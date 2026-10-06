@@ -1,0 +1,33 @@
+{
+ "agree": [
+  "cjaikaeo/elabsheet",
+  "saxionnl/42/lms42",
+  "travo-cr/travo",
+  "olatorg/OpenOLAT",
+  "adaptive-learning-engine/adlete-packages",
+  "TIBHannover/oer/wordpress-oersi-plugin",
+  "learntech-rwth/omilaxr-ecosystem/v2/omilaxr",
+  "particify/dev/foss/arsnova-lms-connector",
+  "moodlenet/moodlenet",
+  "eduplex-api/cake-api-xapi-proxy",
+  "Sudz1/sam-lms",
+  "voxos.ai/learn-anything",
+  "elizeubarbosaabreu/leitor-de-gabaritos",
+  "yoockh-group/Edusaku",
+  "ai-swarm-solutions-group/OpenTeacherAgent",
+  "git-classrooms/git-classrooms",
+  "francoisjacquet/Grading_Scale_Generation"
+ ],
+ "wrong": [
+  "francoisjacquet/rosariosis",
+  "olatorg/openolat-starter"
+ ],
+ "silent": [
+  "kbarbounakis/eduapi"
+ ],
+ "pointer": [
+  "oer/emacs-reveal",
+  "oer/oer-reveal"
+ ],
+ "nofamily": []
+}

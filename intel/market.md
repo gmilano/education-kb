@@ -697,6 +697,33 @@ artefact pack (P24)**, not a conformity extension — and the evidence tier in
 `repos/foundations.md` is what both consume. ⚠️ **Do not pitch a "transition plan" here.** The buyer
 has no extension to protect; what they have is a rubric to score against and a remediation backlog
 with a date.
+
+#### Twenty-second pass of 2026-10-06 — the zero-egress classroom, and why state law is now the pitch
+
+**The 2026 legislative picture, as the trackers describe it:** more than **1,500 AI-related bills**
+were introduced across the states this year, and roughly **100 state bills** bear directly on
+students' use of AI (PIE Network count). Four instruments decide architecture rather than policy:
+
+| Instrument | What it obliges | Why it changes the build |
+|---|---|---|
+| **Ohio** — first state to require **every** K-12 district to adopt a formal AI-use policy (state model or locally aligned) **by 2026-07-01** | a policy per district | the deadline has passed; districts now need **evidence of conformance**, not advice |
+| **Maryland** — *Artificial Intelligence Ready Schools Act* | state guidance, aligned district policies, a named **AI coordinator** per district | a named owner per district is a named buyer per district |
+| **California** — statewide guidance of **January 2026** | raises expectations for AI integration in public schools | the largest single K-12 market has a written bar to clear |
+| **California A.B. 1159** (proposed) | would **bar student data from training AI models** unless the use directly benefits the school | 🔴 **this is an architecture constraint, not a policy line.** A SaaS tutor cannot prove it; a self-hosted stack proves it by construction |
+| **Oregon S.B. 1546** (enacted) | design duties protecting minors, incl. **reducing compulsive use** when the user is known or presumed to be a child | engagement-maximising UX becomes a legal risk in a learning product |
+
+🟢 **The opportunity this pass actually adds: a classroom stack where no student artefact leaves the
+institution.** [`travo-cr/travo`](https://gitlab.com/travo-cr/travo) (**BSD-3-Clause**, active
+2026-10-06) is a **Université Paris-Saclay × Université du Québec à Montréal** collaboration — so it
+is already a North American production tool — and it runs against **any** GitLab instance, including
+one the district or university hosts itself, with **nbgrader** (BSD-3-Clause, 1.4k★) doing automatic
+and manual notebook grading. Add [`cjaikaeo/elabsheet`](https://gitlab.com/cjaikaeo/elabsheet)
+(**BSD-2-Clause**) for non-notebook exercises and nothing in the assessment loop is a third-party
+service.
+
+⚠️ **Sell it as the evidence, not the software.** The deliverable a district's counsel buys is a
+one-page data-flow statement saying *student submissions never leave your tenancy*, which this stack
+can make true in week one. Full wiring: **`P-ONPREM-CLASSROOM`** in `compose/patterns.md`.
 ### EMEA
 
 - **The EU AI Act is the whole conversation.** AI used in education access and
@@ -1311,6 +1338,44 @@ precisely why the deliverable in this region is evidence. 🔵 **Market frame: E
 31.9% CAGR toward $8.0B by 2030; MEA $0.56B at 34.3%**, with Finland, Estonia and the Netherlands
 leading K-12 integration and the **UAE** one of only two countries worldwide running a compulsory
 national AI curriculum since 2025-26.
+
+#### Twenty-second pass of 2026-10-06 — the forge where European public-sector education code actually lives
+
+**Measured, not asserted: 11 of the 18 rows this pass added are EMEA-origin — 5 verified from the
+project's own README (Saxion, TIB Hannover, RWTH Aachen, Paris-Saclay, and SAM LMS's own "African"),
+6 inferred from a namespace or an author name and marked as such** — Netherlands
+(Saxion's `lms42`), Germany (TIB Hannover's OERSI plugin, RWTH Aachen's OmiLAXR, Particify's LMS
+connector, GitClassrooms, the Münster OER toolchain), France (Travo), Switzerland (OpenOLAT's second
+host), Greece (Universis EduAPI), and an Africa-targeted LMS. **One sweep of a forge this KB had
+never searched returned a European public-institution estate.**
+
+🔵 **Why that is a sovereignty signal and not a trivium.** The institutions whose code this sweep
+returned — a university of applied sciences, a national library of science and technology, a
+technical university's learning-technologies group, a Greek higher-education consortium — are
+exactly the buyers who must demonstrate that teaching data stays in their own infrastructure. They
+are not publishing to GitHub. **A supply map built on one forge missed them entirely.**
+
+🔴 **And the honest half: the European supply is more copyleft than this KB's GitHub shelf.** Of
+those 10 EMEA rows, **4 are copyleft** — AGPL-3.0 (`lms42`, `omilaxr`, MoodleNet) and LGPL-3.0
+(`eduapi`, the 1EdTech **EduAPI** implementation). The interoperability layer trend 28 named as
+missing turns out to exist in Europe and to be **weak-copyleft**, which means *linkable, not
+foldable*: the LGPL-3.0 route is the one this KB already documents for Odoo/OpenEduCat.
+
+**The regulatory frame is unchanged and now closer.** AI systems that determine access to education
+or assess learning outcomes sit in **Annex III** of Regulation (EU) 2024/1689; schools and
+universities that deploy them are **deployers** with their own duties, including the **AI-literacy**
+obligation for staff operating the systems. Risk management, data governance, human oversight,
+transparency and conformity assessment are pre-deployment, not post-hoc.
+
+🟢 **Two concrete lines that follow:**
+
+1. **Procurement-grade interoperability.** [`kbarbounakis/eduapi`](https://gitlab.com/kbarbounakis/eduapi)
+   (LGPL-3.0) is a **1EdTech EduAPI** implementation in production use by a university consortium —
+   the first in this KB. It is the answer to the scored interoperability line item, with a licence
+   conversation attached rather than a build.
+2. **Public-institution OER discovery.** [`TIBHannover/oer/wordpress-oersi-plugin`](https://gitlab.com/TIBHannover/oer/wordpress-oersi-plugin)
+   (**MIT**, committed 2026-10-02) puts the German **OERSI** index behind a WordPress front end. MIT,
+   maintained by a national institution — the cheapest credible OER search tier in this KB.
 ### APAC
 
 - **Largest absolute AI market: ~USD 102B as of March 2026** (all sectors, not
@@ -1934,6 +1999,36 @@ duties; **fact-finding investigations and administrative fines are deferred at l
 has no grace period at all.** ⚠️ **So in Korea the labelling limb ships now and the governance limb
 is a 2027 programme** — and because the fine is small, the grace period is worth more than the
 penalty it defers, which is an argument for doing the work on the schedule rather than against it.
+
+#### Twenty-second pass of 2026-10-06 — two permissive APAC rows from one sweep, and the ceiling has not moved
+
+This KB's fifth pass found the first India-, LATAM- and ASEAN-placed permissive education projects
+and recorded that **all three sat at 0–9★** — the finding being the ceiling, not the discovery. One
+GitLab sweep adds two more, and the ceiling holds:
+
+| Row | Licence (payload) | ★ · activity | Country | What it is |
+|---|---|---|---|---|
+| [`cjaikaeo/elabsheet`](https://gitlab.com/cjaikaeo/elabsheet) | 🟢 **BSD-2-Clause** | **14** · 2026-09-19 | Thailand | Exercise/exam platform with **automatic grading**, holders named in the payload. 🟢 The most permissive assessment asset in this KB |
+| [`yoockh-group/Edusaku`](https://gitlab.com/yoockh-group/Edusaku) | 🟢 **Apache-2.0** | 0 · 2026-05-18 | Indonesia | **Offline-first** AI education assistant for remote areas, React Native, on-device model |
+
+🔵 **Why BSD-2 in particular matters here.** APAC's buying criterion in this KB's record is
+**sovereignty**: a ministry wants to fork, localise and run a system without publishing the result or
+asking anyone. BSD-2-Clause is the shortest grant that allows exactly that — shorter than MIT in
+obligations and with no patent clause to negotiate. **A ministry-scale grading platform can be built
+on `elabsheet` without a single licence conversation.** ⚠️ Against that: **14★, two named
+maintainers, 2013 copyright line.** Treat it as a specification and a working reference, and budget
+to own the fork.
+
+**The regulatory and model picture this pass re-read:** India signalled in **July 2026** that it may
+pursue **dedicated AI legislation** on a risk-based model; Japan's promotion-style **Act on
+Promotion of R&D and Utilization of AI-Related Technologies** (May 2025, in force June 2025) remains
+the light-touch pole; China's **labelling measures for AI-generated content** have been effective
+since **September 2025**. Singapore leads regional diffusion and has committed to AI-in-education
+training for teachers at all levels **by 2026**. Every major APAC economy now runs a domestic LLM
+programme — **Sarvam** (India, 105B, 22 Indian languages), **SEA-LION** (Singapore), **ILMU**
+(Malaysia), **Sahabat AI** (Indonesia), **HyperCLOVA X Think** (Korea), **NTT Sarashina** (Japan) —
+which is why the mother-tongue tutoring patterns in `compose/patterns.md` have a model layer in this
+region and not in LATAM.
 ### LATAM
 
 - **Teacher adoption is ahead of institutional readiness, sharply.** In Chile and
@@ -2654,6 +2749,52 @@ Latin American and Caribbean institutions use AI in at least one area of their a
 in their teaching** while **88% report minimal-to-moderate engagement**. 🔴 **An 87%-adoption,
 26%-strategy gap is a governance deficit, not a technology deficit** — and governance is the
 deliverable this channel produces.
+
+#### Twenty-second pass of 2026-10-06 — the LATAM gap, now measured in three languages instead of one
+
+🔴 **This is a declared absence with a denominator, and it is the most useful thing this pass found
+about the region.**
+
+| Sweep | Terms | Unique projects | LATAM-origin education projects with a licence payload |
+|---|---|---|---|
+| English | 25 | **534** | **0** — one LATAM-*plausible* row, [`elizeubarbosaabreu/leitor-de-gabaritos`](https://gitlab.com/elizeubarbosaabreu/leitor-de-gabaritos) (**AGPL-3.0**), placed by Portuguese-language naming only, not by any declaration |
+| **Spanish + Portuguese** | **16** | **141** (140 of them invisible to the English sweep) | 🔴 **0** |
+| total | **41** | **674** | **0 permissive, 1 copyleft, placement inferred** |
+
+⚠️ **The second sweep was run because the first one's terms were English-only — that was a real
+defect in this pass's own instrument, and fixing it changed the answer's shape but not its
+direction.** 140 of the 141 Spanish/Portuguese results were new, so the English sweep *was* blind to
+the region. What the region returned is the finding:
+
+| Candidate | What it is | Licence |
+|---|---|---|
+| [`ccsl-ufpa/educacaovigiada-org-br`](https://gitlab.com/ccsl-ufpa/educacaovigiada-org-br) | **"Educação Vigiada"** — the Federal University of Pará free-software centre's project on surveillance in education. Real, academic, Brazilian, five years old | 🔴 **none** |
+| [`angeelrdz-group/nova-aula`](https://gitlab.com/angeelrdz-group/nova-aula) | Spanish-language full-stack education platform: courses, quizzes, analytics, Stripe. Committed 2026-10-05 | 🔴 **none** |
+| [`evertonwilliam/plataforma-de-educacao`](https://gitlab.com/evertonwilliam/plataforma-de-educacao) | Portuguese AI-guided software-engineering training track | 🔴 **none** |
+
+🔴 **So the LATAM supply gap is not an absence of building — it is an absence of *granting*.** Three
+real Spanish- and Portuguese-language education projects, one of them from a federal university,
+**not one carrying a licence payload.** That is trend 24's licence-hygiene finding with a regional
+signature, and it is actionable in a way an empty result never is: these projects cannot be adopted,
+contributed to, or resold by anyone — including their own institutions' partners — until someone adds
+one file.
+
+**Against the market context, the contradiction is sharp.** Brazil and Mexico lead regional AI
+adoption at **76%** and **70%** of digital users; **38% of Latin American organisations already use
+open-source AI** (Mexico **65%**, Brazil **46%**); **Brazil ranks 4th globally in open-source
+contribution**. Regulation is converging — Brazil's **PL 2338/2023** AI framework approved with
+transparency, impact-assessment and high-risk registration duties, and a **Q2-2026** wave across
+**Chile** (law in process), **Colombia** (MinTIC guidelines), **Mexico** (INAI directives) and
+**Argentina** (draft law). 🟢 **A region that contributes that heavily to open source and uses
+open-source AI that widely is not short of capability.** 🔴 **It is short of licensed education
+assets, measured now across 674 projects and three languages.**
+
+🟢 **The engagement that follows, and it is small and immediately sellable:** a **licence-grant
+clinic** — for a university or ministry partner, add the grant, the holder line and a `LICENSES/`
+directory to the education code they already run, and the asset becomes reusable across the region.
+One of the three above is a federal university's own project. ⚠️ Pre-registered as the next pass's
+LATAM action: sweep the **national forges** (`gitlab.com` self-hosted instances at `.edu.br`,
+`.edu.mx`, `.cl`) that this channel cannot see at all.
 ## Cross-region read
 
 Two patterns hold in every region, which makes them safe to build once and sell
@@ -4183,3 +4324,57 @@ single most-starred asset on this KB's shelf, which installs **AGPL-3.0-or-pay**
 door-opener and a trust signal** — it is concrete, verifiable by the client in one command, and it
 surfaces a real finding often enough (**4 of 13**, measured) to be worth running before any fixed-price
 commitment on an open-source education build.
+
+## What changed in the twenty-second pass of 2026-10-06
+
+**Channel: the GitLab REST API v4** — discovery (`/projects?search=`), metadata and licence key
+(`/projects/:id?license=true`), payload (`/repository/files/:path/raw`), licence set
+(`/repository/tree?path=LICENSES`), holder (`/users`). ⚠️ **Half-new, stated precisely:** pass 107
+already read payloads from `gitlab.com/-/raw`. The **API** had never been called — and it is the only
+forge API this environment can reach, since `api.github.com` has answered **403** since pass 37.
+
+**What moved, in numbers:**
+
+| Measure | Value |
+|---|---|
+| search terms, three languages | **41** (25 English + 16 Spanish/Portuguese) |
+| unique projects returned | **674** (534 + 140 new in the second language sweep) |
+| licence payloads read first-hand | **22** |
+| rows published | **18 new** + **2 cross-host confirmations** |
+| forge licence-detector verdicts, of 22 payloads | 🟢 **17 agree** · 🔴 **2 wrong** · ⚠️ **1 silent** · 🔵 **2 REUSE pointers** |
+| licences returned by the **search** endpoint despite `license=true` | 🔴 **0 of 534** |
+| LATAM-origin education projects carrying a licence | 🔴 **0 of 674** |
+
+🟢 **The commercial headline is a region, not a repository: one sweep of one unsearched forge
+returned a European public-institution education estate** — a Dutch university of applied sciences,
+the German national library of science and technology, RWTH Aachen, a Greek higher-education
+consortium, Paris-Saclay with Québec. Those are the buyers who must prove teaching data stays in
+their own infrastructure, and they do not publish where this industry looks.
+
+🔴 **The risk headline is that a forge field would have put wrong data in two client-facing rows.**
+GitLab calls a **GPL-2.0** payload `agpl-1.0` and an **Apache-2.0** payload `ecl-2.0`. The first is a
+project this KB already publishes; the second is the Apache/ECL pair that education consortia
+actually use. Both were caught only because the payload was read. **Trend 51.**
+
+### The method note, stated plainly
+
+1. ⚠️ **This pass's own first instrument was defective and is reported as such.** A substring
+   classifier found "General Public License" inside MPL-2.0's secondary-licence clause and "Lesser
+   General Public License" inside GPL-2.0's closing section, and so claimed **6** detector errors
+   where there are **2 wrong + 1 silent**. The number published is the corrected one, and the
+   correction flipped one row *toward* the forge: `Grading_Scale_Generation`'s `composer.json`
+   declares `GPL-2.0-or-later`, so the `+` the payload could not establish was real. **Payload
+   first, manifest second, detector never alone.**
+2. ⚠️ **The English-only term list was a second defect, found and fixed inside the same pass.** The
+   Spanish/Portuguese sweep returned **140 projects the English sweep could not see** — so the LATAM
+   gap is now measured in three languages, and it survived.
+3. 🔵 **A 200 confirms, a 302 does not refute.** GitLab answers unknown paths with a redirect to
+   sign-in, so the HTML channel cannot establish absence on this forge. The API's **404** control
+   discriminates and is the channel any withdrawal must use.
+4. 🔴 **★ is a host's audience, not a project's adoption** — RosarioSIS is 644★ on GitHub and 65★ on
+   GitLab, same project, same byte-identical licence file. No ★ in this KB may be quoted to a client
+   as a measure of use.
+5. 🟢 **Liveness is finally measurable somewhere:** 47.6% of the 534 touched in 2026, 18.7% in the
+   last 30 days, **33.5% cold since before 2024**. Two candidate rows were rejected on that field
+   alone. **Trend 52**, with the GitHub-side measurement pre-registered for the next pass via `git`
+   rather than an API.

@@ -1,0 +1,3235 @@
+{
+"terms": {
+"ai tutor": 30,
+"intelligent tutoring": 4,
+"tutoring agent": 1,
+"adaptive learning": 30,
+"learning analytics": 30,
+"moodle ai": 30,
+"lms ai": 30,
+"student assessment ai": 30,
+"automatic grading": 22,
+"autograder": 23,
+"spaced repetition": 30,
+"course generator": 30,
+"education agent": 16,
+"edtech ai": 30,
+"exercise generator": 8,
+"knowledge tracing": 6,
+"quiz generator ai": 29,
+"educational chatbot": 2,
+"teacher assistant ai": 6,
+"open educational resources": 30,
+"learning management system": 30,
+"student information system": 30,
+"xapi lrs": 2,
+"h5p": 30,
+"classroom ai": 30
+},
+"projects": {
+"nanuchi/youtube-tutorial-series": {
+"stars": 296,
+"last_activity": "2026-07-03T03:02:15.449Z",
+"license": null,
+"desc": ""
+},
+"polloloco/vgpu-proxmox": {
+"stars": 185,
+"last_activity": "2026-04-10T14:57:27.537Z",
+"license": null,
+"desc": "Tutorial for setting up vGPU Unlock on PVE 8.x"
+},
+"xavki/xavki-tutorials-index": {
+"stars": 124,
+"last_activity": "2026-06-21T11:07:14.937Z",
+"license": null,
+"desc": "Master index of all Xavki tutorial repositories. Start here to navigate the full course catalog."
+},
+"xavki/tutorials-ansible": {
+"stars": 92,
+"last_activity": "2026-06-21T11:06:54.028Z",
+"license": null,
+"desc": "Complete Ansible course: install, SSH keys, config, CLI, modules, inventories, variables, playbooks, ELK lab. Xavki tutorials \u2014 https://youtu.be/kzmvwc2q_z0"
+},
+"pavel.krupala/pyqt-node-editor": {
+"stars": 61,
+"last_activity": "2025-09-10T09:41:24.210Z",
+"license": null,
+"desc": "This is the node editor in Python using PyQt5 - tutorials can be found on my website: https://www.blenderfreak.com/tutorials/node-editor-tutorial-series/"
+},
+"menip/godot-multiplayer-tutorials": {
+"stars": 49,
+"last_activity": "2020-11-29T21:14:52.728Z",
+"license": null,
+"desc": ""
+},
+"wikibooks-opengl/modern-tutorials": {
+"stars": 46,
+"last_activity": "2020-08-26T14:49:11.382Z",
+"license": null,
+"desc": "Code for OpenGL Wikibook tutorials\r http://en.wikibooks.org/wiki/OpenGL_Programming"
+},
+"fbb-git/cppannotations": {
+"stars": 45,
+"last_activity": "2026-08-22T13:39:30.911Z",
+"license": null,
+"desc": "Extensive tutorial and documentation about C++"
+},
+"xavki/tutorials-kubernetes": {
+"stars": 43,
+"last_activity": "2026-06-21T11:07:22.889Z",
+"license": null,
+"desc": "Original Kubernetes course: minikube, prerequisites, cluster install, kubectl basics, services, scaling, YAML manifests, resources. Xavki tutorials \u2014 https://youtu.be/37VLg7mlHu8"
+},
+"Athamaxy/telegram-bot-tutorial": {
+"stars": 41,
+"last_activity": "2026-06-05T01:59:28.172Z",
+"license": null,
+"desc": ""
+},
+"MobiusDevelopment/L2J_Mobius": {
+"stars": 34,
+"last_activity": "2026-10-06T09:24:14.700Z",
+"license": null,
+"desc": "This repository is updated regularly with the latest releases and shares made at the project's forum. Installation tutorial at https://l2jmobius.org/forum/index.php?topic=3231.0"
+},
+"jmattheij/pianojacq": {
+"stars": 32,
+"last_activity": "2025-08-07T23:15:13.875Z",
+"license": null,
+"desc": "A - for now - browser based piano tutoring program that allows you to use a midi keyboard and a computer to study playing the piano, organ, keyboard/synthesizer or harpsichord. It will also help you to learn sightreading"
+},
+"johandurancerdas/gitlab-cicd-tutorial": {
+"stars": 28,
+"last_activity": "2026-06-20T02:07:44.358Z",
+"license": null,
+"desc": ""
+},
+"xavki/infrastructure-cloud-infomaniak": {
+"stars": 24,
+"last_activity": "2026-06-21T11:05:52.720Z",
+"license": null,
+"desc": "Full cloud infrastructure on Infomaniak Public Cloud: Terraform, OpenStack CLI, networking, VPN, Kubernetes, Helm, Prometheus monitoring. Xavki tutorials."
+},
+"xavki/become-devops-s01": {
+"stars": 24,
+"last_activity": "2026-06-21T11:06:52.357Z",
+"license": null,
+"desc": "Become a DevOps engineer \u2014 Season 1: full pipeline lab with Vagrant servers, BDD, Docker registry, GitLab, Jenkins, Maven, Ansible. Xavki tutorials \u2014 https://youtu.be/tiSfXCM8VTw"
+},
+"asacolips-projects/foundry-mods/foundryvtt-system-tutorial": {
+"stars": 23,
+"last_activity": "2020-06-02T19:23:55.602Z",
+"license": null,
+"desc": "Create custom systems for FoundryVTT!"
+},
+"jadijadi/gittutorial": {
+"stars": 21,
+"last_activity": "2026-04-16T22:30:46.013Z",
+"license": null,
+"desc": ""
+},
+"introcienciadedados/tutoriais": {
+"stars": 20,
+"last_activity": "2025-07-01T23:36:22.901Z",
+"license": null,
+"desc": "Tutoriais para a disciplina de ci\u00eancia de dados"
+},
+"xavki/tutorials-gitlab-v2": {
+"stars": 19,
+"last_activity": "2026-06-21T11:07:04.784Z",
+"license": null,
+"desc": "Modern GitLab course: install, GUI, users, repos, issues, labels, wiki, repo flow, merge requests, roles, GitLab CI. Xavki tutorials in French."
+},
+"xavki/tutorials-prometheus-grafana": {
+"stars": 19,
+"last_activity": "2026-06-21T11:08:41.147Z",
+"license": null,
+"desc": "Prometheus + Grafana monitoring stack: install, queries, exporters (HAProxy, Nginx, Postgres, Process), custom exporters, push gateway. Xavki tutorials \u2014 https://youtu.be/ti0YEPZAxMk"
+},
+"commonsguy/cw-andexplore": {
+"stars": 19,
+"last_activity": "2021-12-19T18:04:56.164Z",
+"license": null,
+"desc": "Source code for tutorials from [*Exploring Android*](https://commonsware.com/AndExplore)."
+},
+"inkscape/inkscape-docs/documentation": {
+"stars": 18,
+"last_activity": "2026-10-04T18:20:32.455Z",
+"license": null,
+"desc": "Everything needed to manage tutorials, keys and mouse reference and man page translations for Inkscape."
+},
+"camlcase-dev/michelson-tutorial": {
+"stars": 17,
+"last_activity": "2023-03-28T21:01:48.229Z",
+"license": null,
+"desc": ""
+},
+"xavki/tutorials-elk": {
+"stars": 16,
+"last_activity": "2026-06-21T11:07:08.627Z",
+"license": null,
+"desc": "Complete ELK stack: Elasticsearch install, Logstash inputs/filters, Filebeat outputs, Metricbeat modules, TLS, examples (Postgres, Docker, system). Xavki tutorials \u2014 https://youtu.be/FIIWGs65Gi0"
+},
+"xavki/tutorials-docker": {
+"stars": 15,
+"last_activity": "2026-06-21T11:06:14.217Z",
+"license": null,
+"desc": "Complete Docker formation from beginner to advanced: install, containers, volumes, networking, Dockerfile, multistage builds, registry. Xavki tutorials \u2014 https://youtube.com/playlist?list=PLn6POgpklwWq0iz59-px2z-qjDdZKEv"
+},
+"xavki/tutorials-terraform": {
+"stars": 14,
+"last_activity": "2026-06-21T11:06:39.325Z",
+"license": null,
+"desc": "Terraform from scratch: install, modules, Docker provider, networking, volumes, WordPress, Kubernetes provider, ingress. Xavki tutorials \u2014 https://youtu.be/_6AITxe5iVc"
+},
+"lunafromthemoon/RenJSTutorial": {
+"stars": 13,
+"last_activity": "2021-09-07T14:24:58.551Z",
+"license": null,
+"desc": "Tutorial game for RenJS."
+},
+"xavki/tutorials-kubernetes-v2": {
+"stars": 12,
+"last_activity": "2026-06-21T11:05:47.441Z",
+"license": null,
+"desc": "Modern Kubernetes course: clusters, kubectl, pods, deployments, services, configmaps, volumes, ingress. Updated edition. Xavki tutorials in French."
+},
+"lucasrthompson/Sonic-Bot-In-OpenAI-and-NEAT": {
+"stars": 12,
+"last_activity": "2021-07-04T03:54:23.238Z",
+"license": null,
+"desc": "This repository holds my tutorial code for an Open-AI and NEAT Sonic the Hedgehog Bot. "
+},
+"xavki/tutorials-postgresql": {
+"stars": 11,
+"last_activity": "2026-06-21T11:06:15.800Z",
+"license": null,
+"desc": "PostgreSQL deep dive: install, databases, tables, indexes (B-tree, hash), views, roles, permissions, logs, dumps. Xavki tutorials in French \u2014 https://youtu.be/gBgqJbW8kXE"
+},
+"yrahul/student-modeling-project": {
+"stars": 0,
+"last_activity": "2025-11-03T00:57:41.187Z",
+"license": null,
+"desc": "An Intelligent Tutoring System (ITS) using various algorithms from literature."
+},
+"troy0496/ITS": {
+"stars": 0,
+"last_activity": "2025-09-01T05:13:05.454Z",
+"license": null,
+"desc": "Intelligent Tutoring System for the students of FEU Manila"
+},
+"andi-schwab/moodle-block_intuitel": {
+"stars": 0,
+"last_activity": "2022-03-07T16:15:42.522Z",
+"license": null,
+"desc": "Moodle Plugin for INTUITEL Intelligent Tutoring System"
+},
+"wesley.wz/bias2020": {
+"stars": 0,
+"last_activity": "2020-04-13T12:46:20.575Z",
+"license": null,
+"desc": "Code from paper Recommendation filtering a\u0300 la carte for intelligent tutoring systems\r "
+},
+"geekhaus314/NeuroTutor-CS": {
+"stars": 0,
+"last_activity": "2026-09-08T22:12:24.401Z",
+"license": null,
+"desc": "An Interactive, Agentic Tutoring Companion for Neurodivergant Learners"
+},
+"zhaoqing-wang/SlimR": {
+"stars": 1,
+"last_activity": "2026-04-21T10:00:47.367Z",
+"license": null,
+"desc": "SlimR: Adaptive Machine Learning-Powered, Context-Matching Tool for Single-Cell and Spatial Transcriptomics Annotation"
+},
+"adaptive-learning-engine/adlete-packages": {
+"stars": 1,
+"last_activity": "2026-10-02T13:34:26.854Z",
+"license": null,
+"desc": "This adaptive learning technologies (adlete) repository is a mono-repository which contains all software components supporting the adaptive learning engine."
+},
+"emilykuck/mae-5280": {
+"stars": 1,
+"last_activity": "2023-01-30T05:13:11.854Z",
+"license": null,
+"desc": "Adaptive and Learning Systems"
+},
+"CompressiveLearning/mean-nystroem-embeddings-for-adaptive-compressive-learning-source-code-aistats-2022": {
+"stars": 1,
+"last_activity": "2022-02-10T09:50:14.838Z",
+"license": null,
+"desc": "This repository contains the code to generate the results of the AISTATS 2022 paper \"Mean Nystr\u00f6m Embeddings for Adaptive Compressive Learning\"."
+},
+"neutron-nuaa/dfrl": {
+"stars": 1,
+"last_activity": "2022-04-06T01:41:29.837Z",
+"license": null,
+"desc": "A distributed-force-feedback-based reflex with online learning (DFRL) for adaptive quadruped motor control"
+},
+"majid.ghasemi/an-adaptive-type-2-fuzzy-dictionary-learning": {
+"stars": 1,
+"last_activity": "2020-03-03T22:07:06.147Z",
+"license": null,
+"desc": "This project has developed by Matlab 2017b."
+},
+"CodelikeC/AIC-Education": {
+"stars": 0,
+"last_activity": "2026-09-17T16:25:21.981Z",
+"license": null,
+"desc": "AIC-Education = Human Alignment & Adaptive Learning Infrastructure | @AdaptiveIntelligenceCircle"
+},
+"raosamarth22/ruflo": {
+"stars": 0,
+"last_activity": "2026-09-12T20:24:38.919Z",
+"license": null,
+"desc": "\ud83c\udf0a The leading agent meta-harness for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning swarm intelligence, RAG in"
+},
+"Sallami.sch/Adaptive-Learning-Tutor": {
+"stars": 0,
+"last_activity": "2026-08-26T21:52:34.134Z",
+"license": null,
+"desc": "AI Tutor"
+},
+"Sallami.sch/multicheck": {
+"stars": 0,
+"last_activity": "2026-08-26T21:52:34.149Z",
+"license": null,
+"desc": "Adaptive learning coach for Multicheck Attest (EBA) exam prep"
+},
+"Roxanne_Ardary/thoughtbridge": {
+"stars": 0,
+"last_activity": "2026-08-19T19:15:04.832Z",
+"license": null,
+"desc": "ThoughtBridge is a modular, multi-agent AI specification designed to help turn ideas into reality by bringing together creative exploration, multiple perspectives, adaptive learning, physics-grounded reasoning, industry "
+},
+"Roxanne_Ardary/omniscientia": {
+"stars": 0,
+"last_activity": "2026-07-28T23:03:07.768Z",
+"license": null,
+"desc": "OmniScientia is a modular AI framework for scientific discovery that helps learners explore the natural world through curiosity, experimentation, and verified evidence. It combines adaptive AI tutoring, safe laboratory e"
+},
+"Roxanne_Ardary/earthroot-network": {
+"stars": 0,
+"last_activity": "2026-08-03T11:58:36.249Z",
+"license": null,
+"desc": "EarthRoot Network is an open-source, AI-assisted infrastructure design system that generates location-aware, modular renewable energy and material solutions. It analyzes local environmental conditions, material availabil"
+},
+"Roxanne_Ardary/flexiprice": {
+"stars": 0,
+"last_activity": "2026-07-17T10:11:02.261Z",
+"license": null,
+"desc": "FlexiPrice is an open-source, modular dynamic pricing platform that helps businesses, organizations, and individuals make intelligent pricing decisions based on real-time market conditions. Designed to work across indust"
+},
+"shahTanya/eduforge": {
+"stars": 0,
+"last_activity": "2026-06-13T10:21:39.564Z",
+"license": null,
+"desc": "EduForge is an AI-powered adaptive learning platform that monitors at\u2011risk students and delivers personalized recovery plans. Built for the Google Cloud Rapid Agent Hackathon.\r \r - 6 microservices on Google Cloud Run\r - "
+},
+"Amonite11/gnome-swift-adaptive-learing-platform": {
+"stars": 0,
+"last_activity": "2026-04-26T18:15:01.576Z",
+"license": null,
+"desc": ""
+},
+"shray77/vetlearn-concurs": {
+"stars": 0,
+"last_activity": "2026-04-13T17:01:54.767Z",
+"license": null,
+"desc": "VetLearn Concurs - AI-powered personalized veterinary learning platform for competition. Based on VetVoice. Adaptive trajectory, AI cases, voice mentor, quiz system."
+},
+"Roxanne_Ardary/instantindex": {
+"stars": 0,
+"last_activity": "2026-08-09T09:22:14.826Z",
+"license": null,
+"desc": "InstantIndex is a privacy-first, locally hosted search engine that combines ultra-fast crawling, adaptive AI learning, and optimized archiving. Users can select their preferred language, and the system evolves its knowle"
+},
+"Roxanne_Ardary/cnccompanion": {
+"stars": 0,
+"last_activity": "2026-07-24T01:39:39.825Z",
+"license": null,
+"desc": "CNC Companion is an open-source AI tutor for apprentice machinists. It provides step-by-step lessons, real-time guidance, skill tracking, and immersive learning tools for CNC and other shop floor machines. With adaptive "
+},
+"AlfanumrikOS/Alfanumrik": {
+"stars": 0,
+"last_activity": "2026-03-25T05:01:14.571Z",
+"license": null,
+"desc": "Adaptive Learning OS"
+},
+"emerladcompass1/BioShield-Integration": {
+"stars": 0,
+"last_activity": "2026-01-22T17:40:11.108Z",
+"license": null,
+"desc": "Unified Intelligence Framework: A\u2192B\u2192C\u2192D with Adaptive Learning & Real-Time Alerts"
+},
+"shyeom01/ai-driven-self-paced-course-for-assembly-cse-230-1": {
+"stars": 0,
+"last_activity": "2025-11-16T20:02:52.846Z",
+"license": null,
+"desc": "This project is about creating an AI-driven, self-paced learning platform for CSE 230 (Assembly Language). It focuses on giving students instant feedback on errors, adaptive mastery checks, and personalized guidance. "
+},
+"yrahul/adaptive-lr-dnn": {
+"stars": 0,
+"last_activity": "2025-11-03T00:57:41.192Z",
+"license": null,
+"desc": "Implementation of Adaptive Learning Rate as inverse of Lipschitz constant in deep neural networks."
+},
+"saqib99/EduMind": {
+"stars": 0,
+"last_activity": "2025-10-12T20:10:51.848Z",
+"license": null,
+"desc": "EduMind AI is a Next.js application that acts as an intelligent, adaptive learning companion. It leverages Generative AI to transform study sessions and provide personalized learning experiences."
+},
+"WinuWijegunawardhana98/Integrated-Healthcare-System-for-Vulnerable-Populations-Leveraging-IOT-Machine-learning": {
+"stars": 0,
+"last_activity": "2025-06-09T14:37:03.142Z",
+"license": null,
+"desc": "Healthcare systems struggle to meet the needs of vulnerable groups like post-surgery patients and those with NCDs. This study proposes an integrated system using adaptive learning, blockchain, predictive analytics, and I"
+},
+"alphaxnexon1/Alpha-x": {
+"stars": 0,
+"last_activity": "2025-03-16T15:47:08.727Z",
+"license": null,
+"desc": "Zashirion's Alpha-X is an advanced AI assistant designed to enhance productivity, streamline tasks, and provide intelligent support for Windows users. Powered by continuous learning and adaptive intelligence, Alpha-X evo"
+},
+"Ludovic.arnould/adaptive-learning-evaluation": {
+"stars": 0,
+"last_activity": "2024-10-28T10:55:51.721Z",
+"license": null,
+"desc": ""
+},
+"Ludovic.arnould/adaptive-learning-with-ai": {
+"stars": 0,
+"last_activity": "2025-08-27T13:56:43.288Z",
+"license": null,
+"desc": ""
+},
+"DuongKien2001/mclda": {
+"stars": 0,
+"last_activity": "2024-01-10T00:11:43.277Z",
+"license": null,
+"desc": "[SOICT2023] Official Implementation of MCLDA: Multi-level Contrastive Learning for Domain Adaptive Semantic Segmentation"
+},
+"dbalboni/adaptive-learning-rate": {
+"stars": 0,
+"last_activity": "2024-09-25T13:16:38.119Z",
+"license": null,
+"desc": ""
+},
+"learntech-rwth/repix-vr/learning-analytics": {
+"stars": 2,
+"last_activity": "2023-06-05T15:16:21.848Z",
+"license": null,
+"desc": ""
+},
+"containalytics/containalytics": {
+"stars": 2,
+"last_activity": "2022-05-11T22:09:05.205Z",
+"license": null,
+"desc": "\"Cloud container data analytics, statistical modeling, and machine learning on distributed databases\".\r \"A free opensource alternative to SPSS, SAS, MATLAB, PowerBI, Tableau and Alteryx\".\r Runs on Linux, Windows, MacOS, "
+},
+"deeva/Night-to-Day-Image-translation": {
+"stars": 2,
+"last_activity": "2021-08-24T20:37:05.191Z",
+"license": null,
+"desc": "It is the main project of the team deeva, and it is a deep learning based video analytics project."
+},
+"group-19833714/group19-big-data-predictive-analytics": {
+"stars": 1,
+"last_activity": "2025-05-04T18:24:53.947Z",
+"license": null,
+"desc": "This project explores the use of big data analytics and machine learning techniques to predict the likelihood of ICU admission among COVID-19 patients. It includes data cleansing, exploratory analysis, classification mod"
+},
+"learntech-rwth/omilaxr-ecosystem/v2/omilaxr": {
+"stars": 1,
+"last_activity": "2026-07-03T22:25:17.528Z",
+"license": null,
+"desc": "A framework for authoring open, educational and modular Learning Analytics modules for eXtended Reality (Virtual and Augmented Reality)."
+},
+"agritracka/agritracka": {
+"stars": 1,
+"last_activity": "2024-02-18T14:39:56.833Z",
+"license": null,
+"desc": "AgriTracka is a comprehensive agricultural monitoring platform that leverages sensor data and machine learning algorithms to predict plant health and provide actionable recommendations to farmers, ultimately enhancing cr"
+},
+"rrrokhtar/Night-to-Day-Image-translation": {
+"stars": 1,
+"last_activity": "2021-06-28T20:55:06.358Z",
+"license": null,
+"desc": "It is the main project of the team deeva, and it is a deep learning based video analytics project."
+},
+"VPRzhou/Night-to-Day-Image-translation": {
+"stars": 1,
+"last_activity": "2019-12-19T01:30:48.051Z",
+"license": null,
+"desc": "It is the main project of the team deeva, and it is a deep learning based video analytics project."
+},
+"JafarMustafazada/CSCI-6767_1_Riyad_Jafar": {
+"stars": 0,
+"last_activity": "2026-09-26T08:11:42.519Z",
+"license": null,
+"desc": "Project 1 Group Jafar Riyad. Spring 2026 Applied Machine Learning & Data Analytics (CSCI-6767) "
+},
+"JafarMustafazada/CSCI-6767-p4_Riyad_Jafar": {
+"stars": 0,
+"last_activity": "2026-09-26T08:09:27.641Z",
+"license": null,
+"desc": "Project 4 Group Jafar Riyad. Spring 2026 Applied Machine Learning & Data Analytics (CSCI-6767)"
+},
+"JafarMustafazada/CSCI-6767-p3_Jafar_Emil": {
+"stars": 0,
+"last_activity": "2026-09-26T08:08:09.450Z",
+"license": null,
+"desc": "Project 3 Group Jafar Emil. Spring 2026 Applied Machine Learning & Data Analytics (CSCI-6767) "
+},
+"JafarMustafazada/CSCI-6767-p2_Jafar_Asmar": {
+"stars": 0,
+"last_activity": "2026-09-26T08:07:05.470Z",
+"license": null,
+"desc": "Project 2 Group Jafar Asmar. Spring 2026 Applied Machine Learning & Data Analytics (CSCI-6767)"
+},
+"kunteprajwal34/MentorLoop": {
+"stars": 0,
+"last_activity": "2026-08-03T05:57:01.981Z",
+"license": null,
+"desc": "MentorLoop is a developer-growth workspace for students and early-career engineers. It brings the practical parts of career preparation into one place: a skills profile, AI-assisted code feedback, GitHub project reviews,"
+},
+"ai-village-agents/village/learning-oracle": {
+"stars": 0,
+"last_activity": "2026-07-03T20:57:57.301Z",
+"license": null,
+"desc": "Learning Oracle: Predictive analytics for fragment system based on Day 430 discoveries"
+},
+"carloshsalvador/crm-etl-analytics-demo": {
+"stars": 0,
+"last_activity": "2026-06-25T09:10:49.543Z",
+"license": null,
+"desc": "Public portfolio demo of a CRM analytics pipeline using Bitrix-style exports, Python ETL, DuckDB, PostgreSQL, and machine learning for deal probability scoring."
+},
+"aerisericas-group/ai-trading-bot-software-for-passive-income": {
+"stars": 0,
+"last_activity": "2026-06-06T03:53:32.075Z",
+"license": null,
+"desc": "AI trading involves leveraging artificial intelligence, predictive analytics, and machine learning to analyze past market and stock data. This technology aids in creating investment strategies, building portfolios, and a"
+},
+"Youssef-AMARZOU/ingamar-bi": {
+"stars": 0,
+"last_activity": "2026-06-04T18:29:31.718Z",
+"license": null,
+"desc": "A modern, enterprise-ready business intelligence platform with AI-powered analytics, machine learning, and Grafana-inspired design."
+},
+"Briy1t/Data-Analytics-learning-path": {
+"stars": 0,
+"last_activity": "2026-04-24T07:03:25.848Z",
+"license": null,
+"desc": "\"An\u00e1lisis y procesamiento de datos para la toma de decisiones. Uso de SQL, Excel avanzado y Python (Pandas) para el tratamiento de datasets y generaci\u00f3n de reportes. En proceso..."
+},
+"benedictjenkins1787/customer_analytic": {
+"stars": 0,
+"last_activity": "2026-04-05T21:53:05.888Z",
+"license": null,
+"desc": "Detailed customer analytics project, including cohort and RFM analyses, machine learning model to get actionable recommendations. using Python and PowerBI"
+},
+"larsmeiendresch/learning-analytics-dashboard": {
+"stars": 0,
+"last_activity": "2026-03-26T12:56:25.471Z",
+"license": null,
+"desc": "A learning analytics dashboard for the 2023 VR study"
+},
+"banhmuy/data-science-artificial-intelligence-projects": {
+"stars": 0,
+"last_activity": "2026-03-21T10:26:18.280Z",
+"license": null,
+"desc": "Data Science and Artificial Intelligence Learning Projects \u2014 Mini experiments and applied learning in AI, ML, CV, and Data Analytics."
+},
+"kubulee.kl/rda": {
+"stars": 0,
+"last_activity": "2025-12-27T10:42:46.601Z",
+"license": null,
+"desc": "RODAAI (Republic of Data, Analytics & AI) is an open-source platform designed to empower users with tools for artificial intelligence, data science, and analytics. It combines frontend UI components with backend AI servi"
+},
+"shahadatbiddyut/DataVisualization-PowerBI-Tableau-Analytics": {
+"stars": 0,
+"last_activity": "2025-11-29T19:35:30.460Z",
+"license": null,
+"desc": "Exploring data visualization with Power BI & Tableau!  Practicing dashboards, insights, and analytics\u2014learning by doing."
+},
+"kartik-commits/mechanical-engineering-analytics": {
+"stars": 0,
+"last_activity": "2025-10-11T14:36:21.297Z",
+"license": null,
+"desc": "Comprehensive mechanical engineering data analytics project covering Predictive, Prescriptive, Descriptive, and Diagnostic Analytics across thermal systems, manufacturing, and condition monitoring domains using Python, M"
+},
+"Reaishma/CloudBI": {
+"stars": 0,
+"last_activity": "2025-08-05T09:24:56.191Z",
+"license": null,
+"desc": "A comprehensive cloud-based business intelligence platform featuring machine learning analytics, predictive insights, and enterprise-grade data visualization capabilities."
+},
+"shubhankardumka/dj": {
+"stars": 0,
+"last_activity": "2026-04-13T12:19:34.493Z",
+"license": null,
+"desc": "Repository housing code files and study material for personal projects related to data engineering, data analytics, machine learning, game design and digital marketing engineering. "
+},
+"Reaishma/CerebroApex": {
+"stars": 0,
+"last_activity": "2025-08-01T04:49:46.021Z",
+"license": null,
+"desc": "This project showcases a comprehensive data analytics and machine learning platform built using microservices architecture, containerization, and cloud-native technologies. It leverages advanced tools for data processing"
+},
+"wifiknight45/ThreatScope": {
+"stars": 0,
+"last_activity": "2025-07-31T04:42:26.228Z",
+"license": null,
+"desc": "This Automated SOC Dashboard Generator is a real-time security analytics tool that fetches logs from open-source SIEM solutions, applies machine learning for anomaly detection, implements role-based access control, and a"
+},
+"Microeinstein/panopto-sync": {
+"stars": 11,
+"last_activity": "2025-12-15T21:51:44.154Z",
+"license": null,
+"desc": "Automatically downloads and synchronizes UniVR Panopto and moodle lessons."
+},
+"jezhops/moodle-theme_adaptable": {
+"stars": 11,
+"last_activity": "2023-11-09T10:06:08.610Z",
+"license": null,
+"desc": "Adaptable\r \r To contribute to the project, please read CONTRIBUTING.txt"
+},
+"moodlenet/moodlenet": {
+"stars": 9,
+"last_activity": "2023-07-07T08:16:28.524Z",
+"license": null,
+"desc": ""
+},
+"MrFry/moodle-test-userscript": {
+"stars": 5,
+"last_activity": "2024-09-12T10:19:42.481Z",
+"license": null,
+"desc": ""
+},
+"epitech-pedago/moodle-competencies-extractor": {
+"stars": 4,
+"last_activity": "2021-07-07T13:27:17.685Z",
+"license": null,
+"desc": "Small script to extract competencies (acquired and non-acquired) from Epitech Moodle Intranets (Gandalf and Merlin)"
+},
+"adapta/moodle-tool_resendnewaccountemail": {
+"stars": 3,
+"last_activity": "2024-04-12T19:34:07.141Z",
+"license": null,
+"desc": ""
+},
+"adapta/moodle-local_selfcohort": {
+"stars": 3,
+"last_activity": "2025-12-10T18:49:02.088Z",
+"license": null,
+"desc": "Allow users to add themselves to the selected cohorts"
+},
+"adapta/moodle-local_modcustomfields": {
+"stars": 3,
+"last_activity": "2026-05-20T17:00:39.719Z",
+"license": null,
+"desc": "This plugin adds custom fields feature to all activity modules"
+},
+"rluna-open-source/learning-management-system/moodle/moodle": {
+"stars": 3,
+"last_activity": "2026-10-03T11:12:48.708Z",
+"license": null,
+"desc": "Moodle - the world's open source learning platform"
+},
+"teknight/moodle-enhancer": {
+"stars": 3,
+"last_activity": "2018-05-20T15:34:56.079Z",
+"license": null,
+"desc": ""
+},
+"adapta/moodle-certificateelement_multidate": {
+"stars": 2,
+"last_activity": "2026-08-31T17:14:46.627Z",
+"license": null,
+"desc": "This displays the course completion dates and a configurable number of days before it."
+},
+"renatoduartepinheiro/videoedu": {
+"stars": 2,
+"last_activity": "2024-03-21T03:40:00.270Z",
+"license": null,
+"desc": "Moodle Plugin to track video views"
+},
+"adapta/moodle-block_minhabiblioteca": {
+"stars": 2,
+"last_activity": "2025-09-15T12:59:00.913Z",
+"license": null,
+"desc": ""
+},
+"Udinanon/unipd_moodledl": {
+"stars": 2,
+"last_activity": "2022-10-03T14:56:32.285Z",
+"license": null,
+"desc": ""
+},
+"3bits/theme-adaptable3": {
+"stars": 2,
+"last_activity": "2021-12-13T10:35:10.490Z",
+"license": null,
+"desc": "Official repository for Adaptable 3 for moodle 3.10 and 3.11"
+},
+"adapta/moodle-local_notifycohorts": {
+"stars": 2,
+"last_activity": "2025-11-25T18:52:56.400Z",
+"license": null,
+"desc": "This plugins allows admins to send notifications to members of selected cohorts."
+},
+"stacktools/tools": {
+"stars": 2,
+"last_activity": "2025-06-06T16:56:14.408Z",
+"license": null,
+"desc": "Publically available tools for authorship and curation of Stack questions for Moodle.\r "
+},
+"moodle-local_mail/moodle-local_mail": {
+"stars": 2,
+"last_activity": "2026-10-05T17:19:29.455Z",
+"license": null,
+"desc": "Local Mail plugin for Moodle"
+},
+"rmueller/moodle-mod_newmodule": {
+"stars": 2,
+"last_activity": "2019-03-24T22:34:24.100Z",
+"license": null,
+"desc": "Code template for the Moodle activity module"
+},
+"pdagog/moodlenq": {
+"stars": 2,
+"last_activity": "2025-01-21T12:08:55.004Z",
+"license": null,
+"desc": "Moodle feedback made easy"
+},
+"adapta/moodle-block_featuredcourses": {
+"stars": 2,
+"last_activity": "2025-12-10T17:21:20.378Z",
+"license": null,
+"desc": "A block for Moodle to show featured courses on frontpage"
+},
+"zeizig/moodle-wrapper": {
+"stars": 2,
+"last_activity": "2017-05-20T17:07:53.861Z",
+"license": null,
+"desc": "Moodle API wrapper"
+},
+"jcbagneris/csv_to_moodle_xml": {
+"stars": 2,
+"last_activity": "2020-05-12T08:25:25.458Z",
+"license": null,
+"desc": "Create calculated questions in Moodle xml format from a spreadsheet through a csv file"
+},
+"eita/blocoa5": {
+"stars": 1,
+"last_activity": "2026-09-15T18:06:05.527Z",
+"license": null,
+"desc": ""
+},
+"letstudygroup/moodle-mod_certstudio": {
+"stars": 1,
+"last_activity": "2026-08-13T13:51:41.162Z",
+"license": null,
+"desc": ""
+},
+"pleio/helm-charts/moodle-charts": {
+"stars": 1,
+"last_activity": "2026-09-25T07:07:14.920Z",
+"license": null,
+"desc": ""
+},
+"adapta/moodle-block_rbreportchart": {
+"stars": 1,
+"last_activity": "2026-02-24T18:59:02.432Z",
+"license": null,
+"desc": ""
+},
+"vbe/moodlet-backend": {
+"stars": 1,
+"last_activity": "2026-02-24T14:01:05.132Z",
+"license": null,
+"desc": ""
+},
+"vbe/moodlet": {
+"stars": 1,
+"last_activity": "2026-02-27T14:41:08.884Z",
+"license": null,
+"desc": ""
+},
+"jbosse3/excel2moodle": {
+"stars": 1,
+"last_activity": "2026-06-04T13:14:21.846Z",
+"license": null,
+"desc": ""
+},
+"kevin.solovjov/realms-of-exether": {
+"stars": 13,
+"last_activity": "2026-09-30T21:19:11.474Z",
+"license": null,
+"desc": ""
+},
+"gitlab-com/infra-standards/hackystack": {
+"stars": 10,
+"last_activity": "2026-06-01T22:00:01.062Z",
+"license": null,
+"desc": "HackyStack provides the web UI and API for managing your infrastructure. Created by Jeff Martin. Powers the GitLab Sandbox Cloud https://about.gitlab.com/handbook/infrastructure-standards/realms/sandbox/"
+},
+"saxionnl/42/lms42": {
+"stars": 10,
+"last_activity": "2026-10-06T13:54:14.381Z",
+"license": null,
+"desc": "Learning Management System for the Associate degree Software Development at Saxion. "
+},
+"ones-ai/eval-quant-llms": {
+"stars": 7,
+"last_activity": "2024-09-13T06:03:23.204Z",
+"license": null,
+"desc": ""
+},
+"Taro94/realms": {
+"stars": 5,
+"last_activity": "2026-10-05T13:20:05.694Z",
+"license": null,
+"desc": ""
+},
+"itm301lms/lms-f2": {
+"stars": 4,
+"last_activity": "2026-09-02T15:52:12.162Z",
+"license": null,
+"desc": ""
+},
+"rogs/forge-llm": {
+"stars": 4,
+"last_activity": "2025-07-31T01:17:27.436Z",
+"license": null,
+"desc": "forge-llm is an Emacs package that integrates Large Language Models (LLMs) with Forge, enhancing the pull request (PR) workflow for GitHub and GitLab users. It automates PR description generation by analyzing git diffs a"
+},
+"tangibleai/community/convohub": {
+"stars": 4,
+"last_activity": "2026-03-13T16:06:17.880Z",
+"license": null,
+"desc": "Django application to build and maintain chatbots that combine the best of LLMs and rule-based engines to truly assist your users instead of manipulating them."
+},
+"devolved-ai1/institutional-ai-developer-version": {
+"stars": 3,
+"last_activity": "2025-06-10T19:16:27.168Z",
+"license": null,
+"desc": "\r The Institutional AI LLM Fine-Tuning Developer Version is an advanced AI framework designed for fine-tuning Large Language Models (LLMs) at an institutional level. It enables research institutions, enterprises, and AI "
+},
+"reswild/opigno-lms-d10": {
+"stars": 3,
+"last_activity": "2024-07-16T15:15:06.474Z",
+"license": null,
+"desc": "Drupal 10 version of Opigno LMS"
+},
+"olatorg/openolat-starter": {
+"stars": 3,
+"last_activity": "2026-09-17T09:27:16.079Z",
+"license": null,
+"desc": "OpenOlat Starter is an extension to the open source learning managements system (LMS) OpenOlat."
+},
+"LMSAL_HUB/iris_hub/irispy-lmsal": {
+"stars": 3,
+"last_activity": "2025-08-22T20:28:15.884Z",
+"license": null,
+"desc": "Moved to https://github.com/LM-SAL/irispy\r \r Please open issues or pull requests there."
+},
+"particify/dev/foss/arsnova-lms-connector": {
+"stars": 3,
+"last_activity": "2022-09-12T02:16:35.091Z",
+"license": null,
+"desc": ""
+},
+"MagmaTV/magmatv": {
+"stars": 3,
+"last_activity": "2026-02-16T08:19:49.387Z",
+"license": null,
+"desc": "Command-line tool for managing and playing television series and films from RSS feeds. "
+},
+"cmsa/manifest-driven-llms": {
+"stars": 2,
+"last_activity": "2026-08-20T17:01:36.859Z",
+"license": null,
+"desc": ""
+},
+"toxy4ny/redteam-ai-benchmark": {
+"stars": 2,
+"last_activity": "2026-07-13T14:31:15.883Z",
+"license": null,
+"desc": "Red Team AI Benchmark: Evaluating LLMs for authorized offensive-security tasks. Red Team AI Benchmark is a CLI model-evaluation benchmark. It measures how LLMs understand and respond to red-team questions and security sc"
+},
+"integrated-semantics/flexible-graphrag": {
+"stars": 2,
+"last_activity": "2026-04-10T23:06:10.316Z",
+"license": null,
+"desc": "Flexible GraphRAG: Python, LlamaIndex (LangChain also coming) Docker Compose: 8 Property Graph dbs, 3 RDF graph dbs, 10 Vector dbs, OpenSearch, Elasticsearch, Alfresco. 13 data sources (9 auto-sync), KG auto-building, RD"
+},
+"KudoAI/bravegpt": {
+"stars": 2,
+"last_activity": "2026-09-07T16:57:00.413Z",
+"license": null,
+"desc": "AI chat & search summaries in Brave Search, powered by the latest LLMs"
+},
+"amrron/flmsg-viewer": {
+"stars": 2,
+"last_activity": "2025-11-30T16:32:30.683Z",
+"license": null,
+"desc": ""
+},
+"mavit/lms-pipewire": {
+"stars": 2,
+"last_activity": "2026-08-03T13:26:52.011Z",
+"license": null,
+"desc": "`lms-pipewire` is a plugin for [Lyrion Music Server](https://lyrion.org/).  You can use it to route system audio from a [PipeWire](https://pipewire.org/) source to LMS."
+},
+"Tayzen/ezchatbot": {
+"stars": 2,
+"last_activity": "2024-08-18T08:06:51.249Z",
+"license": null,
+"desc": "A Python library to make the creation of a chatbot easy (thanks to LLMs and ollama)."
+},
+"thinh.nguyenbk2018/lms": {
+"stars": 2,
+"last_activity": "2022-09-25T17:33:18.810Z",
+"license": null,
+"desc": "\u0110CLV "
+},
+"LMSAL_HUB/aia_hub/hekpy": {
+"stars": 2,
+"last_activity": "2020-06-15T17:58:51.366Z",
+"license": null,
+"desc": "Tools for working with the [Heliophysics Event Knowledgebase (HEK)](https://www.lmsal.com/hek/)"
+},
+"IUT-2019/cinetech": {
+"stars": 2,
+"last_activity": "2018-10-20T06:14:52.555Z",
+"license": null,
+"desc": "R\u00e9alisation d'un site de films en Web serveur"
+},
+"mangebanane/Projet_films_php": {
+"stars": 2,
+"last_activity": "2015-10-19T20:06:04.439Z",
+"license": null,
+"desc": ""
+},
+"RaithChr/pv-energieoptimierung": {
+"stars": 1,
+"last_activity": "2026-10-05T14:00:00.058Z",
+"license": null,
+"desc": "Preisgesteuerte PV- und Batterieoptimierung f\u00fcr Fronius GEN24 und SMA. L\u00e4dt den Speicher bei g\u00fcnstigen dynamischen Strompreisen (smartENERGY, 15-Minuten-Tarif) aus dem Netz und h\u00e4lt ihn bei teuren Stunden \u2013 mit Ber\u00fccksic"
+},
+"xscodeid/pos-cli": {
+"stars": 1,
+"last_activity": "2026-07-29T06:42:31.270Z",
+"license": null,
+"desc": "POS CLI is a terminal-based Point of Sale application, designed as a *tool* for AI Agents (LLMs). Lightweight, fast, *single binary*, no external dependencies."
+},
+"comparedge/llm-cost-mcp": {
+"stars": 1,
+"last_activity": "2026-07-12T15:41:52.379Z",
+"license": null,
+"desc": "MCP server: current per-million-token rates for 69 LLMs and the cost math"
+},
+"surfshack/screenshot-testing-oss": {
+"stars": 1,
+"last_activity": "2026-06-23T20:13:14.609Z",
+"license": null,
+"desc": "Reusable Playwright screenshot-testing pattern for ASP.NET Core, with animation filmstrip capture."
+},
+"napkingcompany-group/brand-manifesto": {
+"stars": 1,
+"last_activity": "2026-07-24T18:22:30.589Z",
+"license": null,
+"desc": "Public brand corpus for The Napkin Company \u2014 manifesto, catalog, voice rules, llms.txt. CC0 licensed."
+},
+"phyloinformatics/introcompsci2": {
+"stars": 5,
+"last_activity": "2026-08-14T00:22:05.889Z",
+"license": null,
+"desc": "This GitLab page is intended primarily for the instructor, TAs, and students of UNC Charlotte's undergraduate class ITSC-1213 (\"Introduction to Computer Science II, Summer 2026\"). ITSC-1213 reinforces computational think"
+},
+"koplacitgroup/kesproject": {
+"stars": 2,
+"last_activity": "2019-09-06T13:47:36.468Z",
+"license": null,
+"desc": "KES Project is a project to help students of different schools in Czech republic make the assessment of their teachers."
+},
+"st.stolz/Peer-Grading-Tool": {
+"stars": 1,
+"last_activity": "2023-06-28T07:59:07.975Z",
+"license": null,
+"desc": "Peer-Grading Tool is a plugin for Google Spreadsheets. It is intended for educational use cases where students should grade each other in a peer assessment process. The tool was kept simple and flexible to adapt fast whe"
+},
+"ahmedfahad04/EmPower": {
+"stars": 0,
+"last_activity": "2026-10-05T06:53:06.172Z",
+"license": null,
+"desc": "EmPower is a specialized learning tool for autistic children \ud83c\udf1f. Instructors create tailored lessons \ud83d\udcda and assessments \ud83d\udcdd, while students access engaging content \ud83e\udde9. We focus on behavior, speech, and social interaction \ud83d\udcac, f"
+},
+"muhammed_abdullah_coder/smart-campus-management-system": {
+"stars": 0,
+"last_activity": "2026-09-13T07:52:47.977Z",
+"license": null,
+"desc": "A professional student performance management platform by Maqsad Tech for managing classes, students, assessments, marks, academic queries, and performance insights."
+},
+"adeloat2/introcompsci2": {
+"stars": 0,
+"last_activity": "2026-06-23T16:27:17.263Z",
+"license": null,
+"desc": "This private GitLab page is intended for the instructor, TAs, and students of UNC Charlotte's undergraduate class ITSC-1213 (\"Introduction to Computer Science II, Summer 2026\"). ITSC 1213 reinforces computational thinkin"
+},
+"ivandikic22/studentassessment": {
+"stars": 0,
+"last_activity": "2026-06-09T14:57:31.552Z",
+"license": null,
+"desc": ""
+},
+"mannyhuenchunir/introcompsci2": {
+"stars": 0,
+"last_activity": "2026-06-03T05:49:13.741Z",
+"license": null,
+"desc": "This private GitLab page is intended for the instructor, TAs, and students of UNC Charlotte's undergraduate class ITSC-1213 (\"Introduction to Computer Science II, Summer 2026\"). ITSC 1213 reinforces computational thinkin"
+},
+"ahall145/introcompsci2": {
+"stars": 0,
+"last_activity": "2026-05-21T04:12:46.129Z",
+"license": null,
+"desc": "This private GitLab page is intended for the instructor, TAs, and students of UNC Charlotte's undergraduate class ITSC-1213 (\"Introduction to Computer Science II, Summer 2026\"). ITSC 1213 reinforces computational thinkin"
+},
+"ylbermudez/introcompsci2": {
+"stars": 0,
+"last_activity": "2026-05-26T17:25:04.959Z",
+"license": null,
+"desc": "This private GitLab page is intended for the instructor, TAs, and students of UNC Charlotte's undergraduate class ITSC-1213 (\"Introduction to Computer Science II, Summer 2026\"). ITSC 1213 reinforces computational thinkin"
+},
+"takitajwar17/Project-Skedule-4-0": {
+"stars": 0,
+"last_activity": "2026-03-19T14:56:45.512Z",
+"license": null,
+"desc": "Skedule is a C# desktop application utilizing the .NET framework, designed to centralize academic resources for students, featuring modules for routine management, announcements, event promotion, quiz/exam tracking, assi"
+},
+"longzheng0315/Analytics-of-Campus-Consumption-Behavior-and-Student-Economic-Assessment-via-Smart-Card-Data": {
+"stars": 0,
+"last_activity": "2025-11-07T08:26:52.514Z",
+"license": null,
+"desc": "\u6821\u56ed\u6d88\u8d39\u884c\u4e3a\u5206\u6790\u4e0e\u5b66\u751f\u7ecf\u6d4e\u8bc4\u4f30\u9879\u76ee  \u9879\u76ee\u6982\u8ff0 \u672c\u9879\u76ee\u901a\u8fc7\u667a\u80fd\u5361\u6570\u636e\u5bf9\u6821\u56ed\u6d88\u8d39\u884c\u4e3a\u8fdb\u884c\u5206\u6790\uff0c\u5e76\u5bf9\u5b66\u751f\u7ecf\u6d4e\u72b6\u51b5\u8fdb\u884c\u8bc4\u4f30\u3002"
+},
+"kamanga20/Junior-School": {
+"stars": 0,
+"last_activity": "2025-10-05T19:16:27.184Z",
+"license": null,
+"desc": "Junior School is a custom Frappe application that extends the core Frappe Education. It provides comprehensive tools for scheduling, attendance tracking, assessment management, and automated student lifecycle processes, "
+},
+"rutwikkm23078/student-crud-assessment": {
+"stars": 0,
+"last_activity": "2025-08-29T02:47:57.813Z",
+"license": null,
+"desc": ""
+},
+"samrangsambath/studentmagament_php": {
+"stars": 0,
+"last_activity": "2025-06-29T09:57:18.666Z",
+"license": null,
+"desc": ""
+},
+"Sardor0801/student-assessment-system": {
+"stars": 0,
+"last_activity": "2025-05-18T16:35:30.056Z",
+"license": null,
+"desc": ""
+},
+"Sukki/student-assessment": {
+"stars": 0,
+"last_activity": "2024-04-25T00:11:31.729Z",
+"license": null,
+"desc": ""
+},
+"danielstanchev/student-course-assessment-system": {
+"stars": 0,
+"last_activity": "2023-08-01T14:52:32.513Z",
+"license": null,
+"desc": ""
+},
+"santoshgunashekar/gt_school": {
+"stars": 0,
+"last_activity": "2023-06-05T09:19:33.538Z",
+"license": null,
+"desc": "A tik tok like application that allows students take study and take assessments"
+},
+"ayeshanadeem/mid-project_student-assessment-project": {
+"stars": 0,
+"last_activity": "2024-06-12T10:25:10.797Z",
+"license": null,
+"desc": ""
+},
+"b08waffles/chapteronelibrary-webdev": {
+"stars": 0,
+"last_activity": "2022-06-12T11:21:26.718Z",
+"license": null,
+"desc": "TAFE QLD, Develop Web Based Apps and Integrate Database With A Website students assessment semester 1, current date 10/11/2021.  "
+},
+"tkvarun35/examform": {
+"stars": 0,
+"last_activity": "2022-01-14T11:12:08.066Z",
+"license": null,
+"desc": "I undertook a project utilizing AngularJS to develop a comprehensive exam management system. This system efficiently organized and administered exams for students while empowering faculty members to define question paper"
+},
+"0x000004d1/backend-weekly-assessment-1": {
+"stars": 0,
+"last_activity": "2021-11-22T15:59:41.191Z",
+"license": null,
+"desc": "first week assessment test for backend student glints academy intensive bootcamp batch 15"
+},
+"learn-student-work/prototype": {
+"stars": 0,
+"last_activity": "2021-07-12T22:21:32.720Z",
+"license": null,
+"desc": "This repository contains prototype files for testing the feasibility of a learn-integrated CI/CD native assessment grading flow for student work."
+},
+"sreejish_lal/Peer-Grading-Tool": {
+"stars": 0,
+"last_activity": "2021-06-05T18:55:36.583Z",
+"license": null,
+"desc": "Peer-Grading Tool is a plugin for Google Spreadsheets. It is intended for educational use cases where students should grade each other in a peer assessment process. The tool was kept simple and flexible to adapt fast whe"
+},
+"vinothkumar3/assessmentquestion-studentapp": {
+"stars": 0,
+"last_activity": "2020-11-13T08:45:21.731Z",
+"license": null,
+"desc": ""
+},
+"amirtharajan/online-assessment-application": {
+"stars": 0,
+"last_activity": "2020-04-15T17:58:50.852Z",
+"license": null,
+"desc": "This application will help KPRIET  to conduct the online assessment and test for the students"
+},
+"gowthamarvind03/students-assessment": {
+"stars": 0,
+"last_activity": "2019-12-30T06:55:27.946Z",
+"license": null,
+"desc": ""
+},
+"ROHIT513/online-quiz-system": {
+"stars": 0,
+"last_activity": "2019-11-14T03:17:28.366Z",
+"license": null,
+"desc": "Student able to take online test. And professor able to see all register student  data and able to add questions, and change marks, and view questions, and also student see your all assessment result and many more."
+},
+"dapaspei/sat": {
+"stars": 0,
+"last_activity": "2021-10-17T09:03:12.102Z",
+"license": null,
+"desc": "Skills Development Tool is a tool to manage projects and challenges and get the assessment for students."
+},
+"cjaikaeo/elabsheet": {
+"stars": 14,
+"last_activity": "2026-09-19T00:14:57.355Z",
+"license": null,
+"desc": "Task authoring and automatic grading system for e-learning"
+},
+"HttpAnimations/kdenlive-auto-colour": {
+"stars": 1,
+"last_activity": "2026-09-17T22:03:54.822Z",
+"license": null,
+"desc": "One-click automatic colour grading, white balance and colour correction for Kdenlive projects"
+},
+"sangsiri/elabsheet": {
+"stars": 1,
+"last_activity": "2019-01-08T10:07:48.281Z",
+"license": null,
+"desc": "Task authoring and automatic grading system for e-learning"
+},
+"elizeubarbosaabreu/leitor-de-gabaritos": {
+"stars": 0,
+"last_activity": "2026-09-23T21:32:34.080Z",
+"license": null,
+"desc": "Data for the main F-Droid repository at https://f-droid.orgEnglish  Leitor de Gabaritos uses computer vision (OMR) to read hand-filled answer sheets and grade exams automatically \u2014 no scanner or special filled-box marker"
+},
+"professorKrish/laravel-exam-portal": {
+"stars": 0,
+"last_activity": "2026-06-15T17:24:51.423Z",
+"license": null,
+"desc": "A comprehensive Online Exam Management System designed for educational institutions. Features include secure student login, timed multiple-choice questions, automatic grading, and comprehensive result generation. Include"
+},
+"KiseKi7k/elabsheet": {
+"stars": 0,
+"last_activity": "2026-01-12T03:29:52.543Z",
+"license": null,
+"desc": "Task authoring and automatic grading system for e-learning"
+},
+"apo5698/ags-cli": {
+"stars": 0,
+"last_activity": "2024-02-21T20:51:04.201Z",
+"license": null,
+"desc": "A simple automatic grading system for CSC116@NCSU"
+},
+"apo5698/helli-grading": {
+"stars": 0,
+"last_activity": "2024-02-21T20:50:56.921Z",
+"license": null,
+"desc": "A web-based automatic grading system (for CSC 116@NCSU)."
+},
+"gaia-x/data-infrastructure-federation-services/deployment-scenario/renovate": {
+"stars": 0,
+"last_activity": "2024-07-10T08:45:40.411Z",
+"license": null,
+"desc": "Renovate for GXFS-FR projects\r \r This project takes care of maintaining gxfs-fr projects dependencies up-to-date with Renovate.\r It is configured (on gitlab.com) as a scheduled CI/CD job to regularly scan through all to "
+},
+"ovsyanka83/autograder": {
+"stars": 0,
+"last_activity": "2022-08-11T16:20:21.367Z",
+"license": null,
+"desc": "Automatic assignment grading for instructor use in programming courses"
+},
+"kasars/vitsord": {
+"stars": 0,
+"last_activity": "2025-10-01T19:24:51.910Z",
+"license": null,
+"desc": "Hopefully this application will help teachers with grading papers by automatically calculating the grade based on the points the student has received in the test.\r You enter the lowest passing grade and the highest grade"
+},
+"moy/scale": {
+"stars": 0,
+"last_activity": "2021-11-19T17:54:24.944Z",
+"license": null,
+"desc": "Semi-automatic grading for lab works. Put grading annotations in the source file, and the script computes the sum."
+},
+"cnn2019/elabsheet": {
+"stars": 0,
+"last_activity": "2020-09-30T05:32:53.575Z",
+"license": null,
+"desc": "Task authoring and automatic grading system for e-learning"
+},
+"marius.micluta-campeanu/computer-vision-automatic-grading-multiple-choice": {
+"stars": 0,
+"last_activity": "2020-04-20T10:25:43.990Z",
+"license": null,
+"desc": ""
+},
+"jmazur2/automatic-sakai-homework-opener": {
+"stars": 0,
+"last_activity": "2020-04-19T15:04:05.013Z",
+"license": null,
+"desc": "A short batch script to allow for easier grading of Sakai submissions. It will automatically open student submissions so you don't have to deal with Sakai's interface."
+},
+"francoisjacquet/Grading_Scale_Generation": {
+"stars": 0,
+"last_activity": "2026-04-27T17:37:48.333Z",
+"license": null,
+"desc": "RosarioSIS plugin to generate the Grading Scale. Comes handy if your Grading Scale counts with hundreds of grades, to generate it automatically instead of creating grades one by one."
+},
+"siwat1/elabsheet": {
+"stars": 0,
+"last_activity": "2019-06-13T12:30:00.285Z",
+"license": null,
+"desc": "Task authoring and automatic grading system for e-learning"
+},
+"erelsgl/ariel-cpp-5779-homework": {
+"stars": 0,
+"last_activity": "2020-02-27T14:10:28.595Z",
+"license": null,
+"desc": "Automatic grading files for homework in C++ course, year 5779"
+},
+"up11/elabsheet": {
+"stars": 0,
+"last_activity": "2018-11-07T14:07:18.451Z",
+"license": null,
+"desc": "Task authoring and automatic grading system for e-learning"
+},
+"araya.f/elabsheet": {
+"stars": 0,
+"last_activity": "2018-11-03T14:49:18.590Z",
+"license": null,
+"desc": "Task authoring and automatic grading system for e-learning"
+},
+"tilowiklund/zeppelingrade": {
+"stars": 0,
+"last_activity": "2017-09-18T18:36:39.836Z",
+"license": null,
+"desc": "Simple testing framework using Apache Zeppelin, to be used as component of automatic grading system"
+},
+"kumar-sachin52/neural-asag": {
+"stars": 0,
+"last_activity": "2020-06-30T00:12:07.376Z",
+"license": null,
+"desc": "Implementation of Neural Models of 'Automatic Short Answer Grading' based on Siamese LSTMs"
+},
+"tepl/uol-autograder": {
+"stars": 3,
+"last_activity": "2021-03-23T17:36:36.777Z",
+"license": null,
+"desc": ""
+},
+"danielloera/pac": {
+"stars": 1,
+"last_activity": "2019-04-30T14:52:24.494Z",
+"license": null,
+"desc": "Python Autograder for Canvas"
+},
+"cogumbreiro/autograder-rkt": {
+"stars": 1,
+"last_activity": "2021-01-29T18:21:16.446Z",
+"license": null,
+"desc": "Runs a RackUnit test and produces a GradeScope-compatible JSON file."
+},
+"ClarksonUniversity/autograder/autograder-gwt": {
+"stars": 1,
+"last_activity": "2019-04-14T19:47:37.840Z",
+"license": null,
+"desc": "Clarkson University Autograder web application"
+},
+"gt404/assignment2": {
+"stars": 0,
+"last_activity": "2026-06-20T16:30:53.437Z",
+"license": null,
+"desc": "HKU C++ assignment: a Matrix class and Gaussian-elimination equation solver with a self-contained Moodle VPL autograder."
+},
+"cderda/cargogetgraded": {
+"stars": 0,
+"last_activity": "2026-07-28T16:13:06.488Z",
+"license": null,
+"desc": "Step-level algebra autograder (Python/SymPy) \u2192 teacher Excel. Built for K\u201312 classrooms.\r \r Math teachers save hours grading without losing insight. \r Carriage: Piloting Fall 2026"
+},
+"jldowns-usna/grist-docker-autograder": {
+"stars": 0,
+"last_activity": "2025-12-10T19:24:34.385Z",
+"license": null,
+"desc": ""
+},
+"dhanidwinawans12/autograder-python-template": {
+"stars": 0,
+"last_activity": "2025-06-16T09:21:52.155Z",
+"license": null,
+"desc": ""
+},
+"Bellande-Architecture-Mechanism-Research-Innovations-Center/coq_autograder": {
+"stars": 0,
+"last_activity": "2025-02-23T23:14:09.531Z",
+"license": null,
+"desc": ""
+},
+"JZJisawesome/autograderv2": {
+"stars": 0,
+"last_activity": "2024-07-29T01:53:07.274Z",
+"license": null,
+"desc": "Autograder for ECE 350 :). Mirror of https://github.com/JZJisawesome/autograderv2."
+},
+"fmorriso/python-codehs-autograder-paralleograms": {
+"stars": 0,
+"last_activity": "2024-04-22T12:25:57.663Z",
+"license": null,
+"desc": ""
+},
+"stchang/autograder-rkt": {
+"stars": 0,
+"last_activity": "2023-10-03T18:03:52.035Z",
+"license": null,
+"desc": "Runs a RackUnit test and produces a GradeScope-compatible JSON file."
+},
+"ovsyanka83/autograder_gui": {
+"stars": 0,
+"last_activity": "2022-08-11T16:20:19.294Z",
+"license": null,
+"desc": "Autograder graphical user interface"
+},
+"tommynanny/AutoGrader": {
+"stars": 0,
+"last_activity": "2022-08-10T03:12:52.824Z",
+"license": null,
+"desc": ""
+},
+"kmarquart/gitlab-education-svs-autograder-scripts": {
+"stars": 0,
+"last_activity": "2022-09-09T19:22:39.687Z",
+"license": null,
+"desc": ""
+},
+"xomex/moodle-autograder": {
+"stars": 0,
+"last_activity": "2023-04-28T09:01:16.779Z",
+"license": null,
+"desc": ""
+},
+"simberman/jest-autograder": {
+"stars": 0,
+"last_activity": "2022-11-22T00:22:21.509Z",
+"license": null,
+"desc": ""
+},
+"tepl/UoL-Autograder-Exercises": {
+"stars": 0,
+"last_activity": "2020-11-24T17:04:15.382Z",
+"license": null,
+"desc": ""
+},
+"wygzero/programming-language-autograder": {
+"stars": 0,
+"last_activity": "2020-04-26T04:13:42.642Z",
+"license": null,
+"desc": "This project is for CS4121 MTU"
+},
+"EricKirschenmann/JavaAutoGrader": {
+"stars": 0,
+"last_activity": "2018-08-28T22:02:47.490Z",
+"license": null,
+"desc": "Create basic Java Auto-Grader using C++ and Unix Scripts"
+},
+"jdkula8/CodePracticeHelper": {
+"stars": 0,
+"last_activity": "2018-02-10T09:10:51.310Z",
+"license": null,
+"desc": "A simple autograder (in Java) that allows testing of student Java code generally, and gives the student tips about what their solution should look like (looks for methods, parameters/types, and return type, as well as te"
+},
+"ClarksonUniversity/autograder/rich-text-editor": {
+"stars": 0,
+"last_activity": "2018-03-24T23:33:15.005Z",
+"license": null,
+"desc": "The Autograder shall support any markup which this editor produces."
+},
+"matthew-whalley/japanese-revision": {
+"stars": 1,
+"last_activity": "2024-02-16T21:12:35.107Z",
+"license": null,
+"desc": "A site containing lessons and content for learning japanese, also a spaced repetition tool for learning japanese kanjia and vocabulary"
+},
+"brayandoria/governor-salesforce": {
+"stars": 0,
+"last_activity": "2026-10-05T21:08:56.302Z",
+"license": null,
+"desc": "Salesforce certification study app with SM-2 spaced repetition, built on the Salesforce Platform (Apex, LWC, Flow)"
+},
+"AlexeyVolnov/SpacedRepetitionSystem": {
+"stars": 0,
+"last_activity": "2026-10-05T05:31:16.572Z",
+"license": null,
+"desc": ""
+},
+"AlexeyVolnov/SpacedRepetitionSystem-deletion_scheduled-86849476": {
+"stars": 0,
+"last_activity": "2026-09-24T11:15:50.077Z",
+"license": null,
+"desc": ""
+},
+"AlexeyVolnov/SpacedRepetitionSystem-deletion_scheduled-86849276": {
+"stars": 0,
+"last_activity": "2026-09-24T11:11:58.120Z",
+"license": null,
+"desc": ""
+},
+"AlexeyVolnov/SpacedRepetitionSystem-deletion_scheduled-86849209": {
+"stars": 0,
+"last_activity": "2026-09-24T11:05:21.471Z",
+"license": null,
+"desc": ""
+},
+"AlexeyVolnov/SpacedRepetitionSystem-deletion_scheduled-86848938": {
+"stars": 0,
+"last_activity": "2026-09-24T11:00:41.975Z",
+"license": null,
+"desc": ""
+},
+"srira11/rebmemer": {
+"stars": 0,
+"last_activity": "2026-09-20T05:43:35.584Z",
+"license": null,
+"desc": "An offline PWA for Spaced Repetition practice"
+},
+"aa22396584/polyglot": {
+"stars": 0,
+"last_activity": "2026-09-26T02:15:00.575Z",
+"license": null,
+"desc": "Spaced-repetition Japanese / multi-language trainer for Claude Code, Codex and Gemini workflows (FSRS-5 lt CLI)."
+},
+"vputewestvie/linguadeck": {
+"stars": 0,
+"last_activity": "2026-09-07T21:11:38.931Z",
+"license": null,
+"desc": "LinguaDeck - flashcards for English with spaced repetition (SM-2). Next.js, LocalStorage."
+},
+"ejimm363/ielts-study-os": {
+"stars": 0,
+"last_activity": "2026-09-13T10:45:25.456Z",
+"license": null,
+"desc": "Independent open-source IELTS Study OS: fundamentals, all four skills, practice, AI coaching (optional), deterministic scoring, spaced-repetition vocabulary, and computer-delivered mock exams. Static-first (Next.js expor"
+},
+"bois1616/audiolex": {
+"stars": 0,
+"last_activity": "2026-08-27T12:24:27.642Z",
+"license": null,
+"desc": "Data f# AudioLex  H\u00f6rtraining f\u00fcr Wortverst\u00e4ndnis. Die App spielt ein Wort, man ordnet es zu, und der Abstand bis zur Wiederholung richtet sich danach, wie gut es sa\u00df \u2014 Spaced Repetition wie bei Anki, aber mit Klang als "
+},
+"lapnitocorp/all-country-flags-quiz-learn-254-flags-capitals": {
+"stars": 0,
+"last_activity": "2026-08-18T08:15:07.633Z",
+"license": null,
+"desc": "All Country Flags: Learn 254 \u2014 offline flag quiz and learning app with spaced repetition, 35 similar-flag groups, capitals mode, world heat map and 254 countries + territories. No account, no tracking. By lapnito.cz s.r."
+},
+"jontue.bkyc/multiplication-mastery": {
+"stars": 0,
+"last_activity": "2026-06-03T02:13:57.310Z",
+"license": null,
+"desc": "GED-focused multiplication mastery app with spaced repetition, times tables, and step-by-step GED learn mode"
+},
+"andreasjansson/anki": {
+"stars": 0,
+"last_activity": "2026-05-21T04:41:37.352Z",
+"license": null,
+"desc": "Anki is a smart spaced repetition flashcard program"
+},
+"nastaso/cloudcertprep": {
+"stars": 0,
+"last_activity": "2026-05-15T23:39:34.175Z",
+"license": null,
+"desc": "Free, open-source AWS certification practice exams. CloudCertPrep ships 1,050+ AWS Cloud Practitioner (CLF-C02) questions, full-length mock exams, domain practice with adaptive spaced repetition, and progress tracking. N"
+},
+"jontue.bkyc/sc-300-identity-exam-prep": {
+"stars": 0,
+"last_activity": "2026-07-26T21:36:10.550Z",
+"license": null,
+"desc": "Free, open-source SC-300 Microsoft Identity and Access Administrator exam prep app \u2014 335+ questions (MC + PBQs), spaced repetition, readiness gauge, dark/light mode, PWA. Built by an IAM practitioner actively studying fo"
+},
+"russell.powers45/cloud-architect-trainerv2": {
+"stars": 0,
+"last_activity": "2026-04-15T10:07:59.008Z",
+"license": null,
+"desc": "AI-powered Cloud Architect LMS \u2014 dual-cloud AWS+GCP certification training with gamification, spaced repetition, quests, leaderboard, and cert pathway visualizer\r \r https://cloud-architect-trainerv2-410866387199.us-centr"
+},
+"d33tah/inkstone": {
+"stars": 0,
+"last_activity": "2026-05-17T19:25:54.948Z",
+"license": null,
+"desc": "Chinese character flashcard app with Anki SM-2 spaced repetition (WASM), stroke recognition. Vite   Preact   TypeScript."
+},
+"voxos.ai/learn-anything": {
+"stars": 0,
+"last_activity": "2026-03-15T17:30:23.824Z",
+"license": null,
+"desc": "Turn any AI coding agent into your personal tutor. One file, spaced repetition, visual exercises, adaptive difficulty. Works with Claude Code, Cursor, Windsurf.\r https://srs.voxos.ai/"
+},
+"kratiuk/obsidian-spaced-repetition-fork": {
+"stars": 0,
+"last_activity": "2026-01-26T22:59:48.209Z",
+"license": null,
+"desc": ""
+},
+"elsaspeakvietnam/3000-tu-vung-tieng-anh-thong-dung-oxford": {
+"stars": 0,
+"last_activity": "2025-11-15T12:08:00.385Z",
+"license": null,
+"desc": "3000 t\u1eeb v\u1ef1ng ti\u1ebfng anh th\u00f4ng d\u1ee5ng oxford >> https://vn.elsaspeak.com/3000-tu-vung-tieng-anh-thong-dung-oxford/\r \ud83d\udcd8 3000 T\u1eea V\u1ef0NG TI\u1ebeNG ANH TH\u00d4NG D\u1ee4NG OXFORD \u2013 C\u1ea8M NANG KH\u00d4NG TH\u1ec2 B\u1ece QUA!\r B\u1ea1n c\u00f3 bi\u1ebft b\u1ed9 t\u1eeb v\u1ef1ng Oxford 3000 "
+},
+"dev-pm/vocabuilder": {
+"stars": 0,
+"last_activity": "2025-10-30T19:23:25.891Z",
+"license": null,
+"desc": "Help memorizing items (words, phrases etc.) via spaced repetition method"
+},
+"sxvxmx/remi": {
+"stars": 0,
+"last_activity": "2025-06-14T19:27:28.946Z",
+"license": null,
+"desc": "Simple telegram reminder with spaced repetition function."
+},
+"datquangtran05/Korean-Easy": {
+"stars": 0,
+"last_activity": "2025-05-12T09:02:27.839Z",
+"license": null,
+"desc": "My first static website project about making an application for learning language with \"spaced repetition\" method"
+},
+"joaoseckler/repetition": {
+"stars": 0,
+"last_activity": "2025-10-21T16:19:25.070Z",
+"license": null,
+"desc": "Webapp for spaced repetition of music repertoire"
+},
+"tnalabs/khel": {
+"stars": 0,
+"last_activity": "2023-06-29T23:03:44.209Z",
+"license": null,
+"desc": "Generate flashcards and uses the principle of spaced repetition to optimize learning with AI aided reviews."
+},
+"mount.ai/obsidian-spaced-repetition": {
+"stars": 0,
+"last_activity": "2023-05-22T18:51:59.375Z",
+"license": null,
+"desc": "Fight the forgetting curve by reviewing flashcards & entire notes on Obsidian.md"
+},
+"wwwxkz/PortunholApp": {
+"stars": 0,
+"last_activity": "2022-06-07T14:17:26.551Z",
+"license": null,
+"desc": "Multiplatform language learning tool. Spaced-repetition premise and gamification as rank, points, and friends."
+},
+"saiteki-kai/japanese-vocabulary": {
+"stars": 0,
+"last_activity": "2022-06-06T19:28:37.212Z",
+"license": null,
+"desc": "Mobile app for learning Japanese vocabulary through a spaced repetition method. The user can review the vocabularies and evaluate himself."
+},
+"gamedev-cuni-cz/pcg/minecraft-terrain": {
+"stars": 2,
+"last_activity": "2026-03-29T18:29:50.538Z",
+"license": null,
+"desc": "Task for the NAIL123 Procedural Content Generation in Games course at MFF UK.\r Create terrain generator for Minecraft."
+},
+"human-intelligence/enterprise/production/quickstartcourse": {
+"stars": 1,
+"last_activity": "2026-10-06T05:06:07.852Z",
+"license": null,
+"desc": "A private, local ai-powered courses generator. Generate, Learn, Play, Edit & Save courses localy (as simple Markdown .md files)."
+},
+"markovvn1-iu/telegram-bots/cigen_bot": {
+"stars": 1,
+"last_activity": "2021-06-03T15:24:01.666Z",
+"license": null,
+"desc": ""
+},
+"timohavol/concurrent-data-seeding-pipeline": {
+"stars": 0,
+"last_activity": "2026-10-03T00:25:31.282Z",
+"license": null,
+"desc": "Shpp Backend Java course, practical 4 - Multithreaded producer/consumer generator that bulk-loads 3M rows into PostgreSQL"
+},
+"mff_rolloj/minecraft-terrain-wand-crafter-llm": {
+"stars": 0,
+"last_activity": "2026-06-09T19:48:45.533Z",
+"license": null,
+"desc": "Task for the NAIL123 Procedural Content Generation in Games course at MFF UK. Create terrain generator for Minecraft, use LLMs."
+},
+"sashakva123-jpg/startup-attribute-service": {
+"stars": 0,
+"last_activity": "2026-04-01T03:59:08.678Z",
+"license": null,
+"desc": "\u0421\u0435\u0440\u0432\u0438\u0441 \u0434\u043b\u044f \u0433\u0435\u043d\u0435\u0440\u0430\u0446\u0438\u0438 \u0441\u043b\u0443\u0447\u0430\u0439\u043d\u044b\u0445 \u0430\u0442\u0440\u0438\u0431\u0443\u0442\u043e\u0432 \u0441\u0442\u0430\u0440\u0442\u0430\u043f\u043e\u0432, \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0430\u043d\u043d\u044b\u0439 \u0432 \u0440\u0430\u043c\u043a\u0430\u0445 \u0443\u0447\u0435\u0431\u043d\u043e\u0433\u043e \u0437\u0430\u0434\u0430\u043d\u0438\u044f (https://gitlab.com/advoronov/awesome-course/slop-startup-generator) \r \u0421\u0435\u0440\u0432\u0438\u0441 \u0438\u043c\u0438\u0442\u0438\u0440\u0443\u0435\u0442 \u0440\u0430\u0431\u043e\u0442\u0443 \u0433\u0435\u043d\u0435\u0440\u0430\u0442\u043e\u0440\u0430 \u0445\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043a \u0434\u043b\u044f \u043e\u0434\u043d\u043e"
+},
+"labex-labs/course-cover": {
+"stars": 0,
+"last_activity": "2025-11-01T02:51:38.378Z",
+"license": null,
+"desc": "LabEx Course Cover Generator"
+},
+"elliotvh/fcc-python-pw-generator": {
+"stars": 0,
+"last_activity": "2024-08-15T18:03:19.643Z",
+"license": null,
+"desc": "freeCodeCamp's \"Learn Regular Expressions by Building a Password Generator\" lesson -- part of the \"Scientific Computing with Python\" certification course."
+},
+"angeldgm/coursegeneratorai": {
+"stars": 0,
+"last_activity": "2024-05-31T15:57:32.396Z",
+"license": null,
+"desc": ""
+},
+"MarkusSecundus/minecraft-terrain": {
+"stars": 0,
+"last_activity": "2024-03-26T23:36:34.005Z",
+"license": null,
+"desc": "Task for the NAIL123 Procedural Content Generation in Games course at MFF UK. Create terrain generator for Minecraft."
+},
+"smacfarlane/boot_dev-maze": {
+"stars": 0,
+"last_activity": "2024-03-13T22:36:35.329Z",
+"license": null,
+"desc": "Python/TK Maze generator/solver built as part of boot.dev course."
+},
+"yyyyyyyuan/osx-serial-generator": {
+"stars": 0,
+"last_activity": "2023-08-10T09:40:15.557Z",
+"license": null,
+"desc": "Mac Serial Generator - Generate complete sets of Serial Numbers for OSX-KVM, Docker-OSX and of course, OpenCore."
+},
+"benjamin.verner/abc-puzzle-generator": {
+"stars": 0,
+"last_activity": "2023-03-16T11:29:04.941Z",
+"license": null,
+"desc": "Credit project for Programming in C++ course implementing generator for 'Easy as ABC' puzzles"
+},
+"mirvaim/rt-ratageneraattori": {
+"stars": 0,
+"last_activity": "2023-01-22T15:17:49.320Z",
+"license": null,
+"desc": ""
+},
+"CR-Lough/Generators_Iterators": {
+"stars": 0,
+"last_activity": "2022-09-16T13:35:22.005Z",
+"license": null,
+"desc": "Explores the differences between generators and iterators.\r \r UW PCE, Python Development Certificate. Course 2, Assignment 4."
+},
+"unvise/sqlite3-db-generator-coursework": {
+"stars": 0,
+"last_activity": "2022-05-14T22:12:36.816Z",
+"license": null,
+"desc": ""
+},
+"tiago138/meme-generator": {
+"stars": 0,
+"last_activity": "2021-12-02T19:19:02.893Z",
+"license": null,
+"desc": "Meme generator project from the Lern React course on Scrimba. "
+},
+"juand-ik/django-course-password-generator": {
+"stars": 0,
+"last_activity": "2021-05-26T21:07:46.029Z",
+"license": null,
+"desc": ""
+},
+"amookhsin/udemy-python-3-deep-dive-part-2": {
+"stars": 0,
+"last_activity": "2024-08-09T04:23:43.486Z",
+"license": null,
+"desc": "\u0645\u062e\u0632\u0646 \u062e\u0648\u062f\u0622\u0645\u0648\u0632 \r [Python 3: Deep Dive (Part 2 - Iteration, Generators) ](https://www.udemy.com/course/python-3-deep-dive-part-2/)\r  \u06cc\u0648\u062f\u0645\u06cc"
+},
+"ekkaia/langages-automates": {
+"stars": 0,
+"last_activity": "2020-12-22T18:11:00.336Z",
+"license": null,
+"desc": "Course project about creating a Flex competitor able to read \".lea\" files. Lexical analyser generator for automatons and rational expressions. Made in C++ (Licence 3, 2020)."
+},
+"learn-python3/python3-generators": {
+"stars": 0,
+"last_activity": "2020-06-11T20:00:23.110Z",
+"license": null,
+"desc": "Section 10: Advanced Python: Generators of the course Complete Python Developer in 2020: Zero to Mastery. (https://www.udemy.com/course/complete-python-developer-zero-to-mastery/learn/lecture/16077464#content)\r \r "
+},
+"carsten.menge/picx": {
+"stars": 0,
+"last_activity": "2020-05-07T11:36:14.829Z",
+"license": null,
+"desc": "A simple mosaic generator made for a uni course in 2019."
+},
+"MootezSaaD/schedule-generator": {
+"stars": 0,
+"last_activity": "2020-01-04T16:38:35.936Z",
+"license": null,
+"desc": "This is part of the CS321 course at SMU-MedTech.\r It is an automatic schedule generator using Genetic Algorithms. It is inspired from Genetic Algorithms in Java Basics by Lee Jacobson and Burak Kanber.\r "
+},
+"glixn/plc": {
+"stars": 0,
+"last_activity": "2019-12-25T01:31:26.852Z",
+"license": null,
+"desc": "Three-address code generator for the PLC language as defined in University of M\u00e1laga's Language Processors 2018/2019 course."
+},
+"dbohrk/mb2g-lombok": {
+"stars": 0,
+"last_activity": "2019-09-27T13:20:03.344Z",
+"license": null,
+"desc": "Lombok code generator from Udemy Course (Maven)"
+},
+"chrislaive/schedulegenerator": {
+"stars": 0,
+"last_activity": "2019-07-06T22:11:40.623Z",
+"license": null,
+"desc": "A schedule generator for university courses."
+},
+"kentsay/TwitterNews": {
+"stars": 0,
+"last_activity": "2019-01-09T10:56:41.862Z",
+"license": null,
+"desc": "An automatic news topic generator based on public tweets. Done as a course project for Big Data course at ETH Zurich (263-3010-00L). Contributors: Ali Alavi, Rolf Jagermann, Ken Tsay"
+},
+"bouldergoat/edin01-project-3": {
+"stars": 0,
+"last_activity": "2018-12-13T08:52:21.242Z",
+"license": null,
+"desc": "The third project for LTH course EDIN01, Cryptography. Attack on a stream cipher using Hamming distance to calculate the key for the stream generator."
+},
+"LuizVasconcellos/PRNG": {
+"stars": 0,
+"last_activity": "2018-12-16T20:34:44.806Z",
+"license": null,
+"desc": "A pseudo random number generator with some basic analysis.\r First Project for my CI-067 course (Programming Projects).\r "
+},
+"ajbyrnes/data-structures-final-project": {
+"stars": 0,
+"last_activity": "2017-08-08T22:43:35.787Z",
+"license": null,
+"desc": "This project contains the implementation of an ASCII art generator from an image. The project was assigned as part of the CSE 20312 \"Data Structures\" course in at the University of Notre Dame."
+},
+"MBcom/gitlabkubernetesbridge": {
+"stars": 1,
+"last_activity": "2026-09-29T06:25:09.707Z",
+"license": null,
+"desc": "GKB is a self\u2011service platform for developers and AI agents deploying applications to GitLab.\r With GKB, users can easily create, manage, and delete Kubernetes namespaces for their GitLab projects \u2014 eliminating the need "
+},
+"nurwaay/ai-agent": {
+"stars": 0,
+"last_activity": "2026-10-06T10:31:30.327Z",
+"license": null,
+"desc": "AI Agent educational project with Git, GitHub, GitLab CI and Jenkins"
+},
+"aj-group4860936/EduAgent": {
+"stars": 0,
+"last_activity": "2026-09-17T09:18:37.772Z",
+"license": null,
+"desc": "Agent-based AI system for generating and reviewing educational content using a Generator and Reviewer workflow."
+},
+"99DevOps892/STAs-500-AI-Agents-Projects": {
+"stars": 0,
+"last_activity": "2026-08-18T10:25:28.041Z",
+"license": null,
+"desc": "The 500 AI Agents Projects is a curated collection of AI agent use cases across various industries. It showcases practical applications and provides links to open-source projects for implementation, illustrating how AI a"
+},
+"sourabhjagga/nexus-terminal": {
+"stars": 0,
+"last_activity": "2026-08-17T16:23:56.721Z",
+"license": null,
+"desc": "NEXUS TERMINAL \u2014 agentic market analysis platform (Streamlit + Anthropic + Three.js + SQLite). Research/education only (SEBI)."
+},
+"ai-swarm-solutions-group/OpenTeacherAgent": {
+"stars": 0,
+"last_activity": "2026-08-15T02:56:58.116Z",
+"license": null,
+"desc": "OpenTeacherAgent \u2014 agentic educational authoring in a single binary (fork of TeacherAgent Light, work of opencode). AGPL-3.0-or-later."
+},
+"shibz23/educationalagent": {
+"stars": 0,
+"last_activity": "2026-04-16T11:18:10.393Z",
+"license": null,
+"desc": ""
+},
+"aiagentmackenzie-lang/SuperTutorProject": {
+"stars": 0,
+"last_activity": "2026-03-20T21:15:22.045Z",
+"license": null,
+"desc": "An AI-powered educational assistant that leverages multiple agents to provide personalized learning resources, exercises, website recommendations, interactive activities, and study advice tailored to students' needs. Bui"
+},
+"lethhai3003/agent_education": {
+"stars": 0,
+"last_activity": "2025-11-27T01:43:25.891Z",
+"license": null,
+"desc": ""
+},
+"flashfusion/swarm": {
+"stars": 0,
+"last_activity": "2025-11-13T11:06:17.538Z",
+"license": null,
+"desc": "Educational framework exploring ergonomic, lightweight multi-agent orchestration. Managed by OpenAI Solution team."
+},
+"the-colosseum/milites/tiro-cameron": {
+"stars": 0,
+"last_activity": "2026-02-05T09:51:31.028Z",
+"license": null,
+"desc": "Tiro-Cameron is an autonomous agent that monitors Ross Cameron's (Warrior Trading) daily watchlist videos and extracts structured trading insights for educational purposes. This agent serves as a **mentorship component**"
+},
+"782A/500-AI-Agents-Projects": {
+"stars": 0,
+"last_activity": "2025-10-09T09:06:51.782Z",
+"license": null,
+"desc": "The 500 AI Agents Projects is a curated collection of AI agent use cases across various industries. It showcases practical applications and provides links to open-source projects for implementation, illustrating how AI a"
+},
+"abaasi256/selenium-rl-educational": {
+"stars": 0,
+"last_activity": "2025-06-30T10:58:26.045Z",
+"license": null,
+"desc": "Educational Selenium RL project: Train AI agents to navigate websites using Q-Learning. Complete implementation with Episode 100 achievement (129.73 reward). Learn reinforcement learning through practical web automation!"
+},
+"maxpundyk157/edu": {
+"stars": 0,
+"last_activity": "2021-01-26T09:16:39.718Z",
+"license": null,
+"desc": "My Magento 2 education"
+},
+"aleksandr.golyk/magento_educational_project2": {
+"stars": 0,
+"last_activity": "2020-08-25T17:18:59.934Z",
+"license": null,
+"desc": ""
+},
+"wilkie323/samfirm-sourcecode": {
+"stars": 0,
+"last_activity": "2018-11-10T17:08:04.736Z",
+"license": null,
+"desc": "[C#] a request handler for kies servers, which enables you to download various-firmware files for your device, without the actual need for KIES program, using a mock of useragent and other methods... reverse-engineered f"
+},
+"Zinnia_Zirconium/litespeedtech-lsquic": {
+"stars": 1,
+"last_activity": "2026-07-13T01:01:08.170Z",
+"license": null,
+"desc": "Forked from https://github.com/litespeedtech/lsquic"
+},
+"icecoolduke-archives/IcedTech": {
+"stars": 0,
+"last_activity": "2026-09-24T04:17:08.040Z",
+"license": null,
+"desc": ""
+},
+"icecoolduke-archives/IcedTech3": {
+"stars": 0,
+"last_activity": "2026-09-24T04:15:23.899Z",
+"license": null,
+"desc": ""
+},
+"icecoolduke-archives/DNF-IcedTech": {
+"stars": 0,
+"last_activity": "2026-09-24T02:38:06.308Z",
+"license": null,
+"desc": "Duke Nukem Forever IcedTech Branch"
+},
+"manassingh1509/shakyatech-programming-hub": {
+"stars": 0,
+"last_activity": "2026-09-05T13:26:51.869Z",
+"license": null,
+"desc": "Official frontend repository for ShakyaTech Programming Hub. A modern EdTech platform offering industry-oriented courses in C, C++, Java, Python, and Web Development. Built with Next.js, React, and Tailwind CSS."
+},
+"chandnivalecha369/edtech-course-management": {
+"stars": 0,
+"last_activity": "2026-08-27T16:01:08.070Z",
+"license": null,
+"desc": ""
+},
+"LabelleSolutions/courseflow": {
+"stars": 0,
+"last_activity": "2026-08-18T00:44:30.754Z",
+"license": null,
+"desc": "EdTech"
+},
+"kunalailsinghani04/edtech-course-management": {
+"stars": 0,
+"last_activity": "2026-07-29T20:01:54.648Z",
+"license": null,
+"desc": ""
+},
+"xklong.01/edtech-fe": {
+"stars": 0,
+"last_activity": "2026-07-15T11:37:33.891Z",
+"license": null,
+"desc": ""
+},
+"AayushRanjan31/house_of_edtech_assignment": {
+"stars": 0,
+"last_activity": "2026-06-13T17:53:47.880Z",
+"license": null,
+"desc": ""
+},
+"zimcke/apps-edtech-hong-kong": {
+"stars": 0,
+"last_activity": "2026-06-19T00:20:46.625Z",
+"license": null,
+"desc": ""
+},
+"prakharchandragupta/Edtech-Project-Mega": {
+"stars": 0,
+"last_activity": "2026-05-09T03:13:12.876Z",
+"license": null,
+"desc": ""
+},
+"muhammadalisohail7996/medtech": {
+"stars": 0,
+"last_activity": "2026-05-16T08:36:27.855Z",
+"license": null,
+"desc": ""
+},
+"kbarbounakis/eduapi": {
+"stars": 0,
+"last_activity": "2026-05-15T10:09:19.020Z",
+"license": null,
+"desc": "An implementation of 1EdTech Edu-API for Universis Project"
+},
+"imhcode/boa-master": {
+"stars": 0,
+"last_activity": "2026-05-29T03:09:24.866Z",
+"license": null,
+"desc": "Apa itu BY ONE AYO?\r \r AI Social-Emotional Debate Engine \u2014 bukan chatbot, bukan quiz, bukan edtech biasa.\r \r Ini adalah game debat melawan AI di mana kamu masukin ide, dan 1-3 AI persona menyerang, mempertanyakan, membel"
+},
+"adityamahekar/EdTech_2": {
+"stars": 0,
+"last_activity": "2026-03-28T16:26:03.094Z",
+"license": null,
+"desc": ""
+},
+"adityamahekar/EdTechnew": {
+"stars": 0,
+"last_activity": "2026-03-28T16:21:20.194Z",
+"license": null,
+"desc": ""
+},
+"deadpool7641/medtech-app": {
+"stars": 0,
+"last_activity": "2026-03-27T07:56:35.812Z",
+"license": null,
+"desc": ""
+},
+"ce440107/lab-edtech": {
+"stars": 0,
+"last_activity": "2026-03-25T08:01:49.351Z",
+"license": null,
+"desc": ""
+},
+"David9827/edtech_app": {
+"stars": 0,
+"last_activity": "2026-05-15T14:08:19.412Z",
+"license": null,
+"desc": ""
+},
+"angelovski.niko/hackathon-edtech-json-analytics": {
+"stars": 0,
+"last_activity": "2026-03-11T21:30:16.674Z",
+"license": null,
+"desc": ""
+},
+"David9827/edtech": {
+"stars": 0,
+"last_activity": "2026-05-28T00:07:43.653Z",
+"license": null,
+"desc": ""
+},
+"abhishek124141/edtech-mobile": {
+"stars": 0,
+"last_activity": "2026-03-03T11:40:01.007Z",
+"license": null,
+"desc": ""
+},
+"rfonseca9851/BlueEdTech-modulo2": {
+"stars": 0,
+"last_activity": "2026-02-01T09:47:43.827Z",
+"license": null,
+"desc": ""
+},
+"rfonseca9851/BlueEdTech-modulo1": {
+"stars": 0,
+"last_activity": "2026-02-01T09:46:37.024Z",
+"license": null,
+"desc": ""
+},
+"whoshnri/kwizkit": {
+"stars": 0,
+"last_activity": "2026-01-30T21:16:34.167Z",
+"license": null,
+"desc": "An edtech startup"
+},
+"GFEDTechTitans/gfedtechtitans": {
+"stars": 0,
+"last_activity": "2026-01-28T06:38:16.419Z",
+"license": null,
+"desc": ""
+},
+"steffxmar/medtech-ppg-hypoxemia-detection": {
+"stars": 0,
+"last_activity": "2026-01-08T07:12:15.615Z",
+"license": null,
+"desc": ""
+},
+"kunalailsinghani04/testing-edtech-course-management": {
+"stars": 0,
+"last_activity": "2025-12-05T21:11:58.787Z",
+"license": null,
+"desc": ""
+},
+"nikhil.janyani.oct2005/testing-edtech-course-management": {
+"stars": 0,
+"last_activity": "2025-12-05T19:21:56.642Z",
+"license": null,
+"desc": ""
+},
+"NCKDG/ipv4-address-calculation-exercise-generator": {
+"stars": 0,
+"last_activity": "2026-04-29T08:45:39.341Z",
+"license": null,
+"desc": ""
+},
+"dgalperen/exercise-generator": {
+"stars": 0,
+"last_activity": "2023-11-02T09:19:12.358Z",
+"license": null,
+"desc": ""
+},
+"_3xe/workout-app": {
+"stars": 0,
+"last_activity": "2022-12-15T11:26:11.634Z",
+"license": null,
+"desc": "Workout Plan Generator:\r What I want to do: \r - workout plan generator from database \r    which contains exercises for every group of muscles,\r - exercise guide, \r - timer for breaks between exercises,\r - ability to post"
+},
+"KyleFontenot/Roost": {
+"stars": 0,
+"last_activity": "2022-11-05T22:03:12.580Z",
+"license": null,
+"desc": "A style generator for the one-off design exercise. "
+},
+"WallacceCorrea/invoice-creator": {
+"stars": 0,
+"last_activity": "2022-06-09T22:56:31.501Z",
+"license": null,
+"desc": "Besides the self-explanatory name, this project is an exercise for arrays and DOM manipulation.\r \r Figma project provided by Scrimba at https://www.figma.com/file/roUn8DT7zHTI9tcL2JXNZG/Invoice-Generator?node-id=0%3A1"
+},
+"wyd-weiss/exercise-generator": {
+"stars": 0,
+"last_activity": "2025-11-26T12:17:27.339Z",
+"license": null,
+"desc": ""
+},
+"andiemen/go-string-encryptor": {
+"stars": 0,
+"last_activity": "2021-05-27T06:30:23.898Z",
+"license": null,
+"desc": "In this exercise you will need to build an encrypted string generator. This will be done with two microservices written in GO. \r This exercise comes to test the ability to write microservices on cloud environments, creat"
+},
+"nchristiny/nchristiny.gitlab.io": {
+"stars": 0,
+"last_activity": "2020-01-08T19:26:20.904Z",
+"license": null,
+"desc": "Personal blog and yak shaving training exercise built with static site generator Jekyll and deployed using Netlify and GitLab Pages.\r  https://nchristiny.gitlab.io/ [forever a WIP]"
+},
+"rogerkorantenng/sankofa-orbit": {
+"stars": 0,
+"last_activity": "2026-06-17T22:22:39.762Z",
+"license": null,
+"desc": "Sankofa \u2014 Orbit-Powered Developer Intelligence Suite. Blast radius analysis, contextual onboarding, and vulnerability propagation tracing using GitLab Orbit's knowledge graph."
+},
+"phecda98010639/knowledge-tracing-prediction": {
+"stars": 0,
+"last_activity": "2025-12-05T14:05:53.096Z",
+"license": null,
+"desc": ""
+},
+"applepie9687/knowledge-tracing-prediction": {
+"stars": 0,
+"last_activity": "2025-11-16T00:47:43.981Z",
+"license": null,
+"desc": ""
+},
+"ai_collection/Bayes_Knowledge_Tracing": {
+"stars": 0,
+"last_activity": "2025-09-20T17:08:49.495Z",
+"license": null,
+"desc": ""
+},
+"samisar/dlkt-review-and-emprical-evaluation": {
+"stars": 0,
+"last_activity": "2021-12-21T13:03:26.315Z",
+"license": null,
+"desc": "Code for the article Deep Learning Models for Knowledge Tracing: Review and Empirical Evaluation."
+},
+"antoinelb/knowledge-tracing": {
+"stars": 0,
+"last_activity": "2023-09-21T20:51:12.426Z",
+"license": null,
+"desc": ""
+},
+"Adarshboja/AI-sports-quiz-Generator": {
+"stars": 0,
+"last_activity": "2026-09-09T06:11:16.382Z",
+"license": null,
+"desc": ""
+},
+"TastySnak/PresentationMcpServer": {
+"stars": 0,
+"last_activity": "2026-07-12T09:15:29.561Z",
+"license": null,
+"desc": "LLM teaching-deck generator (TypeScript): Zod IR trust boundary, zero-dollar free-tier routing, misconception-grounded quizzes, converging TTS rehearsal. 97 tests."
+},
+"englert/Quiz-Generator": {
+"stars": 0,
+"last_activity": "2026-06-24T14:54:43.563Z",
+"license": null,
+"desc": "Ever find yourself bored and looking for random trivia quizzes? Test out your knowledge with tests and games"
+},
+"Baharoon/arithmetic-quiz-generator": {
+"stars": 0,
+"last_activity": "2026-06-03T08:01:25.703Z",
+"license": null,
+"desc": ""
+},
+"shreyas.dbg/QuizGenerator": {
+"stars": 0,
+"last_activity": "2026-02-18T03:35:13.166Z",
+"license": null,
+"desc": ""
+},
+"tima.yegemberdiev/quiz-generator": {
+"stars": 0,
+"last_activity": "2026-01-30T14:48:40.522Z",
+"license": null,
+"desc": ""
+},
+"adityajanjanam/ai-quiz-generator": {
+"stars": 0,
+"last_activity": "2026-01-23T15:00:38.425Z",
+"license": null,
+"desc": "AI-powered quiz generator built with React and Google Gemini AI. Generates dynamic quizzes on any topic with interactive questions and real-time scoring."
+},
+"sheikhcoders/interleaved-learning-mcp": {
+"stars": 0,
+"last_activity": "2026-01-21T08:20:54.317Z",
+"license": null,
+"desc": "MCP Server for Interleaved Learning - Study Scheduler, Quiz Generator, Flashcard Shuffler, and Learning Tracker. Deploy on Vercel."
+},
+"orujovshahmurad/flask-rag-tutor": {
+"stars": 0,
+"last_activity": "2025-11-11T09:38:27.852Z",
+"license": null,
+"desc": "AI-powered tutorial generator using RAG (Retrieval Augmented Generation). Upload documents, ask questions, generate quizzes   automatically. Built with Flask, ChromaDB, Sentence Transformers, and Ollama. Portfolio projec"
+},
+"shelltief/quiz-generator": {
+"stars": 0,
+"last_activity": "2026-03-29T12:17:05.910Z",
+"license": null,
+"desc": ""
+},
+"sayali.sumant-coditas/quizgenerator": {
+"stars": 0,
+"last_activity": "2025-09-24T13:31:59.863Z",
+"license": null,
+"desc": ""
+},
+"nathaniel-challenges/quiz-generator": {
+"stars": 0,
+"last_activity": "2025-09-04T22:36:35.154Z",
+"license": null,
+"desc": ""
+},
+"jeevananthams668/quiz-generator-backend": {
+"stars": 0,
+"last_activity": "2025-08-31T19:28:55.829Z",
+"license": null,
+"desc": ""
+},
+"saqib99/pixel_generator": {
+"stars": 0,
+"last_activity": "2025-06-25T19:49:04.371Z",
+"license": null,
+"desc": "PixelQuizzer is a modern web application that leverages Google's Gemini AI to automatically generate educational quizzes from PDF documents and text content. Built with React, TypeScript, and a pixel-perfect retro design"
+},
+"youseef/online-quiz-generator": {
+"stars": 0,
+"last_activity": "2024-07-31T11:52:40.589Z",
+"license": null,
+"desc": ""
+},
+"public_outlaws42/Quiz_Schedule_Generator": {
+"stars": 0,
+"last_activity": "2023-03-31T23:08:00.903Z",
+"license": null,
+"desc": "Generates  a bible quiz schedule. Takes the teams then randomizes the matches between them. 3 teams of 3 quiz at a time."
+},
+"bards-ai/hackathony/hackyeah-2022/quiz-generator/quiz-generator-backend": {
+"stars": 0,
+"last_activity": "2022-11-20T03:25:01.909Z",
+"license": null,
+"desc": ""
+},
+"bards-ai/hackathony/hackyeah-2022/quiz-generator/quiz-generator-frontend": {
+"stars": 0,
+"last_activity": "2022-11-19T22:47:47.025Z",
+"license": null,
+"desc": ""
+},
+"roberto.m/quizuru": {
+"stars": 0,
+"last_activity": "2022-05-13T09:48:32.302Z",
+"license": null,
+"desc": "CLI Quiz generator developed during the zuru tech academy"
+},
+"aleksander_grm/moodle-quiz-generator": {
+"stars": 0,
+"last_activity": "2022-02-09T12:36:03.209Z",
+"license": null,
+"desc": "Python program that generate set of randomized Moodle Quiz questions."
+},
+"lg-facens/lg-quiz-generator": {
+"stars": 0,
+"last_activity": "2023-10-01T12:51:13.880Z",
+"license": null,
+"desc": "Question maker/tester platform."
+},
+"Svetlana.Gruzdeva/quiz-generator": {
+"stars": 0,
+"last_activity": "2020-05-18T13:21:29.855Z",
+"license": null,
+"desc": "Creates quizzes with questions and answers in random order, along with the answer key."
+},
+"verdure/quiz-generator": {
+"stars": 0,
+"last_activity": "2020-04-20T18:01:41.087Z",
+"license": null,
+"desc": "A program that generates a quiz of 10 questions from a file containing a selection of questions. The program checks the answers and gives the user a final score."
+},
+"akashDash458/JavaQuizGenerator": {
+"stars": 0,
+"last_activity": "2019-07-06T21:53:27.898Z",
+"license": null,
+"desc": ""
+},
+"kitayamanoriaki/quizcomponentgenerator": {
+"stars": 0,
+"last_activity": "2018-12-13T22:29:04.345Z",
+"license": null,
+"desc": ""
+},
+"pasha-bolokhov/ewu-physics-133-quiz-sine-generator": {
+"stars": 0,
+"last_activity": "2018-04-20T03:39:47.095Z",
+"license": null,
+"desc": ""
+},
+"Teamexe/Quiz-Generator": {
+"stars": 0,
+"last_activity": "2018-03-31T10:22:38.903Z",
+"license": null,
+"desc": ""
+},
+"RogerDodger-Python/Random-Quiz-Generator": {
+"stars": 0,
+"last_activity": "2017-09-15T19:38:29.036Z",
+"license": null,
+"desc": "Generates Multiple Question and Answer sheets"
+},
+"galpratama/edupress": {
+"stars": 0,
+"last_activity": "2017-08-17T16:41:14.948Z",
+"license": null,
+"desc": "Exam Quiz Creator Generator using Wordpress Engine"
+},
+"mesa_python/dialog_tree": {
+"stars": 1,
+"last_activity": "2025-05-24T19:54:37.295Z",
+"license": null,
+"desc": "Fork of https://github.com/obxfisherman/dialog_tree a simple dialog engine and data file format for constructing rule based chatbots for use as text adventure games, educational text CLI apps, or rule based NPC dialog en"
+},
+"fihlatv/Multitenant-Chatbot": {
+"stars": 0,
+"last_activity": "2020-01-06T15:03:06.557Z",
+"license": null,
+"desc": "Multitenant Chatbot for Educational Institutes, Movie Theatres and Insurance Companies"
+},
+"yoockh-group/Edusaku": {
+"stars": 0,
+"last_activity": "2026-05-18T03:05:21.653Z",
+"license": null,
+"desc": "Edusaku is an offline-first AI education assistant designed for teachers and students in remote areas with limited or no internet access. It runs Google's Gemma 4 E2B model entirely on-device \u2014 no cloud, no data leaving "
+},
+"iancarterkulani/lazy-panda-v8-0-0": {
+"stars": 0,
+"last_activity": "2026-04-09T14:44:51.182Z",
+"license": null,
+"desc": "lazy-panda-v8.0.0 is a next-generation AI assistant bot designed to empower cybersecurity professionals, network engineers, students, teachers, and researchers with intelligent command execution and automated IP analysis"
+},
+"michzuerch/TeachersAssistant": {
+"stars": 0,
+"last_activity": "2023-01-07T11:48:40.376Z",
+"license": null,
+"desc": "Refactoring von Vorg\u00e4nger"
+},
+"blank_/class-assistant": {
+"stars": 0,
+"last_activity": "2019-02-07T19:47:31.001Z",
+"license": null,
+"desc": "The official repository for ClassAssistant, a powerful tool that helps teachers to manage computers in IT labs during courses."
+},
+"yhassanzadeh13/distance-vector": {
+"stars": 0,
+"last_activity": "2017-04-17T12:03:16.113Z",
+"license": null,
+"desc": "Proposed and implemented Comp413-Computer Networks-Project3 routing algorithm as a teacher assistant. "
+},
+"yhassanzadeh13/java-skiplist": {
+"stars": 0,
+"last_activity": "2017-04-17T12:01:05.648Z",
+"license": null,
+"desc": "My proposed COMP202-project3 (Data Structure and Algorithm Course) as a teacher assistant. The task is to visualize a SkipList with insertion, deletion, and search supported. "
+},
+"oer/emacs-reveal": {
+"stars": 53,
+"last_activity": "2026-10-02T12:11:28.840Z",
+"license": null,
+"desc": "Generate and publish [reveal.js](https://revealjs.com/) presentations with audio explanations as [OER](https://en.wikipedia.org/wiki/Open_educational_resources) from simple texts in [Org Mode](https://orgmode.org/) with "
+},
+"oer/oer-courses/it-systems": {
+"stars": 3,
+"last_activity": "2026-03-24T14:34:02.423Z",
+"license": null,
+"desc": "[Open Educational Resources](https://oer.gitlab.io/oer-courses/it-systems) explaining the basics of IT systems in a bottom-up approach, from computer architecture over operating systems to cloud infrastructures"
+},
+"oer/oer-reveal": {
+"stars": 3,
+"last_activity": "2026-10-04T09:33:34.460Z",
+"license": null,
+"desc": "Extension of [org-re-reveal](/oer/org-re-reveal) to publish Open Educational Resources in the form of reveal.js presentations. Part of [emacs-reveal](/oer/emacs-reveal)."
+},
+"oer/oer-courses/cacs": {
+"stars": 3,
+"last_activity": "2025-06-23T10:57:20.953Z",
+"license": null,
+"desc": "[Open Educational Resources](https://oer.gitlab.io/oer-courses/cacs) explaining the basics of distributed systems as part of a module on communication and collaboration systems."
+},
+"oer/figures": {
+"stars": 3,
+"last_activity": "2026-10-02T12:05:21.322Z",
+"license": null,
+"desc": "Figures with license terms based on [CC REL](https://wiki.creativecommons.org/wiki/CC_REL); see `licenseurl` in `meta` file for reuse requirements, e.g., in [Open Educational Resources (OER)](https://en.wikipedia.org/wik"
+},
+"etrovub/learningrobots/projects/educational-modular-robot": {
+"stars": 2,
+"last_activity": "2024-10-08T15:42:55.900Z",
+"license": null,
+"desc": "Welcome to the repository for the Educational Modular Robot project. \ud83d\ude80\r This open-source platform provides all necessary resources for exploring robotics and advanced educational topics. The repository includes design fi"
+},
+"ginf-wang/share-oer-backend": {
+"stars": 2,
+"last_activity": "2020-06-09T16:25:13.530Z",
+"license": null,
+"desc": "This software provides a simple REST-API to show how an OER-Portal to manage Open Educational Resources could be built."
+},
+"TIBHannover/oer/wordpress-oersi-plugin": {
+"stars": 1,
+"last_activity": "2026-10-02T15:51:14.815Z",
+"license": null,
+"desc": "This plugin is a WordPress integration of OERSI - a search index for Open Educational Resources in higher education."
+},
+"osh-academy/oer-osh-docu-2": {
+"stars": 1,
+"last_activity": "2021-05-04T16:05:55.413Z",
+"license": null,
+"desc": "Open Educational Resources regarding documentation of Open Source Hardware - Community Collaboration"
+},
+"osh-academy/oer-osh-docu-1": {
+"stars": 1,
+"last_activity": "2021-05-11T14:53:33.320Z",
+"license": null,
+"desc": "\r Open Educational Resources regarding documentation of Open Source Hardware - Prototyping in Teams\r "
+},
+"osh-academy/oer-osh-intro": {
+"stars": 1,
+"last_activity": "2021-04-20T16:59:49.961Z",
+"license": null,
+"desc": "Open Educational Resources giving an Introduction to Open Source Hardware"
+},
+"oer/cs/functional-dependencies": {
+"stars": 1,
+"last_activity": "2023-07-25T08:41:34.482Z",
+"license": null,
+"desc": "An [Open Educational Resource](https://en.wikipedia.org/wiki/Open_educational_resources) (OER) to refresh prior knowledge about functional dependencies (FDs) and normalization of relational database schemata."
+},
+"ginf-wang/share-oer-frontend": {
+"stars": 1,
+"last_activity": "2020-06-12T09:39:24.713Z",
+"license": null,
+"desc": "This software provides a React based Frontend to show how an OER-Portal to manage Open Educational Resources could be built."
+},
+"oer/oer-on-oer-infrastructure": {
+"stars": 1,
+"last_activity": "2020-07-03T15:54:21.713Z",
+"license": null,
+"desc": "Obsolete OER explaining [OER](https://en.wikipedia.org/wiki/Open_educational_resources). Newer versions of these OER are available elsewhere."
+},
+"rachel.green.r/ecoscan-3113810-deletion_scheduled-87279135": {
+"stars": 0,
+"last_activity": "2026-10-06T06:13:22.251Z",
+"license": null,
+"desc": "Generate and publish [reveal.js](https://revealjs.com/) presentations with audio explanations as [OER](https://en.wikipedia.org/wiki/Open_educational_resources) from simple texts in [Org Mode](https://orgmode.org/) with "
+},
+"chandler.bing/ecoscan-3113810-deletion_scheduled-87235460": {
+"stars": 0,
+"last_activity": "2026-10-05T06:08:41.290Z",
+"license": null,
+"desc": "Generate and publish [reveal.js](https://revealjs.com/) presentations with audio explanations as [OER](https://en.wikipedia.org/wiki/Open_educational_resources) from simple texts in [Org Mode](https://orgmode.org/) with "
+},
+"chandler.bing/ecoscan-3113810-deletion_scheduled-87188478": {
+"stars": 0,
+"last_activity": "2026-10-03T05:47:53.514Z",
+"license": null,
+"desc": "Generate and publish [reveal.js](https://revealjs.com/) presentations with audio explanations as [OER](https://en.wikipedia.org/wiki/Open_educational_resources) from simple texts in [Org Mode](https://orgmode.org/) with "
+},
+"rachel.green.r/ecoscan-3113810-deletion_scheduled-87105244": {
+"stars": 0,
+"last_activity": "2026-10-01T05:54:47.876Z",
+"license": null,
+"desc": "Generate and publish [reveal.js](https://revealjs.com/) presentations with audio explanations as [OER](https://en.wikipedia.org/wiki/Open_educational_resources) from simple texts in [Org Mode](https://orgmode.org/) with "
+},
+"rachel.green.r/ecoscan-3113810-deletion_scheduled-87060505": {
+"stars": 0,
+"last_activity": "2026-09-30T06:18:34.134Z",
+"license": null,
+"desc": "Generate and publish [reveal.js](https://revealjs.com/) presentations with audio explanations as [OER](https://en.wikipedia.org/wiki/Open_educational_resources) from simple texts in [Org Mode](https://orgmode.org/) with "
+},
+"rachel.green.r/ecoscan-3113810-deletion_scheduled-87015510": {
+"stars": 0,
+"last_activity": "2026-09-29T06:02:59.673Z",
+"license": null,
+"desc": "Generate and publish [reveal.js](https://revealjs.com/) presentations with audio explanations as [OER](https://en.wikipedia.org/wiki/Open_educational_resources) from simple texts in [Org Mode](https://orgmode.org/) with "
+},
+"chandler.bing/ecoscan-3113810-deletion_scheduled-86970474": {
+"stars": 0,
+"last_activity": "2026-09-28T06:00:00.091Z",
+"license": null,
+"desc": "Generate and publish [reveal.js](https://revealjs.com/) presentations with audio explanations as [OER](https://en.wikipedia.org/wiki/Open_educational_resources) from simple texts in [Org Mode](https://orgmode.org/) with "
+},
+"cannabis-group/cannabis-dispensary-in-the-usa": {
+"stars": 0,
+"last_activity": "2026-09-28T00:12:10.570Z",
+"license": null,
+"desc": "\r  Cannabis industry resources, cultivation knowledge, extraction technology, processing equipment, and educational information for growers, processors, and cannabis professionals. Explore tools, guides, and open-source "
+},
+"chandler.bing/ecoscan-3113810-deletion_scheduled-86944995": {
+"stars": 0,
+"last_activity": "2026-09-27T06:07:33.431Z",
+"license": null,
+"desc": "Generate and publish [reveal.js](https://revealjs.com/) presentations with audio explanations as [OER](https://en.wikipedia.org/wiki/Open_educational_resources) from simple texts in [Org Mode](https://orgmode.org/) with "
+},
+"chandler.bing/ecoscan-3113810-deletion_scheduled-86922239": {
+"stars": 0,
+"last_activity": "2026-09-26T06:10:47.474Z",
+"license": null,
+"desc": "Generate and publish [reveal.js](https://revealjs.com/) presentations with audio explanations as [OER](https://en.wikipedia.org/wiki/Open_educational_resources) from simple texts in [Org Mode](https://orgmode.org/) with "
+},
+"chandler.bing/ecoscan-3113810-deletion_scheduled-86881968": {
+"stars": 0,
+"last_activity": "2026-09-25T05:57:28.339Z",
+"license": null,
+"desc": "Generate and publish [reveal.js](https://revealjs.com/) presentations with audio explanations as [OER](https://en.wikipedia.org/wiki/Open_educational_resources) from simple texts in [Org Mode](https://orgmode.org/) with "
+},
+"cannabis-group/exotic-cannabis-flower-buy-sell-trade": {
+"stars": 0,
+"last_activity": "2026-09-25T04:43:05.162Z",
+"license": null,
+"desc": "Cannabis industry resources, cultivation knowledge, extraction technology, processing equipment, and educational information for growers, processors, and cannabis professionals. Explore tools, guides, and open-source res"
+},
+"rachel.green.r/ecoscan-3113810-deletion_scheduled-86838375": {
+"stars": 0,
+"last_activity": "2026-09-24T06:31:01.670Z",
+"license": null,
+"desc": "Generate and publish [reveal.js](https://revealjs.com/) presentations with audio explanations as [OER](https://en.wikipedia.org/wiki/Open_educational_resources) from simple texts in [Org Mode](https://orgmode.org/) with "
+},
+"cannabis-group/how-to-extract-cannabis-oil": {
+"stars": 0,
+"last_activity": "2026-09-23T17:12:23.752Z",
+"license": null,
+"desc": "Cannabis industry resources, cultivation knowledge, extraction technology, processing equipment, and educational information for growers, processors, and cannabis professionals. Explore tools, guides, and open-source res"
+},
+"chandler.bing/ecoscan-3113810-deletion_scheduled-86789974": {
+"stars": 0,
+"last_activity": "2026-09-23T05:53:42.021Z",
+"license": null,
+"desc": "Generate and publish [reveal.js](https://revealjs.com/) presentations with audio explanations as [OER](https://en.wikipedia.org/wiki/Open_educational_resources) from simple texts in [Org Mode](https://orgmode.org/) with "
+},
+"chandler.bing/ecoscan-3113810-deletion_scheduled-86739941": {
+"stars": 0,
+"last_activity": "2026-09-22T06:14:52.198Z",
+"license": null,
+"desc": "Generate and publish [reveal.js](https://revealjs.com/) presentations with audio explanations as [OER](https://en.wikipedia.org/wiki/Open_educational_resources) from simple texts in [Org Mode](https://orgmode.org/) with "
+},
+"netojoaobatista/order": {
+"stars": 2,
+"last_activity": "2024-05-28T23:51:59.831Z",
+"license": null,
+"desc": "This project shows an order management system using object-oriented design in PHP. It features customer creation, product addition, and order state management through the State pattern and a Facade for abstraction. Struc"
+},
+"olatorg/OpenOLAT": {
+"stars": 2,
+"last_activity": "2026-10-06T15:02:58.600Z",
+"license": null,
+"desc": "Learning Management System OpenOlat"
+},
+"labex-labs/ansible-free-tutorials": {
+"stars": 1,
+"last_activity": "2025-08-01T02:56:41.188Z",
+"license": null,
+"desc": "Practice Ansible Free Tutorials | This repo collects 20 of free tutorials for Ansible. Ansible is a powerful tool for IT automation. This Skill Tree presents a systematic approach to learning Ansible. Perfect for DevOps "
+},
+"b4burhan/LMS-Learning-Management-System": {
+"stars": 1,
+"last_activity": "2025-12-05T17:11:47.055Z",
+"license": null,
+"desc": ""
+},
+"roshanlimbu714/corporate-learning-management-system-backend": {
+"stars": 1,
+"last_activity": "2023-01-04T13:33:53.173Z",
+"license": null,
+"desc": ""
+},
+"katava99/LMS-Client-KWA": {
+"stars": 1,
+"last_activity": "2026-09-29T16:07:22.226Z",
+"license": null,
+"desc": ""
+},
+"han-aim/aim/lern": {
+"stars": 1,
+"last_activity": "2023-02-15T07:52:26.610Z",
+"license": null,
+"desc": "The Lern e-learning content management system. \r [Sample website](https://han-aim.gitlab.io/lern/)"
+},
+"afokal/Claroline": {
+"stars": 1,
+"last_activity": "2021-12-25T17:46:43.949Z",
+"license": null,
+"desc": "Learning management system"
+},
+"tayabsalman/simple-learning-management-system": {
+"stars": 1,
+"last_activity": "2020-05-03T17:48:54.345Z",
+"license": null,
+"desc": "A simple learning management system in which admin can create and publish courses for the users."
+},
+"nielsekkelenkamp/lms42": {
+"stars": 0,
+"last_activity": "2026-10-02T17:23:07.494Z",
+"license": null,
+"desc": "Learning Management System for the Associate degree Software Development at Saxion. "
+},
+"AnPhucNguyenIT/ai-integrated-learning-support-and-management-system": {
+"stars": 0,
+"last_activity": "2026-09-23T07:25:16.041Z",
+"license": null,
+"desc": ""
+},
+"corporate-projects1/future-behavior-analysis": {
+"stars": 0,
+"last_activity": "2026-08-08T19:58:03.134Z",
+"license": null,
+"desc": "Futures Behavior Analysis (FBA) is a Learning Management System (LMS) site for a US-based client to sell courses related to Applied Behavior Analysis (ABA). "
+},
+"mohsensami2/lms": {
+"stars": 0,
+"last_activity": "2026-07-31T19:32:15.447Z",
+"license": null,
+"desc": "Learning Management System"
+},
+"Neatink/Learning-Management-System": {
+"stars": 0,
+"last_activity": "2026-07-22T19:42:23.330Z",
+"license": null,
+"desc": ""
+},
+"iddhidasanayaka/LMSmobile": {
+"stars": 0,
+"last_activity": "2026-07-10T08:29:58.804Z",
+"license": null,
+"desc": "User friendly Learning management system developed using Flutter and Firebase "
+},
+"hafizhandika304/learning-management-system": {
+"stars": 0,
+"last_activity": "2026-07-30T04:41:56.618Z",
+"license": null,
+"desc": ""
+},
+"uajjawalsingh/Learning-Management-System": {
+"stars": 0,
+"last_activity": "2026-06-15T05:21:37.062Z",
+"license": null,
+"desc": ""
+},
+"sathvikgn/learning_management_system": {
+"stars": 0,
+"last_activity": "2026-06-02T14:28:22.525Z",
+"license": null,
+"desc": ""
+},
+"dangkhoa2016/Ruby-Quiz-Lab": {
+"stars": 0,
+"last_activity": "2026-05-04T05:32:25.436Z",
+"license": null,
+"desc": "A modern Ruby on Rails 8 quiz platform designed for scalable learning and assessment systems. It features role-based authentication, admin question management, multilingual support, bulk question imports, user performanc"
+},
+"pietrobragaaquino/Spring-Microservices-Courses-Platform": {
+"stars": 0,
+"last_activity": "2026-05-01T19:49:04.489Z",
+"license": null,
+"desc": "Spring Microservices Courses Platform is a modular learning management system (LMS) built with Spring Boot and Spring Cloud using a microservices architecture. The platform is designed to provide scalable, maintainable, "
+},
+"mdsamsuzzohashayon/ponditi-lms": {
+"stars": 0,
+"last_activity": "2026-05-01T06:55:43.528Z",
+"license": null,
+"desc": "A learning management system. Functions: Calender, Pagination, Search, price calculator"
+},
+"qware7/LearningManagementSystem": {
+"stars": 0,
+"last_activity": "2026-04-16T05:28:37.763Z",
+"license": null,
+"desc": "Core Contributor: Ingrid"
+},
+"suryoatm/learning-management-system-laravel-10": {
+"stars": 0,
+"last_activity": "2026-04-02T04:01:50.467Z",
+"license": null,
+"desc": ""
+},
+"tilio3x/lacolso-lms": {
+"stars": 0,
+"last_activity": "2026-05-01T09:50:58.050Z",
+"license": null,
+"desc": "A learning management system for continuing environments."
+},
+"suryoatm/learning-management-system-php": {
+"stars": 0,
+"last_activity": "2026-03-27T04:11:23.457Z",
+"license": null,
+"desc": ""
+},
+"Sudz1/sam-lms": {
+"stars": 0,
+"last_activity": "2026-03-23T19:28:15.380Z",
+"license": null,
+"desc": "Open-source Learning Management System for African education. Built with SA educators in mind. Features mobile money, SMS, offline-first curriculum. \ud83c\uddff\ud83c\udde6"
+},
+"jelisejtomic/lms-tim1": {
+"stars": 0,
+"last_activity": "2026-10-05T22:34:32.558Z",
+"license": null,
+"desc": "Full-stack web-app built with Spring Boot and Angular, featuring Keycloak auth, Docker containerization, and NGINX reverse proxy."
+},
+"yoelsimanjuntak/daksa-lms": {
+"stars": 0,
+"last_activity": "2026-08-21T15:38:58.635Z",
+"license": null,
+"desc": "Learning Management System by Daksa Studio ID"
+},
+"francoisjacquet/rosariosis": {
+"stars": 65,
+"last_activity": "2026-10-06T21:20:35.761Z",
+"license": null,
+"desc": "RosarioSIS Student Information System for school management"
+},
+"AbEB/rosariospx": {
+"stars": 1,
+"last_activity": "2025-10-04T12:34:54.877Z",
+"license": null,
+"desc": "RosarioSPX Student Information System for school management"
+},
+"lefajele/rosariosis": {
+"stars": 1,
+"last_activity": "2020-03-05T08:31:50.977Z",
+"license": null,
+"desc": "RosarioSIS Student Information System for School Management"
+},
+"francoisjacquet/rosariosis-rest-api": {
+"stars": 1,
+"last_activity": "2020-02-25T15:43:28.719Z",
+"license": null,
+"desc": "WordPress plugin. Helper to connect to the RosarioSIS (free Student Information System) REST API."
+},
+"dpredster/rosariosis": {
+"stars": 1,
+"last_activity": "2018-07-29T20:00:52.839Z",
+"license": null,
+"desc": "RosarioSIS Student Information System for School Management"
+},
+"dashluce/sala": {
+"stars": 1,
+"last_activity": "2017-01-30T05:26:45.589Z",
+"license": null,
+"desc": "Sala is a free custom-designed open source student information system for records management, grading, scheduling and report generation. Teachers save time and are able to focus on providing higher quality of teaching ba"
+},
+"macintoshplus/rosariosis": {
+"stars": 0,
+"last_activity": "2026-10-06T20:44:04.794Z",
+"license": null,
+"desc": "RosarioSIS Student Information System for school management"
+},
+"chandler.bing/ecoscan-7292712-deletion_scheduled-87276919": {
+"stars": 0,
+"last_activity": "2026-10-06T04:37:46.098Z",
+"license": null,
+"desc": "RosarioSIS Student Information System for school management"
+},
+"itswseduerp/school-fee-management-software-simplify-fee-collection-and-management": {
+"stars": 0,
+"last_activity": "2026-10-05T12:03:07.327Z",
+"license": null,
+"desc": "Managing school fees manually can be time-consuming, especially when schools have a large number of students and multiple fee structures. Maintaining payment records, pending dues, receipts, discounts, and reports throug"
+},
+"chandler.bing/ecoscan-7292712-deletion_scheduled-87233571": {
+"stars": 0,
+"last_activity": "2026-10-05T04:31:15.177Z",
+"license": null,
+"desc": "RosarioSIS Student Information System for school management"
+},
+"rachel.green.r/ecoscan-7292712-deletion_scheduled-87187042": {
+"stars": 0,
+"last_activity": "2026-10-03T04:10:36.040Z",
+"license": null,
+"desc": "RosarioSIS Student Information System for school management"
+},
+"rachel.green.r/ecoscan-7292712-deletion_scheduled-87103161": {
+"stars": 0,
+"last_activity": "2026-10-01T04:16:12.242Z",
+"license": null,
+"desc": "RosarioSIS Student Information System for school management"
+},
+"chandler.bing/ecoscan-7292712-deletion_scheduled-87058008": {
+"stars": 0,
+"last_activity": "2026-09-30T04:37:21.604Z",
+"license": null,
+"desc": "RosarioSIS Student Information System for school management"
+},
+"rachel.green.r/ecoscan-7292712-deletion_scheduled-87013208": {
+"stars": 0,
+"last_activity": "2026-09-29T04:24:08.329Z",
+"license": null,
+"desc": "RosarioSIS Student Information System for school management"
+},
+"chandler.bing/ecoscan-7292712-deletion_scheduled-86968804": {
+"stars": 0,
+"last_activity": "2026-09-28T04:21:15.163Z",
+"license": null,
+"desc": "RosarioSIS Student Information System for school management"
+},
+"chandler.bing/ecoscan-7292712-deletion_scheduled-86943893": {
+"stars": 0,
+"last_activity": "2026-09-27T04:31:33.122Z",
+"license": null,
+"desc": "RosarioSIS Student Information System for school management"
+},
+"JafarMustafazada/SIS2Server": {
+"stars": 0,
+"last_activity": "2026-09-26T08:07:05.456Z",
+"license": null,
+"desc": "Student Information System - API oriented project."
+},
+"chandler.bing/ecoscan-7292712-deletion_scheduled-86920953": {
+"stars": 0,
+"last_activity": "2026-09-26T04:34:22.583Z",
+"license": null,
+"desc": "RosarioSIS Student Information System for school management"
+},
+"rachel.green.r/ecoscan-7292712-deletion_scheduled-86879932": {
+"stars": 0,
+"last_activity": "2026-09-25T04:20:59.015Z",
+"license": null,
+"desc": "RosarioSIS Student Information System for school management"
+},
+"chandler.bing/ecoscan-7292712-deletion_scheduled-86832527": {
+"stars": 0,
+"last_activity": "2026-09-24T04:53:36.541Z",
+"license": null,
+"desc": "RosarioSIS Student Information System for school management"
+},
+"chandler.bing/ecoscan-7292712-deletion_scheduled-86787745": {
+"stars": 0,
+"last_activity": "2026-09-23T04:15:52.445Z",
+"license": null,
+"desc": "RosarioSIS Student Information System for school management"
+},
+"rachel.green.r/ecoscan-7292712-deletion_scheduled-86737129": {
+"stars": 0,
+"last_activity": "2026-09-22T04:40:09.643Z",
+"license": null,
+"desc": "RosarioSIS Student Information System for school management"
+},
+"rachel.green.r/ecoscan-7292712-deletion_scheduled-86693936": {
+"stars": 0,
+"last_activity": "2026-09-21T04:35:21.561Z",
+"license": null,
+"desc": "RosarioSIS Student Information System for school management"
+},
+"chandler.bing/ecoscan-7292712-deletion_scheduled-86669998": {
+"stars": 0,
+"last_activity": "2026-09-20T04:30:36.413Z",
+"license": null,
+"desc": "RosarioSIS Student Information System for school management"
+},
+"chandler.bing/ecoscan-7292712-deletion_scheduled-86647828": {
+"stars": 0,
+"last_activity": "2026-09-19T04:05:39.949Z",
+"license": null,
+"desc": "RosarioSIS Student Information System for school management"
+},
+"rachel.green.r/ecoscan-7292712-deletion_scheduled-86563959": {
+"stars": 0,
+"last_activity": "2026-09-17T04:30:05.459Z",
+"license": null,
+"desc": "RosarioSIS Student Information System for school management"
+},
+"awriel/rosariosis": {
+"stars": 0,
+"last_activity": "2026-09-17T01:33:45.480Z",
+"license": null,
+"desc": "RosarioSIS Student Information System for school management"
+},
+"rachel.green.r/ecoscan-7292712-deletion_scheduled-86520456": {
+"stars": 0,
+"last_activity": "2026-09-16T04:35:26.485Z",
+"license": null,
+"desc": "RosarioSIS Student Information System for school management"
+},
+"chandler.bing/ecoscan-7292712-deletion_scheduled-86475991": {
+"stars": 0,
+"last_activity": "2026-09-15T04:27:18.475Z",
+"license": null,
+"desc": "RosarioSIS Student Information System for school management"
+},
+"rachel.green.r/ecoscan-7292712-deletion_scheduled-86434754": {
+"stars": 0,
+"last_activity": "2026-09-14T04:23:48.877Z",
+"license": null,
+"desc": "RosarioSIS Student Information System for school management"
+},
+"eduplex-api/cake-api-xapi-proxy": {
+"stars": 0,
+"last_activity": "2026-08-31T15:35:04.961Z",
+"license": null,
+"desc": "Simple PHP Proxy to forward xAPI requests to LRS"
+},
+"artpetro/nodejs-lrs": {
+"stars": 0,
+"last_activity": "2018-07-02T09:31:02.128Z",
+"license": null,
+"desc": "node.js implementation of a learning record store (LRS) as described in the XAPI specifications"
+},
+"clinton.roy/h5pydantic": {
+"stars": 1,
+"last_activity": "2025-05-25T23:57:26.390Z",
+"license": null,
+"desc": "Maps from pydantic models to hdf5. Work in progress."
+},
+"MAXIV-SCISW/parallel-h5py-examples": {
+"stars": 1,
+"last_activity": "2022-04-15T09:14:16.368Z",
+"license": null,
+"desc": "Python demo for writing image series to HDF5 with parallel h5py."
+},
+"immappie/h5pyViewer": {
+"stars": 1,
+"last_activity": "2019-04-11T16:34:02.089Z",
+"license": null,
+"desc": "h5pyViewer"
+},
+"icfoss/H5P-ImageSequencing": {
+"stars": 1,
+"last_activity": "2020-10-30T18:24:20.778Z",
+"license": null,
+"desc": ""
+},
+"xiao-fang/H5Practice": {
+"stars": 1,
+"last_activity": "2016-06-06T14:07:52.697Z",
+"license": null,
+"desc": "a HTML5 Practice project."
+},
+"starkbaknet/h5p-to-desktop-app": {
+"stars": 0,
+"last_activity": "2026-04-17T08:37:22.239Z",
+"license": null,
+"desc": ""
+},
+"adamcreyes/h5py": {
+"stars": 0,
+"last_activity": "2026-02-09T23:06:41.772Z",
+"license": null,
+"desc": "HDF5 for Python -- The h5py package is a Pythonic interface to the HDF5 binary data format."
+},
+"cuongtruongrsjdn-group/proj-x0th5p98": {
+"stars": 0,
+"last_activity": "2025-10-25T03:05:59.471Z",
+"license": null,
+"desc": ""
+},
+"gannhiemmo/h5pc3fva": {
+"stars": 0,
+"last_activity": "2025-10-18T04:28:37.400Z",
+"license": null,
+"desc": ""
+},
+"thaoquockychu-group/proj-tl670rse": {
+"stars": 0,
+"last_activity": "2025-10-15T04:06:43.152Z",
+"license": null,
+"desc": ""
+},
+"gitlab-oss-package-research/tools/libbehave/3.2.0/npm/h5/h5p-server-bc3e82c4": {
+"stars": 0,
+"last_activity": "2026-10-04T00:05:33.826Z",
+"license": null,
+"desc": ""
+},
+"gitlab-oss-package-research/source/npm/h5/h5p-server-bc3e82c4": {
+"stars": 0,
+"last_activity": "2026-10-05T00:05:48.808Z",
+"license": null,
+"desc": ""
+},
+"benjimaclellan/h5pydantic": {
+"stars": 0,
+"last_activity": "2025-03-08T15:57:41.198Z",
+"license": null,
+"desc": "Maps from pydantic models to hdf5. Work in progress."
+},
+"contact842/h5pydantic": {
+"stars": 0,
+"last_activity": "2025-01-13T22:32:37.422Z",
+"license": null,
+"desc": "Maps from pydantic models to hdf5. Work in progress."
+},
+"fendivictor/h5p-player": {
+"stars": 0,
+"last_activity": "2025-01-22T07:10:01.971Z",
+"license": null,
+"desc": ""
+},
+"adaptive-learning-engine/moodle/adleteh5p": {
+"stars": 0,
+"last_activity": "2026-04-22T09:03:35.502Z",
+"license": null,
+"desc": ""
+},
+"adaptive-learning-engine/moodle/adleteh5ppool": {
+"stars": 0,
+"last_activity": "2025-01-24T15:25:03.216Z",
+"license": null,
+"desc": ""
+},
+"melmakin/h5pydantic": {
+"stars": 0,
+"last_activity": "2024-02-04T21:06:34.164Z",
+"license": null,
+"desc": "Maps from pydantic models to hdf5. Work in progress."
+},
+"dne-elearning/moodle-magistere/moodle-local_hvp2h5p": {
+"stars": 0,
+"last_activity": "2022-12-08T13:24:12.640Z",
+"license": null,
+"desc": ""
+},
+"frankvanrest/react-h5p-boilerplate": {
+"stars": 0,
+"last_activity": "2022-10-01T18:21:12.963Z",
+"license": null,
+"desc": ""
+},
+"krischl/h5p_typen": {
+"stars": 0,
+"last_activity": "2022-12-08T22:13:21.455Z",
+"license": null,
+"desc": ""
+},
+"cuongdang1997/h5pdemolaravel7": {
+"stars": 0,
+"last_activity": "2021-12-27T14:41:11.663Z",
+"license": null,
+"desc": ""
+},
+"roberthost.vn/h5p-testing": {
+"stars": 0,
+"last_activity": "2021-07-10T07:45:21.639Z",
+"license": null,
+"desc": ""
+},
+"freedomwalkingtest/cicd-h5p-testing": {
+"stars": 0,
+"last_activity": "2021-07-09T05:09:00.305Z",
+"license": null,
+"desc": ""
+},
+"cesar.ecoclub/H5P-FindTheWords": {
+"stars": 0,
+"last_activity": "2021-06-10T13:11:48.773Z",
+"license": null,
+"desc": ""
+},
+"zum-team/apps.zum.de/h5p.imagehotspotszum": {
+"stars": 0,
+"last_activity": "2021-04-29T13:35:06.794Z",
+"license": null,
+"desc": ""
+},
+"tice.canope/h5pdemo01": {
+"stars": 0,
+"last_activity": "2022-11-02T23:02:53.634Z",
+"license": null,
+"desc": ""
+},
+"Silverc/h5p-threejs-test": {
+"stars": 0,
+"last_activity": "2021-11-15T16:40:54.297Z",
+"license": null,
+"desc": "Ficheiros que servir\u00e3o de teste para a realiza\u00e7\u00e3o do projeto de tese sobre Realidade Virtual e e-Learning."
+},
+"otacke/H5P-ImagePair": {
+"stars": 0,
+"last_activity": "2021-01-06T12:02:37.040Z",
+"license": null,
+"desc": ""
+},
+"aragilar/h5preserve": {
+"stars": 0,
+"last_activity": "2022-12-05T15:06:54.814Z",
+"license": null,
+"desc": "Thin wrapper around h5py and HDF5, inspired by camel"
+},
+"rgdacosta/classroom_env": {
+"stars": 39,
+"last_activity": "2026-10-06T11:01:04.800Z",
+"license": null,
+"desc": ""
+},
+"travo-cr/travo": {
+"stars": 8,
+"last_activity": "2026-10-06T11:22:08.096Z",
+"license": null,
+"desc": "Inspired by e.g. GitHub ClassRoom,\r Travo is a lightweight Python toolkit that helps you turn your\r favorite GitLab instance into a flexible assignment management\r solution. It does so by automating steps in the assignme"
+},
+"magnusmj/godot4classroom": {
+"stars": 6,
+"last_activity": "2023-02-01T01:34:50.858Z",
+"license": null,
+"desc": ""
+},
+"pyfml/prepare": {
+"stars": 4,
+"last_activity": "2023-02-15T01:40:25.412Z",
+"license": null,
+"desc": "Things to prepare before going to classroom #PyFML \r https://www.facebook.com/pyfml/\r \u0110\u0103ng k\u00fd h\u1ecdc Python t\u1ea1i http://pymi.vn "
+},
+"cist1605-fall2025/Classroom-codes": {
+"stars": 3,
+"last_activity": "2026-03-31T22:09:19.520Z",
+"license": null,
+"desc": ""
+},
+"git-classrooms/git-classrooms": {
+"stars": 3,
+"last_activity": "2026-06-16T01:05:19.565Z",
+"license": null,
+"desc": "GitClassrooms Source-Code Mirror - This is a publish-only repository of [GitClassrooms](https://github.com/git-classrooms/git-classrooms)"
+},
+"wchs-map/churchill-map": {
+"stars": 3,
+"last_activity": "2022-05-21T16:13:39.856Z",
+"license": null,
+"desc": "Online map of Winston Churchill High School with navigation between classrooms. Currently in beta. https://wchsmap.com"
+},
+"nathanchere/rEFInd-classroom": {
+"stars": 3,
+"last_activity": "2024-02-12T09:52:24.107Z",
+"license": null,
+"desc": "Fork of rEFInd (https://sf.net/p/refind/) with a focus on eyecandy features"
+},
+"enit-idce/etc": {
+"stars": 2,
+"last_activity": "2026-09-23T07:23:25.465Z",
+"license": null,
+"desc": ""
+},
+"namonexus2/NamoNexus-Smart-Classroom": {
+"stars": 1,
+"last_activity": "2026-04-28T09:36:10.387Z",
+"license": null,
+"desc": ""
+},
+"yotoshelf/yotoshelf": {
+"stars": 1,
+"last_activity": "2026-10-02T23:48:41.115Z",
+"license": null,
+"desc": "A self-hosted library manager for Yoto Make Your Own audio cards. Create collections, author cards with drag-and-drop audio, generate pixel art track icons, and publish to multiple family or classroom Yoto accounts from "
+},
+"kndetounde/openclassroomprojects": {
+"stars": 1,
+"last_activity": "2024-12-11T14:41:40.750Z",
+"license": null,
+"desc": ""
+},
+"Mr-Tonton/P7_front_geraci_tony": {
+"stars": 1,
+"last_activity": "2023-03-07T15:54:41.315Z",
+"license": null,
+"desc": "OPENCLASSROOMS: Projet 7 \"groupomania\" partie frontend dans le cadre de la formation d\u00e9veloppeur web"
+},
+"Mr-Tonton/p3_geraci_tony": {
+"stars": 1,
+"last_activity": "2023-03-07T15:53:59.074Z",
+"license": null,
+"desc": "OPENCLASSROOMS: Projet 3 \"Ohmyfood\" dans le cadre de la formation d\u00e9veloppeur web"
+},
+"Mr-Tonton/P2_geraci_tony": {
+"stars": 1,
+"last_activity": "2023-03-07T15:53:58.334Z",
+"license": null,
+"desc": "OPENCLASSROOMS: Projet 2 \"Booki\" dans le cadre de la formation d\u00e9veloppeur web"
+},
+"Mr-Tonton/p6_geraci_tony": {
+"stars": 1,
+"last_activity": "2023-03-07T15:53:57.981Z",
+"license": null,
+"desc": "OPENCLASSROOMS: Projet 6 \"Piiquante\" dans le cadre de la formation d\u00e9veloppeur web"
+},
+"Mr-Tonton/P7_back_geraci_tony": {
+"stars": 1,
+"last_activity": "2023-03-07T15:53:57.891Z",
+"license": null,
+"desc": "OPENCLASSROOMS: Projet 7 \"groupomania\" partie backend dans le cadre de la formation d\u00e9veloppeur web"
+},
+"Mr-Tonton/p4_geraci_tony": {
+"stars": 1,
+"last_activity": "2023-03-07T15:53:57.873Z",
+"license": null,
+"desc": "OPENCLASSROOMS: Projet 4 \"La Panth\u00e8re\" dans le cadre de la formation d\u00e9veloppeur web"
+},
+"darnoul20/todoapp-konsa-project": {
+"stars": 1,
+"last_activity": "2023-04-06T12:56:01.021Z",
+"license": null,
+"desc": ""
+},
+"pierreloicq/spring-petclinic-microservices": {
+"stars": 1,
+"last_activity": "2022-08-12T20:07:53.338Z",
+"license": null,
+"desc": "Openclassroom Petclinic project"
+},
+"mathieu-boutin-personal/test-ci-cd/spring-petclinic-microservices": {
+"stars": 1,
+"last_activity": "2022-06-19T09:05:57.710Z",
+"license": null,
+"desc": "OpenClassroom CI/CD"
+},
+"ladmia.madi/tour-guide": {
+"stars": 1,
+"last_activity": "2022-06-22T13:14:26.628Z",
+"license": null,
+"desc": "Projet 8 Openclassrooms Am\u00e9liorez votre application avec des syst\u00e8mes distribu\u00e9s"
+},
+"earvin.saintus3/projectangular": {
+"stars": 1,
+"last_activity": "2022-02-24T14:15:28.523Z",
+"license": null,
+"desc": "Formation en auto didacte avec OpenClassRoom"
+},
+"ackheron-openclassrooms/christopheromand_7_280122": {
+"stars": 1,
+"last_activity": "2022-05-31T09:40:00.296Z",
+"license": null,
+"desc": "Projet 7 Openclassrooms \"Cr\u00e9ez un r\u00e9seau social d\u2019entreprise\""
+},
+"ackheron-openclassrooms/christopheromand_6_070122": {
+"stars": 1,
+"last_activity": "2022-05-31T09:34:05.017Z",
+"license": null,
+"desc": "Projet 6 Openclassrooms \"Construire une API s\u00e9curis\u00e9e pour une application d'avis gastronomiques\" "
+},
+"ackheron-openclassrooms/christopheromand_5_091221": {
+"stars": 1,
+"last_activity": "2022-10-26T17:55:25.134Z",
+"license": null,
+"desc": "Projet 5 \"Kanap\" Openclassrooms \r \r page: https://ackheron.gitlab.io/christopheromand_5_091221/"
+},
+"ackheron-openclassrooms/christopheromand_4_19112021": {
+"stars": 1,
+"last_activity": "2022-05-31T09:07:55.385Z",
+"license": null,
+"desc": "Projet 4 \"Optimisez un site web existant\" Openclassrooms\r \r Site: https://ackheron-openclassrooms.gitlab.io/christopheromand_4_19112021/"
+},
+"ackheron-openclassrooms/christopheromand_3_211021": {
+"stars": 1,
+"last_activity": "2022-05-31T08:58:23.767Z",
+"license": null,
+"desc": "Projet 3 \"Ohmyfood\" Openclassrooms\r \r Page: https://ackheron-openclassrooms.gitlab.io/christopheromand_3_211021/"
+},
+"nicolasbournas/projet-2-reservia-openclassrooms": {
+"stars": 1,
+"last_activity": "2021-08-31T16:54:28.846Z",
+"license": null,
+"desc": "Projet 2 OpenClassrooms Reservia"
+},
+"thenextgreat/classroomio": {
+"stars": 1,
+"last_activity": "2023-11-02T11:35:42.814Z",
+"license": null,
+"desc": ""
+}
+}
+}

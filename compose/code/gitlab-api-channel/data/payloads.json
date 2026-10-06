@@ -1,0 +1,214 @@
+{
+ "francoisjacquet/rosariosis": {
+  "path": "LICENSE",
+  "ref": "mobile",
+  "bytes": 15214,
+  "sha256": "d954e14e5c752eb0",
+  "payload_family": "GPL v2",
+  "detector": "agpl-1.0",
+  "head": "GNU GENERAL PUBLIC LICENSE / Version 2, June 1991 / Copyright (C) 1989, 1991 Free Software Foundation, Inc."
+ },
+ "oer/emacs-reveal": {
+  "path": "LICENSE",
+  "ref": "main",
+  "bytes": 517,
+  "sha256": "21a1dedbfaf3b73f",
+  "payload_family": "REUSE",
+  "detector": "other",
+  "head": "This repository embeds different resources under different (free/libre / and open) license terms, following the REUSE best practices, see: / https://r",
+  "licence_set": [
+   "CC-BY-4.0.txt",
+   "CC-BY-SA-4.0.txt",
+   "CC0-1.0.txt",
+   "GPL-3.0-or-later.txt"
+  ]
+ },
+ "oer/oer-reveal": {
+  "path": "LICENSE",
+  "ref": "main",
+  "bytes": 516,
+  "sha256": "7f04d5c40c5f8081",
+  "payload_family": "REUSE",
+  "detector": "other",
+  "head": "This repository embeds different resources under different (free/libre / and open) license terms, following the REUSE best practices, see: / https://r",
+  "licence_set": [
+   "CC-BY-4.0.txt",
+   "CC-BY-SA-4.0.txt",
+   "CC0-1.0.txt",
+   "GPL-3.0-or-later.txt",
+   "LicenseRef-MIT-HEH-JL.txt",
+   "LicenseRef-MIT-JL.txt"
+  ]
+ },
+ "cjaikaeo/elabsheet": {
+  "path": "LICENSE",
+  "ref": "master",
+  "bytes": 1325,
+  "sha256": "8be92e91c1f6968d",
+  "payload_family": "BSD",
+  "detector": "bsd-2-clause",
+  "head": "Copyright (c) 2013, Chaiporn Jaikaeo and Jittat Fakcharoenphol / All rights reserved. / Redistribution and use in source and binary forms, with or wit"
+ },
+ "saxionnl/42/lms42": {
+  "path": "LICENSE",
+  "ref": "master",
+  "bytes": 34523,
+  "sha256": "8486a10c4393cee1",
+  "payload_family": "AGPL v3",
+  "detector": "agpl-3.0",
+  "head": "GNU AFFERO GENERAL PUBLIC LICENSE / Version 3, 19 November 2007 / Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>"
+ },
+ "travo-cr/travo": {
+  "path": "LICENSE",
+  "ref": "master",
+  "bytes": 1517,
+  "sha256": "80d9492665622470",
+  "payload_family": "BSD",
+  "detector": "bsd-3-clause",
+  "head": "BSD 3-Clause License / Copyright (c) 2023,2024 travo / All rights reserved."
+ },
+ "olatorg/OpenOLAT": {
+  "path": "LICENSE",
+  "ref": "20.3.x",
+  "bytes": 10982,
+  "sha256": "6dbc5b605ed0be6e",
+  "payload_family": "Apache v2",
+  "detector": "apache-2.0",
+  "head": "Apache License / Version 2.0, January 2004 / http://www.apache.org/licenses/"
+ },
+ "olatorg/openolat-starter": {
+  "path": "LICENSE",
+  "ref": "main",
+  "bytes": 11344,
+  "sha256": "923103fa20b33855",
+  "payload_family": "Apache v2",
+  "detector": "ecl-2.0",
+  "head": "Apache License / Version 2.0, January 2004 / http://www.apache.org/licenses/"
+ },
+ "adaptive-learning-engine/adlete-packages": {
+  "path": "LICENSE",
+  "ref": "master",
+  "bytes": 1106,
+  "sha256": "4b7a96da55e519f4",
+  "payload_family": "MIT",
+  "detector": "mit",
+  "head": "The MIT License (MIT) / Copyright (c) 2022 Florian Gnadlinger & Andr\u00e9 Selmanagi\u0107 / Permission is hereby granted, free of charge, to any person obtaini"
+ },
+ "TIBHannover/oer/wordpress-oersi-plugin": {
+  "path": "LICENSE",
+  "ref": "master",
+  "bytes": 1075,
+  "sha256": "6e396f6ec11c46bb",
+  "payload_family": "MIT",
+  "detector": "mit",
+  "head": "MIT License / Copyright (c) 2020 TIB Hannover / OER / Permission is hereby granted, free of charge, to any person obtaining a copy"
+ },
+ "learntech-rwth/omilaxr-ecosystem/v2/omilaxr": {
+  "path": "LICENSE",
+  "ref": "main",
+  "bytes": 34519,
+  "sha256": "bb0480b515d194e5",
+  "payload_family": "AGPL v3",
+  "detector": "agpl-3.0",
+  "head": "GNU AFFERO GENERAL PUBLIC LICENSE / Version 3, 19 November 2007 / Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>"
+ },
+ "particify/dev/foss/arsnova-lms-connector": {
+  "path": "LICENSE",
+  "ref": "master",
+  "bytes": 1101,
+  "sha256": "ea6b403edc167e77",
+  "payload_family": "MIT",
+  "detector": "mit",
+  "head": "Copyright 2013-2020 Daniel Gerhardt, Paul-Christian Volkmer and contributors / Permission is hereby granted, free of charge, to any person obtaining a"
+ },
+ "moodlenet/moodlenet": {
+  "path": "LICENSE",
+  "ref": "master",
+  "bytes": 34481,
+  "sha256": "6dbb120dadf0e5f8",
+  "payload_family": "AGPL v3",
+  "detector": "agpl-3.0",
+  "head": "GNU AFFERO GENERAL PUBLIC LICENSE / Version 3, 19 November 2007 / Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>"
+ },
+ "eduplex-api/cake-api-xapi-proxy": {
+  "path": "LICENSE",
+  "ref": "main",
+  "bytes": 1147,
+  "sha256": "7d9e705e204fafc6",
+  "payload_family": "MIT",
+  "detector": "mit",
+  "head": "MIT License / Copyright (c) 2024 EduPLEx partners (courseticket Deutschland GmbH, / Hochschule Schmalkalden, WBS Training AG)"
+ },
+ "kbarbounakis/eduapi": {
+  "path": "LICENSE",
+  "ref": "main",
+  "bytes": 7560,
+  "sha256": "446e755fae55ff03",
+  "payload_family": "LGPL",
+  "detector": "other",
+  "head": "GNU Lesser General Public License / ================================= / _Version 3, 29 June 2007_"
+ },
+ "Sudz1/sam-lms": {
+  "path": "LICENSE",
+  "ref": "main",
+  "bytes": 1084,
+  "sha256": "c3ebb66217a4c303",
+  "payload_family": "MIT",
+  "detector": "mit",
+  "head": "MIT License / Copyright (c) 2025 sudhir / Permission is hereby granted, free of charge, to any person obtaining a copy"
+ },
+ "voxos.ai/learn-anything": {
+  "path": "LICENSE",
+  "ref": "main",
+  "bytes": 1070,
+  "sha256": "db6c1be55e8c496c",
+  "payload_family": "MIT",
+  "detector": "mit",
+  "head": "MIT License / Copyright (c) 2026 Voxos.ai Inc. / Permission is hereby granted, free of charge, to any person obtaining a copy"
+ },
+ "elizeubarbosaabreu/leitor-de-gabaritos": {
+  "path": "LICENSE",
+  "ref": "master",
+  "bytes": 34520,
+  "sha256": "57c8ff33c9c0cfc3",
+  "payload_family": "AGPL v3",
+  "detector": "agpl-3.0",
+  "head": "GNU AFFERO GENERAL PUBLIC LICENSE / Version 3, 19 November 2007 / Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>"
+ },
+ "yoockh-group/Edusaku": {
+  "path": "LICENSE",
+  "ref": "main",
+  "bytes": 11357,
+  "sha256": "c71d239df91726fc",
+  "payload_family": "Apache v2",
+  "detector": "apache-2.0",
+  "head": "Apache License / Version 2.0, January 2004 / http://www.apache.org/licenses/"
+ },
+ "ai-swarm-solutions-group/OpenTeacherAgent": {
+  "path": "LICENSE",
+  "ref": "main",
+  "bytes": 34523,
+  "sha256": "0d96a4ff68ad6d4b",
+  "payload_family": "AGPL v3",
+  "detector": "agpl-3.0",
+  "head": "GNU AFFERO GENERAL PUBLIC LICENSE / Version 3, 19 November 2007 / Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>"
+ },
+ "git-classrooms/git-classrooms": {
+  "path": "LICENSE",
+  "ref": "develop",
+  "bytes": 16725,
+  "sha256": "1f256ecad1928805",
+  "payload_family": "MPL v2",
+  "detector": "mpl-2.0",
+  "head": "Mozilla Public License Version 2.0 / ================================== / 1. Definitions"
+ },
+ "francoisjacquet/Grading_Scale_Generation": {
+  "path": "LICENSE",
+  "ref": "master",
+  "bytes": 18046,
+  "sha256": "db296f2f7f35bca3",
+  "payload_family": "GPL v2",
+  "detector": "gpl-2.0+",
+  "head": "GNU GENERAL PUBLIC LICENSE / Version 2, June 1991 / Copyright (C) 1989, 1991 Free Software Foundation, Inc., <http://fsf.org/>"
+ }
+}

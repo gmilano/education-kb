@@ -1,0 +1,11 @@
+{
+ "francoisjacquet/Grading_Scale_Generation": {
+  "manifest": "composer.json",
+  "ref": "master",
+  "declared_license": "GPL-2.0-or-later",
+  "bytes": 890,
+  "payload_family": "GPL v2",
+  "detector": "gpl-2.0+",
+  "note": "the payload cannot settle 'or later'; the manifest does, and it corroborates the detector"
+ }
+}

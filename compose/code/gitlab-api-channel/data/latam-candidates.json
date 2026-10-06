@@ -1,0 +1,29 @@
+{
+ "ccsl-ufpa/educacaovigiada-org-br": {
+  "http": 200,
+  "stars": 1,
+  "license_key": null,
+  "license_url": null,
+  "last_activity": "2025-12-09T19:33:36.055Z",
+  "created": "2021-02-05T15:33:19.521Z",
+  "desc": ""
+ },
+ "angeelrdz-group/nova-aula": {
+  "http": 200,
+  "stars": 0,
+  "license_key": null,
+  "license_url": null,
+  "last_activity": "2026-10-05T23:24:33.893Z",
+  "created": "2026-08-19T14:38:34.559Z",
+  "desc": "Plataforma educativa full-stack en tiempo real para publicar blogs, cursos, quizzes y recursos digitales, gestionar profesores y alumnos, medir el aprendizaje y vender contenido con Stripe. Construida"
+ },
+ "evertonwilliam/plataforma-de-educacao": {
+  "http": 200,
+  "stars": 0,
+  "license_key": null,
+  "license_url": null,
+  "last_activity": "2026-09-08T22:39:26.487Z",
+  "created": "2026-08-28T20:44:54.969Z",
+  "desc": "Este reposit\u00f3rio cont\u00e9m o material pr\u00e1tico e os registros de uma **trilha de forma\u00e7\u00e3o em Engenharia de Software orientada por um agente de Intelig\u00eancia Artificial**.\r\n\r\nO objetivo n\u00e3o \u00e9 apenas aprende"
+ }
+}

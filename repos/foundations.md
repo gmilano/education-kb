@@ -1546,3 +1546,53 @@ Apache-2.0 and one MIT, every one read from its own payload. That is a better re
 the platform tier, the assistive tier or the language tier has ever returned in this KB,
 and it means the evidence layer is the one part of an Annex III delivery with no licence
 negotiation in it at all.
+
+## Added in the twenty-second pass of 2026-10-06 — the interoperability layer, found on a forge this KB had never searched
+
+Channel: the **GitLab REST API v4** (discovery + metadata + payload). Controls, limits and the
+detector-error table are in `agents/top.md`; the instrument is in
+`compose/code/gitlab-api-channel/`. 25 search terms → **534 unique projects** → the rows below are
+the ones that are *infrastructure* rather than product.
+
+🟢 **Why this shelf cared about the sweep at all:** trend 28 of this KB records an
+**interoperability hole** — the standards (xAPI, LTI, 1EdTech) are scored line items in
+procurement, and the permissive implementations were missing. **Three of the rows below are
+standards plumbing**, and they were invisible to every previous pass because every previous pass
+searched one forge.
+
+| Repo | Licence (read from payload) | ★ · last activity | Placement | Why it is a foundation |
+|---|---|---|---|---|
+| [`kbarbounakis/eduapi`](https://gitlab.com/kbarbounakis/eduapi) | ⚠️ **LGPL-3.0** (`LICENSE`; GitLab's detector says `other`) | 0 · 2026-05-15 | ⚠️ EMEA *(README names **Universis**; Greece inferred)* | **An implementation of the 1EdTech EduAPI specification**, built for the **Universis** Greek higher-education student-information project. The first EduAPI implementation in this KB. ⚠️ **LGPL-3.0** — the middle path this KB already documents for Odoo/OpenEduCat: link against it, do not fold it into a proprietary binary |
+| [`eduplex-api/cake-api-xapi-proxy`](https://gitlab.com/eduplex-api/cake-api-xapi-proxy) | 🟢 **MIT** (`LICENSE`) | 0 · 2026-08-31 | ⚠️ **unplaced** — no country evidence in repo or README | PHP proxy that forwards **xAPI** statements to an **LRS**, as a CakePHP plugin over `cake-rest-api`. Tiny, single-purpose, permissive — the cheapest way to put a compliant statement pipe in front of an LRS when the LMS cannot speak xAPI itself |
+| [`TIBHannover/oer/wordpress-oersi-plugin`](https://gitlab.com/TIBHannover/oer/wordpress-oersi-plugin) | 🟢 **MIT** (`LICENSE`) | 1 · **2026-10-02** | EMEA (Germany) | WordPress integration of **OERSI**, the German higher-education **search index for Open Educational Resources**, with Elasticsearch indexing. From **TIB Hannover** (the German National Library of Science and Technology) — a public-institution-maintained OER discovery layer, MIT, actively committed |
+| [`adaptive-learning-engine/adlete-packages`](https://gitlab.com/adaptive-learning-engine/adlete-packages) | 🟢 **MIT** (`LICENSE`) | 1 · **2026-10-02** | ⚠️ EMEA *(inferred)* | ADLETE adaptive-learning engine, monorepo of components; sibling `adaptive-learning-engine/moodle/adleteh5p` binds it to **H5P** inside Moodle. Full entry in `agents/top.md` |
+| [`travo-cr/travo`](https://gitlab.com/travo-cr/travo) | 🟢 **BSD-3-Clause** (`LICENSE`) | 8 · **2026-10-06** | EMEA (France) + NA (Québec) | Assignment-distribution and grading infrastructure over **any** GitLab instance, **nbgrader**-integrated. Pairs with [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) (BSD-3-Clause, 1.4k★, v0.9.6 of 2026-09-30) already on this shelf. PyPI `travo` 2.1.1 |
+| [`learntech-rwth/omilaxr-ecosystem/v2/omilaxr`](https://gitlab.com/learntech-rwth/omilaxr-ecosystem/v2/omilaxr) | 🔴 **AGPL-3.0** (`LICENSE`) | 1 · 2026-07-03 | EMEA (Germany) | **OmiLAXR** — authoring framework for modular **learning-analytics modules in XR** (VR/AR), from RWTH Aachen's Learning Technologies group. 🔴 Recorded and **excluded from delivery** on licence; kept because it is the only XR-learning-analytics framework this KB has located at all |
+| [`particify/dev/foss/arsnova-lms-connector`](https://gitlab.com/particify/dev/foss/arsnova-lms-connector) | 🟢 **MIT** (`LICENSE`) | 3 · 🔴 **2022-09-12** | EMEA (Germany) | Proxy exposing **course-membership data from LMSs under one unified API** — from the ARSnova/Particify audience-response project. 🔴 **The first row in this KB marked dead by measurement rather than by inference:** `last_activity_at` is four years old. Read it as a design, not a dependency |
+| [`git-classrooms/git-classrooms`](https://gitlab.com/git-classrooms/git-classrooms) | 🟢 **MPL-2.0** (`LICENSE`, detector agrees) | 3 · 2026-06-16 | ⚠️ **unplaced** (namespace only) | GitHub-Classroom-equivalent for self-hosted GitLab. ⚠️ **A publish-only mirror**: its own description points upstream to a GitHub repository, so the GitLab copy is a *host*, not the project. MPL-2.0 is file-level copyleft — usable alongside proprietary code, not inside the same file |
+
+### ⚠️ The REUSE rows — where the root `LICENSE` is a map and not a grant
+
+| Repo | Root `LICENSE` | The real licence set, enumerated from `/repository/tree?path=LICENSES` |
+|---|---|---|
+| [`oer/emacs-reveal`](https://gitlab.com/oer/emacs-reveal) | **517 B** REUSE pointer | **4**: `GPL-3.0-or-later`, `CC-BY-4.0`, `CC-BY-SA-4.0`, `CC0-1.0` |
+| [`oer/oer-reveal`](https://gitlab.com/oer/oer-reveal) | **516 B** REUSE pointer | **6**: the same four plus `LicenseRef-MIT-HEH-JL`, `LicenseRef-MIT-JL` — two **custom references**, which SPDX permits and no classifier can resolve |
+
+🔵 **Pass 107 had already rejected `oer/emacs-reveal` on licence and kept it as a design.** What is
+new is that the licence **set** is now enumerated rather than sampled: an OER toolchain splits
+**code under GPL-3.0-or-later** from **content under CC-BY/CC-BY-SA/CC0**, and a `LicenseRef-`
+entry means the project wrote its own terms. 🔴 **For this KB's method the consequence is blunt:
+on a REUSE repository, reading the root payload — the rule that bought twenty passes of accuracy —
+returns a notice board.** The answer lives in `LICENSES/` and in per-file SPDX headers, and only a
+tree listing finds it.
+
+### 🔴 What this sweep did **not** find, with the denominator attached
+
+534 unique projects, 25 terms, one forge. **Not found, searched for explicitly:**
+
+| Looked for | Terms used | Result |
+|---|---|---|
+| a permissive **LTI 1.3 tool provider** | `lms ai`, `learning management system`, `student information system` | 🔴 **0** — the LTI-shaped hole of trend 28 is still open on a second forge |
+| a permissive **knowledge-tracing / BKT-IRT** library | `knowledge tracing`, `adaptive learning`, `learning analytics` | 🔴 **0** — `OATutor` (MIT) and the ADLETE engine above remain the only mastery assets in this KB |
+| an **MCP server for education** on GitLab | `education agent`, `edtech ai`, `classroom ai` | 🔴 **1 candidate, unusable** — `sheikhcoders/interleaved-learning-mcp` carries **no licence payload at all**. Every education MCP server this KB holds is still GitHub-hosted |
+| a **LATAM-origin** education project | all 25 terms | 🔴 **1 LATAM-plausible of 534**, and its placement is an inference from Portuguese-language naming, not a declaration — see `intel/market.md` |

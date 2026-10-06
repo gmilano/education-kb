@@ -1,0 +1,727 @@
+{
+"terms": {
+"tutor inteligente": 0,
+"aprendizaje adaptativo": 0,
+"plataforma educativa": 16,
+"educacion ia": 30,
+"evaluacion automatica": 0,
+"gestion escolar": 11,
+"aula virtual": 14,
+"cuestionario generador": 0,
+"ensino aprendizagem": 2,
+"educacao ia": 30,
+"tutor virtual": 30,
+"escola gestao": 4,
+"prova corretor": 1,
+"avaliacao automatica": 0,
+"recursos educativos abiertos": 3,
+"recursos educacionais abertos": 0
+},
+"projects": {
+"RamadrianG/wiki---fpga-para-todos": {
+"stars": 12,
+"last_activity": "2024-07-26",
+"desc": "Repositorio abierto con documentaci\u00f3n y ejemplos para la plataforma educativa \"FPGA para todos\" desarrollada por la UTN Haedo con el objetivo de acerc"
+},
+"elchuo160/sifu": {
+"stars": 2,
+"last_activity": "2020-08-22",
+"desc": "plataforma educativa"
+},
+"angeelrdz-group/nova-aula": {
+"stars": 0,
+"last_activity": "2026-10-05",
+"desc": "Plataforma educativa full-stack en tiempo real para publicar blogs, cursos, quizzes y recursos digitales, gestionar profesores y alumnos, medir el apr"
+},
+"agustina.gomez.dev/plataforma-educativa-testing": {
+"stars": 0,
+"last_activity": "2026-07-29",
+"desc": ""
+},
+"josephlewisleal83/plataformaeducativameta": {
+"stars": 0,
+"last_activity": "2025-11-06",
+"desc": ""
+},
+"JmAtochePascual/Escuela-Cocina": {
+"stars": 0,
+"last_activity": "2025-05-20",
+"desc": "Escuela Cocina es una innovadora plataforma educativa especializada en artes culinarias, dise\u00f1ada para transformar la manera en que las personas apren"
+},
+"ReynaSRdz/labsol-academy": {
+"stars": 0,
+"last_activity": "2024-01-10",
+"desc": "Labsol Academy es una plataforma educativa en l\u00ednea que ofrece una amplia gama de cursos de manera gratuita. El sistema est\u00e1 dise\u00f1ado para brindar acc"
+},
+"MauriIglesiasES/edext": {
+"stars": 0,
+"last_activity": "2021-04-26",
+"desc": "Plataforma educativa para cursos de extensi\u00f3n universitaria programada en Java, con interfaz web utilizando JSP. Interfaz de administraci\u00f3n del sistem"
+},
+"www.joelramiro/plataforma-educativa": {
+"stars": 0,
+"last_activity": "2020-05-07",
+"desc": ""
+},
+"EdGuz21/SEPAES": {
+"stars": 0,
+"last_activity": "2019-11-22",
+"desc": "Plataforma educativa para estudio y practica para la PAES"
+},
+"gobernaciondenarino/ganaedu": {
+"stars": 0,
+"last_activity": "2019-12-26",
+"desc": "Plataforma de datos de las Instituciones Educativas del Departamento de Nari\u00f1o"
+},
+"edjabe/start": {
+"stars": 0,
+"last_activity": "2019-10-09",
+"desc": "Plataforma educativa"
+},
+"it10-public/pps/jmanchado_pps": {
+"stars": 0,
+"last_activity": "2019-07-03",
+"desc": "Pr\u00e1ctica Profesional Supervisada IT10- Joaqu\u00edn Manchado\r Despliegue IOT para para plataforma Educativa Edukit10\r Proyecto \"Invernadero Inteligente IoT"
+},
+"BrendaSGalvisG01/Colegio": {
+"stars": 0,
+"last_activity": "2018-08-31",
+"desc": "Proyecto sena con el fin de realizar una plataforma para una institucion educativa "
+},
+"wsalgado/Unidades_recidenciales": {
+"stars": 0,
+"last_activity": "2017-05-26",
+"desc": "Este es un proyecto para la ense\u00f1anza en una plataforma educativa de android studio"
+},
+"mauchino/pewdi": {
+"stars": 0,
+"last_activity": "2017-05-18",
+"desc": "Plataforma educativa web para ninos con discapacidad"
+},
+"1789/src": {
+"stars": 2,
+"last_activity": "2018-11-14",
+"desc": "Desenvolvimento de um jogo educacional sobre a Revolu\u00e7\u00e3o Francesa.\r P\u00fablico alvo principal: Estudantes do PVP (Pr\u00e9-vestibuar Popular)"
+},
+"brunoromulo/bobathon-appdev": {
+"stars": 1,
+"last_activity": "2026-07-13",
+"desc": "Este projeto DEMO educacional oferece uma experi\u00eancia pr\u00e1tica com produtos IBM para moderniza\u00e7\u00e3o de aplica\u00e7\u00f5es Java. Voc\u00ea ter\u00e1 a oportunidade de traba"
+},
+"henrique.kozachf/projeto-logitech-mobile": {
+"stars": 1,
+"last_activity": "2026-04-15",
+"desc": "Aplicativo mobile conceitual de e-commerce da Logitech, desenvolvido como projeto escolar. O app n\u00e3o tem v\u00ednculo com a Logitech e foi criado apenas pa"
+},
+"jpmacleure/programacao-web-js": {
+"stars": 1,
+"last_activity": "2024-03-24",
+"desc": "Conte\u00fado educacional para programa\u00e7\u00e3o de software para web usanso JS e node.js"
+},
+"prolibreros/cc/wikieducacion2022": {
+"stars": 1,
+"last_activity": "2023-01-06",
+"desc": "Libro editado para Wikimedia M\u00e9xico.\r \r PDF: https://gitlab.com/prolibreros/cc/wikieducacion2022/-/raw/no-masters/wikieducacion2022.digital.pdf"
+},
+"impresionista/educacionlibre": {
+"stars": 1,
+"last_activity": "2021-03-31",
+"desc": "Herramientas \u00fatiles para la docencia con Software Libre y licencias Creative Commons."
+},
+"jmgroup88/educacion-chia-cundinamarca-gov-co": {
+"stars": 0,
+"last_activity": "2026-10-06",
+"desc": ""
+},
+"esprojectr/la-respuesta-sistemico-interdisciplinaria-en-el-campo-de-la-educacion": {
+"stars": 0,
+"last_activity": "2026-08-18",
+"desc": ""
+},
+"comproff0/la-tecnologia-en-la-educacion": {
+"stars": 0,
+"last_activity": "2026-08-18",
+"desc": ""
+},
+"esprojectr/la-educacion-en-poblacion": {
+"stars": 0,
+"last_activity": "2026-08-12",
+"desc": ""
+},
+"esprojectr/la-renovacion-educacional-problemas-y-tendencias-en-la-region": {
+"stars": 0,
+"last_activity": "2026-08-10",
+"desc": ""
+},
+"esprojectr/la-democratizacion-de-la-educacion-en-estados-miembros-de-la-region": {
+"stars": 0,
+"last_activity": "2026-08-10",
+"desc": ""
+},
+"educatespilar/las-ensananzas-contrarias-a-la-educacion-formal-y-la-material": {
+"stars": 0,
+"last_activity": "2026-07-28",
+"desc": ""
+},
+"educatespilar/la-ensenanza-y-educacion-desde-un-nuevo-punto-de-vista": {
+"stars": 0,
+"last_activity": "2026-07-21",
+"desc": ""
+},
+"educatespilar/la-educacion-y-su-relacion-con-el-ambiente": {
+"stars": 0,
+"last_activity": "2026-07-16",
+"desc": ""
+},
+"r3n0/ensayo-ia-educacion": {
+"stars": 0,
+"last_activity": "2026-07-16",
+"desc": "este es un un sayo corto sobre el uso de inteligencia artificial e las carreras de dise\u00f1o y artes visuales de la facultad de artes."
+},
+"educatespilar/como-la-educacion-forma-a-las-personas-a-nivel-intelectual-y-personal": {
+"stars": 0,
+"last_activity": "2026-07-06",
+"desc": ""
+},
+"dimar5/solidarion": {
+"stars": 0,
+"last_activity": "2026-09-14",
+"desc": "Solidarion - Plataforma global de reunificacion, recaudacion y educacion en catastrofes"
+},
+"kamila2021/gestion-educacional": {
+"stars": 0,
+"last_activity": "2026-06-15",
+"desc": ""
+},
+"delledonnegn/eit-gitlabpages": {
+"stars": 0,
+"last_activity": "2026-10-06",
+"desc": "Proyecto de muestra para el curso de introduccion a DevOps de EducacionIT.\r GitLab Pages."
+},
+"hvicente/banrural-educacion-financiera": {
+"stars": 0,
+"last_activity": "2026-07-27",
+"desc": ""
+},
+"jucoyarzun1/EducacionCultural": {
+"stars": 0,
+"last_activity": "2026-05-19",
+"desc": ""
+},
+"biotechtrendsft/hype-y-poder-de-la-incertidumbre-en-la-tecnologia-de-la-educacion": {
+"stars": 0,
+"last_activity": "2026-05-18",
+"desc": ""
+},
+"fjavier777/bot-whatsapp": {
+"stars": 0,
+"last_activity": "2026-05-05",
+"desc": "\ud83e\udd16 Bot automatizado de atendimento para WhatsApp desenvolvido com Node.js e WPPConnect. Projeto educacional open source com menu interativo, respostas "
+},
+"makingadifferencep/tele-educacion-para-madres-y-el-impacto-de-los-cursos-de-salud-por-whatsapp": {
+"stars": 0,
+"last_activity": "2026-04-23",
+"desc": ""
+},
+"makingadifferencep/higiene-menstrual-y-educacion-la-gestion-privada-en-escuelas-rurales": {
+"stars": 0,
+"last_activity": "2026-04-14",
+"desc": ""
+},
+"lafihrm/fihrm-la-educacion-artistica-como-derecho": {
+"stars": 0,
+"last_activity": "2026-03-12",
+"desc": ""
+},
+"educatespilar/la-significacion-de-la-educacion": {
+"stars": 0,
+"last_activity": "2026-03-12",
+"desc": ""
+},
+"educatespilar/la-educacion-contemporanea": {
+"stars": 0,
+"last_activity": "2026-03-11",
+"desc": ""
+},
+"globalfihrm/fihrm-la-educacion-artistica-como-derecho": {
+"stars": 0,
+"last_activity": "2026-03-10",
+"desc": ""
+},
+"manueltorrejonh510/sistema-gestion-escolar": {
+"stars": 0,
+"last_activity": "2026-10-02",
+"desc": ""
+},
+"clases_diplomado8024422/sys_gestion/sys_gestion_escolar": {
+"stars": 0,
+"last_activity": "2026-06-20",
+"desc": ""
+},
+"quienes/silvana-corso-la-educadora-argentina-que-transformo-la-inclusion-en-gestion-escolar": {
+"stars": 0,
+"last_activity": "2026-05-29",
+"desc": ""
+},
+"Alvarete377/Proyecto_olimpiadas": {
+"stars": 0,
+"last_activity": "2025-10-14",
+"desc": "Aplicacion web desarrollada para la gestion de las olimpiadas escolares de Cadiz. Proyecto para segundo de ASIR."
+},
+"hcordona/gestionescolar": {
+"stars": 0,
+"last_activity": "2025-08-28",
+"desc": ""
+},
+"sistema-de-pago-escolar/backend/sistema-gestion-pago-cuotas-escolares": {
+"stars": 0,
+"last_activity": "2023-06-10",
+"desc": ""
+},
+"aton1698/gestionescolar": {
+"stars": 0,
+"last_activity": "2020-01-22",
+"desc": ""
+},
+"spartan264/gestion-escolar-dist": {
+"stars": 0,
+"last_activity": "2019-01-23",
+"desc": ""
+},
+"spartan264/gestion_escolar": {
+"stars": 0,
+"last_activity": "2019-03-01",
+"desc": ""
+},
+"gabokuck/Gestion-Escolar": {
+"stars": 0,
+"last_activity": "2018-06-13",
+"desc": "Proyecto de Gesti\u00f3n Escolar realizado con PyQt5 y MySql"
+},
+"theundertaker23/GestionEscolar": {
+"stars": 0,
+"last_activity": "2018-05-03",
+"desc": ""
+},
+"albert.diaz.7e5/projecte2-aulavirtual": {
+"stars": 1,
+"last_activity": "2023-05-15",
+"desc": ""
+},
+"andilegal/UNOPAR_CI_CD": {
+"stars": 0,
+"last_activity": "2026-09-02",
+"desc": "Aula Pratica - Infraestrutura Agil | Pipeline de entrega com Git e GitLab CI/CD - Projeto Loja Virtual"
+},
+"ing.juanmarriaga-group/aulavirtual": {
+"stars": 0,
+"last_activity": "2026-03-11",
+"desc": ""
+},
+"tothemoon88/aulavirtual": {
+"stars": 0,
+"last_activity": "2025-09-04",
+"desc": ""
+},
+"minayamajo/tarea2": {
+"stars": 0,
+"last_activity": "2021-10-18",
+"desc": "Tema 2: Javascript. Dise\u00f1ar una p\u00e1gina web de ingreso de\r datos de clientes, utilizando HTML, CSS y Javascript. El recurso se\r encuentra en el aula vi"
+},
+"walthervargas/epn-aulavirtual": {
+"stars": 0,
+"last_activity": "2021-10-14",
+"desc": ""
+},
+"leixerlucasmero/formulario_registro_cliente": {
+"stars": 0,
+"last_activity": "2021-05-19",
+"desc": "SEMANA 2: Tema 2: Javascript. Dise\u00f1ar una p\u00e1gina web de ingreso de\r datos de clientes, utilizando HTML, CSS y Javascript. El recurso se\r encuentra en "
+},
+"Cristian_Cornejo/aulavirtual-graphql": {
+"stars": 0,
+"last_activity": "2021-03-25",
+"desc": ""
+},
+"bjohnmer/petroq": {
+"stars": 0,
+"last_activity": "2020-06-20",
+"desc": "Contenido de la materia Petroqu\u00edmica - Aula Virtual"
+},
+"tovictoriagrosso/prueba-aula-virtual": {
+"stars": 0,
+"last_activity": "2020-04-04",
+"desc": "Proyecto para probar la gesti\u00f3n de un aula virtual universitaria"
+},
+"mkathc/aulavirtualapp": {
+"stars": 0,
+"last_activity": "2019-06-01",
+"desc": ""
+},
+"Carlos22z/gym": {
+"stars": 0,
+"last_activity": "2019-07-24",
+"desc": ""
+},
+"MMaestre/AulaVirtual": {
+"stars": 0,
+"last_activity": "2018-04-24",
+"desc": ""
+},
+"diegocorcida/AulaVirtual": {
+"stars": 0,
+"last_activity": "2018-04-28",
+"desc": ""
+},
+"ziquedc/desenvolvimentotcc": {
+"stars": 0,
+"last_activity": "2019-08-26",
+"desc": "Desenvolvimento de um Objeto de Aprendizagem voltado para o ensino de Programa\u00e7\u00e3o."
+},
+"juliolimareis/celula": {
+"stars": 0,
+"last_activity": "2018-11-22",
+"desc": "Objeto de aprendizagem para primeiro ano do ensino m\u00e9dio"
+},
+"simoesusp/educacao-em-open-source": {
+"stars": 1,
+"last_activity": "2021-10-14",
+"desc": "Grupo de Extens\u00e3o em Open Source (GEOS)"
+},
+"ccsl-ufpa/educacaovigiada-org-br": {
+"stars": 1,
+"last_activity": "2025-12-09",
+"desc": ""
+},
+"evertonwilliam/plataforma-de-educacao": {
+"stars": 0,
+"last_activity": "2026-09-08",
+"desc": "Este reposit\u00f3rio cont\u00e9m o material pr\u00e1tico e os registros de uma **trilha de forma\u00e7\u00e3o em Engenharia de Software orientada por um agente de Intelig\u00eanci"
+},
+"sdtoto-group1/educacao": {
+"stars": 0,
+"last_activity": "2026-06-17",
+"desc": ""
+},
+"pietropassarella/xpeducacao-pa": {
+"stars": 0,
+"last_activity": "2026-03-27",
+"desc": ""
+},
+"Hbini/notebooklm-educacao-financeira": {
+"stars": 0,
+"last_activity": "2026-02-23",
+"desc": "Projeto de Educa\u00e7\u00e3o Financeira Introdut\u00f3ria criado com NotebookLM - DIO Challenge"
+},
+"vmendesbeck/vaga-chatbot-developer-mais-a-educacao": {
+"stars": 0,
+"last_activity": "2025-11-26",
+"desc": ""
+},
+"andrebelforte/analise_dados_educacao_infantil_rondonia": {
+"stars": 0,
+"last_activity": "2025-07-07",
+"desc": ""
+},
+"blastin/desafio-final-xp-educacao": {
+"stars": 0,
+"last_activity": "2025-06-23",
+"desc": ""
+},
+"sistemas3392807/frontend-educacao": {
+"stars": 0,
+"last_activity": "2025-02-15",
+"desc": ""
+},
+"aszarth/clone-arcoeducacao": {
+"stars": 0,
+"last_activity": "2024-06-10",
+"desc": ""
+},
+"marcos-abs/educacao-financeira": {
+"stars": 0,
+"last_activity": "2024-04-06",
+"desc": "Um modelo inicial de um site para um projeto de educa\u00e7\u00e3o financeira da faculdade"
+},
+"jonathan.vieira/somos_educacao": {
+"stars": 0,
+"last_activity": "2024-02-16",
+"desc": ""
+},
+"arturbensch/educacao": {
+"stars": 0,
+"last_activity": "2023-05-26",
+"desc": ""
+},
+"dadosecausas/educacao": {
+"stars": 0,
+"last_activity": "2023-07-06",
+"desc": ""
+},
+"DIOBS/paineis/escolas-educacao-basica": {
+"stars": 0,
+"last_activity": "2023-03-08",
+"desc": ""
+},
+"luanamarialuuz/desafio-somos-educacao": {
+"stars": 0,
+"last_activity": "2022-12-31",
+"desc": ""
+},
+"rkodykoda/tv-cultura-educacao": {
+"stars": 0,
+"last_activity": "2022-11-22",
+"desc": ""
+},
+"f0rmig4/educacaovigiada-bots": {
+"stars": 0,
+"last_activity": "2022-08-07",
+"desc": "Esse reposit\u00f3rio tem o objetivo de consolidar os bots criados para minerar e higienizar os dados do projeto educa\u00e7\u00e3o vigiada\r "
+},
+"pandolfo/educacao-dengue": {
+"stars": 0,
+"last_activity": "2022-10-12",
+"desc": ""
+},
+"d2563/educacao": {
+"stars": 0,
+"last_activity": "2023-03-07",
+"desc": ""
+},
+"hackathons4/hackingrio-educacao-makers": {
+"stars": 0,
+"last_activity": "2021-05-20",
+"desc": "Projeto da equipe Makers para o hackinrio 2018"
+},
+"guilhermeof/simposio-internacional-de-educacao-superior": {
+"stars": 0,
+"last_activity": "2021-03-24",
+"desc": ""
+},
+"victor.degaspari/educacao-digitalsys": {
+"stars": 0,
+"last_activity": "2021-01-08",
+"desc": ""
+},
+"interacao-urbana/indicadores-da-educacao": {
+"stars": 0,
+"last_activity": "2020-12-31",
+"desc": "Indicadores da educa\u00e7\u00e3o"
+},
+"davidfaria/educacao_api": {
+"stars": 0,
+"last_activity": "2020-05-19",
+"desc": ""
+},
+"grupo_de_sistema/reciclagem-na-educacao": {
+"stars": 0,
+"last_activity": "2020-05-12",
+"desc": "Reciclagem na Educa\u00e7\u00e3o!"
+},
+"fabiopbcarvalho/universo-da-educacao": {
+"stars": 0,
+"last_activity": "2019-11-06",
+"desc": ""
+},
+"jrgvf/quero_educacao_challenger_2019_01_29": {
+"stars": 0,
+"last_activity": "2019-02-04",
+"desc": ""
+},
+"danielsxavier/sistemasmultimida": {
+"stars": 0,
+"last_activity": "2017-07-26",
+"desc": ""
+},
+"xavki/tutorials-python": {
+"stars": 5,
+"last_activity": "2026-06-21",
+"desc": "Python from scratch: strings, loops, functions, modules, pip, virtualenv, slicing, comprehensions, generators, OS module. Xavki tutorials in French."
+},
+"xavki/tutorials-kvm-libvirt": {
+"stars": 2,
+"last_activity": "2026-06-21",
+"desc": "Virtualization with KVM and libvirt: install, virt-manager, virt-install, virsh, debian-preseed, virsh networking, LVM storage pools. Xavki tutorials "
+},
+"virtual-teacher/virtual-teacher": {
+"stars": 1,
+"last_activity": "2022-09-15",
+"desc": "Virtual Teacher is an online platform for tutoring. Users will be able to register as either a teacher or a student.\r \r Students must be able to enrol"
+},
+"zhufengGNSS/opencv-1": {
+"stars": 1,
+"last_activity": "2020-08-25",
+"desc": "OpenCV 3 , Visual C++ 2015 , win 64x , computer vision, image processing, webcam,video,motion,frame,edge,vector  image processing with opencv 3 & c++ "
+},
+"xavki/tutorials-packer": {
+"stars": 1,
+"last_activity": "2026-06-21",
+"desc": "Image building with HashiCorp Packer: install, VirtualBox preseed, KVM Ubuntu preseed + cloud-init, variables. Xavki tutorials in French."
+},
+"moto-timo/yp-dev-day_virtualization": {
+"stars": 1,
+"last_activity": "2024-09-29",
+"desc": "Tutorial files for Virtualization session of Yocto Project Developer Day\r NOTE: This content is provided for tutorial, training and demonstration purp"
+},
+"IvanSimeonov/virtuallearning": {
+"stars": 1,
+"last_activity": "2019-08-14",
+"desc": "Virtual learning platform for online tutoring"
+},
+"Roxanne_Ardary/omniscientia": {
+"stars": 0,
+"last_activity": "2026-07-28",
+"desc": "OmniScientia is a modular AI framework for scientific discovery that helps learners explore the natural world through curiosity, experimentation, and "
+},
+"mahmoudlabeebelfar/mrh-academy": {
+"stars": 0,
+"last_activity": "2026-07-09",
+"desc": "A comprehensive online learning platform built with Next.js, NestJS, and PostgreSQL. Features interactive virtual classrooms, integrated video calls, "
+},
+"bica_lab/virtual_tutor": {
+"stars": 0,
+"last_activity": "2026-03-03",
+"desc": ""
+},
+"sandeeprajendra00/CloudCrafters-DevOpsJourney": {
+"stars": 0,
+"last_activity": "2025-01-27",
+"desc": "Cloud Crafters is an open-source project providing in-depth resources and tutorials to master cloud and DevOps technologies. Designed for learners at "
+},
+"cloudnative_impress/openshift_virtualization_tutorial": {
+"stars": 0,
+"last_activity": "2025-02-08",
+"desc": ""
+},
+"48k483x/Born2beroot-Tutorial": {
+"stars": 0,
+"last_activity": "2024-11-03",
+"desc": " Tutorial to install Debian virtual machine with functional WordPress site with the following services: lighttpd, MariaDB, PHP and Litespeed. "
+},
+"billy-the-butcher/09-gl2-almeroth-stark": {
+"stars": 0,
+"last_activity": "2025-10-22",
+"desc": ""
+},
+"SixSixGod/thymeleafexamples-gtvg": {
+"stars": 0,
+"last_activity": "2023-11-07",
+"desc": "Good Thymes Virtual Grocery - Companion application for the  \"Using Thymeleaf\" tutorial downloadable at the Thymeleaf website: http://www.thymeleaf.or"
+},
+"vrstanchev/C-Virtual-machine": {
+"stars": 0,
+"last_activity": "2023-02-05",
+"desc": "a virtual machine i developed according this tutorial https://www.youtube.com/watch?v=DUNkdl0Jhgs.     Licenced under GNU GPL Licence"
+},
+"mathisto/little-crystal-computer-3-the-vm": {
+"stars": 0,
+"last_activity": "2022-02-10",
+"desc": "A Crystal port of the venerable \"Write your Own Virtual Machine\" tutorial.\r https://justinmeiners.github.io/lc3-vm/\r "
+},
+"arefahmed1/archlinux-tools-after-install": {
+"stars": 0,
+"last_activity": "2021-12-10",
+"desc": "This is an important text tutorial on installing VirtualBox, connecting android,USB,iPhones and many more which are needed after installing Xorg and d"
+},
+"tusharjain1082/filediskproxy.net": {
+"stars": 0,
+"last_activity": "2021-12-06",
+"desc": "# FilediskProxy.Net\r A very-very simple tutorial level and basic example in C++ and C# and .Net of a simple ordinary file backend based full fledged V"
+},
+"enriquemiloslavov11/virtual-teacher": {
+"stars": 0,
+"last_activity": "2021-10-24",
+"desc": "Virtual Teacher is an online platform for tutoring. Users will be able to register as either a teacher or a student."
+},
+"arefahmed1/copy-and-paste-virtualbox": {
+"stars": 0,
+"last_activity": "2021-10-24",
+"desc": "This Tutorial is about copying and pasting from host-local machine to guest VirtualBox and vise versa"
+},
+"telerik-academy-final-project/virtual-teacher": {
+"stars": 0,
+"last_activity": "2021-09-25",
+"desc": "Virtual Teacher is an online platform for tutoring."
+},
+"FelipeSimoesDaRocha/Projeto-ww": {
+"stars": 0,
+"last_activity": "2021-09-01",
+"desc": "Estou desenvolvendo este site,para meu grupo de League of Legends,onde vai ter tutoriais,links para outras plataformas,e uma loja virtual "
+},
+"virtual-assistance-tutorial-program/virtual-assistance-tutorial-program": {
+"stars": 0,
+"last_activity": "2021-03-16",
+"desc": ""
+},
+"anthonymoreira768/proyecto-tutorias-virtuales": {
+"stars": 0,
+"last_activity": "2021-03-12",
+"desc": ""
+},
+"BenWiser/physio-quiz": {
+"stars": 0,
+"last_activity": "2021-02-17",
+"desc": "A \"virtual tutor\" I made for my partner to help her study for uni."
+},
+"mauricioarango/docker-php-nginx-mysql-mailhog-ssl": {
+"stars": 0,
+"last_activity": "2022-01-06",
+"desc": "Sets up a basic development environment for PHP & MySQL. Uses a NGINX server with SSL, virtual domains, and mailhog for mailng.\r 99.99% based on the t"
+},
+"jamieoglindsey0/vr-python-quickstart": {
+"stars": 0,
+"last_activity": "2020-03-22",
+"desc": "VR Headset Controller Tutorial, get started with virtual reality in Python"
+},
+"devu-62442/Hack-The-Virtual-Memory": {
+"stars": 0,
+"last_activity": "2019-11-28",
+"desc": "This is a series of small articles / tutorials based around virtual memory. The goal is to learn some CS basics, but in a different and more practical"
+},
+"sandershihacker/python-vm-setup-tutorial": {
+"stars": 0,
+"last_activity": "2019-09-25",
+"desc": "This is a tutorial for setting up a Python development environment and a virtual machine."
+},
+"AntonioCalheirosNeves/Gestao-Escolar": {
+"stars": 0,
+"last_activity": "2026-05-26",
+"desc": "Sistema completo de gest\u00e3o escolar / School Management System (em desenvolvimento) Python e Django"
+},
+"Leoneldals23/sistema-de-gestao-escolar": {
+"stars": 0,
+"last_activity": "2026-04-11",
+"desc": ""
+},
+"acasal2000/software-de-gestao-escolar": {
+"stars": 0,
+"last_activity": "2021-01-09",
+"desc": "Software de Gest\u00e3o Escolar."
+},
+"educationforRailson/Gestao_Escolar": {
+"stars": 0,
+"last_activity": "2018-05-04",
+"desc": ""
+},
+"tapioca-ufrn/multiprova/multiprova-corretor": {
+"stars": 0,
+"last_activity": "2020-05-20",
+"desc": "Projeto do aplicativo para leitura \u00f3ptica dos cart\u00f5es de resposta do Multiprova"
+},
+"nanocastro/labfisica_1": {
+"stars": 0,
+"last_activity": "2025-07-30",
+"desc": "El objetivo de este proyecto es desarrollar una serie de instrumentos libres y abiertos, de bajo costo, para equipar laboratorios de f\u00edsica junto con "
+},
+"pdirene/programas_cvs_gitlab": {
+"stars": 0,
+"last_activity": "2020-07-21",
+"desc": "Proyecto para el control de versionamiento de Programas desarrollados como Recursos Educativos Abiertos (REA) en la Universidad T\u00e9cnica Particular de "
+},
+"pcremades/labfisica_1": {
+"stars": 0,
+"last_activity": "2026-07-10",
+"desc": "El objetivo de este proyecto es desarrollar una serie de instrumentos libres y abiertos, de bajo costo, para equipar laboratorios de f\u00edsica junto con "
+}
+}
+}

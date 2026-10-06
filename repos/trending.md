@@ -8,6 +8,85 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — twenty-second pass: a second forge, 674 projects, and the supply map was missing a European public-institution estate
+
+**Channel new to this KB this pass: the GitLab REST API v4.** The agent-side findings and the
+channel's controls are in `agents/trending.md`; this file records what the channel does to the
+**supply** picture. Unlike the twenty-first pass, which added **zero** repositories and re-priced the
+existing ones, this one adds rows — **15** — and the reason is structural: it searched a place this
+KB had never searched.
+
+### What the sweep returned, measured
+
+| Measure | Value |
+|---|---|
+| search terms, English | **25** |
+| search terms, Spanish + Portuguese *(added in-pass after the English list proved to be a defect)* | **16** |
+| hits | **539 + 141** |
+| **unique projects** | **534 + 140 new = 674** |
+| licence payloads read first-hand | **22** |
+| rows published | **18 new** + **2 cross-host confirmations** + 2 projects measured only in the detector table |
+| licences served by the search endpoint, with `license=true` passed | 🔴 **0 of 534** |
+
+### 🟢 The supply finding: the European public sector publishes here
+
+**11 of the 18 new rows are EMEA-origin — 5 of them verified from the project's own README, 6
+inferred from a namespace or an author name and labelled as inferences.** The institutions behind
+the verified ones are exactly the buyers this KB's sovereignty patterns address:
+
+| Institution | Country | Row | Licence (payload) |
+|---|---|---|---|
+| Saxion University of Applied Sciences | 🇳🇱 | [`saxionnl/42/lms42`](https://gitlab.com/saxionnl/42/lms42) — LMS **and curriculum** for a degree programme, committed daily | 🔴 AGPL-3.0 |
+| TIB Hannover (German National Library of Science and Technology) | 🇩🇪 | [`TIBHannover/oer/wordpress-oersi-plugin`](https://gitlab.com/TIBHannover/oer/wordpress-oersi-plugin) — the **OERSI** OER index as a WordPress plugin | 🟢 **MIT** |
+| RWTH Aachen, Learning Technologies | 🇩🇪 | [`learntech-rwth/omilaxr-ecosystem/v2/omilaxr`](https://gitlab.com/learntech-rwth/omilaxr-ecosystem/v2/omilaxr) — modular **learning analytics for XR** | 🔴 AGPL-3.0 |
+| Universis (Greek higher-education consortium) | ⚠️ 🇬🇷 *(README names Universis; the country is inferred)* | [`kbarbounakis/eduapi`](https://gitlab.com/kbarbounakis/eduapi) — **1EdTech EduAPI** implementation | ⚠️ LGPL-3.0 |
+| Paris-Saclay × UQAM | 🇫🇷 🇨🇦 | [`travo-cr/travo`](https://gitlab.com/travo-cr/travo) — GitLab ClassRoom + nbgrader | 🟢 **BSD-3-Clause** |
+| OpenOlat (Frentix / Swiss HE) | 🇨🇭 | [`olatorg/OpenOLAT`](https://gitlab.com/olatorg/OpenOLAT) — second host of the Apache-2.0 LMS | 🟢 **Apache-2.0** |
+| Particify / ARSnova | ⚠️ 🇩🇪 *(inferred)* | [`particify/dev/foss/arsnova-lms-connector`](https://gitlab.com/particify/dev/foss/arsnova-lms-connector) — unified course-membership API over LMSs | 🟢 MIT, 🔴 **cold since 2022-09-12** |
+
+🔴 **And the honest half: 4 of those 10 are copyleft** (AGPL-3.0 ×3, LGPL-3.0 ×1). The European
+estate this channel reveals is less permissive than this KB's GitHub shelf — so the finding is
+*supply exists*, not *supply is usable*.
+
+### 🔵 The channel's precision, so no later pass over-reads it
+
+| Defect in the returned set | Count of 534 |
+|---|---|
+| no description at all | **149 (27.9%)** |
+| projects sharing a description with another (12 texts → 67 projects) | **67** |
+| — RosarioSIS's description, cloned | **23×** |
+| — `oer/emacs-reveal`'s description, cloned | **14×** |
+| — ELabSheet's description, cloned | **7×** |
+| `ecoscan-*deletion_scheduled*` scratch clones | **37** |
+
+🔵 **The three most-cloned descriptions belong to three projects this pass publishes** — on this
+forge, being copied is a weak adoption signal that happens to point where a human reviewer would.
+🔴 **But 27.9% of the corpus has no description, so the description-driven triage used here skipped
+more than a quarter of what it searched. The 18 rows are a floor, not a census.**
+
+### 🟢 Liveness distribution — the first one in this KB
+
+| | Count | Share |
+|---|---|---|
+| touched in 2026 | 254 | **47.6%** |
+| touched in the last 30 days | 100 | **18.7%** |
+| untouched since before 2024 | **179** | **33.5%** |
+
+The ~470 GitHub references in this KB have **no equivalent measurement**, because the endpoint that
+serves commit recency is 403 here. **Trend 52**, with a `git`-based measurement pre-registered for
+the next pass.
+
+### 🔴 What the sweep did not find, with the denominator attached
+
+| Looked for | Result |
+|---|---|
+| permissive **LTI 1.3 tool provider** | 🔴 **0 of 674** — the LTI-shaped hole of trend 28 survives on a second forge |
+| permissive **knowledge-tracing / BKT-IRT** library | 🔴 **0** — OATutor (MIT) and ADLETE (MIT) remain the only mastery assets here |
+| **education MCP server** on GitLab | 🔴 **1 candidate, no licence payload at all** (`sheikhcoders/interleaved-learning-mcp`). Every education MCP server in this KB is still GitHub-hosted |
+| **LATAM-origin** education project with a grant | 🔴 **0 of 674**, across three languages — three real projects found, none licensed |
+
+---
+
 ## 2026-10-06 — twenty-first pass: 352 dependencies resolved, 15 not permissive, and the supply picture changes shape rather than size
 
 **Channel new to this KB this pass: the declared-dependency channel** — resolving the licence of

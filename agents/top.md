@@ -2551,3 +2551,119 @@ licences have already been found outside that set here — `OS4ED/openSIS-Classi
 `docs/License.txt`, `frappe/*` at lowercase `license.txt`. 🟢 **So the honest form of the number is
 not "93 unlicensed" but "93 that must not be cited as permissive without a manual read"** — a work
 item with a size, which is the first time this KB can price its own licence debt.
+
+## Added in the twenty-second pass of 2026-10-06 — the first rows this KB ever read from a forge API
+
+**Channel new to this KB this pass: the GitLab REST API v4 as a *discovery and metadata* channel**
+(`/projects?search=`, `/projects/:id?license=true`, `/repository/files/:path/raw`,
+`/repository/tree`, `/users`). ⚠️ **Stated precisely, because half of it is not new:** pass 107 of
+2026-10-05 already read licence payloads from `gitlab.com/-/raw` and already assessed
+`oer/emacs-reveal`. What had never been called is the **API** — and it matters for one reason that
+has shaped forty passes of this KB: **`api.github.com` has returned 403 since pass 37, so every
+metadata question (liveness, topics, licence key, holder) has been unanswerable about a GitHub row.
+A different forge answers all of them.**
+
+Instrument, controls and limits: `compose/code/gitlab-api-channel/`. Trends **51** and **52** in
+`intel/trends.md`; pattern **`P-ONPREM-CLASSROOM`** in `compose/patterns.md`.
+
+### 🔬 The channel, measured before any verdict
+
+| Layer | Endpoint | Status | Negative control |
+|---|---|---|---|
+| discovery | `gitlab.com/api/v4/projects?search=…` | 🟢 **200** | — |
+| project metadata + licence key | `…/projects/:idEnc?license=true` | 🟢 **200** | `definitely-not-a-project-zzz9/nope` → **404** ⇒ **DISCRIMINATES** |
+| licence payload | `…/repository/files/LICENSE/raw?ref=…` | 🟢 **200** | — |
+| licence set (REUSE) | `…/repository/tree?path=LICENSES` | 🟢 **200** | — |
+| copyright holder | `…/users?username=…` | 🟢 **200** | — |
+| rendered page | `gitlab.com/<slug>` | 🟢 **200** on **26 of 26** GitLab URLs cited by this pass | invented slug → **302**, not 404 ⇒ 🔴 **does NOT discriminate** |
+| *(still blocked, re-probed)* | `api.github.com`, `github.com`, `huggingface.co` | 🔴 **403 / 403 / 000** | — |
+
+🔴 **The HTML control is the one to carry out of this table.** GitLab answers an unknown path with a
+**302** to sign-in, not a 404. So on this forge an HTML probe can confirm existence and **can never
+establish absence** — the same rule this file already imposes after the single-path sweep of the
+nineteenth pass, now with a second, independent reason.
+
+### 🔴 `license=true` is silently ignored by the search endpoint — so licence-filtered discovery is impossible here
+
+25 search terms → 539 hits → **534 unique projects**, every one requested with `license=true`.
+**Licences returned: 0 of 534.** The same parameter on the single-project endpoint returns
+`{"key":"mit","name":"MIT License"}` for `gitlab-org/gitlab-runner`, so the parameter works — the
+list endpoint just does not honour it.
+
+🟢 **This is a clean cross-forge replication of trend 29.** On GitHub a licence filter has a
+false-negative floor it cannot see; on GitLab there is **no filter at all**, and a candidate costs
+**two requests minimum** — one to find it, one to learn whether it carries a grant.
+
+### 🔴 The detector is wrong in two rows, and one of them is a row this KB already carries
+
+22 licence payloads read first-hand. Detector = GitLab's `license.key`; payload = the first lines of
+the file the detector claims to have read.
+
+| Project | Detector says | Payload says | Verdict |
+|---|---|---|---|
+| [`francoisjacquet/rosariosis`](https://gitlab.com/francoisjacquet/rosariosis) | **`agpl-1.0`** | **GNU GPL v2**, 15,214 B | 🔴 **WRONG — and wrong by two licence families** |
+| [`olatorg/openolat-starter`](https://gitlab.com/olatorg/openolat-starter) | **`ecl-2.0`** | **Apache-2.0**, verbatim header, **0** occurrences of "Educational Community" | 🔴 **WRONG** |
+| [`kbarbounakis/eduapi`](https://gitlab.com/kbarbounakis/eduapi) | **`other`** | **LGPL-3.0**, named in its own first three lines | ⚠️ **Silent about a knowable answer** |
+| [`francoisjacquet/Grading_Scale_Generation`](https://gitlab.com/francoisjacquet/Grading_Scale_Generation) | **`gpl-2.0+`** | plain **GPL-2.0** text — the `+` is **not obtainable from the payload**; its `composer.json` declares **`GPL-2.0-or-later`** | 🔵 **Agreement, and a counter-example to this KB's own rule: here the payload *under*-reads the grant and the manifest settles it** |
+| [`oer/emacs-reveal`](https://gitlab.com/oer/emacs-reveal) | **`other`** | 517 B **REUSE pointer**; real set = **4** identifiers | 🔵 **Pointer, not a grant** |
+| [`oer/oer-reveal`](https://gitlab.com/oer/oer-reveal) | **`other`** | 516 B REUSE pointer; real set = **6**, two of them `LicenseRef-` | 🔵 **Pointer, not a grant** |
+| the other **16** | — | — | 🟢 **Agreed** (**17** with `Grading_Scale_Generation` above) |
+
+**Final tally, after the instrument correction below: 22 payloads → 🟢 17 agree · 🔴 2 wrong · ⚠️ 1
+silent · 🔵 2 REUSE pointers.** Reproducible: `python3 compose/code/gitlab-api-channel/test_gitlab_channel.py` → **32/32**, `--live` → **35/35**.
+
+🟢 **The RosarioSIS row is the most useful fact in this pass.** This KB records the **GitHub** copy as
+`GPL-2.0 (LICENSE@master)`, **15,214 B**. The GitLab copy's payload is **the same 15,214 bytes** —
+two forges, one file, cross-host agreement at the byte. 🔴 **And the forge's own detector contradicts
+both of them, naming a licence (`AGPL-1.0`) that would change what a client may do with a
+delivered module.** A KB row built on the detector key would have been wrong; a row built on the
+payload was right on both hosts.
+
+⚠️ **My own instrument's defect, declared rather than hidden.** The first run of this comparison
+flagged **6** disagreements. Two were mine: a substring classifier read "GNU General Public License"
+inside **MPL-2.0**'s secondary-licence clause and "Lesser General Public License" inside
+**GPL-2.0**'s closing section, mislabelling `git-classrooms` and `Grading_Scale_Generation`. 🟢 **So
+the honest detector tally is 2 wrong + 1 silent of 20 comparable payloads (plus 2 REUSE pointers)
+— not 6** —
+and the lesson is the one this file keeps relearning: *a classifier that matches licence names inside
+licence texts will find every licence in every licence.*
+
+### 🆕 A third disagreement class: the project contradicts itself
+
+| Project | Surface 1 | Surface 2 | Surface 3 |
+|---|---|---|---|
+| [`Sudz1/sam-lms`](https://gitlab.com/Sudz1/sam-lms) | README badge: **ISC** | `package.json` `"license": "ISC"` | `LICENSE` payload: **MIT** |
+| [`travo-cr/travo`](https://gitlab.com/travo-cr/travo) | `LICENSE` payload: **BSD-3-Clause** | PyPI `travo` 2.1.1: `license: null`, **zero** licence classifiers | — |
+
+🔵 **Neither is commercially dangerous** — ISC and MIT are both permissive, and a silent registry
+does not revoke a repository's grant. 🟢 **Both are useful anyway:** they are the first cases in this
+KB where the *same project* answers the licence question differently on three and on two of its own
+surfaces, which is the shape trend 23 predicted and had only ever seen *across* parties.
+
+### The new rows — agent- and tool-shaped
+
+Licences read from payload; ★ and `last_activity_at` served by the API on 2026-10-06. ⚠️ **Every
+star count here is small. That is the finding, not an omission** — see the regional read in
+`intel/market.md`.
+
+| Project | Repo | Licence (payload) | ★ | Last activity | Placement | What it does |
+|---|---|---|---|---|---|---|
+| **ELabSheet** | [cjaikaeo/elabsheet](https://gitlab.com/cjaikaeo/elabsheet) | 🟢 **BSD-2-Clause** (`LICENSE`, holders named) | 14 | **2026-09-19** | APAC (Thailand) | **Task authoring + automatic grading for e-learning.** Python 64.8% / HTML 25.0% / C++ 2.7%. Payload names its holders — *Chaiporn Jaikaeo and Jittat Fakcharoenphol*, 2013 — so the `P386` holder gate passes on first read. Dockerised install in a sibling repo (`cjaikaeo/elab-docker`). **The most permissive auto-grader this KB has found: BSD-2 is looser than mentingo's MIT-with-tracing and carries no platform.** |
+| **Travo** | [travo-cr/travo](https://gitlab.com/travo-cr/travo) | 🟢 **BSD-3-Clause** (`LICENSE`) | 8 | **2026-10-06** | EMEA (France) + North America (Québec) | **GitLab ClassRoom**: fetch/submit assignment workflow over Git + the GitLab REST API, terminal or Jupyter widget dashboard, **automatic and manual grading of notebooks via nbgrader** (already on this KB's shelf at BSD-3-Clause, 1.4k★). Runs against **any** GitLab instance including self-hosted, needs no other infrastructure. Université Paris-Saclay × Université du Québec à Montréal; in production in a dozen classes. PyPI `travo` **2.1.1**. |
+| **learn-anything (SRS)** | [voxos.ai/learn-anything](https://gitlab.com/voxos.ai/learn-anything) | 🟢 **MIT** (`LICENSE`) | 0 | 2026-03-15 | Global | Turns **any** coding agent into a tutor: one file dropped into a folder, spaced repetition, visual exercises, adaptive difficulty. Works with Claude Code and Cursor. The skill-shaped sibling of this KB's `anything-to-course` row, without the packaging. |
+| **Edusaku** | [yoockh-group/Edusaku](https://gitlab.com/yoockh-group/Edusaku) | 🟢 **Apache-2.0** (`LICENSE`) | 0 | 2026-05-18 | APAC (Indonesia) | **Offline-first** AI education assistant for teachers and students in remote areas with limited or no internet. React Native 0.76.5, on-device model. The APAC counterpart to this KB's equity-deployment pattern, and the second permissive APAC-origin row found this pass. |
+| **ADLETE** | [adaptive-learning-engine/adlete-packages](https://gitlab.com/adaptive-learning-engine/adlete-packages) | 🟢 **MIT** (`LICENSE`) | 1 | **2026-10-02** | ⚠️ EMEA *(inferred — no country in repo or README)* | Monorepo of a generalised **adaptive learning engine**: analyses a learner's competence level and recommends the next task/exercise/training. Ships a Moodle-side sibling (`adaptive-learning-engine/moodle/adleteh5p`) that wires it to **H5P** activities — the integration this KB's P3 mastery pattern has had to hand-build. |
+| **SAM LMS** | [Sudz1/sam-lms](https://gitlab.com/Sudz1/sam-lms) | 🟢 **MIT** (payload; ⚠️ project claims ISC twice) | 0 | 2026-03-23 | EMEA (Africa) | "Smart African LMS": offline-first curriculum, **mobile money** payments, SMS notifications, Node.js. Built "with SA educators in mind". Early and single-maintainer — read it as a reference for the *constraints* (money rails, SMS, offline), not as a platform to deploy. |
+| **OpenTeacherAgent** | [ai-swarm-solutions-group/OpenTeacherAgent](https://gitlab.com/ai-swarm-solutions-group/OpenTeacherAgent) | 🔴 **AGPL-3.0** (`LICENSE`) | 0 | 2026-08-15 | Global | Agentic educational authoring in a single binary. **Recorded and excluded**: AGPL-3.0 is incompatible with this KB's redistribution brief. Listed so a later pass does not spend a sweep rediscovering it. |
+
+### 🔵 Cross-host confirmation, which is a verification result and not a new row
+
+| Project | This KB's GitHub reading | GitLab reading this pass | Result |
+|---|---|---|---|
+| **OpenOLAT** | `OpenOLAT/OpenOLAT`, ✅ Apache-2.0, 446★ | [olatorg/OpenOLAT](https://gitlab.com/olatorg/OpenOLAT), payload **Apache-2.0** 10,982 B, 2★, active **2026-10-06** | 🟢 **Confirmed on a second forge.** The "only complete LMS you can extend without the copyleft conversation" claim in `verticals/solutions.md` now rests on two independent hosts |
+| **RosarioSIS** | `francoisjacquet/rosariosis`, ⚠️ GPL-2.0, **15,214 B**, 644★ | [francoisjacquet/rosariosis](https://gitlab.com/francoisjacquet/rosariosis), payload GPL-2.0, **15,214 B**, 65★, active **2026-10-06** | 🟢 **Byte-identical payload on both hosts** — and 🔴 the detector disagrees with both (above) |
+
+🔴 **One consequence for every star count in this KB.** The same project is **644★** on GitHub and
+**65★** on GitLab. ★ measures a *host's* audience, never a project's adoption, and this KB's shelf is
+ranked almost entirely by GitHub ★. Nothing in this file needs reordering, but no ★ here may be
+quoted to a client as "how widely used this is".

@@ -8,6 +8,109 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — twenty-second pass: the only forge API this environment can reach is not GitHub's, and it calls a GPL-2.0 file AGPL-1.0
+
+**Channel new to this KB this pass: the GitLab REST API v4 as a discovery and metadata channel** —
+`/projects?search=`, `/projects/:id?license=true`, `/repository/files/:path/raw`,
+`/repository/tree?path=LICENSES`, `/users?username=`. Previous channels: topic, star count, funder,
+ministry, institution, function, licence scope, platform name, language, MCP registry, conformance
+register, named technical standard, transitional article, declared dependency. **Tenth distinct
+channel.** Instrument: `compose/code/gitlab-api-channel/`. Trends **51** and **52** in
+`intel/trends.md`; pattern **`P-ONPREM-CLASSROOM`** in `compose/patterns.md`.
+
+⚠️ **Half of this channel is not new, and saying so is the point.** Pass 107 of 2026-10-05 already
+read licence payloads from `gitlab.com/-/raw` and already assessed `oer/emacs-reveal`. What had never
+been called is the **API** — and that gap mattered more than any single row, because
+**`api.github.com` has answered 403 since pass 37**, so forty-plus passes have had no way to ask a
+forge *anything* except "serve me this file".
+
+### 🟢 Verification level of this pass, stated before the findings
+
+| Layer | Endpoint | Status | Control |
+|---|---|---|---|
+| discovery | `gitlab.com/api/v4/projects?search=` | 🟢 **200** | — |
+| metadata + licence key | `…/projects/:idEnc?license=true` | 🟢 **200** | invented slug → **404** ⇒ 🟢 **DISCRIMINATES** |
+| licence payload | `…/repository/files/LICENSE/raw?ref=` | 🟢 **200** | — |
+| licence **set** | `…/repository/tree?path=LICENSES` | 🟢 **200** | — |
+| holder identity | `…/users?username=` | 🟢 **200** | — |
+| rendered page | `gitlab.com/<slug>` | 🟢 **200** on **26 of 26** GitLab URLs cited by this pass | invented slug → **302** ⇒ 🔴 **does NOT discriminate** |
+| *(blocked, re-probed)* | `api.github.com` · `github.com` · `huggingface.co` | 🔴 **403 · 403 · 000** | — |
+
+### The findings, in the order they change a decision
+
+**1. 🔴 The forge's licence field is wrong on a row this KB already publishes.** 22 payloads read
+against GitLab's `license.key`: 🟢 **17 agree, 🔴 2 wrong, ⚠️ 1 silent, 🔵 2 REUSE pointers.**
+`francoisjacquet/rosariosis` → detector `agpl-1.0`, payload **GNU GPL v2, 15,214 B**, which is
+**byte-for-byte** this KB's GitHub reading of the same file. `olatorg/openolat-starter` → detector
+`ecl-2.0`, payload **verbatim Apache-2.0** with **zero** occurrences of "Educational Community".
+🔵 ECL-2.0 *is* a modified Apache-2.0, and it is the licence higher-education consortia actually use,
+so that is the worst pair on this shelf to confuse. Full table in `agents/top.md`.
+
+**2. 🔴 `license=true` is silently ignored by the search endpoint: 0 licences on 534 projects**, while
+the same parameter resolves correctly per-project (control: `gitlab-org/gitlab-runner` → MIT). On
+GitHub a licence filter is lossy (trend 29); **on GitLab there is no licence filter at all.**
+
+**3. 🟢 The permissive auto-grader this KB has been looking for across several passes exists, and it
+is BSD-2.** [`cjaikaeo/elabsheet`](https://gitlab.com/cjaikaeo/elabsheet) — **BSD-2-Clause**, 14★,
+committed 2026-09-19, Python 64.8%, task authoring **plus** automatic answer checking, holders named
+in the payload (*Chaiporn Jaikaeo and Jittat Fakcharoenphol*, 2013), Dockerised in a sibling repo.
+BSD-2 is a shorter grant than MIT and carries no platform with it — the thing a ministry can fork
+without a conversation.
+
+**4. 🟢 Seven new agent- and tool-shaped rows, 18 new rows in total** (plus 2 cross-host
+confirmations and 2 further projects measured only in the detector table), among them
+[`travo-cr/travo`](https://gitlab.com/travo-cr/travo) (**BSD-3-Clause**, active today, Paris-Saclay ×
+UQAM, nbgrader-integrated, runs on any self-hosted GitLab),
+[`yoockh-group/Edusaku`](https://gitlab.com/yoockh-group/Edusaku) (**Apache-2.0**, offline-first,
+Indonesia) and [`adaptive-learning-engine/adlete-packages`](https://gitlab.com/adaptive-learning-engine/adlete-packages)
+(**MIT**, adaptive engine with an H5P binding written).
+
+**5. 🆕 A third licence-disagreement class: the project contradicts itself.**
+`Sudz1/sam-lms` says **ISC** in its README badge and in `package.json`, and **MIT** in its `LICENSE`
+payload. `travo` grants **BSD-3-Clause** in its payload while **PyPI `travo` 2.1.1 declares
+`license: null` and zero licence classifiers.** Trend 23 predicted label-vs-grant divergence *between*
+parties; this is the first measurement of it *inside* one project.
+
+**6. 🟢 Liveness, for the first time in this KB.** `last_activity_at` comes free from this API — the
+field `api.github.com` would serve and cannot. Of 534: **47.6%** touched in 2026, **18.7%** in the
+last 30 days, 🔴 **33.5% cold since before 2024**. Two candidates were rejected on that field alone
+(`particify/dev/foss/arsnova-lms-connector`, MIT, last commit **2022-09-12**; `moodlenet/moodlenet`,
+AGPL-3.0, **2023-07-07**). **Trend 52** records the asymmetry: this KB cannot measure recency for the
+~470 GitHub references that are its substance.
+
+**7. 🔴 The LATAM gap, re-measured in three languages and still standing.** The English term list was
+a defect in this pass's own instrument, so a **Spanish + Portuguese** sweep was run inside the same
+pass: 16 terms, 141 projects, **140 invisible to the English sweep**, and **0** carrying a licence.
+The three real ones — including the Federal University of Pará's *Educação Vigiada* — have **no
+licence file at all**. 🟢 **The regional gap is not absence of building, it is absence of granting**,
+and that is a one-week engagement rather than a declared void. Detail in `intel/market.md`.
+
+### ⚠️ What this pass got wrong and corrected inside itself
+
+1. **A substring licence classifier is a licence-finding machine.** My first comparison claimed **6**
+   detector errors. Two were mine: "General Public License" appears inside **MPL-2.0**'s
+   secondary-licence clause and "Lesser General Public License" inside **GPL-2.0**'s closing section.
+   Published number: **2 wrong + 1 silent of 20 comparable payloads, plus 2 REUSE pointers.**
+   🔵 **And correcting it flipped one row the other way:** `Grading_Scale_Generation`'s `gpl-2.0+`
+   looked like the detector over-claiming, until its `composer.json` was read — it declares
+   **`GPL-2.0-or-later`**. **The detector was right and the payload was insufficient**, which is the
+   first counter-example in this KB to its own payload-first rule. The rule becomes: **payload first,
+   manifest second, detector never alone.**
+2. **English-only search terms.** Fixed in-pass, and the fix returned 140 projects the first sweep
+   could not see.
+3. **★ is a host's audience.** RosarioSIS: **644★** on GitHub, **65★** on GitLab, one project, one
+   byte-identical licence file. No ★ in this KB is an adoption measurement.
+
+### 🔵 Pre-registered for the next pass
+
+| # | Action | Prediction written **before** running it |
+|---|---|---|
+| **A** | Measure **head-commit recency** for the 20 highest-value GitHub rows with `git ls-remote` / `--depth=1` clone — the channels this KB has proven open — and publish the distribution beside the 33.5% above | ⚠️ if the GitHub shelf comes back similar, roughly a third of it is cold and several patterns need components re-picked |
+| **B** | Sweep the **national self-hosted GitLab instances** (`.edu.br`, `.edu.mx`, `.cl`) that `gitlab.com`'s API cannot see | 🔴 expect egress blocks on most; record each as a measured channel state, not a silence |
+| **C** | Run the **licence-grant clinic** write-up as a named offer for one of the three ungranted LATAM projects | — |
+
+---
+
 ## 2026-10-06 — twenty-first pass: the shelf's flagship is Apache-2.0 and installs AGPL, and this KB never once asked what its repos depend on
 
 **Channel new to this KB this pass: the declared-dependency channel** — reading each shelf

@@ -2941,3 +2941,80 @@ roughly 3×.
 | **No SBOM layer anywhere on the shelf** | 🔴 **NEW.** No `syft`, `cyclonedx`, `pip-licenses` or `license-checker` row exists. The twentieth pass found the same absence one layer up (`mlflow`, `dvc`, `evidently`, `croissant`, `fairlearn`: zero occurrences). Not shelved this pass because none of them was verified against an education deployment |
 | **Six dependency rows are unreadable at the registry layer** | ⚠️ Resolvable at the **repository** layer, where this KB already has a working channel. Prediction recorded before measurement: `python-dateutil` resolves permissive, `azure-cognitiveservices-speech` stays proprietary |
 | **The education-agent and GitHub-trending queries** | ⚠️ **Thin for the third consecutive pass**, which makes it a stable property of the channel rather than a bad day. "Education" in a trending feed means *learning to build AI*, not *AI for schools* |
+
+## 51. Every forge's licence field is a classifier, and a second one is now measured wrong — while its search cannot filter by licence at all
+
+**Added in the twenty-second pass of 2026-10-06. This extends trends 23 and 29 to a second forge,
+and the direction of the error is the same.**
+
+Trend 23 established that the licence *label* and the licence *grant* have come apart, and that
+reading the payload is the floor. Trend 29 established that GitHub's licence **index** can report
+"not specified" about a repository carrying a complete MIT grant, so every licence-filtered
+zero-result has an invisible false-negative floor.
+
+**Measured this pass on GitLab, 22 payloads read first-hand against the forge's own
+`license.key`:**
+
+| What the forge said | What the file said | Class |
+|---|---|---|
+| `agpl-1.0` | **GNU GPL v2**, 15,214 B — byte-identical to this KB's reading of the same project on GitHub | 🔴 wrong by two families |
+| `ecl-2.0` | **Apache-2.0**, verbatim, zero occurrences of "Educational Community" | 🔴 wrong |
+| `other` | **LGPL-3.0**, named in the file's own first three lines | ⚠️ silent about a knowable answer |
+| `gpl-2.0+` | plain **GPL-2.0**; the "or later" is nowhere in the payload — but the project's `composer.json` declares **`GPL-2.0-or-later`** | 🔵 **agreement, and the one case where the payload *under*-reads the grant** |
+| `other` ×2 | **REUSE pointers**; the real answer is a *set* of 4 and of 6 identifiers, two of them `LicenseRef-` | 🔵 not a grant at all |
+| agreed | — | 🟢 16 |
+
+**Seventeen agree, two wrong, one silent, two REUSE pointers of 22.** The ECL-2.0 case is the instructive one:
+**ECL-2.0 is a modified Apache-2.0**, differing in its patent grant, so a similarity classifier will
+confuse them — and in education that is the *worst* pair to confuse, because ECL is the licence the
+higher-education consortia actually use.
+
+🔴 **And the half with no workaround: `license=true` on GitLab's project-**search** endpoint is
+silently ignored. 0 of 534 projects came back with a licence**, while the same parameter on the
+single-project endpoint resolves correctly. On GitHub a licence filter is *lossy*; on GitLab there is
+**no licence filter at all**. A candidate costs two requests: one to find it, one to learn whether it
+carries a grant.
+
+**What this means for how absence is priced.** This KB declares gaps, and clients buy against them.
+Trend 29 already said a licence-filtered zero-result is a claim about an index. This pass adds the
+stronger form: **on at least one major forge, a licence-filtered sweep is not weak evidence, it is
+not possible** — so any "no permissive X exists" claim that leaned on a licence filter was measuring
+GitHub's index and calling it the world.
+
+**The rule, stated so it can be applied:** a forge's licence field is a hint for *triage ordering*
+and is never written into a row. ⚠️ **Including when it agrees** — 16 of 22 agreed here, and the
+agreement is unverifiable without the read that makes it redundant.
+
+## 52. This KB cannot measure whether its own shelf is alive, and the reason is one HTTP status
+
+**Added in the twenty-second pass of 2026-10-06.**
+
+`api.github.com` has returned **403** to this environment since pass 37. Forty-plus passes have
+therefore recorded, for every GitHub row: licence (read from payload), ★ (read from the rendered
+page), description, release tags — and **never once a commit-recency measurement**, because the
+endpoint that serves `pushed_at` is the one that is blocked. The nineteenth pass audited 475
+references for *liveness* and found "nothing newly dead" — but the probe it used was **licence-payload
+reachability**, which a repository abandoned in 2021 passes just as cleanly as one committed to this
+morning.
+
+**GitLab's API serves `last_activity_at` for free, to an unauthenticated caller.** Measured on the
+534 education projects this pass swept:
+
+| | Count | Share |
+|---|---|---|
+| touched in 2026 | 254 | **47.6%** |
+| touched in the last 30 days | 100 | **18.7%** |
+| untouched since before 2024 | **179** | **33.5%** |
+
+**One project in three is more than two years cold** — and three of this pass's own candidates were
+rejected on exactly that basis (`particify/.../arsnova-lms-connector`, MIT, last commit **2022-09-12**;
+`moodlenet/moodlenet`, AGPL-3.0, **2023-07-07**).
+
+**The trend is the asymmetry, not the number.** Maintenance status is the second question any client
+asks after licensing, this KB answers it for GitLab rows and cannot answer it for the ~470 GitHub
+references that are its substance. 🔵 **It is also not hopeless:** a shallow `git ls-remote` returns
+ref SHAs without the API, and a `--depth=1` clone returns the head commit's date — both channels this
+KB has already proven open. ⚠️ **Pre-registered as the action for the next pass: measure head-commit
+recency for the twenty highest-value GitHub rows via `git`, not via an API, and publish the
+distribution next to this one.** If it comes back similar to 33.5%, roughly a third of this KB's
+shelf is cold and several patterns need their components re-picked.

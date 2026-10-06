@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-05
+updated: 2026-10-06
 ---
 
 # 📚 Education KB
@@ -39,6 +39,11 @@ contexto léxico de una cifra es la **etiqueta de su bloque** (el `###` de arrib
 encabezado de su tabla), no su renglón. Las 2 pruebas que habían congelado el baseline **defectuoso**
 se re-expresaron contra el atribuidor corregido. 🟢 **Tablero: `77/77` verdes, `0` rojas.**
 
+🆕 **Pase 22 del 2026-10-06 (el de la API de GitLab) agrega una carpeta y su suite: `32/32` sin red,
+`35/35` con red.** ⚠️ **Dicho con precisión: las otras suites NO se re-corrieron en este pase**, así
+que el `77/77` de arriba es la última medición del pase 122 y no una medición de hoy. El total
+honesto es *`77/77` (pase 122) + `32/32` (nuevo)*, no un tablero re-medido.
+
 🔴 **Y la honestidad del método, dicha en la suite misma:**
 vaciar el conjunto *agregando* clases de exclusión (hicieron falta 4) es afinar-hasta-verde y va a
 romperse otra vez; la **inversión** —definir la clase POSITIVA y medir la propiedad sólo sobre
@@ -50,6 +55,7 @@ o la variable de entorno (regla de **P107**, pase 47):
 
 | Carpeta | Qué prueba | Invocación | Hoy |
 |---|---|---|---|
+| 🆕 **`gitlab-api-channel/`** *(nueva en el pase 22 del 2026-10-06)* | **El canal de API de GitLab** — el único API de forja que este entorno alcanza, porque `api.github.com` responde **403** desde el pase 37. Prueba tres cosas y cada una con **control negativo**: `P-GL-1` el campo de licencia de la forja **se equivoca en 2 de 22** (`agpl-1.0` sobre un payload **GPL-2.0** de 15.214 B, idéntico byte a byte al que esta KB leyó en GitHub; `ecl-2.0` sobre un **Apache-2.0** literal); `P-GL-2` **`license=true` se ignora en silencio** en el endpoint de búsqueda (**0 licencias sobre 534**) aunque resuelve por proyecto; `P-GL-3` un clasificador por subcadena **encuentra toda licencia en toda licencia** — fue defecto propio de este pase y el control lo mantiene detectable | `python3 test_gitlab_channel.py` · `--live` | 🟢 **32/32** · 🟢 **35/35** con red |
 | 🆕 **`p351-star-digit-sweep/`** *(convertida en el pase 122)* | **accion M: de RETRATO a PROPIEDAD.** Afirmaba `posteriores_a(110) == []` —una cardinalidad congelada que cada pase volvia roja sin que nada se rompiera (clase de `P399`)— y ahora afirma la invariante: **toda ★ atribuida a un pase posterior esta CLASIFICADA** (meta / umbral / `P403` cita-de-canal / `P404` rechazo), o sea ninguna es una MEDICION sin banda ni fecha. 🔴 Hizo falta ademas `P405`: el clasificador leia LINEAS sobre un corpus duro-envuelto | `python3 test_p351.py` | 🟢 **36/36** *(estaba 33/36)* |
 | 🆕 **`p356-citation-origin/`** *(convertida en el pase 122)* | **accion M: idem.** Afirmaba `len(fuera) == 3` y `sorted(fuera) == [245, 279, 281]`; el dia de la reescritura el conjunto medía **26**. Ahora afirma la propiedad en dos mitades: el conjunto es **no vacio** (si fuera vacio el defecto no existiria y la prueba pasaria por vacuidad) **y** cada miembro esta realmente definido fuera de `patterns.md`, verificado contra `WHERE` | `python3 test_origin.py` | 🟢 **16/16** *(estaba 15/16)* |
 | **`p399-census-order-gate/`** | **el hallazgo del pase 121: un auto-censo publicado en el MISMO pase que agrega filas mide el corpus PRE-ESCRITURA. El 15/46/125/186 de `P394` es el arbol del pase 119; el commit donde se publico mide 23/46/139/208. La compuerta lee los dos arboles con `git show` e imprime ademas que columnas NO se mueven — `presente` (46 -> 46), que es por que ningun control lo agarraba** | `python3 test_census_order.py` | 🟢 **21/21** *(nuevo en el pase 121)* |

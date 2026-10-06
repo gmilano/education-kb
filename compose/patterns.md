@@ -3272,3 +3272,90 @@ instrument already exists and runs offline except for the two registry endpoints
 bundled discovery artefact rather than a standalone engagement** — it is a trust signal the client
 can verify in one command, and on this KB's own shelf it surfaced a real finding in **4 of 13**
 projects.
+
+## P-ONPREM-CLASSROOM — The zero-egress classroom (assignment, grading and mastery with no third-party service in the loop)
+
+**Added in the twenty-second pass of 2026-10-06.** Every component's licence was read from its own
+payload this pass or an earlier one; the three new ones came from the GitLab API channel documented
+in `agents/top.md`.
+
+**The constraint this answers, in two regions at once.** California's proposed **A.B. 1159** would
+bar student data from training AI models unless the use directly benefits the school; a district's
+counsel cannot verify that about a SaaS tutor and can verify it about a system with no outbound
+calls. In EMEA the same architecture answers **Annex III** deployer duties and data-residency rules
+without a transfer assessment. 🟢 **The deliverable is not software, it is a provable data-flow
+statement** — and this stack makes it true by construction rather than by contract.
+
+### Components
+
+| Layer | Component | Licence (payload-verified) | Why this one |
+|---|---|---|---|
+| **Forge** | [`gitlab-org/gitlab-foss`](https://gitlab.com/gitlab-org/gitlab-foss) (GitLab CE), self-hosted | 🟢 **MIT Expat** — ⚠️ with directory carve-outs: `doc/` is **CC BY-SA 4.0**, `ee/` and `jh/` carry their **own** licences (payload, 2,001 B) | The institution already has Git hosting or can stand it up. ⚠️ **Deploy `gitlab-foss`, not the EE package** — the carve-out is the scope-split failure mode of trend 23, in the foundation layer |
+| **Assignment workflow** | [`travo-cr/travo`](https://gitlab.com/travo-cr/travo) | 🟢 **BSD-3-Clause** | fetch/submit over the GitLab REST API, terminal **or** Jupyter widget dashboard; works against **any** instance incl. self-hosted; in production in a dozen classes at Paris-Saclay and UQAM. PyPI `travo` 2.1.1 |
+| **Notebook grading** | [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 🟢 **BSD-3-Clause** | automatic + manual grading with **hidden tests**; Travo drives it directly. v0.9.6 of 2026-09-30 |
+| **Non-notebook grading** | [`cjaikaeo/elabsheet`](https://gitlab.com/cjaikaeo/elabsheet) | 🟢 **BSD-2-Clause**, holders named in payload | exercise/exam authoring with automatic answer checking, incl. a compiled-language component. Dockerised in `cjaikaeo/elab-docker` |
+| **Mastery / next-task** | [`adaptive-learning-engine/adlete-packages`](https://gitlab.com/adaptive-learning-engine/adlete-packages) + its `moodle/adleteh5p` sibling | 🟢 **MIT** | competence estimation and next-exercise recommendation, with an **H5P** binding already written — the integration P3 has had to hand-build |
+| **LMS of record** | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) *(confirmed this pass at [olatorg/OpenOLAT](https://gitlab.com/olatorg/OpenOLAT))* | 🟢 **Apache-2.0**, payload read on **two forges** | the only complete LMS in this KB with no copyleft conversation; QTI, SCORM, curriculum, assessment |
+| **Standards edge** | [`kbarbounakis/eduapi`](https://gitlab.com/kbarbounakis/eduapi) *(optional)* · [`eduplex-api/cake-api-xapi-proxy`](https://gitlab.com/eduplex-api/cake-api-xapi-proxy) | ⚠️ **LGPL-3.0** · 🟢 **MIT** | 1EdTech **EduAPI** for SIS-side interop (link, do not fold) · **xAPI → LRS** pipe when the LMS cannot emit statements |
+| **Inference** | Ollama or vLLM, on the institution's own hardware | 🟢 MIT · Apache-2.0 *(this KB's foundation shelf)* | the only layer that would otherwise call out. **No hosted model endpoint anywhere in this pattern** |
+| **Offline tier** | [`LearningEquality/kolibri`](https://github.com/LearningEquality/kolibri) *(optional)* | 🟢 **MIT** — ⚠️ `REVIEW-WEAK`, two LGPL deps (pass 21) | where connectivity is the constraint rather than residency |
+
+### Wiring
+
+1. **Stand up `gitlab-foss`** inside the institution's network. One group per course; one project
+   per assignment template; students' submissions are **forks inside that group**, so every artefact
+   stays on the institution's disk.
+2. **`pip install travo`** on the student image (JupyterHub, lab machine or BYOD). `travo fetch`
+   clones the assignment; `travo submit` pushes the student's fork. The dashboard widget means the
+   student never touches Git directly.
+3. **Grading splits by artefact type.** Notebooks → nbgrader's autograde + hidden tests, manual
+   tranche for the rest. Code and short-answer exercises → **elabsheet**, which authors the task and
+   checks the answer. Both run as CI jobs **on the institution's own runners**.
+4. **Mastery loop:** push each grading outcome into **ADLETE**; it returns the next task. If the LMS
+   is Moodle, `adleteh5p` renders that task as an H5P activity in place; if it is OpenOLAT, drive it
+   through QTI items.
+5. **The model layer stays local.** Feedback drafting, hint generation and rubric-assisted marking
+   call **Ollama/vLLM on-premises**. 🔴 **The oversight gate of `P11` applies unchanged: no
+   model-generated mark is final.** This is also the only way the Oregon-style design duties and the
+   A.B. 1159-style training-data rule are satisfiable at the same time.
+6. **Standards edge last**, and only if procurement scored it: EduAPI for SIS interop, the xAPI proxy
+   for statement export to an LRS the institution already runs.
+
+### Deliverables
+
+* A **data-flow statement** naming every egress point — ideally the empty set — reproducible by the
+  client in one command (`ss -tunp` on the runner during a grading job).
+* A course **pilot**: one real assignment, fetched, submitted, autograded and mastery-routed
+  end-to-end.
+* A **fork-ownership plan** for elabsheet and ADLETE (see the warnings) with a named maintainer and a
+  budgeted hour-count.
+* The **licence file set** for the deliverable: BSD-2, BSD-3, MIT, MIT Expat, Apache-2.0 — and, if
+  EduAPI is in, the LGPL-3.0 linking note written out.
+
+### ⚠️ Four warnings, which are the point of this pattern
+
+1. 🔴 **Two components are small, and the stack's risk is concentrated there.** elabsheet is **14★**
+   with a 2013 copyright line and two named holders; ADLETE is **1★**. Both were committed within the
+   last month, both are permissive enough to fork outright, and **the engagement must price owning
+   the fork** rather than assume upstream. This is a *deliberate* trade against a SaaS grader: the
+   licence and the egress property are worth the maintenance.
+2. ⚠️ **`gitlab-foss` is MIT Expat *outside* three directories.** `doc/` is CC BY-SA 4.0 and `ee/`
+   carries its own terms. If the client's platform team installs the EE package "because it is the
+   same product", the licence premise of this whole pattern changes. Check which package is running
+   before writing the licence section of any proposal.
+3. ⚠️ **Travo's trust model is GitLab tokens.** Each student authenticates to the forge; the
+   workflow's security is the instance's access control, not the tool's. On a self-hosted instance
+   that is an advantage — it is the institution's own IAM — but it must be configured, not assumed.
+4. 🔵 **Nothing here is an agent, and that is on purpose.** The agentic layer in this pattern is a
+   local model doing feedback and hint drafting behind a human gate. **A pattern whose selling point
+   is "no data leaves" cannot have an autonomous component calling out**, and every hosted-tutor
+   component in this KB does.
+
+### Where it sells, and where it does not
+
+| Region | Fit |
+|---|---|
+| **North America** | 🟢 **Strongest.** A.B. 1159-shaped data rules, Ohio's district-policy mandate (deadline **2026-07-01**, passed) and Maryland's AI coordinators give it a named buyer with a written obligation. Travo is already a Québec production tool |
+| **EMEA** | 🟢 **Strong.** Answers Annex III deployer duties and residency without a transfer assessment; **11 of the 18 rows this pass added are EMEA-origin** (5 verified from a README, 6 inferred), so the local reference base exists |
+| **APAC** | 🟢 **Strong where sovereignty is the criterion.** BSD-2 on the grading core means a ministry can fork and localise without publishing — the shortest grant in this KB |
+| **LATAM** | ⚠️ **Fits the budget case, with an added step.** The cost argument is the point here, but 🔴 the regional supply this pass measured is **ungranted, not absent** (0 licensed education projects of 674), so a LATAM delivery imports this stack rather than building on local assets. Pair it with the **licence-grant clinic** in `intel/market.md` |

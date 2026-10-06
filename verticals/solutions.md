@@ -1409,3 +1409,56 @@ platforms on this page**, however benign its pedagogy, unless the corpus is enum
 controlled. 🟢 **The platform is not the exposure; the ingestion pipeline is** — which is why
 `iterative/dvc` and `great-expectations/great_expectations` (see `repos/foundations.md`) now belong
 in a platform conversation that used to be only about licences.
+
+## Added in the twenty-second pass of 2026-10-06 — the platforms a second forge holds, and the first liveness numbers in this KB
+
+Channel: the **GitLab REST API v4**. Licences read from each project's own payload; `★` and
+**`last_activity_at` served by the API**, which is the field `api.github.com` would give this KB and
+cannot (403 since pass 37). Controls and the detector-error table: `agents/top.md`. Instrument:
+`compose/code/gitlab-api-channel/`.
+
+| Platform | Repo | Licence (payload) | ★ · last activity | Placement | What it is, and what it is for |
+|---|---|---|---|---|---|
+| **ELabSheet** | [cjaikaeo/elabsheet](https://gitlab.com/cjaikaeo/elabsheet) | 🟢 **BSD-2-Clause** | 14 · 2026-09-19 | APAC (Thailand) | **Exercise and examination platform with automatic answer checking** — task authoring plus grading, Python/HTML with a C++ component for compiled-language exercises. Runs standalone; Dockerised in `cjaikaeo/elab-docker`. 🟢 **The most permissively licensed assessment platform on this page** — looser than mentingo (MIT, full LMS) and far smaller, which is the trade |
+| **LMS42** | [saxionnl/42/lms42](https://gitlab.com/saxionnl/42/lms42) | 🔴 **AGPL-3.0** | 10 · **2026-10-06** | EMEA (Netherlands) | The LMS **and most of the curriculum** for the Associate degree in Software Development at **Saxion University of Applied Sciences**. A university's production teaching system, committed to daily. 🔴 AGPL-3.0, so not a delivery base — 🟢 but as a *curriculum* artefact under an open licence it is the only one of its kind in this KB |
+| **OpenOLAT** *(second host)* | [olatorg/OpenOLAT](https://gitlab.com/olatorg/OpenOLAT) | 🟢 **Apache-2.0** (10,982 B) | 2 · **2026-10-06** | EMEA (Switzerland) | 🟢 **Confirms the Apache-2.0 reading this page already carries for `OpenOLAT/OpenOLAT`, from an independent forge.** The "extend it without the copyleft conversation" recommendation is now double-sourced |
+| **RosarioSIS** *(second host)* | [francoisjacquet/rosariosis](https://gitlab.com/francoisjacquet/rosariosis) | ⚠️ **GPL-2.0**, **15,214 B** | 65 · **2026-10-06** | Global (LATAM-relevant) | 🟢 Payload **byte-identical** to this page's GitHub reading. 🔴 GitLab's own detector calls it **`AGPL-1.0`** — a two-family error on a row this page already publishes, which is why the GPL-2.0-not-3.0 warning above stays sourced to the payload and never to a forge field |
+| **MoodleNet** | [moodlenet/moodlenet](https://gitlab.com/moodlenet/moodlenet) | 🔴 **AGPL-3.0** | 9 · 🔴 **2023-07-07** | EMEA | Moodle's federated resource-sharing network. 🔴 **Dead by measurement:** three years without a commit on this host. Recorded so no later pass proposes it as the OER-sharing tier |
+| **Leitor de Gabaritos** | [elizeubarbosaabreu/leitor-de-gabaritos](https://gitlab.com/elizeubarbosaabreu/leitor-de-gabaritos) | 🔴 **AGPL-3.0** | 0 · 2026-09-23 | ⚠️ LATAM-**plausible**, not declared | **Optical mark recognition (OMR)**: reads hand-filled answer sheets with computer vision, ships through **F-Droid** as an Android app. 🟢 The paper-to-digital assessment tier this KB has never held — the one that matters where exams are still printed. 🔴 AGPL-3.0, and ⚠️ its placement is an inference from Portuguese-language naming only |
+| **GitClassrooms** | [git-classrooms/git-classrooms](https://gitlab.com/git-classrooms/git-classrooms) | 🟢 **MPL-2.0** | 3 · 2026-06-16 | ⚠️ **unplaced** (namespace only) | Self-hosted GitHub-Classroom equivalent for GitLab, with a web UI. ⚠️ A **publish-only mirror** of a GitHub repository — pin the upstream, not this copy |
+
+### 🟢 The first liveness distribution this KB has ever measured
+
+Not of its own shelf — of the 534 projects this sweep returned. **It is the shape of a forge's
+education corpus, and it is the number no GitHub pass could produce:**
+
+| Measure | Count | Share |
+|---|---|---|
+| unique projects returned | **534** | 100% |
+| touched in **2026** | **254** | **47.6%** |
+| touched in the **last 30 days** | **100** | **18.7%** |
+| untouched since **before 2024** | **179** | **33.5%** |
+
+🔴 **One education project in three on this forge has not been touched in over two years, and the
+only reason this KB can say so is that it finally called an API that answers.** Every GitHub row in
+this KB — 475 references, audited for liveness in the nineteenth pass by *licence-payload
+reachability* — still has **no commit-recency measurement at all**, because the endpoint that serves
+it is 403. 🔵 That is an asymmetry, recorded as trend **52**, not a claim that the GitHub shelf is
+stale.
+
+### ⚠️ And the precision of this channel, so no later pass over-reads it
+
+| Defect in the returned set | Count of 534 |
+|---|---|
+| **no description at all** | **149 (27.9%)** |
+| projects sharing a description with another project (12 texts, 67 projects) | **67** |
+| — RosarioSIS's own description, cloned | **23 times** |
+| — `oer/emacs-reveal`'s description, cloned | **14 times** |
+| — ELabSheet's description, cloned | **7 times** |
+| slugs matching `ecoscan-*deletion_scheduled*` — scratch clones queued for deletion | **37** |
+
+🔵 **The three most-cloned descriptions in the corpus belong to three projects this pass actually
+publishes**, which is a useful accident: on this forge, *being copied* is a weak adoption signal,
+and it points at the same rows a human reviewer would pick. 🔴 **But 27.9% of the corpus describes
+itself not at all**, so a description-driven triage — the one used here — silently skips more than a
+quarter of what it searched. **The 18 published rows are a floor, never a census.**
