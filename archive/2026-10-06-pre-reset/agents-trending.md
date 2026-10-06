@@ -1,68 +1,8 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-06
+updated: 2026-10-05
 ---
-
-# Trending Agents — Education
-
-> **Append-only.** Newest dated section on top; history preserved below.
-
-## 2026-10-06
-
-**Framework consolidation — AutoGen is out.** `microsoft/autogen` (61.3k★) is now
-in **maintenance mode**, community-managed, no new features, with the README
-directing new users to **Microsoft Agent Framework**
-([microsoft/agent-framework](https://github.com/microsoft/agent-framework), MIT,
-14.0k★, Python + .NET). Its `LICENSE` at HEAD reads **CC-BY-4.0** (dual
-CC-BY-4.0 / MIT), not the plain MIT recorded in earlier cycles of this KB. Any
-education proposal specifying AutoGen needs re-specifying.
-
-**DeepTutor keeps compounding and shipped this week.**
-[HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) (Apache-2.0) is at
-**40.8k★** with **v1.6.13 released 2026-10-04**. Reported trajectory: 20k★ in
-111 days, ~40k★ in nine months. It is now the only education-native agent project
-with real gravity. Architecture to copy: two-layer plugin model (single-shot
-Tools + multi-stage Capabilities), three entry points (CLI / WebSocket / Python
-SDK), per-learner workspaces with persistent memory.
-
-**Fork-lineage warning on DeepTutor.** Searching for DeepTutor surfaces
-mirrors before the origin: `cloudtoolbox/deeptutor` (**7★**),
-`lucadeg/DeepTutor` and `q-qp-p/HKUDS-DeepTutor` all carry the same description
-and the same correct Apache-2.0 license, with none of the history. Pin
-`HKUDS/DeepTutor`.
-
-**MCP is now the LMS integration layer — and the license boundary.**
-[vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) (MIT,
-**278★**) exposes up to **102 Canvas tools and 8 agent skills**, including a
-20-check WCAG accessibility scanner and bulk grading, across 40+ MCP clients.
-[peancor/moodle-mcp-server](https://github.com/peancor/moodle-mcp-server) (MIT)
-covers Moodle. Measured this pass: all three in-tree Moodle AI plugins
-(`moodle-block_openai_chat`, `moodle-local_aiquestions`, `moodle-qbank_genai`)
-are **GPL-3.0**, while both external MCP servers are **MIT**. Integration style
-now determines the IP outcome.
-
-**Enablement assets are the quiet movers.**
-[microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners)
-(MIT) is at **76.5k★** with 18 lessons, and its samples now target MAF rather
-than AutoGen — the course followed the framework shift.
-[huggingface/smolagents](https://github.com/huggingface/smolagents) (Apache-2.0)
-sits at **29.7k★**.
-
-**Still no permissive auto-grader.** Re-searched this pass; nothing credible.
-OATutor (MIT, 264★, CHI '23 + PLOS ONE) remains the substitute worth having —
-Bayesian Knowledge Tracing gives an inspectable mastery estimate where a
-regulator will ask for a justification.
-
-**Regional note.** Nothing new surfaced from LATAM (no LATAM-origin education
-agent project found) or from APAC's sovereign-model build-out (base models, no
-pedagogy layer). `panaversity/learn-agentic-ai` (MIT) remains the single
-APAC-origin education asset tracked here.
-
----
-
-## History (earlier passes, preserved verbatim)
-
 
 # 📈 Agentes trending — education
 
