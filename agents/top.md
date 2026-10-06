@@ -2416,3 +2416,78 @@ Where the two disagreed, the payload won — and they **did** disagree once: a r
 reported `AccessLint/skills` as *"License: MIT"* while the repository contains no licence file at
 all. **That is the whole argument for this KB's payload-reading rule, demonstrated in a single
 repository.**
+
+---
+
+## Twentieth pass of 2026-10-06 — one correction to this file, and a 475-reference audit of the whole shelf
+
+**From the transition-provision channel.** Narrative in `agents/trending.md`; trends **46** and
+**47** in `intel/trends.md`; the evidence tier in `repos/foundations.md`; delivery in
+`compose/patterns.md` under **`P-TRANSITION-EVIDENCE`**.
+
+### 🔵 Correction — "Decree 33" is a Prime Ministerial *Decision*, and there is a second instrument this file never named
+
+This file states *"Vietnam's **Decree 33** (in force 2026-08-15) classifies AI that monitors…"*. 🟢
+**The date is right and the substance is right. The instrument type is wrong, and it matters.**
+
+| What this file said | What the instrument is |
+|---|---|
+| "Decree 33" | **Decision 33/2026/QĐ-TTg** — a *Quyết định* of the **Prime Minister**, issued **2026-06-30**, effective **2026-08-15**, carrying the list of **46 high-risk AI systems across six sectors** |
+| *(never recorded here)* | **Decree 142/2026/ND-CP** — a *Nghị định* of the **Government**, issued **2026-04-30**, effective **2026-05-01**: one-stop portal, national AI database, three-tier risk classification and conformity assessment, labelling and watermarking, three-level sandbox. **8 chapters, 46 articles** |
+
+🔵 **Why a terminology slip earns a correction block.** In Vietnam's hierarchy a *Decree* and a
+*Prime Ministerial Decision* are different instruments — different issuing body, different amendment
+procedure, different place of publication. "Decree 33" is not findable; it sends the next reader
+looking for a document that does not exist, and it hides the fact that **there are two instruments**
+— the one this file named, and the one (142) carrying a filing duty whose deadline, **2026-06-30**,
+has already passed.
+
+🟢 **Education's three entries in Decision 33, now recorded exactly:** AI providing **self-learning
+content from uncontrolled data sources**; AI that **automatically assesses, grades or ranks
+students**; AI that **monitors or analyses learner behaviour using biometric data** (facial
+recognition, eye tracking). Six sectors: education **3**, ethnic and religious affairs 7, healthcare
+2, banking 2, judicial proceedings 1, transportation 31.
+
+⚠️ **Verification level:** this correction comes from **search-result summaries** naming the
+instruments (Allen & Gledhill, Vietnam Briefing, Indochine Counsel, Tilleke & Gibbins, VCI Legal,
+Viet An Law, `thuvienphapluat.vn`). The primary texts are **`EGRESS_BLOCKED`** from this environment.
+**Re-read the instrument before quoting it to a client.**
+
+### 🟢 The shelf audit — 475 references, nothing newly dead
+
+Every `github.com/owner/repo` reference in this file and the five other non-append-only files was
+extracted and probed for a licence payload across 7 filenames × up to 3 branch refs.
+
+| Result | Count |
+|---|---|
+| Reachable | **470** |
+| 🟢 Genuinely gone | **1** — `planejaia/OpenMAIC-Brasil`, **already recorded in this file as a phantom**, now 404-confirmed by a second method |
+| ⚠️ False flags — the repo exists | **3** — `foradian/fedena` (4★), `AmericasNLP/americasnlp2024` (7★), `cqm3ron/bromcom-scraper` (1★) |
+| 🔵 Extraction artefact, never a repository | **1** — `search/repositories`, from this file's own prose about `api.github.com` |
+
+🟢 **After nineteen passes of accumulation, nothing on this shelf has rotted.**
+
+🔴 **The method finding is the one to keep: of 4 repository-shaped flags, 1 was real — 25%
+precision.** All three false flags failed identically — no licence payload *and* no `README.md` at
+the probed paths — and this KB had **already** resolved `foradian/fedena` by a better method
+(`master/config/routes.rb` and `master/Gemfile` return 200 while every `README.md` 404s, recorded in
+`verticals/solutions.md`). ⚠️ **The cheap probe is strictly weaker than the method already in this
+KB. Never withdraw a row on one probe** — a single-path sweep confirms liveness and must never
+declare death.
+
+### ⚠️ The licence portfolio of this shelf, measured for the first time
+
+All 475 references, licence read from payload: **MIT 202 · Apache-2.0 61 · BSD 8 · MPL-2.0 5 →
+276 clearly permissive (58.1%)**; **GPL 41 · AGPL-3.0 19 → 60 copyleft (12.6%)**; **93 (19.6%) with
+no licence payload at the probed paths**; ~22 others (ECL-2.0 7, CC0 4, CC-BY 2, ISC 2, CC-NC 3,
+Elastic-2.0 1, national and bespoke).
+
+🔴 **The number to carry out of this file is 93 — one reference in five, a bucket larger than GPL and
+AGPL combined.** This file's licence-failure catalogue already names three failure modes; this is the
+first measurement of how much of the corpus sits in them.
+
+⚠️ **It is an upper bound and is stated as one.** The probe tested 7 filenames at up to 3 refs, and
+licences have already been found outside that set here — `OS4ED/openSIS-Classic` at
+`docs/License.txt`, `frappe/*` at lowercase `license.txt`. 🟢 **So the honest form of the number is
+not "93 unlicensed" but "93 that must not be cited as permissive without a manual read"** — a work
+item with a size, which is the first time this KB can price its own licence debt.

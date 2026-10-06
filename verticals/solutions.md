@@ -1332,3 +1332,52 @@ not (`agents/top.md`).
 | To prove a remediated LMS actually works for a blind student | **NVDA** (GPL-2.0+) as a *test client* | Free, scriptable, and the screen reader the user actually has |
 | To validate that a PDF is genuinely PDF/UA | **veraPDF** as a *CLI*, not a dependency | Dual-licensed; invoking it keeps the obligation out of the deliverable |
 | **To produce** an accessible tagged PDF | 🔴 **Nothing permissive exists** | Searched and not found. Price the tagging as human labour (`repos/foundations.md`) |
+
+---
+
+## Added in the twentieth pass of 2026-10-06 — the transition bucket is a platform-selection input, and nobody had treated it as one
+
+**From the transition-provision channel** (findings in `agents/trending.md`, trend **46** in
+`intel/trends.md`, delivery in `compose/patterns.md` under **`P-TRANSITION-EVIDENCE`**).
+
+🔵 **The question this adds to platform selection.** Every selection table in this file asks what a
+platform *is* — its licence, its scale, its AI surface. None asks **which transition bucket the
+client's deployment of it falls into**, and that is now the variable with the longest lever on cost:
+it can be worth four years.
+
+### The three buckets, and what each one makes of the same platform
+
+| Bucket | Who is in it | What the regime gives them | What it costs to leave |
+|---|---|---|---|
+| **Already in service, public authority** | a ministry, a regional authority, a state university running Moodle, Open edX, Sunbird or an SIS with an AI module already live | 🟢 **EU: until 2030-08-02.** Vietnam: **2027-09-01** for education. Peru: a staged 1–4-year window from Sept 2025 | 🔴 **a change in design** — and the extension does not come back |
+| **Already in service, private provider** | a tutoring company, a corporate L&D platform, a private school group | ⚠️ **EU: no extended date — 2027-12-02**, with only the design-stability route available while it lasts | the same change, with two months of runway instead of four years |
+| **Not yet in service** | any new deployment, and **any significantly modified existing one** | 🔴 **nothing.** Full Annex III §3 obligations on the day it ships | — |
+
+🔴 **The consequence for this file's own platform shortlist.** A platform is not "AI Act ready" or
+not; **a deployment is.** Kolibri, Oppia, Mentingo, Coursemology, Sunbird and OpenMAIC all sit in
+whichever bucket the client's circumstances put them in — and the identical technical choice carries
+a 2030 date for a state university and a 2027-12-02 date for a private operator. ⚠️ **So record the
+buyer's legal form in the selection note, next to the licence.** It is the second field that changes
+the answer and the only one this file has never captured.
+
+### What this changes about a platform *migration*
+
+🔴 **A migration is a change in design by construction**, so the standard "move them off the legacy
+SIS onto a permissive platform" engagement **forfeits the extension** on the high-risk functions it
+carries — admissions scoring, automated grading, placement, proctoring.
+
+🟢 **The sequencing that preserves it, and it is a real delivery option rather than a dodge:**
+migrate the **non-high-risk** estate first — content delivery, rostering, administration,
+accessibility remediation — and leave the high-risk decision functions on the frozen legacy system,
+wrapped in the evidence tier, until the client is ready to pay for conformity on them deliberately.
+⚠️ **This is the opposite of the usual advice**, which is to migrate the hard parts first while
+budget exists, and the difference is worth stating to the buyer explicitly rather than deciding for
+them.
+
+🔵 **And one platform-level note that follows from Vietnam's Decision 33.** Its education category 1
+is *"AI systems providing self-learning content using uncontrolled data sources"* — a **corpus**
+test, not a decision test. ⚠️ **That catches an RAG tutor bolted onto any of the permissive
+platforms on this page**, however benign its pedagogy, unless the corpus is enumerated and
+controlled. 🟢 **The platform is not the exposure; the ingestion pipeline is** — which is why
+`iterative/dvc` and `great-expectations/great_expectations` (see `repos/foundations.md`) now belong
+in a platform conversation that used to be only about licences.

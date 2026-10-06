@@ -8,6 +8,329 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — twentieth pass: "in force" is not "comply by", and the thing that forfeits the extension is the modernisation project itself
+
+**Channel new to this KB this pass: the transition-provision channel** — sweeping each binding
+instrument for its **transitional article** rather than for its entry-into-force date, its topic,
+star count, funder, ministry, institution, function, licence scope, platform name, language, MCP
+registry, conformance register or named technical standard. **Eighth channel used.** New rows in
+`repos/foundations.md`, regional consequences in `intel/market.md`, trends 46 and 47 in
+`intel/trends.md`, pattern **`P-TRANSITION-EVIDENCE`** in `compose/patterns.md`.
+
+### ⚠️ Verification level of this pass, stated before the findings
+
+🔴 **The primary legal texts are not reachable from this environment.** `eur-lex.europa.eu`,
+`artificialintelligenceact.eu`, `ai-act-law.eu`, `ai-act-service-desk.ec.europa.eu`,
+`www.loc.gov`, `www.gibsondunn.com` and `www.tilleke.com` all returned
+**`EGRESS_BLOCKED`** from the network egress proxy. Only `raw.githubusercontent.com` and
+`github.com` (via `WebFetch`) proved fetchable for first-hand reads this pass.
+
+🔵 **So the regulatory findings below sit at *search-summary* level, not primary-text level**, and
+they are written that way on purpose: each one is **triangulated across independent queries whose
+summaries name the same instrument, article and date**, and the naming sources are listed. ⚠️ **Any
+of these dates that enters a client proposal must be re-read against the instrument itself first.**
+That is a weaker standard than this KB applies to a licence payload, and the difference is recorded
+rather than smoothed over.
+
+### 🔴 Finding 1 — nineteen passes, deep AI Act coverage, and not one mention of a transition provision
+
+Verified by grep over all eight files before a line of this pass was written:
+
+| Probe | Occurrences outside `archive/` |
+|---|---|
+| `Article 111` · `Art. 111` | **0** |
+| `grandfather` | **0** |
+| `legacy system` | **0** |
+| `transition period` | **0** |
+| `placed on the market before` · `already on the market` | **0** |
+| `2030-12-31` · `31 December 2030` | **0** |
+
+🔵 **This is a gap of a specific kind, and it is the expensive kind.** The KB had the
+obligations (trends 2, 17, 36, 45), the regional instruments, the Annex III categories and the
+engineering patterns. What it never had was **the article that says when any of it binds a system
+that already exists** — and a client's estate consists almost entirely of systems that already
+exist.
+
+### 🟢 Finding 2 — the thesis: in three of four regions the real date is *later* than the headline, and one date has already passed
+
+| Region | Market / instrument | The headline date this KB carried | What the transition article actually says | The date that governs an existing system |
+|---|---|---|---|---|
+| **EMEA** | EU AI Act, **Art. 111** | Annex III high-risk applies **2027-12-02** | A high-risk system lawfully placed on the market before the high-risk rules apply may continue **without retrofit or additional certification, provided its design remains unchanged**. Providers and deployers of high-risk AI **intended to be used by public authorities** must comply **by 2 August 2030**. AI inside Annex X large-scale IT systems placed before **2027-08-02** → comply by **2030-12-31** | 🟢 **2030-08-02** for a public-authority deployment — which in education means most ministries and state universities |
+| **APAC** | Vietnam, law **134/2025/QH15** | *"in force 2026-03-01"* | Existing systems must be brought into compliance by **2027-03-01**; **health, education and finance get until 2027-09-01** | 🟢 **2027-09-01** for education — **18 months later than the date in this KB's summary tables** |
+| **APAC** | Vietnam, Decree **142/2026/ND-CP** (the procedural limb) | *(not previously recorded)* | Effective **2026-05-01**: within **60 days**, i.e. **before 2026-06-30**, a transitioning organisation must file a **notice plus a transition plan** on the one-stop portal | 🔴 **2026-06-30 — already passed** |
+| **APAC** | South Korea, **Framework Act** | In force **2026-01-22** | Enforcement decree and amendment effective **2026-07-21**, when high-impact duties became real duties; **fact-finding investigations and administrative fines deferred at least one year** (→ ~**2027-07-21**); 🔴 **the generated-content labelling duty has no grace period at all** | ⚠️ **Split**: labelling now, everything else ~2027-07-21 |
+| **LATAM** | Peru, law **31814** + *reglamento* **DS 115-2025-PCM** | Reglamento in force **2026-01-22** | Sector obligations for **health, EDUCATION, justice, security, economy and finance activated 2026-09-10**; staged compliance **one to four years from September 2025**, by sector and organisation size | 🔴 **2026-09-10 — already passed**, a month before this pass ran |
+| **North America** | DOJ **ADA Title II** interim final rule | **2027-04-26 / 2028-04-26** | ⚠️ **Informed gap: there is no transition article to read, because there is no binding federal high-risk AI statute.** State duties (California **AB 1159**, Idaho **SB 1227**, Oklahoma, Maryland) attach at enactment, without a transition regime. The DOJ extension already recorded in the nineteenth pass **is** North America's transition analogue | **2027-04-26** for entities serving ≥50,000 |
+
+### 🔴 Finding 3 — the commercially important half: an AI modernisation project is the event that destroys the extension
+
+This is the finding that changes a proposal, and it follows from one clause.
+
+🔵 **The EU extension is conditional on the design remaining unchanged.** Vietnam's is conditional
+on a **filed transition plan**, and a **reclassification** into high-risk restarts a 12-month clock
+of its own. So the grandfathering is not a property of the system — it is a property of the system
+**being left alone**.
+
+⚠️ **An AI Studio engagement is, definitionally, the thing that does not leave it alone.** Adding a
+tutor to a legacy LMS, wiring an agent into an SIS, replacing a rules-based placement engine with a
+model — each is a change in design, and each converts a system that had until **2030-08-02** into
+one that must satisfy Annex III **on the day it ships**.
+
+🟢 **So the proposal rule, stated the way it should be said to a client:** *the conformity work is
+not a later phase that the extension pays for — it is in scope of this phase, because this phase is
+what ends the extension.* ⚠️ **The sales failure mode is the reassuring version** — "you have until
+2030" — which is true right up to the moment the client signs the statement of work that makes it
+false. 🔵 **And the inverse is a real, sellable option this KB had no language for: a
+non-modifying engagement** — observability, evidence, inventory and an accessibility remediation
+queue *around* a frozen high-risk core — which banks the extension instead of spending it, and is
+precisely what the tier in `repos/foundations.md` and pattern `P-TRANSITION-EVIDENCE` build.
+
+### ⚠️ Finding 4 — a correction to this KB: Vietnam's instrument is a Decision, not a Decree, and both exist
+
+This KB records *"Vietnam's **Decree 33** (in force 2026-08-15)"* in `agents/top.md` and leans on it
+in pattern **P20**. The date is right and the substance is right. **The instrument type is wrong,
+and it matters.**
+
+| What this KB said | What the instrument is |
+|---|---|
+| "Decree 33" | **Decision 33/2026/QĐ-TTg** — a *Quyết định* of the **Prime Minister**, issued **2026-06-30**, effective **2026-08-15**, carrying the list of **46 high-risk AI systems across six sectors** |
+| *(not recorded)* | **Decree 142/2026/ND-CP** — a *Nghị định* of the **Government**, issued **2026-04-30**, effective **2026-05-01**: the one-stop portal, the national AI database, three-tier risk classification and conformity assessment, labelling and watermarking, a three-level sandbox — **8 chapters, 46 articles** |
+
+🔵 **Why a terminology slip is worth a correction block.** In Vietnam's hierarchy a *Decree* and a
+*Prime Ministerial Decision* are different instruments, issued by different bodies, amended by
+different procedures and published in different places. "Decree 33" is not findable; it sends the
+next reader — or the next pass — looking for a document that does not exist, and it conceals the
+fact that **there are two instruments**, one of which (142) carries the filing duty whose deadline
+has already passed.
+
+🟢 **And the substance, now recorded properly.** Decision 33's education entry is **three systems**
+out of 46: AI providing **self-learning content from uncontrolled data sources**; AI that
+**automatically assesses, grades or ranks students**; and AI that **monitors or analyses learner
+behaviour using biometric data** such as facial recognition or eye tracking. Six sectors in all —
+education (3), ethnic and religious affairs (7), healthcare (2), banking (2), judicial proceedings
+(1), transportation (31).
+
+### 🟢 Finding 5 — LATAM has the binding, education-naming, phased regime the region is usually said to lack
+
+This is the regional finding of the pass, and it cuts against this KB's standing LATAM posture that
+the driver is a programme rather than a rule.
+
+| Market | Instrument | Status read this pass |
+|---|---|---|
+| **Peru** | Law **31814** + *reglamento* **DS 115-2025-PCM** | Reglamento published in *El Peruano* **2025-09-09**, in force **2026-01-22**. 🔴 **Sector obligations for health, education, justice, security, economy and finance activated 2026-09-10.** Staged compliance **1–4 years from September 2025** by sector and organisation size. Algorithmic-transparency mechanisms required for high-risk systems |
+| **Brazil** | **PL 2338/2023** | ⚠️ **Still not law.** Senate approved **2024-12-10**; in the Chamber of Deputies with status *"Aguardando Parecer"*, latest entry **2026-09-02**; rapporteur **Aguinaldo Ribeiro (PP-PB)** said on **2026-08-24** that the vote comes **after the October elections**. 🔴 **No AI statute is in force in LATAM's largest market** |
+| **Uruguay** | Council of Europe Framework Convention | First LATAM signatory — a commitment instrument, not a compliance deadline |
+
+🔵 **What this does to a LATAM engagement.** It gives one — exactly one — market where a compliance
+deliverable can be sold against a **date that has already bitten** rather than a programme or a
+grant cycle, and **education is named in the activated set**. ⚠️ **It does not generalise**: Brazil
+has no statute, and a pitch that treats "LATAM regulation" as a single thing will be wrong in the
+region's biggest market. 🟢 **The honest regional sentence is comparative**: Peru is ahead of
+Brazil, and in one narrow respect ahead of the EU — its education obligations are live now, while
+Annex III §3 waits until 2027-12-02.
+
+### 🟢 Finding 6 — the supply answer: a ten-repo evidence tier, absent from nineteen passes
+
+Every transition regime above discharges on an **artefact**. Grep confirmed the KB held none of the
+tooling that makes one: `mlflow`, `dvc`, `evidently`, `whylogs`, `great_expectations`, `croissant`,
+`OpenLineage`, `fairlearn`, `AIF360` — **zero occurrences across all eight files**.
+
+Ten rows, every licence read from the repository's own payload on 2026-10-06, full table in
+`repos/foundations.md`: **MLflow** (Apache-2.0, 28.3k★) as the Art. 111 instrument — a versioned
+registry is how you state that the system in service is the system that was placed in service;
+**DVC** (Apache-2.0, 15.9k★) versioning the corpus, which is the answer to Vietnam's
+"uncontrolled data sources" trigger; **Great Expectations** (Apache-2.0, 11.9k★) turning
+"the corpus is controlled" into a suite that fails a build; **Evidently** (Apache-2.0, 8.0k★) for
+the regression baseline; **AIF360** (Apache-2.0, 2.9k★) and **Fairlearn** (**MIT**, 2.3k★) over
+Annex III §3 decisions; **whylogs** (Apache-2.0, 2.8k★) emitting statistical profiles rather than
+raw student records; **OpenLineage** (Apache-2.0, 2.7k★); **NannyML** (Apache-2.0) estimating
+performance **without ground-truth labels**, which education's late-arriving outcomes require; and
+**Croissant** (Apache-2.0, 907★) as the published provenance format.
+
+🔴 **Two measured rejections:** `deepchecks/deepchecks` is **AGPL-3.0**, and `sodadata/soda-core` is
+**Elastic License 2.0** — *not* OSI-approved, a data-quality tool whose own licence is the risk it
+would be bought to manage.
+
+⚠️ **State this tier honestly.** None of it is education software; it is general-purpose MLOps that
+earns its place because the obligations found this pass are discharged by artefacts and nothing on
+this KB's shelves produced them. 🟢 **Nine of ten permissive, eight Apache-2.0 and one MIT** — the
+cleanest licence shape of any tier in this KB.
+
+### 🟢 Finding 7 — a 475-reference liveness and licence audit: the shelf is not decaying, and the probe that says otherwise is wrong 3 times in 4
+
+Every `github.com/owner/repo` reference in the six non-append-only files was extracted and probed
+for a licence payload across 7 filenames × up to 3 branch refs. **475 unique references.**
+
+| Result | Count |
+|---|---|
+| Reachable | **470** |
+| Flagged unreachable | 5 |
+| 🟢 **Genuinely gone** | **1** — `planejaia/OpenMAIC-Brasil`, confirmed 404 by two independent methods, and **already recorded by this KB as a phantom** |
+| ⚠️ False flags (repo exists) | **3** — `foradian/fedena` (4★, Ruby), `AmericasNLP/americasnlp2024` (7★), `cqm3ron/bromcom-scraper` (1★) |
+| 🔵 Extraction artefact | **1** — `search/repositories`, from prose about `api.github.com`, never a repository |
+
+🟢 **The headline is a negative result, and it is worth the run: zero newly-dead references.** After
+nineteen passes of accumulation, nothing on the shelf has rotted.
+
+🔴 **The method finding is the more useful one, and it is a warning to every later pass.** Of 4
+repository-shaped flags, **1 was real — 25% precision.** The three false flags all failed for the
+same reason: no licence payload *and* no `README.md` at the probed paths. This KB had **already**
+resolved `foradian/fedena` by a better method — *"`README.md` 404s on every branch, but
+`master/config/routes.rb` and `master/Gemfile` return 200"* — so the single-path probe is strictly
+weaker than the method already in this file. ⚠️ **Never prune a shelf row on one probe.** A cheap
+sweep is a tool for *confirming* liveness, never for declaring death.
+
+### ⚠️ Finding 8 — the licence portfolio of the whole shelf, measured for the first time: the biggest risk bucket is silence, not AGPL
+
+All 475 references, licence read from payload:
+
+| Licence class | Count | Share |
+|---|---|---|
+| **MIT** | 202 | 42.5% |
+| **Apache-2.0** | 61 | 12.8% |
+| **BSD** | 8 | 1.7% |
+| **MPL-2.0** | 5 | 1.1% |
+| 🟢 **Clearly permissive subtotal** | **276** | **58.1%** |
+| **GPL** | 41 | 8.6% |
+| **AGPL-3.0** | 19 | 4.0% |
+| 🔴 **Copyleft subtotal** | **60** | **12.6%** |
+| 🔴 **No licence payload found at probed paths** | **93** | **19.6%** |
+| Education Community Licence 2.0 (7), CC0 (4), CC-BY (2), ISC (2), national/bespoke, CC-NC (3), Elastic 2.0 (1) | ~22 | 4.6% |
+
+🔴 **The number to carry out of this table: 93.** One reference in five on this shelf has **no
+licence establishable by root-path probing** — a bucket **bigger than GPL and AGPL combined**. This
+KB's licence-failure catalogue already names three failure modes; this is the first measurement of
+how much of the corpus sits in them.
+
+⚠️ **And 93 is an upper bound, stated as one.** The probe tested 7 filenames at up to 3 refs, and
+this KB has already documented licences living outside that set — `OS4ED/openSIS-Classic` at
+`docs/License.txt`, `frappe/*` at lowercase `license.txt`. 🟢 **The actionable form of the number is
+therefore not "93 unlicensed" but "93 that must not be cited as permissive without a manual read"**
+— which is a work item with a size, and the first one this KB can price.
+
+### 🔴 Finding 9 — this KB has two trend 39s, and the nineteenth pass's central correction cites "trend 39"
+
+A citation-integrity audit of `intel/trends.md`, run because the previous pass's headline finding
+was a correction that failed to propagate.
+
+| Measurement | Value |
+|---|---|
+| Numbered trend headings | **54** |
+| Highest number used | **45** |
+| 🔴 **Duplicated numbers** | **8** — `33`, `34` (**three times**), `35`, `36`, `37`, `38`, `39`, `40` |
+| Numbers skipped by the later series | `41`, `42` (used once each earlier, then jumped 40 → 43) |
+| 🔴 **Cross-references in this KB pointing at an ambiguous number** | **27**, across `agents/trending.md` (9), `compose/patterns.md` (8), `intel/market.md` (4), `intel/trends.md` (4), `repos/trending.md` (2) |
+| 🔴 **References to `trend 39` specifically** | **13** |
+
+🔵 **Why this is the same failure as the nineteenth pass, one layer down.** That pass found a
+correction that could not reach an assertion written after it, and fixed the assertion. But its own
+finding is addressed to **"trend 39"** — and a reader who looks that up lands on *"Integration
+coverage follows the higher-education install base"* (line 1878) as readily as on *"The regulation
+stopped being forthcoming and started being in force"* (line 2404). ⚠️ **A correction whose
+dependents are named by an ambiguous key is not propagated; it is only filed.**
+
+🔴 **And the same defect is worse one file over, found by walking into it.** This pass went to add a
+pattern, read the highest number in `compose/patterns.md`, and **collided with three existing
+definitions of P28.** Measured: **46 numbered `## Pn` headings over 36 distinct numbers**, with
+**7 numbers duplicated** — `P1` ×2, `P25` ×3, `P26` ×3, `P27` ×2, **`P28` ×3**, `P29` ×2, `P30` ×2
+— and **137 cross-references** across ten files pointing at one of those seven.
+
+🟢 **This KB already owns an instrument for the adjacent defect.**
+`compose/code/pattern-citation-audit/` detects **dangling** citations — numbers cited but never
+defined — its 8 assertions pass, and run against the current tree it reports **36 patterns defined**
+plus dangling citations into the **P60s**, inherited from the pre-reset era and still live in the
+append-only files. 🔴 **It cannot see duplication, because it asks the opposite question: a number
+defined three times is defined, so it never dangles.** ⚠️ **Dangling and duplicated are two
+failures of one namespace, and an instrument for one is not an instrument for the other** — the fix
+is one assertion, that each number resolve to **exactly one** definition rather than at least one.
+
+🟢 **So this pass stopped minting numbers.** Its new pattern is named
+**`P-TRANSITION-EVIDENCE`**, not numbered: a content key cannot collide, cannot dangle, and tells a
+reader what it points at without a lookup. ⚠️ **This is a convention for new entries, not a
+migration** — the 137 existing references stay exactly as they are.
+
+🟢 **The prescription, and it is deliberately the cheap one: cite trends by title, not by number,
+and do not renumber.** Renumbering would silently invalidate **27 live cross-references** across
+five files — trading an ambiguous pointer for a confidently wrong one, which is worse. The numbers
+stay as historical labels; the title is the key. ⚠️ **And the rule for later passes: before writing
+`trend N`, grep `^## N\.` and count the hits.**
+
+### 🟢 Finding 10 — this pass ran the KB's own gates against itself, and left them cleaner than it found them
+
+🔵 **Two of this repository's own instruments were run before the commit, not after it.**
+
+| Gate | Baseline at `HEAD` | After this pass |
+|---|---|---|
+| `compose/code/p243-frontmatter-coverage` | 23/23 self-tests pass; **120 of 121** `.md` files carry complete frontmatter with `region` in the closed vocabulary (the one miss, `compose/code/p432-fromscratch-fixture-gate/README.md`, is untouched by this pass) | 🟢 unchanged — all eight KB files pass |
+| `compose/code/p239-table-integrity` (P240 region gap) | 23/23 self-tests pass; 🔴 **3 findings** | 🟢 **0 findings** |
+
+⚠️ **The gate caught this pass twice before a human would have.** Both of this pass's new regional
+tables were initially written with the region and the country **in the same cell** —
+`**APAC — Vietnam**`, `**LATAM — Peru**` — and the detector correctly refused to count them as
+region cells, because *"REGION solo si no queda residuo"*. 🟢 **That is the closed-vocabulary rule
+enforced at cell level, and it is right**: the region belongs in the field and the country in the
+prose. Both tables were restructured with a separate **Market / instrument** column.
+
+### 🔴 Finding 11 — clearing the gate surfaced the nineteenth pass's stale date a *second* time, in a second summary table
+
+The three pre-existing region gaps were fixed rather than inherited, and one of them was not really
+a region gap.
+
+🔴 **`intel/market.md` carried a three-region table whose EMEA cell read
+`**EMEA** | The **statute** (EU AI Act, in force 2 Aug 2026)`.** That is the **same stale assertion
+the nineteenth pass corrected** in trend 39 and in the seventeenth-pass EMEA paragraph — surviving in
+a third location that pass did not reach. ⚠️ **It is now corrected in place**: Article 50
+transparency duties are in force from **2026-08-02**; the **Annex III** high-risk set where education
+lives was deferred to **2027-12-02** by Reg. (EU) 2026/1744.
+
+🔵 **This is the propagation failure of the nineteenth pass, reproduced exactly, one pass later, and
+it was found by a structural gate rather than by reading.** The gate was not looking for a stale
+date — it was looking for a missing LATAM row — and the stale date was in the cell next to it.
+🟢 **The lesson is cheap and general: run the structural linters on the files you are editing, because
+a table that is wrong about its regions is a table nobody has re-read, and a table nobody has
+re-read is where the stale date still lives.**
+
+🟢 **The two other gaps were closed with content rather than with a renumbering.** `intel/trends.md`
+trend 44 ("Who publishes the state's education code") gained a **North America** row — marked
+explicitly as a **partial read**, because this KB's evidence there is the Ed-Fi Alliance estate and
+vendor integration repos rather than a dedicated state-estate sweep, and saying so is the difference
+between a measured row and a padded one. `compose/patterns.md` gained a **North America** row in the
+accessibility porting table, which had omitted **its own base case** — the DOJ ADA Title II rule
+whose deadlines moved to **2027-04-26 / 2028-04-26**.
+
+### The mandatory queries, run with the year **computed** (2026), not hardcoded
+
+| Query | Result |
+|---|---|
+| `top open source AI agents education {year} github MIT` | ⚠️ **thin for education** — returned general agent frameworks (OpenClaw ~362k★, OpenHands, CrewAI) and the two enablement courses already on this shelf. **No education-specific agent new to this KB.** |
+| `github trending education AI {year}` | ⚠️ **off-target** — returned AI-engineering *curricula* (`LLMs-from-scratch`, `ai-engineering-from-scratch` 63k★) rather than education-sector software. Recorded because the mismatch is stable across passes: "education" in a trending feed means *learning to build AI*, not *AI for schools*. |
+| `open source platform {industry} ERP CRM MIT Apache` | 🟢 **pass, nothing new** — OLAT/OpenOLAT, Open edX, OpenEduCat, Sakai, `.LRN`, Chamilo, Gibbon, Fedena, Frappe all already on the shelf. **The platform channel is saturated**; verified by grep, not assumed. |
+| `AI {industry} industry trends {year}` | 🟢 **pass** — market $7.52B (2025) → **$10.6B (2026)** at 40.9% CAGR, → $42.48B by 2030; "experimentation to governance"; purpose-built beats generic; **teacher-first adoption**. Consistent with trends 1, 2 and 14. |
+| `AI education North America {year} adoption regulation players` | 🟢 **pass** — 36% of global market, **$3.68B in 2026** → $32B by 2030; **134 bills in 31 states**; 60% of US K-12 teachers used AI tools in 2024-25, 32% weekly; **H.R. 8747** advanced at a 21 July markup. ⚠️ **No transition article to find — the pass's North America result is a declared gap, not a finding.** |
+| `AI education EMEA {year} adoption regulation players` | 🟢 **pass** — Europe **$2.64B (2026)**, 31.9% CAGR → $8.0B by 2030; MEA **$0.56B (2026)**, 34.3% CAGR; Finland, Estonia, Netherlands leading K-12 integration; **China and the UAE the only two countries running compulsory national AI curricula since 2025-26**. 🔴 **The search summaries still assert "the AI Act's general application date was 2 August 2026"** — the stale claim the nineteenth pass corrected in this KB. The correction holds; the open web has not caught up. |
+| `AI education APAC {year} adoption regulation players` | 🟢 **pass, and it produced findings 2 and 4** — Korea's high-impact duties and grace period; **Vietnam's 2027-09-01 education date**; every major APAC economy building a sovereign model (Sarvam, ILMU, Sahabat AI, SEA-LION, HyperCLOVA X, Sarashina, TAIDE — all already recorded). |
+| `AI education LATAM {year} adoption regulation players` | 🟢 **pass, and it produced finding 5** — Peru's activated sector obligations and Brazil's stalled bill; UNESCO/IESALC **87% of institutions using AI in at least one area, 26% with a formal strategy**; **79% of LATAM faculty** using AI in teaching, 88% at minimal-to-moderate engagement. |
+
+🔵 **Two of the eight mandatory queries returned nothing usable, and that is written down rather
+than left as silence** — the education-agent query and the GitHub-trending query. An informed gap
+is information; an unreported empty query looks exactly like coverage.
+
+### Sources named by the search summaries this pass relied on
+
+EU AI Act Art. 111 and the Omnibus: the Commission's AI Act Service Desk page for Article 111,
+`artificialintelligenceact.eu/article/111`, `ai-act-law.eu`, `regulation-ai.eu`, Cooley and Gibson
+Dunn client notes, `euaiact.com/implementation-timeline`. Vietnam: Tilleke & Gibbins, VILAF, Viet An
+Law and VCI Legal on Decree 142/2026/ND-CP; Allen & Gledhill, Vietnam Briefing and Indochine Counsel
+on Decision 33/2026/QĐ-TTg; `english.luatvietnam.vn` and `thuvienphapluat.vn` for the instrument
+texts. Korea: Library of Congress Global Legal Monitor, Baker Botts, CODIT, Stimson Center, IAPP.
+Peru: *El Peruano*, EY Perú, Cuatrecasas, Caro & Asociados on DS 115-2025-PCM. Brazil: DIAP,
+Demarest, Câmara dos Deputados tracking of PL 2338/2023. Regional market and adoption figures:
+UNESCO IESALC, Digital Education Council, MultiState, NASBE, ExcelinEd, Ken Research, EdTech Hub.
+⚠️ **Every one of these reached this pass as a search-result summary. None was fetched.**
+
+---
+
+
 ## 2026-10-06 — nineteenth pass: the deadline moved and the duty did not, and this KB's own correction never reached the trend that quotes it
 
 **Channel new to this KB this pass: the regulatory-citation channel** — sweeping for

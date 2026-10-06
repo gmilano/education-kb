@@ -3072,6 +3072,141 @@ cannot staff this alone.
 
 | Region | What changes | What does not |
 |---|---|---|
+| **North America** | 🟢 **Nothing — this is the base case the pattern is written from.** The trigger is the DOJ rule under **ADA Title II**, whose deadlines the **2026-04-20 interim final rule** extended by a year to **2027-04-26** (public entities serving ≥50,000) and **2028-04-26** (below that, and special districts); the standard remains **WCAG 2.1 Level AA**, unchanged. 🔵 **Row added in the twentieth pass** because a porting table that omits its own origin reads, from outside, like a region that was never measured | Everything below |
 | **EMEA** | The trigger becomes the **European Accessibility Act** (in force **2025-06-28**) and the standard becomes **EN 301 549**. ⚠️ **As of 2026-07-20 no EN 301 549 version had been cited in the Official Journal under the EAA** (v4.1.0 of Nov 2025 still in Public Enquiry and Vote to Aug 2026), **so there is no presumption of conformity to lean on** — which makes the per-criterion evidence ledger *more* valuable, not less. 🔴 **No permissive tool maps findings to EN 301 549 clauses**; the mapping is a studio artefact, and it is reusable IP | The toolchain. EN 301 549 is substantially WCAG 2.1 AA for web content |
 | **APAC** | The trigger is a standing mandate, not a deadline: **India** RPwD Act 2016 + **GIGW 3.0** (WCAG 2.1 AA, government portals including education); **Japan** **JIS X 8341-3:2016** ≈ WCAG 2.0 AA, mandatory for government; **Australia** AHRC guidance (April 2025) affirming **WCAG 2.2 AA** under the 1992 DDA, plus the DTA Digital Experience Policy. ⚠️ **Three countries, three WCAG versions — the ledger must be configurable by target version** | Everything else |
 | **LATAM** | 🔴 **There is no accessibility deadline to sell against.** The demand driver is a programme — UNICEF's **Accessible Digital Textbooks** — and the economics are the pitch: a conventional accessible textbook takes **6–9 months and up to USD 50,000 per title**, Paraguay has embedded ADTs in national inclusive-education policy, **Uruguay produced the world's first AI-led ADT prototype in 2025**, and Brazil's **PNLD** reaches **40M+ students**. 🟢 **Here the deliverable is the production line itself**, benchmarked against that 6–9-month baseline | The document pipeline (steps 5–6), which *is* the ADT production problem |
+
+---
+
+## P-TRANSITION-EVIDENCE — The transition-evidence mandate (bank the extension instead of spending it)
+
+> ⚠️ **This pattern deliberately carries a name instead of a number.** `compose/patterns.md`
+> already defines **P28 three times** (lines 1790, 2205, 2777), and this file's own audit
+> (`compose/code/pattern-citation-audit/`) reports **36 patterns defined** against citations
+> running into the **P60s** inherited from the pre-reset era. Taking another number would add a
+> fourth P28 or a second dangling P37. 🟢 **Cite this pattern as `P-TRANSITION-EVIDENCE`** — the
+> prescription of trend 47 ("A knowledge base that corrects itself needs unambiguous pointers"),
+> applied to itself rather than only recommended.
+
+**Twentieth pass of 2026-10-06.** Follows from trend **46** ("The date that governs a client's
+system is in the transition article…"). Every transition regime this KB found discharges on an
+**artefact**, not on a date — and in the EU the extension survives only while *"the design remains
+unchanged"*. P28 is the engagement that produces the artefact **without** triggering the change.
+
+🔵 **It is the first pattern in this KB whose selling point is what it does not touch.** Every other
+pattern here adds a capability to a client's estate. P28 wraps a frozen high-risk core in evidence,
+so the client keeps an extension worth up to **2030-08-02** (EU public authority) or **2027-09-01**
+(Vietnam, education) instead of forfeiting it on the day a tutor ships.
+
+**Sell it when:** the client operates an AI system that is **already in service** and falls in a
+high-risk category — admissions or placement scoring, automated assessment or grading, proctoring or
+behaviour monitoring — and asks what the AI Act, Vietnam's Decision 33 or Peru's reglamento means for
+it. ⚠️ **Sell it *before* P1, P3, P11 or P13 on the same system**, because those modify it. P28 is
+the phase that establishes the baseline the later phases will be measured against — and if the
+client decides not to modify, it is the whole engagement.
+
+### Components
+
+All licences read from the repository's own payload on 2026-10-06; full rows in
+`repos/foundations.md`.
+
+| Role | Component | Licence (payload-verified) | Why this one |
+|---|---|---|---|
+| **System-identity record** | [`mlflow/mlflow`](https://github.com/mlflow/mlflow) | **Apache-2.0** (`LICENSE.txt`) | 28.3k★. **The Art. 111 instrument.** Register the deployed model and its config as a versioned, dated entry. The extension's condition is *"design unchanged"* — this is what makes that a statement with evidence behind it rather than an assurance. |
+| **Corpus identity** | [`iterative/dvc`](https://github.com/iterative/dvc) | **Apache-2.0** (`LICENSE`) | 15.9k★. Hashes the training and retrieval corpus in Git. Vietnam's Decision 33 education category 1 turns on *"uncontrolled data sources"*; a hash is the only non-rhetorical answer to it. |
+| **Corpus control gate** | [`great-expectations/great_expectations`](https://github.com/great-expectations/great_expectations) | **Apache-2.0** (`LICENSE`) | 11.9k★. Expectation suites over the corpus, run in CI. Turns "the sources are controlled" into a build that fails when they are not. |
+| **Behaviour baseline** | [`evidentlyai/evidently`](https://github.com/evidentlyai/evidently) | **Apache-2.0** (`LICENSE`) | 8.0k★. ML **and LLM** observability. Captures how the frozen system behaves *now*, which is what any later modification gets compared against. |
+| **Label-free performance watch** | [`NannyML/nannyml`](https://github.com/NannyML/nannyml) | **Apache-2.0** (`LICENSE`) | Estimates performance **without ground truth**. Education's outcome labels arrive a term or a year late; a monitoring plan that waits for them is not a monitoring plan. |
+| **Privacy-shaped telemetry** | [`whylabs/whylogs`](https://github.com/whylabs/whylogs) | **Apache-2.0** (`LICENSE`) | 2.8k★. Emits **statistical profiles, not raw records** — the only shape that survives California **AB 1159** (student data may not be used to train models) and the EU data-minimisation posture. |
+| **Fairness evidence over the decision** | [`fairlearn/fairlearn`](https://github.com/fairlearn/fairlearn) **or** [`Trusted-AI/AIF360`](https://github.com/Trusted-AI/AIF360) | ✅ **MIT** / **Apache-2.0** | 2.3k★ / 2.9k★. Annex III §3 is admissions, assessment, placement and test monitoring — decisions **about people**. Pick Fairlearn when the client wants MIT and a smaller surface; AIF360 when they want the metric catalogue and mitigation algorithms. |
+| **Lineage as a standard** | [`OpenLineage/OpenLineage`](https://github.com/OpenLineage/OpenLineage) | **Apache-2.0** (`LICENSE`) | 2.7k★. So the evidence outlives your pipeline choice and a successor supplier can read it. |
+| **Published provenance format** | [`mlcommons/croissant`](https://github.com/mlcommons/croissant) | **Apache-2.0** (`LICENSE.md`) | 907★. Dataset provenance in a format a ministry or an auditor can read without your toolchain. |
+| **Accessibility queue (non-modifying)** | [`tomaszboloz/WCAG-Accessibility-Skills`](https://github.com/tomaszboloz/WCAG-Accessibility-Skills) + the engine tier from the nineteenth pass | **MIT** | Remediating the *presentation* estate is billable work that does **not** change the high-risk system's design. The nineteenth pass established there is **no cited standard under the EAA**, so the deliverable is per-criterion evidence — which is what this produces and the big engines do not. |
+| 🔴 **Excluded** | [`deepchecks/deepchecks`](https://github.com/deepchecks/deepchecks) (**AGPL-3.0**) · [`sodadata/soda-core`](https://github.com/sodadata/soda-core) (**Elastic License 2.0**, non-OSI) | — | Named so a later pass does not rediscover them as options. |
+
+### Wiring
+
+```
+  ┌───────────────────────────────────────────────────────────────┐
+  │  CLIENT'S HIGH-RISK SYSTEM — FROZEN. NOT TOUCHED BY P28.      │
+  │  admissions scoring · auto-grading · proctoring · placement   │
+  └───────────┬───────────────────────────────┬───────────────────┘
+              │ read-only telemetry           │ read-only config/model read
+              ▼                               ▼
+      whylogs (profiles,            MLflow registry entry
+      not raw records)              = "this is the system,
+              │                       as of this date"
+              ▼                               │
+      Evidently  ──────┐                      │
+      NannyML    ──────┤                      │
+      Fairlearn/AIF360 ┤                      │
+                       ▼                      ▼
+              ┌──────────────────────────────────────┐
+              │  EVIDENCE PACK (the deliverable)     │
+              │  · design-stability attestation      │
+              │  · corpus manifest (DVC + Croissant) │
+              │  · GX suite results                  │
+              │  · behaviour + fairness baseline     │
+              │  · OpenLineage event log             │
+              │  · per-criterion WCAG queue          │
+              └──────────────────────────────────────┘
+                       │
+                       ▼
+        filed where the regime wants it:
+        EU → the client's technical documentation
+        Vietnam → the one-stop portal transition plan
+        Peru → the algorithmic-transparency mechanism
+```
+
+⚠️ **The arrows are deliberately one-way.** The moment a component writes back into the high-risk
+system — a retrained model, a changed threshold, a new retrieval source — the pattern has become a
+modification and the extension is gone. **Enforce it in the architecture, not in the statement of
+work:** read-only credentials on the model and corpus stores, and a separate repository for the
+evidence pipeline.
+
+### Deliverables
+
+1. **The design-stability attestation** — a dated, versioned record of the system as it stands, with
+   the registry entry and corpus hashes behind it. ⚠️ Written so that a *later* change is detectable
+   by comparison, which is the only form that is worth anything.
+2. **The corpus manifest** — DVC hashes plus a Croissant description, naming every source and
+   whether it is controlled.
+3. **The behaviour and fairness baseline** — Evidently reports, NannyML estimates and a **stated
+   choice of fairness metric with the reasoning for it**.
+4. **The filing** — Vietnam's portal notice and transition plan; the EU technical documentation
+   section; Peru's algorithmic-transparency mechanism. 🔵 **Jurisdiction decides the artefact's
+   form, not its content.**
+5. **The accessibility remediation queue** — per-criterion, with engine, version and who judged what.
+6. **The modification register** — the running list of changes the client *wants*, each annotated
+   with whether it forfeits the extension. 🟢 **This is the document that sells the next phase**, and
+   it is honest: it tells the client what their roadmap costs in compliance terms before they commit.
+
+### ⚠️ Three warnings that are the point of this pattern
+
+🔴 **One. P28 does not make the client compliant, and must never be sold as if it did.** It preserves
+an extension and builds the evidence a conformity assessment will need. The assessment itself is
+P13's scope. A proposal that blurs the two is the kind of over-claim a regulator reads closely.
+
+🔴 **Two. Check whether the client is a public authority before pricing this.** The EU's
+**2030-08-02** date attaches to high-risk AI **intended to be used by public authorities** — a state
+university or a ministry gets it; a private tutoring company does not, and for them the governing
+date is **2027-12-02** with only the design-stability route available. ⚠️ **The same engagement is
+worth four years to one buyer and two months to another.**
+
+🔴 **Three. Two deadlines in this pattern have already passed.** Vietnam's Decree 142 filing was due
+**before 2026-06-30**, and Peru's education-sector obligations activated **2026-09-10**. 🟢 **For a
+client in either market the first task is not a plan, it is establishing what was missed** — and
+saying so in week one is the difference between a remediation engagement and a discovered failure.
+⚠️ **And the dates themselves came to this KB through search summaries, not primary texts** (the
+legal sources are `EGRESS_BLOCKED` from this environment) — **re-read the instrument before quoting
+any of them to a client.**
+
+### How P28 changes by region
+
+| Region | What changes | What does not |
+|---|---|---|
+| **EMEA** | The prize is the **2030-08-02** public-authority date, and most education buyers qualify. The filing is technical documentation under the AI Act. ⚠️ **No harmonised standard has been cited under the EAA**, so the accessibility half cannot be discharged by naming a standard — it must be per-criterion evidence | The design-stability condition, which is the whole mechanism |
+| **APAC** | **Vietnam**: the prize is **2027-09-01** (education's 18-month extension), the filing is the one-stop portal transition plan, and Decision **33/2026/QĐ-TTg** names the three education categories — uncontrolled-source self-learning content, automated assessment/grading/ranking, and **biometric** behaviour monitoring. **Korea**: fines are deferred to ~**2027-07-21**, but 🔴 **generated-content labelling has no grace at all**, so the labelling limb ships immediately | The artefact set |
+| **LATAM** | **Peru** is the one market with a live, education-naming obligation — **activated 2026-09-10**, staged **1–4 years from September 2025** by sector and size, requiring algorithmic-transparency mechanisms for high-risk systems. 🔴 **Brazil has no AI statute in force** (PL 2338/2023 still in the Chamber, vote deferred past the October elections), so there the pitch is readiness, not compliance | The evidence pack, which is cheap to re-file once a statute lands |
+| **North America** | ⚠️ **There is no transition article, because there is no binding federal high-risk statute.** P28 sells against the **procurement rubric** (see P24) and against **state** duties that attach at enactment — California **AB 1159** on student data, Oklahoma and Maryland on human oversight. The one real date is the DOJ ADA Title II IFR: **2027-04-26** for entities serving ≥50,000, **2028-04-26** below that | The accessibility queue, which is the North American half of this engagement |

@@ -8,6 +8,141 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — twentieth pass: the evidence tier, and a 475-reference audit that found nothing dead
+
+**Channel new to this KB this pass: the transition-provision channel** — reading each binding
+instrument's **transitional article** rather than its entry-into-force date. The regulatory findings
+are in `agents/trending.md`; this file records what the channel did to the **supply** picture, plus
+two audits of the shelf itself.
+
+### Why a regulatory channel produced a repository shelf
+
+Every transition regime found this pass discharges on an **artefact**, not on a date: the EU's
+Art. 111 extension survives only while *"the design remains unchanged"*; Vietnam's requires a
+**transition plan filed on the one-stop portal**; Vietnam's Decision 33 education category 1 turns
+on whether self-learning content comes from *"uncontrolled data sources"*; and the nineteenth pass
+established that in EMEA **no harmonised standard has been cited under the EAA**, so evidence is the
+only available route to conformity.
+
+🔴 **Grep over all eight files found none of the tooling that produces such artefacts** —
+`mlflow`, `dvc`, `evidently`, `whylogs`, `great_expectations`, `croissant`, `OpenLineage`,
+`fairlearn`, `AIF360`: **zero occurrences.** Nineteen passes held the obligations and the pedagogy
+and nothing in between.
+
+### The evidence tier — ten rows, licences read from payload 2026-10-06
+
+Full table with descriptions in `repos/foundations.md`. Stars via `WebFetch` on the repository page
+(`github.com` is **403 to `curl`** through this environment's proxy; `raw.githubusercontent.com` is
+not, which is why licences are payload-read and stars are page-read).
+
+| Repo | Licence (payload path) | ★ / forks | Role in a transition-evidence delivery |
+|---|---|---|---|
+| [mlflow/mlflow](https://github.com/mlflow/mlflow) | **Apache-2.0** (`LICENSE.txt`) | 28.3k / 6.4k | **The Art. 111 instrument** — versioned registry proving the system in service is the system placed in service |
+| [iterative/dvc](https://github.com/iterative/dvc) | **Apache-2.0** (`LICENSE`) | 15.9k / 1.3k | Corpus versioning — the answer to *"uncontrolled data sources"* is a hash |
+| [great-expectations/great_expectations](https://github.com/great-expectations/great_expectations) | **Apache-2.0** (`LICENSE`) | 11.9k / 1.9k | Declarative data validation — makes corpus control a failing build, not a claim |
+| [evidentlyai/evidently](https://github.com/evidentlyai/evidently) | **Apache-2.0** (`LICENSE`) | 8.0k / 946 | ML **and LLM** observability — the regression baseline a remediation contract ships |
+| [Trusted-AI/AIF360](https://github.com/Trusted-AI/AIF360) | **Apache-2.0** (`LICENSE`) | 2.9k / 912 | Fairness metrics + mitigation over Annex III §3 decisions |
+| [whylabs/whylogs](https://github.com/whylabs/whylogs) | **Apache-2.0** (`LICENSE`) | 2.8k / 145 | Statistical **profiles instead of raw records** — survives a student-data rule (California AB 1159) |
+| [OpenLineage/OpenLineage](https://github.com/OpenLineage/OpenLineage) | **Apache-2.0** (`LICENSE`) | 2.7k / 540 | Lineage as an **open standard**, so evidence outlives the pipeline choice |
+| [fairlearn/fairlearn](https://github.com/fairlearn/fairlearn) | ✅ **MIT** (`LICENSE`) | 2.3k / 522 | The MIT option — no notice obligation at all |
+| [NannyML/nannyml](https://github.com/NannyML/nannyml) | **Apache-2.0** (`LICENSE`) | ★ not read this pass | Performance estimation **without ground-truth labels** — education's outcomes arrive a term late |
+| [mlcommons/croissant](https://github.com/mlcommons/croissant) | **Apache-2.0** (`LICENSE.md`) | 907 / 125 | Published dataset-provenance format a ministry can read |
+
+🔴 **Two measured rejections:** [`deepchecks/deepchecks`](https://github.com/deepchecks/deepchecks)
+is **AGPL-3.0** (`LICENSE`), and [`sodadata/soda-core`](https://github.com/sodadata/soda-core) is
+**Elastic License 2.0** — payload opens *"Elastic License 2.0 … Acceptance: By using the software,
+you agree to…"*, **not OSI-approved**. A data-quality tool whose own licence is the risk it would be
+bought to manage.
+
+⚠️ **Nine of ten permissive, eight Apache-2.0 and one MIT — the cleanest licence shape of any tier
+in this KB — and not one of them is education software.** It is general-purpose MLOps, and it
+belongs here only because the obligations need artefacts and nothing on these shelves made them.
+Sell it as plumbing under a billable education rubric, as P27 treats `inspect_ai`.
+
+### Audit 1 — liveness: 475 references, zero newly dead
+
+Every `github.com/owner/repo` reference in the six non-append-only files, extracted and probed for a
+licence payload across 7 filenames × up to 3 branch refs.
+
+| Result | Count |
+|---|---|
+| Reachable | **470** |
+| 🟢 Genuinely gone | **1** — `planejaia/OpenMAIC-Brasil`, 404 confirmed twice, **already recorded here as a phantom** |
+| ⚠️ False flags — the repo exists | **3** — `foradian/fedena` (4★), `AmericasNLP/americasnlp2024` (7★), `cqm3ron/bromcom-scraper` (1★) |
+| 🔵 Extraction artefact, never a repo | **1** — `search/repositories`, from prose about `api.github.com` |
+
+🟢 **Nothing on the shelf has rotted after nineteen passes of accumulation.**
+
+🔴 **The method finding matters more than the negative result. Of 4 repository-shaped flags, 1 was
+real — 25% precision.** All three false flags failed identically: no licence payload *and* no
+`README.md` at the probed paths. This KB had already resolved `foradian/fedena` by a better method —
+*"`README.md` 404s on every branch, but `master/config/routes.rb` and `master/Gemfile` return
+200"* — so the cheap probe is **strictly weaker than the method already recorded in
+`verticals/solutions.md`.** ⚠️ **Never prune a shelf row on one probe.** A cheap sweep confirms
+liveness; it must never declare death.
+
+### Audit 2 — the licence portfolio of the entire shelf, measured for the first time
+
+| Licence class | Count | Share of 475 |
+|---|---|---|
+| **MIT** | 202 | 42.5% |
+| **Apache-2.0** | 61 | 12.8% |
+| **BSD** | 8 | 1.7% |
+| **MPL-2.0** | 5 | 1.1% |
+| 🟢 **Clearly permissive** | **276** | **58.1%** |
+| **GPL** | 41 | 8.6% |
+| **AGPL-3.0** | 19 | 4.0% |
+| 🔴 **Copyleft** | **60** | **12.6%** |
+| 🔴 **No licence payload at probed paths** | **93** | **19.6%** |
+| ECL-2.0 (7), CC0 (4), CC-BY (2), ISC (2), CC-NC (3), Elastic-2.0 (1), national/bespoke | ~22 | 4.6% |
+
+🔴 **The number to carry: 93 — one reference in five, a bucket bigger than GPL and AGPL combined.**
+This KB's licence-failure catalogue names three failure modes; this is the first measurement of how
+much of the corpus sits in them.
+
+⚠️ **It is an upper bound and is written as one.** The probe tested 7 filenames at up to 3 refs, and
+licences have already been found outside that set here — `OS4ED/openSIS-Classic` at
+`docs/License.txt`, `frappe/*` at lowercase `license.txt`. 🟢 **So the actionable statement is not
+"93 unlicensed" but "93 that may not be cited as permissive without a manual read"** — a work item
+with a size, which is the first time this KB can price its own licence debt.
+
+### Audit 3 — the pattern namespace, found by walking into it
+
+This pass went to add a pattern, read the highest number in `compose/patterns.md`, and **collided
+with three existing definitions of P28.**
+
+| Measurement | Value |
+|---|---|
+| Numbered `## Pn` headings | **46** |
+| Distinct numbers | **36** |
+| 🔴 Duplicated | **7** numbers — `P1` ×2, `P25` ×3, `P26` ×3, `P27` ×2, **`P28` ×3**, `P29` ×2, `P30` ×2 |
+| 🔴 Cross-references at an ambiguous number | **137**, ten files |
+| `intel/trends.md`, same disease | **54** headings, highest 45, **8** duplicated numbers, **27** ambiguous cross-references, **13** at `trend 39` alone |
+
+🟢 **The KB's own `compose/code/pattern-citation-audit/` passes its 8 assertions and reports 36
+patterns defined plus dangling citations into the P60s** (inherited from the pre-reset era). 🔴 **It
+cannot detect duplication — a number defined three times never dangles.** One assertion closes it:
+each number must resolve to **exactly one** definition.
+
+🟢 **This pass therefore stopped minting numbers**: the new pattern is **`P-TRANSITION-EVIDENCE`**.
+⚠️ **A convention for new entries, not a migration** — renumbering 137 references would trade an
+ambiguous pointer for a confidently wrong one. Full reasoning in `intel/trends.md` trend 47.
+
+### The mandatory repository queries, year **computed** (2026)
+
+| Query | Result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | ⚠️ **thin** — general frameworks (OpenClaw ~362k★, OpenHands, CrewAI) and the two courses already shelved. **No new education-specific agent.** |
+| `github trending education AI 2026` | ⚠️ **off-target, and stably so** — returns AI-engineering curricula (`LLMs-from-scratch`, `ai-engineering-from-scratch` 63k★). In a trending feed "education" means *learning to build AI*, not *AI for schools*. |
+| `open source platform education SIS/LMS MIT Apache` | 🟢 **saturated, verified by grep** — OLAT/OpenOLAT, Open edX, OpenEduCat, Sakai, `.LRN`, Chamilo, Gibbon, Fedena, Frappe: **all already present.** |
+
+🔵 **Two of three repository queries returned nothing new, and that is recorded rather than padded.**
+The additions this pass came from the regulatory channel, not from a repository search — which is
+the point of rotating channels.
+
+---
+
+
 ## 2026-10-06 — nineteenth pass: the standard named in the rule is a proper noun, and it returns six engines this KB never had
 
 ### The mandatory queries, run with the year **computed** (2026), not hardcoded

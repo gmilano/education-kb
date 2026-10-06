@@ -653,6 +653,32 @@ while the EU classifies the same systems as high-risk. That asymmetry is why the
 procurement rubric, not the regulator, remains the specification in this region (trend 26),
 and why an artefact pack that clears the EU clears a US district by construction.
 
+
+#### Twentieth pass of 2026-10-06 — the transition-provision channel: North America is this pass's declared gap
+
+⚠️ **There is no transition article to read in this region, because there is no binding federal
+high-risk AI statute to carry one.** That is the finding, and it is written down rather than left as
+an empty section: the channel that produced dated extensions in EMEA, APAC and LATAM returned
+**nothing** here.
+
+🔵 **What exists instead, re-read this pass.** The region holds **36% of the global AI-in-education
+market, $3.68B in 2026**, rising toward **$32B by 2030**. **134 bills across 31 states** in the 2026
+session; **60% of US K-12 teachers** used AI tools in 2024-25 and **32% weekly**; the **K-12 AI
+Literacy and Readiness Act of 2026 (H.R. 8747)** advanced at a **21 July** markup; **30+ states**
+have AI guidance and the 2026 movement is its evolution rather than its creation.
+
+🔴 **State duties attach at enactment, with no transition regime** — California **AB 1159** (student
+data may not be used to train models), Idaho **SB 1227** (data-privacy protections for AI tools in
+schools), Oklahoma and Maryland (human oversight, no high-stakes automated decisions about students).
+**There is nothing to grandfather into.**
+
+🟢 **The one real date in the region is the one already recorded: the DOJ ADA Title II interim final
+rule — 2027-04-26** for public entities serving ≥50,000 and **2028-04-26** below that. 🔵 **So North
+America's version of `P-TRANSITION-EVIDENCE` is the accessibility half plus the procurement-rubric
+artefact pack (P24)**, not a conformity extension — and the evidence tier in
+`repos/foundations.md` is what both consume. ⚠️ **Do not pitch a "transition plan" here.** The buyer
+has no extension to protect; what they have is a rubric to score against and a remediation backlog
+with a date.
 ### EMEA
 
 - **The EU AI Act is the whole conversation.** AI used in education access and
@@ -1234,6 +1260,39 @@ scientists and developers. That is enablement scope (P6) sold to three audiences
 which is the client's own legal function and is also the audience for the governance
 artefacts above.
 
+
+#### Twentieth pass of 2026-10-06 — the transition-provision channel: the public-authority date is 2030, and most education buyers qualify
+
+🟢 **The opportunity this channel found is four years long and this KB had never recorded it.**
+Article 111 of the AI Act: a high-risk system lawfully placed on the market before the high-risk
+rules apply may continue **without retrofit or additional certification, provided its design remains
+unchanged**; and **providers and deployers of high-risk AI intended to be used by public authorities
+must comply by 2 August 2030.** AI inside **Annex X** large-scale IT systems placed before
+**2027-08-02** has until **2030-12-31**.
+
+🔵 **Why this is a European education finding specifically.** Annex III §3 covers admissions and
+access, evaluation of learning outcomes, level placement and monitoring for prohibited behaviour
+during tests — and in EMEA the operators of those systems are predominantly **ministries, regional
+authorities and state universities**, which is to say **public authorities**. ⚠️ **The same
+engagement is worth four years to a state university and until 2027-12-02 to a private tutoring
+company** — so the buyer's legal form, not its size or sector, sets the value of the work.
+
+🔴 **And the condition is what makes it sellable rather than reassuring: the extension dies on a
+change in design.** A tutor bolted onto a legacy LMS, an agent wired into an SIS, a model replacing
+a rules-based placement engine — each ends it. 🟢 **The offer is therefore
+`P-TRANSITION-EVIDENCE`: a non-modifying mandate that banks the extension** — design-stability
+attestation, corpus manifest, behaviour and fairness baseline, accessibility queue — **followed by a
+priced modification register** that tells the ministry what each item on its roadmap costs in
+conformity terms before it commits.
+
+⚠️ **Pair it with the gap the nineteenth pass established and do not let it get lost: as of
+2026-07-20 no version of EN 301 549 had been cited in the Official Journal under the European
+Accessibility Act.** The EAA has been in force since **2025-06-28**, so in EMEA **the obligation is
+live and the safe harbour is not** — conformance cannot be discharged by naming a standard, which is
+precisely why the deliverable in this region is evidence. 🔵 **Market frame: Europe $2.64B in 2026 at
+31.9% CAGR toward $8.0B by 2030; MEA $0.56B at 34.3%**, with Finland, Estonia and the Netherlands
+leading K-12 integration and the **UAE** one of only two countries worldwide running a compulsory
+national AI curriculum since 2025-26.
 ### APAC
 
 - **Largest absolute AI market: ~USD 102B as of March 2026** (all sectors, not
@@ -1697,10 +1756,18 @@ can be contributed into a government-recognised harness** rather than built alon
 | Region | Where the specification lives | What the deliverable is |
 |---|---|---|
 | **North America** | The **procurement rubric** (trend 26) | Evidence that scores well against it — Ed-Fi, OneRoster, xAPI conformance. |
-| **EMEA** | The **statute** (EU AI Act, in force 2 Aug 2026) | A conformity file for a high-risk system. |
+| **EMEA** | The **statute** — EU AI Act. 🔵 **Corrected in the twentieth pass:** Article 50 **transparency** duties are in force from **2026-08-02**, but the **Annex III high-risk** set where education lives was deferred to **2027-12-02** by Reg. (EU) 2026/1744. ⚠️ **The cell previously read *"in force 2 Aug 2026"*, which over-claims the high-risk duty** | A conformity file for a high-risk system — due 2027-12-02, or **2030-08-02** where the deployer is a public authority (Art. 111, trend 46). |
 | **APAC** | The **regulator's own open-source harness** | A test plugin inside that harness — permissive, contributable, and citable as the regulator's instrument rather than the vendor's claim. |
+| **LATAM** | 🟢 **The *reglamento*, in one market only** — Peru's **DS 115-2025-PCM** under law **31814**, whose education-sector obligations **activated 2026-09-10**, requiring algorithmic-transparency mechanisms for high-risk systems. 🔴 **Brazil has no AI statute in force** (PL 2338/2023 still in the Chamber) | An algorithmic-transparency mechanism plus the evidence behind it — and in every other LATAM market, the same pack sold as **readiness**, not compliance (twentieth pass). |
 
-That third shape is the most defensible of the three, and it is available only here.
+That third shape is the most defensible of the four, and it is available only in APAC.
+
+🔵 **Why this table gained a LATAM row in the twentieth pass, and why it needed a correction at the
+same time.** It had published **three of four regions** — which, read from outside, is
+indistinguishable from having measured four and found three. 🔴 **And the EMEA cell carried the exact
+stale date the nineteenth pass corrected elsewhere in this file**, which is the propagation failure
+that pass named, found a second time in a second summary table. ⚠️ **A summary table is where a stale
+date does the most damage, because it is the cell a proposal quotes.**
 ⚠️ **With one caveat already visible in the table:** `LLM-Evals-Catalogue` sits in the same
 government foundation's organisation and carries **no licence at all**. Organisation-level
 licence inference is unsafe even inside a regulator's foundation — read each payload.
@@ -1813,6 +1880,42 @@ remain thinner than the enterprise ones, so **the compliance instrument in this 
 still the client's own governance committee** rather than a regulator — which is why the
 artefact, not the certificate, is what closes the deal.
 
+
+#### Twentieth pass of 2026-10-06 — the transition-provision channel: Vietnam gives education 2027-09-01, and Korea splits its own deadline
+
+🟢 **Vietnam's education date is eighteen months later than the one this KB's summary tables
+carried.** The law (**134/2025/QH15**) is in force from **2026-03-01**, but the transition regime
+gives **existing systems until 2027-03-01**, and **health, education and finance until
+2027-09-01**.
+
+🔵 **The instrument set, now recorded properly** — and this corrects a terminology error in
+`agents/top.md`, which calls it "Decree 33":
+
+| Instrument | What it is | Dates |
+|---|---|---|
+| **Decision 33/2026/QĐ-TTg** | a *Quyết định* of the **Prime Minister** carrying the list of **46 high-risk AI systems across six sectors** | issued **2026-06-30**, effective **2026-08-15** |
+| **Decree 142/2026/ND-CP** | a *Nghị định* of the **Government**: one-stop portal, national AI database, three-tier classification and conformity assessment, labelling and watermarking, three-level sandbox — 8 chapters, 46 articles | issued **2026-04-30**, effective **2026-05-01** |
+
+🔴 **Education is three of the 46**: AI providing **self-learning content from uncontrolled data
+sources**; AI that **automatically assesses, grades or ranks students**; and AI that **monitors or
+analyses learner behaviour using biometric data** — facial recognition, eye tracking. The six
+sectors are education (3), ethnic and religious affairs (7), healthcare (2), banking (2), judicial
+proceedings (1) and transportation (31).
+
+🔴 **One Vietnamese deadline has already passed, and it is procedural: Decree 142 required a notice
+plus a transition plan filed on the one-stop portal within 60 days of 2026-05-01 — before
+2026-06-30.** ⚠️ **So a client in this market may believe it has until 2027-09-01 while already
+having missed the gate that preserves it.** 🟢 **For a Vietnamese engagement the first week is not
+planning, it is establishing what was filed and what was not** — which is a discovery deliverable
+with a clear scope and an obvious follow-on.
+
+🔵 **Korea splits in a way that changes sequencing.** The Framework Act took effect **2026-01-22**;
+the **enforcement decree and amendment effective 2026-07-21** turned high-impact duties into real
+duties; **fact-finding investigations and administrative fines are deferred at least one year**
+(→ ~**2027-07-21**, maximum fine KRW 30m ≈ US$21k). 🔴 **But the labelling duty for generated content
+has no grace period at all.** ⚠️ **So in Korea the labelling limb ships now and the governance limb
+is a 2027 programme** — and because the fine is small, the grace period is worth more than the
+penalty it defers, which is an argument for doing the work on the schedule rather than against it.
 ### LATAM
 
 - **Teacher adoption is ahead of institutional readiness, sharply.** In Chile and
@@ -2504,6 +2607,35 @@ risk levels. For a studio this is a **portability requirement** on the governanc
 not a reason to wait — build the pack once to the strictest regime in scope and re-use it per
 country, which is what P13 and P24 already do.
 
+
+#### Twentieth pass of 2026-10-06 — the transition-provision channel: Peru has a live, education-naming obligation, and Brazil has no statute
+
+🟢 **This is the pass's regional surprise, and it cuts against this KB's standing LATAM posture that
+the driver is a programme rather than a rule.**
+
+| Market | Instrument | Status read this pass |
+|---|---|---|
+| **Peru** | Law **31814** + *reglamento* **DS 115-2025-PCM** | Reglamento published in *El Peruano* **2025-09-09**, in force **2026-01-22**. 🔴 **Sector obligations for health, EDUCATION, justice, security, economy and finance activated 2026-09-10.** Staged compliance **1–4 years from September 2025**, by sector and organisation size. Algorithmic-transparency mechanisms required for high-risk systems |
+| **Brazil** | **PL 2338/2023** | ⚠️ **Still not law.** Senate approved **2024-12-10**; in the Chamber with status *"Aguardando Parecer"*, latest entry **2026-09-02**; rapporteur **Aguinaldo Ribeiro (PP-PB)** said on **2026-08-24** the vote comes **after the October elections** |
+| **Uruguay** | Council of Europe Framework Convention on AI | First LATAM signatory — a commitment instrument, not a compliance deadline |
+
+🔵 **What it gives a LATAM engagement that it did not have.** Exactly one market where a compliance
+deliverable sells against **a date that has already bitten**, with **education named in the activated
+set** — and in that one narrow respect Peru is **ahead of the EU**, whose Annex III §3 duties wait
+until 2027-12-02.
+
+⚠️ **It does not generalise, and a pitch that treats "LATAM regulation" as one thing will be wrong in
+the region's largest market.** Brazil has no AI statute in force, so there the offer is **readiness**
+— the same evidence pack, framed as what makes a later filing cheap rather than what discharges a
+current duty. 🟢 **That framing is honest and it is also durable**: the pack is built once and
+re-filed per country, which is the economics this KB already recorded for P13 and P24.
+
+🔵 **The demand side, re-read this pass, is the reason the offer lands.** UNESCO/IESALC: **87% of
+Latin American and Caribbean institutions use AI in at least one area of their activity, and only
+26% have a formal AI strategy**; the Digital Education Council finds **79% of LATAM faculty using AI
+in their teaching** while **88% report minimal-to-moderate engagement**. 🔴 **An 87%-adoption,
+26%-strategy gap is a governance deficit, not a technology deficit** — and governance is the
+deliverable this channel produces.
 ## Cross-region read
 
 Two patterns hold in every region, which makes them safe to build once and sell

@@ -1435,3 +1435,77 @@ is copyleft** (`cboard` GPL-3.0, `AsTeRICS-Grid` AGPL-3.0, `pa11y` LGPL-3.0, `nv
 client's own estate rather than shipping an assistive application, the half a studio needs is the
 half that is permissive.** That is a better position than this KB has been able to report for any
 other tier in education, and it is worth stating plainly in a capability deck.
+
+---
+
+## Added in the twentieth pass of 2026-10-06 — the evidence tier, which every transition article actually asks for
+
+**Channel new to this KB this pass: the transition-provision channel** — reading each
+binding instrument's **transitional article** instead of its entry-into-force date. Full
+findings in `agents/trending.md`; the regional consequences in `intel/market.md`; the
+delivery recipe in `compose/patterns.md` **P28**.
+
+The channel produced a supply question this KB had never asked. Every transition regime
+found this pass discharges on an **artefact**, not on a date:
+
+| Regime | What the extension is conditional on | The artefact that proves it |
+|---|---|---|
+| **EU AI Act Art. 111** | the design of the high-risk system **remaining unchanged** | a versioned, dated record that the deployed system is the same system |
+| **Vietnam** Decree 142/2026/ND-CP | a **transition plan** filed on the one-stop portal | the plan, plus the inventory behind it |
+| **Vietnam** Decision 33/2026/QĐ-TTg, education category 1 | self-learning content **not** drawn from *"uncontrolled data sources"* | dataset provenance and validation records |
+| **EU Annex III §3** (admissions, assessment, placement) | bias and accuracy obligations | fairness measurements over the decision, retained |
+| **EMEA, per the nineteenth pass** | 🔴 **no harmonised standard cited under the EAA**, so no presumption of conformity | evidence is the *only* route — there is no standard number to point at |
+
+🔴 **Nineteen passes recorded none of the tooling that produces these artefacts.** Grep
+confirmed it before this shelf was written: `mlflow`, `dvc`, `evidently`, `whylogs`,
+`great_expectations`, `croissant`, `OpenLineage`, `fairlearn`, `AIF360` — **zero
+occurrences across all eight files.** The KB had the obligations and the pedagogy, and
+nothing in between.
+
+### The shelf — all licences read from the repository's own payload on 2026-10-06
+
+Stars and descriptions read from each repository page the same day via `WebFetch`
+(`github.com` is 403 to `curl` through this environment's proxy; `raw.githubusercontent.com`
+is not). **Ten rows, all verified.**
+
+| Repo | Licence (payload path) | ★ / forks | Lang | What it does, and why an education engagement needs it |
+|---|---|---|---|---|
+| [mlflow/mlflow](https://github.com/mlflow/mlflow) | **Apache-2.0** (`LICENSE.txt`) | 28.3k / 6.4k | Python | *"The open source AI engineering platform for agents, LLMs, and ML models."* Model registry with versioned stages. **This is the Art. 111 instrument**: the registry is what lets you state, with dates, that the system in service is the system that was placed in service. |
+| [iterative/dvc](https://github.com/iterative/dvc) | **Apache-2.0** (`LICENSE`) | 15.9k / 1.3k | Python | *"Data Versioning and ML Experiments."* Versions the **corpus** alongside the model, in Git. The answer to Vietnam's *"uncontrolled data sources"* trigger is a hash, and this produces it. |
+| [great-expectations/great_expectations](https://github.com/great-expectations/great_expectations) | **Apache-2.0** (`LICENSE`) | 11.9k / 1.9k | Python | *"Always know what to expect from your data."* Declarative data validation. Turns "the curriculum corpus is controlled" from an assertion into a suite that fails a build. |
+| [evidentlyai/evidently](https://github.com/evidentlyai/evidently) | **Apache-2.0** (`LICENSE`) | 8.0k / 946 | Python | ML **and LLM** observability — evaluate, test and monitor any AI-powered system or pipeline. The regression baseline the nineteenth pass said a remediation contract has to ship. |
+| [Trusted-AI/AIF360](https://github.com/Trusted-AI/AIF360) | **Apache-2.0** (`LICENSE`) | 2.9k / 912 | Python | Fairness metrics for datasets and models, explanations for them, and bias-mitigation algorithms. Annex III §3 is **admissions, assessment and placement** — decisions about people. |
+| [whylabs/whylogs](https://github.com/whylabs/whylogs) | **Apache-2.0** (`LICENSE`) | 2.8k / 145 | Python | Data logging that emits **statistical profiles rather than raw records** — visibility into data quality over time with privacy-preserving collection. The shape that survives a student-data rule (see California **AB 1159**). |
+| [OpenLineage/OpenLineage](https://github.com/OpenLineage/OpenLineage) | **Apache-2.0** (`LICENSE`) | 2.7k / 540 | Java | *"An Open Standard for lineage metadata collection."* A generic model of run, job and dataset entities. Lineage as a **standard**, so the evidence outlives your pipeline choice. |
+| [fairlearn/fairlearn](https://github.com/fairlearn/fairlearn) | **MIT** (`LICENSE`) | 2.3k / 522 | Python | *"A Python package to assess and improve fairness of machine learning models."* The **MIT** option on this shelf — the one with no notice obligation at all. |
+| [NannyML/nannyml](https://github.com/NannyML/nannyml) | **Apache-2.0** (`LICENSE`) | ★ not read this pass | Python | Post-deployment performance estimation **without ground-truth labels**. Education's labels arrive a term or a year late; this is the tier that does not wait for them. |
+| [mlcommons/croissant](https://github.com/mlcommons/croissant) | **Apache-2.0** (`LICENSE.md`) | 907 / 125 | Python | *"A high-level format for machine learning datasets."* Dataset metadata as a published format — the interchange layer for a provenance claim a regulator or a ministry can read. |
+
+### Measured rejections from the same sweep
+
+Recorded so a later pass does not re-probe them as options.
+
+| Repo | Licence (payload) | Verdict |
+|---|---|---|
+| [deepchecks/deepchecks](https://github.com/deepchecks/deepchecks) | 🔴 **AGPL-3.0** (`LICENSE`) | Reject for reusable IP. Testing and validation for ML and LLM systems — capable, and the network clause reaches a hosted validation service. |
+| [sodadata/soda-core](https://github.com/sodadata/soda-core) | 🔴 **Elastic License 2.0** (`LICENSE`) | Reject. **Not OSI-approved**; the payload opens *"Elastic License 2.0 … Acceptance: By using the software, you agree to…"*. A data-quality tool whose own licence is the risk it would be bought to manage. |
+
+### Read this shelf honestly — three qualifications
+
+🔵 **None of these is an education project.** This is general-purpose MLOps and
+responsible-AI tooling. It earns a place in an education KB for one reason: the
+transition articles found this pass are discharged by artefacts, and nothing already on
+this KB's shelves produces them. ⚠️ **Do not present this tier as education IP** — present
+it as the plumbing under a billable education-specific rubric, exactly as P27 treats
+`inspect_ai`.
+
+⚠️ **The fairness pair is a measurement tool, not a compliance verdict.** AIF360 and
+Fairlearn compute metrics; which metric is the *right* one for an admissions decision is a
+legal and pedagogical judgement that has to be made and documented per engagement. A
+dashboard of eleven fairness metrics with no stated choice among them is not evidence.
+
+🟢 **The licence shape of this tier is unusually clean** — nine of ten permissive, eight
+Apache-2.0 and one MIT, every one read from its own payload. That is a better result than
+the platform tier, the assistive tier or the language tier has ever returned in this KB,
+and it means the evidence layer is the one part of an Annex III delivery with no licence
+negotiation in it at all.

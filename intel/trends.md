@@ -2536,8 +2536,9 @@ region in a way that changes the counterparty, the artefact and the engagement s
 | **EMEA** | 🟢 **The agency itself** | Norway's **Utdanningsdirektoratet** and Finland's **Opetushallitus** (188 repos, EUPL) — passes 16–17. The Netherlands' **Stichting Kennisnet**, 29 repos, 6 MIT libraries payload-verified — this pass |
 | **APAC** | 🟡 **An arm's-length foundation or vendor, never the ministry** | India: the **EkStep Foundation** publishes `Sunbird-Ed` (MIT, 38,046 commits, the DIKSHA national platform) while **SamagraX** carries 124 repos with its most-starred and its education repo both **ungranted**. Singapore: `opengovsg`, **98 repos, zero education products**; the assessment work reaches the market through **Coursemology / Codaveri** (MIT). Indonesia: `kemdikbud` exists with **1 empty repository** |
 | **LATAM** | 🔴 **The state publishes *data*; a private third party publishes the *code*** | **Mineduc Chile's Centro de Estudios**: **21 datasets** via `datos.gob.cl`, **no code estate**. **SEP Mexico**: no education repositories under `mxabierto` (61 repos). The only clients that reach the data are **third-party MIT** — `pipeworx-io/mcp-datos-cl` (© 2026 Mojibake Inc.) and `gerardbourguett/mcp-chilegob-dataset` (© 2025, an individual) |
+| **North America** | 🟡 **A non-profit standards alliance, with state agencies as adopters** | ⚠️ **Partial read, flagged as one in the twentieth pass.** This KB's measured evidence is the **Ed-Fi Alliance** estate (**Apache-2.0**, the US K-12 data standard — see `repos/foundations.md`) plus vendor-side integration repos; state education agencies in this KB's sample **adopt and certify against** that standard rather than publishing code of their own. 🔴 **No dedicated North American state-estate sweep has been run**, so this row is weaker evidence than the other three and must not be cited as if it were equal to them |
 
-**Why this is a trend and not a table of three anecdotes:** the instrument that works in one region
+**Why this is a trend and not a table of four anecdotes:** the instrument that works in one region
 returns nothing in another, and *returning nothing is not the same as there being nothing*. Pass 17
 ran `org:` against ministry names and recorded four dead ends with the correct caveat that they were
 **unmeasured, not empty**. They were unmeasured because `org:`-against-a-ministry is an **EMEA-shaped
@@ -2698,3 +2699,131 @@ that is copyleft** — Cboard **GPL-3.0**, AsTeRICS Grid **AGPL-3.0**, NVDA **GP
 an assistive application, the half a studio needs is the permissive half.** ⚠️ **And the proposal
 rule that follows: never offer to fork the assistive application — integrate at the file-format
 boundary and test against it.**
+
+---
+
+## 46. The date that governs a client's system is in the transition article, not the headline — and modernising the system is what forfeits it
+
+**Twentieth pass of 2026-10-06.** ⚠️ **Cite this trend by its title.** This file contains
+**eight duplicated trend numbers** — see the trend below — so "trend 46" is unambiguous today
+only because 46 was free when it was written.
+
+🔴 **Every pass of this KB until now recorded when a rule *starts*. None recorded when it
+*binds a system that already exists*.** Verified by grep before this was written: `Article 111`,
+`grandfather`, `legacy system`, `transition period`, `placed on the market before` and
+`31 December 2030` returned **zero occurrences** across all eight files. That is the expensive
+kind of gap, because a client's estate is made almost entirely of systems that already exist.
+
+| Region | Market / instrument | Headline date | What the transitional article says | Governs an existing system from |
+|---|---|---|---|---|
+| **EMEA** | EU AI Act, **Art. 111** | Annex III §3 applies **2027-12-02** | A high-risk system lawfully placed on the market before the high-risk rules apply continues **without retrofit or additional certification, provided its design remains unchanged**; providers and deployers of high-risk AI **intended to be used by public authorities** must comply **by 2 August 2030**; AI inside **Annex X** large-scale IT systems placed before **2027-08-02** → **2030-12-31** | 🟢 **2030-08-02** for a public-authority deployment — in education, most ministries and state universities |
+| **APAC** | Vietnam, law 134/2025/QH15 | in force **2026-03-01** | existing systems comply by **2027-03-01**; **health, education and finance by 2027-09-01** | 🟢 **2027-09-01** — eighteen months after the date this KB's summary tables carried |
+| **APAC** | South Korea, Framework Act | in force **2026-01-22** | enforcement decree effective **2026-07-21** made high-impact duties real; investigations and fines **deferred ≥1 year** (→ ~**2027-07-21**); 🔴 **generated-content labelling has no grace** | ⚠️ split — labelling now, the rest ~2027-07-21 |
+| **LATAM** | Peru, *reglamento* DS 115-2025-PCM | in force **2026-01-22** | sector obligations for **health, education**, justice, security, economy and finance **activated 2026-09-10**; staged compliance **1–4 years from September 2025** by sector and size | 🔴 **2026-09-10 — already passed** |
+| **North America** | no federal high-risk statute; DOJ ADA Title II IFR | — | ⚠️ **no transition article exists, because no binding federal high-risk statute does**; state duties attach at enactment | **2027-04-26** (DOJ ADA Title II IFR, ≥50,000 population) |
+
+### 🔴 The second-order effect, and it is the one that changes a proposal
+
+🔵 **The EU extension is conditional on the design remaining unchanged. Vietnam's is conditional on a
+filed transition plan, and a reclassification restarts a 12-month clock.** Grandfathering is
+therefore not a property of a system — it is a property of a system **being left alone**.
+
+⚠️ **An AI Studio engagement is definitionally the thing that does not leave it alone.** Adding a
+tutor to a legacy LMS, wiring an agent into an SIS, replacing a rules-based placement engine with a
+model: each is a change in design, and each converts a system that had until **2030-08-02** into one
+that must satisfy Annex III **the day it ships**.
+
+🟢 **So the conformity work is in scope of the modernisation phase, not of a later phase the
+extension pays for — because the modernisation is what ends the extension.** ⚠️ **The sales failure
+mode is the reassuring sentence** — "you have until 2030" — true until the client signs the statement
+of work that makes it false.
+
+🟢 **And the inversion is a sellable engagement this KB had no language for: the non-modifying
+mandate.** Observability, evidence, inventory and an accessibility remediation queue built *around* a
+frozen high-risk core — which **banks** the extension instead of spending it, and is exactly what the
+evidence tier in `repos/foundations.md` and pattern **`P-TRANSITION-EVIDENCE`** deliver.
+
+### 🔵 Why this is a trend and not a news item
+
+Because the shape repeats across four jurisdictions written independently of each other: **a duty, a
+later date for what already exists, and a condition that the existing thing not be touched.** The EU
+wrote it as design stability, Vietnam as a filed plan plus a sector-specific extension, Korea as
+deferred enforcement with one carve-out that bites immediately, Peru as a staged activation by sector
+and organisation size. ⚠️ **Four regimes, four mechanisms, one commercial consequence** — the
+regulated moment is the *change*, not the calendar.
+
+### ⚠️ The qualification this trend carries, stated plainly
+
+🔴 **The primary texts could not be read.** `eur-lex.europa.eu`, `artificialintelligenceact.eu`,
+`ai-act-law.eu`, the Commission's AI Act Service Desk, `loc.gov` and the law-firm notes all returned
+**`EGRESS_BLOCKED`** from this environment's proxy. The dates above are **triangulated across
+independent search summaries naming the same instrument, article and date** — a weaker standard than
+this KB's payload rule for licences, and recorded as such. ⚠️ **Re-read the instrument before any of
+these dates enters a client proposal.**
+
+---
+
+## 47. A knowledge base that corrects itself needs unambiguous pointers, and this one has eight duplicated trend numbers
+
+**Twentieth pass of 2026-10-06.** This is a trend about this KB's own machinery, recorded here
+because the nineteenth pass's headline finding was a correction that failed to propagate — and its
+own pointer is ambiguous.
+
+| Measurement of `intel/trends.md` | Value |
+|---|---|
+| Numbered trend headings | **54** |
+| Highest number used | **45** |
+| 🔴 Duplicated numbers | **8** — `33`, `34` (**three times**), `35`, `36`, `37`, `38`, `39`, `40` |
+| Skipped by the later series | `41`, `42` — used once each earlier, then 40 → 43 |
+| 🔴 Cross-references in this KB pointing at an ambiguous number | **27** — `agents/trending.md` 9, `compose/patterns.md` 8, `intel/market.md` 4, `intel/trends.md` 4, `repos/trending.md` 2 |
+| 🔴 References to **`trend 39`** alone | **13** |
+
+🔵 **The nineteenth pass found a correction that could not reach an assertion written after it, and
+fixed the assertion. But that finding is addressed to "trend 39" — and this file has two.** A reader
+following the pointer lands on *"Integration coverage follows the higher-education install base"* as
+readily as on *"The regulation stopped being forthcoming and started being in force"*. ⚠️ **A
+correction whose dependents are named by an ambiguous key is not propagated — it is only filed.**
+
+🟢 **The prescription is deliberately the cheap one: cite trends by title, and do not renumber.**
+Renumbering would silently invalidate **27 live cross-references** across five files, trading an
+ambiguous pointer for a confidently wrong one. The numbers remain historical labels; **the title is
+the key.** ⚠️ **And the rule for later passes: before writing `trend N`, grep `^## N\.` and count
+the hits.**
+
+### 🔴 And the same defect is worse in `compose/patterns.md`, where it was found by writing into it
+
+This pass went to add a pattern, chose the next free number by reading the highest one in the file,
+and **collided with three existing definitions.**
+
+| Measurement of `compose/patterns.md` | Value |
+|---|---|
+| Numbered `## Pn` headings | **46** |
+| Distinct numbers | **36** |
+| 🔴 Duplicated numbers | **7** — `P1` ×2, `P25` ×3, `P26` ×3, `P27` ×2, **`P28` ×3**, `P29` ×2, `P30` ×2 |
+| 🔴 Cross-references in this KB pointing at one of those seven | **137**, across ten files — `compose/patterns.md` 64, `intel/market.md` 17, `agents/trending.md` 15, `agents/top.md` 9, `repos/foundations.md` 6, `intel/trends.md` 6, `repos/trending.md` 5, `verticals/solutions.md` 4 |
+
+🟢 **This KB already owns an instrument for the adjacent defect, and it is a good one.**
+`compose/code/pattern-citation-audit/` detects **dangling** citations — numbers cited but never
+defined — and its 8 assertions pass. Run against the current tree it reports **36 patterns defined**
+and dangling citations running up into the **P60s**, inherited from the pre-reset era and still
+present in the live append-only files.
+
+🔴 **But it cannot see this defect, because it asks the opposite question.** A number defined **three
+times** is defined, so it never dangles; the audit passes it. ⚠️ **Dangling and duplicated are two
+different failures of the same namespace, and an instrument for one is not an instrument for the
+other.** The one-line addition that would close it: assert that each number resolves to **exactly
+one** definition, not **at least one**.
+
+🟢 **What this pass did about it, rather than only recording it.** The new pattern is named
+**`P-TRANSITION-EVIDENCE`**, not given a number. A content key cannot collide, cannot dangle, and
+tells a reader what it points at without a lookup. ⚠️ **It is not a migration** — the 137 existing
+references stay as they are, for the same reason the trend numbers do: renumbering would trade an
+ambiguous pointer for a confidently wrong one. 🔵 **It is the convention for new entries only**, and
+the cheapest possible fix is simply to stop minting numbers into a damaged space.
+
+🔵 **Why this generalises beyond this KB.** Any append-only corpus maintained by automated passes
+accumulates identifiers faster than it accumulates a way to allocate them. The failure is silent:
+nothing breaks, the number is simply reused, and every pointer written before the collision keeps
+resolving — to the wrong target half the time. 🟢 **The durable fix is to key corrections to content,
+not to position** — which is also why this KB's correction blocks quote the sentence they are
+correcting rather than citing its line number.
