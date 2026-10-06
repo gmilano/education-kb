@@ -8,6 +8,120 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — seventeenth pass: 188 live repositories from one national agency, and the licence that makes them unshelvable as they stand
+
+### The mandatory queries, run with the year **computed** (2026), not hardcoded
+
+`$(date +%Y)` → **2026**. Four global, then four regional.
+
+| Mandatory query | Verdict | What actually came back |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **fail (13th time)** | `openclaw` 385,407★, `browser-use` 108,128★, Mem0 62,735★, AutoGen 60,284★, dify 151,639★. **Zero education-specific results.** |
+| `github trending education AI 2026` | 🔴 **fail (13th)** | `ai-engineering-from-scratch`, Karpathy *Zero to Hero*, `2026-AI-College-Jobs` 5.2k★. **"Learning AI", never "AI for learning".** |
+| `open source platform education ERP CRM MIT Apache student information system` | 🟡 **repeat pass** | **OpenEduCat** (Odoo-based, 300 modules / 65 languages, "3M+ users") and **.LRN** (MIT-originated LMS) — the same two names as pass 16. **No new platform.** |
+| `AI education industry trends 2026` | 🟢 pass (market only) | See the forecast conflict below — this query returned **two incompatible forecasts** for the same market this pass. |
+| `AI education North America 2026 adoption regulation players` | 🟢 pass | 134 bills in 31 states; NA = **36%** of the global market, **$3.68B in 2026**; 60% of US K-12 teachers used AI in 2024-25, 32% weekly. |
+| `AI education EMEA 2026 adoption regulation players` | 🟢 **pass, and it is this pass's regional headline** | EU AI Act high-risk duties for education **apply from August 2026 — i.e. already in force as this is written**. Europe **$2.64B (2026) → $8.0B (2030), 31.9% CAGR**. FI/EE/NL lead K-12 integration. Only **10%** of 450+ surveyed institutions have formal AI guidelines. |
+| `AI education APAC 2026 adoption regulation players` | 🟢 pass | **Three binding AI statutes inside 12 months**: Vietnam (in force **2026-03-01**, education among six high-risk sectors, naming automated assessment and behavioural monitoring), South Korea AI Basic Act (**2026-01-22**), Taiwan (passed Dec 2025). |
+| `AI education LATAM 2026 adoption regulation players` | 🟢 pass | **92% of students and 79% of faculty** engaging with AI, but **88% of faculty "minimal to moderate"**; 72% of faculty positive vs **57% globally**; UNESCO warns institutional governance is missing. |
+
+🟢 **All four regions returned relevant material this pass — no regional gap to declare on the
+query axis.** The gaps this pass declares are on the *supply* axis (Finding 4 in
+`agents/trending.md`): Chile, Colombia, Mexico and the Netherlands are **unmeasured**, which is
+not the same as empty.
+
+### 🔴 The forecast conflict, recorded rather than averaged
+
+| Source read this pass | 2025 | 2026 | Horizon | CAGR |
+|---|---|---|---|---|
+| Forecast A | $8.3B | **$11.4B** | $57.2B by 2033 | **25.9%** |
+| Forecast B (the figure pass 16 carried) | $7.52B | **$10.6B** | — | **40.9%** |
+
+🔴 **The two cannot both be right: B's own 2025→2026 step is 41%, A's is 37%, and B's stated
+40.9% CAGR compounded from $7.52B would reach roughly $160B by 2033 — nearly 3× A's number.**
+⚠️ **Do not average them and do not pick the bigger one.** For a client deck, quote the step the
+source actually measured (2025→2026, where the two agree within ~8%) and **attribute the
+horizon figure to its publisher by name**, because the long-run numbers diverge by a factor of
+three. 🔵 This is the second pass running in which the market tier produced a number conflict;
+the KB's market claims should be read as *ranges with named sources*, never as facts.
+
+### 🟢 The channel that yielded: `org:Opetushallitus` — 188 repositories, all live
+
+`github.com/orgs/Opetushallitus/repositories` → **188 public repositories**, and **every one of
+the first 30 was updated on 2026-10-06**, the day it was read. This is the Finnish National
+Agency for Education's working estate, not an archive.
+
+Default branch resolved per repo with `ls-remote --symref` — **six of the nine are `master`**,
+which a hardcoded `main` would have written down as ungranted. Licences read from
+`raw.githubusercontent.com` on that branch.
+
+| Repository | Branch | Licence (payload-verified) | ★ | Stack | What it is |
+|---|---|---|---|---|---|
+| [`Opetushallitus/koski`](https://github.com/Opetushallitus/koski) | `master` | 🟡 **EUPL-1.1** (653 B) | **23** | Scala | **Finland's national study-records service** — *"opintosuoritukset ja opiskeluoikeudet kootusti yhdessä palvelussa"*: every qualification and study right in one service. The highest-starred repo in the estate. |
+| [`Opetushallitus/aoe`](https://github.com/Opetushallitus/aoe) | `main` | 🟡 **EUPL-1.2** (303 B ×2, **in subdirectories**) | 0 | TypeScript | **AOE — the national Library of Open Educational Resources** (`aoe.fi`). **6,829 commits**, HEAD the day it was read. A production national OER platform. |
+| [`Opetushallitus/eperusteet`](https://github.com/Opetushallitus/eperusteet) | `master` | 🟡 **EUPL-1.1** (631 B) | 3 | Java | **ePerusteet — the national core curriculum and qualifications service.** Finland's analogue of Norway's Grep, and the second national curriculum substrate this KB has placed. |
+| [`Opetushallitus/ataru`](https://github.com/Opetushallitus/ataru) | `master` | 🟡 **EUPL-1.2** (295 B) | **11** | Clojure | *"Generic form generation service"* — the **national admissions application** form engine. |
+| [`Opetushallitus/valtionavustus`](https://github.com/Opetushallitus/valtionavustus) | `master` | 🟡 **EUPL-1.1** (652 B, **(c) 2026**) | 8 | TypeScript | **State-grant administration** for education providers: application, evaluation, award. |
+| [`Opetushallitus/organisaatio`](https://github.com/Opetushallitus/organisaatio) | `master` | 🟡 **EUPL-1.1** (631 B) | 4 | Java | The **national register of education providers and institutions** — the organisation layer every other service joins against. |
+| [`Opetushallitus/oppijanumerorekisteri`](https://github.com/Opetushallitus/oppijanumerorekisteri) | `master` | 🟡 **EUPL-1.1** (631 B) | 1 | Java | **The learner-number registry** — national persistent learner identity. |
+| [`Opetushallitus/ehoks`](https://github.com/Opetushallitus/ehoks) | `master` | 🟡 **EUPL-1.1** (631 B) | 1 | Clojure | **eHOKS — personal competence-development plans** for vocational education. The individual-learning-plan layer. |
+| [`Opetushallitus/suorituspalvelu`](https://github.com/Opetushallitus/suorituspalvelu) | `main` | 🟡 **EUPL-1.2** (652 B) | 0 | Scala | **Attainment service** — newest of the set (2025 copyright, current licence version). |
+
+⚠️ **GitHub's own listing labels these "Other license" or shows no licence at all** — `koski`
+(23★, EUPL-1.1) displays **no licence** in the org listing, while `suorituspalvelu` and
+`oppijanumerorekisteri` show **"Other license"**. 🔵 **The EUPL is not in GitHub's SPDX picker, so
+a pass that reads the sidebar records this entire estate as unlicensed or unknown.** This KB's
+payload-over-sidebar rule has never had a cleaner instance: **the sidebar is wrong about 188
+repositories at once.**
+
+### 🟢 `org:Skolverket` — small, but the one permissive asset is a national standard
+
+**6 repositories.** One carries a full permissive payload:
+
+| Repository | Branch | Licence (payload-verified) | ★ | What it is |
+|---|---|---|---|---|
+| [`Skolverket/dnp-ss12000-reference-api`](https://github.com/Skolverket/dnp-ss12000-reference-api) | `main` | 🟢 **Apache-2.0** (11,339 B, full text) | 5 | **Reference implementation of SS 12000** — the Swedish national standard for information exchange between school administration systems. Java. 🟢 **Permissive, from the national agency, on the rostering/SIS-interop layer.** |
+| [`Skolverket/dnp-usermanagement`](https://github.com/Skolverket/dnp-usermanagement) | `main` | 🔴 **NO-PAYLOAD** | 7 | API specs for DNP (national digital assessment) **user management**. The highest-starred Swedish doc, and ungranted. |
+| [`Skolverket/dnp-provplattform`](https://github.com/Skolverket/dnp-provplattform) | `main` | 🔴 **NO-PAYLOAD** | 0 | Documentation for the **national digital assessment platform**. |
+| [`Skolverket/learning-assessments-f1`](https://github.com/Skolverket/learning-assessments-f1) | `main` | 🔴 **NO-PAYLOAD** | 0 | Digital result-reporting format for preschool class and grade 1. |
+| [`Skolverket/dnp-access-management`](https://github.com/Skolverket/dnp-access-management) | — | not read this pass | 1 | DNP access-management documentation. |
+| `Skolverket/ng2-completer` | — | MIT per listing, **not education** | 0 | An Angular 2 autocomplete component, last touched **2021**. ⚠️ Excluded from the shelf: it is a stray front-end dependency, not an education asset. |
+
+🔵 **Read together, the two agencies divide the same way every state estate in this KB does:**
+Sweden publishes the **standard** (Apache-2.0, reusable anywhere) and leaves the systems closed;
+Finland publishes the **systems** (EUPL, 188 of them) and expresses the standard inside them.
+**The Swedish asset is the one a studio can lift; the Finnish estate is the one a studio can
+learn the domain model from and must integrate with rather than fork.**
+
+### ⚠️ The instrument note that constrains this pass
+
+| Probe | Pass 16 | **This pass** |
+|---|---|---|
+| `curl https://github.com/<owner>/<repo>` | 🟢 read star counts from rendered pages | 🔴 **403 — regressed** |
+| `WebFetch` on the same URL | not recorded | 🟢 **200** — stars, forks, **fork banner** |
+| `git clone --filter=blob:none` on any public repo | not recorded | 🟢 **works** — root SHA, HEAD, commit/tag counts, `ls-tree` |
+| `api.github.com` | 🔴 403 | 🔴 403 |
+| Executing `compose/code/lib/*.sh` | 🔴 denied | 🔴 **denied, second consecutive pass** |
+
+🔴 **Star counts in this pass's tables come from the org listing page, read once, on
+2026-10-06.** Where a number was not read, the cell says so. 🟢 **And the clone instrument is the
+one to carry forward:** it answered a question two passes had carried as unanswerable
+(`agents/trending.md`, Finding 2) without touching the API at all.
+
+### What the next pass should do
+
+1. 🟢 **The 188-repository estate needs the EUPL anchor before it can be shelved properly** — only
+   9 of 188 are recorded here, and the other 179 are unread, not absent. The anchor is
+   instruction 1 in `agents/trending.md`.
+2. 🟢 **Ask the SS 12000 question commercially:** Sweden's standard is Apache-2.0 and the Finnish
+   systems implement the same domain. Whether SS 12000 is the interop layer for a *Nordic* AI
+   offer, or only a Swedish one, is one document away and would place a second EMEA pattern.
+3. ⚠️ **Do not re-buy the two failed mandatory agent queries as written.** Thirteen passes. Run
+   them to satisfy the instruction, record the failure in one line, and spend the budget on
+   proper nouns.
+
+---
+
 ## 2026-10-06 — sixteenth pass: the mandatory queries fail for the twelfth time, and a ministry estate answers in its own language
 
 ### The mandatory queries, run with the year **computed** (2026), not hardcoded

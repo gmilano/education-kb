@@ -2346,3 +2346,111 @@ Searched this pass, not found, stated so the absence is informative rather than 
    the licence ask on [`IFRN/suapi`](https://github.com/IFRN/suapi). It requires opening an
    issue on a third party's repository — an outward-facing write with no mandate here.
    **It needs a human, or an explicit instruction that upstream asks are in scope.**
+
+---
+
+## 38. The licence question has moved from *permission* to *delivery model* — and the EUPL is where education meets it
+
+Through sixteen passes this KB's licence axis has been **permissive vs copyleft vs ungranted**:
+may we use it at all? **The seventeenth pass found a tier where that question is settled "yes"
+and the answer still constrains the architecture** — and it is not a marginal tier. It is
+**188 live repositories, the entire published code estate of a national education agency.**
+
+Every Finnish payload read is **EUPL** (v1.1 or v1.2), ten of ten. The EUPL is OSI-approved, and:
+
+| The EUPL property | Why education hits it harder than other industries |
+|---|---|
+| **Art. 1 counts *"communication to the public"* as Distribution** — making functionality available over a network | 🔴 Education delivery is **almost always** network delivery: an LMS, a tutor, a portal. The copyleft triggers on the normal shape of the engagement, AGPL-style. |
+| **Art. 5 carries a compatibility list** (GPL-2.0/3.0, AGPL-3.0, LGPL, MPL-2.0, EPL, CeCILL, OSL) | 🟡 A genuine relicensing route for combined works — the only copyleft licence with one. ⚠️ And because the compatible licence prevails on conflict, the EC's own discussion notes the SaaS duty **can be circumvented** via GPL-3.0. **Documented, contested, not a sales route.** |
+| Valid in 23 EU languages, written for public bodies | 🔵 It is *why* European state estates pick it: it is the licence that survives a procurement lawyer in any member state. **Expect more of it, not less.** |
+
+🔵 **The structural trend, stated for the next pass: as European public bodies publish more
+education software, the dominant licence in this industry's supply will be a network-reaching
+copyleft, not MIT.** The KB's instinct — *permissive good, copyleft bad* — gives the wrong answer
+here. **The right question is no longer "may we use it?" but "may we use it *the way we intend to
+ship it*?"** Calling these services is free of obligation; forking them into a hosted product is
+not. That is a two-cell answer, and the KB now needs both cells in every platform row.
+
+## 39. The regulation stopped being forthcoming and started being in force — in three regions at once
+
+Every prior pass wrote about education-AI regulation in the future tense. **As of this pass it is
+present tense in three regions simultaneously**, and the dates are specific:
+
+| Instrument | Status read this pass | What it binds |
+|---|---|---|
+| **EU AI Act**, high-risk obligations | 🔴 **Apply from August 2026 — in force now** | Education **access and assessment** — admissions, student evaluation, exam scoring — are high-risk: risk management, data governance, human oversight, transparency, conformity assessment **before** deployment |
+| **Vietnam, Law on Artificial Intelligence** | 🔴 **In force 2026-03-01** | Six high-risk sectors **including education**, naming **automated assessment and behavioural monitoring** |
+| **South Korea, AI Basic Act** | 🔴 **In force 2026-01-22** | Comprehensive statute with enforcement teeth |
+| **Taiwan, AI Basic Act** | Passed December 2025 | Comprehensive statute |
+| **US states** | 🔴 **134 bills, 31 states**, this session | **CA AB 1159** (no student data in training), **Idaho SB 1227**, **OK / MD** human-oversight and no-high-stakes-decisions rules |
+
+Against which: 🔴 **10% of 450+ surveyed institutions have formal AI guidelines**, while **92% of
+students use AI.**
+
+🔵 **The trend is a reversal of who carries the risk.** While the rules were forthcoming, the
+buyer's question was *"what can AI do for us?"* Now that assessment is a high-risk classification
+in force, the buyer's question is *"can you prove this deployment is conformant?"* — and that is a
+question a studio answers with artefacts (data-flow attestations, human-oversight design, a
+per-jurisdiction obligation matrix), not with a model. ⚠️ **Note the divergence trap in APAC:**
+the same assessment feature is high-risk in Vietnam, statutory in Korea and voluntary-guidance in
+Singapore and Japan, so **a regional posture is not a compliance position** — the matrix has to be
+per country, and it belongs in the product's configuration rather than in a slide.
+
+## 40. A number that is plausible in two columns will eventually be read from the wrong one
+
+This pass withdrew a figure this KB had carried for seven weeks: `dasgltd/mcp-brasil` at
+**"246★"**. The repository has **0★**. **246 is its commit count** — and this KB carries exactly
+that number, correctly labelled, in a **commits / tags** column of `repos/trending.md`.
+
+🔵 **The failure was not carelessness about stars; it was a column with no type.** Both numbers
+sit on the same rendered page, both are small integers, and **246 is a completely reasonable star
+count** — so nothing downstream could flag it. The two numeric gates this KB already ships
+(`p349-star-resolution-band`, `p351-star-digit-sweep`) check the *shape* of a star figure, and
+246 is shaped correctly.
+
+🟢 **The control that would have caught it is one comparison: a star count equal to that repo's
+own commit count is a flag.** It is cheap, it is first-hand under the clone instrument, and it
+generalises — **the defect class is "two plausible numbers on one page", and licence bytes vs
+file counts is the next instance waiting to happen.**
+
+## Declared gaps — seventeenth pass, 2026-10-06
+
+Searched this pass, not found, stated so the absence is informative rather than silent.
+
+1. 🟢 **CLOSED from the sixteenth pass: `mcp-brasil` identity.** Item 6 of the sixteenth-pass
+   gaps is resolved and its figures are withdrawn. All three addresses share root commit
+   `8b786bf` (2026-03-22); **`Mcp-Brasil/mcp-brasil` is upstream** (1.8k★, no fork banner),
+   `dasgltd/mcp-brasil` is a **0★ fork** of it in exact sync, `marcellodesales/mcp-brasil` a fork
+   8 commits behind. **There was never a 7.3× star gap between two projects.**
+2. 🔴 **Four national education ministries remain unmeasured — and the names were the wrong
+   instrument.** `Mineduc` (Chile, Colombia) and `onderwijsinspectie` (Netherlands) are **org
+   names claimed with zero public repositories**; `SEP` (Mexico) resolves to **an unrelated
+   software consultancy**; `stil` and `DUO` are **404**. ⚠️ **None of these is evidence that the
+   body publishes nothing.** Falsifiable by: the bodies' own language and national code-hosting
+   habits (`gob.mx`, `datos.gob.cl`, `developer.overheid.nl`) — the channel that found
+   `Utdanningsdirektoratet` and `Opetushallitus`.
+3. 🔴 **No APAC ministry education estate has been found by any pass.** The region now has three
+   binding AI statutes and this KB has **one** APAC-origin permissive education asset
+   (`panaversity/learn-agentic-ai`, MIT, Pakistan). ⚠️ **Unmeasured, not empty** — no `org:` query
+   has yet been run against an APAC education authority.
+4. 🔴 **179 of Opetushallitus's 188 repositories are unread.** Nine were probed, chosen by stars
+   and domain relevance. The estate's full licence picture is **sampled, not established**.
+5. 🔴 **`Skolverket/dnp-usermanagement` (7★) and `dnp-provplattform` are NO-PAYLOAD.** Sweden's
+   national digital-assessment platform and user-management API specifications are **ungranted**,
+   which is the second consecutive pass where the most interesting *document* in a state estate
+   is the one with no licence.
+6. 🔴 **This KB's own licence classifier cannot read the EUPL** (`grep -c -i eupl` → **0**), and
+   **this pass could not execute it to confirm the consequence** — the behaviour is traced by
+   reading the code. ⚠️ **Second consecutive pass unable to run `compose/code/lib/*.sh`.** A
+   control that cannot be executed is documentation (§36), and that is now true two passes
+   running.
+7. 🔴 **A new payload class has no instrument: `GRANT-BY-REFERENCE` with a dead pointer.** The six
+   EUPL-1.1 notices name their terms at `http://www.osor.eu/eupl/`, which returns **403**. The
+   repository contains neither the terms nor a working address for them. ⚠️ **Not equivalent to
+   NO-PAYLOAD** — the grant is real and the named licence is public — but it means **the terms
+   must be pinned from the EC's dated text**, because the repo pins nothing.
+8. ⚠️ **Carried over unclosed, and still not closeable by an unattended run:** the four-vendor
+   anti-AI-training ToU question (sixteenth-pass gap 4, egress-blocked) and the licence ask on
+   [`IFRN/suapi`](https://github.com/IFRN/suapi) (an outward-facing write on a third party's
+   repository, with no mandate here). **Both need a human or an explicit instruction.**
+

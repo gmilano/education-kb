@@ -2149,14 +2149,26 @@ publishes a curriculum API, not a tutor.
 
 | Name | Repo | Licence (payload-verified) | ★ | Region | Description |
 |---|---|---|---|---|---|
-| **MCP Brasil** | [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) (`main`) | 🟢 **MIT** (`LICENSE`, 1,072 B, *"(c) 2025-2026 MCP Brasil"*) | 🟢 **1,805** | **LATAM** (BR) | MCP server over **70 Brazilian public-sector APIs** (Python / FastMCP), **13 of its endpoints education**. The largest education-data tool surface placed in LATAM in this KB. ⚠️ **Identity unresolved — read the warning below before quoting it.** |
+| **MCP Brasil** | [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) (`main`) | 🟢 **MIT** (`LICENSE`, 1,072 B, *"(c) 2025-2026 MCP Brasil"*) | 🟢 **1,805** | **LATAM** (BR) | MCP server over **70 Brazilian public-sector APIs** (Python / FastMCP), **13 of its endpoints education**. The largest education-data tool surface placed in LATAM in this KB. 🟢 **Canonical address, settled in the seventeenth pass by root-commit comparison** — see the resolution below. |
 
-⚠️ **The identity warning, and it is why this row carries a caveat instead of a recommendation.**
-This KB already shelves [`dasgltd/mcp-brasil`](https://github.com/dasgltd/mcp-brasil) — **MIT,
-246★, recorded 2026-08-18, 97 tools, 13 of education**. Both addresses resolve, each has its own
-`HEAD`, the GitHub API reports neither as a fork of the other, and they are **7.3× apart in
-stars**. Until first-commit SHAs are compared, **which address is canonical is unknown**, and a
-client deliverable should pin a commit rather than a name.
+🟢 **RESOLVED in the seventeenth pass of 2026-10-06 — and the resolution corrects this KB,
+not the repository.** All three addresses were cloned with full history and share the root commit
+`8b786bfab09f2637bf842571250f4beb8ff5d216` (2026-03-22). `Mcp-Brasil/mcp-brasil` is **upstream**
+(1.8k★, 278 forks, no fork banner). [`dasgltd/mcp-brasil`](https://github.com/dasgltd/mcp-brasil)
+is a **fork of it** — its page reads *"forked from Mcp-Brasil/mcp-brasil"* — sitting at **0★** and
+in exact sync (same `HEAD` `2efb258`, same 246 commits, same 23 tags), which is why refs alone
+could not separate them. `marcellodesales/mcp-brasil` is a second fork, 8 commits behind.
+
+🔴 **Two pass-16 statements were wrong and are withdrawn here.** (1) *"the GitHub API reports
+neither as a fork of the other"* — the rendered page states the fork relationship plainly.
+(2) **`dasgltd/mcp-brasil` was recorded at "246★"; it has 0★, and 246 is its commit count** — the
+same figure this KB carries, correctly labelled, in a **commits / tags** column of
+`repos/trending.md`. A commit count was imported into the star column and carried for seven
+weeks. 🔵 **There was therefore never a 7.3× star gap between two projects: there is one project,
+and the KB was comparing it with a 0★ fork of itself.**
+
+🟢 **What to do in a deliverable:** pin `Mcp-Brasil/mcp-brasil` and pin a commit — the
+pin-a-commit advice stands, for versioning reasons rather than identity ones.
 
 ### What this pass searched for and did not find — stated as a gap, not as silence
 
@@ -2180,3 +2192,47 @@ The same author published [`SidneyBissoli/educabR`](https://github.com/SidneyBis
 FUNDEB and more). 🟢 **One identifiable individual is supplying both the global and the
 Brazilian education-statistics access layer, permissively.** ⚠️ Which is also a
 **bus-factor-of-one** note for anything built on either.
+
+---
+
+## Added in the seventeenth pass of 2026-10-06 — no new agent rows, one correction, and the reason both are the right outcome
+
+**This pass adds zero rows to the tables above, and that is a finding rather than a shortfall.**
+The channel it ran was the **ministry tier queried as `org:`** (`agents/trending.md`, Finding 4):
+eight national bodies, of which two have a code estate — **188 repositories from Finland's
+Opetushallitus and 6 from Sweden's Skolverket**. Not one of the 194 is an agent. They are
+curriculum services, study registries, learner-identity registries, admissions form engines,
+grant administration and an OER library.
+
+🔵 **Four consecutive passes have now run a state channel and none has found a state-published
+agent.** That is no longer a sampling result; it is the division of labour this KB sells into,
+and it is already written as `P25` in `compose/patterns.md`: **the state ships the substrate and
+leaves the agent to the market.** A fifth pass looking for a ministry tutor should expect to
+find a ministry *API*.
+
+### What this pass changed in the table above
+
+| Change | Row | Why |
+|---|---|---|
+| 🟢 **Caveat lifted** | **MCP Brasil** | Identity settled by root-commit comparison. `Mcp-Brasil/mcp-brasil` is upstream and is the address to pin. |
+| 🔴 **Figure withdrawn** | (prose) `dasgltd/mcp-brasil` **"246★"** | It has **0★**. 246 is its **commit count**, imported into the star column and carried since 2026-08-18. |
+| 🔴 **Claim withdrawn** | (prose) *"the API reports neither as a fork"* | The rendered page reads *"forked from Mcp-Brasil/mcp-brasil"*. |
+
+⚠️ **Nothing else on this shelf moved, and no row was re-measured this pass.** Star counts above
+still carry their **2026-10-06** morning readings; `curl` on `github.com` returned **403**
+throughout this pass, so a full re-read was not available at the price of one request per repo.
+
+### 🔴 The licence finding that decides whether 188 repositories can ever appear on this shelf
+
+Every Finnish payload read is **EUPL** (v1.1 or v1.2) — ten of ten. The EUPL is **OSI-approved**,
+so this is not an exclusion; but it is **copyleft whose reach includes network use**, and
+`lib/license_family.sh` — this KB's hardened classifier — contains **zero EUPL patterns**, so it
+returns `UNCLASSIFIED` for all of them. The full trace is Finding 6 of `agents/trending.md`; the
+commercial consequence is in `verticals/solutions.md` and `intel/trends.md` (§38).
+
+🟢 **For an agent builder the practical reading is short:** an agent that **calls** these services
+over their APIs is unaffected by their licence. An agent that **embeds or forks** their code into
+a hosted client product inherits an AGPL-shaped obligation. **That boundary, not the star count,
+is what decides the architecture** — and it is why this pass added a pattern (`P27`) rather than
+a row.
+

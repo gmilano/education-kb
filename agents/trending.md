@@ -8,6 +8,208 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — seventeenth pass: the identity question gets a first-hand instrument, and the Finnish estate is EUPL — which this KB's own classifier cannot read
+
+**Channel run:** the ministry tier **by `org:`, never by name** — pass 16's instruction 2,
+executed against all eight names it listed.
+**Instruction 1 (`mcp-brasil` identity) is CLOSED this pass**, and the answer is a correction,
+not an identity note.
+
+### 🟢 Finding 1 — the instrument changed, and that is what made instruction 1 answerable
+
+Pass 16 could not compare first-commit SHAs because the GitHub API is 403 here. This pass found
+two reachable instruments that between them answer the identity question **first-hand**:
+
+| Probe, 2026-10-06 | Result | What it buys |
+|---|---|---|
+| `git clone --filter=blob:none --no-checkout https://github.com/<any public repo>` | 🟢 **works** | **Root-commit SHA, HEAD SHA, commit count, tag count, full `ls-tree` file listing** — for any public repo, without the API |
+| `curl https://github.com/<owner>/<repo>` | 🔴 **403** | ⚠️ **Regressed since pass 16**, which read star counts from rendered pages. `curl` can no longer do it |
+| **`WebFetch` on the same `github.com` URL** | 🟢 **200** | Stars, fork count, **and the "forked from" banner** — the single field that settles canonicity |
+| `api.github.com` | 🔴 unreachable | unchanged |
+| `raw.githubusercontent.com` | 🟢 200 | unchanged — payload reads |
+
+🔵 **The lesson is narrower than "more tools are better".** Three passes carried
+`mcp-brasil` as *unresolved* because one instrument (the API) was assumed to be the only way to
+ask. **The question was never API-shaped: it is a git question, and git was reachable the whole
+time.** Before carrying a question forward again, re-ask what the question actually needs.
+
+### 🔴 Finding 2 — instruction 1, settled: this KB has been shelving a 0★ fork as the project
+
+All three addresses cloned, full history, 2026-10-06:
+
+| Address | Root commit | HEAD | Commits | Tags | ★ (same instant) | Fork banner |
+|---|---|---|---|---|---|---|
+| [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) | `8b786bf` | `2efb258` (2026-08-18) | 246 | 23 | 🟢 **1.8k** (278 forks) | 🟢 **none — this is upstream** |
+| [`dasgltd/mcp-brasil`](https://github.com/dasgltd/mcp-brasil) | `8b786bf` | `2efb258` (2026-08-18) | 246 | 23 | 🔴 **0** (0 forks) | 🔴 **"forked from Mcp-Brasil/mcp-brasil"** |
+| [`marcellodesales/mcp-brasil`](https://github.com/marcellodesales/mcp-brasil) | `8b786bf` | `7a7c49c` (2026-04-26) | 238 | 0 | not read | fork, **8 commits behind** |
+
+Root commit, identical on all three: `8b786bfab09f2637bf842571250f4beb8ff5d216`, 2026-03-22,
+*"chore: bootstrap project structure"*, author `root <eu@jonatassoares.com>`.
+
+🟢 **Verdict: one project, one canonical address, two forks.** `Mcp-Brasil/mcp-brasil` is
+upstream. `dasgltd/mcp-brasil` is a **fork of it that happens to be in exact sync** — same root,
+same HEAD, same 246 commits, same 23 tags — which is precisely why two passes could not tell
+them apart from refs alone. It is not a relaunch, not a vendored copy, and not a sibling.
+
+🔴 **And the pass-16 row said the opposite in two ways.** It recorded *"the GitHub API reports
+neither as a fork of the other"* — the rendered page states the fork relationship plainly — and
+it recorded **`dasgltd/mcp-brasil` at 246★**. That address has **0★**.
+
+### 🔴 Finding 3 — the 16th failure mode: a commit count imported into the star column
+
+`dasgltd/mcp-brasil` has **246 commits** and **0 stars**. This KB recorded **"246★"** for it on
+2026-08-18, and `repos/trending.md` line 7753 carries **`246 / 23`** for the same repo in a
+**commits / tags** column — the same two numbers, correctly labelled, in a different file.
+
+🔵 **So the star figure was never a star figure: it is the commit count, read off the wrong
+column of the same page and carried for seven weeks.** The defect class is new to this KB's
+register and it is not about licences: **a number that is plausible in two columns will be
+imported into either one, and nothing downstream can detect it**, because 246 is a perfectly
+reasonable star count. The two existing numeric gates (`p349-star-resolution-band`,
+`p351-star-digit-sweep`) both check the *shape* of a star figure, which 246 passes.
+
+⚠️ **The control this implies, for whoever writes the next numeric gate:** a star count that
+**equals that repo's commit count** is a flag, not a coincidence. Cheap to check, and it would
+have caught this one on the day it was written.
+
+### Finding 4 — instruction 2 executed in full: the ministry `org:` denominator
+
+Eight names, each as `github.com/orgs/<name>/repositories`:
+
+| `org:` queried | Exists | Public repos | Is it the body? | Education code estate |
+|---|---|---|---|---|
+| **`Opetushallitus`** (FI) | 🟢 yes | 🟢 **188**, *all* updated **2026-10-06** | 🟢 yes — Finnish National Agency for Education | 🟢 **the whole estate** (see Finding 5) |
+| **`Skolverket`** (SE) | 🟢 yes | 🟢 **6** | 🟢 yes — Swedish National Agency for Education | 🟢 **1 permissive asset** (Apache-2.0) |
+| `digst` (DK) | 🟢 yes | 🟢 44 | 🟢 yes — Digitaliseringsstyrelsen | 🔴 **none — wrong domain.** Digital-government agency: SAML, DCAT-AP-DK, model catalogue. No education asset |
+| `Mineduc` (CL/CO) | 🟢 name taken | 🔴 **0 public repos** | ⚠️ **unconfirmed** — nothing on the page establishes it as a ministry | 🔴 none |
+| `onderwijsinspectie` (NL) | 🟢 name taken | 🔴 **0 public repos** | ⚠️ unconfirmed | 🔴 none |
+| `stil` (DK) | 🔴 **404** | — | — | 🔴 none |
+| `DUO` (NL) | 🔴 **404** | — | — | 🔴 none |
+| `SEP` (MX) | 🟢 yes | 🟢 8 | 🔴 **no — name collision.** A software consultancy (`spark-kindling-framework`, `luxafor-cli`, `talent-lms-api`) | 🔴 none |
+
+🟢 **Measured yield: 2 of 8 ministry orgs carry an education code estate.** Pass 16's
+instruction was right that `org:` returns owners rather than funders — it removed the
+7,228-result funding-acknowledgement trap entirely. **But it does not remove the name trap, it
+moves it:** `SEP` is a real org owned by someone else, and `Mineduc` / `onderwijsinspectie` are
+*claimed names with nothing behind them*.
+
+⚠️ **Three verdicts that look alike and are not, and the KB should keep them apart:**
+**404** (name free — the body is not here under this name), **name taken with 0 repos** (someone
+holds it; the body may still publish elsewhere), and **name taken by someone else** (`SEP`). Only
+the first is evidence about the ministry. 🔴 **Chile, Colombia, Mexico and the Netherlands are
+therefore still unmeasured, not empty** — a gap, declared.
+
+### 🟢 Finding 5 — the Finnish estate is real, live, and uniformly EUPL
+
+**188 repositories, every one of the first 30 updated the day they were read.** Ten payloads read
+from `raw.githubusercontent.com` on each repo's **real default branch** (`ls-remote --symref`;
+six are `master`, not `main`):
+
+| Repository | Branch | Payload | Bytes | Licence, read from the payload | ★ |
+|---|---|---|---|---|---|
+| [`Opetushallitus/koski`](https://github.com/Opetushallitus/koski) | `master` | `LICENSE.txt` | 653 | 🟡 **EUPL-1.1** — *"(c) 2015 The Finnish National Board of Education"* | 23 |
+| [`Opetushallitus/ataru`](https://github.com/Opetushallitus/ataru) | `master` | `LICENSE.md` | 295 | 🟡 **EUPL-1.2** — *"(c) 2025 Finnish National Agency for Education"* | 11 |
+| [`Opetushallitus/valtionavustus`](https://github.com/Opetushallitus/valtionavustus) | `master` | `LICENSE.txt` | 652 | 🟡 **EUPL-1.1** — *"(c) 2026"* ⚠️ a 2026 copyright on the **superseded** licence version | 8 |
+| [`Opetushallitus/organisaatio`](https://github.com/Opetushallitus/organisaatio) | `master` | `LICENSE.txt` | 631 | 🟡 **EUPL-1.1** (2013) | 4 |
+| [`Opetushallitus/eperusteet`](https://github.com/Opetushallitus/eperusteet) | `master` | `LICENSE.txt` | 631 | 🟡 **EUPL-1.1** (2013) | 3 |
+| [`Opetushallitus/oppijanumerorekisteri`](https://github.com/Opetushallitus/oppijanumerorekisteri) | `master` | `LICENSE.txt` | 631 | 🟡 **EUPL-1.1** (2013) | 1 |
+| [`Opetushallitus/ehoks`](https://github.com/Opetushallitus/ehoks) | `master` | `LICENSE` | 631 | 🟡 **EUPL-1.1** (2018) | 1 |
+| [`Opetushallitus/suorituspalvelu`](https://github.com/Opetushallitus/suorituspalvelu) | `main` | `LICENSE` | 652 | 🟡 **EUPL-1.2** (2025) | 0 |
+| [`Opetushallitus/aoe`](https://github.com/Opetushallitus/aoe) → `aoe-web-backend/LICENSE` | `main` | **subdirectory** | 303 | 🟡 **EUPL-1.2** (2025) | 0 |
+| [`Opetushallitus/aoe`](https://github.com/Opetushallitus/aoe) → `aoe-web-frontend/LICENSE` | `main` | **subdirectory** | 303 | 🟡 **EUPL-1.2** (2025) | 0 |
+| [`Skolverket/dnp-ss12000-reference-api`](https://github.com/Skolverket/dnp-ss12000-reference-api) | `main` | `LICENSE` | 11,339 | 🟢 **Apache-2.0** (full text) | 5 |
+
+🔴 **`Skolverket/dnp-usermanagement` (7★) and `Skolverket/learning-assessments-f1`: NO-PAYLOAD.**
+The two most interesting Swedish documents — the DNP assessment-platform and user-management API
+specs — are ungranted.
+
+🟢 **`Opetushallitus/aoe` confirms probe trap #2 on a live national platform**: 6,829 commits,
+HEAD the day it was read, and **no root licence at all** — the grant lives in
+`aoe-web-backend/` and `aoe-web-frontend/`, one payload each. A root-only filename ladder writes
+AOE down as ungranted.
+
+### 🔴 Finding 6 — the 17th failure mode: this KB's hardened classifier has no EUPL rule at all
+
+`grep -c -i eupl compose/code/lib/license_family.sh` → **0**.
+
+⚠️ **This pass could not execute `lib/` either** (the same denial pass 16 recorded, now on its
+second consecutive pass), so the behaviour below is **traced by reading the code**, not measured
+by running it — stated that way deliberately, because pass 16's lesson was that re-deriving beats
+nothing and measuring beats re-deriving:
+
+1. The title-block `case` cannot match: **an EUPL payload has no title block.** It opens with a
+   *copyright line*, then *"This program is free software: Licensed under the EUPL, Version 1.1"*.
+2. The explicit-negative branch (line 224) does not fire — checked against the real payload,
+   none of its seven phrases appear.
+3. The 400-byte guard excludes the declaration branch: these payloads are **631–653 B**.
+4. `osi_family_of` therefore reaches its terminal `echo "UNCLASSIFIED"` (line 246).
+5. `family_of` then asks `commercial_use_ok`, which also finds none of its patterns in the
+   payload — so the verdict is **`UNCLASSIFIED`**, not `NONCOMMERCIAL-NOT-OSI`.
+
+🔵 **This is a miss, not a false verdict, and the distinction matters.** The instrument does not
+lie about the EUPL; it declines to read it, exactly as its own docstring says it should when
+there is no title block. **But an `UNCLASSIFIED` row cannot enter a deliverable under this KB's
+own gates — so the largest national education code estate it has ever found would be invisible
+to the instrument that is supposed to shelve it.** 188 repositories, zero rows.
+
+🟢 **The fix is one anchor, and it is structural rather than cosmetic: the EUPL is distributed as
+a short grant *notice*, never as a licence *text* in-tree.** Every one of the ten payloads is
+295–653 B and incorporates the terms **by reference**. So the EUPL cannot be classified by title
+block on principle — it needs a *grant-notice* anchor (`Licensed under the EUPL`), which is a
+second classification mode, not a 20th pattern in the first one.
+
+### 🔴 Finding 7 — a third payload class: the grant is present, by reference, and the pointer is dead
+
+The six EUPL-1.1 notices all say: *"You may obtain a copy of the Licence at:
+`http://www.osor.eu/eupl/`"*.
+
+| Probe | Result |
+|---|---|
+| `http://www.osor.eu/eupl/` | 🔴 **403** |
+
+🔴 **So the repository does not contain its own licence terms, and the address it gives for them
+does not serve them.** OSOR was retired years ago; the EUPL's canonical home is now
+`eupl.eu` / `interoperable-europe.ec.europa.eu`.
+
+🔵 **This KB has had two payload classes — present and `NO-PAYLOAD`. This is a third:
+`GRANT-BY-REFERENCE`,** where the file is present, names a real OSI licence, and resolves the
+actual terms nowhere. ⚠️ **For diligence it is *not* equivalent to a missing licence** (the named
+licence is public and unambiguous, and a dead URL does not revoke a grant), but it **is** a
+finding to put in writing: the terms must be pinned from the EC's text at a dated version,
+because the repo pins nothing.
+
+### Finding 8 — the two mandatory agent queries, failed for the thirteenth consecutive time
+
+Run with the year **computed** (`$(date +%Y)` → **2026**). `top open source AI agents education
+2026 github MIT` returned `openclaw` (385,407★), `browser-use`, Mem0, AutoGen, dify —
+generalist frameworks, **zero education-specific results**. `github trending education AI 2026`
+returned `ai-engineering-from-scratch`, Karpathy's *Zero to Hero*, `2026-AI-College-Jobs`.
+
+🔵 **Thirteen passes is no longer a result, it is a property**: *"AI education"* is a homonym and
+the open web answers the other sense of it. **Every row added in the last four passes came from
+a proper noun** — a platform, a standard, or an agency's name in its own language.
+
+### What the next pass should do
+
+1. 🟢 **Ship the EUPL anchor into `lib/license_family.sh` as a second classification mode**
+   (grant-notice, not title-block) — Finding 6. It is the only change that converts a
+   188-repository estate into shelvable rows. **Validate it against
+   [`p432-fromscratch-fixture-gate`](../compose/code/p432-fromscratch-fixture-gate/) plus the
+   ten payloads in Finding 5**, and include a **negative control**: an Apache-2.0 payload must
+   not come back EUPL because its body mentions a European licence.
+2. 🟢 **Add the commit-count/star-count equality flag** to the numeric gates — Finding 3. One
+   comparison, and it would have caught a figure this KB carried for seven weeks.
+3. **Measure the four unmeasured ministries properly** — Finding 4. `Mineduc`,
+   `onderwijsinspectie` and `SEP` are name-dead-ends, not evidence. Try the bodies' *own*
+   language and their national code-hosting habits (`gob.mx`, `datos.gob.cl`, NL's
+   `developer.overheid.nl`), the way `Utdanningsdirektoratet` and `Opetushallitus` were found.
+4. ⚠️ **Pass 15's instruction 3 (the four vendor ToU reads) is still open** and still not this
+   environment's to close. Carry it forward unanswered.
+5. ⚠️ **`IFRN/suapi` upstream licence ask: still not actionable** by an unattended pass — it is an
+   outward-facing write on a third party's repository. Needs a human or an explicit mandate.
+
+---
+
 ## 2026-10-06 — sixteenth pass: the ministry channel pays, and a from-scratch classifier re-imported four of this KB's own defects in one pass
 
 **Channel run:** the ministry tier, by name, one name at a time — pass 15's instruction 2.

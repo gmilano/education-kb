@@ -1163,3 +1163,66 @@ compliance profile.
 | Selling **courses** and needing catalogue + checkout + certificates | 🟢 **Richie + Joanie** | 🟢 **MIT both** — the commercial surface is clean |
 | Asking for **"the Odoo education ERP"** | ⚠️ **OdooEduERP, with the AGPL-3.0 conversation first** | 🔴 AGPL-3.0, declared in the module manifest — network copyleft reaches a hosted deliverable |
 | A **Norwegian** institution needing curriculum alignment | 🟢 **Grep SPARQL endpoint** (`repos/foundations.md`) | 🟢 **NLOD — commercial use granted** |
+
+---
+
+## Added in the seventeenth pass of 2026-10-06 — the national-platform tier, and the first licence on this page whose problem is *delivery model*, not permission
+
+Pass 15 found the SIS/MIS tier and reported that **none of it is permissive**. Pass 16 found the
+education-ERP shelf. This pass found something the page has not had: **a complete national
+platform estate, published by the state, under an OSI licence — where the blocker is neither
+"closed" nor "copyleft" but *how you intend to deliver it*.**
+
+### The tier, licence read from the payload on 2026-10-06
+
+| Platform | Owner | Licence (payload-verified) | Scale | What it runs in production |
+|---|---|---|---|---|
+| **AOE — Avointen oppimateriaalien kirjasto** ([`Opetushallitus/aoe`](https://github.com/Opetushallitus/aoe)) | 🇫🇮 Finnish National Agency for Education | 🟡 **EUPL-1.2** (`aoe-web-backend/LICENSE` + `aoe-web-frontend/LICENSE`, 303 B each) | **6,829 commits**, HEAD 2026-10-06, TypeScript | **Finland's national library of open educational resources** (`aoe.fi`) — upload, describe, license-tag and search OER, with a full editorial metadata model. |
+| **ePerusteet** ([`Opetushallitus/eperusteet`](https://github.com/Opetushallitus/eperusteet)) | 🇫🇮 same | 🟡 **EUPL-1.1** (631 B) | Java, active | **The national core curriculum and qualification requirements**, as a service rather than a PDF. |
+| **Koski** ([`Opetushallitus/koski`](https://github.com/Opetushallitus/koski)) | 🇫🇮 same | 🟡 **EUPL-1.1** (653 B) | Scala, 23★ | **National study-records service**: every study right and completed qualification, one API. |
+| **Ataru** ([`Opetushallitus/ataru`](https://github.com/Opetushallitus/ataru)) | 🇫🇮 same | 🟡 **EUPL-1.2** (295 B) | Clojure, 11★ | **The national admissions application engine** — generic form generation driving real intake. |
+| **eHOKS** ([`Opetushallitus/ehoks`](https://github.com/Opetushallitus/ehoks)) | 🇫🇮 same | 🟡 **EUPL-1.1** (631 B) | Clojure | **Personal competence-development plans** for vocational learners. |
+| **SS 12000 reference API** ([`Skolverket/dnp-ss12000-reference-api`](https://github.com/Skolverket/dnp-ss12000-reference-api)) | 🇸🇪 Swedish National Agency for Education | 🟢 **Apache-2.0** (11,339 B) | Java, 5★ | Not a platform — **the standard every Swedish school-administration system exchanges data through**, with a working implementation. |
+
+### 🔴 Read this before anyone proposes "the Finnish stack, customised with AI" to a client
+
+The EUPL is **OSI-approved open source** and nothing here is a permission problem. The problem is
+that **EUPL copyleft reaches network delivery**, and almost every engagement this page describes
+is network delivery.
+
+| Delivery model the studio is actually proposing | EUPL consequence |
+|---|---|
+| **Call** AOE / Koski / ePerusteet APIs from an agent we build | 🟢 **No obligation.** Using a service is not distribution. This is the safe default and it is where the value is. |
+| Deploy an **unmodified** instance for the client, on-prem or hosted | 🟢 Fine; ship the licence and the notices. |
+| **Modify** it and run it as the client's **hosted** product | 🔴 **Copyleft triggers.** Art. 1 counts *"communication to the public"* — making functionality available to others, including over a network — as Distribution. Our modifications must be offered under the EUPL. **This is the AGPL shape, and most studio proposals land here.** |
+| Modify it, combine with a GPL-3.0 / AGPL-3.0 / MPL-2.0 component, relicense the combined work | 🟡 **Permitted — Art. 5 compatibility list.** ⚠️ And the EC's own published discussion notes that because the compatible licence prevails on conflict, routing through **GPL-3.0** (which has no network clause) can **circumvent the SaaS obligation**. 🔴 **Do not sell this route.** It is documented, it is contested, and it is a question for the client's counsel, not for an architecture deck. |
+
+🔵 **The honest sales line, and it is a better one than a fork would have been:** *"We do not
+fork Finland's national services; we build the agent layer that calls them, and we can do that
+because the state published the interfaces."* **That proposal has no copyleft exposure at all**,
+and the national platform becomes an asset of the engagement rather than a licensing risk.
+
+### 🟢 Why the Swedish row changes the platform menu differently
+
+`dnp-ss12000-reference-api` is **Apache-2.0**, so it carries none of the above. It can go into a
+closed, hosted product, and what it gives is the thing integration projects actually burn budget
+on: **a national-standard conformant rostering/SIS data exchange, already implemented.**
+
+⚠️ **The limit, stated plainly:** SS 12000 is **Swedish**. It is not an EU standard and not a
+Nordic one by fiat. Whether the Finnish services can be reached through an SS 12000 shape — which
+would turn one country's standard into a regional integration layer — **is not established in
+this KB and should not be implied in a deck.**
+
+### Platform selection shortcut — seventeenth-pass additions
+
+- **Client wants a national OER library** → **AOE** is the only state-run, OSI-licensed one here.
+  Call it or deploy it unmodified; do not fork it into a hosted product.
+- **Client wants curriculum alignment in EMEA** → **Grep/NLOD (Norway)** if commercial reuse of the
+  *data* is the requirement (NLOD grants it outright); **ePerusteet (Finland)** if the requirement is
+  depth of the curriculum model. `P25` and `P27` in `compose/patterns.md`.
+- **Client wants Swedish school-data integration** → **SS 12000 reference API**, Apache-2.0, lift it.
+- **Client wants a learner-identity or study-records model to copy** → read **`oppijanumerorekisteri`**
+  and **`koski`**; take the model, write your own code. Reading carries no obligation.
+- 🔴 **Client wants to white-label a national platform as their SaaS** → **stop.** That is the one
+  cell in the table above that is red, and it is the most common thing to be asked for.
+

@@ -3460,3 +3460,163 @@ That gate is now shipped as `compose/code/p432-fromscratch-fixture-gate/`.
 this KB's licence figures are only as good as the instrument that read them, and **the instrument
 must be validated against inputs chosen to break it, not against the answers you expect.** An
 instrument tested only on MIT repositories scores 100% while calling MIT repositories MPL-2.0.
+
+---
+
+## What changed in the seventeenth pass of 2026-10-06
+
+### Global market figures — and a conflict this pass refuses to average
+
+| Source read this pass | 2025 | 2026 | Horizon | Stated CAGR |
+|---|---|---|---|---|
+| Forecast A | $8.3B | **$11.4B** | $57.2B by 2033 | **25.9%** |
+| Forecast B (the figure pass 16 published) | $7.52B | **$10.6B** | — | **40.9%** |
+
+🔴 **These are not two estimates of one number, they are two incompatible growth models.**
+Compounding B's own 40.9% from $7.52B reaches roughly **$160B by 2033 — about 2.8× A's $57.2B**.
+The near-term steps, however, agree within ~8% ($10.6B vs $11.4B for 2026).
+
+🟢 **The rule for a client deck, and it is a commercial rule rather than a methodological one:**
+**quote the 2026 figure as a range ($10.6–11.4B) and attribute every horizon number to its
+publisher by name.** A single confident 2033 number is the one claim in this file most likely to
+be challenged by a client's own analyst, and the challenge would be correct.
+
+### Demand-side figures, re-read this pass
+
+| Measure | Value | Where it applies |
+|---|---|---|
+| Student AI use | **92%** (2025), from 66% in 2024 | Global |
+| Higher-ed students using AI as primary research/brainstorming partner | **86%** entering 2026 | Global |
+| US K-12 teachers who used AI in 2024-25 | **60%** (32% at least weekly) | North America |
+| Institutions with **formal** AI guidelines | 🔴 **10%** of 450+ surveyed | EMEA |
+| Cloud delivery share | 71.22% | Global |
+| K-12 share of adoption | 45.62% | Global |
+
+🔵 **The spread between 92% student use and 10% institutional governance is the whole
+addressable market in one line**, and it has widened rather than closed since pass 16. Demand
+arrived; policy did not. **Governance work is not an adjacent sale here — for a 2026 engagement
+it is the entry point.**
+
+## Opportunities by region
+
+### North America
+
+🔴 **Regulatory load is now the dominant procurement variable, and it is per-state.** **134 bills
+on AI in education across 31 states** this session, plus ~100 tracked state bills touching student
+AI use and 1,500+ AI bills overall. Named instruments read this pass: **California AB 1159**
+(prohibits using student data to train AI models), **Idaho SB 1227** (data-privacy requirements
+for school AI tools), and **Oklahoma and Maryland** rules requiring human oversight and banning
+AI from high-stakes decisions about students. Federally, the **K-12 AI Literacy and Readiness Act
+of 2026** advanced out of the House Education and Workforce Committee, and a student-authored
+**STUDENTS FIRST Act of 2026** framework came out of all 50 states.
+
+🟢 **Market weight justifies the compliance cost:** North America is **36% of the global market,
+$3.68B in 2026**, forecast to **$32B by 2030**.
+
+🟢 **The sellable offer, sharpened by the AB 1159 shape:** a deployment that can *prove* student
+data never entered a training run. **"No-training-on-student-data" is becoming a contractual
+term, not a reassurance** — and it is an architecture deliverable (data-flow attestation, retention
+boundaries, per-vendor ToU citations) that a studio can produce and a brochure cannot.
+⚠️ Pass 16's unanswered question stands: the four-vendor ToU channel is still unread, so the
+procurement thesis remains evidenced by one vendor, not four.
+
+### EMEA
+
+🟢 **This is the region where this pass found supply, and the single most important fact is a
+date: the EU AI Act's high-risk obligations for education apply from August 2026 — they are in
+force as this is written, not forthcoming.** Education access and assessment — admissions
+decisions, student evaluation, exam scoring — are **high-risk**, which means risk management, data
+governance, human oversight, transparency and conformity assessment **before** deployment.
+Against that, **only 10% of 450+ institutions surveyed have formal AI guidelines.**
+
+Market: **$2.64B in 2026 → $8.0B by 2030, 31.9% CAGR.** Finland, Estonia and the Netherlands lead
+K-12 integration; the UK put **£4M** into AI for lesson planning and marking. Outside the EU, the
+**UAE** (National AI Strategy 2031, AI Ethics Guidelines) and **Saudi Arabia** (SDAIA governance
+framework) are the regional AI-policy anchors.
+
+🟢 **New supply, placed this pass:** **188 live repositories from Finland's Opetushallitus** — the
+national curriculum service, study records, learner-identity registry, admissions engine,
+attainment service, vocational plans, grant administration, and the **national OER library (AOE,
+6,829 commits)** — plus **Sweden's SS 12000 reference API under Apache-2.0**. Full tables in
+`repos/foundations.md` and `verticals/solutions.md`.
+
+⚠️ **And the licence is the commercial finding, not a footnote.** The Finnish estate is **EUPL**,
+whose copyleft reaches **network delivery** the way AGPL does. 🟢 **That makes the high-margin
+offer the API-layer offer** — build the agent that calls the national services, which carries no
+copyleft exposure — and makes "white-label the national platform as the client's SaaS" the one
+proposal to refuse. **EMEA is therefore the region where the conformity work and the supply are
+the same engagement**: the state publishes the substrate, the Act obliges the governance, and
+both are billable.
+
+### APAC
+
+🟢 **Three binding AI statutes inside twelve months, and one of them names education
+explicitly.** **Vietnam's Law on Artificial Intelligence took effect 2026-03-01**, with high-risk
+coverage across six sectors **including education — naming automated assessment and behavioural
+monitoring**. **South Korea's AI Basic Act entered force 2026-01-22**; **Taiwan** passed its AI
+Basic Act in December 2025. China enforces binding rules on algorithms, deep synthesis and
+generative AI; **Singapore and Japan remain voluntary-guidance** regimes backed by existing law.
+
+🔵 **The regional read is divergence, and divergence is the product.** A platform sold across
+APAC now needs **per-jurisdiction conformance**, not a regional posture: the same assessment
+feature is a high-risk system in Hanoi, a statutory-duty system in Seoul and a voluntary-guidance
+system in Singapore. 🟢 **The sellable artefact is a jurisdiction matrix wired into the product's
+own configuration** — which obligations switch on which features, per country — and it is
+precisely the kind of work a studio with multi-country delivery can price and a local vendor
+cannot.
+
+Market: China, India and Japan dominate regional spend; named incumbents in the region's
+AI-in-education market are Google, Microsoft, IBM, Pearson and Byju's. ⚠️ **Open-source supply
+remains thin:** this KB's only APAC-origin education asset is still `panaversity/learn-agentic-ai`
+(MIT, Pakistan), and no APAC ministry estate has yet been found — **unmeasured, not empty.**
+
+### LATAM
+
+🟢 **Adoption is the highest-evidenced of any region and the governance gap is the widest.** The
+Digital Education Council's **AI in Higher Education LATAM Survey 2026** (with Tecnológico de
+Monterrey's Institute for the Future of Education, supported by **AIGEN** and **RIE360**) reports
+**92% of students and 79% of faculty** engaging with AI — student use **6 points above** the 2024
+global figure — while **88% of faculty describe their own engagement as "minimal" to "moderate"**
+and **72% hold positive views, against 57% globally**. **UNESCO** warns that institutions across
+Latin America and the Caribbean are using generative AI for teaching, learning and research
+**without policies to govern it**.
+
+🔵 **Enthusiasm high, depth low, policy absent — that is a capability-transfer market, not a
+licence market.** The engagement that fits is **faculty enablement plus an institutional AI
+policy that is actually implemented in the systems**, and the 72%-vs-57% sentiment gap says the
+region will buy it rather than resist it.
+
+🟢 **Supply, corrected this pass:** `Mcp-Brasil/mcp-brasil` (**MIT**) is confirmed as the
+**canonical** address for the 70-API Brazilian public-data MCP surface, **13 endpoints of it
+education** — identity settled by root-commit comparison. Together with `SidneyBissoli/educabR`
+(MIT, CRAN, eleven INEP instruments), **Brazil has the best-evidenced permissive education-data
+layer in the region.**
+
+🔴 **And the rest of the region is still unmeasured.** This pass queried `Mineduc` (Chile,
+Colombia) and found the **org name claimed with zero public repositories**, and `SEP` (Mexico)
+resolves to **an unrelated software company**. ⚠️ **Neither result is evidence that those
+ministries publish nothing** — they are evidence that the name was the wrong instrument.
+**Chile, Colombia and Mexico remain gaps, declared.**
+
+## The method note, stated plainly — seventeenth pass
+
+🟢 **The identity question got a first-hand instrument this pass, and it closed a question two
+passes had carried as unanswerable.** `git clone --filter=blob:none` works against any public
+repository here, which yields root-commit SHAs, HEADs and commit/tag counts without the GitHub
+API — and `WebFetch` reads `github.com` pages (stars, fork banner) even though **`curl` on the
+same URL now returns 403**.
+
+🔴 **Two published figures are withdrawn by this pass.** (1) The claim in the sixteenth-pass LATAM
+note that *"two live addresses share that name (the other at 246★)"* — there is **one project**;
+`dasgltd/mcp-brasil` is a **0★ fork** of the canonical address. (2) The **"246★"** itself: it is
+that fork's **commit count**, imported into the star column on 2026-08-18 and carried for seven
+weeks. 🔵 **The diligence lesson is the general one:** a number that is plausible in two columns
+of the same page will eventually be read from the wrong one, and no downstream check will notice,
+because **246 is a perfectly reasonable star count.**
+
+⚠️ **This pass could not execute the KB's own licence instrument** (`compose/code/lib/*.sh`,
+denied for the second consecutive pass), so the ten EUPL payloads behind the EMEA opportunity
+above were **read by hand**, and the classifier's behaviour on them was **traced by reading the
+code rather than measured by running it**. Stated so that the next pass knows which claims here
+are first-hand (the payloads) and which are inferred (the classifier verdict).
+

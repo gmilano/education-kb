@@ -1185,7 +1185,7 @@ a machine-readable service, with a written commercial grant.**
 | Repo | Branch | Licence (read from payload) | ★ | What it gives you |
 |---|---|---|---|---|
 | [`SidneyBissoli/educabR`](https://github.com/SidneyBissoli/educabR) | `main` | 🟢 **MIT** — ⚠️ declared in **`DESCRIPTION`**, not `LICENSE` | 15 | **CRAN** package v1.2.0.9000. Download + process **INEP** microdata: Censo Escolar, ENEM, SAEB, Censo da Educação Superior, ENADE, ENCCEJA, IDD, CPC, IGC, CAPES, FUNDEB. **Eleven national instruments behind one MIT API.** |
-| [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) | `main` | 🟢 **MIT** (1,072 B) | 1,805 | 70 Brazilian public APIs as MCP tools, 13 of them education. ⚠️ Identity caveat in `agents/top.md`. |
+| [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) | `main` | 🟢 **MIT** (1,072 B) | 1,805 | 70 Brazilian public APIs as MCP tools, 13 of them education. 🟢 **Canonical — identity settled in the seventeenth pass** (root-commit comparison; `dasgltd/mcp-brasil` is a 0★ fork of this address). |
 | [`inepdadosabertos/api`](https://github.com/inepdadosabertos/api) | `master` | 🔴 **GPL-2.0** (18,025 B) | 45 | Civil-society open-data API over INEP. ⚠️ **Created 2014** — treat as reference, not as a dependency, and note it is *not* INEP's own. |
 | [`lucasmation/microdadosBrasil`](https://github.com/lucasmation/microdadosBrasil) | `master` | 🔴 **NO-PAYLOAD** | 174 | Reads Brazilian public microdata (CENSO, PNAD). The most-starred of this group and the one you cannot use. |
 
@@ -1239,3 +1239,70 @@ teachers' material and no ministry estate, Japan publishes PDFs plus a CC0 kanji
 Gulf publishes nothing findable. **Norway is the exception that shows what the other four are
 missing** — and `P25` is written so the Norwegian case is the reference implementation and the
 others are a documented substitution.
+
+---
+
+## Added in the seventeenth pass of 2026-10-06 — a national standard you can lift, and a national estate you cannot
+
+The channel was the **ministry tier as `org:`**. Two agencies had an estate; they split along a
+line that decides how each one enters an engagement.
+
+### 🟢 The permissive row — a national interoperability standard, Apache-2.0
+
+| Repository | Branch | Licence (payload-verified) | ★ | Why it belongs on this shelf |
+|---|---|---|---|---|
+| [`Skolverket/dnp-ss12000-reference-api`](https://github.com/Skolverket/dnp-ss12000-reference-api) | `main` | 🟢 **Apache-2.0** (`LICENSE`, 11,339 B, full text) | 5 | **Reference implementation of SS 12000**, the Swedish national standard for information exchange between school administration systems — published by the national agency itself, Java, permissive. 🟢 **The rostering/SIS-interop layer this KB has been missing a permissive entry for:** `p230-rostering-layer-axis` exists because every prior candidate on that layer was copyleft, vendor-hosted or ungranted. |
+
+🔵 **Why one row matters more than its star count.** Everything else this KB shelves on the
+student-data layer is either a *platform* (which you adopt whole) or a *client* for someone's
+proprietary API. A **standard with a permissive reference implementation** is the third thing:
+you can implement it, ship it inside a closed product, and the other end of the wire is a
+national specification rather than a vendor's roadmap. ⚠️ **5★ is not a maturity signal here** —
+a reference implementation of a national standard is used by integrators who do not star it.
+
+### 🟡 The Finnish estate — nine of 188, read correctly, and shelved with a condition
+
+**`org:Opetushallitus` has 188 public repositories, all live on the day they were read.** Nine
+payloads read from the real default branch (**six are `master`**):
+
+| Repository | Branch | Licence (payload-verified) | ★ | Layer it supplies |
+|---|---|---|---|---|
+| [`Opetushallitus/eperusteet`](https://github.com/Opetushallitus/eperusteet) | `master` | 🟡 **EUPL-1.1** (631 B) | 3 | **National core curriculum + qualifications** (ePerusteet). Finland's analogue of Norway's Grep. |
+| [`Opetushallitus/koski`](https://github.com/Opetushallitus/koski) | `master` | 🟡 **EUPL-1.1** (653 B) | 23 | **National study records** — qualifications and study rights in one service. |
+| [`Opetushallitus/aoe`](https://github.com/Opetushallitus/aoe) | `main` | 🟡 **EUPL-1.2** (303 B ×2, **in subdirectories**) | 0 | **National OER library** (`aoe.fi`), 6,829 commits. |
+| [`Opetushallitus/ataru`](https://github.com/Opetushallitus/ataru) | `master` | 🟡 **EUPL-1.2** (295 B) | 11 | **Admissions application forms** — generic form generation. |
+| [`Opetushallitus/organisaatio`](https://github.com/Opetushallitus/organisaatio) | `master` | 🟡 **EUPL-1.1** (631 B) | 4 | **Register of providers and institutions** — the join key for the rest. |
+| [`Opetushallitus/oppijanumerorekisteri`](https://github.com/Opetushallitus/oppijanumerorekisteri) | `master` | 🟡 **EUPL-1.1** (631 B) | 1 | **National learner identity** (learner-number registry). |
+| [`Opetushallitus/ehoks`](https://github.com/Opetushallitus/ehoks) | `master` | 🟡 **EUPL-1.1** (631 B) | 1 | **Personal competence-development plans** (vocational). |
+| [`Opetushallitus/suorituspalvelu`](https://github.com/Opetushallitus/suorituspalvelu) | `main` | 🟡 **EUPL-1.2** (652 B) | 0 | **Attainment service** (2025, newest). |
+| [`Opetushallitus/valtionavustus`](https://github.com/Opetushallitus/valtionavustus) | `master` | 🟡 **EUPL-1.1** (652 B, **(c) 2026**) | 8 | **State-grant administration** for providers. |
+
+🔴 **179 of the 188 are unread, not absent.** This table is a sample chosen by stars and by
+domain relevance, and it should be read as such.
+
+### ⚠️ The condition on the Finnish rows, stated once and precisely
+
+**The EUPL is OSI-approved, so these are open source.** What makes them different from every
+other row on this shelf is **where the copyleft reaches**:
+
+| Question | Answer |
+|---|---|
+| May we read, study, run and modify it? | 🟢 Yes. |
+| May we **call these services** from our own agent over their APIs? | 🟢 **Yes, and the licence is irrelevant to that** — calling is not distribution. |
+| May we fork it into a **hosted** client product and keep our changes closed? | 🔴 **No.** EUPL Art. 1 assimilates *"communication to the public"* to distribution, so **SaaS delivery triggers the copyleft, AGPL-style**. |
+| May the combined work be relicensed? | 🟡 **Yes — EUPL Art. 5 carries a compatibility list** (GPL-2.0/3.0, AGPL-3.0, LGPL, MPL-2.0, EPL, CeCILL, OSL). ⚠️ Compatible-licence terms *prevail on conflict*, and the EC's own discussion notes the SaaS obligation can be circumvented that way. **Do not build a commercial plan on that route without counsel.** |
+
+🔵 **The shelving rule this produces:** the Finnish estate belongs on this shelf as a **domain
+model and an integration target**, not as a starting codebase. It is the most complete public
+description of how a national education system's data actually fits together — curriculum,
+provider register, learner identity, study records, attainment, plans, grants — and reading it
+is free of licence consequence. **Forking it into a hosted product is the one move that is not.**
+
+### 🔴 And the instrument cannot see any of it
+
+`grep -c -i eupl compose/code/lib/license_family.sh` → **0**. Traced through the code (it could
+not be executed this pass), every payload above lands on `UNCLASSIFIED`: the EUPL ships as a
+**300–650 B grant notice with no title block**, and the classifier is a title-block classifier by
+design. 🟢 **Until a grant-notice anchor exists, these nine rows are the only EUPL rows this KB
+can defend, because they were read by hand.** That work is instruction 1 for the next pass.
+

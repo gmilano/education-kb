@@ -2673,3 +2673,173 @@ hardest test a public-sector codebase can pass.
 3. ⚠️ **Child data is the most sensitive category this KB touches.** GDPR, national ECEC law and
    municipal data-protection officers all apply before the AI Act does. Scope the DPO
    conversation into week one.
+
+---
+
+## P27 — Curriculum-aligned tutoring on a national service estate, without forking it (EMEA, Finland shape)
+
+**The pattern this page has needed since the EU AI Act's high-risk duties came into force in
+August 2026, and the pass that found the substrate also found the reason not to fork it.**
+`P25` works against Norway's Grep because **NLOD grants commercial reuse of the data outright**.
+Finland's estate is bigger — **188 live repositories covering curriculum, learner identity, study
+records, attainment, admissions and a national OER library** — and is **EUPL**, whose copyleft
+reaches network delivery. 🟢 **So this pattern's thesis is a boundary: everything you fork is
+MIT/Apache; everything EUPL you only ever call.**
+
+### Components (every licence payload-verified 2026-10-06)
+
+| Role | Component | Licence | Fork or call? |
+|---|---|---|---|
+| **Curriculum objectives** | [`Opetushallitus/eperusteet`](https://github.com/Opetushallitus/eperusteet) — national core curriculum + qualification requirements (`master`) | 🟡 **EUPL-1.1** (631 B) | 🔴 **CALL ONLY** |
+| **OER content pool** | [`Opetushallitus/aoe`](https://github.com/Opetushallitus/aoe) — the national OER library, `aoe.fi` (`main`) | 🟡 **EUPL-1.2** (303 B, in subdirectories) | 🔴 **CALL ONLY** |
+| **Prior attainment** | [`Opetushallitus/koski`](https://github.com/Opetushallitus/koski) — national study records (`master`) | 🟡 **EUPL-1.1** (653 B) | 🔴 **CALL ONLY** |
+| **Identity / provider model** | [`Opetushallitus/oppijanumerorekisteri`](https://github.com/Opetushallitus/oppijanumerorekisteri) + [`organisaatio`](https://github.com/Opetushallitus/organisaatio) | 🟡 **EUPL-1.1** (631 B each) | 🟡 **READ THE MODEL**, write your own code — reading carries no obligation |
+| Agent runtime | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 🟢 **Apache-2.0** | 🟢 fork freely |
+| Tutoring loop | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** | 🟢 fork freely |
+| **Auditable mastery model** | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) — Bayesian Knowledge Tracing | 🟢 **MIT** | 🟢 fork freely |
+| Item generation | [`satvik314/educhain`](https://github.com/satvik314/educhain) | 🟢 **MIT** | 🟢 fork freely |
+| Source-backed pedagogy | [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) | 🟢 **Apache-2.0** | 🟢 fork freely |
+| Tool allowlist | `compose/code/mcp-allowlist-gateway/` | — | — |
+| Oversight gate | `P11` | — | — |
+| AI Act profile | `P13` | — | — |
+
+### Wiring
+
+1. **Put the licence boundary in the architecture diagram, not in a footnote.** Draw one line:
+   north of it, the four Finnish services, reached **only** over HTTP. South of it, your
+   Apache/MIT code. 🔵 **Nothing EUPL is ever compiled, vendored, copied or containerised into the
+   deliverable** — and because "communication to the public" is Distribution under EUPL Art. 1,
+   *hosting* a modified copy for the client is exactly the move that triggers the copyleft.
+   **Calling an API is not.**
+2. **Pull the objectives from `eperusteet` and cache them as your own derived index**, keyed by
+   qualification and objective id. ⚠️ The *data* served by a EUPL-licensed service is not itself
+   covered by the code's licence — but **do not assume it is open**: unlike Norway's NLOD, this
+   pass established the **code** licence, not a data licence. 🔴 **Establish the terms of the data
+   before a commercial deliverable depends on it** — that is one document, and it is not in this
+   KB yet.
+3. **Retrieve learning material from AOE** over its API and keep AOE's per-resource licence tag
+   with every retrieved item. AOE exists to express OER licences (`edit-license` is a first-class
+   component of its UI), so the metadata you need is already in the payload — **carry it through
+   to the learner-facing citation** rather than discarding it at ingest. `p345-oer-four-forms`.
+4. **Build the tutoring loop on `DeepTutor` + `smolagents`**, with the agent's tool surface
+   restricted by `mcp-allowlist-gateway` to exactly: curriculum lookup, OER search, prior
+   attainment read, item generation. 🟢 **smolagents is the right runtime here specifically
+   because its surface is small enough to audit** — which is a conformity argument, not a
+   preference.
+5. **Do mastery estimation in `OATutor`'s BKT, not in the LLM.** 🔴 **This is the step that makes
+   the deployment defensible.** Student evaluation is a **high-risk** function under the AI Act
+   from August 2026; a Bayesian knowledge-tracing model has inspectable parameters and a stated
+   error characteristic, and an LLM's judgement of mastery has neither. **The LLM explains and
+   converses; the BKT decides what the learner knows.**
+6. **Read `koski` for prior attainment, never write to it.** Treat it as the system of record it
+   is.
+7. **Gate every assessment-shaped output through `P11`** with a named human decision-maker, and
+   **run `P13`** to produce the AI Act determination per function.
+
+### Deliverables
+
+* An agent layer whose entire dependency tree is MIT/Apache — **auditable in one `pip`/`npm`
+  licence report**, with the EUPL services appearing as *endpoints*, not dependencies.
+* A derived curriculum index with the provenance of every objective (service, qualification,
+  retrieval date).
+* A BKT mastery model with parameters, training window and error characteristics stated.
+* OER citations carrying each resource's own licence tag end-to-end.
+* A `P13` AI Act high-risk determination for the assessment and tutoring functions, plus the
+  `P11` oversight record.
+* 🟢 **A one-page licence-boundary memo** naming every EUPL service called and asserting that no
+  EUPL code is distributed. ⚠️ **This is the document that makes the engagement sellable to a
+  public buyer's lawyer** — produce it in week one, not at handover.
+
+### ⚠️ Warnings
+
+1. 🔴 **Do not fork the Finnish estate into a hosted product, and do not route around the
+   copyleft via EUPL Art. 5.** The compatibility list is real (GPL-2.0/3.0, AGPL-3.0, LGPL,
+   MPL-2.0, EPL, CeCILL, OSL) and the EC's own discussion notes the SaaS obligation **can be
+   circumvented** by combining with GPL-3.0. **It is documented, it is contested, and selling it
+   as a plan puts the client's compliance on a disputed reading.** Counsel decides, not an
+   architect.
+2. ⚠️ **The six EUPL-1.1 notices point at `http://www.osor.eu/eupl/`, which returns 403.** The
+   repositories do not contain their own terms. **Pin the EUPL text from the EC's dated version**
+   in the licence memo; do not cite the repository's URL.
+3. 🔴 **Six of the nine repositories' default branch is `master`, not `main`.** Any script in this
+   pattern that resolves a branch must use `git ls-remote --symref`. Hardcoding `main` writes
+   two thirds of the estate down as missing.
+4. ⚠️ **179 of the 188 repositories are unread.** If the engagement needs a service not in the
+   component table, **probe its payload before designing against it** — the estate's licence
+   picture is sampled, not established.
+5. 🔴 **This pattern is Finland-shaped, and the substitution is not automatic.** For Norway use
+   `P25` (Grep, NLOD, commercial reuse granted). For everywhere else, **the curriculum substrate
+   has to be found before this pattern applies** — and four passes of ministry channels say most
+   countries do not publish one.
+
+---
+
+## P28 — A standards-conformant student-data bridge with a no-training attestation (EMEA Sweden shape; the attestation travels to North America)
+
+**Two findings this pass combine into one engagement.** Sweden publishes **SS 12000** — its
+national standard for information exchange between school administration systems — with an
+**Apache-2.0 reference implementation** from the national agency. North America's procurement
+question, meanwhile, has hardened into a contractual term: **California AB 1159 prohibits using
+student data to train AI models**, and Idaho SB 1227 imposes data-privacy requirements on school
+AI tools. 🟢 **A conformant bridge plus a provable no-training boundary is the same build.**
+
+### Components (licences payload-verified 2026-10-06)
+
+| Role | Component | Licence |
+|---|---|---|
+| **Standards bridge** | [`Skolverket/dnp-ss12000-reference-api`](https://github.com/Skolverket/dnp-ss12000-reference-api) — SS 12000 reference implementation, Java (`main`) | 🟢 **Apache-2.0** (11,339 B, full text) — 🟢 **liftable into a closed product** |
+| LMS tool surface | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) — up to 103 Canvas tools, WCAG scanner, bulk grading | 🟢 **MIT** |
+| Moodle surface (out-of-tree) | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 **MIT** |
+| Tool allowlist + egress control | `compose/code/mcp-allowlist-gateway/` | — |
+| Oversight gate | `P11` | — |
+| AI Act profile | `P13` | — |
+
+### Wiring
+
+1. **Lift the SS 12000 reference API as the canonical data shape** for roster, group, enrolment,
+   person and activity. 🟢 Apache-2.0 means it can ship inside a closed, hosted product with
+   attribution and notices — **no copyleft, no delivery-model constraint.** This is the one
+   national-agency asset in this KB you can simply take.
+2. **Map every LMS surface onto that shape, not onto each other.** Canvas via `canvas-mcp`,
+   Moodle via `moodle-mcp-server` (⚠️ **MIT precisely because it sits outside the GPL Moodle
+   tree** — keep it there; an in-tree plugin inherits GPL-3.0).
+3. **Terminate all student-data egress at `mcp-allowlist-gateway`.** One process, one allowlist,
+   one log. 🔵 **The attestation in step 5 is only as good as the number of places data can
+   leave** — make that number one.
+4. **Make the no-training boundary a configuration, not a promise:** no student-identifying field
+   crosses the gateway to a model provider; retrieval sends objective ids and de-identified
+   features; retention windows are declared per field and enforced at the gateway.
+5. **Produce the attestation as a build artefact**, generated from the gateway's own allowlist and
+   schema — so it cannot drift from the running system. ⚠️ **A hand-written attestation that the
+   code can contradict is worse than none**: it is a representation about personal data.
+6. **Run `P13`** where the bridge feeds any assessment function, and **`P11`** on every graded
+   output. Note `canvas-mcp`'s bulk-grading tools are exactly the surface that turns this into a
+   high-risk system — **gate them explicitly**.
+
+### Deliverables
+
+* An SS 12000-conformant bridge with a per-source field-mapping table.
+* A gateway allowlist, as code, with the egress log it produces.
+* 🟢 **A generated no-training-on-student-data attestation**, traceable to the allowlist and
+  schema that enforce it — the artefact AB 1159 makes procurement-relevant and that most
+  competitors answer with a sentence in a brochure.
+* Per-field retention declarations enforced at the gateway.
+* `P13` determinations and `P11` oversight records for graded outputs.
+
+### ⚠️ Warnings
+
+1. ⚠️ **SS 12000 is Swedish.** It is not an EU or Nordic standard by fiat, and **this KB has not
+   established** that Finland's services can be reached through an SS 12000 shape. 🔴 **Do not
+   imply a regional standard in a deck** — propose it as a data shape you have chosen and can
+   defend, which is a true and sufficient claim.
+2. 🔴 **The two most interesting Swedish documents are ungranted.**
+   `Skolverket/dnp-usermanagement` (7★) and `dnp-provplattform` — the national digital-assessment
+   platform and user-management specifications — are **NO-PAYLOAD**. Design against the
+   Apache-2.0 reference API, **not** against those specs.
+3. ⚠️ **"AI training is prohibited" is a per-vendor fact.** The fifteenth pass read one SIS
+   vendor's Terms of Use; four remain unread and egress-blocked. **Cite the district's own
+   vendor's ToU, dated, and price the verification** — do not assert a sector norm.
+4. 🔴 **Do not let the attestation imply more than it covers.** It is a statement about **this
+   deployment's egress**, not about the client's other systems, and the memo must say so in the
+   first sentence.
+
