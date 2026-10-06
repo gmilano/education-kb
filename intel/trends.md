@@ -663,6 +663,113 @@ secondary outlets; the **biometric** qualifier on category 3 appeared in only on
 of the two. **Verify against the decree before this reaches a client
 deliverable**, and treat the biometric narrowing as the least-confirmed element.
 
+## 23. The licence label and the licence grant have come apart — and reading the payload is no longer enough
+
+**Added in the eighth pass of 2026-10-06. This is a correction to how every
+other trend in this file was verified.**
+
+Eight passes of this KB established one verification rule: never trust a badge,
+a sidebar or a blog post — **read the `LICENSE` payload from
+`raw.githubusercontent.com`.** That rule bought real accuracy, and this pass
+found its ceiling. **Four live cases, and the payload is wrong or silent in
+every one:**
+
+| Case | Payload says | Grant actually is | Direction |
+|---|---|---|---|
+| `Llamacha/IWSLT2023_Quechua_data` | **Apache-2.0**, complete and unambiguous | README: audio is **CC BY-NC-ND 3.0**, owned by Siminchikkunarayku + Llamacha | Payload **too permissive** |
+| **Latam-GPT** (CENIA) | *(no repository located)* | **Llama 3.1 Community License** © Meta — **not OSI-approved**, AUP + 700M-MAU clause | Label **too permissive** |
+| `caiuc/equipo-*` × 20 | **MIT**, complete | Holder is **CAi UC**, the event organiser, not the authoring teams — **template-inherited** | Grant **not issued by the author** |
+| `AmericasNLP/americasnlp{2021,2022,2023,2024}` | **Nothing** | No grant at all, across four editions of a flagship venue — including a 2024 shared task on *creating educational materials* | **Silent** |
+
+**The three shapes of failure, named so they can be checked for:**
+
+1. **Wrong scope.** A correct, complete licence file that governs the
+   repository's *scripts* while the *data* — the only reason to clone it — is
+   governed elsewhere and more restrictively. New in this pass.
+2. **Wrong holder.** A valid licence whose copyright line names someone other
+   than the author, so the grant was inherited rather than issued. This KB's
+   `p184` rule, now observed at a scale of 20 repositories at once.
+3. **Wrong label.** Open *weights* under a bespoke corporate licence,
+   described as open *source* by the press, by Brookings, and by **the European
+   Commission's own Open Source Observatory**.
+
+**Why it is a trend and not a methodology footnote.** All three shapes are
+produced by the same market condition: **"open" has become a positioning claim
+before it is a legal one.** Model-weight releases normalised bespoke licences
+with acceptable-use policies and user-count thresholds; academic and
+public-sector projects publish under grant-funded obligations to be "open"
+without anyone on the project owning the licence question; and template-driven
+repository creation propagates a copyright line nobody re-reads.
+
+**Consequence for Globant, and it is a billable one.** The licence question in
+an education engagement is no longer a checkbox a developer can clear in an
+afternoon by looking at a repository page. **Three points, every time: the
+payload, the asset-scope statement, and the holder.** For anything whose value
+is data, audio, a corpus or weights, the asset-scope statement is
+**controlling**. Budget it, and say so in the proposal — because the failure
+mode is not "we could not find a licence", it is **"we found one, it was clean,
+and it was the wrong one."**
+
+**And the inverse is an opportunity.** The same condition means genuinely
+permissive regional assets are **undersold**: BERTimbau sat at 886★ and MIT,
+unmentioned anywhere in this KB for seven passes, while Latam-GPT's non-open
+licence was being reported as open source by the EC. The asset that is quietly
+correctly licensed is the one with no marketing behind it.
+
+## 24. Licensing hygiene is now the measured constraint in two regions — and one event's rules fixed it in eight hours
+
+**Added in the eighth pass of 2026-10-06.**
+
+The seventh pass concluded of MEA: *"the binding constraint is not interest,
+funding or capability — it is licensing hygiene. Three `LICENSE` files would
+change the regional answer."* The eighth pass found the **same shape in LATAM's
+indigenous-language layer**, which makes it a pattern rather than a regional
+quirk:
+
+- **AmericasNLP**, the flagship academic venue for the indigenous languages of
+  the Americas: **four probed editions (2021, 2022, 2023, 2024), no `LICENSE`
+  payload in any** — and the **2024 edition's Shared Task 2 is "Creation of
+  Educational Materials for Indigenous Languages"**, which is precisely the
+  asset this KB would want, shipped with data, baselines and no grant. Corpora for **Aymara** (6,531 pairs), **Nahuatl** (16,145)
+  and **Quechua** (125,008).
+- ASR for **Quechua, Guaraní, Bribri, Kotiria and Wai'khana**; MT for Peru; a
+  T5 for **10** indigenous languages — **all ungranted.**
+- **Ten of twelve** probed repositories carry no grant. The same organisation
+  licensed its 2023 release and not its 2025 one; the same author licensed
+  neither of two.
+- Five LATAM education-AI applications found the same pass
+  (Colombia ×3, Chile, Peru): **none has a `LICENSE` payload.**
+
+**The capability is funded, published and benchmarked. The redistribution right
+is absent.** So a Quechua or Guaraní tutor is blocked on **data rights, not on
+modelling** — and that is a procurement and legal problem, which is cheap to fix
+and expensive to discover late.
+
+**The remedy, demonstrated rather than proposed.** **CAi UC** (*Centro de
+Alumnos de Ingeniería*, Pontificia Universidad Católica de Chile) ran
+**HaCAIthon 2026** with one clause in its rules: projects must ship an **OSI
+licence** and a **root `LICENSE` file** to be *eligible for evaluation*.
+**Result: 20 team repositories, 19 MIT and one AGPL-3.0, in a single eight-hour
+event**, four of them education-track — including **EduFlow**, the first
+LATAM-origin MIT education repository in this KB with running code.
+
+**Why this is the most leveraged intervention this KB has identified.** The
+sixth and seventh passes' recommendation was *file an issue asking for a
+`LICENSE` file* — correct, but **retrospective**, one repository at a time, and
+dependent on a maintainer who has already moved on. A submission rule is
+**prospective**: it licenses work that does not exist yet, at the moment of
+creation, when the authors are present and the question is trivial.
+
+**The concrete action, with its caveat.** Sponsoring or co-writing the licence
+clause in a university hackathon's rules — São Paulo, Lima, Bogotá, and on the
+identical argument in Nairobi — costs a sponsorship line and addresses the one
+constraint blocking **both** LATAM and MEA. **Caveat:** CAi UC's own template
+put the **organiser** in the copyright line rather than the authoring team,
+which is the wrong holder and triggers this KB's `p184` flag on all 20 repos. A
+sponsored clause should name the **authors** as holders — a one-line difference
+between a channel that produces usable assets and one that produces flagged
+ones.
+
 ## Regional notes where the trend diverges
 
 - **North America:** adoption is broad (60% of K-12 teachers) and the binding
@@ -890,3 +997,36 @@ Spanish/Portuguese-language search. Four of the gaps below changed state.
   prohibits teachers from substituting AI for core instruction; nothing on the
   permissive shelf implements cohort-based capability tiering. Pattern P9 assembles
   it from general-purpose parts, as pattern P4 does for Annex III.
+
+## Declared gaps — eighth pass, 2026-10-06
+
+- **Trend 21 needs splitting, not another increment.** It currently reads
+  *"mother-tongue AI is a three-region capability"*. After this pass the honest
+  form is **two claims**: *capability* is at least **four** regions (India,
+  Africa, ASEAN, LATAM), while **redistributable** capability is still **two**.
+  LATAM has the corpora, the ASR and the MT and cannot license them. Left as a
+  declared gap rather than silently renumbered, because the distinction between
+  *existing* and *usable* is the whole content of trends 23 and 24.
+- **No automated evaluator of tutoring quality — open since the fourth pass,
+  unchanged.** TutorIA's **RNF-09** (pedagogical review by **≥2 subject-expert
+  teachers per subject before launch**, MIT) is a **human protocol**, and it is
+  the first citable one in this KB. It does not close the gap and is not
+  presented as closing it.
+- **No permissive open-source exam proctoring agent — not re-probed this pass.**
+  The seventh pass's sweep stands; recorded so the next pass knows it was
+  skipped rather than re-confirmed.
+- **North America's general-language channel is saturated.** Four consecutive
+  passes, identical facts. The next North America trend must come from district
+  RFP language, state education-agency procurement portals, or vendor filings —
+  **none of which this KB has ever swept.** Recorded as an exhausted channel, not
+  as regional stability.
+- **Latam-GPT's licence is single-source.** `huggingface.co`, `latamgpt.org`,
+  `interoperable-europe.ec.europa.eu` and `opensourceforu.com` are all
+  **EGRESS_BLOCKED** in this environment (4/4), so the model card was **not
+  read**. The Llama 3.1 Community License's *properties* are independently
+  confirmed from the OSI's published position; the **link** between Latam-GPT
+  and that licence is not. Confirm before any client deliverable.
+- **The `p184` holder question on the 20 CAi UC repositories is unresolved and
+  is not a probe question.** Whether a student federation's template copyright
+  validly covers code written by independent teams during an event is a matter
+  for counsel. Recorded as a legal open item, not as a licence finding.

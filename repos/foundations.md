@@ -319,6 +319,106 @@ cedes.** The operational rule is unchanged and now carries three instances
 instead of one: **probe every repository, every time, and probe the dataset
 sibling separately from the code.**
 
+## Added in the eighth pass of 2026-10-06 — the LATAM language substrate, and where it stops
+
+The seventh pass falsified "mother-tongue AI is a two-region capability" by
+searching ASEAN for language **toolkits** instead of sovereign **models**. The
+eighth pass ran the same move at the one gap this KB called its firmest: **no
+LATAM-origin permissive education project.**
+
+**The move works at the majority-language layer and fails at the indigenous
+layer — and it fails for a reason this shelf has seen before in MEA.**
+Licences read from each repository's own `LICENSE` payload.
+
+### Language — Spanish and Portuguese, permissive and real
+
+| Repo | Licence (payload) | ★ / forks / commits | What it is |
+|---|---|---|---|
+| [neuralmind-ai/portuguese-bert](https://github.com/neuralmind-ai/portuguese-bert) | **MIT** (`master/LICENSE`, © 2020 NeuralMind — Fabio Capuano de Souza, Rodrigo Nogueira, Roberto de Alencar Lotufo) | **886** / 139 / 20 | **BERTimbau** — BERT-Base and BERT-Large for **Brazilian Portuguese**, trained on **BrWaC** for 1M steps with whole-word masking. State of the art on NER, STS and RTE at publication. **Brazil-origin, and the first Brazil-origin permissive asset on this shelf** |
+| [alphacep/vosk-api](https://github.com/alphacep/vosk-api) | **Apache-2.0** (`master/COPYING`) | — | Offline ASR for 20+ languages including **Spanish and Portuguese**, Raspberry-Pi-class hardware, Python/Java/C#/Node bindings. Permissive, maintained — **global-origin, not LATAM** |
+
+`speechbrain/speechbrain` (Apache-2.0) on the sixth-pass shelf remains the
+bridge when a language needs a model **trained** rather than downloaded.
+
+### Language — indigenous languages of the Americas: the capability is there, the grant is not
+
+| Repo | Licence state (payload) | Coverage |
+|---|---|---|
+| [Llamacha/IWSLT2023_Quechua_data](https://github.com/Llamacha/IWSLT2023_Quechua_data) | ⚠️ payload **Apache-2.0**, README **CC BY-NC-ND 3.0** — **scope conflict, see below** | **Peru** — ~1h40m aligned Quechua–Spanish speech + pointers to 60h transcribed Siminchik audio. Southern Quechua |
+| [pywirrarika/naki](https://github.com/pywirrarika/naki) | **GPL-3.0** (`master/LICENSE`) | Curated NLP research and engineering index for Native American languages |
+| [AmericasNLP/americasnlp2021](https://github.com/AmericasNLP/americasnlp2021) | **No `LICENSE` payload** | Shared task — **Aymara** (6,531 pairs), **Nahuatl** (16,145), **Quechua** (125,008) |
+| [AmericasNLP/americasnlp2022](https://github.com/AmericasNLP/americasnlp2022) | **No `LICENSE` payload** | Second probed edition |
+| [AmericasNLP/americasnlp2023](https://github.com/AmericasNLP/americasnlp2023) | **No `LICENSE` payload** | Third probed edition |
+| [AmericasNLP/americasnlp2024](https://github.com/AmericasNLP/americasnlp2024) | **No `LICENSE` payload** — 404 at root **and** in both task subdirectories | MT into indigenous languages, **plus Shared Task 2: "Creation of Educational Materials for Indigenous Languages"** — sentence-transformation and fill-in-the-blank exercise generation, data and baselines shipped. **No root `README.md`; existence confirmed via `master/ST1_MachineTranslation/README.md`** |
+| [monirome/asr-indigenous-languages](https://github.com/monirome/asr-indigenous-languages) | **No `LICENSE` payload** | Fine-tuned ASR: **Quechua, Guaraní, Bribri, Kotiria, Wai'khana** |
+| [UBC-NLP/IndT5](https://github.com/UBC-NLP/IndT5) | **No `LICENSE` payload** | Text-to-text transformer for **10** indigenous languages |
+| [aoncevay/mt-peru](https://github.com/aoncevay/mt-peru) | **No `LICENSE` payload** | *"Peru is Multilingual, Its Machine Translation Should Be Too?"* |
+| [aoncevay/quechua-nlp](https://github.com/aoncevay/quechua-nlp) | **No `LICENSE` payload** | Standard Southern Quechua data for NLP |
+| [Llamacha/IWSLT2025_Quechua_data](https://github.com/Llamacha/IWSLT2025_Quechua_data) | **No `LICENSE` payload** | The 2025 edition — **same organisation, licensed 2023 and not 2025** |
+| [jnehring/awesome-low-resource-languages](https://github.com/jnehring/awesome-low-resource-languages) | **No `LICENSE` payload** | Endangered / low-resource language resource index |
+
+**Ten of twelve carry no grant at all.** **AmericasNLP** — the flagship academic
+venue for the indigenous languages of the Americas — has run **four probed
+editions (2021, 2022, 2023, 2024) without a `LICENSE` file in any of them**, and
+its 2024 edition ships the one task on this shelf that is **explicitly an
+education task**: *"Creation of Educational Materials for Indigenous
+Languages"*, with data and baseline scripts and no grant. The same author
+(`aoncevay`) licensed neither of two repositories; the same organisation
+(`Llamacha`) licensed one edition and not the next.
+
+### ⚠️ The `Llamacha` scope conflict — it defeats this shelf's own method
+
+Every licence on this shelf is read from the repository's own `LICENSE` payload.
+Do that to `Llamacha/IWSLT2023_Quechua_data` and you get **complete, unambiguous
+Apache-2.0** from `main/LICENSE`.
+
+**The README says otherwise:**
+
+> All audio recordings are property of Siminchikkunarayku and Llamacha.
+> This work is licensed under a Creative Commons
+> **Attribution-NonCommercial-NoDerivs 3.0 Unported License**.
+
+**NonCommercial and NoDerivs — unusable in commercial client work.** The Apache
+file plausibly covers the repository's scripts; the **data**, which is the only
+reason to clone it, is NC/ND.
+
+**This is a third licence trap, distinct from the two this KB already tracks.**
+`p184` catches a holder foreign to the project. The seventh pass's
+MathTutorBench case catches a file that contradicts itself internally. This is
+**a correct, complete licence file applied to the wrong scope.**
+
+**Rule for this shelf, from this pass forward: for any repository whose value is
+data, audio, a corpus or model weights, the payload is necessary and not
+sufficient.** Read the README's licence section too, and treat the
+**asset-scope** statement as controlling for the asset.
+
+### Why this shelf matters even though most of it is unusable
+
+**Because it is the exact layer a regional tutor needs next, and it is one
+`LICENSE` file per repository away from being usable.**
+
+`LabSirius/TutorIA`'s own **RNF-10** specifies Colombian Spanish for v1.0 *"con
+posibilidad futura de soportar **lenguas nativas**"*. Latam-GPT lists indigenous
+languages as roadmap. So the demand is written down in two places, and the
+supply — corpora, ASR for five languages, MT, benchmarks, a T5 for ten
+languages — **already exists, funded and published.** What is missing is
+redistribution rights.
+
+**This is the MEA diagnosis in a second region.** The seventh pass concluded of
+MEA: *"the binding constraint is not interest, funding or capability — it is
+licensing hygiene. Three `LICENSE` files would change the regional answer."*
+That sentence is now true of the LATAM indigenous layer word for word, and the
+eighth pass found a **remedy that works prospectively**: a submission rule in a
+university event's terms produced **20 licensed repositories in eight hours**
+(see `agents/top.md`, the CAi UC holder warning, and `intel/market.md`).
+
+**For an engagement:** a Quechua or Guaraní tutor is blocked on **data rights,
+not on modelling**. Budget the licence conversation with Llamacha,
+Siminchikkunarayku and the AmericasNLP organisers as a project line item, not an
+afterthought — and note that `vosk-api` (Apache-2.0) plus `speechbrain`
+(Apache-2.0) give you a permissive *pipeline* into which licensed data can be
+dropped the moment it exists.
+
 ## Teaching-content repos (for enablement, not for production)
 
 | Repo | License (read from payload) | Note |

@@ -1072,6 +1072,138 @@ subsequent engagement in the practice.
   a source manifest is required by EMEA and useful in all four regions — but do
   not quote the categories as law without reading the law.
 
+## P21 — The LATAM productionisation engagement (a published spec + a working offline core)
+
+**Added in the eighth pass of 2026-10-06.** This pattern exists because the
+LATAM gap changed shape: the region has published **the design and the licence,
+not the product**. P21 is the engagement that closes that distance, and every
+component is MIT and locally authored.
+
+**Use it when:** a LATAM client (Colombia, Chile, Peru, Brazil) wants a tutoring
+or practice system for low-connectivity public education, and wants local
+provenance in the architecture rather than a US SaaS wrapper.
+
+### Components
+
+| Role | Component | Licence | Why this one |
+|---|---|---|---|
+| **Requirements baseline** | [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) `docs/TutorIA_Requerimientos.pdf` + `docs/tutoria_architecture.svg` | **MIT** © Grupo Sirius | **13-page spec, v1.0 April 2026**, RF-01…RF-20 + RNF-01…RNF-10, 5-layer architecture. Universidad Tecnológica de Pereira. **The only citable LATAM-authored education-AI requirements document in this KB** |
+| **Offline delivery platform** | [learningequality/kolibri](https://github.com/learningequality/kolibri) (+ `kolibri-installer-android`) | **MIT** | Purpose-built, deployed, maintained offline-first LMS; the Android build is the 2 GB-RAM target |
+| **Offline-sync reference** | [caiuc/equipo-19-haCAIthon-2026](https://github.com/caiuc/equipo-19-haCAIthon-2026) (EduFlow) | **MIT** © CAi UC — **holder flagged** | ~41 commits showing room-code + IndexedDB + Service Worker + auto-sync in readable form. **Read it; do not vendor it** until the holder is cleared |
+| **LMS integration surface** | Open edX XBlock / plugin | AGPL-3.0 (platform) — side-car stays separate | The integration shape TutorIA's RF-01 specifies |
+| **Portuguese language layer** | [neuralmind-ai/portuguese-bert](https://github.com/neuralmind-ai/portuguese-bert) | **MIT** © NeuralMind | **886★**, BERTimbau, BrWaC-trained. Brazil-origin, for pt-BR classification/NER/retrieval work |
+| **Offline ASR / TTS** | [alphacep/vosk-api](https://github.com/alphacep/vosk-api) **Apache-2.0**; `rhasspy/piper` **MIT** (archived) or `OHF-Voice/piper1-gpl` **GPL-3.0** | mixed | The voice tier from P18; the Piper fork decision is unchanged and must be made explicitly |
+| **Human quality gate** | TutorIA **RNF-09** | **MIT** (as text) | *"Al menos **2 docentes por asignatura**"* must pass pedagogical review **before launch**. A written protocol with a quorum — the thing to ship while no automated evaluator exists |
+
+### Wiring
+
+1. **Adopt RNF-04 and RNF-05 as the acceptance criteria, verbatim.** Target
+   **2 GB RAM / 3G**; implement **TLS** in transit and **AES-256** at rest under
+   **Ley 1581 de 2012 (Habeas Data)**. These are the client's own regulator's
+   terms, quoted from a Colombian university's specification — far stronger in a
+   proposal than a vendor's own non-functional requirements.
+2. **Deploy Kolibri as the delivery platform**, Android build first. Do not
+   retrofit sync onto a network-assuming LMS (see `verticals/solutions.md`).
+3. **Implement the sync core on EduFlow's design:** teacher-created room +
+   6-character join code; assignment packaged as text (**~8 KB per 10
+   exercises**); client-side **IndexedDB** store; **Service Worker** app-shell
+   cache; queued answers flushed on reconnection. Re-implement from the design —
+   the holder flag makes vendoring unsafe.
+4. **Keep the agent as a side-car** behind the API layer of TutorIA's
+   architecture (CAPA 3), so the Open edX AGPL-3.0 boundary is never crossed —
+   identical to P1 and P7's rule.
+5. **Gate every consequential output through RNF-09.** Two subject teachers per
+   subject sign off before launch; log the sign-off. This is also the artefact
+   that satisfies the US human-oversight statutes and EU Annex III if the client
+   later operates across regions.
+6. **Language:** Spanish-only for v1, per TutorIA's RNF-10. For pt-BR work add
+   BERTimbau. **Do not promise indigenous-language support** — see the
+   warning below.
+
+### Deliverables
+
+A Kolibri deployment with an offline-capable practice module, a side-car agent
+behind the API layer, a signed pedagogical review record per subject, and a
+compliance note citing **Ley 1581** with the TLS/AES-256 evidence.
+
+### ⚠️ Two warnings that are the point of this pattern
+
+**1. Do not promise Quechua, Guaraní, Aymara or Nahuatl.** TutorIA's RNF-10
+names native languages as a future possibility and Latam-GPT lists them as
+roadmap, so a client may well ask. **The capability exists and the rights do
+not:** ten of twelve probed repositories in that layer — including **all four
+probed AmericasNLP editions, whose 2024 shared task is literally "Creation of
+Educational Materials for Indigenous Languages"**, the ASR covering Quechua/Guaraní/Bribri/Kotiria/Wai'khana,
+and the Peru MT work — carry **no `LICENSE` payload**, and
+`Llamacha/IWSLT2023_Quechua_data` serves an **Apache-2.0** file over data its
+README licenses **CC BY-NC-ND**. Scope it as a **data-rights workstream**
+(licence conversations with Llamacha, Siminchikkunarayku and the AmericasNLP
+organisers) or scope it out. `vosk-api` + `speechbrain`, both Apache-2.0, give
+you a permissive pipeline ready for licensed data when it exists.
+
+**2. Latam-GPT is not open source.** If the client asks for the regional
+sovereign model: it is **Llama 3.1 Community License** © Meta — **not
+OSI-approved**, carrying an Acceptable Use Policy and the 700M-MAU clause.
+Usable and genuinely good for Spanish/Portuguese grounding; **not
+relicensable**, and it inherits Meta's AUP into the client's product. Do not let
+it into a slide that says "open source stack". *(Licence is single-source in this
+KB — confirm the model card; see `agents/top.md`.)*
+
+## P22 — The licence-reliability gate (three points, run before any component enters a deliverable)
+
+**Added in the eighth pass of 2026-10-06.** This is not an architecture pattern;
+it is the check that protects every other pattern on this page, and it exists
+because the eighth pass found **four live cases where this KB's own verification
+method returns the wrong answer**.
+
+**Use it when:** any repository is about to become a dependency, a vendored
+component, or a named asset in a client deliverable. Always.
+
+### The gate
+
+| # | Check | How | Fails when |
+|---|---|---|---|
+| **1** | **Payload** | `curl raw.githubusercontent.com/<repo>/<branch>/LICENSE` across `main`/`master` × `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `license`, `license.txt`, `LICENCE` | No file → **no grant.** `AmericasNLP/americasnlp{2021,2023,2024}`, 9 of 11 LATAM indigenous-layer repos |
+| **2** | **Asset scope** | Read the README's own licence section. Ask: *what is the thing of value here — code, or data/audio/corpus/weights?* | Payload governs the scripts, README governs the asset, and they disagree. **`Llamacha/IWSLT2023_Quechua_data`: Apache-2.0 payload, CC BY-NC-ND data.** The asset-scope statement is **controlling** |
+| **3** | **Holder** | Read the copyright line. Does the holder belong to the project? | Holder is foreign or upstream → grant **inherited, not issued**. `MaybeItsAdam/tutors` (tldraw Inc.); **all 20 `caiuc/equipo-*` repos (© CAi UC, the organiser, not the authoring teams)** |
+
+**Plus one question that no probe answers:** *is this open **source**, or open
+**weights** under a bespoke licence?* **Latam-GPT** is described as open source
+by the trade press, Brookings and **the European Commission's own Open Source
+Observatory**, and is licensed **Llama 3.1 Community** — not OSI-approved. Model
+releases are the standing exception to every licence heuristic on this page;
+check the model card, never the coverage.
+
+### Why run all three
+
+Each check catches a case the others miss, and in this KB's measured sample each
+one has a live failure attached:
+
+- Payload alone → ships a **CC BY-NC-ND** corpus believing it is Apache-2.0.
+- Payload + scope → ships 20 MIT repositories whose **copyright belongs to
+  someone who did not write them**.
+- All three → still calls a **Llama-licensed** model "open source" unless the
+  weights question is asked separately.
+
+### Outputs, and what to do with each verdict
+
+- 🟢 **All three clean** → cleared for vendoring. Record repo, branch, filename,
+  licence family, holder and probe date in the deliverable's licence register.
+- 🟡 **Scope conflict** → usable for the layer the payload actually covers
+  (usually scripts), **not** for the asset. Re-implement or license the asset
+  separately.
+- 🟡 **Holder mismatch** → **read-and-learn only.** Re-implement from the design.
+  Clearing it is a question for counsel, not for another probe.
+- 🔴 **No payload** → not a dependency. Two options, and the eighth pass
+  established which is cheaper: file an upstream `LICENSE` issue
+  (**retrospective**, one repo at a time), or — where the work has not been
+  written yet — **get the licence into the rules**. CAi UC made an OSI licence a
+  condition of hackathon evaluation and **20 licensed repositories appeared in
+  eight hours**. For engagements touching LATAM's indigenous layer or MEA, that
+  clause is the highest-leverage intervention in this KB. **Name the authors as
+  holders, not the organiser** — CAi UC's own template got that wrong and
+  flagged all 20 of its outputs at check 3.
+
 ## Pattern selection
 
 | Situation | Pattern |

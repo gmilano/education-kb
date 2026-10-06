@@ -19,13 +19,15 @@ carrying a stale or inferred number.
 
 ## Agents and tools
 
-**40 rows, all verified.** The 12 recorded in the morning pass of 2026-10-06, 2
+**43 rows, all verified.** The 12 recorded in the morning pass of 2026-10-06, 2
 added in the second pass, **17 added in the third pass** from the `ai-tutor`
 GitHub topic page and a stars-sorted repository search, and **5 added in the
 fourth pass** by tracing academic papers to their repositories and sweeping a
 GitHub organisation, and **4 added in the fifth pass** by searching on funding
 body, ministry and university name in English and Spanish instead of by topic or
-star count — five distinct channels, each new to this KB when it was used. One of the 17, OpenTutor, is a **reinstatement** of an entry this KB wrongly
+star count, and **3 added in the eighth pass** from an
+**institutional-event channel** — a university hackathon whose rules make an OSI
+licence a condition of evaluation — five distinct channels, each new to this KB when it was used. One of the 17, OpenTutor, is a **reinstatement** of an entry this KB wrongly
 withdrew earlier the same day; see the corrections section. The fourth pass added
 the largest single asset in this KB (**OpenMAIC, MIT, 40.0k★**) and the first
 **Africa-placed** repositories it has ever recorded. The fifth pass added the first
@@ -174,28 +176,62 @@ it is production-grade.
 |---|---|---|---|---|---|---|
 | Shiksha Copilot | [microsoft/shiksha-copilot](https://github.com/microsoft/shiksha-copilot) | **MIT** (`main/LICENSE`, Microsoft Corporation) | 9★ / 149 commits | **India** — Microsoft Research India, VELLM initiative; classroom validation with the **Sikshana Foundation** | Working full-stack system; GPT-4o dependency acknowledged in its own README | Teacher-side lesson planning: select curriculum, grade, subject and chapter, then generate lesson plans, real-world examples, analogies, hands-on activities, and formative and summative assessments. Compiles reviewed output to **DOCX, PPT and student handouts**, and generates **multi-chapter question banks against standard blueprint formats**. React + FastAPI + Azure durable functions; textbook ingestion pipeline with **human curator oversight** |
 | CurriculumCraft AI | [Naitik-xd/CurriculumCraft-AI](https://github.com/Naitik-xd/CurriculumCraft-AI) | **MIT** (`main/LICENSE`, 2026) | 0★ / 7 commits | **India** — individual, Hacktoberfest 2026 | Public beta, real TypeScript codebase | **CBSE / NCERT grades 9–12** assessment engine: tests, lesson plans and marking keys. Runs on **open-weight Gemma only** (`gemma-4-26b-a4b-it`, failover `gemma-4-31b-it`), temperature 0.2, no Gemini. Model calls routed through backend endpoints so API keys never reach the browser; IP rate limit of 30 requests per 5-hour window. Ships an explicit **copyright analysis**: no NCERT text is stored or reproduced, syllabi are treated as public standards, all items synthesised on demand |
-| TutorIA | [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) | **MIT** (`main/LICENSE`, Grupo Sirius) | 0★ / 4 commits | **LATAM** — Universidad Tecnológica de Pereira, Sirius research group, **Colombia**; funded under Colombia's **SNCTI** | **Scaffold only — see the warning below** | Specified as an autonomous tutor agent for **rural higher education in Risaralda**, delivered as an **Open edX XBlock/plugin** with Claude API, TTS audio replies, animated avatar, teacher statistics panel and cross-session context. Initial subjects: Programación I (Python) and Introducción a la Matemática. Named team includes a **dedicated pedagogical director** |
+| TutorIA | [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) | **MIT** (`main/LICENSE`, Grupo Sirius) | 0★ / 4 commits | **LATAM** — Universidad Tecnológica de Pereira, Sirius research group, **Colombia**; funded under Colombia's **SNCTI** | **Specification published, code not — corrected in the eighth pass.** `docs/` holds a **13-page MIT requirements spec (v1.0, April 2026)** and a 5-layer architecture diagram; the six code directories hold only `.gitkeep`. Earlier passes read this as "scaffold only" because they probed code filenames and never `docs/` | Specified as an autonomous tutor agent for **rural higher education in Risaralda**, delivered as an **Open edX XBlock/plugin** with Claude API, TTS audio replies, animated avatar, teacher statistics panel and cross-session context. Initial subjects: Programación I (Python) and Introducción a la Matemática. Named team includes a **dedicated pedagogical director** |
 | Tutor Agente Local | [DannyAvilaL/agente_clases](https://github.com/DannyAvilaL/agente_clases) | **MIT** (`main/LICENSE`, 2026) | 0★ / 5 commits | Spanish-language, individual; **no institution or country stated in the repository** | Working single-author system | **100% offline** programming-class preparation: Ollama **Phi-3 (2 GB)** generates per-student explanations and exercises in Markdown, synthesises `.csv` datasets and injects them as tables into local **PostgreSQL**. Syncs Google Calendar into a **local Radicale CalDAV** server and keeps working with no internet. Streamlit dashboard; `cron` autopilot prepares classes a week ahead |
+| EduFlow | [caiuc/equipo-19-haCAIthon-2026](https://github.com/caiuc/equipo-19-haCAIthon-2026) | **MIT** (`main/LICENSE`, © 2026 CAi UC — **see the holder warning below**) | 1★ / 41 commits | **LATAM** — Pontificia Universidad Católica de **Chile**, Centro de Alumnos de Ingeniería; HaCAIthon 2026, *Educación pública* track | **8-hour hackathon build with working code** — not a product; the only CAi UC education repo verified to contain a running backend and frontend | **Offline-first maths practice for schools with no reliable signal.** Teacher opens a room and shares a 6-character code; student downloads the assignment while in signal (**~8 KB for 10 exercises**), solves it **entirely offline** with immediate correction via **IndexedDB** + Service Worker app-shell cache, and answers **sync automatically** when connectivity returns. FastAPI backend (routers `auth`, `rooms`, `activities`, `answers`) + Next.js PWA + Supabase. Its README names **Kolibri** and **RACHEL** as prior art. **The concrete implementation of the constraint TutorIA's RNF-04 specifies and has no code for** |
+| CPU-Benchmark | [caiuc/equipo-6-haCAIthon-2026](https://github.com/caiuc/equipo-6-haCAIthon-2026) | **MIT** (`main/LICENSE`, © 2026 CAi UC — **holder warning below**) | 0★ | **LATAM** — PUC **Chile**, HaCAIthon 2026, *Educación y brecha digital* track | 8-hour build; `README.md` and devcontainer verified, no application code confirmed in-tree | Classifies **donated computers** by measuring their real performance, so a school receiving a hardware donation can tell what each machine is actually fit to run. The triage step in front of any low-resource deployment — the question TutorIA's **2 GB RAM / 3G** envelope assumes someone has already answered |
+| OnlyUs | [caiuc/equipo-16-haCAIthon-2026](https://github.com/caiuc/equipo-16-haCAIthon-2026) | **MIT** (`main/LICENSE`, © 2026 CAi UC — **holder warning below**) | 0★ / 50 commits | **LATAM** — PUC **Chile**, HaCAIthon 2026, *Educación y orientación* track | 8-hour build; `README.md` and `frontend/package.json` verified in-tree | Simulates the Chilean university application and suggests degree programmes the applicant's score actually reaches. Guidance and admissions rather than tutoring — the one education function in this KB with **no** other permissive entry |
 
 #### TutorIA: read this before you cite it
 
-TutorIA is the **first LATAM-origin permissive education project this KB has
-found in five passes**, and it is institutionally real — a named university, a
-named research group, a named pedagogical director, and public science funding.
-It is also, today, **a README and a licence**. Every code path in its own
-documented tree returns HTTP 404:
+TutorIA is the **first LATAM-origin permissive education project this KB
+found**, and it is institutionally real — a named university, a named research
+group, a named pedagogical director, and public science funding.
 
-| Probed path | Result |
-|---|---|
-| `backend/requirements.txt`, `backend/main.py`, `backend/app/main.py` | 404 |
-| `frontend/package.json` | 404 |
-| `openedx/setup.py` | 404 |
-| `docker-compose.yml`, `.env.example` | 404 |
+**⚠️ CORRECTED IN THE EIGHTH PASS (2026-10-06). Earlier passes described this
+repository as "a README and a licence" with "every code path 404". The first
+half was wrong.** The code claim holds — and is now explained — but the
+repository also publishes a **complete requirements specification** that five
+passes never probed, because every probe used a *code* filename.
+
+| Probed path | Result | What it is |
+|---|---|---|
+| `backend/`, `frontend/`, `openedx/`, `data/`, `infra/`, `tests/` | **`.gitkeep` only** | Deliberately placeholder-reserved — which is *why* the code paths 404 |
+| `backend/main.py`, `frontend/package.json`, `openedx/setup.py`, `docker-compose.yml`, `.env.example` | 404 | Unchanged from earlier passes |
+| **`docs/TutorIA_Requerimientos.pdf`** | **200** | **13-page requirements specification, v1.0, April 2026** — RF-01…RF-20, RNF-01…RNF-10, actors, use cases |
+| **`docs/tutoria_architecture.svg`** | **200** | **5-layer architecture**, 19 KB: Usuarios → Open edX LMS → API → Servicios Core → IA & Media |
+| **`CONTRIBUTING.md`** | **200** | Contribution guide — also missed by the code-path sweeps |
+
+**The four requirements worth lifting, all under MIT:**
+
+- **RNF-05** — *"conforme a la **Ley 1581 de 2012 (Habeas Data)**"*, with **TLS**
+  in transit and **AES-256** at rest as the acceptance criterion. This KB's
+  **first Colombian data-protection anchor**; `Ley 1581` appeared nowhere in it
+  before the eighth pass.
+- **RNF-04** — *"mínimo **2GB de RAM**; funcional con conectividad de **3G**"*.
+  A testable low-resource envelope, where this KB previously had adjectives.
+- **RNF-09** — agent responses must pass pedagogical review by **at least 2
+  subject-expert teachers per subject before launch**. Not an automated
+  evaluator, so the standing evaluator gap is unchanged — but it is a **written
+  human quality protocol with a quorum**, which is the thing an engagement can
+  actually ship.
+- **RF-02** (priority *Alta*) — *"**Todo** el código fuente, configuraciones y
+  documentación base … deben publicarse en un repositorio de acceso público"*.
+  **Unmet as of 2026-10-06.** This reframes TutorIA from an abandoned-looking
+  repository into a **tracked commitment**: watch RF-02, and make RF-02 the
+  subject of any approach to the Sirius group.
+
+**RNF-10** specifies Colombian Spanish for v1.0 *"con posibilidad futura de
+soportar lenguas nativas"* — the layer the eighth pass found is almost entirely
+**unlicensed** (see the LATAM substrate shelf in `repos/trending.md`).
 
 Its own quickstart tells you to clone a **different repository**
-(`Sof1SP/tutorIA`) from the one the README lives in. So: **cite TutorIA as
-evidence that the LATAM gap is a build gap rather than an interest gap, and as a
-partnership lead. Never cite it as a starting point you can fork.** The
+(`Sof1SP/tutorIA`) from the one the README lives in — MIT © **Sofia Soto
+Parra**, containing only `README.md` and `LICENSE`. Two locations, two
+copyright holders, zero code. So: **cite TutorIA for its specification, which is
+genuinely reusable and the most complete LATAM education-AI design document in
+this KB; cite it as a partnership lead; and do not present it as a codebase you
+can fork.** The
 architecture it specifies — Open edX XBlock, side-car agent, teacher analytics —
 is exactly pattern **P1** in this KB, which is the useful part: a Colombian public
 university has independently specified this KB's default engagement shape and has
@@ -757,3 +793,128 @@ new.** Two of this pass's three corrections cost nothing but a `grep` — the
 evidence was already in the tree, written by an earlier pass, and contradicted by
 the file a reader would actually open. **A KB that only grows forward accumulates
 contradictions at exactly the rate it accumulates findings.**
+
+## The CAi UC holder warning — read this before vendoring EduFlow, CPU-Benchmark or OnlyUs
+
+The three Chilean rows added in the eighth pass come from **HaCAIthon 2026**, run
+by **CAi UC** (*Centro de Alumnos de Ingeniería*, Pontificia Universidad
+Católica de Chile). The event's rules require, as a condition of being eligible
+for evaluation:
+
+> All projects must be released under an **OSI licence** (MIT, Apache 2.0 or
+> GPLv3 recommended), with a **`LICENSE` file at the repository root**.
+
+That rule worked: **20 team repositories, 19 MIT and one AGPL-3.0**, created in a
+single eight-hour event. As a **channel** that is the most valuable thing the
+eighth pass found — see `intel/market.md` and `repos/trending.md`.
+
+**But every team repo's MIT payload reads `Copyright (c) 2026 CAi UC`** — the
+organiser, not the authoring team. The grant is **inherited from the base
+template**, not issued by the people who wrote the code. By this KB's own
+`p184` rule — *the holder is the cheapest signal that a licence was inherited
+rather than granted* — all 20 are flagged.
+
+**What that means in practice.** Whether a student federation's template
+copyright validly covers code written by independent teams during an event is a
+**question for counsel, not for a probe.** So:
+
+- ✅ **Read them, benchmark them, and copy the design** — EduFlow's offline-sync
+  core in particular.
+- ✅ **Cite them** as evidence that the LATAM licensing gap is fixable by rule.
+- ❌ **Do not vendor them** into a client deliverable until the holder is
+  cleared with CAi UC and the authoring team.
+
+The organisers' own showcase repository, `caiuc/proyectos-hacaithon-2026`, has
+**no `LICENSE` payload at all** — the mandate bound the teams and not the
+vitrine, which is worth knowing before citing the event as a model of hygiene.
+
+## Gap updates from the eighth pass of 2026-10-06
+
+Channels: the **`docs/` directory** as a probe target, and the
+**institutional-event channel**. **34 repository targets probed; 31 resolved** — `AngelitUX/EstudiaUni`, RACHEL and Latam-GPT did not resolve and are recorded as unverified rather than as findings.
+
+| Gap as recorded above | State after the eighth pass |
+|---|---|
+| "No LATAM-origin permissive education project" — *the firmest finding in this KB* | **FULLY REFUTED, and now precisely resized.** Origin, licence and design are all refuted: **EduFlow** (MIT, PUC Chile) has **running code**; **TutorIA** (MIT, UTP Colombia) has a **13-page requirements specification**; **BERTimbau** (`neuralmind-ai/portuguese-bert`, MIT, **886★**, NeuralMind, Brazil) is a real Brazil-origin language asset with adoption. **What survives is maturity alone** — see the replacement gap below |
+| "TutorIA is scaffold only / every code path 404s" | **CORRECTED — see the block above.** The code claim holds and is explained (`.gitkeep` in six directories); the `docs/` directory was never probed and holds the deliverable. **Third instance of the probe-vocabulary failure mode**, after the sixth pass's layer error and the seventh pass's noun error |
+| "No shippable permissive evaluator of tutoring quality" (fourth pass) | **STILL OPEN on automated evaluation, PARTLY ANSWERED on protocol.** TutorIA's **RNF-09** specifies pedagogical review by **≥2 subject-expert teachers per subject before launch**, under MIT. That is a human quality gate, not an evaluator; the gap as written is unchanged, but the thing an engagement needs *first* now exists in citable form |
+| "Mother-tongue AI is a two-region capability" (trend 21, falsified to three in the seventh pass) | **FOUR regions on capability, TWO on licensing.** LATAM has the capability — AmericasNLP corpora for Aymara, Nahuatl and Quechua, ASR for Quechua, Guaraní, Bribri, Kotiria and Wai'khana, MT for Peru, T5 for 10 indigenous languages — and **ten of twelve probed repositories in that layer carry no `LICENSE` payload**, including **all four probed AmericasNLP editions (2021, 2022, 2023, 2024)** — whose 2024 edition includes a shared task called *"Creation of Educational Materials for Indigenous Languages"*. The claim must now be split: *capability* is four regions, *redistributable* capability is still two |
+| "MEA is the only region with zero shippable permissive education assets, and the constraint is licensing hygiene" (seventh pass) | **The diagnosis is confirmed and is no longer unique to MEA.** LATAM's indigenous-language layer has the identical shape: funded, published, benchmarked, ungranted. **And the eighth pass found the remedy** — a submission rule in an event's terms produced 20 licensed repositories in 8 hours (see the CAi UC block above). Cheaper and more prospective than filing `LICENSE` issues one repository at a time |
+| "No permissive open-source exam proctoring agent" (seventh pass) | **Unchanged — not re-probed this pass.** The seventh pass's function-scoped sweep stands |
+
+### The replacement LATAM gap, stated so it can be falsified
+
+**There is no LATAM-origin permissive education product at production maturity.**
+Not origin, not licence, not architecture — **maturity**, and nothing else:
+
+- `LabSirius/TutorIA` — MIT, institutionally backed, **specification only**, 4 commits.
+- `caiuc/equipo-19` (EduFlow) — MIT, **running code**, but an 8-hour build at 1★ with a flagged holder.
+- `neuralmind-ai/portuguese-bert` — MIT, **886★ and genuinely adopted**, but a language model, not an education product.
+- Four further LATAM education repositories found this pass and confirmed to exist (`Dreathward/sistema-de-aprendizaje-en-linea`, `InkuA-Pasantia/Proyecto-web-educativa`, `luisllacuaperez/PROYECTO-IA`, `AprendizajeProfundo/Diplomado`) — **none has a `LICENSE` payload.** A fifth search hit, `AngelitUX/EstudiaUni` (Chile), **did not resolve on any probe** and is excluded from the count rather than reported as unlicensed.
+
+**So the LATAM engagement posture changes.** For four passes the honest line to a
+client was *"nothing exists upstream in the region; we build."* The accurate line
+now is: **"the region has published the design and the licence, not the
+product"** — which makes a LATAM engagement a *productionisation* engagement with
+citable local provenance, and makes the Universidad Tecnológica de Pereira and
+PUC Chile named partnership leads rather than absences.
+
+### A new declared gap, from the licence-scope channel
+
+**The `LICENSE` payload — this KB's verification standard for eight passes — is
+necessary and not sufficient for any repository whose value is data, audio,
+corpus or model weights.**
+
+[Llamacha/IWSLT2023_Quechua_data](https://github.com/Llamacha/IWSLT2023_Quechua_data)
+serves a complete **Apache-2.0** text from `main/LICENSE`. Its README's licence
+section says the audio is *"property of Siminchikkunarayku and Llamacha"* and
+that the work is licensed **CC BY-NC-ND 3.0** — **NonCommercial and NoDerivs**,
+which is unusable in commercial client work. The Apache file plausibly covers
+the scripts; the data, which is the only reason to clone it, does not.
+
+This is a **third distinct licence trap**, after `p184` (holder foreign to the
+project) and the seventh pass's self-contradicting file: **a correct, complete,
+unambiguous licence file applied to the wrong scope.** A reviewer following this
+KB's own documented method gets a permissive answer and ships a violation.
+
+**Verification method, updated to three points:** read the **payload**, read the
+**asset-scope statement** in the README, and check the **holder**. Treat the
+asset-scope statement as controlling for the asset. All three are cheap; any one
+alone is wrong somewhere in this pass's findings.
+
+### Also recorded: the regional flagship is not open source
+
+**Latam-GPT** (CENIA Chile, launched February 2026, 60+ institutions across 15
+countries, Llama-3.1-70B base, ~8 TB of regional data, ≈US$550k) is released
+under the **Llama 3.1 Community License Agreement, © Meta Platforms** — **not
+OSI-approved**, carrying an Acceptable Use Policy and the 700-million-MAU clause
+that requires a separate licence at Meta's sole discretion. The EC's Open Source
+Observatory, Brookings and the trade press all describe it as *"open source"*.
+**It is open-weights under a bespoke corporate licence**, which is a different
+commercial object: usable and valuable for Spanish and Portuguese grounding,
+**not relicensable, not presentable to a client as open source**, and it inherits
+Meta's AUP into the client's product.
+
+**Provenance caveat.** The licence-to-Latam-GPT link is **single-source** —
+`huggingface.co`, `latamgpt.org`, `interoperable-europe.ec.europa.eu` and
+`opensourceforu.com` are all **EGRESS_BLOCKED** here (4/4), so the model card
+was **not read**. The Llama 3.1 licence's properties are independently confirmed
+from the OSI's published position. **Confirm the model card before any client
+deliverable.**
+
+### The method note for this pass
+
+Seven passes probed repositories for **code** and for **licences**. This pass
+probed one for a **specification** and found a 13-page document in a repository
+this KB had written off — the fourth version of the same lesson: **change the
+channel, change the layer, change the noun, and now change the file type.** A
+project that publishes its design before its code is invisible to a code-shaped
+probe, and in academic and ministry-funded work that is the *normal* publication
+order.
+
+The harder correction is to this KB's own standard. **The payload channel is not
+ground truth.** It is wrong about `Llamacha` in the permissive direction, silent
+about `caiuc`'s inherited holder, and it says nothing at all about the
+label-versus-grant gap that makes Latam-GPT look open. Eight passes of
+"read it from the payload" bought real accuracy and has now been shown to have a
+ceiling.

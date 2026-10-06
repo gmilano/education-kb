@@ -300,6 +300,29 @@ velocity, institutional provenance and the word "open" are all orthogonal to
 whether rights were granted.** Probe before promising, and expect to have this
 conversation with a university client who believes their own repo is usable.
 
+
+#### Eighth pass, 2026-10-06 — nothing new found for this region, and that is the finding
+
+The eighth pass ran the mandated North America sweep (`AI education North
+America 2026 adoption regulation state law`) and it returned **only material
+this file already holds**: the 134 bills across 31 states, California **AB
+1159** (prohibiting the use of student data to train models), Idaho **SB 1227**,
+the Oklahoma and Maryland human-oversight statutes, Ohio **HB 96** and the
+district-level-policy approach, plus the federal K-12 AI task force.
+
+**One new item, and it is small:** Tennessee **SB 1711** joins Ohio HB 96 in the
+*delegate-to-districts* column rather than the statewide-rule column. That
+matters only because it strengthens a pattern already recorded here — in the US
+the buyer of AI governance is increasingly **the district**, not the state, which
+is a procurement shape (many small buyers, each needing a policy artefact) rather
+than a product shape.
+
+**Recorded as a saturation signal, not as coverage.** Four consecutive passes
+have now returned the same North America facts from a general-language search.
+The channel is exhausted; the next North America finding will have to come from
+a different one — district RFP language, state education-agency procurement
+portals, or the vendor-side filings, none of which this KB has swept.
+
 ### EMEA
 
 - **The EU AI Act is the whole conversation.** AI used in education access and
@@ -551,6 +574,28 @@ the **UAE** one of only two jurisdictions worldwide running a compulsory nationa
 AI curriculum, and Egypt, Morocco and Jordan building capacity through
 public–private partnerships. The demand is funded and the open supply is
 unlicensed, which is an unusually favourable asymmetry for a services business.
+
+
+#### Eighth pass, 2026-10-06 — no new EMEA finding; the sweep returned enterprise-AI material, not education
+
+The mandated EMEA sweep (`AI education EMEA 2026 adoption regulation players`)
+returned **general enterprise AI-adoption commentary** — CompTIA's EMEA IT
+outlook, Workday's adoption study, AI-fluency training statistics — and **no
+education-specific regulatory or supply development** beyond what this file
+already records for the EU AI Act and Annex III point 3.
+
+**The one education-specific signal is an event, not a rule:** the **Council of
+Europe** is convening its **second working conference on the regulatory
+dimensions of AI in education** in October. This file already records the
+Council of Europe's role; the conference is worth tracking as the venue where
+sub-AI-Act education guidance for the 46 member states is likely to be shaped,
+and it is a legitimate forum for Globant to monitor rather than a market change.
+
+**Explicit gap:** this KB still has **no EMEA-origin permissive education agent
+added in the last three passes**, and the eighth pass did not change that. The
+EMEA supply picture remains what the earlier passes measured — strong platform
+estate, mostly copyleft (Moodle, Chamilo, ILIAS), with ECL-2.0 and LGPL-3.0
+as the permissive-adjacent exceptions.
 
 ### APAC
 
@@ -821,6 +866,31 @@ voice. Thai, Vietnamese and Indonesian have text-layer coverage only, so spoken
 practice in those languages routes through `sherpa-onnx` or Whisper and needs
 per-language accuracy testing before it is promised.
 
+
+#### Eighth pass, 2026-10-06 — no new APAC education rule; sovereignty is the operative frame
+
+The mandated APAC sweep returned **sovereignty and governance-gap material**
+rather than education regulation: 48% of APAC governance leaders naming AI
+adoption a top 2026 priority, 57% of Asian organisations with AI in at least one
+area, Singapore's consultations on AI in financial institutions, and a
+*"sovereign-by-design"* framing for 2026 regional execution. **No new education
+instrument** beyond the Korea **AI Framework Act** (in force 2026-01-22) and
+Vietnam's **Decree 33** (in force 2026-08-15) that this file already carries.
+
+**Why "sovereign-by-design" is the APAC education opportunity and not a
+slogan.** It is the one region where the buyer's stated preference — run it in
+our jurisdiction, on our data, under our rules — aligns exactly with what a
+permissive self-hosted stack delivers and a SaaS tutor cannot. The seventh
+pass's ASEAN language shelf (`pythainlp`, `underthesea`, `malaya`, `nusa-crowd`,
+all permissive) is the supply side of that preference, and it is the
+best-licensed regional language layer in this KB — **a direct contrast with
+LATAM's indigenous layer below, where the same capability exists without
+grants.**
+
+**Explicit gap, unchanged:** no **Korea**-origin permissive education *agent*
+(the seventh pass found course material, not an agent), which remains the widest
+distance in this KB between regulatory maturity and open supply.
+
 ### LATAM
 
 - **Teacher adoption is ahead of institutional readiness, sharply.** In Chile and
@@ -1086,6 +1156,79 @@ indigenous and regional languages (Guaraní, Quechua, Nahuatl, Aymara) that a
 ministry engagement would actually ask about. That noun has never been queried
 for LATAM, and in APAC changing exactly that noun falsified a standing gap.
 
+
+#### Eighth pass, 2026-10-06 — the regional diagnosis changes: the constraint is licence reliability, not supply
+
+Four passes told a client *"nothing exists upstream in this region; we build."*
+**That line is now wrong, and the replacement is more useful.**
+
+**What the eighth pass established (full evidence in `agents/trending.md`):**
+
+| Asset | Licence | Maturity | Where |
+|---|---|---|---|
+| `LabSirius/TutorIA` | **MIT** © Grupo Sirius | **13-page requirements spec + 5-layer architecture; no code** | Universidad Tecnológica de Pereira, **Colombia** |
+| `caiuc/equipo-19` (EduFlow) | **MIT** © CAi UC *(holder flagged)* | **Running code**, 8-hour build, 1★ | Pontificia Universidad Católica de **Chile** |
+| `neuralmind-ai/portuguese-bert` (BERTimbau) | **MIT** © NeuralMind | **886★, genuinely adopted** | NeuralMind, **Brazil** |
+| `Llamacha/IWSLT2023_Quechua_data` | payload Apache-2.0 / README **CC BY-NC-ND** | Corpus, scope-conflicted | Llamacha, **Peru** |
+| **Latam-GPT** | **Llama 3.1 Community License** © Meta — **not OSI** | Open-weights, 70B | CENIA, **Chile**, 60+ institutions / 15 countries |
+
+**The opportunity, stated as an engagement shape.** The region has published
+**the design and the licence, not the product.** So a LATAM engagement is a
+**productionisation** engagement with citable local provenance — which prices and
+positions very differently from a greenfield build, and gives Globant two named
+partnership leads (**UTP Pereira**, **PUC Chile**) where it previously had an
+absence.
+
+**Three region-specific facts that are new to this file and are directly
+billable:**
+
+1. **Colombia's data-protection anchor, from TutorIA's own RNF-05:** student
+   personal data, learning profiles and interaction history must be protected
+   *"conforme a la **Ley 1581 de 2012 (Habeas Data)**"*, with **TLS** in transit
+   and **AES-256** at rest. Processing minors' data without a compliant policy
+   exposes the institution to **Superintendencia de Industria y Comercio (SIC)**
+   enforcement. Pair this with **CONPES 4144** (already recorded here) and
+   Colombia becomes the most *specifiable* LATAM jurisdiction in this KB —
+   good news for a fixed-scope compliance workstream.
+2. **A hard low-resource envelope, also from TutorIA:** **2 GB RAM, 3G
+   connectivity** as acceptance criteria. This file previously described LATAM
+   rural access with adjectives; it now has numbers a proposal can be tested
+   against, and **EduFlow demonstrates they are achievable** (~8 KB per
+   10-exercise assignment, IndexedDB + Service Worker, auto-sync).
+3. **Latam-GPT is not open source, and nearly every account of it says it is.**
+   Usable and valuable for Spanish/Portuguese regional grounding; **not
+   relicensable, not presentable to a client as open source**, and it inherits
+   Meta's Acceptable Use Policy and the 700M-MAU clause into the client's
+   product. *Provenance caveat: single-source — `huggingface.co`,
+   `latamgpt.org`, EC OSOR and `opensourceforu.com` are all EGRESS_BLOCKED here
+   (4/4), so the model card was not read. Confirm before any deliverable.*
+
+**The governance gap, re-read against this supply picture.** UNESCO IESALC
+(already recorded here: 200 institutions, 19 countries, **87%** using AI, **26%**
+with a formal strategy, **45%** with institutional guidance against **70%** in
+Europe and North America) has until now been read as a demand signal for
+policy work. **It now reads as the same failure as the licensing gap, one level
+up:** the region produces the capability and omits the governing document —
+whether that document is an institutional AI policy or a `LICENSE` file.
+
+**And the eighth pass found the cheapest intervention in this KB.** **CAi UC**
+(PUC Chile) made an **OSI licence and a root `LICENSE` file a condition of
+evaluation eligibility** in HaCAIthon 2026, and **20 licensed team repositories
+appeared in eight hours** — 19 MIT, one AGPL-3.0, four of them education-track.
+Meanwhile the region's indigenous-language layer — AmericasNLP corpora for
+Aymara, Nahuatl and Quechua, ASR for five languages, MT for Peru — has **nine of
+eleven repositories with no `LICENSE` payload at all**, including **three
+AmericasNLP editions**.
+
+**So: sponsoring or co-writing the licence clause in a university hackathon's
+rules — in São Paulo, Lima, Bogotá, and on the same argument in Nairobi — is a
+concrete, low-cost, prospective fix for the one constraint that blocks both LATAM
+and MEA.** It is cheaper than filing upstream `LICENSE` issues one repository at
+a time, and it works on repositories that do not exist yet. Caveat worth
+carrying into any such sponsorship: CAi UC's template put **the organiser's name
+in the copyright line**, which is the wrong holder — a sponsored clause should
+make the authoring team the holder.
+
 ## Cross-region read
 
 Two patterns hold in every region, which makes them safe to build once and sell
@@ -1282,3 +1425,55 @@ And the cheapest two corrections of this pass required no search at all — they
 were this KB disagreeing with itself, found with `grep`. **A pass is finished
 when the shelf, the gap list, the trends file and the patterns agree with the
 log, not when the log entry is written.**
+
+## What changed in the eighth pass of 2026-10-06
+
+**The LATAM read is replaced, not extended.** For four passes this file's LATAM
+position rested on *"no LATAM-origin permissive education project"*. That gap is
+**fully refuted on origin, licence and design** and survives **only on
+maturity**: the region has published the design (TutorIA's MIT 13-page
+specification, Colombia) and working code (EduFlow, MIT, Chile) and an adopted
+language model (BERTimbau, MIT, 886★, Brazil) — and nothing at production scale.
+
+**The commercial consequence is a different engagement shape.** A LATAM
+engagement is a **productionisation** engagement with citable local provenance
+and two named academic partnership leads, not a greenfield build.
+
+**Three facts new to this file:** Colombia's **Ley 1581 de 2012 (Habeas Data)**
+with TLS/AES-256 acceptance criteria and SIC enforcement exposure; a hard
+**2 GB RAM / 3G** low-resource envelope with a working demonstration that it is
+achievable; and **Latam-GPT's licence** — **Llama 3.1 Community, not OSI
+approved**, despite the EC's own Open Source Observatory and the trade press
+calling it open source.
+
+**One cross-region finding, and it is the most actionable thing in the pass.**
+The seventh pass diagnosed MEA: *the binding constraint is licensing hygiene,
+not capability.* The eighth pass found the **identical** shape in LATAM's
+indigenous-language layer (9 of 11 repositories ungranted, including three
+AmericasNLP editions) **and a remedy that works prospectively**: CAi UC made an
+OSI licence a condition of hackathon evaluation and 20 licensed repositories
+appeared in eight hours. **Sponsoring that one clause is cheaper than any
+upstream-issue campaign and is the pass's recommended action for both regions.**
+
+**North America, EMEA and APAC returned nothing new, and each is recorded as
+such above rather than left silent.** North America's general-language channel
+is now **saturated** — four consecutive passes, identical facts — and the next
+finding there must come from district RFP language or state procurement portals,
+which this KB has never swept. EMEA returned enterprise-AI commentary and one
+event (the Council of Europe's second working conference on AI-in-education
+regulation). APAC returned sovereignty framing, which is read here as the
+region's actual opportunity shape rather than as a miss.
+
+### The method note, stated plainly
+
+**This file's regional claims are only as good as the probe's vocabulary, and
+this pass is the fourth consecutive demonstration of it.** The LATAM gap was
+refuted not by searching LATAM harder — four passes had done that — but by
+probing a repository for a **specification** instead of for **code**, and by
+sweeping an **institutional event** instead of a topic page.
+
+**And the licence column in every table in this KB now carries a known
+ceiling.** Eight passes treated the `LICENSE` payload as ground truth. It is
+wrong about `Llamacha` in the permissive direction, silent about CAi UC's
+inherited holder, and says nothing about the label-versus-grant gap that makes
+Latam-GPT look open. **Three points, not one: payload, asset scope, holder.**

@@ -143,6 +143,71 @@ Two engineering choices generalise to every pattern in this KB:
   by-product of normal operation rather than assembled as a compliance project.
   Wire it into the side-car patterns too.
 
+
+## Added in the eighth pass of 2026-10-06 — the offline-first delivery tier, and why it is a platform question
+
+Every platform on this page assumes a network. **The eighth pass found the tier
+underneath that assumption**, and it changes the LATAM and MEA architecture
+conversation from a feature trade-off into a platform selection.
+
+### The constraint, now with numbers instead of adjectives
+
+`LabSirius/TutorIA`'s requirements specification (**MIT**, Universidad
+Tecnológica de Pereira, Colombia — see `agents/top.md`) states the rural-access
+envelope as a **testable acceptance criterion**, which no platform page in this
+KB previously had:
+
+> **RNF-04** — *"Compatible con dispositivos con mínimo **2GB de RAM**;
+> funcional con conectividad de **3G**."*
+
+And it states the governing privacy regime for the same deployment:
+
+> **RNF-05** — *"conforme a la **Ley 1581 de 2012 (Habeas Data)**"*, with
+> **TLS** in transit and **AES-256** at rest.
+
+**Use these two lines as the intake questions for any LATAM education platform
+selection.** They are citable, institutionally authored, and permissively
+licensed.
+
+### The platform answer, which is Kolibri — and the reference implementation, which is new
+
+| System | Repo | Licence (payload) | Role in this tier |
+|---|---|---|---|
+| **Kolibri** | [learningequality/kolibri](https://github.com/learningequality/kolibri) | **MIT** (`master/LICENSE`, © 2021 Learning Equality and other contributors) | **The platform.** Purpose-built for schools with no reliable internet; the only permissive, maintained, genuinely deployed offline-first LMS on this page |
+| Kolibri Studio | [learningequality/studio](https://github.com/learningequality/studio) | **MIT** (`master/LICENSE`, Foundation for Learning Equality) | Curriculum authoring and channel curation for Kolibri |
+| Kolibri for Android | [learningequality/kolibri-installer-android](https://github.com/learningequality/kolibri-installer-android) | **MIT** (`master/LICENSE`, © 2023) | The 2 GB-RAM delivery target of RNF-04 |
+| **EduFlow** | [caiuc/equipo-19-haCAIthon-2026](https://github.com/caiuc/equipo-19-haCAIthon-2026) | **MIT** (© 2026 CAi UC — **holder flagged**, see `agents/top.md`) | **Not a platform — a readable reference implementation** of the offline-sync pattern, 41 commits |
+| RACHEL | *path unresolved* | **Unknown — not established** | Cited by EduFlow as prior art alongside Kolibri. **No file resolved on any probe** (`rachelproject/rachelplus`, `rachelproject/RACHELPlus`, `rachelproject/rachel`, `worldpossible/rachelplus` × `main`/`master`), so the canonical location was **not** established and no licence claim is made. Recorded so the next pass starts from the project's own site, not from a guessed repository path |
+
+All three Learning Equality licences were **re-confirmed from payload this
+pass**.
+
+### What EduFlow contributes that Kolibri does not
+
+Kolibri is the right platform and it is a large system. **EduFlow is ~41 commits
+and shows the mechanism in a form an architect can read in an afternoon:**
+teacher opens a room and shares a **6-character code**; the student downloads
+the assignment while in signal — **~8 KB for 10 exercises**, because a maths
+problem is text — solves it **entirely offline** with immediate correction via
+**IndexedDB** plus a **Service Worker** app-shell cache, and answers **sync
+automatically** on reconnection. FastAPI + Next.js PWA + Supabase.
+
+Its own problem statement is the sharpest on this page: *"Las plataformas
+educativas que existen — Khan Academy, Google Classroom, Kahoot — **asumen
+conexión permanente**. En un colegio municipal con internet intermitente eso las
+vuelve inservibles."*
+
+### The selection rule this adds to the page
+
+**If the deployment has intermittent connectivity, offline-first is a platform
+decision and not a feature you add later.** Retrofitting sync onto a
+network-assuming LMS means rebuilding its data layer; choosing Kolibri means
+accepting its content model from day one. **Decide this before the LMS
+shortlist, not after** — and note that this is the one tier of the education
+platform shelf where the permissive option (**Kolibri, MIT**) is also the best
+option, which is not true of the LMS tier (Moodle, Chamilo, ILIAS — all
+copyleft) or the ERP tier (**OpenEduCat, LGPL-3.0**).
+
 ## The Kuali estate — one higher-ed consortium, three different licences
 
 Added in the third pass of 2026-10-06. The admin shelf above was missing the
