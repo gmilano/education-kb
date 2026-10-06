@@ -49,8 +49,21 @@ equivalent for Moodle.
 
 Why it matters beyond convenience: **MCP side-cars keep their permissive
 license** while in-tree LMS plugins inherit copyleft. Every in-tree Moodle AI
-plugin probed this pass is GPL-3.0; both MCP servers are MIT. The integration
-style now determines the IP outcome.
+plugin probed this pass is GPL-3.0; both canonical MCP servers are MIT. The
+integration style now determines the IP outcome.
+
+**Refinement from the second pass of 2026-10-06 — and it is a correction of
+emphasis.** A side-car is permissive *by the author's choice*, not by
+construction. Sweeping every Canvas and Moodle MCP server that surfaces in
+search, the shelf is in worse shape than the canonical two suggest:
+`DMontgomery40/mcp-canvas-lms` (103★, 54 tools, v2.3.0) and `loyaniu/moodle-mcp`
+(38★) carry **no license at all** on any branch or in their READMEs, and
+`csmediapro/moodle-mcp-server` is **AGPL-3.0 with a paid premium tier**. Only
+four of the seven servers probed are usable, and the most-starred non-canonical
+one is not. An unlicensed repo is worse than a copyleft one: AGPL is a constraint
+you architect around, no license is all-rights-reserved. **A license probe is now
+week-one engagement work, not diligence you defer.** Full table in
+`agents/top.md`.
 
 ## 5. Framework consolidation — AutoGen is out
 
@@ -111,23 +124,96 @@ effect: instrument for retention and participation, not just for correctness and
 completion. A tutoring deployment that improves completion while reducing
 sustained participation is a failure that only shows up if you measure it.
 
+## 11. Agent-specific governance has arrived, and a regulator wrote it first
+
+Until 2026, education AI governance was general AI rules applied to education by
+analogy. That changed: **Singapore's IMDA published the world's first Model AI
+Governance Framework for Agentic AI** at Davos in January 2026, updated in June
+2026 — a framework that governs autonomous planning, reasoning and action
+directly. Its four dimensions read as a build checklist:
+
+1. **bound the agent upfront** — pick appropriate agentic use cases and place
+   explicit limits on the agent's powers;
+2. **make humans meaningfully accountable** — define which checkpoints require
+   human approval (note *meaningfully*: a rubber-stamp approval does not count);
+3. **technical controls across the whole agent lifecycle**, not just at launch;
+4. **enable end-user responsibility** through transparency and **training** — the
+   framework explicitly expects users of workflow-assisting agents to be taught
+   capabilities, common failure points and risks.
+
+Two consequences. First, dimension 4 makes teacher and student enablement a
+*compliance artefact*, which means it is fundable rather than discretionary.
+Second, a system designed to this framework largely satisfies EU Annex III, the
+Oklahoma/Maryland human-oversight statutes and Korea's high-impact
+classification at the same time — so use it as the cross-region checklist even on
+engagements nowhere near Singapore.
+
+The binding-regulation wave is also wider than this KB recorded: **Korea's AI
+Framework Act took effect 22 January 2026** and **Vietnam's dedicated AI law
+(No. 134/2025/QH15) on 1 March 2026**.
+
+## 12. Agent Skills are becoming the distribution format for pedagogy
+
+The interesting packaging unit is shifting from "a tutoring app" to "a skill an
+agent can load." `vishalsachdev/canvas-mcp` (MIT) ships **8 agent skills**
+alongside its 103 tools. `JuneYaooo/lineage-skill` (Apache-2.0, 448★ — the
+highest-starred project on the `education-ai` topic) exists only to produce them:
+it distils videos, PDFs, transcripts and notes into **source-backed teacher Agent
+Skills**, preserving source attribution, extracting the instructor's methodology
+and ordering practice tasks progressively.
+
+Why this matters commercially: a skill is portable across the 40+ clients that
+speak MCP, which makes an institution's *pedagogy* — its methodology, its
+sequencing, its worked examples — the reusable asset rather than the application
+wrapped around it. Source-backed matters just as much: a skill that carries
+provenance back to the instructor's own materials is defensible in a way a
+fine-tune is not, and provenance is what the high-risk regimes ask for. Expect
+"turn our course into agent skills" to become a recognisable engagement shape.
+
 ## Regional notes where the trend diverges
 
 - **North America:** adoption is broad (60% of K-12 teachers) and the binding
   constraint is policy and procurement, not willingness.
-- **EMEA:** the AI Act deferral to December 2027 is a design window, and the
-  trend is pre-emptive compliance architecture.
-- **APAC:** sovereign models everywhere; an education agent layer nowhere. ANZ
+- **EMEA:** the AI Act's general application is **already live (2 August 2026)**;
+  what is deferred is the high-risk set (Annex III stand-alone to 2 December 2027,
+  embedded to 2 August 2028). The trend is pre-emptive compliance architecture, and
+  the sequencing institutions actually use is admin and teacher support first,
+  assessment last. The region is $2.64B in 2026 and the K-12 integration leaders
+  are Finland, Estonia and the Netherlands — small digitally mature states, not the
+  large economies. Africa is in this bucket and is greenfield.
+- **APAC:** sovereign models everywhere; an education agent layer nowhere — and
+  now sovereign *inferencing platforms* too, so the hosting gap is closing while
+  the pedagogy gap stays open. Singapore leads on agentic governance, Korea
+  (22 Jan 2026) and Vietnam (1 Mar 2026) on binding law. ANZ
   diverges from the rest of the region — higher public support for banning AI in
   schools, where Asian markets surveyed show lower support for bans.
 - **LATAM:** the trend is teacher-led, bottom-up adoption outrunning institutional
-  governance by a wide margin. UNESCO's LAC Observatory (14 April 2026) is the
-  top-down counterweight now forming.
+  governance by a wide margin — now quantified for higher education: **92% of
+  students and 79% of faculty** actively using AI, **94% of faculty** expecting to,
+  while **88% of faculty report only minimal-to-moderate engagement**. Adoption is
+  done; depth is not. UNESCO's LAC Observatory (14 April 2026) is the top-down
+  counterweight now forming, and Colombia's funded CONPES 4144 programme shows the
+  regulatory map fragmenting country by country rather than converging.
 
 ## Declared gaps this pass
 
 - No permissive open source automated grading/assessment agent.
 - No open source EU AI Act compliance toolkit specific to education.
-- No LATAM-origin open source education agent project.
+- No LATAM-origin open source education agent project — **re-probed with
+  evidence this pass.** `planejaia/OpenMAIC-Brasil`, surfaced by search as a
+  Brazil-origin multi-agent classroom with a v1.0.0 release, returns **HTTP 404**;
+  every file 404s across four branches. The `education-ai` GitHub topic contains
+  no LATAM-origin project at all (its long tail is Chinese, Indian and German, and
+  nothing on it exceeds 448★). Latam-GPT is regional foundation infrastructure,
+  not a pedagogy layer.
+- **Africa: almost entirely uncovered, and that is now stated rather than
+  implied.** South Africa's draft national AI policy (2026) is forming and
+  GenAITEd Ghana is a published first-of-its-kind curriculum-aligned teacher-education
+  agent, but there is no deployed open source African education AI shelf to
+  recommend from. Greenfield, with teacher capability as the binding constraint.
+- **No permissive open source auto-grader — and now a measured reason to distrust
+  the shelf generally.** Of seven education MCP servers probed, three are
+  unusable (two unlicensed, one AGPL + paid tier). The education open source
+  shelf is thinner than its star counts imply.
 - No APAC-origin education agent layer on top of the region's sovereign models
   (`panaversity/learn-agentic-ai` is curriculum, not a product).

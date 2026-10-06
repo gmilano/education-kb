@@ -8,6 +8,71 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — second pass: the administrative shelf (SIS / education ERP)
+
+The morning pass covered the *learning* platform shelf (Moodle, Open edX, Canvas,
+Chamilo, Sakai, ILIAS, Kolibri, Oppia) thoroughly. It did not cover the
+**administrative** shelf — student information systems and education ERP — and
+that is where a large share of real institutional spend and automation work sits:
+admissions, enrolment, fees, attendance, examinations, library, HR. Swept and
+verified this pass.
+
+| Platform | Repo | Licence (read from payload) | ★ | Position |
+|---|---|---|---|---|
+| OpenEduCat | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | **LGPL-3.0** (`LICENSE@master`) | 884 (775 forks) | Education ERP on the Odoo framework, Python, v19.0, 1,710 commits. Admissions, student info, courses, exams, finance, attendance, library, HR. **The most important licence finding of this pass — see below.** |
+| ERPNext | [frappe/erpnext](https://github.com/frappe/erpnext) | **GPL-3.0** (`license.txt@master`) | — | General ERP with an education module (students, programmes, fees, assessment). Same lowercase-`license.txt` trap as `frappe/lms`: probing `LICENSE` returns 404. |
+| Gibbon | [GibbonEdu/core](https://github.com/GibbonEdu/core) | GPL-3.0 (`LICENSE@main`) | — | School management platform — timetabling, attendance, markbook, pastoral care. Strong K-12 fit. |
+| RosarioSIS | [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | **GPL-2.0** (`LICENSE@master`) | — | Student information system, PHP/PostgreSQL, strong multilingual support including Spanish. GPL-**2.0**, not 3.0 — the only GPL-2.0 project on either shelf, so it is not licence-compatible with GPL-3.0-only code. |
+| openSIS Classic | [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | **GPL-2.0** (`docs/License.txt@master`) | — | Student information system: scheduling, grades, attendance, billing. See the method note below — its licence is in a **subdirectory**. |
+| Apache OFBiz | [apache/ofbiz-framework](https://github.com/apache/ofbiz-framework) | **Apache-2.0** (`LICENSE@master`) | — | Not education-specific, but a genuinely permissive ERP/CRM framework (Java) when an institution needs admin automation with no copyleft exposure and no Odoo dependency. The permissive fallback on this shelf. |
+
+### LGPL-3.0 is the middle path this KB's framing was missing
+
+This KB has been treating licences as binary: permissive (build reusable IP) or
+copyleft (your AI inherits it, so side-car instead). OpenEduCat's LGPL-3.0 is a
+third position, and the project chose it deliberately — LGPLv3 lets an
+institution extend the platform with **proprietary modules** (an integration with
+a confidential research system, licensed third-party content) without being
+forced to open-source those modules.
+
+**Consequence for an engagement:** against an LGPL-3.0 platform, a *module* is a
+viable commercial shape — you are not pushed to the side-car to protect your IP
+the way Moodle (GPL-3.0) or Canvas (AGPL-3.0) push you. Modifications to
+OpenEduCat's own LGPL files stay LGPL; a separate module that links against it
+does not have to. This widens the architecture menu on the admin side from one
+option to two, and OpenEduCat (884★, 775 forks, v19.0) is a live, maintained
+platform rather than a curiosity.
+
+### Method note — the licence probe needs a THIRD axis: path depth
+
+`repos/foundations.md` records that a licence probe needs both filename *and*
+extension (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license.txt`, `COPYING`,
+`COPYING.txt`). `OS4ED/openSIS-Classic` adds a third axis: **directory**. Every
+root-level candidate returns 404 — `LICENSE`, `LICENSE.md`, `COPYING`, `license`,
+`License.txt`, `GPL-LICENSE.txt` — while the real licence sits at
+**`docs/License.txt`** (GPL-2.0), and the only pointer to it is a Markdown link
+inside the README.
+
+So the probe order that actually works:
+
+1. root filename × extension variants;
+2. if all 404, **read the README for a licence link** before recording a gap;
+3. follow that link and read the payload.
+
+Skipping step 2 produces a false "unlicensed" verdict on a correctly licensed
+project — which is the mirror image of the false-MIT error that `frappe/lms`
+causes. Both failure modes are now documented with a live example.
+
+### Enablement repos verified this pass
+
+| Repo | Licence (read from payload) | Note |
+|---|---|---|
+| [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | MIT (`LICENSE@main`) | AI-engineering track; trending through 2026. |
+| [jamwithai/production-agentic-rag-course](https://github.com/jamwithai/production-agentic-rag-course) | MIT (`LICENSE@main`) | Production agentic-RAG course — the missing middle between "agent demo" and "deployed retrieval system", and directly relevant to the curriculum-ingestion patterns. |
+| [ashishpatel26/500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) | MIT (`LICENSE@main`) | Curated agent use cases indexed **by industry**, education included. Useful as an opportunity-scan input, not as a dependency. |
+| [caramaschiHG/awesome-ai-agents-2026](https://github.com/caramaschiHG/awesome-ai-agents-2026) | **CC0-1.0** (`LICENSE@main`) | 300+ resources, 20+ categories. CC0 is a public-domain dedication — fine for a list, but it is not a software licence; do not treat CC0 on a list repo as a grant over the projects it links to. |
+
+
 ## 2026-10-06
 
 **Verification channel changed this pass — worth recording.** `api.github.com`

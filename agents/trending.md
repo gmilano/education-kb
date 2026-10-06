@@ -8,6 +8,94 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — second pass: licence sweep of the education MCP shelf
+
+The morning pass established that MCP side-cars keep their permissive licence
+while in-tree LMS plugins inherit copyleft. This pass probed **every** Canvas and
+Moodle MCP server that surfaces in search, not just the canonical two, and the
+refinement matters: **a side-car is permissive by the author's choice, not by
+construction.** Three of the most-starred education MCP servers in circulation
+cannot be used in a client deliverable at all.
+
+### The education MCP shelf, licence read from payload
+
+| Repo | ★ | Licence (read from payload) | Tools | Verdict |
+|---|---|---|---|---|
+| [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | 278 (95 forks) | MIT (`LICENSE@main`) | up to 103 tools, 8 agent skills, v1.13.0 (Sep 2026) | **Canonical. Use this one.** |
+| [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | 103 | **NONE** — no `LICENSE` on any branch, no licence statement in README | 54 tools, v2.3.0 | **Do not use.** No licence = all rights reserved. |
+| [loyaniu/moodle-mcp](https://github.com/loyaniu/moodle-mcp) | 38 | **NONE** — no `LICENSE` on any branch, no licence statement in README | Moodle LMS tools, Python | **Do not use.** |
+| [peancor/moodle-mcp-server](https://github.com/peancor/moodle-mcp-server) | ~42 | MIT (`LICENSE`) | Moodle via web services | Canonical Moodle side-car. |
+| [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) | 1 | **AGPL-3.0** (`LICENSE@main`) | 11 core tools + paid premium plugins | Avoid. AGPL **plus** a commercial upsell — the worst combination for reusable studio IP. |
+| [CharlieCardenasToledo/mcp-canvas-server](https://github.com/CharlieCardenasToledo/mcp-canvas-server) | 0 | MIT (`LICENSE@main`) | README says 117 tools / 21 categories; repo description says 51 | Usable, unproven. Note the tool-count contradiction inside its own repo. |
+| [Jawadh-Salih/moodle-mcp-server](https://github.com/Jawadh-Salih/moodle-mcp-server) | 0 | MIT (`LICENSE@main`) | student-facing, **Go** | Usable, unproven. The only Go implementation found. |
+
+**Why an unlicensed repo is worse than a copyleft one.** AGPL-3.0 is a known
+constraint you can architect around. No licence at all means default copyright:
+all rights reserved, no grant to use, modify or redistribute. A 103★ repo with
+54 working tools and no `LICENSE` file is a trap precisely because it looks
+mature. Probe the licence before the feature list.
+
+### canvas-mcp fork lineage — two more forks to pin against
+
+Alongside the forks already recorded in this KB, two further forks carry
+byte-identical descriptions to the canonical repo and the same MIT licence, with
+none of its history: [abr-Projects/canvas-mcp](https://github.com/abr-Projects/canvas-mcp)
+and [BartMassey-upstream/canvas-mcp](https://github.com/BartMassey-upstream/canvas-mcp).
+A description-identity match is the cheapest fork signal available — see
+`compose/code/description-drift-audit` and `compose/code/fork-lineage-audit`.
+Pin `vishalsachdev/canvas-mcp`.
+
+### New verified agents this pass
+
+| Agent | Repo | Licence (read from payload) | ★ | What it does |
+|---|---|---|---|---|
+| lineage-skill | [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) | Apache-2.0 (`LICENSE@main`) | 448 | Distils videos, PDFs, transcripts and notes into **source-backed teacher Agent Skills** — keeps source attribution, extracts instructor methodology, orders practice tasks progressively. Python. The highest-starred repo on the `education-ai` topic and the clearest example of Agent Skills as a *distribution format for pedagogy*. |
+| Claw-ED | [SirhanMacx/Claw-ED](https://github.com/SirhanMacx/Claw-ED) | MIT (`LICENSE@main`) | 60 | Local-first AI teaching assistant for lesson drafts and materials. Python. Small, but local-first + MIT is exactly the shape the EMEA residency and LATAM cost constraints ask for. |
+
+### Correction to an earlier cycle: OpenTutor
+
+Cycle 3 of this KB recorded **"OpenTutor (MIT, ~900★, FSRS6 + KG + 12 blocks)"**.
+Probed this pass, [tutornew/OpenTutor](https://github.com/tutornew/OpenTutor) has
+**8 stars, 5 commits, and no licence** — no `LICENSE` file on `main`, `master` or
+`develop` across eight filename/extension variants, and no licence statement in
+its README. Both the star count and the licence in that earlier entry were wrong
+by two orders of magnitude and by a whole legal category. **Withdrawn.** It is
+not a starting point and not usable as-is.
+
+Note the near-collision that probably caused it: `tutornew/OpenTutor` (8★,
+unlicensed) is a different project from the MIT-licensed OATutor
+([CAHLR/OATutor](https://github.com/CAHLR/OATutor), 264★, UC Berkeley) and from
+the Open TutorAI work published on arXiv. Three similar names, three different
+licence positions.
+
+### Gap re-probed with evidence, not silence
+
+**The LATAM-origin gap still holds, and here is the probe.** A search for
+LATAM education agents surfaced `planejaia/OpenMAIC-Brasil` ("Open Multi-Agent
+Interactive Classroom", described as v1.0.0 released 2026-08-27). It is
+**unreachable**: `raw.githubusercontent.com` returns 404 for `README.md`,
+`LICENSE`, `requirements.txt` and `package.json` on `main`, `master`, `dev` and
+`develop`, and the repository page itself returns **HTTP 404**. Deleted, renamed
+or made private. A search hit is not a repository.
+
+The `education-ai` GitHub topic, swept this pass, contains **no LATAM-origin
+project at all** — the long tail is Chinese (`ASEpochs/ai-digital-teacher`,
+`SimonsTang/*`, `LeoLiu363/ai-video-understanding`,
+`upstream1119/Traceable-Ideological-Education-RAG`), Indian
+(`brahm-ai-official/brahm-ai`, 5★) and German (`awesome-german/ai-tools`, 4★),
+and nothing on it exceeds 448★. For LATAM the opportunity remains deployment,
+governance and localisation — not upstream code. **Latam-GPT** (Chile-led, trained
+for Spanish and Portuguese with indigenous languages planned, reported as
+published on Hugging Face and GitHub) is regional *foundation* infrastructure,
+which is the same shape as the APAC sovereign-model gap: a base model with no
+pedagogy layer on top.
+
+*Source note:* the Latam-GPT reporting could not be link-verified from this
+environment — the publishing domain is blocked by the egress proxy — so it is
+recorded as an unverified secondary claim with no URL rather than a verified
+finding. Re-verify before it reaches a client deliverable.
+
+
 ## 2026-10-06
 
 **Framework consolidation — AutoGen is out.** `microsoft/autogen` (61.3k★) is now

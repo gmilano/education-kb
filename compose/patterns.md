@@ -11,7 +11,7 @@ Concrete recipes built only from repos verified in `agents/top.md`,
 component names its license, because in this industry the license decides the
 architecture.
 
-**The rule behind all six patterns:** the education platform shelf is mostly
+**The rule behind patterns P1–P6:** the education platform shelf is mostly
 copyleft (Moodle GPL-3.0, Open edX / Canvas / Frappe AGPL-3.0). AI built as an
 in-tree plugin inherits that license; the same AI built as an external service
 over LTI 1.3 or MCP stays permissive. Globant's reusable IP lives in the
@@ -32,7 +32,7 @@ side-car.
    (Apache-2.0) for launch, identity and grade passback.
 3. Expose LMS data to the agent over MCP:
    [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) (MIT,
-   102 tools, 8 agent skills) for Canvas, or
+   up to 103 tools, 8 agent skills) for Canvas, or
    [peancor/moodle-mcp-server](https://github.com/peancor/moodle-mcp-server)
    (MIT) for Moodle.
 4. Tutoring engine: [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor)
@@ -181,6 +181,111 @@ how an engagement becomes a programme rather than a project.
 
 ---
 
+## P7 — Admin automation on an LGPL platform (the module, not the side-car)
+
+**Added 2026-10-06.** The first six patterns all route around copyleft by building
+a side-car. On the *administrative* shelf that is not forced, and routing around a
+constraint that is not there costs you integration depth for nothing.
+
+**Use when:** the client's pain is administrative — admissions triage, enrolment,
+fee reconciliation, attendance follow-up, exam scheduling — rather than tutoring,
+and they do not already run a committed SIS.
+
+**Outcome:** AI-assisted administration inside the ERP, with Globant's module able
+to stay proprietary.
+
+**Wiring:**
+1. Platform: [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp)
+   (**LGPL-3.0**, 884★, 775 forks, v19.0, Odoo/Python). Admissions, student info,
+   courses, exams, finance, attendance, library, HR already exist — do not rebuild
+   them.
+2. **Respect the LGPL boundary, because it is what buys you the proprietary
+   option.** Do not fork OpenEduCat's own files: changes to them stay LGPL-3.0.
+   Build a *separate* Odoo module that links against it through documented
+   interfaces. That module can be proprietary.
+3. Agent layer in the module: [pydantic/pydantic-ai](https://github.com/pydantic/pydantic-ai)
+   (MIT) for typed, validated outputs on every record it writes, orchestrated with
+   [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) (MIT) so each
+   administrative decision carries a checkpointed trail.
+4. Documents in: [opendatalab/MinerU](https://github.com/opendatalab/MinerU)
+   (Apache-2.0) for transcripts, certificates and application attachments.
+5. Inference: [ollama/ollama](https://github.com/ollama/ollama) (MIT) on-prem —
+   admissions data is exactly the category California AB 1159, EU residency
+   practice and India's DPDP constrain.
+6. If the client needs admin automation with **zero** copyleft exposure anywhere
+   in the tree, substitute [apache/ofbiz-framework](https://github.com/apache/ofbiz-framework)
+   (Apache-2.0, Java) and accept that you are building the education domain model
+   yourself.
+
+**Watch:** admissions is an Annex III high-risk use case under the EU AI Act —
+"AI used in education access" is named explicitly. An admissions agent is a
+high-risk system, not back-office convenience. Put the P4 oversight gate on any
+admit/reject path, and keep the agent on triage, completeness checking and
+summarisation rather than the decision.
+
+**Watch also:** if the client already runs an SIS, do not migrate them. Gibbon
+(GPL-3.0), RosarioSIS (GPL-2.0) and openSIS (GPL-2.0) are all copyleft, so there
+P1's side-car shape returns. RosarioSIS being GPL-**2.0** also means it is not
+license-compatible with GPL-3.0-only code — check before combining anything.
+**Effort:** 5–7 weeks for a single-process pilot (admissions triage is the usual
+first one).
+
+---
+
+## P8 — Course materials → source-backed Agent Skills
+
+**Added 2026-10-06.** P2 turns curriculum into an *item bank*. This turns it into
+**portable agent skills**, which is a different and more reusable asset: the
+institution's own pedagogy, loadable by any of the 40+ MCP-speaking clients.
+
+**Use when:** the client's differentiator is *how they teach* — a methodology, a
+sequencing, a body of worked examples — and it currently lives only in lecture
+recordings, slide decks and a few senior instructors' heads.
+
+**Outcome:** the institution's teaching method as versioned, source-attributed
+skills, usable inside the LMS and outside it.
+
+**Wiring:**
+1. Capture: [opencast/opencast](https://github.com/opencast/opencast) (ECL-2.0,
+   permissive) for the lecture corpus if it is not already recorded.
+2. Structure: [opendatalab/MinerU](https://github.com/opendatalab/MinerU)
+   (Apache-2.0) for PDFs, textbooks and scanned handouts.
+3. Distil: [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill)
+   (**Apache-2.0**, 448★, Python) — videos, PDFs, transcripts and notes into
+   source-backed teacher Agent Skills. It preserves source attribution, extracts
+   instructor methodology and orders practice tasks progressively, which is
+   precisely the part a generic summariser throws away.
+4. Deliver into the LMS: the 8 agent skills already shipped by
+   [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) (MIT,
+   up to 103 tools, v1.13.0) are the reference shape and the delivery path for
+   Canvas; [peancor/moodle-mcp-server](https://github.com/peancor/moodle-mcp-server)
+   (MIT) for Moodle.
+5. Deliver offline too: package the same distilled material into Kolibri channels
+   with [LearningEquality/ricecooker](https://github.com/LearningEquality/ricecooker)
+   (MIT) → [LearningEquality/kolibri](https://github.com/LearningEquality/kolibri)
+   (MIT). One distillation, two delivery modes — this is what makes the pattern pay
+   in LATAM and low-connectivity contexts.
+6. Local authoring assist: [SirhanMacx/Claw-ED](https://github.com/SirhanMacx/Claw-ED)
+   (MIT, 60★) for local-first lesson drafting, so draft materials never leave the
+   institution.
+
+**Why source-backed is the whole point:** provenance back to the instructor's own
+materials is defensible under the high-risk regimes in a way a fine-tune is not,
+and it is what lets a faculty member accept the output. A skill that cannot cite
+its source will not survive faculty review.
+
+**Watch:** IP and consent. Lecture recordings carry instructor performance rights
+and student voices and faces; third-party course content carries licensing terms.
+Settle who owns a distilled skill — institution, instructor, or Globant — in the
+SOW, before the first ingest. This is also the LATAM depth play: with 92% of
+students and 79% of faculty already using AI but 88% of faculty engaging only
+shallowly, the gap is integration into real teaching practice, which is exactly
+what a skill built from their own course does.
+**Effort:** 4–6 weeks for one programme; the second programme is roughly half,
+because the pipeline is reused and only the corpus changes.
+
+---
+
 ## Pattern selection
 
 | Situation | Pattern |
@@ -191,6 +296,11 @@ how an engagement becomes a programme rather than a project.
 | EU client, assessment in scope | P4 (P1 for the integration) |
 | Connectivity/budget constrained, equity mandate | P5 |
 | Client staff must own it afterwards | P6, alongside any other |
+| Pain is administrative, no committed SIS yet | **P7** (module on LGPL-3.0 OpenEduCat) |
+| Pain is administrative, SIS already committed | P1's side-car shape — Gibbon/RosarioSIS/openSIS are all copyleft |
+| Differentiator is *how they teach*, locked in recordings and senior staff | **P8** |
+| LATAM higher ed: adoption already universal, integration shallow | **P8** for depth, P6 for faculty capability |
+| Singapore/APAC agentic-governance requirement in scope | any pattern, built to the IMDA four dimensions (see `intel/trends.md` §11) |
 
 ## Anti-patterns
 
@@ -205,3 +315,25 @@ how an engagement becomes a programme rather than a project.
   the description and license without the history. Pin `HKUDS/DeepTutor`.
 - **Treating an APAC sovereign model as an education product.** They are base
   models with no pedagogy layer; that layer is the work.
+- **Depending on an unlicensed repo because it looks mature.**
+  `DMontgomery40/mcp-canvas-lms` has 103★, 54 tools and **no license**;
+  `loyaniu/moodle-mcp` has 38★ and none either. No license means all rights
+  reserved — it cannot ship in a client deliverable. Probe the license in week one,
+  before the feature comparison.
+- **Recording "unlicensed" after probing only the repo root.**
+  `OS4ED/openSIS-Classic` 404s on every root-level license filename while its real
+  GPL-2.0 license sits at `docs/License.txt`, linked only from the README. Probe
+  filename × extension, then read the README for a license link, then conclude.
+- **Building a side-car against an LGPL-3.0 platform out of habit.** On OpenEduCat
+  a separate proprietary module is permitted; routing around a constraint that is
+  not there costs integration depth for nothing. Use P7.
+- **Selling adoption into LATAM higher education.** 92% of students and 79% of
+  faculty already use AI. The gap is depth — 88% of faculty engage only minimally.
+  Sell integration and faculty capability, not enablement-from-zero.
+- **Telling an EMEA client the AI Act does not apply yet.** General application
+  started 2 August 2026. Only the high-risk obligations are deferred (Annex III
+  stand-alone to 2 December 2027, embedded to 2 August 2028).
+- **Chasing a search hit without a reachability probe.** `planejaia/OpenMAIC-Brasil`
+  reads like a Brazil-origin multi-agent classroom with a v1.0.0 release and
+  returns HTTP 404 on every branch and file. `curl -sI` before it reaches a
+  proposal.

@@ -19,7 +19,8 @@ carrying a stale or inferred number.
 
 ## Agents and tools
 
-12 rows, all verified this pass.
+14 rows, all verified. The 12 recorded in the morning pass, plus 2 added in the
+second pass of 2026-10-06.
 
 | Agent | Repo | License (read from payload) | ★ (2026-10-06) | What it does |
 |---|---|---|---|---|
@@ -28,13 +29,44 @@ carrying a stale or inferred number.
 | smolagents | [huggingface/smolagents](https://github.com/huggingface/smolagents) | Apache-2.0 (`LICENSE`) | 29.7k | Barebones library for agents that think in code. Small surface area makes it the cheapest framework to audit for a high-risk education deployment. |
 | Microsoft Agent Framework (MAF) | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) | MIT (`LICENSE`) | 14.0k | Building, orchestrating and deploying agents and multi-agent workflows, Python and .NET. Ships migration guides *from* AutoGen and Semantic Kernel. |
 | Oppia | [oppia/oppia](https://github.com/oppia/oppia) | Apache-2.0 (`LICENSE`) | 6.8k | Online learning platform for authoring interactive lessons ("explorations") with built-in misconception handling. One of only three permissively licensed full platforms in this KB. |
-| Canvas MCP | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT (`LICENSE`) | 278 | Canvas LMS MCP server: up to 102 tools and 8 agent skills for students, educators and learning designers. Includes a 20-check WCAG accessibility scanner and bulk-grading tools. Works with 40+ MCP clients. |
+| Canvas MCP | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT (`LICENSE`) | 278 (95 forks) | Canvas LMS MCP server: **up to 103 tools** and 8 agent skills for students, educators and learning designers. Includes a 20-check WCAG accessibility scanner and bulk-grading tools. Works with 40+ MCP clients. Latest release v1.13.0 (Sep 2026). The canonical repo — pin it against its forks. |
 | OATutor | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | MIT (`LICENSE`) | 264 | Intelligent tutoring system with Bayesian Knowledge Tracing, from CAHLR at UC Berkeley. Published at CHI '23 with a follow-up in PLOS ONE. ReactJS + Firebase. The auditable mastery model in this list. |
 | Educhain | [satvik314/educhain](https://github.com/satvik314/educhain) | MIT (`LICENSE`) | 388 | Python package for generating educational content with generative AI — MCQs, open-ended items, lesson plans, flashcards. |
 | Kolibri | [LearningEquality/kolibri](https://github.com/LearningEquality/kolibri) | MIT (`LICENSE`) | 1.1k | Offline-first learning platform for teaching and learning without an internet connection. The only fully permissive end-to-end platform here; the basis of the equity-deployment pattern. |
 | Moodle MCP Server | [peancor/moodle-mcp-server](https://github.com/peancor/moodle-mcp-server) | MIT (`LICENSE`) | not read this pass | MCP server exposing Moodle data to agents from *outside* the Moodle tree — which is why it is MIT while in-tree Moodle plugins are GPL-3.0 (see the license-boundary note below). |
 | Hugging Face Agents Course | [huggingface/agents-course](https://github.com/huggingface/agents-course) | Apache-2.0 (`LICENSE`) | not read this pass | Open course on building agents with Hugging Face tooling. Pairs with the Microsoft course for a two-track enablement curriculum. |
 | learn-agentic-ai | [panaversity/learn-agentic-ai](https://github.com/panaversity/learn-agentic-ai) | MIT (`LICENSE`) | not read this pass | Agentic-AI curriculum used at large scale by the Panaversity / GIAIC programme in Pakistan — a rare APAC-origin education asset in this space. |
+| lineage-skill | [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) | Apache-2.0 (`LICENSE@main`) | 448 | Distils videos, PDFs, transcripts and notes into **source-backed teacher Agent Skills**: keeps source attribution, extracts instructor methodology, orders practice tasks progressively. Python. The highest-starred project on the `education-ai` topic, and the clearest example of Agent Skills used as a distribution format for pedagogy rather than for tooling. |
+| Claw-ED | [SirhanMacx/Claw-ED](https://github.com/SirhanMacx/Claw-ED) | MIT (`LICENSE@main`) | 60 | Local-first AI teaching assistant for lesson drafts and classroom materials. Python. Small and early, but local-first + MIT is exactly the shape EMEA data-residency rules and LATAM cost constraints ask for. |
+
+## The education MCP shelf — a side-car is permissive by choice, not by construction
+
+The licence-boundary note below says an external MCP side-car keeps its permissive
+licence while an in-tree plugin inherits copyleft. True of the canonical servers,
+but it is the *author's* choice, not a property of the architecture. Every Canvas
+and Moodle MCP server that surfaces in search was probed on 2026-10-06:
+
+| Repo | ★ | Licence (read from payload) | Verdict |
+|---|---|---|---|
+| [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | 278 | MIT (`LICENSE@main`) | **Canonical Canvas side-car. Use this.** |
+| [peancor/moodle-mcp-server](https://github.com/peancor/moodle-mcp-server) | ~42 | MIT (`LICENSE`) | **Canonical Moodle side-car. Use this.** |
+| [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | 103 | **NONE** | **Do not use.** 54 working tools, v2.3.0, no `LICENSE` on any branch and no licence statement in the README. |
+| [loyaniu/moodle-mcp](https://github.com/loyaniu/moodle-mcp) | 38 | **NONE** | **Do not use.** No `LICENSE` on any branch, none in README. |
+| [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) | 1 | **AGPL-3.0** (`LICENSE@main`) | Avoid: AGPL **and** a paid premium-plugin upsell. |
+| [CharlieCardenasToledo/mcp-canvas-server](https://github.com/CharlieCardenasToledo/mcp-canvas-server) | 0 | MIT (`LICENSE@main`) | Usable, unproven. README claims 117 tools / 21 categories while the repo description says 51 — its own numbers disagree. |
+| [Jawadh-Salih/moodle-mcp-server](https://github.com/Jawadh-Salih/moodle-mcp-server) | 0 | MIT (`LICENSE@main`) | Usable, unproven. Only Go implementation found. |
+
+**An unlicensed repo is worse than a copyleft one.** AGPL-3.0 is a constraint you
+can architect around. No licence at all means default copyright — all rights
+reserved, no grant to use, modify or redistribute. `DMontgomery40/mcp-canvas-lms`
+is the trap: 103★ and 54 tools make it look mature, and it cannot legally ship in
+a client deliverable. Probe the licence before the feature list.
+
+Two further forks of the canonical Canvas server carry byte-identical
+descriptions and the same MIT licence with none of the history:
+[abr-Projects/canvas-mcp](https://github.com/abr-Projects/canvas-mcp) and
+[BartMassey-upstream/canvas-mcp](https://github.com/BartMassey-upstream/canvas-mcp).
+Pin `vishalsachdev/canvas-mcp`.
 
 ## The license boundary that decides your architecture
 
@@ -64,6 +96,16 @@ side-car. This drives pattern P1 in `compose/patterns.md`.
   the plain MIT recorded in earlier cycles. Earlier education cycles listed
   AutoGen as a top agent at ~60k★ — that recommendation is withdrawn in favour of
   MAF.
+- **OpenTutor is withdrawn — the earlier entry was wrong on both axes.** Cycle 3
+  of this KB recorded *"OpenTutor (MIT, ~900★, FSRS6 + KG + 12 blocks)"*. Probed
+  on 2026-10-06, [tutornew/OpenTutor](https://github.com/tutornew/OpenTutor) has
+  **8 stars, 5 commits and no licence** — no `LICENSE` on `main`, `master` or
+  `develop` across eight filename/extension variants, and no licence statement in
+  its README. Wrong by two orders of magnitude on stars and by a whole legal
+  category on licence. Not a starting point. The likely cause is a name
+  collision: `tutornew/OpenTutor` (8★, unlicensed) is a different project from
+  OATutor ([CAHLR/OATutor](https://github.com/CAHLR/OATutor), MIT, 264★, UC
+  Berkeley) and from the Open TutorAI work published on arXiv.
 - **DeepTutor's canonical repo is `HKUDS/DeepTutor`.** Searching for it surfaces
   forks and mirrors first: `cloudtoolbox/deeptutor` (7★), `lucadeg/DeepTutor` and
   `q-qp-p/HKUDS-DeepTutor` all carry the same description and the same Apache-2.0
@@ -79,13 +121,35 @@ An informed gap is information; silence looks exactly like coverage.
   in this KB therefore keeps a human in the scoring loop — which is also what the
   EU AI Act high-risk rules and the Oklahoma/Maryland human-oversight statutes
   require. Do not promise an autonomous grader to a client.
-- **No LATAM-origin open source education agent found.** Chamilo has deep
-  Spanish-language and LATAM deployment but is EU-origin and GPL-3.0. The regional
-  opportunity is deployment and localisation, not upstream code.
+- **No LATAM-origin open source education agent found — re-probed 2026-10-06 with
+  evidence.** Chamilo has deep Spanish-language and LATAM deployment but is
+  EU-origin and GPL-3.0. The regional opportunity is deployment and localisation,
+  not upstream code. Two probes this pass:
+  - A search surfaced `planejaia/OpenMAIC-Brasil` ("Open Multi-Agent Interactive
+    Classroom", described as v1.0.0 released 2026-08-27). It is **unreachable**:
+    `raw.githubusercontent.com` 404s for `README.md`, `LICENSE`,
+    `requirements.txt` and `package.json` across `main`, `master`, `dev` and
+    `develop`, and the repository page returns **HTTP 404**. Deleted, renamed or
+    private. A search hit is not a repository.
+  - The `education-ai` GitHub topic, swept in full, contains **no LATAM-origin
+    project at all**. Its long tail is Chinese (`ASEpochs/ai-digital-teacher`,
+    `SimonsTang/*`, `upstream1119/Traceable-Ideological-Education-RAG`), Indian
+    (`brahm-ai-official/brahm-ai`, 5★) and German (`awesome-german/ai-tools`,
+    4★), and nothing on the topic exceeds 448★.
+
+  Latam-GPT (Chile-led, Spanish and Portuguese, published on Hugging Face and
+  GitHub) is regional *foundation* infrastructure — the same shape as the APAC
+  gap below: a base model with no pedagogy layer on top.
 - **APAC sovereign models are base models, not education agents.** Sarvam AI,
   SEA-LION, Sahabat AI, ILMU, HyperCLOVA X Think and NTT Sarashina are
-  foundation models; none ships an education agent layer. `learn-agentic-ai` is
-  the one APAC-origin education asset found.
+  foundation models; none ships an education agent layer. Re-probed 2026-10-06
+  and the list only grew: **BharatGen** (IndiaAI Mission), Japan's
+  **Fugaku-LLM**, and South Korea's National Sovereign AI Initiative champions
+  (LG AI Research, SK Telecom, Naver Cloud, NC AI, Upstage). Still all base
+  models. `learn-agentic-ai` remains the one APAC-origin education asset found;
+  the APAC long tail on the `education-ai` topic is individual-scale
+  (`brahm-ai-official/brahm-ai`, 5★). The pedagogy layer on top of a sovereign
+  model is still unbuilt, and that is the opportunity.
 - **No open source EU AI Act compliance toolkit specific to education** surfaced
   this pass. The compliance work in pattern P4 is assembled from general-purpose
   parts (typed outputs, checkpointed audit trails, explainable mastery models).
