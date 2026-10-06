@@ -29,6 +29,7 @@ does not).
 | Kolibri | [LearningEquality/kolibri](https://github.com/LearningEquality/kolibri) | **MIT** (`LICENSE`) | Offline-first platform for teaching without internet. Default choice for low-connectivity, low-budget and equity-driven deployments. *(Earlier passes called this "the only fully permissive end-to-end platform on this shelf" — no longer true: see Mentingo below, MIT, and Oppia, Apache-2.0.)* |
 | Oppia | [oppia/oppia](https://github.com/oppia/oppia) | **Apache-2.0** (`LICENSE`) | Authoring and delivery of interactive lessons with misconception handling built into the pedagogy. Permissive, and designed for learners with limited educational resources. |
 | Mentingo | [Selleo/mentingo](https://github.com/Selleo/mentingo) | **MIT** (`LICENSE`) | **Added third pass, 2026-10-06 — and it changes the shape of this shelf.** Self-hosted, multi-tenant, white-label LMS with a **built-in AI mentor**, built for corporate L&D, onboarding and compliance rather than academic use. 91★, 29 forks, TypeScript, maintained by Selleo (Poland). The second fully permissive end-to-end platform here and **the only AI-native one**. |
+| Coursemology | [Coursemology/coursemology2](https://github.com/Coursemology/coursemology2) | **MIT** (`master/LICENSE`, © 2023 Coursemology.org) | **Added fifth pass, 2026-10-06.** NUS-origin gamified LMS — Rails 8 API, React client, Keycloak auth, **15,802 commits**, 158★, 78 forks. "Currently supported by the AI Centre for Educational Technologies" and the host platform for Singapore's **Codaveri** AI programming tutor. The **third** fully permissive end-to-end platform here, the only one with a decade-scale commit history, and the strongest fit for **CS and programming teaching in higher education**. Read the concentration-risk note below before proposing it. |
 
 ## Content, assessment and delivery components
 
@@ -263,3 +264,76 @@ anything Globant intends to reuse across engagements.
 | needs a whole course generated from documents, not just a tutor | **OpenMAIC (MIT, 40.0k★)** — self-host a reviewed fork; put the gate of pattern P11 in front of it |
 | needs generated teaching material but cannot host the generator | **OpenMAIC's PPTX / interactive-HTML export** — generate outside, deliver the artefact in the client's own LMS |
 | needs to choose *which model* should teach | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) (MIT) — scores pedagogical knowledge, not task accuracy |
+| teaches **programming or CS** in higher ed and wants to own the platform | **Coursemology (MIT)** — autograded assignments, gamification, 15,802 commits; accept the 158★ concentration risk, see below |
+| needs teacher-side lesson plans and question banks, not a student tutor | **[microsoft/shiksha-copilot](https://github.com/microsoft/shiksha-copilot) (MIT)** — curriculum → lesson plan + assessments → DOCX/PPT/handouts, with a human-curator ingestion gate |
+| is **CBSE/NCERT**-aligned and model-sovereignty constrained | **[Naitik-xd/CurriculumCraft-AI](https://github.com/Naitik-xd/CurriculumCraft-AI) (MIT)** — grades 9–12 on open-weight Gemma only; reuse its synthetic-generation copyright argument either way |
+| must evidence **EU AI Act** conformity for an education system | **[AbdelStark/eu-ai-act-toolkit](https://github.com/AbdelStark/eu-ai-act-toolkit) (MIT)** + an Annex III point 3 profile you write — pattern **P13** |
+
+## Coursemology — the third permissive platform, and the first with a long commit history
+
+**Added in the fifth pass of 2026-10-06.** Found by institution-first search, not
+by topic page or star ranking, which is why four earlier passes missed it.
+
+### Verified specification
+
+| Axis | Value |
+|---|---|
+| Repo | [Coursemology/coursemology2](https://github.com/Coursemology/coursemology2) |
+| Licence | **MIT**, read from `master/LICENSE` (© 2023 Coursemology.org). `main/LICENSE` is a 404 — the default branch is `master` |
+| Scale | 158★, 78 forks, **15,802 commits** |
+| Stack | Rails 8.0.5.1 API + React client + **Keycloak** authentication — three components, not one |
+| Origin | National University of Singapore; Prof Ben Leong, NUS Computing |
+| Current backing | "Currently supported by the **AI Centre for Educational Technologies**" (AICET) |
+| AI today | **Codaveri**, AICET's personalised programming tutor, is deployed on coursemology.org — 30,000+ pieces of personalised feedback since 2024. **Codaveri itself is closed source** |
+| Design centre | Gamified learning: autograded programming assignments, achievements, levels, experience points |
+
+### Why it matters commercially
+
+It resolves a tension that has run through this whole shelf. Every mature,
+widely-deployed LMS here is GPL-family — Moodle, Open edX, Canvas, Chamilo,
+ILIAS, Frappe LMS. Every permissive one has been either young (Mentingo, 91★),
+offline-specialised (Kolibri) or authoring-focused (Oppia). Coursemology is the
+first that is **both permissive and long-lived**: a client can fork it, rebrand
+it, embed proprietary modules and resell it, with a codebase that has over
+fifteen thousand commits behind it.
+
+For a **programming or computer-science teaching** engagement it is the strongest
+fit on this shelf, because that is what it was built for: the autograder,
+submission handling and gamification are native, not bolted on.
+
+### The risk, stated plainly
+
+**158★ is a small contributor base for a platform of this size, and maintenance
+is realistically NUS-dependent.** You are trading a copyleft obligation for a
+concentration risk. Size that trade explicitly in week one:
+
+- Will the client's own engineers maintain the fork? If not, Coursemology is the
+  wrong answer and Moodle is the right one.
+- Does the engagement need a plugin ecosystem? Moodle's 2,000+ plugins have no
+  equivalent here.
+- Is the Keycloak dependency compatible with the client's identity estate? This is
+  not a single-container deployment.
+
+### What AICET tells you about the AI layer
+
+AICET's three products — **Codaveri** (programming tutor, 30,000+ feedback items
+since 2024), **Softmark** (exam-script digitisation and concurrent team marking,
+70,000+ scripts in 2025, now grouping similar answers with computer vision) and
+**ScholAIstic** (multi-agent platform letting educators author their own
+specialised chatbots; deployed in Social Work, Law and Nursing at NUS since June
+2024) — are **all closed source**, all funded by Singapore's Smart Nation and
+Digital Government Office, and all working with the **Ministry of Education**.
+
+Two things follow:
+
+1. **The reference architecture is validated and the implementation is not
+   available.** A ministry-scale deployment of exactly the shapes this KB
+   recommends — side-car tutor on an open LMS (P1), gated grading (P11),
+   educator-authored agents (P8) — exists, works at 70,000-script scale, and
+   cannot be forked. Cite it as proof the shape works; build the shape yourself.
+2. **ScholAIstic is the most interesting of the three to replicate.** Educators
+   authoring their own roleplay chatbots for professional-skills training, scaled
+   across unrelated faculties, is a product shape with no permissive equivalent
+   anywhere in this KB. Pattern **P8** (course materials → Agent Skills) is the
+   closest thing here, and it stops short of letting a non-technical educator
+   author and publish one.

@@ -8,6 +8,121 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — fifth pass: three regional gaps refuted in one pass, all of them at 0★
+
+Channel new to this KB this pass: **institution-first search** — querying by
+funding body, ministry, university and research-group name, in English and
+Spanish, instead of by GitHub topic or star count. Four passes of topic sweeps
+had established "no India-origin", "no ASEAN-origin" and "no LATAM-origin"
+permissive education project as this KB's firmest findings. **All three were
+artefacts of star-ordered discovery.** Every licence below was read from the
+repository's own `LICENSE` payload via `raw.githubusercontent.com`.
+
+### Finding 1 — India has a Microsoft Research India project, MIT, and it is teacher-side
+
+[microsoft/shiksha-copilot](https://github.com/microsoft/shiksha-copilot) —
+**MIT (`main/LICENSE`, © Microsoft Corporation), 9★, 12 forks, 149 commits,
+Python.** Built under Microsoft Research India's **VELLM** initiative, with
+classroom validation through the **Sikshana Foundation**.
+
+A teacher selects curriculum, grade, subject and chapter; the system generates
+lesson plans, real-world examples, analogies, hands-on activities, and formative
+and summative assessments, then compiles the **teacher-reviewed** output into
+DOCX, PPT and student handouts. It also generates multi-chapter question banks
+against standard blueprint formats. React + FastAPI + Azure durable functions,
+with a textbook ingestion pipeline gated by **human curators**.
+
+**Why it matters more than its 9★ suggest.** Every other teacher-side generator
+in this KB is either a lesson *delivery* system (OpenMAIC) or a student-side
+tutor. This is the only one built from the start around the artefact a teacher
+actually has to produce and sign — and the only one whose ingestion pipeline
+treats human curation as a required stage rather than an option. Its README names
+its own GPT-4o dependency as a quality risk, which is the kind of disclosure that
+makes a system safe to propose.
+
+### Finding 2 — the LATAM gap is a build gap, and now it has an address
+
+[LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) — **MIT (`main/LICENSE`,
+© 2026 Grupo Sirius), 0★, 4 commits.** Universidad Tecnológica de Pereira, Sirius
+research group, Colombia. **Funded under Colombia's Sistema Nacional de Ciencia,
+Tecnología e Innovación (SNCTI).**
+
+This is the first LATAM-origin permissive education project this KB has found in
+five passes, and it is **a README and a licence**. Its `backend/`, `frontend/`,
+`openedx/`, `docker-compose.yml` and `.env.example` paths all return HTTP 404,
+and its own quickstart tells you to clone a different repository
+(`Sof1SP/tutorIA`).
+
+**The valuable part is the specification, not the code.** TutorIA specifies an
+Open edX XBlock side-car tutor with Claude API, TTS replies, an animated avatar,
+a teacher statistics panel and cross-session context, for **rural higher
+education in Risaralda**, with a named pedagogical director on the team. That is
+**pattern P1 in this KB, independently specified by a Colombian public
+university, and unbuilt.** Treat it as a partnership lead and a validation of the
+P1 shape. Do not treat it as a fork point.
+
+### Finding 3 — ASEAN's mature education AI is closed; its substrate is MIT
+
+Singapore's **AICET** (AI Centre for Educational Technologies — hosted by AI
+Singapore, funded by the Smart Nation and Digital Government Office, working with
+the **Ministry of Education**) runs three products at genuine scale:
+
+| Product | Scale | Repository |
+|---|---|---|
+| **Codaveri** — personalised programming tutor, deployed on coursemology.org | 30,000+ pieces of personalised feedback since launch in 2024 | **none public** |
+| **Softmark** — exam-script digitisation, concurrent team marking, CV-based grouping of similar answers | 70,000+ scripts in 2025 | **none public** |
+| **ScholAIstic** — multi-agent platform for educator-authored specialised chatbots (Social Work, Law, Nursing roleplay training at NUS since June 2024) | deployed across NUS faculties and overseas IHLs | **none public** |
+
+What **is** open is the platform Codaveri runs on:
+[Coursemology/coursemology2](https://github.com/Coursemology/coursemology2) —
+**MIT, read from `master/LICENSE` (© 2023 Coursemology.org), 158★, 78 forks,
+15,802 commits**, Rails 8 + React + Keycloak, NUS-origin, and "currently
+supported by the AI Centre for Educational Technologies."
+
+**Reframe the gap.** It was never that ASEAN lacks education AI. It is that
+**ASEAN's ministry-scale education AI is closed and the LMS beneath it is MIT** —
+a far better commercial position than the gap this KB had recorded, because the
+integration surface is permissive even where the products are not.
+
+### Finding 4 — two more MIT rows, both curriculum- and constraint-aware
+
+| Repo | Licence (payload) | ★ / commits | Why it is here |
+|---|---|---|---|
+| [Naitik-xd/CurriculumCraft-AI](https://github.com/Naitik-xd/CurriculumCraft-AI) | **MIT** (`main/LICENSE`) | 0★ / 7 | **CBSE/NCERT grades 9–12** assessment engine on **open-weight Gemma only** (`gemma-4-26b-a4b-it`, failover `gemma-4-31b-it`, temperature 0.2, explicitly zero Gemini). Keys stay server-side; IP rate limit 30 req / 5 h. Ships a written copyright argument: no NCERT text stored or reproduced, syllabi treated as public standards, every item synthesised on demand. **The first curriculum-aligned permissive asset in this KB that is also deployable under a sovereignty constraint** |
+| [DannyAvilaL/agente_clases](https://github.com/DannyAvilaL/agente_clases) | **MIT** (`main/LICENSE`) | 0★ / 5 | **100% offline** class preparation: Ollama **Phi-3 (2 GB)** writes per-student Markdown material, synthesises `.csv` datasets and injects them into local PostgreSQL; Google Calendar syncs down into a local **Radicale** CalDAV server so the system keeps working with no internet; Streamlit dashboard; `cron` autopilot runs a week ahead. Spanish-language, no institution stated. **The most concrete offline-first implementation this KB has recorded** — trend 9 and pattern P5 in working code |
+
+### Finding 5 — pedagogy evaluation is licensed as content, not as software
+
+The fourth pass recorded `AITutor-EvalKit` (EACL 2026) claiming MIT in its paper
+with no `LICENSE` payload, and called it a fourth licence failure mode. This pass
+went looking for an alternative and found that **the whole subfield licenses this
+way**:
+
+| Instrument | Claimed | Payload |
+|---|---|---|
+| [eth-lre/mathtutorbench](https://github.com/eth-lre/mathtutorbench) — ETH Zurich LRE, EMNLP 2025 oral, 43★, 14 forks | README badge: **CC BY 4.0**. README body: **CC BY-SA 4.0**. Same file | **none** — 10 filenames probed on `main` |
+| [kaushal0494/UnifyingAITutorEvaluation](https://github.com/kaushal0494/UnifyingAITutorEvaluation) — NAACL 2025 | not stated | **none** |
+| [kaushal0494/AITutor-EvalKit](https://github.com/kaushal0494/AITutor-EvalKit) — EACL 2026 | MIT, in the paper | **none** |
+| Open TutorAI — arXiv 2602.07176 | "open source" | **CC BY-NC-SA 4.0** |
+
+**A fifth failure mode: the licence that contradicts itself inside one file.** The
+MathTutorBench badge and the MathTutorBench footer disagree, and neither is backed
+by a payload — three reviewers reading the same commit get three different
+answers. MathTutorBench is also the most useful instrument of the four (7 tasks
+over 3 skills, a 1.5B pedagogical reward model scoring generated teacher
+utterances against ground truth, a 20+ model leaderboard). **Read the task
+design, re-implement the harness, vendor none of them.**
+
+### What this pass says about method
+
+Three of this KB's most confidently stated regional gaps fell to **one change of
+query shape**. Topic pages and stars-sorted searches are ordered by popularity,
+and a 2026 project from a public university in Risaralda with four commits is
+invisible to both. The gaps were real as statements about *the discoverable
+shelf* and wrong as statements about *the world*. **When a gap has survived
+several passes, change the channel rather than the wording** — and prefer a
+channel that is not ordered by stars.
+
 ## 2026-10-06 — fourth pass: a 40k★ MIT classroom nobody here had seen, and a gap argued from a filename
 
 Channel changed again. The first three passes of today swept GitHub **topic pages**

@@ -94,6 +94,57 @@ for **Sierra Leone's MBSSE** and for **Uganda** (Luganda).
 has **no `LICENSE` payload** (`README.md` 200, `LICENSE` 404). Five MIT siblings do
 not license the sixth.
 
+## Added in the fifth pass of 2026-10-06
+
+**Channel: institution-first search** — funding bodies, ministries, universities
+and research groups, queried by name in English and Spanish. All licences read
+from each repository's own `LICENSE` payload via `raw.githubusercontent.com`.
+
+| Repo | Licence (read from payload) | ★ | Role in the stack |
+|---|---|---|---|
+| [Coursemology/coursemology2](https://github.com/Coursemology/coursemology2) | **MIT** (`master/LICENSE`, © 2023 Coursemology.org) | **158** · 78 forks · **15,802 commits** | **LMS core, permissive.** NUS-origin gamified learning platform: Rails 8 API, React client, Keycloak auth. "Currently supported by the AI Centre for Educational Technologies" and the deployment host for Singapore's **Codaveri** programming tutor. The one MIT LMS in this KB with a decade-scale commit history |
+| [AbdelStark/eu-ai-act-toolkit](https://github.com/AbdelStark/eu-ai-act-toolkit) | **MIT** (`main/LICENSE`, 2026) | 8 · 2 forks · 98 commits | **Compliance scaffolding.** Six-tier risk classifier over the Act's decision tree, **61 conformity checklist items** (risk management, data governance, documentation, human oversight), **8 document templates**. CLI + zero-dependency TypeScript SDK + client-only Next.js UI. **No education content** — supply the Annex III point 3 profile yourself (pattern P13) |
+| [compl-ai/compl-ai](https://github.com/compl-ai/compl-ai) | **Apache-2.0** (`main/LICENSE`) | not read this pass | **Compliance measurement.** ETH Zurich framework pairing a technical interpretation of the AI Act with a generative-model benchmarking suite. Use it for the evidence the checklist above asks for |
+| [crpf-mitadt/Indian-AI-for-Education](https://github.com/crpf-mitadt/Indian-AI-for-Education) | **CC0-1.0** (`main/LICENSE`) | not read this pass | **Regional index, not a dependency.** Curated map of Indian education AI: datasets, models, ASR, TTS, OCR, machine translation, infrastructure, benchmarks, research. CC0 means the map is free of attribution obligations; **every item it indexes still needs its own payload probe** |
+
+### Coursemology is the licence answer to the Moodle question
+
+This KB's platform shortcut has sent "needs permissive IP with no copyleft
+exposure" to Frappe LMS and Kolibri, because Moodle, Open edX, Chamilo, Sakai and
+ILIAS are all GPL-family. Coursemology changes that answer for **higher-education
+and CS-teaching** engagements specifically:
+
+| | Moodle / Open edX | Coursemology |
+|---|---|---|
+| Licence | GPL-3.0 / AGPL-3.0 family | **MIT** |
+| Client fork, rebranded and resold | copyleft obligations attach | **no copyleft exposure** |
+| Commit history | very large | **15,802 commits** |
+| Community size | enormous | **158★ — small, and that is the real risk** |
+| AI integration today | plugin / XBlock side-car | AICET's Codaveri already runs on it, closed source |
+
+**The honest trade.** You swap a copyleft obligation for a **maintenance
+concentration risk**: 158★ means a small contributor base and, realistically,
+NUS-dependent maintenance. Take Coursemology where the client wants to own and
+rebrand the platform outright and has engineering capacity; stay on Moodle or Open
+edX where community breadth and plugin supply matter more than licence purity.
+Do not present it as a drop-in Moodle replacement — its data model and its Keycloak
+dependency are not Moodle's.
+
+### A licence warning that applies per model, not per repository
+
+[aisingapore/sealion](https://github.com/aisingapore/sealion) (424★) is the
+substrate anyone would reach for to build a Southeast Asian education layer, and
+it has **no `LICENSE` payload** at any probed path. Its README §Licensing says
+the project embraces MIT "as much as possible; however, the exact licensing terms
+may vary depending on the underlying base model's restrictions" — Llama3-derived
+variants carry **commercial-use restrictions**, Gemma-derived variants carry
+different terms again — and directs you to each model's **Hugging Face model
+card**.
+
+**So: clear rights per model, per release, before a SEA sovereign-model education
+engagement is scoped.** A repository-level licence check on `sealion` returns
+nothing, and a studio that stops there will have cleared nothing at all.
+
 ## Teaching-content repos (for enablement, not for production)
 
 | Repo | License (read from payload) | Note |

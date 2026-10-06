@@ -58,9 +58,11 @@ against whichever LMS the client already runs.
 
 ### North America
 
-- **Largest regional share: 36% of the global market, $3.68B in 2026.** The 2030
-  figure is **disputed and must be quoted as a range** — see the sizing conflict
-  immediately below.
+- **Largest regional share: 36% of the global market, $3.68B in 2026**, declining
+  to **~25% by 2030** as APAC grows faster. **The 2030 figure is $10.8B.** The
+  fourth pass recorded it as disputed and unresolved; the **fifth pass closed it
+  on internal-consistency arithmetic** — see "Fifth pass" below, and stop quoting
+  a range.
 - **SIZING CONFLICT, flagged in the fourth pass of 2026-10-06 — do not quote
   "$32B by 2030" unqualified.** Earlier passes of this KB recorded NA 2030 at
   **$32B**. A second source puts NA at **$3.68B (2026) → $10.8B (2030), 31.1%
@@ -181,6 +183,42 @@ pass would add **rows** or **precision**, and treat the second as worth a pass o
 its own. Procurement portals and state trackers remain the right instrument for
 going deeper still.
 
+
+#### Fifth pass, 2026-10-06 — the sizing conflict resolves, and it resolves in favour of the lower figure
+
+The fourth pass recorded the NA 2030 figure as **disputed and unresolved**, with
+the primary source unreachable. It can now be closed on arithmetic alone, using
+this KB's own global row, and the conclusion is **$10.8B, not $32B**:
+
+| Check | Figure | Verdict |
+|---|---|---|
+| Global 2026 (this KB's own row) | **$10.6B** | — |
+| NA 2026 at the asserted 36% share | 36% × $10.6B = **$3.82B** | matches the recorded **$3.68B** to within rounding. **The 2026 figures are mutually consistent** |
+| Global 2030 (this KB's own row) | **$42.48B** | — |
+| NA 2030 at **$32B** | would be **75%** of global | **incoherent** with a 36% share asserted on the same page |
+| NA 2030 at **$10.8B** | **25%** of global; implies **31.1% CAGR** | **coherent** — and it sits almost exactly on EMEA's independently sourced **31.9%** CAGR |
+
+**Quote $3.68B (2026) → $10.8B (2030), ~31% CAGR, and say NA's share declines
+from 36% to ~25% as APAC grows faster.** That last clause is the sellable part:
+it is the arithmetic consequence of a 41.5% global CAGR against a 31% North
+American one, and it is the reason an NA-only account strategy loses ground even
+while the NA number triples.
+
+**Retire the $32B figure.** It is not a range endpoint; it is an outlier that
+fails an internal-consistency check against two of this KB's own rows and against
+EMEA's independently sourced growth rate.
+
+**One NA entity added this pass:** the **STUDENTS FIRST Act of 2026**, drafted by
+students representing all 50 states at America's Youth AI Festival in July 2026
+and published through **AASA** (the School Superintendents Association) in August
+2026. It proposes protections for authentic learning, student privacy, fairness,
+**human judgment** and relationships. It is not law and will not become law in
+this form — its value is that it is **student-authored and superintendent-amplified**,
+which makes it the cheapest available legitimacy artefact for a district-facing
+oversight proposal. It also converges on the same "human judgment is final" test
+this KB records as the one testable rule US state law has settled on.
+
+
 ### EMEA
 
 - **The EU AI Act is the whole conversation.** AI used in education access and
@@ -292,6 +330,68 @@ going deeper still.
   means the content pipeline has to produce age-appropriate *ethics and policy*
   material, not only technical exercises. See the new pattern P9 in
   `compose/patterns.md`.
+
+
+#### Fifth pass, 2026-10-06 — the compliance clock moved 16 months, and the near-term deliverable changed with it
+
+**This is the most consequential single finding of this pass, and it rewrites the
+EMEA engagement calendar.**
+
+**Regulation (EU) 2026/1744** — the *Digital Omnibus on AI* — amends the AI Act.
+Legislative trail, corroborated across multiple independent legal and vendor
+analyses: European Parliament approval **16 June 2026**, Council final adoption
+**29 June 2026**, signature **8 July 2026**, published in the Official Journal
+**24 July 2026**, **entered into force 27 July 2026**. CELEX identifier
+**32026R1744**.
+
+| Obligation | Was | Now |
+|---|---|---|
+| **Annex III stand-alone high-risk** — including **education**: admission and access, evaluation of learning outcomes, student level placement, and **exam or behaviour monitoring** | 2 August 2026 | **2 December 2027** (+16 months) |
+| **Annex I embedded high-risk** (AI inside regulated products) | 2 August 2027 | **2 August 2028** (+12 months) |
+| **Article 50 transparency**, including the **watermarking / synthetic-content marking** deadline | 2 December 2026 | **unchanged — 2 December 2026** |
+
+**Read the third row again.** The heavy Annex III work — technical
+documentation, conformity assessment, CE marking, EU-database registration —
+moved out 16 months. The **transparency obligations did not move at all**, and
+the watermarking deadline is **2 December 2026**. So in EMEA, as of this writing:
+
+- The deliverable that is **weeks away** is Article 50: disclosure that a learner
+  is interacting with an AI system, and marking of AI-generated content. For an
+  education client that is **labelling every generated lesson, item and feedback
+  artefact**, and disclosing the tutor. It is small, concrete, and nearly
+  everyone has deferred it along with the Annex III work, because the two were
+  discussed as one deadline.
+- The deliverable that is **14 months away** is Annex III conformity — and the
+  deferral is explicitly **not a compliance holiday**: the obligation to
+  *classify* systems against Annex III and Annex I, and to begin compliance
+  planning, is immediate.
+
+**How to sell this.** The engagement shape is now two-phase and the first phase
+is fundable this quarter: **(1) classify and label by December 2026; (2) build the
+Annex III conformity evidence by December 2027.** A client who believes the
+August 2026 deadline passed and nothing happened is in the worst position —
+unlabelled and unclassified — and that is a very easy conversation.
+
+**Caveat on sourcing, stated because this claim is load-bearing.** The primary
+texts (EUR-Lex, the Commission's own notice) are **unreachable from this
+environment** — the egress proxy denies both. The regulation number, OJ date,
+entry-into-force date and all three deadlines above are corroborated across
+several independent law-firm and compliance-vendor analyses, and the CELEX id is
+given so a reader can verify in one step. **Verify against EUR-Lex before it goes
+in a client deliverable.**
+
+**EMEA market sizing, added this pass:** **$2.64B in 2026 → $8.0B by 2030, 31.9%
+CAGR**, with **Finland, Estonia and the Netherlands** named as the K-12 AI
+integration leaders. The UK's £4M investment in AI lesson-planning and marking
+tools is small in absolute terms and useful as a procurement precedent.
+
+**And the compliance toolkit is no longer a gap.** See `repos/foundations.md`:
+[AbdelStark/eu-ai-act-toolkit](https://github.com/AbdelStark/eu-ai-act-toolkit)
+is **MIT** and already carries the risk-tier decision tree, 61 conformity
+checklist items and 8 document templates — with **no education content**. The
+Annex III point 3 profile is the billable piece and it is days of work, not
+months. Pattern **P13**.
+
 
 ### APAC
 
@@ -414,6 +514,53 @@ going deeper still.
   posture and a reviewed fork** belong in the first week of the engagement, not
   the last.
 
+
+#### Fifth pass, 2026-10-06 — three binding regimes, one accreditation lever, and a licence trap
+
+Earlier passes recorded APAC regulation as "heterogeneous and moving toward
+binding frameworks." It has largely arrived. Dated and specific:
+
+| Jurisdiction | Instrument | Status | What it requires that bears on education |
+|---|---|---|---|
+| **South Korea** | **AI Basic Act** (Act on the Development of Artificial Intelligence and Establishment of Trust) | **In force 22 January 2026** | Transparency, risk assessment, **human oversight** and documentation for **high-impact** systems. Education decisions sit squarely in the high-impact concept — the same substance as EU Annex III, arriving **23 months earlier** |
+| **Vietnam** | **Law No. 134/2025/QH15 on Artificial Intelligence** | **Effective 1 March 2026** | A dedicated national AI law. First-mover compliance work in a market with no incumbent AI-governance services base |
+| **Australia** | **TEQSA** (national higher-education regulator) | Active requirement | **Every** higher-education provider must submit an **institutional action plan** addressing generative-AI risks. This is an **accreditation** lever, not a fine — it is the sharpest procurement trigger in the region |
+| **China** | Generative AI Services Management Measures; synthetic-content identification rules (**effective 1 September 2025**) | In force | Consent, data quality, **content labelling**, user rights, complaint handling. Compounds the age-gating and teacher-substitution rules this KB already records |
+
+**The Australia item is the one to act on first.** A regulator requiring a written
+institutional action plan from every provider in a country creates a bounded,
+repeatable, nationally-scoped deliverable with a known buyer and a deadline that
+is not negotiable, because accreditation depends on it. There is no equivalent
+single-document, single-regulator trigger in any other region in this KB.
+
+**South Korea reorders the global compliance calendar.** With the EU's Annex III
+obligations now at December 2027 (see EMEA above) and Korea's AI Basic Act **in
+force since January 2026**, **Korea — not the EU — is now the binding constraint
+for a multi-jurisdiction education product.** Build to the Korean high-impact
+requirements and the EU conformity work becomes largely a documentation exercise.
+This is the reverse of how this KB and most of the market have sequenced it.
+
+**Sovereign-model landscape, updated:** **MaLLaM**, Malaysia's sovereign LLM built
+with NVIDIA, natively handling Malaysian Bahasa and colloquial dialects, deployed
+to **3M+ users** via YTL/Yes mobile; **Gemma-SEA-LION-v4-27B-VL**, a
+vision-language member of the SEA-LION v4 family, released **March 2026**.
+
+**And the licence trap, because this is where an APAC engagement will hit it:**
+[aisingapore/sealion](https://github.com/aisingapore/sealion) (424★) has **no
+repository-level `LICENSE` payload**. Its README states terms vary with the
+underlying base model — Llama3-derived variants carry commercial-use
+restrictions, Gemma-derived variants differ — and directs you to each **Hugging
+Face model card**. **Rights must be cleared per model and per release, not per
+repository.**
+
+**Singapore is the region's reference deployment and it is closed.** AICET (AI
+Singapore, funded by the Smart Nation and Digital Government Office, working with
+the Ministry of Education) runs Codaveri, Softmark and ScholAIstic at ministry
+scale with no public repositories — while the LMS beneath Codaveri,
+[Coursemology](https://github.com/Coursemology/coursemology2), is **MIT with
+15,802 commits**. See `verticals/solutions.md`.
+
+
 ### LATAM
 
 - **Teacher adoption is ahead of institutional readiness, sharply.** In Chile and
@@ -522,6 +669,76 @@ going deeper still.
   sized build** — and the one place where contributing upstream would make Globant
   the originating voice in a vacuum it has now confirmed four times.
 
+
+#### Fifth pass, 2026-10-06 — the governance gap is now measured, and it is the engagement
+
+This KB has argued the LATAM opportunity from adoption anecdotes and an absent
+code shelf. Both are now replaced by primary-research numbers, and they size the
+opportunity far more precisely than anything recorded before.
+
+**UNESCO IESALC regional study**, launched **9 September 2026** during **UNESCO
+Digital Learning Week 2026** — **200 higher-education institutions across 19
+Latin American and Caribbean countries**:
+
+| Measure | Value |
+|---|---|
+| Institutions using AI in at least one area of activity | **87%** |
+| Institutions with a **formal AI strategy** | **26%** |
+| Institutions with clear policies, governance structures and monitoring/evaluation frameworks | **fewer still** |
+| Institutions reporting formal AI guidance — **LAC** | **45%** |
+| Institutions reporting formal AI guidance — **Europe and North America** | **70%** |
+
+**Digital Education Council, AI in Higher Education LATAM Survey 2026** —
+delivered with the **Institute for the Future of Education at Tecnológico de
+Monterrey**, with outreach through **AIGEN** and **RIE360**:
+
+| Measure | Value |
+|---|---|
+| Students actively engaging with AI | **92%** |
+| Faculty actively engaging with AI | **79%** |
+| Faculty expecting to use AI in future teaching | **94%** |
+| Faculty self-reporting **"minimal" to "moderate"** engagement | **88%** |
+
+**Read the two together and the engagement writes itself.** Adoption is
+near-universal and *shallow* — 92% of students using AI against 88% of faculty
+still at surface-level engagement — and **61 percentage points separate the
+institutions using AI from the institutions with a strategy for it**. That is not
+a technology gap. It is a **governance-and-capability gap**, in a region where
+only 45% of institutions have formal guidance against 70% in Europe and North
+America.
+
+**The sellable shape, and it is not a tutor.** A LATAM higher-education
+engagement should lead with **AI governance enablement** — institutional policy,
+oversight structures, faculty capability, monitoring and evaluation — with the
+technology build following it. This is the opposite of how this KB's patterns are
+ordered, and the numbers say so clearly. **Pattern P6 (client capability build) is
+the LATAM entry point; P1 follows it.** Both UNESCO IESALC and the Digital
+Education Council are citable, independent, and dated inside the last month —
+which makes this the best-evidenced regional claim in this KB.
+
+**National policy, dated:** **Chile** has classified AI uses by risk with
+governance measures scaled to risk and a supervisory model tied to its
+forthcoming **data protection authority** — the first LATAM regime structurally
+comparable to EU Annex III tiering. **Colombia** adopted national AI policy via
+**CONPES 4144** in **February 2025**, a government-wide programme with actions
+and **budget through 2030**. Colombia is the one LATAM jurisdiction where both a
+funded national policy and a publicly-funded permissive education project (see
+below) now exist.
+
+**And the code gap has an address.** The firmest gap in this KB — "no LATAM-origin
+permissive open source education project" — **is refuted**:
+[LabSirius/TutorIA](https://github.com/LabSirius/TutorIA), **MIT**, Universidad
+Tecnológica de Pereira, Sirius research group, funded under Colombia's **SNCTI**,
+specifying an Open edX side-car tutor for **rural higher education in Risaralda**.
+It has **4 commits and every code path in its own documented tree returns 404**.
+
+**So the gap was never about interest — it was about delivery capacity.** A
+Colombian public university, with public science funding and a named pedagogical
+director, independently specified **this KB's default pattern P1** and has not
+built it. That is a partnership lead, a validation of the P1 shape, and the single
+most concrete LATAM entry point this KB has ever recorded. **Do not fork it.**
+
+
 ## Cross-region read
 
 Two patterns hold in every region, which makes them safe to build once and sell
@@ -610,3 +827,29 @@ claims**, which is the point of recording them.
 | The third pass called North America **"saturated"**; re-running general searches added **statute names, bill numbers, mechanisms and dates** on six states — incl. **CA AB 1159's 1 July 2027 higher-ed trigger**, Idaho SB 1227 as an **AI-literacy and teacher-training mandate**, Oklahoma **SB 1734's annual parent disclosure**, Maryland's **24 districts / 120-day rolling** clock, **Ohio HB 96's deadline now past**, and NC's funding being **recurring and sole-sourced** | **"saturated" conflated no-new-entities with no-new-information.** Precision is what makes a finding sellable, and it was mostly missing. Ohio's 600+ districts are now in **implement-and-audit**, which is the better engagement |
 | **Africa gets its first code shelf: `AI-for-Education`**, 5 of 6 repos MIT, built for **Sierra Leone's MBSSE** and **Uganda** (Luganda) — plus the only **voice-evaluation** and **pedagogical model-selection** tooling in this KB | Africa stops being greenfield-with-nothing and becomes **greenfield with a specific, permissive, ministry-connected entry point**. At 1–12★ it is research-grade: a conversation starter, not a product shelf |
 | **A fourth licence failure mode: the grant that exists only in the paper.** `AITutor-EvalKit` (peer-reviewed EACL 2026, "released under an MIT license") has **no `LICENSE` payload on either branch**. Separately, **Open TutorAI** calls itself open source and is **CC BY-NC-SA 4.0** | **a peer-reviewed licence claim is evidence of intent, never of rights.** Probe the payload. Re-implement `AITutor-EvalKit`'s MI/ML/PG/AC rubric rather than vendoring it, and **file an issue asking for a `LICENSE`** — the cheapest high-value upstream contribution available here |
+
+## What changed in the fifth pass of 2026-10-06
+
+Channel new to this KB this pass: **institution-first search** — funding bodies,
+ministries, universities and research groups queried by name, in English and
+Spanish, instead of by GitHub topic or star count. Three of the six findings
+below are **corrections to this KB's own claims**.
+
+| Finding | So what |
+|---|---|
+| **The EU compliance clock moved 16 months.** Regulation (EU) 2026/1744 (*Digital Omnibus on AI*, OJ 24 July 2026, in force 27 July 2026, CELEX 32026R1744) pushes **Annex III stand-alone high-risk — education included — from 2 August 2026 to 2 December 2027**, and Annex I embedded to 2 August 2028. **Article 50 transparency did not move: the watermarking deadline is still 2 December 2026** | **The EMEA engagement is now two-phase and the near-term phase is the small one.** Label and classify by **December 2026**; build Annex III conformity evidence by **December 2027**. Clients who heard "the deadline was delayed" have deferred the labelling work too, and that one is weeks away. Primary texts unreachable from this environment — **verify against EUR-Lex before client use** |
+| **The NA 2030 sizing conflict is resolved, in favour of $10.8B.** 36% × $10.6B global = $3.82B ≈ the recorded $3.68B for 2026, so the 2026 figures cohere. At 2030, $32B would be **75%** of this KB's own $42.48B global row; $10.8B is **25%**, implying 31.1% CAGR — within a point of EMEA's independently sourced 31.9% | **Retire $32B; quote $3.68B → $10.8B at ~31%.** And lead with the consequence: NA's share falls from 36% to ~25% while the absolute number triples, which is the arithmetic case for an APAC-weighted account strategy |
+| **LATAM's opportunity is now measured, not inferred.** UNESCO IESALC (launched **9 September 2026**, UNESCO Digital Learning Week; **200 institutions, 19 countries**): **87% use AI, 26% have a formal AI strategy**; **45%** have formal guidance against **70%** in Europe and North America. Digital Education Council LATAM Survey 2026 (with Tec de Monterrey's Institute for the Future of Education): **92% of students and 79% of faculty** using AI, **88% of faculty still at minimal-to-moderate engagement** | **A 61-point gap between using AI and having a strategy for it is a governance engagement, not a tutor engagement.** Lead LATAM higher education with **pattern P6 (capability build)** and let P1 follow. Two independent, citable, month-old primary sources — the best-evidenced regional claim in this KB |
+| **APAC regulation has arrived and reorders the build sequence.** Korea's **AI Basic Act in force 22 January 2026** (transparency, risk assessment, human oversight, documentation for high-impact systems); **Vietnam's Law No. 134/2025/QH15 effective 1 March 2026**; **Australia's TEQSA requires an institutional genAI action plan from every higher-education provider** | **Korea, not the EU, is now the binding constraint** for a multi-jurisdiction education product — its substance matches Annex III and it is live 23 months earlier. Build to Korea and EU conformity becomes documentation. **And TEQSA is the sharpest procurement trigger in this KB**: one mandatory document, one regulator, every provider in a country, enforced through accreditation |
+| **Three regional "no permissive project exists" gaps refuted in one pass** — India ([microsoft/shiksha-copilot](https://github.com/microsoft/shiksha-copilot), MIT, MSR India/VELLM), ASEAN ([Coursemology](https://github.com/Coursemology/coursemology2), MIT, **15,802 commits**, NUS/AICET), LATAM ([LabSirius/TutorIA](https://github.com/LabSirius/TutorIA), MIT, UTP Colombia, SNCTI-funded). **All were found at 0–158★** | **The gaps were true of the discoverable shelf and false of the world.** Topic pages and star-sorted search are popularity-ordered and structurally cannot see a four-commit project from a public university in Risaralda. **When a gap survives several passes, change the channel — and pick one that is not ordered by stars** |
+| **Singapore is the region's reference deployment and it is closed.** AICET (AI Singapore, Smart Nation and Digital Government Office funding, working with the Ministry of Education) runs **Codaveri** (30,000+ feedback items since 2024), **Softmark** (70,000+ scripts in 2025) and **ScholAIstic** (educator-authored chatbots across Social Work, Law and Nursing at NUS since June 2024) with **no public repositories** — on top of an **MIT** LMS | **The architecture this KB recommends is validated at ministry scale and cannot be forked.** Cite AICET as proof the shape works; build the shape from the permissive substrate. **ScholAIstic is the gap worth naming**: non-technical educators authoring and publishing their own roleplay training agents has **no permissive equivalent anywhere in this KB** |
+
+### The method correction, stated plainly
+
+The fourth pass concluded with "never attribute a region from a repository slug."
+The fifth pass adds the complement, and it is the more expensive mistake:
+**never conclude a region is empty from a popularity-ordered channel.** Every
+regional gap this KB has stated most confidently was produced by sweeping topic
+pages and star-sorted searches — both of which rank by adoption, and neither of
+which can surface a new, unstarred, institutionally-backed project. Three such
+projects existed the whole time. One query shape found all three.

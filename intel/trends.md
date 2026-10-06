@@ -354,6 +354,110 @@ disclosure report generator. [littlecookie0722/AI-Teaching-Agent](https://github
 found — 0★ and unproven, so read it and re-implement rather than pin it. Pattern
 P11 assembles the production version.
 
+## 17. The EU compliance clock moved, and the near-term deliverable is labelling
+
+**Added in the fifth pass of 2026-10-06. This supersedes the August 2026 dates
+used in trend 2 and pattern P4.**
+
+**Regulation (EU) 2026/1744** — the *Digital Omnibus on AI* — amends the AI Act.
+Parliament approval **16 June 2026**, Council adoption **29 June 2026**, signature
+**8 July 2026**, Official Journal **24 July 2026**, in force **27 July 2026**.
+CELEX **32026R1744**.
+
+| Obligation | Was | Now |
+|---|---|---|
+| Annex III stand-alone high-risk — **education**: admission and access, evaluation of learning outcomes, student level placement, exam or behaviour monitoring | 2 Aug 2026 | **2 Dec 2027** |
+| Annex I embedded high-risk | 2 Aug 2027 | **2 Aug 2028** |
+| **Article 50 transparency**, incl. **watermarking / synthetic-content marking** | 2 Dec 2026 | **unchanged** |
+
+The industry read this as a reprieve. It is not, quite. The **heavy** work moved
+— technical documentation, conformity assessment, CE marking, EU-database
+registration. The **transparency** work did not, and its deadline is **2 December
+2026**: disclose that a learner is talking to an AI system, and mark
+AI-generated content. For an education deployment that means labelling every
+generated lesson, item and piece of feedback.
+
+**So the trend is a sequencing inversion.** Through 2026 the assumption was:
+conformity first, transparency as a detail inside it. From now to December 2027
+it is the reverse — **labelling and classification are the live obligations, and
+conformity is the planned programme.** The deferral is also explicitly not a
+holiday: classifying systems against Annex III and Annex I, and beginning
+compliance planning, is immediate.
+
+The clients in the worst position are the ones who heard "delayed" and stopped:
+unlabelled, unclassified, and 14 months from a conformity deadline they have not
+started scoping.
+
+**Sourcing caveat.** EUR-Lex and the Commission's own notice are unreachable from
+this environment (egress denied). Every date above is corroborated across several
+independent legal and compliance-vendor analyses, and the CELEX id is given for
+one-step verification. **Verify against EUR-Lex before this goes into a client
+deliverable.**
+
+## 18. Pedagogy evaluation is published as research and licensed as content
+
+**Added in the fifth pass of 2026-10-06.** The fourth pass found one instrument
+claiming MIT in a peer-reviewed paper with no `LICENSE` payload and called it a
+licence failure mode. Searching for an alternative revealed that **this is how the
+entire subfield licenses**:
+
+| Instrument | Venue | Claimed | `LICENSE` payload |
+|---|---|---|---|
+| [eth-lre/mathtutorbench](https://github.com/eth-lre/mathtutorbench) (ETH Zurich LRE, 43★, 14 forks) | EMNLP 2025 oral | README badge **CC BY 4.0**; README body **CC BY-SA 4.0** — *same file* | **none** (10 filenames probed) |
+| [kaushal0494/AITutor-EvalKit](https://github.com/kaushal0494/AITutor-EvalKit) | EACL 2026 | MIT, stated in the paper | **none** |
+| [kaushal0494/UnifyingAITutorEvaluation](https://github.com/kaushal0494/UnifyingAITutorEvaluation) | NAACL 2025 | not stated | **none** |
+| Open TutorAI (arXiv 2602.07176) | arXiv | "open source" | **CC BY-NC-SA 4.0** |
+
+Four instruments for measuring whether a tutor *teaches well* — the one
+capability an education client actually buys — and **not one permissive software
+licence among them.**
+
+**Why this is structural rather than accidental.** These come from education and
+NLP research groups, where the publishing norm is Creative Commons for artefacts
+and papers. CC licences govern *content*; they were never designed to grant the
+rights a delivery team needs over *code*. The subfield is behaving normally for
+research and anomalously for software, and the mismatch lands on whoever tries to
+ship.
+
+**A fifth failure mode, and the nastiest: the licence that contradicts itself
+inside one file.** MathTutorBench's badge says CC BY 4.0 and its footer says
+CC BY-SA 4.0, with no payload behind either. A reviewer who checks the badge
+clears it; a reviewer who reads to the bottom flags ShareAlike; a reviewer who
+probes the payload finds nothing. All three are reading the same commit.
+
+**What to do.** MathTutorBench is also the best of the four — 7 tasks across 3
+skills (problem solving, Socratic questioning, solution correctness, mistake
+location, mistake correction, scaffolding generation, pedagogy following), a
+**1.5B pedagogical reward model** scoring generated teacher utterances against
+ground truth, and a 20+ model leaderboard. **Read the task design, re-implement
+the harness, vendor none of them, and file a `LICENSE` issue on all three
+unlicensed repositories.** For model *selection* — a different question —
+[`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark)
+is MIT and usable today.
+
+## 19. The compliance toolchain commoditised; the education profile did not
+
+**Added in the fifth pass of 2026-10-06.** This KB recorded "no open source EU AI
+Act compliance toolkit" four times and implied each time that the work was a
+build from scratch. It is not, any longer:
+
+| Repo | Licence (payload) | What it already carries |
+|---|---|---|
+| [AbdelStark/eu-ai-act-toolkit](https://github.com/AbdelStark/eu-ai-act-toolkit) | **MIT** | Six-tier risk classifier over the Act's decision tree; **61 conformity checklist items** across risk management, data governance, documentation and human oversight; **8 document templates**; CLI, zero-dependency TypeScript SDK, client-only web UI |
+| [compl-ai/compl-ai](https://github.com/compl-ai/compl-ai) | **Apache-2.0** | ETH Zurich: a technical interpretation of the Act plus a generative-model benchmarking suite — the measurement half |
+
+**Neither mentions education, or Annex III point 3.** So the generic layer
+commoditised while the vertical layer stayed empty, which is the same shape
+trend 14 identified on the agent shelf: *the permissive base is no longer the
+scarce thing, and the differentiator moved up the stack.*
+
+**The missing artefact is small and specific:** Annex III point 3's four education
+categories — admission and access, evaluation of learning outcomes, student level
+placement, exam or behaviour monitoring — mapped onto the 61 checklist items a
+school, university or edtech vendor actually has to evidence. That is a
+**profile on an MIT base**, contributable upstream, and it is days of work.
+Pattern **P13**.
+
 ## Regional notes where the trend diverges
 
 - **North America:** adoption is broad (60% of K-12 teachers) and the binding
@@ -406,6 +510,93 @@ P11 assembles the production version.
   regulatory map fragmenting country by country rather than converging.
 
 ## Declared gaps this pass
+
+**Updated in the fifth pass of 2026-10-06. Read this block first — it supersedes
+the fourth-pass block that follows it.**
+
+Channel new to this KB this pass: **institution-first search** (funding body,
+ministry, university and research-group names, English and Spanish, not ordered by
+stars). **Six gaps changed state, three of them refuted outright.**
+
+- **REFUTED: "no India-origin permissive education project."**
+  [microsoft/shiksha-copilot](https://github.com/microsoft/shiksha-copilot) —
+  **MIT, 9★, 12 forks, 149 commits** — Microsoft Research India's VELLM
+  initiative, validated in classrooms with the **Sikshana Foundation**.
+  Teacher-side: curriculum → lesson plans, examples, analogies, activities and
+  assessments → DOCX/PPT/handouts, plus multi-chapter question banks against
+  blueprint formats, with a **human-curator gate** on textbook ingestion. Plus
+  [Naitik-xd/CurriculumCraft-AI](https://github.com/Naitik-xd/CurriculumCraft-AI)
+  (MIT, 0★, **CBSE/NCERT grades 9–12 on open-weight Gemma only**).
+- **REFUTED and reframed: "no ASEAN-origin permissive education project."**
+  [Coursemology/coursemology2](https://github.com/Coursemology/coursemology2) —
+  **MIT, 158★, 78 forks, 15,802 commits**, NUS-origin, "currently supported by the
+  AI Centre for Educational Technologies." **What is actually missing is ASEAN's
+  agent layer:** AICET's Codaveri (30,000+ feedback items), Softmark (70,000+
+  scripts in 2025) and ScholAIstic run at Singapore Ministry-of-Education scale
+  and are **all closed source**. The substrate is permissive; the products are
+  not.
+- **REFUTED on existence, confirmed on substance: "no LATAM-origin permissive
+  education project — the firmest finding in this KB."**
+  [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) — **MIT**, Universidad
+  Tecnológica de Pereira, Sirius research group, Colombia, funded under
+  **SNCTI** — specifies an Open edX side-car tutor for rural higher education in
+  Risaralda, with a named pedagogical director. It has **4 commits and every code
+  path in its own documented tree returns 404.** **The LATAM gap is a delivery-capacity
+  gap, not an interest gap**, and a Colombian public university has
+  independently specified **this KB's pattern P1**. Partnership lead; never a fork
+  point.
+- **RE-SIZED, much smaller: "no open source EU AI Act compliance toolkit specific
+  to education."** The generic toolkit exists and is **MIT** —
+  [AbdelStark/eu-ai-act-toolkit](https://github.com/AbdelStark/eu-ai-act-toolkit)
+  (six risk tiers, **61 conformity checklist items**, 8 document templates, CLI +
+  SDK + client-only UI) — alongside Apache-2.0
+  [compl-ai/compl-ai](https://github.com/compl-ai/compl-ai) from ETH Zurich.
+  Neither mentions education or **Annex III point 3**. The gap is now an
+  **education profile on an MIT base**: days of work, upstream-contributable.
+  Trend 19, pattern **P13**.
+- **STILL OPEN, and now structural rather than accidental: no shippable permissive
+  evaluator of tutoring quality.** All four published instruments are licensed as
+  *content*, not software: MathTutorBench (**CC BY 4.0 badge vs CC BY-SA 4.0 body,
+  same file, no payload**), AITutor-EvalKit (MIT in the paper, no payload),
+  UnifyingAITutorEvaluation (no payload), Open TutorAI (CC BY-NC-SA). See trend
+  18. Re-implement; vendor none.
+- **STILL OPEN, with a licence reason attached: no education layer on an APAC
+  sovereign model.** [aisingapore/sealion](https://github.com/aisingapore/sealion)
+  (424★) has **no repository-level `LICENSE` payload**; its README states terms
+  vary by base model — Llama3 variants restrict commercial use, Gemma variants
+  differ — and points to each **Hugging Face model card**. **Rights clear per
+  model and per release, never per repository.** Landscape additions: **MaLLaM**
+  (Malaysia, with NVIDIA, 3M+ users via YTL/Yes) and **Gemma-SEA-LION-v4-27B-VL**
+  (March 2026).
+- **NEW: no permissive way for a non-technical educator to author and publish
+  their own agent.** AICET's **ScholAIstic** does exactly this — educators design
+  and deliver specialised chatbots, deployed across Social Work, Law and Nursing
+  at NUS since June 2024 — and it is closed. Pattern **P8** is the nearest thing
+  in this KB and it stops short: it produces Agent Skills *for* educators, not an
+  authoring surface *used by* them. Precisely sized, uncontested, and validated at
+  faculty scale by somebody else.
+- **NEW: the education vertical does not appear in general AI trend tracking.** A
+  daily AI open-source trend feed read on 2026-10-06
+  ([duanyytop/agents-radar#3628](https://github.com/duanyytop/agents-radar/issues/3628))
+  listed 23 repositories by star movement and **not one was an education-vertical
+  project** — the only education-adjacent entry was `rasbt/LLMs-from-scratch`, which
+  is AI literacy. *(That feed's star counts are demonstrably inflated and were not
+  used for any number in this KB; it was read as a presence/absence check only.)*
+  **An education shelf must be built by vertical search and never by watching what
+  trends.**
+- **Still no Brazil-origin permissive project.**
+  [vitorr2101/Projeto-Agente-IA-Educacional](https://github.com/vitorr2101/Projeto-Agente-IA-Educacional)
+  surfaced on a Portuguese-language search and has **no `LICENSE` payload** on
+  either branch across five filenames. The one LATAM-origin project that exists is
+  **Colombian**.
+- **Unverifiable, therefore not recorded: "K.A.L.I."**, described in search results
+  as a sovereign AI learning engine with 3D logic visualisation. A targeted search
+  returned ten unrelated `sovereign`-named repositories and no such project. Named
+  here so a later pass does not re-surface it as new.
+
+---
+
+### Fourth-pass gap block, retained
 
 **Updated in the fourth pass of 2026-10-06.** Channels new to this KB this pass:
 paper-to-repository tracing, a GitHub-organisation sweep, and a

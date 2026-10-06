@@ -8,6 +8,62 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — fifth pass: a 15,802-commit MIT LMS, an MIT compliance toolkit, and a trending feed with no education in it
+
+Channel new to this KB this pass: **institution-first search** (funding body,
+ministry, university and research-group names, English and Spanish) plus a read
+of a **daily AI open-source trend feed** as a presence/absence check. Licences
+read from each repository's own `LICENSE` payload via `raw.githubusercontent.com`.
+
+### The repositories
+
+| Repo | Licence (read from payload) | ★ | Why it belongs on the foundations shelf |
+|---|---|---|---|
+| [Coursemology/coursemology2](https://github.com/Coursemology/coursemology2) | **MIT** (`master/LICENSE`, © 2023 Coursemology.org) | **158** (78 forks, **15,802 commits**) | NUS-origin gamified LMS, Rails 8 + React + Keycloak, "currently supported by the AI Centre for Educational Technologies." It is the platform Singapore's **Codaveri** AI programming tutor is deployed on. **The most commit-dense permissive education platform in this KB after Moodle** — and unlike Moodle it is MIT, so a client fork carries no copyleft exposure |
+| [AbdelStark/eu-ai-act-toolkit](https://github.com/AbdelStark/eu-ai-act-toolkit) | **MIT** (`main/LICENSE`, 2026) | 8 (2 forks, 98 commits) | Six-tier risk classifier walking the Act's decision tree (Prohibited / High-Risk / GPAI Systemic / GPAI / Limited / Minimal), **61 conformity checklist items** across risk management, data governance, documentation and human oversight, and **8 Markdown document templates**. Ships a CLI (`npx @eu-ai-act/cli` — `classify`, `checklist`, `generate`, `gaps`, `penalties`, `standards`), a zero-dependency TypeScript SDK and a **client-only** Next.js UI where no data leaves the browser. **Does not mention education or Annex III point 3** |
+| [compl-ai/compl-ai](https://github.com/compl-ai/compl-ai) | **Apache-2.0** (`main/LICENSE`) | — (not read this pass) | ETH Zurich compliance-centred evaluation framework for generative models: a technical interpretation of the AI Act plus a benchmarking suite. The measurement half of the pair above |
+| [crpf-mitadt/Indian-AI-for-Education](https://github.com/crpf-mitadt/Indian-AI-for-Education) | **CC0-1.0** (`main/LICENSE`) | — (not read this pass) | Curated map of Indian education AI: datasets, models, ASR, TTS, OCR, machine translation, tooling, infrastructure, benchmarks and research. **CC0, so the map itself carries no attribution obligation** — but it is an index, not code: every item on it needs its own payload probe |
+
+### The compliance gap was mis-sized by three passes
+
+This KB has recorded "no open source EU AI Act compliance toolkit specific to
+education" four times, and each time implied the work was a build from scratch.
+It is not. The **generic** toolkit exists, is **MIT**, and already carries the
+risk-tier decision tree, 61 checklist items and the Annex IV-shaped document
+templates. What is absent is an **education profile**: Annex III point 3's four
+categories (admission and access, learning-outcome evaluation, level placement,
+and exam or behaviour monitoring), mapped to the checklist items a school or
+university actually has to evidence.
+
+That is a **profile on an MIT base**, not a toolkit — days of work rather than
+months, and the result is contributable upstream. See pattern **P13**.
+
+### The negative result, stated because silence looks like coverage
+
+Read on 2026-10-06: a daily AI open-source trend feed
+([duanyytop/agents-radar#3628](https://github.com/duanyytop/agents-radar/issues/3628))
+listing 23 repositories ranked by that day's star movement. **Not one is an
+education-vertical project.** The only education-adjacent entry is
+`rasbt/LLMs-from-scratch` — AI *literacy*, not education *technology*.
+
+Two cautions on that source, recorded so nobody reuses it wrongly:
+
+1. **Its star counts are not trustworthy** and were not used here. It lists
+   `affaan-m/ECC` at 273,692★ and `career-ops-hq/career-ops` at 73,574★, which do
+   not survive contact with the repository pages. This KB's v76 technology cycle
+   recorded the same class of pipeline inflation. **Use a feed like this for
+   presence and absence only; read every number off the repository page.**
+2. One absence on one day is one data point. It is consistent with four passes of
+   this KB's own sweeps, which is why it is recorded.
+
+**So what.** The education vertical does not surface in general AI trend
+tracking, so an education shelf has to be built by **vertical** search —
+institution, ministry, curriculum body, topic page — and never by watching what
+trends. A studio that waits for education repos to trend will not see them,
+because the biggest one in this KB (OpenMAIC, 40.0k★) and the most commit-dense
+(Coursemology, 15,802 commits) were both found by vertical search and neither has
+ever appeared in a general trend feed this KB has read.
+
 ## 2026-10-06 — fourth pass: the 404 that was hiding a 40k★ upstream
 
 The third pass went after the **Kuali** consortium and found a single body whose

@@ -107,6 +107,15 @@ mastery claim. A BKT posterior with known priors is.
 defers stand-alone high-risk obligations to **2 December 2027** — that deferral
 is the design window, not a reason to wait.
 
+**Updated in the fifth pass of 2026-10-06.** The deferral has a regulation number
+and a catch: **Regulation (EU) 2026/1744** (*Digital Omnibus on AI*, in force
+27 July 2026, CELEX 32026R1744) moved Annex III to 2 December 2027 and Annex I to
+2 August 2028, **but left Article 50 transparency untouched — the watermarking
+and synthetic-content-marking deadline is still 2 December 2026.** So the
+sovereign build below is the December 2027 programme, and there is a small,
+separate, nearly-immediate obligation in front of it. **Run P13 before this
+pattern**, not after: it classifies the estate and ships the labelling layer.
+
 **Wiring:**
 1. Inference stays in-region: ollama (MIT) or vLLM on-prem, open-weight models
    (Llama, Mistral). No student data to a third-party API.
@@ -143,6 +152,19 @@ use AI but <10% of institutions have the capacity to support it.
 4. ollama (MIT) with a small quantised model on the local server for offline
    tutoring and question answering — no egress, no per-token cost.
 5. Sync opportunistically when connectivity appears; never assume it.
+6. **Added in the fifth pass of 2026-10-06 — read a working implementation of
+   steps 4 and 5 before building them.**
+   [DannyAvilaL/agente_clases](https://github.com/DannyAvilaL/agente_clases)
+   (**MIT**, Spanish-language, 0★, 5 commits) is the most concrete offline-first
+   education agent this KB has recorded: **Ollama Phi-3 (2 GB)** generating
+   per-student Markdown material and exercises, synthesised `.csv` datasets
+   injected as tables into local **PostgreSQL**, Google Calendar syncing *down*
+   into a local **Radicale** CalDAV server so the system keeps running with no
+   internet, a **Streamlit** dashboard for teachers, and a `cron` autopilot that
+   prepares classes a week ahead. Two design choices worth copying outright: the
+   **2 GB model floor** (it names the laptop-class hardware it runs on), and
+   **calendar sync in the offline-safe direction** — cloud is a source, never a
+   dependency. 0★ and single-author: **read it, do not pin it.**
 6. For Spanish-first public-sector clients that require a conventional LMS
    instead, substitute [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms)
    (GPL-3.0) — accepting the copyleft, and keeping the AI as a P1 side-car.
@@ -560,6 +582,204 @@ them deliberately, read the code before trusting a score, and expect to maintain
 your fork. They are in this KB because they are the only permissive options that
 exist for these two functions — not because they are robust.
 
+## P13 — The EU AI Act education profile (the December 2026 / December 2027 split)
+
+Added in the fifth pass of 2026-10-06. **This is the highest ratio of billable
+clarity to engineering effort in this KB**, and it has a deadline weeks away.
+
+**Use when:** the client deploys AI anywhere near European education — admission
+and access, evaluation of learning outcomes, student level placement, or exam and
+behaviour monitoring (Annex III point 3). Also use it as the opening diagnostic on
+any EMEA education account, because most of them now believe the deadline was
+cancelled.
+
+**The fact the engagement turns on.** **Regulation (EU) 2026/1744** (in force
+27 July 2026, CELEX 32026R1744) moved Annex III stand-alone high-risk obligations
+from 2 August 2026 to **2 December 2027**, and Annex I embedded to 2 August 2028.
+**Article 50 transparency did not move: the watermarking and
+synthetic-content-marking deadline is still 2 December 2026.** Clients who heard
+"delayed" deferred the labelling work along with the conformity work. The labelling
+work is the one that is imminent.
+
+**Outcome:** two deliverables with two dates. **(A)** By December 2026 — every AI
+interaction disclosed, every generated artefact marked, every system classified.
+**(B)** By December 2027 — Annex III conformity evidence: technical documentation,
+risk management, data governance, human oversight, conformity assessment, CE
+marking, EU-database registration.
+
+**Wiring:**
+1. **Classify first, with the MIT toolkit, not a spreadsheet.**
+   [AbdelStark/eu-ai-act-toolkit](https://github.com/AbdelStark/eu-ai-act-toolkit)
+   (**MIT**, TypeScript, 98 commits) walks the Act's decision tree across six risk
+   tiers and emits **61 conformity checklist items** plus **8 document templates**.
+   Run its CLI — `npx @eu-ai-act/cli classify`, then `checklist`, then `gaps` —
+   over every AI system in the estate. Its web UI is **client-side only, with no
+   backend**, which matters: you can hand it to a client's compliance team without
+   a data-processing conversation.
+2. **Write the education profile. This is the billable artefact and it does not
+   exist anywhere.** The toolkit has **no education content and never mentions
+   Annex III point 3**. Map its four education categories — admission/access,
+   learning-outcome evaluation, level placement, exam/behaviour monitoring — onto
+   the 61 checklist items, as a data file in the toolkit's own shape. Ship it as a
+   **pull request upstream** as well as a client deliverable: it costs nothing
+   extra, and a merged education profile in the canonical MIT toolkit is a
+   positioning asset no competitor can take back.
+3. **Do the December 2026 labelling work now, because it is small.** Every
+   generated lesson, item, feedback string and tutor turn carries a
+   machine-readable marker and a learner-visible disclosure. Make it structural
+   rather than a convention: reuse **P11 step 3** — artefacts carry non-optional
+   `ai_generated`, `disclosure_shown` and `marked_at` fields via
+   [pydantic/pydantic-ai](https://github.com/pydantic/pydantic-ai) (MIT), so an
+   unlabelled artefact fails to construct.
+4. **Generate the Annex III evidence from traces you are already keeping.**
+   [langfuse/langfuse](https://github.com/langfuse/langfuse) (MIT — stay out of
+   `ee/`, `web/src/ee/`, `worker/src/ee/`) is the technical-documentation and
+   human-oversight record. The checklist items from step 1 tell you exactly which
+   spans you must be able to produce.
+5. **Measure the model against the Act's data-governance and robustness asks.**
+   [compl-ai/compl-ai](https://github.com/compl-ai/compl-ai) (**Apache-2.0**, ETH
+   Zurich) pairs a technical interpretation of the Act with a benchmarking suite.
+   It is the measurement half of step 1's checklist half.
+6. **Keep the human gate from P11.** Annex III human-oversight evidence and the
+   gate are the same artefact. Do not build two.
+
+**Effort:** 2–3 weeks for classification plus the education profile on an estate
+of a handful of systems; 4–5 weeks to add the December 2026 labelling layer;
+10–12 weeks for the full Annex III evidence programme (compose with **P4** and
+**P11**).
+
+**Verify before you quote.** EUR-Lex and the Commission's notice are unreachable
+from the environment this KB is built in. Every date here is corroborated across
+several independent legal analyses and the CELEX id is given for one-step
+verification — **check it against EUR-Lex before it reaches a client.**
+
+## P14 — ASEAN: the permissive LMS under the closed products
+
+Added in the fifth pass of 2026-10-06. For Singapore, Malaysia and the wider SEA
+higher-education and polytechnic market.
+
+**Use when:** the client is an ASEAN institution teaching **programming or
+computer science**, wants to own and rebrand its platform, and has engineering
+capacity. Also use it when a client has seen Singapore's AICET products and asked
+for "that, but ours."
+
+**The situation.** Singapore has APAC's most operationally mature education AI and
+**none of it is forkable**: AICET's **Codaveri** (30,000+ pieces of personalised
+programming feedback since 2024), **Softmark** (70,000+ exam scripts in 2025, with
+computer-vision grouping of similar answers) and **ScholAIstic** (educators
+authoring their own roleplay chatbots, deployed across Social Work, Law and
+Nursing at NUS since June 2024) are closed, ministry-funded products. The LMS
+beneath Codaveri is **MIT**.
+
+**Outcome:** a client-owned, rebrandable CS-teaching platform with an agent
+side-car, built on a permissive substrate that already carries an autograder and
+gamification — with the AICET deployment cited as the proof the shape works.
+
+**Wiring:**
+1. **Fork [Coursemology/coursemology2](https://github.com/Coursemology/coursemology2)**
+   — **MIT, read from `master/LICENSE`, 158★, 78 forks, 15,802 commits.** Note the
+   default branch is `master`; `main/LICENSE` 404s. Three components, not one:
+   Rails 8 API, React client, **Keycloak** auth. Scope the Keycloak-to-client-IdP
+   work in week one; it is the integration that surprises teams.
+2. **Size the concentration risk out loud, in week one.** 158★ means a small
+   contributor base and realistically NUS-dependent maintenance. If the client's
+   engineers will not own the fork, **stop and propose Moodle instead** — this
+   pattern is wrong for them. Trading copyleft for a maintenance cliff is only a
+   good trade when somebody is standing at the top of it.
+3. **Put the tutor beside it, not inside it.** Build the programming-feedback
+   agent as a side-car against Coursemology's own submission and assignment
+   models — the **P1** shape — so platform upgrades and agent iterations stay
+   independent. Codaveri is the existence proof that this integration point works
+   at scale on this codebase.
+4. **Gate the grading with P11.** Korea's **AI Basic Act** (in force **22 January
+   2026**) requires human oversight and documentation for high-impact systems, and
+   **Australia's TEQSA** requires an institutional genAI action plan from every
+   higher-education provider. The gate is the deliverable both ask for.
+5. **Clear model rights per model, never per repository.** If the client wants a
+   SEA sovereign model, [aisingapore/sealion](https://github.com/aisingapore/sealion)
+   has **no repository `LICENSE` payload** and its README states terms vary by base
+   model — Llama3-derived variants restrict commercial use, Gemma-derived variants
+   differ. Clear each **Hugging Face model card**, per release, and put the
+   result in the decision log. **MaLLaM** (Malaysia, with NVIDIA, 3M+ users via
+   YTL/Yes) and **Gemma-SEA-LION-v4-27B-VL** (March 2026) are the current
+   candidates.
+6. **The ScholAIstic-shaped gap is the follow-on sale.** No permissive project
+   anywhere in this KB lets a **non-technical educator author and publish their
+   own agent**. P8 produces Agent Skills *for* educators; it does not give them an
+   authoring surface. Build that on top of this platform and it is a product, not
+   a project.
+
+**Effort:** 8–10 weeks for a branded fork with IdP integration and one side-car
+tutor; +4 weeks for the gated-grading layer.
+
+**Why it beats greenfield.** The autograder, submission pipeline, gamification and
+a decade of commits are already there under a licence that lets the client resell
+the result. Rebuilding that to avoid a 158★ dependency is the more expensive risk.
+
+## P15 — Curriculum-aligned item generation under a sovereignty constraint
+
+Added in the fifth pass of 2026-10-06. India-first, and portable to any
+jurisdiction with a national curriculum body and a data-residency requirement.
+
+**Use when:** the client is a ministry, board, state system or publisher that
+needs assessment items and lesson material **aligned to a named national
+curriculum**, cannot send student or textbook data to a frontier API, and will be
+asked in week one whether the output infringes the curriculum body's copyright.
+
+**Outcome:** curriculum-tagged lesson plans, items and marking keys, generated on
+open-weight models the client can host, with a written copyright position and a
+human-curator gate — i.e. the three things that stop this kind of programme, all
+answered.
+
+**Wiring:**
+1. **Take the teacher-side workflow from
+   [microsoft/shiksha-copilot](https://github.com/microsoft/shiksha-copilot)**
+   (**MIT**, Microsoft Research India / VELLM, validated with the **Sikshana
+   Foundation**). Two things specifically: the **selection model** —
+   curriculum → grade → subject → chapter, which is how a teacher actually thinks
+   and how the artefact must be tagged — and the **ingestion pipeline gated by
+   human curators**, which is the answer to "where did the source material come
+   from?" Its output set is the right target too: lesson plans, real-world
+   examples, analogies, hands-on activities, formative and summative assessments,
+   exported to **DOCX, PPT and handouts**, plus multi-chapter question banks
+   against blueprint formats. **Note its own declared GPT-4o dependency** and
+   replace that layer in step 2.
+2. **Take the sovereignty and copyright posture from
+   [Naitik-xd/CurriculumCraft-AI](https://github.com/Naitik-xd/CurriculumCraft-AI)**
+   (**MIT**, CBSE/NCERT grades 9–12). It runs on **open-weight Gemma only**
+   (`gemma-4-26b-a4b-it`, failover `gemma-4-31b-it`, temperature 0.2, explicitly
+   zero Gemini), routes every model call through a backend so keys never reach the
+   browser, and ships a **written copyright argument**: no curriculum-body text is
+   stored or reproduced, syllabi and blueprints are treated as public standards,
+   and every item is synthesised on demand. **Reuse the argument even when you do
+   not reuse the code** — it is the artefact that unblocks procurement.
+   *(0★, 7 commits: read it, do not pin it.)*
+3. **Serve the weights yourself.** [ollama/ollama](https://github.com/ollama/ollama)
+   or [vllm-project/vllm](https://github.com/vllm-project/vllm) inside the
+   client's boundary. Low temperature and structured pedagogical prompts are doing
+   real work here; keep both.
+4. **Make curriculum tags and provenance structural**, via
+   [pydantic/pydantic-ai](https://github.com/pydantic/pydantic-ai) (MIT): every
+   item carries non-optional `curriculum`, `grade`, `subject`, `chapter`,
+   `blueprint_section` and `generated_by`. Untagged items are exactly the ones that
+   fail an audit.
+5. **Gate it with P11 and label it with P13.** The human gate satisfies the
+   oversight rules; the labelling satisfies Article 50 if any of this touches
+   Europe.
+6. **Evaluate the teaching, not the answer.** Re-implement the MathTutorBench
+   rubric (trend 18 — read it, do not vendor it) and use
+   [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark)
+   (MIT) to pick which open-weight model teaches best, per **P12**.
+
+**Effort:** 6–8 weeks for one board, one grade band and one subject, self-hosted;
++3–4 weeks per additional subject once the tagging schema is settled.
+
+**Portability.** The pattern is curriculum-shaped, not India-shaped. Substitute the
+curriculum body and it serves the UAE's seven-area mandate — which this KB records
+as having **no curriculum-aligned permissive pipeline at all** — or any LATAM
+ministry, where **P6** should precede it (see `intel/market.md`: 87% of LAC
+institutions use AI and only 26% have a strategy for it).
+
 ## Pattern selection
 
 | Situation | Pattern |
@@ -586,6 +806,15 @@ exist for these two functions — not because they are robust.
 | Client asks "which model should teach?" or must justify a model choice | **P12** (`pedagogy-benchmark`, MIT) — 1–2 weeks as a scoping add-on |
 | Tutoring quality must be measured or must not silently regress | **P12** — re-implement the MI/ML/PG/AC rubric; `AITutor-EvalKit` code is unlicensed |
 | Voice is the primary modality (low literacy, low bandwidth, Africa) | **P12** step 3 + **P5** |
+| **Any EMEA education account, as the opening diagnostic** | **P13** — most of them believe the August 2026 deadline was cancelled; the 2 December 2026 labelling obligation was not |
+| Client must evidence EU AI Act conformity for an education system | **P13** (MIT toolkit + the Annex III point 3 profile you write), then P4 |
+| ASEAN institution teaching programming/CS that wants to own its platform | **P14** (fork Coursemology, MIT, 15,802 commits) — and size the 158★ concentration risk in week one |
+| Client has seen Singapore's AICET products and wants "that, but ours" | **P14** — the products are closed, the LMS beneath them is MIT |
+| Korea or Australia in scope | **P11** gate + **P14** step 4 — Korea's AI Basic Act is live since 22 Jan 2026; TEQSA requires an action plan from every provider |
+| National curriculum body **plus** a data-residency constraint | **P15** — open-weight only, with a written copyright position |
+| Client asks whether generated items infringe the curriculum body's copyright | **P15** step 2 — reuse CurriculumCraft AI's argument even if you reuse none of its code |
+| Teacher-side artefacts (lesson plans, question banks) rather than a student tutor | **P15** step 1 (`microsoft/shiksha-copilot`, MIT) — not P1 |
+| LATAM higher ed, and you are choosing where to start | **P6 first** — 87% of LAC institutions use AI, 26% have a strategy; the gap is governance, not technology |
 
 ## Anti-patterns
 
@@ -654,3 +883,32 @@ exist for these two functions — not because they are robust.
   reads like a Brazil-origin multi-agent classroom with a v1.0.0 release and
   returns HTTP 404 on every branch and file. `curl -sI` before it reaches a
   proposal.
+- **Concluding a region has no permissive shelf from a popularity-ordered
+  channel.** Added in the fifth pass of 2026-10-06. GitHub topic pages and
+  stars-sorted searches rank by adoption, so a 2026 project with four commits from
+  a public university in Risaralda is structurally invisible to both. Four passes
+  of this KB declared "no India-origin", "no ASEAN-origin" and "no LATAM-origin"
+  permissive education project; **one institution-first search refuted all three.**
+  When a gap survives several passes, change the channel — and pick one that is
+  not ordered by stars.
+- **Clearing a model's licence at the repository level.**
+  [aisingapore/sealion](https://github.com/aisingapore/sealion) (424★) has **no
+  `LICENSE` payload** and its README says terms vary by base model — Llama3-derived
+  variants restrict commercial use, Gemma-derived variants differ. A repo-level
+  check returns nothing and clears nothing. **Clear rights per model, per release,
+  from each Hugging Face model card**, and log the result.
+- **Trusting a licence badge.** [eth-lre/mathtutorbench](https://github.com/eth-lre/mathtutorbench)
+  carries a **CC BY 4.0** badge on README line 3 and a **CC BY-SA 4.0** statement on
+  README line 199, with **no `LICENSE` payload** behind either. Three reviewers
+  reading the same commit get three different answers. The payload is the licence;
+  a badge is a claim about it.
+- **Forking a repository because its README is good.**
+  [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) is MIT, institutionally
+  funded, architecturally sound — and **every code path in its own documented tree
+  404s**, with a quickstart pointing at a different repository. Probe the paths the
+  README promises, not just the repository root.
+- **Telling an EMEA client the high-risk deferral bought them 16 quiet months.**
+  **Regulation (EU) 2026/1744** left **Article 50 transparency untouched**: the
+  watermarking and synthetic-content-marking deadline is still **2 December 2026**,
+  and the duty to classify systems against Annex III is immediate. The clients who
+  heard "delayed" and stopped are unlabelled *and* unclassified. Run **P13**.

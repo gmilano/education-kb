@@ -19,15 +19,18 @@ carrying a stale or inferred number.
 
 ## Agents and tools
 
-**36 rows, all verified.** The 12 recorded in the morning pass of 2026-10-06, 2
+**40 rows, all verified.** The 12 recorded in the morning pass of 2026-10-06, 2
 added in the second pass, **17 added in the third pass** from the `ai-tutor`
 GitHub topic page and a stars-sorted repository search, and **5 added in the
 fourth pass** by tracing academic papers to their repositories and sweeping a
-GitHub organisation — four distinct channels, each new to this KB when it was
-used. One of the 17, OpenTutor, is a **reinstatement** of an entry this KB wrongly
+GitHub organisation, and **4 added in the fifth pass** by searching on funding
+body, ministry and university name in English and Spanish instead of by topic or
+star count — five distinct channels, each new to this KB when it was used. One of the 17, OpenTutor, is a **reinstatement** of an entry this KB wrongly
 withdrew earlier the same day; see the corrections section. The fourth pass added
 the largest single asset in this KB (**OpenMAIC, MIT, 40.0k★**) and the first
-**Africa-placed** repositories it has ever recorded.
+**Africa-placed** repositories it has ever recorded. The fifth pass added the first
+**India-, LATAM- and ASEAN-placed** permissive projects — and found all three at
+**0–9★**, which is the finding, not a footnote.
 
 The third-pass rows sit in their own table below the core shelf, because most of
 them are **Agent Skills rather than applications** and that distinction decides how
@@ -151,6 +154,109 @@ placed. See `intel/market.md`.
 unlicensed repo, the AGPL-plus-paid-tier side-car and the unenforceable prose
 grant: **the licence that exists only in the paper.** A peer-reviewed claim of MIT
 is evidence about intent, never about rights.
+
+### Added in the fifth pass of 2026-10-06 — the first India-, ASEAN- and LATAM-origin permissive projects
+
+**Channel new to this KB this pass:** **institution-first search** — searching by
+funding body, ministry and university name in English and Spanish rather than by
+GitHub topic or star count. Four passes of topic sweeps had concluded that India-,
+ASEAN- and LATAM-origin permissive education projects did not exist. They do. They
+were invisible to topic sweeps because **none of them has a single star**, and
+three were created in 2026.
+
+Every licence below was read from the repository's own `LICENSE` payload via
+`raw.githubusercontent.com`. Star and commit counts were read from the repository
+page the same day. **Read the maturity column before the licence column** — this
+pass's finding is that region coverage is now achievable and that almost nothing on
+it is production-grade.
+
+| Agent | Repo | License (read from payload) | ★ / commits | Origin | Maturity | What it does |
+|---|---|---|---|---|---|---|
+| Shiksha Copilot | [microsoft/shiksha-copilot](https://github.com/microsoft/shiksha-copilot) | **MIT** (`main/LICENSE`, Microsoft Corporation) | 9★ / 149 commits | **India** — Microsoft Research India, VELLM initiative; classroom validation with the **Sikshana Foundation** | Working full-stack system; GPT-4o dependency acknowledged in its own README | Teacher-side lesson planning: select curriculum, grade, subject and chapter, then generate lesson plans, real-world examples, analogies, hands-on activities, and formative and summative assessments. Compiles reviewed output to **DOCX, PPT and student handouts**, and generates **multi-chapter question banks against standard blueprint formats**. React + FastAPI + Azure durable functions; textbook ingestion pipeline with **human curator oversight** |
+| CurriculumCraft AI | [Naitik-xd/CurriculumCraft-AI](https://github.com/Naitik-xd/CurriculumCraft-AI) | **MIT** (`main/LICENSE`, 2026) | 0★ / 7 commits | **India** — individual, Hacktoberfest 2026 | Public beta, real TypeScript codebase | **CBSE / NCERT grades 9–12** assessment engine: tests, lesson plans and marking keys. Runs on **open-weight Gemma only** (`gemma-4-26b-a4b-it`, failover `gemma-4-31b-it`), temperature 0.2, no Gemini. Model calls routed through backend endpoints so API keys never reach the browser; IP rate limit of 30 requests per 5-hour window. Ships an explicit **copyright analysis**: no NCERT text is stored or reproduced, syllabi are treated as public standards, all items synthesised on demand |
+| TutorIA | [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) | **MIT** (`main/LICENSE`, Grupo Sirius) | 0★ / 4 commits | **LATAM** — Universidad Tecnológica de Pereira, Sirius research group, **Colombia**; funded under Colombia's **SNCTI** | **Scaffold only — see the warning below** | Specified as an autonomous tutor agent for **rural higher education in Risaralda**, delivered as an **Open edX XBlock/plugin** with Claude API, TTS audio replies, animated avatar, teacher statistics panel and cross-session context. Initial subjects: Programación I (Python) and Introducción a la Matemática. Named team includes a **dedicated pedagogical director** |
+| Tutor Agente Local | [DannyAvilaL/agente_clases](https://github.com/DannyAvilaL/agente_clases) | **MIT** (`main/LICENSE`, 2026) | 0★ / 5 commits | Spanish-language, individual; **no institution or country stated in the repository** | Working single-author system | **100% offline** programming-class preparation: Ollama **Phi-3 (2 GB)** generates per-student explanations and exercises in Markdown, synthesises `.csv` datasets and injects them as tables into local **PostgreSQL**. Syncs Google Calendar into a **local Radicale CalDAV** server and keeps working with no internet. Streamlit dashboard; `cron` autopilot prepares classes a week ahead |
+
+#### TutorIA: read this before you cite it
+
+TutorIA is the **first LATAM-origin permissive education project this KB has
+found in five passes**, and it is institutionally real — a named university, a
+named research group, a named pedagogical director, and public science funding.
+It is also, today, **a README and a licence**. Every code path in its own
+documented tree returns HTTP 404:
+
+| Probed path | Result |
+|---|---|
+| `backend/requirements.txt`, `backend/main.py`, `backend/app/main.py` | 404 |
+| `frontend/package.json` | 404 |
+| `openedx/setup.py` | 404 |
+| `docker-compose.yml`, `.env.example` | 404 |
+
+Its own quickstart tells you to clone a **different repository**
+(`Sof1SP/tutorIA`) from the one the README lives in. So: **cite TutorIA as
+evidence that the LATAM gap is a build gap rather than an interest gap, and as a
+partnership lead. Never cite it as a starting point you can fork.** The
+architecture it specifies — Open edX XBlock, side-car agent, teacher analytics —
+is exactly pattern **P1** in this KB, which is the useful part: a Colombian public
+university has independently specified this KB's default engagement shape and has
+not built it.
+
+#### What these four rows change, and what they do not
+
+- **Three declared gaps move from "open" to "open at a different size."** This KB
+  has recorded "no India-origin", "no ASEAN-origin" and "no LATAM-origin"
+  permissive education project as its firmest findings, across four independent
+  channels. All three were **artefacts of star-ordered discovery**. An
+  institution-first search found all three in one pass.
+- **Nothing here is a product shelf.** Three of the four rows have **0★**. The
+  India row with institutional weight — Shiksha Copilot — has **9★ and 12 forks**.
+  Globant cannot shop from this shelf; it can **partner** (MSR India, UTP
+  Colombia, NUS) or **re-implement**.
+- **Curriculum alignment is no longer China-only.** Before this pass,
+  `Zenglian990/AI_Tutor_Release` (Chinese grade 1–9) was the only
+  curriculum-aligned permissive tutor in this KB. CurriculumCraft AI adds
+  **CBSE/NCERT grades 9–12**, and does it on **open-weight models only** — which
+  makes it the first curriculum-aligned permissive asset here that is also
+  deployable in a sovereignty-constrained engagement.
+- **Two of them are built against the copyright problem, not around it.**
+  CurriculumCraft's synthetic-generation argument and Shiksha Copilot's
+  human-curator ingestion gate are both answers to the question every ministry
+  engagement asks in week one. Reuse the arguments even where you do not reuse the
+  code.
+
+#### Measured rejections from the same sweep
+
+Recorded so the absence is visible rather than silent.
+
+| Candidate | Why it is not in the table |
+|---|---|
+| [vitorr2101/Projeto-Agente-IA-Educacional](https://github.com/vitorr2101/Projeto-Agente-IA-Educacional) | **Brazil-origin and therefore the row this KB most wanted** — and it has **no `LICENSE` payload** on `main` or `master` across five filenames. No rights, no row |
+| "K.A.L.I." (described in search results as a sovereign AI learning engine with 3D logic visualisation) | **Could not be located.** A targeted search returned ten unrelated `sovereign`-named repositories and no K.A.L.I. Not recorded — an unverifiable name is not a finding |
+| AICET's Codaveri, Softmark, ScholAIstic (NUS / AI Singapore) | **Closed source.** See the ASEAN note below — the mature ASEAN education AI is not open, but its host platform is |
+
+#### The ASEAN finding is a platform, not an agent
+
+Singapore has the most operationally mature education AI in APAC and almost none
+of it is open. **AICET** — the AI Centre for Educational Technologies, hosted by
+AI Singapore, funded by the Smart Nation and Digital Government Office, working
+with Singapore's **Ministry of Education** — ships three products at real scale:
+**Codaveri** (programming tutor, 30,000+ pieces of personalised feedback since
+2024), **Softmark** (exam-script digitisation and concurrent team marking, 70,000+
+scripts in 2025, now with computer-vision grouping of similar answers) and
+**ScholAIstic** (multi-agent platform for educator-authored specialised chatbots,
+deployed across Social Work, Law and Nursing at NUS since June 2024). **None has a
+public repository.**
+
+What is open is the platform underneath Codaveri:
+[**Coursemology/coursemology2**](https://github.com/Coursemology/coursemology2) —
+**MIT, read from `master/LICENSE` (Coursemology.org)**, 158★, 78 forks, 15,802
+commits, Rails 8 + React, NUS-origin and "currently supported by the AI Centre for
+Educational Technologies." It is recorded in `repos/foundations.md` and
+`verticals/solutions.md` rather than here, because it is an LMS and that decides
+how you deliver it. **The ASEAN gap was never that ASEAN lacks education AI. It is
+that ASEAN's mature education AI is closed and its substrate is MIT** — which is a
+much better commercial position than the gap this KB had recorded.
+
 
 ## The education MCP shelf — a side-car is permissive by choice, not by construction
 
@@ -414,3 +520,48 @@ An informed gap is information; silence looks exactly like coverage.
 - **No open source EU AI Act compliance toolkit specific to education** surfaced
   this pass. The compliance work in pattern P4 is assembled from general-purpose
   parts (typed outputs, checkpointed audit trails, explainable mastery models).
+
+## Gap updates from the fifth pass of 2026-10-06
+
+The institution-first channel refuted three of this KB's firmest regional gaps.
+They are left standing above, rather than deleted, so the correction is legible.
+
+| Gap as recorded above | State after the fifth pass |
+|---|---|
+| "No India-origin permissive education project found in any channel" | **REFUTED.** [microsoft/shiksha-copilot](https://github.com/microsoft/shiksha-copilot) (MIT, 9★, Microsoft Research India / VELLM, validated with the Sikshana Foundation) and [Naitik-xd/CurriculumCraft-AI](https://github.com/Naitik-xd/CurriculumCraft-AI) (MIT, 0★, CBSE/NCERT grades 9–12 on open-weight Gemma only) |
+| "No ASEAN-origin permissive education project found in any channel" | **REFUTED, and reframed.** [Coursemology/coursemology2](https://github.com/Coursemology/coursemology2) (MIT, 158★, 15,802 commits, NUS, supported by AICET) is a mature ASEAN-origin permissive platform. What is actually missing is ASEAN's **agent** layer: AICET's Codaveri, Softmark and ScholAIstic run at ministry scale and are **closed** |
+| "No LATAM-origin permissive education project — the firmest finding in this KB" | **REFUTED on existence, confirmed on substance.** [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) (MIT, Universidad Tecnológica de Pereira, Colombia, SNCTI-funded) exists and specifies this KB's P1 architecture — and **every code path in its own documented tree 404s**. The gap is a build gap, not an interest gap |
+| "No education agent layer on an APAC **sovereign** model" | **STILL OPEN, and now with a licence reason.** [aisingapore/sealion](https://github.com/aisingapore/sealion) (424★) has **no `LICENSE` payload**; its README §Licensing states terms "may vary depending on the underlying base model's restrictions" — Llama3-based variants carry commercial-use restrictions, Gemma-based variants differ — and directs you to each **Hugging Face model card**. Anyone building an education layer on a SEA sovereign model must clear rights **per model, not per repository**. Related, verified this pass: **MaLLaM** (Malaysia's sovereign LLM, built with NVIDIA, 3M+ users via YTL/Yes) and **Gemma-SEA-LION-v4-27B-VL** (March 2026) |
+| "No open source EU AI Act compliance toolkit specific to education" | **RE-SIZED, and much smaller than recorded.** The generic toolkit now exists and is permissive — [AbdelStark/eu-ai-act-toolkit](https://github.com/AbdelStark/eu-ai-act-toolkit) (**MIT**, 8★, TypeScript, six risk tiers, 61 conformity checklist items, 8 document templates, CLI + SDK + client-only web UI) and [compl-ai/compl-ai](https://github.com/compl-ai/compl-ai) (**Apache-2.0**, ETH Zurich). Neither mentions education or **Annex III point 3**. The missing piece is an education **profile** on an MIT base, not a toolkit from scratch — see pattern **P13** |
+| "No shippable permissive evaluator of tutoring quality" (declared NEW in the fourth pass) | **STILL OPEN — and the reason is now structural, not accidental.** See the licence finding below |
+
+### The licence pattern in pedagogy evaluation — four instruments, zero permissive software licences
+
+The fourth pass found that `AITutor-EvalKit` claims MIT in a peer-reviewed paper
+and has no `LICENSE` payload, and called it "a fourth licence failure mode." The
+fifth pass searched for alternatives and found that **this is how the whole
+subfield is licensed**:
+
+| Instrument | Venue | Licence as claimed | `LICENSE` payload |
+|---|---|---|---|
+| [kaushal0494/AITutor-EvalKit](https://github.com/kaushal0494/AITutor-EvalKit) | EACL 2026 | "released under an MIT license" (in the paper) | **None** — probed both branches |
+| [eth-lre/mathtutorbench](https://github.com/eth-lre/mathtutorbench) (43★, 14 forks, ETH Zurich LRE, EMNLP 2025 oral) | EMNLP 2025 | **Contradicts itself inside one file**: README line 3 badge says **CC BY 4.0**, README line 199 says **CC BY-SA 4.0** | **None** — probed 10 filenames on `main` |
+| [kaushal0494/UnifyingAITutorEvaluation](https://github.com/kaushal0494/UnifyingAITutorEvaluation) | NAACL 2025 | not stated | **None** — probed both branches |
+| Open TutorAI (arXiv 2602.07176) | arXiv | "open-source" | **CC BY-NC-SA 4.0** — non-commercial |
+
+**The fifth failure mode, and the one most likely to catch a delivery team: the
+licence that contradicts itself inside one file.** A reviewer who reads the badge
+gets a permissive answer; a reviewer who reads to the bottom gets a ShareAlike
+answer; a reviewer who probes the payload gets no answer at all. All three
+reviewers are reading the same commit.
+
+**So what.** MathTutorBench is the most useful of the four and the one you still
+cannot vendor: 7 tasks across 3 skills (problem solving, Socratic questioning,
+solution correctness, mistake location, mistake correction, scaffolding
+generation, pedagogy following with hard variants), a **1.5B pedagogical reward
+model** that scores win rates of a generated teacher utterance against ground
+truth, and a published leaderboard over 20+ models. **Read the task design,
+re-implement the harness, and do not vendor any of the four.** The cheapest
+high-value upstream contribution available in this industry remains unchanged
+and now applies to three repositories instead of one: **file an issue asking for
+a `LICENSE` file.**
