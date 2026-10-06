@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
+> **2026-10-05 — pase 126 (lectura `23:56Z`):** 🟢 **4 altas permisivas** (`towardsai/ai-tutor-app` Apache-2.0 11.386 B · `zhangl1001/civil-ai` MIT 1.067 B · `koukekoukej-glitch/feynman-tutor` MIT 1.056 B · `hwl668/Scientific-learning-skills-` MIT 1.096 B) **y las 4 aparecieron en el buscador con «License: Not shown»**. 🆕 **`P434`: el listado miente PARA ABAJO** — 6 sub-reportes y **0** sobre-reportes en 14 filas. 🔵 Y se corrige una fila del pase 125: `onbirdev/moodle-webservice_mcp` **cede GPL-3.0-or-later** por cabecera de archivo, no «NINGUNA». 🔴 De las 2 que no entran: **1 es PROPIETARIA explícita** (`alfredang/AI-LMS-TMS`, «All rights reserved») y **1 declara MIT citando un `LICENSE` que da 404** (🆕 **`P439`**).
 > **Pase 125 del 2026-10-05 (lectura `22:50Z`):** 🟢 **16 agentes/plugins netos — y lo que los destapa no es una consulta nueva sino un canal que este estante había dado por MUERTO con UNA sola medición.** `github.com/search` responde **403 a `curl` y 200 a `WebFetch`** (acción Y CONFIRMADA) ⇒ **16 plugins de Moodle con capa de AI, 16 de 16 ausentes del estante**, enumerados con `grep` antes de escribir. **8 con cesión leída de primera mano:** `block_openai_chat` (42 ★, GPL-3.0) · `webservice_mcp` (17 ★, 🔴 **NINGUNA** — y es la pieza **MCP**) · `mod_maici` (16 ★, GPL-3.0+) · `local_ai_course_assistant` (16 ★, GPL-3.0, RAG sobre el curso) · `local_aiquestions` (15 ★, GPL-3.0+) · `local_aiid` (7 ★, GPL-3.0, ⚠️ **pasó a premium**) · `qbank_genai` (7 ★, ⚠️ GPL-3.0+ sólo en README, `P314`) · `AIChatForMoodle` (0 ★, GPL-3.0). 🆕 **`P432` — la tendencia que estas filas miden NO es la que el pase 123 publicó: el *placement* obliga a copyleft (7 de 8) pero la familia es **GPL-3.0, no AGPL** (0 de 8).** 🔴 El pase 123 generalizó de 4 de 4 y erró justo la columna del **uso en red** ⇒ un Moodle con esta capa, **hospedado**, no dispara cláusula de red. 🔴 **El canal generalista, en cambio, falla por 7.ª vez del mismo modo** (eje *enseñar-sobre-IA*: `OpenClaw`, `OpenHands`, `CrewAI`, *Generative AI for Beginners*) ⇒ **0 piezas de industria**, y ahora se sabe que el problema era de SONDA y de CLIENTE, no de mercado. 🆕 **`P429`** · 🆕 **`P430`** · 🆕 **`P431`**.
 > **Pase 123 del 2026-10-05 (lectura `20:45Z`):** 🔴 **La serie de ceros de los pases 118–121 NO era saturación del mercado: era saturación de DOS PÁGINAS.** `topics/ai-tutor` 0 netas de 20 · `topics/education-ai` 5 netas **sin cesión** · `topics/edtech` **15 netas** · `topics/learning-management-system` **14 netas**. 🟢 **2 altas permisivas** (`instructional_agents` MIT 1.066 B · `get-it` Apache-2.0 11.358 B) y **2 copyleft** (`moodle-ai-skill-navigator` · `math-question-bank`, AGPL). 🆕 **La tendencia que las filas miden: la capa de AI educativa nace copyleft por PLACEMENT — 4 de 4 plugins de host GPL salieron AGPL.** 🆕 **`P411`: `PageLM` (2.000 ★) se presenta con la frase del MIT y prohíbe el uso comercial.** 🔵 **Par de linaje: `SkyLearn` y `django-lms` comparten digest y titular — `P379` con *upstream* localizable sin la API, y el control negativo que `P386` pedía.**
 > **Pase 122 del 2026-10-05 (lectura `19:45Z`):** 🟢 **7 altas, las 7 por `github.com/topics/education-ai`; el canal generalista falla por 6.ª vez del mismo modo (0 altas).** Denominador completo: **20** filas enumeradas → **15** ausentes del estante → **7** ceden. 🔴 **9 rechazos medidos**, entre ellos una licencia **PROPIETARIA declarada** de un ecosistema cripto listada en una topic page educativa (`brahm-ai`, 21.119 B) y un **`LICENSE` de 0 bytes** (`P404`).
@@ -24,6 +25,46 @@ updated: 2026-10-05
 > **Pase 110 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimosegundo barrido), cero ENUMERADO: 6 candidatas → 4 ya publicadas (`P311`), 2 nuevas sin cesion.** 🟢 **Lo que SE MUEVE este pase no es el trending: es que las ESTRELLAS VUELVEN a ser medibles — `WebFetch` sobre `github.com` sirve 200 donde `curl` da 403, con control negativo en 404.** 🔴 **Y al volver, cobran: `OATutor` 264 ★ contra «~1,5k» publicado, y `open-tutor-ai-CE` BSD-3-Clause / 108 ★ contra «Apache-2.0 / ~600 ★».**
 > **Pase 107 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimo barrido, 3 candidatas MEDIDAS del payload y las 3 con su bloqueo nombrado) y las TRES acciones pre-registradas corridas: A con la cota NO CERRADA y su clausula de atribucion FALSIFICADA, B CONFIRMADA, C CONFIRMADA en dos clausulas y FALSIFICADA en la tercera.** 🔴 **`P332`: la EXTENSION de un archivo de imagen no es su FORMATO — 2.443 de 2.443 `.gif` son PNG/JPEG/WEBP, y un barrido por extension habria dado «0 solapamiento» desde una premisa falsa.** 🔴 **`P334`: el titular de una FIGURA se resuelve por BYTES y vive en una obra DISTINTA de la que el item cita (36 pares leidos).** 🔴 **`P333`: `fa4e32e5e622` era la huella del archivo SIN su salto final — defecto de dato, no de upstream.** 🔴 **`P335`: tercera sub-clase de `P320` — lo denegado fue el LOTE, no la pieza nombrada.** 🟢 **Canal nuevo: `gitlab.com/-/raw`.**
 > **Pase 106 del 2026-10-05:** 🟢 **0 altas (vigesimonoveno barrido, 5 candidatas, las 5 frenadas por el gate de `P311`) y las TRES acciones pre-registradas corridas: A CONFIRMADA, B FALSIFICADA, C CONFIRMADA.** 🔴 **`P328`: la cesion de un OER se ESTRECHA entre ediciones — 10 de 10 colecciones con el mismo `collection-id` pasan de `CC BY 4.0` en `1e` a `CC BY-NC-SA 4.0` en `main`, y el slug cambia de nombre, que es por lo que esta base no lo veia.** 🔴 **El denominador se corrige de 13.371 a 82.492 unidades y aparece una capa sintetica de 6.886 unidades (`oer: openai`) sin cesion.** 🟢 **Canal nuevo: `git ls-remote` para enumerar refs — es el que abrio la accion A.**
+
+## 🟢 2026-10-05 — pase 126 (lectura `23:56Z`): 4 agentes permisivos nuevos, y la columna «License» del buscador resulta CIEGA en 4 de 6
+
+### 🔬 El canal, declarado antes del veredicto (`P249`)
+
+`github.com/search?q=…&type=repositories` vía `WebFetch` (el canal que abrió la acción Y del pase 125) + `raw.githubusercontent.com` para cada payload, **de a una** (`P431`). **24 lecturas de payload, 0 denegaciones.**
+
+### 🟢 Las 4 altas permisivas de la semana, con la cesión leída del PAYLOAD
+
+| agente | ★ (listado, `23:46Z`) | cesión | bytes | `sha256` | qué hace |
+|---|---|---|---|---|---|
+| [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | 31 | 🟢 **Apache-2.0** | 11.386 | `7dc0f2a45a9e21d1` | tutor RAG agéntico (LangGraph + FastAPI + Next.js) sobre corpus curado |
+| [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) | 43 | 🟢 **MIT** | 1.067 | `5731a2d3ccea989c` | tutoría adaptativa *local-first*, iOS + Web |
+| [`koukekoukej-glitch/feynman-tutor`](https://github.com/koukekoukej-glitch/feynman-tutor) | 29 | 🟢 **MIT** | 1.056 | `1126322e2cc8d165` | técnica de Feynman: el alumno enseña al modelo |
+| [`hwl668/Scientific-learning-skills-`](https://github.com/hwl668/Scientific-learning-skills-) | 15 | 🟢 **MIT** | 1.096 | `6d831876f07cba6d` | *Agent Skills* de diagnóstico previo a responder |
+
+### 🆕 La tendencia que estas filas SÍ miden: el listado MIENTE PARA ABAJO, y por eso el estante subcuenta
+
+🔴 **Las 4 aparecieron en el buscador con «License: Not shown».** Las 4 ceden — 1 Apache-2.0 y 3 MIT, leídas del payload con bytes y `sha256`.
+
+| superficie de listado | filas medidas | sub-reporta la cesión | sobre-reporta |
+|---|---|---|---|
+| columna «License» del buscador | 6 | **4** | **0** |
+| sidebar del repo (acción AB, pase 125) | 8 | **2** | **0** |
+| **total** | **14** | **6** | **0** |
+
+🟢 **`P434`: el sesgo tiene un solo signo.** Un catálogo de agentes armado con metadato de listado **subcuenta el inventario permisivo**; leyendo payload aparece más software entregable, no menos. 🔵 Para esta industria, donde la mayoría de las piezas son de 0–100 ★ y nadie les llenó el campo de licencia, el efecto es **grande**.
+
+### ⚪ Lo que se midió y NO cede — 2 piezas, con el motivo y no con silencio
+
+| pieza | ★ | sonda | resultado |
+|---|---|---|---|
+| [`alfredang/AI-LMS-TMS`](https://github.com/alfredang/AI-LMS-TMS) | 19 | 10 rutas + README | 🔴 **PROPIETARIO EXPLÍCITO** — README: *«proprietary software developed by Tertiary Infotech Pte Ltd. All rights reserved.»* (LMS/TMS para SkillsFuture, Singapur — **APAC**, y es el que más pena da). 🔵 **Tercer repo del MISMO titular** que este árbol ya tiene sin cesión (`alfredang/ai-mms`, `alfredang/ai4kids`, pase 87) ⇒ cohorte confirmada, no caso aislado |
+| [`fracabu/scorm-course-generator`](https://github.com/fracabu/scorm-course-generator) | 5 | 10 rutas + README | ⚠️ **MIT declarado en README + badge, y el `LICENSE` que CITA da 404** (`P439`) — generador multi-agente de SCORM 1.2 |
+
+### 🔵 La corrección de una fila de la semana pasada, por MEDICIÓN
+
+🔴 El pase 125 publicó `onbirdev/moodle-webservice_mcp` (17 ★) como **`NINGUNA`** cesión y lo llamó *«la pieza MCP más apetecible de esta capa y NO usable»*. **Medido en el payload: cede.** `version.php` y `server.php` llevan cabecera GPL completa + `@license … GNU GPL v3 or later` + `@copyright 2025 MohammadReza PourMohammad`. 🟢 **Es GPL-3.0-or-later y es usable** en los mismos términos que el resto de la capa Moodle. La lectura vieja salía del **sidebar**, que no mira cabeceras por archivo.
+
+---
 
 ## 🟢 2026-10-05 — pase 124 (lectura `21:46Z`): 5 páginas nunca tocadas dan 83 netas, y el único candidato con forma de AGENTE es copyleft
 

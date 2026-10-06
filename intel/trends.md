@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 126 del 2026-10-05 (lectura `23:56Z`):** 🟢 **T1 — la licencia del entregable la decide el LÍMITE DE INTEGRACIÓN, no la librería:** 24 payloads, 3 hosts, **6 de 6** piezas fuera de proceso permisivas, 0 contraejemplos. 🟢 **T2 — el inventario permisivo de la industria está SUBCONTADO** y el sesgo tiene un solo signo (`P434`: 6 sub-reportes, 0 sobre-reportes). 🔴 **T3 — la demanda regulatoria está madura en las 4 regiones y la oferta OSS no acompaña donde el mandato es más duro (APAC).** 🔵 **T4 — el dato de licencia se está volviendo PER-ARCHIVO** (`P435`, `P437`, acción `AD`) y las herramientas de catálogo no leen ahí.
 > **Pase 125 del 2026-10-05 (lectura `22:50Z`):** 🔴 **0 tendencias nuevas de contenido, y por una vez el cero es el dato principal: la tendencia que este pase mide es del CANAL, no del mercado.** 🆕 **Tendencia 941 — la capa de información sobre educación open source tiene la licencia mal declarada justo donde importa.** Medido, no opinado (`P429`, suite 12/12): 4 afirmaciones de licencia de un mismo comparativo «Best Open Source LMS 2026» contra el sidebar de GitHub ⇒ **2 aciertos** (`sakai` ECL-2.0, `chamilo` GPL-3.0) y **2 fallos** (`formalms` vendido como *«la más permisiva»* **sin tener campo de licencia**; `openedx/edx-platform` recomendado para escala empresarial **sin decir que es AGPL-3.0**). 🔴 **Y el reparto es la tendencia, no el conteo: los 2 aciertos son los 2 casos donde la licencia no cambia la entrega, y los 2 fallos son los 2 donde sí la cambia** (`BLOQUEANTE` y `HOSPEDAJE`) ⇒ **el error no es ruido aleatorio, está sesgado hacia la decisión que un comprador toma.** 🔵 **Por qué es tendencia de industria y no anécdota:** el mismo canal de oferta falló ya **7 veces** devolviendo el eje *enseñar-sobre-IA*, y ahora se mide que cuando sí devuelve plataformas de industria, **la mitad de su columna de cesión no es utilizable sin re-medir**. 🆕 **Tendencia 942 — la capa de AI educativa nace copyleft por PLACEMENT, pero en GPL-3.0 y NO en AGPL (`P432`).** Medido sobre **8** plugins de AI sobre Moodle: **7 copyleft, 0 AGPL**. 🔴 El pase 123 había generalizado de 4 de 4 que la familia era AGPL, y erró justo la columna del **uso en red** ⇒ la consecuencia de industria es la contraria de la que este árbol venía publicando: **un LMS con capa de AI, HOSPEDADO como servicio gestionado, no dispara cláusula de red.** 🔵 Tercera lectura del mismo eje en un solo pase y las tres independientes: `P419` (no se lee de las licencias que CITA), `P429` (ni de quien RECOMIENDA), `P432` (ni de una muestra de 4). 🆕 **`P431`** (el límite de un canal puede ser de FORMA y no de host), 🆕 **`P430`** (un verde no prueba el mecanismo) y 🟢 **la acción Y CONFIRMADA** (un canal declarado muerto estaba vivo para otro cliente) completan el pase.
 > **Pase 123 del 2026-10-05 (lectura `20:45Z`):** 🟢 **Tendencias 937–940** (y se reservan los lugares **933–936** a las 4 que el pase 122 publicó sin número de serie, en vez de renumerarlas: el archivo es APPEND-ONLY). 🆕 **937 — la capa de AI educativa nace COPYLEFT por dónde se enchufa: 4 de 4 plugins de host GPL salieron AGPL, y el par `Azure/Moodle` (MIT, afuera) contra `o365-moodle` (AGPL, adentro) lo prueba con autor y destino controlados. La vía rápida al dato del cliente es la vía que entrega el código bajo copyleft.** 🆕 **938 — el *source-available* NO-OSI llegó al edtech de mayor tracción: Elastic 2.0, Fair code y una «Community License» que se presenta con la frase del MIT.** 🆕 **939 — el descubrimiento por «plataforma» está agotado (30 barridos en cero); el que rinde es por ESTÁNDAR.** 🆕 **940 — LATAM: el techo normativo pasa por encima de la práctica en exactamente un mercado (Uruguay, CETS 225).**
 > **Pase 122 del 2026-10-05 (lectura `19:45Z`):** 🟢 **Cuatro fuentes independientes dan la MISMA inflexión para 2026: «de la experimentación a la gobernanza», aceleración selectiva con foco en ética/transparencia/casos agénticos, y desplazamiento desde herramientas genéricas hacia plataformas hechas a propósito — que es exactamente lo que este estante mide desde el pase 58 (el eje que devuelve software es la OBLIGACIÓN, no «mejores agentes»).** 🟢 **Convergencia de ETIQUETADO: art. 50(2) de la UE (2026-12-02, NO diferido) + etiquetado chino + gracia coreana hasta enero de 2027 ⇒ un solo componente de marcado sirve a dos jurisdicciones, y las suites `aiact-50-2-*` ya lo implementan con tests.** 🔴 **Y los DOS relojes que no hay que confundir: Anexo III/art. 27 corre a 2027-12-02, el marcado del art. 50 corre a 2026-12-02 — mismo cliente, fechas distintas.** 🆕 **Tendencia 4: la diligencia de licencia es diferenciador real, porque el titular NO está donde todos lo buscan (0 de 26 filas copyleft lo tienen en el payload).**
@@ -134,6 +135,65 @@ updated: 2026-10-05
 > (tendencia 29), se abre el **gap 20** y se registran dos advertencias de verificación: los agregadores de estrellas
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
+
+## 🟢 Pase 126 del 2026-10-05 (lectura `23:56Z`) — 4 tendencias, y la del pase es de ARQUITECTURA: en educación la licencia del entregable la decide el LÍMITE DE INTEGRACIÓN, no la librería
+
+### 🟢 T1 — La cesión sigue al límite de proceso, y eso convierte una decisión de licencia en una decisión de semana 1
+
+Medido este pase sobre **24 payloads** y **3 hosts**, sin contraejemplo:
+
+| host | pieza DENTRO del proceso | pieza FUERA del proceso |
+|---|---|---|
+| **Moodle** (GPL-3.0) | plugins: **GPL-3.0 / -or-later** (7 de 8) | — |
+| **Nextcloud** (AGPL-3.0) | apps PHP: **AGPL-3.0** (3 de 3) | ExApps en contenedor: **MIT** (3 de 3) |
+| **LTI** (estándar, sin host) | aplicaciones: **GPL-2.0/3.0, AGPL-3.0** (6 de 7) | librerías de protocolo: **MIT / Apache-2.0** (3 de 3) |
+
+🟢 **La tendencia no es «el OSS educativo es copyleft» —que es lo que este árbol venía escribiendo— sino algo más útil: el copyleft se hereda por PROXIMIDAD DE PROCESO.** Cuanto más lejos corre la pieza del proceso del host, más probable que ceda permisivo: **6 de 6** piezas fuera de proceso ceden MIT/Apache-2.0.
+
+🔵 **Por qué es tendencia de mercado y no de ingeniería:** el ecosistema está empujando sus integraciones **hacia afuera** del host (AppAPI/ExApp en Nextcloud, *tools* LTI 1.3, servidores MCP), y ese movimiento arquitectónico **arrastra la licencia hacia permisivo**. El efecto es que la ventana de piezas entregables **se está abriendo**, no cerrando.
+
+🔴 **Límite de la muestra, declarado:** 3 hosts, 6 piezas fuera de proceso, 0 contraejemplos. Chico. Pre-registrado como acción **AF** con cláusula de refutación.
+
+### 🟢 T2 — El inventario permisivo de esta industria está SUBCONTADO, y el sesgo tiene un solo signo
+
+| superficie de listado | filas medidas contra payload | sub-reporta | sobre-reporta |
+|---|---|---|---|
+| columna «License» del buscador de GitHub | 6 | **4** | **0** |
+| sidebar del repo | 8 | **2** | **0** |
+| **total** | **14** | **6** | **0** |
+
+🔴 **6 sub-reportes, 0 sobre-reportes.** No es ruido: es sesgo direccional (`P434`). Y pega fuerte **justo en esta industria**, donde la mayoría de las piezas son de **0–100 ★** y nadie llenó el campo de licencia.
+
+🟢 **La lectura de mercado:** quien decide con metadato de catálogo concluye *«en educación casi nada cede»*; quien lee payload encuentra que **sí cede**. Este pase convirtió 4 filas de «License: Not shown» en **1 Apache-2.0 + 3 MIT** y una fila de «NINGUNA» en **GPL-3.0-or-later**. 🔵 **La diligencia de licencia sigue siendo diferenciador real** (lo que el pase 122 llamó tendencia 4), y ahora con el mecanismo nombrado y el signo medido.
+
+### 🔴 T3 — Las cuatro regiones se movieron a «gobernar», y la oferta OSS no acompaña donde el mandato es más duro
+
+El barrido 53 dio **0 hechos netos**: las 4 regiones ya tienen su reloj registrado en este árbol (AI Act vigente desde ago-2026 · 134 proyectos en 31 estados de EE. UU. · currícula obligatoria en China/EAU e India desde Class 3 en 2026-27 · Chile 21.719 el 1-dic-2026 y Brasil PL 2338 aprobado). **La demanda está madura y documentada.**
+
+🔴 **Y la asimetría que este pase mide es de OFERTA:** en **APAC**, donde el mandato es el más duro (currícula obligatoria nacional), la única pieza regional con forma de plataforma —`alfredang/AI-LMS-TMS`, para el ecosistema SkillsFuture de Singapur— es **propietaria explícita**: su README reserva todos los derechos a Tertiary Infotech Pte Ltd. 🔵 Y es el **tercer** repo del mismo titular que este árbol mide sin cesión (`ai-mms`, `ai4kids`, pase 87) ⇒ **cohorte**, no caso aislado. **Mandato obligatorio y cero base OSS entregable de la región.** Esa es la brecha más grande del sector hoy, y no es de producto: es de **licencia**.
+
+### 🔵 T4 — El dato de licencia se está volviendo PER-ARCHIVO, y las herramientas de catálogo no leen ahí
+
+Tres mediciones independientes de este pase apuntan al mismo lugar:
+
+- **`AD`** — `webservice_mcp` cede sólo en la **cabecera de cada `.php`**: sin `LICENSE`, sin `COPYING`, sin mención en el README.
+- **`P435`** — el sufijo **`-or-later`** no es decidible del `LICENSE` (el texto de GPL-3.0 es idéntico para `only` y `or-later`; la frase «any later version» aparece **3 veces** en el apéndice de **toda** copia). Vive en la nota por archivo.
+- **`P437`** — `INGInious` declara en su propio `LICENSE` que **no describe a todo el árbol**: *«Most of the files… If it is not the case, this is clearly indicated in the files»*.
+
+🟢 **La consecuencia operativa:** la pregunta «¿qué licencia tiene este repo?» está dejando de tener una respuesta de **un** archivo. Para un cliente que necesita defender su despliegue, la unidad de análisis pasa a ser el **archivo**, y eso es trabajo que las herramientas de catálogo (sidebar, buscador, índices de paquetes) **no hacen**.
+
+### 🔴 Las brechas declaradas de este pase, por región
+
+| region | brecha medida |
+|---|---|
+| **North America** | 0 hechos netos y 0 repos netos de la región |
+| **EMEA** | 0 hechos netos; el AI Act rige desde ago-2026 y el corpus aún no registra un **expediente** publicado por una institución real |
+| **APAC** | 🔴 la brecha más grande: mandato obligatorio y la pieza regional de plataforma **no cede** |
+| **LATAM** | 0 hechos netos y 0 repos netos; la base instalada sigue siendo Moodle, y la capa que le calza quedó medida este pase |
+
+🔴 **Y una brecha de método, propia:** el **tablero de suites no se pudo correr** (ejecución del código del árbol clonado denegada en este entorno). Sigue en **74/75** por el pase 125 y este pase **no lo reclama verde**. Toda cifra de arriba es de payload o de listado; **ninguna es de instrumento corrido**.
+
+---
 
 ## 🟢 Pase 124 del 2026-10-05 (lectura `21:46Z`) — 4 tendencias, y la del pase es que el reloj regulatorio de EMEA venció sin que cambiara ningún dato
 

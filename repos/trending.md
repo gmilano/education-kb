@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📈 Repos trending — education
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
+> **2026-10-05 — pase 126 (lectura `23:56Z`):** 🟢 **26 netas de 28 por el canal de búsqueda** que la acción Y desbloqueó ⇒ **AA CONFIRMADA**, y los ceros de los pases 118–122 quedan explicados por **tercera** vez como ceros de canal. 🔴 **Una de las 4 consultas del encargo devuelve CERO medido** («0 results, 62 ms»). ⚠️ **26 netas no son 26 piezas:** de 6 medidas, 4 ceden y 2 no; el resto es de 0–90 ★ y varias ni son de la industria. 🔴 **3 de 4 regiones sin repo neto propio**, declarado.
 > **Pase 125 del 2026-10-05 (lectura `22:50Z`):** 🟢 **El hallazgo del pase es un CANAL, no una fila: `github.com/search` estaba declarado muerto en este árbol y responde 200 con resultados reales a `WebFetch` (403 a `curl`) ⇒ acción Y CONFIRMADA, y lo que se había perdido era la ENUMERACIÓN.** Rinde de inmediato: **16 repos netos** (16 de 16 ausentes del estante, `grep` uno por uno) de la capa de plugins AI sobre Moodle. 🆕 **Y una auditoría del OTRO canal, el de comparativos (`P429`): de 4 afirmaciones de licencia de un mismo «Best Open Source LMS 2026» contra el sidebar de GitHub, **2 aciertos** —`sakaiproject/sakai` **ECL-2.0**, `chamilo/chamilo-lms` **GPL-3.0**— y **2 fallos** —`formalms/formalms` vendido como *«Apache 2.0, la más permisiva de esta comparación»* **sin tener campo de licencia**, y `openedx/edx-platform` recomendado para escala empresarial **sin decir que es AGPL-3.0** (8.2k ★).** 🔴 **El reparto no es azar: los 2 aciertos son los 2 casos donde la licencia no cambia la entrega; los 2 fallos, los 2 donde sí la cambia.** 🔵 **`formalms` queda re-confirmado como negativo a 12 pases del pase 113** (misma lectura, descripción aún *«forma.lms mirror repository»*) ⇒ estable, no transitorio.
 > **Pase 123 del 2026-10-05 (lectura `20:45Z`):** 🔴 **Las 4 consultas obligatorias del encargo dan 0 repos netos entre todas** (la generalista falla por 7.ª vez idéntica: `OpenClaw`, `CrewAI`, `browser-use`). 🟢 **Lo que rindió fue el canal de *topic page*, y específicamente dos páginas nunca barridas: `edtech` (15 netas) y `learning-management-system` (14 netas), contra `ai-tutor` (0 de 20) y `education-ai` (5 netas sin cesión).** **15 repos netos permisivos** con cesión leída del payload, **8 copyleft** declarados, **8 sin cesión** y **3 NO-OSI** (`PageLM` `P411` · `advisingapp` Elastic 2.0 · `leemons` Fair code). 🔵 **Discrepancia registrada sin normalizar: el `LICENSE` de `edrys` mide 16.724 B y la AGPL íntegra mide ~34–35 KB en este corpus — es AGPL ABREVIADA.**
 > **Pase 122 del 2026-10-05 (lectura `19:45Z`):** 🔴 **Las 4 consultas obligatorias del encargo dieron 0 altas por 6.ª vez consecutiva; `github.com/topics/education-ai` —que el encargo no nombra— dio 7 de 7.** 🟢 **14 repos trending de la industria medidos con ★ de la topic page** (único canal de ★ del pase: API y HTML en 403). 🔴 **Huecos por región, dichos y no silenciados: LATAM 0 repos y 0 hechos netos, 3.er pase consecutivo; EMEA 0 hechos regulatorios netos.**
@@ -23,6 +24,44 @@ updated: 2026-10-05
 > **Pase 110 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMONOVENA vez.** 🟢 **Lo que se mueve es el CANAL: `WebFetch` sobre `github.com` devuelve estrellas donde `curl` da 403, con control negativo en 404 — asi que la columna de estrellas de este arbol vuelve a existir, con resolucion de 3 cifras significativas.** 🔴 **Y lo primero que mide es un repo de 8 ★ sin licencia que el canal de busqueda presento junto a uno de 40,8 ★k.**
 > **Pase 107 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOSEXTA vez: curriculo, catalogos, una bolsa de trabajo y dos generalistas (`microsoft/semantic-kernel` 27.470 ★, `NousResearch/hermes-agent` MIT), con las SEIS cifras del eje generalista identicas digito a digito a los pases 105 y 106 ⇒ informacion sobre el CANAL, no sobre la industria.** 🟢 **Lo que SI se movio es una capa de BINARIOS que este archivo nunca conto: 2.443 archivos de figura (~156 MiB, 1.326 imagenes distintas) en `CAHLR/OATutor-Content`, con la extension `.gif` falsa en 2.443 de 2.443 (`P332`).** 🔵 **`git ls-remote` da TRES refs, y una se llama `gpt-science-study`: la unica de este arbol cuyo nombre anuncia contenido sintetico.** 🔴 **Defecto propio corregido: los 49.481 JSON contra los 49.479 del pase 106 son los 6 caminos con bytes de control (U+007F/U+0080/U+0081) en el nombre del paso — la identidad de un paso NO es un slug seguro.**
 > **Pase 106 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOQUINTA vez: el canal devuelve generalista o educativo-sobre-AI, no AI-para-educacion.** 🟢 **Lo que SI se movio esta en el eje de `ref` y no de repo: las ramas `1e` de 5 bundles de `openstax` contienen la UNICA cesion `CC BY 4.0` de 10 colecciones cuyas versiones vivas son `NC-SA` — cesion y vigencia apuntan en direcciones opuestas.** 🔵 **Canal nuevo calibrado: `git ls-remote` para enumerar refs (responde a repo real, falla a repo inventado), el unico de este arbol que contesta «que refs tiene este repo» con `api.github.com` en 403 — sin el, la accion A de este pase era imposible.**
+
+## 🟢 2026-10-05 — pase 126 (lectura `23:56Z`): el canal de BÚSQUEDA rinde 26 netas de 28, y una de las 4 consultas del encargo devuelve un CERO medido
+
+### 🔬 Las 4 consultas, corridas por el canal que la acción Y desbloqueó (`github.com/search` vía `WebFetch`)
+
+| consulta | candidatas | ya publicadas | **netas** |
+|---|---|---|---|
+| `AI tutor agent education` | 10 | 2 (`A-R007/Multi-Agent-Study-Assistant`, `ahmedEid1/lumen`) | **8** |
+| `learning management system AI agent` | 10 | 0 | **10** |
+| `curriculum lesson plan generator AI` | 8 | 0 | **8** |
+| `automated grading assessment AI open source` | **0** | — | 🔴 **0 — y es un cero de CANAL, con la cifra del propio buscador: «Your search did not match any repositories», 0 results (62 ms)** |
+| **total** | **28** | **2** | **26** |
+
+🟢 **26 netas ⇒ la acción AA queda CONFIRMADA** (umbral ≥20) y los ceros de los pases 118–122 quedan explicados por **tercera** vez como ceros de canal.
+
+### 🔴 El rinde, medido en vez de celebrado
+
+⚠️ **26 netas no son 26 piezas.** De las 6 medidas: **4 ceden permisivo** del payload, **1 es PROPIETARIA explícita** (`alfredang/AI-LMS-TMS`) y **1 declara MIT citando un `LICENSE` que da 404** (`fracabu/scorm-course-generator`, `P439`). El resto de la cohorte es de **0–90 ★** sin respaldo institucional, y varias ni son de la industria (`Sajid-Hussain14/PHM-AI_Agent-System` es prognosis de maquinaria; `marciolscoutinho/superintelligence` y `freepik-company/knowledge-agent` no son educación). 🔵 **El canal enumera mucho y entrega poco: las dos cifras son distintas y este archivo publica las dos.**
+
+### 🟢 Lo trending que SÍ es de consultora: la capa LTI queda con cesión medida
+
+Lo que el pase 124 destapó y dejó sin medir, este pase lo cierra en **10 lecturas de payload** (ver `repos/foundations.md`). El titular de la semana no es un repo: es un **corte**.
+
+> 🟢 **Las librerías de protocolo LTI ceden permisivo (`pylti1.3` MIT · `lti-1-3-php-library` Apache-2.0); las aplicaciones LTI ceden copyleft, y `Obojobo` + `Materia` con cláusula de RED (AGPL-3.0).**
+
+### 🔴 Huecos declarados de este pase, por región
+
+| región | lo que se buscó | resultado |
+|---|---|---|
+| **Global** | 4 consultas del encargo vía buscador | 🟢 26 netas, 6 medidas |
+| **North America** | — | 🔴 **ningún repo nuevo atribuible a la región**; el canal de búsqueda no expone región y no se infiere (`P374`) |
+| **EMEA** | — | 🔴 **ídem.** `cerpus/Edlib` (Noruega) y `oat-sa` (Francia) son de la capa LTI del pase 124, **no netas de este pase** |
+| **APAC** | — | 🔵 2 de las netas medidas son de origen APAC por contenido (`zhangl1001/civil-ai`, examen de servicio civil; `hwl668`), y se dice que la atribución es por **contenido** y no por titular verificado |
+| **LATAM** | — | 🔴 **0 repos netos de la región este pase.** El único de la capa Moodle con señal LATAM es `caiocarvalhofre/moodle-mod_maici`, ya publicado por el pase 125 |
+
+🔴 **El silencio se declara y no se deja leer como cobertura:** 3 de 4 regiones sin repo neto propio este pase.
+
+---
 
 ## 🟢 2026-10-05 — pase 124 (lectura `21:46Z`): el canal generalista falla por 8.ª vez, y la *topic page* rinde 83 netas en 5 páginas nuevas
 
