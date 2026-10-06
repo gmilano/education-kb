@@ -813,3 +813,66 @@ single commit.
 | **Ministry-level EMIS** | **OpenEMIS Core** | GPL-2.0 | Publishing the fork is acceptable, often preferable, for a public client. |
 | **Interactive content authoring** | **Edlib** / H5P | GPL-3.0 | Fork is published. |
 | A **student-advising CRM** | ⚠️ **not `advisingapp`** | Elastic 2.0 | Source-available, no managed service. Build on a permissive base instead. |
+
+## Added in the thirteenth pass of 2026-10-06 — the fifth fully permissive platform, and the first AI-native one that is also sovereign-ready
+
+| Platform | Repo | Licence (read from payload) | Position |
+|---|---|---|---|
+| **Open TutorAI (CE)** | [Open-TutorAi/open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | **BSD-3-Clause** (`LICENSE`, 1,531 B — body text, **no title line**) | **Promoted onto this shelf this pass.** Personalised tutoring platform: multi-model conversation, **local RAG**, **voice / video / 3D-avatar modes**, per-learner assistant configured through structured onboarding, and **role-based access control**. Serves **Ollama** local models as well as OpenAI / Groq / Mistral. Python, 380 commits, **108★ / 192 forks**. From the **IRF-SIC Laboratory, Ibn Zohr University, Agadir, Morocco**, with Morocco's Ministry of Higher Education, the **Digital Development Agency** and the **CNRST** as funders. **Open core** — a paid Enterprise Edition adds theming, SLA and LTS. |
+
+### Why this changes the shelf, and what it does not change
+
+The permissive end of this shelf has been **four platforms** — Kolibri (MIT),
+Oppia (Apache-2.0), Mentingo (MIT), Coursemology (MIT), plus Sunbird (MIT) at national
+scale. Every one of them is a **platform that AI can be added to**. Mentingo was recorded
+as *"the only AI-native one"*, and on a corporate-L&D footing that remains true.
+
+Open TutorAI is the **fifth**, and it is a different proposition from all of them:
+
+- 🟢 **AI-native and academic**, not AI-added and corporate. The tutoring loop,
+  the retrieval layer and the avatar presentation are the product, not a plugin.
+- 🟢 **Sovereign by construction.** It ships **local RAG** and serves **Ollama** in the
+  same configuration surface as the hosted APIs. Every other AI-native option on this
+  shelf requires the sovereign path to be *built*; here it is a setting. That makes it the
+  shortest route to the EMEA data-residency posture this KB has been assembling by hand
+  since pattern **P4**.
+- 🟢 **RBAC is already there**, which is the unglamorous blocker that stops a pilot
+  becoming an institutional deployment.
+- 🟢 **It is a state-funded public-sector reference.** A Moroccan ministry, the DDA and the
+  CNRST stand behind it. For a public-sector buyer in EMEA or LATAM, a sovereign-stack
+  tutoring platform that a government already funds is a materially stronger reference than
+  a vendor pilot.
+
+What it does **not** change:
+
+- ⚠️ **It is open core.** The CE is the base for a commercial Enterprise Edition. The
+  BSD-3-Clause grant on the CE is unqualified and **this is not a directory carve-out like
+  Langfuse's `ee/`** — but the roadmap is set by a party with an incentive to keep features
+  above the line. Check which side of that line a client's must-haves fall on **before**
+  proposing it, and record the answer.
+- 🔴 **The copyright holder in the payload is not identifiable.** The licence reads
+  *"Copyright (c) 2023-2025 Mohamed El hajji On behalf of all R2D-dev"*, and **R2D-dev
+  appears in no public artefact of the project** — not the README, not the documentation,
+  not the search index. The grant is real; the entity holding it is opaque. On a
+  redistribution engagement that is the party an indemnity question routes to, so **raise
+  it upstream before it reaches a contract**.
+- ⚠️ **It is published as Apache-2.0 in third-party catalogues and it is BSD-3-Clause.**
+  Both are permissive and both are on this KB's allowlist, so nothing architectural turns
+  on the error — but a diligence pack that cites a catalogue instead of the payload will
+  state the wrong licence, and the attribution clauses differ.
+- ⚠️ **192 forks against 108 stars.** The twelfth pass established the reading: in the
+  education layer, forks exceeding stars means **deployed as a base**, not watched. That is
+  a point in its favour, and it also means a meaningful share of real-world use is in forks
+  whose divergence nobody is tracking. **Pin a commit.**
+
+### The platform-selection table, updated
+
+| If the engagement is… | Start from | Licence posture |
+|---|---|---|
+| **Academic tutoring, AI-native, data must stay in-region** | **Open TutorAI CE** | 🟢 BSD-3-Clause — build and redistribute; verify the open-core line |
+| Corporate L&D / onboarding / compliance, AI-native | Mentingo | 🟢 MIT |
+| CS and programming teaching, higher ed | Coursemology | 🟢 MIT |
+| Low connectivity, equity-driven, offline | Kolibri | 🟢 MIT |
+| Interactive lessons with misconception handling | Oppia | 🟢 Apache-2.0 |
+| National / nine-figure learner scale | Sunbird | 🟢 MIT (100+ services is the cost) |
+| The incumbent is already there | Moodle / Canvas / Open edX | 🔴 Copyleft — **side-car via LTI or MCP**, never a fork |

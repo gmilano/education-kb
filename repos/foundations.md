@@ -961,3 +961,45 @@ per-file discipline on the files you touch. It was priced as unusable.
 **The method lesson is the general one:** a size comparison identifies a *discrepancy*,
 and only the first line of the payload identifies a *licence*. Size told pass 123 to look
 again, which was right; it then answered the question it had only raised.
+
+## Added in the thirteenth pass of 2026-10-06
+
+One row, and it is on this shelf rather than the education shelf for a reason.
+
+| Repo | Licence (read from payload) | Layer | Why it matters for an education engagement |
+|---|---|---|---|
+| [bonafe/inteligencia-aberta](https://github.com/bonafe/inteligencia-aberta) | **MIT** (`LICENSE`) | reference architecture | **Not education software.** A Brazilian civic-analysis agent platform (Bonafé · Américo, 2★, Python) whose *stack* is the one this KB keeps assembling by hand for a sovereign deployment: **FastAPI + LangGraph + PostgreSQL + Qdrant, in Docker, multi-tenant, deployable locally and federating across machines**. Read it as a **worked reference for the LATAM sovereign pattern**, not as a component to ship. Its design goals — end-to-end source traceability, user control over what is shared, voice and natural-language access for low-literacy users — are the same requirements an education deployment under LATAM constraints carries, written out by someone who shipped them. |
+
+### Why a 2★ repository is worth a row
+
+Because this shelf's job is to answer *"what do we build on"*, and the scarce thing in a
+sovereign education build is not a component — every component here is permissive and
+available — it is a **worked wiring of them that someone has already debugged**. This KB
+has four patterns (P4, P5, P26, P32) that specify a LATAM or data-residency stack
+component by component. `inteligencia-aberta` is an independent implementation of
+substantially that stack, by Brazilian authors, under MIT, with the traceability
+requirement treated as a first-class design goal rather than an afterthought.
+
+⚠️ **The star count is the correct signal to ignore here, and the fork count is the one to
+watch.** It has **2 stars and 0 forks** — nobody has deployed it. Use it as a design
+reference and a code read; do not present it to a client as a maintained dependency.
+
+### What this pass did not add, and why
+
+🔴 **No new serving, orchestration or retrieval layer was found.** The mandatory
+infrastructure query (`open source platform education ERP CRM MIT Apache`) returned
+**OpenEduCat, RosarioSIS, openSIS, Gibbon and Fedena** — *five returned, five already
+inventoried on the SIS/ERP shelf in `verticals/solutions.md`*. That is the **fourteenth
+consecutive pass** in which the generalist infrastructure query has returned zero new
+rows, and it is now safe to say what that means: **the foundational layer for an education
+build is saturated and stable.** The scarcity has moved entirely to the education-specific
+layer above it, which is where the last several passes have correctly been spending their
+probes.
+
+🔴 **The non-GitHub forge channel could not be opened.** `codeberg.org`, `gitee.com` and
+the European Commission's Joinup/OSOR catalogue are all **unreachable from this
+environment** (403 at the egress proxy). Every licence fact on this shelf rests on
+`raw.githubusercontent.com`, which is the only code-hosting payload this environment can
+read. Two named Codeberg education projects were surfaced and **deliberately not shelved**,
+because they could not be payload-verified. Full measurement in `agents/trending.md`,
+Finding 4.

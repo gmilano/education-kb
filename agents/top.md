@@ -1443,3 +1443,96 @@ the **Nextcloud AI apps**, the **Moodle AI plugin cluster** and the **interopera
 tier**. The **~20-server education MCP cluster remains the largest untouched block**,
 and the next pass should take it: two of this pass's five dead addresses were MCP
 servers, so that cluster is the one most likely to have decayed.
+
+---
+
+## Added in the thirteenth pass of 2026-10-06 — the non-English-language channel, and a platform promoted out of trending
+
+**Channel used this pass:** search in the **language of the country**, not in English or
+Spanish. Passes 1–12 searched in English and (from the fifth pass) Spanish. This pass ran
+the mandatory queries again in **Japanese, Korean, Arabic and Portuguese**. That is a new
+channel for this KB, and the measured yield is in `agents/trending.md`.
+
+**One row is promoted, not discovered.** `Open-TutorAi/open-tutor-ai-CE` was already
+recorded in `repos/trending.md` by the twelfth pass, with the correct licence and star
+count. It had never been shelved in `agents/top.md` or `verticals/solutions.md`. It is the
+most capable permissive AI-native education platform in this KB and it was sitting in a
+trending log. That is a shelving failure, and this pass fixes it.
+
+| Agent | Repo | Licence (read from payload) | ★ / forks (2026-10-06) | What it does |
+|---|---|---|---|---|
+| Open TutorAI (Community Edition) | [Open-TutorAi/open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | **BSD-3-Clause** (`LICENSE`, 1,531 B — **body text, no title line**) | 108 / **192** | Personalised tutoring platform: multi-model conversation, **local RAG**, **voice / video / 3D-avatar modes**, structured learner onboarding that configures a per-learner assistant, and **role-based access control**. Serves **Ollama** local models as well as OpenAI / Groq / Mistral APIs. Python, 380 commits on `main`. **Morocco** — see provenance below. Open core: a paid Enterprise Edition adds theming, SLA and LTS. |
+| SAEP 2026 — Agentes de IA e Ferramentas | [armandokeller/SAEP2026-Agentes-IA-e-Ferramentas](https://github.com/armandokeller/SAEP2026-Agentes-IA-e-Ferramentas) | **MIT** (`LICENSE`) | 0 / 0 | Eight-step agent-engineering curriculum (`ex0`–`ex8`): environment check, chat, conversation memory, tool calling, agentic loop, LangGraph, **MCP integration**, **human-in-the-loop approval**, then an exercise implementing custom MCP tools. Runs on a **small local model (Qwen 3.5-4B via LM Studio)** with **no cloud dependency**. Workshop material from the Escola Politécnica academic week at **Unisinos, Brazil**. Python. |
+
+### Provenance of Open TutorAI, which this KB had not recorded
+
+The twelfth pass recorded the repository, its licence and its fork inversion. It did not
+record **who stands behind it**, and that is the part a client conversation turns on.
+
+- **Origin: Agadir, Morocco.** The **IRF-SIC Laboratory, Ibn Zohr University**, with the
+  **Regional Centre for Education and Training Professions (CRMEF) Souss-Massa**. Authors
+  El Hajji · Ait Baha · Dakir · Fadili · Es-Saady (`arXiv:2602.07176`).
+- **It is state-funded.** The work is supported by Morocco's **Ministry of Higher
+  Education, Scientific Research and Innovation**, the **Digital Development Agency (DDA)**
+  and the **CNRST**.
+
+Both facts were absent from this KB: `Agadir` and `Ibn Zohr` returned **zero** matches
+across every file before this pass. The consequence is a market fact, not a trivia fact:
+**the most capable permissive AI-native education platform on this shelf is an African,
+government-sponsored project**, which is a reference a public-sector buyer in EMEA or
+LATAM can be pointed at directly.
+
+### The licence warning on the row above — the holder is not identifiable
+
+The payload reads:
+
+```
+Copyright (c) 2023-2025 Mohamed El hajji On behalf of all R2D-dev
+All rights reserved.
+```
+
+**`R2D-dev` appears nowhere else.** Not in the README, not in the repository
+documentation, and not in any search result this pass could reach. The licence is a clean
+BSD-3-Clause and the grant is real; the **legal entity named as the holder is
+unidentifiable from any public artefact of the project**. For an engagement that
+redistributes this code to a client, the holder is the party a warranty or indemnity
+question routes to — so this is the diligence item to raise upstream before it is proposed.
+
+Two further details on the same payload:
+
+- **`All rights reserved.` sits directly above a permissive grant.** The phrase contradicts
+  nothing legally — it is vestigial — but it is exactly the string that makes a
+  procurement reviewer stop. Expect to explain it.
+- **The copyright range ends at 2025** while the repository is active in 2026, and the
+  repository is **published as Apache-2.0 in third-party catalogues** while the payload is
+  BSD-3-Clause. The twelfth pass caught the catalogue error; this pass confirms it from the
+  payload independently, at the **same 1,531 bytes**.
+
+### The 14th failure mode: a permissive body with no title line reads as unclassified
+
+This pass's probe classified licence family by matching the **title line** of the payload
+(`MIT License`, `Apache License`, …). `open-tutor-ai-CE` returned **HTTP 200 with a
+payload that matched nothing** — because BSD-3-Clause is frequently distributed as the
+**bare three-condition body with no heading at all**. A title-line classifier reports that
+as *unclassified* and an automated gate would reject a genuinely permissive component.
+
+This KB already knew the shape — `crewAIInc/crewAI` is recorded as *"MIT (`LICENSE`, body
+text — no title line)"* — but it had not been written down as a **failure mode of the
+instrument**. It is one: **classify on the operative clauses, not on the heading.** The
+three-condition BSD body is identifiable by its third clause (*"Neither the name of the
+copyright holder nor the names of its contributors may be used to endorse"*) with no
+heading present anywhere.
+
+### Recorded and excluded: ClawTeam
+
+[HKUDS/ClawTeam](https://github.com/HKUDS/ClawTeam) — **MIT** (`LICENSE`), **5.5k★**,
+Python, v0.2.0 (Mar 2026). Agent-swarm orchestration: agents spawn sub-agents, divide
+tasks, communicate over a file and P2P transport, isolated per-agent workspaces via git
+worktrees. **It is not education software** and it is not shelved as one.
+
+It is recorded because of **how it was found**: `HKUDS` is the organisation that publishes
+**DeepTutor**, the largest agent in this KB. An **organisation sweep** — a channel this KB
+used in its fourth pass — pulls ClawTeam in on the strength of the org name alone, and a
+5.5k★ MIT repository from a known-good education org is precisely the kind of row that
+gets shelved without being read. **The org is not the subject.** Logged here so the next
+org sweep does not re-find it as a discovery.

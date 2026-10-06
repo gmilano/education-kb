@@ -8,6 +8,107 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — thirteenth pass: the generalist query fails for the ninth time, and the forge channel cannot be opened at all
+
+### The mandatory queries, run with the year **computed** (2026), not hardcoded
+
+| Query | Result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **Generalist layer.** OpenClaw (~388k★), AutoGPT, OpenHands, CrewAI, Hermes Agent, plus course material *about* agents. **Zero education-specific repositories.** |
+| `github trending education AI 2026` | ⚠️ **Six candidates, six already in this KB**: `rasbt/LLMs-from-scratch`, `rohitg00/ai-engineering-from-scratch`, `jamwithai/production-agentic-rag-course`, `ebookfoundation/free-programming-books`, `mlabonne/llm-course`, `duanyytop/agents-radar`. |
+| `open source platform education ERP CRM MIT Apache` | ⚠️ **Five returned, five already inventoried**: OpenEduCat, RosarioSIS, openSIS, Gibbon, Fedena. |
+| `AI education industry trends 2026` | ⚠️ **Market figures, all already published** in `intel/market.md`. |
+
+🔵 **Marginal yield of the generalist search channel: ZERO for the ninth consecutive
+pass**, and the fourteenth for the infrastructure query specifically. It is run because a
+regime change has to be *seen*, not because it discovers.
+
+⚠️ **One identity discrepancy worth recording.** This KB carries
+[`duanyytop/agents-radar`](https://github.com/duanyytop/agents-radar); the trending channel
+this pass surfaced the same AI-trends issue series under **`kouweizhu/agents-radar`**, and
+a Korean-language equivalent under **`roomedia/ax-trend`** (probed: **no licence
+payload**). 🔵 **The daily-AI-trends issue tracker is a repository *shape* that is forked
+and re-published under many owners**, so an address recorded for one of them is not a
+stable reference to "the" tracker. Cite the owner, or cite nothing.
+
+### 🟢 The channel that yielded, and it was not GitHub trending: non-English search
+
+Full measurement in `agents/trending.md` (thirteenth pass, Finding 1). The short form:
+**12 candidates across Japanese, Korean, Arabic and Portuguese; 3 carried a licence; 1 of
+those 3 is education software.**
+
+| Repo | ★ / forks | Licence | Probe result |
+|---|---|---|---|
+| [`HKUDS/ClawTeam`](https://github.com/HKUDS/ClawTeam) | **5.5k** / — | MIT | 🟢 MIT payload — ⚠️ **not education**, logged with its exclusion reason |
+| [`bonafe/inteligencia-aberta`](https://github.com/bonafe/inteligencia-aberta) | 🔴 **2** / 0 | MIT | 🟢 MIT payload — ⚠️ **not education**, shelved as a reference architecture |
+| [`armandokeller/SAEP2026-Agentes-IA-e-Ferramentas`](https://github.com/armandokeller/SAEP2026-Agentes-IA-e-Ferramentas) | 🔴 **0** / 0 | MIT | 🟢 MIT payload — the **only education asset** the channel produced |
+| `rlaalstn1504/langchain-ai-agent-edu` | — | **none** | 🔴 0 of 13 probes |
+| `edu-agent-lab/edu-agent-lab` | — | **none** | 🔴 0 of 13 probes |
+| `Choonholic/jpub_ai_agent` | — | **none** | 🔴 0 of 13 probes |
+| `roomedia/ax-trend` | — | **none** | 🔴 0 of 13 probes |
+| `781991937/TOFAN-AI-2026` | — | **none** | 🔴 0 of 13 probes — **re-confirms the standing ask, eighth pass running** |
+| `aigerimtech/my-education-platform` | — | **none** | 🔴 0 of 13 probes |
+| `lojainlll9820-ops/my-education-platform` | — | **none** | 🔴 0 of 13 probes |
+| `Pedro-Araujo4/EduAi` | — | **none** | 🔴 0 of 13 probes |
+| `kellyson71/agentes-ia-dev-minicurso` | — | **none** | 🔴 0 of 13 probes |
+
+🔴 **Nine of twelve addresses carry no grant at all.** The pattern this KB recorded as
+trend 35 — *"ungranted code clusters by the type of body that published it, not by
+region"* — holds across all four new languages: **individual and coursework
+repositories are ungranted irrespective of the language they are written in.**
+
+### 🔴 The forge channel: tried for the first time, and blocked
+
+`codeberg`, `gitee`, `framagit` and `joinup` returned **zero** matches across every file in
+this KB before this pass, so this was a genuinely untried channel. It is now a **measured
+block**, not an untried one.
+
+| Host | Result |
+|---|---|
+| `codeberg.org` (Forgejo, EU non-profit) | 🔴 `CONNECT tunnel failed, 403` · **`EGRESS_BLOCKED`** |
+| `gitee.com` (China domestic) | 🔴 `CONNECT tunnel failed, 403` |
+| `interoperable-europe.ec.europa.eu` (Joinup / OSOR) | 🔴 `CONNECT tunnel failed, 403` |
+| `arxiv.org` · `alphaxiv.org` | 🔴 **`EGRESS_BLOCKED`** — arXiv blocked for the **third** consecutive pass |
+
+⚠️ **Two named Codeberg education projects were surfaced and deliberately NOT written to
+any shelf**: **`lerntools`** (privacy-focused digital-education tooling, German-language)
+and **`lmemsm/delightful-educational-games`** (curated FLOSS educational games). This KB
+verifies licences by reading the payload, and the payload is unreachable. **An unverifiable
+row is not a finding.** They open a **non-GitHub backlog** for an environment that can
+reach those hosts.
+
+🔵 **The structural consequence, stated plainly:** every licence fact in this knowledge base
+rests on `raw.githubusercontent.com` because **it is the only code-hosting payload this
+environment can read**. This KB is *"the permissive education shelf **on GitHub**"* — and
+the EU-hosted sovereignty forge, the one most likely to hold European public-sector
+education software, is precisely the blind spot.
+
+### Star and fork figures re-read this pass
+
+| Repo | ★ | Forks | Licence | Note |
+|---|---|---|---|---|
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🔴 **108** | **192** | BSD-3-Clause | 🟢 **Independently re-confirmed at the same 1,531 B** as pass 12, one day later. Promoted to `agents/top.md` and `verticals/solutions.md` this pass. |
+| [`HKUDS/ClawTeam`](https://github.com/HKUDS/ClawTeam) | **5.5k** | — | MIT | v0.2.0 (Mar 2026); v0.3 shipping with file + P2P transport and Web UI |
+
+🟢 **The fork inversion holds and is now explained.** 192 forks against 108 stars, on a
+platform that ships **local RAG and Ollama serving as configuration**. Forks exceeding
+stars in the education layer means *deployed as a base* — and a platform whose sovereign
+path is a setting rather than a build is exactly what gets forked and deployed rather than
+starred. ⚠️ **It also means much real-world use sits in forks nobody tracks: pin a commit.**
+
+### Verification surface
+
+| Probe | Result |
+|---|---|
+| `git ls-remote --symref … HEAD` | 🟢 **Works** — existence + default branch, 16 addresses |
+| `raw.githubusercontent.com` + explicit branch | 🟢 **200** — the only payload channel |
+| `curl https://api.github.com/repos/{o}/{r}` | 🔴 **403** |
+| `curl https://github.com/{o}/{r}` | 🔴 **403** — pass 12 measured **400**; it is **403** today |
+| `github.com` via the fetcher | 🟢 **Works** |
+| GitHub **MCP** `search_repositories` | ⚫ **Not used this pass** — this session's repository scope does not entitle it; see `agents/trending.md` |
+
+---
+
 ## 2026-10-06 — twelfth pass: 66 archive addresses resolved to a branch and a grant, and the generalist query fails for the eighth time
 
 **Instrument of record this pass:** `git ls-remote --symref https://github.com/{o}/{r}

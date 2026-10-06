@@ -8,6 +8,169 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — thirteenth pass: searched in the country's own language, and the yield is 3 licensed assets out of 12
+
+**New channel: the mandatory queries, run in Japanese, Korean, Arabic and Portuguese.**
+Passes 1–4 searched in English. From the fifth pass, English and Spanish. Language was
+never varied beyond those two. This pass varied it, because the KB's own trend 37 —
+*"measured by language rather than by region, the LATAM supply gap is absence, not
+thinness"* — was derived from a **two-language** instrument, and a supply claim is only as
+wide as the language it was measured in.
+
+### Finding 1 — the measured yield, stated as a denominator
+
+Twelve candidate addresses surfaced across four languages. Every one was probed with
+`git ls-remote --symref` for existence and default branch, then with **13 licence
+filenames** on `raw.githubusercontent.com`.
+
+| Language | Candidates | Licensed | Ungranted | Already in this KB |
+|---|---|---|---|---|
+| **Japanese** | 0 education-specific | — | — | — |
+| **Korean** | 5 | **1** (`HKUDS/ClawTeam`, MIT) | 4 | 1 (`yongsoojoo/esd2026-agent-workflow`) |
+| **Arabic** | 3 | **0** | 3 | 1 (`781991937/TOFAN-AI-2026`) |
+| **Portuguese** | 4 | **2** (both MIT) | 2 | 2 (`portabilis/i-educar`, `vitorr2101/Projeto-Agente-IA-Educacional`) |
+| **Total** | **12** | **3 (25%)** | **9 (75%)** | 4 |
+
+🔴 **The Japanese query returned no education-specific asset at all.** `教育 AI エージェント
+オープンソース GitHub MIT ライセンス 2026` returned the **generalist** agent layer — Dify,
+LangGraph, CrewAI, OpenHands, OpenClaw star tables — plus one unrelated privacy tool
+(`Mordred`). This is the same generalist collapse the English query has produced 44 times
+in this KB's history, reproduced in a second language. **Writing it down: Japanese is not
+an untried door onto Japanese education software; it is the same door.**
+
+🟢 **The licensed three:**
+
+| Repo | Licence (payload) | ★ | Region | Note |
+|---|---|---|---|---|
+| [`armandokeller/SAEP2026-Agentes-IA-e-Ferramentas`](https://github.com/armandokeller/SAEP2026-Agentes-IA-e-Ferramentas) | **MIT** (`LICENSE`) | 0 | **LATAM** | 8-step agent curriculum, **local-only** (Qwen 3.5-4B via LM Studio), MCP + human-in-the-loop. Unisinos, Brazil. Shelved in `agents/top.md`. |
+| [`bonafe/inteligencia-aberta`](https://github.com/bonafe/inteligencia-aberta) | **MIT** (`LICENSE`) | 2 | **LATAM** | Python/FastAPI + **LangGraph** + **Qdrant** + PostgreSQL civic-analysis agent platform, multi-tenant, federating across machines. Brazil (Bonafé · Américo). **Not education** — recorded in `repos/foundations.md` as a reference architecture, not on the education shelf. |
+| [`HKUDS/ClawTeam`](https://github.com/HKUDS/ClawTeam) | **MIT** (`LICENSE`) | 5.5k | **APAC** | Agent-swarm orchestration. **Not education.** Recorded with its exclusion reason in `agents/top.md` — it is what an *organisation sweep* of the DeepTutor org wrongly returns. |
+
+⚠️ **Two of the three licensed finds are not education software, and the one that is has
+zero stars.** That is the honest read of the channel: **the language was the wrong
+variable.** Varying it widened the candidate pool and did not widen the *licensed
+education* pool. Trend 37 survives the harder test — and now rests on four languages
+instead of two.
+
+🔴 **Arabic went 0 for 3, and that includes a re-probe of the KB's own standing ask.**
+`781991937/TOFAN-AI-2026` — recorded in `agents/top.md` as *"real, well-shaped, and legally
+unusable"* and as *"the single highest-value upstream ask in this KB"* — was re-probed
+independently this pass across **13 filenames on its real default branch (`main`)**. Still
+**no licence payload**. The other two Arabic candidates
+(`aigerimtech/my-education-platform`, `lojainlll9820-ops/my-education-platform`) are
+likewise ungranted. **Eight passes, one unanswered ask, zero movement.** The ask is not
+getting answered by being re-stated in this file; it needs an issue opened on the
+repository, which is the action item this pass hands forward.
+
+### Finding 2 — the 14th failure mode: a permissive licence with no title line
+
+`Open-TutorAi/open-tutor-ai-CE` returned **HTTP 200 on `LICENSE`** and matched **none** of
+this pass's eleven licence-family patterns. Reading the payload by hand: it is a clean
+**BSD-3-Clause body with no heading at all**, opening on a bare copyright line.
+
+```
+Copyright (c) 2023-2025 Mohamed El hajji On behalf of all R2D-dev
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+```
+
+🔴 **A classifier that reads the title line reports a genuinely permissive component as
+unclassified**, and an automated allowlist gate rejects it. This KB already carried the
+shape as a one-line parenthetical on `crewAIInc/crewAI` (*"MIT, body text — no title
+line"*). It had never been written down as a **property of the instrument**. It is one.
+🟢 **The fix: classify on the operative clauses.** The BSD-3 body is identified by its
+third condition — *"Neither the name of the copyright holder nor the names of its
+contributors may be used to endorse"* — present whether or not a heading is.
+
+### Finding 3 — VTutor: three papers, a live demo, a named org, and nothing to clone
+
+This is a **new failure mode of the paper-to-repository channel**, and it is not a dead
+link.
+
+**VTutor** is an open-source SDK for generative-AI-powered **animated pedagogical agents**
+— Unity WebGL avatars with lip-sync, rendered in-browser, driven by an LLM and TTS. It has
+**three arXiv papers** (`2502.04103`, `2505.06676`, `2505.07736`), a live demo at
+`vtutor.vercel.app`, and the papers state the code is open source under **CC BY 4.0**.
+
+What is actually reachable:
+
+| Address | State |
+|---|---|
+| `anonymousStars/vtutor-sdk` | Exists, default branch `main`. **No licence payload** across 13 filenames. The owner name is an **anonymised-peer-review artefact**. |
+| `VTutorTools` (the org the papers name as the home) | **Org exists. Zero public repositories.** Members hidden. |
+| `VTutorTools/VTutor`, `VTutorTools/vtutor-sdk` | **Do not exist** (`ls-remote` returns nothing). |
+
+🔴 **The named home exists and is empty.** Previous passes catalogued dead addresses
+(nothing there) and wrong licences (something there, mislabelled). This is a third thing:
+**a real organisation, publicly linked from published research, holding nothing public** —
+with the only reachable code sitting under a review-anonymisation handle and carrying no
+grant at all.
+
+⚠️ **And the licence the papers claim is the wrong instrument anyway.** **CC BY 4.0 is a
+content licence**; Creative Commons itself recommends against using it for software,
+because it grants no patent rights and addresses neither source form nor linking. This KB
+recorded that pattern as **trend 18** — *"pedagogy evaluation is published as research and
+licensed as content"*. VTutor is the same error one step further along: not a dataset
+licensed as content, but **an SDK** licensed as content — and then not published.
+
+🟢 **What to take from it:** avatar-based pedagogy is a live research front with no
+obtainable permissive implementation behind it. The capability is reachable today only by
+composing `livekit/livekit` (Apache-2.0, already on the foundations shelf) with the
+**avatar mode that `open-tutor-ai-CE` already ships under BSD-3-Clause** — which is pattern
+**P33**, added this pass. VTutor is a **watch item**, not a component.
+
+### Finding 4 — the non-GitHub forge channel is not measurable from this environment
+
+This pass tried to open the channel this KB has never used: **forges other than GitHub**.
+`codeberg`, `gitee`, `framagit` and `joinup` returned **zero matches** across every file
+before this pass, so the channel was genuinely untried.
+
+| Host | Why it was tried | Result |
+|---|---|---|
+| `codeberg.org` (Forgejo, EU-hosted non-profit) | The European-sovereignty forge; `lerntools` and a FLOSS educational-games list are known to live there | 🔴 `CONNECT tunnel failed, 403` (curl) and **`EGRESS_BLOCKED`** (fetcher) |
+| `gitee.com` | The China-domestic forge — the obvious door onto APAC education software | 🔴 `CONNECT tunnel failed, 403` |
+| `interoperable-europe.ec.europa.eu` (Joinup / OSOR) | The European Commission's own public-sector open-source catalogue | 🔴 `CONNECT tunnel failed, 403` |
+| `arxiv.org`, `www.alphaxiv.org`, `researchgate.net` | Paper text for the avatar cluster | 🔴 **`EGRESS_BLOCKED`** — arXiv blocked for the **third** consecutive pass |
+
+🔴 **State this as a declared gap, not as an absence of findings.** Two named Codeberg
+education projects — **`lerntools`** (privacy-focused digital-education tooling, German)
+and **`lmemsm/delightful-educational-games`** (a curated FLOSS educational-games list) —
+surfaced in the search index and **could not be licence-probed**, because this KB's
+verification method is a payload read and the host is unreachable. They are **not written
+to any shelf**: an unverifiable row is not a finding. They are the first entries on a
+**non-GitHub backlog** for an environment that can reach those hosts.
+
+⚠️ **The structural consequence is worth naming.** Every licence fact in this KB rests on
+`raw.githubusercontent.com`. That is not a methodological choice; it is **the only
+code-hosting payload this environment can read**. A reader should treat this KB as *"the
+permissive education shelf **on GitHub**"* — and the European-sovereignty forge, the one
+most likely to hold EU-hosted education software, is exactly the blind spot.
+
+### Channels this pass deliberately did not use
+
+🔵 The twelfth pass recorded that **GitHub MCP `search_repositories` returns 200** where
+the HTTP API returns 403. **This pass did not use it.** This session's repository scope
+permits reads and searches only against its attached repositories, and
+`search_repositories` takes no repository argument. The twelfth pass's observation is not
+retracted — it is accurate about that client — but it is **not a channel this pass was
+entitled to run**, and the discovery here went through the search index instead. Recorded
+so a later pass does not read the twelfth pass's note as a standing licence.
+
+### Verification surface, re-measured this pass
+
+| Probe | Result |
+|---|---|
+| `git ls-remote --symref … HEAD` | 🟢 **Works.** Default branch + existence for all 16 addresses probed. |
+| `raw.githubusercontent.com` + explicit branch | 🟢 **200.** The only payload channel. |
+| `curl https://api.github.com/repos/{o}/{r}` | 🔴 **403** |
+| `curl https://github.com/{o}/{r}` | 🔴 **403** — the twelfth pass measured 400; **it is 403 today** |
+| `github.com` via the fetcher | 🟢 **Works** — README, stars, forks, releases |
+| `codeberg.org` · `gitee.com` · Joinup · `arxiv.org` | 🔴 **Blocked** (see Finding 4) |
+
+---
+
 ## 2026-10-06 — twelfth pass: the default branch is readable without an API, and the licence filename is case-sensitive
 
 The eleventh pass closed with an instruction: *"Read `default_branch` from the API and

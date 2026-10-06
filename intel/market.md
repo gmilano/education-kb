@@ -578,6 +578,31 @@ outcome; (4) **integration and exit-path work around funded proprietary tutors**
 the North Carolina Khanmigo deployment. ⚠️ Architect (1)–(3) so **no student data trains a
 model** — California AB 1159 makes that a design constraint, not a policy preference.
 
+#### Thirteenth pass, 2026-10-06 — re-verified, nothing new
+
+🔵 **Every North America figure and instrument this KB carries was re-run this pass against
+the search index and came back unchanged.** Market share **36%**, **$3.68B in 2026** rising
+to **$32B by 2030**; **134 AI-in-education bills across 31 states**; **Ohio** the first
+state to mandate written district AI policy (**July 2026**); **California AB 1159** barring
+student data from model training; **North Carolina**'s **$10M** Khanmigo earmark; the
+50-state student-authored national framework; the split between states building
+procurement pipelines and states imposing moratoria.
+
+⚠️ **No new North America opportunity is recorded this pass, and that is the finding.**
+The regional intelligence here is **saturated at the level this channel can measure**. The
+pass spent its probes on supply (new repositories, new languages, new forges) rather than
+on demand, and the demand picture did not move in a day. **P24** (procurement-rubric-ready
+delivery) and **P25** (the interoperability tier) remain the standing North America plays,
+unchanged.
+
+🟢 **One supply-side item does land here, indirectly.** The avatar/animated-pedagogical-agent
+research front is **predominantly North American and Chinese academic work** (the VTutor
+cluster, `arXiv:2502.04103` / `2505.06676` / `2505.07736`), and it has produced **no
+obtainable permissive implementation** — the named `VTutorTools` organisation exists with
+**zero public repositories**. The only shippable avatar capability on this shelf is
+**Moroccan** (`open-tutor-ai-CE`, BSD-3-Clause). For a North America engagement that wants
+an animated tutor, the component comes from EMEA and the research citations come from home.
+
 ### EMEA
 
 - **The EU AI Act is the whole conversation.** AI used in education access and
@@ -1060,6 +1085,57 @@ abroad; (3) **QTI + conformity** as a single assessment workstream, permissive v
 (4) **licence-hygiene stewardship** with ministries and standards bodies — the cheapest
 high-trust opening available in the region, and it unblocks the vocabulary layer everything
 else needs.
+
+#### Thirteenth pass, 2026-10-06 — the most capable permissive AI-native platform on this shelf is African and state-funded
+
+🟢 **This is the EMEA opportunity this pass adds, and it is a reference, not a forecast.**
+
+[`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) —
+**BSD-3-Clause**, 108★ / **192 forks** — comes from the **IRF-SIC Laboratory at Ibn Zohr
+University in Agadir, Morocco**, with the **Regional Centre for Education and Training
+Professions (CRMEF) Souss-Massa**, and is funded by Morocco's **Ministry of Higher
+Education, Scientific Research and Innovation**, the **Digital Development Agency (DDA)**
+and the **CNRST**.
+
+Why it is an opportunity rather than a curiosity:
+
+- 🟢 **It is a government-funded sovereign-stack tutoring platform.** It ships **local
+  RAG** and serves **Ollama** as a configuration option alongside hosted APIs. The EMEA
+  data-residency posture this KB has specified component-by-component since **P4** is, here,
+  a setting. **P33** (added this pass) is the delivery shape.
+- 🟢 **It is the strongest public-sector reference this KB can offer an EMEA buyer.** A
+  ministry, a national digital agency and a national research council already stand behind
+  it. In a procurement conversation that outranks a vendor pilot.
+- 🟢 **It reframes the Africa position.** This KB's fourth pass recorded its *first*
+  Africa-placed repositories. This pass places, in Africa, the **most capable AI-native
+  education platform on the entire permissive shelf** — ahead of the European, Indian,
+  Singaporean and Brazilian entries on the same axis. **Africa is a supply region for this
+  industry, not only a demand region**, and a Globant EMEA engagement can be built on
+  Moroccan public-sector IP.
+- 🔴 **Two diligence items travel with it.** The payload's copyright holder — *"Mohamed El
+  hajji On behalf of all **R2D-dev**"* — names an entity that appears in **no public
+  artefact of the project**, and the project is **open core** with a paid Enterprise
+  Edition. Both go in the diligence pack before it is proposed. Full write-up in
+  `verticals/solutions.md`.
+
+🔵 **Re-verified unchanged this pass:** Europe at **$2.64B in 2026** → **$8.0B by 2030**
+(**31.9% CAGR**); **Finland, Estonia and the Netherlands** leading K-12 integration; the
+UK's **£4M** lesson-planning and marking investment; and the **Digital Omnibus**
+(Regulation (EU) 2026/1744) deferral of Annex III stand-alone high-risk obligations to
+**2 December 2027** and Annex I embedded to **2 August 2028**, with **Article 50
+transparency duties live since 2 August 2026**. 🟢 **This pass confirms the Omnibus dates
+from an independent sweep** — Council final approval **29 June 2026** — so the KB's
+eleventh- and twelfth-pass reading stands. The near-term billable deliverable remains
+**labelling and transparency**, not Annex III conformity.
+
+🔴 **A declared EMEA blind spot, newly measured.** The European-sovereignty forge
+**`codeberg.org`** and the European Commission's own open-source catalogue
+**Joinup / OSOR** are **unreachable from this environment** (403 at the egress proxy).
+Two named Codeberg education projects — **`lerntools`** (German, privacy-focused digital
+education) and **`lmemsm/delightful-educational-games`** — were surfaced and **could not be
+licence-verified, so they are on no shelf.** The forge most likely to hold EU-hosted,
+EU-licensed public-sector education software is exactly the one this KB cannot see. Treat
+the EMEA supply picture as **GitHub-only and therefore understated**.
 
 ### APAC
 
@@ -1552,6 +1628,43 @@ documentation duties map directly onto the artefacts trend 16 already specifies;
 (3) **TEQSA institutional action plans** for Australian higher education — a defined,
 repeatable, regulator-mandated document; (4) **Sunbird implementation and extension** at
 state scale on an MIT base, including the AI layer the platform does not ship.
+
+#### Thirteenth pass, 2026-10-06 — two languages tried, and the supply door did not open
+
+🔵 **Re-verified unchanged:** Korea's **AI Framework Act** in force **22 January 2026** with
+a **one-year enforcement grace period** making 2026 a pilot year; **Vietnam**'s
+**Law No. 134/2025/QH15** on AI effective **1 March 2026**; China's generative-AI measures
+and **synthetic-content labelling** obligations; Google, Microsoft, IBM, Pearson and Byju's
+as the commercial players, with China, India and Japan as the dominant national markets.
+
+🔴 **The new measurement is a negative one, and it is worth as much as a find.** This pass
+searched for APAC education AI supply **in Japanese and Korean** — the first time this KB
+has searched in either.
+
+- **Japanese returned nothing education-specific at all.** `教育 AI エージェント オープン
+  ソース GitHub MIT ライセンス 2026` returned the **generalist** agent layer (Dify, LangGraph,
+  CrewAI, OpenHands, OpenClaw star tables) plus one unrelated privacy tool. ⚠️ **Japanese is
+  not an untried door onto Japanese education software; it is the same door as English.**
+- **Korean returned five candidates and one licence.** Four were ungranted
+  (`rlaalstn1504/langchain-ai-agent-edu`, `edu-agent-lab/edu-agent-lab`,
+  `Choonholic/jpub_ai_agent`, `roomedia/ax-trend`) — all individual or coursework
+  repositories, which is **exactly the publisher class trend 35 predicts will be
+  ungranted**. The one licensed find, [`HKUDS/ClawTeam`](https://github.com/HKUDS/ClawTeam)
+  (**MIT, 5.5k★**), is **agent-swarm infrastructure for software engineering, not education**
+  — and is on no education shelf.
+
+🔵 **What this means for an APAC engagement.** The region's **regulatory** surface is the
+richest in the world and this KB tracks it well; its **permissive open-source education
+supply** remains thin in a way that **two additional languages did not fix**. The standing
+APAC plays are therefore unchanged and still rest on assets found through other channels:
+**Sunbird** (MIT, India/DIKSHA, nine-figure scale), **Coursemology** (MIT,
+NUS/Singapore), **AI Verify** (Singapore) via **P31**, the **AI4Bharat** and **SEA-LION**
+language stacks, and **P26** for intermittent connectivity.
+
+🔴 **`gitee.com` — the China-domestic forge, and the single most likely home of Chinese
+education software — is unreachable from this environment** (403 at the egress proxy).
+Any statement this KB makes about Chinese open-source education supply is made **without
+access to the forge where it would live**. Declared, not inferred.
 
 ### LATAM
 
@@ -2133,6 +2246,54 @@ nothing reusable has been *published* in the region's second language.
    grant at all**, which is the same failure this KB has recorded in the region for five
    passes.
 
+#### Thirteenth pass, 2026-10-06 — the Portuguese channel yields two MIT assets, at 2★ and 0★
+
+🔵 **Re-verified unchanged:** the **Digital Education Council LATAM survey 2026** —
+**92% of students** and **79% of faculty** actively using AI, **30,000+ responses across 29
+institutions**, with **88% of faculty** reporting only *minimal* to *moderate* engagement;
+**UNESCO's Observatory on AI in Education for Latin America and the Caribbean**, launched at
+**ECLAC headquarters in Santiago**; **Chile's** risk-classified draft AI bill tied to its
+forthcoming data-protection authority; **Colombia's CONPES 4144** national AI policy with
+budgeted actions through 2030. The survey was delivered with the **Institute for the Future
+of Education at Tecnológico de Monterrey**, **AIGEN** and **RIE360** — the named
+institutional entry points for a LATAM engagement.
+
+🟢 **New supply, honestly sized.** This pass ran the mandatory queries **in Portuguese**,
+which had never been tried (passes 5–12 used Spanish). It produced **four candidates, two
+licensed**:
+
+| Repo | Licence | ★ | What it is |
+|---|---|---|---|
+| [`armandokeller/SAEP2026-Agentes-IA-e-Ferramentas`](https://github.com/armandokeller/SAEP2026-Agentes-IA-e-Ferramentas) | **MIT** | **0** | 8-step agent-engineering curriculum, **cloud-free** (Qwen 3.5-4B via LM Studio), MCP + human-in-the-loop. **Unisinos, Brazil.** |
+| [`bonafe/inteligencia-aberta`](https://github.com/bonafe/inteligencia-aberta) | **MIT** | **2** | FastAPI + LangGraph + Qdrant + PostgreSQL multi-tenant agent platform, source traceability as a design goal. Brazil. **Not education** — shelved as a reference architecture. |
+
+⚠️ **Two MIT assets at 2★ and 0★ is the LATAM finding, restated with a fourth language
+behind it.** This KB's **trend 37** — *"measured by language rather than by region, the
+LATAM supply gap is absence, not thinness"* — was derived from a **two-language**
+instrument. Adding Portuguese did not overturn it; it **confirmed it on harder evidence**.
+The region produces education AI work; it does not produce **licensed, adopted, reusable**
+education AI work.
+
+🟢 **And that remains the LATAM opportunity, now with a sharper edge.** Where there is no
+incumbent permissive component, the first credible one sets the default — the position
+**P32** (the Portuguese-language permissive component) was written for. Two things this
+pass adds to it:
+
+1. **`SAEP2026` is a usable enablement asset today**, star count notwithstanding. A
+   **cloud-free, MIT, Portuguese-language** agent curriculum running a 4B model on a laptop
+   is precisely shaped for a LATAM engagement where cloud spend and connectivity are the
+   constraints — and for client-staff upskilling where data cannot leave the building.
+2. **`inteligencia-aberta` is a worked sovereign stack by Brazilian authors**, independently
+   arriving at the architecture **P5** and **P26** specify. Read it as a design review of
+   this KB's own LATAM pattern.
+
+🔵 **The region to watch for supply is not LATAM.** The most capable permissive AI-native
+education platform found in thirteen passes is **Moroccan and state-funded**
+(`open-tutor-ai-CE`, BSD-3-Clause — see EMEA above). A LATAM public-sector buyer asking for
+a sovereign Spanish- or Portuguese-language tutoring platform is best served by
+**localising that platform** — it already serves Ollama and local RAG — rather than waiting
+for a LATAM-origin equivalent that this pass's evidence says is not coming soon.
+
 ## Cross-region read
 
 Two patterns hold in every region, which makes them safe to build once and sell
@@ -2608,3 +2769,57 @@ repository's reset earlier on 2026-10-06 dropped 172 real repository addresses**
 tenth pass declared one of them — `pylti1.3` — a gap while it sat in
 `archive/2026-10-06-pre-reset/` with its licence and star count intact. **A gap claim
 made after a reset is not publishable until it has been diffed against the archive.**
+
+## What changed in the thirteenth pass of 2026-10-06
+
+**One opportunity moved, in EMEA, and it moved because of provenance rather than
+discovery.**
+
+[`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) was
+already in this KB — the twelfth pass recorded it in `repos/trending.md` with the right
+licence (**BSD-3-Clause**) and the right figures (**108★ / 192 forks**). What was missing is
+the only part a client conversation turns on: **who stands behind it.** It is from the
+**IRF-SIC Laboratory, Ibn Zohr University, Agadir, Morocco**, funded by Morocco's
+**Ministry of Higher Education**, the **Digital Development Agency** and the **CNRST**.
+`Agadir` and `Ibn Zohr` returned **zero** matches across this KB before this pass.
+
+**That makes the most capable permissive AI-native education platform on this shelf an
+African, government-sponsored project** — ahead of the European, Indian, Singaporean and
+Brazilian entries on the same axis. It is now shelved in `agents/top.md` and
+`verticals/solutions.md`, and **P33** is the delivery shape.
+
+### The method note, stated plainly
+
+🔵 **A row recorded in a trending log is not a shelved asset, and this KB had been
+treating it as one.** The twelfth pass did the hard part — found it, probed the payload,
+corrected a catalogue that mislabelled it Apache-2.0, and spotted the fork inversion — and
+then left it in an append-only log that nobody reads to answer *"what do we build on?"*.
+For a day, the best permissive AI-native platform available to this practice was invisible
+to the shelves that exist to surface it.
+
+🟢 **The rule that follows: a payload-verified asset gets shelved in the same pass that
+verifies it.** The trending log records *how and when* it was found; `agents/top.md`,
+`repos/foundations.md` and `verticals/solutions.md` record *that it exists and what it is
+for*. The twelfth pass's own closing instruction was to take the education MCP cluster
+next; that remains right, and it should be read alongside this one — **probe the cluster,
+then shelve what the probe grants, before moving on.**
+
+⚠️ **Second method note: the demand side is saturated at this channel's resolution.** Every
+market figure and regulatory instrument in all four regions was re-run this pass and came
+back **unchanged** — NA at $3.68B/36% share with 134 bills across 31 states; Europe at
+$2.64B → $8.0B at 31.9% CAGR with the Digital Omnibus dates independently reconfirmed
+(Council approval 29 June 2026); Korea's AI Framework Act and Vietnam's Law 134/2025/QH15
+in force; the DEC LATAM survey at 92%/79% and UNESCO's Santiago observatory. **Nothing in
+the demand picture moves in a day.** Future passes should spend their probe budget on
+**supply** — repositories, licences, provenance — and re-run the demand queries only to
+catch a regime change, which is the same discipline this KB already applies to the
+generalist GitHub query.
+
+🔴 **Third, and it bounds every regional claim above: three forges are unreachable.**
+`codeberg.org` (the EU sovereignty forge), `gitee.com` (the China-domestic forge) and the
+European Commission's **Joinup / OSOR** catalogue all return **403 at the egress proxy**.
+Every licence fact in this KB rests on `raw.githubusercontent.com` because it is the only
+code-hosting payload this environment can read. **The EMEA and APAC supply pictures are
+GitHub-only and therefore understated**, and two named Codeberg education projects were
+surfaced and left off every shelf because they could not be payload-verified. Declared, not
+inferred.

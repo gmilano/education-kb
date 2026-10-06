@@ -2078,3 +2078,104 @@ largest education system in the region. There is no incumbent to displace.
 - ⚠️ **Licence hygiene is the regional failure mode, not licence choice.** Two LATAM
   repositories probed this pass carry **no grant at all**. Whatever is built here, attach the
   licence in the first commit.
+
+## P33 — Sovereign avatar-and-voice tutoring, on a platform that already ships it (EMEA first; the same build serves LATAM)
+
+**When to use it.** A public-sector or university client wants conversational AI tutoring
+with a **spoken or embodied** interface, and student data **cannot leave the institution or
+the region**. Previously this KB answered that request by specifying the stack component by
+component (P4) and accepting a 10–12 week build. **It is now mostly a configuration
+exercise**, because a permissive platform ships the sovereign path as a setting.
+
+**Why this pattern exists now.** Two facts found in the thirteenth pass:
+
+1. [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE)
+   (**BSD-3-Clause**) ships **local RAG**, **voice / video / 3D-avatar modes**, **RBAC** and
+   **Ollama serving** in the same configuration surface as hosted APIs — and is funded by
+   Morocco's Ministry of Higher Education, the DDA and the CNRST.
+2. The research alternative is **not obtainable**. The **VTutor** animated-pedagogical-agent
+   SDK has three papers and a live demo, but no licence payload and an **empty**
+   `VTutorTools` organisation. **Do not plan around it.**
+
+### The stack — every component payload-verified permissive
+
+| Layer | Component | Licence | Role |
+|---|---|---|---|
+| Tutoring platform | [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | **BSD-3-Clause** | Tutoring loop, learner onboarding, per-learner assistant, avatar presentation, RBAC |
+| Model serving | [`ollama/ollama`](https://github.com/ollama/ollama) | MIT | Open-weight models on institutional hardware. **Already a first-class target of the platform** — not an integration |
+| Serving at cohort scale | [`vllm-project/vllm`](https://github.com/vllm-project/vllm) | Apache-2.0 | Swap in when concurrency outgrows Ollama |
+| Retrieval | [`pgvector/pgvector`](https://github.com/pgvector/pgvector) | **PostgreSQL Licence** (permissive) | Vectors **inside Postgres** — no separate vector store to host, secure and keep in-region |
+| Document ingestion | [`opendatalab/MinerU`](https://github.com/opendatalab/MinerU) | Apache-2.0 | Curriculum, textbooks and scanned material into structured text for the local RAG |
+| Real-time voice | [`livekit/livekit`](https://github.com/livekit/livekit) | Apache-2.0 | WebRTC transport for spoken practice and oral assessment beyond what the platform ships |
+| Audit trail | [`langfuse/langfuse`](https://github.com/langfuse/langfuse) | MIT **outside `ee/`** | Every model call with cost, latency and output — the Article 50 evidence, produced as a by-product |
+| Typed decisions | [`pydantic/pydantic-ai`](https://github.com/pydantic/pydantic-ai) | MIT | Any assessment-adjacent output as a validated schema, never free text |
+| LMS seam | [`IMSGlobal/LTI-Tool-Provider-Library-PHP`](https://github.com/IMSGlobal/LTI-Tool-Provider-Library-PHP) | Apache-2.0 | The permissive doorway into an incumbent Moodle / Canvas / Open edX — **side-car, never a fork** |
+
+### Wiring
+
+1. **Stand the platform up against local inference first.** Deploy `open-tutor-ai-CE` with
+   **Ollama** as the only configured provider and no hosted API key present. This is the
+   step that is a setting rather than a build, and doing it first means the sovereign
+   posture is the default configuration rather than a later hardening pass. Prove a tutoring
+   turn end to end before adding anything.
+2. **Point the local RAG at real curriculum.** Run the client's syllabi, textbooks and past
+   papers through **MinerU**, load them into **pgvector** in the platform's own Postgres.
+   One database for relational and vector state — one thing to host in-region, back up and
+   certify.
+3. **Put Langfuse in front of every model call, before the pilot opens.** Retrofitting an
+   audit trail after a pilot has run means the pilot has no trail. **Exclude `ee/` from any
+   vendored copy and record the holder as ClickHouse, Inc.** as well as the licence.
+4. **Wrap every assessment-adjacent output in a `pydantic-ai` schema.** Grades, mastery
+   estimates, placement and progression as validated objects with the inputs that produced
+   them. This is the P22/P24 artefact the procurement rubric and the Annex III file both
+   consume, and it is what makes **human-final** (trend 16) enforceable in code rather than
+   in policy.
+5. **Add voice only where it is assessed.** The platform's own voice/avatar modes cover
+   conversational practice. Reach for **LiveKit** when you need multi-party sessions, oral
+   examination with recording, or latency control you must own.
+6. **Keep the incumbent.** Enrolment, roster and gradebook stay in the institution's
+   existing LMS; integrate over **LTI 1.3** so none of the above inherits AGPL or GPL. The
+   tutoring platform is a tool the LMS launches, not a replacement for it.
+
+### Compliance, mapped to the real clock
+
+🟢 **The near-term EU deliverable is labelling, not conformity.** **Article 50 transparency
+duties have applied since 2 August 2026.** The Digital Omnibus
+(**Regulation (EU) 2026/1744**) deferred **Annex III stand-alone high-risk** obligations to
+**2 December 2027** and **Annex I embedded** to **2 August 2028**.
+
+- **Now:** AI interaction is disclosed to the learner, and synthetic output is marked. Steps
+  1–3 deliver this.
+- **By December 2027:** if the deployment touches admission, evaluation of learning
+  outcomes, placement, or exam/behaviour monitoring, it is **Annex III high-risk**. Steps 3
+  and 4 are the risk-management, data-governance, human-oversight and record-keeping
+  evidence — built in, not retrofitted.
+- ⚠️ **Scope the boundary explicitly in the SOW.** A tutor that *practises* is not
+  high-risk; the moment its output informs a grade or a progression decision, it is. The
+  cheapest compliance decision available is **keeping the tutor on the practice side of that
+  line** and routing assessment through the LMS.
+
+### Timeline and the honest caveats
+
+**6–8 weeks** to a governed pilot: ~1 week platform and local inference, ~2 weeks curriculum
+ingestion and retrieval, ~1 week observability and typed outputs, ~1 week LTI integration,
+2–3 weeks hardening and evidence pack. 🔵 **That is 4 weeks faster than the P4 build it
+replaces**, and the saving is entirely in steps 1–2.
+
+- 🔴 **Pin a commit.** 192 forks against 108 stars means much real-world use sits in
+  divergent forks nobody tracks.
+- 🔴 **Raise the holder question before contract.** The payload reads *"Mohamed El hajji On
+  behalf of all **R2D-dev**"*, and **R2D-dev appears in no public artefact of the project**.
+  On a redistribution engagement that is the party an indemnity question routes to.
+- ⚠️ **Check the open-core line against the client's must-haves.** Theming, SLA and LTS sit
+  in the paid Enterprise Edition. The CE grant is unqualified and **this is not a directory
+  carve-out like Langfuse's `ee/`** — but the roadmap is set by a party with an incentive to
+  keep features above the line. Get the answer in writing at proposal time.
+- ⚠️ **Cite the payload, not a catalogue.** Third-party catalogues list this project as
+  Apache-2.0; it is **BSD-3-Clause**, confirmed from the payload by two passes at the same
+  1,531 bytes. Both are permissive, but the attribution clauses differ.
+- 🟢 **For LATAM, this is the same build with a localisation workstream.** The thirteenth
+  pass found no LATAM-origin permissive equivalent — the Portuguese channel returned two MIT
+  assets at 2★ and 0★. **Localise this platform** (it already serves local models and local
+  RAG) rather than waiting for one; pair with **P32** if the localisation work is published
+  back as the permissive Portuguese-language component that shelf still lacks.

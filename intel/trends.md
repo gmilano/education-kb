@@ -1650,6 +1650,72 @@ LAN, offline-capable, optional AI**, is the regionally correct one.
 `total_count: 0` there is no incumbent to displace, and the publishing cost is one competent
 MIT component.
 
+## 38. The permissive AI-native frontier is state-funded and non-Western — and its legal holder is harder to identify than its licence
+
+Trend 14 recorded that the permissive shelf stopped being thin, so the differentiator moved.
+Trend 15 recorded that *permissive* is a bigger set than three licence names, and that open
+core hides inside directories. This pass puts a third fact beside them, and it changes who
+a Globant engagement cites as a reference.
+
+**The most capable permissive AI-native education platform available today is Moroccan and
+government-funded.** [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE)
+— **BSD-3-Clause**, 108★ / **192 forks** — ships multi-model tutoring, **local RAG**,
+voice/video/**3D-avatar** modes and **RBAC**, and serves **Ollama** in the same
+configuration surface as hosted APIs. It comes from the **IRF-SIC Laboratory at Ibn Zohr
+University, Agadir**, with the **CRMEF Souss-Massa**, funded by Morocco's **Ministry of
+Higher Education**, the **Digital Development Agency** and the **CNRST**.
+
+Set that against the rest of the AI-native permissive field as this KB has measured it:
+Mentingo (MIT, a Polish consultancy), Coursemology (MIT, NUS Singapore), Sunbird (MIT, an
+Indian foundation at national scale), Oppia (Apache-2.0, a US-origin non-profit). 🟢 **Not
+one of the leading permissive AI-native education platforms is a Western commercial
+product.** They are **universities, foundations, ministries and small consultancies** —
+publishing bodies, in the sense of trend 35. The commercial AI-education market is
+proprietary; the permissive shelf that market sits on is **public-sector and academic**,
+and increasingly **Global South**.
+
+### The consequence for delivery
+
+🟢 **The sovereign deployment stopped being a build and became a configuration.** Every
+pattern in this KB from **P4** onward specifies the data-residency stack component by
+component — on-prem serving, local retrieval, typed outputs, checkpointed audit trails —
+because no platform shipped it. One now does, under a permissive licence, with a
+government as its sponsor. **P33** is the shape that follows.
+
+🟢 **And the reference changes.** A public-sector education buyer in EMEA or LATAM asking
+whether sovereign AI tutoring is real can be pointed at a **ministry-funded production
+project**, not a vendor pilot. That is a materially different procurement conversation.
+
+### The warning that travels with the trend, and it is the new part
+
+🔴 **On a state-funded academic project, the licence is clean and the holder is not.** The
+payload reads:
+
+```
+Copyright (c) 2023-2025 Mohamed El hajji On behalf of all R2D-dev
+All rights reserved.
+```
+
+**`R2D-dev` appears in no public artefact of the project** — not the README, not the
+documentation, not the search index. The grant is an unambiguous BSD-3-Clause; the entity
+holding it cannot be identified. On a redistribution engagement, the holder is the party a
+warranty or indemnity question routes to.
+
+This is trend 15's Langfuse lesson generalised. There, the finding was that *the copyright
+holder on a dependency can change under you between passes, and no licence probe will flag
+it*. Here it is sharper: **the holder can be unidentifiable from the outset**, and a
+licence probe reports the component as fully clear. ⚠️ **A licence check is not a
+provenance check.** Record **who grants** alongside **what is granted** — for an academic
+or ministry-funded project the two are routinely answered by different documents, and
+sometimes the first is not answered at all.
+
+🔵 **Three shapes to probe for, now that the pattern is named:** `All rights reserved.`
+sitting above a permissive grant (vestigial, but it stops procurement reviewers); a
+copyright range that ends before the current year on an actively developed repository; and
+a holder named as an organisation that has no web presence. **None of the three invalidates
+a grant. All three are questions a client's counsel will ask**, so answer them in the
+diligence pack rather than at the meeting.
+
 ## Declared gaps — twelfth pass, 2026-10-06
 
 - 🔴 **No public Caliper reference implementation survives in any language.** The eleventh
@@ -1706,3 +1772,75 @@ MIT component.
   trend 21 says mother-tongue capability is where the demand sits. **Declared as an
   unmeasured region-language pair, not as an absence** — the LATAM lesson of trend 37 is
   precisely that those are different claims.
+
+## Declared gaps — thirteenth pass, 2026-10-06
+
+**The twelfth pass's gaps all stand.** Nothing above was closed by this pass, and the
+Caliper, Open Badges, LTI-Python, AI-grading, OATutor-Content, OpenLiteracy, AI-Verify-profile
+and oral-reading-fluency gaps should be read forward unchanged. What follows is what this
+pass changed, closed or newly measured.
+
+- 🟢 **Partly closed: "APAC has never been measured in its own languages."** This pass ran
+  the mandatory queries in **Japanese** and **Korean** — the first pass of this KB to search
+  in either. ⚠️ **The result is a negative, and it is a real measurement.** Japanese
+  returned **no education-specific asset at all** (the generalist agent layer, same as
+  English). Korean returned **5 candidates, 1 licensed** — and the licensed one
+  (`HKUDS/ClawTeam`, MIT, 5.5k★) is **software-engineering infrastructure, not education**.
+  🔴 **Still unmeasured: Hindi, Bahasa Indonesia, Vietnamese.** The gap narrows to three
+  languages and should not be re-declared as five.
+- 🟢 **Confirmed on harder evidence: the Portuguese-language permissive shelf.** Trend 37
+  was derived from a two-language instrument. This pass searched **in Portuguese** and found
+  **4 candidates, 2 licensed (MIT), at 2★ and 0★**
+  (`bonafe/inteligencia-aberta`, `armandokeller/SAEP2026-Agentes-IA-e-Ferramentas`). ⚠️ The
+  gap is therefore **no longer `total_count: 0`** — it is *"two MIT assets, neither adopted,
+  one not education software"*. **The contribution opportunity of P32 stands and is better
+  evidenced**: the absence is of *adopted, reusable* components, not of activity.
+- 🔴 **NEW — three forges are unreachable, so the non-GitHub supply picture is unmeasured,
+  not empty.** `codeberg.org` (the EU sovereignty forge), `gitee.com` (the China-domestic
+  forge) and the European Commission's **Joinup / OSOR** catalogue all return **403 at the
+  egress proxy**; `arxiv.org` and `alphaxiv.org` are blocked for the third consecutive pass.
+  Every licence fact in this KB rests on `raw.githubusercontent.com` because **it is the
+  only code-hosting payload this environment can read**. Two named Codeberg education
+  projects — **`lerntools`** (German, privacy-focused digital education) and
+  **`lmemsm/delightful-educational-games`** — were surfaced and **deliberately left off every
+  shelf**, because an unverifiable row is not a finding. ⚠️ **Read this KB as the permissive
+  education shelf *on GitHub*.** The EMEA and APAC pictures are understated by an unknown
+  amount, and the EU-hosted forge is precisely the blind spot for the sovereignty story this
+  KB sells.
+- 🔴 **NEW — avatar-based pedagogy has no obtainable permissive implementation.** The
+  **VTutor** cluster has three arXiv papers (`2502.04103`, `2505.06676`, `2505.07736`), a
+  live demo and a claimed **CC BY 4.0** licence. Reality: the SDK repository
+  (`anonymousStars/vtutor-sdk`) has **no licence payload** across 13 filenames and sits under
+  a peer-review anonymisation handle, and the organisation the papers name as its home —
+  **`VTutorTools`** — **exists with zero public repositories**. ⚠️ **A new failure mode: the
+  named home exists and is empty** — distinct from a dead address and from a mislabelled
+  licence. And **CC BY 4.0 is a content licence being applied to an SDK**, which is trend 18
+  one step further along. 🟢 The capability is reachable today only by composing
+  `livekit/livekit` (Apache-2.0) with the avatar mode `open-tutor-ai-CE` already ships under
+  BSD-3-Clause — **pattern P33**. VTutor is a **watch item, not a component**.
+- 🔴 **Unmoved for the eighth pass: the Arabic ask.** `781991937/TOFAN-AI-2026` was
+  re-probed independently this pass on its real default branch across 13 filenames —
+  **still no grant**. The Arabic channel went **0 for 3**. ⚠️ Restating this gap in this file
+  has not moved it in eight passes. **The action is an issue opened on the repository**, and
+  that is what the next pass should carry rather than another re-probe.
+- ⚠️ **NEW — the 14th failure mode: a permissive body with no title line.** A licence
+  classifier that matches the payload's **heading** reports a bare **BSD-3-Clause** body as
+  *unclassified*, and an automated allowlist gate rejects a genuinely permissive component.
+  `open-tutor-ai-CE` is the live example; `crewAIInc/crewAI` is the same shape recorded
+  earlier as a parenthetical rather than as a property of the instrument. 🟢 **Classify on
+  the operative clauses, not the heading.** Together with the 13th failure mode
+  (case-sensitive filenames), **the retroactive re-probe already owed should also drop the
+  title-line assumption.**
+- ⚠️ **NEW — a trending-log entry is not a shelved asset.** The twelfth pass verified
+  `open-tutor-ai-CE` correctly and left it only in `repos/trending.md`; for a day, the best
+  permissive AI-native platform available to this practice was absent from `agents/top.md`
+  and `verticals/solutions.md`. 🟢 **Rule: a payload-verified asset is shelved in the same
+  pass that verifies it.** The ~89 unrecovered archive addresses and the **~20-server
+  education MCP cluster** should be worked under that rule — **probe, then shelve what the
+  probe grants, before moving on.**
+- ⚠️ **NEW — the demand side is saturated at this channel's resolution.** All four regions'
+  market figures and regulatory instruments were re-run this pass and came back
+  **unchanged**. Future passes should spend their budget on **supply** and re-run the demand
+  queries only to catch a regime change — the same discipline already applied to the
+  generalist GitHub query, which has now returned **zero new rows for nine consecutive
+  passes** (fourteen for the infrastructure query).
