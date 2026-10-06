@@ -8,6 +8,82 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — twenty-first pass: 352 dependencies resolved, 15 not permissive, and the supply picture changes shape rather than size
+
+**Channel new to this KB this pass: the declared-dependency channel** — resolving the licence of
+every dependency each shelf project declares, instead of the licence of the project. The agent-side
+findings are in `agents/trending.md`; this file records what the channel does to the **supply**
+picture, and it is not a longer shelf — it is the same shelf with a second licence attached to each
+row.
+
+### Why a dependency channel produced no new repositories, and why that is the finding
+
+🔵 **Nine of the previous twenty passes added rows. This one adds none, and the reason is
+structural:** the channel does not discover projects, it **re-prices the ones already on the shelf**.
+A pass that only ever adds rows grows a catalogue; a pass that re-prices one makes the catalogue
+usable. 🟢 **Zero new repositories, 352 new facts about existing ones.**
+
+| Measure | Value |
+|---|---|
+| targets attempted | **17** |
+| targets measurable at depth 1 | **13** |
+| declared direct dependencies resolved | **352** |
+| 🟢 `PERMISSIVE` | **337** (95.7%) |
+| ⚠️ `WEAK-COPYLEFT` | **7** |
+| 🔴 `UNKNOWN` | **6** |
+| 🔴 `STRONG-COPYLEFT` | **2** |
+
+### 🔴 The two rows that cost money, and the one that costs attention
+
+| Project | Its own licence | The dependency | The dependency's licence | What it does to a deliverable |
+|---|---|---|---|---|
+| `HKUDS/DeepTutor` — **row 1 of this shelf, 40.8k★** | Apache-2.0 | **`PyMuPDF>=1.26.0`** (core array, line 66) | 🔴 **`Dual Licensed - GNU AFFERO GPL 3.0 or Artifex Commercial License`** (v1.28.2) | Comply with AGPL for the hosted service, **buy the Artifex licence**, or swap the PDF layer. A procurement line item, not a code change |
+| `oppia/oppia` — 1 of 3 permissive full platforms | Apache-2.0 | **`mutagen`** | 🔴 **`GPL-2.0-or-later`** | Audio-metadata path only; 148 of its 152 declared deps are clean |
+| `ronantakizawa/a11ymcp` | MIT | **`axe-core`**, **`@axe-core/puppeteer`** | ⚠️ **MPL-2.0** (axe-core 4.14.0) | Linkable and shippable; modifications **to those files** must be published. Load-bearing in the EMEA accessibility pattern |
+
+🔵 **Three more rows in Oppia's manifest are not clean and are not blockers either:** `certifi`
+(MPL-2.0), `orjson` (**`MPL-2.0 AND (Apache-2.0 OR MIT)`** — a compound expression, where the `AND`
+means the MPL obligation is **not** escapable by picking the other branch), and
+`azure-cognitiveservices-speech` (`Other/Proprietary License`).
+
+### 🔴 The audit of the foundation shelf's own measurability
+
+⚠️ **Four of 17 targets could not be measured at depth 1, each for a different structural reason, and
+every one of them would make a filename-keyed sweep return a confident wrong answer:**
+
+| Shape | Target | Naive verdict | Truth |
+|---|---|---|---|
+| **empty sink file** | `LearningEquality/kolibri` | 🔴 "zero dependencies" | **32 deps** in `[dependency-groups] base`; `[project].dependencies` is literally `[]` and `requirements.txt` is a build-time sink |
+| **workspace root** | `Selleo/mentingo`, `zijinz456/OpenTutor` | 🔴 "no runtime deps" | root manifest carries only `devDependencies` + pnpm; runtime lives in `apps/*` |
+| **meta-package** | `microsoft/agent-framework` | ⚠️ "1 dependency" | one dep, `agent-framework-core[all]==1.20.0`; the closure is a level down |
+| 🟢 **genuine zero** | `tomaszboloz/WCAG-Accessibility-Skills` | 🟢 correct | **confirms this KB's own prose claim** of *"no production dependencies"* via an independent channel |
+
+🟢 **Kolibri re-measured through the group: 32 deps — 28 permissive, 2 LGPL
+(`json-schema-validator`, `zeroconf-py2compat`), 2 unreadable.** ⚠️ **It is this KB's only fully
+permissive end-to-end platform and the basis of the equity-deployment pattern, so a wrong zero there
+would have propagated into every offline engagement.**
+
+### 🔵 What the blocked endpoints mean for the supply picture
+
+🔴 **Three adoption channels were probed and are closed from this environment**, recorded so no later
+pass spends a request on them: `api.osv.dev` **403** (no advisory or CVE channel — **the shelf's
+vulnerability history remains unmeasured, and that is now a declared gap, not an oversight**),
+`pypistats.org` and `api.npmjs.org` **403** (no download counts, so **real adoption still cannot be
+separated from stars**), `api.github.com` **403** as since pass 37.
+
+⚠️ **The star count remains this KB's only popularity signal, and this pass proves the registry layer
+can carry facts stars cannot** — a licence, a version, a dependency list — **but not adoption.**
+
+### Instruments left behind, both runnable without network
+
+| Directory | Tests | What it closes |
+|---|---|---|
+| 🟢 `compose/code/dependency-licence-closure/` | **48/48**, no network | the channel itself: manifest parsers for 4 shapes, PyPI/npm licence readers, 5-class ordering with the `AGPL`/`LGPL` substring trap asserted |
+| 🟢 `compose/code/pattern-citation-audit/` | **14/14** (was 8/8) | the twentieth pass's pre-registered one-line fix: each pattern number must resolve to **exactly one** definition. Corrected that pass's **7** duplicated numbers to **6** |
+| 🟢 `compose/code/p243-frontmatter-coverage/` | 23/23 | now reports **121 de 121** (was 120/121) |
+
+---
+
 ## 2026-10-06 — twentieth pass: the evidence tier, and a 475-reference audit that found nothing dead
 
 **Channel new to this KB this pass: the transition-provision channel** — reading each binding

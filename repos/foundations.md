@@ -538,6 +538,43 @@ page implied:
    invoked. Process separation makes the question moot, which is a second reason
    for the side-car.
 
+## Added in the twenty-first pass of 2026-10-06 — no new rows, and a second licence on the existing ones
+
+🔵 **This pass adds no foundational repositories, and the reason is structural rather than a dry
+sweep.** The declared-dependency channel does not discover projects; it **re-prices the ones already
+here**. Every row on this shelf carried one licence — its own. The rows below now carry a second: the
+licence of **what they install**.
+
+⚠️ **The platform channel was re-probed and remains saturated**, verified by grep rather than
+assumed: OpenEduCat, Open edX, Moodle, Sakai, OLAT/OpenOLAT, Chamilo, Gibbon, Frappe, `.LRN` all
+already shelved. The one name new to the result set, **`CK-ERP`** — a 32-module education / ERP / CRM
+/ MRP system — is recorded here as a **measured non-finding**: the most recent release note in the
+result set is from **2010** and it is Drupal-6 era. 🔴 **Abandonware, not a shelf candidate.**
+
+### What the foundation shelf installs
+
+| Foundation row | Its licence | Direct deps | Closure verdict |
+|---|---|---|---|
+| `oppia/oppia` | Apache-2.0 | **152** | 🔴 **REVIEW-STRONG** — `mutagen` is `GPL-2.0-or-later`; `certifi` MPL-2.0; `orjson` `MPL-2.0 AND (Apache-2.0 OR MIT)`; `azure-cognitiveservices-speech` `Other/Proprietary License`. **148 of 152 clean** |
+| `LearningEquality/kolibri` | MIT | **32** | ⚠️ **REVIEW-WEAK** — 2 LGPL rows, 2 unreadable. ⚠️ Measurable only via `[dependency-groups] base`; both canonical fields answer "nothing" and both are wrong |
+| `huggingface/smolagents` | Apache-2.0 | 6 | 🟢 **CLEAN** — the smallest permissive surface on the shelf, now verified on both layers |
+| `microsoft/agent-framework` | MIT | 1 | ⚠️ **CLEAN but uninformative** — `agent-framework-core[all]==1.20.0`; the closure is one level down |
+
+🟢 **The operational consequence for foundation selection:** where two foundations are otherwise
+comparable, **the one with the smaller declared surface is the cheaper one to clear legally**, and
+that is now a measured property rather than an instinct. smolagents at 6 declared dependencies and
+Oppia at 152 are not the same procurement task even when both say Apache-2.0.
+
+### 🔴 The evidence tooling the twentieth pass went looking for is still absent — and now so is one more layer
+
+⚠️ **The twentieth pass recorded zero occurrences of `mlflow`, `dvc`, `evidently`, `whylogs`,
+`great_expectations`, `croissant`, `OpenLineage`, `fairlearn` and `AIF360`.** 🔴 **A dependency-licence
+audit is the same shape of missing instrument one layer further down:** this KB can now resolve a
+licence per dependency, but it has **no SBOM layer** — no `syft`, no `cyclonedx`, no
+`pip-licenses`/`license-checker` row anywhere on the shelf. 🔵 **Recorded as a declared gap with a
+named next step rather than as a new row, because this pass did not verify any of those tools against
+an education deployment and will not shelf what it has not read.**
+
 ## Teaching-content repos (for enablement, not for production)
 
 | Repo | License (read from payload) | Note |

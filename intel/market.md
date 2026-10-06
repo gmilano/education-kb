@@ -15,6 +15,24 @@ updated: 2026-10-06
 | Projected 2030 | $42.48B | 41.5% CAGR |
 | Alternative long-range series, 2025 | $6.4B | A second house's base year — **lower than the $7.52B above for the same year** |
 | Alternative long-range series, 2034 | $79.6B | 31.35% CAGR 2026–2034, same house |
+| 🔴 **Third series, 2025** | **$8.3B** | A third house — **higher** than both base years above |
+| 🔴 **Third series, 2026** | **$11.4B** | same house; **25.9%** CAGR |
+| 🔴 **Third series, 2033** | **$57.2B** | same house |
+
+🔴 **The third series was added to this file by the seventeenth pass and never reached this table —
+corrected in the twenty-first pass of 2026-10-06.** That pass read it, named it *"Forecast A"*,
+called the pair *"two incompatible growth models"* and wrote the right prescription. ⚠️ **But it wrote
+all of that inside its own pass-scoped section ~3,600 lines down, while the table at the top of the
+file — the one a reader actually quotes — went on presenting the 40.9% series as settled.** The
+twenty-first pass re-ran the mandatory trends query, got the third series back, and **spent most of a
+finding re-discovering what this file already knew.** 🔵 **Measured: `40.9%` appears 19 times and
+`42.48` 12 times across the non-archive files, against 10 for `11.4B` and 6 for `25.9%`.**
+
+⚠️ **This is the third reproduction of one propagation failure.** The nineteenth pass corrected a
+stale AI Act date and the twentieth found it surviving in two further locations; here a recorded
+conflict failed to reach the summary table above it. 🟢 **The rule it earns: a correction that lands
+only in a pass-scoped section has not been applied — it has been filed.** When a pass corrects a
+figure, it must edit the table that publishes that figure, in the same pass.
 
 **Two incompatible series, re-checked in the sixth pass of 2026-10-06.** One house
 puts 2025 at **$7.52B** growing at ~41% CAGR to **$42.48B by 2030**; another puts
@@ -3629,7 +3647,7 @@ addressable market in one line**, and it has widened rather than closed since pa
 arrived; policy did not. **Governance work is not an adjacent sale here — for a 2026 engagement
 it is the entry point.**
 
-## Opportunities by region
+## Opportunities by region — seventeenth-pass update
 
 ### North America
 
@@ -4112,3 +4130,56 @@ open-source position to displace.
    anti-AI-training ToU reads (EGRESS_BLOCKED) and the licence ask on `IFRN/suapi`. A sixth item
    joins them this pass: a `LICENSE` request to `AccessLint`. **All need a human or an explicit
    instruction.**
+
+---
+
+## What changed in the twenty-first pass of 2026-10-06
+
+🔵 **The channel was the declared-dependency layer, so most of what changed is a licence fact rather
+than a market figure. Two market figures did move, and one of them contradicts this file.**
+
+### The regional figures returned this pass
+
+| Region | Market / instrument | Figure read this pass |
+|---|---|---|
+| **North America** | US K-12 and higher ed | **36%** of the global market; **$951M (2024) → $2.303B (2029)**, 15.9% CAGR. Characterised in the summaries as *"a relative regulatory vacuum… no equivalent to the FDA for educational technology"* — adoption decided school-by-school, with Colorado and Texas piecemeal. **OpenAI launched a country-level education programme with eight national partners in Q1 2026** |
+| **EMEA** | EU + UK skills policy | **94%** of organisations likely to invest in AI-specific training in 2026, against **38% that have not begun piloting** and **60%** reporting siloed data. UK's first AI Adoption Summit committed **£200m+**, structured as government-funds / Big Tech-delivers (Cisco, IBM, BT, Rolls-Royce) / unions-legitimise. Council of Europe held its **2nd working conference on the regulatory dimensions of AI in education in October** |
+| **APAC** | Enterprise + sovereign stacks | **48%** of APAC governance leaders rank AI adoption a top-3 priority for 2026; **57%** already run it in ≥1 area; *"sovereign-by-design"* shapes infrastructure for roughly **half** of APAC firms; Singapore's consultation on AI in financial institutions is the template neighbours copy. ⚠️ **Generic-enterprise, not education-specific — a declared thin result** |
+| **LATAM** | Adoption vs capital | **Third-largest market worldwide for generative-AI application downloads.** **99%** of LATAM startups use AI internally, **85%** embed it in the product, OpenAI integrated by **89%**. **Ednova (Chile)** named the standout edtech |
+
+🔵 **The LATAM asymmetry is the engagement thesis in one line: adoption-rich and capital-poor.** Among
+the four regions it is the one where a permissive, self-hostable stack competes best against a
+licensed SaaS product, because the constraint is budget rather than governance.
+
+### 🔴 The market query returned a series this file already held — and had never propagated
+
+⚠️ **The honest version of this finding is a correction of my own first draft of it.** The mandatory
+trends query returned **$8.3B (2025) → $11.4B (2026) → $57.2B by 2033 at 25.9% CAGR**, which looked
+like a new rival to the **$10.6B / 40.9% / $42.48B-by-2030** series this file leads with. 🔴 **It is
+not new: the seventeenth pass already read it, named it "Forecast A", and wrote the correct
+prescription.** It simply never reached the `## Global market size` table at the top of this file,
+which went on presenting one series as settled. 🟢 **Now corrected there**, with all **three** series
+this KB has collected side by side.
+
+🔵 **So the finding is not the conflict. It is that a recorded conflict did not propagate**, for the
+third time in three passes — the nineteenth pass's stale AI Act date, the twentieth pass finding it
+in two more places, and now this. 🟢 **The rule: a pass that corrects a figure must edit the table
+that publishes it, not only describe the correction in its own section.**
+
+### 🔴 The opportunity this pass actually creates, and it is the same in all four regions
+
+🔵 **A new, small, repeatable line item: the dependency-closure audit.** This pass found that **4 of
+13** audited education projects install something their own licence does not cover — including the
+single most-starred asset on this KB's shelf, which installs **AGPL-3.0-or-pay**.
+
+| Region | Why the same audit sells differently there |
+|---|---|
+| **North America** | No sector regulator to point at, so **procurement and counsel** are the gate. A closure report is the artefact that clears a district's or university's legal review, and it is cheap enough to bundle into discovery |
+| **EMEA** | Lands inside an obligation that already exists. The **EAA** evidence route (no harmonised standard cited) and the **AI Act** Annex III duties from **2027-12-02** both reward documented provenance, and a dependency manifest with licences resolved is exactly that class of evidence |
+| **APAC** | **Sovereignty is the buying criterion**, and a closure report is a sovereignty document: it names every third-party grant travelling into a national deployment. Fits the Vietnam transition-plan and Korea high-impact filings this KB already records |
+| **LATAM** | The permissive stack **is** the budget strategy, so a copyleft dependency is not a legal nuisance but a **threat to the cost case**. ⚠️ Kolibri — the offline platform this KB's equity pattern is built on — came back `REVIEW-WEAK` with two LGPL rows, which is precisely the region where that matters most |
+
+⚠️ **Sized honestly: this is a days-long engagement artefact, not a programme.** 🟢 **Its value is as a
+door-opener and a trust signal** — it is concrete, verifiable by the client in one command, and it
+surfaces a real finding often enough (**4 of 13**, measured) to be worth running before any fixed-price
+commitment on an open-source education build.

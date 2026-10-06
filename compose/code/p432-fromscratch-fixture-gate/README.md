@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-06
+---
+
 # p432 — the from-scratch fixture gate
 
 **Run this before you trust a licence instrument you just wrote. Four requests.**

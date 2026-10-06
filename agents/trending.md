@@ -8,6 +8,238 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — twenty-first pass: the shelf's flagship is Apache-2.0 and installs AGPL, and this KB never once asked what its repos depend on
+
+**Channel new to this KB this pass: the declared-dependency channel** — reading each shelf
+project's own dependency manifest and resolving **what licence each dependency carries**, rather
+than reading the project's licence, its topic, star count, funder, ministry, institution, function,
+licence scope, platform name, language, MCP registry, conformance register, named technical standard
+or transitional article. **Ninth channel used.** Instrument in
+`compose/code/dependency-licence-closure/`, trends 48 and 49 in `intel/trends.md`, pattern
+**`P-DEPENDENCY-CLOSURE`** in `compose/patterns.md`.
+
+### 🟢 Verification level of this pass, stated before the findings
+
+🟢 **This is the strongest verification level this KB has reached on 2026-10-06, and the opposite of
+the twentieth pass's.** Every licence below was read **first-hand from the registry that serves the
+package**, machine-readable, reproducible by one command:
+
+| Layer | Endpoint | Status |
+|---|---|---|
+| manifest | `raw.githubusercontent.com/<slug>/<ref>/<path>` | 🟢 **200** |
+| Python dependency licence | `pypi.org/pypi/<name>/json` | 🟢 **200** |
+| npm dependency licence | `registry.npmjs.org/<name>` | 🟢 **200** |
+
+🔴 **Still blocked, probed this pass, recorded so no later pass re-probes them:** `api.osv.dev`
+(**403**, so no advisory/CVE channel), `pypistats.org` and `api.npmjs.org` (**403**, so no download
+counts — adoption cannot be measured this way), `api.github.com` (**403**, as since pass 37).
+
+⚠️ **The ref is verified rather than assumed.** A control request for
+`definitely-not-a-branch-zzz9` returns **404**, proving the channel discriminates between refs;
+`main` and `master` on `huggingface/smolagents` both return 200 with **byte-identical** payloads
+(same SHA-256), which is two live refs agreeing, not a proxy ignoring the ref.
+
+### 🔴 Finding 1 — twenty passes of licence rigour, and the dependency list was never read
+
+Verified by grep over all eight files before a line of this pass was written:
+
+| Probe | Occurrences outside `archive/` |
+|---|---|
+| `transitive` | **0** |
+| `dependency licence` · `dependency license` | **0** |
+| `copyleft dependency` | **0** |
+| `lockfile` · `poetry.lock` · `package-lock` | **0** |
+
+🔵 **This KB owns roughly a dozen instruments for the licence question and all of them answer the
+same half of it.** `p170`, `p172`, `p191`, `p283`, `p342` and the rest make *"what is this
+project?"* reproducible to the byte. **None of them asks *"what does this project install?"*** —
+and that is the half a redistribution claim rests on. Manifests *had* been read, twice: for the
+project's own licence declaration (`p283-manifest-named-license`) and for which model provider it
+calls (`p257-provider-binding`). **The dependency list was on screen for both and neither asked what
+it was licensed under.**
+
+### 🔴 Finding 2 — DeepTutor is Apache-2.0, 40.8k★, row 1 of this shelf, and `pip install` pulls AGPL-3.0
+
+🔴 **`HKUDS/DeepTutor` declares `PyMuPDF>=1.26.0` as a CORE runtime dependency, and PyMuPDF's own
+published licence field reads:**
+
+> `Dual Licensed - GNU AFFERO GPL 3.0 or Artifex Commercial License`
+
+Read first-hand from `pypi.org/pypi/pymupdf/json` on 2026-10-06, version **1.28.2**.
+
+⚠️ **Core, not optional, and confirmed structurally rather than by eye.** DeepTutor's
+`pyproject.toml` opens `dependencies = [` at line 19 and the array closes at line 93; `PyMuPDF` is
+declared at **line 66**, inside it, and again at line 126. It is **not** behind an extra, **not** a
+dev dependency, and it is not reachable only through the optional `parse-pymupdf4llm` path. A plain
+`pip install` of this project resolves it.
+
+🔵 **What that means, stated precisely and no further.** The free half of PyMuPDF's dual grant is
+**AGPL-3.0** — the network-copyleft licence. The other half is a **paid Artifex commercial
+licence**. So a client deployment of DeepTutor has exactly three honest options: comply with AGPL
+for the service that embeds it (which for a hosted tutor means offering corresponding source to its
+users), **buy the Artifex licence**, or **replace the PDF layer** before shipping. ⚠️ **This is the
+cheapest possible finding to act on and the most expensive to discover late** — it is a procurement
+line item, and it was invisible for twenty passes because the repository licence said Apache-2.0 and
+every pass stopped there.
+
+🔵 **This is not a defect in DeepTutor and nothing here says it is.** Apache-2.0 is the correct
+licence for its own code, its manifest is public and honest, and the AGPL option is PyMuPDF's to
+offer. 🔴 **The defect is this KB's** — it shelved the project under *"the licences Globant can build
+on and redistribute to clients"* without reading one line further.
+
+### 🔴 Finding 3 — the same shape in Oppia, and a second permissive platform with GPL-2.0 in the manifest
+
+🔴 **`oppia/oppia` (Apache-2.0, one of only three permissively licensed full platforms in this KB)
+declares `mutagen`, whose published `license_expression` is `GPL-2.0-or-later`.** Three more rows in
+the same manifest are not clean either: `certifi` (**MPL-2.0**), `orjson`
+(**`MPL-2.0 AND (Apache-2.0 OR MIT)`** — a compound expression, not a choice), and
+`azure-cognitiveservices-speech` (**`Other/Proprietary License`**).
+
+🔵 **Oppia's 152 declared dependencies are the largest surface measured this pass, and 148 of them
+are permissive.** The finding is four specific rows out of 152, which is exactly the shape a review
+can act on in an afternoon.
+
+### 🔴 Finding 4 — the accessibility engine this KB recommends is MPL-2.0, and this KB wrote down the dependency without its licence
+
+🔴 **`ronantakizawa/a11ymcp` is MIT, and both of its engine dependencies — `axe-core` and
+`@axe-core/puppeteer` — are MPL-2.0**, read from `registry.npmjs.org` (axe-core **4.14.0**).
+
+⚠️ **This KB already recorded the dependency and missed the licence.** `agents/top.md` states that
+a11ymcp *"declares **axe-core** ^4.6.0 and **@axe-core/puppeteer** as *runtime* dependencies"* —
+correct, specific, and silent on the grant. 🔵 **MPL-2.0 is weak, file-level copyleft and this is
+the mildest of the three findings**: you may link it from permissive code and ship it, provided
+modifications *to those files* are published. It matters because accessibility scanning is load-
+bearing in this KB's EMEA accessibility pattern, so the obligation travels into a deliverable.
+
+### 🟢 Finding 5 — the denominator, because three findings without one is an anecdote
+
+**13 targets measurable, 352 declared direct dependencies resolved one by one:**
+
+| Class | Rows | Share |
+|---|---|---|
+| 🟢 `PERMISSIVE` | **337** | 95.7% |
+| ⚠️ `WEAK-COPYLEFT` | **7** | 2.0% |
+| 🔴 `UNKNOWN` | **6** | 1.7% |
+| 🔴 `STRONG-COPYLEFT` | **2** | 0.6% |
+
+🟢 **The shelf is overwhelmingly clean, and saying so is part of the finding.** 95.7% permissive at
+depth 1 means the curation worked; the value of this channel is that it turns *"probably fine"* into
+**two named rows in two named projects**, both actionable before a proposal goes out. 🔵 **Verdicts
+per target: 9 `CLEAN`, 2 `REVIEW-STRONG` (DeepTutor, Oppia), 1 `REVIEW-WEAK` (a11ymcp), 2
+`REVIEW-UNKNOWN`** (`vishalsachdev/canvas-mcp`, `CAHLR/OATutor`) — plus Kolibri at `REVIEW-WEAK`,
+measured only after the defect in Finding 7 was fixed.
+
+### 🔴 Finding 6 — `UNKNOWN` has four causes in the wild, and a fifth was in my own classifier
+
+🔵 **This KB has a three-entry catalogue of licence-failure modes at the repository layer. The
+registry layer has its own, and it is different:**
+
+| Cause | Live example |
+|---|---|
+| a dual grant **naming neither half** | `python-dateutil` publishes literally `"Dual License"` — 3 of 13 targets depend on it |
+| the whole licence **TEXT** pasted into the field | `semver` → `"Copyright (c) 2013, Konstantine Rybnikov  All rights..."` |
+| an explicitly **proprietary** classifier | `azure-cognitiveservices-speech` → `Other/Proprietary License` |
+| a declared name **the registry does not serve** | `CAHLR/OATutor` declares `@common/global-config` → **404 on npm** |
+
+🔴 **And the fifth was mine.** `defusedxml` publishes `PSFL` — the Python Software Foundation
+Licence, which is **permissive**. The first version of my classifier knew only the bare token `PSF`
+and reported a **false `UNKNOWN` on a clean package.** ⚠️ **A false `UNKNOWN` is not harmless in this
+KB: `UNKNOWN` is the class it escalates on**, so a broken classifier manufactures exactly the
+findings a reader would act on. Fixed, and now asserted by four tests.
+
+### 🔴 Finding 7 — a 200 on `requirements.txt` is not a dependency list, and Kolibri is the proof
+
+🔴 **`LearningEquality/kolibri` serves `requirements.txt` at HTTP 200, and the file declares
+nothing.** Its own header says it exists *"only as the sink for any EXTRA_REQUIREMENTS injected at
+build time"*. 🔴 **And its `pyproject.toml` declares `dependencies = []` — literally empty** — with
+the real runtime set in **`[dependency-groups] base`**, resolved by `make staticdeps`.
+
+⚠️ **So the two canonical places to look both answer "nothing", and both answers are wrong.** A
+filename-keyed sweep reports *"Kolibri has zero dependencies"* — a confident wrong answer, which is
+worse than a visible failure. 🟢 **Measured through the group instead: 32 dependencies, 28
+permissive, 2 weak-copyleft (`json-schema-validator` LGPL, `zeroconf-py2compat` LGPL), 2 unreadable**
+(`python-dateutil`, `semver`). ⚠️ **Kolibri is this KB's only fully permissive end-to-end platform
+and the basis of its equity-deployment pattern, so its closure mattering is not hypothetical.**
+
+🔵 **Five of 17 targets parsed zero, and not one was a parser bug** — four distinct structural
+shapes, each making a naive sweep confidently wrong: the **empty sink** (Kolibri), the **workspace
+root** carrying only `devDependencies` (`Selleo/mentingo`, `zijinz456/OpenTutor`), **meta-package
+indirection** (`microsoft/agent-framework`, one dep: `agent-framework-core[all]==1.20.0`), and
+🟢 **a genuine zero** — `tomaszboloz/WCAG-Accessibility-Skills`, which **independently confirms this
+KB's own prose claim** that the project has *"no production dependencies"*. 🔵 **That row is the
+positive control: an instrument that returns zero for everything is useless, and this one returns
+zero exactly where zero is true.**
+
+### 🟢 Finding 8 — the twentieth pass's pre-registered action, run — and its figure corrected
+
+🔵 **The twentieth pass measured duplicated pattern numbers by hand, found its own citation audit
+blind to them, and wrote the fix in one line:** *"the fix is one assertion, that each number resolve
+to **exactly one** definition rather than at least one."* 🟢 **Implemented this pass** in
+`compose/code/pattern-citation-audit/`: `definition_counts()` and `duplicate_definitions()`, six new
+tests, **14/14 passing** (was 8/8), and the count now prints on every run so no future pass has to
+read the code to see it.
+
+🔴 **Running it corrects the twentieth pass's own number.** That pass reported **7** duplicated
+numbers — *"P1 ×2, P25 ×3, P26 ×3, P27 ×2, P28 ×3, P29 ×2, P30 ×2"*. Measured against definitions
+rather than against text, it is **6**:
+
+| Pass 20 claim | Verdict this pass |
+|---|---|
+| `P25 ×3, P26 ×3, P27 ×2, P28 ×3, P29 ×2, P30 ×2` | 🟢 **CONFIRMED, all six.** Genuine collisions — `P28` is simultaneously *"Brazilian public-sector school management"*, *"The K-12 administrative integration"* and *"A standards-conformant student-data bridge"* |
+| `P1 ×2` | 🔴 **FALSE POSITIVE.** The two headings are `## P1 — LTI + MCP side-car tutor` and `## P1 update, fourteenth pass...` — a definition **and a note about it**, not two patterns fighting for a number |
+| *"46 numbered headings over 36 distinct numbers"* | ⚠️ **36 distinct is right; 46 counts the update heading.** Definition headings: **45** over **36** distinct |
+
+⚠️ **And the mechanism is the one this very instrument's docstring warns about:** pass 20 counted
+`^## P1` — **the orthography** — where the object is *a definition heading*. 🔵 **I reproduced the
+error before finding it**: my own first count returned **37** distinct numbers, because
+`grep -o '^## P[0-9]*'` with *zero*-or-more digits also matches the bare `## P` of pass 20's
+deliberately **unnumbered** `## P-TRANSITION-EVIDENCE`. 🟢 **Which is the strongest possible argument
+for that pass's own decision to stop minting numbers**, arrived at by walking into it from the other
+side.
+
+### 🟢 Finding 9 — the frontmatter gate reaches 121/121, after carrying one miss across passes
+
+🟢 **`compose/code/p243-frontmatter-coverage` reported `120 de 121` at `HEAD`**, the single miss
+being `compose/code/p432-fromscratch-fixture-gate/README.md` — recorded by the twentieth pass as
+*"untouched by this pass"*. 🟢 **Fixed this pass** (four lines of frontmatter, `region: Global`), and
+the gate now reports **`121 de 121`**. ⚠️ **A known one-line gap that survives several passes stops
+being a gap and becomes a habit**; it cost less to close than the twentieth pass spent writing that
+it had not closed it.
+
+### The mandatory queries, run with the year **computed** (2026), not hardcoded
+
+| Query | Result |
+|---|---|
+| `top open source AI agents education {year} github MIT` | ⚠️ **thin for education, and the mismatch now reproduces for a third pass** — returned general frameworks (openclaw 385.4k★, browser-use 108.1k★, mem0 62.7k★, AutoGen 60.3k★, dify 151.6k★, Flowise 55.2k★). **No education-specific agent new to this KB.** |
+| `github trending {industry} AI {year}` | ⚠️ **off-target, stable across three passes** — AI-engineering *curricula* (`rohitg00/ai-engineering-from-scratch` #1 on 2026-05-24, Karpathy's Zero-to-Hero, `speedyapply/2026-AI-College-Jobs` 5.2k★). 🔵 **"Education" in a trending feed means *learning to build AI*, not *AI for schools*, and recording that saves the next pass the query.** |
+| `open source platform {industry} ERP CRM MIT Apache` | 🟢 **pass, nothing new. The platform channel stays saturated** — OpenEduCat (on Odoo), plus `CK-ERP`, a 32-module Drupal-era education/ERP/CRM system whose last release note in the result set is **2010**. ⚠️ **Recorded as a measured non-finding: it is abandonware, not a shelf candidate.** |
+| `AI {industry} industry trends {year}` | 🟢 **pass, and the market figure MOVED** — $8.3B (2025) → **$11.4B (2026)** → $57.2B by 2033 at **25.9% CAGR**. 🔴 **It contradicts the series this file's own query table carried one pass earlier** ($10.6B 2026, 40.9% CAGR, $42.48B by 2030) — ⚠️ **and it is NOT a new rival: the seventeenth pass already recorded this exact series as "Forecast A" and prescribed the fix. It never reached the summary table at the top of `intel/market.md`, so this pass started re-discovering it.** Corrected there; see trend 50. Also: **student AI use 66% (2024) → 92% (2025)**, 86% of HiEd students using AI as primary research partner entering 2026. |
+| `AI {industry} North America {year} adoption regulation players` | 🟢 **pass** — 36% of global market; NA at $951M (2024) → $2.303B (2029) at 15.9% CAGR; *"a relative regulatory vacuum… no equivalent to the FDA for educational technology"*, adoption decided school-by-school; Colorado and Texas piecemeal. **OpenAI launched a country-level education programme with eight national partners in Q1 2026.** 🔴 **The summaries again assert the AI Act "takes full effect in August 2026" classifying education AI high-risk — the stale claim the nineteenth pass corrected. Third reproduction; the correction holds.** |
+| `AI {industry} EMEA {year} adoption regulation players` | 🟢 **pass** — **94%** of organisations likely to invest in AI training in 2026; **38% have not begun piloting** and **60% report siloed data**; UK's first AI Adoption Summit committed **£200m+**, delivered as *government funds / Big Tech delivers (Cisco, IBM, BT, Rolls-Royce) / unions legitimise*; Council of Europe held a **2nd working conference on the regulatory dimensions of AI in education in October**. |
+| `AI {industry} APAC {year} adoption regulation players` | 🟢 **pass** — **48%** of APAC governance leaders rank AI adoption a top-3 2026 priority, **57%** already running it in ≥1 area; *"sovereign-by-design"* shaping infrastructure for roughly **half** of APAC firms; Singapore consulting on AI use in financial institutions as the template others copy. ⚠️ **Generic-enterprise, not education-specific: a declared thin result, not a finding.** |
+| `AI {industry} LATAM {year} adoption regulation players` | 🟢 **pass** — LATAM is the **third-largest market worldwide for generative-AI application downloads**; **99%** of LATAM startups use AI internally and **85%** embed it in the product; OpenAI integrated by **89%**. **Ednova (Chile)** named as the standout edtech. 🔵 **The capital-poor / adoption-rich asymmetry is the LATAM engagement thesis in one line.** |
+
+🔵 **Two of eight queries returned nothing usable and that is written down rather than left as
+silence** — the same two as the twentieth pass, which makes the mismatch a stable property of the
+channel rather than a bad day. An informed gap is information; an unreported empty query looks
+exactly like coverage.
+
+### Sources named by the search summaries this pass relied on
+
+Market and trends: Grand View / TBRC / Technavio / MarketsandMarkets / BCC Research summaries,
+`azumo.com` AI-in-education statistics, `wise.live` AI-tutor trends, ETS *Three forces shaping AI*.
+North America: MultiState and state-bill trackers via the summaries, `metavert.io` on the regulatory
+vacuum. EMEA: CompTIA EMEA IT-strategy 2026, Workday EMEA AI-adoption study, Council of Europe
+education pages, QS *Europe EdTech 200*. APAC: Boomi APAC tech priorities, IntelligentCIO APAC
+governance, TechRepublic APAC signals, itnews.asia on AI sovereignty. LATAM: Barchart on
+ground-up LATAM adoption, `ecosistemastartup.com`, UNU working paper on AI implementation in LAC
+higher education, IADB *An Enabling Regulatory Framework for AI in LAC*.
+⚠️ **Every one of these reached this pass as a search-result summary. None was fetched.**
+🟢 **In exchange, every licence, version and dependency figure in Findings 2–7 was read first-hand
+from a registry and is reproducible with `python3 resolve.py targets.tsv`.**
+
+---
+
 ## 2026-10-06 — twentieth pass: "in force" is not "comply by", and the thing that forfeits the extension is the modernisation project itself
 
 **Channel new to this KB this pass: the transition-provision channel** — sweeping each binding

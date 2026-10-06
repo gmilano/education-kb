@@ -2827,3 +2827,117 @@ nothing breaks, the number is simply reused, and every pointer written before th
 resolving — to the wrong target half the time. 🟢 **The durable fix is to key corrections to content,
 not to position** — which is also why this KB's correction blocks quote the sentence they are
 correcting rather than citing its line number.
+
+---
+
+## 48. The licence you can redistribute and the licence you install are two different facts, and the industry publishes only the first
+
+🔴 **Measured, not argued: 13 education projects, 352 declared direct dependencies, and the two
+layers disagree for 4 of the 13.** The shelf licence is a public, prominent, well-governed fact —
+every project puts it in the sidebar, and this KB spent twenty passes reading it from the payload
+rather than the badge. 🔵 **The dependency layer is equally public and nobody reads it**, because
+nothing in the ecosystem's presentation puts it next to the first.
+
+| Project | Published licence | What `pip install` / `npm install` adds |
+|---|---|---|
+| DeepTutor (40.8k★) | Apache-2.0 | **AGPL-3.0** or a paid Artifex licence, via `PyMuPDF` |
+| Oppia | Apache-2.0 | **GPL-2.0-or-later**, via `mutagen` |
+| Kolibri | MIT | **LGPL** ×2 |
+| A11y MCP | MIT | **MPL-2.0** ×2, via `axe-core` |
+
+🟢 **The base rate is the other half of the trend and it is good news: 337 of 352 dependencies
+(95.7%) are permissive.** This is not a story about an unsafe ecosystem. It is a story about **where
+the remaining 4.3% hides** — never in the project you evaluated, always one declaration down.
+
+⚠️ **The commercial consequence is asymmetric, which is why it is worth a trend.** Discovering an
+AGPL dependency during due diligence costs an afternoon. Discovering it after a fixed-price delivery
+has shipped a hosted tutor costs either a source-disclosure obligation over the whole service or a
+commercial licence bought under time pressure. 🔵 **The cost of the check is one command; the cost of
+skipping it is a renegotiation.**
+
+🟢 **The engagement rule this yields:** quote the dependency closure, not the repository licence, in
+any document a client signs. **"MIT" describes the code the maintainer wrote. It does not describe
+the build you are about to hand over.**
+
+## 49. A manifest returning HTTP 200 is evidence the file exists, not evidence it declares anything
+
+🔴 **Five of 17 targets this pass declared zero dependencies, and all five files fetched fine.** Not
+one was a parser bug. Four distinct shapes, each of which turns a filename-keyed sweep into a
+confident wrong answer:
+
+| Shape | Live case | The wrong answer it produces |
+|---|---|---|
+| **empty sink file** | Kolibri: `requirements.txt` is a build-time `EXTRA_REQUIREMENTS` sink **and** `[project].dependencies = []`; the real set is in `[dependency-groups] base` | 🔴 "zero dependencies" |
+| **workspace root** | `mentingo`, `OpenTutor`: root manifest is `devDependencies` + pnpm; runtime lives in `apps/*` | 🔴 "no runtime dependencies" |
+| **meta-package** | `agent-framework`: one dep, `agent-framework-core[all]` | ⚠️ "1 dependency" — true and useless |
+| 🟢 **genuine zero** | `WCAG-Accessibility-Skills` | 🟢 correct, and it **confirms the project's own documented claim** |
+
+🔵 **The epistemics matter more than the parsing.** A missing measurement announces itself; a
+**confident wrong one does not**, and "this project has no dependencies" reads like a clean bill of
+health. ⚠️ **The only defence is a positive control** — an instrument that cannot distinguish "zero
+because nothing is declared" from "zero because I looked in the wrong file" is not measuring
+anything. This pass had exactly one genuine zero out of five, and it is the row that proves the other
+four are findings rather than silence.
+
+🟢 **This is the same lesson as this KB's licence-filename case sweep (pass 12) and its
+`LICENSE`-outside-root catalogue, arriving a layer down: the anchor recognises a SPELLING, and the
+object is a DECLARATION.** The family now has four members at the repository layer and four at the
+manifest layer.
+
+## 50. A correction that lands only in a pass-scoped section has been filed, not applied
+
+🔴 **Third reproduction of one failure mode, on a third unrelated fact.** The pattern is now stable
+enough to be a trend rather than three incidents:
+
+| Pass | The fact | Where the correction landed | Where it failed to reach |
+|---|---|---|---|
+| 19 → 20 | AI Act Annex III deferred to **2027-12-02**, not in force 2026-08-02 | trend 39, seventeenth-pass EMEA paragraph | a **third** location in `intel/market.md`, found by a structural gate a pass later |
+| 17 → 21 | a **third** market series, $8.3B → **$11.4B (2026)** → $57.2B by 2033 at **25.9%** | the seventeenth pass's own section, ~3,600 lines down, correctly named and prescribed | 🔴 **the `## Global market size` table at the TOP of the same file**, which kept presenting 40.9% as settled |
+
+🔵 **The second row is the embarrassing one and it is recorded on purpose.** The twenty-first pass ran
+the mandatory trends query, got the third series back, and **began writing it up as a new finding** —
+a rival series this KB had supposedly never seen. It had seen it, four passes earlier, and had written
+a better prescription for it than the one being drafted. ⚠️ **The re-discovery was caught only because
+the pass went to edit the duplicate `## Opportunities by region` heading and read the surrounding
+section on the way.**
+
+**Measured spread of the un-propagated figure across non-archive files:**
+
+| Token | Occurrences |
+|---|---|
+| `40.9%` | **19** |
+| `42.48` | **12** |
+| `11.4B` | **10** |
+| `25.9%` | **6** |
+
+⚠️ **Nineteen against six is not a disagreement between sources, it is a disagreement between this
+KB's own files**, and a reader who quotes the top of `intel/market.md` gets the 19 without ever
+meeting the 6.
+
+🟢 **The rule, and it is cheap: a pass that corrects a published figure must edit the table that
+publishes it, in the same pass.** Describing the correction in a dated section is necessary — the
+append-only history is how this KB stays auditable — but it is **not sufficient**, because nobody
+quotes the history, they quote the summary table. 🔵 **A correction has two halves: the record and the
+edit. This KB has been reliably doing the first and intermittently doing the second**, and the three
+rows above are what that looks like after twenty-one passes.
+
+🟢 **Corrected this pass:** all three market series now sit side by side in the
+`## Global market size` table, each with its base year, terminal year and CAGR attached. The
+commercial rule stands as the seventeenth pass wrote it — **quote 2026 as a range ($10.6–11.4B) and
+attribute every horizon figure to its publisher by name.** ⚠️ **Never quote a bare CAGR**: between
+these three series it ranges from 25.9% to 41%, and the choice silently moves a 2033 number by
+roughly 3×.
+
+## Declared gaps — twenty-first pass, 2026-10-06
+
+🔴 **Named here because an unreported gap looks exactly like coverage.**
+
+| Gap | Status, and why it is open |
+|---|---|
+| **The shelf's vulnerability history is entirely unmeasured** | 🔴 **NEW and now explicit.** `api.osv.dev` returns **403** at the egress proxy, and `api.github.com` has been 403 since pass 37, so no advisory, GHSA or CVE channel exists from this environment. ⚠️ **Twenty-one passes have recommended Moodle, Open edX, Canvas, Oppia and Kolibri without once checking a published vulnerability against them.** A pass with a reachable advisory source should treat this as its channel |
+| **Real adoption still cannot be separated from stars** | 🔴 **Probed and closed again this pass:** `pypistats.org` and `api.npmjs.org` both **403**. Download counts are the one signal that would distinguish an asset in production from an asset being starred, and they are not reachable |
+| **Transitive dependency licences** | 🔴 **OPEN, by design.** This pass measured depth 1 only. Hypothesis pre-registered in the instrument's README: depth 2 **raises** the copyleft count, because `certifi`'s MPL-2.0 is transitive almost everywhere. Falsifiable — if depth 2 adds no new copyleft *class*, depth 1 was sufficient |
+| **Three shelf rows have no closure measurement at all** | 🔴 `Selleo/mentingo` and `zijinz456/OpenTutor` (pnpm workspace roots — read `apps/*`), `Miaotofu01/Study-Mate` (vestigial `package.json`). ⚠️ **Listed as unmeasured, never as clean** |
+| **No SBOM layer anywhere on the shelf** | 🔴 **NEW.** No `syft`, `cyclonedx`, `pip-licenses` or `license-checker` row exists. The twentieth pass found the same absence one layer up (`mlflow`, `dvc`, `evidently`, `croissant`, `fairlearn`: zero occurrences). Not shelved this pass because none of them was verified against an education deployment |
+| **Six dependency rows are unreadable at the registry layer** | ⚠️ Resolvable at the **repository** layer, where this KB already has a working channel. Prediction recorded before measurement: `python-dateutil` resolves permissive, `azure-cognitiveservices-speech` stays proprietary |
+| **The education-agent and GitHub-trending queries** | ⚠️ **Thin for the third consecutive pass**, which makes it a stable property of the channel rather than a bad day. "Education" in a trending feed means *learning to build AI*, not *AI for schools* |

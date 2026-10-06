@@ -293,6 +293,34 @@ model the client's data-residency posture allows (the KB's sovereign and local
 inference options apply unchanged). Raise this yourself in week one; do not let a
 procurement reviewer raise it in week eight.
 
+## What the permissive platforms install — twenty-first pass of 2026-10-06
+
+⚠️ **This file's job is to say which platforms can be customised with AI on top. That recommendation
+has always rested on the platform's own licence. For the two permissive platforms measured this pass,
+the platform's licence is not the whole answer.**
+
+Measured first-hand from PyPI on 2026-10-06, depth 1. Instrument:
+`compose/code/dependency-licence-closure/`.
+
+| Platform | Platform licence | Direct deps | Closure verdict | What a deployment has to decide |
+|---|---|---|---|---|
+| **Oppia** | Apache-2.0 | **152** | 🔴 **REVIEW-STRONG** | `mutagen` is **`GPL-2.0-or-later`** (audio metadata). Clear that one path, or drop the feature that reaches it. 148 of 152 deps are clean |
+| **Kolibri** | MIT | **32** | ⚠️ **REVIEW-WEAK** | 2 LGPL (`json-schema-validator`, `zeroconf-py2compat`) — linkable, shippable, but they travel with the offline bundle |
+| **Mentingo** | MIT | **not measured** | ⚠️ **UNMEASURED** | pnpm **workspace root**: its root manifest carries only `devDependencies`, so the runtime closure is in `apps/*` and this pass did not reach it. ⚠️ **Unmeasured is not clean** |
+
+🔵 **Why this belongs in the verticals file and not only in the agents file.** The copyleft platforms
+here — Moodle GPL-3.0, Open edX and Canvas AGPL-3.0 — are *already* copyleft, so this KB's standing
+advice is to keep Globant IP in an external side-car over LTI 1.3 or MCP. That advice is unchanged.
+🔴 **What changes is the advice for the permissive platforms**, which were the escape hatch: *"pick
+Kolibri or Oppia and you avoid the copyleft question entirely"* was the shortcut, and at depth 1 it is
+**not quite true for either of them**. The escape hatch is still the right call — the obligations are
+narrow and attach to specific features — but it is **narrow, not absent**, and a proposal that
+promised "no copyleft anywhere" on an Oppia build would have been wrong.
+
+⚠️ **Limits, so the table is not over-read:** depth 1 only (transitive deps unmeasured), linkage not
+analysed, and `REVIEW-*` means *"look at this row"*, not *"violation"*. The one hard class,
+`BLOCKER` (a non-commercial grant), **was not triggered by any platform on this shelf.**
+
 ## AI integration surfaces, by strategy
 
 Two ways to put AI on a platform, with different license outcomes:

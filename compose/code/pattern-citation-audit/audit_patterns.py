@@ -51,6 +51,43 @@ def definitions(patterns_md):
     return by
 
 
+def definition_counts(patterns_md):
+    """Cuantas veces se define cada numero, SIN colapsar.
+
+    `definitions()` usa `setdefault`, o sea se queda con la primera y descarta
+    las demas: por eso este instrumento nunca pudo ver un numero definido tres
+    veces. El pase 20 del 2026-10-06 midio el defecto a mano -- 46 encabezados
+    `## Pn` sobre 36 numeros distintos, 7 numeros duplicados -- y dejo la
+    prescripcion en una sola linea: *que cada numero resuelva a EXACTAMENTE una
+    definicion, no a AL MENOS una*. Esta funcion es esa linea.
+
+    COLGADA y DUPLICADA son dos fallas del mismo namespace y la pregunta las
+    separa: la primera pregunta si el numero resuelve, la segunda si resuelve a
+    un solo sitio. Un detector de la primera es ciego a la segunda por
+    construccion.
+
+    Los encabezados de RANGO se cuentan aparte: `## P145-P148` define cuatro
+    numeros a proposito, asi que solapar con el no es el mismo defecto que dos
+    secciones peleando por un numero.
+    """
+    with open(patterns_md, encoding='utf-8') as fh:
+        text = fh.read()
+    ranged_lows = {int(m.group(1)) for m in DEF_RANGE.finditer(text)}
+    explicit = collections.Counter()
+    for m in DEF_A_B.finditer(text):
+        n = int(m.group(1))
+        if n not in ranged_lows:
+            explicit[n] += 1
+    recipes = collections.Counter(int(m.group(1)) for m in DEF_RECIPE.finditer(text))
+    return explicit, recipes
+
+
+def duplicate_definitions(patterns_md):
+    """Numeros con mas de una definicion explicita. Vacio = namespace sano."""
+    explicit, _ = definition_counts(patterns_md)
+    return {n: c for n, c in sorted(explicit.items()) if c > 1}
+
+
 # El propio directorio del detector queda FUERA del barrido: documenta sus casos
 # de prueba con numeros de ejemplo (P900, P999) que no son citas de la KB. Un
 # detector que se lee a si mismo se cuenta sus propios ejemplos como defectos.
@@ -93,6 +130,17 @@ def main():
         print('P%d\t%d\t%d\t%s' % (n, bold[n], any_[n],
                                    ','.join('%s:%d' % (f, c) for f, c in sorted(where[n].items()))))
     print('# COLGADAS\t%d numeros\t%d citas_bold\t%d citas_any' % (len(dangling), tb, ta))
+
+    # DUPLICADAS: la otra falla del mismo namespace (pase 21 del 2026-10-06).
+    # Se reporta aunque no cambie el codigo de salida, porque COLGADA rompe una
+    # referencia y DUPLICADA la vuelve ambigua: la segunda se arregla con una
+    # convencion, no con una definicion nueva.
+    dups = duplicate_definitions(patterns_md)
+    explicit, _recipes = definition_counts(patterns_md)
+    print('# DUPLICADAS\t%d numeros\t%s' % (
+        len(dups), ','.join('P%d(x%d)' % (n, c) for n, c in dups.items())))
+    print('# encabezados_de_definicion\t%d\tnumeros_distintos\t%d' % (
+        sum(explicit.values()), len(explicit)))
 
     # controles: sin ellos la cifra no es citable (P107/P119)
     ok = [n for n in (142, 145, 148, 149, 131, 136) if n in defs]

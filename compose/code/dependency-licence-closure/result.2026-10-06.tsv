@@ -1,0 +1,358 @@
+slug	manifest	dep	licence_raw	field	class
+HKUDS/DeepTutor	pyproject.toml	aiohttp	Apache-2.0 AND MIT	license_expression	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	aiosqlite	MIT License	classifier	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	anthropic	MIT	license	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	arxiv	MIT	license_expression	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	dashscope	Apache 2.0	license	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	ddgs	MIT	license_expression	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	defusedxml	PSFL	license	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	faiss-cpu	MIT	license_expression	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	fastapi	MIT	license_expression	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	httpx	BSD-3-Clause	license	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	jinja2	BSD License	classifier	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	jsonschema	MIT	license_expression	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	llama-index	MIT	license_expression	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	llama-index-retrievers-bm25	MIT	license_expression	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	llama-index-vector-stores-faiss	MIT	license_expression	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	mcp	MIT	license	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	nest_asyncio	BSD	license	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	numpy	BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0	license_expression	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	oauth-cli-kit	MIT	license	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	openai	Apache-2.0	license_expression	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	openpyxl	MIT	license	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	pageindex	MIT	license	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	pdfplumber	MIT License	classifier	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	perplexityai	Apache-2.0	license	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	pillow	MIT-CMU	license_expression	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	prompt_toolkit	BSD License	classifier	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	pydantic	MIT	license_expression	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	pydantic-settings	MIT	license_expression	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	pymupdf	Dual Licensed - GNU AFFERO GPL 3.0 or Artifex Commercial Lic	license	STRONG-COPYLEFT
+HKUDS/DeepTutor	pyproject.toml	pypdf	BSD-3-Clause	license_expression	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	pyte	GNU Lesser General Public License v3 (LGPLv3)	classifier	WEAK-COPYLEFT
+HKUDS/DeepTutor	pyproject.toml	python-docx	MIT	license	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	python-pptx	MIT	license	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	pyyaml	MIT	license	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	qrcode	BSD	license	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	reportlab	BSD license (see license.txt for details), Copyright (c) 200	license	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	requests	Apache-2.0	license	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	rich	MIT	license	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	tenacity	Apache 2.0	license	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	tiktoken	MIT License                  Copyright (c) 2022 OpenAI, Shan	license	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	typer	MIT	license_expression	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	uvicorn	BSD-3-Clause	license_expression	PERMISSIVE
+HKUDS/DeepTutor	pyproject.toml	youtube-transcript-api	MIT	license	PERMISSIVE
+huggingface/smolagents	pyproject.toml	huggingface-hub	Apache-2.0	license	PERMISSIVE
+huggingface/smolagents	pyproject.toml	jinja2	BSD License	classifier	PERMISSIVE
+huggingface/smolagents	pyproject.toml	pillow	MIT-CMU	license_expression	PERMISSIVE
+huggingface/smolagents	pyproject.toml	python-dotenv	BSD-3-Clause	license	PERMISSIVE
+huggingface/smolagents	pyproject.toml	requests	Apache-2.0	license	PERMISSIVE
+huggingface/smolagents	pyproject.toml	rich	MIT	license	PERMISSIVE
+vishalsachdev/canvas-mcp	pyproject.toml	fastmcp	Apache-2.0	license_expression	PERMISSIVE
+vishalsachdev/canvas-mcp	pyproject.toml	httpx	BSD-3-Clause	license	PERMISSIVE
+vishalsachdev/canvas-mcp	pyproject.toml	mcp	MIT	license	PERMISSIVE
+vishalsachdev/canvas-mcp	pyproject.toml	pydantic	MIT	license_expression	PERMISSIVE
+vishalsachdev/canvas-mcp	pyproject.toml	python-dateutil	Dual License	license	UNKNOWN
+vishalsachdev/canvas-mcp	pyproject.toml	python-dotenv	BSD-3-Clause	license	PERMISSIVE
+vishalsachdev/canvas-mcp	pyproject.toml	uvicorn	BSD-3-Clause	license_expression	PERMISSIVE
+towardsai/ai-tutor-app	pyproject.toml	anthropic	MIT	license	PERMISSIVE
+towardsai/ai-tutor-app	pyproject.toml	chromadb	Apache Software License	classifier	PERMISSIVE
+towardsai/ai-tutor-app	pyproject.toml	cohere	MIT	license	PERMISSIVE
+towardsai/ai-tutor-app	pyproject.toml	fastapi	MIT	license_expression	PERMISSIVE
+towardsai/ai-tutor-app	pyproject.toml	google-genai	Apache-2.0	license_expression	PERMISSIVE
+towardsai/ai-tutor-app	pyproject.toml	hf-xet	Apache-2.0	license_expression	PERMISSIVE
+towardsai/ai-tutor-app	pyproject.toml	huggingface-hub	Apache-2.0	license	PERMISSIVE
+towardsai/ai-tutor-app	pyproject.toml	langchain	MIT	license	PERMISSIVE
+towardsai/ai-tutor-app	pyproject.toml	langchain-anthropic	MIT	license	PERMISSIVE
+towardsai/ai-tutor-app	pyproject.toml	langchain-deepseek	MIT	license	PERMISSIVE
+towardsai/ai-tutor-app	pyproject.toml	langchain-google-genai	MIT	license	PERMISSIVE
+towardsai/ai-tutor-app	pyproject.toml	langchain-openai	MIT	license	PERMISSIVE
+towardsai/ai-tutor-app	pyproject.toml	nbconvert	BSD 3-Clause License                  - Copyright (c) 2001-2	license	PERMISSIVE
+towardsai/ai-tutor-app	pyproject.toml	nbformat	BSD 3-Clause License                  - Copyright (c) 2001-2	license	PERMISSIVE
+towardsai/ai-tutor-app	pyproject.toml	openai	Apache-2.0	license_expression	PERMISSIVE
+towardsai/ai-tutor-app	pyproject.toml	pydantic	MIT	license_expression	PERMISSIVE
+towardsai/ai-tutor-app	pyproject.toml	python-dotenv	BSD-3-Clause	license	PERMISSIVE
+towardsai/ai-tutor-app	pyproject.toml	requests	Apache-2.0	license	PERMISSIVE
+towardsai/ai-tutor-app	pyproject.toml	tiktoken	MIT License                  Copyright (c) 2022 OpenAI, Shan	license	PERMISSIVE
+towardsai/ai-tutor-app	pyproject.toml	uvicorn	BSD-3-Clause	license_expression	PERMISSIVE
+SirhanMacx/Claw-ED	pyproject.toml	anthropic	MIT	license	PERMISSIVE
+SirhanMacx/Claw-ED	pyproject.toml	fastapi	MIT	license_expression	PERMISSIVE
+SirhanMacx/Claw-ED	pyproject.toml	httpx	BSD-3-Clause	license	PERMISSIVE
+SirhanMacx/Claw-ED	pyproject.toml	jinja2	BSD License	classifier	PERMISSIVE
+SirhanMacx/Claw-ED	pyproject.toml	lxml	BSD-3-Clause	license	PERMISSIVE
+SirhanMacx/Claw-ED	pyproject.toml	openai	Apache-2.0	license_expression	PERMISSIVE
+SirhanMacx/Claw-ED	pyproject.toml	pydantic	MIT	license_expression	PERMISSIVE
+SirhanMacx/Claw-ED	pyproject.toml	pypdf	BSD-3-Clause	license_expression	PERMISSIVE
+SirhanMacx/Claw-ED	pyproject.toml	python-docx	MIT	license	PERMISSIVE
+SirhanMacx/Claw-ED	pyproject.toml	python-pptx	MIT	license	PERMISSIVE
+SirhanMacx/Claw-ED	pyproject.toml	reportlab	BSD license (see license.txt for details), Copyright (c) 200	license	PERMISSIVE
+SirhanMacx/Claw-ED	pyproject.toml	rich	MIT	license	PERMISSIVE
+SirhanMacx/Claw-ED	pyproject.toml	typer	MIT	license_expression	PERMISSIVE
+SirhanMacx/Claw-ED	pyproject.toml	uvicorn	BSD-3-Clause	license_expression	PERMISSIVE
+moarshy/mcp-tutor	pyproject.toml	anthropic	MIT	license	PERMISSIVE
+moarshy/mcp-tutor	pyproject.toml	dspy-ai	MIT License	license	PERMISSIVE
+moarshy/mcp-tutor	pyproject.toml	httpx	BSD-3-Clause	license	PERMISSIVE
+moarshy/mcp-tutor	pyproject.toml	mcp	MIT	license	PERMISSIVE
+moarshy/mcp-tutor	pyproject.toml	openai	Apache-2.0	license_expression	PERMISSIVE
+moarshy/mcp-tutor	pyproject.toml	pydantic	MIT	license_expression	PERMISSIVE
+moarshy/mcp-tutor	pyproject.toml	python-dotenv	BSD-3-Clause	license	PERMISSIVE
+moarshy/mcp-tutor	pyproject.toml	rich	MIT	license	PERMISSIVE
+moarshy/mcp-tutor	pyproject.toml	typer	MIT	license_expression	PERMISSIVE
+moarshy/mcp-tutor	pyproject.toml	uv	MIT OR Apache-2.0	license_expression	PERMISSIVE
+microsoft/agent-framework	python/pyproject.toml	agent-framework-core	MIT License	classifier	PERMISSIVE
+LearningEquality/kolibri	requirements.txt	-	-	parsed-zero	NO-DEPS
+oppia/oppia	requirements.txt	annotated-types	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	anyio	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	apache-beam	Apache License, Version 2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	attrs	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	azure-cognitiveservices-speech	Other/Proprietary License	classifier	UNKNOWN
+oppia/oppia	requirements.txt	beautifulsoup4	MIT License	license	PERMISSIVE
+oppia/oppia	requirements.txt	bleach	Apache Software License	license	PERMISSIVE
+oppia/oppia	requirements.txt	cachecontrol	Apache-2.0	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	cachetools	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	certifi	MPL-2.0	license	WEAK-COPYLEFT
+oppia/oppia	requirements.txt	cffi	MIT-0	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	charset-normalizer	MIT	license	PERMISSIVE
+oppia/oppia	requirements.txt	crcmod	MIT	license	PERMISSIVE
+oppia/oppia	requirements.txt	cryptography	Apache-2.0 OR BSD-3-Clause	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	deepdiff	MIT License	classifier	PERMISSIVE
+oppia/oppia	requirements.txt	defusedxml	PSFL	license	PERMISSIVE
+oppia/oppia	requirements.txt	dill	BSD-3-Clause	license	PERMISSIVE
+oppia/oppia	requirements.txt	distro	Apache License, Version 2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	dnspython	ISC	license	PERMISSIVE
+oppia/oppia	requirements.txt	docopt	MIT	license	PERMISSIVE
+oppia/oppia	requirements.txt	docstring-parser	MIT	license	PERMISSIVE
+oppia/oppia	requirements.txt	faiss-cpu	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	fastavro	MIT	license	PERMISSIVE
+oppia/oppia	requirements.txt	fasteners	Apache-2.0	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	filetype	MIT	license	PERMISSIVE
+oppia/oppia	requirements.txt	firebase-admin	Apache License 2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	future	MIT	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-api-core	Apache 2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-api-python-client	Apache 2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-apitools	Apache 2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-auth	Apache 2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-auth-httplib2	Apache 2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-aiplatform	Apache 2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-appengine-logging	Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-audit-log	Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-bigquery	Apache 2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-bigquery-storage	Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-bigtable	Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-core	Apache 2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-dataflow-client	Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-datastore	Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-dlp	Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-firestore	Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-language	Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-logging	Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-monitoring	Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-ndb	Apache 2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-pubsub	Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-pubsublite	Apache 2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-recommendations-ai	Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-resource-manager	Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-secret-manager	Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-spanner	Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-storage	Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-tasks	Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-translate	Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-videointelligence	Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-cloud-vision	Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-crc32c	Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	google-genai	Apache-2.0	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	google-resumable-media	Apache 2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	googleapis-common-protos	Apache-2.0	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	grpc-google-iam-v1	Apache 2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	grpc-interceptor	MIT	license	PERMISSIVE
+oppia/oppia	requirements.txt	grpcio	Apache-2.0	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	grpcio-status	Apache-2.0	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	gunicorn	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	h11	MIT	license	PERMISSIVE
+oppia/oppia	requirements.txt	h2	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	hdfs	MIT	license	PERMISSIVE
+oppia/oppia	requirements.txt	hpack	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	httpcore	BSD-3-Clause	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	httplib2	MIT	license	PERMISSIVE
+oppia/oppia	requirements.txt	httpx	BSD-3-Clause	license	PERMISSIVE
+oppia/oppia	requirements.txt	hyperframe	The MIT License (MIT)  Copyright (c) 2014 Cory Benfield  Per	license	PERMISSIVE
+oppia/oppia	requirements.txt	idna	BSD-3-Clause	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	jaraco-classes	MIT License	classifier	PERMISSIVE
+oppia/oppia	requirements.txt	jaraco-context	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	jaraco-functools	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	jeepney	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	jsonpickle	BSD-3-Clause	license	PERMISSIVE
+oppia/oppia	requirements.txt	jsonschema	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	jsonschema-specifications	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	keyring	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	keyrings-google-artifactregistry-auth	Apache Software License	classifier	PERMISSIVE
+oppia/oppia	requirements.txt	mailchimp3	MIT	license	PERMISSIVE
+oppia/oppia	requirements.txt	milvus-lite	Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	mmh3	MIT License                  Copyright (c) 2011-2026 Hajime 	license	PERMISSIVE
+oppia/oppia	requirements.txt	more-itertools	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	msgpack	Apache-2.0	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	mutagen	GPL-2.0-or-later	license_expression	STRONG-COPYLEFT
+oppia/oppia	requirements.txt	numpy	BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	oauth2client	Apache 2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	objsize	BSD-3-Clause	license	PERMISSIVE
+oppia/oppia	requirements.txt	opentelemetry-api	Apache-2.0	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	opentelemetry-resourcedetector-gcp	Apache-2.0	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	opentelemetry-sdk	Apache-2.0	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	opentelemetry-semantic-conventions	Apache-2.0	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	orderly-set	MIT License	classifier	PERMISSIVE
+oppia/oppia	requirements.txt	orjson	MPL-2.0 AND (Apache-2.0 OR MIT)	license_expression	WEAK-COPYLEFT
+oppia/oppia	requirements.txt	overrides	Apache License, Version 2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	packaging	Apache-2.0 OR BSD-2-Clause	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	pandas	BSD 3-Clause License                    Copyright (c) 2008-2	license	PERMISSIVE
+oppia/oppia	requirements.txt	pillow	MIT-CMU	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	pluggy	MIT	license	PERMISSIVE
+oppia/oppia	requirements.txt	proto-plus	Apache 2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	protobuf	3-Clause BSD License	license	PERMISSIVE
+oppia/oppia	requirements.txt	pyarrow	Apache-2.0	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	pyarrow-hotfix	Apache License, Version 2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	pyasn1	BSD-2-Clause	license	PERMISSIVE
+oppia/oppia	requirements.txt	pyasn1-modules	BSD	license	PERMISSIVE
+oppia/oppia	requirements.txt	pycparser	BSD-3-Clause	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	pydantic	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	pydantic-core	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	pydot	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	pyjwt	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	pylatexenc	MIT	license	PERMISSIVE
+oppia/oppia	requirements.txt	pymemcache	Apache License 2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	pymilvus	Apache Software License	classifier	PERMISSIVE
+oppia/oppia	requirements.txt	pymongo	Apache-2.0	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	pyopenssl	Apache License, Version 2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	pyparsing	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	python-dateutil	Dual License	license	UNKNOWN
+oppia/oppia	requirements.txt	python-dotenv	BSD-3-Clause	license	PERMISSIVE
+oppia/oppia	requirements.txt	pytz	MIT	license	PERMISSIVE
+oppia/oppia	requirements.txt	pyyaml	MIT	license	PERMISSIVE
+oppia/oppia	requirements.txt	redis	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	referencing	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	regex	Apache-2.0 AND CNRI-Python	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	requests	Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	requests-mock	Apache-2	license	PERMISSIVE
+oppia/oppia	requirements.txt	result	MIT	license	PERMISSIVE
+oppia/oppia	requirements.txt	rpds-py	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	rsa	Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	secretstorage	BSD-3-Clause	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	shapely	BSD 3-Clause	license	PERMISSIVE
+oppia/oppia	requirements.txt	six	MIT	license	PERMISSIVE
+oppia/oppia	requirements.txt	sniffio	MIT OR Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	sortedcontainers	Apache 2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	soupsieve	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	sqlparse	BSD License	classifier	PERMISSIVE
+oppia/oppia	requirements.txt	tenacity	Apache 2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	typing-extensions	PSF-2.0	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	typing-inspection	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	ujson	BSD-3-Clause AND TCL	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	uritemplate	BSD 3-Clause OR Apache-2.0	license	PERMISSIVE
+oppia/oppia	requirements.txt	urllib3	MIT	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	webapp2	Apache Software License	license	PERMISSIVE
+oppia/oppia	requirements.txt	webencodings	BSD License	classifier	PERMISSIVE
+oppia/oppia	requirements.txt	webob	MIT	license	PERMISSIVE
+oppia/oppia	requirements.txt	websockets	BSD-3-Clause	license_expression	PERMISSIVE
+oppia/oppia	requirements.txt	zstandard	BSD-3-Clause	license_expression	PERMISSIVE
+ronantakizawa/a11ymcp	package.json	@axe-core/puppeteer	MPL-2.0	version.license	WEAK-COPYLEFT
+ronantakizawa/a11ymcp	package.json	@modelcontextprotocol/sdk	MIT	version.license	PERMISSIVE
+ronantakizawa/a11ymcp	package.json	axe-core	MPL-2.0	version.license	WEAK-COPYLEFT
+ronantakizawa/a11ymcp	package.json	puppeteer	Apache-2.0	version.license	PERMISSIVE
+ronantakizawa/a11ymcp	package.json	puppeteer-core	Apache-2.0	version.license	PERMISSIVE
+ankimcp/anki-mcp-server	package.json	@modelcontextprotocol/core	Apache-2.0	version.license	PERMISSIVE
+ankimcp/anki-mcp-server	package.json	@modelcontextprotocol/node	Apache-2.0	version.license	PERMISSIVE
+ankimcp/anki-mcp-server	package.json	@modelcontextprotocol/server	Apache-2.0	version.license	PERMISSIVE
+ankimcp/anki-mcp-server	package.json	@nestjs/common	MIT	version.license	PERMISSIVE
+ankimcp/anki-mcp-server	package.json	@nestjs/config	MIT	version.license	PERMISSIVE
+ankimcp/anki-mcp-server	package.json	@nestjs/core	MIT	version.license	PERMISSIVE
+ankimcp/anki-mcp-server	package.json	@nestjs/microservices	MIT	version.license	PERMISSIVE
+ankimcp/anki-mcp-server	package.json	@nestjs/platform-express	MIT	version.license	PERMISSIVE
+ankimcp/anki-mcp-server	package.json	@rekog/mcp-nest	MIT	version.license	PERMISSIVE
+ankimcp/anki-mcp-server	package.json	async-mutex	MIT	version.license	PERMISSIVE
+ankimcp/anki-mcp-server	package.json	commander	MIT	version.license	PERMISSIVE
+ankimcp/anki-mcp-server	package.json	ipaddr.js	MIT	version.license	PERMISSIVE
+ankimcp/anki-mcp-server	package.json	ky	MIT	version.license	PERMISSIVE
+ankimcp/anki-mcp-server	package.json	mime	MIT	version.license	PERMISSIVE
+ankimcp/anki-mcp-server	package.json	pino	MIT	version.license	PERMISSIVE
+ankimcp/anki-mcp-server	package.json	pino-pretty	MIT	version.license	PERMISSIVE
+ankimcp/anki-mcp-server	package.json	reflect-metadata	Apache-2.0	version.license	PERMISSIVE
+ankimcp/anki-mcp-server	package.json	remark-parse	MIT	version.license	PERMISSIVE
+ankimcp/anki-mcp-server	package.json	rxjs	Apache-2.0	version.license	PERMISSIVE
+ankimcp/anki-mcp-server	package.json	unified	MIT	version.license	PERMISSIVE
+ankimcp/anki-mcp-server	package.json	update-notifier	BSD-2-Clause	version.license	PERMISSIVE
+ankimcp/anki-mcp-server	package.json	ws	MIT	version.license	PERMISSIVE
+ankimcp/anki-mcp-server	package.json	zod	MIT	version.license	PERMISSIVE
+ankimcp/anki-mcp-server	package.json	zod-to-json-schema	ISC	version.license	PERMISSIVE
+zijinz456/OpenTutor	package.json	-	-	parsed-zero	NO-DEPS
+CAHLR/OATutor	package.json	@common/global-config		http-404	UNKNOWN
+CAHLR/OATutor	package.json	@material-ui/core	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	@material-ui/icons	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	algebrite	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	await-to-js	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	aws-sdk	Apache-2.0	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	axios	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	canvas-confetti	ISC	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	clsx	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	crypto-js	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	equation-editor-react	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	expr-eval	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	firebase	Apache-2.0	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	http2	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	list-react-files	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	localforage	Apache-2.0	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	mathlive	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	random-seed	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	react	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	react-cursor-position	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	react-dom	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	react-katex	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	react-markdown	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	react-medium-image-zoom	BSD-3-Clause	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	react-router-dom	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	react-scripts	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	react-scroll	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	react-toastify	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	rehype-katex	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	remark-gfm	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	remark-math	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	speech-rule-engine	Apache-2.0	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	typeface-roboto	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	underscore	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	universal-cookie	MIT	version.license	PERMISSIVE
+CAHLR/OATutor	package.json	use-window-focus	MIT	version.license	PERMISSIVE
+Selleo/mentingo	package.json	-	-	parsed-zero	NO-DEPS
+peancor/moodle-mcp-server	package.json	@modelcontextprotocol/sdk	MIT	version.license	PERMISSIVE
+peancor/moodle-mcp-server	package.json	axios	MIT	version.license	PERMISSIVE
+tomaszboloz/WCAG-Accessibility-Skills	package.json	-	-	parsed-zero	NO-DEPS
+Miaotofu01/Study-Mate	package.json	-	-	parsed-zero	NO-DEPS
+LearningEquality/kolibri	pyproject.toml#base	cheroot	BSD License	classifier	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	click	BSD-3-Clause	license_expression	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	colorama	BSD License	classifier	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	colorlog	MIT License	license	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	configobj	BSD-3-Clause	license	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	diskcache	Apache 2.0	license	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	django	BSD-3-Clause	license_expression	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	django-csp	BSD	license	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	django-filter	BSD License	classifier	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	django-js-reverse	MIT	license	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	django-mptt	MIT-License	license	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	django-redis-cache	BSD	license	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	django-sortedm2m	BSD	license	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	djangorestframework	BSD-3-Clause	license_expression	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	html5lib	MIT License	license	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	idna	BSD-3-Clause	license_expression	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	ifaddr	MIT	license	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	importlib-metadata	Apache-2.0	license_expression	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	importlib_resources	Apache-2.0	license_expression	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	json-schema-validator	GNU Library or Lesser General Public License (LGPL)	classifier	WEAK-COPYLEFT
+LearningEquality/kolibri	pyproject.toml#base	jsonfield	MIT	license_expression	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	le-utils	MIT	license_expression	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	magicbus	BSD License	classifier	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	morango	MIT	license	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	python-dateutil	Dual License	license	UNKNOWN
+LearningEquality/kolibri	pyproject.toml#base	pytz	MIT	license	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	redis	MIT	license_expression	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	requests	Apache-2.0	license	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	semver	Copyright (c) 2013, Konstantine Rybnikov         All rights 	license	UNKNOWN
+LearningEquality/kolibri	pyproject.toml#base	tzlocal	MIT	license_expression	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	whitenoise	MIT	license_expression	PERMISSIVE
+LearningEquality/kolibri	pyproject.toml#base	zeroconf-py2compat	LGPL	license	WEAK-COPYLEFT

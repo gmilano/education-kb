@@ -3210,3 +3210,65 @@ any of them to a client.**
 | **APAC** | **Vietnam**: the prize is **2027-09-01** (education's 18-month extension), the filing is the one-stop portal transition plan, and Decision **33/2026/QĐ-TTg** names the three education categories — uncontrolled-source self-learning content, automated assessment/grading/ranking, and **biometric** behaviour monitoring. **Korea**: fines are deferred to ~**2027-07-21**, but 🔴 **generated-content labelling has no grace at all**, so the labelling limb ships immediately | The artefact set |
 | **LATAM** | **Peru** is the one market with a live, education-naming obligation — **activated 2026-09-10**, staged **1–4 years from September 2025** by sector and size, requiring algorithmic-transparency mechanisms for high-risk systems. 🔴 **Brazil has no AI statute in force** (PL 2338/2023 still in the Chamber, vote deferred past the October elections), so there the pitch is readiness, not compliance | The evidence pack, which is cheap to re-file once a statute lands |
 | **North America** | ⚠️ **There is no transition article, because there is no binding federal high-risk statute.** P28 sells against the **procurement rubric** (see P24) and against **state** duties that attach at enactment — California **AB 1159** on student data, Oklahoma and Maryland on human oversight. The one real date is the DOJ ADA Title II IFR: **2027-04-26** for entities serving ≥50,000, **2028-04-26** below that | The accessibility queue, which is the North American half of this engagement |
+
+---
+
+## P-DEPENDENCY-CLOSURE — The dependency-closure clearance (run it before the proposal, not after the build)
+
+> 🟢 **Cite this pattern as `P-DEPENDENCY-CLOSURE`**, not as a number. The pattern-number space in
+> this file has **6 numbers carrying 2–3 competing definitions each** (`P25`–`P30`), and
+> `compose/code/pattern-citation-audit/` now asserts against adding a seventh. A content key cannot
+> collide and cannot dangle.
+
+**The engagement problem.** Every recommendation in this KB rests on a licence read from the
+repository's own `LICENSE` payload — rigorously, reproducibly, and **one declaration short.** A
+client contract is not signed against the code a maintainer wrote; it is signed against **the build
+you hand over**, which includes everything the manifest pulls in. Measured on this shelf: **4 of 13**
+audited projects install something their own licence does not cover, and the single most-starred
+asset in this KB — **DeepTutor, Apache-2.0, 40.8k★** — installs **AGPL-3.0-or-pay-Artifex** through
+`PyMuPDF`.
+
+**When to run it.** During discovery, before any fixed-price commitment on an open-source education
+build. ⚠️ **The cost asymmetry is the entire argument: one command during discovery, versus a
+source-disclosure obligation or an emergency commercial licence after a hosted tutor has shipped.**
+
+### The recipe, concretely
+
+| Step | Component | Licence | What it does |
+|---|---|---|---|
+| 1 | `compose/code/dependency-licence-closure/resolve.py` | this KB | Reads each candidate's manifest from `raw.githubusercontent.com/<slug>/<ref>/<path>` at a **pinned ref**, parses the direct runtime deps, resolves each one against `pypi.org/pypi/<name>/json` or `registry.npmjs.org/<name>`, and classifies it into five classes |
+| 2 | `dep_licence.py` classifier | this KB | `NONCOMMERCIAL` → `STRONG-COPYLEFT` → `WEAK-COPYLEFT` → `PERMISSIVE` → `UNKNOWN`, **in that order** — `AGPL`, `GPL` and `LGPL` all contain the substring `GPL`, and collapsing them is the difference between one real finding and forty false ones. **48/48 offline assertions** |
+| 3 | the four manifest shapes | — | `pyproject.toml` (PEP 621), `pyproject.toml#<group>` (**PEP 735** — required for Kolibri, whose `[project].dependencies` is literally `[]`), `requirements.txt`, `package.json` (runtime `dependencies` only, never `devDependencies`) |
+| 4 | **the positive control** | — | ⚠️ **Do not ship a closure report without one.** At least one target must come back a **genuine zero** — here, `tomaszboloz/WCAG-Accessibility-Skills`, whose manifest confirms its own documented *"no production dependencies"*. An instrument that cannot tell "zero declared" from "I read the wrong file" is measuring nothing |
+| 5 | the verdict, written for counsel | — | `BLOCKER` (non-commercial — no linkage argument rescues it) · `REVIEW-STRONG` · `REVIEW-WEAK` · `REVIEW-UNKNOWN` · `CLEAN`. ⚠️ **`REVIEW-*` means "a lawyer should read this row", never "this is a violation"** |
+| 6 | the remediation choice | — | For a `REVIEW-STRONG` row: **comply** for the embedding service, **buy** the commercial grant, or **replace** the component. For DeepTutor's `PyMuPDF` the third is usually cheapest — the PDF layer is swappable, and `pypdf` (**BSD-3-Clause**, verified this pass via `license_expression`) is the drop-in candidate to evaluate |
+
+### What the deliverable is
+
+🟢 **A one-page table per candidate: its licence, its declared direct dependency count, its verdict,
+and the specific rows that produced the verdict** — plus the three limits stated on the page itself,
+because a verdict quoted past its limits becomes wrong data:
+
+1. **Depth 1 only.** Transitive dependencies are not measured. `certifi` (MPL-2.0) is in nearly
+   every Python deployment and surfaced here only where it was declared directly.
+2. **Linkage is not analysed.** Whether an AGPL import makes the importer a derivative work depends
+   on how the thing is used and distributed.
+3. ⚠️ **"Not measured" is never reported as "clean."** Workspace roots (`mentingo`, `OpenTutor`)
+   keep their runtime deps in `apps/*` and were left explicitly unmeasured.
+
+### Why it sells in all four regions, and differently in each
+
+| Region | The buying reason |
+|---|---|
+| **North America** | No sector regulator to point at, so **counsel and procurement** are the gate. The closure report is the artefact that clears a district's or university's legal review |
+| **EMEA** | Lands inside obligations that already exist — the **EAA** evidence route (no harmonised standard cited) and **AI Act** Annex III duties from **2027-12-02** both reward documented provenance, and a resolved manifest is that class of evidence |
+| **APAC** | **Sovereignty is the buying criterion**, and this report is a sovereignty document: it names every third-party grant entering a national deployment. Attaches directly to Vietnam's portal transition plan and Korea's high-impact filings |
+| **LATAM** | The permissive stack **is** the budget strategy, so a copyleft dependency threatens the **cost case**, not just the legal one. ⚠️ **Kolibri — the platform this KB's equity pattern is built on — came back `REVIEW-WEAK` with two LGPL rows**, in the region where that matters most |
+
+### Sizing
+
+**2–4 days** for a shelf of 10–15 candidates, most of it reading rather than coding, since the
+instrument already exists and runs offline except for the two registry endpoints. 🟢 **Best sold as a
+bundled discovery artefact rather than a standalone engagement** — it is a trust signal the client
+can verify in one command, and on this KB's own shelf it surfaced a real finding in **4 of 13**
+projects.

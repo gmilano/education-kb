@@ -1,0 +1,14 @@
+
+== verdicts ==
+HKUDS/DeepTutor                                pyproject.toml    43 deps  REVIEW-STRONG
+huggingface/smolagents                         pyproject.toml     6 deps  CLEAN
+vishalsachdev/canvas-mcp                       pyproject.toml     7 deps  REVIEW-UNKNOWN
+towardsai/ai-tutor-app                         pyproject.toml    20 deps  CLEAN
+SirhanMacx/Claw-ED                             pyproject.toml    14 deps  CLEAN
+moarshy/mcp-tutor                              pyproject.toml    10 deps  CLEAN
+microsoft/agent-framework                      python/pyproject.toml   1 deps  CLEAN
+oppia/oppia                                    requirements.txt 152 deps  REVIEW-STRONG
+ronantakizawa/a11ymcp                          package.json       5 deps  REVIEW-WEAK
+ankimcp/anki-mcp-server                        package.json      24 deps  CLEAN
+CAHLR/OATutor                                  package.json      36 deps  REVIEW-UNKNOWN
+peancor/moodle-mcp-server                      package.json       2 deps  CLEAN

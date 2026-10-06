@@ -8,7 +8,7 @@ convencion "## Pn -". Si alguien simplifica el detector, estos casos lo atrapan.
 import os, sys, tempfile, unittest
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from audit_patterns import definitions, citations
+from audit_patterns import definitions, citations, duplicate_definitions
 
 
 def kb(patterns_text, extra=None):
@@ -71,6 +71,57 @@ class DesanclaDetector(unittest.TestCase):
         d = definitions(os.path.join(kb('texto que menciona **P135** sin encabezado\n'),
                                      'compose/patterns.md'))
         self.assertNotIn(135, d)
+
+
+class TestDuplicateDefinitions(unittest.TestCase):
+    """La asercion que el pase 20 del 2026-10-06 dejo escrita y no implementada:
+    que cada numero resuelva a EXACTAMENTE una definicion, no a AL MENOS una."""
+
+    def _dups(self, text):
+        import tempfile, os
+        fd, path = tempfile.mkstemp(suffix='.md')
+        with os.fdopen(fd, 'w', encoding='utf-8') as fh:
+            fh.write(text)
+        try:
+            return duplicate_definitions(path)
+        finally:
+            os.unlink(path)
+
+    def test_un_numero_una_definicion_no_es_duplicado(self):
+        self.assertEqual(self._dups('## P5 \u2014 uno\n## P6 \u2014 otro\n'), {})
+
+    def test_dos_definiciones_del_mismo_numero_SI_es_duplicado(self):
+        """El caso real: dos patrones DISTINTOS peleando por un numero."""
+        d = self._dups('## P28 \u2014 gestion escolar brasilena\n'
+                       '## P28 \u2014 integracion administrativa K-12\n')
+        self.assertEqual(d, {28: 2})
+
+    def test_tres_definiciones_se_cuentan_tres(self):
+        d = self._dups('## P28 \u2014 a\n## P28 \u2014 b\n## P28 \u2014 c\n')
+        self.assertEqual(d, {28: 3})
+
+    def test_COLGADA_no_es_DUPLICADA(self):
+        """\U0001f535 Las dos fallas son del mismo namespace y NO son la misma:
+        un numero citado y nunca definido no es un numero definido dos veces.
+        El detector de la primera es ciego a la segunda por construccion."""
+        self.assertEqual(self._dups('Ver **P126**, que nadie definio.\n'), {})
+
+    def test_seccion_de_ACTUALIZACION_no_es_una_segunda_definicion(self):
+        """\U0001f534 El falso positivo que corrige la cifra del pase 20.
+
+        `## P1 update, fourteenth pass ...` es una nota sobre P1, no un segundo
+        patron llamado P1. El pase 20 conto `^## P1` -- la ORTOGRAFIA -- y
+        reporto 7 numeros duplicados; contando el OBJETO son 6. Es exactamente
+        la familia de defectos que el docstring de este mismo instrumento
+        advierte: el ancla reconoce una ortografia y no un objeto."""
+        d = self._dups('## P1 \u2014 LTI + MCP side-car tutor\n'
+                       '## P1 update, fourteenth pass \u2014 cuatro puertas\n')
+        self.assertEqual(d, {})
+
+    def test_encabezado_de_RANGO_no_colisiona_con_su_numero_bajo(self):
+        """`## P145-P148` define cuatro numeros a proposito."""
+        d = self._dups('## P145\u2014P148, los patrones del pase 55\n')
+        self.assertEqual(d, {})
 
 
 if __name__ == '__main__':

@@ -83,6 +83,66 @@ in this category.
 | nanobot-study | [WangyiNTU/nanobot-study](https://github.com/WangyiNTU/nanobot-study) | MIT (`LICENSE`) | 18 | enablement | Guided 3-day study plan built on nanobot (~3k lines of Python) with a Socratic tutor. Small enough to read end-to-end, which is exactly what an enablement asset needs to be. |
 | Scientific-learning-skills | [hwl668/Scientific-learning-skills-](https://github.com/hwl668/Scientific-learning-skills-) | MIT (`LICENSE`) | 15 | skill | Diagnosis-first skills that turn an assistant "from answer machine into learning tutor". |
 
+### The dependency closure — added in the twenty-first pass of 2026-10-06
+
+⚠️ **Read this table before quoting any row above as "permissive, safe to build on".** Every licence
+in this file answers *"what is this project?"*. This table answers **"what does it install?"** —
+and for two rows the two answers disagree in a way that reaches a client contract.
+
+Measured first-hand on 2026-10-06 from `pypi.org/pypi/<name>/json` and
+`registry.npmjs.org/<name>`, depth 1 (**declared direct runtime dependencies only**). Instrument,
+method and limits: `compose/code/dependency-licence-closure/`.
+
+| Project | Its licence | Deps | Verdict | The dependency that decides it |
+|---|---|---|---|---|
+| **DeepTutor** | Apache-2.0 | 43 | 🔴 **REVIEW-STRONG** | **`PyMuPDF>=1.26.0`**, core array — `Dual Licensed - GNU AFFERO GPL 3.0 or Artifex Commercial License` (v1.28.2). **AGPL, or pay Artifex, or replace the PDF layer** |
+| **Oppia** | Apache-2.0 | 152 | 🔴 **REVIEW-STRONG** | **`mutagen`** → `GPL-2.0-or-later`. Also `certifi` (MPL-2.0), `orjson` (`MPL-2.0 AND (Apache-2.0 OR MIT)`), `azure-cognitiveservices-speech` (`Other/Proprietary License`) |
+| **Kolibri** | MIT | 32 | ⚠️ **REVIEW-WEAK** | `json-schema-validator` (LGPL), `zeroconf-py2compat` (LGPL). ⚠️ Measurable **only** via `[dependency-groups] base` — see the note below |
+| **A11y MCP** | MIT | 5 | ⚠️ **REVIEW-WEAK** | **`axe-core` + `@axe-core/puppeteer` → MPL-2.0.** This file already named both deps and omitted the grant |
+| **Canvas MCP** | MIT | 7 | 🔴 **REVIEW-UNKNOWN** | `python-dateutil` publishes the string `"Dual License"`, naming neither half |
+| **OATutor** | MIT | 36 | 🔴 **REVIEW-UNKNOWN** | declares **`@common/global-config`**, which **404s on npm** — a declared name the registry does not serve |
+| **smolagents** | Apache-2.0 | 6 | 🟢 **CLEAN** | — |
+| **anki-mcp-server** | MIT | 24 | 🟢 **CLEAN** | — |
+| **ai-tutor-app** | Apache-2.0 | 20 | 🟢 **CLEAN** | — |
+| **Claw-ED** | MIT | 14 | 🟢 **CLEAN** | — |
+| **mcp-tutor** | — | 10 | 🟢 **CLEAN** | — |
+| **Moodle MCP Server** | MIT | 2 | 🟢 **CLEAN** | — |
+| **MAF** | MIT | 1 | ⚠️ **CLEAN, and uninformative** | one dep, `agent-framework-core[all]==1.20.0`; the closure is a level down |
+| **WCAG Accessibility Skills** | MIT | **0** | 🟢 **CLEAN, genuine zero** | 🟢 **Confirms this file's own claim of "no production dependencies"** through an independent channel |
+
+**Totals: 13 measurable targets, 352 declared direct dependencies — 337 permissive (95.7%), 7
+weak-copyleft, 6 unreadable, 2 strong-copyleft.**
+
+🟢 **The shelf is overwhelmingly clean, and that is the headline, not a hedge.** 95.7% permissive at
+depth 1 means twenty passes of licence curation worked. What this channel adds is that *"probably
+fine"* is now **two named rows in two named projects**, each fixable before a proposal goes out.
+
+⚠️ **Three limits, because a verdict quoted past them becomes wrong data:**
+
+1. **Depth 1 is not the closure.** Transitive dependencies are not measured. `certifi` (MPL-2.0) sits
+   in nearly every Python deployment and surfaced here only in Oppia, which declares it directly.
+2. **Linkage is not analysed.** `REVIEW-*` means *"a lawyer should look at this specific row"*, not
+   *"this is a violation"*. Whether importing an AGPL library makes the importer a derivative work
+   depends on how it is used and shipped.
+3. 🔴 **Three rows above are not yet measured at all** — `Selleo/mentingo` and `zijinz456/OpenTutor`
+   are pnpm **workspace roots** whose runtime deps live in `apps/*`, and `Miaotofu01/Study-Mate`
+   carries a vestigial `package.json`. ⚠️ **"Not measured" is not "clean" and this table does not
+   list them as clean.**
+
+### 🔴 The Kolibri trap, recorded because it generalises
+
+🔴 **Kolibri serves `requirements.txt` at HTTP 200 and the file declares nothing** — its header says
+it exists *"only as the sink for any EXTRA_REQUIREMENTS injected at build time"* — **and its
+`pyproject.toml` declares `dependencies = []`, literally empty.** The real runtime set is in
+**`[dependency-groups] base`** (PEP 735), resolved by `make staticdeps`.
+
+⚠️ **So both canonical places answer "nothing", and both answers are wrong.** A sweep keyed on
+filename reports *"Kolibri has zero dependencies"*, which is not a missing measurement but a
+confident wrong one. 🔵 **The general rule this leaves: a 200 on a manifest is evidence the file
+exists, never evidence it declares anything** — and in this KB, Kolibri is the only fully permissive
+end-to-end platform and the basis of the equity-deployment pattern, so a wrong zero there would have
+travelled into every offline engagement.
+
 ### Measured rejections from the same sweep
 
 High stars, unusable for reusable studio IP. Recorded so the next pass does not

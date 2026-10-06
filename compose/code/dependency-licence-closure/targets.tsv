@@ -1,0 +1,24 @@
+# slug	ref	manifest	ecosystem
+# Python side of the shelf
+HKUDS/DeepTutor	main	pyproject.toml	pypi
+huggingface/smolagents	main	pyproject.toml	pypi
+vishalsachdev/canvas-mcp	main	pyproject.toml	pypi
+towardsai/ai-tutor-app	main	pyproject.toml	pypi
+SirhanMacx/Claw-ED	main	pyproject.toml	pypi
+moarshy/mcp-tutor	main	pyproject.toml	pypi
+microsoft/agent-framework	main	python/pyproject.toml	pypi
+# Kolibri is listed TWICE on purpose: the requirements.txt row records that the
+# file exists, returns 200 and declares NOTHING (a deliberate build-time sink),
+# and the #base row is where the runtime set actually lives.
+LearningEquality/kolibri	develop	requirements.txt	pypi
+LearningEquality/kolibri	develop	pyproject.toml#base	pypi
+oppia/oppia	develop	requirements.txt	pypi
+# npm side of the shelf
+ronantakizawa/a11ymcp	main	package.json	npm
+ankimcp/anki-mcp-server	main	package.json	npm
+zijinz456/OpenTutor	main	package.json	npm
+CAHLR/OATutor	main	package.json	npm
+Selleo/mentingo	main	package.json	npm
+peancor/moodle-mcp-server	main	package.json	npm
+tomaszboloz/WCAG-Accessibility-Skills	main	package.json	npm
+Miaotofu01/Study-Mate	main	package.json	npm
