@@ -88,3 +88,58 @@ interno pasa `raw=True`; el próximo que importe la función hereda la floja sin
 
 🟢 **La regla: cuando una función tiene una versión segura y una lenient, la segura es el DEFAULT y
 la lenient se PIDE.** Una regla que vive en `lib/` pero detrás de un flag no viajó: viajó a medias.
+
+---
+
+## `probe_payload.sh` — el bucle, no sólo el clasificador
+
+**Pase 15 del 2026-10-06 (capa SIS/MIS).**
+
+Este directorio existía ya, con la regla escrita arriba, y **se rompió otra vez**. El pase 15
+escribió su propio bucle de sondeo (`curl` + `grep`) sin hacer `source` de
+`license_family.sh`, y reportó **cuatro** payloads **GPL-3.0/AGPL-3.0** como Creative
+Commons/NonCommercial (`SapuSeven/BetterUntis` 300★, `TEAMSchools/powerschool`,
+`sikkepitje/TeamSync`, `sas-fossdev/saspes`).
+
+🔴 **La causa ya estaba medida en esta base**: el cuerpo de GPL-3.0 dice *«noncommercially»*
+en su sección 6, **línea 259 del payload**, y `license_family.sh` ya lo resolvía con una
+compuerta — la rama Creative Commons se entra sólo con un marcador CC, y `NonCommercial` se
+lee después como **atributo** de una familia CC, nunca como familia propia. 🟢 **Probado este
+pase, la librería acierta los tres payloads difíciles a la primera: `GPL-3.0`, `AGPL-3.0`,
+`CC-BY-NC-SA-4.0`.**
+
+🔵 **El diagnóstico, y es la razón de este archivo nuevo.** La pregunta de **familia** tenía
+control; el **bucle que la rodea** no. Así que cada pase seguía escribiendo el `curl` y el
+`grep` a mano y, mientras lo escribía, **volvía a elegir el clasificador también.** La regla
+«hacé `source` de la librería» no se cumple porque escribir seis líneas de `grep` es más
+barato que encontrar la librería.
+
+🟢 **`probe_payload.sh` es ese bucle.** `probe_repo <owner/repo>` devuelve TSV
+`repo · rama · archivo · bytes · familia · titular`, clasificando con `family_of()` y
+`holder_of()` de `license_family.sh`. **Un control que nadie tiene que ensamblar es el único
+que se usa.**
+
+Cierra además **tres trampas medidas en repositorios reales del pase 15**, no en fixtures:
+
+| # | Trampa | Especímenes reales |
+|---|---|---|
+| 1 | 🔴 **La rama por defecto no es `main` ni `master`** | `GibbonEdu/core` → **`v31.0.00`** · `portabilis/i-educar` → **`2.12`** · `francoisjacquet/rosariosis` → **`mobile`** — **3 de las 5 plataformas SIS abiertas más estrelladas que existen.** Una rama hardcodeada las anota a las tres como *sin cesión*, y son **GPL**, que es una entrega muy distinta. |
+| 2 | 🔴 **La licencia vive en un subdirectorio, con mayúsculas mixtas** | `OS4ED/openSIS-Classic` guarda GPL-2.0 en **`docs/License.txt`** (con BOM). **Ninguna escalera de nombres de esta base la encontraba**; el *enlace del propio README* sí, en una petición. Por eso el enlace del README se intenta **antes** de la escalera larga. |
+| 3 | 🟢 **Ortografía británica** | `AkizumiFox/NTU-COOL-Assignment-Status-Viewer` trae `LICENCE`. El pase 14 midió la escalera completa de 20 nombres en **0 pagos sobre 98 repos** y dijo no volver a comprarla; `LICENCE` es **una** petición y pagó **1 de 44**. La lista corta de `PROBE_NAMES` es ese hallazgo, no una conjetura. |
+
+🟢 **Y un veredicto nuevo que no es una ausencia: `DECLARED-NOT-GRANTED`.** Un README que
+**apunta** a un archivo de licencia que no existe no es silencio — es un mantenedor que
+**cree** que cedió. Espécimen: [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms)
+(**103★**, el segundo servidor MCP de Canvas más estrellado) dice *«MIT License - see
+[LICENSE] file for details»* y **no trae ese archivo**. Eso es un **pedido upstream de un
+commit**, y reportarlo como «sin cesión» pierde esa distinción.
+
+⚠️ **Lo que este archivo NO contesta, y es el límite que el pase 15 encontró:** un payload
+contesta la pregunta de **copyright**. La pregunta de **acceso** —¿podemos *llamar* a este
+sistema?— vive en los Términos de Uso de un tercero, es invisible para todo sondeo de este
+directorio, y tiene su propia compuerta: **P26** en `compose/patterns.md`. El pase 15 encontró
+un componente **MIT** que es **inentregable** exactamente por eso.
+
+**Suite:** `bash lib/test_probe_payload.sh` → **12/12**. Los doce casos son repositorios
+reales y pegan a la red a propósito, por la lección de este mismo README: *un fixture lo
+bastante corto para ser cómodo es lo bastante corto para no ver el defecto.*

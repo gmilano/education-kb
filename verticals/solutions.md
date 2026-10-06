@@ -984,3 +984,82 @@ layer a Globant deliverable occupies.
 is the three things a client cannot get from an endpoint they do not host: **the code**, **the
 deployment inside their own boundary**, and **the audit trail**. Lead with those, and keep
 `langfuse` (MIT outside `ee/`) in the stack so the third one is produced automatically.
+
+## Added in the fifteenth pass of 2026-10-06 — the SIS/MIS platform tier, and why none of it is permissive
+
+This KB's platform shelf has been built around the **learning** platform — Moodle, Open edX,
+Canvas, Sunbird, Coursemology, Mentingo, Kolibri. The administrative platform — the student
+information system — had only OpenEduCat (LGPL-3.0, on Odoo), i-Educar and the Fedena
+question. This pass measured the tier properly, because the fifteenth pass's SIS integration
+work made the platform question unavoidable: *if we must integrate with a proprietary SIS,
+is there an open one to deploy instead?*
+
+**There is. It is substantial. And not one of it is permissive.**
+
+### The tier, licence read from the payload on 2026-10-06
+
+| Platform | ★ / forks | Licence (payload) | Default branch | Country / scope |
+|---|---|---|---|---|
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | **644** / 391 | ⚠️ **GPL-2.0** (15,214 B) | 🔴 `mobile` | Global, PHP — full SIS: gradebook, attendance, scheduling, billing |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | **634** / 417 | ⚠️ **GPL-3.0** (35,121 B) | 🔴 `v31.0.00` | Global, PHP — school management platform |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | **345** / 286 | ⚠️ **GPL-2.0** (17,286 B, at `docs/License.txt`) | `master` | Global, PHP — multi-institution SIS |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | *(already shelved)* | ⚠️ **GPL-2.0** (18,092 B) | 🔴 `2.12` | **LATAM** — Brazilian municipal SIS |
+| [`OS4ED/openSIS-Responsive-Design`](https://github.com/OS4ED/openSIS-Responsive-Design) | — | 🔴 **no payload found** | `master` | sibling repo of the above |
+
+🔴 **Four platforms, 1,600+ stars and 1,000+ forks between them, and the licence set is
+`{GPL-2.0, GPL-3.0}` with one ungranted sibling. Zero MIT. Zero Apache. Zero BSD.**
+
+### 🟢 This is the finding that explains the whole pass
+
+The fifteenth pass found **24 permissive assets** in the SIS space (`agents/top.md`) and
+**zero permissive SIS platforms**. That is not a coincidence, and it is the most useful
+structural fact in this file:
+
+> **You cannot fork an open SIS permissively, so all the permissive work happens at the
+> edges.** The MIT supply is in clients, wrappers, timetable decoders, MCP servers and
+> browser extensions — everything that *talks to* a student information system without
+> *being* one.
+
+🔵 **Which means the architecture decision is forced, and it is the same in every region:**
+
+| If the client wants | The answer is | Licence reality |
+|---|---|---|
+| To **replace** a proprietary SIS with open source | RosarioSIS, Gibbon or openSIS | ⚠️ **GPL — plan for it.** A Globant-delivered module that is a derivative work must be published under the same terms. The Odoo/OpenEduCat LGPL-3.0 route remains the only middle path on this page. |
+| To **add AI to** the SIS the client already runs | the integration tier (`agents/top.md`, `repos/foundations.md`) | 🟢 MIT/BSD on the code — 🔴 **and the vendor's ToU on the access.** See below. |
+| To **avoid both constraints** | official API + your own code | 🟢 permissive OneRoster/Ed-Fi implementations, already shelved in the interoperability tier |
+
+### ⚠️ The warning that outranks every licence on this page
+
+For the **second** route above, the licence is not the binding constraint. A proprietary SIS
+vendor's Terms of Use can forbid exactly the access an AI integration needs, regardless of
+how the client library is licensed. Infinite Campus's ToU — quoted in full in
+`agents/top.md`, Finding 2 — prohibits access *"by any means other than our publicly
+supported interfaces (for example, scraping or using the content to train artificial
+intelligence software)"*, and the one MIT-licensed MCP server for that platform states that
+it violates it.
+
+🔵 **Platform selection therefore acquired a new question this pass, and it goes before the
+licence question:** *does the institution hold an API agreement with its SIS vendor?* If yes,
+the integration route is open and the permissive shelf is usable. If no, the honest options
+are the official API (procure it), an open SIS (accept the GPL), or a prototype that is
+explicitly not a production path. **Run P26 before scoping either.**
+
+### A platform-tier instrument finding — 3 of 5 default branches are not `main` or `master`
+
+| Platform | Default branch |
+|---|---|
+| `GibbonEdu/core` | 🔴 **`v31.0.00`** — a version number |
+| `portabilis/i-educar` | 🔴 **`2.12`** — a release series |
+| `francoisjacquet/rosariosis` | 🔴 **`mobile`** — a feature name |
+
+🔴 **The fourteenth pass found one agent-generated default branch and called `ls-remote
+--symref` non-optional. This tier makes it unarguable: a probe that assumes `main` or
+`master` returns 404 on the three highest-starred open SIS platforms in existence** and
+writes all three down as ungranted. They are not; they are GPL, which is a very different
+engagement from unlicensed.
+
+🟢 **And one licence sat at `docs/License.txt`** (mixed case, in a subdirectory, with a
+byte-order mark) — `OS4ED/openSIS-Classic`. No filename ladder in this KB would have found
+it. **It was found by reading the README's own licence link**, which is a better instrument
+than guessing filenames: it is one request, it is authoritative, and the maintainer wrote it
+on purpose. Add it to the method ahead of the ladder.

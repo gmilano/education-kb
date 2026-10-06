@@ -1059,3 +1059,106 @@ only as a **channel**, never as a dependency:
 **The rule for this page:** the registry is a good place to *find* candidates and a
 disqualifying place to *source* them. Nothing enters this shelf from a registry listing
 without an `ls-remote` resolution and a licence payload on its real default branch.
+
+## Added in the fifteenth pass of 2026-10-06 — the SIS/MIS client layer, and why it belongs in *this* file
+
+The assets found this pass are not education products and they are not agents. They are the
+**client libraries that speak a student information system's protocol** — the layer an
+education agent stands on when the engagement is administrative rather than instructional.
+Full rows, stars and country placement in `agents/top.md` (fifteenth pass). This file records
+what they are *for*, and the two things that decide whether you may use them.
+
+Licences read from each repository's own payload on 2026-10-06; default branches confirmed
+with `ls-remote --symref`.
+
+### The layer, by protocol family
+
+| Repo | Licence (payload) | Language | Speaks to |
+|---|---|---|---|
+| [`bain3/pronotepy`](https://github.com/bain3/pronotepy) | **MIT** | Python | PRONOTE (FR) |
+| [`python-webuntis/python-webuntis`](https://github.com/python-webuntis/python-webuntis) | **BSD-2-Clause** | Python | WebUntis (DE/AT) |
+| [`aydenp/PowerSchool-API`](https://github.com/aydenp/PowerSchool-API) | **MIT** | Node.js | PowerSchool (US) |
+| [`dougpenny/PyPowerSchool`](https://github.com/dougpenny/PyPowerSchool) | **MIT** | Python | PowerSchool (US) |
+| [`grantholle/powerschool-api`](https://github.com/grantholle/powerschool-api) | **MIT** | PHP | PowerSchool (US) |
+| [`magister-api/magister`](https://github.com/magister-api/magister) | **MIT** | PHP | Magister 6 (NL) |
+| [`elisaado/somtoday.js`](https://github.com/elisaado/somtoday.js) | **MIT** | TypeScript | SOMtoday (NL) |
+| [`ivmelo/suap-api-php`](https://github.com/ivmelo/suap-api-php) | **MIT** | PHP | SUAP (BR) |
+| [`Projeto-SIAC/suap-wrapper`](https://github.com/Projeto-SIAC/suap-wrapper) | **MIT** | Node.js | SUAP (BR) |
+| [`PucaVaz/sigaa-tools`](https://github.com/PucaVaz/sigaa-tools) | **MIT** | Python | SIGAA (BR) |
+| [`untisapi/untis4j`](https://github.com/untisapi/untis4j) | ⚠️ **LGPL-3.0** | Java | WebUntis (DE/AT) |
+| [`shinyquagsire23/InfiniteCampusAPI`](https://github.com/shinyquagsire23/InfiniteCampusAPI) | ⚠️ **WTFPL v2** | Java | Infinite Campus (US) |
+
+🟢 **Ten of the twelve are MIT or BSD, and together they cover six countries in four
+protocol families.** Measured by *placed* permissive infrastructure, this is the broadest
+single shelf this KB has added in one pass.
+
+### ⚠️ Two warnings, and the second one is the reason this shelf is not a green light
+
+**1. The licence is not the binding constraint here. The vendor's Terms of Use is.**
+
+Every library above talks to a **proprietary, closed SIS**. The MIT grant covers the client
+code; it says nothing about whether you may call the endpoint. The tier documents this
+itself — `GeovaneSchmitz/sigaa-api` describes itself as *"uma biblioteca de **Web
+Scraping**"*, `kc0506/ntucool` as *"**unofficial** … use it at your own risk"*, and
+`chrischall/infinitecampus-mcp` quotes Infinite Campus's ToU forbidding access *"by any
+means other than our publicly supported interfaces (for example, scraping or using the
+content to train artificial intelligence software)"* before stating that it does exactly
+that. Full treatment in `agents/top.md`, Finding 2; the gate that operationalises it is
+**P26** in `compose/patterns.md`.
+
+🔵 **The practical rule: these libraries are excellent for a prototype, a migration, or a
+one-off data rescue the institution itself authorises — and they are not a production
+integration path unless the institution holds an API agreement with its vendor.** When it
+does, the same libraries become legitimate, because the institution's own credentials and
+contract cover the access. **The asset is fine. The access needs paperwork.**
+
+**2. Three licence shapes on this shelf would fail an automated allowlist, two of them
+wrongly.**
+
+- ⚠️ **`WTFPL v2`** (`shinyquagsire23/InfiniteCampusAPI`, 474 B payload, Sam Hocevar
+  copyright) — maximally permissive in effect, **not OSI-approved**, and rejected by name by
+  many corporate allowlists. Usable in substance; expect to justify it, and expect some
+  clients to refuse it on the name alone.
+- ⚠️ **`LGPL-3.0`** (`untisapi/untis4j`) — the middle path this KB already documents for
+  OpenEduCat: dynamic linking keeps your code yours, modifications to the library itself must
+  be published.
+- 🔴 **`CC BY-NC-SA 4.0`** (`Jona-Zwetsloot/Somtoday-Mod`) — **NonCommercial. Not usable in
+  client work at all**, and a content licence applied to software besides.
+
+⚠️ **And read these families with the shared classifier, not a fresh one.** This pass's
+from-scratch probe script mislabelled four payloads on this shelf as
+Creative Commons/NonCommercial — three GPL-3.0 and one AGPL-3.0 — because GPL-3.0 §6 contains
+the word *"noncommercially"*. 🟢 **`compose/code/lib/license_family.sh` already gets all of
+them right**, because it gates the Creative Commons branch on a CC marker before reading
+NonCommercial as an attribute. **Source the library.** See `agents/top.md`, method note 2.
+
+### The costliest absences on this shelf
+
+| Repo | ★ | Why it matters |
+|---|---|---|
+| [`SchoolUtils/WebUntis`](https://github.com/SchoolUtils/WebUntis) | **214** | The JavaScript WebUntis client, highest-starred ungranted asset in the tier. 6 filenames probed on `master`: **nothing**. |
+| [`Litarvan/pronote-api`](https://github.com/Litarvan/pronote-api) | 192 | The multi-language PRONOTE API. **Ungranted.** `pronotepy` (MIT, 241★) is the answer for Python. |
+| [`IFRN/suapi`](https://github.com/IFRN/suapi) | 28 | ⚠️ Published by the **federal institute that operates SUAP** — and ungranted, while an individual's client is MIT. One file, one commit, a public institution: **the most answerable upstream ask in this pass.** |
+| [`NCSIS/InfiniteCampus-Vendor-Integration`](https://github.com/NCSIS/InfiniteCampus-Vendor-Integration) | 13 | Vendor-integration PowerShell, ungranted. |
+
+🔵 **Pattern across all four: the ungranted assets cluster at the *most useful* layer** — the
+general-purpose client and the official-institution publication — while the permissive ones
+are language-specific ports and student tools. The same shape this KB recorded in the Canvas
+MCP cluster, now reproduced in a completely different tier.
+
+### What this adds to the architecture menu
+
+The interoperability tier added in the tenth pass (OneRoster, Ed-Fi, xAPI/LRS) and this
+client layer answer the **same** question by **different** routes, and the difference is
+entirely about who authorised the access:
+
+| Route | Grant on the code | Grant on the data | Use it for |
+|---|---|---|---|
+| **Official API** (OneRoster / Ed-Fi, permissive implementations already shelved) | permissive | **the institution's contract with its vendor** | 🟢 production |
+| **SIS client library** (this shelf) | permissive (10 of 12) | ⚠️ **none — often contrary to vendor ToU** | prototype, migration, authorised rescue |
+
+🟢 **Read together, they are the strongest architectural recommendation this KB can make for
+an administrative engagement: prototype on the client library to prove the workflow in days,
+then ship on the official API path.** The prototype is cheap and the production path is
+contractual, and conflating them is how an engagement discovers in month three that its
+integration was never licensable.

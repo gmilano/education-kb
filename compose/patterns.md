@@ -2388,3 +2388,152 @@ grading from a vendor, execution in a sandbox, and mastery tracking.
   measured are licensed shut — Khan's dataset permits evaluation and forbids redistribution,
   production use and training; `CSTutorBench` is CC BY-NC. Evaluate with them where their
   terms allow, ship **none** of them, and keep the harness (P23) as the asset.
+
+## P25 — The SIS integration engagement (wrap an MIT client; do not build the client, do not wait for a licensed MCP server)
+
+**When to use it.** The client is a school district, a university or a federal institute, and
+the ask is administrative rather than instructional: attendance, grades, scheduling,
+guardian communication, enrolment, "an assistant that answers questions about our student
+data." This is the shape of most K-12 engagements and most public-sector higher-education
+engagements in Brazil.
+
+**The finding it is built on** (fifteenth pass, `agents/top.md` Finding 4): in the
+PowerSchool tier, **both MCP servers are ungranted and three of four API clients are MIT**.
+The grant sits exactly one layer below the layer an agent engagement wants. So the cheapest
+correct move is to take the licensed layer and write the thin one yourself.
+
+### Components
+
+| Role | Component | Licence (payload-verified 2026-10-06) |
+|---|---|---|
+| SIS client — Python | [`dougpenny/PyPowerSchool`](https://github.com/dougpenny/PyPowerSchool) | **MIT** |
+| SIS client — Node | [`aydenp/PowerSchool-API`](https://github.com/aydenp/PowerSchool-API) | **MIT** |
+| SIS client — PHP | [`grantholle/powerschool-api`](https://github.com/grantholle/powerschool-api) | **MIT** |
+| SIS client — FR | [`bain3/pronotepy`](https://github.com/bain3/pronotepy) | **MIT** |
+| SIS client — DE/AT | [`python-webuntis/python-webuntis`](https://github.com/python-webuntis/python-webuntis) | **BSD-2-Clause** |
+| SIS client — NL | [`magister-api/magister`](https://github.com/magister-api/magister) · [`elisaado/somtoday.js`](https://github.com/elisaado/somtoday.js) | **MIT** |
+| SIS client — BR | [`ivmelo/suap-api-php`](https://github.com/ivmelo/suap-api-php) · [`PucaVaz/sigaa-tools`](https://github.com/PucaVaz/sigaa-tools) | **MIT** |
+| **MCP wrapper** | 🔧 **Globant-built** — ~300 lines over the client above | your client's terms |
+| Reference design for the wrapper | [`chrischall/infinitecampus-mcp`](https://github.com/chrischall/infinitecampus-mcp) (20 tools, RBAC-aware) · [`kc0506/ntucool`](https://github.com/kc0506/ntucool) (Rust) | **MIT** — read them, do not necessarily deploy them |
+| **Production access path** | OneRoster / Ed-Fi permissive implementations (interoperability tier, tenth pass) | permissive |
+| Oversight gate | **P11** (gated generation) | — |
+| Access-rights gate | **P26** — **run this first** | — |
+
+### Wiring
+
+1. 🔴 **Run P26 before writing any code.** If the institution has no API agreement with its
+   SIS vendor, everything below is a prototype and must be labelled one in the SOW.
+2. Pick the MIT client that matches the client's SIS and your delivery language. Vendor it,
+   do not fork it — these libraries are small and stable, and the licence lets you.
+3. Write the MCP server yourself over the client's own method surface. **Read
+   `infinitecampus-mcp` first for its tool decomposition** (academics / daily life /
+   documents / messaging / healthcheck) and for its RBAC middleware shape — this is the one
+   governance-aware design in the tier.
+4. 🔴 **Writes off by default.** Every tool that mutates a student record is opt-in, behind an
+   explicit configuration flag, and routed through P11's oversight gate. The SIS is the
+   system of record for regulated data; an agent that writes to it without a human gate is
+   the single highest-liability thing in this entire KB.
+5. Swap the transport, not the tools, when the official API arrives: keep your MCP tool
+   signatures stable and re-point them from the community client to the OneRoster/Ed-Fi
+   endpoint. **This is the whole reason to own the wrapper layer** — the access path changes
+   and your deliverable does not.
+6. Scope data egress explicitly: student records are FERPA (US), and under-13 data is
+   additionally COPPA; in EMEA this is GDPR Article 9-adjacent and the EU AI Act's Annex III
+   education classification applies. **Do not route student records through a shared LLM
+   context and do not train on them.**
+
+### Deliverables
+
+- An MCP server the client owns, over a vendored MIT client, with writes gated.
+- A P26 access-rights memo naming the vendor, the ToU clauses read, the date read, and
+  whether an API agreement exists. **This is a deliverable, not an internal note.**
+- A migration note: what changes when the official API entitlement lands (transport only, if
+  step 5 was respected).
+
+### ⚠️ Three warnings that are the point of this pattern
+
+1. 🔴 **The community client's licence does not grant API access.** See **P26** and trend 33.
+   An MIT licence on a scraper is a grant to copy the scraper.
+2. ⚠️ **`GeovaneSchmitz/sigaa-api` (MIT, 61★) is archived and self-describes as a web
+   scraper.** It is excellent reference material for how SIGAA's surface works and a poor
+   production dependency. Prefer `PucaVaz/sigaa-tools` (MIT, 24★, active).
+3. ⚠️ **`shinyquagsire23/InfiniteCampusAPI` is WTFPL** — permissive in substance, not
+   OSI-approved, and rejected by name by some corporate allowlists. If the client runs an
+   automated licence gate, expect to justify it or choose another client.
+
+---
+
+## P26 — The access-rights gate (run before any component that talks to a system you do not own)
+
+**This is the gate trend 33 made necessary, and it is the first gate in this KB that does not
+look at a licence.** P22 (the licence-reliability gate) answers *may we copy this code?*
+P26 answers *may we call this system?* **A component must pass both.** Most of the SIS tier
+passes P22 cleanly and fails P26.
+
+### The gate — four checks, in order, all cheap
+
+| # | Check | How | 🔴 Fail condition |
+|---|---|---|---|
+| **A1** | **Is the access path official?** | Read the component's README and source for the endpoints it calls. Compare against the vendor's published API documentation. | The component calls endpoints absent from the vendor's public API docs — mobile-app JSON, portal internals, HTML scraping. |
+| **A2** | **What does the vendor's ToU say?** | Fetch the vendor's Terms of Use and search for: *publicly supported interfaces*, *scraping*, *automated access*, *crawl*, *train*, *artificial intelligence*, *reverse engineer*, *derivative*. **Record the URL and the date read.** | The ToU prohibits the means of access the component uses — or prohibits AI training on the content. |
+| **A3** | **Does the institution hold an API agreement?** | Ask the client directly: *"do you have an API entitlement with your SIS vendor, and may we see its scope?"* | No agreement, or an agreement that does not cover programmatic third-party access. |
+| **A4** | **What regulation attaches to the data?** | Classify the records the component reaches. | Student records without a lawful basis for the processing: **FERPA** (US), **COPPA** (US, under-13), **GDPR** + EU AI Act Annex III (EMEA), LGPD (Brazil). |
+
+### Why all four, and in that order
+
+**A1 is the cheapest and it predicts the other three.** A component that calls undocumented
+endpoints will almost always fail A2, and A1 takes one README and one docs page. Run it
+first and most candidates resolve in minutes.
+
+**A2 is the one that is invisible to every tool in this KB.** It is not in the repository.
+No licence scanner, SBOM, allowlist or payload probe reaches it — it lives on the vendor's
+website, and it changes without notice, which is why the gate requires the **date read** to
+be recorded next to the verdict.
+
+**A3 is the one that converts a failure into a pass.** The same community client that is
+unusable for a district with no entitlement becomes legitimate for a district with one,
+because the institution's own contract covers the access. **This is the question that
+decides whether the engagement is scoped as a prototype or as production.**
+
+**A4 survives a pass on A1–A3.** Lawful access is not lawful processing. An institution may
+be perfectly entitled to its own data and still unable to route it through a third-party
+model.
+
+### Outputs, and what each verdict means
+
+| Verdict | Condition | What you may deliver |
+|---|---|---|
+| 🟢 **PRODUCTION** | A1 official **or** A3 agreement in place, A2 clean for the intended use, A4 lawful basis documented | Ship it. Normal P22 licence rules apply on top. |
+| ⚠️ **PROTOTYPE ONLY** | A1 fails, A3 absent, A4 satisfiable | Build it, demo it, **label it in the SOW as a non-production proof of workflow**, and quote the official-API path as the production phase. |
+| 🔴 **BLOCKED** | A2 prohibits the use and A3 cannot cure it, **or** A4 has no lawful basis | Do not deliver. Propose the official API or an open platform (⚠️ GPL — see `verticals/solutions.md`). |
+
+### The worked example, from this pass
+
+`chrischall/infinitecampus-mcp`, MIT, 20 tools:
+
+- **A1** 🔴 fails — calls `/campus/api/oneRosterCampus` and `/portal/api/...`; the maintainer
+  states these *"are not publicly supported interfaces."*
+- **A2** 🔴 fails — [Infinite Campus ToU](https://www.infinitecampus.com/terms/terms-of-use)
+  (quoted in the repository's README, read by the maintainer 2026-05-23) forbids access *"by
+  any means other than our publicly supported interfaces (for example, scraping or using the
+  content to train artificial intelligence software)"*; the maintainer adds that *"IC may
+  treat this as a ToS violation."*
+- **A3** — unknown per engagement; **this is the question to ask the district.**
+- **A4** 🔴 FERPA and COPPA both attach; the repository itself says *"do not… train AI models
+  on student records."*
+
+⚠️ **Provenance:** the ToU wording above is quoted from the **repository's README** (the
+maintainer dates their reading 2026-05-23); `infinitecampus.com` is egress-blocked from this
+environment, so it is **not** first-hand verified here. **A2 therefore carries an explicit
+re-read instruction** — that is exactly why the check requires the URL *and the date read*
+to be recorded beside the verdict.
+
+**Verdict: 🔴 BLOCKED as a deliverable; ⚠️ PROTOTYPE ONLY where a district authorises it on
+its own data; 🟢 the production path is PowerSchool's or Infinite Campus's OneRoster
+entitlement.** The licence was never the problem — and that is the whole point of this gate.
+
+🔵 **Note for the proposal, not just the gate.** A cookie-bridge in a repository — such as
+the browser extension `infinitecampus-mcp` uses to lift a session token from a logged-in tab
+— is evidence that an install base wants agent access its vendor does not yet sell.
+**That is a product opportunity to raise with the vendor, and an anti-pattern to decline in
+client delivery.**

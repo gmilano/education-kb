@@ -2021,3 +2021,117 @@ region, same quality of public data, no grant at all.
    **zero times across 98 repositories** — all 76 payloads sat at plain `LICENSE`. Keep it
    for a single high-value asset whose absence would change a recommendation; do not pay it
    across a census.
+
+## 33. The licence has stopped being the last gate — the access grant is
+
+Every licensing trend in this file (23, 24, 25, 29) answers one question: **may we copy and
+redistribute this code?** This pass found the first component in this KB's history where the
+answer is an unqualified **yes** and the component still cannot be shipped.
+
+[`chrischall/infinitecampus-mcp`](https://github.com/chrischall/infinitecampus-mcp) is MIT,
+payload read, 20 tools over the Infinite Campus student information system. Its own README
+quotes the vendor's Terms of Use:
+
+> Users may not access, use, or search the Services by any means other than our publicly
+> supported interfaces (for example, scraping or using the content to train artificial
+> intelligence software).
+
+…then states that the server calls non-public mobile endpoints and that **"IC may treat this
+as a ToS violation"**, restricts itself to personal parent/student use, forbids bulk
+extraction and model training, and invokes **FERPA and COPPA** on its output.
+
+**Two grants are needed to ship an integration, and only one of them is in the repository:**
+
+| Grant | Who gives it | Where it lives | What a licence audit sees |
+|---|---|---|---|
+| **Copyright** — may we copy the code? | the maintainer | `LICENSE` | 🟢 everything |
+| **Access** — may we call the system? | the **platform vendor** | the vendor's ToU, and the institution's contract | 🔴 **nothing** |
+
+🔴 **This is why the trend matters beyond one repository.** The whole SIS integration tier —
+24 permissive assets across seven countries, found this pass — is built on unofficial access
+and says so in its own words: *"web scraping"* (`GeovaneSchmitz/sigaa-api`), *"unofficial…
+at your own risk"* (`kc0506/ntucool`), repository topic `reverse-engineering`
+(`elisaado/somtoday-api-docs`). The licences are clean. The access is not granted by anyone.
+
+⚠️ **The clause to watch is the AI-specific one.** Infinite Campus's ToU does not merely
+forbid scraping; it names **"using the content to train artificial intelligence
+software"** as a prohibited means of access. This KB has **one** verified instance of that
+clause, so it is recorded as a data point and **not** yet asserted as an industry-wide
+pattern — but it is the clause that would, if it spreads, make the distinction between
+"integrate with" and "train on" a contractual line rather than an ethical one. **Next pass
+should read the ToU of PowerSchool, Canvas/Instructure, Moodle-hosting and Google Classroom
+and establish whether this is one vendor or the sector.**
+
+🟢 **What to do about it, commercially.** The constraint is not a dead end, it is a scoping
+rule: a client engagement that touches a proprietary SIS must budget for the **vendor's
+official API entitlement** before any agent work is scoped. Both US K-12 vendors publish
+OneRoster endpoints, and this KB's interoperability tier already carries permissive
+OneRoster and Ed-Fi implementations. **Prototype on the community client, ship on the
+official API.** Operationalised as **P25** and gated by **P26**.
+
+## 34. Permissive supply collects at the edges of platforms it is not allowed to fork
+
+This pass measured both halves of the student information system space and the result is a
+structural law, not a coincidence:
+
+| Layer | Assets found | Licence set |
+|---|---|---|
+| **SIS platforms** (deployable products) | 5, with 1,600+ ★ and 1,000+ forks between them | 🔴 **{GPL-2.0, GPL-3.0}** + one ungranted. **Zero MIT. Zero Apache. Zero BSD.** |
+| **SIS clients, wrappers, MCP servers, extensions** | 36 addresses, 24 permissive | 🟢 **22 MIT · 1 Apache-2.0 · 1 BSD-2 · 1 WTFPL** |
+
+🔵 **You cannot fork an open SIS permissively, so all the permissive work happens around it.**
+The MIT supply is clients, timetable decoders, MCP servers and browser extensions —
+everything that *talks to* a student information system without *being* one. The same shape
+holds for learning platforms, where Moodle (GPL-3.0) and Open edX (AGPL-3.0) are surrounded
+by an MIT MCP cluster this KB has censused at 98 addresses.
+
+**Three consequences for how an engagement is shaped:**
+
+1. 🟢 **The permissive shelf is reliably an *integration* shelf.** When this KB reports a
+   deep permissive tier, expect side-cars and clients, not a product you can brand and
+   resell. The exceptions are rare enough to be named individually (Mentingo, OpenMAIC,
+   Coursemology, Sunbird).
+2. ⚠️ **"Is there an open-source X?" and "is there a permissive open-source X?" have
+   different answers at the platform layer in every category this KB has measured.** Ask the
+   second question.
+3. 🔵 **The copyleft platform is often still the right answer** — it is simply a different
+   engagement: deploy-and-extend under GPL obligations, or take the LGPL-3.0 middle path
+   (OpenEduCat on Odoo) where a module can stay proprietary. What it is not is a white-label
+   product.
+
+## Declared gaps — fifteenth pass, 2026-10-06
+
+Searched this pass; stated so they can be falsified rather than left as silence.
+
+1. 🔴 **No permissive SIS *platform* exists.** Five measured, all GPL-2.0/GPL-3.0 or
+   ungranted. If a client needs a brandable, resellable student information system, **there
+   is nothing to start from** and this KB has now looked properly.
+2. 🔴 **The UK has no permissive MIS integration layer.** `bromcom` 36 repositories (nothing
+   above 2★), `"arbor mis"` 7 (nothing above 0★), `"capita sims" school` **0**. Against the
+   strongest government MIT estate in this KB. **A clean build opportunity, stated as a gap
+   rather than as an absence of evidence.**
+3. 🔴 **No Japan-, Korea-, Australia- or India-placed SIS integration asset was found.**
+   India's `diksha` is a name collision returning 2,864 irrelevant repositories;
+   `samarth ugc` returned 0. The Australia probe (`sentral compass school australia api`)
+   was OR'd and therefore weak — **re-run one name at a time before trusting this gap.**
+   The entire APAC tier found this pass is one Taiwanese university.
+4. ⚠️ **The ministry tier is still unmeasured.** Skolverket (SE) is shelved from the
+   fourteenth pass, but Udir (NO), Eduscol (FR), INEP/Censo Escolar (BR), MEXT (JP) and the
+   Gulf ministries were not queried by name. **This is the fourteenth pass's instruction 2
+   only half-executed — the SIS half is done, the ministry half is not.**
+5. ⚠️ **Whether the anti-AI-training ToU clause is one vendor or the sector is unknown.**
+   One verified instance (Infinite Campus). Trend 33 names the four ToUs to read next.
+6. ⚠️ **The MCP Registry's true index size remains unestablished**, but for a better-understood
+   reason than before: the empty page that stopped the fourteenth pass at 31,300 records is a
+   **transient fault, not an end-of-index marker** — re-requesting the same cursor returned
+   100 servers on 3 of 3 attempts. Any denominator quoted from a walk without retries is a
+   floor, not a size. See `repos/trending.md`, fifteenth pass.
+7. 🔵 **Negative method result, priced so it is not re-bought:** `curl -sI` against
+   `github.com` returns **HTTP 403 for every repository** through this environment's egress
+   proxy — 36 of 36, including repositories whose payloads were then read successfully. A
+   uniform response across all inputs carries no information. **Use `git ls-remote --symref`
+   for existence and `raw.githubusercontent.com` for payloads.**
+8. 🟢 **Positive method result worth adopting ahead of the filename ladder:** read the
+   **README's own licence link**. `OS4ED/openSIS-Classic` keeps its GPL-2.0 text at
+   `docs/License.txt` — mixed case, in a subdirectory, with a byte-order mark — which no
+   filename ladder in this KB would have found. The README said where it was, in one request.

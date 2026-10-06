@@ -1799,3 +1799,279 @@ whose grant is most needed.
    The thirteenth pass's conclusion — *"the language was the wrong variable"* — holds and
    gets sharper: **what places an asset is the institution, and the institution's name is
    usually searchable in English even when its README is not.**
+
+## Added in the fifteenth pass of 2026-10-06 — the SIS/MIS tier, and the first non-licence blocker in this KB
+
+The fourteenth pass handed this pass two instructions. This section answers the second:
+*"run the platform-name channel against the SIS and ministry tiers, which this pass only
+sampled."* It was the right instruction and it overturns the finding that produced it.
+
+**Every licence below was read from the repository's own payload** on 2026-10-06, on the real
+default branch confirmed by `ls-remote --symref`. 44 addresses probed, 36 carried forward.
+
+### Finding 1 — "the tier does not exist" is wrong, and this KB already held the refutation
+
+The fourteenth pass's Finding 6 recorded `powerschool` at **`total_count: 0`** and concluded
+**"none — the tier does not exist"**. Measured again today, four query shapes:
+
+| Query | `total_count` |
+|---|---|
+| `powerschool` | **590** |
+| `powerschool in:name` | **354** |
+| `powerschool mcp` | **3** |
+| `powerschool mcp server` | **1** |
+
+🔴 **The minimum over four shapes is 1, not 0.** The zero is not reproducible as a
+query-shape artifact; it was an instrument error written down as a property of the world.
+
+🔴 **And the refutation was already inside this KB before the claim was made.** An earlier
+pass had shelved [`443pablo/mcp-powerschool`](https://github.com/443pablo/mcp-powerschool)
+and [`chrischall/infinitecampus-mcp`](https://github.com/chrischall/infinitecampus-mcp) under
+*"MCP over SIS"*. The fourteenth pass wrote "the tier does not exist" over its own record.
+
+🔵 **The method rule this adds:** a zero from a search channel is a claim about the channel.
+Before it is written as a property of the supply, **grep this KB for the thing claimed
+absent.** That check costs one command and would have caught this.
+
+### Finding 2 — the headline: MIT is granted, and the tier is still not deployable
+
+[`chrischall/infinitecampus-mcp`](https://github.com/chrischall/infinitecampus-mcp) — MIT,
+`LICENSE`, 1,067 B, holder *"Chris Hall"*, 20 tools over Infinite Campus — is the one
+payload-backed MCP server on a US K-12 SIS. Its own README quotes the vendor's Terms of Use:
+
+> Users may not access, use, or search the Services by any means other than our publicly
+> supported interfaces (for example, scraping or using the content to train artificial
+> intelligence software).
+
+And then states, of itself:
+
+> This server uses Infinite Campus's mobile-app JSON endpoints (`/campus/api/oneRosterCampus`,
+> `/portal/api/...`) which are not "publicly supported interfaces" — IC may treat this as a
+> ToS violation.
+
+It further restricts itself to **"personal, parent/student use only"**, is *"not affiliated
+with, endorsed by, sponsored by, or in partnership with Infinite Campus, Inc. or any school
+district"*, says **"do not use it to bulk-extract student data … or train AI models on
+student records"**, and invokes **FERPA and COPPA** on the output.
+
+🔴 **This is a new axis, and it is the first blocker in this KB that is not a licence.**
+Twenty-three recorded licence failure modes all answer one question: *may we copy and
+redistribute this code?* Here the answer is **yes, MIT, unambiguously** — and the component
+is still not shippable, because a different grant is missing: **the right to reach the data.**
+The copyright holder gave us the code. The SIS vendor did not give us the API.
+
+⚠️ **The two grants are orthogonal, and only one of them is in the repository.** No licence
+audit, however rigorous, detects this. It is not in `LICENSE`; it is in a third party's ToU.
+
+⚠️ **Provenance of the quotation, stated precisely.** The ToU text above was read today from
+**the repository's own README**, where the maintainer records having read the vendor's terms
+on **2026-05-23**. The vendor's page itself — `infinitecampus.com/terms/terms-of-use` — is
+**blocked by this environment's egress proxy** (`connect_rejected`), so this KB has **not**
+verified it first-hand, and a ToU can change without notice. 🔵 **The finding does not
+depend on the quotation being current**: the maintainer's own statement that the server
+calls non-public endpoints and may violate the vendor's terms is first-hand evidence from
+the party best placed to know. **Next pass: re-read the vendor page from an unblocked
+network and date it.**
+
+🔵 **What it does to the fourteenth pass's conclusion.** That pass said *"for K-12
+administration there is nothing to adopt… a Globant-built PowerSchool MCP server enters an
+empty tier."* The tier is **not** empty — and the build recommendation **survives anyway, for
+a stronger reason**: what you cannot adopt is not the code but the access path. Building your
+own MCP server does not fix it either. **What fixes it is a contract and the vendor's official
+API** (PowerSchool and Infinite Campus both publish OneRoster endpoints; this KB's
+interoperability tier already carries the permissive OneRoster/Ed-Fi implementations).
+
+### Finding 3 — the access-legitimacy axis, read from the repositories' own words
+
+This is not one maintainer being unusually careful. The tier is built on unofficial access and
+says so:
+
+| Asset | What it says about itself |
+|---|---|
+| [`chrischall/infinitecampus-mcp`](https://github.com/chrischall/infinitecampus-mcp) | *"Unofficial — not affiliated with Infinite Campus. AI-maintained."* + the ToU quotation above |
+| [`GeovaneSchmitz/sigaa-api`](https://github.com/GeovaneSchmitz/sigaa-api) | *"Uma biblioteca de **Web Scraping**, para acessar o SIGAA"* — and it is **archived** |
+| [`kc0506/ntucool`](https://github.com/kc0506/ntucool) | *"This is an **unofficial** project. Use it at your own risk, and responsibly."* |
+| [`elisaado/somtoday-api-docs`](https://github.com/elisaado/somtoday-api-docs) | repository topic: **`reverse-engineering`** |
+| [`Underlyingglitch/SomtodaySSOLogin`](https://github.com/Underlyingglitch/SomtodaySSOLogin) | topics `reverse-engineering`, `sso-authentication` — **archived** |
+| [`cqm3ron/bromcom-scraper`](https://github.com/cqm3ron/bromcom-scraper) | *"a python script to host an API to get bromcom homework assignment data"* |
+
+🔴 **And a cookie-bridge architecture, which is the mechanism the ToS language targets.**
+`infinitecampus-mcp`'s no-password auth path installs a browser extension
+([`nullnet-app/contextmint-bridge`](https://github.com/nullnet-app/contextmint-bridge), the
+former `fetchproxy`), which reads the HttpOnly `JSESSIONID` and `XSRF-TOKEN` from a
+logged-in tab and hands them to the MCP server, which then calls the API directly. It is an
+elegant answer to *"the vendor has no agent API"* — and it is precisely *"means other than
+our publicly supported interfaces."*
+
+🔵 **Record it as an anti-pattern for client work and a signal for roadmaps.** A cookie bridge
+in a repository is evidence that the install base wants agent access the vendor does not yet
+sell. That is a product opportunity, not a deliverable component.
+
+### Finding 4 — the PowerSchool grant is one layer down from where you want it
+
+| Layer | Asset | ★ | Payload |
+|---|---|---|---|
+| MCP server | [`443pablo/mcp-powerschool`](https://github.com/443pablo/mcp-powerschool) | 2 | 🔴 **none** (6 filenames, `main`) |
+| MCP server | [`zuvy/ps-mcp-server`](https://github.com/zuvy/ps-mcp-server) | 1 | 🔴 **none** (6 filenames, `main`) |
+| API client (Node) | [`aydenp/PowerSchool-API`](https://github.com/aydenp/PowerSchool-API) | **34** | 🟢 **MIT**, 1,072 B — *Ayden Panhuyzen* |
+| API client (PHP) | [`grantholle/powerschool-api`](https://github.com/grantholle/powerschool-api) | 20 | 🟢 **MIT**, 1,101 B |
+| API client (Python) | [`dougpenny/PyPowerSchool`](https://github.com/dougpenny/PyPowerSchool) | 16 | 🟢 **MIT**, 1,082 B |
+| API client (Python) | [`TEAMSchools/powerschool`](https://github.com/TEAMSchools/powerschool) | 23 | ⚠️ **GPL-3.0**, 35,149 B — **archived** |
+
+🔴 **Both PowerSchool MCP servers are ungranted. Every PowerSchool API client but one is MIT.**
+The grant exists exactly one layer below the layer an agent engagement wants.
+
+🟢 **So the recipe writes itself, and it is the opposite of "build the integration":** take an
+MIT client, write the thin MCP wrapper yourself, and spend the saved effort on the access
+contract. Shipped as **P25** in `compose/patterns.md`.
+
+### The rows — 36 addresses, placed by country, licence read from the payload
+
+**North America** — US K-12 and higher-ed SIS
+
+| Repo | ★ | Licence (payload) | What it is |
+|---|---|---|---|
+| [`aydenp/PowerSchool-API`](https://github.com/aydenp/PowerSchool-API) | 34 | **MIT** (1,072 B) | Node.js client, PowerSchool SIS API |
+| [`TEAMSchools/powerschool`](https://github.com/TEAMSchools/powerschool) | 23 | GPL-3.0 (35,149 B) | Python client — **archived** |
+| [`grantholle/powerschool-api`](https://github.com/grantholle/powerschool-api) | 20 | **MIT** (1,101 B) | PHP client |
+| [`shinyquagsire23/InfiniteCampusAPI`](https://github.com/shinyquagsire23/InfiniteCampusAPI) | 20 | ⚠️ **WTFPL v2** (474 B) | Java Infinite Campus client |
+| [`dougpenny/PyPowerSchool`](https://github.com/dougpenny/PyPowerSchool) | 16 | **MIT** (1,082 B) | Python client |
+| [`sas-fossdev/saspes`](https://github.com/sas-fossdev/saspes) | 13 | AGPL-3.0 (34,522 B) | PowerSchool browser extension |
+| [`NCSIS/InfiniteCampus-Vendor-Integration`](https://github.com/NCSIS/InfiniteCampus-Vendor-Integration) | 13 | 🔴 none | PowerShell vendor integration |
+| [`chrischall/infinitecampus-mcp`](https://github.com/chrischall/infinitecampus-mcp) | 4 | **MIT** (1,067 B) | **MCP server, 20 tools** — ⚠️ see Finding 2 |
+| [`443pablo/mcp-powerschool`](https://github.com/443pablo/mcp-powerschool) | 2 | 🔴 none | MCP server |
+| [`zuvy/ps-mcp-server`](https://github.com/zuvy/ps-mcp-server) | 1 | 🔴 none | MCP server |
+| [`bnnadi/Sky`](https://github.com/bnnadi/Sky) | 1 | 🔴 none | React Native **demo** — not an integration |
+
+**EMEA** — placed by country
+
+| Repo | ★ | Licence (payload) | Country / system |
+|---|---|---|---|
+| [`SapuSeven/BetterUntis`](https://github.com/SapuSeven/BetterUntis) | **300** | ⚠️ GPL-3.0 (35,149 B) | DE/AT — WebUntis, Kotlin Android |
+| [`bain3/pronotepy`](https://github.com/bain3/pronotepy) | **241** | 🟢 **MIT** (1,062 B) | FR — PRONOTE, Python wrapper |
+| [`SchoolUtils/WebUntis`](https://github.com/SchoolUtils/WebUntis) | **214** | 🔴 **none** (6 filenames, `master`) | DE/AT — the costliest absence in this tier |
+| [`Litarvan/pronote-api`](https://github.com/Litarvan/pronote-api) | 192 | 🔴 none | FR — PRONOTE |
+| [`JonasJoKuJonas/homeassistant-WebUntis`](https://github.com/JonasJoKuJonas/homeassistant-WebUntis) | 148 | 🟢 **MIT** (1,062 B) | DE/AT |
+| [`delphiki/hass-pronote`](https://github.com/delphiki/hass-pronote) | 105 | 🔴 none | FR |
+| [`elisaado/somtoday-api-docs`](https://github.com/elisaado/somtoday-api-docs) | 87 | 🔴 none | NL — SOMtoday API documentation |
+| [`python-webuntis/python-webuntis`](https://github.com/python-webuntis/python-webuntis) | 81 | 🟢 **BSD-2-Clause** (1,505 B) | DE/AT — *Markus Unterwaditzer* |
+| [`magister-api/magister`](https://github.com/magister-api/magister) | 49 | 🟢 **MIT** (1,085 B) | NL — Magister 6, PHP |
+| [`ninocss/UntisPlus`](https://github.com/ninocss/UntisPlus) | 44 | 🟢 **MIT** (1,064 B) | DE/AT — Flutter, **on-device AI assistant** |
+| [`untisapi/untis4j`](https://github.com/untisapi/untis4j) | 33 | ⚠️ LGPL-3.0 (7,378 B) | DE/AT — Java |
+| [`Jona-Zwetsloot/Somtoday-Mod`](https://github.com/Jona-Zwetsloot/Somtoday-Mod) | 16 | 🔴 **CC BY-NC-SA 4.0** (17,056 B) | NL — **NonCommercial: unusable** |
+| [`elisaado/somtoday.js`](https://github.com/elisaado/somtoday.js) | 15 | 🟢 **MIT** (1,066 B) | NL — SOMtoday REST client |
+| [`sikkepitje/TeamSync`](https://github.com/sikkepitje/TeamSync) | 9 | ⚠️ GPL-3.0 (35,149 B) | NL — Magister → MS School Data Sync |
+| [`RichardSlater/bromcom-timetable-formatter`](https://github.com/RichardSlater/bromcom-timetable-formatter) | 1 | 🟢 **MIT** (1,071 B) | UK — Bromcom, Rust |
+| [`DPlazma/assessapp`](https://github.com/DPlazma/assessapp) | 0 | 🟢 **MIT** (1,064 B) | UK — Arbor MIS + **AI tagging**, Django |
+
+**APAC** — and the whole tier is one university
+
+| Repo | ★ | Licence (payload) | Country / system |
+|---|---|---|---|
+| [`AkizumiFox/NTU-COOL-Assignment-Status-Viewer`](https://github.com/AkizumiFox/NTU-COOL-Assignment-Status-Viewer) | 19 | 🟢 **MIT** — at **`LICENCE`** (1,056 B) | TW — NTU COOL |
+| [`kc0506/ntucool`](https://github.com/kc0506/ntucool) | 10 | 🟢 **MIT** (1,066 B) | TW — **Rust CLI + MCP server** |
+| [`kuang-che/NTU-COOL-Preview-Tool-extension`](https://github.com/kuang-che/NTU-COOL-Preview-Tool-extension) | 8 | 🟢 **MIT** (1,066 B) | TW |
+
+🔵 **NTU COOL is Canvas-based**, which is why this is the one APAC institution with a tier:
+the asset authors inherit Canvas's documented API. The platform channel found an institution;
+the *reason* it had something to find is the LMS underneath it.
+
+**LATAM** — Brazil, and it is the deepest national tier in this pass
+
+| Repo | ★ | Licence (payload) | Institution / system |
+|---|---|---|---|
+| [`aquario-ufpb/aquario`](https://github.com/aquario-ufpb/aquario) | 84 | 🟢 **MIT** (1,070 B) | UFPB — student information hub, TypeScript |
+| [`luthierycosta/ConsertandoHorariosSIGAA`](https://github.com/luthierycosta/ConsertandoHorariosSIGAA) | 75 | 🟢 **MIT** (1,082 B) | UnB — SIGAA timetable decoder |
+| [`GeovaneSchmitz/sigaa-api`](https://github.com/GeovaneSchmitz/sigaa-api) | 61 | 🟢 **MIT** (1,108 B) | SIGAA — ⚠️ **archived**, self-described scraper |
+| [`ernestosrf/sigaa-horarios-extension`](https://github.com/ernestosrf/sigaa-horarios-extension) | 58 | 🔴 none | UFBA |
+| [`rodrigmatrix/sigaa_ufc_android`](https://github.com/rodrigmatrix/sigaa_ufc_android) | 33 | 🟢 **Apache-2.0** (11,357 B) | UFC — Android |
+| [`ivmelo/suap-api-php`](https://github.com/ivmelo/suap-api-php) | 33 | 🟢 **MIT** (1,071 B) | IFRN — SUAP client |
+| [`IFRN/suapi`](https://github.com/IFRN/suapi) | 28 | 🔴 **none** | ⚠️ **the institution's own org, ungranted** |
+| [`PucaVaz/sigaa-tools`](https://github.com/PucaVaz/sigaa-tools) | 24 | 🟢 **MIT** (1,065 B) | SIGAA tooling, Python |
+| [`Projeto-SIAC/suap-wrapper`](https://github.com/Projeto-SIAC/suap-wrapper) | 12 | 🟢 **MIT** (1,061 B) | SUAP, Node.js |
+
+🟢 **The LATAM entry the fourteenth pass could not measure is real and it is the largest
+national cluster this pass found: `sigaa` 677 repositories, `suap ifrn` 27, nine addresses
+carried forward, seven of them permissive.** The fourteenth pass's only attempt OR'd the
+names and collapsed into the generalist layer at `total_count: 160,659`. One name per query
+returns a tier.
+
+⚠️ **And the ungranted one is the institution's own.** [`IFRN/suapi`](https://github.com/IFRN/suapi)
+— *"Clientes para acesso à API do SUAP"*, published by the federal institute that **operates**
+SUAP — carries no licence payload, while an individual's `suap-api-php` is MIT. This is the
+single most answerable upstream ask in this pass: a public institution, a public repository,
+one missing file.
+
+### Finding 5 — the channel's yield is a property of the name, not of the supply
+
+The fourteenth pass priced the platform channel at 80% licensed and recommended it broadly.
+It works, and it has one failure mode that must be stated with it:
+
+| Platform name | `total_count` | Verdict |
+|---|---|---|
+| `pronote` | **907** | 🟢 real tier |
+| `sigaa` | **677** | 🟢 real tier |
+| `powerschool` | **590** | 🟢 real tier |
+| `webuntis` | **401** | 🟢 real tier |
+| `somtoday` | **112** | 🟢 real tier |
+| `"ntu cool"` | **54** | 🟢 real tier |
+| `infinitecampus` | **43** | 🟢 real tier |
+| `bromcom` | **36** | ⚠️ thin — nothing above 2★ |
+| `suap ifrn` | **27** | 🟢 real tier |
+| `"arbor mis"` | **7** | ⚠️ all 0★, mostly coursework clones |
+| `"skyward" student information system` | **1** | 🔴 a demo app, no integration |
+| `"capita sims" school` | **0** | 🔴 empty |
+| `samarth ugc` | **0** | 🔴 empty |
+| 🔴 `diksha` | **2,864** | 🔴 **name collision — zero are the platform** |
+
+🔴 **`diksha` is the channel's worst case and it is not thinness, it is a false positive at
+scale.** India's national platform shares its name with a common Indian given name: the 2,864
+results are personal portfolios, a fitness studio, a coaching website. **A tier that looks
+deep and contains nothing.** The real upstream for that platform is **Sunbird**, which this
+KB already shelves.
+
+🔵 **The qualification to carry forward: the platform channel's yield tracks the
+*distinctiveness* of the platform's name.** `webuntis`, `somtoday`, `pronote`, `bromcom` are
+coined words and return clean tiers. `diksha`, `arbor`, `skyward`, `compass`, `clever` are
+ordinary words and return noise or nothing. Before trusting a count, ask whether the name is
+a word.
+
+⚠️ **Boolean `OR` failed again, twice, exactly as the fourteenth pass warned**:
+`arbor bromcom sims mis school` → **0**; `sentral compass school australia api` → **0**. Two
+more data points for a rule this KB already has.
+
+### The method note for this pass
+
+**Three instrument findings, and the first one invalidates an instruction in the brief.**
+
+1. 🔴 **`curl -sI https://github.com/<repo>` returns HTTP 403 for every repository through
+   this environment's egress proxy — all 36, including ones whose payloads were then read
+   successfully.** The standing instruction to verify URLs with `curl -sI` **cannot be
+   satisfied here**, and worse, it returns a *uniform* 403 that looks like a verdict. A
+   constant response is not evidence. **The instruments that do work:**
+   `git ls-remote --symref` (existence + real default branch, no API, no auth) and
+   `raw.githubusercontent.com` (payload). All 36 rows above were verified with both;
+   36/36 exist and every default branch was confirmed, not assumed.
+2. 🔴 **This pass reproduced a defect this KB had already found, fixed and built a control
+   for — and the control was correct.** The probe script written for this pass classified
+   four payloads as Creative Commons/NonCommercial (`SapuSeven/BetterUntis` 300★,
+   `TEAMSchools/powerschool`, `sikkepitje/TeamSync`, `sas-fossdev/saspes`); all four are
+   **GPL-3.0 or AGPL-3.0**, because GPL-3.0 §6 contains the word *"noncommercially"*. An
+   earlier pass of this KB had already measured that exact string at **line 259** of the
+   payload, diagnosed it as **P171** (*a token read over the body cannot be believed*), and
+   fixed it in `compose/code/lib/license_family.sh` with a **gate** — `osi_family_of()`
+   resolves the family first, and the Creative Commons branch is entered only on
+   `Creative Commons|creativecommons.org|CC BY|CC-BY`, after which NonCommercial is read as
+   an attribute. 🟢 **Tested this pass, that library is right on all three hard payloads
+   first time: `GPL-3.0`, `AGPL-3.0`, `CC-BY-NC-SA-4.0`.** 🔴 **The failure was bypassing it.**
+   The library's own header records the previous instance (pass 77, *"the correction did not
+   travel"*); this is the second. **The rows published above are unaffected — all four were
+   re-read by hand and carry their true families** — but the lesson is a process one: source
+   `lib/license_family.sh`, and better, give `lib/` a probe harness so no future pass writes
+   the loop by hand at all.
+3. 🟢 **One payload sat at `LICENCE`, British spelling** —
+   `AkizumiFox/NTU-COOL-Assignment-Status-Viewer`, MIT, 1,056 B. The fourteenth pass measured
+   the full case-variant ladder at **76 of 76 on plain `LICENSE`** and priced it as worthless.
+   That stands, with one amendment: **1 in 44 this pass sat at the British spelling.** Carry
+   `LICENCE` as a second probe — it is one extra request — and leave the other eleven variants
+   off the census, exactly as that pass instructed.

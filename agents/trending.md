@@ -8,6 +8,200 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — fifteenth pass: the SIS tier is real, it is MIT, and the licence is not what blocks it
+
+**The fourteenth pass's instruction 2, executed.** It said: *"run the platform-name channel
+against the SIS and ministry tiers, which this pass only sampled: PowerSchool measured 0…"*
+Running it overturned the finding that produced it, and turned up the first blocker in this
+KB's history that is not a licence at all.
+
+### Finding 1 — the measured yield, stated as a denominator
+
+| Channel | Addresses probed | Licence payload read | Rate | Permissive (MIT/BSD/Apache/WTFPL) |
+|---|---|---|---|---|
+| Platform name, LMS tier (14th pass) | 20 | 16 | 80% | 16 |
+| **Platform name, SIS/MIS tier (this pass)** | **44** | **36** | **82%** | **24 of 36** |
+| Generalist queries (this pass) | 0 new | — | — | — |
+
+🟢 **The channel reproduces at 82% on a completely different tier, and it places every
+finding by country for free.** 36 rows across **seven countries** — US, FR, DE/AT, NL, UK,
+TW, BR — all in `agents/top.md` (fifteenth pass).
+
+🔵 **Permissive breakdown of the 36:** 22 MIT · 1 Apache-2.0 · 1 BSD-2-Clause · 1 WTFPL ·
+3 GPL-3.0 · 1 AGPL-3.0 · 1 LGPL-3.0 · 1 CC BY-NC-SA · **10 ungranted**.
+
+### Finding 2 — 🔴 the headline: an MIT grant on code you still may not deploy
+
+[`chrischall/infinitecampus-mcp`](https://github.com/chrischall/infinitecampus-mcp) (MIT,
+payload read, 20 tools over a US K-12 SIS) quotes its vendor's Terms of Use in its own
+README — *"users may not access… by any means other than our publicly supported interfaces
+(for example, scraping or using the content to train artificial intelligence software)"* —
+then states that it uses non-public mobile endpoints and **"IC may treat this as a ToS
+violation"**, limits itself to personal parent/student use, forbids bulk extraction and model
+training, and invokes FERPA and COPPA.
+
+🔴 **Twenty-three licence failure modes in this KB all answer "may we copy this code?" This
+is the first time the answer is an unambiguous yes and the component is still unshippable.**
+The missing grant is not the copyright holder's — it is the SIS vendor's, and it is not in
+the repository. **A licence audit cannot see it.** Recorded as a new axis in
+`agents/top.md` Finding 2, as a shelf-wide warning in `repos/foundations.md`, as trend 33,
+and as a runnable gate (**P26**) in `compose/patterns.md`.
+
+### Finding 3 — the correction, and this KB already held the refutation
+
+The fourteenth pass wrote `powerschool` → **`total_count: 0`** → *"the tier does not exist."*
+
+| Query shape | Result today |
+|---|---|
+| `powerschool` | **590** |
+| `powerschool in:name` | **354** |
+| `powerschool mcp` | **3** |
+| `powerschool mcp server` | **1** |
+
+🔴 **Minimum over four shapes: 1. The zero is not a query-shape artifact.** And an earlier
+pass of this KB had *already shelved* `443pablo/mcp-powerschool` and
+`chrischall/infinitecampus-mcp` under "MCP over SIS" — the fourteenth pass wrote over its own
+record.
+
+🟢 **New rule, cheap to run: before writing a zero as a property of the world, grep this KB
+for the thing claimed absent.** One command. It would have caught this.
+
+### Finding 4 — the grant sits one layer below the layer agents want
+
+Both PowerSchool **MCP servers** are ungranted (`443pablo/mcp-powerschool`,
+`zuvy/ps-mcp-server` — 6 filenames each, nothing). Three of four PowerSchool **API clients**
+are MIT (`aydenp/PowerSchool-API` 34★, `grantholle/powerschool-api` 20★,
+`dougpenny/PyPowerSchool` 16★).
+
+🟢 **So: do not build the SIS client and do not wait for a licensed MCP server. Wrap an MIT
+client in your own thin MCP layer and spend the saved budget on the access contract.**
+Shipped as **P25**.
+
+### Finding 5 — the channel's failure mode is the platform's *name*
+
+| Name | `total_count` | Verdict |
+|---|---|---|
+| `pronote` · `sigaa` · `powerschool` · `webuntis` | 907 · 677 · 590 · 401 | 🟢 clean tiers |
+| `somtoday` · `"ntu cool"` · `infinitecampus` · `suap ifrn` | 112 · 54 · 43 · 27 | 🟢 clean tiers |
+| `bromcom` · `"arbor mis"` | 36 · 7 | ⚠️ thin, nothing above 2★ |
+| `"skyward" student information system` · `"capita sims" school` · `samarth ugc` | 1 · 0 · 0 | 🔴 empty |
+| 🔴 `diksha` | **2,864** | 🔴 **name collision: zero are the platform** |
+
+🔴 **`diksha` is the worst case the channel has produced — a tier that looks deep and
+contains nothing.** India's national platform shares a common Indian given name; the results
+are portfolios, a fitness studio, a coaching site. **The channel's yield tracks how coined
+the platform's name is, not how big its install base is.** Coined names (`webuntis`,
+`somtoday`, `pronote`, `bromcom`) return clean tiers; ordinary words (`diksha`, `arbor`,
+`skyward`, `compass`, `clever`) return noise or nothing.
+
+⚠️ **Boolean `OR` failed twice more**: `arbor bromcom sims mis school` → **0**;
+`sentral compass school australia api` → **0**. The fourteenth pass's rule holds.
+
+### Finding 6 — the MCP Registry: the empty page is a transient fault, and both passes under-counted
+
+Instruction 1 was to *"finish the MCP Registry census — the page loop stopped at page 313
+(31,300 records, 11,505 unique servers) when a request came back empty."*
+
+A cursor walk (not page numbers) terminated **the same way, at a different place**: empty
+response after **142 requests / 14,100 records**. So the empty page was re-tested:
+
+| Test | Result |
+|---|---|
+| Re-request the exact terminating cursor, 3× | 🔴 **100 servers every time, 3 of 3** |
+| Same cursor, `limit=5` | 🔴 returns records and a valid `nextCursor` |
+
+🔴 **The empty page is a transient fault, not the end of the index — and a walk that treats
+it as the end under-reports by an arbitrary amount.** That is what happened at page 313, and
+what happened at request 142. **Neither pass measured the index; both measured where their
+connection hiccuped.**
+
+🟢 **The fix is four lines: retry the same cursor up to 4× with a short sleep before
+concluding end-of-index.** With retries in place the walk ran past both previous stopping
+points, and the resumed census is reported in `repos/trending.md` (fifteenth pass).
+
+⚠️ **The instruction's "11,505 unique servers" should not be carried forward as the index
+size.** It was derived from a truncated walk.
+
+### Finding 7 — `curl -sI` on github.com is a dead instrument in this environment
+
+All **36** repository URLs returned **HTTP 403** to `curl -sI https://github.com/<repo>` —
+including every repository whose licence payload was then read successfully from
+`raw.githubusercontent.com` and whose default branch was confirmed by `ls-remote`.
+
+🔴 **A uniform 403 across every input is not a verdict, and the standing instruction to
+verify URLs with `curl -sI` cannot be satisfied here.** Used naively it would have deleted
+this entire pass as 36 dead links.
+
+🟢 **The working pair: `git ls-remote --symref` for existence and real default branch, and
+`raw.githubusercontent.com` for the payload. 36/36 verified both ways.**
+
+### Finding 8 — 🔴 not a new failure mode: a control this KB already built, bypassed again
+
+This pass wrote its own licence classifier for the probe script. It reported **four** payloads
+as Creative Commons/NonCommercial — `SapuSeven/BetterUntis` (300★),
+`TEAMSchools/powerschool`, `sikkepitje/TeamSync`, `sas-fossdev/saspes`. All four are
+**GPL-3.0 or AGPL-3.0**. Cause: an unanchored substring match on `NonCommercial`, and
+**GPL-3.0 §6 contains the word "noncommercially"**.
+
+🔴 **None of that is new, and the honest finding is the part that is.** This KB had already:
+
+| Already in this KB | Where |
+|---|---|
+| Found the identical defect — *"el cuerpo real de GPL-3.0/AGPL-3.0 dice «allowed only occasionally and **noncommercially**» en su seccion 6 (**linea 259** del payload)"* | `agents/trending.md`, earlier pass |
+| Diagnosed it as **P171**'s thesis — *"un token sobre el cuerpo no se puede creer"* | same |
+| **Fixed it with a gate**, not more tokens: `osi_family_of()` decides first, and an identified OSI family permits commercial use by definition | `compose/code/lib/license_family.sh` |
+| Hardened the suite **18/18 → 41/41** with full (not truncated) GPL-§6 and Unlicense fixtures | same |
+| Written the standing rule: *"a rule that has to be remembered is not a control. **This file is the control.**"* | `lib/license_family.sh` header |
+
+🟢 **And the control is correct.** Run against this pass's three hardest payloads it is right
+on all three, first time:
+
+| Payload | `osi_family_of()` | This pass's from-scratch script |
+|---|---|---|
+| `BetterUntis` `LICENSE` (35,149 B) | 🟢 **`GPL-3.0`** | 🔴 CC/NonCommercial |
+| `saspes` `LICENSE` (34,522 B) | 🟢 **`AGPL-3.0`** | 🔴 CC/NonCommercial |
+| `Somtoday-Mod` `LICENSE.md` (17,056 B) | 🟢 **`CC-BY-NC-SA-4.0`** | ⚠️ right family, by luck |
+
+It is right because of its **architecture**, not its token list: the Creative Commons branch
+is gated on `Creative Commons|creativecommons.org|CC BY|CC-BY` **first**, and NonCommercial
+is then read as an *attribute* of a CC family rather than as a family of its own.
+
+🔴 **So the finding is a process measurement, and it is the second recorded instance.** The
+`lib/` header documents the first: pass 77 *"reintroduced the defect anyway, in two fresh
+instruments, because it wrote a new classifier from scratch instead of reusing a hardened
+one. The correction did not travel."* This pass is the second. **The control existed, was
+correct, was one `source` away, and was bypassed — by a pass whose own subject matter was
+licence verification.**
+
+🔵 **What would actually fix it, stated as a constraint rather than a reminder:** the defect
+recurs because writing six `grep -qi` lines is easier than finding the library. The cheap
+structural fixes, in order of strength: (1) **a probe harness in `compose/code/lib/` that
+takes a repo list and returns classified payloads**, so no pass needs to write the loop at
+all; (2) a one-line pre-flight in every new instrument that fails loudly if
+`license_family.sh` was not sourced. **A third recurrence should be treated as evidence that
+documentation cannot carry this and only tooling can.**
+
+⚠️ **Nothing in this pass's published rows is affected.** The four payloads were read by hand
+and are recorded with their true families (GPL-3.0 ×3, AGPL-3.0 ×1) everywhere they appear.
+The defect was caught inside this pass, which is the only reason it is a process note and not
+a correction block.
+
+### What the next pass should do
+
+1. **Ask `IFRN` for a licence file on [`IFRN/suapi`](https://github.com/IFRN/suapi).** A
+   federal institute, a public repository of clients for the SIS it operates, 28★, no
+   payload — while an individual's client for the same system is MIT. One commit. The most
+   answerable upstream ask this KB has recorded.
+2. **Run the platform channel against the ministry tier, which this pass still did not
+   reach**: Skolverket is shelved, but Udir (NO), DfE (UK, estate already shelved), Eduscol
+   (FR), INEP/Censo Escolar (BR), MEXT (JP) and the Gulf ministries were not queried by name.
+   Query one name at a time and **check the name is coined before trusting the count.**
+3. **Finish the registry census with the retry fix** and publish the real index size. The
+   walk is resumable from any cursor.
+4. **Do not re-run `curl -sI` against github.com here.** Finding 7 priced it.
+
+---
+
 ## 2026-10-06 — fourteenth pass: the channel is the platform's name, and it yields 80% against the language channel's 25%
 
 **New channel: query the name of the platform, one name at a time.** Passes 1–4 searched in

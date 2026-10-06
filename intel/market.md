@@ -3103,3 +3103,182 @@ numbers that were wrong.**
 six sampled entries points at a repository `ls-remote` cannot reach. The same rule this file
 already applies to GitHub's `total_count` — an index count is an **upper bound** — applies to
 the registry.
+
+## What changed in the fifteenth pass of 2026-10-06
+
+**One instrument completed across all four regions, one carried figure contradicted, and one
+arithmetic trap closed.** The global market query reproduced the series this file already
+carries ($7.52B → $10.6B → $42.48B at ~41%; the rival $6.4B → $79.6B at 31.35%; the 71.22% /
+45.62% / 34.78% segment splits; 66% → 92% student usage). **Nothing new globally — the
+divergence this file already documents is unchanged.** What is new is regional.
+
+### The geography instrument, now complete — and LATAM is its slowest-growing region
+
+The fourteenth pass recorded North America from one house's geography series. This pass
+retrieved the other three entries of **the same series**, so for the first time the four
+regions are comparable on one instrument:
+
+| Region | 2024 | 2029 | CAGR |
+|---|---|---|---|
+| **North America** | $951.0M | $2,303.2M | **15.9%** |
+| **APAC** | $591.6M | $1,848.1M | **20.9%** 🆕 |
+| **LATAM** | $105.6M | $204.7M | **11.7%** 🆕 |
+| *— of which "Rest of Latin America"* | $18.2M | $36.0M | 12.1% 🆕 |
+| **EMEA** | 🔴 **not retrieved** | — | — |
+
+🟢 **APAC is the growth region and North America is the money region** — APAC compounds five
+points faster from 62% of the base. That ordering is consistent with everything else this
+file carries about APAC.
+
+🔴 **And LATAM is the slowest-growing region in this instrument at 11.7%** — which
+contradicts a figure this KB has carried since its second cycle: *"LATAM $1.5B → $4.2B,
+CAGR 45%."* The two cannot both be about the same thing: **they differ by a factor of
+roughly 20–40 on the base and by 33 points on the rate.**
+
+⚠️ **Do not reconcile them. Do not average them. Quote one, with its instrument named.**
+The most likely explanation is scope — a narrow "AI in education software" definition
+against a broad "AI-enabled edtech" one — but this pass did not establish that, and an
+unverified reconciliation is how a wrong number gets into a deck with a citation attached.
+
+🔴 **EMEA could not be retrieved from this instrument: the publisher's domain is blocked by
+this environment's egress proxy** (`EGRESS_BLOCKED`, `www.marketsandmarkets.com`), so the
+three figures above come from search-result snippets rather than the pages themselves. A
+*different* house puts Europe at **$2.64B growing 31.9% to $8.0B by 2030** — which is not
+comparable to the table above and must not be dropped into it.
+
+### 🔴 The arithmetic trap, stated so nobody repeats it
+
+Sum the geography instrument's 2024 regional values: **$951.0M + $591.6M + $105.6M ≈
+$1.65B**, three regions of four. The global series in this file puts 2025 at **$6.4B–$7.52B**.
+
+**The regional instrument is roughly four to five times smaller in scope than the global
+one.** Therefore:
+
+- ❌ **Never compute "region as % of global" by dividing a figure from one instrument by a
+  figure from the other.** It produces a number that is wrong by a factor of four and looks
+  perfectly plausible — LATAM would come out at ~1.5% of a market it does not measure.
+- ❌ Never add a regional CAGR to the global narrative ("the market grows 41%, and LATAM
+  grows 11.7% of it") — they are growth rates of different quantities.
+- ✅ Use the geography series **only** for region-against-region comparison, which is the one
+  thing it is internally valid for, and say which house it came from.
+
+### Opportunities by region — fifteenth-pass additions
+
+The supply-side findings this pass are placed by country by construction (the platform-name
+channel returns an institution, and an institution is in a country). Full rows in
+`agents/top.md`.
+
+#### North America
+
+🔴 **The headline is a *negative* commercial finding and it is worth more than a positive
+one.** The US K-12 SIS integration tier exists (PowerSchool 590 repositories, Infinite
+Campus 43) and is substantially MIT — and it is **not a production path**, because Infinite
+Campus's Terms of Use forbid access by means other than publicly supported interfaces,
+naming scraping and AI training explicitly. The one MIT MCP server for the platform says in
+its own README that it likely violates that ToU, and adds FERPA and COPPA on top.
+
+🟢 **The opportunity that follows:** the engagement is **procurement plus integration, not
+integration alone.** A US K-12 district engagement must budget for the vendor's official API
+entitlement (OneRoster) before any agent work is scoped — and a studio that says so in week
+one differentiates itself from every competitor that discovers it in month three. This is
+also the strongest argument in this KB for leading North American K-12 conversations with
+the **interoperability tier** rather than the tutor tier.
+
+⚠️ Regulatory context re-confirmed this pass, unchanged: a **relative regulatory vacuum** —
+no FDA-equivalent for edtech, adoption decided school-by-school, with Colorado and Texas
+named again as the states with piecemeal requirements. **36%** of global adoption share.
+
+#### EMEA
+
+🟢 **The deepest permissive integration supply in this pass is European, and it is placed by
+country**: PRONOTE (FR, 907 repositories, `pronotepy` MIT at 241★), WebUntis (DE/AT, 401,
+MIT and BSD-2 clients plus an MIT Flutter client with an **on-device** AI assistant),
+Magister and SOMtoday (NL, MIT clients). **France, Germany/Austria and the Netherlands each
+have a payload-backed permissive client for their dominant school platform.**
+
+🔴 **The UK is the exception, and it is a clean gap**: `bromcom` 36 repositories with nothing
+above 2★, `"arbor mis"` 7 with nothing above 0★, `"capita sims" school` **0**. The UK has the
+strongest *government* open-source estate in this KB (the DfE MIT estate, ninth pass) and
+**no permissive MIS integration layer at all**. Build, don't adopt — and the one UK asset
+found, [`DPlazma/assessapp`](https://github.com/DPlazma/assessapp) (MIT, Arbor MIS + AI
+tagging), is a 0★ sketch of exactly the product that is missing.
+
+⚠️ **Regulatory clock, as reported this pass:** the EU AI Act became applicable **2 August
+2026**, with education classified high-risk (Annex III) requiring human oversight and data
+protection. ⚠️ **This conflicts with the December 2026 / December 2027 split this KB models
+in P13** — two different readings of the same instrument. P13 was built from a closer
+reading and is not overturned by a search snippet; **flagging the conflict, not resolving
+it.** Also reported: **94%** of EMEA organisations likely to invest in AI-specific training
+in 2026, and a January 2026 competency framework defining **15 competencies across 5
+dimensions** for national teacher-training programmes.
+
+#### APAC
+
+🟢 **Fastest-growing region on the completed geography instrument (20.9%)**, and the
+governance posture matches: **48%** of APAC governance leaders rank AI adoption their top
+2026 priority — ahead of growth (45%), cybersecurity (39%) and geopolitical risk (32%) — and
+**57%** of Asian organisations already run AI in at least one area, with **70%** of boards
+naming digital transformation including AI risk their most pressing agenda item.
+
+⚠️ **Fragmentation is the standing constraint and no common framework is coming** — *"a
+common APAC-wide AI legislative framework will remain a distant dream."* The ASEAN Guide on
+AI Governance and Ethics is the regional instrument and is early-stage; Singapore's financial
+AI consultations are the template others are watching. **Per-country compliance is a
+line item, not an overhead.**
+
+🔴 **Supply-side, APAC is thin in this channel and the reason is instructive.** The entire
+APAC SIS tier found this pass is **one university** — National Taiwan University's NTU COOL,
+with three MIT assets including a Rust CLI + MCP server. It has a tier because **NTU COOL is
+Canvas-based**, so its authors inherited a documented API. **India returned nothing usable:
+`diksha` is a false positive at scale (2,864 repositories, zero of them the national
+platform — it is a common given name), and `samarth ugc` returned 0.** The real Indian
+upstream remains **Sunbird**, already shelved. ⚠️ **Written down explicitly: this pass found
+no Japan-, Korea-, Australia- or India-placed SIS integration asset.** `sentral compass
+school australia api` returned 0 (an OR'd query, so the measurement is weak and should be
+re-run one name at a time).
+
+#### LATAM
+
+🟢 **Brazil is the largest single national cluster this pass found anywhere — larger than
+the US, France or Germany by repository count placed on one country**: `sigaa` 677
+repositories and `suap ifrn` 27, yielding nine carried addresses of which **seven are
+permissive** (six MIT, one Apache-2.0), spanning UFPB, UnB, UFC, UFBA and IFRN. The
+fourteenth pass could not measure this because it OR'd the names and collapsed to
+`total_count: 160,659`.
+
+🔵 **The commercial read:** Brazilian federal universities and institutes run **SIGAA and
+SUAP**, both with real permissive client libraries written by their own student and staff
+communities. For a Brazilian public-sector higher-education engagement that is a genuine
+head start — **and it is the one region where the access-rights problem is softest**, because
+the institution that operates the SIS is usually the same institution that is the client.
+**The ToU gate (P26) is cheap to clear when the vendor and the customer are the same body.**
+
+⚠️ **And the most answerable upstream ask in this KB is Brazilian**:
+[`IFRN/suapi`](https://github.com/IFRN/suapi) — the federal institute's *own* repository of
+clients for the SIS it operates, 28★ — carries **no licence payload**, while an individual's
+client for the same system is MIT. One file, one commit, a public institution.
+
+**Demand-side, re-confirmed and extended this pass:** UNESCO IESALC's survey (200
+institutions, 19 countries, fielded Aug–Oct 2025) remains the best-evidenced regional claim
+here. Added this pass: **13 of the 19 LAC countries do not teach early AI adoption in
+schools**, with a *"bottleneck in advanced training [that] limits the region's ability to
+produce its own solutions"*; Brazil's draft AI framework borrows heavily from the EU
+approach and Brazil has signed an EU digital partnership with annual ethical-AI meetings;
+**CENIA (Chile)** leads **Latam-GPT**, trained on regional data, and publishes the Latin
+America AI Index, with Chile leading regional AI readiness. One forecast puts **50% of Latin
+America adopting AI by 2029**.
+
+### The method note, stated plainly
+
+1. 🔴 **An egress block is a data-quality fact and belongs in the file.** `marketsandmarkets.com`
+   is unreachable from this environment, so three of the four regional figures above are
+   **snippet-derived, not page-verified**. They are good enough to compare regions and not
+   good enough to put a decimal point on in a client deck without re-verification from an
+   unblocked network.
+2. 🟢 **The four mandatory global queries paid in figures and not in repositories, for the
+   eleventh consecutive pass.** Every number they returned this pass was already in this
+   file. The market query remains the only one of the four worth running, exactly as the
+   fourteenth pass concluded.
+3. ⚠️ **A regional figure and a global figure from different houses do not divide.** The trap
+   above is not hypothetical arithmetic — it is the single easiest way to produce a
+   confidently wrong slide from this file's own contents.
