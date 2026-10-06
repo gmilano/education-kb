@@ -699,3 +699,49 @@ and [kolibri-server](https://github.com/learningequality/kolibri-server) returne
 **no licence payload** under any of 20 probed URLs. Kolibri itself, `morango`,
 `le-utils`, `studio` and `ricecooker` are MIT, read from payload. **The
 organisation's posture does not license its repositories** — probe each one.
+
+## Added in the eleventh pass of 2026-10-06 — nine platforms recovered from this repository's own archive, re-verified on their real default branch
+
+All nine addresses below sit in `archive/2026-10-06-pre-reset/` and were dropped by
+this repository's reset earlier on 2026-10-06 (172 real addresses lost; the audit is
+in `repos/trending.md`). Each licence was re-read this pass from the repository's
+payload, **on the branch the GitHub API reports as `default_branch`** — not a guessed
+`main`/`master` pair, which is what made two of these look ungranted.
+
+### The permissive end — what Globant can customise and redistribute
+
+| Platform | Repo | Licence (read from payload) | ★ / forks | What it is, and what AI goes on top |
+|---|---|---|---|---|
+| **OpenOLAT** | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) (`master`) | ✅ **Apache-2.0** | 446 / 166 | Full Swiss LMS: course authoring, **assessment**, curriculum management, QTI, SCORM, lecture and roll-call. Java. Pushed 2026-10-06. **The most permissively licensed complete LMS in this KB** — Moodle is GPL-3.0 and Open edX is AGPL-3.0, so OpenOLAT is the only one you can extend without the copyleft conversation. AI layer: QTI item generation, assessment scoring, curriculum-gap analysis. |
+| **Richie** | [openfun/richie](https://github.com/openfun/richie) (`master`) | ✅ **MIT** | 316 / 95 | Django CMS purpose-built for **education portals** — course catalogue, programmes, organisations, teacher pages — designed to sit *in front of* Open edX or Moodle rather than replace them. From **France Université Numérique**. AI layer: catalogue search, programme recommendation, multilingual course descriptions. **MIT at the portal tier is the cleanest place to put client-visible AI**, because the copyleft lives behind it in the LMS. |
+| **Sunbird** | [project-sunbird/sunbird-lms-mw](https://github.com/project-sunbird/sunbird-lms-mw) · [sunbird-analytics](https://github.com/project-sunbird/sunbird-analytics) (`master`) | ✅ **MIT** | 6 / **41** · 3 / 28 | The stack under **India's DIKSHA** national platform: LMS middleware plus a learning-analytics framework. **The most permissive national-tier education stack this KB has recorded.** ⚠️ **Dormant** — middleware last touched 2024-08-30, analytics 2023-02-08, and `sunbird-learning-platform-devops` is **archived**. Forks (41) exceeding stars (6) is the signature of infrastructure that is *deployed* rather than starred. **Use as a licence-clean reference architecture; do not expect upstream patches.** |
+| **Ed-Fi ODS/API** | [Ed-Fi-Alliance-OSS/Ed-Fi-ODS](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) (`main`) | ✅ **Apache-2.0** (`LICENSE.txt`) | 28 / 47 | Reference implementation of the **Ed-Fi** US K-12 data standard: an operational data store plus a REST API over a shared student-data model. C#. **The data tier a North American district RFP assumes you already speak** — see trend 26 and P24. AI layer: early-warning models, intervention targeting, anything that needs cross-system student records without a bespoke integration per source. |
+| **OpenTutor** | [LEARNableLabs/opentutor](https://github.com/LEARNableLabs/opentutor) (`main`) | ✅ **MIT** | 0 / 0 | *"Compounding Deliberate Curiosity."* JavaScript, 72 open issues, created 2026-02-28, pushed 2026-10-02. **Measured at 0★.** Noted precisely because earlier KB cycles recorded an "OpenTutor" at ~900★ — **a different project of the same name.** Treated here as an early-stage MIT asset, not as an established platform. |
+
+### The copyleft end — real platforms, and the clause decides the engagement
+
+| Platform | Repo | Licence (read from payload) | ★ / forks | The delivery constraint, stated plainly |
+|---|---|---|---|---|
+| **LearnHouse** | [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) (**`dev`**) | 🔴 **AGPL-3.0** | **2,320** / 564 | *"The next-gen open source learning platform for everyone."* Python + React, headless, explicitly AI-native. Pushed 2026-10-06 — the most actively developed AGPL platform here. ⚠️ **Network clause**: hosting a modified LearnHouse for a client triggers the obligation to offer the modified source **to its users**. Viable where the client accepts an open deliverable; fatal where they expect proprietary differentiation. ⚠️ Default branch is **`dev`**. |
+| **CourseLit** | [codelitdev/courselit](https://github.com/codelitdev/courselit) (`main`) | 🔴 **AGPL-3.0** (`LICENSE.md`) | **1,269** / 260 | Course sales, digital downloads and blogging on a branded site — the open alternative to Teachable/Thinkific/Podia. TypeScript. Same network clause as above. **The right base for a client whose product *is* the open platform**, wrong for one reselling it. |
+| **i-educar** | [portabilis/i-educar](https://github.com/portabilis/i-educar) (**`2.12`**) | 🔴 **GPL-2.0** (*"Version 2, June 1991"*) | **718** / **547** | *"O maior software livre de educação do Brasil."* A full school-management/SIS platform — enrolment, attendance, grades — Laravel/PHP, tagged `software-publico`. **The only genuine LATAM-origin education platform in this KB**, and with 547 forks it is the most-forked platform on these shelves. GPL-2.0 is **no network clause**: hosting a modified i-educar for a Brazilian municipality triggers nothing; **distributing** a modified binary or source does. For public-sector LATAM work, where the client often *wants* the source, this is close to ideal. ⚠️ Default branch is the version number **`2.12`**; `main` serves nothing, which is why a `main`+`master` probe reports this platform as ungranted. |
+| **Obojobo** | [ucfopen/Obojobo](https://github.com/ucfopen/Obojobo) (`master`) | 🔴 **AGPL-3.0** | 72 / 35 | Next-generation course content delivered into an LMS over LTI. React + SlateJS. From the **University of Central Florida**. |
+| **Materia** | [ucfopen/Materia](https://github.com/ucfopen/Materia) (`master`) | 🔴 **AGPL-3.0** | 52 / 41 | Embeddable learning widgets and educational games for LMS courses, also LTI-delivered. Same organisation; note that UCF's own LTI **template** (`cookiecutter-python-lti`) is **MIT** while its *applications* are AGPL-3.0. **An organisation's licence posture is not uniform across its repositories** — probe each one. |
+| **OpenEMIS** | [openemis/core](https://github.com/openemis/core) (`main`) | 🔴 **GPL** — **version not read this pass** | — | Education management information system deployed at ministry tier. Recorded with the licence version explicitly open rather than guessed; resolve before it enters a proposal. |
+
+### What this table changes about platform selection
+
+The KB's standing advice has been Moodle (GPL-3.0) or Open edX (AGPL-3.0) with AI on
+top. Two corrections:
+
+1. **If copyleft is the blocker, the answer is OpenOLAT, not a negotiation.**
+   Apache-2.0, 446★, full assessment and curriculum management, pushed the day of
+   this pass. It has been absent from this KB's live files since the reset.
+2. **If the engagement is LATAM public sector, i-educar's GPL-2.0 is a feature.**
+   No network clause, 547 forks, Brazilian, already classified as `software-publico`.
+   The licence that blocks a SaaS product is the licence a municipality asks for.
+
+And one procurement note that spans both tables: **the portal tier is where
+permissive licences survive.** Richie (MIT) in front, a copyleft LMS behind, and the
+AI in the MIT layer — that is the pattern that lets a client keep what they paid for
+without anyone misreading a clause.

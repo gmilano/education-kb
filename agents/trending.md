@@ -8,6 +8,346 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — eleventh pass: the GitHub search API was reachable all along, and it refutes three of this KB's declared gaps
+
+The tenth pass closed with a structural conclusion and an instruction:
+
+> *"`github.com` and `raw.githubusercontent.com` are the only reachable origins. The
+> next pass should stop spending budget on primary-document attempts and spend it on
+> Tier 1 repository work."*
+
+The instruction was right. The conclusion was wrong, and **that was the expensive part.**
+
+### Finding 1 — the instrument: the GitHub REST search API answers in this environment, through one path only
+
+| Instrument | Result (6 Oct 2026) |
+|---|---|
+| `curl https://api.github.com/search/repositories?q=…` | **HTTP 403** — *"This GitHub API path is not available: sessions are bound to their configured repositories."* |
+| `curl https://api.github.com/repos/{owner}/{repo}` | **error** — *"GitHub access to this repository is not enabled for this session"* (for every repo outside this session's scope) |
+| GitHub MCP server, `search_repositories` | **200 with real results** — `total_count`, `stargazers_count`, `default_branch`, `fork`, `archived`, `pushed_at`, and `license.spdx_id` |
+
+Ten passes probed the API the two ways that fail and concluded it was blocked. **The
+path that works is the MCP server, not the HTTP client.** The difference matters
+because it changes what a zero means: for ten passes this KB's absences were
+measured with `WebSearch` and `github.com/search` renderings. Those are ranked,
+truncated, cached surfaces. `total_count` is a count.
+
+Everything below is **Tier 1**: licence bodies read from `raw.githubusercontent.com`
+payloads, metadata from the search API, both on 6 Oct 2026. Where only one of the
+two instruments saw a thing, that is said in the row.
+
+### Finding 2 — the tutoring-evaluation gap is refuted as an absence and replaced by something worse: a licensing wall
+
+This is the most consequential correction in this KB's history, because the gap it
+corrects is the one driving an engagement recommendation.
+
+For three passes the KB has carried: *"`tutoring quality evaluation benchmark
+license:apache-2.0` → 0 results"*, and built pattern **P23** on the premise that the
+benchmark does not exist and must be waited for. Re-measured this pass:
+
+| Probe (GitHub REST search) | `total_count` |
+|---|---|
+| `tutoring quality evaluation benchmark` | **0** (reproduced — the KB's number is correct) |
+| `tutoring evaluation benchmark fork:true` | **20** |
+
+**The literal word "quality" was carrying the zero.** Drop it and the shelf appears,
+led by two institutions this KB would have recognised instantly:
+
+| Repo | Licence (read from payload) | ★ | What it is |
+|---|---|---|---|
+| [Khan/tutoring-accuracy-dataset](https://github.com/Khan/tutoring-accuracy-dataset) | 🔴 **Custom "Evaluation Dataset License"** (`main/LICENSE`, 2,690 B, read in full) | **57** | **Khan Academy's own** benchmark dataset, published with the paper *"LLM Based Math Tutoring: Challenges and Dataset."* Updated 2026-08-16. |
+| [eth-lre/mathtutorbench](https://github.com/eth-lre/mathtutorbench) | 🔴 **no payload under 10 filenames × 2 branches**; README claims **two different licences** | **43** | **ETH Zurich** Learning & Reasoning group. *"Benchmark for Measuring Open-ended Pedagogical Capabilities of LLM Tutors"*, **EMNLP 2025 Oral.** Updated 2026-10-02. |
+| [Yunfeng-Wan/CSTutorBench](https://github.com/Yunfeng-Wan/CSTutorBench) | 🔴 **CC BY-NC-4.0** (`main/LICENSE`) | 2 | 2,970 multi-turn QA dialogues from real university forums, plus an evaluation method. **NonCommercial — unusable in client work.** |
+| [shivanireddyk/tutoreval](https://github.com/shivanireddyk/tutoreval) | ✅ **MIT** (`main/LICENSE`, 1,074 B) | 0 | *"Measuring whether an AI tutor teaches, rather than whether it answers."* Deterministic pedagogical evaluation with a hand-labelled benchmark. Created 2026-08-20. |
+
+**Read the Khan licence before you read anything else in this section.** It is not a
+software licence and it is not a near-miss of one. Granted: internal use, copy,
+modify, merge, for **evaluating AI models**. Prohibited, in its own words:
+**re-distribution or publication, use for model training, and any production use.**
+No sublicensing. And clause 4 is viral — *any* dataset containing *any* portion of it
+stays under these terms. But clause 3 carves out, explicitly, that the restriction
+does **not** prohibit *"use of the Dataset in connection with evaluation of products
+intended for commercial use"* or *"commercial use of insights and learnings gained
+from permitted evaluations."*
+
+So the operative rule for a Globant engagement, stated as a rule:
+
+> **Khan's dataset may be used to evaluate a client's tutor, and the findings are
+> yours to keep and to bill. It may not enter the deliverable, the training set, or
+> any dataset you hand over. It is a measuring instrument you borrow, not a
+> component you ship.**
+
+**And `mathtutorbench` cannot be used at all.** 43★, an EMNLP oral, from ETH — and
+**no licence payload exists.** Its README carries a **CC BY 4.0 badge** and, in the
+body, *"This work is licensed under a Creative Commons Attribution-ShareAlike 4.0
+International License."* **Two incompatible claims in one file and nothing
+authoritative to adjudicate them**, since there is no `LICENSE` to read. The
+ShareAlike reading would attach to derivatives. Treat as ungranted.
+
+**What the gap actually is, restated so it can be acted on.** It was never *"no
+tutoring benchmark exists."* It is: **four tutoring-evaluation benchmarks exist, from
+Khan Academy and ETH Zurich among others, and not one of them carries an OSI-approved
+licence. The only MIT-licensed instrument in the set has zero stars and one author.**
+That is a licensing wall, not a void — and a wall is navigated differently from a
+void. P23 is rewritten accordingly, and P27 is new.
+
+### Finding 3 — and the harness P23 was told to build already exists, MIT, from a government, with 2,945 stars — in this KB's own archive
+
+The KB has spent three passes saying *build the evaluation harness, swap the artefacts
+in as they land.* Both halves of that harness were sitting in `archive/`:
+
+| Repo | Licence (read from payload) | ★ | Forks | Last push | What it is |
+|---|---|---|---|---|---|
+| [UKGovernmentBEIS/inspect_ai](https://github.com/UKGovernmentBEIS/inspect_ai) | ✅ **MIT** (`main/LICENSE`) | **2,945** | 779 | **2026-10-06** | **Inspect** — LLM evaluation framework built by the **UK AI Security Institute** (`aisi.gov.uk`, named in the README). Prompt engineering, tool use, multi-turn dialog, model-graded evals; scoring and elicitation extensible from other Python packages. Python, `main`, 348 open issues. |
+| [aiverify-foundation/moonshot](https://github.com/aiverify-foundation/moonshot) | ✅ **Apache-2.0** (`main/LICENSE.md`) | **355** | 72 | **2026-10-06** | **Moonshot** — modular tool to **evaluate and red-team any LLM application**, from the **AI Verify Foundation** (Singapore IMDA's AI testing community). Topics: benchmarking, evaluation-framework, red-teaming, trustworthy-ai. |
+
+Two permissively licensed evaluation frameworks, both maintained by or around a
+**national government body**, both pushed to on the day of this pass. The tenth pass
+wrote that *"North America is buying the artefact, EMEA is writing the rule"* — the
+correction is that **EMEA shipped the tooling** (UK AISI, MIT) and **APAC shipped the
+red-team tooling** (Singapore IMDA, Apache-2.0), while North America funds the
+datasets that both will consume. All three regions are in this picture and the two
+that this KB kept recording as regulators are also suppliers.
+
+### Finding 4 — why both were invisible: the reset of 2026-10-06 cost this KB 172 repository addresses
+
+`inspect_ai`, `moonshot`, `pylti1.3` and the Ed-Fi stack are not new to this
+repository. They are in `archive/2026-10-06-pre-reset/`. Measured, by extracting
+every `github.com/{owner}/{repo}` address from the eight live files and from the nine
+archived ones:
+
+| Address set | Distinct `owner/repo` |
+|---|---|
+| The eight live KB files | **627** |
+| The nine pre-reset archive files | **678** |
+| **In the archive, absent from the live KB** | **179** |
+| of those, not real repositories (placeholders and negative controls: `owner/repo`, `repos/openedx`, `orgs/1edtech`, `topics/agent-skills`, `topics/claude-skill`, `thisorgdoesnotexist999/nope-nope-nope`, `elgg/nosuchrepohere12345`) | 7 |
+| **Real repository addresses dropped by the reset** | **172** |
+
+And the harm is not hypothetical, because **the same day's pass re-declared one of
+them as a gap.** The tenth pass wrote:
+
+> *"**No Python LTI 1.3 library exists on the permissive shelf.** Finding 6's verified
+> set covers Node, PHP, Java and .NET. Most AI tutoring code is Python. Searched, not
+> found, recorded as a gap — and as a candidate contribution."*
+
+The pre-reset archive, in the same repository, contains
+`dmitry-viskov/pylti1.3` with its star count, its licence and a note that the KB
+*"already had it registered with 138★ from an earlier pass."*
+
+**The gap was refuted by this repository's own `archive/` directory before it was
+declared.** That is the **eleventh failure mode**, and it is the only one in this
+KB's list that needs no external instrument to catch: *a KB that has been reset must
+diff its new gap claims against its own archive before publishing them.*
+
+### Finding 5 — the Python LTI shelf, measured properly: 33 repositories, and the hole was in the KB, not in the ecosystem
+
+| Repo | Licence (read from payload) | ★ | Branch | What it is |
+|---|---|---|---|---|
+| [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) | ✅ **MIT** (`master/LICENSE`, 1,070 B) | **138** | `master` | `PyLTI1p3` — LTI 1.3 Advantage tool implementation with **Django and Flask** adapters. **The canonical Python LTI 1.3 library.** ⚠️ last push **2024-08-18**: stable, not active. |
+| [Pearson-Advance/openedx-lti-tool-plugin](https://github.com/Pearson-Advance/openedx-lti-tool-plugin) | ✅ **Apache-2.0** (`main/LICENSE`) | 5 | `main` | Turns **Open edX itself** into an LTI 1.3 tool. Pushed 2026-09-11 — the most recently maintained asset in this set. |
+| [ucfopen/cookiecutter-python-lti](https://github.com/ucfopen/cookiecutter-python-lti) | ✅ **MIT** (`main/LICENSE`, © 2025 **University of Central Florida — Center for Distributed Learning**) | 5 | `main` | Project template for a new Python LTI tool. The fastest honest start for a greenfield tool. |
+| [Kamuyin/bitsygrader](https://github.com/Kamuyin/bitsygrader) | ✅ **BSD-3-Clause** (`master/LICENSE`, © 2026) | 4 | `master` | LTI-connected grader. Pushed 2026-09-29. |
+| [dmitry-viskov/pylti1.3-django-example](https://github.com/dmitry-viskov/pylti1.3-django-example) · [-flask-example](https://github.com/dmitry-viskov/pylti1.3-flask-example) | MIT (**search-index `spdx_id`, payload not read this pass**) | 31 · 23 | `master` | Reference integrations for the row above. |
+| [kltn-moolde/moodle-adaptive-learning-plugin](https://github.com/kltn-moolde/moodle-adaptive-learning-plugin) | MIT (**search-index `spdx_id`, payload not read**) | 7 | `main` | Adaptive-learning plugin on the Moodle side. Pushed 2026-02-14. |
+
+`LTI 1.3 language:python` → **`total_count` 33.** The tenth pass's four-runtime
+shelf (Node 373★ · PHP 124★ · Java 27★ · .NET 6★) gains **Python at 138★ — the
+second-largest runtime on the permissive interoperability shelf.** P25 is corrected.
+
+### Finding 6 — the maintained MIT AI tutor from MIT is a fork, and fork-excluding search cannot see it
+
+This one is a method finding with a real asset attached.
+
+| | `MIT-OL-AI-Tutoring/Open_Learning_AI_Tutor` | `mitodl/open-learning-ai-tutor` |
+|---|---|---|
+| Role | upstream (`fork: false`) | **`fork: true`** |
+| Licence | **MIT**, `main/LICENSE`, md5 `cb5f766beb2db853d5b69328279ccb1b` | **MIT**, byte-identical md5 `cb5f766beb2db853d5b69328279ccb1b` (both © 2024 Romain Puech) |
+| ★ / forks | 0 / 3 | 1 / 2 |
+| Last activity | **2025-02-26** | **pushed 2026-10-03** |
+| README points at | `uai-tutor-demo.streamlit.app` | **`learn-ai.ol.mit.edu`** |
+| Visible to `repo:` search | ✅ yes | ❌ **`total_count` 0** |
+
+**The fork is the live one.** `mitodl` is MIT Open Learning's institutional
+organisation; it forked the researcher's repository, has pushed to it three days
+before this pass, and its README points at MIT's **production** domain. The upstream
+has been still for nineteen months.
+
+And `repo:mitodl/open-learning-ai-tutor` returns **`total_count` 0**, while
+`repo:mitodl/open-learning-ai-tutor fork:true` returns **1**. Not an index defect —
+documented behaviour: **GitHub repository search excludes forks unless `fork:true` is
+asked for.** The consequence for this KB is exact and uncomfortable:
+
+> **Every search this KB has ever run was fork-excluding. A `repo:` zero is not an
+> absence. And when an institution adopts a researcher's project, the institutional
+> copy is a fork — which is precisely the case where the fork is the asset.**
+
+That is the **twelfth failure mode.** `fork:true` joins the probe set, not as a
+flourish but because it changed a zero into MIT Open Learning's production tutor.
+Re-run on the sixth pass's oral-reading gap: `oral reading fluency assessment` → **4**;
+with `fork:true` → **6** (two dormant forks of `labaaoom`).
+
+### Finding 7 — the default branch is not always `main` or `master`, and it cost real rows
+
+The tenth pass found the `master` trap (eighth failure mode) and fixed the probe set
+to `main` + `master`. **Two branches is still an assumption.** Measured this pass,
+from `default_branch` in the search API:
+
+| Repo | `default_branch` | Licence, read from the real default branch | ★ |
+|---|---|---|---|
+| [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | **`dev`** | 🔴 **AGPL-3.0** (`dev/LICENSE`; also resolves on `main`) | **2,320** |
+| [portabilis/i-educar](https://github.com/portabilis/i-educar) | **`2.12`** | 🔴 **GPL-2.0** (`2.12/LICENSE`, *"Version 2, June 1991"*) — and **`main` serves nothing at all** | **718** |
+| [mendezjerick/ReaDirect-V2](https://github.com/mendezjerick/ReaDirect-V2) | **`deployment/playstore`** | **no payload**, re-probed on its real default branch | 0 |
+
+`i-educar` is the sharp one: a **718★, 547-fork** platform — *"o maior software livre
+de educação do Brasil"*, Laravel/PHP, tagged `software-publico` — whose default branch
+is a **version number**. A `main`+`master` probe returns nothing and the KB writes
+"ungranted" about Brazil's largest free education platform. It is **GPL-2.0**, which
+is a delivery constraint, not an absence.
+
+`ReaDirect-V2` is the control that keeps this honest: re-probed on
+`deployment/playstore`, it is **still ungranted**. The tenth pass's conclusion about
+it was right; its method could not have known that.
+
+**The probe set is corrected: read `default_branch` from the API first, then probe
+that branch** — not a guessed pair.
+
+### Finding 8 — the 1EdTech Caliper reference implementations went private, and only forks survive
+
+The tenth pass's standards shelf listed `1EdTech/lti-1-3-php-library` as the
+body's own public reference. That holds for **LTI**. It does not hold for **Caliper**:
+
+| Address | Status (6 Oct 2026) |
+|---|---|
+| `imsglobal/caliper-python` | **`README.md` 404 on `main` and `master`; invisible to search** |
+| `concentricsky/badgr-server` | **`README.md` 404 on `main` and `master`; invisible to search** |
+
+Both were live addresses in the pre-reset archive. The reason is readable in a
+surviving fork's own description:
+
+> *"**NOTICE: 1EdTech will be moving Caliper to private repositories on June 17,
+> 2023.** Access to the repositories will be available for 1EdTech Contributing
+> Members and Affiliates."*
+
+What is left in public is **forks only** — `rubysoho07/caliper-python` (0★, 11 forks),
+`jonespm/caliper-python` (0★, carrying the notice above). So the learning-analytics
+half of the interoperability tier is **behind a membership**, while the LTI half
+stayed open. **An engagement that promises Caliper event emission is promising
+either a 1EdTech membership or a clean-room implementation** — state it in the
+proposal, not in the retrospective. This also corrects, by example, the KB's
+standing habit of treating "1EdTech publishes its own reference code" as a
+property of the standards body rather than of each standard.
+
+### Finding 9 — new agents, verified: an ITS multi-agent framework at 131★, and a CC0 trap inside it
+
+| Agent | Repo | Licence (read from payload) | ★ | What it is |
+|---|---|---|---|---|
+| **GenMentor** | [GeminiLight/gen-mentor](https://github.com/GeminiLight/gen-mentor) | ⚠️ **CC0-1.0** (`main/LICENSE`, 7,048 B Creative Commons Legal Code, read in full) | **131** | *"LLM-powered Multi-agent Framework for Goal-oriented Learning in Intelligent Tutoring System"* — **WWW 2025 Industry Track, Oral.** Skill-gap identification → learner modelling → tailored content. TypeScript, 22 forks, updated **2026-10-04**. **The highest-starred purpose-built ITS agent framework this KB has found.** |
+| **MITS** | [Siesher/MITS](https://github.com/Siesher/MITS) | ✅ **MIT** (`main/LICENSE`) | 3 | Math ITS: **Socratic** multi-agent STEM tutor over an RL-trained Qwen3.5-9B. FastAPI + Next.js. |
+| **Intellicode** | [Redomic/intellicode-backend](https://github.com/Redomic/intellicode-backend) | ✅ **MIT** (`main/LICENSE`) | 5 | Adaptive platform bridging a classical **ITS** with coordinated LLM agents — the hybrid architecture, not a chat wrapper. |
+
+**The CC0 note is the finding, not a footnote.** CC0-1.0 is broader than MIT for
+copyright — it is a dedication, not a licence — but Creative Commons says in the
+instrument itself that **no patent or trademark rights of the Affirmer are waived**.
+MIT and Apache-2.0 both do better here (Apache-2.0 grants patents expressly; MIT's
+"deal in the Software without restriction" is read as implying them). For a client
+deliverable, **CC0 is permissive on copyright and silent on patents** — usable, worth
+a line in the licence register, and not interchangeable with Apache-2.0 for anything
+patent-sensitive.
+
+### Finding 10 — LATAM, measured in Spanish, returns nothing usable, and that is the finding
+
+The task that drives this KB requires that a region returning nothing has that
+written down. Measured this pass:
+
+| Probe | `total_count` | What came back |
+|---|---|---|
+| `educación inteligencia artificial estudiantes plataforma stars:>5` | **0** | — |
+| `educación IA aprendizaje` | **10** | **Every result 0–1★.** Top of list by stars: `Edwin1719/AvatarAcademy` (**1★**, MIT, verified — GPT-4o + Tavus avatars for video tutors), then eight 0★ repositories including coursework (`app_aprendizaje`), a PE lesson generator, and `FreeHelado/neurax-ia`, which is **a satirical fake-documentary art project about an AI-education company**, not software. |
+| `education AI tutor India OR China OR Indonesia OR Japan language stars:>50` | **0** | Over-constrained: GitHub repo search **ANDs** free-text terms, so a five-term query collapses. Recorded as an instrument limit, not an APAC absence. |
+
+**The Spanish-language education-AI channel on GitHub contains no production asset.**
+Ten repositories, maximum one star, one of them deliberately fictional. This is the
+fifth consecutive pass in which the LATAM-origin shelf measures at 0–9★, and the
+first in which the channel was probed with `total_count` rather than a ranked search
+page. **The LATAM opportunity is not "adopt the regional shelf" — there is no
+regional shelf. It is to deliver the global permissive shelf with Spanish and
+Portuguese as first-class, offline-tolerant, and data-resident by construction.**
+
+The one real regional platform found is **`portabilis/i-educar`** (Finding 7):
+718★, Brazilian, `software-publico`, **GPL-2.0**, default branch `2.12`.
+
+### Finding 11 — APAC's national stack is open, MIT, and dormant
+
+| Repo | Licence (read from payload) | ★ / forks | Last activity |
+|---|---|---|---|
+| [project-sunbird/sunbird-lms-mw](https://github.com/project-sunbird/sunbird-lms-mw) | ✅ **MIT** (`master/LICENSE`) | 6 / **41** | **2024-08-30** |
+| [project-sunbird/sunbird-analytics](https://github.com/project-sunbird/sunbird-analytics) | ✅ **MIT** (`master/LICENSE`) | 3 / 28 | 2023-02-08 |
+| `project-sunbird/sunbird-learning-platform-devops` | not probed | 2 / 1 | **`archived: true`** |
+
+Sunbird is the stack under **India's DIKSHA** national platform, and it is **MIT** —
+the most permissive national-tier education stack this KB has recorded. It is also
+**two years stale on GitHub, with one component archived.** Fork counts (41 on the
+middleware) well above star counts is the signature of a platform that is **deployed
+and forked rather than starred** — which is how national infrastructure looks on
+GitHub, and a reason not to read these star counts as adoption. **Usable as a
+reference architecture and a licence-clean base; not usable as an upstream you can
+expect patches from.**
+
+### Declared gaps — eleventh pass, searched and measured
+
+- **`OpenLiteracy` → `total_count` 0**, re-measured on the authoritative instrument.
+  The ninth and tenth passes' highest-value funded project (Harvard, Ying Xu, early
+  reading assessment) still has **no public repository**. Unchanged and now
+  confirmed with a count rather than a search page.
+- **No permissively licensed tutoring-evaluation benchmark exists.** Restated from
+  Finding 2: the benchmarks exist; the grants do not. The one MIT instrument
+  (`tutoreval`) is 0★. This is the gap worth a Globant contribution, and it is a
+  *licensing* contribution — a permissively licensed pedagogical benchmark — not a
+  code one.
+- **No oral reading fluency product exists.** Re-measured: **4 repositories, 6 with
+  forks included.** One MIT (`prosody`, 0★, 1 commit), one BSD-2-Clause-plus-
+  contribution-clause Android app from 2017 (`labaaoom`, 1★), one ungranted on its
+  real default branch (`ReaDirect-V2`), one 0★ HTML calculator. The capability gap
+  stands; the count is now exact.
+- **Five of the eight Cohort 2 grantees of the $26M K-12 AI Infrastructure Program
+  remain unnamed.** Not advanced this pass: naming them needs a primary document,
+  and every host carrying one is EGRESS_BLOCKED (23 hosts across the ninth and tenth
+  passes). **This gap is not closeable from this environment** — recorded so no
+  further pass spends budget discovering that again.
+- **The Caliper reference implementation is not obtainable.** Finding 8. Behind
+  1EdTech membership since 2023-06-17; public forks are 0★ and unmaintained.
+- **The 172 dropped addresses are not all recovered.** This pass verified and
+  reinstated **17** of them. The remaining ~155 are listed in
+  `archive/2026-10-06-pre-reset/` and include whole clusters a future pass should
+  take one at a time: the **Ed-Fi** stack (US K-12 data standard), the
+  **LibreTexts** and **OpenStax** content estates, the **Nextcloud** AI apps, the
+  **xAPI/LRS** tier (`yetanalytics/xapipe`, `adlnet/lrs-conformance-test-suite`),
+  the **Moodle AI plugin** cluster (~16 plugins), and the **education MCP** cluster
+  (~20 Canvas/Moodle MCP servers). **A pass spent on the archive will out-yield a
+  pass spent on the open internet**, which is the opposite of what the tenth pass
+  told the eleventh, and it is the opposite because the instrument changed.
+
+### What this pass says about method
+
+Three of the four findings that matter here came from **distrusting a zero**:
+
+1. A zero from a **ranked web surface** is not a count — the API has `total_count`.
+2. A zero from **`repo:`** is not an absence — search excludes forks by default.
+3. A zero from a **licence-filtered or keyword-heavy query** is a statement about the
+   filter — dropping one word ("quality") turned 0 into 20.
+
+And the fourth came from distrusting the KB itself: **the live files and the
+`archive/` directory disagreed about 172 repositories, and the gap the tenth pass
+declared most confidently was refuted by a file already committed to this
+repository.** The failure-mode list now runs to twelve, and the two added this pass
+are both instrument-shaped:
+
+| # | Failure mode | Added by |
+|---|---|---|
+| 11 | **A reset drops verified assets, and new gap claims must be diffed against `archive/` before publication** | eleventh pass |
+| 12 | **Repository search excludes forks by default; when an institution adopts a project, the institutional copy is a fork** | eleventh pass |
+
 ## 2026-10-06 — tenth pass: the correction the ninth pass promised, run backwards over 41 repositories — and GitHub's own licence field caught lying
 
 Channel new to this KB this pass: **retroactive re-probing of its own rejections.**

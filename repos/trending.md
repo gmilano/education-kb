@@ -8,6 +8,105 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — eleventh pass: a 172-address audit of this repository against its own archive, and the 33-repo Python shelf the KB said was empty
+
+The channel new to this pass is **the GitHub REST search API**, reached through this
+session's GitHub MCP server rather than an HTTP client. The distinction is the whole
+finding: `curl https://api.github.com/search/repositories` returns **403**
+(*"sessions are bound to their configured repositories"*) and
+`/repos/{owner}/{repo}` returns *"GitHub access to this repository is not enabled for
+this session"* — so ten passes concluded the API was unreachable. Through the MCP
+path it answers, with `total_count`, `stargazers_count`, **`default_branch`**, `fork`,
+`archived`, `pushed_at` and `license.spdx_id`.
+
+Licences below are still read from `raw.githubusercontent.com` payloads. The API
+supplied the metadata and the real default branch to probe.
+
+### The audit: 627 live addresses, 678 archived, 172 real ones dropped
+
+This repository was reset earlier on 2026-10-06 (`archive/2026-10-06-pre-reset/`).
+Every `github.com/{owner}/{repo}` address was extracted from the eight live KB files
+and the nine archived ones:
+
+| Address set | Distinct `owner/repo` |
+|---|---|
+| The eight live KB files | **627** |
+| The nine pre-reset archive files | **678** |
+| In the archive, absent from the live KB | **179** |
+| of those, not real repositories (`owner/repo`, `repos/openedx`, `orgs/1edtech`, `topics/agent-skills`, `topics/claude-skill`, `thisorgdoesnotexist999/nope-nope-nope`, `elgg/nosuchrepohere12345`) | 7 |
+| **Real repository addresses dropped by the reset** | **172** |
+
+**And the tenth pass, eight hours earlier, declared one of them a gap:** *"No Python
+LTI 1.3 library exists on the permissive shelf."* The archive holds
+`dmitry-viskov/pylti1.3` at **MIT, 138★**, with a note that the KB already had it.
+A pass spent on `archive/` will out-yield a pass spent on the open internet.
+
+### The Python LTI 1.3 shelf — `total_count` 33, verified rows below
+
+| Repo | Licence (read from payload) | ★ | Branch | Last push | What it is |
+|---|---|---|---|---|---|
+| [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) | ✅ **MIT** (`master/LICENSE`, 1,070 B) | **138** | `master` | 🔴 2024-08-18 | `PyLTI1p3` — LTI 1.3 Advantage tool with **Django** and **Flask** adapters. The canonical Python implementation. Stable, not active. |
+| [Pearson-Advance/openedx-lti-tool-plugin](https://github.com/Pearson-Advance/openedx-lti-tool-plugin) | ✅ **Apache-2.0** (`main/LICENSE`) | 5 | `main` | 🟢 2026-09-11 | Makes **Open edX itself** an LTI 1.3 tool. The most recently maintained asset in this set. |
+| [ucfopen/cookiecutter-python-lti](https://github.com/ucfopen/cookiecutter-python-lti) | ✅ **MIT** (`main/LICENSE`, © 2025 **UCF Center for Distributed Learning**) | 5 | `main` | 2026-05-12 | Cookiecutter template for a new Python LTI tool. |
+| [Kamuyin/bitsygrader](https://github.com/Kamuyin/bitsygrader) | ✅ **BSD-3-Clause** (`master/LICENSE`, © 2026) | 4 | `master` | 🟢 2026-09-29 | LTI-connected grader. |
+| [dmitry-viskov/pylti1.3-django-example](https://github.com/dmitry-viskov/pylti1.3-django-example) | MIT (**search-index `spdx_id`; payload not read this pass**) | 31 | `master` | 2024-03-08 | Reference Django integration. |
+| [dmitry-viskov/pylti1.3-flask-example](https://github.com/dmitry-viskov/pylti1.3-flask-example) | MIT (**search-index `spdx_id`; payload not read**) | 23 | `master` | 2023-12-21 | Reference Flask integration. |
+| [kltn-moolde/moodle-adaptive-learning-plugin](https://github.com/kltn-moolde/moodle-adaptive-learning-plugin) | MIT (**search-index `spdx_id`; payload not read**) | 7 | `main` | 2026-02-14 | Adaptive-learning plugin, Moodle side. |
+| [christophse/django-lti-tool](https://github.com/christophse/django-lti-tool) | BSD-3-Clause (**search-index; payload not read**) | 2 | `main` | 2024-06-20 | Minimal Django LTI tool. |
+| [digillab-lmu/smart-rag](https://github.com/digillab-lmu/smart-rag) | ⚠️ **`NOASSERTION`** (search index) — unresolved licence, **do not assume** | 2 | `main` | 2026-08-27 | RAG over LMS content, **LMU Munich**. Needs a payload read before use. |
+
+**The permissive interoperability shelf, corrected by runtime:**
+**Node 373★** (`Cvmcosta/ltijs`, Apache-2.0) › **Python 138★** (`pylti1.3`, MIT) ›
+**PHP 124★** (`1EdTech/lti-1-3-php-library`, Apache-2.0) › **Java 27★**
+(`Unicon/tool13demo`) › **.NET 6★** (`theopenem/OneRoster.NET`). Python is the
+**second-largest** runtime here, not the hole the tenth pass recorded.
+
+### Platforms recovered from the archive and re-verified on their real default branch
+
+These are repository-tier findings; the delivery detail is in `verticals/solutions.md`.
+
+| Repo | `default_branch` | Licence (read from payload) | ★ / forks | Note |
+|---|---|---|---|---|
+| [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | ⚠️ **`dev`** | 🔴 **AGPL-3.0** (`dev/LICENSE`) | **2,320** / 564 | *"Next-gen open source learning platform."* Python + React, headless, AI-native. Pushed 2026-10-06. |
+| [codelitdev/courselit](https://github.com/codelitdev/courselit) | `main` | 🔴 **AGPL-3.0** (`main/LICENSE.md`) | **1,269** / 260 | Course + digital-download commerce; open alternative to Teachable/Thinkific. TypeScript. |
+| [portabilis/i-educar](https://github.com/portabilis/i-educar) | ⚠️ **`2.12`** (a version number; **`main` serves nothing**) | 🔴 **GPL-2.0** (`2.12/LICENSE`, *"Version 2, June 1991"*) | **718** / **547** | *"O maior software livre de educação do Brasil."* Laravel/PHP, tagged `software-publico`. **The only real LATAM-origin platform in this KB.** |
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | `master` | ✅ **Apache-2.0** (`master/LICENSE`) | 446 / 166 | Swiss LMS with assessment, curriculum management, QTI, SCORM. Java. Pushed 2026-10-06. **The most permissive full LMS in this KB.** |
+| [openfun/richie](https://github.com/openfun/richie) | `master` | ✅ **MIT** (`master/LICENSE`) | 316 / 95 | Django CMS for building **education portals** over Open edX or Moodle. From **France Université Numérique**. |
+| [Ed-Fi-Alliance-OSS/Ed-Fi-ODS](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | `main` | ✅ **Apache-2.0** (`main/LICENSE.txt`) | 28 / 47 | **Ed-Fi Operational Data Store + API** — the US K-12 data standard's reference implementation. C#. |
+| [ucfopen/Obojobo](https://github.com/ucfopen/Obojobo) | `master` | 🔴 **AGPL-3.0** | 72 / 35 | Next-generation LMS course content, LTI-delivered. |
+| [ucfopen/Materia](https://github.com/ucfopen/Materia) | `master` | 🔴 **AGPL-3.0** | 52 / 41 | Embeddable learning widgets/games for LMS courses. |
+| [project-sunbird/sunbird-lms-mw](https://github.com/project-sunbird/sunbird-lms-mw) | `master` | ✅ **MIT** (`master/LICENSE`) | 6 / **41** | Middleware of **Sunbird**, the stack under India's **DIKSHA**. 🔴 last activity 2024-08-30. |
+| [project-sunbird/sunbird-analytics](https://github.com/project-sunbird/sunbird-analytics) | `master` | ✅ **MIT** (`master/LICENSE`) | 3 / 28 | Sunbird's learning-analytics framework. 🔴 2023-02-08. |
+| [LEARNableLabs/opentutor](https://github.com/LEARNableLabs/opentutor) | `main` | ✅ **MIT** (`main/LICENSE`) | 0 / 0 | *"Compounding Deliberate Curiosity."* JavaScript, 72 open issues, created 2026-02-28, pushed 2026-10-02. **Measured at 0★ this pass** — earlier KB cycles recorded a much larger OpenTutor, which was a different project of the same name. |
+| [openemis/core](https://github.com/openemis/core) | `main` | 🔴 **GPL** (`main/LICENSE`; **version not read this pass**) | — | Education management information system used at ministry tier. Recorded with the licence version open. |
+
+### Measured zeros and near-zeros this pass
+
+| Probe (GitHub REST search) | `total_count` | Reading |
+|---|---|---|
+| `OpenLiteracy` | **0** | The Harvard/Ying Xu funded early-reading project still has no public repository. Now confirmed with a count. |
+| `tutoring quality evaluation benchmark` | **0** | Reproduced — and the zero is the word *quality*. |
+| `tutoring evaluation benchmark fork:true` | **20** | Khan Academy (57★) and ETH Zurich (43★) at the top. **See `agents/top.md`: none is OSI-licensed.** |
+| `oral reading fluency assessment` | **4** · with `fork:true` **6** | The sixth-pass capability gap stands; the count is now exact. |
+| `intelligent tutoring system LLM agent` | **12** | Three usable rows, all added this pass. |
+| `LTI 1.3 language:python` | **33** | The shelf above. |
+| `educación inteligencia artificial estudiantes plataforma stars:>5` | **0** | — |
+| `educación IA aprendizaje` | **10** | **All 0–1★.** Best: `Edwin1719/AvatarAcademy` (1★, MIT, verified). One entry, `FreeHelado/neurax-ia`, is a **satirical art project about a fictional AI-education company** — not software. |
+| `education AI tutor India OR China OR Indonesia OR Japan language stars:>50` | **0** | **Instrument limit, not an APAC absence**: GitHub repo search **ANDs** free-text terms, so a five-term query collapses. Recorded so it is not mistaken for a measurement. |
+| `education multi-agent grading curriculum pushed:>2026-09-01 stars:>20` | **0** | Same over-constraint. Not a finding about the ecosystem. |
+
+### Gone from public GitHub
+
+| Address | Evidence |
+|---|---|
+| `imsglobal/caliper-python` | `README.md` **404** on `main` and `master`; invisible to search. A surviving fork preserves the notice: *"**1EdTech will be moving Caliper to private repositories on June 17, 2023.** Access [...] available for 1EdTech Contributing Members and Affiliates."* Public forks: `rubysoho07/caliper-python` (0★, 11 forks), `jonespm/caliper-python` (0★). |
+| `concentricsky/badgr-server` | `README.md` **404** on both branches. Survives only as third-party forks (`reedu-reengineering-education/badgr-server`, 3★). |
+
+**So the interoperability tier splits by standard, not by body: 1EdTech's LTI
+reference code is public and Apache-2.0; its Caliper reference code is behind
+membership.** An engagement promising Caliper event emission is promising a
+membership or a clean-room implementation. Say which, in the proposal.
+
 ## 2026-10-06 — tenth pass: 41 rejections re-probed, a 238-repo estate behind a 1-row entry, and 184 search results that are mostly blockchain
 
 Channel this pass: **the KB's own reject pile**, re-probed; plus the

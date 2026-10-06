@@ -737,3 +737,43 @@ LTI/OneRoster tier answers *how it gets into the systems the client already runs
 against a rubric that scores exactly that. Together they are the two ends of a
 delivery that an RFP can actually score — and both ends are permissive, which is
 the whole reason this file exists.
+
+## Added in the eleventh pass of 2026-10-06 — the evaluation layer, and the Python protocol layer
+
+Licences read from each repository's own payload on `raw.githubusercontent.com` on
+2026-10-06; metadata (stars, forks, `default_branch`, `fork`, `pushed_at`) from the
+GitHub REST search API, reachable this pass through the session's GitHub MCP server.
+
+**All four rows are reinstatements of addresses this repository's own reset dropped
+earlier the same day** — they are in `archive/2026-10-06-pre-reset/`. See
+`repos/trending.md` for the 172-address audit.
+
+### The evaluation layer — the one infrastructure tier this KB had been describing as missing
+
+| Repo | Licence (read from payload) | ★ (2026-10-06) | Forks | Why it is foundational |
+|---|---|---|---|---|
+| [UKGovernmentBEIS/inspect_ai](https://github.com/UKGovernmentBEIS/inspect_ai) | **MIT** (`main/LICENSE`) | **2,945** | 779 | **Inspect**, from the **UK AI Security Institute**. A general LLM-evaluation framework: datasets → solvers → scorers, with model-graded evals, tool use and multi-turn dialog built in, and third-party Python packages able to add scoring and elicitation techniques. **This is the harness.** An education engagement supplies the dataset and the rubric; it should not supply the runner, the logging, the sandboxing or the scoring plumbing. Pushed on the day of this pass. |
+| [aiverify-foundation/moonshot](https://github.com/aiverify-foundation/moonshot) | **Apache-2.0** (`main/LICENSE.md`) | 355 | 72 | **Moonshot**, from the **AI Verify Foundation** (Singapore IMDA's AI-testing community). Benchmarking **and red-teaming** of any LLM application in one modular tool. The red-team half has no permissive equivalent in this KB, and for an education deployment — where the adversary is a bored fifteen-year-old with unlimited attempts — it is not optional. Pushed on the day of this pass. |
+
+**Why both, rather than one.** Inspect measures whether the system is *right*;
+Moonshot measures whether it can be made to *misbehave*. Education buyers in every
+region this KB tracks now ask for both, and the two licences (MIT and Apache-2.0) are
+compatible with each other and with a commercial deliverable. **Neither ships any
+education content** — which is exactly why they are in `foundations.md` and the
+benchmarks are not.
+
+### The protocol layer — Python
+
+| Repo | Licence (read from payload) | ★ | Branch | Why it is foundational |
+|---|---|---|---|---|
+| [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) | **MIT** (`master/LICENSE`, 1,070 B) | **138** | `master` | `PyLTI1p3` — **LTI 1.3 Advantage** tool implementation with Django and Flask adapters. Most AI tutoring code in this KB is Python, and LTI 1.3 is how it reaches a learner inside an institution's LMS. ⚠️ **Last push 2024-08-18**: treat as a stable protocol library, pin the version, and budget for maintaining your own fork if the spec moves. |
+| [Pearson-Advance/openedx-lti-tool-plugin](https://github.com/Pearson-Advance/openedx-lti-tool-plugin) | **Apache-2.0** (`main/LICENSE`) | 5 | `main` | Makes an **Open edX** instance act as an LTI 1.3 *tool*, so an existing Open edX estate can be consumed by another institution's LMS rather than replaced. Pushed 2026-09-11. |
+
+### A probe-set correction that belongs in this file
+
+Every licence in `foundations.md` is read from a payload URL, and a payload URL needs
+a branch. The tenth pass probed `main` and `master`. **Read `default_branch` from the
+API instead**: this pass found a 2,320★ platform on `dev` (`learnhouse`), a 718★
+platform on `2.12` (`portabilis/i-educar`) and one repository on
+`deployment/playstore`. On a `main`+`master` probe all three read as **ungranted**,
+and two of them are merely **copyleft** — a delivery constraint, not an absence.

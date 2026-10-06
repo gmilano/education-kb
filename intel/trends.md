@@ -1387,3 +1387,104 @@ Spanish/Portuguese-language search. Four of the gaps below changed state.
   ungranted after a full 20-URL re-probe.** These negatives now hold under a
   stricter method than the one that produced them, which makes them usable: the
   blocker is licensing, not capability, and not this KB's reach.
+
+## 31. The pedagogy benchmark is no longer missing — it is licensed shut
+
+For three passes this KB recorded the evaluation void as an *absence*: nothing to
+measure a tutor against, a $26M philanthropic programme funding the artefact, and an
+engagement line that said *build the harness and wait*. Measured properly on
+2026-10-06, the absence was a search artefact. **The benchmarks exist. The grants
+do not.**
+
+| Benchmark | Institution | ★ | Grant, read from the payload | Usable in client work? |
+|---|---|---|---|---|
+| `Khan/tutoring-accuracy-dataset` | **Khan Academy, Inc.** | 57 | Custom **"Evaluation Dataset License"** — internal, **non-commercial evaluation only**; **no redistribution, no model training, no production use**; viral over combined datasets. Carve-out: evaluating products *intended for commercial use*, and commercial use of the **insights**, are permitted. | ⚠️ **Borrow, never ship** |
+| `eth-lre/mathtutorbench` | **ETH Zurich** (EMNLP 2025 Oral) | 43 | **No payload.** README asserts **CC BY 4.0** in a badge and **CC BY-SA 4.0** in the body. | 🔴 **Ungranted** |
+| `Yunfeng-Wan/CSTutorBench` | — | 2 | **CC BY-NC-4.0** | 🔴 **NonCommercial** |
+| `shivanireddyk/tutoreval` | one author | 0 | **MIT** | ✅ — and it is a weekend project |
+
+**This is a different trend from "there is no benchmark," and it changes the
+deliverable.** A void is filled by building. A wall is navigated by **separating the
+instrument from the artefact**: the harness and the rubric are yours and permissive;
+the datasets are called at measurement time under their own terms and never vendored,
+never trained on, never handed over. The number you deliver is the finding — and
+Khan's licence explicitly permits you to bill for it.
+
+The second-order effect is a market one. **An industry whose only credible quality
+benchmarks are non-redistributable cannot standardise on them.** Every vendor
+measures privately against instruments it cannot publish results from in a
+comparative form. That is precisely the condition that makes the EMEA route — a
+*reference framework* for evaluation, written as a rule (trend 27) — more durable
+than the North American route of funding open artefacts, and it is why a
+**permissively licensed pedagogical benchmark is the highest-value open-source
+contribution available in this industry right now.** It is a licensing contribution,
+not a code one.
+
+## 32. The evaluation tooling for education is being written by governments, and it is permissive
+
+The three most capable evaluation instruments on these shelves are not vendor
+products and not academic one-offs:
+
+| Instrument | Who maintains it | Licence | Scale |
+|---|---|---|---|
+| **Inspect** (`UKGovernmentBEIS/inspect_ai`) | **UK AI Security Institute** | **MIT** | **2,945★**, 779 forks, pushed 2026-10-06 |
+| **Moonshot** (`aiverify-foundation/moonshot`) | **AI Verify Foundation** (Singapore **IMDA**) | **Apache-2.0** | 355★, 72 forks, pushed 2026-10-06 |
+| **Sunbird** (`project-sunbird/*`) | India's national platform programme | **MIT** | deployed at national tier; 🔴 dormant since 2024 |
+
+**A pattern worth naming: the public sector is now the most reliable source of
+permissively licensed AI infrastructure in this industry.** Private open-source
+education platforms in this KB trend AGPL-3.0 (LearnHouse 2,320★, CourseLit 1,269★,
+Obojobo, Materia) or GPL (Moodle, i-educar, OpenEMIS). The MIT and Apache-2.0 assets
+at comparable scale are governmental or government-adjacent: UK AISI, Singapore IMDA,
+India's Sunbird, France Université Numérique's Richie (MIT), Switzerland's OpenOLAT
+(Apache-2.0), the Ed-Fi Alliance (Apache-2.0).
+
+Three consequences for how an engagement is built and sold:
+
+1. **The permissive layer and the copyleft layer have swapped places.** The
+   conventional assumption is permissive infrastructure underneath and copyleft
+   applications above. In education it is now **copyleft platforms underneath and
+   permissive, government-built evaluation and interoperability tooling around
+   them.** Put the client-visible AI in the permissive layer — portal tier (Richie,
+   MIT), evaluation tier (Inspect, MIT), protocol tier (pylti1.3, MIT) — and the
+   copyleft stays behind an interface.
+2. **A government licence is a procurement argument.** "The evaluation harness is
+   the UK AI Security Institute's, MIT-licensed" answers a ministry's question about
+   independence in one sentence, in a way no vendor claim does.
+3. **But a government repository is not a maintained dependency by default.**
+   Sunbird is MIT, at national scale, and has not been pushed to since August 2024,
+   with one component archived. Inspect and Moonshot were both pushed on the day of
+   this pass. **Check `pushed_at`, not provenance.**
+
+## Declared gaps — eleventh pass, 2026-10-06
+
+- **No permissively licensed tutoring-evaluation benchmark exists.** Trend 31. Four
+  instruments, one MIT and at 0★. **The gap worth a Globant contribution**, and the
+  contribution is a licence, not an algorithm.
+- **No oral reading fluency product exists.** Re-measured with the API: **4
+  repositories, 6 including forks.** One MIT (`prosody`, 0★, 1 commit), one
+  BSD-2-Clause-plus-contribution-clause Android app from 2017 (`labaaoom`, 1★), one
+  ungranted even on its real default branch (`ReaDirect-V2`, branch
+  `deployment/playstore`), one 0★ calculator. The capability gap stands; the count is
+  now exact rather than approximate.
+- **`OpenLiteracy` → `total_count` 0.** The Harvard/Ying Xu early-reading project
+  funded to close exactly that gap still has no public repository.
+- **The Caliper reference implementation is not obtainable.** 1EdTech moved it to
+  private repositories on **2023-06-17**; `imsglobal/caliper-python` and
+  `concentricsky/badgr-server` both 404, and surviving public forks are 0★. The
+  learning-analytics half of the interoperability tier is behind a membership while
+  the LTI half stayed open. **Do not promise Caliper emission without pricing a
+  membership or a clean-room build.**
+- **Five of the eight Cohort 2 grantees of the $26M K-12 AI Infrastructure Program
+  remain unnamed, and this gap is not closeable from this environment.** Naming them
+  needs a primary document; 23 distinct hosts carrying one were attempted across the
+  ninth and tenth passes and **all 23 returned EGRESS_BLOCKED**. Recorded as closed
+  to this instrument so no further pass rediscovers it.
+- **The LATAM-origin repository shelf does not exist.** `educación IA aprendizaje` →
+  10 repositories, **all 0–1★**, one of them a satirical art project. Fifth
+  consecutive pass at 0–9★, first measured with a count.
+- **~155 of the 172 addresses dropped by this repository's reset are still
+  unrecovered**, including the Ed-Fi stack, LibreTexts, OpenStax, the Nextcloud AI
+  apps, the xAPI/LRS tier, ~16 Moodle AI plugins and ~20 education MCP servers. They
+  are listed in `archive/2026-10-06-pre-reset/`. **A pass spent there will out-yield
+  a pass spent on the open internet.**

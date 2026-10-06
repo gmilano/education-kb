@@ -1180,3 +1180,130 @@ around a blocked primary host. With the ninth pass's fourteen, that is **23
 distinct hosts, zero reachable.** `github.com` and `raw.githubusercontent.com` are
 the only origins this environment serves, which is why this pass spent its budget
 on payload work.
+
+## Added in the eleventh pass of 2026-10-06 — the evaluation tier, and three ITS agents
+
+New channel this pass: **the GitHub REST search API**, reachable through this
+session's GitHub MCP server. Ten previous passes probed it with an HTTP client
+(`curl https://api.github.com/search/repositories` → **403**, *"sessions are bound to
+their configured repositories"*) and concluded it was blocked. It is not — the MCP
+path returns `total_count`, `stargazers_count`, `default_branch`, `fork`, `archived`
+and `license.spdx_id`. Every licence below was still read from the repository's own
+payload on `raw.githubusercontent.com`; the API supplied the metadata and, crucially,
+**the real `default_branch`** to probe.
+
+**8 rows added. 7 are reinstatements of assets dropped by this repository's reset
+earlier the same day** (see the gap-update section below) — which is why the count is
+high and why none of them is a discovery.
+
+### The evaluation tier — permissive, government-built, and what P23 was told to wait for
+
+| Agent | Repo | License (read from payload) | ★ (2026-10-06) | What it does |
+|---|---|---|---|---|
+| Inspect | [UKGovernmentBEIS/inspect_ai](https://github.com/UKGovernmentBEIS/inspect_ai) | **MIT** (`main/LICENSE`) | **2,945** | LLM evaluation framework from the **UK AI Security Institute** (`aisi.gov.uk`). Prompt engineering, tool use, multi-turn dialog and **model-graded evals**; scorers and elicitation techniques extend from separate Python packages. 779 forks, 348 open issues, pushed 2026-10-06. **The harness every evaluation pattern in this KB needs, and the single highest-starred MIT asset on the evaluation shelf.** |
+| Moonshot | [aiverify-foundation/moonshot](https://github.com/aiverify-foundation/moonshot) | **Apache-2.0** (`main/LICENSE.md`) | 355 | Modular tool to **evaluate and red-team any LLM application**, from the **AI Verify Foundation** (the Singapore IMDA AI-testing community). Benchmarking + red-teaming in one surface. 72 forks, pushed 2026-10-06. **The APAC-origin half of the evaluation tier, and the only permissive red-teaming harness here.** |
+| tutoreval | [shivanireddyk/tutoreval](https://github.com/shivanireddyk/tutoreval) | **MIT** (`main/LICENSE`, 1,074 B) | 0 | *"Measuring whether an AI tutor teaches, rather than whether it answers."* Deterministic pedagogical evaluation with a hand-labelled benchmark. **The only MIT-licensed pedagogical benchmark found — and it is one author's project.** Listed because the licence is the scarce thing here, not the stars. |
+
+### Intelligent tutoring system agents
+
+| Agent | Repo | License (read from payload) | ★ (2026-10-06) | What it does |
+|---|---|---|---|---|
+| GenMentor | [GeminiLight/gen-mentor](https://github.com/GeminiLight/gen-mentor) | ⚠️ **CC0-1.0** (`main/LICENSE`, 7,048 B, read in full) | **131** | *"LLM-powered Multi-agent Framework for Goal-oriented Learning in Intelligent Tutoring System"* — **WWW 2025 Industry Track, Oral.** Skill-gap identification → learner modelling → tailored content generation. TypeScript, 22 forks, updated 2026-10-04. **Highest-starred purpose-built ITS agent framework in this KB.** See the CC0 warning below — it is permissive on copyright and **silent on patents**. |
+| Open Learning AI Tutor | [mitodl/open-learning-ai-tutor](https://github.com/mitodl/open-learning-ai-tutor) (live **fork**) · upstream [MIT-OL-AI-Tutoring/Open_Learning_AI_Tutor](https://github.com/MIT-OL-AI-Tutoring/Open_Learning_AI_Tutor) | **MIT** (`main/LICENSE`, md5 `cb5f766beb2db853d5b69328279ccb1b` on **both**, © 2024 Romain Puech) | 1 (fork) · 0 (upstream) | **MIT Open Learning's** AI tutor backend — the pedagogical engine behind `learn-ai.ol.mit.edu` (paper: arXiv 2410.03781). **Use the `mitodl` fork**: it was pushed 2026-10-03 and its README points at MIT's production domain, while the upstream has been still since 2025-02-26. ⚠️ The maintained copy is a **fork**, so fork-excluding search cannot see it. |
+| MITS | [Siesher/MITS](https://github.com/Siesher/MITS) | **MIT** (`main/LICENSE`) | 3 | Math ITS: **Socratic** multi-agent STEM tutor over an RL-trained Qwen3.5-9B. FastAPI + Next.js. The clearest small example of Socratic-constraint-as-architecture rather than as a prompt. |
+| Intellicode | [Redomic/intellicode-backend](https://github.com/Redomic/intellicode-backend) | **MIT** (`main/LICENSE`) | 5 | Adaptive learning platform **bridging a classical ITS with coordinated LLM agents** — the hybrid, not a chat wrapper. Python. Frontend at `Redomic/Intellicode-frontend` (MIT per payload probe pending; 1★). |
+
+### The Python LTI 1.3 row this KB declared missing eight hours earlier
+
+| Agent | Repo | License (read from payload) | ★ (2026-10-06) | What it does |
+|---|---|---|---|---|
+| PyLTI1p3 | [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) | **MIT** (`master/LICENSE`, 1,070 B) | **138** | LTI 1.3 Advantage tool implementation for Python with **Django and Flask** adapters. **The canonical Python LTI 1.3 library.** ⚠️ Last push **2024-08-18** — stable and widely used, not actively developed. Branch is `master`. |
+
+### Measured this pass and NOT usable — read this before quoting a benchmark in a proposal
+
+Four tutoring-evaluation instruments exist and are real work by serious
+institutions. **Not one carries an OSI-approved licence.** This table is the whole
+reason pattern **P27** exists.
+
+| Repo | ★ | What the payload actually says | Verdict for client work |
+|---|---|---|---|
+| [Khan/tutoring-accuracy-dataset](https://github.com/Khan/tutoring-accuracy-dataset) | **57** | Custom **"Evaluation Dataset License"** (`main/LICENSE`, 2,690 B, read in full). Grants internal use/copy/modify/merge **solely to evaluate AI models**. Prohibits **re-distribution, publication, use for model training, and any production use**; no sublicensing; clause 4 makes it **viral** over any combined dataset. Clause 3 expressly permits evaluating **products intended for commercial use** and **commercial use of the insights gained**. | ⚠️ **Borrow, never ship.** Usable to measure a client's tutor; the findings are yours. It must not enter a deliverable, a training set, or any dataset you hand over. |
+| [eth-lre/mathtutorbench](https://github.com/eth-lre/mathtutorbench) | 43 | **No licence payload** under 10 filenames × 2 branches. README carries a **CC BY 4.0 badge** *and* body text saying **CC BY-SA 4.0**. Two incompatible claims, nothing authoritative to adjudicate. **ETH Zurich**, EMNLP 2025 Oral. | 🔴 **Treat as ungranted.** The ShareAlike reading would attach to derivatives. |
+| [Yunfeng-Wan/CSTutorBench](https://github.com/Yunfeng-Wan/CSTutorBench) | 2 | **CC BY-NC-4.0** (`main/LICENSE`). 2,970 multi-turn QA dialogues from real university forums. | 🔴 **NonCommercial — out.** |
+| [ScottDaniels/labaaoom](https://github.com/ScottDaniels/labaaoom) | 1 | **BSD-2-Clause body** (`master/LICENSE`, 2,266 B) behind a preamble: *"Contributions to this source repository must be published with the same license."* Android oral-reading-fluency app, © 2017, last touched 2024-12-12. | ⚠️ **Usable.** The reciprocity clause binds **contributions back**, not derivatives; the two-clause body governs redistribution. Flag it in the licence register and do not vendor it as "BSD" without the qualifier. |
+
+### Measured and still ungranted
+
+| Repo | Probe | Result |
+|---|---|---|
+| [mendezjerick/ReaDirect-V2](https://github.com/mendezjerick/ReaDirect-V2) | re-probed on its **real** `default_branch` — `deployment/playstore`, not `main` or `master` | **No payload.** The tenth pass's verdict was right; its two-branch method could not have established it. |
+| [Kaylazagelbaum/ORF_Calculator_6th](https://github.com/Kaylazagelbaum/ORF_Calculator_6th) | `main`, 6 filenames | **No payload.** 0★, HTML, created 2026-08-25. |
+| `imsglobal/caliper-python` · `concentricsky/badgr-server` | `README.md` on `main` and `master`; search index | **404 / invisible.** 1EdTech moved Caliper to **private repositories on 2023-06-17** (notice preserved in a surviving fork). Public forks are 0★ and unmaintained. |
+
+### ⚠️ The CC0 warning — read before vendoring GenMentor
+
+**CC0-1.0 is a public-domain dedication, not a software licence.** For copyright it is
+broader than MIT. But the instrument states that **no patent or trademark rights held
+by the Affirmer are waived.** Apache-2.0 grants patent rights expressly; MIT's
+"deal in the Software without restriction" is generally read as implying them. CC0
+does neither.
+
+**The rule:** CC0 components are fine in a deliverable and must be recorded in the
+licence register **as CC0, not as "MIT-equivalent"**. For anything patent-sensitive —
+assessment scoring methods, adaptive-sequencing algorithms, anything a client may
+want to defend — prefer an Apache-2.0 component for the same function if one exists.
+
+## Gap updates from the eleventh pass of 2026-10-06
+
+### The reset of 2026-10-06 dropped 172 repository addresses, and the tenth pass re-declared one of them as a gap
+
+This repository was reset earlier on 2026-10-06; the previous estate is preserved in
+`archive/2026-10-06-pre-reset/`. Measured by extracting every
+`github.com/{owner}/{repo}` address from the eight live KB files and from the nine
+archived ones:
+
+| Address set | Distinct `owner/repo` |
+|---|---|
+| The eight live KB files | **627** |
+| The nine pre-reset archive files | **678** |
+| In the archive, absent from the live KB | **179** |
+| of those, not real repositories (placeholders and negative controls) | 7 |
+| **Real repository addresses dropped** | **172** |
+
+The cost is not hypothetical. The tenth pass declared, eight hours before this one:
+
+> *"**No Python LTI 1.3 library exists on the permissive shelf.** [...] Most AI
+> tutoring code is Python. Searched, not found, recorded as a gap — and as a
+> candidate contribution."*
+
+`archive/2026-10-06-pre-reset/` contains `dmitry-viskov/pylti1.3` — **MIT, 138★** —
+with a note that the KB *"already had it registered from an earlier pass."*
+**The gap was refuted by this repository's own archive before it was declared.**
+
+**The rule this adds, and it needs no external instrument:** after a reset, a gap
+claim is not publishable until it has been diffed against `archive/`. This is the
+**eleventh failure mode** in this KB's list.
+
+**Reinstated this pass: 17 addresses**, 8 of them as rows above (`inspect_ai`,
+`moonshot`, `pylti1.3`, `gen-mentor` is new, `mitodl/open-learning-ai-tutor`,
+`tutoreval`, `MITS`, `intellicode-backend`) and 9 in `verticals/solutions.md` and
+`repos/foundations.md`. **~155 remain unrecovered**, in clusters a later pass should
+take one at a time: the **Ed-Fi** stack, **LibreTexts** and **OpenStax**, the
+**Nextcloud** AI apps, the **xAPI/LRS** tier, the ~16-plugin **Moodle AI** cluster,
+and the ~20-server **education MCP** cluster.
+
+### The method note for this pass — three kinds of zero, all of them wrong
+
+| What produced the zero | Why it was not an absence |
+|---|---|
+| A **ranked web surface** (`WebSearch`, `github.com/search` rendering) | Ranked, truncated and cached. The REST API returns `total_count`, which is a count. Ten passes measured absences without it. |
+| A **`repo:` qualifier** | **GitHub repository search excludes forks unless `fork:true` is passed.** `repo:mitodl/open-learning-ai-tutor` → 0; the same query with `fork:true` → 1, and that fork is MIT Open Learning's production tutor. **Twelfth failure mode.** |
+| A **keyword-heavy or licence-filtered query** | `tutoring quality evaluation benchmark` → 0. Drop the single word *quality*: **20 results**, led by Khan Academy and ETH Zurich. The zero described the filter. |
+
+And one correction to the probe set itself: the tenth pass fixed `main`-only probing
+by adding `master`. **Two guesses is still a guess.** Read `default_branch` from the
+API and probe *that*: this pass found `dev` (`learnhouse`, 2,320★), a version number
+(`portabilis/i-educar`, 718★, branch `2.12`) and `deployment/playstore`
+(`ReaDirect-V2`). A `main`+`master` probe reports "ungranted" about Brazil's largest
+free education platform, which is **GPL-2.0**.
+

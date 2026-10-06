@@ -1250,6 +1250,16 @@ one has a live failure attached:
 
 ## P23 — The benchmark-ready evaluation harness (build the socket before the plug exists)
 
+> ⚠️ **Superseded in part by P27 (eleventh pass, 2026-10-06).** This pattern was
+> written on the premise that no permissive evaluation harness and no pedagogy
+> benchmark existed. Both were search artefacts: **Inspect** (MIT, 2,945★, UK AI
+> Security Institute) and **Moonshot** (Apache-2.0, Singapore IMDA) are the harness,
+> and four tutoring benchmarks exist — **none of them OSI-licensed**. Read **P27**
+> for the corrected component list and the build-system rule that keeps a
+> non-redistributable dataset out of the deliverable. The reasoning below about
+> building the socket first still holds for the *rubric*; it no longer holds for the
+> *runner*.
+
 **Added in the ninth pass of 2026-10-06.** This pattern exists because of a fact
 no earlier pass could state: **the permissive evaluation layer this KB has
 declared missing since its fourth pass is funded, dated and licence-floored** —
@@ -1421,6 +1431,15 @@ the same time.**
   and staff it accordingly.
 
 ## P25 — The interoperability tier, built to be scored (North America, and anywhere with an LMS)
+
+> ⚠️ **Corrected in the eleventh pass, 2026-10-06.** This pattern recorded the
+> permissive LTI shelf as Node/PHP/Java/.NET with **no Python option**. There is one:
+> [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) — **MIT,
+> 138★**, Django and Flask adapters, branch `master` — the **second-largest runtime**
+> on the shelf after Node. Also permissive and Python: `openedx-lti-tool-plugin`
+> (Apache-2.0) and `ucfopen/cookiecutter-python-lti` (MIT). The Python-shaped hole
+> was in this KB, not in the ecosystem; it was dropped by this repository's reset
+> and is recorded in `archive/2026-10-06-pre-reset/`.
 
 Added tenth pass, 2026-10-06. This pattern exists because of a procurement number,
 not a technology: **39% of districts score interoperability in their RFP rubrics**
@@ -1675,3 +1694,163 @@ opens.** Checking the index against the pattern headings is now part of a pass.
   watermarking and synthetic-content-marking deadline is still **2 December 2026**,
   and the duty to classify systems against Annex III is immediate. The clients who
   heard "delayed" and stopped are unlabelled *and* unclassified. Run **P13**.
+
+## P27 — The tutor-quality evidence pack (the harness is free; the benchmarks are borrowed, never shipped)
+
+**Replaces the "wait for the artefact" half of P23.** P23 was written when this KB
+believed no permissive evaluation harness and no pedagogy benchmark existed. Both
+beliefs were wrong in different ways, measured 2026-10-06: **the harness exists,
+MIT, from a government, at 2,945★**, and **the benchmarks exist and are licensed
+shut.** P27 is the pattern that follows from the real situation.
+
+**Sell it when:** the buyer asks "how do we know it teaches?" — a North American
+district or university with no mandated evaluation, an EMEA ministry facing AI Act
+high-risk classification, an APAC buyer with a sovereignty requirement, or a LATAM
+institution among the 91% with no formal evaluation mechanism.
+
+### Components
+
+| Role | Component | Licence (payload-verified 2026-10-06) | Why this one |
+|---|---|---|---|
+| Evaluation harness | [`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai) | **MIT** | 2,945★, 779 forks, UK AI Security Institute, pushed 2026-10-06. Datasets → solvers → scorers, model-graded evals, tool use, multi-turn dialog. **Do not write a runner.** |
+| Red-team harness | [`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) | **Apache-2.0** | Singapore IMDA's AI Verify Foundation. Benchmarking **and** adversarial probing in one tool. The only permissive red-teaming harness in this KB. |
+| Pedagogical scorer (yours) | written against Inspect's scorer interface | **your client's** | The billable artefact. Encodes the rubric: does it scaffold, does it withhold the answer, does it detect and correct a misconception, does it over-validate. |
+| Reference benchmark #1 | [`Khan/tutoring-accuracy-dataset`](https://github.com/Khan/tutoring-accuracy-dataset) | 🔴 **custom Evaluation Dataset License** | 57★, Khan Academy's own math-tutoring benchmark. **Borrowed at measurement time.** |
+| Reference benchmark #2 | [`shivanireddyk/tutoreval`](https://github.com/shivanireddyk/tutoreval) | ✅ **MIT** | 0★, one author — but the **only** OSI-licensed pedagogical benchmark found. Vendorable. |
+| 🔴 Excluded | `eth-lre/mathtutorbench` (no payload; README claims CC BY 4.0 *and* CC BY-SA 4.0) · `Yunfeng-Wan/CSTutorBench` (CC BY-NC-4.0) | — | Named here so a later pass does not rediscover them as options. |
+| Delivery into the LMS | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | ✅ **MIT** | So the evaluated tutor reaches learners inside the institution's LMS. Pin the version: last push 2024-08-18. |
+
+### Wiring
+
+```
+                        ┌─────────────────────────────────────┐
+  client's tutor ──────▶│ Inspect (MIT)                       │
+  (any model/arch)      │  tasks → solvers → scorers          │
+                        │                                     │
+   your rubric ────────▶│  custom pedagogical scorer          │──▶ eval logs
+                        │   · scaffolding present?            │     (client's,
+                        │   · answer withheld?                │      exportable)
+                        │   · misconception corrected?        │
+                        │   · sycophancy / over-validation?   │
+                        └──────────────┬──────────────────────┘
+                                       │
+          ┌────────────────────────────┴───────────────────────┐
+          │                                                    │
+  ┌───────▼─────────────┐                        ┌─────────────▼──────────┐
+  │ tutoreval (MIT)     │                        │ Khan dataset (🔴)      │
+  │ VENDORED into the   │                        │ MOUNTED read-only at   │
+  │ deliverable         │                        │ eval time; NEVER in    │
+  └─────────────────────┘                        │ the repo, the image,   │
+                                                 │ the training set, or   │
+  ┌─────────────────────┐                        │ the handover           │
+  │ Moonshot (Apache-2) │                        └────────────────────────┘
+  │ adversarial pass:   │
+  │ jailbreak → answer  │──▶ red-team report
+  │ leakage → unsafe    │
+  └─────────────────────┘
+```
+
+**The licence boundary is a build-system boundary, not a policy document.** Enforce it
+mechanically:
+
+1. The Khan dataset lives **outside** the repository — a mount, a fetch step gated on
+   an explicit `--external-benchmarks` flag, or an operator-run command. It must not
+   be a git submodule, a vendored directory, a Docker layer, or a fixture.
+2. CI fails the build if any path under the benchmark mount is reachable from the
+   packaging target. One rule in the packaging config; ten minutes to write.
+3. The **eval logs are the deliverable** — scores, traces, per-item verdicts. Those
+   are "insights and learnings," which clause 3 of Khan's licence expressly permits
+   you to use commercially. The dataset rows are not, and must not appear verbatim
+   in a report appendix.
+4. **Never fine-tune on it.** The licence prohibits model training in terms, and this
+   is the mistake most likely to be made by a well-meaning engineer three sprints in.
+
+### Deliverables
+
+- An Inspect task suite + the custom pedagogical scorer — **MIT/client-owned,
+  shippable**.
+- A Moonshot red-team configuration and its report.
+- The **evidence pack**: scores on the client's own content, scores on `tutoreval`,
+  comparative findings from the borrowed benchmarks, and the adversarial report.
+- A **licence register** naming each component's grant, and the mechanical rule that
+  keeps the borrowed datasets out of the artefact.
+
+### ⚠️ Three warnings that are the point of this pattern
+
+- **Do not quote harness construction as the deliverable.** It is free, MIT, and
+  maintained by a government. Quoting it is how a proposal loses on credibility.
+  Quote the rubric, the scorer, the evidence pack and the licence hygiene.
+- **"We benchmarked against Khan Academy's dataset" is sayable; publishing a
+  comparative league table from it is not.** The licence prohibits publication and
+  redistribution. Keep the comparison inside the engagement.
+- **`mathtutorbench` will be suggested to you.** 43★, ETH Zurich, an EMNLP oral —
+  it looks like the obvious choice and it has **no licence payload** and two
+  contradictory README claims. Treat as ungranted; say so once, in writing, early.
+
+## P28 — Brazilian public-sector school management with AI on top (GPL-2.0 is the feature)
+
+**Sell it when:** the buyer is a Brazilian municipality, state secretariat or public
+school network — the engagement most likely to be mispriced by assuming a copyleft
+platform is a problem.
+
+### Components
+
+| Role | Component | Licence (payload-verified 2026-10-06) | Note |
+|---|---|---|---|
+| School management / SIS | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🔴 **GPL-2.0** (`2.12/LICENSE`) | **718★, 547 forks** — the most-forked platform in this KB. Laravel/PHP, tagged `software-publico`. ⚠️ **Default branch is `2.12`**; `main` serves nothing. |
+| Offline sync | [`learningequality/morango`](https://github.com/learningequality/morango) | ✅ **MIT** | Peer-to-peer Django model replication, certificate-authenticated, built for low-bandwidth links. SQLite **and** PostgreSQL. |
+| Learner-facing delivery | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | ✅ **MIT** | Offline-first learning platform. |
+| Evaluation | **Inspect** (MIT) + the P27 scorer | ✅ | The 9%-with-evaluation-mechanisms gap is the differentiator in this region. |
+| LMS-side delivery, if any | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | ✅ **MIT** | Python, matches the AI tier's language. |
+
+### Wiring, and why the licence works in your favour
+
+```
+  ┌──────────────────────────┐        ┌─────────────────────────────┐
+  │ i-educar (GPL-2.0)       │        │ AI tier — SEPARATE PROCESS  │
+  │ enrolment · attendance   │◀──────▶│ (your licence)              │
+  │ grades · school records  │  REST  │  · early-warning scoring    │
+  │ branch 2.12              │        │  · PT-BR tutoring agent     │
+  └───────────┬──────────────┘        │  · evaluated via Inspect    │
+              │                       └─────────────────────────────┘
+       morango (MIT) ──── certificate-authenticated P2P sync ───▶ school servers
+              │
+      ┌───────▼────────┐
+      │ Kolibri (MIT)  │  offline learner delivery in classrooms
+      └────────────────┘
+```
+
+**GPL-2.0 has no network clause.** Hosting a modified i-educar for a municipality
+triggers **nothing** — unlike the AGPL-3.0 platforms (LearnHouse 2,320★, CourseLit
+1,269★, Obojobo, Materia), where serving a modified instance obliges you to offer
+source to its users. Obligations attach to **distribution**: if you hand the
+municipality a modified i-educar, you hand them its source under GPL-2.0.
+
+**And in Brazilian public procurement that is usually what they are asking for.**
+`software-publico` is a classification the platform already carries; a buyer who
+expects to own and inspect what they bought is a buyer whose requirement the licence
+satisfies for free. **Keep the AI tier in a separate process across a REST boundary**
+so it carries your own licence, and the question of whether linking occurred never
+arises.
+
+### Deliverables
+
+- i-educar deployment pinned to a branch that exists (**`2.12`** — verify before
+  every release; this platform does not use `main`).
+- The AI tier as an independently licensed service, PT-BR first.
+- morango-based sync so school sites work through intermittent connectivity.
+- The P27 evidence pack, in Portuguese — **the artefact 91% of LAC institutions
+  cannot produce.**
+
+### ⚠️ Warnings
+
+- **Probe the branch, not the convention.** `main` on i-educar serves no licence and
+  no README. A `main`+`master` licence probe reports Brazil's largest free education
+  platform as ungranted, which is how a real option gets struck off a shortlist.
+- **Do not stage this on the Spanish-language GitHub shelf.** Measured 2026-10-06:
+  `educación IA aprendizaje` → 10 repositories, **all 0–1★**, one a satirical art
+  project. There is no regional component shelf. The components above are global and
+  the regionalisation is yours to build.
+- **i-educar is PHP/Laravel and your AI tier is Python.** That is a feature here —
+  the process boundary that keeps the licences apart is the same boundary the
+  language split would have forced anyway.

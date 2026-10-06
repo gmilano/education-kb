@@ -476,6 +476,40 @@ gradebook**). **No Caliper Analytics implementation on a permissive licence, and
 no Python LTI 1.3 library at all** — the second is an open-source contribution
 opening with a procurement-scored buyer already attached.
 
+
+#### Eleventh pass, 2026-10-06 — the benchmarks are American, the licences are not open
+
+| Finding | Value | Instrument |
+|---|---|---|
+| Share of the global AI-in-education opportunity 2026–2030 | **41.7%** | Tier 2, market-research summary |
+| Regional market share | **36%** of global AI-in-education | Tier 2 |
+| Institutions with formal AI guidelines | **10%** | Tier 2 |
+| US teachers lacking AI training | **71%** | Tier 2 |
+| State-level AI requirements for education | **Colorado** and **Texas** have introduced piecemeal requirements; no federal instrument | Tier 2 |
+
+**The opportunity this pass actually adds.** The two leading tutoring-evaluation
+benchmarks are North American and European institutional work — **Khan Academy**
+(`Khan/tutoring-accuracy-dataset`, 57★) and **ETH Zurich**
+(`eth-lre/mathtutorbench`, 43★) — and **neither is OSI-licensed** (Tier 1, payloads
+read 2026-10-06). Khan's custom *Evaluation Dataset License* permits internal,
+non-commercial evaluation **and explicitly permits evaluating products intended for
+commercial use and commercially exploiting the insights gained**, while prohibiting
+redistribution, model training and production use.
+
+That is a billable position, and it is specific to this region: **a US district or
+university buyer can be shown a measured pedagogical-quality number from Khan
+Academy's own dataset, without that dataset ever entering the deliverable.** The
+regulatory vacuum here (10% with guidelines, no FDA-equivalent, 41.7% of the money)
+means the buyer has no mandated evaluation to point at — so the vendor who arrives
+with one sets the standard. The harness is **Inspect** (MIT, 2,945★, UK AISI). The
+pattern is **P27**.
+
+**And the data tier is Apache-2.0 and already in the RFP.**
+`Ed-Fi-Alliance-OSS/Ed-Fi-ODS` (Apache-2.0, Tier 1) is the reference implementation
+of the Ed-Fi K-12 data standard — the student-data model North American district
+procurement assumes a vendor already speaks. It was dropped from this KB's live files
+by the reset and is reinstated this pass.
+
 ### EMEA
 
 - **The EU AI Act is the whole conversation.** AI used in education access and
@@ -845,6 +879,45 @@ ministry tier — in the region that is simultaneously drafting a legal instrume
 on AI in education and a framework for evaluating it. **Sovereignty, auditability
 and data residency are not abstract selling points here; they are the subject of
 the instrument being drafted.**
+
+
+#### Eleventh pass, 2026-10-06 — EMEA is not only writing the rule, it is shipping the tooling
+
+The tenth pass framed the region as the one *"writing the rule"* while North America
+*"buys the artefact."* **That framing was incomplete and the correction is
+commercially significant.**
+
+| Asset | Origin | Licence (Tier 1, payload read 2026-10-06) | Scale |
+|---|---|---|---|
+| [UKGovernmentBEIS/inspect_ai](https://github.com/UKGovernmentBEIS/inspect_ai) | **UK AI Security Institute** (`aisi.gov.uk`) | **MIT** | **2,945★**, 779 forks, pushed 2026-10-06 |
+| [eth-lre/mathtutorbench](https://github.com/eth-lre/mathtutorbench) | **ETH Zurich**, Learning & Reasoning group, EMNLP 2025 Oral | 🔴 **no payload**; README claims **CC BY 4.0** *and* **CC BY-SA 4.0** | 43★ |
+| [openfun/richie](https://github.com/openfun/richie) | **France Université Numérique** | **MIT** | 316★ |
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | Switzerland | **Apache-2.0** | 446★, pushed 2026-10-06 |
+| [digillab-lmu/smart-rag](https://github.com/digillab-lmu/smart-rag) | **LMU Munich** | ⚠️ **`NOASSERTION`** — unresolved | 2★ |
+
+**A European government body maintains the most-starred MIT evaluation framework on
+these shelves**, and two European universities publish the pedagogy benchmarks — one
+of them without a usable grant. Combined with the Council of Europe's **European
+Reference Framework for the Evaluation of Educational Technologies** (tenth pass,
+Tier 2) and the **EU AI Act taking full effect in August 2026 with education AI
+classified high-risk** (Tier 2, re-corroborated this pass), the region now supplies
+*all three* layers of the conformance story: the rule, the reference framework, and
+an MIT-licensed harness to run it in.
+
+**Market context re-corroborated this pass (Tier 2):** AI uptake rose ~30% year on
+year, with roughly five businesses per minute adopting AI, and **94% of organisations
+at least somewhat likely to invest in AI-specific training in 2026**. Among
+enterprises that considered and declined AI in 2025, the barriers were **lack of
+expertise (70.9%)**, **uncertainty about legal consequences (52.5%)** and **data
+protection concerns (48.8%)** — the second and third of which are precisely what an
+Inspect-based conformance harness is for. Structural brakes named: inconsistent
+implementation across member states, a shortage of mainstream digital skills, and
+limited late-stage capital.
+
+**The opportunity, stated as a sentence:** in EMEA the deliverable is not a tutor, it
+is a **tutor plus its conformance evidence**, and the evidence pack can be built from
+EMEA's own MIT-licensed tooling. That is an easier sale to a ministry than any
+import.
 
 ### APAC
 
@@ -1221,6 +1294,54 @@ attributable to a spelling or branch defect in this KB's method. **APAC has the
 evaluation benchmark the US is funding and the licence that makes it unusable.**
 A grant request to the maintainers is a cheaper route to a regional evaluation
 asset than building one.
+
+
+#### Eleventh pass, 2026-10-06 — the region's red-team harness is Apache-2.0, and its national stack is MIT and dormant
+
+| Asset | Origin | Licence (Tier 1, payload read 2026-10-06) | Scale |
+|---|---|---|---|
+| [aiverify-foundation/moonshot](https://github.com/aiverify-foundation/moonshot) | **AI Verify Foundation** — Singapore IMDA's AI-testing community | **Apache-2.0** | 355★, 72 forks, pushed 2026-10-06 |
+| [project-sunbird/sunbird-lms-mw](https://github.com/project-sunbird/sunbird-lms-mw) | **Sunbird** — the stack under India's **DIKSHA** | **MIT** | 6★ / **41 forks**, 🔴 last push 2024-08-30 |
+| [project-sunbird/sunbird-analytics](https://github.com/project-sunbird/sunbird-analytics) | Sunbird | **MIT** | 3★ / 28 forks, 🔴 2023-02-08 |
+
+**Two findings that pull in opposite directions.**
+
+1. **Singapore exports the evaluation instrument.** Moonshot evaluates *and
+   red-teams* any LLM application, Apache-2.0, maintained. For an education
+   deployment the red-team half is not optional — the adversary is a student with
+   unlimited attempts and no deadline. This is the only permissive red-teaming
+   harness in this KB, and it comes from the same regulator-adjacent body whose
+   guidelines the region's buyers already cite.
+2. **India's national stack is the most permissive in the world and nobody is
+   pushing to it.** Sunbird is **MIT** at national tier — more permissive than
+   Moodle, Open edX, or anything else of comparable deployment — and its GitHub
+   activity stopped in 2024, with one component **archived**. The fork-to-star ratio
+   (41:6) says deployed-and-forked, not abandoned-and-ignored; but a KB must not
+   read it as an upstream. **Reference architecture and licence-clean base, not a
+   maintained dependency.**
+
+**Market context re-corroborated this pass (Tier 2):** **56% of APAC businesses have
+already deployed chatbots, copilots or AI assistants — outpacing both Europe and
+North America** — and **48% of governance leaders name AI adoption a top strategic
+priority for 2026**. Regulation stays **fragmented by design**: a common APAC-wide
+framework remains distant, with Singapore running mature responsible-AI guidelines,
+China legislating against algorithmic misconduct, and India applying existing
+criminal law. **Sovereignty will shape infrastructure choices for roughly half of
+APAC firms.**
+
+**The opportunity:** fragmentation plus sovereignty plus the highest deployment rate
+means the sellable artefact is a **per-jurisdiction policy layer over one
+architecture** — and both the harness (Inspect, MIT) and the red-team tooling
+(Moonshot, Apache-2.0) can be run inside the client's own boundary, which is the
+condition sovereignty actually imposes.
+
+**Declared, so it is not mistaken for coverage:** the generalist APAC repository
+probe `education AI tutor India OR China OR Indonesia OR Japan language stars:>50`
+returned **`total_count` 0**. That is an **instrument limit, not an absence** —
+GitHub repository search ANDs free-text terms, so a five-term query collapses. The
+region's assets above were found by **named organisation**, which is now the third
+consecutive pass in which naming the institution worked and the generalist query
+did not.
 
 ### LATAM
 
@@ -1682,6 +1803,51 @@ most distinctive technical asset, the blocker is **licensing, not capability, an
 not this KB's ability to see it.** Obtaining grants on two or three of these
 datasets is a higher-leverage regional action than any further search.
 
+
+#### Eleventh pass, 2026-10-06 — measured in Spanish, the regional shelf does not exist, and that is the opportunity
+
+**Measured, Tier 1, GitHub REST search, 2026-10-06:**
+
+| Probe | `total_count` | What came back |
+|---|---|---|
+| `educación inteligencia artificial estudiantes plataforma stars:>5` | **0** | — |
+| `educación IA aprendizaje` | **10** | **Every result 0–1★.** Highest: `Edwin1719/AvatarAcademy` (**1★**, **MIT**, payload verified — GPT-4o plus Tavus avatars for video tutors). The rest are coursework, a PE lesson generator, and `FreeHelado/neurax-ia`, **a satirical fake-documentary art project about a fictional AI-education company** — not software. |
+
+**The Spanish-language education-AI repository channel on GitHub contains no
+production asset.** Ten repositories, maximum one star, one of them deliberately
+fictional. This is the fifth consecutive pass measuring the LATAM-origin shelf at
+0–9★, and the first to measure it with a count rather than a ranked search page.
+
+**The one real regional platform, and it is a good one.**
+[`portabilis/i-educar`](https://github.com/portabilis/i-educar) — **GPL-2.0** (Tier 1,
+payload read from branch **`2.12`**; `main` serves nothing), **718★ and 547 forks**,
+Laravel/PHP, *"o maior software livre de educação do Brasil"*, tagged
+`software-publico`. It is the most-forked platform on these shelves and it was
+**missing from this KB's live files** until this pass. **GPL-2.0 carries no network
+clause**: hosting a modified i-educar for a municipality triggers nothing, and a
+public-sector buyer who wants the source is asking for exactly what the licence
+delivers.
+
+**Governance context re-corroborated this pass (Tier 2):** across 200 institutions in
+19 LAC countries, AI adoption leads in **teaching and learning at 73.5%**, then
+research 57.0%, administration 34.1%, community engagement 20.0% — while only **26%
+have a formal AI strategy, 18.5% an institution-wide policy, 8% a dedicated AI
+budget, and 9% any formal evaluation mechanism.** Regulation: **no unified regional
+framework**; **Chile** leads with a National AI Policy since 2021 and pending
+legislation; **Brazil** and **Colombia** have national strategies without sectoral
+education regulation; most universities operate in a normative vacuum. Chile's
+**CENIA** publishes the regional AI index and leads **Latam-GPT**.
+
+**The opportunity, stated so it can be sold.** 73.5% are already using AI in teaching
+and 9% can evaluate it. **The gap between adoption and evaluation is wider here than
+in any other region in this KB, and the instruments that close it are free and
+permissive** — Inspect (MIT) and Moonshot (Apache-2.0). The LATAM engagement is not
+"adopt the regional shelf," because there is no regional shelf. It is: **deliver the
+global permissive shelf with Spanish and Portuguese as first-class, offline-tolerant
+by construction, data-resident by default, and with the evaluation mechanism the
+other 91% do not have** — on i-educar or Moodle where the client is public sector,
+and with the licence register written in the client's language.
+
 ## Cross-region read
 
 Two patterns hold in every region, which makes them safe to build once and sell
@@ -2102,3 +2268,58 @@ funder, regulatory and procurement figure in this file remains Tier 2**: dollar
 amounts, dates, percentages and licence clauses are corroborated across independent
 search summaries, never read from the primary document. **Confirm each one against
 its source before it enters a client deliverable.**
+
+## What changed in the eleventh pass of 2026-10-06
+
+**One instrument change produced every market finding below.** The GitHub REST
+search API is reachable in this environment through the session's GitHub MCP server —
+`curl https://api.github.com/search/repositories` returns **403** and
+`/repos/{owner}/{repo}` is refused, which is why ten passes recorded the API as
+blocked. Through the MCP path it returns `total_count` and real metadata, so this
+KB's *absences* can now be counted rather than inferred from a ranked search page.
+
+| What the KB said | What this pass measured | Consequence for a proposal |
+|---|---|---|
+| *"No permissive evaluation harness exists; build the socket and wait for the artefact"* (P23, three passes) | **Inspect** (MIT, **2,945★**, UK AI Security Institute) and **Moonshot** (Apache-2.0, 355★, Singapore IMDA's AI Verify Foundation), both pushed 2026-10-06 | **Stop quoting harness-building as the deliverable.** The harness is free, permissive and government-maintained. Quote the *rubric*, the *dataset handling* and the *conformance pack*. |
+| *"`tutoring quality evaluation benchmark` → 0 results"* | Drop one word: **20 results**, led by **Khan Academy** (57★) and **ETH Zurich** (43★) | The benchmarks exist. **None is OSI-licensed** — the constraint is legal, not technical. |
+| *"No Python LTI 1.3 library on the permissive shelf"* (tenth pass) | **`dmitry-viskov/pylti1.3`, MIT, 138★** — the **second-largest runtime** on the permissive interoperability shelf | The integration tier priced in P25 was priced against a hole that was not there. |
+| *"The regional flagship is not open source"* / LATAM has no platform | **`portabilis/i-educar`, GPL-2.0, 718★ / 547 forks**, Brazil, `software-publico` | A LATAM public-sector engagement has a real, licence-appropriate base. |
+
+### The market read that follows from the licensing wall
+
+The money and the measurement are in different places, and the licence is what
+separates them:
+
+- **North America funds the datasets** — $26M philanthropic K-12 AI infrastructure
+  programme with an Apache-2.0-or-better floor (ninth pass) — and its two best
+  existing benchmarks come from **Khan Academy** and are **not** openly licensed.
+- **EMEA supplies the harness** — UK AI Security Institute's Inspect, **MIT** — and
+  the rule (Council of Europe reference framework; EU AI Act full effect August 2026,
+  education AI high-risk).
+- **APAC supplies the red-team tooling** — Singapore IMDA's Moonshot, **Apache-2.0** —
+  and the highest deployment rate (**56%** of businesses already running assistants).
+- **LATAM supplies the demand and almost none of the supply** — **73.5%** using AI in
+  teaching and learning against **9%** with any formal evaluation mechanism.
+
+**The sellable asset across all four is the same one and it is not a model.** It is
+an evaluation and conformance capability assembled from permissive components, with
+the non-permissive benchmarks **borrowed at measurement time and never shipped**.
+Every region's buyer wants it for a different stated reason — procurement rubric in
+North America, AI Act conformance in EMEA, sovereignty in APAC, institutional
+credibility in LATAM — and the architecture is identical. That is the most
+transferable finding this KB has produced.
+
+### The method note, stated plainly
+
+Three zeros were wrong this pass and each was wrong for a different reason: a **ranked
+web surface** is not a count; a **`repo:` qualifier excludes forks by default**
+(`repo:mitodl/open-learning-ai-tutor` → 0, with `fork:true` → 1, and that fork is MIT
+Open Learning's production tutor); and a **keyword-heavy query measures the filter**,
+not the world.
+
+A fourth was wrong for a reason that has nothing to do with search: **this
+repository's reset earlier on 2026-10-06 dropped 172 real repository addresses**
+(627 live vs 678 archived, 7 of the 179 differences being placeholders), and the
+tenth pass declared one of them — `pylti1.3` — a gap while it sat in
+`archive/2026-10-06-pre-reset/` with its licence and star count intact. **A gap claim
+made after a reset is not publishable until it has been diffed against the archive.**
