@@ -827,7 +827,7 @@ the platform is already a recognised **Digital Public Good** running at national
 scale. **Do not propose this outside Indic markets:** NCERT/CBSE/SCERT alignment
 is embedded, and undoing it costs more than starting from Coursemology.
 
-## P17 — Oral reading fluency assessment (the open category with no open competitor)
+## P17 — Oral reading fluency assessment (two repositories in the whole category, one of them MIT)
 
 Added sixth pass, 2026-10-06. This is the one pattern here that builds into a
 **declared void**: oral reading fluency (ORF) is the highest-volume literacy
@@ -875,6 +875,50 @@ evaluation is the deliverable** — a fluency score nobody has validated against
 human raters is worse than no score. And ORF is **high-stakes assessment**: in the
 EU this is Annex III point 3 territory, so run it through P13 before it touches a
 real pupil.
+
+### P17 update, tenth pass of 2026-10-06 — the void has prior art and a funded competitor
+
+Two corrections to the framing above, both measured this pass.
+
+**1. "No open competitor" is no longer accurate — there is prior art, and it is
+MIT.** The whole GitHub result set for `oral reading fluency assessment speech` is
+**two repositories**:
+
+| Repo | Licence (payload) | ★ | Relevance to P17 |
+|---|---|---|---|
+| [qazasd2518995/prosody](https://github.com/qazasd2518995/prosody) | **MIT** (`main/LICENSE`, full text read) | 0 | **Implements this pattern's core loop already**: aligns speech to reference text at word level, reports accuracy and WER, **speaking rate in WPM**, misread/omitted/inserted words, and a fluency score from pause pattern and pace. Whisper for ASR, **Levenshtein alignment**, Groq for transcription. Python, **1 commit**. |
+| [mendezjerick/ReaDirect-V2](https://github.com/mendezjerick/ReaDirect-V2) | **no payload** (20 URLs) | 0 | Oral reading + comprehension support, TypeScript. Unusable — repository exists, grant does not. |
+
+**Use `prosody` as a reference implementation, not as a dependency.** One commit
+and zero stars is not a maintained component, and the licence permits reading it
+freely. What it gives you is a **validated shape** for the aligner-and-scorer stage
+that the table above leaves as "your code": Levenshtein alignment against the
+reference passage, with fluency derived from pause pattern as well as rate. That is
+a day of reading that removes a week of design.
+
+Note also that `prosody` calls the **Groq API** for transcription. For the P17
+build keep `faster-whisper`/`whisperX` local — the offline and data-residency
+properties are the reason this pattern exists.
+
+**2. The funded competitor now has a name, and it is the closest match in the
+whole $26M programme.** **Harvard University (Ying Xu)** is a Cohort 2 grantee for
+**"OpenLiteracy: An Open-Source AI Infrastructure Suite for Advancing Speech
+Foundation Models for Early Word Reading Assessment and Instruction"** (Tier 2),
+under the programme's **Apache-2.0-or-better licence floor**. **GitHub returns 0
+repositories for `OpenLiteracy`** (Tier 1, 6 Oct 2026) — funded, named, not
+shipped.
+
+**What this does to the sequence: nothing, and that is the point.** The 10–12 week
+build above stays as specified, because the deliverable that survives OpenLiteracy's
+arrival is the **evaluation and the error taxonomy**, not the ASR stack. Structure
+the engagement so the transcript-and-timestamp stage is replaceable behind an
+interface (**P23**'s socket discipline), and OpenLiteracy becomes a drop-in upgrade
+to a validated harness instead of a reason the client's project was wasted.
+
+**And state the licence floor to the client.** Anything the programme funds must be
+**at least as permissive as Apache-2.0**, so the upgrade path is contractually safe
+to promise — which is a rare thing to be able to say about a dependency that does
+not exist yet.
 
 ## P18 — Offline voice tutoring (P5 with a voice, LATAM and low-connectivity)
 
@@ -1376,6 +1420,106 @@ the same time.**
   compliance artefact and becomes the instrument your payment depends on — price
   and staff it accordingly.
 
+## P25 — The interoperability tier, built to be scored (North America, and anywhere with an LMS)
+
+Added tenth pass, 2026-10-06. This pattern exists because of a procurement number,
+not a technology: **39% of districts score interoperability in their RFP rubrics**
+(CoSN, Tier 2, ninth pass). If a third of your buyers assign points to roster and
+activity exchange, the integration layer is a **scored deliverable** and it needs to
+be specified, licensed and demonstrable — not discovered in integration testing.
+
+**The deliverable:** an AI service that launches from inside the client's LMS with
+real identity and course context, reads rosters from the SIS, and produces an
+artefact pack that answers an interoperability rubric line by line.
+
+| Stage | Component | Licence (payload) | Why this one |
+|---|---|---|---|
+| Tool launch, Node estate | [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | **Apache-2.0** (`master/LICENSE`) | 373★, the highest-starred genuine LTI 1.3 implementation; turns a service into a full tool provider |
+| Tool launch, Moodle estate | [1EdTech/lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library) | **Apache-2.0** (`master/LICENSE`) | **Published by the standards body itself** — the reference, and PHP sits next to Moodle |
+| Tool launch, JVM estate | [Unicon/tool13demo](https://github.com/Unicon/tool13demo) | **Apache-2.0** (`master/LICENSE`) | LTI 1.3 in Spring Boot, from a higher-ed systems integrator |
+| Tool launch, existing Spring Security | [oxctl/spring-security-lti13](https://github.com/oxctl/spring-security-lti13) | **Apache-2.0** (`master/LICENSE.txt`) | LTI inside an existing Spring Security estate rather than beside it |
+| Rostering | [theopenem/OneRoster.NET](https://github.com/theopenem/OneRoster.NET) | **MIT** (`master/LICENSE`) | OneRoster 1.1 + 1.2 client, OAuth2 for 1.2. **Rostering only — no gradebook** |
+| Audit trail | [langfuse/langfuse](https://github.com/langfuse/langfuse) | **MIT** (with carve-out) | The rubric gap the ninth pass found: **no rubric requires an interaction audit trail**, so it is the differentiator (P24) |
+| Evaluation socket | P23 harness | — | The other half of the differentiator, and the EMEA conformance file (trend 27) |
+
+**Wiring, and the decision that comes first.** **Pick the LTI runtime from the
+client's estate, not from your preference** — the four implementations are not
+interchangeable in effort once a stack exists. Then: LTI 1.3 launch carries
+identity, course context and role; your Python AI service sits **behind** that
+adapter over an internal API; OneRoster.NET syncs the roster on a schedule;
+Langfuse records every interaction with the launch context attached, so an audit
+trail is a by-product of the architecture rather than a feature nobody funded.
+
+**The gap you must price, not hide.** **There is no Python LTI 1.3 library.** The
+AI layer is Python; the adapter is not. So the honest architecture is two
+processes, and the adapter is a **budgeted component in the bid**. Equally: if the
+rubric scores **grade passback**, OneRoster.NET does not implement the gradebook,
+and if it scores **learning-analytics event streams**, there is **no permissive
+Caliper Analytics implementation at all** — both are builds against the spec. Say
+so in the response. A rubric line you answered with a library that does not cover
+it is worse than one you answered with a costed build.
+
+**Sequence:** estate assessment and runtime choice (1 wk) → LTI 1.3 launch with
+identity and context, end to end (2 wk) → OneRoster sync and reconciliation
+(2 wk) → Langfuse trail bound to launch context (1 wk) → rubric artefact pack,
+line by line (1 wk) → conformance dry-run against the client's own rubric (1 wk).
+**8 weeks** to something a procurement officer can score.
+
+**Two warnings.** **Pin `theopenem/OneRoster.NET`**, not the byte-identical
+`jdolny/OneRoster.NET` — both are MIT and both name `theopenem` as copyright
+holder, so they are one asset at two addresses, and the fork direction is not
+establishable from this environment. And **do not sweep for components with the
+word "Caliper"**: the search is dominated by `google/caliper` (Java
+micro-benchmarking) and `hyperledger-caliper/caliper` (blockchain), which is how a
+184-result count turns into five real repositories.
+
+## P26 — Offline-tolerant sync without a platform migration (LATAM, APAC, anywhere intermittent)
+
+Added tenth pass, 2026-10-06. For three passes this KB has answered "offline-first"
+with **Kolibri**, which is correct when the client is choosing a platform and wrong
+when they already have one. The separable component underneath it is now verified,
+and it is MIT.
+
+**The deliverable:** an existing Django application that keeps working, and keeps
+syncing, across intermittent connectivity — without adopting a learning platform.
+
+| Stage | Component | Licence (payload) | Why this one |
+|---|---|---|---|
+| Replication engine | [learningequality/morango](https://github.com/learningequality/morango) | **MIT** (`master/LICENSE`) | **Pure-Python peer-to-peer DB replication for Django.** Marks chosen models syncable; **certificate-based authentication** for data privacy and integrity; change tracking and **data partitioning** designed for low-bandwidth links; SQLite **and** PostgreSQL. 15★, 23 forks, `release-v0.9.x` |
+| Shared vocabulary | [learningequality/le-utils](https://github.com/learningequality/le-utils) | **MIT** (`main/LICENSE.txt`) | Constants and utilities shared across the Kolibri toolchain — needed if you ever exchange content with it |
+| Content pipeline (optional) | [learningequality/ricecooker](https://github.com/learningequality/ricecooker) | **MIT** (`main/LICENSE`) | Generates Kolibri channels, if the client wants interoperability with that ecosystem |
+| Full platform (the alternative) | [learningequality/kolibri](https://github.com/learningequality/kolibri) | **MIT** (`master/LICENSE`) | Where this pattern stops and the platform choice starts |
+| Local inference | [k2-fsa/sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) · [ollama/ollama](https://github.com/ollama/ollama) | **Apache-2.0** · **MIT** | The AI layer has to run where the connectivity is not |
+
+**Wiring.** Morango is a Django app: you declare which models are syncable, give
+each device or site a certificate, and let it reconcile. The **partitioning** is
+the part to design deliberately — it decides what a given school or device is
+allowed to hold, which is a data-protection control as much as a performance one.
+Pair it with local inference so tutoring continues while the link is down, and let
+only the records sync, not the model traffic.
+
+**Why it is a smaller engagement than it looks.** Nothing here asks the client to
+migrate. **Morango is usable independently of Kolibri**, under MIT, with
+certificate-based auth already built — which is normally the expensive half of a
+sync design. For a ministry or network that already runs a Django SIS or LMS, this
+is weeks, not a platform programme.
+
+**Sequence:** syncable-model and partition design (2 wk) → morango integration and
+certificate provisioning (2 wk) → conflict and reconciliation testing on forced
+disconnection (2 wk) → local inference for the degraded path (2 wk) → multi-site
+pilot (2 wk). **10 weeks.**
+
+**Two warnings, both licence-shaped.** **Probe every sibling repository before you
+depend on it.** Inside this same organisation,
+[kolibri-design-system](https://github.com/learningequality/kolibri-design-system)
+and [kolibri-server](https://github.com/learningequality/kolibri-server) returned
+**no licence payload** under 20 probed URLs — so the Vue design system in
+particular must not be used for client UI on the assumption that the org is MIT.
+And `learningequality/studio` carries `Copyright (c) 2021 Foundation for Learning
+Equality (internal apps)`: the parenthetical looks like a scope restriction, but
+the **full text was read this pass and the permission body is unmodified MIT**.
+Use it; the qualifier annotates the holder, not the grant.
+
 ## Pattern selection
 
 | Situation | Pattern |
@@ -1415,13 +1559,18 @@ the same time.**
 | Teacher-side artefacts (lesson plans, question banks) rather than a student tutor | **P15** step 1 (`microsoft/shiksha-copilot`, MIT) — not P1 |
 | LATAM higher ed, and you are choosing where to start | **P6 first** — 87% of LAC institutions use AI, 26% have a strategy; the gap is governance, not technology |
 | India or a state/national programme wanting an end-to-end permissive stack | **P16** — AI4Bharat (MIT) + Sunbird (MIT); permissive from language layer to platform |
-| Primary literacy, oral reading fluency, or "measure whether the child can read" | **P17** — the only category in this KB with permissive components, a public dataset, a published baseline and **no open competitor** |
+| Primary literacy, oral reading fluency, or "measure whether the child can read" | **P17** — permissive components, a public dataset and a published baseline; the whole existing category is **two repositories, one MIT at 1 commit** (`prosody`), and Harvard's **OpenLiteracy** is funded to fill it (0 repos today) |
 | Offline/low-connectivity **and** the tutor must speak or listen | **P18** — `sherpa-onnx` (Apache-2.0) gives STT+TTS+diarization+VAD in one dependency; **not** Piper |
 | ASEAN institution wanting a tutor in Vietnamese, Thai, Malay or Indonesian | **P19** — MIT LMS substrate, Apache-2.0/MIT language shelf, pedagogy layer unbuilt by anyone open or closed |
 | Spoken practice in Thai, Vietnamese or Indonesian specifically | **P19 constraint 2** — only Malay has a regional permissive voice toolkit; measure `sherpa-onnx` on real learner audio before promising |
 | **Vietnam in scope, at all** | **P20** — Decree 33 makes a RAG tutor high-risk on **corpus provenance alone**, even with no grading, ranking or monitoring |
 | Client asks "where did this generated question come from?" | **P20** — the source manifest, with forward tracing from source to item |
 | Any engagement that ingests client or curriculum content into a tutor | **P20** alongside **P2** — build the manifest once, it satisfies Vietnam, EMEA Annex III, California AB 1159 and the LATAM governance gap |
+| RFP or rubric that **scores interoperability** (39% of US districts do) | **P25** — pick the LTI runtime from the client's estate, and price the Python adapter instead of hiding it |
+| Client already runs a **Django** SIS/LMS and needs offline tolerance | **P26** — `morango` (MIT) gives P2P replication with certificate auth; **no platform migration** |
+| "We need offline" but the client is **not** choosing a platform | **P26**, not P5 — Kolibri is the answer to a platform question, morango to a sync question |
+| Rubric scores **grade passback** or **learning-analytics event streams** | **P25**, costed as a build — OneRoster.NET has no gradebook and there is no permissive Caliper implementation |
+| Any absence you are about to put in a client deliverable | **P22**, plus trend 29 — state the instrument that measured it; GitHub's licence field reports MIT repos as unlicensed |
 
 **Index consistency note (seventh pass, 2026-10-06):** this table was missing
 **P16, P17 and P18** — three patterns written by earlier passes and never indexed

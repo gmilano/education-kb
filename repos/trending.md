@@ -8,6 +8,134 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — tenth pass: 41 rejections re-probed, a 238-repo estate behind a 1-row entry, and 184 search results that are mostly blockchain
+
+Channel this pass: **the KB's own reject pile**, re-probed; plus the
+**interoperability-standards shelf**, which the ninth pass's procurement finding
+pointed straight at. Full narrative and the method controls are in
+`agents/trending.md`, tenth pass. This file records the repository-level
+measurements.
+
+**All licence facts below are Tier 1** — read from each repository's own payload
+via `raw.githubusercontent.com`, across **10 filenames × 2 branches**
+(`LICENCE`/`LICENSE`/`licence`/`license`/`COPYING` and `.md`/`.txt` variants, on
+`main` and on `master`). The probe was validated on 6 known-payload controls
+first; **6 of 6 resolved**, including two British-spelling controls and three on
+`master`.
+
+### The retroactive sweep — 41 repositories this KB had rejected
+
+| Outcome | Count |
+|---|---|
+| Re-probed (every repo this KB records as ungranted) | **41** |
+| Flipped to granted | **1** |
+| Confirmed ungranted under all 20 URLs | **40** |
+| Flips attributable to the British `LICENCE` spelling | **0** |
+
+The ninth pass's spelling correction **generalised to nothing** outside the one UK
+government organisation that prompted it. The single flip resolved on
+`master/LICENSE` — the defect was the **branch name**, which no pass had varied.
+
+**The flip:**
+
+| Repo | Licence (read from payload) | ★ | Note |
+|---|---|---|---|
+| [jdolny/OneRoster.NET](https://github.com/jdolny/OneRoster.NET) | **MIT** (`master/LICENSE`) | 6 (8 forks) | OneRoster 1.1/1.2 client for .NET, rostering only. Previously recorded here as ungranted. **Copyright holder is `theopenem`, not the repo owner** — see the pinning note below. |
+
+### The interoperability shelf — permissive, verified, and split by runtime
+
+The ninth pass established the demand side: **39% of districts score
+interoperability in their RFP rubrics.** This is the supply side, payload-verified.
+
+| Repo | Licence (read from payload) | ★ | Runtime | What it is |
+|---|---|---|---|---|
+| [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | Apache-2.0 (`master/LICENSE`) | 373 | Node / TypeScript | Turns an application into a fully integratable **LTI 1.3 tool provider**. Highest-starred genuine LTI project. |
+| [1EdTech/lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library) | Apache-2.0 (`master/LICENSE`) | 124 | PHP | LTI 1.3 library from **the standards body itself**. The reference implementation, and the Moodle-side pairing. |
+| [Unicon/tool13demo](https://github.com/Unicon/tool13demo) | Apache-2.0 (`master/LICENSE`) | 27 | Java / Spring Boot | LTI 1.3 tool in Spring Boot. **New to this KB this pass.** |
+| [oxctl/spring-security-lti13](https://github.com/oxctl/spring-security-lti13) | Apache-2.0 (`master/LICENSE.txt`) | 25 | Java / Spring Security | LTI 1.3 for Spring Security on its OAuth2 support. **New to this KB this pass.** |
+| [theopenem/OneRoster.NET](https://github.com/theopenem/OneRoster.NET) | **MIT** (`master/LICENSE`) | 6 (8 forks) | .NET | OneRoster 1.1 + 1.2 client. OAuth2 for 1.2, consumer credentials for 1.1. **Rostering calls only — gradebook not implemented.** |
+
+**Pinning note, and the limit of what this environment can establish.**
+`theopenem/OneRoster.NET` and `jdolny/OneRoster.NET` serve **byte-identical**
+`README.md` (md5 `110b2e3439d86b6055821de382d90d61`, 2,048 bytes) and
+byte-identical MIT text naming **`theopenem`** as holder in both. One is a fork,
+mirror or rename of the other; **the direction is not established** — the fork
+banner is absent from the page this environment renders and `github.com` returns
+403 to `curl`. **Pin `theopenem/OneRoster.NET`** (owner matches the copyright
+line) and treat the other as the same asset at a second address, not a second
+option.
+
+**The homonym trap, measured.** `OneRoster OR Caliper OR "LTI 1.3"
+license:apache-2.0` returns **184 repositories**, and the top of that list is
+`google/caliper` (818★, deprecated Java micro-benchmarking) and
+`hyperledger-caliper/caliper` (708★, blockchain benchmarking) — **nothing to do
+with 1EdTech Caliper Analytics.** Four of the top eight are blockchain or JVM
+benchmarking. A 184-result count reads as a thriving ecosystem and is mostly a
+*different* ecosystem; the real shelf is the five rows above.
+
+**The gap in that shelf, stated plainly: there is no Python LTI 1.3 library in
+it.** Node, PHP, Java and .NET are covered. Python — where most AI tutoring code
+in this KB is written — is not. Searched, not found.
+
+### The Learning Equality estate — 238 repositories behind a one-row entry
+
+Learning Equality is a Cohort 1 grantee of the $26M K-12 AI Infrastructure
+Program **and** the maintainer of Kolibri. Its organisation holds **238
+repositories**; this KB had recorded Kolibri, `studio` and `ricecooker`.
+
+| Repo | Licence (read from payload) | ★ | What it is |
+|---|---|---|---|
+| [learningequality/morango](https://github.com/learningequality/morango) | **MIT** (`master/LICENSE`) | 15 (23 forks) | **Pure-Python peer-to-peer DB replication engine for Django.** Marks chosen models syncable; **certificate-based authentication** for data privacy and integrity; change-tracking and partitioning designed for low-bandwidth links; SQLite **and** PostgreSQL. Branch `release-v0.9.x`. **The sync substrate under Kolibri's offline-first story**, and usable on its own. |
+| [learningequality/le-utils](https://github.com/learningequality/le-utils) | **MIT** (`main/LICENSE.txt`) | not read this pass | Constants and utilities shared across Kolibri, Ricecooker and Studio — the vocabulary layer anything generating Kolibri channels needs. |
+| [learningequality/studio](https://github.com/learningequality/studio) | **MIT** (`master/LICENSE`), **full text read** | not read this pass | Content curation for Kolibri. Already on these shelves; **re-verified this pass for a reason** — see below. |
+| [learningequality/kolibri-design-system](https://github.com/learningequality/kolibri-design-system) | **no payload** (20 URLs) | not read this pass | Vue design system. Repository exists (`main/README.md` resolves); **the grant does not.** Do not ship client UI from it on an assumption. |
+| [learningequality/kolibri-server](https://github.com/learningequality/kolibri-server) | **no payload** (20 URLs) | not read this pass | Performance and caching access layer for Kolibri, multi-core. **The repository exists** (`main/README.rst`; `README.md` does not resolve). **No licence payload under any of 20 URLs.** |
+
+**Two of four new probes inside the MIT-friendliest organisation on these shelves
+came back ungranted.** An organisation's licence posture is not inherited by its
+repositories, and "they're the Kolibri people" is not a licence.
+
+**A concern raised and refuted, which is worth as much as a finding.**
+`learningequality/studio` declares `Copyright (c) 2021 Foundation for Learning
+Equality (internal apps)`. A parenthetical scope qualifier in a copyright line is
+exactly the shape this KB treats as a narrowed grant (cf. the corpus-cession
+work). The **full licence text was read this pass**: the permission body is
+standard, unmodified MIT with no field-of-use restriction. **The parenthetical
+annotates the holder, not the grant. Full MIT.**
+
+### Oral reading fluency — the whole denominator, in two rows
+
+| Repo | Licence (read from payload) | ★ | What it is |
+|---|---|---|---|
+| [qazasd2518995/prosody](https://github.com/qazasd2518995/prosody) | **MIT** (`main/LICENSE`, full text read) | 0 | Oral reading assessment from speech: word-level alignment against reference text, accuracy and WER, speaking rate (WPM), misread/omitted/inserted word detection, fluency from pause pattern and pace. Whisper ASR, Levenshtein alignment, Groq API. Python, **1 commit**, 0 forks, not a fork. |
+| [mendezjerick/ReaDirect-V2](https://github.com/mendezjerick/ReaDirect-V2) | **no payload** (20 URLs) | 0 | AI oral reading and comprehension support: speech recognition, adaptive assessment, guided reading. TypeScript. Repository exists; grant does not. |
+
+**That is the entire GitHub result set for `oral reading fluency assessment
+speech` — two repositories.** And `prosody` is the pass's method finding: GitHub's
+search listing reports **"License: Not specified"** for it while its payload is a
+complete MIT licence. **The listing manufactures absences**, which matters because
+this KB declares gaps from licence-filtered searches that cannot see a repository
+GitHub believes is unlicensed.
+
+### Measured zeros — three funded projects, no code
+
+| Probe | Result (6 Oct 2026) |
+|---|---|
+| `OpenLiteracy` (Harvard / Ying Xu, Cohort 2, funded Sept 2026) | **0 repositories** |
+| `tutoring quality evaluation benchmark license:apache-2.0` | **0 repositories** (unchanged from ninth pass) |
+| `formative assessment dataset classroom` | **0 repositories** |
+
+### The dead channel, measured rather than mined
+
+`education AI agent license:mit pushed:>2026-09-20` returns **158 repositories.**
+Top by stars: `shauryagangrade/awesome-ai-prompts` (69★, prompt list),
+`cuic19053-hue/awesome-student-ai-skills` (55★),
+`StudentSuite/awesome-skills-plugins-for-students` (22★),
+`weishao2/tizhuang-agent-skills` (21★, K12 item bank),
+`llwand1/studentbuddy-v2` (23★, gamified platform). **Curated lists and student
+coursework — no production asset.** Recorded as a measured dead channel, with the
+counts, rather than converted into eight table rows.
+
 ## 2026-10-06 — ninth pass: a ministry's MIT estate, a NonCommercial shell, and the word "licence" spelled the other way
 
 Channels this pass: the **funder and procurement channel** (philanthropic RFPs,

@@ -426,6 +426,56 @@ stands**; a 15.9% regional CAGR and a 40.9% global CAGR in the same market is a
 scope difference, not a growth difference. Quote the regional figure, state the
 definition, and never blend the two in one chart.
 
+#### Tenth pass of 2026-10-06 — the funded pipeline gains two more names, and the integration tier becomes sellable
+
+**The oral-reading project is named, and it is the most on-target funded work this
+KB has seen.** Two further Cohort 2 grantees of the **$26M K-12 AI Infrastructure
+Program** (Tier 2, search-summary corroborated):
+
+| Grantee | Lead | Project |
+|---|---|---|
+| **Harvard University** | Ying Xu | **OpenLiteracy: An Open-Source AI Infrastructure Suite for Advancing Speech Foundation Models for Early Word Reading Assessment and Instruction** |
+| **University of Maryland, College Park** | Jing Liu | *Enhancing Two Multimodal Classroom Datasets to Advance R&D on Formative Assessment* |
+
+Three of the eight Cohort 2 grantees are now named here (with MMSA & TERC from the
+ninth pass); **five remain unnamed.**
+
+**And nothing has shipped — measured, Tier 1, 6 Oct 2026:**
+
+| Probe | Result |
+|---|---|
+| `OpenLiteracy` | **0 repositories** |
+| `tutoring quality evaluation benchmark license:apache-2.0` | **0 repositories** (unchanged) |
+| `formative assessment dataset classroom` | **0 repositories** |
+
+**The opportunity, sharpened.** OpenLiteracy targets early word reading
+assessment. The whole existing permissive shelf for that capability is **two
+repositories** — [qazasd2518995/prosody](https://github.com/qazasd2518995/prosody)
+(MIT, 0★, 1 commit, Whisper + Levenshtein alignment) and
+[mendezjerick/ReaDirect-V2](https://github.com/mendezjerick/ReaDirect-V2) (no
+licence payload). A client who needs oral reading fluency assessment **this**
+school year cannot wait for Harvard's suite; the engagement is to build the
+harness around `prosody`'s approach now and swap the funded artefacts in when they
+land (**P23**, **P25**).
+
+**A named partner with a 238-repository MIT estate.** Learning Equality — Cohort 1
+grantee, Kolibri maintainer — holds **238 repositories**, of which this KB had
+recorded three. Newly verified MIT: **morango** (15★, peer-to-peer Django DB
+replication with certificate-based auth) and **le-utils**. Two others
+(`kolibri-design-system`, `kolibri-server`) returned **no licence payload** — so
+the diligence is per-repository, not per-organisation. The partnership case is
+unchanged and stronger: the organisation funded to produce an openly-licensed
+benchmark already ships MIT infrastructure this KB can build on.
+
+**The integration tier is now a sellable line item.** Against the ninth pass's
+**39% of districts scoring interoperability in RFP rubrics**, the permissive shelf
+is verified and small: `ltijs` (Apache-2.0, 373★, Node), `1EdTech/lti-1-3-php-library`
+(Apache-2.0, 124★), `Unicon/tool13demo` and `oxctl/spring-security-lti13`
+(Apache-2.0, JVM), `theopenem/OneRoster.NET` (MIT, rostering only, **no
+gradebook**). **No Caliper Analytics implementation on a permissive licence, and
+no Python LTI 1.3 library at all** — the second is an open-source contribution
+opening with a procurement-scored buyer already attached.
+
 ### EMEA
 
 - **The EU AI Act is the whole conversation.** AI used in education access and
@@ -744,6 +794,57 @@ and relevant to enablement engagements (**P6**); the rest is enterprise
 cross-industry material in an education query. **Second consecutive pass in which
 this region's general query failed to return education-specific findings** — the
 ministry-org channel is what worked, and it should be the EMEA default from here.
+
+#### Tenth pass of 2026-10-06 — EMEA is writing the evaluation rule that North America is funding the artefact for
+
+The generalist regional query failed for the **third consecutive pass**, returning
+enterprise AI-governance and corporate-training material (94% of organisations
+likely to invest in AI training; 38% of EMEA organisations not yet piloting; 60%
+reporting siloed data; UK AI Adoption Summit with £200m+ committed to AI
+adoption). Useful context, **not education findings.** The generalist query is
+retired for this region; what worked in the ninth pass was a named institution,
+and what worked this pass is the same.
+
+**The channel: the Council of Europe education directorate** — a treaty body, not
+a search term. **Tier 2, corroborated across two independent summaries.**
+
+The Council of Europe has established a **Committee of Experts on AI and
+Education (EDU IA)** and introduced the **Council of Europe Compass for AI and
+Education**, presented at a third working conference, *"Ensuring quality education
+in the AI era."* The **Committee of Ministers adopted a text in Munich** placing
+education at the centre of Europe's response to AI, implementing **Article 20 of
+the Framework Convention on Artificial Intelligence, Human Rights, Democracy and
+the Rule of Law.**
+
+The **2026–2027 work programme** names four deliverables:
+
+| Deliverable | Why it is a market event |
+|---|---|
+| A proposal for a **legal instrument to regulate the use of AI systems in education** | A sector-specific instrument on top of the EU AI Act's horizontal duties — a second compliance surface for the same deployment |
+| A **European Reference Framework for the Evaluation of Educational Technologies** | **The EMEA twin of the $26M North American benchmark programme** — same void, different instrument |
+| A **Policy Toolbox** on teaching and learning about AI | Ministry and institutional advisory demand |
+| **Draft guidelines on the use of education data and analytics** | Lands directly on the learning-analytics layer, where this KB found **no permissive Caliper implementation** |
+
+**The read, and it is the most useful cross-region statement in this file.**
+North America is **buying the artefact** — $26M, twelve projects, an Apache-2.0
+floor, benchmarks and datasets. EMEA is **writing the rule** — a reference
+framework for evaluating educational technology, and a proposed legal instrument
+behind it. A client deploying in both regions faces one gap expressed two ways,
+and the EMEA expression is the harder one to retrofit, because conformance
+evidence cannot be generated after the fact. **An evaluation harness built now
+(P23) serves the US benchmark swap-in and the European conformance file at the
+same time**, and it gives the EU AI Act profile work (**P13**) a named successor
+instrument to track rather than a horizontal regulation alone.
+
+**The competitive fact for the same buyers.** OpenAI's **Education for Countries**
+programme (Tier 2; launched at Davos 2026) is working directly with ministries of
+education, and its named EMEA participants are **Estonia, Greece, Italy (CRUI, the
+rectors' conference), Slovakia, the UAE and Jordan.** Six EMEA national or
+sector-wide bodies are being onboarded to a single proprietary vendor at the
+ministry tier — in the region that is simultaneously drafting a legal instrument
+on AI in education and a framework for evaluating it. **Sovereignty, auditability
+and data residency are not abstract selling points here; they are the subject of
+the instrument being drafted.**
 
 ### APAC
 
@@ -1078,6 +1179,48 @@ the sovereignty framing from the eighth. **Second consecutive pass in which the
 general APAC query returned enterprise rather than education material** — like
 EMEA, this region needs a channel change, and the ministry-org channel that
 worked for the UK this pass is the obvious candidate.
+
+#### Tenth pass of 2026-10-06 — a ministry already has a vendor, and it says it is still shopping
+
+The generalist regional query failed for the **third consecutive pass**, returning
+enterprise material (48% of APAC governance leaders making AI adoption a top 2026
+priority; 57% of Asian organisations with AI in at least one area; Singapore's
+consultations on AI in financial institutions; corporate LMS and upskilling
+announcements). **Not education findings.** Retired for this region, as for EMEA.
+
+**What worked was the ministry-programme channel**, the APAC analogue of the UK
+DfE sweep. **Tier 2.**
+
+**Singapore's Ministry of Education was welcomed into OpenAI's Education for
+Countries on 20 May 2026** at the Education World Forum in London. OpenAI is
+supporting use cases developed by **MOE and GovTech** teams, including
+personalised learning and **mother tongue language learning**. **Kazakhstan** is
+also named in the programme's first cohort.
+
+**The opening is in Singapore's own framing.** MOE is described as *"exploring
+various AI tools from different partners to meaningfully support teaching and
+learning."* A ministry that states a **multi-partner** posture while onboarding one
+vendor is a ministry that will evaluate alternatives — and GovTech's involvement
+means the counterparty is an engineering organisation that can assess an open,
+auditable, data-resident stack on its merits. **That is a different sales motion
+from displacing an incumbent, and it is open now.**
+
+**The mother-tongue use case is the one to lead with.** It is precisely where this
+KB's language substrate shelves (sixth, seventh and eighth passes) hold
+permissive, regionally-placed assets, and precisely where a single global vendor is
+weakest.
+
+**Tier 1 confirmation, and it is a negative.**
+[AI-EDU-LAB/E-EVAL](https://github.com/AI-EDU-LAB/E-EVAL) — the Chinese K12 LLM
+education evaluation benchmark (33★), the region's most on-target evaluation asset
+— was **re-probed this pass across 20 URLs** (both `LICENCE`/`LICENSE` spellings,
+both `main` and `master`). **Still no licence payload.** The repository exists;
+`main/README.md` resolves. The ninth pass's *built, published, benchmarked,
+ungranted* finding for APAC **survives a full re-probe** and is no longer
+attributable to a spelling or branch defect in this KB's method. **APAC has the
+evaluation benchmark the US is funding and the licence that makes it unusable.**
+A grant request to the maintainers is a cheaper route to a regional evaluation
+asset than building one.
 
 ### LATAM
 
@@ -1483,6 +1626,62 @@ into a measured deficit rather than a speculative one — and the **productionis
 posture from the eighth pass (TutorIA's MIT specification, EduFlow's MIT offline
 core, PUC Chile and UTP Pereira as named leads) is how you build on top of it.
 
+#### Tenth pass of 2026-10-06 — the governance numbers get sharper, and a Caribbean ministry gets a vendor first
+
+**The UNESCO IESALC / UNU-IAS survey, extended.** The ninth pass recorded part of
+this instrument; the full set is now corroborated at Tier 2 — **200 higher
+education institutions across 19 countries of Latin America and the Caribbean,
+surveyed August–October 2025**:
+
+| Adoption, by domain | Share |
+|---|---|
+| Teaching and learning | **73.5%** |
+| Research | **57.0%** |
+| Administration | **34.1%** |
+| Community engagement | **20.0%** |
+
+| Governance | Share |
+|---|---|
+| Formal AI strategy | **26.0%** |
+| Institution-wide AI policy | **18.5%** |
+| **Formal evaluation mechanisms** | **9.0%** |
+| Dedicated AI budget | **8.0%** |
+
+**73.5% adoption against 9.0% evaluation and 8.0% budget.** The new figure this
+pass is **26.0% with a formal AI strategy** — which sits *above* the 18.5% with an
+actual institution-wide policy, so roughly a third of institutions that have
+written a strategy have not turned it into policy. The engagement that follows
+from this table is **governance-and-evaluation first**, and it is buyable: it needs
+an evaluation harness, an audit trail and a policy instrument, not a model.
+
+**A Caribbean ministry is in a national AI-education programme with a proprietary
+vendor.** **Trinidad & Tobago** is named in the first cohort of OpenAI's
+**Education for Countries** (Tier 2) — the programme working directly with
+ministries of education. This is the first LATAM/Caribbean national AI-education
+engagement this KB has recorded, and it arrives in the region measured at **9%
+formal evaluation mechanisms.** The vendor is arriving before the governance
+capacity. **That ordering is the opportunity and the risk in one sentence**: the
+region will be deploying national AI education programmes without the institutional
+machinery to evaluate them, which is exactly the work an open, auditable
+alternative can be sold as — and exactly the condition under which a closed one
+becomes entrenched.
+
+**Tier 1 confirmation, and it is a negative that now holds under a stricter
+probe.** Nine of the 41 repositories re-probed this pass are the LATAM-placed
+indigenous-language and hackathon repositories — the `AmericasNLP` shared-task
+datasets (2021, 2023, 2024), `Llamacha/IWSLT2025_Quechua_data`,
+`aoncevay/mt-peru`, `aoncevay/quechua-nlp`, `monirome/asr-indigenous-languages`,
+`caiuc/proyectos-hacaithon-2026` and `vilcaaguilerandrea-oss/carrera-lectora`.
+Every one was re-probed across **20 URLs** including both spellings of "licence"
+and both `main` and `master`. **Not one carries a licence payload.**
+
+The eighth pass's LATAM finding — *the capability is there, the grant is not* —
+**survives a full retroactive re-probe** and can no longer be attributed to this
+KB's own query defects. For a region whose indigenous-language capability is its
+most distinctive technical asset, the blocker is **licensing, not capability, and
+not this KB's ability to see it.** Obtaining grants on two or three of these
+datasets is a higher-leverage regional action than any further search.
+
 ## Cross-region read
 
 Two patterns hold in every region, which makes them safe to build once and sell
@@ -1803,3 +2002,103 @@ spelling pattern **P22**'s gate already lists and no recorded sweep has ever
 run. See `agents/top.md`, ninth-pass method
 note — four government repositories would have been recorded as ungranted by a
 query that could not have found their grant.
+
+## What changed in the tenth pass of 2026-10-06
+
+**Channel: the KB's own reject pile, re-probed** — plus the **interoperability
+shelf** that the ninth pass's procurement finding pointed at, the **Council of
+Europe education directorate** for EMEA, and the **ministry-programme channel**
+for APAC and LATAM. The generalist regional query was retired for EMEA and APAC
+after a third consecutive failure.
+
+1. **North America's funded pipeline gained two more named projects and a third
+   measured zero.** Harvard (Ying Xu) is funded for **OpenLiteracy**, an
+   open-source speech-foundation-model suite for early word reading assessment —
+   which lands exactly on this KB's sixth-pass oral reading fluency gap. Maryland
+   (Jing Liu) is funded for multimodal classroom formative-assessment datasets.
+   **`OpenLiteracy` returns 0 repositories on GitHub.** Three funded, named,
+   dated projects; three measured zeros. Five of eight Cohort 2 grantees still
+   unnamed.
+2. **EMEA is writing the evaluation rule that North America is funding the
+   artefact for.** The Council of Europe has a **Committee of Experts on AI and
+   Education (EDU IA)**, a **Compass for AI and Education**, a Committee of
+   Ministers text adopted in **Munich** implementing **Article 20 of the Framework
+   Convention on AI**, and a 2026–27 programme containing a **proposed legal
+   instrument to regulate AI systems in education** and a **European Reference
+   Framework for the Evaluation of Educational Technologies**. One gap, two
+   regions, two instruments — and the European one arrives as conformance, which
+   cannot be retrofitted.
+3. **The proprietary ministry channel is simultaneously in all three non-US
+   regions.** OpenAI's **Education for Countries** names **Estonia, Greece, Italy
+   (CRUI), Slovakia, UAE, Jordan** (EMEA), **Kazakhstan, Singapore** (APAC) and
+   **Trinidad & Tobago** (LATAM). Nine ministries or sector bodies, one vendor,
+   national tier. Singapore's own framing — *"exploring various AI tools from
+   different partners"* — is the opening, and **Trinidad & Tobago is a Caribbean
+   ministry acquiring a national programme in a region measured at 9% formal
+   evaluation capacity.**
+4. **LATAM's governance table is now complete and sharper.** UNESCO IESALC /
+   UNU-IAS, 200 institutions, 19 countries: **73.5%** teaching-and-learning
+   adoption, **57.0%** research, **34.1%** administration, **20.0%** community
+   engagement — against **26.0%** with a formal AI strategy, **18.5%** with
+   institution-wide policy, **9.0%** with formal evaluation mechanisms and
+   **8.0%** with a dedicated AI budget. The new figure, 26.0% strategy above
+   18.5% policy, says a third of institutions that wrote a strategy never turned
+   it into one.
+5. **The integration tier became a priceable deliverable.** Against **39% of
+   districts scoring interoperability in RFP rubrics**, the permissive shelf is
+   verified and small: four Apache-2.0 LTI 1.3 libraries (Node, PHP, two JVM) and
+   one MIT OneRoster client (**rostering only, no gradebook**). **No permissive
+   Caliper Analytics implementation. No Python LTI 1.3 library at all** — and
+   Python is where the AI layer lives.
+6. **A named North American partner turned out to have a 238-repository MIT
+   estate.** Learning Equality, Cohort 1 grantee and Kolibri maintainer. New
+   verified MIT: **morango** (peer-to-peer Django DB replication with
+   certificate-based auth — the sync engine under the offline story) and
+   **le-utils**. Two sibling repositories returned **no payload**, so diligence
+   stays per-repository.
+7. **Three negatives were re-tested and held, which makes them usable.** APAC's
+   `E-EVAL` benchmark and nine LATAM-placed indigenous-language and hackathon
+   repositories were re-probed across **20 URLs each** — both spellings of
+   "licence", both branch names. **Not one carries a payload.** Those regional
+   findings can no longer be attributed to this KB's own query defects.
+
+### The method note, stated plainly
+
+This pass **audited the KB against itself**, and the audit cost it two of its own
+conclusions.
+
+The ninth pass's headline method fix — probing the British spelling `LICENCE` —
+**flipped nothing** when run backwards over the 41 repositories this KB had
+recorded as ungranted. It is a house style at one UK government organisation that
+was written up as a general defect in the KB's reach. The defect that *was*
+general was never announced: **the KB had only ever probed one branch name.** The
+single flip in 41 (`jdolny/OneRoster.NET`, MIT) sits on `master/LICENSE`, and three
+of the six validation controls do too.
+
+The finding to carry forward is worse, and it is about market intelligence as much
+as code: **GitHub's rendered licence field reported "License: Not specified" for a
+repository carrying a complete MIT grant** (`qazasd2518995/prosody`). Every
+licence-filtered zero-result measurement in this KB — including three in this very
+pass, used above to show that funded projects have not shipped — inherits that
+error. The zeros remain the best available measurement. **They are evidence of
+absence as GitHub's licence index sees it, not evidence of absence**, and the
+distinction has to survive into any client deliverable that quotes them.
+
+**And the environment is now a measured constraint rather than a series of
+accidents.** Nine further hosts were attempted this pass and **all nine returned
+`EGRESS_BLOCKED`**: `digitalpromise.org`, `www.coe.int`, `rm.coe.int`,
+`www.prnewswire.com`, `www.gse.upenn.edu`, `www.eunews.it`, `www.sec.gov`,
+`ess.iesalc.unesco.org`, `openai.com` — including **three syndicated mirrors tried
+specifically to route around a blocked primary host.** With the ninth pass's
+fourteen, that is **23 distinct hosts across two passes with zero reachable.**
+`github.com` and `raw.githubusercontent.com` are the only origins this environment
+serves.
+
+Two consequences for the next pass. **The vendor-filings channel is not unswept,
+it is unreachable** — `www.sec.gov` is blocked, so McGraw Hill's and Workday's
+FY2026 open-source and copyleft-risk disclosures are available at Tier 2 only, and
+that channel needs a different host rather than a better query. And **every market,
+funder, regulatory and procurement figure in this file remains Tier 2**: dollar
+amounts, dates, percentages and licence clauses are corroborated across independent
+search summaries, never read from the primary document. **Confirm each one against
+its source before it enters a client deliverable.**

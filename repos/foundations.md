@@ -649,3 +649,91 @@ read wrongly for three passes.**
 by stars, so they structurally hide small orgs: the `AI-for-Education` sweep in the
 same pass returned six repositories, five MIT, that no topic page had ever shown
 this KB — and they are the only Africa-placed code it holds.
+
+## Added in the tenth pass of 2026-10-06 — the interoperability tier, and the sync engine under the offline platform
+
+Two shelves this pass, both payload-verified, both arriving from a demand signal
+rather than from a search for interesting code.
+
+**All licences below were read from the repository's own payload** via
+`raw.githubusercontent.com`, probed across **10 filenames × 2 branches**
+(`LICENCE`/`LICENSE`/`licence`/`license`/`COPYING`, `.md` and `.txt` variants, on
+`main` and `master`). The probe was validated against 6 known-payload controls
+first; **6 of 6 resolved.** Star counts read from the rendered repository page the
+same day.
+
+### The interoperability tier — because 39% of district RFPs score it
+
+The ninth pass found the procurement number: **39% of districts score
+interoperability in their RFP rubrics** (CoSN, Tier 2). That makes the integration
+layer a **scored deliverable**, not plumbing — and this is the entire permissive
+shelf for it, split by runtime.
+
+| Repo | License (read from payload) | ★ (2026-10-06) | Runtime | What it is |
+|---|---|---|---|---|
+| [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | Apache-2.0 (`master/LICENSE`) | 373 | Node / TypeScript | Turns an application into a fully integratable **LTI 1.3 tool provider**. The highest-starred genuine LTI project, and the default when the AI layer is a Node service. |
+| [1EdTech/lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library) | Apache-2.0 (`master/LICENSE`) | 124 | PHP | LTI 1.3 library published by **the standards body itself**. The reference implementation; the natural pairing when the LMS is Moodle. |
+| [Unicon/tool13demo](https://github.com/Unicon/tool13demo) | Apache-2.0 (`master/LICENSE`) | 27 | Java / Spring Boot | LTI 1.3 tool in Spring Boot, from a long-standing higher-ed systems integrator. **The JVM entry point** — which is the stack most enterprise education clients already run. |
+| [oxctl/spring-security-lti13](https://github.com/oxctl/spring-security-lti13) | Apache-2.0 (`master/LICENSE.txt`) | 25 | Java / Spring Security | LTI 1.3 for Spring Security, built on its OAuth2 support. Use this one when the client already has a Spring Security estate and wants LTI inside it rather than beside it. |
+| [theopenem/OneRoster.NET](https://github.com/theopenem/OneRoster.NET) | **MIT** (`master/LICENSE`) | 6 (8 forks) | .NET | OneRoster 1.1 and 1.2 client. OAuth2 for 1.2, consumer credentials for 1.1. **Rostering calls only — gradebook is not implemented**, which is a scope limit to check against the rubric before you promise it. |
+
+**Three warnings on this shelf.**
+
+1. **Pin the right OneRoster.NET.** [jdolny/OneRoster.NET](https://github.com/jdolny/OneRoster.NET)
+   is **also MIT** (`master/LICENSE`) and serves a byte-identical `README.md`
+   (md5 `110b2e3439d86b6055821de382d90d61`, 2,048 bytes) and byte-identical
+   licence text. **Both licences name `theopenem` as holder.** One asset, two
+   addresses; the fork direction is **not established** in this environment
+   (`github.com` → 403 to `curl`, no fork banner in the rendered page). Pin
+   `theopenem`, whose owner matches the copyright line.
+2. **"Caliper" is a homonym and it will waste a sweep.** `OneRoster OR Caliper OR
+   "LTI 1.3" license:apache-2.0` returns **184 repositories**, led by
+   `google/caliper` (818★, deprecated Java micro-benchmarking) and
+   `hyperledger-caliper/caliper` (708★, blockchain benchmarking). Four of the top
+   eight have nothing to do with 1EdTech Caliper Analytics. **The result count is
+   not the ecosystem size.**
+3. **There is no Python LTI 1.3 library on this shelf.** Node, PHP, Java and .NET
+   are covered. Python — where almost all of the AI tutoring code in this KB is
+   written — is not. In practice this means the tutoring service talks to a
+   thin LTI adapter in another runtime, or the integration becomes a custom
+   build. It is also the clearest open-source contribution opening this KB has
+   found in the interoperability layer.
+
+### The Learning Equality substrate — the sync engine, not just the app
+
+This KB has recommended offline-first delivery for three passes while recording
+the *application* (Kolibri) and not the machinery under it. The organisation holds
+**238 repositories**. Probed this pass:
+
+| Repo | License (read from payload) | ★ (2026-10-06) | What it is |
+|---|---|---|---|
+| [learningequality/morango](https://github.com/learningequality/morango) | **MIT** (`master/LICENSE`) | 15 (23 forks) | **Pure-Python peer-to-peer database replication engine for Django.** Marks chosen application models syncable; **certificate-based authentication** protecting data privacy and integrity; change-tracking and data-partitioning constructs designed for low-bandwidth links; works on **SQLite and PostgreSQL**. Branch `release-v0.9.x`. Built for Kolibri, **usable independently** — this is the component that makes an offline-first architecture real rather than aspirational. |
+| [learningequality/le-utils](https://github.com/learningequality/le-utils) | **MIT** (`main/LICENSE.txt`) | not read this pass | Constants and utilities shared across Kolibri, Ricecooker and Studio. The shared vocabulary layer; required by anything that generates Kolibri channels. |
+
+**And the two that came back ungranted, inside that same organisation:**
+
+| Repo | License probe result | Consequence |
+|---|---|---|
+| [learningequality/kolibri-design-system](https://github.com/learningequality/kolibri-design-system) | **no payload** (20 URLs) | Vue design system. Repository exists (`main/README.md` resolves). **Do not ship client UI from it** on the assumption that the org is MIT. |
+| [learningequality/kolibri-server](https://github.com/learningequality/kolibri-server) | **no payload** (20 URLs) | Performance and caching access layer for Kolibri with multi-core support. **The repository exists** — its README is `main/README.rst`, not `README.md`. **No licence payload under any of 20 URLs.** Treat as unlicensed until a payload is read. |
+
+**Two of four new probes in the MIT-friendliest organisation on these shelves came
+back ungranted.** An organisation's licence posture is not inherited by its
+repositories. "They're the Kolibri people" is not a licence.
+
+**A scope concern raised and refuted.** `learningequality/studio`
+([repo](https://github.com/learningequality/studio), already on these shelves)
+declares `Copyright (c) 2021 Foundation for Learning Equality (internal apps)`.
+A parenthetical qualifier inside a copyright line is exactly the shape this KB
+treats as a possible narrowed grant. **Full text read this pass: the permission
+body is standard, unmodified MIT with no field-of-use restriction.** The
+parenthetical annotates the holder, not the grant. **Full MIT** — recorded so the
+next pass does not re-litigate it.
+
+### Why these two shelves belong on the same page
+
+Morango answers *how the data gets there* when connectivity is intermittent. The
+LTI/OneRoster tier answers *how it gets into the systems the client already runs*,
+against a rubric that scores exactly that. Together they are the two ends of a
+delivery that an RFP can actually score — and both ends are permissive, which is
+the whole reason this file exists.

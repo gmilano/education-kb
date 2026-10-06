@@ -1066,3 +1066,117 @@ them and all seven survived. And **earlier passes' "ungranted" conclusions were
 produced by a query that could not have found a British-spelled grant** — they
 are suspect until re-probed, which matters most for the MEA, Commonwealth and
 ministry-adjacent repositories where that spelling is the norm.
+
+## Gap updates from the tenth pass of 2026-10-06
+
+This pass did not sweep outward for new agents. It **re-probed the 41
+repositories this KB has recorded as ungranted**, because the ninth pass ended
+by declaring its own back catalogue suspect:
+
+> *"Earlier passes' 'ungranted' conclusions were produced by a query that could
+> not have found a British-spelled grant — they are suspect until re-probed."*
+
+They have now been re-probed. **41 repositories × 10 filenames × 2 branches**
+(`LICENCE`/`LICENSE`/`licence`/`license`/`COPYING`, with `.md` and `.txt`
+variants, on `main` and `master`), all via `raw.githubusercontent.com`, and the
+probe was validated on **6 known-payload controls first — 6 of 6 resolved**,
+including two British-spelling controls and three repositories whose licence sits
+on `master`.
+
+### The result: 1 flip in 41, and the spelling was not the cause
+
+| Re-probe outcome | Count |
+|---|---|
+| Repositories re-probed | **41** |
+| Flipped to granted | **1** |
+| Confirmed ungranted under all 20 URLs | **40** |
+| Flips attributable to the British `LICENCE` spelling | **0** |
+
+**The ninth pass's correction generalised to nothing.** `LICENCE` is a house
+style at one UK government organisation, not a defect in this KB's reach. It
+stays in the probe set — it costs one URL per repository and two controls prove it
+works — but it is a **special case, and this KB recorded it as a general
+discovery.** That is corrected here.
+
+**The defect that was general is the branch name.** The single flip resolved on
+`master/LICENSE`: American spelling, non-default branch. Three of six controls sit
+on `master` too. No pass before this one varied the branch. **Eighth failure
+mode: wrong branch.**
+
+### The correction to the catalogue
+
+| Repo | Was | Is | Read from |
+|---|---|---|---|
+| [jdolny/OneRoster.NET](https://github.com/jdolny/OneRoster.NET) | recorded ungranted | **MIT** | `master/LICENSE` |
+
+Caveat that travels with it: the MIT text names **`theopenem`** as copyright
+holder, and [theopenem/OneRoster.NET](https://github.com/theopenem/OneRoster.NET)
+serves a byte-identical `README.md` (md5 `110b2e3439d86b6055821de382d90d61`) and
+byte-identical licence. **One asset, two addresses** — pin the `theopenem` copy,
+whose owner matches its copyright line. The fork direction is **not established**:
+`github.com` returns 403 to `curl` here and the fork banner is absent from the
+rendered page this environment receives.
+
+### The row this pass adds — one, and why only one
+
+| Agent | Repo | License (read from payload) | ★ (2026-10-06) | What it does |
+|---|---|---|---|---|
+| prosody | [qazasd2518995/prosody](https://github.com/qazasd2518995/prosody) | **MIT** (`main/LICENSE`, **full text read**) | 0 | Oral reading assessment from speech. Aligns recorded audio to reference text at word level; reports accuracy and word error rate, speaking rate in WPM, misread/omitted/inserted words, and a fluency score from pause pattern and pace. Whisper for ASR (`PROSODY_ASR_MODEL`), Levenshtein alignment, Groq API for transcription. Python, **1 commit**, 0 forks, not a fork. Targets language learning and speech-language pathology. |
+
+**One row, and the reason is the finding.** `oral reading fluency assessment
+speech` returns **two repositories on all of GitHub**. The other,
+[mendezjerick/ReaDirect-V2](https://github.com/mendezjerick/ReaDirect-V2)
+(TypeScript, 0★), has **no payload under any of the 20 URLs** — the repository
+exists, the grant does not. That is the entire denominator, and padding it would
+destroy the only useful thing about it.
+
+### The method finding: GitHub's licence field manufactures absences
+
+`prosody` is listed in GitHub's repository search as **"License: Not
+specified."** Its payload is a **complete, unmodified MIT licence**, read in full
+this pass, body unqualified, `Copyright (c) 2026 Justin`.
+
+This is the **ninth failure mode**, and it is the most consequential one yet
+because it attacks the instrument this KB uses to *declare gaps*. A
+licence-filtered search cannot return a repository GitHub believes is unlicensed.
+Three such searches were run this very pass and all three returned zero. Those
+zeros remain the best available measurement, but their meaning has changed:
+they are **absence as GitHub's licence index sees it**, not absence.
+
+Every gap in this file that rests on a `license:` filter inherits that caveat.
+
+### What this does to the oral reading fluency gap (sixth pass)
+
+Restated, because the old wording was wrong in the expensive direction:
+
+- **Old:** *"an oral reading fluency agent does not exist."* Refutable by one
+  repository, and now refuted by one.
+- **New:** **two repositories exist in the whole of GitHub; one is MIT with a
+  single commit; neither has a single star.** The *capability* gap is real and
+  the shelf is empty for practical purposes — but it is empty in a way a client
+  engagement can price, and `prosody` is a starting point rather than nothing.
+
+And the funded answer now has a name. **Harvard University (Ying Xu)** is a
+Cohort 2 grantee of the $26M K-12 AI Infrastructure Program for **"OpenLiteracy:
+An Open-Source AI Infrastructure Suite for Advancing Speech Foundation Models for
+Early Word Reading Assessment and Instruction"** (Tier 2, search-summary
+corroborated). It lands on this gap exactly. **GitHub returns 0 repositories for
+`OpenLiteracy`** (Tier 1, measured this pass) — funded, named, not shipped.
+
+### The method note for this pass
+
+Nine passes looked outward; this one audited the KB against itself, and the audit
+cost it two of its own conclusions — the generality of the spelling fix, and the
+wording of the oral-reading gap. Both corrections came from re-running rejections
+rather than from new search, which is a cheaper channel than any this KB has used
+and the only one that can find a **false negative**.
+
+The limit is worth stating: **no primary document was read this pass either.**
+Nine further hosts were attempted and all nine returned `EGRESS_BLOCKED`
+(`digitalpromise.org`, `www.coe.int`, `rm.coe.int`, `www.prnewswire.com`,
+`www.gse.upenn.edu`, `www.eunews.it`, `www.sec.gov`, `ess.iesalc.unesco.org`,
+`openai.com`) — including three **syndicated mirrors** tried specifically to route
+around a blocked primary host. With the ninth pass's fourteen, that is **23
+distinct hosts, zero reachable.** `github.com` and `raw.githubusercontent.com` are
+the only origins this environment serves, which is why this pass spent its budget
+on payload work.

@@ -8,6 +8,343 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — tenth pass: the correction the ninth pass promised, run backwards over 41 repositories — and GitHub's own licence field caught lying
+
+Channel new to this KB this pass: **retroactive re-probing of its own rejections.**
+Every previous pass swept *outward* for assets it had not seen. This one swept
+*backwards* over the 41 repositories this KB has recorded as ungranted across ten
+passes, because the ninth pass ended on this admission:
+
+> *"The KB's probe set is corrected to include British spellings **from this pass
+> forward**."*
+
+"From this pass forward" leaves every earlier rejection standing on a query that
+could not have found a `LICENCE` file. If the spelling defect produced four false
+negatives in one UK ministry organisation, the KB's own reject pile was the place
+most likely to be hiding more. **It was swept this pass. The result is not the one
+the ninth pass implied.**
+
+### Method, stated before the findings
+
+41 repositories, every one previously recorded in this KB as having no licence
+payload, re-probed against **10 filenames × 2 branches = 20 URLs each** —
+`LICENCE`, `LICENCE.md`, `LICENCE.txt`, `licence`, `LICENSE`, `LICENSE.md`,
+`LICENSE.txt`, `license`, `COPYING`, `COPYING.txt`, each on `main` and on
+`master`. All via `raw.githubusercontent.com`. **Tier 1 throughout.**
+
+**The probe was controlled before it was trusted.** Six repositories with known
+payloads were run through the identical script first:
+
+| Control | Resolved at | Proves |
+|---|---|---|
+| `learningequality/kolibri` | `master/LICENSE` | American spelling, `master` branch |
+| `DFE-Digital/apply-for-teacher-training` | `main/LICENCE` | **British spelling, `main` branch** |
+| `DFE-Digital/get-into-teaching-app` | `master/LICENCE` | **British spelling, `master` branch** |
+| `HKUDS/DeepTutor` | `main/LICENSE` | Apache-2.0 body, `main` |
+| `CAHLR/OATutor` | `main/LICENSE` | MIT body, `main` |
+| `theopenem/OneRoster.NET` | `master/LICENSE` | `master`-only repo |
+
+**6 of 6 resolved.** The negatives below are therefore measurements, not probe
+failures — which is the only basis on which a zero is worth writing down.
+
+### Finding 1 — 41 re-probed, 1 flipped, and the spelling was not the reason
+
+**One repository of 41 changed status.** `jdolny/OneRoster.NET` is **MIT**, read
+from `master/LICENSE`.
+
+And the correction the ninth pass was so confident about **is not what found it.**
+It resolved under the *American* spelling. What this KB had wrong was the
+**branch** — the repository has no `main`, only `master`.
+
+| Re-probe outcome | Count |
+|---|---|
+| Repositories re-probed | **41** |
+| Flipped to granted | **1** (`jdolny/OneRoster.NET`, MIT) |
+| Confirmed ungranted under all 20 URLs | **40** |
+| Flips attributable to the British spelling | **0** |
+
+So the ninth pass's headline method fix — the one it called the KB's seventh
+failure mode — **generalised to nothing.** Four false negatives in `DFE-Digital`
+were four false negatives in `DFE-Digital`: a house style at one UK government
+organisation, not a defect in the KB's reach. The spelling probe stays in the set
+because it costs one URL per repository and it demonstrably works (two controls
+above), but **it is a UK-government special case, not a general correction.**
+
+The defect that *was* general is the one nobody announced: **the KB had been
+probing one branch name.** Three of the six controls and the single flip all sit
+on `master`. That is the **eighth failure mode** in this KB's running list, and
+it is the first one to be found by auditing the KB's own rejections rather than
+by a new search.
+
+### Finding 2 — GitHub's licence field is a false negative, and it was hiding an MIT asset in this KB's oldest unclosed gap
+
+The sharper finding of the pass, and it came from distrusting a listing.
+
+[qazasd2518995/prosody](https://github.com/qazasd2518995/prosody) appears in
+GitHub's repository search for oral reading assessment with **"License: Not
+specified."** Its payload at `main/LICENSE` is a **complete, unmodified MIT
+licence** — read in full this pass, body unqualified, `Copyright (c) 2026 Justin`.
+
+**GitHub's own rendered licence field said unlicensed about a repository that
+carries an MIT grant.** Every pass of this KB has treated the *payload* as ground
+truth and the listing as a convenience. This is the first measured case of the
+listing being not merely absent but **wrong in the direction that destroys
+findings** — it manufactures absences. That is the **ninth failure mode**, and
+unlike the spelling it is not vendor-specific trivia: it applies to every
+licence-filtered GitHub search this KB has ever run, including the zero-result
+measurements it has used to declare gaps.
+
+**A licence-filtered search cannot find a repository GitHub believes is
+unlicensed.** The KB's gap declarations rest on exactly those searches.
+
+### Finding 3 — the oral reading fluency gap: real as a capability, false as an absence
+
+The sixth pass recorded *"an oral reading fluency agent does not exist."* Measured
+properly this pass, with the whole GitHub repository search as the denominator:
+
+| Probe | Result (6 Oct 2026) |
+|---|---|
+| `oral reading fluency assessment speech` | **2 repositories, total** |
+| of those, carrying a licence payload | **1** (`prosody`, MIT) |
+| of those, with any stars | **0** |
+
+| Repo | Licence (read from payload) | ★ | What it is |
+|---|---|---|---|
+| [qazasd2518995/prosody](https://github.com/qazasd2518995/prosody) | **MIT** (`main/LICENSE`, read in full) | 0 | Oral reading assessment from speech: word-level alignment of audio against reference text, word accuracy and WER, speaking rate in WPM, misread/omitted/inserted word detection, fluency scored on pause pattern and pace. Whisper for ASR (`PROSODY_ASR_MODEL`), Levenshtein alignment, Groq API for transcription. Python, **1 commit**, 0 forks, not a fork. |
+| [mendezjerick/ReaDirect-V2](https://github.com/mendezjerick/ReaDirect-V2) | **no payload** under any of 20 URLs | 0 | Oral reading and comprehension support using speech recognition, adaptive assessment and guided reading. TypeScript. Repository exists (`main/README.md` resolves); the grant does not. |
+
+The honest reading: **the capability gap is real** — a 1-commit, 0★ script is not
+a product, and the second repository cannot be used at all. But the KB's wording
+was wrong, and wrong in the expensive direction. "Does not exist" is refutable by
+one repository; **"two repositories exist, one is MIT, neither has a single
+star"** is a finding a client engagement can actually price. The gap is restated
+in those terms.
+
+### Finding 4 — the funded answer to that same gap now has a name, and zero repositories
+
+The ninth pass left the eight Cohort 2 grantees of the **$26M K-12 AI
+Infrastructure Program** unnamed and called the lookup "the single highest-value
+in this KB right now." Two more are now named (**Tier 2**, search-summary
+corroborated):
+
+| Grantee | Lead | Project | Lands on |
+|---|---|---|---|
+| **Harvard University** | Ying Xu | **OpenLiteracy: An Open-Source AI Infrastructure Suite for Advancing Speech Foundation Models for Early Word Reading Assessment and Instruction** | **This KB's sixth-pass oral reading fluency gap, exactly** |
+| **University of Maryland, College Park** | Jing Liu | *Enhancing Two Multimodal Classroom Datasets to Advance R&D on Formative Assessment* | The fourth-pass evaluator gap |
+
+**OpenLiteracy is the single most on-target funded project this KB has
+encountered.** A named PI at a named institution is funded, under an
+Apache-2.0-or-better floor, to build the open speech infrastructure for early
+reading assessment that this KB measured above as two unstarred repositories.
+
+And the counterweight, measured Tier 1 the same day:
+
+| Probe | Result (6 Oct 2026) |
+|---|---|
+| `OpenLiteracy` (GitHub repository search) | **0 results** |
+| `tutoring quality evaluation benchmark license:apache-2.0` | **0 results** (re-measured, unchanged from ninth pass) |
+| `formative assessment dataset classroom` | **0 results** |
+
+**Three measured zeros against three funded, named, dated projects.** The
+engagement line the ninth pass derived holds and now has a second instance:
+build the harness, swap the artefacts in as they land.
+
+### Finding 5 — the grantee this KB already had on its shelves has 238 repositories, and the KB had recorded one
+
+**Learning Equality** — Cohort 1 grantee, maintainer of Kolibri — operates
+**238 repositories**. This KB had Kolibri, `studio` and `ricecooker`. Probed this
+pass:
+
+| Repo | Licence (read from payload) | ★ | Why it matters |
+|---|---|---|---|
+| [learningequality/morango](https://github.com/learningequality/morango) | **MIT** (`master/LICENSE`) | 15 (23 forks) | **Pure-Python peer-to-peer database replication engine for Django.** Makes chosen models syncable; certificate-based authentication protecting data privacy and integrity; change-tracking and data-partitioning built for low-bandwidth links; SQLite **and** PostgreSQL. `release-v0.9.x`. **This is the actual sync substrate under Kolibri's offline story** — the KB has recommended offline-first delivery for three passes while recording only the application above it. |
+| [learningequality/le-utils](https://github.com/learningequality/le-utils) | **MIT** (`main/LICENSE.txt`) | not read this pass | Shared constants and utilities across Kolibri, Ricecooker and Studio. The vocabulary layer; needed by anything that generates Kolibri channels. |
+| [learningequality/kolibri-design-system](https://github.com/learningequality/kolibri-design-system) | **no payload** (20 URLs) | not read this pass | Vue design system. Repository exists; grant does not. **Do not ship client UI from it on a licence assumption.** |
+| [learningequality/kolibri-server](https://github.com/learningequality/kolibri-server) | **no payload** (20 URLs) | not read this pass | Performance/caching access layer for Kolibri. **The repository exists** (`main/README.rst` — note the extension; `README.md` does not resolve, which is the same wrong-file-type trap the eighth pass found). **The grant does not.** |
+
+This is the **wrong-layer failure mode** (sixth pass) recurring at organisation
+scale: the KB probed the *product* and recorded one row where a 238-repository
+estate was in reach. And it cuts both ways — two of the four probes came back
+**ungranted**, inside the MIT-friendliest organisation on these shelves. **An
+organisation's licence posture is not inherited by its repositories.**
+
+One concern raised and **refuted** rather than carried: `learningequality/studio`
+declares `Copyright (c) 2021 Foundation for Learning Equality (internal apps)`.
+A parenthetical scope qualifier inside a copyright line is exactly the shape this
+KB treats as a narrowed grant. The full text was read this pass: **the permission
+body is standard, unmodified MIT with no field-of-use restriction.** The
+parenthetical annotates the holder, not the grant. Full MIT.
+
+### Finding 6 — the standards channel returns a homonym, and the real shelf is small, permissive and split by runtime
+
+Pass 9 found the procurement-side number: **39% of districts score
+interoperability in RFP rubrics.** This pass went after the shelf that answers
+it. The channel has a trap:
+
+`OneRoster OR Caliper OR "LTI 1.3" license:apache-2.0` returns **184
+repositories** — led by `google/caliper` (818★, *deprecated Java
+micro-benchmarking*) and `hyperledger-caliper/caliper` (708★, *blockchain
+benchmark framework*). **Neither has anything to do with 1EdTech Caliper
+Analytics.** Four of the top eight results are blockchain or JVM benchmarking
+projects sharing a word with an education standard.
+
+That is the **tenth failure mode: the homonym.** A 184-result count reads as a
+healthy ecosystem and is mostly a different ecosystem. The real education shelf,
+payload-verified this pass:
+
+| Repo | Licence (read from payload) | ★ | Runtime | What it is |
+|---|---|---|---|---|
+| [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | Apache-2.0 (`master/LICENSE`) | 373 | Node / TypeScript | Turns an application into a fully integratable **LTI 1.3 tool provider**. The highest-starred real LTI project. |
+| [1EdTech/lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library) | Apache-2.0 (`master/LICENSE`) | 124 | PHP | LTI 1.3 library **published by the standards body itself** — the reference, and the natural pairing with Moodle. |
+| [Unicon/tool13demo](https://github.com/Unicon/tool13demo) | Apache-2.0 (`master/LICENSE`) | 27 | Java / Spring Boot | LTI 1.3 tool in Spring Boot. **New to this KB.** |
+| [oxctl/spring-security-lti13](https://github.com/oxctl/spring-security-lti13) | Apache-2.0 (`master/LICENSE.txt`) | 25 | Java / Spring Security | LTI 1.3 for Spring Security, built on its OAuth2 support. **New to this KB.** |
+| [theopenem/OneRoster.NET](https://github.com/theopenem/OneRoster.NET) | **MIT** (`master/LICENSE`) | 6 (8 forks) | .NET | OneRoster 1.1 and 1.2 client, rostering calls only — gradebook not implemented. OAuth2 for 1.2, consumer credentials for 1.1. |
+| [jdolny/OneRoster.NET](https://github.com/jdolny/OneRoster.NET) | **MIT** (`master/LICENSE`) | 6 (8 forks) | .NET | **The flip from Finding 1.** Identical codebase to the row above. |
+
+**On the two OneRoster.NET entries — resolved as far as this environment
+allows.** Both serve byte-identical `README.md` (md5 `110b2e34…`, 2,048 bytes) and
+byte-identical MIT text, and **both licences name `theopenem` as copyright
+holder.** One is a fork, mirror or rename of the other. GitHub's fork banner is
+not in the rendered page this environment receives and `github.com` returns
+**403** to `curl`, so the direction is **not established.** The holder names
+`theopenem`, so **pin `theopenem/OneRoster.NET`** — the repository whose owner
+matches its own copyright line — and treat `jdolny/OneRoster.NET` as the same
+asset, not a second option. Recorded as one asset with two addresses, which is
+what the evidence supports.
+
+**Why this shelf matters more than its star counts suggest.** If 39% of district
+RFP rubrics *score* interoperability, the integration tier is not plumbing — it
+is a **scored deliverable**, and the whole permissive shelf for it is these six
+repositories across four runtimes. There is no Python LTI 1.3 library in this
+set, which is where most AI tutoring work is written. That is a real, specific
+gap, stated at the end of this section rather than buried.
+
+### Finding 7 — EMEA is building the evaluation *framework* the US is funding the *benchmark* for
+
+The generalist EMEA query failed again (see declared gaps). The channel change
+worked, and the channel is the **Council of Europe education directorate** — a
+treaty body, not a search term.
+
+**Tier 2, corroborated across two independent summaries:** the Council of Europe
+has established a **Committee of Experts on AI and Education (EDU IA)** and
+introduced the **Council of Europe Compass for AI and Education**. Its
+**2026–2027 work programme** names four deliverables:
+
+1. a **proposal for a legal instrument to regulate the use of AI systems in education**
+2. a **European Reference Framework for the Evaluation of Educational Technologies**
+3. a **Policy Toolbox** on teaching and learning about AI
+4. **draft guidelines on the use of education data and analytics** in education systems
+
+The Committee of Ministers adopted a text in **Munich** placing education at the
+centre of Europe's AI response, implementing **Article 20 of the Framework
+Convention on Artificial Intelligence, Human Rights, Democracy and the Rule of
+Law.** A third working conference, *"Ensuring quality education in the AI era,"*
+introduced the Compass.
+
+**Why this is a finding and not a news item.** Deliverable 2 is a **framework for
+evaluating educational technology** — the European instrument addressing the same
+void that the US is spending $26M of philanthropic money to fill with
+Apache-2.0 benchmarks. **Two regions, one gap, two instruments: North America is
+buying the artefact, EMEA is writing the rule.** An engagement that builds the
+evaluation harness now (P23) is building against both, and the EMEA side arrives
+as a *conformance* requirement rather than a dataset — which is the harder one to
+retrofit. This also gives the EU AI Act profile work (P13) a named successor
+instrument to track.
+
+### Finding 8 — the ministry channel is proprietary, and it is in every region at once
+
+**Tier 2.** OpenAI's **Education for Countries**, launched at Davos in 2026,
+works directly with **ministries of education**, public universities and research
+partners. Named participants:
+
+| Region (closed vocabulary) | Named participants |
+|---|---|
+| **EMEA** | Estonia, Greece, Italy (**CRUI**, the rectors' conference), Slovakia, UAE, Jordan |
+| **APAC** | Kazakhstan, **Singapore** (Ministry of Education + **GovTech**, added 20 May 2026 at the Education World Forum, London) |
+| **LATAM** | **Trinidad & Tobago** |
+| **North America** | **none named.** The programme is US-headquartered and contracts with *other* countries' ministries; **no US state or federal education agency is named as a participant.** North America's national-tier analogue is the $26M philanthropic programme with an Apache-2.0 floor (trend 25), which is the opposite acquisition model: it buys open artefacts rather than onboarding ministries. |
+
+Singapore's MOE is described as *exploring various AI tools from different
+partners*, with OpenAI supporting MOE and GovTech use cases including mother
+tongue language learning.
+
+**This is the competitive frame for every engagement in this KB.** Nine ministries
+across three regions are being onboarded to a **single proprietary vendor** at the
+national tier, while this KB's permissive shelf for the same buyers is what the
+tables above describe. Two consequences worth stating plainly:
+
+- **"Exploring various AI tools from different partners"** is Singapore's own
+  framing, and it is the opening: a multi-partner posture at the ministry level
+  is where an open, auditable, data-resident alternative gets evaluated rather
+  than displaced.
+- **Trinidad & Tobago is a LATAM/Caribbean ministry already in a national AI
+  education programme** — against a region this KB has measured at **9% formal
+  evaluation mechanisms**. The governance deficit and the vendor arrival are
+  landing in the same place at the same time.
+
+### Declared gaps — searched this pass, and what came back
+
+- **The vendor-filings channel is now blocked, not merely untouched.** The ninth
+  pass named it as the one unswept sub-channel of three. It was attempted this
+  pass and **`www.sec.gov` is EGRESS_BLOCKED**. McGraw Hill's FY2026 10-K
+  (open-source use and copyleft-compliance risk language) and Workday's FY2026
+  10-K (acquiring and investing in open-source AI platforms, heightened copyleft
+  risk from mixing proprietary agents with open-source components) are available
+  **at Tier 2 only**. No filing was read. The channel is **not exhausted — it is
+  unreachable from this environment**, which is a different instruction to the
+  next pass: it needs a different host, not a better query.
+- **No primary document was read this pass either, and the blocking is now
+  systematic.** Nine further hosts were attempted and **all nine returned
+  EGRESS_BLOCKED**: `digitalpromise.org`, `www.coe.int`, `rm.coe.int`,
+  `www.prnewswire.com`, `www.gse.upenn.edu`, `www.eunews.it`, `www.sec.gov`,
+  `ess.iesalc.unesco.org`, `openai.com`. Added to the ninth pass's fourteen,
+  that is **23 distinct hosts attempted across two passes with zero
+  reachable.** Syndicated mirrors were tried specifically to route around the
+  primary host — PRNewswire for the grantee release, a university newsroom for
+  the programme, a news site for the Munich adoption — and **all three mirrors
+  were blocked too.** The conclusion is structural: **`github.com` and
+  `raw.githubusercontent.com` are the only reachable origins.** The next pass
+  should stop spending budget on primary-document attempts and spend it on Tier 1
+  repository work, which is the one thing this environment does well.
+- **Six of the eight Cohort 2 grantees remain unnamed.** Two were recovered this
+  pass (Harvard, UMD), one by the ninth (MMSA & TERC). Five unnamed.
+- **No Python LTI 1.3 library exists on the permissive shelf.** Finding 6's
+  verified set covers Node, PHP, Java and .NET. Most AI tutoring code is Python.
+  Searched, not found, recorded as a gap — and as a candidate contribution.
+- **The MIT education-agent channel is saturated with non-assets.** `education AI
+  agent license:mit pushed:>2026-09-20` returns **158 repositories**; the top of
+  that list by stars is `shauryagangrade/awesome-ai-prompts` (69★, prompt list),
+  `cuic19053-hue/awesome-student-ai-skills` (55★), and
+  `StudentSuite/awesome-skills-plugins-for-students` (22★). **Curated lists and
+  student coursework, no production asset.** Measured and reported as a dead
+  channel rather than converted into table rows — this KB's rule is that fewer
+  real rows beat padding.
+- **The generalist EMEA and APAC education queries failed for the third
+  consecutive pass**, returning enterprise AI-governance and vendor-training
+  material. This is now three passes of identical evidence: the generalist
+  regional query is **retired** for EMEA and APAC. What worked both times was a
+  named institution — the UK DfE engineering organisation (ninth), the Council of
+  Europe education directorate and a ministry programme (this pass).
+
+### What this pass says about method
+
+Nine passes looked outward. This one **audited the KB against itself**, and the
+audit cost the KB two of its own conclusions.
+
+The ninth pass's proudest correction — the British spelling — **flipped nothing**
+in 41 retroactive probes. It was a house style at one UK organisation presented
+as a general defect in the KB's reach. Meanwhile the defect that *was* general,
+the single-branch assumption, went unnoticed in the same pass that found the
+spelling, and surfaced only when the rejections were re-run.
+
+And Finding 2 is the one to carry forward, because it undermines the instrument
+this KB uses to declare gaps: **GitHub's licence field reported "not specified"
+for a repository carrying a full MIT grant.** Every zero-result,
+licence-filtered search in this KB — including three in this very pass — inherits
+that error. The zeros are still the best available measurement. They are no
+longer evidence of absence; they are evidence of **absence as GitHub's licence
+index sees it**, and those are not the same claim.
+
 ## 2026-10-06 — ninth pass: the money arrived before the code, and it arrived with a licence floor
 
 Channel new to this KB this pass: **the funder and procurement channel** —

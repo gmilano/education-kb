@@ -881,6 +881,152 @@ are buying tutoring at scale, on rubrics, with outcome clauses.
 **EGRESS_BLOCKED** here; **no rubric or RFP document was read.** Confirm each
 statutory citation before client use.
 
+## 27. The evaluation void is being closed by two instruments in two regions — a cheque and a rule
+
+For five passes this KB recorded one absence: **no shippable permissive evaluator
+of tutoring quality.** The ninth pass found North America buying it. This pass
+found EMEA regulating it. **The same void, addressed by two different kinds of
+instrument, on overlapping timelines.**
+
+| Region | Instrument | Mechanism | Status |
+|---|---|---|---|
+| **North America** | **$26M K-12 AI Infrastructure Program** (Digital Promise + Gates Foundation) | **Funding**, with a mandatory licence floor at least as permissive as CC-BY-4.0 (content) / Apache-2.0 (code and models) | 12 projects funded; named grantees include Harvard's **OpenLiteracy**, Maryland's classroom datasets, Stanford's **KB-TutorBench**, Cornell's ASR leaderboards. **0 repositories shipped.** |
+| **EMEA** | **Council of Europe Compass for AI and Education** + **Committee of Experts (EDU IA)** | **Rule-making** — a **European Reference Framework for the Evaluation of Educational Technologies**, plus a proposed **legal instrument to regulate AI systems in education** | 2026–27 work programme; Committee of Ministers text adopted in **Munich** under **Article 20** of the Framework Convention on AI |
+| **APAC** | **none found** | — | Searched this pass and the ninth. No regional instrument and no regional funder addressing evaluation of educational AI. The region's most on-target asset, `AI-EDU-LAB/E-EVAL` (Chinese K12 LLM education evaluation benchmark, 33★), exists and is **ungranted** — re-probed across 20 URLs this pass, still no licence payload. **APAC built the benchmark and did not license it.** |
+| **LATAM** | **none found** | — | Searched this pass and the ninth. No regional instrument, no regional funder. What exists is the measured demand: **9.0% of 200 higher education institutions across 19 countries have formal evaluation mechanisms** (UNESCO IESALC / UNU-IAS). **The need is quantified and the instrument is absent**, which makes this the region where an evaluation harness is sold as capability rather than as compliance. |
+
+Both facts are **Tier 2** (search-summary corroborated; no primary document is
+reachable from this environment).
+
+**Why the pairing matters more than either half.** A benchmark you can adopt late;
+a conformance framework you cannot. Evaluation evidence — interaction audit trails,
+output provenance, measured accuracy and bias — has to be **generated while the
+system runs**, which means a deployment that did not instrument for it has nothing
+to submit when the framework lands. The North American artefacts are a *swap-in*;
+the European framework is a *precondition*.
+
+**What to do with it.** Build the harness now and leave the benchmark slot empty
+(**P23**). It is the same harness in both regions: the US side fills it with
+Apache-2.0 benchmarks as the twelve projects deliver through 2027; the EMEA side
+turns its output into a conformance file. This also gives the EU AI Act work
+(**P13**) a named successor instrument to track rather than horizontal regulation
+alone.
+
+**The honest counterweight:** `tutoring quality evaluation benchmark
+license:apache-2.0` still returns **0 repositories**, measured 6 Oct 2026. Neither
+instrument has produced a usable artefact yet. The trend is real; the shelf is
+still empty.
+
+## 28. Interoperability became a scored line item — and the permissive shelf has a Python-shaped hole
+
+The ninth pass found the demand signal: **39% of districts score interoperability
+in their RFP rubrics** (CoSN, Tier 2). That is not a technical preference, it is
+**points in a bid**. This pass measured the supply side, payload-verified:
+
+| Standard | Permissive implementations found |
+|---|---|
+| **LTI 1.3** | **4** — `Cvmcosta/ltijs` (Apache-2.0, 373★, Node), `1EdTech/lti-1-3-php-library` (Apache-2.0, 124★, PHP, **from the standards body**), `Unicon/tool13demo` (Apache-2.0, 27★, Spring Boot), `oxctl/spring-security-lti13` (Apache-2.0, 25★, Spring Security) |
+| **OneRoster 1.1 / 1.2** | **1** — `theopenem/OneRoster.NET` (MIT, 6★, .NET), **rostering only, gradebook not implemented** |
+| **Caliper Analytics** | **0 found on a permissive licence** |
+| **QTI** | not swept |
+
+**The structural finding: there is no Python LTI 1.3 library on the permissive
+shelf.** Node, PHP, Java and .NET are served. Python — where essentially all of
+the AI tutoring and agent code in this KB is written — is not. So the real
+architecture is a Python AI service behind an LTI adapter in a *second* runtime,
+and the adapter is a **budgeted component**, not an afternoon's integration work.
+
+Three consequences for how work is scoped:
+
+1. **The LMS choice now implies the integration runtime.** Moodle → the 1EdTech
+   PHP library; a Spring estate → `oxctl`/`Unicon`; a Node AI service → `ltijs`.
+   Week-one decision, alongside the platform.
+2. **Grade passback and analytics streams are builds, not selections.**
+   OneRoster.NET does rostering only, and Caliper has no permissive
+   implementation here. If the rubric scores either, say "build" in the bid.
+3. **A Python LTI 1.3 library is the clearest open-source contribution opening
+   this KB has identified** — a gap with a procurement-scored buyer already
+   attached to it.
+
+**And a vocabulary warning that is part of the trend.** `OneRoster OR Caliper OR
+"LTI 1.3" license:apache-2.0` returns **184 repositories**, led by
+`google/caliper` (deprecated Java micro-benchmarking, 818★) and
+`hyperledger-caliper/caliper` (blockchain benchmarking, 708★). **Education
+standards share names with unrelated ecosystems**, and the result count reads as
+ecosystem health when it is mostly a different ecosystem.
+
+## 29. Gap claims built on licence-filtered search are claims about an index, not about the world
+
+This is a methodological trend, and it belongs here because this KB — and every
+consultancy doing the same work — **prices engagements on declared absences.**
+
+Measured this pass: [qazasd2518995/prosody](https://github.com/qazasd2518995/prosody)
+is listed in GitHub's repository search as **"License: Not specified."** Its
+payload at `main/LICENSE` is a **complete, unmodified MIT licence.**
+
+**GitHub's licence field reported unlicensed about a repository carrying an MIT
+grant.** The consequence is mechanical: a `license:mit` or `license:apache-2.0`
+filter **cannot return** a repository the index believes is unlicensed. So every
+zero-result, licence-filtered measurement — the instrument this KB uses to declare
+that something does not exist — has a **false-negative floor it cannot see.**
+
+Three of those zero-result measurements were run in this very pass, and are quoted
+in `intel/market.md` as evidence that funded projects have not shipped. They stay,
+because they remain the best available measurement. **Their meaning changes:**
+they are evidence of **absence as the licence index sees it.**
+
+The same pass produced the other half of the lesson. Re-probing the 41
+repositories this KB had recorded as ungranted — 10 filenames × 2 branches each,
+controls validated 6 of 6 — flipped exactly **one**, and the cause was neither of
+the things the previous pass blamed: not the British spelling `LICENCE` (which
+flipped **zero** of 41), but the **branch name**, which no pass had ever varied.
+
+**The operational rule, for this KB and for client diligence:** a licence claim
+is only as good as the payload read from the repository, under **every** spelling
+and **every** branch; and an *absence* claim must state the instrument that
+produced it. "There is no permissive X" is not a finding. **"A GitHub repository
+search filtered on `license:apache-2.0` returned zero results on this date"** is,
+and it is a materially weaker claim — which is the point.
+
+## 30. The ministry tier is being bought by one proprietary vendor across three regions, ahead of the governance capacity
+
+**Tier 2.** OpenAI's **Education for Countries**, launched at Davos 2026, works
+directly with ministries of education, public universities and research partners.
+Named participants place into three of this KB's four regions:
+
+| Region | Named |
+|---|---|
+| **EMEA** | Estonia, Greece, Italy (**CRUI**, the rectors' conference), Slovakia, UAE, Jordan |
+| **APAC** | Kazakhstan, **Singapore** (Ministry of Education + **GovTech**, added 20 May 2026 at the Education World Forum, London) |
+| **LATAM** | **Trinidad & Tobago** |
+| **North America** | **none named.** The programme is US-headquartered and contracts with *other* countries' ministries; **no US state or federal education agency is named as a participant.** North America's national-tier analogue is the $26M philanthropic programme with an Apache-2.0 floor (trend 25), which is the opposite acquisition model: it buys open artefacts rather than onboarding ministries. |
+
+**Nine national or sector-wide bodies, one vendor, the ministry tier.** This is the
+competitive context for every engagement in this KB, and it changes the pitch in
+two specific ways.
+
+**First, the sequencing is the risk.** LATAM is measured at **9% of institutions
+with formal evaluation mechanisms** and **8% with a dedicated AI budget** (UNESCO
+IESALC, 200 institutions, 19 countries). Trinidad & Tobago is acquiring a national
+AI education programme into that. **The vendor is arriving before the capacity to
+evaluate the vendor** — which is simultaneously the strongest argument for buying
+governance work now and the mechanism by which a closed stack becomes permanent.
+
+**Second, the opening is in the buyers' own language.** Singapore's MOE is
+described as *"exploring various AI tools from different partners."* A ministry
+that states a multi-partner posture while onboarding one vendor will evaluate
+alternatives — and with **GovTech** in the room, the counterparty is an engineering
+organisation capable of assessing an open, auditable, data-resident stack on its
+merits. The named Singapore use case is **mother tongue language learning**, which
+is precisely where this KB's permissive language-substrate shelves are strong and a
+single global vendor is weakest.
+
+**And EMEA is the region where this argument is being written into law.** Six EMEA
+bodies are in the programme while the Council of Europe drafts a legal instrument
+on AI systems in education and a framework for evaluating educational technology
+(trend 27). **Sovereignty, auditability and data residency are not positioning in
+this region; they are the subject matter of the instrument being drafted.**
+
 ## Regional notes where the trend diverges
 
 - **North America:** adoption is broad (60% of K-12 teachers) and the binding
@@ -1200,3 +1346,44 @@ Spanish/Portuguese-language search. Four of the gaps below changed state.
   found a British-spelled grant** and are unconfirmed until re-probed. This is
   the seventh instance of the probe-vocabulary failure mode and the first that
   invalidates prior conclusions rather than merely missing new ones.
+
+## Declared gaps — tenth pass, 2026-10-06
+
+- **No permissive Caliper Analytics implementation.** Searched with the licence
+  filter; the result set is dominated by two unrelated projects sharing the name.
+  If an RFP scores learning-analytics event streams, it is a build.
+- **No Python LTI 1.3 library.** Four permissive LTI 1.3 implementations exist
+  across Node, PHP and the JVM; none in the language the AI layer is written in.
+- **No gradebook in the permissive OneRoster shelf.** `theopenem/OneRoster.NET`
+  states it: rostering calls only, grade book not implemented.
+- **`OpenLiteracy` returns 0 GitHub repositories**, as do `tutoring quality
+  evaluation benchmark license:apache-2.0` and `formative assessment dataset
+  classroom`. Three funded, named, dated projects; three measured zeros. **Read
+  these three zeros against trend 29** — they are measurements of GitHub's licence
+  index, not of the world.
+- **Five of the eight Cohort 2 grantees of the $26M programme remain unnamed.**
+  Harvard (Ying Xu), Maryland (Jing Liu) and MMSA & TERC are known.
+- **The oral reading fluency shelf is two repositories**, one MIT with a single
+  commit (`prosody`), one with no licence payload (`ReaDirect-V2`), neither with a
+  star. The sixth pass's *"does not exist"* wording is **retired** in favour of
+  this denominator.
+- **The vendor-filings channel is unreachable, not unswept.** `www.sec.gov` is
+  `EGRESS_BLOCKED`. McGraw Hill's and Workday's FY2026 open-source and
+  copyleft-risk disclosures are Tier 2 only. The next pass needs a different host,
+  not a better query.
+- **No primary document was read, and 23 distinct hosts have now been attempted
+  across two passes with zero reachable** — including three syndicated mirrors
+  tried specifically to bypass a blocked primary host. Every market, funder,
+  regulatory and procurement figure in these files is **Tier 2**.
+- **Two Learning Equality repositories are ungranted** —
+  `kolibri-design-system` and `kolibri-server`, no payload under 20 probed URLs —
+  inside an organisation whose other five probed repositories are MIT. **Licence
+  posture is not inherited; probe each repository.**
+- **The fork direction between `theopenem/OneRoster.NET` and
+  `jdolny/OneRoster.NET` is not established.** Byte-identical README and licence,
+  both naming `theopenem` as holder; `github.com` returns 403 to `curl` here and
+  the rendered page carries no fork banner. Pin the holder-matching copy.
+- **APAC's `E-EVAL` and nine LATAM-placed language/hackathon repositories remain
+  ungranted after a full 20-URL re-probe.** These negatives now hold under a
+  stricter method than the one that produced them, which makes them usable: the
+  blocker is licensing, not capability, and not this KB's reach.

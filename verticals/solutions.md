@@ -621,3 +621,81 @@ because government services are *consumed*, not forked. On this page that is the
 one place where low stars do **not** indicate low maturity — the opposite of the
 reading this KB applies everywhere else, and the opposite of the trap in
 `agents/top.md` where a 72★ repository turned out to be the ungranted one.
+
+## Added in the tenth pass of 2026-10-06 — the integration tier is a scored line item, not plumbing
+
+Every section above this one picks a **platform**. This one is about the layer
+between the platform and whatever Globant builds on top of it, and it is here
+because of a procurement number rather than a technology trend.
+
+**CoSN: 39% of districts score interoperability in their RFP rubrics** (Tier 2,
+corroborated, recorded in the ninth pass). A third of the North American K-12
+buying market **assigns points** to how well a system exchanges roster and
+activity data. That moves the integration layer out of the implementation plan and
+into the bid.
+
+### The standards, and which ones actually have permissive implementations
+
+| Standard | What it carries | Permissive implementation shelf (payload-verified, tenth pass) |
+|---|---|---|
+| **LTI 1.3** (1EdTech) | Launching an external tool from inside an LMS, with identity and context | **Four**, across four runtimes — see below |
+| **OneRoster 1.1 / 1.2** (1EdTech) | Rosters: orgs, schools, students, teachers, terms, enrolments | **One** (.NET), **rostering only** |
+| **Caliper Analytics** (1EdTech) | Learning activity event streams | **None found on a permissive licence this pass** — and the search term is a homonym trap |
+| **QTI** (1EdTech) | Assessment item and test interchange | Not swept this pass |
+
+The runtime split for LTI 1.3 and OneRoster, with licences read from payload:
+
+| Runtime | Repo | License |
+|---|---|---|
+| Node / TypeScript | [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) (373★) | Apache-2.0 |
+| PHP (Moodle-side) | [1EdTech/lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library) (124★) | Apache-2.0 |
+| Java / Spring Boot | [Unicon/tool13demo](https://github.com/Unicon/tool13demo) (27★) | Apache-2.0 |
+| Java / Spring Security | [oxctl/spring-security-lti13](https://github.com/oxctl/spring-security-lti13) (25★) | Apache-2.0 |
+| .NET | [theopenem/OneRoster.NET](https://github.com/theopenem/OneRoster.NET) (6★) | MIT |
+| **Python** | **none found** | — |
+
+### What this adds to platform selection
+
+1. **The LMS choice now implies the integration runtime.** Moodle pulls toward the
+   1EdTech PHP library; a Spring estate pulls toward `oxctl` or `Unicon`; a Node
+   AI service pulls toward `ltijs`. That is a decision to make in week one
+   alongside the platform, not after it.
+2. **Python is where the AI layer lives, and there is no Python LTI 1.3 library
+   here.** So the realistic shape is: tutoring/agent service in Python, LTI
+   adapter in Node, PHP or the JVM, talking to each other over an internal API.
+   **Budget for the adapter as a component**, and say so in the bid rather than
+   discovering it in integration testing.
+3. **OneRoster.NET does rostering only — the gradebook is not implemented.** If
+   the rubric scores grade passback, this shelf does not cover it and the honest
+   answer is a custom build against the spec.
+4. **Caliper has no permissive implementation on this shelf, and the word is a
+   trap.** `OneRoster OR Caliper OR "LTI 1.3" license:apache-2.0` returns **184
+   repositories** dominated by `google/caliper` (deprecated Java
+   micro-benchmarking, 818★) and `hyperledger-caliper/caliper` (blockchain
+   benchmarking, 708★). If an RFP scores learning-analytics event streams, treat
+   it as a build, not a selection.
+5. **Pin `theopenem/OneRoster.NET`, not the identical copy.**
+   [jdolny/OneRoster.NET](https://github.com/jdolny/OneRoster.NET) is also MIT and
+   byte-identical (same `README.md` md5, same licence text, **same `theopenem`
+   copyright holder**). One asset, two addresses.
+
+### The offline-first stack gains its missing layer
+
+The eighth pass made **Kolibri** the platform answer for offline-first delivery.
+What it did not record is the component that makes the synchronisation work:
+[learningequality/morango](https://github.com/learningequality/morango) — **MIT**,
+15★, a pure-Python **peer-to-peer database replication engine for Django** with
+**certificate-based authentication**, change tracking and data partitioning built
+for low-bandwidth links, on SQLite or PostgreSQL.
+
+This matters for platform selection because it is **separable**. A client who
+needs offline-tolerant sync for an existing Django system does not have to adopt
+Kolibri to get it — morango is usable on its own, under MIT. That is a smaller,
+faster engagement than a platform migration, and it is now on the shelf.
+
+**One warning inside the same organisation:**
+[kolibri-design-system](https://github.com/learningequality/kolibri-design-system)
+and [kolibri-server](https://github.com/learningequality/kolibri-server) returned
+**no licence payload** under any of 20 probed URLs. Kolibri itself, `morango`,
+`le-utils`, `studio` and `ricecooker` are MIT, read from payload. **The
+organisation's posture does not license its repositories** — probe each one.
