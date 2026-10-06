@@ -603,6 +603,56 @@ obtainable permissive implementation** — the named `VTutorTools` organisation 
 **Moroccan** (`open-tutor-ai-CE`, BSD-3-Clause). For a North America engagement that wants
 an animated tutor, the component comes from EMEA and the research citations come from home.
 
+
+#### Fourteenth-pass additions, 2026-10-06 — the integration tier is measured, and the K-12 administrative one is empty
+
+**Market figures read this pass.** North America **$951M (2024) → $2,303.2M (2029), CAGR
+15.9%**, and **36%** of the global AI-in-education market — the largest regional share, on
+the slowest regional growth rate in this file. Segment splits, global but
+North-America-weighted: **K-12 45.62%** of adoption, **STEM 34.78%** of revenue, **cloud
+delivery 71.22%** (2024), with language learning the fastest-growing subject.
+
+🔵 **The opportunity this pass measured is a supply vacuum, not a demand claim.** Counting
+open-source integration repositories per platform (GitHub REST `total_count`, one platform
+name per query, licences read from payloads — full table in `verticals/solutions.md`):
+
+| Platform | Open-source integration repos | Best permissive server |
+|---|---|---|
+| Canvas LMS | 117 | MIT, 278★ |
+| Brightspace / D2L (Canadian vendor) | 23 🆕 | MIT, 57★, on npm |
+| **Google Classroom** | **17** | MIT, **6★** |
+| Blackboard Learn | 5 | MIT, 2★ |
+| 🔴 **PowerSchool** (dominant US K-12 SIS) | **0** | **none** |
+
+**K-12 is 45.62% of adoption and its two defining platforms have an integration tier of 17
+repositories and zero repositories.** Higher education — Canvas, Brightspace — is served:
+adopt there, and sell configuration, governance and pedagogy rather than connectors. The
+build is K-12 administration, and the reason it is empty is the reason it is defensible: a
+hobbyist cannot obtain credentials to a district student information system, and an
+enterprise integrator can.
+
+⚠️ **The regulated surface and the empty tier are the same tier.** What a Classroom or
+PowerSchool integration touches is student records, guardians, enrolment and
+**accommodations** — and accommodations is a legal obligation, not a feature. The one asset
+found this pass that even names it is `GarphenGate/moltline-mcp` (MIT, 8 skills across
+curriculum, classroom, accommodations and exam prep). Price the governance artefacts into
+the statement of work from day one (P24, P25).
+
+🔵 **The school-data layer already exists — as hosted endpoints nobody can audit.** The MCP
+Registry census this pass found a dense US cluster with **no source repositories**:
+`ai.edusignal/districts` (K-12 districts, all 50 states), `dev.districtapi/districtapi-mcp`
+(ungranted repo), `co.schoolscope/mcp` and `ai.sacs/sacs-mcp` (California school finance and
+CDE data), `com.olyport/nces-education` and `com.olyport/college-scorecard` (federal NCES and
+College Scorecard). **The open, inside-the-boundary equivalent of that cluster is an
+engagement**, and the public data underneath it is already free.
+
+**Regulatory read, unchanged in direction and worth restating with this pass's framing:**
+there is no FDA-equivalent for educational technology, and adoption is decided school by
+school, district by district, university by university, with minimal external oversight —
+while the EU classifies the same systems as high-risk. That asymmetry is why the
+procurement rubric, not the regulator, remains the specification in this region (trend 26),
+and why an artefact pack that clears the EU clears a US district by construction.
+
 ### EMEA
 
 - **The EU AI Act is the whole conversation.** AI used in education access and
@@ -1137,6 +1187,53 @@ licence-verified, so they are on no shelf.** The forge most likely to hold EU-ho
 EU-licensed public-sector education software is exactly the one this KB cannot see. Treat
 the EMEA supply picture as **GitHub-only and therefore understated**.
 
+
+#### Fourteenth-pass additions, 2026-10-06 — the ministry tier is real, and a treaty body is writing the evaluation framework
+
+🟢 **The most consequential EMEA finding this pass is a shape, not a number: a national
+curriculum published as an open API and wrapped, permissively, as an agent-callable server.**
+
+| Authority | Wrapper | Licence (payload read) | What it exposes |
+|---|---|---|---|
+| **Skolverket**, Swedish National Agency for Education | [isakskogstad/Skolverket-MCP](https://github.com/isakskogstad/Skolverket-MCP), 12★ | 🟢 **MIT** (1,093 B) | *All* of Skolverket's open APIs: **Läroplan / syllabus**, **Skolenhetsregistret** school-unit register, Planned Educations. In the official MCP Registry. |
+| **Udir**, Norwegian Directorate for Education | [3121n/nor-data-udir-mcp](https://github.com/3121n/nor-data-udir-mcp) | 🔴 **none** (0 of 20 filenames) | School (NSR) and kindergarten (NBR) registries. |
+| **Smartschool**, dominant LMS in Flemish education (Belgium) | [MauroDruwel/Smartschool-MCP](https://github.com/MauroDruwel/Smartschool-MCP), 5★ | 🟢 **MIT** (1,069 B) | Platform integration; PyPI package, CI, codecov. |
+
+**Why this is an opportunity and not a curiosity:** in this region *"aligned to the national
+curriculum"* is a procurement requirement, and it has been a consulting deliverable — someone
+reads the syllabus and writes a mapping. Where the authority publishes an API and a
+permissive wrapper exists, it becomes **a tool call inside the product**, re-checked on every
+run. That is the input P15 was missing.
+
+⚠️ **Two diligence items, both of which an MIT badge hides.** Skolverket-MCP's copyright line
+reads **"Skolverket Syllabus MCP Contributors"**, not the agency: the grant covers the
+**wrapper**, and the **agency's own terms govern the data**. And Udir is the counter-case in
+the same region — same idea, same quality of public data, **no grant at all**. So the
+engagement shape is *"check for a wrapper, expect to write one"*, and writing one against a
+public national API is a small, well-bounded, highly reusable piece of work.
+
+🆕 **A European evaluation framework for educational technology is being written by the
+Council of Europe, not by a market.** Its Education Department convened the **2nd Working
+Conference on the regulatory dimensions of AI in education (October 2026)**, covering AI
+governance in education, teaching and learning with AI, and **a European evaluation framework
+to assess educational technologies**. Read alongside the EU AI Act — full effect from August
+2026, education systems **high-risk** — this is a second, softer instrument aimed at the one
+question the Act does not answer: *is the thing any good pedagogically.*
+
+🔵 **The commercial consequence is a deliverable, available now.** This KB has recorded for
+several passes that the pedagogy-evaluation tier is either absent or licensed shut (trends
+27, 31, 32; pattern P23). A treaty body drafting an evaluation framework means the
+**artefact** — a documented, re-runnable evaluation of an education AI system against stated
+pedagogical criteria — becomes procurement-relevant **before** any benchmark is settled.
+Build the socket, as P23 says; the EMEA engagement is now the socket plus the paperwork.
+
+**Demand-side number read this pass:** **94%** of organisations are at least somewhat likely
+to invest in AI-specific training in 2026, and the EMEA framing is explicit that AI fluency
+has to reach business leaders, legal and compliance teams and frontline staff — not only data
+scientists and developers. That is enablement scope (P6) sold to three audiences, one of
+which is the client's own legal function and is also the audience for the governance
+artefacts above.
+
 ### APAC
 
 - **Largest absolute AI market: ~USD 102B as of March 2026** (all sectors, not
@@ -1665,6 +1762,56 @@ language stacks, and **P26** for intermittent connectivity.
 education software — is unreachable from this environment** (403 at the egress proxy).
 Any statement this KB makes about Chinese open-source education supply is made **without
 access to the forge where it would live**. Declared, not inferred.
+
+
+#### Fourteenth-pass additions, 2026-10-06 — five placed assets, and the sovereignty constraint priced
+
+🟢 **APAC was the highest-yielding region of this pass, and the channel was the platform's
+own name** (`agents/trending.md`, fourteenth pass). Five assets, placed by the institution
+they integrate with:
+
+| Asset | Licence (payload) | Country | Why it matters here |
+|---|---|---|---|
+| [ictinnovations/ictexam-mcp](https://github.com/ictinnovations/ictexam-mcp), 16★ | 🟢 **MIT** | Pakistan | **A vendor shipping MIT into the auto-grading gap.** Exam authoring, delivery and auto-grading; reads exams, gradebooks, per-question item analysis; **writes off unless explicitly enabled**. Corporate holder (ICT Innovations), on npm. |
+| [SonAIengine/ku-portal-mcp](https://github.com/SonAIengine/ku-portal-mcp), 13★ | 🟢 **MIT** | Korea | Korea University's KUPID portal. On PyPI. |
+| [kc0506/ntucool](https://github.com/kc0506/ntucool), 10★ | 🟢 **MIT** | Taiwan | NTU COOL: one binary = CLI + MCP + SDK, **plus a Claude Code plugin**. ⚠️ Self-declared unofficial. |
+| [haanhtuandev/vgu-mcp](https://github.com/haanhtuandev/vgu-mcp), 10★ | 🔴 **none** | Vietnam | Vietnamese-German University. Ungranted. |
+| [kesaruhasun/mcp-sliit-courseweb](https://github.com/kesaruhasun/mcp-sliit-courseweb), 6★ | 🔴 **none** | Sri Lanka | SLIIT. Ungranted. |
+
+🔵 **Three of five carry a grant, and the two that do not are both university portals in
+emerging markets.** That is the regional licensing-hygiene pattern this KB has recorded
+twice before, reproduced a third time with new addresses — and it is still a one-commit ask.
+
+⚠️ **The auto-grading asset is the commercially significant one.** Trend 7 has carried
+assessment as *the regulated frontier and the tooling gap* for the whole life of this KB. A
+company — not a student — has now published an MIT MCP server for a commercial auto-grading
+platform **with writes gated by default**. The gated-write design is the thing to copy
+whether or not the client ever touches ICTExam.
+
+**Adoption and constraint figures read this pass:**
+
+| Metric | Value |
+|---|---|
+| APAC governance leaders naming AI adoption a top 2026 priority | **48%** |
+| Organisations in Asia with AI in one or more areas of operations | **57%** |
+| APAC businesses citing **insufficient infrastructure for real-time data processing** as the barrier | **49%** |
+| Share of APAC firms whose infrastructure choices sovereignty is expected to shape | **~half** |
+
+🔵 **Read those two middle rows together and the regional opportunity is an architecture, not
+a product.** Adoption is majority-done; the stated blocker is infrastructure, and sovereignty
+is what decides the infrastructure. That is the same stack this KB already specifies for
+EMEA — open-weight inference, retrieval in-region, no student data leaving the institution —
+sold into APAC against a **capacity** argument rather than a compliance one. **P16 (the
+all-MIT national/state stack) and P19 (ASEAN mother-tongue tutor) are the patterns; this
+pass adds the portal-wrapper channel that places them at a named institution.**
+
+**Regulatory direction, as measured this pass:** APAC is converging on common principles —
+safety, transparency, accountability — with governments taking cues from early movers, and
+Singapore's consultations on AI use in financial institutions (transparency, accountability,
+risk oversight) read as the template other sectors will be held to. Education-specific rules
+remain thinner than the enterprise ones, so **the compliance instrument in this region is
+still the client's own governance committee** rather than a regulator — which is why the
+artefact, not the certificate, is what closes the deal.
 
 ### LATAM
 
@@ -2294,6 +2441,69 @@ a sovereign Spanish- or Portuguese-language tutoring platform is best served by
 **localising that platform** — it already serves Ollama and local RAG — rather than waiting
 for a LATAM-origin equivalent that this pass's evidence says is not coming soon.
 
+
+#### Fourteenth-pass additions, 2026-10-06 — the supply measurement this pass failed to make, stated as a failure
+
+🔴 **This pass did not measure LATAM's platform-integration tier, and the reason was a method
+error, not an absence.** The probe was run as a single Boolean query —
+`sigaa OR suap OR siga mcp server` — and returned **`total_count: 160,659`**: the generalist
+MCP layer (`awesome-mcp-servers` 95.9k★, `headroom`, `private-gpt`, `playwright-mcp`).
+**Boolean `OR` in GitHub repository search destroys specificity**, because the two
+highest-volume words in the query (`mcp`, `server`) dominate the ranking. Every other region
+in this pass was measured one platform name per query; LATAM was not.
+
+**Writing this down rather than reporting the 160,659 as a result**, because an unmeasured
+tier that looks measured is worse for an engagement than a declared gap. **SIGAA** and
+**SUAP** — the academic and administrative systems of Brazil's federal universities and
+federal institutes — are the region's real entry points into this channel, and they are the
+first item of LATAM work for the next pass.
+
+🔵 **The one LATAM asset the pass did surface, and it fails twice over.**
+[`vnschneider/suap-mcp`](https://github.com/vnschneider/suap-mcp) — a SUAP integration,
+Brazil — carries **no licence payload under 20 filenames**, and its `pyproject.toml` declares
+**`AGPL-3.0-or-later`**. Both halves matter: there is **no grant to rely on today**, and if
+the payload ever lands it is a **copyleft constraint**, not a permissive win. It is the only
+Brazilian federal-systems wrapper found, and it is the only asset in this pass's entire set
+whose *declared* licence would restrict a Globant deliverable.
+
+🔴 **LATAM in the MCP Registry: zero of 102.** The registry census this pass
+(`repos/trending.md`, fourteenth pass) filtered 11,505 unique servers down to 102 with
+education vocabulary. **Not one is LATAM-placed.** The single Brazilian entry,
+`br.com.lensas/optical-intelligence`, is optometry training — not education software. This is
+the fourth instrument in this KB's history to return absence rather than thinness for the
+region, and it is consistent with trend 37.
+
+🟢 **The honest opportunity read, which is better than it sounds.** The region's dominant
+platform is **Moodle**, and Moodle has the **second-deepest integration tier measured this
+pass: 86 repositories**, led by permissive, payload-backed servers (`peancor/moodle-mcp-server`
+MIT; `1alexandrer/moodle-mcp` MIT, 18★ 🆕; `Snaw80/moodle-mcp` MIT 🆕). **So the LATAM
+engagement does not need a LATAM-origin asset to be well served** — it needs the MIT Moodle
+side-car tier, which exists and is global, plus the offline-first delivery stack this KB
+already specifies (P5, P21, P26).
+
+**What the region's own supply gap does cost** is the thing a local asset would have carried:
+Portuguese- and Spanish-language pedagogy, local curriculum alignment, and the
+institution-specific administrative surface. Those stay **build**, and this pass's EMEA
+finding says exactly how to price that build — a thin permissive wrapper over a public
+national API (the Skolverket shape) is small, bounded and reusable, and nothing about it is
+Nordic.
+
+**Demand-side figures read this pass:**
+
+| Metric | Value |
+|---|---|
+| LATAM startups using some AI solution (2026) | **99%** |
+| LATAM startups with AI integrated **natively** into their main product | **85%** |
+| Most disruptive applied-AI sectors named | fintech, healthtech, **edtech** (e.g. Ednova, Chile) |
+| UNU / UNESCO working paper: higher-education institutions surveyed | **200 HEIs across 19 countries**, Aug–Oct 2025, five dimensions: teaching and learning, research, community engagement, administration, governance |
+
+⚠️ **Regulatory fragmentation is the standing constraint for cross-border delivery**, and it
+is structural rather than a phase: multiple countries operating under different or absent
+frameworks, against an EU AI Act that took effect progressively from August 2026 with four
+risk levels. For a studio this is a **portability requirement** on the governance artefacts,
+not a reason to wait — build the pack once to the strictest regime in scope and re-use it per
+country, which is what P13 and P24 already do.
+
 ## Cross-region read
 
 Two patterns hold in every region, which makes them safe to build once and sell
@@ -2823,3 +3033,73 @@ code-hosting payload this environment can read. **The EMEA and APAC supply pictu
 GitHub-only and therefore understated**, and two named Codeberg education projects were
 surfaced and left off every shelf because they could not be payload-verified. Declared, not
 inferred.
+
+## What changed in the fourteenth pass of 2026-10-06
+
+**The supply side of this file got a measurement it has never had: the integration tier,
+counted per platform, with the licence read from the payload.** That is a market fact, not a
+repository fact, because it decides whether an engagement is an adoption or a build.
+
+| Platform the client runs | Open-source integration repos | Engagement verdict |
+|---|---|---|
+| Canvas LMS | 117 | adopt |
+| Moodle | 86 | adopt (from outside the GPL tree) |
+| Brightspace / D2L 🆕 | 23 | adopt |
+| Google Classroom 🆕 | 17 (best dedicated server **6★**) | **build** |
+| Blackboard Learn 🆕 | 5 | build on the best of five |
+| Open edX | 1 (AGPL-3.0) | copyleft all the way down |
+| 🔴 **PowerSchool** 🆕 | **0** | **build — the tier does not exist** |
+
+🔵 **The single sentence to carry out of this pass:** open-source integration coverage tracks
+the **higher-education** install base and ignores **K-12 administration** — Canvas and Moodle
+hold 203 of the 249 repositories measured, while K-12 is **45.62% of adoption** and its two
+defining platforms (Google Classroom, PowerSchool) have 17 and 0. The empty tier and the
+regulated tier are the same tier, and that is what makes it defensible for an enterprise
+integrator rather than a hobbyist.
+
+**New regional facts, each in its own region's section above, none of them LATAM-only:**
+
+- **North America** — $951M (2024) → $2,303.2M (2029), **CAGR 15.9%**, **36%** of the global
+  market: the largest share on the slowest growth. Segment splits: K-12 **45.62%** of
+  adoption, STEM **34.78%** of revenue, cloud **71.22%**. A dense US school-data cluster
+  exists in the MCP Registry as **hosted endpoints with no source** — the open,
+  inside-the-boundary equivalent is an engagement.
+- **EMEA** — the **ministry tier is real**: Sweden's Skolverket curriculum, school-register
+  and planned-educations APIs are wrapped **MIT** and in the official MCP Registry; Belgium's
+  Smartschool likewise; Norway's Udir equivalent is **ungranted**. And the **Council of
+  Europe** convened its 2nd Working Conference on the regulatory dimensions of AI in
+  education (October 2026), including **a European evaluation framework to assess educational
+  technologies** — a treaty body writing the pedagogy-evaluation instrument the market has
+  not settled.
+- **APAC** — the highest-yielding region of the pass: five placed assets, three with
+  permissive payloads, including **MIT auto-grading from a commercial vendor with writes
+  gated by default** (Pakistan). Adoption is majority-done (**57%** of Asian organisations),
+  the stated blocker is **infrastructure** (**49%**), and **sovereignty shapes roughly half**
+  of infrastructure choices — so the regional sale is an architecture, not a product.
+- **LATAM** — **99%** of startups use AI, **85%** natively, edtech named among the most
+  disruptive sectors; UNU/UNESCO surveyed **200 HEIs across 19 countries**. 🔴 And two honest
+  negatives: **zero of the registry's 102 education servers are LATAM-placed**, and this pass
+  **failed to measure the region's platform tier** because it OR'd SIGAA and SUAP into one
+  query and collapsed into the generalist layer. The region is nonetheless well served
+  today — its dominant platform is Moodle, whose 86-repository MIT side-car tier is global.
+
+### The method note, stated plainly
+
+🔴 **Three instrument failures this pass, and two of them would have produced published
+numbers that were wrong.**
+
+1. **Boolean `OR` in GitHub repository search destroys specificity.** `sigaa OR suap OR siga
+   mcp server` → **`total_count: 160,659`**, all generalist. One platform name per query, or
+   no count.
+2. **The MCP Registry's `?q=` parameter returns HTTP 200 and the unfiltered page** — a silent
+   no-op. `?search=` fails at the connection (000) and is therefore the safe failure. A pass
+   that trusted `q=` would have published a fabricated per-platform count with a 200 beside
+   it.
+3. **A record is not a server.** The registry is version-rowed: **31,300 records = 11,505
+   unique servers**, a 2.7× overstatement. And the figure is a **floor**, because the page
+   loop ended on an empty body at page 313.
+
+⚠️ **One standing caution, re-earned.** A registry listing is not an existence proof: one of
+six sampled entries points at a repository `ls-remote` cannot reach. The same rule this file
+already applies to GitHub's `total_count` — an index count is an **upper bound** — applies to
+the registry.

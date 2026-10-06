@@ -8,6 +8,157 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — fourteenth pass: the generalist query fails for the tenth time, and a new index opens with three traps in it
+
+### The mandatory queries, run with the year **computed** (2026), not hardcoded
+
+| Query | Result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **Generalist layer.** openclaw (~385k★), browser-use (108k★), mem0 (62.7k★), AutoGen (60.3k★), Flowise (55.2k★), dify (151.6k★), Hermes Agent, aider, Cline, CrewAI, LangGraph — plus course material *about* agents. **Zero education-specific repositories.** One marginal: `pguso/agents-from-scratch` (MIT, topics `ai-education`, `open-source-education`) — a teaching artefact, not education software. |
+| `github trending education AI 2026` | ⚠️ **Learning-resource layer, already inventoried**: `rohitg00/ai-engineering-from-scratch` (#1 on Trending, 24 May 2026), Awesome LLM, LangChain, Agents Towards Production, `speedyapply/2026-AI-College-Jobs` (5.2k★). **Zero education-platform repositories.** |
+| `open source platform education ERP CRM MIT Apache` | ⚠️ **Five returned, five already inventoried**: OpenEduCat (on Odoo), plus generic MIT CRM / AGPL-3.0 ERP alternatives and **CK-ERP** — a 32-module education/ERP/CRM system whose newest cited release is **2010**, i.e. an archaeological result, not a finding. |
+| `AI education industry trends 2026` | ⚠️ **Market figures.** Two new numbers worth carrying, both in `intel/market.md`: North America **$951M (2024) → $2,303.2M (2029), CAGR 15.9%**, and the K-12 / STEM / cloud segment splits (**45.62%** / **34.78%** / **71.22%**). The rest already published. |
+
+🔵 **Marginal yield of the generalist search channel for *repositories*: ZERO for the tenth
+consecutive pass**, and the fifteenth for the infrastructure query specifically. It is run
+because a regime change has to be *seen*, not because it discovers. **The market query is now
+the only one of the four that pays, and it pays in figures, not repositories.**
+
+### 🟢 The channel that yielded: the platform's own name
+
+Full measurement in `agents/trending.md` (fourteenth pass, Finding 1) and all 24 rows with
+licences in `agents/top.md`. The short form: **20 candidates, 16 with a licence payload
+(80%), all 16 education software, 22 of 24 shelved rows new to this KB.** Against the
+thirteenth pass's language channel at 3 of 12 (25%), of which 1 was education software.
+
+| Repo | ★ / forks | Licence | Probe result |
+|---|---|---|---|
+| [`taybenlor/runno`](https://github.com/taybenlor/runno) | **773** | MIT | 🟢 payload, 1,106 B — **the highest-starred new find of this pass.** Infrastructure, not an agent: see `repos/foundations.md` |
+| [`OpenStudy-dev/OpenStudy`](https://github.com/OpenStudy-dev/OpenStudy) | **75** | MIT | 🟢 payload, 1,068 B |
+| [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | **57** / 27 | MIT | 🟢 payload — **the fourth major LMS on this shelf** |
+| [`HumphreySun98/Smart-Study-Agent`](https://github.com/HumphreySun98/Smart-Study-Agent) | 57 | MIT | 🟢 payload — RL policy + FSRS + LLM quizzes |
+| [`kaorii-ako/Shiori-v1`](https://github.com/kaorii-ako/Shiori-v1) | 45 | MIT | 🟢 payload |
+| [`lucanardinocchi/canvas-mcp`](https://github.com/lucanardinocchi/canvas-mcp) | 🔴 22 | **none** | 🔴 0 of 20 probes + no manifest field |
+| [`1alexandrer/moodle-mcp`](https://github.com/1alexandrer/moodle-mcp) | 18 | MIT | 🟢 payload — highest-starred permissive Moodle MCP after `peancor` (43★) |
+| [`ictinnovations/ictexam-mcp`](https://github.com/ictinnovations/ictexam-mcp) | 16 | MIT | 🟢 payload — auto-grading, **corporate holder**, writes gated |
+| [`r1ckyIn/canvas-ed-mcp`](https://github.com/r1ckyIn/canvas-ed-mcp) | 15 | MIT | 🟢 payload — ⚠️ copyright year with **no holder name** |
+| [`plyght/canvas-mcp`](https://github.com/plyght/canvas-mcp) | 🔴 14 | **none** | 🔴 0 of 20 probes |
+| [`joshuasoup/d2l-mcp`](https://github.com/joshuasoup/d2l-mcp) | 🔴 13 | **none** | 🔴 0 of 20 probes |
+| [`SonAIengine/ku-portal-mcp`](https://github.com/SonAIengine/ku-portal-mcp) | 13 | MIT | 🟢 payload — Korea University KUPID, on PyPI |
+| [`isakskogstad/Skolverket-MCP`](https://github.com/isakskogstad/Skolverket-MCP) | 12 | MIT | 🟢 payload — ⚠️ holder is *"Contributors"*, not the agency |
+| [`r-huijts/canvas-mcp`](https://github.com/r-huijts/canvas-mcp) | 12 | MIT | 🟢 payload |
+| [`JhostinAleck/brightspace-mcp`](https://github.com/JhostinAleck/brightspace-mcp) | 12 | MIT | 🟢 payload — multi-auth, circuit breaker, **opt-in writes** |
+| [`aryankeluskar/canvas-mcp`](https://github.com/aryankeluskar/canvas-mcp) | 11 | **ISC** | 🟢 payload, 746 B — second ISC asset in this KB |
+| [`kc0506/ntucool`](https://github.com/kc0506/ntucool) | 10 | MIT | 🟢 payload — ships a **Claude Code plugin** |
+| [`haanhtuandev/vgu-mcp`](https://github.com/haanhtuandev/vgu-mcp) | 🔴 10 | **none** | 🔴 0 of 20 probes |
+| [`Deeptanshuu/mydy-lms-helper`](https://github.com/Deeptanshuu/mydy-lms-helper) | 7 | MIT | 🟢 payload |
+| [`faizan45640/google-classroom-mcp-server`](https://github.com/faizan45640/google-classroom-mcp-server) | 6 / **9** | MIT | 🟢 payload — **the whole Google Classroom tier's best dedicated server** |
+| [`kesaruhasun/mcp-sliit-courseweb`](https://github.com/kesaruhasun/mcp-sliit-courseweb) | 🔴 6 | **none** | 🔴 0 of 20 probes |
+| [`zainf2327/mcp-classroom`](https://github.com/zainf2327/mcp-classroom) | 🔴 6 | **none** | 🔴 0 of 20 probes — ⚠️ **it auto-grades submissions** |
+| [`pranav-vijayananth/brightspace-mcp-server`](https://github.com/pranav-vijayananth/brightspace-mcp-server) | 6 | **Apache-2.0** | 🟢 payload, 11,357 B |
+| [`MauroDruwel/Smartschool-MCP`](https://github.com/MauroDruwel/Smartschool-MCP) | 5 | MIT | 🟢 payload — PyPI, CI, codecov |
+| [`Snaw80/moodle-mcp`](https://github.com/Snaw80/moodle-mcp) | 4 | MIT | 🟢 payload |
+| [`nitsuah/bb-mcp`](https://github.com/nitsuah/bb-mcp) | 2 | MIT | 🟢 payload — **RBAC middleware** |
+| [`NiccoloSalvini/mcp-blackboard-ucsc`](https://github.com/NiccoloSalvini/mcp-blackboard-ucsc) | 0 | MIT | 🟢 payload |
+| [`Kimmahone/edu-workspace-mcp`](https://github.com/Kimmahone/edu-workspace-mcp) | 1 | MIT | 🟢 payload — includes **Google Forms** |
+| [`P1ckle3/blackboard-mcp`](https://github.com/P1ckle3/blackboard-mcp) | 🔴 0 | **none** | 🔴 0 of 20 probes |
+| [`shimahikojin/google-classroom-mcp`](https://github.com/shimahikojin/google-classroom-mcp) | 🔴 0 | **none** | 🔴 0 of 20 probes |
+| [`AStheTECH/mewcp-google-classroom`](https://github.com/AStheTECH/mewcp-google-classroom) | not read | 🔴 **bespoke "ACL"** | 🟢 payload, 6,489 B — **non-commercial, no-SaaS, no-rebrand. Unusable.** |
+
+### 🆕 The new index: the official MCP Registry — and it has three traps in it
+
+`registry.modelcontextprotocol.io` is reachable from this environment and this KB has never
+used it. It is a real channel and it is **not** a source shelf. Everything below was measured
+first-hand on 2026-10-06.
+
+**Trap 1 — `?q=` returns HTTP 200 and ignores you.**
+
+| Call | Result |
+|---|---|
+| `/v0/servers?limit=100` | 🟢 **200**, 100 records + `metadata.nextCursor` |
+| `/v0/servers?search=moodle` | 🔴 **000** — fails at the connection, no response |
+| `/v0/servers?q=moodle` | ⚠️ **200 — and the body is the unfiltered first page.** `q` is a **silent no-op** |
+| `/v0/servers?limit=5&q=canvas` | ⚠️ **200**, 5 records, first one `ac.inference.sh/mcp` — *not* a Canvas server |
+
+🔴 **A pass that trusted `q=` would have published "5 Canvas servers in the MCP Registry"
+with a 200 next to it.** The parameter is accepted, the count matches the limit, and nothing
+is filtered. This is the most dangerous instrument this KB has touched: `search=` fails
+loudly and is therefore safe; `q=` fails **quietly**.
+
+**Trap 2 — a record is not a server.** Paged with `limit=100` + `nextCursor`:
+
+| Measurement | Value |
+|---|---|
+| Pages retrieved before an empty response | **313** |
+| Records | **31,300** |
+| 🔵 **Unique server names** | **11,505** |
+
+The index is **version-rowed**: the same server appears once per published version. A count
+of records overstates the supply by **2.7×**. ⚠️ The loop stopped at page 313 on an empty
+body, so **11,505 is a floor, not the index size** — stated as a floor deliberately, and the
+next pass should resume from the cursor.
+
+**Trap 3 — a registry listing is not an existence proof.**
+`ai.smithery/a-ariff-canvas-instant-mcp` is listed, points at
+`github.com/a-ariff/canvas-instant-mcp`, and 🔴 **`ls-remote` cannot reach that
+repository**. One dead address in a sample of six. The same failure this KB recorded for
+GitHub's own search index (`total_count` is an upper bound) reproduces in the registry.
+
+### What the registry actually contains, for education
+
+Filtering the 11,505 unique servers on education vocabulary with word boundaries:
+
+| Measurement | Value |
+|---|---|
+| Education-vocabulary servers | **102** |
+| 🔴 **Of those, carrying no source repository at all** | **71 (70%)** |
+| With a GitHub repository URL | 31 |
+| Genuinely education + repo, probed this pass | 6 → **2 MIT, 3 ungranted, 1 dead** |
+
+🔵 **The MCP Registry's education tier is a catalogue of hosted commercial endpoints, not of
+open source.** 70% ship no code. Among the 71: **`com.moodlemcp/moodle`** — *"Connect your
+Moodle to AI assistants: courses, content, grading"*, a **closed hosted Moodle MCP competing
+with the 86 open repositories in that tier**; `io.cubite/lms` (hosted LMS with SCORM/xAPI);
+`com.skillsail/mcp` (SCORM authoring and export); and a dense **US school-data cluster** —
+`ai.edusignal/districts` (all 50 states), `co.schoolscope/mcp` and `ai.sacs/sacs-mcp`
+(California), `com.olyport/nces-education` and `com.olyport/college-scorecard`.
+
+⚠️ **A first-order warning for the word "open" in a proposal.** An MCP server is now a
+*product shape*, and the registry is where the products are listed. Being in the registry
+says nothing about a licence; this KB's own filter — read the payload — is what separates the
+31 from the 71, and then the 2 from the 31.
+
+🔴 **LATAM in the registry: zero.** Not one of the 102 education-vocabulary servers is
+LATAM-placed. The one Brazilian entry (`br.com.lensas/optical-intelligence`) is optometry
+training, not education software. The region's two real entry points, **SIGAA** and **SUAP**,
+are university systems whose names this pass failed to measure properly — see the method
+note.
+
+### The two repository finds the registry channel did yield
+
+| Repo | Licence (payload) | What it is |
+|---|---|---|
+| [`Lilly-Tech-Collab/ai-school-mcp`](https://github.com/Lilly-Tech-Collab/ai-school-mcp) | **MIT** (`LICENSE`, 1,405 B) | 550+ free AI course tracks, 21,000+ lessons, searchable and readable by an agent. Enablement content, not a platform integration. |
+| [`GarphenGate/moltline-mcp`](https://github.com/GarphenGate/moltline-mcp) | **MIT** (`LICENSE`, 1,072 B) | 8 skills across curriculum, classroom, **accommodations** and exam prep. ⚠️ *Accommodations* is vocabulary no other asset in this KB covers — and a legal requirement in both US and EU school systems. |
+
+### 🔴 The method failure of this pass, recorded as one
+
+The LATAM probe was run as **`sigaa OR suap OR siga mcp server`** and returned
+**`total_count: 160,659`** — `punkpeye/awesome-mcp-servers` (95.9k★),
+`headroomlabs-ai/headroom`, `zylon-ai/private-gpt`, `microsoft/playwright-mcp`. The
+generalist layer, from a query containing three Brazilian university-system names.
+
+🔵 **Boolean `OR` in GitHub repository search destroys specificity.** The engine appears to
+score documents matching *any* term and the two highest-volume words in the query (`mcp`,
+`server`) dominate. Every platform count in this pass was therefore measured **one name per
+query**, and that is the rule going forward.
+
+**The consequence is that this pass did not measure LATAM's platform tier at all**, and says
+so rather than reporting the 160,659 as a result. SIGAA and SUAP, queried alone, are the
+first item of LATAM work for the next pass.
+
+---
+
 ## 2026-10-06 — thirteenth pass: the generalist query fails for the ninth time, and the forge channel cannot be opened at all
 
 ### The mandatory queries, run with the year **computed** (2026), not hardcoded

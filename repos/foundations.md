@@ -1003,3 +1003,59 @@ environment** (403 at the egress proxy). Every licence fact on this shelf rests 
 read. Two named Codeberg education projects were surfaced and **deliberately not shelved**,
 because they could not be payload-verified. Full measurement in `agents/trending.md`,
 Finding 4.
+
+## Added in the fourteenth pass of 2026-10-06 — the sandbox layer, and the index that is not a shelf
+
+One infrastructure row, and it is the highest-starred find of the whole pass. It arrived
+through the platform-name channel (`agents/trending.md`, fourteenth pass) as a by-product:
+searching for education platform integrations surfaced the layer underneath the one thing
+education software does that no other industry's software does — **run a student's code**.
+
+| Repo | Licence (read from payload) | Layer | Why it matters for an education engagement |
+|---|---|---|---|
+| [taybenlor/runno](https://github.com/taybenlor/runno) | **MIT** (`LICENSE`, 1,106 B; © Benjamin Taylor) | code sandbox | **773★.** Runs code in many languages inside a **WebAssembly/WASI sandbox** — in the browser with no server, or in Node. Four published packages, all **MIT on npm**: `@runno/runtime` 0.10.0 (web components for runnable examples), `@runno/sandbox` 0.10.2 (secure sandbox for Node and other JS runtimes), `@runno/wasi` 0.10.0 (isomorphic WASI runner) and 🆕 **`@runno/mcp` 0.10.6 — the sandbox exposed as an MCP server**. |
+
+### Why this is a foundations row and not a curiosity
+
+Every CS-education pattern in this KB has had the same unsolved component: **where does the
+student's code run?** The existing answers on this shelf are JupyterHub (a multi-user server
+per cohort) and OpenHands (a coding agent with its own sandbox). Both are servers you operate.
+
+Runno moves execution **into the learner's browser**, which changes three things an education
+engagement is costed and audited on:
+
+- **Data residency becomes trivial for the execution step.** Student code never reaches a
+  server, so there is no execution-side transfer to document in an EMEA deployment. The
+  sovereignty argument this KB makes with Ollama for inference, Runno makes for execution.
+- **Per-seat cost goes to zero and scales with the cohort's own devices.** No container per
+  student, no idle notebook servers — the LATAM and offline-first cost constraints in P5
+  apply to execution too, and this is the component that answers them.
+- 🆕 **`@runno/mcp` makes the sandbox agent-callable**, which is the piece that was missing:
+  a tutor agent can now *execute* a learner's submission and reason about the actual output
+  rather than predicting it. Pair it with the auto-grading assets in `agents/top.md`
+  (fourteenth pass) and the grading loop has a real execution step under a permissive licence.
+
+⚠️ **Two limits to state before it enters a proposal.** WASI sandboxing covers languages
+with a WASI target — check the language a client's curriculum actually teaches against the
+published package list rather than assuming coverage. And a browser sandbox is **not** an
+anti-cheat boundary: it protects the host from the code, not the assessment from the student.
+For proctored assessment the execution still belongs server-side.
+
+### The MCP Registry — an index this KB now uses, and what it is not
+
+`registry.modelcontextprotocol.io` is reachable here and was measured first-hand this pass
+(method, traps and counts in `repos/trending.md`, fourteenth pass). It belongs on this page
+only as a **channel**, never as a dependency:
+
+- **11,505 unique servers** across 31,300 version rows — a record is not a server, and the
+  figure is a **floor** because the page loop ended early.
+- **102 education-vocabulary servers, of which 71 (70%) ship no source repository.** It is a
+  catalogue of hosted endpoints with open-source entries mixed in, not a source shelf.
+- 🔴 Its `?q=` parameter returns **HTTP 200 and the unfiltered page** — a silent no-op. Do
+  not quote a count from it.
+- 🔴 One listed server's repository **no longer exists**. A registry entry is not an
+  existence proof; `ls-remote` still is.
+
+**The rule for this page:** the registry is a good place to *find* candidates and a
+disqualifying place to *source* them. Nothing enters this shelf from a registry listing
+without an `ls-remote` resolution and a licence payload on its real default branch.

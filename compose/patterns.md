@@ -2179,3 +2179,212 @@ replaces**, and the saving is entirely in steps 1–2.
   assets at 2★ and 0★. **Localise this platform** (it already serves local models and local
   RAG) rather than waiting for one; pair with **P32** if the localisation work is published
   back as the permissive Portuguese-language component that shelf still lacks.
+
+## P1 update, fourteenth pass of 2026-10-06 — the default engagement shape now has four platform doors, not two
+
+P1 (LTI + MCP side-car tutor) was written when the only platforms with a permissive,
+payload-backed MCP side-car were **Canvas** and **Moodle**. Measured this pass, the door
+list is four, and the choice is now made on the client's existing LMS rather than on what the
+shelf happens to carry:
+
+| Client runs | Side-car to start from | Licence (payload) | ★ |
+|---|---|---|---|
+| Canvas LMS | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT | 278 |
+| Moodle | [peancor/moodle-mcp-server](https://github.com/peancor/moodle-mcp-server) · [1alexandrer/moodle-mcp](https://github.com/1alexandrer/moodle-mcp) 🆕 | MIT · MIT | 43 · 18 |
+| 🆕 **Brightspace / D2L** | [RohanMuppa/brightspace-mcp-server](https://github.com/RohanMuppa/brightspace-mcp-server) (features, npm) · [JhostinAleck/brightspace-mcp](https://github.com/JhostinAleck/brightspace-mcp) (**opt-in writes**, circuit breaker, multi-auth) · [pranav-vijayananth/brightspace-mcp-server](https://github.com/pranav-vijayananth/brightspace-mcp-server) (**Apache-2.0**) | MIT · MIT · Apache-2.0 | 57 · 12 · 6 |
+| 🆕 **Blackboard Learn / Ultra** | [nitsuah/bb-mcp](https://github.com/nitsuah/bb-mcp) — **RBAC middleware in the MCP layer** | MIT | 2 |
+
+⚠️ **Two selection rules this adds.** On Brightspace, take the **feature** server for scope
+and read the **multi-auth** one before designing any write path — it is the only asset in the
+tier that models TOTP/OAuth/browser auth, retries and circuit-breaking, and LMS auth is where
+these integrations actually fail. On Blackboard the tier is five repositories deep, so expect
+to fork rather than adopt — and start from `bb-mcp` **because of its RBAC middleware**, which
+is the control an education deployment is audited on and which no other asset in the
+98-address cluster implements.
+
+## P28 — The K-12 administrative integration (the empty tier, built properly)
+
+**When to use.** A school district, a ministry, or a K-12 group asks for an agent over its
+own administrative systems — Google Classroom, a student information system, guardians,
+enrolment, accommodations. **This is the pattern for a tier with no incumbent**: Google
+Classroom measures 17 open-source integration repositories whose best dedicated server has
+**6★**, and PowerSchool measures **`total_count: 0`** (trend 39).
+
+### Components
+
+| Component | Repo | Licence (payload read 2026-10-06) | Role |
+|---|---|---|---|
+| Workspace-for-Education surface | [Kimmahone/edu-workspace-mcp](https://github.com/Kimmahone/edu-workspace-mcp) | **MIT** (1,087 B) | Docs, Sheets, Slides, **Forms**, Drive, Classroom. **Start here, not from a Classroom-only server** — Forms is where K-12 assessment lives. |
+| Classroom reference implementation | [faizan45640/google-classroom-mcp-server](https://github.com/faizan45640/google-classroom-mcp-server) | **MIT** (1,063 B) | The tier's best dedicated server (6★, 9 forks). Read it for the Classroom API surface; expect to extend it. |
+| **Role separation** | [nitsuah/bb-mcp](https://github.com/nitsuah/bb-mcp) | **MIT** (1,063 B) | Not for Blackboard here — **lift its RBAC middleware pattern.** Teacher, student, guardian and administrator must be distinct principals in the MCP layer, not in the prompt. |
+| Accommodations vocabulary | [GarphenGate/moltline-mcp](https://github.com/GarphenGate/moltline-mcp) | **MIT** (1,072 B) | 8 skills across curriculum, classroom, **accommodations**, exam prep. The only asset in this KB that names accommodations as a surface. |
+| Typed outputs | [pydantic/pydantic-ai](https://github.com/pydantic/pydantic-ai) | MIT | Every record-touching decision returns a validated schema, never free text. |
+| Orchestration + audit | [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) | MIT | Checkpoints are the audit trail. |
+| Observability | [langfuse/langfuse](https://github.com/langfuse/langfuse) | **MIT outside `ee/`** | Trace every call, cost and output. ⚠️ Keep the deployment out of `ee/`. |
+| Retrieval | [pgvector/pgvector](https://github.com/pgvector/pgvector) | PostgreSQL Licence | Vectors inside the district's existing Postgres — no second datastore to secure. |
+
+### Wiring
+
+1. **Scope to read-only for the whole of phase one.** Every component above supports it;
+   `edu-workspace-mcp` and the Classroom server are read-first by design. No write path ships
+   until the oversight gate in step 5 exists and has been exercised.
+2. **Authenticate as the institution, not as a user.** This is the barrier that emptied the
+   tier (trend 39) and the one an integrator clears: Google Workspace for Education
+   domain-wide delegation, scoped to the minimum API set, with the scope list in the SOW.
+3. **Put RBAC in the MCP layer** — the `bb-mcp` pattern. One principal per role; a tool a
+   guardian may call is a *different tool* from the teacher's, not the same tool with a
+   different prompt. Guardian access to another child's record must be impossible by
+   construction, not by instruction.
+4. **Index curriculum and policy documents through MinerU → pgvector**, keeping the source
+   document id on every chunk so an answer can always be traced to a page.
+5. **Gate every write and every consequential read behind a named human.** US state law has
+   converged on one testable rule — human judgment is final (trend 16) — and the EU treats
+   these systems as high-risk. The gate is a LangGraph node that cannot be bypassed, and
+   Langfuse records who passed it.
+6. **Handle accommodations as a first-class, logged capability**, using the moltline
+   vocabulary. An accommodation is a legal entitlement; an agent that silently fails to apply
+   one is a compliance incident, not a bug.
+
+### Deliverables
+
+- A read-only Workspace-for-Education / SIS MCP server deployed inside the district's
+  boundary, with per-role tool sets and the scope list documented.
+- An RBAC matrix (role × tool × data class), reviewed by the client's counsel.
+- A Langfuse trace archive demonstrating every access and every gate decision.
+- A written accommodations-handling note: which entitlements the system reads, which it
+  applies, and which it explicitly refuses to decide.
+- The P22 licence-reliability gate output for every component.
+
+### ⚠️ Three warnings that are the point of this pattern
+
+- 🔴 **Do not start from the ungranted assets in this tier, however convenient.**
+  `zainf2327/mcp-classroom` **auto-grades submissions and carries no licence of any kind**;
+  `shimahikojin/google-classroom-mcp` likewise; `AStheTECH/mewcp-google-classroom` carries a
+  bespoke **"Community License"** that forbids commercial use, hosted service, rebranding and
+  anything competitive, with automatic termination on breach. All three are unusable in a
+  Globant deliverable and the third is the one most likely to be mistaken for usable.
+- ⚠️ **`total_count: 0` for PowerSchool means no *open-source* asset, not no integration.**
+  The client may already pay for a vendor integration. Ask before positioning the work as
+  greenfield.
+- 🔵 **The empty tier is empty because of authorisation, so the credential conversation is
+  the critical path.** Start it in week one; it will outlast the build.
+
+## P29 — Curriculum alignment as a tool call (the Skolverket shape, and how to port it)
+
+**When to use.** Any engagement where *"aligned to the national curriculum"* is a
+procurement requirement — which, in EMEA and in the APAC mandate regimes, is most of them.
+Replaces a human-written mapping that is stale on the day it ships with a call the product
+makes on every run (trend 42).
+
+### Components
+
+| Component | Repo / source | Licence | Role |
+|---|---|---|---|
+| National curriculum surface | [isakskogstad/Skolverket-MCP](https://github.com/isakskogstad/Skolverket-MCP) | **MIT** (payload, 1,093 B) | Sweden: Läroplan/syllabus API, Skolenhetsregistret school-unit register, Planned Educations. The reference implementation to copy. |
+| The counter-case to plan for | [3121n/nor-data-udir-mcp](https://github.com/3121n/nor-data-udir-mcp) | 🔴 **none** | Norway's equivalent public data, **no grant**. Read it as the expected state, not the exception. |
+| Document ingestion | [opendatalab/MinerU](https://github.com/opendatalab/MinerU) | Apache-2.0 | For the parts of a curriculum published as PDF rather than API — i.e. most countries. |
+| Typed alignment claims | [pydantic/pydantic-ai](https://github.com/pydantic/pydantic-ai) | MIT | An alignment is a schema — `{objective_id, source_uri, confidence, evidence_span}` — never prose. |
+| Orchestration | [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) | MIT | Re-run alignment as a graph step with checkpoints. |
+| Retrieval | [pgvector/pgvector](https://github.com/pgvector/pgvector) | PostgreSQL Licence | Curriculum objectives indexed in-region. |
+| Observability | [langfuse/langfuse](https://github.com/langfuse/langfuse) | MIT outside `ee/` | Every alignment claim traceable to the call that produced it. |
+
+### Wiring
+
+1. **Check for an authority API first, then for a wrapper, then expect to write one.** The
+   three outcomes, in order of likelihood: public API with no wrapper (write a thin MIT one —
+   small, bounded, reusable); public API with an ungranted wrapper (fork the shape, write your
+   own grant, or ask for one — see Udir); public API with a permissive wrapper (Sweden — the
+   lucky case).
+2. **Pin the curriculum version.** A syllabus API returns *today's* curriculum. An assessment
+   decision made last term must be explainable against the curriculum as it stood then, so
+   persist the objective set with a retrieval timestamp and never resolve historical claims
+   against a live call.
+3. **Make the alignment claim auditable, not confident.** Each generated item or lesson
+   carries `{objective_id, source_uri, evidence_span}` pointing into the authority's own text.
+   A reviewer must be able to click from an item to the clause it claims to satisfy.
+4. **Re-run alignment on a schedule and diff it.** When the authority changes a syllabus, the
+   diff is the client's change notice — and producing it automatically is a sellable
+   capability on its own.
+5. **Keep the data-terms diligence separate from the licence check**, per the warning below.
+
+### Deliverables
+
+- A curriculum-alignment service with a typed claim schema and per-claim provenance.
+- A pinned, versioned local objective set with retrieval timestamps.
+- A **data-terms memo**: what the authority's own terms permit for the data (distinct from the
+  wrapper's licence), signed off before launch.
+- An alignment-diff report, scheduled.
+- P22 gate output for the wrapper.
+
+### ⚠️ Two warnings that are the point of this pattern
+
+- 🔴 **The wrapper's licence is not the data's licence, and this is the error the pattern
+  exists to prevent.** Skolverket-MCP's copyright line reads **"Skolverket Syllabus MCP
+  Contributors"**, *not the agency*. MIT covers the **code**; the **agency's terms govern the
+  corpus**. A proposal citing "MIT" for a national-curriculum capability is citing the
+  connector and implying the corpus — trend 22's corpus-pricing error arriving through a
+  cleaner door.
+- ⚠️ **Do not generalise "a permissive wrapper exists" from one country.** Two Nordic
+  authorities, same idea, same public-data quality: one MIT, one ungranted. Budget the wrapper
+  as work in every country until proven otherwise.
+
+## P30 — Gated auto-grading with a real execution step
+
+**When to use.** Assessment work — the regulated frontier this KB has tracked since trend 7,
+and the one where the open-source tier has been thinnest. Three components verified this pass
+make a complete loop possible under permissive licences **for the first time in this KB**:
+grading from a vendor, execution in a sandbox, and mastery tracking.
+
+### Components
+
+| Component | Repo | Licence (payload read 2026-10-06) | Role |
+|---|---|---|---|
+| Exam authoring, delivery, **auto-grading** | [ictinnovations/ictexam-mcp](https://github.com/ictinnovations/ictexam-mcp) | **MIT** (1,114 B, **corporate holder**) | Read exams, gradebooks and **per-question item analysis**; parse a paper into a structured exam; publish to students. **Writes are off unless explicitly enabled** — adopt that default, do not reinvent it. |
+| 🆕 **Code execution** | [taybenlor/runno](https://github.com/taybenlor/runno) | **MIT** (1,106 B) | WASM/WASI sandbox. **`@runno/mcp` 0.10.6 (MIT on npm)** makes the sandbox agent-callable, so the grader executes the submission instead of predicting its output. |
+| Mastery, two families | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) · [HumphreySun98/Smart-Study-Agent](https://github.com/HumphreySun98/Smart-Study-Agent) | MIT · **MIT** (1,067 B) 🆕 | Bayesian Knowledge Tracing (auditable, published) and **RL policy + FSRS scheduling**. Two different defensible answers to *"why this item next"*. |
+| Standards conformance | [pie-framework/pie-qti](https://github.com/pie-framework/pie-qti) | ISC | QTI 2.1/2.2/3.0 player, bidirectional QTI ↔ PIE. Keeps the item bank portable. |
+| Typed outputs | [pydantic/pydantic-ai](https://github.com/pydantic/pydantic-ai) | MIT | A grade is a schema with evidence, never a sentence. |
+| Orchestration + gate | [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) | MIT | The oversight gate is a node, and it cannot be routed around. |
+| Observability | [langfuse/langfuse](https://github.com/langfuse/langfuse) | MIT outside `ee/` | The evidence pack is a by-product of running. |
+
+### Wiring
+
+1. **Author and deliver through the exam platform's read surface**; keep its write scope off
+   until step 5 is in place. Pull **per-question item analysis** — it is the signal that tells
+   you whether the *item* is bad rather than the cohort.
+2. **Execute, do not predict.** For any submission that is code, run it in `@runno/sandbox`
+   via `@runno/mcp` and grade the **actual** output. The model reasons about observed
+   behaviour; it never asserts what the code "would" do.
+3. **Grade into a typed claim**: `{score, rubric_id, evidence_span | execution_trace,
+   confidence}`. Free-text justification is an attachment to the claim, never the claim.
+4. **Route low confidence and every high-stakes item to a human**, and record the routing
+   decision. US state law has converged on human judgment being final (trend 16); the EU
+   treats this as high-risk.
+5. **The write-back gate**: no grade reaches the gradebook except through a node that records
+   a named human's decision. This is where the ICTExam write scope is finally enabled, and
+   never before.
+6. **Feed accepted outcomes into the mastery model** — BKT for an auditable, published
+   instrument; RL+FSRS where review scheduling matters more than explainability. **Name which
+   one, and why, in the deliverable.**
+
+### Deliverables
+
+- An auto-grading pipeline with writes gated behind a named human and traced end to end.
+- Execution traces for every code-graded submission, retained with the grade.
+- A rubric registry with per-rubric accuracy against the human-reviewed sample.
+- Item-analysis reports distinguishing a weak cohort from a bad item.
+- A mastery-model selection note: which family, what it can and cannot explain.
+- P22 gate output for every component; P27's evidence pack as the external-facing artefact.
+
+### ⚠️ Three warnings that are the point of this pattern
+
+- 🔴 **A browser or WASM sandbox is not an anti-cheat boundary.** Runno protects the host from
+  the code, not the assessment from the student. For proctored or high-stakes assessment,
+  execution stays server-side; use Runno for formative practice, feedback and teaching.
+- ⚠️ **Check Runno's language coverage against the client's actual curriculum.** WASI
+  sandboxing covers languages with a WASI target; verify against the published packages
+  rather than assuming.
+- 🔴 **Borrow no benchmark into the deliverable.** The pedagogy benchmarks this KB has
+  measured are licensed shut — Khan's dataset permits evaluation and forbids redistribution,
+  production use and training; `CSTutorBench` is CC BY-NC. Evaluate with them where their
+  terms allow, ship **none** of them, and keep the harness (P23) as the asset.

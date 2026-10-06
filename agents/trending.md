@@ -8,6 +8,153 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — fourteenth pass: the channel is the platform's name, and it yields 80% against the language channel's 25%
+
+**New channel: query the name of the platform, one name at a time.** Passes 1–4 searched in
+English; 5–12 in English and Spanish; the thirteenth added Japanese, Korean, Arabic and
+Portuguese and concluded the language was the wrong variable. This pass accepts that
+conclusion and replaces the variable: not the *language* of the query but the **name of the
+education platform the asset integrates with** — Canvas, Moodle, Brightspace, Blackboard,
+Google Classroom, Skolverket, Smartschool, KUPID, NTU COOL.
+
+### Finding 1 — the measured yield, stated as a denominator
+
+| Channel | Candidates | Carried a licence payload | Rate | Of those, education software |
+|---|---|---|---|---|
+| Language (13th pass) | 12 | 3 | 25% | **1 of 3** |
+| **Platform name (this pass)** | **20** | **16** | **80%** | **16 of 16** |
+| MCP Registry (this pass, new) | 6 probed | 2 | 33% | 2 of 2 — and **1 of the 6 is dead** |
+| Generalist queries (this pass) | 0 new | — | — | — |
+
+🟢 **The platform channel cannot drift.** A topic query, a star-sorted query and a language
+query all collapse into the generalist agent layer — this KB has recorded that collapse 45
+times. A platform name cannot: `brightspace` returns 23 repositories and every one of them
+is about Brightspace. **And it places the finding by region for free**, because a platform is
+an institution in a country. Full rows and licences in `agents/top.md` (fourteenth pass).
+
+🔵 **22 of the 24 rows shelved this pass are new to this KB.** The channel was genuinely
+untried: this KB has searched *for* education MCP servers many times and had never searched
+*by the name of the system they plug into*.
+
+### Finding 2 — the archive MCP cluster is 98 addresses, not "~20", and it is 73% permissive
+
+The thirteenth pass's instruction 1 was to take the education MCP cluster out of
+`archive/` — *"largest unrecovered block; expect decay and record it as supply data."*
+
+| Verdict | of 98 |
+|---|---|
+| Permissive payload read (68 MIT · 2 Apache-2.0 · 2 Unlicense) | **72** |
+| Copyleft payload (2 GPL-3.0 · 2 AGPL-3.0) | 4 |
+| No payload under 20 filenames (7 of them declare a licence in a manifest only) | 17 |
+| 🔴 Gone | **5** |
+
+🔴 **The prediction of decay was wrong, and the reason is instructive.** It was extrapolated
+from 2 dead MCP servers inside a sample of 4 dead addresses — a 2-of-4 ratio read as a rate.
+Measured across the cluster, **decay is 5%** and the block is the most uniformly permissive
+this KB has ever censused. Three of the five dead addresses are Canvas or teacher-facing
+servers: **decay concentrates where many authors built the same thing**, not where the work
+was hard.
+
+### Finding 3 — the case-variant ladder cost 19 extra requests per repository and bought nothing
+
+Instruction 2 was to re-probe ungranted verdicts with case variants, after `LICENSE.TXT`
+turned a 470★ Apache-2.0 repository into a false absence. Run across all 98 addresses with
+the full ladder (`LICENSE` · `.md` · `.txt` · `.TXT` · `.MD` · `License*` · `license*` ·
+`LICENCE*` · `COPYING*` · `LICENSE-MIT` · `LICENSE.rst` · `docs/LICENSE`):
+
+🔵 **76 of 76 payloads sat at plain `LICENSE`.** Not one variant paid out.
+
+**The failure mode is real and rare.** Carry the ladder for a single high-value asset whose
+absence would change a recommendation; do not pay it across a census. A negative result on a
+method is worth as much as a positive one, because it is the one that stops the next twelve
+passes spending the budget.
+
+### Finding 4 — an agent-published branch is a default branch in the wild
+
+`DaviPac/Classroom-mcp` has **no `main`**. Its default branch is
+`claude/publish-classroom-aluno-mcp-9g61ee`. Every filename probe against a hardcoded
+`main`/`master` returns 404, and the repository is written down as ungranted — which it is
+not (its `package.json` declares MIT).
+
+🟢 This is the concrete case that makes `ls-remote --symref` non-optional. It is also a new
+fact about the supply: **agent-generated branches are now shipping as defaults**, so a KB
+that probes by convention will manufacture absences at a rate that grows with agent usage.
+
+### Finding 5 — 7 of 17 ungranted repositories are *declared* and ungranted, and the costliest is at 103★
+
+Seven carry a licence identifier in `package.json` or `pyproject.toml` and no licence text.
+🔴 **The worst case is [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms)
+at 103★** — the second-highest-starred Canvas MCP server on GitHub. GitHub's API returns
+`license: null`; the manifest says MIT. One of the seven declares **AGPL-3.0**
+(`vnschneider/suap-mcp`), so a landing payload there would be a constraint, not a win.
+
+**7 of 17 is a packaging default, not a licensing culture**: `npm init` writes the field and
+no file. It is one commit to fix and worth asking a client or maintainer for. Until then the
+rule is unchanged: **no payload, no deliverable.**
+
+### Finding 6 — a bespoke licence named "Community License", and it forbids everything a Globant deliverable does
+
+[`AStheTECH/mewcp-google-classroom`](https://github.com/AStheTECH/mewcp-google-classroom)
+ships `LICENSE.md`, 6,489 B, **"AStheTECH Community License (ACL)"** — read in full:
+non-commercial only; **no hosted service, SaaS or API offering**; no rebranding or
+white-labelling; nothing *"substantially similar or competitive"*; automatic termination on
+breach with destruction of derivatives.
+
+🔴 **Unusable in client work under every clause that matters**, and its *name* reads as the
+opposite. Trend 23 at its sharpest: not a mislabelled permissive licence but a **bespoke
+proprietary one wearing an open name**.
+
+### Finding 7 — the platform supply map, and the empty tier is K-12 administration
+
+`total_count`, one platform name per query (never OR'd — see the method note):
+
+| Tier | repos | best ★ | permissive payload at the top? |
+|---|---|---|---|
+| Canvas LMS | 117 | 278 | yes |
+| Moodle | 86 | 43 | yes |
+| Brightspace / D2L | 23 | 57 | yes 🆕 |
+| Google Classroom | 17 | 45 | best **dedicated** server is **6★** 🆕 |
+| Blackboard Learn | 5 | 2 | yes 🆕 |
+| Open edX | 1 | 1 | AGPL-3.0 |
+| 🔴 **PowerSchool (US K-12 SIS)** | **0** | — | **tier does not exist** |
+
+🔵 **Coverage tracks the higher-ed install base and ignores K-12.** Canvas + Moodle hold 203
+of 249 repositories. The clearest build-versus-adopt signal this KB has produced: **adopt in
+higher ed, build in K-12 administration** — where there is nothing to compete with and the
+data (student records, guardians, accommodations) is the regulated part.
+
+### Finding 8 — the three regulated functions now have permissive, payload-backed assets
+
+Three capabilities this KB has repeatedly recorded as gaps or as proprietary-shaped
+problems now each have at least one MIT asset with a licence file, found this pass:
+
+| Function | Asset | Licence | Why it closes something |
+|---|---|---|---|
+| **Auto-grading from a vendor** | [`ictinnovations/ictexam-mcp`](https://github.com/ictinnovations/ictexam-mcp) 16★ | MIT | Exam authoring, delivery and auto-grading, with **writes off by default** — the gated design trend 7 has been asking for, shipped by a company rather than a student. |
+| **Role separation in an LMS agent** | [`nitsuah/bb-mcp`](https://github.com/nitsuah/bb-mcp) 2★ | MIT | **RBAC middleware** in the MCP layer. 2★, and the only governance-aware design in a 98-address cluster. |
+| **A national curriculum as an API** | [`isakskogstad/Skolverket-MCP`](https://github.com/isakskogstad/Skolverket-MCP) 12★ | MIT | All of Sweden's Skolverket open APIs — syllabus, school-unit register, planned educations. ⚠️ Copyright is *"Contributors"*, **not the agency**: the MIT covers the wrapper, the agency's terms govern the data. |
+
+⚠️ **Star count is not the signal in this tier and this pass is the proof.** The three assets
+that close regulated gaps sit at 16★, 2★ and 12★; the 103★ asset in the same cluster cannot
+be shipped at all for want of a licence file.
+
+### What the next pass should do
+
+1. **Finish the MCP Registry census.** The page loop stopped at page 313 (31,300 records,
+   11,505 unique servers) when a request came back empty. Resume from the last cursor and
+   state the real index size, then re-run the education filter against the whole thing.
+2. **Run the platform-name channel against the SIS and ministry tiers**, which this pass only
+   sampled: PowerSchool measured 0, and Infinite Campus, Skyward, SIMS (UK), Arbor,
+   Magister/Somtoday (NL), WebUntis (DE/AT), Pronote (FR) and SIGAA/SUAP (Brazil) were not
+   each queried alone. **The LATAM entry in this channel is SIGAA and SUAP, and this pass did
+   not measure them properly** — the only attempt OR'd them and collapsed into the
+   generalist layer.
+3. **Ask the seven manifest-only maintainers for a licence file**, starting with
+   `DMontgomery40/mcp-canvas-lms` (103★). It is one commit and it unblocks the top of a tier.
+4. **Do not re-run the case-variant ladder across a census.** Finding 3 priced it.
+
+---
+
 ## 2026-10-06 — thirteenth pass: searched in the country's own language, and the yield is 3 licensed assets out of 12
 
 **New channel: the mandatory queries, run in Japanese, Korean, Arabic and Portuguese.**

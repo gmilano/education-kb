@@ -1844,3 +1844,180 @@ pass changed, closed or newly measured.
   queries only to catch a regime change — the same discipline already applied to the
   generalist GitHub query, which has now returned **zero new rows for nine consecutive
   passes** (fourteen for the infrastructure query).
+
+## 39. Integration coverage follows the higher-education install base, and K-12 administration is an empty tier
+
+Measured this pass for the first time: the number of open-source integration repositories per
+education platform, one platform name per query, licences read from payloads.
+
+| Platform | Integration repos | Best permissive, payload-backed server |
+|---|---|---|
+| Canvas LMS | **117** | MIT, 278★ |
+| Moodle | **86** | MIT, 43★ (+ MIT 18★ new) |
+| Brightspace / D2L | **23** | MIT, 57★, on npm |
+| Google Classroom | **17** | MIT, **6★** |
+| Blackboard Learn | **5** | MIT, 2★ |
+| Open edX | **1** | AGPL-3.0 |
+| 🔴 PowerSchool (US K-12 SIS) | **0** | none |
+
+**Canvas and Moodle hold 203 of the 249 repositories.** Blackboard, with a large global
+university estate, has five. Google Classroom — the widest K-12 reach on the table — has
+seventeen, and its best *dedicated* server has six stars. PowerSchool measures zero.
+
+🔵 **The trend is not "K-12 is underserved"; it is that supply tracks who can get
+credentials.** An individual developer can obtain a Canvas or Moodle token for their own
+course in minutes. Nobody can obtain a district student information system token for a
+weekend project. So the open-source tier maps almost perfectly onto *self-serve
+authentication*, and stops exactly where institutional authorisation begins.
+
+**Three consequences that decide how an engagement is priced.**
+
+1. **In higher education the connector is not differentiating.** It exists, it is MIT, and it
+   is duplicated. Sell configuration, governance, pedagogy and the audit trail.
+2. **In K-12 administration there is nothing to adopt and nothing to compete with**, and the
+   barrier that emptied the tier — institutional credentials — is one an enterprise
+   integrator clears as a matter of course. This is the clearest build-versus-adopt signal
+   this KB has produced.
+3. **The empty tier and the regulated tier are the same tier.** Student records, guardians,
+   enrolment, accommodations. The absence of hobbyist code is not an absence of demand; it is
+   the regulated surface declining to be built by hobbyists.
+
+⚠️ **The counter-reading to keep in view:** a tier at `total_count: 0` may also be a tier
+served entirely by the platform vendor's own paid integrations. Zero open repositories is a
+statement about the open-source shelf, not about whether a client currently has an
+integration.
+
+## 40. The MCP server has become a product shape, and the catalogue it is listed in is mostly closed
+
+The official MCP Registry was censused first-hand this pass: **11,505 unique servers** across
+31,300 version rows. Filtered on education vocabulary with word boundaries: **102 servers, of
+which 71 (70%) carry no source repository at all.**
+
+🔵 **The education tier of the registry is a directory of hosted commercial endpoints with
+open-source entries mixed in.** Among the 71: **`com.moodlemcp/moodle`** — *"Connect your
+Moodle to AI assistants: courses, content, grading"* — a **closed, hosted connector competing
+directly with the 86 open repositories** in that platform's tier; `io.cubite/lms` (hosted LMS
+with SCORM/xAPI); `com.skillsail/mcp` (SCORM authoring and export); and a dense US
+school-data cluster (`ai.edusignal/districts`, `co.schoolscope/mcp`, `ai.sacs/sacs-mcp`,
+`com.olyport/nces-education`, `com.olyport/college-scorecard`).
+
+**What changed, stated as a change:** for two years the open-source education stack competed
+with proprietary *platforms*. It now also competes with **proprietary connectors to open
+platforms** — a thin, high-margin layer sold in front of software the client already hosts
+themselves. That is the same layer a Globant deliverable occupies.
+
+**So the differentiator moves to the three things an endpoint cannot offer**, and they are
+the three a client cannot get from a service they do not host: **the code**, **deployment
+inside their own boundary**, and **the audit trail**. Keep an observability layer in the stack
+(Langfuse, MIT outside `ee/`) so the third is a by-product of running rather than a separate
+compliance project.
+
+⚠️ **And a vocabulary warning for proposals.** "It's in the MCP registry" now sounds like a
+provenance claim and is not one: the registry says nothing about a licence, **one of six
+sampled entries points at a repository that no longer exists**, and its `?q=` search
+parameter returns HTTP 200 with the unfiltered page. Being listed is marketing; the payload
+is provenance.
+
+## 41. What places an asset is the institution, not the language — and the institution's name is searchable in English
+
+Trend 37 concluded that measured by language rather than region, the LATAM supply gap is
+absence rather than thinness. The thirteenth pass then tested language directly — Japanese,
+Korean, Arabic, Portuguese — and got **3 licensed finds from 12 candidates (25%), only one of
+them education software**, concluding that language was the wrong variable.
+
+This pass replaced the variable with the **name of the platform the asset integrates with**,
+run one name at a time: **16 licensed from 20 candidates (80%), and all 16 are education
+software.**
+
+🟢 **Two properties make this channel structurally better, not just luckier.**
+
+- **It cannot drift.** Topic queries, star-sorted queries and language queries all collapse
+  into the generalist agent layer — this KB has recorded that collapse 45 times, and ten
+  consecutive passes of the mandatory generalist query have yielded zero repositories. A
+  platform name cannot collapse: `brightspace` returns 23 repositories and every one is about
+  Brightspace.
+- **It places the finding by region for free**, because a platform is an institution in a
+  country. Skolverket places to Sweden, Smartschool to Belgium, KUPID to Korea, NTU COOL to
+  Taiwan, SLIIT to Sri Lanka, VGU to Vietnam. No inference step, so no inferred-data error.
+
+**The sharp version of the correction:** the Korean asset `SonAIengine/ku-portal-mcp` (MIT,
+13★) already existed when the Korean-language query was run, and that query did not find it.
+The platform name **KUPID** did. So the finding is not that non-English search is useless —
+it is that **the institution is the unit of placement, and institutions are usually
+searchable in English even when their README is not.**
+
+⚠️ **The method caveat that cost this pass a region.** The channel works only with one
+platform name per query. `sigaa OR suap OR siga mcp server` — three Brazilian
+university-system names — returned **`total_count: 160,659`** and the generalist layer,
+because Boolean `OR` lets the highest-volume terms (`mcp`, `server`) dominate. **LATAM's
+platform tier therefore remains unmeasured**, and that is recorded as a gap rather than as a
+result.
+
+## 42. The national curriculum is becoming a callable API — and the wrapper's licence is not the data's licence
+
+New this pass, and it is a shape rather than a single asset: a **state education authority's
+own API estate, wrapped thinly under a permissive licence and published as an agent-callable
+server.**
+
+| Authority | Wrapper | Licence (payload read) |
+|---|---|---|
+| **Skolverket** (Sweden) — Läroplan/syllabus API, Skolenhetsregistret school-unit register, Planned Educations | [isakskogstad/Skolverket-MCP](https://github.com/isakskogstad/Skolverket-MCP), 12★ | 🟢 **MIT**, 1,093 B |
+| **Udir** (Norway) — school (NSR) and kindergarten (NBR) registries | [3121n/nor-data-udir-mcp](https://github.com/3121n/nor-data-udir-mcp) | 🔴 **none**, 0 of 20 filenames |
+
+🔵 **Why this matters more than its star counts suggest.** In every regime this KB tracks,
+*"aligned to the national curriculum"* is a procurement requirement, and it has been a
+**consulting deliverable** — a human reads the syllabus and writes a mapping that is stale on
+the day it ships. Where the authority publishes an API and a permissive wrapper exists, the
+alignment becomes **a tool call inside the product**, re-evaluated on every run. It is the
+input trend 13 implied and pattern P15 lacked.
+
+⚠️ **And it comes with a licensing distinction this KB has not had to make before.**
+Skolverket-MCP's copyright line reads **"Skolverket Syllabus MCP Contributors"**, *not the
+agency*. So:
+
+- the **MIT grant covers the wrapper** — safe to fork, modify, ship, rebrand;
+- the **agency's own terms govern the data** the wrapper returns, and the MIT licence says
+  nothing whatsoever about them;
+- a proposal that cites "MIT" for a national-curriculum capability is **citing the connector
+  and implying the corpus**. Trend 22 priced the corpus; this is the same error arriving
+  through a cleaner-looking door.
+
+🟢 **The generalisable move, and nothing about it is Nordic.** Check whether the target
+country's education authority publishes an open API; check whether a permissive wrapper
+exists; expect to write one. Writing a thin wrapper over a public national API is small,
+well-bounded and highly reusable — and **Udir is the proof that the gap is normal**: same
+region, same quality of public data, no grant at all.
+
+## Declared gaps — fourteenth pass, 2026-10-06
+
+**Measured and genuinely missing, after first-hand probing this pass.**
+
+1. 🔴 **LATAM's platform-integration tier is unmeasured, by this pass's own error.** SIGAA
+   and SUAP were OR'd into one query, which collapsed into the generalist layer
+   (`total_count: 160,659`). The only LATAM asset found, `vnschneider/suap-mcp`, has **no
+   licence payload** and declares **AGPL-3.0-or-later** in `pyproject.toml` — no grant today,
+   and a copyleft constraint if one ever lands. **Next pass: SIGAA and SUAP, one name per
+   query.**
+2. 🔴 **Zero of the MCP Registry's 102 education servers are LATAM-placed.** Fourth
+   independent instrument to return absence rather than thinness for the region. Consistent
+   with trend 37.
+3. 🔴 **PowerSchool integration tier: `total_count: 0`.** No open-source asset of any licence
+   for the dominant US K-12 student information system. This is a build, and the gap is
+   structural (credentials), not temporal.
+4. ⚠️ **The registry census is incomplete and is reported as a floor.** The page loop ended
+   on an empty body at page 313 (31,300 records → 11,505 unique servers). The true index size
+   is unknown; resume from the cursor before quoting any denominator from it.
+5. ⚠️ **Seven assets are declared-and-ungranted, one of them at 103★.**
+   `DMontgomery40/mcp-canvas-lms` — second-highest-starred Canvas MCP server on GitHub —
+   ships a `package.json` MIT field and no licence file. Six others the same (five MIT, one
+   ISC); one declares AGPL-3.0. **One commit each would unblock them**, and asking is cheaper
+   than rebuilding.
+6. ⚠️ **No permissive asset found this pass addresses accommodations as a first-class
+   surface.** `GarphenGate/moltline-mcp` (MIT) is the only one that even names it among its
+   eight skills. Accommodations are a legal requirement in both US and EU school systems, and
+   the tier is effectively empty.
+7. 🔵 **Negative method result, recorded so the next twelve passes do not re-buy it:** the
+   licence-filename **case-variant ladder** (19 extra requests per repository) paid out
+   **zero times across 98 repositories** — all 76 payloads sat at plain `LICENSE`. Keep it
+   for a single high-value asset whose absence would change a recommendation; do not pay it
+   across a census.

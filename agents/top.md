@@ -1536,3 +1536,266 @@ used in its fourth pass — pulls ClawTeam in on the strength of the org name al
 5.5k★ MIT repository from a known-good education org is precisely the kind of row that
 gets shelved without being read. **The org is not the subject.** Logged here so the next
 org sweep does not re-find it as a discovery.
+
+## Added in the fourteenth pass of 2026-10-06 — the platform-name channel, and 24 verified rows
+
+The thirteenth pass closed with four instructions. This pass took the first three and the
+first one came back with a different answer than the pass that ordered it expected.
+
+**Instruction 1 was: "take the ~20-server education MCP cluster from `archive/`."** The
+cluster is **98 addresses**, not ~20 — the estimate was low by a factor of five. Every one
+was probed: `git ls-remote --symref` for existence and real default branch, then up to
+**20 licence filenames** on `raw.githubusercontent.com` against that branch, then
+`package.json` / `pyproject.toml` / `setup.py` for a manifest declaration.
+
+### Finding 1 — the archive MCP cluster is not decayed, and it is not ungranted
+
+| Verdict | Count of 98 | Detail |
+|---|---|---|
+| **Licence payload read** | **76** | 68 MIT · 2 Apache-2.0 · 2 Unlicense · 2 GPL-3.0 · 2 AGPL-3.0 |
+| No payload under 20 filenames | 17 | of which **7 declare a licence in a manifest only** |
+| 🔴 **Gone — `ls-remote` cannot reach them** | **5** | listed below |
+
+🟢 **72 of 98 addresses (73%) carry a permissive payload.** The pass that ordered this work
+predicted decay ("expect decay and record it as supply data") on the strength of 2 dead MCP
+servers in a sample of 4 dead addresses. Measured across the whole cluster, **decay is 5%**,
+and the cluster is the most uniformly permissive block this KB has ever censused — 68 of 76
+payloads are a plain 1.0–1.1 KB MIT. **The prediction was wrong, and it was wrong because a
+2-of-4 ratio was read as a rate.**
+
+🔴 **The 5 that no longer resolve:**
+
+| Address | What it was |
+|---|---|
+| `Ed-Fi-Alliance-OSS/Ed-Fi-SDK-MCP` | MCP server for the Ed-Fi SDK. Confirms the thirteenth pass. The rest of Ed-Fi is alive and Apache-2.0; Ed-Fi-over-MCP remains a **build**. |
+| `appliedrelevance/frappe_mcp_server` | Frappe/ERPNext MCP server. The KB's note on its 3-byte PyPI licence field now has no upstream to re-read. |
+| `imazhar101/mcp-canvas-server` | Canvas MCP server. |
+| `owentaylor/canvas-mcp` | Canvas MCP server. |
+| `radhepa/Teacher-MCP` | Teacher-facing MCP server. |
+
+**Three of the five are Canvas or teacher-facing servers** — the densest, most duplicated
+part of the cluster. Decay here concentrates in the tier where many authors built the same
+thing, not in the tier that is hard to build.
+
+### Finding 2 — the case-variant hypothesis does not reproduce, and that is worth as much as if it had
+
+The thirteenth pass's instruction 2 was to re-probe ungranted verdicts with case variants,
+because `LICENSE.TXT` had turned a 470★ Apache-2.0 repository into a false absence. This
+pass probed all 98 addresses with the full case ladder — `LICENSE`, `LICENSE.md`,
+`LICENSE.txt`, `LICENSE.TXT`, `LICENSE.MD`, `License`, `License.md`, `License.txt`,
+`license`, `license.md`, `license.txt`, `LICENCE`, `LICENCE.md`, `LICENCE.txt`, `COPYING`,
+`COPYING.txt`, `LICENSE-MIT`, `LICENSE.rst`, `docs/LICENSE`.
+
+🔵 **76 of 76 payloads were at plain `LICENSE`.** Not one case variant, British spelling or
+`COPYING` fallback paid out across 98 repositories.
+
+**So the 13th failure mode is real but rare, and this is the number to carry:** the case
+ladder costs ~19 extra requests per ungranted repository and buys, in this cluster, nothing.
+Keep it in the gate for a **single high-value asset** whose absence would change a
+recommendation; do not pay it across a census. The 470★ Apache-2.0 repository remains the
+exception that justified finding the mode, not evidence of a systematic bias.
+
+### Finding 3 — one default branch is an agent-generated branch, and `main` would have lied
+
+`DaviPac/Classroom-mcp` resolves, and its default branch is:
+
+```
+claude/publish-classroom-aluno-mcp-9g61ee
+```
+
+🔴 **There is no `main`.** A probe hardcoding `main` or `master` — which is what this KB's
+earlier passes did — returns 404 on every filename and writes the repository down as
+ungranted. It is not: its `package.json` declares MIT (see Finding 4 for what that is
+worth).
+
+🟢 **This is the concrete vindication of instruction 3.** `ls-remote --symref` is now the
+standing first step not because it is tidy but because **an agent-published branch is a
+default branch in the wild**, and that is a new fact about the supply this KB measures.
+
+### Finding 4 — 7 of the 17 "ungranted" repositories are *declared and ungranted*, which is worse than silent
+
+Of the 17 addresses with no licence payload under 20 filenames, 7 carry a licence
+**identifier in a build manifest** and nothing else:
+
+| Address | Declares | Where | ★ |
+|---|---|---|---|
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | MIT | `package.json` | **103** |
+| [`DaviPac/Classroom-mcp`](https://github.com/DaviPac/Classroom-mcp) | MIT | `package.json` | not read |
+| [`SalShah20/classroom_mcp`](https://github.com/SalShah20/classroom_mcp) | MIT | `package.json` | 1 |
+| [`ink-waffle/moodle-mcp`](https://github.com/ink-waffle/moodle-mcp) | MIT | `package.json` | not read |
+| [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) | MIT | `package.json` | not read |
+| [`pnp-v/bo-google-classroom-mcp-server`](https://github.com/pnp-v/bo-google-classroom-mcp-server) | ISC | `package.json` | not read |
+| [`vnschneider/suap-mcp`](https://github.com/vnschneider/suap-mcp) | AGPL-3.0-or-later | `pyproject.toml` | not read |
+
+🔴 **`DMontgomery40/mcp-canvas-lms` is the second-highest-starred Canvas MCP server on
+GitHub at 103★, and it ships no licence text.** The GitHub API returns
+`license: null` for it; the `package.json` says MIT. This KB has already established the
+rule (a manifest identifier is an **identifier**, not a grant) — what is new is its **cost**:
+the rule disqualifies the most-starred asset in the second-largest platform tier.
+
+**This is a one-commit fix for the maintainer and it is worth asking for.** 7 of 17 is not a
+licensing culture problem; it is a packaging default — `npm init` writes a `license` field
+and no file. For a Globant engagement the practical rule stands unchanged: **no payload, no
+deliverable.** `vnschneider/suap-mcp` is the one to read twice — it declares **AGPL-3.0**,
+so if the payload ever lands it is a copyleft constraint, not a permissive win.
+
+### Finding 5 — the platform-name channel: 80% licensed, against 25% for the language channel
+
+**Instruction 4's channel question, answered.** The thirteenth pass varied the *language* of
+the query and concluded the language was the wrong variable (3 licensed of 12, and only 1 was
+education software). This pass varied the **platform name** instead — Canvas, Moodle,
+Brightspace, Blackboard, Google Classroom, Skolverket, Smartschool, KUPID, NTU COOL — and ran
+each one **alone**.
+
+| Channel | Candidates | Licensed | Rate | Education software |
+|---|---|---|---|---|
+| Language (13th pass) | 12 | 3 | **25%** | 1 of 3 |
+| **Platform name (this pass)** | **20** | **16** | **80%** | **16 of 16** |
+
+🟢 **Every licensed find is education software, because the platform *is* an education
+platform** — the channel cannot drift into the generalist agent layer the way a topic or
+star-count query does. And it **places each find by region for free**: a platform is an
+institution in a country. That is the property this KB has been missing, and it is the
+answer to its own standing complaint that findings arrive unplaced.
+
+### The rows — 24 verified assets, 22 of them new to this KB
+
+Licences read from each repository's own payload on the real default branch, 2026-10-06.
+Stars from the GitHub REST search API the same day.
+
+#### The platform tier — Brightspace and Blackboard, which this KB had never recorded
+
+| Agent | Repo | Licence (payload) | ★ | Region | What it does |
+|---|---|---|---|---|---|
+| **Brightspace MCP Server** | [RohanMuppa/brightspace-mcp-server](https://github.com/RohanMuppa/brightspace-mcp-server) | **MIT** (`LICENSE`, 1,068 B) | **57** (27 forks) | **North America** | **The fourth major LMS arrives on this shelf.** D2L Brightspace: grades, due dates, assignments, announcements, rosters, syllabus, course content. Published to npm (`npx brightspace-mcp-server@latest`), CI green, Node ≥ 20, "works with any school". Author at Purdue; D2L is Canadian. **The reference row for any Brightspace engagement.** |
+| Brightspace MCP (multi-auth) | [JhostinAleck/brightspace-mcp](https://github.com/JhostinAleck/brightspace-mcp) | **MIT** (`LICENSE`, 1,070 B) | 12 | Global | The **engineering** reference rather than the feature reference: multi-strategy authentication (TOTP, OAuth, browser), retry / circuit-breaker / cache tiers, and **opt-in write operations**. Read this one before designing a write path into any LMS. |
+| Brightspace MCP (Purdue) | [pranav-vijayananth/brightspace-mcp-server](https://github.com/pranav-vijayananth/brightspace-mcp-server) | **Apache-2.0** (`LICENSE`, 11,357 B) | 6 | North America | Python. The only **Apache-2.0** asset in the Brightspace tier — relevant where a client's policy prefers an explicit patent grant over MIT. |
+| Blackboard Learn MCP + RBAC | [nitsuah/bb-mcp](https://github.com/nitsuah/bb-mcp) | **MIT** (`LICENSE`, 1,063 B) | 2 | Global | Blackboard Learn REST API over HTTP or stdio, with **RBAC middleware for role-based access control**. 2★ and the most governance-aware design in the whole 98-address cluster: role separation is the control an education deployment is actually audited on. |
+| Blackboard Learn Ultra MCP | [NiccoloSalvini/mcp-blackboard-ucsc](https://github.com/NiccoloSalvini/mcp-blackboard-ucsc) | **MIT** (`LICENSE`, 1,073 B) | 0 | EMEA | Blackboard Learn Ultra over the public REST API. Python. |
+
+#### The ministry and national-platform tier — the first of its kind in this KB
+
+| Agent | Repo | Licence (payload) | ★ | Region | What it does |
+|---|---|---|---|---|---|
+| **Skolverket MCP** | [isakskogstad/Skolverket-MCP](https://github.com/isakskogstad/Skolverket-MCP) | **MIT** (`LICENSE`, 1,093 B) | 12 | **EMEA** (Sweden) | 🟢 **A national curriculum as an agent-callable surface.** Exposes *all* of Skolverket's (Swedish National Agency for Education) open APIs: the **Läroplan / syllabus API**, the **Skolenhetsregistret** school-unit register, and the Planned Educations API. Published in the **official MCP Registry** (`io.github.isakskogstad/Skolverket-MCP`). ⚠️ The copyright line reads *"Skolverket Syllabus MCP Contributors"*, **not the agency** — this is a third-party wrapper of a public API, so the MIT covers the wrapper and the agency's own terms govern the data. |
+| Udir MCP (Norway) | [3121n/nor-data-udir-mcp](https://github.com/3121n/nor-data-udir-mcp) | 🔴 **none** — no payload under 20 filenames, no manifest field | not read | **EMEA** (Norway) | Norwegian Directorate for Education (Udir) school (NSR) and kindergarten (NBR) registry data. **Found in the MCP Registry, and ungranted.** Recorded as the EMEA counter-case to Skolverket: two Nordic education-ministry wrappers, one usable, one not. |
+| Smartschool MCP | [MauroDruwel/Smartschool-MCP](https://github.com/MauroDruwel/Smartschool-MCP) | **MIT** (`LICENSE`, 1,069 B) | 5 | **EMEA** (Belgium) | Smartschool, the dominant LMS in Flemish education. Python ≥ 3.10, on **PyPI** (`smartschool-mcp`), with CI, codecov and a published MCP name (`io.github.MauroDruwel/smartschool-mcp`). Small star count, real release engineering. |
+| KUPID portal MCP | [SonAIengine/ku-portal-mcp](https://github.com/SonAIengine/ku-portal-mcp) | **MIT** (`LICENSE`, 1,068 B) | 13 | **APAC** (Korea) | Korea University's KUPID portal: notices, library seat availability, weekly assignments. On **PyPI** (`ku-portal-mcp`). Korean-language README. **The thirteenth pass's Korean-language query did not find this; the platform name did** — see the method note below. |
+| NTU COOL | [kc0506/ntucool](https://github.com/kc0506/ntucool) | **MIT** (`LICENSE`, 1,066 B) | 10 | **APAC** (Taiwan) | National Taiwan University's COOL platform: a single `cool` binary that is CLI, MCP server (`cool mcp`) and SDK, **plus a Claude Code plugin** (`/plugin marketplace add kc0506/ntucool`) shipping skills and commands. ⚠️ Its own README states it is **unofficial**. The first asset in this KB to ship a Claude Code plugin as a distribution channel. |
+
+#### Assessment, study and tutoring agents
+
+| Agent | Repo | Licence (payload) | ★ | Region | What it does |
+|---|---|---|---|---|---|
+| **ICTExam MCP** | [ictinnovations/ictexam-mcp](https://github.com/ictinnovations/ictexam-mcp) | **MIT** (`LICENSE`, 1,114 B) | 16 | **APAC** (Pakistan) | 🟢 **A vendor shipping MIT into the assessment gap.** MCP server for **ICTExam**, a commercial AI exam authoring, delivery and **auto-grading** platform: read exams, gradebooks and per-question item analysis; parse a question paper into a structured exam with AI and publish to students — **only when writes are explicitly turned on**. On npm. Holder is a company (ICT Innovations), so the grant is corporate, not a student project. **The write gate is the design this KB has been asking for in trend 7.** |
+| SmartStudy Agent | [HumphreySun98/Smart-Study-Agent](https://github.com/HumphreySun98/Smart-Study-Agent) | **MIT** (`LICENSE`, 1,067 B) | 57 | Global | A **reinforcement-learning policy** chooses what to study next, an **FSRS** memory model schedules review, an LLM generates the quizzes between. Browser, terminal and MCP. The second auditable mastery instrument in this KB after OATutor's Bayesian Knowledge Tracing — and a different family (RL + FSRS vs BKT), which matters when a client asks why a sequencing decision was made. |
+| Shiori (栞) | [kaorii-ako/Shiori-v1](https://github.com/kaorii-ako/Shiori-v1) | **MIT** (`LICENSE`, 1,073 B) | 45 | Global | Study companion: Google Classroom sync, SRS flashcards, weighted grade calculator with GPA prediction, syllabus-to-study-plan, quiz generation, MCP server. React/Vite + Supabase, PWA, Docker, self-hostable. **Bring-your-own Gemini key** — the cost model, not a subscription. The highest-starred asset in the Google Classroom tier. |
+| OpenStudy | [OpenStudy-dev/OpenStudy](https://github.com/OpenStudy-dev/OpenStudy) | **MIT** (`LICENSE`, 1,068 B) | **75** | EMEA | Self-hostable personal study dashboard — courses, schedule, lectures, topics, deliverables, tasks — reachable by an agent from browser, phone, desktop or Claude Code. FastAPI + React 19 + Postgres 16. Bilingual DE/EN README. The cleanest **self-hosted + agent-reachable** reference stack on this shelf. |
+| mydy LMS helper | [Deeptanshuu/mydy-lms-helper](https://github.com/Deeptanshuu/mydy-lms-helper) | **MIT** (`LICENSE`, 1,070 B) | 7 | APAC (India) | LMS assistant for the mydy platform. |
+
+#### The Canvas and Moodle tiers — the duplicated middle, with the licensed ones named
+
+| Agent | Repo | Licence (payload) | ★ | What it does |
+|---|---|---|---|---|
+| canvas-ed-mcp | [r1ckyIn/canvas-ed-mcp](https://github.com/r1ckyIn/canvas-ed-mcp) | **MIT** (`LICENSE`, 1,056 B) | 15 | Canvas LMS MCP server. ⚠️ Its MIT copyright line carries **a year and no holder name** — valid, but name the holder before vendoring. |
+| canvas-mcp (Huijts) | [r-huijts/canvas-mcp](https://github.com/r-huijts/canvas-mcp) | **MIT** (`LICENSE`, 1,065 B) | 12 | Canvas LMS MCP server, © 2024 R. Huijts — the earliest copyright year in this pass's set. |
+| canvas-mcp (Keluskar) | [aryankeluskar/canvas-mcp](https://github.com/aryankeluskar/canvas-mcp) | **ISC** (`LICENSE`, 746 B) | 11 | Canvas LMS MCP server. **The second ISC asset in this KB** — functionally MIT, OSI-approved, and still rejected by a `license:mit OR license:apache-2.0 OR license:bsd` filter. Reinforces the thirteenth pass's allow-list finding. |
+| moodle-mcp (Ribeiro) | [1alexandrer/moodle-mcp](https://github.com/1alexandrer/moodle-mcp) | **MIT** (`LICENSE`, 1,074 B) | **18** | Moodle MCP server. The highest-starred **permissive** Moodle MCP server found this pass after `peancor/moodle-mcp-server` (43★), which this KB already carries. |
+| moodle-mcp (Lefebvre) | [Snaw80/moodle-mcp](https://github.com/Snaw80/moodle-mcp) | **MIT** (`LICENSE`, 1,072 B) | 4 | Moodle MCP server. |
+| Google Classroom MCP | [faizan45640/google-classroom-mcp-server](https://github.com/faizan45640/google-classroom-mcp-server) | **MIT** (`LICENSE`, 1,063 B) | 6 (9 forks) | 🔵 **The highest-starred *dedicated* Google Classroom MCP server on GitHub.** 6★ — and that is the finding, not the row; see Finding 6. More forks than stars, which is what a utility people deploy rather than watch looks like. |
+| Google Workspace for Education MCP | [Kimmahone/edu-workspace-mcp](https://github.com/Kimmahone/edu-workspace-mcp) | **MIT** (`LICENSE`, 1,087 B) | 1 | Docs, Sheets, Slides, **Forms**, Drive and Classroom in one server. TypeScript. The Forms surface is the one the others lack, and Forms is where K-12 assessment actually lives. |
+| AI School (course catalogue) | [Lilly-Tech-Collab/ai-school-mcp](https://github.com/Lilly-Tech-Collab/ai-school-mcp) | **MIT** (`LICENSE`, 1,405 B) | not read | Search and read 550+ free AI course tracks and 21,000+ lessons. Found in the **MCP Registry**. An enablement-content surface, not a platform integration. |
+| Moltline Educator | [GarphenGate/moltline-mcp](https://github.com/GarphenGate/moltline-mcp) | **MIT** (`LICENSE`, 1,072 B) | not read | 8 skills across curriculum, classroom, **accommodations** and exam prep. Found in the MCP Registry. Accommodations is a vocabulary no other asset in this KB covers, and it is a legal requirement in both US and EU school systems. |
+
+### Finding 6 — the supply map, and the hole is K-12 administration
+
+Measured with GitHub REST `total_count`, one platform name per query, 2026-10-06:
+
+| Platform tier | `total_count` | Highest ★ | Highest-starred **permissive, payload-backed** asset |
+|---|---|---|---|
+| Canvas LMS | **117** | 278 | `vishalsachdev/canvas-mcp`, MIT (already shelved) |
+| Moodle | **86** | 43 | `peancor/moodle-mcp-server`, MIT (already shelved) |
+| **Brightspace / D2L** | **23** | 57 | `RohanMuppa/brightspace-mcp-server`, MIT 🆕 |
+| **Google Classroom** | **17** | 45 (Shiori) | `faizan45640/...`, MIT, **6★** 🆕 |
+| **Blackboard Learn** | **5** | 2 | `nitsuah/bb-mcp`, MIT 🆕 |
+| Open edX | **1** | 1 | — (AGPL-3.0; already recorded) |
+| 🔴 **PowerSchool (US K-12 SIS)** | **0** | — | **none — the tier does not exist** |
+
+🔵 **Open-source MCP coverage tracks the higher-education install base and ignores K-12.**
+Canvas and Moodle together hold **203 of the 249** repositories measured. Blackboard, with a
+large global university estate, has **5**. Google Classroom — the widest K-12 reach of any
+platform on this table — has **17**, and its best dedicated server has **6★**. PowerSchool,
+the dominant US K-12 student information system, measures **`total_count: 0`**.
+
+**This is the clearest build-versus-adopt signal in this KB.** For a higher-ed engagement on
+Canvas or Moodle, adopt: the shelf is deep, permissive and duplicated. For **K-12
+administration**, there is nothing to adopt and nothing to compete with — a Globant-built
+Google Classroom or PowerSchool MCP server enters an empty tier, and the governance surface
+(student records, guardians, accommodations) is exactly the regulated part.
+
+### Finding 7 — a bespoke "Community License" in the education MCP tier, and it is unusable
+
+[`AStheTECH/mewcp-google-classroom`](https://github.com/AStheTECH/mewcp-google-classroom)
+carries **`LICENSE.md`, 6,489 B**, titled **"AStheTECH Community License (ACL)"**. Read in
+full. It is not OSI-approved and it is not near-miss permissive:
+
+- Grant: *"limited, non-exclusive, non-transferable"*; *"All rights not expressly granted are reserved."*
+- Prohibited without written authorisation: **sell, license, sublicense, lease or otherwise commercially exploit**; **offer the software as part of any hosted service, SaaS platform or API service**; **rebrand or white-label**; build anything *"substantially similar to or competitive with"* it.
+- Distribution permitted only where *"strictly non-commercial in nature."*
+- **Termination is automatic and immediate on any breach**, with destruction of derivatives.
+
+🔴 **Verdict: unusable in client work, under every clause that matters.** A Globant
+deliverable is commercial, is usually hosted, and is usually rebranded. The word
+*"Community"* in the title is doing the opposite of what a reader skimming a repository
+listing would assume, and GitHub's sidebar shows such a file as a generic "License".
+
+**This is trend 23's label-versus-grant finding at its sharpest**: not a mislabelled
+permissive licence, but a **bespoke proprietary licence whose name reads as an open one**.
+The gate is unchanged and it caught this: read the payload, and when the first line is not a
+known licence title, read all of it.
+
+### Finding 8 — 11 addresses measured this pass and genuinely ungranted
+
+Probed with the full 20-filename ladder on the real default branch, plus manifests. No grant
+of any kind:
+
+| Address | Platform | ★ |
+|---|---|---|
+| [`lucanardinocchi/canvas-mcp`](https://github.com/lucanardinocchi/canvas-mcp) | Canvas | **22** |
+| [`plyght/canvas-mcp`](https://github.com/plyght/canvas-mcp) | Canvas | 14 |
+| [`joshuasoup/d2l-mcp`](https://github.com/joshuasoup/d2l-mcp) | Brightspace | 13 |
+| [`haanhtuandev/vgu-mcp`](https://github.com/haanhtuandev/vgu-mcp) | Vietnamese-German University (APAC) | 10 |
+| [`zainf2327/mcp-classroom`](https://github.com/zainf2327/mcp-classroom) | Google Classroom — **auto-grades submissions** | 6 |
+| [`kesaruhasun/mcp-sliit-courseweb`](https://github.com/kesaruhasun/mcp-sliit-courseweb) | SLIIT, Sri Lanka (APAC) | 6 |
+| [`P1ckle3/blackboard-mcp`](https://github.com/P1ckle3/blackboard-mcp) | Blackboard, Univ. of Queensland + Okta SSO | 0 |
+| [`shimahikojin/google-classroom-mcp`](https://github.com/shimahikojin/google-classroom-mcp) | Google Classroom | 0 |
+| [`3121n/nor-data-udir-mcp`](https://github.com/3121n/nor-data-udir-mcp) | Udir, Norway (EMEA) | not read |
+| [`DistrictAPI/districtapi-mcp`](https://github.com/DistrictAPI/districtapi-mcp) | US school districts (North America) | not read |
+| [`710git/course-drift-oracle`](https://github.com/710git/course-drift-oracle) | course-drift reports | not read |
+
+⚠️ **`zainf2327/mcp-classroom` auto-grades student submissions and carries no licence.** Of
+everything ungranted in this pass, that is the one whose function is most regulated and
+whose grant is most needed.
+
+### The method note for this pass
+
+**Four instrument facts, three of them cautionary.**
+
+1. 🔴 **Boolean `OR` in GitHub repository search destroys specificity.** The LATAM probe
+   `sigaa OR suap OR siga mcp server` returned **`total_count: 160,659`** — the generalist
+   MCP layer (`awesome-mcp-servers` 95.9k★, `headroom`, `private-gpt`, `playwright-mcp`).
+   The same platform names queried **one at a time** return tiers in the single and double
+   digits. **Never OR platform names.** Every count in Finding 6 was measured with one name
+   per query for exactly this reason.
+2. 🔵 **`minimal_output: true` on the search API returns stars, forks, topics and the real
+   default branch, and omits the licence.** That is the right shape for this KB: the licence
+   must come from the payload anyway, and the full objects overflow a single tool result at
+   ten rows.
+3. 🟢 **`ls-remote --symref` first, every time** — it answers existence and default branch in
+   one call with no API dependency, and Finding 3 is what happens without it.
+4. ⚠️ **A language channel and a platform channel answer different questions.** The Korean
+   asset `SonAIengine/ku-portal-mcp` (MIT, 13★) existed when the thirteenth pass ran its
+   Korean-language query and that query did not surface it. The platform name **KUPID** did.
+   The thirteenth pass's conclusion — *"the language was the wrong variable"* — holds and
+   gets sharper: **what places an asset is the institution, and the institution's name is
+   usually searchable in English even when its README is not.**

@@ -876,3 +876,111 @@ What it does **not** change:
 | Interactive lessons with misconception handling | Oppia | 🟢 Apache-2.0 |
 | National / nine-figure learner scale | Sunbird | 🟢 MIT (100+ services is the cost) |
 | The incumbent is already there | Moodle / Canvas / Open edX | 🔴 Copyleft — **side-car via LTI or MCP**, never a fork |
+
+## Added in the fourteenth pass of 2026-10-06 — the proprietary platforms a client already runs, and what their integration tier now costs
+
+Every platform on this page up to here is one Globant can **deploy**: permissive ones to
+customise and redistribute, copyleft ones whose clause decides the engagement. That framing
+has a hole in it, and it is the most common engagement in higher education: **the client
+already runs a proprietary LMS and is not replacing it.** Canvas, Brightspace, Blackboard
+and Google Classroom are not on this shelf as platforms because they cannot be — and the
+question a studio is actually asked is not *"what should we deploy"* but *"what can you build
+against what we have."*
+
+This pass measured that answer, platform by platform. The licence that matters is no longer
+the platform's; it is **the licence of the integration tier**, and that tier is now large
+enough to inventory.
+
+### The integration tier, by platform
+
+Measured with GitHub REST `total_count`, one platform name per query, 2026-10-06. Licences
+read from each repository's own payload. Full rows in `agents/top.md` (fourteenth pass).
+
+| Platform the client runs | Integration repos | Best permissive, payload-backed server | Verdict for a Globant engagement |
+|---|---|---|---|
+| **Canvas LMS** (Instructure) | **117** | `vishalsachdev/canvas-mcp`, **MIT**, 278★, up to 103 tools | 🟢 **Adopt.** Deepest tier in education. Pin the canonical repo against its forks. |
+| **Moodle** (GPL-3.0 platform) | **86** | `peancor/moodle-mcp-server`, **MIT** — plus `1alexandrer/moodle-mcp`, MIT, 18★ 🆕 | 🟢 **Adopt, from outside the tree.** The MCP side-car is MIT precisely because it is not an in-tree plugin — the licence-boundary note in `agents/top.md` is the whole architecture. |
+| 🆕 **Brightspace / D2L** | **23** | `RohanMuppa/brightspace-mcp-server`, **MIT**, 57★, on npm | 🟢 **Adopt.** New to this KB. A real tier: a feature-complete server on npm, an engineering-grade alternative with opt-in writes (`JhostinAleck/brightspace-mcp`, MIT) and an **Apache-2.0** option (`pranav-vijayananth/...`) where a client's policy wants the explicit patent grant. |
+| 🆕 **Blackboard Learn / Ultra** | **5** | `nitsuah/bb-mcp`, **MIT**, 2★, **RBAC middleware** | ⚠️ **Thin — build on the best of five.** Large university install base, five repositories. `bb-mcp` is the one to start from: it is the only asset in the whole 98-address cluster that puts **role-based access control** in the MCP layer, which is the control an education deployment is audited on. |
+| 🆕 **Google Classroom** | **17** | `faizan45640/google-classroom-mcp-server`, **MIT**, **6★** | 🔴 **Build.** The widest K-12 reach of any platform here and its best dedicated server has six stars. `Kimmahone/edu-workspace-mcp` (MIT) is the more useful starting point because it covers **Google Forms**, and Forms is where K-12 assessment actually lives. |
+| **Open edX** (AGPL-3.0 platform) | **1** | — (`blend-ed/tutor-contrib-openedxmcp`, **AGPL-3.0**) | ⚠️ **Copyleft all the way down.** The one integration asset inherits the platform's AGPL. Already recorded; unchanged this pass. |
+| 🔴 **PowerSchool** (dominant US K-12 SIS) | **0** | **none** | 🔴 **Empty tier.** `total_count: 0`. There is nothing to adopt, nothing to fork and nothing to compete with. |
+
+### What this table changes about platform selection
+
+🔵 **Integration depth is inversely related to engagement opportunity.** Canvas and Moodle
+hold **203 of the 249** repositories measured. Everything a client is likely to ask for
+against those two already exists under MIT, so the studio's value there is configuration,
+governance and pedagogy — **not** the connector.
+
+The money is in the thin and empty tiers, and they are the **K-12 administrative** ones:
+
+- **Google Classroom and PowerSchool together cover most of US K-12**, and their open-source
+  integration tier is 17 repositories and 0 repositories respectively.
+- That tier's data is **student records, guardians, enrolment and accommodations** — i.e. the
+  regulated surface. The reason it is empty is not that nobody wants it; it is that a
+  hobbyist cannot get credentials to a district SIS. **An enterprise integrator can**, and
+  that is the asymmetry.
+- Price it as a build, not an adoption, and put the governance artefacts in the statement of
+  work from day one (see P24 and P25 in `compose/patterns.md`).
+
+### 🆕 The ministry tier — a national curriculum as a callable platform
+
+New on this page and new to this KB: the platform is not an LMS but a **state education
+authority's own API estate**, and in two Nordic countries it is already wrapped as an MCP
+server.
+
+| Authority | Wrapper | Licence (payload) | What it exposes |
+|---|---|---|---|
+| **Skolverket** — Swedish National Agency for Education (**EMEA**) | [isakskogstad/Skolverket-MCP](https://github.com/isakskogstad/Skolverket-MCP), 12★ | 🟢 **MIT** (`LICENSE`, 1,093 B) | *All* of Skolverket's open APIs: the **Läroplan / syllabus API**, the **Skolenhetsregistret** school-unit register, and the Planned Educations API. Published in the official MCP Registry. |
+| **Udir** — Norwegian Directorate for Education (**EMEA**) | [3121n/nor-data-udir-mcp](https://github.com/3121n/nor-data-udir-mcp) | 🔴 **none** — 0 of 20 filenames, no manifest field | School (NSR) and kindergarten (NBR) registry data. |
+| **Smartschool** — dominant LMS in Flemish education (**EMEA**, Belgium) | [MauroDruwel/Smartschool-MCP](https://github.com/MauroDruwel/Smartschool-MCP), 5★ | 🟢 **MIT** (`LICENSE`, 1,069 B) | Platform integration with real release engineering: PyPI package, CI, codecov. |
+
+⚠️ **Read the Skolverket copyright line before this goes in a proposal.** It says
+**"Skolverket Syllabus MCP Contributors"**, not Skolverket. The MIT grant covers **the
+wrapper**; the **agency's own terms govern the data** the wrapper returns. Two consequences
+for an EMEA engagement: the code is safe to fork and ship, and the data terms are a separate
+diligence item that the MIT licence does not answer.
+
+🔵 **This is the reusable shape, and it generalises past Sweden.** A national curriculum
+published as an open API, wrapped thinly under a permissive licence, turns
+*"align this to the national curriculum"* from a consulting deliverable into a **tool call**.
+It is the missing input to P15 (curriculum-aligned item generation) and the cleanest
+instance yet of trend 13: the mandate specifies the architecture. **Udir is the counter-case
+in the same region** — same idea, same quality of public data, no grant — so the pattern is
+"check for a wrapper, expect to write one," not "a wrapper exists."
+
+### The university tier, and the two APAC assets that prove it is a channel
+
+The same shape one level down: a single institution's portal, wrapped permissively.
+
+| Institution | Wrapper | Licence | Note |
+|---|---|---|---|
+| **Korea University** (KUPID portal), **APAC** | [SonAIengine/ku-portal-mcp](https://github.com/SonAIengine/ku-portal-mcp), 13★ | 🟢 **MIT** | Notices, library seat availability, weekly assignments. On PyPI. Korean-language README — and the thirteenth pass's **Korean-language query did not find it**; the platform name did. |
+| **National Taiwan University** (NTU COOL), **APAC** | [kc0506/ntucool](https://github.com/kc0506/ntucool), 10★ | 🟢 **MIT** | One `cool` binary = CLI + MCP server + SDK, **plus a Claude Code plugin** shipping skills and commands. ⚠️ Self-declared **unofficial**. |
+
+⚠️ **"Unofficial" is a diligence item, not a disqualifier** — but it is the one that decides
+whether a university client can deploy it. An unofficial wrapper of an institution's own
+portal depends on undocumented endpoints and on credentials the institution controls; it can
+be broken by the institution at any time, deliberately. Fork it for the shape, then get the
+integration sanctioned.
+
+### 🔴 And the competition is now hosted, closed, and in the same catalogue
+
+The MCP Registry census this pass (`repos/trending.md`, fourteenth pass) found **102
+education-vocabulary servers, 71 of them with no source repository at all**. One of those 71
+is **`com.moodlemcp/moodle`** — *"Connect your Moodle to AI assistants: courses, content,
+grading and more"* — a **closed, hosted Moodle MCP endpoint competing directly with the 86
+open repositories in that tier.** Others: `io.cubite/lms` (hosted LMS with SCORM/xAPI) and
+`com.skillsail/mcp` (SCORM authoring and export).
+
+🔵 **The strategic read, and it belongs on this page rather than in trends.** For two years
+the open-source platform shelf competed with proprietary *platforms*. It now also competes
+with proprietary **connectors to open platforms** — someone selling a hosted MCP endpoint in
+front of the client's own Moodle. That is a thin, high-margin layer, and it is exactly the
+layer a Globant deliverable occupies.
+
+**So the pitch changes.** Against a hosted connector, the differentiator is not features; it
+is the three things a client cannot get from an endpoint they do not host: **the code**, **the
+deployment inside their own boundary**, and **the audit trail**. Lead with those, and keep
+`langfuse` (MIT outside `ee/`) in the stack so the third one is produced automatically.
