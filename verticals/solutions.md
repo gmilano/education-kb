@@ -1226,3 +1226,58 @@ this KB and should not be implied in a deck.**
 - 🔴 **Client wants to white-label a national platform as their SaaS** → **stop.** That is the one
   cell in the table above that is red, and it is the most common thing to be asked for.
 
+
+## Added in the eighteenth pass of 2026-10-06 — the assessment delivery tier, and a national agency's service clients
+
+**No new platform this pass.** `open source platform education LMS SIS MIT Apache 2026` returned
+the shelf above — Open edX, Sakai, OpenOLAT, OpenEduCat — and nothing new. What it did return is a
+**component tier that was never swept**, because the sweeps were organised by topic and these are
+filed under a **standard**. Licences read from each repository's own payload on 2026-10-06.
+
+### QTI 3 — assessment item delivery
+
+This is the layer that sits *between* the LMS and the learner, and it is the one place where a
+permissive component now carries **third-party conformance certification**.
+
+| Component | Repo | Licence (read from payload) | Use |
+|---|---|---|---|
+| QTI 3 item player | [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | **MIT** (`main/LICENSE`, © 2022-2024 Amp-up.io, LLC) | 🟢 **1EdTech Certified — QTI 3 Basic *and* Advanced "Delivery"**. The default. 30★ |
+| QTI 3 item player, Vue 3 | [`amp-up-io/qti3-item-player-vue3`](https://github.com/amp-up-io/qti3-item-player-vue3) | **MIT** (`main/LICENSE`, © 2024) | Same component for a Vue front end |
+| QTI 3 toolchain | [`longsightgroup/qti3`](https://github.com/longsightgroup/qti3) | **MIT** (`main/LICENSE.md`, © 2026 Longsight, Inc.) | 12 npm packages — parse, validate, render, **score**, and **migrate QTI 1.2 / 2.x → 3**. The migrator is the part nobody else ships |
+| QTI 3 renderer, framework-neutral | [`agencyenterprise/qti-3-player`](https://github.com/agencyenterprise/qti-3-player) | **MIT** (`main/LICENSE`, © 2026 AE Studio) | Full response processing, no framework commitment |
+| QTI 3 HTML utilities | [`metyatech/qti-html-renderer`](https://github.com/metyatech/qti-html-renderer) | **MIT** (`main/LICENSE`, © 2026 metyatech) | Smallest surface of the five |
+| QTI 3 support, PHP | [`Kennisnet/php-qti3`](https://github.com/Kennisnet/php-qti3) | **MIT** (`main/LICENSE`, © 2026 Kennisnet) | The permissive PHP path, where `oat-sa/qti-sdk` is GPL-2.0 |
+| QTI item renderer (mature, copyleft) | [`Citolab/qti-components`](https://github.com/Citolab/qti-components) | **GPL-3.0** (`main/LICENSE.md`) | 2,456 commits, 19★ — the most mature here. From **Citolab**, the software lab of **Cito**, the Dutch national assessment institute. ⚠️ README invites relicensing on request — read trends §43 before designing around the licence |
+| QTI SDK, PHP | [`oat-sa/qti-sdk`](https://github.com/oat-sa/qti-sdk) | **GPL-2.0** (`master/LICENSE`) | From the TAO assessment platform. **GPL-2.0**, so **not compatible with GPL-3.0-only code** — the same trap as RosarioSIS above |
+
+🔴 **Do not cite [`Kennisnet/qti-components`](https://github.com/Kennisnet/qti-components).** It is a
+**stale fork** of the Citolab repository — identical root commit `de8b27b`, **79 commits behind**,
+1★ against upstream's 19. Pin the upstream address.
+
+### Kennisnet — clients for the Dutch national education services
+
+**[Stichting Kennisnet](https://github.com/Kennisnet)** is the Netherlands' public agency for ICT in
+education. Its repositories are not a platform; they are **clients for national services**, which is
+a shape this shelf had no entry for. **29 repositories, nine probed: 6 MIT, 1 GPL-3.0, 2 ungranted.**
+
+| Component | Repo | Licence (read from payload) | The national service it reaches |
+|---|---|---|---|
+| Edurep search client | [`Kennisnet/phpEdurepSearch`](https://github.com/Kennisnet/phpEdurepSearch) | **MIT** (© 2015 Stichting Kennisnet) | **Edurep**, the national learning-resource index. 🟢 A national OER index you may query under a permissive client |
+| Eduterm client | [`Kennisnet/py-eduterm-client`](https://github.com/Kennisnet/py-eduterm-client) | **MIT** (© 2018 Kennisnet) | **Eduterm**, the national curriculum vocabulary — **in Python** |
+| LOM metadata | [`Kennisnet/pylom`](https://github.com/Kennisnet/pylom) | **MIT** (© 2017 Kennisnet) | IMS-LOM records, read and write — **in Python** |
+| NL-LOM profile | [`Kennisnet/phpNLLOM`](https://github.com/Kennisnet/phpNLLOM) | **MIT** (© 2017 Stichting Kennisnet) | The Dutch national application profile of LOM — the worked example of how a country profiles a global standard |
+| OAI-PMH harvesting | [`Kennisnet/OaiPmh`](https://github.com/Kennisnet/OaiPmh) | **MIT** (© 2024 Kennisnet) | The protocol national repositories actually expose |
+| QTI editor | [`Kennisnet/qti-editor-angular`](https://github.com/Kennisnet/qti-editor-angular) | 🔴 **NO-PAYLOAD** | Ungranted — **do not vendor** |
+| Edurep transforms | [`Kennisnet/edurep-xslt`](https://github.com/Kennisnet/edurep-xslt) | 🔴 **NO-PAYLOAD** | Ungranted |
+
+⚠️ **Nine of 29 probed**, chosen by stars and domain relevance. The estate's ungranted rate is
+**sampled, not established** — carried as declared gap 5 of this pass.
+
+### 🔵 What this adds to the shelf, stated as a rule
+
+The platforms above are mostly **copyleft**, and that decides whether your AI work is a plugin or a
+side-car. This tier is different: **assessment delivery and national-service clients are
+overwhelmingly permissive**, and they sit exactly at the seam §34 identified — *education's reusable
+IP lives at the plugin seam of copyleft platforms, not beside them.* **You will not get a permissive
+LMS. You can get a permissive, certified assessment tier and a permissive metadata layer to bolt
+onto the copyleft one you inherit.**

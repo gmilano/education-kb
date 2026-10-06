@@ -1306,3 +1306,72 @@ not be executed this pass), every payload above lands on `UNCLASSIFIED`: the EUP
 design. 🟢 **Until a grant-notice anchor exists, these nine rows are the only EUPL rows this KB
 can defend, because they were read by hand.** That work is instruction 1 for the next pass.
 
+
+## Added in the eighteenth pass of 2026-10-06 — the certified assessment tier, and a national agency's metadata layer
+
+**Channel new to this KB this pass: the standards-body conformance register** — searching by
+**standard + conformance certification** rather than by topic, star count, funder or institution.
+Every licence below was read from the repository's own payload on `raw.githubusercontent.com`
+on 2026-10-06. Star counts, where given, were read the same day via `WebFetch`; cells that say
+*not read this pass* say so rather than carrying an inferred number.
+
+### QTI 3 — assessment item delivery, and the first externally certified permissive asset in this KB
+
+Trend 28 swept LTI 1.3, OneRoster and Caliper and recorded **QTI as "not swept"**. Swept now, and
+it is the **best-served** standard on the permissive shelf, not the worst.
+
+| Repo | Licence (read from payload) | ★ / forks | Why it matters for an education engagement |
+|---|---|---|---|
+| [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | **MIT** (`main/LICENSE`, © 2022-2024 Amp-up.io, LLC) | 30 / 6 | 100% JavaScript QTI 3 item player, **1EdTech Certified for QTI 3 Basic *and* Advanced "Delivery" conformance**. 🟢 The only asset in this KB that is **both permissive and third-party certified** — fork it, brand it, and the conformance claim in the bid is somebody else's audit, not your assertion |
+| [`amp-up-io/qti3-item-player-vue3`](https://github.com/amp-up-io/qti3-item-player-vue3) | **MIT** (`main/LICENSE`, © 2024 Amp-up.io, LLC) | not read this pass | Vue 3 build of the same component. Use when the client front end is already Vue |
+| [`longsightgroup/qti3`](https://github.com/longsightgroup/qti3) | **MIT** (`main/LICENSE.md`, © 2026 Longsight, Inc.) | 5 / 2 | TypeScript reference implementation — **667 commits, 12 npm packages**: parsing, validation, rendering, **scoring**, and **migration from QTI 1.2 / 2.x into QTI 3**. The migrator is the part nobody else ships, and legacy item banks are the reason most assessment projects stall |
+| [`agencyenterprise/qti-3-player`](https://github.com/agencyenterprise/qti-3-player) | **MIT** (`main/LICENSE`, © 2026 AE Studio) | not read this pass | Framework-agnostic npm renderer with full response processing. The neutral option when the front-end framework is not yet chosen |
+| [`metyatech/qti-html-renderer`](https://github.com/metyatech/qti-html-renderer) | **MIT** (`main/LICENSE`, © 2026 metyatech) | not read this pass | QTI 3.0 item HTML rendering utilities. Smallest surface of the five |
+
+#### Two QTI assets that are **not** permissive — read this before the architecture, not after
+
+| Repo | Licence (read from payload) | The constraint |
+|---|---|---|
+| [`Citolab/qti-components`](https://github.com/Citolab/qti-components) | **GPL-3.0** (`main/LICENSE.md`) | 19★ / 10 forks, **2,456 commits** — the most mature renderer here, and copyleft. Citolab is the software lab attached to **Cito**, the Netherlands' national assessment institute. ⚠️ Its README states: *"the licensing is GPLv3 — if you want to use it in another way, feel free to ask!"* The **payload is GPL-3.0** and the **holder advertises negotiability**. That is an *invitation to dual-license*, it is invisible to any payload-reading classifier, and it is a **conversation to have before you design around the licence**. See trends §43 |
+| [`oat-sa/qti-sdk`](https://github.com/oat-sa/qti-sdk) | **GPL-2.0** (`master/LICENSE`) | PHP SDK from the TAO assessment platform. **GPL-2.0, not 3.0** — so it is **not licence-compatible with GPL-3.0-only code**. Same trap as `francoisjacquet/rosariosis` in `verticals/solutions.md`. Check before combining |
+
+🔴 **And one fork that nearly entered this shelf as a public-body asset.**
+[`Kennisnet/qti-components`](https://github.com/Kennisnet/qti-components) (1★, 0 forks) is **forked
+from `Citolab/qti-components`** — identical root commit `de8b27b`, **2,377 commits against
+upstream's 2,456, so 79 behind**. Caught by running `git clone --filter=blob:none --no-checkout`
+**before the row was written**. Pin the Citolab address; do not cite the Kennisnet one.
+
+### Kennisnet — the Dutch national education-ICT agency, metadata and vocabulary layer
+
+**[Stichting Kennisnet](https://github.com/Kennisnet)**, the Netherlands' public agency for ICT in
+education, publishes **29 repositories**. Nine probed this pass: **6 MIT, 1 GPL-3.0** (the stale
+fork above), **2 NO-PAYLOAD**. These are the layer an AI content pipeline needs and that nobody
+should write twice.
+
+| Repo | Licence (read from payload) | Layer | Why it matters for an education engagement |
+|---|---|---|---|
+| [`Kennisnet/pylom`](https://github.com/Kennisnet/pylom) | **MIT** (`master/LICENSE`, © 2017 Kennisnet) | metadata — **Python** | Reads and writes **IMS-LOM** learning-object metadata records. 🟢 **A permissive Python library for an education standard** — see the correction to trend 28 below |
+| [`Kennisnet/py-eduterm-client`](https://github.com/Kennisnet/py-eduterm-client) | **MIT** (`master/LICENSE`, © 2018 Kennisnet) | curriculum vocabulary — **Python** | Client for **Eduterm**, the Dutch curriculum-vocabulary service. The curriculum-alignment tool call of P29, already written, in the language the agents are written in |
+| [`Kennisnet/php-qti3`](https://github.com/Kennisnet/php-qti3) | **MIT** (`main/LICENSE`, © **2026** Kennisnet) | assessment | QTI 3 support library, **published this year**. The permissive PHP path into QTI, where `oat-sa/qti-sdk` is GPL-2.0 |
+| [`Kennisnet/phpNLLOM`](https://github.com/Kennisnet/phpNLLOM) | **MIT** (`master/LICENSE`, © 2017 Stichting Kennisnet) | metadata | **NL-LOM**, the Dutch national application profile of LOM. The worked example of how a country profiles a global metadata standard |
+| [`Kennisnet/phpEdurepSearch`](https://github.com/Kennisnet/phpEdurepSearch) | **MIT** (`master/LICENSE`, © 2015 Stichting Kennisnet) | discovery | Client for **Edurep**, the national learning-resource search index. A national OER index with a permissive client is a **content source you may query without a licence negotiation** |
+| [`Kennisnet/OaiPmh`](https://github.com/Kennisnet/OaiPmh) | **MIT** (`main/LICENSE`, © 2024 Kennisnet) | harvesting | OAI-PMH implementation — the protocol national repositories actually expose |
+| [`Kennisnet/qti-editor-angular`](https://github.com/Kennisnet/qti-editor-angular) | 🔴 **NO-PAYLOAD** (`main`+`master` × 6 filenames, all 404) | authoring | QTI editor. **Ungranted — do not vendor it** |
+| [`Kennisnet/edurep-xslt`](https://github.com/Kennisnet/edurep-xslt) | 🔴 **NO-PAYLOAD** (`main`+`master` × 6 filenames, all 404) | transforms | Edurep XSLTs. **Ungranted** |
+
+⚠️ **Nine of 29 probed, chosen by stars and domain relevance.** The estate's ungranted rate is
+**sampled, not established** — the same shortfall pass 17 declared for Opetushallitus's 188
+repositories, and it is carried as a declared gap rather than rounded off.
+
+### 🔵 The correction this section forces on trend 28
+
+Trend 28 concluded that the permissive shelf has a **"Python-shaped hole"** — *"Python, where
+essentially all of the AI tutoring and agent code in this KB is written, is not [served]."*
+
+**Half of that survives.** There is still **no permissive Python LTI 1.3 library**, which is the
+claim trend 28 actually measured. But `pylom` and `py-eduterm-client` are **MIT Python libraries
+for education standards**, so Python *is* served for **metadata and curriculum vocabulary**.
+
+🟢 **The hole is LTI-shaped, not Python-shaped — and that makes the contribution opening cheaper,
+not smaller.** It is one protocol, with a procurement-scored buyer already attached (39% of US
+districts score interoperability in the RFP rubric). Corrected in place in `intel/trends.md` §28.

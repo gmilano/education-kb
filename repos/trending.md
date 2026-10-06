@@ -8,6 +8,81 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — eighteenth pass: a certified MIT assessment tier, a national agency's metadata layer, and two state estates that publish something other than code
+
+### The mandatory queries, run with the year **computed** (2026), not hardcoded
+
+| Query | Result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 Generalist frameworks again — OpenClaw, OpenHands, CrewAI, LangGraph. **Zero education-specific repositories.** Fourteenth consecutive pass |
+| `github trending education AI 2026` | 🔴 `ai-engineering-from-scratch`, Microsoft *GenAI for Beginners* (108k★), *LLMs from Scratch* (87.7k★) — **courses about AI, not software for education** |
+| `open source platform education LMS SIS MIT Apache 2026` | 🟡 Returns the shelf this KB already holds: Open edX, Sakai, OpenOLAT, OpenEduCat. **No new platform** |
+| `open source QTI 3 player renderer Apache MIT 1EdTech` | 🟢 **The pass's whole yield — see below.** Five MIT implementations, one externally certified |
+
+🔵 **The pattern is now fifteen passes old and it is a property of the query, not of the world:**
+*"AI education"* is a homonym and the open web answers the other sense of it. **Every repository
+added in the last six passes came from a proper noun** — a standard, an agency, or a platform.
+This pass's proper noun was **QTI**.
+
+### 🟢 The certified assessment tier — new to this KB, all payload-verified 2026-10-06
+
+Trend 28 swept LTI 1.3, OneRoster and Caliper and left **QTI unswept**. It is the strongest tier
+on the permissive shelf, and the only one carrying third-party conformance certification.
+
+| Repo | Licence (read from payload) | ★ / forks | Layer |
+|---|---|---|---|
+| [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | **MIT** (`main/LICENSE`, © 2022-2024 Amp-up.io, LLC) | 30 / 6 | 🟢 **1EdTech Certified — QTI 3 Basic *and* Advanced "Delivery"**. JavaScript item player |
+| [`amp-up-io/qti3-item-player-vue3`](https://github.com/amp-up-io/qti3-item-player-vue3) | **MIT** (`main/LICENSE`, © 2024) | not read | Vue 3 build, same certification claim |
+| [`longsightgroup/qti3`](https://github.com/longsightgroup/qti3) | **MIT** (`main/LICENSE.md`, © 2026 Longsight, Inc.) | 5 / 2 | TypeScript, **667 commits, 12 npm packages** — parse, validate, render, **score**, **migrate QTI 1.2/2.x → 3** |
+| [`agencyenterprise/qti-3-player`](https://github.com/agencyenterprise/qti-3-player) | **MIT** (`main/LICENSE`, © 2026 AE Studio) | not read | Framework-agnostic npm renderer, full response processing |
+| [`metyatech/qti-html-renderer`](https://github.com/metyatech/qti-html-renderer) | **MIT** (`main/LICENSE`, © 2026 metyatech) | not read | QTI 3.0 HTML rendering utilities |
+| [`Citolab/qti-components`](https://github.com/Citolab/qti-components) | **GPL-3.0** (`main/LICENSE.md`) | 19 / 10 | Item renderer web-components, **2,456 commits**. Citolab is the software lab of **Cito**, the Dutch national assessment institute. ⚠️ README invites relicensing on request — see §43 |
+| [`oat-sa/qti-sdk`](https://github.com/oat-sa/qti-sdk) | **GPL-2.0** (`master/LICENSE`) | not read | PHP SDK from the TAO platform. **GPL-2.0**, so not compatible with GPL-3.0-only code |
+
+🔴 **And the fork that nearly got shelved:** [`Kennisnet/qti-components`](https://github.com/Kennisnet/qti-components)
+(1★, 0 forks) is **forked from `Citolab/qti-components`** — identical root commit `de8b27b`,
+**2,377 commits against upstream's 2,456, so 79 behind.** Caught by running
+`git clone --filter=blob:none --no-checkout` **before writing the row**, not after.
+
+### 🟢 Kennisnet — the Dutch national education-ICT agency's metadata layer
+
+**[Stichting Kennisnet](https://github.com/Kennisnet), 29 repositories.** Pass 17 searched for the
+Netherlands under `onderwijsinspectie` (the *inspectorate*) and found nothing. This is the body that
+publishes. Nine probed from payload: **6 MIT, 1 GPL-3.0 (the stale fork), 2 NO-PAYLOAD.**
+
+| Repo | Licence (read from payload) | Language | Layer |
+|---|---|---|---|
+| [`Kennisnet/pylom`](https://github.com/Kennisnet/pylom) | **MIT** (`master/LICENSE`, © 2017) | **Python** | IMS-LOM learning-object metadata, read and write |
+| [`Kennisnet/py-eduterm-client`](https://github.com/Kennisnet/py-eduterm-client) | **MIT** (`master/LICENSE`, © 2018) | **Python** | Client for **Eduterm**, the Dutch curriculum-vocabulary service |
+| [`Kennisnet/php-qti3`](https://github.com/Kennisnet/php-qti3) | **MIT** (`main/LICENSE`, © **2026**) | PHP | QTI 3 support library — **published this year** |
+| [`Kennisnet/phpNLLOM`](https://github.com/Kennisnet/phpNLLOM) | **MIT** (`master/LICENSE`, © 2017) | PHP | **NL-LOM**, the Dutch LOM application profile |
+| [`Kennisnet/phpEdurepSearch`](https://github.com/Kennisnet/phpEdurepSearch) | **MIT** (`master/LICENSE`, © 2015) | PHP | Client for **Edurep**, the national learning-resource index |
+| [`Kennisnet/OaiPmh`](https://github.com/Kennisnet/OaiPmh) | **MIT** (`main/LICENSE`, © 2024) | PHP | OAI-PMH harvesting |
+| [`Kennisnet/qti-editor-angular`](https://github.com/Kennisnet/qti-editor-angular) | 🔴 **NO-PAYLOAD** | TypeScript | QTI editor — **ungranted** |
+| [`Kennisnet/edurep-xslt`](https://github.com/Kennisnet/edurep-xslt) | 🔴 **NO-PAYLOAD** | XSLT | Edurep transforms — **ungranted** |
+
+⚠️ **Nine of 29 probed.** The ungranted rate is **sampled, not established** — the same shortfall
+pass 17 declared for Opetushallitus's 188 repositories. Carried as a gap.
+
+### 🔴 Three state estates that are not what the query shape assumed
+
+| Org | Identity | Measured |
+|---|---|---|
+| [`Samagra-Development`](https://github.com/Samagra-Development) | India — SamagraX, *Samagra \| Transforming Governance* | **124 repos.** Of the top five, **3 NO-PAYLOAD** — including `ai-tools` (48★, the most-starred) and **`dsep`** ("SkillEd: Trainings and Courses"). Granted: `Doc-Generator` (**MIT**, © 2019), `x-admin` (**MIT**, © 2022) |
+| [`opengovsg`](https://github.com/opengovsg) | Singapore — Open Government Products | **98 repos, zero education products.** `pdf2md` 500★, `FormSG` 372★, `GoGovSG` 129★ |
+| [`kemdikbud`](https://github.com/kemdikbud) | Indonesia — Ministry of Basic and Secondary Education | **1 repo, 0★, no description**, last updated 2025-08-27. Effectively empty |
+
+🔵 **And the two LATAM bodies publish a different artefact entirely.** **Mineduc Chile's Centro de
+Estudios** publishes **21 datasets** through [`datos.gob.cl`](https://datos.gob.cl) and no code;
+**SEP Mexico** has no repositories under [`mxabierto`](https://github.com/mxabierto) (61 repos, all
+civic open-data tooling). The only code that reaches Chilean state education data is **third-party
+and MIT**: [`pipeworx-io/mcp-datos-cl`](https://github.com/pipeworx-io/mcp-datos-cl) (MIT, © 2026
+Mojibake Inc. — a CKAN **MCP server**) and
+[`gerardbourguett/mcp-chilegob-dataset`](https://github.com/gerardbourguett/mcp-chilegob-dataset)
+(MIT, © 2025, an individual). **Trend 42 confirmed in a second region.**
+
+---
+
 ## 2026-10-06 — seventeenth pass: 188 live repositories from one national agency, and the licence that makes them unshelvable as they stand
 
 ### The mandatory queries, run with the year **computed** (2026), not hardcoded

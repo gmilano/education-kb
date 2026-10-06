@@ -2236,3 +2236,41 @@ a hosted client product inherits an AGPL-shaped obligation. **That boundary, not
 is what decides the architecture** — and it is why this pass added a pattern (`P27`) rather than
 a row.
 
+
+### Eighteenth pass of 2026-10-06 — state the negative first: **no new agent**
+
+**This pass added no row to the agent tables above, and that is the correct outcome rather than a
+shortfall.** The channel run was the **standards-body conformance register** — searching by
+*standard + conformance certification* instead of by topic, star count, funder, institution or
+ministry name. It returned a substantial amount of permissive software, and **none of it is an
+agent**: five MIT **QTI 3 item players and toolchains**, six MIT **national-service clients** from
+the Dutch agency Kennisnet, and two **MCP servers** over a Chilean national open-data portal.
+
+Those are shelved where they belong — `repos/foundations.md` and `verticals/solutions.md` — because
+**putting components in the agent table is how a KB starts counting libraries as capabilities.**
+
+**Three things from this pass do bear on the agents already listed:**
+
+1. 🟢 **The assessment agents now have a deterministic scoring path, which they did not have.**
+   [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) (**MIT**, 30★,
+   **1EdTech Certified** for QTI 3 Basic and Advanced "Delivery") runs a QTI item's **declared**
+   response processing. Any generation agent in this KB — Educhain, the P11 chain, the item-bank
+   patterns — can now be wired so that **the model proposes and the standard scores**, with the
+   model demonstrably outside the scoring path. That is the single cheapest way to make an
+   assessment deployment defensible under the EU AI Act's high-risk obligations and under the US
+   "human judgment is final" rule (§16). Recipe: **P34**.
+2. 🟢 **Curriculum alignment gains a permissive Python client.**
+   [`Kennisnet/py-eduterm-client`](https://github.com/Kennisnet/py-eduterm-client) (**MIT**, © 2018)
+   reaches **Eduterm**, the Dutch national curriculum vocabulary — the P29 "curriculum alignment as
+   a tool call" shape, already written, in the language the agents here are written in.
+3. 🔴 **A fork nearly entered this file as a public-body asset, for the second consecutive pass.**
+   [`Kennisnet/qti-components`](https://github.com/Kennisnet/qti-components) is **forked from
+   [`Citolab/qti-components`](https://github.com/Citolab/qti-components)** — identical root commit
+   `de8b27b`, **2,377 commits against upstream's 2,456, so 79 behind**, 1★ against 19. Caught by
+   running `git clone --filter=blob:none --no-checkout` **before** the row was written rather than
+   after. Pass 17 spent a whole pass correcting the same class of error in `mcp-brasil`. **The
+   instrument did not change; when it was run did.** Fork-lineage is a **pre-write** check.
+
+⚠️ **The star counts and licences in the tables above were not re-read this pass.** They carry the
+2026-10-06 readings recorded by the passes that took them. A cell saying *not read this pass* in an
+earlier section still means exactly that.

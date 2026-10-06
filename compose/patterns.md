@@ -2843,3 +2843,138 @@ AI tools. 🟢 **A conformant bridge plus a provable no-training boundary is the
    deployment's egress**, not about the client's other systems, and the memo must say so in the
    first sentence.
 
+
+## P34 — Certified-conformant assessment delivery (the first pattern in this KB built on a third party's audit)
+
+**Added in the eighteenth pass of 2026-10-06.** Every component licence below was read from the
+repository's own payload on `raw.githubusercontent.com` the same day.
+
+**The engagement this serves:** a client — most often North American K-12 or higher ed, but the
+shape travels — is procuring assessment delivery against a rubric that **scores interoperability**
+(39% of US districts do, trend 28). They have a legacy item bank in QTI 1.2 or 2.x, an LMS they are
+not replacing, and an AI item-generation ambition they cannot yet evidence as safe.
+
+**Why this pattern exists and P11/P15 do not cover it:** those patterns *generate* items. This one
+**delivers and scores** them, standards-conformant, with the conformance claim **certified by
+1EdTech rather than asserted by us**.
+
+### Components
+
+| Role | Component | Licence (payload-verified 2026-10-06) |
+|---|---|---|
+| Item player (default) | [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | **MIT** (© 2022-2024 Amp-up.io, LLC) — 🟢 **1EdTech Certified, QTI 3 Basic + Advanced "Delivery"** |
+| Item player (Vue front end) | [`amp-up-io/qti3-item-player-vue3`](https://github.com/amp-up-io/qti3-item-player-vue3) | **MIT** (© 2024) |
+| Item player (framework-neutral) | [`agencyenterprise/qti-3-player`](https://github.com/agencyenterprise/qti-3-player) | **MIT** (© 2026 AE Studio) |
+| **Legacy migration + scoring + validation** | [`longsightgroup/qti3`](https://github.com/longsightgroup/qti3) | **MIT** (© 2026 Longsight, Inc.) — 12 npm packages, **QTI 1.2 / 2.x → 3 migrator** |
+| PHP-side QTI support | [`Kennisnet/php-qti3`](https://github.com/Kennisnet/php-qti3) | **MIT** (© 2026 Kennisnet) |
+| LMS doorway | [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) or [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | Apache-2.0 |
+| Item generation | P11's gated generation chain | — |
+| Audit trail | [`langfuse/langfuse`](https://github.com/langfuse/langfuse) | MIT **outside `ee/`** — exclude `ee/` from any vendored copy |
+| Typed agent outputs | [`pydantic/pydantic-ai`](https://github.com/pydantic/pydantic-ai) | MIT |
+
+### Wiring
+
+1. **Migrate the item bank first, and make it the first deliverable.** `longsightgroup/qti3`'s
+   migrator converts QTI 1.2 / 2.1 / 2.2 packages into QTI 3. Run its **validator** over the output
+   and treat the validation report as a client-facing artefact. This is the step that stalls
+   assessment projects, and it is the step that proves the engagement is real in week one.
+2. **Deliver items through the certified player**, served as a side-car behind LTI 1.3 — the P1
+   shape. The LMS keeps the roster and the gradebook; the player renders and runs response
+   processing. **Do not fork the LMS.**
+3. **Score with the player's own response processing**, not with a model. A QTI item carries its
+   declared correct responses; scoring it is **deterministic and inspectable**. Keep the model out
+   of the scoring path entirely — this is what makes the deployment defensible under the EU AI
+   Act's high-risk assessment obligations and under US state law's "human judgment is final" rule
+   (§16).
+4. **Generate new items with P11's gated chain, then validate them with `qti3` before they ever
+   reach a learner.** The generator proposes QTI 3 XML; the validator is the gate; a human approves.
+   **A generated item that fails validation never renders** — the standard does half your oversight
+   work.
+5. **Trace every generation call through Langfuse.** The audit trail is a by-product of normal
+   operation, not a separate compliance project.
+
+### Deliverables
+
+- A migrated, **validated** QTI 3 item bank, with the validation report.
+- A certified-player delivery tier behind LTI 1.3, with **the issuer and scope of the 1EdTech
+  certificate cited by name** in the bid.
+- A deterministic scoring path with the model demonstrably outside it.
+- A generation pipeline whose output is gated by standards validation **and** human approval.
+
+### ⚠️ Three warnings that are the point of this pattern
+
+1. 🔴 **Verify the certificate at the issuer, not in the README.** This KB read the conformance
+   claim from the vendor's own repository. By §23's rule that is a claim to check against its
+   issuer — **read 1EdTech's certified-products register and record the certificate's scope and
+   date** before it goes in a bid. Declared gap 6 of this pass.
+2. 🔴 **Two QTI components on the shelf are copyleft, and one of them is the most mature.**
+   [`Citolab/qti-components`](https://github.com/Citolab/qti-components) is **GPL-3.0** (2,456
+   commits, Cito's lab) and [`oat-sa/qti-sdk`](https://github.com/oat-sa/qti-sdk) is **GPL-2.0** —
+   *not* compatible with GPL-3.0-only code. If the renderer is on the critical path and Citolab's
+   maturity is what you want, **read §43 and ask them**: their README advertises willingness to
+   relicense. That is an invitation to negotiate, **never a grant** — settle it in writing before
+   any architecture depends on it.
+3. 🔴 **Do not cite [`Kennisnet/qti-components`](https://github.com/Kennisnet/qti-components).** It
+   is a **stale fork** of the Citolab repository, 79 commits behind, 1★. Pin the upstream address.
+
+## P35 — The national open-data MCP client (LATAM, and portable to every CKAN portal in the region)
+
+**Added in the eighteenth pass of 2026-10-06.** This is the pattern that follows from §44: in LATAM
+the state publishes **data**, not code, and the only clients that reach it are third-party.
+
+**The engagement this serves:** a LATAM ministry, university system or edtech client needs an agent
+that can answer questions against **national education data** — enrolment, establishment directory,
+teaching staff, graduates — and there is **nothing to fork from the state**.
+
+### Components
+
+| Role | Component | Licence / status |
+|---|---|---|
+| The data | **Mineduc Chile, Centro de Estudios** — **21 datasets** via [`datos.gob.cl`](https://datos.gob.cl) and its own *Datos Abiertos* portal | 🔴 **Portal terms of use — read them; the dataset's licence is not the wrapper's licence (§42)** |
+| Reference client | [`pipeworx-io/mcp-datos-cl`](https://github.com/pipeworx-io/mcp-datos-cl) | **MIT** (© 2026 **Mojibake Inc.**) — a CKAN **MCP server** for `datos.gob.cl` |
+| Second reference | [`gerardbourguett/mcp-chilegob-dataset`](https://github.com/gerardbourguett/mcp-chilegob-dataset) | **MIT** (© 2025, **an individual**) |
+| Agent layer | `pydantic-ai` (MIT) or `smolagents` (Apache-2.0) | typed/auditable outputs |
+| Local inference | [`ollama/ollama`](https://github.com/ollama/ollama) | MIT — keeps queries in-country |
+| Audit trail | `langfuse/langfuse` | MIT outside `ee/` |
+
+### Wiring
+
+1. **Read the portal's terms of use before writing a line.** CKAN is the software; the **dataset
+   licence and the portal ToU are separate instruments** and they govern what the client may do with
+   the answers. This is step one, not diligence to be done later.
+2. **Treat the two existing MCP servers as reference implementations, not dependencies.** Read them,
+   credit them, and write a maintained one. Both are MIT so this is permitted; the point is that
+   **neither is a supply chain you should put a client on** — see the warnings.
+3. **Target CKAN, not Chile.** `datos.gob.cl` is a CKAN instance, and so are most LATAM national
+   open-data portals. A client written against **CKAN's API** with the portal as configuration is
+   portable across the region at near-zero marginal cost; one written against Chile is not.
+4. **Put the agent behind typed outputs and local inference.** Education statistics answered by an
+   agent are a reporting artefact; schema-checked outputs beat free text, and `ollama` keeps the
+   queries in-country where the procurement asks for it.
+5. **Cache and version the data pulls.** National statistical datasets are **revised**. An answer
+   that cannot name which release it came from is not usable in a ministry report.
+
+### Deliverables
+
+- A maintained, permissively licensed **CKAN MCP client**, portal-configurable, with the Chilean
+  education datasets as the first configuration.
+- A terms-of-use memo distinguishing **dataset licence** from **portal ToU** from **wrapper
+  licence**.
+- A versioned data-pull layer with release identifiers in every answer.
+
+### ⚠️ Four warnings that are the point of this pattern
+
+1. 🔴 **The incumbent is one company and one individual.** `mcp-datos-cl` is held by **Mojibake
+   Inc.** and `mcp-chilegob-dataset` by a single named person. Putting a ministry client on either
+   is a **supply-chain risk**, and saying so is the honest version of this opportunity — not a
+   reason to disparage either repository, both of which are MIT and useful.
+2. 🔴 **The data's licence is not the wrapper's licence.** §42, confirmed in a second region this
+   pass. An MIT MCP server over a dataset with restrictive terms **grants you nothing about the
+   data**. Both instruments must be read.
+3. 🔴 **The portal itself was never reached from here.** `datos.gob.cl` is **EGRESS_BLOCKED**
+   in this environment, so the **21 datasets** figure and the dataset inventory are **Tier 2** — search
+   results, not a first-hand read. The two MCP repositories were verified first-hand. **Confirm the
+   portal's contents and its terms of use from a host that can reach it before step 1 is billable.**
+4. ⚠️ **This pattern is specified from Chile and Mexico only.** Colombia, Brazil, Peru and Argentina
+   were **not** probed this pass. The CKAN-first design is what makes the untested regions cheap to
+   add — it is not evidence that they are the same.

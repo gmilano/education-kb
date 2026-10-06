@@ -8,6 +8,198 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — eighteenth pass: the one standard this KB never swept is the only one with a *certified* permissive implementation — and a fork nearly entered the shelf again
+
+**Channel new to this KB this pass: the standards-body conformance register** — searching by
+**standard + conformance certification** rather than by topic, star count, funder, institution or
+ministry name. Six channels have now been used; this is the first that returns assets already
+*audited by a third party*.
+
+**Pass 17's instructions 1 and 2 are NOT executed this pass, and Finding 6 names the blocker
+rather than working around it.** Instruction 3 **is** executed, in two regions, and the answer is
+that the instrument was wrong (Findings 5 and 7).
+
+### 🟢 Finding 1 — QTI was trend 28's one blank row. It is the best-served standard on the permissive shelf
+
+Trend 28 swept LTI 1.3, OneRoster and Caliper and left `**QTI** | not swept`. Swept now. Every
+licence below read from the repository's own payload on `raw.githubusercontent.com`, 2026-10-06.
+
+| Repo | Licence (read from payload) | ★ / forks | What it is |
+|---|---|---|---|
+| [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | **MIT** (`main/LICENSE`, © 2022-2024 Amp-up.io, LLC) | 30 / 6 | 100% JavaScript QTI 3 item player. 🟢 **1EdTech Certified for QTI 3 Basic *and* QTI 3 Advanced "Delivery" conformance** |
+| [`amp-up-io/qti3-item-player-vue3`](https://github.com/amp-up-io/qti3-item-player-vue3) | **MIT** (`main/LICENSE`, © 2024 Amp-up.io, LLC) | not read this pass | Vue 3 build of the same component, same certification claim |
+| [`longsightgroup/qti3`](https://github.com/longsightgroup/qti3) | **MIT** (`main/LICENSE.md`, © 2026 Longsight, Inc.) | 5 / 2 | TypeScript reference implementation, **667 commits, 12 npm packages**: parsing, validation, rendering, **scoring**, and **migration from QTI 1.2 / 2.x** |
+| [`agencyenterprise/qti-3-player`](https://github.com/agencyenterprise/qti-3-player) | **MIT** (`main/LICENSE`, © 2026 AE Studio) | not read this pass | Framework-agnostic npm renderer with full response processing |
+| [`metyatech/qti-html-renderer`](https://github.com/metyatech/qti-html-renderer) | **MIT** (`main/LICENSE`, © 2026 metyatech) | not read this pass | QTI 3.0 item HTML rendering utilities |
+| [`oat-sa/qti-sdk`](https://github.com/oat-sa/qti-sdk) | **GPL-2.0** (`master/LICENSE`) | not read this pass | PHP QTI SDK, from the TAO assessment platform. Copyleft, and **GPL-2.0**, so not compatible with GPL-3.0-only code |
+
+🟢 **Five MIT implementations, three of them first published in 2026, and one of them carries a
+third-party conformance certificate.** Set that against trend 28's own table: LTI 1.3 had four
+permissive implementations and no certification; OneRoster had **one**, rostering only; Caliper
+had **zero**. **QTI is not the gap. It is the strongest tier this KB has measured** — and it is the
+tier nobody swept because the sweep was organised by *topic* and QTI is a *standard*.
+
+🔵 **The commercial point is the certificate, not the licence.** Trend 28 established that
+**39% of US districts score interoperability in the RFP rubric**. A rubric scores a *claim* of
+QTI support at one level and a **1EdTech-certified** implementation at another. `qti3-item-player`
+is the first asset in this KB that is **both MIT and externally certified** — permissive enough to
+fork and brand, audited enough to put in a bid.
+
+### 🔴 Finding 2 — second consecutive pass in which a fork nearly entered the shelf as the project
+
+The first QTI renderer this pass found was [`Kennisnet/qti-components`](https://github.com/Kennisnet/qti-components).
+It was one probe away from being written into `repos/foundations.md` as a Dutch public-body asset.
+Pass 17's instrument — `git clone --filter=blob:none --no-checkout`, **not** the API — was run
+**before** the row was written:
+
+| Address | Root commit | HEAD | Commits | ★ / forks | Fork banner |
+|---|---|---|---|---|---|
+| [`Citolab/qti-components`](https://github.com/Citolab/qti-components) | `de8b27b` | `aeda9f1` | **2,456** | 🟢 **19 / 10** | 🟢 **none — this is upstream** |
+| [`Kennisnet/qti-components`](https://github.com/Kennisnet/qti-components) | `de8b27b` | `230fdec` | 2,377 | 🔴 **1 / 0** | 🔴 **"forked from Citolab/qti-components"** |
+
+Identical root commit `de8b27b41634e7ac61292a28edaefebee2ccb75b`. **One project, one canonical
+address, and Kennisnet's copy is 79 commits behind.** Both are **GPL-3.0** (`LICENSE.md`).
+
+🔵 **The lesson is about *when*, not *whether*.** Pass 17 ran this instrument to correct a row it
+had already carried for three passes. This pass ran it **before writing**, and it cost one command.
+**Fork-lineage is a pre-write check, not a post-hoc audit** — that is the only difference between
+the two passes, and it is the whole saving.
+
+⚠️ **And `Citolab/qti-components` carries a licence signal that does not fit this KB's classes.**
+The README states: *"This project is licensed under the GPLv3 License. Please note that the
+licensing is GPLv3 if you want to use it in another way, feel free to ask!"* The **payload is
+GPL-3.0** and the **holder advertises negotiability**. That is neither a permissive grant nor a
+closed door — it is an **invitation to dual-license**, and it is invisible to any classifier that
+reads only the payload. Recorded as a new class in trends §43. Citolab is the software lab
+attached to **Cito**, the Netherlands' national assessment institute.
+
+### 🟢 Finding 3 — Kennisnet: the Dutch education estate pass 17 was hunting under the wrong name
+
+Pass 17 recorded `onderwijsinspectie` as *"an org name claimed with zero public repositories"* and
+correctly warned that this was **not** evidence the Netherlands publishes nothing. It is not.
+`onderwijsinspectie` is the **inspectorate**; the body that publishes code is
+**[Stichting Kennisnet](https://github.com/Kennisnet)**, the Dutch public agency for ICT in
+education — **29 repositories**. Licences read from payload this pass:
+
+| Repo | Licence (read from payload) | Language | What it is |
+|---|---|---|---|
+| [`Kennisnet/pylom`](https://github.com/Kennisnet/pylom) | **MIT** (`master/LICENSE`, © 2017 Kennisnet) | **Python** | Reads and writes **IMS-LOM** learning-object metadata records |
+| [`Kennisnet/py-eduterm-client`](https://github.com/Kennisnet/py-eduterm-client) | **MIT** (`master/LICENSE`, © 2018 Kennisnet) | **Python** | Client for **Eduterm**, the Dutch curriculum-vocabulary service |
+| [`Kennisnet/php-qti3`](https://github.com/Kennisnet/php-qti3) | **MIT** (`main/LICENSE`, © **2026** Kennisnet) | PHP | QTI 3 support library — **published this year** |
+| [`Kennisnet/phpNLLOM`](https://github.com/Kennisnet/phpNLLOM) | **MIT** (`master/LICENSE`, © 2017 Stichting Kennisnet) | PHP | Reads/writes **NL-LOM**, the Dutch LOM application profile |
+| [`Kennisnet/phpEdurepSearch`](https://github.com/Kennisnet/phpEdurepSearch) | **MIT** (`master/LICENSE`, © 2015 Stichting Kennisnet) | PHP | Client for **Edurep**, the national learning-resource search index |
+| [`Kennisnet/OaiPmh`](https://github.com/Kennisnet/OaiPmh) | **MIT** (`main/LICENSE`, © 2024 Kennisnet) | PHP | OAI-PMH harvesting implementation |
+| [`Kennisnet/qti-components`](https://github.com/Kennisnet/qti-components) | GPL-3.0 (`main/LICENSE.md`) | JS | 🔴 **stale fork — see Finding 2** |
+| [`Kennisnet/qti-editor-angular`](https://github.com/Kennisnet/qti-editor-angular) | 🔴 **NO-PAYLOAD** | TypeScript | QTI editor; **ungranted** |
+| [`Kennisnet/edurep-xslt`](https://github.com/Kennisnet/edurep-xslt) | 🔴 **NO-PAYLOAD** | XSLT | Edurep transforms; **ungranted** |
+
+🟢 **Six MIT libraries from a national agency, and they are the *metadata and vocabulary* layer** —
+exactly the layer that an AI content pipeline needs and that nobody writes twice.
+
+### 🔵 Finding 4 — trend 28's "Python-shaped hole" is **LTI-shaped**, not Python-shaped
+
+Trend 28 concluded: *"there is no Python LTI 1.3 library on the permissive shelf… Python — where
+essentially all of the AI tutoring and agent code in this KB is written — is not [served]."*
+
+**The first clause survives this pass. The second does not.** `pylom` and `py-eduterm-client` are
+**MIT Python libraries for education standards** — LOM metadata and curriculum vocabulary. Python
+*is* served for **metadata and curriculum alignment**; it is still unserved for **LTI 1.3 launch**,
+which is the specific thing trend 28 measured.
+
+🟢 **This narrows the open-source contribution opening rather than closing it**, and narrowing it
+makes it cheaper: the gap is **one protocol**, not a language's worth of ecosystem. Corrected in
+trends §28 in place, because the original wording overstates a measured result.
+
+### 🔴 Finding 5 — the APAC ministry tier, measured for the first time: **the ministry is not the publisher**
+
+Pass 17's gap 3: *"No APAC ministry education estate has been found by any pass… unmeasured, not
+empty — no `org:` query has yet been run against an APAC education authority."* Run now.
+
+| Org probed | Identity | Result |
+|---|---|---|
+| [`kemdikbud`](https://github.com/kemdikbud) | Indonesia — *Kementerian Pendidikan Dasar dan Menengah* (Ministry of Basic and Secondary Education) | 🔴 Org **exists**; **1 repository**, 0★, no description, no forks, last updated **2025-08-27**. Effectively empty |
+| [`opengovsg`](https://github.com/opengovsg) | Singapore — Open Government Products | 🔴 **98 repositories, zero education products.** Top assets are `pdf2md` (500★), `FormSG` (372★), `GoGovSG` (129★). The only education-adjacent repo is **archived** teaching material for a civil-service web course |
+| [`Samagra-Development`](https://github.com/Samagra-Development) | India — SamagraX, *Samagra \| Transforming Governance* | 🟡 **124 repositories**, education-governance adjacent. Of the top five by stars, **three are NO-PAYLOAD** — including the most-starred, `ai-tools` (48★), and the education one, **`dsep` ("SkillEd: Trainings and Courses")**. Only `Doc-Generator` (MIT, © 2019) and `x-admin` (MIT, © 2022) are granted |
+
+🔵 **The finding is structural, and it is not "APAC publishes less".** It is that in APAC **the
+education code is not in the ministry's org**. India's national school platform is published by the
+**EkStep Foundation** (`Sunbird-Ed`, MIT, 38,046 commits — already on this KB's shelf); Singapore's
+assessment work reaches the market through **Coursemology / Codaveri** (MIT, already shelved);
+Indonesia's ministry org is a placeholder. **The state's arm's length is the publisher.**
+
+⚠️ **Gap 3 is now MEASURED, not CLOSED.** Three orgs is not a region. What has changed is that
+"no APAC ministry estate has been found" is no longer a statement about an un-run query.
+
+### 🔴 Finding 6 — instructions 1 and 2 are not executed, and the reason is finally *diagnosed* rather than reported
+
+Passes 16 and 17 both recorded *"unable to run `compose/code/lib/*.sh`"* without a cause, and
+pass 17 raised it to a declared gap: **a control that cannot be executed is documentation (§36),
+and that is now true two passes running.** This pass makes it three — but with the cause named:
+
+| Probe, 2026-10-06 | Result |
+|---|---|
+| `bash --version` | 🟢 **GNU bash 5.2.21** — present |
+| `python3`, `git`, `curl` | 🟢 all present |
+| `read compose/code/lib/license_family.sh` | 🟢 readable |
+| **execute `bash compose/code/lib/test_license_family.sh`** | 🔴 **refused by the environment's policy, reason `[Code from External]`** |
+
+🔵 **It is not a missing tool and it is not flaky.** The environment permits this session to run
+code it writes itself and refuses to run code that arrives **inside the repository**. That is a
+sandbox property, it will not vary between passes, and **no amount of re-trying or re-phrasing is
+the right response to it** — so none was attempted.
+
+🔴 **Therefore instruction 1 was deliberately not shipped.** Pass 17 asked for a **grant-notice
+EUPL anchor** in `lib/license_family.sh`, *validated against `p432-fromscratch-fixture-gate` plus
+ten payloads, with a negative control.* The validation is the instruction. Writing the anchor
+without it would put an **unexecuted, untested classifier change into the single file that every
+licence row in this KB depends on** — which is precisely the §36 failure the instruction exists to
+prevent, committed in the worst possible file. **An unvalidated control is worse than a declared
+gap, because it looks like a control.** Carried forward intact, blocker named.
+
+### 🔴 Finding 7 — LATAM: the ministry publishes a **dataset**, not a repository, so `org:` was the wrong instrument
+
+Pass 17's instruction 3 asked for the four unmeasured ministries to be retried through *the bodies'
+own language and national code-hosting habits*. Done for Chile and Mexico:
+
+| Body | What it actually publishes |
+|---|---|
+| **Mineduc Chile** — *Centro de Estudios* | 🟢 **Publishes substantially — as open data, not code.** **21 datasets** via [`datos.gob.cl`](https://datos.gob.cl) and its own *Datos Abiertos* portal: establishment directory, enrolment, teaching staff, education assistants, school administrators, higher-education admission and graduates. **No GitHub code estate** |
+| **SEP Mexico** (via [`mxabierto`](https://github.com/mxabierto), *México Abierto*) | 🔴 **61 repositories, no education repositories.** The estate is civic open-data tooling — `scraper-sniim` (20★), `calidad-del-aire` (12★), `precios-central` (10★) |
+| The code that *does* reach Chilean state education data | 🟡 **Third-party, and MIT.** [`pipeworx-io/mcp-datos-cl`](https://github.com/pipeworx-io/mcp-datos-cl) — MIT (`main/LICENSE`, © **2026 Mojibake Inc.**), a CKAN **MCP server** for `datos.gob.cl`. Also [`gerardbourguett/mcp-chilegob-dataset`](https://github.com/gerardbourguett/mcp-chilegob-dataset) — MIT (© 2025, an individual) |
+
+🟢 **Pass 17 was right that the name was a dead end, and wrong about what the dead end meant.**
+`Mineduc` returning no repositories is not thin publication. It is **publication in a different
+artefact class**: the LATAM state ships a *dataset over CKAN*, and a **private third party** ships
+the *code that makes it callable*.
+
+🔵 **This is trend 42 confirmed in a second region** — *"the national curriculum is becoming a
+callable API, and the wrapper's licence is not the data's licence"* — and in both regions **the
+wrapper's holder is a company, not the state**. For a LATAM engagement that changes the counterparty
+question from *"what may we fork?"* to **"who owns the only client, and what are the portal's terms
+of use?"** New trend §44.
+
+### What the next pass should do
+
+1. 🟢 **Shelve the QTI tier into a delivery pattern and verify the certification at source.** This
+   pass read the 1EdTech conformance claim from the repository README. **Read it from 1EdTech's own
+   certified-products register** and record the certificate's scope and date — a certification claim
+   in a vendor's own README is exactly the class of claim §23 says to check against the issuer.
+2. 🟢 **Sweep the remaining 20 Kennisnet repositories.** Nine were probed, chosen by stars and
+   relevance. Two of the nine are **NO-PAYLOAD**; the estate's ungranted rate is **sampled, not
+   established** — the same shortfall pass 17 declared for Opetushallitus's 188.
+3. 🔴 **Finish the APAC measurement with the *foundation* tier, not the ministry tier** — Finding 5
+   says the publisher is at arm's length. Probe the Japanese and Korean equivalents (**KERIS**,
+   Korea; **MEXT**'s delivery bodies, Japan) **as foundations and agencies**, not as ministries.
+4. ⚠️ **Instructions 1 and 2 remain open and are NOT this environment's to close** (Finding 6).
+   They need a host that permits executing the repository's own test suite. Carry forward **with the
+   validation requirement attached** — the instruction is not "add the anchor", it is "add the
+   anchor *and prove it with a negative control*".
+5. ⚠️ **Still unactionable by an unattended pass, third consecutive carry:** the four-vendor
+   anti-AI-training ToU reads (egress-blocked) and the `IFRN/suapi` upstream licence ask (an
+   outward-facing write on a third party's repository). **Both need a human or an explicit mandate.**
+
+---
+
 ## 2026-10-06 — seventeenth pass: the identity question gets a first-hand instrument, and the Finnish estate is EUPL — which this KB's own classifier cannot read
 
 **Channel run:** the ministry tier **by `org:`, never by name** — pass 16's instruction 2,

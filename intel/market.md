@@ -3520,6 +3520,36 @@ boundaries, per-vendor ToU citations) that a studio can produce and a brochure c
 ⚠️ Pass 16's unanswered question stands: the four-vendor ToU channel is still unread, so the
 procurement thesis remains evidenced by one vendor, not four.
 
+
+**🟢 Eighteenth pass — the interoperability line item now has a *certified* permissive answer.**
+Trend 28 measured the demand signal: **39% of US districts score interoperability in the RFP
+rubric**. This pass found the supply, and it is better than the rubric expects.
+[`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) is **MIT** (payload,
+© 2022-2024 Amp-up.io, LLC) **and 1EdTech Certified for QTI 3 Basic *and* Advanced "Delivery"
+conformance** — the first asset in this KB that is both permissive and externally audited. Four
+more MIT QTI 3 implementations sit beside it, including
+[`longsightgroup/qti3`](https://github.com/longsightgroup/qti3) (MIT, 12 npm packages) whose
+**QTI 1.2 / 2.x → 3 migrator** addresses the thing that actually stalls assessment projects: the
+legacy item bank.
+
+**The commercial move is to stop asserting conformance and start citing somebody else's
+certificate.** A rubric scores a *claim* of QTI support at one level and a certified
+implementation at another, and the certificate costs nothing because the licence is MIT.
+
+**The procurement weather this lands in**, read this pass: the **US Department of Education** has
+urged states and districts to evaluate ed-tech by **measurable learning outcomes** and to build
+**evidence requirements into procurement**, naming Arkansas, Indiana, Louisiana, Michigan and
+Texas for outcomes-based contracting. **Maryland's 2026 AI-Ready Schools Act (S.B. 720)** is the
+most complete state instrument: state guidance, a mandated district policy with a named **AI
+coordinator**, a formal **tool evaluation and certification process**, and procurement aligned to
+the guidance. **Ohio requires every public district to have a written AI policy by July 2026**,
+which puts **600+ districts** into procurement on a fixed date. **North Carolina** put **$10M**
+behind Khanmigo — the shape of money moving to a proprietary incumbent while the certified
+permissive alternative sits unbid.
+
+⚠️ **The certification claim was read from the vendor's README, not 1EdTech's register** — see
+declared gap 6. Verify the certificate's scope and date before it goes in a bid.
+
 ### EMEA
 
 🟢 **This is the region where this pass found supply, and the single most important fact is a
@@ -3548,6 +3578,32 @@ proposal to refuse. **EMEA is therefore the region where the conformity work and
 the same engagement**: the state publishes the substrate, the Act obliges the governance, and
 both are billable.
 
+
+**🟢 Eighteenth pass — the Netherlands joins the EMEA agency tier, and it publishes the layer
+nobody wants to rebuild.** Pass 17 searched for a Dutch estate under `onderwijsinspectie` (the
+*inspectorate*) and found nothing. The body that publishes is
+**[Stichting Kennisnet](https://github.com/Kennisnet)**, the national agency for ICT in education:
+**29 repositories**, nine payload-probed this pass, **6 MIT** — `pylom` and `py-eduterm-client`
+(**Python**, IMS-LOM metadata and the **Eduterm** curriculum vocabulary), `phpNLLOM` (the Dutch
+national LOM profile), `phpEdurepSearch` (client for **Edurep**, the national learning-resource
+index), `OaiPmh`, and `php-qti3` (**© 2026**, published this year).
+
+**This is the metadata and curriculum-alignment layer, permissively licensed, from a state
+agency** — and it is the layer every AI content pipeline needs and every vendor rebuilds. EMEA is
+now the only region where this KB can point at a **national OER index with an MIT client**.
+
+⚠️ **And the region's most mature assessment component is copyleft with a door left open.**
+[`Citolab/qti-components`](https://github.com/Citolab/qti-components) (**GPL-3.0** payload, 2,456
+commits) is the lab of **Cito**, the Dutch national assessment institute, and its README invites
+relicensing on request (§43). On an EMEA engagement where the renderer is on the critical path,
+**that conversation is worth having before the architecture is designed around the licence.**
+
+**The clock, re-read this pass:** the EU AI Act's high-risk obligations for education —
+admissions, assessment, and decisions steering an educational path — were due **August 2026**, and
+the **Digital Omnibus moved the main high-risk compliance deadline to 2 December 2027**. Schools
+are **deployers** with their own obligations. ⚠️ Quote both dates together; a proposal citing only
+one of them is describing a different obligation than the client has.
+
 ### APAC
 
 🟢 **Three binding AI statutes inside twelve months, and one of them names education
@@ -3569,6 +3625,35 @@ Market: China, India and Japan dominate regional spend; named incumbents in the 
 AI-in-education market are Google, Microsoft, IBM, Pearson and Byju's. ⚠️ **Open-source supply
 remains thin:** this KB's only APAC-origin education asset is still `panaversity/learn-agentic-ai`
 (MIT, Pakistan), and no APAC ministry estate has yet been found — **unmeasured, not empty.**
+
+
+**🔴 Eighteenth pass — the APAC ministry estate is now measured, and the finding is that the
+ministry is not the publisher.** Pass 17 declared this *unmeasured, not empty*. Three orgs probed:
+`kemdikbud` (Indonesia's Ministry of Basic and Secondary Education) has **one empty repository**;
+`opengovsg` (Singapore) has **98 repositories and zero education products**;
+`Samagra-Development` (India, SamagraX) has **124 repositories** but its most-starred asset
+(`ai-tools`, 48★) and its education asset (`dsep`, "SkillEd: Trainings and Courses") are both
+**NO-PAYLOAD — ungranted**.
+
+🔵 **The state's code is at arm's length.** India's national school platform is published by the
+**EkStep Foundation** (`Sunbird-Ed`, MIT, 38,046 commits — already shelved here); Singapore's
+assessment work reaches the market through **Coursemology / Codaveri** (MIT, already shelved).
+**For an APAC engagement, find the foundation, not the ministry — and ask whether there is a
+licence at all before asking which one.** The two largest APAC estates measured have their most
+valuable repositories ungranted, which is a **diligence finding, not a licence finding**.
+
+**Regulatory context re-read this pass:** APAC is *"a patchwork of regulatory models"*, with
+**2026 a pilot period with limited enforcement** in several jurisdictions. **Vietnam** adopted
+Southeast Asia's first AI law, naming **education among six high-risk sectors** — explicitly
+automated assessment and behavioural monitoring — with ministry guidance where a provider cannot
+self-determine risk level. **Korea** mobilised **KRW 65 trillion** of private AI investment
+2024–2027, and **Korea and Taiwan** are the clearest cases of state policy converting an existing
+industrial advantage into AI adoption. **Australia** stood up its **AI Safety Institute** from
+early 2026.
+
+⚠️ **Three orgs is not a region.** No Japanese or Korean body has been probed at all — **KERIS**
+(Korea) and MEXT's delivery bodies (Japan) are the named next targets, as *foundations and
+agencies*, not ministries.
 
 ### LATAM
 
@@ -3598,6 +3683,49 @@ resolves to **an unrelated software company**. ⚠️ **Neither result is eviden
 ministries publish nothing** — they are evidence that the name was the wrong instrument.
 **Chile, Colombia and Mexico remain gaps, declared.**
 
+
+**🔴 Eighteenth pass — the LATAM state publishes a dataset, not a repository, and that inverts the
+counterparty question.** Pass 17 left `Mineduc` (Chile, Colombia) and `SEP` (Mexico) as name
+dead-ends with the correct caveat that a dead end is not evidence of absence. Measured now through
+the bodies' **own** channels:
+
+- **Mineduc Chile's Centro de Estudios publishes substantially — as open data.** **21 datasets**
+  via [`datos.gob.cl`](https://datos.gob.cl) and its own *Datos Abiertos* portal: establishment
+  directory, enrolment, teaching staff, education assistants, school administrators,
+  higher-education admission and graduates. **No GitHub code estate.**
+- **SEP Mexico has no education repositories** under [`mxabierto`](https://github.com/mxabierto)
+  (61 repos, all civic open-data tooling).
+- **The only code reaching Chilean state education data is third-party and MIT:**
+  [`pipeworx-io/mcp-datos-cl`](https://github.com/pipeworx-io/mcp-datos-cl) (MIT, © 2026 **Mojibake
+  Inc.**, a CKAN **MCP server** for `datos.gob.cl`) and
+  [`gerardbourguett/mcp-chilegob-dataset`](https://github.com/gerardbourguett/mcp-chilegob-dataset)
+  (MIT, © 2025, **an individual**).
+
+🟢 **This is the clearest, smallest, best-defined LATAM opportunity this KB has recorded.** There
+is nothing to fork from the state, so *"what may we fork?"* is the wrong question; the right ones
+are **"what are the portal's terms of use?"** and **"who owns the only existing client?"** A single
+individual's repository standing between a client and a national dataset is a **supply-chain
+risk** — and a maintained, permissive, properly governed MCP client over a national education
+open-data portal is a **fundable piece of work with no incumbent**, portable to every CKAN portal
+in the region. See §44 and `compose/patterns.md` P34.
+
+⚠️ **The `datos.gob.cl` figures in this section are Tier 2, not a first-hand read.** The portal is **EGRESS_BLOCKED** from this environment, so the **21 datasets** count and the dataset inventory come from search results, not from the portal itself. The two MCP repositories **were** verified first-hand (payload reads plus `git ls-remote`). Treat the portal numbers as unconfirmed until a host that can reach `datos.gob.cl` checks them.
+
+
+**Demand context re-read this pass:** LATAM sits at **47% enterprise AI deployment**, with
+**Brazil (65.89), Chile (63.19) and Uruguay (62.21)** the only regional entries in the global top
+50; Brazil and Mexico carry the absolute spend while **Colombia, Chile and Peru lead percentage
+growth off smaller bases**. On governance, **UNESCO's Santiago office and Chile's National Centre
+for Artificial Intelligence (CENIA) signed a cooperation agreement in late February 2026** to
+promote responsible AI in education across Chile and Latin America — a **named, citable regional
+counterparty** for an ethics-and-capability workstream. Legislatively: **Chile's risk-based bill**
+sits in its first constitutional stage tied to the forthcoming data-protection authority;
+**Colombia's bill** names the **Ministry of Science, Technology and Innovation** as lead authority,
+alongside **CONPES 4144**; **Mexico's** federal bill mirrors the risk-based structure.
+
+⚠️ **Two of pass 17's four ministries remain unmeasured** — `stil` and `DUO` were not re-probed,
+and `onderwijsinspectie` resolved to the wrong body (**Kennisnet** publishes; see EMEA).
+
 ## The method note, stated plainly — seventeenth pass
 
 🟢 **The identity question got a first-hand instrument this pass, and it closed a question two
@@ -3620,3 +3748,74 @@ above were **read by hand**, and the classifier's behaviour on them was **traced
 code rather than measured by running it**. Stated so that the next pass knows which claims here
 are first-hand (the payloads) and which are inferred (the classifier verdict).
 
+
+## What changed in the eighteenth pass of 2026-10-06
+
+### Global market figures, re-read this pass
+
+| Metric | Value | Note |
+|---|---|---|
+| AI in education, 2025 → 2026 | **$7.52B → $10.6B** | **40.9% CAGR**, Research and Markets. Unchanged from the sixth-pass reading — the series is stable across twelve passes |
+| **AI tutors** market, 2026 → 2033 | 🆕 **$2.7B → $17.7B** | **30.5% CAGR**, Grand View Research. **A sub-segment figure new to this KB** |
+
+🔴 **Do not add the AI-tutors series to the AI-in-education series.** $2.7B of AI tutors in 2026
+sits **inside** the $10.6B, it is not additional to it, and its **30.5%** CAGR is ten points below
+the parent series' 40.9% — so a deck that quotes both and averages the growth is producing a number
+nobody published. This is the §40 failure (*"a number that is plausible in two columns will
+eventually be read from the wrong one"*) in its most tempting form yet: **both figures are real,
+both are from named houses, and they are not summable.** The two-series conflict recorded in the
+sixth and seventeenth passes still stands and is still not averaged here.
+
+**Demand-side signal re-read:** the market's defining 2026 movement is **from generic AI tools to
+platforms purpose-built for education**, and from experimentation to governance — reinforced this
+pass by **Microsoft updating its Education AI Toolkit with agentic capabilities in April 2026** for
+multi-step administrative workflows and tutoring at scale. That is the incumbent moving into
+exactly the agentic-administration space this KB's P7 and P28 patterns address, which **raises the
+bar on the oversight story rather than removing the opportunity**.
+
+### Supply-side finding of this pass, stated commercially
+
+🟢 **The first externally certified permissive asset in this KB.** Five **MIT** QTI 3
+implementations, payload-verified, three first published in 2026 — and one,
+[`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) (30★), carries
+**1EdTech certification for QTI 3 Basic and Advanced "Delivery" conformance**.
+
+**Why that is a market fact and not a technical one:** trend 28 established that **39% of US
+districts score interoperability in the RFP rubric**. Until this pass, every permissive
+interoperability component in this KB offered a **claim** of conformance. One of them now offers a
+**third party's certificate**, under a licence that permits forking and rebranding. **The
+differentiator in a scored bid moves from "we support QTI" to "this component is certified, here is
+the issuer".**
+
+Set against the rest of the interoperability shelf measured in trend 28: **LTI 1.3** — four
+permissive implementations, none certified; **OneRoster** — one, rostering only; **Caliper** —
+zero. **QTI was the one standard nobody had swept, and it is the strongest tier.**
+
+### The method note, stated plainly — eighteenth pass
+
+🔵 **The channel was the standards-body conformance register, and the lesson is about taxonomy.**
+QTI went unswept for ten passes because this KB's sweeps were organised **by topic** — `ai-tutor`,
+`education-ai`, `edtech` — and **QTI is a standard, not a topic**. The row was not empty because the
+world was empty; it was empty because **nothing had asked in the vocabulary the answer is filed
+under**. Every repository added in the last six passes came from a **proper noun**: a platform, an
+agency, a funder, or — this pass — a standard.
+
+🟢 **The fork-lineage check moved from audit to pre-write, and that is the whole saving.** Pass 17
+spent a pass correcting a row it had carried for three passes (`mcp-brasil`, a 0★ fork shelved as
+the project). This pass ran the same instrument — `git clone --filter=blob:none --no-checkout` —
+**before** writing a row, and caught [`Kennisnet/qti-components`](https://github.com/Kennisnet/qti-components)
+as a **stale fork of [`Citolab/qti-components`](https://github.com/Citolab/qti-components)**,
+79 commits behind, identical root commit `de8b27b`. **One command, no correction needed, no pass
+spent.** Fork-lineage is a pre-write check.
+
+🔴 **And the honest negative: two of pass 17's five instructions were not executed, deliberately.**
+The environment permits this session to run code it writes itself and **refuses to run code that
+arrives inside the repository** (policy reason `[Code from External]`) — `bash` 5.2.21, `python3`,
+`git` and `curl` are all present, so this is a **sandbox property, not a missing tool**, and it does
+not vary between passes. Pass 17's instruction 1 was *"ship the EUPL grant-notice anchor **and
+validate it** against the fixture gate, ten payloads and a negative control"*. **The validation is
+the instruction.** Writing an unvalidated classifier change into `lib/license_family.sh` — the one
+file every licence row in this KB depends on — would be §36's own failure committed in the worst
+possible place. **An unvalidated control is worse than a declared gap, because it looks like a
+control.** Not shipped; carried forward with the blocker named and the validation requirement
+intact.

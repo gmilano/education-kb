@@ -955,6 +955,36 @@ Three consequences for how work is scoped:
 standards share names with unrelated ecosystems**, and the result count reads as
 ecosystem health when it is mostly a different ecosystem.
 
+### 🔵 Correction, eighteenth pass of 2026-10-06 — the hole is **LTI-shaped**, not Python-shaped
+
+Two things in this trend were measured and one was inferred. The measurement stands; the inference
+does not.
+
+**Stands:** there is **no permissive Python LTI 1.3 library**. That is what the sweep tested and it
+is still true.
+
+**Withdrawn:** the broader reading — *"Python, where essentially all of the AI tutoring and agent
+code in this KB is written, is not served"*. Two **MIT Python libraries for education standards**
+were payload-verified this pass, both from the Dutch national education-ICT agency:
+[`Kennisnet/pylom`](https://github.com/Kennisnet/pylom) (IMS-LOM metadata records) and
+[`Kennisnet/py-eduterm-client`](https://github.com/Kennisnet/py-eduterm-client) (the Eduterm
+curriculum-vocabulary service). **Python is served for metadata and curriculum alignment.** It is
+unserved for **LTI 1.3 launch**.
+
+🟢 **This makes the contribution opening cheaper, not smaller.** The gap is **one protocol**, not a
+language's worth of missing ecosystem — and it keeps its procurement-scored buyer.
+
+**And the QTI row of the table above is no longer blank.** It was the only standard left unswept,
+and it turns out to be the **best**-served: **five MIT implementations**, three first published in
+2026, one of them (`amp-up-io/qti3-item-player`, MIT, 30★) **1EdTech Certified for QTI 3 Basic and
+Advanced "Delivery" conformance** — the first externally certified permissive asset in this KB.
+Set against LTI 1.3's four uncertified implementations, OneRoster's one (rostering only) and
+Caliper's zero. See `repos/foundations.md`, eighteenth pass, and §44 below.
+
+⚠️ **The method note, because it is the transferable part:** QTI went unswept for ten passes
+because the sweeps were organised **by topic** and QTI is a **standard**. The row was not empty
+because the world was empty. It was empty because nothing had asked.
+
 ## 29. Gap claims built on licence-filtered search are claims about an index, not about the world
 
 This is a methodological trend, and it belongs here because this KB — and every
@@ -2454,3 +2484,144 @@ Searched this pass, not found, stated so the absence is informative rather than 
    [`IFRN/suapi`](https://github.com/IFRN/suapi) (an outward-facing write on a third party's
    repository, with no mandate here). **Both need a human or an explicit instruction.**
 
+
+## 43. The grant and the *offer* have come apart — a copyleft payload can carry an advertised willingness to relicense
+
+§23 established that the licence **label** and the licence **grant** had come apart, and that
+reading the payload is no longer enough. The eighteenth pass found the next layer down, and it runs
+the other way: a payload that reads **GPL-3.0** can sit under a README that **offers to change it**.
+
+[`Citolab/qti-components`](https://github.com/Citolab/qti-components) — 19★, 10 forks,
+**2,456 commits**, the most mature QTI item renderer measured — ships `main/LICENSE.md` as
+unambiguous **GPL-3.0**, and states in its README:
+
+> *"This project is licensed under the GPLv3 License. Please note that the licensing is GPLv3 —
+> if you want to use it in another way, feel free to ask!"*
+
+Citolab is the software lab attached to **Cito**, the Netherlands' national assessment institute,
+so the holder is **identifiable, institutional and reachable** — which is what makes the offer worth
+anything.
+
+**Three consequences, and the third is the one that changes behaviour:**
+
+1. **A payload-reading classifier cannot see this.** `license_family.sh` reads the payload and will
+   return GPL-3.0, correctly. The offer lives in prose, in a different file, and **no licence
+   instrument this KB owns will ever surface it**. It is found by reading the README — the step
+   that automation was supposed to remove.
+2. **"Copyleft" stops being a routing decision and becomes an opening position.** This KB's
+   standing rule is that copyleft decides whether the AI work is a plugin (and inherits) or a
+   side-car (and does not). That rule holds *by default*. Where the holder advertises
+   negotiability, there is a **third branch**: ask.
+3. 🔴 **The cost of not asking is paid silently.** A team that routes around a GPL-3.0 renderer and
+   rebuilds it has spent the budget **before discovering the licence was negotiable** — and nothing
+   in the pipeline flags it, because the payload was read correctly and the verdict was right.
+
+🟢 **The operational rule: when a copyleft component is on the critical path and its holder is an
+identifiable institution, read the README for a relicensing offer before designing around the
+licence.** It is one read, and the alternative is a rebuild.
+
+⚠️ **And the warning that travels with it.** An offer in a README is **not a grant**. It is an
+invitation to a negotiation whose outcome is unknown, cannot be assumed in a bid, and must be
+settled in writing with the named holder before any architecture depends on it. Record it as
+**"GPL-3.0, holder has advertised willingness to relicense"** — never as a permissive row.
+
+## 44. Who publishes the state's education code is a regional property — and it decides who you contract with
+
+Four passes have now probed state education estates across three regions. The pattern is not *how
+much* each region publishes. It is **which body does the publishing**, and the answer differs by
+region in a way that changes the counterparty, the artefact and the engagement shape.
+
+| Region | Who publishes | Measured evidence |
+|---|---|---|
+| **EMEA** | 🟢 **The agency itself** | Norway's **Utdanningsdirektoratet** and Finland's **Opetushallitus** (188 repos, EUPL) — passes 16–17. The Netherlands' **Stichting Kennisnet**, 29 repos, 6 MIT libraries payload-verified — this pass |
+| **APAC** | 🟡 **An arm's-length foundation or vendor, never the ministry** | India: the **EkStep Foundation** publishes `Sunbird-Ed` (MIT, 38,046 commits, the DIKSHA national platform) while **SamagraX** carries 124 repos with its most-starred and its education repo both **ungranted**. Singapore: `opengovsg`, **98 repos, zero education products**; the assessment work reaches the market through **Coursemology / Codaveri** (MIT). Indonesia: `kemdikbud` exists with **1 empty repository** |
+| **LATAM** | 🔴 **The state publishes *data*; a private third party publishes the *code*** | **Mineduc Chile's Centro de Estudios**: **21 datasets** via `datos.gob.cl`, **no code estate**. **SEP Mexico**: no education repositories under `mxabierto` (61 repos). The only clients that reach the data are **third-party MIT** — `pipeworx-io/mcp-datos-cl` (© 2026 Mojibake Inc.) and `gerardbourguett/mcp-chilegob-dataset` (© 2025, an individual) |
+
+**Why this is a trend and not a table of three anecdotes:** the instrument that works in one region
+returns nothing in another, and *returning nothing is not the same as there being nothing*. Pass 17
+ran `org:` against ministry names and recorded four dead ends with the correct caveat that they were
+**unmeasured, not empty**. They were unmeasured because `org:`-against-a-ministry is an **EMEA-shaped
+instrument**. In APAC the ministry is not the publisher. In LATAM the artefact is not a repository.
+
+**Three delivery consequences:**
+
+1. **EMEA — the estate is the integration target, and the licence is the whole question.** You will
+   meet real code with a real grant (EUPL, MIT, GPL-3.0), and §38's delivery-model analysis applies
+   directly.
+2. **APAC — find the foundation, not the ministry, and expect the grant to be missing.** The two
+   largest APAC estates measured have their **most valuable repositories ungranted**. The
+   first question is not "what licence?" but **"is there a licence at all?"**
+3. 🔴 **LATAM — the counterparty question inverts.** There is nothing to fork from the state, so
+   *"what may we fork?"* is the wrong question. The right ones are **"what are the open-data
+   portal's terms of use?"** and **"who owns the only existing client, and is it maintained?"** A
+   single individual's MIT repository standing between a client and a national dataset is a
+   **supply-chain risk**, not a solution — and building a maintained, permissive replacement is a
+   **small, well-defined, fundable piece of work** this KB can point a LATAM engagement at.
+
+🔵 **This confirms §42 in a second region** — *"the national curriculum is becoming a callable API,
+and the wrapper's licence is not the data's licence"* — and sharpens it: in **both** regions where
+it has now been observed, **the wrapper's holder is a private party and the data's holder is the
+state.**
+
+## Declared gaps — eighteenth pass, 2026-10-06
+
+Searched or probed this pass, not resolved, stated so the absence is informative rather than silent.
+
+1. 🟢 **CLOSED from the seventeenth pass (gap 3, partially): the APAC ministry tier is now
+   MEASURED.** Three orgs probed — `kemdikbud` (**1 empty repo**), `opengovsg` (**98 repos, zero
+   education**), `Samagra-Development` (**124 repos, top assets ungranted**). ⚠️ **Measured, not
+   closed:** three orgs is not a region, and **no Japanese or Korean body has been probed at all**.
+   The next instrument is the **foundation tier**, not the ministry tier — see §44.
+2. 🟢 **CLOSED from the seventeenth pass (gap 2, for two of four): Chile and Mexico.** `Mineduc` and
+   `SEP` are not thin publishers. **They publish a different artefact class** — Mineduc ships **21
+   datasets** through `datos.gob.cl`; SEP has no repositories under `mxabierto`. 🔴 **Still open:
+   `onderwijsinspectie` resolved to the wrong body** (the inspectorate, not the publisher —
+   **Kennisnet** is), and **`stil` and `DUO` were not re-probed this pass.**
+3. 🔴 **Instruction 1 (the EUPL grant-notice anchor) is NOT shipped, for the third consecutive
+   pass, and the cause is now diagnosed rather than reported.** `bash` 5.2.21, `python3`, `git` and
+   `curl` are all present and the library is readable; what the environment refuses is **executing
+   code that arrives inside the repository** (policy reason `[Code from External]`). It is a sandbox
+   property, not a missing tool, and it will not vary between passes. ⚠️ **The anchor was
+   deliberately not written**, because pass 17's instruction *is* the validation — fixture gate, ten
+   payloads, negative control — and an unvalidated classifier change in the one file every licence
+   row depends on is **§36's failure committed in the worst possible place**. An unvalidated control
+   is worse than a declared gap, because it looks like a control.
+4. 🔴 **Instruction 2 (the commit-count / star-count equality flag) is likewise unshipped**, same
+   cause. ⚠️ Note that this pass **would have been caught by it in reverse**: `Kennisnet/qti-components`
+   has **2,377 commits and 1 star**, and the two columns were never at risk of being confused
+   because the fork-lineage clone reported both in the same breath. **The manual instrument covered
+   the gap the automated one would have.**
+5. 🔴 **20 of Kennisnet's 29 repositories are unread.** Nine were probed, chosen by stars and domain
+   relevance; **two of those nine are NO-PAYLOAD**. The estate's ungranted rate is **sampled, not
+   established** — the identical shortfall declared for Opetushallitus's 188, now in a second
+   estate. ⚠️ A 2-of-9 ungranted rate must not be reported as 22% of the estate.
+6. 🔴 **The 1EdTech certification claim was read from the vendor's own README, not from the
+   issuer's register.** `amp-up-io/qti3-item-player` states QTI 3 Basic and Advanced "Delivery"
+   certification, and this KB has recorded it as the first externally certified permissive asset.
+   ⚠️ **By §23's own rule that is a claim to check against its issuer**, and 1EdTech's certified-products
+   register was not read this pass. **Scope and date of the certificate are unestablished.**
+7. 🔴 **Structural defect, newly measured and NOT silently repaired: the numbering has collided.**
+   `compose/patterns.md` reuses **P1, P25, P26, P27, P28, P29 and P30** across two and three
+   distinct patterns each; `intel/trends.md` reuses **33–40**, with `## 34.` used **three** times.
+   Cross-references of the form "see P25" are therefore **ambiguous by construction**. Declared
+   rather than renumbered, per this KB's standing policy of declaring over silently renumbering —
+   but ⚠️ **this one has a cost the policy did not anticipate**, because unlike a trend whose
+   *content* needs splitting, these are **identical labels on unrelated content**, and every future
+   cross-reference inherits the ambiguity. **It needs a deliberate renumbering pass with a
+   redirect table, not another declaration.**
+8. 🔴 **`intel/market.md` still carries TWO `## Opportunities by region` blocks** where the brief
+   specifies one. 🟢 The `###` damage `p383-region-heading-gate` measured at pass 117 is **fully
+   repaired** — both blocks now contain **exactly four `###` headings, all in the closed vocabulary,
+   zero out-of-vocabulary siblings** (it was 24). The remaining defect is the **block count: 2, not
+   1.** This pass added its regional opportunities **inside the existing final block** rather than
+   opening a third.
+9. 🔴 **`datos.gob.cl` was never reached first-hand — the LATAM figures in this pass are Tier 2.**
+   The portal is **EGRESS_BLOCKED** from this environment, so the **21 datasets** count and the dataset
+   inventory behind §44 and P35 come from search results. 🟢 The claim that **the state publishes data
+   and a third party publishes the code** does **not** rest on that number — it rests on the first-hand
+   finding that `mxabierto` has **no education repositories** and that both Chilean clients are
+   **third-party MIT**, all payload- and `ls-remote`-verified. ⚠️ But the **21** itself is unconfirmed.
+10. ⚠️ **Carried over unclosed for a third consecutive pass, and still not closeable by an unattended
+   run:** the four-vendor anti-AI-training ToU reads (egress-blocked) and the licence ask on
+   [`IFRN/suapi`](https://github.com/IFRN/suapi) (an outward-facing write on a third party's
+   repository, with no mandate here). **Both need a human or an explicit instruction.**
