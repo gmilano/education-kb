@@ -777,3 +777,187 @@ API instead**: this pass found a 2,320★ platform on `dev` (`learnhouse`), a 71
 platform on `2.12` (`portabilis/i-educar`) and one repository on
 `deployment/playstore`. On a `main`+`master` probe all three read as **ungranted**,
 and two of them are merely **copyleft** — a delivery constraint, not an absence.
+
+## Added in the twelfth pass of 2026-10-06 — the xAPI/LRS tier, the Ed-Fi stack, and the Apache-2.0 seam inside an AGPL platform
+
+Every branch below came from `git ls-remote --symref … HEAD` and every licence from the
+`raw.githubusercontent.com` payload on that branch, on 2026-10-06. No licence here was
+taken from a sidebar, a badge or an organisation-level assumption — the
+`aiverify-foundation` rows are the reason why: two repositories in that organisation are
+Apache-2.0 and a third, in the same org, carries no licence at all.
+
+### The row that changes platform strategy — Open edX's plugin SDK is Apache-2.0
+
+| Repo | Licence (payload) | ★ | Branch | Why it is foundational |
+|---|---|---|---|---|
+| [openedx/XBlock](https://github.com/openedx/XBlock) | **Apache-2.0** (`master/`**`LICENSE.TXT`**) | **470** | `master` | The **XBlock SDK** — the component and plugin API every Open edX course component is written against. Python. |
+
+**This matters out of proportion to the row.** Open edX's platform core
+(`openedx/edx-platform`) is **AGPL-3.0**, and this KB has correctly priced the platform
+as copyleft since its first pass. But the surface a studio actually writes on — a
+client-specific interactive component, an AI tutor delivered inside a course, a
+proctoring or analytics side-car — is an **XBlock**, and the XBlock SDK is
+**Apache-2.0**. A component built against it is **your** component: Globant can build,
+keep and redistribute it without inheriting the platform's AGPL obligations, provided it
+stays a plugin and is not linked into the platform tree. The LATAM `TutorIA`
+specification already on this KB's agent shelf specifies exactly this shape — *"delivered
+as an Open edX XBlock/plugin"* — and this row is the licence evidence that the shape is
+sound.
+
+⚠️ **The boundary is the deliverable, not the repository.** AGPL-3.0 reaches anything
+that becomes part of the platform process in a way that creates a derivative work; it
+does not reach a separately licensed plugin consumed through a published plugin API. Get
+the packaging reviewed before you promise a client a proprietary component — the
+distinction is the whole engagement, and it is a legal review, not a licence-file read.
+
+*Found at `LICENSE.TXT` — uppercase extension. A nine-name lowercase probe reports this
+repository as ungranted; see the 13th failure mode in `agents/top.md`.*
+
+### The xAPI / LRS tier — the learning-analytics half, recovered
+
+The eleventh pass declared the learning-analytics side of the interoperability tier
+behind a membership, on the evidence of Caliper. **That is true of Caliper and false of
+xAPI.** xAPI's tooling is permissive and alive:
+
+| Repo | Licence (payload) | ★ | Branch | What it gives you |
+|---|---|---|---|---|
+| [adlnet/lrs-conformance-test-suite](https://github.com/adlnet/lrs-conformance-test-suite) | **MIT** (`master/LICENSE`) | **77** (52 forks) | `master` | **The conformance instrument.** Node.js suite that tests an LRS against the **MUST** requirements of the xAPI specification. From **ADL** (Advanced Distributed Learning, the US Department of Defense initiative that authored xAPI). This is how you *prove* an analytics deliverable conforms rather than asserting it — and in a procurement where interoperability is a scored line item (trend 28), a conformance run is the evidence. |
+| [adlnet/xapi-profiles](https://github.com/adlnet/xapi-profiles) | **Apache-2.0** (`master/LICENSE`) | **60** (33 forks) | `master` | The **xAPI Profiles specification** — structure, communication and processing — plus context, library and ontology files. ADL also runs a public profile index at `xapi.vocab.pub`. The vocabulary layer: what a statement *means*, not just how it is transported. |
+| [yetanalytics/xapipe](https://github.com/yetanalytics/xapipe) | **Apache-2.0** (`main/LICENSE`) | 17 (9 forks) | `main` | **LRSPipe** — xAPI statement forwarding and middleware, governed directly by xAPI Profiles. Clojure. ⚠️ **The product name is not the repository name**: `yetanalytics/lrspipe` is a 404 and this KB recorded that false negative twice. Pin the address, not the brand. |
+| [pelotech/xapi-lrs](https://github.com/pelotech/xapi-lrs) | **Apache-2.0** (`main/LICENSE`) | not read this pass | `main` | An LRS implementation. The store at the end of the pipe. |
+
+**What this adds up to:** a permissive xAPI chain exists end to end — **profile**
+(vocabulary) → **pipe** (transport and transformation) → **LRS** (store) →
+**conformance suite** (proof). All four are MIT or Apache-2.0. An analytics deliverable
+can be built, kept and redistributed by Globant on this chain. **Caliper cannot be, and
+xAPI can** — and the two standards are not interchangeable, so this is a design decision
+to make at proposal time, with the licence as one of the inputs.
+
+### The Apereo learning-analytics tier — permissive, under a licence the filter misses, and dormant
+
+| Repo | Licence (payload) | ★ | Branch | State |
+|---|---|---|---|---|
+| [Apereo-Learning-Analytics-Initiative/OpenLRS](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS) | **ECL-2.0** (`master/LICENSE`) | 47 (38 forks) | `master` | 🔴 **Archived by the owner on 2019-01-31, read-only.** Superseded by OpenLRW; the README says all new development moved there. |
+| [Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor](https://github.com/Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor) | **ECL-2.0** (`master/LICENSE`) | not read this pass | `master` | Dormant. |
+| [Apereo-Learning-Analytics-Initiative/OpenDashboard-api](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-api) | **ECL-2.0** (`master/LICENSE`) | not read this pass | `master` | Dormant. |
+
+🆕 **ECL-2.0 is the Educational Community License 2.0, and it belongs in this KB's
+permissive set.** It is **OSI-approved** and it is **Apache-2.0 with one modification**:
+the patent grant is narrowed so that a contributing university licenses patents only for
+the contributed work, not across its whole portfolio — written precisely so that
+universities could contribute to open source without their technology-transfer offices
+blocking it. For redistribution and commercial use it behaves like Apache-2.0.
+
+**This is trend 15 — "permissive is a bigger set than MIT, Apache, BSD" — with the
+education sector's own licence as the example.** A `license:mit OR license:apache-2.0`
+filter rejects the entire Apereo estate, and Apereo is the consortium behind Sakai and
+much of higher education's shared infrastructure. **Add `ECL-2.0` to the permissive
+allow-list.**
+
+⚠️ **And then do not adopt these three anyway.** The licence is fine; the code has been
+read-only since January 2019. They are a **reference architecture and a vocabulary
+source**, and the live permissive alternative is the ADL/Yet Analytics xAPI chain above.
+The useful lesson is the licence, not the repositories.
+
+### The Ed-Fi stack — Apache-2.0, and the US K-12 data standard
+
+| Repo | Licence (payload) | ★ | Branch | What it gives you |
+|---|---|---|---|---|
+| [Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard) | **Apache-2.0** (`v6.2.0/LICENSE`) | 46 (13 forks) | 🆕 **`v6.2.0`** | The **Ed-Fi Data Standard** — the schema that enables interoperability among US K-12 education data systems. Latest release v6.2.0, which is also the default branch. |
+| [Ed-Fi-Alliance-OSS/edfi-oneroster](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | **Apache-2.0** (`main/LICENSE`) | not read this pass | `main` | **OneRoster** over Ed-Fi — rostering interoperability, the 1EdTech standard that *did* stay open. |
+| [Ed-Fi-Exchange-OSS/Ed-Fi-Clever-Integration](https://github.com/Ed-Fi-Exchange-OSS/Ed-Fi-Clever-Integration) | **Apache-2.0** (`main/LICENSE`) | not read this pass | `main` | Integration with **Clever**, the rostering provider most US districts actually run. The bridge between the standard and the installed base. |
+
+**Why this is the North America procurement asset.** US K-12 procurement increasingly
+scores interoperability directly (trend 26, trend 28), and Ed-Fi is the standard those
+rubrics name. The schema, the OneRoster bridge and the Clever integration are all
+**Apache-2.0**. ⚠️ **The MCP side-car is gone**: `Ed-Fi-Alliance-OSS/Ed-Fi-SDK-MCP` is
+recorded in this repository's archive and no longer resolves. Agent access to Ed-Fi over
+MCP is a **build**, and it is a well-shaped, small one — the schema is published and
+permissive.
+
+*The default branch here is `v6.2.0`. This is the cleanest example in the KB of why the
+branch must be read rather than guessed: the Apache-2.0 licence of the US K-12 data
+standard is invisible to a `main`+`master` probe.*
+
+### The interoperability tier — Python and Java LTI 1.3, measured exhaustively
+
+The tenth pass declared *"no Python LTI 1.3 library exists on the permissive shelf"*;
+the eleventh pass refuted it from this repository's own archive. This pass **measured the
+whole tier** with the MCP search API — `lti 1.3 advantage language:Python` →
+**`total_count: 4`**, which is the complete set, not a page of it:
+
+| Repo | Licence (payload) | ★ | Branch | Verdict |
+|---|---|---|---|---|
+| [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) | **MIT** (1,070 B) | **138** (83 forks) | `master` | **The only viable one.** Django and Flask adapters. ⚠️ **51 open issues**, last push 2024-08-18. |
+| [blackboard/BBDN-lti-1p3-tool-example](https://github.com/blackboard/BBDN-lti-1p3-tool-example) | **Apache-2.0** (`main/LICENSE`) | 1 | `main` | 🆕 **Blackboard's own** Python/Flask LTI 1.3 example with AWS deployment. A vendor-authored reference — useful for reading how a major LMS expects a tool to behave. Last updated 2022. |
+| [glenn-watt/lti-1p3-reference-tool](https://github.com/glenn-watt/lti-1p3-reference-tool) | **MIT** (`main/LICENSE`) | 0 | `main` | 🆕 Flask reference tool implementing **OIDC, JWKS validation, AGS, NRPS and Deep Linking from first principles**. 0★ and three months old, so it is **code to read**, not a dependency — but it is the only one that covers all four LTI Advantage services explicitly. |
+| [CNIT-Organization/ltitoolkit](https://github.com/CNIT-Organization/ltitoolkit) | **MIT** (`main/LICENSE`) | 0 | `main` | 🆕 PyPI-published LTI 1.3 Advantage toolkit. 0★. |
+
+🔴 **The Python-shaped hole in trend 28 is one library deep, and this is the exact
+measurement of it.** Four repositories exist in the world; one has more than one star;
+that one has 51 open issues and has not been pushed since August 2024. **If an
+engagement's LMS integration is on the critical path, budget for maintaining a fork of
+`pylti1.3` from the start.** That is not a risk to flag later — at `total_count: 4` it is
+the baseline condition of the tier.
+
+**The Java side is healthier, and it is EMEA-placed:**
+
+| Repo | Licence (payload) | ★ | Branch | Verdict |
+|---|---|---|---|---|
+| [UOC/java-lti-1.3-provider-example](https://github.com/UOC/java-lti-1.3-provider-example) | **MIT** (`master/LICENSE`) | 8 (12 forks) | `master` | **EMEA / Spain** — a working LTI Advantage tool webapp built on the LTI libraries of the **Universitat Oberta de Catalunya**, a large European distance-learning university. The Java counterpart to `pylti1.3`, carrying a European institution's own production lineage. |
+
+### The assessment-standards tier — QTI, and an ISC licence from a commercial vendor
+
+| Repo | Licence (payload) | ★ | Branch | What it gives you |
+|---|---|---|---|---|
+| [pie-framework/pie-qti](https://github.com/pie-framework/pie-qti) | 🆕 **ISC** (`master/LICENSE`, © 2026 **Renaissance Learning**) | 4 (1 fork) | `master` | **QTI player for 2.1, 2.2 and 3.0**, plus bidirectional QTI ↔ PIE transforms with a CLI for batch conversion. Ships an item player and a multi-item assessment player. TypeScript. |
+| [Citolab/qti-convert](https://github.com/Citolab/qti-convert) | **GPL-3.0** (`main/LICENSE`) | not read this pass | `main` | QTI conversion tooling from **Cito** (the Dutch national assessment institute). Real and maintained — but GPL-3.0, so a conversion step built on it is a copyleft deliverable. |
+
+🆕 **ISC belongs on the permissive allow-list too.** It is OSI-approved and functionally
+equivalent to MIT — a two-clause permission grant with no added conditions — just shorter.
+A `license:mit OR license:apache-2.0 OR license:bsd` filter misses it.
+
+**And note who holds the copyright: Renaissance Learning**, a commercial assessment
+vendor, publishing a QTI player under ISC. Trend 7 has called assessment "the regulated
+frontier and the tooling gap" for eleven passes. The gap is narrower than that on the
+**standards-conformance** side: a permissive QTI player exists, at 4★, from a vendor
+with a real assessment business. It is still wide on **AI-generated grading**, where
+`license:apache-2.0` + automated rubric grading measures **`total_count: 0`** this pass
+and the only permissive answer in this KB remains `Selleo/mentingo` (MIT).
+
+### Classroom-discourse and research infrastructure
+
+| Repo | Licence (payload) | ★ | Branch | What it gives you |
+|---|---|---|---|---|
+| [stanfordnlp/edu-convokit](https://github.com/stanfordnlp/edu-convokit) | **MIT** (`main/LICENSE`) | 117 (16 forks) | `main` | Stanford NLP: anonymise → annotate → analyse classroom talk. Full entry in `agents/top.md`. |
+| [EduNLP/EduCoder](https://github.com/EduNLP/EduCoder) | **MIT** (`main/LICENSE`) | 3 | `main` | Human-vs-LLM transcript annotation workspace. Full entry in `agents/top.md`. |
+| [jupyterhub/jupyterhub-deploy-teaching](https://github.com/jupyterhub/jupyterhub-deploy-teaching) | **BSD** (`master/LICENSE`) | not read this pass | `master` | 🆕 **Absent from every earlier pass of this KB**, live or archived, except one archive mention. Reference deployment of **JupyterHub for a teaching environment** — the standard way CS and data-science courses give every student a server-side notebook. BSD. The infrastructure layer under any coding-course engagement. |
+| [aiverify-foundation/aiverify](https://github.com/aiverify-foundation/aiverify) | **Apache-2.0** (`main/LICENSE`) | 98 (32 forks) | `main` | **APAC / Singapore** — AI governance *testing framework* from the **AI Verify Foundation** under **IMDA**, validating AI systems against internationally recognised principles through standardised tests. The compliance-evidence instrument for an APAC deployment, built by the regulator's own foundation. |
+| [aiverify-foundation/aiverify-developer-tools](https://github.com/aiverify-foundation/aiverify-developer-tools) | **Apache-2.0** (`main/LICENSE`) | not read this pass | `main` | Plugin and test-widget development kit for AI Verify. How you add an **education-specific** test to a government-recognised harness. |
+| [aiverify-foundation/moonshot-data](https://github.com/aiverify-foundation/moonshot-data) | **Apache-2.0** (`main/LICENSE.md`) | not read this pass | `main` | Test assets, datasets, metrics and attack modules for Moonshot (the red-teaming/benchmark harness already on this shelf). |
+| `aiverify-foundation/LLM-Evals-Catalogue` | 🔴 **ungranted** | — | `main` | **No licence file**, under 30+ name variants on the real default branch. A catalogue of LLM evaluations — the index, not the code. **Treat as reading material, cite it, do not vendor it.** Three repos in one government foundation's organisation: two Apache-2.0, one ungranted. |
+
+### One correction to this KB, with the payload as evidence
+
+The 123rd-pass note in `repos/trending.md` records:
+
+> *"Discrepancia registrada sin normalizar: el `LICENSE` de `edrys` mide 16.724 B y la
+> AGPL íntegra mide ~34–35 KB en este corpus — es AGPL ABREVIADA."*
+
+🔴 **`edrys-org/edrys` is `MPL-2.0`, not an abbreviated AGPL.** Read this pass from
+`main/LICENSE` (16,725 B): the first line is **`Mozilla Public License Version 2.0`**,
+and the full MPL-2.0 text is ~16.7 KB — the size is not a truncated AGPL, it is a
+complete MPL. The only occurrence of "Affero" in the file is inside **MPL §1.12's
+secondary-licence definition**, which names the LGPL and AGPL as compatible licences.
+That boilerplate is what a substring search found.
+
+**This changes the delivery constraint, not just the label.** MPL-2.0 is **file-level
+weak copyleft**: modified MPL files must stay MPL and be published, but the work can be
+combined with proprietary code in a larger program without that program becoming MPL.
+AGPL would have added a network-use obligation that MPL has none of. `edrys` — a
+live-classroom platform — is therefore **usable in a mixed-licence deliverable** with
+per-file discipline on the files you touch. It was priced as unusable.
+
+**The method lesson is the general one:** a size comparison identifies a *discrepancy*,
+and only the first line of the payload identifies a *licence*. Size told pass 123 to look
+again, which was right; it then answered the question it had only raised.

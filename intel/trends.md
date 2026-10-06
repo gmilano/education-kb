@@ -1488,3 +1488,221 @@ Three consequences for how an engagement is built and sold:
   apps, the xAPI/LRS tier, ~16 Moodle AI plugins and ~20 education MCP servers. They
   are listed in `archive/2026-10-06-pre-reset/`. **A pass spent there will out-yield
   a pass spent on the open internet.**
+
+## 33. The permissive set includes two more licences the standard filter rejects — and one of them is education's own
+
+Trend 15 established that "permissive" is a bigger set than MIT, Apache and BSD. This
+pass found the two entries that matter most for this industry, and the first one is not a
+curiosity:
+
+**ECL-2.0 — the Educational Community License 2.0.** OSI-approved. It is **Apache-2.0
+with exactly one modification**: the patent grant is narrowed so that a contributing
+university licenses patents only for the work it contributed, rather than across its
+whole portfolio. That clause exists because technology-transfer offices would otherwise
+veto university participation in open source. For redistribution and commercial use, it
+behaves as Apache-2.0.
+
+It covers the **Apereo** estate — the consortium behind **Sakai** and a large share of
+higher education's shared infrastructure. A `license:mit OR license:apache-2.0` filter
+rejects all of it. This KB's own filters have been doing so for eleven passes.
+
+**ISC.** OSI-approved, functionally MIT, shorter. It carries
+[pie-framework/pie-qti](https://github.com/pie-framework/pie-qti) — a **QTI 2.1/2.2/3.0
+player** with bidirectional QTI ↔ PIE transforms, copyright **© 2026 Renaissance
+Learning**, a commercial assessment vendor.
+
+**The permissive allow-list for this KB is therefore: MIT, Apache-2.0, BSD (2- and
+3-clause), ISC, ECL-2.0.** MPL-2.0 sits just outside it as **file-level weak copyleft** —
+usable in a mixed deliverable with per-file discipline, which is a different and much
+cheaper constraint than AGPL's network-use clause.
+
+⚠️ **A licence being usable does not make the code usable.** All three ECL-2.0
+repositories found this pass have been **archived and read-only since 2019-01-31**. The
+right conclusion is "add ECL-2.0 to the filter", not "adopt Apereo's analytics stack" —
+for which the live permissive answer is the ADL/Yet Analytics xAPI chain.
+
+## 34. Education's reusable IP lives at the plugin seam of copyleft platforms, not beside them
+
+The most-deployed platforms in this industry are copyleft: **Moodle** (GPL-3.0),
+**Open edX** (AGPL-3.0), **OpenEMIS** (GPL-2.0), **i-educar** (GPL-2.0). Eleven passes of
+this KB priced that as a constraint on reusable studio IP. **It is more precisely a
+constraint on where the IP sits.**
+
+[openedx/XBlock](https://github.com/openedx/XBlock) — the **plugin SDK** that every Open
+edX course component is written against — is **Apache-2.0** at **470★**, while the
+platform core it plugs into is AGPL-3.0. A component written against the XBlock API is
+**yours**, under whatever licence you choose, provided it stays a plugin consumed through
+the published API rather than being linked into the platform tree.
+
+Moodle shows the same architecture with the opposite default: its **in-tree** AI plugins
+are GPL-3.0 (correctly — 8 of 8 verified this pass), while
+[peancor/moodle-mcp-server](https://github.com/peancor/moodle-mcp-server), which reaches
+Moodle data **from outside the tree**, is MIT. This KB has recorded that licence-boundary
+note for several passes; XBlock generalises it.
+
+**The pattern, stated as a rule for engagement design:**
+
+| Where your code sits | Licence you inherit | Reusable as studio IP |
+|---|---|---|
+| Inside the platform tree | The platform's (GPL/AGPL) | No |
+| Against a **published plugin API** | **Your choice** | **Yes** |
+| Outside the platform, over MCP / REST / LTI | **Your choice** | **Yes** |
+
+**So the architectural decision that determines IP ownership is made before any code is
+written**, and it is not a licence decision — it is a packaging decision. The LATAM
+`TutorIA` specification on this KB's agent shelf already chose correctly
+(*"delivered as an Open edX XBlock/plugin"*) without, as far as its documents show,
+knowing that the SDK was Apache-2.0.
+
+⚠️ **Get the packaging reviewed by counsel, not by a licence-file read.** The AGPL reaches
+derivative works, and whether a plugin is one is a question about linkage and distribution,
+not about which repository the licence file lives in.
+
+## 35. Ungranted code clusters by the type of body that published it, not by region
+
+Across the 66 repository addresses resolved this pass, **11 carried no licence grant at
+all** — measured against 30+ filename variants on each repository's real default branch,
+so these are absences of a grant rather than failures of a probe. They are not scattered:
+
+| Publisher type | Ungranted found | Examples |
+|---|---|---|
+| **Public-sector bodies and standards groups** | 5 | DG EMPL (`european-digital-credentials`), **FWU** Germany (2 school ontologies), **DINI-AG-KIM**, **IMDA**'s `LLM-Evals-Catalogue` |
+| **Individual-maintainer LMS plugins** | 3 | `moodle-tool_aiconnect`, `moodle-local_aihub`, **`moodle-ai-graded-assignment`** |
+| **Academic content repositories** | 1 | **`CAHLR/OATutor-Content`** — the content of an **MIT** engine |
+| **LATAM individual projects** | 2 | `tutor-adaptativo-ia`, `API-EduAdapt` |
+
+**The inversion is the finding.** The bodies whose output is *most* reusable in principle —
+ministries and standards groups publishing curriculum vocabularies and credential models,
+whose entire purpose is shared infrastructure — are the **least likely** to attach a grant.
+Meanwhile the individual developers publishing tutoring apps mostly do attach one.
+
+**Three operational consequences:**
+
+1. **Organisation-level licence inference is unsafe, even inside a regulator.** The
+   `aiverify-foundation` organisation has two Apache-2.0 repositories and one ungranted
+   one. Read every payload.
+2. **The engine and its content are separately licensed, and the content is the pedagogy.**
+   `CAHLR/OATutor` is MIT; `CAHLR/OATutor-Content` — the problem bank and hint trees — is
+   ungranted. Anyone scoping an OATutor deployment on the strength of the engine's licence
+   has mispriced the asset.
+3. 🟢 **Asking is the cheapest unblock in this industry.** A ministry can attach a licence
+   in one commit, and the usual reason there is none is that nobody asked. This belongs in
+   the first fortnight of a public-sector engagement, in **every** region — it is not an
+   EMEA peculiarity, it is a property of public-sector publishing.
+
+## 36. The compliance instrument differs in *kind* by region, and that determines the deliverable
+
+Trend 27 recorded two instruments closing the evaluation void — a cheque and a rule. With
+APAC's harness verified this pass, the full picture is that **each region specifies AI-in-
+education compliance through a different *kind* of artefact**, and a proposal written for
+one region's instrument does not transfer:
+
+| Region | The instrument | Its nature | What you actually deliver |
+|---|---|---|---|
+| **North America** | State statutes + **district procurement rubrics** (134 bills / 31 states; Ohio's July 2026 written-policy deadline) | A **scoring sheet** and a set of prohibitions | Evidence that scores: Ed-Fi/OneRoster/xAPI conformance, a policy and inventory pack, human-oversight procedures |
+| **EMEA** | **EU AI Act**, enforcement from **2 Aug 2026** | A **statute** with a conformity-assessment duty | A conformity file for a high-risk system, before deployment |
+| **APAC** | **AI Verify** (IMDA Singapore, **Apache-2.0**) plus binding national laws (Korea 22 Jan 2026, Vietnam 1 Mar 2026, Australia's TEQSA plans) | An **open-source test harness**, extensible by plugin | A **test plugin inside the regulator's own harness** — plus the national readiness documents |
+| **LATAM** | 🔴 **Nothing regional.** Brazil's bill, Chile's framework, Colombia's CONPES, Mexico's sectoral rules, all at different speeds; **UNESCO** warns institutions use GenAI without policies | An **institutional vacuum** | The institution's own governance layer — there is no external artefact to conform to |
+
+🆕 **APAC's shape is the strongest of the four and it exists in no other region.** When the
+regulator publishes its conformance harness under Apache-2.0 **and** ships a plugin kit
+(`aiverify-developer-tools`), compliance evidence can be produced **by the regulator's own
+instrument** rather than asserted by the vendor — and an education-specific test profile can
+be contributed upstream, where it becomes a reference other implementers must meet.
+
+🔴 **LATAM's shape is the weakest, and it is why the governance engagement is the regional
+engagement.** With 92% student and 79% faculty adoption and no instrument at any level, the
+deliverable is not conformance — it is the institution's first policy.
+
+## 37. Measured by language rather than by region, the LATAM supply gap is absence, not thinness
+
+Five passes of this KB measured "the LATAM shelf" and found repositories at 0–9★, and
+described the result as **thin**. All five measured in **Spanish**.
+
+Measured this pass with `total_count`:
+
+| Query | Result |
+|---|---|
+| `tutor IA educación aprendizaje` (**Spanish**) | **3** — all 0–1★, one of which no longer resolves. **Live shelf: 2.** |
+| `tutor inteligência artificial educação aprendizagem` (**Portuguese**) | 🔴 **0** |
+
+**Brazil is the largest education system in Latin America, and the Portuguese-language
+permissive AI-tutoring shelf is empty.** Not immature, not low-star: zero. "Thin" was the
+wrong word for a condition that is, in half the region, absence — and the word was wrong
+because the measurement was monolingual.
+
+**The generalisable lesson is about measurement, not about Brazil.** A region is not a
+language, and a supply claim about a region measured in one of its languages is a claim
+about that language. This KB's regional vocabulary is correctly closed to five values
+(trend hygiene the compiler depends on), but **the probe underneath a regional claim has to
+enumerate the region's languages.** APAC is the obvious next case: every APAC measurement in
+this KB to date has been in English or Chinese, which leaves Hindi, Bahasa, Japanese, Korean
+and Vietnamese unmeasured — and trend 21's mother-tongue finding says that is where the
+demand is.
+
+**What Brazil does have** is copyleft and consequential: `yunger7/enem-api` (**GPL-2.0**, an
+API over the national university-entrance exam), `portabilis/i-educar` (GPL-2.0, the largest
+free school-management platform), `moodle-mod_maici` (GPL-3.0). And exactly one permissive
+Portuguese asset: `thiagoluzin/pemara-edu-mira` (**MIT**, 0★) — whose architecture, **school
+LAN, offline-capable, optional AI**, is the regionally correct one.
+
+🟢 **For a LATAM-rooted firm this is the cheapest durable position in this entire KB**: at
+`total_count: 0` there is no incumbent to displace, and the publishing cost is one competent
+MIT component.
+
+## Declared gaps — twelfth pass, 2026-10-06
+
+- 🔴 **No public Caliper reference implementation survives in any language.** The eleventh
+  pass established that `IMSGlobal/caliper-python` went private on 2023-06-17. This pass
+  confirmed it with a second instrument **and found `1EdTech/caliper-php` is gone too**.
+  There is no second language to fall back on. **Do not promise Caliper emission without
+  pricing a 1EdTech membership or a clean-room build.** The xAPI alternative *is*
+  permissive end to end (profile → pipe → store → conformance suite, all MIT/Apache-2.0),
+  so this is a standards choice to make at proposal time, not a capability gap.
+- 🔴 **No permissive Open Badges server.** `concentricsky/badgr-server` is gone, confirmed
+  twice. Trend 8's verifiable-credential half still has no permissive server implementation.
+- 🔴 **The Python LTI 1.3 tier is `total_count: 4` and one library deep.** `pylti1.3`
+  (MIT, 138★) is the only entry above 1★, with **51 open issues** and no push since
+  2024-08-18; the other three are 0–1★. This is now measured exhaustively rather than
+  estimated. **Budget a fork from day one** on any engagement where LMS integration is on
+  the critical path. The Java side is healthier (`UOC/java-lti-1.3-provider-example`, MIT).
+- 🔴 **No permissive Apache-2.0 AI grading tool.** `automated grading rubric LLM education
+  license:apache-2.0` → **`total_count: 0`**. The only permissive answer in this KB remains
+  `Selleo/mentingo` (MIT). ⚠️ And a Moodle plugin for the function exists and is
+  **ungranted** (`alvarogregori/moodle-ai-graded-assignment`) — the supply is there and the
+  grant is not.
+- 🔴 **`CAHLR/OATutor-Content` is ungranted.** The MIT engine on this KB's core shelf has an
+  **unlicensed content repository**. Its problem bank and hint trees — the pedagogy, i.e.
+  the asset — cannot be redistributed. **New this pass, and it changes how OATutor should
+  be scoped.**
+- 🔴 **The Portuguese-language permissive shelf is `total_count: 0`.** Trend 37. **The
+  single clearest contribution opportunity in this KB**, and the contribution is a
+  published component, not a licence.
+- 🔴 **No oral reading fluency product exists.** Re-measured independently: `total_count: 4`,
+  the same four repositories as the eleventh pass (`prosody` MIT 0★; `labaaoom` 2017,
+  `NOASSERTION`; `ReaDirect-V2` ungranted on branch `deployment/playstore`; `ORF_Calculator_6th`
+  0★). **Holds, now reproduced by two passes with the same count.**
+- 🔴 **`OpenLiteracy` → `total_count: 0`.** Still no public repository for the Harvard/Ying Xu
+  early-reading project funded to close that gap.
+- 🔴 **No education test profile exists for AI Verify.** `aiverify-developer-tools` is
+  Apache-2.0 and built for exactly this, and nothing education-specific has been contributed.
+  **New this pass. The highest-leverage upstream contribution available in APAC**, because it
+  lands inside the regulator's own instrument.
+- 🔴 **~89 archive addresses remain unrecovered**, down from ~155. The largest untouched
+  block is the **~20-server education MCP cluster** — and **2 of the 4 dead addresses found
+  this pass were MCP servers**, so expect decay there and record it as supply data rather
+  than re-declaring it as absence.
+- ⚠️ **Every "ungranted" verdict in this KB older than the twelfth pass is suspect.** The
+  13th failure mode — **case-sensitive licence filenames** — turned a **470★ Apache-2.0**
+  repository (`openedx/XBlock`, at `LICENSE.TXT`) into a false absence in this pass's own
+  first sweep, and earlier passes used lowercase-only probe sets. **A retroactive re-probe
+  with case variants is owed**, and it is cheap.
+- ⚠️ **A `total_count` is an upper bound, not a census.**
+  `junjie1005/Plataforma-IA-Educativa-Rutas-Personalizadas` is listed by the search index
+  and unreachable via `git ls-remote`. Counts from the index should be stated as "indexed",
+  and existence confirmed separately, before a count is quoted as a measurement.
+- ⚠️ **APAC has never been measured in its own languages.** Hindi, Bahasa Indonesia,
+  Japanese, Korean and Vietnamese queries have not been run by any pass of this KB, while
+  trend 21 says mother-tongue capability is where the demand sits. **Declared as an
+  unmeasured region-language pair, not as an absence** — the LATAM lesson of trend 37 is
+  precisely that those are different claims.

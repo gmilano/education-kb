@@ -8,6 +8,190 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — twelfth pass: the default branch is readable without an API, and the licence filename is case-sensitive
+
+The eleventh pass closed with an instruction: *"Read `default_branch` from the API and
+probe **that**."* Right conclusion, wrong dependency. This pass the HTTP API returned
+**403** on every path (*"sessions are bound to their configured repositories"*), so an
+instruction that routes through it is not executable in the general case.
+
+**It does not need an API.**
+
+```
+git ls-remote --symref https://github.com/{owner}/{repo} HEAD
+# → ref: refs/heads/{default_branch}	HEAD
+```
+
+Plain git over HTTPS. Authoritative, not a guess. It also answers *does this repository
+still exist* — a dead address returns nothing. Every row below was resolved this way.
+
+### Finding 1 — four default branches that neither `main` nor `master` would have found
+
+| Repo | Real default branch | What a two-name probe reports | Truth |
+|---|---|---|---|
+| `Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard` | **`v6.2.0`** | ungranted | **Apache-2.0**, 46★ — the US K-12 data standard |
+| `moodlehq/moodle-tool_dataprivacy` | **`MOODLE_34_STABLE`** | ungranted | GPL-3.0 |
+| `datakind/student-success-tool` | **`develop`** | ungranted | **MIT**, Google.org-funded |
+| `mendezjerick/ReaDirect-V2` | **`deployment/playstore`** | ungranted | ungranted (as pass 11 found) |
+
+A semantic version, a vendor release-branch convention, and `develop`. **The guess-set
+is not two names wide and it is not enumerable.** Read it.
+
+### Finding 2 — the 13th failure mode: the right word, the right directory, the wrong case
+
+`raw.githubusercontent.com` is case-sensitive. A nine-name lowercase-conventional probe
+(`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, …) across this pass's addresses
+reported **13 repositories as ungranted**. Re-probed with case variants, two were not:
+
+| Repo | Actual filename | Real licence |
+|---|---|---|
+| [openedx/XBlock](https://github.com/openedx/XBlock) | **`LICENSE.TXT`** — uppercase extension | **Apache-2.0**, 470★ |
+| [european-commission-empl/European-Learning-Model](https://github.com/european-commission-empl/European-Learning-Model) | **`license`** — lowercase, no extension | **EUPL-1.2** |
+
+🔴 **The XBlock one is expensive and it is strategic.** Open edX's platform core is
+AGPL-3.0, which this KB has priced correctly for eleven passes. But the **XBlock SDK** —
+the plugin API a studio actually writes a client component against — is **Apache-2.0**.
+A lowercase probe calls the plugin SDK of the most widely deployed LMS in this KB
+ungranted. It is permissive, and it is the seam that lets a client-specific component be
+built and redistributed without inheriting the platform's AGPL obligations. The LATAM
+`TutorIA` specification on this shelf already specifies that exact shape — *"delivered
+as an Open edX XBlock/plugin"* — and this is the licence evidence that the shape holds.
+⚠️ Packaging decides it, not the licence file: get it legally reviewed before promising a
+client a proprietary component.
+
+The catalogue of licence-location failure modes now reads: **no licence file at all** ·
+**a licence outside the root** (`docs/License.txt`) · **prose imitating a grant** ·
+**the MIT incipit on a proprietary licence** (`P411`) · 🆕 **the wrong case** · 🆕 **the
+grant declared only as a README badge pointing off-repository**.
+
+### Finding 3 — the EU Commission declares a licence by badge, to someone else's repository
+
+`european-commission-empl/European-Learning-Model` has no conventional licence file. Its
+README declares **EUPL-1.2** through an image badge whose link points at
+`github.com/teamdigitale/licenses` — **a third party's** copy of the licence text, not
+the Commission's. The grant itself turned out to be in a root file named `license`.
+
+Its sibling, `european-commission-empl/european-digital-credentials`, is **ungranted**
+under every variant tried.
+
+For an EMEA engagement this is the practical read: **the EU's own learning-data model is
+EUPL-1.2** — OSI-approved, but **reciprocal**, with a compatibility list rather than a
+permissive grant — and **the digital-credentials repository has no grant at all**. Neither
+is MIT, and neither is unusable; both need to be priced as what they are.
+
+### Finding 4 — an independent reproduction of `P411`, and the size floor holds
+
+This pass's payload classifier, written independently, read `CaviraOSS/PageLM`
+(**2,000★**) as **MIT**. Pass 123 predicted exactly that on 2026-10-05: the payload opens
+with the literal MIT grant and is titled *"PageLM Community License"* — **non-commercial
+only, redistribution prohibited, revenue-sharing agreement required, revocable**.
+
+No new finding is claimed. What is added is a **second, independent instrument falling
+into the same trap**, which settles which check is load-bearing: **not the grant phrase,
+the size.** This pass measured two real MITs at **1,070 B** exactly
+(`AI-Powered-Video-Tutorial-Generator`, `pylti1.3`) against PageLM's 8,563 B. The
+~1,070 B floor is a real signal, reproduced.
+
+🔴 **PageLM stays DO-NOT-VENDOR at any star count.**
+
+### Finding 5 — four agent rows, one of them new to this KB entirely
+
+| Agent | Repo | Licence (payload) | ★ | Branch | Why it earns a row |
+|---|---|---|---|---|---|
+| AI-Powered-Video-Tutorial-Generator | [AkshitIreddy/AI-Powered-Video-Tutorial-Generator](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | **MIT** (1,070 B) | **313** (65 forks) | `main` | 🆕 **Appears in no earlier pass of this KB, live or archived.** Illustrated video lessons with presenters, voices and lip-sync on a native timeline; Tauri/Rust + Python + React desktop app that runs **local models**. The only permissive video-lesson generator on this shelf, and local inference is what makes it viable where per-seat model cost binds. |
+| Edu-ConvoKit | [stanfordnlp/edu-convokit](https://github.com/stanfordnlp/edu-convokit) | **MIT** | 117 (16 forks) | `main` | Stanford NLP. Anonymise → annotate (talk time, student reasoning, teacher uptake) → analyse classroom talk. **The measurement instrument for trend 10**, and the anonymisation step is what makes classroom audio lawful to process in all four regions. |
+| Student Success Tool | [datakind/student-success-tool](https://github.com/datakind/student-success-tool) | **MIT** | 8 | **`develop`** | DataKind; **Google.org**-funded; partner **John Jay College** reports +32% senior graduation over two years. Predictive advising with explicit bias-reduction and an advisor in the loop. **North America**-placed. |
+| EduCoder | [EduNLP/EduCoder](https://github.com/EduNLP/EduCoder) | **MIT** | 3 | `main` | Human-vs-LLM transcript annotation with evidence tied to individual lines. The labelling front end to Edu-ConvoKit's analysis. |
+
+### Finding 6 — the archive pass out-yielded the open internet, as pass 11 predicted
+
+The eleventh pass wrote: *"A pass spent there will out-yield a pass spent on the open
+internet."* Measured:
+
+| Channel | Addresses resolved | Net new usable |
+|---|---|---|
+| `archive/2026-10-06-pre-reset/` (**66 addresses**) | **66** — every one resolved to a real branch and a licence state | **28 permissive** (12 MIT, 10 Apache-2.0, 3 ECL-2.0, 1 ISC, 1 BSD, 1 MPL-2.0) |
+| The four mandated `WebSearch` queries | — | **0 net new repositories.** They returned `OpenClaw`, `CrewAI`, `AutoGPT`, the Microsoft and Hugging Face courses — all already recorded, none education-specific. **Eighth consecutive pass in which the generalist query yields nothing.** |
+| MCP `search_repositories` | 7 addresses | **1 net new agent row** (313★) **+ 3 Python LTI libraries** |
+
+Full breakdown of the 66: 28 permissive · 17 copyleft (10 GPL-3.0, 4 AGPL-3.0, 2 GPL-2.0,
+1 EUPL-1.2) · **11 ungranted** · 3 CC content licences · 3 non-OSI source-available ·
+**4 dead**.
+
+### Finding 7 — five addresses are gone, and two of them were MCP servers
+
+| Address | What it was | Consequence |
+|---|---|---|
+| `IMSGlobal/caliper-python` | Caliper reference impl, Python | Confirms pass 11's gap with a second instrument. |
+| 🆕 `1EdTech/caliper-php` | Caliper reference impl, **PHP** | **Extends the gap.** Pass 11 established the Python one went private 2023-06-17. The PHP one is gone too. **No surviving public Caliper reference implementation in any language this KB has checked** — and now no second language to fall back on. |
+| `concentricsky/badgr-server` | Open Badges server | Confirms pass 11. Trend 8's verifiable-credential half still has no permissive server. |
+| 🆕 `Ed-Fi-Alliance-OSS/Ed-Fi-SDK-MCP` | **MCP server for the Ed-Fi SDK** | The rest of the Ed-Fi stack is alive and Apache-2.0. The agent side-car is what decayed. Ed-Fi-over-MCP is a **build**. |
+| 🆕 `junjie1005/Plataforma-IA-Educativa-Rutas-Personalizadas` | LATAM Spanish adaptive platform, 0★ | **The search index lists it; `ls-remote` cannot reach it.** A repository can be inside `total_count` and not exist — so a count from the index is an **upper bound**, which matters before quoting one as a measurement. |
+
+**Two of the four dead addresses were MCP servers.** The ~20-server education MCP
+cluster is the largest block still unrecovered from the archive, and it is the one most
+likely to have decayed. **Next pass should take it.**
+
+### Finding 8 — ECL-2.0 and ISC belong on the permissive allow-list
+
+Two licences surfaced this pass that a `license:mit OR license:apache-2.0 OR license:bsd`
+filter rejects and should not:
+
+- **ECL-2.0** (Educational Community License 2.0) — OSI-approved, **Apache-2.0 with a
+  narrowed patent grant** written so universities could contribute without their
+  technology-transfer offices objecting. **The education sector's own permissive
+  licence**, and it covers the whole **Apereo** learning-analytics estate (`OpenLRS`,
+  `LearningAnalyticsProcessor`, `OpenDashboard-api`). ⚠️ Those three are
+  **archived since 2019-01-31** — the licence is usable, the code is read-only. Take the
+  vocabulary, use the live ADL/Yet Analytics xAPI chain instead.
+- **ISC** — OSI-approved, functionally MIT. Carries
+  [pie-framework/pie-qti](https://github.com/pie-framework/pie-qti) (**© 2026 Renaissance
+  Learning**): a **QTI 2.1/2.2/3.0 player** with bidirectional QTI ↔ PIE transforms, from
+  a commercial assessment vendor. Trend 7's assessment gap is narrower than recorded on
+  the **standards-conformance** side; it is still wide on AI grading, where
+  `license:apache-2.0` + automated rubric grading measures **`total_count: 0`** this pass.
+
+### Finding 9 — one correction to this KB
+
+🔴 **`edrys-org/edrys` is MPL-2.0, not "AGPL abreviada".** Pass 123 inferred an
+abbreviated AGPL from the file size (16,724 B against a ~34–35 KB full AGPL). Read this
+pass: the first line is **`Mozilla Public License Version 2.0`** and the complete MPL-2.0
+text *is* ~16.7 KB. The single "Affero" occurrence is MPL §1.12's secondary-licence
+clause naming compatible licences.
+
+**This changes the delivery constraint.** MPL-2.0 is **file-level** weak copyleft, with
+no network-use obligation: Edrys can sit inside a **mixed-licence deliverable** provided
+modified Edrys files stay MPL and are published. It was priced as unusable. Size
+comparison correctly raised a flag; it then answered a question only the first line of
+the payload can answer.
+
+### Gap re-measurements with `total_count` — three hold, one gets sharper
+
+| Gap | Query | `total_count` | Verdict |
+|---|---|---|---|
+| Oral reading fluency | `oral reading fluency assessment` | **4** | **Holds, reproduced exactly.** Same four: `prosody` (MIT, 0★), `labaaoom` (2017, `NOASSERTION`), `ReaDirect-V2` (ungranted), `ORF_Calculator_6th` (0★). |
+| `OpenLiteracy` | `OpenLiteracy` | **0** | **Holds.** Still no public repository. |
+| LATAM shelf, **Spanish** | `tutor IA educación aprendizaje` | **3** | Holds, sixth consecutive pass at 0–9★. All **0–1★**; one of the three **does not resolve**, so the live shelf is **2 repositories**. One MIT (`AvatarAcademy`, 1★), one **AGPL-3.0** (`OPEN-TUTOR-IA`). |
+| LATAM shelf, **Portuguese** | `tutor inteligência artificial educação aprendizagem` | 🆕 **0** | **New measurement, and it is the sharper one** — see `intel/market.md`. |
+| Python LTI 1.3 | `lti 1.3 advantage language:Python` | **4** | The tier measured exhaustively. One repo above 1★. |
+
+### What the next pass should do
+
+1. **Take the ~20-server education MCP cluster from `archive/`.** Largest unrecovered
+   block; 2 of this pass's 4 dead addresses were MCP servers, so expect decay and record
+   it as supply data.
+2. **Re-probe every "ungranted" verdict in this KB older than this pass with case
+   variants.** The 13th failure mode is retroactive: `LICENSE.TXT` turned a 470★
+   Apache-2.0 repository into a false absence here, and earlier passes used
+   lowercase-only probe sets.
+3. **Use `ls-remote --symref` as the standing first step.** No API dependency, gives the
+   branch and the existence check in one call.
+4. **Ask the licence question of public-sector clients.** 11 of 66 addresses were
+   ungranted and they concentrate in ministry and standards-body vocabulary repositories.
+   A grant is one commit for the client and unblocks reuse entirely.
+
+---
+
 ## 2026-10-06 — eleventh pass: the GitHub search API was reachable all along, and it refutes three of this KB's declared gaps
 
 The tenth pass closed with a structural conclusion and an instruction:

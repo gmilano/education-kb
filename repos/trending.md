@@ -8,6 +8,161 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — twelfth pass: 66 archive addresses resolved to a branch and a grant, and the generalist query fails for the eighth time
+
+**Instrument of record this pass:** `git ls-remote --symref https://github.com/{o}/{r}
+HEAD`, which returns the default branch authoritatively over plain git-HTTPS with **no
+API dependency** — the HTTP search API was 403 again this pass. It doubles as an
+existence check. Licences then read from the `raw.githubusercontent.com` payload **on
+that branch**. Nothing below comes from a sidebar, a badge, or an organisation-level
+inference.
+
+### The channel comparison, measured
+
+| Channel | Resolved | Net new usable | Verdict |
+|---|---|---|---|
+| `archive/2026-10-06-pre-reset/` — **66 addresses** | **66 / 66** | **28 permissive** | Pass 11's prediction was right: the archive out-yielded the open internet by every measure. |
+| The 4 mandated `WebSearch` queries | — | **0 repositories** | `OpenClaw`, `CrewAI`, `AutoGPT`, the MS/HF courses — all already recorded, **none education-specific**. **Eighth consecutive pass** the generalist query returns nothing net. |
+| MCP `search_repositories` | 7 | **1 agent (313★) + 3 LTI libraries** | Works where the HTTP client 403s — reproducing pass 11. |
+
+**The 66, by licence state:** 28 permissive (12 MIT · 10 Apache-2.0 · **3 ECL-2.0** ·
+**1 ISC** · 1 BSD · 1 MPL-2.0) · 17 copyleft (10 GPL-3.0 · 4 AGPL-3.0 · 2 GPL-2.0 ·
+**1 EUPL-1.2**) · **11 ungranted** · 3 CC content licences · 3 non-OSI source-available ·
+**4 dead**.
+
+### The permissive rows recovered — the xAPI chain is complete and it is permissive end to end
+
+Pass 11 declared the learning-analytics half of the interoperability tier behind a
+membership. **True of Caliper, false of xAPI:**
+
+| Repo | Licence (payload) | ★ | Branch | Layer |
+|---|---|---|---|---|
+| [adlnet/xapi-profiles](https://github.com/adlnet/xapi-profiles) | **Apache-2.0** | **60** (33 forks) | `master` | **Vocabulary** — the xAPI Profiles spec from **ADL**, the US DoD initiative that authored xAPI. |
+| [yetanalytics/xapipe](https://github.com/yetanalytics/xapipe) | **Apache-2.0** | 17 (9 forks) | `main` | **Transport** — LRSPipe, statement forwarding governed by xAPI Profiles. Clojure. ⚠️ Product name ≠ repo name; `yetanalytics/lrspipe` is a 404 and this KB logged that false negative twice. |
+| [pelotech/xapi-lrs](https://github.com/pelotech/xapi-lrs) | **Apache-2.0** | not read | `main` | **Store** — an LRS implementation. |
+| [adlnet/lrs-conformance-test-suite](https://github.com/adlnet/lrs-conformance-test-suite) | **MIT** | **77** (52 forks) | `master` | **Proof** — tests an LRS against the xAPI spec's MUST requirements. Node.js. |
+
+🟢 **Profile → pipe → store → conformance proof, all MIT or Apache-2.0.** Where
+interoperability is a scored procurement line item (trends 26, 28), a conformance run is
+*evidence* rather than an assertion. **Caliper cannot be built on and xAPI can** — and
+they are not interchangeable, so this is a proposal-time design decision with the
+licence as an input.
+
+| Repo | Licence (payload) | ★ | Branch | What it is |
+|---|---|---|---|---|
+| [openedx/XBlock](https://github.com/openedx/XBlock) | **Apache-2.0** (`LICENSE.TXT`) | **470** | `master` | 🔴 **The headline.** Open edX's plugin SDK is **permissive** while the platform core is AGPL-3.0. Found only after re-probing with **uppercase** filename variants. |
+| [Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard) | **Apache-2.0** | 46 (13 forks) | 🆕 **`v6.2.0`** | The **US K-12 data standard**. Default branch is a semantic version. |
+| [Ed-Fi-Alliance-OSS/edfi-oneroster](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | **Apache-2.0** | not read | `main` | **OneRoster** over Ed-Fi — the 1EdTech standard that stayed open. |
+| [Ed-Fi-Exchange-OSS/Ed-Fi-Clever-Integration](https://github.com/Ed-Fi-Exchange-OSS/Ed-Fi-Clever-Integration) | **Apache-2.0** | not read | `main` | Bridge to **Clever**, the rostering provider most US districts run. |
+| [pupilfirst/pupilfirst](https://github.com/pupilfirst/pupilfirst) | **MIT** | **978** (280 forks) | `master` | **A full LMS at nearly 1,000★ under MIT** — asynchronous school built on focused tasks, directed feedback, submit→review→resubmit. Ruby/Rails. The first permissive platform here whose core model is **coached project work**. |
+| [Sunbird-Ed/SunbirdEd-mobile-app](https://github.com/Sunbird-Ed/SunbirdEd-mobile-app) | **MIT** | 10 (**92 forks**) | `main` | **APAC / India.** Offline+online mobile client, 12,921 commits. ⚠️ **10★ / 92 forks** — a deployment artefact, not a popularity artefact. Forks are what state implementers create. |
+| [Sunbird-Ed/SunbirdEd-consumption-ngcomponents](https://github.com/Sunbird-Ed/SunbirdEd-consumption-ngcomponents) | **MIT** | not read | `master` | Angular content-player components. |
+| [project-sunbird/sunbird-telemetry-sdk](https://github.com/project-sunbird/sunbird-telemetry-sdk) | **MIT** | not read | `master` | Sunbird's own event model, MIT, at national scale. |
+| [LibreTexts/conductor](https://github.com/LibreTexts/conductor) | **MIT** (`LICENSE.md`) | 4 (3 forks) | `master` | **Multi-tenant OER platform** — Commons catalogue, Campus Commons, Meilisearch, **AI knowledge base on LangChain + vector embeddings**. One codebase, many institutions by configuration. |
+| [LibreTexts/LibreOne](https://github.com/LibreTexts/LibreOne) | **MIT** (`LICENSE.md`) | not read | `main` | Identity/account layer for the LibreTexts estate. |
+| [aiverify-foundation/aiverify](https://github.com/aiverify-foundation/aiverify) | **Apache-2.0** | 98 (32 forks) | `main` | **APAC / Singapore.** AI-governance testing framework from the **AI Verify Foundation under IMDA** — the regulator's own foundation. |
+| [aiverify-foundation/aiverify-developer-tools](https://github.com/aiverify-foundation/aiverify-developer-tools) | **Apache-2.0** | not read | `main` | Plugin/test-widget kit — how an **education-specific** test gets into a government-recognised harness. |
+| [aiverify-foundation/moonshot-data](https://github.com/aiverify-foundation/moonshot-data) | **Apache-2.0** (`LICENSE.md`) | not read | `main` | Datasets, metrics and attack modules for Moonshot. |
+| [pie-framework/pie-qti](https://github.com/pie-framework/pie-qti) | 🆕 **ISC** (© 2026 **Renaissance Learning**) | 4 | `master` | **QTI 2.1/2.2/3.0 player** + bidirectional QTI ↔ PIE transforms with batch CLI. TypeScript. A commercial assessment vendor publishing under a permissive licence. |
+| [stanfordnlp/edu-convokit](https://github.com/stanfordnlp/edu-convokit) | **MIT** | 117 (16 forks) | `main` | Classroom-talk pipeline: anonymise → annotate → analyse. Stanford NLP. |
+| [datakind/student-success-tool](https://github.com/datakind/student-success-tool) | **MIT** (`LICENSE.md`) | 8 | **`develop`** | Predictive advising with bias-reduction and advisor-in-the-loop. **Google.org**-funded; John Jay College reports +32% senior graduation over two years. |
+| [EduNLP/EduCoder](https://github.com/EduNLP/EduCoder) | **MIT** | 3 | `main` | Human-vs-LLM transcript annotation, evidence tied to transcript lines. |
+| [jupyterhub/jupyterhub-deploy-teaching](https://github.com/jupyterhub/jupyterhub-deploy-teaching) | **BSD** | not read | `master` | 🆕 **In no live file of this KB before now.** Reference JupyterHub deployment for a teaching environment — the layer under any coding-course engagement. |
+| [UOC/java-lti-1.3-provider-example](https://github.com/UOC/java-lti-1.3-provider-example) | **MIT** | 8 (12 forks) | `master` | **EMEA / Spain**, Universitat Oberta de Catalunya. The Java counterpart to `pylti1.3`. |
+| [blackboard/BBDN-lti-1p3-tool-example](https://github.com/blackboard/BBDN-lti-1p3-tool-example) | **Apache-2.0** | 1 | `main` | 🆕 **Blackboard's own** Python/Flask LTI 1.3 reference. Vendor-authored; last updated 2022. |
+| [glenn-watt/lti-1p3-reference-tool](https://github.com/glenn-watt/lti-1p3-reference-tool) | **MIT** | 0 | `main` | 🆕 OIDC, JWKS, **AGS, NRPS and Deep Linking** from first principles. Code to read, not a dependency. |
+| [CNIT-Organization/ltitoolkit](https://github.com/CNIT-Organization/ltitoolkit) | **MIT** | 0 | `main` | 🆕 PyPI-published LTI 1.3 Advantage toolkit. |
+| [AkshitIreddy/AI-Powered-Video-Tutorial-Generator](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | **MIT** (1,070 B) | **313** (65 forks) | `main` | 🆕 Illustrated video lessons, lip-sync presenters, native timeline, **local models**. The only permissive video-lesson generator on this shelf. |
+| [thiagoluzin/pemara-edu-mira](https://github.com/thiagoluzin/pemara-edu-mira) | **MIT** | 0 | `main` | **LATAM / Brazil**, README in Portuguese. Local classroom authoring/presentation for Brazilian basic education (6th-grade history first), **deployed on a school LAN, not the public internet**. Node 24 + Express + React + PostgreSQL. 0★ — and still the only Portuguese-language permissive asset this KB has. |
+
+🔴 **The Python LTI 1.3 tier measured exhaustively: `total_count: 4`.** One repository
+above 1★ (`pylti1.3`, 138★, **51 open issues**, last push 2024-08-18); the other three are
+0–1★. Trend 28's "Python-shaped hole" is **one library deep**. If an engagement's LMS
+integration is on the critical path, **budget for maintaining a fork from day one** —
+that is the baseline condition of the tier, not a risk to raise later.
+
+### ECL-2.0 — permissive, education's own licence, and the code is read-only
+
+| Repo | Licence | ★ | Branch | State |
+|---|---|---|---|---|
+| [Apereo-Learning-Analytics-Initiative/OpenLRS](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS) | **ECL-2.0** | 47 (38 forks) | `master` | 🔴 **Archived 2019-01-31, read-only.** Superseded by OpenLRW. |
+| [Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor](https://github.com/Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor) | **ECL-2.0** | not read | `master` | Dormant. |
+| [Apereo-Learning-Analytics-Initiative/OpenDashboard-api](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-api) | **ECL-2.0** | not read | `master` | Dormant. |
+
+🆕 **ECL-2.0 = Apache-2.0 with a narrowed patent grant**, written so a contributing
+university licenses patents only for the contributed work rather than across its
+portfolio — the clause that let technology-transfer offices approve open-source
+contribution. OSI-approved; for redistribution and commercial use it behaves as
+Apache-2.0. **A `license:mit OR apache-2.0` filter rejects the entire Apereo estate** —
+the consortium behind Sakai and much of higher education's shared infrastructure. **Add
+ECL-2.0 to the allow-list** (trend 15), then **do not adopt these three**: use the live
+ADL/Yet Analytics xAPI chain and take Apereo as reference architecture.
+
+### Copyleft and non-OSI — recorded so the next pass does not re-probe
+
+| Repo | Licence (payload) | Note |
+|---|---|---|
+| [openedx/event-routing-backends](https://github.com/openedx/event-routing-backends) | **AGPL-3.0** (`LICENSE.txt`) | Open edX → xAPI/Caliper event emission. Platform-tree, so AGPL — unlike `XBlock`. |
+| [openstax/openstax-cms](https://github.com/openstax/openstax-cms) | **AGPL-3.0** | Network-use copyleft; a hosted deployment triggers it. |
+| [openstax/osbooks-biology-bundle](https://github.com/openstax/osbooks-biology-bundle) | **CC** | Correct for a textbook, useless as a code licence. **Take the content, not the CMS.** |
+| [nextcloud/assistant](https://github.com/nextcloud/assistant) · [nextcloud/context_chat](https://github.com/nextcloud/context_chat) | **AGPL-3.0** (`COPYING`) | **EMEA / Germany.** On-prem assistant + RAG for a Nextcloud estate — the self-hosted European answer where residency binds. Licence lives in `COPYING`. |
+| [cerpus/Edlib](https://github.com/cerpus/Edlib) | **GPL-3.0** | **EMEA / Norway.** Content authoring/sharing, H5P-adjacent. |
+| [ucfopen/UDOIT](https://github.com/ucfopen/UDOIT) | **GPL-3.0** | **North America.** UCF's **WCAG accessibility scanner for Canvas** — the installed-base tool for a US procurement requirement. |
+| [OpenEMIS/core](https://github.com/OpenEMIS/core) | **GPL-2.0** | Ministry-level **EMIS**. For a public client, publishing the fork is usually a feature (cf. pattern P28). |
+| [Citolab/qti-convert](https://github.com/Citolab/qti-convert) | **GPL-3.0** | **EMEA / Netherlands**, Cito (national assessment institute). |
+| [yunger7/enem-api](https://github.com/yunger7/enem-api) | **GPL-2.0** | **LATAM / Brazil.** API over **ENEM**, Brazil's national exam. Copyleft, real, and the exam that matters most in the region. |
+| [Elmaldelego/OPEN-TUTOR-IA](https://github.com/Elmaldelego/OPEN-TUTOR-IA) | **AGPL-3.0** | **LATAM**, Spanish. Gemma-3n-based education assistant. 0★. |
+| 8 Moodle AI plugins | **GPL-3.0** | Correct for in-tree plugins: `o365-moodle`, `AIChatForMoodle`, `moodle-local_ai_course_assistant`, `moodle-local_aiid`, `moodle-aiprovider_gemini`, `moodle-mod_maici` (**Brazil**), `moodle-tool_dataprivacy` (branch `MOODLE_34_STABLE`). |
+| [canyongbs/advisingapp](https://github.com/canyongbs/advisingapp) | 🔴 **Elastic License 2.0** | Confirms pass 123 from the payload. Prohibits managed-service provision. **Looks open on GitHub, is not.** |
+| [leemonade/leemons](https://github.com/leemonade/leemons) | 🔴 **Composite / "Fair code"** | *"Portions of this software are licensed as follows"* — open-core split **by directory**. Per-directory review before any reuse. |
+| [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) | 🔴 **"PageLM Community License"** | 2,000★. Non-commercial, no redistribution, revenue share, revocable — **with the literal MIT grant as its first paragraph**. This pass's independent classifier fell for it too; the **size tell (1,070 B floor vs 8,563 B) is the load-bearing check**. **DO-NOT-VENDOR.** |
+
+### 11 ungranted, measured against 30+ filename variants on the real default branch
+
+`CAHLR/OATutor-Content` · `FWU-DE/schulfach-ontologie` · `FWU-DE/schulart-ontologie` ·
+`european-commission-empl/european-digital-credentials` ·
+`dini-ag-kim/school-curriculum-pg` · `aiverify-foundation/LLM-Evals-Catalogue` ·
+`marcusgreen/moodle-tool_aiconnect` · `jeanlucio/moodle-local_aihub` ·
+`alvarogregori/moodle-ai-graded-assignment` · `Kaiman-p/tutor-adaptativo-ia` ·
+`mietiainvestigacion-creator/API-EduAdapt`
+
+Three of these are worth naming individually:
+
+- ⚠️ **`CAHLR/OATutor-Content`** — the *engine* (`CAHLR/OATutor`) is **MIT** and sits on
+  this KB's core shelf. **Its content repository — the problem bank and hint trees —
+  carries no licence.** The pedagogy is the asset, and the pedagogy is the ungranted part.
+  **Read this before scoping an OATutor deployment.**
+- ⚠️ **`alvarogregori/moodle-ai-graded-assignment`** — AI-graded assignments is trend 7's
+  regulated frontier. A Moodle plugin for it exists and has no grant.
+- ⚠️ **`aiverify-foundation/LLM-Evals-Catalogue`** — ungranted, in an organisation whose
+  other two repositories are Apache-2.0. **Organisation-level licence inference is unsafe
+  even inside a government foundation.**
+
+🆕 **The ungranted set is not randomly distributed.** It concentrates in two places:
+**individual-maintainer LMS plugins**, and **public-sector metadata and vocabulary
+repositories** (FWU Germany, DG EMPL, DINI-AG-KIM, IMDA). The bodies whose output is most
+reusable in principle — ministries and standards groups publishing vocabularies — are the
+least likely to attach a grant. **For an EMEA public-sector engagement, "can you put a
+licence on this?" is a cheap, early, high-leverage ask**, satisfiable by the client in one
+commit.
+
+### 4 dead addresses
+
+`IMSGlobal/caliper-python` (confirms pass 11) · 🆕 **`1EdTech/caliper-php`** (**extends
+it: no surviving public Caliper reference implementation in any language this KB has
+checked**) · `concentricsky/badgr-server` (confirms pass 11) · 🆕
+**`Ed-Fi-Alliance-OSS/Ed-Fi-SDK-MCP`**.
+
+Plus `junjie1005/Plataforma-IA-Educativa-Rutas-Personalizadas`, which the **search index
+still lists** while `ls-remote` cannot reach it — so a `total_count` is an **upper
+bound**, not a census.
+
+**2 of the 4 dead were MCP servers.** The ~20-server education MCP cluster is the largest
+block still unrecovered from `archive/`, and the most likely to have decayed. **Next pass
+takes it.**
+
+---
+
 ## 2026-10-06 — eleventh pass: a 172-address audit of this repository against its own archive, and the 33-repo Python shelf the KB said was empty
 
 The channel new to this pass is **the GitHub REST search API**, reached through this

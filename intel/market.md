@@ -510,6 +510,74 @@ of the Ed-Fi K-12 data standard — the student-data model North American distri
 procurement assumes a vendor already speaks. It was dropped from this KB's live files
 by the reset and is reinstated this pass.
 
+#### Twelfth pass, 2026-10-06 — the deadline is a date now, and the permissive estate under the rubric is Apache-2.0
+
+**Sizing read this pass.** North America holds the **largest regional share of the
+global AI-in-education market at 36%** — **$3.68B in 2026**, forecast to **$32B by
+2030**. Teacher-level adoption: **60% of US K-12 teachers used AI tools during the
+2024–25 school year, 32% at least weekly.** Adoption is no longer the question in this
+region; governance and procurement are.
+
+**The regulatory surface, counted.** **134 AI-in-education bills introduced across 31
+states** in the 2026 legislative session. The clusters that change a deliverable:
+
+| Instrument | What it binds |
+|---|---|
+| **California AB 1159** | **Prohibits using student data to train AI models.** The sharpest constraint in the region on a tutoring product's data loop — it rules out the default fine-tuning architecture. |
+| **Idaho SB 1227** | Requires data-privacy protections for AI tools used in schools. |
+| **Oklahoma, Maryland** | Require **human oversight** and bar AI from making high-stakes decisions about students. Trend 16's "human judgment is final" rule, still converging. |
+| **Georgia, Mississippi** | Computer-science credit requirements **that include AI instruction**, phased in from the late 2020s. Curriculum-mandate demand (trend 13). |
+| 🆕 **Ohio** | **Every public school district must have a written AI policy by a July 2026 deadline.** A date, state-wide, already passed at the time of this pass. |
+| 🆕 **North Carolina** | Lawmakers **defended a $10M earmark** funding **Khanmigo** for participating districts state-wide. A funded, named, proprietary deployment. |
+
+🆕 **Ohio and North Carolina are two different engagement shapes, and both are live.**
+Ohio is a **compliance artefact** at district scale: ~600 districts needing a written
+policy, an inventory of what AI is actually running, and a human-oversight procedure
+that matches Oklahoma/Maryland-style rules. North Carolina is the opposite — a **funded
+proprietary tutor already deployed**, which creates demand for the work around it:
+integration into the district's SIS, evidence that it conforms, and an exit path that is
+not a second procurement.
+
+🆕 **And the permissive estate sitting under the procurement rubric is Apache-2.0.** This
+pass recovered and verified it (details in `repos/foundations.md`):
+
+- **The Ed-Fi stack** — [Ed-Fi-Data-Standard](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard)
+  (Apache-2.0, branch `v6.2.0`), [edfi-oneroster](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster)
+  (Apache-2.0), [Ed-Fi-Clever-Integration](https://github.com/Ed-Fi-Exchange-OSS/Ed-Fi-Clever-Integration)
+  (Apache-2.0). The standard US K-12 interoperability rubrics name, plus the bridge to
+  **Clever**, the rostering provider most districts actually run. ⚠️ The **Ed-Fi MCP
+  side-car is dead** — agent access over MCP is a build.
+- **The xAPI chain** — profile, pipe, store and **conformance test suite**, all MIT or
+  Apache-2.0, and authored by **ADL**, a US Department of Defense initiative. A
+  conformance run is procurement *evidence*, not an assertion.
+- **[datakind/student-success-tool](https://github.com/datakind/student-success-tool)**
+  (MIT, branch `develop`) — predictive advising with explicit bias-reduction and an
+  advisor in the loop, **Google.org**-funded, with **John Jay College** reporting a 32%
+  rise in senior graduation over two years. The permissive answer to a retention brief,
+  with an outcome number attached.
+- **[openedx/XBlock](https://github.com/openedx/XBlock)** (Apache-2.0, 470★) — the
+  plugin seam that lets a district-specific component be built and kept while the Open edX
+  platform stays AGPL.
+- ⚠️ **[ucfopen/UDOIT](https://github.com/ucfopen/UDOIT)** (GPL-3.0) — UCF's WCAG
+  scanner for Canvas. Accessibility is a hard US public-education procurement requirement
+  and this is the installed-base tool; it is copyleft, so pair it with `canvas-mcp`'s MIT
+  scanner when the deliverable must be permissive.
+
+**Also recorded:** students from **all 50 states** produced a **national framework for AI
+in America's schools** at America's Youth AI Festival in July 2026, proposing protections
+for authentic learning, student privacy, fairness, human judgment and relationships. Not
+binding — and a useful legitimacy artefact to cite in a district-facing proposal, because
+it is the student constituency asking for the same human-oversight rule the state statutes
+impose.
+
+**The North America opportunity, stated as work:** (1) district **AI-policy and
+inventory** packages against Ohio-style deadlines; (2) **Ed-Fi + OneRoster + xAPI
+conformance** as a scored-procurement evidence pack, buildable entirely on Apache-2.0;
+(3) **retention/advising** on the DataKind base, which already carries a published
+outcome; (4) **integration and exit-path work around funded proprietary tutors** such as
+the North Carolina Khanmigo deployment. ⚠️ Architect (1)–(3) so **no student data trains a
+model** — California AB 1159 makes that a design constraint, not a policy preference.
+
 ### EMEA
 
 - **The EU AI Act is the whole conversation.** AI used in education access and
@@ -918,6 +986,80 @@ limited late-stage capital.
 is a **tutor plus its conformance evidence**, and the evidence pack can be built from
 EMEA's own MIT-licensed tooling. That is an easier sale to a ministry than any
 import.
+
+#### Twelfth pass, 2026-10-06 — the rule is in force, and the public sector's own code has no grant
+
+**Sizing read this pass.** The European AI-in-education market is **$2.64B in 2026**,
+forecast to **$8.0B by 2030** at a **31.9% CAGR** — roughly **72% of North America's
+current size and growing more slowly**, which is the ratio to carry into a regional
+investment case. **Finland, Estonia and the Netherlands** lead K-12 AI integration. The
+**UK government invested £4M** in AI tools for lesson planning and homework marking.
+
+**The compliance clock has struck.** From **2 August 2026 the AI Office and national
+authorities began enforcing** the EU AI Act. Education remains squarely in scope: AI used
+for **access and assessment** — admission decisions, student evaluation, exam scoring —
+is **high-risk**, requiring risk management, data governance, human oversight,
+transparency and conformity assessment **before deployment**. Phased implementation runs
+through 2026–2027, so most institutions are in **pilot-and-pre-compliance** rather than
+full enforcement. That gap *is* the engagement window, and it is closing on a published
+schedule.
+
+🆕 **The finding of this pass is about EMEA's public-sector supply, and it is not
+flattering.** Of the public-sector and standards-body repositories probed from this
+repository's archive, **four of five carry no licence grant at all**, measured against
+30+ filename variants on the real default branch:
+
+| Repository | Body | Licence state |
+|---|---|---|
+| [european-commission-empl/European-Learning-Model](https://github.com/european-commission-empl/European-Learning-Model) | **European Commission**, DG EMPL | **EUPL-1.2** — and declared only by a **README badge linking to a third party's repository**; the grant itself sits in a root file named `license` (lowercase, no extension). |
+| `european-commission-empl/european-digital-credentials` | **European Commission**, DG EMPL | 🔴 **Ungranted.** |
+| `FWU-DE/schulfach-ontologie`, `FWU-DE/schulart-ontologie` | **FWU** — the German federal states' media institute | 🔴 **Ungranted.** School-subject and school-type ontologies: exactly the vocabulary a German curriculum alignment needs. |
+| `dini-ag-kim/school-curriculum-pg` | **DINI-AG-KIM**, German metadata group | 🔴 **Ungranted.** |
+
+**Two consequences, and they point in opposite directions.**
+
+First, **the EU's own learning-data model is EUPL-1.2** — OSI-approved but **reciprocal**,
+operating through a compatibility list rather than a permissive grant. A deliverable built
+on the European Learning Model is a **published deliverable**. That is priceable for a
+public client and must not be quoted as permissive.
+
+Second, **the ungranted repositories are an unusually cheap unblock.** A ministry or
+standards body can attach a licence in **one commit**; the reason these have none is
+almost always that nobody asked. 🆕 **"Can you put a licence on this?" belongs in the
+first fortnight of any EMEA public-sector engagement** — it converts an unusable
+vocabulary into a reusable one at essentially zero cost, and it is the kind of ask that
+positions a studio as a steward rather than a vendor.
+
+**The usable EMEA estate verified this pass:**
+
+- **[UOC/java-lti-1.3-provider-example](https://github.com/UOC/java-lti-1.3-provider-example)**
+  (**MIT**, Spain) — a working LTI 1.3 Advantage tool on the Universitat Oberta de
+  Catalunya's own LTI libraries. The Java counterpart to a Python tier that is **four
+  repositories deep in total** (see `repos/foundations.md`), so for a Java-shop client in
+  EMEA this is the healthier path.
+- **[nextcloud/assistant](https://github.com/nextcloud/assistant)** and
+  **[nextcloud/context_chat](https://github.com/nextcloud/context_chat)** (**AGPL-3.0**,
+  Germany) — on-premises assistant and RAG-over-documents. The self-hosted European answer
+  where data residency binds. AGPL does not obstruct a **deployment and integration**
+  engagement; it obstructs shipping a proprietary derivative.
+- **[cerpus/Edlib](https://github.com/cerpus/Edlib)** (GPL-3.0, Norway) — interactive
+  content authoring, H5P-adjacent.
+- **[Citolab/qti-convert](https://github.com/Citolab/qti-convert)** (GPL-3.0,
+  Netherlands) — QTI conversion from **Cito**, the Dutch national assessment institute.
+  Pair with the **ISC-licensed** [pie-qti](https://github.com/pie-framework/pie-qti)
+  player when the deliverable must be permissive: **assessment is the high-risk
+  classification under the AI Act**, so QTI conformance and the AI Act conformity file are
+  the same workstream.
+- ⚠️ **[leemonade/leemons](https://github.com/leemonade/leemons)** (Spain) — open-core
+  split **by directory**, not one grant. Per-directory review before any reuse.
+
+**The EMEA opportunity, stated as work:** (1) **AI Act conformity files for assessment and
+admission systems** — now enforcement-era work, not preparatory; (2) **data-residency
+deployments** on the Nextcloud AI stack for institutions that cannot send student data
+abroad; (3) **QTI + conformity** as a single assessment workstream, permissive via `pie-qti`;
+(4) **licence-hygiene stewardship** with ministries and standards bodies — the cheapest
+high-trust opening available in the region, and it unblocks the vocabulary layer everything
+else needs.
 
 ### APAC
 
@@ -1342,6 +1484,74 @@ GitHub repository search ANDs free-text terms, so a five-term query collapses. T
 region's assets above were found by **named organisation**, which is now the third
 consecutive pass in which naming the institution worked and the generalist query
 did not.
+
+#### Twelfth pass, 2026-10-06 — the only region where the regulator's own conformance harness is permissive and extensible
+
+**The binding regimes, as read this pass.** APAC's regulatory environment is
+heterogeneous and is converging on binding frameworks rather than guidance:
+
+| Jurisdiction | Instrument | Status |
+|---|---|---|
+| **South Korea** | **AI Basic Act** (Act on the Development of AI and Establishment of Trust) | **In force 22 January 2026.** Transparency, risk assessment, **human oversight** and documentation obligations for high-impact AI systems. |
+| **Vietnam** | **Law No. 134/2025/QH15 on Artificial Intelligence** | **In force 1 March 2026.** A dedicated national AI law. |
+| **China** | Generative AI Services Management Measures + **synthetic-content identification** rules | Enforced. Consent, data quality, **content labelling**, user rights, complaint handling. |
+| **Australia** | **TEQSA** (national higher-education regulator) | **Requires all higher-education providers to submit institutional action plans** addressing generative-AI risk. |
+
+**The market shape.** China, India and Japan dominate regional AI-in-education spend,
+with China leading on heavy government backing. The named market leaders are **Google,
+Microsoft, IBM, Pearson and Byju's** — **all proprietary**, which is the same ministry-tier
+pattern trend 30 records across three regions.
+
+🆕 **The finding of this pass: APAC is the only region where the regulator's own
+conformance instrument is permissively licensed *and* designed to be extended.**
+
+| Repository | Body | Licence (payload) | ★ |
+|---|---|---|---|
+| [aiverify-foundation/aiverify](https://github.com/aiverify-foundation/aiverify) | **AI Verify Foundation**, under **IMDA** (Singapore's Infocomm Media Development Authority) | **Apache-2.0** | 98 (32 forks) |
+| [aiverify-foundation/aiverify-developer-tools](https://github.com/aiverify-foundation/aiverify-developer-tools) | same | **Apache-2.0** | — |
+| [aiverify-foundation/moonshot-data](https://github.com/aiverify-foundation/moonshot-data) | same | **Apache-2.0** | — |
+| `aiverify-foundation/LLM-Evals-Catalogue` | same | 🔴 **Ungranted** | — |
+
+**Why the `developer-tools` row is the strategically interesting one.** AI Verify is a
+governance *testing framework* that validates AI systems against internationally
+recognised principles through standardised tests — and `aiverify-developer-tools` is the
+**plugin and test-widget kit for adding your own tests to it**. There is no
+education-specific test suite in it today. That means an **education conformance profile
+can be contributed into a government-recognised harness** rather than built alongside one.
+
+**Contrast the three regions, because the engagement shape differs in each:**
+
+| Region | Where the specification lives | What the deliverable is |
+|---|---|---|
+| **North America** | The **procurement rubric** (trend 26) | Evidence that scores well against it — Ed-Fi, OneRoster, xAPI conformance. |
+| **EMEA** | The **statute** (EU AI Act, in force 2 Aug 2026) | A conformity file for a high-risk system. |
+| **APAC** | The **regulator's own open-source harness** | A test plugin inside that harness — permissive, contributable, and citable as the regulator's instrument rather than the vendor's claim. |
+
+That third shape is the most defensible of the three, and it is available only here.
+⚠️ **With one caveat already visible in the table:** `LLM-Evals-Catalogue` sits in the same
+government foundation's organisation and carries **no licence at all**. Organisation-level
+licence inference is unsafe even inside a regulator's foundation — read each payload.
+
+**The India/national-scale estate, re-addressed.** The reset had dropped the Sunbird
+client addresses; this pass restored them with verified grants:
+**[SunbirdEd-mobile-app](https://github.com/Sunbird-Ed/SunbirdEd-mobile-app)** (**MIT**,
+offline **and** online consumption, 12,921 commits),
+**[SunbirdEd-consumption-ngcomponents](https://github.com/Sunbird-Ed/SunbirdEd-consumption-ngcomponents)**
+(MIT) and **[sunbird-telemetry-sdk](https://github.com/project-sunbird/sunbird-telemetry-sdk)**
+(MIT). ⚠️ **Read the mobile client's ratio, not its stars: 10★ against 92 forks.** Forks
+are what national and state implementers produce; stars are what GitHub browsers produce.
+A 10★ repository with 92 forks and ~13k commits is a deployment artefact, and judging it
+by star count is the error. Sunbird's telemetry SDK also means an Indian deployment has a
+**native MIT event model** and does not have to adopt xAPI to get analytics.
+
+**The APAC opportunity, stated as work:** (1) an **education test plugin for AI Verify**,
+Apache-2.0, contributed upstream — the only route in any region to compliance evidence
+carried by the regulator's own instrument; (2) **Korea and Vietnam readiness work** against
+two laws that came into force in the first quarter of 2026, where human-oversight and
+documentation duties map directly onto the artefacts trend 16 already specifies;
+(3) **TEQSA institutional action plans** for Australian higher education — a defined,
+repeatable, regulator-mandated document; (4) **Sunbird implementation and extension** at
+state scale on an MIT base, including the AI layer the platform does not ship.
 
 ### LATAM
 
@@ -1847,6 +2057,81 @@ global permissive shelf with Spanish and Portuguese as first-class, offline-tole
 by construction, data-resident by default, and with the evaluation mechanism the
 other 91% do not have** — on i-educar or Moodle where the client is public sector,
 and with the licence register written in the client's language.
+
+#### Twelfth pass, 2026-10-06 — measured in Portuguese for the first time, the shelf is not thin, it is empty
+
+The eleventh pass concluded: *"measured in Spanish, the regional shelf does not exist,
+and that is the opportunity."* This pass **re-measured it in Spanish and then measured it
+in Portuguese**, with `total_count` rather than a ranked page:
+
+| Query | `total_count` | What came back |
+|---|---|---|
+| `tutor IA educación aprendizaje` (**Spanish**) | **3** | All **0–1★**. One **MIT** (`Edwin1719/AvatarAcademy`, 1★), one **AGPL-3.0** (`Elmaldelego/OPEN-TUTOR-IA`, 0★), and one that **does not resolve at all** (`junjie1005/Plataforma-IA-Educativa-Rutas-Personalizadas` — the index lists it, `git ls-remote` cannot reach it). **The live Spanish-language shelf is 2 repositories.** |
+| `tutor inteligência artificial educação aprendizagem` (**Portuguese**) | 🆕 **0** | Nothing. |
+
+🔴 **This is the sharpest LATAM finding this KB has recorded, and it is a language
+finding, not a regional one.** Brazil is the largest education system in Latin America,
+and **the Portuguese-language permissive AI-tutoring shelf does not exist** — it is not
+sparse, not immature, not 0–9★. It is **zero**. Five previous passes measured "LATAM" and
+found 0–9★; none of them measured the half of the region that does not speak Spanish, so
+"thin" was the wrong word for a condition that is, in Portuguese, **absence**.
+
+**What Brazil does have is copyleft and specific**, all verified from payloads this pass:
+
+| Repo | Licence | What it is |
+|---|---|---|
+| [yunger7/enem-api](https://github.com/yunger7/enem-api) | **GPL-2.0** | An API over **ENEM** — Brazil's national secondary-school exam, the gateway to higher education. The highest-stakes assessment artefact in the region, and it is copyleft. |
+| [caiocarvalhofre/moodle-mod_maici](https://github.com/caiocarvalhofre/moodle-mod_maici) | **GPL-3.0** | AI chat activity module for Moodle, Brazilian-authored. |
+| `portabilis/i-educar` (recorded pass 11, branch `2.12`) | **GPL-2.0** | Brazil's largest free school-management platform. |
+| [thiagoluzin/pemara-edu-mira](https://github.com/thiagoluzin/pemara-edu-mira) | **MIT** | 🟢 **The only Portuguese-language permissive asset in this KB.** 0★. Local classroom authoring and presentation for Brazilian basic education (6th-grade history first), **designed to run on a school LAN rather than the public internet**, with optional AI. Node 24 + Express + React + PostgreSQL. 0★ and a one-person project — but the *architecture* is the regionally correct one, and it is MIT. |
+
+**The demand side is the inverse of the supply side, and that is the whole LATAM case.**
+The 2026 Digital Education Council LATAM survey — **30,000+ responses across 29
+institutions**, run with the **Institute for the Future of Education at Tecnológico de
+Monterrey**, with **AIGEN** and **RIE360** — reports:
+
+- **92% of students** and **79% of faculty** actively engaging with AI;
+- **94% of faculty** expect to use AI in future teaching, consistently across experience levels;
+- **61% of students fear AI misuse by peers**, raising fairness and academic-integrity concerns.
+
+And **UNESCO** warns that higher-education institutions across Latin America and the
+Caribbean are increasingly using generative AI **while lacking institutional policies to
+govern it** — raising misuse risk and leaving academic staff uncertain about permitted use.
+
+Nationally the map is **fragmenting rather than converging**: **Brazil's AI bill**,
+**Chile's framework**, **Colombia's CONPES on AI** and **Mexico's sectoral rules** are all
+moving at different speeds. Unlike the EU's single statute or Singapore's single harness,
+there is **no regional instrument to build one compliance artefact against**.
+
+🆕 **The structural read, stated so it can be falsified:** LATAM has **near-universal
+adoption (92%), no governance layer, no regional instrument, and — in Portuguese — no
+permissive code at all.** Every other region in this file has at least one of those four
+filled in. The constraint is **not demand** and it is **not capability**; it is that
+nothing reusable has been *published* in the region's second language.
+
+**The LATAM opportunity, stated as work:**
+
+1. 🟢 **Publish the Portuguese-language permissive asset.** `total_count: 0` means a
+   competent MIT-licensed Portuguese tutoring or lesson-generation component has **no
+   competitor to displace**. Globant is LATAM-rooted and Brazil is its largest regional
+   market; this is the cheapest durable position available anywhere in this KB. The
+   architecture to copy is `pemara-edu-mira`'s — **school-LAN deployment, offline-capable,
+   optional AI** — because that is what the infrastructure actually supports.
+2. **Institutional AI governance, at scale and at speed.** 92% adoption with no policy is a
+   repeatable engagement per institution, and UNESCO's warning is the citable framing. The
+   artefacts are the same ones Ohio's districts need — inventory, permitted-use rules,
+   human-oversight procedure, integrity policy — which means the North America compliance
+   package **ports**, translated.
+3. **Academic integrity as the named deliverable.** 61% of students fear peer misuse. That
+   is a student-demanded, faculty-supported workstream, and it is distinct from governance
+   paperwork.
+4. ⚠️ **Price the copyleft correctly rather than avoiding it.** ENEM tooling and `i-educar`
+   are GPL-2.0; for a Brazilian public-sector client, publishing the fork is usually
+   **acceptable and often preferred** (see pattern P28). The licence is not the obstacle in
+   this region — **licence hygiene is**: two of the LATAM repositories probed this pass
+   (`Kaiman-p/tutor-adaptativo-ia`, `mietiainvestigacion-creator/API-EduAdapt`) carry **no
+   grant at all**, which is the same failure this KB has recorded in the region for five
+   passes.
 
 ## Cross-region read
 

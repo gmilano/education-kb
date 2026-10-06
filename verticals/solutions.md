@@ -745,3 +745,71 @@ And one procurement note that spans both tables: **the portal tier is where
 permissive licences survive.** Richie (MIT) in front, a copyleft LMS behind, and the
 AI in the MIT layer — that is the pattern that lets a client keep what they paid for
 without anyone misreading a clause.
+
+## Added in the twelfth pass of 2026-10-06 — nine more platforms off the archive, on their real default branch
+
+Branches from `git ls-remote --symref … HEAD`; licences from the
+`raw.githubusercontent.com` payload on that branch, 2026-10-06.
+
+### The permissive end — customise and redistribute
+
+| Platform | Repo | Licence (payload) | ★ | Branch | What it is, and where it fits |
+|---|---|---|---|---|---|
+| **Pupilfirst** | [pupilfirst/pupilfirst](https://github.com/pupilfirst/pupilfirst) | **MIT** (`master/LICENSE`) | **978** (280 forks) | `master` | 🆕 **A full LMS under MIT, at nearly 1,000★ — the largest permissive end-to-end platform this KB has recorded after Kolibri.** Built to run an **asynchronous online school**: learning through focused tasks, directed feedback, an iterative submit-review-resubmit workflow, and community interaction. Ruby on Rails. **Why it matters for engagements:** the other permissive platforms here are offline-first (Kolibri) or lesson-authoring (Oppia). Pupilfirst is the first permissive platform whose core model is **coached, reviewed project work** — which is the shape of corporate L&D, bootcamps and competency programmes, i.e. the shape of most of Globant's own education-adjacent demand. |
+| **Sunbird (mobile + components)** | [Sunbird-Ed/SunbirdEd-mobile-app](https://github.com/Sunbird-Ed/SunbirdEd-mobile-app) | **MIT** (`main/LICENSE`) | 10 (**92 forks**) | `main` | **APAC / India.** The Cordova mobile client for the Sunbird stack, handling **both offline and online** consumption. TypeScript, **12,921 commits**. ⚠️ **Read the ratio, not the stars: 10★ against 92 forks.** This is a deployment artefact, not a GitHub-popularity artefact — forks are what national and state implementers create. Sunbird is already on this KB's shortlist as the nine-figure-scale platform; **this is the client address**, which the reset had dropped. |
+| **Sunbird consumption components** | [Sunbird-Ed/SunbirdEd-consumption-ngcomponents](https://github.com/Sunbird-Ed/SunbirdEd-consumption-ngcomponents) | **MIT** (`master/LICENSE`) | not read this pass | `master` | Angular content-consumption components — the reusable player/renderer layer of the Sunbird client. |
+| **Sunbird telemetry SDK** | [project-sunbird/sunbird-telemetry-sdk](https://github.com/project-sunbird/sunbird-telemetry-sdk) | **MIT** (`master/LICENSE`) | not read this pass | `master` | The telemetry SDK. Pairs with the xAPI chain in `repos/foundations.md`: Sunbird's own event model, MIT, at national scale. |
+| **LibreTexts Conductor** | [LibreTexts/conductor](https://github.com/LibreTexts/conductor) | **MIT** (`master/LICENSE.md`) | 4 (3 forks) | `master` | **North America.** The platform behind LibreTexts' **Commons** catalogue, Campus Commons multi-tenancy, library integration, Meilisearch search, adoption reporting, and an **AI knowledge-base feature built on LangChain with vector embeddings**. TypeScript/React/Express/MongoDB. **Multi-tenant from a single codebase** — one deployment serving many institutions by configuration, which is exactly the shape a consortium or ministry engagement needs. |
+| **LibreTexts LibreOne** | [LibreTexts/LibreOne](https://github.com/LibreTexts/LibreOne) | **MIT** (`main/LICENSE.md`) | not read this pass | `main` | The identity and account layer for the LibreTexts estate. The piece you need if Conductor is going to serve more than one institution. |
+| **Edrys** | [edrys-org/edrys](https://github.com/edrys-org/edrys) | **MPL-2.0** (`main/LICENSE`, 16,725 B) | not read this pass | `main` | **Live-classroom platform** (remote labs, shared classroom modules). 🔴 **Corrected this pass: this is MPL-2.0, not the "abbreviated AGPL" an earlier pass recorded** — see `repos/foundations.md`. MPL-2.0 is **file-level** weak copyleft, so Edrys **can** sit inside a mixed-licence deliverable provided modified Edrys files stay MPL and are published. It was priced as unusable; it is usable with per-file discipline. |
+
+### The copyleft and non-OSI end — real platforms, and the clause is the engagement
+
+| Platform | Repo | Licence (payload) | Branch | What the clause does to the deal |
+|---|---|---|---|---|
+| **OpenEMIS Core** | [OpenEMIS/core](https://github.com/OpenEMIS/core) | **GPL-2.0** (`master/LICENSE`) | `master` | **Education Management Information System** — the ministry-level estate layer (schools, students, staff, institutions), the system UNICEF-supported deployments use. GPL-2.0: a modified OpenEMIS must be published under GPL-2.0, which for a **public-sector ministry client is usually a feature, not a cost** — the same argument pattern 28 makes for `i-educar` in Brazil. Price it as a public-good deliverable, not as lost IP. |
+| **Edlib** | [cerpus/Edlib](https://github.com/cerpus/Edlib) | **GPL-3.0** (`master/LICENSE`) | `master` | **EMEA / Norway** (Cerpus). Content-authoring and sharing platform, the H5P-adjacent layer for interactive learning content. GPL-3.0 — a fork is a published fork. |
+| **UDOIT** | [ucfopen/UDOIT](https://github.com/ucfopen/UDOIT) | **GPL-3.0** (`main/LICENSE`) | `main` | **North America** — University of Central Florida's **accessibility scanner for Canvas** courses: finds and helps fix WCAG issues in course content. GPL-3.0. Accessibility is a procurement requirement in US public education, and this is the installed-base tool. Pair it with the WCAG scanner already in `canvas-mcp` (MIT) when the deliverable must be permissive. |
+| **OpenStax CMS** | [openstax/openstax-cms](https://github.com/openstax/openstax-cms) | **AGPL-3.0** (`main/LICENSE`) | `main` | The CMS behind OpenStax's open-textbook estate. AGPL-3.0 — **network-use copyleft**, so a hosted deployment triggers the source obligation. Content is separate: [openstax/osbooks-biology-bundle](https://github.com/openstax/osbooks-biology-bundle) is **Creative Commons**, which is correct for a textbook and useless as a code licence. Take the content, not the CMS. |
+| **Nextcloud AI apps** | [nextcloud/assistant](https://github.com/nextcloud/assistant) · [nextcloud/context_chat](https://github.com/nextcloud/context_chat) | **AGPL-3.0** (`main/COPYING`) | `main` | **EMEA / Germany.** On-premises assistant and RAG-over-your-documents for a Nextcloud estate — the self-hosted European answer to a cloud AI assistant, and relevant wherever data residency binds. AGPL-3.0, and the licence sits in **`COPYING`**, not `LICENSE`. For a school or university already running Nextcloud this is a **deployment and integration** engagement, which AGPL does not obstruct; it obstructs shipping a proprietary derivative. |
+| **Advising App** | [canyongbs/advisingapp](https://github.com/canyongbs/advisingapp) | 🔴 **Elastic License 2.0** (`main/LICENSE`) | `main` | **Not open source.** Student-advising CRM for higher education. Elastic 2.0 **prohibits providing it as a managed service** and prohibits circumventing its licence keys. It looks open on GitHub and is not. Already recorded in pass 123; confirmed here from the payload. **Do not put it in a proposal as open source.** |
+| **Leemons** | [leemonade/leemons](https://github.com/leemonade/leemons) | 🔴 **Composite / "Fair code"** (`main/LICENSE.md`) | `main` | **EMEA / Spain.** The payload opens *"Portions of this software are licensed as follows"* — an **open-core split by directory**, not one grant. Already recorded in pass 123. **Per-directory review before any reuse**; there is no single answer to "what licence is Leemons". |
+
+### The Moodle AI plugin cluster, measured — 11 of ~16
+
+Moodle's core is GPL-3.0 and an in-tree plugin inherits it. That is expected and is not
+a finding. **What the sweep found is that the cluster is not uniformly licensed:**
+
+| Licence state | Count | Repos |
+|---|---|---|
+| **GPL-3.0** (correct for in-tree) | 8 | [microsoft/o365-moodle](https://github.com/microsoft/o365-moodle) · [surlabs/AIChatForMoodle](https://github.com/surlabs/AIChatForMoodle) · [saylordotorg/moodle-local_ai_course_assistant](https://github.com/saylordotorg/moodle-local_ai_course_assistant) · [michael-milette/moodle-local_aiid](https://github.com/michael-milette/moodle-local_aiid) · [Universita-di-Ferrara/moodle-aiprovider_gemini](https://github.com/Universita-di-Ferrara/moodle-aiprovider_gemini) · [caiocarvalhofre/moodle-mod_maici](https://github.com/caiocarvalhofre/moodle-mod_maici) (**LATAM / Brazil**) · [moodlehq/moodle-tool_dataprivacy](https://github.com/moodlehq/moodle-tool_dataprivacy) (branch **`MOODLE_34_STABLE`**) · [Citolab/qti-convert](https://github.com/Citolab/qti-convert) |
+| 🔴 **Ungranted** | 3 | `marcusgreen/moodle-tool_aiconnect` · `jeanlucio/moodle-local_aihub` · `alvarogregori/moodle-ai-graded-assignment` |
+
+⚠️ **`moodle-ai-graded-assignment` is the one to notice.** AI-graded assignments is the
+function trend 7 has flagged as the regulated frontier and the tooling gap since the
+seventh pass. A plugin for it exists in the Moodle ecosystem and **carries no licence**.
+It cannot be adopted, and that is a supply fact rather than a search failure — it was
+probed on its real default branch against 30+ filename variants.
+
+🆕 **And the licence-hygiene asymmetry is now visible as a pattern.** Across this pass's
+66 archive addresses, **11 were ungranted** — and the ungranted set is concentrated in
+exactly two places: **individual-maintainer LMS plugins** and **public-sector metadata
+and vocabulary repositories** (FWU Germany, DG EMPL, DINI-AG-KIM, IMDA's evals
+catalogue). The organisations whose output is *most* reusable in principle — ministries
+and standards groups publishing vocabularies — are the ones least likely to attach a
+grant. **For an EMEA public-sector engagement, "can we have a licence on this?" is a
+cheap, early, high-leverage ask**, and one a client ministry can usually satisfy with a
+single commit.
+
+### The platform-selection table, updated
+
+| If the client needs… | Take | Licence | Why |
+|---|---|---|---|
+| Coached, reviewed **project-based** learning at scale | **Pupilfirst** | **MIT** | Only permissive platform built around submit → review → resubmit. 978★. |
+| **Offline-first** / low-connectivity delivery | **Kolibri** | MIT | Unchanged; still the equity-deployment base. |
+| **National / state** scale with an existing implementer community | **Sunbird** | MIT | 92 forks on the mobile client; India-proven. |
+| **Multi-tenant OER** for a consortium or ministry | **LibreTexts Conductor** + **LibreOne** | MIT | One codebase, many institutions, AI KB already wired. |
+| **Live/remote-lab classrooms** | **Edrys** | MPL-2.0 | File-level copyleft only — mixed deliverable is fine. |
+| **Ministry-level EMIS** | **OpenEMIS Core** | GPL-2.0 | Publishing the fork is acceptable, often preferable, for a public client. |
+| **Interactive content authoring** | **Edlib** / H5P | GPL-3.0 | Fork is published. |
+| A **student-advising CRM** | ⚠️ **not `advisingapp`** | Elastic 2.0 | Source-available, no managed service. Build on a permissive base instead. |
