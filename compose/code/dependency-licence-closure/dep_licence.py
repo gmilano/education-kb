@@ -26,7 +26,15 @@ _RULES = [
                     r"\bZLIB\b", r"UNLICENSE", r"\b0BSD\b", r"PYTHON-2",
                     r"\bPSFL?\b", r"PYTHON SOFTWARE FOUNDATION",
                     r"HISTORICAL PERMISSION", r"\bHPND\b",
-                    r"PUBLIC DOMAIN", r"\bCC0\b", r"BOOST"]),
+                    r"PUBLIC DOMAIN", r"\bCC0\b", r"BOOST",
+                    # Blue Oak Model License 1.0.0 -- OSI-approved, permissive, and
+                    # not recognised by any rule above.  Found by the depth-2 closure
+                    # of 2026-10-07: `glob` and `sax`, two of the most widely installed
+                    # packages on npm, both declare `BlueOak-1.0.0` and both came back
+                    # UNKNOWN.  An UNKNOWN on a package at that install count is not a
+                    # neutral gap -- it is the classifier failing on a licence that is
+                    # safer than several it already passes.
+                    r"BLUE\s*OAK", r"BLUEOAK"]),
 ]
 
 
@@ -73,12 +81,26 @@ def pypi_licence(payload):
     if expr and str(expr).strip():
         return str(expr).strip(), "license_expression"
     lic = info.get("license")
-    if lic and str(lic).strip():
-        # Some projects dump their entire licence TEXT into this field.
-        return str(lic).strip()[:120], "license"
+    classifier = None
     for c in info.get("classifiers") or []:
         if c.startswith("License ::"):
-            return c.split("::")[-1].strip(), "classifier"
+            classifier = c.split("::")[-1].strip()
+            break
+    if lic and str(lic).strip():
+        text = str(lic).strip()
+        # Some projects dump their entire licence TEXT into this field.  Truncating
+        # it to 120 characters and classifying the truncation is how
+        # `jupyterlab-pygments` -- a plain BSD-3-Clause package -- came back UNKNOWN
+        # in the depth-2 closure of 2026-10-07: its `license` field opens
+        # "Copyright (c) 2015 Project Jupyter Contributors\nAll rights reserved."
+        # and names no licence in its first 120 characters.  When the field is TEXT
+        # rather than a NAME and a classifier exists, the classifier is the better
+        # datum; the field is still reported when there is no classifier.
+        if len(text) > 80 and classifier:
+            return classifier, "classifier (license field is text)"
+        return text[:120], "license"
+    if classifier:
+        return classifier, "classifier"
     return None, "absent"
 
 

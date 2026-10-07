@@ -8,6 +8,208 @@ updated: 2026-10-07
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-07 — twenty-fifth pass: the whole supply map at last, and the shelf Globant can redistribute is the older half of it
+
+⏱️ **Measurement window 2026-10-07 ~01:40 UTC → 04:30 UTC; every age computed against the
+reference date `2026-10-07`**, passed explicitly to each instrument. Channels: `git`,
+`raw.githubusercontent.com`, `pypi.org`, `registry.npmjs.org`, and — **new this pass** —
+`repo.packagist.org`, `repo1.maven.org` and `hex.pm`. Instruments:
+`compose/code/p436-fork-hypothesis/`, `p437-pinned-version/`, `p438-depth2-closure/`,
+`p439-case-collision-gate/`.
+
+🔵 **Every previous supply map in this file measured a sample. This one measures the whole
+shelf.** `p170`'s published denominator is **200 slugs from 2026-10-03**, and pass 66 left a
+written reservation that it be re-run once the shelf grew. It was not re-run for twenty-four
+passes. **Rebuilt from the six non-append-only files as they stand today: 503 reference strings
+naming 494 distinct repositories. Only 62 are in `p170`'s 200. 441 had never been measured.**
+
+### The supply map, 503 references, 501 dated
+
+| | n | share |
+|---|---|---|
+| licence payload present | **412** | 81.9% |
+| 🔴 **no licence file at all** | **87** | **17.3%** |
+| unreachable | 4 | 0.8% |
+| — of the 412: permissive (MIT · Apache-2.0 · BSD · ISC · ECL-2.0 · CC0 · Unlicense) | **309** | **75.0%** |
+| — copyleft (GPL 40 · AGPL-3.0 23 · LGPL 11) | 74 | 18.0% |
+| — CC-BY | 7 | 1.7% |
+| — unclassified by the coarse vocabulary | 22 | 5.3% |
+
+### 🔴 Liveness runs inverse to permissiveness on this shelf, and it is a 9× spread
+
+Median head-commit age, by the licence family read from the payload:
+
+| Family | n | median age | cold > 1 yr |
+|---|---|---|---|
+| **AGPL-3.0** | 23 | 🟢 **6 d** | 13.0% |
+| **GPL** | 40 | 🟢 **12 d** | 25.0% |
+| LGPL | 11 | 🟢 30 d | 18.2% |
+| **MIT** | 215 | ⚠️ **44 d** | 22.3% |
+| BSD | 10 | ⚠️ 51 d | 20.0% |
+| **Apache-2.0** | 72 | ⚠️ **54 d** | 26.4% |
+| *(no licence file)* | 87 | 🔴 **160 d** | 27.6% |
+| **ECL-2.0** | 7 | 🔴 **2,403 d** | 71% |
+
+> 🔴 **The half of this shelf Globant can redistribute is the older half.** The copyleft rows —
+> the ones whose AI work has to be a side-car, which is the premise of every pattern in
+> `compose/patterns.md` — have a median head-commit age of **6 to 12 days**. The permissive rows
+> Globant can actually build reusable IP on sit at **44 to 54 days**, and the rows with no grant
+> at all at **160**.
+
+⚠️ **This is a composition effect and must be quoted as one.** The AGPL and GPL rows are the large
+funded platforms — Moodle, Open edX, Canvas, Oppia, ILIAS, Chamilo, Frappe, Anki — while the MIT
+population is 215 rows dominated by small single-author MCP servers. **The licence does not cause
+the liveness; the kind of project that chooses each licence does.** 🔵 **The operational
+conclusion survives the caveat anyway, because the engagement has to live with the population it
+can use, not with the one that is best maintained.** It is trend 54 (*liveness is tier-structured*)
+measured along a second axis.
+
+🟢 **`sakaiproject/sakai` and `opencast/opencast` are the two live ECL-2.0 rows (1 d each) and the
+other five are the Apereo/Kuali estate**, at 2,289–3,808 d. **ECL-2.0 on this shelf is bimodal,
+not old** — a median over seven rows is the wrong statistic for it, and the pair is the right one.
+
+### 🔴 The 25 coldest repositories this KB still recommends
+
+`foradian/fedena` **5,108 d (2012-10-12)** · `inepdadosabertos/api` 4,525 d ·
+`Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor` 3,808 d ·
+`shinyquagsire23/InfiniteCampusAPI` 3,658 d · `IMSGlobal/LTI-Tool-Provider-Library-PHP` 3,600 d ·
+`kuali/kc` 3,561 d · `fnshr/kyo-kan` 3,518 d · `kuali/rice` 3,430 d · `ScottDaniels/labaaoom`
+3,227 d · `rachelproject/module-template` 3,123 d · `kuali/kfs` 3,121 d · `IFRN/suapi` 3,002 d ·
+`magister-api/magister` 2,933 d · `Utdanningsdirektoratet/xmldataimport` 2,884 d ·
+`Apereo-Learning-Analytics-Initiative/OpenLRS` 2,806 d · `Projeto-SIAC/suap-wrapper` 2,766 d ·
+`mazhar266/fedena` 2,703 d · `lucasmation/microdadosBrasil` 2,500 d ·
+`project-sunbird/sunbird-analytics` 2,413 d ·
+`Apereo-Learning-Analytics-Initiative/OpenDashboard-api` 2,403 d ·
+`project-sunbird/sunbird-lms-mw` 2,346 d · `Kennisnet/py-eduterm-client` 2,328 d ·
+`1EdTech/lti-1-3-php-library` 2,317 d · `moodlehq/moodle-tool_dataprivacy` 2,304 d ·
+`KualiCo/rice` 2,289 d. Full table: `compose/code/p436-fork-hypothesis/recency.2026-10-07.tsv`.
+
+### 🔴 The second time axis, resolved: what a build INSTALLS is four times older than what the registry SERVES
+
+Pass 24 dated the installed tier from each dependency's **latest** release and published the limit:
+*"a manifest pinning `foo==1.0` is older than reported, never newer."* This pass resolved the
+specifiers (`p437-pinned-version`, 47 controls, 327 of 328 rows resolved):
+
+| | Latest release | **Pinned release** | Ratio |
+|---|---|---|---|
+| median age | 57 d | 🔴 **220 d** | **3.9×** |
+| mean age | 366 d | 570 d | 1.6× |
+| cold > 1 yr | 27.2% | 🔴 **42.5%** | 1.6× |
+| cold > 2 yr | 15.0% | 23.2% | 1.5× |
+| released in 2026 | 70.3% | 53.2% | 0.76× |
+
+🔵 **The effect lives entirely in the specifier mix, and the mix must travel with the ratio:**
+**159 of 327 rows (52%) are pinned exactly**, 97 are capped (`^`, `~`, `<`), and only 70 are
+`>=` or unpinned. On the `FLOOR` and `ANY` rows the two numbers are identical by construction.
+A `>=`-heavy corpus shows no gap at all.
+
+| Target | n | median pinned | median latest | × |
+|---|---|---|---|---|
+| `CAHLR/OATutor` | 35 | 🔴 **1,839 d** | 604 d | 3.0× |
+| `ronantakizawa/a11ymcp` | 5 | 🔴 **686 d** | 14 d | **49×** |
+| `peancor/moodle-mcp-server` | 2 | 366 d | 22 d | 16.6× |
+| `oppia/oppia` | 152 | 334 d | 60 d | 5.6× |
+| `SirhanMacx/Claw-ED` | 21 | 101 d | 35 d | 2.9× |
+| `ankimcp/anki-mcp-server` | 24 | 68 d | 20 d | 3.4× |
+| `towardsai/ai-tutor-app` · `moarshy/mcp-tutor` · `vishalsachdev/canvas-mcp` · `microsoft/agent-framework` · `huggingface/smolagents` | 44 | 5–12 d | 5–12 d | 🟢 1.0× |
+
+🔴 **The row this reverses is the one pass 24 called cleanest.** `ronantakizawa/a11ymcp` was filed
+🟢 *"0 of 5 cold, oldest dependency 57 d"*. It pins `puppeteer` and `puppeteer-core` at **13.5.0,
+released 2022-03-05 — 1,675 days, twelve major versions behind** the current 25.12.0. ⚠️ **A clean
+latest-release row is not a clean build**, and the five repositories at 1.0× are clean on both
+axes, which is what makes them worth naming.
+
+🟢 **The single counterexample to pass 24's lower-bound claim, in 327 rows:** `oppia/oppia` pins
+`webapp2==3.0.0b1`, a **pre-release from 2016-09 (3,676 d)**, while the registry's latest *stable*
+`webapp2` is **2.5.2 from 2012-09-28 (5,122 d)**. Pass 24 published 5,122 d. The verdict — *"a relic
+of a dead platform"* — stands; the figure was wrong by 1,446 days in the direction that flattered
+the story.
+
+### 🟢 Depth 2 of the closure: it doubles, and nothing new appears
+
+Expanding to what the 268 depth-1 packages themselves require — runtime only, `extra`-gated and
+dev dependencies excluded, 13 scope controls:
+
+| | Depth 2, new names only |
+|---|---|
+| distinct packages | **276** |
+| `PERMISSIVE` | **273** |
+| `WEAK-COPYLEFT` (MPL-2.0: `tqdm`, `mathquill`) | 2 |
+| `STRONG-COPYLEFT` · non-commercial · proprietary | 🟢 **0 · 0 · 0** |
+| `UNKNOWN` | 1 |
+
+> 🟢 **No new licence class. Depth 1 was sufficient for the licence-class question and the gap
+> closes.** 🔴 **The prediction's mechanism was impossible, though:** it named `certifi` (MPL-2.0)
+> as the route, and `certifi` is a **depth-1** dependency of this corpus.
+
+**`UNKNOWN` resolved 4 → 1, and three were classifier gaps, not risks.** `glob` and `sax` — two of
+the most-installed packages on npm — declare **`BlueOak-1.0.0`**, an OSI-approved permissive
+licence no rule recognised; `jupyterlab-pygments` puts the licence **text** in the `license` field.
+🔴 The survivor is **`azure-core`**: empty `license`, no `license_expression`, no `License ::`
+classifier — and it is reachable only through `azure-cognitiveservices-speech`, the single
+proprietary depth-1 row pass 24 found in `oppia/oppia`.
+
+🔵 **Dated, the closure has a gradient and it runs one way:**
+
+| Tier | n | median | cold > 1 yr |
+|---|---|---|---|
+| what this KB **cites** (head commit) | 501 | **48 d** | 24.8% |
+| installed depth 1, latest release | 327 | 57 d | 27.2% |
+| installed depth 2, latest release | 276 | 🔴 **177 d** | 🔴 **37.0%** |
+| installed depth 1, **pinned** | 327 | 🔴 **220 d** | 🔴 42.5% |
+
+⚠️ **Depth 2's pinned tier is not measured and would be older still.** Coldest at depth 2:
+`json-stringify-safe` **4,159 d**, `wicked-good-xpath` 3,841 d, `mathquill` 3,768 d,
+`identity-obj-proxy` 3,717 d, `lodash.throttle` 3,707 d — the npm micro-package layer under
+OATutor's 2020-era React front end, reached from the opposite direction to `p437` and agreeing
+with it.
+
+### 🟢 Three new registries, and the release channel now covers every language on the LTI shelf
+
+The release column of the interoperability shelf was four dashes because this KB had only ever
+used PyPI and npm. Probed for the first time this pass, all **200**:
+
+| Registry | Endpoint | What it supplied |
+|---|---|---|
+| **Packagist** | `repo.packagist.org/p2/<v>/<p>.json` | `packbackbooks/lti-1p3-tool` **v6.4.4, 14 d, 68 releases** |
+| **Maven Central** | `repo1.maven.org/maven2/.../maven-metadata.xml` | `uk.ac.ox.ctl:spring-security-lti13` **0.3.7, 1 d, 23 versions** |
+| **Hex** | `hex.pm/api/packages/<n>` | `lti_1p3` **0.11.0, 208 d** |
+| RubyGems · Go proxy | — | 🟢 reachable; no shelf row needs them yet |
+| *(blocked)* | `api.github.com/repos/*` · `github.com` page · `crates.io` | 🔴 403 |
+
+🟢 **Three of the five LTI rows now show the head commit and the release on the same day** — the
+signature of a maintained library, and the exact inverse of `pylti1.3`'s 1,416 / 1,417.
+
+⚠️ **The lesson that makes the channel usable: the package name is not the repository name.**
+`repo.packagist.org/p2/packbackbooks/lti-1-3-php-library.json` is a **404**; the package is
+`packbackbooks/lti-1p3-tool`, and only the repo's own `composer.json` says so. 🔵 **A registry
+census keyed on repository slugs would have recorded a library with 68 releases as unpublished** —
+and that is precisely the error that hid `ff-ltitoolkit` from fourteen passes of this KB.
+
+🔴 **The same probe closes the `1EdTech` cold-fork case from a third direction.** Its
+`composer.json` declares `imsglobal/lti-1p3-tool`, which Packagist **404s**, and declares **no
+licence** while the repository ships Apache-2.0. Commit date, payload identity and registry
+presence now all agree.
+
+### 🔵 Pre-registered for the next pass, supply side
+
+| # | Action | Prediction written **before** running it |
+|---|---|---|
+| **A** | Resolve the **87 rows with no licence file** against their registries' declared licence field | ⚠️ Expect a licence for **fewer than half**. The class worth finding is the inverse: **no `LICENSE` in the tree, MIT in the published package** — a grant made in the registry and nowhere in the repository |
+| **B** | Date the **pinned** depth-2 tier | 🔴 Expect it to exceed the depth-1 pinned median of **220 d**; if not, the staleness gradient stops at depth 1 |
+| **C** | Re-measure the licence-family liveness table **controlling for project size** (stars or commit count), to test whether the AGPL-6 d / Apache-54 d spread survives | ⚠️ Expect most of it to disappear. **Recorded as a prediction against this pass's own headline**, because a composition effect published without the control is how a true number becomes a false claim |
+
+### The method note for this pass
+
+🔵 **The most valuable thing this pass did was rebuild its own input list.** No new technique was
+needed to discover that 441 of the 503 repositories this KB currently recommends had never been
+measured — only the willingness to regenerate the denominator from the files as they stand rather
+than to re-run the sweep that was already there. **A measurement is only as current as its input
+list, and an input list has no expiry date written on it.**
+
+---
+
+
 ## 2026-10-07 — twenty-fourth pass: the supply map gains a second time axis, and the one that matters for a build is the release date
 
 ⏱️ **Measurement window 2026-10-07 ~00:30 UTC → 03:00 UTC; ages computed against the reference date

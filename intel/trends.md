@@ -952,7 +952,7 @@ instead of a topic filter.
 ⚠️ **The narrow claim that survives:** there is no **live framework-agnostic** permissive Python
 LTI 1.3 library. `dmitry-viskov/pylti1.3` is the only framework-neutral one and it is **1,416 days
 cold on the commit channel, 1,417 on the release channel** — both channels agreeing, which is the
-signature of abandonment rather than of a finished library.
+signature of abandonment rather than of a finished library. 🔵 **NARROWED, twenty-fifth pass of 2026-10-07 — "none" is now "one alpha".** [`CNIT-Organization/ltitoolkit`](https://github.com/CNIT-Organization/ltitoolkit) (MIT) **vendors `PyLTI1p3`, rebranded** — its README says so — and publishes it as [`ff-ltitoolkit`](https://pypi.org/project/ff-ltitoolkit/) **0.1.0, 2026-06-26 (103 d), one release ever**; head commit **63 d**; **0★**; `Development Status :: 3 - Alpha` with the FastAPI adapter and token minting **unbuilt**; and its `LICENSE` holder is **`Dmitry Viskov`, not its own authors**. **Not "no option", and not a safe dependency either.** Full row in `repos/foundations.md`.
 
 🟢 **So the two-runtime architecture is now conditional, not structural.** If the AI tier is Django
 or JupyterHub, LTI launch happens **in-process** and there is no adapter to budget. Only a
@@ -1427,7 +1427,11 @@ Spanish/Portuguese-language search. Four of the gaps below changed state.
 - 🔵 ~~**No Python LTI 1.3 library.**~~ **CLOSED, twenty-fourth pass of 2026-10-07.**
   [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) — MIT, head commit **2 d**, PyPI
   `django-lti` **v0.10.1 (61 d)**. Django-coupled; `jupyterhub/ltiauthenticator` (BSD-3, 98 d)
-  covers JupyterHub. ⚠️ Still open in the narrow form: **no live framework-agnostic** one.
+  covers JupyterHub. ⚠️ Still open in the narrow form, but **narrowed again** in the
+  twenty-fifth pass: the framework-agnostic slot holds exactly one candidate,
+  [`ff-ltitoolkit`](https://pypi.org/project/ff-ltitoolkit/) **0.1.0 (103 d)**, a 0★ alpha that
+  **vendors** the abandoned `PyLTI1p3` rather than replacing it and whose `LICENSE` names
+  `Dmitry Viskov` rather than its own authors.
 - **No gradebook in the permissive OneRoster shelf.** `theopenem/OneRoster.NET`
   states it: rostering calls only, grade book not implemented.
 - **`OpenLiteracy` returns 0 GitHub repositories**, as do `tutoring quality
@@ -3324,3 +3328,114 @@ field.
 > inherits a Microsoft Speech SDK licence obligation.** Oppia's own Apache-2.0 grant is unaffected —
 > a permissive project may depend on proprietary software — but the deliverable is not. The
 > permissive substitute is already on this KB's shelf: `k2-fsa/sherpa-onnx`, Apache-2.0.
+
+## 58. The head SHA, not the name, is what tells you whether two slugs are two repositories
+
+*Added in the twenty-fifth pass, 2026-10-07. Instrument:
+`compose/code/p436-fork-hypothesis/sha_discriminator.py`.*
+
+Trend 56 established that a licence holder which does not match the publishing account is a fork
+signal, and that the package registry's declared homepage resolves the upstream. Run over the
+whole 503-slug shelf, that resolution returns **21 rows whose registry names a different
+repository** — and **six of them are not forks at all.** They are GitHub **renames and transfers**,
+where the old path keeps working as a redirect and nothing visible changes:
+
+| Cited | Declared | Head |
+|---|---|---|
+| `All-Hands-AI/OpenHands` | `OpenHands/OpenHands` | both `9f05599` |
+| `NVIDIA/NeMo` | `NVIDIA-NeMo/NeMo` | both `50c71db` |
+| `iterative/dvc` | `treeverse/dvc` | both `56e5982` |
+| `adlnet/lrs-conformance-test-suite` | `TryxAPI/lrs-conformance-tests` | both `5bc232d` |
+| `stanfordnlp/edu-convokit` | `rosewang2008/edu-convokit` | both `d845ffd` |
+| `1EdTech/openbadges-validator-core` | `IMSGlobal/openbadges-validator-core` | both `0a66b52` |
+
+> 🟢 **The rule: a declared-elsewhere row is not lineage until the heads differ.**
+> `git ls-remote <a> HEAD == git ls-remote <b> HEAD` is one call, needs no API, and separates a
+> rename from a fork exactly. Only after it differs is "which is upstream" a question.
+
+🔵 **And the direction is not fixed.** Five of the six are the KB citing a former name; the sixth
+is the **registry** carrying a name the project abandoned in 2022. Neither source is authoritative
+alone, which is why the discriminator has to be the ref itself.
+
+⚠️ **Consequence for an engagement, not just for a KB.** A dependency manifest, a vendor
+questionnaire or an SBOM that names `iterative/dvc` is naming a repository that now belongs to a
+different company. The code is identical today. The *governance* is not, and that is the question
+a procurement review is actually asking when it asks who maintains a component.
+
+## 59. Half of what a build installs is pinned, so the registry's latest release is the wrong number by a factor of four
+
+*Added in the twenty-fifth pass, 2026-10-07. Instrument: `compose/code/p437-pinned-version/`.
+Supersedes the figures in trend 57, which are left as published and should not be re-quoted.*
+
+Trend 57 separated what a repository **commits** from what its build **installs**, and dated the
+installed tier from each dependency's **latest** release. It published the limit honestly: a
+manifest pinning `foo==1.0` installs 1.0 regardless. Resolving the specifiers measures the size of
+that limit:
+
+| | Latest release | **Pinned release** | Ratio |
+|---|---|---|---|
+| median age | 57 d | 🔴 **220 d** | **3.9×** |
+| cold > 1 yr | 27.2% | 🔴 **42.5%** | 1.6× |
+| cold > 2 yr | 15.0% | 23.2% | 1.5× |
+
+🔵 **The reason the gap is this large is a property of the corpus, and it must be quoted with the
+ratio or the ratio does not transfer: 52% of these 327 dependency rows are pinned EXACTLY**
+(`==1.2.3`), and another 30% are capped (`^`, `~`, `<`). Only the remaining 18% — `>=` and
+unpinned — resolve to the latest release, and those are the rows where the two numbers agree.
+
+🔴 **The row this reverses is the one trend 57 called cleanest.** `ronantakizawa/a11ymcp` was filed
+as *"0 of 5 cold, oldest dependency 57 d"*. It pins `puppeteer` and `puppeteer-core` at **13.5.0,
+released 2022-03-05 — 1,675 days, twelve major versions behind** a current 25.12.0 from a fortnight
+ago. Its median moves from **14 d to 686 d, a factor of 49.** `CAHLR/OATutor`'s median triples,
+604 d → **1,839 d**.
+
+> **What to put in a bid:** adopting a component means adopting its *pinned* dependency set, not
+> the latest versions of its dependency names. Price the uplift from the pin. The two numbers
+> differ by 4× at the median of this corpus and by 49× on its worst row, and the *latest*-release
+> figure is the one that flatters.
+
+⚠️ **This is still a lower bound.** The manifest is resolved, not the lock file, and a real solver
+can only move a capped version **down**.
+
+## 60. `UNKNOWN` is a parse class before it is a risk class — and depth 2 proves depth 1 was enough
+
+*Added in the twenty-fifth pass, 2026-10-07. Instrument: `compose/code/p438-depth2-closure/`.
+Closes the depth-2 question the closure's README has carried open since pass 21.*
+
+Extending the dependency closure one level down — what the 268 depth-1 packages themselves
+require, runtime only, `extra`-gated and dev dependencies excluded — **doubles it: 276 further
+distinct packages.** The licence result does not move:
+
+| | Depth 2 |
+|---|---|
+| `PERMISSIVE` | **273** |
+| `WEAK-COPYLEFT` (MPL-2.0: `tqdm`, `mathquill`) | 2 |
+| `STRONG-COPYLEFT` · non-commercial · proprietary | 🟢 **0 · 0 · 0** |
+| `UNKNOWN` | 1 |
+
+> 🟢 **No new licence class appears at depth 2. For the licence-class question, depth 1 was
+> sufficient, and this gap is closed.**
+
+🔴 **The prediction's conclusion held and its mechanism did not.** Pass 24 expected the copyleft
+count to rise via `certifi` (MPL-2.0). **`certifi` is a *depth-1* dependency of this corpus** and
+could not have been the route; the rise came from `tqdm` and `mathquill`. 🔵 **A prediction can be
+right about the outcome and wrong about every step to it, and recording only the outcome would
+have left a false mechanism in the file.**
+
+**And the `UNKNOWN` bucket repeated trend 57's lesson one level down: 4 rows, 3 of them parse
+failures.** `glob` and `sax` — two of the most-installed packages on npm — declare
+**`BlueOak-1.0.0`**, an OSI-approved permissive licence no rule in the classifier recognised.
+`jupyterlab-pygments` puts the licence **text** in the `license` field, and its first 120
+characters name no licence. All three are permissive; all three read as risk. The classifier now
+knows Blue Oak and prefers the PyPI classifier when the field is prose, with seven new controls.
+
+🔴 **The one that survives is `azure-core`: empty `license`, no `license_expression`, and no
+`License ::` classifier at all** — reached only through `azure-cognitiveservices-speech`, the
+single proprietary depth-1 row trend 57 found in `oppia/oppia`. A second reason to take that
+trend's advice and substitute `k2-fsa/sherpa-onnx`.
+
+🔵 **Dated, the closure has a gradient, and it runs one way:** what this KB **cites** has a median
+head-commit age of **48 d**; depth 1 installs at **57 d** (latest) and **220 d** (pinned); depth 2
+installs at **177 d** (latest). ⚠️ **Depth 2's pinned tier is not measured and would be older
+still** — every level down is older than the one above it, and the number a client is shown is
+always the one from the top.

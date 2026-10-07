@@ -159,6 +159,31 @@ check("inline group array",
       parse_dependency_group('[dependency-groups]\nbase = ["httpx", "rich"]\n', "base"),
       ["httpx", "rich"])
 
+# --- depth-2 closure findings, 2026-10-07 (p438) ---------------------------
+# Each positive is paired with the negative that forbids a lazy fix.
+check("BlueOak-1.0.0 is permissive, not UNKNOWN",
+      classify_licence("BlueOak-1.0.0"), "PERMISSIVE")
+check("Blue Oak Model License 1.0.0, spelled out",
+      classify_licence("Blue Oak Model License 1.0.0"), "PERMISSIVE")
+check("the new rule does not swallow a copyleft that merely mentions oak",
+      classify_licence("GPL-3.0-only (Oakland fork)"), "STRONG-COPYLEFT")
+check("a licence FIELD that is TEXT defers to the classifier",
+      pypi_licence({"info": {
+          "license": "Copyright (c) 2015 Project Jupyter Contributors\nAll rights "
+                     "reserved.\n\nRedistribution and use in source and binary forms, "
+                     "with or without modification, are permitted provided that the "
+                     "following conditions are met:",
+          "classifiers": ["License :: OSI Approved :: BSD License"]}}),
+      ("BSD License", "classifier (license field is text)"))
+check("a SHORT licence field is still the licence, classifier or not",
+      pypi_licence({"info": {"license": "MPL-2.0",
+                             "classifiers": ["License :: OSI Approved :: MIT License"]}}),
+      ("MPL-2.0", "license"))
+check("licence TEXT with NO classifier is still reported, not dropped",
+      pypi_licence({"info": {"license": "x" * 200, "classifiers": []}})[1], "license")
+check("no field and no classifier is absent, which is a finding not a default",
+      pypi_licence({"info": {"license": None, "classifiers": []}}), (None, "absent"))
+
 # --- verdict ordering ------------------------------------------------------
 check("clean", verdict("PERMISSIVE", ["PERMISSIVE", "PERMISSIVE"]), "CLEAN")
 check("weak", verdict("PERMISSIVE", ["PERMISSIVE", "WEAK-COPYLEFT"]), "REVIEW-WEAK")
@@ -169,7 +194,7 @@ check("nc beats strong",
 check("unknown is reported, not swallowed",
       verdict("PERMISSIVE", ["PERMISSIVE", "UNKNOWN"]), "REVIEW-UNKNOWN")
 
-TOTAL = 48
+TOTAL = 55
 if FAIL:
     print("FAIL (%d of %d)" % (len(FAIL), TOTAL))
     for f in FAIL:

@@ -21,16 +21,16 @@ the third pass of the same day — see the section below.
 | [pydantic/pydantic-ai](https://github.com/pydantic/pydantic-ai) | MIT (`LICENSE`) | agent framework | Typed, validated agent outputs. When an assessment decision must be defensible, a schema-checked output beats free text. |
 | [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) | MIT (`LICENSE`) | orchestration | Graph-structured, checkpointed agent state. The checkpoints double as the audit trail a high-risk education deployment needs. |
 | [crewAIInc/crewAI](https://github.com/crewAIInc/crewAI) | MIT (`LICENSE`, body text — no title line) | orchestration | Role-based multi-agent teams; maps cleanly onto tutor / assessor / reviewer separations. |
-| [All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands) | MIT (`LICENSE`) | coding agents | For the build itself and for CS-education use cases where students need a sandboxed coding agent. |
+| [All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands) — ⚠️ **now `OpenHands/OpenHands`**; both paths serve head `9f05599`, see the canonical-name table below | MIT (`LICENSE`) | coding agents | For the build itself and for CS-education use cases where students need a sandboxed coding agent. |
 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) | MIT (`LICENSE`) | agent framework | Python + .NET. The right default for clients already on a Microsoft stack, and the successor path off AutoGen. |
 | [huggingface/smolagents](https://github.com/huggingface/smolagents) | Apache-2.0 (`LICENSE`) | agent framework | Smallest auditable surface of the frameworks here. |
 | [opendatalab/MinerU](https://github.com/opendatalab/MinerU) | Apache-2.0 (`LICENSE.md`) | document ingestion | Turns textbooks, PDFs and scanned curricula into structured text. This is the front door of every content-generation pipeline in `compose/patterns.md`. |
 | [jupyterhub/jupyterhub](https://github.com/jupyterhub/jupyterhub) | BSD-3-Clause (`LICENSE`, modified-BSD body) | lab environment | Multi-user notebook serving for a cohort. The standard way to hand 200 students an identical environment. |
 | [jupyter/notebook](https://github.com/jupyter/notebook) | BSD-3-Clause (`LICENSE`) | lab environment | The notebook itself. |
-| [LearningEquality/ricecooker](https://github.com/LearningEquality/ricecooker) | MIT (`LICENSE`) | content pipeline | Python framework for packaging arbitrary content into Kolibri channels. The ETL half of the offline-first pattern. |
-| [LearningEquality/studio](https://github.com/LearningEquality/studio) | MIT (`LICENSE`) | content authoring | Curriculum authoring and channel curation that feeds Kolibri. |
+| [learningequality/ricecooker](https://github.com/learningequality/ricecooker) | MIT (`LICENSE`) | content pipeline | Python framework for packaging arbitrary content into Kolibri channels. The ETL half of the offline-first pattern. |
+| [learningequality/studio](https://github.com/learningequality/studio) | MIT (`LICENSE`) | content authoring | Curriculum authoring and channel curation that feeds Kolibri. |
 | [IMSGlobal/LTI-Tool-Provider-Library-PHP](https://github.com/IMSGlobal/LTI-Tool-Provider-Library-PHP) | Apache-2.0 (`LICENSE`) | LMS integration | LTI tool-provider implementation. The permissive doorway into a copyleft LMS — see the license-boundary note in `agents/top.md`. |
-| [1EdTech/openbadges-validator-core](https://github.com/1EdTech/openbadges-validator-core) | Apache-2.0 (`LICENSE`) | credentialing | Open Badges validation. Relevant to the skills-economy trend: competency claims a third party can verify. |
+| [1EdTech/openbadges-validator-core](https://github.com/1EdTech/openbadges-validator-core) — 🟢 **the KB has the current name; PyPI `openbadges` still declares the pre-2022 `IMSGlobal/...`**, same head `0a66b52` | Apache-2.0 (`LICENSE`) | credentialing | Open Badges validation. Relevant to the skills-economy trend: competency claims a third party can verify. |
 | [opencast/opencast](https://github.com/opencast/opencast) | ECL-2.0 (`LICENSE`) | lecture capture | Video capture, processing and delivery for universities. ECL-2.0 is an Apache-2.0 derivative, so it is **permissive** — the recorded-lecture corpus it produces is the natural input to the P2 ingestion pipeline. |
 
 ## Added in the third pass of 2026-10-06
@@ -42,7 +42,7 @@ had been assembling by hand — see `verticals/solutions.md`.
 | Repo | Licence (read from payload) | Layer | Why it matters for an education engagement |
 |---|---|---|---|
 | [pgvector/pgvector](https://github.com/pgvector/pgvector) | **PostgreSQL License** (`LICENSE`) — permissive, BSD-like | retrieval | Vector similarity search **inside PostgreSQL**. Removes a whole component from a sovereign deployment: no separate vector database to host, secure, back up and keep in-region. Where this KB previously reached for a dedicated vector store, reach for this first. |
-| [langfuse/langfuse](https://github.com/langfuse/langfuse) | **MIT, with a carve-out** (`LICENSE`) — see the warning below | LLM observability | Traces every model call with cost, latency and the actual output. In a high-risk education deployment this is the **audit trail produced as a by-product of normal operation**, rather than as a separate compliance project. The single highest-leverage addition to every pattern in this KB. |
+| [langfuse/langfuse](https://github.com/langfuse/langfuse) | **MIT, with a carve-out** (`LICENSE`) — see the warning below, and ⚠️ **the holder on that payload is `ClickHouse, Inc.`, not Langfuse** (the dual-licence wrapper was copied in, holder line and all). The grant text is MIT-Expat and unaffected; the **named grantor is a company that does not own the code**, which is a line a legal review will stop on | LLM observability | Traces every model call with cost, latency and the actual output. In a high-risk education deployment this is the **audit trail produced as a by-product of normal operation**, rather than as a separate compliance project. The single highest-leverage addition to every pattern in this KB. |
 | [livekit/livekit](https://github.com/livekit/livekit) | **Apache-2.0** (`LICENSE`) | real-time voice | WebRTC infrastructure for spoken practice, oral assessment and role-play. The permissive path to voice tutoring, which is otherwise a proprietary-API-shaped problem. |
 | [KualiCo/rice](https://github.com/KualiCo/rice) | **ECL-2.0** (`LICENSE.txt`) — permissive | higher-ed middleware | Application framework, workflow and eDocLite document routing built for and by the higher-education community. Java, 4★, 12 forks. **In maintenance mode** by its own README — vendor and fork it, do not present it as a living upstream. Full estate breakdown in `verticals/solutions.md`. |
 
@@ -164,7 +164,7 @@ repository page. Discovery narrative in `agents/trending.md`, sixth pass.
 | [speechbrain/speechbrain](https://github.com/speechbrain/speechbrain) | **Apache-2.0** (`main/LICENSE`) | 11.9k / **10,611** | PyTorch toolkit: 200+ training recipes over 40+ datasets, 20 speech and text tasks. The bridge when a language needs a model trained rather than downloaded |
 | [espnet/espnet](https://github.com/espnet/espnet) | **Apache-2.0** (`master/LICENSE`) | 10.0k / **27,378** | End-to-end speech toolkit with the deepest recipe archive here. First stop for a language nothing off-the-shelf covers |
 | [huggingface/parler-tts](https://github.com/huggingface/parler-tts) | **Apache-2.0** (`main/LICENSE`) | 5.6k / 199 | Prompt-controllable TTS — the voice is described in text, so register can be tuned per age group without retraining |
-| [NVIDIA/NeMo](https://github.com/NVIDIA/NeMo) | **Apache-2.0** (`main/LICENSE`) | — | Full speech + LLM training stack where GPUs are available |
+| [NVIDIA/NeMo](https://github.com/NVIDIA/NeMo) — ⚠️ **now `NVIDIA-NeMo/NeMo`**; both paths serve head `50c71db`, see the canonical-name table below | **Apache-2.0** (`main/LICENSE`) | — | Full speech + LLM training stack where GPUs are available |
 | [pytorch/audio](https://github.com/pytorch/audio) | **BSD** (`main/LICENSE`) | — | Audio primitives underneath the above |
 | [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) | **MPL-2.0** (`main/LICENSE.txt`) | 2.3k / **5,309** | Voice cloning and XTTS-class synthesis, **actively maintained** at Idiap Research Institute (Switzerland). PyPI `coqui-tts`. **Use this, not the 46.1k★ original** — see the warnings below |
 
@@ -556,7 +556,7 @@ result set is from **2010** and it is Drupal-6 era. 🔴 **Abandonware, not a sh
 | Foundation row | Its licence | Direct deps | Closure verdict |
 |---|---|---|---|
 | `oppia/oppia` | Apache-2.0 | **152** | 🔴 **REVIEW-STRONG** — `mutagen` is `GPL-2.0-or-later`; `certifi` MPL-2.0; `orjson` `MPL-2.0 AND (Apache-2.0 OR MIT)`; `azure-cognitiveservices-speech` `Other/Proprietary License`. **148 of 152 clean** |
-| `LearningEquality/kolibri` | MIT | **32** | ⚠️ **REVIEW-WEAK** — 2 LGPL rows, 2 unreadable. ⚠️ Measurable only via `[dependency-groups] base`; both canonical fields answer "nothing" and both are wrong |
+| `learningequality/kolibri` | MIT | **32** | ⚠️ **REVIEW-WEAK** — 2 LGPL rows, 2 unreadable. ⚠️ Measurable only via `[dependency-groups] base`; both canonical fields answer "nothing" and both are wrong |
 | `huggingface/smolagents` | Apache-2.0 | 6 | 🟢 **CLEAN** — the smallest permissive surface on the shelf, now verified on both layers |
 | `microsoft/agent-framework` | MIT | 1 | ⚠️ **CLEAN but uninformative** — `agent-framework-core[all]==1.20.0`; the closure is one level down |
 
@@ -744,7 +744,7 @@ shelf for it, split by runtime.
    released 6 d ago), is **AGPL-3.0** — right inside Open edX, unusable as reusable IP. So the
    contribution opening narrows from "a library" to "a framework-neutral library", and the
    adapter-in-another-runtime workaround below is **no longer required** when the AI tier is
-   Django.
+   Django. 🔵 **NARROWED, twenty-fifth pass of 2026-10-07 — "none" is now "one alpha".** [`CNIT-Organization/ltitoolkit`](https://github.com/CNIT-Organization/ltitoolkit) (MIT) **vendors `PyLTI1p3`, rebranded** — its README says so — and publishes it as [`ff-ltitoolkit`](https://pypi.org/project/ff-ltitoolkit/) **0.1.0, 2026-06-26 (103 d), one release ever**; head commit **63 d**; **0★**; `Development Status :: 3 - Alpha` with the FastAPI adapter and token minting **unbuilt**; and its `LICENSE` holder is **`Dmitry Viskov`, not its own authors**. **Not "no option", and not a safe dependency either.** Full row in `repos/foundations.md`.
 
 ### The Learning Equality substrate — the sync engine, not just the app
 
@@ -938,14 +938,51 @@ whole tier** with the MCP search API — `lti 1.3 advantage language:Python` →
 | [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) | **MIT** (1,070 B) | **138** (83 forks) | `master` | **The only viable one.** Django and Flask adapters. ⚠️ **51 open issues**, last push 2024-08-18. |
 | [blackboard/BBDN-lti-1p3-tool-example](https://github.com/blackboard/BBDN-lti-1p3-tool-example) | **Apache-2.0** (`main/LICENSE`) | 1 | `main` | 🆕 **Blackboard's own** Python/Flask LTI 1.3 example with AWS deployment. A vendor-authored reference — useful for reading how a major LMS expects a tool to behave. Last updated 2022. |
 | [glenn-watt/lti-1p3-reference-tool](https://github.com/glenn-watt/lti-1p3-reference-tool) | **MIT** (`main/LICENSE`) | 0 | `main` | 🆕 Flask reference tool implementing **OIDC, JWKS validation, AGS, NRPS and Deep Linking from first principles**. 0★ and three months old, so it is **code to read**, not a dependency — but it is the only one that covers all four LTI Advantage services explicitly. |
-| [CNIT-Organization/ltitoolkit](https://github.com/CNIT-Organization/ltitoolkit) | **MIT** (`main/LICENSE`) | 0 | `main` | 🆕 PyPI-published LTI 1.3 Advantage toolkit. 0★. |
+| [CNIT-Organization/ltitoolkit](https://github.com/CNIT-Organization/ltitoolkit) | **MIT** (`main/LICENSE`) — ⚠️ **the holder is `Dmitry Viskov`, not this project** | 0 | `main` | 🔴 **REWRITTEN, twenty-fifth pass of 2026-10-07 — this row said "PyPI-published" and that is wrong under this name.** `pypi.org/pypi/ltitoolkit` is **404**; the package is published as **[`ff-ltitoolkit`](https://pypi.org/project/ff-ltitoolkit/) 0.1.0, uploaded 2026-06-26 (103 d), one release ever**, and the repo's own README says *"Published via Git (no PyPI required)"*. **And the row omitted the only thing about it that matters: its `src/ltitoolkit/core/` is, in its README's words, the "vendored LTI 1.3 engine (PyLTI1p3, rebranded)".** See the correction block below. |
 
-🔴 **The Python-shaped hole in trend 28 is one library deep, and this is the exact
-measurement of it.** Four repositories exist in the world; one has more than one star;
-that one has 51 open issues and has not been pushed since August 2024. **If an
-engagement's LMS integration is on the critical path, budget for maintaining a fork of
-`pylti1.3` from the start.** That is not a risk to flag later — at `total_count: 4` it is
-the baseline condition of the tier.
+🔴 **CORRECTED, twenty-fifth pass of 2026-10-07 — two figures in the table above were
+stale and the row that resolves the tier was mis-described.**
+
+⚠️ *"has not been pushed since August 2024"* is wrong: `dmitry-viskov/pylti1.3`'s head commit
+is **2022-11-21**, measured over `git` by pass 23 and re-measured this pass, and its last PyPI
+release, `pylti1p3` **2.0.0**, is **2022-11-20**. Both channels agree and both are **1,416
+days**. Pass 24 published the right figure in `agents/trending.md` and this table kept the
+wrong one — the third reproduction of the propagation failure recorded in `intel/market.md`.
+
+🟢 **And the KB's own answer to its most-repeated supply gap was already sitting in the last
+row of this table.** Pass 24 spent its headline establishing that *"the only framework-neutral
+Python LTI 1.3 implementation (`pylti1.3`) is abandoned on both channels"*. Measured this pass
+by the **licence-holder channel** — `CNIT-Organization/ltitoolkit` ships a `LICENSE` whose
+holder is `Dmitry Viskov`, which is the fork signal trend 56 defines — and then confirmed by
+opening its README:
+
+> `src/ltitoolkit/core/   # vendored LTI 1.3 engine (PyLTI1p3, rebranded) — internal`
+
+**So the framework-agnostic path is not dead; it is early.** The honest shelf:
+
+| | `ff-ltitoolkit` (`CNIT-Organization/ltitoolkit`) |
+|---|---|
+| licence payload | 🟢 MIT (`main/LICENSE`) |
+| ⚠️ licence **holder** | 🔴 `Dmitry Viskov` — **the vendored engine's holder, carried over.** The repo publishes **no grant naming its own authors** for the new code |
+| PyPI | 🟢 `ff-ltitoolkit` **0.1.0**, 2026-06-26, **103 d** — the only release |
+| head commit | ⚠️ **2026-08-05, 63 d** — alive, but two months without a commit on a project whose README says three of its five subsystems *"are being built"* |
+| scope today | 🟢 OIDC/JWT launch, AGS, NRPS, Deep Linking, Dynamic Registration declared; 🔴 **FastAPI adapter, Dynamic Registration and token minting are Phase 2–5, unbuilt** |
+| declared status | 🔴 *"early development (v0.1.0)"*, `Development Status :: 3 - Alpha` |
+
+🔵 **The sentence that replaces trend 28's, narrower and finally true in three directions:**
+the **Django** path is alive (`academic-innovation/django-lti`, MIT, 2 d); the **JupyterHub**
+path is alive (`jupyterhub/ltiauthenticator`, BSD-3-Clause, 98 d); and the **framework-agnostic**
+path is a **single 0★ alpha that vendors the abandoned library rather than replacing it**, with
+one release and no grant of its own. **Read as a procurement answer that is better than "there
+is none" and much weaker than "there is one."** If an engagement's LMS integration is on the
+critical path and the tool is not a Django app, budget for maintaining the vendored engine
+yourself — the alpha has already done the vendoring, which is the work, and has not yet done
+the adapters.
+
+⚠️ **One figure in the table above is left as published and should not be re-used:** the
+`total_count: 4` came from the MCP search API, which this environment no longer reaches.
+`ff-ltitoolkit` is reachable only through PyPI and `git`, and `pypi.org/pypi/ltitoolkit` is a
+404 — **a tier census run by repository search would have missed the package name entirely.**
 
 **The Java side is healthier, and it is EMEA-placed:**
 
@@ -1418,7 +1455,7 @@ essentially all of the AI tutoring and agent code in this KB is written, is not 
 **Half of that survives.** ~~There is still **no permissive Python LTI 1.3 library**, which is the
 claim trend 28 actually measured.~~ 🔵 **WITHDRAWN, twenty-fourth pass of 2026-10-07** — [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti)
 is **MIT**, head commit **2 d**, PyPI `django-lti` **v0.10.1 (61 d)**. What survives is only the
-narrow form: **no live *framework-agnostic* permissive Python LTI 1.3 library**. And `pylom` and
+narrow form: **no live *framework-agnostic* permissive Python LTI 1.3 library**. 🔵 **NARROWED, twenty-fifth pass of 2026-10-07 — "none" is now "one alpha".** [`CNIT-Organization/ltitoolkit`](https://github.com/CNIT-Organization/ltitoolkit) (MIT) **vendors `PyLTI1p3`, rebranded** — its README says so — and publishes it as [`ff-ltitoolkit`](https://pypi.org/project/ff-ltitoolkit/) **0.1.0, 2026-06-26 (103 d), one release ever**; head commit **63 d**; **0★**; `Development Status :: 3 - Alpha` with the FastAPI adapter and token minting **unbuilt**; and its `LICENSE` holder is **`Dmitry Viskov`, not its own authors**. **Not "no option", and not a safe dependency either.** Full row in `repos/foundations.md`. And `pylom` and
 `py-eduterm-client` are **MIT Python libraries for education standards**, so Python *is* served for
 **metadata and curriculum vocabulary** as well.
 
@@ -1521,7 +1558,7 @@ is not). **Ten rows, all verified.**
 | Repo | Licence (payload path) | ★ / forks | Lang | What it does, and why an education engagement needs it |
 |---|---|---|---|---|
 | [mlflow/mlflow](https://github.com/mlflow/mlflow) | **Apache-2.0** (`LICENSE.txt`) | 28.3k / 6.4k | Python | *"The open source AI engineering platform for agents, LLMs, and ML models."* Model registry with versioned stages. **This is the Art. 111 instrument**: the registry is what lets you state, with dates, that the system in service is the system that was placed in service. |
-| [iterative/dvc](https://github.com/iterative/dvc) | **Apache-2.0** (`LICENSE`) | 15.9k / 1.3k | Python | *"Data Versioning and ML Experiments."* Versions the **corpus** alongside the model, in Git. The answer to Vietnam's *"uncontrolled data sources"* trigger is a hash, and this produces it. |
+| [iterative/dvc](https://github.com/iterative/dvc) — 🔴 **now `treeverse/dvc`**; both paths serve head `56e5982` and PyPI `dvc` declares `Source: github.com/treeverse/dvc`. See the canonical-name table below | **Apache-2.0** (`LICENSE`) | 15.9k / 1.3k | Python | *"Data Versioning and ML Experiments."* Versions the **corpus** alongside the model, in Git. The answer to Vietnam's *"uncontrolled data sources"* trigger is a hash, and this produces it. |
 | [great-expectations/great_expectations](https://github.com/great-expectations/great_expectations) | **Apache-2.0** (`LICENSE`) | 11.9k / 1.9k | Python | *"Always know what to expect from your data."* Declarative data validation. Turns "the curriculum corpus is controlled" from an assertion into a suite that fails a build. |
 | [evidentlyai/evidently](https://github.com/evidentlyai/evidently) | **Apache-2.0** (`LICENSE`) | 8.0k / 946 | Python | ML **and LLM** observability — evaluate, test and monitor any AI-powered system or pipeline. The regression baseline the nineteenth pass said a remediation contract has to ship. |
 | [Trusted-AI/AIF360](https://github.com/Trusted-AI/AIF360) | **Apache-2.0** (`LICENSE`) | 2.9k / 912 | Python | Fairness metrics for datasets and models, explanations for them, and bias-mitigation algorithms. Annex III §3 is **admissions, assessment and placement** — decisions about people. |
@@ -1655,7 +1692,7 @@ licence, the description or the ★ would have surfaced this — only the date.
 | PHP | [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) | Apache-2.0 (11,343 B) | 2020-06-03 | 🔴 2,316 d | 🔴 **superseded by its own upstream** |
 | PHP | [`IMSGlobal/LTI-Tool-Provider-Library-PHP`](https://github.com/IMSGlobal/LTI-Tool-Provider-Library-PHP) | — | 2016-11-28 | 🔴 3,599 d | 🔴 **9.9 years** — remove from any proposal |
 | Java | [`UOC/java-lti-1.3-provider-example`](https://github.com/UOC/java-lti-1.3-provider-example) | MIT | 2022-11-18 | 🔴 1,418 d | 🔴 example only, cold |
-| Java | [`unicon/tool13demo`](https://github.com/unicon/tool13demo) | — | 2024-10-31 | 🔴 705 d | 🔴 demo only, cold |
+| Java | [`Unicon/tool13demo`](https://github.com/Unicon/tool13demo) | — | 2024-10-31 | 🔴 705 d | 🔴 demo only, cold |
 
 ### 🔴 Three corrections this table forces on standing text in this file
 
@@ -1737,16 +1774,47 @@ above; this section records what replaced them and why the detection generalises
 |---|---|---|---|---|---|
 | **Python / Django** | 🆕 [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | 🟢 **MIT** (1,098 B) | 2026-10-05 | 🟢 **2 d** | 🟢 [`django-lti`](https://pypi.org/project/django-lti/) **v0.10.1**, 61 d |
 | **Python / JupyterHub** | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | 🟢 **BSD-3-Clause** (1,528 B) | 2026-07-01 | 🟢 98 d | 🟢 v1.6.3, 195 d |
-| **Node** | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 Apache-2.0 (11,360 B) | 2026-10-06 | 🟢 **1 d** | — |
-| **PHP / Moodle** | 🔁 [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | 🟢 Apache-2.0 (`master/LICENSE.md`, 11,343 B) | 2026-09-23 | 🟢 **14 d** | — |
-| **JVM / Spring Security** | [`oxctl/spring-security-lti13`](https://github.com/oxctl/spring-security-lti13) | 🟢 Apache-2.0 (11,357 B) | 2026-10-06 | 🟢 1 d | — |
-| **Python, framework-neutral** | 🔴 *none live* | — | — | — | — |
+| **Node** | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 Apache-2.0 (11,360 B) | 2026-10-06 | 🟢 **1 d** | 🆕 🟢 npm [`ltijs`](https://www.npmjs.com/package/ltijs) **7.0.7, 2026-10-06 — 1 d** |
+| **PHP / Moodle** | 🔁 [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | 🟢 Apache-2.0 (`master/LICENSE.md`, 11,343 B) | 2026-09-23 | 🟢 **14 d** | 🆕 🟢 Packagist [`packbackbooks/lti-1p3-tool`](https://packagist.org/packages/packbackbooks/lti-1p3-tool) **v6.4.4, 2026-09-23 — 14 d**, 68 releases |
+| **JVM / Spring Security** | [`oxctl/spring-security-lti13`](https://github.com/oxctl/spring-security-lti13) | 🟢 Apache-2.0 (11,357 B) | 2026-10-06 | 🟢 1 d | 🆕 🟢 Maven Central `uk.ac.ox.ctl:spring-security-lti13` **0.3.7, 2026-10-06 — 1 d**, 23 versions |
+| **Elixir** | [`Simon-Initiative/lti_1p3`](https://github.com/Simon-Initiative/lti_1p3) | 🟢 MIT (1,082 B, © Carnegie Mellon University) | 2026-03-13 | 🟢 208 d | 🆕 🟢 Hex [`lti_1p3`](https://hex.pm/packages/lti_1p3) **0.11.0, 2026-03-13 — 208 d** |
+| **Python, framework-neutral** | ⚠️ [`CNIT-Organization/ltitoolkit`](https://github.com/CNIT-Organization/ltitoolkit) — **alpha, vendors `PyLTI1p3`** | 🟢 MIT, ⚠️ holder `Dmitry Viskov` | 2026-08-05 | ⚠️ 63 d | ⚠️ PyPI [`ff-ltitoolkit`](https://pypi.org/project/ff-ltitoolkit/) **0.1.0, 2026-06-26 — 103 d**, one release |
 
-🔴 **The one genuinely empty cell is "framework-neutral Python".** `dmitry-viskov/pylti1.3` is the
-only framework-neutral permissive implementation and it is **1,416 days cold on the commit channel
-and 1,417 on the release channel** (`pylti1p3` v2.0.0, 2022-11-20). Both channels agreeing is the
-signature of abandonment, not of a finished library. **This is the remaining contribution opening,
-and it is one protocol binding wide — not a language's worth of missing ecosystem.**
+🆕 **The release column was four dashes until the twenty-fifth pass, and the reason was that this
+KB had only ever used two registries.** `pypi.org` and `registry.npmjs.org` serve Python and Node;
+the PHP, JVM and Elixir rows had no release channel at all. **Three further registries are
+reachable from this environment and were probed for the first time on 2026-10-07:**
+
+| Registry | Endpoint | Status |
+|---|---|---|
+| **Packagist** (PHP) | `repo.packagist.org/p2/<vendor>/<pkg>.json` | 🟢 200 |
+| **Maven Central** (JVM) | `repo1.maven.org/maven2/<group path>/<artifact>/maven-metadata.xml` | 🟢 200 |
+| **Hex** (Elixir / Erlang) | `hex.pm/api/packages/<name>` | 🟢 200 |
+| RubyGems · Go module proxy | `rubygems.org/api/v1/gems/<n>.json` · `proxy.golang.org/<mod>/@v/list` | 🟢 200, no shelf row needs them yet |
+| *(still blocked)* | `api.github.com/repos/*` · rendered `github.com` · `crates.io` | 🔴 403 |
+
+🟢 **Every row on this shelf now agrees across two independent channels**, and on three of the
+five rows the head commit and the release are the **same day** — the signature of a maintained
+library, and the exact inverse of `pylti1.3`'s 1,416/1,417.
+
+⚠️ **The PHP row carries the lesson that makes the channel usable: the package name is not the
+repository name.** `repo.packagist.org/p2/packbackbooks/lti-1-3-php-library.json` is a **404**;
+the composer package is **`packbackbooks/lti-1p3-tool`**, and only its own `composer.json` says so.
+🔵 **A registry census keyed on repository slugs would have recorded "not published" for a library
+with 68 releases.** Read the manifest for the name, then query the registry — never the other way.
+
+🔴 **And the same probe closes the cold-fork case from a third direction.** `1EdTech`'s copy
+declares the composer name **`imsglobal/lti-1p3-tool`**, which Packagist **404s**, and its
+`composer.json` declares **no licence at all** while the repository ships Apache-2.0. Commit date,
+payload identity and now registry presence all agree: the standards body's copy is the dead one.
+
+🔵 **So the "framework-neutral Python" cell is no longer empty, and it is the only row on this
+shelf whose two channels disagree in the dangerous direction** — a release 103 days old against a
+commit 63 days old, on a project whose own README says three of its five subsystems are unbuilt.
+`dmitry-viskov/pylti1.3` remains **1,416 days cold on the commit channel and 1,417 on the release
+channel** (`pylti1p3` v2.0.0, 2022-11-20), and `ff-ltitoolkit` **vendors it rather than replacing
+it**. The contribution opening is still one protocol binding wide; what changed is that someone
+has started, alone, at `0★`.
 
 ### 🔴 Rows removed from this shelf, and the reason each was wrong
 
@@ -1774,7 +1842,7 @@ this pass. **30.1% are more than a year old; 13.0% predate 2024; the median is 6
 the citing tier's 23.0% / 11.1% / 42 days, **the installed tier is 1.31× colder on the cold bucket**
 — the direction pass 23 predicted, at a smaller magnitude than its motivating example implied.
 
-🔴 **Two foundation rows carry the divergence:** `LearningEquality/kolibri` (head commit 1 d, median
+🔴 **Two foundation rows carry the divergence:** `learningequality/kolibri` (head commit 1 d, median
 dependency **200 d**, 14/32 cold, including `json-schema-validator` at **3,894 d** and
 `zeroconf-py2compat` at 1,156 d — Python-2-era compatibility shims still in the manifest) and
 `CAHLR/OATutor` (head commit 7 d, median **604 d**). 🟢 Two read cleanly on both axes:
@@ -1785,3 +1853,94 @@ dependency **200 d**, 14/32 cold, including `json-schema-validator` at **3,894 d
 reading *"Dual License"*; `semver` is **BSD** despite a field containing the raw notice text; and
 🔴 `azure-cognitiveservices-speech`, declared by `oppia/oppia`, is **proprietary** — *"License ::
 Other/Proprietary License"*, empty licence field. Full census in `intel/trends.md` §57.
+
+---
+
+## Twenty-fifth pass, 2026-10-07 — the shelf measured whole: 503 slugs, one denominator
+
+Every pass before this one measured a *sample* of the shelf. `p170`'s published denominator is
+**200 slugs from 2026-10-03**, and pass 66 left the reservation *"the sweep is redone when
+`slugs.input.txt` incorporates this pass's additions"* standing. It stood for twenty-four passes.
+
+🔵 **The denominator this pass uses is every `github.com/owner/repo` cited in the six
+non-append-only shelf files: 503 slugs. Only 62 of them are in `p170`'s 200. 441 had never been
+measured.** Instrument: `compose/code/p436-fork-hypothesis/` (6 controls, offline).
+
+| Layer | Result |
+|---|---|
+| licence payload, `raw.githubusercontent.com/<slug>/HEAD/<14 filenames>` | 412 `LICENSED` · 87 `UNLICENSED` · 4 `UNREACHABLE` |
+| head commit date, `git fetch --depth 1 --filter=blob:none` | 🟢 **501 of 503 dated** |
+| licence family | MIT 215 · Apache-2.0 72 · GPL 40 · AGPL-3.0 23 · LGPL 11 · BSD 10 · ECL-2.0 8 · CC-BY 7 · ISC 2 · CC0 2 · unclassified 22 |
+
+### Liveness of the live-cited shelf, against the reference date `2026-10-07`
+
+| | 503-slug live shelf | pass 24's 884-repo citing tier |
+|---|---|---|
+| median head-commit age | **48 d** | 42 d |
+| committed in 2026 | 72.3% | 73.5% |
+| 🔴 cold > 1 yr | **24.8%** | 23.0% |
+| 🔴 cold > 2 yr | **16.6%** | 11.1% (pre-2024) |
+| committed within 7 d | 31.5% | — |
+
+⚠️ **Read the first comparison, not the headline.** You would expect what a KB *recommends* to be
+fresher than what it merely *mentions*. **Measured, it is not** — the live shelf is 48 d against
+42 d, and colder on both cold buckets. Nothing in this KB's selection process favours recency, and
+this is the number that says so.
+
+🔴 **The 25 coldest rows the KB still cites**, led by `foradian/fedena` **5,108 d (2012-10-12)**,
+`inepdadosabertos/api` 4,525 d, `Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor`
+3,808 d, `shinyquagsire23/InfiniteCampusAPI` 3,658 d,
+`IMSGlobal/LTI-Tool-Provider-Library-PHP` 3,600 d (the row pass 24 removed from **P1**),
+`kuali/kc` 3,561 d, `fnshr/kyo-kan` 3,518 d, `kuali/rice` 3,430 d. Full table:
+`compose/code/p436-fork-hypothesis/recency.2026-10-07.tsv`.
+
+### 🔴 Six rows on this shelf are cited at a repository's FORMER name
+
+A GitHub rename or transfer leaves the old path working as a redirect, so nothing in a browser
+shows that anything has moved. The discriminator costs one call and is exact:
+`git ls-remote <old> HEAD == git ls-remote <new> HEAD` ⇒ **one repository, two names**. Found by
+asking each repo's **package registry** which repository it declares as its homepage, then
+comparing heads.
+
+| Cited here as | The registry declares | Shared head | Direction |
+|---|---|---|---|
+| [`All-Hands-AI/OpenHands`](https://github.com/All-Hands-AI/OpenHands) | `OpenHands/OpenHands` | `9f05599` | 🔴 the project moved; the KB has the old name |
+| [`NVIDIA/NeMo`](https://github.com/NVIDIA/NeMo) | `NVIDIA-NeMo/NeMo` | `50c71db` | 🔴 same |
+| [`iterative/dvc`](https://github.com/iterative/dvc) | `treeverse/dvc` | `56e5982` | 🔴 same — and this one is a **transfer between companies**, not a rename |
+| [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) | `TryxAPI/lrs-conformance-tests` | `5bc232d` | 🔴 same |
+| [`stanfordnlp/edu-convokit`](https://github.com/stanfordnlp/edu-convokit) | `rosewang2008/edu-convokit` | `d845ffd` | ⚠️ one repository under two names, **537 d cold either way** |
+| [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | `IMSGlobal/openbadges-validator-core` | `0a66b52` | 🟢 **the reverse** — the KB has the post-2022 name and the **registry metadata is stale** |
+
+🔵 **The last row is why this is a channel and not a rule.** Five times the KB was behind the
+repository; once the registry was behind the KB. **The head SHA settles it; neither source is
+authoritative on its own.** The names are left as published above with a pointer, because both
+paths resolve and rewriting a working citation buys nothing — what was missing was the note.
+
+### 🔴 Seven MIT licence files on this shelf name no copyright holder at all
+
+Under **P179**, a licence file is an *identifier* or a *cession*: a cession names a grantor, a year
+and the terms. These seven are MIT texts with the terms and **no grantor**:
+
+| Slug | What the copyright line says |
+|---|---|
+| [`AbdelStark/eu-ai-act-toolkit`](https://github.com/AbdelStark/eu-ai-act-toolkit) | `Copyright (c) 2026` — a year and nothing else |
+| [`AkizumiFox/NTU-COOL-Assignment-Status-Viewer`](https://github.com/AkizumiFox/NTU-COOL-Assignment-Status-Viewer) | `Copyright (c) 2025` — same |
+| [`koukekoukej-glitch/feynman-tutor`](https://github.com/koukekoukej-glitch/feynman-tutor) | `Copyright (c) 2026` — same |
+| [`r1ckyIn/canvas-ed-mcp`](https://github.com/r1ckyIn/canvas-ed-mcp) | `Copyright (c) 2025` — same |
+| [`lebmatter/exampro`](https://github.com/lebmatter/exampro) | 🔴 `Copyright (c) [year] [fullname]` — **the template placeholder, shipped verbatim** |
+| [`nguyentrieu210/edu`](https://github.com/nguyentrieu210/edu) | 🔴 same placeholder |
+| [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) | the copyright line is **absent** |
+
+⚠️ **This is a weaker defect than a wrong licence and a real one.** The MIT grant text is present
+and unambiguous in all seven; what is missing is the party making the grant. For a client
+redistribution review that is a question someone has to answer, and the repository does not.
+🔵 **`adlnet/lrs-conformance-test-suite` is the one to care about** — ADL's xAPI conformance suite
+is a standards artefact an engagement cites in a bid, and it is the one with no copyright line.
+
+🔴 **The KB could not see any of this until this pass, because its own instrument could not return
+the class.** `p184`'s copyright regex used `\s*` between the word *copyright* and the capture;
+`\s` matches a newline, so `Copyright (c) 2026` followed by a blank line **reached across it and
+published the next paragraph of the licence as the holder**. All seven were filed as
+`HOLDER-UNRELATED` with a sentence of MIT boilerplate in the holder column. Fixed with four new
+controls — three negatives and the positive that forbids an instrument answering `NO-HOLDER`
+always — in `compose/code/p184-holder-mismatch/` (now 19/19).

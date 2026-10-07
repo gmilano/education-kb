@@ -26,10 +26,19 @@ import re, sys
 
 # A filled copyright line.  The unfilled Apache/BSD placeholders are excluded by
 # construction: they are the thing we are trying to detect as NO-HOLDER.
+# D8 -- EVERY QUANTIFIER HERE IS SAME-LINE, and that is not cosmetic.  The first build
+# used `\s*` between the word "copyright" and the holder.  `\s` matches a NEWLINE, so a
+# copyright line with NO holder -- `Copyright (c) 2026` and nothing else -- silently
+# reached across the blank line and published the next paragraph of the licence,
+# `Permission is hereby granted, free of charge, to any person obtaining a copy`, as the
+# holder.  The NO-HOLDER class the instrument exists to return was therefore UNREACHABLE
+# for exactly the files that need it: MIT texts with a year and no name.  Measured on the
+# 2026-10-07 shelf sweep, that was 7 of 61 rows in the reading list.  See the four D8
+# controls in `test_holder.py`.
 COPY = re.compile(
-    r'copyright\s*(?:\(c\)|©|\bc\b)?\s*'
-    r'(?:[0-9]{4}(?:\s*[-–,]\s*[0-9]{4})?)?\s*'
-    r'(?:\(c\)|©)?\s*'
+    r'copyright[ \t]*(?:\(c\)|©|\bc\b)?[ \t]*'
+    r'(?:[0-9]{4}(?:[ \t]*[-–,][ \t]*[0-9]{4})*)?[ \t]*'
+    r'(?:\(c\)|©)?[ \t]*'
     r'([^\n\r]{2,90})', re.I)
 PLACEHOLDER = re.compile(r'\[?(yyyy|year|name of copyright owner|fullname|your name|'
                          r'copyright holders?|owner)\]?', re.I)
@@ -54,9 +63,13 @@ HOLDER_FAMILIES = ('MIT', 'BSD', 'ISC')
 # Copyright lines that belong to the license STEWARD, never to the project.
 STEWARD = re.compile(r'free software foundation|creative commons|open source initiative|'
                      r'regents of the university of california\b.{0,0}$', re.I)
+# D8b -- the plural.  `\bholder\b` does not match `HOLDERS`, so the warranty clause
+# `... AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM ...` passed the sentence
+# filter and was published as a holder by 3 of the 7 D8 rows.
 # A match that is a clause of the body rather than a name.
-SENTENCE = re.compile(r'\b(notice|owner|holder|laws?|work|license|means|shall|defined|'
-                      r'rights?|that|which|upon|include[ds]?|attached)\b', re.I)
+SENTENCE = re.compile(r'\b(notices?|owners?|holders?|laws?|works?|licen[sc]e[ds]?|means|'
+                      r'shall|defined|rights?|that|which|upon|include[ds]?|attached|'
+                      r'permission|hereby|granted|liable|damages|claim)\b', re.I)
 
 def holder(text):
     """The first FILLED copyright holder in the license text, or None."""

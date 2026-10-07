@@ -48,7 +48,7 @@ you deliver them.
 | Canvas MCP | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT (`LICENSE`) | 278 (95 forks) | Canvas LMS MCP server: **up to 103 tools** and 8 agent skills for students, educators and learning designers. Includes a 20-check WCAG accessibility scanner and bulk-grading tools. Works with 40+ MCP clients. Latest release v1.13.0 (Sep 2026). The canonical repo — pin it against its forks. |
 | OATutor | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | MIT (`LICENSE`) | 264 | Intelligent tutoring system with Bayesian Knowledge Tracing, from CAHLR at UC Berkeley. Published at CHI '23 with a follow-up in PLOS ONE. ReactJS + Firebase. The auditable mastery model in this list. |
 | Educhain | [satvik314/educhain](https://github.com/satvik314/educhain) | MIT (`LICENSE`) | 388 | Python package for generating educational content with generative AI — MCQs, open-ended items, lesson plans, flashcards. |
-| Kolibri | [LearningEquality/kolibri](https://github.com/LearningEquality/kolibri) | MIT (`LICENSE`) | 1.1k | Offline-first learning platform for teaching and learning without an internet connection. The only fully permissive end-to-end platform here; the basis of the equity-deployment pattern. |
+| Kolibri | [learningequality/kolibri](https://github.com/learningequality/kolibri) | MIT (`LICENSE`) | 1.1k | Offline-first learning platform for teaching and learning without an internet connection. The only fully permissive end-to-end platform here; the basis of the equity-deployment pattern. |
 | Moodle MCP Server | [peancor/moodle-mcp-server](https://github.com/peancor/moodle-mcp-server) | MIT (`LICENSE`) | not read this pass | MCP server exposing Moodle data to agents from *outside* the Moodle tree — which is why it is MIT while in-tree Moodle plugins are GPL-3.0 (see the license-boundary note below). |
 | Hugging Face Agents Course | [huggingface/agents-course](https://github.com/huggingface/agents-course) | Apache-2.0 (`LICENSE`) | not read this pass | Open course on building agents with Hugging Face tooling. Pairs with the Microsoft course for a two-track enablement curriculum. |
 | learn-agentic-ai | [panaversity/learn-agentic-ai](https://github.com/panaversity/learn-agentic-ai) | MIT (`LICENSE`) | not read this pass | Agentic-AI curriculum used at large scale by the Panaversity / GIAIC programme in Pakistan — a rare APAC-origin education asset in this space. |
@@ -2702,7 +2702,7 @@ full tier table.
 |---|---|---|---|
 | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 2026-10-07 | 🟢 0 d | the largest asset in this KB is also committed daily |
 | [`Coursemology/coursemology2`](https://github.com/Coursemology/coursemology2) | 2026-10-07 | 🟢 0 d | |
-| [`LearningEquality/kolibri`](https://github.com/learningequality/kolibri) | 2026-10-06 | 🟢 0 d | |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 2026-10-06 | 🟢 0 d | |
 | [`frappe/lms`](https://github.com/frappe/lms) | 2026-10-07 | 🟢 0 d | |
 | [`langfuse/langfuse`](https://github.com/langfuse/langfuse) | 2026-10-06 | 🟢 0 d | |
 | [`k2-fsa/sherpa-onnx`](https://github.com/k2-fsa/sherpa-onnx) | 2026-10-06 | 🟢 0 d | |
@@ -2712,7 +2712,7 @@ full tier table.
 | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | 2025-10-15 | ⚠️ **356 d** | the pedagogy benchmark is **a fortnight from being a year stale** |
 | [`rhasspy/piper`](https://github.com/rhasspy/piper) | 2025-08-26 | 🔴 **406 d** | wired into **P18**; `sherpa-onnx` does TTS too and was committed today |
 | [`AI4Bharat/IndicTrans2`](https://github.com/AI4Bharat/IndicTrans2) | 2025-10-03 | 🔴 368 d | the liveliest member of a substrate that is 87.5% cold |
-| [`ai-edu-lab/E-Eval`](https://github.com/ai-edu-lab/e-eval) | 2024-02-19 | 🔴 **960 d** | wired into **P12** |
+| [`ai-edu-lab/E-Eval`](https://github.com/AI-EDU-LAB/E-EVAL) | 2024-02-19 | 🔴 **960 d** | wired into **P12** |
 | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 2022-11-21 | 🔴 **1,415 d** | see the Python LTI correction below |
 
 ⚠️ **`pedagogy-benchmark` at 356 days is the row to watch, not the row to pull.** Trend 31 records
@@ -2828,7 +2828,7 @@ repositories **install**. They are different facts about the same row.
 | Row | Head commit (pass 23) | Median dependency age (this pass) | Cold > 1 yr | Read |
 |---|---|---|---|---|
 | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 2026-09-30, **7 d** | 🔴 **604 d** | **21/35** | 🔴 maintained project, 2020-era build |
-| [`LearningEquality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 2026-10-06, 1 d | ⚠️ 200 d | 14/32 | Python-2-era shims persist (`zeroconf-py2compat`, 1,156 d) |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 2026-10-06, 1 d | ⚠️ 200 d | 14/32 | Python-2-era shims persist (`zeroconf-py2compat`, 1,156 d) |
 | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 2026-10-04, 3 d | 🟢 62 d | 10/43 | row 1 of this shelf, healthy on both axes |
 | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 2026-10-06, 1 d | 🟢 **60 d** | 40/152 | ⚠️ bimodal — a modern core and a 5,923-day App Engine tail |
 | [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | — | 🟢 **9 d** | **0/20** | 🟢 the cleanest build in the corpus |
@@ -2894,7 +2894,90 @@ trend 50 (*a filed correction regresses*) in its sharper form: **a filed anomaly
 ⚠️ **Every age in this section is a lower bound on staleness.** The registry channel dates the
 **latest** release, not the **pinned** one; a manifest pinning an old version installs something
 older than reported, never newer.
+🔵 **MEASURED, twenty-fifth pass of 2026-10-07:** across 327 resolved rows the pinned release is
+**220 d** at the median against **57 d** at the latest — **3.9×** — and **42.5%** of the installed
+tier is cold by more than a year, not 27.2%. The bound holds in **326 of 327** rows; the single
+exception is below.
 
 🔴 **And a date is still not a verdict.** `defusedxml` at 2,039 days is a finished security library
-and the correct pick; `webapp2` at 5,122 days is a relic of a retired platform. Age does not
+and the correct pick; `webapp2` is a relic of a retired platform. Age does not
 separate them — reading does.
+🔴 **`webapp2`'s figure is corrected here**: this section published **5,122 d**, the age of the
+latest *stable* release (2.5.2, 2012-09-28). `oppia/oppia` does not install that one — it pins
+`webapp2==3.0.0b1`, a **pre-release from 2016-09, 3,676 d**. The verdict stands, the number was
+wrong, and this is the only row in the corpus where the pinned release is **newer** than the
+registry's latest.
+
+---
+
+## Twenty-fifth pass, 2026-10-07 — the Canvas MCP cohort is nine repositories, and the shelf cites all nine
+
+The fourth pass of this KB recorded two forks of `vishalsachdev/canvas-mcp` and wrote *"pin the
+canonical repo"*. **Measured against the whole shelf this pass — 503 slugs, every one dated — the
+cohort is nine, and this file and `repos/foundations.md` between them cite every one:**
+
+| Slug | Head commit | Age | Relation, and how it was established |
+|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 2026-10-05 | 🟢 **2 d** | 🟢 **the canonical repo — pin this** |
+| [`BartMassey-upstream/canvas-mcp`](https://github.com/BartMassey-upstream/canvas-mcp) | 2026-10-04 | 🟢 3 d | derivative — PyPI `canvas-mcp` declares `vishalsachdev/canvas-mcp`; licence holder `Vishal Sachdev` |
+| [`abr-Projects/canvas-mcp`](https://github.com/abr-Projects/canvas-mcp) | 2026-09-06 | 🟢 31 d | derivative — same two signals |
+| [`r-huijts/canvas-mcp`](https://github.com/r-huijts/canvas-mcp) | 2026-09-21 | 🟢 16 d | ⚠️ **independent** — MIT © 2024 R. Huijts, its own lineage, not a fork |
+| [`lucanardinocchi/canvas-mcp`](https://github.com/lucanardinocchi/canvas-mcp) | 2026-05-08 | ⚠️ 152 d | derivative — npm `canvas-mcp` declares `vishalsachdev/canvas-mcp` |
+| [`aryankeluskar/canvas-mcp`](https://github.com/aryankeluskar/canvas-mcp) | 2026-03-11 | ⚠️ 210 d | derivative — same signal; **ISC**, not MIT |
+| [`CharlieCardenasToledo/mcp-canvas-server`](https://github.com/CharlieCardenasToledo/mcp-canvas-server) | 2026-08-01 | 🟢 67 d | separate name, separate project |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 2026-05-31 | ⚠️ 129 d | a **second root**: `plyght/canvas-mcp` declares *this*, not `vishalsachdev` |
+| [`plyght/canvas-mcp`](https://github.com/plyght/canvas-mcp) | 2025-10-30 | 🔴 **342 d** | derivative of `DMontgomery40/mcp-canvas-lms`, the only cold member |
+
+🔵 **The cohort has two roots, not one**, and the advice *"pin `vishalsachdev/canvas-mcp`"* is
+right for six of the nine and silent about the other three. **Eight of nine are live**; the Canvas
+MCP layer is the healthiest tier this KB measures, and its problem is duplication, not decay.
+
+### The four ways a package registry names a repository other than the one you cited
+
+Asking every one of the 503 slugs *"which repository does your package registry say you live at?"*
+returned **21** that name a different one. Only some of those are lineage:
+
+| Class | n | Discriminator | Examples |
+|---|---|---|---|
+| **rename / transfer** | 6 | 🟢 `git ls-remote` serves the **same head SHA** | `All-Hands-AI/OpenHands` → `OpenHands/OpenHands`; `iterative/dvc` → `treeverse/dvc` |
+| **fork / derivative** | 9 | different heads, same package, holder or payload carries over | `ucfopen/pylti1.3` → `dmitry-viskov/pylti1.3`; four of the canvas-mcp cohort |
+| **generic-name collision** | 5 | different heads, **unrelated project** on the registry | `frappe/lms` → `molobrakos/lms` (*a Squeezebox server interface*); `LibreTexts/conductor` → `WaldoJeffers/conductor`; two Google Classroom servers → `deadlyicon/class.js`, *"a super small ruby-ish class system"*, last touched **2013** |
+| **vendoring** | 1 | the manifest came in **with the copied code** | `Polygl0t/Polygl0t` → `mosaicml/llm-foundry` |
+
+⚠️ **The collision class is why this is a reading list and not a verdict.** A manifest declaring
+`"name": "lms"` or `"name": "class"` will resolve to whoever registered that word first.
+`"private": true` removes the worst of them — a workspace root is never published, so its `name`
+is a local label — and that one rule killed both false-positive classes the first build produced.
+
+🟢 **`Polygl0t/Polygl0t` is worth a row of its own and is EMEA-placed.** Apache-2.0, its README
+opens *"# LLM Foundry 🏭"*, and it is the **University of Bonn**'s derivation of MosaicML's training
+stack for the **Polyglot** multilingual-model project, targeted at the Marvin and Bender HPC
+clusters and JSC Jupiter. For an EMEA engagement that needs a sovereign multilingual training
+pipeline rather than an inference wrapper, it is a European public-research starting point with a
+permissive grant — and it is reachable only through the registry channel, because a search for
+"education" never surfaces it.
+
+### ⚠️ The holder channel is not a superset of the lineage channel, and the action assumed it was
+
+Pass 24 pre-registered *"treat every **holder ≠ account** row as a fork hypothesis"*. Run that way,
+the sweep sees **4** of the 21. The other **17** are Apache-2.0 or GPL rows, where the holder is
+`NOT-APPLICABLE` **by construction** — those families ship the licence steward's copyright, not the
+project's, which is exactly what `p184` was built to establish. 🔵 **So the holder is a lineage
+signal for MIT/BSD/ISC and structurally blind elsewhere. Running the registry stage over the whole
+shelf rather than over the holder stage's output is what found the other seventeen** — and that is
+a correction to the action, not to the instrument.
+
+### The pre-registered prediction, and why it did not hold
+
+> *"Two of two LTI picks were cold forks. Expect **more than two** further cold forks in the
+> 283-row shelf, concentrated in the interoperability tier."*
+
+🔴 **Not confirmed.** Over 503 slugs and two independent lineage channels, **every cold fork found
+was already recorded in this KB** — `Harvard-University-iCommons/django-lti` (406 d),
+`ucfopen/pylti1.3` (1,364 d), `jdolny/OneRoster.NET` (1,090 d),
+`MIT-OL-AI-Tutoring/Open_Learning_AI_Tutor` (588 d). **Zero new ones.** The derivatives the
+channels surfaced are mostly *live*: eight of the nine Canvas MCP repositories, and the one
+genuine surprise runs the other way — **a live fork of a dead upstream**
+(`CNIT-Organization/ltitoolkit`, which vendors the abandoned `PyLTI1p3`; see
+`repos/foundations.md`). 🔵 **"Cold fork" was the wrong shape to predict. The shelf's lineage
+problem is duplication and stale naming, not abandonment.**

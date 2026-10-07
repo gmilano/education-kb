@@ -60,6 +60,27 @@ REAL = [
      'moodle/moodle', 'fixtures/gpl-3.0-moodle-COPYING.txt', 'GPL', 'NOT-APPLICABLE'),
     ('D7 GPL-3.0, FULL real text, family WITHHELD: the instrument REFUSES, not guesses',
      'moodle/moodle', 'fixtures/gpl-3.0-moodle-COPYING.txt', None, 'FAMILY-REQUIRED'),
+
+    # D8 controls, added 2026-10-07 (pass 25).  The 503-slug shelf sweep returned 61
+    # HOLDER-UNRELATED rows and SEVEN of them were the instrument misreading a licence
+    # with NO holder.  `\s*` between "copyright" and the capture matches a NEWLINE, so
+    # `Copyright (c) 2026` followed by a blank line adopted the next paragraph as its
+    # holder; and `\bholder\b` does not match the plural in `... COPYRIGHT HOLDERS BE
+    # LIABLE ...`.  All four fixtures are the REAL payloads, byte-for-byte, not excerpts.
+    ('D8 MIT, year present and NO name: must be NO-HOLDER, not the next paragraph',
+     'AbdelStark/eu-ai-act-toolkit', 'fixtures/d8-mit-year-only-eu-ai-act-toolkit.txt',
+     'MIT', 'NO-HOLDER'),
+    ('D8 MIT, GitHub template placeholder shipped verbatim: NO-HOLDER',
+     'lebmatter/exampro', 'fixtures/d8-mit-template-placeholder-exampro.txt',
+     'MIT', 'NO-HOLDER'),
+    ('D8 MIT, copyright line deleted entirely: NO-HOLDER, not the warranty clause',
+     'adlnet/lrs-conformance-test-suite', 'fixtures/d8-mit-no-copyright-line-adlnet.txt',
+     'MIT', 'NO-HOLDER'),
+    # D8 POSITIVE control.  Three negatives alone would pass an instrument that returned
+    # NO-HOLDER for everything; this is the row that forbids that fix.
+    ('D8 positive: a REAL filled MIT holder is still read, and is UNRELATED to the account',
+     'academic-innovation/django-lti', 'fixtures/d8-mit-filled-holder-django-lti.txt',
+     'MIT', 'HOLDER-UNRELATED'),
 ]
 
 

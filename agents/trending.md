@@ -8,6 +8,276 @@ updated: 2026-10-07
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-07 — twenty-fifth pass: the answer to pass 24's headline gap was already a row in this KB, and the registry channel is wider than the repository
+
+⏱️ **Measurement window 2026-10-07 ~01:40 UTC → 04:30 UTC. Every age in days is computed against
+the reference date `2026-10-07`**, passed explicitly to each instrument, so the figures reproduce.
+
+**Channels new to this KB this pass: three further package registries** — `repo.packagist.org`
+(PHP), `repo1.maven.org` (JVM) and `hex.pm` (Elixir), each probed and each **200**; `rubygems.org`
+and `proxy.golang.org` also answer but no shelf row needs them yet. Previous channels: topic, star
+count, funder, ministry, institution, function, licence scope, platform name, language, MCP
+registry, conformance register, named technical standard, transitional article, declared
+dependency, GitLab REST API, `git`, PyPI/npm. **Thirteenth, fourteenth and fifteenth distinct
+channels.** Instruments: `compose/code/p436-fork-hypothesis/` (6 controls),
+`compose/code/p437-pinned-version/` (47), `compose/code/p438-depth2-closure/` (13),
+`compose/code/p439-case-collision-gate/` (7). Trends **58**, **59** and **60** in
+`intel/trends.md`; pattern **`P-REGISTRY-ID`** in `compose/patterns.md`.
+
+This pass executed all three of pass 24's pre-registered actions. **Two of the three predictions
+were wrong, and the one that was right was right for the wrong reason** — which is most of what
+is worth reading below.
+
+### 🟢 Verification level of this pass, stated before the findings
+
+| Layer | Endpoint / method | Status | Control |
+|---|---|---|---|
+| licence payload | `raw.githubusercontent.com/<slug>/HEAD/<14 names>` | 🟢 **200**, 412 of 503 licensed | absent file → 404 ⇒ 🟢 **DISCRIMINATES** |
+| head commit | `git fetch --depth 1 --filter=blob:none` | 🟢 **501 of 503 dated** | the 2 that fail are a known phantom and a prose placeholder ⇒ 🟢 **DISCRIMINATES** |
+| ref identity | `git ls-remote <url> HEAD` | 🟢 full ref list on every probed slug | — |
+| release date | `pypi.org` · `registry.npmjs.org` | 🟢 **200** | 4 planted names → 404 ⇒ 🟢 **DISCRIMINATES** |
+| 🆕 release date | `repo.packagist.org/p2/<v>/<p>.json` | 🟢 **200** | `imsglobal/lti-1p3-tool` → **404**, correctly ⇒ 🟢 **DISCRIMINATES** |
+| 🆕 release date | `repo1.maven.org/.../maven-metadata.xml` | 🟢 **200** | wrong group path `ac/uk/ox` → **404** ⇒ 🟢 **DISCRIMINATES** |
+| 🆕 release date | `hex.pm/api/packages/<n>` | 🟢 **200** | — |
+| *(blocked, re-probed)* | `api.github.com/repos/*` · rendered `github.com` · `crates.io` | 🔴 **403 · 403 · 403** | unchanged |
+| *(blocked, so not cited)* | `unu.edu` · `publications.iadb.org` · `coe.int` | 🔴 **000** at the egress proxy | — |
+
+### 🔴 Finding 1 — pass 24 declared the framework-agnostic Python LTI shelf dead while a live, vendored copy sat in this KB's own `repos/foundations.md`
+
+Pass 24's headline was that *"the only framework-neutral implementation (`pylti1.3`) is abandoned
+on both channels"*, and it corrected **13 live assertions** to say so. The holder sweep run over
+the whole shelf this pass returns a cluster it had never seen, because `p170`'s 200-slug
+denominator never contained it:
+
+| Slug | Licence payload | **Holder** | Head commit |
+|---|---|---|---|
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | MIT, `5aef77eb4471` | `Dmitry Viskov` | 🔴 1,416 d |
+| [`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) | MIT, **byte-identical** | `Dmitry Viskov` | 🔴 1,364 d |
+| 🆕 [`CNIT-Organization/ltitoolkit`](https://github.com/CNIT-Organization/ltitoolkit) | MIT, **byte-identical** | `Dmitry Viskov` | 🟢 **63 d** |
+
+Opening its README settles it in one line:
+
+> `src/ltitoolkit/core/   # vendored LTI 1.3 engine (PyLTI1p3, rebranded) — internal`
+
+🔵 **A third copy of the abandoned library, alive, under a third account — and this KB was already
+citing it**, as the last row of the interoperability table in `repos/foundations.md`, described as
+*"🆕 PyPI-published LTI 1.3 Advantage toolkit. 0★."* 🔴 **That description is wrong in the way that
+hid it:** `pypi.org/pypi/ltitoolkit` is a **404**. The package is
+[`ff-ltitoolkit`](https://pypi.org/project/ff-ltitoolkit/), **0.1.0, uploaded 2026-06-26 (103 d),
+one release ever**, and the repo's README says *"Published via Git (no PyPI required)."*
+
+**The honest verdict, which is neither pass 24's nor the row's:**
+
+| | measured this pass |
+|---|---|
+| licence payload | 🟢 MIT, `main/LICENSE` |
+| ⚠️ licence **holder** | 🔴 `Dmitry Viskov` — the vendored engine's. **No grant names the vendoring project's own authors** |
+| PyPI | ⚠️ `ff-ltitoolkit` **0.1.0**, 103 d, **one release** |
+| head commit | ⚠️ **63 d** on a project whose README says three of five subsystems *"are being built"* |
+| declared status | 🔴 `Development Status :: 3 - Alpha`; FastAPI adapter, Dynamic Registration and token minting **unbuilt** |
+
+🔵 **The corrected sentence, applied in place at all 10 live assertion sites, not filed in this
+section:** the **Django** path is alive, the **JupyterHub** path is alive, and the
+**framework-agnostic** path is a single 0★ alpha that **vendors the dead library rather than
+replacing it**. Better than *"there is none"*; much weaker than *"there is one"*.
+
+⚠️ **And the reason fourteen passes missed it is a method finding, not bad luck.** Every census of
+this tier was run by **repository search**. `ff-ltitoolkit` is reachable only by reading the
+manifest and then querying PyPI — **the package name and the repository name share no substring.**
+
+### 🔴 Finding 2 — the action's premise was wrong: the holder channel sees 4 of the 21 lineage rows
+
+Action A said *"treat every **holder ≠ account** row as a fork hypothesis"*. Executed literally,
+over the 503-slug shelf:
+
+| Stage | Result |
+|---|---|
+| licence payloads read | 412 of 503 |
+| holder verdicts | 185 `NOT-APPLICABLE` · 166 `HOLDER-MATCH` · **54 `HOLDER-UNRELATED`** · 7 `NO-HOLDER` |
+| registry resolution over the **54** | **4** `UPSTREAM` |
+| registry resolution over the **503** | 🔵 **21** `UPSTREAM` |
+
+🔴 **17 of 21 are invisible to the holder channel by construction.** They are Apache-2.0 and GPL
+rows, where the licence file carries the *steward's* copyright and the holder verdict is
+`NOT-APPLICABLE` — which is exactly what `p184` was built to establish in pass 66. **Chaining
+stage 3 onto stage 2's output discards 81% of the signal.** Run the registry stage over the whole
+shelf.
+
+### 🟢 Finding 3 — the head SHA separates a rename from a fork exactly, and six rows here are renames
+
+`UPSTREAM` mixes four things. `git ls-remote <a> HEAD == git ls-remote <b> HEAD` settles the first
+in one call:
+
+| Cited | Declared by the registry | Head |
+|---|---|---|
+| `All-Hands-AI/OpenHands` | `OpenHands/OpenHands` | both `9f05599` |
+| `NVIDIA/NeMo` | `NVIDIA-NeMo/NeMo` | both `50c71db` |
+| `iterative/dvc` | **`treeverse/dvc`** | both `56e5982` |
+| `adlnet/lrs-conformance-test-suite` | `TryxAPI/lrs-conformance-tests` | both `5bc232d` |
+| `stanfordnlp/edu-convokit` | `rosewang2008/edu-convokit` | both `d845ffd` |
+| `1EdTech/openbadges-validator-core` | `IMSGlobal/openbadges-validator-core` | both `0a66b52` |
+
+🔵 **The last row is why this is a channel and not a rule: five times the KB was behind the
+repository, once the registry was behind the KB.** `iterative/dvc` → `treeverse/dvc` is the one to
+notice — a **transfer between companies**, identical code, different governance, and the question
+a procurement questionnaire is actually asking.
+
+The remaining 15 split into **9 derivatives**, **5 generic-name collisions** (`frappe/lms` →
+`molobrakos/lms`, *a Squeezebox server interface*; two Google Classroom servers → `deadlyicon/class.js`,
+*"a super small ruby-ish class system"*, 2013) and **1 vendoring**
+(`Polygl0t/Polygl0t` → `mosaicml/llm-foundry` — the **University of Bonn**'s multilingual training
+stack, Apache-2.0, committed **1 d** ago, and an EMEA row no education query would ever return).
+
+🟢 **One rule kills both false-positive classes: honour `"private": true`.** A workspace root is
+never published, so its `name` is a local label. The control that forced it,
+`kaorii-ako/Shiori-v1`, declares `"name": "shiori"` privately; npm's `shiori` is *"a lightweight
+discord library made for NodeJS"* at `shiorijs/shiori` — **a slug that does not resolve over
+`git`.** Unguarded, the instrument publishes a fork hypothesis against a **deleted repository for
+an unrelated project**.
+
+### 🔴 Finding 4 — the prediction failed: zero new cold forks, and the surprise runs the other way
+
+> *"Expect **more than two** further cold forks in the 283-row shelf, concentrated in the
+> interoperability tier."*
+
+🔴 **Not confirmed.** Across 503 slugs and two independent lineage channels, **every cold fork
+found was already recorded in this KB**: `Harvard-University-iCommons/django-lti` (406 d),
+`ucfopen/pylti1.3` (1,364 d), `jdolny/OneRoster.NET` (1,090 d),
+`MIT-OL-AI-Tutoring/Open_Learning_AI_Tutor` (588 d). **Zero new ones.**
+
+🟢 **What the channels found instead is a cohort, and it is healthy.** The Canvas MCP family on
+this shelf is **nine repositories, eight of them live**, with **two roots** rather than one:
+`vishalsachdev/canvas-mcp` (2 d) and `DMontgomery40/mcp-canvas-lms` (129 d). The KB's standing
+advice *"pin `vishalsachdev/canvas-mcp`"* is right for six of the nine and silent about the rest.
+Full table in `agents/top.md`.
+
+🔵 **"Cold fork" was the wrong shape to predict. The lineage problem on this shelf is duplication
+and stale naming, not abandonment** — and the single genuine surprise is the inverse of the
+prediction: a **live fork of a dead upstream** (finding 1).
+
+### 🔴 Finding 5 — seven MIT files on this shelf name no copyright holder, and the instrument could not return that class
+
+| Slug | Copyright line |
+|---|---|
+| `AbdelStark/eu-ai-act-toolkit` | `Copyright (c) 2026` — a year, no name |
+| `AkizumiFox/NTU-COOL-Assignment-Status-Viewer` | `Copyright (c) 2025` |
+| `koukekoukej-glitch/feynman-tutor` | `Copyright (c) 2026` |
+| `r1ckyIn/canvas-ed-mcp` | `Copyright (c) 2025` |
+| `lebmatter/exampro` | 🔴 `Copyright (c) [year] [fullname]` — **the template placeholder, verbatim** |
+| `nguyentrieu210/edu` | 🔴 the same placeholder |
+| `adlnet/lrs-conformance-test-suite` | the copyright line is **absent** |
+
+Under **P179** these are grants with terms and **no grantor**. ⚠️ Weaker than a wrong licence, and
+real: a client redistribution review has to name the party making the grant, and the repository
+does not. 🔵 **`adlnet/lrs-conformance-test-suite` is the one that matters** — ADL's xAPI
+conformance suite is cited in bids as a standards artefact. 🔵 And
+`AbdelStark/eu-ai-act-toolkit` is **an EU AI Act compliance toolkit whose own licence identifies
+nobody**.
+
+🔴 **All seven were filed as `HOLDER-UNRELATED` with a line of MIT boilerplate in the holder
+column, because `p184`'s regex used `\s*` between the word *copyright* and the capture.** `\s`
+matches a newline: `Copyright (c) 2026` followed by a blank line reached across it and published
+*"Permission is hereby granted, free of charge, to any person obtaining a copy"* as the holder.
+Three more published *"HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER"*, because `\bholder\b`
+does not match the plural. **The `NO-HOLDER` class the instrument exists to return was unreachable
+for exactly the files that need it.** Fixed with four controls — three negatives and the positive
+that forbids answering `NO-HOLDER` always; `p184` is now **19/19**.
+
+### ⚠️ Finding 6 — `langfuse/langfuse` is MIT under someone else's name
+
+This KB calls it *"the single highest-leverage addition to every pattern"*. Its `LICENSE` opens:
+
+```
+Copyright (c) 2023-2026 ClickHouse, Inc.
+```
+
+🟢 The grant text is MIT-Expat and the `ee/` carve-out is already recorded here correctly.
+🔴 **The named grantor is a company that does not own the code** — the dual-licence wrapper was
+copied in, holder line and all. It is the `MaybeItsAdam/tutors` → `tldraw Inc.` shape that
+`p184` was built for in pass 66, second instance, on a component in six patterns.
+
+### 🔵 Finding 7 — nine repositories on this shelf were cited under two spellings each
+
+GitHub resolves `owner/repo` case-insensitively, so both links work and nothing is visibly wrong.
+A compiler keying on the string emits two entities. **503 reference strings on this shelf name
+494 distinct repositories; 9 of those 494 were written both ways — 18 references for 9
+repositories.** Canonical spelling resolved from the registry homepage where one exists
+(`learningequality/kolibri`), the repo's own self-link where one does not
+(`Sunbird-Ed/SunbirdEd-mobile-app`, `OpenEMIS/core`, `AI-EDU-LAB/E-EVAL`), and recorded as a
+**majority decision rather than evidence** for the two with neither. All normalised;
+`compose/code/p439-case-collision-gate/` (9 controls) added so they cannot return — including the
+control that the first build failed, where pointing one directory too high found **zero**
+references and printed *"0 findings"*.
+
+### 🔴 Pre-registered actions from pass 24 — outcomes
+
+| # | Action | Prediction written before running it | Outcome |
+|---|---|---|---|
+| **A** | wire `p184-holder-mismatch` to `fork-lineage-audit`; resolve each holder mismatch against the registry homepage | 🔴 *"more than two further cold forks, concentrated in the interoperability tier"* | 🔴 **Prediction failed: zero new cold forks.** 🔴 **And the action's premise failed too** — the holder channel sees 4 of 21 lineage rows. 🟢 What it did produce: a **503-slug denominator** (up from 200), the **SHA discriminator**, 6 renames, a 9-member Canvas cohort, and finding 1 |
+| **B** | extend the closure to **depth 2** and date it | 🔴 *"copyleft count rises via `certifi` (MPL-2.0), no new copyleft class"* | 🟢 **Conclusion confirmed, mechanism wrong.** No new class: 273 permissive, 2 weak-copyleft, 0 strong, 0 proprietary. 🔴 But `certifi` is a **depth-1** dependency and could not have been the route; `tqdm` and `mathquill` were. **The gap closes: depth 1 is sufficient for the licence-class question** |
+| **C** | date the **pinned** version, not the latest release | ⚠️ *"every age is a lower bound; OATutor's median rises above 604 d; no repo's falls"* | 🟢 **Confirmed on every clause.** OATutor **604 → 1,839 d**; no median fell; the bound holds in **326 of 327** rows. 🔴 The one exception is `webapp2`, where oppia pins a **pre-release newer than the latest stable** |
+
+### 🔵 Pre-registered for the next pass
+
+| # | Action | Prediction written **before** running it |
+|---|---|---|
+| **A** | Run `p436`'s four stages over the **87 `UNLICENSED`** rows — the slugs this shelf cites that ship **no licence file at all** — and resolve each against its registry's declared licence field | ⚠️ Expect the registry to supply a licence for **fewer than half**. The interesting class is the opposite one: a repository with **no** `LICENSE` whose published package declares MIT, which is a grant made in the registry and nowhere in the tree |
+| **B** | Date the **pinned** depth-2 tier, which this pass measured only at the latest release | 🔴 Expect the depth-2 pinned median to exceed the depth-1 pinned median of **220 d**; if it does not, the staleness gradient stops at depth 1 and the closure can stop there for recency as well as for licence |
+| **C** | Re-run `p439`'s canonical resolution as a **positive** sweep, not a collision gate: ask the registry or the self-link for the canonical spelling of all 494 repositories, not only the 9 that collided | ⚠️ Expect **more than 9** slugs to be spelled differently from their own publisher's spelling — a collision needs two spellings *in this KB*, and one wrong spelling used consistently is invisible to the gate |
+
+### The mandatory queries, run with the year **computed** (2026), not hardcoded
+
+| Query | Result against this KB |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **0 new** — openclaw, browser-use, Mem0, AutoGen, Flowise, dify, CrewAI, LangGraph again; none education-specific |
+| `github trending education AI 2026` | 🔴 **0 new** — `ai-engineering-from-scratch`, Awesome LLM, AI Terminology: curricula *about* AI, not education product repos |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **0 new** — OpenEduCat, Odoo, ERPNext/Frappe, and **CK-ERP** again, a 2010 SourceForge-era Drupal connector already rejected by pass 24 on currency grounds |
+| `AI education industry trends 2026` | 🔴 **0 new** — ETS *Three forces*, the $10.6 B 2026 figure, 92% student usage, 86% higher-ed, cloud 71.22%: all held |
+| `AI education {North America, EMEA, APAC, LATAM} 2026 adoption regulation players` | 🔴 **0 new.** Every named instrument — marketsandmarkets' NA series, Colorado/Texas, CompTIA EMEA, Workday, the Council of Europe conference, Boomi APAC, `itnews.asia`, LearnUpon Sydney, TCS–Pearson, Alteryx Academy, UNU LAC, IADB, Ednova, Kredi, MindHealth, the 99%/85% LATAM figures — **checked by string against this KB and already held** |
+
+🔴 **Fifteenth consecutive pass in which the mandatory query set produced no new repository, and
+the ninth with no new instrument.** Everything in this section came from a **package registry**,
+from `git ls-remote`, or from re-reading a row this KB had already written.
+
+### The method note for this pass
+
+🔵 **Two predictions failed and the pass was better for it.** Action A predicted cold forks and
+found none; its value was the denominator it forced — **503 slugs instead of 200, 441 of them
+never measured** — and the finding that fell out of the enlarged denominator had nothing to do
+with forks. Action B's conclusion held on a mechanism that was impossible. 🟢 **A pre-registration
+is worth running even when you expect it to be wrong, and recording only the conclusion would
+have left a false mechanism in the file.**
+
+⚠️ **The instruments were wrong before the data was.** Five defects this pass were found by the
+controls, not by the output: a `.*?\]` scan closing on `pyjwt[crypto]`'s extra bracket; a quote
+class splitting `python_version < '3.14'` into a package called `3.14`; a line-continuation
+backslash making two real PyPI versions unresolvable; a `\s*` reaching across a newline; and a
+gate counting zero references and calling it clean. 🔵 **Each is now a control. The pattern across
+all five is the same: the instrument answered, and the answer was the shape of a clean result.**
+
+🔴 **And the oldest finding here is the cheapest one.** `p170`'s denominator was published on
+2026-10-03 with a written reservation that it be re-run once the shelf grew. **It was not re-run
+for twenty-four passes, and 441 of the 503 currently-cited repositories had therefore never been
+measured at all.** Nothing in this pass needed a new idea to find that — only the willingness to
+rebuild the input list from the files as they stand today.
+
+### Sources named by the search summaries this pass relied on
+
+ETS *Three forces shaping AI* · marketsandmarkets (North America AI in Education) · azumo (80 AI
+in Education statistics 2026) · technavio · BCC Research (AI in Higher Education) · comptia
+(*Five tech trends shaping EMEA's IT strategy in 2026*) · Workday EMEA AI adoption study ·
+Council of Europe education/regulatory-dimensions working conference · boomi *APAC tech
+priorities AI 2026* · techrepublic *5 signals shaping APAC enterprise tech in 2026* ·
+itnews.asia *AI sovereignty* · onetrust (APAC AI governance gap) · UNU *AI implementation in
+higher education in Latin America and the Caribbean* · IADB *An enabling regulatory framework for
+AI in LAC* · ecosistemastartup · barchart (LATAM AI adoption 2026) · openeducat.org.
+**First-party verification this pass: `raw.githubusercontent.com`, `git`, `pypi.org`,
+`registry.npmjs.org`, `repo.packagist.org`, `repo1.maven.org` and `hex.pm` — not the summaries
+above.**
+
+---
+
+
 ## 2026-10-07 — twenty-fourth pass: the installed tier is older than the citing tier, and the fork this KB corrected to was itself a cold fork
 
 ⏱️ **Measurement window 2026-10-07 ~00:30 UTC → 03:00 UTC. Every age in days is computed against

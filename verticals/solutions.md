@@ -26,7 +26,7 @@ does not).
 | Sakai | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | **ECL-2.0** (`LICENSE`) | Higher-ed collaboration and learning environment. Educational Community License 2.0 is an Apache-2.0 derivative — **permissive**, and the only copyleft-free option among the traditional big LMSs. Underrated for this reason. |
 | ILIAS | [ILIAS-eLearning/ILIAS](https://github.com/ILIAS-eLearning/ILIAS) | GPL-3.0 (`LICENSE`) | Strong in German-speaking Europe, workplace training and SCORM-heavy compliance training. |
 | Frappe LMS | [frappe/lms](https://github.com/frappe/lms) | **AGPL-3.0** (`license.txt`) | Modern, fast to deploy via Docker. **Commonly mis-reported as MIT** by LMS comparison articles — it is AGPL-3.0. Verified at `license.txt`; `LICENSE` is a 404, which is how the error spreads. |
-| Kolibri | [LearningEquality/kolibri](https://github.com/LearningEquality/kolibri) | **MIT** (`LICENSE`) | Offline-first platform for teaching without internet. Default choice for low-connectivity, low-budget and equity-driven deployments. *(Earlier passes called this "the only fully permissive end-to-end platform on this shelf" — no longer true: see Mentingo below, MIT, and Oppia, Apache-2.0.)* |
+| Kolibri | [learningequality/kolibri](https://github.com/learningequality/kolibri) | **MIT** (`LICENSE`) | Offline-first platform for teaching without internet. Default choice for low-connectivity, low-budget and equity-driven deployments. *(Earlier passes called this "the only fully permissive end-to-end platform on this shelf" — no longer true: see Mentingo below, MIT, and Oppia, Apache-2.0.)* |
 | Oppia | [oppia/oppia](https://github.com/oppia/oppia) | **Apache-2.0** (`LICENSE`) | Authoring and delivery of interactive lessons with misconception handling built into the pedagogy. Permissive, and designed for learners with limited educational resources. |
 | Mentingo | [Selleo/mentingo](https://github.com/Selleo/mentingo) | **MIT** (`LICENSE`) | **Added third pass, 2026-10-06 — and it changes the shape of this shelf.** Self-hosted, multi-tenant, white-label LMS with a **built-in AI mentor**, built for corporate L&D, onboarding and compliance rather than academic use. 91★, 29 forks, TypeScript, maintained by Selleo (Poland). The second fully permissive end-to-end platform here and **the only AI-native one**. |
 | Coursemology | [Coursemology/coursemology2](https://github.com/Coursemology/coursemology2) | **MIT** (`master/LICENSE`, © 2023 Coursemology.org) | **Added fifth pass, 2026-10-06.** NUS-origin gamified LMS — Rails 8 API, React client, Keycloak auth, **15,802 commits**, 158★, 78 forks. "Currently supported by the AI Centre for Educational Technologies" and the host platform for Singapore's **Codaveri** AI programming tutor. The **third** fully permissive end-to-end platform here, the only one with a decade-scale commit history, and the strongest fit for **CS and programming teaching in higher education**. Read the concentration-risk note below before proposing it. |
@@ -694,7 +694,7 @@ The runtime split for LTI 1.3 and OneRoster, with licences read from payload:
    **v0.10.1 (61 d)**. **If the AI tier is Django, the two-runtime shape below is unnecessary** —
    launch in-process and skip the adapter. The adapter shape is still correct when the AI tier is
    **not** Django and not JupyterHub, because the only framework-neutral Python implementation
-   (`pylti1.3`) is **1,416 days cold**. ⚠️ **So budget the adapter only after checking the AI
+   (`pylti1.3`) is **1,416 days cold**. 🔵 **NARROWED, twenty-fifth pass of 2026-10-07 — "none" is now "one alpha".** [`CNIT-Organization/ltitoolkit`](https://github.com/CNIT-Organization/ltitoolkit) (MIT) **vendors `PyLTI1p3`, rebranded** — its README says so — and publishes it as [`ff-ltitoolkit`](https://pypi.org/project/ff-ltitoolkit/) **0.1.0, 2026-06-26 (103 d), one release ever**; head commit **63 d**; **0★**; `Development Status :: 3 - Alpha` with the FastAPI adapter and token minting **unbuilt**; and its `LICENSE` holder is **`Dmitry Viskov`, not its own authors**. **Not "no option", and not a safe dependency either.** Full row in `repos/foundations.md`. ⚠️ **So budget the adapter only after checking the AI
    tier's framework** — it is a conditional line item now, not a certainty.
 3. **OneRoster.NET does rostering only — the gradebook is not implemented.** If
    the rubric scores grade passback, this shelf does not cover it and the honest
@@ -758,7 +758,7 @@ payload, **on the branch the GitHub API reports as `default_branch`** — not a 
 | **i-educar** | [portabilis/i-educar](https://github.com/portabilis/i-educar) (**`2.12`**) | 🔴 **GPL-2.0** (*"Version 2, June 1991"*) | **718** / **547** | *"O maior software livre de educação do Brasil."* A full school-management/SIS platform — enrolment, attendance, grades — Laravel/PHP, tagged `software-publico`. **The only genuine LATAM-origin education platform in this KB**, and with 547 forks it is the most-forked platform on these shelves. GPL-2.0 is **no network clause**: hosting a modified i-educar for a Brazilian municipality triggers nothing; **distributing** a modified binary or source does. For public-sector LATAM work, where the client often *wants* the source, this is close to ideal. ⚠️ Default branch is the version number **`2.12`**; `main` serves nothing, which is why a `main`+`master` probe reports this platform as ungranted. |
 | **Obojobo** | [ucfopen/Obojobo](https://github.com/ucfopen/Obojobo) (`master`) | 🔴 **AGPL-3.0** | 72 / 35 | Next-generation course content delivered into an LMS over LTI. React + SlateJS. From the **University of Central Florida**. |
 | **Materia** | [ucfopen/Materia](https://github.com/ucfopen/Materia) (`master`) | 🔴 **AGPL-3.0** | 52 / 41 | Embeddable learning widgets and educational games for LMS courses, also LTI-delivered. Same organisation; note that UCF's own LTI **template** (`cookiecutter-python-lti`) is **MIT** while its *applications* are AGPL-3.0. **An organisation's licence posture is not uniform across its repositories** — probe each one. |
-| **OpenEMIS** | [openemis/core](https://github.com/openemis/core) (`main`) | 🔴 **GPL** — **version not read this pass** | — | Education management information system deployed at ministry tier. Recorded with the licence version explicitly open rather than guessed; resolve before it enters a proposal. |
+| **OpenEMIS** | [OpenEMIS/core](https://github.com/OpenEMIS/core) (`main`) | 🔴 **GPL** — **version not read this pass** | — | Education management information system deployed at ministry tier. Recorded with the licence version explicitly open rather than guessed; resolve before it enters a proposal. |
 
 ### What this table changes about platform selection
 
@@ -1498,8 +1498,8 @@ commit *history*, can now be answered with a date.
 
 | Repo | Head commit | Age |
 |---|---|---|
-| [`sunbird-ed/sunbirded-mobile-app`](https://github.com/sunbird-ed/sunbirded-mobile-app) | 2025-09-16 | ⚠️ 385 d |
-| [`sunbird-ed/sunbirded-consumption-ngcomponents`](https://github.com/sunbird-ed/sunbirded-consumption-ngcomponents) | 2023-09-07 | 🔴 1,125 d |
+| [`Sunbird-Ed/SunbirdEd-mobile-app`](https://github.com/Sunbird-Ed/SunbirdEd-mobile-app) | 2025-09-16 | ⚠️ 385 d |
+| [`Sunbird-Ed/SunbirdEd-consumption-ngcomponents`](https://github.com/Sunbird-Ed/SunbirdEd-consumption-ngcomponents) | 2023-09-07 | 🔴 1,125 d |
 | [`project-sunbird/sunbird-devops`](https://github.com/project-sunbird/sunbird-devops) | 2023-04-26 | 🔴 1,259 d |
 | [`project-sunbird/sunbird-telemetry-sdk`](https://github.com/project-sunbird/sunbird-telemetry-sdk) | 2021-07-22 | 🔴 1,902 d |
 | [`project-sunbird/sunbird-lms-mw`](https://github.com/project-sunbird/sunbird-lms-mw) | 2020-05-05 | 🔴 **2,345 d** |
@@ -1515,7 +1515,7 @@ a deck, confirm which namespace the client's distribution actually tracks.
 
 | Repo | Head commit | Age |
 |---|---|---|
-| [`kualico/rice`](https://github.com/kualico/rice) | 2020-07-01 | 🔴 2,288 d |
+| [`KualiCo/rice`](https://github.com/KualiCo/rice) | 2020-07-01 | 🔴 2,288 d |
 | [`kuali/kfs`](https://github.com/kuali/kfs) | 2018-03-22 | 🔴 3,120 d |
 | [`kuali/rice`](https://github.com/kuali/rice) | 2017-05-17 | 🔴 3,429 d |
 | [`kuali/kc`](https://github.com/kuali/kc) | 2017-01-06 | 🔴 3,560 d |
@@ -1579,7 +1579,7 @@ decision now has three branches, and only one of them still carries the adapter 
 |---|---|---|
 | **Django** | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) — MIT (1,098 B), head commit **2 d**, PyPI [`django-lti`](https://pypi.org/project/django-lti/) **v0.10.1 (61 d)** | 🟢 **No.** Launch in-process |
 | **JupyterHub** | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) — BSD-3-Clause (1,528 B), 98 d; LTI 1.3 **and** 1.1, tested against Open edX, Canvas and Moodle | 🟢 **No** |
-| **Anything else in Python** (FastAPI, Flask, bare ASGI) | 🔴 no live framework-neutral option — `dmitry-viskov/pylti1.3` is **1,416 d cold** | ⚠️ **Yes** — `ltijs` (Node, 1 d) or `packbackbooks` (PHP, 14 d) |
+| **Anything else in Python** (FastAPI, Flask, bare ASGI) | ⚠️ one alpha only — [`ff-ltitoolkit`](https://pypi.org/project/ff-ltitoolkit/) **0.1.0 (103 d)**, which **vendors** the 1,416-d-cold `dmitry-viskov/pylti1.3` and leaves its FastAPI adapter unbuilt | ⚠️ **Probably** — `ltijs` (Node, 1 d) or `packbackbooks` (PHP, 14 d) unless you are willing to own the vendored engine |
 
 🔵 **So the adapter is a conditional line item, not a certainty.** Ask which framework the AI tier
 uses **before** pricing it. On a Django engagement this removes a component, a second runtime and an
@@ -1592,3 +1592,56 @@ it is **AGPL-3.0** (payload 34,520 B). Inside an Open edX deployment it is the r
 inside a reusable-IP deliverable it is not. That distinction is the whole of **P30**, and it is the
 real reason this page read the Python shelf as empty for fourteen passes: the shelf was not empty,
 the **well-maintained** part of it was copyleft.
+
+---
+
+## Twenty-fifth pass, 2026-10-07 — a platform is not on one clock, and Sunbird is the proof
+
+Every platform on this page has been dated as a **single row**. Dating the components of one of
+them separately, over `git`, changes what a proposal has to say:
+
+| Sunbird component | Head commit | Age |
+|---|---|---|
+| [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal) | 2025-12-16 | 🟢 295 d |
+| [`Sunbird-Ed/SunbirdEd-mobile-app`](https://github.com/Sunbird-Ed/SunbirdEd-mobile-app) | 2025-09-19 | 🔴 **383 d** |
+| [`Sunbird-Ed/SunbirdEd-consumption-ngcomponents`](https://github.com/Sunbird-Ed/SunbirdEd-consumption-ngcomponents) | 2023-09-07 | 🔴 **1,126 d** |
+| [`project-sunbird/sunbird-lms-mw`](https://github.com/project-sunbird/sunbird-lms-mw) | 2020-05-05 | 🔴 **2,346 d** |
+| [`project-sunbird/sunbird-analytics`](https://github.com/project-sunbird/sunbird-analytics) | 2020-02-28 | 🔴 **2,413 d** |
+
+> 🔴 **The portal is current, the mobile app is a year behind, the shared Angular components are
+> three years behind, and the original microservice estate is six.** The platform entry on this
+> page says *"100+ micro-services are the operational cost"*. **This is that cost, dated.** Scope a
+> Sunbird engagement by component and put the `ngcomponents` uplift in the plan before anyone
+> demos the portal.
+
+🔵 **The method point generalises past Sunbird.** Any platform published as an estate of
+repositories — Open edX, Sunbird, Frappe, Apereo — has a *distribution* of component ages, not an
+age. **A single date on a platform row is the age of whichever repository someone happened to
+measure.** Where this page shows one date for a multi-repository platform, read it as a sample.
+
+**Dated this pass, every platform on this page, against the reference date `2026-10-07`:**
+
+| Platform | Head commit | Age |
+|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) · [`Coursemology/coursemology2`](https://github.com/Coursemology/coursemology2) | 2026-10-07 | 🟢 **0 d** |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) · [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) · [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) · [`oppia/oppia`](https://github.com/oppia/oppia) · [`learningequality/kolibri`](https://github.com/learningequality/kolibri) · [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 2026-10-06 | 🟢 **1 d** |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 2026-10-03 | 🟢 4 d |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 2026-10-02 | 🟢 5 d |
+| 🔴 [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | **2026-04-30** | 🔴 **160 d** |
+
+🔴 **One row does not look like the others, and it is the one most likely to be in the room.**
+Every open source LMS on this page committed within five days — **except Canvas**, at **160 days**,
+and this page describes Canvas as *"dominant in North American higher ed"*. ⚠️ **Do not read that
+as an abandoned product.** Instructure develops Canvas commercially and publishes to the open
+repository in batches, so a long gap on the public mirror is a **release-cadence** fact, not a
+maintenance one — which is precisely why this page's existing advice holds: *"the best AI entry
+point is its API via MCP, not a fork."* 🔵 **A fork of a batch-published mirror inherits the batch
+cadence**, and that is the sentence to put in a bid, with the date attached. Full table:
+`compose/code/p436-fork-hypothesis/recency.2026-10-07.tsv`.
+
+⚠️ **And one citation defect fixed on this page.** `sunbird-ed/sunbirded-mobile-app` and
+`Sunbird-Ed/SunbirdEd-mobile-app` are the **same repository** — GitHub resolves owner and repo
+names case-insensitively — and this page cited both spellings. Nine such pairs existed across the
+six non-append-only files, **18 references for 9 repositories**, each of which a compiler keying on
+the reference string would have emitted twice. All normalised, with
+`compose/code/p439-case-collision-gate/` (9 controls) added so they cannot come back.

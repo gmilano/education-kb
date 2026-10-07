@@ -160,11 +160,11 @@ CEPAL covers much of LATAM, where >50% of Chilean and Brazilian teachers already
 use AI but <10% of institutions have the capacity to support it.
 
 **Wiring — a fully MIT stack, no copyleft anywhere:**
-1. [LearningEquality/kolibri](https://github.com/LearningEquality/kolibri) (MIT)
+1. [learningequality/kolibri](https://github.com/learningequality/kolibri) (MIT)
    as the platform; runs offline on a classroom server or a single laptop.
-2. [LearningEquality/studio](https://github.com/LearningEquality/studio) (MIT)
+2. [learningequality/studio](https://github.com/learningequality/studio) (MIT)
    for curriculum authoring and channel curation.
-3. [LearningEquality/ricecooker](https://github.com/LearningEquality/ricecooker)
+3. [learningequality/ricecooker](https://github.com/learningequality/ricecooker)
    (MIT) to package existing client or ministry content into Kolibri channels.
 4. ollama (MIT) with a small quantised model on the local server for offline
    tutoring and question answering — no egress, no per-token cost.
@@ -300,8 +300,8 @@ skills, usable inside the LMS and outside it.
    Canvas; [peancor/moodle-mcp-server](https://github.com/peancor/moodle-mcp-server)
    (MIT) for Moodle.
 5. Deliver offline too: package the same distilled material into Kolibri channels
-   with [LearningEquality/ricecooker](https://github.com/LearningEquality/ricecooker)
-   (MIT) → [LearningEquality/kolibri](https://github.com/LearningEquality/kolibri)
+   with [learningequality/ricecooker](https://github.com/learningequality/ricecooker)
+   (MIT) → [learningequality/kolibri](https://github.com/learningequality/kolibri)
    (MIT). One distillation, two delivery modes — this is what makes the pattern pay
    in LATAM and low-connectivity contexts.
 6. Local authoring assist: [SirhanMacx/Claw-ED](https://github.com/SirhanMacx/Claw-ED)
@@ -945,8 +945,8 @@ permissive way to make the tutor speak or listen. It does now.
 
 | Layer | Component | Licence (payload) |
 |---|---|---|
-| Platform | [LearningEquality/kolibri](https://github.com/LearningEquality/kolibri) | **MIT** (`LICENSE`) |
-| Content pipeline | [LearningEquality/ricecooker](https://github.com/LearningEquality/ricecooker) | **MIT** |
+| Platform | [learningequality/kolibri](https://github.com/learningequality/kolibri) | **MIT** (`LICENSE`) |
+| Content pipeline | [learningequality/ricecooker](https://github.com/learningequality/ricecooker) | **MIT** |
 | **Voice, all of it** | [k2-fsa/sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) | **Apache-2.0** (`master/LICENSE`) |
 | Higher-quality TTS | [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) | **MPL-2.0** (`main/LICENSE.txt`) — the **live fork**, not `coqui-ai/TTS` |
 | Local inference | [ollama/ollama](https://github.com/ollama/ollama) | **MIT** |
@@ -1499,7 +1499,7 @@ is **MIT**, head commit **2 d**, PyPI `django-lti` **v0.10.1 (61 d)**. 🟢 **If
 Django, launch LTI in-process and budget no adapter at all** — that line item disappears from the
 bid. ⚠️ The two-process architecture is still right when the AI tier is neither Django nor
 JupyterHub, because the only framework-neutral Python implementation is 1,416 days cold; price the
-adapter **only after** checking the framework. Equally: if the
+adapter **only after** checking the framework. 🔵 **NARROWED, twenty-fifth pass of 2026-10-07 — "none" is now "one alpha".** [`CNIT-Organization/ltitoolkit`](https://github.com/CNIT-Organization/ltitoolkit) (MIT) **vendors `PyLTI1p3`, rebranded** — its README says so — and publishes it as [`ff-ltitoolkit`](https://pypi.org/project/ff-ltitoolkit/) **0.1.0, 2026-06-26 (103 d), one release ever**; head commit **63 d**; **0★**; `Development Status :: 3 - Alpha` with the FastAPI adapter and token minting **unbuilt**; and its `LICENSE` holder is **`Dmitry Viskov`, not its own authors**. **Not "no option", and not a safe dependency either.** Full row in `repos/foundations.md`. Equally: if the
 rubric scores **grade passback**, OneRoster.NET does not implement the gradebook,
 and if it scores **learning-analytics event streams**, there is **no permissive
 Caliper Analytics implementation at all** — both are builds against the spec. Say
@@ -3326,7 +3326,7 @@ statement** — and this stack makes it true by construction rather than by cont
 | **LMS of record** | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) *(confirmed this pass at [olatorg/OpenOLAT](https://gitlab.com/olatorg/OpenOLAT))* | 🟢 **Apache-2.0**, payload read on **two forges** | the only complete LMS in this KB with no copyleft conversation; QTI, SCORM, curriculum, assessment |
 | **Standards edge** | [`kbarbounakis/eduapi`](https://gitlab.com/kbarbounakis/eduapi) *(optional)* · [`eduplex-api/cake-api-xapi-proxy`](https://gitlab.com/eduplex-api/cake-api-xapi-proxy) | ⚠️ **LGPL-3.0** · 🟢 **MIT** | 1EdTech **EduAPI** for SIS-side interop (link, do not fold) · **xAPI → LRS** pipe when the LMS cannot emit statements |
 | **Inference** | Ollama or vLLM, on the institution's own hardware | 🟢 MIT · Apache-2.0 *(this KB's foundation shelf)* | the only layer that would otherwise call out. **No hosted model endpoint anywhere in this pattern** |
-| **Offline tier** | [`LearningEquality/kolibri`](https://github.com/LearningEquality/kolibri) *(optional)* | 🟢 **MIT** — ⚠️ `REVIEW-WEAK`, two LGPL deps (pass 21) | where connectivity is the constraint rather than residency |
+| **Offline tier** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) *(optional)* | 🟢 **MIT** — ⚠️ `REVIEW-WEAK`, two LGPL deps (pass 21) | where connectivity is the constraint rather than residency |
 
 ### Wiring
 
@@ -3679,7 +3679,7 @@ are **different facts** (trend 57). Across 293 depth-1 dependencies: **30.1% col
 | Adoption target | Head commit | Median dependency age | Cold > 1 yr | Sprint-one reality |
 |---|---|---|---|---|
 | `CAHLR/OATutor` | 🟢 7 d | 🔴 **604 d** | 21/35 | Material-UI **v4** (superseded 2021); `random-seed` 3,967 d |
-| `LearningEquality/kolibri` | 🟢 1 d | ⚠️ 200 d | 14/32 | Python-2-era shims: `zeroconf-py2compat` 1,156 d |
+| `learningequality/kolibri` | 🟢 1 d | ⚠️ 200 d | 14/32 | Python-2-era shims: `zeroconf-py2compat` 1,156 d |
 | `oppia/oppia` | 🟢 1 d | 🟢 60 d | 40/152 | bimodal; App Engine tail (`crcmod` 5,923 d) **and** a proprietary Azure Speech SDK |
 | `towardsai/ai-tutor-app` | — | 🟢 **9 d** | **0/20** | 🟢 nothing to uplift |
 
@@ -3704,3 +3704,94 @@ first sprint is a dependency uplift. Saying so wins trust; discovering it in spr
 account.
 🟢 **A cold dependency is not a defect by itself.** `defusedxml` at 2,039 days is a finished security
 library. **The deliverable is the partition, not the age**, and the partition requires reading.
+
+---
+
+## P-UPLIFT addendum, twenty-fifth pass — price the uplift from the **pin**, and the number is four times bigger
+
+**P-UPLIFT** was written against the *latest-release* ages of a component's dependencies, which is
+the number `registry-recency-channel` produces. This pass resolved the **version specifiers**
+(`compose/code/p437-pinned-version/`, 47 controls) and the number a client is actually quoted
+changes:
+
+| Across 327 dependency rows of the twelve target repositories | Latest release | **Pinned** |
+|---|---|---|
+| median age | 57 d | 🔴 **220 d** |
+| cold > 1 yr | 27.2% | 🔴 **42.5%** |
+
+🔵 **Why it is this large, and the condition for transferring it: 52% of these rows are pinned
+exactly** (`==1.2.3`) and another 30% are capped (`^`, `~`, `<`). Only the remaining 18% resolve
+to the latest release. **Check the specifier mix before quoting the ratio**; a `>=`-heavy manifest
+shows no gap at all, and `pinned.py` prints the mix.
+
+🔴 **Two rows to re-scope in any live proposal.** `CAHLR/OATutor`: median **604 d → 1,839 d**,
+29 of 35 dependencies cold by more than a year. `ronantakizawa/a11ymcp`, which the previous pass
+filed as the **cleanest** row in the corpus (0 of 5 cold): it pins `puppeteer` and `puppeteer-core`
+at **13.5.0, 2022-03-05 — 1,675 days and twelve major versions behind**. Its median moves from
+**14 d to 686 d**. ⚠️ **A clean latest-release row is not a clean build.**
+
+**Added to the pattern's step 1:** run `pinned.py` over the candidate's manifests and deliver the
+specifier-class histogram with the age table. The histogram is what tells the client whether the
+gap is a maintenance choice (exact pins, a deliberate freeze) or neglect (caps nobody has raised).
+
+---
+
+## P-REGISTRY-ID — resolve a component's identity through its registry before you put it in a bid
+
+**Use when:** you are about to name an open source component in a proposal, an SBOM, an
+architecture page or a vendor questionnaire — which is every engagement.
+**Outcome:** the name you write is the one its publisher uses, it is not a fork of something
+better maintained, and its governance is current.
+**Effort:** minutes per component. Every step is one HTTP or `git` call.
+
+**Why it exists.** Measured over the 503 repositories this KB cites, **21 name a repository other
+than the one cited**, and of the **494 distinct repositories** those 503 references name, **9
+were cited under two different spellings**.
+None of that is visible in a browser: GitHub redirects renames and resolves owner names
+case-insensitively, so every wrong citation still works. It stops working when a compiler, an SBOM
+tool or a procurement reviewer keys on the string.
+
+**Wiring — four calls, in this order, and the order matters:**
+
+1. **Read the manifest for the package NAME.** `pyproject.toml` / `setup.cfg` / `setup.py` /
+   `package.json` / `composer.json` / `mix.exs` / `pom.xml`.
+   🔴 **Never assume the package is named after the repository.**
+   `repo.packagist.org/p2/packbackbooks/lti-1-3-php-library.json` → **404**; the package is
+   `packbackbooks/lti-1p3-tool`, **68 releases**. A census keyed on slugs records a maintained
+   library as unpublished.
+   ⚠️ **`"private": true` ends the resolution here** — a workspace root is never published and its
+   `name` is a local label. Skipping this check produced a fork hypothesis against a *deleted*
+   repository for an *unrelated* project.
+2. **Ask the registry which repository it declares.** `project_urls` / `repository.url` /
+   `source.url`. Reachable from this environment: **PyPI · npm · Packagist · Maven Central ·
+   Hex · RubyGems · Go proxy**. Not reachable: `api.github.com`, the rendered `github.com` page,
+   `crates.io`.
+3. **If the declared slug differs, compare heads.**
+   `git ls-remote https://github.com/<a> HEAD` against `<b>`.
+   🟢 **Same SHA ⇒ one repository under two names** — a rename or a transfer. Update the name;
+   there is no lineage question. 🔴 **Different SHAs ⇒ two repositories**, and only now is
+   "which is upstream" worth asking.
+4. **Date both channels.** Head commit via `git fetch --depth 1 --filter=blob:none`; latest
+   release from the registry. 🟢 **Agreement on the same day is the signature of a maintained
+   library** — three of the five rows on this KB's LTI shelf do that. 🔴 **Both cold and equal is
+   the signature of abandonment**: `pylti1.3` is 1,416 d on one and 1,417 d on the other.
+
+**What it catches, with the counts from 2026-10-07:**
+
+| | n | Example |
+|---|---|---|
+| component cited at a former name | 6 | `iterative/dvc` → **`treeverse/dvc`**, a transfer between companies |
+| component is a derivative of a better-maintained upstream | 9 | `ucfopen/pylti1.3` → `dmitry-viskov/pylti1.3` |
+| the registry name collides with an unrelated project | 5 | `frappe/lms` → `molobrakos/lms`, *a Squeezebox interface* |
+| component vendors another project wholesale | 2 | `CNIT-Organization/ltitoolkit` vendors `PyLTI1p3`; `Polygl0t/Polygl0t` vendors `llm-foundry` |
+| one repository cited under two spellings | 9 | `LearningEquality/kolibri` and `learningequality/kolibri` |
+
+⚠️ **Steps 2 and 3 are a reading list, not a verdict.** The registry can be stale in the other
+direction: PyPI's `openbadges` still declares `IMSGlobal/openbadges-validator-core`, the name
+1EdTech left behind in 2022, while this KB has the current one. **The head SHA settles which of
+the two is out of date; nothing else does.**
+
+🔵 **Sell it as the first hour of a due-diligence engagement, not as a separate line.** It costs
+minutes, it is fully evidenced, and the output — *"these four components have moved owner, this
+one is a fork, this one vendors a library its licence does not mention"* — is exactly the content
+of the governance section a client's procurement team has to fill in and usually cannot.

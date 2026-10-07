@@ -495,7 +495,7 @@ gradebook**). **No Caliper Analytics implementation on a permissive licence.**
 this sentence was false.** [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) is **MIT**,
 head commit **2 d**, PyPI `django-lti` **v0.10.1 (61 d)**. **Caliper remains the contribution
 opening with a procurement-scored buyer attached; Python LTI 1.3 no longer is**, except in its
-narrow framework-agnostic form.
+narrow framework-agnostic form. 🔵 **NARROWED, twenty-fifth pass of 2026-10-07 — "none" is now "one alpha".** [`CNIT-Organization/ltitoolkit`](https://github.com/CNIT-Organization/ltitoolkit) (MIT) **vendors `PyLTI1p3`, rebranded** — its README says so — and publishes it as [`ff-ltitoolkit`](https://pypi.org/project/ff-ltitoolkit/) **0.1.0, 2026-06-26 (103 d), one release ever**; head commit **63 d**; **0★**; `Development Status :: 3 - Alpha` with the FastAPI adapter and token minting **unbuilt**; and its `LICENSE` holder is **`Dmitry Viskov`, not its own authors**. **Not "no option", and not a safe dependency either.** Full row in `repos/foundations.md`.
 
 
 #### Eleventh pass, 2026-10-06 — the benchmarks are American, the licences are not open
@@ -4661,3 +4661,152 @@ self-hosted forges** remains **unrunnable and therefore open**: 15 hosts returne
 requests and so did a bogus control, so the probe does not discriminate and **no conclusion about
 LATAM self-hosted supply may be drawn**. Stated again because an unmeasurable channel left
 unmentioned looks like a measured absence.
+
+---
+
+## Opportunities by region — twenty-fifth-pass additions
+
+This pass measured **every repository this KB currently cites — 503 slugs, 501 dated** — rather
+than a sample, so for the first time each region's shelf can be stated as a count instead of as a
+list of examples. The mandatory regional query set returned **no new finding in any of the four
+regions**; everything below comes from the shelf measurement, and the query result is recorded as
+a gap at the end.
+
+### North America
+
+🔴 **The region's shelf is the one carrying the pinned-dependency debt, and three of the four
+worst rows are US university or US federal projects.** Measured at the **pin** rather than at the
+latest release (`compose/code/p437-pinned-version/`):
+
+| Component | Origin | Head commit | Median **pinned** dependency age | What the first sprint is |
+|---|---|---|---|---|
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | UC Berkeley | 🟢 7 d | 🔴 **1,839 d** (604 d at latest) | React 16 → 19, MUI v4 → v5+, `react-router` 5 → 7 |
+| [`ronantakizawa/a11ymcp`](https://github.com/ronantakizawa/a11ymcp) | US | 🟢 211 d | 🔴 **686 d** (14 d at latest) | `puppeteer` 13.5.0 → 25.x, **twelve major versions** |
+| [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) | US DoD / ADL | 🔴 **398 d** | — | ⚠️ and its MIT file has **no copyright line at all** |
+
+> 🟢 **The commercial line this produces.** A North American engagement that adopts an open
+> university component is adopting its *pinned* dependency set. **Quote the uplift as sprint zero,
+> with the number**: at the median of this corpus the pinned tier is **3.9× older** than the
+> latest-release figure a due-diligence deck would show, and on `a11ymcp` it is **49×**. A bidder
+> who prices from the latest-release number is underbidding the first month.
+
+⚠️ **A second, quieter North American item: SBOM and governance questions now have wrong answers
+in circulation.** Three widely cited US-origin components have **moved owner** and the old path
+still resolves — [`All-Hands-AI/OpenHands`](https://github.com/All-Hands-AI/OpenHands) →
+`OpenHands/OpenHands`, [`NVIDIA/NeMo`](https://github.com/NVIDIA/NeMo) → `NVIDIA-NeMo/NeMo`, and
+[`iterative/dvc`](https://github.com/iterative/dvc) → **`treeverse/dvc`**, which is a transfer
+*between companies*. An SBOM naming the old slug is not wrong about the code and is wrong about
+who governs it, which is what a US federal or state procurement questionnaire is asking.
+
+🟢 **Live and usable, North America:** `academic-innovation/django-lti` (Michigan, MIT, 2 d),
+`mitodl/open-learning-ai-tutor` (MIT Open Learning, 5 d), `LibreTexts/conductor` and
+`LibreTexts/LibreOne` (1 d, 13 d), `pie-framework/pie-qti` (9 d),
+`agencyenterprise/qti-3-player` (237 d), `Simon-Initiative/lti_1p3` (Carnegie Mellon, Elixir,
+208 d — and now dated on **Hex** as well as on `git`).
+
+### EMEA
+
+🟢 **EMEA's public-sector shelf is the freshest of the four regions**, and this pass dated it
+end to end: `ILIAS-eLearning/ILIAS` (Germany) **1 d**, `openfun/joanie` (France Université
+Numérique) **1 d**, `openfun/richie` **7 d**, `Opetushallitus/valtionavustus` (Finnish National
+Agency for Education) **1 d**, `DFE-Digital/get-information-about-schools` (UK) **1 d**,
+`oxctl/spring-security-lti13` (Oxford) **1 d**, `Selleo/mentingo` (Poland) **5 d**,
+`3121n/nor-data-udir-mcp` (Norway) 122 d, `isakskogstad/Skolverket-MCP` (Sweden) 168 d.
+
+🆕 **A new EMEA row, and it is a training stack rather than a wrapper.**
+[`Polygl0t/Polygl0t`](https://github.com/Polygl0t/Polygl0t) — **Apache-2.0, head commit 1 d** — is
+the **University of Bonn**'s derivation of MosaicML's `llm-foundry`, built for the **Polyglot**
+multilingual-model project and targeted at the Marvin, Bender and JSC Jupiter HPC clusters. It was
+invisible to every education query this KB has ever run and surfaced only because its *manifest*
+still declares `llm-foundry`. 🔵 **For an EMEA client that wants a sovereign multilingual model
+rather than a sovereign inference endpoint, this is a European public-research starting point
+with a permissive grant** — the supply-side counterpart to the data-residency patterns this KB
+already carries.
+
+⚠️ **The EMEA-specific risk this pass can name precisely.** The EU AI Act puts educational
+assessment in the high-risk tier, and a high-risk deployment has to document provenance of its
+components. **Seven MIT files on this shelf name no copyright holder** — four carry a bare year,
+two ship `Copyright (c) [year] [fullname]` verbatim, one has no copyright line — including
+`AbdelStark/eu-ai-act-toolkit`, which is **an EU AI Act compliance toolkit whose own licence
+identifies no grantor**. The grant text is valid; the grantor is unnamed, and that is a question
+an EMEA conformity file has to answer.
+
+🔴 **Cold, and still cited:** `UOC/java-lti-1.3-provider-example` (Spain) **1,419 d**,
+`Kennisnet/py-eduterm-client` (Netherlands) 2,328 d, `Utdanningsdirektoratet/VFKL` (Norway)
+1,202 d — whose licence holder is **`Altinn`**, the Norwegian national digital platform, a
+public-sector template lineage rather than the directorate's own grant —
+and `Utdanningsdirektoratet/xmldataimport` 2,884 d.
+
+### APAC
+
+🟢 **India's national-scale shelf is live at the top and cold underneath, and the gap is measurable
+now.** `Sunbird-Ed/SunbirdEd-portal` is **295 d**; `Sunbird-Ed/SunbirdEd-mobile-app` is
+🔴 **383 d**; `Sunbird-Ed/SunbirdEd-consumption-ngcomponents` is 🔴 **1,126 d**; and the older
+`project-sunbird/*` services are 🔴 **2,346–2,413 d**. `AI4Bharat/Shoonya` is 🟢 106 d and
+`AI4Bharat/IndicTrans2` 🔴 369 d.
+
+> ⚠️ **What to tell an APAC client proposing Sunbird.** The platform is real, MIT, and proven at
+> nine-figure learner scale — and **its component tiers are on different clocks.** The portal is
+> current, the mobile app is a year behind, the shared Angular components are three years behind,
+> and the original microservice estate is six. **Scope by component, not by platform**, and put
+> the ngcomponents uplift in the plan before anyone demos the portal.
+
+🟢 `Coursemology/coursemology2` (Singapore / NUS) committed **today**, and remains the strongest
+fit for CS teaching in APAC higher education. ⚠️ `malaysia-ai/malaya` is 195 d and
+`malaysia-ai/malaya-speech` 🔴 377 d — the Malay-language speech asset is the colder half of that
+pair, which matters because speech is the half an AI tutor needs.
+
+⚠️ **A lineage note for APAC due diligence.** `AI4Bharat/Shoonya`'s licence holder is
+**`ULCA (Project Sunbird)`** and `project-sunbird/sunbird-analytics`'s is **`EkStep`** — both
+correct histories of India's public-digital-goods lineage, and both a holder that does not match
+the publishing account. In this region that pattern is **provenance, not a defect**, and a
+reviewer applying the fork heuristic mechanically will flag the wrong things.
+
+🔴 `AI-EDU-LAB/E-EVAL` (China) **961 d** and `AkizumiFox/NTU-COOL-Assignment-Status-Viewer`
+(Taiwan) **618 d** — and the latter is one of the seven MIT files with no named grantor.
+
+### LATAM
+
+🟢 **The Brazilian MCP layer is the newest thing on this shelf in any region.**
+`aquario-ufpb/aquario` (Federal University of Paraíba) **5 d**, `vnschneider/suap-mcp` **6 d**,
+`vitorr2101/Projeto-Agente-IA-Educacional` **15 d**, `Mcp-Brasil/mcp-brasil` **50 d**, and
+`pipeworx-io/mcp-datos-cl` (Chile) **12 d**. 🔵 **Four of the five are under a month old.** LATAM
+is not behind on the agent layer; it is behind on everything underneath it.
+
+🔴 **Which is the finding, stated as the gap it is.** The Brazilian **data and SIS** layer that
+those agents have to sit on is the oldest regional tier this KB measures:
+`inepdadosabertos/api` **4,525 d** (2014) — the national education statistics API —
+`IFRN/suapi` **3,002 d**, `Projeto-SIAC/suap-wrapper` **2,766 d**,
+`lucasmation/microdadosBrasil` **2,500 d**, `yunger7/enem-api` 297 d.
+
+> 🟢 **The engagement shape this implies, and it is specific to LATAM.** In North America and EMEA
+> the integration layer is alive and the work is AI on top of it. **In Brazil the MCP layer is
+> alive and the integration layer is a decade old**, so a SUAP or INEP engagement is an
+> *integration-rebuild* engagement with an AI surface, not an AI engagement with an integration
+> line item. Price the wrapper, not just the agent — and note that the live MCP servers above are
+> individual or single-university projects with no institutional maintenance commitment behind
+> them.
+
+⚠️ **One duplication to resolve before citing:** `Mcp-Brasil/mcp-brasil` and `dasgltd/mcp-brasil`
+serve the same content at the same date (2026-08-18) under two accounts; pin one and say which.
+
+### ⚠️ What this pass could not measure, recorded so it is not mistaken for coverage
+
+- 🔴 **The mandatory regional query set returned zero new findings for the fifteenth consecutive
+  pass.** Every instrument the summaries named this pass —
+  marketsandmarkets' North America series ($951 M 2024 → $2,303.2 M 2029, 15.9% CAGR, 41.7% of
+  global growth to 2030, 36% share), the Colorado and Texas state requirements, CompTIA's EMEA
+  2026 trends, the Workday EMEA adoption study, the Council of Europe regulatory-dimensions
+  conference, Boomi's APAC priorities, `itnews.asia` on AI sovereignty, LearnUpon's Sydney HQ,
+  the TCS–Pearson alliance, the Alteryx Academy relaunch, the UNU LAC higher-education survey,
+  the IADB regulatory-framework paper, Ednova, Kredi, MindHealth LATAM and the 99% / 85% LATAM
+  startup figures — **is already held in this file or in `agents/trending.md`.** Checked by
+  string, not by recollection.
+- 🔴 **`unu.edu`, `publications.iadb.org` and `coe.int` still return `000`** at this environment's
+  egress proxy, so those three policy documents are named here and **cited nowhere in this KB**.
+- ⚠️ **Pass 22's LATAM self-hosted-forge sweep remains unrunnable**: 15 hosts returned `000` on
+  all 45 requests and so did a bogus control, so the probe does not discriminate and **no
+  conclusion about LATAM self-hosted supply may be drawn**.
+- ⚠️ **Region placement here is by the publishing institution's country, read from the repository
+  or its licence holder — not by where the software is deployed.** `Polygl0t` is placed EMEA
+  because Bonn publishes it; its models are multilingual by design.
