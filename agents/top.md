@@ -17,6 +17,55 @@ this environment (403, session-scoped), so star counts come from the rendered
 page; where a count was not read this pass, the cell says so rather than
 carrying a stale or inferred number.
 
+## 🔴 Licence corrections — twenty-eighth pass, 2026-10-07
+
+**21 of the 412 licensed rows on this shelf carried the wrong licence family**, and the cause was
+three defects in the classifier rather than three bad readings. Read this before using any licence
+cell below as a commercial answer.
+
+| Correction | n | Direction |
+|---|---|---|
+| `UNKNOWN` → **EUPL** | 9 | the EMEA public-sector tier became machine-readable for the first time |
+| `LGPL` → **GPL** (`P452`) | 7 | 🔴 **a commercial answer inverts** — the LGPL permits linking from proprietary code, GPL-2.0 does not |
+| `GPL` → **MPL-2.0** | 5 | 🟢 less restrictive than filed; pass 26 published this correction in prose and never in the data |
+
+🔴 **`P452` — the GNU family must be read from the payload's TITLE, not from a window.** The three
+GNU licences name each other inside their own texts. Probing LGPL before GPL over `text[:4000]`
+therefore returned **LGPL for every GPL-2.0 payload** (its Preamble recommends the LGPL at
+character 784) and the correct answer for every GPL-3.0 payload (whose closing notes do so at
+34,143). Nothing but the constant separated them. The seven affected rows are `OpenEMIS/core`,
+`openemis/core`, `portabilis/i-educar`, `oat-sa/qti-sdk`, `oat-sa/lib-lti1p3-core`,
+`inepdadosabertos/api` and `yunger7/enem-api`; the four rows that are genuinely LGPL did not move.
+
+🔴 **`P449` — the `CC-BY` label here covers three different commercial answers**, and 5 of the 7
+rows carrying it are commercially unusable or mislabelled:
+
+| Row | Published | Actually | Commercial |
+|---|---|---|---|
+| `EbookFoundation/free-programming-books` · `microsoft/autogen` | CC-BY | Attribution 4.0 | 🟢 permitted |
+| `Yunfeng-Wan/CSTutorBench` · `facebookresearch/seamless_communication` | CC-BY | Attribution-**NonCommercial** 4.0 | 🔴 prohibited |
+| `Jona-Zwetsloot/Somtoday-Mod` · `openstax/osbooks-biology-bundle` | CC-BY | Attribution-**NonCommercial-ShareAlike** 4.0 | 🔴 prohibited |
+| `sign/translate` | CC-BY | 🔴 **a paid dual-tier licence, not Creative Commons** | 🔴 **paid** |
+
+🔴 **`sign/translate` is the row to remember**, and this file already described it correctly as
+"Non-OSI, dual-tier" while the data layer said `CC-BY`. Its `LICENSE.md` (17,404 B, © 2022 Nagish
+Inc.) grants a free tier under CC BY-NC-SA 4.0 to *"individuals, non-profit organizations, and
+educational institutions"* and requires *"a separate license … for for-profit commercial
+organizations."* **Globant is the latter.**
+
+🔵 **`microsoft/autogen` is the clean example of the opposite trap.** Its root grant is **CC-BY** —
+the *documentation* licence — and its code is **MIT**, in `LICENSE-CODE`. A rooted licence probe
+reports CC-BY for an MIT codebase. Full-tree enumeration of all 412 rows found this pattern in four
+repositories and found **zero** cases of the reverse (a permissive root hiding a reciprocal grant
+below it), so on this shelf the rule is: **check `LICENSE-CODE` or `docs/LICENSE` before writing off
+a CC- or AGPL-rooted repository.**
+
+🟢 **Where the licence facts came from: this file.** Every one of the corrections above was already
+stated correctly in this KB's prose; what was wrong was the machine-readable layer. Measured over
+six published files, prose and data disagree on **15 of 431** repositories and **the prose is right
+in 14 of 15** (`p449`). The fifteenth is a correct archived finding that a defective classifier
+overwrote — see `repos/trending.md` for the full account.
+
 ## Agents and tools
 
 **47 rows, all verified.** The 12 recorded in the morning pass of 2026-10-06, 2

@@ -78,6 +78,36 @@ def family_of(text):
         return "MPL-2.0"
     if "eclipse public license" in t:
         return "EPL"
+    # `P452` (pass 28): THE GNU FAMILY MUST BE READ FROM THE TITLE, NOT THE WINDOW.
+    #
+    # The three GNU licences name each other inside their own texts, so "somewhere in
+    # the first 4000 characters" picks whichever cross-reference the window happens to
+    # reach.  Measured, on real payloads from this shelf, with offsets of the flattened
+    # text:
+    #
+    #     GPL-2.0  `oat-sa/qti-sdk`    "...lesser general public license"  @  784
+    #     GPL-3.0  `GibbonEdu/core`    "...lesser general public license"  @ 34143
+    #
+    # GPL-2.0's Preamble recommends the LGPL and GPL-3.0 defers it to the closing
+    # notes.  So probing LGPL before GPL over a 4000-character window returns **LGPL
+    # for every GPL-2.0 payload** and the correct answer for GPL-3.0, and the only
+    # thing deciding that is where the window falls.  Seven of the eleven rows this KB
+    # published as LGPL are GNU GENERAL PUBLIC LICENSE Version 2 -- `OpenEMIS/core`,
+    # `openemis/core`, `inepdadosabertos/api`, `oat-sa/lib-lti1p3-core`,
+    # `oat-sa/qti-sdk`, `portabilis/i-educar`, `yunger7/enem-api` -- and the commercial
+    # verdict INVERTS between the two: the LGPL permits linking from proprietary code
+    # and GPL-2.0 does not.
+    #
+    # A licence states its own name at the top.  So the GNU family is resolved from the
+    # TITLE region first, and only then from the wide window -- which is left in place
+    # because `espoon-voltti/evaka` names the LGPL at 656 in a REUSE notice that has no
+    # title at all, and that row is correct today.
+    title = re.sub(r"\s+", " ", text[:1200].lower())[:400]
+    for pat, fam in (("gnu affero general public license", "AGPL-3.0"),
+                     ("gnu lesser general public license", "LGPL"),
+                     ("gnu general public license", "GPL")):
+        if pat in title:
+            return fam
     if "gnu affero general public license" in t:
         return "AGPL-3.0"
     if "gnu lesser general public license" in t:

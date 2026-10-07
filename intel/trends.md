@@ -3561,6 +3561,99 @@ the same here: `@material-ui/core` pins `popper.js@1.16.1-lts`, **2,375 d**, aga
 postdates the last plain one.** So *"every published age is a lower bound on staleness"* holds in
 343 of 344 rows here and 326 of 327 there, and the exception is structural rather than anecdotal.
 
+## 64. Trend 61, measured at corpus scale: the prose wins 18 times out of 19, and the nineteenth is prose a defective instrument overwrote
+
+Trend 61 recorded that where this KB's prose and its instruments disagreed about a licence, the
+instrument was wrong — **four times out of four**. Pass 28 built the gate that measures it over the
+whole corpus instead of over one pass's findings (`p449`, 6 published files, 431 slugs with a bound
+licence claim, 510 co-occurrences where the binding rules refused and said so).
+
+| Verdict | n |
+|---|---|
+| `AGREE` | **299** |
+| `PROSE-ONLY` | 83 |
+| `PROSE-MIXED-INCLUDES-TODAY` — the gate **abstains** | 29 |
+| 🟡 `STALE-DATA` — prose right, data behind | **14** |
+| `DATA-ABSTAINS` — classifier gap, not a prose error | 5 |
+| 🔴 `CONTRADICT` — prose wrong | **1** |
+
+**Prose and data disagree on 15 of 431, and the prose is right in 14.** With pass 26's four, the
+record is **18 of 19**.
+
+🔴 **And the nineteenth is not a counterexample, it is the mechanism.** The single `CONTRADICT`,
+`oat-sa/lib-lti1p3-core`, is published LGPL-2.1 and is GPL-2.0 — but the pre-reset archive carries
+GPL-2.0 for it in **nine** places, once as a deliberate finding (*"the exception that breaks the
+symmetry — a protocol library and still GPL-2.0"*). The prose **regressed**: a correct human
+reading was overwritten by the classifier's wrong answer, and `intel/market.md` then published
+EMEA architecture advice concluding *"neither is a blocker."*
+
+**Consequence for Globant:** in a corpus that versions prose and data, the prose is the layer where
+somebody read the actual document and the data is the layer a compiler consumes. Neither can be the
+sole authority — the prose goes stale and the data is wrong — so the reconciliation has to run in
+**both directions** and must **abstain** where the corpus contradicts itself. Asserting
+*"against the TSVs, not against the prose"*, as `p342` chose to, was backwards.
+
+## 65. A truncation window is a sampling decision, and carrying one from a picker into a counter silently caps the count
+
+`p441` read `text[:4000]` to pick ONE licence family, where reading further cannot change the
+answer because the granting licence names itself at the top. Two functions later the same constant
+was governing a function whose entire purpose was to **count** families, and three separate defects
+followed from it:
+
+| Defect | Mechanism | Cost |
+|---|---|---|
+| **`P452`** | the GNU licences name each other; GPL-2.0's Preamble recommends the LGPL at char **784**, GPL-3.0's closing notes at **34,143** | 🔴 **every GPL-2.0 payload filed LGPL**, 7 rows, commercial verdict inverted |
+| **`P448`** | the EUPL-1.2 Appendix, which names five other families, begins at char **5964** of a 13,699-char payload | the count of multi-family payloads reads **38** at window 6000 and **73** on full text |
+| **`P447`** | patterns written with literal spaces; licence prose wraps at ~72 columns, so a family name straddling a break does not match | LGPL and AGPL invisible in `axe-core`'s real MPL payload |
+
+**Consequence for Globant:** when a client's licence-scanning tooling reports a clean result, ask
+what window it read and whether that window was chosen for a different question. A constant that is
+provably safe for "which licence is this?" is provably unsafe for "which licences are mentioned?"
+and for "is this GPL or LGPL?" — and all three questions get asked of the same payload.
+
+## 66. `CC-BY` is not a licence, it is four licences with opposite commercial answers, and the label hides the only one that matters
+
+One label on this shelf covered plain Attribution, Attribution-NonCommercial,
+Attribution-NonCommercial-ShareAlike, and one document that is not Creative Commons at all. Read
+line by line, **5 of the 7 rows published `CC-BY` are commercially unusable or mislabelled** — four
+are **NonCommercial** and one is a **paid dual-tier** licence.
+
+🔴 **The one to remember:** `sign/translate`'s `LICENSE.md` grants a free tier under CC BY-NC-SA 4.0
+to *"individuals, non-profit organizations, and educational institutions"* and states that *"a
+separate license is required for for-profit commercial organizations."* The classifier matched
+`"creative commons"` at character 848 — inside the free tier's heading — and filed the whole
+repository as attribution-only.
+
+🔵 **The structural point: a licence family is not the unit of a commercial decision.** `MIT` and
+`Apache-2.0` are safe as families; `CC-BY` and `GPL` are not, because the qualifier (`NC`, `SA`,
+`v2` vs `v3`, linking exception or none) carries the answer. A vocabulary coarse enough to be
+comparable across a shelf is too coarse to clear a deliverable, and this KB had been using one
+vocabulary for both jobs.
+
+**Consequence for Globant:** for any Creative Commons or GNU row, the **qualifier is the finding**
+and the family is filing. Publish `CC BY-NC-SA 4.0`, never `CC`; publish `GPL-2.0`, never `GPL`.
+
+## 67. A grant below the root is usually the documentation, and it is usually *more* permissive — but a rooted probe reads it as the code's licence
+
+Full-tree enumeration of all 412 licensed rows (blobless clone + `git ls-tree -r`, every candidate
+path read and classified rather than name-matched): **323 `ROOT-ONLY` (78.4%)**, 47
+`DIVERGENT-BUNDLED`, 33 `CONCORDANT`, **9 `DIVERGENT-OWN` (2.2%)**.
+
+🔴 **The 9 are not dual-licensed projects — the expected tier produced zero.** Four are an explicit
+code/documentation split: `microsoft/autogen` (CC-BY root, `LICENSE-CODE` = MIT), `ankitects/anki`
+(AGPL-3.0, `docs-site/` = CC BY-SA), `learnhouse/learnhouse` (AGPL-3.0, `docs/` = MIT),
+`yongsoojoo/esd2026-agent-workflow` (MIT, `LICENSE-docs` = CC BY).
+
+🟢 **And the direction is the opposite of the feared one: 0 of 412 pair a permissive root with a
+reciprocal grant deeper.** Every divergence runs copyleft-or-CC root → permissive component, or
+permissive → permissive.
+
+**Consequence for Globant:** the practical instruction inverts the usual caution. On a repository
+whose root grant is Creative Commons or AGPL, **look for `LICENSE-CODE` or `docs/LICENSE` before
+writing it off** — on this shelf the code is more permissive than the root in three cases out of
+three. The trap is the reverse: a rooted probe on `microsoft/autogen` reports **CC-BY**, which is
+the *documentation* licence, for a repository whose code is MIT.
+
 ## Declared gaps — twenty-sixth pass, 2026-10-07
 
 - 🔴 **No case oracle exists on this host.** `p443` measured five channels — `raw.githubusercontent`,
@@ -3588,3 +3681,40 @@ postdates the last plain one.** So *"every published age is a lower bound on sta
   the tenth with no new instrument. One new named datum in sixteen passes: OpenAI appointed a policy
   lead for Australia and New Zealand — a personnel fact, not a repository. Every repository added this
   pass came from a **package registry** or from `git ls-tree`.
+
+## Declared gaps — twenty-eighth pass, 2026-10-07
+
+Stated as gaps rather than left as silence, because an unstated gap is indistinguishable from
+coverage.
+
+- 🔴 **No case oracle exists on this host, and a fourth channel confirmed the gap is structural.**
+  Pass 26 measured five channels (`raw`, `git ls-remote`, `info/refs`, rendered `github.com`,
+  `codeload`) at `200 / resolves / 200 / 403 / 403`. This pass added the shelf itself as a fifth:
+  **173 of the 186** unverifiable slugs are cited by **no other repository** on the shelf, and of
+  the 13 that are cited, 5 are the same owner and 3 are known fork pairs. **5 genuinely independent
+  citations out of 186.** A repository nobody else names has no external spelling, so this gap will
+  not close by adding channels.
+- 🔴 **The gate abstains on 29 rows where this corpus contradicts itself** (`PROSE-MIXED-INCLUDES-TODAY`),
+  and at least one of them carries a live error: `Citolab/qti-components` is described as both GPL
+  and LGPL across nine mentions, and it is GPL-3.0. The abstention is honest and it is not a
+  verdict. **Pre-registered as pass 29's action A**, resolved by binding each mention to its pass
+  date.
+- 🟡 **`api.github.com` has been 403 since pass 37** and rendered `github.com` is 403. Every
+  structural fact in this pass came from `git` over HTTPS, `raw.githubusercontent.com`, or
+  re-reading a file already in this repository. Star counts and fork counts therefore remain
+  **uncalibratable on this host** and are carried as published values, not measurements.
+- 🔴 **13 of the 412 licensed payloads still classify `UNKNOWN`** after three classifier fixes.
+  That is a refusal, not a verdict (`P160`), and it is why the gate has a `DATA-ABSTAINS` class
+  rather than counting these as prose errors. The known sub-classes are RTF payloads
+  (`docs/LICENSE.rtf`, `OS4ED/openSIS-*`), markdown pointers to another project's terms, and
+  bespoke dual-tier documents.
+- 🔴 **APAC produced no new repository and no new regulatory instrument this pass**, for the
+  seventeenth consecutive pass on repositories. The regional query returns adoption statistics and
+  vendor expansion only. **APAC supply on this shelf is the thinnest of the four regions**, and no
+  APAC repository appears among the 21 corrected licence rows. An APAC engagement starts from a
+  Global or EMEA repository localised, not a regional one.
+- ⚠️ **The corrected `family_of` has not yet been propagated to the downstream censuses that
+  consumed it** (`holder.tsv`, `homepage.tsv`, the `p250` commercial sweep, the `p419` copyleft
+  census). Those still carry the pre-`P452` families. **Pre-registered as pass 29's action B**, and
+  named here so the debt is not invisible — which is the exact failure mode pass 26 had, publishing
+  a correction in prose and not in the data.

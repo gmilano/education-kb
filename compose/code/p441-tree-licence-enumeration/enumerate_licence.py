@@ -222,7 +222,25 @@ def family_marks(text):
     reading list instead of a verdict -- which is the same move `p436` made for
     `UPSTREAM` and `p184` for `HOLDER-UNRELATED`.
     """
-    t = text[:6000].lower()
+    # `P447` (pass 28): FLATTEN WHITESPACE BEFORE MATCHING.  Every pattern above is
+    # written with literal spaces, and a licence payload wraps its prose at ~72
+    # columns, so a family NAME that straddles a line break does not match.  Measured
+    # on `dequelabs/axe-core`'s real MPL-2.0 payload:
+    #
+    #     line 74   "...the GNU General Public License, Version 2.0, the GNU Lesser"
+    #     line 75   "      General Public License, Version 2.1, the GNU Affero General
+    #     line 76    Public License, Version 3.0..."
+    #
+    # so LGPL and AGPL were both invisible and this function returned {MPL, GPL} where
+    # the truth is {MPL, GPL, LGPL, AGPL}.  It UNDERCOUNTS, which matters because
+    # counting is this function's entire purpose: pass 26 built it to replace a verdict
+    # with a count, and then measured the count with literal spaces.
+    #
+    # Pass 26 diagnosed exactly this mechanism one function away -- *"which of the three
+    # fired was decided by LINE WRAPPING"* -- and fixed `family_of` by REORDERING, which
+    # cures the symptom there (the granting family's own title happens not to wrap) and
+    # does nothing here.  The defect outlived its own diagnosis by one pass.
+    t = re.sub(r"\s+", " ", text[:6000].lower())
     return sorted({name for name, pat in _MARKS if re.search(pat, t)})
 
 

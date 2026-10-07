@@ -8,6 +8,153 @@ updated: 2026-10-07
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-07 — twenty-eighth pass: seven repositories on this shelf are GPL-2.0 and were filed LGPL, and the only thing deciding it was a truncation constant
+
+⏱️ **Window 2026-10-07 ~05:20 → 08:10 UTC. Reference date `2026-10-07` passed explicitly to every
+instrument.** 🔴 **0 new repositories** from the mandatory query set — the seventeenth consecutive
+pass — so everything below is a **re-measurement of the shelf this KB already holds**, which is
+where the whole of this pass's value turned out to be.
+
+### 🔴 The correction that changes a commercial answer: `P452`, seven rows, LGPL → GPL-2.0
+
+`family_of` probed LGPL before GPL over `text[:4000]`. The GNU licences name each other inside
+their own texts, so that window decided the verdict by where it happened to fall:
+
+| Payload | `"gnu lesser general public license"` at | In the window? | Returned |
+|---|---|---|---|
+| **GPL-2.0** — `oat-sa/qti-sdk` | **784** — its Preamble recommends the LGPL | 🔴 yes | 🔴 `LGPL` |
+| **GPL-3.0** — `GibbonEdu/core` | **34,143** — its closing notes do | 🟢 no | 🟢 `GPL` |
+
+So every **GPL-2.0** payload came back LGPL and every GPL-3.0 payload came back right. Audited row
+by row, **7 of the 11 rows published LGPL open with `GNU GENERAL PUBLIC LICENSE Version 2, June
+1991`:**
+
+| Repo | ★ / role | Was | 🔴 Is | Region | What changes for an engagement |
+|---|---|---|---|---|---|
+| [`OpenEMIS/core`](https://github.com/OpenEMIS/core) · [`openemis/core`](https://github.com/openemis/core) | education MIS (ministry-scale) | LGPL | **GPL-2.0** | Global | 🔴 **Two rows, one repository** — a live `p443` case collision, so the shelf double-counts it |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | municipal school system | LGPL | **GPL-2.0** | LATAM | Brazil's most-deployed municipal SIS; linking is no longer the easy answer |
+| [`oat-sa/qti-sdk`](https://github.com/oat-sa/qti-sdk) | QTI assessment SDK (PHP) | LGPL | **GPL-2.0** | EMEA | the assessment-standard tier |
+| [`oat-sa/lib-lti1p3-core`](https://github.com/oat-sa/lib-lti1p3-core) | LTI 1.3 core, certified | LGPL-2.1 | **GPL-2.0** | EMEA | 🔴 **see the regression below** |
+| [`inepdadosabertos/api`](https://github.com/inepdadosabertos/api) | national exam open data | LGPL | **GPL-2.0** | LATAM | Brazil — INEP |
+| [`yunger7/enem-api`](https://github.com/yunger7/enem-api) | ENEM exam API | LGPL | **GPL-2.0** | LATAM | Brazil |
+
+🟢 **The negative half, which is what makes the above a finding and not a sweep artefact — 4 of 11
+are genuinely LGPL and did not move:** [`Tampere/trevaka`](https://github.com/Tampere/trevaka)
+(LGPL-2.1), [`untisapi/untis4j`](https://github.com/untisapi/untis4j) (LGPL-3.0, and it names the
+GPL 90 characters after naming itself),
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) (LGPL-3.0 declared in
+prose with no title block), [`espoon-voltti/evaka`](https://github.com/espoon-voltti/evaka) (a REUSE
+notice naming the LGPL 656 characters in, with no title at all).
+
+🔴 **The commercial verdict inverts.** The LGPL permits linking from proprietary code across a
+library boundary. **GPL-2.0 does not.** All seven are components an engagement links against rather
+than forks, which is precisely the case the LGPL exists to permit and the GPL does not.
+
+### 🔴 The regression, and it is the one to learn from
+
+`oat-sa/lib-lti1p3-core` was **not** wrong in this KB by accident. The pre-reset archive carries
+`GPL-2.0` for it in **nine** places, with payload size and fingerprint (`18.091 B`,
+`f9c375a1be4a`), and in one of them as a deliberate finding:
+
+> *"🔴 **La excepción que rompe la simetría y hay que mirarla:** `oat-sa/lib-lti1p3-core` **es**
+> librería de protocolo y aun así es **GPL-2.0**. La regla «librería ⇒ permisivo» no es ley: es
+> correlación de 3 de 4."*
+
+After the 2026-10-06 reset it was rewritten as **LGPL-2.1** — the answer the *defective* classifier
+gives — and `intel/market.md` then built EMEA architecture advice on it, concluding *"neither is a
+blocker."* 🔴 **Both repositories in that paragraph were misdescribed:** `oat-sa/lib-lti1p3-core` is
+GPL-2.0 and [`Citolab/qti-components`](https://github.com/Citolab/qti-components) is **GPL-3.0**
+(`LICENSE.md`, read this pass), not LGPL-3.0. Corrected in both files.
+
+### 🟡 The EUPL tier was machine-invisible, and it is nine repositories, not eight
+
+Nine rows moved `UNKNOWN → EUPL` — **8 Finnish national education services** plus the European
+Commission's own data model. Pass 26 described this tier correctly in prose and named eight;
+🆕 **[`Opetushallitus/valtionavustus`](https://github.com/Opetushallitus/valtionavustus) is the
+ninth** (EUPL-1.1, 652 B, state-grant administration for education providers).
+
+| Repo | Grant | Size | Note |
+|---|---|---|---|
+| [`Opetushallitus/eperusteet`](https://github.com/Opetushallitus/eperusteet) · [`koski`](https://github.com/Opetushallitus/koski) · [`ataru`](https://github.com/Opetushallitus/ataru) · [`organisaatio`](https://github.com/Opetushallitus/organisaatio) · [`oppijanumerorekisteri`](https://github.com/Opetushallitus/oppijanumerorekisteri) · [`ehoks`](https://github.com/Opetushallitus/ehoks) · [`suorituspalvelu`](https://github.com/Opetushallitus/suorituspalvelu) · 🆕 [`valtionavustus`](https://github.com/Opetushallitus/valtionavustus) | **EUPL-1.1 / 1.2** | 296–654 B | 🔵 **short reference notices, not the full licence text** — which is why they name only one family |
+| [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) | **EUPL-1.2** | **13,699 B** | the full text, in a root file named `license` (lowercase, no extension) |
+
+⚠️ **EUPL Article 1's "Communication" covers network use, so the EUPL binds a hosted service**, not
+only a shipped binary — the same shape as AGPL for deployment purposes.
+
+### 🔵 Deep-tree enumeration over the 412 licensed rows: the root file is the whole grant 78% of the time
+
+Full trees (`git clone --filter=blob:none --no-checkout --depth 1` + `git ls-tree -r`, because
+`api.github.com` is 403 here), every candidate path **read and classified** rather than matched by
+name:
+
+| Verdict | n | share |
+|---|---|---|
+| `ROOT-ONLY` | **323** | 78.4% |
+| `DIVERGENT-BUNDLED` | 47 | 11.4% — the second grant is a vendored dependency's |
+| `CONCORDANT` | 33 | 8.0% — deeper grants, all the same family |
+| 🔴 `DIVERGENT-OWN` | **9** | 2.2% |
+
+🔴 **The 9 are not dual-licensed projects. Four are a code/documentation split:**
+`microsoft/autogen` (CC-BY root, **`LICENSE-CODE`** = MIT), `ankitects/anki` (AGPL-3.0,
+`docs-site/LICENSE` = CC BY-**SA** 4.0), `learnhouse/learnhouse` (AGPL-3.0, `docs/LICENSE` = MIT),
+`yongsoojoo/esd2026-agent-workflow` (MIT, **`LICENSE-docs`** = CC BY 4.0). Four more carry a
+sub-component grant one directory down (`Opetushallitus/ehoks`, `SapuSeven/BetterUntis`,
+`facebookresearch/seamless_communication`, `mlcommons/croissant`); `SidneyBissoli/educabR` has an
+unclassifiable root and MIT in `LICENSE.md`.
+
+🟢 **Zero of 412 pair a permissive root with a reciprocal grant deeper** — the direction that would
+cost money. The practical rule: on this shelf, **read `LICENSE-CODE` / `docs/LICENSE` before reusing
+documentation or examples from an AGPL repository**, because the docs are frequently *more*
+permissive than the code, not less.
+
+### 🔴 `P449` — `CC-BY` on this shelf means three different commercial answers
+
+| Repo | Published | Actually | Commercial |
+|---|---|---|---|
+| [`EbookFoundation/free-programming-books`](https://github.com/EbookFoundation/free-programming-books) | CC-BY | Attribution 4.0 | 🟢 permitted |
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | CC-BY | Attribution 4.0 (docs) | 🟢 permitted |
+| [`Yunfeng-Wan/CSTutorBench`](https://github.com/Yunfeng-Wan/CSTutorBench) | CC-BY | Attribution-**NonCommercial** 4.0 | 🔴 **prohibited** |
+| [`facebookresearch/seamless_communication`](https://github.com/facebookresearch/seamless_communication) | CC-BY | Attribution-**NonCommercial** 4.0 | 🔴 **prohibited** |
+| [`Jona-Zwetsloot/Somtoday-Mod`](https://github.com/Jona-Zwetsloot/Somtoday-Mod) | CC-BY | Attribution-**NonCommercial-ShareAlike** 4.0 | 🔴 **prohibited** |
+| [`openstax/osbooks-biology-bundle`](https://github.com/openstax/osbooks-biology-bundle) | CC-BY | Attribution-**NonCommercial-ShareAlike** 4.0 | 🔴 **prohibited** |
+| [`sign/translate`](https://github.com/sign/translate) | CC-BY | 🔴 **a paid dual-tier licence — not CC at all** | 🔴 **paid** |
+
+🔴 **`sign/translate` is the row to remember.** Its `LICENSE.md` (17,404 B, © 2022 Nagish Inc.) is
+two-tier: a *Free license* of **CC BY-NC-SA 4.0** for *"individuals, non-profit organizations, and
+educational institutions"*, and a **Commercial License** requiring *"a separate license … for
+for-profit commercial organizations."* The classifier found `"creative commons"` at character 848 —
+inside the free tier's heading. 🟢 This KB's prose already said "Non-OSI, dual-tier" in three files.
+
+🟢 **`openstax/osbooks-biology-bundle` at BY-NC-SA corroborates `P328`** (pass 106: OpenStax cession
+narrows from `CC BY 4.0` to `CC BY-NC-SA 4.0`) through an independent channel.
+
+### 🔵 The 186 unverifiable spellings are structurally unverifiable, not under-sampled
+
+A fourth channel for slug spelling — what the **other 495 repositories on this shelf** call a
+repository, read from 16 manifest and README paths. Corpus: **488 of 496** returned ≥1 file,
+**7,377,680 chars**; calibrated (planted slug → **0** citers, `vishalsachdev/canvas-mcp` → **2**).
+
+**13 of 186 (7.0%)** are named by any neighbour; **173 are uncited**; **0 disagree** with this KB's
+spelling. And of the 13, **5 are the same owner one repository over** and **3 are fork/upstream
+pairs already held**, leaving **5 genuinely independent citations (2.7%)** —
+`grantholle/powerschool-api`, `dini-ag-kim/school-curriculum-pg`, `AmericasNLP/americasnlp2021`,
+`h5p/h5p-php-library`, `adlnet/xapi-profiles`. A repository nobody else cites has no external
+spelling, so no further channel will resolve these.
+
+### 🟢 Instruments added this pass
+
+| Folder | What it proves | Invocation | Today |
+|---|---|---|---|
+| **`p447-deep-grant-divergence/`** | re-measure of the published 412, `family_marks` at two windows, and full-tree divergence against the root grant | `python3 divergence.py licensed.input.2026-10-07.tsv .` | 🟢 **61/61** controls · 21 rows moved · 9 `DIVERGENT-OWN` |
+| **`p448-crossref-oracle/`** | the shelf-as-oracle channel, with the independence premise it refutes | `python3 crossref.py shelf.input.2026-10-07.txt targets.no-oracle.2026-10-07.txt .` | 🟢 **20/20** controls · 13 of 186 cited |
+| **`p449-prose-tsv-reconciliation/`** | **prose against data, both directions**, with the 5 defects it found in itself | `python3 reconcile.py <6 .md files> <measured.tsv> <published.tsv>` | 🟢 **59/59** controls · 14 `STALE-DATA` · 1 `CONTRADICT` |
+
+🔴 **`P451`, declared against this pass:** the gate's first build matched `MPL` inside "exa**mpl**e"
+and `ECL` inside "edgam**ecl**aw", which is pass 26's `UNLICENSE`-inside-`UNLICENSED` defect
+re-imported one pass later into a from-scratch instrument (`p432`, third occurrence).
+
+---
+
 ## 2026-10-07 — twenty-sixth pass: nine repositories this shelf had written off have a licence, and every level of the dependency graph is older than the one above it
 
 ⏱️ **Measurement window 2026-10-07 ~02:40 UTC → 05:10 UTC; every age computed against the reference
@@ -9927,7 +10074,7 @@ la colisión 5 en `agents/trending.md`: la página renderizada de GitHub sí dic
   **leyendo el código**; la superficie REST de OpenCASE y su endpoint de descubrimiento, **leyendo los docs del repo**;
   las dos licencias, **en el archivo `LICENSE`**.
 - ❌ **No medido:** **ninguna llamada HTTP contra ninguna de las dos plataformas.** Sin instancia, y levantarla choca
-  con el límite declarado del pase 27. **OAuth2, *scopes*, *rate limits* y forma de las respuestas, sin verificar.**
+  con el límite declarado del pase 28. **OAuth2, *scopes*, *rate limits* y forma de las respuestas, sin verificar.**
 - ❌ **No medido, y es una contradicción interna del repo:** la **forma exacta** de las rutas de OpenCASE.
   `DEVELOPER.md` escribe `/management/tenants/{tenantId}/CFItems/{id}`;
   `FRAMEWORK_EDITOR_BACKEND_INTEGRATION.md` escribe
@@ -9943,7 +10090,7 @@ la colisión 5 en `agents/trending.md`: la página renderizada de GitHub sí dic
 
 ## 2026-10-01 (pase 28) — el gap 48 queda contestado **leyendo el código fuente de Open edX**, y la respuesta es doble: la API alcanza para matrícula y notas, y **el *authoring* se declara experimental en el propio repo**
 
-**La acción 1 del pase 27 era la de mayor valor comercial de esta KB** —*«verificar si Open edX expone una API REST
+**La acción 1 del pase 28 era la de mayor valor comercial de esta KB** —*«verificar si Open edX expone una API REST
 suficiente, y si lo hay, P55 se cotiza; si no, ésa es la razón de la ausencia»*. **Se ejecutó, y la respuesta no es
 «sí» ni «no»: es un corte limpio entre dos mitades de la plataforma**, y el corte explica la ausencia mejor que
 cualquiera de las dos respuestas simples.
@@ -9956,7 +10103,7 @@ más valiosa del pase.
 
 ✅ **Pero `raw.githubusercontent.com` responde.** Eso habilita un canal de verificación que esta KB no estaba usando:
 **leer el archivo fuente directamente, sin clonar y sin instalar nada.** Es importante más allá de este pase, porque
-**esquiva parcialmente el límite que bloqueó al pase 27** (no se puede instalar código de terceros): no permite
+**esquiva parcialmente el límite que bloqueó al pase 28** (no se puede instalar código de terceros): no permite
 *ejecutar*, pero sí **leer la declaración en el código**, que para medir superficie de API es exactamente lo que hace
 falta.
 
@@ -9971,9 +10118,9 @@ es un resumen de búsqueda, y no es inferencia.
 | **Enrollment** | `openedx/core/djangoapps/enrollments/urls.py` | `enrollment/{username},{course_key}`, `enrollment/{course_key}`, `enrollment`, `enrollments/`, `course/{course_key}`, **`unenroll/`**, `roles/`, **`enrollment_allowed/`** | ✅ **Sí** — `EnrollmentListView`, `UnenrollmentView`, `EnrollmentAllowedView`, `EnrollmentUserRolesView` |
 | **Grades v1** | `lms/djangoapps/grades/rest_api/v1/urls.py` | `courses/`, `courses/{course_id}/`, `policy/courses/{course_id}/`, **`gradebook/{course_id}/`**, **`gradebook/{course_id}/bulk-update`**, `gradebook/{course_id}/grading-info`, **`subsection/{subsection_id}/`**, `section_grades_breakdown/`, `submission_history/{course_id}/` | ✅ **Sí** — **`GradebookBulkUpdateView`** y **`SubsectionGradeView`** (*course_grade_overrides*) |
 
-🔵 **El dato que cotiza, y es mejor de lo que el pase 27 suponía:** **Open edX escribe notas por lote.**
+🔵 **El dato que cotiza, y es mejor de lo que el pase 28 suponía:** **Open edX escribe notas por lote.**
 `GradebookBulkUpdateView` es el equivalente funcional de `provide_assignment_feedback` del conector MIT de Moodle —
-**y es *bulk*, que es justamente lo que el conector de Moodle no tiene** (el hallazgo del pase 27 fue que el *bulk* de
+**y es *bulk*, que es justamente lo que el conector de Moodle no tiene** (el hallazgo del pase 28 fue que el *bulk* de
 xAPI en CaSS quedaba afuera de MCP; acá el *bulk* es el que está).
 
 **Precisión de método que conviene no saltearse:** el `urls.py` de *Enrollment* **no lleva la versión adentro**. La
@@ -10021,12 +10168,12 @@ había.
 
 - ✅ **Medido:** rutas, versiones y capacidad de escritura de cuatro grupos de API, **leyendo el código**.
 - ❌ **No medido:** **no se hizo ninguna llamada HTTP contra una instancia de Open edX.** No hay instancia, y levantarla
-  necesita instalar el árbol de dependencias, que es el límite declarado del pase 27. **Autenticación (OAuth2),
+  necesita instalar el árbol de dependencias, que es el límite declarado del pase 28. **Autenticación (OAuth2),
   *scopes*, *rate limits* y forma real de las respuestas quedan sin verificar.**
 - ❌ **No medido:** si los endpoints `v0` de *authoring* —los que el repo recomienda— cubren lo que el `v1`
   experimental promete. **Es la acción 1 del pase 29.**
 
-## 2026-10-01 (pase 27) — la superficie MCP de CaSS medida por anotación: **6 expuestas y 55 ocultas sobre 61 operaciones**, y el «45» del pase 26 era aritmética, no conteo
+## 2026-10-01 (pase 28) — la superficie MCP de CaSS medida por anotación: **6 expuestas y 55 ocultas sobre 61 operaciones**, y el «45» del pase 26 era aritmética, no conteo
 
 **Dos repos abiertos de primera mano sobre el árbol clonado** (`cassproject/CASS` v1.7.7, Apache-2.0) **y uno verificado
 por página** (`1EdTech/ltibootcamp`). Este pase **no pudo ejecutar el generador** (ver la nota de método) y entonces

@@ -10,6 +10,64 @@ Infrastructure Globant can build an education solution *on top of*. These are no
 education products; they are the permissively licensed layers underneath one.
 Licenses read from each repo's own `LICENSE` payload on 2026-10-06.
 
+## 🔴 Licence corrections — twenty-eighth pass, 2026-10-07
+
+**Seven repositories on this shelf are `GPL-2.0` and were filed `LGPL`** (`P452`), and the
+difference is the whole reason the LGPL exists: it grants a linking exception that the plain GPL
+does not. All seven are components an engagement **links against** rather than forks, which is
+exactly the case the exception covers.
+
+| Repo | Was | 🔴 Is | Region | Role |
+|---|---|---|---|---|
+| [`OpenEMIS/core`](https://github.com/OpenEMIS/core) · [`openemis/core`](https://github.com/openemis/core) | LGPL | **GPL-2.0** | Global | ministry-scale education MIS — 🔴 **two rows, one repository**, a live case collision |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | LGPL | **GPL-2.0** | LATAM | Brazilian municipal school system |
+| [`oat-sa/qti-sdk`](https://github.com/oat-sa/qti-sdk) | LGPL | **GPL-2.0** | EMEA | QTI assessment SDK |
+| [`oat-sa/lib-lti1p3-core`](https://github.com/oat-sa/lib-lti1p3-core) | LGPL-2.1 | **GPL-2.0** | EMEA | certified LTI 1.3 core — see the regression note below |
+| [`inepdadosabertos/api`](https://github.com/inepdadosabertos/api) · [`yunger7/enem-api`](https://github.com/yunger7/enem-api) | LGPL | **GPL-2.0** | LATAM | Brazilian national exam data |
+
+🟢 **The negative half: four rows are genuinely LGPL and did not move** —
+[`Tampere/trevaka`](https://github.com/Tampere/trevaka) (2.1),
+[`untisapi/untis4j`](https://github.com/untisapi/untis4j) (3.0),
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) (3.0),
+[`espoon-voltti/evaka`](https://github.com/espoon-voltti/evaka) (REUSE notice). For those, the
+dynamic-linking conversation is real.
+
+**The cause.** `family_of` probed LGPL before GPL over `text[:4000]`. The GNU licences name each
+other inside their own texts, so the window decided the verdict: GPL-2.0's Preamble recommends the
+LGPL at character **784** (inside the window), GPL-3.0's closing notes do so at **34,143**
+(outside). Every GPL-2.0 payload came back LGPL; every GPL-3.0 payload came back right. Fixed by
+resolving the GNU family from the payload's title region first.
+
+🔵 **A free cross-check this corpus already had the data for: the byte size refutes the label.**
+GPL-3.0 is ~35 kB, GPL-2.0 ~18 kB, LGPL-2.1 ~26.5 kB, LGPL-3.0 ~7.6 kB. This file published
+`Citolab/qti-components` as *LGPL-3.0 (35,199 B payload)* and `oat-sa/lib-lti1p3-core` as
+*LGPL-2.1 (18,091 B)* — both sizes contradict both labels, and no fetch was needed to see it.
+
+### 🔴 The regression, which is the finding worth carrying
+
+`oat-sa/lib-lti1p3-core` was not mis-stated by accident. The pre-reset archive carries **GPL-2.0**
+for it in **nine** places, with payload size and fingerprint (`18.091 B`, `f9c375a1be4a`), once as a
+deliberate, argued finding:
+
+> *"🔴 **La excepción que rompe la simetría y hay que mirarla:** `oat-sa/lib-lti1p3-core` **es**
+> librería de protocolo y aun así es **GPL-2.0**. La regla «librería ⇒ permisivo» no es ley: es
+> correlación de 3 de 4. Se dice en vez de redondearla."*
+
+After the 2026-10-06 reset it was rewritten as LGPL-2.1 — the answer the defective classifier gives
+— and `intel/market.md` published EMEA architecture advice on it concluding *"neither is a
+blocker."* Both the row and that paragraph are corrected this pass. **A correct human reading was
+destroyed by an instrument, and the instrument was wrong.**
+
+### 🟡 The EUPL tier, now machine-readable, and it is nine repositories
+
+Nine rows moved `UNKNOWN → EUPL`: eight `Opetushallitus/*` Finnish national education services
+(🆕 including [`valtionavustus`](https://github.com/Opetushallitus/valtionavustus), the ninth, which
+pass 26's prose did not name) plus
+[`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model).
+🔵 The eight Finnish grants are **short reference notices (296–654 B), not the full licence text**.
+⚠️ **EUPL Article 1's "Communication" covers network use**, so the EUPL binds a hosted service the
+way AGPL does — the fact that matters for a managed service delivered to a European ministry.
+
 ## Core stack
 
 15 rows, all verified on 2026-10-06. Four further infrastructure rows were added in
@@ -1686,7 +1744,7 @@ licence, the description or the ★ would have surfaced this — only the date.
 | **Python / Django** | [`Harvard-University-iCommons/django-lti`](https://github.com/Harvard-University-iCommons/django-lti) | **MIT** (1,097 B) | 2025-08-27 | ⚠️ 405 d | ⚠️ usable; ageing |
 | **Python (scaffold)** | [`ucfopen/cookiecutter-python-lti`](https://github.com/ucfopen/cookiecutter-python-lti) | **MIT** (1,129 B) | 2026-05-12 | 🟢 147 d | ⚠️ **Django template only** — see the warning below |
 | **Elixir** | [`Simon-Initiative/lti_1p3`](https://github.com/Simon-Initiative/lti_1p3) | **MIT** (1,082 B, © Carnegie Mellon University) | 2026-03-13 | 🟢 207 d | 🟢 usable (OLI Torus) |
-| **PHP (assessment vendor)** | [`oat-sa/lib-lti1p3-core`](https://github.com/oat-sa/lib-lti1p3-core) | ⚠️ **LGPL-2.1** (18,091 B) | 2026-07-16 | 🟢 82 d | ⚠️ live but **copyleft** — library-boundary conversation |
+| **PHP (assessment vendor)** | [`oat-sa/lib-lti1p3-core`](https://github.com/oat-sa/lib-lti1p3-core) | 🔴 **GPL-2.0** (18,091 B) — *corrected pass 28, `P452`; was filed LGPL-2.1* | 2026-07-16 | 🟢 82 d | 🔴 **strong copyleft, and it is a LIBRARY** — there is no LGPL linking exception here, so linking it into a deliverable carries the obligation. The archive called this *"the exception that breaks the symmetry"* and it was right |
 | Python | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | MIT (1,069 B) | 2022-11-21 | 🔴 1,415 d | 🔴 **do not start here** |
 | Python | [`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) | MIT (1,069 B, © Dmitry Viskov) | 2023-01-12 | 🔴 1,363 d | 🔴 fork, also cold |
 | PHP | [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) | Apache-2.0 (11,343 B) | 2020-06-03 | 🔴 2,316 d | 🔴 **superseded by its own upstream** |
@@ -1736,7 +1794,7 @@ dependency closure, not the dependency list.**
 | Repo | Head commit | Age | Note |
 |---|---|---|---|
 | [`k2-fsa/sherpa-onnx`](https://github.com/k2-fsa/sherpa-onnx) | 2026-10-06 | 🟢 0 d | **Apache-2.0**; ASR **and** TTS — the replacement for Piper in P18 |
-| [`Citolab/qti-components`](https://github.com/Citolab/qti-components) | 2026-10-06 | 🟢 0 d | ⚠️ **LGPL-3.0** (35,199 B payload) — live, not permissive |
+| [`Citolab/qti-components`](https://github.com/Citolab/qti-components) | 2026-10-06 | 🟢 0 d | 🔴 **GPL-3.0** (35,199 B payload) — *corrected pass 28; was filed LGPL-3.0.* 🔵 **The size already said so:** GPL-3.0 is ~35 kB and LGPL-3.0 is ~7.6 kB, so the byte count published beside the label refuted it without a fetch |
 | [`Kennisnet/qti-components`](https://github.com/Kennisnet/qti-components) | 2026-07-20 | 🟢 78 d | |
 | [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | 2025-06-21 | 🔴 **472 d** | MIT, **1EdTech Certified** — certification does not lapse when maintenance stops, but disclose the date |
 | [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) | 2025-09-04 | 🔴 397 d | |

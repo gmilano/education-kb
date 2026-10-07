@@ -15,6 +15,37 @@ education platform shelf is copyleft. That is not a blocker, but it decides
 whether your AI work is a plugin (and inherits the license) or a side-car (and
 does not).
 
+## 🔴 Licence corrections — twenty-eighth pass, 2026-10-07
+
+Two platforms on this shelf were filed **LGPL** and are **GPL-2.0** (`P452`), and both are
+administrative systems a client deploys and extends rather than links as a library — so the
+correction tightens rather than relaxes the architecture:
+
+| Platform | Was | 🔴 Is | Region | Consequence |
+|---|---|---|---|---|
+| [`OpenEMIS/core`](https://github.com/OpenEMIS/core) · [`openemis/core`](https://github.com/openemis/core) | LGPL | **GPL-2.0** | Global | ministry-scale education MIS. 🔴 **Two rows, one repository** — this shelf double-counts it under two case spellings |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | LGPL | **GPL-2.0** | LATAM | Brazil's most-deployed municipal school system. A ministry deliverable that **links** it inherits the obligation; extending it in-place and returning the source does not |
+
+**The cause** was a truncation window, not a misreading: `family_of` probed LGPL before GPL over the
+first 4000 characters, and GPL-2.0's Preamble recommends the LGPL at character 784 while GPL-3.0's
+closing notes do so at 34,143. Every GPL-2.0 payload was filed LGPL.
+
+⚠️ **And the EMEA assessment tier, for the same reason:** `oat-sa/lib-lti1p3-core` (**GPL-2.0**) and
+`Citolab/qti-components` (**GPL-3.0**) are the certified, most complete LTI 1.3 and QTI options and
+**neither is LGPL**. There is no linking exception on either. See `repos/foundations.md`.
+
+🔵 **The OpenStax split, re-confirmed through a new channel.** This file already says to *"take the
+content, not the CMS"* because `openstax/openstax-cms` is AGPL-3.0. The content side now needs the
+same precision: [`openstax/osbooks-biology-bundle`](https://github.com/openstax/osbooks-biology-bundle)
+is **`CC BY-NC-SA 4.0`**, not `CC BY` — **NonCommercial**, so it cannot be resold inside a
+commercial courseware product. That independently corroborates `P328` (OpenStax cession narrows
+between editions). Verify cession **per collection**, not per bundle.
+
+🟡 **The EUPL tier binds hosted services.** Nine EMEA public-sector repositories on this shelf are
+EUPL (eight Finnish national services plus the European Commission's data model), and **EUPL
+Article 1's "Communication" covers network use** — so for a managed service delivered to a European
+ministry the EUPL behaves like the AGPL, not like the MPL.
+
 ## Learning platforms
 
 | Platform | Repo | License (read from payload) | Position |

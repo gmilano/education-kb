@@ -3443,7 +3443,7 @@ the **only 1EdTech-Certified permissive asset in this KB**. 🟢 **Keep it.** Ce
 lapse when maintenance pauses, and the certificate is the strongest procurement artefact on this
 shelf. 🔴 **But the date goes in the deck**, because "certified" and "maintained" are now different
 facts about the same repository. The live alternative,
-[`Citolab/qti-components`](https://github.com/Citolab/qti-components) (0 d), is **LGPL-3.0** — a
+[`Citolab/qti-components`](https://github.com/Citolab/qti-components) (0 d), is 🔴 **GPL-3.0** (*corrected pass 28, `P452`; was filed LGPL-3.0*) — a
 different licence conversation, not a drop-in.
 
 ### ⚠️ P12 and P16 — two further cold components, flagged without a replacement
@@ -3857,3 +3857,117 @@ rows). Maven Central's POM layer answers **429 intermittently**, so a single-sho
 POM with no licence from a POM that was rate-limited — retry before recording silence. And for **57 of
 87** repositories the registry channel has nothing to say at all, because a project that publishes no
 package has no metadata to read.
+
+## `P-FAMILY-QUALIFIER` — read the licence QUALIFIER before you bid, because the family does not carry the answer
+
+**Added in the twenty-eighth pass of 2026-10-07.** This is the pattern that would have caught every
+licence defect this KB found this pass, and it is the cheapest one in this file: it is three greps
+and a byte count, and it runs before anybody opens an architecture document.
+
+**The problem it solves, stated as the three live failures it would have caught:**
+
+| Failure | What the KB said | What the payload says | Cost if un-caught |
+|---|---|---|---|
+| `oat-sa/lib-lti1p3-core` | LGPL-2.1 | **GPL-2.0** | the certified LTI 1.3 library has **no linking exception** — a linked deliverable inherits copyleft |
+| `sign/translate` | CC-BY | **paid dual-tier**, free only for non-profits and schools | a demo built on it is a **licence violation** by a for-profit |
+| `openstax/osbooks-biology-bundle` | CC BY | **CC BY-NC-SA 4.0** | **NonCommercial** — the courseware cannot be resold |
+
+**The recipe, concretely.**
+
+1. **Fetch the payload, not the badge, not the sidebar.**
+   ```sh
+   curl -s "https://raw.githubusercontent.com/$SLUG/HEAD/$PATH" -o payload.txt
+   ```
+   Use `compose/code/p441-tree-licence-enumeration/enumerate_licence.py` to find `$PATH`, because a
+   filename list cannot sustain a licence's absence (`P441`) — `openedx/XBlock` ships `LICENSE.TXT`
+   and `Opetushallitus/aoe` ships `aoe-web-frontend/LICENSE`.
+
+2. **Read the TITLE, which is the first non-blank line, and never a mid-document match.**
+   ```sh
+   grep -v '^[[:space:]]*$' payload.txt | head -2
+   ```
+   This single step separates `GNU GENERAL PUBLIC LICENSE Version 2` from
+   `GNU LESSER GENERAL PUBLIC LICENSE Version 2.1`, which is the distinction seven rows on this
+   shelf got wrong. The reason a window fails is in
+   `compose/code/p436-fork-hypothesis/sweep_payload.py` (`P452`).
+
+3. **Cross-check against the byte size — free, and it caught two rows this pass.**
+
+   | Licence | Payload size |
+   |---|---|
+   | GPL-3.0 | ~35 kB |
+   | LGPL-2.1 | ~26.5 kB |
+   | GPL-2.0 | ~18 kB |
+   | AGPL-3.0 | ~34 kB |
+   | LGPL-3.0 | **~7.6 kB** |
+   | Apache-2.0 | ~11.3 kB |
+   | MPL-2.0 | ~16.7 kB |
+   | MIT | ~1.1 kB |
+   | EUPL reference notice | 0.3–0.7 kB |
+
+   A row reading *"LGPL-3.0 (35,199 B)"* is wrong on its face. Both of this pass's prose errors were
+   visible this way with no network at all.
+
+4. **For Creative Commons, the qualifier IS the finding (`P449`).**
+   ```sh
+   head -3 payload.txt | grep -Eoi 'noncommercial|sharealike|attribution'
+   ```
+   `CC-BY` is four licences. Four of the seven CC rows on this shelf are **NonCommercial**. Publish
+   `CC BY-NC-SA 4.0`; never publish `CC`.
+
+5. **For GNU, record the VERSION and whether an exception is attached.** `GPL-2.0` and `GPL-3.0`
+   differ on patent and compatibility terms; `GPL + Classpath/linking exception` behaves like the
+   LGPL and a substring classifier cannot see the exception at all (`nvaccess/nvda`'s
+   `copying.txt`). If the payload names more than one family, the row is a **reading list**, not a
+   verdict — 73 of 412 payloads here name two or more.
+
+6. **Scan for a second grant below the root before you write a repository off.**
+   ```sh
+   git clone --filter=blob:none --no-checkout --depth 1 "https://github.com/$SLUG" t
+   git -C t ls-tree -r --name-only HEAD | grep -Ei '(^|/)(un)?licen[cs]e|(^|/)copying'
+   ```
+   On this shelf the second grant is usually the **documentation** and usually **more** permissive:
+   `microsoft/autogen` is CC-BY at the root and **MIT in `LICENSE-CODE`**; `learnhouse/learnhouse`
+   is AGPL-3.0 with **MIT in `docs/`**. **Zero of 412** repositories hide a reciprocal grant under a
+   permissive root, so this step only ever opens doors. Ignore anything under `node_modules/`,
+   `vendor/`, `third_party/`, and any file whose own name says `THIRD-PARTY`, `NOTICE` or
+   `dependencies` — a notice about other people's licences is not a grant (`P342`).
+
+7. **Gate the answer against what your own knowledge base already says.**
+   ```sh
+   cd compose/code/p449-prose-tsv-reconciliation
+   python3 reconcile.py ../../../agents/top.md … <measured.tsv> <published.tsv>
+   ```
+   This is the step nobody had. Where prose and data disagree on a licence in this corpus, **the
+   prose has been right 18 times out of 19** — so a disagreement is a signal to re-read the payload,
+   and the one case where the prose lost was prose a defective classifier had overwritten.
+
+**Wiring, as an engagement artefact.** Run steps 1–6 as a pre-bid gate over the client's candidate
+component list and deliver the output as a two-column table — `family` for comparability, `qualifier`
+for the decision — plus a third column naming the **channel** each answer came from. Budget: one
+day for up to ~80 components at the measured rates (412 payloads read and 412 trees enumerated in
+64 s; the human time is reading the ~10% that name more than one family). Step 7 only applies if the
+client keeps a knowledge base of their own, and when they do it is the step that finds the
+regressions.
+
+**What this pattern is NOT.** It does not produce a legal opinion, and it does not resolve a
+`GPL + exception` payload or an RTF grant — both are declared limits of the instruments it calls.
+It produces the **reading list** a lawyer should be given, and it refuses rather than guessing: 13
+of 412 payloads here still classify `UNKNOWN`, and `UNKNOWN` is published as a refusal, not as
+"permissive".
+
+### How this pattern changes the three patterns above it
+
+- **`P34` (certified-conformant assessment delivery)** was built on `oat-sa/lib-lti1p3-core` and
+  `Citolab/qti-components` as **LGPL** components behind a linking boundary. Both are **plain GPL**.
+  🔴 **The linking boundary is not a defence any more.** Re-wire `P34` to call both across a
+  **process** boundary — a separate service with its own repository and its own source offer — or
+  price a commercial licence from OAT. This is the one place in this KB where a licence correction
+  invalidates a published architecture.
+- **`P35` (national open-data MCP client, LATAM)** reads `inepdadosabertos/api` and `yunger7/enem-api`,
+  both now **GPL-2.0**. The pattern already consumes them **over HTTP as data sources**, not as
+  linked libraries, so it is unaffected — stated explicitly so a later pass does not re-open it.
+- **`P36` (accessible-courseware remediation)** depends on `dequelabs/axe-core` and
+  `ocrmypdf/OCRmyPDF`, both of which moved **GPL → MPL-2.0**, which is *less* restrictive than
+  filed. MPL-2.0 is file-level copyleft, so invoking either as an unmodified tool propagates
+  nothing. 🟢 **The pattern gets cheaper, and its original reasoning was already correct in prose.**

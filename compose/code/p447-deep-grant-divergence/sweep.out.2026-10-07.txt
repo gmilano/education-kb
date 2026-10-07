@@ -1,0 +1,38 @@
+## stage 0 -- re-measure of the published set (n=412)
+rows whose family MOVES under the corrected family_of: 21
+  transitions: [('UNKNOWN -> EUPL', 9), ('LGPL -> GPL', 7), ('GPL -> MPL-2.0', 5)]
+  new distribution: [('MIT', 215), ('Apache-2.0', 72), ('GPL', 42), ('AGPL-3.0', 23), ('UNKNOWN', 13), ('BSD', 10), ('EUPL', 9), ('ECL-2.0', 8), ('CC-BY', 7), ('MPL-2.0', 5), ('LGPL', 4), ('CC0-1.0', 2), ('ISC', 2)]
+
+## stage 1 / action B -- payloads naming more than one family (n=412)
+count naming >1, window 6000 (p441 as built): 38 (9.2%)
+count naming >1, FULL text   (p446 corrected): 73 (17.7%)
+rows the window UNDERCOUNTED: 37
+    european-commission-empl/European-Learning-Model     1 -> 7  AGPL,CC,EPL,EUPL,GPL,LGPL,MPL
+    Citolab/qti-components                               1 -> 3  AGPL,GPL,LGPL
+    Citolab/qti-convert                                  1 -> 3  AGPL,GPL,LGPL
+    CybroOdoo/EducationalERP                             1 -> 3  AGPL,GPL,LGPL
+    GibbonEdu/core                                       1 -> 3  AGPL,GPL,LGPL
+    ILIAS-eLearning/ILIAS                                1 -> 3  AGPL,GPL,LGPL
+    Kennisnet/qti-components                             1 -> 3  AGPL,GPL,LGPL
+    Limekiller/moodle-block_openai_chat                  1 -> 3  AGPL,GPL,LGPL
+    OHF-Voice/piper1-gpl                                 1 -> 3  AGPL,GPL,LGPL
+    SapuSeven/BetterUntis                                1 -> 3  AGPL,GPL,LGPL
+    TEAMSchools/powerschool                              1 -> 3  AGPL,GPL,LGPL
+    Universita-di-Ferrara/moodle-aiprovider_gemini       1 -> 3  AGPL,GPL,LGPL
+  by combination (FULL): [('AGPL,GPL,LGPL', 32), ('AGPL,GPL', 22), ('GPL,LGPL', 10), ('AGPL,GPL,LGPL,MPL', 5), ('AGPL,MIT', 1), ('AGPL,CC,EPL,EUPL,GPL,LGPL,MPL', 1), ('Apache,CC', 1), ('CC,MIT', 1)]
+  by granting family (FULL): [('GPL', 40), ('AGPL-3.0', 22), ('MPL-2.0', 5), ('LGPL', 3), ('EUPL', 1), ('Apache-2.0', 1), ('MIT', 1)]
+
+## stage 2 / action A -- deep-tree divergence (n=412)
+  verdicts: [('ROOT-ONLY', 323), ('DIVERGENT-BUNDLED', 47), ('CONCORDANT', 33), ('DIVERGENT-OWN', 9)]
+  DIVERGENT-OWN: 9
+    Opetushallitus/ehoks                                    root EUPL         deeper json-schema-viewer/LICENSE=Unlicense
+    SapuSeven/BetterUntis                                   root GPL          deeper material-color-utils/LICENSE=Apache-2.0
+    SidneyBissoli/educabR                                   root UNKNOWN      deeper LICENSE.md=MIT
+    ankitects/anki                                          root AGPL-3.0     deeper docs-site/LICENSE=CC-BY
+    facebookresearch/seamless_communication                 root CC-BY        deeper ggml/LICENSE=MIT
+    learnhouse/learnhouse                                   root AGPL-3.0     deeper docs/LICENSE=MIT
+    microsoft/autogen                                       root CC-BY        deeper LICENSE-CODE=MIT
+    mlcommons/croissant                                     root Apache-2.0   deeper croissant-rdf/LICENSE=MIT
+    yongsoojoo/esd2026-agent-workflow                       root MIT          deeper LICENSE-docs=CC-BY
+  INTERESTING (permissive root, copyleft own-deeper): 1
+    yongsoojoo/esd2026-agent-workflow                       MIT

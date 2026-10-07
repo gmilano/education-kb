@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-06
+updated: 2026-10-07
 ---
 
 # 📚 Education KB
@@ -39,6 +39,14 @@ contexto léxico de una cifra es la **etiqueta de su bloque** (el `###` de arrib
 encabezado de su tabla), no su renglón. Las 2 pruebas que habían congelado el baseline **defectuoso**
 se re-expresaron contra el atribuidor corregido. 🟢 **Tablero: `77/77` verdes, `0` rojas.**
 
+🆕 **Pase 28 del 2026-10-07 agrega TRES carpetas y sus suites: `p447` 61/61, `p448` 20/20,
+`p449` 59/59 — y re-corrió las suites que sus arreglos tocan**, porque este pase modificó dos
+instrumentos anteriores (`family_of` en `p436`, `family_marks` en `p441`) y una corrección sin la
+suite preexistente intacta no es una corrección: 🟢 **`p436` 15/15**, 🟢 **`p441` 40/40**,
+🟢 **`p243` 23/23 + barrido 136 de 136 `.md`**, 🟢 **`trend-backlink-audit` 31/31**,
+🟢 **`p370-gap-gate` 27/27** (barrido: **5** huecos con región, **0 CONTRADICHOS**).
+⚠️ **Dicho con precisión: las DEMÁS suites del tablero NO se re-corrieron en este pase.**
+
 🆕 **Pase 22 del 2026-10-06 (el de la API de GitLab) agrega una carpeta y su suite: `32/32` sin red,
 `35/35` con red.** ⚠️ **Dicho con precisión: las otras suites NO se re-corrieron en este pase**, así
 que el `77/77` de arriba es la última medición del pase 122 y no una medición de hoy. El total
@@ -55,6 +63,9 @@ o la variable de entorno (regla de **P107**, pase 47):
 
 | Carpeta | Qué prueba | Invocación | Hoy |
 |---|---|---|---|
+| 🆕 **`p449-prose-tsv-reconciliation/`** *(nueva en el pase 28 del 2026-10-07)* | **La compuerta que este corpus necesitaba desde dos pases: la PROSA contra los DATOS, en las dos direcciones.** El pase 26 dejó el diagnóstico (*"un corpus que versiona prosa e instrumentos tiene que reconciliarlos, y nada en este repositorio lo hacía"*) y ninguna solución. Sobre 6 `.md` publicados y **431** slugs con afirmación de licencia LIGADA: **299 `AGREE`**, 🟡 **14 `STALE-DATA`** (la prosa tenía razón y el dato está atrasado), 🔴 **1 `CONTRADICT`**, **29** donde el corpus se contradice a sí mismo y la compuerta **SE ABSTIENE**, y **510** renglones donde la ligadura se NEGÓ y se publica el denominador. 🔴 **La prosa gana 14 de 15 — con el pase 26, 18 de 19.** 🔴 **Y encontró 5 defectos propios antes de dar un número**, entre ellos `P451`: `MPL` casaba dentro de «exa**mpl**e» y `ECL` dentro de «edgam**ecl**aw» — el mismo defecto de `UNLICENSE` dentro de `UNLICENSED` del pase 26, reimportado un pase después | `python3 test_reconcile.py` · `python3 reconcile.py <6 .md> <medido.tsv> <publicado.tsv>` | 🟢 **59/59** · 14 `STALE-DATA` · 1 `CONTRADICT` |
+| 🆕 **`p447-deep-grant-divergence/`** *(nueva en el pase 28 del 2026-10-07)* | **La sonda enraizada SÍ contestó, y su respuesta no es toda la cesión.** Tres etapas: (0) **re-medición** del conjunto publicado — 🔴 **21 de 412 filas se mueven** (9 `UNKNOWN→EUPL`, 7 `LGPL→GPL`, 5 `GPL→MPL-2.0`), porque el pase 26 corrigió los clasificadores y **nunca los volvió a correr sobre el estante**; (1) `family_marks` en **dos ventanas** — **38** con `text[:6000]` y **73** con el texto COMPLETO (`P448`: el Apéndice de la EUPL-1.2 empieza en el carácter **5964** y la ventana lo corta por **36** caracteres); (2) árbol completo — 323 `ROOT-ONLY`, 47 `DIVERGENT-BUNDLED`, 33 `CONCORDANT`, **9 `DIVERGENT-OWN`**. 🔴 **`P452`: la familia GNU hay que leerla del TÍTULO, no de una ventana** — el Preámbulo de la GPL-2.0 recomienda la LGPL en el carácter 784 y las notas finales de la GPL-3.0 en el 34.143, así que **toda** carga GPL-2.0 salía LGPL y toda GPL-3.0 salía bien: **7 filas con el veredicto comercial INVERTIDO** | `python3 test_divergence.py` · `python3 divergence.py licensed.input.2026-10-07.tsv .` | 🟢 **61/61** · 21 filas movidas · 9 `DIVERGENT-OWN` |
+| 🆕 **`p448-crossref-oracle/`** *(nueva en el pase 28 del 2026-10-07)* | **El cuarto canal para la grafía de un slug: lo que lo llaman los VECINOS.** `p443` dejó **186 de 496** grafías sin oráculo y el pase 26 probó que en este host **no existe ningún oráculo de capitalización**. Este canal no necesita API de forja: las otras **495** fichas del estante, leídas de 16 rutas de manifiesto y README (**488 de 496** devolvieron archivo, **7.377.680** caracteres; calibrado: slug plantado → **0** citantes, `vishalsachdev/canvas-mcp` → **2**). 🟢 **13 de 186 (7,0%) citadas ⇒ predicción «menos de 40» CONFIRMADA** y **0 desacuerdos**. 🔴 **Y la premisa de independencia queda REFUTADA: 5 de las 13 citas son del MISMO dueño** una ficha más allá —el canal de self-link que ya había fallado— y 3 de las 8 restantes son pares fork/upstream ya conocidos ⇒ **5 citas de terceros de verdad, 2,7%** | `python3 test_crossref.py` · `python3 crossref.py shelf.input.2026-10-07.txt targets.no-oracle.2026-10-07.txt .` | 🟢 **20/20** · 13 de 186 |
 | 🆕 **`gitlab-api-channel/`** *(nueva en el pase 22 del 2026-10-06)* | **El canal de API de GitLab** — el único API de forja que este entorno alcanza, porque `api.github.com` responde **403** desde el pase 37. Prueba tres cosas y cada una con **control negativo**: `P-GL-1` el campo de licencia de la forja **se equivoca en 2 de 22** (`agpl-1.0` sobre un payload **GPL-2.0** de 15.214 B, idéntico byte a byte al que esta KB leyó en GitHub; `ecl-2.0` sobre un **Apache-2.0** literal); `P-GL-2` **`license=true` se ignora en silencio** en el endpoint de búsqueda (**0 licencias sobre 534**) aunque resuelve por proyecto; `P-GL-3` un clasificador por subcadena **encuentra toda licencia en toda licencia** — fue defecto propio de este pase y el control lo mantiene detectable | `python3 test_gitlab_channel.py` · `--live` | 🟢 **32/32** · 🟢 **35/35** con red |
 | 🆕 **`p351-star-digit-sweep/`** *(convertida en el pase 122)* | **accion M: de RETRATO a PROPIEDAD.** Afirmaba `posteriores_a(110) == []` —una cardinalidad congelada que cada pase volvia roja sin que nada se rompiera (clase de `P399`)— y ahora afirma la invariante: **toda ★ atribuida a un pase posterior esta CLASIFICADA** (meta / umbral / `P403` cita-de-canal / `P404` rechazo), o sea ninguna es una MEDICION sin banda ni fecha. 🔴 Hizo falta ademas `P405`: el clasificador leia LINEAS sobre un corpus duro-envuelto | `python3 test_p351.py` | 🟢 **36/36** *(estaba 33/36)* |
 | 🆕 **`p356-citation-origin/`** *(convertida en el pase 122)* | **accion M: idem.** Afirmaba `len(fuera) == 3` y `sorted(fuera) == [245, 279, 281]`; el dia de la reescritura el conjunto medía **26**. Ahora afirma la propiedad en dos mitades: el conjunto es **no vacio** (si fuera vacio el defecto no existiria y la prueba pasaria por vacuidad) **y** cada miembro esta realmente definido fuera de `patterns.md`, verificado contra `WHERE` | `python3 test_origin.py` | 🟢 **16/16** *(estaba 15/16)* |

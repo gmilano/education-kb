@@ -1,0 +1,24 @@
+## corpus: 488 of 496 shelf repos returned at least one file, 7377680 chars
+## CORPUS_PATHS (16): README.md readme.md README.rst README.txt README.markdown package.json pyproject.toml requirements.txt setup.py setup.cfg composer.json pom.xml Cargo.toml go.mod Gemfile environment.yml
+## calibration: planted slug -> 0 citers (want 0); vishalsachdev/canvas-mcp -> 2 citers (want >0)
+
+## action C -- the 186 NO-ORACLE spellings against 495 neighbours (n=186)
+  verdicts: [('UNCITED', 173), ('CONSENSUS-CONFIRMS', 13)]
+  CITED BY ANY NEIGHBOUR: 13 of 186 (7.0%)
+  prediction was '<40 cited' -> CONFIRMED
+
+  the rows where the neighbours disagree with this KB's spelling:
+
+  most-cited NO-ORACLE rows:
+    AmericasNLP/americasnlp2021                    n=1   UBC-NLP/IndT5
+    CAHLR/OATutor-Content                          n=1   CAHLR/OATutor
+    KualiCo/rice                                   n=1   kuali/rice
+    Pearson-Advance/openedx-lti-tool-plugin        n=1   eduNEXT/openedx-lti-tool-plugin
+    adlnet/xapi-profiles                           n=1   yetanalytics/xapipe
+    dini-ag-kim/school-curriculum-pg               n=1   FWU-DE/schulfach-ontologie
+    elisaado/somtoday-api-docs                     n=1   elisaado/somtoday.js
+    faizan45640/google-classroom-mcp-server        n=1   pnp-v/bo-google-classroom-mcp-server
+    grantholle/powerschool-api                     n=1   443pablo/mcp-powerschool
+    h5p/h5p-php-library                            n=1   crpf-mitadt/Indian-AI-for-Education
+    ink-waffle/moodle-mcp                          n=1   ink-waffle/sisu-mcp
+    ink-waffle/sisu-mcp                            n=1   ink-waffle/moodle-mcp

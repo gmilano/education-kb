@@ -1,0 +1,29 @@
+## p449 -- prose vs data, over 6 markdown files
+## slugs with at least one BOUND licence claim in prose: 431
+## lines where a slug and a licence co-occur and binding REFUSED: 510
+
+  AGREE                      299
+  PROSE-ONLY                 83
+  PROSE-MIXED-INCLUDES-TODAY 29
+  STALE-DATA                 14
+  DATA-ABSTAINS              5
+  CONTRADICT                 1
+
+### 🔴 CONTRADICT -- prose and today's measurement disagree
+  oat-sa/lib-lti1p3-core                         prose=LGPL                   today=GPL         ../../../repos/foundations.md:1689
+
+### 🟡 STALE-DATA -- prose right, published TSV behind (pass 26's class)
+  european-commission-empl/european-learning-model prose=EUPL         today=EUPL        tsv=UNKNOWN     ../../../agents/top.md:1427
+  inepdadosabertos/api                           prose=GPL          today=GPL         tsv=LGPL        ../../../repos/foundations.md:1273
+  oat-sa/qti-sdk                                 prose=GPL          today=GPL         tsv=LGPL        ../../../repos/foundations.md:1439
+  openemis/core                                  prose=GPL          today=GPL         tsv=LGPL        ../../../verticals/solutions.md:801
+  opetushallitus/ataru                           prose=EUPL         today=EUPL        tsv=UNKNOWN     ../../../repos/foundations.md:1357
+  opetushallitus/ehoks                           prose=EUPL         today=EUPL        tsv=UNKNOWN     ../../../repos/foundations.md:1360
+  opetushallitus/eperusteet                      prose=EUPL         today=EUPL        tsv=UNKNOWN     ../../../repos/foundations.md:1354
+  opetushallitus/koski                           prose=EUPL         today=EUPL        tsv=UNKNOWN     ../../../repos/foundations.md:1355
+  opetushallitus/oppijanumerorekisteri           prose=EUPL         today=EUPL        tsv=UNKNOWN     ../../../repos/foundations.md:1359
+  opetushallitus/organisaatio                    prose=EUPL         today=EUPL        tsv=UNKNOWN     ../../../repos/foundations.md:1358
+  opetushallitus/suorituspalvelu                 prose=EUPL         today=EUPL        tsv=UNKNOWN     ../../../repos/foundations.md:1361
+  opetushallitus/valtionavustus                  prose=EUPL         today=EUPL        tsv=UNKNOWN     ../../../repos/foundations.md:1362
+  portabilis/i-educar                            prose=GPL          today=GPL         tsv=LGPL        ../../../verticals/solutions.md:758
+  yunger7/enem-api                               prose=GPL          today=GPL         tsv=LGPL        ../../../intel/market.md:2562

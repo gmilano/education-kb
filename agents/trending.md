@@ -8,6 +8,399 @@ updated: 2026-10-07
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-07 — twenty-eighth pass: all three predictions held on their headline clause and failed on their mechanism, and the layer that was right every time was the prose
+
+⏱️ **Measurement window 2026-10-07 ~05:20 UTC → 08:10 UTC. Every age in days is computed
+against the reference date `2026-10-07`**, passed explicitly to each instrument, so the figures
+reproduce.
+
+🟢 **All three of pass 26's pre-registered predictions were confirmed on their primary clause.**
+🔴 **And all three were wrong about WHY** — each named a mechanism, and in each case the measured
+mechanism was something else. 🔴 **The pass's finding is the one pass 26 wrote down and did not
+act on: this corpus has two layers that can disagree, and after 27 passes nothing compared them.
+Built this pass, the gate finds the prose and the data disagree on 15 of 431 repositories — and
+the prose is right in 14 of 15.** The fifteenth is prose that a defective instrument overwrote,
+and the archive still has it right.
+
+### 🟢 Verification level of this pass, stated before the findings
+
+| Layer | Endpoint / method | Status | Control |
+|---|---|---|---|
+| licence payload | `raw.githubusercontent.com/<slug>/HEAD/<path>` | 🟢 **200** on 412 of 412 | `LICENSE.globant-kb-p447-planted` → **404** ⇒ 🟢 **DISCRIMINATES** |
+| tree enumeration | `git clone --filter=blob:none --no-checkout --depth 1` + `git ls-tree -r` | 🟢 **412 of 412**, 64 s total | planted path → absent ⇒ 🟢 **DISCRIMINATES** |
+| 🆕 shelf cross-reference | 16 manifest/README paths over all 496 shelf slugs | 🟢 **488 of 496** returned ≥1 file, **7,377,680 chars** | planted slug → **0** citers; `vishalsachdev/canvas-mcp` → **2** ⇒ 🟢 **DISCRIMINATES** |
+| 🆕 prose/data gate | 6 published `.md` files vs the measured TSV | 🟢 431 slugs bound, **510** lines refused and counted | 3 defects of its own, each with a negative control ⇒ see Finding 5 |
+| *(blocked, unchanged)* | `api.github.com` · rendered `github.com` | 🔴 **403 · 403** | unchanged since pass 37 |
+| *(no oracle, unchanged)* | case of a slug, on five channels | 🔴 **no channel discriminates** | pass 26's gap, re-confirmed by action C |
+
+### 🔴 Finding 1 — pass 26 corrected three classifiers and shipped none of the corrections to the data, so 21 of the 412 published rows carry the wrong licence today
+
+Pass 26's closing instruction was *"before executing an action over a published set, re-measure the
+set."* Taken literally, that is what stage 0 of action A did — and the set it was sent at turned out
+to be stale in a way nobody had looked for. **Presence is robust: a grant that was found stays
+found. What is not robust is the FAMILY attributed to it**, and pass 26 reordered `family_of` twice
+without ever re-running it over the shelf.
+
+The symptom needed no fetch at all. The published family distribution over the 412 contained
+**zero MPL-2.0 rows and zero EUPL rows** — for two of the most common licences in this corpus, one
+of which eight Finnish national education services on this very shelf are published under in prose.
+
+Re-read and re-classified, **21 of 412 rows move (5.1%)**:
+
+| Transition | n | What it is |
+|---|---|---|
+| `UNKNOWN` → **EUPL** | 9 | the EMEA public-sector tier: 8 × `Opetushallitus/*` + `european-commission-empl/European-Learning-Model` |
+| `LGPL` → **GPL** | 7 | 🔴 **new this pass, and the commercial verdict inverts** — see Finding 2 |
+| `GPL` → **MPL-2.0** | 5 | pass 26's own five, corrected in prose and never in the data |
+
+🔴 **The five MPL rows are the sharpest case, because pass 26 published the correction as a table.**
+`repos/foundations.md` carries, written one pass ago, a table headed *"Repo | Filed | Actually, from
+the first line of its payload"* listing `dequelabs/axe-core`, `ocrmypdf/OCRmyPDF`, `coqui-ai/TTS`,
+`idiap/coqui-ai-TTS` and `edrys-org/edrys` as `GPL → MPL-2.0`, under the sentence *"the prose was
+right and the measurement was wrong."* `p436`'s `payloads.tsv` still said **GPL** for all five when
+this pass started. The correction was written for humans and never written back to the layer a
+compiler reads.
+
+🟢 **Corrected distribution over the 412:** MIT 215 · Apache-2.0 72 · GPL 42 · AGPL-3.0 23 ·
+UNKNOWN 13 · BSD 10 · **EUPL 9** · ECL-2.0 8 · CC-BY 7 · **MPL-2.0 5** · LGPL 4 · CC0-1.0 2 · ISC 2.
+
+🆕 **`Opetushallitus/valtionavustus` is a ninth Finnish EUPL service**, and pass 26's prose names
+eight. It is EUPL-1.1, 652 B, state-grant administration for education providers.
+
+### 🔴 Finding 2 — `P452`: seven repositories published LGPL are GNU GPL **version 2**, and the only thing deciding it was where a truncation window fell
+
+`family_of` probes LGPL before GPL over `text[:4000]`. The three GNU licences name each other
+inside their own texts, so that window picks whichever cross-reference it happens to reach.
+Measured, on flattened offsets of real payloads from this shelf:
+
+| Payload | `"gnu lesser general public license"` at | Inside the 4000-char window? | Returned |
+|---|---|---|---|
+| **GPL-2.0** — `oat-sa/qti-sdk` | **784** (its Preamble recommends the LGPL) | 🔴 **yes** | 🔴 `LGPL` |
+| **GPL-3.0** — `GibbonEdu/core` | **34,143** (its closing notes do) | 🟢 no | 🟢 `GPL` |
+
+So the classifier was **correct for every GPL-3.0 payload and wrong for every GPL-2.0 payload**, and
+nothing but the constant `4000` separated the two. Audited row by row, **7 of the 11 rows published
+as LGPL open with `GNU GENERAL PUBLIC LICENSE Version 2, June 1991`:**
+
+| Repo | Published | Actually | Why it matters |
+|---|---|---|---|
+| `OpenEMIS/core` · `openemis/core` | LGPL | 🔴 **GPL-2.0** | education MIS used by ministries; **two rows, one repository** — a live `p443` case collision |
+| `portabilis/i-educar` | LGPL | 🔴 **GPL-2.0** | LATAM — Brazilian municipal school system |
+| `oat-sa/qti-sdk` · `oat-sa/lib-lti1p3-core` | LGPL | 🔴 **GPL-2.0** | the assessment/LTI standard tier |
+| `inepdadosabertos/api` · `yunger7/enem-api` | LGPL | 🔴 **GPL-2.0** | LATAM — Brazilian national exam data |
+| `Tampere/trevaka` · `untisapi/untis4j` · `openeducat/openeducat_erp` · `espoon-voltti/evaka` | LGPL | 🟢 **LGPL** (2.1, 3.0, 3.0, REUSE notice) | correct; the negative half of the control |
+
+🔴 **The commercial verdict inverts.** The LGPL permits linking from proprietary code across a
+library boundary; **GPL-2.0 does not.** Every one of the seven is a component a Globant engagement
+would link against, not fork.
+
+🟢 **Fixed by resolving the GNU family from the payload's TITLE region (first 400 flattened chars)
+before the wide window**, with **10 controls**: a real GPL-2.0 whose Preamble names the LGPL inside
+the old window, plus negatives holding LGPL-2.1, LGPL-3.0 (which names the GPL 90 characters after
+naming itself), GPL-3.0, AGPL-3.0, MPL, EUPL, and a titleless prose grant that must still resolve
+through the retained wide window. `p436`'s suite **15/15** and `p441`'s **40/40**, both unchanged.
+
+### 🔴 Finding 3 — `P447` and `P448`: the function pass 26 built to replace a verdict with a count was undercounting by two independent mechanisms
+
+Action B asked for *"the count of payloads naming more than one family"* using `family_marks()`.
+That function had two defects, and both had already been diagnosed in this corpus — one of them one
+function away and one pass earlier.
+
+🔴 **`P447` — the patterns are written with literal spaces and licence prose wraps at ~72 columns.**
+On `dequelabs/axe-core`'s real payload, lines 74–76 read `"...the GNU Lesser⏎General Public
+License, Version 2.1, the GNU Affero General Public⏎License, Version 3.0"`. Both names straddle a
+break, so the function returned `{MPL, GPL}` where the truth is `{MPL, GPL, LGPL, AGPL}`. **Pass 26
+diagnosed this exact mechanism** — *"which of the three fired was decided by LINE WRAPPING"* — and
+fixed `family_of` by **reordering**, which cures the symptom where the granting licence's own title
+happens not to wrap and does nothing for a function whose purpose is to count.
+
+🔴 **`P448` — the truncation window, and it misses by 36 characters.** `family_marks` reads
+`text[:6000]`. The **EUPL-1.2 Appendix**, the one section on this shelf that names five other
+families, begins at character **5964** of the European Commission's own 13,699-character payload:
+
+```
+window 6000   ['EUPL']
+full text     ['AGPL', 'CC', 'EPL', 'EUPL', 'GPL', 'LGPL', 'MPL']
+```
+
+`p441` chose 6000 to bound the cost of a classifier that only had to pick ONE family, where reading
+further cannot change the answer. Carried over to a function that COUNTS, the same constant
+silently caps the count.
+
+🟢 **So action B has two true answers, and both are published with their invocation:**
+
+| Window | Payloads naming >1 family | |
+|---|---|---|
+| `text[:6000]` — `p441` as built | **38 of 412** | 9.2% |
+| full text — `p446` corrected | **73 of 412** | 17.7% |
+
+**37 rows were undercounted**, the worst by six families.
+
+### 🔴 Finding 4 — `P449`: one label, `CC-BY`, covers the only Creative Commons distinction that decides whether Globant may use the repository
+
+`family_of` returns `CC-BY` for every Creative Commons payload that is not CC0. Read line by line,
+the **7** rows it labels that way are three different commercial answers:
+
+| Repo | Actual licence | Commercial |
+|---|---|---|
+| `EbookFoundation/free-programming-books` | Attribution 4.0 | 🟢 permitted |
+| `microsoft/autogen` | Attribution 4.0 *(docs; code is MIT — see Finding 6)* | 🟢 permitted |
+| `Yunfeng-Wan/CSTutorBench` | Attribution-**NonCommercial** 4.0 | 🔴 **prohibited** |
+| `facebookresearch/seamless_communication` | Attribution-**NonCommercial** 4.0 | 🔴 **prohibited** |
+| `Jona-Zwetsloot/Somtoday-Mod` | Attribution-**NonCommercial-ShareAlike** 4.0 | 🔴 **prohibited** |
+| `openstax/osbooks-biology-bundle` | Attribution-**NonCommercial-ShareAlike** 4.0 | 🔴 **prohibited** |
+| `sign/translate` | 🔴 **not Creative Commons at all** — see below | 🔴 **paid** |
+
+🔴 **5 of 7 rows published as `CC-BY` are commercially unusable or mislabelled**, and the label
+reads as "attribution only" to anyone who does not re-open the payload.
+
+🔴 **The sharpest single row on this shelf: `sign/translate` is published `CC-BY` and is a paid
+dual-tier licence.** Its `LICENSE.md` (17,404 chars, © 2022 Nagish Inc.) is a two-tier document: a
+*Free license* tier of **CC BY-NC-SA 4.0** for *"individuals, non-profit organizations, and
+educational institutions"*, and a **Commercial License** tier stating *"a separate license is
+required for for-profit commercial organizations."* `family_of` finds `"creative commons"` at
+character **848** — inside the free tier's heading — and returns `CC-BY`. **Globant is a for-profit
+commercial organisation.** 🟢 This KB's prose already said so, in three files, in exactly these
+terms ("Non-OSI, dual-tier"); only the data layer said `CC-BY`.
+
+🟢 **`openstax/osbooks-biology-bundle` at BY-NC-SA independently corroborates `P328`** (pass 106's
+finding that OpenStax cession narrows from `CC BY 4.0` to `CC BY-NC-SA 4.0`) through a completely
+different channel.
+
+⚠️ **Declared, against this pass:** the first probe of this table used `head -1` and read a blank
+first line on `seamless_communication`, missing its NonCommercial clause. A positional assumption
+about where the answer lives — the same class as everything else in this pass.
+
+### 🔴 Finding 5 — `P450`: the gate this corpus has needed for two passes, and the three defects it had to find in itself first
+
+Pass 26 ended with a diagnosis it did not act on: *"A corpus that versions both prose and
+instruments has to reconcile them, and nothing in this repository did — `p342` explicitly chose the
+other direction, asserting 'against the TSVs, not against the prose'."* Pass 28 ran three unrelated
+actions and landed in the same place a third time. So the gate got built.
+
+🔴 **Its first build produced 16 `CONTRADICT` rows and eleven were its own defects.** Each is now a
+control:
+
+- **`P451` — unanchored acronyms.** `MPL` matches inside "exa**mpl**e" and `ECL` inside
+  "edgam**ecl**aw", so `blackboard/BBDN-lti-1p3-tool-example`, `UOC/java-lti-1.3-provider-example`
+  and `yh2072/edgameclaw` were all reported as prose claims of licences nobody had written. **This
+  is pass 26's finding 2 re-imported one pass later** — there the bare pattern `r"UNLICENSE"`
+  matched inside `UNLICENSED`, npm's documented value for a *refusal* to grant. Third time this
+  corpus has re-imported a known defect into a from-scratch instrument (`p432`).
+- **`P385` at cell level.** `repos/foundations.md:607` reads *"kuali/kc | **AGPL-3.0** … after
+  `frappe/lms` and `frappe/erpnext`"* — three slugs, one licence, belonging to the first. The gate
+  bound AGPL-3.0 to all three. `P385` measured exactly this bias at LINE level and `P391` narrowed
+  it by reading the CELL; the gate re-imported it one level down. Now: **one slug per cell, or
+  refuse.**
+- **Contradicting an abstention.** Six rows were `CONTRADICT` against `today=UNKNOWN`. An
+  instrument that declined to answer has not contradicted anything (`P160`, `P184`). Now a separate
+  `DATA-ABSTAINS` class.
+- **And two more the controls caught, not the sweep:** `main/LICENSE` has slug *shape*, so the
+  licence of every row bound to the PATH instead of the repository; and the slug regex could not
+  start inside a URL, so bare `github.com/owner/repo` mentions — the commonest form in this corpus
+  — matched **nothing**.
+
+🟢 **The gate, after its own defects were closed (`59/59` controls):**
+
+| Verdict | n | |
+|---|---|---|
+| `AGREE` | **299** | prose and today's measurement agree |
+| `PROSE-ONLY` | 83 | prose names a family for a slug the data layer has no row for |
+| `PROSE-MIXED-INCLUDES-TODAY` | 29 | the corpus says two things; the gate **abstains** |
+| 🟡 `STALE-DATA` | **14** | **prose right, published data behind** |
+| `DATA-ABSTAINS` | 5 | classifier gap, not a prose error |
+| 🔴 `CONTRADICT` | **1** | |
+
+**510 lines where a slug and a licence co-occur and the binding rules refused** — published as a
+denominator, not hidden.
+
+🔴 **So prose and data disagree on 15 of 431 repositories, and the prose is right in 14 of 15.**
+Added to pass 26's four-for-four, this corpus's record is now **eighteen for nineteen** in favour of
+the sentence a human wrote.
+
+### 🔴 Finding 6 — the nineteenth case, and it is the one that matters: a correct fact was overwritten by the defective instrument, and the archive still has it right
+
+The gate's single `CONTRADICT` is `oat-sa/lib-lti1p3-core`: prose **LGPL-2.1**, payload
+**`GNU GENERAL PUBLIC LICENSE Version 2, June 1991`**. Read alone, that is the first row in 27
+passes where the prose loses.
+
+🔴 **It is not.** The pre-reset archive carries `GPL-2.0` for this repository in **nine** places,
+with its payload size and fingerprint (`18.091 B`, `f9c375a1be4a`), and in one of them it is a
+deliberate, reasoned finding:
+
+> *"🔴 **La excepción que rompe la simetría y hay que mirarla:** `oat-sa/lib-lti1p3-core` **es**
+> librería de protocolo y aun así es **GPL-2.0**. La regla «librería ⇒ permisivo» no es ley: es
+> correlación de 3 de 4. Se dice en vez de redondearla."*
+
+So the current prose did not get it wrong independently. **It regressed** — a correct, argued
+GPL-2.0 finding was rewritten as LGPL-2.1 after the 2026-10-06 reset, by a pass that trusted
+`family_of` over the archive. And `family_of` returns LGPL for GPL-2.0 payloads, which is `P452`.
+
+🔴 **And advice was then built on the regression.** `intel/market.md` reads:
+
+> *"⚠️ The EMEA-specific licence trap on this tier is LGPL, not AGPL. Two European
+> interoperability assets this KB holds are LGPL — `Citolab/qti-components` (LGPL-3.0) and
+> `oat-sa/lib-lti1p3-core` (LGPL-2.1, 82 d) — and LGPL's dynamic-linking boundary is a different
+> conversation from AGPL's network-use clause. **Neither is a blocker**; both need the architecture
+> decided in week one."*
+
+🔴 **Both repositories are misdescribed.** `oat-sa/lib-lti1p3-core` is **GPL-2.0** and
+`Citolab/qti-components` is **GPL-3.0** (`LICENSE.md`, verified this pass). Neither is LGPL, so the
+dynamic-linking boundary the paragraph rests on does not exist, and *"neither is a blocker"* inverts
+the archive's explicit warning that this one **is** copyleft despite being a library. Corrected in
+`intel/market.md` and `repos/foundations.md` this pass.
+
+🔵 **`Citolab/qti-components` also shows the gate's own blind spot honestly.** It is filed
+`PROSE-MIXED-INCLUDES-TODAY`, because across nine mentions the corpus says both GPL and LGPL — so
+the gate abstained on a row that carries a live error. That bucket holds **29** rows and is
+pre-registered below.
+
+### 🔴 Pre-registered actions from pass 26 — outcomes
+
+| # | Action | Prediction written before running it | Outcome |
+|---|---|---|---|
+| **A** | tree-enumerate the **412 `LICENSED`** rows; compare the root family against every other licence text in the tree | 🔴 *"more than five"* repositories carry a second, different grant below the root, *"concentrated in the dual-licensed and monorepo tiers"*; interesting class = permissive root, **copyleft** deeper | 🟢 **Confirmed: 9 `DIVERGENT-OWN` of 412** (plus 47 `DIVERGENT-BUNDLED`, 33 `CONCORDANT`, 323 `ROOT-ONLY`). 🔴 **Mechanism FALSIFIED — the concentration is the code/documentation boundary, not dual-licensing.** 🔴 **And the interesting class is EMPTY: 0 of 412.** See below |
+| **B** | re-measure `family_marks()` over all 412; publish the count naming more than one family | ⚠️ *"more than 20"* of 412; *"the MPL/EUPL/GPL-with-exception trio to account for most of them"* | 🟢 **Confirmed on either window: 38 (9.2%) or 73 (17.7%).** 🔴 **Second clause FALSIFIED — the trio is 6 of 73 (8%).** 🔴 **And the instrument was undercounting twice (`P447`, `P448`)** |
+| **C** | resolve the **186 `NO-ORACLE`** spellings by a fourth channel: the slug as written in another shelf repository's manifest or README, *"treating 495 cross-references as a consensus vote"* | 🔴 fewer than **40** of 186 cited by any other repository, *"which would make the gap structural"* | 🟢 **Confirmed by a wide margin: 13 of 186 (7.0%).** 🔴 **And the premise of independence does not hold** — see below |
+
+#### 🔴 Action A's mechanism, and why the inversion matters
+
+The prediction named dual-licensing and monorepos. **Not one of the 9 is a `LICENSE-MIT` /
+`LICENSE-APACHE` dual pair.** Four of the 9 are an explicit **code/documentation split**:
+
+| Repo | Root | Deeper own grant |
+|---|---|---|
+| `microsoft/autogen` | CC-BY (docs) | **`LICENSE-CODE`** = MIT |
+| `ankitects/anki` | AGPL-3.0 | `docs-site/LICENSE` = CC BY-**SA** 4.0 |
+| `learnhouse/learnhouse` | AGPL-3.0 | `docs/LICENSE` = MIT |
+| `yongsoojoo/esd2026-agent-workflow` | MIT | **`LICENSE-docs`** = CC BY 4.0 |
+| `Opetushallitus/ehoks` · `SapuSeven/BetterUntis` · `facebookresearch/seamless_communication` · `mlcommons/croissant` | EUPL · GPL · CC-BY · Apache-2.0 | a sub-component one directory down |
+| `SidneyBissoli/educabR` | UNKNOWN | `LICENSE.md` = MIT — the root file did not classify |
+
+🔴 **The pre-registered interesting class — permissive root, reciprocal grant deeper — is empty.**
+Zero of 412 pair a permissive root with GPL/AGPL/LGPL/MPL/EPL/EUPL below it. Every divergence runs
+the *other* way (copyleft or CC root, permissive component) or permissive→permissive. Under the
+axis written into the instrument **before** the sweep ran it reads **1**, and that single row
+(`yongsoojoo`, MIT root → `LICENSE-docs`) flags only because that axis placed `CC-BY` in the
+copyleft bucket; the payload is plain **Attribution 4.0** and is not reciprocal. **Both readings
+published, neither re-cut after the fact.**
+
+🔵 **The instrument also had to narrow a bucket its own pass had a prediction over.**
+`LICENSE-3RD-PARTY.txt` sits at root depth, so `p441`'s depth rule called a third-party *notice*
+`axe-core`'s second grant. A filename that disclaims itself is `P342` on the axis of the name.
+The rule added can only **remove** rows from `DIVERGENT-OWN` — the bucket the ">5" prediction is
+scored on — and it was applied anyway, before scoring, with 9 controls holding `LICENSE-MIT`,
+`LICENSE-APACHE`, `COPYING.LESSER` and `aoe-web-backend/LICENSE` as own grants.
+
+#### 🔴 Action B's mechanism: it is not the exotic licences, it is the GNU family citing itself
+
+| Combination | n | share of 73 |
+|---|---|---|
+| `AGPL,GPL,LGPL` | **32** | 44% |
+| `AGPL,GPL` | 22 | 30% |
+| `GPL,LGPL` | 10 | 14% |
+| `AGPL,GPL,LGPL,MPL` | 5 | 7% |
+| `AGPL,MIT` · `Apache,CC` · `CC,MIT` · `AGPL,CC,EPL,EUPL,GPL,LGPL,MPL` | 1 each | 5% |
+
+**64 of 73 (88%) are purely intra-GNU.** The mechanism is boilerplate, verified on
+`GibbonEdu/core`: GPL-3.0 **§13** is titled *"Use with the GNU Affero General Public License"*
+(line 552) and its closing notes recommend the LGPL (line 672), so every GPL-3.0 payload carries
+three GNU marks. `AGPL,GPL,LGPL = 32` is simply *"32 of these repositories are GPL-3.0."*
+
+🟢 **And the conclusion the action drew does not follow.** It proposed that a large count makes the
+coarse `p170` vocabulary *"unfit for this shelf."* It does not: **multi-mark is not ambiguous.** For
+the 64 intra-GNU rows the granting licence states its own name in its title, which is exactly what
+`P452` now reads. The genuinely ambiguous set — where a substring classifier structurally cannot
+decide which named licence is granted — is **9 of 412 (2.2%)**: the 5 MPL, the 1 full EUPL, and
+`AGPL,MIT` · `Apache,CC` · `CC,MIT`. **The vocabulary is fit for 97.8% of this shelf.**
+
+#### 🔴 Action C: the channel works, discriminates, and refutes its own premise
+
+Corpus: **488 of 496** shelf repositories returned at least one of 16 manifest/README paths,
+**7,377,680 characters**. Calibrated both ways before any negative was believed.
+
+| Verdict | n |
+|---|---|
+| `UNCITED` | **173** |
+| `CONSENSUS-CONFIRMS` | **13** |
+| `CONSENSUS-DIFFERS` | **0** |
+| `CITERS-DISAGREE` | **0** |
+
+🟢 **13 of 186 (7.0%) — prediction confirmed, and the gap is more structural than "<40" implied.**
+🟢 **Zero disagreements:** every one of the 13 is spelled exactly as this KB spells it, so the
+channel contradicts nothing.
+
+🔴 **The premise — *"495 independent spellings by third parties"* — does not hold.** Audited by
+owner, **5 of the 13 citations come from the same owner one repository over**
+(`ink-waffle/moodle-mcp` ↔ `ink-waffle/sisu-mcp`, `CAHLR/OATutor` → `CAHLR/OATutor-Content`,
+`elisaado/somtoday.js` → `elisaado/somtoday-api-docs`, `shawnmcb/a11y-mcp-server` →
+`shawnmcb/claude-a11y-skills`). That is `p443`'s already-failed self-link channel one directory
+over, not a third party. Of the 8 other-owner citations, **3 are fork or upstream pairs this KB
+already holds** — `kuali/rice` → `KualiCo/rice`, `eduNEXT/` → `Pearson-Advance/openedx-lti-tool-plugin`,
+and `pnp-v/bo-google-classroom-mcp-server` → `faizan45640/google-classroom-mcp-server`, which is
+pass 26's own `FOREIGN-PACKAGE` row.
+
+🔴 **Genuinely independent third-party citations: 5 of 186 (2.7%)** — `grantholle/powerschool-api`,
+`dini-ag-kim/school-curriculum-pg`, `AmericasNLP/americasnlp2021`, `h5p/h5p-php-library`,
+`adlnet/xapi-profiles`. **A repository nobody else cites has no external spelling, and no further
+channel will invent one.** The 173 are not a sampling artefact.
+
+### 🔵 Pre-registered for the next pass
+
+| # | Action | Prediction written **before** running it |
+|---|---|---|
+| **A** | Adjudicate the **29 `PROSE-MIXED-INCLUDES-TODAY`** rows the gate abstained on, by binding each mention to its own **pass date** and taking the most recent as the corpus's current claim | 🔴 Expect **more than 5** to be a live regression of the `oat-sa/lib-lti1p3-core` shape — an older correct statement overwritten by a newer wrong one — and expect the newer statement to be the one agreeing with the **pre-`P452`** classifier, which would make instrument damage the dominant source of prose error rather than human error |
+| **B** | Propagate the corrected `family_of` to every published census that consumed it (`holder.tsv`, `homepage.tsv`, the `p250` commercial sweep, the `p419` copyleft census) and publish the count of **downstream** rows that move | ⚠️ Expect **more than 21** — strictly more than stage 0's own count, because the 7 `LGPL → GPL` rows change the `p250` commercial verdict and the `p419` copyleft classification independently, so one payload correction moves more than one published row. If the count is **not** larger, the censuses are not actually reading the shared classifier and `p294`'s wiring defect is live again |
+| **C** | Run the `P449` qualifier split as a **sweep** over every `CC-BY` and `CC0-1.0` row on the whole shelf, not just the 412, and add `NC`/`SA` as published columns | 🔴 Expect the **NonCommercial** share to exceed **40%** of CC rows, and expect at least one row outside the 412 to be, like `sign/translate`, not Creative Commons at all. A `CC-BY` label that is wrong 5 times in 7 is not a vocabulary gap, it is a **commercial** defect, and it is the one a client engagement pays for |
+
+### The mandatory queries, run with the year **computed** (2026), not hardcoded
+
+| Query | Result against this KB |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **0 new** — openclaw (385.4k★), dify (151.6k★), browser-use (108.1k★), Mem0 (62.7k★), AutoGen (60.3k★), Flowise (55.2k★), CrewAI, LangGraph, Hermes Agent, `free-ai-agents-resources`: all held by string, none education-specific |
+| `github trending education AI 2026` | 🔴 **0 new** — `ai-engineering-from-scratch`, Awesome LLM, Semantic Kernel (27,470★), `speedyapply/2026-AI-College-Jobs` (5.2k★): curricula *about* AI and a job list, not education product repos |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **0 new** — OpenEduCat, Odoo, ERPNext/Frappe, and **CK-ERP** for the fourth time, the 2010 SourceForge-era Drupal connector rejected by pass 24 on currency grounds |
+| `AI education industry trends 2026` | 🔴 **0 new** — $7.52B→$10.6B at 40.9%, $79.6B by 2034 at 31.35%, 92% student use, 86% higher-ed, cloud 71.22%: every figure checked by string and already held |
+| `AI education {North America, EMEA, APAC, LATAM} 2026 adoption regulation players` | 🔴 **0 new repositories.** NA $951M→$2,303.2M/15.9%, 41.7% of forecast growth, 36% share, 10% with formal AI guidelines, 71% of teachers untrained, Colorado/Texas; EMEA 94% training intent; APAC 48%/57%, Singapore consultations, LearnUpon Sydney, TCS–Pearson, Alteryx Academy; LATAM third-largest genAI download market, 99%/85%, UNESCO IESALC 200 HEIs/19 countries, Ednova — **all held by string** |
+
+🔴 **Seventeenth consecutive pass in which the mandatory query set produced no new repository**, and
+the eleventh with no new instrument.
+
+⚠️ **One recency trap recorded rather than ingested.** A 2026-dated regional query surfaced the
+Council of Europe's *"2nd Working Conference on regulating the use of AI systems in education"* as
+current. It was held **24–25 October 2024**. This KB already holds its downstream products — the
+**Compass for AI and Education**, the **EDU IA** committee, and the planned education-sector legal
+instrument complementing the **Framework Convention on AI, Human Rights, Democracy and the Rule of
+Law**. Logged because an undated conference page is indistinguishable from news, which is the
+currency rule pass 24 applied to CK-ERP.
+
+### The method note for this pass
+
+🔵 **Three predictions held and all three were right for the wrong reason**, which is a sharper
+version of pass 26's lesson rather than a repeat of it. Pass 25 learned that a pre-registration is
+worth running even when you expect it to be wrong. Pass 26 learned that a pre-registration takes
+its denominator as given. **Pass 28's is that a prediction's threshold and its mechanism fail
+independently, and only the threshold gets scored.** All three actions here would have been filed
+"confirmed" by their own stated criterion while being wrong about dual-licensing, about exotic
+licences, and about third-party independence.
+
+🔴 **And the structural finding is about this repository, not about education.** Four of pass 26's
+five findings were instruments disagreeing with sentences already in these files. Pass 28 added
+four more and then measured the whole corpus: **the prose is right 18 times in 19.** Pass 26
+diagnosed this and proposed nothing; `p342` had explicitly chosen to assert *"against the TSVs, not
+against the prose."* That choice was backwards — the TSVs are the layer that has been wrong every
+time — and it cost real money in one measurable place, where a GPL-2.0 protocol library the archive
+had deliberately flagged as *"the exception that breaks the symmetry"* was demoted to LGPL by a
+defective classifier and then written up in `intel/market.md` as *"not a blocker."*
+
+🔵 **The cheap rule that follows, and it is not "trust the prose":** the prose is right because it is
+the layer where a human read the actual document, and it is *stale* because nothing re-checks it. So
+the gate runs **both directions** — it flags `CONTRADICT` when prose loses and `STALE-DATA` when
+data loses — and it **abstains** rather than adjudicating 29 rows where the corpus contradicts
+itself. The abstention is the honest part, and it is pass 29's first action.
+
+---
+
 ## 2026-10-07 — twenty-sixth pass: all three predictions held, and all three instruments were wrong somewhere this KB's own prose was already right
 
 ⏱️ **Measurement window 2026-10-07 ~02:40 UTC → 05:10 UTC. Every age in days is computed against
@@ -14545,7 +14938,7 @@ esta tabla son el argumento: **583 ★ / 0 descargas** contra **8 ★ / 950 desc
 ### 🔴 La misma inversión, en la fila que más le importa a esta KB: el conector de LMS más grande tiene 8 estrellas
 
 El pase 26 declaró a `vishalsachdev/canvas-mcp` (**MIT**, 269 ★, «102–103 tools») **el conector permisivo de LMS más
-grande que vio esta KB**, y el pase 27 agregó una *advertencia de cifra* porque el número de tools variaba según la
+grande que vio esta KB**, y el pase 28 agregó una *advertencia de cifra* porque el número de tools variaba según la
 versión (40+, 80+, 116). **La advertencia era correcta y el título caducó.**
 
 | Conector Canvas | Licencia | ★ | Tools | Escribe | Commits / versiones |
@@ -14564,7 +14957,7 @@ grading standards, users, groups, enrollments, discussions, modules, pages, cale
 accounts, analytics, outcomes, content exports, course setup, link audits, **accessibility audits**, appointment groups,
 student workflows, student search, dashboard* e *instructor attention workflows*.
 
-🔵 **Y resuelve la advertencia de cifra del pase 27 en vez de heredarla:** acá el número **165** aparece igual en el
+🔵 **Y resuelve la advertencia de cifra del pase 28 en vez de heredarla:** acá el número **165** aparece igual en el
 campo `description` del paquete y en el README, sobre 62 versiones publicadas. **Es una cifra citable**, a diferencia de
 la de `canvas-mcp`. 🔵 **Dos detalles que valen para una propuesta:** declara **MCP 1.x** (versión de protocolo, no
 «compatible con MCP»), y trae **`accessibility audits`** como categoría propia — el único conector de LMS de esta base
@@ -14749,7 +15142,7 @@ cierto del servidor y **falso del SDK**. Quien integre por npm no hereda la puer
 
 🔵 **Lo que esto le hace al mapa de conectores: Canvas tiene al menos cinco puertas MIT y Moodle cuatro más un cliente
 envolvible.** La capa de conectores **ya no es escasa** — es la capa mejor abastecida de esta KB, y es toda permisiva
-salvo dos piezas. ⚠️ **Y eso erosiona por segunda vez la tesis del pase 27** (*«las LMS son copyleft pero las puertas son
+salvo dos piezas. ⚠️ **Y eso erosiona por segunda vez la tesis del pase 28** (*«las LMS son copyleft pero las puertas son
 MIT»*): la primera grieta fue Open edX (AGPL y en proceso); la segunda es que **de las puertas de Moodle, una es
 AGPL-3.0** (`csmediapro/moodle-mcp-server`, que esta KB ya tenía y que este pase re-fecha: **8 versiones en npm como
 `moodle-mcp-server-aql`, la última del 2026-10-01** — está vivo). **La tesis vale por mayoría, no por regla.**
@@ -15068,7 +15461,7 @@ que **xAPI/LRS no tiene puerta MCP** (**gap 60**). **Es falso, y la refutación 
 | Dónde | Desde cuándo | Qué dice |
 |---|---|---|
 | `agents/top.md`, tabla principal (fila `learnmcp-xapi`) | **pase 6** | *«Servidor MCP que le da a un agente memoria de aprendizaje conforme al estándar: tres tools sobre un Learning Record Store xAPI»* |
-| `agents/top.md`, mapa por estándar | **pase 27** | **`| xAPI | ✅ learnmcp-xapi (desde el pase 6) |`** |
+| `agents/top.md`, mapa por estándar | **pase 28** | **`| xAPI | ✅ learnmcp-xapi (desde el pase 6) |`** |
 | `repos/foundations.md`, capa de telemetría | **pase 6** | `learnmcp-xapi` **MIT**, con `lrsql` (Apache-2.0) y `Ralph` (MIT) |
 | `compose/patterns.md` | varios | **más de quince patrones** ya componen `learnmcp-xapi` + `lrsql` |
 
@@ -15704,7 +16097,7 @@ su archivo de metadatos»*) **y este pase la repitió de todos modos.** Dos conc
 —138 ★ para un repo que el test dice que no existe—, **la contradicción se resuelve antes de publicar**, no después. El
 registro viejo fue el que tenía razón.
 
-## 2026-10-02 (pase 30) — la ausencia más valiosa de esta KB **la cerró el propio proyecto**: Open edX tiene conector MCP oficial, y es **AGPL-3.0 y en proceso**, así que lo que se rompe no es el gap sino **la tesis de composición del pase 27**
+## 2026-10-02 (pase 30) — la ausencia más valiosa de esta KB **la cerró el propio proyecto**: Open edX tiene conector MCP oficial, y es **AGPL-3.0 y en proceso**, así que lo que se rompe no es el gap sino **la tesis de composición del pase 28**
 
 **6 artefactos verificados de primera mano (4 leyendo código fuente, 1 ejecutando el servidor, 1 en el registro de
 paquetes), 3 altas, 1 tesis propia refutada, 1 conclusión propia corregida, 2 nombres cerrados.**
@@ -15723,7 +16116,7 @@ comercial. **Ya no lo es.**
 
 ---
 
-### 🔴 El hallazgo del pase: **el gap 48 lo cerró Open edX, no un tercero — y la licencia de la puerta invierte la conclusión del pase 27**
+### 🔴 El hallazgo del pase: **el gap 48 lo cerró Open edX, no un tercero — y la licencia de la puerta invierte la conclusión del pase 28**
 
 Esta KB sostuvo durante tres pases que **Open edX era el único LMS grande sin puerta de agente** (gap 48), y los pases
 28 y 29 gastaron su esfuerzo principal en medir la superficie REST para cotizar el conector que faltaba (**P55**).
@@ -15735,7 +16128,7 @@ prosa):
 - **`openedx-mcp` 0.1.5** — *«Open edX admin operations exposed as an MCP facade for staff/superusers (Ulmo)»*.
 - **`tutor-contrib-openedxmcp` 0.1.7** — *«Tutor plugin: MCP server + openedx-mcp Django app»*, Tutor local y Kubernetes.
 
-🔴 **Por qué esto rompe una tesis propia y no sólo cierra un gap.** El pase 27 escribió la frase que organizó tres pases
+🔴 **Por qué esto rompe una tesis propia y no sólo cierra un gap.** El pase 28 escribió la frase que organizó tres pases
 de trabajo: *«las LMS son copyleft pero las puertas son MIT, y por eso se pueden componer»*. Esa frase descansaba en una
 propiedad **arquitectónica**, no legal: las puertas de Moodle y Canvas son **procesos aparte que hablan REST**, así que
 llevan su propia licencia. **Esta puerta no.** Leído del propio paquete:
@@ -15848,7 +16241,7 @@ operaciones listadas bajo dos grupos a la vez**. Ejemplos: `getStudentsForClass`
 `studentsmanagement`; los cinco métodos de *course components* aparecen en `coursecomponentsmanagement` **y** en
 `coursesmanagement`. **32 alias, 32 entradas de más, y el servidor registra cada operación una sola vez.**
 
-| Medición | CaSS (pase 27) | `oneroster-ts` (este pase) |
+| Medición | CaSS (pase 28) | `oneroster-ts` (este pase) |
 |---|---|---|
 | Operaciones del adaptador | 61 | **132 distintas** (164 con alias) |
 | Expuestas como tools | **6** | 🔵 **132 — el 100 %** |
@@ -16133,7 +16526,7 @@ Cuatro búsquedas globales y cuatro regionales, con el año **calculado** (2026)
   métodos de `oneroster-ts`, **contados**; la licencia de los dos repos nuevos, **leída del archivo `LICENSE`**; la
   ausencia de MCP en OpenCASE, **leída del README crudo**.
 - ❌ **No medido:** **ninguna llamada HTTP contra una instancia de Open edX ni de OpenCASE.** Sigue en pie el límite
-  del pase 27 (no se instala código de terceros). **OAuth2, *scopes*, *rate limits* y forma de las respuestas siguen
+  del pase 28 (no se instala código de terceros). **OAuth2, *scopes*, *rate limits* y forma de las respuestas siguen
   sin verificar en las dos plataformas.**
 - ❌ **No medido:** el `tools/list` real de `oneroster-ts`. **164 es conteo de métodos de SDK, no de tools servidas.**
 - ❌ **No medido:** la forma exacta de las rutas de OpenCASE. **Los dos documentos del repo se contradicen** (uno
@@ -16154,7 +16547,7 @@ Cuatro búsquedas globales y cuatro regionales, con el año **calculado** (2026)
 ## 2026-10-01 (pase 28) — el eje conector rinde por **cuarta vez**, y la corrección es de método: **la puerta MCP se esconde adentro de un SDK**, no detrás de un nombre `*-mcp`
 
 **5 repos verificados de primera mano, 3 nuevos para esta KB, 1 control negativo, 1 cifra de agregador refutada en la
-dirección contraria a la esperada.** Este pase ejecutó las **acciones 1 y 2** del pase 27. Las dos rindieron, y la 2
+dirección contraria a la esperada.** Este pase ejecutó las **acciones 1 y 2** del pase 28. Las dos rindieron, y la 2
 **volvió a corregir la premisa de un pase anterior** — es la **cuarta vez consecutiva** que el error estuvo en el
 muestreo y no en la fuente.
 
@@ -16164,11 +16557,11 @@ muestreo y no en la fuente.
 | [`paulocymbaum/ed-tech-system-mcp`](https://github.com/paulocymbaum/ed-tech-system-mcp) | **MIT** ✅ | 0 | 0 | 132 | Python | **18 tools** sobre agentes LangGraph: `content_generation`, `author_lesson_pipeline`, `validate_lesson`/`_quiz`/`_project`, `search_graph_nodes`, `generate_mock_test_structure`, **`socratic_tutor`**, `project_review`, `search_youtube` | **Early-stage declarado** (0 ★ con 132 commits). **Sin integración a LMS**: backend propio en Supabase. Otro caso puro del **gap 49** |
 | [`examplary/qti`](https://github.com/examplary/qti) | **MIT** ✅ | 1 | 0 | 32 | TypeScript | QTI **3.0 (default) y 2.1**, generación y parseo de paquetes | **Control negativo del pase.** 🔴 **MCP no se menciona en ningún lugar del repo.** Ver abajo: es lo que convierte la ausencia de QTI en **medida** |
 | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | AGPL-3.0 | 8.2k | 4.4k | 68.764 | Python/Django | Medido **leyendo el código**, no la documentación. Ver la sección del gap 48 | ⚠️ **Nota de nomenclatura:** el repo **se renombró** — `openedx/edx-platform` es el nombre viejo y **redirige**. Las dos URLs resuelven y apuntan al mismo árbol |
-| [`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent) | **MIT** ✅ | **250,6k** | 53,6k | — | — | Agente genérico auto-mejorable, sucesor de OpenClaw | **No es educativo** y no entra a la tabla de agentes. Se verificó **porque el pase 27 dejó la instrucción de verificarlo si volvía a aparecer** — y volvió |
+| [`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent) | **MIT** ✅ | **250,6k** | 53,6k | — | — | Agente genérico auto-mejorable, sucesor de OpenClaw | **No es educativo** y no entra a la tabla de agentes. Se verificó **porque el pase 28 dejó la instrucción de verificarlo si volvía a aparecer** — y volvió |
 
 ### 🔴 La corrección, y esta vez la regla del pase anterior tampoco habría alcanzado
 
-El pase 26 declaró **OneRoster vacío** consultando un directorio. El pase 27 diagnosticó la causa (**gap 49**: los
+El pase 26 declaró **OneRoster vacío** consultando un directorio. El pase 28 diagnosticó la causa (**gap 49**: los
 directorios rankean por promoción) y dejó escrita la regla: *«no preguntarle a un directorio de MCP, preguntarle al
 host del repositorio por patrón de nombre»* — `*-mcp`, `mcp-*`, `mcp-server` + el nombre del estándar.
 
@@ -16197,7 +16590,7 @@ Es el único no-hallazgo de este pase que se puede firmar, y conviene decir por 
 | Método | Resultado |
 |---|---|
 | Consulta a directorio MCP (pase 26) | vacío — **no concluyente**, es el error del gap 49 |
-| Patrón de nombre `qti-mcp` / `mcp-qti` (regla del pase 27) | vacío |
+| Patrón de nombre `qti-mcp` / `mcp-qti` (regla del pase 28) | vacío |
 | **Apertura del SDK permisivo** (`examplary/qti`, MIT, QTI 3.0 + 2.1) | 🔴 **MCP no aparece en el repo** |
 
 **Tres métodos independientes, el mismo resultado.** La otra pieza de la capa, `oat-sa/qti-sdk`, es **PHP** — y el
@@ -16228,7 +16621,7 @@ como **gap 51**.
 
 ### La cifra de agregador, refutada **en la dirección contraria** a la que esta KB esperaba
 
-El pase 27 registró un *«Hermes Agent, MIT, 180.000+ ★»* y **se negó a escribirlo** por venir de un agregador sin
+El pase 28 registró un *«Hermes Agent, MIT, 180.000+ ★»* y **se negó a escribirlo** por venir de un agregador sin
 verificación, dejando la instrucción de verificarlo si reaparecía. **Reapareció en el barrido global de este pase, y
 con tres cifras distintas en tres fuentes: 180.000, 212.000 y 230.000.** La página del repo dice **250,6k ★ y 53,6k
 forks**.
@@ -16242,7 +16635,7 @@ forks**.
 **Hermes Agent no entra a la tabla de agentes de esta KB:** es un agente de propósito general, no educativo. Se
 registra acá por el método, y como nota de sucesión de OpenClaw.
 
-## 2026-10-01 (pase 27) — el eje conector rinde por tercera vez, y lo que devuelve es una corrección: el conector MCP de Moodle **sí existe, es MIT y escribe notas**, y el hueco real se corre a Open edX
+## 2026-10-01 (pase 28) — el eje conector rinde por tercera vez, y lo que devuelve es una corrección: el conector MCP de Moodle **sí existe, es MIT y escribe notas**, y el hueco real se corre a Open edX
 
 **5 repos verificados de primera mano, 4 nuevos para esta KB, 1 inexistente.** Este pase no agrega una capa: **corrige
 la premisa del pase anterior.** El **gap 43** y el patrón **P51** del pase 26 se construyeron sobre la afirmación *«el

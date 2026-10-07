@@ -4603,11 +4603,31 @@ data-residency clause means a second service to host, audit and certify inside t
 perimeter, one fewer component in the Annex III technical file.** That is a concrete reduction in
 EU AI Act documentation scope, not just an engineering tidy-up.
 
-⚠️ **The EMEA-specific licence trap on this tier is LGPL, not AGPL.** Two European
-interoperability assets this KB holds are **LGPL** — `Citolab/qti-components` (LGPL-3.0) and
-`oat-sa/lib-lti1p3-core` (LGPL-2.1, 82 d) — and LGPL's dynamic-linking boundary is a different
-conversation from AGPL's network-use clause. Neither is a blocker; both need the architecture
-decided in week one.
+🔴 **Corrected in pass 28 (`P452`): the EMEA licence trap on this tier is GPL, and it IS a
+blocker.** This paragraph previously read *"the trap is LGPL, not AGPL … neither is a blocker"*,
+and **both repositories it named were misdescribed**:
+
+| Repo | Was filed | 🔴 Actually | Payload |
+|---|---|---|---|
+| `oat-sa/lib-lti1p3-core` | LGPL-2.1 | **GPL-2.0** | 18,091 B (LGPL-2.1 is ~26.5 kB) |
+| `Citolab/qti-components` | LGPL-3.0 | **GPL-3.0** | 35,199 B (LGPL-3.0 is ~7.6 kB) |
+
+Both payloads open with `GNU GENERAL PUBLIC LICENSE`, verified this pass; the byte sizes this KB had
+already published refute the LGPL labels on their own. **So the dynamic-linking boundary the old
+advice rested on does not exist.** The LGPL's linking exception is the entire reason it was safe to
+call these "not a blocker" — under the plain GPL there is no such exception, and linking either
+library into a client deliverable carries the copyleft obligation on the deliverable.
+
+🔴 **Both are the certified, most complete options on the EMEA assessment/LTI interoperability
+tier**, which is why this matters: the standards-conformant choice here is copyleft, and the
+architecture decision is not "decide in week one" but **"isolate behind a process boundary or
+licence commercially."** The pre-reset archive had this right and called
+`oat-sa/lib-lti1p3-core` *"the exception that breaks the symmetry — a protocol library and still
+GPL-2.0"*; a defective classifier overwrote it and this paragraph inherited the error.
+
+⚠️ **The genuine LGPL rows on this shelf, for contrast**, are `Tampere/trevaka` (LGPL-2.1),
+`untisapi/untis4j` (LGPL-3.0), `openeducat/openeducat_erp` (LGPL-3.0) and `espoon-voltti/evaka`
+(REUSE notice). For those the dynamic-linking conversation is real.
 
 🔴 **Nothing new was found for EMEA this pass on the demand side.** The UK AI Adoption Summit
 funding (£200m+, of which £100m to Bridge AI and £53m regional), Skills England's curriculum role
@@ -4910,3 +4930,119 @@ holder — not by where the software is deployed.
 - 🟢 **Ednova (Chile)** remains the named standout edtech, and UNESCO IESALC's survey of **200 higher
   education institutions across 19 LAC countries** remains the adoption baseline. Both held against
   this pass's queries; neither is new.
+
+## What changed in the twenty-eighth pass of 2026-10-07
+
+🔴 **The licence layer of this KB was wrong on 21 of 412 rows, and the error has a commercial
+direction.** Three classifier defects were found and fixed (`P452` GNU-family-by-window, `P447`
+line-wrapped family names, `P448` the 6000-character truncation window), and the corrections move:
+**9** rows `UNKNOWN → EUPL`, **7** rows `LGPL → GPL`, **5** rows `GPL → MPL-2.0`.
+
+🔴 **The seven `LGPL → GPL` rows invert a commercial answer** and they are concentrated in the two
+tiers an engagement actually buys: the **EMEA assessment/LTI interoperability** tier
+(`oat-sa/qti-sdk`, `oat-sa/lib-lti1p3-core`) and the **LATAM public-education** tier
+(`portabilis/i-educar`, `inepdadosabertos/api`, `yunger7/enem-api`), plus the ministry-scale MIS
+`OpenEMIS/core`. The LGPL permits linking from proprietary code; GPL-2.0 does not.
+
+🔴 **`P449` — the `CC-BY` label on this shelf is wrong 5 times in 7**, and the failures are all in
+the commercially decisive direction: four rows are **NonCommercial** and one (`sign/translate`) is a
+**paid dual-tier** licence whose free tier covers *"individuals, non-profit organizations, and
+educational institutions"* and explicitly requires a separate licence for *"for-profit commercial
+organizations"*. Globant is the latter.
+
+🟢 **What did NOT change: the market numbers.** The seventeenth consecutive pass produced **0 new
+repositories** and **0 new named instruments** from the mandatory query set. Every figure returned —
+$7.52B→$10.6B at 40.9%, $79.6B by 2034 at 31.35%, NA $951M→$2,303.2M at 15.9%, EMEA 94% training
+intent, APAC 48%/57%, LATAM third-largest genAI download market — was already held by string.
+
+⚠️ **One recency trap logged rather than ingested:** the Council of Europe's *"2nd Working
+Conference on regulating the use of AI systems in education"* surfaces on a 2026-dated query and was
+held **24–25 October 2024**. Its downstream products are already held here (the **Compass for AI and
+Education**, the **EDU IA** committee, and the planned education-sector legal instrument
+complementing the **Framework Convention on AI, Human Rights, Democracy and the Rule of Law**).
+
+## Opportunities by region — twenty-eighth-pass additions
+
+The supply-side findings this pass are licence corrections, so they are placed by the region of the
+estate they affect. **Where a region produced nothing this pass, that is stated rather than left
+blank.**
+
+### North America
+
+- 🟢 **The code/documentation licence split is a North-American corporate pattern, and it runs in
+  the safe direction.** `microsoft/autogen` carries **CC-BY** at the root and **MIT** in
+  `LICENSE-CODE`; `mlcommons/croissant` is Apache-2.0 with MIT in `croissant-rdf/`;
+  `facebookresearch/seamless_communication` is CC BY-**NC** at the root with MIT in `ggml/`. **A
+  rooted licence probe reads the docs licence and attributes it to the code.** For a NA engagement
+  the practical instruction is: on any repository whose root grant is a Creative Commons licence,
+  look for `LICENSE-CODE` before concluding the code is unusable — in three of three cases here the
+  code is more permissive than the root.
+- 🔴 **And the inverse trap, same pattern:** `facebookresearch/seamless_communication` is
+  **Attribution-NonCommercial 4.0** at the root, so the *model and data* are non-commercial even
+  though its vendored `ggml/` is MIT. It is the top result for open-source multilingual speech and
+  remains a **hard reject for anything billable** — the MIT subdirectory does not rescue it.
+- 🔵 **No new North American repository or regulatory instrument this pass.** The NA figures
+  ($951M→$2,303.2M at 15.9%, 41.7% of forecast growth, 36% share, 10% of institutions with formal AI
+  guidelines, 71% of teachers untrained, Colorado and Texas as the only states with piecemeal
+  requirements) were all returned by the regional query and all already held.
+
+### EMEA
+
+- 🔴 **The EMEA interoperability tier is GPL, not LGPL, and this is the pass's most expensive
+  correction.** Both certified assets on the assessment/LTI tier —
+  `oat-sa/lib-lti1p3-core` (**GPL-2.0**, 18,091 B) and `Citolab/qti-components` (**GPL-3.0**,
+  35,199 B) — were filed LGPL, and the advice built on that filing said *"neither is a blocker."*
+  Under the plain GPL there is no linking exception. **The standards-conformant choice on this tier
+  is copyleft**, so an EMEA assessment engagement either isolates these behind a process boundary or
+  negotiates commercially — it does not link them.
+- 🟡 **The EUPL public-sector tier is nine repositories, not eight, and it was machine-invisible
+  until this pass.** Eight `Opetushallitus/*` Finnish national education services (🆕 including
+  **`valtionavustus`**, state-grant administration) plus the European Commission's
+  **`European-Learning-Model`**. 🔵 **The eight Finnish grants are short reference NOTICES (296–654
+  B), not the full licence text** — which is why they name only one family and why a
+  multi-family counter sees nothing there. ⚠️ **EUPL Article 1's "Communication" covers network
+  use**, so the EUPL binds a hosted service, the same way AGPL does, which is the fact that matters
+  for a managed-service engagement with a European ministry.
+- 🔴 **`european-commission-empl/European-Learning-Model` is the single most multi-family payload on
+  this shelf** — its full text names **seven** licence families via the EUPL-1.2 Appendix, and the
+  Appendix begins at character **5964**, which is why a 6000-character reader saw one. Any tooling
+  Globant builds against EU public-sector grants must read the whole payload.
+- 🔵 **No new EMEA repository this pass.** The 94% training-intent figure was returned again and is
+  held; the one education-specific EMEA regulatory item surfaced was the 2024 Council of Europe
+  conference described above, which is not current.
+
+### APAC
+
+- 🔴 **APAC produced nothing new on the supply side this pass, and that is a measured gap rather
+  than an absence of searching.** The regional query returned adoption and vendor-expansion items
+  only — 48% of governance leaders prioritising AI, 57% of Asian organisations with AI in at least
+  one area, Singapore's financial-sector AI consultations, LearnUpon's Sydney HQ and Create+, the
+  TCS–Pearson alliance, Alteryx's Academy relaunch — **all of them commercial or policy news, none
+  of them an open-source education repository**, and all already held by string.
+- 🔵 **No APAC repository appears in the 21 corrected licence rows either.** The licence estate this
+  pass re-measured is EMEA- and LATAM-weighted; APAC supply on this shelf remains the thinnest of
+  the four regions, and seventeen passes of the mandatory query set have not changed it. **For an
+  APAC engagement the starting point is still a Global or EMEA repository localised**, not a
+  regional one.
+
+### LATAM
+
+- 🔴 **Three of the seven `LGPL → GPL` corrections are Brazilian public-education assets**, and they
+  are the most-deployed systems in the region on this shelf: `portabilis/i-educar` (municipal school
+  system), `inepdadosabertos/api` and `yunger7/enem-api` (national exam data and API, INEP). All
+  three are **GPL-2.0**, not LGPL. For a LATAM public-sector engagement this moves them from "link
+  it" to "isolate it": a ministry deliverable that links `i-educar` inherits the obligation.
+- 🔴 **`openstax/osbooks-biology-bundle` is `CC BY-NC-SA 4.0`, not `CC BY`** — independently
+  corroborating `P328` (pass 106: OpenStax cession narrows between editions) through a different
+  channel. OpenStax content is the default open-textbook corpus for Spanish- and
+  Portuguese-language courseware, and the **NonCommercial** clause means the bundle cannot be
+  resold as part of a commercial LATAM courseware product. Take the *CC BY* editions, verified per
+  collection, not the bundle.
+- 🔵 **LATAM supply remains disproportionately single-maintainer and unverifiable by spelling.** Of
+  the 186 slugs with no case oracle, **173 are cited by no other repository on this shelf**, and
+  LATAM rows are over-represented in that class. Entity resolution for a LATAM engagement should
+  not assume the slug as written is canonical — unchanged from pass 26 and now measured with a
+  fourth channel that also found nothing.
+- 🔵 **No new LATAM repository or regulatory instrument this pass.** The regional figures
+  (third-largest genAI download market, 99%/85% enterprise adoption, UNESCO IESALC's 200 HEIs
+  across 19 LAC countries, Ednova in Chile) were all returned and all already held.
