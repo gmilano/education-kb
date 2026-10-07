@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-06
+updated: 2026-10-07
 ---
 
 # Trends — Education, October 2026
@@ -962,6 +962,21 @@ does not.
 
 **Stands:** there is **no permissive Python LTI 1.3 library**. That is what the sweep tested and it
 is still true.
+
+> 🔴 **WITHDRAWN at the twenty-third pass of 2026-10-07. The sentence immediately above is false and
+> is retained only so this correction has something to point at.** It was already false when a later
+> pass of 2026-10-06 reinstated [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3)
+> (MIT, 1,069 B payload) in `agents/top.md` — a correction that never left its pass-scoped section,
+> which is **trend 50** committed inside trend 28. The twenty-third pass closes it twice over:
+> 🟢 [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) — **BSD-3-Clause**
+> (1,527 B payload), head commit **2026-07-01**, README states it implements **LTI 1.3 and LTI 1.1**
+> and is tested against **Open edX, Canvas and Moodle**; and 🟢
+> [`Harvard-University-iCommons/django-lti`](https://github.com/Harvard-University-iCommons/django-lti)
+> — **MIT** (1,097 B), head commit 2025-08-27. ⚠️ `pylti1.3` itself is **1,415 days cold**, so the
+> correction that first closed the gap closed it with an abandoned library. 🔴 **`ltiauthenticator`
+> was cited three times in this KB before anyone counted it**, because it is filed as a JupyterHub
+> authenticator and the gap was swept for as an *LTI library* — trend 29 turned on this KB's own
+> index. See **trend 53** and `repos/foundations.md`, twenty-third pass.
 
 **Withdrawn:** the broader reading — *"Python, where essentially all of the AI tutoring and agent
 code in this KB is written, is not served"*. Two **MIT Python libraries for education standards**
@@ -2987,6 +3002,11 @@ agreement is unverifiable without the read that makes it redundant.
 
 ## 52. This KB cannot measure whether its own shelf is alive, and the reason is one HTTP status
 
+> 🔴 **FALSIFIED at the twenty-third pass of 2026-10-07.** `git ls-remote` plus a blob-filtered
+> depth-1 fetch dated **884 of 904** references without touching `api.github.com`. The title
+> over-claimed what this trend's own closing paragraph already knew. See *"Trend 52 is falsified"*
+> at the end of this file; what survives of it is recorded there too.
+
 **Added in the twenty-second pass of 2026-10-06.**
 
 `api.github.com` has returned **403** to this environment since pass 37. Forty-plus passes have
@@ -3018,3 +3038,154 @@ KB has already proven open. ⚠️ **Pre-registered as the action for the next p
 recency for the twenty highest-value GitHub rows via `git`, not via an API, and publish the
 distribution next to this one.** If it comes back similar to 33.5%, roughly a third of this KB's
 shelf is cold and several patterns need their components re-picked.
+
+---
+
+## 53. The licence tells you if you may use it; only the date tells you if anyone else still does
+
+**Added in the twenty-third pass of 2026-10-07.** Measurement window 2026-10-06 ~21:00 UTC →
+2026-10-07 00:00 UTC; ages computed against the reference date 2026-10-06.
+
+For twenty-two passes this KB described every repository on two axes — **licence** (read from
+payload, rigorously) and **★** (read from a rendered page, and pass 22 showed ★ measures a host's
+audience rather than adoption). Both are properties of a repository **at rest**. Neither says
+whether anyone is still working on it.
+
+Adding a time axis did not change which repositories exist. It changed **which ones to pick**, and in
+one case it inverted the choice completely:
+
+| | `packbackbooks/lti-1-3-php-library` | `1EdTech/lti-1-3-php-library` |
+|---|---|---|
+| licence payload | Apache-2.0, 11,343 B, `sha256 78b49eea…` | Apache-2.0, 11,343 B, `sha256 78b49eea…` |
+| head commit | 🟢 **2026-09-23** | 🔴 **2020-06-03** |
+
+**Identical grant, identical bytes, same library, 2,303 days apart — and this KB cited the cold
+one.** No licence audit, dependency audit or star count could have caught it.
+
+🟢 **The generalisable claim:** licence answers *may we*, ★ answers *who noticed*, **date answers
+*will anyone fix it*** — and for a component going into a client deliverable with a support
+expectation, the third question is the one the client is actually buying. A licence-and-★ shelf is a
+**catalogue**; a licence-★-and-date shelf is a **recommendation**.
+
+⚠️ **A date is not a verdict.** A 472-day-old 1EdTech-certified QTI player may still be the right
+pick, because certification does not lapse when maintenance pauses; a 0-day-old repository may be a
+week old in total. The rule is **disclose, then argue** — never **sort and prune**.
+
+---
+
+## 54. Liveness is tier-structured, and in this KB it is inversely correlated with how regulated the tier is
+
+**Added in the twenty-third pass of 2026-10-07.**
+
+The aggregate was the least informative number produced by dating 884 repositories. **The spread
+between tiers was 9×, measured inside one KB in one sitting:**
+
+| Tier | n | in 2026 | 🔴 cold >1 y | 🔴 pre-2024 |
+|---|---|---|---|---|
+| MCP side-cars | 121 | **90.9%** | 🟢 **5.0%** | 🟢 **0.0%** |
+| whole KB | 873 | 73.3% | 23.1% | 11.2% |
+| eval tier | 17 | 52.9% | 35.3% | 5.9% |
+| voice / speech | 13 | 53.8% | 46.2% | 0.0% |
+| **interoperability (LTI/QTI/OneRoster/Caliper/xAPI)** | **73** | 🔴 **50.7%** | 🔴 **46.6%** | 🔴 **34.2%** |
+| Kennisnet (NL national metadata) | 9 | 33.3% | 66.7% | 44.4% |
+| Sunbird estate | 8 | 12.5% | 75.0% | 62.5% |
+| India substrate (AI4Bharat et al.) | 8 | 12.5% | 87.5% | 0.0% |
+| LATAM indigenous NLP | 10 | 🔴 **0.0%** | 🔴 **100%** | 🔴 70.0% |
+| Kuali estate | 4 | 🔴 **0.0%** | 🔴 **100%** | 🔴 **100%** |
+
+🔴 **The ordering is close to the inverse of how much this KB argues each tier matters
+commercially.** Trend 28 records that **39% of district RFPs score interoperability**; the
+interoperability tier is the coldest thing here that is not an abandoned consortium. Trends 21 and
+25 build equity and mother-tongue arguments on language substrates; **LATAM indigenous NLP is 100%
+cold and the India substrate has nothing touched in 30 days.** The newest tier — MCP side-cars, which
+no regulator scores and no RFP names — is the liveliest by a wide margin.
+
+🔵 **The most plausible reading is maturity, not neglect.** A standards implementation that passes
+conformance can be correct and finished; a protocol that changed in 2026 cannot. But the commercial
+consequence does not depend on which reading is right: **the tier a buyer scores hardest is the tier
+whose components you will be maintaining yourself**, and that belongs in the price.
+
+🟢 **One genuinely reassuring result.** `compose/patterns.md` — the components actually wired into
+engagements — is **warmer than the foundation shelf it draws from** (18.8% vs 33.0% cold).
+Twenty-two passes of composition, without once reading a date, still selected disproportionately
+from the live subset.
+
+⚠️ **Do not compare these figures to pass 22's GitLab 33.5%.** That was an undifferentiated search
+population; this is a curated shelf. The valid comparison is tier against tier, inside one corpus,
+measured the same minute — which is what the table above is.
+
+---
+
+## 55. A `LICENSE` file is a filename, not a grant — and the strongest counter-example is a refusal
+
+**Added in the twenty-third pass of 2026-10-07.**
+
+This KB's licence-reliability work has moved through three failure classes. The third is new, and it
+breaks the assumption the first two still shared:
+
+| Class | Recorded | Shape | What it breaks |
+|---|---|---|---|
+| detector names the wrong OSI licence | trend 23; pass 22 (2 wrong of 20 payloads) | label ≠ grant, **between** parties | reading the sidebar |
+| the project contradicts itself | pass 22 (`sam-lms`: ISC badge, MIT payload) | disagreement **inside** one project | reading any single source |
+| 🆕 **the file is an anti-grant** | **this pass** | the payload **withholds every right a licence confers** | reading the *filename* as evidence at all |
+
+[`Wahid7852/Verbix-Flutter`](https://gitlab.com/Wahid7852/Verbix-Flutter) carries `LICENSE.md`,
+**208 bytes**, and GitLab classifies it `license_key: "other"`:
+
+> *Copyright (c) 2024 Swati Sharma · This code is provided for viewing purposes only as part of a
+> Google Solution Challenge. No permissions are granted for reuse, distribution, or modification.*
+
+🔴 **Every pipeline that counts "repositories with a licence file" counts this as covered.** So does
+every dependency scanner that treats `other` as "needs review" and then reviews nothing. The rule
+this KB now operates under: **payload first, manifest second, detector never alone** — and, added
+here, **presence never at all.**
+
+🔵 **The same shape, inverted, is the larger supply story.** Four education projects measured across
+the last two passes are real, active, and carry **no grant of any kind**: three LATAM
+(`ccsl-ufpa/educacaovigiada-org-br`, `angeelrdz-group/nova-aula`,
+`evertonwilliam/plataforma-de-educacao`) and — new this pass, and the reason the framing had to
+widen — one **North American**, [`cderda/cargogetgraded`](https://gitlab.com/cderda/cargogetgraded),
+a step-level algebra autograder piloting in Fall 2026 whose root tree was enumerated to establish
+that no licence file exists anywhere in it.
+
+🟢 **Ungranted-but-real is therefore a global condition with a LATAM concentration, not a LATAM
+condition** — and unlike an absence, it is fixable in a week by someone who knows which file to add.
+That is `P-GRANT-CLINIC` in `compose/patterns.md`.
+
+---
+
+## 🔴 Trend 52 is falsified — by a channel it named itself
+
+**Twenty-third pass of 2026-10-07.** Trend 52, written one pass earlier, is titled *"This KB cannot
+measure whether its own shelf is alive, and the reason is one HTTP status."* **It can, and the status
+was never the obstacle.**
+
+`api.github.com/repos/*` does return **403** — and so do `/search/*`, `/orgs/*` and `/licenses/*`,
+re-probed this pass, while `api.github.com/` and `/rate_limit` return **200**, so it is the resource
+paths that are denied rather than the host. But `pushed_at` was never the only way to date a
+repository:
+
+```
+git ls-remote https://github.com/<slug> HEAD            # existence  → ref SHA
+git fetch --depth 1 --filter=blob:none origin HEAD      # head commit
+git log -1 --format=%cI FETCH_HEAD                      # its date
+```
+
+**884 of 904 references dated, in under two minutes, with no API.** 🔵 Trend 52's own closing
+paragraph names both commands as *"channels this KB has already proven open"* and then pre-registers
+the measurement for a later pass — so the trend's **title** over-claimed what its **body** already
+knew. That is the transferable lesson, and it is not about GitHub: **an impossibility claim written
+from one blocked endpoint will usually survive only until someone tries the second endpoint in the
+same paragraph.**
+
+🟢 **What survives of trend 52:** the observation that forty-plus passes recorded licence, ★ and
+description while never recording recency, and that pass 20's liveness audit used **licence-payload
+reachability** — a probe an abandoned repository passes as cleanly as a live one. Both true, both
+the reason this pass was worth running. 🟢 **And pass 20's conclusion itself survives the stronger
+probe: zero newly dead across 904 references.**
+
+⚠️ **One thing trend 52 got right that this pass could not fix:** `huggingface.co` (000) and
+`codeberg.org` (000) remain unreachable, and the 15 LATAM self-hosted forges probed under pass 22's
+pre-registered action B returned **000 on all 45 requests — as did a deliberately bogus control
+host.** That probe does **not** discriminate, so it yields no finding about LATAM self-hosted supply
+in either direction, and none is recorded.

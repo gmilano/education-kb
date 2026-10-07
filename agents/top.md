@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-06
+updated: 2026-10-07
 ---
 
 # AI Agents — Education
@@ -2667,3 +2667,146 @@ star count here is small. That is the finding, not an omission** — see the reg
 **65★** on GitLab. ★ measures a *host's* audience, never a project's adoption, and this KB's shelf is
 ranked almost entirely by GitHub ★. Nothing in this file needs reordering, but no ★ here may be
 quoted to a client as "how widely used this is".
+
+---
+
+## Added in the twenty-third pass of 2026-10-07 — the agent shelf, dated for the first time
+
+⏱️ **Measurement window 2026-10-06 ~21:00 UTC → 2026-10-07 00:00 UTC. Ages in days are computed
+against the reference date 2026-10-06**, so every figure here is reproducible.
+
+**No new agent row is added by discovery this pass.** What is added is a **column this file never
+had**: the head-commit date of every GitHub repository it cites, read with `git ls-remote` and
+`git fetch --depth 1 --filter=blob:none` — the channel that works while `api.github.com/repos/*`
+returns 403.
+
+### The agent shelf's liveness, measured
+
+Across the **250** distinct GitHub repositories cited in this file:
+
+| Bucket | Share |
+|---|---|
+| touched in the last 30 days | 40.0% |
+| touched at any point in 2026 | **77.6%** |
+| 🔴 cold more than a year | 18.8% |
+| 🔴 cold since before 2024 | 8.0% |
+
+🟢 **This is the second-liveliest population in the KB**, behind only the MCP side-car tier (90.9%
+in 2026, 5.0% cold). The agent shelf is young because the category is young; the ageing in this KB
+is concentrated in infrastructure and standards, not in agents. See `repos/trending.md` for the
+full tier table.
+
+### Spot dates for the rows a client is most likely to be shown
+
+| Row | Head commit | Age | Read |
+|---|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 2026-10-07 | 🟢 0 d | the largest asset in this KB is also committed daily |
+| [`Coursemology/coursemology2`](https://github.com/Coursemology/coursemology2) | 2026-10-07 | 🟢 0 d | |
+| [`LearningEquality/kolibri`](https://github.com/learningequality/kolibri) | 2026-10-06 | 🟢 0 d | |
+| [`frappe/lms`](https://github.com/frappe/lms) | 2026-10-07 | 🟢 0 d | |
+| [`langfuse/langfuse`](https://github.com/langfuse/langfuse) | 2026-10-06 | 🟢 0 d | |
+| [`k2-fsa/sherpa-onnx`](https://github.com/k2-fsa/sherpa-onnx) | 2026-10-06 | 🟢 0 d | |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 2026-10-04 | 🟢 2 d | row 1 of this shelf, and it is alive |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 2026-10-02 | 🟢 4 d | |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 2026-09-30 | 🟢 6 d | |
+| [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | 2025-10-15 | ⚠️ **356 d** | the pedagogy benchmark is **a fortnight from being a year stale** |
+| [`rhasspy/piper`](https://github.com/rhasspy/piper) | 2025-08-26 | 🔴 **406 d** | wired into **P18**; `sherpa-onnx` does TTS too and was committed today |
+| [`AI4Bharat/IndicTrans2`](https://github.com/AI4Bharat/IndicTrans2) | 2025-10-03 | 🔴 368 d | the liveliest member of a substrate that is 87.5% cold |
+| [`ai-edu-lab/E-Eval`](https://github.com/ai-edu-lab/e-eval) | 2024-02-19 | 🔴 **960 d** | wired into **P12** |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 2022-11-21 | 🔴 **1,415 d** | see the Python LTI correction below |
+
+⚠️ **`pedagogy-benchmark` at 356 days is the row to watch, not the row to pull.** Trend 31 records
+that this KB's pedagogy benchmark is *"no longer missing — it is licensed shut"*; it is now also
+nearly a year unmaintained. A benchmark can be valid while unmaintained in a way a library cannot,
+but the date belongs in any deck that cites it.
+
+### 🔴 The Python LTI 1.3 claim is dead twice over, and this file holds half of the correction
+
+This file already carries *"The Python LTI 1.3 row this KB declared missing eight hours earlier"*,
+reinstating `dmitry-viskov/pylti1.3` (MIT, 138★). **That correction closed the gap with a library
+whose head commit is 1,415 days old** — and the whole family stopped together
+(`pylti1.3-django-example` and `pylti1.3-flask-example`, both 1,406 d), which is the signature of an
+abandoned project rather than a finished one.
+
+**The live permissive Python LTI 1.3 shelf, payload-verified 2026-10-06:**
+
+| Repo | Licence (payload) | Holder named in payload | Head commit | Age |
+|---|---|---|---|---|
+| [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | 🟢 **BSD-3-Clause** (1,527 B) | Project Jupyter Contributors, 2016 | 2026-07-01 | 🟢 **97 d** |
+| [`Harvard-University-iCommons/django-lti`](https://github.com/Harvard-University-iCommons/django-lti) | 🟢 **MIT** (1,097 B) | ⚠️ *The Regents of the **University of Michigan***, 2022 | 2025-08-27 | ⚠️ 405 d |
+| [`ucfopen/cookiecutter-python-lti`](https://github.com/ucfopen/cookiecutter-python-lti) | 🟢 **MIT** (1,129 B) | UCF Center for Distributed Learning, 2025 | 2026-05-12 | 🟢 147 d |
+| [`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) | 🟢 MIT (1,069 B) | *Dmitry Viskov*, 2019 | 2023-01-12 | 🔴 1,363 d |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 MIT (1,069 B) | *Dmitry Viskov*, 2019 | 2022-11-21 | 🔴 1,415 d |
+
+🟢 **Use `jupyterhub/ltiauthenticator`.** BSD-3-Clause, Python, and its README states it implements
+**LTI 1.3 and LTI 1.1, tested against Open edX, Canvas and Moodle** — the three platforms this KB
+already documents.
+
+🔴 **This KB has cited it three times and never counted it**, because it is filed as a JupyterHub
+authenticator and the gap was swept for as an *LTI library*. Trend 29 says a gap built on a filtered
+index is a claim about the index; here the index was this KB's own.
+
+⚠️ **`ucfopen/cookiecutter-python-lti` is live and installs a corpse.** Its Flask template pins
+`git+https://github.com/ucfopen/pylti1.3.git@master` — a fork, 1,363 days cold, at a moving branch.
+Its Django template pins `django-lti==0.7.1`, a real version of the MIT library above. **Take the
+Django path, or take `ltiauthenticator`.**
+
+### 🔴 A new licence failure class: the `LICENSE` file that is a refusal
+
+[`Wahid7852/Verbix-Flutter`](https://gitlab.com/Wahid7852/Verbix-Flutter) — Flutter app using OCR and
+speech recognition to help children with dyslexia read. GitLab's detector reports
+`license_key: "other"`. The payload is **208 bytes in full**:
+
+> *Copyright (c) 2024 Swati Sharma · This code is provided for viewing purposes only as part of a
+> Google Solution Challenge. No permissions are granted for reuse, distribution, or modification.*
+
+| Class | First recorded | Shape |
+|---|---|---|
+| detector names the wrong OSI licence | trend 23, pass 22 | label ≠ grant, **between** parties |
+| project contradicts itself | pass 22 | badge/manifest/payload disagree **inside** one project |
+| 🆕 **the file is an anti-grant** | **this pass** | a `LICENSE` whose content **withholds every right a licence confers** |
+
+🔴 **Operational rule:** *the presence of a `LICENSE` file is not even weak evidence of a grant.*
+Any count of "repositories with a licence" includes this one. ⚠️ Holder mismatch as well — payload
+holder **Swati Sharma**, publishing account **Wahid7852**.
+
+### 🔴 What this does to the oral reading fluency gap (sixth pass, P17)
+
+The gap **stands**, and the reason is now stronger than absence. A GitLab sweep of 15 English,
+Spanish and Portuguese terms returned **276 unique projects**; the single candidate squarely inside
+the category is `Verbix-Flutter`, and it is explicitly closed. 🔴 **The capability was built and the
+build was shut.** That is a different engagement conversation from "nobody has built this" — it
+means a clean-room build cannot be avoided by adoption, but it also means the pedagogy is not
+unexplored.
+
+### 🆕 One ungranted agent-shaped asset, North America, recorded because it widens pass 22's framing
+
+| Project | What it is | Licence |
+|---|---|---|
+| [`cderda/cargogetgraded`](https://gitlab.com/cderda/cargogetgraded) ("Carriage") | **Step-level algebra autograder.** Python/SymPy; ingests post-OCR LaTeX student work, flags *mistake transitions* rather than final answers, emits teacher-facing Excel. 15 package directories (`math_engine`, `mistake_processing`, `transformation_assessment`, `assignment_taxonomy`…). Built by a former high-school maths teacher and UChicago Math graduate. **Piloting Fall 2026** | 🔴 **none** — established by **enumerating the repository root tree** (21 entries), not by guessing filenames |
+
+🟢 **Why it matters beyond one row.** Pass 22 concluded that ungranted-but-real education code is a
+**LATAM** signature and proposed the licence-grant clinic as a LATAM offer. Carriage is **North
+America**, more pedagogically ambitious than the BSD-2 auto-grader this KB just adopted, and equally
+unusable. **The clinic is a global offer with a LATAM concentration** — see `P-GRANT-CLINIC` in
+`compose/patterns.md`.
+
+⚠️ **This does not displace [`cjaikaeo/elabsheet`](https://gitlab.com/cjaikaeo/elabsheet)**
+(BSD-2-Clause, 14★, activity 2026-09-19, holders *Chaiporn Jaikaeo and Jittat Fakcharoenphol*,
+re-verified this pass), which remains the permissive auto-grader this KB recommends.
+
+### The method note for this pass
+
+🟢 **The probe discriminates, and that is why the negative result counts.** Four repository slugs
+invented by earlier passes as controls (`UniTime/this-repo-does-not-exist-xyz123`,
+`openedx/fake-repo-zzz999`, and two others) were swept blind alongside the real ones and **all four
+failed to resolve**, while 884 real ones resolved. Pass 22's GitLab rendered-page control **302s on
+an invented slug** and therefore proves nothing; this one returns no ref.
+
+⚠️ **No ★ was read this pass.** Both `github.com` rendered pages and `api.github.com/repos/*` return
+403 to this environment, so every star count in this file is pass-22's or older, and
+the pass-22 warning that ★ measures a host's audience still governs.
+
+🔴 **A date is not a verdict.** A 472-day-old certified QTI player may be the right pick and a
+0-day-old repository may be a week old in total. The dates are published so that a component choice
+can be *argued*, not so it can be automated.

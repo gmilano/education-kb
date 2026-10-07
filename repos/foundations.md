@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-06
+updated: 2026-10-07
 ---
 
 # Foundational Repos — Education
@@ -1596,3 +1596,114 @@ tree listing finds it.
 | a permissive **knowledge-tracing / BKT-IRT** library | `knowledge tracing`, `adaptive learning`, `learning analytics` | 🔴 **0** — `OATutor` (MIT) and the ADLETE engine above remain the only mastery assets in this KB |
 | an **MCP server for education** on GitLab | `education agent`, `edtech ai`, `classroom ai` | 🔴 **1 candidate, unusable** — `sheikhcoders/interleaved-learning-mcp` carries **no licence payload at all**. Every education MCP server this KB holds is still GitHub-hosted |
 | a **LATAM-origin** education project | all 25 terms | 🔴 **1 LATAM-plausible of 534**, and its placement is an inference from Portuguese-language naming, not a declaration — see `intel/market.md` |
+
+---
+
+## Added in the twenty-third pass of 2026-10-07 — the interoperability tier, re-picked by date
+
+⏱️ **Measurement window 2026-10-06 ~21:00 UTC → 2026-10-07 00:00 UTC; ages computed against the
+reference date 2026-10-06.** Licences below were read from the repository's own payload via
+`raw.githubusercontent.com` on 2026-10-06. Head-commit dates come from
+`git fetch --depth 1 --filter=blob:none`, the channel that works while `api.github.com/repos/*`
+returns 403.
+
+🔴 **This file is the coldest shelf file in the KB: of its 230 GitHub references, 33.0% have not been
+touched in a year and 18.3% not since before 2024** — against 18.8% and 6.6% for
+`compose/patterns.md`. "Foundational" has been doing duty as a synonym for "long-established". This
+section fixes the worst instance and dates the rest.
+
+### 🔴 The correction: this file recommends the cold fork of a live library
+
+| | [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) |
+|---|---|---|
+| licence payload | **Apache-2.0**, 11,343 B, `sha256 78b49eea…` | **Apache-2.0**, 11,343 B, `sha256 78b49eea…` |
+| composer `name` | `packbackbooks/lti-1p3-tool` | `imsglobal/lti-1p3-tool` |
+| composer `description` | *"A library used for building IMS-certified LTI 1.3 tool providers in PHP."* | *(none)* |
+| head commit | 🟢 **2026-09-23 (13 d)** | 🔴 **2020-06-03 (2,316 d)** |
+
+🟢 **Byte-identical licence file. Same library. 2,303 days apart.** The consortium's republished copy
+stopped; the author's original did not. **Use `packbackbooks/lti-1-3-php-library`.** Nothing in the
+licence, the description or the ★ would have surfaced this — only the date.
+
+### The permissive LTI 1.3 shelf, by runtime and by date
+
+| Runtime | Repo | Licence (payload) | Head commit | Age | Verdict |
+|---|---|---|---|---|---|
+| **Node / JS** | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | **Apache-2.0** (11,360 B) | 2026-10-06 | 🟢 0 d | 🟢 **pick** |
+| **PHP** | [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | **Apache-2.0** (11,343 B) | 2026-09-23 | 🟢 13 d | 🟢 **pick** |
+| **Java / Spring** | [`oxctl/spring-security-lti13`](https://github.com/oxctl/spring-security-lti13) | **Apache-2.0** (11,357 B) | 2026-10-06 | 🟢 0 d | 🟢 **pick** |
+| **Python** | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | **BSD-3-Clause** (1,527 B) | 2026-07-01 | 🟢 97 d | 🟢 **pick** — LTI 1.3 **and** 1.1, tested against Open edX, Canvas, Moodle |
+| **Python / Django** | [`Harvard-University-iCommons/django-lti`](https://github.com/Harvard-University-iCommons/django-lti) | **MIT** (1,097 B) | 2025-08-27 | ⚠️ 405 d | ⚠️ usable; ageing |
+| **Python (scaffold)** | [`ucfopen/cookiecutter-python-lti`](https://github.com/ucfopen/cookiecutter-python-lti) | **MIT** (1,129 B) | 2026-05-12 | 🟢 147 d | ⚠️ **Django template only** — see the warning below |
+| **Elixir** | [`Simon-Initiative/lti_1p3`](https://github.com/Simon-Initiative/lti_1p3) | **MIT** (1,082 B, © Carnegie Mellon University) | 2026-03-13 | 🟢 207 d | 🟢 usable (OLI Torus) |
+| **PHP (assessment vendor)** | [`oat-sa/lib-lti1p3-core`](https://github.com/oat-sa/lib-lti1p3-core) | ⚠️ **LGPL-2.1** (18,091 B) | 2026-07-16 | 🟢 82 d | ⚠️ live but **copyleft** — library-boundary conversation |
+| Python | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | MIT (1,069 B) | 2022-11-21 | 🔴 1,415 d | 🔴 **do not start here** |
+| Python | [`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) | MIT (1,069 B, © Dmitry Viskov) | 2023-01-12 | 🔴 1,363 d | 🔴 fork, also cold |
+| PHP | [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) | Apache-2.0 (11,343 B) | 2020-06-03 | 🔴 2,316 d | 🔴 **superseded by its own upstream** |
+| PHP | [`IMSGlobal/LTI-Tool-Provider-Library-PHP`](https://github.com/IMSGlobal/LTI-Tool-Provider-Library-PHP) | — | 2016-11-28 | 🔴 3,599 d | 🔴 **9.9 years** — remove from any proposal |
+| Java | [`UOC/java-lti-1.3-provider-example`](https://github.com/UOC/java-lti-1.3-provider-example) | MIT | 2022-11-18 | 🔴 1,418 d | 🔴 example only, cold |
+| Java | [`unicon/tool13demo`](https://github.com/unicon/tool13demo) | — | 2024-10-31 | 🔴 705 d | 🔴 demo only, cold |
+
+### 🔴 Three corrections this table forces on standing text in this file
+
+1. **"There is no Python LTI 1.3 library on this shelf"** (stated **four** times in this file, the
+   most of any file in this KB) is **false**. It was already false when a later pass reinstated `pylti1.3`; it is now false twice
+   over, and the asset that closes it — `jupyterhub/ltiauthenticator`, BSD-3-Clause, 97 days — has
+   been cited elsewhere in this KB three times without ever being counted. The gap was an artefact
+   of **how this KB filed the repository**, not of supply. (Trend 29, applied to this KB's own
+   index; trend 50, because the earlier correction never left its pass-scoped section.)
+2. **The LTI-shaped hole of trend 28 is closed.** Five live permissive implementations across five
+   runtimes. What remains is not a hole but a **selection discipline**: three of the four
+   implementations this KB had been naming are cold.
+3. ⚠️ **`Harvard-University-iCommons/django-lti` has a holder mismatch** — published by Harvard's
+   iCommons organisation, MIT payload vesting copyright in **the Regents of the University of
+   Michigan**. The grant is clean; the counterparty is not the one the URL implies. Record it in any
+   provenance pack.
+
+### ⚠️ Recency is not inherited — the rule this adds to the dependency work of the twenty-first pass
+
+Pass 21 resolved 352 dependencies and measured them **by licence**. None were measured **by date**.
+The first one checked shows why that matters.
+[`ucfopen/cookiecutter-python-lti`](https://github.com/ucfopen/cookiecutter-python-lti) is MIT and
+**147 days old**. Its Flask template's `requirements.txt` ends:
+
+```
+git+https://github.com/ucfopen/pylti1.3.git@master
+```
+
+| Defect | Detail |
+|---|---|
+| 🔴 stale | resolves to a fork whose head commit is **2023-01-12 — 1,363 days** |
+| 🔴 not upstream | the fork, not `dmitry-viskov/pylti1.3`, and not PyPI |
+| 🔴 unreproducible | pinned to **`@master`**, a moving branch, so two builds a month apart differ |
+
+🟢 **Its Django template does it correctly**, pinning `django-lti==0.7.1`. **Rule: a component's own
+head-commit date says nothing about the dates of what it installs. Run the P22 gate over the
+dependency closure, not the dependency list.**
+
+### The rest of the foundation shelf, dated
+
+| Repo | Head commit | Age | Note |
+|---|---|---|---|
+| [`k2-fsa/sherpa-onnx`](https://github.com/k2-fsa/sherpa-onnx) | 2026-10-06 | 🟢 0 d | **Apache-2.0**; ASR **and** TTS — the replacement for Piper in P18 |
+| [`Citolab/qti-components`](https://github.com/Citolab/qti-components) | 2026-10-06 | 🟢 0 d | ⚠️ **LGPL-3.0** (35,199 B payload) — live, not permissive |
+| [`Kennisnet/qti-components`](https://github.com/Kennisnet/qti-components) | 2026-07-20 | 🟢 78 d | |
+| [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | 2025-06-21 | 🔴 **472 d** | MIT, **1EdTech Certified** — certification does not lapse when maintenance stops, but disclose the date |
+| [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) | 2025-09-04 | 🔴 397 d | |
+| [`adlnet/xapi-profiles`](https://github.com/adlnet/xapi-profiles) | 2024-12-16 | 🔴 659 d | |
+| [`theopenem/OneRoster.NET`](https://github.com/theopenem/OneRoster.NET) | 2023-10-13 | 🔴 1,089 d | the only OneRoster implementation on this shelf, and it is cold |
+| [`rhasspy/piper`](https://github.com/rhasspy/piper) | 2025-08-26 | 🔴 406 d | MIT; superseded for new work by `sherpa-onnx` |
+| [`AI4Bharat/IndicTrans2`](https://github.com/AI4Bharat/IndicTrans2) | 2025-10-03 | 🔴 368 d | liveliest member of a substrate that is **87.5% cold, 0% in 30 days** |
+| [`coqui-ai/TTS`](https://github.com/coqui-ai/TTS) | 2024-02-10 | 🔴 969 d | already flagged for relicensing; now also dated |
+
+### 🔴 Declared gaps from this pass, with the denominator attached
+
+| Looked for | How | Result |
+|---|---|---|
+| a **live permissive OneRoster** implementation | head-commit date over every OneRoster reference in this KB | 🔴 **0 of 2** — `theopenem/OneRoster.NET` and `jdolny/OneRoster.NET`, both 1,089 d |
+| a **live permissive Caliper** implementation | same | 🔴 **0** — and `1EdTech/caliper-java` now 404s because **the consortium announced a move to private repositories**; `1EdTech/caliper-spec` last touched 2019 |
+| a **live** permissive **knowledge-tracing / BKT-IRT** library | recency over the mastery tier | ⚠️ `CAHLR/OATutor` is **6 days** old — 🟢 this gap is *not* a recency gap; it remains a breadth gap |
+| anything on **LATAM self-hosted forges** (`.edu.br`, `.edu.mx`, `.cl`) | 15 hosts × 3 endpoints | 🔴 **unmeasurable** — 000 on all 45 requests, and a deliberately bogus host also returns 000, so the probe cannot separate "absent" from "egress denied". **No supply conclusion is drawn** |
+
+⚠️ **That last row is recorded so it is not mistaken for coverage.** A channel that cannot
+distinguish absence from denial produces no finding in either direction.

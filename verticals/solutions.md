@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-06
+updated: 2026-10-07
 ---
 
 # Vertical Platforms — Education
@@ -1462,3 +1462,90 @@ publishes**, which is a useful accident: on this forge, *being copied* is a weak
 and it points at the same rows a human reviewer would pick. 🔴 **But 27.9% of the corpus describes
 itself not at all**, so a description-driven triage — the one used here — silently skips more than a
 quarter of what it searched. **The 18 published rows are a floor, never a census.**
+
+---
+
+## Added in the twenty-third pass of 2026-10-07 — the platform shelf, dated
+
+⏱️ **Measurement window 2026-10-06 ~21:00 UTC → 2026-10-07 00:00 UTC; ages computed against the
+reference date 2026-10-06.** Head-commit dates read with `git fetch --depth 1 --filter=blob:none`.
+
+Across the **137** GitHub repositories cited in this file: **54.7% touched in the last 30 days,
+73.7% in 2026, 24.1% cold more than a year, 14.6% cold since before 2024.** The headline platforms
+are in excellent shape. The ageing is concentrated in two places, and both are places this file
+sends clients.
+
+### 🟢 The platform shortlist is alive
+
+| Platform | Repo | Head commit | Age |
+|---|---|---|---|
+| **Kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 2026-10-06 | 🟢 0 d |
+| **Coursemology** | [`Coursemology/coursemology2`](https://github.com/Coursemology/coursemology2) | 2026-10-07 | 🟢 0 d |
+| **Frappe LMS** | [`frappe/lms`](https://github.com/frappe/lms) | 2026-10-07 | 🟢 0 d |
+| **OpenMAIC** | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 2026-10-07 | 🟢 0 d |
+| **Mentingo** | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 2026-10-02 | 🟢 4 d |
+
+🟢 **Every permissive platform on the shortlist was committed within the last four days.** The
+"permissive platforms are hobby projects" objection, which this file has been answering with ★ and
+commit *history*, can now be answered with a date.
+
+### 🔴 Where the ageing actually is
+
+**1. The Sunbird estate — on the shortlist as the only nine-figure-scale permissive platform, and 75% cold.**
+
+| Repo | Head commit | Age |
+|---|---|---|
+| [`sunbird-ed/sunbirded-mobile-app`](https://github.com/sunbird-ed/sunbirded-mobile-app) | 2025-09-16 | ⚠️ 385 d |
+| [`sunbird-ed/sunbirded-consumption-ngcomponents`](https://github.com/sunbird-ed/sunbirded-consumption-ngcomponents) | 2023-09-07 | 🔴 1,125 d |
+| [`project-sunbird/sunbird-devops`](https://github.com/project-sunbird/sunbird-devops) | 2023-04-26 | 🔴 1,259 d |
+| [`project-sunbird/sunbird-telemetry-sdk`](https://github.com/project-sunbird/sunbird-telemetry-sdk) | 2021-07-22 | 🔴 1,902 d |
+| [`project-sunbird/sunbird-lms-mw`](https://github.com/project-sunbird/sunbird-lms-mw) | 2020-05-05 | 🔴 **2,345 d** |
+| [`project-sunbird/sunbird-analytics`](https://github.com/project-sunbird/sunbird-analytics) | 2020-02-28 | 🔴 2,412 d |
+
+⚠️ **Read this precisely, because it is easy to over-read.** Sunbird's scale claim is real and its
+deployments are real. What the dates say is that **the `project-sunbird/*` component repositories
+this KB cites are not where current work happens** — the newer `sunbird-ed/*` namespace is. 🔴 **A
+proposal that cites `sunbird-lms-mw` is citing a 6.4-year-old repository.** Before Sunbird goes into
+a deck, confirm which namespace the client's distribution actually tracks.
+
+**2. The Kuali estate — 100% of it predates 2024, and 100% predates 2021.**
+
+| Repo | Head commit | Age |
+|---|---|---|
+| [`kualico/rice`](https://github.com/kualico/rice) | 2020-07-01 | 🔴 2,288 d |
+| [`kuali/kfs`](https://github.com/kuali/kfs) | 2018-03-22 | 🔴 3,120 d |
+| [`kuali/rice`](https://github.com/kuali/rice) | 2017-05-17 | 🔴 3,429 d |
+| [`kuali/kc`](https://github.com/kuali/kc) | 2017-01-06 | 🔴 3,560 d |
+
+🟢 **This confirms rather than overturns the existing "Kuali estate" section**, which already treats
+it as a licence lesson (one consortium, three licences) rather than a build target. The dates make
+it unambiguous: **the Kuali repositories are a case study, not a shelf.** The same applies to
+`foradian/fedena` (**2012-10-12, 5,107 days** — the oldest reference in this entire KB), which this
+file already closed as a question.
+
+**3. The Kennisnet metadata layer — 66.7% cold, and it is the layer this file recommends for
+curriculum alignment.**
+
+`Kennisnet/pylom` (2020-10-03, 2,194 d), `Kennisnet/py-eduterm-client` (2020-05-23, 2,327 d),
+`Kennisnet/phpnllom` (2022-06-28, 1,561 d), `Kennisnet/phpedurepsearch` (2022-12-19, 1,387 d) are
+cold; 🟢 `Kennisnet/qti-components` (2026-07-20, 78 d) and `Kennisnet/oaipmh` (2025-09-16, 385 d) are
+not. ⚠️ **A national agency's estate ages unevenly** — the QTI work is current, the LOM/Eduterm
+Python clients are five to six years old. Pick per repository, never per organisation.
+
+### ⚠️ What this does *not* change
+
+🔵 **A cold platform repository is not a dead platform, and this file should not start pruning on
+date alone.** Moodle, Open edX and Canvas are large multi-repository estates whose activity lives in
+namespaces this KB does not enumerate; a single cold mirror says nothing about them. What the dates
+*do* change is the **citation**: when this file points a client at a specific repository, that
+repository's date is now a disclosable fact, and three of the pointers above need replacing with a
+live namespace rather than defending.
+
+### The method note
+
+🟢 The channel is `git`, not an API: `api.github.com/repos/*` returns **403** to this environment
+(while `api.github.com/` itself returns 200, so it is the resource paths that are denied), and the
+rendered `github.com` page returns **403**. `git ls-remote` and a blob-filtered depth-1 fetch both
+work, and four invented control slugs swept blind alongside the real ones all failed to resolve —
+so the probe discriminates. ⚠️ **No ★ was readable this pass**; every star count in this file
+remains pass-22's or older.

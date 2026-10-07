@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-06
+updated: 2026-10-07
 ---
 
 # Market Intelligence — Education
@@ -4378,3 +4378,156 @@ actually use. Both were caught only because the payload was read. **Trend 51.**
    last 30 days, **33.5% cold since before 2024**. Two candidate rows were rejected on that field
    alone. **Trend 52**, with the GitHub-side measurement pre-registered for the next pass via `git`
    rather than an API.
+
+---
+
+## What changed in the twenty-third pass of 2026-10-07
+
+⏱️ **Measurement window 2026-10-06 ~21:00 UTC → 2026-10-07 00:00 UTC; repository ages computed
+against the reference date 2026-10-06.**
+
+🔴 **No market figure changed this pass, and that is a finding about the instrument, not the
+market.** The four global and four regional mandatory queries were run with the year **computed**
+(2026). They returned **Ohio's district-policy mandate, California AB 1159, Idaho SB 1227, the 134
+bills across 31 states, Korea's AI Basic Act (in force 2026-01-22), Vietnam's AI law
+(2026-03-01), Taiwan's AI Basic Act, the Digital Education Council LATAM survey (92% of students /
+79% of faculty), the $3.68 B North America and $2.64 B Europe 2026 figures, and the
+$10.6 B → $42.48 B global forecast** — **every one of which this KB already holds.**
+
+🔵 **One new instrument, worth citing because of who wrote it:** the **OECD *Digital Education
+Outlook 2026***, which recommends moving beyond general-purpose AI tools toward **purpose-built
+educational AI designed to produce durable learning gains**. That is trend 1 of this KB, stated by
+the OECD rather than by a vendor, and it is the single most quotable third-party endorsement of the
+"education-specific beats general-purpose" thesis that underwrites most of these engagements.
+
+🔴 **Thirteenth consecutive pass in which the mandatory query set produced no new supply.** The
+commercial material below came from dating this KB's own shelf and from the GitLab API.
+
+### The supply-side finding that changes a proposal, stated commercially
+
+Every GitHub repository this KB cites was dated for the first time — **884 of 904 resolved**, and
+**zero newly dead**. The aggregate (11.1% cold since before 2024) is unremarkable. **The tier
+spread is 9× and it is sellable:**
+
+- 🟢 **The permissive platform shortlist was all committed within four days** of the measurement —
+  Kolibri, Coursemology, Frappe LMS, OpenMAIC, Mentingo. The "permissive platforms are hobby
+  projects" objection now has a one-line answer with a date on it.
+- 🔴 **The interoperability tier is 46.6% cold and 34.2% pre-2024** — the tier buyers score. Trend
+  28 records that **39% of district RFPs score interoperability**. **The tier the buyer scores
+  hardest is the tier whose components the integrator will be maintaining**, and that is a line
+  item, not a risk note.
+- 🟢 **This KB's own patterns are warmer than the shelf they draw from** (18.8% vs 33.0% cold),
+  which means the existing engagement designs mostly stand; a handful of components need swapping,
+  named in `repos/trending.md`.
+
+### 🟢 The licence-grant clinic, re-scoped from a LATAM offer to a global one
+
+Pass 22 proposed a **licence-grant clinic** on the finding that three real LATAM education projects
+carry no licence payload. All three were **re-verified ungranted this pass** across 8 branch ×
+filename combinations each — and dated, which changes who to approach:
+
+| Project | Origin | Last activity | Clinic route |
+|---|---|---|---|
+| [`angeelrdz-group/nova-aula`](https://gitlab.com/angeelrdz-group/nova-aula) | LATAM (Spanish) | 🟢 **2026-10-05** | 🟢 **best first target** — a maintainer is demonstrably present, so this is a merge request and a conversation, not an institutional process |
+| [`evertonwilliam/plataforma-de-educacao`](https://gitlab.com/evertonwilliam/plataforma-de-educacao) | LATAM (Portuguese) | 🟢 2026-09-08 | 🟢 live enough for a direct approach |
+| [`ccsl-ufpa/educacaovigiada-org-br`](https://gitlab.com/ccsl-ufpa/educacaovigiada-org-br) | **Brazil — Federal University of Pará**, free-software centre | ⚠️ 2025-12-09 (10 months) | ⚠️ **best institutional story, worst merge-request odds** — route through the university's free-software centre, not through the repository |
+| 🆕 [`cderda/cargogetgraded`](https://gitlab.com/cderda/cargogetgraded) | 🔴 **North America** (UChicago Math graduate, former high-school maths teacher) | 2026-07-28 | 🟢 **piloting Fall 2026** — an ungranted asset about to be used in classrooms |
+
+🔴 **The fourth row is why the offer had to be re-scoped.** Ungranted-but-real education code is not
+a LATAM signature; it is a **global condition with a LATAM concentration**. The clinic sells in
+every region — and in LATAM it sells against a measured regional denominator (674 projects, three
+languages, **0 carrying a permissive payload**), which is a stronger pitch than it is anywhere else.
+
+## Opportunities by region — twenty-third-pass additions
+
+### North America
+
+🟢 **The component-currency audit, sold into the procurement rubric that already exists.** Trend 26
+records that in the US **the procurement rubric, not the regulator, is the specification**, and
+pass 10 recorded that **39% of district RFPs score interoperability**. The measurement above says
+the interoperability tier is the coldest on the permissive shelf — **46.6% cold, including a
+9.9-year-old 1EdTech PHP library and a 1,089-day-old OneRoster implementation that is the only one
+there is.** A district or state buyer scoring interoperability is scoring components whose
+maintenance someone must now own.
+
+**The offer:** a dated component register for the client's existing stack, with live permissive
+replacements named per runtime and the maintenance burden priced for what has none. It is a
+two-to-three week engagement, it produces an artefact the rubric already asks for, and 🟢 **it is
+the same evidence pack as the EU Annex III technical documentation** — built once, filed twice
+(the economics this KB already recorded for P13 and P24).
+
+🆕 **And a named, local, ungranted asset:** Carriage (`cderda/cargogetgraded`), piloting in US
+classrooms in Fall 2026 with no licence at all. The clinic is a North America opening, not only a
+LATAM one.
+
+### EMEA
+
+🟢 **The OECD *Digital Education Outlook 2026* is the citation this region's pitch was missing.** Its
+recommendation — purpose-built educational AI over general-purpose tools — comes from the
+institution EMEA ministries actually cite in procurement, and it lands on top of the existing
+Annex III argument rather than competing with it.
+
+🔴 **The regional supply warning this pass adds:** the **Kennisnet** estate — the Dutch national
+education-ICT agency's metadata layer, which this KB recommends for curriculum alignment — is
+**66.7% cold**. `pylom` (2,194 d) and `py-eduterm-client` (2,327 d) are five to six years old, while
+`qti-components` (78 d) and `oaipmh` (385 d) are current. ⚠️ **A national agency's estate ages
+unevenly; select per repository, never per organisation.** The same holds for the Norwegian **Udir**
+estate (50% cold).
+
+🟢 **The opportunity inside that warning:** EMEA is the region where a public-sector client is most
+likely to *be* the maintainer of the cold component. A contribution-and-maintenance agreement with
+a national agency is a different, stickier commercial relationship than a delivery project, and the
+dates above identify exactly which repositories are candidates.
+
+### APAC
+
+🟢 **Sovereignty is still the criterion, and the shortlist survives the date test.** OpenMAIC
+(committed on the measurement day) and `cjaikaeo/elabsheet` (BSD-2-Clause, activity 2026-09-19 — the
+shortest grant in this KB, forkable by a ministry without a conversation) are both current.
+
+🔴 **Two warnings that are specific to this region's flagship arguments.** The **Sunbird** estate —
+cited by this KB as the only nine-figure-scale permissive platform — is **75% cold in the
+`project-sunbird/*` namespace**, with `sunbird-lms-mw` at **2,345 days**; current work is in
+`sunbird-ed/*`. And the **India language substrate** (AI4Bharat and peers) has **nothing touched in
+30 days and 87.5% cold over a year**, with IndicTrans2 at 368 days the liveliest member.
+
+**The offer that follows:** for any APAC national or state engagement built on Sunbird or on
+mother-tongue models, a **namespace-and-currency check in week one** — confirm which repositories
+the client's distribution actually tracks before they appear in a deck. Korea's AI Basic Act (in
+force 2026-01-22) and Vietnam's AI law (2026-03-01) both make the provenance of a deployed component
+a documentation duty, so this check has a compliance buyer as well as an engineering one.
+
+### LATAM
+
+🟢 **The licence-grant clinic is now a scoped, targeted, one-week offer rather than a proposal.**
+Three projects re-verified ungranted at 8 path combinations each, now with activity dates that say
+which to approach how (table above). `nova-aula`, active the day before the measurement, is the
+first call; the **Federal University of Pará**'s *Educação Vigiada* carries the institutional story
+but has been quiet ten months and needs the university's free-software centre rather than a merge
+request.
+
+🔴 **A second, distinct regional defect, measured this pass:** LATAM **indigenous-language NLP** —
+AmericasNLP, Llamacha, the Quechua and Peru MT corpora on which trends 21 and 25 build the
+mother-tongue argument — is **100% cold over a year and 70% pre-2024.** Pass 22 found the region's
+education assets *ungranted*; this pass finds the region's *language* assets *unmaintained*. **Those
+are two different problems and they need two different sentences in a proposal.** An equity pitch
+built on a corpus last touched in 2022 should say so.
+
+🔵 **The honest framing, which is also the strongest one:** 38% of Latin American organisations
+already use open-source AI (Mexico 65%, Brazil 46%), Brazil ranks 4th globally in open-source
+contribution, and UNESCO/IESALC finds **87% of institutions using AI with only 26% holding a formal
+AI strategy**. 🟢 **The region is not short of capability or of adoption. It is short of
+*granted* and *maintained* assets** — and both of those are services, which is better for a services
+business than a supply gap would be.
+
+### ⚠️ What this pass could not measure, recorded so it is not mistaken for coverage
+
+Pass 22 pre-registered a sweep of **LATAM self-hosted forges** (`.edu.br`, `.edu.mx`, `.cl`) to test
+whether the regional supply gap is real or an artefact of only ever looking at `gitlab.com` and
+`github.com`. **15 hosts were probed on 3 endpoints each: 000 on all 45 requests — and a
+deliberately bogus control host returned 000 too.**
+
+🔴 **The probe does not discriminate between "this host does not exist" and "this environment may
+not reach it", so it yields no information in either direction, and no conclusion about LATAM
+self-hosted supply is drawn here.** A DNS check that would have separated the two cases was not
+permitted in this environment. **The question stays open and stays pre-registered.**

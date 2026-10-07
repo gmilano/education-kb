@@ -1,12 +1,282 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-06
+updated: 2026-10-07
 ---
 
 # Trending Agents — Education
 
 > **Append-only.** Newest dated section on top; history preserved below.
+
+## 2026-10-07 — twenty-third pass: the shelf was never audited by date, and the KB's own LTI pick is the cold fork of a library committed 13 days ago
+
+⏱️ **Measurement window: 2026-10-06 ~21:00 UTC → 2026-10-07 00:00 UTC.** Every age in days below is
+computed against the reference date **2026-10-06**, so the figures are reproducible; a handful of
+rows show a head commit dated `2026-10-07` because they were committed in timezones ahead of UTC
+while the sweep was running. This is the first section in this file dated 2026-10-07; the twenty-two
+passes below it all ran on 2026-10-06.
+
+**Channel new to this KB this pass: `git` itself as a metadata channel** — `git ls-remote` for
+existence, and `git fetch --depth 1 --filter=blob:none` for the **head commit's date**. Previous
+channels: topic, star count, funder, ministry, institution, function, licence scope, platform name,
+language, MCP registry, conformance register, named technical standard, transitional article,
+declared dependency, GitLab REST API. **Eleventh distinct channel.** Instrument:
+`compose/code/git-recency-channel/`. Trends **53**, **54** and **55** in `intel/trends.md`; the
+licence-grant clinic is now pattern **`P-GRANT-CLINIC`** in `compose/patterns.md`.
+
+🔴 **This pass executed pre-registered action A and the prediction it was written against was
+wrong — in the direction that matters.** Pass 22 predicted that if the GitHub shelf resembled
+GitLab's 33.5% cold, "roughly a third of this KB's shelf is cold". Measured: **11.1%**. But the
+aggregate was the least useful number this pass produced, because **liveness turns out to be
+tier-structured**, and the coldest tier is the one this KB sells hardest.
+
+### 🟢 Verification level of this pass, stated before the findings
+
+| Layer | Endpoint / method | Status | Control |
+|---|---|---|---|
+| existence | `git ls-remote https://github.com/<slug>` | 🟢 **ref SHA** on 884 of 904 | 4 invented slugs → **no ref** ⇒ 🟢 **DISCRIMINATES** |
+| head-commit date | `git fetch --depth 1 --filter=blob:none` + `git log -1 --format=%cI` | 🟢 **884 dates** | — |
+| licence payload | `raw.githubusercontent.com/<slug>/<branch>/<file>` | 🟢 **200** | absent repo → **404** ⇒ 🟢 **DISCRIMINATES** |
+| GitLab metadata + licence key | `gitlab.com/api/v4/projects/:idEnc?license=true` | 🟢 **200** | — |
+| *(blocked, re-probed)* | `api.github.com/repos/*`, `/search/*`, `/orgs/*`, `/licenses/*` | 🔴 **403** | `api.github.com/` and `/rate_limit` → **200**, so the host is reachable and the *resource* paths are what is denied |
+| *(blocked)* | `github.com` rendered page · `huggingface.co` · `codeberg.org` | 🔴 **403 · 000 · 000** | — |
+| *(unmeasurable)* | 15 LATAM self-hosted forges | 🔴 **000 on all** | bogus host → **000** ⇒ 🔴 **does NOT discriminate** — see action B |
+
+⚠️ **No ★ was read this pass.** The rendered page is 403 and the API path is 403, so every ★ in this
+KB remains pass-22's figure or older. Dates below are head-commit dates, read this pass, and they are
+the only freshly measured metadata here.
+
+### 🔴 Finding 1 — the headline: this KB wires in the cold fork of a live library
+
+`1EdTech/lti-1-3-php-library` is cited in `compose/patterns.md`, `repos/foundations.md` and
+`verticals/solutions.md`. Its head commit is **2020-06-03 — 2,316 days ago.**
+
+Its upstream, [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library),
+was committed **2026-09-23 — 13 days ago**.
+
+They are the same library:
+
+| | `packbackbooks/…` | `1EdTech/…` |
+|---|---|---|
+| licence payload | Apache-2.0, **11,343 B**, `sha256 78b49eea…` | Apache-2.0, **11,343 B**, `sha256 78b49eea…` |
+| composer `name` | `packbackbooks/lti-1p3-tool` | `imsglobal/lti-1p3-tool` |
+| composer `description` | *"building IMS-certified LTI 1.3 tool providers in PHP"* | — (none) |
+| head commit | 🟢 **2026-09-23** | 🔴 **2020-06-03** |
+
+🟢 **Byte-identical licence file, same package, two names, 2,303 days apart.** The consortium's
+republished copy went cold; the author's original did not. **This KB cited the copy.** Nothing about
+the licence, the ★ or the description would have revealed it — only the date, and the date was never
+read.
+
+### 🔴 Finding 2 — the interoperability tier is the coldest tier on the shelf, and pass 10 added it *because* it is scored
+
+Pass 10 added the interoperability tier on the finding that **39% of district RFPs score it**.
+Measured by head commit, across the 73 LTI/QTI/OneRoster/Caliper/xAPI references in this KB:
+
+| Tier | n | touched ≤30 d | touched in 2026 | 🔴 cold >1 y | 🔴 pre-2024 |
+|---|---|---|---|---|---|
+| MCP side-cars | 121 | 51.2% | **90.9%** | 🟢 **5.0%** | 🟢 **0.0%** |
+| whole KB | 873 | 45.2% | 73.3% | 23.1% | 11.2% |
+| **interop: LTI/QTI/OneRoster/Caliper/xAPI** | **73** | 🔴 **27.4%** | 🔴 **50.7%** | 🔴 **46.6%** | 🔴 **34.2%** |
+
+⚠️ **But the tier is split, not uniformly cold, and the split is the commercially useful part.** The
+*vendor and community* implementations are alive; the *standards bodies' own reference libraries* are
+not:
+
+| Repo | Licence (payload-read) | Head commit | Age |
+|---|---|---|---|
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | **Apache-2.0** (11,360 B) | 2026-10-06 | 🟢 **0 d** |
+| [`oxctl/spring-security-lti13`](https://github.com/oxctl/spring-security-lti13) | **Apache-2.0** (11,357 B) | 2026-10-06 | 🟢 **0 d** |
+| [`Citolab/qti-components`](https://github.com/Citolab/qti-components) | ⚠️ **LGPL-3.0** (35,199 B) | 2026-10-06 | 🟢 **0 d** |
+| [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | **Apache-2.0** (11,343 B) | 2026-09-23 | 🟢 **13 d** |
+| [`oat-sa/lib-lti1p3-core`](https://github.com/oat-sa/lib-lti1p3-core) | ⚠️ **LGPL-2.1** (18,091 B) | 2026-07-16 | 🟢 **82 d** |
+| [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | **BSD-3-Clause** (1,527 B) | 2026-07-01 | 🟢 **97 d** |
+| [`unicon/tool13demo`](https://github.com/unicon/tool13demo) | — | 2024-10-31 | 🔴 705 d |
+| [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | **MIT** (1,075 B) | 2025-06-21 | 🔴 **472 d** |
+| [`theopenem/OneRoster.NET`](https://github.com/theopenem/OneRoster.NET) | — | 2023-10-13 | 🔴 1,089 d |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | **MIT** (1,069 B) | 2022-11-21 | 🔴 **1,415 d** |
+| [`UOC/java-lti-1.3-provider-example`](https://github.com/UOC/java-lti-1.3-provider-example) | — | 2022-11-18 | 🔴 1,418 d |
+| [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) | **Apache-2.0** (11,343 B) | 2020-06-03 | 🔴 **2,316 d** |
+| [`IMSGlobal/LTI-Tool-Provider-Library-PHP`](https://github.com/IMSGlobal/LTI-Tool-Provider-Library-PHP) | — | 2016-11-28 | 🔴 **3,599 d** |
+
+🔵 **`amp-up-io/qti3-item-player` deserves its own line.** Trend 28's correction calls it *"the first
+externally certified permissive asset in this KB"* — 1EdTech Certified for QTI 3 Delivery. It is
+**472 days cold**. Certification does not expire when maintenance stops, and the certificate is still
+the strongest procurement artefact on this shelf; **but a client must be told the date**, because
+"certified" and "maintained" are now different facts about the same repository.
+
+### 🔴 Finding 3 — the permissive Python LTI 1.3 gap is closed twice over, and the live asset has been in this KB's own files all along
+
+This KB's single most-repeated supply claim — *"there is no permissive Python LTI 1.3 library"* —
+appears **20 times across 8 files**, counted this pass: `repos/foundations.md` **×4**,
+`intel/trends.md` **×3**, `intel/market.md` **×3**, and once each in `agents/top.md`,
+`compose/patterns.md`, `repos/trending.md` and `verticals/solutions.md` — **14 live assertions** —
+plus **6** historical occurrences in `agents/trending.md`, which are legitimate in an append-only
+history and are **not** to be edited. One of the 14 is inside trend 28's own correction block, which
+re-asserts the claim as the part that *"stands"*. A later pass found
+`pylti1.3` and said so in `agents/top.md`. 🔴 **That correction was filed, not applied** — this KB's
+trend 50, committed against itself for the second time.
+
+**The Python LTI 1.3 shelf, measured by date for the first time:**
+
+| Repo | Licence (payload-read) | Copyright holder in payload | Head commit | Age |
+|---|---|---|---|---|
+| [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | **BSD-3-Clause** (1,527 B) | Project Jupyter Contributors, 2016 | 2026-07-01 | 🟢 **97 d** |
+| [`Harvard-University-iCommons/django-lti`](https://github.com/Harvard-University-iCommons/django-lti) | **MIT** (1,097 B) | ⚠️ *The Regents of the **University of Michigan***, 2022 | 2025-08-27 | ⚠️ 405 d |
+| [`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) | **MIT** (1,069 B) | *Dmitry Viskov*, 2019 | 2023-01-12 | 🔴 1,363 d |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | **MIT** (1,069 B) | *Dmitry Viskov*, 2019 | 2022-11-21 | 🔴 1,415 d |
+
+🟢 **`jupyterhub/ltiauthenticator` closes the gap: BSD-3-Clause, Python, and its README states it
+implements LTI 1.3 and LTI 1.1, tested against Open edX, Canvas and Moodle.** This KB already cites
+it **three times** — in `agents/trending.md`, in `repos/trending.md` (where a sweep notes it as
+*"ya publicado en `verticals/solutions.md`"*) and once more besides. 🔴 **It was never connected to
+the gap, because it is filed as a JupyterHub authenticator and the gap was swept for as an LTI
+library.** The hole was in the index, not in the world — trend 29, now demonstrated against this
+KB's own index rather than GitHub's.
+
+⚠️ **A holder mismatch, new this pass:** `django-lti` is published by **Harvard**'s iCommons
+organisation and its MIT payload vests copyright in **the University of Michigan**. Two universities,
+one grant. The grant is clean; the *counterparty* is not who the URL suggests.
+
+### 🔴 Finding 4 — recency is not inherited, and a 147-day-old MIT template installs a 1,363-day-old fork
+
+Pass 21 measured what this shelf **installs** by licence. Nobody measured what it installs by
+**date**. [`ucfopen/cookiecutter-python-lti`](https://github.com/ucfopen/cookiecutter-python-lti)
+(MIT, © 2025 UCF Center for Distributed Learning, head commit **2026-05-12, 147 d**) is live. Its
+Flask template's `requirements.txt` pins:
+
+```
+git+https://github.com/ucfopen/pylti1.3.git@master
+```
+
+🔴 **Three defects in one line.** It resolves to a **fork** (not the upstream, not PyPI); that fork's
+head commit is **2023-01-12 — 1,363 days ago**; and it is pinned to **`@master`, a moving branch**,
+so the build is simultaneously stale *and* unreproducible. 🟢 The same repo's **Django** template
+takes the other road and pins `django-lti==0.7.1` — a real version, of the MIT library above.
+
+**The rule this adds to P22's licence-reliability gate:** a component's own head-commit date says
+nothing about the dates of what it installs. Run the gate on the dependency closure, not the
+dependency list.
+
+### 🟢 Finding 5 — zero newly dead, measured with a stronger probe than the claim that preceded it
+
+Pass 20 audited 475 references for liveness and found nothing dead — but its probe was
+**licence-payload reachability**, which an abandoned repository passes as cleanly as a live one. This
+pass re-ran the question on **904 references** with an existence probe that discriminates.
+
+| Outcome | n | Reading |
+|---|---|---|
+| resolved to a head commit | **884** | 🟢 live |
+| unresolved | **20** | — |
+| ↳ already recorded by this KB as 404 | 12 | 🟢 no change (`radhepa/Teacher-MCP` — **fifth** confirmation; `1EdTech/caliper-java` — the org announced the move to private repos; `yetanalytics/lrspipe` — product name ≠ repo name, already logged) |
+| ↳ deliberate controls planted by earlier passes | 4 | 🟢 correctly failed ⇒ the probe discriminates |
+| ↳ citation artefacts, not repositories | 4 | ⚠️ `owner/repo`, `your-username/SafeTutors`, `repos/HKUDS`, a truncated `UOC/java-lti-1.3-provider` |
+
+🔴 **Newly dead: 0.** Pass 20's conclusion survives a probe built to break it. 🔵 And the four planted
+controls failing is the cleanest discrimination result in this KB — better than pass 22's GitLab
+rendered page, which 302s on an invented slug and therefore proves nothing.
+
+### 🔴 Finding 6 — a new failure class: the LICENSE file that is an explicit *refusal*
+
+[`Wahid7852/Verbix-Flutter`](https://gitlab.com/Wahid7852/Verbix-Flutter) — OCR + speech recognition
+to help children with dyslexia with reading, i.e. squarely inside this KB's **oral reading fluency**
+void (P17, declared at the sixth pass). GitLab's detector reports `license_key: "other"`, `name:
+"Other"`. The payload, in full, is **208 bytes**:
+
+> *Copyright (c) 2024 Swati Sharma · This code is provided for viewing purposes only as part of a
+> Google Solution Challenge. No permissions are granted for reuse, distribution, or modification.*
+
+🔴 **This is not a licence. It is an anti-licence, filed where a licence goes.** The classes this KB
+had: detector wrong about which OSI licence (trend 23); project contradicts itself across badge,
+manifest and payload (pass 22). **New: a `LICENSE` file whose content withholds every right a licence
+grants.** The operational consequence is blunt — *the presence of a LICENSE file is not even weak
+evidence of a grant*, and any pipeline that counts licence files counts this as covered.
+⚠️ Holder mismatch again: payload holder **Swati Sharma**, publishing account **Wahid7852**.
+
+🔴 **The oral reading fluency void therefore stands**, and for a sharper reason than absence: the
+capability was built, and the build was explicitly closed.
+
+### 🟢 Finding 7 — the ungranted-asset pattern is **not** LATAM-specific, and pass 22's framing needs widening
+
+Pass 22 concluded that the LATAM supply gap *"is not an absence of building, it is an absence of
+granting"* and proposed a licence-grant clinic as a **LATAM** offer.
+[`cderda/cargogetgraded`](https://gitlab.com/cderda/cargogetgraded) breaks the regional framing:
+
+- **"Carriage"** — step-level algebra autograder, Python/SymPy, ingests post-OCR LaTeX, flags mistake
+  *transitions*, emits teacher-facing Excel. Created 2026-02-15, head activity **2026-07-28**,
+  **piloting Fall 2026**.
+- Built by *"a former high school math teacher and UChicago Math graduate"* ⇒ **North America**.
+- 🔴 **Licence: none.** Established by **enumerating the repository root tree** (21 entries:
+  `ARCHITECTURE.md`, `README.md`, `main.py`, `requirements.txt`, 15 package directories) — not by
+  guessing filenames, which is the weaker method this KB has warned about.
+
+🟢 **So the clinic is a global offer with a LATAM concentration, not a LATAM offer.** Written up as
+**`P-GRANT-CLINIC`** in `compose/patterns.md`.
+
+⚠️ **It also qualifies pass 22's autograder headline.** `cjaikaeo/elabsheet` (BSD-2-Clause,
+re-verified this pass: 14★, activity **2026-09-19**, holders *Chaiporn Jaikaeo and Jittat
+Fakcharoenphol*) stands as **the** permissive auto-grader. Carriage is the more pedagogically
+ambitious system — step-level mistake transitions, not answer checking — and it is **unusable by
+anyone**, including the teacher who wrote it, until one file is added.
+
+### ⚠️ What this pass got wrong and corrected inside itself
+
+1. **I first read the 11.1% aggregate as good news against GitLab's 33.5%.** It is not a comparison.
+   GitLab's 534 was an **undifferentiated search population**; this KB's 884 is a **curated shelf
+   that twenty-two passes already filtered**. A curated shelf *should* be liver than a search result.
+   🟢 **The number that survives is not the aggregate but the spread between tiers** — 5.0% cold for
+   MCP side-cars against 46.6% for interoperability, inside one KB, measured the same minute.
+   Recorded as **trend 54**.
+2. **My Spanish/Portuguese term list repeated pass 22's success and inherited a precision problem
+   it did not report.** `lectura` / `leitura` are polysemous: they mean literacy *and* sensor-read,
+   data-read, book club. 15 terms returned **276 unique projects**, of which **2** were education
+   assets. Pass 22's language expansion found 140 projects invisible to English — true, and it is
+   also true that the channel's precision on these terms is roughly **1%**. Both belong in the
+   record.
+3. **Pre-registered action B is unrunnable from here, and reporting it as "nothing found" would have
+   been false.** See below.
+
+### 🔴 Pre-registered actions from pass 22 — outcomes, including the one that failed
+
+| # | Action | Prediction | Outcome |
+|---|---|---|---|
+| **A** | head-commit recency for the 20 highest-value GitHub rows | *"if similar to 33.5%, roughly a third of the shelf is cold"* | 🟢 **Run, and widened from 20 rows to all 904.** 🔴 **Prediction falsified: 11.1% pre-2024, not ~33%.** The useful result was the tier spread, not the aggregate |
+| **B** | sweep national self-hosted GitLab instances (`.edu.br`, `.edu.mx`, `.cl`) | *"expect egress blocks on most; record each as a measured channel state"* | 🔴 **Blocked, and — the part the prediction missed — unmeasurable.** 15 hosts probed on `/`, `/api/v4/projects` and `/api/v4/version`: **000 on all 45 requests.** A deliberately bogus host returns **000** too ⇒ 🔴 **the probe does not discriminate**, so it cannot distinguish "host does not exist" from "egress denied". **No conclusion about LATAM self-hosted supply may be drawn from this**, and none is drawn. ⚠️ A DNS-resolution check that would have separated the two was not permitted in this environment |
+| **C** | licence-grant clinic as a named offer | — | 🟢 **Done, and retargeted.** All three pass-22 projects re-verified ungranted across **8 branch × filename combinations** each. Activity dates — new this pass — change who to approach. `P-GRANT-CLINIC` |
+
+### 🔵 Pre-registered for the next pass
+
+| # | Action | Prediction written **before** running it |
+|---|---|---|
+| **A** | Apply the stale *"no permissive Python LTI 1.3 library"* claim's correction to the **14 live assertions** counted in finding 3 (leaving the 6 historical ones in `agents/trending.md` intact), not to a pass-scoped section | ⚠️ trend 50 says a filed correction regresses; this is the test of whether this KB can actually clear one |
+| **B** | Run the recency channel over the **dependency closure** pass 21 resolved (352 dependencies), not just the top-level repos | 🔴 expect the installed tier to be *older* than the citing tier, on the `cookiecutter → ucfopen/pylti1.3@master` shape |
+| **C** | Re-pick the cold components in **P1** and **P18** and re-measure, rather than only flagging them | — |
+
+### The mandatory queries, run with the year **computed** (2026), not hardcoded
+
+| Query | Result against this KB |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **0 new** — returned general agent frameworks (OpenClaw, CrewAI, LangGraph, OpenHands), none education-specific |
+| `github trending education AI 2026` | 🔴 **0 new** — course and curriculum repos, no education *product* repos |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **0 new** — ERPNext, Frappe Education, OpenEduCat, Apache OFBiz, Aureus ERP all already held |
+| `AI education industry trends 2026` | ⚠️ **1 new instrument** — the **OECD 2026 Digital Education Outlook**, which recommends moving beyond general-purpose tools to purpose-built educational AI. Supports trend 1; this KB had not cited it |
+| `AI education {North America, EMEA, APAC, LATAM} 2026 adoption regulation players` | ⚠️ **0 new findings, 1 new citation** — Ohio, AB 1159, SB 1227, the 134 bills, Korea's AI Basic Act, Vietnam, Peru, the DEC LATAM survey, the $3.68 B / $2.64 B regional figures are all already recorded. See `intel/market.md` |
+
+🔴 **That is the thirteenth consecutive pass in which the mandatory query set produced no new
+repository.** It is not a defect in the queries — it is what trend 29 predicts: a question shaped
+like a listicle returns listicles. **Every row this pass added came from `git`, from GitLab's API, or
+from reading this KB's own citations more carefully than the pass that wrote them.**
+
+### Sources named by the search summaries this pass relied on
+
+OECD *Digital Education Outlook 2026* · multistate.us (134 bills / 31 states) · excelined.org (Ohio
+district-policy mandate) · Digital Education Council *AI in Higher Education LATAM Survey 2026* ·
+Latham & Watkins *AI Regulation in APAC* · European Commission *European approach to artificial
+intelligence* · researchandmarkets *AI in Education Market Report 2026* · frappe.io/education ·
+nocobase (open-source ERP/CRM rankings).
+
+---
+
 
 ## 2026-10-06 — twenty-second pass: the only forge API this environment can reach is not GitHub's, and it calls a GPL-2.0 file AGPL-1.0
 

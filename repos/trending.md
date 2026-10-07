@@ -1,12 +1,129 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-06
+updated: 2026-10-07
 ---
 
 # Trending Repos — Education
 
 > **Append-only.** Newest dated section on top; history preserved below.
+
+## 2026-10-07 — twenty-third pass: 904 references dated for the first time, and the supply map gains a time axis
+
+⏱️ **Measurement window 2026-10-06 ~21:00 UTC → 2026-10-07 00:00 UTC; ages computed against the
+reference date 2026-10-06.** Channel: **`git` as a metadata channel** — `git ls-remote` for
+existence and `git fetch --depth 1 --filter=blob:none` for the head commit's date. Eleventh distinct
+channel. Full findings in `agents/trending.md`; this section carries the repository-supply half.
+
+### Why a dating channel produced almost no new repositories, and why that is the finding
+
+🔴 **This pass added 6 repository rows, and 4 of them were already cited somewhere in this KB.** That
+is not a thin result — it is the result. For twenty-two passes the supply map had **two axes**
+(licence and, where readable, ★) and no **time** axis. Adding time did not reveal new supply; it
+**re-ranked the supply already held**, and in two cases inverted the ranking.
+
+| What the sweep covered | n |
+|---|---|
+| distinct `github.com/owner/repo` references across all 8 KB files | **904** |
+| resolved to a head-commit date | **884** (97.8%) |
+| unresolved — all explained, none newly dead | **20** |
+| references in the four *shelf* files (`agents/top`, `repos/foundations`, `verticals/solutions`, `compose/patterns`) | **483** |
+
+### 🟢 Liveness distribution of the GitHub shelf — the first one in this KB
+
+| Bucket | n | Share |
+|---|---|---|
+| touched in the last 30 days | 404 | **45.7%** |
+| 31–90 days | 127 | 14.4% |
+| 91–365 days | 150 | 17.0% |
+| 1–2 years (2024–2025) | 105 | 11.9% |
+| 🔴 cold since before 2024 | **98** | **11.1%** |
+| *touched at any point in 2026* | *650* | *73.5%* |
+
+⚠️ **Do not read this against pass 22's GitLab 33.5% as if it were the same measurement.** GitLab's
+534 was an **undifferentiated search population**; these 884 are a **shelf twenty-two passes already
+curated**. A curated shelf *ought* to be liver. The comparison that is valid is **tier against tier
+inside this KB**, below.
+
+### 🔴 The finding: liveness is tier-structured, and the spread is 9×
+
+| Tier | n | ≤30 d | in 2026 | 🔴 cold >1 y | 🔴 pre-2024 |
+|---|---|---|---|---|---|
+| MCP side-cars | 121 | 51.2% | **90.9%** | 🟢 **5.0%** | 🟢 **0.0%** |
+| `compose/patterns.md` (components actually wired into engagements) | 181 | 54.7% | 76.2% | 18.8% | 6.6% |
+| `agents/top.md` | 250 | 40.0% | 77.6% | 18.8% | 8.0% |
+| `verticals/solutions.md` | 137 | 54.7% | 73.7% | 24.1% | 14.6% |
+| **whole KB** | **873** | **45.2%** | **73.3%** | **23.1%** | **11.2%** |
+| `repos/foundations.md` | 230 | 43.0% | 63.9% | 🔴 **33.0%** | 🔴 **18.3%** |
+| eval tier | 17 | 17.6% | 52.9% | 🔴 35.3% | 5.9% |
+| voice / speech | 13 | 46.2% | 53.8% | 🔴 46.2% | 0.0% |
+| **interop (LTI/QTI/OneRoster/Caliper/xAPI)** | **73** | 🔴 **27.4%** | 🔴 **50.7%** | 🔴 **46.6%** | 🔴 **34.2%** |
+| Udir (Norway) estate | 10 | 40.0% | 40.0% | 50.0% | 20.0% |
+| Kennisnet (NL metadata) | 9 | 11.1% | 33.3% | 🔴 66.7% | 44.4% |
+| Sunbird estate | 8 | 0.0% | 12.5% | 🔴 75.0% | 62.5% |
+| India substrate (AI4Bharat, IndoNLP, IndoBenchmark) | 8 | 🔴 **0.0%** | 12.5% | 🔴 87.5% | 0.0% |
+| LATAM indigenous NLP (AmericasNLP, Llamacha, Quechua, Naki) | 10 | 🔴 **0.0%** | 🔴 **0.0%** | 🔴 **100%** | 🔴 70.0% |
+| Kuali estate | 4 | 🔴 **0.0%** | 🔴 **0.0%** | 🔴 **100%** | 🔴 **100%** |
+
+**Three readings that change a decision:**
+
+1. 🟢 **`compose/patterns.md` is warmer than the shelf it draws from** (18.8% cold vs `foundations`'
+   33.0%). Twenty-two passes of composition, without ever reading a date, still selected
+   disproportionately from the live subset. That is a genuine vote of confidence in the patterns —
+   and it makes the handful of cold components they *did* pick (finding below) worth fixing rather
+   than worth panicking about.
+2. 🔴 **`repos/foundations.md` is the coldest shelf file.** "Foundational" has been operating as a
+   synonym for "long-established", and one third of it has not been touched in a year.
+3. 🔴 **The two language substrates built for equity arguments are the two coldest tiers that are
+   not an abandoned consortium.** LATAM indigenous NLP is **100% cold, 70% pre-2024**; the India
+   substrate has **nothing touched in 30 days**. Pass 22 found LATAM assets ungranted; this pass
+   finds the region's *language* assets unmaintained. Those are two different defects and both are
+   in `intel/market.md`.
+
+### 🟢 Rows added or re-ranked this pass — all licences read from payload on 2026-10-06
+
+| Repo | Licence (payload bytes) | Head commit | Age | Status in this KB |
+|---|---|---|---|---|
+| [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | **Apache-2.0** (11,343 B) | 2026-09-23 | 🟢 13 d | 🆕 **new** — the live upstream of the cold `1EdTech` copy this KB cites. `sha256` of the two licence payloads is identical |
+| [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | **BSD-3-Clause** (1,527 B) | 2026-07-01 | 🟢 97 d | 🔁 **promoted** — cited 3× in trending files, never counted against the Python LTI 1.3 gap it closes |
+| [`oxctl/spring-security-lti13`](https://github.com/oxctl/spring-security-lti13) | **Apache-2.0** (11,357 B) | 2026-10-06 | 🟢 0 d | 🔁 **dated** — the live Java/Spring LTI 1.3 option |
+| [`oat-sa/lib-lti1p3-core`](https://github.com/oat-sa/lib-lti1p3-core) | ⚠️ **LGPL-2.1** (18,091 B) | 2026-07-16 | 🟢 82 d | 🔁 **dated** — live, but copyleft: a library-boundary conversation, not a drop-in |
+| [`Harvard-University-iCommons/django-lti`](https://github.com/Harvard-University-iCommons/django-lti) | **MIT** (1,097 B) | 2025-08-27 | ⚠️ 405 d | 🆕 **new as a row** — ⚠️ payload vests copyright in **the University of Michigan**, not Harvard |
+| [`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) | **MIT** (1,069 B, © Dmitry Viskov) | 2023-01-12 | 🔴 1,363 d | 🆕 **new, and recorded as a warning** — the fork that `ucfopen/cookiecutter-python-lti` pins at `@master` |
+| [`cjaikaeo/elabsheet`](https://gitlab.com/cjaikaeo/elabsheet) | **BSD-2-Clause** | 2026-09-19 (GitLab activity) | 🟢 17 d | ✅ **re-verified** — pass 22's headline autograder holds: 14★, holders named in payload |
+| [`cderda/cargogetgraded`](https://gitlab.com/cderda/cargogetgraded) | 🔴 **none** (root tree enumerated, 21 entries) | 2026-07-28 (activity) | ⚠️ 70 d | 🆕 **new, unusable** — North America, step-level algebra autograder, piloting Fall 2026 |
+| [`Wahid7852/Verbix-Flutter`](https://gitlab.com/Wahid7852/Verbix-Flutter) | 🔴 **anti-grant** (208 B: *"No permissions are granted"*) | 2026-06-01 (activity) | ⚠️ 127 d | 🆕 **new, recorded as a failure class** — dyslexia OCR + speech |
+
+### 🔴 The cold components this KB currently wires into patterns
+
+Measured, not inferred. These are in `compose/patterns.md` today:
+
+| Component | Pattern | Head commit | Age | Live permissive alternative found this pass |
+|---|---|---|---|---|
+| `1EdTech/lti-1-3-php-library` | P1 | 2020-06-03 | 🔴 2,316 d | 🟢 `packbackbooks/lti-1-3-php-library`, Apache-2.0, **13 d** — same library |
+| `dmitry-viskov/pylti1.3` | P1 | 2022-11-21 | 🔴 1,415 d | 🟢 `jupyterhub/ltiauthenticator`, BSD-3, **97 d** |
+| `rhasspy/piper` | P18 (offline voice) | 2025-08-26 | 🔴 406 d | 🟢 `k2-fsa/sherpa-onnx`, Apache-2.0, **0 d** — already in this KB, does ASR *and* TTS |
+| `amp-up-io/qti3-item-player` | P2, P24 | 2025-06-21 | 🔴 472 d | ⚠️ `Citolab/qti-components`, **0 d**, but **LGPL-3.0** — keep the certified MIT player and disclose the date |
+| `theopenem/OneRoster.NET` | P24 | 2023-10-13 | 🔴 1,089 d | 🔴 **none found** — declared gap below |
+| `ai-edu-lab/e-eval` | P12 | 2024-02-19 | 🔴 960 d | ⚠️ `AI-for-Education/pedagogy-benchmark`, 356 d — also ageing |
+| `project-sunbird/sunbird-lms-mw` | P16 | 2020-05-05 | 🔴 2,345 d | ⚠️ the Sunbird estate is 75% cold; `sunbird-ed/sunbirded-mobile-app` (2025-09-16) is its liveliest part |
+
+### 🔴 What the sweep did not find, with the denominator attached
+
+| Looked for | How | Result |
+|---|---|---|
+| any **newly dead** reference among 904 | `git ls-remote` existence probe, discriminating (4 planted controls correctly failed) | 🟢 **0** — pass 20's claim survives a stronger probe |
+| a **live permissive OneRoster** implementation | recency over all OneRoster references in this KB | 🔴 **0** — `theopenem/OneRoster.NET` (1,089 d) and `jdolny/OneRoster.NET` (1,089 d) are the shelf, and both are cold |
+| a **live permissive Caliper** implementation | same | 🔴 **0** — and `1EdTech/caliper-java` is 404 because **the consortium announced a move to private repositories**; `1EdTech/caliper-spec` is 2019 |
+| a permissive **oral reading fluency** asset | GitLab API, 15 EN/ES/PT terms, 276 unique projects | 🔴 **0 usable** — the one real candidate (`Verbix-Flutter`) carries an explicit anti-grant |
+| **LATAM self-hosted forge** supply (`.edu.br`, `.edu.mx`, `.cl`) | 15 hosts × 3 endpoints | 🔴 **unmeasurable — 000 on all 45, and a bogus control also returns 000.** The probe does not discriminate, so this is a statement about this environment's egress and **not** about LATAM supply |
+
+⚠️ **That last row is the one to read carefully.** An empty result from a channel that cannot tell
+absence from denial is not evidence of absence. It is recorded here so no later pass mistakes it for
+coverage.
+
+---
+
 
 ## 2026-10-06 — twenty-second pass: a second forge, 674 projects, and the supply map was missing a European public-institution estate
 

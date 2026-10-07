@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-06
+updated: 2026-10-07
 ---
 
 # Compose Patterns — Education
@@ -3359,3 +3359,181 @@ statement** — and this stack makes it true by construction rather than by cont
 | **EMEA** | 🟢 **Strong.** Answers Annex III deployer duties and residency without a transfer assessment; **11 of the 18 rows this pass added are EMEA-origin** (5 verified from a README, 6 inferred), so the local reference base exists |
 | **APAC** | 🟢 **Strong where sovereignty is the criterion.** BSD-2 on the grading core means a ministry can fork and localise without publishing — the shortest grant in this KB |
 | **LATAM** | ⚠️ **Fits the budget case, with an added step.** The cost argument is the point here, but 🔴 the regional supply this pass measured is **ungranted, not absent** (0 licensed education projects of 674), so a LATAM delivery imports this stack rather than building on local assets. Pair it with the **licence-grant clinic** in `intel/market.md` |
+
+---
+
+## Component currency update, twenty-third pass of 2026-10-07
+
+⏱️ **Measurement window 2026-10-06 ~21:00 UTC → 2026-10-07 00:00 UTC; ages computed against the
+reference date 2026-10-06.** Every GitHub repository cited anywhere in this KB was dated via
+`git ls-remote` and `git fetch --depth 1 --filter=blob:none`.
+
+🟢 **Read this first, because it is the reassuring half.** Of the **181** repositories wired into
+the patterns in this file, **54.7% were touched in the last 30 days and only 18.8% are more than a
+year old** — against **33.0%** for `repos/foundations.md`. **These patterns were already composing
+from the live subset of the shelf, without ever reading a date.** What follows is a short list of
+exceptions, not a rebuild.
+
+### 🔴 P1 — the default engagement shape: both LTI picks are cold, and both have live replacements
+
+| Currently named | Head commit | Age | 🟢 Replace with | Licence (payload) | Head commit |
+|---|---|---|---|---|---|
+| `1EdTech/lti-1-3-php-library` | 2020-06-03 | 🔴 2,316 d | [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | **Apache-2.0** (11,343 B) | **2026-09-23** (13 d) |
+| `dmitry-viskov/pylti1.3` | 2022-11-21 | 🔴 1,415 d | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | **BSD-3-Clause** (1,527 B) | **2026-07-01** (97 d) |
+
+🟢 **The PHP swap is free.** The two repositories' `LICENSE` payloads are **byte-identical**
+(`sha256 78b49eea…`, 11,343 B) and the composer packages are the same library under two names
+(`packbackbooks/lti-1p3-tool` vs `imsglobal/lti-1p3-tool`). **This is an upstream swap, not a
+migration** — the consortium's republished copy went cold, the author's original did not.
+
+🟢 **The Python swap is a real choice and it closes this KB's most-repeated gap.**
+`ltiauthenticator` implements **LTI 1.3 and LTI 1.1** and its README names **Open edX, Canvas and
+Moodle** as tested platforms — the three this KB documents. If the tool must be Django rather than
+JupyterHub-hosted, use [`Harvard-University-iCommons/django-lti`](https://github.com/Harvard-University-iCommons/django-lti)
+(**MIT**, 2025-08-27, ⚠️ copyright vests in the **University of Michigan** despite the Harvard
+organisation — note it in the provenance pack).
+
+⚠️ **Do not reach for `ucfopen/cookiecutter-python-lti` without reading its requirements file.** The
+template is MIT and 147 days old; its **Flask** path pins
+`git+https://github.com/ucfopen/pylti1.3.git@master` — a **fork, 1,363 days cold, at a moving
+branch**. Its **Django** path pins `django-lti==0.7.1` and is fine.
+
+### 🔴 P18 — offline voice tutoring: Piper is 406 days cold and the replacement is already in this KB
+
+| Currently named | Head commit | Age | 🟢 Replace with | Licence | Head commit |
+|---|---|---|---|---|---|
+| `rhasspy/piper` (TTS) | 2025-08-26 | 🔴 406 d | [`k2-fsa/sherpa-onnx`](https://github.com/k2-fsa/sherpa-onnx) | **Apache-2.0** (11,357 B) | **2026-10-06** (0 d) |
+
+🟢 **`sherpa-onnx` is already the ASR component of this pattern**, and it does **TTS as well**, so
+the swap *removes* a dependency rather than exchanging one. Piper stays usable — MIT, and a frozen
+TTS model is a far smaller risk than a frozen protocol library — but new builds should not add it.
+
+### ⚠️ P2 / P24 — the certified QTI player is 472 days old, and that is a disclosure, not a swap
+
+[`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) (MIT, 2025-06-21) is
+the **only 1EdTech-Certified permissive asset in this KB**. 🟢 **Keep it.** Certification does not
+lapse when maintenance pauses, and the certificate is the strongest procurement artefact on this
+shelf. 🔴 **But the date goes in the deck**, because "certified" and "maintained" are now different
+facts about the same repository. The live alternative,
+[`Citolab/qti-components`](https://github.com/Citolab/qti-components) (0 d), is **LGPL-3.0** — a
+different licence conversation, not a drop-in.
+
+### ⚠️ P12 and P16 — two further cold components, flagged without a replacement
+
+| Pattern | Component | Head commit | Age | Status |
+|---|---|---|---|---|
+| **P12** (pedagogy-aware evaluation) | `ai-edu-lab/E-Eval` | 2024-02-19 | 🔴 960 d | 🔴 **no live permissive replacement found.** `AI-for-Education/pedagogy-benchmark` is 356 d and also ageing |
+| **P16** (all-MIT national/state stack) | `project-sunbird/sunbird-lms-mw` | 2020-05-05 | 🔴 2,345 d | ⚠️ the `project-sunbird/*` namespace is **75% cold**; current work is in `sunbird-ed/*`. **Confirm which namespace the client's distribution tracks before week one** |
+| **P24** | `theopenem/OneRoster.NET` | 2023-10-13 | 🔴 1,089 d | 🔴 **no live permissive OneRoster implementation exists** — both known ones are 1,089 d. Price the maintenance |
+
+### 🟢 Added to the P22 gate — a fourth point, and it runs over the closure
+
+P22 (the licence-reliability gate) has three points: payload, manifest, detector. **Add a fourth:**
+
+> **P22.4 — currency.** For every component entering a deliverable, record the head-commit date
+> (`git ls-remote` + `git fetch --depth 1 --filter=blob:none`; no API needed, and it works where
+> `api.github.com/repos/*` returns 403). **Run it over the dependency closure, not the dependency
+> list** — a 147-day-old MIT template installing a 1,363-day-old fork at a moving branch is the
+> shape this catches, and neither the template's licence nor its own date reveals it.
+
+**Output:** three verdicts. 🟢 **current** (<180 d) — no action. ⚠️ **ageing** (180 d–2 y) —
+disclose in the deck with the date. 🔴 **cold** (>2 y) — either name a live replacement or price
+the maintenance explicitly as a line item. **Never prune on date alone**: a finished conformant
+implementation and an abandoned one look identical to this probe, and only reading the project tells
+you which it is.
+
+---
+
+## P-GRANT-CLINIC — the licence-grant clinic (small, fast, and it sells in every region)
+
+**Added in the twenty-third pass of 2026-10-07**, executing pass 22's pre-registered action C and
+re-scoping it from a LATAM offer to a global one.
+
+### The finding it monetises
+
+Across the last two passes, **four real, active education projects were measured as carrying no
+grant of any kind** — not a restrictive licence, *no licence file at all*. They cannot be adopted,
+contributed to, forked, resold or deployed by anyone, **including their own institutions'
+partners**, until one file is added.
+
+| Project | Origin | Last activity | What it is |
+|---|---|---|---|
+| [`angeelrdz-group/nova-aula`](https://gitlab.com/angeelrdz-group/nova-aula) | LATAM (Spanish) | 🟢 2026-10-05 | full-stack education platform: courses, quizzes, analytics |
+| [`evertonwilliam/plataforma-de-educacao`](https://gitlab.com/evertonwilliam/plataforma-de-educacao) | LATAM (Portuguese) | 🟢 2026-09-08 | AI-guided software-engineering training track |
+| [`ccsl-ufpa/educacaovigiada-org-br`](https://gitlab.com/ccsl-ufpa/educacaovigiada-org-br) | **Brazil — Federal University of Pará** | ⚠️ 2025-12-09 | *Educação Vigiada*, surveillance in education; five years old |
+| [`cderda/cargogetgraded`](https://gitlab.com/cderda/cargogetgraded) | 🔴 **North America** (UChicago) | 2026-07-28 | **Carriage** — step-level algebra autograder, Python/SymPy, **piloting Fall 2026** |
+
+🔴 **The fourth row is why this is not a LATAM pattern.** Ungranted-but-real is a **global condition
+with a LATAM concentration** — and in LATAM it carries a measured denominator (674 projects across
+English, Spanish and Portuguese; **0 with a permissive payload**) that makes the pitch sharper
+there than anywhere else.
+
+### Components
+
+Nothing to build. This pattern is **entirely artefact and process**, which is why it fits in a week:
+
+| Artefact | Source |
+|---|---|
+| licence selection note (MIT / Apache-2.0 / BSD-2 / BSD-3, with the consequence of each stated in one paragraph) | this KB's `repos/foundations.md` licence-boundary section |
+| `LICENSE` payload, correct holder line, correct year | the project's own commit history and institutional owner |
+| `LICENSES/` directory + **REUSE**-style per-file headers where the project has mixed provenance | the pattern pass 22 measured on `gitlab.com` |
+| manifest alignment — `composer.json` / `package.json` / `pyproject.toml` `license` field matching the payload | prevents pass 22's class-3 defect (*the project contradicts itself*) |
+| dependency-licence closure report | **P22** gate, points 1–3 |
+| currency report | **P22.4**, added above |
+
+### Wiring — the one-week shape
+
+1. **Day 1 — establish there is genuinely no grant.** 🔴 **Enumerate the repository root tree via
+   the forge API; do not guess filenames.** This is how Carriage was established as ungranted (21
+   root entries, no licence file). Guessing `LICENSE`/`LICENSE.md`/`COPYING` across two branches
+   misses `LICENSES/` directories and mis-reports REUSE projects as ungranted.
+2. **Day 1 — identify the actual holder.** ⚠️ Rarely the account name. Measured counter-examples:
+   `django-lti` is published by **Harvard** and vests copyright in the **University of Michigan**;
+   `Verbix-Flutter` is published by `Wahid7852` and names **Swati Sharma**;
+   `ucfopen/pylti1.3` names the upstream author. **For a university project the holder is usually
+   the institution, and the grant needs the institution's assent, not the committer's.**
+3. **Days 2–3 — licence selection workshop.** For a ministry or university the decision is nearly
+   always between **MIT** (shortest, most permissive, zero obligations) and **Apache-2.0** (adds an
+   explicit patent grant — the one a public institution's counsel usually wants). **BSD-2** is the
+   answer when the institution wants the shortest possible text, as `cjaikaeo/elabsheet` chose.
+4. **Days 3–4 — add the files and align the manifests.** Payload, holder, year, `LICENSES/`,
+   manifest `license` field. Run the P22 gate against the result so the project passes its own
+   check.
+5. **Day 5 — the closure report.** What the project *installs* may be less permissive than what it
+   *grants* (pass 21: 15 of 352 dependencies not permissive). **The grant is not finished until the
+   closure is reported**, or the institution has been told, in writing, which dependency constrains
+   redistribution.
+
+### Deliverables
+
+- A merged licence grant, or — where the holder is an institution and the repository is quiet — a
+  **written grant recommendation addressed to the institution**, which is the realistic output for
+  `ccsl-ufpa/educacaovigiada-org-br` (ten months idle).
+- Dependency-licence closure report and currency report.
+- A one-page reusable licence-selection note the institution can apply to its remaining repositories
+  — **this is the part that turns one clinic into a programme.**
+
+### ⚠️ Three warnings that are the point of this pattern
+
+1. 🔴 **Target by activity, not by prestige.** The federal university's project has the best story
+   and the worst odds: **ten months idle** means there is no maintainer to accept a merge request,
+   so it must be routed through the institution's free-software centre as a policy conversation.
+   `nova-aula`, committed the day before measurement, is a merge request and a chat. **Open with the
+   live one; the institutional one is the follow-on.**
+2. 🔴 **A `LICENSE` file is not a grant.** `Wahid7852/Verbix-Flutter` carries one — 208 bytes
+   reading *"No permissions are granted for reuse, distribution, or modification."* Any clinic that
+   screens on *presence* will skip the projects that most need it and "fix" nothing. **Screen on
+   payload.**
+3. ⚠️ **This is not free legal advice, and it should not be priced as a giveaway.** The deliverable
+   is a licence decision made by the institution's own counsel with the engineering facts in front
+   of them. 🟢 **The commercial logic is that the clinic creates the asset the later engagement is
+   built on** — a client cannot buy a platform engagement on code nobody is allowed to modify.
+
+### Regional fit
+
+| Region | Fit |
+|---|---|
+| **LATAM** | 🟢 **Strongest, and the only region with a measured denominator**: 674 projects, three languages, **0 permissive payloads**. Three named targets, one of them a federal university. Pair with the offline-first and cost arguments of P5 and P21 |
+| **North America** | 🟢 **Real and newly evidenced** — Carriage is piloting in US classrooms in Fall 2026 with no grant. Sells alongside the procurement-rubric component register of trend 26 and P24 |
+| **EMEA** | 🟢 **Different buyer, same work.** Public-sector publishers here mostly *do* grant, often via **REUSE** and `LICENSES/` directories; the clinic's EMEA form is **correctness and closure** (manifest alignment, REUSE conformance, dependency closure) rather than adding a first grant |
+| **APAC** | ⚠️ **Thinnest fit of the four, stated rather than padded.** The region's permissive assets measured in this KB — OpenMAIC, `elabsheet`, the Sunbird estate — already carry grants. The APAC version of this engagement is the **currency** check of P22.4, not the grant |
