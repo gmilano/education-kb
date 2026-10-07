@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟡 Forty-fourth pass, 2026-10-07 — a deployable Portuguese **text-complexity service** joins the shelf, and its licence is the reason it may not be hosted for a client
+
+⏱️ **Eleventh pass of this date.** **Licences read first-hand on 2026-10-07 from payload in cloned
+trees, channel named per row (`P237`, `P171`, `P250`, `P510`). No star counts (`P479`).**
+
+🔵 **This file lists real systems a studio can stand up and customise.** 🔴 **This pass adds one and
+immediately qualifies it, because the qualification is the whole commercial story.**
+
+### 🟡 Added — NILC-Metrix as a self-hosted Brazilian-Portuguese text-complexity service
+
+| | Measured in the cloned tree, HEAD `5416e43` (2026-08-27) |
+|---|---|
+| Repo | `github.com/nilc-nlp/nilcmetrix` (`git ls-remote`: 1 ref; negative control in the same run: 0) |
+| Licence | 🔴 **AGPL-3.0** — payload 34 522 B, `affero_lines=15`, classified on the **title block** by the shared hardened classifier (`P237`) |
+| Shape | 🟢 **a real service, not a library**: `nilcmetrix.go` + `ranking.go` (Go HTTP), `Dockerfile.nilcmetrix` → `FROM cohmetrix:noble`, **`EXPOSE 8080`**, `ENTRYPOINT /opt/text_metrics/nilcmetrix` |
+| Payload | **172 files**; **23** metric modules under `text_metrics/metrics/` (`basic_counts`, `tokens`, `freq`, `lsa`, `sem`, `coref`, `connectives`, `liwc`, `guten_palavras`, `aic_palavras`, …) |
+| Identity | 🔵 `go.mod` declares `module github.com/sidleal/nilcmetrix` — so `nilc-nlp/` and `sidleal/` are **one project in two namespaces**, not two assets (the `P506` / `P253` pattern) |
+
+🔴 **Why the licence is worse here than its family usually is, and this is the point.** AGPL-3.0's
+§13 triggers on **interaction over a network**, and this asset **is** a network service by
+construction (`EXPOSE 8080`). 🔵 **Hosting it for a client is the exact act that obliges offering the
+corresponding source of the hosting service.** 🟡 **So it is admitted to this shelf as a
+self-hosted-by-the-client component, and refused as a Globant-hosted one** — the distinction a
+procurement reviewer will ask about first.
+
+🟢 **How it compares to the other non-permissive service this file already carries:** pass 42 added
+**LanguageTool** as an **LGPL-2.1** linguistic service, which can be linked and hosted without
+infecting the caller. 🔴 **NILC-Metrix cannot.** 🔵 **Same layer, same language, two different
+commercial answers — and the difference is one licence line read from payload.**
+
+### 🔵 The Portuguese assessment stack as it now stands, end to end
+
+| Link | Component | Licence | Shape |
+|---|---|---|---|
+| 1 · graded corpus | `lplnufpi/essay-br` (ENEM C1-C5, human-graded, peer-reviewed) | 🟢 **MIT** | data |
+| 2 · NLP pipeline | `explosion/spaCy` + `pt_core_news_*` | 🟢 **MIT** (code; 🔴 **model artefact licences unmeasured** → `Gap 246`) | library |
+| 3 · feature extractor | 🔴 **the gap** — NILC-Metrix is AGPL, Coh-Metrix-Port is GPL, TAALED is **NonCommercial** | 🔴 none permissive | 🔴 **must be reimplemented from published index definitions** |
+| 4 · grammar/orthography | LanguageTool, self-hosted | 🟡 **LGPL-2.1** | service, linkable |
+| 5 · scorer architecture | `wwrwbs/AI_AWE` (Qwen2.5 base family, LoRA harness) | 🟢 **Apache-2.0** | transfers, 🔴 **module 2 English-locked** (`Gap 239`) |
+| 6 · delivery | Moodle `ai/provider` plugin (`P520`) or `qti3` + the `P533` emitter | 🟢 GPL-3.0 platform / **MIT** emitter | platform |
+
+🔵 **Four of six links are usable as they stand; link 3 is the one that has to be built, and now
+this file says why in licence terms rather than in capability terms.**
+
+### 🔴 The mandated platform sweep, recorded in full so silence is not read as coverage
+
+Query run verbatim (`open source platform education ERP CRM MIT Apache`). 🔴 **The channel returned a
+single vendor's glossary, repeated across ten locales** (`openeducat.org`), and no independent
+comparison of education ERP/CRM platforms.
+
+| Candidate surfaced | Verdict | Reason |
+|---|---|---|
+| **OpenEduCat** | 🔵 **already shelved** | education ERP on Odoo; **LGPLv3** as the vendor's own glossary states — no change |
+| **Odoo** (framework beneath it) | 🔵 already shelved | ERP framework |
+| Moodle, Koha, LibreOffice, Linux | 🔵 already shelved or out of scope | named only as generic examples |
+
+🟢 **Nothing new admitted — the platform shelf is saturated for the eleventh consecutive pass.** 🔵
+**The sweep is recorded rather than omitted precisely because an informed nil result is information
+and an absent one looks identical to coverage.** 🔴 **The one claim in the channel worth flagging as
+unsupported: the glossary asserts open source "usually wins on TCO" for education workloads and cites
+Gartner and the European Commission with no figures or links — not usable in a deliverable.**
+
 ## 🟢 Forty-third pass, 2026-10-07 — the **assessment-authoring** layer this file listed as a manual workaround is now a deployable component
 
 ⏱️ **Tenth pass of this date.** **Licences read first-hand on 2026-10-07 from payload or the cloned

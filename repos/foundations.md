@@ -4,6 +4,106 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Forty-fourth pass, 2026-10-07 — `Gap 243` **CLOSED with code**, and the sweep found two defects **in itself** that reading it could not
+
+⏱️ **Eleventh pass of this date.** **Licences read first-hand on 2026-10-07 from payload in cloned
+trees via the shared hardened classifier `compose/code/lib/license_family.sh` (`P237`, title-block,
+`P171`), commercial use via its `commercial_use_ok()` (`P250`). Existence by `git ls-remote --heads`
+against a negative control in the same run (`P510`). **No star counts** (`P479`).
+
+### 🟢 `P542` — `Gap 243` closed: `compose/code/p542-empty-input-sweep/`
+
+`Gap 243` was declared *"mechanically closable"* and *"the one that would tell this KB how much of
+its own evidence is real"*, with the remedy in one line: *"one pass, one loop — invoke every
+argument-taking instrument with no arguments and assert a non-zero exit."* 🟢 **That loop now
+exists, ran over the whole tree, and publishes its result** (`result.2026-10-07.tsv`).
+
+| Class | n | Reading |
+|---|---|---|
+| `REFUSES` | 43 | 🟢 exits non-zero — correct, does not fake success |
+| `P542-STDIN-FILTER` | 35 | 🔵 filter given EOF — correct, not judgeable by this harness |
+| `P542-NOT-A-GATE` | 31 | 🔵 library module, no entry point — invoking it is a no-op by design |
+| `P542-UNADJUDICATED-OUTPUT` | 31 | 🟡 shell that emitted something — **declared, not absolved** |
+| 🔴 **`P541-FALSE-PASS`** | **16** | 🔴 exit `0` having opened **zero** judged files — **proved**, not inferred |
+| `MEASURES` | 15 | 🟢 exit `0` and read real input (self-discovering, the `p355` shape) |
+| 🔴 **`P541-SILENT-SUCCESS`** | **7** | 🔴 exit `0` with zero bytes on **both** streams |
+| `P542-UNADJUDICATED-TIMEOUT` | 9 | 🟡 did not finish in 12 s — nothing asserted either way |
+| **total** | **187** | 🔴 **23 confirmed `P541`-class defects** |
+
+🔴 **The two most uncomfortable rows are this KB's own gap gates.** `p370-gap-gate/gap_gate.py` and
+`p471-gap-gate-language/gap_language.py` each **print their own header and exit `0`** when invoked
+with no arguments. 🔵 **The instruments that exist to catch undeclared gaps cannot themselves tell an
+empty invocation from a clean tree.** 🟢 **Suite: 42/42, offline, 7 mutants killed.** 🟢 **The sweep
+does not have the defect it detects** — `sweep_empty_input.py` and `readcount.py` both refuse empty
+input with exit `2`, and the suite asserts both.
+
+### 🔴 `P543` — the gap's one-line remedy **over-accuses**, and only running it showed that
+
+🔵 **This is the finding, not a caveat.** The prescribed loop ("assert a non-zero exit") is wrong for
+three shapes that exit `0` on empty input **correctly**, and a sweep that cannot separate them commits
+the error class of `P502` — an instrument that could not tell *"no licence file"* from *"no
+repository"*.
+
+| Shape | Why exit `0` is correct | How it was found | Cost of missing it |
+|---|---|---|---|
+| **self-discovering gate** | resolves its corpus from `__file__`, not `argv` — the `p355` lesson; `p243` measures **146** files this way | known before the run | would have accused a correct gate |
+| **library module** (no `__main__`) | its suite *imports* it; direct invocation is a no-op **by design** | 🔴 **the run** — **24 of the first 49** accusations | 49 → 25 |
+| **stdin filter** (`sys.stdin`, `while read`) | given EOF it correctly does nothing, like `cat < /dev/null` | 🔴 **hand-checking ONE accusation** before publishing 34 | 34 → 23 |
+
+🔴 **The first published number would have been 49 and the true number is 23.** 🟢 **Both
+self-inflicted defects are now mutants in the suite** (`ignora_invocable`, `ignora_filtro`), so the
+regression is covered rather than merely corrected — the `P480` lesson, where a new instrument
+inherited the shared classifier's code but not its regression coverage.
+
+### 🔵 The two oracles, and the one that is weaker — stated rather than blurred
+
+| | Oracle | Applies to | Strength |
+|---|---|---|---|
+| **A** | `sys.addaudithook` counts the **non-code files under the repo the instrument opens**; `0` with exit `0` is the defect | `.py` | 🟢 **direct** — measures the read itself |
+| **B** | **silence**: exit `0` with zero bytes on stdout **and** stderr | `.sh` | 🟡 **indirect** — a weaker claim, marked as such in every row |
+
+🔴 **Why not a tracer.** `strace` is installed and works, but wrapping the cloned tree's code in a
+tracer is **not permitted in this environment**. 🟢 **The audit hook is pure Python, runs inside the
+instrument's own process, and measures the `open` rather than a proxy for it.** 🔴 **Oracle A does
+not reach shell**, so a `.sh` run that exits `0` after printing 13 777 bytes is **not accused** — it
+becomes `UNADJUDICATED-OUTPUT`. 🔵 **The sweep prefers to under-accuse**; every boundary resolves in
+the instrument's favour. → **`Gap 244`**.
+
+### 🟢 `P545` — counter-evidence the sweep produced by accident, and it is evidence **for** this KB
+
+The sweep re-ran `p294-pom-in-production/sweep_pom_production.sh` with no arguments, which
+**self-discovers a slug list and fetches live** — so it regenerated a dated result beside pass 39's
+`result.2026-10-04.tsv`. 🟢 **The two files differ by exactly one byte**, in one field:
+
+```
+-OpenOLAT/OpenOLAT	84781	org.openolat	OWN	True	Apache 2.0 Open Source L6icense ...
++OpenOLAT/OpenOLAT	84780	org.openolat	OWN	True	Apache 2.0 Open Source L6icense ...
+```
+
+🔵 **The field that moved is `pom_bytes` — the fetched `pom.xml`'s size, an upstream property, not
+instrument state.** Every licence verdict in all nine rows is unchanged. 🟢 **So the honest reading
+of `Gap 243`'s closure is: 23 of 187 gates cannot tell empty from clean — NOT "this KB's evidence is
+fake."** 🔵 **The instruments that measure, reproduce.** 🔵 **(Aside, recorded because it is in
+upstream and not a transcription error: OpenOLAT's own `pom.xml` declares `Apache 2.0 Open Source
+L6icense`.)** 🟢 **The regenerated artefact was removed; pass 39's remains the record.**
+
+### 🟢 `P544` — the Portuguese feature tier, shelved here with licences read from payload
+
+The five assets measured this pass are in `agents/top.md` `P544` with their channels and byte counts.
+🔵 **Summary for this file's purpose — what a studio may build on:**
+
+| Layer | Asset | Licence | Usable by Globant? |
+|---|---|---|---|
+| NLP pipeline | `explosion/spaCy` | 🟢 **MIT** | 🟢 yes |
+| PT feature extractor | `nilc-nlp/nilcmetrix` (172 files) | 🟡 **AGPL-3.0** | 🔴 not as a hosted service without releasing the service |
+| PT feature extractor (older) | `nilc-nlp/coh-metrix-port` | 🟡 **GPL-3.0** | 🟡 only if the deliverable is GPL |
+| EN reference tool | `kristopherkyle/TAALED` | 🔴 **CC-BY-NC-SA-4.0** | 🔴 **no — NonCommercial** |
+
+🔴 **This inverts the tier's assumed topology the way `P493` inverted the comparability tier's**: the
+*intelligence* is available and the *licence* is the blocker, which is `P516`'s shape again. 🟢 **The
+index definitions are publishable statistics and free to reimplement** — that is the path, and it is
+reimplementation, not porting. → **`Gap 246`**.
+
 ## 🟢 Forty-third pass, 2026-10-07 — `Gap 238` **CLOSED with code**: the authoring half of QTI 3 parametric items now exists, and the build found three defects reading could not
 
 ⏱️ **Tenth pass of this date** (34–42 ran earlier). **Licences read first-hand on 2026-10-07 via the

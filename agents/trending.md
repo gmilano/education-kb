@@ -4,6 +4,38 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — pass 44 (eleventh of this date)
+
+🔵 **APPEND-ONLY.** History below is untouched.
+
+🔴 **Zero new education agents for the fourth consecutive pass, and the shelf is declared saturated
+for the twelfth.** The mandated query ran verbatim (`top open source AI agents education 2026 github
+MIT`) and returned the horizontal agent shelf plus "learn AI" curricula —
+`pguso/agents-from-scratch` is a *teaching repo about* agents, not an agent for education. 🔵 **This
+is `P512`'s conclusion reproduced on a fresh run, which is information; it is not a silence.**
+
+🟢 **What moved this week is one tier down from agents: the Portuguese *feature* layer.** Three
+implementations located and licence-classified from payload (`P544`): `nilc-nlp/nilcmetrix`
+(**AGPL-3.0**, 172 files), `nilc-nlp/coh-metrix-port` (**GPL-3.0**), and the English reference tool
+`kristopherkyle/TAALED` — 🔴 **CC-BY-NC-SA-4.0, NonCommercial, commercial-use gate CLOSED**. 🔵 **The
+week's real news is a licence, not a release.**
+
+🔴 **And the trend that concerns this file's own history:** the `P542` sweep found that **23 of 187**
+invocation points in `compose/code/` report success over an empty input — including both of this
+KB's **gap gates**. 🔵 **Trending entries written from a gate that exited `0` having read nothing are
+not evidence.** 🟢 **None of this file's measured rows is withdrawn** — the sweep's own
+counter-evidence (`P545`) is that instruments which *do* measure reproduce byte-for-byte — but the
+23 are named in `result.2026-10-07.tsv` and a reader can now check which gate produced what.
+
+### 🔴 The informed gap this pass declares rather than leaves silent — agents by region
+
+🔵 **Per-region agent queries were run for all four regions** (`AI education {region} 2026 adoption
+regulation players`). 🔴 **Not one returned an education *agent*, permissive or otherwise, in any
+region.** What each returned is recorded in `intel/market.md` (`P546`, `P547`). 🔵 **The regional
+channel is productive for policy and adoption and has now produced zero agents across four regions
+and twelve passes** — that is a measured property of the channel, and it is why this file's rows come
+from repository probes rather than from regional search.
+
 ## 2026-10-07 — forty-third pass: the week's movement is an **artefact this KB built**, plus one permissive scorer the English sweeps had missed for ten passes
 
 ⏱️ **Tenth pass of this date.** **Licences from payload or the cloned tree, named per row. Title-block

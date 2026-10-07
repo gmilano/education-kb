@@ -4,6 +4,94 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Forty-fourth pass, 2026-10-07 — one new recipe (`P549`: audit a client's own quality gates) and a **correction** to every Portuguese-scorer recipe in this file
+
+⏱️ **Eleventh pass of this date.** 🔵 **Licences read first-hand on 2026-10-07 from payload in cloned
+trees, channel named per row (`P237`, `P250`, `P510`). No star counts (`P479`).**
+
+🔵 **Numbering.** 🟢 **`P490`'s rule followed before allocation**: the occupied set was read from the
+live tree and this pass allocates `P542`–`P549`.
+
+## 🔴 Correction to every Portuguese essay-scorer recipe in this file — `P544` falsifies the feature step as written
+
+`P532` (pass 42) and the retarget path in `Gap 236` both contain a step of the form *"port
+`AI_AWE`'s feature extractor to Portuguese"*, and pass 43's `Gap 239` wrote the remedy as *"measure
+whether spaCy supports TAALED-equivalent metrics, and if so **port the extractor**."*
+
+🔴 **The verb is wrong, and it is not a quibble — it changes the legal shape of the deliverable.**
+Measured this pass from payload (`P544`):
+
+| Implementation | Licence | Can a client deliverable include it? |
+|---|---|---|
+| `nilc-nlp/nilcmetrix` (23 metric modules, HTTP service) | **AGPL-3.0** | 🔴 not if Globant hosts it — §13 triggers on network interaction |
+| `nilc-nlp/coh-metrix-port` | **GPL-3.0** | 🟡 only if the whole deliverable is GPL |
+| `kristopherkyle/TAALED` (the tool the gap names) | 🔴 **CC-BY-NC-SA-4.0** | 🔴 **no — NonCommercial** |
+
+🟢 **Corrected step, and it is what the recipes should say from now on:** *reimplement* the index set
+(TTR, MTLD, MATTR, HD-D, and the syntactic-complexity indices) over spaCy's `pt_core_news_*`
+pipeline, **from the published definitions**, using NILC-Metrix only as a **comparison oracle run
+locally** — never vendored, never shipped, never hosted. 🔵 **This is exactly `P504`'s shape**, where
+the permissive implementation used the copyleft tier as its test oracle and confined the contact to
+tests. 🔴 **Cost, stated rather than implied:** the index definitions are free, the **validation** is
+not — the published tools carry years of it and a reimplementation inherits none, so a human-scored
+agreement study against `essay-br` is part of the work, not a follow-up to it.
+
+## 🟢 `P549` — Recipe: audit whether a client's quality gates **measure anything at all**
+
+🔵 **Why this is a recipe and not an internal note.** This pass closed `Gap 243` by running the audit
+on **this KB's own** `compose/code/`, and the result was **23 of 187** gates reporting success over an
+empty input — including both of its gap gates. 🟢 **Every CI estate has this defect class and almost
+nobody tests for it**, because the failure mode is a **green check**, not a red one.
+
+### What it produces
+
+A per-gate classification of a client's CI and quality estate into: refuses empty input (correct),
+self-discovers its corpus (correct), **reports success having read nothing** (the defect), and
+**unadjudicated** (declared, not absolved) — plus the one-line guard that fixes each defect.
+
+### The components, with licences read this pass
+
+| Component | Licence | Role |
+|---|---|---|
+| `compose/code/p542-empty-input-sweep/` (this KB) | 🟢 KB-internal, reusable | the sweep: static axis + behavioural run + two oracles |
+| CPython ≥ 3.8 `sys.addaudithook` | 🟢 **PSF** (stdlib) | **oracle A** — counts the files the gate actually opens, in-process |
+| POSIX `timeout` + exit-code discipline | 🟢 **GPL** (coreutils, *used*, not shipped) | bounds a gate that waits on the network |
+| `compose/code/p383-region-heading-gate/` | 🟢 KB-internal | the worked example of the fix: `if not argv: return 2` |
+
+### How to wire it
+
+1. **Enumerate invocation points**, not repositories — every `*.py` / `*.sh` a pipeline calls.
+2. **Classify statically** on three axes: does it consume positional arguments; is it **invocable at
+   all** (a library module has no `__main__`); does it read **stdin**.
+   🔴 **Axes 2 and 3 are not optional** — skipping them produced **49** accusations where the true
+   number is **23** (`P543`).
+3. **Invoke each with no arguments**, bounded by `timeout`, capturing exit code and both stream sizes.
+4. **Apply oracle A** to everything that exits `0`: run it under an audit hook and count the
+   non-code files it opens. 🟢 **Zero opens with exit `0` is the defect, proved.**
+5. **Fall back to oracle B** (exit `0` with zero bytes on both streams) only where A cannot reach —
+   and **label those rows as weaker**, because they are.
+6. **Fix each defect with the guard, not with a usage note**: refuse an empty argument list with a
+   non-zero exit and a message naming the correct invocation. 🔵 **A contract that has to be
+   remembered is not a control** (`P237`).
+7. **Add the fix as a regression assertion plus a mutant**, or the next instrument inherits the code
+   and not the correction (`P480`).
+
+### What this costs, stated honestly
+
+🟢 **Cheap**: one engineer, 2-4 days for an estate the size of this KB's 187 entry points, and the
+sweep is written. 🔴 **The uncomfortable part is not technical** — the deliverable tells a client
+that some portion of their green history was never measured, so the engagement needs an agreed
+remediation path before the number is produced, not after. 🔵 **The honest framing is the one this
+pass used on itself**: the gates that *do* measure reproduce byte-for-byte (`P545`), so the finding
+is bounded, not an indictment.
+
+### 🔴 What it does **not** do
+
+🔴 **Oracle A does not reach shell** — 31 rows in this KB's own run exit `0` after printing real
+output and are left **unjudged**, and 9 more time out. 🔵 **Remedy named: a `PATH` shim that logs
+`grep`/`cat`/`curl`/`git` invocations**, or a tracer where one is permitted. → **`Gap 244`**. 🔴 **And
+the 23 defects this pass identified are named, not fixed** → **`Gap 245`**.
+
 ## 🟢 Forty-third pass, 2026-10-07 — the item-bank recipe's broken step is **fixed with code**, not re-described; and the Portuguese scorer recipe gains a reference implementation
 
 ⏱️ **Tenth pass of this date.** 🔵 **Licences read first-hand on 2026-10-07 from payload or the cloned

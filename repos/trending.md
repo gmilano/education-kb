@@ -4,6 +4,33 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — pass 44 (eleventh of this date)
+
+🔵 **APPEND-ONLY.** History below is untouched.
+
+🟢 **New in the tree this pass — this KB's own code, and it is the week's most consequential repo
+change:** `compose/code/p542-empty-input-sweep/` closes `Gap 243`. 187 invocation points swept,
+**23 confirmed** instruments that exit `0` having judged nothing, **42/42** suite, **7 mutants
+killed**, two oracles with their asymmetry declared. 🔴 **Two of the 23 are this KB's gap gates.**
+
+🟢 **Trending externally, measured rather than ranked** (`git ls-remote` existence + payload licence,
+`P510` / `P237`; **no star counts**, `P479`):
+
+| Repo | HEAD read this pass | Licence (payload) | Why it is here |
+|---|---|---|---|
+| `nilc-nlp/nilcmetrix` | `5416e43`, **2026-08-27** | **AGPL-3.0** | 🟢 **active this quarter** — the most complete Brazilian-Portuguese text-complexity implementation found to date (172 files) |
+| `sidleal/nilcmetrix` | `0a94a30`, 2026-06-21 | AGPL-3.0 | 🔵 same project, author's namespace, extra `docker-adjusts` branch — **not a second asset** |
+| `nilc-nlp/coh-metrix-port` | `108531f` | **GPL-3.0** | the predecessor metric set, 11 modules |
+| `kristopherkyle/TAALED` | `61dfe70` | 🔴 **CC-BY-NC-SA-4.0** | the English tool `Gap 239` names — **NonCommercial** |
+| `explosion/spaCy` | `c2dabfc` | 🟢 **MIT** | the pipeline half of `Gap 246`'s remedy |
+
+🔴 **The mandated GitHub-trending query (`github trending education AI 2026`) returned no
+education-software repo** — it returned AI-curriculum and AI-job-listing repos, and the trending
+snapshots it surfaced are dated May–July 2026. 🔵 **Recorded so the nil result is not mistaken for
+coverage:** this channel has not produced an education repo for this KB in twelve passes, and the
+productive channel remains the **targeted language-specific probe** (`P521`'s lesson: the query's
+language is the axis).
+
 ## 2026-10-07 — forty-third pass: one permissive repo admitted, its **licence closure** measured rather than assumed, and the upstream repo this KB now patches
 
 ⏱️ **Tenth pass of this date.** **Licences from payload or the cloned tree, each named per row.

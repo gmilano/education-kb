@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🔴 Forty-fourth pass, 2026-10-07 — the feature layer `Gap 239` asked for **exists in three implementations, and not one of them may be sold**
+
+⏱️ **Eleventh pass of this date.** **Licences read first-hand on 2026-10-07 from the repository
+**payload** in cloned trees, classified by the shared hardened classifier
+`compose/code/lib/license_family.sh` (`P237`, title-block, `P171`), commercial use gated by its own
+`commercial_use_ok()` (`P250`). Existence by `git ls-remote --heads` against a negative control in the
+same run (`P510`). **No star counts** (`P479`).
+
+### 🔴 `P544` — `Gap 239`'s remedy is not a *port*, because every implementation of the Portuguese feature layer is either network-copyleft or **NonCommercial**
+
+`Gap 239` (pass 43) is the binding constraint on `Gap 236`: the only permissive assembled essay
+scorer, `wwrwbs/AI_AWE`, has an **English-locked module 2** — a LightGBM model over *"31
+TAALED/QuanSyn features"* computed from English wordlists. The gap's remedy was written as:
+*"measure whether spaCy's `pt_core_news_*` pipelines support TAALED-equivalent lexical and syntactic
+metrics, and if so **port the extractor**."*
+
+🟢 **The probe paid: a Brazilian Portuguese feature layer exists, and it is far more complete than
+the gap assumed.** 🔴 **And its licence topology kills the word *port*.**
+
+| Asset | Channel | Licence (payload, `family_of`) | Commercial use (`P250`) | What is in the tree |
+|---|---|---|---|---|
+| `github.com/nilc-nlp/nilcmetrix` | clone, HEAD `5416e43`, 2026-08-27 | **AGPL-3.0** (34 522 B, `affero_lines=15`) | 🟡 permitted, but **network copyleft** | 🟢 real implementation — **172 files**, `text_metrics/metrics/{basic_counts,lsa,tokens,freq,liwc,coref,connectives,sem,guten_palavras,aic_palavras}.py` |
+| `github.com/sidleal/nilcmetrix` | clone, HEAD `0a94a30`, 2026-06-21 | **AGPL-3.0** (34 522 B, byte-identical) | 🟡 same | 🔵 **same project, second namespace** — same author (Sidney Leal), older head, extra `docker-adjusts` branch |
+| `github.com/nilc-nlp/coh-metrix-port` | clone, HEAD `108531f` | **GPL-3.0** (35 058 B, `affero_lines=3`) | 🟡 permitted, copyleft | 11 metric modules (`ambiguity`, `anaphores`, `connectives`, `constituents`, `corref`, `hypernyms`, `logic_ops`…) |
+| `github.com/kristopherkyle/TAALED` | clone, HEAD `61dfe70` | 🔴 **CC-BY-NC-SA-4.0** (15 693 B) | 🔴 **REFUSED — `commercial_use_ok()` returns false** | the English tool `Gap 239` names as module 2's feature source |
+| `github.com/explosion/spaCy` | clone (blobless, sparse `LICENSE`), HEAD `c2dabfc` | 🟢 **MIT** (1 128 B), holder `ExplosionAI GmbH / spaCy GmbH / Matthew Honnibal` | 🟢 OK | the pipeline half of the remedy |
+
+🔵 **`affero_lines` is quoted because it is the discriminator `P171` exists for**: GPL-3.0 section 13
+is *titled* "Use with the GNU Affero General Public License", so a body grep calls every GPL-3.0
+payload AGPL. 🟢 **15 lines vs 3 is the measured difference between the two families here**, and the
+classifier got both right — its suite is **132/132** this pass.
+
+### 🔴 The correction this forces on pass 43's own wording, and it must travel
+
+Pass 43 wrote module 2's features as *"31 TAALED/QuanSyn features"* and declared `AI_AWE`'s closure
+**permissive end to end**. 🔵 **Both statements stand as measured** — pass 43 read the tree's payload
+and the only vendored dependency was `TextComplexityToolkit` (MIT). 🔴 **But a later pass must not
+read "TAALED features" as "TAALED is available to build on."** It is **CC-BY-NC-SA-4.0**: the
+*index definitions* (TTR, MTLD, MATTR, HD-D) are published statistics and free to reimplement; the
+**tool that computes them is not licensed for commercial use.**
+
+🟢 **So the remedy's true shape, and it is more expensive than "port":** reimplement the index set
+from its published definitions over spaCy's `pt_core_news_*` pipeline. 🔵 **Nothing is copied** —
+which is also why nothing needs to be licensed. 🔴 **What is NOT measured this pass: the licence of
+the `pt_core_news_*` model artefacts themselves**, which are distributed separately from spaCy's MIT
+code. → **`Gap 246`**.
+
+### 🔵 The agent shelf — the mandated query ran, and it is saturated for the **twelfth** consecutive pass
+
+Query run verbatim as prescribed (`top open source AI agents education 2026 github MIT`). 🔴 **It
+returns general-purpose agent frameworks and "learn AI" curricula — not education agents.** Named in
+the result: `pguso/agents-from-scratch` (a teaching repo, not an agent for education), plus the usual
+horizontal shelf. 🟢 **This is `P512`'s conclusion reproduced, not a silence**: the permissive
+education-*agent* shelf is saturated, and the productive tier this KB keeps finding is **measurement
+and feature code**, not agents.
+
+### 🔵 No row is added to this file's agent table this pass
+
+🔴 **Four consecutive passes with zero new agent rows.** The five assets above are **libraries and a
+model pipeline**, not agents, and this file's table is for agents. 🟢 **They are shelved where they
+belong** — `repos/foundations.md`, `P544`.
+
 ## 🟢 Forty-third pass, 2026-10-07 — the assembled permissive essay scorer `Gap 236` said nobody had published **does exist**, and it is Apache-2.0 end to end
 
 ⏱️ **Tenth pass of this date.** **Licences read first-hand on 2026-10-07 from the repository **payload**

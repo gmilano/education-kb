@@ -4,6 +4,99 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🔴 Forty-fourth pass, 2026-10-07 — four trends: a gate that passed while blind hid a real backlog, "port" turns out to mean "reimplement", the acronym defect is asymmetric, and a sweep's own accusations needed auditing
+
+⏱️ **Eleventh pass of this date.** 🔵 **All market and regulatory figures are secondary and carry
+their series (`P477`, `P515`); `eur-lex.europa.eu` stays proxy-blocked (`Gap 56`), so the Annex III
+deferral is NOT cited as primary (`Gap 241`).** Existence by `git ls-remote --heads` against a
+negative control in the same run (`P510`); licences from payload via the shared classifier (`P237`).
+
+### T1 🔴 `P542` / `P546` — a blind gate does not merely fail to catch things, it **manufactures a clean record**, and this KB has been reading one
+
+🟢 **`Gap 243` is closed with code** (`compose/code/p542-empty-input-sweep/`, `repos/foundations.md`
+`P542`): **23 of 187** invocation points in `compose/code/` exit `0` having judged nothing. 🔴 **Two
+of the 23 are this KB's own gap gates** (`p370`, `p471`).
+
+🔵 **The trend is not the count — it is what the count was hiding.** `p383-region-heading-gate`, run
+against `intel/market.md` for the first time this pass, returns **14 findings** and exits `1`: the
+file had accumulated **8** canonical `## Opportunities by region` blocks where the contract allows
+**one**, and **every one of them omitted `Global`**. 🔴 **That backlog is seven passes old.** It was
+invisible because the gate was being invoked with no arguments, printing `total 0` — the exact defect
+`P541` named at pass 43.
+
+🔴 **The general lesson, and it is the most expensive one on this KB:** a gate that cannot distinguish
+*"I checked and found nothing"* from *"I checked nothing"* does not produce a gap in the record — it
+produces a **positive claim of cleanliness**. 🔵 **Silence is detectable; a false `0` is not.**
+🟢 **Acted on**: the backlog is cleared, the live block carries all five values, `p383` exits `0`.
+
+### T2 🔴 `P544` — in the Portuguese feature tier the code exists and **none of it may be sold**, so the remedy's verb changes from *port* to *reimplement*
+
+`Gap 239` named the remedy as *"port the extractor"* once a Portuguese equivalent was found. 🟢 **A
+far more complete one was found than the gap assumed** — but its licence topology voids the verb:
+
+| Asset | Licence (payload) | What blocks it |
+|---|---|---|
+| `nilc-nlp/nilcmetrix` (23 metric modules, Go+Python service) | **AGPL-3.0** | 🔴 **network copyleft** — and it ships as an HTTP service (`EXPOSE 8080`), which is the precise trigger |
+| `nilc-nlp/coh-metrix-port` | **GPL-3.0** | 🟡 copyleft deliverable |
+| `kristopherkyle/TAALED` — the tool `Gap 239` names as the feature source | 🔴 **CC-BY-NC-SA-4.0** | 🔴 **NonCommercial — `commercial_use_ok()` refuses it** |
+| `explosion/spaCy` | 🟢 **MIT** | 🟢 nothing |
+
+🔵 **This is `P516`'s shape for the third time** — *"the licence is permissive and the intelligence is
+not"* — now inverted once more: here the **intelligence is freely published** (the index definitions
+are statistics in papers) and the **implementations** are what is encumbered. 🟢 **So the path is
+real and the cost is honest**: reimplement the index set over spaCy's `pt_core_news_*` pipeline from
+published definitions. 🔴 **Nothing is copied, so nothing needs licensing — and nothing is inherited
+either**, including the validation those tools accumulated. → **`Gap 246`**.
+
+🔴 **A correction that must travel:** pass 43 wrote module 2's features as *"31 TAALED/QuanSyn
+features"*. 🔵 **A later pass must not read that as "TAALED is available to build on."**
+
+### T3 🟢 `P546`'s sibling — the region-acronym defect is **asymmetric**, which makes it cheap to route around
+
+`P513` said the acronym is the defect. 🟢 **This pass measures that the defect is not uniform**, and
+that is the actionable part: **LATAM** returns education-native research (UNESCO IESALC, UNU-IAS,
+SciELO, IDB), **North America** returns a usable if vendor-heavy channel, and **EMEA** and **APAC**
+return enterprise IT with the channel stating outright that it found no education-specific data.
+
+🔵 **Why: Spanish- and Portuguese-language academic and multilateral literature genuinely writes about
+*América Latina* as a unit, while no education ministry on earth describes itself as "EMEA".** 🟢
+**Operational rule left written:** run the probe as prescribed for LATAM and NA; for EMEA and APAC
+substitute the **national instrument** (ministry, Council of Europe, MOE) before concluding anything.
+🔴 **Four identical regional queries is the wrong shape for a global KB** — it reads as coverage and
+delivers two nil results.
+
+### T4 🔴 `P543` — a sweep that audits other instruments needs its own accusations audited, and hand-checking **one** row changed the headline by a third
+
+🔵 **The sequence is the trend.** `Gap 243`'s remedy — *"assert a non-zero exit"* — produced **49**
+accusations on first run. Two shapes exit `0` on empty input **correctly** and the loop could not see
+either:
+
+1. 🔴 **library modules** (no `__main__`; the suite *imports* them) — **24 of the 49**, found by the run;
+2. 🔴 **stdin filters** (`sys.stdin`, `while read`; EOF ⇒ correctly do nothing) — **11 of the
+   remaining 34**, found by **reading one accusation by hand** before publishing.
+
+🟢 **49 → 25 → 23.** 🔵 **The first number was wrong by more than a factor of two, and the prescribed
+remedy produced it.** 🟢 **Both defects are now mutants in the suite** (`ignora_invocable`,
+`ignora_filtro`) — the `P480` lesson: a correction that is not a regression test does not survive the
+next instrument. 🔴 **The general form, and this KB has now paid for it twice (`P502`, and here): an
+instrument that collapses two different causes into one verdict will report the wrong one with full
+confidence.**
+
+🟢 **The counter-evidence this pass also produced, and it belongs in the same trend** (`P545`): the
+sweep accidentally re-ran a dated result artefact from pass 39 and it reproduced with **exactly one
+byte** of difference — `pom_bytes` for OpenOLAT, an **upstream** property. 🔵 **So the correct reading
+of 23/187 is "a third of this tree's gates cannot tell empty from clean", NOT "this KB's evidence is
+fabricated."** 🟢 **The instruments that measure, reproduce.**
+
+### 🔵 Trend table — what moved, what did not
+
+| | This pass |
+|---|---|
+| 🟢 **Closed** | `Gap 243` with code (`P542`), 42/42 suite, 7 mutants killed; `p383`'s 14-finding backlog on `intel/market.md` |
+| 🟡 **Narrowed** | `Gap 239` (feature layer found, licence blocks the verb); `Gap 242` (a better instrument named: UNESCO IESALC / UNU-IAS, 200 HEIs, 19 countries) |
+| 🔴 **Opened** | `Gap 244` (oracle A does not reach shell: 31+9 rows unjudged); `Gap 245` (the 23 defects are **named and unfixed**); `Gap 246` (PT index set must be reimplemented; spaCy PT **model** licences unmeasured) |
+| 🔴 **Unmoved** | `Gap 56` (eur-lex proxy-blocked); `Gap 240` (upstream contribution untaken); `Gap 237` (Spanish, structural); the **agent** shelf — twelfth consecutive saturated pass, fourth with zero new rows |
+
 ## 🟢 Forty-third pass, 2026-10-07 — three trends: a value asserted from itself is not measured (found in this pass's **own** oracle), `Gap 237`'s premise is **refuted**, and the EU clock this KB reads was moved sixteen months
 
 ⏱️ **Tenth pass of this date.** 🔵 **All market and regulatory figures are secondary and carry their
