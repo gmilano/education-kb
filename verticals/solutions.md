@@ -1773,3 +1773,50 @@ reported `UNCLASSIFIED` by the shell classifier and correctly as `EUPL` by the P
 3. **Quote the classifier beside the verdict and the path beside both** — *"Elastic 2.0, per
    `lib/license_family.sh` on `main/LICENSE`"*. On this shelf a bare family name is wrong once in
    ten.
+
+## Corrected in the twenty-ninth pass of 2026-10-07 — openSIS is GPL-2.0, and its licence is not where a sweep looks
+
+[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) and
+[`OS4ED/openSIS-Responsive-Design`](https://github.com/OS4ED/openSIS-Responsive-Design) are
+real, deployed Student Information Systems and belong on this page's **SIS tier**. Two things
+about them were wrong or unstated, and both matter for platform selection.
+
+### 🔴 The licence is GPL-2.0, and this KB had it as `LGPL?`
+
+Read first-hand from `docs/License.txt` (**17,286 bytes**, opening on a plain
+`GNU GENERAL PUBLIC LICENSE / Version 2, June 1991`):
+
+| Platform | published | 🟢 corrected | Commercial use | Tier |
+|---|---|---|---|---|
+| openSIS-Classic | `LGPL?` | **GPL-2.0** | 🟢 allowed | SIS |
+| openSIS-Responsive-Design | `LGPL?` | **GPL-2.0** | 🟢 allowed | SIS |
+
+The `?` was honest about its own uncertainty, and the uncertainty had a cause: the classifier
+probed the LGPL over the whole payload body, and **GPL-2.0's closing paragraph recommends the
+LGPL** (*"If this is what you want to do, use the GNU Lesser General Public License instead of
+this License"*). One sentence of advice inside the licence decided the family (`P455`).
+
+⚠️ **The correction tightens the architecture menu rather than loosening it.** GPL-2.0 is
+**project-level** copyleft, so the LGPL reading was the *more* permissive one: an LGPL
+platform could be linked from a proprietary module, and a GPL-2.0 one cannot. **Extend
+openSIS the way this page already prescribes for strong-copyleft platforms — a side-car over
+its API, not a module inside it** — and keep the client's own code outside the copyleft
+boundary.
+
+### 🔴 There is no root licence file, which changes how you audit it
+
+Neither repository carries a licence at the repository root. Both are absent from the 412 root
+payloads this KB sweeps, and `p441` files them `OWN-GRANT-IN-SUBTREE`.
+
+🔵 **For a platform decision that is a due-diligence note, not trivia.** A client's own
+procurement scan — and most automated licence scanners — look at the root. On openSIS they
+find nothing and may report the platform as **unlicensed**, which it is not. **Point the audit
+at `docs/License.txt` explicitly, in writing, in week one.**
+
+⚠️ **And ignore `docs/LICENSE.rtf`.** It is 61,575 bytes of RTF wrapping the same GPL-2.0
+text. Because the RTF header occupies the title block, this KB's own classifiers cannot read
+it and the commercial-use question falls through to a body token match that finds GPL-2.0
+**§3(c)**'s *"allowed only for noncommercial distribution"* — a condition on one distribution
+option, not a restriction on the licensee — and answers **PROHIBITED** (`P460`). Both
+repositories are now reported `CONTAINER-RTF (no legible)` rather than guessed at. **The
+authoritative file is the plain-text one.**

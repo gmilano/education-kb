@@ -35,6 +35,7 @@ Both classifiers over the **same bytes** of every root licence payload on the
                          not -- the class that reaches a client invoice
     VOCABULARY           they disagree on the name without disagreeing on the class
                          (e.g. `GPL` vs `GPL-2.0`, `EUPL` vs `EUPL-1.2`)
+    BOTH-DECLINE         neither names a licence -- agreement, not divergence (P458)
     PYTHON-UNKNOWN       python declines, shell names one
     SHELL-UNKNOWN        shell declines, python names one
 
@@ -124,6 +125,19 @@ def one(job):
         v = "NC-ERASED"
     elif not sh and py != "UNKNOWN":
         v = "SHELL-UNKNOWN"
+    elif py == "UNKNOWN" and sh in ("UNCLASSIFIED", "", "-"):
+        # P458 (pass 29).  `UNCLASSIFIED` IS NOT A FAMILY, and counting it as one made
+        # this instrument report agreement as disagreement.  The old branch asked only
+        # `sh and py == "UNKNOWN"`, and the string "UNCLASSIFIED" is truthy -- so a row
+        # where BOTH classifiers declined to name a licence was filed under
+        # `PYTHON-UNKNOWN`, a verdict whose name asserts that the shell named one.
+        #
+        # Measured this pass: 10 of the 13 residual rows were this -- both sides
+        # declining, in agreement, counted against the convergence the pass was
+        # measuring.  Declining together is the one honest thing two classifiers can do
+        # about a payload like `espoon-voltti/evaka`'s, which is a REUSE-spec POINTER to
+        # per-file licensing and contains no grant at all.
+        v = "BOTH-DECLINE"
     elif sh and py == "UNKNOWN":
         v = "PYTHON-UNKNOWN"
     elif sh.upper().startswith(py.upper()) or py.upper().startswith(sh.upper()):

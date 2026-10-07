@@ -133,3 +133,84 @@ python3 -I divergence.py ../p444-root-vs-tree-family/payloads.licensed.2026-10-0
 The payload is passed to the shell leg on **stdin, not argv**: several of these exceed
 35 kB, an argv list has a hard limit, and silent truncation would look like a
 classifier disagreement rather than a plumbing fault.
+
+---
+
+## 🟢 Re-run, pass 28 of 2026-10-07 — both classifiers hardened, and the divergence all but closes
+
+Pass 27's pre-registered action B was *"give `lib/license_family.sh` the **EUPL** patterns
+it lacks and `sweep_payload.family_of` the **NC** axis it lacks, then re-run `p445`"*, with
+the prediction:
+
+> ⚠️ *"Expect `AGREE` to rise from 369 to **above 400** and the residual disagreements to be
+> the **GPLv2-preamble** rows only — which would mean the two classifiers' remaining gap is
+> a single, nameable defect rather than two vocabularies."*
+
+⚠️ **Wrong twice, and narrowly on the number.**
+
+| Verdict | pass 27 | pass 28 | |
+|---|---|---|---|
+| `AGREE` | 369 | **399** | 96.8% — the prediction said *above 400*, so it misses **by one row** |
+| `VOCABULARY` | 25 | **0** | |
+| 🔴 `NC-ERASED` | 5 | **0** | the class that reaches an invoice is closed |
+| `BOTH-DECLINE` | *(not a verdict)* | 10 | `P458` — see below |
+| `PYTHON-UNKNOWN` | 13 | **3** | |
+
+🔴 **And the residual is not "the GPLv2-preamble rows only".** Those rows existed, were a
+real defect (`P455`), and were **fixed** rather than tolerated. What is left is **3 rows** —
+`canyongbs/advisingapp`, `digillab-lmu/smart-rag`, `sodadata/soda-core` — where the shell
+names `Elastic` or `PolyForm` and the Python side's deliberately coarse p170 vocabulary has
+**no token for them**. All three are commercial-use **PROHIBITED**, so the gap is on the
+rows that matter — and it is a **vocabulary** gap, not a reading error. Two classifiers
+built to be comparable with different published tables will always have one.
+
+### 🔴 Five defects the re-run found, and in three of them the hardened classifier was the wrong one
+
+Pass 27 cast the shell as hardened and the Python side as blind. Re-running after fixing
+both inverted that:
+
+| | Defect | Rows | Which side was wrong |
+|---|---|---|---|
+| `P453` | the shell had **no EUPL branch at all**, while the Python side had had one since pass 26 | 9 | 🔴 shell |
+| `P454` | the shell probes the **GNU family before Mozilla/Eclipse**, and MPL-2.0 §1.12 names all three GNU licences — **the exact defect pass 26 fixed in Python and never ported** | 5 | 🔴 shell |
+| `P455` | the Python side probes **LGPL before GPL over the whole body**, and GPL-2.0/3.0 both *close* by recommending the LGPL | 8 | 🔴 python |
+| `P451` | `"apache license" and "version 2.0"` excludes every **prose** declaration (`"licensed under Apache License 2.0"`) | 1 | 🔴 python |
+| `P457` | the **title-stripped** GNU payload — three repositories ship the full text with the title removed | 3 | 🔴 both |
+
+🔴 **`P457` carries a shelf correction worth more than the convergence number.**
+[`untisapi/untis4j`](https://github.com/untisapi/untis4j) is **LGPL-3.0** — its text says
+*"this License refers to version 3 of the GNU Lesser General Public License"* — and the
+shell reported it `GPL-3.0`. The LGPL permits linking from proprietary code and the GPL does
+not, so the row was published **one tier more restrictive than it is**.
+
+### 🔴 `P458` — `UNCLASSIFIED` is not a family, and counting it as one reported agreement as disagreement
+
+The old branch asked only `sh and py == "UNKNOWN"`, and the string `"UNCLASSIFIED"` is
+**truthy** — so a row where **both** classifiers declined was filed under
+`PYTHON-UNKNOWN`, a verdict whose name asserts that the shell named one. Measured: **10 of
+the 13** residual rows were this. Declining together is the one honest thing two
+classifiers can do about a payload like
+[`espoon-voltti/evaka`](https://github.com/espoon-voltti/evaka)'s, which is a REUSE-spec
+**pointer** to per-file licensing and contains no grant at all.
+
+### ⚠️ `P453` — and one row was lost to the network, silently
+
+The first re-run reported `eduNEXT/openedx-lti-tool-plugin` as `UNREADABLE`. Probed
+directly a minute later the same path returned **HTTP 200 and 11,357 bytes** of
+Apache-2.0. `read_blob` swallowed every exception and answered `""`, and `family_of("")` is
+`UNKNOWN` — so **a transient reset is indistinguishable from a repository that declines to
+license its code**. A measurement whose failure mode imitates its most interesting finding
+is unsound; `read_blob` now retries once, and never on a 404, which is an answer.
+
+### Reproduce
+
+```bash
+python3 test_divergence.py          # 22/22 -- NOT `python3 -I`, see below
+python3 divergence.py ../p444-root-vs-tree-family/payloads.licensed.2026-10-07.tsv \
+        > result.2026-10-07.pass28.tsv
+```
+
+⚠️ **The command this README carried above is `python3 -I test_divergence.py`, and it cannot
+work**: `-I` drops the script's own directory from `sys.path`, so `import divergence` raises
+`ModuleNotFoundError`. A reproduction command that does not reproduce is a documentation
+defect of the same family as the rest of this page, found the same way — by running it.

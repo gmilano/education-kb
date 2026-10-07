@@ -218,6 +218,30 @@ how an engagement becomes a programme rather than a project.
 
 **Effort:** 3–4 weeks to stand up, then runs continuously.
 
+### P6 update, twenty-ninth pass of 2026-10-07 — three assets that change the first week
+
+The mandatory query set produced new repositories for the first time in seventeen passes, and
+all three land on this pattern rather than on any product tier. Verified payload-first:
+
+6. [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps)
+   (**Apache-2.0**, 140,891★, pushed 2026-09-30) — **100+ runnable agents, Agent Skills and
+   RAG apps.** Put this *before* the lesson tracks above, not after: a cohort that has run a
+   working agent on day one argues about architecture in week two instead of week five.
+   ⚠️ It is an *examples* corpus — fork it as curriculum and read each app's own dependencies
+   before anything from it enters a deliverable.
+7. [GokuMohandas/Made-With-ML](https://github.com/GokuMohandas/Made-With-ML)
+   (**MIT**, 49,696★) — the **deploy-and-iterate** track this pattern was missing. Steps 1–3
+   teach agents; this teaches what happens after the demo works, which is the part a client
+   programme actually fails at. ⚠️ Last pushed **2026-03-04**: teach the method, re-pin the
+   dependencies.
+8. [HandsOnLLM/Hands-On-Large-Language-Models](https://github.com/HandsOnLLM/Hands-On-Large-Language-Models)
+   (**Apache-2.0**, 29,517★) — the clearest permissive treatment of embeddings, retrieval and
+   fine-tuning on this shelf; the right deep track for staff who will own the RAG layer in
+   `P1` or `P8`. ⚠️ Last pushed **2026-04-24**; a book's companion repo is *meant* to freeze.
+
+🟢 **All three are Apache-2.0 or MIT**, so the training materials themselves can be forked,
+rebranded and left with the client — the difference between enablement and a course licence.
+
 ---
 
 ## P7 — Admin automation on an LGPL platform (the module, not the side-car)
@@ -4042,3 +4066,83 @@ of 412 payloads here still classify `UNKNOWN`, and `UNKNOWN` is published as a r
   `ocrmypdf/OCRmyPDF`, both of which moved **GPL → MPL-2.0**, which is *less* restrictive than
   filed. MPL-2.0 is file-level copyleft, so invoking either as an unmodified tool propagates
   nothing. 🟢 **The pattern gets cheaper, and its original reasoning was already correct in prose.**
+
+---
+
+## P37 — The two-reader licence gate (due diligence you can hand to procurement)
+
+**Use when:** an engagement will ship, resell or embed open-source education components — so
+someone will eventually ask, in writing, which licences the deliverable carries. Which is
+every engagement on this shelf.
+
+**Why two readers rather than a better one.** Measured on this KB's own 412 education
+repositories, across two concurrent passes: two independently hardened licence classifiers,
+each with a passing regression suite, **disagreed on 43 payloads (10.4%)**. After repairs on
+both sides the disagreement fell to **10 (2.4%)** — and every row that moved was a real
+defect. 🔴 **The five rows that can put a non-commercial asset into a billable deliverable
+are still open**, because each pass fixed the classifier it was looking at. A single scanner
+does not have a lower error rate than 10.4% — it has an **unmeasured** one. The deliverable
+here is not a green dashboard; it is a **named list of contested rows**, which is the only
+licence artefact that survives a procurement conversation.
+
+### Components
+
+| Role | Component | Licence | Why this one |
+|---|---|---|---|
+| Reader A — fine vocabulary | `compose/code/lib/license_family.sh` | this KB | answers `CC-BY-NC-SA-4.0`, `EUPL-1.1`, `Elastic`, `PolyForm`; carries the independent **commercial-use axis** |
+| Reader B — coarse vocabulary | `compose/code/p436-fork-hypothesis/sweep_payload.py` | this KB | deliberately coarse so its output stays comparable with a published table; different blind spots by construction |
+| Composition | `compose/code/p459-unified-verdict/unified.py` | this KB | one verdict, disagreements **printed not resolved** |
+| Divergence report | `compose/code/p445-classifier-divergence/divergence.py` | this KB | the artefact procurement actually wants |
+| Third opinion (optional) | [licensee/licensee](https://github.com/licensee/licensee) (MIT) or [nexB/scancode-toolkit](https://github.com/nexB/scancode-toolkit) (Apache-2.0) | MIT / Apache-2.0 | an outside reader, so the pair does not share a lineage |
+
+### Wiring
+
+1. **Enumerate, do not guess at filenames.** Walk the repository tree and treat *every*
+   grant-shaped path as a candidate — `p441`'s enumeration found 9 grants where two filename
+   lists found zero and one. Two platforms here (`OS4ED/openSIS-Classic`,
+   `OS4ED/openSIS-Responsive-Design`) have **no root licence at all**; their grant is only at
+   `docs/License.txt`.
+2. **Read both layers.** Root payloads *and* every grant below the root. On this corpus the
+   tree layer held no NonCommercial surprise — 0 of 76 — but it held the only licence evidence
+   two real platforms have.
+3. **Run both readers over the same bytes.** Pass the payload on **stdin**, never as an argv
+   string: several licence texts exceed 35 kB and argv truncation would present as a
+   classifier disagreement rather than a plumbing fault.
+4. **Compose conservatively, and put the restriction before the gate.** Commercial use is
+   ALLOWED only if both readers allow it. A payload whose family **neither** reader can name
+   can still forbid commercial use — three rows here are exactly that — so *"we could not
+   name this licence"* must never overwrite *"this licence forbids what you want to do with
+   it."*
+5. **Decline on containers.** A licence shipped as RTF or PDF puts markup in the title block;
+   every family probe declines, and an unclassified family is precisely the state in which
+   tools fall back to token-matching the body. On this shelf that read GPL-2.0 §3(c)'s
+   *"allowed only for noncommercial distribution"* — a condition on one distribution option —
+   as a restriction, and turned a usable SIS platform into a reject. Report `CONTAINER-RTF`
+   and **ask the vendor for plain text**; that request is itself a due-diligence finding.
+6. **Resolve EUPL to its version.** Six of the nine EUPL repositories here are **1.1**, not
+   1.2, and the two carry different compatibility lists. For any EMEA public-sector build this
+   is a procurement fact, not a detail.
+7. **Pin the gaps you do not close.** Where one reader is known blind, assert the
+   one-sided flag in a test **and state that the assertion must flip when the gap closes** —
+   `p459/test_unified.py` does exactly this for the NonCommercial axis. A test that goes red
+   when a defect is *fixed* is how a known gap cannot be closed silently and the flag left
+   behind as noise.
+8. **Publish three lists, not one score:** 🟢 agreed-and-usable, 🔴 agreed-and-restricted,
+   ⚠️ **contested** — with both readers' answers side by side for every contested row.
+
+### What it produces
+
+- A per-component licence table where every row names **which reader said what**.
+- A contested list — on this corpus **10 of 412** — small enough for a lawyer to read in an
+  afternoon, and a **5-row subset explicitly marked as the commercially dangerous class**.
+- A declined list (containers, pointer files, `REUSE`-spec repositories), stated as a limit
+  rather than hidden inside a pass.
+
+**Effort:** 1 week to stand up against a client's dependency set; a few hours per re-run.
+Re-run it on **every dependency bump**, because the grant moves — and re-run it after *your
+own* fixes, because this pattern's own history is two concurrent repairs that each left the
+other's blind spot in place.
+
+⚠️ **What this pattern is not.** It is not legal advice and does not replace counsel. It
+replaces what most engagements actually do — **one scanner, once, and a green tick** — and
+gives counsel a list worth reading instead of a dashboard worth ignoring.

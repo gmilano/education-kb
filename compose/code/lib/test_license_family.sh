@@ -519,5 +519,168 @@ check "P312 BUSL uso comercial PROHIBIDO"     PROHIBITED "$(cu "$BUSL")"
 check "P312 Elastic uso comercial PROHIBIDO"  PROHIBITED "$(cu "$ELASTIC")"
 check "P312 PolyForm uso comercial PROHIBIDO" PROHIBITED "$(cu "$POLYFORM")"
 
+
+# ---------------------------------------------------------------------------
+# CONTROL NEGATIVO 9 — P453 (pase 29).  La EUPL es la licencia de la propia Comision
+# Europea y el estante publico EMEA de esta KB esta escrito en ella: nueve payloads
+# reales, ocho de ellos servicios educativos nacionales finlandeses.  Este clasificador
+# NO la tenia y devolvia UNCLASSIFIED sobre los nueve, mientras el lado Python la
+# resolvia desde el pase 26 -- la asimetria exacta que P445 nombro.
+#
+# LOS DOS CONTROLES NEGATIVOS SON EL PUNTO, y van en las dos direcciones:
+#
+#   (1) EUPL NO LE ROBA A NADIE.  El Apendice de EUPL-1.2 lista por NOMBRE a GPL-2.0,
+#       AGPL-3.0, LGPL-2.1, MPL-2.0 y EPL-1.0 como licencias compatibles.  Si la rama
+#       EUPL matcheara la mencion desnuda de esos nombres, un payload EUPL se clasificaria
+#       bien pero por la razon equivocada; y al reves, la rama EUPL va PRIMERA, asi que si
+#       matcheara de mas se quedaria con payloads GPL/MPL/EPL legitimos.  Se afirma que no.
+#
+#   (2) NADIE LE ROBA A LA EUPL.  Es la razon del orden: un payload EUPL trae las marcas
+#       de cinco familias ajenas, asi que cualquier rama de abajo se lo lleva si corre
+#       antes.  El fixture EUPL_APPENDIX trae el Apendice COMPLETO justamente para eso.
+EUPL12='European Union Public Licence
+V. 1.2
+
+EUPL (C) the European Union 2007, 2016
+
+This European Union Public Licence (the EUPL) applies to the Work (as defined
+below) which is provided under the terms of this Licence.'
+EUPL11='This project is licensed under the EUPL, Version 1.1 or - as soon they will be
+approved by the European Commission - subsequent versions of the EUPL.'
+# El Apendice real: cinco familias ajenas NOMBRADAS dentro de un payload EUPL.
+EUPL_APPENDIX='European Union Public Licence
+V. 1.2
+
+Appendix
+
+Compatible Licences according to Article 5 EUPL are:
+- GNU General Public License (GPL) v. 2, v. 3
+- GNU Affero General Public License (AGPL) v. 3
+- Mozilla Public Licence (MPL) v. 2
+- Eclipse Public License (EPL) v. 1.0
+- CeCILL v. 2.0, v. 2.1
+- Common Development and Distribution License (CDDL) v. 2.'
+check "P453 EUPL-1.2 texto canonico"              EUPL-1.2 "$(family_of "$EUPL12")"
+check "P453 EUPL-1.1 aviso corto"                 EUPL-1.1 "$(family_of "$EUPL11")"
+check "P453 EUPL con Apendice: no la roba GPL"    EUPL-1.2 "$(family_of "$EUPL_APPENDIX")"
+check "P453 EUPL uso comercial ALLOWED"           ALLOWED  "$(cu "$EUPL12")"
+check "P453 EUPL invariante a reflujo 70"         EUPL-1.2 "$(family_of "$(printf '%s' "$EUPL12" | reflow 70)")"
+# NEG: la mencion desnuda de la sigla no licencia nada.  Un MIT que REMITE a la EUPL
+# sigue siendo MIT; el Apendice de OTRA licencia que nombra la EUPL no la hereda.
+check "P453 NEG EUPL no roba un MIT que la menciona" MIT "$(family_of "MIT License
+
+Copyright (c) 2026 X
+Permission is hereby granted, free of charge.  Some vendored parts are EUPL.")"
+check "P453 NEG EUPL no roba un Apache que la menciona" Apache-2.0 "$(family_of "                                 Apache License
+                           Version 2.0, January 2004
+   Interoperable with the European Union Public Licence where required.")"
+check "P453 NEG mencion desnuda de la sigla no clasifica" UNCLASSIFIED "$(family_of "See the EUPL for details about reuse of European public sector software.
+This file is a pointer and grants nothing by itself.")"
+# NEG en la direccion de P171: GPL-2.0 real NO se vuelve EUPL por nombrarse en su Apendice.
+check "P453 NEG GPL-2.0 sigue GPL-2.0"            GPL-2.0  "$(family_of "$GPL2")"
+check "P453 NEG GPL-3.0 sigue GPL-3.0 (seccion 13)" GPL-3.0 "$(family_of "$GPL3")"
+
+
+# ---------------------------------------------------------------------------
+# CONTROL NEGATIVO 10 — P454/P455/P456 (pase 29).  Los tres defectos que el re-run de
+# `p445` destapo DESPUES de que las dos ramas EUPL/NC entraran: los 29 desacuerdos que
+# quedaban no eran «filas de preambulo GPLv2», eran TRES CLASES NOMBRABLES, y en dos de
+# las tres el clasificador equivocado era ESTE, el endurecido.
+#
+# P454 — MPL-2.0 seccion 1.12 DEFINE «Secondary License» nombrando la GPL-2.0, la
+# LGPL-2.1 y la AGPL-3.0, asi que todo payload MPL trae las tres marcas GNU.  El pase 26
+# arreglo esto en el lado Python y el arreglo NO VIAJO: cinco repos MPL-2.0 de este
+# estante volvian GPL-3.0 aca.  El fixture es el titulo real de `dequelabs/axe-core`.
+MPL_SECONDARY='Mozilla Public License, version 2.0
+
+1. Definitions
+
+1.12. "Secondary License" means either the GNU General Public License, Version 2.0, the
+GNU Lesser General Public License, Version 2.1, the GNU Affero General Public License,
+Version 3.0, or any later versions of those licenses.'
+check "P454 MPL-2.0 con 1.12 no la roba la familia GNU" MPL-2.0 "$(family_of "$MPL_SECONDARY")"
+check "P454 MPL-2.0 permite uso comercial"              ALLOWED "$(cu "$MPL_SECONDARY")"
+EPL='Eclipse Public License - v 2.0
+
+THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS ECLIPSE PUBLIC LICENSE.'
+check "P454 EPL clasificada y no robada por GNU"        EPL     "$(family_of "$EPL")"
+# Y el control en la direccion contraria: MPL/EPL suben, asi que no pueden quedarse con
+# un GPL legitimo que las mencione.  GPL-3.0 no nombra a Mozilla ni a Eclipse, pero la
+# afirmacion se hace igual porque es la premisa del reordenamiento.
+check "P454 NEG GPL-3.0 real sigue GPL-3.0"             GPL-3.0 "$(family_of "$GPL3")"
+check "P454 NEG GPL-2.0 real sigue GPL-2.0"             GPL-2.0 "$(family_of "$GPL2")"
+
+# P455 — la concesion EN PROSA con el titulo en caja mixta.  Fixture: el `LICENSE` real de
+# `ankitects/anki`, que volvia `CC-BY-SA-4.0` -- un AGPL-3.0 reportado como licencia de
+# contenido.  El control negativo que importa es la seccion 13 de GPL-3.0, que dice
+# «licensed under VERSION 3 OF the GNU Affero...»: otra preposicion, y por eso no entra.
+ANKI='Anki is licensed under the GNU Affero General Public License, version 3 or later,
+with portions contributed by Anki users licensed under the BSD-3 license.
+Documentation on this repository is licensed CC BY-SA 4.0.'
+check "P455 AGPL-3.0 concedida en prosa, caja mixta"    AGPL-3.0 "$(family_of "$ANKI")"
+LGPL_PROSE='This library is licensed under the GNU Lesser General Public License,
+version 2.1 or later.'
+check "P455 LGPL concedida en prosa, caja mixta"        LGPL     "$(family_of "$LGPL_PROSE")"
+# EL CONTROL NEGATIVO DE P455, y es el que atrapo dos intentos de este mismo pase:
+# el payload de GPL-2.0 NOMBRA la LGPL en su recomendacion de cierre.  Una sonda suelta
+# sobre el cuerpo se lo lleva; esta no.
+GPL2_RECOMMENDS_LGPL='                    GNU GENERAL PUBLIC LICENSE
+                       Version 2, June 1991
+
+If your program is a subroutine library, you may consider it more useful to permit
+linking proprietary applications with the library.  If this is what you want to do, use
+the GNU Lesser General Public License instead of this License.'
+check "P455 NEG GPL-2.0 que recomienda la LGPL sigue GPL-2.0" GPL-2.0 \
+      "$(family_of "$GPL2_RECOMMENDS_LGPL")"
+
+# P456 — una FRASE DE CONCESION vence a una SIGLA de clausula.  Fixture: la forma real de
+# `pupilfirst/pupilfirst`, que declara CC BY-SA para `docs/` y MIT para el software.
+PUPILFIRST='Copyright (c) 2013-present Example Pvt. Ltd.
+
+Portions of this software are licensed as follows:
+
+* All content residing under the "docs/" directory of this repository is licensed under
+  "Creative Commons: CC BY-SA 4.0 license".
+* Content outside of the above mentioned restrictions is available under the "MIT"
+  license as defined below.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this
+software and associated documentation files.'
+check "P456 aviso mixto: el software es MIT, no la clausula de docs" MIT \
+      "$(family_of "$PUPILFIRST")"
+check "P456 el aviso mixto permite uso comercial"       ALLOWED "$(cu "$PUPILFIRST")"
+# LOS DOS CONTROLES NEGATIVOS DE P456: las anclas que subieron no pueden robarle un
+# payload CC real, porque el texto legal de CC no contiene ninguna de las dos frases.
+check "P456 NEG CC BY-NC-SA real sigue CC-BY-NC-SA-4.0" CC-BY-NC-SA-4.0 "$(family_of "$CCNCSA")"
+check "P456 NEG CC BY-NC-SA real sigue PROHIBIDO"       PROHIBITED      "$(cu "$CCNCSA")"
+
+
+# ---------------------------------------------------------------------------
+# CONTROL NEGATIVO 11 — P457 (pase 29).  El payload GNU SIN TITULO.  Tres repos de este
+# estante lo traen (`kuali/kc`, `kuali/kfs`, `untisapi/untis4j`): el texto completo con el
+# titulo borrado, identificandose solo en el Preambulo.  La oracion autoidentificatoria es
+# el discriminador, y el ORDEN entre las tres es forzado porque el texto de LGPL-3.0
+# tambien nombra a la GPL-3.0.
+AGPL_NOTITLE='Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
+Everyone is permitted to copy and distribute verbatim copies of this license document.
+
+Preamble
+The GNU Affero General Public License is a free, copyleft license for software.
+"This License" refers to version 3 of the GNU Affero General Public License.'
+LGPL3_NOTITLE='Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+
+This version of the GNU Lesser General Public License incorporates the terms and
+conditions of version 3 of the GNU General Public License, supplemented by the
+additional permissions listed below.
+As used herein, "this License" refers to version 3 of the GNU Lesser General Public
+License, and the "GNU GPL" refers to version 3 of the GNU General Public License.'
+check "P457 AGPL-3.0 sin titulo, por su oracion propia"  AGPL-3.0 "$(family_of "$AGPL_NOTITLE")"
+check "P457 LGPL-3.0 sin titulo no se la lleva la GPL"   LGPL-3.0 "$(family_of "$LGPL3_NOTITLE")"
+check "P457 LGPL-3.0 permite uso comercial"              ALLOWED  "$(cu "$LGPL3_NOTITLE")"
+check "P457 NEG GPL-3.0 con su propia oracion sigue GPL-3.0" GPL-3.0 \
+      "$(family_of 'GNU GENERAL PUBLIC LICENSE
+Version 3, 29 June 2007
+"This License" refers to version 3 of the GNU General Public License.')"
+
 printf '\n%d/%d\n' "$((n-fail))" "$n"
 [ "$fail" = 0 ] || exit 1

@@ -8,6 +8,294 @@ updated: 2026-10-07
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-07 — twenty-ninth pass: the seventeen-pass repository drought ends, and the shared classifier still carried every defect pass 28 had just fixed in the other one
+
+🔵 **This pass ran concurrently with pass 28 under the same schedule, and the overlap is the
+finding rather than an accident.** Pass 28 re-measured the 412 root payloads and fixed three
+defect classes in `sweep_payload.family_of`: 9 `UNKNOWN → EUPL`, 7 `LGPL → GPL`, 5
+`GPL → MPL-2.0`. This pass re-measured the same payloads with the **other** classifier —
+`lib/license_family.sh`, the one this KB calls hardened and the one **pass 28 never
+touched** — and found **the same three classes sitting in it**, plus two more.
+
+🔴 **That is `P237` and `P445` arriving together, and it is the most transferable thing
+either pass produced: a correction that lives in one of two implementations is not a
+control.** Pass 26 fixed the MPL/GNU collision in Python and named the five repositories.
+Pass 28 fixed the LGPL/GPL and EUPL classes in Python. Neither fix crossed the file
+boundary, and `lib/license_family.sh` is sourced by **27 instruments**.
+
+### 🟢 Verification level of this pass, stated before the findings
+
+Licences read from each repository's own payload on `raw.githubusercontent.com` this pass,
+with **both** classifiers over the **same bytes**. Star counts and registry licences from the
+GitHub API via the MCP channel (plain `curl` to `api.github.com` is blocked here). Market
+figures **checked by string against `intel/market.md`, not re-sourced** — every one held.
+
+⚠️ **De-duplicated against pass 28 before publishing, not after.** This pass also ran pass
+27's action C (the cross-reference oracle for the 186 `NO-ORACLE` spellings) and **its result
+is deleted rather than published**, because pass 28's `p448` did the same work better: a
+16-path corpus against this pass's 7, 488 repositories against 483, a calibration control
+this pass had none of, and an owner audit carried one step further — to **5 genuinely
+independent third-party citations of 186 (2.7%)**, where this pass stopped at 8. Both runs
+got the identical 13 slugs and both confirmed the *"fewer than 40"* prediction. **The right
+response to duplicate work is to delete it**, which is what pass 27's own method note said
+when it was on the other side of this.
+
+### 🟢 Finding 1 — three new repositories, and the drought was real rather than a search defect
+
+Seventeen consecutive passes of *"0 new"* invites the suspicion that the query set had gone
+stale. It had not. Verified payload-first, and **absent from pass 28**:
+
+| Repo | ★ | Licence (payload + registry) | Pushed | What it is |
+|---|---|---|---|---|
+| [`Shubhamsaboo/awesome-llm-apps`](https://github.com/Shubhamsaboo/awesome-llm-apps) | **140,891** | 🟢 **Apache-2.0** (11,357 B) | 2026-09-30 | 100+ runnable agents, Agent Skills and RAG apps |
+| [`GokuMohandas/Made-With-ML`](https://github.com/GokuMohandas/Made-With-ML) | **49,696** | 🟢 **MIT** (1,069 B) | 2026-03-04 | develop → deploy → iterate production ML |
+| [`HandsOnLLM/Hands-On-Large-Language-Models`](https://github.com/HandsOnLLM/Hands-On-Large-Language-Models) | **29,517** | 🟢 **Apache-2.0** (11,364 B) | 2026-04-24 | official code for the O'Reilly *Hands-On LLMs* |
+
+🟢 **Payload and registry agree on all three** — worth stating rather than assuming, after
+pass 26 measured the registry stripping 7 of 15 ownership grants.
+
+⚠️ **All three are enablement assets, not education agents.** They teach *about* AI; they do
+not tutor, grade, schedule or touch an LMS. Same class as
+`microsoft/ai-agents-for-beginners`, already shelved, so they go on the **`P6`
+capability-build tier** and nowhere else. Filing them as tutoring agents because they are
+popular would be the `P412` error.
+
+⚠️ **Two of the three are cold** — `Made-With-ML` seven months, `Hands-On-LLMs` five and a
+half. For a book's companion repo that is correct behaviour; it is still the difference
+between *"fork it"* and *"follow it"*.
+
+### 🔴 Finding 2 — five defects in the classifier pass 28 did not open
+
+| | Defect | Rows | Status before this pass |
+|---|---|---|---|
+| `P453` | the shell had **no EUPL branch at all** | 9 | Python side had one since pass 26 |
+| `P454` | the shell probes **GNU before Mozilla/Eclipse**, and MPL-2.0 §1.12 names GPL-2.0, LGPL-2.1 and AGPL-3.0 | 5 | fixed in Python in **pass 26**, never ported |
+| `P455` | the GNU family read from a **window** rather than a title or a grant phrase | 8 | fixed in Python in **pass 28**, never ported |
+| `P456` | a **clause acronym** outranked a **grant phrase** | 2 | never measured in either |
+| `P457` | the **title-stripped** GNU payload — full text shipped with the title removed | 3 | never measured in either |
+
+🟢 **Measured outcome on the shelf.** Divergence between the two classifiers over the 412
+roots, after this pass's shell repairs and on top of pass 28's Python repairs:
+
+| Verdict | pass 27 | 🟢 this pass |
+|---|---|---|
+| `AGREE` | 369 | **393** |
+| `VOCABULARY` | 25 | **1** |
+| 🔴 `NC-ERASED` | 5 | **5 — unchanged** |
+| `BOTH-DECLINE` | *(not a verdict)* | 9 |
+| `PYTHON-UNKNOWN` | 13 | 4 |
+
+### 🔴 Finding 3 — the one class that reaches a client invoice is STILL open after two passes
+
+🔴 **`NC-ERASED` is 5 of 412, exactly as pass 27 measured it.** Five payloads whose text
+forbids commercial use collapse to a flat `CC-BY` — a licence that *permits* it:
+
+| Slug | `family_of` says | the shell says | commercial |
+|---|---|---|---|
+| [`facebookresearch/seamless_communication`](https://github.com/facebookresearch/seamless_communication) | `CC-BY` | **CC-BY-NC-4.0** | 🔴 NO |
+| [`openstax/osbooks-biology-bundle`](https://github.com/openstax/osbooks-biology-bundle) | `CC-BY` | **CC-BY-NC-SA-4.0** | 🔴 NO |
+| [`sign/translate`](https://github.com/sign/translate) | `CC-BY` | **CC-BY-NC-SA-4.0** | 🔴 NO |
+| [`Yunfeng-Wan/CSTutorBench`](https://github.com/Yunfeng-Wan/CSTutorBench) | `CC-BY` | **CC-BY-NC-4.0** | 🔴 NO |
+| [`Jona-Zwetsloot/Somtoday-Mod`](https://github.com/Jona-Zwetsloot/Somtoday-Mod) | `CC-BY` | **CC-BY-NC-SA-4.0** | 🔴 NO |
+
+⚠️ **Pass 28 named this defect and did not fix it** — its `P449` reads *"one label `CC-BY`
+covers plain Attribution, Attribution-NonCommercial, Attribution-NonCommercial-ShareAlike
+and one document that is not Creative Commons at all"*. So after two concurrent passes of
+licence work, **the only error class that can put a non-commercial asset into a billable
+deliverable is the one neither pass closed**, and it is open because each run fixed the
+classifier it happened to be looking at.
+
+🟢 **This pass does not patch `sweep_payload.py` to close it, and the restraint is
+deliberate.** Pass 28 rewrote that file hours ago; reconciling two concurrent rewrites of one
+classifier from a stale base is precisely how this KB's history says corrections get
+regressed (`P237`, pass 77, and `P455` twice in this very pass). Instead the gap is
+**pinned by a test**: `p459/test_unified.py` asserts the `NC-ONLY-SHELL` flag fires on a
+CC-BY-NC payload, with a comment stating that **the assertion must flip to `[]` when the
+Python side gains the axis.** A test that goes red when a defect is *fixed* is how the gap
+cannot be closed silently and the flag left behind as noise. Pre-registered as action A.
+
+### 🔴 Finding 4 — the other three Python-side residuals, enumerated rather than patched
+
+| Row | `family_of` | shell | What it is |
+|---|---|---|---|
+| [`opendatalab/MinerU`](https://github.com/opendatalab/MinerU) | `UNKNOWN` | **Apache-2.0** | its `LICENSE.md` says *"licensed under Apache License 2.0"*; the probe requires a separate `"version 2.0"` string, so every **prose** declaration is excluded |
+| [`espoon-voltti/evaka`](https://github.com/espoon-voltti/evaka) | `LGPL` | `UNCLASSIFIED` | a **REUSE-spec pointer file** that grants nothing; the shell declines, the Python side reads a family out of it |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp), [`sodadata/soda-core`](https://github.com/sodadata/soda-core), [`digillab-lmu/smart-rag`](https://github.com/digillab-lmu/smart-rag) | `UNKNOWN` | **Elastic** ×2, **PolyForm** | a genuine **vocabulary** gap: the coarse p170 vocabulary has no token for the non-OSI restriction families — and all three forbid commercial use |
+
+🔵 **And the shell is not a superset either, which is `P445`'s thesis in the direction pass 27
+did not look.** On `instructure/canvas-lms`'s `COPYRIGHT` and `doc/copyright.md` the Python
+side answers `AGPL-3.0` and the shell declines. The shell is **right about the file** — a
+copyright notice is not a grant — and the Python side is **right about the project**, which
+genuinely is AGPL-3.0. Neither verdict is the error; the composition is the answer.
+
+### 🔴 Finding 5 — prediction A falsified: there are ZERO NonCommercial grants below the root
+
+`p459` composes both classifiers into one verdict and runs it over the 412 roots **and** all
+**76 tree payloads** `p441`/`p444` ever read (48 slugs).
+
+| Layer | n | ALLOWED | PROHIBITED | UNDETERMINED |
+|---|---|---|---|---|
+| root | 412 | 395 | **11** | 6 |
+| tree | 76 | 67 | **0** | 9 |
+
+> 🔴 Pre-registered: *"at least **3** further NonCommercial grants below the root, none
+> currently flagged."*
+
+🔴 **Zero.** The convention the prediction named — `docs/`, `data/` and `assets/` are where
+CC-BY-NC lives — is real and is not in this corpus. The tree layer here is a **vendoring**
+layer: 18 MIT, 15 Apache-2.0, 6 ECL-2.0, 4 EUPL, 4 GPL-2.0, 3 MPL-2.0, and the three CC-BY
+rows carry **no clause at all**.
+
+🟢 The root `PROHIBITED` count of **11** matches `lib/license_family.sh`'s own independent
+count exactly — an unplanned cross-check of the composition against the axis it composes.
+
+### 🔴 Finding 6 — and the tree layer carried what a root sweep structurally cannot
+
+The only two tree rows flagged were [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic)
+and [`OS4ED/openSIS-Responsive-Design`](https://github.com/OS4ED/openSIS-Responsive-Design),
+both shipping the same 61,575-byte `docs/LICENSE.rtf`, both **false positives** (`P460`):
+
+1. the payload is **RTF**, so its first two non-blank lines are `{\rtf1\adeflang1025…` and a
+   font table — **the title block is markup**;
+2. with no readable title every family probe declines → family `UNCLASSIFIED`;
+3. `P250`'s gate only short-circuits an **identified** family, so an unclassified one falls
+   through to the body token match — and the body is GPL-2.0, whose **§3(c)** says *"this
+   alternative is allowed only for noncommercial distribution"*.
+
+⚠️ A **condition on one distribution option**, not a restriction on the licensee — exactly
+what `P250`'s own header says about *"occasionally and noncommercially"* in GPL-3.0 §6.
+**The guarantee was in place; the container walked around it.**
+
+🔴 **Underneath it, the real finding: neither repository has a root licence at all.** Both are
+absent from the 412 and `p441` files them `OWN-GRANT-IN-SUBTREE` with family `LGPL?`. Read
+first-hand from `docs/License.txt` (17,286 B, opening on a plain `GNU GENERAL PUBLIC LICENSE
+/ Version 2, June 1991`): **GPL-2.0, commercial use allowed.** Two real SIS platforms,
+mis-shelved, and only the layer nobody had checked with both classifiers could say so.
+
+### 🟢 Finding 7 — the regional gap declared in passes 26 and 27, partially closed
+
+Pass 27 wrote: *"`openstax` and `sign/translate` are **plausibly** North America and EMEA
+respectively, and plausibly is not a measurement."* The 11 commercial-prohibited roots were
+placed against **first-hand evidence** — the repository's own README, or an unambiguous
+organisational identity. **5 of 11 place; 6 do not.**
+
+| Repo | Region | Evidence |
+|---|---|---|
+| `facebookresearch/seamless_communication` | **North America** | Meta's research organisation |
+| `openstax/osbooks-biology-bundle` | **North America** | 🟢 README names **Rice University** — confirms pass 27's guess |
+| `Khan/tutoring-accuracy-dataset` | **North America** | the `Khan` organisation; ⚠️ its README is **0 bytes**, so org identity alone |
+| `Jona-Zwetsloot/Somtoday-Mod` | **EMEA** | 🟢 README built around **Somtoday**, the Dutch SIS |
+| `digillab-lmu/smart-rag` | **EMEA** | 🟢 README names **LMU München**, in German |
+
+⚠️ **`sign/translate` does not place.** Its README, read this pass, names **no country at
+all** — so pass 27's guess is neither confirmed nor refuted. A plausible region that survives
+three passes starts to read like a measured one, which is why pass 27 flagged the phrasing.
+
+🔴 Unplaced: `sign/translate`, `sodadata/soda-core`, `canyongbs/advisingapp`,
+`leemonade/leemons`, `Yunfeng-Wan/CSTutorBench`, `AStheTECH/mewcp-google-classroom`.
+
+### 🔴 Pre-registered actions from pass 27 — outcomes
+
+| # | Action | Prediction written before running it | Outcome |
+|---|---|---|---|
+| **A** | wire **both** classifiers into one verdict function; run it over all 412 roots **and** every tree payload `p441`/`p444` read | 🔴 *"at least **3** further NonCommercial grants below the root"* | 🔴 **Falsified: ZERO** of 76. The 2 flagged rows were false positives (`P460`), and the layer instead yielded the `openSIS` correction — the only licence evidence two real platforms have, read wrong |
+| **B** | give the shell the **EUPL** patterns and `family_of` the **NC** axis, then re-run `p445` | ⚠️ *"`AGREE` rises from 369 to **above 400**; residual = the **GPLv2-preamble** rows only"* | ⚠️ **Wrong twice.** `AGREE` **393**, short of 400. The EUPL half was done here (`P453`); **the NC half was not**, and is re-registered below rather than claimed. The GPLv2 rows were a real defect and were fixed — in the shell by `P455`, in Python by pass 28 — so the residual is *not* them: it is 5 `NC-ERASED` + 4 + 1 |
+| **C** | pass 26's action C: resolve the 186 `NO-ORACLE` spellings by cross-reference | 🔴 *"fewer than 40 of the 186 are named by any other repository on this shelf"* | 🟢 **Confirmed at 13 — by pass 28's `p448`, independently, with a better instrument.** This pass's duplicate was run, compared, and **deleted** |
+
+### 🔵 Pre-registered for the next pass
+
+| # | Action | Prediction written **before** running it |
+|---|---|---|
+| **A** | Give `sweep_payload.family_of` the **NonCommercial axis** and the three **non-OSI restriction families**, from a base that is current rather than stale, then re-run `p445` | 🟢 Expect `NC-ERASED` → **0** and `PYTHON-UNKNOWN` → **1** (`MinerU`'s prose Apache). Prediction: `AGREE` reaches **403 of 412**, and `p459/test_unified.py`'s pinned `NC-ONLY-SHELL` assertion **goes red** — which is the point of pinning it |
+| **B** | Run `p459`'s unified verdict over the **`UNLICENSED` and `UNREACHABLE`** sides of `p436` — the ~84 slugs the 412 excludes | 🔴 Expect `CONTAINER` and `NO-CESSION` verdicts to be **concentrated there**: a repository that fails a filename sweep is likelier to have put its grant in a PDF, an RTF or a sentence. Prediction: **at least 5** payloads unreadable for **container reasons alone**, i.e. recoverable by a parser rather than absent |
+| **C** | Test the **solitary-repository signal** (pass 28's 173 `UNCITED`) against liveness: median days since last push, 173 uncited vs 323 cited | ⚠️ Expect the uncited set **materially colder** — prediction: a median gap of **more than 180 days**. If it is not, *"named by nothing"* measures obscurity rather than abandonment and must not be sold as a risk flag |
+
+### The mandatory queries, run with the year **computed** (2026), not hardcoded
+
+| Query | Result against this KB |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🟢 **2 new** — `awesome-llm-apps` (Apache-2.0, 140.9k★), `Made-With-ML` (MIT, 49.7k★). Held: openclaw (385.4k★), browser-use, Mem0, AutoGen, Flowise, dify, `Hermes Agent`, `pguso/agents-from-scratch`, `avinash201199/free-ai-agents-resources` |
+| `github trending education AI 2026` | 🟢 **1 new** — `Hands-On-Large-Language-Models` (Apache-2.0, 29.5k★). Held: `rohitg00/ai-engineering-from-scratch`, `microsoft/ai-agents-for-beginners`, Awesome LLM, `speedyapply/2026-AI-College-Jobs` |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **0 new** — OpenEduCat, Odoo, ERPNext/Frappe, and **CK-ERP** again (a 2010 SourceForge-era Drupal connector). Saturated |
+| `AI education industry trends 2026` | 🔴 **0 new** — $7.52 B 2025 → $10.6 B 2026 at 40.9%, **$79.6 B by 2034 at 31.35%**, cloud 71.22%, K-12 45.62%, STEM 34.78%, student usage 66%→92%→86% primary: all held |
+| `AI education {NA, EMEA, APAC, LATAM} 2026 adoption regulation players` | 🔴 **0 new facts, 0 new repos.** Checked by string and held: the $951M→$2,303.2M NA series, 41.7% of global, 36% of adoption, 86% across 16 countries, Colorado/Texas, EMEA 94% training and 60% siloed, APAC 48% of governance leaders and 57% of Asian organisations, Singapore's FI consultation, LearnUpon Sydney and Create+, TCS–Pearson, NIIT MTS, UNU's 200 institutions across 19 LAC countries, LATAM 99%/85%, OpenAI 89%, Ednova |
+
+🟢 **The repository drought is over; the market-fact drought is not** — nineteen passes now.
+Four summary-grade queries re-serve the same eight syndicated reports, which is evidence
+about the **sources**, not the market. A new figure needs a primary source — a ministry
+publication, a regulator's consultation, a funder's portfolio disclosure — not a better
+query. Pre-registered as a method change for a later pass.
+
+### ⚠️ Declared gaps — what this pass did not measure
+
+- 🔴 **The Python-side NC axis is NOT fixed**, by choice, and five rows remain exposed. It is
+  action A above and it is pinned by a failing-when-fixed test.
+- 🔴 **The RTF container was declined, not parsed** (`P460`), so the number of payloads whose
+  licence is readable *only* by a container parser is **unknown** — action B.
+- ⚠️ **`p459` was not run over the unlicensed side**: its denominator is the 412 `LICENSED`
+  roots plus 76 tree payloads; the ~84 `UNLICENSED`/`UNREACHABLE` slugs are untouched.
+- 🔴 **6 of the 11 commercial-prohibited roots remain regionally unplaced**, named above.
+  Their READMEs carry no country, institution or jurisdiction.
+- ⚠️ **The `EUPL-1.1`/`EUPL-1.2` split is new data nobody has used.** `P453` resolves the
+  version and the Finnish estate is **6× 1.1 and 2× 1.2** — not uniformly 1.2 as the old
+  `EUPL` label implied. The two versions carry **different compatibility lists**; the
+  consequence is **not yet traced** into `compose/patterns.md`.
+- ⚠️ **One row was lost to a transient network failure** during a sweep and recovered on a
+  direct re-probe (`eduNEXT/openedx-lti-tool-plugin`, HTTP 200, 11,357 B). `read_blob`
+  swallows exceptions and answers `""`, and `family_of("")` is `UNKNOWN` — so **a transient
+  reset is indistinguishable from a repository that declines to license its code.** Not
+  patched this pass, for the same base-staleness reason as the NC axis.
+
+### The method note for this pass
+
+🔵 **The suite found three of this pass's defects before the shelf did, and two were the same
+mistake.** Teaching the shell mixed-case GNU titles was attempted twice and rejected twice:
+once as a probe over the whole body — which **eats every GPL-2.0**, because GPL-2.0's closing
+paragraph recommends the LGPL — and once anchored to a **200-character window**, which made
+the suite's own `GPL3_S13` fixture answer `AGPL-3.0`. That second failure is **`P171`, the
+founding defect of this library, reintroduced by the patch for a case defect.** Pass 28 hit
+the same wall from the other side and wrote it as its own `P452`: *"the GNU family must be
+read from the payload's title, not from a window"*. **Two runs, two classifiers, the same
+wrong idea, independently.**
+
+🟢 **So the lesson is a shape, not a rule.** A window of characters or lines is a bet on the
+file's layout; a **title** is the first one or two non-blank lines, and a **grant phrase**
+concedes wherever it appears. Every probe added this pass is one or the other, and the three
+rejected attempts are preserved in the comments so a later pass cannot spend the money again.
+
+⚠️ **`P460` is the counter-lesson, and it is why the container is declined rather than
+parsed.** De-marking RTF well enough to recover a title means parsing a font table, and a
+half-parsed container reopens precisely the token-match path that produced the false
+positive. **Saying "this toolchain cannot read this payload" is an answer; inventing a verdict
+from its markup is not.**
+
+🔴 **And the honest note about `p459`'s own first cut.** It asked `if family ==
+"UNDETERMINED"` **before** testing the restriction, which hid three root payloads whose text
+forbids commercial use while their family is unnameable. The symptom was in its own output:
+`PROHIBITED` read **8** where the shell's axis says **11**. That is `P299`'s lesson — *the
+negative goes before the gate* — committed **inside a function written to compose the fix for
+it.** A guarantee proved in one module protects nothing in another, and this pass paid that
+bill three times: as `P454` across two classifiers, as `P455` across two passes, and as
+`P299` inside one new instrument.
+
+### Sources named by the search summaries this pass relied on
+
+opendatascience · DEV Community (*Best open source AI agents in 2026*) · toolradar ·
+fungies.io · oosmetrics · trendshift.io · ayautomate · sourcepulse · abvx.substack ·
+gittrend.io · is4.ai · openeducat (*Open-Source ERP Framework*) · openalternative · Drupal
+development list (CK-ERP) · yoursocial/giikorea/giiresearch (*AI in Education Market
+2026–2034*) · wise.live (*Top 6 AI Tutor Trends 2026*) · caddcentre · newmarketpitch ·
+spill.org · marketsandmarkets (North America AI in Education) · technavio · azumo (*80 AI in
+Education Statistics 2026*) · BCC Research · ETS *Three forces shaping AI* · comptia · Workday
+EMEA AI adoption study · Council of Europe regulatory-dimensions working conference · boomi ·
+techrepublic · intelligentcio APAC · itnews.asia · itbrief/channellife AU · UNU (*AI
+implementation in higher education in LAC*) · IADB · ecosistemastartup · barchart ·
+laestrella.com.pa.
+
+🟢 **First-party verification this pass:** `raw.githubusercontent.com` payloads,
+`lib/license_family.sh` (**132/132**), `p445` (**22/22**), `p459` (**30/30**), the GitHub API
+via MCP, and `git` — **not** the summaries above.
+
 ## 2026-10-07 — twenty-eighth pass: all three predictions held on their headline clause and failed on their mechanism, and the layer that was right every time was the prose
 
 ⏱️ **Measurement window 2026-10-07 ~05:20 UTC → 08:10 UTC. Every age in days is computed

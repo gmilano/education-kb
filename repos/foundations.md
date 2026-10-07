@@ -2093,3 +2093,98 @@ for** — `axe-core` is the engine inside every MIT accessibility agent on this 
 🔵 **The symptom needed no fetch: the published family distribution over 412 licensed payloads
 contained ZERO MPL-2.0 rows.** Fixed by probing EUPL, then MPL and EPL, before the GNU family, with
 **15 controls** that pair each positive against a GNU payload which must not move.
+
+## Added in the twenty-ninth pass of 2026-10-07 — corrections to the licence column, and the EUPL tier gains a version
+
+No new foundational layers. What changed is the **licence column on layers this page already
+recommends** — and here a wrong licence is worse than a missing row, because these are the
+pieces a client build links against.
+
+🔵 **All of it came from one file pass 28 never opened.** Pass 28 repaired three defect
+classes in `sweep_payload.family_of`. `lib/license_family.sh` — the **shared** classifier,
+sourced by 27 instruments — still carried all three.
+
+### 🟢 Five repositories are MPL-2.0, not GPL
+
+| Repo | published | 🟢 corrected | Layer |
+|---|---|---|---|
+| [dequelabs/axe-core](https://github.com/dequelabs/axe-core) | `GPL-3.0` | **MPL-2.0** | accessibility testing |
+| [ocrmypdf/OCRmyPDF](https://github.com/ocrmypdf/OCRmyPDF) | `GPL-3.0` | **MPL-2.0** | document ingestion |
+| [coqui-ai/TTS](https://github.com/coqui-ai/TTS) | `GPL-3.0` | **MPL-2.0** | speech synthesis |
+| [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) | `GPL-3.0` | **MPL-2.0** | speech synthesis (maintained fork) |
+| [edrys-org/edrys](https://github.com/edrys-org/edrys) | `GPL-3.0` | **MPL-2.0** | live classroom |
+
+🔴 **The cause, and this is the second time this KB has paid for it.** MPL-2.0 **§1.12**
+defines *"Secondary License"* by naming *"the GNU General Public License, Version 2.0, the
+GNU Lesser General Public License, Version 2.1, the GNU Affero General Public License,
+Version 3.0"* — so **every MPL-2.0 payload carries all three GNU marks**, and a classifier
+probing the GNU family first takes the payload.
+
+⚠️ **Pass 26 measured this, named these exact five repositories, fixed it, and wrote it up —
+in the other classifier.** Three passes later the identical defect sat in
+`lib/license_family.sh`, on the same five rows. `P237` said a correction living in prose is
+not a control. `P454` adds: **a correction living in one of two implementations is not one
+either.**
+
+🟢 **Why it matters for selection, not bookkeeping.** MPL-2.0 is **file-level** copyleft: you
+may link it into a proprietary application and must publish changes only to the MPL files.
+GPL-3.0 is **project-level**. Recorded as GPL, all five looked like they would infect a
+client deliverable; they do not. **Two of the five are the TTS layer**, so the speech
+substrate this KB recommends for offline and mother-tongue tutoring was marked unusable and
+is not.
+
+### 🟢 The EUPL public-sector tier now resolves to a version — and it is mostly 1.1
+
+`lib/license_family.sh` had **no EUPL branch at all** before this pass (`P453`), so all nine
+EUPL payloads read `UNCLASSIFIED` from it. They now resolve, with the version:
+
+| Repo | 🟢 family | Region | Country |
+|---|---|---|---|
+| [Opetushallitus/ehoks](https://github.com/Opetushallitus/ehoks) | **EUPL-1.1** | EMEA | Finland |
+| [Opetushallitus/eperusteet](https://github.com/Opetushallitus/eperusteet) | **EUPL-1.1** | EMEA | Finland |
+| [Opetushallitus/koski](https://github.com/Opetushallitus/koski) | **EUPL-1.1** | EMEA | Finland |
+| [Opetushallitus/oppijanumerorekisteri](https://github.com/Opetushallitus/oppijanumerorekisteri) | **EUPL-1.1** | EMEA | Finland |
+| [Opetushallitus/organisaatio](https://github.com/Opetushallitus/organisaatio) | **EUPL-1.1** | EMEA | Finland |
+| [Opetushallitus/valtionavustus](https://github.com/Opetushallitus/valtionavustus) | **EUPL-1.1** | EMEA | Finland |
+| [Opetushallitus/ataru](https://github.com/Opetushallitus/ataru) | **EUPL-1.2** | EMEA | Finland |
+| [Opetushallitus/suorituspalvelu](https://github.com/Opetushallitus/suorituspalvelu) | **EUPL-1.2** | EMEA | Finland |
+| [european-commission-empl/European-Learning-Model](https://github.com/european-commission-empl/European-Learning-Model) | **EUPL-1.2** | EMEA | EU |
+
+⚠️ **Read this before building on the tier: six of nine are EUPL-1.1, not 1.2.** The two
+versions carry **different compatibility lists** — 1.2's Appendix adds licences 1.1's does
+not — so a build composing this tier with GPL, MPL or EPL components cannot treat the `EUPL`
+label as uniform. Resolve the version per repository, which is now possible.
+
+🔵 **Both of the tier's shapes need covering.** The eight Finnish services carry **no licence
+title at all**: they open on a copyright line and concede in prose — *"Licensed under the
+EUPL, Version 1.1 or — as soon as they will be approved by the European Commission —
+subsequent versions"*. Only the Commission's own payload ships the full licence text with the
+name as a title. A title probe alone misses eight of nine; a grant-phrase probe alone misses
+the one that matters most.
+
+🔴 **The consequence nobody had stated.** With the family `UNCLASSIFIED`, `P250`'s gate never
+fired on these nine, so their **commercial-use verdict came from the body token match**
+rather than from an identified family — the route `P171` declares unsafe. The answer it gave
+is right (**the EUPL permits commercial use**), but it was right **by luck**, across the whole
+EMEA public-sector tier, for every pass before this one.
+
+### 🔴 And one correction where the grant is not in the root at all
+
+| Repo | published | 🟢 corrected | Where the grant actually is |
+|---|---|---|---|
+| [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | `LGPL?` | **GPL-2.0** | `docs/License.txt`, 17,286 B — **no root licence exists** |
+| [OS4ED/openSIS-Responsive-Design](https://github.com/OS4ED/openSIS-Responsive-Design) | `LGPL?` | **GPL-2.0** | same |
+
+Neither appears among the 412 root payloads this shelf sweeps. They are the clearest case on
+this page for why `p441`'s tree enumeration exists: **for these two the subtree is the only
+licence evidence there is**, and until this pass the family read from it was wrong.
+
+### ⚠️ One layer still unreadable by the Python classifier, declared not patched
+
+[opendatalab/MinerU](https://github.com/opendatalab/MinerU) — the PDF/document → structured
+text layer under curriculum parsing — answers **Apache-2.0** from the shell and `UNKNOWN`
+from `sweep_payload.family_of`. Its `LICENSE.md` says *"MinerU is licensed under Apache
+License 2.0"*, naming licence and version in one token, and the Python probe requires a
+separate `"version 2.0"` string, so every **prose** declaration of Apache is excluded. The
+row on this page is **Apache-2.0** and correct; the instrument disagrees, and the fix is
+pre-registered rather than applied to a file pass 28 rewrote hours earlier.

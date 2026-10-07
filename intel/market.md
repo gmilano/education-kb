@@ -2798,6 +2798,41 @@ directory to the education code they already run, and the asset becomes reusable
 One of the three above is a federal university's own project. ⚠️ Pre-registered as the next pass's
 LATAM action: sweep the **national forges** (`gitlab.com` self-hosted instances at `.edu.br`,
 `.edu.mx`, `.cl`) that this channel cannot see at all.
+### Global
+
+Opportunities that are **not** regional — sold on the same terms in all four regions above,
+because the constraint they answer is the licence and the codebase rather than a jurisdiction.
+Added in the twenty-ninth pass of 2026-10-07, which also closes a standing `P383` gate
+failure: this block declared four of the five vocabulary regions, and the fifth, `Global`, had
+no subsection even though the file's own frontmatter is `Global`.
+
+- 🟢 **The two-reader licence gate (`P37`).** Measured on 412 education repositories across
+  two concurrent passes: two independently hardened licence classifiers disagreed on **43
+  (10.4%)**; after repairs on both sides, **10 (2.4%)** — and the **5 rows that can put a
+  non-commercial asset into a billable deliverable are still open**, because each run fixed
+  the classifier it happened to be looking at. Every engagement that ships, resells or embeds
+  open-source education components eventually has to answer *"which licences does this
+  carry"* in writing, and the near-universal current answer is one scanner, once, and a green
+  tick. A **named list of contested rows** is a sellable, week-long, repeatable deliverable
+  with no regional dependency.
+- ⚠️ **Container-delivered licences as a due-diligence line item.** A licence shipped only as
+  RTF or PDF puts markup where a title belongs, so every scanner on both sides of a
+  procurement conversation is guessing. Two platforms on this shelf have **no root licence
+  file at all** — their grant lives at `docs/License.txt` — so a client's root-only
+  procurement scan reports a correctly-licensed GPL-2.0 platform as unlicensed. Asking the
+  vendor for plain text is free and is itself a finding.
+- 🟢 **The licence-grant clinic, generalised.** The LATAM section above proposes it for a
+  university or ministry partner; the need is global. **173 of 496 cited education
+  repositories (34.9%) are referenced by nothing** — no registry, no self-link, no peer
+  repository — and a third of a shelf being un-depended-on is a condition of open-source
+  education everywhere, not of one region.
+- 🟢 **Enablement on permissively licensed curriculum.** The three assets added this pass
+  ([`awesome-llm-apps`](https://github.com/Shubhamsaboo/awesome-llm-apps) Apache-2.0,
+  [`Made-With-ML`](https://github.com/GokuMohandas/Made-With-ML) MIT,
+  [`Hands-On-LLMs`](https://github.com/HandsOnLLM/Hands-On-Large-Language-Models) Apache-2.0)
+  can be forked, rebranded and **left with the client** — the difference between enablement
+  and a course licence, and it travels to every region unchanged.
+
 ## Cross-region read
 
 Two patterns hold in every region, which makes them safe to build once and sell
@@ -5137,3 +5172,85 @@ blank.**
 - 🔵 **No new LATAM repository or regulatory instrument this pass.** The regional figures
   (third-largest genAI download market, 99%/85% enterprise adoption, UNESCO IESALC's 200 HEIs
   across 19 LAC countries, Ednova in Chile) were all returned and all already held.
+
+## What changed in the twenty-ninth pass of 2026-10-07
+
+🔴 **Nothing, on the market side — the nineteenth consecutive pass.** All four summary-grade
+queries plus the four regional ones were run with the year **computed** (2026). Every figure
+they returned was checked by string against this file and **held**: the $951M→$2,303.2M North
+America series, 41.7% of global growth, 36% of adoption, 86% of students across 16 countries,
+Colorado and Texas's piecemeal rules, EMEA's 94% training investment and 60% siloed data,
+APAC's 48% of governance leaders and 57% of Asian organisations, Singapore's
+financial-institution consultation, LearnUpon's Sydney HQ and Create+, TCS–Pearson, NIIT
+MTS's Top-20 listing, UNU's 200 institutions across 19 LAC countries, LATAM's 99%/85% startup
+adoption, OpenAI at 89%, Ednova.
+
+⚠️ **Nineteen passes is evidence about the sources, not about the market.** Four
+summary-grade queries re-serve the same eight syndicated reports, and a ninth query will not
+change that. **A new figure now requires a primary source** — a ministry's own publication, a
+regulator's consultation document, a funder's portfolio disclosure. That is a change of
+method, pre-registered for a later pass rather than claimed here.
+
+### 🟢 Partially closing the regional gap this KB declared twice
+
+Pass 27 declared: *"No regional dimension on any licence finding. Which regions the 5
+NonCommercial rows sit in is unmeasured; `openstax` and `sign/translate` are **plausibly**
+North America and EMEA respectively, and plausibly is not a measurement."*
+
+This pass placed the **11 commercially-prohibited root payloads** against first-hand evidence
+— the repository's own README, or an unambiguous organisational identity — rather than against
+the look of a name. **5 of 11 place; 6 do not, and are listed as unplaced.**
+
+| Repo | Family | Region | Evidence |
+|---|---|---|---|
+| [facebookresearch/seamless_communication](https://github.com/facebookresearch/seamless_communication) | CC-BY-NC-4.0 | **North America** | Meta's research organisation |
+| [openstax/osbooks-biology-bundle](https://github.com/openstax/osbooks-biology-bundle) | CC-BY-NC-SA-4.0 | **North America** | 🟢 README names **Rice University** — confirms pass 27's guess |
+| [Khan/tutoring-accuracy-dataset](https://github.com/Khan/tutoring-accuracy-dataset) | *(undetermined)* | **North America** | the `Khan` organisation (Khan Academy); ⚠️ its README is **0 bytes**, so this rests on org identity alone |
+| [Jona-Zwetsloot/Somtoday-Mod](https://github.com/Jona-Zwetsloot/Somtoday-Mod) | CC-BY-NC-SA-4.0 | **EMEA** | 🟢 README is built around **Somtoday**, the Dutch school information system |
+| [digillab-lmu/smart-rag](https://github.com/digillab-lmu/smart-rag) | PolyForm | **EMEA** | 🟢 README names **LMU München**, in German |
+
+🔴 **The six that do not place, said rather than silently omitted** — their READMEs name no
+country, institution or jurisdiction:
+[`sign/translate`](https://github.com/sign/translate) (CC-BY-NC-SA-4.0),
+[`sodadata/soda-core`](https://github.com/sodadata/soda-core) (Elastic),
+[`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) (Elastic),
+[`leemonade/leemons`](https://github.com/leemonade/leemons),
+[`Yunfeng-Wan/CSTutorBench`](https://github.com/Yunfeng-Wan/CSTutorBench) (CC-BY-NC-4.0),
+[`AStheTECH/mewcp-google-classroom`](https://github.com/AStheTECH/mewcp-google-classroom).
+
+⚠️ **`sign/translate` is the instructive one.** Pass 27 called it *"plausibly EMEA"*. Its
+README, read this pass, names **no country at all** — so the guess is neither confirmed nor
+refuted, and it stays unplaced. A plausible region that survives three passes starts to read
+like a measured one, which is the whole reason pass 27 flagged the phrasing.
+
+### 🟢 One regional structure that did change, and it is EMEA
+
+The **EMEA public-sector tier** is the only region whose data improved this pass, and it
+improved structurally rather than numerically. All nine EUPL payloads on this shelf — eight
+Finnish national education services (`Opetushallitus/*`) and the European Commission's own
+`European-Learning-Model` — now resolve to a **version**: **six are EUPL-1.1 and three are
+EUPL-1.2.**
+
+⚠️ **For an EMEA engagement that is a procurement fact, not a licensing detail.** EUPL-1.1
+and EUPL-1.2 carry **different compatibility lists**, so a build composing this tier with GPL,
+MPL or EPL components has to resolve the version per repository — now possible, and not before.
+
+🔴 **And the honest part: before this pass the shared classifier had no EUPL branch at all**,
+so every one of these nine read `UNCLASSIFIED`, which meant their commercial-use verdict came
+from a body token match rather than from an identified family. The verdict happened to be
+correct — the EUPL permits commercial use — but **the entire EMEA public-sector tier of this
+KB had been graded by luck** for every pass before this one.
+
+### ⚠️ A supply-side signal that is regional in effect though it was not measured that way
+
+Pass 28's `p448` established, across four independent channels, that **173 of 496 cited
+repositories (34.9%) are named by nothing at all** — and that only **5 of 186 (2.7%)** have a
+genuinely independent third-party citation. That is a procurement signal worth as much as a
+star count, and unlike a star count **one author cannot manufacture it**.
+
+🔴 Its regional distribution is **unmeasured**, and that is the gap this pass leaves rather
+than closes. What can be said without measuring: the LATAM tier of this shelf is small enough
+(`portabilis/i-educar`, `inepdadosabertos/api`, `yunger7/enem-api`, `SidneyBissoli/educabR`)
+that a 34.9% base rate would be expected to hit **one or two of the four**, and which ones
+would change how a LATAM engagement is scoped. The next pass tests the signal against
+liveness before anyone sells it as risk.

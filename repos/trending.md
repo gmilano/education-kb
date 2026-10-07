@@ -8,6 +8,157 @@ updated: 2026-10-07
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-07 — twenty-ninth pass: three new repositories after seventeen empty passes, zero NonCommercial grants below the root, and the shared classifier still carried pass 28's defects
+
+### 🟢 The drought ends — three repositories, verified payload-first
+
+| Repo | ★ | Forks | Licence (payload) | Registry | Pushed | Tier |
+|---|---|---|---|---|---|---|
+| [`Shubhamsaboo/awesome-llm-apps`](https://github.com/Shubhamsaboo/awesome-llm-apps) | 140,891 | 20,710 | 🟢 **Apache-2.0** (11,357 B) | Apache-2.0 | 2026-09-30 | enablement |
+| [`GokuMohandas/Made-With-ML`](https://github.com/GokuMohandas/Made-With-ML) | 49,696 | 7,807 | 🟢 **MIT** (1,069 B) | MIT | 2026-03-04 | enablement |
+| [`HandsOnLLM/Hands-On-Large-Language-Models`](https://github.com/HandsOnLLM/Hands-On-Large-Language-Models) | 29,517 | 6,725 | 🟢 **Apache-2.0** (11,364 B) | Apache-2.0 | 2026-04-24 | enablement |
+
+🟢 **Payload and registry agree on all three** — a result, not an assumption, after pass 26
+measured the registry stripping 7 of 15 ownership grants.
+
+⚠️ **All three are enablement assets**, not education-sector software: they teach *about* AI
+and do nothing in a school. `P6` capability-build tier only.
+
+⚠️ **Two of the three are cold** — `Made-With-ML` seven months since last push,
+`Hands-On-LLMs` five and a half. Normal and even correct for a book's companion repo; still
+the difference between *"fork it"* and *"follow it"*.
+
+### 🔴 Five licence-column defects in `lib/license_family.sh` — the file pass 28 never opened
+
+Pass 28 re-measured these same 412 payloads and repaired three classes in
+`sweep_payload.family_of`. This pass re-measured them with the **other** classifier — the
+shared one, sourced by **27 instruments** — and found the same three plus two more.
+
+| | Defect | Rows | Already fixed elsewhere? |
+|---|---|---|---|
+| `P453` | no **EUPL** branch at all | 9 | Python since pass 26 |
+| `P454` | **GNU probed before Mozilla/Eclipse**; MPL-2.0 §1.12 names three GNU licences | 5 | 🔴 Python in **pass 26** — never ported |
+| `P455` | GNU family read from a **window**, not a title or grant phrase | 8 | 🔴 Python in **pass 28** — never ported |
+| `P456` | a **clause acronym** outranked a **grant phrase** | 2 | never measured |
+| `P457` | the **title-stripped** GNU payload | 3 | never measured |
+
+Divergence between the two classifiers over the 412 roots: `AGREE` **369 → 393**,
+`VOCABULARY` **25 → 1**.
+
+### 🔴 But the class that reaches an invoice did not move: `NC-ERASED` is still 5
+
+| Slug | `family_of` | the shell | commercial |
+|---|---|---|---|
+| [`facebookresearch/seamless_communication`](https://github.com/facebookresearch/seamless_communication) | `CC-BY` | **CC-BY-NC-4.0** | 🔴 NO |
+| [`openstax/osbooks-biology-bundle`](https://github.com/openstax/osbooks-biology-bundle) | `CC-BY` | **CC-BY-NC-SA-4.0** | 🔴 NO |
+| [`sign/translate`](https://github.com/sign/translate) | `CC-BY` | **CC-BY-NC-SA-4.0** | 🔴 NO |
+| [`Yunfeng-Wan/CSTutorBench`](https://github.com/Yunfeng-Wan/CSTutorBench) | `CC-BY` | **CC-BY-NC-4.0** | 🔴 NO |
+| [`Jona-Zwetsloot/Somtoday-Mod`](https://github.com/Jona-Zwetsloot/Somtoday-Mod) | `CC-BY` | **CC-BY-NC-SA-4.0** | 🔴 NO |
+
+⚠️ All five collapse to `CC-BY`, which **permits** commercial use. Pass 28 named this defect
+and did not fix it. **This pass declines to patch that file from a stale base** — pass 28
+rewrote it hours earlier, and reconciling two concurrent rewrites of one classifier is how
+`P237` happens — and instead **pins the gap with a test that goes red when it is fixed**.
+
+### 🟢 Zero NonCommercial grants below the root — the prediction said at least three
+
+`p459` composes both classifiers into one verdict over the 412 roots **and** all 76 tree
+payloads `p441`/`p444` ever read (48 slugs).
+
+| Layer | n | ALLOWED | PROHIBITED | UNDETERMINED |
+|---|---|---|---|---|
+| root | 412 | 395 | **11** | 6 |
+| tree | 76 | 67 | **0** | 9 |
+
+The convention the prediction named — `docs/`, `data/`, `assets/` as the home of CC-BY-NC —
+is real and is not in this corpus. **The tree layer here is a vendoring layer:**
+
+| Family below the root | n |
+|---|---|
+| MIT | 18 |
+| Apache-2.0 | 15 |
+| ECL-2.0 | 6 |
+| GPL-2.0 | 4 |
+| EUPL-1.1 / EUPL-1.2 | 2 / 2 |
+| MPL-2.0 | 3 |
+| CC-BY-4.0 | 3 — **and none carries a clause** |
+| LGPL (all forms) | 4 |
+| AGPL-3.0 | 2 |
+| GPL-3.0 | 2 |
+| BSD | 2 |
+| Unlicense | 1 |
+| CC-BY-SA-4.0 | 1 |
+
+🟢 The root `PROHIBITED` count of **11** matches the shell's own independent count exactly.
+
+### 🔴 `openSIS` has no root licence, and the family this shelf published for it was wrong
+
+The only two tree rows flagged were the same 61,575-byte `docs/LICENSE.rtf` shipped by both
+openSIS repositories, and both are **false positives** (`P460`: RTF markup occupies the title
+block → family `UNCLASSIFIED` → `P250`'s gate does not fire → the body token match reads
+GPL-2.0 **§3(c)**'s *"allowed only for noncommercial distribution"*, a condition on one
+distribution option).
+
+🔴 **Underneath that is the finding.** Neither repository appears among the 412: they have
+**no root licence payload at all**, and `p441` files them `OWN-GRANT-IN-SUBTREE` / `LGPL?`.
+Read first-hand from `docs/License.txt` (17,286 B, plain `GNU GENERAL PUBLIC LICENSE /
+Version 2, June 1991`):
+
+| Repo | published | 🟢 corrected | Commercial use |
+|---|---|---|---|
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | `LGPL?` | **GPL-2.0** | 🟢 ALLOWED |
+| [`OS4ED/openSIS-Responsive-Design`](https://github.com/OS4ED/openSIS-Responsive-Design) | `LGPL?` | **GPL-2.0** | 🟢 ALLOWED |
+
+**For these two the subtree is the only licence evidence that exists** — the class a root-only
+sweep cannot see, and the reason the tree run was worth it even though its headline prediction
+failed.
+
+### 🔴 Four corrections to this shelf's licence column
+
+| Repo | published | 🟢 corrected | Why | Consequence |
+|---|---|---|---|---|
+| [`untisapi/untis4j`](https://github.com/untisapi/untis4j) | `GPL-3.0` | **LGPL-3.0** | title-stripped payload; identifies itself only in prose (`P457`) | 🔴 **the LGPL permits linking from proprietary code and the GPL does not** — published a tier too restrictive |
+| [`ankitects/anki`](https://github.com/ankitects/anki) | `CC-BY-SA-4.0` | **AGPL-3.0** | mixed-case prose grant no GNU branch matched (`P455`) | a copyleft **code** licence filed as a **content** licence |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | `CC-BY-SA-4.0` | **MIT** | kept `docs/`'s CC clause, dropped the software's MIT grant (`P456`) | 🔴 a **permissive, redistributable** row rejected as ShareAlike |
+| `dequelabs/axe-core`, `ocrmypdf/OCRmyPDF`, `coqui-ai/TTS`, `idiap/coqui-ai-TTS`, `edrys-org/edrys` | `GPL-3.0` (shell) | **MPL-2.0** | MPL §1.12 names three GNU licences; the shell probed GNU first (`P454`) | the **same five repositories** pass 26 fixed in the *other* classifier |
+
+### 🟢 The EUPL tier now has a version, and it is not the one a reader would assume
+
+| Repo | 🟢 family | Region |
+|---|---|---|
+| [`Opetushallitus/ehoks`](https://github.com/Opetushallitus/ehoks) | **EUPL-1.1** | EMEA (Finland) |
+| [`Opetushallitus/eperusteet`](https://github.com/Opetushallitus/eperusteet) | **EUPL-1.1** | EMEA (Finland) |
+| [`Opetushallitus/koski`](https://github.com/Opetushallitus/koski) | **EUPL-1.1** | EMEA (Finland) |
+| [`Opetushallitus/oppijanumerorekisteri`](https://github.com/Opetushallitus/oppijanumerorekisteri) | **EUPL-1.1** | EMEA (Finland) |
+| [`Opetushallitus/organisaatio`](https://github.com/Opetushallitus/organisaatio) | **EUPL-1.1** | EMEA (Finland) |
+| [`Opetushallitus/valtionavustus`](https://github.com/Opetushallitus/valtionavustus) | **EUPL-1.1** | EMEA (Finland) |
+| [`Opetushallitus/ataru`](https://github.com/Opetushallitus/ataru) | **EUPL-1.2** | EMEA (Finland) |
+| [`Opetushallitus/suorituspalvelu`](https://github.com/Opetushallitus/suorituspalvelu) | **EUPL-1.2** | EMEA (Finland) |
+| [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) | **EUPL-1.2** | EMEA (EU) |
+
+⚠️ **Six of nine are EUPL-1.1, not 1.2**, and the two versions carry **different
+compatibility lists** — so a build mixing this tier with GPL, MPL or EPL components cannot
+treat the label as uniform.
+
+🔵 **And the tier's two shapes both need covering.** The eight Finnish services carry **no
+title at all** — they open on a copyright line and concede in prose (*"Licensed under the
+EUPL, Version 1.1"*) — while the Commission's own payload is the full licence text with the
+name as a title. A title probe alone misses eight of nine; a grant-phrase probe alone misses
+the one that matters most.
+
+### ⚠️ Huecos por región, dichos y no silenciados
+
+- 🔴 **North America** — the three new repositories are US-origin. **No new NA
+  *education-sector* repository**; the drought that ended was an enablement drought.
+- 🟢 **EMEA** — the only region that gained structured data: nine EUPL rows now carry a
+  version, and the 1.1/1.2 split is new.
+- 🔴 **APAC** — nothing new. The region's named activity this pass is commercial and closed
+  (LearnUpon Sydney, TCS–Pearson, NIIT MTS), all already held, none open source.
+- 🔴 **LATAM** — nothing new, fourth consecutive pass. `portabilis/i-educar`,
+  `inepdadosabertos/api`, `yunger7/enem-api` and `SidneyBissoli/educabR` remain the whole
+  Brazilian tier, and three of those four were touched this pass only as `P455` corrections
+  rather than as new finds.
+
 ## 2026-10-07 — twenty-eighth pass: seven repositories on this shelf are GPL-2.0 and were filed LGPL, and the only thing deciding it was a truncation constant
 
 ⏱️ **Window 2026-10-07 ~05:20 → 08:10 UTC. Reference date `2026-10-07` passed explicitly to every

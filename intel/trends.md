@@ -3863,3 +3863,108 @@ coverage.
   census). Those still carry the pre-`P452` families. **Pre-registered as pass 29's action B**, and
   named here so the debt is not invisible — which is the exact failure mode pass 26 had, publishing
   a correction in prose and not in the data.
+
+## 68. The two-classifier problem is the industry's, not just this KB's — and two concurrent passes measured it
+
+🔵 **The finding generalises past this knowledge base, which is why it is a trend and not a
+method note.** This KB held two licence classifiers over the same 412 education repositories.
+Each was independently hardened, each had a passing regression suite, and **they disagreed on
+43 of 412 payloads (10.4%)**. Two concurrent passes then repaired them — one each — and the
+disagreement fell to **10 (2.4%)**. Every row that moved was a *defect*, not a vocabulary
+preference.
+
+🔴 **The direction of the errors is what a buyer should care about**, because they run both
+ways commercially:
+
+| Error direction | Example | Cost |
+|---|---|---|
+| **Over-permissive** — a restricted payload read as usable | 5 payloads reading `CC-BY` where the text says `CC-BY-NC` | 🔴 a non-commercial asset quoted into a billable deliverable |
+| **Over-restrictive** — a usable payload read as restricted | `untis4j` LGPL-3.0 read as GPL-3.0; `pupilfirst` MIT read as CC-BY-SA; five MPL-2.0 layers read as GPL | 🔴 a permissive component rejected, and a competitor who read it correctly bids lower |
+
+🔴 **And the sharpest part: the over-permissive class survived both repairs.** Each pass fixed
+the classifier it was looking at, and the five rows that can put a non-commercial asset into
+an invoice sit in the one neither closed. **A defect that two independent reviewers each
+assume the other owns is the most durable kind.**
+
+⚠️ **Every education buyer running an automated licence scan is running one classifier,
+once.** The 2026 compliance toolchain commoditised (trend 19) and the scanners it ships are
+single-implementation: one regex set, one vocabulary, one set of blind spots, and no second
+reader with the right to disagree. **The measured disagreement rate between two independently
+hardened classifiers over the same corpus was 10.4%.** A single scanner does not have a lower
+error rate than that — it has an **unmeasurable** one.
+
+🟢 **The practical consequence.** Licence verdicts on an open-source education stack should be
+produced by **two independent readers with the right to disagree**, and the disagreements
+**published rather than resolved by precedence**. That is cheap — the second reader can be a
+different open-source classifier — and it converts an unknown error rate into a list of named
+rows. In a procurement conversation, *"these ten rows are contested and here is why"* is a
+defensible position; a single green dashboard is not.
+
+## 69. The licence name and the licence grant come apart in one nameable place: the title block
+
+Trend 23 recorded that *the licence label and the licence grant have come apart, and reading
+the payload is no longer enough*. This pass located **where**, across five independent defect
+classes that all reduce to one mechanism.
+
+🔴 **A licence body contains the vocabulary of other licences, by construction:**
+
+| Payload | Names, in its own body | Consequence if read as a body |
+|---|---|---|
+| GPL-2.0 and GPL-3.0 | *"use the **GNU Lesser General Public License** instead of this License"* (closing recommendation) | 8 GPL repositories read as LGPL |
+| MPL-2.0 | §1.12 defines *"Secondary License"* by naming **GPL-2.0, LGPL-2.1, AGPL-3.0** | 5 MPL repositories read as GPL |
+| GPL-3.0 | §13 is titled *"Use with the **GNU Affero** General Public License"* | GPL-3.0 read as AGPL-3.0 |
+| EUPL-1.2 | its Appendix lists **GPL, AGPL, MPL, EPL, CeCILL, CDDL** as compatible | an EUPL payload claimable by five other families |
+| a mixed `LICENSE` | *"`docs/` is CC BY-SA … content outside is MIT"* | a permissive repository read as ShareAlike |
+
+🟢 **So the rule that survives all five is about evidence class, not vocabulary: a licence
+NAME identifies only where it is a TITLE; a GRANT PHRASE identifies wherever it appears.**
+
+⚠️ **And "title" cannot be implemented as a window.** Three attempts this pass used a
+character window (200) or a line window (6); all three failed, one by making a GPL-3.0 fixture
+answer `AGPL-3.0`. The concurrent pass hit the same wall independently and wrote the same
+conclusion. **A window is a bet on the file's layout. A title is the first one or two
+non-blank lines.**
+
+🔴 **The container case is the trap, and it is new.** A licence shipped as **RTF, PDF or any
+markup** puts markup in the title block. Every family probe then declines, the payload falls
+to `UNCLASSIFIED`, and — critically — **an unclassified family is exactly the state in which
+most tools fall back to token-matching the body.** Measured consequence: GPL-2.0 §3(c)'s
+*"this alternative is allowed only for noncommercial distribution"* — a condition on one
+distribution option — turned a real SIS platform into a *commercial-use prohibited* row.
+**The guarantee was in place and the container walked around it.**
+
+🟢 **Two concrete rules for an engagement.** First, **a licence delivered only as RTF or PDF
+is a due-diligence finding in itself** — ask for plain text, because every scanner on both
+sides of the table is guessing at it. Second, **check whether the grant is at the root at
+all**: two platforms on this shelf have no root licence and are findable only at
+`docs/License.txt`, so a client's root-only procurement scan reports a correctly-licensed
+GPL-2.0 platform as unlicensed.
+
+## 70. An AI-curriculum repository is not an AI-education product, and the market's biggest numbers are the former
+
+🔴 **The mandatory query set for *"open source AI agents education"* produced three
+repositories this pass after seventeen empty passes — and all three teach *about* AI rather
+than doing anything in a school:**
+[`awesome-llm-apps`](https://github.com/Shubhamsaboo/awesome-llm-apps) (Apache-2.0,
+**140,891★**), [`Made-With-ML`](https://github.com/GokuMohandas/Made-With-ML) (MIT, 49,696★),
+[`Hands-On-Large-Language-Models`](https://github.com/HandsOnLLM/Hands-On-Large-Language-Models)
+(Apache-2.0, 29,517★).
+
+🔵 **The star counts are the point.** The largest of them has **140,891 stars** — more than
+every education-sector agent on this shelf combined, by a wide margin. The most-starred
+*tutoring* asset this KB has ever recorded is in the tens of thousands, and most of the
+shelf sits at 0–600. **A naive popularity ranking of "AI + education" open source returns
+developer curricula, not education software**, which is why this KB shelves them on the
+enablement tier and says so in the row.
+
+⚠️ **For a studio this is a scoping hazard with a specific shape.** A client who has done
+their own GitHub research arrives having seen these repositories and reasonably concludes the
+open-source education space is enormous and mature. It is not: the *enablement* space is
+enormous and mature, and the *product* space is thin, young and mostly copyleft. **Setting
+that expectation in week one is cheaper than discovering it in week six.**
+
+🟢 **And they are genuinely valuable, for exactly one thing.** All three are Apache-2.0 or
+MIT, so the training materials can be forked, rebranded and **left with the client** — the
+difference between enablement and a course licence. ⚠️ Two of the three have not been pushed
+in five to seven months, which for a book's companion repository is correct behaviour and
+still the difference between *"fork it"* and *"follow it"*.

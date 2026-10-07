@@ -65,6 +65,154 @@ osi_family_of() {
   # -------------------------------------------------------------------------
   n=$(printf '%s' "$1" | tr -s '[:space:]' ' ')
   t=$(printf '%s' "$n" | head -c 4000)
+  # -------------------------------------------------------------------------
+  # P453 (pase 29 del 2026-10-07).  EUPL VA PRIMERA, y el orden no es una preferencia:
+  # el Apendice de EUPL-1.2 LISTA como compatibles, POR NOMBRE, a GPL-2.0, AGPL-3.0,
+  # LGPL-2.1, MPL-2.0, EPL-1.0 y CeCILL.  O sea que un payload EUPL trae las marcas de
+  # CINCO familias ajenas, y toda rama de abajo que busque una de esas marcas se lo roba.
+  # Es exactamente P171 --un CUERPO contiene el vocabulario de otras licencias-- medido
+  # sobre la licencia de la propia Comision Europea.
+  #
+  # Esta rama FALTABA en este clasificador y existia en `sweep_payload.family_of` desde el
+  # pase 26, que es la asimetria que P445 nombro: el clasificador ENDURECIDO era el ciego
+  # aca.  Medido en el pase 27: ocho servicios educativos nacionales finlandeses
+  # (`Opetushallitus/*`, EUPL-1.1 y 1.2) volvian UNCLASSIFIED por esta via, y la rama
+  # UNCLASSIFIED es la que CAE AL TOKEN-MATCH de `commercial_use_ok` -- asi que el
+  # veredicto comercial de todo el estante publico EMEA lo producia el camino que P171
+  # declara insegura, y no la familia.
+  #
+  # Se matchea SOLO sobre frases de CONCESION, nunca sobre la mencion desnuda de la sigla:
+  # un archivo que REMITE al lector a la EUPL (un README de un proyecto que la nombra, o el
+  # propio Apendice de otra licencia) no esta licenciado bajo ella.  Misma regla que usa el
+  # lado Python, palabra por palabra, para que las dos respondan sobre el mismo criterio.
+  # P453, TERCER tramo, y lo encontro el control negativo de esta misma suite, no el estante:
+  # la sonda del NOMBRE COMPLETO corria sobre `$t` (4.000 caracteres) y por eso se llevaba un
+  # payload Apache-2.0 REAL que simplemente MENCIONA la licencia europea («Interoperable with
+  # the European Union Public Licence where required»).  La rama EUPL va PRIMERA por necesidad
+  # --su Apendice nombra cinco familias ajenas-- y «primera» es precisamente lo que convierte
+  # un falso positivo en un ROBO: ninguna rama de abajo llega a defenderse.  Es P171 en su
+  # forma mas pura: el NOMBRE de una licencia aparece en el CUERPO de otras, asi que el nombre
+  # identifica solo donde es TITULO.
+  #
+  # Y el primer arreglo --un «bloque de titulo» de 200 caracteres-- NO alcanzo, que es el dato
+  # util: en un payload CORTO los 200 caracteres son casi todo el archivo, asi que la ventana
+  # no distinguia titulo de cuerpo.  La ventana es la variable equivocada; la ANCLA es la
+  # correcta.
+  #
+  # Medido sobre los nueve payloads EUPL reales de este estante, las dos vias son disjuntas y
+  # ninguna es opcional:
+  #   * OCHO (los servicios nacionales finlandeses) NO traen titulo: abren con el copyright y
+  #     conceden en prosa -- «Licensed under the EUPL, Version 1.1 or ... 1.2».  Los salva la
+  #     via de CONCESION, que corre sobre todo `$t` porque una concesion concede donde este.
+  #   * UNO (el payload propio de la Comision) trae la licencia ENTERA y el nombre como
+  #     TITULO en la posicion 0.  Lo salva la via de TITULO, anclada al principio.
+  #
+  # La mencion desnuda de la sigla o del nombre no entra por ninguna de las dos, que es lo que
+  # los tres controles negativos de la suite afirman.  El token de VERSION pelado (`EUPL v1.2`)
+  # quedo FUERA de la compuerta a proposito: nombrar una version no es conceder nada, y CeCILL
+  # nombra la compatibilidad EUPL en su propio texto.
+  if printf '%s' "$n" | grep -qiE '^ {0,8}(the )?european union public licen[cs]e' \
+     || printf '%s' "$t" | grep -qiE 'licensed under the eupl|under the eupl([^a-z0-9]|$)|this european union public licen[cs]e[^.]{0,80}applies to the work'; then
+    # La version SE DECLARA cuando el texto la dice.  Este clasificador es el de
+    # vocabulario FINO (contesta `GPL-3.0`, `CC-BY-NC-SA-4.0`), asi que degradar a un
+    # `EUPL` pelado perderia la distincion 1.1/1.2 que el estante finlandes SI tiene.
+    # P453, segundo tramo: el TEXTO CANONICO no pega la version a la sigla.  El payload
+    # oficial de la Comision abre «European Union Public Licence / V. 1.2» -- la version
+    # cuelga del NOMBRE COMPLETO y en su propia linea, no de `EUPL`.  Medido sobre
+    # `european-commission-empl/European-Learning-Model` (13.864 B): las dos sondas
+    # pegadas a la sigla fallaban y la respuesta caia al `EUPL` pelado, o sea que el unico
+    # payload del estante que trae la licencia ENTERA era el peor clasificado, mientras los
+    # avisos cortos de 631 B si resolvian 1.1.  Las formas abreviadas se quedan: el estante
+    # finlandes las usa y son las que resuelven seis de nueve filas.
+    printf '%s' "$t" | grep -qiE 'eupl[,-]? ?(v\.?|version )?1\.2|version 1\.2 (of the )?eupl|public licen[cs]e,? ?(v\.?|version) ?1\.2' \
+        && { echo "EUPL-1.2"; return; }
+    printf '%s' "$t" | grep -qiE 'eupl[,-]? ?(v\.?|version )?1\.1|version 1\.1 (of the )?eupl|public licen[cs]e,? ?(v\.?|version) ?1\.1' \
+        && { echo "EUPL-1.1"; return; }
+    echo "EUPL"; return
+  fi
+  # -------------------------------------------------------------------------
+  # P454 (pase 29 del 2026-10-07).  MPL Y EPL VAN ANTES DE LA FAMILIA GNU, y esta base ya
+  # pago este defecto EXACTO -- en el otro clasificador, hace dos pases.
+  #
+  # El pase 26 lo midio y lo arreglo en `sweep_payload.family_of`: la seccion 1.12 de
+  # MPL-2.0 DEFINE «Secondary License» nombrando «the GNU General Public License, Version
+  # 2.0, the GNU Lesser General Public License, Version 2.1, the GNU Affero General Public
+  # License, Version 3.0», asi que TODO payload MPL-2.0 trae las tres marcas GNU.  Quien
+  # sondee GNU primero se queda con el payload.
+  #
+  # El arreglo no viajo hasta aca.  Medido en este pase sobre los 412 roots: CINCO
+  # repositorios MPL-2.0 --`dequelabs/axe-core`, `ocrmypdf/OCRmyPDF`, `coqui-ai/TTS`,
+  # `idiap/coqui-ai-TTS` y `edrys-org/edrys`-- volvian `GPL-3.0` por ESTA via, y son los
+  # MISMOS CINCO que el pase 26 nombro en el lado Python.  Verificado de primera mano:
+  # el `LICENSE` de `axe-core` abre «Mozilla Public License, version 2.0» y nombra la GPL
+  # una sola vez, en 1.12.
+  #
+  # Es la simetria de P445 en la direccion contraria: ahi el clasificador ENDURECIDO veia
+  # lo que el nuevo no; aca el nuevo arreglo un defecto que el endurecido conserva.  Un
+  # control no es un control si vive en una sola de las dos implementaciones.
+  printf '%s' "$t" | grep -qi 'Mozilla Public License' && { echo "MPL-2.0"; return; }
+  printf '%s' "$t" | grep -qi 'Eclipse Public License' && { echo "EPL"; return; }
+  # -------------------------------------------------------------------------
+  # P455 (pase 29).  EL ARREGLO DE CAJA DE P288 QUEDO A MEDIAS, y el que falta es el que
+  # importa.  P288 ya habia medido que las dos ramas de arriba son globs de `case`, o sea
+  # SENSIBLES A LA CAJA -- pero su parche fue UNA FRASE concreta de GPL-3.0
+  # («refers to version 3 of the GNU Affero...»), no el TITULO en caja mixta.
+  #
+  # Medido: el `LICENSE` de `ankitects/anki` dice «Anki is licensed under the GNU Affero
+  # General Public License, version 3 or later» -- caja mixta, ninguna rama GNU lo
+  # reconoce (su texto NO contiene «GNU General Public License» de forma contigua), y el
+  # payload terminaba clasificado `CC-BY-SA-4.0` por mencionar CC mas abajo.  Un AGPL-3.0
+  # reportado como licencia de CONTENIDO.
+  #
+  # Y LA SONDA VA ANCLADA, no suelta sobre el cuerpo -- el primer intento de este mismo
+  # pase la escribio suelta y se habria comido los GPL-2.0, porque el payload de GPL-2.0
+  # NOMBRA la LGPL en su recomendacion de cierre («use the GNU Lesser General Public
+  # License instead of this License»).  Verificado de primera mano sobre
+  # `oat-sa/lib-lti1p3-core`: una ocurrencia, en el cuerpo.  O sea que el arreglo ingenuo
+  # de un defecto de CAJA reintroduce el defecto de CUERPO que es P171.  Las dos sondas
+  # miran el BLOQUE DE TITULO, o una frase de CONCESION explicita, y nada mas.
+  #
+  # Y LA SONDA ES UNA FRASE DE CONCESION, no una ventana de titulo.  Este pase escribio
+  # las dos versiones equivocadas antes de esta, y la suite atrapo a las dos:
+  #   (1) suelta sobre el cuerpo -> se come los GPL-2.0, porque el payload de GPL-2.0
+  #       NOMBRA la LGPL en su recomendacion de cierre («use the GNU Lesser General
+  #       Public License instead of this License»).  Verificado sobre
+  #       `oat-sa/lib-lti1p3-core`: una ocurrencia, en el cuerpo.
+  #   (2) anclada a una ventana de 200 caracteres -> el fixture GPL3_S13 de esta suite
+  #       volvio `AGPL-3.0`.  O sea P171, el defecto FUNDACIONAL de esta libreria,
+  #       reintroducido por el parche de un defecto de caja.  En un payload ABREVIADO la
+  #       seccion 13 cae DENTRO de la ventana, asi que una ventana de caracteres no es un
+  #       bloque de titulo: es una apuesta sobre el largo del archivo.
+  #
+  # Lo que falta de verdad no es el titulo en caja mixta: es la CONCESION EN PROSA, que es
+  # la forma que trae el especimen real.  `ankitects/anki` dice «Anki is licensed under the
+  # GNU Affero General Public License, version 3 or later».  Y la seccion 13 de GPL-3.0
+  # dice «licensed under VERSION 3 OF the GNU Affero General Public License» -- otra
+  # preposicion, otra frase, y por eso esta sonda la distingue y la ventana no podia.
+  # P457 (pase 29).  EL PAYLOAD GNU SIN TITULO, y es una forma REAL de este estante:
+  # `kuali/kc`, `kuali/kfs` y `untisapi/untis4j` traen el texto GNU completo con el TITULO
+  # BORRADO -- abren en «Copyright (C) 2007 Free Software Foundation» y solo se identifican
+  # en el Preambulo.  Leidos de primera mano en este pase.
+  #
+  # Cada licencia GNU de la generacion v3 trae UNA oracion autoidentificatoria que no
+  # depende del titulo y que es mutuamente excluyente con las otras dos.  P288 ya usaba la
+  # del AGPL; esto la generaliza a las tres.
+  #
+  # Y EL ORDEN ES FORZADO, que es lo que este pase midio: el texto de LGPL-3.0 TAMBIEN dice
+  # que el «GNU GPL» refiere a la version 3 de la GNU General Public License, asi que sondear
+  # la oracion de la GPL primero se lleva TODOS los LGPL.  Medido: `untisapi/untis4j` es
+  # LGPL-3.0 --su texto dice «this License refers to version 3 of the GNU Lesser General
+  # Public License»-- y este clasificador lo reportaba GPL-3.0.  La diferencia no es
+  # cosmetica: la LGPL permite enlazar desde codigo propietario y la GPL no, asi que la fila
+  # se publicaba una categoria MAS restrictiva de lo que es.
+  printf '%s' "$t" | grep -qi 'refers to version 3 of the GNU Affero General Public License' \
+      && { echo "AGPL-3.0"; return; }
+  printf '%s' "$t" | grep -qi 'refers to version 3 of the GNU Lesser General Public License' \
+      && { echo "LGPL-3.0"; return; }
+  printf '%s' "$t" | grep -qi 'licensed under the GNU Affero General Public License' \
+      && { echo "AGPL-3.0"; return; }
+  printf '%s' "$t" | grep -qi 'licensed under the GNU Lesser General Public License' \
+      && { echo "LGPL"; return; }
   case "$t" in
     *"GNU AFFERO GENERAL PUBLIC LICENSE"*) echo "AGPL-3.0"; return ;;
     *"GNU LESSER GENERAL PUBLIC LICENSE"*) echo "LGPL"; return ;;
@@ -116,6 +264,30 @@ osi_family_of() {
   # mientras el texto canonico daba la incorrecta.  La SIGLA es un identificador
   # inequivoco: entra como puerta, y queda DESPUES de los anclas de MIT/Apache/GPL de
   # arriba, asi que no puede robarle un payload a una familia OSI.
+  # -------------------------------------------------------------------------
+  # P456 (pase 29).  LAS ANCLAS DE CONCESION DE MIT Y BSD SUBEN POR ENCIMA DE LA RAMA CC,
+  # y el motivo es una regla de EVIDENCIA, no de orden: una FRASE DE CONCESION concede;
+  # una SIGLA de clausula, aparezca donde aparezca, solo describe.
+  #
+  # Medido sobre los 412 roots: `pupilfirst/pupilfirst` volvia `CC-BY-SA-4.0` y su
+  # `LICENSE` --leido de primera mano-- dice literalmente «All content residing under the
+  # "docs/" directory ... is licensed under "Creative Commons: CC BY-SA 4.0"» y, dos
+  # vinietas mas abajo, «Content outside of the above mentioned restrictions is available
+  # under the "MIT" license», seguido del texto MIT completo.  O sea: el aviso declara CC
+  # para `docs/` y MIT para EL SOFTWARE, y el clasificador se quedaba con la clausula de
+  # la documentacion.  La direccion del error es la cara: una fila PERMISIVA, redistribuible,
+  # reportada como licencia de contenido con ShareAlike -- se RECHAZA un entregable que si
+  # se podia facturar.
+  #
+  # Es seguro en la otra direccion, y eso es lo que lo hace un arreglo y no un intercambio:
+  # el texto legal real de CC-BY / CC-BY-NC / CC-BY-SA no contiene «Permission is hereby
+  # granted, free of charge» ni «Redistribution and use in source and binary forms».  Las
+  # dos anclas que suben no pueden robarle un payload CC; la sigla si podia robarles uno.
+  # Los controles negativos de P312 («la sigla no roba un MIT/Apache que la menciona») y
+  # los cinco de P304/P308 que esta suite ya traia lo afirman en las dos direcciones.
+  printf '%s' "$n" | grep -qi 'Permission is hereby granted, free of charge' && { echo "MIT"; return; }
+  printf '%s' "$n" | grep -qiE 'redistribution and use[^.]{0,40}in source and binary forms' \
+      && { echo "BSD"; return; }
   if printf '%s' "$t" | grep -qi 'Creative Commons\|creativecommons.org\|CC BY\|CC-BY'; then
     printf '%s' "$t" | grep -qi 'CC0\|Public Domain Dedication' && { echo "CC0-1.0"; return; }
     local nc="" sa="" nd=""
@@ -139,7 +311,6 @@ osi_family_of() {
   # por el ancla de titulo «MIT License» de arriba, que ya es normalizada.  Se arregla igual:
   # la sombra solo cubre a los payloads que TRAEN titulo, y un MIT sin titulo (el que abre
   # directamente en «Copyright (c) ...») no tiene otra via que esta.
-  printf '%s' "$n" | grep -qi 'Permission is hereby granted, free of charge' && { echo "MIT"; return; }
   # P304 (pase 99).  La linea de concesion BSD estaba anclada como FRASE CONTIGUA, y la
   # identidad de BSD es una SECUENCIA ORDENADA DE PALABRAS, no una cadena fija.  Medido, no
   # supuesto: `instructure/QTIMigrationTool` (BSD-3-Clause real, `LICENSE.txt` 1.392 B,
@@ -168,9 +339,6 @@ osi_family_of() {
   # espacio porque la insercion puede caer sobre un salto de linea.
   # P308: era una SEGUNDA normalizacion local (`nbsd`).  Ahora hay una sola, `$n`, arriba --
   # y que fuera local es justo lo que dejo a MIT y al Unlicense leyendo el payload crudo.
-  printf '%s' "$n" | grep -qiE 'redistribution and use[^.]{0,40}in source and binary forms' \
-      && { echo "BSD"; return; }
-  printf '%s' "$t" | grep -qi 'Mozilla Public License' && { echo "MPL-2.0"; return; }
   # The Unlicense. p170's inline classifier HAD this; this shared lib never did, so adopting
   # the lib would have LOST a family (FWU-DE/mem-mcp). P237 cuts both ways: the shared control
   # is only better than the copies once it is a superset of them.

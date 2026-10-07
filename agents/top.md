@@ -68,7 +68,7 @@ overwrote — see `repos/trending.md` for the full account.
 
 ## Agents and tools
 
-**47 rows, all verified.** The 12 recorded in the morning pass of 2026-10-06, 2
+**50 rows, all verified.** The 12 recorded in the morning pass of 2026-10-06, 2
 added in the second pass, **17 added in the third pass** from the `ai-tutor`
 GitHub topic page and a stars-sorted repository search, and **5 added in the
 fourth pass** by tracing academic papers to their repositories and sweeping a
@@ -76,7 +76,9 @@ GitHub organisation, and **4 added in the fifth pass** by searching on funding
 body, ministry and university name in English and Spanish instead of by topic or
 star count, and **3 added in the eighth pass** from an
 **institutional-event channel** — a university hackathon whose rules make an OSI
-licence a condition of evaluation — five distinct channels, each new to this KB when it was used. One of the 17, OpenTutor, is a **reinstatement** of an entry this KB wrongly
+licence a condition of evaluation — and **3 added in the twenty-ninth pass** from the
+mandatory query set itself, which had produced nothing for seventeen consecutive passes
+before it — six distinct channels, each new to this KB when it was used. One of the 17, OpenTutor, is a **reinstatement** of an entry this KB wrongly
 withdrew earlier the same day; see the corrections section. The fourth pass added
 the largest single asset in this KB (**OpenMAIC, MIT, 40.0k★**) and the first
 **Africa-placed** repositories it has ever recorded. The fifth pass added the first
@@ -3118,3 +3120,69 @@ file is the one most likely to declare `UNLICENSED`. Fixed with a `NO-GRANT` cla
 🔵 **The string collision deserves naming: `UNLICENSED` is this KB's own status for "no licence file
 found" and npm's value for "no licence granted".** One spelling, two meanings — and one of them is a
 verdict about the publisher's intent, not about a probe.
+
+## Added in the twenty-ninth pass of 2026-10-07 — three enablement assets, and four licence corrections
+
+🟢 **The mandatory query set produced new repositories for the first time in seventeen
+passes.** All three verified payload-first on `raw.githubusercontent.com` and cross-checked
+against the GitHub API's registry licence; the two channels agree on all three.
+
+| Repo | ★ | Licence (payload) | Verdict |
+|---|---|---|---|
+| [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) | 140,891 | 🟢 **Apache-2.0** | **Take it for enablement, not for the product.** 100+ runnable agents, Agent Skills and RAG apps, Python, pushed 2026-09-30. The best starting corpus on this shelf for a client capability build — it is *examples*, so fork it as curriculum and vendor nothing from it without reading each app's own dependencies. |
+| [GokuMohandas/Made-With-ML](https://github.com/GokuMohandas/Made-With-ML) | 49,696 | 🟢 **MIT** | **Take it for enablement.** Develop → deploy → iterate on production-grade ML, course-shaped, with a Ray-based training and serving path. ⚠️ Last pushed **2026-03-04** (seven months): teach the method, re-pin the dependencies. |
+| [HandsOnLLM/Hands-On-Large-Language-Models](https://github.com/HandsOnLLM/Hands-On-Large-Language-Models) | 29,517 | 🟢 **Apache-2.0** | **Take it for enablement.** Official code for the O'Reilly *Hands-On Large Language Models*; the clearest permissive treatment of embeddings, retrieval and fine-tuning here. ⚠️ Last pushed **2026-04-24**; a book's companion repo is *meant* to freeze — fine for teaching, not for vendoring. |
+
+⚠️ **All three are enablement assets and none is an education agent.** They teach *about* AI;
+they do not tutor, grade, schedule or integrate with an LMS. They belong on the **`P6`
+capability-build** tier with `microsoft/ai-agents-for-beginners`, and `compose/patterns.md`
+names them in a concrete recipe. Shelving them as tutoring agents because they are popular
+would be the `P412` error — taking a repository's category from its star count.
+
+### 🔴 Four corrections to the licence column, from repairing the classifier pass 28 did not open
+
+Pass 28 repaired three defect classes in `sweep_payload.family_of`. This pass re-measured the
+same 412 payloads with the **shared shell classifier** — `lib/license_family.sh`, sourced by
+27 instruments and untouched by pass 28 — and found the same three classes in it, plus two
+more. These are the rows where that changes what a client may ship.
+
+| Repo | published | 🟢 corrected | Why | Consequence |
+|---|---|---|---|---|
+| [untisapi/untis4j](https://github.com/untisapi/untis4j) | `GPL-3.0` | **LGPL-3.0** | title-stripped payload, identifying itself only in prose — *"this License refers to version 3 of the GNU Lesser General Public License"* (`P457`) | 🔴 **the LGPL permits linking from proprietary code and the GPL does not.** Published one tier too restrictive — usable vs unusable in a client build |
+| [ankitects/anki](https://github.com/ankitects/anki) | `CC-BY-SA-4.0` | **AGPL-3.0** | mixed-case prose grant no GNU branch recognised; the payload mentions CC further down and the CC branch took it (`P455`) | a copyleft **code** licence filed as a **content** licence |
+| [pupilfirst/pupilfirst](https://github.com/pupilfirst/pupilfirst) | `CC-BY-SA-4.0` | **MIT** | the `LICENSE` puts `docs/` under CC BY-SA and says *"Content outside of the above mentioned restrictions is available under the MIT license"*; the classifier kept the documentation's clause (`P456`) | 🔴 a **permissive, redistributable** row rejected as ShareAlike |
+| [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic), [OS4ED/openSIS-Responsive-Design](https://github.com/OS4ED/openSIS-Responsive-Design) | `LGPL?` | **GPL-2.0** | **no root licence exists**; the grant lives only at `docs/License.txt` (17,286 B), and `P455` mis-read it | the only licence evidence two real SIS platforms have, read wrong |
+
+### 🔴 And one correction this pass deliberately did NOT make
+
+🔴 **Five rows still erase a NonCommercial restriction**, and they are the only error class
+that can put a non-commercial asset into a billable deliverable:
+`facebookresearch/seamless_communication`, `openstax/osbooks-biology-bundle`,
+`sign/translate`, `Yunfeng-Wan/CSTutorBench`, `Jona-Zwetsloot/Somtoday-Mod` — all five read
+`CC-BY` from `sweep_payload.family_of` while their payloads say CC-BY-NC or CC-BY-NC-SA.
+
+⚠️ **The rows in the tables above are correct**; this KB's prose has had them right since
+the shelf was built (*"**CC BY-NC-4.0** in `main/LICENSE` — **non-commercial. Hard reject**
+for anything billable"*). It is the **instrument** that is blind, which is pass 26's trend 61
+holding for a sixth time.
+
+🟢 **The fix belongs on the Python side, which pass 28 rewrote hours before this pass ran**,
+and reconciling two concurrent rewrites of one classifier from a stale base is exactly how
+`P237` corrections get regressed. So the gap is **pinned by a test** —
+`compose/code/p459-unified-verdict/test_unified.py` asserts the `NC-ONLY-SHELL` flag fires,
+with a comment stating that **the assertion must flip when the axis is added.** A test that
+goes red when a defect is *fixed* is how a known gap cannot be closed silently.
+
+### ⚠️ A payload this toolchain declines to read, stated as a limit rather than a verdict
+
+`OS4ED/openSIS-*` also ship `docs/LICENSE.rtf` — 61,575 bytes of RTF wrapping the same
+GPL-2.0 text. Its first two non-blank lines are `{\rtf1\adeflang1025\ansi…` and a font table,
+so **the title block is markup**, the family falls to `UNCLASSIFIED`, and the commercial-use
+question then reaches the body token match, which finds GPL-2.0 **§3(c)**'s *"this
+alternative is allowed only for noncommercial distribution"* — a condition on one
+distribution option, not a restriction on the licensee — and answers **PROHIBITED**.
+
+🟢 Both are now reported `CONTAINER-RTF (no legible)` on both axes rather than guessed at
+(`P460`). De-marking RTF well enough to recover a title means parsing a font table, and a
+half-parsed container would reopen the token-match path that produced the false positive.
+**Declining is an answer; inventing a verdict from markup is not.**
