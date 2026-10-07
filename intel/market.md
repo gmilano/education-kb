@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟡 Forty-sixth pass, 2026-10-07 — the regional channel returns a **vendor-concentration** signal in North America, and it is the same shape as the licence finding on the ERP shelf
+
+⏱️ **Thirteenth pass of this date.** 🔵 **Every figure below is secondary and carries base year, scope
+and publisher, per `P515`.** 🔴 **`eur-lex.europa.eu` and `data.europa.eu` remain blocked by the proxy
+(`Gap 56`), so no EU date below is cited as primary — `Gap 241` stands unchanged from pass 45, and
+`P555`'s contradiction is NOT resolved.**
+
+🔵 **The canonical `## Opportunities by region` block of this file was REFRESHED IN PLACE, not
+duplicated** — eight accumulated copies is the defect `P546` cleared, and the `p383` gate reports
+🟢 **0 findings** on this file after this pass's edit.
+
+### 🟡 `P567` — North America's education-AI supply side is **consolidating**, and the free tier is now four-way
+
+🔵 **No new market denominator surfaced this pass** (the seven of `P554`/`P515` stand, and they still
+disagree: Research and Markets **USD 10.6 B** 2026 → **42.48 B** 2030 @ **41.5 %**; IMARC **USD 6.4 B**
+2025 → 79.6 B 2034 @ 31.35 %; HolonIQ **USD 12.3 B** 2026 — all "AI in education", global, via
+secondary). 🟢 **What is new is structural, and structure is more usable in a proposal than a
+denominator nobody agrees on.**
+
+| Signal, 2026 | What it is | Reading |
+|---|---|---|
+| 🆕 **McGraw Hill → TeachFX** | a curriculum publisher **completed** the acquisition of an AI-native teacher-coaching platform | 🔴 **consolidation**: the AI layer is being bought by the incumbent content layer, not competing with it |
+| 🆕 **Free teacher tier, now four-way** | OpenAI *ChatGPT for Teachers* (Nov 2025), Anthropic *Claude for Teachers* (Jul 2026), plus Google and Amazon giving tools to students/teachers | 🔴 **the entry-level tool market is being priced to zero** by four firms at once |
+| 🆕 **AFT National Academy for AI Instruction** | **USD 23 M**, the union's New York City affiliate and **three** AI companies | 🟡 **teacher training is being funded by the vendors whose tools are taught** |
+| **Gates Foundation** | **USD 1 B** commitment to equitable AI tools, **40 %** to education | 🟢 philanthropic demand-side money, incl. AI tutoring |
+| **White House pledge** | **60+** companies committing funding, curriculum and PD to K-12 | 🟡 a channel, not a market |
+
+🔴 **The commercial consequence for a studio is specific and it is not "compete with the free
+tier".** When the generic assistant is free from four directions, the billable work is **everything
+the free tier cannot do**: institutional data boundaries, the academic domain model, conformity
+evidence, and integration into a student information system. 🟢 **Which is precisely the shelf this
+KB has been assembling** — and precisely what `verticals/solutions.md` measures this pass: the
+education domain model exists only under copyleft, so building it on a permissive base is *work*,
+and work is what a studio sells.
+
+### 🔵 The same shape, twice, in one pass
+
+🟢 **Worth stating because the two findings came from unrelated channels and agree.** On the supply
+side of the market, four firms give away the entry tier and an incumbent buys the AI layer:
+**plurality that resolves to concentration.** On this KB's own ERP/CRM shelf, the two "independent
+MIT options" a studio would pick for licence diversity — `krayin/laravel-crm` and
+`aureuserp/aureuserp` — ship a **byte-identical** 1 077 B licence file held by the **same vendor**
+(`Webkul Software`, `P564`). 🔵 **A shelf can look plural and have one supplier behind it, and the
+only way to find out is to read the payload rather than the list.**
+
+### 🔴 What the regional channel did NOT produce this pass, stated rather than left blank
+
+| Region | This pass |
+|---|---|
+| North America | 🟢 **new**: the consolidation signals above |
+| EMEA | 🟡 **one weak addition** — the OECD's *2026 Digital Education Outlook* is reported (via aggregator, **not** read first-hand) to recommend **purpose-built educational AI over general-purpose tools**. 🔴 **UK, Gulf and African education regulation returned nothing again — fifth consecutive pass.** `Gap 241` and `P555`'s date contradiction both stand |
+| APAC | 🟡 **one addition**: **Australia** released a **National AI Plan** and announced an **AI Safety Institute** (December 2025) — 🔵 **safety-and-risk framing, NOT education-specific; do not cite it as education regulation** (the `P524` rule, applied) |
+| LATAM | 🔴 **nothing new.** The channel reproduced what pass 45 already holds (UNESCO IESALC **87 %** of **200** institutions across **19** countries; TALIS 2024 teacher use Brazil **56 %** / Chile **55 %** / Colombia **53 %** / Costa Rica **52 %** vs OECD **36 %**; PISA 2025 nine in ten 15-year-olds in 13 countries; Brazil **53 %** of administrators using AI against **22 %** with guidelines). 🔵 **Reproduction is confirmation, not a finding** |
+
+🔴 **Zero education-native AI agents in all four regions, for the fourteenth consecutive pass.**
+🔵 **That is now a stable property of the channel rather than a gap waiting to close**, and it is
+recorded as such in `agents/top.md` and `intel/trends.md`.
+
 ## 🟢 Forty-fifth pass, 2026-10-07 — the regional channel delivers a **binding education instrument** in the region that had none, and a seventh market denominator
 
 ⏱️ **Twelfth pass of this date.** 🔵 **Every figure below is secondary and carries base year, scope
@@ -164,8 +222,9 @@ identically.**
 ## Opportunities by region
 
 🔵 **One canonical block, five vocabulary values, per the contract `p383` enforces (`P546`).**
-🟢 **Refreshed at pass 45 in place — the block is UPDATED, never duplicated**, because eight
-accumulated copies is the defect `P546` cleared and re-adding one would reopen it.
+🟢 **Refreshed again at pass 46 in place — the block is UPDATED, never duplicated**, because eight
+accumulated copies is the defect `P546` cleared and re-adding one would reopen it. 🟢 **`p383`
+reports 0 findings on this file after this pass's edit.**
 
 ### North America
 
@@ -185,6 +244,23 @@ weekly. 🟢 **The `P549`/`P550` audit pattern sells directly here** — a distr
 an AI policy needs evidence its gates measure something, which is exactly what this KB found missing
 in itself.
 
+🔴 **New at pass 46 — the supply side is consolidating and the entry tier is being priced to zero
+(`P567`, all secondary per `P515`).** **McGraw Hill completed its acquisition of TeachFX**, an
+AI-native teacher-coaching platform: the incumbent content layer is *buying* the AI layer rather
+than competing with it. The free teacher tier is now **four-way** — OpenAI *ChatGPT for Teachers*
+(Nov 2025), Anthropic *Claude for Teachers* (Jul 2026), plus Google and Amazon — and the **AFT**
+runs a **USD 23 M** National Academy for AI Instruction with its New York City affiliate and
+**three** AI companies as partners. 🟡 **Also in the demand channel:** the **Gates Foundation**'s
+**USD 1 B** equitable-AI commitment with **40 %** to education, and a White House pledge carrying
+**60+** corporate commitments. 🔴 **So do not price a generic classroom assistant** — it is free from
+four directions. 🟢 **Price what the free tier structurally cannot supply** (`P570` in
+`compose/patterns.md`): the institutional data boundary, the academic domain model, conformity
+evidence against a named in-force instrument, and SIS integration. 🔵 **District-level demand is
+real and is about restriction as much as adoption:** **New York City Public Schools** is running a
+**moratorium on student-facing generative AI in grades 2K–8** for 2026-27 under a traffic-light
+framework whose red tier bars AI from grading, discipline and placement — 🟢 **a governance
+deliverable, not a tooling one.**
+
 ### EMEA
 
 🟢 **The regulatory anchor is still the asset, and the honest offer is compliance-by-construction.**
@@ -199,9 +275,16 @@ side of it. 🟢 **What is not in doubt and is enough to sell:** admissions, stu
 scoring are high-risk uses, carrying risk management, data governance, human oversight, transparency
 and conformity assessment. 🟢 **The permissive assessment chain this KB has assembled is the right
 starting point** precisely because every link's licence is read from payload — and after `P551` the
-CC **version** on each link is read too, which a conformity file will be asked for. 🔴 **Declared
+CC **version** on each link is read too, which a conformity file will be asked for. 🟢 **And after
+`P560`/`P561` at pass 46 the **EPL and MPL** versions on each link are read as well — which matters
+here specifically, because an EPL-1.0 link is GPL-incompatible where an EPL-2.0 link may not be, and
+a conformity file that cannot state which is not a conformity file.** 🔴 **Declared
 gap:** the regional channel returned effectively nothing on **UK, Gulf and African** education
-regulation this pass; EMEA here means *EU* until a national instrument elsewhere is named.
+regulation this pass either — **fifth consecutive pass**; EMEA here means *EU* until a national
+instrument elsewhere is named. 🟡 **One weak addition at pass 46, flagged as weak:** the OECD's
+**2026 Digital Education Outlook** is reported — **via aggregator, not read first-hand** — to
+recommend **purpose-built educational AI over general-purpose tools**. 🔵 **Consistent with `T3` of
+pass 44 and with `P570`'s commercial reading, but it is not citable as primary and is not priced on.**
 
 ### APAC
 
@@ -222,6 +305,12 @@ Moodle's in-core `ai/provider` extension point (`P520`) plus a self-hosted model
 concrete shape. 🟡 **Depth is uneven:** Singapore leads the region on diffusion (**60.9 %** of
 working-age adults, second globally) while only **1 in 10** APAC enterprises calls itself very
 mature.
+
+🟡 **Added at pass 46:** **Australia** released a **National AI Plan** and announced an **AI Safety
+Institute** (**December 2025**). 🔴 **Safety-and-risk framing, NOT education-specific — do not cite
+it as education regulation** (the `P524` rule, applied before the row was written rather than
+after). 🟢 **Vietnam remains the only instrument in any region that names education uses explicitly
+and is already in force**, which is why `P570` leads a conformity offer with it.
 
 ### LATAM
 
@@ -249,6 +338,14 @@ competencies) plus `wwrwbs/AI_AWE` (Apache-2.0) remain permissive, but the featu
 is clean, fine-tuning produces a ShareAlike derivative, and the client must be told which one they
 are buying. 🔴 **Spanish still has no equivalent instrument**, and for Chile the premise is refuted
 outright — the PAES has no essay (`P537`, `Gap 237`).
+
+🔴 **Pass 46 produced NOTHING NEW on this region, and that is stated rather than left to look like
+coverage.** The mandated regional query ran verbatim and reproduced the figures above — IESALC's
+**87 %** of **200** institutions across **19** countries, the TALIS 2024 teacher rates, PISA 2025's
+nine-in-ten 15-year-olds across 13 countries, and Brazil's **53 %** of administrators using AI
+against **22 %** with guidelines. 🔵 **Reproduction on a fresh run is confirmation, not a finding**:
+it raises confidence in the figures already published here and adds no new denominator, no new
+instrument and no new actor. 🟢 **The verdicts above stand unchanged.**
 
 ### Global
 

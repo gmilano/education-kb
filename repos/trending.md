@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — pass 46 (thirteenth of this date)
+
+🔵 **APPEND-ONLY.** History below is untouched.
+
+🟢 **New in the tree this pass — this KB's own code:** `compose/code/p560-epl-mpl-version-read/`
+(**8** real licence payloads as fixtures, suite **22/22**, **5 mutants**, refuses an empty corpus
+with exit `2`) plus three repairs that reach beyond the instrument that found them: `P560` (the EPL
+branch of the **shared** classifier collapsed 1.0 and 2.0 into one answer), `P561` (the **MPL** branch
+stamped `-2.0` on a version it never read — `P551` verbatim, one line above its own fix) and `P562`
+(**two consumers** of the classifier were testing for family strings it could not emit).
+🟢 **Classifier suite `141/141` → `152/152`; `p429` `12/12` → `18/18`; `p444` 24 OK; whole tree
+`106` suites pass.**
+
+🔴 **Two red, neither this pass's doing — both verified red at pristine `HEAD` (`5dc22ad`) in a
+separate worktree:** `p351-star-digit-sweep` (5 failures: historical `★` rows inside the append-only
+trending history, `P479`'s accumulated debt, **still open**) and `p213-envelope-aad` (the
+environment's `cryptography` wheel raises `pyo3_runtime.PanicException` on import — environmental).
+🔵 **Neither reads the shared classifier.**
+
+🟢 **Trending externally, measured rather than ranked** (`git ls-remote --heads` existence with a
+negative control in the same run — `gmilano/nope-560-control` → **0 refs**, `P510`; payload licences
+via the shared classifier, `P237`; **no star counts**, `P479`):
+
+| Repo | HEAD read this pass | Licence (payload) | Why it is here |
+|---|---|---|---|
+| [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | `fa4eeca`, branch **`2.2`**, 7 refs | 🟢 **MIT** (1 077 B, `Webkul Software`) | 🆕 **first admission.** Permissive admissions/CRM layer — the layer the education shelf otherwise has only under copyleft. 🔴 **0** education terms in README (`P564`) |
+| [`hcengineering/platform`](https://github.com/hcengineering/platform) | `5bb9b2f`, branch `develop`, 67 refs | 🔴 **EPL-2.0** (14 196 B) | 🔴 **falsifies the Apache-2.0 claim** the vertical channel circulates (`P563`); weak copyleft, not permissive |
+| [`junit-team/junit4`](https://github.com/junit-team/junit4) | `890f3c9`, 5 refs | 🟡 **EPL-1.0** (11 374 B) | 🔴 **the real EPL-1.0 that proved `P560`** — GPL-incompatible, where EPL-2.0 may not be |
+| [`eclipse/paho.mqtt.java`](https://github.com/eclipse/paho.mqtt.java) | resolves, branch `master` | 🟡 **EPL-2.0** (519 B) | 🟢 the anchor/order control: names EPL **v2.0** and Eclipse *Distribution* License **v1.0** together |
+| [`eclipse-ee4j/jersey`](https://github.com/eclipse-ee4j/jersey) | branch `4.x` | 🟡 **EPL-2.0** (35 081 B) | the long-payload shape, against the 4 000 B title window (`P308`) |
+| [`h2database/h2database`](https://github.com/h2database/h2database) | `510d687`, 8 refs | 🟡 **MPL-2.0 *or* EPL-1.0** (27 753 B) | 🟡 **`Gap 249`** 🆕 — dual licensing answers only the MPL arm. 🔵 Fixing it changes `family_of`'s contract from a string to a set, so it is **declared** |
+| [`mozilla/rhino`](https://github.com/mozilla/rhino) | branch `master` | 🟢 **MPL-2.0** (16 779 B) | 🟢 `P561`'s negative control — a *partial* grant (*"the majority of Rhino"*) that must stay 2.0 |
+| [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) | `070cacc`, 1 ref | 🟢 **MIT** (1 077 B, `Webkul Software`) | 🔴 **`cmp`-identical payload to Krayin's** — the two "independent MIT options" are one vendor (`P564`) |
+
+🔴 **The mandated trending query (`github trending education AI 2026`) produced no new
+education-native repo.** It returned third-party aggregator digests rather than GitHub's own
+trending page, and what they named was generic AI engineering (`ai-engineering-from-scratch`,
+`rasbt/LLMs-from-scratch`, `ultralytics`) plus Microsoft's `generative-ai-for-beginners` — 🔵 **all
+already held by this base.** 🟡 **One aggregator's 2026-10-07 digest explicitly reported
+*"LLMs / Training: None in trending"***, which is a measured absence rather than a gap in the probe.
+🔴 **The `ai-education` GitHub topic surfaced only `ChatTutor` and `education-agent-skills`, both
+already held** (the latter admitted at pass 45 as `P552`, and classified then as an instruction
+corpus, not an agent).
+
+🔵 **Nothing in `foundations.md` changed shelf position this pass.** 🟢 **What changed is that the
+licence column over there is now answering a question it previously could not**: a versioned EPL/MPL
+family, and a delivery class (`COPYLEFT`) where the audit used to report `NO_CLASIFICADA`.
+
 ## 2026-10-07 — pass 45 (twelfth of this date)
 
 🔵 **APPEND-ONLY.** History below is untouched.

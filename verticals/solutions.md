@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🔴 Forty-sixth pass, 2026-10-07 — Huly is **not** Apache-2.0, and the two "independent MIT options" on the ERP/CRM shelf ship **one vendor's licence file**
+
+⏱️ **Thirteenth pass of this date.** **Licences read first-hand on 2026-10-07 from payload, channel
+named per row (`P237`, `P171`, `P250`, `P510`). No star counts (`P479`).**
+
+🔵 **This file lists real systems a studio can stand up and customise.** 🟢 **Two corrections and one
+admission this pass, and all three move a licence verdict.**
+
+### 🔴 `P563` — `hcengineering/platform` (Huly) is **EPL-2.0**, and the channel that recommends it says Apache-2.0
+
+🔵 **The mandated vertical query (`open source platform education ERP CRM MIT Apache`) returned Huly
+as an Apache-2.0 option** — in those words: *"Huly Platform is licensed under Apache License 2.0."*
+🔴 **The payload says otherwise.**
+
+| | Measured 2026-10-07 |
+|---|---|
+| Repo | [`github.com/hcengineering/platform`](https://github.com/hcengineering/platform) |
+| Existence (`P510`) | 🟢 **67 refs**; negative control `gmilano/nope-560-control` **0 refs** in the same run |
+| HEAD / default branch | `5bb9b2f`, branch **`develop`** |
+| Payload | `LICENSE`, **14 196 B**, title block *"Eclipse Public License - v 2.0"* |
+| Family (shared classifier) | 🔴 **`EPL-2.0`** — 🔵 and before `P560` this very payload answered the unversioned `EPL` |
+| Commercial use (`P250`) | 🟢 **ALLOWED** |
+| Regime | 🔴 **Weak copyleft**, not permissive: file-level reciprocity on modified files, plus patent-litigation termination |
+
+🔴 **The difference decides a deliverable.** Apache-2.0 lets a studio modify and ship closed; EPL-2.0
+obliges source availability for the files it modifies. 🟡 **Huly stays on the shelf — it is usable,
+and the hosting case is fine — but it is filed as copyleft, not as the permissive ERP the secondary
+channel advertised.** 🔵 **And it was never on the live shelf: the `archive/` listed it (as a
+"generic ERP with no educational domain model", alongside Apache OFBiz) with no licence attached at
+all. That absence is what let an Apache-2.0 claim circulate unchallenged.**
+
+### 🟡 `P564` — `krayin/laravel-crm` admitted, and its licence file is **byte-identical** to AureusERP's
+
+🔵 **The same query offered Krayin as the one CRM on the list a studio could "fork, modify and ship
+inside a commercial product with essentially no strings attached", and AureusERP as a separate MIT
+ERP.** 🟢 **Both are MIT. 🔴 They are not two independent options.**
+
+| | `krayin/laravel-crm` 🆕 | `aureuserp/aureuserp` |
+|---|---|---|
+| Existence (`P510`) | 🟢 **7 refs** | 🟢 1 ref |
+| HEAD | `fa4eeca` | `070cacc` |
+| Default branch | 🔴 **`2.2`** — *not* `main`/`master` (`P565`) | `master` |
+| Payload | `LICENSE`, **1 077 B** | `LICENSE`, **1 077 B** |
+| Family (payload) | 🟢 **MIT** | 🟢 **MIT** |
+| Second channel | 🟢 `composer.json` → `"license": "MIT"` | 🟢 `composer.json` (held since pass 99) |
+| Holder (`holder_of`) | 🟡 **`Webkul Software`** | 🟡 **`Webkul Software`** |
+| Copyright range | `2010-2025` | `2010-2025` |
+
+🔴 **`cmp` says the two payloads are byte-identical.** 🔵 **Same vendor, one licence text, one holder
+— so "diversify by taking an MIT CRM and an MIT ERP" buys a studio one supplier, not two.** 🟢 **The
+base already recorded `Webkul Software` as AureusERP's holder (pass 99); what is new is Krayin
+itself and the fact that the two are the same vendor's file.** 🔵 **The secondary channel could not
+establish this — it said in as many words that it "did not find a source describing Webkul's broader
+role". The payload answers it.**
+
+🔴 **And Krayin is NOT education software.** Measured: **0** occurrences of *education*, *student*,
+*admission*, *school* or *university* in its README. 🟡 **It is filed exactly as AureusERP was — a
+generic platform with no academic domain model** — and it earns a row only because the layer it
+covers, **admissions/lead management**, is one the education shelf currently has only under
+copyleft:
+
+| Admissions/CRM layer | Licence | Education domain model |
+|---|---|---|
+| `openeducat/openeducat_erp` | 🟡 LGPL-3.0 | 🟢 **yes** — SIS + admissions CRM, library, hostel, fees, exams |
+| `frappe/education` | 🟡 GPL-3.0 (19 B declaration) | 🟢 **yes** |
+| `krayin/laravel-crm` 🆕 | 🟢 **MIT** | 🔴 **none** — the academic model is the studio's build |
+| `aureuserp/aureuserp` | 🟢 MIT | 🔴 none |
+| `hcengineering/platform` | 🔴 **EPL-2.0** (`P563`) | 🔴 none |
+| `apache/ofbiz-framework` | 🟢 Apache-2.0 | 🔴 none |
+
+🔵 **Read it as the trade this shelf actually offers, and it has not changed this pass:** the
+education domain model comes with copyleft; the permissive options come empty.
+
+### 🟢 `P565` — Krayin's default branch is `2.2`, and a probe that assumes `main`/`master` returns **NO-PAYLOAD** on it
+
+🔵 **A confirmation finding, and it confirms an instrument rather than a repo.** `krayin/laravel-crm`
+resolves `HEAD` to **`2.2`**. 🔴 **Every licence path under `main` or `master` 404s.** 🟢 **The shared
+`probe_default_branch()` resolves the real branch via `git ls-remote --symref` and so reads the
+payload correctly** — the trap it exists for is live on a repo admitted this pass, which is the
+useful kind of confirmation. 🔵 **Measured as the author's own error first:** an ad-hoc loop written
+during this pass omitted the guard, and a 56-byte *"Temporary Redirect"* HTML stub came back for
+`dynare/dynare` and would have been classified as a licence payload. 🟢 **`probe_repo()` does not
+have that hole — it returns `UNRESOLVED`, which is a different verdict from `NO-PAYLOAD` and must
+not be conflated with it.**
+
+### 🔴 `P566` — `krayin/krayin-crm` does not exist, and it is the name the shelf would guess
+
+🔵 **Probed in the same run as the negative control:** `krayin/krayin-crm` → **0 refs**, identical to
+`gmilano/nope-560-control`. 🟢 **The canonical path is `krayin/laravel-crm`.** 🔵 **Recorded because
+the plausible-looking path is the one a reader reconstructs from the product name, and a 404 is not
+a finding** — this base's own rule, applied before the row was written rather than after.
+
 ## 🟡 Forty-fifth pass, 2026-10-07 — two education ERPs admitted with their licences read from payload, and the Portuguese stack's "permissive" link is **downgraded**
 
 ⏱️ **Twelfth pass of this date.** **Licences read first-hand on 2026-10-07 from payload in cloned

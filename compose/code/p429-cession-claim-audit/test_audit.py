@@ -30,6 +30,19 @@ CASOS = [
     ('omitida, MIT real',      None,       'MIT',        'OMITIDA',  'COSMETICA'),
     # --- omision sobre un repo que no cede: bloqueante, no cosmetica ---
     ('omitida, sin cesion',    None,       'NINGUNA',    'OMITIDA',  'BLOQUEANTE'),
+
+    # --- P562 (pase 46): las familias EPL/MPL versionadas que P560 hizo EMITIBLES ---
+    # Antes de P560 el clasificador devolvia `EPL` a secas y caia en NO_CLASIFICADA, asi que un
+    # componente EPL declarado MIT se reportaba como discrepancia SIN CLASE.  Ahora la clase
+    # existe, y un permisivo-dicho / copyleft-real es una refutacion que mueve la entrega.
+    ('MIT dicho, EPL-2.0 real',    'MIT',     'EPL-2.0',         'REFUTADA', 'BLOQUEANTE'),
+    ('MIT dicho, EPL-1.0 real',    'MIT',     'EPL-1.0',         'REFUTADA', 'BLOQUEANTE'),
+    ('MIT dicho, MPL-1.1 real',    'MIT',     'MPL-1.1',         'REFUTADA', 'BLOQUEANTE'),
+    # Y la version sin leer sigue siendo copyleft: «es algun EPL» ya decide la entrega.
+    ('MIT dicho, EPL sin version', 'MIT',     'EPL-UNVERSIONED', 'REFUTADA', 'BLOQUEANTE'),
+    # NEG: dentro de la MISMA clase la discrepancia de VERSION no se infla a bloqueante.
+    ('EPL2 dicho, EPL1 real',      'EPL-2.0', 'EPL-1.0',         'REFUTADA', 'COSMETICA'),
+    ('MPL2 dicho, MPL1.1 real',    'MPL-2.0', 'MPL-1.1',         'REFUTADA', 'COSMETICA'),
 ]
 
 

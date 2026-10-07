@@ -61,8 +61,19 @@ from sweep_payload import family_of  # noqa: E402  -- the published family vocab
 THIRD_PARTY_RE = __import__("re").compile(
     r'3rd[-_. ]?party|third[-_. ]?party|3rdparty', re.I)
 
+# P562 (pass 46, 2026-10-07).  Same inheritance defect as in `p429/audit_claim.py`: until P560
+# the shared classifier collapsed every EPL payload into the bare string `EPL`, which is in
+# NEITHER set here, and stamped every MPL payload `MPL-2.0` without reading its version.  So the
+# `EPL-2.0` this set already named was unreachable by construction, and now that versions ARE
+# read, four further families it does not name became reachable.  Added, with the same reasoning
+# as p429: EPL and MPL are distribution copyleft in EVERY version, so the `*-UNVERSIONED` answers
+# belong here rather than in neither set.  `EUPL-1.1` is added for the same reason -- the EUPL
+# branch resolves it and this set only ever named 1.2.
 COPYLEFT = {"GPL", "GPL-2.0", "GPL-3.0", "AGPL-3.0", "LGPL", "LGPL-2.1", "LGPL-3.0",
-            "EUPL-1.2", "MPL-2.0", "EPL-2.0", "CC-BY-SA", "OSL-3.0", "CPAL-1.0"}
+            "EUPL-1.2", "EUPL-1.1", "EUPL",
+            "MPL-2.0", "MPL-1.1", "MPL-1.0", "MPL-UNVERSIONED",
+            "EPL-2.0", "EPL-1.0", "EPL-UNVERSIONED",
+            "CC-BY-SA", "OSL-3.0", "CPAL-1.0"}
 PERMISSIVE = {"MIT", "Apache-2.0", "BSD", "BSD-2-Clause", "BSD-3-Clause", "ISC",
               "CC0-1.0", "Unlicense", "ECL-2.0", "NCSA", "Zlib", "OFL-1.1"}
 # NOTE: bare `CC-BY` is deliberately in NEITHER set.  `p445` measured that `family_of`

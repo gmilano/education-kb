@@ -48,7 +48,25 @@ import sys
 RED = {'AGPL-3.0', 'AGPL-1.0', 'SSPL', 'OSL-3.0'}
 
 # Copyleft de distribucion: obliga al distribuir binario/fuente, no por red.
-COPYLEFT = {'GPL-2.0', 'GPL-3.0', 'LGPL-2.1', 'LGPL-3.0', 'MPL-2.0', 'EPL-2.0'}
+# P562 (pase 46 del 2026-10-07).  ESTE CONJUNTO PEDIA UN STRING QUE EL CLASIFICADOR NO PODIA
+# EMITIR.  Hasta P560, `family_of` colapsaba todo payload EPL --1.0 y 2.0-- en el string `EPL`
+# sin version, y `EPL` no figura en ningun conjunto de aca: caia en `NO_CLASIFICADA`.  O sea que
+# el audito de RIESGO DE ENTREGA no podia ver un componente EPL como copyleft NUNCA, y el
+# `EPL-2.0` que este conjunto ya nombraba era inalcanzable POR CONSTRUCCION.  Medido antes del
+# arreglo: `EPL` -> NO_CLASIFICADA; despues: `EPL-2.0` -> COPYLEFT.
+#
+# Y EL ARREGLO DE P560 SOLO NO ALCANZA: al volverse legibles las versiones aparecieron cuatro
+# familias mas que este conjunto tampoco nombraba (`EPL-1.0`, `MPL-1.1`, `MPL-1.0` y las dos
+# `*-UNVERSIONED`), y todas son copyleft de distribucion igual que sus hermanas.  Es la tesis de
+# P197/P237 otra vez: una correccion en el control compartido no sirve si el CONSUMIDOR no la
+# hereda.
+#
+# Las `*-UNVERSIONED` entran a COPYLEFT a proposito: EPL y MPL son copyleft en TODA version, asi
+# que «es algun EPL» ya responde la pregunta de entrega, y dejarlas en NO_CLASIFICADA seria
+# reportar desconocimiento sobre algo que si se sabe.
+COPYLEFT = {'GPL-2.0', 'GPL-3.0', 'LGPL-2.1', 'LGPL-3.0',
+            'MPL-2.0', 'MPL-1.1', 'MPL-1.0', 'MPL-UNVERSIONED',
+            'EPL-2.0', 'EPL-1.0', 'EPL-UNVERSIONED'}
 
 PERMISIVA = {'MIT', 'Apache-2.0', 'BSD-2-Clause', 'BSD-3-Clause', 'ECL-2.0', 'ISC'}
 

@@ -150,8 +150,74 @@ osi_family_of() {
   # Es la simetria de P445 en la direccion contraria: ahi el clasificador ENDURECIDO veia
   # lo que el nuevo no; aca el nuevo arreglo un defecto que el endurecido conserva.  Un
   # control no es un control si vive en una sola de las dos implementaciones.
-  printf '%s' "$t" | grep -qi 'Mozilla Public License' && { echo "MPL-2.0"; return; }
-  printf '%s' "$t" | grep -qi 'Eclipse Public License' && { echo "EPL"; return; }
+  # -------------------------------------------------------------------------
+  # P560 / P561 (pase 46 del 2026-10-07).  LAS DOS RAMAS DE ABAJO TENIAN EL DEFECTO QUE EL
+  # PASE ANTERIOR ACABABA DE ARREGLAR UNA LINEA MAS ABAJO, y es el mismo defecto en sus dos
+  # direcciones.  P551 (pase 45) midio que la rama CC ESTAMPABA `-4.0` en vez de LEER la
+  # version, y publico un treebank CC-BY-SA-3.0 como 4.0.  El arreglo no viajo UNA LINEA.
+  #
+  #   P561 -- MPL ESTAMPABA.  `echo "MPL-2.0"` sobre cualquier payload que diga «Mozilla
+  #     Public License».  Medido de primera mano sobre el texto canonico de MPL-1.1
+  #     (SPDX license-list-data, 23.668 B, titulo «Mozilla Public License Version 1.1»):
+  #     devolvia `MPL-2.0`.  Es P551 VERBATIM, en el mismo archivo.
+  #
+  #   P560 -- EPL COLAPSABA.  `echo "EPL"`, sin version, para 1.0 y 2.0 por igual.  Medido
+  #     sobre cuatro payloads reales: `junit-team/junit4` (EPL-1.0, 11.374 B),
+  #     `hcengineering/platform` (EPL-2.0, 14.196 B), `eclipse-ee4j/jersey` (EPL-2.0,
+  #     35.081 B) y `eclipse/paho.mqtt.java` (EPL-2.0, 519 B).  Los cuatro: `EPL`.
+  #
+  # POR QUE NO ES COSMETICO, medido contra el estante de ESTA base.  Los ERP de educacion
+  # que esta KB recomienda son copyleft: `openeducat/openeducat_erp` es LGPL-3.0 y
+  # `frappe/education` + ERPNext son GPL-3.0.  «¿Puedo combinar este componente con el ERP
+  # que estoy levantando?» es una pregunta viva en cada engagement, y es LA UNICA pregunta
+  # en la que EPL-1.0 y EPL-2.0 diferen: EPL-1.0 es INCOMPATIBLE con GPL; EPL-2.0 agrego la
+  # clausula de «Secondary Licenses» (Exhibit A) con la que el steward PUEDE designar
+  # compatibilidad GPL-2.0-or-later.  `EPL` no responde ninguna de las dos.
+  #
+  # LAS SONDAS VAN ANCLADAS A LA FRASE «Eclipse Public License», NO A LA VERSION SUELTA, y
+  # 2.0 se prueba primero.  El payload de `eclipse/paho.mqtt.java` (519 B) nombra LAS DOS:
+  # «Eclipse Public License v2.0» Y «Eclipse Distribution License v1.0», asi que es el caso
+  # que fija esta decision.
+  #
+  # Y LO QUE PROTEGE A ESE PAYLOAD SON DOS COSAS REDUNDANTES, NO UNA -- este comentario
+  # afirmo primero que era el ORDEN y despues que era el ANCLA, y la suite refuto las dos.
+  # Medido en 2x2 en `p560-epl-mpl-version-read/test_versions.sh` (seccion 5):
+  #
+  #     anclada + segunda (lo que corre) .... EPL-2.0
+  #     anclada + PRIMERA ................... EPL-2.0   <- el orden solo no degrada
+  #     SUELTA  + segunda ................... EPL-2.0   <- el ancla sola tampoco hace falta
+  #     SUELTA  + PRIMERA ................... EPL-1.0   <- hay que romper LAS DOS
+  #
+  # O sea: ninguna de las dos es «el control» por si misma.  Se dejan las dos, y lo que esta
+  # afirmado es la redundancia, que es lo que el mutante mide.
+  #
+  # Y LA SONDA MIRA `$t` --el bloque de titulo de 4.000 B-- NO el cuerpo (P171/P308).  La
+  # seccion 1.12 de MPL-2.0 DEFINE «Secondary License» nombrando «the GNU General Public
+  # License, Version 2.0», asi que una sonda de version suelta sobre el CUERPO de un MPL-2.0
+  # encuentra «Version 2.0» pegada a un nombre GNU.  El bloque de titulo no tiene esa trampa.
+  #
+  # LO QUE ESTO NO ARREGLA, y queda declarado como `Gap 249` en vez de resuelto en silencio:
+  # el licenciamiento DUAL.  `h2database/h2database` (27.753 B) abre «H2 is dual licensed and
+  # available under the MPL 2.0 ... or under the EPL 1.0» -- dos opciones, y la rama MPL va
+  # primera, asi que la respuesta es `MPL-2.0` y el brazo EPL-1.0 se pierde.  Resolverlo bien
+  # cambia el contrato de retorno de UN string a un CONJUNTO, y eso toca a todo consumidor de
+  # `family_of`.  No se hace de contrabando dentro de un arreglo de version.
+  if printf '%s' "$t" | grep -qi 'Mozilla Public License'; then
+    printf '%s' "$t" | grep -qiE 'mozilla public licen[cs]e,? *-? *(v\.?|version)? ?2\.0|\bMPL[ ,-]*(v\.?)? ?2\.0' \
+        && { echo "MPL-2.0"; return; }
+    printf '%s' "$t" | grep -qiE 'mozilla public licen[cs]e,? *-? *(v\.?|version)? ?1\.1|\bMPL[ ,-]*(v\.?)? ?1\.1' \
+        && { echo "MPL-1.1"; return; }
+    printf '%s' "$t" | grep -qiE 'mozilla public licen[cs]e,? *-? *(v\.?|version)? ?1\.0|\bMPL[ ,-]*(v\.?)? ?1\.0' \
+        && { echo "MPL-1.0"; return; }
+    echo "MPL-UNVERSIONED"; return
+  fi
+  if printf '%s' "$t" | grep -qi 'Eclipse Public License'; then
+    printf '%s' "$t" | grep -qiE 'eclipse public licen[cs]e,? *-? *(v\.?|version)? ?2\.0' \
+        && { echo "EPL-2.0"; return; }
+    printf '%s' "$t" | grep -qiE 'eclipse public licen[cs]e,? *-? *(v\.?|version)? ?1\.0' \
+        && { echo "EPL-1.0"; return; }
+    echo "EPL-UNVERSIONED"; return
+  fi
   # -------------------------------------------------------------------------
   # P455 (pase 29).  EL ARREGLO DE CAJA DE P288 QUEDO A MEDIAS, y el que falta es el que
   # importa.  P288 ya habia medido que las dos ramas de arriba son globs de `case`, o sea

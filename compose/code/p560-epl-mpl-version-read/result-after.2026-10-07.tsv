@@ -1,0 +1,10 @@
+payload	bytes	title_version_in_payload	family_of	verdict
+dual-mpl-2.0-or-epl-1.0-h2database.LICENSE	27753	MPL-2.0	MPL-2.0	OK
+epl-1.0-junit4.LICENSE	11374	EPL-1.0	EPL-1.0	OK
+epl-2.0-huly.LICENSE	14196	EPL-2.0	EPL-2.0	OK
+epl-2.0-jersey.LICENSE	35081	EPL-2.0	EPL-2.0	OK
+epl-2.0-paho-with-edl-1.0.LICENSE	519	EPL-2.0	EPL-2.0	OK
+mit-krayin-webkul.LICENSE	1077	-	MIT	OK
+mpl-1.1-spdx-canonical.LICENSE	23668	MPL-1.1	MPL-1.1	OK
+mpl-2.0-rhino-partial-grant.LICENSE	16779	MPL-2.0	MPL-2.0	OK
+p560: 8 payloads, 0 divergent (payload states a version the classifier does not return)

@@ -4,6 +4,161 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Forty-sixth pass, 2026-10-07 — three recipes (`P568` a permissive admissions layer with the copyleft boundary **measured**; `P569` a cross-component contract suite; `P570` sell against a free tier) and a **correction** to every recipe that cited an EPL or MPL component
+
+⏱️ **Thirteenth pass of this date.** 🔵 **Licences read first-hand on 2026-10-07 from payload in the
+repository, channel named per row (`P237`, `P250`, `P510`). No star counts (`P479`).**
+
+🔵 **Numbering.** 🟢 **`P490`'s rule followed before allocation**: the occupied set was read from the
+live tree **and** `archive/`, and this pass allocates `P560`–`P570`. 🔵 **Verified free before use:**
+`P568`–`P570` appear nowhere in either tree.
+
+## 🔴 Correction — any recipe that named an EPL or MPL component carried a licence **regime** this base could not read
+
+🔵 **Not a correction to a step, but to what the steps were CHECKED against.** Until `P560`/`P561`
+this pass, the shared classifier answered the unversioned `EPL` for every Eclipse payload and
+stamped `MPL-2.0` on every Mozilla one. 🔴 **And `p429`, the instrument that decides whether a
+component can be SHIPPED, tested for the string `EPL-2.0` — which the classifier could not
+emit — so every EPL component in any recipe was scored `NO_CLASIFICADA`, i.e. no verdict at all.**
+
+| | Before this pass | 🟢 After |
+|---|---|---|
+| An EPL component's delivery class | 🔴 `NO_CLASIFICADA` | 🟢 `COPYLEFT`, with the version read |
+| An MPL-1.1 component | 🔴 reported `MPL-2.0` | 🟢 `MPL-1.1` |
+| GPL-combinability of an EPL link | 🔴 **unanswerable** — `EPL` does not distinguish 1.0 (GPL-incompatible) from 2.0 (compatible if the steward designates it) | 🟢 answerable |
+
+🟢 **No published recipe's verdict changes**, because this base holds no EPL or MPL-1.1 component in
+a live recipe today. 🔴 **That is luck rather than design** — the first EPL dependency to enter a
+recipe would have been scored "no verdict" and shipped on it.
+
+## 🟢 `P568` — permissive **admissions/CRM** layer over a copyleft academic core, with the boundary drawn by measurement
+
+🔵 **The problem this solves is the trade `verticals/solutions.md` measures and that has not moved
+in fourteen passes:** the education domain model exists only under copyleft, and every permissive
+ERP/CRM on the shelf is empty of academic concepts.
+
+| Layer | Component | Licence (payload, 2026-10-07) | Why this one |
+|---|---|---|---|
+| Academic core (SIS, programmes, assessment, fees) | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 **LGPL-3.0** (8 241 B) | 🟢 **LGPL links without infecting the caller** — the one copyleft on this shelf that lets a studio keep its own modules closed |
+| Admissions / lead management | [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) 🆕 | 🟢 **MIT** (1 077 B, holder `Webkul Software`; `composer.json` agrees) | 🟢 permissive, and the CRM layer is where the client's commercial process lives |
+| Tutor / assistant surface | Moodle in-core `ai/provider` extension point (`P520`) | 🟡 GPL-3.0 (Moodle core) | 🟢 **the provider is a plug-in boundary**, so the model choice stays the institution's |
+| Model serving | self-hosted (Ollama / vLLM) | 🟢 MIT / Apache-2.0 | 🟢 in-country data; satisfies the APAC sovereignty brief |
+
+🔴 **The boundary is the whole recipe, and it is where a naive composition becomes undeliverable.**
+
+- 🟢 **Build custom academic modules against OpenEduCat (LGPL-3.0), not against `frappe/education`.**
+  `frappe/education` is **GPL-3.0** (its `license.txt` is a **19 B** declaration: *"License: GNU GPL
+  V3"*), so modules built *inside* it are GPL and the client cannot keep them closed.
+  🔵 **Both are real options; they differ on exactly this.**
+- 🟢 **Keep Krayin a SEPARATE SERVICE behind an API**, not a package linked into the Odoo/Frappe
+  process. 🔵 Its MIT grant is clean, but co-process linking is how a permissive component inherits
+  its host's obligations.
+- 🔴 **Do not substitute `aureuserp/aureuserp` for Krayin "for licence diversity".** `P564`:
+  byte-identical licence payload, same holder. 🔵 **It is one supplier, measured by `cmp`.**
+- 🔴 **Do not substitute `hcengineering/platform` (Huly) as "the Apache-2.0 option".** `P563`: the
+  payload is **EPL-2.0** (14 196 B), weak copyleft with file-level reciprocity — the Apache-2.0
+  claim is the secondary channel's, not the repository's.
+
+**Wiring, concretely.** OpenEduCat (Odoo modules) owns student/programme/enrolment as the system of
+record. Krayin runs beside it and owns the admissions funnel; the two reconcile on a single
+`applicant_id` pushed from Krayin to OpenEduCat on *admitted*, over Odoo's JSON-RPC — one direction
+only, so there is no shared schema and no linked code. Moodle consumes the enrolment feed and the
+tutor runs as an `ai/provider` implementation pointed at a self-hosted model.
+
+**Gate before shipping:** run `compose/code/dependency-licence-closure` over both trees, then
+`p429-cession-claim-audit` on each resolved family. 🟢 **Both now read versions (`P560`/`P561`) and
+`p429` now classifies the EPL/MPL families it previously dropped (`P562`)**, so the closure report is
+answering the question for the first time. 🔵 **Estimate: 8–10 weeks**, the bulk of it the academic
+model and the reconciliation, not the AI.
+
+## 🟢 `P569` — a **cross-component contract suite**: assert the producer's output set against each consumer's expected set
+
+🔵 **This is `T2`/`P562` turned into a reusable instrument, and it is the pattern this base most
+needs on itself.** The defect it catches belongs to **neither** component: `family_of` emitted `EPL`,
+`p429` expected `EPL-2.0`, both were internally consistent, both suites were green, and the
+**intersection was empty** for forty-five passes.
+
+**The recipe, four steps, no new dependencies:**
+
+1. **Enumerate the producer's real output set.** Not from its documentation — from its code and its
+   corpus. For `family_of`: every `echo "<FAMILY>"` in `lib/license_family.sh`, unioned with the
+   families it actually returns over the tree's payload corpus.
+2. **Enumerate each consumer's expected set.** The literal membership sets: `p429`'s `RED` /
+   `COPYLEFT` / `PERMISIVA` / `SIN_CESION`, `p444`'s `COPYLEFT` / `PERMISSIVE`, `p411`'s inline
+   families.
+3. **Assert the join, in both directions.** 🔴 **Producer value in no consumer set** → it silently
+   becomes "unclassified" (this was `EPL`). 🔴 **Consumer value the producer cannot emit** → dead
+   expectation that looks like coverage (this was `EPL-2.0`). 🟢 **Both are findings; the second is
+   the one every one-sided suite misses.**
+4. **Fail on either.** A new family added to the classifier must break this suite until every
+   consumer places it — which is the only mechanism that makes a correction *travel* (`T1`: proximity
+   does not, a shared file does not, a suite that asks every branch does).
+
+🔵 **Scope, measured:** this base has **three** consumers of `family_of`'s family strings (`p429`,
+`p444`, and `p411`'s inline copy), so the suite is small. 🟡 **`p411` must be migrated onto the
+shared control first** — it still inlines its own classifier and still carries `P561`, stamping
+`MPL-2.0` on any Mozilla payload. 🔵 **Estimate: 1 week**, and it retires a class rather than an
+instance.
+
+## 🟢 `P570` — what a studio sells when the entry tier is **free from four directions**
+
+🔵 **The commercial recipe implied by `P567`.** With OpenAI, Anthropic, Google and Amazon all giving
+teacher/student tools away, and McGraw Hill buying the AI coaching layer outright, the generic
+assistant is not a deliverable. 🟢 **The four things the free tier structurally cannot supply, each
+mapped to something on this shelf:**
+
+| What the free tier cannot do | What to build | Component |
+|---|---|---|
+| Live inside the institution's data boundary | self-hosted inference, in-country | Ollama / vLLM (🟢 MIT / Apache-2.0) |
+| Know the academic domain | SIS-integrated student/programme/assessment model | OpenEduCat 🟡 LGPL-3.0 (`P568`) |
+| Produce conformity evidence | a dossier against a **named, in-force** instrument | 🟢 **Vietnam's law (in force 2026-03-01)** names automated assessment and behavioural monitoring; a Vietnam dossier is most of an EU Annex III dossier early |
+| Prove its own controls measure something | audit the gates, not just run them | `P541`/`P550`/`P562` pattern — 🔵 **this KB's own findings are the demo** |
+
+🔴 **The one to lead with is the third.** 🟢 **Vietnam's qualifier is a product requirement, not a
+compliance cost:** a system is high-risk **only when its output is the sole basis for a decision
+without meaningful human review** — so an auditable human decision point in the assessment flow
+*removes* the classification. 🔵 **That is a design deliverable a free chatbot cannot be retrofitted
+into**, and it is billable in every region whose instrument is risk-based.
+
+## 🟢 Definition index — pass 46's findings, so `pattern-citation-audit` can resolve them
+
+🔵 **Why this block exists.** `pattern-citation-audit` collects definitions **only from this file**,
+so a finding headed in `agents/top.md` or `verticals/solutions.md` and cited across the tree reads as
+**dangling** to it. 🔴 **That is why the audit reports 505 dangling numbers and 2 273 bold citations:
+it is the convention, not a defect in the passes** — pass 45's `P550`–`P557` are dangling by exactly
+the same mechanism, measured this pass. 🟢 **Cheap to do better than the norm**, so this pass's
+findings get one-line definitions here, in the convention the instrument actually parses
+(`DEF_A_B`). 🔵 **Each line says where the finding is MEASURED; it does not restate the evidence.**
+
+### `P560` — the shared classifier **collapsed** EPL-1.0 and EPL-2.0 into one unversioned answer
+Measured on four real payloads in `agents/top.md`; fixed in `lib/license_family.sh`; instrument
+`compose/code/p560-epl-mpl-version-read/` (**22/22**, 5 mutants).
+
+### `P561` — the MPL branch **stamped** `-2.0` on a version it never read
+`P551` verbatim, one line above its own fix. Falsified against the canonical MPL-1.1 text
+(**23 668 B**); see `repos/foundations.md`.
+
+### `P562` — two **consumers** tested for family strings the classifier could not emit
+`p429`'s `COPYLEFT` set asked for `EPL-2.0`; the producer emitted `EPL`; the intersection was empty
+and both suites were green. Repaired in `p429` and `p444`; see `intel/trends.md` `T2`.
+
+### `P563` — `hcengineering/platform` (Huly) is **EPL-2.0**, not the Apache-2.0 the channel claims
+Weak copyleft, not permissive. Measured in `verticals/solutions.md`.
+
+### `P564` — Krayin and AureusERP ship a **byte-identical** MIT payload, same holder
+One vendor behind two apparently independent options (`cmp` clean, 1 077 B, `Webkul Software`).
+Measured in `verticals/solutions.md`.
+
+### `P565` — Krayin's default branch is `2.2`, so a probe assuming `main`/`master` reads NO-PAYLOAD
+Confirms `probe_default_branch()`; see `verticals/solutions.md`.
+
+### `P566` — `krayin/krayin-crm` does not exist; the canonical path is `krayin/laravel-crm`
+0 refs, identical to the negative control in the same run.
+
+### `P567` — North America's education-AI supply side is **consolidating** and the entry tier is free
+McGraw Hill→TeachFX, a four-way free teacher tier, AFT's USD 23 M academy. Measured in
+`intel/market.md`; the commercial response is `P570` above.
+
 ## 🟢 Forty-fifth pass, 2026-10-07 — two new recipes (`P558` audit the **model and data** tier a code-licence review never reaches; `P559` detect a fix that was appended instead of substituted) and a **second correction** to every Portuguese-scorer recipe
 
 ⏱️ **Twelfth pass of this date.** 🔵 **Licences read first-hand on 2026-10-07 from payload in cloned

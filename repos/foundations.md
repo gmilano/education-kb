@@ -4,6 +4,113 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🔴 Forty-sixth pass, 2026-10-07 — the licence **version** of a foundational repo was being invented, and two consumers were asking for a string the classifier could not produce
+
+⏱️ **Thirteenth pass of this date.** **Licences read first-hand on 2026-10-07 from payload, classified
+by the shared hardened classifier `compose/code/lib/license_family.sh` (`P237`, title-block, `P171`),
+commercial use by its `commercial_use_ok()` (`P250`). Existence by `git ls-remote --heads` against a
+negative control in the same run (`P510`). **No star counts** (`P479`).
+
+🔵 **Both findings this pass are in the instrument, not the shelf, and both were found by RUNNING it
+on new input rather than by reading it.** 🟢 **Both are fixed, with regression tests and five
+mutants, and the shelf's published verdicts survive unchanged** — 🔵 **because this base holds no
+EPL or MPL-1.1 foundational repo today.** 🔴 **That is luck, not design, and it is exactly what made
+the defect invisible for forty-five passes.**
+
+### 🔴 `P561` — the MPL branch **stamped** `-2.0` on every Mozilla payload
+
+The shared control's header says *"source this, do not rewrite it"*: every licence verdict this KB
+publishes is classified by it. 🔴 **Its MPL branch read the family and invented the version:**
+
+```sh
+printf '%s' "$t" | grep -qi 'Mozilla Public License' && { echo "MPL-2.0"; return; }
+```
+
+🟢 **Falsified first-hand against the canonical MPL-1.1 text** (SPDX `license-list-data`,
+**23 668 B**, title block *"Mozilla Public License Version 1.1"*): it answered 🔴 **`MPL-2.0`**.
+🔵 **This is `P551` verbatim — the defect pass 45 measured and fixed for the CC branch — sitting one
+line above its own fix.** 🟢 **Fixed: `MPL-2.0` / `MPL-1.1` / `MPL-1.0` are read, and a Mozilla
+payload that states no version answers `MPL-UNVERSIONED` rather than being guessed into 2.0**
+(`P502`'s lesson: *"declares no version"* and *"declares 2.0"* are different answers).
+
+🔵 **Negative control held:** `mozilla/rhino`'s real MPL-2.0 payload (**16 779 B**, and a *partial*
+grant — it opens *"The majority of Rhino is licensed under the MPL 2.0"*) still answers `MPL-2.0`.
+
+### 🔴 `P560` — the EPL branch **collapsed** two licences into one answer
+
+```sh
+printf '%s' "$t" | grep -qi 'Eclipse Public License' && { echo "EPL"; return; }
+```
+
+🔴 **Four real payloads, two versions, one answer.** Measured: `junit-team/junit4` (**EPL-1.0**,
+11 374 B), `hcengineering/platform` (**EPL-2.0**, 14 196 B), `eclipse-ee4j/jersey` (**EPL-2.0**,
+35 081 B), `eclipse/paho.mqtt.java` (**EPL-2.0**, 519 B) — 🔴 **all four `EPL`**.
+
+🔵 **Why it matters here and not only in prose:** this file's own recommendations run on top of
+copyleft education ERPs (`openeducat` LGPL-3.0, `frappe/education` + ERPNext GPL-3.0), so
+GPL-combinability is a standing question — and **EPL-1.0 is GPL-incompatible while EPL-2.0 may be
+GPL-compatible** via its *Secondary Licenses* clause, at the steward's designation. 🔴 **`EPL`
+answers neither.** 🟢 **Fixed: `EPL-2.0` / `EPL-1.0` are read, `EPL-UNVERSIONED` when the payload
+states no version.**
+
+### 🔴 `P562` — the repair had to travel to the **consumers**, and there it had been waiting
+
+🟢 **The pass's sharpest measurement, and it was not visible from the library at all.** Two
+instruments test membership against literal family strings:
+
+| Consumer | Set | 🔴 Before |
+|---|---|---|
+| `p429-cession-claim-audit/audit_claim.py` | `COPYLEFT` named **`EPL-2.0`** | 🔴 a string `family_of` **could not emit**; the real output `EPL` fell through to **`NO_CLASIFICADA`** |
+| `p444-root-vs-tree-family/root_vs_tree.py` | `COPYLEFT` named `EPL-2.0`, `MPL-2.0`, `EUPL-1.2` | 🔴 same, and `EUPL-1.1` was never named although the EUPL branch resolves it |
+
+🔴 **So the delivery-risk audit could not classify an EPL component as copyleft at any point in this
+base's history.** It reported *"unclassified"* — the string reserved for *no verdict* — on a licence
+family whose regime is well settled. 🟢 **Both sets repaired**, with the `*-UNVERSIONED` answers
+placed in `COPYLEFT` deliberately: EPL and MPL are distribution copyleft in **every** version, so
+*"it is some EPL"* already answers the delivery question, and leaving it in `NO_CLASIFICADA` would
+report ignorance about something known.
+
+🔵 **Third occurrence of the `P197`/`P237` thesis: a correction in a shared control is not a
+correction until the consumer inherits it.** 🟢 **Pinned by 6 new cases in `p429`'s suite**, including
+the negative control that a version discrepancy *within* one class (`EPL-2.0` claimed vs `EPL-1.0`
+measured) stays **COSMETICA** and is not inflated to blocking.
+
+### 🟢 What the suites say
+
+| Suite | Before | 🟢 After |
+|---|---|---|
+| `lib/test_license_family.sh` | 141/141 | 🟢 **152/152** (11 new, incl. 4 negative controls) |
+| `p560-epl-mpl-version-read/test_versions.sh` 🆕 | — | 🟢 **22/22**, **5 mutants** |
+| `p429-cession-claim-audit/test_audit.py` | 12/12 | 🟢 **18/18** |
+| `p444-root-vs-tree-family/test_root_vs_tree.py` | 24 OK | 🟢 **24 OK** |
+| whole tree | — | 🟢 **106 suites pass** |
+
+🔴 **Two red, neither caused by this pass, both verified red at pristine `HEAD` (`5dc22ad`) in a
+separate worktree before anything was claimed:** `p351-star-digit-sweep` (5 failures — historical
+`★` rows inside the append-only trending history, i.e. `P479`'s own accumulated debt, and a real
+open item) and `p213-envelope-aad` (the environment's `cryptography` wheel panics on import:
+`pyo3_runtime.PanicException` — 🔵 **an environment fault**). 🔵 **Neither instrument reads the shared
+classifier, so neither could have been affected.**
+
+### 🟡 The inlined classifier that still carries `P561`
+
+🔴 **`p411-cession-identity-gate/gate_cesion.py` classifies licences INLINE** — `elif 'mozilla
+public' in bajo: v['familia'] = 'MPL-2.0'` — which is both the `P237` violation the `lib/` README
+forbids in writing (*"no se inlinea un clasificador de licencias"*) and 🔴 **a second live copy of
+`P561`**: it stamps `2.0` on any Mozilla payload. 🟡 **NOT fixed this pass, and declared rather than
+left silent:** rewriting `p411` onto the shared control changes what that gate reports and needs its
+own pass and its own suite. 🔵 **Registered here so the next pass inherits it instead of
+rediscovering it.**
+
+### 🔴 The mandated foundational query, again
+
+🔵 **`open source platform education ERP CRM MIT Apache` ran verbatim and returned, for the
+twenty-seventh time, the generalist axis** — ERPNext/Frappe, Odoo, Apache OFBiz, Huly, AureusERP,
+plus Dolibarr, Compiere and Krayin. 🔴 **Zero new education-native foundational repos.** 🟢 **What it
+did yield is two licence corrections on that generalist axis** (`P563` Huly is EPL-2.0 not
+Apache-2.0; `P564` Krayin and AureusERP ship one vendor's identical MIT file) — both in
+`verticals/solutions.md`, which is where platforms live.
+
 ## 🔴 Forty-fifth pass, 2026-10-07 — the **shared control** carried two answers to its own question, and a second defect stamped a licence version it never read
 
 ⏱️ **Twelfth pass of this date.** **Licences read first-hand on 2026-10-07 from payload, classified

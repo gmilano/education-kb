@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — pass 46 (thirteenth of this date)
+
+🔵 **APPEND-ONLY.** History below is untouched.
+
+🔴 **Zero new education agents for the sixth consecutive pass, and the shelf is declared saturated
+for the fourteenth.** The mandated query ran verbatim (`top open source AI agents education 2026
+github MIT`) and returned the horizontal agent shelf (OpenClaw, opencode, CrewAI, LangGraph,
+OpenHands, browser-use, Hermes Agent) plus "learn AI" curricula and agent **catalogues**
+(`ashishpatel26/500-AI-Agents-Projects`, `ARUNAGIRINATHAN-K/awesome-ai-agents-2026`,
+`caramaschiHG/awesome-ai-agents-2026`). 🔵 **Reproduced on a fresh run, in every region — which is
+information, not silence, and it is now a stable property of the channel rather than a hole waiting
+to close.**
+
+🟢 **So the pass's findings are in the INSTRUMENT, and the biggest one is that this KB could not
+read the licence regime of an EPL component at all:**
+
+| Finding | What was measured |
+|---|---|
+| 🔴 **`P560`** | the shared classifier collapsed **EPL-1.0 and EPL-2.0** into one unversioned answer, `EPL`. Four real payloads, two versions, one string |
+| 🔴 **`P561`** | the **MPL** branch *stamped* `MPL-2.0` on any Mozilla payload. The canonical **MPL-1.1** text (SPDX, 23 668 B) answered `MPL-2.0`. 🔵 **`P551` verbatim, one line above its own fix** |
+| 🔴 **`P562`** | `p429`'s delivery-risk `COPYLEFT` set asked for **`EPL-2.0`**, a string the classifier **could not emit** — so every EPL component ever scored landed in `NO_CLASIFICADA`. 🔵 **A contract violated by neither side; the intersection was empty** |
+| 🔴 **`P563`** | `hcengineering/platform` (Huly) is **EPL-2.0**, not the Apache-2.0 the vertical channel advertises |
+| 🟡 **`P564`** | `krayin/laravel-crm` and `aureuserp/aureuserp` ship a **byte-identical** 1 077 B MIT payload, same holder `Webkul Software` — **one vendor, not two options** |
+| 🟢 **`P565`** | Krayin's default branch is **`2.2`**, not `main`/`master`; a probe that assumes either returns NO-PAYLOAD |
+| 🔴 **`P566`** | `krayin/krayin-crm` → **0 refs**, identical to the negative control. The canonical path is `krayin/laravel-crm` |
+
+🟢 **Existence measured this pass** (`git ls-remote --heads`, negative control `gmilano/nope-560-control`
+→ **0 refs** in the same run; **no star counts**, `P479`):
+
+| Repo | Existence / HEAD | Licence (payload, read 2026-10-07) | Why it is here |
+|---|---|---|---|
+| [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | 🟢 **7 refs**, HEAD `fa4eeca`, branch **`2.2`** | 🟢 **MIT** (1 077 B, holder `Webkul Software`) | 🆕 **first admission** — permissive admissions/CRM layer. 🔴 **0** education terms in its README: generic CRM, no academic model (`verticals/solutions.md`) |
+| [`hcengineering/platform`](https://github.com/hcengineering/platform) | 🟢 **67 refs**, HEAD `5bb9b2f`, branch `develop` | 🔴 **EPL-2.0** (14 196 B) | 🔴 **the payload that falsified the Apache-2.0 claim** (`P563`), and one of the four that exposed `P560` |
+| [`junit-team/junit4`](https://github.com/junit-team/junit4) | 🟢 **5 refs**, HEAD `890f3c9` | 🟡 **EPL-1.0** (`LICENSE-junit.txt`, 11 374 B) | 🔴 **the real EPL-1.0 that proved the collapse** — GPL-**incompatible**, where 2.0 may not be |
+| [`eclipse/paho.mqtt.java`](https://github.com/eclipse/paho.mqtt.java) | 🟢 resolves | 🟡 **EPL-2.0** (519 B) | 🟢 **the ordering/anchor control** — names EPL v2.0 **and** Eclipse *Distribution* License v1.0 in one payload |
+| [`eclipse-ee4j/jersey`](https://github.com/eclipse-ee4j/jersey) | 🟢 branch `4.x` | 🟡 **EPL-2.0** (35 081 B) | third EPL-2.0 shape: a long payload, to check the 4 000 B title window |
+| [`h2database/h2database`](https://github.com/h2database/h2database) | 🟢 **8 refs**, HEAD `510d687` | 🟡 **MPL-2.0 *or* EPL-1.0** (27 753 B) | 🟡 **`Gap 249`** — dual licensing collapses to the MPL arm; declared, not fixed |
+| [`mozilla/rhino`](https://github.com/mozilla/rhino) | 🟢 branch `master` | 🟢 **MPL-2.0** (16 779 B, *partial* grant) | 🟢 the negative control for `P561`: a real 2.0 must stay 2.0 |
+| [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) | 🟢 1 ref, HEAD `070cacc` | 🟢 **MIT** (1 077 B, holder `Webkul Software`) | 🔴 **`cmp`-identical to Krayin's payload** (`P564`) |
+
+🟢 **New in the tree this pass — this KB's own code:**
+`compose/code/p560-epl-mpl-version-read/` (8 real payload fixtures, suite **22/22**, **5 mutants**,
+refuses an empty corpus with exit `2`) plus repairs to the **shared** classifier every row in this
+file depends on and to **two** of its consumers. 🟢 **Classifier suite `141/141` → `152/152`;
+`p429` `12/12` → `18/18`; whole tree `106` suites pass.**
+
+🔴 **Two suites in the tree are red and this pass caused neither — both verified red at pristine
+`HEAD` (`5dc22ad`) in a separate worktree before the claim was written:** `p351-star-digit-sweep`
+(5 failures, historical `★` rows inside this very append-only history — `P479`'s own debt, still
+open) and `p213-envelope-aad` (the environment's `cryptography` wheel panics on import). 🔵 **Neither
+reads the shared classifier.**
+
+🟡 **Declared and left open:** `Gap 249` (dual licensing reports one arm); `p411-cession-identity-gate`
+still inlines a licence classifier and still carries `P561`; `Gap 241` / `P555` (the EU education
+date contradiction) unchanged, with `eur-lex` still proxy-blocked (`Gap 56`).
+
 ## 2026-10-07 — pass 45 (twelfth of this date)
 
 🔵 **APPEND-ONLY.** History below is untouched.

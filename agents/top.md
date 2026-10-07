@@ -4,6 +4,129 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🔴 Forty-sixth pass, 2026-10-07 — the agent shelf is saturated for the fourteenth time, and the pass's real finding is that this KB could not **see** the licence regime of an EPL component at all
+
+⏱️ **Thirteenth pass of this date.** **Licences read first-hand on 2026-10-07 from the repository
+**payload**, classified by the shared hardened classifier `compose/code/lib/license_family.sh`
+(`P237`, title-block, `P171`), commercial use gated by its own `commercial_use_ok()` (`P250`).
+Existence by `git ls-remote --heads` against a negative control in the same run (`P510`).
+**No star counts** (`P479`).
+
+🔴 **Zero new education agents for the sixth consecutive pass; the shelf is declared saturated for
+the fourteenth.** The mandated query ran verbatim (`top open source AI agents education 2026 github
+MIT`) and returned, once again, the **horizontal** agent shelf (OpenClaw, CrewAI, LangGraph,
+OpenHands, opencode, browser-use) plus "learn AI" curricula and agent *catalogues*
+(`ashishpatel26/500-AI-Agents-Projects`, `ARUNAGIRINATHAN-K/awesome-ai-agents-2026`,
+`caramaschiHG/awesome-ai-agents-2026`). 🔵 **Reproduced on a fresh run. That is information, not
+silence** — and it is the fourteenth consecutive reproduction, which is a finding about the
+*channel*, not about this pass.
+
+🟢 **So this pass spent its budget where the measurement was actually wrong**, and what it found is
+in the instrument: for forty-five passes **this KB could not distinguish EPL-1.0 from EPL-2.0**, and
+the one question those two licences differ on is the one every engagement asks.
+
+### 🔴 `P560` / `P561` — the shared classifier read the licence **family** and invented the **version**
+
+🔵 **Pass 45 fixed `P551`: a CC payload's version was being STAMPED (`-4.0`) rather than READ**, and
+a CC-BY-SA-3.0 treebank had been published as 4.0. 🔴 **The fix did not travel ONE LINE UP.** The two
+branches immediately above the CC branch were:
+
+```sh
+printf '%s' "$t" | grep -qi 'Mozilla Public License' && { echo "MPL-2.0"; return; }
+printf '%s' "$t" | grep -qi 'Eclipse Public License' && { echo "EPL";     return; }
+```
+
+| | Defect | Measured first-hand this pass |
+|---|---|---|
+| 🔴 `P561` | MPL **stamped** a version it never read | the canonical **MPL-1.1** text (SPDX `license-list-data`, **23 668 B**, title *"Mozilla Public License Version 1.1"*) answered 🔴 **`MPL-2.0`**. 🔵 **This is `P551` verbatim, in the same file** |
+| 🔴 `P560` | EPL **collapsed** 1.0 and 2.0 into one answer | four real payloads, two versions, 🔴 **all four answered `EPL`** |
+
+**The four EPL payloads, read from the repository payload on 2026-10-07:**
+
+| Repo | Existence (`P510`) | Payload | Title block | Before | 🟢 After |
+|---|---|---|---|---|---|
+| [`junit-team/junit4`](https://github.com/junit-team/junit4) | 🟢 5 refs | `LICENSE-junit.txt`, **11 374 B** | *"Eclipse Public License - v 1.0"* | 🔴 `EPL` | 🟢 **`EPL-1.0`** |
+| [`hcengineering/platform`](https://github.com/hcengineering/platform) | 🟢 67 refs, HEAD `5bb9b2f` | `LICENSE`, **14 196 B** | *"Eclipse Public License - v 2.0"* | 🔴 `EPL` | 🟢 **`EPL-2.0`** |
+| [`eclipse-ee4j/jersey`](https://github.com/eclipse-ee4j/jersey) | 🟢 branch `4.x` | `LICENSE.md`, **35 081 B** | *"Eclipse Public License - v 2.0"* | 🔴 `EPL` | 🟢 **`EPL-2.0`** |
+| [`eclipse/paho.mqtt.java`](https://github.com/eclipse/paho.mqtt.java) | 🟢 resolves | `LICENSE`, **519 B** | *"Eclipse Public License - v 2.0"* **and names EDL v1.0** | 🔴 `EPL` | 🟢 **`EPL-2.0`** |
+
+🔵 Negative control in the same run: `gmilano/nope-560-control` → **0 refs**.
+
+### 🔴 Why the collapse is not cosmetic — it is measured against **this KB's own shelf**
+
+🔵 **The education ERPs this base recommends are copyleft:** `openeducat/openeducat_erp` is
+**LGPL-3.0** and `frappe/education` + ERPNext are **GPL-3.0** (`verticals/solutions.md`). So *"may I
+combine this component with the ERP I am standing up?"* is live on every engagement — and it is the
+**one question** on which the two EPL versions differ:
+
+| | EPL-1.0 | EPL-2.0 |
+|---|---|---|
+| Combination with GPL | 🔴 **incompatible** | 🟡 **may be compatible** — the *Secondary Licenses* clause lets the steward designate GPL-2.0-or-later. 🔵 **An option, not automatic** |
+
+🔴 **`EPL` answers neither.** A family string that cannot separate *"GPL-incompatible"* from
+*"GPL-compatible if designated"* is not an answer to the question the shelf asks of it.
+
+### 🔴 `P562` — and the correction had to travel to the **consumers**, where a string was being asked for that the classifier could not emit
+
+🟢 **The sharpest measurement of the pass.** `p429-cession-claim-audit/audit_claim.py` classifies
+delivery risk against sets of family strings, and its `COPYLEFT` set **already named `EPL-2.0`** —
+a string `family_of` **could never produce**. Measured:
+
+| Family string | `_clase()` before | 🟢 after |
+|---|---|---|
+| `EPL` (what the classifier actually emitted) | 🔴 **`NO_CLASIFICADA`** | — (no longer emitted) |
+| `EPL-2.0` | 🟡 `COPYLEFT`, but **unreachable** | 🟢 `COPYLEFT` |
+| `EPL-1.0`, `MPL-1.1`, `MPL-1.0`, `*-UNVERSIONED` | 🔴 `NO_CLASIFICADA` | 🟢 `COPYLEFT` |
+
+🔴 **So for forty-five passes the delivery-risk audit could not see an EPL component as copyleft at
+all** — it saw "unclassified", which is the string this base reserves for *"no verdict"*. 🟢 **Both
+consumers repaired** (`p429`, and `p444-root-vs-tree-family`, whose set also only ever named
+`EUPL-1.2`). 🔵 **This is the `P197`/`P237` thesis for the third time: a correction in the shared
+control is not a correction until the consumer inherits it.**
+
+### 🟢 The suite refuted this pass's **own** justification, twice, and the refutation is the result
+
+🔵 **The fix's first comment claimed the load-bearing control was the probe ORDER** (2.0 before 1.0),
+because `eclipse/paho.mqtt.java` names *both* "Eclipse Public License v2.0" **and** "Eclipse
+**Distribution** License v1.0". 🔴 **The mutant that inverts the order left paho at `EPL-2.0`.** The
+second claim — *"then it is the ANCHOR"* — was refuted the same way. Measured 2×2:
+
+| Probe for 1.0 | Position | paho verdict |
+|---|---|---|
+| anchored | second *(what runs)* | 🟢 `EPL-2.0` |
+| anchored | **first** | 🟢 `EPL-2.0` — the order alone does not decide |
+| **loose** | second | 🟢 `EPL-2.0` — the anchor alone is not required either |
+| **loose** | **first** | 🔴 **`EPL-1.0`** — both must break |
+
+🟢 **Both protections are kept and what is now asserted is the redundancy**, which is what the
+mutant measures. 🔵 **A rationale a suite can refute is worth more than one it cannot.**
+
+### 🟢 Suites
+
+| Suite | Before | 🟢 After |
+|---|---|---|
+| `lib/test_license_family.sh` (shared control) | 141/141 | 🟢 **152/152** |
+| `p560-epl-mpl-version-read/test_versions.sh` 🆕 | — | 🟢 **22/22**, 5 mutants |
+| `p429-cession-claim-audit/test_audit.py` | 12/12 | 🟢 **18/18** |
+| `p444-root-vs-tree-family` | 24 OK | 🟢 **24 OK** |
+| **whole tree** | — | 🟢 **106 suites pass** |
+
+🔴 **Two suites in the tree are red and this pass did NOT cause either — both verified red at
+pristine `HEAD` (`5dc22ad`) in a separate worktree:** `p351-star-digit-sweep` (5 failures: historical
+`★` rows inside the append-only trending history, which is `P479`'s own debt) and
+`p213-envelope-aad` (the environment's `cryptography` wheel raises `pyo3_runtime.PanicException` on
+import — 🔵 **an environment fault, not a KB defect**). 🔵 **Neither reads the shared classifier.**
+
+### 🟡 `Gap 249` 🆕 — dual licensing is **declared, not resolved**
+
+`h2database/h2database` (🟢 8 refs, HEAD `510d687`, `LICENSE.txt` **27 753 B**) opens: *"H2 is dual
+licensed and available under the MPL 2.0 ... or under the EPL 1.0."* 🔴 **Two options; the MPL branch
+runs first, so the answer is `MPL-2.0` and the EPL-1.0 arm is silently dropped.** 🔵 **And dual
+licensing is exactly how a project resolves the GPL-compatibility question above, so collapsing it
+to one arm loses the resolution.** 🟢 **Resolving it properly changes the return contract from one
+string to a SET, which touches every consumer of `family_of` — so it is registered as a gap and
+asserted by the suite, not smuggled into a version fix.**
+
 ## 🟡 Forty-fifth pass, 2026-10-07 — the first education-specific asset at the agent layer in thirteen passes, and it is **not an agent**
 
 ⏱️ **Twelfth pass of this date.** **Licences read first-hand on 2026-10-07 from the repository

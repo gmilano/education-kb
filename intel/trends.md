@@ -4,6 +4,113 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🔴 Forty-sixth pass, 2026-10-07 — five trends: a correction that did not travel one line, a consumer asking for a string that could not exist, plurality that resolves to one vendor, a free tier priced to zero, and a rationale its own suite refuted
+
+⏱️ **Thirteenth pass of this date.** 🔵 **All market and regulatory figures are secondary and carry
+their series (`P477`, `P515`); `eur-lex.europa.eu` stays proxy-blocked (`Gap 56`), so the EU
+education dates are NOT cited as primary (`Gap 241`, and `P555`'s contradiction is unresolved).**
+Existence by `git ls-remote --heads` against a negative control in the same run (`P510`); licences
+from payload via the shared classifier (`P237`).
+
+### T1 🔴 `P561` — a correction that is **one line away** from the defect it fixes still does not travel
+
+🟢 **Pass 45 measured `P551`: the CC branch of the shared classifier STAMPED `-4.0` instead of
+READING the version**, published a CC-BY-SA-3.0 treebank as 4.0, fixed it, and shipped a suite.
+🔴 **The MPL branch — the line immediately above — was doing the identical thing, and still was at
+the end of that pass.** Measured first-hand this pass on the canonical MPL-1.1 text (SPDX,
+**23 668 B**, title *"Mozilla Public License Version 1.1"*): 🔴 **`MPL-2.0`**.
+
+🔵 **The trend is not "a second instance of a known bug". It is that proximity is not transmission.**
+This base's standing explanation for non-travelling corrections has been *distance* — five hardened
+instruments knew `P171`, a sixth written from scratch did not (`P237`), so the fix was moved into a
+shared file. 🔴 **`P561` falsifies the distance theory: the fix and the defect are in the same
+function, ten lines apart, written by the same pass.** 🟢 **What transmits a correction is not
+proximity and not a shared file — it is a SUITE THAT ASKS THE QUESTION OF EVERY BRANCH.** The CC
+branch got four new assertions at pass 45; the MPL and EPL branches got none, so they kept their
+defects under a green `141/141`.
+
+### T2 🔴 `P562` — a consumer can spend a base's whole history asking for a value its producer cannot emit, and every suite stays green
+
+🟢 **The pass's sharpest finding, and nothing in the library could reveal it.**
+`p429-cession-claim-audit` classifies **delivery risk** — the question *"can we ship this?"* — by
+testing the family string against sets. Its `COPYLEFT` set named **`EPL-2.0`**. 🔴 **The classifier
+emitted the unversioned `EPL` and could never emit `EPL-2.0`**, so every EPL component that ever
+passed through landed in `NO_CLASIFICADA` — the string this base reserves for *no verdict*.
+
+| Side of the contract | What it held |
+|---|---|
+| 🔴 Producer's output | `EPL` |
+| 🔴 Consumer's expectation | `EPL-2.0` |
+| 🔴 Result | **`NO_CLASIFICADA`** on a licence family whose regime is entirely settled |
+| 🟢 Suites | **green throughout** — both sides were internally consistent and tested |
+
+🔵 **The lesson generalises past licences, and it is the one worth carrying:** a contract between two
+components can be violated by **neither** of them. The producer's values were right, the consumer's
+set was right, and the **intersection was empty** — a defect that lives in the join and is therefore
+invisible to any suite that tests one side. 🟢 **The instrument class that catches it is a suite that
+asserts the producer's actual OUTPUT SET against the consumer's EXPECTED SET**, which is what
+`p429`'s six new cases now do. 🔴 **Of this base's instruments, that remains the only pair so
+checked; the rest are still one-sided.**
+
+### T3 🔴 `P564` — a shelf can look plural and have **one supplier**, and only the payload says so
+
+🔵 **The mandated vertical query presented two independent MIT options for the ERP/CRM layer:**
+`krayin/laravel-crm` (*"the only one you can fork, modify and ship inside a commercial product with
+essentially no strings attached"*) and `aureuserp/aureuserp`. 🟢 **Both are MIT, confirmed on two
+channels each.** 🔴 **Their `LICENSE` files are byte-identical — 1 077 B, `cmp` clean — and both are
+held by `Webkul Software`.**
+
+🔵 **So the licence-diversity a studio thinks it is buying by picking one of each does not exist**,
+and the secondary channel could not have told them: it stated in as many words that it *"did not
+find a source describing Webkul's broader role"*. 🟢 **The payload answered in one `cmp`.**
+🔵 **The trend is the method, not the repo pair:** a licence LIST tells you what each row claims; a
+licence PAYLOAD tells you who actually holds the grant, and holder-concentration is invisible to
+every row-by-row reading — including this base's own, for 45 passes.
+
+### T4 🔴 The entry tier of education AI is being priced to **zero** by four firms at once, and the incumbent is buying the AI layer
+
+🔵 **Measured in the North America channel this pass** (secondary, `P515`): OpenAI *ChatGPT for
+Teachers* (Nov 2025), Anthropic *Claude for Teachers* (Jul 2026), plus Google and Amazon giving AI
+tools to students and teachers — 🔴 **four free offerings aimed at the same buyer** — while
+**McGraw Hill completed its acquisition of TeachFX**, an AI-native teacher-coaching platform, and the
+**AFT** runs a **USD 23 M** teacher-AI academy with **three AI companies** as partners.
+
+🔴 **The implication for a studio is a repricing, not a new market.** The generic classroom assistant
+is no longer a billable deliverable. 🟢 **What stays billable is what the free tier structurally
+cannot supply:** the institution's data boundary, the **academic domain model**, conformity evidence
+against a named instrument (Vietnam now, EU Annex III later), and integration with the SIS.
+🔵 **And T5 of pass 45 still holds underneath this** — governance is the barrier, which is the same
+sentence read from the buyer's side.
+
+### T5 🟢 A rationale a suite can **refute** is worth more than one it cannot — measured on this pass's own fix
+
+🔵 **This pass wrote a fix, justified it in a comment, and its own mutant suite refuted the
+justification twice.**
+
+| Claim written | Mutant built | Result |
+|---|---|---|
+| 🔴 *"the load-bearing control is the probe ORDER (2.0 first)"* | invert the order | 🟢 paho still `EPL-2.0` — **refuted** |
+| 🔴 *"then it is the ANCHOR on the licence phrase"* | unanchor the 1.0 probe, leave it second | 🟢 paho still `EPL-2.0` — **refuted** |
+| 🟢 *"the two protections are REDUNDANT"* | unanchored **and** first | 🔴 `EPL-1.0` — **confirmed: both must break** |
+
+🔵 **The comment in `lib/license_family.sh` now asserts the redundancy and prints the 2×2**, because
+that is what was measured. 🟢 **The general point, and it is `P541`'s in a new direction:** a control
+whose rationale was never tested is a control whose rationale is a guess. 🔴 **Forty-five passes of
+this base's prose carry rationales in exactly that state** — the difference here is only that a
+mutant was cheap enough to build, and it cost two wrong sentences to find out.
+
+### 🟡 What did not move, said plainly
+
+🔴 **Zero new education-native AI agents, sixth consecutive pass, fourteenth saturation
+declaration** — the mandated query returns the horizontal shelf plus catalogues, in every region.
+🔴 **Zero new education-native foundational repos** — the mandated platform query returned the
+generalist ERP axis for the twenty-seventh time. 🔴 **LATAM produced nothing new** (reproduction of
+pass 45's IESALC/TALIS/PISA figures, which is confirmation). 🔴 **UK, Gulf and Africa still empty,
+fifth consecutive pass.** 🟡 **`Gap 249` opened and left open**: dual licensing (`h2database`,
+MPL-2.0 **or** EPL-1.0) collapses to one arm, and fixing it changes `family_of`'s return contract
+from a string to a set. 🟡 **`p411-cession-identity-gate` still inlines a licence classifier and
+still carries `P561`** — declared, not fixed.
+
 ## 🔴 Forty-fifth pass, 2026-10-07 — five trends: a fix that was appended instead of substituted, a version that was stamped instead of read, a ShareAlike floor under an entire language, the code/content licence line, and regulation turning binding in the region that had nothing
 
 ⏱️ **Twelfth pass of this date.** 🔵 **All market and regulatory figures are secondary and carry

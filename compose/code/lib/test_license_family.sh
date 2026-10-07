@@ -603,7 +603,15 @@ check "P454 MPL-2.0 permite uso comercial"              ALLOWED "$(cu "$MPL_SECO
 EPL='Eclipse Public License - v 2.0
 
 THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS ECLIPSE PUBLIC LICENSE.'
-check "P454 EPL clasificada y no robada por GNU"        EPL     "$(family_of "$EPL")"
+# P560 (pase 46).  LA AFIRMACION DE P454 ES INDEPENDIENTE DE LA VERSION, y escribirla como
+# `expected=EPL` la ataba a que la rama EPL fuera SIN VERSIONAR -- que es exactamente el defecto
+# que P560 arreglo.  Cuando la rama empezo a LEER la version este check se puso rojo sin que la
+# propiedad que afirma hubiera cambiado en nada: el payload sigue sin ser robado por GNU.  Se
+# reescribe como la INVARIANTE que siempre fue («la familia es EPL, no una GNU»), asi que no
+# vuelve a romperse cuando aparezca EPL-1.0 u otra version; la afirmacion de VERSION se hace
+# aparte, en la linea de abajo, que es donde corresponde.
+check "P454 EPL no robada por GNU (invariante: familia EPL)" EPL "$(family_of "$EPL" | cut -d- -f1)"
+check "P560 el fixture de P454 dice v2.0 y ahora SE LEE"     EPL-2.0 "$(family_of "$EPL")"
 # Y el control en la direccion contraria: MPL/EPL suben, asi que no pueden quedarse con
 # un GPL legitimo que las mencione.  GPL-3.0 no nombra a Mozilla ni a Eclipse, pero la
 # afirmacion se hace igual porque es la premisa del reordenamiento.
@@ -720,6 +728,52 @@ You are free to share and adapt.")"
 # NEG: la version de una familia OSI no se la lleva la rama CC.
 check "P551 NEG Apache-2.0 no entra a la rama CC por su 2.0" Apache-2.0 \
   "$(family_of "$APACHE")"
+
+# ---------------------------------------------------------------------------
+# CONTROL NEGATIVO 14 — P560/P561 (pase 46 del 2026-10-07).  P551 arreglo «la version se
+# ESTAMPA en vez de LEERSE» para la rama CC y el arreglo NO VIAJO UNA LINEA: la rama MPL
+# estampaba `MPL-2.0` (P561) y la rama EPL colapsaba 1.0 y 2.0 en `EPL` (P560).  Los fixtures
+# son payloads REALES, no sinteticos, y viven en `p560-epl-mpl-version-read/fixtures/`.
+FIXP560="$(dirname "${BASH_SOURCE[0]}")/../p560-epl-mpl-version-read/fixtures"
+if [ -d "$FIXP560" ]; then
+  # P561: el texto canonico de MPL-1.1 (SPDX) contestaba MPL-2.0.
+  check "P561 MPL-1.1 canonico contesta 1.1 y no el estampado 2.0" MPL-1.1 \
+    "$(family_of "$(cat "$FIXP560/mpl-1.1-spdx-canonical.LICENSE")")"
+  check "P561 NEG MPL-2.0 real sigue 2.0" MPL-2.0 \
+    "$(family_of "$(cat "$FIXP560/mpl-2.0-rhino-partial-grant.LICENSE")")"
+  # P560: cuatro payloads EPL reales, dos versiones, antes TODOS `EPL`.
+  check "P560 EPL-1.0 real (junit4) se distingue de 2.0" EPL-1.0 \
+    "$(family_of "$(cat "$FIXP560/epl-1.0-junit4.LICENSE")")"
+  check "P560 EPL-2.0 real (Huly) se distingue de 1.0" EPL-2.0 \
+    "$(family_of "$(cat "$FIXP560/epl-2.0-huly.LICENSE")")"
+  # EL CONTROL QUE FIJA EL ORDEN DE LAS SONDAS.  El payload de paho nombra «Eclipse Public
+  # License v2.0» Y «Eclipse Distribution License v1.0».  Si la sonda de 1.0 fuera suelta, o
+  # corriera primero, este payload contestaria EPL-1.0 -- el veredicto equivocado y justo
+  # sobre el eje de compatibilidad GPL.  Es el caso obligatorio de esta rama.
+  check "P560 paho: EDL v1.0 en el mismo payload no degrada el EPL-2.0" EPL-2.0 \
+    "$(family_of "$(cat "$FIXP560/epl-2.0-paho-with-edl-1.0.LICENSE")")"
+  # Las dos familias siguen permitiendo uso comercial: ambas son OSI en toda version.
+  check "P560 EPL-1.0 permite uso comercial" ALLOWED \
+    "$(cu "$(cat "$FIXP560/epl-1.0-junit4.LICENSE")")"
+  check "P561 MPL-1.1 permite uso comercial" ALLOWED \
+    "$(cu "$(cat "$FIXP560/mpl-1.1-spdx-canonical.LICENSE")")"
+  # «no declara version» y «declara una» son respuestas DISTINTAS (la leccion de P502), y la
+  # rama EPL/MPL la hereda igual que la rama CC.
+  check "P560 EPL sin version no se adivina" EPL-UNVERSIONED \
+    "$(family_of "Eclipse Public License
+
+THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS AGREEMENT.")"
+  check "P561 MPL sin version no se adivina en 2.0" MPL-UNVERSIONED \
+    "$(family_of "Mozilla Public License
+
+1. Definitions.")"
+  # Gap 249: el licenciamiento DUAL no esta resuelto, y la suite lo AFIRMA en vez de callarlo.
+  # H2 ofrece MPL-2.0 O EPL-1.0; la respuesta es un string, asi que el brazo EPL se pierde.
+  check "Gap 249 dual MPL-2.0/EPL-1.0 (H2) contesta solo el brazo MPL" MPL-2.0 \
+    "$(family_of "$(cat "$FIXP560/dual-mpl-2.0-or-epl-1.0-h2database.LICENSE")")"
+else
+  echo "SKIP P560/P561 — fixtures ausentes en $FIXP560" >&2
+fi
 
 printf '\n%d/%d\n' "$((n-fail))" "$n"
 [ "$fail" = 0 ] || exit 1
