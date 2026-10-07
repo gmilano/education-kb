@@ -4,6 +4,204 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🔴 Thirty-second pass, 2026-10-07 — adoption is near-saturated, funding fell 26%, and that gap is the whole commercial story
+
+⏱️ **Measured 2026-10-07 from secondary sources** (market research houses, legislative trackers,
+UNESCO IESALC). ⚠️ **These are published estimates, not first-hand measurements**, and where two
+houses disagree this pass records **both numbers and the disagreement** rather than picking one.
+
+### Global market size — and a disagreement worth carrying
+
+| Metric | Value | Source shape |
+|---|---|---|
+| AI in education, 2025 | **$7.52B** | market-research baseline |
+| AI in education, 2026 | **$10.6B** | ~**40.9% CAGR** off 2025 |
+| AI in education, 2030 | **$42.48B** | ~**41.5% CAGR** 2026→2030 |
+| North America share, 2026 | **36%**, ≈ **$3.68B** | largest single region |
+| APAC, 2026 | ≈ **$2.85B** | fastest-growing region |
+| 🔴 APAC CAGR | **35.3%** *or* **28.1%** | ⚠️ **two houses, two answers** |
+| APAC, 2033 | **$18.21B** | the 28.1% series |
+| Edtech VC funding, H1 2026 | **$1B, −26% YoY** | 🔴 **down while adoption rises** |
+
+🔴 **The APAC CAGR disagreement is not noise and should not be averaged.** One series puts APAC at
+**35.3%** growth off a $2.85B 2026 base; another projects **28.1%** to 2033. Different base years and
+different scope definitions produce materially different 5-year numbers, and a deck that quotes one
+without the other is quoting a coin flip. **Carry the range, name the uncertainty.**
+
+### The adoption/funding scissor — read this before any pricing conversation
+
+| Signal | Value |
+|---|---|
+| Students using AI in their studies (16 countries) | **86%** |
+| Educational organisations having adopted generative AI | **86%** — 🟢 **the highest of any industry** |
+| US K-12 teachers who used AI tools in 2024–25 | **60%** (**32%** at least weekly) |
+| Edtech venture funding, H1 2026 | **$1B, −26% YoY**, smaller and more selective cheques |
+
+🔵 **Adoption is near-saturated and capital is retreating. Those two facts together define the
+engagement.** When 86% of institutions have already adopted *something*, there is no greenfield
+"introduce AI" project left to sell — the work is **consolidation, governance and proving value on
+what is already in the building**. And because funding is down 26%, the buyer cannot fund a
+speculative platform build; they can fund **a bounded project that retires a specific compliance or
+cost risk**. 🟢 **This is precisely why the permissive local-first stack added to
+`repos/foundations.md` this pass matters commercially:** `education-ai-suite` (Apache-2.0, OpenVINO,
+**with hardware benchmarking**) + `prometheus-eval` (Apache-2.0, open weights) + `rubric` (MIT)
+replaces recurring per-seat API spend with a one-time integration on hardware the client already
+owns. In a −26% funding market, "lower your run-rate and pass your audit" sells and "transform your
+institution" does not.
+
+⚠️ **The honest counterweight:** an 86% adoption figure counts *any* generative-AI use, including a
+teacher using a consumer chatbot unsanctioned. It is a measure of **diffusion, not of deployed
+institutional capability**, and the gap between the two is where the governance work lives. Do not
+quote 86% as 86% of institutions having a governed AI programme — they do not.
+
+## Opportunities by region — thirty-second-pass update, 2026-10-07
+
+### North America
+
+**Regulation turned from guidance into mandate, with dated deadlines.**
+
+- 🔴 **Ohio is the first state to require every K-12 district to adopt a formal AI use policy** —
+  either the state model or a locally developed policy aligned to it — **by 1 July 2026**.
+- **Oklahoma S.B. 1734** requires every district to adopt a written AI policy **before the 2027–28
+  school year**.
+- **~100 state bills in 2026** touch students' use of AI directly; **1,500+** AI-related bills were
+  introduced nationwide.
+- **Idaho S.B. 1227** — statewide K-12 AI framework, mandated local policies, AI-literacy standards,
+  educator training, data-privacy requirements, and an explicit prohibition on **AI replacing human
+  teachers**.
+- **California A.B. 1159** (proposed) — would bar student data from training AI models **unless
+  doing so directly benefits the school**.
+- **Oregon S.B. 1546** — design-feature requirements protecting minors, including measures reducing
+  **compulsive use** when the user is known or presumed to be a child.
+- **Virginia S.B. 394** — directs the state education agency to issue guidance including teacher
+  training.
+
+🟢 **The opportunity: policy-to-implementation, with a deadline attached.** Hundreds of districts
+must have a *written, defensible* AI policy by a fixed date, and a policy document alone does not
+satisfy it — someone has to show the tools in use match the policy. That is an inventory,
+a data-flow map, a control set and an evidence trail. 🔵 **A.B. 1159 and Idaho's data-privacy clause
+specifically favour the local-inference stack**: if student work never leaves district
+infrastructure, the "is our data training someone's model?" question answers itself, and
+`prometheus-eval`'s open weights plus `education-ai-suite`'s on-device pipelines are the
+implementation. ⚠️ **Oregon S.B. 1546 is the one that catches engagement teams off guard** — it
+regulates *engagement mechanics*, so an adaptive tutor with streaks and nudges can be a compliance
+problem in Oregon while being the product requirement everywhere else. `DeepTutor`'s proactive
+Heartbeat check-ins are exactly the pattern that needs review there.
+
+### EMEA
+
+**The hardest compliance regime, and this KB's thinnest repo shelf — second pass running.**
+
+- **EU AI Act: full enforcement by August 2026.** Adopted 2024, phased through 2026–27.
+- 🔴 **Education is HIGH-RISK under Annex III** where AI determines **access** (admissions), performs
+  **assessment** of learning outcomes, or influences a person's **educational path** — plus exam
+  scoring and proctoring. High-risk obligations attach **before deployment**: risk management, data
+  governance, human oversight, transparency, and **conformity assessment**.
+- **AI-literacy duty**: providers *and deployers* must ensure a sufficient level of AI literacy among
+  staff operating the systems.
+- Schools are now accountable for auditing their own AI use for safety, fairness and transparency.
+
+🟢 **The opportunity is conformity assessment as a delivery product, not a PDF.** Annex III makes
+grading and admissions the regulated core of edtech, which means the artefacts an engagement must
+produce are known in advance: a documented risk-management file, data-governance lineage, a
+demonstrable human-in-the-loop, and reproducible evidence for every automated decision. 🔵 **This is
+the direct commercial case for `rubric` (MIT) + `prometheus-eval` (Apache-2.0):** a weighted rubric
+held as a **data structure** rather than a prompt makes each scoring decision replayable and
+inspectable, which is what a conformity file needs; open evaluator weights mean the deployer can
+actually audit the model instead of citing a vendor. ⚠️ **And the AI-literacy duty is billable and
+usually forgotten** — it is a *legal obligation* with no technical deliverable, which maps onto the
+Spanish/English enablement assets on this shelf (`IA-PARA-TODOS`, Apache-2.0, added this pass;
+plus the Microsoft and Hugging Face courses already shelved).
+
+🔴 **The gap, stated as a gap:** searched for EUPL/Apache/BSD **EMEA-origin** education repos and
+found none this pass, for the second consecutive pass. Found only institutional news (Central
+European University × GitHub, April 2026, open AI teaching materials). **EMEA has the strictest
+requirements and the least local open-source supply** — the engagement will be built on Global repos
+configured for EU constraints, not on EU-origin code. Plan the sovereignty conversation accordingly.
+
+### APAC
+
+**The widest spread between national ambition and classroom reality — including one reversal.**
+
+- **China and the UAE are the only nations running compulsory, national AI curricula**, since the
+  2025–26 school year.
+- 🟢 **India is the largest single bet:** AI and computational thinking **mandatory from Class 3**
+  across government and private schools, backed by the **₹10,372 crore IndiaAI mission**. **DIKSHA**
+  (Ministry of Education digital public infrastructure) already ships AI for *inclusion*: keyword
+  search inside video, read-aloud for visually impaired students.
+- 🔴 **South Korea is the cautionary tale.** Seoul mandated AI textbooks from 2025; adoption sat
+  **below 30%** by March, and in **August the National Assembly stripped them of official textbook
+  status** after unions said the pace had outrun teacher preparation. Korea is also the **second
+  jurisdiction after the EU** to enact comprehensive AI legislation.
+- **Japan** moves slowly and deliberately: digital textbooks may gain official status **as early as
+  the 2030 school year**.
+- Market: ≈**$2.85B** in 2026; **$18.21B by 2033** on the 28.1% series. ⚠️ CAGR disputed (above).
+
+🟢 **The opportunity is teacher-readiness infrastructure, and Korea is the proof.** A national
+mandate failed at **under 30% adoption** not for lack of technology or funding but because
+preparation lagged — and the legislature then reversed it. That is the most actionable fact in this
+the region: the binding constraint on APAC AI-in-education is **teacher capability and
+trust, not product**. Engagements that lead with training, classroom-evidence collection and staged rollout
+survive; engagements that lead with a platform repeat Korea. 🔵 **India's DIKSHA is the better
+template and the better integration target** — it treats AI as *accessibility* (read-aloud,
+in-video search) rather than as replacement, which is both politically durable and technically
+modest. `project-sunbird/sunbird-lms-service` (MIT, the stack behind DIKSHA) is already on this
+shelf from pass 31, which makes this a buildable regional play rather than a thesis. ⚠️ **China and
+the UAE are curriculum-delivery opportunities but not open-source supply:** no permissively licensed
+APAC-origin education agent was added this pass, and `datawhalechina/hello-agents` — the notable
+APAC curriculum repo — is **CC BY-NC-SA 4.0, unusable in a client deliverable** (pass 31).
+
+### LATAM
+
+🟢 **Gap closed on supply this pass, and the real constraint is now named precisely: licences.**
+
+- **UNESCO IESALC: adoption is widespread across LAC higher education while governance lags.**
+- **UNESCO Observatory on AI in Education for Latin America and the Caribbean** convenes **33
+  Ministries of Education** and their learning ecosystems.
+- **Mexico: 73% of university students use AI for coursework**, while **over 80% of Mexican higher
+  education institutions have no clear normative framework** governing ethical or academic use.
+- **Chile leads on policy** — National AI Policy since 2021, with a law under discussion.
+- **Brazil and Colombia** have national AI strategies but **no education-sector-specific
+  regulation**.
+- 🟢 **Supply:** [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) — **MIT**, Universidad
+  Tecnológica de Pereira, Colombia: an Open-edX-native tutor agent for **rural** higher education,
+  with TTS, avatar and a teacher analytics panel.
+- 🔴 **But 3 of the 4 LATAM repos found this pass carry no licence at all**:
+  `a-bobadilla/Asistente-Pedagogico-IA` (Canvas, competency-based lesson planning, Spanish),
+  `henriquebotelhogomes/educacao` (Brazil — LangChain + Llama 3/Groq + Docling + Qdrant RAG tutor),
+  `virginiandujar/educa-ia`.
+
+🟢 **The opportunity: the 73%/80% inversion is a governance engagement with a number on it.** Nearly
+three quarters of Mexican students already use AI for coursework while four fifths of institutions
+have no framework — the demand has already happened and the institution is the part that is missing.
+Academic-integrity policy, assessment redesign that assumes AI availability, and a sanctioned
+institutional tool are the deliverables, and the Observatory's 33 ministries make this
+**procurable at ministry scale**, not one campus at a time. 🔵 **`TutorIA` is the credible regional
+reference**: Colombian, public-university, rural-first, MIT, and it demonstrates the Apache-2.0
+XBlock side-car shape against an AGPL Open edX core (`repos/foundations.md`). ⚠️ **And the licence
+finding is itself a service offering**: three LATAM teams shipped real, relevant work that **no
+client can legally use**. Getting a grant added upstream costs one file; it converts unusable
+regional work into a reusable asset, and it is the cheapest regional contribution Globant could
+make.
+
+### 🔵 Cross-region read, thirty-second pass
+
+| Region | Binding constraint | What to sell |
+|---|---|---|
+| North America | **dated policy mandates** (Ohio 1 Jul 2026) | policy→implementation evidence; local inference answers A.B. 1159 |
+| EMEA | **Annex III high-risk, Aug 2026** | conformity assessment as deliverable + the AI-literacy duty |
+| APAC | **teacher readiness** (Korea reversed at <30%) | training-led staged rollout; DIKSHA/Sunbird accessibility pattern |
+| LATAM | **governance vacuum** (73% use / 80% no framework) | ministry-scale policy + assessment redesign; `TutorIA` as reference |
+
+🔴 **One thing is true in all four regions and is the strongest claim this pass can make:** the
+regulated object is **assessment**. EU Annex III names it, US states legislate the student data that
+feeds it, Korea's reversal was about trusting it, and LATAM's vacuum is academic integrity in it.
+🟢 **A rubric held as auditable data, scored by weights the client controls, is therefore the single
+highest-leverage technical asset in this industry** — and as of this pass the permissive stack for
+it is complete and verified: `rubric` (MIT) + `prometheus-eval` (Apache-2.0) +
+`education-ai-suite` (Apache-2.0). ⚠️ Every number in this section is a **published estimate**, two
+of them disagree by 7 CAGR points, and none was measured first-hand.
+
 # Market Intelligence — Education
 
 ## Global market size

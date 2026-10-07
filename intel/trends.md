@@ -4,6 +4,131 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-second pass, 2026-10-07 — six trends, and the first one is a correction to how this KB reads a licence
+
+### T1 🔴 "It has a LICENSE file" stopped being a usable test
+
+[`murderszn/open-tutor`](https://github.com/murderszn/open-tutor) serves a 869-byte file at
+`main/LICENSE` whose text is: *"This repository has not declared a project-wide reuse license… A
+public GitHub repository is not itself a declaration of an open-source or open-content license."*
+**The file exists, is correctly named, returns 200, and refuses the grant.**
+
+🔵 **This is a new shape of licence signal and it will spread.** Maintainers are learning that
+silence gets misread as permission, so some now publish an explicit *refusal* in the place a licence
+would go — which is good practice that **breaks every existence-based scanner**, including the one
+this KB was using. Every prior licence defect recorded here moved a row between two real licences,
+where the error is a wrong *degree* of freedom; this one files an all-rights-reserved repo as
+licensed. 🟢 **The rule, generalised: existence is not the test — the grant is the test.** Paired with
+`P456` (a README's `- Apache (recommended) with mod_rewrite enabled` became "Apache-2.0, no copyleft
+obligations" in a secondary source), the discipline is now: **read the payload, identify the subject,
+and check the role the word is playing in the sentence.**
+
+### T2 🟢 The integration surface schools want is the gradebook, not the chat window
+
+Six MCP servers for **LMS gradebooks** — five Canvas, one Moodle — all MIT, each with a **different
+copyright holder**, all surfacing in the same window. Not a fork tree; six independent decisions.
+
+🔵 **Read it as a shift in where the value is believed to be.** A tutoring chatbot sits beside the
+institution's systems of record; a gradebook agent sits **inside** one. Grades are the institution's
+hardest data: they are contested, audited, appealed and legally consequential. Six people wiring
+agents to that API means the market's belief has moved from *"AI talks to students"* to **"AI
+operates the administrative machinery teachers actually lose time to."** ⚠️ **And nothing certifies
+the write path.** Tool counts span 3× (51 / 102 / 165), there is no shared schema, no conformance
+suite, and no agreement on whether a grade write is idempotent. **The absence of a standard here is
+itself the trend** — and the opening: whoever publishes a conformance suite for LMS gradebook agents
+defines the category. 🔴 Two repos circulated as part of this "all MIT" set have **no licence at
+all** (`CreveXTech/canvas-lms-mcp`, `DMontgomery40/mcp-canvas-lms`) — the blanket claim was wrong
+for 2 of 8.
+
+### T3 🟢 Local-first became a compliance strategy, not a privacy preference
+
+Three of four notable new learning workspaces this pass run inference on hardware the user owns:
+`zijinz456/OpenTutor` (10+ providers, **no API key required**), `LEARNableLabs/opentutor` (history
+stays on the machine), `open-edge-platform/education-ai-suite` (OpenVINO on Intel CPU/iGPU/NPU).
+
+🔵 **The driver is regulatory arithmetic, and it points the same way in two regions at once.** EU AI
+Act Annex III makes educational assessment **high-risk** with full enforcement from **August 2026**;
+California **A.B. 1159** would bar training on student data unless the school benefits; Idaho
+**S.B. 1227** mandates data-privacy requirements for AI tools in K-12. A stack where student work
+**never leaves the building** does not need a cross-border transfer argument, a sub-processor
+addendum, or a promise about model training — the questions do not arise. 🟢 **As of this pass the
+permissive version of that stack is complete and verified:** `education-ai-suite` (Apache-2.0,
+including **hardware benchmarking** — the question that decides affordability), `prometheus-eval`
+(Apache-2.0, **open evaluator weights**), `rubric` (MIT, rubrics as data). ⚠️ The constraint is
+capital expenditure and ops capability, and edtech funding is **down 26% YoY** — so the pitch is
+*run-rate reduction plus audit readiness*, not *transformation*.
+
+### T4 🔴 Adoption has saturated while capital retreated — the scissor defines the engagement
+
+**86%** of educational organisations have adopted generative AI, the **highest of any industry**;
+**86%** of students across 16 countries use AI in their studies; **60%** of US K-12 teachers used AI
+tools in 2024–25. Meanwhile edtech venture funding in H1 2026 was **$1B, down 26% YoY**, in smaller
+and more selective cheques.
+
+🔵 **There is no greenfield left to sell, and no budget for a speculative platform.** When adoption
+is near-universal, the remaining work is **consolidation, governance and proving value on what is
+already installed** — inventory, data-flow mapping, control sets, evidence trails, retiring
+redundant tools. ⚠️ **The honest reading of 86%:** it counts *any* generative-AI use, including a
+teacher using a consumer chatbot nobody sanctioned. It measures **diffusion, not governed
+institutional capability**, and the distance between those two is exactly the billable work. Do not
+let the number be quoted as 86% of institutions having an AI programme.
+
+### T5 🔴 A national mandate failed at under 30%, and the cause was teachers, not technology
+
+South Korea mandated AI textbooks from 2025. Adoption sat **below 30%** by March, and in **August the
+National Assembly stripped them of official textbook status** after unions argued the pace had
+outrun teacher preparation — this in the **second jurisdiction after the EU** to pass comprehensive
+AI legislation.
+
+🔵 **This is the most useful negative result available in this industry right now.** A wealthy,
+technically capable country with legislative will, a national curriculum and funding still failed —
+and failed *upward*, by legislative reversal, which is the expensive kind. The binding constraint
+was **teacher capability and trust**. 🟢 **The contrast case is India's DIKSHA**, which frames AI as
+**accessibility** (read-aloud for visually impaired students, keyword search inside video) rather
+than as substitution: politically durable, technically modest, and already running at national
+scale on `project-sunbird/sunbird-lms-service` (MIT, shelved pass 31). ⚠️ **Idaho S.B. 1227
+independently legislates the same lesson** — it explicitly prohibits AI from replacing human
+teachers. Two jurisdictions, two routes, one conclusion: **lead with augmentation and teacher
+preparation, or repeat Korea.**
+
+### T6 🔴 LATAM's constraint is licences, not output — 1 of 4 repos carries a grant
+
+Four LATAM education-AI repositories were found this pass. **One has a licence.**
+🟢 [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) — MIT, Universidad Tecnológica de
+Pereira, Colombia, Open-edX-native, rural-first, closes pass 31's declared LATAM gap. 🔴 The other
+three publish **no grant**: `a-bobadilla/Asistente-Pedagogico-IA` (Canvas, competency-based lesson
+planning), `henriquebotelhogomes/educacao` (Brazil, LangChain + Llama 3/Groq + Docling + Qdrant),
+`virginiandujar/educa-ia`.
+
+🔵 **This reframes the regional story this KB has been telling.** Earlier passes recorded LATAM as
+thin on supply; measured repo by repo, **the work exists and is relevant — it is simply unusable.**
+That is a different problem with a much cheaper fix: a grant is one file. ⚠️ It compounds with the
+governance vacuum on the demand side (Mexico: **73%** of university students using AI for coursework
+against **over 80%** of institutions having no normative framework) — unusable local supply *and*
+absent local policy, while usage is already near-universal. 🟢 **The lowest-cost high-visibility
+regional contribution available: get licences onto LATAM education repos.** It converts existing
+regional work into reusable assets and is the kind of upstream act that is remembered.
+
+### 🔵 What this pass did NOT establish
+
+- ⚠️ **No star counts, no momentum measurement.** Three channels measured, three **403**: `curl -sI`
+  on github.com, `curl` **GET** on github.com, `api.github.com`. Every trend above is read from
+  licence payloads, repository documents and secondary sources — **not** from growth data. Any claim
+  here about something "gaining traction" rests on *independent appearance in the same window*, not
+  on measured stars.
+- 🔴 **EMEA supply gap unresolved, second consecutive pass.** No EMEA-origin permissively licensed
+  education repo found. EMEA has the strictest regime (Annex III, August 2026) and the thinnest
+  local open-source supply on this shelf.
+- ⚠️ **APAC growth rate is genuinely disputed** — **35.3%** vs **28.1%** CAGR from two houses with
+  different base years and scopes. Recorded as a range, deliberately not averaged.
+- 🔵 **Two tutoring systems are paper-only**, no code located: `LEA` (arXiv:2607.13370) and the
+  multi-agent tutoring latency/cost study (arXiv:2604.24110).
+- 🔴 **`formalms/formalms` effective licence is still unknown.** Established only that **no grant is
+  published in the repository** (16 filenames × 3 branches, all 404) and that the "Apache 2.0" claim
+  in a secondary source traces to a **web-server requirement line**. Its Docebo lineage is **GPL**,
+  the opposite of the claim — but this pass did not confirm Forma's own terms, only that the
+  repository publishes none.
+
 # Trends — Education, October 2026
 
 ## 1. Purpose-built beats general-purpose

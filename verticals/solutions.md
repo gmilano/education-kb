@@ -4,6 +4,103 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-second pass, 2026-10-07 — the Open edX licence split, and a platform claim that was a web server
+
+**Licences read from payload on `raw.githubusercontent.com`, 2026-10-07.** No star counts:
+`api.github.com` **403**, github.com landing pages **403** on both HEAD and GET.
+
+### 🔵 Open edX, stated as two licences instead of one
+
+This shelf has carried Open edX for many passes as a single "platform" row. It is **two licences**,
+and the split decides the architecture of every engagement on it. Both halves read from payload this
+pass:
+
+| Layer | Repo | Licence (payload) | Bytes | Commercial consequence |
+|---|---|---|---|---|
+| Core platform | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🟡 **AGPL-3.0** | 35136 | Network copyleft. **Self-hosting for a client is fine.** Redistributing a modified platform, or running a modified one as your own service, is a licence event |
+| Extension point | [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 **Apache-2.0** | 11357 (`master/LICENSE.TXT`) | Permissive. This is the surface an agent plugs into — and the surface your deliverable can keep proprietary |
+
+🟢 **So the customisation menu for Open edX is not a matter of preference:**
+
+1. **Agent as an XBlock** — Apache-2.0 extension point, the platform stays untouched. 🟢 Preferred.
+2. **Agent as an external service** over Open edX APIs — no copyleft contact at all. 🟢 Preferred.
+3. **Fork `edx-platform` to embed the agent** — 🔴 takes AGPL-3.0 onto the whole deliverable.
+
+🔵 **[`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) (MIT, Colombia, added this pass) is a
+working instance of shape 1–2**: an MIT tutor agent with TTS, avatar and a teacher analytics panel
+living inside an Open edX deployment at Universidad Tecnológica de Pereira, without taking on the
+platform's licence. **It is the first Open edX AI reference on this shelf that is both LATAM-origin
+and permissively licensed.**
+
+⚠️ **This is the same plugin/side-car boundary pass 30 called this KB's best-evidenced architectural
+rule, now with a third and fourth instance:** `peancor/moodle-mcp-server` (MIT *because* it sits
+outside GPL-3.0 Moodle), `Jawadh-Salih/moodle-mcp-server` (MIT, Moodle side-car, added this pass),
+and now the Apache-2.0 XBlock point against the AGPL-3.0 Open edX core. 🟢 **Four independent
+instances: when the platform is copyleft and the deliverable must not be, the AI goes outside the
+tree and talks over an API.**
+
+### Platforms added and re-confirmed this pass
+
+| Platform | Repo | Licence (payload) | Region | Role |
+|---|---|---|---|---|
+| Intel Education AI Suite | [`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite) | 🟢 **Apache-2.0** (11350 B) | Global | Not an LMS — the **AI layer you put on top of one**. Smart Classroom (multimodal session capture → summarisation) and Teaching Assistant (voice-first), on OpenVINO pipelines for Intel CPU / iGPU / NPU, **with benchmarking tools to size the hardware**. 🔵 The only row on this shelf that answers "what will this cost to run on-prem?" |
+| Sakai | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** (11120 B) | Global | Apereo-stewarded academic LMS. 🟢 Payload re-read this pass: *"consists of the Apache 2.0 license, modified…"* — **permissive, stays on the allowlist** |
+| OpenEduCat | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 **LGPL-3.0** (8241 B) | Global | K-12-native **LMS + SIS + fees + parent app on one database**, on the Odoo stack. 🟢 Genuinely LGPL, re-read this pass — **independently corroborates pass 28's negative half**, so the dynamic-linking path for this component is real |
+
+🔵 **Why `education-ai-suite` belongs on the *verticals* shelf and not only with the agents.** Every
+other AI row here assumes an API you pay per call. This one assumes **hardware you already own**, and
+ships the benchmarking to prove which hardware suffices. For a school district or a public
+university — the buyers in this industry — that converts an unbounded recurring cost into a
+one-time, sizeable, budgetable capital line. With edtech funding **down 26% YoY**
+(`intel/market.md`), that is the difference between a project that gets approved and one that does
+not.
+
+### 🔴 `P456` — Forma LMS: the "Apache 2.0" platform claim was a web-server requirement
+
+A secondary source presented **Forma LMS** as *"built for corporate teams that specifically need
+Apache 2.0 permissive licensing … an open-source fork of Docebo with Apache 2.0 license, so modified
+versions deploy and distribute without the copyleft obligations GPL and AGPL carry."* Probed
+first-hand:
+
+- [`formalms/formalms`](https://github.com/formalms/formalms) publishes **no licence payload**.
+  `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENSE.TXT`, `LICENCE`, `COPYING`, `COPYING.txt`,
+  `license.txt`, `licence.txt`, `docs/LICENSE` and six more names all **404** across `master`,
+  `main` and `develop`. The repository is real (`master/README.md` **200**).
+- The **only** occurrence of "Apache" in that README is an install prerequisite:
+  **`- Apache (recommended) with mod_rewrite enabled`.**
+
+🔴 **A web server in a requirements list became a licence grant, and then became a commercial
+conclusion.** The claimed consequence — "deploy and distribute without the copyleft obligations GPL
+and AGPL carry" — is exactly what someone would write if they believed *Apache httpd* meant
+*Apache-2.0*. ⚠️ Forma LMS's upstream Docebo lineage is **GPL**, the opposite of the claim. **This
+pass did not establish Forma's own effective licence** — only that **the repository publishes no
+grant**, which is sufficient to keep it out of a deliverable until someone establishes otherwise.
+
+🔵 **The generalisable rule for this shelf, and it applies to every row here.** *Apache*, *nginx*,
+*MIT* and *BSD* are each simultaneously the name of a licence and the name of something that is not
+a licence. **A licence family appearing in a README's requirements, install or stack section is not
+a licence claim.** Combined with pass 30's subject-model finding, the gate is now two questions:
+**who is the subject of this licence claim, and what role is the word playing in the sentence?**
+Both must be answered before a cell on this shelf is used as a commercial answer.
+
+### 🔴 `P453` / `P454` / `P458` — a correction that affects this shelf's own history
+
+`openedx/XBlock` — a real, correctly licensed Apache-2.0 repository already on this shelf — was
+returned **`ABSENT`** by this KB's prober. Three defects stacked:
+
+- **`P453`** `raw.githubusercontent.com` is **case-sensitive**; XBlock's licence is `LICENSE.TXT`
+  (caps extension), which was not in the probe list. Negative control:
+  `pykt-team/pykt-toolkit/main/LICENSE` **200**, `…/license` **404**, `…/LiCeNsE` **404**.
+- **`P454`** the existence fallback probed only `README.md`; XBlock ships **`README.rst`**.
+- **`P458`** XBlock's **own README links a licence path that 404s** (lowercase `LICENSE.txt`).
+  `pyproject.toml` is the tiebreaker: `license = "Apache-2.0"`,
+  `license-files = ["LICENSE.TXT"]`.
+
+⚠️ **Every one of these errs toward deleting a true row**, reported as a 404 — the silent direction.
+🔵 **Any `ABSENT` verdict recorded in this KB before this pass should be re-probed** with the
+corrected filename list before it is acted on, especially for `.rst`-documented and Python-packaging
+projects, where `P453` and `P454` land together.
+
 # Vertical Platforms — Education
 
 Real, deployed education systems that can be customised and extended with AI —

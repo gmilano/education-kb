@@ -4,6 +4,200 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-second pass, 2026-10-07 — three recipes: P38, P39, P40
+
+**Every repo named below had its licence read from its own payload on `raw.githubusercontent.com`
+on 2026-10-07.** No star counts (`api.github.com` **403**, github.com **403** on HEAD and GET), so
+these recipes are composed on **licence and documented capability**, not on popularity. Durations are
+**estimates for a Globant squad**, not measurements.
+
+---
+
+## P38 — The auditable grader: rubric-as-data, scored on hardware the client owns
+
+🔵 **The problem.** EU AI Act **Annex III** makes AI that assesses learning outcomes **high-risk**,
+with full enforcement from **August 2026**: risk management, data governance, human oversight,
+transparency and a **conformity assessment**, all *before* deployment. In the US, California
+**A.B. 1159** would bar student data from training models unless the school benefits, and Idaho
+**S.B. 1227** mandates data-privacy requirements for K-12 AI tools. A grader built on a frontier API
+with the rubric inside a prompt satisfies none of it: the decision is not reproducible, the criteria
+are not inspectable, and student work left the building.
+
+🟢 **The recipe.** Three permissive components, all verified this pass:
+
+| Component | Repo | Licence (payload) | Job in the stack |
+|---|---|---|---|
+| Rubric store | [`paper-instruments/rubric`](https://github.com/paper-instruments/rubric) | **MIT** (1076 B) | Weighted rubric as a **data structure**, provider-agnostic — the auditable criteria |
+| Scorer | [`prometheus-eval/prometheus-eval`](https://github.com/prometheus-eval/prometheus-eval) | **Apache-2.0** (10141 B) | Rubric-conditioned LLM-as-judge with **open evaluator weights** |
+| Runtime + sizing | [`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite) | **Apache-2.0** (11350 B) | OpenVINO pipelines on Intel CPU/iGPU/NPU, **plus benchmarking to size the hardware** |
+| Gradebook write | one of the six MIT MCP servers (**P39**) | **MIT** | Return the grade to the system of record |
+
+**Wiring.**
+
+1. Author each assessment's rubric in `rubric` as weighted criteria — **versioned in git**. This is
+   the artefact a conformity assessment asks for, and the reason it must not be a prompt string.
+2. Size the deployment with `education-ai-suite`'s **benchmarking** tools before buying anything:
+   decide CPU vs iGPU vs NPU against real throughput for the cohort size.
+3. Score with `prometheus-eval` against the rubric, **on the client's own hardware**. Open weights
+   mean the deployer can audit the evaluator rather than cite a vendor attestation.
+4. Persist, for every scored submission: rubric **version**, per-criterion score, model and weights
+   **version**, and the reviewing human's decision. This tuple *is* the transparency and
+   human-oversight evidence.
+5. Gate on a human. Under Annex III the human must be able to **override and have that recorded** —
+   so the override path is a product requirement, not a UX nicety.
+6. Write back through the MCP server of P39 — never directly against the gradebook API.
+
+⚠️ **Scope discipline that keeps you out of the high-risk band entirely.** Annex III attaches to
+assessment that determines **access**, evaluates **learning outcomes**, or shapes an **educational
+path**. **Formative** feedback that never contributes to a grade of record is a materially lighter
+regime. 🟢 [`baker-jr-john/automated-summary-evaluation-llm`](https://github.com/baker-jr-john/automated-summary-evaluation-llm)
+(**MIT**, Llama 3.1 8B, validated on middle-school informational summaries) is the reference for the
+formative-only shape — and the only component on this shelf tested against real K-12 student
+writing. **Ship formative first, summative second**, and the first release carries a fraction of the
+compliance load.
+
+⏱️ **Estimate: 8–10 weeks.** 2 for rubric modelling with the client's assessment leads, 2 for
+hardware sizing and the OpenVINO deployment, 3 for the scoring pipeline plus the evidence store,
+2 for the human-review UI and override trail, 1 for the conformity-file handover.
+🔵 **Sells in EMEA on Annex III, and in North America on A.B. 1159 / S.B. 1227.** Same build.
+
+---
+
+## P39 — The gradebook agent, pinned: pick one of six MIT MCP servers and prove the write path
+
+🔵 **The problem.** Six independent MIT MCP servers for LMS gradebooks appeared in one window
+(`agents/top.md`), each by a **different author**. They are the fastest route to an agent that does
+the administrative work teachers actually lose time to. ⚠️ **But none of them is a standard**: tool
+counts span **3×** (51 / 102 / 165), there is no shared schema, no conformance suite, and no
+agreement on whether a grade write is **idempotent**. And two repos circulated as part of the same
+"all MIT" set have **no licence at all**.
+
+🟢 **The recipe — choose by audit surface, not by tool count.**
+
+| If the engagement needs | Pick | Licence |
+|---|---|---|
+| The widest write surface (gradebook history, rubrics, admin workflows) | [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | **MIT** (© Christian Bru) |
+| Packaged workflows — bulk grading of 10+ submissions as a first-class skill | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | **MIT** (© Vishal Sachdev) |
+| Spanish-language delivery team, HTTP transport + Swagger | [`CharlieCardenasToledo/mcp-canvas-server`](https://github.com/CharlieCardenasToledo/mcp-canvas-server) | **MIT** (© Charlie Cárdenas Toledo) |
+| 🟢 **The smallest surface to audit line-by-line before it gets credentials** | [`mtgibbs/canvas-lms-mcp`](https://github.com/mtgibbs/canvas-lms-mcp) | **MIT** (© mtgibbs) |
+| **Moodle**, not Canvas | [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server) | **MIT** (© Jawadh) |
+
+🔴 **Do NOT use** [`CreveXTech/canvas-lms-mcp`](https://github.com/CreveXTech/canvas-lms-mcp) or
+[`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) — **no licence
+payload** under 12 probed filenames. Public is not a grant.
+
+**Wiring.**
+
+1. **Pin the commit, not the tag.** None of the six has a stability guarantee; a tool rename
+   mid-engagement is a silent break.
+2. **Run the P37 two-reader licence gate** on the chosen repo before it reaches a client branch.
+3. **Build the conformance suite that does not exist.** Against a **staging course**, assert for
+   every write tool: a repeated write is idempotent; a partial failure does not half-apply; a grade
+   write is rejected when the submission is missing; an unauthorised scope fails closed. 🔵 **This
+   suite is the deliverable's most reusable asset** — it survives switching servers, and nobody in
+   this cluster has published one.
+4. **Read-only credentials until the suite is green.** Grades are contested, audited and appealed;
+   an agent that silently mis-writes one is a legal problem, not a bug.
+5. **Keep it a side-car.** For Moodle this is a licence requirement, not a style choice: the MCP
+   server stays **outside** the GPL-3.0 tree and talks over the API.
+6. **Log every write** with actor, tool, version and before/after value. Feeds P38's evidence store.
+
+⏱️ **Estimate: 4–6 weeks.** 1 for selection + licence gate, 2 for the conformance suite against
+staging, 1–2 for agent wiring and the audit log, 1 for supervised rollout to a pilot cohort.
+🔴 **Do not skip step 3 to save two weeks.** It is the only thing separating this from an agent with
+write access to the institution's most consequential data and no test for what it does.
+
+---
+
+## P40 — Offline-capable local tutor for a connectivity-constrained region
+
+🔵 **The problem.** LATAM demand is already near-universal while institutions are not: **73%** of
+Mexican university students use AI for coursework, and **over 80%** of Mexican higher-education
+institutions have **no normative framework** (`intel/market.md`). Rural deployments add bandwidth
+and cost limits, and funding is **down 26% YoY** — so per-call API pricing is the wrong shape
+regardless of policy.
+
+🟢 **The recipe.**
+
+| Component | Repo | Licence (payload) | Job |
+|---|---|---|---|
+| Reference implementation | [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) | **MIT** (© 2026 Grupo Sirius) | Open-edX-native tutor for **rural** Colombian higher ed: TTS voice, avatar, teacher analytics, context persistence |
+| Platform | [`openedx/XBlock`](https://github.com/openedx/XBlock) on Open edX | 🟢 **Apache-2.0** (`LICENSE.TXT`) | The **permissive** extension point — see the licence note below |
+| Local workspace | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | **MIT** (© Zijin Zhang) | Runs **locally**, 10+ providers, **no API key**: FSRS spaced repetition, knowledge graph, cognitive-load detection |
+| Local inference + sizing | [`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite) | **Apache-2.0** | OpenVINO on commodity Intel hardware, **with benchmarking** |
+| Spanish enablement | [`0xnavarro/IA-PARA-TODOS`](https://github.com/0xnavarro/IA-PARA-TODOS) | **Apache-2.0** | Spanish-language teaching substrate for staff and student onboarding |
+
+🔴 **The licence constraint that decides the build.** `openedx/edx-platform` is **AGPL-3.0** (35136 B,
+read this pass); `openedx/XBlock` is **Apache-2.0** (11357 B, `master/LICENSE.TXT`). **Build the
+agent as an XBlock or as an external service** and the AGPL stays on a platform the client
+self-hosts. **Fork `edx-platform` to embed it and AGPL-3.0 attaches to the whole deliverable.**
+🟢 `TutorIA` is a working instance of the permissive shape, which is why it anchors this recipe.
+
+**Wiring.**
+
+1. Start from `TutorIA`'s shape — it already solved the hard parts for this context: voice output for
+   low-literacy and low-bandwidth use, an avatar for face-to-face expectation, and a **teacher**
+   analytics panel. ⚠️ Note it ships pointed at a hosted model API; **swapping the language engine
+   for a local one is the main integration work**, not a bonus.
+2. Size with `education-ai-suite`'s benchmarking, then run inference locally. Capital cost replaces
+   per-call cost — the only shape that survives a −26% funding market.
+3. Use `OpenTutor` for the **offline study loop** (FSRS spaced repetition, knowledge graph) so the
+   student keeps working when the link drops; sync when it returns.
+4. Deliver the **governance artefacts alongside the software** — academic-integrity policy,
+   assessment redesign that assumes AI availability, staff AI-literacy training in Spanish via
+   `IA-PARA-TODOS`. 🔵 In LATAM this is not an add-on: **80%+ of institutions have no framework**, so
+   the policy is the differentiator and the software is the easy half.
+5. **Lead with augmentation, never substitution.** Korea mandated AI textbooks, reached **under
+   30%** adoption, and the National Assembly **stripped their official status** in August after
+   union pushback. Idaho **S.B. 1227** legislates the same conclusion from the other direction by
+   prohibiting AI from replacing teachers. 🟢 India's **DIKSHA** is the durable model — AI as
+   **accessibility** (read-aloud, in-video search) — and runs on
+   `project-sunbird/sunbird-lms-service` (MIT), already on this shelf.
+
+⏱️ **Estimate: 10–12 weeks.** 2 for `TutorIA` assessment and local-model substitution, 2 for
+hardware sizing and deployment, 3 for Open edX/XBlock integration and the offline sync loop, 2 for
+governance artefacts and Spanish enablement, 2 for a teacher-led pilot with evidence collection.
+
+⚠️ **The reusability caveat, stated plainly.** Three of the four LATAM repos found this pass carry
+**no licence** — `a-bobadilla/Asistente-Pedagogico-IA`, `henriquebotelhogomes/educacao` (Brazil),
+`virginiandujar/educa-ia`. Relevant work exists that **no client can legally use**, so this recipe
+is built on **one** verified LATAM component plus Global ones. 🟢 **The cheapest upstream
+contribution available to Globant in this industry: help those teams add a grant.** It is one file,
+and it converts regional work into reusable regional assets.
+
+---
+
+### 🔵 Cross-cutting gate update — `P455` and `P456` join the licence-reliability checks
+
+Both findings below belong to the **P22 / P22.5 / P37** family of licence gates and apply to every
+recipe on this shelf:
+
+- 🔴 **`P455` — existence is not the grant.** [`murderszn/open-tutor`](https://github.com/murderszn/open-tutor)
+  serves a 869-byte `main/LICENSE` that **declares no licence**: *"A public GitHub repository is not
+  itself a declaration of an open-source or open-content license."* **Add to the gate: read the
+  payload's grant, never just its HTTP status.**
+- 🔴 **`P456` — check the word's role, not just its presence.** [`formalms/formalms`](https://github.com/formalms/formalms)
+  publishes **no licence payload**; the only "Apache" in its README is
+  **`- Apache (recommended) with mod_rewrite enabled`** — a **web server** in a requirements list,
+  which a secondary source converted into "Apache 2.0 … without the copyleft obligations GPL and
+  AGPL carry." **Add to the gate: a licence family in a requirements/install/stack section is not a
+  licence claim.**
+- 🔴 **`P457` — de-duplicate on the licence copyright holder, not the README hash.**
+  `algenlab/adaptive-tutor` is a **renamed** fork of `zijinz456/OpenTutor` with an **edited** README
+  (different md5), so hash comparison passes it through; its `LICENSE` still reads
+  **© Zijin Zhang**. **Add to the gate: before shelving a repo as new, compare its licence holder
+  against every repo already shelved.**
+- 🔴 **`P459` — a holder must be a party, not a clause.** The long-form licences name *copyright*
+  inside their own body, so an unrestricted scrape returns `owner or entity authorized by` for every
+  Apache-2.0 payload and **merges two unrelated repos as a fork pair**. **Add to the gate: read the
+  holder from the payload's head region only, and reject clause fragments.** Instrument and suite:
+  `compose/code/licence-grant-gate/` (`47/47` offline, `12/12` live).
+- ⚠️ **`P453` / `P454` / `P458` — re-probe old `ABSENT` verdicts.** `raw.githubusercontent.com` is
+  **case-sensitive**, `.rst` projects were invisible to the README fallback, and a repo's own README
+  can link a licence path that 404s. All three produced a false `ABSENT` on `openedx/XBlock`, a real
+  Apache-2.0 repo already on this shelf. **These defects delete true rows silently** — any
+  pre-pass-32 `ABSENT` should be re-checked before it is relied on.
+
 # Compose Patterns — Education
 
 Concrete recipes built only from repos verified in `agents/top.md`,

@@ -4,6 +4,204 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — thirty-second pass: 33 repos probed, and the LATAM gap pass 31 declared is now closed
+
+⏱️ **Measurement window 2026-10-07, reference date `2026-10-07`.** 33 repositories probed
+first-hand against `raw.githubusercontent.com`. **16 are permissively licensed and buildable**
+(11 MIT, 5 Apache-2.0); **10 have no licence payload at all**; **1 has a `LICENSE` file that is an
+explicit refusal to grant a licence**; **3 are forks of something already counted**.
+
+**Method, and what changed in it.** This pass re-confirmed the environment constraints pass 31
+recorded and then found that the prober built on them was wrong in four ways. `curl -sI` on a
+github.com landing page returns **403**; `curl` **GET** on the same page also returns **403**; and
+`api.github.com` returns **403**. All three were re-measured this pass. So
+`raw.githubusercontent.com` remains the only verification channel, and **no star counts were read
+this pass** — the cells say so rather than carrying an inferred number. A **negative control**
+(`totally-fake-org-zzz9/nope-repo-abc`) returned `ABSENT` in the same run that returned the 200s
+below, which is what makes those 200s evidence rather than a proxy artefact.
+
+### 🟢 New this pass — buildable, licence read from payload
+
+| Repo | Licence (read from payload) | ★ | Region | What it is |
+|---|---|---|---|---|
+| [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) | **MIT** (`main/LICENSE`, 1068 B, "© 2026 Grupo Sirius") | not read this pass | LATAM | 🟢 **Closes pass 31's LATAM gap.** Autonomous tutor agent for **rural** higher education in Risaralda, **Colombia** (Universidad Tecnológica de Pereira). Runs **inside Open edX**, Claude API as the language engine, TTS audio replies, animated avatar, teacher statistics panel, context persistence across sessions. Bilingual ES/EN README. First subjects: Programación I (Python), Introducción a la Matemática. |
+| [`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite) | **Apache-2.0** (`main/LICENSE`, 11350 B) | not read this pass | Global | Intel's education suite: reference applications, libraries, microservices and **benchmarking** tools, with audio/video pipelines accelerated by **OpenVINO** on Intel CPU/iGPU/NPU. Two workflows: **Smart Classroom** (multimodal session processing + summarisation) and **Teaching Assistant** (voice-first study help). 🔵 **The benchmarking half is the unusual part** — it is the only repo on this shelf that ships hardware-selection tooling, which is what an on-prem school deployment actually has to answer. |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | **MIT** (`main/LICENSE`, 1068 B, "© 2026 Zijin Zhang") | not read this pass | Global | Block-based adaptive learning workspace that runs **locally**: upload material → notes, quizzes, flashcards, adaptive tutor. **FSRS** spaced repetition, knowledge graphs, cognitive-load detection, 10+ LLM providers, no API key required. **Canonical** — see the de-duplication note below. |
+| [`LEARNableLabs/opentutor`](https://github.com/LEARNableLabs/opentutor) | **MIT** (`main/LICENSE`, 1079 B, "© 2026 OpenTutor Contributors") | not read this pass | Global | 🔵 **A different project that happens to share the name.** One topic a day, **Socratic** — asks before explaining, targets what you keep getting wrong, re-surfaces concepts days later in new contexts. Local-first, learning history stays on the machine. |
+| [`paper-instruments/rubric`](https://github.com/paper-instruments/rubric) | **MIT** (`main/LICENSE`, 1076 B, "© 2025 The LLM Data Company") | not read this pass | Global | Python library for LLM evaluation against **weighted rubrics**, provider-agnostic. The missing primitive for assessment work: a rubric as a data structure instead of a prompt. |
+| [`prometheus-eval/prometheus-eval`](https://github.com/prometheus-eval/prometheus-eval) | **Apache-2.0** (`main/LICENSE`, 10141 B) | not read this pass | Global | Rubric-conditioned LLM-as-judge with open evaluator weights. Pairs with `rubric` above: one holds the rubric, the other scores against it **without** sending student work to a frontier API. |
+| [`baker-jr-john/automated-summary-evaluation-llm`](https://github.com/baker-jr-john/automated-summary-evaluation-llm) | **MIT** (`main/LICENSE`, 1070 B, "© 2026 John Baker Jr.") | not read this pass | North America | Rubric-aligned **formative** feedback on middle-school informational summaries using **Llama 3.1 8B**. Proof-of-concept scale, but it is the only row here validated against actual K-12 student writing. |
+| [`0xnavarro/IA-PARA-TODOS`](https://github.com/0xnavarro/IA-PARA-TODOS) | **Apache-2.0** (`main/LICENSE`, 11470 B) | not read this pass | LATAM | Spanish-language open-source AI collection — applications, tutorials, resources. Teaching substrate for Spanish-speaking cohorts, not a runtime. |
+
+### 🟢 The Canvas/Moodle MCP cluster — six independent MIT implementations, not six forks
+
+A blanket secondary-source claim that *"all of these projects are open-source and MIT-licensed"*
+was **checked repo by repo, and it is wrong for two of eight.**
+
+| Repo | Licence (read from payload) | Holder | Note |
+|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | **MIT** (1070 B) | Vishal Sachdev | ~102 tools + 8 agent skills; bulk grading of 10+ submissions |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | **MIT** (1069 B) | Christian Bru | TypeScript, ~165 tools; grade, comment, gradebook history, admin workflows |
+| [`CharlieCardenasToledo/mcp-canvas-server`](https://github.com/CharlieCardenasToledo/mcp-canvas-server) | **MIT** (1080 B) | Charlie Cárdenas Toledo | ~51 tools, `stdio` + Streamable-HTTP with Swagger; ships a **`README.es.md`** |
+| [`caleb-media-studio/canvas-mcp`](https://github.com/caleb-media-studio/canvas-mcp) | **MIT** (1065 B) | Caleb Mau | self-hosted, student + educator facing |
+| [`mtgibbs/canvas-lms-mcp`](https://github.com/mtgibbs/canvas-lms-mcp) | **MIT** (1063 B) | mtgibbs | grades, assignments, academic data |
+| [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server) | **MIT** (1062 B) | Jawadh | **Moodle**, not Canvas; student-facing |
+| [`CreveXTech/canvas-lms-mcp`](https://github.com/CreveXTech/canvas-lms-mcp) | 🔴 **NO LICENCE PAYLOAD** | — | repo real (`README.md` 200), no grant under 12 probed filenames |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 🔴 **NO LICENCE PAYLOAD** | — | repo real, no grant under 12 probed filenames |
+
+🔵 **Why the six matter as a signal rather than as six rows.** Every one carries a **different
+copyright holder**, so these are independent re-implementations, not a fork tree. Six people
+independently built the same bridge — *an agent that reads and writes a real gradebook* — in the
+same window. That is the clearest demand signal in this pass: the integration surface schools
+actually want agents pointed at is **the LMS gradebook API**, not a chat window. ⚠️ **It also means
+none of them is a standard.** Tool counts differ by 3× (51 / 102 / 165) and nothing certifies what a
+"grade" write does. Pick one and pin it; do not treat them as interchangeable.
+
+⚠️ **`CharlieCardenasToledo/mcp-canvas-server` ships Spanish documentation**, which makes it the most
+LATAM-ready of the cluster. But a Spanish README and a Spanish personal name are **not** evidence of
+origin, and no repository metadata was readable this pass (`api.github.com` 403). Filed **Global** in
+the frontmatter; the Spanish-language asset is recorded in prose. **Do not promote it to LATAM on the
+strength of a name** — that is an inference, and inferences become wrong data.
+
+### 🔁 De-duplication — three of this pass's candidates were forks, and one hid it
+
+| Fork | Canonical | What gave it away |
+|---|---|---|
+| [`adity982/OpenTutor`](https://github.com/adity982/OpenTutor) | `zijinz456/OpenTutor` | `README.md` **byte-identical** (md5 `620be84c…`, 11807 B) and `LICENSE` reads **© Zijin Zhang** |
+| [`algenlab/adaptive-tutor`](https://github.com/algenlab/adaptive-tutor) | `zijinz456/OpenTutor` | 🔴 **README md5 DIFFERS** (12562 B vs 11807 B) — renamed and edited. Caught by `LICENSE` reading **© Zijin Zhang**, plus a residual `alt="OpenTutor Logo"` in its own README |
+| [`wiwaszko-intel/education-ai-suite`](https://github.com/wiwaszko-intel/education-ai-suite) | `open-edge-platform/education-ai-suite` | identical README md5 (`804f0ed1…`, 2709 B) **and the fork's own README links home** to `open-edge-platform` |
+
+🔴 **`P457` — README-hash de-duplication misses a renamed fork.** `algenlab/adaptive-tutor`
+presents under a different project name with an edited README, so the md5 check that caught
+`adity982` passes it through. The invariant that still holds is the **licence copyright holder**:
+a fork almost never rewrites the `LICENSE` copyright line, because doing so is the one edit that
+looks like theft. **De-duplicate on the licence holder, not on the README hash.** Pass 31 caught its
+fork by a release badge pointing home — same family of signal, and `wiwaszko-intel` confirms it
+again. Three passes, three forks: this is a standing failure mode, not an incident.
+
+### 🔴 Four defects found in this shelf's own verification instrument
+
+All four were found by running the prober against repos whose correct answer was already known. Each
+one, left unfixed, **deletes or mis-files a true row** — the expensive direction of error.
+
+| ID | Defect | Proof | Cost if unfixed |
+|---|---|---|---|
+| **`P453`** | `raw.githubusercontent.com` paths are **case-sensitive**, and a probe list without `LICENSE.TXT` misses real licences | `pykt-team/pykt-toolkit`: `LICENSE` **200**, `license` **404**, `LiCeNsE` **404**. `openedx/XBlock` licence lives at **`master/LICENSE.TXT`** (11357 B, Apache-2.0) | 🔴 XBlock — a real, correctly-licensed Apache-2.0 repo **already on this shelf** — came back `ABSENT`. A pass that trusted that would have deleted a good row as a 404 |
+| **`P454`** | existence fallback probed only `README.md`; `.rst` projects look non-existent | `openedx/XBlock` has `master/README.rst` **200**, `README.md` **404** | same false-delete, by a second independent route |
+| **`P455`** | 🔴 **a `200` on a `LICENSE` path is not a grant** | [`murderszn/open-tutor`](https://github.com/murderszn/open-tutor) `main/LICENSE` is 200 and 869 B, and its text reads: *"This repository has not declared a project-wide reuse license… A public GitHub repository is not itself a declaration of an open-source or open-content license."* | an existence-only probe files an **all-rights-reserved** repo as licensed and it reaches a client deliverable |
+| **`P458`** | a repo's own README can link a licence path that **404s** | `openedx/XBlock` README links `…/blob/master/LICENSE.txt`; the actual file is `LICENSE.TXT`. `pyproject.toml` settles it: `license = "Apache-2.0"`, `license-files = ["LICENSE.TXT"]` | a link-following verifier reports "licence missing" on a correctly licensed repo |
+
+🟢 **`P455` is the one that pays for this pass.** It is the inverse of every other licence defect
+this KB has recorded: previous corrections moved a row between two real licences, where the worst
+case is a wrong *degree* of freedom. Here the file exists, is named `LICENSE`, is served `200`, and
+says **no**. Existence was never the test — **the grant is the test.**
+
+### 🔴 `P456` — a licence family named in a README may be a web server, not a licence
+
+A secondary source stated that **Forma LMS** *"is an open-source fork of Docebo with Apache 2.0
+license, so modified versions deploy and distribute without the copyleft obligations GPL and AGPL
+carry."* Probed first-hand:
+
+- [`formalms/formalms`](https://github.com/formalms/formalms) has **no licence payload** — `LICENSE`,
+  `LICENSE.txt`, `LICENSE.md`, `LICENSE.TXT`, `COPYING`, `COPYING.txt`, `licence.txt`,
+  `license.txt`, `docs/LICENSE` and eight more names all **404** on `master` and `main`.
+- The **only** occurrence of "Apache" in its `README.md` is a server requirement:
+  **`- Apache (recommended) with mod_rewrite enabled`.**
+
+🔴 **The claim is a category error with a dollar sign on it.** *Apache httpd*, a web server in an
+install prerequisites list, became *Apache-2.0*, a licence grant — and the sentence then asserted the
+exact commercial conclusion that error would produce ("no copyleft obligations"). The payload grants
+**nothing**. ⚠️ Forma LMS's upstream Docebo lineage is **GPL**, which is the opposite of the claim;
+this pass did not establish Forma's own effective licence, only that **no grant is published in the
+repository**, and that is enough to keep it out of a deliverable. 🔵 **The generalisable rule: a
+licence family inside a README's *requirements* section is not a licence claim.** Apache, nginx, MIT
+and BSD are all simultaneously the names of licences and the names of things that are not licences.
+
+### 🟢 Re-confirmations — four shelf rows re-read from payload, none moved
+
+| Repo | Payload | Verdict |
+|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `main/LICENSE`, 11408 B | 🟢 **Apache-2.0**, unchanged |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master/LICENSE`, 11120 B | 🟢 **ECL-2.0** ("consists of the Apache 2.0 license, modified…") — corroborates the lineage reading pass 30 published |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `master/LICENSE`, 8241 B | 🟢 **LGPL-3.0**, genuinely LGPL — **corroborates pass 28's negative half** ("four rows are genuinely LGPL and did not move") from an independent run |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | `master/LICENSE.TXT`, 11357 B | 🟢 **Apache-2.0** — the shelf row was right; only the *instrument* was wrong (`P453`/`P454`/`P458`) |
+
+⚠️ **`openedx/edx-platform` is `AGPL-3.0`** (`master/LICENSE`, 35136 B, read this pass). Open edX's
+*core platform* is network-copyleft, while `XBlock` — the extension point an agent plugs into — is
+Apache-2.0. 🔵 **That asymmetry is the whole architecture argument for Open edX work:** build the
+agent as an XBlock or an external service against Apache-2.0 surfaces, and the AGPL stays where it
+already is, on a platform the client self-hosts rather than redistributes. This is the same in-tree
+vs side-car boundary pass 30 recorded for `peancor/moodle-mcp-server` against GPL-3.0 Moodle.
+
+### 🟢 The instrument is now code with a suite — `compose/code/licence-grant-gate/`
+
+Everything above is reproducible rather than asserted:
+
+```
+python3 compose/code/licence-grant-gate/test_grant_gate.py   # 47 checks, offline
+```
+
+🟢 **`47/47` green offline, and `12/12` live cases reproduce the verdicts in this section.** Each of
+`P453`–`P459` carries a **negative control** proving the original defect is still detectable — a
+suite that only records today's behaviour guards nothing. `probe_repo`'s transport is injectable, so
+the suite needs no network and cannot silently pass because of a proxy.
+
+🔴 **`P459` — and this one is a defect in that instrument's own first draft, found by running it
+live instead of reading it.** The long-form licences contain the word *copyright* inside their **own
+body** (Apache-2.0's "Legal Entity" definition, AGPL-3.0's section 2), so an unrestricted holder
+scrape returned clause fragments as parties:
+
+| Repo | Licence | "Holder" before the fix |
+|---|---|---|
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | Apache-2.0 | `owner or entity authorized by` |
+| [`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite) | Apache-2.0 | `owner or entity authorized by` |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | AGPL-3.0 | `on the software, and (2) offer` |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 | `information, please see the COPYRIGHT file` |
+
+🔴 **Two unrelated Apache-2.0 repositories therefore shared a "holder", and the `P457` fork check
+would have merged them as a fork pair** — a false **positive**, which is worse than the miss `P457`
+was created to fix, because it deletes a real project as a duplicate. ⚠️ **Note what nearly
+happened: the fix for one defect introduced another in the same pass.** Fixed by restricting the
+notice to the payload's head region and requiring the captured string to look like a party rather
+than a clause. 🟢 The long-form licences now correctly return **no holder** — a bare Apache-2.0 or
+GPL grant names no party — while MIT/BSD notices still resolve, so `algenlab/adaptive-tutor` is
+still caught live as **© Zijin Zhang**.
+
+🔵 **Pre-registered for pass 33.** `P453` and `P454` mean **any `ABSENT` verdict recorded in this KB
+before this pass may be a false negative**, most likely for `.rst`-documented and Python-packaging
+projects where both defects land together. The next pass should re-run `probe_repo` over every
+`ABSENT` in the corpus and publish the diff. ⚠️ **This pass did not do that**, and reporting the
+corpus as clean would be a fabricated negative.
+
+### 🔵 Declared gaps — searched, nothing found, written down
+
+- 🟢 **LATAM — gap CLOSED this pass.** Pass 31 declared *"no new open-source education agent repo
+  this window."* [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) is MIT, Colombian,
+  Open-edX-native and verified from payload. Searched in Spanish and Portuguese;
+  three further LATAM candidates were found and **all three are unusable for lack of a grant**:
+  [`a-bobadilla/Asistente-Pedagogico-IA`](https://github.com/a-bobadilla/Asistente-Pedagogico-IA)
+  (Canvas LMS competency-based lesson planning, ES),
+  [`henriquebotelhogomes/educacao`](https://github.com/henriquebotelhogomes/educacao) (Brazil;
+  Advanced RAG tutor on LangChain + Llama 3/Groq + Docling + Qdrant),
+  [`virginiandujar/educa-ia`](https://github.com/virginiandujar/educa-ia). ⚠️ **The LATAM pattern is
+  not absence of work — it is absence of licences.** 1 of 4 LATAM repos found this pass carries a
+  grant. That is the regional constraint worth naming to a client, and it is cheap to fix upstream.
+- 🔴 **EMEA — gap STILL OPEN, second consecutive pass.** Searched for EUPL / Apache / Nordic /
+  Germany / France education agents. Found institutional activity (Central European University's
+  April 2026 GitHub collaboration on open AI teaching materials) but **no EMEA-origin
+  permissively-licensed education agent repository**. The EUPL public-sector tier that pass 28 made
+  machine-readable produced **no new rows** this pass. This is an informed gap, not coverage.
+- 🔴 **`Latam-GPT` still has no locatable repository.** Re-checked `latam-gpt/latam-gpt`,
+  `cenia-chile/latam-gpt`, `CENIA-Chile/LatamGPT` — unchanged from pass 31. Licence and
+  composability remain **unverified**; do not shelve it as buildable.
+- ⚠️ **No star counts anywhere this pass** — `api.github.com` **403**, github.com landing pages
+  **403 on both HEAD and GET**. Three channels measured, three closed. Every `★` cell above says
+  "not read this pass" by construction, not by omission.
+- 🔵 **No repo found for two tutoring systems that have papers.** `LEA` (Learning Engagement
+  Assistant, arXiv:2607.13370, cross-course classroom evaluation) and the multi-agent tutoring cost
+  study (arXiv:2604.24110) are both **paper-only** in this window — no code located. Recorded so a
+  later pass does not re-spend the search.
+
 # Trending Agents — Education
 
 ## 2026-10-07 — thirty-first pass: six new repos verified, and only two of them are ours to build on

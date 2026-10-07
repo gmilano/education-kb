@@ -4,6 +4,96 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-second pass, 2026-10-07 — the Open edX licence asymmetry, stated precisely
+
+**Licences read from each repo's own payload on `raw.githubusercontent.com`, 2026-10-07.** No star
+counts: `api.github.com` **403**, github.com landing pages **403 on both HEAD and GET** — three
+channels measured, three closed.
+
+### 🔵 The one thing to know before quoting an Open edX engagement
+
+This shelf has carried Open edX components for many passes without stating the licence split in one
+place. Both halves were read from payload this pass:
+
+| Layer | Repo | Licence (payload) | Bytes | What it means commercially |
+|---|---|---|---|---|
+| Core platform | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🟡 **AGPL-3.0** | 35136 | Network copyleft. Fine to **self-host for a client**; a licence event if you redistribute a modified platform or expose it as a modified service you own |
+| Extension point | [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 **Apache-2.0** | 11357 (`master/LICENSE.TXT`) | Permissive. The surface an agent plugs into, and the surface you can keep proprietary |
+
+🟢 **The architecture follows from the table, not from taste.** Build the agent **as an XBlock, or as
+an external service talking to Open edX over its APIs**, and the AGPL stays confined to a platform
+the client self-hosts. Fork `edx-platform` to embed the agent and you have taken on AGPL-3.0 for the
+whole deliverable. [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) (MIT, Colombia, added
+to `agents/top.md` this pass) is a working instance of the permissive shape: an MIT tutor agent
+living inside an Open edX deployment without touching the platform's licence.
+
+⚠️ **This is the same in-tree vs side-car boundary** this KB recorded for `peancor/moodle-mcp-server`
+(MIT, *because* it sits outside the GPL-3.0 Moodle tree) and for `Jawadh-Salih/moodle-mcp-server`
+(MIT, added this pass). 🔵 **Three independent instances now: the licence boundary *is* the
+integration boundary.** When the platform is copyleft and the agent must not be, the agent goes
+outside the tree and talks over an API. That is not a workaround — it is the design.
+
+### Foundations added this pass
+
+| Repo | Licence (payload) | Region | Role |
+|---|---|---|---|
+| [`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite) | 🟢 **Apache-2.0** (11350 B) | Global | Intel's education reference stack: libraries, microservices and **benchmarking** tools over **OpenVINO**, targeting Intel CPU / iGPU / NPU. 🔵 **The only foundation on this shelf that answers "what hardware does this need?"** — the question that decides whether an on-prem school deployment is affordable |
+| [`prometheus-eval/prometheus-eval`](https://github.com/prometheus-eval/prometheus-eval) | 🟢 **Apache-2.0** (10141 B) | Global | Rubric-conditioned evaluator with **open weights**. The piece that lets assessment scoring run on infrastructure the client controls, instead of posting student work to a frontier API |
+| [`paper-instruments/rubric`](https://github.com/paper-instruments/rubric) | 🟢 **MIT** (1076 B, © 2025 The LLM Data Company) | Global | Weighted rubrics as a **data structure**, provider-agnostic. Makes a grading decision reproducible and auditable after the fact — which is what a conformity assessment asks for |
+
+🔵 **Why these three belong on the *foundations* shelf rather than with the agents.** None of them is
+an education product. Each is a layer underneath one, and together they close the gap this shelf has
+had all along: **an education deliverable that must not send student data to a third party now has a
+complete permissive stack** — `education-ai-suite` for the accelerated local inference and the
+hardware sizing, `prometheus-eval` for open-weight scoring, `rubric` for the auditable criteria.
+That stack is the direct technical answer to EU AI Act Annex III and to the US state student-data
+statutes catalogued in `intel/market.md` this pass.
+
+### 🔴 Correction to this shelf's verification instrument — `P453`, `P454`, `P458`
+
+**`openedx/XBlock` was returned `ABSENT` by this KB's own prober**, and it is a real repository,
+correctly licensed Apache-2.0, already on this shelf. Three independent defects produced that one
+false negative:
+
+- **`P453`** — `raw.githubusercontent.com` paths are **case-sensitive**. Proven by negative control:
+  `pykt-team/pykt-toolkit/main/LICENSE` **200**, `…/license` **404**, `…/LiCeNsE` **404**. XBlock's
+  licence file is **`LICENSE.TXT`** — caps extension — which was not in the probe list.
+- **`P454`** — the existence fallback probed only `README.md`. XBlock ships **`README.rst`**
+  (200; `README.md` 404), so the fallback also reported it missing.
+- **`P458`** — XBlock's **own README links a licence path that 404s**
+  (`…/blob/master/LICENSE.txt`, lowercase extension). A verifier that follows the README's link
+  concludes "licence missing" on a correctly licensed repo. `pyproject.toml` is the tiebreaker:
+  `license = "Apache-2.0"`, `license-files = ["LICENSE.TXT"]`.
+
+⚠️ **The direction of this error is the expensive one.** Every defect here turns a **true row into a
+deletion**. This KB has spent many passes guarding against *over*-claiming a licence; `P453`/`P454`
+are the first recorded defects that destroy correct rows instead, and they would do it silently,
+reported as a 404. 🔵 **Any `ABSENT` verdict recorded in this KB before this pass should be
+re-probed with the corrected name list before it is acted on** — in particular for `.rst`-documented
+and Python-packaging repos, where both defects land together.
+
+### 🟢 Re-reads this pass — two foundations re-confirmed from payload
+
+| Repo | Payload | Verdict |
+|---|---|---|
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master/LICENSE`, 11120 B | 🟢 **ECL-2.0**. Payload opens *"Educational Community License, Version 2.0 … consists of the Apache 2.0 license, modified…"* — corroborates pass 30's lineage reading **from the payload text itself**, and the row stays on the permissive allowlist |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `master/LICENSE`, 8241 B | 🟢 **LGPL-3.0**, genuinely LGPL. Payload: *"published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3 … Since the LGPL is a set of additional permissions on top of the GPL…"*. **Independently corroborates pass 28's negative half** — the linking conversation for this component is real, and the linking exception is really there |
+
+🔵 **The `openeducat` re-read is worth more than a tick.** Pass 28 corrected seven rows `LGPL → GPL-2.0`
+and kept four as genuinely LGPL; that correction inverted a commercial answer, so the negative half
+needed independent confirmation rather than trust. One of the four is now confirmed by a separate
+run, with the payload's own words. The remaining three are **not** re-measured here.
+
+### 🔴 Declared gap — EMEA foundations, second consecutive pass
+
+Searched for EUPL / Apache / BSD education foundations of EMEA origin (Germany, France, Nordics,
+EU public sector). **Nothing new found.** Institutional activity exists — Central European
+University announced a GitHub collaboration in April 2026 on open AI teaching materials — but it
+produced **no repository with a verified permissive grant** in this window. The EUPL public-sector
+tier that pass 28 made machine-readable gained **zero rows** this pass. ⚠️ **This is an informed
+gap, not coverage**, and it is now two passes old: EMEA is the region where this KB's shelf is
+thinnest while being the region with the hardest compliance requirements (`intel/market.md`).
+
 # Foundational Repos — Education
 
 Infrastructure Globant can build an education solution *on top of*. These are not

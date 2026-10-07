@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — thirty-second pass: the gradebook, not the chat window
+
+> **Append-only.** Newest dated section on top; history preserved below.
+
+**Method unchanged and re-measured:** licences read from payload on `raw.githubusercontent.com`;
+`curl -sI` and `curl` GET on github.com landing pages both **403**; `api.github.com` **403**.
+**No star counts this pass.** Negative control `totally-fake-org-zzz9/nope-repo-abc` → `ABSENT` in
+the same run as the 200s below. 33 repos probed; **16 buildable, 10 with no grant, 1 explicit
+non-grant, 3 forks.**
+
+### Trending this pass — 6 independent Canvas/Moodle gradebook MCP servers
+
+🔵 **The signal is the cluster, not any one row.** Six MCP servers for LMS gradebooks, each with a
+**different copyright holder**, all MIT, all in the same window. This is not a fork tree and not one
+project's momentum — it is six people independently deciding that the thing worth wiring an agent to
+is **the gradebook write API**.
+
+| Repo | Licence (payload) | Signal | Region | Why it matters |
+|---|---|---|---|---|
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | **MIT** (© 2026 Christian Bru) | ~165 tools — widest of the cluster | Global | TypeScript. Covers gradebook history, rubrics and admin workflows, not just reads. The most complete surface if you need write paths |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | **MIT** (© 2025 Vishal Sachdev) | ~102 tools + **8 agent skills** | Global | The only one shipping packaged *skills* rather than only tools — bulk grading of 10+ submissions as a first-class workflow |
+| [`CharlieCardenasToledo/mcp-canvas-server`](https://github.com/CharlieCardenasToledo/mcp-canvas-server) | **MIT** (© 2025 Charlie Cárdenas Toledo) | ~51 tools, `stdio` + HTTP/Swagger | Global | 🔵 Ships **`README.es.md`**. ⚠️ Spanish docs ≠ LATAM origin; **filed Global on purpose** |
+| [`caleb-media-studio/canvas-mcp`](https://github.com/caleb-media-studio/canvas-mcp) | **MIT** (© 2026 Caleb Mau) | self-hosted focus | Global | Explicitly unofficial and self-hosted — the deployment shape a privacy-constrained district can actually approve |
+| [`mtgibbs/canvas-lms-mcp`](https://github.com/mtgibbs/canvas-lms-mcp) | **MIT** (© 2025 mtgibbs) | smallest surface | Global | 🟢 Cheapest to **audit line-by-line** before it gets gradebook credentials. For a first engagement that is a feature, not a limitation |
+| [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server) | **MIT** (© 2026 Jawadh) | **Moodle**, not Canvas | Global | The only Moodle entry in the cluster. Side-car outside Moodle's GPL-3.0 tree |
+
+⚠️ **Do not treat these as interchangeable.** Tool counts span **3×** (51 → 165), and nothing in the
+cluster certifies what a grade *write* does: no shared schema, no conformance suite, no agreement on
+whether a write is idempotent. Pin one, pin its version, and test the write path on a staging course
+before it sees a real gradebook. 🔴 **And two repos presented alongside these as part of the same
+"all MIT" set are not licensed at all** — [`CreveXTech/canvas-lms-mcp`](https://github.com/CreveXTech/canvas-lms-mcp)
+and [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) have **no
+licence payload** under 12 probed filenames. The blanket claim was wrong for **2 of 8**.
+
+### Also trending — local-first learning workspaces
+
+| Repo | Licence (payload) | Signal | Region | Why it matters |
+|---|---|---|---|---|
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | **MIT** (© 2026 Zijin Zhang) | canonical of a 3-repo name cluster | Global | Block-based adaptive workspace running **locally**, FSRS spaced repetition + knowledge graph + cognitive-load detection, 10+ LLM providers, **no API key**. The "no data leaves the machine" shape |
+| [`LEARNableLabs/opentutor`](https://github.com/LEARNableLabs/opentutor) | **MIT** (© 2026 OpenTutor Contributors) | distinct project, same name | Global | Socratic, one topic a day, spaced re-exposure in new contexts. Local-first |
+| [`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite) | **Apache-2.0** | Intel, canonical org | Global | OpenVINO-accelerated Smart Classroom + Teaching Assistant **plus benchmarking tools** for CPU/iGPU/NPU hardware selection |
+| [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) | **MIT** (© 2026 Grupo Sirius) | 🟢 **closes the LATAM gap** | LATAM | Open-edX-native tutor for **rural** Colombian higher education (U.T. Pereira), Claude API, TTS, avatar, teacher analytics |
+
+🔵 **"Local-first" stopped being a privacy slogan this window and became a licence-and-compliance
+strategy.** Three of the four rows above run inference on hardware the client owns. Read against
+`intel/market.md`: EU AI Act Annex III makes education assessment **high-risk** with full
+enforcement from **August 2026**, and US states are legislating student-data limits (California
+A.B. 1159 would bar training on student data unless the school benefits). A stack that never
+transmits student work is not a nice-to-have — **it is the cheapest route through both regimes**, and
+`education-ai-suite` + `prometheus-eval` + `rubric` (all added to `repos/foundations.md` this pass)
+is now a complete permissive version of it.
+
+### 🔁 Three forks de-duplicated — and one did not look like a fork
+
+| Fork | Canonical | Tell |
+|---|---|---|
+| [`adity982/OpenTutor`](https://github.com/adity982/OpenTutor) | `zijinz456/OpenTutor` | README **byte-identical** (md5 `620be84c…`, 11807 B); `LICENSE` reads **© Zijin Zhang** |
+| [`algenlab/adaptive-tutor`](https://github.com/algenlab/adaptive-tutor) | `zijinz456/OpenTutor` | 🔴 **renamed, README edited** (12562 B, different md5) — the hash check **passes it through**. Caught by `LICENSE` **© Zijin Zhang** and a leftover `alt="OpenTutor Logo"` |
+| [`wiwaszko-intel/education-ai-suite`](https://github.com/wiwaszko-intel/education-ai-suite) | `open-edge-platform/education-ai-suite` | README identical (md5 `804f0ed1…`, 2709 B) **and the fork's own README links home** to `open-edge-platform` |
+
+🔴 **`P457` — de-duplicate on the licence copyright holder, not the README hash.** A renamed fork with
+an edited README defeats hash comparison, but almost never rewrites the `LICENSE` copyright line —
+that is the one edit that looks like theft. **Three passes, three forks** (pass 31 caught one by a
+release badge pointing home; this pass caught one the same way and one by the holder line). This is
+a standing failure mode of repo discovery, not an incident, and the holder line is the invariant
+that has held every time.
+
+### 🔵 Declared gaps
+
+- 🟢 **LATAM — CLOSED.** `LabSirius/TutorIA` (MIT, Colombia). ⚠️ But **3 of 4** LATAM repos found this
+  pass have **no licence**: `a-bobadilla/Asistente-Pedagogico-IA` (Canvas competency-based lesson
+  planning, ES), `henriquebotelhogomes/educacao` (Brazil, LangChain + Llama 3/Groq + Docling +
+  Qdrant RAG tutor), `virginiandujar/educa-ia`. **The LATAM constraint is licences, not output.**
+- 🔴 **EMEA — STILL OPEN, second consecutive pass.** No EMEA-origin permissively-licensed education
+  repo found. Institutional news only (CEU × GitHub, April 2026). Informed gap, not coverage.
+- 🔴 **`Latam-GPT` repo still not locatable** — `latam-gpt/latam-gpt`, `cenia-chile/latam-gpt`,
+  `CENIA-Chile/LatamGPT` all unresolved, unchanged from pass 31. Not buildable until a repo is found.
+- 🔵 **Two tutoring systems are paper-only this window, no code located:** `LEA` (Learning
+  Engagement Assistant, arXiv:2607.13370) and the multi-agent tutoring latency/cost study
+  (arXiv:2604.24110). Recorded so a later pass does not re-spend the search.
+- ⚠️ **No star counts.** Three channels measured, three closed (`-sI` 403, GET 403, API 403).
+
 # Trending Repos — Education
 
 ## 2026-10-07 — thirty-first pass: the trending shelf this window is curriculum, not runtime
