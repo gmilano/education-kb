@@ -3858,6 +3858,77 @@ POM with no licence from a POM that was rate-limited — retry before recording 
 87** repositories the registry channel has nothing to say at all, because a project that publishes no
 package has no metadata to read.
 
+## `P-GRANT-ENUMERATION` step 8 — twenty-seventh pass: classify with BOTH classifiers, because neither is a superset
+
+🔵 **Added 2026-10-07.** Steps 1–7 above answer *"is there a grant, and whose is it?"* — and they
+answer it well: 15 of 87 rejected components recovered. **This step answers "what does it say?",
+and the measurement behind it is that this repository cannot answer that with one tool.**
+
+⚠️ **Step 3 classifies each payload with `p436/sweep_payload.py:family_of`. That function has no
+NonCommercial axis.** Step 7's `dep_licence.py` does carry a `NONCOMMERCIAL` verdict, but it
+classifies a **dependency string**, not a licence **payload** — so nothing in steps 1–7 can see a
+non-commercial restriction in a repository's own `LICENSE` file.
+
+```sh
+# 8. CLASSIFY WITH BOTH, on the same bytes, and reconcile  (P445 / trend 64)
+compose/code/p445-classifier-divergence/divergence.py
+#    lib/license_family.sh  -> osi_family_of + commercial_use_ok   (NC, Elastic, PolyForm)
+#    p436/sweep_payload.py  -> family_of                           (EUPL, MPL-not-GPL)
+#    over 412 LICENSED roots: AGREE 369 · VOCABULARY 25 · PYTHON-UNKNOWN 13 · NC-ERASED 5
+```
+
+### 🔴 Why one classifier is not enough, measured over 412 payloads
+
+| Case | `family_of` (Python, step 3) | `lib/license_family.sh` | Who is right |
+|---|---|---|---|
+| **NonCommercial** (5 rows) | 🔴 erased to `CC-BY` | 🟢 `CC-BY-NC-*`, commercial `NO` | **shell** |
+| **Elastic / PolyForm** (3) | 🔴 `UNKNOWN` | 🟢 named | **shell** |
+| **EUPL** (9) | 🟢 `EUPL` | 🔴 `UNCLASSIFIED` | **Python** |
+| **MPL read as GPL** (4) | 🟢 `MPL-2.0` | 🔴 `GPL-3.0` | **Python** |
+| **GPLv2 read as LGPL** (4) | 🔴 `LGPL` | 🟢 `GPL-2.0` | **shell** |
+
+🔵 **Each was hardened against the defect the other still has.** Step 7's note above — *"probe EUPL,
+then MPL and EPL, then the GNU family"* — is the Python classifier's fix, and the shell classifier
+never received it. The shell classifier gained the NC axis in pass 101 (`P312`, 21/21) and the
+source-available families in pass 82, and the Python one never received those.
+⚠️ **43 of 412 (10.4%) are wrong in one of the two, and which one depends on the family.**
+
+### 🔴 The eight rows this step exists to catch before they reach a bid
+
+A shelf filtered for *redistributable* components on step 3's output **includes all five of these**,
+because all five report as plain `CC-BY` — a licence that permits commercial use:
+
+| Repo | Actually | What it is |
+|---|---|---|
+| [`facebookresearch/seamless_communication`](https://github.com/facebookresearch/seamless_communication) | **CC-BY-NC-4.0** | multilingual speech — the top hit for "open source multilingual speech" |
+| [`openstax/osbooks-biology-bundle`](https://github.com/openstax/osbooks-biology-bundle) | **CC-BY-NC-SA-4.0** | open textbook content |
+| [`sign/translate`](https://github.com/sign/translate) | **CC-BY-NC-SA-4.0** | sign-language translation |
+| [`Yunfeng-Wan/CSTutorBench`](https://github.com/Yunfeng-Wan/CSTutorBench) | **CC-BY-NC-4.0** | CS-tutoring benchmark |
+| [`Jona-Zwetsloot/Somtoday-Mod`](https://github.com/Jona-Zwetsloot/Somtoday-Mod) | **CC-BY-NC-SA-4.0** | NL SIS client |
+
+Plus three that bar commercial use with **no `NC` token at all**:
+[`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) and
+[`sodadata/soda-core`](https://github.com/sodadata/soda-core) (**Elastic**),
+[`digillab-lmu/smart-rag`](https://github.com/digillab-lmu/smart-rag) (**PolyForm**) —
+source-available, not OSI. **11 of 412 root payloads restrict commercial use; step 3 flags none.**
+
+### 🟢 Two rules for the write-up
+
+1. **Report the commercial axis separately from the family.** `P250` built them as two independent
+   axes, and `commercial_use_ok` is the one answering the question a client is actually asking.
+   Searching for `NC` inside a family *name* misses the Elastic and PolyForm rows entirely — and
+   matches `UNCLASSIFIED`, which contains those letters.
+2. **Name the classifier beside the verdict.** *"MIT, per `lib/license_family.sh` on
+   `LICENSE@HEAD`"* is auditable; *"MIT"* is not, and on this shelf it is wrong once in ten.
+
+### What step 8 adds to the scoping
+
+| | |
+|---|---|
+| **Cost** | under an hour on top of steps 1–7 — both classifiers already exist and it needs **no network** |
+| **Changes** | the **redistributable** count, which is the number a bid is built on: 11 of 412 move from "usable" to "not billable" |
+| **Controls** | `compose/code/p445-classifier-divergence/` — **22 offline**, on top of the 70 between `p440` and `p441` |
+| **Sells hardest in** | **EMEA**, where the 9 EUPL rows the shell cannot name are the public-sector tier and the AI Act already imposes documentation duty; and in any engagement that redistributes modified source |
 ## `P-FAMILY-QUALIFIER` — read the licence QUALIFIER before you bid, because the family does not carry the answer
 
 **Added in the twenty-eighth pass of 2026-10-07.** This is the pattern that would have caught every

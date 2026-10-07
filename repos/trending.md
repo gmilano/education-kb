@@ -155,6 +155,126 @@ re-imported one pass later into a from-scratch instrument (`p432`, third occurre
 
 ---
 
+## 2026-10-07 — twenty-seventh pass: five non-commercial repositories were on the permissive side of the shelf, and the root file is complete 92% of the time
+
+⏱️ **Measurement window 2026-10-07 ~09:00 → 12:30 UTC, reference date passed explicitly.**
+Instruments: `compose/code/p444-root-vs-tree-family/`, `p445-classifier-divergence/`,
+`p446-pinned-parent-chain/` — **71 offline controls, all passing.** Full narrative in
+`agents/trending.md`; this section carries the **supply** reading.
+
+⚠️ **This pass ran concurrently with pass 26 and keeps only what survives comparison with it** —
+two corrections to pass 26's published rows, one measurement it did not make, one action it
+pre-registered.
+
+### 🔴 Five repositories on the redistributable side of this shelf forbid commercial use
+
+Both of this KB's licence classifiers, run over the **same bytes** of all 412 `LICENSED` root
+payloads:
+
+| Slug | `family_of` (used by `p436`/`p441`/`p444`) | `lib/license_family.sh` |
+|---|---|---|
+| [`facebookresearch/seamless_communication`](https://github.com/facebookresearch/seamless_communication) | 🔴 `CC-BY` | 🟢 **CC-BY-NC-4.0** |
+| [`openstax/osbooks-biology-bundle`](https://github.com/openstax/osbooks-biology-bundle) | 🔴 `CC-BY` | 🟢 **CC-BY-NC-SA-4.0** |
+| [`sign/translate`](https://github.com/sign/translate) | 🔴 `CC-BY` | 🟢 **CC-BY-NC-SA-4.0** |
+| [`Yunfeng-Wan/CSTutorBench`](https://github.com/Yunfeng-Wan/CSTutorBench) | 🔴 `CC-BY` | 🟢 **CC-BY-NC-4.0** |
+| [`Jona-Zwetsloot/Somtoday-Mod`](https://github.com/Jona-Zwetsloot/Somtoday-Mod) | 🔴 `CC-BY` | 🟢 **CC-BY-NC-SA-4.0** |
+
+⚠️ **All five collapse to `CC-BY`, which permits commercial use.** A shelf filtered for
+redistributable rows on that output includes all five. 🟢 `agents/top.md` already calls the first a
+*"hard reject for anything billable"*; the instrument could not see it.
+
+🔴 **And three more rows restrict commercial use without an `NC` token:**
+[`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) and
+[`sodadata/soda-core`](https://github.com/sodadata/soda-core) are **Elastic**, and
+[`digillab-lmu/smart-rag`](https://github.com/digillab-lmu/smart-rag) is **PolyForm** — all three
+**source-available, not OSI**, and all three reported `UNKNOWN` by `family_of`. **11 of 412 root
+payloads bar commercial use; the Python classifier flags none of them.**
+
+### 🔵 Neither classifier is a superset — each is blind where the other sees
+
+| Case | Python `family_of` | Shell `license_family.sh` | Right |
+|---|---|---|---|
+| NonCommercial (5) | 🔴 erased | 🟢 named | **shell** |
+| Elastic / PolyForm (3) | 🔴 `UNKNOWN` | 🟢 named | **shell** |
+| **EUPL (9)** | 🟢 `EUPL` | 🔴 `UNCLASSIFIED` | **Python** |
+| MPL read as GPL (4) | 🟢 `MPL-2.0` | 🔴 `GPL-3.0` | **Python** |
+| GPLv2 read as LGPL (4) | 🔴 `LGPL` | 🟢 `GPL-2.0` | **shell** |
+
+🔴 **43 of 412 root families (10.4%) are wrong in one of the two**, and which one depends on the
+family. **The supply verdict for this shelf requires consulting both** — now step 8 of
+`P-GRANT-ENUMERATION`. 🔵 The **9 EUPL** rows the shell cannot name are the Finnish and European
+public-sector tier, which is also the tier `p444`'s skew column flags.
+
+### 🟢 The root licence file is complete for 92% of the shelf — and where it is not, it is a documentation grant
+
+Pass 26's action A, executed over all **412 `LICENSED`** rows with a blobless tree enumeration:
+
+| Verdict | n | share |
+|---|---|---|
+| `ROOT-ONLY` | **323** | 78.4% |
+| `BUNDLED-ONLY-EXTRA` — extras all vendored | **54** | 13.1% |
+| `TREE-AGREES` | **26** | 6.3% |
+| 🔴 `TREE-ADDS` — an own text names a new family | **9** | 2.2% |
+
+🟢 **Prediction's number holds (9 > 5).** 🔴 **Its interesting class is empty: 0 of 412 are
+permissive-root with copyleft deeper in.** Two run the other way (copyleft root, permissive below).
+
+🔵 **Five of the nine are a code licence beside a content licence** — `LICENSE-CODE`,
+`LICENSE-docs`, `docs/LICENSE`, `docs-site/LICENSE` — which is correct hygiene, not risk.
+
+🔴 **The row that matters: [`microsoft/autogen`](https://github.com/microsoft/autogen)**, on this
+KB's core shelf, has a root `LICENSE` of **CC-BY-4.0** and its **code** grant in `LICENSE-CODE`
+(**MIT**). ⚠️ **A rooted probe returns a content licence as the licence of a software project.**
+🟢 Already recorded in `agents/top.md` — **1 of the 9 was known, 8 are new.**
+
+Also new to the shelf: [`ankitects/anki`](https://github.com/ankitects/anki) AGPL-3.0 + CC-BY docs ·
+[`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) AGPL-3.0 + MIT docs ·
+[`SapuSeven/BetterUntis`](https://github.com/SapuSeven/BetterUntis) GPL + Apache-2.0 ·
+[`mlcommons/croissant`](https://github.com/mlcommons/croissant) Apache-2.0 + MIT ·
+[`Opetushallitus/ehoks`](https://github.com/Opetushallitus/ehoks) EUPL + Unlicense ·
+[`yongsoojoo/esd2026-agent-workflow`](https://github.com/yongsoojoo/esd2026-agent-workflow) MIT +
+CC-BY docs.
+
+### 🔴 The dependency ladder is monotone only if you take the parent at its latest release
+
+Pass 26's `p442` published **334.5 d** for the pinned depth-2 tier. Walking the chain **pinned the
+whole way** — the dependency list of the depth-1 version this shelf actually pins — gives **97 d**,
+so depth 2 is **younger** than depth 1's 220 d.
+
+| | `p442` latest-parent | **`p446` pinned-parent** |
+|---|---|---|
+| rows | 344 edges / 276 pkgs | **891 edges / 410 pkgs** |
+| median pinned age | **334.5 d** | 🟢 **97 d** |
+| `EXACT` share / median | 21% / 49 d | 11% / 🔴 **1,553 d** |
+| `CAPPED` share / median | 56% / 🔴 **694 d** | 58% / 62 d |
+
+🔵 **The two disagree about which class carries the staleness, and both are right about their own
+corpus.** `puppeteer-core` pinned at **13.5.0** (2022) alone contributes 24 of the 100 `EXACT` rows,
+dragging in `rimraf 3.0.2` (**+2,199 d**) and `https-proxy-agent 5.0.0` (**+2,313 d**).
+
+⚠️ **`P446`: every leg of a measured chain is a parameter.** The unstated one here is worth **3.4×**.
+🟢 **Depth 1 stays the number to quote** — the only tier both chains agree is worth measuring, and
+the only one a client's manifest controls. Trend 63 corrected in place.
+
+### 🟢 Corrected in place: `cs341-illinois/coursebook` is NCSA, not MIT
+
+Pass 26 published its code grant as MIT. The payload's first line is **`University of
+Illinois/NCSA Open Source License`** and the repo's own `LICENSE/README.md` names NCSA. 🔵 **The
+NCSA licence contains MIT's grant sentence verbatim**, so a classifier probing that sentence
+returns MIT — the same class pass 26 documented, and a third member of it alongside MPL and EUPL.
+**`NCSA` is a licence family new to this KB.** Corrected at all five live sites.
+
+### 🟢 Trending, checked and unchanged
+
+Seventeenth consecutive pass with **no new education product repository** from the mandatory query
+set: `rohitg00/ai-engineering-from-scratch`, `speedyapply/2026-AI-College-Jobs`, Awesome LLM,
+`pguso/agents-from-scratch`, `avinash201199/free-ai-agents-resources`, Nous Research's
+`Hermes Agent` — curricula about AI or general-purpose agents, all already cited. openclaw at
+**385.4k★**.
+
+**Everything in this section came from re-reading payloads this KB already catalogued, from a
+classifier it already contained, and from `git`.**
+
 ## 2026-10-07 — twenty-sixth pass: nine repositories this shelf had written off have a licence, and every level of the dependency graph is older than the one above it
 
 ⏱️ **Measurement window 2026-10-07 ~02:40 UTC → 05:10 UTC; every age computed against the reference
@@ -10074,7 +10194,7 @@ la colisión 5 en `agents/trending.md`: la página renderizada de GitHub sí dic
   **leyendo el código**; la superficie REST de OpenCASE y su endpoint de descubrimiento, **leyendo los docs del repo**;
   las dos licencias, **en el archivo `LICENSE`**.
 - ❌ **No medido:** **ninguna llamada HTTP contra ninguna de las dos plataformas.** Sin instancia, y levantarla choca
-  con el límite declarado del pase 28. **OAuth2, *scopes*, *rate limits* y forma de las respuestas, sin verificar.**
+  con el límite declarado del pase 27. **OAuth2, *scopes*, *rate limits* y forma de las respuestas, sin verificar.**
 - ❌ **No medido, y es una contradicción interna del repo:** la **forma exacta** de las rutas de OpenCASE.
   `DEVELOPER.md` escribe `/management/tenants/{tenantId}/CFItems/{id}`;
   `FRAMEWORK_EDITOR_BACKEND_INTEGRATION.md` escribe
@@ -10090,7 +10210,7 @@ la colisión 5 en `agents/trending.md`: la página renderizada de GitHub sí dic
 
 ## 2026-10-01 (pase 28) — el gap 48 queda contestado **leyendo el código fuente de Open edX**, y la respuesta es doble: la API alcanza para matrícula y notas, y **el *authoring* se declara experimental en el propio repo**
 
-**La acción 1 del pase 28 era la de mayor valor comercial de esta KB** —*«verificar si Open edX expone una API REST
+**La acción 1 del pase 27 era la de mayor valor comercial de esta KB** —*«verificar si Open edX expone una API REST
 suficiente, y si lo hay, P55 se cotiza; si no, ésa es la razón de la ausencia»*. **Se ejecutó, y la respuesta no es
 «sí» ni «no»: es un corte limpio entre dos mitades de la plataforma**, y el corte explica la ausencia mejor que
 cualquiera de las dos respuestas simples.
@@ -10103,7 +10223,7 @@ más valiosa del pase.
 
 ✅ **Pero `raw.githubusercontent.com` responde.** Eso habilita un canal de verificación que esta KB no estaba usando:
 **leer el archivo fuente directamente, sin clonar y sin instalar nada.** Es importante más allá de este pase, porque
-**esquiva parcialmente el límite que bloqueó al pase 28** (no se puede instalar código de terceros): no permite
+**esquiva parcialmente el límite que bloqueó al pase 27** (no se puede instalar código de terceros): no permite
 *ejecutar*, pero sí **leer la declaración en el código**, que para medir superficie de API es exactamente lo que hace
 falta.
 
@@ -10118,9 +10238,9 @@ es un resumen de búsqueda, y no es inferencia.
 | **Enrollment** | `openedx/core/djangoapps/enrollments/urls.py` | `enrollment/{username},{course_key}`, `enrollment/{course_key}`, `enrollment`, `enrollments/`, `course/{course_key}`, **`unenroll/`**, `roles/`, **`enrollment_allowed/`** | ✅ **Sí** — `EnrollmentListView`, `UnenrollmentView`, `EnrollmentAllowedView`, `EnrollmentUserRolesView` |
 | **Grades v1** | `lms/djangoapps/grades/rest_api/v1/urls.py` | `courses/`, `courses/{course_id}/`, `policy/courses/{course_id}/`, **`gradebook/{course_id}/`**, **`gradebook/{course_id}/bulk-update`**, `gradebook/{course_id}/grading-info`, **`subsection/{subsection_id}/`**, `section_grades_breakdown/`, `submission_history/{course_id}/` | ✅ **Sí** — **`GradebookBulkUpdateView`** y **`SubsectionGradeView`** (*course_grade_overrides*) |
 
-🔵 **El dato que cotiza, y es mejor de lo que el pase 28 suponía:** **Open edX escribe notas por lote.**
+🔵 **El dato que cotiza, y es mejor de lo que el pase 27 suponía:** **Open edX escribe notas por lote.**
 `GradebookBulkUpdateView` es el equivalente funcional de `provide_assignment_feedback` del conector MIT de Moodle —
-**y es *bulk*, que es justamente lo que el conector de Moodle no tiene** (el hallazgo del pase 28 fue que el *bulk* de
+**y es *bulk*, que es justamente lo que el conector de Moodle no tiene** (el hallazgo del pase 27 fue que el *bulk* de
 xAPI en CaSS quedaba afuera de MCP; acá el *bulk* es el que está).
 
 **Precisión de método que conviene no saltearse:** el `urls.py` de *Enrollment* **no lleva la versión adentro**. La
@@ -10168,12 +10288,12 @@ había.
 
 - ✅ **Medido:** rutas, versiones y capacidad de escritura de cuatro grupos de API, **leyendo el código**.
 - ❌ **No medido:** **no se hizo ninguna llamada HTTP contra una instancia de Open edX.** No hay instancia, y levantarla
-  necesita instalar el árbol de dependencias, que es el límite declarado del pase 28. **Autenticación (OAuth2),
+  necesita instalar el árbol de dependencias, que es el límite declarado del pase 27. **Autenticación (OAuth2),
   *scopes*, *rate limits* y forma real de las respuestas quedan sin verificar.**
 - ❌ **No medido:** si los endpoints `v0` de *authoring* —los que el repo recomienda— cubren lo que el `v1`
   experimental promete. **Es la acción 1 del pase 29.**
 
-## 2026-10-01 (pase 28) — la superficie MCP de CaSS medida por anotación: **6 expuestas y 55 ocultas sobre 61 operaciones**, y el «45» del pase 26 era aritmética, no conteo
+## 2026-10-01 (pase 27) — la superficie MCP de CaSS medida por anotación: **6 expuestas y 55 ocultas sobre 61 operaciones**, y el «45» del pase 26 era aritmética, no conteo
 
 **Dos repos abiertos de primera mano sobre el árbol clonado** (`cassproject/CASS` v1.7.7, Apache-2.0) **y uno verificado
 por página** (`1EdTech/ltibootcamp`). Este pase **no pudo ejecutar el generador** (ver la nota de método) y entonces

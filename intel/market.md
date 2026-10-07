@@ -4852,7 +4852,7 @@ holder — not by where the software is deployed.
   packages more than two years old, including `sax@1.2.1` at **3,854 d against a current release 75
   days old**. US K-12 and higher-ed SaaS is heavily AWS-hosted; this is one substitution, bounded,
   with a measurable before and after.
-- 🟢 **`cs341-illinois/coursebook`'s three-grant structure** — MIT for code, CC-BY for original content
+- 🟢 **`cs341-illinois/coursebook`'s three-grant structure** — **NCSA** for code (*not* MIT; corrected in the twenty-seventh pass), CC-BY for original content
   and for output — is a University of Illinois course repository and the right scaffold for a corporate
   academy that must keep content and code licences separable.
 
@@ -4931,6 +4931,97 @@ holder — not by where the software is deployed.
   education institutions across 19 LAC countries** remains the adoption baseline. Both held against
   this pass's queries; neither is new.
 
+## Opportunities by region — twenty-seventh-pass additions
+
+🔵 **2026-10-07.** The regional sweep returned **one new fact and no new repository** across four
+regions. The three regions that returned nothing are **declared as returning nothing**, because a
+silent region reads exactly like a covered one.
+
+This pass's own measurements are **licence** findings, so what they change is the *redistributable
+count a bid is built on* rather than any region's sizing. The offer is
+**`P-GRANT-ENUMERATION` step 8** in `compose/patterns.md`.
+
+### North America
+
+🔴 **Declared: nothing new found for this region this pass.** Re-verified by string and unchanged:
+the **$951 M (2024) → $2,303.2 M (2029) at 15.9% CAGR** series, **41.7% of the global
+opportunity**, **<10% of institutions with formal AI guidelines**, **71% of US teachers lacking AI
+training**, the Colorado and Texas statutes, and the characterisation of US education AI as
+operating in a relative regulatory vacuum with adoption decided school by school.
+
+⚠️ **What this pass changes here is a licence verdict on two North American assets.**
+[`openstax/osbooks-biology-bundle`](https://github.com/openstax/osbooks-biology-bundle) — Rice
+University's open-textbook programme, and the obvious content source for any US curriculum
+engagement — is **CC-BY-NC-SA-4.0**, which this KB's primary classifier reported as plain `CC-BY`.
+🔴 **Non-commercial: it cannot be the content layer of a billable deliverable**, and the
+**ShareAlike** term would additionally bind derivative course material. And
+[`cs341-illinois/coursebook`](https://github.com/cs341-illinois/coursebook) (UIUC) is **NCSA**, not
+MIT — permissive either way, but the attribution text a client must ship is different.
+
+### EMEA
+
+🔴 **Declared: nothing new found for this region this pass.** The **60% of EMEA organisations
+reporting siloed data** figure, the **38% not yet piloting** and the **94% likely to invest in
+AI-specific training in 2026** were all already recorded, as were the EU AI Act's high-risk
+classification of education AI and the Council of Europe's second working conference on the
+regulatory dimensions of AI in education.
+
+🔴 **But this is the region where this pass's licence finding binds hardest, and it is a
+measurement, not a caution.** The **9 EUPL-1.2 rows** that this KB's *hardened* classifier
+(`lib/license_family.sh`) reports as `UNCLASSIFIED` are **the European public-sector tier** — eight
+Finnish National Agency for Education repositories plus the European Commission's own
+`European-Learning-Model`. ⚠️ **A licence audit run with that classifier returns "unclassified" for
+every public-body asset in EMEA**, and "unclassified" is what a procurement reviewer reads as
+"unknown risk". The other classifier names them correctly and is blind to NonCommercial instead.
+🟢 **Consulting both is an hour of work and it is the difference between a clean EMEA public-sector
+bid and nine unexplained rows.**
+
+### APAC
+
+🆕 **New this pass: OpenAI has appointed Brent Thomas to lead policy in Australia and New
+Zealand**, as Canberra tightens AI governance and copyright rules — the first named vendor-policy
+hire this KB has recorded for the region.
+
+🔵 **It fits the frame this KB already holds rather than changing it.** With **48% of APAC
+governance leaders** making AI adoption a top 2026 priority while governance frameworks lag,
+Singapore consulting on AI use in financial institutions, and **AI sovereignty** named as the
+pacing factor, a vendor placing a dedicated policy lead in ANZ is evidence that **the regulatory
+conversation is now where the deals are decided**. ⚠️ **The copyright clause is the
+education-specific part**: a tutoring product grounded on curriculum material is exactly what a
+tightened copyright rule reaches, and a licence audit that cannot distinguish `CC-BY` from
+`CC-BY-NC` is exactly the wrong instrument to bring to that conversation. Previously held and
+re-verified: LearnUpon's Sydney headquarters and Create+ authoring tool, the TCS–Pearson multi-year
+AI learning alliance, Boomi's APAC priorities, techrepublic's five signals.
+
+### LATAM
+
+🔴 **Declared: nothing new found for this region this pass.** Re-verified and held: UNU's survey of
+**200 higher-education institutions across 19 LAC countries** (August–October 2025), LATAM as the
+**third-largest market worldwide for generative-AI application downloads**, **>85% of companies
+using AI with 100% projected for 2026**, **OpenAI at 89%** of popular integrations with **<25%
+building their own models**, the IADB's three-dimensional regulatory framework and its
+fragmentation warning, and Ednova (Chile), Kredi (México) and MindHealth LATAM (Colombia).
+
+⚠️ **The regional constraint recorded since the eighth pass is unchanged, and this pass sharpened
+it again: licence reliability, not supply.** A region whose institutions adopt faster than they
+govern, under fragmented or absent legal frameworks, is the region where a licence verdict is least
+likely to be checked by anyone downstream. 🟢 **The clinic that began as a LATAM offer in the
+twenty-third pass now has two measured error rates behind it** — 15 of 87 components wrongly
+rejected as unlicensed (pass 26) and **11 of 412 wrongly cleared as commercially usable** (this
+pass).
+
+### ⚠️ What this pass could not measure, recorded so it is not mistaken for coverage
+
+- 🔴 **No regional dimension on any licence finding.** The 412-payload sweep carries no region
+  field, so which regions the 5 NonCommercial and 3 source-available rows sit in is **unmeasured**.
+  `openstax` and `sign/translate` are plausibly North America and EMEA; **plausibly is not a
+  measurement**, and the North America and EMEA notes above name only rows whose origin is
+  independently documented elsewhere in this KB.
+- 🔴 **No demand-side or sizing figure was newly verified in any region.** The single new fact is a
+  vendor personnel appointment reported by a trade publication.
+- 🔴 **`unu.edu`, `publications.iadb.org` and `coe.int` remain unreachable** from this environment
+  (000 at the egress proxy), so the UNU, IADB and Council of Europe instruments are still cited
+  **as named by search summaries** and have never been read first-hand here.
 ## What changed in the twenty-eighth pass of 2026-10-07
 
 🔴 **The licence layer of this KB was wrong on 21 of 412 rows, and the error has a commercial

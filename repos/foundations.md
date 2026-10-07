@@ -2023,13 +2023,15 @@ HEAD with no API and no truncation, in **13 seconds for all 87**:
 | [`nvaccess/nvda`](https://github.com/nvaccess/nvda) | **GPL-2.0-or-later with two exceptions** | `copying.txt` | **lowercase `COPYING`**, which the probe list carries only in uppercase |
 | [`veraPDF/veraPDF-library`](https://github.com/veraPDF/veraPDF-library) | ⚠️ **GPL-3.0 + MPL-2.0**, dual | `LICENSE.GPL` **and** `LICENSE.MPL` | **family suffix** — two grants cannot both live in a file called `LICENSE` |
 | [`Opetushallitus/aoe`](https://github.com/Opetushallitus/aoe) | 🟡 **EUPL-1.2** | `aoe-web-backend/LICENSE` · `aoe-web-frontend/LICENSE`, 303 B each | **depth** |
-| [`cs341-illinois/coursebook`](https://github.com/cs341-illinois/coursebook) | **MIT** (code) **+ CC-BY** (content, output) | `LICENSE/LICENSE.code` · `LICENSE.original` · `LICENSE.output` | **a licence DIRECTORY holding three grants** |
+| [`cs341-illinois/coursebook`](https://github.com/cs341-illinois/coursebook) | 🔴 **NCSA** (code — *not* MIT, corrected in the twenty-seventh pass) **+ CC-BY-4.0** (content, output) | `LICENSE/LICENSE.code` · `LICENSE.original` · `LICENSE.output` | **a licence DIRECTORY holding three grants** |
 | [`learningequality/kolibri-server`](https://github.com/learningequality/kolibri-server) | **GPL** | `debian/copyright` | **the Debian packaging convention** |
 | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) · [`OS4ED/openSIS-Responsive-Design`](https://github.com/OS4ED/openSIS-Responsive-Design) | 🔴 **unread — RTF** | `docs/License.txt` plus a `docs/LICENSE.rtf` the classifier cannot read | **format**, which is a limit and not an absence |
 
 🔵 **[`cs341-illinois/coursebook`](https://github.com/cs341-illinois/coursebook) is the row that makes
-the whole case.** Separate grants for the **code** (MIT), the **original content** and the **output**
-(CC-BY) is the *correct* structure for a course repository, and it is the structure a single `LICENSE`
+the whole case.** Separate grants for the **code** (**NCSA** — corrected in the twenty-seventh pass from MIT; the
+University of Illinois/NCSA licence quotes MIT's grant sentence verbatim, so a classifier probing
+for that sentence returns MIT), the **original content** and the **output**
+(CC-BY-4.0) is the *correct* structure for a course repository, and it is the structure a single `LICENSE`
 file cannot express. A rooted filename probe therefore reports a teaching repository with exemplary
 licensing hygiene as having none at all. For a client who wants a course scaffold whose content and
 code licences are separable — which is what every corporate-academy engagement needs — this is the
