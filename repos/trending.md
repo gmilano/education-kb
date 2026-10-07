@@ -4,6 +4,104 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — thirty-eighth pass: the IRT tier opens, a fork frozen at a dead licence, and one name across two slugs
+
+⏱️ **Fifth pass of this date** (34–37 earlier). **Licences from payload, title-block classified
+(`P171`). No star counts (`P479`).**
+
+🟢 **The week's movement is not an agent. It is a whole tier: item-parameter estimation and adaptive
+testing — 8 permissive rows, none of which existed anywhere in this tree, including `archive/`.**
+
+### 🟢 New and granted this pass — 8 rows, with maintenance tiered separately (`P260`)
+
+| Repo | Licence (payload) | Hit · bytes | Release / last upload | Tier |
+|---|---|---|---|---|
+| [`nd-ball/py-irt`](https://github.com/nd-ball/py-irt) | 🟢 **MIT** | `master/LICENSE` · 1,121 B | 🟢 **v0.7.1 · 2026-03-24 · 34 releases** | 🟢 **Delivery-grade** |
+| [`joakimwallmark/irtorch`](https://github.com/joakimwallmark/irtorch) | 🟢 **MIT** (no title line) | `main/LICENSE.txt` · 1,073 B | 🟢 **v0.5.5 · 2026-08-24 · 26 releases** | 🟢 **Freshest in tier** |
+| [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 **BSD-3-Clause** | `main/LICENSE` · 1,514 B | 🟢 **v0.21.0 · 2026-04-08 · 34 releases** | 🟢 **Delivery-grade** |
+| [`condecon/adaptivetesting`](https://github.com/condecon/adaptivetesting) | 🟡 **MPL-2.0** | `main/LICENSE` · 16,661 B | 🟢 **v1.2.1 · 2026-06-29 · 13 releases** | 🟡 **File-level copyleft** |
+| [`eribean/girth`](https://github.com/eribean/girth) | 🟢 **MIT** | `master/LICENSE.txt` · 1,064 B | 🔴 **v0.8.0 · 2021-11-11** | 🔴 **Stale (5 yr)** |
+| [`junchenfeng/pyirt`](https://github.com/junchenfeng/pyirt) · [`17zuoye/pyirt`](https://github.com/17zuoye/pyirt) | 🟢 **MIT** — **identical on both** | `master/LICENSE.txt` · 1,083 B each | 🔴 **v0.3.4 · 2019-07-18** | 🔴 **Stale (7 yr)** |
+| [`mhw32/variational-item-response-theory-public`](https://github.com/mhw32/variational-item-response-theory-public) | 🟢 **MIT** | `master/LICENSE` · 1,064 B | ⚠️ **unpackaged** | 🔵 **Method reference** |
+| [`inuyasha2012/pypsy`](https://github.com/inuyasha2012/pypsy) | 🟢 **MIT** | `master/LICENSE` · 1,068 B | 🔴 **v0.1.5 · 2016-04-04** | 🔴 **Abandoned (10 yr)** |
+
+🔵 **Four of eight are alive, and only two are both alive and fully permissive with slug-level
+second-channel confirmation: `py-irt` and `irtorch`.** That is the shortlist, and the other six are
+reference or fixture material.
+
+### 🔴 `P485` — one project name, two slugs, two **licence eras**, and a three-way disagreement inside the fork
+
+🔴 **The search channel reported `catsim` as *"LGPLv3 → changed to BSD 3-Clause"* with the two slugs
+treated as interchangeable. They are not.**
+
+| Slug | Licence payload | Hit path · bytes | Own manifest says | Verdict |
+|---|---|---|---|---|
+| 🟢 [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 **BSD-3-Clause** | `main/LICENSE` · 1,514 B | 🟢 `pyproject.toml` → `license = "BSD-3-Clause"` | 🟢 **Upstream, current, agrees with itself** |
+| 🔴 [`datacamp/catsim`](https://github.com/datacamp/catsim) | 🔴 **GPL-3.0** | `master/COPYING` · 35,147 B | 🔴 `setup.py` → `license='LGPLv3'` **+ OSI classifier `LGPLv3`** | 🔴 **Fork, frozen, and disagrees with itself three ways** |
+
+🔴 **The fork serves GPL-3.0 text while declaring LGPL-3.0 in two places in its own `setup.py`.** 🔵 **So
+"catsim is LGPL" is a claim that is false about the project, false about the upstream, and not even
+true of the fork's payload** — it is true only of the fork's *metadata*.
+
+> **`P485`.** A fork carries the licence of the **commit it forked**, not the licence of the project
+> today. Cite the **slug**, never the project name — and when a fork's payload and manifest disagree,
+> the payload governs and the row says **both**. 🔵 **Relicensing is a forward-only act: upstream moving
+> to BSD-3 does nothing for anyone who pip-installed the fork.**
+
+### 🔵 `P488` — "one name, two slugs" has three outcomes, and only measurement separates them
+
+🟢 **`P482` (pass 37) established the shape on `moodle-mcp`. This pass found the other two members of
+the class in one run**, which makes it a taxonomy rather than an anecdote:
+
+| Outcome | Instance | Grants | Danger |
+|---|---|---|---|
+| 🔴 **Disagree in *kind*** | `moodle-mcp` (`P482`) | one **MIT**, one **ungranted** — and the ungranted twin owns the registry name | 🔴 **Highest.** Cross-channel "confirmation" lands on the wrong grant |
+| 🔴 **Disagree in *era*** | `catsim` (`P485`) | upstream **BSD-3**, fork **GPL-3.0** | 🔴 **High.** Both are real grants, so nothing looks wrong |
+| 🟢 **Agree byte for byte** | `pyirt` (this pass) | **MIT on both**, 1,083 B **identical** | 🟢 **None.** Cite either; prefer the slug the registry's `Homepage` names |
+
+🔵 **`pyirt` is the benign case and worth recording precisely because it is benign**: PyPI's `Homepage`
+resolves to `junchenfeng/pyirt` (the author's personal slug) while its `Download` archive points at
+`17zuoye/pyirt` (the company org, 一起作业). 🟢 **Both payloads are the same 1,083 bytes with the same
+holder line, so `P482`'s back-resolution test passes at the author level and the split is organisational
+rather than legal.**
+
+> **`P488`.** On encountering one distribution name across two slugs, **resolve both payloads before
+> citing either**. The shape alone says nothing — *disagree in kind*, *disagree in era* and *agree
+> exactly* are three different facts with three different consequences, and the registry record is
+> evidence about **one** of the slugs at most.
+
+### 🔴 Granted but **not** usable — the trap this pass caught in prose, not payload
+
+| Repo | Payload | Why it is still not usable |
+|---|---|---|
+| [`hicsail/opencat-pro`](https://github.com/hicsail/opencat-pro) | 🟢 **MIT** · `master/LICENSE` · 1,106 B | 🔴 **`P486`** — the **Accessible+** UI framework it ships requires a **purchased licence for production use**, stated twice in its own README (lines 6 and 176). 🟢 MIT on the authors' code, 🔴 **non-free on the interface the product ships** |
+
+### 🆕 Channel movement this pass
+
+| Channel | This pass | Note |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 **200** | the licence route; 15 payloads read |
+| `pypi.org` | 🟢 **200** | 🆕 **heavily exercised: 7 `/pypi/{name}/json` reads** for version, upload date and `license_expression`. 🟢 **`license_expression` is the field to prefer** — `catsim` returns it populated (`BSD-3-Clause`) where legacy `license` is `None` |
+| 🔴 `api.github.com` (unattached) | 🔴 **403** | `P479` — gated per-repository, not blocked. **No star counts, no fork/commit dates** |
+| 🔴 `github.com` | 🔴 **403** | no HTML |
+| 🔴 **`travis-ci.com` / `coveralls.io` badges** | 🔴 **not fetched** | 🔵 `py-irt` and `datacamp/catsim` both carry **Travis** badges — a 2019-era CI signal. **Not used as a liveness measure**; PyPI upload dates were used instead |
+
+🔵 **Measured limit worth stating: with `api.github.com` gated, *repository* liveness is unobservable
+here and only *package* liveness is.** 🔴 **So every "stale" verdict above is a statement about PyPI
+uploads, not about commits** — a repo could be active with no release. Stated so the tiering is not
+over-read.
+
+### 🔵 Regional placement — 1 of 8 placed, and the other seven said out loud
+
+| Repo | Region | Basis |
+|---|---|---|
+| [`bigdata-ustc/CAT4AI`](https://github.com/bigdata-ustc/CAT4AI) | 🟢 **APAC** | 🟢 **MIT**, `master/LICENSE`, 1,062 B. Placed on the **org's declared institutional domain** (BigData Lab @USTC, `bigdata.ustc.edu.cn`, Hefei) — the `P261` route, not an anthroponym. ⚠️ **Adjacent, not education delivery:** its subject is **psychometrics applied to AI-model evaluation**, so it is shelved as instrument-tier |
+| The other 7 | ⚠️ **Unplaced — and this is structural, not an omission** | 🔴 **`P474` fired on this pass.** `douglasrizzo/catsim`'s author publishes from `douglasrizzo.com.br` and the pass nearly placed it **LATAM** on that basis. **`P474` forbids exactly that**: place from the artifact's domain model, never the maintainer's name or domain |
+
+🟢 **The honest generalisation: an IRT estimator is jurisdiction-neutral by construction.** 🔵 **Which
+means the regional value of this tier is not where it was written but *which regulator makes it
+mandatory* — and that is a `intel/market.md` question, answered there per region.**
+
 ## 2026-10-07 — thirty-seventh pass: the copyleft tier re-measured, Maven opens, and a package name held by the ungranted twin
 
 > **Append-only.** Newest dated section on top; history preserved below.

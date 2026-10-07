@@ -4,6 +4,167 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-eighth pass, 2026-10-07 — one recipe, `P491`: the chain Gap 39 asked for, closed end to end and permissively
+
+⏱️ **Fifth pass of this date.** 🔵 **Licences below were all re-read from payload on 2026-10-07
+(`P171` title-block classification). No star counts (`P479`).**
+
+🟢 **One recipe this pass, not four, because it closes a gap this KB declared at pass 25 and then
+archived (`P483`).** 🔵 **It is also the first recipe on these shelves whose every link is permissive —
+MIT · MIT · MIT · BSD-3 — so it is a product component rather than a side-car.**
+
+### 🔴 `P490` — the `P` namespace carries both patterns and findings, and the live tree re-used 15 numbers the archive had already assigned
+
+🔴 **Found while taking the ceiling for this pass's recipe, and it is `P481`'s warning already realised
+at scale.** `P481` (pass 37) said a duplicate definition *"makes every prior citation of that number
+ambiguous, retroactively."* 🔴 **That has happened to **15** numbers:**
+
+| | Live tree (`compose/patterns.md`) | Archive (`archive/2026-10-06-pre-reset/compose-patterns.md`) |
+|---|---|---|
+| `P49` | *EMEA: the conformity-assessment pack for a high-risk education system* (pass 37) | 🔴 *Integridad de examen sin AI de vigilancia … **EMEA primero por Annex III*** (pass 25) |
+| `P50` | *APAC: the on-premise multi-agent classroom* | 🔴 *Perfil de competencia por MCP* |
+| `P51` | *North America: assistive grading …* | 🔴 *El conector MCP de Moodle …* |
+| `P52` | *LATAM: institution-scale text understanding …* | 🔴 *La capa agéntica de biblioteca …* |
+
+🔴 **The `P49` collision is the dangerous one, because both patterns are EMEA/Annex III.** `Gap 39`'s own
+cross-reference reads *"Ver **P49**"* — written at pass 25, pointing at the **archived** exam-integrity
+pattern. 🔴 **A reader of the live tree today finds a different `P49` that is also about EMEA conformity,
+and nothing signals the mismatch.** 🔵 **That is the precise harm `P481` described: the citation
+resolves *plausibly*, to the wrong thing.**
+
+🔴 **The root cause is that one `P` sequence is being used for two kinds of object.** Measured across
+the whole tree: **pattern headings** occupy `P1`–`P125`, `P131`, `P136`–`P144`, `P150`–`P152`,
+`P179`–`P185`; **findings** occupy most of `P186`–`P482`. 🔴 **Only six numbers below `P490` are free
+anywhere in the tree: `291`, `292`, `422`, `440`, `442`, `443`.** The namespace is effectively full.
+
+> **`P490`.** Patterns and findings must not share a number sequence. The durable remedy is a **prefix
+> split** — `F###` for findings, `P###` for patterns — applied tree-wide. 🔴 **This pass does **not**
+> perform that migration**, and deliberately: renumbering retroactively would break every existing
+> citation, which is the harm being fixed. 🔵 **The safe interim rule, used by this pass: take the
+> ceiling across the *whole tree including `archive/`*, for pattern headings **and** finding
+> definitions, and allocate from a number that is free in both.** This recipe is therefore **`P491`**,
+> not `P53` — 🔴 **`P53` is an archived pattern** (*predictive flow with a human deciding*), and this
+> pass's first draft cited it before measuring.
+
+---
+
+## P491 — The calibrated item bank: prove two exam variants are equivalent, permissively, on the client's own hardware
+
+🟢 **Closes `Gap 39`** (declared pass 25, archived at the reset, recovered this pass as `P483`). 🔵
+**Region: unplaced by construction — the chain is jurisdiction-neutral (`P474`); it is *driven* by
+regulation per region, see `intel/market.md`.**
+
+### The problem, in the client's words
+
+> *"Our AI generates unlimited practice and exam variants, so students can't copy from each other."*
+
+🔴 **Under a high-risk regime that sentence is a liability, not a feature.** If two students sat
+different variants and nothing measured that the variants were **equally hard**, their scores are not
+comparable — and comparability is what an assessment system is for. 🔵 **The EU AI Act asks for
+accuracy and robustness evidence (Annex IV); "the model writes good questions" is not evidence.**
+
+### Why this could not be built on these shelves until now
+
+🟢 **The KB had the two ends and not the middle.** Item banking (`LongsightGroup/qti3`, MIT) and
+certified delivery (`amp-up-io/qti3-item-player`, MIT) were shelved; **nothing could fit item
+parameters.** 🔴 **`2PL` and `3PL` were named zero times across the whole KB before this pass** (`P484`). The gap was
+declared at pass 25 and prescribed its own fix — *"calibrar con una librería IRT de Python"* — and that
+library is what pass 38 found.
+
+### The stack — every licence read from payload, 2026-10-07
+
+| # | Role | Repo | Licence | Hit path · bytes |
+|---|---|---|---|---|
+| 1 | Author N parametric variants of one item → QTI 3 bank package | [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) | 🟢 **MIT** | `main/LICENSE.md` · 1,072 B |
+| 2 | Deliver variants, capture responses | [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | 🟢 **MIT** | `main/LICENSE` · 1,076 B |
+| 3 | 🆕 Fit item parameters (1PL/2PL/4PL), hierarchical priors | [`nd-ball/py-irt`](https://github.com/nd-ball/py-irt) | 🟢 **MIT** | `master/LICENSE` · 1,121 B |
+| 3b | 🆕 Alternative / cross-check estimator, GPU | [`joakimwallmark/irtorch`](https://github.com/joakimwallmark/irtorch) | 🟢 **MIT** | `main/LICENSE.txt` · 1,073 B |
+| 4 | 🆕 Adaptive selection from the calibrated bank | [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 **BSD-3-Clause** | `main/LICENSE` · 1,514 B |
+| 5 | 🆕 Synthetic response data for the test fixtures | [`eribean/girth`](https://github.com/eribean/girth) | 🟢 **MIT** | `master/LICENSE.txt` · 1,064 B |
+
+🟢 **No copyleft anywhere.** 🔵 **Contrast with the rest of this KB's platform tiers** — Moodle (GPL),
+Open edX (AGPL), proctoring (copyleft) — which must be side-cars. **This chain ships inside the
+product.**
+
+### Wiring
+
+```
+                 ┌─────────────────────────────────────────┐
+  topic/blueprint│  any shelved generator (tutor/LLM)      │
+  ───────────────▶│  writes N variants of item i            │
+                 └───────────────┬─────────────────────────┘
+                                 │  QTI 3 item package
+                                 ▼
+                 ┌─────────────────────────────────────────┐
+                 │  LongsightGroup/qti3        (MIT)       │  1. bank
+                 └───────────────┬─────────────────────────┘
+                                 ▼
+                 ┌─────────────────────────────────────────┐
+                 │  amp-up-io/qti3-item-player (MIT)      │  2. deliver
+                 └───────────────┬─────────────────────────┘
+                                 │  response matrix  (student × item → 0/1)
+                                 ▼
+                 ┌─────────────────────────────────────────┐
+                 │  nd-ball/py-irt             (MIT)      │  3. calibrate
+                 │  2PL: per-item difficulty b, discrim a │
+                 │  + posterior SE per parameter          │
+                 └───────────────┬─────────────────────────┘
+                                 │  item-parameter table
+                 ┌───────────────┴─────────────┬───────────────────────┐
+                 ▼                             ▼                       ▼
+     EQUIVALENCE GATE                 douglasrizzo/catsim      Annex IV evidence
+     |b_v1 − b_v2| ≤ τ  ?               (BSD-3) 4. adapt       pack (the artefact
+     fail ⇒ variant rejected            selection + stop       the regulator reads)
+```
+
+### The gate that makes it a pattern rather than a pipeline
+
+🟢 **The equivalence gate is the deliverable.** Everything upstream is conventional; **the gate is what
+converts "we generate variants" into "our variants are measurably equivalent".**
+
+| Step | Concretely |
+|---|---|
+| 1 | Pilot each variant family on a sample. 🔵 **Sample size is the real constraint** — a 2PL fit needs enough responses per item for the posterior to be narrow, and `py-irt` reports the SE that tells you whether it is |
+| 2 | Fit **one** model over the whole family with `py-irt` (2PL, hierarchical priors) |
+| 3 | 🔴 **Gate:** reject variant `v` if `|b_v − b_family|` exceeds a tolerance **τ fixed in advance and written down**. A τ chosen after seeing the results is not a gate |
+| 4 | 🟢 **Cross-check with `irtorch`** on the same matrix. 🔵 **Two independent MIT estimators agreeing is the same two-channel discipline this KB applies to licences** (`p289`, `P482`) — and disagreement between them is a finding, not noise |
+| 5 | Feed surviving items to `catsim` for adaptive delivery; 🟢 **`girth` generates synthetic responses so the gate has regression fixtures that need no student data** |
+| 6 | 🟢 **Emit the item-parameter table + τ + SEs as the accuracy/robustness annex.** That table *is* the compliance artefact |
+
+### Why this sells, per region
+
+| Region | The driver |
+|---|---|
+| **EMEA** | 🔴 **Annex IV accuracy/robustness evidence** for a high-risk assessment system; 🟡 **deferred to 2027-12-02**, so calibrating now is free and retrofitting later is not |
+| **North America** | 🟢 **Human-oversight rules** (Oklahoma, Maryland): the system produces a *measurement*, a human holds the *determination*. 🟢 **And it is fitted on response patterns, not student text — architecturally compatible with California AB 1159** |
+| **APAC** | 🔴 **Binding now** (Korea Basic AI Act, H2 2026) at national testing volumes — `catsim` + a calibrated bank is the ministry-scale shape |
+| **LATAM** | 🟢 **Robust to a pending statute.** Brazil's PL 2.338/2023 can still change; accuracy evidence is required under every risk-based draft, and the whole chain runs **on-premise** |
+
+### What this pattern does **not** claim
+
+- 🔴 **Nobody has published the equivalence study for an LLM-generated variant family on this stack.**
+  🔵 **The second half of `Gap 39` is still open** — this recipe supplies the **instrument**, not the
+  result. The measurement is a few weeks of pilot data, not research.
+- 🔴 **`girth` (2021) and `pyirt` (2019) are stale** (`P260`). Use them as **fixture generators and
+  reference**, not as the production estimator.
+- 🔴 **No CAT *web platform* is cleanly usable** — `hicsail/opencat-pro` is MIT code with a **purchased
+  UI framework** (`P486`). This pattern deliberately uses an **engine + the client's own UI**.
+- ⚠️ **`irtorch`'s grant is MIT and its attribution is unresolved** (`P487`): the `LICENSE` names *"The
+  Python Packaging Authority"* as holder while `pyproject.toml` names the actual author. 🔵 **Cite the
+  author from `pyproject.toml` in any warranty or indemnity clause.**
+
+### 🔵 Cross-cutting gate update — and one that still cannot run
+
+🟢 **`P485` joins the licence-reliability checks**: when a dependency is reachable at two slugs, resolve
+**both** payloads before pinning either, and pin the **slug**, never the project name. 🔴 **`catsim` is
+the live example — the `datacamp` fork serves GPL-3.0 while declaring LGPLv3 in its own `setup.py`**, so
+a careless pin inverts the licence of this entire recipe from BSD-3 to copyleft.
+
+🔴 **Still blocked, second pass running:** `./discover_probe.sh --self-test` is denied by the session's
+auto-mode classifier (`Code from External`), so the `P480` fixture debt stays open and the gate stays
+honest at **9/9** with the GPL/AGPL specimens parked in `fixtures-pending/`. 🔵 **Closing it is one
+command in a session without that restriction — see the operational note in `agents/top.md`.**
+
 ## 🟢 Thirty-seventh pass, 2026-10-07 — four recipes, one per region: P49, P50, P51, P52
 
 **Every repo named below had its licence read from its own payload on `raw.githubusercontent.com` on

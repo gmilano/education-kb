@@ -4,6 +4,147 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-eighth pass, 2026-10-07 — the item-calibration layer, declared missing at pass 25 and unreachable since the reset
+
+**Every licence below was read from the repository's own payload on `raw.githubusercontent.com` on
+2026-10-07**, 16 licence filenames × `main` **and** `master`, and classified on the **title block**
+(`P171`). **No star counts are claimed** (`P479` — this session is repo-scoped, so popularity metrics
+are out of scope by construction). ⏱️ **Fifth pass of this date** (34–37 all ran earlier).
+
+🟢 **This pass closes a gap this KB declared for itself at pass 25 and then lost.** Not a gap found in
+the industry — a gap found in **this repository's own open-gap register**, which the `2026-10-06`
+reset left behind in `archive/`.
+
+### 🔴 `P483` — the reset dropped the open-gap register, so a declared gap became uncollectable
+
+`archive/2026-10-06-pre-reset/repos-foundations.md:6019` carries **Gap 39**, opened at **pass 25**,
+and it is specific to the point of being a work order:
+
+> *"Hay *item banking* y hay entrega certificada; **no hay análisis de ítems** (TRI/IRT, calibración de
+> dificultad) empaquetado y permisivo que cierre la cadena. … **Es acotado y construible:** escribir N
+> variantes con el *writer*, entregarlas con `qti3-item-player` y **calibrar con una librería IRT de
+> Python**."*
+
+🔴 **That sentence appears nowhere in the live tree.** Measured: `calibración de dificultad` and
+`análisis de ítems` return **0 hits** outside `archive/`. 🔵 **So twelve passes have run since the reset
+over a shelf that had already worked out what was missing, what it was worth, and how to close it —
+and none of them could see it.**
+
+> **`P483`.** A reset or re-scope must carry forward the **open-gap register** as live content. A gap
+> claim that survives only in an archive is **worse than no gap claim**: the work of identifying it has
+> been paid for, and the claim is no longer reachable by the passes that could close it. 🔵 **`P469`
+> withdrew a gap that was false. This is the opposite failure — a gap that was true and went
+> uncollectable.**
+
+### 🔴 `P484` — and the probe that found it published two wrong numbers on the way
+
+🔴 **This pass's first draft claimed the industry gap outright: *"psychometrics: zero coverage across
+1,087 shelved slugs."*** It was produced by an **English-only** grep — `psychometric`,
+`item-response` → **0 files**. 🔴 **The corpus is bilingual.** Passes up to the reset wrote in Spanish:
+
+| Spelling probed | Files | Verdict on the draft claim |
+|---|---|---|
+| `psychometric` · `item response` | **0** | the draft's only evidence |
+| 🔴 `psicometr` | **5** | 🔴 **refutes it** |
+| 🔴 `testing adaptativo` | **5** | 🔴 **refutes it** |
+| 🔴 `IRT` | **19** | 🔴 **refutes it** |
+| `2PL` · `3PL` | **0** | 🟢 survives — see below |
+
+🔴 **And the corrective probe was itself wrong by two orders of magnitude.** `grep -ril TRI` reported
+**105 files**; `grep -roh '\bTRI\b'` reports **1 occurrence** in the whole tree. The 105 was
+case-insensitive substring noise inside ordinary words. 🔵 **The run that corrected a false gap claim
+simultaneously published a false coverage count, in the same command, from the same missing word
+boundary.**
+
+> **`P484`.** Probe a gap claim in **every language the corpus uses**, with **word boundaries**
+> (`\b`), and count **occurrences, not files**. A file count over a case-insensitive substring is not a
+> measurement of coverage. 🔵 **And the single real `TRI` hit was the declared gap itself** — so the
+> correct probe would have found `P483` directly instead of arriving at it by accident.
+
+### 🟢 What survives, stated precisely — and it is the half that matters
+
+🟢 **The KB holds the *education-data-mining* measurement layer and always did**: `EduCDM`
+(IRT/MIRT/DINA), `EduKTM` (knowledge tracing), `EduCAT` (CAT policy), `EduNLP` — the BigData Lab @USTC
+shelf, archived at pass 87. 🔴 **What it holds nowhere, in either language, is a library that *fits item
+parameters from response data*.** `2PL` and `3PL` were named **zero times** across the whole KB **before this pass** — 58,633 lines, `archive/` included.
+
+🔵 **The distinction is the whole finding, and it is a delivery distinction, not a taxonomic one.** The
+USTC layer models the **learner** (what does this student know?). The absent layer calibrates the
+**instrument** (is item 7 harder than item 12, and by how much, with what standard error?). 🔴 **Gap 39
+needs the second one, and a high-stakes exam is indefensible without it**: without measured
+equivalence, scores across item variants are not comparable.
+
+### 🟢 Foundations added this pass — the IRT / CAT estimation tier, 8 permissive rows
+
+🟢 **All eight read from payload. Maintenance is tiered separately, because `P260` applies: "there is a
+package" is not "there is maintenance".**
+
+| Repo | Licence (payload) | Hit path · bytes | Second channel (`P482`) | Why it earns a row |
+|---|---|---|---|---|
+| 🆕 [`nd-ball/py-irt`](https://github.com/nd-ball/py-irt) | 🟢 **MIT** | `master/LICENSE` · 1,121 B | 🟢 PyPI `MIT`, Homepage → **same slug** | 🟢 **The delivery-grade choice.** Bayesian IRT on **Pyro/PyTorch**, GPU-accelerated, variational inference; **1PL (Rasch), 2PL and 4PL** implemented, vague **or hierarchical** priors. **v0.7.1, 34 releases, last upload 2026-03-24** |
+| 🆕 [`joakimwallmark/irtorch`](https://github.com/joakimwallmark/irtorch) | 🟢 **MIT** — 🔴 **body text, no title line** (`P487`) | `main/LICENSE.txt` · 1,073 B | 🟢 `pyproject.toml` `license={text="MIT"}` · PyPI `MIT`, Homepage → **same slug** | 🟢 **The freshest in the tier. v0.5.5, 26 releases, last upload 2026-08-24.** PyTorch-based IRT with GPU support. ⚠️ **Attribution unresolved** — the grant's copyright holder is a packaging-template default (`P487`) |
+| 🆕 [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 **BSD-3-Clause** | `main/LICENSE` · 1,514 B | 🟢 PyPI `license_expression: BSD-3-Clause` (⚠️ Homepage → author domain, not slug) | 🟢 **The adaptive-selection engine.** Reusable CAT engine + simulator: initialisation, item-selection, ability-estimation and stopping rules as swappable strategies. **v0.21.0, 34 releases, last upload 2026-04-08.** 🔴 **Subject of `P485` — cite this slug, not "catsim"** |
+| 🆕 [`condecon/adaptivetesting`](https://github.com/condecon/adaptivetesting) | 🟡 **MPL-2.0** | `main/LICENSE` · 16,661 B | 🟡 PyPI `license: None` — **registry under-reports the payload** | 🟢 **Maintained CAT package, v1.2.1, 13 releases, last upload 2026-06-29.** ⚠️ **MPL-2.0 is file-level copyleft** — weaker than GPL, but modified MPL files must stay MPL. In-tree is viable; **changes to its own files are publishable** |
+| 🆕 [`eribean/girth`](https://github.com/eribean/girth) | 🟢 **MIT** | `master/LICENSE.txt` · 1,064 B | 🟡 PyPI `MIT`, Homepage → author **Pages** domain (owner-level, not slug) | 🟢 **Marginal-ML / conditional estimation plus synthetic IRT data generation** — the fixture generator the tier otherwise lacks. 🔴 **Stale: v0.8.0, last upload 2021-11-11** |
+| 🆕 [`junchenfeng/pyirt`](https://github.com/junchenfeng/pyirt) · [`17zuoye/pyirt`](https://github.com/17zuoye/pyirt) | 🟢 **MIT** — **byte-identical on both slugs** | `master/LICENSE.txt` · 1,083 B **each** | 🟢 PyPI Homepage → `junchenfeng/pyirt`; Download archive → `17zuoye/pyirt` | 🟢 **EM-based 2PL estimation, built for an operating edtech platform** (17zuoye / 一起作业). 🔵 **Subject of `P488` — two slugs, one name, grants agree byte for byte.** 🔴 **Stale: v0.3.4, last upload 2019-07-18** |
+| 🆕 [`mhw32/variational-item-response-theory-public`](https://github.com/mhw32/variational-item-response-theory-public) | 🟢 **MIT** | `master/LICENSE` · 1,064 B | ⚠️ none — not packaged | 🔵 **Reference implementation, not a dependency.** PyTorch code for *"Variational Item Response Theory: Fast, Accurate and Expressive"* — the method `py-irt` productised. Shelve as the **method citation** for a defensibility annex |
+| 🆕 [`inuyasha2012/pypsy`](https://github.com/inuyasha2012/pypsy) | 🟢 **MIT** | `master/LICENSE` · 1,068 B | 🟡 PyPI `MIT` | 🔵 **Breadth reference: MIRT, GRM, CAT, CDM, FA and SEM in one package.** 🔴 **Effectively abandoned: v0.1.5, last upload 2016-04-04 (10 years).** Read it for **algorithm coverage**, do not ship it |
+
+### 🔴 `P486` — a permissive repo payload does not license a vendored proprietary UI
+
+🆕 [`hicsail/opencat-pro`](https://github.com/hicsail/opencat-pro) (**BYO-CAT**, Boston University SAIL)
+probes clean: 🟢 **MIT**, `master/LICENSE`, **1,106 B**. 🔴 **And it is not usable as it stands.** Its own
+`README.md` says so twice:
+
+> *line 6:* *"The platform uses **Accessible+** to provide section 508 compliant user interface. Please
+> **purchase a license** … if you wish to use BYO-CAT for development."*
+> *line 176:* *"The UI framework is based on **Accessible+**. **A valid license is required to use this
+> in production.**"*
+
+🔴 **So the MIT grant covers the authors' code and not the interface the product ships.** A
+filename-and-payload probe returns `LICENSED · MIT · OK` and is **right about the repository and wrong
+about the deliverable**.
+
+🟢 **This instrument already names the class as a known limit and this is its first measured education
+instance.** `compose/code/p473-probe-commercial-gate/README.md` → *"Monorepo and open-core carve-outs
+are not detected. A repo-level permissive payload can coexist with a proprietary `ee/` subtree."*
+🔵 **The carve-out here is not a subtree — it is a purchased third-party asset named only in prose**,
+which no path-aware read of the tree would catch either.
+
+🔵 **The rule this yields is `P486`, and it is **defined once**, in `verticals/solutions.md` — the shelf it governs, since it is a statement about **platform** rows.** 🔴 **Cited here, not redefined: a duplicate definition makes every prior citation of the number ambiguous retroactively (`P481`).**
+
+### 🟢 What the tier does to the in-tree / side-car decision
+
+| Need | In-tree, permissive | Licence |
+|---|---|---|
+| Fit item parameters (1PL/2PL/4PL), maintained | 🟢 `nd-ball/py-irt` **or** `joakimwallmark/irtorch` | MIT |
+| Adaptive item selection + simulation | 🟢 `douglasrizzo/catsim` | BSD-3-Clause |
+| Synthetic response data for fixtures | 🟢 `eribean/girth` | MIT (stale) |
+| CAT with file-level copyleft tolerated | 🟡 `condecon/adaptivetesting` | MPL-2.0 |
+| 🔴 A ready-made CAT **web platform** | 🔴 **still none that is cleanly usable** | `opencat-pro` is MIT **+ paid UI** (`P486`) |
+
+🟢 **The chain Gap 39 asked for is now permissive end to end**, and every link was re-read from payload
+this pass:
+
+| Link | Repo | Licence (payload) | Bytes |
+|---|---|---|---|
+| Write N parametric item variants | [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) | 🟢 **MIT** · `main/LICENSE.md` | 1,072 |
+| Deliver them (QTI 3) | [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | 🟢 **MIT** · `main/LICENSE` | 1,076 |
+| Calibrate difficulty / prove equivalence | [`nd-ball/py-irt`](https://github.com/nd-ball/py-irt) | 🟢 **MIT** · `master/LICENSE` | 1,121 |
+| Select adaptively from the calibrated bank | [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 **BSD-3-Clause** · `main/LICENSE` | 1,514 |
+
+🔵 **See `P491` in `compose/patterns.md` for the wiring.** 🟢 **MIT · MIT · MIT · BSD-3 — no copyleft
+anywhere in the chain**, which is what makes it a product component rather than a side-car.
+
+### ⚠️ Gaps this pass searched for and did **not** close — stated so silence is not read as coverage
+
+| Gap | Searched | Result |
+|---|---|---|
+| 🔴 **A permissive CAT *web platform*** | `opencat-pro`, `EduCAT`, CAT platform searches | 🔴 **Open.** The only candidate carries a paid UI (`P486`) |
+| 🔴 **Psychometric equivalence *between generated variants*** | the second half of Gap 39 | 🔴 **Still open, and still unmeasured.** This pass supplies the **calibration** library; nobody has published the **equivalence study** for an LLM-generated variant family on this stack |
+| ⚠️ **An `R`-tier row (`philchalmers/mirt`)** | — | ⚠️ **Not probed this pass.** 🔵 `MIRT` appears 4× in the corpus but only as an **algorithm name inside `EduCDM`'s description** — the R package itself is unshelved. Stated as unprobed, not as absent |
+| 🔴 **LLM item-generation agents with a real slug** | `ExamEow`, `S.E.S.`, `ExamGen` surfaced in prose | 🔴 **Unresolved — no owner slug recoverable for any of the three.** Recorded as leads, not findings |
+
 ## 🟢 Thirty-seventh pass, 2026-10-07 — the copyleft tier measured correctly for the first time, and the Java tier gets a second channel
 
 **Licences read from each repo's own payload on `raw.githubusercontent.com`, 2026-10-07** (16 filenames

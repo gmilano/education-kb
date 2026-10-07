@@ -4,6 +4,97 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🔵 Thirty-eighth pass, 2026-10-07 — no new agents, and the honest reason: this pass found a measurement layer, not an agent
+
+**Licences read from payload on `raw.githubusercontent.com`, 2026-10-07**, 16 filenames × `main`/`master`,
+classified on the **title block** (`P171`). **No star counts** (`P479`). ⏱️ **Fifth pass of this date.**
+
+🔴 **This pass adds zero rows to this file, and that is the finding rather than a shortfall.** Ten
+agent-shaped candidates were probed. **Every one was already shelved**, which is what a saturated
+shelf looks like from the inside:
+
+| Candidate surfaced this pass | Status here |
+|---|---|
+| `Tutor MCP` (v0.4.0, Postgres + multi-node) | 🔵 **already shelved** — `agents/top.md`, `agents/trending.md`, `repos/trending.md` |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🔵 **already shelved** (pass 32) — re-verified this pass: 🟢 **BSD-3-Clause**, `main/LICENSE`, **1,531 B**, unchanged |
+| `DeepTutor` · `Lumen` · `OpenTutor` · `Claw-ED` · `StudyMate` · `Study-Mate` | 🔵 **all already shelved** (10–20 files each) |
+| `ExamEow` · `S.E.S.` · `ExamGen` | 🔴 **unresolved — no owner slug recoverable from any channel.** Leads, not findings |
+
+🔵 **The roster is 1,087 distinct `github.com` slugs. A general-purpose listicle sweep now returns
+almost nothing this KB does not hold**, and the two general searches run this pass (`top open source AI
+agents education 2026 github MIT`, `github trending education AI 2026`) returned **0 new usable
+agents** between them. 🟢 **Where the pass did find new ground was a *tier* nobody had searched for:
+item calibration — see `repos/foundations.md`.**
+
+> 🔵 **Method note, not a finding.** On a saturated shelf, *"which agents are trending"* has stopped
+> being the productive question and *"which layer of the delivery chain has no shelf at all"* has
+> started being it. `P483` is what happens when the answer to the second question was already written
+> down and then lost.
+
+### 🔴 `P487` — an **absent** licence title block is a different failure from a **wrong** one, and the cause selects the remedy
+
+🔴 **Correction first, because the class is not new and this shelf already holds it.** `agents/top.md`
+records at **pass 32** that `open-tutor-ai-CE` is *"BSD-3-Clause (`LICENSE`, 1,531 B — **body text, no
+title line**)"*. 🔵 **So "payload with no title line" is a registered case here, and any claim of it as a
+discovery is withdrawn.** What is new is that the pass found a **second** instance whose title block is
+absent for a **different reason**, and the reason decides how it resolves:
+
+| Cause of the absent title | Instance | Payload resolves how? | Residual risk |
+|---|---|---|---|
+| 🟢 **Body clauses are countable** | `open-tutor-ai-CE` (pass 32) · 1,531 B | 🟢 **From the payload alone** — 3 numbered clauses + the *"Neither the name … endorse"* clause ⇒ **BSD-3-Clause** | 🟢 **None.** Holder is named: *"Mohamed El hajji on behalf of all R2D-dev"* |
+| 🔴 **Holder is a packaging-template default** | 🆕 `joakimwallmark/irtorch` · 1,073 B | 🔴 **Family yes, holder no.** Body is **verbatim MIT**, so the family is unambiguous; the copyright line reads 🔴 ***"Copyright (c) 2018 The Python Packaging Authority"*** | 🔴 **Attribution unresolved** — see below |
+
+🔴 **The PyPA did not write `irtorch`.** `pyproject.toml` names the author as **Joakim Wallmark**; the
+`LICENSE.txt` grants rights in the name of an organisation that has no connection to the work. 🟢 **Two
+manifest channels resolve the *family* and both satisfy `P482`**: `pyproject.toml`
+`license = { text = "MIT" }`, and PyPI `license: MIT` with `Homepage` resolving **back to the same
+slug**.
+
+> **`P487`.** Classify on the title block (`P171`); when the title block is **absent**, say which of two
+> things is missing. **Family absent** → count the body clauses, or take the manifest layer as tiebreak.
+> **Holder absent or templated** → the **grant** is still good and the **attribution is not**, and that
+> is a **contract** question, not a licence one. 🔵 **For Globant the practical consequence is narrow and
+> real: an MIT grant issued by a copyright holder who did not author the code cannot be relied on for a
+> warranty or indemnity clause.** Name the actual author in the paperwork and cite `pyproject.toml`, not
+> the `LICENSE`.
+
+### 🟢 Re-verified this pass — one row, unchanged
+
+| Repo | Licence (payload) | Hit path · bytes | Movement |
+|---|---|---|---|
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **BSD-3-Clause** (body text, no title line) | `main/LICENSE` · **1,531 B** | 🟢 **None** — byte count matches the pass-32 record exactly |
+
+### 🔴 The `P480` fixture debt is **not** closed, and this is the second consecutive pass blocked
+
+🔴 **`./discover_probe.sh --self-test` was denied again**, by the same session auto-mode classifier that
+blocked pass 37, with the same reason (`Code from External`). 🔵 **The block is therefore a reproducible
+property of this environment, not a transient**, and that changes how it should be recorded.
+
+🟢 **The two fixtures `P480` demands remain correctly parked in `fixtures-pending/`.** Pass 37's
+instruction is explicit — *"if it does not report `11/11`, do not edit the `.expected` files to make it
+green"* — and promoting them **unexecuted** would move the gate from an honest `9/9` to an unverified
+`11/11`, which is the exact defect the instrument exists to prevent. 🔴 **So they stay pending, and the
+gate stays honest at `9/9` over a fixture set that still omits the shelf's dominant family.**
+
+🆕 **What this pass can contribute to the debt without executing anything: a third, independent
+GPL-3.0 specimen, fetched and byte-measured.**
+
+| Candidate fixture | Source | Bytes | Why it is worth having |
+|---|---|---|---|
+| 🆕 `gpl-3.0-datacamp-catsim` | [`datacamp/catsim`](https://github.com/datacamp/catsim) `master/COPYING` | **35,147** | 🟢 **An independent GPL-3.0 payload from a different project family than `lmscloud`** — and within the **±1 B** trailing-newline tolerance pass 37 recorded (`35,148` there). 🔵 Corroborates that the staged specimen is canonical GPL-3.0 text and not a variant |
+
+⚠️ **Not staged into `fixtures-pending/` this pass.** The directory's own README defines the promotion
+protocol for payloads *already* there; adding a **third** unexecuted specimen would enlarge an
+unverified set without improving it. 🔵 **Recorded here so the next pass that can execute has it
+costlessly.**
+
+> 🔴 **Operational note for whoever runs this next.** Closing `P480` needs one command in a session
+> **without** the auto-mode external-code restriction:
+> `cd compose/code/p473-probe-commercial-gate && ./discover_probe.sh --self-test` (expect `9/9`), then
+> `mv fixtures-pending/* fixtures/` and re-run (expect `11/11`). **Two passes have now been unable to
+> run it.** This is a permissions blocker, not a research one, and it is the single highest-value
+> unblocked action available on this KB.
+
 ## 🔴 Thirty-seventh pass, 2026-10-07 — the pass that reproduced `P250` on purpose-built new code, and found the fixture set that hid it
 
 **Every licence below was read from the repository's own payload on `raw.githubusercontent.com` on

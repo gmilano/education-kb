@@ -4,6 +4,121 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-eighth pass, 2026-10-07 — five trends: scoring becomes a measurement claim, and a KB can lose a gap it already paid for
+
+⏱️ **Fifth pass of this date.** 🔵 **All market figures below are secondary and carry their series
+(`P477`): never divide a figure from one series by a figure from another.**
+
+### T1 🟢 The defensible unit of AI assessment is shifting from the *score* to the *measurement claim*
+
+🔵 **Thirty-seven passes of this shelf have tracked agents that produce and grade items.** 🔴 **None of
+them can answer the question a regulator actually asks: *on what basis is this score comparable?***
+
+The EU AI Act classes **student evaluation and exam scoring** as high-risk, and the obligation that
+bites is not "a human reviewed it" but **accuracy, robustness and documented performance**. 🟢 **Those
+are psychometric properties, not LLM properties.** An item's **difficulty**, **discrimination** and the
+**standard error** of an ability estimate are the evidence; a rubric and a transcript are not.
+
+🔴 **The practical consequence, and it inverts a common pitch.** "Our AI generates infinite practice
+variants" is a **liability** under a high-risk regime unless variant **equivalence** is measured —
+without it, two students sitting different variants received different tests, and the grades are not
+comparable. 🟢 **With a calibration layer it becomes the strongest possible answer**: the variants are
+equivalent *to a stated tolerance*, and here is the item-parameter table.
+
+🟢 **And this is now buildable entirely permissively** — `py-irt` (MIT) or `irtorch` (MIT) for
+calibration, `catsim` (BSD-3) for adaptive selection, on top of the MIT QTI chain this KB already held.
+🔵 **See `P491` in `compose/patterns.md`, and the tier in `repos/foundations.md`.**
+
+### T2 🔴 A knowledge base can lose a gap it has already paid to identify — and losing it is worse than never having it
+
+🔴 **This pass's largest finding is about this repository.** `Gap 39`, opened at **pass 25**, named the
+missing item-calibration layer, priced it (*"acotado y construible"*) and prescribed the remedy
+(*"calibrar con una librería IRT de Python"*). 🔴 **The `2026-10-06` reset left it in `archive/` and it
+appears nowhere in the live tree.** Twelve passes ran without being able to see it.
+
+🔵 **The asymmetry is what makes this a trend and not a bookkeeping note.** A **fact** that falls out of
+a KB gets rediscovered by the next sweep that touches the topic — facts are in the world. 🔴 **A *gap*
+is not in the world. It is an inference the KB made about its own coverage**, so when the record goes,
+the inference is not recoverable by searching harder: nothing out there contradicts it, and no sweep
+returns it.
+
+🔴 **`P469` and `P483` are the two ways this fails, and they are opposites:**
+
+| | `P469` (pass 35) | 🆕 `P483` (this pass) |
+|---|---|---|
+| The claim | a gap that was **false** | a gap that was **true** |
+| The failure | asserted for 3 passes, disproved by the KB's own shelves | **archived**, so no pass could act on it |
+| What it cost | credibility — a deliverable would have said "nothing exists" | **12 passes of unrealised work**, already identified and priced |
+| The control | probe the shelf before declaring | 🆕 **carry the open-gap register forward through any reset** |
+
+> 🔵 **Generalised beyond this KB, because Globant ships this shape to clients.** Any knowledge asset
+> with a **lifecycle** — a re-scope, a migration, a reset — must treat its **open questions** as
+> first-class content with the same migration guarantee as its answers. 🔴 **Deliverables migrate the
+> conclusions and drop the register of what was known to be missing**, which is precisely the part the
+> next engagement needs.
+
+### T3 🔴 Measurement libraries are jurisdiction-neutral, so the regional story is regulatory, not geographic
+
+🟢 **An IRT estimator is mathematics: it has no locale, no curriculum and no jurisdiction in its domain
+model.** 🔴 **Which means the usual regional-placement move does not apply, and `P474` fired on this pass
+to stop it** — `catsim`'s author publishes from a `.com.br` domain and the pass nearly recorded a
+**LATAM** placement on the strength of a hostname.
+
+🔵 **The right question is not where the library was written but which regulator makes auditable
+measurement mandatory, and the answer differs sharply:**
+
+| Region | What makes calibration a requirement | Clock |
+|---|---|---|
+| **EMEA** | 🔴 **EU AI Act high-risk**: assessment, admissions, proctoring. Accuracy + robustness documentation | 🟡 **deferred to 2027-12-02** (July 2026 AI Omnibus) — but **Art. 4 AI-literacy has applied since 2025-02-02** |
+| **APAC** | 🔴 **Already binding in places.** Korea's Basic AI Act provisions from **H2 2026**; China's GenAI Measures operationally enforced since 2023 | 🔴 **now** |
+| **North America** | 🟡 **State-level and specific**: human-oversight and no-high-stakes-AI-decisions rules (Oklahoma, Maryland) make the *measurement* the defensible artefact | 🟡 **live, fragmented** |
+| **LATAM** | 🟡 **Brazil PL 2.338/2023** risk-based, in the Chamber of Deputies — text can still change | 🟡 **pending** |
+
+🔵 **So the same MIT library is a compliance asset on four different timetables.** 🟢 **EMEA's deferral
+is the window, not the reprieve**: a system calibrated now is evidence-ready in 2027 at no extra cost,
+whereas retrofitting calibration onto a deployed grader means re-running every item.
+
+### T4 🟢 Open source licence risk has moved from the *licence* to the *dependency named in prose*
+
+🔵 **Passes 33–37 hardened this KB against licence misreads — payload over prose, title block over body,
+two channels over one.** 🔴 **This pass's trap defeated all of it and was perfectly visible in a README.**
+
+`hicsail/opencat-pro` serves a **1,106-byte MIT** payload, classifies cleanly, and says in its own
+`README`: *"The UI framework is based on Accessible+. **A valid license is required to use this in
+production.**"* 🔴 **Every licence control this KB owns returns `OK`, and the platform is not shippable.**
+
+| Generation of risk | Example | What catches it |
+|---|---|---|
+| Wrong licence claimed in prose | `formalms` Apache claim (`P470`) | 🟢 read the payload |
+| Wrong family from body tokens | Sakai ECL→Apache (`P476`), GPL §6 (`P250`) | 🟢 title-block classification |
+| Registry name held by the ungranted twin | `moodle-mcp` (`P482`) | 🟢 back-resolution |
+| 🆕 **Permissive repo, non-free vendored asset** | `opencat-pro` (`P486`) | 🔴 **nothing automated. Read the README's licence section** |
+
+🔵 **The pattern across generations: as licence *metadata* gets more reliable, the residual risk moves
+into the parts that were never metadata.** 🔴 **For a platform, "what licence is this repo?" has become a
+less useful question than "what does this repo not contain?"**
+
+### T5 🔴 On a saturated shelf, discovery stops paying and *chain completion* starts
+
+🟢 **Measured this pass: 1,087 distinct slugs on the roster; four broad discovery searches; zero new
+usable agents.** Every candidate the general channels produced was already held.
+
+🔵 **Meanwhile two narrow searches aimed at a *missing link* rather than a trend produced eight
+permissive rows and a complete delivery chain.** 🔴 **The difference was not effort or luck — it was the
+question.** "What is trending in education AI" samples the same popular surface every pass. "What does
+the assessment chain still lack" interrogates the KB's own structure.
+
+🔵 **The market data agrees with the method.** Capital in the sector fell while structural adoption rose
+(pass 34, `T5`), and the agentic shift is described by every 2026 series as moving **from experiment to
+deployment**. 🟢 **In a deployment market the scarce input is not another agent — it is the one component
+that makes an existing agent defensible.** 🔴 **A studio that keeps cataloguing tutors is cataloguing the
+abundant half.**
+
+> 🔵 **Operational form of this trend for Globant.** Audit a client's intended chain link by link and
+> find the link with **no permissive option**. That link is the engagement: it is where the client
+> cannot self-serve from GitHub, and on this shelf it has twice been **measurement** rather than
+> generation.
+
 ## 🟢 Thirty-seventh pass, 2026-10-07 — five trends: the tutor becomes a classroom, and local inference stops being the fallback
 
 ⚠️ **T1, T2 and T4 rest on payload-verified repositories measured this pass. T3 and T5 mix payload

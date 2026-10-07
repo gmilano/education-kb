@@ -4,6 +4,87 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🔴 Thirty-eighth pass, 2026-10-07 — the assessment-delivery tier gets its measurement half, and a platform whose MIT grant stops at the UI
+
+**Licences read from payload on 2026-10-07**, title-block classified (`P171`). ⏱️ **Fifth pass of this date.**
+
+🔵 **This file's job is platforms that can be customised with AI on top. This pass adds no new LMS or
+SIS — the platform shelf is saturated — and instead closes a hole *inside* the assessment tier that
+`verticals` has been carrying for several passes.**
+
+### 🟢 The assessment tier was half a platform, and this pass says which half was missing
+
+🔵 **Shelved already: item banking and certified delivery.** 🔴 **Absent until now: the measurement that
+makes a delivered item mean anything.**
+
+| Layer | Platform / library | Licence (payload) | Status before this pass |
+|---|---|---|---|
+| Author + bank items (QTI 3) | [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) | 🟢 **MIT** · `main/LICENSE.md` · 1,072 B | 🟢 shelved |
+| Deliver items (QTI 3 player) | [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | 🟢 **MIT** · `main/LICENSE` · 1,076 B | 🟢 shelved |
+| 🔴 **Calibrate difficulty / discrimination** | 🆕 [`nd-ball/py-irt`](https://github.com/nd-ball/py-irt) | 🟢 **MIT** · `master/LICENSE` · 1,121 B | 🔴 **absent** |
+| 🔴 **Adapt the test to the learner** | 🆕 [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 **BSD-3-Clause** · `main/LICENSE` · 1,514 B | 🔴 **absent** |
+
+🟢 **All four permissive, no copyleft anywhere, so the whole assessment chain is an in-product
+component rather than a side-car.** 🔵 **That is rare on this shelf** — the LMS, SIS and proctoring tiers
+are overwhelmingly GPL/AGPL, and the KB has repeatedly had to route around them (`T4`, passes 33–37).
+
+### 🔴 `P486` — a repo's MIT payload does not license the interface the platform ships
+
+🆕 [`hicsail/opencat-pro`](https://github.com/hicsail/opencat-pro) (**BYO-CAT**, Boston University
+Software & Application Innovation Lab) is the only open-source **CAT web platform** this pass found. It
+probes **clean**:
+
+| Probe | Result |
+|---|---|
+| Licence payload | 🟢 **MIT**, `master/LICENSE`, **1,106 B** |
+| Family (title block) | 🟢 **MIT**, unambiguous |
+| Commercial use, from the payload | 🟢 **`OK`** |
+
+🔴 **And it cannot be used in production without buying something.** Its own `README.md`, twice:
+
+> *line 6:* *"The platform uses **Accessible+** to provide **section 508 compliant** user interface.
+> Please **purchase a license** of the platform suitable to your needs if you wish to use BYO-CAT for
+> development."*
+>
+> *line 176:* *"The UI framework is based on **Accessible+**. **A valid license is required to use this
+> in production.**"*
+
+🔵 **The grant is honest and the probe is honest; they are answering different questions.** The payload
+answers *"may I use the authors' code?"* — yes. The deliverable question is *"may I ship this
+platform?"* — **not without a third-party licence the repo does not contain.**
+
+🔴 **And the non-free component sits exactly where the education buyer's requirement is.** Section 508 /
+WCAG conformance is a **procurement precondition** for US public-sector education, so the one part a
+public buyer cannot drop is the one part that is not free.
+
+> **`P486`.** For a **platform** row, payload is necessary and **not sufficient**. Read the `README`'s
+> own licence section for **vendored-asset obligations** before writing `OK`. 🔵 **This is the
+> probe's own documented limit** — *"monorepo and open-core carve-outs are not detected"* — met for the
+> first time in education, and in a form **no path-aware read of the tree would catch either**, because
+> the obligation is stated only in prose.
+
+### 🟢 The CAT platform question, answered honestly
+
+| Option | Licence reality | Verdict |
+|---|---|---|
+| [`hicsail/opencat-pro`](https://github.com/hicsail/opencat-pro) | 🟢 MIT code 🔴 **+ paid UI framework** | 🔴 **Not cleanly usable.** Viable only if the UI is **replaced**, which is most of a web platform |
+| [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) + own UI | 🟢 **BSD-3-Clause**, no vendored assets | 🟢 **The recommended route.** `catsim` is an **engine**, not a platform — pair it with the QTI player above and the UI is the client's |
+| [`condecon/adaptivetesting`](https://github.com/condecon/adaptivetesting) | 🟡 **MPL-2.0** · 16,661 B | 🟡 **Usable in-tree**, with file-level copyleft: modifications **to its own files** must be published; your surrounding code is unaffected |
+
+> 🔵 **Selection rule this pass adds.** For assessment, prefer an **engine + your own UI** over a
+> **platform**. The engines in this tier are permissive and jurisdiction-neutral; the one platform
+> carries a purchased dependency. 🟢 **And an engine is what a regulated buyer wants anyway** — the
+> auditable artefact is the calibration, not the chrome.
+
+### 🔵 What did not change this pass, stated so the shelf is not re-litigated
+
+| Tier | Status |
+|---|---|
+| LMS (Moodle, Open edX, Chamilo, ILIAS, Sakai, `classroomio`) | 🔵 **unchanged.** Re-surfaced by this pass's platform search; **all already shelved with payload-read licences** (pass 37 re-licensed the whole shelf from payload) |
+| SIS (`rubelw/OSSS` Apache-2.0, openSIS, RosarioSIS) | 🔵 **unchanged** |
+| ERP-for-education (`OpenEduCat`, LGPL, Odoo-based) | 🔵 **unchanged.** ⚠️ Still the shelf's only **LGPL** platform, and still **without a fixture** in the licence gate (`fixtures-pending/README.md` names this) |
+| Proctoring / integrity | 🔵 **unchanged** — still copyleft, still a side-car (pass 33) |
+
 ## 🟢 Thirty-seventh pass, 2026-10-07 — the whole platform shelf re-licensed from payload, and the rule it reveals
 
 **Licences read from payload on `raw.githubusercontent.com`, 2026-10-07**, branch- and case-aware,

@@ -4,6 +4,92 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — thirty-eighth pass: zero new agents, and a gap this KB declared for itself then archived
+
+⏱️ **Fifth pass of this date.** **Licences from payload, title-block classified (`P171`). No star
+counts (`P479`).**
+
+### 🔴 The headline is an absence, reported as an absence
+
+🔴 **Ten agent-shaped candidates probed. Zero new rows.** Every one was already on these shelves. 🟢
+**The roster is 1,087 distinct slugs, and a general listicle sweep has stopped being productive** — the
+two broad searches run this pass returned **no agent this KB does not already hold**.
+
+| Candidate | Channel it came from | Status |
+|---|---|---|
+| `Tutor MCP` v0.4.0 (Postgres, multi-node, MIT) | search summary | 🔵 **already shelved** — 3 files |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | arXiv `2602.07176` + search | 🔵 **already shelved** (pass 32) · 🟢 re-verified **BSD-3-Clause**, 1,531 B, **no movement** |
+| `DeepTutor` · `Lumen` · `OpenTutor` · `Claw-ED` · `StudyMate` · `Study-Mate` | GitHub-topics prose | 🔵 **already shelved** (10–20 files each) |
+| `ExamEow` · `S.E.S.` · `ExamGen` | search prose only | 🔴 **UNRESOLVED — no owner slug recoverable.** Leads, not findings |
+| `FutureAGI` tutoring sim/grading (claimed Apache-2.0, self-hostable) | vendor blog | 🔴 **UNVERIFIED — vendor-blog claim, no repo slug given.** 🔵 `P470` applies: a published licence claim is not a licence |
+
+> 🔵 **Not a shortfall — a signal.** Agent discovery on this shelf has saturated. The productive
+> question has moved from *"which agent is trending"* to *"which link in the delivery chain has no
+> shelf at all"*, and this pass answered the second one.
+
+### 🟢 Where the week actually moved — the item-calibration tier
+
+🟢 **8 permissive rows, a tier with no prior presence anywhere in this tree including `archive/`:
+`py-irt`, `irtorch`, `catsim`, `adaptivetesting`, `girth`, `pyirt`, `variational-IRT`, `pypsy`.** Full
+table with payload bytes, release dates and maintenance tiering in **`repos/trending.md`** and
+**`repos/foundations.md`**.
+
+🔵 **This matters for agents even though none of it is an agent**: the shelf is thick with tutors and
+graders that **produce** items and **score** responses, and held nothing that could say whether an item
+is *harder* than another, or whether two generated variants are *equivalent*. 🔴 **A grading agent
+without a calibration layer cannot defend a score, and defensibility is what the regulated buyer is
+paying for** (see `intel/trends.md` `T2`).
+
+### 🔴 `P483` — the gap was this KB's own, declared at pass 25, and the reset made it uncollectable
+
+🔴 **`archive/2026-10-06-pre-reset/repos-foundations.md:6019` holds Gap 39**, which names the missing
+piece (*"no hay análisis de ítems (TRI/IRT, calibración de dificultad) empaquetado y permisivo"*),
+prices it (*"acotado y construible"*) and prescribes the fix (*"calibrar con una librería IRT de
+Python"*). 🔴 **It appears nowhere in the live tree — 0 hits outside `archive/`.** 🔵 **Twelve passes have
+run since the reset over a shelf that had already done this thinking and could no longer see it.**
+
+### 🔴 `P484` — and the probe that found it published two wrong numbers getting there
+
+🔴 **First draft of this pass claimed *"psychometrics: zero coverage"*, on an English-only grep.** The
+corpus is **bilingual**: `psicometr` → 5 files, `testing adaptativo` → 5, `IRT` → 19. 🔴 **Claim
+withdrawn.** 🔴 **And the corrective probe over-reported too** — `grep -ril TRI` said **105 files**, while
+`grep -roh '\bTRI\b'` finds **1 occurrence** in the whole tree. 🔵 **Same command, same run: one false
+gap corrected, one false coverage figure created, both from a missing `\b`.**
+
+### 🟢 Searches run this pass, and what each returned — stated so silence is not read as coverage
+
+| Search | New usable finding? |
+|---|---|
+| `top open source AI agents education 2026 github MIT license` | 🔴 **No.** Returned general-purpose agents (OpenClaw, OpenHands, browser-use) — **not education**, and all already shelved |
+| `github trending education AI 2026 tutor agent repository` | 🔴 **No.** All five named projects already shelved |
+| `open source platform education LMS SIS MIT Apache self-hosted 2026` | 🔴 **No new platform.** Moodle, Open edX, Sakai, Chamilo, ILIAS, OpenEduCat all shelved — see `verticals/solutions.md` |
+| `AI education industry trends 2026 market size agentic tutors` | 🟢 **Yes** — market series and the agentic-shift framing, carried to `intel/` |
+| 🟢 `open source item response theory python library IRT psychometrics github` | 🟢 **Yes — the pass's whole yield.** 5 estimation libraries |
+| 🟢 `computerized adaptive testing open source library catsim github license` | 🟢 **Yes** — `catsim`, `opencat-pro`, `adaptivetesting`, `CAT4AI`, plus the `P485` fork split |
+| `new open source education AI agent October 2026 release MCP grading tutor` | 🔴 **No.** `Tutor MCP` and `Open TutorAI` both already held |
+| `open source AI exam item generation agent assessment psychometrics 2026 github` | 🔴 **No slug recoverable.** Three named tools, none resolvable |
+
+### 🔵 Region placement this pass — 1 of 9, and `P474` is the reason for the rest
+
+| Placement | Basis |
+|---|---|
+| 🟢 **APAC** — [`bigdata-ustc/CAT4AI`](https://github.com/bigdata-ustc/CAT4AI) (🟢 MIT, 1,062 B) | the org's **declared institutional domain** (USTC, Hefei) — the `P261` route |
+| ⚠️ **8 unplaced** | 🔴 **`P474` fired.** `catsim`'s author publishes from a `.com.br` domain and the pass nearly placed it **LATAM** on that basis — forbidden: place from the **artifact's domain model**, not the maintainer's |
+
+🟢 **Stated as a property rather than a gap: an IRT estimator has no jurisdiction in its domain model,
+so this tier is unplaceable by construction.** 🔵 **Its regional value is which regulator makes
+auditable measurement *mandatory*** — placed per region in `intel/market.md`.
+
+### 🔴 Instrument status — the `P480` fixture debt is still open, second pass running
+
+🔴 **`./discover_probe.sh --self-test` denied again** (auto-mode classifier, `Code from External`) —
+**same block as pass 37, so it is an environment property, not a transient**. 🟢 **The two staged GPL/AGPL
+fixtures stay in `fixtures-pending/` unpromoted**, exactly as pass 37's protocol requires: promoting an
+expectation that has never been executed is the defect the instrument exists to prevent. 🆕 **A third
+independent GPL-3.0 specimen was measured this pass anyway** — `datacamp/catsim` `master/COPYING`,
+**35,147 B**, within the ±1 B trailing-newline tolerance of the staged `lmscloud` payload (35,148 B),
+corroborating that the staged text is canonical.
+
 ## 2026-10-07 — thirty-seventh pass: a multi-agent classroom from Tsinghua, and the fixture set that let `P250` back in
 
 > **Append-only.** Newest dated section on top; history preserved below.
