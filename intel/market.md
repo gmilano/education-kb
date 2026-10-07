@@ -4,6 +4,190 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🔴 Thirty-fourth pass, 2026-10-07 — funding is down 44% on a like-for-like window, and that is worse than this KB recorded
+
+⏱️ **Measured 2026-10-07 from secondary sources** (market-research houses, state and national
+legislative trackers, Ipsos Education Monitor 2026, UNESCO/ECLAC, Digital Education Council,
+law-firm regulatory trackers, the Latin American AI Index). ⚠️ **These are published estimates and
+reported survey results, not first-hand measurements.** 🔴 **Primary legal texts remain unreachable:**
+`eur-lex.europa.eu` → **000** this pass, as last pass. **Every AI Act date below is secondary-sourced
+and must be re-verified against the Official Journal before it enters a client deliverable.** This
+pass additionally measured `code.europa.eu` → **000** (see `repos/foundations.md`, `P467`).
+
+### 🔴 The funding scissor, re-measured on a like-for-like window
+
+Pass 32 recorded funding "fell 26%". A like-for-like comparison this pass gives a **worse** number:
+
+| Window | Raised | Deals | Average deal |
+|---|---|---|---|
+| **January–July 2025** | ~**$774M** | **37** | ~$20.9M |
+| **January–July 2026** | ~**$435M** | **24** | ~$18.1M |
+| **Change** | 🔴 **−43.8%** | 🔴 **−35.1%** | 🔴 **−13.4%** |
+
+🔵 **Capital is down far more than deal count, and deal count is down more than deal size.** The
+market is not repricing rounds downward so much as **doing fewer of them** — fewer companies are
+clearing the bar at all. A separate count puts AI-education startups at **$232.07M across 32
+disclosed rounds for Aug 2025 – Sep 2026**, consistent in direction.
+
+⚠️ **This is the single most important slide in a commercial conversation, and it cuts both ways.**
+Against: nobody is funding a new education AI product. For: **47% of higher-education institutions
+now use AI structurally** in teaching and administration while capital retreats — which is the
+definition of a services market rather than a product market. The buyer is the institution, the
+budget is operational, and the deliverable is integration into what they already run.
+
+### Global market size — the disagreement is still the finding
+
+| Source type | 2026 value | Forward |
+|---|---|---|
+| Spread across four research houses | **$6.4B – $11.4B** | — |
+| One house, explicit | **$10.6B** (2026) | **$42.48B by 2030**, 41.5% CAGR |
+| Precedence Research | — | **$136.79B by 2035** |
+| Whole EdTech market (context) | **$404B**, 16.3% CAGR | AI the fastest segment at **+42%/yr** |
+
+🔴 **A 78% spread between the low and high 2026 estimate.** Quote the range, never a point. The only
+defensible framing: *"the AI-in-education market is somewhere between $6B and $11B in 2026, and it is
+the fastest-growing segment of a $404B sector."*
+
+## Opportunities by region — thirty-fourth-pass update, 2026-10-07
+
+### North America
+
+📊 **Measured:** **134 AI-in-education bills introduced across 31 states** in the 2026 session;
+**35+ states** now publish official AI guidance through their departments of education (as of June
+2026); one tracker counts **68 bills across 27 states with 10 already enacted** in 2026.
+
+🔵 **The legislative content has converged on three things**, and each is a buildable deliverable:
+
+| What states are legislating | Example | The engagement it creates |
+|---|---|---|
+| **Student data must not train models** | **California AB 1159** prohibits using student data to train AI models | A **data-boundary architecture**: local inference or contractual no-train guarantees, provable. This is `P38`/`P40` territory — the client must be able to *show* the data never left. |
+| **Human oversight on high-stakes decisions** | **Oklahoma** and **Maryland** require human oversight and **ban AI from high-stakes decisions about students** | A **gated-decision workflow**: AI proposes, a named human disposes, and the gate is logged. This is `P11` (one oversight gate), and it is now a statutory requirement rather than a nicety. |
+| **AI in the curriculum itself** | **Georgia** and **Mississippi** require computer-science credits including AI instruction | **Curriculum and teacher-enablement** work — content generation plus training, `P6` and `P8`. |
+
+🟡 **Higher education is behind K-12 on policy and knows it.** State officials are now setting rules
+for universities, and the open questions are explicitly: **must faculty disclose AI use, must students
+disclose AI use, and what uses are permitted.** 🔵 **That is a policy-and-tooling engagement, not a
+model engagement** — the deliverable is a disclosure workflow wired into the LMS submission path, and
+`ucfopen/canvasapi` (added this pass) is the MIT layer for the Canvas half of it.
+
+🟢 **Sell into North America:** the **data-boundary proof** and the **logged human gate**. Both are
+now compliance line items in named statutes, which means they have a budget owner.
+
+### EMEA
+
+📊 **Measured:** the **EU AI Act (Regulation (EU) 2024/1689)** classifies AI used in education for
+**admission decisions, assessment of learning outcomes, evaluation of students and steering of an
+individual's educational path** as **high-risk** (Annex III). Schools and universities that *use*
+third-party AI are **deployers** with their own obligations — not bystanders. The Act also imposes an
+**AI-literacy duty** on providers and deployers for staff who operate AI systems. Secondary sources
+place full enforcement of the relevant provisions at **August 2026**. 🔴 **Date secondary-sourced —
+`eur-lex` 000.**
+
+🔵 **The deployer obligation is the commercial key, and it is widely missed.** A school that buys an
+essay-grading tool cannot discharge its duties by pointing at the vendor: it owes risk management,
+data governance, **human oversight**, transparency to students, and documented AI literacy for staff.
+Every one of those is a documentation-and-process deliverable Globant can produce, and none of them
+requires building a model.
+
+| Obligation | Deliverable |
+|---|---|
+| Human oversight, documented | The `P11` oversight gate with an audit trail that names the human |
+| Data governance | Local-first deployment (`P4`, `P40`); `coqui-tts` MPL / `faster-whisper` MIT keep the speech tier clean |
+| Transparency to the student | Explainable scoring — **evidence breakdown, not a bare percentage** |
+| AI literacy for staff | `P6` enablement, and the MIT `promptster-ai/rubric` taxonomy as a scorecard starting point |
+| Conformity before deployment | The AI Act education profile already in `P13` |
+
+🔴 **And a standing caveat this pass sharpened:** this KB's EMEA *repository* shelf is thin, and
+**`P467` shows that is partly because every European public-sector forge is unreachable from this
+instrument** (`code.europa.eu`, `gitlab.opencode.de`, `forge.apps.education.fr`, Codeberg, Framagit,
+FSFE — all 000). 🔵 **Do not present EMEA open-source thinness to a client as market evidence.** One
+EMEA-origin asset did arrive this pass: `macsnoeren/genai-open-assessment` (Netherlands, **GPL-3.0**),
+an auditable rubric-driven grader for open questions — exactly the Annex III shape, in the wrong
+licence for embedding and the right one for a standalone.
+
+🟢 **Sell into EMEA:** **deployer compliance as a service**. The regulation creates the obligation,
+the institution carries it, and almost none of them have the documentation.
+
+### APAC
+
+📊 **Measured — three binding statutes landed inside twelve months:**
+
+| Jurisdiction | Instrument | Status |
+|---|---|---|
+| **Vietnam** | Law on Artificial Intelligence | 🔴 **in force 2026-03-01** |
+| **South Korea** | AI Basic Act | 🔴 **in force 2026-01-22** |
+| **Taiwan** | AI Basic Act | passed **December 2025** |
+| **India** | dedicated AI legislation, risk-based | **signalled July 2026** — not yet law |
+| **Singapore, Japan** | voluntary guidelines on existing law | no AI statute |
+
+📊 **Adoption is led by Singapore at a 60.9% AI diffusion rate** among working-age adults, with
+**South Korea posting the world's largest gain in H2 2025**; Australia, Korea and Taiwan follow, with
+Japan, India and China measured as relatively behind on diffusion.
+
+📊 **And the public has already decided.** Support for *banning* AI in schools (Ipsos Education
+Monitor 2026): **Indonesia 23%, Thailand 25%, India 26%, Singapore 28%, Japan 29%, Malaysia 29%,
+South Korea 31%.** 🟢 **No APAC market measured has even a third of the public behind a ban** — the
+social licence to deploy exists, which is not true everywhere.
+
+🔵 **The hard part in APAC is not permission, it is jurisdictional multiplicity.** A regional client
+spans a binding Vietnamese law, a binding Korean act, a Taiwanese framework act, voluntary Singapore
+and Japanese guidance, and an Indian regime that does not exist yet. 🟢 **That is `P6`/`P9`/`P16`
+territory and the pattern is policy-as-configuration:** one agent architecture, per-jurisdiction
+policy nodes, so adding a country is a config change rather than a rebuild.
+
+📊 **Every major APAC economy is building a sovereign model:** India's **Sarvam AI**, Malaysia's
+**ILMU**, Indonesia's **Sahabat AI**, Singapore's **SEA-LION**, South Korea's **HyperCLOVA X Think**,
+Japan's **NTT Sarashina**. 🔴 **This KB cannot verify a single one of their weights licences —
+`huggingface.co` is 000** (see `intel/trends.md`, standing limit). 🔵 **Treat "sovereign model
+available" as a client-supplied input, never as a KB finding.**
+
+🟢 **Sell into APAC:** the **multi-jurisdiction policy layer**, and **integration against a sovereign
+model the client chooses** — with the model licence as the client's representation, in writing.
+
+### LATAM
+
+📊 **Measured:** **more than 50% of teachers in Chile and Brazil already use AI tools, while fewer
+than 10% of institutions in the region have formal guidelines.** Regional enterprise AI deployment
+sits at **47%**, with only **Brazil (65.89), Chile (63.19) and Uruguay (62.21)** inside the global
+top 50. **UNESCO launched the Observatory on AI in Education for Latin America and the Caribbean on
+2026-04-14** at ECLAC headquarters in Santiago.
+
+🔴 **The teacher/institution gap is the sellable work, and it is a governance gap, not a technology
+gap.** Over half of teachers are using these tools inside institutions that have written nothing
+down. This is consistent in direction with the 87%-adoption-against-26%-strategy figure pass 33
+recorded, and it is the same shape measured a different way. 🔵 **The first LATAM deliverable is
+almost never a model. It is an acceptable-use policy, a data-handling boundary, and a teacher
+enablement programme** — then the tooling.
+
+📊 **Regulation is converging on the EU risk-based model, and none of it is finished:**
+
+| Country | Instrument | Distinctive feature |
+|---|---|---|
+| **Brazil** | **PL 2.338/2023** — horizontal statute | The regional bellwether: risk-based, transparency duties, a supervisory architecture. Brazil also **signed an AI and tech-regulation agreement with the EU in June 2026**, which makes EU-shaped compliance work directly reusable. |
+| **Chile** | government-sponsored bill (executive draft **2024-05-07**) | Supervision tied to Chile's forthcoming data-protection authority. **ILIA 2025 ranks Chile 1st in LATAM**, "pioneer" tier. |
+| **Mexico** | federal bill in the Senate (2024) | Explicit **"technological sovereignty"** framing — reducing dependence on foreign models is a stated policy goal, not a preference. |
+
+🟢 **Latam-GPT** remains the regional anchor: led by **CENIA (Chile)** with **30+ institutions across
+8 countries**, trained on regional corpora. 🔵 **Mexico's sovereignty framing plus Latam-GPT plus a
+Brazil–EU regulatory alignment is a coherent sales story:** build on regional models, with EU-shaped
+governance, deployable on infrastructure the client owns — which is `P5`, `P40` and `P42`.
+
+🟢 **Sell into LATAM:** **governance first, on top of adoption that already happened.** The region has
+the highest teacher uptake and the least institutional documentation of any region measured here.
+
+### 🔵 Cross-region read, thirty-fourth pass
+
+| Region | Binding regime | Adoption | The gap you are paid to close |
+|---|---|---|---|
+| **North America** | 🟡 state-by-state, 10 statutes enacted 2026 | high, policy-led | **Provable data boundaries + logged human gates** |
+| **EMEA** | 🔴 hardest (AI Act Annex III, deployer duties) | moderate | **Deployer compliance documentation** |
+| **APAC** | 🟡 three binding statutes, diverging | led by Singapore | **One architecture, many jurisdictions** |
+| **LATAM** | 🟢 lightest, all bills pending | **highest teacher uptake** | **Governance for adoption that already happened** |
+
+🔵 **The regions are not at different stages of the same journey; they are solving different
+problems.** EMEA buys compliance, LATAM buys governance, North America buys provable boundaries, APAC
+buys portability. **A single pitch deck will fail in three of four.**
+
 ## 🔴 Thirty-third pass, 2026-10-07 — LATAM's number is 87% adoption against 26% strategy, and that 61-point gap is the sellable work
 
 ⏱️ **Measured 2026-10-07 from secondary sources** (market research houses, legislative trackers,

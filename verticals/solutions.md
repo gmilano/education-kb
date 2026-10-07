@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-fourth pass, 2026-10-07 — the platform licences re-read against a second channel, and the Canvas integration layer was missing
+
+**Licences read from payload on `raw.githubusercontent.com`, 2026-10-07** (branch- and case-aware,
+13 filenames × `main`/`master`), **and cross-checked against the registry each platform publishes
+to.** No star counts: `api.github.com` **403**, and the GitHub MCP route an earlier pass used is
+outside this session's repository scope. Consolidated 20-channel census in `agents/top.md`; `P465`
+records why it needed consolidating.
+
+### 🔵 Why the second channel matters more for platforms than for agents
+
+A platform's licence is the most consequential fact on this shelf — it decides whether the
+deliverable can be a module inside the tree or must be a side-car outside it. And platforms are
+exactly where payload-reading is least comfortable: a 35 KB `LICENSE` blob has to be text-matched,
+and GPL-2.0, GPL-3.0, AGPL-3.0 and LGPL share most of their prose. **A packaging declaration says
+which one in a machine-readable string.**
+
+| Platform | Payload verdict (this KB's record) | 🆕 Registry declaration | Agreement |
+|---|---|---|---|
+| **Moodle** | GPL-3.0-or-later | Packagist `moodle/moodle` → **`GPL-3.0-or-later`** | 🟢 agrees |
+| **Open edX platform tier** | AGPL-3.0 | PyPI `openedx-learning` → **AGPL 3.0** (OSI AGPLv3+); `edx-proctoring` → **AGPL 3.0**; 🆕 `edx-opaque-keys` → **AGPL-3.0-only** | 🟢 agrees — 🆕 **`edx-opaque-keys` is a new row** |
+| **Open edX extension tier** | Apache-2.0 | PyPI `xblock` → **Apache-2.0** | 🟢 agrees |
+| **Kolibri** | MIT | PyPI `kolibri` → **MIT** (OSI MIT classifier) | 🟢 agrees |
+| **Frappe / Frappe Education** | MIT | PyPI `frappe` → **OSI MIT classifier** | 🟢 agrees |
+| **Chamilo** | GPL-3.0 | 🔴 Packagist **404** — not published there | ⚠️ payload only |
+
+🔵 **`GPL-3.0-or-later` is this KB's existing record for Moodle, and the point of the re-read is that
+it did not move.** The distinction matters on every Moodle engagement — *"GPL-3.0"* alone leaves open
+whether a downstream work may be distributed under a later GPL version, and `-or-later` settles it —
+so it is worth confirming from Moodle's own packaging metadata rather than inheriting it.
+
+⚠️ **Chamilo is the counter-example that keeps this honest** (`P468`): a major PHP LMS on this shelf
+with **no Packagist presence**. The registry route has coverage holes, and a 404 is not a licence
+finding.
+
+### 🟢 The integration layer this shelf was missing
+
+| Layer | Repo | Licence | Cross-channel | Why it belongs on the platform shelf |
+|---|---|---|---|---|
+| **Canvas LMS API client (Python)** | [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) | 🟢 **MIT** (`master/LICENSE`, 1,130 B) | 🟢 PyPI `canvasapi` → MIT + **OSI MIT classifier** | 🔴 **This shelf carried six Canvas MCP servers and not the client they sit on.** Object-oriented Python over the Canvas REST API: courses, enrolments, assignments, **submissions and gradebook writes**, quizzes, LTI. From **UCF Open** — the same group as `UDOIT`, `Materia` and `Obojobo`, all already here. 🔵 **Canvas itself is AGPL-3.0; this client is MIT.** Sixth independent instance of this KB's platform-copyleft / integration-permissive rule: the client talks over HTTP from outside the tree, so your deliverable does not inherit Canvas's licence. Branch is `master`. |
+
+### 🟡 A standalone assessment platform, EMEA-origin, and copyleft
+
+| Platform | Repo | Licence | Stack | Where it fits |
+|---|---|---|---|---|
+| **genai-open-assessment** | [`macsnoeren/genai-open-assessment`](https://github.com/macsnoeren/genai-open-assessment) | 🟡 **GPL-3.0** (`main/LICENSE`, 35,149 B) | Apache + PHP + **SQLite**, one-command Docker start | Rubric-driven automated grading of **open-ended** higher-education questions, with role-separated UIs for teachers, assessors, admins and students. 🟢 **Its design principle is the one EMEA buyers ask for first:** educational validity, transparency and **auditability** — every prompt, criterion, input and output storable and reviewable, with the human educator accountable for the decision. **Netherlands-origin** (Dutch interface, `@school.nl` seed accounts). 🟡 **GPL-3.0 — deploy it or extend it as its own system; do not embed it in a permissive deliverable.** 🔵 **Its real value to an engagement may be the rubric-and-audit data model rather than the PHP**: it is the clearest worked example on this shelf of what Annex III "assessment of learning outcomes" compliance looks like in a schema. |
+
+### 🔵 The selection rule this pass adds
+
+**Verify a platform's licence twice, and prefer the sharper statement.** Where payload and registry
+agree, the row is as well-evidenced as this KB can make it, and the registry often carries the more
+precise SPDX expression (`GPL-3.0-or-later` beats `GPL-3.0`). Where only payload answers — Chamilo,
+and every platform not published to a registry — say so on the row rather than implying both.
+
 ## 🟡 Thirty-third pass, 2026-10-07 — the integrity layer is copyleft, and that decides where the agent goes
 
 **Licences read from payload on `raw.githubusercontent.com`, 2026-10-07**, branch- and case-aware

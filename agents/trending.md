@@ -4,6 +4,86 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — thirty-fourth pass: a census that contradicted itself, 20 repos probed, 7 with no grant at all
+
+> **Append-only.** Newest dated section on top; history preserved below.
+
+⏱️ **Measurement window 2026-10-07.** **20 repositories probed** first-hand against
+`raw.githubusercontent.com`, branch- and case-aware (13 licence filenames × `main` **and** `master`),
+with README and manifest reads for substance. **Census of the 15-repo candidate sweep, every class
+named so the denominator closes: 7 carry a permissive grant** (4 × MIT, 2 × Apache-2.0,
+1 × BSD-3-Clause), **1 is GPL-3.0**, **7 exist and serve no licence payload at all** —
+7 + 1 + 7 = **15**. Five further repos were probed outside the sweep (`ucfopen/canvasapi`,
+`dmitry-viskov/pylti1.3`, `jupyter/nbgrader`, `ucbds-infra/otter-grader`,
+`soumics/llm-rag-assistant`) for **20 total**.
+
+🔴 **7 of 15 shipped no grant.** That ratio is the headline of the sweep: the long tail of
+education-agent repositories surfaced by search is overwhelmingly ungranted.
+
+🟢 **"No payload" was separated from "unresolved" by a second probe, which is the `P461` lesson
+applied rather than quoted.** Each of the 7 ungranted repositories was re-probed for existence
+across `main` and `master` against `README.md`, `README.rst`, `README.txt`, `readme.md`,
+`package.json`, `requirements.txt`, `pyproject.toml`, `index.html` and `app.py`. **All 7 returned
+`main/README.md` at 200** — so all 7 **exist and genuinely serve no licence payload**, and **0 are
+unresolved**. Negative control in the same run: `totally-fake-org-zzz9/nope-repo-abc` → **404** on
+both `README.md` and `package.json`.
+
+### 🔴 `P465` — the correction, and it is about this file
+
+The thirty-third pass's channel census, in this file, contains these two rows in the same table:
+
+| Channel | Result | Note (verbatim) |
+|---|---|---|
+| `raw.githubusercontent.com` | **200** | *"**the only licence channel**"* |
+| `pypi.org` | **200** | *"still open, as pass 41 used it for `edx-proctoring`"* |
+
+🔴 **Both cannot be true, and the narrower claim is the one that propagated** — *"six channels"* and
+*"the only licence channel"* were carried into the pass-33 headers of `agents/top.md`,
+`repos/foundations.md`, `verticals/solutions.md` and `compose/patterns.md`. ⚠️ **No new channel was
+discovered this pass.** PyPI, npm, Packagist and Maven Central were used and proved to discriminate
+by earlier passes. **What decayed was the record of a capability, not a fact** — see `intel/trends.md`
+T1. **Consolidated 20-channel census now lives in `agents/top.md`.**
+
+**Channel census this pass — 20 channels, HEAD and GET:** `raw.githubusercontent.com` **200** ·
+`pypi.org` **200** · `registry.npmjs.org` **200** · `packagist.org` **200** · `repo1.maven.org`
+**200** (unused) · `gitlab.com` **200** · 🆕 `bitbucket.org` **200** (never named in this KB before) ·
+`github.com` **403** · `api.github.com` **403** (**no star counts**) · `sourceforge.net` **403** ·
+`crates.io` **403** · `github.com/.../archive/{sha}.zip` and `codeload.github.com` **403** ·
+`eur-lex.europa.eu` **000** · `huggingface.co` **000** · `zenodo.org` **000** · `codeberg.org`
+**000** · `code.europa.eu` **000** · `gitlab.opencode.de` **000** · 🆕 `forge.apps.education.fr`
+**000** · 🆕 `invent.kde.org` / `salsa.debian.org` **000**.
+
+**Negative controls, same run:** `pypi.org/pypi/nonexistent-pkg-zzz/json` → **404**; a nonexistent
+GitLab path → **302 to sign-in**; `packagist.org/packages/chamilo/chamilo-lms.json` → **404**.
+
+### 🟢 New this week — permissive, education-specific
+
+| Agent | Repo | Licence (payload) | Region | Note |
+|---|---|---|---|---|
+| Adaptive AI Tutor | [`soumics/adaptive-ai-tutor`](https://github.com/soumics/adaptive-ai-tutor) | 🟢 **MIT** (`main/LICENSE`, 1,070 B) | Global | Curriculum-grounded: the uploaded material's own structure becomes the topic graph; cited explanations, Socratic mode, rubric-graded practice, **SM-2 spaced repetition**, fully local on **Ollama**. Author states it is a prototype with no measured learning outcomes. 🔴 **`P466` — not installable here: its MIT RAG core is pinned as a GitHub archive zip, 403.** |
+| genai-open-assessment | [`macsnoeren/genai-open-assessment`](https://github.com/macsnoeren/genai-open-assessment) | 🟡 **GPL-3.0** (`main/LICENSE`, 35,149 B) | **EMEA** | Rubric-driven grading of **open-ended** higher-ed questions as a *constrained* assessor; every prompt, criterion, input and output stored for review. Apache/PHP/SQLite, Docker one-liner. **Netherlands-origin.** First EMEA-origin higher-ed assessment framework on any shelf here — **copyleft, so it does not fill the permissive EMEA gap.** |
+| Promptster AI-fluency rubric | [`promptster-ai/rubric`](https://github.com/promptster-ai/rubric) | 🟢 **MIT**; npm `@promptster/rubric` 0.7.0 MIT | Global | A **data asset, not an agent.** Five dimensions, behavioural anchors, research citations, as `src/rubric.json`. 🔴 **Open rubric, closed calibration** — scoring weights deliberately withheld. Taxonomy for a client enablement scorecard; not a scoring engine. |
+
+### 🔴 Probed and rejected — stated in full, because silence looks like coverage
+
+| Repo | Result |
+|---|---|
+| [`jadrianlg16/learning-tutor`](https://github.com/jadrianlg16/learning-tutor) | **no payload** — good design (a learner model the LLM may never edit), no grant |
+| [`samrathreddy/Tutor-multi-ai-agent`](https://github.com/samrathreddy/Tutor-multi-ai-agent) | **no payload** |
+| [`omerbbbb/ai-graded-assessment-platform`](https://github.com/omerbbbb/ai-graded-assessment-platform) | **no payload**, despite real assessment-day use |
+| [`spal740/GradeScribe`](https://github.com/spal740/GradeScribe) | **no payload** |
+| [`natiworldclass/adaptive-tutor`](https://github.com/natiworldclass/adaptive-tutor) | **no payload** |
+| [`RutujaDeshmukh29/Adaptive-AI`](https://github.com/RutujaDeshmukh29/Adaptive-AI) | **no payload** |
+| [`Sujal-Shejwal/adaptive-ai-tutor`](https://github.com/Sujal-Shejwal/adaptive-ai-tutor) | **no payload** — 🔴 **name-collides exactly with the MIT `soumics/adaptive-ai-tutor`; match on owner** |
+| [`parcheesime/rubric-agent`](https://github.com/parcheesime/rubric-agent) | 🟢 **Apache-2.0** — but **no implementation yet**; README says research precedes implementation, deps are `boto3`/`bs4`/`requests`. **Watch, do not compose.** |
+
+### 🟢 Re-confirmations — none moved
+
+`THU-MAIC/OpenMAIC` **MIT** (1,065 B) · `Open-TutorAi/open-tutor-ai-CE` **BSD-3-Clause** (1,531 B) ·
+`HKUDS/DeepTutor` **Apache-2.0** (11,408 B, **independently confirmed** by PyPI `deeptutor`) ·
+`biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent` **MIT** (`master/LICENSE`, 1,068 B),
+re-read this pass and unchanged from the pass-33 correction.
+
 ## 2026-10-07 — thirty-third pass: a declared gap refuted, 15 repos probed, and two new closed channels
 
 > **Append-only.** Newest dated section on top; history preserved below.

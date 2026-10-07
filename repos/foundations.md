@@ -4,6 +4,97 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-fourth pass, 2026-10-07 — the Canvas client was missing, and the EMEA gap gets its reach restated
+
+**Licences read from each repo's own payload on `raw.githubusercontent.com`, 2026-10-07**, branch-
+and case-aware (13 filenames × `main` and `master`), **cross-checked against the registry each
+project publishes to** where one exists. No star counts: `api.github.com` **403**, and the GitHub MCP
+route an earlier pass used is **outside this session's repository scope** (see `agents/top.md`).
+Consolidated 20-channel census in `agents/top.md`; `P465` records why it needed consolidating.
+
+### 🟢 Foundations added this pass
+
+| Repo | Licence (payload) | Cross-channel | Language | Why it is a foundation |
+|---|---|---|---|---|
+| [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) | 🟢 **MIT** (`master/LICENSE`, 1,130 B) | 🟢 PyPI `canvasapi` → `MIT License` + **OSI MIT classifier** | Python | 🔴 **A real gap, and an awkward one: this KB carries six Canvas MCP servers and never carried the Canvas REST client they all sit on.** A maintained, MIT, object-oriented Python wrapper over the Canvas LMS API — courses, enrolments, assignments, submissions, **gradebook writes**, quizzes, LTI. From **UCF Open** (University of Central Florida), the same group as `UDOIT`, `Materia`, `Obojobo` and this shelf's `cookiecutter-python-lti`, all already here. 🔵 **Canvas itself is AGPL-3.0 and this client is MIT** — the client talks HTTP from outside the tree, so the deliverable inherits nothing. **Sixth independent instance of this KB's platform-copyleft / integration-permissive rule.** 🔴 **Branch is `master`** — a `main`-only probe reports it ungranted. |
+| [`soumics/llm-rag-assistant`](https://github.com/soumics/llm-rag-assistant) | 🟢 **MIT** (`main/LICENSE`, 1,070 B) | — not published to any registry | Python | The retrieval / embedding / **citation-checking** core reused by the MIT `soumics/adaptive-ai-tutor` (`agents/top.md`). Local-first: embeddings and generation served by **Ollama**, `faiss-cpu` index, and **citation verification as a first-class component rather than a prompt instruction**. 🔵 **Citation checking is the piece most tutor prototypes skip and the first thing an education client asks about.** ⚠️ **`P466`** — distributed only as a pinned GitHub archive zip, **403** from this environment. |
+| `edx-opaque-keys` (PyPI) | 🟡 **`AGPL-3.0-only`** (registry declaration) | — | Python | 🆕 **Not previously recorded in this KB.** A core Open edX key/identifier library, and **network copyleft**. Recorded because it extends the Open edX licence asymmetry by one brick: the platform tier is AGPL **including its small utility libraries**, so "it's just a helper package" is not a route out of the copyleft. |
+
+### 🟡 `P467` — the EMEA gap: still a gap, with its reach now stated in full
+
+This shelf has declared for three consecutive passes that it can find **no EMEA-origin permissive
+education foundation**. This KB already records that the European Commission's **Joinup/OSOR**
+catalogue and **Codeberg** are unreachable from this environment. This pass re-measured that and
+**extended it with three forges never named here before**:
+
+| European / public-sector forge | HEAD | GET | Previously recorded here? |
+|---|---|---|---|
+| `code.europa.eu` — the European Commission's own GitLab | **000** | **000** | yes |
+| `gitlab.opencode.de` — German federal/state public-sector forge | **000** | **000** | yes |
+| `codeberg.org` — EU-hosted, the main non-US community forge | **000** | **000** | yes |
+| `framagit.org`, `git.fsfe.org` | **000** | **000** | yes |
+| 🆕 `forge.apps.education.fr` — **French Ministry of Education** | **000** | **000** | 🆕 **no — first measured this pass** |
+| 🆕 `invent.kde.org`, `salsa.debian.org` | **000** | **000** | 🆕 **no — first measured this pass** |
+
+🔴 **Nine European and public-sector forges unreachable, against `raw.githubusercontent.com` 200 and
+`gitlab.com` 200.** The EUPL tier this KB made machine-readable in pass 28 is, by construction, the
+tier most likely to live where this instrument cannot look: **EUPL is the European Commission's own
+licence, and the Commission publishes to `code.europa.eu`.**
+
+⚠️ **This does not convert the gap into coverage. It is still a gap and it is now three passes old.**
+What it fixes is the *wording*. The defensible sentence is: **"no EMEA-origin permissive education
+foundation was found through the forges this environment can reach, and nine forges where EU
+public-sector code is most likely to live returned 000."** 🔵 **Consequence: never quote this KB's
+thin EMEA shelf to a client as market evidence.** It is partly an artefact of the collection
+instrument. Ask the client's own procurement which national forge they publish to.
+
+🟢 **One EMEA-origin asset did arrive this pass through a reachable channel** —
+[`macsnoeren/genai-open-assessment`](https://github.com/macsnoeren/genai-open-assessment), **GPL-3.0**,
+Netherlands (full row in `agents/top.md`). Copyleft, so it does not fill the *permissive* EMEA gap;
+it is the first EMEA-origin higher-education assessment framework on any shelf here.
+
+### 🟢 The registry tier by language — re-consolidated after `P465`
+
+Earlier passes used these registries and proved they discriminate; the pass-33 census dropped them.
+Restated here as one table so the next pass inherits the instrument rather than re-deriving it:
+
+| Stack | Registry endpoint | Reachability | Read this pass | Education relevance |
+|---|---|---|---|---|
+| Python | `pypi.org/pypi/{pkg}/json` | 🟢 **200** | `kolibri` MIT · `xblock` Apache-2.0 · `openedx-learning` AGPL-3.0 · `edx-proctoring` AGPL-3.0 · 🆕 `edx-opaque-keys` **AGPL-3.0-only** · `nbgrader` BSD · `otter-grader` BSD-3-Clause · 🆕 `canvasapi` MIT · `pylti1p3` MIT · `frappe` MIT | Open edX, Jupyter-grading, Kolibri tiers |
+| Node / TS | `registry.npmjs.org/{pkg}` | 🟢 **200** | `ltijs` **Apache-2.0, v7.0.7** · `@promptster/rubric` MIT | LTI tool-provider tier |
+| PHP | `packagist.org/packages/{v}.json` | 🟢 **200** | `moodle/moodle` → **`GPL-3.0-or-later`** | **The Moodle tier — the largest installed base in this industry** |
+| JVM | `repo1.maven.org/maven2` | 🟢 **200** | 🔴 **nothing — still unused** | Sakai, OpenOLAT, Opencast, all payload-verified only |
+
+⚠️ **`P468` — the registry tier has a measured miss rate and never overrules payload.** `crewai`
+publishes with **no licence metadata whatsoever**; `chamilo/chamilo-lms` is **404 on Packagist**
+despite being a major PHP LMS on this shelf; **8 of 20** PyPI rows gave only free text with no OSI
+classifier. 🔵 **Where both channels answer and agree, the row is as well-evidenced as this KB can
+make it. Where only one answers, the row must say which one** — rather than reading as doubly
+verified.
+
+### 🟢 Substrate re-verification — twelve rows, second source, no movement
+
+No new rows. Recorded because pass 32's T1 is that a licence claim decays, and this is the cheapest
+way to re-check one:
+
+| Package | Registry declaration | Note |
+|---|---|---|
+| `faster-whisper` | **MIT** + OSI classifier | the practical ASR choice for a local tutor |
+| `openai-whisper` | **MIT** | reference implementation |
+| `coqui-tts` | **MPL-2.0** + OSI classifier | 🟡 **weak copyleft, file-level.** Linking is fine; a quietly patched fork is not. |
+| `sentence-transformers` | **Apache-2.0** | embeddings |
+| `qdrant-client`, `chromadb` | **Apache-2.0** | vector stores |
+| `vllm` | **Apache-2.0** | self-hosted inference — the sovereignty tier |
+| `litellm` | **MIT** | provider abstraction |
+| `docling` | **MIT** | 🔵 document → structured text; the curriculum-ingestion front door (`P2`) |
+| `marker-pdf` | **Apache-2.0** | PDF → Markdown |
+| `unstructured` | **Apache-2.0** | mixed-format ingestion |
+| `librosa` | **ISC** | audio features — oral-fluency work |
+| `mediapipe`, `opencv-python` | **Apache-2.0** both | on-device vision — the local proctoring tier |
+
+🔵 **All twelve permissive or weak-copyleft, none a surprise.** A re-check is supposed to be boring;
+when it is not, you have found something.
+
 ## 🟢 Thirty-third pass, 2026-10-07 — the regional-corpus layer, and a gap repo that was licensed all along
 
 **Licences read from each repo's own payload on `raw.githubusercontent.com`, 2026-10-07**, with a

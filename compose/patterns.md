@@ -4,6 +4,137 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-fourth pass, 2026-10-07 — two recipes: P43, P44
+
+**Every repo named below had its licence read from its own payload on `raw.githubusercontent.com` on
+2026-10-07** with the branch- and case-aware probe, **and cross-checked against the registry it
+publishes to** (see `agents/top.md` for the 20-channel census). No star counts (`api.github.com`
+**403**), so these recipes are composed on **licence and documented capability**, not popularity.
+⚠️ **No model-weights licence below is verified — `huggingface.co` is 000.**
+
+## P43 — The two-channel licence gate: make a disagreement fail the build
+
+**Problem it solves.** Every engagement eventually ships a dependency manifest to a client's legal
+team, and the question is always the same: *how do you know?* Pass 32 established that *"we read the
+`LICENSE` file"* is no longer a sufficient answer — a file with that name can contain bespoke terms,
+a web-server notice or Creative Commons text. This KB has used both payload and registry channels for
+several passes; **what it has not had is one written-down gate with an explicit disagreement rule**,
+which is what `P465` made obvious was missing. This is that gate.
+
+**Why two channels.** Payload is evidence that a *document* exists and says certain words. A registry
+classifier is the publisher's own **machine-readable assertion** about what the licence *is*. They
+fail differently, and the gate's value is in the disagreement rule, not in either channel alone.
+
+| Repos and endpoints | Role |
+|---|---|
+| `https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{file}` | **Channel A — payload.** 13 filenames (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`, `MIT-LICENSE`, `UNLICENSE`, …) × `main` **and** `master`. 🔴 **Both branches are mandatory**: `ucfopen/canvasapi`, `dmitry-viskov/pylti1.3` and `ucbds-infra/otter-grader` are all **`master`-only**, and a `main`-only probe reports them as ungranted. |
+| `https://pypi.org/pypi/{pkg}/json` → `info.license_expression`, `info.license`, `classifiers[]` | **Channel B — Python.** Prefer `license_expression` (SPDX), then the OSI classifier, then free text. |
+| `https://registry.npmjs.org/{pkg}` → `versions[dist-tags.latest].license` | **Channel B — Node.** Verified: `ltijs` → Apache-2.0 at v7.0.7. |
+| `https://packagist.org/packages/{vendor}/{pkg}.json` → `package.versions[latest].license[]` | **Channel B — PHP.** Verified: `moodle/moodle` → `GPL-3.0-or-later`. |
+| `https://repo1.maven.org/maven2/...` | **Channel B — JVM.** Reachable (200); use for Sakai / OpenOLAT / Opencast. |
+
+**The decision table — this is the part worth copying.**
+
+| Channel A | Channel B | Verdict | Build action |
+|---|---|---|---|
+| permissive | same, OSI classifier | 🟢 **verified permissive** | pass |
+| permissive | **`Other/Proprietary`** | 🔴 **reject** | **fail the build** — this is the `open-webui` case |
+| permissive | silent (no metadata) | 🟡 **single-source** | pass **with the row flagged "payload only"** — the `crewai` and Chamilo case |
+| copyleft | same | 🟡 **verified copyleft** | pass **only** on the side-car path; fail if the manifest is the embedded deliverable |
+| **no payload found** | any | 🔴 **no grant** | **fail** — 7 of 15 candidates this pass |
+| permissive | **different licence** | 🔴 **disagreement** | **fail and escalate to a human.** 0 of 10 this pass — and finding zero is what makes a non-zero meaningful |
+
+**Two checks that are not about licences and belong in the same gate.**
+
+1. 🔴 **Resolvability.** Issue a request for every pinned artefact URL, not just the manifest. A
+   dependency can be licence-clean and still unobtainable: `soumics/adaptive-ai-tutor` pins its MIT
+   RAG core as `github.com/.../archive/<sha>.zip`, which is **403** from this environment. Licence-
+   resolvable ≠ install-resolvable (`P466`).
+2. 🔴 **Manifest emptiness.** A 200 on `requirements.txt` is evidence the file exists, never that it
+   declares anything — Kolibri serves one that is deliberately empty and a `pyproject.toml` with
+   `dependencies = []`, while the real set is in PEP 735 `[dependency-groups]`. **An empty answer must
+   raise, not return zero.**
+
+**Wiring.** Run it as a CI job over the lockfile on every dependency change, emit one TSV row per
+package (`package · channel-A verdict · channel-B verdict · agreement · source URLs`), and **archive
+the TSV with the release** — that artefact, not an assertion, is what goes to the client's legal
+team. This KB's own `compose/code/dependency-licence-closure/` is the natural home for it.
+
+**Effort:** 1–2 weeks to build and wire, then effectively free. **Sell it inside** `P4`, `P13` and
+`P38`, where "prove it" is already the deliverable.
+
+## P44 — The all-permissive Canvas grading path: MIT end to end, on the client's own hardware
+
+**Problem it solves.** Canvas is **AGPL-3.0**. North American statutes now require that **student
+data not train models** (California AB 1159) and that **a human make high-stakes decisions**
+(Oklahoma, Maryland); EU Annex III requires documented **human oversight** and transparency for
+assessment. The usual answer — an SaaS grading product — fails the first requirement and cannot
+evidence the second. This recipe builds the whole path from permissively licensed parts that run on
+infrastructure the institution owns, **without inheriting Canvas's AGPL**.
+
+🔵 **This is the Python counterpart to `P39`.** `P39` pins one of six MIT **MCP servers** for the
+gradebook write path. `P44` is for the engagement where the deliverable is a service rather than an
+agent tool, and nobody wants a third-party MCP server in the trust boundary.
+
+**The stack — every licence read from payload and confirmed in a registry this pass:**
+
+| Layer | Component | Licence | Verified |
+|---|---|---|---|
+| LTI 1.3 launch | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 **MIT** | payload 1,070 B + PyPI `pylti1p3` MIT. 🔴 **Install name is `pylti1p3`, not `pylti1.3`.** ⚠️ Last push 2024-08-18 — stable, not actively developed. |
+| Canvas read/write | [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) | 🟢 **MIT** | payload 1,130 B (`master`) + PyPI OSI MIT classifier |
+| Grading core | [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) **or** [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 🟢 **BSD-3-Clause** both | payload + PyPI OSI BSD classifier |
+| Submission ingestion | [`docling`](https://pypi.org/project/docling/) | 🟢 **MIT** | PyPI |
+| Model access | `litellm` | 🟢 **MIT** | PyPI |
+| Local inference | **Ollama** (dev) / **vLLM** (prod, Apache-2.0) | 🟢 permissive | PyPI `vllm` Apache-2.0 |
+| Rubric vocabulary (optional) | [`promptster-ai/rubric`](https://github.com/promptster-ai/rubric) | 🟢 **MIT** | ⚠️ anchors only — **scoring weights are deliberately not published** |
+
+🟢 **No AGPL anywhere in the deliverable.** Canvas stays AGPL on the institution's own servers; every
+line Globant writes sits outside its tree and speaks HTTP.
+
+**The flow, and where the statute is satisfied:**
+
+1. **Launch.** Instructor opens the tool from a Canvas assignment; `pylti1p3` validates the LTI 1.3
+   launch and yields the course, assignment and instructor identity. *No student data has moved yet.*
+2. **Fetch.** `canvasapi` pulls the submissions for that assignment only. 🔵 **Scope the API token to
+   the course** — the boundary is enforced by the token, not by application logic.
+3. **Normalise.** `docling` converts PDF/DOCX submissions to structured text.
+4. **Score.** The rubric is **data, not a prompt** (the `P38` rule). `otter-grader` or `nbgrader`
+   handles anything executable; the model, reached through `litellm` against **Ollama or vLLM on the
+   institution's hardware**, scores the open-response criteria and must emit **per-criterion evidence
+   spans**, not a single number. 🟢 **AB 1159 is satisfied structurally**: the weights are local, the
+   provider is the institution, and there is no third party to train on the data.
+5. 🔴 **Gate.** Nothing is written back unattended. The instructor sees proposed score, per-criterion
+   evidence and the rubric cell that fired, and **accepts, edits or rejects**. 🟢 **This is the
+   Oklahoma/Maryland human-decision requirement and the EU Annex III human-oversight requirement, and
+   it is the same gate** — build it once.
+6. **Write back.** `canvasapi` writes the accepted grade and comment to the Canvas gradebook. 🔵
+   **Prove this path on day one against a Canvas sandbox** — the write path is where these projects
+   fail, and a demo that only reads looks identical to one that works.
+7. **Log.** Every proposal, the evidence, the human's decision and the final grade, appended
+   immutably. 🟢 **That log is the Annex III audit trail and the AB 1159 evidence**, and it is the
+   artefact that renews the contract.
+
+**Swap-ins by platform.** Moodle (**GPL-3.0-or-later**, confirmed on Packagist this pass) → replace
+steps 1–2 with the MIT `moodle-mcp-server` side-cars already on the agents shelf. Open edX → keep the
+AGPL platform untouched and extend through **Apache-2.0 `XBlock`**; never fork `edx-platform`.
+
+**Effort:** **6–8 weeks** to a production pilot on one course, assuming the institution supplies the
+Canvas sandbox and the GPU. **Regions:** 🟢 strongest in **North America** (named statutes, named
+budget owner) and **EMEA** (Annex III); works in **APAC** and **LATAM** wherever data residency is
+the constraint.
+
+### 🔵 Cross-cutting gate update — the two-channel check joins the existing licence gates
+
+`P43`'s decision table applies to the dependency gate in **every** pattern on this page, not just to
+new work. Three concrete additions:
+
+- **`master`-only repos are a live failure mode.** `ucfopen/canvasapi`, `dmitry-viskov/pylti1.3` and
+  `ucbds-infra/otter-grader` are all on `master`. **Probe both branches or lose true rows.**
+- **Install name ≠ repo name.** `pylti1.3` → `pylti1p3`. Pin the distribution, not the repository.
+- **Flag single-source rows explicitly.** Chamilo (Packagist 404) and `crewai` (no PyPI licence
+  metadata) are **payload-only** and must say so on the row, rather than silently reading as
+  double-verified.
+
 ## 🟢 Thirty-third pass, 2026-10-07 — two recipes: P41, P42
 
 **Every repo named below had its licence read from its own payload on `raw.githubusercontent.com` on

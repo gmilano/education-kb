@@ -4,6 +4,115 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-fourth pass, 2026-10-07 — five trends, and the first is that this KB forgot an instrument it had already built
+
+### T1 🔴 A knowledge base loses capability the same way it loses facts — in the freshest layer
+
+Pass 33 wrote a six-channel census whose `raw.githubusercontent.com` row says, verbatim,
+*"**the only licence channel**"* — and whose `pypi.org` row, four lines later in the same table, says
+*"still open, as pass 41 used it for `edx-proctoring`"*. 🔴 **Both cannot be true, and the narrower
+one was the one that propagated**, into the pass-33 headers of four separate shelves.
+
+🔵 **Nothing was lost that was never had.** Earlier passes used PyPI, npm, Packagist and Maven
+Central, and verified that each discriminates. **What decayed was not a fact but the record of a
+capability** — and a capability nobody remembers having is indistinguishable from one that does not
+exist. The downstream cost is real: four shelves spent a pass telling readers that licence
+verification had one source when this KB's own history proves it has five.
+
+🔵 **The transferable rule: a census is a cumulative instrument record, not a re-derivation from
+whatever this pass happened to probe.** A pass that measures three channels must inherit the other
+seventeen, not quietly redefine the census as three. Pass 33 named this exact failure in its own T2
+— *"the freshest layer is where stale claims live"* — and then committed it. Recorded as `P465`.
+
+### T2 🟢 Payload proves a document exists; a classifier proves a claim — and the gap between them is where the traps live
+
+Pass 32 established that *"it has a LICENSE file"* is no longer a usable test. The complement, worth
+stating as its own trend: **a registry classifier is the publisher's own machine-readable assertion
+about what the licence is**, and it fails differently from a text-matched blob. The worked example
+found this pass:
+
+> **`open-webui`** serves a file named `LICENSE` at 200. Its PyPI metadata declares
+> **`License :: Other/Proprietary License`**, and the text is a bespoke *"Open WebUI License"* with
+> branding restrictions. 🔴 **One channel sees a licence file; the other says "proprietary".**
+
+🟢 **Run both and the agreement rate becomes a measurable property of the shelf.** Ten existing rows
+were re-read through their registries this pass and **ten agreed** — including an independent
+reproduction of this KB's Open edX asymmetry (`xblock` Apache-2.0 against `openedx-learning` and
+`edx-proctoring` AGPL-3.0, plus the newly recorded `edx-opaque-keys` **AGPL-3.0-only**). ⚠️ **But
+`P468`: the channel is silent more often than it is wrong.** `crewai` publishes no licence metadata,
+`chamilo/chamilo-lms` 404s on Packagist, and 8 of 20 PyPI rows carried only free text. **A silence is
+not a finding, and a row answered by one channel must say so.**
+
+### T3 🔴 Licence-resolvable and install-resolvable are different properties, and only one is ever checked
+
+[`soumics/adaptive-ai-tutor`](https://github.com/soumics/adaptive-ai-tutor) is MIT. Its RAG core
+[`soumics/llm-rag-assistant`](https://github.com/soumics/llm-rag-assistant) is **also MIT**. The
+dependency closure is clean and this KB's own closure tooling would pass it without comment. And it
+**cannot be installed from this environment**, because `requirements.txt` pins that core as a
+**GitHub archive zip at an exact commit**, and `github.com/.../archive/<sha>.zip` is **403** here
+(`codeload.github.com` likewise).
+
+🔵 **A manifest scan answers "what am I allowed to use?" and never "will this resolve?"** The two
+diverge whenever a project distributes outside a package registry — direct VCS pins, archive URLs,
+submodules, vendored wheels. 🔵 **The engagement consequence is sharper than the KB consequence:** a
+client's build environment is usually *more* restricted than this one, and a pinned GitHub archive is
+a supply-chain dependency on a single immutable URL with **no registry mirror behind it**. Recorded
+as `P466`.
+
+### T4 🔴 A declared gap needs three parts, and this KB has been writing two
+
+This shelf has declared for three passes that it can find no EMEA-origin permissive education
+foundation. True and honest about the result; silent about the reach. This pass measured the reach
+and found **nine European and public-sector forges unreachable** — `code.europa.eu`,
+`gitlab.opencode.de`, Codeberg, Framagit, FSFE (all previously recorded), plus three measured here
+for the first time: **`forge.apps.education.fr` (the French Ministry of Education's forge)**,
+`invent.kde.org` and `salsa.debian.org`. All **000**.
+
+🔴 **The EUPL tier is by construction the tier most likely to live where this instrument cannot
+look** — EUPL is the European Commission's licence and the Commission publishes to `code.europa.eu`.
+
+🔵 **The gap is still a gap; it did not become coverage.** What changed is that it can no longer be
+quoted as evidence *about the market*. 🔵 **A declared gap needs three parts: what was searched, what
+was found, and what could not be reached.** This KB had been writing the first two, which is how an
+instrument limit comes to read as an industry fact. Recorded as `P467`.
+
+### T5 🔴 Capital fell 44% while structural adoption hit 47% — this is a services market, not a product market
+
+On a like-for-like window, **January–July 2026 raised ~$435M across 24 deals against ~$774M across 37
+deals in January–July 2025: −43.8% in capital, −35.1% in deals.** Pass 32 recorded this decline at
+26%; the like-for-like figure is worse. Meanwhile **47% of higher-education institutions now use AI
+structurally** in teaching and administration, and **more than 50% of teachers in Chile and Brazil
+use AI tools** inside institutions of which **fewer than 10%** have written guidelines.
+
+🔵 **Capital down with usage up is not a contradiction, it is a market-shape signal.** Deal count fell
+further than deal size, so fewer companies are clearing the bar at all rather than rounds being
+repriced downward. Nobody is funding a new education AI product — and institutions are deploying
+anyway, from operational budget, into stacks they already own.
+
+🟢 **That is a systems-integration market**, which is the business Globant is in: the buyer is the
+institution, the money is operational rather than venture, and the deliverable is governance and
+integration into the Moodle, Canvas, Open edX and SIS estate the client already runs. 🔵 **The
+corollary is a positioning warning: pitching a *platform* into this market pitches against the one
+thing the funding data says is not being bought.**
+
+### 🔵 What this pass did NOT establish
+
+- 🔴 **No star counts.** `api.github.com` **403**. The **GitHub MCP** route an earlier pass used is
+  **outside this session's repository scope** (restricted to `globant-kb` and `education-kb`), so
+  "not obtainable this pass" means exactly that. Every popularity figure on these shelves is
+  inherited or absent.
+- 🔴 **No model-weights licence.** `huggingface.co` **000**. Sarvam AI, ILMU, Sahabat AI, SEA-LION,
+  HyperCLOVA X Think, NTT Sarashina and Latam-GPT appear in `intel/market.md` as **client-supplied
+  inputs**, and **not one of their weights licences is verified here.** Oldest standing limit; it did
+  not move.
+- 🔴 **No primary legal text.** `eur-lex.europa.eu` **000**. Every AI Act date is secondary-sourced
+  and must be re-verified against the Official Journal before client use.
+- 🟡 **Maven Central is reachable and still unused.** `repo1.maven.org` 200; **no JVM row read**.
+  Sakai, OpenOLAT and Opencast remain payload-verified only. This is the cheapest open task for the
+  next pass.
+- 🟡 **Bitbucket is reachable and unused.** 200, and **never named in this KB before** — capability,
+  not coverage. No row on any shelf points at it.
+
 ## 🔴 Thirty-third pass, 2026-10-07 — five trends, and the first is that this KB re-acquired an error it had already fixed
 
 ### T1 🔴 A declared gap decays faster than a row, and nobody re-measures gaps

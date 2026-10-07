@@ -4,6 +4,157 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-fourth pass, 2026-10-07 — the census in the freshest layer contradicts itself, and the Canvas client was never on the shelf
+
+**Every licence below was read from the repository's own payload on `raw.githubusercontent.com` on
+2026-10-07**, branch- and case-aware (13 filenames × `main` and `master`), **and cross-checked
+against the registry the project publishes to** where one exists. **No star counts.**
+
+🔵 **On star counts, stated once so later passes stop re-deriving it.** `api.github.com` is **403**,
+as every pass records. An earlier pass obtained counts through the session's **GitHub MCP server** —
+that route is **not available to this pass**: this session's GitHub scope is restricted to
+`gmilano/globant-kb` and `gmilano/education-kb`, and reaching third-party repositories through
+account-wide search tools is outside it. 🔵 **So "not read this pass" below means genuinely
+unobtainable here, not skipped.**
+
+### 🔴 `P465` — the pass-33 channel census says `raw` is "the only licence channel", and its own next row disproves it
+
+In `agents/trending.md`, the thirty-third pass's six-channel census contains these two rows, four
+lines apart, in the same table:
+
+| Channel | Result | Note (verbatim) |
+|---|---|---|
+| `raw.githubusercontent.com` | **200** | *"**the only licence channel**"* |
+| `pypi.org` | **200** | *"still open, as pass 41 used it for `edx-proctoring`"* |
+
+🔴 **Both cannot be true.** And the error is not confined to that table: **"six channels"** and
+*"`raw.githubusercontent.com`, the only licence channel"* were carried into the pass-33 headers of
+**`agents/top.md`, `repos/foundations.md`, `verticals/solutions.md` and `compose/patterns.md`** —
+four shelves telling the reader the instrument is narrower than this KB's own earlier passes proved.
+
+⚠️ **This is not a discovery of new channels.** Earlier passes used `pypi.org`, `registry.npmjs.org`,
+`packagist.org` and `repo1.maven.org` extensively, and verified that they discriminate. **The defect
+is that the freshest layer forgot them** — the exact failure pass 33 itself named in its T2 trend,
+*"the freshest layer of a knowledge base is where stale claims live"*, committed in the same pass
+that named it. 🔵 **Rule: a census is a cumulative instrument record, not a re-derivation from
+whatever this pass happened to probe.**
+
+### 🔵 Channel census, consolidated — 20 channels, measured this pass with both HEAD and GET
+
+| Channel | HEAD | GET | Usable for | Status |
+|---|---|---|---|---|
+| `raw.githubusercontent.com` | **200** | **200** | licence payload, README, manifests | 🟢 open — primary |
+| `pypi.org/pypi/{pkg}/json` | **200** | **200** | `license_expression`, OSI classifier, release dates | 🟢 open |
+| `registry.npmjs.org` | **200** | **200** | `license`, latest version + date | 🟢 open |
+| `packagist.org/packages/{v}.json` | **200** | **200** | PHP licence — the Moodle tier | 🟢 open |
+| `repo1.maven.org/maven2` | **200** | **200** | JVM tier | 🟢 open, **unused** |
+| `gitlab.com` (raw) | **200** | **200** | payload off GitHub | 🟢 open |
+| 🆕 `bitbucket.org` | **200** | **200** | payload off GitHub | 🟢 **open — never named in this KB before** |
+| `github.com` landing | 403 | 403 | — | 🔴 blocked |
+| `api.github.com` | 403 | 403 | star counts, topics | 🔴 blocked |
+| `sourceforge.net` | 403 | 403 | — | 🔴 blocked |
+| `crates.io` | 403 | 403 | — | 🔴 blocked |
+| `github.com/.../archive/{sha}.zip`, `codeload.github.com` | 403 | 403 | **pinned source archives** | 🔴 blocked — see `P466` |
+| `eur-lex.europa.eu` | 000 | 000 | primary legal text | 🔴 egress-blocked |
+| `huggingface.co` | 000 | 000 | **model-weights licences** | 🔴 egress-blocked — oldest standing limit |
+| `zenodo.org` | 000 | 000 | research artefact DOIs | 🔴 egress-blocked |
+| `codeberg.org` | 000 | 000 | EU-hosted forge | 🔴 egress-blocked |
+| `code.europa.eu` | 000 | 000 | European Commission forge | 🔴 egress-blocked |
+| `gitlab.opencode.de` | 000 | 000 | German public-sector forge | 🔴 egress-blocked |
+| 🆕 `forge.apps.education.fr` | 000 | 000 | **French Ministry of Education forge** | 🔴 **egress-blocked — first measured here** |
+| 🆕 `invent.kde.org`, `salsa.debian.org`, `gitlab.gnome.org`, `framagit.org`, `git.fsfe.org` | 000 | 000 | EU-centred community forges | 🔴 egress-blocked |
+
+🔵 **Discrimination re-confirmed before use:** `pypi.org` → **404** for a package that does not exist;
+`gitlab.com` raw → **302 to sign-in** for a path that does not exist; `packagist.org` → **404** for
+`chamilo/chamilo-lms`. They answer *no* when the answer is no.
+
+### 🟢 Cross-channel licence audit — 10 existing shelf rows, 0 disagreements
+
+Re-verification, not a new method. The point of running it is that a **zero** is only informative if
+the test could have returned non-zero:
+
+| Package | Registry declaration | This KB's payload verdict | Agreement |
+|---|---|---|---|
+| `kolibri` | MIT + OSI MIT classifier | MIT | 🟢 |
+| `xblock` | Apache-2.0 | Apache-2.0 | 🟢 |
+| `openedx-learning` | AGPL 3.0 + OSI AGPLv3+ | AGPL-3.0 | 🟢 |
+| `edx-proctoring` | AGPL 3.0 + OSI AGPLv3+ | AGPL-3.0 | 🟢 |
+| `nbgrader` | OSI BSD classifier | BSD-3-Clause | 🟢 |
+| `otter-grader` | BSD-3-Clause | BSD-3-Clause | 🟢 |
+| `frappe` | OSI MIT classifier | MIT | 🟢 |
+| `deeptutor` | Apache-2.0 | Apache-2.0 (`HKUDS/DeepTutor`) | 🟢 |
+| `ltijs` (npm) | Apache-2.0, v7.0.7 | Apache-2.0 | 🟢 |
+| `moodle/moodle` (Packagist) | **`GPL-3.0-or-later`** | GPL-3.0 | 🟢 |
+
+🆕 **One new row fell out of the audit:** `edx-opaque-keys` declares **`AGPL-3.0-only`** on PyPI — a
+core Open edX key library, network-copyleft, **not previously recorded anywhere in this KB.** It
+extends the Open edX asymmetry (`XBlock` Apache-2.0 against an AGPL platform tier) by one more brick.
+
+### 🟢 Agents added this pass
+
+| Agent | Repo | Licence (read from payload) | ★ | Region | What it does |
+|---|---|---|---|---|---|
+| Adaptive AI Tutor | [`soumics/adaptive-ai-tutor`](https://github.com/soumics/adaptive-ai-tutor) | 🟢 **MIT** (`main/LICENSE`, 1,070 B) | not obtainable | Global | Curriculum-grounded tutor: upload a PDF/Markdown syllabus and **the material's own structure becomes the topic graph** (PDF bookmarks → numbered headings → Markdown headings), with prerequisites taken from the material's explicit cross-references rather than guessed. Cited explanations, Socratic mode, generated practice graded against a rubric, **SM-2 spaced repetition**. Runs **fully local on Ollama**; cloud LLM optional. ⚠️ **The author states plainly it is a prototype with no measured learning outcomes** — a credibility signal, not a defect. 🔴 **See `P466`: licence-clean, not installable from this environment.** |
+| genai-open-assessment | [`macsnoeren/genai-open-assessment`](https://github.com/macsnoeren/genai-open-assessment) | 🟡 **GPL-3.0** (`main/LICENSE`, 35,149 B) | not obtainable | **EMEA** | Rubric-driven automated grading of **open-ended** higher-education questions, built as a *constrained* assessor: fixed grading scale, explicit criteria, formative feedback, and **every prompt, criterion, input and output stored for review** so the human educator remains accountable. Apache + PHP + SQLite, one-command Docker start, role-separated UIs for teacher / assessor / admin / student. 🔵 **Netherlands-origin** (Dutch interface text, `@school.nl` seed accounts). 🟡 **GPL-3.0 — standalone or side-car, never embedded in a permissive deliverable.** |
+
+### 🟡 A data asset, not an agent — recorded because L&D engagements keep asking for it
+
+| Asset | Repo | Licence | What it is | The catch |
+|---|---|---|---|---|
+| Promptster AI-fluency rubric | [`promptster-ai/rubric`](https://github.com/promptster-ai/rubric) | 🟢 **MIT** (`main/LICENSE`, 1,067 B); npm `@promptster/rubric` **0.7.0** also MIT | A published rubric for grading **how an engineer drives an AI coding tool** — five dimensions, behavioural anchors, five tiers, each grounded in cited research. Ships as `src/rubric.json`. | 🔴 **Open rubric, closed calibration** — the repo says so outright: per-prompt criteria and **scoring weights are deliberately not published**. Adopt the vocabulary and anchors for a client AI-enablement scorecard (`P6`, `P10`); **it is not a scoring engine and cannot reproduce their result.** |
+
+### 🔴 Rejected this pass — 8 of 15 candidates cannot enter a deliverable
+
+Stated in full, because an unexplained absence looks identical to coverage:
+
+| Repo | Probe result | Why it cannot enter |
+|---|---|---|
+| [`jadrianlg16/learning-tutor`](https://github.com/jadrianlg16/learning-tutor) | **no `LICENSE` payload** (13 filenames × `main`+`master`) | No grant. Genuinely interesting design — *a learner model the LLM is never allowed to edit* — still unusable. |
+| [`samrathreddy/Tutor-multi-ai-agent`](https://github.com/samrathreddy/Tutor-multi-ai-agent) | **no `LICENSE` payload** | No grant. |
+| [`omerbbbb/ai-graded-assessment-platform`](https://github.com/omerbbbb/ai-graded-assessment-platform) | **no `LICENSE` payload** | No grant, despite describing real assessment-day use. |
+| [`spal740/GradeScribe`](https://github.com/spal740/GradeScribe) | **no `LICENSE` payload** | No grant. |
+| [`natiworldclass/adaptive-tutor`](https://github.com/natiworldclass/adaptive-tutor) | **no `LICENSE` payload** | No grant. |
+| [`RutujaDeshmukh29/Adaptive-AI`](https://github.com/RutujaDeshmukh29/Adaptive-AI) | **no `LICENSE` payload** | No grant. |
+| [`Sujal-Shejwal/adaptive-ai-tutor`](https://github.com/Sujal-Shejwal/adaptive-ai-tutor) | **no `LICENSE` payload** | No grant. 🔴 **Name-collides exactly with the MIT `soumics/adaptive-ai-tutor` above — match on owner, never on repo name.** |
+| [`parcheesime/rubric-agent`](https://github.com/parcheesime/rubric-agent) | 🟢 **Apache-2.0** (`main/LICENSE`, 11,357 B) | **Licence is fine; there is no implementation.** The README states the project "begins with research before implementation"; dependencies are `boto3` + `beautifulsoup4` + `requests` — a corpus collector. 🔵 **Watch, do not compose.** |
+
+🔵 **7 of 15 shipped no grant at all.** That ratio is itself the finding: the long tail of education-
+agent repositories surfaced by search is overwhelmingly ungranted, and any sweep that does not probe
+the payload will recommend them.
+
+### 🟢 Re-confirmations — three shelf rows re-read from payload, none moved
+
+| Repo | Where read | Verdict |
+|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `main/LICENSE`, 1,065 B | 🟢 **MIT**, unchanged |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `main/LICENSE`, 1,531 B | 🟢 **BSD-3-Clause**, unchanged — byte count still matches the body-text-no-title-line record from pass 32 |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `main/LICENSE`, 11,408 B | 🟢 **Apache-2.0**, unchanged — **and independently confirmed** by PyPI `deeptutor` → Apache-2.0 |
+
+### 🔵 An install-name trap worth one line
+
+The canonical Python LTI 1.3 library is [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3), **but the installable
+distribution is `pylti1p3`** — dots are not legal where the repo name puts them. Both read **MIT**.
+`pip install pylti1.3` fails. The shelf row carried the repo and not the install name.
+
+### 🔴 `P466`–`P468`
+
+- **`P466` — a licence-clean repo that cannot be installed here, and no manifest scan could catch it.**
+  `soumics/adaptive-ai-tutor` is MIT and its RAG core `soumics/llm-rag-assistant` is **also MIT**
+  (`main/LICENSE`, 1,070 B) — the closure is clean. But `requirements.txt` pins that core as a
+  **GitHub archive zip at an exact commit**, and `github.com/.../archive/<sha>.zip` returns **403**
+  here, as does `codeload.github.com`. 🔵 **Licence-resolvable and install-resolvable are different
+  properties**, and this KB's dependency-closure tooling reads manifests without testing that pins
+  resolve. The row stands with the limitation on it.
+- **`P467` — the EMEA forge blind spot, re-measured and extended.** This KB already records Joinup/
+  OSOR and Codeberg as unreachable. Re-measured this pass and **extended with three forges never
+  named here**: `forge.apps.education.fr` (**French Ministry of Education**), `invent.kde.org` and
+  `salsa.debian.org` — all **000**, alongside `code.europa.eu`, `gitlab.opencode.de`, `framagit.org`
+  and `git.fsfe.org`. See `repos/foundations.md` for what this does and does not do to the EMEA gap.
+- **`P468` — the registry channel's miss rate, with two fresh instances.** `crewai` publishes to PyPI
+  with **no licence metadata at all** (empty `license`, no classifier); `chamilo/chamilo-lms` is
+  **404 on Packagist** despite being a major PHP LMS on this shelf; **8 of 20** PyPI rows carried
+  only a free-text string with no OSI classifier. 🔵 **A registry silence is not a licence finding.**
+
 ## 🔴 Thirty-third pass, 2026-10-07 — a declared gap was wrong, and the repo it rested on has been MIT all along
 
 **Every licence below was read from the repository's own payload on `raw.githubusercontent.com` on

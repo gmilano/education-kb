@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — thirty-fourth pass: the Canvas client this KB never had, and an AGPL library it never recorded
+
+> **Append-only.** Newest dated section on top; history preserved below.
+
+**Method.** Licences read from payload on `raw.githubusercontent.com`, branch- and case-aware (13
+filenames × `main` **and** `master`), cross-checked against the registry each project publishes to.
+**20 repositories probed.** `github.com` and `api.github.com` both **403** — **no star counts**, and
+the GitHub MCP route an earlier pass used is **outside this session's repository scope**. Negative
+controls in the same run: PyPI nonexistent package → **404**, nonexistent GitLab path → **302**,
+`packagist.org/packages/chamilo/chamilo-lms.json` → **404**.
+
+### 🔴 The gap: six Canvas MCP servers, and not the client they sit on
+
+| Repo | Licence (payload) | Cross-channel | Why it matters |
+|---|---|---|---|
+| [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) | 🟢 **MIT** (`master/LICENSE`, 1,130 B) | 🟢 PyPI `canvasapi` → MIT + **OSI MIT classifier** | Object-oriented Python over the Canvas REST API — courses, enrolments, assignments, submissions, **gradebook writes**, quizzes, LTI. From **UCF Open**, the same group as `UDOIT`, `Materia`, `Obojobo` and `cookiecutter-python-lti`, all already on these shelves. 🔵 **Canvas is AGPL-3.0; this client is MIT** — sixth instance of the platform-copyleft / integration-permissive rule. 🔴 **`master`-only: a `main`-only probe reports it ungranted.** |
+| [`soumics/llm-rag-assistant`](https://github.com/soumics/llm-rag-assistant) | 🟢 **MIT** (`main/LICENSE`, 1,070 B) | — not on any registry | The retrieval / embedding / **citation-checking** core under the MIT `soumics/adaptive-ai-tutor`. Ollama + `faiss-cpu`, **citation verification as a component, not a prompt instruction**. ⚠️ **`P466`** — pinned-archive distribution, **403** here. |
+| `edx-opaque-keys` (PyPI) | 🟡 **`AGPL-3.0-only`** | registry declaration | 🆕 **Never recorded in this KB.** A core Open edX key library, **network copyleft** — so *"it's only a helper package"* is not a route out of the platform's copyleft. |
+
+### 🟢 Registry re-reads — 10 existing rows, 0 disagreements
+
+`kolibri` MIT · `xblock` **Apache-2.0** · `openedx-learning` **AGPL-3.0** · `edx-proctoring`
+**AGPL-3.0** · `nbgrader` BSD · `otter-grader` **BSD-3-Clause** · `frappe` MIT · `deeptutor`
+Apache-2.0 · `ltijs` **Apache-2.0 v7.0.7** (npm) · `moodle/moodle` **`GPL-3.0-or-later`**
+(Packagist). 🟢 **The Open edX asymmetry reproduces from a second channel**: the extension tier is
+Apache-2.0 while the platform tier is AGPL-3.0.
+
+⚠️ **`P468` — the registry channel is silent more often than it is wrong.** `crewai` → **no licence
+metadata at all**; `chamilo/chamilo-lms` → **404 on Packagist**; **8 of 20** PyPI rows carried only
+free text with no OSI classifier. **A silence is not a finding.** And the counter-example worth
+keeping: **`open-webui`** serves a `LICENSE` file at 200 while declaring
+**`License :: Other/Proprietary License`** on PyPI — not OSI, not a base layer.
+
+### 🔴 EMEA forge reachability, re-measured and extended
+
+`code.europa.eu` **000** · `gitlab.opencode.de` **000** · `codeberg.org` **000** · `framagit.org`
+**000** · `git.fsfe.org` **000** (all previously recorded) · 🆕 `forge.apps.education.fr` — **the
+French Ministry of Education's forge** — **000** · 🆕 `invent.kde.org` **000** · 🆕
+`salsa.debian.org` **000**. Against `raw.githubusercontent.com` **200** and `gitlab.com` **200**.
+
+🔵 **Nine European and public-sector forges unreachable.** The EUPL tier is by construction the tier
+most likely to live there. **The EMEA gap stands — but it may no longer be quoted as market
+evidence** (`P467`).
+
+### 🟡 Trending-search sweep — what the generic queries returned
+
+`github trending education AI 2026` and `top open source AI agents education 2026` returned, as in
+passes 46–48, **overwhelmingly teaching material *about* AI and generic agent tooling**:
+`developer-roadmap`, *AI Agents for Beginners*, *ML-For-Beginners*, `nanochat`, `awesome-claude-skills`,
+OpenClaw, CrewAI, Browser Use. 🔴 **None is an education-industry deliverable** and the classification
+is unchanged. 🔵 **The education-specific finds this pass all came from narrow queries**
+(`ai-tutor`, rubric/assessment, SIS/ERP), not from trending feeds — a repeat of the standing lesson
+that GitHub trending is not an industry instrument.
+
 ## 2026-10-07 — thirty-third pass: the proctoring shelf was never empty
 
 > **Append-only.** Newest dated section on top; history preserved below.
