@@ -4,6 +4,151 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-ninth pass, 2026-10-07 — one recipe, `P496`: `P491` corrected, because calibration is not comparability
+
+⏱️ **Sixth pass of this date.** 🔵 **Licences below were all read from payload on 2026-10-07 (`P171`), or
+from the source-header channel where no payload exists (`P494`). No star counts (`P479`).**
+
+🔴 **One recipe, and it is a correction rather than an addition.** 🟢 **`P491` (pass 38) promised to
+*"prove two exam variants are equivalent"* and shipped a chain that cannot prove it.** 🔵 **`P496` is the
+same chain with the missing link installed and the claim restated to what the evidence supports.**
+
+🔵 **Numbering: `P496`.** The ceiling across the whole tree including `archive/` was `P491` before this
+pass. 🟢 **`P490`'s interim rule followed** — every number below was checked free in **both** the live tree
+and `archive/` before allocation. This pass allocates seven:
+
+| | Finding | Filed in |
+|---|---|---|
+| `P492` | `Gap 39` was closed at half — calibration is not comparability | `repos/foundations.md` |
+| `P493` | licence topology is a property of the **tier**, not the industry | `repos/foundations.md` |
+| `P494` | absent payload ≠ absent licence; rank the channels, read the dates | `repos/foundations.md` |
+| `P495` | a market series is **arithmetically falsifiable against itself** | `intel/market.md` |
+| **`P496`** | **this recipe** | `compose/patterns.md` |
+| `P497` | a topic-word query fails by returning a **homonym class** | `agents/trending.md` |
+| `P498` | a control **prescribed but not executed** is indistinguishable from not found | `intel/trends.md` |
+
+### 🔴 What `P491` got wrong, stated precisely
+
+🟢 **`P491`'s diagnosis was right and is worth keeping**: *"if two students sat different variants and
+nothing measured that the variants were equally hard, their scores are not comparable."* 🔴 **Its remedy
+does not produce that measurement.**
+
+| `P491`'s step | What it yields | 🔴 What it does **not** yield |
+|---|---|---|
+| Author N variants with `LongsightGroup/qti3` | QTI 3 item packages | 🔴 **No evidence the writer emits *parametric* variants** — the archived `Gap 39` says this is *"inferido de la descripción de los paquetes, no probado"*, and no pass has proved it |
+| Deliver with `amp-up-io/qti3-item-player` | standards-compliant delivery | — |
+| Calibrate each variant with `py-irt` / `irtorch` | 🟢 item parameters **per variant** | 🔴 **Parameters on *separate scales*.** IRT identifies the metric only up to a linear transformation |
+| Compare the parameter tables | 🔴 **a comparison in mismatched units** | 🔴 **Not an equivalence claim** |
+
+🔴 **The defect in one sentence: you cannot conclude "variant A is as hard as variant B" from two
+independent calibrations, for the same reason you cannot conclude two buildings are the same height from
+one measurement in feet and one in metres.** 🟢 **The fix is standard psychometrics and this KB simply did
+not hold it: put both calibrations on a common metric first.**
+
+---
+
+## P496 — The *comparable* item bank: two exam variants, one scale, no subgroup penalty — permissively, on the client's own hardware
+
+🟢 **Supersedes `P491`.** 🔵 **Closes the half of `Gap 39` that pass 38 left open (`P492`); the open half is
+recorded in `intel/open-gaps.md`.** 🔵 **Region: unplaced by construction — the chain is
+jurisdiction-neutral (`P474`); it is *driven* by regulation per region, see `intel/market.md` and
+`intel/trends.md` T3.**
+
+### The claim this chain can actually defend
+
+> 🟢 *"Variants A and B are on a **common scale**, their difficulty difference is **0.04 logits with a
+> standard error of 0.06**, and **no item** shows DIF above ETS class **B** for any reported subgroup."*
+
+🔵 **That sentence is an accuracy-and-robustness claim with numbers attached, which is what Annex IV asks
+for.** 🔴 **"Our AI writes good questions" is not, and neither is `P491`'s version.**
+
+### The chain
+
+| Step | Component | Licence (channel) |
+|---|---|---|
+| 1 · author variants **with anchor items** | [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) | 🟢 **MIT** · payload `main/LICENSE.md` · 1,072 B |
+| 2 · deliver, capture responses | [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | 🟢 **MIT** · payload `main/LICENSE` · 1,076 B |
+| 3 · calibrate each form | [`nd-ball/py-irt`](https://github.com/nd-ball/py-irt) | 🟢 **MIT** · payload `master/LICENSE` · **1,121 B** |
+| 🆕 **4 · link the two calibrations onto one scale** | [`meyerjp3/psychometrics`](https://github.com/meyerjp3/psychometrics) — **Mean-Mean, Mean-Sigma, Stocking-Lord** | 🟢 **Apache-2.0** · 🔴 no payload; per-file headers govern (`P494`) |
+| 🆕 **5 · test every item for DIF** | [`ZIYINGJERRY/difair`](https://github.com/ZIYINGJERRY/difair) — Mantel-Haenszel + logistic + purification | 🟢 **MIT** · payload `main/LICENSE` · **1,075 B** + `pyproject.toml` |
+| 🆕 **6 · audit the decision, not just the items** | [`dssg/aequitas`](https://github.com/dssg/aequitas) | 🟢 **MIT** · payload `master/LICENSE` · **1,083 B** |
+
+🟢 **Every licence in the table above was re-read from payload on 2026-10-07**, not carried forward:
+`qti3` **1,072 B**, `qti3-item-player` **1,076 B**, `py-irt` **1,121 B**, `catsim` **1,514 B** — 🟢 **all
+four byte-for-byte identical to the pass-38 record**, plus the two new rows.
+
+| 7 · adapt the form per learner (optional) | [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 **BSD-3** · payload `main/LICENSE` · **1,514 B** |
+| 8 · run it all on the client's hardware | `ollama` / `vLLM` (already shelved) | 🟢 **MIT** / **Apache-2.0** |
+
+### How to wire it — the part that is not obvious
+
+🔴 **Step 1 carries the whole design, and it is a *test-assembly* decision, not a software decision.** 🟢
+**The anchor set is what makes step 4 possible at all:**
+
+- 🟢 **Build each variant with a common subset of items** — the **anchor**. Rule of thumb from
+  large-scale practice: **≥ 20% of the form, ≥ 20 items**, spanning the full difficulty range, **identical
+  in wording and position-insensitive**.
+- 🔴 **If the variants share no items and no students, nothing downstream can link them.** 🔵 The
+  alternative design is **common-person**: a subsample sits **both** forms. More expensive, and the only
+  option when item reuse is forbidden for security reasons.
+- 🔴 **An LLM that paraphrases the anchor items has destroyed the anchor.** 🟢 **Freeze the anchor set and
+  exclude it from the generator's reach** — this is the single most likely way an AI-authoring pipeline
+  silently breaks this chain.
+
+🟢 **Step 4, concretely.** Calibrate form A and form B separately with `py-irt`. Take the **anchor items'**
+parameter pairs and feed them to `psychometrics`'s linking methods, which solve for the slope `A` and
+intercept `B` that map form B's metric onto form A's. 🔵 **Prefer Stocking-Lord** — it minimises the
+difference between the two forms' **test characteristic curves** rather than matching parameter moments,
+and it is the more robust of the three when the anchor contains a few misfitting items. 🟢 **Apply the
+transformation to *all* of form B's parameters, then compare.**
+
+🔴 **The JVM boundary is real and is the chain's only ugly seam.** `psychometrics` is Java; the rest is
+Python. 🟢 **Two honest options, both cheap:** run the linking step as a **CLI invocation** over a TSV of
+anchor parameter pairs (the transformation is ~10 numbers in, 2 out — this is not a hot path), or
+**reimplement Stocking-Lord in Python** against `psychometrics` as the reference. 🔵 **The second is a
+days-not-weeks task and removes the JVM from the deliverable**, which is usually worth it; the first is
+correct on day one.
+
+🟢 **Step 5, concretely.** Run `difair.dif.mantel_haenszel` per item with the reported subgroup as the
+focal group and the **linked** ability estimate as the matching variable. 🔴 **Match on the linked score,
+not the raw score** — matching on a raw score that is not on a common scale re-introduces exactly the
+error step 4 removes. 🟢 **Use `iterative purification`** so items that themselves show DIF stop
+contaminating the matching criterion. 🔵 **Report ETS A/B/C classes**, because that is the vocabulary an
+exam board and a regulator both already read.
+
+🟢 **Step 6 answers a different question and both are needed.** DIF asks *"is this **item** unfair given
+equal ability?"*; `aequitas` asks *"does the **decision** this system produces show a group gap?"* 🔴 **An
+assessment can be free of item-level DIF and still produce a disparate pass rate**, because a real ability
+difference upstream is not an item defect. 🔵 **`difair`'s own pipeline-attribution tab exists for exactly
+this split** — it asks which stage of the pipeline produced an observed group gap.
+
+### What it costs, and what it is worth
+
+| | |
+|---|---|
+| 🟢 **Build** | **6–8 weeks** for the chain on an existing QTI stack: 1 wk anchor design, 1 wk calibration harness, 2 wk linking (3 if reimplementing Stocking-Lord in Python), 1 wk DIF + reporting, 1–2 wk evidence pack |
+| 🔴 **Hard prerequisite** | **Response data at volume.** 🔴 Rough floor for stable 2PL: **~500 responses per item**, and the anchor needs it on **both** forms. 🔵 **No library substitutes for this**, and it is the real reason this chain is rare |
+| 🟢 **Licence posture** | 🟢 **MIT · MIT · MIT · Apache-2.0 · MIT · MIT · BSD-3** — in-product, no copyleft. 🔴 **Keep `difR` (GPL) only as an offline validation oracle**, never linked |
+| 🟢 **Deployment** | 🟢 **Fully on-premise.** No component calls out; `difair_studio.html` even runs air-gapped in a browser |
+| 🔴 **What it does not do** | 🔴 **It does not prove the LLM writes good items.** It proves that **whatever was written** is on a known scale and carries no measured subgroup penalty. 🔵 **That is a stronger and much narrower claim — sell that one** |
+
+### 🔴 The two residual risks, named so a client hears them first
+
+| Risk | Reality | Mitigation |
+|---|---|---|
+| 🔴 **`difair` is v0.7.0, two authors, not on PyPI** | 🔴 Real. 🟢 But cross-validated against `difR`'s own R sources over **108 item-level statistics** (MH χ² agreeing to **5.8e-13**) and against **TIMSS 2019** | 🟢 **Pin a commit SHA**, vendor it, keep `difR` as the offline oracle for re-validation on upgrade |
+| 🔴 **`psychometrics`'s root `pom.xml` carries a 2011 GPL-3 header** | 🔴 The code is **Apache-2.0** on three channels (`P494`); 🔴 **an SPDX scanner reading `pom.xml` will report GPL-3** | 🟢 **Brief legal in writing before the scan**, citing the per-file headers and the `<licenses>` element. 🔵 **Expect to have this conversation** — it is the predictable finding of any client OSS review board |
+
+### 🔴 Still open, and `P496` does not pretend otherwise
+
+🔴 **The first half of `Gap 39` remains unmeasured:** nobody has demonstrated first-hand that
+`LongsightGroup/qti3`'s writer emits **parametric variants of the same item**. 🔵 **`P496` routes around it
+— anchor-based linking works regardless of how the variants were authored** — but the KB should stop
+implying the writer does something no pass has watched it do. 🟢 **Recorded as a live row in
+`intel/open-gaps.md`.**
+
+---
+
 ## 🟢 Thirty-eighth pass, 2026-10-07 — one recipe, `P491`: the chain Gap 39 asked for, closed end to end and permissively
 
 ⏱️ **Fifth pass of this date.** 🔵 **Licences below were all re-read from payload on 2026-10-07

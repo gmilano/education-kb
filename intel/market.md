@@ -4,6 +4,185 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-ninth pass, 2026-10-07 — `P489` is adjudicated: a third series sides against the $32 B figure, and one series fails arithmetic inside a single sentence
+
+⏱️ **Sixth pass of this date.** 🔵 **Every figure here is secondary and carries its series (`P477`).**
+🔴 **Channel state, declared rather than implied: `api.github.com` is `403`, `eur-lex.europa.eu` was
+unreachable at pass 38, and this pass adds two more — `www.marketsandmarkets.com` and `unu.edu` are both
+`EGRESS_BLOCKED` by the session proxy.** 🔴 **So no market figure and no regulatory date below is
+first-hand verifiable, and the two sources new to this pass were read from **search summaries, not
+fetched pages**.**
+
+### 🔴 `P489` adjudicated — pass 38 said *"at least one of the two is wrong and nothing says which"*. A third series says which
+
+🟢 **Pass 38 found series A's global CAGR (40.9%) irreconcilable with series B's North America
+trajectory ($3.68 B in 2026 → $32 B in 2030), and correctly refused to pick.** 🟢 **A third series, new to
+this file, is independently published for the same region:**
+
+| Series | Scope | Figures as published | 2026 NA, implied |
+|---|---|---|---|
+| **B** (pass 36–38) | North America | **$3.68 B** (2026) → **$32.0 B** (2030); **36%** of global | **$3.68 B** |
+| 🆕 **F** | North America | **$951 M** (2024) → **$2,303.2 M** (2029), stated CAGR **15.9%** | 🔴 **$1.28 B** |
+
+🔴 **The two disagree by 2.7–2.9× on a year two years away, and by ~14× on 2030:**
+
+| Comparison | B | F | B ÷ F |
+|---|---|---|---|
+| NA **2026** | **$3.68 B** | **$1.28 B** (at F's stated 15.9%) | 🔴 **2.88×** |
+| NA **2026**, F read at its own implied rate | **$3.68 B** | **$1.35 B** (19.35%, see below) | 🔴 **2.72×** |
+| NA **~2030** | **$32.0 B** | **$2.30 B** | 🔴 **13.9×** |
+| NA **CAGR** | 🔴 **71.7%** (B's own figures, pass 38) | **15.9%** (published) | 🔴 **55.8 points apart** |
+
+🟢 **Adjudication, and it is as far as the evidence goes:** 🔴 **series B's North America trajectory is the
+outlier of the three, and `$32 B by 2030` should not be quoted at all.** 🔵 **Two independent series —
+A's global ceiling and F's regional level — are each inconsistent with it, in the same direction. B's
+2026 *share* (36%) remains quotable; **its levels and its 2030 do not.**
+
+> 🔵 **Upgrade to `P489`, not a new finding.** The test pass 38 prescribed (project both and check the
+> implied *share*) flagged the pair correctly but could not break the tie. 🟢 **What breaks a tie is a
+> **third** series on the **same region**, which costs one extra search.** 🔴 **Two series disagreeing is a
+> warning; three series with two agreeing is a verdict.**
+
+### 🔴 `P495` — series F fails arithmetic **inside a single published sentence**, and this class is new to this file
+
+🔵 **Every series defect passes 36–38 found was *between* series. This one is *within* one**, and needs no
+second source to detect — only division:
+
+| Published in one sentence | Value |
+|---|---|
+| North America, **2024** | **$951 M** |
+| North America, **2029** | **$2,303.2 M** |
+| Stated CAGR | **15.9%** |
+
+🔴 **The three cannot all be true.** Measured:
+
+| Check | Result |
+|---|---|
+| CAGR implied by the two endpoints over **5** years (2024→2029) | 🔴 **19.35%**, not 15.9% |
+| $951 M grown at the **stated 15.9%** for 5 years | 🔴 **$1,988.8 M**, not $2,303.2 M |
+| Years of growth that **15.9%** needs to get 951 → 2,303.2 | 🔴 **5.995 — exactly 6** |
+
+🟢 **The defect is almost certainly an off-by-one on a year label**: either the base is **2023**, or the
+endpoint is **2030**. 🔴 **Nothing in the summary says which, and the page itself is `EGRESS_BLOCKED`, so
+this pass cannot resolve it.**
+
+> **`P495`.** 🔵 **Check a series against *itself* before comparing it to anything.** Three published
+> numbers — base, endpoint, CAGR — are **one equation with no free variables**, so any market figure
+> quoting all three is **arithmetically falsifiable at zero cost**. 🔴 **For a deliverable: never quote a
+> level and a CAGR from the same source without dividing them first.** 🟢 **And when the check fails,
+> quote the **endpoints** and drop the CAGR — the endpoints are what the research was for; the CAGR is a
+> derived number someone typed.**
+
+### 🔴 The 2025 base year — two series disagree by 17.5% about a year that has already happened
+
+🆕 **Series E**, new this pass: global **$6.4 B in 2025** → **$79.6 B by 2034**, growth **31.35%** stated
+for **2026–2034**.
+
+| Series | Global **2025** | Global **2026** |
+|---|---|---|
+| **A** (this file's working series) | **$7.52 B** | **$10.6 B** |
+| 🆕 **E** | 🔴 **$6.4 B** | 🔴 **$8.98 B** *(derived: $79.6 B discounted at E's own 31.35% over 8 years)* |
+| **B** (implied) | — | **$10.22 B** |
+| **C** | — | **$11.4 B** · **$12.3 B** |
+
+🔴 **A and E differ by 17.5% on 2025 — an elapsed year.** 🔵 **This is a different and worse signal than a
+forecast disagreement.** Two forecasters may legitimately differ about 2030; **2025 is not a forecast**,
+and a 17.5% spread on it means at least one series is not measuring a market but **back-casting it from a
+model**. 🔴 **E is also internally loose**: $6.4 B (2025) → $79.6 B (2034) implies **32.3%**, not the
+stated 31.35%.
+
+🔴 **The full 2026 global range now on this file's shelves is $8.98 B – $12.3 B — a 37% spread across five
+published series.** 🟢 **This file continues to use **A** end to end (`$10.6 B`, CAGR 40.9%), unchanged,
+and now records that the choice is a **convention**, not a finding.**
+
+### 🟢 Adoption and regulation measured this pass, by region
+
+🔵 **Scope labels matter here and this pass enforces them.** 🔴 **Several regional figures returned by the
+mandated searches are **cross-industry enterprise** numbers, not education-sector numbers, and are marked
+as such** — mixing the two is the same class of error as mixing series.
+
+| Region | Adoption | Regulatory state |
+|---|---|---|
+| **North America** | 🟢 **36%** of the global market (series B, share only). 🟢 **60%** of US K-12 teachers used AI tools in 2024-25, **32% weekly** (pass 38, unchanged). 🆕 **$169 M** committed to responsible AI in higher education in **Q1 2026**; 🆕 **OpenAI launched a country-level education programme with eight national partners, Q1 2026** | 🟡 **134 bills across 31 states** in 2026; **California AB 1159** bars training on student data; **Oklahoma** and **Maryland** require human oversight. 🆕 **Colorado** and **Texas** add piecemeal requirements. 🔴 **One source characterises the sector as a *"relative regulatory vacuum — no FDA equivalent for edtech"*, with adoption decided school by school** — 🔵 consistent with 134 bills and **no federal statute in force** |
+| **EMEA** | 🟡 **Pilot-and-pre-compliance.** 🔴 **New figures this pass are cross-industry, not education**: **94%** of organisations likely to invest in AI training in 2026; **38%** have not begun piloting; **60%** report siloed data. 🆕 **UK AI Adoption Summit committed £200 M+**, delivered via government-as-funder + Big Tech (Cisco, IBM, BT, Rolls-Royce) + unions + **Skills England** setting curriculum | 🔴 **EU AI Act (Reg. (EU) 2024/1689)**: education **admissions, assessment, scoring, proctoring and path-steering personalisation** are **high-risk**. 🔴 **Date conflict, unresolved:** a source new this pass states the Act *"takes full effect in August 2026"*, which **contradicts** this file's pass-38 record that the **July 2026 AI Omnibus deferred standalone high-risk to 2027-12-02**. 🔴 **`eur-lex.europa.eu` is unreachable, so neither date is first-hand verified — do not quote either without the other.** 🟢 **Art. 4 AI-literacy has applied since 2025-02-02** and is not in dispute. 🆕 **Council of Europe held a 2nd working conference on the regulatory dimensions of AI in education in October** |
+| **APAC** | 🟢 **Deepest mandate anywhere, unchanged:** China — AI **compulsory from age 6**; India — AI + computational thinking compulsory **from Class 3, 2026-27** (IndiaAI Mission); Singapore leads implementation, then Australia, Korea, Taiwan. 🔴 **New figures this pass are cross-industry**: **48%** of APAC governance leaders rank AI a top 2026 priority; **57%** of Asian organisations have AI in ≥1 area. 🆕 **Corporate-learning players moving in**: LearnUpon (new Sydney HQ, *Create+* AI authoring), **TCS–Pearson** multi-year AI learning alliance | 🔴 **Three divergent models, unchanged.** Binding risk-based: **Korea's Basic AI Act** (provisions from H2 2026), Vietnam. Targeted: **China's GenAI Measures**, enforced since Aug 2023. Voluntary: **Japan's AI Promotion Act** (soft law, March 2026), Singapore, Australia. 🔵 **Singapore's live consultations on AI assurance are in *financial services*, not education** — 🔴 do not cite them as education regulation |
+| **LATAM** | 🔴 **The gap is governance, not usage**, and this pass strengthens the evidence. **>50%** of teachers in Chile and Brazil already use AI tools; 🔴 **<10% of institutions have formal guidelines**. 🆕 **A UNU/UNESCO working paper surveys 200 higher-education institutions across 19 countries (fieldwork August–October 2025)** on five dimensions — teaching and learning, research, community engagement, administration, **governance**. 🔴 **`unu.edu` is `EGRESS_BLOCKED`: cited from a search summary, not fetched — the paper's own percentages are NOT in this file and should not be invented.** 🟢 Live at scale, unchanged: **Lottus Education (Mexico)** — LucIA, 90,000 students / 45 campuses, feedback from ~2 months to **15 minutes**; **PUC-PR (Brazil)** — AvalIA, **270,000+** comments auto-classified. 🆕 **Ednova (Chile)** named among regional edtech | 🟡 **Brazil PL 2.338/2023** — horizontal, risk-based, Senate-approved 2024-12-10, **now in the Chamber of Deputies, text can still change**. Mexico's bill adds a **"digital rights"** chapter. 🟢 **UNESCO AI-in-Education Observatory for LAC launched April 2026**. 🆕 **IADB has published a regional framework paper** (*An Enabling Regulatory Framework for AI in LAC*) — 🔵 the first regional-bank-level instrument this file has recorded |
+
+### 🟢 Figures this file will carry forward, and the ones it will not
+
+| Use | Figure | Series |
+|---|---|---|
+| 🟢 **Global 2026 market** | **$10.6 B** | **A** — 🔵 a **convention**, chosen end to end; the published range is $8.98–12.3 B |
+| 🟢 **Regional share, 2026 only** | NA **36%** | **B** — 🔵 share only |
+| 🔴 **NA 2030 = $32 B** | 🔴 **Do not quote. Adjudicated against** by series A and F | **B** |
+| 🔴 **NA $951 M → $2,303.2 M at 15.9%** | 🔴 **Quote the endpoints, drop the CAGR** (`P495`) | **F** |
+| 🔴 **Global 2025 = $6.4 B** | 🔴 **Do not quote beside A.** 17.5% below A's elapsed-year figure | **E** |
+| 🟢 **AI-tutors sub-segment** | $3.55 B (2025) → $6.45 B (2030) | **D** — 🔵 label it a sub-segment |
+| 🟢 **Student adoption** | **66%** (2024) → **92%** (2025); **86%** of HE students using AI as primary research partner at the start of 2026 | 🔵 usage, not market — safe to quote beside any series |
+
+## Opportunities by region
+
+🔵 **The opportunity this pass creates is the same instrument everywhere — the **comparability and
+fairness** evidence layer (`P496`, `compose/patterns.md`) — and what differs by region is **who is
+obliged to produce it, and when**. 🔴 **The tooling itself is jurisdiction-neutral (`P474`): no region
+produced a region-specific permissive implementation, and all four regional searches are declared empty on
+that point in `repos/foundations.md`.**
+
+### North America
+
+🟢 **The buyer is an exam board, a state testing programme or a university assessment office, and the
+driver is **professional standards and litigation exposure**, not a statute.** 🔴 **There is no federal AI
+statute in force**, and one source calls the sector a *"regulatory vacuum"* — 🔵 **but DIF analysis has
+been standard practice in US large-scale testing for decades**, so the requirement already exists in
+procurement language and in the AERA/APA/NCME *Standards*. 🟢 **That makes this the easiest region to sell
+into: nobody has to be convinced the evidence is needed, only that it can be produced permissively and
+on-premise.** 🔵 **The constraint to design for is state data law** — **California AB 1159** bars training
+on student data, which is exactly why `difair_studio.html`'s no-network, in-browser path matters. 🔴 **The
+measured gap: 134 bills across 31 states means 31 different compliance targets, and nothing in this pass
+found a vendor-neutral mapping between them.**
+
+### EMEA
+
+🔴 **The strongest regulatory driver anywhere, and the one with a disputed clock.** Education assessment
+and scoring are **Annex III high-risk** under Reg. (EU) 2024/1689, and the obligation that bites is
+**accuracy, robustness and documented performance (Annex IV)** plus **bias examination** — 🟢 **which are
+psychometric properties, and `P496` produces them.** 🔴 **The date is in dispute** (August 2026 full
+effect vs the Omnibus deferral to 2027-12-02) and `eur-lex` is unreachable, 🟢 **so the commercially safe
+framing is the earlier date**: build the evidence pack on the assumption it is needed sooner.
+🟢 **Art. 4 AI-literacy already applies to every school.** 🔵 **The live channel is institutional:** the
+Council of Europe convened a second working conference on AI-in-education regulation in October, and the
+UK is funding **AI skills** through Skills England with £200 M+ — 🔴 **note that the UK money is skills
+delivery, not assessment integrity, so it is adjacent, not the same budget.**
+
+### APAC
+
+🟢 **The largest assessment volume on earth and the clearest mandate** — China from age 6, India from
+Class 3 in 2026-27 — 🟢 **and volume is precisely the prerequisite `P496` cannot substitute for** (~500
+responses per item). 🔵 **So APAC is the region where this chain is *most* buildable and *least*
+required**: the three regulatory models diverge (Korea binding, China targeted, Japan/Singapore/Australia
+voluntary), and none of them yet names item-level fairness evidence as an obligation. 🔴 **Declared gap,
+and it is this pass's sharpest regional asymmetry: the region with compulsory national AI curricula
+produced **zero** permissive open-source measurement tooling that any of this pass's searches could
+find.** 🟢 **The opening is therefore a ministry-scale engagement — national curriculum, national item
+bank, equating across annual cohorts — rather than a compliance sale.**
+
+### LATAM
+
+🔴 **Usage is ahead of governance and the gap is measured, not inferred**: >50% of teachers in Chile and
+Brazil use AI tools, <10% of institutions have formal guidelines, and the new UNU/UNESCO survey covers
+**200 institutions in 19 countries** with **governance** as one of its five dimensions. 🟢 **That shape
+favours an instrument over a product**: the binding constraint is not tooling but the absence of an
+institutional policy to point the tooling at. 🔵 **The regional scaffolding arrived this year** — UNESCO's
+LAC observatory (April 2026) and now an **IADB** regulatory-framework paper — 🟢 **which is what a
+Globant engagement can anchor to: implement the observatory's categories as an actual audit, with
+`P496`'s outputs as the evidence.** 🔴 **Brazil's PL 2.338/2023 is still in the Chamber and its text can
+change, so build to the obligation, not to the draft article numbers.** 🔵 **Two references already exist
+at scale and should be cited in any LATAM pitch — Lottus (Mexico) and PUC-PR (Brazil).** 🔴 **And the
+honest caveat: `unu.edu` is proxy-blocked from this session, so the survey's actual percentages are not in
+this KB and must be obtained before any deck quotes them.**
+
+---
+
 ## 🟢 Thirty-eighth pass, 2026-10-07 — base-year agreement hid a growth assumption that puts North America at 77% of the world
 
 ⏱️ **Fifth pass of this date.** 🔵 **Every figure here is secondary and carries its series (`P477`).

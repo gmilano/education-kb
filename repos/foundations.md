@@ -4,6 +4,190 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-ninth pass, 2026-10-07 — the comparability tier: `0` occurrences tree-wide before this pass, and its licence topology is the opposite of pass 38's
+
+**Every licence below was read from the repository's own payload on `raw.githubusercontent.com` on
+2026-10-07**, 16 licence filenames × `main` **and** `master`, classified on the **title block**
+(`P171`); where no payload exists the **manifest** layer is named explicitly (`P482`). **No star counts
+are claimed** (`P479`). ⏱️ **Sixth pass of this date** (34–38 all ran earlier).
+
+🟢 **Pass 38 opened item calibration. This pass opens the tier that makes calibration *mean* something
+across two tests: linking, equating and differential item functioning.** 🔵 **It was measured absent
+first, in both the KB's languages and with word boundaries (`P484`), before a single search was run:**
+
+| Term probed, whole tree incl. `archive/` | Occurrences |
+|---|---|
+| `differential item functioning` · `funcionamiento diferencial` · `\bDIF\b` | 🔴 **0** |
+| `equating` · `test equating` · `equiparaci…` | 🔴 **0** |
+| `standard setting` · `cut score` · `punto de corte` · `Angoff` | 🔴 **0** |
+| `measurement invariance` · `invarianza` · `Mantel-Haenszel` · `vertical scaling` | 🔴 **0** |
+
+🟢 **Zero across 59,550 lines in two languages. This is the cleanest gap any pass has measured on this
+shelf**, and unlike pass 38's it needed no accidental recovery from `archive/`.
+
+### 🔴 `P492` — `Gap 39` was closed at half, and the half left open is the one the recipe depends on
+
+🔴 **Correction to pass 38, from the archive text pass 38 itself cited.**
+`archive/2026-10-06-pre-reset/repos-foundations.md:6013` declares `Gap 39` in two halves, and names which
+is larger:
+
+> *"**no hay banco de ítems que genere familias de variantes equivalentes** … que su *writer* soporte
+> **variantes paramétricas del mismo ítem con dificultad equivalente** … **está inferido de la
+> descripción de los paquetes, no probado**. Y **la segunda mitad del gap es más grande que la
+> primera**: **la equivalencia psicométrica entre variantes no la cubre ninguna pieza open source de esta
+> KB**."*
+
+| Half of `Gap 39` | Pass 38 | 🔴 Pass 39 |
+|---|---|---|
+| A library that **fits item parameters** from response data | 🟢 **Closed** — `py-irt`, `irtorch` (MIT), `catsim` (BSD-3) | 🟢 **Agreed, closed** |
+| **Psychometric equivalence between variants** | 🟢 claimed closed by the same rows | 🔴 **Not closed. Not addressed.** Calibration is not comparability — see below |
+
+🔴 **The technical reason the claim fails, and it is not a quibble.** Fitting a 2PL to variant A and a 2PL
+to variant B gives two parameter sets on **two different scales**. IRT fixes the metric only up to a
+linear indeterminacy, so until the two calibrations are placed on a common metric — by **anchor items**, a
+**common-person design**, or a **linking transformation** (Mean-Mean, Mean-Sigma, Stocking-Lord) — the
+statement *"variant A's items are as hard as variant B's"* **compares two numbers that are not in the
+same units.** 🟢 **That transformation is exactly what `linking`/`equating` names, and the KB held zero of
+it.**
+
+> **`P492`.** A gap with **two declared halves closes twice, or not at all.** Pass 38 quoted `Gap 39`'s
+> **last sentence** — *"calibrar con una librería IRT de Python"* — and treated the remedy clause as the
+> gap. 🔵 **The control is mechanical and now written down: read the declaring line in full from
+> `intel/open-gaps.md` before writing "closes Gap N".** 🔴 **And note the compounding:** `P483` said a
+> lost gap is worse than no gap; `P492` says a **half-read** gap is worse still, because it is recorded as
+> closed and no later pass will look again.
+
+### 🔴 `P493` — this tier's licence topology **inverts** pass 38's finding, and the inversion is the deliverable
+
+🟢 **Pass 38's conclusion, correctly drawn from its own rows:** *"all four permissive, no copyleft
+anywhere, so the whole assessment chain is an in-product component rather than a side-car."* 🔴 **One tier
+further down the same chain, that stops being true.** Measured, not assumed:
+
+| Capability | Language | 🟢 Permissive | 🔴 Copyleft / unusable |
+|---|---|---|---|
+| **IRT estimation** (pass 38's tier) | Python | `py-irt` · `irtorch` · `girth` · `pyirt` — **MIT** | — |
+| **DIF detection** | Python | 🆕 `difair` — **MIT** (one implementation, v0.7.0) | — |
+| **DIF detection** | R | 🔴 **none** | 🆕 `difR` **GPL (≥2)** · `difNLR` **GPL-3** · `GDINA` **GPL-3** · `MIRT` **GPL (≥3)** · `dexter` **LGPL-3** |
+| **IRT linking + score equating** | Java | 🆕 `psychometrics` — **Apache-2.0** (one implementation) | — |
+| **Observed-score equating** | R | 🔴 **none** | 🆕 `equate` **GPL-3** |
+| **ML fairness metrics** | Python | `fairlearn` · `AIF360` (shelved) · 🆕 `aequitas` — **MIT** | — |
+
+> **`P493`.** **Licence topology is a property of the tier, not of the industry.** The *estimation* tier is
+> uniformly permissive because it grew up in Python/ML; the *comparability* tier is uniformly copyleft
+> because it grew up in **R/CRAN**, where **GPL is the ecosystem default**. 🔴 **For Globant the practical
+> consequence is a single sentence: there is exactly one permissive implementation of each of DIF and
+> equating in existence as far as this pass can measure, and both are single-maintainer.** 🔵 **Do not
+> quote pass 38's "no copyleft anywhere" about an assessment chain that includes equating.**
+
+### 🟢 New rows this pass — **3 permissive**, verified channel by channel
+
+🔵 **Three, and the pass says three rather than padding to five.** All three are new to the whole tree:
+`difair`, `meyerjp3`, `itemanalysis`, `talbano` each returned **0 occurrences** before this pass.
+
+| Repo | Licence | Channel · bytes | What it is |
+|---|---|---|---|
+| 🆕 [`ZIYINGJERRY/difair`](https://github.com/ZIYINGJERRY/difair) | 🟢 **MIT** | payload `main/LICENSE` · **1,075 B** · title block `MIT License` · holder *"Copyright (c) 2026 Ziying Guo, Yan Li"* **and** `pyproject.toml` `license = { text = "MIT" }` → 🟢 **two channels agree (`P482`)** | **DIF + algorithmic fairness in one Python API.** `difair.dif` (Mantel-Haenszel, logistic regression, standardization, Breslow-Day, iterative purification, survey weights), `difair.poly` (generalized M-H, proportional-odds ordinal logistic) |
+| 🆕 [`meyerjp3/psychometrics`](https://github.com/meyerjp3/psychometrics) | 🟢 **Apache-2.0** | 🔴 **no payload** (16 names × `main`/`master`). Three channels: per-file headers, root `pom.xml` `<licenses>`, `README.md` — see `P494` | **Java**, Maven, 7 modules, v2.0. **IRT scale linking (Mean-Mean, Mean-Sigma, Stocking-Lord) and score equating** — the only permissive equating implementation this pass found in any language |
+| 🆕 [`dssg/aequitas`](https://github.com/dssg/aequitas) | 🟢 **MIT** | payload `master/LICENSE` · **1,083 B** · title block `MIT License` · holder *"Copyright (c) 2018 Rayid Ghani, Pedro Saleiro"* | Bias auditing toolkit (DSSG / Center for Data Science and Public Policy). 🔵 The **ML-fairness** complement to DIF; on PyPI |
+
+### 🔴 `P494` — a repo with **no licence file** can still be licensed, and the stale notice is the hazard
+
+🔴 **`meyerjp3/psychometrics` has no licence payload at all** — 16 filenames × 2 branches, nothing. 🔵 **A
+payload-only probe would shelve it as unresolved and lose the one permissive equating library on the
+market.** Four channels, read this pass:
+
+| Channel | Says | Date |
+|---|---|---|
+| `psychometrics-irt/.../irt/equating/MeanMeanMethod.java` header | 🟢 *"Licensed under the Apache License, Version 2.0"* | **2012** |
+| `…/equating/StockingLordMethod.java` · `…/irt/model/Irm3PL.java` headers | 🟢 **same, verbatim** | **2012** |
+| root `pom.xml` → `<licenses><license><name>` | 🟢 *"The Apache Software License, Version 2.0"* | — |
+| `README.md` | 🟢 *"The library is licensed under the Apache License, Version 2.0."* | — |
+| 🔴 root `pom.xml` **file header comment** | 🔴 *"Copyright (c) 2011 Patrick Meyer … you can redistribute it and/or modify it under the terms of the **GNU General Public License** … version 3"* | **2011** |
+
+🟢 **The contradiction resolves cleanly once the dates are read:** the project was **GPL-3 in 2011** and
+**relicensed to Apache-2.0 by 2012**, and the root `pom.xml` kept its old header. 🟢 **The operative
+notices are the per-file headers on the code that actually gets linked**, and every one of them says
+Apache-2.0.
+
+🔴 **And the stale header is a real procurement hazard, not a curiosity.** An automated SPDX or licence
+scanner reading `pom.xml` — which is the **first** file a Maven-aware scanner reads — returns **GPL-3**
+for the whole artifact. 🔴 **A client OSS review board would reject the component on that output**, and
+the rejection would be wrong.
+
+> **`P494`.** When the payload is absent, rank the channels: **per-file notices on the linked code** >
+> **manifest declaration** > **README** > **file-header comments in build files**. 🔵 **When two channels
+> conflict, check the dates: a relicensing explains the conflict and the later notice governs.** 🔴 **Then
+> record the stale notice as a finding in its own right** — the licence is fine and the **scanner output
+> will not be**, so the deliverable needs a written note to legal, not just a row in a table.
+
+### 🔴 Measured and **rejected**, with the reason — 7 rows
+
+🔵 **Recorded because a reader of this shelf should not have to re-probe them, and because `P493`'s
+topology claim is only as good as the rows behind it.**
+
+| Repo | Licence | Channel | Verdict |
+|---|---|---|---|
+| [`cran/difR`](https://github.com/cran/difR) | 🔴 **GPL (≥ 2)** | `master/DESCRIPTION` · v**6.1.0** · packaged **2025-11-29** | 🟡 **Side-car only.** 🔵 The reference implementation, and `difair`'s validation target |
+| [`adelahladka/difNLR`](https://github.com/adelahladka/difNLR) | 🔴 **GPL-3** | `master/DESCRIPTION`; 🔴 no payload | 🟡 Side-car only |
+| [`wenchao-ma/GDINA`](https://github.com/wenchao-ma/GDINA) | 🔴 **GPL-3** | `master/DESCRIPTION`; 🔴 no payload | 🟡 Side-car only |
+| [`xzhaopsy/MIRT`](https://github.com/xzhaopsy/MIRT) | 🔴 **GPL (≥ 3)** | `master/DESCRIPTION`; 🔴 no payload | 🟡 Side-car only |
+| [`dexter-psychometrics/dexter`](https://github.com/dexter-psychometrics/dexter) | 🟡 **LGPL-3** | payload `master/LICENSE` · **7,639 B** · title block `GNU LESSER` | 🟡 **Linkable unmodified**, still not an in-product fork |
+| [`talbano/equate`](https://github.com/talbano/equate) | 🔴 **GPL-3** | `master/DESCRIPTION`; 🔴 no payload | 🟡 Side-car only |
+| [`brettlballard/DIF`](https://github.com/brettlballard/DIF) | 🔴 **NONE — all rights reserved** | 🔴 no payload (16 × 2); `README.md` is **70 B** with **0** occurrences of `licen` | 🔴 **Unusable.** 🔵 Not a licence question: there is no grant |
+
+### 🟢 `difair` scrutinised, because one MIT implementation carrying a whole tier deserves it
+
+🔵 **A v0.7.0 package published in 2026 by two authors is exactly the row a shelf should be sceptical
+about.** Everything below was read from payload this pass:
+
+| Probe | Result |
+|---|---|
+| Code mass | `dif.py` **30,184 B** · `survey.py` **31,020 B** · `poly.py` **20,876 B** · `fairness.py` **16,698 B** · `pipeline.py` **12,516 B** |
+| Tests | 🟢 `tests/test_difair.py` · **65,982 B** — 🔵 larger than any single source module |
+| CI | 🟢 `.github/workflows/ci.yml`: matrix **Python 3.9 / 3.11 / 3.12**, runs `pytest tests/ -q --cov=difair`, then executes `examples/quickstart.py` and asserts its HTML output is non-empty |
+| Numerical validation | 🟢 `examples/crossvalidate_difR.py` (**6,887 B**) checks every procedure against **difR's own R sources** and base R `stats::mantelhaen.test` over **108 item-level statistics from six datasets**. Max abs. diff: MH χ² **5.8e-13**, MH common odds ratio **5.3e-15**, standardized P-DIF **4.7e-16**, logistic LRT χ² **3.6e-12** |
+| Real-corpus validation | 🟢 `examples/timss_validation.py` (**12,925 B**) reconstructs a **TIMSS 2019** analysis |
+| 🔵 Declared divergence | 🟢 **The repo states its own**: Breslow-Day agrees only to **5.0e-05**, *"a floor imposed by difR, which rounds that statistic to four decimals"*; and the continuity correction is **floored at zero by default**, `clamp_correction=False` reproducing difR exactly. 🟢 **ETS A/B/C classifications agree 108 of 108 either way** |
+| 🔴 Adoption risk | 🔴 **Not on PyPI** — install is `pip install git+https://github.com/ZIYINGJERRY/difair`. Two authors, one maintainer, **v0.7.0** (pre-1.0) |
+
+🟢 **Verdict: usable, with the version pinned to a commit SHA rather than a tag.** 🔵 **The numerical
+evidence is stronger than this shelf usually gets** — most rows here are justified by a README; this one
+publishes residuals against the GPL reference implementation it is replacing. 🔴 **The risk is
+maintenance, not correctness**, and the mitigation is ordinary: vendor the commit, keep `difR` available
+as a side-car oracle for re-validation.
+
+### 🔴 Channel state this pass, declared rather than implied
+
+| Channel | Result | Consequence |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 **200** | 🟢 The only working GitHub channel; every licence above came through it |
+| `github.com/<slug>` | 🔴 **403** on **11 of 11** slugs | 🔴 Slug existence cannot be checked here; a `200` on any raw path is the substitute proof |
+| `api.github.com` | 🔴 **403** | 🔴 **`P479` holds** — no star counts, no commit counts, no dates |
+| `codeload.github.com` tarball | 🔴 **403** | 🔴 **No directory listing is possible.** File existence is probed **name by name**, so an absence here means *"not found by the names tried"*, never *"not present"* |
+| `unu.edu` · `www.marketsandmarkets.com` | 🔴 **EGRESS_BLOCKED** by the proxy | 🔴 Two sources used in `intel/market.md` are cited **from search summaries, not fetched** — flagged there |
+
+🔵 **The `codeload` 403 is new information about the instrument.** 🔴 **It means `tests/test_difair.py`
+above was found by **guessing its name** after the CI file revealed `pytest tests/`** — eight other
+plausible names returned 404 first. 🟢 **Stated so no reader mistakes name-probing for enumeration.**
+
+### 🔴 Regional placement: **unplaced by construction**, and the regional searches are declared empty
+
+🔵 **`P474` applies again and harder than at pass 38.** A DIF statistic and a linking transformation are
+**mathematics**: no locale, no curriculum, no jurisdiction in the domain model. 🔴 **All four regional
+searches returned zero region-specific open-source assessment-fairness tooling** — not "little", zero:
+
+| Region | Region-placed permissive DIF/equating repo found | Status |
+|---|---|---|
+| **North America** | 🔴 **none** | 🔵 `difair`, `aequitas` and `psychometrics` have NA-affiliated authors; 🔴 **`P474` forbids placing a library by its author's affiliation**, so they are **not** recorded as NA rows |
+| **EMEA** | 🔴 **none** | 🔵 `difR` is maintained from Belgium and `difNLR` from Czechia — **both GPL, both unplaced for the same reason** |
+| **APAC** | 🔴 **none** | 🔴 **Informed gap.** The region with compulsory AI curricula (China from age 6, India from Class 3) published **no** permissive measurement tooling this pass could find |
+| **LATAM** | 🔴 **none** | 🔴 **Informed gap**, and a sharper one: pass 38 nearly mis-placed `catsim` as LATAM on a `.com.br` hostname (`P474`). 🔵 **LATAM's measured deficit on this shelf is governance capacity, not libraries** — see `intel/market.md` |
+
+> 🔵 **The right question for this tier is not where it was written but which regulator makes auditable
+> comparability mandatory.** That answer differs sharply by region and is in `intel/trends.md` (**T3**).
+
+---
+
 ## 🟢 Thirty-eighth pass, 2026-10-07 — the item-calibration layer, declared missing at pass 25 and unreachable since the reset
 
 **Every licence below was read from the repository's own payload on `raw.githubusercontent.com` on

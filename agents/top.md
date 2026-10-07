@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🔵 Thirty-ninth pass, 2026-10-07 — zero new agent rows, and `P497`: the mandated topic query returns AI *pedagogy*, not education *software*
+
+**Licences read from payload on `raw.githubusercontent.com`, 2026-10-07**, 16 filenames × `main`/`master`,
+classified on the **title block** (`P171`). **No star counts** (`P479`). ⏱️ **Sixth pass of this date.**
+
+🔴 **This file adds zero rows for the second consecutive pass**, and pass 39 will not repeat pass 38's
+framing of that as saturation alone. 🟢 **The sweeps failed in a *specific, reproducible direction*, and
+naming the direction is more useful than naming the shortfall:**
+
+| Mandated sweep | Top names returned | Education agents new to this shelf |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | `openclaw` · `browser-use` · `mem0` · `AutoGen` · `Flowise` · `dify` · `Hermes Agent` · `Aider` · `Cline` · `CrewAI` · `LangGraph` | 🔴 **0** — every one is a **horizontal** framework |
+| `github trending education AI 2026` | `ai-engineering-from-scratch` · *AI Engineering Hub* · Karpathy *Zero to Hero* · `2026-AI-College-Jobs` | 🔴 **0** — every one is **teaching material about AI** |
+
+🔵 **The roster this file sits on is 1,087 distinct `github.com` slugs** (pass-38 measurement, unchanged
+this pass — `api.github.com` is `403`, so no slug count could be re-derived independently). 🔴 **A
+topic-word sweep returns nothing it does not already hold, and `P497` in `agents/trending.md` explains why
+the failure mode is a *homonym class* rather than an empty result.**
+
+### 🔴 The honest statement of what an "education AI agent" shelf is now worth
+
+🔴 **An agent that writes, grades or tutors is the commoditised half of an education AI product.** 🟢 **The
+half a buyer in a high-risk jurisdiction cannot get anywhere is the **measurement** half** — and that half
+is a library tier, which is why this pass's three additions are in `repos/foundations.md` and
+`verticals/solutions.md` and **not** here:
+
+| 🆕 Added this pass (not agents — stated plainly) | Licence | What it answers |
+|---|---|---|
+| [`ZIYINGJERRY/difair`](https://github.com/ZIYINGJERRY/difair) | 🟢 **MIT** · payload **1,075 B** + `pyproject.toml` (`P482`) | *"does this item behave differently for a subgroup?"* |
+| [`meyerjp3/psychometrics`](https://github.com/meyerjp3/psychometrics) | 🟢 **Apache-2.0** · 🔴 **no payload** (`P494`) | *"are these two tests on the same scale?"* |
+| [`dssg/aequitas`](https://github.com/dssg/aequitas) | 🟢 **MIT** · payload **1,083 B** | *"does the decision this system makes show a group gap?"* |
+
+### 🔴 Correction carried into this file: pass 38's `Gap 39` closure was half a closure
+
+🔴 **Pass 38 recorded here that it closed `Gap 39`.** 🔵 **The archived declaration has two halves and
+names the second as the larger**: *"la equivalencia psicométrica entre variantes no la cubre ninguna pieza
+open source de esta KB"*. 🟢 **Calibration was closed; comparability was not addressed.** Full correction in
+`P492` (`repos/foundations.md`); the recipe is corrected in `P496` (`compose/patterns.md`).
+
+### 🟢 Re-verified this pass — pass 38's four measurement rows, **byte-for-byte unchanged**
+
+🔵 **Re-read from payload this pass, not copied forward.** 🟢 **All four byte counts match the pass-38
+record exactly**, which is the first time this shelf has had an independent same-channel confirmation of a
+whole tier one pass later:
+
+| Repo | Licence (payload) | Hit path · bytes | Title block | Movement |
+|---|---|---|---|---|
+| [`nd-ball/py-irt`](https://github.com/nd-ball/py-irt) | 🟢 **MIT** | `master/LICENSE` · **1,121 B** | 🟢 `MIT License` | 🟢 **None** |
+| [`joakimwallmark/irtorch`](https://github.com/joakimwallmark/irtorch) | 🟢 **MIT** | `main/LICENSE.txt` · **1,073 B** | 🔴 **absent** | 🟢 **None** — 🔴 and `P487` re-confirmed verbatim: the first line is *"Copyright (c) 2018 **The Python Packaging Authority**"*, the body is verbatim MIT. 🔵 **Grant good, attribution still unresolved** |
+| [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 **BSD-3-Clause** | `main/LICENSE` · **1,514 B** | 🟢 `BSD 3-Clause` | 🟢 **None** |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **BSD-3-Clause** | `main/LICENSE` · **1,531 B** | 🔴 **absent** | 🟢 **None** — 🟢 holder named: *"Copyright (c) 2023-2025 Mohamed El hajji On behalf of all R2D-dev"*, body clauses countable (`P487`) |
+
+🔵 **Why this table is worth its space.** 🔴 **`P494` (this pass) shows a payload probe can be silently
+wrong in one direction — absent payload ≠ absent licence.** 🟢 **This table checks the other direction:
+that a *present* payload is stable between passes.** Four for four, so the channel itself is not drifting.
+
+### 🔴 The `P480` fixture debt — third consecutive pass, and the blocker changed shape
+
+🔵 **Pass 38 recorded `./discover_probe.sh --self-test` as denied by the session's auto-mode classifier for
+a second time.** 🔴 **This pass did not re-attempt it**, and should say so rather than let silence read as
+a third denial. 🟢 **Instead the pass wrote its own probe from scratch in the session scratchpad** — 16
+filenames × 2 branches, title-block classification — which is what produced every licence row above.
+
+🔴 **That is a workaround, not a closure.** The debt is unchanged: there is still **no checked-in fixture**
+proving the probe's classifier behaves on a known corpus. 🔵 **And this pass added a new reason it
+matters** — `P494` shows the probe's `NO LICENCE PAYLOAD FOUND` result is **not** a licence verdict, so the
+fixture needs a case for *"payload absent, licence present in source headers"* before any later pass
+trusts a negative.
+
+---
+
 ## 🔵 Thirty-eighth pass, 2026-10-07 — no new agents, and the honest reason: this pass found a measurement layer, not an agent
 
 **Licences read from payload on `raw.githubusercontent.com`, 2026-10-07**, 16 filenames × `main`/`master`,

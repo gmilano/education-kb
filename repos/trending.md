@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — thirty-ninth pass: the comparability tier (DIF + equating), one permissive implementation each, and a licence that lives only in source headers
+
+⏱️ **Sixth pass of this date** (34–38 earlier). **Licences from payload, title-block classified
+(`P171`); where no payload exists the manifest channel is named (`P482`). No star counts (`P479`).**
+
+🟢 **The week's movement is a tier, again — and it is the tier immediately below the one pass 38 opened.**
+Pass 38 added item *calibration*. This pass adds **linking, equating and differential item functioning**:
+the machinery that makes two separately-calibrated tests comparable, and that detects an item behaving
+differently for one subgroup. 🔴 **Measured at `0` occurrences across the whole tree — `archive/`
+included, both languages, word-boundaried — before any search ran.**
+
+### 🟢 New rows — 3 permissive, and the pass says three rather than five
+
+| Repo | Licence (channel · bytes) | Why it is here |
+|---|---|---|
+| 🆕 [`ZIYINGJERRY/difair`](https://github.com/ZIYINGJERRY/difair) | 🟢 **MIT** · payload `main/LICENSE` · **1,075 B** · + `pyproject.toml` agrees (`P482`) | 🔴 **The only permissive DIF implementation in any language this pass could find.** Mantel-Haenszel, Breslow-Day, standardization, logistic DIF, iterative purification, survey weights, polytomous DIF — and ML fairness metrics in the same API. **v0.7.0**, 🔴 **not on PyPI** |
+| 🆕 [`meyerjp3/psychometrics`](https://github.com/meyerjp3/psychometrics) | 🟢 **Apache-2.0** · 🔴 **no payload at all** — per-file headers + `pom.xml` `<licenses>` + README | 🔴 **The only permissive equating implementation this pass could find.** Java, 7 Maven modules. **Mean-Mean, Mean-Sigma, Stocking-Lord** IRT linking + score equating. 🔴 Its root `pom.xml` still carries a **2011 GPL-3 header** — `P494` |
+| 🆕 [`dssg/aequitas`](https://github.com/dssg/aequitas) | 🟢 **MIT** · payload `master/LICENSE` · **1,083 B** | Bias-audit toolkit (DSSG). 🔵 The **ML-fairness** half that `difair` bridges to the **psychometric** half |
+
+### 🔴 Measured and rejected — 7 rows, with the channel that decided it
+
+🔵 **These are the evidence behind `P493`: the comparability tier is an R/CRAN tier, and CRAN's default is
+GPL.** 🔴 **The inverse of pass 38's "no copyleft anywhere" — one tier down the same chain.**
+
+| Repo | Licence | Decided by | Verdict |
+|---|---|---|---|
+| [`cran/difR`](https://github.com/cran/difR) v**6.1.0** (packaged **2025-11-29**) | 🔴 **GPL (≥ 2)** | `master/DESCRIPTION` | 🟡 side-car · 🔵 **the reference, and `difair`'s oracle** |
+| [`talbano/equate`](https://github.com/talbano/equate) | 🔴 **GPL-3** | `master/DESCRIPTION` | 🟡 side-car |
+| [`adelahladka/difNLR`](https://github.com/adelahladka/difNLR) | 🔴 **GPL-3** | `master/DESCRIPTION` | 🟡 side-car |
+| [`wenchao-ma/GDINA`](https://github.com/wenchao-ma/GDINA) | 🔴 **GPL-3** | `master/DESCRIPTION` | 🟡 side-car |
+| [`xzhaopsy/MIRT`](https://github.com/xzhaopsy/MIRT) | 🔴 **GPL (≥ 3)** | `master/DESCRIPTION` | 🟡 side-car |
+| [`dexter-psychometrics/dexter`](https://github.com/dexter-psychometrics/dexter) | 🟡 **LGPL-3** | payload `master/LICENSE` · **7,639 B** | 🟡 linkable unmodified |
+| [`brettlballard/DIF`](https://github.com/brettlballard/DIF) | 🔴 **no grant at all** | 🔴 no payload; `README.md` = **70 B**, `licen` appears **0** times | 🔴 **unusable** |
+
+### 🔴 `P494` in one line, because it changes how this file should be read
+
+🔴 **A `NO LICENCE PAYLOAD FOUND` result does not mean "licence unknown".** `meyerjp3/psychometrics`
+returned exactly that, and is **Apache-2.0** on three independent channels. 🔵 **Channel ranking, when the
+payload is absent:** per-file notices on the linked code → manifest declaration → README → build-file
+header comments. 🔴 **And a stale header is its own finding:** a Maven-aware SPDX scanner reads `pom.xml`
+first and will report **GPL-3** for an Apache-2.0 artifact.
+
+### 🔴 What this pass could **not** establish about the instrument
+
+| Attempted | Result |
+|---|---|
+| `codeload.github.com` tarball (to **enumerate** repo files) | 🔴 **403** — 🔵 **new this pass.** No directory listing is available through any channel |
+| `github.com/<slug>` HEAD, 11 slugs | 🔴 **403 × 11** |
+| `api.github.com` | 🔴 **403** — `P479` holds, no ★ anywhere above |
+
+🔴 **Consequence, stated so it is not misread:** every "file not present" claim on these shelves is really
+*"not found by the filenames tried"*. 🔵 `tests/test_difair.py` (**65,982 B**) was found only after
+`ci.yml` revealed the `pytest tests/` invocation — **eight earlier name guesses returned 404**.
+
+---
+
 ## 2026-10-07 — thirty-eighth pass: the IRT tier opens, a fork frozen at a dead licence, and one name across two slugs
 
 ⏱️ **Fifth pass of this date** (34–37 earlier). **Licences from payload, title-block classified

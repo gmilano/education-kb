@@ -4,6 +4,83 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-ninth pass, 2026-10-07 — the assessment tier gets its *comparability* layer, and the layer is an R/CRAN tier the platform shelf cannot absorb
+
+**Licences read from payload on 2026-10-07**, title-block classified (`P171`); where no payload exists the
+manifest and source-header channels are named (`P494`). ⏱️ **Sixth pass of this date.**
+
+🔵 **This file's job is platforms that can be customised with AI on top. No new LMS or SIS again this
+pass — that shelf is saturated.** 🟢 **What changes is the assessment tier `verticals` has been building
+since pass 33: pass 38 declared it complete at four rows, and it was not.**
+
+### 🔴 The assessment chain, corrected — pass 38 counted four links where there are five
+
+🔴 **Pass 38's table had four layers and concluded *"all four permissive, no copyleft anywhere, so the
+whole assessment chain is an in-product component rather than a side-car."*** 🔵 **The chain has a fifth
+link between calibration and delivery, and it is the only one a regulator asks about by name:**
+
+| # | Layer | Platform / library | Licence (channel) | Status before this pass |
+|---|---|---|---|---|
+| 1 | Author + bank items (QTI 3) | [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) | 🟢 **MIT** · payload `main/LICENSE.md` · 1,072 B | 🟢 shelved |
+| 2 | Deliver items (QTI 3 player) | [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | 🟢 **MIT** · payload `main/LICENSE` · 1,076 B | 🟢 shelved |
+| 3 | Calibrate difficulty / discrimination | [`nd-ball/py-irt`](https://github.com/nd-ball/py-irt) | 🟢 **MIT** · payload `master/LICENSE` · **1,121 B** 🟢 re-verified this pass | 🟢 shelved (pass 38) |
+| 4 | Adapt the test to the learner | [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 **BSD-3** · payload `main/LICENSE` · **1,514 B** 🟢 re-verified this pass | 🟢 shelved (pass 38) |
+| 🔴 **5** | 🔴 **Put two tests on the same scale** (linking / equating) | 🆕 [`meyerjp3/psychometrics`](https://github.com/meyerjp3/psychometrics) | 🟢 **Apache-2.0** · 🔴 **no payload** — source headers govern (`P494`) | 🔴 **absent** |
+| 🔴 **5b** | 🔴 **Prove no item disadvantages a subgroup** (DIF) | 🆕 [`ZIYINGJERRY/difair`](https://github.com/ZIYINGJERRY/difair) | 🟢 **MIT** · payload `main/LICENSE` · **1,075 B** + `pyproject.toml` | 🔴 **absent** |
+
+🟢 **All six are permissive, so pass 38's conclusion survives — but only because exactly one permissive
+option exists at layer 5 and exactly one at 5b.** 🔴 **Everything else at this layer is GPL** — see
+`P493`. 🔵 **"No copyleft anywhere" was true of a four-link chain and is a one-deep accident on a six-link
+one.**
+
+### 🔴 Why layer 5 cannot be customised the way this file's platforms are
+
+🔵 **Every other row in this file is a platform you fork, theme and extend** — Moodle, Open edX,
+OpenEduCat, Odoo-based SIS. 🔴 **Layer 5 is not that.** `meyerjp3/psychometrics` is a **Java library with
+no UI, no API, no container** and a 2012 codebase; `difair` is a **Python package plus a single
+155,170 B self-contained HTML file** (`difair_studio.html`) that runs in a browser with no install and no
+network calls.
+
+| | A platform (rows elsewhere in this file) | 🔴 Layer 5 |
+|---|---|---|
+| Customisation model | fork · plugin · theme | 🔴 **embed as a dependency** |
+| Who operates it | an institution's IT | 🔴 **a psychometrician, or nobody** |
+| What the AI sits on top of | the platform's data model | 🔴 **a response matrix** |
+
+> 🔵 **The deliverable consequence, and it is the useful sentence from this pass.** 🔴 **There is no
+> open-source *platform* for assessment comparability** — no equivalent of Moodle for psychometrics.
+> `hicsail/opencat-pro` was the nearest candidate and `P486` disqualified it (MIT code, **paid** Accessible+
+> UI framework). 🟢 **So this layer ships as a **service** behind an existing LMS, not as a product a
+> client's IT department operates**, and that is a sizing and staffing fact, not a licensing one.
+
+### 🟢 `difair_studio.html` — the one row in this file that needs no platform at all
+
+🔵 **Worth separating out, because it is unusual on this shelf.** A **155,170 B** single HTML file, shipped
+in the repo rather than in the Python distribution, with five tabs (dichotomous DIF, polytomous DIF,
+fairness metrics, survey design, pipeline attribution), each with a CSV template and a synthetic sample
+generator. 🟢 **Its own README states the engineering honestly:** every procedure is a from-scratch
+JavaScript port checked against the Python implementation, agreeing to **five or more decimal places** for
+Mantel-Haenszel, standardization, Breslow-Day, generalized M-H, fairness and survey/jackknife, while the
+logistic-regression procedures *"use their own solver … and so are close but not bit-identical."*
+
+| Why it matters for an engagement | |
+|---|---|
+| 🟢 **No install, no Python, no network calls** | 🔵 A ministry or exam board can audit items on an **air-gapped** machine, which is the common constraint in public-sector education procurement |
+| 🟢 **Data never leaves the browser** | 🔵 Directly relevant where student data cannot be processed off-premise — **California AB 1159**, and the EU AI Act's data-governance obligations |
+| 🔴 **Not a substitute for the package** | 🔴 Logistic DIF is *"close but not bit-identical"*; for an evidence pack that a regulator will read, run the **Python** path and cite its residuals |
+
+### 🔴 Rejected at this layer, with the reason — so no later pass re-probes them
+
+| Candidate | Licence | Why it is not a `verticals` row |
+|---|---|---|
+| [`cran/difR`](https://github.com/cran/difR) v**6.1.0** | 🔴 **GPL (≥ 2)** (`master/DESCRIPTION`) | 🟡 **Side-car only.** 🔵 Keep it as the **validation oracle** for `difair`, never in the product |
+| [`talbano/equate`](https://github.com/talbano/equate) | 🔴 **GPL-3** | 🟡 Side-car only |
+| [`dexter-psychometrics/dexter`](https://github.com/dexter-psychometrics/dexter) | 🟡 **LGPL-3** · payload **7,639 B** | 🟡 Linkable unmodified; 🔴 an R runtime inside a product is an operational cost this chain does not otherwise carry |
+| [`brettlballard/DIF`](https://github.com/brettlballard/DIF) | 🔴 **no grant** (no payload; README **70 B**) | 🔴 **Unusable** |
+| [`hicsail/opencat-pro`](https://github.com/hicsail/opencat-pro) | 🟢 MIT code 🔴 **+ paid UI framework** | 🔴 **Still disqualified** (`P486`, pass 38) — unchanged this pass |
+
+---
+
 ## 🔴 Thirty-eighth pass, 2026-10-07 — the assessment-delivery tier gets its measurement half, and a platform whose MIT grant stops at the UI
 
 **Licences read from payload on 2026-10-07**, title-block classified (`P171`). ⏱️ **Fifth pass of this date.**

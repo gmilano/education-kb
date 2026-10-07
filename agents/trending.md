@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — thirty-ninth pass: zero new agents for the second consecutive pass, and the reason is now measured rather than asserted
+
+⏱️ **Sixth pass of this date.** **Licences from payload, title-block classified (`P171`). No star counts
+(`P479`).**
+
+🔴 **Zero new agents. Second consecutive pass.** 🟢 **What is different from pass 38 is that the saturation
+claim now has a number attached to it instead of an impression.**
+
+### 🟢 The two mandated general sweeps, and exactly what they returned
+
+| Sweep | Returned | New to this KB |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **General-purpose agent listicles** — `openclaw`, `browser-use`, `mem0`, `AutoGen`, `Flowise`, `dify`, `Hermes Agent`, `Aider`, `Cline`, `CrewAI`, `LangGraph` | 🔴 **0 education agents.** 🔵 Every name returned is a **horizontal** framework, and `globant-kb`'s `technology` shelf already holds them |
+| `github trending education AI 2026` | 🔴 **"learn AI" teaching material** — `ai-engineering-from-scratch`, *AI Engineering Hub*, Karpathy's *Zero to Hero*, `2026-AI-College-Jobs` | 🔴 **0 education agents** |
+
+### 🔴 `P497` — "education AI" as a search string returns **AI pedagogy**, not **education software**, and that is a property of the query
+
+🔴 **Both sweeps failed in the same direction, and it is not a ranking accident.** The phrase *education +
+AI* is dominated on every channel by repositories that **teach AI to humans** — curricula, roadmaps,
+notebook courses — rather than repositories that **apply AI inside an education system**. 🔵 **The second
+sweep's top result is a neural-network course; the KB's subject is a tutor, a grader, an LMS connector or
+an item bank.**
+
+| What the query asks for | What the corpus optimises for |
+|---|---|
+| 🟢 software **for** schools, LMS, assessment, SIS | 🔴 material **about** AI, for learners |
+
+> **`P497`.** On a saturated vertical shelf, a **topic-word query is exhausted long before the shelf is**,
+> and it fails by returning a **homonym class**, not by returning nothing. 🔵 **The productive query names
+> a *layer of the delivery chain* instead of the industry** — this pass found its whole tier by asking
+> *"what makes two calibrated tests comparable?"*, a phrase containing neither `education` nor `AI`. 🔴 **A
+> pass that only runs the mandated topic sweeps will report saturation correctly and find nothing, every
+> time, forever.**
+
+### 🟢 Where the pass did find new ground — and it is a library tier, not an agent
+
+🔵 **Honest classification: nothing added this pass is an agent.** The additions are **measurement
+libraries**, and they belong in `repos/foundations.md` and `verticals/solutions.md`:
+
+| 🆕 Added this pass | Licence | Tier |
+|---|---|---|
+| [`ZIYINGJERRY/difair`](https://github.com/ZIYINGJERRY/difair) | 🟢 **MIT** (payload **1,075 B** + `pyproject.toml`) | Differential item functioning + ML fairness |
+| [`meyerjp3/psychometrics`](https://github.com/meyerjp3/psychometrics) | 🟢 **Apache-2.0** (🔴 no payload — source headers govern, `P494`) | IRT linking (Mean-Mean/Mean-Sigma/Stocking-Lord) + score equating |
+| [`dssg/aequitas`](https://github.com/dssg/aequitas) | 🟢 **MIT** (payload **1,083 B**) | Bias auditing |
+
+🔴 **And the agent-shaped implication for the shelf, which is the part worth carrying into a client
+conversation:** an *agent* that writes exam variants is now the **cheap** half of an assessment product,
+and the **defensible** half is a library tier this KB did not hold until today. 🔵 **See `P492`** — the
+recipe pass 38 published cannot support its own headline claim without it.
+
+### 🔴 Correction to pass 38, recorded here because pass 38's claim was recorded here
+
+🔴 **Pass 38 wrote in this file that it *"closes `Gap 39`"*.** 🔵 **It closed one of the gap's two declared
+halves.** The archived declaration names the other half as the larger one and calls it *"la equivalencia
+psicométrica entre variantes"*. 🟢 **Full correction: `P492` in `repos/foundations.md`; the register that
+makes the declaring line reachable: `intel/open-gaps.md`, created this pass.**
+
+---
+
 ## 2026-10-07 — thirty-eighth pass: zero new agents, and a gap this KB declared for itself then archived
 
 ⏱️ **Fifth pass of this date.** **Licences from payload, title-block classified (`P171`). No star

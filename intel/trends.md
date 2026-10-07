@@ -4,6 +4,135 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-ninth pass, 2026-10-07 — five trends: comparability overtakes calibration as the defensible claim, and a KB learns that writing a control down is not running it
+
+⏱️ **Sixth pass of this date.** 🔵 **All market figures below are secondary and carry their series
+(`P477`); the 2026 global range across five published series is now **$8.98 B – $12.3 B** — see
+`intel/market.md`.**
+
+### T1 🟢 The defensible unit moves one step further: from the **score**, past the **measurement claim**, to the **comparability claim**
+
+🔵 **Pass 38 called this shift correctly and stopped one step short.** It said the defensible unit is a
+*measurement claim* — difficulty, discrimination, standard error — rather than a score. 🔴 **A measurement
+claim about a single form is not yet defensible, because the regulator's question is comparative.**
+
+| Question asked | Answered by | Held by this KB since |
+|---|---|---|
+| *"What did the student score?"* | the grader | pass 1 |
+| *"On what basis is the score a measurement?"* | item parameters — IRT calibration | 🟢 **pass 38** |
+| 🔴 *"On what basis is **this** score comparable to **that** one?"* | 🆕 **linking / equating** | 🟢 **pass 39** |
+| 🔴 *"Comparable **for whom**?"* | 🆕 **differential item functioning** | 🟢 **pass 39** |
+
+🔴 **The technical correction that drives the whole pass:** two forms calibrated independently carry
+parameters on **two different scales**, because IRT fixes the metric only up to a linear transformation.
+🔵 **So pass 38's recipe `P491`, which promised to *"prove two exam variants are equivalent"*, compared
+numbers in mismatched units.** 🟢 **`P496` installs the missing link — anchor items plus a Stocking-Lord
+transformation — and restates the claim to what the evidence supports.**
+
+🟢 **And the claim, stated properly, is unusually strong for a sales conversation:** *"the two variants are
+on a common scale, their difficulty difference is X logits ± SE, and no item shows DIF above ETS class B
+for any reported subgroup."* 🔴 **No LLM-centric pitch can produce that sentence**, which is precisely why
+it is defensible.
+
+### T2 🔴 `P498` — a knowledge base can **write down a control and not run it**, and the written rule reads exactly like a solved problem
+
+🔴 **Pass 38's headline finding was `P483`: a reset had dropped the open-gap register into `archive/`, so
+twelve passes could not see a gap that pass 25 had already identified and priced.** 🟢 **The rule it wrote
+is correct:** *"A reset or re-scope must carry forward the open-gap register as live content."* 🔴 **Pass
+38 did not carry it forward.** Measured this pass: the live tree contained **no** gap register, and the
+only reachable copy was still the archive path pass 38 had quoted.
+
+🔵 **So the gap `P483` described remained open for one more pass — while the KB's own text asserted the
+remedy.** 🟢 **This pass created `intel/open-gaps.md`**: 40 bold-declared gaps recovered from the eight
+archived files, each with its archive `file:line`, bucketed **12 open / 5 status-undeterminable / 23
+closed** by a mechanical read of the declaring line — 🔵 **explicitly a reachability index, not a
+re-adjudication.**
+
+🔴 **And the cost of the un-run control was immediate and measurable, not hypothetical.** `Gap 39`'s
+declaring line has **two halves**; pass 38 quoted the **last sentence** and closed the gap on it:
+
+| | `P483` (pass 38) | 🆕 `P498` (this pass) |
+|---|---|---|
+| The failure | a gap that was true went **uncollectable** | the **remedy was recorded as done** when it was only specified |
+| How it reads | *"no pass could see it"* | 🔴 *"the rule is in the file"* — 🔵 which is worse, because it **stops the next pass from checking** |
+| What it cost | 12 passes of unrealised work | 🔴 **`Gap 39` closed at half** — `P492` |
+| The control | carry the register forward | 🆕 **execute the control in the same pass that prescribes it, or label it a TODO with an owner** |
+
+> 🔵 **Generalised, because Globant ships this shape constantly.** 🔴 **A documented control is not a
+> control.** An audit finding, a runbook step, a governance policy — each is a *specification* until
+> something executes it, and the document is indistinguishable from a solved problem on every later read.
+> 🟢 **The practical rule: a finding that prescribes an action must either perform it or carry an explicit
+> `NOT DONE` marker with an owner.** 🔵 **`P480`'s fixture debt on this very shelf is the same shape, now
+> three passes old** — and `agents/top.md` records this pass's decision not to let silence stand in for a
+> third denial.
+
+### T3 🔴 Comparability tooling is jurisdiction-neutral, so the regional story is **who is obliged**, and it inverts the usual ranking
+
+🟢 **A linking transformation and a Mantel-Haenszel statistic are mathematics: no locale, no curriculum, no
+jurisdiction.** 🔴 **`P474` fired again this pass and had to be enforced twice** — `difair` and `aequitas`
+have North-America-affiliated authors, `difR` is maintained from Belgium and `difNLR` from Czechia, and
+**none of them is recorded as a regional row.** 🔵 **All four regional searches returned zero
+region-specific open-source assessment-fairness tooling; the gap is declared, per region, in
+`repos/foundations.md`.**
+
+🔵 **The useful regional question is therefore which regulator makes auditable comparability mandatory, and
+the answer inverts the market ranking:**
+
+| Region | What makes comparability evidence required | Clock | 🔵 Commercial shape |
+|---|---|---|---|
+| **EMEA** | 🔴 **Strongest.** Annex III high-risk + Annex IV accuracy/robustness + bias examination | 🔴 **Disputed** — "full effect August 2026" vs the Omnibus deferral to **2027-12-02**; `eur-lex` unreachable, so build to the **earlier** date | 🟢 **Compliance sale** |
+| **North America** | 🟡 **No statute — but decades of professional practice.** DIF is already standard in US large-scale testing; 134 bills / 31 states | 🟡 Now, by procurement language rather than law | 🟢 **Easiest sale**: the requirement is pre-agreed, only the permissive on-premise *how* is new |
+| **APAC** | 🔴 **Weakest obligation, largest volume.** Compulsory curricula (China age 6, India Class 3) but no regime names item-level fairness evidence | 🔴 Not scheduled | 🟢 **Ministry-scale build**, not compliance |
+| **LATAM** | 🔴 **Obligation absent; capacity is the binding constraint.** <10% of institutions have guidelines | 🟡 Brazil PL 2.338/2023 still in the Chamber | 🟢 **Instrument + policy**, anchored to UNESCO's LAC observatory and the new IADB framework |
+
+🔴 **The asymmetry worth saying out loud: the region with the heaviest obligation (EMEA) has the least
+assessment volume, and the region with the volume (APAC) has the lightest obligation.** 🟢 **`P496` needs
+~500 responses per item, so the technically easiest deployments and the commercially most urgent ones are
+in different hemispheres.**
+
+### T4 🔴 Licence topology is a property of the **tier**, and this is the trend-level reading of `P493`
+
+🟢 **Pass 38 concluded of the assessment chain: *"all four permissive, no copyleft anywhere."*** 🔴 **One
+tier down, the ratio reverses: of the eight comparability implementations this pass measured, **six are
+GPL or LGPL**, one is unlicensed, and the permissive options number **exactly one per capability**.**
+
+🔵 **The cause is ecosystem lineage, not education.** Item *estimation* grew up in Python/ML, where
+MIT/Apache are the defaults; item *comparability* grew up in **R/CRAN**, where GPL is the default. 🟢 **So
+the licence profile of a capability is predictable from the community that built it**, and that is a
+reusable heuristic rather than an education fact:
+
+| If the capability's reference implementations are… | Expect | 🔵 Plan for |
+|---|---|---|
+| Python / ML-lineage | 🟢 MIT · Apache-2.0 | in-product |
+| 🔴 **R / CRAN / academic-statistics lineage** | 🔴 **GPL · LGPL** | 🟡 **side-car, or a single permissive outlier carrying the whole tier** |
+| Java / enterprise-2010s lineage | 🟡 Apache-2.0 — 🔴 **often with no `LICENSE` file at all** (`P494`) | read **source headers** |
+
+🔴 **The deliverable risk this creates is concentration, not copyleft.** 🟢 **There is one permissive DIF
+library and one permissive equating library in existence as far as this pass can measure**, and one of
+them is **v0.7.0 and not on PyPI**. 🔵 **That is a single-point-of-failure sentence a client should hear in
+the first conversation**, with the mitigation attached: pin the SHA, vendor it, keep the GPL reference
+implementation as an offline validation oracle.
+
+### T5 🔴 On a saturated vertical shelf, the topic-word query is the bottleneck — and it fails by returning a **homonym class**
+
+🔴 **Two consecutive passes have added zero agents, and this pass measured why rather than calling it
+saturation.** 🔵 **`P497`:** both mandated sweeps — `top open source AI agents education 2026 github MIT`
+and `github trending education AI 2026` — returned **AI pedagogy**: horizontal agent frameworks
+(`openclaw`, `CrewAI`, `LangGraph`, `dify`) and material that **teaches AI to humans**
+(`ai-engineering-from-scratch`, Karpathy's *Zero to Hero*, an AI/ML jobs list).
+
+| The query asks for | The corpus optimises for |
+|---|---|
+| 🟢 software **for** schools — tutors, graders, LMS connectors, item banks | 🔴 material **about** AI, for learners |
+
+🟢 **Every finding of substance this pass produced came from a query containing neither the word
+*education* nor the word *AI***: *"what makes two calibrated tests comparable?"* 🔵 **That is the
+generalisable move for any mature vertical KB — stop naming the industry and start naming the **layer of
+the delivery chain** whose absence you can measure first.** 🔴 **A pass that runs only the topic sweeps
+will correctly report saturation and find nothing, indefinitely.**
+
+---
+
 ## 🟢 Thirty-eighth pass, 2026-10-07 — five trends: scoring becomes a measurement claim, and a KB can lose a gap it already paid for
 
 ⏱️ **Fifth pass of this date.** 🔵 **All market figures below are secondary and carry their series
