@@ -4,6 +4,97 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Forty-fifth pass, 2026-10-07 — two new recipes (`P558` audit the **model and data** tier a code-licence review never reaches; `P559` detect a fix that was appended instead of substituted) and a **second correction** to every Portuguese-scorer recipe
+
+⏱️ **Twelfth pass of this date.** 🔵 **Licences read first-hand on 2026-10-07 from payload in cloned
+trees or publisher metadata, channel named per row (`P237`, `P250`, `P510`). No star counts
+(`P479`).**
+
+🔵 **Numbering.** 🟢 **`P490`'s rule followed before allocation**: the occupied set was read from the
+live tree and this pass allocates `P550`–`P559`.
+
+## 🔴 Second correction to the Portuguese essay-scorer recipes — `P551` falsifies the **pipeline** step, as `P544` falsified the **feature** step
+
+🔵 **Pass 44 corrected the verb** (*port* → *reimplement*) and published the corrected step as:
+*"reimplement the index set over spaCy's `pt_core_news_*` pipeline, from the published definitions,
+using NILC-Metrix only as a comparison oracle run locally."* 🟢 **The verb is still right.** 🔴 **The
+pipeline it names is not the permissive component that step implies.**
+
+| Component | Pass 44 published | Measured this pass |
+|---|---|---|
+| `explosion/spaCy` (code) | 🟢 MIT | 🟢 **MIT** — confirmed, 1 128 B payload |
+| `pt_core_news_sm/md/lg` (**the model you load**) | 🔴 *"model artefact licences unmeasured"* → `Gap 246` | 🟡 **CC-BY-SA-4.0** |
+| `UD_Portuguese-Bosque` (the training corpus) | not addressed | 🟡 **CC-BY-SA-4.0** — the source of the above |
+| any permissive PT treebank | assumed available | 🔴 **does not exist** (Bosque/GSD/Petrogold SA-4.0, PUD SA-3.0, CINTIL **NC-ND**) |
+
+🟢 **Corrected step, and this is what the recipes should say from now on:**
+
+> Reimplement the index set (TTR, MTLD, MATTR, HD-D and the syntactic-complexity indices) from the
+> published definitions, over spaCy (**MIT**) loading `pt_core_news_md` (🟡 **CC-BY-SA-4.0**).
+> **Do not fine-tune the model inside a client deliverable** — a tuned artefact is an *adaptation*
+> and carries ShareAlike. Ship **your own code** plus an **unmodified** model and its attribution;
+> if the engagement requires a tuned Portuguese pipeline, that artefact is **CC-BY-SA-4.0** and the
+> client must agree to publish it on those terms **before** the work starts, not at delivery.
+> Keep `nilc-nlp/nilcmetrix` (**AGPL-3.0**) as a **locally run comparison oracle only** — never
+> vendored, never shipped, never hosted (`P544`).
+
+🔴 **The commercial gate says ALLOWED and that is not the same as "no obligation".**
+`commercial_use_ok()` returns true for CC-BY-SA-4.0 and it is correct — ShareAlike is not
+NonCommercial. 🔵 **The cost is attribution plus copyleft on adaptations**, and the only question that
+changes the deliverable is *"does this engagement fine-tune?"*. 🔴 **Open, and stated rather than
+assumed:** how far ShareAlike reaches into a *fine-tuned* model artefact is read off the licence text
+here, not tested against a published CC interpretation or counsel → **`Gap 247`**.
+
+## 🟢 `P558` — Recipe: audit the **model and data** tier a code-licence review never reaches
+
+🔵 **The engagement this sells into:** a client (or a studio's own delivery) has run a licence review,
+read every repo-root `LICENSE`, found MIT and Apache-2.0, and signed off. 🔴 **In education that
+review looked in the wrong tier** (`P553`): the valuable assets are curricula, rubrics, item banks,
+skill corpora, model artefacts and treebanks, and the academic and public bodies that publish them
+default to **Creative Commons**, not to MIT.
+
+**Wire it together like this — every component named, all of it in this repo:**
+
+| Step | What to run | Repo / file |
+|---|---|---|
+| 1 | Enumerate the **artefacts**, not the repos: every model weight, pipeline, dataset, corpus, rubric and skill pack the deliverable loads at build or run time | — |
+| 2 | For each, fetch the **publisher's own metadata**, not the repo root — for spaCy that is `meta/<model>-<ver>.json` in `explosion/spacy-models` (the `license` field *and* the `sources[]` array) | `explosion/spacy-models` |
+| 3 | Classify each payload with the **shared hardened classifier** — title-block, `P171`-safe, and since `P551` it reads the CC **version** instead of stamping 4.0 | `compose/code/lib/license_family.sh` → `family_of()` |
+| 4 | Gate each on commercial use as a **second, independent axis** — a family name is not an answer | same file → `commercial_use_ok()` (`P250`) |
+| 5 | Walk **one tier deeper**: for a model, the training corpora in `sources[]`; for a corpus, its own `LICENSE.txt`. 🔴 **This is the step that pays** — the PT models are CC-BY-SA *because Bosque is* | `git ls-remote` + payload read (`P510`) |
+| 6 | Verify existence with a **negative control in the same run**, so a dead URL cannot read as a clean result | `P510` |
+| 7 | Split the verdict into **host / ship / tune**, because the three have different answers for the same licence | `verticals/solutions.md` (pass 44 `P544`, pass 45) |
+| 8 | Prove the auditing instruments themselves measure something before you bill for them | `compose/code/p542-empty-input-sweep/`, `p550-duplicate-definition-sweep/` |
+
+🟢 **Worked output of exactly this recipe, run this pass on this KB's own Portuguese stack:** spaCy
+MIT → `pt_core_news_md` **CC-BY-SA-4.0** → Bosque **CC-BY-SA-4.0** + WikiNER CC-BY-4.0 + vectors
+**CC0**; no permissive PT treebank exists; CINTIL **refused** by the commercial gate. 🔵 **Eight
+assets, four licence families, one refusal — from a stack whose repo roots read "MIT".**
+
+🟡 **Effort, stated honestly:** 1–2 weeks for a single-language assessment stack of this shape; the
+cost driver is step 5, because `sources[]` is not standardised across publishers and some ship no
+machine-readable provenance at all. 🔴 **Where it stops:** this recipe establishes *what the licence
+says*. It does not give a legal opinion, and `Gap 247` is open precisely at the point a client will
+push hardest (fine-tuned artefacts).
+
+## 🟢 `P559` — Recipe addendum: detect a fix that was **appended instead of substituted**
+
+🔵 **Pair this with `P549`** (audit whether a client's quality gates measure anything at all). 🟢 **The
+new check is one loop and it found a real defect in this KB's most-trusted file on its first run:**
+
+| Step | What to run |
+|---|---|
+| 1 | `compose/code/p550-duplicate-definition-sweep/sweep_dupdefs.sh <root>` — flags every duplicate function definition whose **bodies differ**, skipping byte-identical re-declarations and declared frozen snapshots |
+| 2 | For each finding, bind the **shadowed** body under a second name and run **both** over the client's real corpus — `oracle_inversion.sh` is the worked example |
+| 3 | Report the **direction** of every divergence, not just the count: over-restriction costs an opportunity, under-restriction costs the deliverable, and they are not the same severity |
+| 4 | Fix by **deleting** the superseded body — keeping the explanation as a comment is fine, keeping the *code* is the defect |
+
+🔵 **Why a client will recognise this immediately:** the shape is universal to long-lived
+rule-engines — pricing rules, eligibility checks, licence gates, fraud filters — where a fix is added
+next to the thing it replaces and the suite stays green because it only ever calls the **name**.
+🟢 **Measured on this KB: 302 files, 1 live finding, 7 of 27 real verdicts in its blast radius, and
+the file it was in is the one every other instrument is told to reuse.**
+
 ## 🟢 Forty-fourth pass, 2026-10-07 — one new recipe (`P549`: audit a client's own quality gates) and a **correction** to every Portuguese-scorer recipe in this file
 
 ⏱️ **Eleventh pass of this date.** 🔵 **Licences read first-hand on 2026-10-07 from payload in cloned

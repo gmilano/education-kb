@@ -294,8 +294,45 @@ osi_family_of() {
     printf '%s' "$t" | grep -qi 'NonCommercial\|Non-Commercial\|NoComercial\|BY-NC' && nc="-NC"
     printf '%s' "$t" | grep -qi 'ShareAlike\|Share-Alike\|CompartirIgual\|BY..SA\|-SA ' && sa="-SA"
     printf '%s' "$t" | grep -qi 'NoDerivatives\|NoDerivs\|SinDerivadas\|BY..ND\|-ND ' && nd="-ND"
+    # P551 (pase 45 del 2026-10-07).  LA VERSION ESTABA ESTAMPADA, NO LEIDA.  Esta rama
+    # armaba los atributos (NC/SA/ND) LEYENDO el payload y despues concatenaba `-4.0`
+    # literal, asi que TODO texto CC volvia 4.0 cualquiera fuera su version real.
+    #
+    # Medido sobre un asset real y relevante: `UniversalDependencies/UD_Portuguese-PUD`
+    # trae un `LICENSE.txt` de 19 556 B cuyo bloque de titulo dice «Creative Commons
+    # Attribution-ShareAlike 3.0 International Public License», con dos URLs `by-sa/3.0` y
+    # CERO apariciones de «4.0» -- y el clasificador contestaba `CC-BY-SA-4.0`.
+    #
+    # POR QUE IMPORTA, y es la direccion peligrosa.  Para un treebank la diferencia entre
+    # 3.0 y 4.0 no es cosmetica: CC 4.0 cubre EXPLICITAMENTE los derechos sui generis de
+    # BASE DE DATOS (art. 4) y agrega el plazo de subsanacion de 30 dias; 3.0 no hace ni
+    # una ni la otra.  Un treebank ES una base de datos.  Etiquetar 3.0 como 4.0 no pierde
+    # estante: INVENTA una concesion que el texto no da, que es la direccion de P312 y no
+    # la de P308.
+    #
+    # La version se lee del bloque de titulo, en dos canales, y si ninguno responde se
+    # contesta `CC-BY...-UNVERSIONED` en vez de adivinar: «no declara version» y «declara
+    # 4.0» son respuestas distintas y no deben compartir string (la leccion de P502).
     if printf '%s' "$t" | grep -qi 'Attribution\|Atribuci\|CC BY'; then
-      echo "CC-BY${nc}${sa}${nd}-4.0"; return
+      local ccv=""
+      # canal 1: la URL canonica `creativecommons.org/licenses/<codigos>/<version>`
+      ccv=$(printf '%s' "$t" | grep -oiE 'creativecommons\.org/licenses/[a-z-]+/([0-9]+\.[0-9]+)' \
+            | grep -oE '[0-9]+\.[0-9]+' | head -1)
+      # canal 2: la version en el titulo, detras del nombre de los atributos
+      [ -n "$ccv" ] || ccv=$(printf '%s' "$t" \
+            | grep -oiE '(Attribution|ShareAlike|NonCommercial|NoDerivatives|NoDerivs)[A-Za-z. -]{0,40}[0-9]+\.[0-9]+' \
+            | grep -oE '[0-9]+\.[0-9]+' | head -1)
+      # canal 3: la SIGLA, que es como la declara un README y no un texto legal
+      # (`CC BY-NC-SA 4.0`).  P312 entro a esta rama precisamente por la sigla, asi que la
+      # version tiene que leerse en la misma forma en que la sigla la escribe: codigos de
+      # LETRAS, no nombres de atributo.
+      [ -n "$ccv" ] || ccv=$(printf '%s' "$t" \
+            | grep -oiE 'CC[ -]?BY([ -]?(NC|SA|ND))*[ -]+v?[0-9]+\.[0-9]+' \
+            | grep -oE '[0-9]+\.[0-9]+' | head -1)
+      if [ -n "$ccv" ]; then
+        echo "CC-BY${nc}${sa}${nd}-${ccv}"; return
+      fi
+      echo "CC-BY${nc}${sa}${nd}-UNVERSIONED"; return
     fi
     echo "CC-UNSPECIFIED"; return
   fi
@@ -426,15 +463,26 @@ affero_lines() { printf '%s' "$1" | grep -ci affero; }
 # question: `CC-BY-SA-4.0` is a real family AND a problem for a client deliverable, while
 # `Apache-2.0` is a real family and no problem.  Asking them separately keeps a restriction
 # from being hidden behind a family name -- or behind UNCLASSIFIED.
-commercial_use_ok() {
-  local d; d=$(printf '%s' "$1" | tr '[:upper:]' '[:lower:]' | tr -s '[:space:]' ' ')
-  case "$d" in
-    *"non-commercial"*|*"noncommercial"*|*"not-for-profit"*|*"non-profit purposes"*) return 1 ;;
-    *"obtain a commercial license"*|*"commercial licence must"*|*"for academic research or other not-for-profit"*) return 1 ;;
-    *"excludes any service or part of selling a service"*) return 1 ;;
-  esac
-  return 0
-}
+#
+# P550 (pase 45 del 2026-10-07).  AQUI VIVIA UN SEGUNDO `commercial_use_ok()`, y era el
+# PRIMER CORTE del pase 82: token-match puro sobre el cuerpo, sin la compuerta de familia.
+# Estuvo definido INMEDIATAMENTE ARRIBA del bloque de comentario que explica por que estaba
+# mal, y de la version que lo corrige.  Es decir: el arreglo se AGREGO, no se SUSTITUYO.
+#
+# Bash conserva la ULTIMA definicion, asi que el que corria era el endurecido y ningun
+# veredicto publicado por esta base fue incorrecto.  Pero era correcto POR ORDEN DE
+# LECTURA, no por construccion -- y el orden de lectura no es un control.  Medido por
+# `p550-duplicate-definition-sweep/oracle_inversion.sh` sobre el corpus real de payloads de
+# esta base: de 27 payloads, 7 INVIERTEN si el orden se da vuelta, y los 7 en la misma
+# direccion (ALLOWED -> PROHIBITED).  Entre ellos la GPL-3.0 de Moodle, la AGPL-3.0 de
+# INGInious y de ClassroomIO, y --el peor-- el Unlicense, el texto mas permisivo que
+# existe.  La direccion es la de P308 (se pierde estante), no la de P312 (se inventa
+# permiso); eso ACOTA el dano, no lo cancela.
+#
+# El sobreviviente del par es el unico cuerpo, abajo.  La leccion que debe viajar: un
+# arreglo que no BORRA lo que reemplaza deja dos respuestas a la misma pregunta en el mismo
+# archivo, y la suite no puede verlo -- llama al nombre, el nombre resuelve a un cuerpo, y
+# 132/132 no dice nada del cuerpo que no resolvio.
 
 # ---------------------------------------------------------------------------
 # P250, pass 82 — commercial use as a SECOND axis, and the gate that makes it sound.

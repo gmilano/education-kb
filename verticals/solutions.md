@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟡 Forty-fifth pass, 2026-10-07 — two education ERPs admitted with their licences read from payload, and the Portuguese stack's "permissive" link is **downgraded**
+
+⏱️ **Twelfth pass of this date.** **Licences read first-hand on 2026-10-07 from payload in cloned
+trees, channel named per row (`P237`, `P171`, `P250`, `P510`). No star counts (`P479`).**
+
+🔵 **This file lists real systems a studio can stand up and customise.** 🟢 **Two added this pass,
+both genuine ERP-class platforms with a student information system inside.**
+
+### 🟡 Added — two education ERPs, and the difference between them is the licence
+
+| | `openeducat/openeducat_erp` | `frappe/education` |
+|---|---|---|
+| Existence (`P510`) | 🟢 17 refs | 🟢 20 refs |
+| HEAD | `1c95cef`, **2026-09-07** | `444cc8e`, **2026-09-30** |
+| Licence | 🟡 **LGPL-3.0** — payload **8 241 B**, title block *"GNU LESSER GENERAL PUBLIC LICENSE, Version 3"* | 🟡 **GPL-3.0 (declaration)** — `license.txt` is **19 B**: *"License: GNU GPL V3"* |
+| Commercial use (`P250`) | 🟢 ALLOWED | 🟢 ALLOWED |
+| Host for a client? | 🟢 **Yes** — LGPL links without infecting the caller | 🟡 **Yes, but** the deliverable's own modules are the question, not the hosting |
+| Built on | **Odoo** | **ERPNext / Frappe** |
+| Shape | SIS + CRM (admissions/lead management), library, hostel, fees, exams | student, course, programme, assessment, fees on the Frappe framework |
+
+🔴 **The `frappe/education` row is a declaration, not a payload, and the classifier says so.**
+Its `license.txt` is nineteen bytes — it *names* GPL-3.0 without shipping the text, so
+`family_of()` answers **`GPL-3.0 (declaracion)`**. 🔵 **That is the axis `P255` exists for**, and the
+distinction is the one a procurement reviewer asks about: a named licence with no text is a weaker
+artefact than a payload, even when nobody disputes the intent.
+
+🟢 **How they sit against the shelf's existing anchors:** Moodle (**GPL-3.0**, with the in-core
+`ai/provider` extension point, `P520`) remains the LMS anchor; **OpenEduCat is the first LGPL-3.0
+platform on this shelf**, which makes it the easiest ERP-class system here to build a *proprietary*
+module against — the licence permits linking without reaching the caller. 🔵 **Neither is permissive**,
+and this shelf still has **no MIT/Apache education ERP**; that nil is now thirteen passes old and is
+stated rather than searched around.
+
+### 🔴 Downgraded — the Portuguese text-complexity stack's spaCy link is **not** the permissive one
+
+🔵 **Pass 44 published this stack with spaCy as its 🟢 MIT link and flagged the model artefacts as
+unmeasured (`Gap 246`).** 🔴 **Measured this pass, and the flag was right to be there:**
+
+| Link | Component | Licence read this pass | Shape |
+|---|---|---|---|
+| 1 · code | `explosion/spaCy` | 🟢 **MIT** (1 128 B payload) | library |
+| 2 · **model artefact** | `pt_core_news_sm` / `md` / `lg` **3.8.0** | 🔴 **CC-BY-SA-4.0** — *was published as "unmeasured", now measured* | the pipeline you actually run |
+| 3 · training corpus | `UD_Portuguese-Bosque` v2.8 | 🟡 **CC-BY-SA-4.0** | the source of link 2's ShareAlike |
+| 3b · NER corpus | WikiNER | 🟢 CC-BY-4.0 | attribution only |
+| 3c · vectors (`md`/`lg`) | Explosion fastText (OSCAR + Wikipedia) | 🟢 **CC0** | no obligation |
+| 4 · metrics service | `nilc-nlp/nilcmetrix` | 🔴 **AGPL-3.0**, `EXPOSE 8080` | 🔴 self-hosted **by the client** only (pass 44) |
+
+🔵 **Commercial use of the PT models is ALLOWED** — `commercial_use_ok()` returns true for
+CC-BY-SA-4.0, and the gate is right: ShareAlike is not NonCommercial. 🔴 **What it costs is
+different:** attribution plus ShareAlike **on the artefact and on adaptations**, so **fine-tuning
+`pt_core_news_*` for a client produces a CC-BY-SA-4.0 derivative**. 🟢 **Inference against the
+unmodified model and shipping your own code beside it is the clean configuration**; shipping a
+*tuned* model is the one that obliges.
+
+🔵 **And the obligation has no permissive escape at the corpus tier** — measured, not assumed:
+Bosque, GSD and Petrogold are all **CC-BY-SA-4.0**, PUD is **CC-BY-SA-3.0**, and CINTIL is 🔴
+**CC-BY-NC-ND-4.0** (refused by the commercial gate). 🟢 **So the ShareAlike floor under Portuguese
+NLP on this shelf is structural**, and `verticals/` records it here because it changes what may be
+*hosted* and *delivered*, not merely what may be read.
+
 ## 🟡 Forty-fourth pass, 2026-10-07 — a deployable Portuguese **text-complexity service** joins the shelf, and its licence is the reason it may not be hosted for a client
 
 ⏱️ **Eleventh pass of this date.** **Licences read first-hand on 2026-10-07 from payload in cloned

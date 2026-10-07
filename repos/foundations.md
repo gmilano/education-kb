@@ -4,6 +4,118 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🔴 Forty-fifth pass, 2026-10-07 — the **shared control** carried two answers to its own question, and a second defect stamped a licence version it never read
+
+⏱️ **Twelfth pass of this date.** **Licences read first-hand on 2026-10-07 from payload, classified
+by the shared hardened classifier `compose/code/lib/license_family.sh` (`P237`, title-block, `P171`),
+commercial use by its `commercial_use_ok()` (`P250`). Existence by `git ls-remote --heads` against a
+negative control in the same run (`P510`). **No star counts** (`P479`).
+
+🔵 **Both findings this pass are in the instrument, not the shelf, and both were found by RUNNING it
+on new input rather than by reading it.** 🟢 **Both are fixed, with regression tests, and the shelf's
+published verdicts survive unchanged.**
+
+### 🔴 `P550` — `lib/license_family.sh` defined `commercial_use_ok()` **twice**, and the live gate was correct **only by source order**
+
+The file's own header says *"source this, do not rewrite it"*: every licence verdict this KB
+publishes is classified by it. It contained **two** definitions of the same function — the pass-82
+**first cut** (a pure token-match over the payload body, **no family gate**) at line 429, and the
+hardened `P299`/`P312` body at line 455.
+
+🔵 **Bash keeps the LAST definition**, so the body that actually ran was the hardened one and **no
+published verdict was ever wrong**. 🔴 **But it was correct by order of reading, and order of reading
+is not a control.** The most uncomfortable detail: the comment block that explains *why the first cut
+was wrong* sits **between the two definitions**. The fix was **appended, not substituted**.
+
+🟢 **The hazard is measured, not hypothetical** — `p550-duplicate-definition-sweep/oracle_inversion.sh`
+binds the shadowed body under a second name and runs both over **this KB's own 27 licence payloads**:
+
+| | Result |
+|---|---|
+| Payloads judged | **27** (every `LICENSE`/`COPYING` payload in `compose/code/`) |
+| 🔴 **Verdicts that invert if the order flips** | **7** |
+| Direction of all 7 | 🟡 `ALLOWED` → `PROHIBITED` — **uniform** |
+| `CC-BY-NC-4.0` control | 🟢 `PROHIBITED` under **both** bodies — the NC case does not move |
+
+🔴 **The seven, named:** `openemis-core` (GPL-2.0), `kuali/kfs` (AGPL-3.0), `Ovsyanka83/autograder`
+(GPL-3.0), `INGInious` (AGPL-3.0), `FWU-DE/mem-mcp` (**Unlicense**), `classroomio` (AGPL-3.0),
+`lmscloud` (GPL-3.0). 🔵 **Moodle's GPL-3.0 payload and the Unlicense — the most permissive text that
+exists — are both in the blast radius.**
+
+🟢 **The direction BOUNDS the damage and is worth stating precisely.** All seven inversions
+over-restrict: this is `P308`'s direction (*lose shelf, cost an opportunity*), **not** `P312`'s
+(*invent permission, cost the deliverable*). 🔵 **That makes it expensive, not catastrophic** — and it
+is the reason the fix is a cleanup rather than a recall of published rows.
+
+🔵 **Dated, not guessed.** The duplicate is also present in the frozen
+`p308-phrase-anchor-sweep/license_family.PRE-P308-CONTROL-2026-10-04.sh` snapshot, so it predates
+**2026-10-04** and survived every `132/132` run since.
+
+### 🟢 The instrument, and the two defects it found **in itself**
+
+`compose/code/p550-duplicate-definition-sweep/` — **302 files** scanned, suite **26/26**, 4 mutants,
+`REFUSES` empty input with exit `2` (`P542`'s lesson applied before publishing, not after).
+
+| Class | n (pre-fix) | Reading |
+|---|---|---|
+| 🔴 `P550-SHADOWED-DIVERGENT` | **1** | 🔴 the shared control itself |
+| `P550-FROZEN-CONTROL` | 1 | 🔵 the PRE-P308 snapshot — **declared, not accused**: reproducing old behaviour is its job |
+| `P550-REDUNDANT-IDENTICAL` | 0 | 🟢 a byte-identical re-declaration is redundant, not dangerous — the sweep says so rather than padding its count |
+| **after the fix** | **0** | 🟢 `sweep_dupdefs.sh` exits `0`; the oracle answers `SHADOW-ABSENT` |
+
+🔴 **`P550b` — the sweep's first cut kept a private counter beside its published table.** Two mutants
+walked straight through the suite (drop the increment; force the final test true) because both leave
+the **rows correct** and only the **exit status** lies. 🔵 **That is `P541`'s shape reproduced inside
+the instrument written to find `P541`'s cousin.** 🟢 **Fixed by construction:** the status is now
+recomputed **from the emitted rows**, so there is no second number that can drift, and the suite
+asserts on the **table** — the exit code is a convenience, the table is the evidence.
+
+🔴 **`P550c` — the first cut reported three definitions that do not exist.** `f`, `g` and `k`: all of
+them **fixture source quoted inside heredocs in the sweep's own suite**. A scanner that cannot tell a
+definition from a string containing one **over-accuses**, which is `P543`'s error class. 🟢 **Fixed
+with a heredoc-aware / triple-quote-aware pre-filter (`strip_quoted.awk`), and tested in BOTH
+directions** — a quoted definition must not be reported, and a real duplicate *after* a heredoc must
+still be.
+
+### 🔴 `P551` — the CC branch **read the attributes and stamped the version**
+
+The same control assembled `NC`/`SA`/`ND` by reading the payload and then concatenated **`-4.0`
+literal**, so *every* Creative Commons text came back as 4.0 whatever its real version.
+
+🟢 **Found on a real asset that `Gap 246` forces this KB to look at.**
+`UniversalDependencies/UD_Portuguese-PUD` ships a `LICENSE.txt` of **19 556 B** whose title block
+reads *"Creative Commons Attribution-ShareAlike **3.0** International Public License"*, with two
+`by-sa/3.0` URLs and **zero** occurrences of "4.0" — and the classifier answered `CC-BY-SA-4.0`.
+
+🔴 **Why it is the dangerous direction, and for a treebank specifically.** CC **4.0** covers *sui
+generis* **database rights** explicitly (Art. 4) and adds a 30-day cure period; **3.0** does neither.
+🔵 **A treebank IS a database.** Labelling 3.0 as 4.0 does not lose shelf — it **invents a grant the
+text does not give**, which is `P312`'s direction.
+
+🟢 **Fixed by reading the version in three channels**, and by refusing to guess: the canonical
+`creativecommons.org/licenses/<codes>/<version>` URL, the version behind an attribute **name** in the
+title, and the **acronym** form a README uses (`CC BY-SA 3.0`). 🔵 **The third channel was not
+optional** — `P312` entered the CC branch by the acronym, and without it `P312`'s own fixture
+regressed, which the suite caught on the first run. 🔴 **And "no version declared" now answers
+`CC-BY-SA-UNVERSIONED`, never 4.0** — `P502`'s lesson: two different facts must not share a string.
+
+🟢 **Suite: `141/141`** (9 new cases, 3 of them **real payloads** committed as fixtures, 5 of them
+**negative controls** that pin the versions and attributes the fix must NOT move).
+
+🔴 **A third defect, in the suite's own input channel, and it is the same shape again.** The first
+cut of those fixture tests resolved their path from `${BASH_SOURCE[0]}`, which is **empty** at that
+point in this suite — `dirname ""` left the path at `/fixtures-p551`, `cat` failed, and all four
+cases returned **`UNCLASSIFIED`**. 🔵 **An absent fixture disguised itself as a verdict**: that is
+`P502` on the suite's input channel, and a reader who saw `UNCLASSIFIED` would have concluded
+something about the licence rather than about the path.
+
+### 🟢 The foundational shelf is unchanged, and that is the finding
+
+🔵 **Nothing is withdrawn.** The live gate was the hardened one throughout, `p312`'s NC-gate suite
+(`21/21`), `p288` (`9/9`), `p255` (`13/13`) and `p308` (`100` pass / `0` fail) all re-run green after
+both repairs. 🟢 **Every suite that sources the shared control was re-run, not assumed** — which is
+the only reason this pass can say the shelf stands.
+
 ## 🟢 Forty-fourth pass, 2026-10-07 — `Gap 243` **CLOSED with code**, and the sweep found two defects **in itself** that reading it could not
 
 ⏱️ **Eleventh pass of this date.** **Licences read first-hand on 2026-10-07 from payload in cloned

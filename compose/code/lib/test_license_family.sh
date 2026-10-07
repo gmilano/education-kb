@@ -682,5 +682,44 @@ check "P457 NEG GPL-3.0 con su propia oracion sigue GPL-3.0" GPL-3.0 \
 Version 3, 29 June 2007
 "This License" refers to version 3 of the GNU General Public License.')"
 
+# ---------------------------------------------------------------------------
+# P551 (pase 45 del 2026-10-07) — LA VERSION DE UN TEXTO CC SE LEE, NO SE ESTAMPA.
+# La rama CC concatenaba `-4.0` literal.  Los tres payloads de abajo son REALES, bajados
+# este pase de los treebanks que `Gap 246` obliga a mirar, y el primero es el que destapo
+# el defecto: su bloque de titulo dice 3.0 y el clasificador contestaba 4.0.
+# Para un treebank --que es una BASE DE DATOS-- 3.0 vs 4.0 es la diferencia entre no tener
+# y tener los derechos sui generis del art. 4, asi que el defecto INVENTABA concesion.
+# ---------------------------------------------------------------------------
+# La suite hace `cd "$(dirname "$0")"` en su linea 14, asi que los fixtures son relativos
+# a ese directorio.  (`${BASH_SOURCE[0]}` llega vacio en este punto y un `dirname ""` deja
+# la ruta en `/fixtures-p551`: el primer intento fallo asi y los cuatro casos dieron
+# UNCLASSIFIED, que es exactamente el modo en que un fixture ausente se disfraza de
+# veredicto -- la forma de P502 sobre el canal de entrada de la propia suite.)
+FIXP551="fixtures-p551"
+check "P551 PUD real: el titulo dice 3.0 y se contesta 3.0" CC-BY-SA-3.0 \
+  "$(family_of "$(cat "$FIXP551/cc-by-sa-3.0-ud-portuguese-pud.LICENSE")")"
+check "P551 NEG Bosque real sigue 4.0 (el arreglo no degrada a todos)" CC-BY-SA-4.0 \
+  "$(family_of "$(cat "$FIXP551/cc-by-sa-4.0-ud-portuguese-bosque.LICENSE")")"
+check "P551 NEG CINTIL real: atributos NC-ND intactos y version 4.0" CC-BY-NC-ND-4.0 \
+  "$(family_of "$(cat "$FIXP551/cc-by-nc-nd-4.0-ud-portuguese-cintil.LICENSE")")"
+check "P551 NEG CINTIL real sigue comercialmente PROHIBIDO" PROHIBITED \
+  "$(cu "$(cat "$FIXP551/cc-by-nc-nd-4.0-ud-portuguese-cintil.LICENSE")")"
+# La sigla (canal 3): es como lo declara un README, y es por donde entro P312.
+check "P551 sigla con version 3.0 contesta 3.0" CC-BY-SA-3.0 \
+  "$(family_of "## License
+CC BY-SA 3.0. ShareAlike restrictions apply.")"
+check "P551 sigla con version 2.5 contesta 2.5" CC-BY-2.5 \
+  "$(family_of "## License
+Licensed CC BY 2.5. Attribution required.")"
+# «no declara version» y «declara 4.0» son respuestas DISTINTAS (la leccion de P502).
+check "P551 CC sin version alguna no se adivina en 4.0" CC-BY-SA-UNVERSIONED \
+  "$(family_of "This work is licensed under a Creative Commons Attribution-ShareAlike License.")"
+check "P551 NEG el texto CC-BY-SA-4.0 canonico sigue 4.0" CC-BY-SA-4.0 \
+  "$(family_of "Creative Commons Attribution-ShareAlike 4.0 International Public License
+You are free to share and adapt.")"
+# NEG: la version de una familia OSI no se la lleva la rama CC.
+check "P551 NEG Apache-2.0 no entra a la rama CC por su 2.0" Apache-2.0 \
+  "$(family_of "$APACHE")"
+
 printf '\n%d/%d\n' "$((n-fail))" "$n"
 [ "$fail" = 0 ] || exit 1

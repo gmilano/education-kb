@@ -4,6 +4,40 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — pass 45 (twelfth of this date)
+
+🔵 **APPEND-ONLY.** History below is untouched.
+
+🟢 **New in the tree this pass — this KB's own code:** `compose/code/p550-duplicate-definition-sweep/`
+(**302** files scanned, suite **26/26**, 4 mutants, refuses empty input with exit `2`) plus two
+repairs to the **shared** licence classifier that every row in this file depends on: `P550` (a
+duplicate `commercial_use_ok()` whose correctness rested on source order) and `P551` (CC licence
+**versions were stamped `-4.0`, not read**). 🟢 **Classifier suite `132/132` → `141/141`.**
+
+🟢 **Trending externally, measured rather than ranked** (`git ls-remote --heads` existence with a
+negative control in the same run, `P510`; payload licences via the shared classifier, `P237`; **no
+star counts**, `P479`):
+
+| Repo | HEAD read this pass | Licence (payload) | Why it is here |
+|---|---|---|---|
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `6bbbce4`, **2026-08-28** | 🟡 **CC-BY-SA-4.0** (1 230 B) | 🟢 **165 education `SKILL.md` across 20 categories** — the first education-native asset at the agent layer in 13 passes. 🔴 Not an agent (`P552`) |
+| [`UniversalDependencies/UD_Portuguese-PUD`](https://github.com/UniversalDependencies/UD_Portuguese-PUD) | 2 refs | 🟡 **CC-BY-SA-3.0** (19 556 B) | 🔴 **the payload that exposed `P551`** — title block says 3.0, the classifier was answering 4.0 |
+| [`UniversalDependencies/UD_Portuguese-Bosque`](https://github.com/UniversalDependencies/UD_Portuguese-Bosque) | 5 refs | 🟡 **CC-BY-SA-4.0** (269 B) | the treebank **under** spaCy's PT models — the source of their ShareAlike (`Gap 246`) |
+| [`UniversalDependencies/UD_Portuguese-GSD`](https://github.com/UniversalDependencies/UD_Portuguese-GSD) | 5 refs | 🟡 **CC-BY-SA-4.0** (202 B) | the obvious alternative treebank — **also ShareAlike** |
+| [`UniversalDependencies/UD_Portuguese-CINTIL`](https://github.com/UniversalDependencies/UD_Portuguese-CINTIL) | 2 refs | 🔴 **CC-BY-NC-ND-4.0** (224 B) | 🔴 **REFUSED — `commercial_use_ok()` returns false**; NonCommercial *and* NoDerivatives |
+| [`UniversalDependencies/UD_Portuguese-Petrogold`](https://github.com/UniversalDependencies/UD_Portuguese-Petrogold) | 2 refs | 🟡 **CC-BY-SA-4.0** (202 B) | 🔵 `Petrogold`/`PetroGold` are **case variants of one repo**, not two assets (`P506`/`P253`) |
+| [`explosion/spacy-models`](https://github.com/explosion/spacy-models) | 2 refs | — (metadata repo) | 🟢 the channel that answers `Gap 246`: `meta/pt_core_news_*-3.8.0.json`, **HTTP 200** |
+| [`frappe/education`](https://github.com/frappe/education) | `444cc8e`, **2026-09-30** | 🟡 **GPL-3.0 (declaration)** — `license.txt` is **19 B**: *"License: GNU GPL V3"* | education module on ERPNext; 20 refs. 🔵 **declaration, not payload** — the axis `P255` exists for |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `1c95cef`, **2026-09-07** | 🟡 **LGPL-3.0** (8 241 B) | education ERP on Odoo; 17 refs. 🟢 linkable without infecting the caller |
+
+🔴 **The mandated GitHub-trending query (`github trending education AI 2026`) again returned no
+education-software repo** — it returned AI-curriculum repos (`microsoft/generative-ai-for-beginners`),
+agent catalogues, and daily trend snapshots (`kouweizhu/agents-radar`) whose entries are coding
+agents and RAG courses. 🔵 **Recorded so the nil result is not mistaken for coverage:** this channel
+has not produced an education repo for this KB in **thirteen** passes. 🟢 **What produced every row
+above is the targeted probe** — `P521`'s lesson holds, and this pass adds a second axis to it: the
+**dependency tier** (a model's training corpus) is where the licences actually live.
+
 ## 2026-10-07 — pass 44 (eleventh of this date)
 
 🔵 **APPEND-ONLY.** History below is untouched.

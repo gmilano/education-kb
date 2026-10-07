@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — pass 45 (twelfth of this date)
+
+🔵 **APPEND-ONLY.** History below is untouched.
+
+🟢 **The week's new asset is education-native, substantial, and not an agent:**
+`GarethManning/education-agent-skills` — **165 `SKILL.md`** files across **20** categories, HEAD
+`6bbbce4` (**2026-08-28**), 🟡 **CC-BY-SA-4.0** (payload 1 230 B, holder *Gareth Manning*),
+commercial use 🟢 **ALLOWED** explicitly (*"even commercially"*), obligation 🔴 **ShareAlike**.
+🔵 **Classified honestly as an instruction corpus, not an agent** — no runtime, no tool loop, no
+model binding — so **`P512` stands and the education agent shelf is still saturated** (`P552`,
+`agents/top.md`).
+
+🔴 **Zero new education agents for the fifth consecutive pass, and the shelf is declared saturated
+for the thirteenth.** The mandated query ran verbatim (`top open source AI agents education 2026
+github MIT`) and returned the horizontal agent shelf (OpenHands, CrewAI, LangGraph, OpenClaw) plus
+"learn AI" curricula and agent *catalogues* (`ashishpatel26/500-AI-Agents-Projects`,
+`ARUNAGIRINATHAN-K/awesome-ai-agents-2026`). 🔵 **Reproduced on a fresh run, which is information, not
+silence.**
+
+### 🟡 The licence trend that matters more than any release this week
+
+🔵 **Two unrelated tiers were measured this pass and came back with the same licence:**
+`education-agent-skills` (the skill corpus) and spaCy's `pt_core_news_*` **model artefacts** are both
+🟡 **CC-BY-SA-4.0**, as is the `UD_Portuguese-Bosque` treebank underneath the models — while the
+**code** at every one of those layers is 🟢 MIT or Apache-2.0.
+
+🔴 **So the permissive/copyleft line in education AI runs between code and content, not between
+agents and platforms** (`P553`). 🔵 **The practical consequence for an agent engagement:** the
+ShareAlike obligation enters through the **skill pack** and the **model**, which is precisely where a
+root-`LICENSE` check does not look.
+
+### 🔴 The informed gaps this pass declares rather than leaves silent
+
+🔵 **Per-region agent queries were run for all four regions** (`AI education {region} 2026 adoption
+regulation players`). 🔴 **Not one returned an education agent in any region — the thirteenth
+consecutive nil.** Policy and adoption findings from those same runs are in `intel/market.md`.
+🟢 **Thirteen passes makes this a measured property of the channel**, which is why this file's rows
+come from repository probes.
+
+🔴 **And the trend that concerns this file's own evidence base, continued from pass 44:** the shared
+licence classifier that stamps every row in this file carried **two** definitions of its
+commercial-use gate (`P550`) and **stamped** CC versions it never read (`P551`). 🟢 **Both fixed this
+pass; no row in this file's history is withdrawn** — the live gate was the hardened one throughout,
+and the inversion the duplicate risked was measured as uniformly *over*-restrictive (7 of 27
+payloads, all `ALLOWED`→`PROHIBITED`), so it could never have admitted an asset that should have been
+refused.
+
 ## 2026-10-07 — pass 44 (eleventh of this date)
 
 🔵 **APPEND-ONLY.** History below is untouched.

@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟡 Forty-fifth pass, 2026-10-07 — the first education-specific asset at the agent layer in thirteen passes, and it is **not an agent**
+
+⏱️ **Twelfth pass of this date.** **Licences read first-hand on 2026-10-07 from the repository
+**payload** in cloned trees, classified by the shared hardened classifier
+`compose/code/lib/license_family.sh` (`P237`, title-block, `P171`), commercial use gated by its own
+`commercial_use_ok()` (`P250`). Existence by `git ls-remote --heads` against a negative control in
+the same run (`P510`). **No star counts** (`P479`).
+
+### 🟡 `P552` — `GarethManning/education-agent-skills`: 165 education skills, **CC-BY-SA-4.0**, and the honest classification is "not an agent"
+
+🔵 **`P512` declared the education *agent* shelf saturated, and twelve passes of the mandated query
+reproduced that.** 🟢 **This pass the GitHub `ai-education` topic surfaced something the agent query
+never does** — and it is a real, substantial, education-native tree.
+
+| | Measured in the cloned tree |
+|---|---|
+| Repo | [`github.com/GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) |
+| Existence (`P510`) | 🟢 **6 refs**; negative control `0` refs in the same run |
+| HEAD | `6bbbce4`, **2026-08-28** |
+| Licence | 🟡 **CC-BY-SA-4.0** · payload **1 230 B** · holder *"Gareth Manning"*, © 2026 |
+| Commercial use (`P250`) | 🟢 **ALLOWED** — the payload says *"even commercially"* twice, explicitly |
+| Obligation | 🔴 **ShareAlike** — *"you must distribute your contributions under the same licence"* |
+| Payload | **241 files**, of which **165 `SKILL.md`** across **20 categories** |
+
+🔵 **What is actually in it**, by category (the largest): `original-frameworks` **17**,
+`ai-learning-science` **14**, `curriculum-assessment` **13**, `student-learning` **13**,
+`wellbeing-motivation-agency` **12**, `historical-thinking` **10**, `professional-learning` **10**,
+`global-cross-cultural-pedagogies` **9**, `systems-thinking` **8**, `memory-learning-science` **8**.
+🟢 **The `ai-learning-science` set is the directly relevant one** — `intelligent-tutoring-dialogue-designer`,
+`cognitive-tutoring-architecture-designer`, `adaptive-hint-sequence-designer`,
+`worked-example-to-problem-solving-transition-designer`, `self-explanation-prompt-designer`.
+
+### 🔴 Why this is recorded here and still does **not** change `P512`
+
+🔵 **It is an instruction corpus, not an agent.** There is no runtime, no tool loop, no model binding
+— 165 Markdown skill definitions. 🟢 **So `P512` stands unamended: the education *agent* shelf is
+still saturated, and this pass's mandated agent query returned the same horizontal shelf plus "learn
+AI" curricula for the thirteenth consecutive time.** 🔴 **Reporting this as "an education agent found"
+would be the padding this KB's own bar forbids.**
+
+🟢 **But it is a new asset CLASS for this KB, and the class matters commercially:** a skill pack is
+exactly what a studio composes *onto* a horizontal agent, and until this pass the KB had no
+education-native entry at that layer at all.
+
+### 🔴 The licence is the same one the model tier turned out to carry, and that is not a coincidence
+
+🔵 **Measured this pass across two unrelated tiers** (`P553`, `repos/foundations.md` `P551`):
+
+| Tier | Asset | Licence |
+|---|---|---|
+| Agent-skill corpus | `education-agent-skills` (165 skills) | 🟡 **CC-BY-SA-4.0** |
+| NLP model artefact | `pt_core_news_sm/md/lg` 3.8.0 | 🟡 **CC-BY-SA-4.0** |
+| Training corpus | `UD_Portuguese-Bosque` v2.8 | 🟡 **CC-BY-SA-4.0** |
+| Code | `explosion/spaCy`, `essay-br`, `wwrwbs/AI_AWE` | 🟢 **MIT / Apache-2.0** |
+
+🔴 **The permissive/copyleft boundary in education AI does not run between agents and platforms — it
+runs between CODE and CONTENT.** 🔵 **And a procurement checklist built for code licences looks in
+the wrong place**: it reads `LICENSE` at the repo root, finds MIT, and never asks what the *model
+artefact* or the *skill corpus* is licensed under. 🟢 **That is `P553`, and it is this pass's most
+transferable finding.**
+
+### 🔵 The regional channel, declared rather than left silent
+
+🔵 **Per-region agent queries ran for all four regions** (`AI education {region} 2026 adoption
+regulation players`). 🔴 **Not one returned an education agent, permissive or otherwise — the
+thirteenth consecutive nil on that axis.** What they *did* return is policy and adoption material,
+recorded by region in `intel/market.md`. 🟢 **Thirteen passes is enough to call this a measured
+property of the channel, not a gap in the searching**: the regional channel prices engagements, and
+the repository probe finds assets.
+
 ## 🔴 Forty-fourth pass, 2026-10-07 — the feature layer `Gap 239` asked for **exists in three implementations, and not one of them may be sold**
 
 ⏱️ **Eleventh pass of this date.** **Licences read first-hand on 2026-10-07 from the repository

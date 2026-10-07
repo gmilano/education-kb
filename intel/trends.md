@@ -4,6 +4,122 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🔴 Forty-fifth pass, 2026-10-07 — five trends: a fix that was appended instead of substituted, a version that was stamped instead of read, a ShareAlike floor under an entire language, the code/content licence line, and regulation turning binding in the region that had nothing
+
+⏱️ **Twelfth pass of this date.** 🔵 **All market and regulatory figures are secondary and carry
+their series (`P477`, `P515`); `eur-lex.europa.eu` stays proxy-blocked (`Gap 56`), so the Annex III
+deferral is NOT cited as primary (`Gap 241`).** Existence by `git ls-remote --heads` against a
+negative control in the same run (`P510`); licences from payload via the shared classifier (`P237`).
+
+### T1 🔴 `P550` — a fix that is **appended** rather than **substituted** leaves two answers in one file, and no suite can see it
+
+🟢 **`lib/license_family.sh` — the shared control every licence verdict on this KB passes through —
+defined `commercial_use_ok()` twice**, and the comment block explaining why the first version was
+wrong sat **between the two**. Bash keeps the last, so the hardened body ran and **no published
+verdict was wrong**; 🔴 **but correctness rested on source order.**
+
+🔵 **The trend is not the duplicate — it is why forty-five passes of green suites could not see it.**
+A suite calls a **name**; the name resolves to **one** body; `132/132` says nothing whatsoever about
+the body that did not resolve. 🔴 **`P541` was about a gate that measures nothing while reporting
+success. This is its sibling: an instrument that measures CORRECTLY while carrying a second,
+contradictory implementation of the same question.** 🟢 **Measured cost if the order ever flipped:
+7 of 27 of this KB's real payloads invert** — Moodle's GPL-3.0 and the **Unlicense** among them —
+**all** in the over-restrictive direction (`P308`'s, not `P312`'s), which bounds the damage to lost
+shelf rather than an unsafe deliverable.
+
+🔵 **The general lesson, and it is cheap to apply:** when a pass fixes an instrument, the old
+implementation must be **deleted**, not left above the new one with an explanation in between. 🟢 **Now
+mechanically enforced** — `p550-duplicate-definition-sweep/` over 302 files, suite 26/26.
+
+### T2 🔴 `P551` — the **version** is part of a licence's identity, and it was being stamped rather than read
+
+The same control read a CC payload's *attributes* (NC/SA/ND) from the text and then concatenated
+**`-4.0` literal**. 🟢 **Caught on `UD_Portuguese-PUD`**, whose 19 556-byte title block says
+**ShareAlike 3.0** and contains no "4.0" at all.
+
+🔴 **The direction is the dangerous one.** CC **4.0** explicitly covers *sui generis* **database
+rights** (Art. 4) and adds a 30-day cure period; **3.0** does neither — and **a treebank is a
+database**. 🔵 **So the defect did not lose shelf, it INVENTED a grant**, which is `P312`'s direction
+and the one that costs a deliverable. 🟢 **Fixed, with "no version declared" answering
+`CC-BY-SA-UNVERSIONED` instead of defaulting to 4.0** — because *"declares 4.0"* and *"declares
+nothing"* are different facts and `P502` says they must not share a string.
+
+🔵 **Both T1 and T2 were found by RUNNING the control on new input, not by reading it** — the same
+way `P546` surfaced last pass. 🟢 **That is now three consecutive passes where the productive audit
+move was to hand a hardened instrument a corpus it had never seen.**
+
+### T3 🔴 `Gap 246` measured: there is **no permissive Portuguese treebank**, so the ShareAlike floor under PT NLP is **structural**
+
+🟢 **The unmeasured half of `Gap 246` is closed with data.** spaCy's *code* is MIT; its Portuguese
+**model artefacts** are not:
+
+| Asset | Licence (measured this pass) | Commercial (`P250`) |
+|---|---|---|
+| `pt_core_news_sm` / `md` / `lg` **3.8.0** | 🟡 **CC-BY-SA-4.0** | 🟢 ALLOWED |
+| `UD_Portuguese-Bosque` v2.8 (the training corpus) | 🟡 **CC-BY-SA-4.0** | 🟢 ALLOWED |
+| `UD_Portuguese-GSD` | 🟡 **CC-BY-SA-4.0** | 🟢 ALLOWED |
+| `UD_Portuguese-PUD` | 🟡 **CC-BY-SA-3.0** | 🟢 ALLOWED |
+| `UD_Portuguese-Petrogold` | 🟡 **CC-BY-SA-4.0** | 🟢 ALLOWED |
+| `UD_Portuguese-CINTIL` | 🔴 **CC-BY-NC-ND-4.0** | 🔴 **PROHIBITED** |
+| WikiNER (NER source) | 🟢 CC-BY-4.0 | 🟢 ALLOWED |
+| Explosion fastText vectors (`md`/`lg`) | 🟢 **CC0** | 🟢 ALLOWED |
+
+🔴 **Every Universal Dependencies Portuguese treebank is ShareAlike or worse.** 🔵 **So this is not a
+bad choice of model that a better choice fixes** — the obligation is inherited from the only training
+data that exists, and swapping Bosque for GSD or Petrogold changes nothing. 🟢 **The practical rule
+this yields:** inference against an **unmodified** `pt_core_news_*` and shipping your own code beside
+it is clean; **fine-tuning produces a CC-BY-SA-4.0 derivative**, so the tuned artefact is the thing
+that obliges. 🔵 **And CINTIL must be kept out of any pipeline** — NonCommercial *and* NoDerivatives.
+
+### T4 🟡 `P553` — the permissive/copyleft line in education AI runs between **code and content**, not between agents and platforms
+
+🔵 **Two unrelated tiers measured in the same pass returned the same licence**, which is what makes
+this a trend rather than a coincidence:
+
+| Tier | Example measured this pass | Licence |
+|---|---|---|
+| Code | `explosion/spaCy`, `essay-br`, `wwrwbs/AI_AWE` | 🟢 MIT / Apache-2.0 |
+| Agent-skill corpus | `GarethManning/education-agent-skills` (165 skills) | 🟡 **CC-BY-SA-4.0** |
+| Model artefact | `pt_core_news_*` 3.8.0 | 🟡 **CC-BY-SA-4.0** |
+| Training corpus | `UD_Portuguese-Bosque` | 🟡 **CC-BY-SA-4.0** |
+
+🔴 **A procurement review built for code licences reads the repo-root `LICENSE`, finds MIT, and
+stops** — and in education the obligation is in the *pedagogical content*, the *model* and the
+*corpus*. 🟢 **This is the most transferable finding of the pass** and it generalises past Portuguese:
+education's valuable assets are curricula, item banks, rubrics and treebanks, and the academic and
+public bodies that produce them default to Creative Commons, not to MIT.
+
+### T5 🟢 Regulation turned **binding** in the region that had nothing, while the EU's own education date got *less* certain
+
+🔵 **For eight passes APAC returned no education-policy instrument.** 🟢 **This pass it returned the
+most education-specific binding one in any region:** **Vietnam**'s AI law, in force **2026-03-01**,
+names **education** among six high-risk sectors — *automated assessment* and *behavioural
+monitoring* explicitly — and attaches the classification **only where the output is the sole basis
+for a decision without meaningful human review**. 🔵 **That qualifier is a design brief, not a
+caveat**: preserve a human decision point and the obligation does not attach. 🟢 **Also binding:**
+Korea's AI Framework Act from **2026-01-22** (foreign providers over thresholds must appoint a
+domestic representative and report to MSIT); Taiwan's AI Basic Act from **December 2025**; China's
+existing algorithm, deep-synthesis and generative-AI rules. 🟡 **Japan and Singapore stay
+voluntary.**
+
+🔴 **Meanwhile the EU — the region this KB treats as its regulatory anchor — produced a
+contradiction** (`P555`, `intel/market.md`): the Commission's page enforces from **2026-08-02**
+while a sector guide reports revised high-risk dates of **2027-12-02** and **2028-08-02**. 🔵 **The
+trend across both: binding beats guidance in 2026, and the places to read the rule are shifting away
+from the jurisdiction everyone benchmarks.** 🟢 **In North America the mandate arrived at the state
+level** — Ohio requiring every K-12 district to hold an AI policy by **2026-07-01**.
+
+### 🔵 Gap ledger for this pass
+
+| | |
+|---|---|
+| 🟢 **Closed** | `Gap 246`'s measurement half — spaCy PT **model artefact** licences measured (**CC-BY-SA-4.0**) and the corpus tier swept: **no permissive PT treebank exists** |
+| 🟡 **Narrowed, NOT closed** | `Gap 244` — `p550`'s oracle reaches both shell and payload channels, but the 31+9 rows `P542` left unjudged are **still unjudged**; nothing in this pass adjudicated them |
+| 🔴 **Still open** | `Gap 245` — the 23 `P541`-class defects named at pass 44 are **still named and unfixed**; this pass fixed two defects in the *classifier*, not those 23 |
+| 🔴 **Widened** | `Gap 241` — six passes of secondary sources have produced a **contradiction** on the EU education date, not a convergence (`P555`) |
+| 🔴 **Opened** | `Gap 247` — the ShareAlike reach of a **fine-tuned** `pt_core_news_*` artefact is reasoned from the licence text, **not** tested against a published CC-BY-SA interpretation or counsel; the host-vs-ship rule in `compose/patterns.md` rests on it |
+| 🔴 **Opened** | `Gap 248` — **UK, Gulf and African** education-AI regulation returned nothing in this pass's EMEA channel; "EMEA" on this KB currently means **EU** |
+
 ## 🔴 Forty-fourth pass, 2026-10-07 — four trends: a gate that passed while blind hid a real backlog, "port" turns out to mean "reimplement", the acronym defect is asymmetric, and a sweep's own accusations needed auditing
 
 ⏱️ **Eleventh pass of this date.** 🔵 **All market and regulatory figures are secondary and carry

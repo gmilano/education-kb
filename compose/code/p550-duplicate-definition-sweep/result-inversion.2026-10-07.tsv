@@ -1,0 +1,28 @@
+payload	family	live	shadowed	inverts
+p255-holder-shared-control/fixtures/declaration-19B-frappe-education-license.txt	GPL-3.0 (declaracion)	ALLOWED	ALLOWED	no
+p255-holder-shared-control/fixtures/gpl-2.0-openemis-core-LICENSE.txt	GPL-2.0	ALLOWED	PROHIBITED	YES
+p269-provider-release-matrix/licenses.2026-10-04.tsv	AGPL-3.0	ALLOWED	ALLOWED	no
+p280-manifest-ownership/fixtures/xblock.LICENSE.TXT.head	Apache-2.0	ALLOWED	ALLOWED	no
+p280-manifest-ownership/relicense.2026-10-04.tsv	UNCLASSIFIED	ALLOWED	ALLOWED	no
+p288-agpl-casefold/fixtures/agpl-3.0-kuali-kfs-reflowed.LICENSE	AGPL-3.0	ALLOWED	PROHIBITED	YES
+p289-maven-manifest/fixtures/kc-licenses.pom.xml	UNCLASSIFIED	ALLOWED	ALLOWED	no
+p289-maven-manifest/fixtures/rice-nolicenses.pom.xml	Apache-2.0 (declaracion)	ALLOWED	ALLOWED	no
+p308-phrase-anchor-sweep/fixtures/apache-autolab-Autolab.LICENSE	Apache-2.0	ALLOWED	ALLOWED	no
+p308-phrase-anchor-sweep/fixtures/bsd3-Submitty-Submitty.LICENSE-md.txt	BSD	ALLOWED	ALLOWED	no
+p308-phrase-anchor-sweep/fixtures/bsd3-YuanGongND-gopt.LICENSE	BSD	ALLOWED	ALLOWED	no
+p308-phrase-anchor-sweep/fixtures/gpl-Ovsyanka83-autograder.LICENSE	GPL-3.0	ALLOWED	PROHIBITED	YES
+p308-phrase-anchor-sweep/fixtures/inginious-INGInious.LICENSE	AGPL-3.0	ALLOWED	PROHIBITED	YES
+p308-phrase-anchor-sweep/fixtures/mit-Halleck45-OpenPronounce.LICENSE	MIT	ALLOWED	ALLOWED	no
+p308-phrase-anchor-sweep/fixtures/mit-TITLELESS-Priyamakeshwari-TeachGPT.LICENSE-md.txt	MIT	ALLOWED	ALLOWED	no
+p308-phrase-anchor-sweep/fixtures/mit-adlnet-xapi-lab.LICENSE	MIT	ALLOWED	ALLOWED	no
+p308-phrase-anchor-sweep/fixtures/mit-mikhailvs-loqui.LICENSE	MIT	ALLOWED	ALLOWED	no
+p308-phrase-anchor-sweep/fixtures/mit-speechsuper-API-Samples.LICENSE	MIT	ALLOWED	ALLOWED	no
+p308-phrase-anchor-sweep/fixtures/unlicense-FWU-DE-mem-mcp.LICENSE	Unlicense	ALLOWED	PROHIBITED	YES
+p444-root-vs-tree-family/payloads.licensed.2026-10-07.tsv	CC0-1.0	ALLOWED	ALLOWED	no
+p447-deep-grant-divergence/licensed.input.2026-10-07.tsv	CC0-1.0	ALLOWED	ALLOWED	no
+p473-probe-commercial-gate/fixtures-pending/agpl-3.0-classroomio.LICENSE	AGPL-3.0	ALLOWED	PROHIBITED	YES
+p473-probe-commercial-gate/fixtures-pending/gpl-3.0-lmscloud.LICENSE	GPL-3.0	ALLOWED	PROHIBITED	YES
+p473-probe-commercial-gate/fixtures/apache-2.0-osss.LICENSE	Apache-2.0	ALLOWED	ALLOWED	no
+p473-probe-commercial-gate/fixtures/cc-by-nc-4.0-crss-ai.LICENSE	CC-BY-NC-4.0	PROHIBITED	PROHIBITED	no
+p473-probe-commercial-gate/fixtures/ecl-2.0-sakai.LICENSE	ECL-2.0	ALLOWED	ALLOWED	no
+p473-probe-commercial-gate/fixtures/mit-bandup.LICENSE	MIT	ALLOWED	ALLOWED	no
