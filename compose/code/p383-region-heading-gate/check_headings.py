@@ -55,6 +55,20 @@ def check(path, lines):
 
 
 def main(argv):
+    # P541 (pase 43 del 2026-10-07).  Sin argumentos este gate imprimia
+    # `#\ttotal\t0` y salia 0: indistinguible de un arbol limpio, habiendo medido
+    # CERO archivos.  Es la forma exacta de P471 -- una compuerta que pasa todas
+    # sus comprobaciones sin juzgar nada -- y el pase 43 la cobro en vivo: leyo
+    # `total 0` como aprobacion antes de notar que el gate toma rutas por
+    # argumento.  Un contrato de uso que hay que recordar no es un control (P237).
+    if not argv:
+        print(
+            "P541-NO-INPUT\tREFUSED: este gate mide los archivos que recibe por "
+            "argumento y no recibio ninguno.  `total 0` sin archivos NO es un "
+            "arbol limpio.  Uso: check_headings.py intel/market.md [...]",
+            file=sys.stderr,
+        )
+        return 2
     print("archivo\thallazgo\tlinea\tdetalle")
     total = 0
     for p in argv:

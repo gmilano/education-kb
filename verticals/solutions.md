@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Forty-third pass, 2026-10-07 — the **assessment-authoring** layer this file listed as a manual workaround is now a deployable component
+
+⏱️ **Tenth pass of this date.** **Licences read first-hand on 2026-10-07 from payload or the cloned
+tree, channel named per row (`P237`, `P171`, `P510`, `P511`). No star counts (`P479`).**
+
+🔵 **This file lists real systems a studio can stand up and customise. This pass corrects a capability
+claim on one already listed and records what it now takes to deploy it.**
+
+### 🟢 Corrected — `qti3` as the assessment-delivery layer, now with an authoring half
+
+| Field | Value |
+|---|---|
+| System | [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) — QTI 3.0 item parser, validator, delivery runtime and writer, TypeScript monorepo |
+| Licence | 🟢 **MIT** — `LICENSE.md` payload, title block *"MIT License"*, © **2026 Longsight, Inc.** · classified via `compose/code/lib/license_family.sh` (`P237`) |
+| Version | `0.13.2` · HEAD `0ca7d6fc` (2026-10-07) |
+| 🔴 **The claim pass 42 corrected** | 🔴 **`packages/writer` cannot author parametric items** — 0 of 33 exports touch `qti-template-declaration` / `qti-template-processing`, while `packages/core` implements the full mechanism in 34 files (`P527`) |
+| 🟢 **What changed this pass** | 🟢 **`compose/code/p533-qti3-template-emitter/` supplies the missing authoring half** (`P533`) — tested `43/0` with 19 controls and 11/11 mutations detected. 🟡 **Python; the TypeScript port for upstream is parse-checked only, not executed** |
+| Deployment shape | 🟢 **Library, not a service.** Embeds in a Node delivery app or behind an existing LMS; `core` runs the draw, the constraint retry and the answer-key derivation client- or server-side |
+| 🔴 **The deployment decision this file exists to record** | 🟢 **Author with the emitter, deliver with `core`, and validate against the official ASI schema in your own CI** — `qti3` ships `scripts/check-test-xsd.mjs` which does exactly this with sha256-pinned schemas. 🔴 **This KB could not run it** (`purl.imsglobal.org` is proxy-blocked), so **that validation step is yours to run, not inherited** |
+
+### 🔵 The assessment stack as it now stands, end to end
+
+| Layer | Component | Licence | State |
+|---|---|---|---|
+| Item authoring (parametric) | 🆕 `p533-qti3-template-emitter` | 🟢 this KB | 🟢 **tested** |
+| Item authoring (fixed-form) | `qti3` `packages/writer` | 🟢 MIT | 🟢 33 exports, production |
+| Item delivery + execution | `qti3` `packages/core` | 🟢 MIT | 🟢 production |
+| Schema conformance | `qti3` `packages/conformance` + official ASI XSD | 🟢 MIT (schema: 1EdTech terms) | 🟡 **runnable, but not here** |
+| Item calibration | `py-irt` / `irtorch` / `catsim` | 🟢 permissive | 🟢 `P499` |
+| Variant equating (IRT linking) | `EqUMP` 0.3.6 | 🟢 **MIT** | 🟢 `P499` |
+| Variant equating (observed-score / kernel) | 🔴 none permissive | 🔴 **`Gap 234`** | 🔴 R side-car, `P518` |
+| Essay / short-answer scoring (English) | 🆕 `wwrwbs/AI_AWE` | 🟢 **Apache-2.0** | 🟢 `P535` |
+| Essay scoring (Portuguese) | 🔴 none | 🔴 **`Gap 236`** | 🟡 corpus exists (MIT, `P524`) |
+| Essay scoring (Spanish) | 🔴 none | 🔴 **`Gap 237`** | 🔴 **re-scoped: qualify the exam first** (`P537`) |
+| LMS host | Moodle · Open edX · Canvas · Sakai · OpenOLAT | mixed copyleft / 🟢 Apache-2.0 (OpenOLAT, Sakai ECL-2.0) | 🟢 as filed |
+| Proctoring | SEB / SEB Server | per `p86` / `p90` instruments | 🟢 as filed |
+| Grammar / style service | `languagetool-org/languagetool` | 🟡 **LGPL-2.1**, process-separated | 🟢 `P525` |
+
+🟢 **The useful statement for a studio engagement: every layer above is permissive or
+process-separable except two equating methods and the two non-English scorers — and those three
+absences are declared gaps with named remedies, not surprises to discover mid-project.**
+
+### 🔵 Platform tier re-swept, nothing admitted
+
+🔵 **The mandated `open source platform education LMS SIS MIT Apache 2026` sweep returned the tier this
+file already holds** — Moodle (GPL), Open edX (AGPL-3.0, Axim Collaborative), Canvas (AGPL-3.0 core,
+features withheld from the open edition), Chamilo (GPL), OpenOLAT (🟢 **Apache-2.0**, 20.3.4 of
+2026-06-03), Sakai (Apereo, ECL-2.0, Apache-derived), OpenEduCat (LGPL-3.0, LMS **and** SIS on one
+database), Gibbon and RosarioSIS (GPL).
+
+🔴 **One correction to the channel rather than to this file**: a comparison article listed Open edX as
+Apache-2.0. 🔴 **It is AGPL-3.0**, as this file already records, and the article is wrong. 🔵 **No
+MIT-licensed LMS exists in this tier — stated as a measured absence, not an omission**, and
+`OpenOLAT` plus `Sakai` remain the only permissive hosts.
+
 ## 🟢 Forty-second pass, 2026-10-07 — a platform layer this file never had: the **grammar engine** as a deployable service, and what `P527` means for the QTI authoring layer
 
 ⏱️ **Ninth pass of this date.** **Licences read first-hand on 2026-10-07 from the channel named per row

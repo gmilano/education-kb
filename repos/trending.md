@@ -4,6 +4,44 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — forty-third pass: one permissive repo admitted, its **licence closure** measured rather than assumed, and the upstream repo this KB now patches
+
+⏱️ **Tenth pass of this date.** **Licences from payload or the cloned tree, each named per row.
+Title-block classified via the shared classifier (`P237`, `P171`). No star counts (`P479`). Existence
+by `git ls-remote --heads` with a negative control in the same run (`P510`).**
+
+### 🟢 Admitted this pass
+
+| Repo | Licence (channel · title block) | Existence | What it is |
+|---|---|---|---|
+| 🆕 [`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE) | 🟢 **Apache-2.0** · root `LICENSE` payload · *"Apache License / Version 2.0, January 2004"* | 🟢 3 refs (`HEAD`, `main`, `v0.1.0`); negative control failed as required | 🟢 **ArguLens** — assembled AES pipeline, LoRA adapter shipped in-repo, `model_checksums.sha256` at root. 🔴 English only. `P535` |
+| 🆕 [`wwrwbs/AI_AWE` → `essay_score/scoring_pipeline/TextComplexityToolkit`](https://github.com/wwrwbs/AI_AWE) *(vendored sub-tree)* | 🟢 **MIT** · nested `LICENSE` payload · *"MIT License"* © 2026 TextComplexityToolkit contributors | 🟢 present in the cloned tree | 🟢 **TAALED / QuanSyn lexical and syntactic complexity metrics** — the feature extractor the scorer depends on. 🔴 **English-locked** (`dep_files/adj_lem_list.txt`, `real_words.txt`) → **`Gap 239`** |
+
+🟢 **Licence closure measured, not assumed.** `find LICENSE* -o -name COPYING*` over the whole cloned
+tree returns **exactly two** payloads, and both are permissive. 🔵 **This is the check that usually
+fails on an ML repository** — a permissive root over a copyleft vendored dependency — and recording
+the *measurement* rather than the root badge is why this row is admissible.
+
+### 🟢 Upstream repo this KB now carries a patch against
+
+| Repo | Licence (channel · holder) | Version · HEAD | Why it is here |
+|---|---|---|---|
+| [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) | 🟢 **MIT** · `LICENSE.md` payload · © **2026 Longsight, Inc.** | `0.13.2` · `0ca7d6fc` (2026-10-07) | 🟢 **`Gap 238` closed against it** (`P533`). 🟢 **MIT means the emitter is a *contribution*, not a procurement.** 🟡 Pre-1.0, and HEAD moved on the day it was read |
+
+### 🔴 Measured and **not** admitted
+
+| Candidate | Why not |
+|---|---|
+| Official QTI 3.0.1 ASI schema (`purl.imsglobal.org`) | 🔴 **Unreachable** — `connect_rejected` by this environment's egress proxy (organization policy). `qti3` pins it by sha256 but **fetches rather than vendors** it, so it could not be verified locally. 🔵 Same class as `Gap 56` / `Gap 92`. Oracle substituted transitively and the substitution is documented at `P533` |
+| `github.com/trending` | 🔴 **Still unreachable** through this proxy, as in every prior pass. Every "trending" claim in this file is third-party aggregation, stated so |
+| Chilean PAES practice platforms (`Rodrigo0876/PAESnet`, `AngelitUX/EstudiaUni`) | 🔴 **Out of scope on the merits, not on licence.** Neither grades written work, 🔴 **because the PAES has no essay component** (`P537`). `EstudiaUni` is additionally a freemium product with a payment gateway and a proprietary LLM dependency |
+
+### 🔵 Previously admitted, restated so silence is not read as a gap
+
+🟢 `lplnufpi/essay-br` (**MIT**, ENEM C1–C5 human-graded, `P524`) remains this KB's only
+**LATAM-origin** permissive asset in the essay-scoring tier — and after `P535` it is the **data** half
+of a pair whose **code** half is now also permissive, in another language.
+
 ## 2026-10-07 — forty-second pass: one new permissive repo, and it is a **corpus** — plus a dependency whose restrictive licence the registry does not declare
 
 ⏱️ **Ninth pass of this date** (34–41 earlier). **Licences from payload and registry, each named per row.

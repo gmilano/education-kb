@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — forty-third pass: the week's movement is an **artefact this KB built**, plus one permissive scorer the English sweeps had missed for ten passes
+
+⏱️ **Tenth pass of this date.** **Licences from payload or the cloned tree, named per row. Title-block
+classified via the shared classifier (`P237`, `P171`). No star counts (`P479`). Existence by
+`git ls-remote --heads` with a negative control in the same run (`P510`).**
+
+🟢 **Two things moved this week, and only one of them is somebody else's.**
+
+### 🔴 The mandated general sweeps — sixth consecutive identical outcome, recorded in full so silence is not read as coverage
+
+| Query (year computed, not hardcoded: **2026**) | Outcome |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **No admissible new asset.** The channel returns general-purpose agent round-ups (OpenClaw, OpenHands, CrewAI, LangGraph, browser-use, opencode) and *courseware about* agents (`AI Agents for Beginners`, HuggingFace Agents Course) — 🔵 **not education-domain agents.** `500-AI-Agents-Projects` is a catalogue, not an agent |
+| `github trending education AI 2026` | 🔴 **No admissible new asset.** Returns `ChatTutor`, `education-agent-skills`, `agents-from-scratch`, `ai-engineering-from-scratch`, `LLMs-from-scratch`, `Generative AI for Beginners` — 🔵 **all learning *resources about* AI, not AI *for* education.** 🔴 **`github.com/trending` itself remains unreachable through this environment's proxy**, so every "trending" claim here is third-party aggregation |
+| `open source platform education LMS SIS MIT Apache 2026` | 🔴 **No admissible new asset.** Returns the platform tier this KB already holds in full — see `verticals/solutions.md` |
+| `AI education industry trends 2026 market size agentic tutoring` | 🟢 **Paid, but in `intel/`** — a fourth and fifth market denominator and the DEC four-region survey (`P539`) |
+| 🆕 `corrector automático ensayos PAES "prueba de egreso" rúbrica código abierto github` | 🟢 **Paid twice** — `P537` (refutation) and 🟢 **`P535`** (the asset below) |
+
+🔵 **`P512` (pass 41) declared the agent shelf *saturated* rather than the query *broken*, and `P521`
+(pass 42) showed the **language** of the query was a missing axis. 🟢 **Pass 43 is the sixth
+consecutive confirmation of the first claim and a second confirmation of the second**: the
+general-English channel is exhausted, and a non-English, country-specific query still returns assets.
+
+### 🟢 Admitted this pass
+
+| Asset | Licence (channel · title block) | Existence | What it is |
+|---|---|---|---|
+| 🆕 [`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE) — **ArguLens** | 🟢 **Apache-2.0** · root `LICENSE` payload · *"Apache License / Version 2.0, January 2004"* · 🟢 **closure checked: the only other payload in the tree is `TextComplexityToolkit/LICENSE` → MIT. No copyleft anywhere** | 🟢 **3 refs** (`HEAD`, `main`, `v0.1.0`); 🟢 negative control failed as required | 🟢 **An *assembled* automated essay scorer with released weights** — Qwen2.5-7B LoRA discourse-move classifier + LightGBM scorer over 31 features + Qwen2.5-14B feedback generator. arXiv `2608.17356`. 🔴 **English only** (Persuade 2.0, US middle-school). Filed at `P535` (`agents/top.md`) |
+
+🔴 **Why it is an admission and not a closure.** `Gap 236` asks for a **Portuguese** scorer. This is an
+English one — 🟢 **but it refutes pass 42's stronger claim that *"nobody has published the assembled
+scorer under a permissive licence"*.** Somebody has; for another language; and licensed so this KB's
+clients may build on it.
+
+### 🟢 Built this pass — `compose/code/p533-qti3-template-emitter/`
+
+🔵 **Recorded in a trending file because it changes what this KB can *do*, which is the only kind of
+movement this file exists to track.** `Gap 238` — pass 42's *"cheapest gap on this KB"* — is **closed
+with a tested artefact**: `43` assertions, `0` failures, `19` negative controls, and **11 of 11
+deliberate mutations detected**. 🔴 **Two of those mutations survived the first version of the suite**
+(`P534`), which is the finding worth carrying forward more than the closure itself.
+
+### 🔵 Still open, carried forward unchanged
+
+| Gap | One-line state |
+|---|---|
+| **234** | 🔴 Observed-score / kernel equating has no permissive **runtime** (`KernEqWPS` is MIT but `Imports: MASS`, GPL, on the GPL R interpreter). R side-car specified at `P518` |
+| **236** | 🔴 Still no **Portuguese** scorer — 🟢 **but narrowed again this pass**, see `P535` / `P540` |
+| **237** | 🟢 **Premise refuted for Chile** (`P537`); re-scoped, not closed |
+| **239** | 🆕 The English-locked feature layer — new this pass |
+| **240** | 🆕 The emitter is built and **unlanded upstream** — new this pass |
+
 ## 2026-10-07 — forty-second pass: the sweep language was the missing axis. A Portuguese-language query returns **six** unseen essay-scoring trees and **not one licence grant**
 
 ⏱️ **Ninth pass of this date.** **Licences from payload and registry, named per row. Title-block

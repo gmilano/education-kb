@@ -1,0 +1,17 @@
+finding	artefact	licence	licence_source	measurement	value	method
+P533	LongsightGroup/qti3	MIT	LICENSE.md (c) 2026 Longsight, Inc.	writer_exports_total	33	grep -c "^export" packages/writer/src/index.ts
+P533	LongsightGroup/qti3	MIT	LICENSE.md	writer_exports_referencing_template	0	grep -rl over packages/writer/src
+P533	LongsightGroup/qti3	MIT	LICENSE.md	core_files_referencing_template	34	grep -rl over packages/core/src
+P533	LongsightGroup/qti3	MIT	LICENSE.md	head_sha	0ca7d6fc451393925ac8f1ba2b1dd2df5117cac5	git log -1 (2026-10-07)
+P533	LongsightGroup/qti3	MIT	LICENSE.md	version	0.13.2	package.json
+P533	emit_template.py	n/a	this KB	oracle_assertions_passed	43	python3 -I test_emit_template.py
+P533	emit_template.py	n/a	this KB	oracle_assertions_failed	0	python3 -I test_emit_template.py
+P533	emit_template.py	n/a	this KB	negative_controls	19	count of control/refuse assertions
+P533	emit_template.py	n/a	this KB	mutations_tried	11	mutation matrix M1-M11
+P533	emit_template.py	n/a	this KB	mutations_detected	11	mutation matrix after O3b/O7b added
+P533	emit_template.py	n/a	this KB	mutations_surviving_before_fix	2	M8 default-step, M9 attr-quote-escaping
+P533	schema_oracle	n/a	proxy	purl.imsglobal.org:443	connect_rejected	curl -sS -L (organization policy)
+P534	wwrwbs/AI_AWE (ArguLens)	Apache-2.0	LICENSE payload, ../lib/license_family.sh	head_sha	41ae3bd4dd9e891bf46dd4834644ca143dbd36df	git log -1 (2026-07-29)
+P534	wwrwbs/AI_AWE/essay_score/scoring_pipeline/TextComplexityToolkit	MIT	nested LICENSE payload	licence_closure	permissive_throughout	find LICENSE* over tree, 2 payloads
+P534	wwrwbs/AI_AWE (ArguLens)	Apache-2.0	LICENSE payload	language_scope	English_only	README: Persuade 2.0 US middle-school, feedback "always English"
+P534	wwrwbs/AI_AWE (ArguLens)	Apache-2.0	LICENSE payload	scorer_architecture	LightGBM_over_31_features	README module 2 (TAALED/QuanSyn + move counts)

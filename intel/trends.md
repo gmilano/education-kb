@@ -4,6 +4,148 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Forty-third pass, 2026-10-07 — three trends: a value asserted from itself is not measured (found in this pass's **own** oracle), `Gap 237`'s premise is **refuted**, and the EU clock this KB reads was moved sixteen months
+
+⏱️ **Tenth pass of this date.** 🔵 **All market and regulatory figures are secondary and carry their
+series (`P477`, `P515`); `eur-lex.europa.eu` remains blocked by the proxy (`Gap 56`), so the Omnibus
+date below is NOT cited as primary.** Existence by `git ls-remote --heads` against a negative control
+in the same run (`P510`).
+
+### T1 🔴 `P534` — mutation testing found two defects in **this pass's own oracle**, and neither was findable by reading it
+
+🟢 **`P533`'s suite passed `38/38` before it was mutation-tested.** It was then run against **11
+deliberate mutations of the emitter**, and 🔴 **two survived** — the oracle was passing while not
+judging:
+
+| Mutation | 🔴 Why it survived | 🟢 Fix |
+|---|---|---|
+| **M8** — default `step` becomes `2` instead of `1` | `O3.grid` and `O3.cover` both compare the executed draw against `grid()`, and **both sides derive from `effective_step`**. A wrong default is **self-consistent and therefore invisible**. The round-trip oracles miss it too, because a defaulted `step` is never emitted at all | `O3b` asserts the default against the **external source** (`operator-attribute.ts:24`, `step ?? "1"`), not against another expression of itself |
+| **M9** — drop `"` → `&quot;` in attribute escaping | 🔴 **Every attribute value in the suite happened to be quote-free.** The surface was never exercised | `O7b` round-trips a `title` carrying `"`, `<` and `&` |
+
+🔵 **This is `P469`'s rule in miniature, and it deserves restating in its strongest form: a value
+asserted from itself is not measured.** `P469` recorded it about a *gap status*; `M8` is the same error
+one level down, inside a test — the assertion and the thing asserted shared a derivation, so the test
+could only ever agree with the code.
+
+🟢 **And `P471`'s rule held exactly as written**: a gate can pass every assertion while judging
+nothing. Reading the suite would not have found either defect; **mutating the thing under test did.**
+
+🔴 **A third defect, same provenance.** Mutation **M4** (drop text escaping) *was* detected — unescaped
+output is not well-formed, so the assertion's own parse raised — but it surfaced as an **uncaught
+traceback rather than a reported failure**. 🔵 **On a board a crash is indistinguishable from a broken
+runner**, so a real detection reads as infrastructure noise. `check_call` now reports an assertion's
+own exception as a failure.
+
+🟢 **Final matrix: 11 of 11 mutations detected, baseline back to `43/0`.** 🔵 **The last row matters —
+a matrix that cannot return to zero failures is measuring its own damage, not the code's.**
+
+> 🟢 **Rule for every later pass that ships an instrument:** mutate it before publishing the number.
+> This KB has twelve passes' worth of gates whose pass-counts were never adversarially tested, and
+> `P534` is the first evidence of what that is worth: **2 of 11 defects slipped a suite that read as
+> complete.**
+
+### T2 🟢 `P537` — `Gap 237`'s premise is **refuted for Chile**: there is no rubric to automate, because the exam has no essay
+
+🔵 **`Gap 237` prescribed the cheaper probe: *"query per country (`prueba de egreso`, `PAES`, `examen
+de admisión`) rather than pan-Spanish, since `P521` is this KB's own evidence that the query's shape
+hides tiers."* 🟢 **It was run verbatim. It paid twice, and neither payment was the one expected.**
+
+🔴 **The first payment is a refutation.** The query surfaces practice platforms for Chile's **PAES** —
+[`Rodrigo0876/PAESnet`](https://github.com/Rodrigo0876/PAESnet) (web practice, auto-marking,
+simulated items explicitly *not* DEMRE originals) and
+[`AngelitUX/EstudiaUni`](https://github.com/AngelitUX/EstudiaUni) (timed official DEMRE mock papers,
+Gemini-backed tutor) — 🔴 **and none of them grades written work, because the PAES has no essay
+component.** 🔵 **So the thing `Gap 237` was looking for in Chile cannot exist**: there is no official
+essay rubric to standardise on, because there is no official essay.
+
+🟢 **This sharpens `Gap 237` from "unmeasured" to "structurally mis-specified per country", and it
+changes the remedy's unit.** Pass 42 wrote the gap as *"Spanish-speaking LATAM has no single
+equivalent instrument"* and priced the remedy as *"a rubric and a human-graded corpus, per target
+country"*. 🔴 **The per-country probe shows the first question is prior to that: does the country's
+exam contain graded writing at all?** Chile's does not. 🔵 **A rubric programme for a country with no
+essay exam is not expensive — it is void.** The probe must therefore be *"which Spanish-speaking
+systems examine writing against a published rubric"*, and only those are candidates.
+
+🔵 **The second payment is `P535`** — the same result set returned `wwrwbs/AI_AWE`, the Apache-2.0
+assembled scorer `Gap 236` said did not exist. 🟢 **Recorded here because of where it came from: a
+Spanish-language query about Chile surfaced an English-language asset that ten passes of
+English-language sweeps had missed.** 🔴 **That is a second instance of `P521`'s lesson and it points
+the opposite way** — `P521` found that changing the query's *language* reveals tiers in that language;
+`P537` finds that changing the language reveals assets in the *original* language too, because the
+corpus a query reaches is not the corpus its language suggests.
+
+### T3 🔴 `P538` — the EU high-risk education deadline this KB has carried was **deferred sixteen months**, and this KB has recorded the superseded date more than once
+
+🔴 **The standing figure in this KB's lineage is `2026-08-02` as full enforcement for education AI.**
+Pass 40's own note already flagged that *"the EMEA channel reproduced a superseded date"*. 🟢 **This
+pass can now say what the correct position is, and it splits by article:**
+
+| Obligation | Date | Status |
+|---|---|---|
+| **Annex III high-risk** education systems — admissions, learning-outcome evaluation, level placement, exam/behaviour monitoring | 🔴 **Deferred to December 2027** | 🔴 **Moved by the "Digital Omnibus" amendment — ~16 additional months.** Compliance obligations themselves reported unchanged, only the date |
+| **Article 50** transparency / AI-disclosure | 🟢 **Still 2026-08-02** | 🟢 **Did not move** |
+| **Article 4** AI-literacy duty | 🟢 **In effect** | 🟡 Reported with *"relaxed scope"* |
+
+🔴 **Stated limit, and it is why this is a trend and not yet a corrected fact in `intel/market.md`'s
+primary column:** `eur-lex.europa.eu` and `data.europa.eu` are **blocked by this environment's proxy**
+(`Gap 56`, open since pass ~24). 🔵 **Every source for the deferral is secondary** — sector press and
+compliance vendors — and they name the instrument inconsistently. 🟢 **What is consistent across them
+is the split above**: the high-risk clock moved, the transparency clock did not. 🔴 **A later pass with
+eur-lex reachable must pin the amending regulation's identifier and date before this is quoted as
+settled.** → **`Gap 241`**.
+
+🔵 **Why it matters commercially rather than only legally.** The deferral moves the *compliance*
+deadline and not the *procurement* one: an institution buying an admissions or assessment system in
+2026 is buying a system that must be conformant by December 2027, and conformity assessment is a
+property of the system, not of the purchase date. 🟢 **So the sales conversation does not get sixteen
+months of relief; the documentation does.**
+
+### T4 🔴 `P541` — a gate in this KB's own `compose/code/` reported **success while measuring zero files**, and this pass paid for it in real time
+
+🔵 **Found by accident, which is the only reason it is reportable.** Pass 43 ran
+`compose/code/p383-region-heading-gate/check_headings.py` with no arguments to verify its own new
+`## Opportunities by region` block, and read the output:
+
+```
+archivo	hallazgo	linea	detalle
+#	total	0
+```
+
+🔴 **`total 0`, exit code `0` — and it had measured zero files.** The gate takes paths **as
+arguments**, received none, iterated an empty list, and reported a clean tree. 🔴 **This pass believed
+its region headings were gated for several minutes on the strength of a number that judged nothing.**
+
+🟢 **Proof it was not judging, run before the fix**: a deliberate `### Latam` — the exact
+open-vocabulary defect the mandate warns about, *"not 'Latam', not 'Brazil'… each variant becomes its
+own bucket and the filter stops working"* — was planted in a copy of `intel/market.md` and the gate
+still reported `total 0`. 🟢 **Invoked correctly it catches it immediately** (`P383-OUT-OF-VOCAB`).
+
+🔵 **The three gates in this tree have three different no-argument contracts, and nobody wrote that
+down:**
+
+| Gate | No-argument behaviour | Verdict |
+|---|---|---|
+| `p243-frontmatter-coverage` | 🟢 **Discovers its own files** — reported `146 de 146` | 🟢 Correct by design |
+| `p239-table-integrity` | 🟡 **Crashes** (`FileNotFoundError` on its `"-"` default) | 🟡 Ugly, but **impossible to mistake for a pass** |
+| `p383-region-heading-gate` | 🔴 **`total 0`, exit `0`** | 🔴 **The defect** |
+
+🟢 **Fixed, with the control and the control's own control.** `main([])` now returns `2` with
+`P541-NO-INPUT` on stderr, and three assertions were added to `test_check_headings.py`: empty input
+**refuses**, a clean file **approves** (`0`), a dirty file **fails** (`1`). 🔵 **The last two matter as
+much as the first — a gate that refuses *always* also judges nothing.** Suite: **8/8 → 11/11**.
+
+🔴 **Why this is a trend and not a bug report.** `P534` (this same pass) found two defects in a
+*freshly written* oracle by mutating it. `P541` found one in a gate that has been **in the tree since
+pass 117** and has been cited as authority since. 🟢 **Together they say something this KB can act on:
+a pass-count is not evidence until somebody has tried to make it lie.** 🔵 **And `P237`'s rule
+generalises one step further than it was written:** a shared *instrument* stops the defect from being
+re-implemented, but it does not stop the instrument from being **mis-invoked**. 🟢 **A usage contract
+that has to be remembered is not a control either** — so the gate now enforces its own.
+
+> 🔴 **Prescription for later passes, cheap and specific:** every instrument in `compose/code/` that
+> takes paths by argument should refuse empty input. 🔵 **This pass fixed the one it tripped over and
+> did not sweep the other ~120 directories** — that sweep is **`Gap 243`**.
+
 ## 🟢 Forty-second pass, 2026-10-07 — four trends: the sweep language was the missing axis, a 0-ref result refutes a **slug** not an **artefact**, open weights reach the proprietary baseline, and a keyword sweep inside a monorepo needs a package column
 
 ⏱️ **Ninth pass of this date.** 🔵 **All market figures are secondary and carry their series (`P477`,

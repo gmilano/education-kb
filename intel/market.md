@@ -4,6 +4,130 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Forty-third pass, 2026-10-07 — the region channel finally returns a **single comparable instrument** across all four regions, and it reorders them against this KB's assumption
+
+⏱️ **Tenth pass of this date.** 🔵 **Every figure below is secondary and carries base year, scope and
+publisher, per `P515`.** 🔴 **`eur-lex.europa.eu` and `data.europa.eu` remain blocked by the proxy
+(`Gap 56`), so no EU date below is cited as primary — see `P538` in `intel/trends.md`.**
+
+### 🟢 `P539` — one survey, four regions, the same question: the first comparable regional measurement this file has held
+
+🔵 **Why this is worth a finding of its own.** Ten passes of regional sweeps returned *different*
+instruments per region — a national curriculum mandate here, a teacher-use percentage there — and
+`P513` already recorded why (the acronyms `EMEA`/`APAC` are trade jargon education sources do not use
+about themselves). 🔴 **Incomparable measurements cannot be ranked, so this file has never been able to
+say which region leads.** 🟢 **The Digital Education Council's 2026 global survey asks one question of
+all four: 45,398 responses across 35 countries.**
+
+| Measure | Value | 🔵 Note |
+|---|---|---|
+| Students using AI (global) | **88%** | |
+| Faculty using AI (global) | **77%** | |
+| Students who believe instructors are **well equipped to guide** AI use | 🔴 **29%** | 🔴 **The gap this file should be selling into**: near-universal use, and a 59-point confidence deficit against it |
+
+**Faculty intent to use AI in teaching, by region — and the order is not the one this KB assumed:**
+
+| Region | Faculty intent | 🔵 Note |
+|---|---|---|
+| **LATAM** | 🟢 **94%** | 🟢 **Highest of the four.** This file has priced LATAM as a follower region for ten passes |
+| **APAC** | 92% | |
+| **EMEA** | 89% | |
+| **North America** | 🔴 **67%** | 🔴 **Lowest by 22 points** |
+
+🔴 **One conflict recorded rather than resolved.** A summary from the same publisher states EMEA has
+*"the lowest future AI adoption intent among all regions"*, which contradicts the 89% / 67% figures in
+the survey coverage. 🔵 **Either the summary refers to a different metric or to a different regional
+definition. The figures are quoted; the summary's claim is not.** → **`Gap 242`**.
+
+🟢 **The commercially useful reading, stated plainly:** demand intent is **inverse** to regulatory
+burden. The region with the heaviest binding obligations (EMEA, and APAC per `P530`) does not have the
+weakest intent — **North America does**, with the lightest federal framework of the four. 🔴 **So
+"regulation suppresses adoption" is not what this measurement shows**, and a studio pitch built on
+that premise is built on nothing.
+
+### 🔵 Regional regulatory and adoption positions measured this pass
+
+🔵 **Restated in full so silence is not read as coverage** (`P479`'s sibling rule). Each row names its
+instrument, because `P513` is this file's record of what happens when a region returns a different
+kind of fact from its neighbour.
+
+| Region | Instrument measured this pass |
+|---|---|
+| **North America** | 🟡 **Fragmented and sub-federal.** Over half of US states had enacted K-12 AI guidance by early 2026. **Binding**: Idaho SB 1227 (statewide framework, AI literacy standards, prohibits AI replacing teachers); Ohio (districts to adopt AI-use policies by 2026-07-01). **Introduced, not law**: California AB 1159 (bars training on student data absent direct school benefit), New York A.9190 (would prohibit most classroom AI below grade 9), Arizona HB 4040 (policies for schools *and* public universities). Vermont HB 650 requires ed-tech providers to register and certify privacy compliance annually. Federal action is **guidance, not rules** — a Dept. of Education Dear Colleague Letter urging outcome-based evaluation of AI tools; HR 8747 advanced in committee only. 🔴 **One claim NOT corroborated and therefore not carried: a "$2.5 B federal AI grant programme", single low-quality source** |
+| **EMEA** | 🔴 **The clock moved — see `P538`.** Annex III high-risk education obligations **deferred to December 2027**; **Article 50** transparency **still 2026-08-02**; **Article 4** AI-literacy in effect with relaxed scope. Education policy otherwise remains **national**; the Commission with the OECD has issued a draft **AI Literacy Framework** for primary and secondary education to align national approaches. 🔵 Non-EU EMEA: South Africa's draft National AI Policy is in progress |
+| **APAC** | 🟢 **The earliest binding obligations, confirming `P530`.** **South Korea**: AI Basic Act in force **2026-01-22**, and education is named a **high-impact** domain, so it carries the heaviest duties — MSIT has signalled 2026 as a pilot year with a **one-year grace period on penalties**. **China**: binding generative-AI measures, algorithm registration, and mandatory synthetic-content labelling since 2025-09; compulsory national AI curriculum since the 2025-26 school year. **India**: AI and computational thinking **mandatory from Class 3** across government and private schools from 2026-27, with a ₹500 crore centre of excellence and the ₹10,372 crore India AI Mission; IT Rules amendments on AI-generated content in force **2026-02-20**; dedicated AI legislation **signalled but not adopted**. **Japan**: promotional framework law (May 2025), voluntary training-data disclosure still proposed. 🔴 **Korea's textbook rollout is the cautionary case**: mandatory AI textbooks planned from 2025 sat **below 30% adoption** by March, and in August the National Assembly **stripped them of official status** after unions said the pace had outrun preparation |
+| **LATAM** | 🟢 **Highest faculty intent of the four (94%), and the teacher-use data agrees.** TALIS 2024: secondary teachers who had used AI in the previous year — **Brazil 56%, Chile 55%, Colombia 53%, Costa Rica 52%**, against an **OECD average of 36%**. Brazilian youth: **65%** of internet users aged 9–17 use AI tools (Cetic.br, 2026). **Regulation**: Brazil's comprehensive AI bill is **not passed**; ANPD runs a **pilot regulatory sandbox for AI and data protection until December 2026**; further bills address mental health, age warnings and AI-content labelling. **Mexico has no education-specific AI rules**; 2026 amendments to copyright, labour and criminal law are pending publication in the DOF, and Mexican courts have held AI-generated content lacks copyright. **Funding**: Google.org is funding AI education across **nine countries** (AR, BR, CL, CO, DO, SV, MX, PE, UY), targeting **1.25 M students by 2028**, on curriculum co-developed with Google DeepMind and the Raspberry Pi Foundation. **UNESCO** has launched the first UN-anchored **regional observatory on AI in education** for LAC, with a Mexican pilot (CONALEP, DGETI) and an agreement with Tec de Monterrey. **IDB** reviewed **193** regional AI initiatives: **59%** used generative AI, 27% language models, 24% NLP. 🔴 **The readiness counterweight, carried because it contradicts the intent figure**: CENIA found **13 of 19** LAC countries do not teach early AI adoption in schools |
+
+## Opportunities by region
+
+### North America
+
+🔴 **The lowest faculty intent of the four regions (67%) is the fact to build on, not around.** The
+demand is not for more capability — it is for **defensibility**. Three concrete openings:
+
+- 🟢 **Vendor-accountability packaging.** Vermont's annual registration-and-certification duty and the
+  FERPA/security questionnaires now standard in higher-ed procurement make *compliance documentation*
+  a product feature. 🟢 `P533`'s emitter is relevant here in an unobvious way: a **parametric item
+  bank** is the cheapest answer to an integrity-and-assessment review, because every student sees a
+  different instance.
+- 🟡 **Scaffolded-access policy implementation.** Districts are landing on grade-banded rules (K-6
+  prohibited, 8-12 permitted with teacher authorisation and mandatory citation). That is a
+  **configuration problem** across an LMS estate, and it recurs per district.
+- 🔴 **Not an opportunity**: single-state compliance products. With rules split across states and most
+  of the strictest bills still only *introduced*, a product keyed to one statute has no second buyer.
+
+### EMEA
+
+🟢 **The sixteen-month Annex III deferral (`P538`) is a timing opportunity and a trap.**
+
+- 🟢 **The real window is conformity-assessment readiness, not relief.** A system sold in 2026 into
+  admissions or assessment must be conformant by **December 2027**, and conformity is a property of
+  the system. 🟢 **Build the technical file while the deadline is soft; that is the engagement.**
+- 🟢 **Article 50 is live now (2026-08-02) and did not move.** Disclosure-and-marking work is
+  immediately billable, and this KB already holds the instruments for it
+  (`compose/code/aiact-50-2-*`).
+- 🟢 **Article 4 AI-literacy, plus the Commission/OECD draft AI Literacy Framework**, makes staff
+  capability a procurement line item across national systems that otherwise share no policy.
+- 🔴 **Stated gap**: with eur-lex blocked (`Gap 56`), this KB cannot cite the amending instrument
+  primarily. 🔴 **Do not put the December 2027 date in a client deliverable without pinning it.**
+
+### APAC
+
+🟢 **The earliest binding clock of the four regions, and the largest compulsory-curriculum demand.**
+
+- 🟢 **Korea is the nearest-term regulated market**: education is a named **high-impact** domain under
+  an Act already in force, with a grace period that ends. 🟢 **High-impact classification work has a
+  deadline and a statutory hook** — the clearest compliance engagement in any region.
+- 🟢 **India is the largest volume opportunity in this file**: AI mandatory **from Class 3** from
+  2026-27 across government *and* private schools, with state funding attached. The bottleneck is
+  **teacher capability and content at national scale**, not platform.
+- 🔴 **Read Korea's textbook reversal as a design constraint, not a footnote.** Mandated adoption with
+  sub-30% uptake, reversed by the legislature after union pressure, is what happens when rollout pace
+  outruns teacher preparation. 🟢 **Sell the preparation programme as part of the platform or expect
+  the same reversal.**
+- 🟡 **China's compulsory curriculum is real but the market is largely closed** to a foreign studio;
+  treat the synthetic-content labelling regime as the exportable lesson.
+
+### LATAM
+
+🟢 **Highest faculty intent of the four regions (94%) and the highest teacher use against the OECD
+average — and a readiness deficit that contradicts both.** That contradiction is the opportunity.
+
+- 🔴 **The binding constraint is not willingness; it is that 13 of 19 LAC countries do not teach early
+  AI adoption at all** (CENIA). 🟢 **So the sellable unit is curriculum-plus-enablement, and there is
+  already third-party money in it**: Google.org across nine countries to 1.25 M students by 2028, and
+  UNESCO's LAC observatory as the convening body with CONALEP/DGETI and Tec de Monterrey.
+- 🟢 **Portuguese-language assessment is the one place this KB holds a genuine asset advantage**:
+  `essay-br` (MIT, human-graded on ENEM C1–C5, `P524`) plus — new this pass — the **Apache-2.0
+  reference implementation** `wwrwbs/AI_AWE` (`P535`). 🔴 **The scorer still does not exist in
+  Portuguese (`Gap 236`) and the feature layer is English-locked (`Gap 239`)**, so this is a build,
+  not an integration — but it is now a *retarget* rather than a greenfield build.
+- 🔴 **Spanish-language essay scoring is NOT the symmetric opportunity, and `P537` is why.** Chile's
+  PAES has **no essay component**, so there is no rubric to automate. 🔵 **Qualify by whether the
+  country's exam grades writing against a published rubric before scoping any Spanish essay work.**
+- 🟡 **Regulatory timing favours moving now**: Brazil's comprehensive bill is unpassed and the ANPD
+  sandbox runs only to December 2026 — a participation window, and it closes.
+
 ## 🟢 Forty-second pass, 2026-10-07 — a fourth market denominator widens `P515`'s spread to 6×, and the regulatory clock this KB has been reading off the EU calendar is **not** the earliest one
 
 ⏱️ **Ninth pass of this date.** 🔵 **Every figure below is secondary and carries base year, scope and

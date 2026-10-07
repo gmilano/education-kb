@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Forty-third pass, 2026-10-07 — `Gap 238` **CLOSED with code**: the authoring half of QTI 3 parametric items now exists, and the build found three defects reading could not
+
+⏱️ **Tenth pass of this date** (34–42 ran earlier). **Licences read first-hand on 2026-10-07 via the
+shared hardened classifier `compose/code/lib/license_family.sh` (`P237`, title-block, `P171`) over the
+**cloned working tree**. Existence by `git ls-remote --heads` against a negative control in the same run
+(`P510`). **No star counts** (`P479`).
+
+🟢 **Pass 42 declared `Gap 238` "the cheapest gap on this KB… the one a single pass could close
+outright". This pass took it at its word and closed it — with a tested artefact, not a prescription.**
+
+### 🟢 `P533` — `Gap 238` closed: `compose/code/p533-qti3-template-emitter/`
+
+🔵 **The gap, reproduced before anything was built.** Pass 42's `P527` measured that
+[`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) can **deliver** parametric item
+variants and cannot **author** them. Re-measured this pass at HEAD `0ca7d6fc` (2026-10-07):
+
+| Measurement | Value | Method |
+|---|---|---|
+| `packages/writer/src/index.ts` exports | **33** | `grep -c "^export"` |
+| …referencing `qti-template-declaration` / `qti-template-processing` | 🔴 **0** | `grep -rl` over `packages/writer/src` |
+| `packages/core/src` files referencing the same | 🟢 **34** | `grep -rl` over `packages/core/src` |
+| Licence | 🟢 **MIT**, © 2026 Longsight, Inc. | `LICENSE.md` payload via shared classifier |
+| Version | `0.13.2` | `package.json` |
+
+🟢 **`P527` reproduces exactly.** The asymmetry is the gap: the runtime implements the whole
+mechanism and the authoring package implements none of it.
+
+**What was built:** `emit_template.py` — `qti-template-declaration`, `qti-template-processing`,
+`qti-set-template-value`, `qti-set-correct-response`, `qti-template-constraint`,
+`qti-random-integer`/`-float`, `qti-variable`, `qti-base-value` and n-ary operators, plus whole-item
+assembly. Stdlib only, per `P237`'s shape: an instrument that needs a dependency to run is an
+instrument that does not run.
+
+**The grammar targets core's parser, not the specification prose**, so the contract is the one the
+runtime enforces: `parser.ts:139-148`, `parser-processing.ts:47/73/109/258`,
+`operator-attribute.ts:24`, `processing-evaluator.ts:163-172`, `session.ts:449-476`,
+`validation-random-expression.ts`.
+
+### 🔴 Why the oracle is **transitive**, stated rather than quietly substituted
+
+`Gap 238` named core's parser plus the fixture as the oracle. **Two stronger instruments were tried
+first and both are unavailable here:**
+
+| Instrument | Outcome |
+|---|---|
+| Execute `qti3`'s own suite | 🔴 **Not permitted** — installing a third-party repository's dependencies is out of scope in this environment. Same limit `P527` recorded; `Gap 238` already carries it as a prerequisite |
+| Validate against the official QTI 3.0.1 ASI schema | 🔴 **Blocked.** `qti3` pins it by sha256 in `packages/conformance/schemas/qti3/sources.json`, but the schema is **fetched, not vendored**, and `purl.imsglobal.org:443` is refused by this environment's egress proxy (`connect_rejected`, organization policy). 🔵 **Same class as `Gap 56`** (eur-lex) **and `Gap 92`** (docs.moodle.org) |
+
+🟢 **So the oracle is transitivity through documents the upstream gate has already validated.**
+`scripts/check-test-xsd.mjs` runs `xmllint --nonet --noout --schema <pinned official ASI xsd>` over
+`packages/fixtures/xml/*.xml` and reports *"official ASI schema validation passed"*. A fixture is
+therefore a **known schema-valid QTI 3 document**; regenerating one **node-for-node** makes the
+emitter's output schema-valid by transitivity without reaching the schema.
+
+🔵 **Two independent fixtures, not one**, so a hand-tuned success cannot pass as a general result —
+and each fixture's comparison is controlled against the other's document.
+
+**Result: `43` assertions, `0` failures, `19` of them negative controls.** Reproduce with
+`python3 -I test_emit_template.py`.
+
+### 🟢 `P536` — the three defects the build found that reading the repo could not
+
+🔵 **Each is a property of the delivery runtime that an author cannot see in the XML they write.**
+
+| | Defect | Consequence |
+|---|---|---|
+| **1** | 🔴 **`max` is frequently unattainable.** The draw is over a **grid**: `count = floor((max-min)/step)+1`, `draw = min + floor(random()*count)*step`. When `step` does not divide `max-min`, `max` **never occurs** — `min=1 max=10 step=4` draws from `{1,5,9}` | An author reading `max="10"` as "the largest value a student can see" **authors a different item from the one delivered** |
+| **2** | 🔴 **An infeasible `qti-template-constraint` degrades silently into a wrong item.** `session.ts:449-476` restarts at most **100** times and then **proceeds with the violating draw** rather than raising | At acceptance probability `p`, exhaustion has probability `(1-p)**101` — ~0.5% at `p=0.05`, **~90% at `p=0.001`**. 🟢 `estimate_constraint_restarts` computes acceptance exactly over the declared grids, so it is checkable before publication |
+| **3** | 🔴 **Parser order and schema order are different orders.** `core` finds children by name and accepts any order; the XSD declares a sequence | 🔴 **An emitter written against the parser produces documents that deliver correctly and fail validation** — the worst available failure mode, because the authoring tool's own test passes |
+
+🔵 **Defect 3 is the one worth generalising**: this KB has repeatedly found that *reading the consumer*
+is not the same as *satisfying the contract*. The consumer was more permissive than the schema, so
+conformance to the consumer was not conformance.
+
+### 🟡 What `P533` does **not** close, stated rather than implied
+
+- 🔴 **The TypeScript is not executed.** `writer-contribution.ts` carries the same emitter in the host
+  project's idiom so the upstream diff is a review rather than a translation, and it is
+  **parse-checked only** (`node --experimental-strip-types --check`, imports stripped). 🔴 **That
+  proves syntax, not types and not behaviour.** The Python module is the tested artefact.
+- 🔴 **Nothing has been contributed upstream.** This KB produced the patch; opening a pull request
+  against `LongsightGroup/qti3` is not something a KB pass should do unprompted. → **`Gap 240`**.
+- 🟡 **`qti3` is `0.13.2`** — pre-1.0, and its HEAD moved on the same day it was read. The emitter
+  targets a grammar that can still change.
+
 ## 🟢 Forty-second pass, 2026-10-07 — `Gap 235` closes on the **corpus**, not the scorer; and `Gap 39`'s first half is finally **tested** — the writer cannot emit what the runtime can execute
 
 ⏱️ **Ninth pass of this date** (34–41 ran earlier). **Licences read first-hand on 2026-10-07** from the

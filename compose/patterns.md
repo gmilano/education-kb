@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Forty-third pass, 2026-10-07 — the item-bank recipe's broken step is **fixed with code**, not re-described; and the Portuguese scorer recipe gains a reference implementation
+
+⏱️ **Tenth pass of this date.** 🔵 **Licences read first-hand on 2026-10-07 from payload or the cloned
+tree, channel named per row (`P171`, `P494`, `P510`, `P511`, `P237`). No star counts (`P479`).**
+
+🔵 **Numbering.** 🟢 **`P490`'s rule followed before allocation.** The occupied set across the live tree
+**and** `archive/` was enumerated with word boundaries over the **committed** tree: **533 distinct
+numbers**, highest contiguous run ending at **`P290`**, with occupancy continuing to **`P532`** and
+**`P591`, `P592`, `P593`, `P679`, `P900`, `P999`** above it. 🟢 **So `P533`–`P590` was free, and this
+pass allocates nine from the bottom of that block:**
+
+| | Finding | Filed in |
+|---|---|---|
+| `P533` | 🟢 **`Gap 238` CLOSED with code** — the QTI 3 template emitter, `43/0` with 19 controls | `repos/foundations.md` |
+| `P534` | 🔴 **Mutation testing found 2 defects in this pass's own oracle** — a value asserted from itself is not measured | `intel/trends.md` |
+| `P535` | 🟢 **`wwrwbs/AI_AWE` (ArguLens) — an assembled Apache-2.0 essay scorer exists**, permissive throughout | `agents/top.md` |
+| `P536` | 🔴 **Three runtime defects an author cannot see in the XML** (unattainable `max`, silent constraint exhaustion, parser≠schema order) | `repos/foundations.md` |
+| `P537` | 🟢 **`Gap 237`'s premise refuted for Chile** — the PAES has no essay, so there is no rubric to automate | `intel/trends.md` |
+| `P538` | 🔴 **EU Annex III education deadline deferred to December 2027**; Article 50 did not move | `intel/trends.md` |
+| `P539` | 🟢 **First comparable four-region measurement** — and LATAM leads faculty intent, NA trails by 22 pts | `intel/market.md` |
+| `P540` | 🟢 **The corrected item-bank recipe**, below | `compose/patterns.md` |
+| `P541` | 🔴 **A gate in this tree reported success while measuring zero files** — fixed, 8/8 → 11/11 | `intel/trends.md` |
+
+### 🟢 `P540` — Recipe: a parametric item bank whose variants are **authored**, not hand-written
+
+🔴 **What was wrong with every version of this recipe before pass 42.** Step 1 read *"author N
+parametric variants with `qti3`"*. 🔴 **`P527` proved that step false as written** — the `writer`
+package has 0 of 33 exports touching the template mechanism — and pass 42 could only replace it with a
+**manual workaround**: hand-author the template XML from the fixture (~35 lines per item family) and
+let `core` execute it.
+
+🟢 **This pass replaces the workaround with the missing tool.** The step is now real.
+
+| Layer | Component | Licence (channel) |
+|---|---|---|
+| **Authoring** | 🆕 `compose/code/p533-qti3-template-emitter/emit_template.py` | 🟢 **This KB's own code**, stdlib only |
+| **Delivery / execution** | [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) `packages/core` `0.13.2` | 🟢 **MIT** — `LICENSE.md` payload, © 2026 Longsight, Inc. |
+| **Item calibration** | `py-irt` / `irtorch` / `catsim` | per `P499` chain (`Gap 39` calibration half) |
+| **Variant comparability** | `EqUMP` 0.3.6 — Mean-Mean, Mean-Sigma, Haebara, Stocking-Lord, true-score | 🟢 **MIT** (`P499`) |
+| | 🔴 observed-score / kernel equating | 🔴 **`Gap 234` — no permissive runtime.** Use the R side-car (`P518`) |
+| **Delivery platform** | Open edX / Moodle per the existing chain | as already filed |
+
+**Wiring, concretely:**
+
+1. 🟢 **Declare the variable family.** `TemplateDeclaration("FACTOR")` … one per parameter. Emits
+   `qti-template-declaration` with `cardinality="single" base-type="integer"`.
+2. 🟢 **Declare the draws.** `SetTemplateValue("FACTOR", RandomInteger(2, 10, step=2))`.
+   🔴 **Check `RandomInteger.grid()` before you trust `max`.** The draw is over a **grid**: when
+   `step` does not divide `max-min`, **`max` never occurs** (`P536` defect 1).
+3. 🟢 **Derive the answer key from the draw** — `SetCorrectResponse("RESPONSE", Variable("TARGET"))`.
+   🔴 **Skip this and every variant shares one authored key, so all but one variant is marked wrong.**
+   This is the step that makes a family *gradable* rather than merely *varied*.
+4. 🟡 **Add constraints only after checking feasibility.**
+   `estimate_constraint_restarts(draws, predicate)` returns exact acceptance over the declared grids.
+   🔴 **`core` restarts at most 100 times and then delivers the violating draw** (`P536` defect 2) —
+   at acceptance `0.001` that is a ~90% chance of shipping an invalid item, silently.
+5. 🟢 **Assemble with `build_parametric_item`**, which emits children in **schema** order.
+   🔴 **Do not emit in parser order**: `core` accepts any order, the XSD does not, and the result
+   delivers correctly while failing validation (`P536` defect 3).
+6. 🟢 **Calibrate and equate** per the `P499`/`P507` chain, with the `Gap 234` caveat above.
+
+🔵 **Honest cost.** Steps 1–5 are now a few lines per item family instead of ~35 lines of hand-written
+XML, and the grid/feasibility checks are the part that was not previously possible at all. 🔴 **Step 6
+is still where the money goes** — equating is a psychometric exercise, not a library call.
+
+🟡 **Stated limit carried into the recipe**, because `P533` carries it: the emitter is tested against
+two upstream fixtures that the `qti3` schema gate validates, **not** against the official XSD directly
+(`purl.imsglobal.org` is proxy-blocked) and **not** by running `qti3`'s own suite (third-party
+dependencies not installable here). 🟢 **Whoever productionises this should run both.**
+
+### 🟢 `P532`'s recipe updated — the Portuguese essay scorer now starts from a reference implementation
+
+🔵 **`P532` (pass 42) specified building a Portuguese scorer from `essay-br` + open weights.** 🟢
+**`P535` adds a step-0 that did not exist yesterday:** start from
+[`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE) — **Apache-2.0**, permissive across its whole tree
+(root Apache-2.0, vendored `TextComplexityToolkit` MIT), three modules, LoRA adapter shipped in-repo.
+
+**What transfers and what does not — the distinction that sets the budget:**
+
+| Layer | Transfers to Portuguese? |
+|---|---|
+| Three-module architecture (move classifier → feature scorer → feedback generator) | 🟢 **Yes.** Reusable as a design |
+| Qwen2.5 base-model family + LoRA fine-tuning pipeline | 🟢 **Yes.** Same families have Portuguese capability |
+| Discourse-move taxonomy (*claim / data / counterclaim / rebuttal*) | 🟡 **In principle** — language-independent as a construct, needs Portuguese annotation |
+| 🔴 **The 31 TAALED/QuanSyn features** | 🔴 **No.** `dep_files/adj_lem_list.txt` and `real_words.txt` are **English wordlists** → **`Gap 239`** |
+| 🔴 **The scorer head** | 🔴 **No.** ArguLens emits a holistic **1–6**; ENEM is **five competencies C1–C5**, which is what `essay-br` is graded on |
+
+🟢 **Net effect on `Gap 236`'s cost**: the pipeline, the training harness and the licence are now
+free. 🔴 **The two layers that carry the pedagogy — features and rubric head — are still a build**, and
+`P532`'s realistic target stands at **QWK ~0.63** (mid-band of the published 0.60–0.73), not
+state-of-the-art.
+
 ## 🟢 Forty-second pass, 2026-10-07 — one new recipe (`P532`, an essay scorer whose judgement the client keeps) and one **correction** to every item-bank recipe in this file
 
 ⏱️ **Ninth pass of this date.** 🔵 **Licences read first-hand on 2026-10-07 from payload, registry or the

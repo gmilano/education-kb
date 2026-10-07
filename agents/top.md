@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Forty-third pass, 2026-10-07 — the assembled permissive essay scorer `Gap 236` said nobody had published **does exist**, and it is Apache-2.0 end to end
+
+⏱️ **Tenth pass of this date.** **Licences read first-hand on 2026-10-07 from the repository **payload**
+in the cloned tree, classified by the shared hardened classifier `compose/code/lib/license_family.sh`
+(`P237`, title-block, `P171`). Existence by `git ls-remote --heads` against a negative control in the
+same run (`P510`). **No star counts** (`P479`).
+
+🔴 **Pass 42 declared `Gap 236` as: *"nobody has published the assembled scorer under a permissive
+licence."* 🟢 **That is now refuted for English, and the refutation came from a channel pass 42 itself
+prescribed** — the per-country Spanish query of `Gap 237`, whose *second* result set surfaced an asset
+no English-language sweep in ten passes had returned.
+
+### 🟢 `P535` — `ArguLens` / `wwrwbs/AI_AWE`: an **assembled, three-module, Apache-2.0** automated essay scorer with released weights
+
+| Field | Value, and the channel it came from |
+|---|---|
+| Repo | [`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE) — published as **ArguLens**, arXiv [`2608.17356`](https://arxiv.org/abs/2608.17356) |
+| Existence | 🟢 **3 refs** — `HEAD`, `refs/heads/main`, `refs/tags/v0.1.0` — by `git ls-remote`; 🟢 **negative control in the same run failed as required** (`P510`) |
+| Licence | 🟢 **Apache-2.0** — root `LICENSE` payload, title block *"Apache License / Version 2.0, January 2004"*, via the shared classifier |
+| 🟢 **Licence closure** | 🟢 **Permissive throughout.** `find LICENSE*` over the whole tree returns **exactly two** payloads: root **Apache-2.0** and the vendored `essay_score/scoring_pipeline/TextComplexityToolkit/LICENSE` → **MIT** (© 2026 TextComplexityToolkit contributors). 🔵 **No copyleft anywhere in the tree** — which is not the default outcome for an ML repo and is the reason this row is admissible |
+| HEAD | `41ae3bd4dd9e891bf46dd4834644ca143dbd36df`, 2026-07-29 |
+| Weights | 🟢 **A LoRA adapter is shipped in-repo** (`essay_score/deploy/adapter/`) with `model_checksums.sha256` at root |
+
+**The three modules, from the repository's own README:**
+
+| # | Module | What it is |
+|---|---|---|
+| 1 | Discourse-move classifier | Fine-tuned **Qwen2.5-7B LoRA**, labels each sentence *claim / data / counterclaim / rebuttal* |
+| 2 | 🔴 **Scorer** | **LightGBM over 31 linguistic and discourse features** (TAALED / QuanSyn complexity + move counts) — 🔴 **not an LLM** |
+| 3 | Feedback generator | Local **Qwen2.5-14B-Instruct** via vLLM |
+
+### 🔴 Why this narrows `Gap 236` hard and does **not** close it
+
+🔴 **It scores English only, and the repository says so itself** in a *Responsible use* section:
+*"Persuade 2.0 consists of US middle-school argumentative essays and may not generalize to other
+populations or genres"*, and the feedback generator *"always produces English feedback"*.
+
+🔴 **And module 2 is the part that does not travel.** A LightGBM model over TAALED features is not a
+prompt that can be rewritten in Portuguese — the features are computed by English-specific resources:
+`TextComplexityToolkit/src/TAALED/dep_files/` ships `adj_lem_list.txt` and `real_words.txt`, which are
+**English wordlists**. 🔵 **So the architecture transfers and the feature layer does not.** That is a
+sharper statement of `Gap 236`'s cost than pass 42 could make, and it moves the remedy:
+
+| | Pass 42's remedy for `Gap 236` | 🟢 This pass's remedy |
+|---|---|---|
+| Shape | Fine-tune an open-weight model on `essay-br`, publish MIT | 🟢 **Retarget an existing Apache-2.0 reference implementation** — same Qwen base-model family, same three-module split |
+| Feature layer | not addressed | 🔴 **The binding constraint.** TAALED's 31 features are English-locked → **`Gap 239`** |
+| Output shape | holistic | 🔴 **Still a mismatch**: ArguLens emits a holistic **1–6**; ENEM is **five competencies C1–C5**, which is what `essay-br` (`P524`) is graded on. The scorer head must be rebuilt regardless |
+
+🟢 **Net: `Gap 236` goes from "nobody has built this" to "someone has built it for another language and
+licensed it so you may."** 🔴 **It is still open, because the two layers that carry the pedagogy — the
+features and the rubric head — are the two that do not transfer.**
+
+### 🔵 No row is added to this file's agent table this pass
+
+🟢 **ArguLens is a scorer, not an agent**, and this KB files scorers and corpora in `repos/` —
+`essay-br` went the same way at `P524`. It is recorded here because it is the direct answer to a gap
+this file declared.
+
 ## 🔴 Forty-second pass, 2026-10-07 — `Gap 235`'s prescribed query returns a **populated** tier, and not one asset in it carries a licence grant
 
 **Licences read first-hand on 2026-10-07** from the channel named per row — repository **payload** on

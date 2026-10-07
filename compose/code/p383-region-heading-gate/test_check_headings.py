@@ -88,5 +88,37 @@ ARCH = """## Oportunidades archivadas — bloque historico
 """.split("\n")
 t("un bloque archivado no se mide como canonico", codes(ARCH) == set())
 
+# ---------------------------------------------------------------------------
+# P541 — el control que el pase 43 pago en vivo.
+# Sin argumentos el gate imprimia `total 0` y salia 0: indistinguible de un
+# arbol limpio habiendo medido CERO archivos (la forma de P471).  Debe RECHAZAR.
+t("sin argumentos el gate RECHAZA en vez de aprobar", m.main([]) == 2)
+
+# Control negativo del control: con un archivo real el gate sigue midiendo,
+# porque un gate que rechaza SIEMPRE tampoco juzga nada.
+import tempfile, os
+with tempfile.TemporaryDirectory() as d:
+    good = os.path.join(d, "good.md")
+    open(good, "w").write("""## Opportunities by region
+
+### North America
+### EMEA
+### APAC
+### LATAM
+### Global
+""")
+    t("con un archivo limpio el gate aprueba (exit 0)", m.main([good]) == 0)
+    bad = os.path.join(d, "bad.md")
+    open(bad, "w").write("""## Opportunities by region
+
+### North America
+### EMEA
+### APAC
+### LATAM
+### Global
+### Latam
+""")
+    t("con un archivo sucio el gate falla (exit 1)", m.main([bad]) == 1)
+
 print(f"\n{ok}/{ok+fail} checks passed")
 raise SystemExit(1 if fail else 0)
