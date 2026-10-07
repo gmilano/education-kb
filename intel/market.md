@@ -4,6 +4,184 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-seventh pass, 2026-10-07 — the five-way split mapped onto this KB's four-region vocabulary, and a third series that agrees on 2026 and diverges 29% by 2030
+
+⏱️ **Measured 2026-10-07 from secondary sources** (market-research houses, state legislative trackers,
+Digital Education Council, UNESCO, IDB/IADB, OECD, EDUCAUSE, law-firm regulatory trackers).
+🔴 **Every market and regulatory domain cited here was re-tested for reachability and every one is
+blocked from this environment: `eur-lex.europa.eu`, `arxiv.org`, `aclanthology.org`, `huggingface.co`,
+`multistate.us`, `excelined.org` → `000` (CONNECT tunnel refused).** ⚠️ **Nothing in this file is
+first-hand.** Figures are corroborated only by agreement across independent search results — a weaker
+channel than payload, and any deliverable must say so.
+
+### 🟢 The find: pass 36's five-way split, reconciled to the closed region vocabulary — and it still sums
+
+🔴 **Pass 36 obtained a coherent five-region split, but it was published as `North America / APAC /
+Europe / LATAM / Middle East & Africa` — and this KB's `region` field is a closed five-value
+vocabulary in which `Europe` and `Middle East & Africa` do not exist.** 🔵 **So the best market series
+this file has ever held was unusable by the very filter the frontmatter exists to drive.** Mapped
+(`EMEA = Europe + MEA`):
+
+| Region (🟢 closed vocabulary) | 2026 | Share | 2030 (published CAGRs) |
+|---|---|---|---|
+| **North America** | **$3.68B** | **35.4%** | $10.87B |
+| 🆕 **EMEA** = Europe $2.64B + MEA $0.56B | 🆕 **$3.20B** | 🆕 **30.8%** | 🆕 **$9.81B** |
+| **APAC** | **$2.85B** | **27.4%** | $9.55B — 🟢 **fastest, 35.3% CAGR** |
+| **LATAM** | **$0.67B** | **6.4%** | $2.13B |
+| 🟢 **Sum** | 🟢 **$10.40B** | **100.0%** | 🟢 **$32.36B** |
+
+🟢 **The four-region sum is still exactly the published global 2026 of `$10.4B`, and the 2030 sum lands
+0.3% from the published global 2030 of `$32.27B`.** 🔵 **The reconciliation costs nothing in accuracy
+and makes the series filterable — EMEA is the **second-largest** region once Europe and MEA are added,
+ahead of APAC, which the five-way presentation obscured.**
+
+### 🔴 A third series entered this pass. It agrees on 2026 to within 2% and implies a 2030 that is 29% higher
+
+| Series | 2025 | 2026 | CAGR | 2030 implied |
+|---|---|---|---|---|
+| **A** — the shelf's reconciled series | — | **$10.40B** | **32.8%** | **$32.36B** |
+| 🆕 **B** — AI-in-education, 2026 report | **$7.52B** | **$10.6B** | 🔴 **40.9%** | 🔴 **$41.78B** |
+| Divergence | | 🟢 **1.9%** | 🔴 **8.1 pts** | 🔴 **+29.1%** |
+
+🟢 **Series B is internally consistent** — `7.52 × 1.409 = 10.60`. 🔴 **So two independent houses agree
+almost exactly on the 2026 base and disagree by nearly a third on where it lands in four years.**
+
+> 🔵 **The operational rule, and it is the useful output of this table: quote the 2026 base, never the
+> CAGR.** The base year is corroborated across series; the growth rate is the single least stable
+> number in this file, and it is the one that compounds into every deck's headline. 🔴 **Pass 36's
+> finding was that this file had been mixing two series; the correction is not "pick the right one" —
+> it is to stop projecting at all and cite a dated base.**
+
+### Market-mechanics figures worth carrying (all secondary)
+
+| Claim | Figure | Why it matters to a build |
+|---|---|---|
+| AI tutoring effect size | 🟢 **0.3–0.5 SD** learning gains, comparable to human 1:1 on specific skills | 🔵 **The only outcome number in this file with a defensible unit.** It is *per skill*, not per course — scope pilots to a skill |
+| Assessment generation | **84.7%** accuracy correlation with expert consensus; **>99%** reduction in creation time | 🔴 **The time saving is the sellable number; the 84.7% is the reason a human stays in the loop** |
+| Grading posture | **AI-assisted grading outperforms fully autonomous grading** as a deployment model (OECD; EDUCAUSE 2026) | 🟢 **Converges with regulation** — NA states and the EU both bar autonomous high-stakes decisions. Assistive is both better *and* legal |
+| Fastest deployers | Tutoring and test-prep businesses, hybrid model: **AI drills between sessions, humans hold relationship, motivation and assessment** | 🔵 **The division of labour a client will recognise** |
+
+---
+
+## Opportunities by region
+
+### North America
+
+🔵 **The regulatory text has become a product specification, and it is unusually explicit about what
+software may not do.**
+
+- **134 AI-in-education bills across 31 states** in the 2026 session; **35+ states** carry official
+  department-of-education AI guidance as of June 2026.
+- **NYC Public Schools, March 2026 — "Traffic Light Framework"** (Green / Yellow / Red). 🔴 **Red —
+  never permitted: grading, discipline, promotion and graduation decisions, behavioural surveillance.**
+- **Oklahoma and Maryland** require human oversight and **bar AI from high-stakes decisions about
+  students**. **Maryland's AI Ready Schools Act** gives all **24 districts 120 days** from state
+  guidance to adopt aligned policies.
+- **California AB 1159** prohibits using student data to train AI models; **Idaho SB 1227** mandates
+  data-privacy protections for AI tools in schools.
+- **Georgia and Mississippi** fold AI into computer-science graduation credit.
+
+🟢 **Opportunity — the compliance-shaped assistive product.** $3.68B, 35.4% of the market, and a
+written list of prohibited functions. 🔵 **Build the assistive-grading and early-warning layer that is
+*architecturally* incapable of the Red-list actions** — recommendation surfaces with a mandatory human
+commit step, decision provenance, and an auditable record that no promotion/discipline outcome was
+machine-emitted. **`AB 1159` additionally forecloses the "improve the model on client data" clause**,
+so an on-premise or no-train posture is a *requirement*, not a differentiator. 🟢 **`OSSS`
+(Apache-2.0) is the natural substrate** — districts are its top-level tenant and board governance,
+accounting and transportation are already modelled.
+
+⚠️ **Per-district policy divergence is the delivery risk**: 24 districts in one state × 120-day clocks
+means a *policy-parameterised* product, not one deployment.
+
+### EMEA
+
+🔴 **The EU AI Act's high-risk obligations for education became fully applicable on 2 August 2026 —
+roughly two months before this measurement — and the sector is, by its own assessments, not ready.**
+
+- **Regulation 2024/1689**, in force 1 Aug 2024, **full applicability 2 Aug 2026**. ⚠️ **Secondary
+  sourced; `eur-lex.europa.eu` is `000` here — verify against the Official Journal before any
+  deliverable.**
+- 🔴 **Education is explicitly high-risk**: admission decisions, evaluation of learning outcomes, exam
+  scoring. Obligations: **risk management, data governance, human oversight, transparency, conformity
+  assessment before deployment**.
+- Published evaluations find a **documented gap between regulatory expectation and institutional
+  readiness**, and recommend ministerial operational guidance, inter-institutional capacity building,
+  and AI-governance indicators inside national quality-assurance systems.
+- Phased implementation continues through 2026–2027; most institutions remain in **pilot and
+  pre-compliance** posture.
+
+🟢 **Opportunity — and on the reconciled series EMEA is the second-largest region at $3.20B (30.8%),
+not the third.** 🔵 **The sellable asset is the conformity-assessment artefact, not the model.** A
+high-risk education system needs a technical file, a data-governance record, a human-oversight design
+and transparency documentation — **deliverables, repeatable across institutions, that nobody's LLM
+produces as a by-product**. 🟢 **`OpenOLAT` (Apache-2.0, Zurich) is the one LMS that can carry an
+in-product compliance layer without a copyleft conversation**, and the KB already holds an
+`aiact-50-2-*` instrument family for the marking/provenance side.
+
+🔴 **The readiness gap is the engagement.** Obligations are live and institutions are in
+pre-compliance: that is a remediation market with a statutory deadline already behind it.
+
+### APAC
+
+🔵 **The fastest-growing region, the only one that produced a new placed repository this pass, and the
+most fragmented regulatory map of the four.**
+
+- 🔴 **South Korea's AI Basic Act took effect January 2026** and names **education** as a
+  **high-impact** domain — risk management and disclosure obligations attach.
+- **China** has the most developed binding AI regulation in APAC. **Japan** runs a deliberately
+  light-touch, voluntary governance model. **India** still has **no dedicated AI statute**, relying on
+  privacy, cybersecurity and consumer law.
+- **Japan and South Korea** impose education-specific data-protection duties — **student-data
+  encryption with penalties for non-compliance**.
+- Market **$2.85B (27.4%), 35.3% CAGR — the fastest of the four**.
+
+🟢 **Opportunity — the on-premise multi-agent classroom, and the asset for it landed this pass.**
+🆕 **`THU-MAIC/OpenMAIC` (MIT, Tsinghua MAIC)** is a full multi-agent classroom — AI teachers *and* AI
+classmates, whiteboard, live discussion, one-click slides/quizzes/simulations — with **Lemonade local
+inference and FunASR local ASR**, so 🟢 **the entire classroom runs inside the institution**. 🔵 **That
+is precisely the shape Korea's high-impact disclosure duties and Japan/Korea's encryption mandates
+reward**, and MIT means it ships in-product.
+
+⚠️ **Four jurisdictions, four regimes: this is a policy-node product.** The KB's existing pattern of
+LangGraph policy nodes per jurisdiction applies directly — one graph, per-market gates.
+
+### LATAM
+
+🔴 **The region's defining number is not adoption. It is the distance between adoption and depth.**
+
+- 🟢 **79% of LATAM faculty report using AI in teaching** (Digital Education Council, 2026) — **18
+  points above the 2025 global figure**.
+- 🔴 **88% report only "minimal" to "moderate" engagement.** In Brazil and Chile **>50% of teachers
+  already use these tools**, yet 🔴 **fewer than 10% of institutions in the region have formal
+  guidelines**.
+- **Brazil's PL 2.338/2023** remains the region's bellwether horizontal, risk-based statute —
+  transparency plus a supervisory architecture, with training-data disclosure still contested.
+- **UNESCO launched the Observatory on AI in Education for Latin America and the Caribbean on 14 April
+  2026**; **Google.org committed $4.6M** targeting **1.25M students by 2028 across nine countries**
+  (Argentina, Brazil, Chile, Colombia, Dominican Republic, El Salvador, Mexico, Peru, Uruguay); the
+  **IDB** has published lessons from **193 solutions** across the region.
+- 🟢 **Named production deployments, which is rare in this file:** **Lottus Education (Mexico)** —
+  `LucIA` processes feedback from **90,000 students across 45 campuses in 15 minutes**, previously
+  nearly two months; **PUC-PR (Brazil)** — `AvalIA` classifies **270,000+ student comments** across
+  didactic / technical / behavioural categories; **Universidad Panamericana (Mexico)** — `SyllabUP`,
+  an **agent architecture** validating curricular programmes and gathering accreditation evidence.
+- Market **$0.67B (6.4%), 33.5% CAGR** — the smallest of the four.
+
+🟢 **Opportunity — governance-as-a-product, and offline-first delivery.** 🔵 **79% usage against <10%
+institutional guidelines is not a gap in tooling, it is a gap in policy infrastructure** — and the
+three named deployments show what sells: **institution-scale text understanding** (feedback,
+comments, syllabus validation, accreditation evidence), not student-facing tutoring. 🟢 **`Kolibri`
+(MIT) is the only platform on these shelves whose architecture already assumes intermittent
+connectivity**, which is the default condition in public education across the region, and it is
+permissive enough to ship the AI layer inside.
+
+⚠️ **This pass placed no new LATAM repository.** It searched for one; the single candidate — a
+Brazilian-Portuguese Socratic-tutor benchmark over 8 open SLMs ≤3.8B, offline — **appears only in
+secondary prose with no recoverable owner slug**. 🔴 **Recorded as an informed gap.** The region's
+verified asset on these shelves remains pass 36's **`eduagarcia/lm-evaluation-harness-pt`** (MIT,
+CEIA / Federal University of Goiás) — 🔵 **a Portuguese evaluation harness, which is the right
+foundation for exactly the governance work the guidelines gap implies.**
+
 ## 🟢 Thirty-sixth pass, 2026-10-07 — the five-region denominator closes, and it shows this file has been mixing two market series
 
 ⏱️ **Measured 2026-10-07 from secondary sources** (market-research houses, state legislative trackers,

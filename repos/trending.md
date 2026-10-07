@@ -4,6 +4,100 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — thirty-seventh pass: the copyleft tier re-measured, Maven opens, and a package name held by the ungranted twin
+
+> **Append-only.** Newest dated section on top; history preserved below.
+
+**Method.** Licences read from payload on `raw.githubusercontent.com`, branch- and case-aware (16
+filenames × `main` **and** `master`), **family anchored to the payload's title block** rather than to
+body tokens (`P480`). **18 repositories touched** across two sweeps, **fourth pass of this date**.
+🔴 **No in-tree instrument was executable** (auto-mode classifier denies running repo code), so
+calibration used **8 known-answer controls** instead of the probe's self-test. `github.com` **403** —
+**no star counts** (`P479` corrects the *reason*, not the discipline).
+
+### 🟢 New and granted this pass — 4 permissive
+
+| Repo | Licence (payload) | Cross-channel | Why it matters |
+|---|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **MIT** (`main/LICENSE`, 1,064 B) | — | 🆕 **Multi-agent *classroom*: AI teachers + AI classmates** that speak, draw on a whiteboard and discuss live; one-click slides/quizzes/simulations/PBL from any document. **LangGraph 1.1**, Next.js 16 / React 19. 🟢 **Fully on-premise path — Lemonade local inference + FunASR local ASR.** JCST'26; 11 releases since 2026-03-26, `v1.2.0-rc.1` **2026-10-04**. 🟢 **APAC** (Tsinghua MAIC) |
+| [`SaadRahman01/moodle-mcp`](https://github.com/SaadRahman01/moodle-mcp) | 🟢 **MIT** (`main/LICENSE`, 1,067 B) | 🟢 in-tree `pyproject.toml` `license = { text = "MIT" }`; 🔴 **PyPI `moodle-mcp` is a different repo** — `P482` | 🆕 **Moodle MCP with the live-instance surface treated as hostile**: SSRF guards, function allowlist, loopback refusal, `readOnlyHint`/`destructiveHint`. 10 docs/Hooks/XMLDB/Jira tools. ⚠️ **Unplaced** |
+| [`laurauguc/grading_assistant`](https://github.com/laurauguc/grading_assistant) | 🟢 **MIT** (`main/LICENSE`, 1,071 B) | — | 🆕 **GradeMate — the rubric is a runtime upload, not a repo encoding.** React + Django + Gemini. 🔵 **Architectural inverse of `bandup`/`MathTutor`**; forced `T1` to grow a second axis |
+| [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | 🟢 **MIT** (`main/LICENSE`, 1,071 B) | — | 🆕 Small clean **LangGraph** reference — tutorial → Q&A → evaluation with carried state, SQLite, Streamlit + CLI. ⚠️ subject-agnostic; reference tier |
+
+### 🔴 Re-measured and corrected inside this pass — 2 rows that a bare-word probe barred
+
+| Repo | 🔴 Probe's first answer | 🟢 Payload's actual answer |
+|---|---|---|
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | `PROHIBIDO` | 🟢 **AGPL-3.0** (`main/LICENSE`, 34,522 B) — Moodle/EdX/Thinkific alternative. 🟢 **MCP layer `@classroomio/mcp` on npm is MIT v0.0.9 — second channel.** ⚠️ network-use copyleft on the core |
+| [`lmscloud-io/moodle-mcp-server`](https://github.com/lmscloud-io/moodle-mcp-server) | `PROHIBIDO`, then `AGPL-3.0` | 🟢 **GPL-3.0** (`main/LICENSE`, 35,148 B) — title block reads *"GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007"* |
+
+🔴 **Two distinct body tokens, two distinct wrong answers, one payload.** §6 contains
+*"`noncommercially`"* → false `PROHIBIDO`; §13 names *"GNU **Affero** General Public License"* → GPL
+read as AGPL. 🔴 **Both are already-closed shelf findings**: §6 is `P250`/`P455`, §13 is `P171` hardened by `P288`,
+and the classifier's own comments name them by number — *"`P171` reabierto por TERCERA vez"*.
+🟢 **The rule has been `P171` all along: family from the title block, never the body.** 🔴 **What is
+new is that the gate added at pass 36 carries no GPL-3.0 and no AGPL-3.0 fixture and reports `9/9`
+anyway** — **`P480`**.
+
+### 🔴 `P482` — one package name, two repos, and the registry points at the one with no grant
+
+| | `SaadRahman01/moodle-mcp` | `loyaniu/moodle-mcp` |
+|---|---|---|
+| In-tree `pyproject.toml` | `name = "moodle-mcp"`, v0.3.0, **`license = { text = "MIT" }`** | `name = "moodle-mcp"`, v0.2.1 |
+| Licence payload | 🟢 **MIT**, 1,067 B | 🔴 **404 on every name × branch** |
+| Owns PyPI `moodle-mcp` | 🔴 **No** | 🟢 **Yes** — and PyPI reports **`license: None`** |
+
+🔵 **Resolution by package name lands — and lands on the ungranted twin.** `p253` found *declaration
+without publication*; this is **two declarations, one publication, publication held by the one with no
+grant**. 🔴 **A "PyPI confirms MIT" line here would have been false in both directions at once.**
+
+### 🟢 Foundations re-measured — the copyleft tier, with bytes
+
+| Repo | Family (title block) | Bytes · path |
+|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 **GPL-3.0** | 35,146 · ⚠️ **`main/COPYING.txt`** — not `LICENSE` |
+| [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | 🟢 **Apache-2.0** | 10,982 · `master/LICENSE` · 🟢 **EMEA**, re-confirmed |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 **ECL-2.0** | 11,340 · `develop/LICENSE` |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🟢 **GPL-2.0** | 15,214 · `master/LICENSE` |
+| [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | 🟢 **LGPL** | 8,240 · `master/LICENSE` |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** | 1,096 · `master/LICENSE` |
+
+⚠️ **`apereo/opencast` resolves nothing** on any branch or filename — the live slug is
+`opencast/opencast`. 🟢 **This file's `foundations.md:1123` already said so**; the probe reproduced the
+shelf's correction rather than making one.
+
+### 🔴 Ungranted or unresolved — 4
+
+[`shrutika00/StudyMate`](https://github.com/shrutika00/StudyMate) (LangGraph + Gemini + RAG adaptive
+tutor, **real, no payload**) · [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms)
+(**real, no payload**) · [`Aditya7808/AI-Powered-Adaptive-Curriculum-Assignment-Generator-Agent`](https://github.com/Aditya7808/AI-Powered-Adaptive-Curriculum-Assignment-Generator-Agent)
+and [`Aryan6238/EduAgent`](https://github.com/Aryan6238/EduAgent) (**both real, both no payload**) ·
+[`EastArctica/canvas-mcp`](https://github.com/EastArctica/canvas-mcp) (**nothing resolved — may not
+exist at this slug**).
+
+🔵 **The pattern across these four is worth naming: agentic curriculum-and-rubric generation is a
+crowded, actively-committed niche in which almost nothing carries a licence.** 🔴 **For this KB that
+is a sourcing dead end, not a shortlist** — capability without a grant is unbuildable, however good
+the README.
+
+### 🆕 Channel movement this pass
+
+| Channel | Result | Consequence |
+|---|---|---|
+| 🆕 `repo.maven.apache.org` | 🟢 **200** (`org/sakaiproject/`, `org/olat/`) | 🟢 **The Java LMS tier's missing second channel.** POM `<licenses>` is a manifest-layer cross-check. ⚠️ **measured as reachable, not yet exercised on a POM** |
+| `search.maven.org` | 🔴 **403** | browse by groupId path; no Solr search |
+| `api.github.com` | 🟡 **host 200, `/rate_limit` 200 (15,000 core, 0 used), per-unattached-repo 403** | **`P479`** — gated by session repo scope, **not blocked by GitHub**. Stars stay out; the stated reason was wrong for 36 passes |
+| `gitlab.com` | 🟡 **301** | reachable, unexercised |
+| `huggingface.co` · `arxiv.org` · `aclanthology.org` · `eur-lex.europa.eu` · `codeberg.org` | 🔴 **000** | no weights licence, no paper, **no Official Journal text** first-hand |
+
+### 🔵 Regional placement — 1 of 5, and the other four said out loud
+
+🟢 **APAC: `THU-MAIC/OpenMAIC`.** 🔴 **LATAM, EMEA, North America and MEA: no new placed repo this
+pass.** LATAM was searched explicitly; its only candidate — a Brazilian-Portuguese Socratic-tutor SLM
+benchmark (8 open models ≤3.8B, offline) — **exists only in secondary prose with no recoverable owner
+slug** and is logged as an unverified lead. ⚠️ **`OpenOLAT` (EMEA) and `OSSS` (NA) were re-confirmed,
+not newly found.**
+
 ## 2026-10-07 — thirty-sixth pass: an Apache-2.0 SIS, two exam-shaped tutors, and a NonCommercial curriculum
 
 > **Append-only.** Newest dated section on top; history preserved below.

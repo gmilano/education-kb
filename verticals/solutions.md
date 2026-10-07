@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-seventh pass, 2026-10-07 — the whole platform shelf re-licensed from payload, and the rule it reveals
+
+**Licences read from payload on `raw.githubusercontent.com`, 2026-10-07**, branch- and case-aware,
+each verdict **anchored to the payload's title block** (**`P171`**; the fixture-coverage gap that let
+this slip in a new instrument is **`P480`**). No star counts (`P479`).
+⚠️ **No in-tree instrument was executable this pass**; verdicts were calibrated against 8 known-answer
+controls instead.
+
+### 🔴 Why every row in this file had to be re-measured
+
+🔵 **`P171` is reopened in the exact place this file lives, and `P480` is why a green gate missed it.** A bare-word NonCommercial test reported
+**AGPL-3.0 and GPL-3.0 payloads as commercially prohibited**, because **§6 of both says *"allowed only
+occasionally and `noncommercially`"***. 🔴 **This file is almost entirely GPL/AGPL** — so the defect's
+blast radius was *this shelf*, and a false `PROHIBIDO` deletes a platform from consideration without
+leaving a row behind.
+
+### 🟢 The platform shelf, by tier, with the licence read from the payload
+
+| Tier | Platform | 🟢 Licence (title block) | Bytes · path | What AI on top looks like |
+|---|---|---|---|---|
+| **LMS** | 🟢 [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | 🟢 **Apache-2.0** | 10,982 · `master/LICENSE` | 🟢 **The one tier-1 LMS you can extend in-product.** Java; Zurich-stewarded. 🟢 **EMEA** |
+| **LMS** | [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 **GPL-3.0** | 35,146 · ⚠️ `main/COPYING.txt` | Deepest plugin catalogue in the category. 🔴 **Deliver as a *plugin* or an out-of-process service** — never a closed fork. 🟢 **Two MCP routes now verified**: `SaadRahman01/moodle-mcp` (MIT, dev-docs + guarded WS) and `lmscloud-io/moodle-mcp-server` (GPL-3.0, WS execution) |
+| **LMS** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** | 11,120 · `master/LICENSE` | ⚠️ **`P476` stands: ECL is Apache-2.0 with the §3 patent grant narrowed to education.** "Basically Apache" is true of copyright and false of patents — and patents are what legal review argues about |
+| **LMS** | 🆕 [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 🟢 **AGPL-3.0** | 34,522 · `main/LICENSE` | 🆕 **Positioned directly against Moodle, EdX, Thinkific and Teachable**, and **AI-native in its own packaging**: the MCP layer ships separately as **`@classroomio/mcp` on npm, 🟢 MIT v0.0.9**. 🔵 **Two licences, two conversations** — an MIT integration layer bolted to an AGPL core. 🔴 **AGPL is network-use copyleft: hosting it for a client triggers source obligations on your modifications** |
+| **SIS** | 🟢 [`rubelw/OSSS`](https://github.com/rubelw/OSSS) | 🟢 **Apache-2.0** | 11,362 · `main/LICENSE` | 🟢 **The one permissive SIS** (pass 36). FastAPI + Keycloak SSO + PostgreSQL; **Ollama + MetaGPT + A2A in-tree**. ⚠️ **self-declared active development, workflow/state-machine logic unfinished — pilot tier, study the architecture** |
+| **SIS** | 🆕 [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🟢 **GPL-2.0** | 15,214 · `master/LICENSE` | Students, grades, scheduling, attendance, billing, discipline, food service, **Moodle integration in-tree**. 🔴 **Strictest row on this shelf** — side-car only |
+| **SIS / ERP** | 🆕 [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | 🟢 **LGPL** | 8,240 · `master/LICENSE` | Odoo-based: admissions, students, faculty, courses **plus LMS delivery**. 🔵 **LGPL is the softest copyleft here — linking a separate AI service is clean, modifying the library is not** |
+| **Lecture capture** | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 **ECL-2.0** | 11,340 · `develop/LICENSE` | Capture → process → deliver. 🔵 **Its recorded-lecture corpus is the natural input to any ingestion pipeline.** ⚠️ default branch is **`develop`**; `apereo/opencast` resolves nothing |
+| **Offline / low-resource** | 🆕 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** | 1,096 · `master/LICENSE` | 🟢 **The most permissive platform on the shelf, and the only one whose architecture already assumes intermittent connectivity.** 🔵 **That is the default condition in LATAM public education, EMEA-Africa and rural APAC — and it is MIT, so the AI layer can ship inside the product** |
+
+### 🟢 The rule this file can now state, because it was measured rather than assumed
+
+> **In open source education there is, per tier, essentially *one* permissive platform — and
+> everything else is copyleft.**
+> **LMS → `OpenOLAT` (Apache-2.0).** **SIS → `OSSS` (Apache-2.0, immature).**
+> **Offline → `Kolibri` (MIT).** Everything else: GPL-2.0, GPL-3.0, LGPL, AGPL-3.0 or ECL-2.0.
+
+🔵 **That turns the platform choice from a preference into a selection of one**, and it makes the
+follow-up question the real one: **when the single permissive option is immature, is the honest
+deliverable a side-car or a fork?** 🟢 **For `OSSS` today the answer is side-car** — its own README
+dates unfinished workflow and state-machine logic, which for a system whose job is enrolment and grade
+workflows is the core, not the periphery.
+
+### 🔵 What the copyleft spread actually costs, stated per obligation rather than per label
+
+| Obligation | Triggered by | Platforms | Practical effect on a Globant deliverable |
+|---|---|---|---|
+| **None** | — | `OpenOLAT`, `OSSS`, `Kolibri` | 🟢 AI layer ships **inside** the product |
+| **Patent grant narrowed** | distribution | `Sakai`, `Opencast` | 🟡 copyright is Apache-shaped; **the §3 patent scope is education-specific** and must reach legal review as ECL, not Apache |
+| **Source on distribution** | shipping modified binaries | `Moodle`, `RosarioSIS` | 🟡 deliver as **plugin / separate service**; modifications to core are publishable |
+| **Source on linking** | linking the library itself | `OpenEduCat` | 🟡 separate-process AI service is clean |
+| 🔴 **Source on network use** | **hosting it for the client** | `ClassroomIO`, Canvas, Open edX | 🔴 **The one obligation that fires on SaaS.** A hosted engagement publishes your modifications — decide this **before** architecture, not at delivery |
+
+🔴 **AGPL is the row that surprises clients, because it is the only one where simply *operating* the
+platform — not shipping it — creates the obligation.** 🔵 **And it is spreading on this shelf: Canvas,
+Open edX and now ClassroomIO are all AGPL-3.0**, which means the LMS tier's *most AI-native* entrants
+carry its strictest terms.
+
 ## 🔴 Thirty-sixth pass, 2026-10-07 — the SIS tier gets an in-tree option, and a secondary source tried to overwrite a verified licence
 
 **Licences read from payload on `raw.githubusercontent.com`, 2026-10-07** (branch- and case-aware),

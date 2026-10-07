@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-seventh pass, 2026-10-07 — the copyleft tier measured correctly for the first time, and the Java tier gets a second channel
+
+**Licences read from each repo's own payload on `raw.githubusercontent.com`, 2026-10-07** (16 filenames
+× `main`/`master`), each verdict **anchored to the payload's title block** rather than to body tokens
+(**`P171`**; the new-instrument fixture gap that let it recur is **`P480`**, written up in
+`agents/top.md`). **No star counts** — see `P479` for why the stated reason
+has been wrong for 36 passes.
+
+### 🔴 Why this file needed a copyleft pass at all
+
+🔵 **These shelves are overwhelmingly copyleft one tier down, and that tier had never been
+payload-measured as a group.** `P171`'s third reopening is what forced the question: a bare-word NonCommercial test
+reported **GPL-3.0 and AGPL-3.0 payloads as commercially prohibited**, because **§6 of both contains
+*"allowed only occasionally and `noncommercially`"***. 🔴 **If the shelf's dominant family can be
+silently mis-barred by the instrument, then the family's rows need to carry their own measured
+evidence**, not an inherited label.
+
+| Repo | 🟢 Licence (payload → title block) | Bytes · path | Why it is a foundation |
+|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 **GPL-3.0** — *"GNU GENERAL PUBLIC LICENSE Version 3"* | **35,146 B** · `main/COPYING.txt` | 🔵 **The reference every other LMS is measured against**, PHP, continuous since 2002, deepest plugin catalogue in the category. 🔴 **GPL-3.0: an AI deliverable is a *plugin* or an out-of-process service, never a fork you keep closed.** ⚠️ **Licence is at `COPYING.txt`, not `LICENSE`** — a probe that omits `COPYING*` reads the world's most deployed LMS as ungranted |
+| [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | 🟢 **Apache-2.0** | **10,982 B** · `master/LICENSE` | 🟢 **Re-confirmed independently this pass.** Still the **permissive full-LMS foundation** (pass 35, `P467` withdrawn) — Zurich-stewarded, Java. 🟢 **EMEA.** 🔵 **The only row in this tier where "extend it in-product" needs no licence conversation** |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 **ECL-2.0** — *"Educational Community License, Version 2.0"* | **11,340 B** · `develop/LICENSE` | Lecture capture, processing and delivery. 🟢 **Shelf slug confirmed correct**: `apereo/opencast` resolves nothing on any branch or filename; `opencast/opencast` resolves on **`develop` and `master`**. 🔵 **This file already recorded that correction at `:1123` — the probe reproduced it rather than finding it** |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🟢 **GPL-2.0** | **15,214 B** · `master/LICENSE` | SIS / school ERP: students, grades, scheduling, attendance, billing, discipline, food service, **Moodle LMS integration in-tree**. 🔴 **GPL-2.0 — the strictest row in the SIS tier**; side-car only |
+| [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | 🟢 **LGPL** | **8,240 B** · `master/LICENSE` | Odoo-based education ERP — admissions, students, faculty, courses, **plus LMS delivery**, which most free SIS platforms omit. 🔵 **LGPL is the softest copyleft in this tier**: linking a separate AI service is clean, modifying the library is not |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** | **1,096 B** · `master/LICENSE` | 🟢 **The permissive offline-first row.** Designed for low-connectivity and low-resource deployment — 🔵 **the only foundation here whose architecture already assumes the constraint that defines LATAM, EMEA-Africa and rural APAC engagements**, and it is **MIT**, so it can be extended in-product without a licence conversation |
+
+### 🆕 The Java LMS tier finally has a second channel — `repo.maven.apache.org` is reachable
+
+🔴 **Every prior pass cross-checked licences through PyPI or npm, which left the Java tier — Sakai,
+OpenOLAT, Opencast, Kuali — on a single channel.** Measured this pass:
+
+| Channel | Result |
+|---|---|
+| 🆕 `repo.maven.apache.org/maven2/org/sakaiproject/` | 🟢 **200** |
+| 🆕 `repo.maven.apache.org/maven2/org/olat/` | 🟢 **200** |
+| `search.maven.org/solrsearch/select` | 🔴 **403** — the Solr API is blocked |
+
+🔵 **So the route exists but it is *browse by groupId path*, not search.** A POM's `<licenses>` block is
+a **manifest-layer** declaration (`p289`, `p294`), which makes it a genuine independent channel for the
+tier that has had none. ⚠️ **Not yet exercised on a POM payload this pass — recorded as a measured,
+open route, not as a completed cross-check.** Next pass should close it on `OpenOLAT` and `Sakai`.
+
+### 🔵 What the licence spread actually means for a delivery decision
+
+| Tier | Permissive option | Reality |
+|---|---|---|
+| **LMS** | 🟢 **`OpenOLAT`** (Apache-2.0) | the rest — Moodle GPL-3.0, Canvas AGPL-3.0, Open edX AGPL-3.0, Sakai ECL-2.0 — is copyleft or patent-narrowed |
+| **SIS** | 🟢 **`rubelw/OSSS`** (Apache-2.0, ⚠️ workflow logic unfinished) | openSIS GPL · RosarioSIS GPL-2.0 · OpenEduCat LGPL |
+| **Offline / low-resource** | 🟢 **`Kolibri`** (MIT) | 🔵 **no copyleft competitor at all in this niche on these shelves** |
+
+🔴 **The pattern is consistent and it is the single most useful sentence this file can give an
+engagement: in open source education there is usually exactly *one* permissive option per tier, and
+every other option is copyleft.** 🔵 **So the licence choice is not a preference, it is a selection of
+one — and if that one is immature (`OSSS`) the honest answer is a side-car, not a fork.**
+
 ## 🟢 Thirty-sixth pass, 2026-10-07 — the permissive in-tree option reaches the SIS tier
 
 **Licences read from each repo's own payload on `raw.githubusercontent.com`, 2026-10-07** (16 filenames

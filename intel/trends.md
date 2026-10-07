@@ -4,6 +4,121 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-seventh pass, 2026-10-07 — five trends: the tutor becomes a classroom, and local inference stops being the fallback
+
+⚠️ **T1, T2 and T4 rest on payload-verified repositories measured this pass. T3 and T5 mix payload
+evidence with secondary sources, and every market/regulatory domain cited is blocked from this
+environment (`000`), `eur-lex.europa.eu` included.** The distinction is load-bearing and belongs in any
+deck built from this file.
+
+### T1 🔵 The binding axis has three values, not two — and the third one changes who owns the asset
+
+Pass 36 established that the tutor is becoming **jurisdiction-shaped**: `bandup` marks Singapore PSLE
+and A-Level GP against *those papers'* band descriptors; `MathTutor` targets India's JEE;
+`lesson-plan-parse-mbsse` encodes Sierra Leone's national lesson plans. 🟢 **This pass adds the
+counter-example that forces a second axis**, and it is not a weaker case — it is a different
+architecture:
+
+| Asset | Binding | Where the rubric lives |
+|---|---|---|
+| `bandup` (MIT) · `MathTutor` (MIT) | 🟢 **Jurisdiction** — PSLE /40, A-Level GP /50, JEE | 🔴 **Encoded in the repo** |
+| 🆕 `SaadRahman01/moodle-mcp` (MIT) | 🟢 **Platform** — Moodle's Hooks API, capabilities, XMLDB, WS surface | n/a — the *platform contract* is the binding |
+| 🆕 `laurauguc/grading_assistant` (MIT) | 🟢 **Nothing** — rubric-agnostic | 🟢 **Uploaded by the teacher at runtime** |
+
+🔵 **The three shapes sell completely differently, and conflating them is how an engagement gets
+mispriced.**
+
+- **Jurisdiction-bound** → the differentiator is the **rubric encoding**, the client owns it, and it
+  cannot be handed to a vendor's cloud. The scaffolding is commodity.
+- **Platform-bound** → the differentiator is **surviving the platform's upgrade cycle**. `moodle-mcp`
+  is explicit about this: *"hardened to survive site redesigns"*, version-filtered docs, Jira tracker
+  search. 🔵 **This is a maintenance product, not a model product.**
+- **Rubric-agnostic** → 🔴 **there is no moat, and that is the point.** `GradeMate` takes any rubric as
+  an upload, which makes it the right **pilot** vehicle — fastest path to a teacher using it — and the
+  wrong **platform** bet.
+
+🟢 **The sequencing this implies: pilot rubric-agnostic, productise jurisdiction-bound, price
+platform-bound as a retainer.**
+
+### T2 🟢 The unit is shifting from the tutor to the classroom, and the new artefact is the peer
+
+🆕 **`THU-MAIC/OpenMAIC` (MIT, Tsinghua MAIC) is not a better tutor — it is a different unit.** AI
+**teachers and AI classmates** that speak, draw on a shared whiteboard, and hold real-time discussion;
+one click turns a document into slides, quizzes, interactive simulations and project-based activities.
+
+🔵 **The AI *classmate* is the genuinely new object here, and it is pedagogically load-bearing rather
+than decorative.** A 1:1 tutor can only model expert→novice transfer. A simulated cohort can carry
+peer explanation, disagreement and group work — the mechanisms that 1:1 tutoring structurally cannot
+reproduce, and that the **0.3–0.5 SD** tutoring effect size is measured *against* rather than on top of.
+
+🔴 **The honest caveat: no evaluation of the classmate mechanism is verifiable from here.** The
+`JCST'26` paper (`10.1007/s11390-025-6000-0`) is real as a citation and **unreadable in this
+environment** — `arxiv.org` and `aclanthology.org` are `000`. 🔵 **So shelve `OpenMAIC` on its
+**architecture and licence**, which are payload-verified, and treat the learning-outcome claim as
+unverified until a reachable channel exists.**
+
+### T3 🟢 Local inference has stopped being the degraded fallback and become the compliance feature
+
+Three independent assets, three regions, same architectural choice:
+
+| Asset | Local path | Posture |
+|---|---|---|
+| 🆕 `OpenMAIC` (APAC) | **Lemonade** local inference + **FunASR** local ASR | 🟢 **the whole classroom runs on-premise** |
+| `bandup` (APAC, pass 36) | **Ollama**, no telemetry | 🔴 **persistent warning when a non-local model is selected** |
+| `Kolibri` (MIT) | offline-first by design | 🟢 **assumes intermittent connectivity as the normal case** |
+
+🔵 **What changed is that regulation now pays for this, in all four regions at once** — and it is the
+rare case where the compliant architecture is also the cheaper one at scale:
+
+- 🔴 **California AB 1159** forecloses training on student data outright — the "we improve the model
+  on your data" clause is simply unavailable.
+- 🔴 **Korea's AI Basic Act** (in force January 2026) names **education** high-impact; **Japan and
+  Korea** mandate student-data encryption with penalties.
+- 🔴 **EU AI Act** high-risk duties — data governance and human oversight — applicable since **2 Aug
+  2026**.
+- 🔵 **LATAM**: <10% of institutions hold formal guidelines, so **"the data never leaves" is the
+  policy**, delivered as architecture instead of paperwork.
+
+🟢 **The consequence for a proposal: "runs on your infrastructure" moved from a concession you make on
+price to the clause that wins the deal.**
+
+### T4 🔴 Education's open source frontier is copyleft — and the most AI-native entrants carry the strictest terms
+
+Measured from payload this pass, by tier: 🟢 **exactly one permissive option each** — `OpenOLAT`
+(Apache-2.0) for LMS, `OSSS` (Apache-2.0, immature) for SIS, `Kolibri` (MIT) for offline — against
+**Moodle GPL-3.0, RosarioSIS GPL-2.0, OpenEduCat LGPL, Sakai and Opencast ECL-2.0, and Canvas, Open
+edX and 🆕 ClassroomIO all AGPL-3.0**.
+
+🔴 **The direction of travel is the problem.** `ClassroomIO` is the newest, most explicitly AI-native
+LMS on these shelves — it ships its own MCP server — and it is **AGPL-3.0**, the one licence whose
+obligation fires on **operating** the software rather than shipping it. 🔵 **So the entrants most
+attractive to an AI engagement are arriving under the terms least compatible with hosting one.**
+
+🟢 **And `ClassroomIO` shows the shape the market is settling into: an MIT integration layer
+(`@classroomio/mcp`, verified on npm) bolted to an AGPL core.** 🔵 **Two licences, two conversations —
+and a deck that names only the permissive half is describing the adapter, not the platform.**
+
+### T5 🔴 In agentic education, capability without a grant is the normal state — and the grant is the scarce input
+
+**4 of 10 repositories probed this pass serve no licence payload at all**, every one of them real and
+actively committed: `StudyMate` (LangGraph + Gemini + RAG + SQLite, diagnostic assessment and
+replanning), `mcp-canvas-lms`, and **both** agentic curriculum-and-rubric generators
+(`AI-Powered-Adaptive-Curriculum…`, `EduAgent`).
+
+🔵 **The clustering is the signal, not the count: the niche closest to what clients ask for —
+"generate the curriculum, the assignments and the rubric, then grade against it" — is precisely the
+niche where nothing carries a licence.** 🔴 **For this KB that is a sourcing dead end, not a
+shortlist.** A README cannot be built on.
+
+🟢 **Which is why the regulatory convergence matters more than it looks.** OECD and EDUCAUSE 2026 both
+find **AI-assisted grading outperforms fully autonomous grading**; NA states bar machine-emitted
+high-stakes decisions outright (**NYC's Red list: grading, discipline, promotion, surveillance**); the
+EU classifies exam scoring as high-risk. 🔵 **So the unlicensed cluster is chasing full autonomy — the
+capability that is simultaneously unbuildable from these repos and unsellable under the regulation.**
+🟢 **The buildable product is the assistive one, and it is the one the permissive shelf already
+supports:** `GradeMate` (MIT) for rubric intake, `OpenMAIC` (MIT) for delivery, `moodle-mcp` (MIT) for
+the platform surface, `lm-evaluation-harness-pt` (MIT) for evaluation.
+
 ## 🟢 Thirty-sixth pass, 2026-10-07 — five trends: the tutor stops being general, and a market series stops being one series
 
 ⚠️ **T1 and T2 rest on payload-verified repositories. T3–T5 rest on secondary sources and every cited

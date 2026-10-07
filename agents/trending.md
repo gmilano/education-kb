@@ -4,6 +4,87 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — thirty-seventh pass: a multi-agent classroom from Tsinghua, and the fixture set that let `P250` back in
+
+> **Append-only.** Newest dated section on top; history preserved below.
+
+⏱️ **Measurement window 2026-10-07**, **fourth pass of this date** (34, 35, 36 ran earlier). **10
+repositories probed** first-hand against `raw.githubusercontent.com`, branch- and case-aware (16
+licence filenames × `main` **and** `master`).
+
+🔴 **No in-tree instrument could be executed this pass** — `discover_probe.sh --self-test` and any
+sourcing of `compose/code/lib/license_family.sh` are **denied by the session's auto-mode classifier as
+external code**. `P237`'s remedy was therefore unavailable, the pass reimplemented the classifier, and
+**reproduced `P171`/`P250`'s documented defects on the first run**. Calibration against **8 known-answer
+controls** (incl. both GPL variants + negative control) replaced the unexecutable self-test. Full
+write-ups: **`P480`**, **`P482`**, **`P479`** in `agents/top.md`.
+
+**Census of the 10, every class named so the denominator closes: 4 permissive** (all MIT), **2
+copyleft but commercially usable** (AGPL-3.0, GPL-3.0), **3 real and serving no licence payload**, **1
+unresolved on every existence filename** — 4 + 2 + 3 + 1 = **10**. Negative control
+`totally-fake-org-zzz9/nope-repo-abc` → **NO-PAYLOAD**, correctly separated from the 3 ungranted-but-real.
+
+### 🟢 Granted and permissive — 4 of 10
+
+| Repo | Licence (payload) | Cross-channel | Why it matters |
+|---|---|---|---|
+| 🆕 [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **MIT** (`main/LICENSE`, 1,064 B) | — | 🟢 **A multi-agent *classroom*, not a tutor.** AI teachers **and AI classmates** that speak, draw on a whiteboard and discuss in real time; one-click slides, quizzes, simulations and PBL from any document. **LangGraph 1.1** on Next.js 16 / React 19 / TS 5. Provider-plural (OpenAI, Azure, Anthropic, Bedrock, Gemini, DeepSeek) **plus Lemonade local inference and FunASR local ASR — the classroom runs on-premise**. **JCST'26** paper; **11 releases since 2026-03-26**, `v1.2.0-rc.1` on **2026-10-04**. 🟢 **APAC** (Tsinghua MAIC, Beijing) |
+| 🆕 [`SaadRahman01/moodle-mcp`](https://github.com/SaadRahman01/moodle-mcp) | 🟢 **MIT** (`main/LICENSE`, 1,067 B) | 🟢 in-tree `pyproject.toml` agrees; 🔴 **PyPI name belongs to another repo** (`P482`) | 🆕 **The first Moodle MCP here that treats a live LMS as a hostile surface.** 10 tools over `moodledev.io` (BM25 + trigram rerank), Hooks API, `RISK_*` capability cards, XMLDB, Moodle Jira — plus live-instance WS calls that are **SSRF-guarded, allowlisted, and refuse loopback/private hosts**. `readOnlyHint`/`destructiveHint` annotations. ⚠️ **Unplaced** — platform-bound |
+| 🆕 [`laurauguc/grading_assistant`](https://github.com/laurauguc/grading_assistant) (**GradeMate**) | 🟢 **MIT** (`main/LICENSE`, 1,071 B) | — | 🔵 **The rubric is an upload, not an encoding** — React + Django + Gemini, teachers bring their own rubric. **The architectural inverse of `bandup`/`MathTutor`**, and the reason `T1` needed a second axis this pass. ⚠️ **Unplaced by design** |
+| 🆕 [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | 🟢 **MIT** (`main/LICENSE`, 1,071 B) | — | Clean small **LangGraph** reference: tutorial → Q&A → knowledge evaluation with state carried across, SQLite persistence, Streamlit + CLI. ⚠️ **Subject-agnostic breadth-first tutor** — reference tier, not a delivery base. **Unplaced** |
+
+### 🔴 The two that this pass's own probe called `PROHIBIDO` — and both are usable
+
+| Repo | Probe said | 🟢 Payload actually says |
+|---|---|---|
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 🔴 `NC-RESTRICTED` / **PROHIBIDO** | 🟢 **AGPL-3.0** (34,522 B). Moodle/EdX/Thinkific alternative; **MCP layer published as `@classroomio/mcp` on npm, 🟢 MIT v0.0.9 — second channel**. ⚠️ network-use copyleft on the core |
+| [`lmscloud-io/moodle-mcp-server`](https://github.com/lmscloud-io/moodle-mcp-server) | 🔴 `NC-RESTRICTED` / **PROHIBIDO** | 🟢 **GPL-3.0** (35,148 B). Moodle WS execution from an MCP client. ⚠️ side-car only |
+
+🔴 **Cause, measured:** **GPL-3.0 §6 and AGPL-3.0 §6 both contain the word `noncommercially`** — *"this
+alternative is allowed only occasionally and noncommercially"*, **line 259** of the `classroomio`
+payload. A bare-word NonCommercial test fired on it. 🔵 **`P473` says test NonCommercial first; done as
+a token match that ordering inverts and reports the shelf's dominant copyleft family as commercially
+barred.** 🔴 **A false `PROHIBIDO` leaves no row behind, so it is the one error class this KB cannot
+audit after the fact.** 🟢 **The rule that catches both is `P171` — *family from the title block, never the body* — and the
+shared classifier states it at line 16 and closes §13 at `P288`. 🔴 **So the licence logic was never
+the gap. The gap is that `p473-probe-commercial-gate`, added yesterday, carries fixtures for
+Apache-2.0, MIT, ECL-2.0 and CC-BY-NC-4.0 and **none for GPL-3.0 or AGPL-3.0** — the exact pair
+`P171` protects — and still reports `9/9`. That is **`P480`**.**
+
+🔴 **And the gate could not have caught it.** `p473-probe-commercial-gate/fixtures/` holds Apache-2.0,
+MIT, ECL-2.0 and CC-BY-NC-4.0 — **no GPL, no AGPL**. It reports **9/9** over a set that excludes the
+family where the tripwire lives.
+
+### 🔴 Ungranted or unresolved — 4 of 10
+
+| Repo | Verdict |
+|---|---|
+| [`shrutika00/StudyMate`](https://github.com/shrutika00/StudyMate) | **UNGRANTED** — real (`main/README.md`), no payload. LangGraph + Gemini + RAG + SQLite adaptive tutor with diagnostic assessment and replanning — 🔵 **capable and unbuildable** |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | **UNGRANTED** — real, no payload |
+| [`Aditya7808/AI-Powered-Adaptive-Curriculum-Assignment-Generator-Agent`](https://github.com/Aditya7808/AI-Powered-Adaptive-Curriculum-Assignment-Generator-Agent) · [`Aryan6238/EduAgent`](https://github.com/Aryan6238/EduAgent) | **UNGRANTED** — both real, both no payload. 🔵 **Agentic-RAG curriculum + rubric generation is a busy niche where almost nothing carries a grant** |
+| [`EastArctica/canvas-mcp`](https://github.com/EastArctica/canvas-mcp) | **NO-PAYLOAD** — nothing resolved; may not exist at this slug |
+
+### 🔵 Region placement this pass — one placed, three gaps stated outright
+
+| Region | Placed this pass | |
+|---|---|---|
+| **APAC** | 🟢 **`THU-MAIC/OpenMAIC`** (Tsinghua MAIC, Beijing) | the only regional placement earned |
+| **LATAM** | 🔴 **None.** Searched explicitly. The one candidate — a Brazilian-Portuguese Socratic-tutor SLM benchmark (8 open models ≤3.8B, offline) — **appears only in secondary prose with no recoverable owner slug**, so it is an unverified lead | 🔵 **An informed gap. Pass 36 placed LATAM via `eduagarcia/lm-evaluation-harness-pt`; this pass adds nothing to it** |
+| **EMEA** | 🔴 **None new.** `openolat/OpenOLAT` (Apache-2.0, Zurich) **re-confirmed** from payload this pass, but it is pass 35's find, not this one | |
+| **North America** | 🔴 **None new.** `rubelw/OSSS` re-confirmed Apache-2.0; pass 36's find | |
+
+🔴 **Three of five regions produced no new placed agent this pass, and that is written here rather than
+left to look like coverage.**
+
+### 🆕 Channel movement
+
+🔵 **`api.github.com` is reachable with an intact 15,000-request quota; the 403 is per-repository
+session scoping whose body names `add_repo` as the remedy, and `add_repo(read)` explicitly does not
+grant API coverage** (`P479`). 🟢 **Star counts stay out of this shelf — the discipline is unchanged,
+the stated reason was wrong for 36 passes.** 🆕 **`repo.maven.apache.org` → 200**, the Java LMS tier's
+missing second channel (`org/sakaiproject/`, `org/olat/` both resolve); `search.maven.org` → 403, so
+browse by groupId path.
+
 ## 2026-10-07 — thirty-sixth pass: five placed agents, one NonCommercial trap, and npm opens as a channel
 
 > **Append-only.** Newest dated section on top; history preserved below.

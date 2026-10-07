@@ -4,6 +4,166 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-seventh pass, 2026-10-07 — four recipes, one per region: P49, P50, P51, P52
+
+**Every repo named below had its licence read from its own payload on `raw.githubusercontent.com` on
+2026-10-07**, with the family **anchored to the payload's title block** (**`P171`**). No star counts
+(`P479`), so these recipes are composed on **licence and documented capability**, never popularity.
+⚠️ **No model-weights licence is verified anywhere here — `huggingface.co` is `000`.** ⚠️ **Every
+regulatory date below is secondary-sourced and every source domain is blocked from this environment**
+— re-verify against the Official Journal, each national gazette and each state's legislative record
+before any of it enters a client deliverable.
+
+🔴 **Step 0 of every recipe, and it changed this pass.** `compose/code/p473-probe-commercial-gate/` is
+the shelf instrument every candidate repo must pass — **but it could not be executed in this
+environment**, and its fixture set holds **no GPL-3.0 and no AGPL-3.0 specimen** while reporting 9/9
+(**`P480`**) — the exact pair `P171` exists to protect.
+🟢 **So step 0 is: run the gate where it *can* execute, and calibrate it against known-answer controls
+that include both GPL variants before believing any `PROHIBIDO`.** The 8 controls used this pass are
+tabulated in `agents/top.md`. 🔵 **A `PROHIBIDO` on a 34 KB payload is a GPL-family false positive
+until the title block says otherwise.**
+
+### 🔵 Why these four and not one
+
+The four recipes are **not variants of one build**. Each is anchored to the binding that actually
+drives its region's buying decision — 🔴 **statutory artefacts in EMEA, data residency in APAC, a
+list of prohibited functions in North America, institutional governance in LATAM** — and each uses a
+*different* permissive foundation because, per `T4`, there is only one per tier.
+
+---
+
+## P49 — EMEA: the conformity-assessment pack for a high-risk education system
+
+**Problem it solves.** 🔴 **The EU AI Act's high-risk obligations for education became fully
+applicable on 2 August 2026** — admission decisions, evaluation of learning outcomes and exam scoring
+are all in scope — **and institutions are, by their own published assessments, still in
+pre-compliance.** 🔵 **The client does not need a better grader. They need the technical file,
+and the deadline is already behind them.**
+
+🟢 **The deliverable is a set of artefacts, not a model**: risk-management record, data-governance
+record, human-oversight design, transparency documentation, conformity assessment.
+
+| Component | Licence (payload) | Role |
+|---|---|---|
+| [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | 🟢 **Apache-2.0** · 10,982 B | 🟢 **The LMS the compliance layer lives *inside*.** The only tier-1 LMS with no copyleft conversation — and Zurich-stewarded, which matters to an EMEA procurement |
+| `compose/code/aiact-50-2-marking/` + `-spans/` + `-pack/` + `-exposure/` | in-tree | 🟢 **Already built: marking, span provenance, the XSD-validated pack, and the exposure scan.** This recipe wires them to a platform rather than writing them |
+| [`laurauguc/grading_assistant`](https://github.com/laurauguc/grading_assistant) | 🟢 **MIT** · 1,071 B | **Rubric intake.** Teacher-uploaded rubric → the human-oversight artefact names *whose* rubric governed each decision |
+| [`eduagarcia/lm-evaluation-harness-pt`](https://github.com/eduagarcia/lm-evaluation-harness-pt) | 🟢 **MIT** | **The evaluation record.** A high-risk technical file needs reproducible accuracy evidence; this is a harness, not a vibe check |
+| **Lemonade** / **Ollama** local inference | — | 🔴 **Data governance is far cheaper to evidence when the data does not move.** See `T3` |
+
+**Wiring.** `OpenOLAT` assignment hook → rubric resolved through `grading_assistant`'s intake → marking
+through the `aiact-50-2-marking` path, which emits **spans** tied to rubric clauses → `-pack` produces
+the XSD-validated provenance envelope per decision → `-exposure` scans the deployment for unmarked
+surfaces → the harness produces the accuracy appendix. 🔴 **The human-oversight gate is a hard commit
+step, not a notification**: no score leaves the system without a named human action recorded against
+the span set.
+
+⏱️ **8–10 weeks.** 🟢 **What makes it sellable: every artefact is a document the institution must
+produce anyway**, and it is repeatable across institutions in the same member state.
+
+⚠️ **Re-verify the 2 Aug 2026 applicability date and the Annex III scope against the Official
+Journal.** `eur-lex.europa.eu` is `000` from here and this KB has **never** read that text first-hand.
+
+---
+
+## P50 — APAC: the on-premise multi-agent classroom, with jurisdiction gates
+
+**Problem it solves.** 🔴 **Four jurisdictions, four regimes, one product**: Korea's AI Basic Act (in
+force January 2026) names **education high-impact**; Japan and Korea mandate **student-data
+encryption with penalties**; China runs the region's most developed binding regime; India has **no
+dedicated AI statute** at all. 🔵 **A single cloud deployment cannot satisfy this set, and a
+per-country rebuild cannot be priced.**
+
+| Component | Licence (payload) | Role |
+|---|---|---|
+| 🆕 [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **MIT** · 1,064 B | 🟢 **The product.** Multi-agent classroom — AI teachers **and AI classmates**, whiteboard, live discussion; one-click slides / quizzes / simulations / PBL from any document. **LangGraph 1.1** on Next.js 16 / React 19 |
+| **Lemonade** (local inference) + **FunASR** (local ASR) | — | 🟢 **Already first-class in `OpenMAIC`, not bolted on.** The classroom — speech included — runs inside the institution |
+| [`BaijayantaRoy/bandup`](https://github.com/BaijayantaRoy/bandup) | 🟢 **MIT** | **The assessment half, jurisdiction-bound**: Singapore PSLE composition /40 and A-Level GP /50 against each paper's own band descriptors. ⚠️ **bands explicitly unofficial** |
+| [`dikshant182004/MathTutor`](https://github.com/dikshant182004/MathTutor) | 🟢 **MIT** | **The India/JEE reference architecture** — 14-node LangGraph, **a critic agent that verifies its own answers**, Redis episodic/semantic/procedural memory, BM25 + dense + RRF retrieval |
+| **LangGraph policy nodes** | — | 🔴 **One graph, per-jurisdiction gates** |
+
+**Wiring.** `OpenMAIC` is the delivery surface. 🟢 **Insert a policy node immediately before every
+egress and every assessment write**, parameterised per market: **Korea** → high-impact disclosure
+record + encryption-at-rest assertion; **Japan/Korea** → student-data encryption gate; **China** →
+binding-regime checks; **India** → privacy/consumer-law baseline. Assessment routes to `bandup` for
+Singapore instruments and follows `MathTutor`'s **critic-agent** pattern elsewhere, so a marked answer
+is verified before a learner sees it. 🔴 **Local inference is the default path; a cloud model is an
+explicit per-tenant opt-in that trips the disclosure node.**
+
+⏱️ **12–14 weeks.** 🟢 **The leverage: the classroom and the local-inference path are MIT and already
+written** — the build is the policy layer and the rubric encoding.
+
+⚠️ **`OpenMAIC`'s learning-outcome claim rests on a `JCST'26` paper that is unreadable from here.** Sell
+the architecture and the residency posture; do **not** quote an effect size for it.
+
+---
+
+## P51 — North America: assistive grading that is architecturally incapable of the prohibited actions
+
+**Problem it solves.** 🔴 **The regulation names the forbidden functions explicitly, and "we trained
+staff not to do that" is not an answer.** NYC Public Schools' March 2026 Traffic Light Framework puts
+**grading, discipline, promotion/graduation decisions and behavioural surveillance** on a **Red —
+never permitted** list; Oklahoma and Maryland require human oversight and bar AI from high-stakes
+student decisions; **Maryland's AI Ready Schools Act** gives 24 districts 120 days to adopt aligned
+policies; **California AB 1159** prohibits training models on student data.
+
+🔵 **So the product requirement is a negative capability** — and the only credible way to demonstrate
+a negative capability is architecture.
+
+| Component | Licence (payload) | Role |
+|---|---|---|
+| [`rubelw/OSSS`](https://github.com/rubelw/OSSS) | 🟢 **Apache-2.0** · 11,362 B | 🟢 **The substrate, and it already models the right tenant**: districts as top-level, board governance, accounting, transportation. **FastAPI + Keycloak SSO + PostgreSQL**, with **Ollama + MetaGPT + A2A in-tree**. ⚠️ **workflow/state-machine logic self-declared unfinished — pilot tier, side-car the writes** |
+| [`laurauguc/grading_assistant`](https://github.com/laurauguc/grading_assistant) | 🟢 **MIT** · 1,071 B | 🟢 **Rubric-agnostic intake is the correct shape here** — the district brings its rubric, so no rubric is encoded in a vendor's repo |
+| **Ollama** (in `OSSS`'s stated architecture) | — | 🔴 **`AB 1159` makes no-train non-negotiable.** On-premise inference is how you evidence it |
+| `compose/code/aiact-50-2-pack/` | in-tree | **Decision provenance.** Built for EU marking; the envelope is jurisdiction-neutral and carries the audit trail |
+| `compose/code/action-gap-crosscheck/` | in-tree | 🟢 **The Red-list gate** — crosscheck every emitted action against the prohibited set |
+
+**Wiring.** `OSSS` holds roster, enrolment and grade state; 🔴 **the AI layer is a side-car with
+read access and *no* write path to promotion, discipline or graduation fields** — the negative
+capability is enforced by **database grants**, not by prompt instructions. Scoring produces a
+**recommendation plus the provenance envelope**; a human commit step writes it. `action-gap-crosscheck`
+runs as the egress gate. 🟢 **Policy is a parameter set, one per district**, because 24 districts on
+independent 120-day clocks is 24 policies, not one deployment.
+
+⏱️ **8–10 weeks** for the first district, **~1–2 weeks** per district thereafter. 🟢 **The artefact
+that wins the review: a schema-level demonstration that the Red-list fields are unreachable from the
+AI service's credentials.**
+
+---
+
+## P52 — LATAM: institution-scale text understanding, offline-capable, with the governance pack
+
+**Problem it solves.** 🔴 **79% of LATAM faculty use AI in teaching; fewer than 10% of institutions
+have formal guidelines.** 🔵 **That gap is not a tooling gap, and the three named production
+deployments in the region show what actually sells — none of them is student-facing tutoring:**
+Lottus Education (Mexico) `LucIA` processes **90,000 students' feedback across 45 campuses in 15
+minutes** against nearly two months manually; PUC-PR (Brazil) `AvalIA` classifies **270,000+ student
+comments**; Universidad Panamericana (Mexico) `SyllabUP` validates **curricular programmes and
+accreditation evidence** on an agent architecture.
+
+🟢 **So build institution-scale text understanding plus the governance artefacts, delivered to run
+where connectivity is intermittent.**
+
+| Component | Licence (payload) | Role |
+|---|---|---|
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** · 1,096 B | 🟢 **The only platform on these shelves that assumes intermittent connectivity as the normal case**, and permissive enough to ship the AI layer **inside** the product |
+| [`eduagarcia/lm-evaluation-harness-pt`](https://github.com/eduagarcia/lm-evaluation-harness-pt) | 🟢 **MIT** | 🟢 **Portuguese evaluation, from CEIA / Federal University of Goiás.** Direct-response eval, chat-template autodetect, **vLLM + LiteLLM on one harness** — the accuracy evidence a Brazilian institution's governance document needs |
+| [`AI-for-Education/lesson-plan-parse-mbsse`](https://github.com/AI-for-Education/lesson-plan-parse-mbsse) | 🟢 **MIT** | 🔵 **The method, portable to any ministry curriculum**: rule-based parsing with **LLMs confined to the cleaning step** — the auditable division of labour, and why its output is trustworthy enough to build on |
+| **Ollama / vLLM** local inference | — | 🔴 **With <10% of institutions holding guidelines, "the data never leaves" is the policy** — delivered as architecture instead of paperwork |
+| `compose/code/aiact-50-2-pack/` | in-tree | **Provenance envelope**, reusable under **Brazil's PL 2.338/2023** risk-based transparency duties |
+
+**Wiring.** Ministry or institutional curriculum → the **MBSSE parser pattern** (rules parse,
+LLM cleans only) → structured curriculum as the retrieval spine. Feedback, course comments and syllabus
+documents are classified at institution scale — the `LucIA` / `AvalIA` / `SyllabUP` shape — with every
+classification emitting a provenance envelope. `Kolibri` carries delivery to low-connectivity sites;
+the Portuguese harness produces the accuracy appendix. 🟢 **Ship the institution's AI-use guideline as
+a deliverable of the engagement**, generated from the provenance records rather than written from
+scratch — 🔵 **which converts the region's governance gap from an objection into the first invoice.**
+
+⏱️ **6–8 weeks.** ⚠️ **Spanish-language evaluation has no equivalent to the Portuguese harness on
+these shelves** — 🔴 **an explicit gap: a Mexico or Colombia engagement has no verified Spanish
+evaluation asset here, and that should be scoped as build, not reuse.**
+
 ## 🟢 Thirty-sixth pass, 2026-10-07 — two recipes: P47, P48 — plus one new instrument
 
 **Every repo named below had its licence read from its own payload on `raw.githubusercontent.com` on

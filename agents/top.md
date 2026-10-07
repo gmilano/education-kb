@@ -4,6 +4,251 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🔴 Thirty-seventh pass, 2026-10-07 — the pass that reproduced `P250` on purpose-built new code, and found the fixture set that hid it
+
+**Every licence below was read from the repository's own payload on `raw.githubusercontent.com` on
+2026-10-07**, branch- and case-aware (16 licence filenames × `main` **and** `master`). **No star counts
+are claimed.** ⏱️ **Fourth pass of this date** (34, 35 and 36 all ran earlier).
+
+🔴 **This pass could not execute a single in-tree instrument.** `./discover_probe.sh --self-test` and
+every sourcing of `compose/code/lib/license_family.sh` were **denied by the session's auto-mode
+classifier as external code**. 🔵 **So `P237`'s remedy — "do not write a classifier, source the shared
+one" — was unavailable, not ignored.** The pass reimplemented it, and reproduced the exact defect
+`P250` was created to fix, on the exact families and the exact licence section the shared classifier's
+own comments name. That is `P480`, and the interesting part is not the mistake but **why no self-test
+would have caught it**.
+
+### 🔴 `P480` — a new instrument inherited the shared classifier's CODE but not its REGRESSION COVERAGE
+
+🔴 **Correction, made inside this pass before anything was promoted.** The first draft of this
+finding claimed the rule *"family from the title block, never from body tokens"* as new. 🔴 **It is
+not. It is `P171`, and `compose/code/lib/license_family.sh:16` states it verbatim** — *"Classifies on
+the TITLE BLOCK (first 40 lines), never the body (P171)"*. 🔵 **Order of precedence on this shelf is
+payload > shelf > secondary prose, and the shelf already held the answer**, so the claim is withdrawn
+and what remains is the part the shelf does *not* hold.
+
+Three misreads happened in this pass's reimplementation. 🔴 **All three are already-closed shelf
+findings, and the classifier's own comments name them by number:**
+
+| # | Payload | Body token that fired | Wrong verdict | 🟢 Truth (title block) |
+|---|---|---|---|---|
+| 1 | `sakaiproject/sakai` | *"Apache License"* appears **inside** ECL's own preamble | `Apache-2.0` | 🟢 **`ECL-2.0`** — `P476`, already on this shelf |
+| 2 | `classroomio/classroomio`, `lmscloud-io/moodle-mcp-server` | 🔴 **§6: *"allowed only occasionally and `noncommercially`"*** | 🔴 **`PROHIBIDO`** | 🟢 **`AGPL-3.0`** / **`GPL-3.0`** — commercial use **permitted** under copyleft |
+| 3 | `lmscloud-io/moodle-mcp-server` | 🔴 **§13 names *"GNU Affero General Public License"*** | `AGPL-3.0` | 🟢 **`GPL-3.0`** — title block reads *"GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007"* |
+
+| # | Already registered as | Where |
+|---|---|---|
+| 1 | 🟢 **`P476`** | this shelf, pass 36 |
+| 2 | 🟢 **`P250`** · and **`P455`** — *"`P171` reabierto por TERCERA vez … la «noncommercially» de la sección 6"* | `license_family.sh:50-54` |
+| 3 | 🟢 **`P171`** · hardened by **`P288`** (casefold) — *"la sección 13 de la GPL-3.0 nombra la AGPL, pero dice «licensed UNDER», no «refers to» — por eso el ancla lleva «refers to» y `P171` queda cerrado"* | `license_family.sh:230-236` |
+
+🔵 **The classifier even records the byte offsets of the two tripwires in `moodle/COPYING` — §13 at
+byte 28,272 — which is the same payload this pass re-measured at 35,146 B.** 🟢 **Nothing about the
+licence logic needed discovering. It needed *running*, and it could not be run.**
+
+🔵 **Instance 2 is the one that matters, because it is `P473` running backwards.** `P473` says check
+NonCommercial **first**, since an NC payload looks permissive to a filename probe. Implemented as a
+bare word match, that ordering **inverts**: it reports the single most common copyleft family in open
+source education — **Moodle, Canvas, Open edX, openSIS, RosarioSIS are all GPL/AGPL** — as
+commercially prohibited.
+
+🔴 **And a false `PROHIBIDO` is strictly worse than a false `GRANTED`, because it is self-concealing.**
+`P473`'s error promoted an unusable repo *into* the shelf, where review found it. This error
+**suppresses a usable repo before it is ever written down** — a repo filtered out at the probe leaves
+no row, no trend line and nothing to review. 🔵 **The defect that deletes evidence of itself is the one
+a KB cannot audit its way out of.**
+
+> **`P480`.** A new shelf instrument must inherit the shared suite's **regression coverage**, not only
+> its code path. `p473-probe-commercial-gate` was added at pass 36 with **four fixtures — Apache-2.0,
+> MIT, ECL-2.0, CC-BY-NC-4.0 — and no GPL-3.0 and no AGPL-3.0**: the exact pair `P171` exists to
+> protect and has been reopened over three times (`P171` → `P288` casefold → `P455` window). 🔴 **A
+> gate reporting `9/9` over a fixture set that excludes every family where this KB's classifier has
+> ever failed is not evidence about that classifier.**
+
+### 🟢 The shared classifier already had this right — and says so, at the same line number
+
+🔵 **This is `P237` confirmed from the outside under the one condition `P237` never anticipated — a pass that is *unable* to source the shared classifier.**
+`compose/code/lib/license_family.sh` carries the fix in its own comments:
+
+> *"The first cut of this detector token-matched the payload for `non-commercial` and friends. It then
+> reported **THREE AGPL-3.0 repos and The Unlicense** as commercial-use … AGPL-3.0 / GPL-3.0 say
+> `occasionally and noncommercially` in **section 6 (line 259** of …)"*
+
+🟢 **Line 259 is exactly where this pass's own `grep` landed on `classroomio`.** The shared classifier
+paid for this at **pass 82**; new code re-bought it within minutes at pass 37. 🔵 **The lesson is not
+"don't write new code" — this pass had no choice — it is that the defects are a property of the
+**payloads**, not of any one implementation, so they recur in *every* reimplementation and the only
+durable defence is a fixture set that exercises them.** 🔴 **Which is precisely what the new gate
+lacks, and that is the finding.**
+
+### 🔴 The structural find: the gate is 9/9 green over a fixture set that omits the dominant family
+
+`compose/code/p473-probe-commercial-gate/fixtures/` holds **four** specimens:
+
+| Fixture | Family | GPL-family? |
+|---|---|---|
+| `apache-2.0-osss.LICENSE` | Apache-2.0 | no |
+| `mit-bandup.LICENSE` | MIT | no |
+| `ecl-2.0-sakai.LICENSE` | ECL-2.0 | no |
+| `cc-by-nc-4.0-crss-ai.LICENSE` | CC-BY-NC-4.0 | no |
+| 🔴 **GPL-3.0** | — | 🔴 **absent** |
+| 🔴 **AGPL-3.0** | — | 🔴 **absent** |
+
+🔴 **The instrument whose entire purpose is the commercial-use column has no specimen of the family
+whose §6 contains the tripwire.** It reports **9/9** and cannot regress the failure. 🔵 **A green gate
+over a fixture set that excludes the shelf's dominant family is `P471`'s shape again — a gate passing
+everything because it judges nothing in the region where the defect lives.**
+
+> **`P480` (second limb).** A gate's fixture set must cover **every licence family the shelf holds in
+> volume**, not only the families that produced *that instrument's* founding finding. For this KB
+> **GPL-3.0 and AGPL-3.0 are mandatory fixtures**, because the LMS/SIS tier is overwhelmingly copyleft.
+> 🔵 **`P126 pt.2` is the precedent and the classifier cites it**: the shared suite once passed **41
+> assertions** while never exercising the AGPL branch, because every AGPL fixture carried the canonical
+> uppercase title. **Same failure, new instrument, one pass later.**
+
+🟢 **Calibration actually used this pass, in place of the unexecutable self-test.** Eight known-answer
+controls, all reproducing the shelf's own verified verdicts, including both GPL variants and the
+negative control:
+
+| Control | Verdict this pass | Expected (shelf) | |
+|---|---|---|---|
+| `sakaiproject/sakai` | `ECL-2.0` / OK · `master/LICENSE` | ECL-2.0, **not** Apache | 🟢 |
+| `rubelw/OSSS` | `Apache-2.0` / OK · `main/LICENSE` | Apache-2.0 | 🟢 |
+| `CRSS-AI/agentic-se-course-early-2026` | `CC-BY-NC-4.0` / 🔴 **PROHIBIDO** | PROHIBIDO (`P473`) | 🟢 |
+| `dikshant182004/MathTutor` | `MIT` / OK · **`master/LICENSE`** | MIT, branch-aware (`P475`) | 🟢 |
+| `classroomio/classroomio` | `AGPL-3.0` / OK-COPYLEFT | 🆕 new GPL-family control | 🟢 |
+| `lmscloud-io/moodle-mcp-server` | `GPL-3.0` / OK-COPYLEFT | 🆕 new, discriminates GPL vs AGPL | 🟢 |
+| `moodle/moodle` | `GPL-3.0` / OK-COPYLEFT · `main/COPYING.txt` | GPL-3.0 | 🟢 |
+| `totally-fake-org-zzz9/nope-repo-abc` | `NO-PAYLOAD` | negative control | 🟢 |
+
+⚠️ **Byte counts this pass run ~1 B below pass 36's** (`sakai` 11,119 vs 11,120; `OSSS` 11,362 vs
+11,363) because command substitution strips the payload's trailing newline. **The licence verdict is
+unaffected; the byte figure is ±1** and should not be quoted as an exact match against earlier passes.
+
+### 🔴 `P482` — a registry cross-channel is valid only if the record resolves BACK to the same repo
+
+🆕 **Two different repositories declare the same distribution name `moodle-mcp`:**
+
+| Repo | In-tree declaration | Licence payload | Owns the PyPI name? |
+|---|---|---|---|
+| 🟢 [`SaadRahman01/moodle-mcp`](https://github.com/SaadRahman01/moodle-mcp) | `pyproject.toml` → `license = { text = "MIT" }`, v0.3.0 | 🟢 **MIT**, `main/LICENSE`, 1,067 B | 🔴 **No** |
+| [`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) | `pyproject.toml` → `name = "moodle-mcp"`, v0.2.1 | 🔴 **404 on every name × branch — no grant** | 🟢 **Yes** |
+
+🔴 **PyPI `moodle-mcp` reports `license: None` and its `Homepage` resolves to `loyaniu/moodle-mcp`.**
+So the registry name is held by the **ungranted** twin, and the repo carrying the **MIT grant does not
+own the name**. 🔵 **Had this pass "cross-channel confirmed" `SaadRahman01/moodle-mcp` through PyPI, it
+would have confirmed another author's package — and confirmed it as licence-absent, the exact opposite
+of the payload.**
+
+🟢 **`p253` already set the rule and this is its next case class.** `p253` found *declaration without
+publication, resolution landing correctly*. This is **two declarations, one publication, and the
+publication belongs to the ungranted one** — resolution lands, and lands on the wrong grant.
+
+> **`P482`.** A registry record corroborates a repo **only** when its `repository` / `Homepage` field
+> resolves **back to that same slug**. Same package name is **not** identity. Where it does not resolve
+> back, the repo has **one** channel, and the row says so.
+
+### 🟢 Agents added this pass — 4 permissive, every one payload-verified
+
+| Agent | Licence (payload) | Region | Why it earns a row |
+|---|---|---|---|
+| 🆕 [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **MIT** — `main/LICENSE`, 1,064 B | 🟢 **APAC** (Tsinghua University **MAIC** team, Beijing) | 🟢 **The headline agent find of this pass: a multi-agent *classroom*, not a tutor.** AI teachers **and AI classmates** that speak, draw on a shared whiteboard and hold real-time discussion; one-click generation of slides, quizzes, interactive simulations and project-based activities from any topic or document. **LangGraph 1.1** state-machine orchestration on **Next.js 16 / React 19 / TypeScript 5**. Provider-plural by design — OpenAI, Azure OpenAI, Anthropic, Amazon Bedrock, Gemini, DeepSeek — plus **Lemonade** local inference and **FunASR** local ASR, so the whole classroom can run on-premise. Peer-reviewed (**JCST'26**, `10.1007/s11390-025-6000-0`), live demo `open.maic.chat`, **11 releases since 2026-03-26** with `v1.2.0-rc.1` on **2026-10-04** |
+| 🆕 [`SaadRahman01/moodle-mcp`](https://github.com/SaadRahman01/moodle-mcp) | 🟢 **MIT** — `main/LICENSE`, 1,067 B; `pyproject.toml` agrees | ⚠️ **Unplaced** — platform-bound, not jurisdiction-bound | 🟢 **The first Moodle MCP on these shelves that treats a live LMS as a hostile surface.** Ten tools over `moodledev.io` (BM25 + trigram-cosine rerank, synonym expansion, version filters), the Hooks API index, capability/`RISK_*` lookups, XMLDB search and the Moodle **Jira tracker** — then two tools against a *real* instance (`list_ws_functions`, `call_ws_function`) that are **SSRF-guarded, function-name allowlisted, and refuse private/loopback hosts unless explicitly overridden**. Ships MCP **resources**, 8 **prompts**, and `readOnlyHint` / `destructiveHint` **tool annotations** for client-side safety. 🔴 **Subject of `P482` — it does not own its PyPI name** |
+| 🆕 [`laurauguc/grading_assistant`](https://github.com/laurauguc/grading_assistant) (**GradeMate**) | 🟢 **MIT** — `main/LICENSE`, 1,071 B | ⚠️ **Unplaced** — 🔵 **rubric-agnostic by design** (see `T1` in `intel/trends.md`) | 🟢 **The counter-example that sharpens pass 36's `T1`.** Teachers apply curated rubrics **or upload their own**, so the rubric is an **input at runtime** rather than an encoding in the repo. React frontend + **Django** backend as an API endpoint; Gemini via `GOOGLE_API_KEY`. 🔵 **Useful precisely because it is the opposite architecture to `bandup`/`MathTutor`** — and the two shapes sell differently |
+| 🆕 [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | 🟢 **MIT** — `main/LICENSE`, 1,071 B | ⚠️ **Unplaced** — no jurisdiction or locale binding in the tree | **Reference-tier, honestly labelled.** LangGraph orchestration with state management across tutorial → Q&A → knowledge-evaluation, SQLite conversation persistence, Streamlit **and** CLI surfaces, OpenRouter-backed. ⚠️ **Subject-agnostic "teach any topic"** — the breadth-first shape earlier passes shelved as commodity. Shelve as a **small clean LangGraph reference**, not a delivery base |
+
+### 🟢 Also verified this pass — two copyleft platform agents, both commercially usable
+
+🔵 **Both were the `P480` false positives, and both are real finds once classified correctly.**
+
+| Repo | Licence (payload) | Note |
+|---|---|---|
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 🟢 **AGPL-3.0** — `main/LICENSE`, 34,522 B | Course/LMS platform positioned against Moodle, EdX, Thinkific and Teachable, **with an MCP server published as `@classroomio/mcp` on npm (🟢 MIT, v0.0.9 — second channel confirmed)**. ⚠️ **AGPL-3.0 on the platform**: network-use copyleft, so a hosted client deployment triggers source obligations. 🔵 **The MIT MCP layer and the AGPL core are two different licence conversations** — name both in any deck |
+| [`lmscloud-io/moodle-mcp-server`](https://github.com/lmscloud-io/moodle-mcp-server) | 🟢 **GPL-3.0** — `main/LICENSE`, 35,148 B | Executes Moodle web services from an MCP client. ⚠️ GPL-3.0, so it is a **side-car**, not an in-product component |
+
+### 🔴 Not usable / not resolved this pass — stated so the denominator closes
+
+**10 candidates probed. 4 permissive · 2 copyleft-usable · 2 real-but-ungranted · 2 unresolved = 10.**
+
+| Repo | Verdict |
+|---|---|
+| [`shrutika00/StudyMate`](https://github.com/shrutika00/StudyMate) | 🔴 **UNGRANTED** — real (`main/README.md` 200), **no licence payload at 16 names × 2 branches**. LangGraph + Gemini + RAG + SQLite adaptive tutor; **cannot be built on until a licence appears** |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 🔴 **UNGRANTED** — real, no payload |
+| [`Aditya7808/AI-Powered-Adaptive-Curriculum-…-Agent`](https://github.com/Aditya7808/AI-Powered-Adaptive-Curriculum-Assignment-Generator-Agent) · [`Aryan6238/EduAgent`](https://github.com/Aryan6238/EduAgent) | 🔴 **UNGRANTED** — both real, both no payload. 🔵 **Multi-agent curriculum/assignment generation with rubrics is an actively populated niche in which almost nothing is licensed** |
+| [`EastArctica/canvas-mcp`](https://github.com/EastArctica/canvas-mcp) | 🔴 **NO-PAYLOAD** — nothing resolved on any existence filename; treat as **may not exist at this slug** |
+| `slm-socratic-tutor-ptbr` (Brazilian-Portuguese Socratic tutor benchmark, 8 open SLMs ≤3.8B, offline) | 🔴 **Unresolved — named in secondary prose, no owner slug recoverable.** 🔵 **Recorded as an unverified lead, not a finding** — it would have been this pass's LATAM placement and it is not one |
+
+### 🔵 `P479` — "no star counts" was never a fact about GitHub. It is a fact about this session's repo scope
+
+🔴 **Thirty-six passes recorded `api.github.com` → 403 as an environmental wall.** Measured this pass,
+reading **bodies** and not only status codes:
+
+| Probe | Result | What it proves |
+|---|---|---|
+| `api.github.com/rate_limit` | 🟢 **200** — `core` limit **15,000**, **used 0**, `graphql` 10,000 | 🔴 **Not a rate limit, and not a blocked host.** The quota is intact and untouched |
+| `api.github.com/repos/sakaiproject/sakai` | 🔴 **403** | 🔴 **Body is the session proxy's own text**: *"GitHub access to this repository is not enabled for this session. Use `add_repo` to request access."* — **not** a GitHub error |
+| `api.github.com/repos/gmilano/education-kb` (attached) | 🟢 **200**, full JSON **including `stargazers_count`** | 🟢 **The endpoint class works. The gate is per-repository authorization** |
+| `add_repo(rubelw/OSSS, access:"read")` | 🟢 served, 🔴 **"Nothing was attached … GitHub API tools do not cover unattached repositories"** | 🔴 **The documented remedy does not open the API.** Only `access:"push"` attaches with credentials, and that is not appropriate for third-party repos |
+
+> **`P479`.** `403` is a statement about **authorization**, not about **availability**. A census that
+> records a status code without reading the body cannot tell a blocked host from a **gated** one, and
+> this one has been reporting the wrong layer for thirty-six passes.
+
+🟢 **The operational consequence is narrow and should be stated narrowly: star counts remain
+unavailable for third-party repos here**, so this shelf's no-stars discipline **stands unchanged**.
+🔵 **What changes is the reason, and the reason is what a deliverable repeats.** Any Globant artefact
+saying *"the GitHub API is blocked"* is wrong; the accurate sentence is *"this session is scoped to
+named repositories, and popularity metrics are therefore out of scope by construction."*
+
+🆕 **Channel census, re-measured 2026-10-07:**
+
+| Channel | This pass | Note |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 **200** on payload paths | the licence route, unchanged |
+| `pypi.org` · `registry.npmjs.org` | 🟢 **200** | both used this pass (`P482`; `@classroomio/mcp`) |
+| 🆕 `repo.maven.apache.org` | 🟢 **200** — `org/sakaiproject/` and `org/olat/` both resolve | 🆕 **Newly measured. The second channel the Java LMS tier has been missing** — Sakai, OpenOLAT and Opencast publish POMs whose `<licenses>` block is a manifest-layer cross-check (`p289`, `p294`) |
+| `search.maven.org` | 🔴 **403** | the Solr search API is blocked; **browse by groupId path instead** |
+| `gitlab.com` | 🟡 **301** | reachable, not yet exercised for payloads |
+| `api.github.com` | 🟡 **200 host / 403 per unattached repo** | `P479` — gated, not blocked |
+| `github.com` | 🔴 **403** | no HTML, no stars |
+| `huggingface.co` · `arxiv.org` · `aclanthology.org` · `eur-lex.europa.eu` · `codeberg.org` | 🔴 **000** (CONNECT tunnel refused) | 🔴 **No model-weights licence, no paper and no Official Journal text is first-hand verifiable here.** The `JCST'26` DOI for `OpenMAIC` and every regulatory date in `intel/` are **secondary** |
+
+### 🔵 `P481` — the finding numbers are a global sequence, and this pass collided with it
+
+🔴 **This pass first published its fixture-coverage finding as `P477`. That number was already taken**
+— by an earlier pass, defining *"never divide a figure from one market series by a figure from
+another"*, cited live at `intel/market.md:248` and `intel/trends.md:228`. 🟢 **Renumbered to `P480`
+inside this pass; the legacy `P477` text was left untouched.**
+
+🔴 **And the collision happened twice, which is the part worth recording.** `P482` below was first
+published as **`P478`** — also taken by pass 36, for *AITutor-EvalKit*'s licence claim, defined at
+`compose/patterns.md:203` and cited at `intel/trends.md:166`.
+
+🔴 **The measured cause of the second collision was the check itself, not the lookup.** The ceiling
+sweep was run as `grep -rn '\bP478\b' --include=*.md . | grep -v … | head -3`, and 🔴 **`head -3` cut
+the output after three `agents/top.md` hits — the pass's own new lines — before it ever reached
+`compose/patterns.md`.** 🔵 **The number looked free because the evidence that it was taken was
+truncated by the pipeline measuring it**, which is `P471`'s shape yet again: an instrument that
+returned a confident answer about a region it never examined.
+
+🔵 **The numbers are global across every file**, but a pass works in one file's newest section and the
+natural check — *"is this number in the section I'm writing?"* — returns the wrong answer. 🟢 **Real
+ceiling for this pass, measured without truncation: `P479` was the first genuinely free number**; the
+repository's commit history claims `P473`–`P478`.
+
+⚠️ **Two dangling citations surfaced while measuring the ceiling**, and they are logged rather than
+fixed: **`P593`** and **`P679`** are cited in `compose/code/p357-hint-layer-cession/README.md` and
+**defined nowhere** in `intel/`, `agents/` or `repos/`. 🔵 **`compose/code/pattern-citation-audit/` is
+the instrument that exists for exactly this** — a cited-but-undefined number — and it is not catching
+these two.
+
+> **`P481`.** Before defining a finding, take the ceiling from **the whole tree**, not from the file
+> being written: `grep -rhoE '\bP[0-9]+\b'` over every `.md` **and** `git log --format='%B'`, with
+> 🔴 **no `head`, no `| head -n`, and no filter that can hide a hit in a file you have not read** —
+> then verify the chosen number has no existing **definition** line. 🔴 **A duplicate definition is
+> worse than a gap**: it makes every prior citation of that number ambiguous, retroactively. 🔵 **And
+> truncating the check is how the number looks free.**
+
 ## 🔴 Thirty-sixth pass, 2026-10-07 — the probe that found the agents misread one of their licences
 
 **Every licence below was read from the repository's own payload on `raw.githubusercontent.com` on
