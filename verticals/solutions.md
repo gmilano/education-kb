@@ -4,6 +4,46 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Forty-second pass, 2026-10-07 — a platform layer this file never had: the **grammar engine** as a deployable service, and what `P527` means for the QTI authoring layer
+
+⏱️ **Ninth pass of this date.** **Licences read first-hand on 2026-10-07 from the channel named per row
+(`P171`, `P510`, `P511`). No star counts (`P479`).**
+
+🔵 **This file lists real systems a studio can stand up and customise. This pass adds one and corrects
+the capability claim on one already listed.**
+
+### 🟢 Added — LanguageTool as a self-hosted linguistic service
+
+| Field | Value |
+|---|---|
+| System | [`languagetool-org/languagetool`](https://github.com/languagetool-org/languagetool) — grammar, style and spelling engine, **25+ languages including pt-BR and es** |
+| Licence | 🟡 **LGPL-2.1** — payload `master/COPYING.txt` **26,432 B**, title block *"GNU LESSER GENERAL PUBLIC LICENSE Version 2.1, February 1999"*; corroborated by `master/pom.xml` `<licenses>` |
+| Deployment shape | 🟢 **Self-hosted HTTP server (JVM).** Runs fully **offline** — no text leaves the client's infrastructure |
+| 🔴 **The deployment decision this file exists to record** | 🔴 **Do not import `language_tool_python` (GPL-3.0, `P525`). Run the engine as its own service and call it over HTTP.** 🟢 **The LGPL-2.1 engine, unmodified and process-separated, is the clean configuration — and it costs one container** |
+| Why it belongs here | 🟢 **Offline, per-language, rule-based linguistic analysis is an *ownable* input to assessment** — `P526` measured it lifting ENEM competency C1 from 0.35 to 0.39 as an explicit feature source. 🔵 **For an education client under LGPD or GDPR, "student text never leaves our network" is a procurement property, not a performance one** |
+
+🔵 **Where it sits in a stack already in this file:** behind **Moodle** or **Open edX** as a marking-support
+service, or as step 4 of `compose/patterns.md` `P532`.
+
+### 🔴 Corrected — the QTI 3 authoring layer does **less** than this file has implied
+
+🟢 **`LongsightGroup/qti3` (🟢 **MIT**, `LICENSE.md` **1,072 B**, © 2026 Longsight, Inc., read from the
+clone) stays listed and its standing is unchanged for everything it was listed for**: 12 packages
+covering parsing, validation, rendering, scoring, delivery and QTI 1.2/2.x migration.
+
+🔴 **What `P527` removes from the claim:** its **`writer`** package **cannot author parametric item
+variants** — 0 of 33 exports and 0 files reference `qti-template-declaration` or
+`qti-template-processing`. 🟢 **Its `core` package implements the mechanism in full** (declaration
+parsing, a real `randomInteger` draw over `min`/`max`/`step`, answer keys derived from the draw, and a
+constraint-retry loop up to 100 restarts), 🔵 **so the capability is a *delivery* capability on this
+platform and not an *authoring* one.**
+
+> 🔵 **Platform consequence for an item-bank engagement:** budget the template XML as **hand-authored
+> content** (the project's own
+> `packages/fixtures/xml/random-integer-template-reference.xml` is a working ~35-line template), or
+> budget the missing emitter as a contribution — 🟢 **`qti3` is MIT, so that is a contribution, not a
+> procurement.** `Gap 238`.
+
 ## 🟢 Forty-first pass, 2026-10-07 — the largest LMS on earth ships an **AI extension point in core**, measured in-tree rather than from its docs, and the platform shelf is saturated for the tenth consecutive pass
 
 **Licences read first-hand on 2026-10-07** from payload, named per row; title-block classified (`P171`).

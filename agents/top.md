@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🔴 Forty-second pass, 2026-10-07 — `Gap 235`'s prescribed query returns a **populated** tier, and not one asset in it carries a licence grant
+
+**Licences read first-hand on 2026-10-07** from the channel named per row — repository **payload** on
+`raw.githubusercontent.com` (title-block classified, `P171`) and **registry** metadata. Existence by
+`git ls-remote --heads` against a negative control in the same run (`P510`). **No star counts** (`P479`).
+⏱️ **Ninth pass of this date.**
+
+🔴 **No row is added to this file's agent table this pass.** 🟢 **That is the finding, not a shortfall:
+the tier `Gap 235` sent this pass to look for exists, is busier than any English-language sweep
+suggested, and is **entirely ungranted**.** The permissive asset the pass did find is a **corpus**, and
+it is filed in `repos/foundations.md` (`P524`) because it is data, not an agent.
+
+### 🔴 `P522` — six distinct Portuguese essay-scoring trees, **zero licence grants**, measured exhaustively
+
+🔵 **How the question was asked, because `P494` says an absent payload is not a verdict.** For every
+slug: `git ls-remote --heads` first (so *absent repo* can never be mistaken for *absent licence*), then
+**twelve** licence filenames — `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license`, `license.md`,
+`licence`, `LICENCE`, `COPYING`, `COPYING.txt`, `LICENSE-MIT`, `LICENSE.rst`, `NOTICE` — across **every
+served ref**, then the **manifests** (`pyproject.toml`, `package.json`, `setup.py`, `setup.cfg`) for a
+declared `license` field, then the **README** for a licence statement.
+
+| Repo | Existence (`P510`) | Licence — 12 filenames × every served ref, + manifests + README | What it is |
+|---|---|---|---|
+| [`IC-Redacoes-UTFPR/CorrecaoRedacao`](https://github.com/IC-Redacoes-UTFPR/CorrecaoRedacao) | 🟢 1 ref, `main` | 🔴 **NO GRANT — none of the 12 names, no manifest field, no README statement** | ENEM five-competency scoring with **open-weight** LLMs + LoRA; UTFPR undergraduate-research project. 🟢 **The substantive one — see `P526`** |
+| [`YuriMatsumotoSantos/CorrecaoRedacao`](https://github.com/YuriMatsumotoSantos/CorrecaoRedacao) | 🟢 1 ref, `main` | 🔴 **NO GRANT** | 🔵 **Not an independent finding — `main` resolves to the *identical* head SHA `da2e8d3d` as the row above, so this is one tree published twice** |
+| [`jgabriel-sntx/Corretor-de-redacao-ENEM`](https://github.com/jgabriel-sntx/Corretor-de-redacao-ENEM) | 🟢 1 ref, `main` | 🔴 **NO GRANT** | Django MVP; OCR via `OCR.space`, scoring via an **NVIDIA API** — 🔴 judgement is a third party's |
+| [`douglas150206/IF_VEST_Redacao_Correcao`](https://github.com/douglas150206/IF_VEST_Redacao_Correcao) | 🟢 **4 refs** | 🔴 **NO GRANT on any of the four** | ENEM C1–C5 web scorer over a **hosted proprietary API** — 🔴 judgement is a third party's |
+| [`victor934034/simulade`](https://github.com/victor934034/simulade) | 🟢 1 ref, `main` | 🔴 **NO GRANT** | Mock-exam generation **and** scoring; two independent graders plus a third on disagreement — 🔵 **a genuinely interesting adjudication design, and unusable as written** |
+| [`horaciohudson/corretor-redacao`](https://github.com/horaciohudson/corretor-redacao) | 🟢 1 ref, `main` | 🔴 **NO GRANT** | ENEM-based scoring; the payload documents too little to classify further |
+| [`neiltonsantana9-star/redacao`](https://github.com/neiltonsantana9-star/redacao) | 🟢 1 ref, `main` | 🔴 **NO GRANT** | Teacher-facing PWA; **browser-side OCR** via `Tesseract.js`, then orthography/cohesion checks |
+| `totally-fake-org-zzz9/nope-repo-abc` — 🔵 **negative control, same run** | 🔴 **0 refs** | — | 🔴 Does not exist |
+
+🔵 **Counted honestly: seven slugs, six distinct trees.** 🟢 **The two UTFPR slugs share a head SHA, and
+this file says so rather than reporting seven findings** — `P386`'s dedup discipline applied to a tier on
+the way in, instead of to a census after the fact.
+
+> **`P522`.** 🔴 **The Portuguese essay-scoring tier is *ungranted*, not *absent* — and those are
+> different procurement facts with different remedies.** 🔵 **Absent means build it. Ungranted means the
+> code exists, is readable, and cannot be used: with no licence, default copyright applies and a studio
+> has no right to copy, modify or ship any of it, however public the repository is.** 🟢 **The practical
+> consequence is narrow and useful: these six trees are legitimate **prior art and design references** —
+> `simulade`'s two-graders-plus-tiebreak and `IC-Redacoes-UTFPR`'s per-competency prompting are both
+> worth reading — and **none of them is a starting point**. ⚠️ **An ungranted repository is the one case
+> where reading is safe and copying is not; no pass of this KB has had counsel read any of this.**
+
+### 🔵 What this means for `P512`'s saturation verdict — it survives, with its scope corrected
+
+🟢 **`P512` declared the agent shelf *saturated* rather than the query *broken*.** 🔵 **This pass is the
+first real test of that claim, because it queried in a **different language** instead of with different
+English terms — and the result cuts both ways, so both halves are recorded:**
+
+| | |
+|---|---|
+| 🟢 **`P512` holds for the *shelf*** | Six new trees, **zero** admissible to the agent table. Nothing here is composable, so the set of usable education agents did not grow |
+| 🔴 **`P512` was too strong about the *corpus*** | The tier was **not** empty and no English-language sweep had seen it. 🔵 **The shelf was saturated; the *map* was not** |
+
+> 🔵 **Carried forward: "saturated" is a claim about what is *usable*, and a language-shaped query can
+> still change what is *known* without changing what is usable.** 🟢 **The two are worth reporting
+> separately, and `P512` conflated them.**
+
 ## 🟢 Forty-first pass, 2026-10-07 — `P502` asked for an independent existence check across four passes; this pass supplies one that **works**, and proves the channel `P502` implied is uniformly broken here
 
 **Licences read first-hand on 2026-10-07** from the channels named per row — repository **payload** on

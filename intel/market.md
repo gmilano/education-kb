@@ -4,6 +4,128 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Forty-second pass, 2026-10-07 — a fourth market denominator widens `P515`'s spread to 6×, and the regulatory clock this KB has been reading off the EU calendar is **not** the earliest one
+
+⏱️ **Ninth pass of this date.** 🔵 **Every figure below is secondary and carries base year, scope and
+publisher, per `P515`'s rule: that rule is the reason this section is readable, and it is applied to the
+figures this pass found *and* to the one this file already carries.**
+
+### 🔴 `P529` — four publishers, four 2026 denominators, a **6× spread**; and this KB's standing figure is one of them
+
+🔵 **`P515` found three irreconcilable denominators. A fourth has been measured, and the spread is now
+wide enough that the number is meaningless without its series.**
+
+| Publisher | Base year | 2026 value | Terminal value | CAGR | 🔵 Note |
+|---|---|---|---|---|---|
+| **Grand View Research** | 2025 ($8.3 B) | 🔴 **$11.4 B** | $57.2 B by 2033 | 25.9% | 🔴 **The highest 2026 figure and the *lowest* growth rate** |
+| **Research and Markets** (report dated Feb 2026) | 2025 | **$10.6 B** | $42.48 B by 2030 | 41.5% | 🟢 **This is the series this KB has carried since pass 2** — now identified by publisher |
+| **Precedence Research** | 2025 ($7.05 B) | **$9.58 B** | $136.79 B by 2035 | 34.52% | 🔵 Longest horizon, so least comparable |
+| **Market Reports World** | 2025 | 🔴 **$1.94 B** | — | 42.95% | 🔴 **Lowest 2026 figure — 5.9× below Grand View for the same year** |
+| **Technavio** | 2025 | 🔴 **not a total** | *incremental* growth of $3.37 B, 2025–2030 | 45% | 🔴 **Measures an increment, not a market. Not comparable, and is quoted as though it were** |
+| **The Business Research Company** | 2025 | $4.09 B *(higher-ed only)* | $13.46 B by 2030 | 34.7% | 🔵 **A sub-segment**, correctly scoped and often cited as the whole |
+
+> **`P529`.** 🔴 **Four publishers put 2026 between $1.94 B and $11.4 B — a 5.9× spread for a year
+> already three quarters elapsed.** 🟢 **Grand View and Market Reports World are the useful pair: they
+> disagree 5.9× on the level and sit within 17 points on the growth rate, which is the signature of
+> **different scope definitions**, not different forecasting.** 🔵 **`P515` said `P477` was necessary and
+> not sufficient; this adds what is sufficient — carry the publisher, the base year, **and whether the
+> figure is a total, an increment or a segment**, because two of the six above are not totals and both
+> circulate as if they were.** 🟢 **This file's standing $10.6 B → $42.48 B is Research and Markets,
+> 2025 base, whole-market scope, and it sits mid-spread — so it is retained, now attributed, and
+> 🔴 **never to be quoted as "the" market size.**
+
+### 🟢 `P530` — the earliest binding education-AI obligation is **APAC's**, not the EU's, and this KB has been pricing engagements off the wrong calendar
+
+🔵 **The instruments below are already held in this file. What is new is the comparison, and it inverts
+the framing eight passes have used** — `P505` and `P514` both treated the **EU Annex III** date as *the*
+regulatory clock, and corrected it twice for staleness without ever asking whether it was the earliest.
+
+| Region | Instrument | Status on 2026-10-07 | 🔵 Education treated as |
+|---|---|---|---|
+| 🟢 **APAC** | **South Korea, AI Basic Act** | 🔴 **IN FORCE since 2026-01-22** — grace period through 2026 focused on guidance over penalties | 🔴 **"high-impact"** |
+| 🟢 **APAC** | **Vietnam**, high-risk list | 🔴 **In force** | 🔴 **Named explicitly** — automated assessment and behavioural monitoring |
+| 🟡 **EMEA** | **EU AI Act, Annex III** | 🟡 **DEFERRED to 2027-12-02** by the Digital Omnibus (OJ 2026-07-24, effective ~2026-07-27) | 🔴 High-risk: access, assessment of learning outcomes, educational path, exam monitoring |
+| 🟢 **EMEA** | **EU AI Act, Articles 50 + GPAI enforcement** | 🟢 **IN FORCE since 2026-08-02** — *not* deferred | transparency duties apply now |
+| 🔵 **NA** | federal | 🔴 **No binding federal AI curriculum standard.** The *K-12 AI Literacy and Readiness Act of 2026* advanced on a July markup and 🔴 **is not enacted**; Aug-2026 Dept. of Education guidance is 🔵 **non-binding** | — |
+| 🟢 **NA** | states | 🟢 **Binding and live** — 134 AI-in-education bills across 31 states in 2026; **40 states + Puerto Rico** have guidance as of Sept 2026 | 🔴 Oklahoma and Maryland **bar AI from high-stakes decisions about students** and require human oversight |
+| 🔴 **LATAM** | Brazil **PL 2.338/2023** | 🔴 **Still pending** (Senate approved versions 2024-12-10), risk-based | 🔵 **Education not clearly singled out in the sources read** |
+| 🟢 **LATAM** | Brazil **LGPD** | 🟢 **In force** | 🟢 **Already bites**: a right to request review of decisions made *solely* by automated processing |
+
+> **`P530`.** 🔴 **A studio sequencing compliance work off the EU calendar is ~23 months late for Korea
+> and misses that the EU's own transparency duties are already live.** 🟢 **The correct ordering of
+> binding obligations today is: **Korea and Vietnam now → US states now → EU transparency now → EU
+> Annex III 2027-12-02 → Brazil when PL 2.338 passes.** 🔵 **And the deferral is not relief: the EU
+> obligations themselves did not change, the FRIA is still required before a high-risk system goes into
+> use, and the Article 4 AI-literacy duty remains — softened by the Omnibus from achieving a defined
+> staff competence level to taking *"measures supporting"* AI literacy.** 🔴 **The one place the deferral
+> genuinely matters is exam scoring, and `P514` already fixed that date at 2027-12-02.**
+
+### 🔵 Regional adoption measured this pass
+
+| Region | Figure | Series |
+|---|---|---|
+| 🔴 **APAC** | Faculty **future** AI-adoption intent **fell 76% → 67%** between 2025 and 2026 — 🔴 **the lowest of any region** | Digital Education Council, *AI in Higher Education Global Survey 2026* |
+| 🟢 **APAC** | India: AI and computational thinking **mandatory from Class 3** in 2026–27; ~**10 M teachers** need training against **15%** AI-fluent in a 2025 survey | 🔵 Secondary; the teacher-capacity ratio is the operative number |
+| 🟢 **LATAM** | **>50% of teachers in Chile and Brazil already use AI tools**, while 🔴 **<10% of regional institutions have formal guidelines and the capacity to apply them** | UNESCO |
+| 🟢 **LATAM** | **193 AI initiatives** catalogued across LAC — 🔵 **mostly administrative rather than pedagogical** (e.g. Rio de Janeiro's education secretariat automating school-invoice validation) | IDB |
+| 🟢 **NA** | 54% of students and 53% of teachers used AI for school in 2025 | RAND, cited secondarily |
+
+🔵 **The LATAM pair is the most actionable figure in this table**: teacher adoption above 50% against
+institutional readiness below 10% is 🟢 **a governance gap, not a technology gap** — the demand already
+exists and the thing missing is policy, capacity and defensibility.
+
+## Opportunities by region
+
+### North America
+
+🟢 **Sell the audit trail, not the model.** Oklahoma and Maryland bar AI from high-stakes student
+decisions and require human oversight; 40 states plus Puerto Rico now have guidance; and 🔴 **there is no
+federal standard to converge on**, so a district's exposure is **state-shaped**. The buyable artefact is
+a **human-in-the-loop evidence layer** over whatever scoring a district already runs: who decided, on
+what evidence, which human reviewed it, and the record to show a state auditor. 🔵 **California's A.B.
+1159 adds a second hook** — restricting use of student data to train models — which makes
+**train-on-your-own-corpus, keep-it-in-district** a compliance feature rather than an engineering
+preference, and `P524`'s corpus-plus-open-weights pattern is exactly that shape in a language the US
+market does not need. 🔴 **Not a market for a sealed proprietary scorer.**
+
+### EMEA
+
+🟢 **2027-12-02 is a delivery date, and the work that fills it is evidence production.** Annex III
+deferral did not change the obligations: a **FRIA before deployment**, technical documentation, and
+defensible assessment decisions. 🟢 **Two things are already live and are the near-term sale**: Article 50
+transparency duties and the Article 4 AI-literacy duty (now *"measures supporting"* AI literacy — 🔵 a
+lower bar, and still a programme someone must run). 🟢 **The permissive shelf is strongest exactly here**:
+`KernEqWPS` (MIT, `P508`) and `EqUMP` for comparability evidence, and the 1EdTech-certified QTI 3 delivery
+tier. 🔴 **And `P527` prices the one honest gap** — the QTI writer cannot author parametric variants, so
+an item-bank engagement must budget the emitter or hand-author the template XML.
+
+### APAC
+
+🟢 **The most urgent region, and the one this KB has been treating as the least.** Korea's AI Basic Act
+has been **in force since 2026-01-22** with education as high-impact and its guidance-focused grace
+period **expiring at the end of 2026** — so a Korean engagement needs compliance evidence *now*, not in
+2027. Vietnam names automated assessment and behavioural monitoring in its high-risk list. 🔵 **India is
+a capacity engagement, not a compliance one**: mandatory AI from Class 3 in 2026–27 against ~10 M
+teachers needing training — **teacher-facing tooling and training pipelines at national scale**. 🔴 **The
+contrarian signal to respect: faculty intent to adopt *fell* 9 points to 67%, the lowest of any region**,
+so higher-ed buying here is sceptical and a pilot must prove itself against human marking rather than
+assert a productivity claim.
+
+### LATAM
+
+🟢 **The clearest opportunity in this file, and this pass made it concrete.** Demand is proven (>50% of
+teachers in Chile and Brazil already using AI) and readiness is absent (<10% of institutions with
+guidelines and capacity) — 🔵 **the gap is governance, and governance is a services engagement.** 🟢
+**Brazil specifically now has a buildable stack**: `essay-br` (**MIT**, human-graded against the ENEM
+C1–C5 rubric, `P524`) + an open-weight model + calibration + LanguageTool as an ownable C1 feature source
+(`P525`, `P526`), wired in `compose/patterns.md` (`P532`). 🔴 **And the competitive fact that makes it
+worth doing: the entire incumbent Portuguese corretor tier is *ungranted* (`P522`), so there is no open
+competitor to displace — six readable design references and not one shippable starting point.** 🟢
+**LGPD's review right for solely-automated decisions makes the human-in-the-loop design mandatory rather
+than optional**, which suits a studio and disadvantages a pure-product vendor. 🔴 **Spanish-speaking
+LATAM is *not* the same opportunity** — `P531` found no graded corpus and no national rubric to
+standardise on, so there the first deliverable is the rubric, not the model.
+
 ## 🟢 Forty-first pass, 2026-10-07 — the regional channel's defect is the **acronym**, and fixing it placed national policy instruments in the two regions that had returned nothing for eight passes
 
 ⏱️ **Eighth pass of this date.** 🔵 **Every figure here is secondary and carries its series (`P477`).**

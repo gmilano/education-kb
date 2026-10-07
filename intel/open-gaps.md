@@ -142,3 +142,32 @@ is still in the live tree, so a later pass can read the declaring line without g
 
 🔴 **Both gaps are declared with the remedy *and* its cost, which is what `P469` and `P492` exist to
 enforce.** 🟢 **Neither is a wish; each names the specific artefact a later pass would have to produce.**
+
+---
+
+## 🟢 The rows pass 42 changed, 2026-10-07
+
+🔵 **Both changed rows were read **in full from their declaring line** before anything was declared
+closed, as the rule above requires.**
+
+| Gap | What it said | 🟢 Pass 42 says |
+|---|---|---|
+| **39** (first half — *parametric variant generation*) | 🔴 *"STILL OPEN and still untested… the chain's oldest untested assumption and the cheapest remaining win on this KB"* | 🟢 **TESTED, and it splits.** 🔴 **Refuted for the writer**: `LongsightGroup/qti3`'s `packages/writer` has **0 of 33 exports** and **0 files** referencing `qti-template-declaration` / `qti-template-processing`, so the step every recipe wrote as *"author N parametric variants with `qti3`"* is **false as written**. 🟢 **Confirmed for the runtime**: `packages/core` implements the whole mechanism — declaration parsing, a real `randomInteger` draw over `min`/`max`/`step`, answer keys derived from the draw, and a constraint-retry loop up to **100 restarts** — with a working parametric fixture. See `P527` (`repos/foundations.md`) and the corrected recipe in `compose/patterns.md`. 🔴 **Stated limit: read from the cloned tree; the suite was *not executed* (installing a third-party repo's dependencies is not permitted here)** |
+| **235** | 🔴 *"No confirmed open-source essay or short-answer scorer for Portuguese or Spanish"*, with the next step named as the Portuguese-language query and the CEFET-RJ org check | 🟢 **CLOSED for Portuguese, as a *measured* result rather than a found component — and it closes in three parts.** 🟢 **(a)** The prescribed query worked first time: **six distinct trees** (seven slugs; two share head SHA `da2e8d3d`) — `P521`, `P522`. 🔴 **(b) Not one carries a licence grant** across 12 filenames × every served ref + manifests + README, so the tier is **ungranted, not absent**. 🟢 **(c) The tier's permissive asset is the *corpus*: `lplnufpi/essay-br`, MIT, human-graded on ENEM C1–C5, peer-reviewed** — `P524`. 🟢 **The org check also paid: `AILAB-CEFET-RJ`, not `AIRGOLAB` (`P523`).** 🔴 **Spanish does NOT close — see `Gap 237`** |
+
+🔵 **Note for a later pass, because `P492` exists to prevent the opposite.** 🔴 **Do not quote "Gap 39
+closed" or "Gap 235 closed" unqualified.** `Gap 39`'s first half is **answered and negative for
+authoring**; `Gap 235` is **closed for Portuguese only**, and closed with the finding that the tier is
+unusable rather than with a usable scorer.
+
+## 🟢 Live gaps declared by pass 42 — remedy *and* cost, per `P469` / `P492`
+
+| Gap | Declared | Declaring pass · file · finding | Status read from the declaring line |
+|---|---|---|---|
+| 🆕 **236** | **2026-10-07**, pass 42 | `agents/top.md` · `P522`; `repos/foundations.md` · `P524` | 🔴 **OPEN.** *"There is no permissively-licensed essay **scorer** for Portuguese — only a permissively-licensed graded **corpus**."* 🟢 **Narrowed hard, not closed**: every layer a scorer needs now exists permissively or ownably (corpus MIT via `P524`; open weights at the proprietary baseline via `P526`; calibration worth more than model size; LanguageTool as an LGPL-2.1 service via `P525`) — 🔴 **but nobody has published the assembled scorer under a permissive licence.** 🔵 **Remedy named and scoped**: fine-tune an open-weight model on `essay-br` with theme-separated folds, per-competency prompting, anchors and bias calibration, and publish it MIT — the chain is written step-by-step at `P532` (`compose/patterns.md`). 🔴 **Cost stated: GPU time for the fine-tune, which is the exact constraint that pushed `P526`'s source onto hosted APIs mid-run; and the realistic target is QWK ~0.63 (mid-band of the published 0.60–0.73), not state-of-the-art** |
+| 🆕 **237** | **2026-10-07**, pass 42 | `intel/trends.md` · `P531` | 🔴 **OPEN, and structural rather than unmeasured.** **No open-source essay scorer for Spanish**, searched this pass in Spanish (`corrector automático ensayos español código abierto licencia MIT github`). The channel returns only the **orthography/grammar** tier — none of which grades against a rubric. 🔵 **Why it is structural, which changes the remedy**: Brazil has one national essay-graded exam with a published five-competency rubric (ENEM), which produced both `essay-br` and a community; **Spanish-speaking LATAM has no single equivalent instrument**, so there is no rubric to standardise on and no graded corpus to train against. 🔴 **Remedy and cost**: the first deliverable is **a rubric and a human-graded corpus**, per target country — an annotation programme, not an engineering sprint, and far more expensive than `Gap 236`. 🔵 **Cheaper next probe before committing: query per country (`prueba de egreso`, `PAES`, `examen de admisión`) rather than pan-Spanish, since `P521` is this KB's own evidence that the query's shape hides tiers** |
+| 🆕 **238** | **2026-10-07**, pass 42 | `repos/foundations.md` · `P527`; `compose/patterns.md` | 🔴 **OPEN, and it is the cheapest gap on this KB.** *"`LongsightGroup/qti3`'s `writer` cannot emit `qti-template-declaration` / `qti-template-processing`, so parametric item variants cannot be **authored** on the stack that can **deliver** them."* 🟢 **Remedy named, scoped and unusually small**: add a `buildQti3TemplateDeclaration` + template-processing emitter to the `writer` package — 🟢 **`qti3` is MIT (© 2026 Longsight, Inc.), so this is a contribution, not a procurement** — and `core`'s parser plus `packages/fixtures/xml/random-integer-template-reference.xml` give it a **ready-made round-trip oracle** (write → parse → execute → assert the draw lands on the declared grid). 🔵 **Interim workaround already specified and costs nothing**: hand-author the template XML from that fixture (~35 lines) and let `core` execute it — `compose/patterns.md`, corrected step 1. 🔴 **Prerequisite for whoever takes it: run the suite.** `P527` is read from source and fixtures because installing a third-party repository's dependencies is not permitted in this environment |
+
+🔴 **All three are declared with the remedy *and* its cost, and none is a wish: each names the specific
+artefact a later pass would have to produce.** 🟢 **`Gap 238` is the one a single pass could close
+outright.**

@@ -4,6 +4,129 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Forty-second pass, 2026-10-07 — one new recipe (`P532`, an essay scorer whose judgement the client keeps) and one **correction** to every item-bank recipe in this file
+
+⏱️ **Ninth pass of this date.** 🔵 **Licences read first-hand on 2026-10-07 from payload, registry or the
+cloned tree — the channel is named per row (`P171`, `P494`, `P510`, `P511`, and new this pass `P525`'s
+bound on `P517`). No star counts (`P479`).**
+
+🔵 **Numbering.** 🟢 **`P490`'s rule followed.** The occupied set across the live tree **and** `archive/`
+was enumerated with word boundaries before allocation: **519 distinct numbers**, highest contiguous run
+ending at **`P520`**, with **`P592`, `P593`, `P679`, `P900`, `P999`** occupied above it. 🟢 **So
+`P521`–`P591` was free, and this pass allocates twelve from the bottom of that block:**
+
+| | Finding | Filed in |
+|---|---|---|
+| `P521` | the missing sweep axis was the **language of the query**; `P503`/`P508` now make a progression | `intel/trends.md` |
+| `P522` | six distinct Portuguese essay-scoring trees, **zero licence grants** — *ungranted*, not *absent* | `agents/top.md` |
+| `P523` | 🔴 **`P517`'s slug was wrong**; a `0`-ref result refutes a **slug**, not an **artefact** | `intel/trends.md` |
+| `P524` | 🟢 **`essay-br` — MIT, human-graded ENEM corpus, UFPI**; the tier's permissive asset is *data* | `repos/foundations.md` |
+| `P525` | the LanguageTool path is **two licences deep** (LGPL-2.1 engine, **GPL-3.0** wrapper) and the registry is silent | `repos/foundations.md` |
+| `P526` | 🟢 **open weights reach the proprietary baseline**; compute, not capability, was the constraint | `intel/trends.md` |
+| `P527` | 🟢 **`Gap 39` first half tested** — `core` generates variant families, the **writer cannot author them** | `repos/foundations.md` |
+| `P528` | a keyword sweep in a monorepo needs a **package** column; `item-body-template` is a homonym | `intel/trends.md` |
+| `P529` | a **fourth** market denominator; the 2026 spread is **5.9×**; carry total-vs-increment-vs-segment | `intel/market.md` |
+| `P530` | 🔴 **the earliest binding education-AI clock is APAC's**, not the EU's | `intel/market.md` |
+| `P531` | the **Spanish** half of `Gap 235` is a measured negative, and it is **structural** | `intel/trends.md` |
+| `P532` | the recipe below | this file |
+
+---
+
+## P532 — Portuguese essay scoring **whose judgement the client keeps**
+
+🔵 **Region: `LATAM`** — specifically **Brazil**, because the rubric, the corpus and the exam are
+Brazilian. 🔴 **Do not read this recipe as pan-LATAM: `P531` found no Spanish equivalent of any layer.**
+
+🟢 **This is the recipe `P516` said could not be written.** `P516` measured the essay-scoring tier and
+found permissive scaffolding around proprietary judgement, concluding that a client could not own the
+scoring. 🟢 **`P524`, `P525` and `P526` together change that, and this is the assembly.**
+
+### What it produces
+
+🟢 **A scorer that returns the five ENEM competency scores (C1–C5, 0–200 each) plus formative feedback,
+where every component that *decides* a score is one the client holds** — and a defensible answer to *"who
+graded this, and can you show the same model next year?"*, which `P516` identified as the obligation an
+exam board cannot discharge with a hosted API.
+
+### The components, with licences read this pass
+
+| Step | Component | Licence (channel) | 🔵 Who owns the judgement |
+|---|---|---|---|
+| 0 · **Graded reference data** | [`lplnufpi/essay-br`](https://github.com/lplnufpi/essay-br) — Extended Essay-BR, human-graded on C1–C5 | 🟢 **MIT** — payload `main/LICENSE`, **1,114 B**, © 2021 LPNLP-UFPI (`P524`) | 🟢 **Client** |
+| 1 · **Scoring model** | an **open-weight** LLM — `gpt-oss-120B` reached the hosted-proprietary band in `P526`'s own measurements; the 7B–8B class is where calibration earned the most | 🔵 **Per-model; verify each weight licence at source — this pass did not** | 🟢 **Client** |
+| 2 · **Per-competency prompting** | one call per competency with the rubric in the prompt, **not** one holistic call | 🟢 Your own code | 🟢 **Client** |
+| 3 · **Anchor essays** | one exemplar per score band per competency, drawn from `essay-br` **outside the test split** | 🟢 **MIT** via step 0 | 🟢 **Client** |
+| 4 · **C1 feature source** | **LanguageTool**, pt-BR, offline — formal-register deviations as an explicit C1 feature | 🟡 **LGPL-2.1** engine (`master/COPYING.txt`, 26,432 B). 🔴 **Call the HTTP service; do *not* import `language_tool_python`, which is GPL-3.0 (`P525`)** | 🟢 **Client** |
+| 5 · **Scale calibration** | bias calibration learned on **theme-separated folds** | 🟢 Your own code; `scikit-learn` BSD-3 | 🟢 **Client** |
+| 6 · **Metrics** | QWK + Pearson against held-out human scores, **paired bootstrap** for significance | 🟢 Your own code | 🟢 **Client** |
+
+### How to wire it
+
+1. **Split `essay-br` by theme, not at random.** 🔴 **This is the step that decides whether the
+   evaluation means anything.** `P526`'s source evaluates **cross-prompt** — unseen essay themes — because
+   a within-theme split lets the model memorise topic vocabulary and inflates every figure.
+2. **Score one competency per call**, rubric text in the prompt. 🟢 **Worth ~0.06 QWK over holistic
+   scoring (0.47 → 0.53 raw), the cheapest structural gain available.**
+3. **Add anchor essays and an explicit C5 element checklist.** 🟢 Raw QWK 0.53 → 0.59; C1 0.29 → 0.35.
+4. **Feed LanguageTool counts into the C1 prompt**, over HTTP per step 4's licence note. 🟢 Best raw
+   figure measured: **QWK 0.63, Pearson 0.63**.
+5. **Fit the bias calibration on the theme-separated folds and apply it as standard post-processing.**
+   🟢 **The single largest effect in `P526`'s table: a 7B model moves from QWK 0.25 to 0.42 with no
+   change of model.** 🔵 **Most of what looks like bad judgement in this tier is a mis-scaled output.**
+6. **Freeze and version everything that decides a score** — weights, prompts, rubric text, anchors,
+   calibration coefficients — as one tagged artefact. 🟢 **This is the step that answers `P516`'s
+   comparability objection, and it is only possible because no layer is a third party's API.**
+
+### What this costs, stated honestly
+
+| | |
+|---|---|
+| 🔴 **GPU time, one-off** | 🟢 **The binding constraint, and the whole reason `P526`'s source ended up on hosted APIs**: it ran out of Colab Pro credit mid-run on the 70B/72B stage. 🔵 **Budget the fine-tune explicitly; it is a known one-off price, not a research risk** |
+| 🔴 **Accuracy ceiling** | 🔵 **Published essay-br band is QWK 0.60–0.73. The best configuration above is 0.63 — mid-band.** 🔴 **Do not sell state-of-the-art** |
+| 🔴 **Statistical honesty** | 🔵 At 300 essays, ~0.04 differences are **inside the noise** by paired bootstrap. 🟢 **Scale the eval set before claiming a gain of that size** |
+| 🟡 **Copyleft adjacency** | 🔵 LanguageTool is LGPL-2.1 as a service and **GPL-3.0 through its Python wrapper**. 🟢 **The HTTP boundary is the whole mitigation, and it costs one container** |
+| 🔴 **Human-in-the-loop is not optional** | 🟢 **LGPD gives a right to review of decisions made *solely* by automated processing.** 🔵 **A Brazilian deployment needs a reviewing human by law, so design the queue in from day one** |
+
+🔴 **What this recipe deliberately does not use.** The six Portuguese corretor repos in `P522` — including
+the UTFPR project whose **measurements** this recipe is built on. 🔵 **They carry no licence grant, so
+they are prior art to read and not code to ship.** 🟢 **The numbers are facts about the world and are
+freely citable; the implementations are not freely usable.** ⚠️ **No pass of this KB has had counsel read
+any of this.**
+
+---
+
+## 🔴 Correction to every item-bank recipe in this file — `P527` falsifies step 1 as written
+
+🔵 **`P496`, `P507` and `P518` all open with a step of the form *"author N parametric variants of one item
+with `LongsightGroup/qti3`"*, each flagging it as inferred-not-tested.** 🟢 **It has now been tested
+(`P527`), and the flag was warranted: the step is false as written.**
+
+| | Status before `P527` | 🟢 After `P527` |
+|---|---|---|
+| `qti3` **writer** emits parametric variants | 🔴 *"No evidence"* — inferred from package descriptions | 🔴 **Refuted by measurement.** `packages/writer`: **0 of 33 exports**, **0 files** referencing `qti-template-declaration` / `qti-template-processing` |
+| QTI 3 variant families are reachable **at all** on this stack | 🔵 unknown | 🟢 **YES — `packages/core` implements the full mechanism**: declaration parsing, a real `randomInteger` draw over `min`/`max`/`step`, `qti-set-correct-response` keying off the draw, and a **constraint-retry loop up to 100 restarts** |
+
+🟢 **The corrected step 1, which costs one file instead of a dependency:**
+
+1. **Hand-author the template-variable XML**, using
+   `packages/fixtures/xml/random-integer-template-reference.xml` **as the template** — it declares
+   `FACTOR`/`TARGET`/`OFFSET`/`RESULT`, draws three parameters, computes `RESULT = FACTOR*TARGET + OFFSET`
+   and sets the correct response to `TARGET`. 🟢 **A working parametric item in ~35 lines.**
+2. **Use `qti3`'s `writer` for everything it *does* export** — the 20 interaction builders,
+   `writeQti3AssessmentTest`, `buildQti3RubricBlock`, packaging and the manifest. 🔵 **The writer is still
+   the right tool; it just cannot produce this one element.**
+3. **Deliver through `core`**, which executes the template processing per candidate.
+4. **Then proceed unchanged** into calibration (`py-irt` / `irtorch` / `girth`, MIT), linking (`EqUMP`,
+   MIT), and observed-score or kernel equating (`KernEqWPS`, MIT, over the R side-car of `P518`).
+
+🟢 **And the contribution this opens, because `qti3` is MIT (© 2026 Longsight, Inc.):** the missing
+emitter is **~one module** — a `buildQti3TemplateDeclaration` / template-processing writer — and
+`core`'s parser plus the fixture above give it a **ready-made test oracle** (round-trip: write → parse →
+execute → assert the draw lands on the declared grid). 🔵 **`Gap 238` records it with that scope.** 🔴
+**Stated limit, per `P527`: the suite was not executed this pass — installing a third-party repository's
+dependencies is not permitted in this environment — so `core`'s generator is verified by reading its
+implementation and fixtures, not by an observed run.**
+
 ## 🟢 Forty-first pass, 2026-10-07 — two recipes: `P518` reopens `P507`'s seam as an **R** seam and prices it honestly, and `P520` delivers the chain **inside Moodle** instead of beside it
 
 ⏱️ **Eighth pass of this date.** 🔵 **Licences below were read first-hand on 2026-10-07 from payload or

@@ -4,6 +4,131 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Forty-second pass, 2026-10-07 — `Gap 235` closes on the **corpus**, not the scorer; and `Gap 39`'s first half is finally **tested** — the writer cannot emit what the runtime can execute
+
+⏱️ **Ninth pass of this date** (34–41 ran earlier). **Licences read first-hand on 2026-10-07** from the
+channel named per row — repository **payload** on `raw.githubusercontent.com` (title-block classified,
+`P171`), **registry** metadata, and this pass additionally **the cloned working tree**. Existence by
+`git ls-remote --heads` against a negative control in the same run (`P510`). **No star counts** (`P479`).
+
+### 🟢 `P524` — the permissive asset in the essay-scoring tier is the **corpus**: `essay-br`, MIT, human-graded, peer-reviewed
+
+🔵 **Why this is the shape of the answer rather than a consolation prize.** `P516` measured the
+essay-scoring tier and found *permissive code over non-permissive intelligence*. 🟢 **This pass found the
+one thing that inverts that, and it is not a scorer — it is the graded data a client needs in order to
+own a scorer.**
+
+| Field | Value, and the channel it came from |
+|---|---|
+| Repo | [`lplnufpi/essay-br`](https://github.com/lplnufpi/essay-br) — 🟢 **existence confirmed**, `git ls-remote --heads` serves exactly one ref, `refs/heads/main` (`P510`, `P511`) |
+| Licence | 🟢 **MIT** — payload `main/LICENSE`, **1,114 B**, title block `MIT License`, holder *"Copyright (c) 2021 Laboratório de Processamento de Linguagem Natural - UFPI"* |
+| Holder | **Laboratório de Processamento de Linguagem Natural, Universidade Federal do Piauí (UFPI)** — 🟢 **LATAM-origin, and a federal university lab rather than a vendor** |
+| What it is | **Extended Essay-BR** — essays written by **Brazilian high-school students**, *"graded by humans professionals following the criteria of the ENEM exam"* (README, read from payload) |
+| Grading scheme | 🟢 **The ENEM five-competency rubric (C1–C5)**, the instrument a Brazilian client actually reports against |
+| Provenance | 🟢 **Peer-reviewed** — Marinho, Anchiêta & Moura, *"Essay-BR: a Brazilian Corpus to Automatic Essay Scoring Task"*, **Journal of Information and Data Management 13(1), 65–76 (2022)**, Sociedade Brasileira de Computação, [`doi:10.5753/jidm.2022.2340`](https://doi.org/10.5753/jidm.2022.2340) |
+| Access surface | `build_dataset.py` exposing a `Corpus` class; Python ≥ 3.6 |
+
+> **`P524`.** 🟢 **The first LATAM-origin permissive asset this KB has recorded in the essay-scoring
+> tier, and it is MIT, human-graded against the national rubric, and citable.** 🔵 **It changes what
+> `P516` means in practice: `P516`'s question was *where does the judgement live, and can the client keep
+> it?* — and a graded corpus under MIT is precisely the artefact that lets the answer be "yes", because
+> it is what you fine-tune and calibrate **your own** scorer against.** 🔴 **What it is not: a scorer.
+> See `Gap 236`.**
+
+### 🔴 `P525` — the LanguageTool path is **two licences deep**, the registry declares neither, and the Python wrapper is the restrictive one
+
+🔵 **Why this row exists.** The one open component that measurably improves Portuguese essay scoring in
+the pipeline `P526` reads is **LanguageTool**, used for competency C1 (formal register). 🔴 **Its licence
+is not one fact, it is three, and they disagree in the direction that matters.**
+
+| Layer | Artefact | Licence, and the channel | 🔴 Consequence |
+|---|---|---|---|
+| **Engine** | [`languagetool-org/languagetool`](https://github.com/languagetool-org/languagetool) | 🟡 **LGPL-2.1** — **two agreeing channels**: payload `master/COPYING.txt` **26,432 B**, title block *"GNU LESSER GENERAL PUBLIC LICENSE Version 2.1, February 1999"*; and `master/pom.xml` `<licenses>` → *"GNU Lesser General Public License"* | 🟢 **Library copyleft.** Usable as a **separate process or service** without reaching the caller |
+| **Python wrapper** | [`jxmorris12/language_tool_python`](https://github.com/jxmorris12/language_tool_python) — the import the pipeline actually writes | 🔴 **GPL-3.0** — payload `master/LICENSE`, **35,151 B**, title block *"GNU GENERAL PUBLIC LICENSE"* | 🔴 **Full copyleft, and it is the layer a developer touches first** |
+| **Registry** | `language-tool-python` **3.4.0** on PyPI | 🔴 **SILENT** — JSON API returns `info.license = None` **and an empty classifier list** | 🔴 **A registry-only sweep records this dependency as unlicensed-unknown and would never see the GPL-3.0** |
+
+> **`P525`.** 🔴 **`P509`'s shape recurs, one tier over and worse: the permissive grant is on the thing
+> you cite and the restrictive grant is on the thing you `import`.** 🟢 **And the registry channel —
+> which `P517` promoted for being *strictly better* at existence and licence — returns `None` here, so
+> `P517`'s promotion is now **bounded**: the JSON API is sound for existence, and is **not** a licence
+> oracle when the field is empty.** 🔵 **The engineering remedy is concrete and costs nothing:** run
+> LanguageTool as its **own HTTP service** (the LGPL-2.1 engine, unmodified) and call it over the wire,
+> instead of importing the **GPL-3.0** wrapper into the client's codebase. ⚠️ **No pass of this KB has
+> had counsel read any of this.**
+
+### 🟢 `P527` — `Gap 39`'s first half, **tested at last**: `qti3`'s runtime generates parametric variant families and its **writer cannot author them**
+
+🔵 **The assumption under test, quoted from the register.** `Gap 39` said parametric variant support was
+*"inferido de la descripción de los paquetes, no probado"*, and `intel/open-gaps.md` called it **"the
+chain's oldest untested assumption and the cheapest remaining win on this KB"**. 🟢 **Tested this pass by
+**cloning the repository and reading the source tree**, which is a channel no earlier pass used here.**
+
+**Subject:** [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) — 🟢 **MIT**, payload
+`LICENSE.md` **1,072 B**, title block `MIT License`, holder *"Copyright (c) 2026 Longsight, Inc."*, read
+from the **clone** this pass made. 🟢 **Existence and ref discipline (`P511`), measured rather than
+assumed: `git ls-remote --heads` serves **four** refs — `main`, `agent/fix-sakai-essay-migration`,
+`codex-qti-correctness-fixes`, `info-model-crosswalk` — and `LICENSE.md` returns `200` on **all four**,
+so the MIT grant is not a property of the default branch alone.** 🟢 **The clone used here is `main` at
+`0ca7d6fc`, committed **2026-10-07** — the project is under active development as of this pass's own
+date, which is why `P527`'s negative result is worth re-testing later rather than treated as permanent.**
+
+🟢 **The QTI 3 mechanism for parametrising one item into a family is `qti-template-declaration` +
+`qti-template-processing`. Measured per package, by file count:**
+
+| Package | Files referencing the template-variable mechanism | 🟢 Verdict |
+|---|---|---|
+| `packages/core` | 🟢 **45** | 🟢 **The mechanism lives here** |
+| `packages/fixtures` | 🟢 **13** | 🟢 Worked examples, incl. a parametric item |
+| `packages/conformance` | 3 | 🟢 Covered by tests |
+| `packages/cli` | 2 | — |
+| `packages/player`, `transcoder`, `migrator` | 1 each | — |
+| `packages/a11y`, `packages/pnp` | 0 | — |
+| 🔴 **`packages/writer`** | 🔴 **0** | 🔴 **The authoring tool emits none of it** |
+
+🔴 **The writer measured on its exported surface, not its directory listing (`P500`'s lesson):** **33
+exports** — `buildQti3ChoiceItem`, `buildQti3MatchItem`, `buildQti3SliderItem`, … twenty interaction
+builders, plus `writeQti3AssessmentItem`, `writeQti3AssessmentTest` and `buildQti3RubricBlock`. 🔴 **Not
+one of the 33 emits a template declaration, a template-processing rule or a `qti-set-template-value`.**
+
+🔴 **And the near-miss that makes this worth writing down.** `packages/writer/src/item-body-template.ts`
+exists, and a keyword sweep for *"template"* hits it. 🔴 **It is unrelated.** Read from the clone, its
+export is `validateItemBodyTemplate`, and what it validates is the placement of a single
+`<qti-interaction-placeholder/>` **slot in the item's HTML body** — a **layout** template. 🔵 **Same
+word, different concept; see `P528`.**
+
+🟢 **What `core` actually does, which is the half of the answer that is good news:**
+
+| Capability | Evidence read from the clone | 🟢 Status |
+|---|---|---|
+| Declare template variables | `core/src/parser-processing.ts` parses `qti-template-constraint`; `core/src/types.ts` carries `setTemplateValue` | 🟢 Implemented |
+| Draw a random parameter | `core/src/processing-evaluator.ts` `case "randomInteger"` — honours `min`/`max`/`step`, computes `count = floor((max-min)/step)+1` and returns `min + floor(random()*count)*step` | 🟢 **A real uniform draw over the declared grid** |
+| Derive the key from the draw | fixture uses `qti-set-correct-response` over a `qti-sum`/`qti-product` of drawn variables | 🟢 **The answer key is computed per variant** |
+| Reject a bad draw and redraw | `core/src/session.ts` — on an unsatisfied `templateConstraint` it calls `resetTemplateValues`, `resetCorrectResponses`, restores responses/outcomes and **restarts the rule list, up to 100 times** | 🟢 **This is what makes a *family* rather than one lucky instance** |
+
+🟢 **The worked example, `packages/fixtures/xml/random-integer-template-reference.xml`** — a bike-share
+word problem declaring `FACTOR`, `TARGET`, `OFFSET`, `RESULT`; drawing `FACTOR` from `min=2 max=10
+step=2`, `TARGET` from `3..9`, `OFFSET` from `1..5`; computing `RESULT = FACTOR*TARGET + OFFSET`; and
+setting the correct response to `TARGET`. 🟢 **That is a parametric variant family, in the project's own
+test data.**
+
+> **`P527`.** 🟢 **`Gap 39`'s first half is answered, and it splits.** 🟢 **The format and the runtime
+> *do* support parametric variant families — declared, drawn, keyed and constraint-retried, with a
+> fixture to prove the shape.** 🔴 **The `writer` package cannot author them: 0 of 33 exports, 0 files.**
+> 🔴 **So the chain step every recipe in this KB has written as *"author N parametric variants with
+> `LongsightGroup/qti3`"* is false as written** — see the corrected recipe in `compose/patterns.md`.
+> 🔵 **The capability is still reachable, which is why this is a win and not a loss:** author the
+> template-variable XML directly (the fixture is the template) and let `core` execute it. 🟢 **And
+> because `qti3` is MIT, the missing emitter is a contributable gap, not a procurement one — `Gap 238`.**
+
+🔴 **Stated limit of this measurement, because this KB does not let an instrument go unreported.** The
+verdicts above are read from **source and test data in the cloned tree**. 🔴 **The suite was not
+executed**: installing a third-party repository's dependencies is not permitted in this environment, so
+`pnpm install` was refused and no test ran. 🔵 **What that does and does not undermine:** the writer's
+**absence** of an emitter is a fact about the tree and is not weakened at all; `core`'s **presence** of a
+working generator is read from its implementation and its fixtures rather than from an observed run. 🟢
+**A later pass with install permission should run `packages/conformance` and `packages/core`'s template
+tests and record the observed draws — that is the one remaining step, and it is now small.**
+
 ## 🟢 Forty-first pass, 2026-10-07 — observed-score and kernel equating have a **permissive** implementation, and `P500`'s licence verdict falls while its deployment verdict survives for a reason it never stated
 
 ⏱️ **Eighth pass of this date** (34–40 ran earlier). **Licences read first-hand on 2026-10-07** from the

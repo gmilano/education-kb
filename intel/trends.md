@@ -4,6 +4,148 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Forty-second pass, 2026-10-07 — four trends: the sweep language was the missing axis, a 0-ref result refutes a **slug** not an **artefact**, open weights reach the proprietary baseline, and a keyword sweep inside a monorepo needs a package column
+
+⏱️ **Ninth pass of this date.** 🔵 **All market figures are secondary and carry their series (`P477`,
+`P515`).** Existence by `git ls-remote --heads` against a negative control in the same run (`P510`).
+
+### T1 🟢 `P521` — the missing axis was the **language of the query**, and `P503`'s lesson now has three instances
+
+🔵 **`Gap 235` prescribed exactly one next step: *"query the Portuguese-language corpus directly
+(`corretor automático de redação código aberto`)"*. 🟢 **It was run verbatim, and it worked on the first
+attempt** — six distinct Portuguese essay-scoring trees, swept in full in `agents/top.md` (`P522`).
+
+🔴 **None of them had ever appeared in this KB**: `CorrecaoRedacao`, `Corretor-de-redacao`, `UTFPR`,
+`essay-br`, `lplnufpi`, `LanguageTool` and `QWK` each returned **0 live files** before this pass.
+
+🟢 **This is the third time a sweep's blind spot has turned out to be an axis nobody had written down,
+and the three make a progression worth stating as a rule:**
+
+| Pass | The axis that was missing | What the sweep was varying instead |
+|---|---|---|
+| `P503` | the **topic vocabulary** | synonyms within one vocabulary |
+| `P508` | the **distribution channel** — `KernEqWPS` is on neither CRAN nor PyPI | language and licence |
+| 🆕 `P521` | the **language of the query itself** | English terms, more of them |
+
+> **`P521`.** 🟢 **A tier can be invisible to every English-language query and busy in its own language,
+> and for a company whose engagements are regional that is a structural blind spot rather than an
+> accident.** 🔵 **The rule to carry: when a regional tier reads as empty, the next instrument is not
+> another English synonym — it is the same question in the language the practitioners publish in.** 🔴
+> **And the corollary that costs the most if ignored: eight passes recorded a LATAM essay-scoring gap
+> that was an artefact of the query language, not a fact about the region.**
+
+### T2 🔴 `P523` — `P517`'s slug was wrong, and a `0`-ref result refutes a **slug**, never an **artefact**
+
+🔴 **Reported against this KB's own prior finding, which is what `P502` requires.** `P517` and `Gap 235`
+recorded `AIRGOLAB-CEFET-RJ/textgrader` as *"0 refs — does not resolve"* and concluded **"nothing
+retrievable"**. 🟢 **The existence verdict was right. The inference drawn from it was not, and the
+organisation name was simply wrong.**
+
+| Slug | `git ls-remote --heads` | 🟢 What it establishes |
+|---|---|---|
+| `AILAB-CEFET-RJ/gcc1734` | 🟢 **1 ref, `main`** | 🟢 **The organisation is `AILAB-CEFET-RJ` and it exists** — the control that makes the rest of this table mean something |
+| 🔴 `AILAB-CEFET-RJ/textgrader` | 🔴 **0 refs** | 🔴 Does not resolve **under the correct org** |
+| 🔴 `AIRGOLAB-CEFET-RJ/textgrader` (`P517`'s slug) | 🔴 **0 refs** | 🔴 **The org in `P517` was a misreading** — *AirGoLab* is how the lab is named on Brazil's MCTI research-infrastructure registry, `AILAB-CEFET-RJ` is how it publishes on GitHub |
+| 🔴 `AIRGOLAB-CEFET-RJ/DRL-ALM` | 🔴 **0 refs** | 🔴 Corroborates: **no repo resolves under `AIRGOLAB-CEFET-RJ` at all** |
+| 🔴 `TextGrader`, `Textgrader`, `text-grader`, `textgrader-api`, `ailab-cefet-rj/textgrader` | 🔴 **0 refs each** | 🔴 Five further name and case variants, all negative |
+| `totally-fake-org-zzz9/nope-repo-abc` — 🔵 control | 🔴 **0 refs** | 🔴 Does not exist |
+
+🔵 **And the artefact is independently attested while the repository is unreachable.** The project's own
+declared site, `aquarii.eic.cefet-rj.br/textgrader`, returns 🔴 **`403` over HTTP and fails TLS over
+HTTPS** — unreachable, not absent. It is also catalogued on **eduCAPES**, Brazil's federal higher-education
+repository, as *"Plataforma de Avaliação Automatizada de Textos Dissertativos com Base nas Competências
+do ENEM"*, pointing at that same URL. 🔵 **A search result still hyperlinks the GitHub repository and
+quotes its README, so it was public at crawl time.**
+
+> **`P523`.** 🔴 **`0` refs means *this slug serves no refs*. It does not mean the project does not
+> exist, was never published, or has nothing to offer** — and `P517` quietly made all three of those
+> inferences from one measurement. 🟢 **The discriminating control is a **sibling repo under the same
+> org**: if a sibling serves refs, the org is real and the verdict is about the repo; if nothing under
+> the org serves refs, the org name itself is the suspect.** 🔵 **Neither `P510` nor `P517` specified
+> that second control, and without it a typo and a deletion are the same string.** 🟢 **`textgrader`'s
+> correct status: published, peer-catalogued, and **not anonymously retrievable today** — private,
+> renamed or removed, and this pass cannot tell which.**
+
+### T3 🟢 `P526` — measured counter-evidence to `P516`: open weights reach the proprietary baseline, and **compute** is the binding constraint
+
+🔵 **`P516` found the essay-scoring tier inverted — the fully-open option archived, the live option an
+MIT harness around a proprietary model — and asked the right question: *where does the judgement live,
+and can the client keep it?* 🟢 **The UTFPR project (`P522`) is the first artefact this KB has read that
+actually measures that trade-off, on Portuguese, against a human-graded reference.** 🔴 **Its code is
+ungranted, so what follows is **read as evidence, not adopted as a component**.**
+
+🔵 **Reported in the project's own metric, Quadratic Weighted Kappa against ENEM human scores, 300-essay
+fixed stratified sample, cross-prompt evaluation:**
+
+| Configuration | QWK raw | QWK calibrated | 🔵 What it isolates |
+|---|---|---|---|
+| Holistic, one call per essay | 0.47 | 0.54 | the naive baseline |
+| One call **per competency** (C1–C5, rubric in prompt) | 0.53 | 🟢 **0.60** | 🟢 **Decomposing by rubric criterion is worth ~0.06** |
+| **+ anchor essays** (one per score band) and a C5 checklist | 0.59 | 0.61 | 🟢 C1 rises 0.29 → 0.35 |
+| **+ LanguageTool on C1** and a Reflect-and-Revise C5 rubric | 🟢 **0.63** | 0.61 | 🟢 **Best raw figure; `P525`'s open component is doing work** |
+
+🟢 **The two results that matter more than any single number:**
+
+| | |
+|---|---|
+| 🟢 **Open weights are not the weak link** | **`gpt-oss-120B`, open-weight, reaches ~0.52 holistic — the same band as the hosted proprietary model it was compared against.** 🔵 **So the project's own evidence is that the *proprietary* model carried no decisive quality advantage at the holistic level** |
+| 🔴 **Most of the apparent weakness was **scale**, not judgement** | 🟢 **A bias calibration learned on theme-separated folds moves the best 7B model from QWK 0.25 to 0.42.** 🔵 **That is the single largest effect in the table and it is pure post-processing — no better model, no more compute** |
+
+🔴 **And the constraint that actually bit, which is the part a studio must price.** The project
+**abandoned** local fine-tuning of 70B/72B models mid-run: *"interrompida no meio da execução por falta
+de crédito computacional"*. 🔵 **It then moved to free hosted endpoints.** 🟢 **So the reason the
+judgement ended up off-premises was **GPU budget**, not model capability** — a cost question, which a
+studio can answer, rather than a capability question, which it cannot.
+
+> **`P526`.** 🟢 **`P516`'s diagnosis stands and its pessimism does not.** 🔵 **`P516` said a client
+> cannot keep the judgement in this tier. The measured position is better: with `essay-br` (MIT,
+> `P524`) as the graded reference, an open-weight model at the proprietary baseline, calibration worth
+> more than model size, and LanguageTool as an ownable C1 feature source, **the judgement can be
+> owned** — the price is GPU time for fine-tuning, and it is a known, bounded, one-off price.** 🔴
+> **The honest caveat the source itself states: at 300 essays, differences of ~0.04 sit inside the noise
+> (paired bootstrap), and the published essay-br band is 0.60–0.73 — so 0.63 is mid-band, not
+> state-of-the-art.** 🟢 **The procurement consequence: the per-score marginal cost and the
+> frozen-scoring problem `P516` identified are both **solvable here**, and solving them is a sizing
+> exercise rather than a research project.** See the chain in `compose/patterns.md` (`P532`).
+
+### T4 🔴 `P528` — inside a monorepo, a keyword sweep without a **package** column produces a false positive
+
+🔵 **Reported against this pass's own instrument, before `P527` was written.** The first sweep for QTI
+template support searched the whole `qti3` tree for *"template"* and found **40+ files**, which reads as
+strong support. 🔴 **Re-run per package, the `writer` had `0` — and its one *"template"* hit,
+`item-body-template.ts`, is a **layout** placeholder validator with no relation to template variables.**
+
+| Sweep | Result | Truth |
+|---|---|---|
+| 🔴 `grep -r template` over the repo | 🔴 **40+ files → "supported"** | 🔴 **Wrong for the package that matters** |
+| 🟢 Same term, **per package** | 🟢 `core` 45, **`writer` 0** | 🟢 **Correct, and it is the whole of `P527`** |
+
+> **`P528`.** 🔴 **In a monorepo a repository-level keyword count measures the *project*, and a
+> capability question is almost always about **one package**.** 🟢 **The fix is a column, not a better
+> query: sweep per package and print the package name.** 🔵 **The aggravating factor here is a genuine
+> homonym — QTI's *template variables* (parametrisation) and an HTML *body template* (layout) share a
+> word — so the false positive was not noise, it was the adjacent concept.** 🟢 **General rule:
+> confirm a capability on the **exported surface** of the specific package that would provide it
+> (`P500`'s lesson), never on a tree-wide string count.**
+
+### 🔴 The informed gap this pass declares rather than leaves silent — Spanish
+
+🟢 **`Gap 235` covered Portuguese **and Spanish**. The Portuguese half is answered. The Spanish half was
+searched this pass and is **negative**, which is recorded here so that silence is not read as coverage.**
+
+Query run: `corrector automático ensayos español código abierto licencia MIT github`. 🔴 **No
+open-source essay *scorer* for Spanish.** What the channel returns instead is the **orthography and
+grammar** tier — `BrayanZambranoDev/AI-Text-Corrector` (README declares MIT; 🔴 **payload not read this
+pass, so unverified here**), `gmiguelgosuna/Corrector-espanol` (hosted third-party API),
+`ZethAlvarez01/TT-R-20-1-006` (Flask prototype) — 🔵 **all of which correct text and none of which
+*grades* an essay against a rubric.**
+
+🔵 **Why the asymmetry with Portuguese is real and not a query artefact:** Brazil has **one national
+essay-graded exam with a published five-competency rubric (ENEM)**, which creates both a corpus and a
+community. 🔴 **Spanish-speaking LATAM has no single equivalent instrument**, so there is no one rubric
+to standardise on. 🟢 **That makes the Spanish gap structural, and it changes the remedy: for Spanish the
+first artefact is a **rubric and a graded corpus**, not a model.** See `Gap 237`.
+
 ## 🟢 Forty-first pass, 2026-10-07 — three trends: permissive code over non-permissive intelligence, a registry channel that confirms packages that do not exist, and the agent shelf declared **saturated** rather than unmeasured
 
 ⏱️ **Eighth pass of this date.** 🔵 **All market figures below are secondary and carry their series

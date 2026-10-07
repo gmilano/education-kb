@@ -4,6 +4,44 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — forty-second pass: one new permissive repo, and it is a **corpus** — plus a dependency whose restrictive licence the registry does not declare
+
+⏱️ **Ninth pass of this date** (34–41 earlier). **Licences from payload and registry, each named per row.
+Title-block classified (`P171`). No star counts (`P479`). Existence by `git ls-remote --heads` with a
+negative control in the same run (`P510`).**
+
+🟢 **The week's movement is one admission, one licence-closure warning, and one bound placed on an
+instrument this KB promoted only yesterday.**
+
+### 🟢 Admitted this pass
+
+| Repo | Licence (channel · bytes · title block) | Existence | What it is |
+|---|---|---|---|
+| 🆕 [`lplnufpi/essay-br`](https://github.com/lplnufpi/essay-br) | 🟢 **MIT** · payload `main/LICENSE` **1,114 B** · `MIT License` · © 2021 *Laboratório de Processamento de Linguagem Natural — UFPI* | 🟢 1 ref, `main` | 🟢 **Extended Essay-BR** — Brazilian high-school essays **graded by human professionals on the ENEM C1–C5 rubric**. Peer-reviewed (JIDM 13(1):65–76, 2022, SBC). 🟢 **The first LATAM-origin permissive asset in this KB's essay-scoring tier.** Promoted to `repos/foundations.md` (`P524`) |
+
+### 🔴 Measured and flagged rather than admitted
+
+| Repo | Licence (channel) | 🔴 Why it is a flag |
+|---|---|---|
+| [`languagetool-org/languagetool`](https://github.com/languagetool-org/languagetool) | 🟡 **LGPL-2.1** — **two agreeing channels**: payload `master/COPYING.txt` **26,432 B**, title block *"GNU LESSER GENERAL PUBLIC LICENSE Version 2.1"*; `master/pom.xml` `<licenses>` | 🟡 **Library copyleft.** 🟢 Usable **as a service**; the pt-BR engine measurably improves ENEM C1 scoring (`P526`) |
+| [`jxmorris12/language_tool_python`](https://github.com/jxmorris12/language_tool_python) | 🔴 **GPL-3.0** — payload `master/LICENSE` **35,151 B**, title block *"GNU GENERAL PUBLIC LICENSE"* | 🔴 **Full copyleft on the layer a developer `import`s first**, while the engine behind it is LGPL. See `P525` |
+| [`eth-lre/MathTutorBench`](https://github.com/eth-lre/MathTutorBench) | 🔴 **NO PAYLOAD** — none of 12 filenames on the served ref | 🟢 Exists (1 ref, `main`) · 🔴 **ungranted**, and this KB has cited it for six passes without recording that |
+
+### 🔴 `P525` bounds `P517`, one pass after it was promoted
+
+🔵 **`P517` (pass 41) promoted the PyPI **JSON API** over the HTML surface as *"strictly better: one
+request, sound existence, machine-readable licence"*. 🟢 **The existence half holds and is unaffected.**
+🔴 **The licence half does not generalise:** for `language-tool-python` **3.4.0** the JSON API returns
+`info.license = None` **and an empty classifier list**, while the repository payload is an unmistakable
+**GPL-3.0**.
+
+> 🔵 **Carried forward: the registry is a sound *existence* oracle and a merely *opportunistic* licence
+> oracle.** 🔴 **An empty `license` field is not "permissive" and not "unknown-and-therefore-low-risk" —
+> it is **unmeasured**, and the payload must be read before the dependency is accepted.** 🟢 **This is
+> `P494`'s rule arriving in the registry channel: absence of a declaration is not a verdict.**
+
+---
+
 ## 2026-10-07 — forty-first pass: two new permissive repos, and a channel defect that rewrites how every `master/` path in this KB should be read
 
 ⏱️ **Eighth pass of this date** (34–40 earlier). **Licences from payload and registry, each named per

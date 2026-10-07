@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — forty-second pass: the sweep language was the missing axis. A Portuguese-language query returns **six** unseen essay-scoring trees and **not one licence grant**
+
+⏱️ **Ninth pass of this date.** **Licences from payload and registry, named per row. Title-block
+classified (`P171`). No star counts (`P479`). Existence by `git ls-remote --heads` with a negative
+control in the same run (`P510`).**
+
+🟢 **The week's movement is a tier, not a repo.** 🔵 **`P512` (pass 41) declared the agent shelf
+*saturated* rather than the query *broken*. This pass tested that by changing the **language** of the
+query instead of the English terms — the step `Gap 235` prescribed — and both halves of the result are
+recorded: the **shelf** is still saturated, and the **map** was not (`P521`, `P522`).**
+
+### 🔴 The mandated general sweeps — fifth consecutive identical outcome, recorded in full so silence is not read as coverage
+
+| Query (year computed, not hardcoded: **2026**) | Outcome |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **No admissible new asset.** Returns `Ebimsv/AITutorAgent` (🟢 MIT, payload `main/LICENSE` 1,072 B), `SirhanMacx/Claw-ED` (🟢 MIT, `main/LICENSE` 1,078 B, 10 refs), `eth-lre/MathTutorBench`, `HKUDS/DeepTutor`, `plastic-labs/tutor-gpt` — 🔵 **all five already held in this KB** |
+| `github trending education AI 2026` | 🔴 **No education-specific trending list exists.** Returns general agent round-ups; the only education row is `HKUDS/DeepTutor`, already held |
+
+🔴 **`eth-lre/MathTutorBench` re-measured and the result is worth a row:** 🟢 existence confirmed (1 ref,
+`main`), 🔴 **no licence payload under any of the 12 filenames swept** — so the LLM-tutor benchmark this
+KB cites is itself **ungranted**. 🔵 **Benchmarks are run, not shipped, so this is a smaller problem than
+for a library — but it is not zero, and no earlier pass recorded it.**
+
+### 🟢 The new tier: Portuguese ENEM essay scoring — six distinct trees, every one ungranted
+
+🔵 **Query: `corretor automático de redação código aberto GitHub`.** Full method and the per-repo table
+are in `agents/top.md` (`P522`); the summary and the dedup fact are here.
+
+| Repo | Existence | Licence (12 filenames × every served ref, + manifests + README) |
+|---|---|---|
+| [`IC-Redacoes-UTFPR/CorrecaoRedacao`](https://github.com/IC-Redacoes-UTFPR/CorrecaoRedacao) | 🟢 1 ref `main` | 🔴 **NO GRANT** |
+| [`YuriMatsumotoSantos/CorrecaoRedacao`](https://github.com/YuriMatsumotoSantos/CorrecaoRedacao) | 🟢 1 ref `main` | 🔴 **NO GRANT** — 🔵 **same head SHA `da2e8d3d` as the row above: one tree, two slugs** |
+| [`jgabriel-sntx/Corretor-de-redacao-ENEM`](https://github.com/jgabriel-sntx/Corretor-de-redacao-ENEM) | 🟢 1 ref `main` | 🔴 **NO GRANT** |
+| [`douglas150206/IF_VEST_Redacao_Correcao`](https://github.com/douglas150206/IF_VEST_Redacao_Correcao) | 🟢 **4 refs** | 🔴 **NO GRANT on any ref** |
+| [`victor934034/simulade`](https://github.com/victor934034/simulade) | 🟢 1 ref `main` | 🔴 **NO GRANT** |
+| [`horaciohudson/corretor-redacao`](https://github.com/horaciohudson/corretor-redacao) | 🟢 1 ref `main` | 🔴 **NO GRANT** |
+| [`neiltonsantana9-star/redacao`](https://github.com/neiltonsantana9-star/redacao) | 🟢 1 ref `main` | 🔴 **NO GRANT** |
+| `totally-fake-org-zzz9/nope-repo-abc` — 🔵 control | 🔴 **0 refs** | — |
+
+🟢 **Seven slugs, six distinct trees, zero grants.** 🔵 **The permissive asset this query ultimately led
+to is a *corpus* and is filed in `repos/foundations.md` (`P524`), because data is not an agent.**
+
+### 🔴 `P523` corrects a pass-41 finding in this KB's own record
+
+`P517` recorded `AIRGOLAB-CEFET-RJ/textgrader` as unresolvable and concluded *"nothing retrievable"*. 🟢
+**The org name was wrong — it publishes as `AILAB-CEFET-RJ`, proved by sibling `AILAB-CEFET-RJ/gcc1734`
+serving refs in the same run.** 🔴 **`textgrader` still returns 0 refs under the corrected org and five
+further name/case variants**, so the project is published, catalogued on eduCAPES, and **not anonymously
+retrievable today**. 🔵 **Full table in `intel/trends.md`.**
+
+---
+
 ## 2026-10-07 — forty-first pass: `P497` is superseded. A shaped query returns four education agents, three were already shelved, the fourth is GPL-3 — the shelf is **saturated**, not the query **broken**
 
 ⏱️ **Eighth pass of this date.** **Licences from payload and registry, named per row. Title-block
