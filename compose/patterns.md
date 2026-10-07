@@ -4,6 +4,139 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-fifth pass, 2026-10-07 — two recipes: P45, P46
+
+**Every repo named below had its licence read from its own payload on `raw.githubusercontent.com` on
+2026-10-07** with the branch- and case-aware probe (12–19 filenames × `main` **and** `master`), **and
+cross-checked against the registry or build descriptor it publishes** where one exists. No star
+counts (`api.github.com` **403**), so these recipes are composed on **licence and documented
+capability**, not popularity. ⚠️ **No model-weights licence is verified anywhere here —
+`huggingface.co` is 000.** ⚠️ **Every regulatory date in `P46` is secondary-sourced — `eur-lex` is
+000 — and must be re-verified against the Official Journal and each national gazette before it
+enters a client deliverable.**
+
+## P45 — Make a declared gap fail the build, in whatever language it was written
+
+**Problem it solves.** This KB spent three passes telling readers that **no EMEA-origin permissive
+education foundation exists**, while holding an **Apache-2.0 Swiss LMS** and a **BSD-3-Clause
+Edinburgh assessment engine** on its own shelves (`P469`). 🔴 **The instrument that should have
+caught it already existed and was already correct.** `p370-gap-gate/` was built for exactly this,
+passes **27/27**, and reported **0 CONTRADICHOS** — because the KB had shifted from writing its gap
+claims in Spanish to writing them in English, and **two independent filters in the gate are
+Spanish-only** (`P471`).
+
+🔵 **This is the recipe worth taking to a client, because the shape is completely general: an
+absence has no payload to re-read, so nothing contradicts it except your own corpus — and the
+checker that compares them has to be able to *parse* the claim.**
+
+| Component | Role |
+|---|---|
+| `compose/code/p370-gap-gate/` — `gap_gate.py` | **The gate.** Classifies a declared gap's **scope** (`INDICE` vs `CANAL`), resolves the region against the closed five-value vocabulary, and searches the corpus for repo rows that **place** an asset in that region |
+| 🆕 `compose/code/p471-gap-gate-language/` — `gap_language.py` | **The coverage meter and the speech-act classifier.** Reports, per gap sentence, whether the gate can scope it **as shipped** and **with English markers** (`language_blind = True` is the untested class); ships `MARKERS_EN` as the patch; and provides `assertion_class()` → `QUOTED` / `QUALIFIED` / `ASSERTED` plus `build_verdict()`, which is what step 4–5 below actually call. **25/25** |
+| `compose/code/lib/region.py` | The closed vocabulary. 🔴 **Not reimplemented** (`P237`) — and note the gate deliberately does **not** use its strict cell detector on repo rows, because this KB's region cells mix region with attribution and strict mode would reject them as residue, making the gate sustain a false gap by false negative |
+| Any CI runner | `python3 gap_language.py --self-test` → **16/16** (nesting the gate's **27/27**); `--coverage <root>` in the pre-commit path |
+
+**Wiring.**
+
+1. **Extract** candidate sentences with **both** patterns — `GAP_SENTENCE` (Spanish) and
+   `GAP_SENTENCE_EN` (English). 🔴 **Either alone loses half the corpus**; the `P467` sentence is
+   invisible to the first.
+2. **Scope** each one. An **index** gap (*"no EMEA-origin permissive education foundation"*) is a
+   claim about the corpus and **is** refutable by its rows. A **channel** gap (*"…through the forges
+   this environment can reach"*) is a claim about the **query** and is **not**. 🔵 **The channel
+   marker must win when a sentence carries both** — the narrower scope is the one that was actually
+   evidenced.
+3. **Refute** index claims against placed rows. Measured on this tree: the `P467` sentence →
+   **CONTRADICHO, 94 rows, 77 placed**.
+4. **Classify the speech act before failing anything** (`assertion_class`). 🔴 **This step is not
+   optional and this pass proved it: with it omitted, the gate fails the build 11 times on this tree
+   and 0 of the 11 are real** — **9** are **quotations** and **2** are narrowed by a **maturity
+   qualifier**. 🔵 **The correct way to retract a false gap is to quote it in the retraction**, so a
+   detector without this step **punishes the fix** and trains people to fix things silently. And
+   *"no LATAM-origin permissive product **at production maturity**"* is a claim about **maturity**:
+   placed rows prove assets exist and say nothing about whether any is production-grade, so the gate
+   must not refute a claim quantified on a dimension it never measured. **Quotation wins over
+   qualifier** — a retraction quoting a qualified claim is still a retraction.
+5. **Fail the build only on `INDICE` + `CONTRADICHO` + `ASSERTED`** (`build_verdict`). Pass
+   `SOSTENIDO`. 🔴 **Report `language_blind` separately and loudly** — it is neither a pass nor a
+   fail, it is *"this gate cannot read this claim."*
+6. **Print the denominator.** 29 → 5 candidate sentences was the only visible symptom of the decay,
+   and nothing surfaced it.
+
+**The design rule this pass paid for.** 🔴 **`NO-CLAIM` must not be the same verdict as
+"unparseable."** The gate returned, for a claim it could not read, the identical verdict it returns
+for prose that is not a claim at all — so the sweep read as *"nothing to judge."* 🔵 **Any
+classifier gets a third outcome: pass, fail, and *I could not parse this*.** A passing suite
+measures the cases you wrote, never the class you stopped writing.
+
+**Where it pays outside this KB.** Any corpus where a team asserts absence — *"no supported driver
+for X"*, *"no customer in segment Y"*, *"no library does Z"* — and where the corpus is bilingual or
+changed language, tooling, or template at some point. 🔵 **The bug is never in the assertion; it is
+in the checker's reach, and the checker reports health.**
+
+**Effort.** 1–2 weeks to port onto a client corpus, assuming their index has structured rows.
+🔴 **Non-negotiable precondition:** the corpus must *place* assets in a **closed** region vocabulary.
+Against free prose ("Brazil", "Europe", "Latam") step 3 has nothing to compare and the gate degrades
+to a word counter — which is this KB's `P135`/`P368` lesson, already paid for.
+
+## P46 — Jurisdiction-pinned assessment: one pipeline, four regulatory clocks
+
+**Problem it solves.** A grading, placement or proctoring deliverable is **high-risk or high-impact
+AI in every major jurisdiction**, and as of 2026 the clocks have **diverged**: the EU moved education
+Annex III obligations to **2 Dec 2027**, while **Korea (22 Jan 2026)** and **Vietnam (1 Mar 2026)**
+are **already in force**, with Vietnam naming **automated assessment** and **behavioural monitoring**
+explicitly. 🔴 **The failure mode is reading the EU deferral as global relief.** A single
+"compliant" pipeline is now wrong in at least two directions at once.
+
+**The architecture: one assessment core, a policy layer that is pinned per jurisdiction.**
+
+| Component | Licence (payload-verified) | Role |
+|---|---|---|
+| [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | 🟢 **BSD-3-Clause** (`master/LICENSE.txt`, 2,058 B) | **The assessment core.** QTI 2.1 delivery + rendering; **JQTI+** to read, write, model and manipulate items and tests programmatically; MathAssess for maths. 🔵 **Permissive, so the policy layer can be compiled in rather than bolted on** |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** (`master/LICENSE`, 10,982 B; `pom.xml` `<licenses>`; second forge on `gitlab.com`) | **The platform, extended IN-TREE.** The only complete LMS on these shelves that permits this — Moodle GPL, Open edX AGPL, Chamilo GPL, ILIAS GPL all force a side-car. 🟢 **EMEA-origin** (Zurich → frentix), which matters for an EU data-residency bid |
+| [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | MIT | **The policy graph.** One node per jurisdiction gate; the graph is the auditable artefact — `P46`'s whole point is that the policy is a **data structure**, not scattered `if` statements |
+| [`ollama/ollama`](https://github.com/ollama/ollama) or [`vllm-project/vllm`](https://github.com/vllm-project/vllm) | MIT / Apache-2.0 | **Local inference.** 🔵 Required, not preferred, where **California AB 1159** bars training on student data and EU/APAC residency rules bite. ⚠️ **The engine licence is verified; no model weight licence is** |
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) + [`openfun/ralph`](https://github.com/openfun/ralph) | Apache-2.0 / MIT | **xAPI learning-record store.** The **post-market monitoring** evidence every one of these statutes demands |
+| [`openedx/edx-proctoring`](https://github.com/openedx/edx-proctoring) | 🟡 **AGPL-3.0** (PyPI declaration) | ⚠️ **Side-car only.** Network copyleft — reachable over HTTP, never linked into an Apache/BSD tree |
+
+**The policy layer, as four pinned configurations.**
+
+| Jurisdiction | Binding date | What the gate must enforce |
+|---|---|---|
+| 🇪🇺 **EU** | **2 Dec 2027** (Annex III) — **but Article 50 transparency from Aug 2026** | Risk-management file, data governance, technical documentation, **human oversight**, post-market monitoring. 🔵 **Ship the Article 50 disclosure now**; build the rest against the 2027 date |
+| 🇰🇷 **Korea** | 🔴 **in force 22 Jan 2026** | Education = **"high-impact"**. Obligations apply **today** |
+| 🇻🇳 **Vietnam** | 🔴 **in force 1 Mar 2026** | Education high-risk, **automated assessment and behavioural monitoring named**. 🔴 **This is the clause that catches proctoring directly** |
+| 🇺🇸 **US states** | **Ohio: 1 July 2026** | District-level AI policy mandatory; **AB 1159** — no student data in training; **OK/MD** — human oversight, **no AI in high-stakes student decisions**; **134 bills / 31 states** in flight |
+
+**Wiring, in order.**
+
+1. **Pin the jurisdiction at the top of the request**, from the tenant, not from a locale header.
+   Every downstream node reads it. 🔴 **A deployment with no pin defaults to the *strictest* profile**
+   — the only safe default, since the cost of over-complying is latency and the cost of
+   under-complying is the engagement.
+2. **Core scores against the rubric** (`qtiworks` + JQTI+), emitting the item, the rubric version and
+   the model version.
+3. **Human-oversight node is non-bypassable where required** (EU, OK, MD, Korea, Vietnam). It is a
+   **queue with an override and a reason field**, not a confirmation dialog. 🔵 **Oklahoma and
+   Maryland bar AI from high-stakes student decisions outright** — so for those, the model output is
+   advisory input to a human decision, and the data model has to say so.
+4. **Residency node** chooses inference: local (Ollama/vLLM) wherever training-on-student-data is
+   barred or residency is required; vendor API only where the pin permits.
+5. **Every step writes xAPI to the LRS.** 🔵 **This is the single component that serves all four
+   jurisdictions at once** — post-market monitoring, the audit trail Ohio district policies ask for,
+   and the evidence base for an EU technical file.
+6. **Emit the conformity pack per pin.** Same core, four document sets.
+
+**Effort.** 10–14 weeks for the core plus two jurisdictions; **+2–3 weeks per additional
+jurisdiction**, which is the number to quote — the marginal cost is a policy profile and a document
+set, not a rebuild. 🔵 **That marginal cost *is* the sales argument**, and it is only true because
+the core is BSD/Apache and the policy lives in a graph.
+
+⚠️ **Two honest limits.** The team this needs is **Java/Maven** (OpenOLAT, JQTI+), not the Python
+most of this KB's agent rows assume. And **every date above is secondary-sourced**: `eur-lex` is
+**000** from this environment, so the EU dates in particular carry a re-verification obligation
+before they go in front of a client.
+
 ## 🟢 Thirty-fourth pass, 2026-10-07 — two recipes: P43, P44
 
 **Every repo named below had its licence read from its own payload on `raw.githubusercontent.com` on

@@ -4,6 +4,183 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🔴 Thirty-fifth pass, 2026-10-07 — a three-pass-old gap claim that this KB's own shelves disprove
+
+**Every licence below was read from the repository's own payload on `raw.githubusercontent.com` on
+2026-10-07**, branch- and case-aware (12–19 filenames × `main` **and** `master`), **cross-checked
+against the registry the project publishes to** where one exists. **No star counts.**
+
+🔵 **Star counts, inherited not re-derived (`P465` discipline).** `api.github.com` → **403** and
+`github.com` → **403**, re-measured this pass. The GitHub MCP route an earlier pass used stays
+outside this session's repository scope (`gmilano/globant-kb`, `gmilano/education-kb`). **"Not read
+this pass" means genuinely unobtainable here, not skipped.**
+
+### 🔴 `P469` — the EMEA permissive gap was never a gap. It was a shelf-membership check reported as an industry finding
+
+`repos/foundations.md` has asserted for **three consecutive passes** (`P467` and its two
+predecessors) that this KB can find **"no EMEA-origin permissive education foundation."** 🔴 **That
+claim is false, and the disproof was already inside this repository the whole time.** Both rows
+below were re-read from payload **this pass**:
+
+| Counter-evidence | Licence (payload, 2026-10-07) | Second channel | EMEA origin | Already on which shelf |
+|---|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** (`master/LICENSE`, **10,982 B**, verbatim Apache preamble) | 🟢 `master/pom.xml` `<licenses>` → `Apache 2.0 Open Source L6icense` + `apache.org/licenses/LICENSE-2.0` | 🟢 **Switzerland** — OLAT originated at the **University of Zurich**; maintained by **frentix GmbH**. `README` and `pom` both resolve to `openolat.org` / `openolat.com` | `repos/trending.md:1349`, `:2617`; `verticals/solutions.md`; `agents/top.md:3118` |
+| [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | 🟢 **BSD-3-Clause** (`master/LICENSE.txt`, **2,058 B**, *"distributed under the 3-clause BSD license… This license is famously liberal"*) | — not published to a registry | 🟢 **United Kingdom** — QTI 2.1 delivery engine + **JQTI+** + **MathAssess**, University of Edinburgh | `agents/trending.md:9124`, where it is **already tagged `🟢 EMEA`** |
+
+🔴 **`repos/trending.md:2617` calls OpenOLAT "the most permissive full LMS in this KB" — on the same
+shelf-set where `repos/foundations.md` says no such asset exists.** A single `grep -ri openolat`
+surfaces both in under a second.
+
+🔴 **A second claim falls with it.** `P467` states the Dutch GPL-3.0
+[`macsnoeren/genai-open-assessment`](https://github.com/macsnoeren/genai-open-assessment) is *"the
+first EMEA-origin higher-education assessment framework on any shelf here."* **`qtiworks` — Edinburgh,
+BSD-3-Clause, a higher-education assessment engine — precedes it on this KB's own shelf.** The phrase
+*"on any shelf here"* is what makes this an error rather than a scoping choice.
+
+🔵 **Root cause, and it is not carelessness.** The gap was true *of `repos/foundations.md`* —
+OpenOLAT lives on the verticals and trending shelves and was never promoted to foundations. The
+defect is the **restatement**: a shelf-local absence was rewritten as a claim about what this
+instrument could *find*, and `P467` then spent a pass hardening the wrong claim with nine forge
+probes. **The forge probes are sound and remain valid; the conclusion they were attached to is not.**
+
+🟢 **Fixed this pass, not just flagged:** both repositories are promoted to `repos/foundations.md`
+with payload evidence, and the EMEA-gap language is withdrawn there.
+
+🔵 **Transferable rule — `P469`.** *A gap claim is an assertion about every shelf, so it must be
+tested with a cross-shelf `grep` before it is written, and it must name the shelf it was measured on.*
+The cost of skipping that grep here was three passes of telling a reader that an Apache-2.0 Swiss LMS
+and a BSD-3 Edinburgh assessment engine did not exist, in a file sitting beside the rows that record
+them.
+
+### 🔴 `P471` — and the check already existed. It passed 27/27 while judging nothing
+
+🔴 **The uncomfortable part of `P469`: this KB had already built the instrument.**
+`compose/code/p370-gap-gate/` exists precisely to falsify a declared gap against the KB's own index,
+its suite passes **27/27**, and the pass that introduced it caught exactly this class of error
+(a four-pass *"CERO repositorios de origen LATAM"* claim against 12 placed LATAM rows).
+
+Swept against the live tree this pass, it reports **5 gap sentences with a region → 0 CONTRADICHOS,
+all 5 `NO-CLAIM` / `SIN-ALCANCE`**. 🔵 **Not because the KB stopped declaring gaps — `P467` is right
+there — but because the KB started writing them in English, and two independent filters in the gate
+are Spanish-only.** Measured on the verbatim `P467` sentence:
+
+| | Result |
+|---|---|
+| `GAP_SENTENCE` (the `--sweep` extractor: `hueco`, `cero repositorios`, `sigue abierta`) | 🔴 **extracts nothing** — the sentence is never even presented for judgement |
+| `INDEX_MARKERS` / `CHANNEL_MARKERS` (the scope classifier) | 🔴 `SIN-ALCANCE` → verdict **`NO-CLAIM`** |
+| `region_in_prose` | 🟢 **`EMEA`, correctly** — the region names are identical in both languages |
+| Rows in the tree naming EMEA beside a GitHub URL | 🟢 **94**, of which **77 placed** |
+
+🔴 **So the gate resolved which region the claim was about, had 94 candidate contradictions on the
+shelf, and still declined to judge it.** With English markers added, the same sentence returns
+**`CONTRADICHO`, scope `INDICE`, 94 rows**; and the channel-scoped wording of the *same* gap still
+returns **`SOSTENIDO`**, which is the control proving this is an extension of the gate and not a
+counter of the word "no".
+
+🔵 **The real lesson, and it is sharper than `P469`'s: `NO-CLAIM` must not be the same verdict as
+"unparseable."** The gate gave a claim it could not read the identical verdict it gives prose that is
+not a claim — so the sweep read as *"nothing to judge."* **A passing suite measures the cases you
+wrote, never the class you stopped writing**, and the only visible symptom was a denominator falling
+from **29 to 5** with nothing reporting it.
+
+🟢 **Instrument shipped this pass:** `compose/code/p471-gap-gate-language/` — **25/25**, nesting the
+gate's own 27/27 — measures that gate's coverage over a corpus, ships `MARKERS_EN` as the patch, and
+found **12 language-blind gap claims among 58**, including a second false English index claim nobody
+had flagged: *"…rested on **no LATAM-origin permissive education project**."* Recipe: `P45` in
+`compose/patterns.md`.
+
+### 🔴 `P472` — and then the fixed gate failed the build 11 times, all 11 wrong
+
+Running the repaired gate over this tree produced **11 `CONTRADICHO` index-scoped claims and not one
+of them was a live assertion**: **9** are **quotations** and **2** are narrowed by a **maturity
+qualifier**.
+
+🔴 **The quotation class is the one that matters, because it is caused by doing the right thing.**
+The correct way to retract a false gap is to **quote it in the retraction** — `repos/foundations.md`
+now carries `> **Superseded text:** *"no EMEA-origin permissive education foundation."*` — so **a
+naive gate fires forever on a corpus that has already been fixed**, and an instrument that punishes
+the fix teaches people to fix things quietly.
+
+🔵 **The qualifier class is the honesty check.** *"No LATAM-origin permissive education product **at
+production maturity**"* is a claim about **maturity**, not existence. Placed rows prove assets exist
+and say nothing about whether any is production-grade — **so the gate must not refute a claim
+quantified on a dimension it never measured.**
+
+🟢 **Fixed, with tests:** `assertion_class()` → `QUOTED` / `QUALIFIED` / `ASSERTED`, and
+`build_verdict()` fails only on `INDICE` + `CONTRADICHO` + `ASSERTED`. Quotation wins over qualifier.
+On this tree: **0 build failures**, `CONTRADICHO-but-QUOTED=9`, `CONTRADICHO-but-QUALIFIED=2`.
+
+🔵 **`P471` and `P472` are the same defect at two levels: `P471` is "the gate could not *read* the
+claim"; `P472` is "the gate could not tell *what the sentence was doing*." A contradiction detector
+needs a speech-act classifier in front of it** — asserting X, quoting X, and asserting X under a
+qualifier are three different acts and only the first is refutable by the corpus.
+
+### 🟢 New verified rows this pass
+
+| Agent / repo | Licence (payload) | Cross-channel | What it does | Region |
+|---|---|---|---|---|
+| [`eloompty/Eloom-LMS-International`](https://github.com/eloompty/Eloom-LMS-International) | 🟢 **MIT** (`main/LICENSE`, **1,062 B**) | 🟢 `README` MIT badge agrees; 🔴 not on Packagist | Laravel **13** LMS covering the **full student lifecycle** — agent-sourced application → offer letter → enrolment → intake scheduling → attendance → assessment → fees → certificates → alumni. **42 `nwidart/laravel-modules` modules**, **five web portals over one codebase**, token-authenticated REST API for mobile. 🟢 **An MIT full LMS is genuinely rare** — this industry's platform tier is overwhelmingly copyleft (Moodle GPL, Open edX AGPL, Chamilo GPL, ILIAS GPL, OpenEduCat LGPL). | ⚠️ **not determinable** — `README` states no country or governing body. Vocational/HE framing, no ASQA/Ofqual anchor. Recorded as unplaced rather than guessed. |
+| [`AgenticAiLabs/Ai-Engineering-Roadmap`](https://github.com/AgenticAiLabs/Ai-Engineering-Roadmap) | 🟢 **MIT** (`main/LICENSE`, **1,067 B**) | — not on any registry | An **OSSU-style open curriculum** for self-taught AI engineering, explicitly modelled on [`ossu/computer-science`](https://github.com/ossu/computer-science): guided path, curriculum overview, learning philosophy, project structure. 🔵 Belongs to the **OER/curriculum tier**, not the agent tier — it is a structured reading path, not software that runs. | 🌍 Global |
+| [`CodeWithJV/ai-tutor`](https://github.com/CodeWithJV/ai-tutor) | 🟢 **MIT** (`main/LICENSE`, **1,068 B**, © 2023 Joshua Vial) | — not on any registry | ⚠️ **Downgraded on reading it.** Search surfaced this as an AI tutor; the `README` is explicit that the repository *"provides you with a prompt"*, tested mainly on **GPT-3.5**. It is a **prompt artefact, not a tutoring system** — no code path, no retrieval, no assessment. Recorded at its true weight so a later pass does not promote it off its title. | 🌍 Global |
+
+### 🔴 Repositories that exist and ship no licence grant at all
+
+Probed with the same 12–19-filename × `main`/`master` sweep, then re-probed for **existence** so
+"ungranted" is separated from "unresolved" (`P461`):
+
+| Repo | Licence sweep | Existence control | Consequence |
+|---|---|---|---|
+| [`Jeremiah0067/Ai_Rubric`](https://github.com/Jeremiah0067/Ai_Rubric) | 🔴 **no payload**, both branches | 🟢 **exists** — `main/package.json` → 200 | Handwritten-answer capture → marking guide → AI-suggested grade with teacher override. **Unusable for a client deliverable without an upstream grant.** |
+| [`OpenLLM-Europe/European-OpenLLM-Projects`](https://github.com/OpenLLM-Europe/European-OpenLLM-Projects) | 🔴 **no payload**, both branches | 🟢 **exists** — `main/README.md` → 200 | 🔵 **Painful one.** A curated catalogue of European open-source LLM projects for **medium- and low-resource European languages** — exactly the EMEA discovery channel this KB has been missing, and it carries **no licence on its own content**. Usable as a **lead source**, never as a redistributable asset. |
+| [`formalms/formalms`](https://github.com/formalms/formalms) | 🔴 **no payload** — 19 filenames × `main`/`master`, incl. `LICENSE.TXT`, `gpl.txt`, `COPYING.txt` | 🟢 **exists** — `master/README.md` → 200 | See `P470` below. |
+
+### 🔴 `P470` — a listicle's licence claim is not a licence, and this one survived three channels of checking as unverifiable
+
+Secondary sources this pass state plainly that **Forma LMS** (the Italian fork of Docebo from before
+Docebo went commercial) is **Apache-2.0**, and recommend it *specifically* for teams that need
+permissive licensing. This KB cannot confirm that from any channel it has:
+
+| Channel | Result |
+|---|---|
+| Payload — 19 licence filenames × `main` + `master` | 🔴 **nothing** |
+| `packagist.org/packages/formalms/formalms.json` | 🔴 **404** — not published |
+| `master/composer.json` | 🔴 **absent / unparseable** |
+
+⚠️ **So Forma LMS is recorded as `licence unverified`, not as Apache-2.0** — even though a
+recommendation article asserts the permissive licence as its headline reason to choose it. 🔵 **This
+is the sharpest form of `P468`: the failure mode is not a missing licence but a *confidently stated*
+one with nothing behind it.** A client-facing dependency manifest that copied that listicle would
+have shipped an unverifiable permissive claim about a platform tier.
+
+### 🔵 Rejected this pass — licence clean, wrong industry
+
+[`WhenWen/AC2`](https://github.com/WhenWen/AC2) — 🟢 **Apache-2.0** (`main/LICENSE`, 11,358 B), and
+**not an education asset**. It is Stanford's *Trust the Critic More* actor-critic-with-action-chunking
+RL method for language models (`arxiv.org/abs/2609.39247`), benchmarked on **IMO-ProofBench**. It
+surfaced in a rubric/grading search purely on the word "grading". 🔵 **Recorded as a rejection rather
+than dropped silently**, because the IMO-ProofBench association makes it exactly the row a later pass
+would mistake for a maths-tutoring asset.
+
+### 🟢 Channel census, pass 35 — cumulative instrument record
+
+Per `P465`, this **inherits** the full census and marks what pass 35 re-measured; it does not
+redefine the census as the subset probed today.
+
+| Channel | Pass-35 result | Role |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 **200** | **Channel A — payload.** The primary licence evidence |
+| `api.github.com` | 🔴 **403** | no stars, no metadata |
+| `github.com` (HTML) | 🔴 **403** | no scraping fallback |
+| `pypi.org/pypi/{pkg}/json` | 🟢 **200** | re-read `canvasapi` → **MIT + OSI MIT classifier**; `kolibri` → **MIT + OSI MIT classifier** |
+| `registry.npmjs.org` | 🟢 **200** | LTI/JS tier |
+| `packagist.org` | 🟢 **200** | PHP tier — and the channel that **404**s on `formalms` (`P470`) |
+| `repo1.maven.org/maven2` | 🟢 **200** | 🔵 **still structurally unused, but no longer idle**: OpenOLAT's licence was cross-checked via its `pom.xml` **through `raw`**, which is the same declaration Maven would serve |
+| `huggingface.co/api` | 🔴 **000** | **no model-weights licence is verified anywhere in this KB** |
+| `eur-lex.europa.eu` | 🔴 **000** | **every AI Act date in `intel/` is secondary-sourced** |
+| `codeberg.org`, `joinup.ec.europa.eu` | 🔴 **000** | EU public-sector forges (`P467`'s probes stand) |
+| `gitlab.com` | 🟢 **301** (reachable, redirect) | the second host that confirmed OpenOLAT |
+| 🆕 `crates.io/api/v1/crates/{crate}` | 🔴 **403** | 🆕 **first measured this pass.** The Rust registry is **closed** here — so `raif-s-naffah/xapi-rs` and any future Rust row stays **payload-only**. Recorded so no later pass counts Rust as an available second channel |
+
 ## 🟢 Thirty-fourth pass, 2026-10-07 — the census in the freshest layer contradicts itself, and the Canvas client was never on the shelf
 
 **Every licence below was read from the repository's own payload on `raw.githubusercontent.com` on

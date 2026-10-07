@@ -4,6 +4,83 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🔴 Thirty-fifth pass, 2026-10-07 — the EMEA gap this shelf declared for three passes is withdrawn
+
+**Licences read from each repo's own payload on `raw.githubusercontent.com`, 2026-10-07**, branch-
+and case-aware (12–19 filenames × `main` and `master`), **cross-checked against the registry or
+build descriptor each project publishes** where one exists. No star counts: `api.github.com` **403**,
+`github.com` **403**, and the GitHub MCP route an earlier pass used is outside this session's
+repository scope. Cumulative channel census in `agents/top.md`.
+
+### 🔴 `P467` is WITHDRAWN. The EMEA permissive gap was a property of this shelf, not of the industry
+
+> **Superseded text:** *"no EMEA-origin permissive education foundation."* Asserted here for three
+> consecutive passes. 🔴 **It is false.** Two EMEA-origin, permissive, education-specific assets were
+> already recorded elsewhere in this KB while this shelf denied their existence. Both were re-read
+> from payload on 2026-10-07 and are **promoted onto this shelf below**. Root cause and the
+> transferable rule: **`P469`** in `agents/top.md`. 🔴 **And the gate that should have caught this
+> already existed and passed 27/27 while judging nothing — its filters are Spanish-only and this
+> claim was written in English (`P471`).** Instrument: `compose/code/p471-gap-gate-language/`
+> (**16/16**). Recipe: **`P45`** in `compose/patterns.md`.
+
+🔵 **What survives from `P467`, unchanged and still valuable:** nine European and public-sector forges
+(`code.europa.eu`, `gitlab.opencode.de`, `codeberg.org`, `framagit.org`, `git.fsfe.org`,
+`forge.apps.education.fr`, `invent.kde.org`, `salsa.debian.org`, `joinup.ec.europa.eu`) return
+**000** from this environment, re-confirmed this pass for `codeberg.org` and `joinup`. **The EUPL
+tier really is invisible here.** 🔴 **What does not survive is the inference that was hung on it.**
+Unreachable forges mean *this instrument is partially blind to EU public-sector code*; they never
+meant *no permissive EMEA education asset exists*. The second claim was refutable by `grep` against
+this KB's own shelves, and nobody ran it.
+
+### 🟢 Foundations added this pass — the two that disprove the withdrawn claim
+
+| Repo | Licence (payload) | Cross-channel | Language | Why it is a foundation |
+|---|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** (`master/LICENSE`, **10,982 B**, verbatim Apache-2.0 preamble) | 🟢 `master/pom.xml` `<licenses>` → `Apache 2.0 Open Source L6icense` pointing at `apache.org/licenses/LICENSE-2.0`; 🟢 **second forge** `gitlab.com/olatorg/OpenOLAT` (payload Apache-2.0, 10,982 B) | Java | 🟢 **The permissive full-LMS foundation this KB has had all along and never shelved here.** Teaching, learning, **assessment**, curriculum management, QTI, SCORM, communication; modular course-authoring toolkit; architecture stated for low resource consumption and scalability. 🔴 **Origin: Switzerland** — OLAT began at the **University of Zurich**, now maintained by **frentix GmbH**. 🔵 **Licence consequence, and it is the big one: this is the only complete LMS on these shelves that an engagement can extend *inside the tree* without the copyleft conversation.** Moodle is GPL-3.0-or-later, Open edX AGPL-3.0, Chamilo GPL-3.0, ILIAS GPL, OpenEduCat LGPL-3.0 — all of which force the side-car architecture. **Apache-2.0 removes that constraint.** 🔴 **Branch is `master`** — a `main`-only probe reports it ungranted. |
+| [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | 🟢 **BSD-3-Clause** (`master/LICENSE.txt`, **2,058 B** — *"distributed under the 3-clause BSD license… This license is famously liberal"*) | — not published to a registry | Java | 🟢 **A permissive, standards-based assessment-delivery foundation, EMEA-origin.** Three components: the **QTIWorks Engine** (QTI 2.1 delivery + rendering), **JQTI+** (Java library to read, write, model and manipulate QTI 2.1 items and tests), and the **MathAssess extensions** for advanced mathematical assessment. From the **University of Edinburgh**. 🔵 **This is the piece that makes assessment migration tractable**: QTI 2.1 in, QTI 2.1 out, with a permissive library for programmatic item manipulation — so item banks can be transformed without a vendor. 🔴 **`master`-only.** ⚠️ The licence text itself *urges* contributing back; **that is an exhortation in the preamble, not a condition** — the operative grant is plain BSD-3-Clause. |
+
+### 🟢 Third permissive platform row — and the platform channel was not saturated after all
+
+| Repo | Licence (payload) | Cross-channel | Why it is here |
+|---|---|---|---|
+| [`eloompty/Eloom-LMS-International`](https://github.com/eloompty/Eloom-LMS-International) | 🟢 **MIT** (`main/LICENSE`, **1,062 B**) | 🟢 `README` MIT badge agrees; 🔴 **not on Packagist** — so this row is **payload + badge**, not payload + registry, and says so | 🆕 Laravel **13**, PHP **8.3+**, **42 `nwidart/laravel-modules` modules all enabled by default**, **five web portals over a single codebase**, token-authenticated REST API for mobile clients, Laravel Reverb + standalone Socket.IO for realtime. Covers the vocational/HE lifecycle end to end: agent-sourced application → offer letter → enrolment → intake scheduling → attendance → **assessment** → fees → certificates → alumni. 🟢 **MIT, which makes it the most permissive full LMS on these shelves.** ⚠️ **Region not determinable** — the `README` names no country, governing body or qualifications authority. **Recorded as unplaced rather than guessed**, per this KB's closed-vocabulary rule. |
+
+🔴 **Prior passes recorded the platform channel as "saturated, verified by grep"** (`repos/trending.md:1597`,
+`:3751`). 🔵 **Two permissive platform rows arrived this pass through that same channel.** The grep
+was over *this KB's contents*, which proves the shelf had those names — it was never evidence that
+the world had no others. **`P469` is the same error in a second place.**
+
+### 🔴 `P470` — Forma LMS: a confidently published Apache-2.0 claim that no channel here confirms
+
+Secondary sources this pass name **Forma LMS** (Italian fork of Docebo, pre-commercialisation) as
+**Apache-2.0**, and recommend it *specifically* for teams needing permissive licensing.
+[`formalms/formalms`](https://github.com/formalms/formalms) **exists** (`master/README.md` → 200) and:
+
+| Channel | Result |
+|---|---|
+| Payload — 19 licence filenames × `main` + `master` (incl. `LICENSE.TXT`, `gpl.txt`, `COPYING.txt`) | 🔴 **nothing** |
+| `packagist.org/packages/formalms/formalms.json` | 🔴 **404** |
+| `master/composer.json` | 🔴 **absent / unparseable** |
+
+⚠️ **Recorded as `licence unverified`. It is NOT shelved as a permissive foundation.** 🔵 **This is a
+sharper failure than a missing licence**: the claim is *specific*, *permissive* and *published as the
+reason to adopt*. A dependency manifest that trusted the article would have carried an unverifiable
+permissive assertion about a **platform tier** — the tier where a licence error is most expensive,
+because it decides in-tree versus side-car. 🔵 **The rule: a licence is a document you read, not a
+recommendation you inherit.**
+
+### 🟢 Registry re-reads this pass — 2 rows, 0 disagreements
+
+`canvasapi` → **MIT** free-text **+ OSI MIT classifier** · `kolibri` → **MIT** + **OSI MIT
+classifier**. Both agree with the payload rows already on this shelf.
+
+### 🆕 Instrument: the Rust registry is closed
+
+| Stack | Endpoint | Pass-35 reachability | Consequence |
+|---|---|---|---|
+| Rust | `crates.io/api/v1/crates/{crate}` | 🔴 **403** — 🆕 **first measured this pass** | [`raif-s-naffah/xapi-rs`](https://github.com/raif-s-naffah/xapi-rs) and every future Rust row stay **payload-only**. 🔵 Recorded so no later pass counts Rust among the available second channels — the registry tier is **Python, Node, PHP and JVM, not five stacks** |
+| JVM | `repo1.maven.org/maven2` | 🟢 **200** | 🔵 **No longer idle in effect**: OpenOLAT's licence was cross-checked against its `pom.xml` `<licenses>` block via `raw` — the same declaration Maven Central serves. The JVM tier now has a worked precedent |
+
 ## 🟢 Thirty-fourth pass, 2026-10-07 — the Canvas client was missing, and the EMEA gap gets its reach restated
 
 **Licences read from each repo's own payload on `raw.githubusercontent.com`, 2026-10-07**, branch-

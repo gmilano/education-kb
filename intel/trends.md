@@ -4,6 +4,125 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🔴 Thirty-fifth pass, 2026-10-07 — five trends, and the first is a gap that existed only on the shelf that declared it
+
+### T1 🔴 A gap claim is the most dangerous kind of claim a knowledge base can hold, because nothing contradicts it
+
+Pass 33 wrote a census that contradicted itself (`P465`). This pass found something worse:
+`repos/foundations.md` declared for **three consecutive passes** that there is **no EMEA-origin
+permissive education foundation** — while this same KB recorded `OpenOLAT/OpenOLAT` (**Apache-2.0**,
+University of Zurich → frentix GmbH, Switzerland) and `OpenOLAT/qtiworks` (**BSD-3-Clause**,
+University of Edinburgh, **already tagged `🟢 EMEA`**). One of those rows calls OpenOLAT *"the most
+permissive full LMS in this KB."*
+
+🔵 **Why a gap claim decays differently from a fact.** A wrong licence gets caught: the next pass
+re-reads the payload and the channels disagree. **A wrong absence has no payload to re-read.** It is
+re-asserted by passes that "confirm" it the only way an absence can be confirmed — by searching
+outward and finding nothing — and **searching outward never looks inward**. `P467` is the pure case:
+it probed **nine** European forges, measured them correctly, and hardened a conclusion that a
+one-second `grep -ri openolat` would have destroyed.
+
+🔵 **The transferable rule, `P469`: an absence is a claim about the whole corpus, so it must be tested
+against the corpus, and it must name the scope it was measured on.** *"Not on this shelf"* and *"not
+findable in this industry"* are different sentences and only one of them was true.
+
+🔴 **And here is the part that makes this a trend rather than a mistake: the mechanical guard already
+existed.** `compose/code/p370-gap-gate/` was built to falsify declared gaps against this KB's own
+index, passes **27/27**, and previously caught this exact error class. Swept against the live tree
+this pass it returns **5 gap sentences → 0 CONTRADICHOS, all `NO-CLAIM`** — because the KB's prose
+shifted from Spanish to English and **two independent filters in the gate are Spanish-only**. On the
+verbatim `P467` sentence the sweep extractor matches **nothing**, the scope classifier returns
+`SIN-ALCANCE`, and yet the region resolves correctly to **`EMEA`** with **94 EMEA rows** on the shelf.
+
+🔵 **So this is pass 34's T1 — *"a knowledge base loses capability the same way it loses facts"* —
+recurring in its worst form: not a capability forgotten, but a capability still running, still
+green, and silently covering nothing.** `27/27` and `0 CONTRADICHOS` were each true, and together
+they were misleading. **A passing suite measures the cases you wrote, never the class you stopped
+writing**; the only symptom was a denominator falling from 29 to 5, and nothing reported denominators.
+
+🔵 **The design rule, `P471`, and it generalises past this KB: `NO-CLAIM` must not be the same
+verdict as "unparseable."** Give every classifier a third outcome — pass, fail, and *I could not read
+this* — and make sweeps print their denominator. Instrument shipped this pass:
+`compose/code/p471-gap-gate-language/` (**16/16**), which found **8 language-blind claims among 50**,
+including a second false English one: *"no LATAM-origin permissive education project."* Recipe: `P45`.
+
+🔴 **Second-order cost, and it is the real one:** `P467` reasoned *from* the false gap to a client
+instruction — *"never quote this KB's thin EMEA shelf as market evidence."* The instruction happens to
+be good advice. **It was derived from a premise that was false.** A conclusion that survives its
+premise being wrong is luck, not method.
+
+### T2 🔴 For the first time, the EU is not the binding constraint on an education AI roadmap
+
+The **Digital Omnibus** (final Council approval **29 June 2026**) moved stand-alone Annex III
+high-risk obligations — which cover **education access and assessment: admissions, student
+evaluation, exam scoring** — from **2 Aug 2026** to **2 Dec 2027**. In the same window, **South
+Korea's AI Basic Act** came into force (**22 Jan 2026**, education = *high-impact*) and **Vietnam's
+Law on AI** came into force (**1 Mar 2026**, education among six high-risk sectors, naming
+**automated assessment** and **behavioural monitoring**). **Taiwan** passed its AI Basic Act in
+**Dec 2025**.
+
+🔵 **Every AI-in-education compliance narrative written before mid-2026 assumed Brussels set the
+clock.** It no longer does. A grading or proctoring product shipping into Seoul or Hanoi is in scope
+**today**; the same product in Frankfurt has until **Dec 2027**.
+
+🔴 **The failure mode this creates is specific and predictable: reading the EU deferral as global
+relief.** It is regional relief, and it arrived in the same months two APAC statutes became
+enforceable. ⚠️ **Also note what did *not* move: Article 50 transparency applies from Aug 2026
+regardless**, and the substance of the high-risk obligations is unchanged — only the date moved.
+⚠️ **All of this is secondary-sourced: `eur-lex.europa.eu` is 000 from here.**
+
+### T3 🟢 LATAM's gap is governance, not adoption — and that inverts the usual sell
+
+**87%** of Latin American institutions use AI in at least one area; **only 26%** have a formal AI
+strategy. **79%** of faculty use AI in teaching (**+18 points** on the global 2025 figure), yet
+**88%** report only minimal-to-moderate engagement. UNESCO's finding is the same in prose:
+institutions are using generative AI for teaching, learning and research **without policies to govern
+it**.
+
+🔵 **The usual regional pitch — "adoption is low, here is a pilot" — is simply wrong for LATAM.**
+Adoption already happened, informally, faculty by faculty. The unmet need is **policy, academic
+integrity, and faculty enablement**, and those are the precondition for the deeper uses (assessment,
+feedback, analytics) that the 88%-shallow figure says have not started. 🔵 **Governance first is the
+revenue path here, not the compliance tax.**
+
+### T4 🔴 A published licence claim is now a *more* dangerous input than a missing one
+
+**Forma LMS** is recommended by articles this pass **because** it is Apache-2.0 — permissive
+licensing is the stated reason to pick it. From this environment: **19 licence filenames × `main` and
+`master` → nothing**, **Packagist → 404**, **no parseable `composer.json`**. Recorded `licence
+unverified` (`P470`).
+
+🔵 **Pass 32 retired *"it has a LICENSE file"*. This retires something stronger: *"a source I trust
+says it is Apache-2.0."*** The missing-licence case is safe because it is visibly missing — nobody
+ships it by accident. **The confidently-asserted-but-unverifiable case ships**, because it reads like
+a finished answer. 🔴 **And it lands on the platform tier**, where a licence error decides in-tree
+versus side-car — the most expensive architectural commitment in an engagement.
+
+🟢 **The complementary finding in the same week:** the permissive platform tier is **larger** than
+this KB said — OpenOLAT **Apache-2.0** and Eloom **MIT**, both payload-verified. 🔵 **So the lesson
+is not "distrust permissive claims." It is: verify them, in both directions.** This pass found one
+false permissive claim and two true ones this KB was not using.
+
+### T5 🟡 "Purpose-built beats general-purpose" is now the industry's own stated thesis — which raises the bar on composition
+
+Sources converge on 2026's defining movement being **away from generic AI tools toward platforms
+purpose-built for education**, with pedagogical structure — learning objectives, grade-level
+expectations, assessment logic, instructional flow — **embedded in the system rather than supplied by
+a prompt**. The adoption metric that predicts retention is **5–10 hours saved per teacher per week**,
+and the deployments that work start **with teachers, not students**.
+
+🔵 **Read against this KB's own shelves, that thesis is a warning about composition.** The generalist
+agent tier (CrewAI, LangGraph, OpenHands) supplies orchestration and **no pedagogy**; the education
+tier supplies the standards and structure (QTI, LTI, xAPI, Open Badges, curriculum ontologies).
+🔴 **A recipe that wires a generalist orchestrator to an LLM and calls it an education product is
+exactly the generic tool the industry is reported to be moving away from.** The structure has to come
+from the standards tier — which is precisely why `qtiworks` (**BSD-3-Clause**, programmatic QTI 2.1)
+arriving on the foundations shelf this pass matters more than another agent framework would.
+
+⚠️ **One honest note on T5's evidence:** the "5–10 hours" threshold and the purpose-built thesis come
+from **vendor and trade press**, not from controlled study. 🔵 **Usable as a product-design heuristic
+and as language a client will recognise; not as an efficacy claim in a deliverable.**
+
 ## 🟢 Thirty-fourth pass, 2026-10-07 — five trends, and the first is that this KB forgot an instrument it had already built
 
 ### T1 🔴 A knowledge base loses capability the same way it loses facts — in the freshest layer

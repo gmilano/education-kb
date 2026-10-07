@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — thirty-fifth pass: two EMEA permissive foundations that were here all along, and an MIT full LMS
+
+> **Append-only.** Newest dated section on top; history preserved below.
+
+**Method.** Licences read from payload on `raw.githubusercontent.com`, branch- and case-aware (12–19
+filenames × `main` **and** `master`), cross-checked against the registry or build descriptor each
+project publishes. **8 repositories probed.** `github.com` and `api.github.com` both **403** — **no
+star counts**. Negative control in the same run: `totally-fake-org-zzz9/nope-repo-abc` → no payload
+**and** unresolved across 6 existence filenames, correctly separated from the 3 real-but-ungranted
+repositories below.
+
+### 🔴 The find is a retraction: the EMEA permissive gap never existed
+
+| Repo | Licence (payload) | Cross-channel | Why it matters |
+|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** (`master/LICENSE`, 10,982 B) | 🟢 `master/pom.xml` `<licenses>`; 🟢 second forge `gitlab.com/olatorg/OpenOLAT` | 🔴 **Not new — newly *shelved*.** Swiss full LMS (OLAT, **University of Zurich** → **frentix GmbH**): assessment, curriculum management, QTI, SCORM. **The only complete LMS here extensible in-tree without copyleft.** `repos/foundations.md` spent three passes saying no such EMEA asset existed while `repos/trending.md:2617` called it *"the most permissive full LMS in this KB"* |
+| [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | 🟢 **BSD-3-Clause** (`master/LICENSE.txt`, 2,058 B) | — | QTI 2.1 delivery engine + **JQTI+** + **MathAssess**, **University of Edinburgh**. Already tagged `🟢 EMEA` at `agents/trending.md:9124`. **Promoted to foundations this pass** |
+| [`eloompty/Eloom-LMS-International`](https://github.com/eloompty/Eloom-LMS-International) | 🟢 **MIT** (`main/LICENSE`, 1,062 B) | 🟢 README badge; 🔴 Packagist absent | 🆕 Laravel 13 LMS: **42 modules, 5 portals, one codebase**, REST API, application→alumni lifecycle incl. assessment and fees. 🟢 **MIT — the most permissive full LMS on these shelves.** ⚠️ **Region not determinable from the repo; left unplaced** |
+| [`AgenticAiLabs/Ai-Engineering-Roadmap`](https://github.com/AgenticAiLabs/Ai-Engineering-Roadmap) | 🟢 **MIT** (`main/LICENSE`, 1,067 B) | — | 🆕 OSSU-modelled open AI-engineering curriculum. **OER tier** |
+| [`CodeWithJV/ai-tutor`](https://github.com/CodeWithJV/ai-tutor) | 🟢 **MIT** (`main/LICENSE`, 1,068 B) | — | 🆕 ⚠️ **A prompt, not a tutor** — README says so outright, tested on GPT-3.5. Logged at true weight so no later pass promotes it off its name |
+
+### 🔴 Ungranted this pass — 3 of 8
+
+[`Jeremiah0067/Ai_Rubric`](https://github.com/Jeremiah0067/Ai_Rubric) (exists via `main/package.json`) ·
+[`OpenLLM-Europe/European-OpenLLM-Projects`](https://github.com/OpenLLM-Europe/European-OpenLLM-Projects)
+(exists via `main/README.md` — 🔵 **a catalogue of European low-resource-language LLM projects, i.e.
+precisely the EMEA discovery channel this KB wanted, and it is itself unlicensed**) ·
+[`formalms/formalms`](https://github.com/formalms/formalms) (**`P470`** — published as Apache-2.0 by
+secondary sources; **19 filenames × 2 branches, Packagist 404, no `composer.json`** all fail to
+confirm it).
+
+### 🔵 Rejected — Apache-2.0 and not education
+
+[`WhenWen/AC2`](https://github.com/WhenWen/AC2) (11,358 B Apache-2.0): Stanford actor-critic /
+action-chunking RL for LLMs, **IMO-ProofBench**. Matched a grading query on one word. Logged as a
+rejection so the maths-benchmark link is not later read as a tutoring capability.
+
+### 🟢 Registry re-reads — 2 rows, 0 disagreements
+
+`canvasapi` → MIT + **OSI MIT classifier** · `kolibri` → MIT + **OSI MIT classifier**.
+
+### 🆕 `crates.io` → 403, first measured
+
+The Rust registry is **closed** from this environment. `raif-s-naffah/xapi-rs` stays **payload-only**,
+and the registry tier is **four stacks (Python, Node, PHP, JVM), not five**. `gitlab.com` → **301**,
+reachable, and it is the forge that independently confirmed OpenOLAT.
+
+### 🔴 Declared gaps this pass — written down so silence is not mistaken for coverage
+
+- **Africa:** no repository-level education-AI asset found. The only African result was a **training
+  provider** (`opensourceafrica.org`), not code. The gap is real *and* channel-limited.
+- **Learning-analytics agents:** **no permissive, education-specific learning-analytics agent is
+  findable here.** The search engine itself returned the absence explicitly. Nearest permissive
+  neighbours are general-purpose (`scalytics/ScalyticsCopilot`, `Zain-ul-Abdin45/data-copilot`) and
+  would need pointing at an LRS.
+- **Unresolvable leads:** *"ai-learning-coach"* and *"Skill-Anything"* were named by search prose with
+  **no owner/repo**, so neither could be probed. **Recorded as leads, not findings.**
+
 ## 2026-10-07 — thirty-fourth pass: the Canvas client this KB never had, and an AGPL library it never recorded
 
 > **Append-only.** Newest dated section on top; history preserved below.

@@ -4,6 +4,85 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — thirty-fifth pass: the EMEA gap disproved from inside, 8 repos probed, 3 ungranted
+
+> **Append-only.** Newest dated section on top; history preserved below.
+
+⏱️ **Measurement window 2026-10-07**, second pass of this date (pass 34 ran earlier the same day).
+**8 repositories probed** first-hand against `raw.githubusercontent.com`, branch- and case-aware
+(12–19 licence filenames × `main` **and** `master`), with `README`, `pom.xml` and `composer.json`
+reads for substance and origin.
+
+**Census of the 8, every class named so the denominator closes: 5 carry a permissive grant**
+(3 × MIT, 1 × Apache-2.0, 1 × BSD-3-Clause), **3 exist and serve no licence payload at all** —
+5 + 3 = **8**. Negative control in the same run: `totally-fake-org-zzz9/nope-repo-abc` → **no
+payload** *and* **unresolved** on all 6 existence filenames, correctly distinguished from the 3
+ungranted-but-real repositories.
+
+### 🔴 The headline is a correction, not a discovery
+
+This pass set out to *close* the EMEA permissive gap that `repos/foundations.md` has declared for
+three passes. It instead found the gap **was never real**: `OpenOLAT/OpenOLAT` is **Apache-2.0**
+(payload **10,982 B**, Switzerland, University of Zurich → frentix GmbH) and `OpenOLAT/qtiworks` is
+**BSD-3-Clause** (payload **2,058 B**, Edinburgh), **both already on this KB's shelves**, one of them
+already tagged `🟢 EMEA` four thousand lines up in *this very file* at `agents/trending.md:9124`.
+
+🔵 **The search that was supposed to find the asset found the record of the asset.** Full write-up
+as **`P469`** in `agents/top.md`.
+
+🔴 **And the guard already existed.** `compose/code/p370-gap-gate/` was built for exactly this and
+passes **27/27** — but swept against the live tree it returns **5 gap sentences → 0 CONTRADICHOS,
+all `NO-CLAIM`**, because two of its filters are **Spanish-only** and the KB now writes its gaps in
+English. On the verbatim `P467` sentence the extractor matches **nothing** and the scope classifier
+returns `SIN-ALCANCE`, *while correctly resolving the region to `EMEA`* and with **94 EMEA rows**
+sitting on the shelf. 🔵 **`NO-CLAIM` read as "nothing to judge" where the truth was "I cannot read
+this."** That is **`P471`**; the instrument that measures it is
+`compose/code/p471-gap-gate-language/` (**16/16**), and the recipe is **`P45`**.
+
+### 🟢 Permissive rows this pass
+
+| Repo | Licence (payload) | Cross-channel | Note |
+|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** (`master/LICENSE`, 10,982 B) | 🟢 `master/pom.xml` `<licenses>` block | 🔴 **Re-read, not newly found.** Swiss full LMS with assessment, curriculum management, QTI, SCORM. **Promoted to `repos/foundations.md` this pass** |
+| [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | 🟢 **BSD-3-Clause** (`master/LICENSE.txt`, 2,058 B) | — | QTI 2.1 delivery engine + **JQTI+** + **MathAssess**, Edinburgh. **Promoted to `repos/foundations.md` this pass** |
+| [`eloompty/Eloom-LMS-International`](https://github.com/eloompty/Eloom-LMS-International) | 🟢 **MIT** (`main/LICENSE`, 1,062 B) | 🟢 README badge agrees; 🔴 Packagist absent | 🆕 Laravel 13 LMS, **42 modules, 5 portals, one codebase**, REST API; full application→alumni lifecycle. 🟢 **An MIT full LMS, where this industry's platform tier is almost entirely copyleft** |
+| [`AgenticAiLabs/Ai-Engineering-Roadmap`](https://github.com/AgenticAiLabs/Ai-Engineering-Roadmap) | 🟢 **MIT** (`main/LICENSE`, 1,067 B) | — | 🆕 OSSU-modelled open AI-engineering curriculum. **OER tier, not the agent tier** |
+| [`CodeWithJV/ai-tutor`](https://github.com/CodeWithJV/ai-tutor) | 🟢 **MIT** (`main/LICENSE`, 1,068 B) | — | 🆕 ⚠️ **A prompt, not a tutor.** README: *"provides you with a prompt"*, tested on **GPT-3.5**. Recorded at true weight |
+
+### 🔴 Ungranted — exist, serve no licence
+
+`Jeremiah0067/Ai_Rubric` (handwritten-answer grading with teacher override) ·
+`OpenLLM-Europe/European-OpenLLM-Projects` (catalogue of European LLM projects for low-resource
+European languages — 🔵 **the EMEA discovery channel this KB wanted, and it is unlicensed**) ·
+`formalms/formalms` (**`P470`** — secondary sources call it Apache-2.0; payload, Packagist and
+`composer.json` all fail to confirm it).
+
+### 🔵 Rejected — clean licence, wrong industry
+
+[`WhenWen/AC2`](https://github.com/WhenWen/AC2), 🟢 Apache-2.0, 11,358 B — Stanford RL
+(actor-critic with action chunking) for language models, **IMO-ProofBench**. Matched a grading query
+on the word "grading" alone. Logged so no later pass mistakes the maths-benchmark association for a
+tutoring asset.
+
+### 🟢 Search-channel results, stated so silence is not read as coverage
+
+| Query run this pass | Result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🟡 **0 net new education rows.** Returns the generalist agent tier (CrewAI, OpenHands, OpenClaw, LangGraph, Hermes) already recorded, plus course repos already on the shelf |
+| `github trending education AI 2026` | 🟡 **0 net new.** `agents-radar`, `awesome-ai-agents-2026`, `generative-ai-for-beginners`, `production-agentic-rag-course` — all already present |
+| `open source platform education SIS/ERP MIT Apache 2026` | 🟢 **1 net new** (`Eloom-LMS-International`, MIT) + 🔴 **1 unverifiable claim** (`formalms`, `P470`). The platform channel is **no longer fully saturated** — prior passes called it saturated, and an MIT full LMS was sitting in it |
+| `open source AI grading agent rubric teacher assistant github 2026` | 🟢 **1 net new** (`Ai_Rubric`, **ungranted**) + 1 rejection (`AC2`) |
+| `new open source education AI agent Sept–Oct 2026 MIT tutor lesson planner` | 🟢 **1 net new** (`CodeWithJV/ai-tutor`, MIT, **downgraded to prompt**). Named-but-unresolvable: *"ai-learning-coach"*, *"Skill-Anything"* — 🔴 **no owner/repo given by any result, so neither could be probed; recorded as unresolved leads, not as findings** |
+| `EMEA European open source education LMS permissive Apache BSD 2026` | 🔴 **The decisive one, and it returned the answer this KB already held** — OpenOLAT (Apache-2.0, Zurich/frentix) and Forma LMS. `P469` |
+| `open source education AI Africa India Indonesia 2026` | 🟡 **0 net new.** `Indian-AI-for-Education`, `CurriculumCraft-AI`, `BRAHM-AI`, Sunbird/DIKSHA, EkStep all already recorded. 🔴 **Africa returned no repository-level asset** — only a training provider (`opensourceafrica.org`), not code. **An informed gap: the African education-AI repository tier remains unfound through these channels** |
+| `open source learning analytics agent LMS copilot 2026 Apache self-hosted` | 🔴 **0 education rows — and the search engine said so explicitly**: *"don't reveal a specific project that combines all elements."* 🔵 **A genuine declared gap: there is no permissive, education-specific learning-analytics agent findable here.** The nearest permissive neighbours are general-purpose (`scalytics/ScalyticsCopilot`, `Zain-ul-Abdin45/data-copilot`) and would have to be pointed at an LRS |
+
+### 🆕 Instrument change this pass
+
+`crates.io` → **403**, first measured. The Rust registry is **closed** from this environment, so
+`raif-s-naffah/xapi-rs` and any future Rust row stay **payload-only**. `gitlab.com` → **301**
+(reachable). Full cumulative census in `agents/top.md`.
+
 ## 2026-10-07 — thirty-fourth pass: a census that contradicted itself, 20 repos probed, 7 with no grant at all
 
 > **Append-only.** Newest dated section on top; history preserved below.

@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🔴 Thirty-fifth pass, 2026-10-07 — the permissive platform tier is bigger than this shelf said, and one Apache claim collapses
+
+**Licences read from payload on `raw.githubusercontent.com`, 2026-10-07** (branch- and case-aware,
+12–19 filenames × `main`/`master`), **cross-checked against the registry or build descriptor each
+platform publishes.** No star counts: `api.github.com` **403**. Cumulative channel census in
+`agents/top.md`.
+
+### 🔴 The platform licence table, corrected
+
+This shelf's standing rule has been that **the platform tier is copyleft and the integration tier is
+permissive**, which forces a side-car architecture on every engagement. 🔵 **That rule is still right
+about most of the tier and wrong about the whole of it.** Two permissive full LMS platforms are
+payload-verified, and one is EMEA-origin:
+
+| Platform | Licence (payload, this pass or prior) | Second channel | Architecture consequence |
+|---|---|---|---|
+| **Moodle** | GPL-3.0-or-later | 🟢 Packagist `moodle/moodle` → `GPL-3.0-or-later` | 🔴 **side-car only** — largest installed base in the industry |
+| **Open edX** platform tier | AGPL-3.0 | 🟢 PyPI `openedx-learning`, `edx-proctoring`, `edx-opaque-keys` → AGPL | 🔴 **side-car only**, incl. helper libraries |
+| **Open edX** extension tier | Apache-2.0 | 🟢 PyPI `xblock` → Apache-2.0 | 🟢 in-tree via XBlock |
+| **Chamilo** | GPL-3.0 | 🔴 Packagist **404** | 🔴 side-car; payload-only row |
+| **ILIAS** | GPL | — | 🔴 side-car — widely used in German universities and public agencies |
+| **OpenEduCat** | LGPL-3.0 (declared) | — | 🟡 Odoo-module model; weaker copyleft but still copyleft |
+| 🆕 **OpenOLAT** | 🟢 **Apache-2.0** — `master/LICENSE`, **10,982 B**, re-read this pass | 🟢 `pom.xml` `<licenses>` **+ second forge** `gitlab.com/olatorg/OpenOLAT` | 🟢 **IN-TREE. The single most consequential licence fact on this shelf** — and it is **EMEA-origin** (OLAT from the **University of Zurich**, maintained by **frentix GmbH**, Switzerland) |
+| 🆕 **Eloom LMS** | 🟢 **MIT** — `main/LICENSE`, **1,062 B** | 🟢 README badge agrees; 🔴 not on Packagist | 🟢 **IN-TREE**, and the most permissive full LMS here. Laravel 13 / PHP 8.3+ |
+| 🆕 **Forma LMS** | 🔴 **UNVERIFIED** — see `P470` | 🔴 payload ∅, Packagist **404**, no `composer.json` | ⚠️ **Do not place in either column.** Secondary sources call it Apache-2.0; nothing here confirms it |
+| **Kolibri** | MIT | 🟢 PyPI `kolibri` → MIT + **OSI classifier** (re-read this pass) | 🟢 in-tree — offline-first, not a full LMS |
+| **Frappe / Frappe Education** | MIT | 🟢 PyPI `frappe` → OSI MIT classifier | 🟢 in-tree |
+
+### 🟢 What changes in practice — the in-tree option now exists for a full LMS
+
+🔵 **Until this pass, every full LMS on this shelf forced the same conversation**: the deliverable
+sits *outside* the platform tree, talks to it over LTI 1.3 / REST / xAPI, and the client's legal team
+reviews a side-car. That architecture is sound and most of this KB's patterns assume it.
+
+🟢 **With OpenOLAT (Apache-2.0) and Eloom (MIT), an engagement has a real second option**: build the
+AI capability **as a module inside the platform**, ship it as part of the product, and keep
+proprietary logic proprietary.
+
+⚠️ **Three honest caveats, so this is not oversold:**
+
+1. **Installed base is the counterweight.** Moodle's footprint dwarfs OpenOLAT's and Eloom's
+   combined. 🔵 **A permissive licence does not relocate the client's existing LMS.** In-tree is an
+   option for a *greenfield* or *replatforming* engagement, not a retrofit argument.
+2. **Eloom's region is unknown.** The `README` names no country or qualifications authority, so it is
+   **unplaced** in this KB, not assigned. It also has **no registry presence**, so its row rests on
+   payload + a README badge.
+3. **OpenOLAT is Java/Maven**, Eloom is **Laravel/PHP 8.3+**. Neither matches the Python skill base
+   most of this KB's agent rows assume. 🔵 **The licence unblocks the architecture; it does not supply
+   the team.**
+
+### 🔴 `P470` — Forma LMS, and why a recommendation is not a grant
+
+Articles this pass recommend Forma LMS **because** it is Apache-2.0 — the permissive licence is the
+stated reason to choose it. The repository exists (`master/README.md` → 200) and **19 licence
+filenames across `main` and `master` return nothing**, Packagist is **404**, and there is no parseable
+`composer.json`.
+
+⚠️ **Forma LMS is therefore recorded as `licence unverified` and is excluded from the permissive
+column.** 🔵 **Platforms are exactly where this costs most.** A licence error in the integration tier
+changes a dependency note; a licence error in the platform tier changes **whether the deliverable can
+be a module at all**. This KB's discipline holds: **payload or a machine-readable declaration, or the
+row says "unverified".**
+
+### 🟢 Assessment-delivery tier — a permissive standards engine, shelved at last
+
+[`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks), 🟢 **BSD-3-Clause** (`master/LICENSE.txt`,
+2,058 B), **University of Edinburgh**: the **QTIWorks Engine** (QTI 2.1 delivery + rendering),
+**JQTI+** (read/write/model/manipulate QTI 2.1 items and tests programmatically) and the
+**MathAssess** extensions for advanced mathematical assessment.
+
+🔵 **Why this belongs on the platform shelf rather than the library shelf:** item-bank migration is
+one of the hardest commitments in an assessment engagement, and JQTI+ makes it **programmatic and
+permissive** — QTI 2.1 in, transformed QTI 2.1 out, no vendor in the path. Paired with the
+`1EdTech`/`oat-sa`/`citolab` QTI rows already here, the standards tier is now permissive **end to
+end**: authoring, transformation and delivery.
+
 ## 🟢 Thirty-fourth pass, 2026-10-07 — the platform licences re-read against a second channel, and the Canvas integration layer was missing
 
 **Licences read from payload on `raw.githubusercontent.com`, 2026-10-07** (branch- and case-aware,
