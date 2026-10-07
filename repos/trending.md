@@ -8,6 +8,107 @@ updated: 2026-10-07
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-07 — twenty-fourth pass: the supply map gains a second time axis, and the one that matters for a build is the release date
+
+⏱️ **Measurement window 2026-10-07 ~00:30 UTC → 03:00 UTC; ages computed against the reference date
+`2026-10-07`**, passed explicitly to the instrument. Channel: **the package registries** —
+`pypi.org/pypi/<n>/json` and `registry.npmjs.org/<n>`, read for the **upload date of the latest
+release**. **Twelfth distinct channel.** Instrument: `compose/code/registry-recency-channel/`
+(20 tests; 4 planted controls, 4 of 4 failing as required).
+
+🔵 **Pass 23 gave this KB a time axis over what it *cites*. This pass adds the axis over what a
+build *installs*, and they are not the same axis.** A head commit records any commit; a release
+records a deliberate publication. The twelve target repositories whose manifests pass 21 resolved
+are all alive on the commit channel — eleven of twelve committed within 7 days — and **their
+dependency sets are not**.
+
+### The installed tier, dated — 293 dependencies, 292 resolved
+
+| Bucket (identical cut dates in both columns) | Installed tier (292 deps) | Citing tier (884 repos) | Ratio |
+|---|---|---|---|
+| released / committed in 2026 | 66.8% | **73.5%** | 0.91× |
+| 🔴 cold more than 1 year | **30.1%** | 23.0% | **1.31×** |
+| 🔴 cold since before 2024 | **13.0%** | 11.1% | 1.17× |
+| median age | **65 d** | 42 d | 1.55× |
+
+⚠️ **Read the ratio, not the direction alone.** Pass 23 pre-registered the prediction *"expect the
+installed tier to be older than the citing tier"*. It is — but by **1.31×** on the cold bucket, not
+by the margin the motivating example (`cookiecutter → ucfopen/pylti1.3@master`, a live template
+installing a 1,364-day corpse) would suggest. The aggregate is a real, modest effect. **The
+per-repository spread is 30× wide and is where every actionable number lives.**
+
+### Liveness by tier, both channels, one table
+
+| Tier | Commit channel (pass 23) | Release channel (this pass) | Read |
+|---|---|---|---|
+| MCP side-cars | 🟢 **5.0% cold** | 🟢 `a11ymcp` 0/5, `moodle-mcp-server` 0/2, `anki-mcp-server` 7/24 | the youngest tier on both axes |
+| AI tutoring apps | 🟢 young | 🟢 `ai-tutor-app` **0/20 cold, median 9 d**; `mcp-tutor` 1/10; `DeepTutor` 10/43 | the category is young, so its builds are young |
+| Agent frameworks | 🟢 young | ⚠️ `smolagents` median **122 d** on only 6 deps — a small, deliberately pinned set | a thin manifest is not the same as a fresh one |
+| Offline / equity platforms | 🟢 `kolibri` 1 d | ⚠️ `kolibri` **14/32 cold, median 200 d** | Python 2-era compatibility shims persist: `zeroconf-py2compat` 1,156 d |
+| Intelligent tutoring systems | 🟢 `OATutor` 7 d | 🔴 **`OATutor` 21/35 cold, median 604 d** | 🔴 **the widest commit-vs-release divergence in the KB** |
+| Large platform monoliths | 🟢 `oppia` 1 d | 🟢 `oppia` median **60 d** on 152 deps, but a 5,923-day tail | bimodal: a modern core beside App Engine relics |
+| Interoperability / standards | 🔴 **46.6% cold** | 🔴 `pylti1p3` **1,417 d**; `IMSGlobal/…` **3,600 d** | **cold on both axes** — the tier 39% of district RFPs score |
+
+### 🔴 The ten oldest things a build in this KB installs
+
+| Dependency | Ecosystem | Latest version | Released | Age | Declared by |
+|---|---|---|---|---|---|
+| `crcmod` | PyPI | 1.7 | 2010-07-20 | 🔴 **5,923 d** | `oppia/oppia` |
+| `webapp2` | PyPI | 2.5.2 | 2012-09-28 | 🔴 **5,122 d** | `oppia/oppia` |
+| `docopt` | PyPI | 0.6.2 | 2014-06-16 | 🔴 4,496 d | `oppia/oppia` |
+| `random-seed` | npm | 0.3.0 | 2015-11-27 | 🔴 3,967 d | `CAHLR/OATutor` |
+| `json-schema-validator` | PyPI | 2.4.1 | 2016-02-08 | 🔴 3,894 d | `LearningEquality/kolibri` |
+| `list-react-files` | npm | 0.2.0 | 2017-06-04 | 🔴 3,412 d | `CAHLR/OATutor` |
+| `http2` | npm | 3.3.7 | 2017-09-21 | 🔴 3,303 d | `oppia/oppia` |
+| `oauth2client` | PyPI | 4.1.3 | 2018-09-07 | 🔴 2,952 d | `oppia/oppia` |
+| `react-cursor-position` | npm | 3.0.3 | 2018-09-30 | 🔴 2,929 d | `CAHLR/OATutor` |
+| `expr-eval` | npm | 2.0.2 | 2019-09-28 | 🔴 2,566 d | `CAHLR/OATutor` |
+
+🔵 **Three of the top ten are Google App Engine relics** (`crcmod`, `webapp2`, `oauth2client` — the
+last **deprecated by Google itself**) and they all sit in `oppia/oppia`, whose *median* is a healthy
+60 days. **A maximum describes a legacy tail; a median describes a build.** Quote the median and
+disclose the tail.
+
+### 🆕 Supply rows added this pass — all four from following a fork, not from a search
+
+| Repo | Licence (payload) | Commit | Release | Why it is here |
+|---|---|---|---|---|
+| [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | 🟢 **MIT** (1,098 B) | 🟢 **2 d** | 🟢 `django-lti` v0.10.1, **61 d** | 🆕 **New to this KB.** The live upstream of the fork pass 23 promoted; closes this KB's most-repeated supply claim |
+| [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | 🟢 Apache-2.0 (`master/LICENSE.md`, 11,343 B) | 🟢 **14 d** | — | 🔁 **Promoted to the shelf row** that `1EdTech/…` (2,317 d) used to hold |
+| [`openedx/xblock-lti-consumer`](https://github.com/openedx/xblock-lti-consumer) | 🔴 **AGPL-3.0** (34,520 B) | 🟢 **6 d** | 🟢 `lti-consumer-xblock` v11.4.2, **6 d** | 🆕 **The best-maintained Python LTI 1.3 implementation in any language — and it is copyleft.** Recorded as a boundary, not a pick |
+| [`eduNEXT/openedx-lti-tool-plugin`](https://github.com/eduNEXT/openedx-lti-tool-plugin) | 🟢 Apache-2.0 (11,357 B) | ⚠️ **443 d** | 🔴 **not on PyPI** | 🔵 **Corrects a standing claim.** `compose/patterns.md` has called it an available permissive Python option since pass 11; the grant is real, the availability was overstated |
+
+### 🔴 Rejected and recorded, so a later pass does not rediscover it
+
+| Candidate | Why rejected |
+|---|---|
+| `openedx/openedx-lti-tool-plugin` | 🔴 **does not exist** — `git ls-remote` returns no ref. The plugin lives under **`eduNEXT/`**. The slug this KB implied was never verified |
+| `openedx-lti-tool-plugin` on PyPI | 🔴 **404.** Not published under that name |
+| `CK-ERP` | returned by this pass's mandatory ERP query; a SourceForge-era Drupal-connector ERP whose last activity (2010) predates every currency threshold this KB applies |
+
+### Method notes
+
+🟢 **The control discriminates and that is why the absences above are publishable.** Four invented
+package names were swept blind with the real corpus: `this-package-does-not-exist-xyz123-globant`
+and `kolibri-oral-fluency-fake-probe-0000` on PyPI, `@globant-kb/no-such-package-zzz999` and
+`moodle-mcp-nonexistent-control-4242` on npm. **4 of 4 returned 404 while 292 of 293 real names
+resolved.**
+
+🔴 **The one false positive this channel nearly published, recorded because it generalises.** The
+fifth non-resolving name was real: `@common/global-config`, from `CAHLR/OATutor`'s `package.json`.
+Its **spec** is `file:./common` — a path inside the repository. **A registry 404 for a `file:`
+dependency is the registry answering correctly**, and publishing it as a missing package would have
+invented a supply-chain defect in a flagship row. The instrument now classifies `file:`, `link:`,
+`workspace:`, `portal:`, `git+` and bare-path specs before reporting absence, and the status string
+is deliberately neutral (`NOT-IN-REGISTRY`, not `MISSING`).
+
+⚠️ **Every age here is a lower bound on staleness.** This channel dates the **latest** release, not
+the **pinned** one. A manifest pinning `foo==1.0` installs something older than reported, never
+newer. Pre-registered as the next pass's action C.
+
+---
+
+
 ## 2026-10-07 — twenty-third pass: 904 references dated for the first time, and the supply map gains a time axis
 
 ⏱️ **Measurement window 2026-10-06 ~21:00 UTC → 2026-10-07 00:00 UTC; ages computed against the

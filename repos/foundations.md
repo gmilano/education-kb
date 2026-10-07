@@ -709,7 +709,7 @@ shelf for it, split by runtime.
 | Repo | License (read from payload) | ★ (2026-10-06) | Runtime | What it is |
 |---|---|---|---|---|
 | [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | Apache-2.0 (`master/LICENSE`) | 373 | Node / TypeScript | Turns an application into a fully integratable **LTI 1.3 tool provider**. The highest-starred genuine LTI project, and the default when the AI layer is a Node service. |
-| [1EdTech/lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library) | Apache-2.0 (`master/LICENSE`) | 124 | PHP | LTI 1.3 library published by **the standards body itself**. The reference implementation; the natural pairing when the LMS is Moodle. |
+| [packbackbooks/lti-1-3-php-library](https://github.com/packbackbooks/lti-1-3-php-library) | Apache-2.0 (`master/LICENSE.md`, 11,343 B) | — | PHP | LTI 1.3 library published by **the standards body itself**. The reference implementation; the natural pairing when the LMS is Moodle. | 🔵 **Row re-pointed, pass 24.** This was `1EdTech/lti-1-3-php-library`, whose head commit is **2020-06-03 — 2,317 d**. The live copy of the *same* library (byte-identical payload) is the `packbackbooks` original, head commit **2026-09-23 (14 d)**. ⚠️ The 124★ figure belonged to the 1EdTech copy and is not transferable, so it is withdrawn rather than moved — no ★ was readable this pass (`github.com` and `api.github.com` are 403 here). |
 | [Unicon/tool13demo](https://github.com/Unicon/tool13demo) | Apache-2.0 (`master/LICENSE`) | 27 | Java / Spring Boot | LTI 1.3 tool in Spring Boot, from a long-standing higher-ed systems integrator. **The JVM entry point** — which is the stack most enterprise education clients already run. |
 | [oxctl/spring-security-lti13](https://github.com/oxctl/spring-security-lti13) | Apache-2.0 (`master/LICENSE.txt`) | 25 | Java / Spring Security | LTI 1.3 for Spring Security, built on its OAuth2 support. Use this one when the client already has a Spring Security estate and wants LTI inside it rather than beside it. |
 | [theopenem/OneRoster.NET](https://github.com/theopenem/OneRoster.NET) | **MIT** (`master/LICENSE`) | 6 (8 forks) | .NET | OneRoster 1.1 and 1.2 client. OAuth2 for 1.2, consumer credentials for 1.1. **Rostering calls only — gradebook is not implemented**, which is a scope limit to check against the rubric before you promise it. |
@@ -729,12 +729,22 @@ shelf for it, split by runtime.
    `hyperledger-caliper/caliper` (708★, blockchain benchmarking). Four of the top
    eight have nothing to do with 1EdTech Caliper Analytics. **The result count is
    not the ecosystem size.**
-3. **There is no Python LTI 1.3 library on this shelf.** Node, PHP, Java and .NET
-   are covered. Python — where almost all of the AI tutoring code in this KB is
-   written — is not. In practice this means the tutoring service talks to a
-   thin LTI adapter in another runtime, or the integration becomes a custom
-   build. It is also the clearest open-source contribution opening this KB has
-   found in the interoperability layer.
+3. 🔵 **CORRECTED, twenty-fourth pass of 2026-10-07. This said "there is no Python LTI 1.3 library
+   on this shelf". It is false, and there is now a live one.** Node, PHP, Java and .NET are
+   covered, and so is Python: [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) —
+   **MIT** (payload 1,098 B, © The Regents of the University of Michigan), head commit
+   **2026-10-05 (2 d)**, published to PyPI as [`django-lti`](https://pypi.org/project/django-lti/)
+   **v0.10.1 on 2026-08-07 (61 d)**. It is **Django**-coupled. For a JupyterHub tool,
+   [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) (BSD-3-Clause,
+   98 d) implements LTI 1.3 **and** 1.1 and is tested against Open edX, Canvas and Moodle.
+   ⚠️ **What is genuinely absent is a live *framework-agnostic* Python implementation:** the only
+   framework-neutral one, `dmitry-viskov/pylti1.3`, is **1,416 days cold on the commit channel and
+   1,417 on the release channel**. 🔴 And the best-maintained Python LTI 1.3 implementation of all,
+   [`openedx/xblock-lti-consumer`](https://github.com/openedx/xblock-lti-consumer) (committed and
+   released 6 d ago), is **AGPL-3.0** — right inside Open edX, unusable as reusable IP. So the
+   contribution opening narrows from "a library" to "a framework-neutral library", and the
+   adapter-in-another-runtime workaround below is **no longer required** when the AI tier is
+   Django.
 
 ### The Learning Equality substrate — the sync engine, not just the app
 
@@ -1405,9 +1415,12 @@ repositories, and it is carried as a declared gap rather than rounded off.
 Trend 28 concluded that the permissive shelf has a **"Python-shaped hole"** — *"Python, where
 essentially all of the AI tutoring and agent code in this KB is written, is not [served]."*
 
-**Half of that survives.** There is still **no permissive Python LTI 1.3 library**, which is the
-claim trend 28 actually measured. But `pylom` and `py-eduterm-client` are **MIT Python libraries
-for education standards**, so Python *is* served for **metadata and curriculum vocabulary**.
+**Half of that survives.** ~~There is still **no permissive Python LTI 1.3 library**, which is the
+claim trend 28 actually measured.~~ 🔵 **WITHDRAWN, twenty-fourth pass of 2026-10-07** — [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti)
+is **MIT**, head commit **2 d**, PyPI `django-lti` **v0.10.1 (61 d)**. What survives is only the
+narrow form: **no live *framework-agnostic* permissive Python LTI 1.3 library**. And `pylom` and
+`py-eduterm-client` are **MIT Python libraries for education standards**, so Python *is* served for
+**metadata and curriculum vocabulary** as well.
 
 🟢 **The hole is LTI-shaped, not Python-shaped — and that makes the contribution opening cheaper,
 not smaller.** It is one protocol, with a procurement-scored buyer already attached (39% of US
@@ -1707,3 +1720,68 @@ dependency closure, not the dependency list.**
 
 ⚠️ **That last row is recorded so it is not mistaken for coverage.** A channel that cannot
 distinguish absence from denial produces no finding in either direction.
+
+---
+
+## Added in the twenty-fourth pass of 2026-10-07 — the interoperability tier re-pointed at its upstreams
+
+⏱️ **Ages against the reference date `2026-10-07`.** Channel: the package registries
+(`compose/code/registry-recency-channel/`), plus `git ls-remote` tag enumeration.
+
+**Two rows on this shelf pointed at forks, and both forks were cold.** The rows are re-pointed
+above; this section records what replaced them and why the detection generalises.
+
+### The LTI 1.3 shelf, by runtime, both channels
+
+| Runtime | Pick | Licence (payload) | Head commit | Age | Latest release |
+|---|---|---|---|---|---|
+| **Python / Django** | 🆕 [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | 🟢 **MIT** (1,098 B) | 2026-10-05 | 🟢 **2 d** | 🟢 [`django-lti`](https://pypi.org/project/django-lti/) **v0.10.1**, 61 d |
+| **Python / JupyterHub** | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | 🟢 **BSD-3-Clause** (1,528 B) | 2026-07-01 | 🟢 98 d | 🟢 v1.6.3, 195 d |
+| **Node** | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 Apache-2.0 (11,360 B) | 2026-10-06 | 🟢 **1 d** | — |
+| **PHP / Moodle** | 🔁 [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | 🟢 Apache-2.0 (`master/LICENSE.md`, 11,343 B) | 2026-09-23 | 🟢 **14 d** | — |
+| **JVM / Spring Security** | [`oxctl/spring-security-lti13`](https://github.com/oxctl/spring-security-lti13) | 🟢 Apache-2.0 (11,357 B) | 2026-10-06 | 🟢 1 d | — |
+| **Python, framework-neutral** | 🔴 *none live* | — | — | — | — |
+
+🔴 **The one genuinely empty cell is "framework-neutral Python".** `dmitry-viskov/pylti1.3` is the
+only framework-neutral permissive implementation and it is **1,416 days cold on the commit channel
+and 1,417 on the release channel** (`pylti1p3` v2.0.0, 2022-11-20). Both channels agreeing is the
+signature of abandonment, not of a finished library. **This is the remaining contribution opening,
+and it is one protocol binding wide — not a language's worth of missing ecosystem.**
+
+### 🔴 Rows removed from this shelf, and the reason each was wrong
+
+| Removed | Why |
+|---|---|
+| `1EdTech/lti-1-3-php-library` | 🔴 Head commit **2020-06-03 — 2,317 d**. It is the standards body's **fork** of `packbackbooks/lti-1-3-php-library`; pass 23 established byte-identical Apache-2.0 payloads (11,343 B) under two composer names. The upstream was committed **14 days** ago. ⚠️ Its **124★** was the fork's audience and is withdrawn rather than transferred |
+| `IMSGlobal/LTI-Tool-Provider-Library-PHP` *(was cited by `compose/patterns.md` P1, not by this file)* | 🔴 Head commit **2016-11-28 — 3,600 d**, and its `README.md` states support for **"LTI 1.1 and the unofficial extensions to LTI 1.0"** — **it does not implement LTI 1.3**. ⚠️ `IMSGlobal` became **1EdTech in 2022**, so the org name alone dated it |
+| `openedx/openedx-lti-tool-plugin` | 🔴 **The slug does not exist** — `git ls-remote` returns no ref, and PyPI 404s on that name. The real project is **`eduNEXT/openedx-lti-tool-plugin`** (Apache-2.0, 11,357 B) and it is ⚠️ **443 days cold and unpublished to PyPI**, so "available permissive Python option" overstated it |
+
+### 🔵 The licence boundary this tier actually has — read this before quoting the shelf
+
+[`openedx/xblock-lti-consumer`](https://github.com/openedx/xblock-lti-consumer) is the
+**best-maintained Python LTI 1.3 implementation in any language**: head commit **6 d**, released
+**6 d** ago as `lti-consumer-xblock` v11.4.2. Its payload is **AGPL-3.0, 34,520 B**.
+
+🟢 Inside an Open edX deployment it is the correct component. 🔴 As reusable Globant IP it is
+unusable, which is the premise of **P30**. **State it that way in a bid**: the permissive Python LTI
+shelf is not empty, it is *younger and thinner than the copyleft one* — a materially different
+sentence from "no Python LTI library exists", which this file asserted for fourteen passes.
+
+### What the installed tier does to this shelf's foundation rows
+
+The 293 depth-1 dependencies of the twelve repositories whose manifests pass 21 resolved were dated
+this pass. **30.1% are more than a year old; 13.0% predate 2024; the median is 65 days.** Against
+the citing tier's 23.0% / 11.1% / 42 days, **the installed tier is 1.31× colder on the cold bucket**
+— the direction pass 23 predicted, at a smaller magnitude than its motivating example implied.
+
+🔴 **Two foundation rows carry the divergence:** `LearningEquality/kolibri` (head commit 1 d, median
+dependency **200 d**, 14/32 cold, including `json-schema-validator` at **3,894 d** and
+`zeroconf-py2compat` at 1,156 d — Python-2-era compatibility shims still in the manifest) and
+`CAHLR/OATutor` (head commit 7 d, median **604 d**). 🟢 Two read cleanly on both axes:
+`towardsai/ai-tutor-app` (median 9 d, **0/20** cold) and `HKUDS/DeepTutor` (median 62 d).
+
+⚠️ **Three licence corrections to the pass-21 closure**, all from the registry classifiers:
+`python-dateutil` is **permissive** (Apache-2.0 **and** BSD classifiers) despite a `license` field
+reading *"Dual License"*; `semver` is **BSD** despite a field containing the raw notice text; and
+🔴 `azure-cognitiveservices-speech`, declared by `oppia/oppia`, is **proprietary** — *"License ::
+Other/Proprietary License"*, empty licence field. Full census in `intel/trends.md` §57.

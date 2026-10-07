@@ -676,7 +676,7 @@ The runtime split for LTI 1.3 and OneRoster, with licences read from payload:
 | Runtime | Repo | License |
 |---|---|---|
 | Node / TypeScript | [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) (373★) | Apache-2.0 |
-| PHP (Moodle-side) | [1EdTech/lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library) (124★) | Apache-2.0 |
+| PHP (Moodle-side) | [packbackbooks/lti-1-3-php-library](https://github.com/packbackbooks/lti-1-3-php-library) 🔵 *(re-picked pass 24; was `1EdTech/…`, the 2,317-day-cold copy of the same library — this one is 14 d)* | Apache-2.0 |
 | Java / Spring Boot | [Unicon/tool13demo](https://github.com/Unicon/tool13demo) (27★) | Apache-2.0 |
 | Java / Spring Security | [oxctl/spring-security-lti13](https://github.com/oxctl/spring-security-lti13) (25★) | Apache-2.0 |
 | .NET | [theopenem/OneRoster.NET](https://github.com/theopenem/OneRoster.NET) (6★) | MIT |
@@ -688,11 +688,14 @@ The runtime split for LTI 1.3 and OneRoster, with licences read from payload:
    1EdTech PHP library; a Spring estate pulls toward `oxctl` or `Unicon`; a Node
    AI service pulls toward `ltijs`. That is a decision to make in week one
    alongside the platform, not after it.
-2. **Python is where the AI layer lives, and there is no Python LTI 1.3 library
-   here.** So the realistic shape is: tutoring/agent service in Python, LTI
-   adapter in Node, PHP or the JVM, talking to each other over an internal API.
-   **Budget for the adapter as a component**, and say so in the bid rather than
-   discovering it in integration testing.
+2. 🔵 **CORRECTED, twenty-fourth pass of 2026-10-07.** Python is where the AI layer lives, and
+   **there is a Python LTI 1.3 library**: [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti),
+   **MIT**, head commit **2026-10-05 (2 d)**, PyPI [`django-lti`](https://pypi.org/project/django-lti/)
+   **v0.10.1 (61 d)**. **If the AI tier is Django, the two-runtime shape below is unnecessary** —
+   launch in-process and skip the adapter. The adapter shape is still correct when the AI tier is
+   **not** Django and not JupyterHub, because the only framework-neutral Python implementation
+   (`pylti1.3`) is **1,416 days cold**. ⚠️ **So budget the adapter only after checking the AI
+   tier's framework** — it is a conditional line item now, not a certainty.
 3. **OneRoster.NET does rostering only — the gradebook is not implemented.** If
    the rubric scores grade passback, this shelf does not cover it and the honest
    answer is a custom build against the spec.
@@ -1549,3 +1552,43 @@ rendered `github.com` page returns **403**. `git ls-remote` and a blob-filtered 
 work, and four invented control slugs swept blind alongside the real ones all failed to resolve —
 so the probe discriminates. ⚠️ **No ★ was readable this pass**; every star count in this file
 remains pass-22's or older.
+
+---
+
+## Added in the twenty-fourth pass of 2026-10-07 — the integration row on this page pointed at a fork
+
+⏱️ **Ages against the reference date `2026-10-07`.**
+
+The PHP (Moodle-side) row in the integration table above is re-pointed from
+`1EdTech/lti-1-3-php-library` to
+[`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library). **Same
+library, same Apache-2.0 payload, byte-identical** (11,343 B, established pass 23) — the difference
+is that the 1EdTech copy's head commit is **2020-06-03 (2,317 d)** and the `packbackbooks` original's
+is **2026-09-23 (14 d)**. ⚠️ The 124★ figure belonged to the 1EdTech copy and is **withdrawn, not
+transferred**: ★ measures a host's audience for one repository, and no ★ was readable this pass
+(`github.com` and `api.github.com` both return 403 here).
+
+### 🟢 The platform-selection consequence, which is the part that changes a bid
+
+Item 2 of the integration guidance on this page said *"Python is where the AI layer lives, and there
+is no Python LTI 1.3 library here"*, and concluded that the realistic shape is a Python AI service
+plus an LTI adapter in a second runtime, **budgeted as a component**. That is corrected above. The
+decision now has three branches, and only one of them still carries the adapter cost:
+
+| AI tier framework | LTI 1.3 launch | Second runtime needed? |
+|---|---|---|
+| **Django** | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) — MIT (1,098 B), head commit **2 d**, PyPI [`django-lti`](https://pypi.org/project/django-lti/) **v0.10.1 (61 d)** | 🟢 **No.** Launch in-process |
+| **JupyterHub** | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) — BSD-3-Clause (1,528 B), 98 d; LTI 1.3 **and** 1.1, tested against Open edX, Canvas and Moodle | 🟢 **No** |
+| **Anything else in Python** (FastAPI, Flask, bare ASGI) | 🔴 no live framework-neutral option — `dmitry-viskov/pylti1.3` is **1,416 d cold** | ⚠️ **Yes** — `ltijs` (Node, 1 d) or `packbackbooks` (PHP, 14 d) |
+
+🔵 **So the adapter is a conditional line item, not a certainty.** Ask which framework the AI tier
+uses **before** pricing it. On a Django engagement this removes a component, a second runtime and an
+internal API boundary from the architecture that this page previously described as unavoidable.
+
+🔴 **And one boundary to state out loud when the platform is Open edX.**
+[`openedx/xblock-lti-consumer`](https://github.com/openedx/xblock-lti-consumer) is the
+best-maintained Python LTI 1.3 implementation anywhere — committed and released **6 days** ago — and
+it is **AGPL-3.0** (payload 34,520 B). Inside an Open edX deployment it is the right component;
+inside a reusable-IP deliverable it is not. That distinction is the whole of **P30**, and it is the
+real reason this page read the Python shelf as empty for fourteen passes: the shelf was not empty,
+the **well-maintained** part of it was copyleft.

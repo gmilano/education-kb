@@ -2810,3 +2810,91 @@ the pass-22 warning that ★ measures a host's audience still governs.
 🔴 **A date is not a verdict.** A 472-day-old certified QTI player may be the right pick and a
 0-day-old repository may be a week old in total. The dates are published so that a component choice
 can be *argued*, not so it can be automated.
+
+---
+
+## Added in the twenty-fourth pass of 2026-10-07 — the shelf's *build* dated, and the LTI row corrected again
+
+⏱️ **Measurement window 2026-10-07 ~00:30 UTC → 03:00 UTC; ages against the reference date
+`2026-10-07`.** Channel new this pass: **the package registries** (`pypi.org`, `registry.npmjs.org`)
+read for the **latest release date**. Instrument: `compose/code/registry-recency-channel/`.
+
+**No new agent row is added by discovery this pass.** What is added is the column *behind* pass 23's
+column: pass 23 dated the repositories this file **cites**; this pass dates the dependencies those
+repositories **install**. They are different facts about the same row.
+
+### 🔴 The row most likely to be shown to a client is the row with the widest divergence
+
+| Row | Head commit (pass 23) | Median dependency age (this pass) | Cold > 1 yr | Read |
+|---|---|---|---|---|
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 2026-09-30, **7 d** | 🔴 **604 d** | **21/35** | 🔴 maintained project, 2020-era build |
+| [`LearningEquality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 2026-10-06, 1 d | ⚠️ 200 d | 14/32 | Python-2-era shims persist (`zeroconf-py2compat`, 1,156 d) |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 2026-10-04, 3 d | 🟢 62 d | 10/43 | row 1 of this shelf, healthy on both axes |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 2026-10-06, 1 d | 🟢 **60 d** | 40/152 | ⚠️ bimodal — a modern core and a 5,923-day App Engine tail |
+| [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | — | 🟢 **9 d** | **0/20** | 🟢 the cleanest build in the corpus |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | — | ⚠️ 122 d | 1/6 | a thin, deliberately pinned manifest — not the same as a fresh one |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | — | 🟢 12 d | 2/7 | |
+| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | — | 🟢 22 d | **0/2** | |
+| [`ronantakizawa/a11ymcp`](https://github.com/ronantakizawa/a11ymcp) | — | 🟢 14 d | **0/5** | |
+
+⚠️ **OATutor is still the recommendation it was, and the sentence next to it has to change.** It is
+MIT, from UC Berkeley, and the only BKT-based permissive intelligent tutoring system this KB has
+found in twenty-four passes — and its front end is `@material-ui/core` **v4**, superseded in 2021,
+beside `random-seed` (3,967 d), `list-react-files` (3,412 d) and `react-cursor-position` (2,929 d).
+🔴 **Adopting OATutor means adopting a dependency uplift as sprint one.** That belongs in the
+estimate, not in the retrospective.
+
+### 🔵 The Python LTI 1.3 row, corrected for the third time — and this time against the upstream
+
+Pass 23's own table in this file promoted
+`Harvard-University-iCommons/django-lti` (MIT, head commit 2025-08-27) and recorded, with a warning
+symbol, that its payload holder is *"The Regents of the **University of Michigan**"*. 🔴 **That
+warning was the finding.** The holder does not match the publishing account because **the repository
+is a fork**, and the upstream is live:
+
+| Repo | Licence (payload) | Head commit | Age | Latest release | Age | Verdict |
+|---|---|---|---|---|---|---|
+| [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | 🟢 **MIT** (1,098 B, © The Regents of the University of Michigan) | 2026-10-05 | 🟢 **2 d** | [`django-lti`](https://pypi.org/project/django-lti/) **v0.10.1** | 🟢 **61 d** | 🟢 **START HERE** (Django) |
+| [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | 🟢 **BSD-3-Clause** (1,528 B) | 2026-07-01 | 🟢 98 d | `jupyterhub-ltiauthenticator` v1.6.3 | 🟢 195 d | 🟢 only if the tool **is** JupyterHub |
+| [`openedx/xblock-lti-consumer`](https://github.com/openedx/xblock-lti-consumer) | 🔴 **AGPL-3.0** (34,520 B) | 2026-10-01 | 🟢 **6 d** | `lti-consumer-xblock` v11.4.2 | 🟢 **6 d** | 🔴 best-maintained of all, **and copyleft** |
+| [`eduNEXT/openedx-lti-tool-plugin`](https://github.com/eduNEXT/openedx-lti-tool-plugin) | 🟢 Apache-2.0 (11,357 B) | 2025-07-21 | ⚠️ 443 d | 🔴 not on PyPI | — | ⚠️ permissive but cold and unpublished |
+| `Harvard-University-iCommons/django-lti` | 🟢 MIT (1,098 B) | 2025-08-27 | 🔴 406 d | — | — | 🔴 **cold fork — do not start here** |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 MIT (1,069 B) | 2022-11-21 | 🔴 1,416 d | `pylti1p3` v2.0.0 | 🔴 **1,417 d** | 🔴 abandoned — both channels agree |
+
+🔴 **The claim this KB repeated for fourteen passes was wrong in an instructive way.** *"There is no
+permissive Python LTI 1.3 library"* was a statement about a **licence-filtered index**, not about
+the world: the best-maintained Python LTI 1.3 implementation in any language exists, is committed
+and released weekly, and is **AGPL-3.0**. **The permissive shelf was not empty; the *well-maintained*
+shelf was copyleft.** All 13 editable assertions of the old claim are corrected in place this pass
+(the append-only records in `agents/trending.md` and `repos/trending.md` are left intact).
+
+⚠️ **One pass-23 figure corrected:** the Harvard payload is **1,098 B**, not 1,097 B. Recorded only
+because byte length is how this KB establishes payload identity, and an off-by-one there reads as a
+different file. The two copies are in fact **not** byte-identical — `sha256 d5558cd4…` upstream
+versus `c24a6b35…` on the fork.
+
+### 🔴 One proprietary dependency, inside an Apache-2.0 row
+
+[`oppia/oppia`](https://github.com/oppia/oppia) declares
+[`azure-cognitiveservices-speech`](https://pypi.org/project/azure-cognitiveservices-speech/), whose
+only licence classifier is **"License :: Other/Proprietary License"** and whose licence field is
+empty. 🟢 Oppia's own Apache-2.0 grant is unaffected — a permissive project may depend on
+proprietary software. 🔴 **A deliverable that forks Oppia and ships it inherits a Microsoft Speech
+SDK obligation**, and nothing in this KB said so before this pass. The permissive substitute is
+already on the shelf: `k2-fsa/sherpa-onnx` (Apache-2.0, head commit 1 d), which covers ASR **and**
+TTS locally.
+
+### The method note for this pass
+
+🟢 **The most productive input was a warning symbol in the previous pass's own table**, not a search
+result. The mandatory query set returned **no new repository for the fourteenth consecutive pass**.
+Findings 1, 2, 3 and 7 all unroll from reading a ⚠️ pass 23 wrote and did not follow — which is
+trend 50 (*a filed correction regresses*) in its sharper form: **a filed anomaly regresses.**
+
+⚠️ **Every age in this section is a lower bound on staleness.** The registry channel dates the
+**latest** release, not the **pinned** one; a manifest pinning an old version installs something
+older than reported, never newer.
+
+🔴 **And a date is still not a verdict.** `defusedxml` at 2,039 days is a finished security library
+and the correct pick; `webapp2` at 5,122 days is a relic of a retired platform. Age does not
+separate them — reading does.

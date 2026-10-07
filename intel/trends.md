@@ -917,7 +917,7 @@ license:apache-2.0` still returns **0 repositories**, measured 6 Oct 2026. Neith
 instrument has produced a usable artefact yet. The trend is real; the shelf is
 still empty.
 
-## 28. Interoperability became a scored line item — and the permissive shelf has a Python-shaped hole
+## 28. Interoperability became a scored line item — and the permissive Python LTI hole closed on 2026-10-07
 
 The ninth pass found the demand signal: **39% of districts score interoperability
 in their RFP rubrics** (CoSN, Tier 2). That is not a technical preference, it is
@@ -930,11 +930,33 @@ in their RFP rubrics** (CoSN, Tier 2). That is not a technical preference, it is
 | **Caliper Analytics** | **0 found on a permissive licence** |
 | **QTI** | not swept |
 
-**The structural finding: there is no Python LTI 1.3 library on the permissive
-shelf.** Node, PHP, Java and .NET are served. Python — where essentially all of
-the AI tutoring and agent code in this KB is written — is not. So the real
-architecture is a Python AI service behind an LTI adapter in a *second* runtime,
-and the adapter is a **budgeted component**, not an afternoon's integration work.
+🔵 **CORRECTED, twenty-fourth pass of 2026-10-07. The structural finding below is withdrawn.**
+
+> ~~**The structural finding: there is no Python LTI 1.3 library on the permissive shelf.** Node,
+> PHP, Java and .NET are served. Python — where essentially all of the AI tutoring and agent code in
+> this KB is written — is not.~~
+
+**Python is served.** [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) — **MIT**
+(payload 1,098 B, © The Regents of the University of Michigan), head commit **2026-10-05 (2 d)**,
+PyPI [`django-lti`](https://pypi.org/project/django-lti/) **v0.10.1, 2026-08-07 (61 d)**, 17
+releases. [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) (BSD-3,
+98 d) serves the JupyterHub case and implements LTI 1.3 **and** 1.1.
+
+🔴 **What was actually true, and is the version to carry into a bid:** the **well-maintained**
+Python LTI 1.3 shelf was **copyleft**, not absent. The most actively developed implementation in any
+language is [`openedx/xblock-lti-consumer`](https://github.com/openedx/xblock-lti-consumer) —
+committed and released **6 days** ago — and it is **AGPL-3.0** (payload 34,520 B). This KB swept for
+*permissive* and read the result as *nonexistent*, which is trend 29 turned on a licence filter
+instead of a topic filter.
+
+⚠️ **The narrow claim that survives:** there is no **live framework-agnostic** permissive Python
+LTI 1.3 library. `dmitry-viskov/pylti1.3` is the only framework-neutral one and it is **1,416 days
+cold on the commit channel, 1,417 on the release channel** — both channels agreeing, which is the
+signature of abandonment rather than of a finished library.
+
+🟢 **So the two-runtime architecture is now conditional, not structural.** If the AI tier is Django
+or JupyterHub, LTI launch happens **in-process** and there is no adapter to budget. Only a
+non-Django, non-JupyterHub Python tier still needs the second runtime.
 
 Three consequences for how work is scoped:
 
@@ -944,9 +966,13 @@ Three consequences for how work is scoped:
 2. **Grade passback and analytics streams are builds, not selections.**
    OneRoster.NET does rostering only, and Caliper has no permissive
    implementation here. If the rubric scores either, say "build" in the bid.
-3. **A Python LTI 1.3 library is the clearest open-source contribution opening
-   this KB has identified** — a gap with a procurement-scored buyer already
-   attached to it.
+3. 🔵 **CORRECTED, twenty-fourth pass of 2026-10-07.** This read *"a Python LTI 1.3 library is the
+   clearest open-source contribution opening this KB has identified"*. **A Python LTI 1.3 library
+   now exists** ([`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti), MIT, 2 d). The
+   contribution opening that survives is narrower and still has the same buyer: a **framework-neutral**
+   permissive Python LTI 1.3 library, or a **permissive-licensed equivalent of
+   `openedx/xblock-lti-consumer`**, which is AGPL-3.0. 🔴 **Caliper Analytics, at zero permissive
+   implementations, is now the clearest opening in this layer.**
 
 **And a vocabulary warning that is part of the trend.** `OneRoster OR Caliper OR
 "LTI 1.3" license:apache-2.0` returns **184 repositories**, led by
@@ -960,8 +986,9 @@ ecosystem health when it is mostly a different ecosystem.
 Two things in this trend were measured and one was inferred. The measurement stands; the inference
 does not.
 
-**Stands:** there is **no permissive Python LTI 1.3 library**. That is what the sweep tested and it
-is still true.
+**Stands:** ~~there is **no permissive Python LTI 1.3 library**. That is what the sweep tested and it
+is still true.~~ 🔵 **Withdrawn at pass 23 and now *replaced* at pass 24 — see the block below, which
+pass 24 corrects in turn: the library pass 23 named as the MIT answer was a 406-day fork.**
 
 > 🔴 **WITHDRAWN at the twenty-third pass of 2026-10-07. The sentence immediately above is false and
 > is retained only so this correction has something to point at.** It was already false when a later
@@ -1397,8 +1424,10 @@ Spanish/Portuguese-language search. Four of the gaps below changed state.
 - **No permissive Caliper Analytics implementation.** Searched with the licence
   filter; the result set is dominated by two unrelated projects sharing the name.
   If an RFP scores learning-analytics event streams, it is a build.
-- **No Python LTI 1.3 library.** Four permissive LTI 1.3 implementations exist
-  across Node, PHP and the JVM; none in the language the AI layer is written in.
+- 🔵 ~~**No Python LTI 1.3 library.**~~ **CLOSED, twenty-fourth pass of 2026-10-07.**
+  [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) — MIT, head commit **2 d**, PyPI
+  `django-lti` **v0.10.1 (61 d)**. Django-coupled; `jupyterhub/ltiauthenticator` (BSD-3, 98 d)
+  covers JupyterHub. ⚠️ Still open in the narrow form: **no live framework-agnostic** one.
 - **No gradebook in the permissive OneRoster shelf.** `theopenem/OneRoster.NET`
   states it: rostering calls only, grade book not implemented.
 - **`OpenLiteracy` returns 0 GitHub repositories**, as do `tutoring quality
@@ -1772,11 +1801,16 @@ diligence pack rather than at the meeting.
   so this is a standards choice to make at proposal time, not a capability gap.
 - 🔴 **No permissive Open Badges server.** `concentricsky/badgr-server` is gone, confirmed
   twice. Trend 8's verifiable-credential half still has no permissive server implementation.
-- 🔴 **The Python LTI 1.3 tier is `total_count: 4` and one library deep.** `pylti1.3`
-  (MIT, 138★) is the only entry above 1★, with **51 open issues** and no push since
-  2024-08-18; the other three are 0–1★. This is now measured exhaustively rather than
-  estimated. **Budget a fork from day one** on any engagement where LMS integration is on
-  the critical path. The Java side is healthier (`UOC/java-lti-1.3-provider-example`, MIT).
+- 🔵 **CORRECTED, twenty-fourth pass of 2026-10-07.** This read *"the Python LTI 1.3 tier is
+  `total_count: 4` and one library deep… budget a fork from day one"*. 🔴 **`total_count: 4` was a
+  property of the search index, not of the world** — trend 29's own thesis, applied here late. The
+  measured tier is **six implementations**: [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti)
+  (MIT, **2 d**, PyPI `django-lti` v0.10.1), `jupyterhub/ltiauthenticator` (BSD-3, 98 d),
+  `openedx/xblock-lti-consumer` (🔴 **AGPL-3.0**, 6 d), `eduNEXT/openedx-lti-tool-plugin`
+  (Apache-2.0, ⚠️ 443 d, not on PyPI), `Harvard-University-iCommons/django-lti` (MIT, 🔴 406 d fork)
+  and `dmitry-viskov/pylti1.3` (MIT, 🔴 1,416 d). 🟢 **Do not budget a fork** — take `django-lti`.
+  ⚠️ The Java side is healthier only on paper: `UOC/java-lti-1.3-provider-example` is **1,418 days
+  cold**, measured pass 23.
 - 🔴 **No permissive Apache-2.0 AI grading tool.** `automated grading rubric LLM education
   license:apache-2.0` → **`total_count: 0`**. The only permissive answer in this KB remains
   `Selleo/mentingo` (MIT). ⚠️ And a Moodle plugin for the function exists and is
@@ -3189,3 +3223,104 @@ probe: zero newly dead across 904 references.**
 pre-registered action B returned **000 on all 45 requests — as did a deliberately bogus control
 host.** That probe does **not** discriminate, so it yields no finding about LATAM self-hosted supply
 in either direction, and none is recorded.
+
+---
+
+## 56. The fork is the default search result, and the licence holder is the cheapest way to detect it
+
+**Added in the twenty-fourth pass of 2026-10-07.** Two of this KB's three Learning Tools
+Interoperability picks turned out to be **cold forks of live upstreams**, found one pass apart, and
+in both cases **the field that identified the upstream was already written down in this KB**.
+
+| Language | What was cited | Age when caught | Live upstream | Age | The field that gave it away |
+|---|---|---|---|---|---|
+| PHP | `1EdTech/lti-1-3-php-library` | 🔴 2,317 d | [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | 🟢 14 d | the **composer package name** |
+| Python | `Harvard-University-iCommons/django-lti` | 🔴 406 d | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | 🟢 2 d | the **licence payload's copyright holder** |
+
+🔴 **Pass 23 wrote the second clue down and marked it with a warning symbol.** Its table recorded the
+Harvard repository's MIT payload as *"⚠️ The Regents of the **University of Michigan**, 2022"* — and
+moved on. A payload holder that is not the publishing institution is **not primarily an attribution
+defect; it is a lineage signal.**
+
+**Why the fork outranks the upstream.** A standards body, a famous university or a well-known
+organisation publishing a fork gives that copy the institutional name, the inbound links and the
+search rank. The upstream — a vendor (`packbackbooks`) or a university *unit*
+(`academic-innovation`) — has none of those. **Searching by reputation returns the fork; searching
+by provenance returns the library.**
+
+### The operational rule
+
+> 1. **Holder ≠ publishing account ⇒ treat it as a fork hypothesis**, not a footnote.
+> 2. **Resolve it against the package registry's declared homepage** — PyPI `project_urls`,
+>    npm `repository`, the composer name. This works where `api.github.com` is 403, as it is here.
+> 3. **Enumerate the remote's tags** (`git ls-remote`). A copy whose tags stop six minor versions
+>    below the registry's current release is a fork, whatever its README says. `django-lti`:
+>    Harvard tops out at `v0.3.2`, PyPI serves `v0.10.1`.
+> 4. **An organisation's *old name* is a staleness signal by construction.** `IMSGlobal` became
+>    1EdTech in 2022; a repository still under `IMSGlobal/` has not been touched since. P1's
+>    component had not been touched for **3,600 days**.
+
+🔵 **This KB already owned both halves of the instrument and had never connected them:**
+`compose/code/p184-holder-mismatch/` sweeps holders, `compose/code/fork-lineage-audit/` resolves
+lineage. Wiring them is pre-registered as the next pass's action A.
+
+⚠️ **The commercial consequence is not pedantry.** The forked copy is not merely older — it can be a
+**different protocol generation**. P1's component implements **LTI 1.1 and LTI 1.0 extensions and
+not LTI 1.3 at all**, which is the version every procurement rubric in `intel/market.md` scores. A
+component audit that checks licences and stars but not **provenance and protocol version** will pass
+a library that cannot win the bid it was selected for.
+
+---
+
+## 57. A repository's commit date and its build's release dates are different facts, and only one of them is what a client installs
+
+**Added in the twenty-fourth pass of 2026-10-07.** Pass 23 dated 884 repositories by head commit.
+This pass dated the **293 depth-1 dependencies** those repositories declare, by latest release.
+Against identical cut dates:
+
+| | Installed tier (292 deps) | Citing tier (884 repos) |
+|---|---|---|
+| median age | **65 d** | 42 d |
+| 🔴 cold > 1 year | **30.1%** | 23.0% |
+| 🔴 pre-2024 | **13.0%** | 11.1% |
+
+🟢 **The installed tier is older — by 1.31× on the cold bucket.** ⚠️ **And the aggregate is the
+least useful number produced.** The actionable finding is that **the two dates can diverge inside a
+single project**, in both directions:
+
+| Project | Commit channel | Release channel | What the divergence means |
+|---|---|---|---|
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 **7 d** | 🔴 **median dependency 604 d**; 21/35 cold | maintained **project**, 2020-era **build** (Material-UI v4, superseded 2021) |
+| [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | 🟢 2 d | 🟢 61 d | healthy on both — the shape to look for |
+| `Harvard-University-iCommons/django-lti` | 🔴 406 d | 🔴 not published | a fork, and both channels say so |
+| [`openedx/xblock-lti-consumer`](https://github.com/openedx/xblock-lti-consumer) | 🟢 6 d | 🟢 6 d | commit and release in lockstep — a release-driven project |
+| `dmitry-viskov/pylti1.3` | 🔴 1,416 d | 🔴 1,417 d | **both channels agreeing is the signature of abandonment**, as distinct from a finished library |
+
+### What to do with it in an engagement
+
+1. **Quote the median, disclose the maximum.** `oppia/oppia` has the oldest dependency in this KB
+   (`crcmod`, **5,923 d**) and a median of **60 d**. The maximum describes a legacy tail; the median
+   describes the build you inherit.
+2. **A green head commit does not price an adoption.** Adopting OATutor means adopting its front
+   end. The first sprint is a dependency uplift, not a feature. **Put it in the estimate.**
+3. **One cold channel is a question; two are an answer.** Cold commits with fresh releases means
+   vendored or branch-based development — look harder. Cold on both means abandoned.
+4. **Ages from this channel are lower bounds.** It dates the *latest* release, not the *pinned* one.
+   A pinned manifest is older than reported, never newer.
+
+🔵 **And a `LICENSE`-class correction falls out of the same sweep.** The pass-21 dependency closure
+left **6 rows** at `UNKNOWN` licence class. All six are resolved from the registry classifiers:
+four were **permissive all along** (`python-dateutil` ×3, whose `license` field reads literally
+*"Dual License"* while its classifiers say Apache-2.0 **and** BSD; `semver`, whose field contains
+the raw BSD notice text), one was **not a registry package** (`@common/global-config`, spec
+`file:./common`), and one is **genuinely proprietary**:
+[`azure-cognitiveservices-speech`](https://pypi.org/project/azure-cognitiveservices-speech/),
+declared by `oppia/oppia`, carrying *"License :: Other/Proprietary License"* and an empty licence
+field.
+
+> 🔴 **`UNKNOWN` was never a licence finding — it was a *parse* finding, and reporting it as risk
+> overstated four rows and understated one.** Resolve it against the classifiers before it reaches
+> a client. And note the real exposure it was hiding: **an engagement that forks Oppia and ships it
+> inherits a Microsoft Speech SDK licence obligation.** Oppia's own Apache-2.0 grant is unaffected —
+> a permissive project may depend on proprietary software — but the deliverable is not. The
+> permissive substitute is already on this KB's shelf: `k2-fsa/sherpa-onnx`, Apache-2.0.

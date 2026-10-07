@@ -490,9 +490,12 @@ benchmark already ships MIT infrastructure this KB can build on.
 is verified and small: `ltijs` (Apache-2.0, 373★, Node), `1EdTech/lti-1-3-php-library`
 (Apache-2.0, 124★), `Unicon/tool13demo` and `oxctl/spring-security-lti13`
 (Apache-2.0, JVM), `theopenem/OneRoster.NET` (MIT, rostering only, **no
-gradebook**). **No Caliper Analytics implementation on a permissive licence, and
-no Python LTI 1.3 library at all** — the second is an open-source contribution
-opening with a procurement-scored buyer already attached.
+gradebook**). **No Caliper Analytics implementation on a permissive licence.**
+🔵 **CORRECTED, twenty-fourth pass of 2026-10-07: the "no Python LTI 1.3 library at all" half of
+this sentence was false.** [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) is **MIT**,
+head commit **2 d**, PyPI `django-lti` **v0.10.1 (61 d)**. **Caliper remains the contribution
+opening with a procurement-scored buyer attached; Python LTI 1.3 no longer is**, except in its
+narrow framework-agnostic form.
 
 
 #### Eleventh pass, 2026-10-06 — the benchmarks are American, the licences are not open
@@ -3161,8 +3164,10 @@ after a third consecutive failure.
    districts scoring interoperability in RFP rubrics**, the permissive shelf is
    verified and small: four Apache-2.0 LTI 1.3 libraries (Node, PHP, two JVM) and
    one MIT OneRoster client (**rostering only, no gradebook**). **No permissive
-   Caliper Analytics implementation. No Python LTI 1.3 library at all** — and
-   Python is where the AI layer lives.
+   Caliper Analytics implementation.** 🔵 **CORRECTED, twenty-fourth pass of 2026-10-07 — "No
+   Python LTI 1.3 library at all" was false.** [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti)
+   is **MIT**, head commit **2 d**, PyPI `django-lti` **v0.10.1 (61 d)**; Python is where the AI
+   layer lives and it is now served, provided the AI tier is Django.
 6. **A named North American partner turned out to have a 238-repository MIT
    estate.** Learning Equality, Cohort 1 grantee and Kolibri maintainer. New
    verified MIT: **morango** (peer-to-peer Django DB replication with
@@ -4531,3 +4536,128 @@ deliberately bogus control host returned 000 too.**
 not reach it", so it yields no information in either direction, and no conclusion about LATAM
 self-hosted supply is drawn here.** A DNS check that would have separated the two cases was not
 permitted in this environment. **The question stays open and stays pre-registered.**
+
+---
+
+## What changed in the twenty-fourth pass of 2026-10-07
+
+⏱️ **Ages against the reference date `2026-10-07`.** Channel: the package registries
+(`compose/code/registry-recency-channel/`). **No market figure in this file changed this pass** —
+the mandatory regional queries returned **zero new findings and zero new instruments** for the
+fourteenth consecutive pass, and every instrument the search summaries named was already held
+(UNU's Latin America and the Caribbean higher-education working paper, the IADB enabling-regulatory-
+framework paper, the Council of Europe education working conference, QS *Europe EdTech 200*, Bridge
+AI / Skills England, Claude Corps, Ednova, ETS *Three forces shaping AI*).
+
+⚠️ **Three of those hosts — `unu.edu`, `publications.iadb.org` and `coe.int` — return `000` at this
+environment's egress proxy.** They are named here and **not written as citations anywhere in this
+KB**, because an unverifiable URL is not a finding. Recorded so a later pass does not spend the
+channel again.
+
+🔵 **What changed is the supply side, and it changes two numbers this file quotes as gaps.** This
+file asserted twice that there is *"no Python LTI 1.3 library at all"*, alongside *"no permissive
+Caliper Analytics implementation"*, and treated both as contribution openings with a
+procurement-scored buyer attached. **One of the two is now closed:**
+[`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) — **MIT**
+(payload 1,098 B, © The Regents of the University of Michigan), head commit **2026-10-05 (2 d)**,
+PyPI [`django-lti`](https://pypi.org/project/django-lti/) **v0.10.1 (61 d)**. 🔴 **Caliper
+Analytics, at zero permissive implementations, is now the clearest opening in the interoperability
+layer** — and it keeps the buyer: **39% of US districts score interoperability in their RFP
+rubrics** (CoSN, Tier 2, recorded in the ninth pass).
+
+### Opportunities by region
+
+🔵 **The supply findings of this pass are global, so each region below states what is *specifically*
+different there, and says so plainly where nothing is.** Pass 22's rule applies: an informed gap is
+information; silence reads as coverage.
+
+#### North America
+
+🟢 **The closed gap is a North American asset, and that is the sales-relevant part.**
+`academic-innovation/django-lti` is published by the **University of Michigan Center for Academic
+Innovation** — MIT-licensed, actively released, and a US public university's own LTI
+implementation. On a North American higher-education engagement this is a **reference, not just a
+dependency**: the rubric answer for "LTI 1.3 conformance" can name a peer institution's code.
+
+⚠️ **The matching risk is also concentrated here, and it is the dependency age of US university
+software, not its licence.** `CAHLR/OATutor` (UC Berkeley, MIT) has a **median dependency age of
+604 days** with 21 of 35 dependencies over a year old and a Material-UI v4 front end superseded in
+2021, while its head commit is 7 days old. 🔴 **An engagement that adopts a US university ITS is
+buying a dependency uplift as sprint one.** Price it; the governance-gap numbers already in this
+file (only **10% of institutions** with formal AI guidelines, **71% of US teachers** untrained) mean
+the client will not have priced it themselves.
+
+🔵 **And one proprietary exposure inside an otherwise permissive North American row:**
+`oppia/oppia` declares [`azure-cognitiveservices-speech`](https://pypi.org/project/azure-cognitiveservices-speech/),
+licence classifier *"Other/Proprietary License"*. Forking and shipping Oppia inherits a Microsoft
+Speech SDK obligation. The permissive substitute, `k2-fsa/sherpa-onnx` (Apache-2.0), is **APAC-origin**
+— so the fix for a North America delivery comes off an APAC shelf.
+
+#### EMEA
+
+🟢 **The Django correction lands hardest in EMEA, because it removes a component from the sovereign
+deployment pattern.** P4 (Annex III-ready) and P15 (sovereignty-constrained item generation) both
+assumed a Python AI tier **plus** an LTI adapter in a second runtime — Node or PHP — which under a
+data-residency clause means a second service to host, audit and certify inside the boundary.
+🟢 **With `django-lti` the launch happens in-process: one fewer runtime inside the sovereign
+perimeter, one fewer component in the Annex III technical file.** That is a concrete reduction in
+EU AI Act documentation scope, not just an engineering tidy-up.
+
+⚠️ **The EMEA-specific licence trap on this tier is LGPL, not AGPL.** Two European
+interoperability assets this KB holds are **LGPL** — `Citolab/qti-components` (LGPL-3.0) and
+`oat-sa/lib-lti1p3-core` (LGPL-2.1, 82 d) — and LGPL's dynamic-linking boundary is a different
+conversation from AGPL's network-use clause. Neither is a blocker; both need the architecture
+decided in week one.
+
+🔴 **Nothing new was found for EMEA this pass on the demand side.** The UK AI Adoption Summit
+funding (£200m+, of which £100m to Bridge AI and £53m regional), Skills England's curriculum role
+and the Council of Europe's regulatory work on AI in education are all **already recorded** in this
+file. **Searched, nothing new** — stated explicitly rather than left as an apparent absence.
+
+#### APAC
+
+🟢 **APAC is where the component substitutions of this pass come from, and that is a reversal worth
+noting.** [`k2-fsa/sherpa-onnx`](https://github.com/k2-fsa/sherpa-onnx) — Apache-2.0 (11,358 B),
+head commit **1 day** — now replaces `rhasspy/piper` in P21 and P36, and it does ASR **and** TTS
+plus VAD, keyword spotting and diarization **locally, on Raspberry Pi and Android**. 🔵 **An
+APAC-origin permissive asset is the offline-voice answer for a LATAM equity deployment and a North
+American accessibility remediation line.** The supply map is not regionally segmented the way the
+demand map is.
+
+🟢 **It also fits the region's own stated priority.** The sovereignty-by-design posture already
+recorded in this file — roughly half of APAC firms expecting sovereignty to shape infrastructure
+choices, 48% of governance leaders putting AI adoption top for 2026 — is served by a component that
+runs **entirely on-device with no network call**. For an APAC ministry engagement, "the voice tier
+makes no outbound request" is a procurement answer, not a feature.
+
+🔴 **No new APAC demand-side finding this pass.** Korea's AI Basic Act, Vietnam's Decree 33, the
+Singapore financial-institution AI consultations and Japan's curriculum gate are all already held.
+
+#### LATAM
+
+⚠️ **The LATAM-specific finding of this pass is a correction to a LATAM pattern, and it removes a
+decision rather than adding a capability.** P21 (the LATAM productionisation engagement) carried
+`vosk-api` for ASR **plus an unresolved Piper fork decision** — `rhasspy/piper` archived read-only
+with a head commit **407 days** old, or its successor `OHF-Voice/piper1-gpl` under **GPL-3.0**.
+🟢 **`sherpa-onnx` collapses that into one Apache-2.0 component** covering both ASR and TTS on
+2 GB-RAM Android and Raspberry Pi hardware — the exact target P21 and P5 specify. **A standing
+architectural argument on the region's flagship pattern is closed, in favour of the permissive
+branch.**
+
+🔵 **The structural LATAM read of this pass is about maintenance capacity, and it is not flattering
+in either direction.** Pass 22 concluded that ungranted-but-real education code is a LATAM
+signature; pass 23 widened that to a global offer with a LATAM concentration after finding a North
+American ungranted autograder. This pass adds the other half: **the cold-dependency problem is a
+North American and global phenomenon too** — OATutor (Berkeley) at a 604-day median is worse than
+anything measured on a LATAM row. 🟢 **So the licence-grant clinic and the dependency-uplift offer
+are the same engagement shape sold to different problems**, and neither is a region's deficiency to
+be managed delicately.
+
+🔴 **No new LATAM supply or demand finding beyond that.** The UNU LAC higher-education survey (200
+institutions, 19 countries), the IADB regulatory-framework paper, Ednova, the 99% / 85% startup AI
+adoption figures and the regional market sizes are **all already held**, and the three
+policy-document hosts are unreachable from here. ⚠️ Pass 22's pre-registered sweep of **LATAM
+self-hosted forges** remains **unrunnable and therefore open**: 15 hosts returned `000` on all 45
+requests and so did a bogus control, so the probe does not discriminate and **no conclusion about
+LATAM self-hosted supply may be drawn**. Stated again because an unmeasurable channel left
+unmentioned looks like a measured absence.

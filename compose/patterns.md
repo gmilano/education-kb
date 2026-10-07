@@ -27,9 +27,26 @@ side-car.
 **Wiring:**
 1. Leave the LMS untouched — Moodle (GPL-3.0), Canvas (AGPL-3.0) or Open edX
    (AGPL-3.0). No fork, no in-tree plugin.
-2. Register a tool provider with
+2. Register a tool provider for launch, identity and grade passback.
+   🔴 **CORRECTED, twenty-fourth pass of 2026-10-07 — this step named the wrong protocol.** It
+   previously specified
    [IMSGlobal/LTI-Tool-Provider-Library-PHP](https://github.com/IMSGlobal/LTI-Tool-Provider-Library-PHP)
-   (Apache-2.0) for launch, identity and grade passback.
+   (Apache-2.0, payload 11,357 B). Its head commit is **2016-11-28 — 3,600 days, 9.9 years**, the
+   oldest component in any pattern in this KB, and its `README.md` states it supports
+   **"LTI 1.1 and the unofficial extensions to LTI 1.0"** — **it does not implement LTI 1.3 at
+   all.** LTI 1.1's security model is retired; LTI 1.3 / Advantage is what Canvas, Moodle and
+   Open edX certify against and what the procurement rubrics in `intel/market.md` score.
+   ⚠️ The organisation name was the tell: **IMSGlobal renamed itself 1EdTech in 2022.**
+   🟢 **Use instead, by estate:**
+   - **Python / Django** (the usual case here, since steps 4–6 are Python):
+     [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) — **MIT** (1,098 B), head commit
+     **2026-10-05 (2 d)**, PyPI [`django-lti`](https://pypi.org/project/django-lti/) **v0.10.1
+     (61 d)**. Launch in-process; **no second runtime**.
+   - **JupyterHub**: [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator)
+     — **BSD-3-Clause** (1,528 B), 98 d, LTI 1.3 **and** 1.1, tested against Open edX, Canvas, Moodle.
+   - **PHP / Moodle estate**: [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library)
+     — **Apache-2.0** (11,343 B), **14 d**.
+   - **Node estate**: [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) — Apache-2.0, 1 d.
 3. Expose LMS data to the agent over MCP:
    [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) (MIT,
    up to 103 tools, 8 agent skills) for Canvas, or
@@ -1136,7 +1153,7 @@ provenance in the architecture rather than a US SaaS wrapper.
 | **Offline-sync reference** | [caiuc/equipo-19-haCAIthon-2026](https://github.com/caiuc/equipo-19-haCAIthon-2026) (EduFlow) | **MIT** © CAi UC — **holder flagged** | ~41 commits showing room-code + IndexedDB + Service Worker + auto-sync in readable form. **Read it; do not vendor it** until the holder is cleared |
 | **LMS integration surface** | Open edX XBlock / plugin | AGPL-3.0 (platform) — side-car stays separate | The integration shape TutorIA's RF-01 specifies |
 | **Portuguese language layer** | [neuralmind-ai/portuguese-bert](https://github.com/neuralmind-ai/portuguese-bert) | **MIT** © NeuralMind | **886★**, BERTimbau, BrWaC-trained. Brazil-origin, for pt-BR classification/NER/retrieval work |
-| **Offline ASR / TTS** | [alphacep/vosk-api](https://github.com/alphacep/vosk-api) **Apache-2.0**; `rhasspy/piper` **MIT** (archived) or `OHF-Voice/piper1-gpl` **GPL-3.0** | mixed | The voice tier from P18; the Piper fork decision is unchanged and must be made explicitly |
+| **Offline ASR / TTS** | [`k2-fsa/sherpa-onnx`](https://github.com/k2-fsa/sherpa-onnx) **Apache-2.0** (11,358 B) | 🟢 permissive, single grant | 🔵 **Re-picked, pass 24.** Was `vosk-api` + a Piper fork decision (`rhasspy/piper` **archived**, head commit **407 d**; `OHF-Voice/piper1-gpl` **GPL-3.0**). `sherpa-onnx` does **ASR *and* TTS** — plus VAD, keyword spotting and diarization — locally, on **Raspberry Pi and Android**, head commit **2026-10-06 (1 d)**. 🟢 **The Piper fork decision disappears**: one component, one permissive licence, no copyleft branch to argue about |
 | **Human quality gate** | TutorIA **RNF-09** | **MIT** (as text) | *"Al menos **2 docentes por asignatura**"* must pass pedagogical review **before launch**. A written protocol with a quorum — the thing to ship while no automated evaluator exists |
 
 ### Wiring
@@ -1432,14 +1449,20 @@ the same time.**
 
 ## P25 — The interoperability tier, built to be scored (North America, and anywhere with an LMS)
 
-> ⚠️ **Corrected in the eleventh pass, 2026-10-06.** This pattern recorded the
-> permissive LTI shelf as Node/PHP/Java/.NET with **no Python option**. There is one:
-> [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) — **MIT,
-> 138★**, Django and Flask adapters, branch `master` — the **second-largest runtime**
-> on the shelf after Node. Also permissive and Python: `openedx-lti-tool-plugin`
-> (Apache-2.0) and `ucfopen/cookiecutter-python-lti` (MIT). The Python-shaped hole
-> was in this KB, not in the ecosystem; it was dropped by this repository's reset
-> and is recorded in `archive/2026-10-06-pre-reset/`.
+> 🔵 **Re-corrected in the twenty-fourth pass, 2026-10-07.** The eleventh pass fixed the
+> "no Python option" error by naming [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3)
+> (MIT, 138★). 🔴 **That library is 1,416 days cold on the commit channel and 1,417 on the release
+> channel** (`pylti1p3` v2.0.0, 2022-11-20) — so the correction closed the gap with an abandoned
+> project. **Take [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) instead:**
+> **MIT** (payload 1,098 B), head commit **2026-10-05 (2 d)**, PyPI
+> [`django-lti`](https://pypi.org/project/django-lti/) **v0.10.1, 2026-08-07 (61 d)**, 17 releases.
+> ⚠️ Two further corrections to the sentence this replaces: `openedx-lti-tool-plugin` is real and
+> Apache-2.0 (payload 11,357 B) but lives at **`eduNEXT/openedx-lti-tool-plugin`**, is **443 days
+> cold** and is **not published to PyPI** under that name; and `ucfopen/cookiecutter-python-lti`
+> (MIT, 147 d) is a live template whose Flask path **installs a 1,364-day-cold fork at a moving
+> branch** — take its Django path. 🔴 The best-maintained Python LTI 1.3 implementation of all,
+> [`openedx/xblock-lti-consumer`](https://github.com/openedx/xblock-lti-consumer) (6 d), is
+> **AGPL-3.0** and therefore off this shelf by design, not by accident.
 
 Added tenth pass, 2026-10-06. This pattern exists because of a procurement number,
 not a technology: **39% of districts score interoperability in their RFP rubrics**
@@ -1454,7 +1477,8 @@ artefact pack that answers an interoperability rubric line by line.
 | Stage | Component | Licence (payload) | Why this one |
 |---|---|---|---|
 | Tool launch, Node estate | [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | **Apache-2.0** (`master/LICENSE`) | 373★, the highest-starred genuine LTI 1.3 implementation; turns a service into a full tool provider |
-| Tool launch, Moodle estate | [1EdTech/lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library) | **Apache-2.0** (`master/LICENSE`) | **Published by the standards body itself** — the reference, and PHP sits next to Moodle |
+| Tool launch, Moodle estate | [packbackbooks/lti-1-3-php-library](https://github.com/packbackbooks/lti-1-3-php-library) | **Apache-2.0** (`master/LICENSE.md`, 11,343 B) | 🔵 **Re-picked, pass 24.** The same library the standards body ships — byte-identical payload — but the **live** copy: head commit **2026-09-23 (14 d)** against `1EdTech/lti-1-3-php-library`'s **2,317 d**. Composer name `packbackbooks/lti-1-3-php-library` |
+| Tool launch, Python/Django estate | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | **MIT** (1,098 B) | 🆕 **Added pass 24.** Head commit **2 d**, PyPI `django-lti` v0.10.1 (61 d). Removes the second runtime when the AI tier is Django |
 | Tool launch, JVM estate | [Unicon/tool13demo](https://github.com/Unicon/tool13demo) | **Apache-2.0** (`master/LICENSE`) | LTI 1.3 in Spring Boot, from a higher-ed systems integrator |
 | Tool launch, existing Spring Security | [oxctl/spring-security-lti13](https://github.com/oxctl/spring-security-lti13) | **Apache-2.0** (`master/LICENSE.txt`) | LTI inside an existing Spring Security estate rather than beside it |
 | Rostering | [theopenem/OneRoster.NET](https://github.com/theopenem/OneRoster.NET) | **MIT** (`master/LICENSE`) | OneRoster 1.1 + 1.2 client, OAuth2 for 1.2. **Rostering only — no gradebook** |
@@ -1469,9 +1493,13 @@ adapter over an internal API; OneRoster.NET syncs the roster on a schedule;
 Langfuse records every interaction with the launch context attached, so an audit
 trail is a by-product of the architecture rather than a feature nobody funded.
 
-**The gap you must price, not hide.** **There is no Python LTI 1.3 library.** The
-AI layer is Python; the adapter is not. So the honest architecture is two
-processes, and the adapter is a **budgeted component in the bid**. Equally: if the
+**The gap you must price, not hide.** 🔵 **CORRECTED, twenty-fourth pass of 2026-10-07: "there is
+no Python LTI 1.3 library" was false.** [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti)
+is **MIT**, head commit **2 d**, PyPI `django-lti` **v0.10.1 (61 d)**. 🟢 **If the AI layer is
+Django, launch LTI in-process and budget no adapter at all** — that line item disappears from the
+bid. ⚠️ The two-process architecture is still right when the AI tier is neither Django nor
+JupyterHub, because the only framework-neutral Python implementation is 1,416 days cold; price the
+adapter **only after** checking the framework. Equally: if the
 rubric scores **grade passback**, OneRoster.NET does not implement the gradebook,
 and if it scores **learning-analytics event streams**, there is **no permissive
 Caliper Analytics implementation at all** — both are builds against the spec. Say
@@ -1718,7 +1746,7 @@ institution among the 91% with no formal evaluation mechanism.
 | Reference benchmark #1 | [`Khan/tutoring-accuracy-dataset`](https://github.com/Khan/tutoring-accuracy-dataset) | 🔴 **custom Evaluation Dataset License** | 57★, Khan Academy's own math-tutoring benchmark. **Borrowed at measurement time.** |
 | Reference benchmark #2 | [`shivanireddyk/tutoreval`](https://github.com/shivanireddyk/tutoreval) | ✅ **MIT** | 0★, one author — but the **only** OSI-licensed pedagogical benchmark found. Vendorable. |
 | 🔴 Excluded | `eth-lre/mathtutorbench` (no payload; README claims CC BY 4.0 *and* CC BY-SA 4.0) · `Yunfeng-Wan/CSTutorBench` (CC BY-NC-4.0) | — | Named here so a later pass does not rediscover them as options. |
-| Delivery into the LMS | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | ✅ **MIT** | So the evaluated tutor reaches learners inside the institution's LMS. Pin the version: last push 2024-08-18. |
+| Delivery into the LMS | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | ✅ **MIT** (1,098 B) | 🔵 **Re-picked, pass 24.** Was `dmitry-viskov/pylti1.3`, which is **1,416 d cold (commit) / 1,417 d (release)**. This is head commit **2026-10-05 (2 d)**, PyPI `django-lti` **v0.10.1 (61 d)**. Django; the harness is Python, so it launches in-process. |
 
 ### Wiring
 
@@ -1801,7 +1829,7 @@ platform is a problem.
 | Offline sync | [`learningequality/morango`](https://github.com/learningequality/morango) | ✅ **MIT** | Peer-to-peer Django model replication, certificate-authenticated, built for low-bandwidth links. SQLite **and** PostgreSQL. |
 | Learner-facing delivery | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | ✅ **MIT** | Offline-first learning platform. |
 | Evaluation | **Inspect** (MIT) + the P27 scorer | ✅ | The 9%-with-evaluation-mechanisms gap is the differentiator in this region. |
-| LMS-side delivery, if any | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | ✅ **MIT** | Python, matches the AI tier's language. |
+| LMS-side delivery, if any | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | ✅ **MIT** (1,098 B) | 🔵 **Re-picked, pass 24** (was `pylti1.3`, 1,416 d cold). Python, matches the AI tier's language; head commit **2 d**, PyPI `django-lti` **v0.10.1 (61 d)**. |
 
 ### Wiring, and why the licence works in your favour
 
@@ -1933,14 +1961,14 @@ side-car. Globant wants the component to be **reusable studio IP** across later 
 | Platform core | `openedx/edx-platform` | ⚠️ AGPL-3.0 | Deployed, configured — **never forked into the deliverable**. |
 | **Out-of-tree Moodle access** | [peancor/moodle-mcp-server](https://github.com/peancor/moodle-mcp-server) | 🟢 MIT | Reaches Moodle data from outside the tree, which is why it can be MIT. |
 | In-tree Moodle plugins | 8 verified this pass | ⚠️ GPL-3.0 | Correct and unavoidable for in-tree work. |
-| **LTI 1.3 delivery (Python)** | [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) | MIT, 138★ | ⚠️ 51 open issues; **fork and maintain**. |
-| **LTI 1.3 delivery (Java)** | [UOC/java-lti-1.3-provider-example](https://github.com/UOC/java-lti-1.3-provider-example) | MIT | EMEA/Spain lineage. |
+| **LTI 1.3 delivery (Python)** | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | 🟢 MIT (1,098 B) | 🔵 **Re-picked, pass 24.** Was `dmitry-viskov/pylti1.3` with *"fork and maintain"* — unnecessary now. Head commit **2026-10-05 (2 d)**, PyPI `django-lti` **v0.10.1 (61 d)**, 17 releases. 🔴 **Do not reach for `openedx/xblock-lti-consumer`** here, however well maintained (6 d): it is **AGPL-3.0**, which defeats this pattern's entire purpose. |
+| **LTI 1.3 delivery (Java)** | [UOC/java-lti-1.3-provider-example](https://github.com/UOC/java-lti-1.3-provider-example) | MIT | EMEA/Spain lineage. ⚠️ **1,418 days cold** (measured pass 23) — a reference, not a dependency. |
 | Reference specification | `LabSirius/TutorIA` (`docs/`) | MIT | A 13-page spec that already chose this shape. |
 
 ### Wiring — the decision tree, in order
 
 1. **Can the component live entirely outside the platform?** Then deliver it over **LTI 1.3**
-   (`pylti1.3` / UOC's Java tool) or **MCP** (`moodle-mcp-server` shape). Cleanest IP
+   (`django-lti` / UOC's Java tool) or **MCP** (`moodle-mcp-server` shape). Cleanest IP
    position, works across LMSs, and it is the only option that is portable between a Moodle
    client and a Canvas client.
 2. **Does it need to render inside a course page?** Then write an **XBlock** against the
@@ -2867,7 +2895,7 @@ not replacing, and an AI item-generation ambition they cannot yet evidence as sa
 | Item player (framework-neutral) | [`agencyenterprise/qti-3-player`](https://github.com/agencyenterprise/qti-3-player) | **MIT** (© 2026 AE Studio) |
 | **Legacy migration + scoring + validation** | [`longsightgroup/qti3`](https://github.com/longsightgroup/qti3) | **MIT** (© 2026 Longsight, Inc.) — 12 npm packages, **QTI 1.2 / 2.x → 3 migrator** |
 | PHP-side QTI support | [`Kennisnet/php-qti3`](https://github.com/Kennisnet/php-qti3) | **MIT** (© 2026 Kennisnet) |
-| LMS doorway | [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) or [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | Apache-2.0 |
+| LMS doorway | [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) or [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | Apache-2.0 — 🔵 **re-picked pass 24**: was `1EdTech/lti-1-3-php-library`, the **2,317-day-cold copy** of the same library (byte-identical payload); this one is **14 d** |
 | Item generation | P11's gated generation chain | — |
 | Audit trail | [`langfuse/langfuse`](https://github.com/langfuse/langfuse) | MIT **outside `ee/`** — exclude `ee/` from any vendored copy |
 | Typed agent outputs | [`pydantic/pydantic-ai`](https://github.com/pydantic/pydantic-ai) | MIT |
@@ -3009,7 +3037,7 @@ cannot staff this alone.
 | OCR for scanned material | [tesseract-ocr/tesseract](https://github.com/tesseract-ocr/tesseract) | **Apache-2.0** | 100+ languages, and **hOCR / ALTO / PAGE** output that a tagging step can consume |
 | Searchable-PDF pass | [ocrmypdf/OCRmyPDF](https://github.com/ocrmypdf/OCRmyPDF) | ⚠️ **MPL-2.0** | Text layer + PDF/A. 🔴 **Searchable ≠ accessible** — see warning 2 |
 | PDF/UA validation | [veraPDF](https://github.com/veraPDF/veraPDF-library) | 🔴 **Dual GPL/MPL** (`LICENSE.GPL` / `LICENSE.MPL`) | **Invoke as a CLI only** |
-| Captions and audio description | [`whisper.cpp`](https://github.com/ggml-org/whisper.cpp) + [rhasspy/piper](https://github.com/rhasspy/piper) | **MIT** + **MIT** | Already on this KB's shelf. Title II's final rule covers **captioning and audio description**; both run on-premise, which is what an education-records clause requires |
+| Captions and audio description | [`whisper.cpp`](https://github.com/ggml-org/whisper.cpp) + [`k2-fsa/sherpa-onnx`](https://github.com/k2-fsa/sherpa-onnx) 🔵 *(re-picked pass 24; was `rhasspy/piper`, archived, head commit 407 d)* | **MIT** + **MIT** | Already on this KB's shelf. Title II's final rule covers **captioning and audio description**; both run on-premise, which is what an education-records clause requires |
 | Screen-reader verification | [nvaccess/nvda](https://github.com/nvaccess/nvda) | GPL-2.0+ — **as a test client** | Free and scriptable; "verified with NVDA" costs nothing and is the line a scanner report cannot produce |
 
 ### Wiring
@@ -3031,7 +3059,7 @@ cannot staff this alone.
 5. **Scanned material:** Tesseract → structured output (hOCR/ALTO) → OCRmyPDF for a searchable
    PDF/A → **human tagging** → veraPDF CLI to validate PDF/UA. 🔴 **Step four is a person.** There is
    no permissive engine that produces tagged, structurally accessible PDF (searched this pass).
-6. **Media:** `whisper.cpp` for captions, human correction pass, `piper` for audio description
+6. **Media:** `whisper.cpp` for captions, human correction pass, `sherpa-onnx` for audio description
    tracks. On-premise throughout.
 7. **Verify, then claim.** `accessibility-insights-web` for the guided human assessment, NVDA for a
    real screen-reader run, then a conformance report that states **pass / fail / undetermined per
@@ -3537,3 +3565,142 @@ Nothing to build. This pattern is **entirely artefact and process**, which is wh
 | **North America** | 🟢 **Real and newly evidenced** — Carriage is piloting in US classrooms in Fall 2026 with no grant. Sells alongside the procurement-rubric component register of trend 26 and P24 |
 | **EMEA** | 🟢 **Different buyer, same work.** Public-sector publishers here mostly *do* grant, often via **REUSE** and `LICENSES/` directories; the clinic's EMEA form is **correctness and closure** (manifest alignment, REUSE conformance, dependency closure) rather than adding a first grant |
 | **APAC** | ⚠️ **Thinnest fit of the four, stated rather than padded.** The region's permissive assets measured in this KB — OpenMAIC, `elabsheet`, the Sunbird estate — already carry grants. The APAC version of this engagement is the **currency** check of P22.4, not the grant |
+
+---
+
+## Added in the twenty-fourth pass of 2026-10-07 — component currency, applied to the patterns rather than reported about them
+
+⏱️ **Ages against the reference date `2026-10-07`.** Channels: the package registries
+(`compose/code/registry-recency-channel/`) and `git ls-remote`.
+
+Pass 23 pre-registered action **C**: *"re-pick the cold components in P1 and P18 and re-measure,
+rather than only flagging them."* Done, and the pre-registration was wrong about both patterns.
+
+### 🔴 P1 did not have a cold component — it had the wrong protocol
+
+P1 is described here as *"the default engagement shape"*, for when *"the client already runs an LMS,
+which is almost always"*. Its step 2 named
+[`IMSGlobal/LTI-Tool-Provider-Library-PHP`](https://github.com/IMSGlobal/LTI-Tool-Provider-Library-PHP):
+
+| | measured this pass |
+|---|---|
+| head commit | 🔴 **2016-11-28 — 3,600 days (9.9 years)**, the oldest component in any pattern here |
+| licence payload | 🟢 Apache-2.0, `master/LICENSE`, 11,357 B — the grant was never the problem |
+| 🔴 protocol | `master/README.md`: *"support for **LTI 1.1** and the unofficial extensions to **LTI 1.0**"* — **no LTI 1.3** |
+
+🔴 **LTI 1.1's security model is retired. LTI 1.3 / Advantage is what Canvas, Moodle and Open edX
+certify against and what every procurement rubric in `intel/market.md` scores.** An engagement
+following P1 literally would have built its LMS integration on a withdrawn protocol generation and
+then failed the interoperability line of the rubric that justified the project.
+
+⚠️ **Pass 23 dated this repository correctly** — it is the last row of that pass's interoperability
+table, at 3,599 d — **and no pass had opened it.** Its licence column there reads `—`, and nothing
+checked its protocol version against the step that cited it. **Dating a component and qualifying it
+are different acts.**
+
+🟢 **P1 step 2 is rewritten above**, with the pick made from the client's estate: `django-lti`
+(Python/Django, MIT, 2 d), `ltiauthenticator` (JupyterHub, BSD-3, 98 d), `packbackbooks` (PHP, 14 d)
+or `ltijs` (Node, 1 d). Because P1's steps 4–6 are already Python, **the usual answer is `django-lti`
+and the second runtime P1 assumed disappears.**
+
+### 🔵 P18 needed nothing, and pass 23's flag was the error
+
+Pass 23 listed `rhasspy/piper` as *"wired into P18"*. **It is not.** P18 already selected
+`sherpa-onnx` and already carries the paragraph *"Why sherpa-onnx and not Piper"*, recording Piper's
+archival and its GPL-3.0 successor. 🟢 The commit channel confirms it independently: `piper`'s head
+commit is **2025-08-26 (407 d)** and nothing has landed since. **P18 was correct before this pass
+and is unchanged.**
+
+### 🟢 Where the cold components actually were
+
+| Pattern | Component | Age | Re-picked to | Age | What the pattern gains |
+|---|---|---|---|---|---|
+| **P1** | `IMSGlobal/LTI-Tool-Provider-Library-PHP` (🔴 LTI 1.1 only) | 🔴 **3,600 d** | `academic-innovation/django-lti` | 🟢 **2 d** | the right protocol, and **one fewer runtime** |
+| **P25**, **P34** | `1EdTech/lti-1-3-php-library` | 🔴 2,317 d | `packbackbooks/lti-1-3-php-library` | 🟢 **14 d** | the **same library**, live copy |
+| **P25**, **P27**, **P28**, **P30** | `dmitry-viskov/pylti1.3` | 🔴 1,416 d | `academic-innovation/django-lti` | 🟢 **2 d** | no *"fork and maintain"* caveat |
+| **P21** | `vosk-api` **+ an unresolved Piper fork decision** | 🔴 407 d | `k2-fsa/sherpa-onnx` | 🟢 **1 d** | **one component instead of two**, one permissive licence, decision closed |
+| **P36** | `rhasspy/piper` (audio description) | 🔴 407 d | `k2-fsa/sherpa-onnx` | 🟢 **1 d** | — |
+
+🟢 **Two of these are simplifications, not swaps.** P21 loses a component *and* a standing
+architectural argument: `sherpa-onnx` does ASR **and** TTS — plus VAD, keyword spotting and
+diarization — *"running the following functions locally"* on **Raspberry Pi and Android**, under one
+Apache-2.0 grant. P1 loses the entire second runtime its two-process architecture existed to host.
+
+### 🔴 The licence boundary that is now explicit in P30
+
+[`openedx/xblock-lti-consumer`](https://github.com/openedx/xblock-lti-consumer) is the
+**best-maintained Python LTI 1.3 implementation in any language** — committed and released **6 days**
+ago as `lti-consumer-xblock` v11.4.2 — and it is **AGPL-3.0** (payload 34,520 B). It is the right
+component **inside** an Open edX deployment and disqualified from a reusable-IP deliverable, which is
+exactly P30's thesis. It is named in P30 as a boundary so that no later pass re-discovers it as a
+pick.
+
+## P22.5 — the currency-and-provenance point, added to the licence-reliability gate
+
+**P22** runs three points before a component enters a deliverable, and pass 23 added **P22.4**
+(currency over the dependency closure). This pass adds the fifth, because P22.4 would not have caught
+either defect found above:
+
+> **P22.5 — Resolve provenance before you trust a date, and read the protocol before you trust the
+> provenance.**
+>
+> 1. **Is the payload's copyright holder the publishing account?** If not, treat it as a **fork
+>    hypothesis** (trend 56). Resolve the upstream from the package registry's declared homepage —
+>    PyPI `project_urls`, npm `repository`, the composer name — which works where `api.github.com`
+>    is 403.
+> 2. **Do the remote's tags reach the registry's current release?** `git ls-remote` the tags. A copy
+>    topping out six minor versions below the published release is a fork.
+> 3. **Is the organisation name current?** An org that has been renamed (`IMSGlobal` → 1EdTech,
+>    2022) dates its repositories by construction.
+> 4. **Does the component implement the version the rubric scores?** Open the README. A library can
+>    be permissive, popular and the wrong protocol generation — which is **three green checks and a
+>    failed bid**.
+> 5. **Both recency channels, not one.** Head commit **and** latest release. Cold commits with fresh
+>    releases means development happens off the default branch — look harder. **Cold on both is
+>    abandonment** (`pylti1.3`: 1,416 d and 1,417 d).
+
+⚠️ **And one bound on every date this gate produces:** the registry channel reads the **latest**
+release, not the **pinned** one, so an age is a **lower bound on staleness**. A manifest pinning an
+old version installs something older than the gate reports, never newer.
+
+## P-UPLIFT — the dependency-uplift engagement (small, honest, and it precedes every adoption)
+
+**Added in the twenty-fourth pass of 2026-10-07.** Not a new capability — a line item this KB has
+been recommending adoptions without, in every region.
+
+**Use when:** a client is adopting a permissive education platform or ITS from this KB's shelf
+(OATutor, Kolibri, Oppia, Coursemology, Mentingo) and the proposal treats "it is actively
+maintained" as sufficient diligence.
+
+**The premise, measured.** A repository's head-commit date and its dependency set's release dates
+are **different facts** (trend 57). Across 293 depth-1 dependencies: **30.1% cold over a year,
+13.0% pre-2024, median 65 days** — and the per-repository spread is **30× wide**:
+
+| Adoption target | Head commit | Median dependency age | Cold > 1 yr | Sprint-one reality |
+|---|---|---|---|---|
+| `CAHLR/OATutor` | 🟢 7 d | 🔴 **604 d** | 21/35 | Material-UI **v4** (superseded 2021); `random-seed` 3,967 d |
+| `LearningEquality/kolibri` | 🟢 1 d | ⚠️ 200 d | 14/32 | Python-2-era shims: `zeroconf-py2compat` 1,156 d |
+| `oppia/oppia` | 🟢 1 d | 🟢 60 d | 40/152 | bimodal; App Engine tail (`crcmod` 5,923 d) **and** a proprietary Azure Speech SDK |
+| `towardsai/ai-tutor-app` | — | 🟢 **9 d** | **0/20** | 🟢 nothing to uplift |
+
+**Wiring.**
+1. Run `compose/code/dependency-licence-closure/` over the target's manifests — the licence census.
+2. Run `compose/code/registry-recency-channel/` over the result — the age census.
+3. Run **P22** including **P22.5** on every component the target itself wires in.
+4. Partition the result: **permissive-and-fresh** (adopt), **permissive-and-cold** (uplift, estimate
+   it), **copyleft** (architecture decision), **proprietary or ungranted** (replace — and name the
+   substitute; for Azure Speech it is `k2-fsa/sherpa-onnx`, Apache-2.0).
+5. Deliver the four-way partition as the adoption decision record.
+
+**Deliverables.** The two censuses, the uplift estimate by dependency, the replacement list with
+named permissive substitutes, and a one-page adoption recommendation that quotes **the median and
+discloses the maximum**.
+
+**Effort:** 1–2 weeks, before the adoption decision rather than after it.
+
+⚠️ **Two warnings that are the point of this pattern.**
+🔴 **A green head commit is not a priced adoption.** OATutor is the right technical pick and its
+first sprint is a dependency uplift. Saying so wins trust; discovering it in sprint three loses the
+account.
+🟢 **A cold dependency is not a defect by itself.** `defusedxml` at 2,039 days is a finished security
+library. **The deliverable is the partition, not the age**, and the partition requires reading.

@@ -8,6 +8,370 @@ updated: 2026-10-07
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-07 — twenty-fourth pass: the installed tier is older than the citing tier, and the fork this KB corrected to was itself a cold fork
+
+⏱️ **Measurement window 2026-10-07 ~00:30 UTC → 03:00 UTC. Every age in days is computed against
+the reference date `2026-10-07`**, passed explicitly to the instrument, so the figures are
+reproducible. Pass 23's figures were computed against `2026-10-06`; where this section compares the
+two populations it **recomputes pass 23's raw data against its own reference date** rather than
+quoting its published percentages.
+
+**Channel new to this KB this pass: the package registries as a recency channel** —
+`pypi.org/pypi/<n>/json` and `registry.npmjs.org/<n>`, read for the **upload date of the latest
+release**. Previous channels: topic, star count, funder, ministry, institution, function, licence
+scope, platform name, language, MCP registry, conformance register, named technical standard,
+transitional article, declared dependency, GitLab REST API, `git`. **Twelfth distinct channel.**
+Instrument: `compose/code/registry-recency-channel/` (20 tests, 4 planted controls, all failing as
+required). Trends **56** and **57** in `intel/trends.md`.
+
+This pass executed all three of pass 23's pre-registered actions. **Action A found a defect in the
+correction it was sent to apply**, and that is the headline.
+
+### 🟢 Verification level of this pass, stated before the findings
+
+| Layer | Endpoint / method | Status | Control |
+|---|---|---|---|
+| release date, PyPI | `pypi.org/pypi/<name>/json` | 🟢 **200**, 292 of 293 names dated | 2 invented names → **404** ⇒ 🟢 **DISCRIMINATES** |
+| release date, npm | `registry.npmjs.org/<name>` | 🟢 **200** | 2 invented names → **404** ⇒ 🟢 **DISCRIMINATES** |
+| head commit | `git fetch --depth 1 --filter=blob:none` | 🟢 **dates on all 12 slugs probed** | pass 23's 4 invented slugs still return no ref |
+| ref/tag enumeration | `git ls-remote <url>` | 🟢 **full ref list** — **new use of the pass-23 channel**, and it is what exposed finding 1 | — |
+| licence payload | `raw.githubusercontent.com/<slug>/<branch>/<file>` | 🟢 **200** + `sha256` | absent file → **404** ⇒ 🟢 **DISCRIMINATES** |
+| *(blocked, re-probed)* | `github.com` rendered page · `api.github.com/repos/*` | 🔴 **403 · 403** | unchanged since pass 37 |
+| *(blocked, so not cited)* | `unu.edu` · `publications.iadb.org` · `coe.int` | 🔴 **000** at the egress proxy | — |
+
+⚠️ **No ★ was read this pass either.** Every star count in this KB remains pass-22's figure or
+older, and pass 22's warning stands: ★ measures a **host's** audience, not a project's adoption.
+
+### 🔴 Finding 1 — the headline: pass 23 corrected a cold fork to another cold fork, and its own ⚠️ was the clue
+
+Pass 23's finding 1 was that `1EdTech/lti-1-3-php-library` (2,317 d) is the **cold fork** of
+[`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) (14 d).
+It then promoted a replacement for the Python side of the same gap, and recorded this next to it:
+
+> `Harvard-University-iCommons/django-lti` | 🟢 **MIT** (1,097 B) | ⚠️ *The Regents of the **University of Michigan**, 2022*
+
+🔴 **That ⚠️ was the same finding again, unread.** A licence payload whose holder is not the
+publishing institution is the signature of a fork. Following it:
+
+| | `academic-innovation/django-lti` | `Harvard-University-iCommons/django-lti` |
+|---|---|---|
+| head commit | 🟢 **2026-10-05** — **2 d** | 🔴 2025-08-27 — **406 d** |
+| highest tag on the remote | **v0.9.2** (+ `0.10.x` on PyPI) | 🔴 **v0.3.2** |
+| licence payload | 🟢 MIT, **1,098 B**, © 2022 The Regents of the University of Michigan | 🟢 MIT, **1,098 B**, same holder |
+| payload `sha256` | `d5558cd4…3512ed` | `c24a6b35…be7f5b` — ⚠️ **not** byte-identical |
+| named by PyPI `django-lti` as its homepage | 🟢 **yes** | 🔴 **no** |
+
+🟢 **[`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) is the
+live upstream** — the University of Michigan Center for Academic Innovation — and it is **new to
+this KB: zero occurrences in any file before this pass.** PyPI
+[`django-lti`](https://pypi.org/project/django-lti/) serves **v0.10.1, uploaded 2026-08-07 (61 d)**,
+17 releases, and names that repository as its homepage. The Harvard copy's tags stop six minor
+versions earlier.
+
+⚠️ **One pass-23 figure corrected:** the Harvard payload is **1,098 B**, not 1,097 B. Trivial on its
+own, recorded because byte length is how this KB establishes payload identity, and an off-by-one
+there would have read as "different file".
+
+### 🔴 Finding 2 — two of this KB's three LTI picks were cold forks of live upstreams, and both were derivable from metadata already in the file
+
+| Language | What this KB cited | Age | The live upstream | Age | What revealed it |
+|---|---|---|---|---|---|
+| PHP | `1EdTech/lti-1-3-php-library` | 🔴 2,317 d | `packbackbooks/lti-1-3-php-library` | 🟢 14 d | the **composer package name** (pass 23) |
+| Python | `Harvard-University-iCommons/django-lti` | 🔴 406 d | `academic-innovation/django-lti` | 🟢 2 d | the **licence payload's holder** (this pass) |
+
+🔵 **This generalises into a rule, and it is trend 56.** In both cases the fork was the obvious
+search result, the upstream was not, and **the field that gave the upstream away was already
+written down in this KB** — a composer name in one case, a copyright holder in the other. The
+operational form:
+
+> **A licence holder that does not match the publishing account is a fork signal. Resolve the
+> upstream before citing, and prefer the repository the package registry names as its homepage.**
+
+This KB already owns an instrument for exactly this — `compose/code/p184-holder-mismatch/` — and a
+separate one for lineage, `compose/code/fork-lineage-audit/`. **Neither was wired to the other.**
+The holder sweep treated a mismatch as an attribution defect; it is also a **lineage** signal, and
+the registry homepage resolves it without `api.github.com`, which is 403 here.
+
+### 🟢 Finding 3 — action A executed: the KB's most-repeated supply claim is now closed, and closed correctly
+
+The claim *"there is no permissive Python LTI 1.3 library"* appears as a **live assertion** in
+`repos/foundations.md` (×2), `intel/trends.md` (×6, including trend 28's own heading),
+`intel/market.md` (×2), `compose/patterns.md` (×2) and `verticals/solutions.md` (×1) — **13 editable
+sites**, plus the historical records in this file and in `repos/trending.md`, which are left intact
+because both files are append-only. All 13 are corrected in place this pass, not into a pass-scoped block, which is what
+pass 23 pre-registered and what trend 50 predicted would not happen.
+
+**The corrected shelf — both channels, one table:**
+
+| Repo | Licence (payload, bytes) | Head commit | Age | Latest release | Age | Verdict |
+|---|---|---|---|---|---|---|
+| [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | 🟢 **MIT** (1,098 B) | 2026-10-05 | 🟢 **2 d** | `django-lti` **v0.10.1** | 🟢 **61 d** | 🟢 **START HERE** for Django |
+| [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | 🟢 **BSD-3-Clause** (1,528 B) | 2026-07-01 | 🟢 98 d | `jupyterhub-ltiauthenticator` **v1.6.3** | 🟢 195 d | 🟢 only if the tool **is** JupyterHub |
+| [`Harvard-University-iCommons/django-lti`](https://github.com/Harvard-University-iCommons/django-lti) | 🟢 MIT (1,098 B) | 2025-08-27 | 🔴 406 d | — not on PyPI | — | 🔴 **cold fork — do not start here** |
+| [`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) | 🟢 MIT (1,069 B) | 2023-01-12 | 🔴 1,364 d | — | — | 🔴 cold fork |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 MIT (1,069 B) | 2022-11-21 | 🔴 1,416 d | `pylti1p3` **v2.0.0** | 🔴 **1,417 d** | 🔴 abandoned, both channels agree |
+| [`openedx/xblock-lti-consumer`](https://github.com/openedx/xblock-lti-consumer) | 🔴 **AGPL-3.0** (34,520 B) | 2026-10-01 | 🟢 **6 d** | `lti-consumer-xblock` **v11.4.2** | 🟢 **6 d** | 🔴 **off the permissive shelf** — see below |
+| [`eduNEXT/openedx-lti-tool-plugin`](https://github.com/eduNEXT/openedx-lti-tool-plugin) | 🟢 Apache-2.0 (11,357 B) | 2025-07-21 | ⚠️ 443 d | 🔴 **not published to PyPI** | — | ⚠️ permissive, Open edX-coupled, cold |
+
+⚠️ **Pass 23's pick needs the qualification it was published without.** `ltiauthenticator`
+implements *"the LTI 1.3 and the LTI v1.1"* specifications and is tested against *"Open edX, Canvas
+and Moodle"* — verified from its README this pass — but it **converts JupyterHub into an LTI Tool
+Provider**. It is not a framework-agnostic library you can embed in an arbitrary service. Promoting
+it as *the* permissive Python LTI 1.3 answer, as pass 23 did, would send an engagement to a
+JupyterHub dependency it did not ask for.
+
+🔴 **And the sharpest row is the one that explains why this gap felt real for ten passes.** The
+**best-maintained Python LTI 1.3 implementation in existence is `openedx/xblock-lti-consumer`** —
+committed 6 days ago, released 6 days ago as `lti-consumer-xblock` v11.4.2, by the Open edX project
+itself. Its payload is **AGPL-3.0, 34,520 B**. 🟢 It is the right answer *inside* an Open edX
+deployment and 🔴 unusable as reusable Globant IP, which is the whole premise of P30. **The
+permissive Python LTI shelf was never empty — it was the *well-maintained* Python LTI shelf that was
+copyleft**, and that is a materially different sentence to put in a bid.
+
+⚠️ `eduNEXT/openedx-lti-tool-plugin`, which `compose/patterns.md` has named as a permissive Python
+option since the eleventh pass, is **Apache-2.0 and real** (payload verified, 11,357 B) but **443
+days cold and not published to PyPI under that name** — so "available" overstates it. Corrected in
+place in P25.
+
+🟢 **So the corrected claim is narrower and finally true in both directions:**
+
+> There **is** a live, permissive, actively released Python LTI 1.3 library — `django-lti`, MIT,
+> committed two days ago. What does **not** exist is a live **framework-agnostic** one: the Django
+> path is alive, the JupyterHub path is alive, and the only framework-neutral implementation
+> (`pylti1.3`) is abandoned on both channels.
+
+### 🟢 Finding 4 — action B executed, prediction confirmed, and the aggregate is the least interesting part
+
+**293 distinct depth-1 dependencies** from the closure pass 21 resolved; **292 dated**; the one that
+did not is not a defect (finding 5). Against identical cut dates:
+
+| Bucket (same cut dates both columns) | Installed tier (292 deps) | Citing tier (884 repos) | Ratio |
+|---|---|---|---|
+| released / committed in 2026 | 66.8% | **73.5%** | 0.91× |
+| 🔴 cold more than 1 year | **30.1%** | 23.0% | **1.31×** |
+| 🔴 cold since before 2024 | **13.0%** | 11.1% | 1.17× |
+| median age | **65 d** | 42 d | 1.55× |
+
+🟢 **Prediction confirmed in direction: the installed tier is older than the citing tier.**
+⚠️ **And weaker than the shape that motivated it.** Pass 23 predicted the effect on the
+`cookiecutter → ucfopen/pylti1.3@master` shape — a live template installing a corpse — which implies
+a large gap. Measured, it is **1.31× on the cold bucket**. The aggregate is a real but modest
+effect, and quoting it alone would overstate what was found.
+
+🔴 **The signal is in the per-repository spread, which is 30× wide:**
+
+| Target repo | Deps | Median dep age | Cold > 1 yr | > 2 yr | Oldest dependency | Head commit |
+|---|---|---|---|---|---|---|
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 35 | 🔴 **604 d** | **21/35** | **17/35** | `random-seed` **3,967 d** | 🟢 2026-09-30 (7 d) |
+| [`LearningEquality/kolibri`](https://github.com/learningequality/kolibri) | 32 | ⚠️ 200 d | 14/32 | 10/32 | `json-schema-validator` **3,894 d** | 🟢 2026-10-06 (1 d) |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 152 | 🟢 60 d | 40/152 | 20/152 | `crcmod` **5,923 d** | 🟢 2026-10-06 (1 d) |
+| [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 24 | 🟢 20 d | 7/24 | 5/24 | `remark-parse` 1,115 d | — |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 43 | 🟢 62 d | 10/43 | 5/43 | `defusedxml` 2,039 d | 🟢 2026-10-04 |
+| [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | 14 | 🟢 37 d | 4/14 | 1/14 | `python-pptx` 791 d | — |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 7 | 🟢 12 d | 2/7 | 1/7 | `python-dateutil` 950 d | — |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 6 | ⚠️ 122 d | 1/6 | 0/6 | `jinja2` 581 d | — |
+| [`moarshy/mcp-tutor`](https://github.com/moarshy/mcp-tutor) | 10 | 🟢 6 d | 1/10 | 0/10 | `httpx` 670 d | — |
+| [`ronantakizawa/a11ymcp`](https://github.com/ronantakizawa/a11ymcp) | 5 | 🟢 14 d | **0/5** | 0/5 | `@axe-core/puppeteer` 57 d | — |
+| [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | 20 | 🟢 **9 d** | **0/20** | 0/20 | `nbconvert` 182 d | — |
+| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 2 | 🟢 22 d | **0/2** | 0/2 | `axios` 42 d | — |
+| [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) | 1 | 🟢 5 d | **0/1** | 0/1 | `agent-framework-core` 5 d | — |
+
+### 🔴 Finding 5 — OATutor: the row pass 23's date column certified as alive is the stalest thing in the KB's build
+
+**OATutor is the case the two channels were built to find.** Pass 23 dated its head commit at
+**2026-09-30** and filed it 🟢 green among *"the rows a client is most likely to be shown"*. Its
+**installed** tier:
+
+- median dependency age **604 days** — 9.3× the corpus median of 65 d;
+- **21 of 35** dependencies cold more than a year; **17 of 35** more than two;
+- `random-seed` **3,967 d**, `list-react-files` 3,412 d, `react-cursor-position` 2,929 d,
+  `expr-eval` 2,566 d, `typeface-roboto` 2,192 d;
+- `@material-ui/core` and `@material-ui/icons` — **Material-UI v4**, superseded by MUI v5 in 2021.
+
+⚠️ **This is not an argument against OATutor.** It is MIT, it is from UC Berkeley, it is the only
+BKT-based permissive ITS this KB has found in twenty-four passes, and its maintainers committed to
+it a week ago. It is an argument about **what an engagement is quoting**: adopting OATutor means
+adopting a 2020-era React front end, and the first sprint is a dependency uplift, not a feature.
+**Price that.**
+
+🟢 **Why `oppia/oppia` reads better than its reputation here.** 152 dependencies, the oldest in the
+entire corpus (`crcmod`, 5,923 d; `webapp2`, 5,122 d — both Google App Engine relics), and yet a
+**median of 60 days**: the distribution is bimodal, a modern core beside a legacy tail. The median,
+not the maximum, is the number that describes a build.
+
+### 🔵 Finding 6 — the closure's `UNKNOWN` licence bucket resolves 6 → 0, and one row is worse than unknown
+
+Pass 21's closure left **6 rows** at `UNKNOWN`. All six are now resolved from the registries:
+
+| Dependency | Why it was `UNKNOWN` | Resolved class | Evidence |
+|---|---|---|---|
+| `python-dateutil` (×3: oppia, kolibri, canvas-mcp) | `license` field reads literally *"Dual License"* | 🟢 **PERMISSIVE** | classifiers: *Apache Software License* **and** *BSD License* — both permissive |
+| `semver` (kolibri) | `license` field contains the **raw BSD notice text**, not a name | 🟢 **PERMISSIVE** | classifier *License :: OSI Approved :: BSD License*; © 2013 Konstantine Rybnikov |
+| `@common/global-config` (OATutor) | registry returned 404 | 🟢 **not a registry package** | spec is `file:./common` — a path inside the repo; covered by OATutor's own MIT |
+| `azure-cognitiveservices-speech` (oppia) | `license` field **empty** | 🔴 **PROPRIETARY** | classifier *License :: Other/Proprietary License*, and it is the only classifier |
+
+🔴 **The one that matters: `oppia/oppia` declares a proprietary Microsoft dependency.**
+[`azure-cognitiveservices-speech`](https://pypi.org/project/azure-cognitiveservices-speech/) carries
+*"License :: Other/Proprietary License"* and an empty licence field. Oppia itself is Apache-2.0 and
+unaffected — a permissive project may depend on proprietary software — but **an engagement that
+forks Oppia and ships it inherits a Microsoft Speech SDK licence obligation**, and nothing in this
+KB said so before this line. The permissive-substrate shelf in `repos/foundations.md` already holds
+`k2-fsa/sherpa-onnx` (Apache-2.0), which is the drop-in answer.
+
+🔵 **Method consequence.** The closure's `UNKNOWN` class was never a licence finding — it was a
+**parse** finding. Four of six rows were permissive all along and one was not a package. The
+pass-24 rule: *`UNKNOWN` means "the field did not parse", and must be resolved against the
+classifiers before it is reported as risk.* And the corrected count of genuinely non-permissive
+depth-1 dependencies is **1 proprietary + 7 weak-copyleft + 2 strong-copyleft**, not 6 unknowns.
+
+### 🔴 Finding 7 — action C executed, and it found something worse than a cold component: P1 wires the **wrong protocol version**
+
+Pass 23 pre-registered *"re-pick the cold components in **P1** and **P18**"*. 🔴 **P1's component
+was misidentified in that pre-registration.** The 2,317-day `1EdTech/lti-1-3-php-library` pass 23
+flagged is wired into **P25** and **P34**, not P1. What **P1** actually wires, at step 2, is
+[`IMSGlobal/LTI-Tool-Provider-Library-PHP`](https://github.com/IMSGlobal/LTI-Tool-Provider-Library-PHP).
+
+🟢 **Pass 23 dated it correctly and published the figure** — it is the last row of the
+interoperability shelf table in that section, at **3,599 d**, the oldest row in the table. 🔴 **What
+no pass had done is open it.** Its licence column there reads `—` (payload unread) and its
+**protocol version was never checked against the step that cites it**:
+
+| | measured this pass |
+|---|---|
+| head commit | 🔴 **2016-11-28 — 3,600 days.** 9.9 years. The oldest component in any pattern in this KB |
+| licence payload | 🟢 Apache-2.0, `master/LICENSE`, 11,357 B — the grant is fine |
+| 🔴 **protocol version** | its `master/README.md`: *"support for **LTI 1.1** and the unofficial extensions to **LTI 1.0**"* |
+
+🔴 **That is not a staleness finding, it is a correctness finding.** P1 is described in this file as
+*"the default engagement shape"* — *"the client already runs an LMS, which is almost always"* — and
+step 2 tells the reader to register a tool provider for *"launch, identity and grade passback"*
+using a library that **does not implement LTI 1.3 at all**. LTI 1.1's security model is deprecated;
+LTI 1.3 / Advantage is what Canvas, Moodle and Open edX certify against today, and what every
+procurement rubric in `intel/market.md` scores. **An engagement that followed P1 literally would
+have built the integration on a retired protocol.**
+
+⚠️ **The organisation name was the tell, and it is the same tell as finding 2.** `IMSGlobal`
+renamed itself **1EdTech** in 2022. A repository still under the old org name has, by construction,
+not been touched since the rename — and this one had not been touched for six years before it.
+
+**The re-picks, all measured this pass:**
+
+| Pattern | Component, and what was wrong | Age | Re-picked to | Licence (payload) | Age |
+|---|---|---|---|---|---|
+| **P1** | `IMSGlobal/LTI-Tool-Provider-Library-PHP` — 🔴 **LTI 1.1 only**, 9.9 y cold | 🔴 **3,600 d** | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) — P1's own AI tier is Python, so the second runtime P1 assumed is unnecessary | 🟢 MIT, 1,098 B | 🟢 **2 d** |
+| **P25**, **P34** | `1EdTech/lti-1-3-php-library` — correct protocol, cold copy | 🔴 2,317 d | [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) — the **same library**, byte-identical payload under a second composer name | 🟢 Apache-2.0, `master/LICENSE.md`, **11,343 B** | 🟢 **14 d** |
+| **P21**, **P36** | `rhasspy/piper` (TTS) — ⚠️ **not P18**, see below | 🔴 **407 d** | [`k2-fsa/sherpa-onnx`](https://github.com/k2-fsa/sherpa-onnx) | 🟢 Apache-2.0, `master/LICENSE`, **11,358 B** | 🟢 **1 d** |
+| **P25**, **P27**, **P28**, **P30** | `dmitry-viskov/pylti1.3` (Python LTI 1.3) | 🔴 1,416 d | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | 🟢 MIT, 1,098 B | 🟢 **2 d** |
+
+🔵 **A second correction to pass 23's pre-registration: P18 did not need re-picking.** Pass 23 listed
+`rhasspy/piper` as *"wired into P18"*. It is not. **P18 already selected `sherpa-onnx`** and already
+carries the paragraph *"Why sherpa-onnx and not Piper"*, recording that Piper has been **archived
+read-only since 2025-10-06** and that its successor `OHF-Voice/piper1-gpl` is **GPL-3.0**. 🟢 The
+commit channel independently confirms the archival date — `piper`'s head commit is **2025-08-26**,
+and nothing has landed since. **P18 was right before this pass and is unchanged.**
+
+🟢 **Where piper *was* still wired, the substitution is a net simplification rather than a swap.**
+**P21** carried `vosk-api` for ASR **plus an unresolved Piper fork decision** ("archived MIT or
+GPL-3.0 successor — must be made explicitly"); **P36** paired `piper` with `whisper.cpp` for audio
+description. README verified this pass, `sherpa-onnx` does **ASR *and* TTS** — plus VAD, keyword
+spotting, diarization and source separation — *"running the following functions locally"*, on
+**Raspberry Pi and Android**, under **one** Apache-2.0 grant. So P21 loses a component, a licence to
+review and a standing architectural decision, and both patterns gain 406 days of recency.
+
+### 🔴 Pre-registered actions from pass 23 — outcomes
+
+| # | Action | Prediction written before running it | Outcome |
+|---|---|---|---|
+| **A** | apply the stale Python LTI 1.3 correction to the **14 live assertions**, in place | ⚠️ *"trend 50 says a filed correction regresses; this is the test of whether this KB can clear one"* | 🟢 **Cleared — and the correction it was sent to apply was itself wrong.** Recounted as **13** editable sites, not 14: pass 23's count included one occurrence in `repos/trending.md`, which is **append-only** and therefore must not be edited, exactly as its own six occurrences in this file must not. All **13** edited in place. 🔴 But the replacement pass 23 named was a **406-day fork**; findings 1–3 |
+| **B** | run the recency channel over the **352-dependency closure** | 🔴 *"expect the installed tier to be older than the citing tier"* | 🟢 **Confirmed, modestly: 1.31× on the cold bucket, 1.55× on the median.** 🔴 **And the action could not be run as written** — a dependency has no git URL, so a second instrument was needed; the two tiers measure *commit* cadence vs *release* cadence and are not one series |
+| **C** | re-pick the cold components in P1 and P18 and re-measure | — | 🟢 **Done.** P1 → `packbackbooks` (14 d); P18 → `sherpa-onnx` (1 d), which **removes** a component rather than replacing it |
+
+### 🔵 Pre-registered for the next pass
+
+| # | Action | Prediction written **before** running it |
+|---|---|---|
+| **A** | Wire `p184-holder-mismatch` to `fork-lineage-audit`: re-run the holder sweep over the whole shelf and treat every **holder ≠ account** row as a *fork hypothesis*, resolving each against the package registry's declared homepage | 🔴 Two of two LTI picks were cold forks. Expect **more than two** further cold forks in the 283-row shelf, concentrated in the interoperability tier (46.6% cold, per pass 23) |
+| **B** | Extend the closure to **depth 2** and date it, the hypothesis the closure's own README pre-registered | 🔴 Expect the copyleft **count** to rise via `certifi` (MPL-2.0) but **no new copyleft class**; if no new class appears, depth 1 was sufficient and the gap closes |
+| **C** | Date the **pinned** version of each dependency, not the latest release, by resolving the manifest's version specifier | ⚠️ Every age published this pass is a **lower bound on staleness**; expect OATutor's median to rise above 604 d and no repo's to fall |
+
+### The mandatory queries, run with the year **computed** (2026), not hardcoded
+
+| Query | Result against this KB |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **0 new** — general agent frameworks only (openclaw, browser-use, Mem0, AutoGen, Flowise, dify, CrewAI, LangGraph), none education-specific |
+| `github trending education AI 2026` | 🔴 **0 new** — AI *curricula* and learning-path repos (`ai-engineering-from-scratch`, Awesome LLM), not education **product** repos |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **0 new** — OpenEduCat, Odoo, ERPNext/Frappe, Apache OFBiz all already held. One unheld name, **CK-ERP**, is a 2010 SourceForge-era Drupal-connector ERP; not written, because its last activity predates every currency threshold this KB applies |
+| `AI education industry trends 2026` | 🔴 **0 new instruments** — ETS *Three forces shaping AI*, the $10.6 B 2026 figure, 92% student usage, 86% higher-ed, K-12 45.62%, cloud 71.22% are all already recorded |
+| `AI education {North America, EMEA, APAC, LATAM} 2026 adoption regulation players` | 🔴 **0 new findings.** Every instrument the summaries named — UNU's LAC higher-education working paper, the IADB enabling-regulatory-framework paper, the Council of Europe working conference, QS *Europe EdTech 200*, Bridge AI / Skills England, Claude Corps, Ednova — is **already held**. ⚠️ Three of those hosts (`unu.edu`, `publications.iadb.org`, `coe.int`) return **000** at this environment's egress proxy, so they are named here and **not written as citations anywhere in this KB** |
+
+🔴 **That is the fourteenth consecutive pass in which the mandatory query set produced no new
+repository, and the eighth with no new instrument.** It is what trend 29 predicts: a question
+shaped like a listicle returns listicles. **Every row this pass added came from a package registry,
+from `git ls-remote`, or from reading a ⚠️ that pass 23 wrote down and did not follow.**
+
+### The method note for this pass
+
+🟢 **The most productive input this pass was not a search result — it was a warning symbol in the
+previous pass's own table.** Pass 23 measured the holder mismatch on the Harvard fork, marked it
+⚠️, and moved on. The entire chain of findings 1, 2, 3 and 7 unrolls from reading it. Trend 50 says
+a filed correction regresses; the sharper version is **a filed *anomaly* regresses**, and this KB
+now has two consecutive passes whose headline was an unfollowed observation already in its files.
+
+⚠️ **One instrument limit, published because it bounds every figure above.** This channel dates the
+**latest** release, not the **pinned** one. A manifest pinning `foo==1.0` is older than reported,
+never newer, so **every age here is a lower bound on staleness** — pre-registered as action C.
+
+🔴 **A date is still not a verdict.** `defusedxml` at 2,039 days is a finished security library and
+the right pick; `webapp2` at 5,122 days is a relic of a dead platform. The two are indistinguishable
+by age and obvious by inspection, which is why these dates are published to make a component choice
+**arguable**, not automatic.
+
+### 🟢 Gate state at the end of this pass, measured not asserted
+
+| Gate | Result |
+|---|---|
+| frontmatter + region vocabulary (`p243`) | 🟢 **125 / 125** files complete, region in the closed vocabulary (124/124 at pass 23; this pass adds one instrument README) |
+| region heading gate (`p383`) | 🟢 **0 findings** |
+| table integrity (`p239`) across all 8 shelf files | 🟢 **0 findings** |
+| placeholder / header-as-data rows | 🟢 **0** |
+| instrument test suites, whole repo | 🟢 **77 of 79 pass** |
+| new instrument `registry-recency-channel` | 🟢 **20 / 20**, all 4 planted controls failing as required |
+| regressions introduced by this pass | 🟢 **zero** — the suite result is byte-identical to the same run against this pass's starting commit |
+
+⚠️ **The two failing suites fail at the starting commit too, and neither is this pass's doing.**
+`p213-envelope-aad` fails on an **environment** fault — the `cryptography` module's Rust bindings
+raise `pyo3_runtime.PanicException` on import here, so the suite never reaches an assertion.
+`p351-star-digit-sweep` fails on a **content** assertion: it expects an empty result and finds **6
+rows** using European decimal star notation (`6.400 ★`) in `agents/trending.md` and
+`repos/trending.md` — both **append-only** files, so those rows cannot be edited. 🔵 **That suite is
+the shape pass 122 was supposed to retire**: it asserts a frozen cardinality of the corpus rather
+than an invariant property, so it fails on history it is not allowed to change. Recorded, not
+patched, because patching it is a method decision rather than a data fix.
+
+🔴 **One discrepancy in pass 23's reported state, found by re-running its own gate.**
+`pattern-citation-audit` reports **8 duplicated pattern numbers** —
+`P1(×2), P18(×2), P25(×3), P26(×3), P27(×2), P28(×3), P29(×2), P30(×2)` — against pass 23's record
+of *"corrected that pass's 7 duplicated numbers to 6"*. The instrument reads 8 **at this pass's
+starting commit**, before any edit here, and 8 after: **this pass added none**, and the pass-23
+figure of 6 does not reproduce. ⚠️ Every pattern number this pass cited (P1, P18, P21, P22, P25,
+P27, P28, P30, P34, P36) was resolved by reading its definition heading directly rather than by
+trusting the audit's count.
+
+### Sources named by the search summaries this pass relied on
+
+ETS *Three forces shaping AI* · marketsandmarkets (North America AI in Education) · azumo (80 AI in
+Education statistics 2026) · comptia (*Five tech trends shaping EMEA's IT strategy in 2026*) ·
+Workday EMEA AI adoption study · QS *Announcing the 2026 Europe EdTech 200* · Council of Europe
+education / regulatory-dimensions working conference · boomi *APAC tech priorities AI 2026* ·
+intelligentcio APAC governance · itnews.asia *AI sovereignty* · UNU *AI implementation in higher
+education in Latin America and the Caribbean* · IADB *An enabling regulatory framework for AI in
+LAC* · ecosistemastartup (LATAM startup AI adoption) · openeducat.org · nocobase.
+**First-party verification this pass: `pypi.org`, `registry.npmjs.org`, `raw.githubusercontent.com`
+and `git` — not the summaries above.**
+
+---
+
+
 ## 2026-10-07 — twenty-third pass: the shelf was never audited by date, and the KB's own LTI pick is the cold fork of a library committed 13 days ago
 
 ⏱️ **Measurement window: 2026-10-06 ~21:00 UTC → 2026-10-07 00:00 UTC.** Every age in days below is
