@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — fortieth pass: one new permissive repo, and it is the tier pass 39 said had only one implementation
+
+⏱️ **Seventh pass of this date** (34–39 earlier). **Licences from payload, registry and — new this pass —
+the published `sdist` artefact, each named per row. Title-block classified (`P171`). No star counts
+(`P479`).**
+
+🟢 **The week's movement is one package, and it matters out of proportion to its size: it is the first
+permissive **Python** implementation of IRT linking this KB has measured, in a tier pass 39 had just
+finished describing as uniformly copyleft outside Java.**
+
+### 🟢 New row — one, and the pass says one rather than five
+
+| Repo / package | Licence (channel · bytes) | Why it is here |
+|---|---|---|
+| 🆕 **`EqUMP` 0.3.6** — registry declares `huni1023/EqUMP` (🔴 **no hyperlink on purpose — unverified path, `P501`**), 🔴 **unresolvable on the raw channel (`P501`)** | 🟢 **MIT** · **artefact payload** `eqump-0.3.6/LICENSE` · **1,068 B** · title block `MIT License` · holder *"Copyright (c) 2025 JeeHun Sung"* · 🟢 **registry + `pyproject.toml` both agree** | 🟢 **IRT linking in Python under MIT: Mean-Mean, Mean-Sigma, Haebara and Stocking-Lord, all four with test files**, plus **true-score equating**, an IRT core (`irf.py` **38,720 B**), and parsers for **PARSCALE** and **STUIRT**. **Four maintainers.** Published **2026-07-15** — after every earlier pass that searched this tier. 🔴 **`equating/kernel/`, `equating/obs/` and `scoring/` are declared and EMPTY (`P500`)** |
+
+🔵 **Why a package and not a repo.** 🔴 **The declared GitHub path returned no `200` on 15 README
+probes (5 spellings × 3 branches) or 14 licence probes.** 🟢 **The `sdist` on the registry CDN is the
+artefact a consumer installs, it carries the full MIT text, and it is what governs use — so the row is
+shelved on artefact evidence with the unresolved repo stated rather than hidden.** See `P501`.
+
+### 🔵 Re-measured this pass, not carried forward — the R comparability tier, 8 packages
+
+🟢 **Read from `DESCRIPTION` on `raw.githubusercontent.com`, one run, with a negative control returning
+`404` in the same run.** 🔴 **8 / 8 are GPL**, which corroborates `P493`'s *mechanism* with eight data
+points where pass 39 had one:
+
+| Package | Slug probed | `License:` | Version |
+|---|---|---|---|
+| `equate` | 🟢 `talbano/equate` **(canonical)** | **GPL-3** | 2.0.9 |
+| `equateIRT` | `cran/equateIRT` *(mirror)* | **GPL-3** | 2.5.2 |
+| `SNSequate` | `cran/SNSequate` *(mirror)* | **GPL (≥ 2)** | 1.3-5 |
+| `plink` | `cran/plink` *(mirror)* | **GPL (≥ 2)** | 1.5-1 |
+| `kequate` | `cran/kequate` *(mirror)* | **GPL-2 \| GPL-3** | 1.6.4 |
+| `irtoys` | `cran/irtoys` *(mirror)* | **GPL (≥ 2)** | 0.2.2 |
+| `catR` | `cran/catR` *(mirror)* | **GPL (≥ 3)** | 3.17 |
+| `mirt` | 🟢 `philchalmers/mirt` **(canonical)** | **GPL (≥ 3)** | 1.48 |
+
+⚠️ **`cran/*` is a read-only mirror namespace, labelled as such per `P506`** — `cran/equate` and
+`talbano/equate` return the same version and the same declared `URL`, which is how the mirror relation was
+measured rather than assumed.
+
+### 🔴 What the mandated repo sweep returned, stated so silence is not read as coverage
+
+| Sweep | Returned | New repos |
+|---|---|---|
+| `github trending education AI 2026` | `ai-engineering-from-scratch` · *AI Engineering Hub* · Karpathy *Zero to Hero* · `2026-AI-College-Jobs` · Semantic Kernel | 🔴 **0** — all **teaching material about AI**, the `P497` homonym class, third consecutive reproduction |
+| `open source platform education ERP CRM MIT Apache student information system` | OpenEduCat (LGPL-3.0, shelved) · Odoo · `.LRN`/OpenACS (GPL-2.0, shelved) · ERPNext/Frappe | 🔴 **0** — every name already on the shelf; see `verticals/solutions.md` |
+| 🆕 `Python test equating library MIT Apache permissive item response theory linking` | 🟢 **`EqUMP` (MIT)** · `girth` (MIT, shelved) · `py-irt` (MIT, shelved) · `meyerjp3/psychometrics` (Apache-2.0, shelved) | 🟢 **1** |
+
+🟢 **The third row is the method result of this pass and it is filed as `P503` in `intel/trends.md`:
+the bare topic word `equating` was measured at **0 returns** by pass 39; topic + **language** + **licence**
+returned the one permissive implementation that exists.**
+
+---
+
 ## 2026-10-07 — thirty-ninth pass: the comparability tier (DIF + equating), one permissive implementation each, and a licence that lives only in source headers
 
 ⏱️ **Sixth pass of this date** (34–38 earlier). **Licences from payload, title-block classified

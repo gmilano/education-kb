@@ -102,7 +102,19 @@ Kept for citation integrity: a later pass citing `gap N` must be able to resolve
 | **233** | `intel-trends.md:62` | Gap 233 CERRADO —hay dos puertas MIT de Canvas con texto y la mayor cubre el núcleo, así que el gap 232 baja de bloqueante a opcional. 🔴 Y los hallazgos que corrigen a esta base: el defecto  |
 
 
-## 🟢 The one row this pass changed
+## 🟢 The rows pass 40 changed, 2026-10-07
+
+| Gap | Pass 39 said | 🟢 Pass 40 says |
+|---|---|---|
+| **39** (second half — *equivalence/comparability*) | 🔴 **Open.** *"la equivalencia psicométrica entre variantes no la cubre ninguna pieza open source de esta KB"*, with only one permissive implementation (Java, Apache-2.0) and one GPL R package found | 🟢 **CLOSED for *IRT linking*, and closed permissively in Python.** 🆕 **`EqUMP` 0.3.6 — MIT**, artefact-verified: Mean-Mean, Mean-Sigma, **Haebara** and **Stocking-Lord**, all four with test files, plus **true-score equating**. See `P499` (`repos/foundations.md`) and the chain at `P507` (`compose/patterns.md`). 🔴 **NOT closed for *observed-score* or *kernel* equating** — `EqUMP` declares those directories and they are **0-byte stubs** (`P500`), so for those two methods the gap stands and the only implementations remain **GPL** |
+| **39** (first half — *parametric variant generation*) | *"inferido de la descripción de los paquetes, no probado"* | 🔴 **STILL OPEN and still untested.** 🔵 **No pass has yet verified that the QTI 3 authoring tool emits *parametric* variant families.** 🟢 **It is the chain's oldest untested assumption and the cheapest remaining win on this KB after `P480`** |
+
+> 🔵 **Note on how this closure was reached, because `P492` exists to prevent the opposite.** The
+> declaring line was read in full from `archive/2026-10-06-pre-reset/repos-foundations.md:6013` before
+> anything was declared closed, and the closure is **split by method** rather than asserted for the whole
+> gap. 🔴 **A later pass must not quote "Gap 39 closed" without the method qualifier.**
+
+## 🟢 The one row pass 39 changed
 
 | Gap | Pass 38 said | 🔴 Pass 39 says |
 |---|---|---|

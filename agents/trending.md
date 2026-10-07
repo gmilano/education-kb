@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — fortieth pass: zero new agents for the third consecutive pass, and the regional channel reproduced a superseded regulation date for the second time
+
+⏱️ **Seventh pass of this date.** **Licences from payload, registry and artefact, named per row.
+Title-block classified (`P171`). No star counts (`P479`).**
+
+🔴 **Zero new agents. Third consecutive pass.** 🟢 **`P497` predicted the *direction* of the failure at
+pass 39, and this pass is its third reproduction — so the claim is now a measured property of the query,
+not an impression.**
+
+### 🔴 The two mandated general sweeps — third consecutive identical outcome
+
+| Sweep | Returned | New to this KB |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | `openclaw` · `browser-use` · `mem0` · `AutoGen` · `Flowise` · `dify` · `Hermes Agent` · `Aider` · `Cline` · `CrewAI` · `LangGraph` | 🔴 **0** — every name a **horizontal** framework, all held by `globant-kb`'s `technology` shelf |
+| `github trending education AI 2026` | `ai-engineering-from-scratch` · *AI Engineering Hub* · Karpathy *Zero to Hero* · `2026-AI-College-Jobs` · Semantic Kernel | 🔴 **0** — all **teaching material about AI** |
+
+🔵 **`P497` holds: *"education AI" as a search string returns AI pedagogy, not education software.*** 🟢 **The
+productive response is not to re-run the string — it is to change the query *shape*, which this pass did,
+and which produced the one new permissive package of the pass (`P503`, `intel/trends.md`).**
+
+### 🟢 Regional read — all four regions returned, and the mandated per-region sweeps are recorded in full
+
+🔴 **Nothing in this table is new to the KB except where marked 🆕.** 🔵 **It is written out in full anyway,
+because an unrecorded region is indistinguishable from an uncovered one.**
+
+| Region | What the channel returned this pass | New? |
+|---|---|---|
+| **North America** | **134 bills across 31 states** in the 2026 session; **CA AB 1159** (no training on student data); **ID SB 1227** (AI-tool privacy protections); **Oklahoma** and **Maryland** requiring human oversight and barring AI from high-stakes decisions about students; the **K-12 AI Literacy and Readiness Act of 2026** (would amend ESEA to let schools spend federal funds on AI literacy); NA = **36%** of the global market, **$3.68 B (2026) → $32 B (2030)**; **60%** of US K-12 teachers used AI tools in 2024-25, **32%** at least weekly; a student-authored national framework from all 50 states (America's Youth AI Festival, July 2026) | 🔴 **0 new** — all held since pass 33; the **$32 B** figure remains the one `P489` adjudicated **against** |
+| **EMEA** | 🔴 **A superseded date, for the second time** — see `P505`. The sweep returned *"From 2 August 2026, the AI Office and national authorities started to enforce the AI Act"* with education access/assessment as high-risk. 🟢 **Independently corroborated this pass that this is wrong**: the **Digital Omnibus** moved Annex III stand-alone high-risk to **2027-12-02**. Also returned: EU market **$2.64 B (2026) → $8.0 B (2030) at 31.9%**; **Finland, Estonia, Netherlands** leading K-12 integration; UK **£4 M** for lesson-planning/marking tools; **OECD 2026 Digital Education Outlook**; only **10%** of 450+ institutions have formal AI guidelines while **93%** of educators say regulation is needed | ⚠️ **0 new findings, 1 reproduced defect** |
+| **APAC** | **Three comprehensive AI statutes in force**: **Vietnam's Law on AI** (**2026-03-01**) naming education among six high-risk sectors — *automated assessment and behavioural monitoring* — with National AI Database pre-registration, conformity assessment, human oversight and **72-hour** incident reporting; **South Korea's AI Basic Act** (**2026-01-22**); **Taiwan's AI Basic Act** (**2025-12**). Named players: Google, Microsoft, IBM, Pearson, Byju's. APAC fastest-growing by GenAI revenue, **~65% YoY** | 🔴 **0 new** — held since pass 33. 🟢 **But see `P505`: this is the regulatory context that makes the EMEA staleness consequential** |
+| **LATAM** | **Digital Education Council LATAM survey 2026**: **92%** of students and **79%** of faculty actively engaging with AI, **30,000+** responses across **29** institutions; **88%** of faculty report only *minimal to moderate* engagement. Fragmenting regulatory map: **Brazil's** AI bill, **Chile's** framework, **Colombia's CONPES**, **Mexico's** sectoral rules, all at different speeds. **Chile, Costa Rica, Peru, Uruguay, Panama, Dominican Republic** standing out in GenAI adoption. **ILIA 2025** (third edition, published 2026-03) | 🔴 **0 new** — held since pass 33. ⚠️ **The survey's faculty denominator differs between this pass's summary (`79%` of faculty, 30,000+ total responses) and the pass-33 record (`7,319` faculty) — the two are compatible (total vs faculty subset) and are *not* reconciled first-hand, because the DEC page was not fetched** |
+
+🟢 **No region returned nothing.** 🔴 **No region returned anything new either, which is the honest
+summary of a regional channel on its eighth consecutive pass over the same four queries.**
+
+### 🔴 `P505` — the EMEA regulatory channel is **reproducibly stale** in one specific direction, and this KB has now been bitten by it twice
+
+🔵 **The facts, separated by channel, because they resolve differently:**
+
+| | What |
+|---|---|
+| 🔴 **What the mandated sweep returned** | That high-risk obligations for education AI apply **from 2026-08-02** |
+| 🔴 **Could the asserting page be read first-hand?** | **No.** `planbe.eco` is **`EGRESS_BLOCKED`** by the session proxy. 🔵 **So the stale claim is attributable only to the *search-summary layer*, and this pass does not quote a page it could not open** |
+| 🟢 **What independent corroboration says** | The **Digital Omnibus** deferred **Annex III stand-alone** high-risk — **education and assessment named explicitly** — from **2026-08-02** to **2027-12-02**, a **16-month** deferral. Rationale: **harmonised standards were not ready**. 🟢 **Multiple independent secondary sources this pass, incl. one assessment-sector read** (*"December 2027 is not a snooze button"*) |
+| 🟢 **What did NOT move** | **Article 50 transparency obligations** — still **2026-08-02**. 🔵 **This is why the stale claim is dangerous rather than merely wrong: a date that is right for Article 50 is being reported as the date for Annex III** |
+| 🟢 **Obligations themselves** | **Unchanged.** Only the date non-compliance bites moved |
+
+> **`P505`.** 🔴 **A regional channel can be *reproducibly* stale, and a KB that re-runs the same query
+> every pass will re-import the same stale fact every pass.** 🔵 **This KB already regressed on exactly
+> this date once** — pass 33 found `compose/patterns.md`, `intel/trends.md` and `intel/market.md` had all
+> reverted to *"full enforcement from August 2026"* — **and the regional sweep is the vector.** 🟢 **The
+> remedy is a standing assertion, not vigilance:** any pass writing an Annex III education date must write
+> **2027-12-02**, and any pass writing **2026-08-02** must be writing about **Article 50**. ⚠️ **Primary
+> text remains unverifiable here — `eur-lex.europa.eu` has been unreachable since pass 32.**
+
+---
+
 ## 2026-10-07 — thirty-ninth pass: zero new agents for the second consecutive pass, and the reason is now measured rather than asserted
 
 ⏱️ **Sixth pass of this date.** **Licences from payload, title-block classified (`P171`). No star counts

@@ -4,6 +4,85 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Fortieth pass, 2026-10-07 — three trends: the comparability tier starts migrating to permissive Python, query *shape* beats query *topic*, and a stale regulation date proves reproducible
+
+⏱️ **Seventh pass of this date.** 🔵 **All market figures below are secondary and carry their series
+(`P477`).**
+
+### T1 🟢 The comparability tier is **migrating from GPL R to MIT Python**, and that changes what Globant can sell rather than merely what it can read
+
+🔵 **Pass 39 established the tier's licence topology and explained it:** calibration grew up in Python/ML
+so it is permissive; comparability grew up in R/CRAN so it is GPL (`P493`). 🟢 **This pass measured eight R
+packages and found 8 / 8 GPL — the mechanism is confirmed, not weakened.** 🔴 **What pass 39 could not see
+is that the tier is being re-implemented:**
+
+| | Calibration tier | Comparability tier, pass 39 | 🆕 Comparability tier, pass 40 |
+|---|---|---|---|
+| Permissive **Python** | 🟢 `py-irt` · `irtorch` · `girth` — MIT | 🔴 **none** | 🟢 **`EqUMP` — MIT** |
+| Permissive **Java** | — | 🟢 `psychometrics` — Apache-2.0 | 🟢 unchanged |
+| Copyleft **R** | — | `equate` GPL-3 | 🔴 **8 / 8 GPL, measured** |
+
+🟢 **The consequence is commercial, not academic.** 🔵 **An **R/GPL** comparability layer can only be a
+side-car: a separate process, invoked over a boundary, with its own distribution obligations.** 🟢 **A
+**Python/MIT** layer is an **in-product component** — it imports into the same service as the calibration
+tier that is already MIT.** 🔴 **The caveat that keeps this honest: `EqUMP` implements **linking** and
+**true-score equating** only. `equating/kernel/`, `equating/obs/` and `scoring/` are declared and empty
+(`P500`), so **observed-score and kernel equating remain R-only and GPL-only**.**
+
+### T2 🟢 `P503` — on a saturated shelf, the productive variable is query **shape**, not query **topic**
+
+🔴 **The evidence is this KB's own two measurements of the same subject, one pass apart:**
+
+| Query | Shape | Returned |
+|---|---|---|
+| `equating` · `test equating` · `equiparación` | **topic alone** | 🔴 **0** — recorded at `repos/foundations.md` by pass 39 |
+| `top open source AI agents education 2026 github MIT` | **topic + year + licence**, but topic is a *homonym* | 🔴 **0 education agents**, three passes running (`P497`) |
+| 🆕 `Python test equating library MIT Apache permissive item response theory linking` | 🟢 **topic + language + licence + method** | 🟢 **`EqUMP`** — the one permissive implementation in the tier |
+
+> **`P503`.** 🔵 **`P497` showed a topic word can fail by returning a *homonym class*. This pass shows the
+> complementary case: a topic word can fail by being **too short to discriminate**, and the fix is to add
+> the axes the KB actually cares about — **language** and **licence** — to the query itself.** 🟢 **Those
+> are the two columns every row of this KB carries, so putting them in the query aligns the search with the
+> shelf.** 🔴 **Stated with its limit: this is one success against one prior failure on one subject.** 🔵 **It
+> is a hypothesis with a cheap test — any later pass can run the bare topic and the shaped topic
+> side by side and record both, which is what this pass did.**
+
+🔴 **The mandated sweeps are not thereby excused.** They are run every pass and recorded in full in
+`agents/trending.md`; `P503` is an argument for running **additional** shaped queries, never for
+substituting them.
+
+### T3 🔴 `P505` — a regulation date can be **reproducibly** wrong in a channel, and this KB has regressed on this exact date once already
+
+🟢 **The only Annex III education date this KB may write is `2027-12-02`.** 🔴 **The mandated EMEA sweep
+returned `2026-08-02` again this pass** — the pre-**Digital Omnibus** date, superseded by a **16-month**
+deferral whose stated rationale was that **harmonised standards were not ready**.
+
+| Obligation | Date | Moved? |
+|---|---|---|
+| **Annex III stand-alone high-risk** — education and assessment named explicitly | 🟢 **2027-12-02** | 🔴 **Yes, from 2026-08-02** |
+| **Annex I embedded** high-risk | **2028-08-02** | 🔴 Yes, from 2027-08-02 |
+| 🟢 **Article 50 transparency** | 🟢 **2026-08-02** | 🟢 **No** |
+
+🔵 **Why the error is attractive rather than obvious: `2026-08-02` is still a real, live AI Act date — it
+is Article 50's.** 🔴 **So a stale source is not quoting a dead date; it is attaching a live date to the
+wrong obligation**, which no date-plausibility check catches. 🟢 **The underlying obligations did not
+change — only the date non-compliance bites.** ⚠️ **Attribution limit, stated: the page carrying the stale
+claim (`planbe.eco`) is `EGRESS_BLOCKED` here, so the stale assertion is attributed to the **search-summary
+layer** and not quoted from a page this pass could open. `eur-lex.europa.eu` has been unreachable since
+pass 32, so the primary text is still unread.**
+
+### 🔵 Trend table — what moved, what did not
+
+| | Pass 39 | 🆕 Pass 40 |
+|---|---|---|
+| Permissive equating implementations | **1** (Java) | 🟢 **2** (Java + Python) |
+| Permissive **observed-score** equating | 🔴 0 | 🔴 **0 — unchanged (`P500`)** |
+| R comparability packages measured | 1 | 🟢 **8, all GPL** |
+| New education **agents** | 0 | 🔴 **0 — third consecutive** |
+| `P480` fixture gate | blocked (3rd) | 🔴 **blocked (4th), same cause** |
+
+---
+
 ## 🟢 Thirty-ninth pass, 2026-10-07 — five trends: comparability overtakes calibration as the defensible claim, and a KB learns that writing a control down is not running it
 
 ⏱️ **Sixth pass of this date.** 🔵 **All market figures below are secondary and carry their series

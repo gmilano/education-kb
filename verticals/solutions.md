@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Fortieth pass, 2026-10-07 — the fifth link in the assessment chain stops being a side-car, and the platform shelf is saturated for the ninth consecutive pass
+
+**Licences read first-hand on 2026-10-07** from payload, registry and published artefact, named per row;
+title-block classified (`P171`). ⏱️ **Seventh pass of this date.**
+
+🔵 **This file's job is platforms that can be customised with AI on top.** 🔴 **No new LMS, SIS or ERP again
+this pass — the platform shelf is saturated and this is the ninth consecutive pass to measure that rather
+than assume it.** 🟢 **What changes is the *deployment shape* of the fifth link in the assessment chain that
+pass 39 added.**
+
+### 🔴 The mandated platform sweep, recorded in full so silence is not read as coverage
+
+| Sweep | Returned | New platforms |
+|---|---|---|
+| `open source platform education ERP CRM MIT Apache student information system` | **OpenEduCat** (on Odoo; **LGPL-3.0**, payload `master/LICENSE` 8,241 B, shelved since pass 28) · **Odoo** · **`.LRN`/OpenACS** (**GPL-2.0**, shelved — dotLRN 2.10.1, release date 2024-09-02) · **ERPNext/Frappe** (**GPL-3.0**, shelved) | 🔴 **0** |
+
+🔵 **The sweep's secondary sources repeated two claims this shelf has already corrected or qualified:**
+
+| Claim in the returned summaries | 🟢 What this shelf holds |
+|---|---|
+| *"OpenEduCat … trusted by 3M+ users, 300 modules, 65 languages, 45 localisations"* | ⚠️ **Vendor marketing from the project's own site, not measured.** 🟢 **The licence is measured: LGPL-3.0 from payload — so it is a *side-car or fork* proposition, not an embeddable component** |
+| *"Originally developed at MIT, `.LRN` claims to be the most widely adopted enterprise class open source LMS"* | 🔴 **"Developed at MIT" is an *institution*, not a *licence*** — a confusion this file should name explicitly, because the mandated query contains the word `MIT`. 🟢 **`.LRN`/OpenACS is `GPL-2.0`**, measured at an earlier pass, and lives in **CVS** |
+
+> 🔵 **Worth stating as a standing caution: the mandated platform query contains the token `MIT`, and the
+> single most prominent result it returns is a platform whose connection to "MIT" is that it was written at
+> a university of that name.** 🟢 **Licence columns on this shelf come from payload, which is why the shelf
+> never absorbed the claim.**
+
+### 🟢 The assessment chain — pass 39's five links, with link 5's deployment shape corrected
+
+| # | Layer | Implementation | Licence (channel) | 🆕 Deployment shape after this pass |
+|---|---|---|---|---|
+| 1 | **Item generation** | `openedx-course-generator` + LLM | per-component | in-product |
+| 2 | **Delivery / proctoring** | Open edX (**AGPL-3.0**) · SEB Server · MIT proctoring side-cars | mixed | 🔴 **side-car** (platform is copyleft) |
+| 3 | **Item calibration** | `py-irt` · `irtorch` · `girth` | 🟢 **MIT** | 🟢 in-product |
+| 4 | **Subgroup fairness (DIF)** | `difair` · `aequitas` | 🟢 **MIT** | 🟢 in-product |
+| 5 | **Comparability / linking** | 🆕 **`EqUMP`** (Python) · `meyerjp3/psychometrics` (Java) | 🟢 **MIT** · **Apache-2.0** | 🟢 **in-product — changed this pass.** 🔴 **Pass 39 could only offer this link as an R/GPL side-car or a JVM process** |
+| 5b | **Observed-score & kernel equating** | `equate` · `kequate` · `SNSequate` | 🔴 **GPL-2/3** | 🔴 **side-car only — unchanged (`P500`)** |
+
+🟢 **The whole chain is now permissive and in-process *except* delivery (link 2, platform copyleft) and
+observed-score/kernel equating (link 5b).** 🔵 **That is a materially different architecture from pass 39's,
+and the reason is one package: `EqUMP` 0.3.6, MIT, artefact-verified (`P499`).**
+
+🔴 **The caveat that must travel with the row.** `EqUMP` ships **linking** (Mean-Mean, Mean-Sigma, Haebara,
+Stocking-Lord) and **true-score equating**. 🔴 **Its `equating/kernel/`, `equating/obs/` and `scoring/`
+directories are declared and contain 0-byte stubs (`P500`)** — so a design that needs observed-score
+equating still needs the GPL R tier behind a process boundary, and link 5b stays where it was.
+
+### 🔵 Why this matters for a platform engagement specifically
+
+🟢 **A platform customisation project inherits the platform's licence at the boundary it crosses.** 🔵 **The
+assessment chain above is the part a vendor *adds*, and until this pass its comparability link forced
+either a GPL R process or a JVM process alongside a Python service.** 🟢 **With `EqUMP`, links 3–5 are one
+Python dependency set, importable into the same service, with the GPL contact confined to `EqUMP`'s own
+test suite (`P504`) rather than to the shipped runtime.**
+
+---
+
 ## 🟢 Thirty-ninth pass, 2026-10-07 — the assessment tier gets its *comparability* layer, and the layer is an R/CRAN tier the platform shelf cannot absorb
 
 **Licences read from payload on 2026-10-07**, title-block classified (`P171`); where no payload exists the

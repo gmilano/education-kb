@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🔵 Fortieth pass, 2026-10-07 — zero new agent rows for the third consecutive pass, and this pass's own probe reproduced the defect `P480`'s missing fixture exists to catch
+
+**Licences read first-hand on 2026-10-07** from three channels named per row — repository **payload** on
+`raw.githubusercontent.com` (title-block classified, `P171`), **registry** metadata, and the published
+**artefact**. **No star counts** (`P479`). ⏱️ **Seventh pass of this date.**
+
+🔴 **Zero rows added here for the third consecutive pass.** 🟢 **The two mandated agent sweeps returned the
+`P497` homonym class for the third time** — horizontal frameworks and "learn AI" teaching material, zero
+education agents. Full tables in `agents/trending.md`.
+
+🟢 **Where this pass found new ground is again a *library* tier, not an agent tier**, so the one new
+permissive package of the pass is filed in `repos/foundations.md` and `repos/trending.md` and
+**deliberately not here**:
+
+| 🆕 Added this pass (not an agent — stated plainly) | Licence | What it answers |
+|---|---|---|
+| **`EqUMP` 0.3.6** (registry declares `huni1023/EqUMP` (🔴 **no hyperlink on purpose — unverified path, `P501`**), 🔴 repo unresolvable — `P501`) | 🟢 **MIT** · artefact payload **1,068 B** · title block `MIT License` | *"are these two tests on the same scale?"* — **in Python, under MIT, with four maintainers** |
+
+### 🔴 `P502` — this pass's probe could not tell *"no licence file"* from *"no repository"*, which is the fixture `P480` has been asking for across four passes
+
+🔴 **Reported against this pass's own instrument, before any finding was promoted.** The scratch probe
+written for this pass (16 licence filenames × 2 branches, title-block classification) emitted the **identical**
+string for two inputs whose right answers are **opposite**:
+
+| Input | Probe output | 🟢 Truth |
+|---|---|---|
+| `huni1023/EqUMP` | `NO LICENCE PAYLOAD FOUND` | 🟢 **MIT** — a complete 1,068 B `LICENSE` ships in the artefact |
+| `totally-fake-org-zzz9/nope-repo-abc` (negative control) | `NO LICENCE PAYLOAD FOUND` | 🔴 **Does not exist** |
+
+> **`P502`.** 🔴 **A licence probe that does not run an *independent existence check* collapses three
+> distinct states — *absent repo*, *absent licence file*, and *licence present elsewhere in the
+> distribution* — into one output string.** 🔵 **`P475` already folded an existence check into the
+> in-tree probe and `P494` already established that absent payload is not a licence verdict; this pass
+> confirms both are necessary by **reproducing the failure in new code that had neither**.** 🟢 **The
+> recovery was to add the existence probe (5 README spellings × 3 branches) and then the artefact
+> channel — which is how `P501` was resolved rather than guessed.**
+
+🔴 **This is the second independent reason the `P480` fixture debt matters**, and it is a stronger one
+than the first: pass 39 argued the fixture set omits the shelf's dominant licence family; this pass shows
+the classifier's **negative** result is ambiguous across three states on a case that actually occurred.
+
+### 🔴 The `P480` fixture debt — **fourth** consecutive pass blocked, same reproducible cause
+
+🔵 **This pass attempted the command the KB's own operational note names as the single highest-value
+unblocked action:** `./discover_probe.sh --self-test` in `compose/code/p473-probe-commercial-gate`.
+
+🔴 **Denied again, by the same session auto-mode classifier, with the same reason (`Code from External`)** —
+passes 37, 38 (recorded), 39 (not re-attempted) and now 40. 🟢 **Four data points make this a stable
+property of this execution environment, not a transient, and the honest conclusion is that no scheduled
+pass running under this classifier will ever close `P480`.**
+
+🟢 **What remains correct and unchanged:**
+
+- **The two fixtures stay in `fixtures-pending/`.** `agpl-3.0-classroomio.LICENSE` (34,523 B) and
+  `gpl-3.0-lmscloud.LICENSE` (35,148 B), with their `.expected` files. 🔴 **Promoting them unexecuted
+  would move the gate from an honest `9/9` to an unverified `11/11`** — the exact defect the instrument
+  exists to prevent.
+- **The gate stays honest at `9/9`** over a fixture set that still omits GPL/AGPL, the shelf's dominant
+  family.
+- 🆕 **This pass adds a third required fixture case to the specification, from `P502`:** the set needs a
+  case for **"repository absent"** distinguished from **"payload absent, licence present"**, because the
+  probe currently returns one string for both.
+
+> 🔴 **Operational note, restated because it is now four passes old.** Closing `P480` needs one command in
+> a session **without** the auto-mode external-code restriction:
+> `cd compose/code/p473-probe-commercial-gate && ./discover_probe.sh --self-test` (expect `9/9`), then
+> `mv fixtures-pending/* fixtures/` and re-run (expect `11/11`). 🔵 **This is a permissions blocker, not a
+> research one.** 🟢 **It needs a human to run it once, or to grant the scheduled session permission to
+> execute in-tree instruments.** ⚠️ **No pass should record it as closed on the strength of a
+> re-implementation, and this pass did not attempt to route around the denial.**
+
+---
+
 ## 🔵 Thirty-ninth pass, 2026-10-07 — zero new agent rows, and `P497`: the mandated topic query returns AI *pedagogy*, not education *software*
 
 **Licences read from payload on `raw.githubusercontent.com`, 2026-10-07**, 16 filenames × `main`/`master`,

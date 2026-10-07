@@ -4,6 +4,150 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Fortieth pass, 2026-10-07 — the comparability tier has a **permissive Python** implementation, and `P493`'s count is extended while its mechanism is corroborated eight times over
+
+**Licences read first-hand on 2026-10-07.** Three channels, named per row: repository **payload** on
+`raw.githubusercontent.com` (title-block classified, `P171`), the **registry** metadata layer, and — new
+to this pass — the **published artefact** (`sdist`), read by extracting the tarball without executing it.
+**No star counts** (`P479`). ⏱️ **Seventh pass of this date** (34–39 all ran earlier).
+
+🔴 **Pass 39 closed with a one-sentence verdict for Globant:** *"there is exactly one permissive
+implementation of each of DIF and equating in existence as far as this pass can measure, and both are
+single-maintainer."* 🟢 **The hedge held and the measurement extended. There is a second permissive
+equating implementation, it is in **Python**, and it was published 2026-07-15 — after every pass that
+searched for it.**
+
+### 🟢 `P499` — `EqUMP`: MIT, Python, and the four canonical linking transformations with tests
+
+| Field | Value, and the channel it came from |
+|---|---|
+| Package | **`EqUMP` 0.3.6** — *"IRT Equating for Unidimensional Mixed Format Test with Python"* |
+| Licence | 🟢 **MIT** — **three agreeing channels**: registry `license = 'MIT'`; `pyproject.toml` `license = {text = "MIT"}`; 🟢 **artefact payload `eqump-0.3.6/LICENSE`, 1,068 B, title block `MIT License`, holder *"Copyright (c) 2025 JeeHun Sung"*** |
+| Published | **2026-07-15T06:02:51** (registry `upload_time`, latest of **9** releases from `0.1.5`) |
+| Artefact | `eqump-0.3.6.tar.gz` · **66,581 B** · `sha256 c4699943f4523c51c6ec5386a092804434dba791f03da358429fbfbdaebc80c2` |
+| Runtime deps | `numpy` · `scipy` · `pandas` · `matplotlib` · `python-dotenv` — 🟢 **the standard permissive scientific-Python stack.** `pytest`/`black` are `extra == 'dev'` only |
+| Python | `>=3.9, <3.14` |
+| Maintainers | JeeHun Sung · YoungJin Kim · Hoon Kim · YeJin Woo — 🔴 **four, so *not* single-maintainer**, which is the second half of pass 39's verdict to fall |
+
+🟢 **What is actually implemented, measured by module byte size inside the artefact — not by directory
+name (see `P500`):**
+
+| Capability | Module | Bytes | Tests present |
+|---|---|---|---|
+| **Haebara** linking | `linking/HB/Haebara.py` | **13,803** | 🟢 `test_linking_hb.py` (7,478 B) |
+| **Stocking-Lord** linking | `linking/SL/Stocking_Lord.py` | **12,833** | 🟢 `test_linking_sl.py` (6,346 B) + `test_production_scenario.py` (3,375 B) |
+| **Mean-Mean** linking | `linking/MM/mean_mean.py` | **4,709** | 🟢 `test_linking_mm.py` (3,020 B) |
+| **Mean-Sigma** linking | `linking/MS/mean_sigma.py` | **4,581** | 🟢 `test_linking_ms.py` (3,234 B) |
+| **True-score equating** | `equating/TSE/tse.py` | **4,782** | 🟢 `test_true_score.py` (699 B) |
+| IRT core (IRF / estimation / TRF) | `base/irf.py` · `base/estimation.py` · `base/trf.py` | **38,720** · **23,779** · **4,514** | 🟢 substantial — `test_irf_class.py` alone is **36,575 B** |
+| Legacy interop | `extensions/PARSCALE/` · `extensions/STUIRT/` | — | parsers for two operational psychometric packages |
+
+🔵 **`repos/foundations.md` recorded at pass 39 that `Mean-Mean, Mean-Sigma, Stocking-Lord` is *"exactly
+what `linking`/`equating` names"*. 🟢 **All three are here, plus Haebara, in a permissive Python package.**
+
+### 🔴 `P500` — a **declared directory is not an implemented capability**, and the gap pass 39 marked open **stays open**
+
+🔴 **The first draft of `P499` said EqUMP closes observed-score equating. It does not, and the error would
+have survived any check that read module *paths* instead of module *bytes*:**
+
+| Declared path in the artefact | Bytes | Verdict |
+|---|---|---|
+| `equating/kernel/__init__.py` | 🔴 **0** | 🔴 **Empty stub.** Kernel equating is **not implemented** |
+| `equating/obs/` | 🔴 **`.gitkeep` only — no `__init__.py` at all** | 🔴 **Empty stub.** Observed-score equating is **not implemented** |
+| `scoring/__init__.py` | 🔴 **0** | 🔴 **Empty stub** |
+
+> **`P500`.** **A directory is a statement of intent; a byte count is a statement of fact.** 🔵 **Pass 39's
+> row *"Observed-score equating | R | 🔴 none permissive | `equate` GPL-3"* is therefore
+> **unchanged and still correct**.** 🟢 **What moves is the row above it — *IRT linking + score equating* —
+> which gains a permissive **Python** entry beside the Apache-2.0 **Java** one.**
+
+### 🟢 The corrected tier table — only the rows this pass actually measured
+
+| Capability | Language | 🟢 Permissive | 🔴 Copyleft |
+|---|---|---|---|
+| **IRT linking** (MM · MS · Haebara · Stocking-Lord) | Python | 🆕 **`EqUMP` — MIT** | — |
+| **IRT linking + score equating** | Java | `psychometrics` — Apache-2.0 (pass 39) | — |
+| **True-score equating** | Python | 🆕 **`EqUMP` — MIT** | — |
+| **Observed-score equating** | R | 🔴 **still none** (`P500`) | `equate` **GPL-3** · `kequate` **GPL-2 \| GPL-3** |
+| **Kernel equating** | R | 🔴 **still none** (`P500`) | `SNSequate` **GPL (≥2)** |
+| **IRT estimation** | Python | `py-irt` · `irtorch` · `girth` — MIT | — |
+
+### 🔴 `P493`'s *mechanism* corroborated — eight R packages probed this pass, **eight GPL**
+
+🔵 **Pass 39 asserted the R/CRAN tier is copyleft *"because GPL is the ecosystem default"* on the strength
+of a single package. 🟢 **This pass measured eight, from `DESCRIPTION` on the raw channel, with a negative
+control (`totally-fake-org-zzz9/nope-repo-abc` → `404`) in the same run:**
+
+| Package | Canonical slug | `License:` as declared | Version |
+|---|---|---|---|
+| `equate` | 🟢 [`talbano/equate`](https://github.com/talbano/equate) | **GPL-3** | 2.0.9 |
+| `equateIRT` | `cran/equateIRT` (mirror — `P506`) | **GPL-3** | 2.5.2 |
+| `SNSequate` | `cran/SNSequate` (mirror) | **GPL (≥ 2)** | 1.3-5 |
+| `plink` | `cran/plink` (mirror) | **GPL (≥ 2)** | 1.5-1 |
+| `kequate` | `cran/kequate` (mirror) | **GPL-2 \| GPL-3** | 1.6.4 |
+| `irtoys` | `cran/irtoys` (mirror) | **GPL (≥ 2)** | 0.2.2 |
+| `catR` | `cran/catR` (mirror) | **GPL (≥ 3)** | 3.17 |
+| `mirt` | 🟢 [`philchalmers/mirt`](https://github.com/philchalmers/mirt) | **GPL (≥ 3)** | 1.48 |
+
+🟢 **8 / 8 copyleft.** 🔵 **`P493`'s explanation survives intact — the R tier *is* uniformly GPL.** 🔴 **What
+`P493` could not see is that the tier is being *re-implemented in Python under MIT*, and `EqUMP` is the
+first instance of that migration this KB has measured.**
+
+### 🟢 `P504` — the permissive implementation uses the **copyleft tier as its test oracle**, and the contact is confined to tests
+
+🔵 **Three R scripts ship inside the `EqUMP` artefact, all under `src/EqUMP/tests/`:**
+
+| R script | Bytes | What it pins |
+|---|---|---|
+| `tests/linking/SNSequate.R` | 506 | Python linking output checked against **`SNSequate` (GPL ≥2)** |
+| `tests/linking/SL/SL_onedirect.R` | 1,424 | Stocking-Lord checked against an R reference |
+| `tests/base/mirt_estimate.R` | 2,083 | IRT estimation checked against **`mirt` (GPL ≥3)** |
+
+> **`P504`.** 🟢 **The GPL contact is in the *test suite*, not the shipped runtime.** The five
+> `Requires-Dist` runtime dependencies are the permissive scientific-Python stack; the GPL packages appear
+> only in `tests/`, are not declared dependencies in any extra, and are not imported by `base/`,
+> `linking/` or `equating/`. 🔵 **For Globant that is the distinction that decides the question: you can
+> embed `EqUMP` in a proprietary product; you would only meet GPL if you chose to reproduce its
+> *validation* step.** 🔴 **Stated as what the manifest and the tree layout show — this pass did not
+> execute the suite, so "not imported" is read from paths and declared dependencies, not from a run.**
+
+### 🔴 `P501` — the grant resolved from the **artefact** after the **declared repository failed to resolve**
+
+🔴 **The registry declares `project_urls.Repository = https://github.com/huni1023/EqUMP`.** 🔵 **That path
+could not be shown to exist on the only channel available here:**
+
+| Probe | Result |
+|---|---|
+| 5 README spellings (`README.md`, `readme.md`, `Readme.md`, `README.rst`, `README.txt`) × 3 branches (`main`, `master`, `dev`) | 🔴 **No `200` on any of the 15** |
+| 7 licence filenames × 2 branches | 🔴 **No `200`** |
+| `pyproject.toml` × 2 branches | 🔴 **No `200`** |
+| Negative control `totally-fake-org-zzz9/nope-repo-abc` on the raw channel | `404` — same shape |
+| 🆕 **Calibration of the `github.com` landing + `codeload` channels** | 🔴 **Non-discriminating: `403` for *all four* of `talbano/equate`, `philchalmers/mirt`, `huni1023/EqUMP` and the fake control.** 🔵 **A channel that returns the same code for a known-good and a known-bad repo cannot adjudicate existence in either direction** |
+
+> **`P501`.** 🔵 **This is a third distinct licence-resolution case and it is not `P494`.** `P494` is
+> *payload absent, licence present in source headers* — the **repo resolves**, the file does not.
+> 🔴 **Here nothing in the repository namespace resolves at all, yet the grant is unambiguous**, because
+> the **published artefact** carries a complete 1,068 B MIT `LICENSE` and two manifest layers agree with
+> it. 🟢 **The rule: when the declared repository does not resolve, the artefact a consumer actually
+> installs is the authoritative licence channel — it is also the one that governs use.** ⚠️ **`EqUMP` is
+> therefore shelved on artefact evidence, and the unresolved repo is recorded, not hidden.** 🔴 **Precision
+> that matters: this pass did **not** establish that the repository is *absent* — it established that the
+> repository is *unverifiable here*. The raw channel returned no `200`; the landing and `codeload`
+> channels return `403` for known-good repos too. 🔵 **The slug is therefore written without a hyperlink
+> everywhere in this KB** — an unverified path is not a finding — **and no pass should record it as a
+> 404.**
+
+### 🔵 `P506` — `cran/*` is a **mirror namespace**, not a canonical one
+
+🟢 **Measured, not assumed:** `cran/equate` and `talbano/equate` both report **`Version: 2.0.9`** and the
+**same** `URL: https://github.com/talbano/equate`. 🔵 **The `cran/` org republishes CRAN sources read-only,
+so a `cran/X` slug is a mirror of an upstream that may live elsewhere.** 🔴 **Canonical slugs are used
+above wherever one was recoverable (`talbano/equate`, `philchalmers/mirt`); the remaining six are cited as
+`cran/` mirrors *and labelled as such*, because a mirror is a legitimate read channel for a
+`DESCRIPTION` but is not the project's address.**
+
+---
+
 ## 🟢 Thirty-ninth pass, 2026-10-07 — the comparability tier: `0` occurrences tree-wide before this pass, and its licence topology is the opposite of pass 38's
 
 **Every licence below was read from the repository's own payload on `raw.githubusercontent.com` on

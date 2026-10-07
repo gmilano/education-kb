@@ -4,6 +4,123 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Fortieth pass, 2026-10-07 — one recipe, `P507`: the JVM seam `P496` called "the chain's only ugly seam" closes, because the Python reimplementation it proposed already exists and is MIT
+
+⏱️ **Seventh pass of this date.** 🔵 **Licences below were read first-hand on 2026-10-07 from payload,
+registry or published artefact — the channel is named per row (`P171`, `P482`, `P494`, and new this pass
+`P501`). No star counts (`P479`).**
+
+🟢 **One recipe, and it is an upgrade to a chain rather than a new chain.** 🔵 **`P496` (pass 39) shipped a
+correct six-step chain and ended by naming its own worst property:** *"The JVM boundary is real and is the
+chain's only ugly seam… reimplement Stocking-Lord in Python against `psychometrics` as the reference. The
+second is a days-not-weeks task and removes the JVM from the deliverable."* 🟢 **That task is already done,
+by someone else, under MIT, with tests — `P507` is `P496` with step 4 replaced.**
+
+🔵 **Numbering.** The ceiling across the whole tree including `archive/` was `P498` before this pass. 🟢
+**`P490`'s interim rule followed** — every number below was checked free in **both** the live tree and
+`archive/` before allocation. This pass allocates nine:
+
+| | Finding | Filed in |
+|---|---|---|
+| `P499` | `EqUMP` — a permissive **Python** implementation of IRT linking exists | `repos/foundations.md` |
+| `P500` | a **declared directory** is not an implemented capability; observed-score equating stays open | `repos/foundations.md` |
+| `P501` | when the declared repo does not resolve, the **published artefact** is the authoritative licence channel | `repos/foundations.md` |
+| `P502` | a licence probe without an independent **existence check** collapses three states into one string | `agents/top.md` |
+| `P503` | on a saturated shelf the productive variable is query **shape**, not query **topic** | `intel/trends.md` |
+| `P504` | the permissive implementation uses the **copyleft tier as its test oracle**; contact confined to tests | `repos/foundations.md` |
+| `P505` | the EMEA regulatory channel is **reproducibly stale** on the Annex III date | `agents/trending.md` |
+| `P506` | `cran/*` is a **mirror namespace**, not canonical | `repos/foundations.md` |
+| `P507` | the comparability chain runs **without a JVM**, in one Python dependency set | this file |
+
+---
+
+## P507 — The *comparable* item bank, all-Python: two exam variants, one scale, no subgroup penalty, no JVM
+
+🟢 **Supersedes `P496` at step 4 only.** 🔵 **Everything `P496` says about anchor design is unchanged and
+still carries the whole chain — read it there; it is not repeated here.** 🔵 **Region: unplaced by
+construction — the chain is jurisdiction-neutral (`P474`); it is *driven* by regulation per region (see
+`intel/market.md`).**
+
+### The claim this chain defends — unchanged from `P496`
+
+> 🟢 *"Variants A and B are on a **common scale**, their difficulty difference is **0.04 logits with a
+> standard error of 0.06**, and **no item** shows DIF above ETS class **B** for any reported subgroup."*
+
+### The chain
+
+| Step | Component | Licence (channel) |
+|---|---|---|
+| 1 · author variants **with a frozen anchor set** | [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) | 🟢 **MIT** · payload `main/LICENSE.md` · 1,072 B |
+| 2 · deliver, capture responses | [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | 🟢 **MIT** · payload `main/LICENSE` · 1,076 B |
+| 3 · calibrate each form separately | [`nd-ball/py-irt`](https://github.com/nd-ball/py-irt) | 🟢 **MIT** · payload `master/LICENSE` · **1,121 B** |
+| 🆕 **4 · link the two calibrations onto one scale — in Python** | **`EqUMP` 0.3.6** · `linking/SL/Stocking_Lord.py` (**12,833 B**) · `linking/HB/Haebara.py` (**13,803 B**) · `linking/MM/` · `linking/MS/` | 🟢 **MIT** · **artefact payload** `eqump-0.3.6/LICENSE` · **1,068 B** · 🔴 declared repo unresolvable (`P501`) |
+| 🆕 **4b · convert linked parameters to comparable scores** | **`EqUMP`** · `equating/TSE/tse.py` (**4,782 B**) — true-score equating | 🟢 **MIT** (same artefact) |
+| 5 · test every item for DIF | [`ZIYINGJERRY/difair`](https://github.com/ZIYINGJERRY/difair) | 🟢 **MIT** · payload `main/LICENSE` · **1,075 B** |
+| 6 · audit the decision, not just the items | [`dssg/aequitas`](https://github.com/dssg/aequitas) | 🟢 **MIT** · payload `master/LICENSE` · **1,083 B** |
+| 7 · adapt the form per learner (optional) | [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 **BSD-3-Clause** · payload `main/LICENSE` · **1,514 B** |
+| 8 · run it all on the client's hardware | `ollama` / `vLLM` (shelved) | 🟢 **MIT** / **Apache-2.0** |
+
+🟢 **Eight steps, one language, zero copyleft in the shipped runtime.** 🔵 **`meyerjp3/psychometrics`
+(Apache-2.0, Java) stays on the shelf as the **reference implementation** — see "how to validate" below —
+but it is no longer in the delivery path.**
+
+### What actually changed, and why it is not cosmetic
+
+| | `P496` (pass 39) | 🆕 `P507` (this pass) |
+|---|---|---|
+| Linking step runtime | 🔴 **JVM** — `psychometrics` invoked as a CLI over a TSV | 🟢 **In-process Python import** |
+| Deliverable's language count | 🔴 **2** (Python + Java) | 🟢 **1** |
+| Linking methods available | Mean-Mean · Mean-Sigma · Stocking-Lord | 🟢 **+ Haebara** (four, all with test files) |
+| Score conversion | 🔴 **not in the chain** | 🟢 **true-score equating, step 4b** |
+| `P496`'s proposed remedy | *"reimplement Stocking-Lord in Python — days not weeks"* | 🟢 **Unnecessary. It exists, tested, MIT** |
+
+🔵 **The cost `P496` was willing to pay was a reimplementation plus the risk of getting Stocking-Lord
+subtly wrong.** 🟢 **`EqUMP` removes both, and it validates its own output against the GPL R tier
+(`tests/linking/SNSequate.R`, `tests/base/mirt_estimate.R`) — so the reference check `P496` wanted is
+already wired into the package's test suite (`P504`).**
+
+### How to wire step 4, concretely
+
+🟢 **Install:** `pip install EqUMP` — **`numpy` · `scipy` · `pandas` · `matplotlib` · `python-dotenv`**,
+all permissive. **Python `>=3.9, <3.14`.**
+
+1. 🟢 **Calibrate form A and form B separately** with `py-irt` (step 3). Two parameter tables, two metrics.
+2. 🟢 **Extract the anchor items' parameter pairs** — the subset present in both forms. 🔴 **`P496`'s anchor
+   rules decide whether this step is possible at all: ≥20% of the form, ≥20 items, full difficulty range,
+   and the anchor must be frozen and excluded from the generator's reach.**
+3. 🟢 **Solve for the linking constants** with `EqUMP`'s `linking/` module. 🔵 **Prefer **Stocking-Lord** or
+   **Haebara** over Mean-Mean/Mean-Sigma** — both are *characteristic-curve* methods, minimising the
+   difference between the forms' response curves rather than matching parameter moments, and both are far
+   more robust when the anchor contains a few misfitting items. 🟢 **`EqUMP` now gives you both**;
+   `psychometrics` gave Stocking-Lord only.
+4. 🟢 **Apply the transformation to *all* of form B's parameters**, then take the difficulty difference and
+   its standard error — that is the number in the claim sentence.
+5. 🟢 **Convert to comparable scores** with `equating/TSE` (step 4b) if the deliverable reports scores
+   rather than abilities.
+6. 🟢 **Then run DIF (step 5) on the linked parameters, not the raw ones** — 🔴 **this ordering matters and
+   is easy to get backwards.** DIF asks whether an item behaves differently *for a subgroup at the same
+   ability*, so "the same ability" must already be on one scale.
+
+### 🔴 Where this chain still cannot go — stated so nobody discovers it in delivery
+
+| Need | Status | What to do |
+|---|---|---|
+| **Observed-score equating** (equipercentile, frequency-estimation) | 🔴 **No permissive implementation in any language** (`P500`) — `EqUMP`'s `equating/obs/` is a **0-byte stub**, and `equate`/`kequate` are **GPL** | 🔴 **Side-car behind a process boundary, or scope it out.** 🔵 **True-score equating (4b) covers many IRT-based designs; confirm with the client's psychometrician which the programme requires** |
+| **Kernel equating** | 🔴 **`EqUMP`'s `equating/kernel/` is a 0-byte stub**; `SNSequate` is **GPL (≥2)** | 🔴 Side-car only |
+| **Scoring module** | 🔴 `EqUMP`'s `scoring/__init__.py` is **0 bytes** | Use `py-irt`/`catsim` ability estimates |
+| **Proof the authoring tool emits *parametric* variants** | 🔴 **Still unproven** — `Gap 39`'s original text calls this *"inferido de la descripción de los paquetes, no probado"*, and no pass has tested it | 🔵 **Unchanged from `P496`. This is the chain's oldest untested assumption** |
+
+### 🔵 Risk register for step 4, new this pass
+
+| Risk | Severity | Mitigation |
+|---|---|---|
+| 🔴 **The declared repository does not resolve** (`P501`) — 15 README probes, 14 licence probes, no `200` | 🔴 **Supply-chain, real** | 🟢 **Pin the exact artefact: `eqump-0.3.6.tar.gz`, `sha256 c4699943f4523c51c6ec5386a092804434dba791f03da358429fbfbdaebc80c2`, 66,581 B**, and vendor it. 🔵 **The grant travels with the artefact** (`LICENSE` ships inside it), so the MIT right to vendor is not in doubt — but a project whose repo you cannot read is a project you cannot patch |
+| **Young package** — 9 releases, latest **2026-07-15** | ⚠️ Moderate | 🟢 **Validate against the R reference the package itself uses** (`SNSequate`, `mirt`) on the client's own anchor data before trusting a production number. 🔵 **`psychometrics` (Apache-2.0) remains a second independent oracle** |
+| **Four maintainers, one project** | 🔵 Low-moderate | 🟢 Better than the single-maintainer position pass 39 recorded for this tier; still vendor it |
+| 🔴 **Run `--self-test`-grade validation yourself** | 🔴 — | 🔴 **This pass could not execute any in-tree instrument** (`P480`, fourth consecutive denial), so **no byte-level claim in this recipe was produced by a checked-in gate.** 🔵 Every byte count above was read directly from the artefact or the raw channel in this pass |
+
+---
+
 ## 🟢 Thirty-ninth pass, 2026-10-07 — one recipe, `P496`: `P491` corrected, because calibration is not comparability
 
 ⏱️ **Sixth pass of this date.** 🔵 **Licences below were all read from payload on 2026-10-07 (`P171`), or
