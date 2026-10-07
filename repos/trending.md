@@ -8,6 +8,68 @@ updated: 2026-10-07
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-07 — thirtieth pass: the reconciler that flagged 29 of this shelf's rows was reading sentences about other repositories
+
+⏱️ **Window 2026-10-07 ~06:45 → 07:40 UTC. Reference date `2026-10-07`.** 🔴 **Execution of this
+tree's code was DENIED this pass** (`[Code from External]`), so **no suite total below is affirmed as
+measured today** (`P107`) and pass 28's four pre-registered sweeps could not run. What follows is a
+read of versioned data and of this shelf's own prose.
+
+⚠️ **Renumbered from "twenty-ninth" at merge time.** This run and pass 29 are two runs of the same
+hourly schedule; pass 29 landed first and holds the number. The two did not overlap — pass 29 worked
+the payload/classifier layer, this run worked the prose-vs-data layer (pass 28's action **A**).
+
+### ⚠️ 0 new education *product* repositories here — but the flat "0 new" is superseded
+
+The mandatory query set returned **openclaw (385,407★), dify (151,639★), browser-use (108,128★),
+Mem0 (62,735★), AutoGen (60,284★), Flowise (55,226★)**, plus `ai-engineering-from-scratch`,
+`free-ai-agents-resources` and `speedyapply/2026-AI-College-Jobs` (5.2k★) — **all held by string,
+and none of them education product repositories**: they are general agent frameworks, curricula
+*about* AI, and a job list. `open source platform education ERP CRM MIT Apache` returned OpenEduCat
+on Odoo, ERPNext/Frappe and **CK-ERP for the fifth time** — the 2010 SourceForge-era Drupal connector
+this KB rejected in pass 24 on currency grounds, and the rejection stands.
+
+🔴 **Corrected against pass 29 rather than left standing:** this run reported a flat `0 new` and
+called it the eighteenth consecutive such pass. Pass 29, running concurrently with payload-first
+verification and the GitHub API over MCP, **brought back three** —
+[`Shubhamsaboo/awesome-llm-apps`](https://github.com/Shubhamsaboo/awesome-llm-apps) (**Apache-2.0**,
+140,891★), [`GokuMohandas/Made-With-ML`](https://github.com/GokuMohandas/Made-With-ML) (**MIT**,
+49,696★) and
+[`HandsOnLLM/Hands-On-Large-Language-Models`](https://github.com/HandsOnLLM/Hands-On-Large-Language-Models)
+(**Apache-2.0**, 29,517★). See its section immediately below.
+
+🔵 **Stated plainly because an informed gap is information and silence is not, and the distinction
+survives the correction:** all three of pass 29's finds are **enablement assets** — they teach *about*
+AI and do not tutor, grade, schedule or touch an LMS, so they sit on the `P6` capability-build tier.
+**The drought in education *product* repositories therefore stands at eighteen passes.** The
+general-agent tier keeps growing (openclaw alone is 385k★) and none of that growth is
+education-specific. This shelf grows from targeted channels — registries, forge trees, national
+curriculum anchors — and not from these eight queries.
+
+### 🔴 What this pass found instead: 29 flagged rows, and the flag was about the wrong subject
+
+Pass 28's `p449` reconciler abstained on **29 rows** of this shelf as *"the corpus says two
+things."* Adjudicated first-hand this pass: **14 of 29, and 0 are contradictions.** Nine of the ten
+shapes are a sentence whose **subject is a different repository or a different layer**; the tenth is
+a normalisation that inverts a commercial answer:
+
+| Row on this shelf | The "second licence" is really | 
+|---|---|
+| [`rhasspy/piper`](https://github.com/rhasspy/piper) ↔ [`OHF-Voice/piper1-gpl`](https://github.com/OHF-Voice/piper1-gpl) | each other — *"MIT but archived read-only 2025-10-06; development moved to piper1-gpl, which is GPL-3.0"* is **one correct sentence naming two repos** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | its **dependencies** — *"two LGPL deps"*, `REVIEW-WEAK`. The repo is MIT |
+| [`opencast/opencast`](https://github.com/opencast/opencast) · [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | the **ancestor licence** — ECL-2.0 *is* an Apache-2.0 derivative, so both families are true |
+| [`dequelabs/axe-core`](https://github.com/dequelabs/axe-core) | the **`Was` column of pass 28's own correction table** |
+| [`frappe/lms`](https://github.com/frappe/lms) | a **mis-report the prose exists to refute** — *"AGPL-3.0, **not MIT**"* |
+| [`aryankeluskar/canvas-mcp`](https://github.com/aryankeluskar/canvas-mcp) | a **search filter** — `license:mit OR license:apache-2.0 OR license:bsd`, the filter that rejects its ISC |
+| 🔴 [`Llamacha/IWSLT2023_Quechua_data`](https://github.com/Llamacha/IWSLT2023_Quechua_data) | **a stripped qualifier, and the one that costs money** — prose says **CC BY-NC-ND 3.0** in five places, the data filed `CC-BY`. `CC-BY` permits commercial use and derivatives; **CC BY-NC-ND forbids both** |
+
+🔵 **The consequence for anyone reading this shelf: the licence cells were right.** The prose was
+correct in **14 of 14** rows read, and carried both the scope and the qualifier that the TSV has no
+column for. Full adjudication, all ten classes, the honest 14-of-29 denominator and the six actions
+pre-registered for pass 30 are in `agents/trending.md` under the same date; the gate change it earns
+is **`P22` check 4** in `compose/patterns.md`.
+
+---
 ## 2026-10-07 — twenty-ninth pass: three new repositories after seventeen empty passes, zero NonCommercial grants below the root, and the shared classifier still carried pass 28's defects
 
 ### 🟢 The drought ends — three repositories, verified payload-first

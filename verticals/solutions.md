@@ -15,6 +15,39 @@ education platform shelf is copyleft. That is not a blocker, but it decides
 whether your AI work is a plugin (and inherits the license) or a side-car (and
 does not).
 
+## 🟢 Thirtieth pass, 2026-10-07 — the plugin/side-car boundary is now the KB's best-evidenced architectural rule
+
+🔴 **Execution of this tree's suites was DENIED this pass** (`[Code from External]`); nothing below is
+a re-measurement (`P107`). It is a reading of this KB's own prose against pass 28's flagged rows.
+
+🟢 **The sentence at the top of this file turns out to be the single most load-bearing claim in the
+KB, and pass 29 found it independently.** Pass 28's reconciler flagged
+[`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) as self-contradictory
+because the corpus names both **MIT** and **GPL-3.0** for it. It is not a contradiction — it is this
+file's rule, stated correctly:
+
+> *"MCP server exposing Moodle data to agents from **outside** the Moodle tree — which is why it is
+> **MIT** while in-tree Moodle plugins are **GPL-3.0**."*
+
+🔵 **Both licences are true, of two different things, and the boundary between them is the deliverable
+decision.** Same shape, same conclusion, three more rows:
+
+| Platform | In-tree licence | Side-car option | What it means for an engagement |
+|---|---|---|---|
+| **Moodle** | **GPL-3.0** (plugins inherit) | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) — **MIT**, external process over the web API | the canonical case: keep AI work out of the tree and the studio's IP stays the studio's |
+| **Sakai** | **ECL-2.0** — permissive | in-tree is already safe | 🟢 **ECL-2.0 is the Apache-2.0 text**; pass 28's reconciler flagged Sakai and Opencast for naming both, and **both families are true** |
+| **Opencast** | **ECL-2.0** — permissive | in-tree is already safe | same lineage; stays on the permissive allowlist |
+| **Open edX** | **AGPL-3.0** — the strongest copyleft on this shelf | side-car only | the AGPL's network clause is why the side-car pattern is not optional here |
+
+⚠️ **The `license:` filter trap, which belongs in this file because it decides shortlists.** A
+shortlist built with `license:mit OR license:apache-2.0 OR license:bsd` **silently drops ECL-2.0**,
+and with it Sakai and Opencast — the only copyleft-free options among the traditional big LMSs. This
+KB has now hit that filter defect twice from opposite directions: once as a dropped platform, and
+once as [`aryankeluskar/canvas-mcp`](https://github.com/aryankeluskar/canvas-mcp), whose **ISC**
+licence was read *as three licences* because the filter string sat in its description. 🔵 **Put
+`ECL-2.0`, `ISC` and `PostgreSQL` on the allowlist explicitly** — the note further down this file
+already says so, and pass 29 is the second independent arrival at it.
+
 ## 🔴 Licence corrections — twenty-eighth pass, 2026-10-07
 
 Two platforms on this shelf were filed **LGPL** and are **GPL-2.0** (`P452`), and both are

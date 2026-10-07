@@ -1289,6 +1289,65 @@ one has a live failure attached:
   holders, not the organiser** — CAi UC's own template got that wrong and
   flagged all 20 of its outputs at check 3.
 
+## P22 update, thirtieth pass of 2026-10-07 — the fourth check: a licence claim has a SUBJECT, and the label may have been stripped of the qualifier that decides it
+
+🔴 **Execution of this tree's instruments was DENIED this pass** (`[Code from External]`), so nothing
+below is a re-measurement (`P107`); it is a first-hand reading of this KB's prose against pass 28's
+29 flagged rows — **14 adjudicated, 0 contradictions**.
+
+### Check 4 — subject, and the qualifier
+
+| # | Check | How | Fails when |
+|---|---|---|---|
+| **4** | **Subject + qualifier** | For every licence family you are about to record: ask *whose* licence it is, and whether the label kept its **qualifier**. Compare the **full** string in the source prose against the family you are filing | The family belongs to a **neighbour** (successor, dependency, alternative, ancestor, doc layer, in-tree vs side-car), is a **refutation** (*"not MIT"*, *"WRONG"*, *"mis-reported"*), is a **query string** (`license:mit OR …`), or the label **lost its qualifier** — 🔴 **`CC BY-NC-ND 3.0` filed as `CC-BY` inverts the commercial answer** |
+
+🔴 **The live case, and it is the same repository P22 check 2 already uses.**
+[`Llamacha/IWSLT2023_Quechua_data`](https://github.com/Llamacha/IWSLT2023_Quechua_data) is recorded
+in this KB's prose, in five places and with explicit scope-conflict warnings, as **payload
+Apache-2.0 / README CC BY-NC-ND 3.0**. Pass 28's reconciler recorded its prose families as
+`Apache-2.0, CC-BY` — **`NC` and `ND` dropped**. 🔴 **`CC-BY` permits commercial use and
+derivatives; `CC BY-NC-ND` forbids both.** A register built from the flattened label clears a corpus
+for a paid deliverable that its licence prohibits, and **the Quechua audio is exactly the asset an
+engagement would want to fine-tune on.**
+
+🔵 **This is pass 28's pre-registered action D confirmed by instance rather than by sweep.** Its
+prediction was that a `CC-BY` label wrong 5 times in 7 is a commercial defect, not a vocabulary gap.
+The sweep still has to run (it needs execution). **One confirmed instance is already enough to change
+the gate**, which is why check 4 goes in now rather than waiting for the count.
+
+### What check 4 catches that checks 1–3 do not
+
+Checks 1–3 all ask *what does the source say?* Check 4 asks the two questions that make an answer
+usable: **about whom**, and **with what qualifier**. Nine of the ten shapes found this pass are
+subject errors — a family that is true, but true of something else:
+
+| Shape | Example | The real subject |
+|---|---|---|
+| successor named in the sentence | `rhasspy/piper` **MIT, archived** → `OHF-Voice/piper1-gpl` **GPL-3.0** | the fork |
+| dependency | `learningequality/kolibri` is **MIT** with *"two LGPL deps"* | the deps |
+| either/or alternative | *Fairlearn (**MIT**) **or** AIF360 (**Apache-2.0**)* | the alternative |
+| ancestor licence | `sakai`, `opencast` — **ECL-2.0** *is* **Apache-2.0** | both, truthfully |
+| doc layer | `yongsoojoo/esd2026-agent-workflow` — MIT code, `LICENSE-docs` **CC BY 4.0** | the docs |
+| in-tree vs side-car | `peancor/moodle-mcp-server` **MIT** outside Moodle's **GPL-3.0** tree | the boundary — **this is P1** |
+| `Was` column of a correction table | `dequelabs/axe-core` is **MPL-2.0** | the superseded reading |
+| refutation marker | `frappe/lms` is **AGPL-3.0, *not MIT*** | a mis-report being corrected |
+| `license:` filter | `aryankeluskar/canvas-mcp` is **ISC** | a query string |
+| 🔴 **stripped qualifier** | `Llamacha/IWSLT2023_Quechua_data` — **CC BY-NC-ND 3.0**, not `CC-BY` | **the commercial answer** |
+
+### How to run it, concretely
+
+1. **Record the full licence string, never the normalised family**, in the deliverable's licence
+   register: `CC BY-NC-ND 3.0`, not `CC-BY`; `GPL-2.0`, not `GPL` (`P452` — the LGPL's linking
+   exception does not exist in GPL-2.0, and seven rows on this shelf moved on that distinction).
+2. **Attach the subject to every family you record.** One column: `applies-to = repo | deps | docs |
+   fork | alternative | superseded | refuted | filter`. Anything not `repo` is **not** the component's
+   licence.
+3. **Treat a two-family row as a question, not a conflict.** Nine times in ten here it is one correct
+   sentence about two things; the tenth is a stripped qualifier, and that one is the expensive one.
+4. 🟢 **Prefer the prose over the table when they disagree.** This KB's standing record is **32 of
+   33** in favour of the sentence a human wrote, for a structural reason: prose carries the scope word
+   (`deps`, `docs`, `in-tree`, `README`) that a family column has nowhere to put.
+
 ## P23 — The benchmark-ready evaluation harness (build the socket before the plug exists)
 
 > ⚠️ **Superseded in part by P27 (eleventh pass, 2026-10-06).** This pattern was

@@ -8,6 +8,173 @@ updated: 2026-10-07
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-07 — thirtieth pass: the 29 abstentions were never contradictions — a licence claim has a SUBJECT, and the gate that found them had no subject model
+
+⏱️ **Measurement window 2026-10-07 ~06:45 UTC → 07:40 UTC. Reference date `2026-10-07` used
+throughout.**
+
+### ⚠️ Relationship to pass 29, which ran concurrently and landed first
+
+**This run and pass 29 are two runs of the same hourly schedule, started minutes apart, and neither
+could see the other while it ran.** Pass 29 pushed first and holds the number; this section was
+drafted as "twenty-ninth" and is **renumbered to thirtieth at merge time**, the same resolution pass
+28 applied to pass 27. 🟢 **The two runs did not overlap, and that is worth stating precisely rather
+than assuming:** pass 29 worked the **payload/classifier** layer — porting pass 28's three fixes into
+`lib/license_family.sh` and finding five more defects there (`P453`–`P457`) — while this run worked
+the **prose-vs-data** layer, which is pass 28's pre-registered action **A** and which pass 29 did not
+touch. Neither run's findings are reachable from the other's channels.
+
+🔴 **But pass 29 refutes one claim in this section, and it is corrected rather than left standing:
+the repository drought has ended.** This run reported `0 new` from the mandatory query set and called
+it the eighteenth consecutive such pass. Pass 29, with payload-first verification and the GitHub API
+over MCP, **brought back three**:
+[`Shubhamsaboo/awesome-llm-apps`](https://github.com/Shubhamsaboo/awesome-llm-apps) (**Apache-2.0**,
+140,891★), [`GokuMohandas/Made-With-ML`](https://github.com/GokuMohandas/Made-With-ML) (**MIT**,
+49,696★) and
+[`HandsOnLLM/Hands-On-Large-Language-Models`](https://github.com/HandsOnLLM/Hands-On-Large-Language-Models)
+(**Apache-2.0**, 29,517★). 🔵 **The correction is narrower than it first looks, and pass 29 drew the
+same boundary itself:** all three are **enablement assets, not education agents** — they teach *about*
+AI and do not tutor, grade, schedule or touch an LMS, so they belong on the `P6` capability-build tier
+and nowhere else. **So the drought in education *product* repositories stands at eighteen passes; the
+drought in anything the query set returns does not.** The query table below is left as this run
+measured it, with that distinction attached rather than silently rewritten.
+
+🔴 **Verification level of this pass, stated before the findings, because it bounds every number
+below.** Execution of this tree's code was **DENIED** by the environment this pass
+(`[Code from External]`), as in passes 58, 67, 79, 80, 81, 84, 86, 89, 90 and 91 of the pre-reset
+lineage. **No suite was re-run, nothing was reimplemented by hand, no other interpreter was tried
+and the command was not sliced up** — the refusal is about the result, not the form. 🔵 **So the
+`Hoy` column of the README board is pass 28's last measurement and is NOT affirmed as measured
+today** (`P107`). What this pass could do is *read* versioned data and *read* prose, and that is
+exactly what pre-registered action **A** asked for.
+
+⚠️ **`curl -sI` was not used as a verification channel** (`P372`: the proxy emits two status lines
+and `head -1` reads the proxy's, returning `200` for an invented repository — worse than blind).
+
+### 🔴 Action A — the prediction is refuted on its threshold *and* on its mechanism
+
+Pass 28 abstained on **29 `PROSE-MIXED-INCLUDES-TODAY`** rows, described them as *"the corpus says
+two things"*, and predicted **more than 5** would be a live regression of the
+`oat-sa/lib-lti1p3-core` shape — an older correct human statement overwritten by a newer wrong one
+from the pre-`P452` classifier — which would make **instrument damage** the dominant source of prose
+error.
+
+🔴 **Adjudicated first-hand: 14 of the 29. Regressions of that shape found: 0.** The corpus does not
+say two things about one repository. **It says one thing about two subjects** — and the gate counted
+the second subject's licence as a competing claim about the first.
+
+| Class | Row that proves it | What the second family actually is |
+|---|---|---|
+| 🔴 `CORRECTION-TRAIL` | [`dequelabs/axe-core`](https://github.com/dequelabs/axe-core) | the **`Was` cell of pass 28's own correction table** (`axe-core │ GPL │ Mozilla Public License, version 2.0`). Every other mention says MPL-2.0 |
+| 🔴 `QUOTED-REFUTATION` | [`francoisjacquet/rosariosis`](https://gitlab.com/francoisjacquet/rosariosis) · [`frappe/lms`](https://github.com/frappe/lms) | a family named **only to mark it wrong** — *"detector `agpl-1.0`, payload GNU GPL v2 … 🔴 **WRONG**"*; *"**AGPL-3.0, not MIT.** Widely mis-reported as MIT by LMS comparison blogs"* |
+| 🔴 `FILTER-EXPRESSION` | [`aryankeluskar/canvas-mcp`](https://github.com/aryankeluskar/canvas-mcp) | the **search filter that rejects it**: *"still rejected by a `license:mit OR license:apache-2.0 OR license:bsd` filter."* Three of its four "families" are one query string |
+| `SIBLING-NAMED` | [`rhasspy/piper`](https://github.com/rhasspy/piper) ↔ [`OHF-Voice/piper1-gpl`](https://github.com/OHF-Voice/piper1-gpl) · `openolat` | the **successor named in the same sentence**: *"MIT but archived read-only 2025-10-06; development moved to piper1-gpl, which is GPL-3.0."* Both rows are each other's second family |
+| `BOUNDARY-NAMED` | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | the **point of the sentence**: *"it is MIT while in-tree Moodle plugins are GPL-3.0."* The licence boundary **is** the architecture finding |
+| `ALTERNATIVE-NAMED` | [`fairlearn/fairlearn`](https://github.com/fairlearn/fairlearn) | an **either/or recommendation** — `MIT` / `Apache-2.0` is *Fairlearn **or** `Trusted-AI/AIF360`* |
+| `DEPENDENCY-SCOPED` | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | explicitly scoped to **dependencies**: *"two LGPL deps"*, `REVIEW-WEAK`. The repo is MIT and the prose says so |
+| 🟢 `LINEAGE-TRUE` | [`opencast/opencast`](https://github.com/opencast/opencast) · [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | **both families are true of one payload** — *"ECL-2.0 is an Apache-2.0 derivative, so it is permissive"* |
+| 🟢 `DUAL-LAYER` | [`yongsoojoo/esd2026-agent-workflow`](https://github.com/yongsoojoo/esd2026-agent-workflow) | **two real licences on two layers** — MIT code + `LICENSE-docs` = CC BY 4.0 |
+| 🔴 `QUALIFIER-STRIPPED` | [`Llamacha/IWSLT2023_Quechua_data`](https://github.com/Llamacha/IWSLT2023_Quechua_data) | **not a subject error at all — a normalisation that inverts the commercial answer.** The prose says **CC BY-NC-ND 3.0** in five places with explicit scope-conflict warnings; the reconciler filed `CC-BY`, dropping `NC` and `ND` |
+
+🔴 **The two classes that invert the instrument are the ones to fix first, and they are the reason
+this class grows every pass.** `CORRECTION-TRAIL` and `QUOTED-REFUTATION` mean the gate reads **the
+corpus's corrections as the corpus's claims**. A corpus whose whole method is publishing corrections
+therefore *manufactures* a fresh contradiction with every correction it makes — pass 28's five
+`GPL → MPL-2.0` rows created four of these abstentions in the act of being fixed.
+
+🔴 **And the tenth class is the one that costs money, because it is not a subject error.**
+[`Llamacha/IWSLT2023_Quechua_data`](https://github.com/Llamacha/IWSLT2023_Quechua_data) is filed by
+the reconciler as `Apache-2.0, CC-BY`. This KB's prose says **payload Apache-2.0 / README CC BY-NC-ND
+3.0**, in five places, each with an explicit scope-conflict warning — the row is already **check 2 of
+`P22`**. 🔴 **The `NC` and the `ND` were dropped in normalisation, and that inverts the commercial
+answer**: `CC-BY` permits commercial use and derivatives, `CC BY-NC-ND` forbids both. 🔵 **This is
+pass 28's action D confirmed by instance rather than by sweep** — its prediction was that a flattened
+`CC-BY` label is a commercial defect and not a vocabulary gap, and here is one, on ~1h40m of aligned
+Quechua–Spanish speech that is precisely the asset an engagement would want to fine-tune on.
+`compose/patterns.md` gains **`P22` check 4** for it this pass.
+
+🔵 **And the corpus's record in favour of its own prose extends rather than narrows.** In **14 of
+14** rows read first-hand the prose was correct, precise, and usually *more* informative than the
+data row — it carried the scope (`deps`, `docs`, `in-tree`, `README`) and the qualifier (`NC`, `ND`)
+that the TSV has no column for. With pass 26's four-for-four and pass 28's 14-of-15, the standing
+count is **32 of 33**.
+
+⚠️ **The honest denominator, because the rest is presumption and not measurement** (`P286`):
+**14 of 29 adjudicated first-hand.** Three more — [`edrys-org/edrys`](https://github.com/edrys-org/edrys),
+[`idiap/coqui-ai-tts`](https://github.com/idiap/coqui-ai-tts),
+[`ocrmypdf/ocrmypdf`](https://github.com/ocrmypdf/ocrmypdf) — carry `axe-core`'s exact
+`measured=MPL-2.0 / published=GPL` signature and are **PRESUMED** `CORRECTION-TRAIL`; that is a
+presumption, recorded as one. **12 rows were not examined**, `citolab/qti-components` among them (its
+mentions did not surface in the grep this pass used, which is a fact about the grep).
+
+### ⚠️ Actions B, C and D were NOT run, and a negative is not available for them
+
+All three are **sweeps that require this tree's instruments to execute** — propagating the corrected
+`family_of` to the downstream censuses (**B**), re-running `p445-classifier-divergence` against the
+post-`P452` classifier (**C**), and the `CC-BY`/`CC0-1.0` qualifier sweep (**D**). Execution was
+denied. 🔴 **Reporting any of them as "nothing moved" would be a fabricated negative**, so all three
+carry forward unchanged. 🔵 **But D is no longer unevidenced:** action A turned up a confirmed
+instance of exactly what D predicted — `Llamacha/IWSLT2023_Quechua_data`'s **CC BY-NC-ND 3.0** filed
+as `CC-BY` — so the sweep now has a known-positive to calibrate against when it can run, and the
+gate change it implies (`P22` check 4) was made this pass without waiting for the count.
+
+### The mandatory queries, run with the year **computed** (2026), not hardcoded
+
+| Query | Result against this KB |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **0 new** — openclaw (385,407★), dify (151,639★), browser-use (108,128★), Mem0 (62,735★), AutoGen (60,284★), Flowise (55,226★), Hermes Agent, CrewAI, LangGraph, `free-ai-agents-resources`: all held by string, none education-specific |
+| `github trending education AI 2026` | 🔴 **0 new** — `ai-engineering-from-scratch`, Awesome LLM, `speedyapply/2026-AI-College-Jobs` (5.2k★): curricula *about* AI and a job list, not education product repos |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **0 new** — OpenEduCat on Odoo, ERPNext/Frappe, and **CK-ERP** for the fifth time (the 2010 SourceForge-era Drupal connector rejected by pass 24 on currency grounds) |
+| `AI education industry trends 2026` | 🔴 **0 new** — the `$8.3B → $11.4B → $57.2B / 25.9%` third series is **already in `intel/market.md`'s table**, added by the seventeenth pass; 92% student use, 86% higher-ed, cloud 71.22% all held |
+| `AI education North America 2026 …` | 🟢 **1 new figure, 0 new repos** — see below |
+| `AI education EMEA 2026 …` | 🔴 **0 new** — 94% training intent, **38% not yet piloting**, 60% siloed data, Council of Europe: held |
+| `AI education APAC 2026 …` | 🔴 **0 new** — 48% / 57%, Singapore consultations, LearnUpon Sydney HQ, TCS–Pearson: held |
+| `AI education LATAM 2026 …` | 🔴 **0 new** — third-largest genAI download market, 99% / 85%, UNESCO IESALC (200 HEIs / 19 countries), Ednova, IADB paper: held |
+
+🔴 **No new education *product* repository from the mandatory query set — the eighteenth consecutive
+pass by that measure**, and ⚠️ **superseded as a flat "0 new": the concurrently-running pass 29
+verified three new enablement repositories payload-first from the same query space** (see the
+relationship note above), and
+the twelfth with no new instrument. 🟢 **The one new figure is North America's and it is a
+*segment*, not the series:** the **AI-for-Kids** market, **USD 482M (2024) → USD 1,082M (2034),
+12.5% CAGR** — adjacent to the AI-in-education series, not inside it, and a far slower curve than any
+of this file's three head series. Filed in `intel/market.md` with that boundary stated.
+
+⚠️ **One qualitative APAC frame recorded without a repo attached:** 2026 APAC coverage has moved from
+"pilots" to **sovereign-by-design**, with sovereignty expected to shape infrastructure choices for
+roughly half of APAC firms. Recorded as an org-level signal; the OpenAI ANZ policy appointment behind
+much of the coverage is **not** recorded as evidence, because an anthroponym is not a finding
+(`P135`).
+
+### 🔵 Pre-registered for the next pass
+
+| # | Action | Prediction written **before** running it |
+|---|---|---|
+| **A** | Give the `p449` reconciler a **subject model**: bind a family to a slug only when the slug is the claim's subject, and exclude the `Was` column of a correction table, any family inside a refutation marker (`WRONG`, `not MIT`, `mis-reported`), and any family inside a `license:` filter expression | 🔴 Expect `PROSE-MIXED` to fall **below 10** from 29 and `AGREE` to rise past **320**. ⚠️ Expect **at least 2 rows to survive legitimately** — `rhasspy/piper` and `OHF-Voice/piper1-gpl` are a real sibling pair whose licences genuinely co-occur in every sentence either appears in, so a subject model that drives this class to **0** has over-fitted and should be distrusted |
+| **A′** | **Stop normalising away licence qualifiers** anywhere in the pipeline: carry `NC`, `ND`, `SA` and the version as part of the family token, and re-read the 6 `CC-BY`/`CC0-1.0` prose claims already on the shelf | 🔴 Expect **at least 2 of the 6** to carry a qualifier the published family dropped, on the `Llamacha` pattern. ⚠️ And expect this to be **cheaper and higher-value than action A itself** — a subject error files a true statement against the wrong repository, while a stripped qualifier files a **false** statement against the right one, which is the one that reaches a client deliverable |
+| **B** | Carried forward from pass 28, unrun: propagate the corrected `family_of` to every published census that consumed it (`holder.tsv`, `homepage.tsv`, the `p250` commercial sweep, the `p419` copyleft census) and publish the count of **downstream** rows that move | ⚠️ Expect **more than 21**. If the count is not larger, the censuses are not reading the shared classifier and `p294`'s wiring defect is live again |
+| **C** | Carried forward from pass 28, unrun: re-run `p445-classifier-divergence` against the post-`P452` classifier and complete its action B (EUPL patterns for `lib/license_family.sh`, the NC axis for `sweep_payload.family_of`) | ⚠️ Pass 27's `43 of 412` was measured pre-`P452`; expect **7 rows to move on the Python side alone** and any residual to be a third defect neither run has named |
+| **D** | Carried forward from pass 28, unrun, and still the highest commercial value: the `P449` qualifier split as a **sweep** over every `CC-BY` and `CC0-1.0` row on the whole shelf, with `NC`/`SA` as published columns | 🔴 Expect the **NonCommercial** share to exceed **40%** of CC rows, and at least one row outside the 412 to not be Creative Commons at all |
+| **E** | Re-measure `p449`'s headline **15 of 431** prose-vs-data disagreement after **A** lands, and publish both numbers side by side | ⚠️ Expect the disagreement count to **rise, not fall** — the subject model moves rows out of `PROSE-MIXED` into decidable classes, and some will decide against the data. A figure that falls would mean the subject model is suppressing comparisons rather than enabling them |
+
+### The method note for this pass
+
+🔵 **Pass 28's lesson was that a prediction's threshold and its mechanism fail independently. Pass
+30's is narrower and more useful: an instrument can be measuring a well-formed question about the
+wrong unit.** `p449` asked *"do prose and data agree about this slug?"* and never asked *"is this
+slug what the sentence is about?"* **Nine of the ten classes above** are a sentence whose subject is
+something else — a successor, a dependency, an alternative, a doc layer, an ancestor licence, a
+filter, or a claim the prose exists to refute. ⚠️ **The tenth is worse, because it is the one where
+the instrument answers the right question about the right subject and still gets the commercial
+verdict backwards**: `CC BY-NC-ND` filed as `CC-BY`.
+
+🔴 **And the sharpest form of it: two of the ten classes mean the gate penalises the corpus for
+doing the right thing.** Publishing a correction, and quoting a wrong answer in order to mark it
+wrong, are both *good* practice here — and both manufacture an abstention. **An instrument that
+degrades as the corpus improves will look like a worsening corpus**, which is the failure mode this
+pass exists to have caught.
+
+---
 ## 2026-10-07 — twenty-ninth pass: the seventeen-pass repository drought ends, and the shared classifier still carried every defect pass 28 had just fixed in the other one
 
 🔵 **This pass ran concurrently with pass 28 under the same schedule, and the overlap is the

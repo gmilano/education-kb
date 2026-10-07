@@ -10,6 +10,34 @@ Infrastructure Globant can build an education solution *on top of*. These are no
 education products; they are the permissively licensed layers underneath one.
 Licenses read from each repo's own `LICENSE` payload on 2026-10-06.
 
+## 🟢 Thirtieth pass, 2026-10-07 — the flagged rows on this shelf were not wrong, and the three that still need a second look
+
+🔴 **Execution of this tree's suites was DENIED this pass** (`[Code from External]`), so no total in
+this file is affirmed as measured today (`P107`), and pass 28's four pre-registered sweeps — including
+the downstream propagation of the corrected `family_of` to `holder.tsv`, `homepage.tsv`, the `p250`
+commercial sweep and the `p419` copyleft census — **did not run**. They carry forward. 🔴 **Reporting
+them as "nothing moved" would be a fabricated negative.**
+
+🟢 **What did get settled.** Pass 28's reconciler flagged **29 rows** across this KB as the corpus
+contradicting itself on licence; **13 were adjudicated first-hand this pass and none is a
+contradiction.** Three of the flagged rows are foundations on this shelf, and all three are fine:
+
+| Row | Flagged because | Verdict |
+|---|---|---|
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | prose names **MIT** and **LGPL** | 🟢 **MIT.** The LGPL is two *dependencies*, and the prose already scoped it (`REVIEW-WEAK`, *"two LGPL deps"*) |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | prose names **ECL-2.0** and **Apache-2.0** | 🟢 **Both true.** ECL-2.0 *is* an Apache-2.0 derivative — the sentence is a lineage statement, and the row stays on the permissive allowlist |
+| [`dequelabs/axe-core`](https://github.com/dequelabs/axe-core) | prose names **GPL** and **MPL-2.0** | 🟢 **MPL-2.0.** The "GPL" is the **`Was` column of pass 28's own correction table** on this shelf |
+
+⚠️ **The useful warning for this file specifically: a correction table manufactures a false
+contradiction.** This shelf publishes `Was → Is` rows every time a classifier is fixed, and an
+instrument that reads cells without reading which column they are in will count every `Was` as a live
+claim. Four of the 29 abstentions were created *by* pass 28 in the act of fixing five rows correctly.
+
+⚠️ **Still genuinely open on this shelf, unchanged from pass 28 and not re-measured here:** the seven
+`LGPL → GPL-2.0` rows below are components an engagement **links against**, and the GPL-2.0 has no
+linking exception. That is the one correction in this area that changes a commercial answer, and it
+stands.
+
 ## 🔴 Licence corrections — twenty-eighth pass, 2026-10-07
 
 **Seven repositories on this shelf are `GPL-2.0` and were filed `LGPL`** (`P452`), and the

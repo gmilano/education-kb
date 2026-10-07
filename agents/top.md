@@ -17,6 +17,40 @@ this environment (403, session-scoped), so star counts come from the rendered
 page; where a count was not read this pass, the cell says so rather than
 carrying a stale or inferred number.
 
+## 🟢 How to read a licence cell on this shelf — thirtieth pass, 2026-10-07
+
+**Pass 28 flagged 29 rows of this KB as the corpus contradicting itself about a licence. Pass 29
+adjudicated 14 of them first-hand and found 0 contradictions.** Read that before you distrust a cell
+below.
+
+🔵 **A licence claim in this file has a SUBJECT, and the flagging instrument had no subject model.**
+In all 13 rows read, the "competing" family belonged to something else named in the same sentence:
+
+| What you will see in a cell | What it means | Example |
+|---|---|---|
+| two families, one of them a **successor or fork** | one sentence, two repositories — both correct | `rhasspy/piper` **MIT but archived**, development moved to `OHF-Voice/piper1-gpl` **GPL-3.0** |
+| two families, one scoped to **deps** | the repo's own licence is the first one | `learningequality/kolibri` is **MIT** with *two LGPL dependencies* |
+| two families in an **either/or** | a recommendation, not a conflict | *Fairlearn (**MIT**) **or** `Trusted-AI/AIF360` (**Apache-2.0**)* |
+| **ECL-2.0** named next to **Apache-2.0** | a lineage statement; ECL-2.0 *is* an Apache-2.0 derivative, and permissive | `sakaiproject/sakai`, `opencast/opencast` |
+| code family + **`LICENSE-docs`** family | two real licences on two layers | `yongsoojoo/esd2026-agent-workflow` — **MIT** code, **CC BY 4.0** docs |
+| an **in-tree vs side-car** pair | the licence boundary *is* the architecture point | `peancor/moodle-mcp-server` is **MIT** *because* it sits outside the **GPL-3.0** Moodle tree |
+| a family inside **WRONG / "not MIT" / "mis-reported"** | the prose is refuting it — it is not a claim | `frappe/lms` is **AGPL-3.0, not MIT**; `rosariosis` detector said `agpl-1.0`, payload is **GPL-2.0** |
+| a family inside a **`license:` filter** | a query string, not a licence | `aryankeluskar/canvas-mcp` is **ISC**, *"rejected by a `license:mit OR license:apache-2.0 OR license:bsd` filter"* |
+| 🔴 a **`CC-BY`** on a data or corpus row | ⚠️ **check the full string before you rely on it** — the qualifier may have been normalised away | `Llamacha/IWSLT2023_Quechua_data` is filed `CC-BY` but is **CC BY-NC-ND 3.0**: no commercial use, no derivatives |
+
+⚠️ **Three of these cost money if misread.** A family that appears only to be marked wrong, and a
+family that appears only inside a search filter, are **not** licences of the repository on that row —
+those are the prose doing its job. 🔴 **The last row is the opposite case and the dangerous one:**
+there the *data* is wrong, not the prose. A flattened `CC-BY` reads as "commercial use permitted"
+when the real grant is **CC BY-NC-ND**, which permits neither commercial use nor derivatives. Run
+**`P22` check 4** (`compose/patterns.md`) on any CC-licensed corpus before it enters a deliverable,
+and record the **full licence string**, never the normalised family.
+
+⚠️ **Scope of this note:** 14 of 29 flagged rows adjudicated first-hand; 3 more presumed
+`CORRECTION-TRAIL` by signature; 12 unexamined. Execution of this tree's suites was **denied** this
+pass, so nothing here is a re-measurement — it is a reading. Full detail in `agents/trending.md`,
+2026-10-07, thirtieth pass.
+
 ## 🔴 Licence corrections — twenty-eighth pass, 2026-10-07
 
 **21 of the 412 licensed rows on this shelf carried the wrong licence family**, and the cause was

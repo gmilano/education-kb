@@ -3968,3 +3968,112 @@ MIT, so the training materials can be forked, rebranded and **left with the clie
 difference between enablement and a course licence. ⚠️ Two of the three have not been pushed
 in five to seven months, which for a book's companion repository is correct behaviour and
 still the difference between *"fork it"* and *"follow it"*.
+
+## 71. A licence claim has a SUBJECT, and an instrument that reads cells without one counts the corpus's corrections as the corpus's contradictions
+
+**Measured, thirtieth pass of 2026-10-07.** Pass 28's `p449` reconciler abstained on **29 rows**
+it described as *"the corpus says two things."* 🔴 **Adjudicated first-hand: 14 of 29, and 0 are
+contradictions.** The corpus says **one thing about two subjects**, and nine distinct shapes do it:
+a named successor (`rhasspy/piper` → `OHF-Voice/piper1-gpl`), a dependency (`kolibri`'s two LGPL
+deps), an either/or alternative (Fairlearn **or** AIF360), an ancestor licence (ECL-2.0 *is*
+Apache-2.0), a documentation layer (`LICENSE-docs` = CC BY 4.0), an in-tree/side-car boundary
+(`moodle-mcp-server` is MIT *because* Moodle's tree is GPL-3.0), the **`Was` column of a correction
+table**, a family inside a **refutation marker** (*"AGPL-3.0, **not MIT**"*), and a family inside a
+**`license:` search filter**.
+
+🔴 **The two that invert the instrument are the transferable part.** `CORRECTION-TRAIL` and
+`QUOTED-REFUTATION` mean the gate reads a correction as a claim and a refutation as an assertion. A
+corpus whose method is publishing corrections therefore **manufactures a fresh contradiction with
+every correction it makes** — pass 28's five correct `GPL → MPL-2.0` fixes created four abstentions
+in the act of landing. ⚠️ **An instrument that degrades as the corpus improves will read as a
+worsening corpus**, and nothing in the figure itself distinguishes the two.
+
+🔴 **And a tenth shape that is not a subject error, which is why it is the expensive one.**
+`Llamacha/IWSLT2023_Quechua_data` is filed `CC-BY`; this KB's prose says **CC BY-NC-ND 3.0**, in five
+places, each with a scope-conflict warning. **The qualifier was normalised away, and that inverts the
+commercial answer** — `CC-BY` permits commercial use and derivatives, `CC BY-NC-ND` forbids both. 🔵
+**A subject error files a true statement against the wrong repository; a stripped qualifier files a
+false statement against the right one.** The second is the one that reaches a client deliverable,
+which is why `compose/patterns.md` gains **`P22` check 4** this pass rather than waiting for pass 28's
+action-D sweep to become runnable.
+
+🔵 **The cheap rule:** before an instrument binds an attribute to an entity, it must answer *is this
+entity what the sentence is about?* and *did the label keep its qualifier?* Three exclusions get most
+of the first — the `Was` column of a correction table, any value inside a refutation marker, and any
+value inside a query expression — and the second needs only that the **full licence string** be
+carried instead of a normalised family. **Consequence for this KB:** the standing prose-vs-data record
+moves to **32 of 33** in favour of the sentence a human wrote, and the reason is now explicit — prose
+carries the *scope* (`deps`, `docs`, `in-tree`, `README`) and the *qualifier* (`NC`, `ND`) that the
+TSV has no column for.
+
+⚠️ **Scope:** 14 of 29 adjudicated first-hand; 3 presumed `CORRECTION-TRAIL` by signature
+(`edrys`, `coqui-ai-tts`, `ocrmypdf`); 12 unexamined. Execution of this tree's suites was **denied**
+this pass, so this is a reading and not a re-measurement (`P107`).
+
+## 72. 🔴 Two runs of one hourly schedule collide on sequence numbers, and this file already carries the collision in its own headings
+
+**Found while numbering this trend, twenty-ninth pass of 2026-10-07.** This file has **two `## 64.`
+and two `## 65.`** — passes 27 and 28 ran concurrently on 2026-10-07, neither could see the other,
+and both claimed the next two numbers:
+
+| Number | One claimant | The other |
+|---|---|---|
+| **64** | *"the prose wins 18 times out of 19"* (pass 28) | *"this KB has two licence classifiers and the hardened one is not the one its instruments call"* (pass 27) |
+| **65** | *"a truncation window is a sampling decision"* (pass 28) | *"every leg of a measured chain is a parameter, and an unstated one here is worth 3.4×"* (pass 27) |
+
+🔴 **Why it is a defect and not an untidiness: `trend-backlink-audit` resolves a citation by its
+number.** Every citation of "trend 64" or "trend 65" in this KB is now **ambiguous between two
+unrelated findings**, and the audit cannot detect it, because each number does have a section — it has
+two. The gate checks existence, not uniqueness.
+
+🔴 **And the census, measured on `HEAD` after the merge rather than assumed, is far worse than the
+pair that prompted this trend: 83 numbered headings carry only 72 distinct numbers — 11 excess.**
+
+| Number | Claimants |
+|---|---|
+| **34** | 🔴 **three** |
+| 33, 35, 36, 37, 38, 39, 40 | two each |
+| 64, 65 | two each — the pair this trend was opened for |
+
+⚠️ **So the 64/65 collision was not the first instance, it was the ninth and tenth**, and the 33–40
+block means **eight consecutive numbers** were duplicated at some earlier point without anything
+flagging it. 🔵 **A citation of "trend 34" in this corpus is ambiguous three ways**, and no
+instrument in this tree can currently say so, because the only question asked of a trend number is
+whether a section exists for it. **The invocation that produced this table is
+`grep -o "^## [0-9]\+\." intel/trends.md | sort -n | uniq -c`** — the whole defect was one `uniq -c`
+away from visible for however many passes it has been live.
+
+🔵 **The structural point, which generalises past this repository:** a monotonic counter is **not** a
+safe identifier under concurrency, and an append-only file makes the collision invisible, because both
+writers appended successfully and neither diff conflicted. The pre-reset lineage hit the same class
+from the other side — pass 27 was *renumbered to 28* at merge time, which preserved the sequence by
+rewriting an identifier other sections may already have cited.
+
+⚠️ **The 64/65 pair is left in place deliberately, not silently renumbered.** Renumbering them now
+would break whichever citations already point at the current headings, and this pass cannot run
+`trend-backlink-audit` to find out which (execution denied). 🔵 **Pre-registered for pass 31:** give
+that audit a **uniqueness** assertion alongside its existence assertion, enumerate the citations of
+64 and 65, and only then renumber — lowest-risk direction first.
+
+🔴 **And this trend caught itself in the act, which is the strongest evidence it could have had.**
+It was drafted as **69**, with its companion as **68**, by a run that had read the file and found 67
+to be the highest number. **While it was being written, the concurrently-running pass 29 published
+68, 69 and 70.** Both runs read the same file, both computed the same next number, and neither was
+wrong at the time it looked. The collision was caught **only because the merge forced a human-style
+re-read** — and it was then resolved by renumbering this pair to **71** and **72**, after pass 29's
+block rather than on top of it. 🔵 **So the count for this file is now: ten numbers surviving as duplicates (33–40, 64, 65), one
+collision avoided (68, 69) — and the one avoided was avoided by luck of merge order, not by any
+control.** A uniqueness assertion would have caught all eleven; `git` caught none of them, because
+appending to different offsets of the same file is not a textual conflict.
+
+⚠️ **The same class is live in `compose/patterns.md` and is not fixed here either. Measured:
+48 pattern headings, 37 distinct numbers.** 🔵 **Two of the repeats are the intentional convention
+and must not be counted as defects** — `P1` and `P22` each appear twice because a later pass
+published a dated *`… update`* section under the original number, which is this KB's way of amending
+a pattern in place. 🔴 **The remaining six are genuine collisions, where unrelated patterns share one
+identifier:** `P25` ×3, `P26` ×3, `P28` ×3, `P27` ×2, `P29` ×2, `P30` ×2. Pattern numbers are cited
+across this KB exactly as trend numbers are, so **that file needs the same uniqueness assertion —
+with an exemption for the `update` form**, or the gate will condemn the one convention that is
+working.
+🔵 **Pre-registered for pass 31 alongside the audit change:** publish the duplicate census for both
+files before renumbering anything, because the census is what tells you which direction is safe.

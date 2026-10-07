@@ -49,11 +49,98 @@ directly. Student AI usage is reported rising from **66% in 2024 to 92% in 2025*
 with ~**86% of higher-education students** using AI as a primary research and
 brainstorming partner entering 2026.
 
+🆕 **New segment figure, thirtieth pass of 2026-10-07, filed here rather than only in a
+pass-scoped section** (this file's own rule, earned above): the **North America AI-for-Kids** market,
+**USD 482M (2024) → USD 1,082M (2034), 12.5% CAGR**. ⚠️ **Read the boundary before quoting it: this
+is adjacent to the AI-in-education series, not inside it**, and at **12.5%** it is a far slower curve
+than any of the three head series in the table above (40.9%, 31.35%, 25.9%). 🔵 **Which makes it
+useful precisely as a brake:** the children's-product segment of the market grows at roughly a third
+the rate of the institutional one, so a deck that justifies a K-12 consumer play with the
+institutional CAGR is overstating its own case by ~3×.
+
 Growth is real but the composition is shifting: the defining movement of 2026 is
 **away from generic AI tools and toward platforms purpose-built for education**,
 and from experimentation toward governance. Budget is moving to whoever can show
 instructional value and a defensible oversight story — which is a services
 opportunity more than a licensing one.
+
+## Opportunities by region — thirtieth-pass update, 2026-10-07
+
+🔴 **Execution of this tree's instruments was DENIED this pass** (`[Code from External]`), so nothing
+here is a re-measurement (`P107`); the regional queries were run and every figure below was checked
+against this file by string. 🔴 **All four regional queries returned 0 new repositories to this
+run** — so what each region gets below is the *demand* side, plus an explicit statement of what is
+still missing. ⚠️ **Renumbered from "twenty-ninth" at merge time:** the concurrently-running pass 29
+landed first, and its three new repositories (all **enablement assets**, not education products, and
+all Global rather than regional) are recorded in `repos/trending.md`. **The drought in education
+*product* repositories stands at eighteen passes; a flat "0 new" does not.**
+
+### North America
+
+🟢 **The one genuinely new figure of the pass, and it is NA's:** AI-for-Kids, **USD 482M (2024) →
+USD 1,082M (2034), 12.5% CAGR** — filed with its boundary in the segment paragraph above. Held and
+re-confirmed: **$951M → $2,303.2M by 2029 at 15.9%**, **36%** of global adoption share, **10%** of
+institutions with formal AI guidelines, **71%** of teachers untrained, Colorado and Texas legislating
+piecemeal.
+
+- **Opportunity.** The gap between **36% of adoption** and **10% with a written policy** is the whole
+  offer: governance-as-deliverable, not model work. The **71% untrained** figure is the same
+  opportunity expressed as enablement.
+- ⚠️ **The structural asymmetry to quote carefully:** education AI in the US faces **no sector
+  regulator** — there is no FDA-equivalent for edtech, and adoption is decided school by school.
+  Compare the EU, where the AI Act classifies education AI as **high-risk**. A single product cannot
+  be sold into both on one compliance story.
+
+### EMEA
+
+**0 new repositories, and every demand figure held by string:** **94%** of organisations likely to
+invest in AI-specific training in 2026, against **38% that have not begun piloting** and **60%**
+reporting siloed data; the Council of Europe's education-sector instrument work continues under the
+Framework Convention.
+
+- **Opportunity.** The **94% / 38%** pair is the sharpest number in this file for EMEA: near-universal
+  intent, with more than a third of the market not past the starting line. That is a
+  first-pilot-delivery business, and the AI Act's high-risk classification makes the compliance
+  artefacts part of the product rather than overhead.
+- 🔴 **Declared gap, unchanged and specific:** no EMEA-origin *permissive* education agent has
+  surfaced from the mandatory query set in eighteen passes. The EMEA public-sector tier this KB does
+  hold is **EUPL** and **GPL-2.0** (see pass 28's nine `UNKNOWN → EUPL` corrections), which is a
+  licence-posture finding, not an absence of code.
+
+### APAC
+
+**0 new repositories; demand figures held:** **48%** of governance leaders putting AI adoption among
+their top 2026 priorities, **57%** of Asian organisations already using AI in at least one area,
+Singapore's financial-sector AI consultations as the regional template, LearnUpon's Sydney HQ, the
+TCS–Pearson learning alliance.
+
+- 🆕 **The frame that moved this pass: "sovereign-by-design."** APAC 2026 coverage has shifted from
+  pilots to sovereignty, which is expected to shape infrastructure choices for roughly **half** of
+  APAC firms. Recorded as an org-level signal only.
+- **Opportunity.** Sovereignty is an architecture requirement Globant can meet with the shelf this KB
+  already holds — on-premise inference, local model weights, no cross-border inference calls — and it
+  converts a procurement obstacle into a reason to choose a systems integrator over a SaaS vendor.
+- ⚠️ **Not recorded as evidence:** the OpenAI ANZ policy appointment behind much of this coverage is
+  an anthroponym, and an anthroponym is not a finding (`P135`).
+
+### LATAM
+
+**0 new repositories; demand figures held:** third-largest market worldwide for generative-AI
+application downloads, **99%** of LATAM startups using AI internally and **85%** embedding it in the
+product, OpenAI integrated by **89%**, UNESCO IESALC's survey of **200 higher-education institutions
+across 19 countries**, the IADB's enabling-regulatory-framework paper, **Ednova (Chile)** as the named
+standout edtech.
+
+- **Opportunity.** Highest adoption against lowest capital access remains the regional signature: the
+  demand is proven and the constraint is delivery capacity, which is the one thing a studio sells.
+  Regulatory fragmentation across LATAM makes a **portable** compliance layer worth more here than a
+  jurisdiction-specific one.
+- 🟢 **The gap this KB already closed, and it stays closed:** the claim of *"zero LATAM-origin
+  repositories"*, published four passes running in the pre-reset lineage, was **refuted** by this
+  KB's own index — **12 repositories located in LATAM**, among them `LabSirius/TutorIA` (**MIT**,
+  Universidad Tecnológica de Pereira, SNCTI-funded) and `portabilis/i-educar` (Brazilian municipal
+  school system). ⚠️ **Note its licence posture:** `i-educar` is one of pass 28's `LGPL → GPL-2.0`
+  corrections, so it is a *link-against* risk, not a permissive base.
 
 ## Market map
 
