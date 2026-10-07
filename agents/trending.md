@@ -8,6 +8,307 @@ updated: 2026-10-07
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-07 — twenty-seventh pass: this KB has two licence classifiers, each is blind where the other sees, and five non-commercial repositories sit on the permissive side of the shelf
+
+⏱️ **Measurement window 2026-10-07 ~09:00 UTC → 12:30 UTC. Every age in days is computed against
+the reference date `2026-10-07`**, passed explicitly to each instrument, so the figures reproduce.
+
+**Channel new to this KB this pass: the second classifier.** Not a new endpoint — a comparison of
+two instruments this repository already contains, `lib/license_family.sh` and
+`p436/sweep_payload.py`, run over the **same bytes**. Seventeenth distinct channel, and the
+cheapest one yet: it needed no network at all beyond re-reading payloads already catalogued.
+Instruments: `compose/code/p444-root-vs-tree-family/` (24 controls),
+`compose/code/p445-classifier-divergence/` (22), `compose/code/p446-pinned-parent-chain/` (25) —
+**71 controls, all offline, all passing.** Trends **64** and **65**; pattern addendum
+**`P-GRANT-ENUMERATION` → step 8**.
+
+⚠️ **Read this pass against the twenty-sixth, not after it.** A concurrent run of this same
+scheduled task published pass 26 while this one was measuring, and the two overlap heavily and
+independently: both carried `P275` to the licence layer, both enumerated trees with a blobless
+clone, both found `veraPDF`, `aoe`, `coursebook`, `kolibri-server` and `openSIS-*`, and both built
+a registry-ownership gate. **Pass 26 got there first and in several places got further** — it
+enumerated all 87 rows where this run enumerated only the 72 its channels had called empty, it
+removed **7** of 15 registry credits where this run removed 5, and it documented the
+licences-that-name-other-licences problem more completely. 🟢 **So this section keeps only what
+survives that comparison: two corrections to pass 26's published rows, one measurement it did not
+make, and one action it pre-registered.**
+
+### 🟢 Verification level of this pass, stated before the findings
+
+| Layer | Endpoint / method | Status | Control |
+|---|---|---|---|
+| licence body, root | `raw.githubusercontent.com`, 412 payloads re-read | 🟢 **412/412** | — |
+| 🆕 **second classifier** | `lib/license_family.sh` → `osi_family_of` + `commercial_use_ok` | 🟢 **412/412** | MIT → `YES`, NC fixture → `NO` ⇒ 🟢 **DISCRIMINATES** |
+| tree enumeration | `git clone --filter=blob:none` + `ls-tree -r`, **412 trees** | 🟢 **412/412, 0 faults** | invented ref → clone fails ⇒ 🟢 **DISCRIMINATES** |
+| pinned resolution | `p437`'s resolver, imported not rewritten | 🟢 **891 of 990** | 99 `NO-DEPS`, 0 unreadable parents |
+| *(blocked, re-probed)* | `api.github.com` · rendered `github.com` · `crates.io` | 🔴 **403 · 403 · 403** | unchanged |
+
+### 🔴 Finding 1 — the hardened licence classifier is not the one three instruments call, and five non-commercial repositories are the price
+
+This KB contains **two** licence classifiers. On the same **19,329 bytes** of
+[`facebookresearch/seamless_communication`](https://github.com/facebookresearch/seamless_communication)'s
+root `LICENSE`:
+
+| Classifier | Family | Commercial use |
+|---|---|---|
+| `lib/license_family.sh` → `osi_family_of` | 🟢 **`CC-BY-NC-4.0`** | 🔴 **NO** |
+| `p436/sweep_payload.py` → `family_of` | 🔴 **`CC-BY`** | *(no such axis exists)* |
+
+The shell classifier is the hardened one — **106/106** on its own suite, and **`P312`**'s
+`test_nc_gate.sh` (**21/21**) exists *specifically* to assert that a NonCommercial payload answers
+`PROHIBITED` on the commercial axis **and keeps the `NC` attribute in its family**.
+
+🔴 **The Python `family_of` has no NonCommercial concept at all — and `family_of` is what `p436`
+(the 503-slug sweep), `p441` (pass 26's tree enumeration) and `p444` (this pass) all call.** Every
+family verdict those three instruments published passed through a classifier that cannot express
+the one attribute that decides whether Globant may bill for the work.
+
+**Both classifiers over all 412 `LICENSED` root payloads:**
+
+| Verdict | n |
+|---|---|
+| `AGREE` | **369** (89.6%) |
+| `VOCABULARY` — different family named | 25 |
+| `PYTHON-UNKNOWN` — shell names one, Python declines | 13 |
+| 🔴 `NC-ERASED` | **5** |
+
+🔴 **The five, every one of which `family_of` reports as plain `CC-BY` — a licence that permits
+commercial use:**
+
+| Slug | shell says |
+|---|---|
+| [`facebookresearch/seamless_communication`](https://github.com/facebookresearch/seamless_communication) | **CC-BY-NC-4.0** |
+| [`openstax/osbooks-biology-bundle`](https://github.com/openstax/osbooks-biology-bundle) | **CC-BY-NC-SA-4.0** |
+| [`sign/translate`](https://github.com/sign/translate) | **CC-BY-NC-SA-4.0** |
+| [`Yunfeng-Wan/CSTutorBench`](https://github.com/Yunfeng-Wan/CSTutorBench) | **CC-BY-NC-4.0** |
+| [`Jona-Zwetsloot/Somtoday-Mod`](https://github.com/Jona-Zwetsloot/Somtoday-Mod) | **CC-BY-NC-SA-4.0** |
+
+⚠️ **A proposal filtering this shelf for commercially-usable rows on `family_of`'s output picks up
+all five.** 🟢 `agents/top.md` has the first one right — *"**CC BY-NC-4.0** in `main/LICENSE` —
+**non-commercial. Hard reject** for anything billable"* — so pass 26's **trend 61** holds a fifth
+time, and this time the instrument was not merely wrong but **structurally incapable**.
+
+### 🔵 Finding 2 — the blindness is symmetric: neither classifier is a superset of the other
+
+| Case | Python `family_of` | Shell `license_family.sh` | Right |
+|---|---|---|---|
+| **NonCommercial** (5) | 🔴 erased to `CC-BY` | 🟢 `CC-BY-NC-*` | **shell** |
+| **Elastic / PolyForm** (3) | 🔴 `UNKNOWN` | 🟢 named | **shell** |
+| **EUPL** (9) | 🟢 `EUPL` | 🔴 `UNCLASSIFIED` | **Python** |
+| **MPL read as GPL** (4) | 🟢 `MPL-2.0` | 🔴 `GPL-3.0` | **Python** |
+| **GPLv2 read as LGPL** (4) | 🔴 `LGPL` | 🟢 `GPL-2.0` | **shell** |
+| `ankitects/anki` | 🟢 `AGPL-3.0` | 🔴 `CC-BY-SA-4.0` | **Python** |
+
+Spot-checked by reading each payload's own title line:
+
+```
+oat-sa/qti-sdk      GNU GENERAL PUBLIC LICENSE Version 2     -> shell right
+OpenEMIS/core       GNU GENERAL PUBLIC LICENSE Version 2     -> shell right
+dequelabs/axe-core  Mozilla Public License, version 2.0      -> Python right
+ankitects/anki      GNU Affero General Public License v3     -> Python right
+```
+
+🔵 **Each was hardened against the defect the other still has.** Pass 26 reordered the Python
+classifier for *"the families that name other families"* — MPL §1.12 naming GPL-2.0/LGPL-2.1/
+AGPL-3.0, EUPL-1.2's appendix naming five — and the shell classifier never got that fix. The shell
+classifier gained NC and the source-available families, and the Python one never got those.
+**No instrument in this KB consults both.**
+
+🔴 **43 of 412 root families (10.4%) are wrong in one of the two**, and which one is wrong depends
+on the family. **The correct verdict for this shelf requires both** — which is the actionable
+output, and it is now step 8 of `P-GRANT-ENUMERATION`.
+
+### 🔴 Finding 3 — correcting pass 26: `cs341-illinois/coursebook` is NCSA, not MIT
+
+Pass 26 published its code grant as **MIT**. The payload's own first line reads
+**`University of Illinois/NCSA Open Source License`**, and the repository's own
+`LICENSE/README.md` says *"licensed under the **University of Illinois NCSA** license under
+LICENSE.code"*.
+
+🔵 **The mechanism is the same class pass 26 documented and is a third member of it.** The NCSA
+licence is an MIT+BSD hybrid and **contains MIT's grant sentence verbatim** — `Permission is hereby
+granted, free of charge, …` — measured present in that payload. A classifier probing for that
+sentence returns MIT. The SIL **Open Font License** does the same thing, which is why two OFL font
+files elsewhere on this shelf also read as MIT.
+
+🟢 **Corrected in place at all five live assertion sites** — `agents/top.md`,
+`repos/foundations.md` ×2, `intel/market.md`, `intel/trends.md` — not filed in this section, per
+trend 50. 🔵 **`NCSA` is a licence family new to this KB.** Practically it is permissive like MIT,
+so no adoption decision changes; **the attribution text a client must ship does.**
+
+### 🔴 Finding 4 — correcting trend 63: the dependency ladder is monotone only if the parent is taken at its latest release
+
+Pass 26's `p442` answered action B with **334.5 d** for the pinned depth-2 tier and concluded
+*"monotone on both axes"*. 🔴 **The same question, with one leg changed, gives 97 d — and depth 2
+is then younger than depth 1's 220 d.**
+
+Both chains resolve the depth-2 **specifier** identically; both import `p437`'s resolver. They
+differ on **whose dependency list the specifier is read from:**
+
+| | first leg |
+|---|---|
+| `p442` | the depth-1 package's **latest** release |
+| **`p446`** | the depth-1 package's **pinned** version |
+
+| | `p442` latest-parent | **`p446` pinned-parent** |
+|---|---|---|
+| rows | 344 edges / 276 pkgs | **891 edges / 410 pkgs** |
+| median pinned age | **334.5 d** | 🟢 **97 d** |
+| `EXACT` share / median | 21% / 49 d | 11% / 🔴 **1,553 d** |
+| `CAPPED` share / median | 56% / 🔴 **694 d** | 58% / 62 d |
+
+🔵 **Both are right about their own corpus, and they disagree about which class carries the
+staleness.** With *latest* parents the `CAPPED` rows are current libraries' wide ranges resolving
+under a cap that may itself be years old; with *pinned* parents those caps are satisfied by today's
+release, while `EXACT` goes to **4.3 years** because **an old pinned parent exact-pins whatever was
+current when it shipped**. `puppeteer-core` pinned at **13.5.0** (2022) alone contributes 24 of the
+100 `EXACT` rows, dragging in `rimraf 3.0.2` (**+2,199 d**) and `https-proxy-agent 5.0.0`
+(**+2,313 d**).
+
+⚠️ **`P446`: when a measurement walks a chain, every leg's version is a parameter, and a chain with
+one leg unstated is not reproducible.** Here the unstated leg is worth **3.4×**. **Neither number
+is wrong; quoting either without naming the parent version is.**
+
+🟢 **What survives is better supported than before:** depth 1 is the tier to quote, because under
+one chain it is the younger tier and under the other the older, so it is **the only tier both
+chains agree is worth measuring** — and the only one a client's own manifest controls. Trend 63 is
+corrected in place, with its original wording kept verbatim in a blockquote.
+
+### 🟢 Finding 5 — executing pass 26's action A: the root file is complete 92% of the time, and the escalation runs the opposite way
+
+Pass 26 pre-registered: *"run `p441`'s tree enumeration over the **412 `LICENSED`** rows … expect
+**more than five** repositories to carry a second, different grant below the root … the interesting
+class is a repository whose root `LICENSE` is **permissive** and which ships a **copyleft** text
+deeper in."*
+
+| Verdict | n | share |
+|---|---|---|
+| `ROOT-ONLY` | **323** | 78.4% |
+| `BUNDLED-ONLY-EXTRA` | **54** | 13.1% |
+| `TREE-AGREES` | **26** | 6.3% |
+| 🔴 `TREE-ADDS` | **9** | 2.2% |
+
+🟢 **The number holds: 9 against "more than five".**
+🔴 **The interesting class is empty — 0 of 412 are permissive-root with copyleft deeper in.** The
+escalation runs the **other way**: 2 are copyleft-root with a permissive text below, and 7 stay
+inside one class.
+
+🔵 **Second consecutive pre-registration where the count was right and the named interesting class
+was empty** — pass 26's own action A predicted a registry-only grant and found none either. **A
+pre-registration can get the magnitude right and the mechanism wrong, and the mechanism is the part
+that reaches a proposal.**
+
+🔵 **The dominant shape is not a hidden obligation; it is a documentation grant.** Five of the nine
+are a code licence beside a content licence: `LICENSE-CODE`, `LICENSE-docs`, `docs/LICENSE`,
+`docs-site/LICENSE`. That is **correct hygiene**, and a root probe reports one half of it.
+
+🔴 **Which half is the finding.** [`microsoft/autogen`](https://github.com/microsoft/autogen) — on
+this KB's core shelf — has a root `LICENSE` that is **CC-BY-4.0** (`Attribution 4.0 International`)
+and its **code** grant in `LICENSE-CODE` (**MIT**, Microsoft Corporation). ⚠️ **A rooted probe
+returns a CONTENT licence as the licence of a software project.** 🟢 `agents/top.md` already records
+it (*"`LICENSE` at HEAD is CC-BY-4.0 (dual with MIT)"*) — **1 of the 9 was known, 8 are new.**
+
+### 🔵 Finding 6 — a bonus measurement: pass 26's family reordering was worth exactly 14 rows
+
+`p444`'s first build inherited each root family from `p436`'s **pass-25** TSV, which predates pass
+26's reordering, so a tree classified today was compared against a root classified last pass.
+Re-deriving instead of inheriting turns that defect into a measurement:
+
+| Skew | n |
+|---|---|
+| `UNKNOWN` → **`EUPL`** | **9** |
+| `GPL` → **`MPL-2.0`** | **5** |
+
+🟢 **14 of 412 published root families were wrong, and the two causes are precisely the two the
+reordering targeted** — the missing EUPL vocabulary and MPL §1.12 naming the GNU licences. ⚠️ And
+the nine EUPL rows are the same rows the **shell** classifier still reports as `UNCLASSIFIED`,
+which is finding 2 from the other direction.
+
+### 🔴 Pre-registered actions from pass 26 — outcomes
+
+| # | Action | Prediction written before running it | Outcome |
+|---|---|---|---|
+| **A** | tree-enumerate the **412 `LICENSED`** rows; compare root family against every other licence text | 🔴 *"more than five carry a second, different grant below the root, concentrated in dual-licensed and monorepo tiers; the interesting class is permissive root + **copyleft** deeper"* | 🟢 **Number confirmed: 9.** 🔴 **Interesting class EMPTY (0 of 412)**; the escalation runs the other way (2 copyleft-root + permissive). 🔵 The real shape is the **documentation grant** (5 of 9), and `microsoft/autogen`'s root is a **content** licence over a code project |
+| **B** | re-measure `family_of` over all 412 with `family_marks()`; publish the count naming >1 family | ⚠️ *"more than 20 of 412 name two or more; MPL/EUPL/GPL-with-exception account for most"* | ⚠️ **Not run as written** — see the declared gap below. What was measured instead is the **cross-classifier** divergence (43 of 412) and the **reordering's** own yield (14 of 412), both of which bear on the same question from outside `family_marks` |
+| **C** | resolve the 186 `NO-ORACLE` spellings via cross-references on this shelf | 🔴 *"fewer than 40 of 186 are named by any other repository here"* | 🔴 **Not run.** Declared, not silently skipped |
+
+### 🔵 Pre-registered for the next pass
+
+| # | Action | Prediction written **before** running it |
+|---|---|---|
+| **A** | Wire **both** classifiers into one verdict function and re-run it over all 412 roots **and** every tree payload `p441`/`p444` read — the first measurement in this KB to consult both | 🔴 Expect the **tree** payloads to carry **more** NC than the roots do, because a `docs/`, `data/` or `assets/` grant is where CC-BY-NC lives by convention, and every such path was classified by the NC-blind `family_of`. Prediction: **at least 3** further NonCommercial grants below the root, none of them currently flagged |
+| **B** | Give `lib/license_family.sh` the **EUPL** patterns it lacks and `sweep_payload.family_of` the **NC** axis it lacks, then re-run `p445` | ⚠️ Expect `AGREE` to rise from 369 to **above 400** and the residual disagreements to be the **GPLv2-preamble** rows only — which would mean the two classifiers' remaining gap is a single, nameable defect rather than two vocabularies |
+| **C** | Execute pass 26's action **C**, unchanged and uncredited to this pass: resolve the 186 `NO-ORACLE` spellings by cross-reference across the 495 cited repositories | 🔴 Keep pass 26's prediction verbatim — *"fewer than 40 of the 186 are named by any other repository on this shelf"* — because re-predicting an action you deferred is how a pre-registration becomes a post-hoc |
+
+### The mandatory queries, run with the year **computed** (2026), not hardcoded
+
+| Query | Result against this KB |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **0 new** — openclaw (385.4k★), browser-use, Mem0, AutoGen, Flowise, dify; `Hermes Agent`, `pguso/agents-from-scratch`, `avinash201199/free-ai-agents-resources` all already cited |
+| `github trending education AI 2026` | 🔴 **0 new** — `rohitg00/ai-engineering-from-scratch`, Awesome LLM, `speedyapply/2026-AI-College-Jobs`: curricula *about* AI, already held |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **0 new** — OpenEduCat, Odoo, ERPNext/Frappe, **CK-ERP** again (a 2010 SourceForge-era Drupal connector) |
+| `AI education industry trends 2026` | 🔴 **0 new** — $10.6 B 2026 at 40.9%, **$79.6 B by 2034 at 31.35%**, cloud 71.22%, K-12 45.62%, STEM 34.78%, 92% student usage: all already in `intel/market.md` |
+| `AI education {NA, EMEA, APAC, LATAM} 2026 adoption regulation players` | ⚠️ **1 new fact, 0 new repos.** New: **OpenAI appointed Brent Thomas to lead ANZ policy** as Canberra tightens AI governance and copyright rules. The EMEA **60% siloed-data** figure was already recorded. Everything else — the $951M→$2,303.2M NA series, 41.7% of global, <10% with formal AI guidelines, 71% of US teachers untrained, 94% investing in training, 38% not piloting, 48% of APAC governance leaders, UNU's 200 institutions across 19 LAC countries, LATAM third-largest for genAI downloads, OpenAI 89%, Ednova/Kredi/MindHealth — **checked by string and held** |
+
+🔴 **Seventeenth consecutive pass in which the mandatory query set produced no new repository.**
+Everything here came from re-reading payloads this KB already catalogued, from a classifier it
+already contained, and from `git`.
+
+### ⚠️ Declared gaps — what this pass did not measure
+
+- 🔴 **Pass 26's action B was not run as written.** `family_marks()`'s own count over 412 is still
+  unpublished. What was measured instead — the cross-classifier divergence and the reordering's
+  14-row yield — bears on the same question from outside that function, and is not a substitute.
+- 🔴 **Pass 26's action C was not run at all**, and is re-registered verbatim above.
+- 🔴 **Tree payloads were not re-classified with the shell classifier.** Finding 1's blindness
+  applies to every payload `p441` and `p444` read, and the exposure there is **unmeasured** — which
+  is exactly what next pass's action A is for.
+- ⚠️ **No regional dimension on any licence finding.** Which regions the 5 NonCommercial rows sit
+  in is unmeasured; `openstax` and `sign/translate` are plausibly North America and EMEA
+  respectively, and plausibly is not a measurement.
+
+### The method note for this pass
+
+🔵 **The cheapest channel this KB has ever used was a classifier it already had.** Finding 1 needed
+no new endpoint — only running `lib/license_family.sh` and `sweep_payload.family_of` over the same
+bytes and reading the difference. **The hardened classifier had been correct about NonCommercial
+since pass 101 and was never wired into the path that three later instruments took.** A guarantee
+proved in one module protects nothing in another.
+
+⚠️ **Both of this pass's own instrument defects were manufactured disagreements**, which is the
+specific way a comparison instrument fails. `"NC" in "UNCLASSIFIED"` is `True`, which put **11
+false rows** — eight of them Finnish national-agency repositories — into the class meaning *"forbids
+commercial use"*. And `commercial_use_ok` signals through its **exit status**, so capturing stdout
+returned `""` for **all 412 rows, MIT included**, reading as *"commercial use not permitted"* for
+the entire shelf. 🔵 **A column constant across every row is not a measurement — and this one was
+constant at the alarming value.**
+
+🟢 **The fix for the first was to change the gate, not the regex.** `P250` built family and
+commercial use as **two independent axes**, so the question is answered by `commercial_use_ok`, not
+by looking for `NC` in a name. Measured that way the shell bars commercial use on **11** of 412
+while only **5** carry a visible `NC` token — the other six being `Elastic` ×2, `PolyForm`, and
+three whose family is `UNCLASSIFIED` but whose text restricts commercial use. **The name-token gate
+would have missed all six.**
+
+🔴 **And the honest note about this pass's provenance.** It was measured concurrently with pass 26
+by another run of the same schedule, and most of what it set out to find, pass 26 found first and
+sometimes better. **The right response to that was to delete the duplicate work, not to publish
+it** — so this section is a quarter the length it would have been, and the two corrections it does
+carry are corrections to pass 26 rather than to the state before it.
+
+### Sources named by the search summaries this pass relied on
+
+ETS *Three forces shaping AI* · marketsandmarkets (North America AI in Education) · azumo (80 AI in
+Education statistics 2026) · technavio · BCC Research · yoursocial/giikorea (AI in Education
+2026–2034) · wise.live (*Top 6 AI Tutor Trends 2026*) · comptia (*Five tech trends shaping EMEA's
+IT strategy in 2026*) · Workday EMEA AI adoption study · Council of Europe
+education/regulatory-dimensions working conference · boomi *APAC tech priorities AI 2026* ·
+techrepublic *5 signals shaping APAC enterprise tech in 2026* · intelligentcio APAC · itnews.asia
+*AI sovereignty* · UNU *AI implementation in higher education in LAC* · IADB *An enabling
+regulatory framework for AI in LAC* · ecosistemastartup · barchart (LATAM AI adoption 2026).
+**First-party verification this pass: `lib/license_family.sh`, `sweep_payload.family_of`,
+`raw.githubusercontent.com`, `git` and `pypi.org`/`registry.npmjs.org` — not the summaries above.**
+
 ## 2026-10-07 — twenty-sixth pass: all three predictions held, and all three instruments were wrong somewhere this KB's own prose was already right
 
 ⏱️ **Measurement window 2026-10-07 ~02:40 UTC → 05:10 UTC. Every age in days is computed against

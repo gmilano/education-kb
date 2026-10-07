@@ -3497,7 +3497,7 @@ filename list on four distinct axes, and **no amount of widening reaches any of 
 - **depth** — `Opetushallitus/aoe`'s **EUPL-1.2** is in `aoe-web-backend/` and `aoe-web-frontend/`;
   `learningequality/kolibri-server`'s is `debian/copyright`; and
   [`cs341-illinois/coursebook`](https://github.com/cs341-illinois/coursebook) carries **three** —
-  `LICENSE/LICENSE.code` (MIT), `LICENSE.original` and `LICENSE.output` (CC-BY).
+  `LICENSE/LICENSE.code` (**NCSA**, corrected in the twenty-seventh pass — *not* MIT), `LICENSE.original` and `LICENSE.output` (CC-BY-4.0).
 
 🔵 **`cs341-illinois/coursebook` is the row that makes the case.** Separate grants for the code, the
 original content and the output is the *correct* structure for a course repository and the one a
@@ -3518,7 +3518,7 @@ states its own licence four levels into a static-assets tree.
 discarding a candidate, enumerate the tree and read the registry (`p440`). On this shelf that moves
 **15 of 87** repositories out of the unusable column — 9 by the tree, 6 more by the registry alone.
 
-## 63. Every level of a dependency graph is older than the one above it, and resolving the pin costs about as much as a level
+## 63. ⚠️ CORRECTED — every level of a dependency graph is older than the one above it **only when the parent is taken at its latest release**
 
 `p442` closes the gradient `p438` left open with the words *"a pinned depth-2 tier is not measured
 here and would be older"*. It is, and it is:
@@ -3531,10 +3531,46 @@ here and would be older"*. It is, and it is:
 | installed **depth 2** | latest release | 177 d | 37.0% |
 | installed **depth 2** | 🔴 **pinned** | 🔴 **334.5 d** | 🔴 **48.6%** |
 
-🟢 **Monotone on both axes, and roughly additive: one level down costs about what resolving the pin
-costs, and doing both costs the sum.** The figure a client is shown is always the one from the top of
-that table; the figure their build installs is the one from the bottom. **Nearly half of what lands on
-disk two levels down is more than a year old.**
+🔴 **CORRECTED in the twenty-seventh pass of 2026-10-07 — the monotone claim holds for ONE of the
+two possible chains, and `p442` did not state which one it walked.**
+
+`p442` built its depth-2 edge set from each depth-1 package's **latest** release
+(`info.requires_dist`, `versions[dist-tags.latest]`), then resolved those specifiers to a pin.
+`compose/code/p446-pinned-parent-chain/` walks the chain **pinned the whole way** — the dependency
+list of the depth-1 version this shelf actually pins, which `p437` had already resolved — and gets
+🟢 **97 d, not 334.5 d.** Depth 2 is then **younger** than depth 1's 220 d, and the ladder is not
+monotone.
+
+| | `p442` — latest parent | `p446` — pinned parent |
+|---|---|---|
+| median pinned depth-2 age | **334.5 d** | 🟢 **97 d** |
+| `EXACT` share / median | 21% / 49 d | 11% / 🔴 **1,553 d** |
+| `CAPPED` share / median | 56% / 🔴 **694 d** | 58% / 62 d |
+
+🔵 **Both are right about their own corpus, and they disagree about which class carries the
+staleness.** With *latest* parents the `CAPPED` rows are current libraries' wide ranges resolving
+under a cap that may itself be years old; with *pinned* parents those caps are satisfied by today's
+release (62 d) while the `EXACT` rows go to **4.3 years**, because an old pinned parent exact-pins
+whatever was current when it shipped. `puppeteer-core` pinned at **13.5.0** (2022) alone contributes
+24 of the 100 `EXACT` rows.
+
+⚠️ **The transferable rule is `P446`: when a measurement walks a chain, every leg's version is a
+parameter, and a chain with one leg unstated is not reproducible.** Here the unstated leg is worth
+**3.4×**. A build installs the *pinned* parent, so for *"how old is what a build installs two levels
+down"* the pinned chain is the faithful one; `p442`'s number answers *"how old would the current
+releases install"*, which is also a real question and a different one.
+
+🟢 **What survives, and is now better supported than before:** depth 1 is the tier to quote. Under
+`p442`'s chain it is the younger tier and under `p446`'s the older, so it is **the only tier both
+chains agree is worth measuring** — and it is the one a client's own manifest controls.
+
+🔵 **The original claim is kept verbatim below, because deleting it would hide the correction —
+read it as "true of the latest-parent chain", not of the ladder in general:**
+
+> 🟢 **Monotone on both axes, and roughly additive: one level down costs about what resolving the pin
+> costs, and doing both costs the sum.** The figure a client is shown is always the one from the top
+> of that table; the figure their build installs is the one from the bottom. **Nearly half of what
+> lands on disk two levels down is more than a year old.**
 
 🔴 **But the MECHANISM inverts between the tiers, and that is the transferable part.** At depth 1,
 **49%** of specifiers are `EXACT` and they carry the whole effect. At depth 2, `EXACT` is **21%** and
@@ -3588,3 +3624,108 @@ postdates the last plain one.** So *"every published age is a lower bound on sta
   the tenth with no new instrument. One new named datum in sixteen passes: OpenAI appointed a policy
   lead for Australia and New Zealand — a personnel fact, not a repository. Every repository added this
   pass came from a **package registry** or from `git ls-tree`.
+
+## 64. A guarantee proved in one module protects nothing in another — this KB has two licence classifiers and the hardened one is not the one its instruments call
+
+This KB contains **two** licence classifiers. Measured on the same **19,329 bytes** of
+[`facebookresearch/seamless_communication`](https://github.com/facebookresearch/seamless_communication)'s
+root `LICENSE`:
+
+| Classifier | Family | Commercial use |
+|---|---|---|
+| `lib/license_family.sh` → `osi_family_of` | 🟢 **`CC-BY-NC-4.0`** | 🔴 **NO** |
+| `p436/sweep_payload.py` → `family_of` | 🔴 **`CC-BY`** | *(no such axis exists)* |
+
+The shell classifier is the hardened one: **106/106** on its own suite, and **`P312`**, written in
+pass 101, exists *specifically* to assert that a NonCommercial payload answers `PROHIBITED` on the
+commercial axis **and keeps the `NC` attribute in its family**. **21/21**, offline, for twenty-six
+passes.
+
+🔴 **The Python `family_of` has no NonCommercial concept at all — and `family_of` is what `p436`
+(the 503-slug payload sweep), `p441` (the tree enumeration) and `p444` (the root-vs-tree
+comparison) all call.** Every family verdict those three instruments published passed through a
+classifier that cannot express the one attribute that decides whether the work is billable.
+
+**Five rows are the price, and all five report as plain `CC-BY`, a licence that permits commercial
+use:** `facebookresearch/seamless_communication`, `openstax/osbooks-biology-bundle`,
+`sign/translate`, `Yunfeng-Wan/CSTutorBench`, `Jona-Zwetsloot/Somtoday-Mod`. ⚠️ **Three more bar
+commercial use with no `NC` token at all** — `canyongbs/advisingapp` and `sodadata/soda-core`
+(**Elastic**), `digillab-lmu/smart-rag` (**PolyForm**), all source-available and not OSI, all
+reported `UNKNOWN`. **11 of 412 root payloads restrict commercial use; the Python classifier flags
+none.**
+
+🔵 **And the blindness is symmetric, which is what makes this a structural finding rather than a
+bug report.** Neither classifier is a superset:
+
+| Case | Python | Shell | Right |
+|---|---|---|---|
+| NonCommercial (5) | 🔴 erased to `CC-BY` | 🟢 named | **shell** |
+| Elastic / PolyForm (3) | 🔴 `UNKNOWN` | 🟢 named | **shell** |
+| **EUPL (9)** | 🟢 `EUPL` | 🔴 `UNCLASSIFIED` | **Python** |
+| MPL read as GPL (4) | 🟢 `MPL-2.0` | 🔴 `GPL-3.0` | **Python** |
+| GPLv2 read as LGPL (4) | 🔴 `LGPL` | 🟢 `GPL-2.0` | **shell** |
+
+🔵 **Each was hardened against the defect the other still has.** Pass 26 reordered the Python
+classifier for *"the families that name other families"* — MPL §1.12 naming GPL-2.0/LGPL-2.1/
+AGPL-3.0, EUPL-1.2's appendix naming five — and the shell classifier never received that fix. The
+shell classifier gained the NC axis and the source-available families in passes 82 and 101, and the
+Python one never received those. **No instrument in this KB consults both.**
+
+🔴 **43 of 412 root families (10.4%) are wrong in one of the two, and which one is wrong depends on
+the licence family.** There is no single classifier in this repository that gets this shelf right.
+
+⚠️ **The transferable rule, and it is not about licences.** A control suite proves a property of
+**the module it imports**. `P312` proved that *the shell classifier* preserves NonCommercial; it
+proved nothing about any other code path, and three instruments built afterwards took a different
+one. **A guarantee does not propagate by being true — it propagates by being imported.** Rule 1 of
+`P126` says do not re-derive what the repository already versions; this is its contrapositive:
+**when you do re-derive it, you inherit none of its hardening.**
+
+🟢 **The cheapest channel this KB has used.** Finding this needed no new endpoint, no API and no
+clone — only running two functions it already had over the same bytes and reading the difference.
+
+## 65. Every leg of a measured chain is a parameter, and an unstated one here is worth 3.4×
+
+`p442` dated the pinned depth-2 dependency tier at **334.5 d** and concluded the ladder was
+*"monotone on both axes"* — trend 63. Walking the same chain with **one leg changed** gives
+**97 d**, which makes depth 2 *younger* than depth 1's 220 d and the ladder not monotone at all.
+
+Both chains resolve the depth-2 **specifier** identically — both import `p437`'s resolver, so the
+second leg is literally the same code. They differ on **whose dependency list the specifier is read
+from**:
+
+| | first leg | endpoint |
+|---|---|---|
+| `p442` | the depth-1 package's **latest** release | `info.requires_dist` · `versions[dist-tags.latest]` |
+| `p446` | the depth-1 package's **pinned** version | `/pypi/<name>/<PINNED>/json` · `versions[<PINNED>]` |
+
+| | `p442` latest-parent | **`p446` pinned-parent** |
+|---|---|---|
+| median pinned age | **334.5 d** | 🟢 **97 d** |
+| `EXACT` share / median | 21% / 49 d | 11% / 🔴 **1,553 d** |
+| `CAPPED` share / median | 56% / 🔴 **694 d** | 58% / 62 d |
+
+🔵 **Both are right about their own corpus, and they disagree about which specifier class carries
+the staleness.** With *latest* parents the `CAPPED` rows are current libraries' wide ranges, which
+resolve to the newest release under a cap that may itself be years old. With *pinned* parents those
+caps are satisfied by today's version (62 d) while the `EXACT` rows go to **4.3 years**, because
+**an old pinned parent exact-pins whatever was current when it shipped**. `puppeteer-core` pinned
+at **13.5.0** (2022) alone contributes 24 of the 100 `EXACT` rows and drags in `rimraf 3.0.2`
+(**+2,199 d** behind its own latest) and `https-proxy-agent 5.0.0` (**+2,313 d**); the same package
+at latest contributes none of it.
+
+🔴 **Neither number is wrong. Quoting either without naming the parent version is.** A build
+installs the *pinned* parent, so for *"how old is what a build installs two levels down"* the
+pinned chain is the faithful one; `p442`'s figure answers *"how old would the current releases
+install"*, which is a different and also real question.
+
+🟢 **What survives is stronger than what it replaces.** Depth 1 is the tier to quote — under one
+chain it is the younger tier and under the other the older, so it is **the only tier both chains
+agree is worth measuring**, and the only one a client's own manifest controls. An uplift priced
+from the depth-1 pin understates nothing.
+
+⚠️ **The rule generalises past dependencies.** Any measurement that walks a chain — a fork to its
+upstream, a slug to its registry entry to its declared repository, a pin to a release to a date —
+has a version or a revision at **every** leg. `p437` learned this for the last leg (*the pinned
+release, not the latest*). **`P446` is the same lesson for every other leg**, and the test for it
+is one question: *could a reader reproduce this number without asking me which version I read?*

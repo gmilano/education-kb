@@ -1,0 +1,991 @@
+parent	parent_version	eco	dep	spec	spec_class	pinned_version	pinned_age	latest_version	latest_age	status
+pyyaml	6.0.3	pypi	-	-	-					NO-DEPS
+jinja2	3.1.6	pypi	MarkupSafe	>=2.0	FLOOR	3.0.4	5	3.0.4	5	OK
+openai	3.26.0	pypi	anyio	<5,>=4.10.0	CAPPED	4.15.1	32	4.15.1	32	OK
+openai	3.26.0	pypi	httpx2	<3,>=2.12.0	CAPPED	2.13.1	14	2.13.1	14	OK
+openai	3.26.0	pypi	jiter	<1,>=0.16.0	CAPPED	0.17.0	25	0.17.0	25	OK
+openai	3.26.0	pypi	pydantic	!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,<3,>=1.10.13	CAPPED	2.13.5	40	2.13.5	40	OK
+openai	3.26.0	pypi	sniffio	*	ANY	1.3.1	955	1.3.1	955	OK
+openai	3.26.0	pypi	typing-extensions	<5,>=4.14	CAPPED	4.16.0	97	4.16.0	97	OK
+tiktoken	0.14.0	pypi	regex	*	ANY	2026.9.29	8	2026.9.29	8	OK
+tiktoken	0.14.0	pypi	requests	*	ANY	2.34.2	146	2.34.2	146	OK
+aiohttp	3.14.4	pypi	aiohappyeyeballs	>=2.5.0	FLOOR	2.7.1	98	2.7.1	98	OK
+aiohttp	3.14.4	pypi	aiosignal	>=1.4.0	FLOOR	1.4.0	461	1.4.0	461	OK
+aiohttp	3.14.4	pypi	async-timeout	<6.0,>=4.0	CAPPED	5.0.1	700	5.0.1	700	OK
+aiohttp	3.14.4	pypi	attrs	>=17.3.0	FLOOR	26.1.0	202	26.1.0	202	OK
+aiohttp	3.14.4	pypi	frozenlist	>=1.1.1	FLOOR	1.8.0	366	1.8.0	366	OK
+aiohttp	3.14.4	pypi	multidict	<7.0,>=4.5	CAPPED	6.9.1	16	7.0.0	11	OK
+aiohttp	3.14.4	pypi	propcache	>=0.2.0	FLOOR	0.5.4	21	0.5.4	21	OK
+aiohttp	3.14.4	pypi	typing_extensions	>=4.4	FLOOR	4.16.0	97	4.16.0	97	OK
+aiohttp	3.14.4	pypi	yarl	<2.0,>=1.25.1	CAPPED	1.25.1	22	1.25.1	22	OK
+httpx	0.28.1	pypi	anyio	*	ANY	4.15.1	32	4.15.1	32	OK
+httpx	0.28.1	pypi	certifi	*	ANY	2026.7.22	77	2026.7.22	77	OK
+httpx	0.28.1	pypi	httpcore	==1.*	ANY	1.0.9	531	1.0.9	531	OK
+httpx	0.28.1	pypi	idna	*	ANY	3.20	20	3.20	20	OK
+requests	2.34.2	pypi	charset_normalizer	<4,>=2	CAPPED	3.5.2	7	3.5.2	7	OK
+requests	2.34.2	pypi	idna	<4,>=2.5	CAPPED	3.20	20	3.20	20	OK
+requests	2.34.2	pypi	urllib3	<3,>=1.26	CAPPED	2.8.0	22	2.8.0	22	OK
+requests	2.34.2	pypi	certifi	>=2023.5.7	FLOOR	2026.7.22	77	2026.7.22	77	OK
+ddgs	9.16.0	pypi	click	>=8.1.8	FLOOR	8.5.0	42	8.5.0	42	OK
+ddgs	9.16.0	pypi	primp	>=1.3.1	FLOOR	2.0.1	24	2.0.1	24	OK
+ddgs	9.16.0	pypi	lxml	>=4.9.4	FLOOR	6.1.3	35	6.1.3	35	OK
+nest_asyncio	1.6.0	pypi	-	-	-					NO-DEPS
+tenacity	9.1.4	pypi	-	-	-					NO-DEPS
+pydantic	2.13.5	pypi	annotated-types	>=0.6.0	FLOOR	0.8.0	76	0.8.0	76	OK
+pydantic	2.13.5	pypi	pydantic-core	==2.46.5	EXACT	2.46.5	40	2.49.0	28	OK
+pydantic	2.13.5	pypi	typing-extensions	>=4.14.1	FLOOR	4.16.0	97	4.16.0	97	OK
+pydantic	2.13.5	pypi	typing-inspection	>=0.4.2	FLOOR	0.4.4	56	0.4.4	56	OK
+pydantic-settings	2.15.0	pypi	pydantic	>=2.7.0	FLOOR	2.13.5	40	2.13.5	40	OK
+pydantic-settings	2.15.0	pypi	python-dotenv	>=0.21.0	FLOOR	1.2.4	6	1.2.4	6	OK
+pydantic-settings	2.15.0	pypi	typing-inspection	>=0.4.0	FLOOR	0.4.4	56	0.4.4	56	OK
+jsonschema	4.26.0	pypi	attrs	>=22.2.0	FLOOR	26.1.0	202	26.1.0	202	OK
+jsonschema	4.26.0	pypi	jsonschema-specifications	>=2023.03.6	FLOOR	2025.9.1	394	2025.9.1	394	OK
+jsonschema	4.26.0	pypi	referencing	>=0.28.4	FLOOR	0.37.0	359	0.37.0	359	OK
+jsonschema	4.26.0	pypi	rpds-py	>=0.25.0	FLOOR	2026.9.1	3	2026.9.1	3	OK
+aiosqlite	0.22.1	pypi	-	-	-					NO-DEPS
+typer	0.27.3	pypi	shellingham	>=1.3.0	FLOOR	1.5.4	1079	1.5.4	1079	OK
+typer	0.27.3	pypi	rich	>=13.8.0	FLOOR	15.0.0	178	15.0.0	178	OK
+typer	0.27.3	pypi	annotated-doc	>=0.0.2	FLOOR	0.0.5	71	0.0.5	71	OK
+typer	0.27.3	pypi	colorama	*	ANY	0.4.6	1443	0.4.6	1443	OK
+rich	15.0.0	pypi	markdown-it-py	>=2.2.0	FLOOR	4.2.0	153	4.2.0	153	OK
+rich	15.0.0	pypi	pygments	<3.0.0,>=2.13.0	CAPPED	2.21.0	51	2.21.0	51	OK
+prompt_toolkit	3.0.53	pypi	wcwidth	>=0.1.4	FLOOR	0.9.2	2	0.9.2	2	OK
+pyte	0.8.2	pypi	wcwidth	*	ANY	0.9.2	2	0.9.2	2	OK
+llama-index-vector-stores-faiss	0.7.0	pypi	llama-index-core	<0.15,>=0.13.0	CAPPED	0.14.25	16	0.14.25	16	OK
+faiss-cpu	1.15.1	pypi	numpy	>=1.25	FLOOR	2.5.3	31	2.5.3	31	OK
+faiss-cpu	1.15.1	pypi	packaging	*	ANY	26.3	64	26.3	64	OK
+pymupdf	1.28.2	pypi	-	-	-					NO-DEPS
+pillow	12.3.0	pypi	-	-	-					NO-DEPS
+numpy	2.5.3	pypi	-	-	-					NO-DEPS
+arxiv	4.0.1	pypi	lxml	<7.0,>=6.1.0	CAPPED	6.1.3	35	6.1.3	35	OK
+arxiv	4.0.1	pypi	requests	<2.35,>=2.32	CAPPED	2.34.2	146	2.34.2	146	OK
+arxiv	4.0.1	pypi	typing-extensions	>=4.0.0	FLOOR	4.16.0	97	4.16.0	97	OK
+python-docx	1.2.0	pypi	lxml	>=3.1.0	FLOOR	6.1.3	35	6.1.3	35	OK
+python-docx	1.2.0	pypi	typing_extensions	>=4.9.0	FLOOR	4.16.0	97	4.16.0	97	OK
+openpyxl	3.1.5	pypi	et-xmlfile	*	ANY	2.0.0	712	2.0.0	712	OK
+python-pptx	1.0.2	pypi	Pillow	>=3.3.2	FLOOR	12.3.0	98	12.3.0	98	OK
+python-pptx	1.0.2	pypi	XlsxWriter	>=0.5.7	FLOOR	3.2.9	386	3.2.9	386	OK
+python-pptx	1.0.2	pypi	lxml	>=3.1.0	FLOOR	6.1.3	35	6.1.3	35	OK
+python-pptx	1.0.2	pypi	typing-extensions	>=4.9.0	FLOOR	4.16.0	97	4.16.0	97	OK
+pypdf	6.19.0	pypi	typing_extensions	>=4.0	FLOOR	4.16.0	97	4.16.0	97	OK
+pdfplumber	0.11.10	pypi	pdfminer.six	==20260107	EXACT	20260107	273	20260107	273	OK
+pdfplumber	0.11.10	pypi	Pillow	>=12.2.0	FLOOR	12.3.0	98	12.3.0	98	OK
+pdfplumber	0.11.10	pypi	pypdfium2	>=5.9.0	FLOOR	5.14.0	3	5.14.0	3	OK
+reportlab	5.0.1	pypi	pillow	>=9.0.0	FLOOR	12.3.0	98	12.3.0	98	OK
+reportlab	5.0.1	pypi	charset-normalizer	*	ANY	3.5.2	7	3.5.2	7	OK
+defusedxml	0.7.1	pypi	-	-	-					NO-DEPS
+youtube-transcript-api	1.2.4	pypi	requests	*	ANY	2.34.2	146	2.34.2	146	OK
+youtube-transcript-api	1.2.4	pypi	defusedxml	<0.8.0,>=0.7.1	CAPPED	0.7.1	2039	0.7.1	2039	OK
+fastapi	0.142.2	pypi	starlette	>=0.46.0	FLOOR	1.7.0	14	1.7.0	14	OK
+fastapi	0.142.2	pypi	pydantic	>=2.9.0	FLOOR	2.13.5	40	2.13.5	40	OK
+fastapi	0.142.2	pypi	typing-extensions	>=4.8.0	FLOOR	4.16.0	97	4.16.0	97	OK
+fastapi	0.142.2	pypi	typing-inspection	>=0.4.2	FLOOR	0.4.4	56	0.4.4	56	OK
+fastapi	0.142.2	pypi	annotated-doc	>=0.0.2	FLOOR	0.0.5	71	0.0.5	71	OK
+fastapi	0.142.2	pypi	opentelemetry-api	>=1.44.0	FLOOR	1.45.1	1	1.45.1	1	OK
+uvicorn	0.54.0	pypi	click	>=7.0	FLOOR	8.5.0	42	8.5.0	42	OK
+uvicorn	0.54.0	pypi	h11	>=0.8	FLOOR	0.16.0	531	0.16.0	531	OK
+uvicorn	0.54.0	pypi	typing-extensions	>=4.0	FLOOR	4.16.0	97	4.16.0	97	OK
+websockets	17.2	pypi	-	-	-					NO-DEPS
+python-multipart	0.0.32	pypi	-	-	-					NO-DEPS
+bcrypt	5.0.0	pypi	-	-	-					NO-DEPS
+python-jose	3.5.0	pypi	ecdsa	!=0.15	ANY	0.19.2	195	0.19.2	195	OK
+python-jose	3.5.0	pypi	rsa	!=4.1.1,!=4.4,<5.0,>=4.0	CAPPED	4.9.1	539	4.9.1	539	OK
+python-jose	3.5.0	pypi	pyasn1	>=0.5.0	FLOOR	0.6.4	90	0.6.4	90	OK
+pocketbase	0.17.3	pypi	httpx	>=0.27.2	FLOOR	0.28.1	670	0.28.1	670	OK
+redis	6.4.0	pypi	async-timeout	>=4.0.3	FLOOR	5.0.1	700	5.0.1	700	OK
+loguru	0.7.3	pypi	colorama	>=0.3.4	FLOOR	0.4.6	1443	0.4.6	1443	OK
+loguru	0.7.3	pypi	aiocontextvars	>=0.2.0	FLOOR	0.2.2	2739	0.2.2	2739	OK
+loguru	0.7.3	pypi	win32-setctime	>=1.0.0	FLOOR	1.2.0	669	1.2.0	669	OK
+json-repair	0.63.5	pypi	-	-	-					NO-DEPS
+croniter	6.2.4	pypi	python-dateutil	*	ANY	2.9.0	950	2.9.0	950	OK
+psutil	7.2.2	pypi	-	-	-					NO-DEPS
+huggingface-hub	2.1.1	pypi	click	<9.0.0,>=8.4.2	CAPPED	8.5.0	42	8.5.0	42	OK
+huggingface-hub	2.1.1	pypi	filelock	>=3.10.0	FLOOR	4.0.12	2	4.0.12	2	OK
+huggingface-hub	2.1.1	pypi	fsspec	>=2023.5.0	FLOOR	2026.9.0	19	2026.9.0	19	OK
+huggingface-hub	2.1.1	pypi	hf-xet	<2.0.0,>=1.6.0	CAPPED	1.7.0	1	1.7.0	1	OK
+huggingface-hub	2.1.1	pypi	httpx2	<3,>=2.0.0	CAPPED	2.13.1	14	2.13.1	14	OK
+huggingface-hub	2.1.1	pypi	packaging	>=20.9	FLOOR	26.3	64	26.3	64	OK
+huggingface-hub	2.1.1	pypi	pyyaml	>=5.1	FLOOR	6.0.3	377	6.0.3	377	OK
+huggingface-hub	2.1.1	pypi	tomli	>=1.1.0	FLOOR	2.4.1	196	2.4.1	196	OK
+huggingface-hub	2.1.1	pypi	tqdm	>=4.42.1	FLOOR	4.70.1	26	4.70.1	26	OK
+huggingface-hub	2.1.1	pypi	typing-extensions	>=4.1.0	FLOOR	4.16.0	97	4.16.0	97	OK
+python-dotenv	1.2.4	pypi	-	-	-					NO-DEPS
+fastmcp	4.0.11	pypi	fastmcp-slim	==4.0.11	EXACT	4.0.11	3	4.0.11	3	OK
+mcp	2.3.0	pypi	anyio	>=4.10	FLOOR	4.15.1	32	4.15.1	32	OK
+mcp	2.3.0	pypi	anyio	>=4.9	FLOOR	4.15.1	32	4.15.1	32	OK
+mcp	2.3.0	pypi	httpx2	>=2.10.0	FLOOR	2.13.1	14	2.13.1	14	OK
+mcp	2.3.0	pypi	jsonschema	>=4.20.0	FLOOR	4.26.0	273	4.26.0	273	OK
+mcp	2.3.0	pypi	mcp-types	==2.3.0	EXACT	2.3.0	5	2.3.0	5	OK
+mcp	2.3.0	pypi	opentelemetry-api	>=1.28.0	FLOOR	1.45.1	1	1.45.1	1	OK
+mcp	2.3.0	pypi	pydantic	>=2.12.0	FLOOR	2.13.5	40	2.13.5	40	OK
+mcp	2.3.0	pypi	pyjwt	>=2.10.1	FLOOR	2.15.1	9	2.15.1	9	OK
+mcp	2.3.0	pypi	python-multipart	>=0.0.9	FLOOR	0.0.32	125	0.0.32	125	OK
+mcp	2.3.0	pypi	pywin32	>=311	FLOOR	312	125	312	125	OK
+mcp	2.3.0	pypi	sse-starlette	>=3.0.0	FLOOR	3.5.0	9	3.5.0	9	OK
+mcp	2.3.0	pypi	starlette	>=0.27	FLOOR	1.7.0	14	1.7.0	14	OK
+mcp	2.3.0	pypi	starlette	>=0.48.0	FLOOR	1.7.0	14	1.7.0	14	OK
+mcp	2.3.0	pypi	typing-extensions	>=4.13.0	FLOOR	4.16.0	97	4.16.0	97	OK
+mcp	2.3.0	pypi	typing-inspection	>=0.4.1	FLOOR	0.4.4	56	0.4.4	56	OK
+mcp	2.3.0	pypi	uvicorn	>=0.31.1	FLOOR	0.54.0	12	0.54.0	12	OK
+python-dateutil	2.9.0	pypi	six	>=1.5	FLOOR	1.17.0	672	1.17.0	672	OK
+anthropic	1.11.0	pypi	anyio	<5,>=4.1.0	CAPPED	4.15.1	32	4.15.1	32	OK
+anthropic	1.11.0	pypi	docstring-parser	<1,>=0.15	CAPPED	0.18.0	176	0.18.0	176	OK
+anthropic	1.11.0	pypi	httpx2	<3,>=2.0.0	CAPPED	2.13.1	14	2.13.1	14	OK
+anthropic	1.11.0	pypi	jiter	<1,>=0.4.0	CAPPED	0.17.0	25	0.17.0	25	OK
+anthropic	1.11.0	pypi	pydantic	<3,>=1.10.0	CAPPED	2.13.5	40	2.13.5	40	OK
+anthropic	1.11.0	pypi	sniffio	<2,>=1	CAPPED	1.3.1	955	1.3.1	955	OK
+anthropic	1.11.0	pypi	typing-extensions	<5,>=4.14	CAPPED	4.16.0	97	4.16.0	97	OK
+chromadb	1.5.9	pypi	build	>=1.0.3	FLOOR	1.6.1	27	1.6.1	27	OK
+chromadb	1.5.9	pypi	pydantic	>=2.0	FLOOR	2.13.5	40	2.13.5	40	OK
+chromadb	1.5.9	pypi	pydantic-settings	>=2.0	FLOOR	2.15.0	61	2.15.0	61	OK
+chromadb	1.5.9	pypi	pybase64	>=1.4.1	FLOOR	1.5.1	3	1.5.1	3	OK
+chromadb	1.5.9	pypi	uvicorn	>=0.18.3	FLOOR	0.54.0	12	0.54.0	12	OK
+chromadb	1.5.9	pypi	numpy	>=1.22.5	FLOOR	2.5.3	31	2.5.3	31	OK
+chromadb	1.5.9	pypi	typing-extensions	>=4.5.0	FLOOR	4.16.0	97	4.16.0	97	OK
+chromadb	1.5.9	pypi	onnxruntime	>=1.14.1	FLOOR	1.30.0	27	1.30.0	27	OK
+chromadb	1.5.9	pypi	opentelemetry-api	>=1.2.0	FLOOR	1.45.1	1	1.45.1	1	OK
+chromadb	1.5.9	pypi	opentelemetry-exporter-otlp-proto-grpc	>=1.2.0	FLOOR	1.45.1	1	1.45.1	1	OK
+chromadb	1.5.9	pypi	opentelemetry-sdk	>=1.2.0	FLOOR	1.45.1	1	1.45.1	1	OK
+chromadb	1.5.9	pypi	tokenizers	>=0.13.2	FLOOR	0.23.2	34	0.23.2	34	OK
+chromadb	1.5.9	pypi	pypika	>=0.48.9	FLOOR	0.51.1	245	0.51.1	245	OK
+chromadb	1.5.9	pypi	tqdm	>=4.65.0	FLOOR	4.70.1	26	4.70.1	26	OK
+chromadb	1.5.9	pypi	overrides	>=7.3.1	FLOOR	7.7.0	984	7.7.0	984	OK
+chromadb	1.5.9	pypi	importlib-resources	*	ANY	7.1.0	178	7.1.0	178	OK
+chromadb	1.5.9	pypi	graphlib-backport	>=1.0.3	FLOOR	1.1.0	946	1.1.0	946	OK
+chromadb	1.5.9	pypi	grpcio	>=1.58.0	FLOOR	1.84.0	23	1.84.0	23	OK
+chromadb	1.5.9	pypi	bcrypt	>=4.0.1	FLOOR	5.0.0	377	5.0.0	377	OK
+chromadb	1.5.9	pypi	typer	>=0.9.0	FLOOR	0.27.3	1	0.27.3	1	OK
+chromadb	1.5.9	pypi	kubernetes	>=28.1.0	FLOOR	37.0.0	0	37.0.0	0	OK
+chromadb	1.5.9	pypi	tenacity	>=8.2.3	FLOOR	9.1.4	242	9.1.4	242	OK
+chromadb	1.5.9	pypi	pyyaml	>=6.0.0	FLOOR	6.0.3	377	6.0.3	377	OK
+chromadb	1.5.9	pypi	mmh3	>=4.0.1	FLOOR	5.3.1	7	5.3.1	7	OK
+chromadb	1.5.9	pypi	orjson	>=3.9.12	FLOOR	3.12.0	54	3.12.0	54	OK
+chromadb	1.5.9	pypi	httpx	>=0.27.0	FLOOR	0.28.1	670	0.28.1	670	OK
+chromadb	1.5.9	pypi	rich	>=10.11.0	FLOOR	15.0.0	178	15.0.0	178	OK
+chromadb	1.5.9	pypi	jsonschema	>=4.19.0	FLOOR	4.26.0	273	4.26.0	273	OK
+cohere	7.2.0	pypi	fastavro	<2.0.0,>=1.9.4	CAPPED	1.13.0	2	1.13.0	2	OK
+cohere	7.2.0	pypi	httpx	>=0.25.0	FLOOR	0.28.1	670	0.28.1	670	OK
+cohere	7.2.0	pypi	pydantic	>=1.9.2	FLOOR	2.13.5	40	2.13.5	40	OK
+cohere	7.2.0	pypi	pydantic-core	<3.0.0,>=2.18.2	CAPPED	2.49.0	28	2.49.0	28	OK
+cohere	7.2.0	pypi	requests	<3.0.0,>=2.0.0	CAPPED	2.34.2	146	2.34.2	146	OK
+cohere	7.2.0	pypi	tokenizers	<1,>=0.15	CAPPED	0.23.2	34	0.23.2	34	OK
+cohere	7.2.0	pypi	types-requests	<3.0.0,>=2.0.0	CAPPED	2.33.0.20261006	1	2.33.0.20261006	1	OK
+cohere	7.2.0	pypi	typing_extensions	>=4.0.0	FLOOR	4.16.0	97	4.16.0	97	OK
+google-genai	2.28.0	pypi	anyio	<5.0.0,>=4.8.0	CAPPED	4.15.1	32	4.15.1	32	OK
+google-genai	2.28.0	pypi	google-auth	<3.0.0,>=2.56.0	CAPPED	2.60.0	2	2.60.0	2	OK
+google-genai	2.28.0	pypi	httpx	<1.0.0,>=0.28.1	CAPPED	0.28.1	670	0.28.1	670	OK
+google-genai	2.28.0	pypi	pydantic	<3.0.0,>=2.12.5	CAPPED	2.13.5	40	2.13.5	40	OK
+google-genai	2.28.0	pypi	requests	<3.0.0,>=2.28.1	CAPPED	2.34.2	146	2.34.2	146	OK
+google-genai	2.28.0	pypi	tenacity	<9.2.0,>=8.2.3	CAPPED	9.1.4	242	9.1.4	242	OK
+google-genai	2.28.0	pypi	websockets	<17.0,>=13.0.0	CAPPED	16.1.1	82	17.2	4	OK
+google-genai	2.28.0	pypi	typing-extensions	<5.0.0,>=4.14.0	CAPPED	4.16.0	97	4.16.0	97	OK
+google-genai	2.28.0	pypi	distro	<2,>=1.7.0	CAPPED	1.9.0	1018	1.9.0	1018	OK
+google-genai	2.28.0	pypi	sniffio	*	ANY	1.3.1	955	1.3.1	955	OK
+hf-xet	1.7.0	pypi	-	-	-					NO-DEPS
+langchain	1.4.3	pypi	langchain-core	<2.0.0,>=1.6.3	CAPPED	1.6.7	1	1.6.7	1	OK
+langchain	1.4.3	pypi	langgraph	<1.3.0,>=1.2.11	CAPPED	1.2.14	1	1.2.14	1	OK
+langchain	1.4.3	pypi	pydantic	<3.0.0,>=2.7.4	CAPPED	2.13.5	40	2.13.5	40	OK
+langchain-anthropic	1.7.5	pypi	anthropic	<2.0.0,>=0.120.0	CAPPED	1.11.0	7	1.11.0	7	OK
+langchain-anthropic	1.7.5	pypi	langchain-core	<2.0.0,>=1.6.6	CAPPED	1.6.7	1	1.6.7	1	OK
+langchain-anthropic	1.7.5	pypi	pydantic	<3.0.0,>=2.7.4	CAPPED	2.13.5	40	2.13.5	40	OK
+langchain-deepseek	1.1.1	pypi	langchain-core	<2.0.0,>=1.4.7	CAPPED	1.6.7	1	1.6.7	1	OK
+langchain-deepseek	1.1.1	pypi	langchain-openai	<2.0.0,>=1.3.1	CAPPED	1.6.7	7	1.6.7	7	OK
+langchain-google-genai	4.4.0	pypi	filetype	<2.0.0,>=1.2.0	CAPPED	1.2.0	1435	1.2.0	1435	OK
+langchain-google-genai	4.4.0	pypi	google-genai	<3.0.0,>=2.20.0	CAPPED	2.28.0	5	2.28.0	5	OK
+langchain-google-genai	4.4.0	pypi	langchain-core	<2.0.0,>=1.6.1	CAPPED	1.6.7	1	1.6.7	1	OK
+langchain-google-genai	4.4.0	pypi	pydantic	<3.0.0,>=2.0.0	CAPPED	2.13.5	40	2.13.5	40	OK
+langchain-openai	1.6.7	pypi	certifi	>=2024.6.2	FLOOR	2026.7.22	77	2026.7.22	77	OK
+langchain-openai	1.6.7	pypi	langchain-core	<2.0.0,>=1.6.6	CAPPED	1.6.7	1	1.6.7	1	OK
+langchain-openai	1.6.7	pypi	openai	<4.0.0,>=2.45.0	CAPPED	3.26.0	1	3.26.0	1	OK
+langchain-openai	1.6.7	pypi	tiktoken	<1.0.0,>=0.7.0	CAPPED	0.14.0	51	0.14.0	51	OK
+nbconvert	7.17.1	pypi	beautifulsoup4	*	ANY	4.15.0	122	4.15.0	122	OK
+nbconvert	7.17.1	pypi	bleach	!=5.0.0	ANY	6.4.0	124	6.4.0	124	OK
+nbconvert	7.17.1	pypi	defusedxml	*	ANY	0.7.1	2039	0.7.1	2039	OK
+nbconvert	7.17.1	pypi	importlib-metadata	>=3.6	FLOOR	9.0.1	40	9.0.1	40	OK
+nbconvert	7.17.1	pypi	jinja2	>=3.0	FLOOR	3.1.6	581	3.1.6	581	OK
+nbconvert	7.17.1	pypi	jupyter-core	>=4.7	FLOOR	5.9.1	356	5.9.1	356	OK
+nbconvert	7.17.1	pypi	jupyterlab-pygments	*	ANY	0.3.0	1049	0.3.0	1049	OK
+nbconvert	7.17.1	pypi	markupsafe	>=2.0	FLOOR	3.0.4	5	3.0.4	5	OK
+nbconvert	7.17.1	pypi	mistune	<4,>=2.0.3	CAPPED	3.3.4	77	3.3.4	77	OK
+nbconvert	7.17.1	pypi	nbclient	>=0.5.0	FLOOR	0.11.0	124	0.11.0	124	OK
+nbconvert	7.17.1	pypi	nbformat	>=5.7	FLOOR	5.11.1	51	5.11.1	51	OK
+nbconvert	7.17.1	pypi	packaging	*	ANY	26.3	64	26.3	64	OK
+nbconvert	7.17.1	pypi	pandocfilters	>=1.4.1	FLOOR	1.5.1	993	1.5.1	993	OK
+nbconvert	7.17.1	pypi	pygments	>=2.4.1	FLOOR	2.21.0	51	2.21.0	51	OK
+nbconvert	7.17.1	pypi	traitlets	>=5.1	FLOOR	5.16.1	65	5.16.1	65	OK
+nbformat	5.11.1	pypi	fastjsonschema	>=2.15	FLOOR	2.22.2	53	2.22.2	53	OK
+nbformat	5.11.1	pypi	jsonschema	>=2.6	FLOOR	4.26.0	273	4.26.0	273	OK
+nbformat	5.11.1	pypi	jupyter-core	!=5.0.*,>=4.12	FLOOR	5.9.1	356	5.9.1	356	OK
+nbformat	5.11.1	pypi	traitlets	>=5.1	FLOOR	5.16.1	65	5.16.1	65	OK
+rich	13.9.4	pypi	typing-extensions	<5.0,>=4.0.0	CAPPED	4.16.0	97	4.16.0	97	OK
+rich	13.9.4	pypi	pygments	<3.0.0,>=2.13.0	CAPPED	2.21.0	51	2.21.0	51	OK
+rich	13.9.4	pypi	markdown-it-py	>=2.2.0	FLOOR	4.2.0	153	4.2.0	153	OK
+anthropic	0.125.0	pypi	anyio	<5,>=3.5.0	CAPPED	4.15.1	32	4.15.1	32	OK
+anthropic	0.125.0	pypi	distro	<2,>=1.7.0	CAPPED	1.9.0	1018	1.9.0	1018	OK
+anthropic	0.125.0	pypi	docstring-parser	<1,>=0.15	CAPPED	0.18.0	176	0.18.0	176	OK
+anthropic	0.125.0	pypi	httpx	<1,>=0.25.0	CAPPED	0.28.1	670	0.28.1	670	OK
+anthropic	0.125.0	pypi	jiter	<1,>=0.4.0	CAPPED	0.17.0	25	0.17.0	25	OK
+anthropic	0.125.0	pypi	pydantic	<3,>=1.9.0	CAPPED	2.13.5	40	2.13.5	40	OK
+anthropic	0.125.0	pypi	sniffio	<2,>=1	CAPPED	1.3.1	955	1.3.1	955	OK
+anthropic	0.125.0	pypi	typing-extensions	<5,>=4.14	CAPPED	4.16.0	97	4.16.0	97	OK
+openai	1.109.1	pypi	anyio	<5,>=3.5.0	CAPPED	4.15.1	32	4.15.1	32	OK
+openai	1.109.1	pypi	distro	<2,>=1.7.0	CAPPED	1.9.0	1018	1.9.0	1018	OK
+openai	1.109.1	pypi	httpx	<1,>=0.23.0	CAPPED	0.28.1	670	0.28.1	670	OK
+openai	1.109.1	pypi	jiter	<1,>=0.4.0	CAPPED	0.17.0	25	0.17.0	25	OK
+openai	1.109.1	pypi	pydantic	<3,>=1.9.0	CAPPED	2.13.5	40	2.13.5	40	OK
+openai	1.109.1	pypi	sniffio	*	ANY	1.3.1	955	1.3.1	955	OK
+openai	1.109.1	pypi	tqdm	>4	FLOOR	4.70.1	26	4.70.1	26	OK
+openai	1.109.1	pypi	typing-extensions	<5,>=4.11	CAPPED	4.16.0	97	4.16.0	97	OK
+lxml	6.1.3	pypi	-	-	-					NO-DEPS
+reportlab	4.5.1	pypi	pillow	>=9.0.0	FLOOR	12.3.0	98	12.3.0	98	OK
+reportlab	4.5.1	pypi	charset-normalizer	*	ANY	3.5.2	7	3.5.2	7	OK
+sse-starlette	2.4.1	pypi	anyio	>=4.7.0	FLOOR	4.15.1	32	4.15.1	32	OK
+mcp	1.30.0	pypi	anyio	>=4.5	FLOOR	4.15.1	32	4.15.1	32	OK
+mcp	1.30.0	pypi	httpx-sse	>=0.4	FLOOR	0.4.3	362	0.4.3	362	OK
+mcp	1.30.0	pypi	httpx	<1.0.0,>=0.27.1	CAPPED	0.28.1	670	0.28.1	670	OK
+mcp	1.30.0	pypi	jsonschema	>=4.20.0	FLOOR	4.26.0	273	4.26.0	273	OK
+mcp	1.30.0	pypi	pydantic-settings	>=2.5.2	FLOOR	2.15.0	61	2.15.0	61	OK
+mcp	1.30.0	pypi	pydantic	<3.0.0,>=2.11.0	CAPPED	2.13.5	40	2.13.5	40	OK
+mcp	1.30.0	pypi	pydantic	<3.0.0,>=2.12.0	CAPPED	2.13.5	40	2.13.5	40	OK
+mcp	1.30.0	pypi	pyjwt	>=2.10.1	FLOOR	2.15.1	9	2.15.1	9	OK
+mcp	1.30.0	pypi	python-multipart	>=0.0.9	FLOOR	0.0.32	125	0.0.32	125	OK
+mcp	1.30.0	pypi	pywin32	>=310	FLOOR	312	125	312	125	OK
+mcp	1.30.0	pypi	pywin32	>=311	FLOOR	312	125	312	125	OK
+mcp	1.30.0	pypi	sse-starlette	>=1.6.1	FLOOR	3.5.0	9	3.5.0	9	OK
+mcp	1.30.0	pypi	starlette	>=0.27	FLOOR	1.7.0	14	1.7.0	14	OK
+mcp	1.30.0	pypi	starlette	>=0.48.0	FLOOR	1.7.0	14	1.7.0	14	OK
+mcp	1.30.0	pypi	typing-extensions	>=4.9.0	FLOOR	4.16.0	97	4.16.0	97	OK
+mcp	1.30.0	pypi	typing-inspection	>=0.4.1	FLOOR	0.4.4	56	0.4.4	56	OK
+mcp	1.30.0	pypi	uvicorn	>=0.31.1	FLOOR	0.54.0	12	0.54.0	12	OK
+apscheduler	3.11.3	pypi	tzlocal	>=3.0	FLOOR	5.4.4	100	5.4.4	100	OK
+apscheduler	3.11.3	pypi	backports.zoneinfo	*	ANY	0.2.1	2297	0.2.1	2297	OK
+urllib3	2.8.0	pypi	-	-	-					NO-DEPS
+dspy-ai	3.4.0	pypi	dspy	>=3.4.0	FLOOR	3.4.0	12	3.4.0	12	OK
+uv	0.12.23	pypi	-	-	-					NO-DEPS
+agent-framework-core	1.20.0	pypi	msgspec	<0.23,>=0.20.0	CAPPED	0.22.0	8	0.22.0	8	OK
+agent-framework-core	1.20.0	pypi	typing-extensions	<5,>=4.15.0	CAPPED	4.16.0	97	4.16.0	97	OK
+agent-framework-core	1.20.0	pypi	pydantic	<3,>=2	CAPPED	2.13.5	40	2.13.5	40	OK
+agent-framework-core	1.20.0	pypi	python-dotenv	<2,>=1	CAPPED	1.2.4	6	1.2.4	6	OK
+agent-framework-core	1.20.0	pypi	opentelemetry-api	<2,>=1.39.0	CAPPED	1.45.1	1	1.45.1	1	OK
+agent-framework-core	1.20.0	pypi	pyyaml	<7.0,>=6.0	CAPPED	6.0.3	377	6.0.3	377	OK
+agent-framework-core	1.20.0	pypi	regex	>=2024.11.6	FLOOR	2026.9.29	8	2026.9.29	8	OK
+annotated-types	0.8.0	pypi	-	-	-					NO-DEPS
+anyio	4.14.2	pypi	exceptiongroup	>=1.0.2	FLOOR	1.3.1	320	1.3.1	320	OK
+anyio	4.14.2	pypi	idna	>=2.8	FLOOR	3.20	20	3.20	20	OK
+anyio	4.14.2	pypi	typing_extensions	>=4.5	FLOOR	4.16.0	97	4.16.0	97	OK
+apache-beam	2.67.0	pypi	crcmod	<2.0,>=1.7	CAPPED	1.7	5946	1.7	5946	OK
+apache-beam	2.67.0	pypi	orjson	<4,>=3.9.7	CAPPED	3.12.0	54	3.12.0	54	OK
+apache-beam	2.67.0	pypi	dill	<0.3.2,>=0.3.1.1	CAPPED	0.3.1.1	2566	0.4.1	261	OK
+apache-beam	2.67.0	pypi	fastavro	<2,>=0.23.6	CAPPED	1.13.0	2	1.13.0	2	OK
+apache-beam	2.67.0	pypi	fasteners	<1.0,>=0.3	CAPPED	0.20	422	0.20	422	OK
+apache-beam	2.67.0	pypi	grpcio	!=1.48.0,!=1.59.*,!=1.60.*,!=1.61.*,!=1.62.0,!=1.62.1,<1.66.0,<2,>=1.33.1	CAPPED	1.65.5	781	1.84.0	23	OK
+apache-beam	2.67.0	pypi	grpcio	>=1.67.0	FLOOR	1.84.0	23	1.84.0	23	OK
+apache-beam	2.67.0	pypi	hdfs	<3.0.0,>=2.1.0	CAPPED	2.7.3	1090	2.7.3	1090	OK
+apache-beam	2.67.0	pypi	httplib2	<0.23.0,>=0.8	CAPPED	0.22.0	1296	0.32.0	103	OK
+apache-beam	2.67.0	pypi	jsonschema	<5.0.0,>=4.0.0	CAPPED	4.26.0	273	4.26.0	273	OK
+apache-beam	2.67.0	pypi	jsonpickle	<4.0.0,>=3.0.0	CAPPED	3.4.2	700	4.1.3	5	OK
+apache-beam	2.67.0	pypi	numpy	<2.3.0,>=1.14.3	CAPPED	2.2.6	508	2.5.3	31	OK
+apache-beam	2.67.0	pypi	objsize	<0.8.0,>=0.6.1	CAPPED	0.7.1	626	0.8.0	262	OK
+apache-beam	2.67.0	pypi	packaging	>=22.0	FLOOR	26.3	64	26.3	64	OK
+apache-beam	2.67.0	pypi	pymongo	<5.0.0,>=3.8.0	CAPPED	4.18.2	13	4.18.2	13	OK
+apache-beam	2.67.0	pypi	proto-plus	<2,>=1.7.1	CAPPED	1.29.0	8	1.29.0	8	OK
+apache-beam	2.67.0	pypi	protobuf	!=4.0.*,!=4.21.*,!=4.22.0,!=4.23.*,!=4.24.*,<6.0.0.dev0,>=3.20.3	CAPPED	5.29.6	245	7.36.2	20	OK
+apache-beam	2.67.0	pypi	pydot	<2,>=1.2.0	CAPPED	1.4.2	2060	4.0.1	477	OK
+apache-beam	2.67.0	pypi	python-dateutil	<3,>=2.8.0	CAPPED	2.9.0	950	2.9.0	950	OK
+apache-beam	2.67.0	pypi	pytz	>=2018.3	FLOOR	2026.5	3	2026.5	3	OK
+apache-beam	2.67.0	pypi	redis	<6,>=5.0.0	CAPPED	5.3.1	439	8.1.0	69	OK
+apache-beam	2.67.0	pypi	regex	>=2020.6.8	FLOOR	2026.9.29	8	2026.9.29	8	OK
+apache-beam	2.67.0	pypi	requests	<3.0.0,>=2.32.4	CAPPED	2.34.2	146	2.34.2	146	OK
+apache-beam	2.67.0	pypi	sortedcontainers	>=2.4.0	FLOOR	2.4.0	1970	2.4.0	1970	OK
+apache-beam	2.67.0	pypi	typing-extensions	>=3.7.0	FLOOR	4.16.0	97	4.16.0	97	OK
+apache-beam	2.67.0	pypi	zstandard	<1,>=0.18.0	CAPPED	0.25.0	388	0.25.0	388	OK
+apache-beam	2.67.0	pypi	pyyaml	<7.0.0,>=3.12	CAPPED	6.0.3	377	6.0.3	377	OK
+apache-beam	2.67.0	pypi	pymilvus	<3.0.0,>=2.5.10	CAPPED	2.6.17	82	3.0.2	19	OK
+apache-beam	2.67.0	pypi	pyarrow	<19.0.0,>=3.0.0	CAPPED	18.1.0	680	25.0.1	58	OK
+apache-beam	2.67.0	pypi	pyarrow-hotfix	<1	CAPPED	0.7	530	0.7	530	OK
+attrs	26.1.0	pypi	-	-	-					NO-DEPS
+azure-cognitiveservices-speech	1.41.1	pypi	-	-	-					NO-DEPS
+beautifulsoup4	4.12.3	pypi	soupsieve	>1.2	FLOOR	2.10	13	2.10	13	OK
+bleach	4.1.0	pypi	-	-	-					NO-DEPS
+cachecontrol	0.14.4	pypi	requests	>=2.16.0	FLOOR	2.34.2	146	2.34.2	146	OK
+cachecontrol	0.14.4	pypi	msgpack	<2.0.0,>=0.5.2	CAPPED	1.2.3	8	1.2.3	8	OK
+cachetools	5.5.2	pypi	-	-	-					NO-DEPS
+certifi	2026.7.22	pypi	-	-	-					NO-DEPS
+cffi	2.1.1	pypi	pycparser	*	ANY	3.0	259	3.0	259	OK
+charset-normalizer	3.4.9	pypi	-	-	-					NO-DEPS
+crcmod	1.7	pypi	-	-	-					NO-DEPS
+cryptography	50.0.0	pypi	cffi	>=2.0.0	FLOOR	2.1.1	65	2.1.1	65	OK
+cryptography	50.0.0	pypi	typing-extensions	>=4.13.2	FLOOR	4.16.0	97	4.16.0	97	OK
+deepdiff	8.6.1	pypi	orderly-set	<6,>=5.4.1	CAPPED	5.5.0	454	5.5.0	454	OK
+dill	0.3.1.1	pypi	-	-	-					NO-DEPS
+distro	1.9.0	pypi	-	-	-					NO-DEPS
+dnspython	2.8.0	pypi	-	-	-					NO-DEPS
+docopt	0.6.2	pypi	-	-	-					NO-DEPS
+docstring-parser	0.18.0	pypi	-	-	-					NO-DEPS
+faiss-cpu	1.15.0	pypi	numpy	>=1.25	FLOOR	2.5.3	31	2.5.3	31	OK
+faiss-cpu	1.15.0	pypi	packaging	*	ANY	26.3	64	26.3	64	OK
+fastavro	1.12.2	pypi	-	-	-					NO-DEPS
+fasteners	0.20	pypi	-	-	-					NO-DEPS
+filetype	1.2.0	pypi	-	-	-					NO-DEPS
+firebase-admin	6.9.0	pypi	cachecontrol	>=0.12.14	FLOOR	0.14.4	327	0.14.4	327	OK
+firebase-admin	6.9.0	pypi	google-api-python-client	>=1.7.8	FLOOR	2.201.0	7	2.201.0	7	OK
+firebase-admin	6.9.0	pypi	google-cloud-storage	>=1.37.1	FLOOR	3.16.0	6	3.16.0	6	OK
+firebase-admin	6.9.0	pypi	pyjwt	>=2.5.0	FLOOR	2.15.1	9	2.15.1	9	OK
+firebase-admin	6.9.0	pypi	httpx	==0.28.1	EXACT	0.28.1	670	0.28.1	670	OK
+firebase-admin	6.9.0	pypi	google-api-core	<3.0.0dev,>=1.22.1	CAPPED	2.41.0	2	2.41.0	2	OK
+firebase-admin	6.9.0	pypi	google-cloud-firestore	>=2.19.0	FLOOR	2.34.0	6	2.34.0	6	OK
+future	1.0.0	pypi	-	-	-					NO-DEPS
+google-api-core	2.30.3	pypi	googleapis-common-protos	<2.0.0,>=1.63.2	CAPPED	1.75.5	8	1.75.5	8	OK
+google-api-core	2.30.3	pypi	protobuf	<8.0.0,>=4.25.8	CAPPED	7.36.2	20	7.36.2	20	OK
+google-api-core	2.30.3	pypi	proto-plus	<2.0.0,>=1.22.3	CAPPED	1.29.0	8	1.29.0	8	OK
+google-api-core	2.30.3	pypi	proto-plus	<2.0.0,>=1.25.0	CAPPED	1.29.0	8	1.29.0	8	OK
+google-api-core	2.30.3	pypi	google-auth	<3.0.0,>=2.14.1	CAPPED	2.60.0	2	2.60.0	2	OK
+google-api-core	2.30.3	pypi	requests	<3.0.0,>=2.20.0	CAPPED	2.34.2	146	2.34.2	146	OK
+google-api-python-client	2.198.0	pypi	httplib2	<1.0.0,>=0.19.0	CAPPED	0.32.0	103	0.32.0	103	OK
+google-api-python-client	2.198.0	pypi	google-auth	!=2.24.0,!=2.25.0,<3.0.0,>=1.32.0	CAPPED	2.60.0	2	2.60.0	2	OK
+google-api-python-client	2.198.0	pypi	google-auth-httplib2	<1.0.0,>=0.2.0	CAPPED	0.4.4	6	0.4.4	6	OK
+google-api-python-client	2.198.0	pypi	google-api-core	!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,<3.0.0,>=1.31.5	CAPPED	2.41.0	2	2.41.0	2	OK
+google-api-python-client	2.198.0	pypi	uritemplate	<5,>=3.0.1	CAPPED	4.2.0	492	4.2.0	492	OK
+google-apitools	0.5.31	pypi	httplib2	>=0.8	FLOOR	0.32.0	103	0.32.0	103	OK
+google-apitools	0.5.31	pypi	fasteners	>=0.14	FLOOR	0.20	422	0.20	422	OK
+google-apitools	0.5.31	pypi	oauth2client	>=1.4.12	FLOOR	4.1.3	2952	4.1.3	2952	OK
+google-apitools	0.5.31	pypi	six	>=1.12.0	FLOOR	1.17.0	672	1.17.0	672	OK
+google-auth	2.40.3	pypi	cachetools	<6.0,>=2.0.0	CAPPED	5.5.2	594	7.2.1	2	OK
+google-auth	2.40.3	pypi	pyasn1-modules	>=0.2.1	FLOOR	0.4.2	558	0.4.2	558	OK
+google-auth	2.40.3	pypi	rsa	<5,>=3.1.4	CAPPED	4.9.1	539	4.9.1	539	OK
+google-auth-httplib2	0.2.1	pypi	google-auth	<3.0.0,>=1.32.0	CAPPED	2.60.0	2	2.60.0	2	OK
+google-auth-httplib2	0.2.1	pypi	httplib2	<1.0.0,>=0.19.0	CAPPED	0.32.0	103	0.32.0	103	OK
+google-cloud-aiplatform	1.130.0	pypi	google-api-core	!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,<3.0.0,>=1.34.1	CAPPED	2.41.0	2	2.41.0	2	OK
+google-cloud-aiplatform	1.130.0	pypi	google-auth	<3.0.0,>=2.14.1	CAPPED	2.60.0	2	2.60.0	2	OK
+google-cloud-aiplatform	1.130.0	pypi	proto-plus	<2.0.0,>=1.22.3	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-aiplatform	1.130.0	pypi	protobuf	!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<7.0.0,>=3.20.2	CAPPED	6.33.6	203	7.36.2	20	OK
+google-cloud-aiplatform	1.130.0	pypi	packaging	>=14.3	FLOOR	26.3	64	26.3	64	OK
+google-cloud-aiplatform	1.130.0	pypi	google-cloud-storage	<4.0.0,>=1.32.0	CAPPED	3.16.0	6	3.16.0	6	OK
+google-cloud-aiplatform	1.130.0	pypi	google-cloud-storage	<4.0.0,>=2.10.0	CAPPED	3.16.0	6	3.16.0	6	OK
+google-cloud-aiplatform	1.130.0	pypi	google-cloud-bigquery	!=3.20.0,<4.0.0,>=1.15.0	CAPPED	3.46.1	5	3.46.1	5	OK
+google-cloud-aiplatform	1.130.0	pypi	google-cloud-resource-manager	<3.0.0,>=1.3.3	CAPPED	1.19.0	6	1.19.0	6	OK
+google-cloud-aiplatform	1.130.0	pypi	shapely	<3.0.0	CAPPED	2.1.2	378	2.1.2	378	OK
+google-cloud-aiplatform	1.130.0	pypi	google-genai	<2.0.0,>=1.37.0	CAPPED	1.75.0	156	2.28.0	5	OK
+google-cloud-aiplatform	1.130.0	pypi	pydantic	<3	CAPPED	2.13.5	40	2.13.5	40	OK
+google-cloud-aiplatform	1.130.0	pypi	typing_extensions	*	ANY	4.16.0	97	4.16.0	97	OK
+google-cloud-aiplatform	1.130.0	pypi	docstring_parser	<1	CAPPED	0.18.0	176	0.18.0	176	OK
+google-cloud-appengine-logging	1.10.0	pypi	google-api-core	<3.0.0,>=2.17.1	CAPPED	2.41.0	2	2.41.0	2	OK
+google-cloud-appengine-logging	1.10.0	pypi	google-auth	!=2.24.0,!=2.25.0,<3.0.0,>=2.14.1	CAPPED	2.60.0	2	2.60.0	2	OK
+google-cloud-appengine-logging	1.10.0	pypi	grpcio	<2.0.0,>=1.59.0	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-appengine-logging	1.10.0	pypi	grpcio	<2.0.0,>=1.75.1	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-appengine-logging	1.10.0	pypi	proto-plus	<2.0.0,>=1.22.3	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-appengine-logging	1.10.0	pypi	proto-plus	<2.0.0,>=1.25.0	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-appengine-logging	1.10.0	pypi	protobuf	<8.0.0,>=4.25.8	CAPPED	7.36.2	20	7.36.2	20	OK
+google-cloud-audit-log	0.6.0	pypi	protobuf	<8.0.0,>=4.25.8	CAPPED	7.36.2	20	7.36.2	20	OK
+google-cloud-audit-log	0.6.0	pypi	googleapis-common-protos	<2.0.0,>=1.56.2	CAPPED	1.75.5	8	1.75.5	8	OK
+google-cloud-bigquery	3.42.3	pypi	google-api-core	<3.0.0,>=2.25.0	CAPPED	2.41.0	2	2.41.0	2	OK
+google-cloud-bigquery	3.42.3	pypi	google-auth	<3.0.0,>=2.14.1	CAPPED	2.60.0	2	2.60.0	2	OK
+google-cloud-bigquery	3.42.3	pypi	google-cloud-core	<3.0.0,>=2.4.1	CAPPED	2.8.0	8	2.8.0	8	OK
+google-cloud-bigquery	3.42.3	pypi	google-resumable-media	<3.0.0,>=2.0.0	CAPPED	2.11.0	8	2.11.0	8	OK
+google-cloud-bigquery	3.42.3	pypi	packaging	>=24.2.0	FLOOR	26.3	64	26.3	64	OK
+google-cloud-bigquery	3.42.3	pypi	python-dateutil	<3.0.0,>=2.8.2	CAPPED	2.9.0	950	2.9.0	950	OK
+google-cloud-bigquery	3.42.3	pypi	requests	<3.0.0,>=2.21.0	CAPPED	2.34.2	146	2.34.2	146	OK
+google-cloud-bigquery-storage	2.39.0	pypi	google-api-core	<3.0.0,>=2.17.1	CAPPED	2.41.0	2	2.41.0	2	OK
+google-cloud-bigquery-storage	2.39.0	pypi	google-auth	!=2.24.0,!=2.25.0,<3.0.0,>=2.14.1	CAPPED	2.60.0	2	2.60.0	2	OK
+google-cloud-bigquery-storage	2.39.0	pypi	grpcio	<2.0.0,>=1.59.0	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-bigquery-storage	2.39.0	pypi	grpcio	<2.0.0,>=1.75.1	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-bigquery-storage	2.39.0	pypi	proto-plus	<2.0.0,>=1.22.3	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-bigquery-storage	2.39.0	pypi	proto-plus	<2.0.0,>=1.25.0	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-bigquery-storage	2.39.0	pypi	protobuf	<8.0.0,>=4.25.8	CAPPED	7.36.2	20	7.36.2	20	OK
+google-cloud-bigtable	2.39.0	pypi	google-api-core	<3.0.0,>=2.17.1	CAPPED	2.41.0	2	2.41.0	2	OK
+google-cloud-bigtable	2.39.0	pypi	google-auth	!=2.24.0,!=2.25.0,<3.0.0,>=2.14.1	CAPPED	2.60.0	2	2.60.0	2	OK
+google-cloud-bigtable	2.39.0	pypi	grpcio	<2.0.0,>=1.59.0	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-bigtable	2.39.0	pypi	grpcio	<2.0.0,>=1.75.1	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-bigtable	2.39.0	pypi	proto-plus	<2.0.0,>=1.22.3	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-bigtable	2.39.0	pypi	proto-plus	<2.0.0,>=1.25.0	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-bigtable	2.39.0	pypi	protobuf	<8.0.0,>=4.25.8	CAPPED	7.36.2	20	7.36.2	20	OK
+google-cloud-bigtable	2.39.0	pypi	google-cloud-core	<3.0.0,>=2.0.0	CAPPED	2.8.0	8	2.8.0	8	OK
+google-cloud-bigtable	2.39.0	pypi	grpc-google-iam-v1	<1.0.0,>=0.14.0	CAPPED	0.14.5	62	0.14.5	62	OK
+google-cloud-bigtable	2.39.0	pypi	google-crc32c	<2.0.0dev,>=1.6.0	CAPPED	1.9.0	13	1.9.0	13	OK
+google-cloud-core	2.6.0	pypi	google-api-core	<3.0.0,>=2.11.0	CAPPED	2.41.0	2	2.41.0	2	OK
+google-cloud-core	2.6.0	pypi	google-auth	!=2.24.0,!=2.25.0,<3.0.0,>=2.14.1	CAPPED	2.60.0	2	2.60.0	2	OK
+google-cloud-dataflow-client	0.9.0	pypi	google-api-core	!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0,>=1.34.1	CAPPED	2.41.0	2	2.41.0	2	OK
+google-cloud-dataflow-client	0.9.0	pypi	google-auth	!=2.24.0,!=2.25.0,<3.0.0,>=2.14.1	CAPPED	2.60.0	2	2.60.0	2	OK
+google-cloud-dataflow-client	0.9.0	pypi	proto-plus	<2.0.0,>=1.22.3	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-dataflow-client	0.9.0	pypi	protobuf	!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<7.0.0,>=3.20.2	CAPPED	6.33.6	203	7.36.2	20	OK
+google-cloud-dataflow-client	0.9.0	pypi	proto-plus	<2.0.0,>=1.25.0	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-datastore	2.25.0	pypi	google-auth	!=2.24.0,!=2.25.0,<3.0.0,>=2.14.1	CAPPED	2.60.0	2	2.60.0	2	OK
+google-cloud-datastore	2.25.0	pypi	google-cloud-core	<3.0.0,>=2.0.0	CAPPED	2.8.0	8	2.8.0	8	OK
+google-cloud-datastore	2.25.0	pypi	grpcio	<2.0.0,>=1.59.0	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-datastore	2.25.0	pypi	grpcio	<2.0.0,>=1.75.1	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-datastore	2.25.0	pypi	proto-plus	<2.0.0,>=1.22.3	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-datastore	2.25.0	pypi	proto-plus	<2.0.0,>=1.25.0	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-datastore	2.25.0	pypi	protobuf	<8.0.0,>=4.25.8	CAPPED	7.36.2	20	7.36.2	20	OK
+google-cloud-datastore	2.25.0	pypi	google-api-core	<3.0.0,>=2.17.1	CAPPED	2.41.0	2	2.41.0	2	OK
+google-cloud-dlp	3.38.0	pypi	google-api-core	<3.0.0,>=2.17.1	CAPPED	2.41.0	2	2.41.0	2	OK
+google-cloud-dlp	3.38.0	pypi	google-auth	!=2.24.0,!=2.25.0,<3.0.0,>=2.14.1	CAPPED	2.60.0	2	2.60.0	2	OK
+google-cloud-dlp	3.38.0	pypi	grpcio	<2.0.0,>=1.59.0	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-dlp	3.38.0	pypi	grpcio	<2.0.0,>=1.75.1	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-dlp	3.38.0	pypi	proto-plus	<2.0.0,>=1.22.3	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-dlp	3.38.0	pypi	proto-plus	<2.0.0,>=1.25.0	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-dlp	3.38.0	pypi	protobuf	<8.0.0,>=4.25.8	CAPPED	7.36.2	20	7.36.2	20	OK
+google-cloud-firestore	2.27.0	pypi	google-api-core	<3.0.0,>=2.11.0	CAPPED	2.41.0	2	2.41.0	2	OK
+google-cloud-firestore	2.27.0	pypi	google-auth	!=2.24.0,!=2.25.0,<3.0.0,>=2.14.1	CAPPED	2.60.0	2	2.60.0	2	OK
+google-cloud-firestore	2.27.0	pypi	google-cloud-core	<3.0.0,>=2.0.0	CAPPED	2.8.0	8	2.8.0	8	OK
+google-cloud-firestore	2.27.0	pypi	grpcio	<2.0.0,>=1.33.2	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-firestore	2.27.0	pypi	grpcio	<2.0.0,>=1.75.1	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-firestore	2.27.0	pypi	proto-plus	<2.0.0,>=1.22.3	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-firestore	2.27.0	pypi	proto-plus	<2.0.0,>=1.25.0	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-firestore	2.27.0	pypi	protobuf	<8.0.0,>=4.25.8	CAPPED	7.36.2	20	7.36.2	20	OK
+google-cloud-language	2.21.0	pypi	google-api-core	<3.0.0,>=2.17.1	CAPPED	2.41.0	2	2.41.0	2	OK
+google-cloud-language	2.21.0	pypi	google-auth	!=2.24.0,!=2.25.0,<3.0.0,>=2.14.1	CAPPED	2.60.0	2	2.60.0	2	OK
+google-cloud-language	2.21.0	pypi	grpcio	<2.0.0,>=1.59.0	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-language	2.21.0	pypi	grpcio	<2.0.0,>=1.75.1	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-language	2.21.0	pypi	proto-plus	<2.0.0,>=1.22.3	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-language	2.21.0	pypi	proto-plus	<2.0.0,>=1.25.0	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-language	2.21.0	pypi	protobuf	<8.0.0,>=4.25.8	CAPPED	7.36.2	20	7.36.2	20	OK
+google-cloud-logging	3.12.1	pypi	google-api-core	!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0,>=1.34.1	CAPPED	2.41.0	2	2.41.0	2	OK
+google-cloud-logging	3.12.1	pypi	google-auth	!=2.24.0,!=2.25.0,<3.0.0,>=2.14.1	CAPPED	2.60.0	2	2.60.0	2	OK
+google-cloud-logging	3.12.1	pypi	google-cloud-appengine-logging	<2.0.0,>=0.1.3	CAPPED	1.11.0	6	1.11.0	6	OK
+google-cloud-logging	3.12.1	pypi	google-cloud-audit-log	<1.0.0,>=0.3.1	CAPPED	0.6.2	44	0.6.2	44	OK
+google-cloud-logging	3.12.1	pypi	google-cloud-core	<3.0.0,>=2.0.0	CAPPED	2.8.0	8	2.8.0	8	OK
+google-cloud-logging	3.12.1	pypi	grpc-google-iam-v1	<1.0.0,>=0.12.4	CAPPED	0.14.5	62	0.14.5	62	OK
+google-cloud-logging	3.12.1	pypi	opentelemetry-api	>=1.9.0	FLOOR	1.45.1	1	1.45.1	1	OK
+google-cloud-logging	3.12.1	pypi	proto-plus	<2.0.0,>=1.22.0	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-logging	3.12.1	pypi	protobuf	!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<7.0.0,>=3.20.2	CAPPED	6.33.6	203	7.36.2	20	OK
+google-cloud-logging	3.12.1	pypi	proto-plus	<2.0.0,>=1.22.2	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-logging	3.12.1	pypi	proto-plus	<2.0.0,>=1.25.0	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-monitoring	2.31.0	pypi	google-api-core	<3.0.0,>=2.17.1	CAPPED	2.41.0	2	2.41.0	2	OK
+google-cloud-monitoring	2.31.0	pypi	google-auth	!=2.24.0,!=2.25.0,<3.0.0,>=2.14.1	CAPPED	2.60.0	2	2.60.0	2	OK
+google-cloud-monitoring	2.31.0	pypi	grpcio	<2.0.0,>=1.59.0	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-monitoring	2.31.0	pypi	grpcio	<2.0.0,>=1.75.1	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-monitoring	2.31.0	pypi	proto-plus	<2.0.0,>=1.22.3	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-monitoring	2.31.0	pypi	proto-plus	<2.0.0,>=1.25.0	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-monitoring	2.31.0	pypi	protobuf	<8.0.0,>=4.25.8	CAPPED	7.36.2	20	7.36.2	20	OK
+google-cloud-ndb	2.3.4	pypi	google-api-core	!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0,>=1.34.0	CAPPED	2.41.0	2	2.41.0	2	OK
+google-cloud-ndb	2.3.4	pypi	google-cloud-datastore	!=2.20.2,<3.0.0,>=2.16.0	CAPPED	2.27.0	6	2.27.0	6	OK
+google-cloud-ndb	2.3.4	pypi	protobuf	!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<7.0.0,>=3.20.2	CAPPED	6.33.6	203	7.36.2	20	OK
+google-cloud-ndb	2.3.4	pypi	pymemcache	<5.0.0,>=2.1.0	CAPPED	4.0.0	1451	4.0.0	1451	OK
+google-cloud-ndb	2.3.4	pypi	pytz	>=2018.3	FLOOR	2026.5	3	2026.5	3	OK
+google-cloud-ndb	2.3.4	pypi	redis	<7.0.0,>=3.0.0	CAPPED	6.4.0	426	8.1.0	69	OK
+google-cloud-pubsub	2.39.0	pypi	google-api-core	<3.0.0,>=2.17.1	CAPPED	2.41.0	2	2.41.0	2	OK
+google-cloud-pubsub	2.39.0	pypi	google-auth	!=2.24.0,!=2.25.0,<3.0.0,>=2.14.1	CAPPED	2.60.0	2	2.60.0	2	OK
+google-cloud-pubsub	2.39.0	pypi	grpcio	<2.0.0,>=1.51.3	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-pubsub	2.39.0	pypi	grpcio	<2.0.0,>=1.75.1	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-pubsub	2.39.0	pypi	proto-plus	<2.0.0,>=1.22.3	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-pubsub	2.39.0	pypi	proto-plus	<2.0.0,>=1.25.0	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-pubsub	2.39.0	pypi	protobuf	<8.0.0,>=4.25.8	CAPPED	7.36.2	20	7.36.2	20	OK
+google-cloud-pubsub	2.39.0	pypi	grpc-google-iam-v1	<1.0.0,>=0.14.0	CAPPED	0.14.5	62	0.14.5	62	OK
+google-cloud-pubsub	2.39.0	pypi	grpcio-status	>=1.51.3	FLOOR	1.84.0	23	1.84.0	23	OK
+google-cloud-pubsub	2.39.0	pypi	opentelemetry-api	>=1.27.0	FLOOR	1.45.1	1	1.45.1	1	OK
+google-cloud-pubsub	2.39.0	pypi	opentelemetry-sdk	>=1.27.0	FLOOR	1.45.1	1	1.45.1	1	OK
+google-cloud-pubsublite	1.13.0	pypi	google-cloud-pubsub	<3.0.0,>=2.10.0	CAPPED	2.42.0	6	2.42.0	6	OK
+google-cloud-pubsublite	1.13.0	pypi	grpcio	<2.0.0,>=1.38.1	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-pubsublite	1.13.0	pypi	grpcio	<2.0.0,>=1.75.1	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-pubsublite	1.13.0	pypi	grpcio-status	<2.0.0,>=1.38.1	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-pubsublite	1.13.0	pypi	grpcio-status	<2.0.0,>=1.75.1	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-pubsublite	1.13.0	pypi	overrides	<8.0.0,>=6.0.1	CAPPED	7.7.0	984	7.7.0	984	OK
+google-cloud-pubsublite	1.13.0	pypi	overrides	<8.0.0,>=7.0.1	CAPPED	7.7.0	984	7.7.0	984	OK
+google-cloud-pubsublite	1.13.0	pypi	google-api-core	!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,<3.0.0,>=1.33.2	CAPPED	2.41.0	2	2.41.0	2	OK
+google-cloud-pubsublite	1.13.0	pypi	proto-plus	<2.0.0,>=1.22.3	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-pubsublite	1.13.0	pypi	proto-plus	<2.0.0,>=1.25.0	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-recommendations-ai	0.10.18	pypi	google-api-core	!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0,>=1.34.1	CAPPED	2.41.0	2	2.41.0	2	OK
+google-cloud-recommendations-ai	0.10.18	pypi	google-auth	!=2.24.0,!=2.25.0,<3.0.0,>=2.14.1	CAPPED	2.60.0	2	2.60.0	2	OK
+google-cloud-recommendations-ai	0.10.18	pypi	proto-plus	<2.0.0,>=1.22.3	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-recommendations-ai	0.10.18	pypi	proto-plus	<2.0.0,>=1.25.0	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-recommendations-ai	0.10.18	pypi	protobuf	!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<7.0.0,>=3.20.2	CAPPED	6.33.6	203	7.36.2	20	OK
+google-cloud-resource-manager	1.18.0	pypi	google-api-core	<3.0.0,>=2.17.1	CAPPED	2.41.0	2	2.41.0	2	OK
+google-cloud-resource-manager	1.18.0	pypi	google-auth	!=2.24.0,!=2.25.0,<3.0.0,>=2.14.1	CAPPED	2.60.0	2	2.60.0	2	OK
+google-cloud-resource-manager	1.18.0	pypi	grpcio	<2.0.0,>=1.59.0	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-resource-manager	1.18.0	pypi	grpcio	<2.0.0,>=1.75.1	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-resource-manager	1.18.0	pypi	proto-plus	<2.0.0,>=1.22.3	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-resource-manager	1.18.0	pypi	proto-plus	<2.0.0,>=1.25.0	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-resource-manager	1.18.0	pypi	protobuf	<8.0.0,>=4.25.8	CAPPED	7.36.2	20	7.36.2	20	OK
+google-cloud-resource-manager	1.18.0	pypi	grpc-google-iam-v1	<1.0.0,>=0.14.0	CAPPED	0.14.5	62	0.14.5	62	OK
+google-cloud-secret-manager	2.24.0	pypi	google-api-core	!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0,>=1.34.1	CAPPED	2.41.0	2	2.41.0	2	OK
+google-cloud-secret-manager	2.24.0	pypi	google-auth	!=2.24.0,!=2.25.0,<3.0.0,>=2.14.1	CAPPED	2.60.0	2	2.60.0	2	OK
+google-cloud-secret-manager	2.24.0	pypi	proto-plus	<2.0.0,>=1.22.3	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-secret-manager	2.24.0	pypi	proto-plus	<2.0.0,>=1.25.0	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-secret-manager	2.24.0	pypi	protobuf	!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<7.0.0,>=3.20.2	CAPPED	6.33.6	203	7.36.2	20	OK
+google-cloud-secret-manager	2.24.0	pypi	grpc-google-iam-v1	<1.0.0,>=0.14.0	CAPPED	0.14.5	62	0.14.5	62	OK
+google-cloud-spanner	3.68.0	pypi	google-api-core	<3.0.0,>=2.17.1	CAPPED	2.41.0	2	2.41.0	2	OK
+google-cloud-spanner	3.68.0	pypi	google-auth	!=2.24.0,!=2.25.0,<3.0.0,>=2.14.1	CAPPED	2.60.0	2	2.60.0	2	OK
+google-cloud-spanner	3.68.0	pypi	google-cloud-core	<3.0.0,>=2.0.0	CAPPED	2.8.0	8	2.8.0	8	OK
+google-cloud-spanner	3.68.0	pypi	grpcio	<2.0.0,>=1.49.1	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-spanner	3.68.0	pypi	grpcio	<2.0.0,>=1.75.1	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-spanner	3.68.0	pypi	grpc-google-iam-v1	<1.0.0,>=0.12.4	CAPPED	0.14.5	62	0.14.5	62	OK
+google-cloud-spanner	3.68.0	pypi	proto-plus	<2.0.0,>=1.22.3	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-spanner	3.68.0	pypi	proto-plus	<2.0.0,>=1.25.0	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-spanner	3.68.0	pypi	protobuf	<8.0.0,>=4.25.8	CAPPED	7.36.2	20	7.36.2	20	OK
+google-cloud-spanner	3.68.0	pypi	grpc-interceptor	>=0.15.4	FLOOR	0.15.4	1056	0.15.4	1056	OK
+google-cloud-spanner	3.68.0	pypi	sqlparse	>=0.4.4	FLOOR	0.6.0	55	0.6.0	55	OK
+google-cloud-spanner	3.68.0	pypi	opentelemetry-api	>=1.22.0	FLOOR	1.45.1	1	1.45.1	1	OK
+google-cloud-spanner	3.68.0	pypi	opentelemetry-sdk	>=1.22.0	FLOOR	1.45.1	1	1.45.1	1	OK
+google-cloud-spanner	3.68.0	pypi	opentelemetry-semantic-conventions	>=0.43b0	FLOOR	0.66b1	1	0.66b1	1	OK
+google-cloud-spanner	3.68.0	pypi	opentelemetry-resourcedetector-gcp	>=1.8.0a0	FLOOR	1.14.0	75	1.14.0	75	OK
+google-cloud-spanner	3.68.0	pypi	google-cloud-monitoring	>=2.16.0	FLOOR	2.32.0	6	2.32.0	6	OK
+google-cloud-spanner	3.68.0	pypi	mmh3	>=4.1.0	FLOOR	5.3.1	7	5.3.1	7	OK
+google-cloud-storage	2.19.0	pypi	google-auth	<3.0dev,>=2.26.1	CAPPED	2.60.0	2	2.60.0	2	OK
+google-cloud-storage	2.19.0	pypi	google-api-core	<3.0.0dev,>=2.15.0	CAPPED	2.41.0	2	2.41.0	2	OK
+google-cloud-storage	2.19.0	pypi	google-cloud-core	<3.0dev,>=2.3.0	CAPPED	2.8.0	8	2.8.0	8	OK
+google-cloud-storage	2.19.0	pypi	google-resumable-media	>=2.7.2	FLOOR	2.11.0	8	2.11.0	8	OK
+google-cloud-storage	2.19.0	pypi	requests	<3.0.0dev,>=2.18.0	CAPPED	2.34.2	146	2.34.2	146	OK
+google-cloud-storage	2.19.0	pypi	google-crc32c	<2.0dev,>=1.0	CAPPED	1.9.0	13	1.9.0	13	OK
+google-cloud-tasks	2.19.3	pypi	google-api-core	!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0,>=1.34.1	CAPPED	2.41.0	2	2.41.0	2	OK
+google-cloud-tasks	2.19.3	pypi	google-auth	!=2.24.0,!=2.25.0,<3.0.0,>=2.14.1	CAPPED	2.60.0	2	2.60.0	2	OK
+google-cloud-tasks	2.19.3	pypi	proto-plus	<2.0.0,>=1.22.3	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-tasks	2.19.3	pypi	proto-plus	<2.0.0,>=1.25.0	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-tasks	2.19.3	pypi	protobuf	!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<7.0.0,>=3.20.2	CAPPED	6.33.6	203	7.36.2	20	OK
+google-cloud-tasks	2.19.3	pypi	grpc-google-iam-v1	<1.0.0,>=0.14.0	CAPPED	0.14.5	62	0.14.5	62	OK
+google-cloud-translate	3.21.1	pypi	google-api-core	!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0,>=1.34.1	CAPPED	2.41.0	2	2.41.0	2	OK
+google-cloud-translate	3.21.1	pypi	google-auth	!=2.24.0,!=2.25.0,<3.0.0,>=2.14.1	CAPPED	2.60.0	2	2.60.0	2	OK
+google-cloud-translate	3.21.1	pypi	google-cloud-core	<3.0.0,>=1.4.4	CAPPED	2.8.0	8	2.8.0	8	OK
+google-cloud-translate	3.21.1	pypi	proto-plus	<2.0.0,>=1.22.3	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-translate	3.21.1	pypi	proto-plus	<2.0.0,>=1.25.0	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-translate	3.21.1	pypi	protobuf	!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<7.0.0,>=3.20.2	CAPPED	6.33.6	203	7.36.2	20	OK
+google-cloud-translate	3.21.1	pypi	grpc-google-iam-v1	<1.0.0,>=0.14.0	CAPPED	0.14.5	62	0.14.5	62	OK
+google-cloud-videointelligence	2.20.0	pypi	google-api-core	<3.0.0,>=2.17.1	CAPPED	2.41.0	2	2.41.0	2	OK
+google-cloud-videointelligence	2.20.0	pypi	google-auth	!=2.24.0,!=2.25.0,<3.0.0,>=2.14.1	CAPPED	2.60.0	2	2.60.0	2	OK
+google-cloud-videointelligence	2.20.0	pypi	grpcio	<2.0.0,>=1.59.0	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-videointelligence	2.20.0	pypi	grpcio	<2.0.0,>=1.75.1	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-videointelligence	2.20.0	pypi	proto-plus	<2.0.0,>=1.22.3	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-videointelligence	2.20.0	pypi	proto-plus	<2.0.0,>=1.25.0	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-videointelligence	2.20.0	pypi	protobuf	<8.0.0,>=4.25.8	CAPPED	7.36.2	20	7.36.2	20	OK
+google-cloud-vision	3.15.0	pypi	google-api-core	<3.0.0,>=2.17.1	CAPPED	2.41.0	2	2.41.0	2	OK
+google-cloud-vision	3.15.0	pypi	google-auth	!=2.24.0,!=2.25.0,<3.0.0,>=2.14.1	CAPPED	2.60.0	2	2.60.0	2	OK
+google-cloud-vision	3.15.0	pypi	grpcio	<2.0.0,>=1.59.0	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-vision	3.15.0	pypi	grpcio	<2.0.0,>=1.75.1	CAPPED	1.84.0	23	1.84.0	23	OK
+google-cloud-vision	3.15.0	pypi	proto-plus	<2.0.0,>=1.22.3	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-vision	3.15.0	pypi	proto-plus	<2.0.0,>=1.25.0	CAPPED	1.29.0	8	1.29.0	8	OK
+google-cloud-vision	3.15.0	pypi	protobuf	<8.0.0,>=4.25.8	CAPPED	7.36.2	20	7.36.2	20	OK
+google-crc32c	1.8.0	pypi	-	-	-					NO-DEPS
+google-genai	1.55.0	pypi	anyio	<5.0.0,>=4.8.0	CAPPED	4.15.1	32	4.15.1	32	OK
+google-genai	1.55.0	pypi	google-auth	<3.0.0,>=2.14.1	CAPPED	2.60.0	2	2.60.0	2	OK
+google-genai	1.55.0	pypi	httpx	<1.0.0,>=0.28.1	CAPPED	0.28.1	670	0.28.1	670	OK
+google-genai	1.55.0	pypi	pydantic	<3.0.0,>=2.9.0	CAPPED	2.13.5	40	2.13.5	40	OK
+google-genai	1.55.0	pypi	requests	<3.0.0,>=2.28.1	CAPPED	2.34.2	146	2.34.2	146	OK
+google-genai	1.55.0	pypi	tenacity	<9.2.0,>=8.2.3	CAPPED	9.1.4	242	9.1.4	242	OK
+google-genai	1.55.0	pypi	websockets	<15.1.0,>=13.0.0	CAPPED	15.0.1	581	17.2	4	OK
+google-genai	1.55.0	pypi	typing-extensions	<5.0.0,>=4.11.0	CAPPED	4.16.0	97	4.16.0	97	OK
+google-genai	1.55.0	pypi	distro	<2,>=1.7.0	CAPPED	1.9.0	1018	1.9.0	1018	OK
+google-genai	1.55.0	pypi	sniffio	*	ANY	1.3.1	955	1.3.1	955	OK
+google-resumable-media	2.10.0	pypi	google-crc32c	<2.0.0,>=1.0.0	CAPPED	1.9.0	13	1.9.0	13	OK
+googleapis-common-protos	1.75.0	pypi	protobuf	<8.0.0,>=4.25.8	CAPPED	7.36.2	20	7.36.2	20	OK
+grpc-google-iam-v1	0.14.4	pypi	grpcio	<2.0.0,>=1.44.0	CAPPED	1.84.0	23	1.84.0	23	OK
+grpc-google-iam-v1	0.14.4	pypi	googleapis-common-protos	<2.0.0,>=1.63.2	CAPPED	1.75.5	8	1.75.5	8	OK
+grpc-google-iam-v1	0.14.4	pypi	protobuf	<8.0.0,>=4.25.8	CAPPED	7.36.2	20	7.36.2	20	OK
+grpc-interceptor	0.15.4	pypi	grpcio	>=1.49.1,<2.0.0	CAPPED	1.84.0	23	1.84.0	23	OK
+grpcio	1.65.5	pypi	-	-	-					NO-DEPS
+grpcio-status	1.65.5	pypi	protobuf	<6.0dev,>=5.26.1	CAPPED	5.29.6	245	7.36.2	20	OK
+grpcio-status	1.65.5	pypi	grpcio	>=1.65.5	FLOOR	1.84.0	23	1.84.0	23	OK
+grpcio-status	1.65.5	pypi	googleapis-common-protos	>=1.5.5	FLOOR	1.75.5	8	1.75.5	8	OK
+gunicorn	23.0.0	pypi	packaging	*	ANY	26.3	64	26.3	64	OK
+gunicorn	23.0.0	pypi	importlib-metadata	*	ANY	9.0.1	40	9.0.1	40	OK
+h11	0.16.0	pypi	-	-	-					NO-DEPS
+h2	4.4.1	pypi	hyperframe	<7,>=6.1	CAPPED	6.1.0	623	6.1.0	623	OK
+h2	4.4.1	pypi	hpack	<5,>=4.2	CAPPED	4.2.0	106	4.2.0	106	OK
+hdfs	2.7.3	pypi	-	-	-					NO-DEPS
+hpack	4.2.0	pypi	-	-	-					NO-DEPS
+httpcore	1.0.9	pypi	certifi	*	ANY	2026.7.22	77	2026.7.22	77	OK
+httpcore	1.0.9	pypi	h11	>=0.16	FLOOR	0.16.0	531	0.16.0	531	OK
+httplib2	0.22.0	pypi	pyparsing	<3,>=2.4.2	CAPPED	2.4.7	2376	3.3.3	17	OK
+httplib2	0.22.0	pypi	pyparsing	!=3.0.0,!=3.0.1,!=3.0.2,!=3.0.3,<4,>=2.4.2	CAPPED	3.3.3	17	3.3.3	17	OK
+hyperframe	6.1.0	pypi	-	-	-					NO-DEPS
+idna	3.18	pypi	-	-	-					NO-DEPS
+jaraco-classes	3.4.0	pypi	more-itertools	*	ANY	11.1.0	138	11.1.0	138	OK
+jaraco-context	6.1.2	pypi	backports.tarfile	*	ANY	1.2.0	862	1.2.0	862	OK
+jaraco-functools	4.6.0	pypi	more_itertools	*	ANY	11.1.0	138	11.1.0	138	OK
+jeepney	0.9.0	pypi	-	-	-					NO-DEPS
+jsonpickle	3.4.2	pypi	-	-	-					NO-DEPS
+jsonschema-specifications	2025.9.1	pypi	referencing	>=0.31.0	FLOOR	0.37.0	359	0.37.0	359	OK
+keyring	25.7.0	pypi	pywin32-ctypes	>=0.2.0	FLOOR	0.2.3	784	0.2.3	784	OK
+keyring	25.7.0	pypi	SecretStorage	>=3.2	FLOOR	3.5.0	318	3.5.0	318	OK
+keyring	25.7.0	pypi	jeepney	>=0.4.2	FLOOR	0.9.0	587	0.9.0	587	OK
+keyring	25.7.0	pypi	importlib_metadata	>=4.11.4	FLOOR	9.0.1	40	9.0.1	40	OK
+keyring	25.7.0	pypi	jaraco.classes	*	ANY	3.4.0	920	3.4.0	920	OK
+keyring	25.7.0	pypi	jaraco.functools	*	ANY	4.6.0	85	4.6.0	85	OK
+keyring	25.7.0	pypi	jaraco.context	*	ANY	6.1.2	201	6.1.2	201	OK
+keyrings-google-artifactregistry-auth	1.1.2	pypi	google-auth	*	ANY	2.60.0	2	2.60.0	2	OK
+keyrings-google-artifactregistry-auth	1.1.2	pypi	keyring	*	ANY	25.7.0	325	25.7.0	325	OK
+keyrings-google-artifactregistry-auth	1.1.2	pypi	pluggy	*	ANY	1.6.0	510	1.6.0	510	OK
+keyrings-google-artifactregistry-auth	1.1.2	pypi	requests	*	ANY	2.34.2	146	2.34.2	146	OK
+mailchimp3	3.0.21	pypi	requests	>=2.7.0	FLOOR	2.34.2	146	2.34.2	146	OK
+milvus-lite	3.1.1	pypi	faiss-cpu	>=1.7.4	FLOOR	1.15.1	21	1.15.1	21	OK
+milvus-lite	3.1.1	pypi	grpcio	>=1.50	FLOOR	1.84.0	23	1.84.0	23	OK
+milvus-lite	3.1.1	pypi	numpy	>=1.24	FLOOR	2.5.3	31	2.5.3	31	OK
+milvus-lite	3.1.1	pypi	pyarrow	>=15.0	FLOOR	25.0.1	58	25.0.1	58	OK
+milvus-lite	3.1.1	pypi	tomli	>=2.0	FLOOR	2.4.1	196	2.4.1	196	OK
+mmh3	5.2.1	pypi	-	-	-					NO-DEPS
+more-itertools	11.1.0	pypi	-	-	-					NO-DEPS
+msgpack	1.2.1	pypi	-	-	-					NO-DEPS
+mutagen	1.47.0	pypi	-	-	-					NO-DEPS
+numpy	2.2.6	pypi	-	-	-					NO-DEPS
+oauth2client	4.1.3	pypi	httplib2	>=0.9.1	FLOOR	0.32.0	103	0.32.0	103	OK
+oauth2client	4.1.3	pypi	pyasn1	>=0.1.7	FLOOR	0.6.4	90	0.6.4	90	OK
+oauth2client	4.1.3	pypi	pyasn1-modules	>=0.0.5	FLOOR	0.4.2	558	0.4.2	558	OK
+oauth2client	4.1.3	pypi	rsa	>=3.1.4	FLOOR	4.9.1	539	4.9.1	539	OK
+oauth2client	4.1.3	pypi	six	>=1.6.1	FLOOR	1.17.0	672	1.17.0	672	OK
+objsize	0.7.1	pypi	-	-	-					NO-DEPS
+opentelemetry-api	1.44.0	pypi	typing-extensions	>=4.5.0	FLOOR	4.16.0	97	4.16.0	97	OK
+opentelemetry-resourcedetector-gcp	1.14.0	pypi	opentelemetry-api	~=1.30	CAPPED	1.45.1	1	1.45.1	1	OK
+opentelemetry-resourcedetector-gcp	1.14.0	pypi	opentelemetry-sdk	~=1.30	CAPPED	1.45.1	1	1.45.1	1	OK
+opentelemetry-resourcedetector-gcp	1.14.0	pypi	requests	~=2.24	CAPPED	2.34.2	146	2.34.2	146	OK
+opentelemetry-sdk	1.44.0	pypi	opentelemetry-api	==1.44.0	EXACT	1.44.0	83	1.45.1	1	OK
+opentelemetry-sdk	1.44.0	pypi	opentelemetry-semantic-conventions	==0.65b0	EXACT	0.65b0	83	0.66b1	1	OK
+opentelemetry-sdk	1.44.0	pypi	typing-extensions	>=4.5.0	FLOOR	4.16.0	97	4.16.0	97	OK
+opentelemetry-semantic-conventions	0.65b0	pypi	opentelemetry-api	==1.44.0	EXACT	1.44.0	83	1.45.1	1	OK
+opentelemetry-semantic-conventions	0.65b0	pypi	typing-extensions	>=4.5.0	FLOOR	4.16.0	97	4.16.0	97	OK
+orderly-set	5.5.0	pypi	-	-	-					NO-DEPS
+orjson	3.11.9	pypi	-	-	-					NO-DEPS
+overrides	7.7.0	pypi	typing	*	ANY	3.10.0.0	1985	3.10.0.0	1985	OK
+packaging	26.3	pypi	-	-	-					NO-DEPS
+pandas	3.0.5	pypi	numpy	>=1.26.0	FLOOR	2.5.3	31	2.5.3	31	OK
+pandas	3.0.5	pypi	numpy	>=2.3.3	FLOOR	2.5.3	31	2.5.3	31	OK
+pandas	3.0.5	pypi	python-dateutil	>=2.8.2	FLOOR	2.9.0	950	2.9.0	950	OK
+pandas	3.0.5	pypi	tzdata	*	ANY	2026.5	4	2026.5	4	OK
+pandas	3.0.5	pypi	tzdata	*	ANY	2026.5	4	2026.5	4	OK
+pillow	10.1.0	pypi	-	-	-					NO-DEPS
+pluggy	1.6.0	pypi	-	-	-					NO-DEPS
+proto-plus	1.25.0	pypi	protobuf	<6.0.0dev,>=3.19.0	CAPPED	5.29.6	245	7.36.2	20	OK
+protobuf	5.29.6	pypi	-	-	-					NO-DEPS
+pyarrow	18.1.0	pypi	-	-	-					NO-DEPS
+pyarrow-hotfix	0.7	pypi	-	-	-					NO-DEPS
+pyasn1	0.6.4	pypi	-	-	-					NO-DEPS
+pyasn1-modules	0.4.2	pypi	pyasn1	<0.7.0,>=0.6.1	CAPPED	0.6.4	90	0.6.4	90	OK
+pycparser	3.0	pypi	-	-	-					NO-DEPS
+pydantic	2.13.4	pypi	annotated-types	>=0.6.0	FLOOR	0.8.0	76	0.8.0	76	OK
+pydantic	2.13.4	pypi	pydantic-core	==2.46.4	EXACT	2.46.4	154	2.49.0	28	OK
+pydantic	2.13.4	pypi	typing-extensions	>=4.14.1	FLOOR	4.16.0	97	4.16.0	97	OK
+pydantic	2.13.4	pypi	typing-inspection	>=0.4.2	FLOOR	0.4.4	56	0.4.4	56	OK
+pydantic-core	2.46.4	pypi	typing-extensions	>=4.14.1	FLOOR	4.16.0	97	4.16.0	97	OK
+pydot	1.4.2	pypi	pyparsing	>=2.1.4	FLOOR	3.3.3	17	3.3.3	17	OK
+pyjwt	2.13.0	pypi	typing_extensions	>=4.0	FLOOR	4.16.0	97	4.16.0	97	OK
+pylatexenc	2.10	pypi	-	-	-					NO-DEPS
+pymemcache	4.0.0	pypi	-	-	-					NO-DEPS
+pymilvus	2.5.18	pypi	setuptools	>69	FLOOR	84.0.0	60	84.0.0	60	OK
+pymilvus	2.5.18	pypi	setuptools	<70.1	CAPPED	70.0.0	869	84.0.0	60	OK
+pymilvus	2.5.18	pypi	protobuf	>=3.20.0	FLOOR	7.36.2	20	7.36.2	20	OK
+pymilvus	2.5.18	pypi	grpcio	!=1.68.0,!=1.68.1,!=1.69.0,!=1.70.0,!=1.70.1,!=1.71.0,!=1.72.1,!=1.73.0,>=1.49.1	FLOOR	1.84.0	23	1.84.0	23	OK
+pymilvus	2.5.18	pypi	python-dotenv	<2.0.0,>=1.0.1	CAPPED	1.2.4	6	1.2.4	6	OK
+pymilvus	2.5.18	pypi	ujson	>=2.0.0	FLOOR	6.0.0	33	6.0.0	33	OK
+pymilvus	2.5.18	pypi	pandas	>=1.2.4	FLOOR	3.0.6	20	3.0.6	20	OK
+pymilvus	2.5.18	pypi	numpy	<1.25.0	CAPPED	1.24.4	1199	2.5.3	31	OK
+pymilvus	2.5.18	pypi	milvus-lite	>=2.4.0	FLOOR	3.2.1	43	3.2.1	43	OK
+pymongo	4.17.0	pypi	dnspython	<3.0.0,>=2.6.1	CAPPED	2.8.0	395	2.8.0	395	OK
+pyopenssl	26.4.0	pypi	cryptography	<51,>=49.0.0	CAPPED	50.0.2	7	50.0.2	7	OK
+pyopenssl	26.4.0	pypi	typing-extensions	>=4.9	FLOOR	4.16.0	97	4.16.0	97	OK
+pyparsing	3.3.2	pypi	-	-	-					NO-DEPS
+python-dotenv	1.2.2	pypi	-	-	-					NO-DEPS
+pytz	2026.3.post1	pypi	-	-	-					NO-DEPS
+pyyaml	6.0.2	pypi	-	-	-					NO-DEPS
+redis	5.3.1	pypi	PyJWT	>=2.9.0	FLOOR	2.15.1	9	2.15.1	9	OK
+redis	5.3.1	pypi	async-timeout	>=4.0.3	FLOOR	5.0.1	700	5.0.1	700	OK
+referencing	0.37.0	pypi	attrs	>=22.2.0	FLOOR	26.1.0	202	26.1.0	202	OK
+referencing	0.37.0	pypi	rpds-py	>=0.7.0	FLOOR	2026.9.1	3	2026.9.1	3	OK
+referencing	0.37.0	pypi	typing-extensions	>=4.4.0	FLOOR	4.16.0	97	4.16.0	97	OK
+regex	2026.7.19	pypi	-	-	-					NO-DEPS
+requests	2.32.5	pypi	charset_normalizer	<4,>=2	CAPPED	3.5.2	7	3.5.2	7	OK
+requests	2.32.5	pypi	idna	<4,>=2.5	CAPPED	3.20	20	3.20	20	OK
+requests	2.32.5	pypi	urllib3	<3,>=1.21.1	CAPPED	2.8.0	22	2.8.0	22	OK
+requests	2.32.5	pypi	certifi	>=2017.4.17	FLOOR	2026.7.22	77	2026.7.22	77	OK
+requests-mock	1.12.1	pypi	requests	<3,>=2.22	CAPPED	2.34.2	146	2.34.2	146	OK
+result	0.17.0	pypi	typing-extensions	*	ANY	4.16.0	97	4.16.0	97	OK
+rpds-py	2026.6.3	pypi	-	-	-					NO-DEPS
+rsa	4.9.1	pypi	pyasn1	>=0.1.3	FLOOR	0.6.4	90	0.6.4	90	OK
+secretstorage	3.5.0	pypi	cryptography	>=2.0	FLOOR	50.0.2	7	50.0.2	7	OK
+secretstorage	3.5.0	pypi	jeepney	>=0.6	FLOOR	0.9.0	587	0.9.0	587	OK
+shapely	2.1.2	pypi	numpy	>=1.21	FLOOR	2.5.3	31	2.5.3	31	OK
+six	1.17.0	pypi	-	-	-					NO-DEPS
+sniffio	1.3.1	pypi	-	-	-					NO-DEPS
+sortedcontainers	2.4.0	pypi	-	-	-					NO-DEPS
+soupsieve	2.9.1	pypi	-	-	-					NO-DEPS
+sqlparse	0.5.5	pypi	-	-	-					NO-DEPS
+typing-extensions	4.16.0	pypi	-	-	-					NO-DEPS
+typing-inspection	0.4.2	pypi	typing-extensions	>=4.12.0	FLOOR	4.16.0	97	4.16.0	97	OK
+ujson	5.13.0	pypi	-	-	-					NO-DEPS
+uritemplate	4.2.0	pypi	-	-	-					NO-DEPS
+urllib3	2.7.0	pypi	-	-	-					NO-DEPS
+webapp2	3.0.0b1	pypi	-	-	-					NO-DEPS
+webencodings	0.5.1	pypi	-	-	-					NO-DEPS
+webob	1.8.11	pypi	legacy-cgi	>=2.6	FLOOR	2.6.4	345	2.6.4	345	OK
+websockets	15.0.1	pypi	-	-	-					NO-DEPS
+zstandard	0.25.0	pypi	-	-	-					NO-DEPS
+@axe-core/puppeteer	4.13.0	npm	axe-core	~4.13.0	CAPPED	4.13.0	63	4.14.0	2	OK
+@modelcontextprotocol/sdk	0.6.1	npm	zod	^3.23.8	CAPPED	3.25.76	456	4.6.5	24	OK
+@modelcontextprotocol/sdk	0.6.1	npm	raw-body	^3.0.0	CAPPED	3.0.2	320	4.0.0	87	OK
+@modelcontextprotocol/sdk	0.6.1	npm	content-type	^1.0.5	CAPPED	1.0.5	1347	3.1.1	20	OK
+axe-core	4.14.0	npm	-	-	-					NO-DEPS
+puppeteer	13.5.0	npm	ws	8.5.0	EXACT	8.5.0	1703	8.22.0	11	OK
+puppeteer	13.5.0	npm	debug	4.3.3	EXACT	4.3.3	1775	4.4.3	389	OK
+puppeteer	13.5.0	npm	rimraf	3.0.2	EXACT	3.0.2	2432	6.1.3	233	OK
+puppeteer	13.5.0	npm	tar-fs	2.1.1	EXACT	2.1.1	2161	3.1.3	102	OK
+puppeteer	13.5.0	npm	pkg-dir	4.2.0	EXACT	4.2.0	2696	9.0.0	489	OK
+puppeteer	13.5.0	npm	progress	2.0.3	EXACT	2.0.3	2863	2.0.3	2863	OK
+puppeteer	13.5.0	npm	cross-fetch	3.1.5	EXACT	3.1.5	1721	4.1.0	655	OK
+puppeteer	13.5.0	npm	extract-zip	2.0.1	EXACT	2.0.1	2310	2.0.1	2310	OK
+puppeteer	13.5.0	npm	proxy-from-env	1.1.0	EXACT	1.1.0	2408	2.1.0	207	OK
+puppeteer	13.5.0	npm	unbzip2-stream	1.4.3	EXACT	1.4.3	2324	1.4.3	2324	OK
+puppeteer	13.5.0	npm	devtools-protocol	0.0.969999	EXACT	0.0.969999	1699	0.0.1710668	4	OK
+puppeteer	13.5.0	npm	https-proxy-agent	5.0.0	EXACT	5.0.0	2434	9.1.0	121	OK
+puppeteer-core	13.5.0	npm	ws	8.5.0	EXACT	8.5.0	1703	8.22.0	11	OK
+puppeteer-core	13.5.0	npm	debug	4.3.3	EXACT	4.3.3	1775	4.4.3	389	OK
+puppeteer-core	13.5.0	npm	rimraf	3.0.2	EXACT	3.0.2	2432	6.1.3	233	OK
+puppeteer-core	13.5.0	npm	tar-fs	2.1.1	EXACT	2.1.1	2161	3.1.3	102	OK
+puppeteer-core	13.5.0	npm	pkg-dir	4.2.0	EXACT	4.2.0	2696	9.0.0	489	OK
+puppeteer-core	13.5.0	npm	progress	2.0.3	EXACT	2.0.3	2863	2.0.3	2863	OK
+puppeteer-core	13.5.0	npm	cross-fetch	3.1.5	EXACT	3.1.5	1721	4.1.0	655	OK
+puppeteer-core	13.5.0	npm	extract-zip	2.0.1	EXACT	2.0.1	2310	2.0.1	2310	OK
+puppeteer-core	13.5.0	npm	proxy-from-env	1.1.0	EXACT	1.1.0	2408	2.1.0	207	OK
+puppeteer-core	13.5.0	npm	unbzip2-stream	1.4.3	EXACT	1.4.3	2324	1.4.3	2324	OK
+puppeteer-core	13.5.0	npm	devtools-protocol	0.0.969999	EXACT	0.0.969999	1699	0.0.1710668	4	OK
+puppeteer-core	13.5.0	npm	https-proxy-agent	5.0.0	EXACT	5.0.0	2434	9.1.0	121	OK
+@modelcontextprotocol/core	2.0.0	npm	zod	^4.2.0	CAPPED	4.6.5	24	4.6.5	24	OK
+@modelcontextprotocol/node	2.0.0	npm	@hono/node-server	^1.19.9	CAPPED	1.19.17	72	2.1.3	8	OK
+@modelcontextprotocol/server	2.0.0	npm	zod	^4.2.0	CAPPED	4.6.5	24	4.6.5	24	OK
+@modelcontextprotocol/server	2.0.0	npm	@modelcontextprotocol/core	2.0.0	EXACT	2.0.0	72	2.3.1	2	OK
+@nestjs/common	12.1.2	npm	uid	2.0.2	EXACT	2.0.2	1286	2.0.2	1286	OK
+@nestjs/common	12.1.2	npm	tslib	2.8.1	EXACT	2.8.1	706	2.8.1	706	OK
+@nestjs/common	12.1.2	npm	iterare	1.2.1	EXACT	1.2.1	2314	1.2.1	2314	OK
+@nestjs/common	12.1.2	npm	load-esm	1.0.3	EXACT	1.0.3	409	1.0.3	409	OK
+@nestjs/common	12.1.2	npm	file-type	22.1.1	EXACT	22.1.1	20	22.1.1	20	OK
+@nestjs/common	12.1.2	npm	@standard-schema/spec	1.1.0	EXACT	1.1.0	296	1.1.0	296	OK
+@nestjs/config	12.0.1	npm	dotenv	18.0.3	EXACT	18.0.3	15	18.0.6	1	OK
+@nestjs/config	12.0.1	npm	es-toolkit	1.52.0	EXACT	1.52.0	40	1.52.0	40	OK
+@nestjs/config	12.0.1	npm	dotenv-expand	13.0.0	EXACT	13.0.0	173	1000.0.0	70	OK
+@nestjs/config	12.0.1	npm	@standard-schema/spec	1.1.0	EXACT	1.1.0	296	1.1.0	296	OK
+@nestjs/core	12.1.2	npm	uid	2.0.2	EXACT	2.0.2	1286	2.0.2	1286	OK
+@nestjs/core	12.1.2	npm	tslib	2.8.1	EXACT	2.8.1	706	2.8.1	706	OK
+@nestjs/core	12.1.2	npm	iterare	1.2.1	EXACT	1.2.1	2314	1.2.1	2314	OK
+@nestjs/core	12.1.2	npm	path-to-regexp	8.4.2	EXACT	8.4.2	189	8.4.2	189	OK
+@nestjs/core	12.1.2	npm	fast-safe-stringify	2.1.1	EXACT	2.1.1	1855	2.1.1	1855	OK
+@nestjs/microservices	12.1.2	npm	tslib	2.8.1	EXACT	2.8.1	706	2.8.1	706	OK
+@nestjs/microservices	12.1.2	npm	iterare	1.2.1	EXACT	1.2.1	2314	1.2.1	2314	OK
+@nestjs/platform-express	12.1.2	npm	cors	2.8.6	EXACT	2.8.6	258	2.8.6	258	OK
+@nestjs/platform-express	12.1.2	npm	tslib	2.8.1	EXACT	2.8.1	706	2.8.1	706	OK
+@nestjs/platform-express	12.1.2	npm	multer	2.4.0	EXACT	2.4.0	23	2.4.0	23	OK
+@nestjs/platform-express	12.1.2	npm	express	5.2.1	EXACT	5.2.1	310	5.2.1	310	OK
+@nestjs/platform-express	12.1.2	npm	path-to-regexp	8.4.2	EXACT	8.4.2	189	8.4.2	189	OK
+@rekog/mcp-nest	2.0.7	npm	multer	^2.3.0	CAPPED	2.4.0	23	2.4.0	23	OK
+@rekog/mcp-nest	2.0.7	npm	path-to-regexp	^8.4.2	CAPPED	8.4.2	189	8.4.2	189	OK
+async-mutex	0.5.0	npm	tslib	^2.4.0	CAPPED	2.8.1	706	2.8.1	706	OK
+commander	15.0.0	npm	-	-	-					NO-DEPS
+ipaddr.js	2.5.0	npm	-	-	-					NO-DEPS
+ky	2.1.0	npm	-	-	-					NO-DEPS
+mime	4.1.0	npm	-	-	-					NO-DEPS
+pino	10.4.0	npm	sonic-boom	^4.0.1	CAPPED	4.2.1	239	5.0.1	37	OK
+pino	10.4.0	npm	atomic-sleep	^1.0.0	CAPPED	1.0.0	2403	1.0.0	2403	OK
+pino	10.4.0	npm	real-require	^1.0.0	CAPPED	1.0.0	207	1.0.0	207	OK
+pino	10.4.0	npm	thread-stream	^4.0.0	CAPPED	4.2.0	146	4.2.0	146	OK
+pino	10.4.0	npm	@pinojs/redact	^0.4.0	CAPPED	0.4.0	358	0.4.0	358	OK
+pino	10.4.0	npm	process-warning	^5.0.0	CAPPED	5.1.0	69	5.1.0	69	OK
+pino	10.4.0	npm	on-exit-leak-free	^2.1.0	CAPPED	2.1.2	1100	2.1.2	1100	OK
+pino	10.4.0	npm	pino-std-serializers	^7.0.0	CAPPED	7.1.0	267	7.1.0	267	OK
+pino	10.4.0	npm	safe-stable-stringify	^2.3.1	CAPPED	2.5.0	774	2.5.0	774	OK
+pino	10.4.0	npm	quick-format-unescaped	^4.0.3	CAPPED	4.0.4	1842	4.0.4	1842	OK
+pino	10.4.0	npm	pino-abstract-transport	^3.0.0	CAPPED	3.0.0	366	3.0.0	366	OK
+pino-pretty	13.2.0	npm	pump	^3.0.3	CAPPED	3.0.4	221	3.0.4	221	OK
+pino-pretty	13.2.0	npm	joycon	^3.1.1	CAPPED	3.1.1	1771	3.1.1	1771	OK
+pino-pretty	13.2.0	npm	help-me	^5.0.0	CAPPED	5.0.0	1029	5.0.0	1029	OK
+pino-pretty	13.2.0	npm	minimist	^1.2.6	CAPPED	1.2.8	1336	1.2.8	1336	OK
+pino-pretty	13.2.0	npm	colorette	^2.0.7	CAPPED	2.0.20	1270	2.0.20	1270	OK
+pino-pretty	13.2.0	npm	fast-copy	^4.0.0	CAPPED	4.1.2	2	4.1.2	2	OK
+pino-pretty	13.2.0	npm	dateformat	^4.6.3	CAPPED	4.6.3	1842	5.0.3	1691	OK
+pino-pretty	13.2.0	npm	sonic-boom	^5.0.0	CAPPED	5.0.1	37	5.0.1	37	OK
+pino-pretty	13.2.0	npm	on-exit-leak-free	^2.1.2	CAPPED	2.1.2	1100	2.1.2	1100	OK
+pino-pretty	13.2.0	npm	secure-json-parse	^4.1.0	CAPPED	4.1.0	367	4.1.0	367	OK
+pino-pretty	13.2.0	npm	fast-safe-stringify	^2.1.1	CAPPED	2.1.1	1855	2.1.1	1855	OK
+pino-pretty	13.2.0	npm	strip-json-comments	^5.0.3	CAPPED	5.0.3	425	5.0.3	425	OK
+pino-pretty	13.2.0	npm	pino-abstract-transport	^3.0.0	CAPPED	3.0.0	366	3.0.0	366	OK
+reflect-metadata	0.2.2	npm	-	-	-					NO-DEPS
+remark-parse	11.0.0	npm	@types/mdast	^4.0.0	CAPPED	4.0.4	876	4.0.4	876	OK
+remark-parse	11.0.0	npm	mdast-util-from-markdown	^2.0.0	CAPPED	2.1.0	4	2.1.0	4	OK
+remark-parse	11.0.0	npm	micromark-util-types	^2.0.0	CAPPED	2.0.3	11	2.0.3	11	OK
+remark-parse	11.0.0	npm	unified	^11.0.0	CAPPED	11.0.5	840	11.0.5	840	OK
+rxjs	7.8.2	npm	tslib	^2.1.0	CAPPED	2.8.1	706	2.8.1	706	OK
+unified	11.0.5	npm	@types/unist	^3.0.0	CAPPED	3.0.3	783	3.0.3	783	OK
+unified	11.0.5	npm	bail	^2.0.0	CAPPED	2.0.2	1795	2.0.2	1795	OK
+unified	11.0.5	npm	devlop	^1.0.0	CAPPED	1.1.0	1196	1.1.0	1196	OK
+unified	11.0.5	npm	extend	^3.0.0	CAPPED	3.0.2	3002	3.0.2	3002	OK
+unified	11.0.5	npm	is-plain-obj	^4.0.0	CAPPED	4.1.0	1575	4.1.0	1575	OK
+unified	11.0.5	npm	trough	^2.0.0	CAPPED	2.2.0	975	2.2.0	975	OK
+unified	11.0.5	npm	vfile	^6.0.0	CAPPED	6.0.3	771	6.0.3	771	OK
+update-notifier	7.3.1	npm	pupa	^3.1.0	CAPPED	3.3.0	385	3.3.0	385	OK
+update-notifier	7.3.1	npm	boxen	^8.0.1	CAPPED	8.0.1	793	9.0.0	16	OK
+update-notifier	7.3.1	npm	chalk	^5.3.0	CAPPED	5.6.2	394	6.0.1	10	OK
+update-notifier	7.3.1	npm	is-npm	^6.0.0	CAPPED	6.1.0	392	6.1.0	392	OK
+update-notifier	7.3.1	npm	semver	^7.6.3	CAPPED	7.8.5	110	7.8.5	110	OK
+update-notifier	7.3.1	npm	is-in-ci	^1.0.0	CAPPED	1.0.0	803	2.0.0	416	OK
+update-notifier	7.3.1	npm	configstore	^7.0.0	CAPPED	7.1.0	387	8.0.0	256	OK
+update-notifier	7.3.1	npm	xdg-basedir	^5.1.0	CAPPED	5.1.0	1889	5.1.0	1889	OK
+update-notifier	7.3.1	npm	latest-version	^9.0.0	CAPPED	9.0.0	953	9.0.0	953	OK
+update-notifier	7.3.1	npm	is-installed-globally	^1.0.0	CAPPED	1.0.1	15	1.0.1	15	OK
+ws	8.22.0	npm	-	-	-					NO-DEPS
+zod	4.6.5	npm	-	-	-					NO-DEPS
+zod-to-json-schema	3.25.2	npm	-	-	-					NO-DEPS
+@material-ui/core	4.12.4	npm	clsx	^1.0.4	CAPPED	1.2.1	1554	2.1.1	897	OK
+@material-ui/core	4.12.4	npm	react-is	^16.8.0 || ^17.0.0	CAPPED	17.0.2	2025	19.3.0	28	OK
+@material-ui/core	4.12.4	npm	popper.js	1.16.1-lts	EXACT	1.16.1-lts	2375	1.16.1	2450	OK
+@material-ui/core	4.12.4	npm	prop-types	^15.7.2	CAPPED	15.8.1	1736	15.8.1	1736	OK
+@material-ui/core	4.12.4	npm	@babel/runtime	^7.4.4	CAPPED	7.29.7	135	8.0.5	27	OK
+@material-ui/core	4.12.4	npm	@material-ui/types	5.1.0	EXACT	5.1.0	2340	6.0.2	1885	OK
+@material-ui/core	4.12.4	npm	@material-ui/utils	^4.11.3	CAPPED	4.11.3	1648	4.11.3	1648	OK
+@material-ui/core	4.12.4	npm	@material-ui/styles	^4.11.5	CAPPED	4.11.5	1648	4.11.5	1648	OK
+@material-ui/core	4.12.4	npm	@material-ui/system	^4.12.2	CAPPED	4.12.2	1648	4.12.2	1648	OK
+@material-ui/core	4.12.4	npm	react-transition-group	^4.4.0	CAPPED	4.4.5	1528	4.4.5	1528	OK
+@material-ui/core	4.12.4	npm	hoist-non-react-statics	^3.3.2	CAPPED	3.3.2	2450	3.3.2	2450	OK
+@material-ui/core	4.12.4	npm	@types/react-transition-group	^4.2.0	CAPPED	4.4.12	665	4.4.12	665	OK
+@material-ui/icons	4.11.3	npm	@babel/runtime	^7.4.4	CAPPED	7.29.7	135	8.0.5	27	OK
+algebrite	1.4.0	npm	big-integer	^1.6.32	CAPPED	1.6.52	1051	1.6.52	1051	OK
+await-to-js	3.0.0	npm	-	-	-					NO-DEPS
+aws-sdk	2.1693.0	npm	sax	1.2.1	EXACT	1.2.1	3854	1.6.1	75	OK
+aws-sdk	2.1693.0	npm	url	0.10.3	EXACT	0.10.3	4240	0.11.4	803	OK
+aws-sdk	2.1693.0	npm	util	^0.12.4	CAPPED	0.12.5	1452	0.12.5	1452	OK
+aws-sdk	2.1693.0	npm	uuid	8.0.0	EXACT	8.0.0	2352	14.0.2	50	OK
+aws-sdk	2.1693.0	npm	buffer	4.9.2	EXACT	4.9.2	2525	6.0.3	2144	OK
+aws-sdk	2.1693.0	npm	events	1.1.1	EXACT	1.1.1	3759	3.3.0	2048	OK
+aws-sdk	2.1693.0	npm	xml2js	0.6.2	EXACT	0.6.2	1169	0.6.2	1169	OK
+aws-sdk	2.1693.0	npm	ieee754	1.1.13	EXACT	1.1.13	2752	1.2.1	2171	OK
+aws-sdk	2.1693.0	npm	jmespath	0.16.0	EXACT	0.16.0	1722	0.16.0	1722	OK
+aws-sdk	2.1693.0	npm	querystring	0.2.0	EXACT	0.2.0	4964	0.2.1	2060	OK
+axios	1.20.0	npm	form-data	^4.0.6	CAPPED	4.0.6	117	4.0.6	117	OK
+axios	1.20.0	npm	proxy-from-env	^2.1.0	CAPPED	2.1.0	207	2.1.0	207	OK
+axios	1.20.0	npm	follow-redirects	^1.16.0	CAPPED	1.16.1	6	1.16.1	6	OK
+axios	1.20.0	npm	https-proxy-agent	^5.0.1	CAPPED	5.0.1	1637	9.1.0	121	OK
+canvas-confetti	1.9.4	npm	-	-	-					NO-DEPS
+clsx	1.1.1	npm	-	-	-					NO-DEPS
+crypto-js	4.2.0	npm	-	-	-					NO-DEPS
+equation-editor-react	0.0.10	npm	jquery	^3.4.1	CAPPED	3.7.1	1136	4.0.0	262	OK
+equation-editor-react	0.0.10	npm	mathquill	^0.10.1-a	CAPPED	0.10.1	3807	0.10.1	3807	OK
+expr-eval	2.0.2	npm	-	-	-					NO-DEPS
+firebase	9.9.4	npm	@firebase/app	0.7.32	EXACT	0.7.32	1496	0.16.2	28	OK
+firebase	9.9.4	npm	@firebase/auth	0.20.6	EXACT	0.20.6	1496	1.13.6	28	OK
+firebase	9.9.4	npm	@firebase/util	1.6.3	EXACT	1.6.3	1553	1.15.3	49	OK
+firebase	9.9.4	npm	@firebase/storage	0.9.9	EXACT	0.9.9	1553	0.14.5	49	OK
+firebase	9.9.4	npm	@firebase/database	0.13.6	EXACT	0.13.6	1496	1.1.5	49	OK
+firebase	9.9.4	npm	@firebase/analytics	0.8.0	EXACT	0.8.0	1553	0.10.25	28	OK
+firebase	9.9.4	npm	@firebase/app-check	0.5.12	EXACT	0.5.12	1538	0.13.1	49	OK
+firebase	9.9.4	npm	@firebase/app-types	0.7.0	EXACT	0.7.0	1869	0.9.6	49	OK
+firebase	9.9.4	npm	@firebase/firestore	3.4.15	EXACT	3.4.15	1496	4.17.2	28	OK
+firebase	9.9.4	npm	@firebase/functions	0.8.4	EXACT	0.8.4	1553	0.14.0	49	OK
+firebase	9.9.4	npm	@firebase/messaging	0.9.16	EXACT	0.9.16	1553	0.13.3	28	OK
+firebase	9.9.4	npm	@firebase/app-compat	0.1.33	EXACT	0.1.33	1496	0.5.18	28	OK
+firebase	9.9.4	npm	@firebase/auth-compat	0.2.19	EXACT	0.2.19	1496	0.6.11	28	OK
+firebase	9.9.4	npm	@firebase/performance	0.5.12	EXACT	0.5.12	1553	0.7.14	49	OK
+firebase	9.9.4	npm	@firebase/installations	0.5.12	EXACT	0.5.12	1553	0.6.24	49	OK
+firebase	9.9.4	npm	@firebase/remote-config	0.3.11	EXACT	0.3.11	1553	0.9.2	49	OK
+firebase	9.9.4	npm	@firebase/storage-compat	0.1.17	EXACT	0.1.17	1553	0.4.5	49	OK
+firebase	9.9.4	npm	@firebase/database-compat	0.2.6	EXACT	0.2.6	1496	2.1.7	49	OK
+firebase	9.9.4	npm	@firebase/analytics-compat	0.1.13	EXACT	0.1.13	1553	0.2.31	28	OK
+firebase	9.9.4	npm	@firebase/app-check-compat	0.2.12	EXACT	0.2.12	1538	0.4.7	49	OK
+firebase	9.9.4	npm	@firebase/firestore-compat	0.1.24	EXACT	0.1.24	1496	0.4.14	28	OK
+firebase	9.9.4	npm	@firebase/functions-compat	0.2.4	EXACT	0.2.4	1553	0.5.0	49	OK
+firebase	9.9.4	npm	@firebase/messaging-compat	0.1.16	EXACT	0.1.16	1553	0.2.30	28	OK
+firebase	9.9.4	npm	@firebase/performance-compat	0.1.12	EXACT	0.1.12	1553	0.2.27	49	OK
+firebase	9.9.4	npm	@firebase/installations-compat	0.1.12	EXACT	0.1.12	1553	0.2.24	49	OK
+firebase	9.9.4	npm	@firebase/remote-config-compat	0.1.12	EXACT	0.1.12	1553	0.2.29	49	OK
+http2	3.3.7	npm	-	-	-					NO-DEPS
+list-react-files	0.2.0	npm	glob	^7.1.2	CAPPED	7.2.3	1606	13.0.6	230	OK
+localforage	1.10.0	npm	lie	3.1.1	EXACT	3.1.1	3527	3.3.0	3137	OK
+mathlive	0.109.2	npm	@cortex-js/compute-engine	0.55.6	EXACT	0.55.6	213	0.149.0	1	OK
+random-seed	0.3.0	npm	json-stringify-safe	^5.0.1	CAPPED	5.0.1	4159	5.0.1	4159	OK
+react	16.14.0	npm	prop-types	^15.6.2	CAPPED	15.8.1	1736	15.8.1	1736	OK
+react	16.14.0	npm	loose-envify	^1.1.0	CAPPED	1.4.0	3011	1.4.0	3011	OK
+react	16.14.0	npm	object-assign	^4.1.1	CAPPED	4.1.1	3551	4.1.1	3551	OK
+react-cursor-position	3.0.3	npm	object-assign	^4.1.1	CAPPED	4.1.1	3551	4.1.1	3551	OK
+react-cursor-position	3.0.3	npm	object.omit	^3.0.0	CAPPED	3.0.0	3320	3.0.0	3320	OK
+react-cursor-position	3.0.3	npm	prop-types	^15.6.0	CAPPED	15.8.1	1736	15.8.1	1736	OK
+react-dom	16.14.0	npm	scheduler	^0.19.1	CAPPED	0.19.1	2393	0.28.0	28	OK
+react-dom	16.14.0	npm	prop-types	^15.6.2	CAPPED	15.8.1	1736	15.8.1	1736	OK
+react-dom	16.14.0	npm	loose-envify	^1.1.0	CAPPED	1.4.0	3011	1.4.0	3011	OK
+react-dom	16.14.0	npm	object-assign	^4.1.1	CAPPED	4.1.1	3551	4.1.1	3551	OK
+react-katex	2.0.2	npm	katex	^0.9.0	CAPPED	0.9.0	3153	0.19.0	6	OK
+react-markdown	7.1.2	npm	vfile	^5.0.0	CAPPED	5.3.7	1337	6.0.3	771	OK
+react-markdown	7.1.2	npm	unified	^10.0.0	CAPPED	10.1.2	1674	11.0.5	840	OK
+react-markdown	7.1.2	npm	react-is	^17.0.0	CAPPED	17.0.2	2025	19.3.0	28	OK
+react-markdown	7.1.2	npm	prop-types	^15.0.0	CAPPED	15.8.1	1736	15.8.1	1736	OK
+react-markdown	7.1.2	npm	@types/hast	^2.0.0	CAPPED	2.3.10	981	3.0.5	90	OK
+react-markdown	7.1.2	npm	@types/unist	^2.0.0	CAPPED	2.0.11	783	3.0.3	783	OK
+react-markdown	7.1.2	npm	remark-parse	^10.0.0	CAPPED	10.0.2	1240	11.0.0	1115	OK
+react-markdown	7.1.2	npm	remark-rehype	^9.0.0	CAPPED	9.1.0	1840	11.1.2	553	OK
+react-markdown	7.1.2	npm	style-to-object	^0.3.0	CAPPED	0.3.0	2526	2.0.2	93	OK
+react-markdown	7.1.2	npm	unist-util-visit	^4.0.0	CAPPED	4.1.2	1352	5.1.0	258	OK
+react-markdown	7.1.2	npm	hast-util-whitespace	^2.0.0	CAPPED	2.0.1	1370	3.0.0	1164	OK
+react-markdown	7.1.2	npm	property-information	^6.0.0	CAPPED	6.5.0	917	7.2.0	128	OK
+react-markdown	7.1.2	npm	comma-separated-tokens	^2.0.0	CAPPED	2.0.3	1423	2.0.3	1423	OK
+react-markdown	7.1.2	npm	space-separated-tokens	^2.0.0	CAPPED	2.0.2	1423	2.0.2	1423	OK
+react-medium-image-zoom	4.4.3	npm	tslib	^2.4.0	CAPPED	2.8.1	706	2.8.1	706	OK
+react-medium-image-zoom	4.4.3	npm	focus-options-polyfill	1.5.1	EXACT	1.5.1	2223	1.6.0	2223	OK
+react-router-dom	5.3.4	npm	history	^4.9.0	CAPPED	4.10.1	2581	5.3.0	1688	OK
+react-router-dom	5.3.4	npm	prop-types	^15.6.2	CAPPED	15.8.1	1736	15.8.1	1736	OK
+react-router-dom	5.3.4	npm	loose-envify	^1.3.1	CAPPED	1.4.0	3011	1.4.0	3011	OK
+react-router-dom	5.3.4	npm	react-router	5.3.4	EXACT	5.3.4	1466	8.4.0	22	OK
+react-router-dom	5.3.4	npm	tiny-warning	^1.0.0	CAPPED	1.0.3	2647	1.0.3	2647	OK
+react-router-dom	5.3.4	npm	@babel/runtime	^7.12.13	CAPPED	7.29.7	135	8.0.5	27	OK
+react-router-dom	5.3.4	npm	tiny-invariant	^1.0.2	CAPPED	1.3.3	957	1.3.3	957	OK
+react-scripts	5.0.1	npm	bfj	^7.0.2	CAPPED	7.1.0	1126	9.1.3	240	OK
+react-scripts	5.0.1	npm	jest	^27.4.3	CAPPED	27.5.1	1702	30.5.2	19	OK
+react-scripts	5.0.1	npm	dotenv	^10.0.0	CAPPED	10.0.0	1965	18.0.6	1	OK
+react-scripts	5.0.1	npm	eslint	^8.3.0	CAPPED	8.57.1	751	10.12.0	5	OK
+react-scripts	5.0.1	npm	semver	^7.3.5	CAPPED	7.8.5	110	7.8.5	110	OK
+react-scripts	5.0.1	npm	postcss	^8.4.4	CAPPED	8.5.29	2	8.5.29	2	OK
+react-scripts	5.0.1	npm	prompts	^2.4.2	CAPPED	2.4.2	1826	2.4.2	1826	OK
+react-scripts	5.0.1	npm	resolve	^1.20.0	CAPPED	1.22.13	1	1.22.13	1	OK
+react-scripts	5.0.1	npm	webpack	^5.64.4	CAPPED	5.111.1	19	5.111.1	19	OK
+react-scripts	5.0.1	npm	fs-extra	^10.0.0	CAPPED	10.1.0	1635	11.4.1	15	OK
+react-scripts	5.0.1	npm	fsevents	^2.3.2	CAPPED	2.3.3	1143	2.3.3	1143	OK
+react-scripts	5.0.1	npm	camelcase	^6.2.1	CAPPED	6.3.0	1740	9.0.0	331	OK
+react-scripts	5.0.1	npm	babel-jest	^27.4.2	CAPPED	27.5.1	1702	30.5.2	19	OK
+react-scripts	5.0.1	npm	css-loader	^6.5.1	CAPPED	6.11.0	917	7.1.5	40	OK
+react-scripts	5.0.1	npm	@babel/core	^7.16.0	CAPPED	7.29.7	135	8.0.6	19	OK
+react-scripts	5.0.1	npm	file-loader	^6.2.0	CAPPED	6.2.0	2171	6.2.0	2171	OK
+react-scripts	5.0.1	npm	sass-loader	^12.3.0	CAPPED	12.6.0	1695	17.0.1	38	OK
+react-scripts	5.0.1	npm	tailwindcss	^3.0.2	CAPPED	3.4.19	301	4.3.3	83	OK
+react-scripts	5.0.1	npm	babel-loader	^8.2.3	CAPPED	8.4.1	751	10.1.1	212	OK
+react-scripts	5.0.1	npm	browserslist	^4.18.1	CAPPED	4.29.3	8	4.29.3	8	OK
+react-scripts	5.0.1	npm	jest-resolve	^27.4.2	CAPPED	27.5.1	1702	30.5.1	36	OK
+react-scripts	5.0.1	npm	style-loader	^3.3.1	CAPPED	3.3.4	1002	4.0.0	912	OK
+react-scripts	5.0.1	npm	@svgr/webpack	^5.5.0	CAPPED	5.5.0	2152	8.1.0	1149	OK
+react-scripts	5.0.1	npm	dotenv-expand	^5.1.0	CAPPED	5.1.0	2760	1000.0.0	70	OK
+react-scripts	5.0.1	npm	react-refresh	^0.11.0	CAPPED	0.11.0	1793	0.19.0	28	OK
+react-scripts	5.0.1	npm	postcss-loader	^6.2.1	CAPPED	6.2.1	1776	8.2.1	234	OK
+react-scripts	5.0.1	npm	react-dev-utils	^12.0.1	CAPPED	12.0.1	1639	12.0.1	1639	OK
+react-scripts	5.0.1	npm	postcss-normalize	^10.0.1	CAPPED	10.0.1	1848	13.0.1	742	OK
+react-scripts	5.0.1	npm	source-map-loader	^3.0.0	CAPPED	3.0.2	1447	5.0.0	996	OK
+react-scripts	5.0.1	npm	identity-obj-proxy	^3.0.0	CAPPED	3.0.0	3717	3.0.0	3717	OK
+react-scripts	5.0.1	npm	postcss-preset-env	^7.0.1	CAPPED	7.8.3	1423	11.6.1	2	OK
+react-scripts	5.0.1	npm	react-app-polyfill	^3.0.0	CAPPED	3.0.0	1758	3.0.0	1758	OK
+react-scripts	5.0.1	npm	resolve-url-loader	^4.0.0	CAPPED	4.0.0	1976	5.0.0	1724	OK
+react-scripts	5.0.1	npm	webpack-dev-server	^4.6.0	CAPPED	4.15.2	931	6.0.0	96	OK
+react-scripts	5.0.1	npm	html-webpack-plugin	^5.5.0	CAPPED	5.6.8	74	5.6.8	74	OK
+react-scripts	5.0.1	npm	jest-watch-typeahead	^1.0.0	CAPPED	1.1.0	1626	3.0.1	475	OK
+react-scripts	5.0.1	npm	eslint-webpack-plugin	^3.1.1	CAPPED	3.2.0	1567	6.0.0	187	OK
+react-scripts	5.0.1	npm	terser-webpack-plugin	^5.2.5	CAPPED	5.6.1	133	5.6.1	133	OK
+react-scripts	5.0.1	npm	babel-preset-react-app	^10.0.1	CAPPED	10.1.0	599	10.1.0	599	OK
+react-scripts	5.0.1	npm	postcss-flexbugs-fixes	^5.0.2	CAPPED	5.0.2	2147	5.0.2	2147	OK
+react-scripts	5.0.1	npm	workbox-webpack-plugin	^6.4.1	CAPPED	6.6.1	1226	7.4.1	156	OK
+react-scripts	5.0.1	npm	eslint-config-react-app	^7.0.1	CAPPED	7.0.1	1639	7.0.1	1639	OK
+react-scripts	5.0.1	npm	mini-css-extract-plugin	^2.4.5	CAPPED	2.10.2	195	2.10.2	195	OK
+react-scripts	5.0.1	npm	webpack-manifest-plugin	^4.0.2	CAPPED	4.1.1	1730	6.0.1	339	OK
+react-scripts	5.0.1	npm	css-minimizer-webpack-plugin	^3.2.0	CAPPED	3.4.1	1723	8.0.0	219	OK
+react-scripts	5.0.1	npm	babel-plugin-named-asset-import	^0.3.8	CAPPED	0.3.8	1758	0.3.8	1758	OK
+react-scripts	5.0.1	npm	case-sensitive-paths-webpack-plugin	^2.4.0	CAPPED	2.4.0	2053	2.4.0	2053	OK
+react-scripts	5.0.1	npm	@pmmmwh/react-refresh-webpack-plugin	^0.5.3	CAPPED	0.5.17	469	0.6.3	41	OK
+react-scroll	1.8.9	npm	prop-types	^15.7.2	CAPPED	15.8.1	1736	15.8.1	1736	OK
+react-scroll	1.8.9	npm	lodash.throttle	^4.1.1	CAPPED	4.1.1	3707	4.1.1	3707	OK
+react-toastify	8.0.3	npm	clsx	^1.1.1	CAPPED	1.2.1	1554	2.1.1	897	OK
+rehype-katex	5.0.0	npm	katex	^0.13.0	CAPPED	0.13.24	1803	0.19.0	6	OK
+rehype-katex	5.0.0	npm	unified	^9.0.0	CAPPED	9.2.2	1924	11.0.5	840	OK
+rehype-katex	5.0.0	npm	@types/katex	^0.11.0	CAPPED	0.11.1	1919	0.16.8	270	OK
+rehype-katex	5.0.0	npm	rehype-parse	^7.0.0	CAPPED	7.0.1	2299	9.0.1	740	OK
+rehype-katex	5.0.0	npm	unist-util-visit	^2.0.0	CAPPED	2.0.3	2279	5.1.0	258	OK
+rehype-katex	5.0.0	npm	hast-util-to-text	^2.0.0	CAPPED	2.0.1	2167	4.0.2	904	OK
+remark-gfm	1.0.0	npm	mdast-util-gfm	^0.1.0	CAPPED	0.1.2	2072	3.1.0	604	OK
+remark-gfm	1.0.0	npm	micromark-extension-gfm	^0.3.0	CAPPED	0.3.3	2044	3.0.0	1199	OK
+remark-math	4.0.0	npm	mdast-util-math	^0.1.0	CAPPED	0.1.2	2128	3.0.0	1179	OK
+remark-math	4.0.0	npm	micromark-extension-math	^0.1.0	CAPPED	0.1.2	2129	3.1.0	821	OK
+speech-rule-engine	5.0.0-alpha.8	npm	commander	14.0.0	EXACT	14.0.0	507	15.0.0	131	OK
+speech-rule-engine	5.0.0-alpha.8	npm	@xmldom/xmldom	0.9.8	EXACT	0.9.8	586	0.9.12	47	OK
+speech-rule-engine	5.0.0-alpha.8	npm	wicked-good-xpath	1.3.0	EXACT	1.3.0	3841	1.3.0	3841	OK
+typeface-roboto	0.0.75	npm	-	-	-					NO-DEPS
+underscore	1.13.8	npm	-	-	-					NO-DEPS
+universal-cookie	4.0.4	npm	cookie	^0.4.0	CAPPED	0.4.2	1708	2.0.1	99	OK
+universal-cookie	4.0.4	npm	@types/cookie	^0.3.3	CAPPED	0.3.3	2693	1.0.0	708	OK
+use-window-focus	1.5.0	npm	-	-	-					NO-DEPS
+@modelcontextprotocol/sdk	0.6.0	npm	zod	^3.23.8	CAPPED	3.25.76	456	4.6.5	24	OK
+@modelcontextprotocol/sdk	0.6.0	npm	raw-body	^3.0.0	CAPPED	3.0.2	320	4.0.0	87	OK
+@modelcontextprotocol/sdk	0.6.0	npm	content-type	^1.0.5	CAPPED	1.0.5	1347	3.1.1	20	OK

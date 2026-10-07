@@ -1694,3 +1694,51 @@ licence text anywhere in its tree**, which a complete enumeration confirms. That
 request in writing from DG EMPL, citing the Commission's own badge. Its Maven artefacts are reachable
 for metadata but **the POM layer answers 429 intermittently** from this environment, so its
 machine-readable licence field is unmeasured rather than absent.
+
+## The platform tier's restrictive licences are hand-recorded and invisible to the automated classifier — twenty-seventh pass, 2026-10-07
+
+🔵 **Why this belongs in the verticals file.** The rows most likely to carry a **non-OSI,
+source-available** licence are platforms, not libraries: a vendor with a managed-service business
+picks Elastic or BSL precisely so a competitor cannot host it. This file records those correctly,
+**by hand**. The classifier three of this KB's instruments call does not see them at all.
+
+Measured over all 412 `LICENSED` root payloads
+(`compose/code/p445-classifier-divergence/`, instrument note **P445**, trend **64**):
+
+| Platform | This file says | `p436/sweep_payload.py:family_of` says | `lib/license_family.sh` says |
+|---|---|---|---|
+| **Advising App** ([`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp)) | 🟢 **Elastic License 2.0** — *"Not open source"* | 🔴 **`UNKNOWN`** | 🟢 **`Elastic`**, commercial **NO** |
+| **Leemons** ([`leemonade/leemons`](https://github.com/leemonade/leemons)) | 🟢 **Composite / "Fair code"** | 🔴 **`UNKNOWN`** | ⚠️ `UNCLASSIFIED`, commercial **NO** |
+| [`sodadata/soda-core`](https://github.com/sodadata/soda-core) | — | 🔴 **`UNKNOWN`** | 🟢 **`Elastic`**, commercial **NO** |
+| [`digillab-lmu/smart-rag`](https://github.com/digillab-lmu/smart-rag) | — | 🔴 **`UNKNOWN`** | 🟢 **`PolyForm`**, commercial **NO** |
+
+🟢 **This file was right about both platforms before either classifier was pointed at them**, which
+is pass 26's **trend 61** holding again — *where this KB's prose and its instruments disagree about
+a licence, it has been the instrument.* ⚠️ **But "right by hand" does not scale**, and the two rows
+with no entry above are the proof: `soda-core` and `smart-rag` carry the same class of licence and
+nobody had written them down.
+
+### 🔴 The asymmetry that matters for this tier
+
+`family_of` returns `UNKNOWN` for all four. **`UNKNOWN` is not a warning** — it reads as *"needs a
+look"*, and in a 412-row sweep it sits beside thirteen other `UNKNOWN`s that are merely unparsed.
+The shell classifier returns `Elastic`, `PolyForm` and a **commercial-use verdict of `NO`**, which
+is a *decision*.
+
+⚠️ **And the reverse blindness bites this same file.** Nine **EUPL-1.2** rows — the Finnish National
+Agency for Education's eight repositories and the European Commission's `European-Learning-Model`,
+all of them public-sector platform assets recorded in this file and in `repos/foundations.md` — are
+reported `UNCLASSIFIED` by the shell classifier and correctly as `EUPL` by the Python one.
+**Neither tool alone can audit this tier.**
+
+### 🟢 The rule for a platform engagement
+
+1. **Never conclude a platform is permissively licensed from one classifier.** Run both
+   (`P-GRANT-ENUMERATION` step 8, under an hour, no network).
+2. **Treat `UNKNOWN` on a platform as a strong signal, not a weak one.** Of the 13
+   `PYTHON-UNKNOWN` rows in this shelf, **3 are source-available licences that forbid the
+   deliverable** and the rest are unparsed permissive text. The base rate for a *platform* in that
+   bucket is nothing like the base rate for a library.
+3. **Quote the classifier beside the verdict and the path beside both** — *"Elastic 2.0, per
+   `lib/license_family.sh` on `main/LICENSE`"*. On this shelf a bare family name is wrong once in
+   ten.
