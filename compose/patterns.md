@@ -4205,3 +4205,73 @@ other's blind spot in place.
 ⚠️ **What this pattern is not.** It is not legal advice and does not replace counsel. It
 replaces what most engagements actually do — **one scanner, once, and a green tick** — and
 gives counsel a list worth reading instead of a dashboard worth ignoring.
+
+## P-31.1 — Permissive-base AI learning platform on MIT Sunbird (APAC-first, redistributable)
+
+**Problem it solves.** A client needs an AI-assisted learning platform **they can redistribute or
+resell**. A Moodle (GPL-3.0) or Open edX (AGPL-3.0) base makes that a licence event; most engagements
+discover this after the architecture is set.
+
+**Wiring.**
+
+1. **LMS core — MIT, in-tree modification permitted.**
+   [`project-sunbird/sunbird-lms-service`](https://github.com/project-sunbird/sunbird-lms-service)
+   (MIT) + [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal) (MIT).
+   National-scale provenance via DIKSHA.
+2. **Learner state — persistent, not stateless.** Pattern the state model on
+   [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) (MIT, **canonical** —
+   not the `kvnloo` fork): durable learner state, review scheduling, misconception tracking,
+   auditable pedagogical decisions. Expose it to the LLM over MCP.
+3. **Serving — self-hosted open weights,** per the regional substrate already shelved in
+   `repos/foundations.md` (Indian/ASEAN language stacks, passes 6–7). Self-hosting is what satisfies
+   EU AI Act documentation duties and Korean/Japanese EdTech privacy rules in the same build.
+4. **Oversight gate — mandatory, not optional.** Every assessment-affecting output is a *suggestion*
+   with a logged human decision. This is the **OK/MD** "AI may not make high-stakes decisions" shape
+   and the EU AI Act human-oversight obligation, satisfied by one mechanism.
+5. **Data boundary.** Store learner state; **never route it into training.** This is **CA AB 1159**
+   literally, and good practice everywhere.
+6. **Enablement.** Ship faculty training built from
+   [`bojieli/ai-agent-book`](https://github.com/bojieli/ai-agent-book) (**Apache-2.0**, redistributable).
+   🔴 **Do not use** `datawhalechina/hello-agents` in client material — **CC BY-NC-SA 4.0**,
+   NonCommercial.
+
+**Why this composition:** steps 1 and 6 are the only two education components verified this pass that
+are *both* buildable and redistributable. Steps 4 and 5 are the two constraints that appear in all
+four regions' rules, so building them in once avoids four divergent forks.
+
+---
+
+## P-31.2 — Compliant autograding: propose-and-review, with the grader itself under test
+
+**Problem it solves.** Autograding is the highest-value education workflow and the one most directly
+restricted: Oklahoma and Maryland **ban AI from high-stakes decisions about students**, the EU AI Act
+treats *assessing learning outcomes* as high-risk, and several APAC statutes name **automated
+assessment** explicitly. Meanwhile LATAM data shows **assessment is the lowest-adoption area** and
+**61% of students fear peer misuse** — so trust, not throughput, is the blocker.
+
+**Wiring.** Take the architecture from
+[`pawtograder/platform`](https://github.com/pawtograder/platform) — **study it, self-host it, or
+re-implement the separation; do not link it into a proprietary deliverable (GPL-3.0-or-later)**:
+
+1. **Deterministic CI layer first.** Tests run in CI per
+   [`pawtograder/assignment-action`](https://github.com/pawtograder/assignment-action): objective,
+   reproducible, explainable to a student. No model in this path.
+2. **Model layer proposes only** — rubric-aligned draft feedback and a suggested band, never a
+   committed grade.
+3. **Handgrading as a distinct human-authority step**, with the rubric as the interface and the human
+   decision recorded. Pawtograder already separates these two; adopt the separation.
+4. **Regression-test the graders themselves.** Pawtograder's assignment-action regression-tests
+   graders — in a regulated setting this doubles as your **evaluation evidence** for conformity
+   documentation.
+5. **Staff-side MCP context, not student-side autonomy.** Course context to instructors over MCP
+   (Pawtograder's own posture) sits in UNESCO's *teacher-supporting* tier — medium-high confidence —
+   rather than the lowest-confidence student-facing tier.
+6. **Appeal path and audit log** as first-class features. This is what converts the LATAM integrity
+   anxiety into a selling point instead of a risk.
+
+**Deliverable framing by region.** Same build, four evidence packages: **NA** — per-state matrix
+(CA training-data prohibition, OK/MD oversight); **EMEA** — high-risk technical documentation,
+logging and human-oversight evidence under the Act enforcing since 2 Aug 2026; **APAC** — KR/VN/TW
+statutory mapping plus Korean EdTech privacy protocols; **LATAM** — institutional governance
+starter mapped to the UNESCO LAC Observatory framing, addressing the **~55% of institutions with no
+AI guidance**.

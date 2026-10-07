@@ -3220,3 +3220,32 @@ distribution option, not a restriction on the licensee — and answers **PROHIBI
 (`P460`). De-marking RTF well enough to recover a title means parsing a font table, and a
 half-parsed container would reopen the token-match path that produced the false positive.
 **Declining is an answer; inventing a verdict from markup is not.**
+
+## Added in the thirty-first pass, 2026-10-07 — four repos, two buildable
+
+Verified by licence payload over `raw.githubusercontent.com` with a 404 negative control in the same
+pass; `curl -sI` on `github.com` is **403 through this session's proxy** and was not used as an
+existence test. `api.github.com` is 403, so **no star counts were read** — cells say so rather than
+carrying an inferred figure.
+
+| Agent / tool | Repo | Licence (read from payload) | ★ | Region | What it does |
+|---|---|---|---|---|---|
+| Sunbird LMS Service | [`project-sunbird/sunbird-lms-service`](https://github.com/project-sunbird/sunbird-lms-service) | **MIT** (`master/LICENSE`) | not read this pass | APAC | 🟢 LMS service tier of Sunbird, the DPI stack behind India's **DIKSHA**. Pairs with `Sunbird-Ed/SunbirdEd-portal` (MIT) already on this shelf — together they are a licence-clean public-sector LMS base for an AI layer. |
+| ai-agent-book | [`bojieli/ai-agent-book`](https://github.com/bojieli/ai-agent-book) | **Apache-2.0** (`main/LICENSE`) | not read this pass | APAC | 🟢 Agent-systems curriculum with runnable Python patterns. Useful as *enablement* material in an engagement, and redistributable. |
+| Pawtograder | [`pawtograder/platform`](https://github.com/pawtograder/platform) | 🟡 **GPL-3.0-or-later** (`main/LICENSE`, "either version 3", © 2025 Jonathan Bell) | not read this pass | North America | CI-based autograder, rubric handgrading, Q&A, office-hours queue, gradebook. **Ships an MCP server exposing course context to staff-side LLMs** — the clearest production example on this shelf of MCP wired into a real gradebook. Copyleft: self-host and run freely; do **not** link into a proprietary deliverable. |
+| Pawtograder Assignment Action | [`pawtograder/assignment-action`](https://github.com/pawtograder/assignment-action) | 🟡 **GPL-3.0-or-later** (`main/LICENSE`) | not read this pass | North America | The CI grading harness itself, plus regression tests *for the graders*. The regression-testing-the-grader idea is the reusable part even where the licence is not. |
+
+🔴 **Two further repos were verified this pass and deliberately kept off this shelf**, because this
+file is the buildable shelf:
+
+- [`datawhalechina/hello-agents`](https://github.com/datawhalechina/hello-agents) — **CC BY-NC-SA
+  4.0** (full string, not the normalised `CC-BY` family). **NonCommercial and ShareAlike: no client
+  deliverable.** Filed in `agents/trending.md` only.
+- [`a5anka/ai-lab-2026-africa-agent-manager`](https://github.com/a5anka/ai-lab-2026-africa-agent-manager)
+  — **no licence file at all** (`LICENSE`, `LICENSE.md`, `package.json` all 404; `README.md` 200).
+  Public ≠ licensed; all rights reserved by default.
+
+🔁 **One candidate was a fork, not a finding:** `kvnloo/tutor-mcp` is byte-identical to
+[`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) (already shelved) — its
+own `LICENSE` is `© 2026 Arnaud Guiovanna` and its README's release badge points back to the
+upstream. **`ArnaudGuiovanna/tutor-mcp` is canonical.** See `agents/trending.md`, 2026-10-07.

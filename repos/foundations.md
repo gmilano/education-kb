@@ -2216,3 +2216,20 @@ License 2.0"*, naming licence and version in one token, and the Python probe req
 separate `"version 2.0"` string, so every **prose** declaration of Apache is excluded. The
 row on this page is **Apache-2.0** and correct; the instrument disagrees, and the fix is
 pre-registered rather than applied to a file pass 28 rewrote hours earlier.
+
+## Added in the thirty-first pass, 2026-10-07 — the DIKSHA service tier
+
+| Repo | Licence (read from payload) | ★ | Region | Why it is foundational |
+|---|---|---|---|---|
+| [`project-sunbird/sunbird-lms-service`](https://github.com/project-sunbird/sunbird-lms-service) | **MIT** (`master/LICENSE`, "Copyright (c) 2018 Project Sunbird") | not read this pass | APAC | The LMS service tier of **Sunbird**, India's education digital public infrastructure and the stack behind **DIKSHA** — national-scale, and **MIT**, which is rare at this scale in public-sector education. With `Sunbird-Ed/SunbirdEd-portal` (MIT, already shelved) this gives a licence-clean LMS core to put agents on top of, rather than retrofitting Moodle's GPL-3.0 tree. |
+| [`bojieli/ai-agent-book`](https://github.com/bojieli/ai-agent-book) | **Apache-2.0** (`main/LICENSE`) | not read this pass | APAC | Redistributable agent-engineering curriculum — the enablement layer of an engagement, usable in client-facing training material because Apache-2.0 permits it. |
+
+⚠️ **Not added, and why.** [`pawtograder/platform`](https://github.com/pawtograder/platform) is the
+most architecturally interesting thing found this pass (MCP server over a real gradebook) but is
+**GPL-3.0-or-later** — it belongs in `agents/top.md` with a copyleft flag, not in a foundations shelf
+that implies a proprietary-safe base. `datawhalechina/hello-agents` is **CC BY-NC-SA 4.0** and
+`a5anka/ai-lab-2026-africa-agent-manager` carries **no licence file**; neither is a foundation.
+
+Verification: licence payloads over `raw.githubusercontent.com`, 404 negative control run in the same
+pass. `curl -sI github.com` is 403 via this session's proxy; `api.github.com` is 403, so no star
+counts were read.

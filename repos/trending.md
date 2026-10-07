@@ -6,6 +6,32 @@ updated: 2026-10-07
 
 # Trending Repos — Education
 
+## 2026-10-07 — thirty-first pass: the trending shelf this window is curriculum, not runtime
+
+**What actually trended in education-adjacent open source this window was teaching material, not
+deployable agents.** Four of the five highest-signal repos below are courses or books. That is itself
+the finding: the education-AI open-source surface is currently growing faster in *how to build
+agents* than in *agents you can run in a classroom*.
+
+| Repo | Licence (read from payload) | ★ | Region | Note |
+|---|---|---|---|---|
+| [`bojieli/ai-agent-book`](https://github.com/bojieli/ai-agent-book) | **Apache-2.0** (`main/LICENSE`) | not read this pass | APAC | 🟢 New on this shelf. Agent-systems book + Python implementations. |
+| [`datawhalechina/hello-agents`](https://github.com/datawhalechina/hello-agents) | 🔴 **CC BY-NC-SA 4.0** (`main/LICENSE.txt`) | not read this pass | APAC | New on this shelf. Trendshift-listed (repo 15520). **NonCommercial — teaching reference only.** |
+| [`project-sunbird/sunbird-lms-service`](https://github.com/project-sunbird/sunbird-lms-service) | **MIT** (`master/LICENSE`) | not read this pass | APAC | 🟢 New on this shelf. DIKSHA's LMS service tier. |
+| [`pawtograder/platform`](https://github.com/pawtograder/platform) | 🟡 **GPL-3.0-or-later** (`main/LICENSE`) | not read this pass | North America | 🟢 New on this shelf. Autograder + CourseOps, MCP server for staff context. |
+| [`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) | already shelved | ~105,957 (secondary source, not payload-verified) | Global | Still the anchor education repo by stars; **count is from a trends digest, not `api.github.com`** — treat as indicative. |
+
+⚠️ **The one star figure in this table is second-hand.** `api.github.com` is 403 in this environment,
+so ~105,957 for `LLMs-from-scratch` comes from a third-party trends digest and is marked as such. No
+other star count was read this pass. Prior passes of this KB recorded that pipeline-inflated star
+counts had to be retracted across several industries; an unmarked second-hand number is how that
+starts.
+
+### 🔵 Declared gap
+No new **LATAM-origin** or **EMEA-origin** permissively-licensed education repo trended this window —
+searched, see `agents/trending.md` 2026-10-07 for the exact slugs probed and their 404s.
+
+
 > **Append-only.** Newest dated section on top; history preserved below.
 
 ## 2026-10-07 — thirtieth pass: the reconciler that flagged 29 of this shelf's rows was reading sentences about other repositories

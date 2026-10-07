@@ -5341,3 +5341,123 @@ than closes. What can be said without measuring: the LATAM tier of this shelf is
 that a 34.9% base rate would be expected to hit **one or two of the four**, and which ones
 would change how a LATAM engagement is scoped. The next pass tests the signal against
 liveness before anyone sells it as risk.
+
+## Opportunities by region — thirty-first-pass additions, 2026-10-07
+
+Global frame for this pass: AI-in-education **$7.52B (2025) → $10.6B (2026)**, CAGR ~40.9%, to
+**$42.48B by 2030** (~41.5% CAGR). Regional figures below are 2026 values with their own CAGRs; they
+are vendor/analyst estimates, not measurements, and are labelled as such.
+
+### North America
+
+- **Largest regional share: 36%, $3.68B (2026), projected $32B by 2030.**
+- **Adoption is already mainstream on the teacher side:** 60% of U.S. K-12 teachers used AI tools in
+  the 2024–25 school year; 32% used them at least weekly.
+- **Regulation is now the binding constraint, and it is state-level and fragmented:** **134 AI-in-education
+  bills across 31 states** in the 2026 session. Concretely:
+  - **California AB 1159** prohibits using student data to train AI models → *rules out fine-tuning on
+    student work in CA deployments.*
+  - **Oklahoma and Maryland** require human oversight and **ban AI from high-stakes decisions about
+    students** → *an autograder may propose, a human must dispose.*
+  - **Georgia and Mississippi** fold AI instruction into required computer-science credits.
+  - Federal: **H.R. 8747, K-12 AI Literacy and Readiness Act of 2026**, advanced out of the House
+    Education Committee; would let schools spend federal funds on AI curriculum and literacy.
+  - **STUDENTS FIRST Act of 2026** — a student-authored national framework from all 50 states (America's
+    Youth AI Festival, July 2026); signal, not law, but it shapes procurement language.
+- **Opportunity:** *human-in-the-loop-by-construction* grading and advising. `pawtograder/platform`
+  (GPL-3.0) is the existence proof that CI autograding + MCP staff context works in production at a
+  US university; the sellable asset is the **oversight and audit layer** OK/MD-style rules require,
+  plus a **per-state policy matrix** as a deliverable in its own right. 30+ states already have
+  guidance documents, so the 2026 work is *conforming* to them, not writing them.
+
+### EMEA
+
+- **$2.64B (2026) → $8.0B by 2030, ~31.9% CAGR.** Leaders in K-12 integration: **Finland, Estonia,
+  the Netherlands**. ~70% of institutions have or are developing AI guidance.
+- **The EU AI Act is live: from 2 August 2026 the AI Office and national authorities began
+  enforcement.** Education is doubly exposed — it is both a **high-risk** domain and a **vulnerable
+  population** domain. Systems that *determine access, assess learning outcomes, or influence an
+  individual's educational path* fall in the high-risk category, which pulls in conformity
+  assessment, technical documentation, logging, and human oversight obligations.
+- **UNESCO's generative-AI guidance** supplies a usable confidence ordering for sequencing a rollout:
+  administrator-facing (highest confidence — predictive analytics, scheduling, language access) →
+  teacher-supporting (medium-high — lesson planning, formative assessment, grading time) →
+  student-facing (lowest). **Sell in that order**; it matches where the Act's risk weight is lightest.
+- **Opportunity:** high-risk-conformity engineering as the product — provenance, logging, evaluation
+  evidence, and documented human oversight on top of an LMS the institution already runs. Data
+  residency plus the Act favours **self-hosted, open-weight** stacks over API-only ones.
+- 🔵 **Declared gap:** no new permissively-licensed **EMEA-origin** education agent repo was found
+  this window; the one Africa-origin artefact located carries **no licence file**. EMEA's open-source
+  education surface is thinner than its regulatory surface — the leverage here is compliance
+  engineering on imported components, not local component reuse.
+
+### APAC
+
+- **Three comprehensive AI statutes came into force in ~12 months:** **South Korea's Framework Act**
+  (in force **22 Jan 2026**), **Vietnam's dedicated AI law** (**1 Mar 2026**), **Taiwan's AI Basic
+  Act** (Dec 2025). High-risk designations in several of these explicitly name education —
+  **automated assessment and behavioural monitoring**.
+- **Korea's AI Data Protection Act requires all AI-driven EdTech platforms to meet strict privacy
+  protocols**; Japan and Korea both tightened data-protection rules specific to AI in education.
+- **China, India and Japan dominate regional volume**; China with heavy state backing, India through
+  online-education platform adoption. Named commercial players: Google, Microsoft, IBM, Pearson,
+  Byju's.
+- **Public opinion is not uniform and it affects deployability:** the **Ipsos Education Monitor 2026**
+  finds *lower* support for banning AI in schools across the Asian markets surveyed, but
+  **Australia and New Zealand record higher support for a ban** — ANZ engagements should expect a
+  more restrictive posture than the regional average.
+- **Opportunity, and it is the strongest licence story of this pass:** **Sunbird/DIKSHA is MIT**
+  (`project-sunbird/sunbird-lms-service` + `Sunbird-Ed/SunbirdEd-portal`). National-scale education
+  DPI under a permissive licence is unusual, and it means an AI layer can be built and
+  **redistributed** without the GPL-3.0 entanglement a Moodle-based approach carries. Pair with the
+  ASEAN and Indian-language substrate already shelved in `repos/foundations.md` (passes 6–7).
+  ⚠️ Counterweight: the two most visible new APAC *curriculum* repos this window are
+  **Apache-2.0** (`bojieli/ai-agent-book`) and **CC BY-NC-SA 4.0** (`datawhalechina/hello-agents`) —
+  the second cannot enter a deliverable.
+
+### LATAM
+
+- **The adoption numbers are the highest in this file, and the governance numbers are the lowest.
+  That gap is the opportunity.** Digital Education Council *AI in Higher Education LATAM Survey 2026*
+  (**30,000+ responses, 29 institutions**, with Tecnológico de Monterrey and its Institute for the
+  Future of Education): **92% of students and 79% of faculty actively engage with AI**; **94% of
+  faculty expect to use it in future teaching**; **72% hold positive views vs 57% globally**.
+- **But engagement is shallow and trust is the brake:** **88% of faculty report only "minimal" to
+  "moderate" engagement**, use concentrates in *creating materials, multimedia and admin* with low
+  uptake in **assessment**, and **61% of students fear misuse by peers** (fairness and integrity).
+- **Governance is the real deficit: only ~45% of institutions in Latin America and the Caribbean have
+  or are developing AI guidance, against ~70% in Europe and North America.**
+- **Regulation is live but uneven** — Brazil's AI bill, Chile's framework, Colombia's CONPES on AI,
+  Mexico's sectoral rules, all moving at different speeds. **UNESCO launched the Observatory on
+  Artificial Intelligence in Education for Latin America and the Caribbean on 14 April 2026**, and
+  has deepened its partnership with **CENIA** (Chile) on ethical AI in education; UNESCO is also
+  running AI-regulation and ethics capacity courses in Ecuador and the region.
+- **Opportunity:** the sequencing is inverted here relative to EMEA. Demand already exists
+  bottom-up; what is missing is **institutional guidance, assessment-integrity design, and faculty
+  enablement**. Three concrete offers: (1) an **institutional AI-governance starter** mapped to the
+  UNESCO Observatory's framing — addressable at the ~55% of institutions without guidance; (2)
+  **assessment redesign for integrity**, the lowest-adoption and highest-anxiety area; (3) **faculty
+  enablement at depth**, converting the 88% shallow-engagement majority. Spanish/Portuguese
+  localisation is table stakes, and **AI Week LATAM 2026** (SoftServe + NVIDIA with regional
+  universities, 29 Sep–3 Oct 2026, Colombia/Mexico/Chile, 4,000+ participants targeted) is the
+  established channel.
+- 🔵 **Declared gap — and a caution against an obvious mistake.** **Latam-GPT** (coordinated by
+  **CENIA**, Chile; launched **Feb 2026**; 60+ institutions across 15 LAC countries; Spanish and
+  Portuguese first, Indigenous languages staged) is the region's flagship open model and is heavily
+  covered in press. **No canonical GitHub repository resolved this pass** — `latam-gpt/latam-gpt`,
+  `cenia-chile/latam-gpt` and `CENIA-Chile/LatamGPT` all 404 on both `LICENSE` and `README.md`,
+  against a working 404 negative control. **Its licence terms are therefore unverified: do not put
+  it in a client proposal as a buildable component until a repository and its grant are located.**
+  No new LATAM-origin open-source education repo was found this window either, searched in Spanish
+  and Portuguese.
+
+### Cross-region read for this pass
+
+**Regulatory posture now predicts architecture more than budget does.** EMEA (AI Act, enforcing since
+Aug 2026) and APAC (KR/VN/TW statutes, education named high-risk) both push toward **self-hosted,
+auditable, open-weight** stacks with documented human oversight. North America pushes the same way
+through a *different* mechanism — 134 state bills, with OK/MD-style human-oversight mandates and
+CA AB 1159's training-data prohibition. LATAM is the outlier: **the constraint is institutional
+capacity, not statute.** One technical architecture — self-hosted, logged, human-in-the-loop, built on
+a permissive base like MIT Sunbird rather than GPL Moodle — serves all four; what changes per region
+is the **evidence package** wrapped around it.

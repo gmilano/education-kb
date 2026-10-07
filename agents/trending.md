@@ -6,6 +6,61 @@ updated: 2026-10-07
 
 # Trending Agents — Education
 
+## 2026-10-07 — thirty-first pass: six new repos verified, and only two of them are ours to build on
+
+**Method.** `curl -sI https://github.com/...` returns **403 through this session's egress proxy**, so
+HEAD-on-the-landing-page is *not* an existence test in this environment. Every row below was verified
+by fetching the repository's own licence payload over `raw.githubusercontent.com` and reading the
+first lines of the grant. A **negative control** was run in the same pass
+(`kvnloo/tutor-mcp-DOES-NOT-EXIST-xyz99`, `totally-fake-org-zzz/nope-repo-abc`) and both returned
+**404**, which is what makes the 200s above meaningful rather than an artefact of the proxy.
+`api.github.com` remains unreachable (403, session-scoped), so **no star counts were read this pass**
+— the cells say so rather than carrying an inferred number.
+
+### New this pass — 6 repos, licence read from payload
+
+| Repo | Licence (read from payload) | ★ | Region | What it is |
+|---|---|---|---|---|
+| [`project-sunbird/sunbird-lms-service`](https://github.com/project-sunbird/sunbird-lms-service) | **MIT** (`master/LICENSE`, "Copyright (c) 2018 Project Sunbird") | not read this pass | APAC | LMS backend service of the Sunbird stack — the digital public infrastructure behind India's **DIKSHA**. Complements `Sunbird-Ed/SunbirdEd-portal` (MIT), already on this shelf. 🟢 **Buildable.** |
+| [`bojieli/ai-agent-book`](https://github.com/bojieli/ai-agent-book) | **Apache-2.0** (`main/LICENSE`) | not read this pass | APAC | Agent-systems curriculum — concepts and implementation patterns, Python. Teaching substrate, not a runtime. 🟢 **Buildable.** |
+| [`pawtograder/platform`](https://github.com/pawtograder/platform) | 🟡 **GPL-3.0-or-later** (`main/LICENSE`, "either version 3", © 2025 Jonathan Bell) | not read this pass | North America | CI-based autograder + Q&A + office-hours queue + real gradebook; a GitHub-Classroom replacement for CS courses, in production at Northeastern. Ships **AI context for staff via an MCP server**. |
+| [`pawtograder/assignment-action`](https://github.com/pawtograder/assignment-action) | 🟡 **GPL-3.0-or-later** (`main/LICENSE`) | not read this pass | North America | The GitHub Action that grades assignments in CI and regression-tests the graders themselves. |
+| [`datawhalechina/hello-agents`](https://github.com/datawhalechina/hello-agents) | 🔴 **CC BY-NC-SA 4.0** (`main/LICENSE.txt`, "Attribution-NonCommercial-ShareAlike 4.0 International") | not read this pass | APAC | 《从零开始构建智能体》— Chinese-language agent-building course, Trendshift-listed. **NonCommercial + ShareAlike: not usable in a client deliverable.** |
+| [`a5anka/ai-lab-2026-africa-agent-manager`](https://github.com/a5anka/ai-lab-2026-africa-agent-manager) | 🔴 **NO LICENCE FILE** (`LICENSE`, `LICENSE.md`, `package.json` all 404; only `README.md` is 200) | not read this pass | EMEA | WSO2Con 2026 Africa agent-manager lab artefact. **No licence file means all rights reserved** — not usable, regardless of being public. |
+
+⚠️ **Only two of six are buildable.** Two are copyleft (GPL-3.0 — fine to *run* and *self-host* for a
+client, a licence event if linked into proprietary deliverables), one is NonCommercial, and one has
+no grant at all. Counting "6 new repos" as 6 new options would be the exact error this shelf's
+twenty-eighth pass was created to stop.
+
+### 🔁 De-duplication — one candidate was a fork, not a finding
+
+[`kvnloo/tutor-mcp`](https://github.com/kvnloo/tutor-mcp) surfaced as a new MIT "Intelligent Tutoring
+System MCP server". It is **a byte-identical fork of
+[`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp), already on this shelf**:
+
+- its `LICENSE` reads `Copyright (c) 2026 **Arnaud Guiovanna**`, not `kvnloo`;
+- its `README.md` is identical byte-for-byte, and its own release badge links to
+  `github.com/ArnaudGuiovanna/tutor-mcp/releases`.
+
+**`ArnaudGuiovanna/tutor-mcp` is canonical.** Recorded here so a later pass does not shelve the fork
+as a second project and inflate the count — the same subject-of-a-claim failure mode that pass 29
+adjudicated.
+
+### 🔵 Declared gaps — searched, nothing found, written down
+
+- **LATAM — no new open-source education agent repo this window.** Searched in Spanish and
+  Portuguese. **Latam-GPT** (CENIA Chile, launched Feb 2026, 60+ institutions across 15 LAC
+  countries, Spanish/Portuguese first with Indigenous languages staged later) is heavily covered in
+  press but **no canonical GitHub repository resolved** at `latam-gpt/latam-gpt`,
+  `cenia-chile/latam-gpt`, or `CENIA-Chile/LatamGPT` (all 404 on `LICENSE`/`README.md`, against a
+  working 404-negative-control). Its licence and composability are therefore **unverified** — do not
+  shelve it as buildable until a repo is located.
+- **EMEA — no new permissively-licensed EMEA-origin education agent this window.** The single
+  Africa-origin artefact found carries no licence (above). This is an informed gap, not coverage.
+- **No star counts anywhere this pass** — `api.github.com` 403.
+
+
 > **Append-only.** Newest dated section on top; history preserved below.
 
 ## 2026-10-07 — thirtieth pass: the 29 abstentions were never contradictions — a licence claim has a SUBJECT, and the gate that found them had no subject model

@@ -1853,3 +1853,42 @@ it and the commercial-use question falls through to a body token match that find
 option, not a restriction on the licensee — and answers **PROHIBITED** (`P460`). Both
 repositories are now reported `CONTAINER-RTF (no legible)` rather than guessed at. **The
 authoritative file is the plain-text one.**
+
+## Added in the thirty-first pass, 2026-10-07 — a permissive LMS base, and a production autograder
+
+### Sunbird / DIKSHA — the MIT-licensed national-scale LMS base
+
+| Component | Repo | Licence (payload) | Region |
+|---|---|---|---|
+| LMS service tier | [`project-sunbird/sunbird-lms-service`](https://github.com/project-sunbird/sunbird-lms-service) | **MIT** (`master/LICENSE`) | APAC |
+| Learner portal | [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal) | **MIT** (`master/LICENSE`) — already shelved | APAC |
+
+**Sunbird** is India's education digital public infrastructure and the stack behind **DIKSHA**,
+operating at national scale. **Why it matters more than its star count:** it is **MIT**. Every other
+customisable LMS base on this shelf carries a copyleft or non-OSI condition —
+**Moodle is GPL-3.0**, **Open edX is AGPL-3.0** (with some Apache-2.0 components), **OpenEduCat is
+LGPLv3**, **frappe/lms is AGPL-3.0** (corrected on this shelf; *not* MIT, despite being
+mis-reported). **Sakai is Apache-2.0 / ECL-2.0** and remains the other permissive option.
+
+**Customisation posture:** with Sunbird you can build an AI layer *in-tree* and redistribute it under
+your own terms. With Moodle or Open edX you cannot, which is exactly why the **side-car MCP boundary**
+(`peancor/moodle-mcp-server`, MIT *because* it sits outside the GPL-3.0 Moodle tree) exists on this
+shelf. **Choose the base from the redistribution requirement, not the feature list.**
+
+### Pawtograder — autograding + CourseOps, with MCP already wired in
+
+| Component | Repo | Licence (payload) | Region |
+|---|---|---|---|
+| Platform | [`pawtograder/platform`](https://github.com/pawtograder/platform) | 🟡 **GPL-3.0-or-later** | North America |
+| CI grading action | [`pawtograder/assignment-action`](https://github.com/pawtograder/assignment-action) | 🟡 **GPL-3.0-or-later** | North America |
+
+A real system — in production at **Northeastern**, built by educators (© 2025 Jonathan Bell), lineage
+from **Autolab** and **Autograder.io** for grading plus **GitHub Classroom** for repo workflow. It
+bundles CI autograding, rubric handgrading, Q&A, an office-hours queue and a gradebook, and **exposes
+course context to staff-side LLMs through an MCP server**.
+
+⚠️ **GPL-3.0-or-later.** Self-hosting it for an institution is unproblematic and is the normal
+deployment. Linking it into a proprietary product, or shipping a derived closed platform, is a
+licence event. The **transferable design idea** — autograding in CI, handgrading as a separate
+human-authority step, graders that are themselves regression-tested — carries no licence at all, and
+in a jurisdiction with OK/MD-style human-oversight rules that separation is the compliant shape.

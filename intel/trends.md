@@ -4077,3 +4077,71 @@ with an exemption for the `update` form**, or the gate will condemn the one conv
 working.
 🔵 **Pre-registered for pass 31 alongside the audit change:** publish the duplicate census for both
 files before renumbering anything, because the census is what tells you which direction is safe.
+
+## Trends — thirty-first pass, 2026-10-07
+
+### T-31.1 — The market has stopped buying "personalisation" and started buying workflows
+
+2026's clearest shift is **away from generic AI tools toward platforms purpose-built for education**,
+and within those, toward **workflow-first** applications: course-design support, teacher
+productivity, instructional and administrative workflow automation, structured student-support tasks.
+Broad personalisation promises are being displaced by *proven instructional benefit*.
+**Consequence for engagements:** scope the admin and teacher-facing workflow first. It is where the
+evidence is, and — per UNESCO's confidence tiers — where regulatory risk is lowest.
+
+### T-31.2 — Governance has become the product, not the paperwork
+
+Across all four regions, AI in education is moving **from experimentation to governance**: clear
+policies, data boundaries, oversight. This is now a deliverable line item rather than a compliance
+afterthought — explicitly so in EMEA (EU AI Act enforcement from **2 Aug 2026**, education as a
+high-risk domain), in North America (**134 bills / 31 states**; **CA AB 1159** barring student data
+from model training; **OK/MD** human-oversight and no-high-stakes-decision rules), and in APAC
+(**Korea Framework Act** 22 Jan 2026, **Vietnam** 1 Mar 2026, **Taiwan AI Basic Act** Dec 2025, with
+automated assessment and behavioural monitoring named high-risk).
+
+### T-31.3 — "Human must dispose" is now a design constraint with statutory force
+
+Oklahoma and Maryland **ban AI from making high-stakes decisions about students** and require human
+oversight; the EU AI Act attaches human-oversight obligations to the same class of systems; Korea and
+Japan add education-specific data-protection duties. **An autograder that writes a final grade is
+non-compliant in a growing number of jurisdictions.** The compliant shape is *propose-and-review*:
+model output as a reviewable suggestion, with the human action logged. Notably,
+`pawtograder/platform` already separates CI autograding from **rubric-based handgrading**, which is
+this shape arrived at for pedagogical reasons before the statutes required it.
+
+### T-31.4 — Memory and persistent learner state are the live technical frontier
+
+The broader agent ecosystem's recognition that **stateless agents are unsuitable for production** has
+landed in education as *durable learner state*: review scheduling, session memory, misconception
+tracking, metacognition, auditable pedagogical decisions. `ArnaudGuiovanna/tutor-mcp` (MIT, canonical
+— see the fork note in `agents/trending.md`) is the clearest MCP-shaped expression of it, and
+`pawtograder/platform` is the clearest production expression of **course state exposed to staff-side
+LLMs over MCP**. ⚠️ Persistent learner state is also precisely what **CA AB 1159** and the Korean
+EdTech privacy rules constrain — *store it, do not train on it.*
+
+### T-31.5 — The open-source growth this window is in curriculum, not classroom runtimes
+
+Four of the five highest-signal repos this window are **books and courses**
+(`rasbt/LLMs-from-scratch`, `rohitg00/ai-engineering-from-scratch`, `bojieli/ai-agent-book`,
+`datawhalechina/hello-agents`). Deployable, permissively-licensed classroom *runtimes* grew far more
+slowly. **Read:** for a 2026 engagement, expect to **compose and build** the runtime on an existing
+LMS core; do not expect to adopt a finished open-source AI classroom.
+
+### T-31.6 — Licence shape, not capability, is the gating factor in education open source
+
+Of six repos verified this pass, **two are buildable** (MIT, Apache-2.0), two are **GPL-3.0-or-later**,
+one is **CC BY-NC-SA 4.0**, one has **no licence file at all**. The sector's institutional and
+public-sector origins mean copyleft and NonCommercial grants are over-represented relative to general
+AI tooling. **The strategic implication is concrete:** prefer **MIT Sunbird/DIKSHA** as an LMS base
+over **GPL-3.0 Moodle** where a proprietary AI layer must be redistributed, and keep the MCP
+side-car boundary (already pattern `P-moodle-mcp` on this shelf) when working against a GPL tree.
+
+### 🔵 Declared gaps for this pass
+
+- **LATAM-origin and EMEA-origin open-source education repos: none new found**, searched in Spanish
+  and Portuguese and against region-specific queries. See `agents/trending.md` 2026-10-07 for probed
+  slugs and their 404s.
+- **Latam-GPT has no located repository** — licence and composability unverified; press coverage is
+  not a licence.
+- **No star counts read this pass** (`api.github.com` 403, session-scoped). The single star figure
+  carried in `repos/trending.md` is explicitly marked second-hand.
