@@ -4,6 +4,149 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🔴 Thirty-third pass, 2026-10-07 — LATAM's number is 87% adoption against 26% strategy, and that 61-point gap is the sellable work
+
+⏱️ **Measured 2026-10-07 from secondary sources** (market research houses, legislative trackers,
+Digital Education Council, UNESCO/IESALC, law-firm regulatory trackers). ⚠️ **These are published
+estimates and reported survey results, not first-hand measurements.** 🔴 **Primary legal texts could
+not be reached this pass:** `eur-lex.europa.eu` → **000** (egress-blocked), so every AI Act date below
+is corroborated across independent secondary sources but **not read from the Official Journal**.
+
+### 🔴 The EMEA date this KB had reverted on
+
+| Instrument | Date | Status |
+|---|---|---|
+| **Article 50** transparency (labelling, machine-readable marking) | **2026-08-02** | 🔴 **In force. Not deferred by the Omnibus** |
+| Article 50(2) backstop for systems deployed before 2026-08-02 | **2026-12-02** | ⏳ weeks away |
+| **Annex III §3 stand-alone high-risk — education** | **2027-12-02** | deferred from 2026-08-02 by Reg. (EU) 2026/1744 |
+| Annex I embedded high-risk | **2028-08-02** | deferred from 2027-08-02 |
+
+🔴 **This pass corrected a regression inside this KB, not the open web.** Three pass-32 sections —
+`compose/patterns.md` P38, `intel/trends.md` and this file — had reverted to *"full enforcement from
+August 2026"*, a claim this KB had already corrected as `P284`. **The stale date was in the freshest
+layer**, at the top of the files a reader opens first, while the correct dates sat deeper in the same
+files. 🔵 **A KB that only grows forward re-acquires its own corrected errors** every time a pass
+drafts a new top section from search summaries instead of from the tree below it.
+
+🟢 **Independent corroboration gained this pass:** the Council's final approval of the Digital Omnibus
+on **2026-06-29**, and education named explicitly among the deferred Annex III categories, from
+sources independent of those used when `P284` was recorded.
+
+🔵 **The commercial read is unchanged and still counter-intuitive: the near-term EMEA deliverable is
+the small one.** Clients who heard *"the high-risk deadline moved to 2027"* have usually deferred the
+**labelling** work too — and that duty is live now, with the already-deployed backstop at
+**2026-12-02**. **Sell the Article 50 marking engagement this quarter; schedule Annex III conformity
+for the 2027 cycle.**
+
+## Opportunities by region — thirty-third-pass update, 2026-10-07
+
+### North America
+
+🟢 **The policy surface is now dense enough to sell against by name.** As of **September 2026**,
+**40 states plus Puerto Rico** have official AI guidance or policy frameworks for education, and the
+PIE Network tracked **~100 state bills** touching students' use of AI in K-12.
+
+| Instrument | State | What it does |
+|---|---|---|
+| **AI in schools act** (enacted, March) | **Idaho** | Requires **local district and charter AI policies**, state **AI-literacy standards** and training, and provides that **no AI replaces or eliminates a human teacher** |
+| Enacted this session | **Utah** | K-12 AI education law |
+| **RAISE Act** (enacted late 2025) | **New York** | the earliest of the current wave |
+| **A.B. 1159** (live) | **California** | would bar student data from training AI models **unless the school benefits** |
+| **HB 650** (live) | **Vermont** | edtech providers must **register and certify privacy compliance annually** |
+| **S.B. 1546** (enacted) | **Oregon** | minor-protective **design** duties, including reducing compulsive use for presumed-child users |
+| **S.B. 394** (enacted) | **Virginia** | directs the state agency to issue guidance covering **teacher training** |
+
+🟢 **Four more states now require districts to adopt AI policies.** 🔵 **The opportunity is the
+district-level policy-to-implementation gap.** A mandate to *have* a policy is not capacity to
+implement one: Idaho's AI-literacy standards and Virginia's teacher-training guidance both create
+work no district has staff for. **Sell policy-conformant implementation and teacher enablement, per
+district, against a named statute** — and note that the **human-teacher guarantee** in Idaho's law
+makes assistive, human-gated designs the only compliant shape, which is precisely the local-first
+explainable stack on this KB's shelves.
+
+### EMEA
+
+🟡 **Two-phase, and the near phase is weeks away** — see the table above. **Article 50 transparency is
+live since 2026-08-02**, the backstop for already-deployed systems lands **2026-12-02**, and
+**Annex III education conformity is due 2027-12-02**.
+
+🔵 **Opportunity, in order of how soon it can be invoiced:**
+
+1. **Article 50 marking and classification sweep** — inventory every AI touchpoint, label outputs,
+   emit machine-readable provenance. **Due now; most clients think it was deferred.** 🟢 The highest
+   urgency-to-effort ratio in any region this pass.
+2. **Annex III conformity evidence** for assessment and admissions systems — technical
+   documentation, risk management, data governance, human-oversight records. **2027-12-02.**
+3. **The AI-literacy obligation** (live since 2025-02-02 and never deferred) — staff training for
+   every organisation that *uses* AI, not just those that build it.
+
+⚠️ **Do not quote any of these dates to a client without a EUR-Lex check**, which **this environment
+cannot perform** (`eur-lex.europa.eu` → **000**).
+
+### APAC
+
+🟢 **Three comprehensive AI statutes came into force within four months, and education is named in
+the scope of at least two.**
+
+| Jurisdiction | Instrument | Status | Education relevance |
+|---|---|---|---|
+| **South Korea** | **AI Basic Act** | in force **2026-01-22** | scopes *"high-impact AI"* in healthcare, **education**, finance, employment and essential services |
+| **Vietnam** | **Law on Artificial Intelligence** | effective **2026-03-01** | with **Decree 33** (in force 2026-08-15) classifying biometric learner-behaviour analysis as high-risk |
+| **Taiwan** | **AI Basic Act** | passed **2025-12** | framework legislation |
+
+**Adoption: 65–75% (2025) → 80–90% (2026 projected).** Named incumbents: **Google, Microsoft, IBM,
+Pearson, Byju's.** China, India and Japan dominate regional spend.
+
+🔵 **The opportunity is that APAC now has three different compliance regimes and no portability
+layer between them.** A vendor selling into Korea, Vietnam and Taiwan needs one system that can
+evidence conformity under three statutes with different definitions of high-risk. 🟢 **Build the
+evidence layer once, parameterised by jurisdiction** — the same artefact set that satisfies EU
+Annex III largely satisfies Korea's high-impact duties, and Vietnam's biometric clause is the
+strictest, so design to it and the others follow. ⚠️ **"No education agent layer on an APAC
+sovereign model" remains open** — `aisingapore/sealion` still serves **no licence payload**, so the
+regional-model pedagogy layer is still unbuilt and still unavailable to build on.
+
+### LATAM
+
+🔴 **The number that defines the region this pass: 87% of institutions use AI in at least one area,
+and only 26% have a formal AI strategy.** A **61-point governance gap** is the clearest single
+commercial signal in any region on this shelf.
+
+| Signal | Value | Source shape |
+|---|---|---|
+| Faculty holding positive/very positive views of AI | **72%** (vs **57%** globally) | Digital Education Council, **7,319 faculty, 29 institutions** |
+| Faculty using AI in teaching | **79%** | same survey |
+| 🔴 Faculty reporting only *minimal to moderate* engagement | **88%** | same survey |
+| Institutions using AI in ≥1 area | **87%** | regional study |
+| 🔴 Institutions with a **formal AI strategy** | **26%** | same study |
+
+🟢 **LATAM is the most AI-positive region measured and the least governed.** Enthusiasm is 15 points
+above global, usage is high, depth is shallow (**88% minimal-to-moderate**), and three in four
+institutions are running AI with no strategy behind it. 🔵 **That is not a technology sale, it is a
+governance-and-depth sale** — and it is the inverse of EMEA, where the regulation forces the
+governance and the appetite lags.
+
+**Regional infrastructure that changed this pass:**
+
+- **UNESCO launched its Observatory on AI in Education for Latin America and the Caribbean on
+  2026-04-14** — a regional platform to help states integrate AI into education systems. 🟢 **A
+  citable, neutral anchor for a governance engagement**, which the region previously lacked.
+- **Uruguay** became the **first LATAM country to sign the Council of Europe's Framework Convention
+  on AI** — the first hard regional commitment to an external standard, and a template for others.
+- **Latam-GPT** (CENIA Chile, **60+ institutions across 15 countries**, ~**$550k**, funded largely by
+  **CAF**): 🟢 tooling permissively licensed (**MIT**/**MIT-0**, verified from payload this pass),
+  🔴 weights reported under the **non-OSI Llama 3.1 Community Licence** and **unverifiable from this
+  environment**. ⚠️ **Not one of the three code grants is held by CENIA or any partner institution**
+  (`P463`).
+
+🔵 **The sharpest LATAM offer, assembled only from things verified this pass:** take the **87%/26%**
+gap as the diagnosis, the **UNESCO Observatory** as the external framework, and
+[`latam-gpt/anonymization-filter`](https://github.com/latam-gpt/anonymization-filter) (**MIT**) as
+the first technical deliverable — Spanish/Portuguese PII scrubbing in front of whatever the
+institution already deployed without a strategy. **It is a small, concrete, compliance-retiring build
+on top of an installed base that is already there**, which is exactly what a market with 26% strategy
+coverage and constrained capital can fund.
+
 ## 🔴 Thirty-second pass, 2026-10-07 — adoption is near-saturated, funding fell 26%, and that gap is the whole commercial story
 
 ⏱️ **Measured 2026-10-07 from secondary sources** (market research houses, legislative trackers,
@@ -92,7 +235,10 @@ Heartbeat check-ins are exactly the pattern that needs review there.
 
 **The hardest compliance regime, and this KB's thinnest repo shelf — second pass running.**
 
-- **EU AI Act: full enforcement by August 2026.** Adopted 2024, phased through 2026–27.
+- **EU AI Act: Annex III conformity duties due 2 December 2027.** ⏸️ **[pass 33, 2026-10-07: this
+  line read *"full enforcement by August 2026"* — superseded by Regulation (EU) 2026/1744 (*Digital
+  Omnibus on AI*, CELEX 32026R1744). **Article 50 transparency was not deferred** and applies from
+  2026-08-02. See `P284`.]** Adopted 2024, phased through 2026–28.
 - 🔴 **Education is HIGH-RISK under Annex III** where AI determines **access** (admissions), performs
   **assessment** of learning outcomes, or influences a person's **educational path** — plus exam
   scoring and proctoring. High-risk obligations attach **before deployment**: risk management, data

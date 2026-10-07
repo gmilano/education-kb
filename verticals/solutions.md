@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟡 Thirty-third pass, 2026-10-07 — the integrity layer is copyleft, and that decides where the agent goes
+
+**Licences read from payload on `raw.githubusercontent.com`, 2026-10-07**, branch- and case-aware
+probe (13 filenames × `main` and `master`). No star counts: `api.github.com` **403**, github.com
+landing pages **403** on HEAD and GET. 🆕 `eur-lex.europa.eu` **000** and `huggingface.co` **000** —
+both egress-blocked, both newly recorded.
+
+### 🔵 Proctoring and exam integrity, stated as a licence layer
+
+This shelf has carried **Safe Exam Browser** and **SEB Server** as the integrity tier and treated the
+category as otherwise unavailable. Three measurements this pass change the menu:
+
+| Layer | Repo / platform | Licence (payload) | Bytes | Commercial consequence |
+|---|---|---|---|---|
+| Platform (Open edX subsystem) | [`openedx/edx-proctoring`](https://github.com/openedx/edx-proctoring) | 🟡 **AGPL-3.0** | 35119 (`master/LICENSE.txt`) | Network copyleft. Deploy it for a client; **do not embed it in a product you redistribute** |
+| Platform (standalone) | [`kamlendras/OpenProctor`](https://github.com/kamlendras/OpenProctor) | 🟡 **AGPL-3.0** | 34523 (`main/LICENSE`) | 🆕 First measurement. Same constraint, no Open edX dependency |
+| **Agent** | [`biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent`](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent) | 🟢 **MIT** | 1068 (`master/LICENSE`) | 🟢 **Permissive, fully local, explainable.** Vendorable into a deliverable |
+| **Agent** | [`SuyashMore/AI-Proctored-Examination-System`](https://github.com/SuyashMore/AI-Proctored-Examination-System) | 🟢 **MIT** | 1068 (`main/LICENSE`) | 🟢 Permissive; second independent implementation (© 2020) |
+
+🔴 **Both MIT rows were previously on this KB's reject list, and the gap built on them is withdrawn.**
+See `P461` (a `main`-first probe files a `master`-default repo as absent) and `P462` (a declared gap
+that rests on one verdict inverts when that verdict does).
+
+🟢 **So the integrity menu for an Open edX or standalone deployment is now three options, ranked:**
+
+1. **MIT proctoring agent outside the platform**, talking to it over APIs — 🟢 **Preferred.** No
+   copyleft contact, fully local inference, explainable risk output.
+2. **Deploy `edx-proctoring` or `OpenProctor` for the client and self-host** — 🟡 fine; the AGPL
+   obligation stays with the instance the client runs.
+3. **Embed either AGPL-3.0 platform in a redistributed deliverable** — 🔴 takes network copyleft onto
+   the whole product.
+
+⚠️ **This is the same plugin/side-car boundary, now with a fifth and sixth instance:**
+`peancor/moodle-mcp-server` and `Jawadh-Salih/moodle-mcp-server` (MIT outside GPL-3.0 Moodle),
+Apache-2.0 `XBlock` against AGPL-3.0 `edx-platform`, and now **two MIT proctoring agents outside two
+AGPL-3.0 integrity platforms.** 🟢 **Six independent instances: when the platform is copyleft and the
+deliverable must not be, the AI goes outside the tree and talks over an API.** That rule has now
+survived every category this shelf covers — LMS, gradebook, courseware and exam integrity.
+
+### ⚠️ A customisation caveat specific to proctoring
+
+🔴 **Proctoring is the one category where the permissive licence is not the binding constraint.**
+EU **Annex III point 3** covers exam and behaviour monitoring, and Vietnam's **Decree 33** (in force
+2026-08-15) classifies AI that *"monitors and analyses learner behaviour with biometric data"* as
+high-risk. **An MIT licence does not make a biometric proctoring deployment lawful.** What keeps it
+sellable is the *architecture* both MIT agents already have: **on-device processing, frames discarded
+after feature extraction, explainable per-signal evidence, and a human gate on every consequential
+decision.** 🔵 **Customise toward that shape, never away from it** — a cloud-API rewrite of either
+repo would be permissively licensed and unsellable in both regimes.
+
+⏸️ **And the EMEA clock is not the one this shelf used to quote:** Annex III conformity duties are due
+**2027-12-02**, deferred by Regulation (EU) 2026/1744; **Article 50 transparency was not deferred** and
+has applied since **2026-08-02**. Primary text unverifiable from here (`eur-lex.europa.eu` → **000**).
+
 ## 🟢 Thirty-second pass, 2026-10-07 — the Open edX licence split, and a platform claim that was a web server
 
 **Licences read from payload on `raw.githubusercontent.com`, 2026-10-07.** No star counts:

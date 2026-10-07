@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-third pass, 2026-10-07 — the regional-corpus layer, and a gap repo that was licensed all along
+
+**Licences read from each repo's own payload on `raw.githubusercontent.com`, 2026-10-07**, with a
+branch- and case-aware prober (13 filenames × `main` and `master`). No star counts:
+`api.github.com` **403**, github.com landing pages **403** on both HEAD and GET. 🆕 Two further
+channels measured and **closed this pass**: `eur-lex.europa.eu` **000**, `huggingface.co` **000**.
+
+### Foundations added this pass
+
+| Repo | Licence (payload) | Region | Role |
+|---|---|---|---|
+| [`latam-gpt/anonymization-filter`](https://github.com/latam-gpt/anonymization-filter) | 🟢 **MIT** (1072 B, © 2025 GonzaloFuentes1) | LATAM | PII anonymisation filter from the **Latam-GPT** corpus pipeline. 🟢 **The regional primitive this shelf was missing:** a Spanish/Portuguese-language scrubber that sits *in front of* any model, which is what makes a student-data pipeline defensible under LATAM data-protection regimes and under CA A.B. 1159-style rules in North America |
+| [`latam-gpt/lm-evaluation-harness`](https://github.com/latam-gpt/lm-evaluation-harness) | 🟢 **MIT** (1067 B, © 2020 **EleutherAI**) | LATAM | Regional evaluation entry point. ⚠️ **A fork** — the grant is EleutherAI's, so treat it as a regionally-configured upstream and cite accordingly |
+| [`latam-gpt/syco-bench`](https://github.com/latam-gpt/syco-bench) | 🟢 **MIT-0** — *MIT No Attribution* (903 B, © 2025 Tim Duffy) | LATAM | Sycophancy benchmark. ⚠️ **MIT-0 is a distinct licence from MIT**: it waives attribution. Harmless here, but it must not be recorded as "MIT" in a licence inventory |
+| [`biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent`](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent) | 🟢 **MIT** (1068 B, `master/LICENSE`, © 2026 Prem Biswal) | Global | 🔴 **Previously filed on this shelf's reject list.** Belongs in foundations as much as in agents: it is a **from-scratch, dependency-light reference implementation** of explainable behavioural risk scoring — logistic regression, anomaly detection, risk decay and fusion written out rather than imported. Read it as the maths layer under any assessment-integrity build |
+
+🔵 **Why the anonymisation filter is the important one.** The other two LATAM rows are evaluation
+tooling with upstream holders. This one is **original regional work** on the problem every education
+engagement in the region hits first: student data cannot leave the institution un-scrubbed, and
+English-trained PII detectors under-perform on Spanish and Portuguese names, document identifiers and
+address forms. 🟢 **It composes directly with the local-first grading stack** already on this shelf —
+scrub, then score on the client's own hardware, and no student text reaches a frontier API.
+
+### ⚠️ What this pass could NOT establish, and will not imply
+
+🔴 **The model layer of this industry is unverifiable from this environment.** `huggingface.co`
+returns **000** (egress-blocked), so **no weights licence anywhere in this KB is payload-verified** —
+including **Latam-GPT's** 70B SFT checkpoint, widely reported under the **Llama 3.1 Community
+Licence**. That licence is **not OSI-approved** and carries acceptable-use and naming conditions.
+**Treat every weights-licence statement in this KB as a secondary-source claim** (`P464`).
+
+🔵 **The practical consequence for foundations work:** prefer compositions where the permissively
+licensed *code* is yours to vendor and the *weights* are a swappable, client-chosen dependency. Every
+pattern on the `compose/` shelf that names an open-weights model is one Hugging Face terms change
+away from needing a re-read, and this pass cannot do that re-read.
+
+### 🟢 The Open edX licence picture, extended to proctoring
+
+The pass-32 split (AGPL-3.0 core, Apache-2.0 `XBlock`) now has a third measured layer:
+
+| Layer | Repo | Licence (payload) | Bytes | Consequence |
+|---|---|---|---|---|
+| Core platform | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🟡 **AGPL-3.0** | 35136 | self-host freely; redistribution of a modified platform is a licence event |
+| Extension point | [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 **Apache-2.0** | 11357 (`master/LICENSE.TXT`) | the surface an agent plugs into, and may keep proprietary |
+| Proctoring subsystem | [`openedx/edx-proctoring`](https://github.com/openedx/edx-proctoring) | 🟡 **AGPL-3.0** | 35119 (`master/LICENSE.txt`) | 🆕 **the integrity layer is copyleft too** — so an integrity *agent* must sit outside it |
+
+🟢 **Which is exactly what the two MIT proctoring agents added this pass do.** The permissive
+proctoring work lives *outside* both AGPL-3.0 trees and communicates over APIs — the fifth
+independent instance of the rule that **the licence boundary is the integration boundary**.
+
 ## 🟢 Thirty-second pass, 2026-10-07 — the Open edX licence asymmetry, stated precisely
 
 **Licences read from each repo's own payload on `raw.githubusercontent.com`, 2026-10-07.** No star

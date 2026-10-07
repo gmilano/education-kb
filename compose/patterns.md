@@ -4,6 +4,125 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-third pass, 2026-10-07 — two recipes: P41, P42
+
+**Every repo named below had its licence read from its own payload on `raw.githubusercontent.com` on
+2026-10-07**, with a branch- and case-aware probe (13 filenames × `main` and `master`). No star counts
+(`api.github.com` **403**, github.com **403** on HEAD and GET), so these recipes are composed on
+**licence and documented capability**, not popularity. ⚠️ **No weights licence below is
+payload-verified** — `huggingface.co` → **000** from this environment (`P464`). Durations are
+**estimates for a Globant squad**, not measurements.
+
+---
+
+## P41 — The defensible integrity layer: local proctoring that survives Annex III and Decree 33
+
+🔵 **The problem.** Exam integrity is the most regulated function in education AI and the one clients
+ask for most often. EU **Annex III point 3** covers exam and behaviour monitoring; Vietnam's
+**Decree 33** (in force 2026-08-15) classifies AI that *"monitors and analyses learner behaviour with
+biometric data"* as high-risk; Idaho's 2026 law provides that **no AI may replace a human teacher**.
+Meanwhile the commercial proctoring market is built on exactly what all three regimes penalise:
+cloud biometric APIs returning an unexplained *"87% cheating probability"*. 🔴 **And this KB spent 26
+passes telling readers no permissive option existed. It was wrong** — see `P461`/`P462`.
+
+🟢 **The recipe.** Everything permissive, everything verified this pass:
+
+| Component | Repo | Licence (payload) | Job in the stack |
+|---|---|---|---|
+| Integrity agent | [`biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent`](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent) | **MIT** (1068 B, `master/LICENSE`) | On-device OpenCV/MediaPipe, **22-dimension behavioural vector**, from-scratch logistic regression + anomaly detection, risk decay and fusion, TF-IDF, SQLite. Emits an **evidence breakdown** |
+| Cross-check implementation | [`SuyashMore/AI-Proctored-Examination-System`](https://github.com/SuyashMore/AI-Proctored-Examination-System) | **MIT** (1068 B) | Second independent MIT implementation — use it as a **differential oracle** on the risk signals, not as a second deployment |
+| Exam delivery | **Safe Exam Browser** / `SafeExamBrowser/seb-server` | already on this KB's shelf | lockdown delivery; the agent scores, SEB constrains |
+| Human gate + rubric trail | [`paper-instruments/rubric`](https://github.com/paper-instruments/rubric) | **MIT** (1076 B) | the appeal record: weighted criteria as data, versioned in git |
+| Gradebook write-back | one of the six MIT LMS MCP servers (**P39**) | **MIT** | return only **human-confirmed** outcomes to the system of record |
+
+⚠️ **Do not deploy [`openedx/edx-proctoring`](https://github.com/openedx/edx-proctoring) (AGPL-3.0,
+35119 B) or [`kamlendras/OpenProctor`](https://github.com/kamlendras/OpenProctor) (AGPL-3.0, 34523 B)
+inside a redistributed deliverable.** Self-hosting either for a client is fine; embedding either in a
+product you ship is a network-copyleft event. **The MIT agent outside the tree is the whole point.**
+
+**Wiring.**
+
+1. **Run every frame locally and discard it.** Extract the 22-dimension feature vector on-device;
+   persist features and scores, never imagery. This single decision is what moves the deployment out
+   of the worst of Decree 33's biometric exposure, and it is the repo's default behaviour.
+2. **Keep the from-scratch models, resist the urge to "upgrade" to an API.** The explainability is
+   not a feature bolted on; it is a consequence of logistic regression and anomaly detection with
+   inspectable coefficients. A frontier-API rewrite would be MIT-licensed and unsellable in both
+   regimes.
+3. **Emit per-signal evidence for every risk score**, with the decay and fusion terms shown. *"Gaze
+   off-screen 14× plus atypical typing cadence → 0.73"* is contestable; *"0.73"* is not.
+4. **Gate every consequential decision on a human**, and record the override. Idaho's human-teacher
+   guarantee, Annex III human-oversight evidence and a student's right of appeal are all satisfied by
+   the same stored tuple: features, score, explanation, reviewer, decision, timestamp.
+5. **Cross-check with the second MIT implementation during calibration only.** Where the two
+   disagree on a signal, that signal is not ready to carry a consequence.
+6. **Write back only confirmed outcomes** through the MCP gradebook path from **P39**, version-pinned
+   and tested against a staging course.
+
+🔵 **Sells in APAC on Decree 33 and the Korean AI Basic Act, in EMEA on Annex III point 3 (due
+2027-12-02, with Article 50 labelling live since 2026-08-02), and in North America on the Idaho
+human-teacher guarantee.** Same build, three arguments. **Estimate: 6–9 weeks** for a calibrated
+single-institution pilot; the calibration, not the code, is the long pole.
+
+⚠️ **The honest caveat.** Both repos are small-team projects, not products. The licence is clean and
+the architecture is right; the hardening, accessibility review and bias testing across cohorts are
+the engagement. **Audit the risk-fusion maths before it carries a consequence for a student.**
+
+---
+
+## P42 — Scrub-then-score: a LATAM student-data pipeline with no English-first assumptions
+
+🔵 **The problem.** LATAM is the most AI-positive region measured — **87% of institutions use AI in at
+least one area** — and the least governed: **only 26% have a formal AI strategy**, and **88% of
+faculty report minimal-to-moderate engagement**. So the typical regional engagement does not start
+with a greenfield build; it starts with **AI already running on student data that nobody governs**.
+⚠️ **And the first technical problem is specific to the region:** PII detectors trained on English
+under-perform on Spanish and Portuguese names, national identifier formats (RUT, CPF, CURP, DNI) and
+address conventions — so the scrubbing step most pipelines inherit does not actually scrub.
+
+🟢 **The recipe.** Regional where it must be, permissive throughout:
+
+| Component | Repo | Licence (payload) | Job in the stack |
+|---|---|---|---|
+| PII scrub | [`latam-gpt/anonymization-filter`](https://github.com/latam-gpt/anonymization-filter) | **MIT** (1072 B, © 2025 GonzaloFuentes1) | Anonymisation filter from the **Latam-GPT** corpus pipeline — built for regional text, not adapted to it |
+| Regional evaluation | [`latam-gpt/lm-evaluation-harness`](https://github.com/latam-gpt/lm-evaluation-harness) | **MIT** (1067 B, © EleutherAI) | ⚠️ **a fork** — regional task configuration over EleutherAI's harness; cite upstream |
+| Sycophancy check | [`latam-gpt/syco-bench`](https://github.com/latam-gpt/syco-bench) | **MIT-0** (903 B) | ⚠️ **MIT-0, not MIT.** A tutor that agrees with a wrong answer is a pedagogical failure; this measures it |
+| Rubric store | [`paper-instruments/rubric`](https://github.com/paper-instruments/rubric) | **MIT** (1076 B) | auditable weighted criteria |
+| Scorer | [`prometheus-eval/prometheus-eval`](https://github.com/prometheus-eval/prometheus-eval) | **Apache-2.0** (10141 B) | rubric-conditioned judging on client hardware |
+| Tutor surface, Open edX estate | [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) | **MIT** (1068 B) | the proven LATAM shape: MIT agent inside an Open edX deployment |
+
+⚠️ **Model choice is deliberately left open, and that is the design.** **Latam-GPT's weights are
+reported under the Llama 3.1 Community Licence — not OSI-approved — and could not be verified from
+this environment** (`P464`). **Treat the model as a swappable, client-chosen dependency behind an
+interface**; the permissive code above is what you actually vendor.
+
+**Wiring.**
+
+1. **Start with an inventory, not a build.** Against the 87%/26% gap, the first deliverable is a map
+   of what AI is already touching student data and under whose authority. Point at UNESCO's
+   **Observatory on AI in Education for Latin America and the Caribbean** (launched **2026-04-14**)
+   as the external framework, so the governance work is not Globant's opinion.
+2. **Put `anonymization-filter` in front of everything**, before any model sees a record. Validate it
+   against the identifier formats of the actual countries in scope — do not assume one regional
+   filter covers RUT, CPF, CURP and DNI equally. **Measure the miss rate and write it down.**
+3. **Score with `prometheus-eval` against rubrics held in `rubric`**, on institution-owned hardware.
+   Scrubbed input plus local inference is the argument that student data never left the institution.
+4. **Gate the tutor on `syco-bench`.** Regional-language tutoring that validates wrong answers is
+   worse than no tutoring; run it as a release gate, not a one-off.
+5. **Deliver inside the existing estate.** Where the institution runs Open edX, follow `TutorIA`'s
+   shape — MIT agent as an XBlock or external service against Apache-2.0 surfaces, leaving
+   `edx-platform`'s AGPL-3.0 exactly where it already is.
+6. **Hand over the governance artefact,** not just the system: data flows, scrub miss rates, rubric
+   versions, model and weights provenance, human-review log. **That document is what turns a 26%
+   strategy-coverage institution into one that has a strategy**, and it is the reason the engagement
+   can be funded in a market where capital is selective.
+
+🔵 **Why this is fundable where a platform build is not.** Edtech venture funding is down and
+institutional appetite is high but shallow. This recipe retires a **specific, nameable** risk —
+ungoverned student data in a pipeline already running — on an installed base the client already paid
+for. **Estimate: 4–6 weeks** for the inventory plus a scrubbed, locally-scored pilot on one faculty;
+the regional PII validation in step 2 is the part not to compress.
+
 ## 🟢 Thirty-second pass, 2026-10-07 — three recipes: P38, P39, P40
 
 **Every repo named below had its licence read from its own payload on `raw.githubusercontent.com`
@@ -16,7 +135,13 @@ these recipes are composed on **licence and documented capability**, not on popu
 ## P38 — The auditable grader: rubric-as-data, scored on hardware the client owns
 
 🔵 **The problem.** EU AI Act **Annex III** makes AI that assesses learning outcomes **high-risk**,
-with full enforcement from **August 2026**: risk management, data governance, human oversight,
+with conformity duties due **2 December 2027** — ⏸️ **[Corrected in the thirty-third pass, 2026-10-07:
+this recipe read *"full enforcement from **August 2026**"*. That date was already superseded when the
+recipe was written. Regulation (EU) 2026/1744 (*Digital Omnibus on AI*, CELEX 32026R1744) deferred
+**Annex III stand-alone high-risk from 2026-08-02 to 2027-12-02**, and Annex I embedded to
+2028-08-02. **Article 50 transparency was NOT deferred** — it applies from 2026-08-02, with the
+backstop for already-deployed systems at 2026-12-02. See `P284` and `P464`.]** — namely: risk
+management, data governance, human oversight,
 transparency and a **conformity assessment**, all *before* deployment. In the US, California
 **A.B. 1159** would bar student data from training models unless the school benefits, and Idaho
 **S.B. 1227** mandates data-privacy requirements for K-12 AI tools. A grader built on a frontier API

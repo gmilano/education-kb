@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — thirty-third pass: the proctoring shelf was never empty
+
+> **Append-only.** Newest dated section on top; history preserved below.
+
+**Method, corrected.** Licences read from payload on `raw.githubusercontent.com` with a **branch- and
+case-aware** prober: 13 filenames × `main` **and** `master`, existence fallbacks on `README.rst`,
+`README.txt`, `pyproject.toml` and `package.json`. **15 repos probed: 5 permissive** (4 × MIT,
+1 × MIT-0), **2 AGPL-3.0**, **4 that exist with no licence payload**, **4 that could not be shown to
+exist at all** — 5 + 2 + 4 + 4 = **15**. ⚠️ **"No payload" ≠ "unresolved"**, and they are counted
+apart. `curl -sI` and GET on github.com landing pages both **403**; `api.github.com` **403** —
+**no star counts this pass.** 🆕 Two further channels measured and **closed**: `eur-lex.europa.eu`
+**000** and `huggingface.co` **000**. Negative control → **404 on both branches** in the same run.
+
+### 🔴 The correction: a trending row this file told readers not to use is MIT
+
+| Repo | What this file said | Measured 2026-10-07 |
+|---|---|---|
+| [`biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent`](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent) | **NONE** · *"Do not use. Local, explainable, human-gated — the right design, no grant"* | 🟢 **MIT**, `master/LICENSE`, 1068 B, © 2026 Prem Biswal. **The design was right and the grant was there.** |
+
+🔴 **Mechanism (`P461`): the repo has no `main` branch.** `main/LICENSE` **404**, `main/README.md`
+**404**, `master/LICENSE` **200** (1068 B), `master/README.md` **200** (26560 B). A `main`-first
+prober with a `main`-rooted existence fallback reports the repository as nonexistent and files it
+beside the genuinely unlicensed rows. This is the **branch** sibling of `P453` (case) and `P454`
+(`.rst`), and the fifth member of the family that **errs toward deleting a true row**.
+
+### 🟢 Trending this pass — permissive proctoring, the category this KB had written off
+
+| Repo | Licence (payload) | Signal | Region | Why it matters |
+|---|---|---|---|---|
+| [`biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent`](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent) | **MIT** (© 2026 Prem Biswal) | the repo that refuted a declared gap | Global | Local proctoring + grading with **no external AI APIs**: OpenCV/MediaPipe on-device, 22-dimension behavioural vector, from-scratch logistic regression and anomaly detection, risk decay and fusion, TF-IDF, SQLite. **Explainable by construction** — an evidence breakdown, not a bare probability. 🟢 The one proctoring shape EU Annex III point 3 and Vietnam's Decree 33 leave sellable |
+| [`SuyashMore/AI-Proctored-Examination-System`](https://github.com/SuyashMore/AI-Proctored-Examination-System) | **MIT** (© **2020** Suyash More) | second, independent, and six years older | Global | 🔵 **The row that makes the correction structural.** One mis-probe is an accident; a second permissive implementation predating the gap by years means the shelf was never empty |
+
+### 🟢 Also this pass — the Latam-GPT tooling layer (LATAM)
+
+| Repo | Licence (payload) | Signal | Region | Why it matters |
+|---|---|---|---|---|
+| [`latam-gpt/anonymization-filter`](https://github.com/latam-gpt/anonymization-filter) | **MIT** (1072 B, © 2025 GonzaloFuentes1) | the pipeline piece, not the model | LATAM | 🟢 **The most reusable regional component found this pass.** PII scrubbing in front of a Spanish/Portuguese student-data pipeline is a compliance primitive, and it is vendorable today |
+| [`latam-gpt/lm-evaluation-harness`](https://github.com/latam-gpt/lm-evaluation-harness) | **MIT** (1067 B, © 2020 **EleutherAI**) | ⚠️ **a fork** | LATAM | The payload's holder is upstream, not the project. Fine to use; cite EleutherAI |
+| [`latam-gpt/syco-bench`](https://github.com/latam-gpt/syco-bench) | **MIT-0** (903 B, © 2025 Tim Duffy) | ⚠️ **MIT-0 ≠ MIT** | LATAM | *MIT No Attribution* — no attribution duty. Third-party holder again |
+
+🔴 **`P463`: not one of the three code grants is held by Latam-GPT, CENIA, or any of the 60+
+institutions behind it** — the holders are Tim Duffy, EleutherAI and an individual contributor, and
+two of the three repos are upstream projects re-hosted. ⚠️ **The weights could not be measured at
+all** (`huggingface.co` → **000**), so the reported **Llama 3.1 Community Licence** — **not
+OSI-approved** — is a secondary-source claim here, not a reading. **"Open source Latam-GPT" is true
+of some tooling and unverified of the model.**
+
+### 🟡 Copyleft measured this pass
+
+| Repo | Licence (payload) | Bytes | Note |
+|---|---|---|---|
+| [`openedx/edx-proctoring`](https://github.com/openedx/edx-proctoring) | **AGPL-3.0** | 35119 (`master/LICENSE.txt`) | re-confirms the existing record |
+| [`kamlendras/OpenProctor`](https://github.com/kamlendras/OpenProctor) | **AGPL-3.0** | 34523 (`main/LICENSE`) | 🆕 first measurement; previously shelved without a licence |
+
+🟢 **Platforms copyleft, agents permissive — the fifth instance of this KB's in-tree/side-car rule.**
+
+### 🔴 No grant, re-confirmed with the corrected prober
+
+[`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) ·
+[`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) ·
+[`kaushal0494/UnifyingAITutorEvaluation`](https://github.com/kaushal0494/UnifyingAITutorEvaluation) ·
+[`aisingapore/sealion`](https://github.com/aisingapore/sealion)
+
+All four repos exist and still carry **no licence payload**. ⚠️ **Separately, and stated without
+hyperlinks because an unresolved path is not a finding:** `latam-gpt/latam-gpt`,
+`latam-gpt/.github` and `latam-gpt/latam-gpt-recipes` **could not be shown to exist** at all, while
+the `latam-gpt` **org** page returns **403** (real but unreadable). So the project has **no flagship
+repository carrying its own grant** — the three MIT/MIT-0 repos above are its entire verified code
+surface. The first four were re-probed deliberately because
+`P461` proved the instrument could manufacture a false absence — so *"no shippable permissive
+evaluator of tutoring quality"* and *"no education agent layer on an APAC sovereign model"* **both
+stand**, now on a tested instrument. ⚠️ Search summaries this pass again called `AITutor-EvalKit`
+*"released under an MIT license"* (**fourth reproduction**) and `mathtutorbench` **CC-BY-4.0**;
+neither repo serves a grant.
+
 ## 2026-10-07 — thirty-second pass: the gradebook, not the chat window
 
 > **Append-only.** Newest dated section on top; history preserved below.
@@ -2993,7 +3068,7 @@ fifth pass had nothing in that quadrant.
 |---|---|---|---|
 | [cs341-illinois/coursebook](https://github.com/cs341-illinois/coursebook) | **~1,626★ gained in one week** — the highest-velocity education repository seen in any pass of this KB | **NONE** (2 branches × 6 filenames) | **Do not use.** An open systems-programming textbook from **UIUC**. A university's own course text, trending hard, with no grant attached |
 | [781991937/TOFAN-AI-2026](https://github.com/781991937/TOFAN-AI-2026) | the only substantial Arabic-language education agent found in 7 passes | **NONE** | **Do not use.** Full write-up in `agents/trending.md`, Finding 4 |
-| [biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent) | the one candidate on the proctoring shelf | **NONE** | **Do not use.** Local, explainable, human-gated — the right design, no grant |
+| [biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent) | the one candidate on the proctoring shelf | 🔴 **CORRECTED 2026-10-07 (pass 33): `MIT`**, `master/LICENSE`, 1068 B, © 2026 Prem Biswal. Previously recorded here as **NONE** | 🟢 **USABLE — the previous "Do not use" was wrong.** Local, explainable, human-gated *and* permissively licensed. The grant sits on `master`; this repo has no `main` branch. See `P461` |
 | [malaysia-ai/malaysian-dataset](https://github.com/malaysia-ai/malaysian-dataset) | **345★**, the org's 2nd most-starred repo, ahead of `malaya-speech` | **NONE** | **Not shippable.** Its two code siblings are both MIT |
 
 **Four rejections, all the same failure mode: no `LICENSE` payload.** Not a

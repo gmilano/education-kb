@@ -4,6 +4,108 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🔴 Thirty-third pass, 2026-10-07 — a declared gap was wrong, and the repo it rested on has been MIT all along
+
+**Every licence below was read from the repository's own payload on `raw.githubusercontent.com` on
+2026-10-07.** Channel census re-measured this pass, **six channels**: `curl -sI` on a github.com
+landing page → **403**; `curl` **GET** on the same page → **403**; `api.github.com` → **403**;
+`raw.githubusercontent.com` → **200**; 🆕 `eur-lex.europa.eu` → **000**; 🆕 `huggingface.co` → **000**.
+So **no star counts were read this pass** and every `★` cell says so. Negative control
+(`totally-fake-org-zzz9/nope-repo-abc`) returned **404** on both `main` and `master` in the same runs
+that returned these 200s.
+
+🔴 **The headline is a self-correction, not a discovery.** Pass 7 declared *"there is no permissive
+open-source exam proctoring agent"* and ranked building one as this KB's **second-best build
+opportunity**. The gap rested on a single repo's licence verdict. **That verdict was wrong.** The repo
+is **MIT**, and a second permissive proctoring agent turned up in the same run. The gap and the
+ranking derived from it are **withdrawn**.
+
+### 🟢 Exam proctoring — the shelf the KB recorded as empty
+
+| Agent | Repo | License (read from payload) | ★ | Region | What it does |
+|---|---|---|---|---|---|
+| Autonomous Exam Proctoring & Grading Agent | [`biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent`](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent) | 🟢 **MIT** (`master/LICENSE`, 1068 B, © 2026 Prem Biswal) | not read this pass | Global | 🔴 **Recorded in four places in this KB as "No `LICENSE` payload" / "NONE" / "Do not use". It is MIT.** Fully local proctoring + grading: OpenCV + MediaPipe face detection on-device, **22-dimension behavioural feature vector**, logistic regression and anomaly detection **implemented from scratch**, risk-decay and risk-fusion formulas, TF-IDF text scoring, SQLite storage. **Zero external AI APIs**; camera frames are processed and discarded. Explainable by construction — it emits an evidence breakdown, not a bare *"87% cheating probability"*. 🟢 **This is the exact shape EU Annex III point 3 and Vietnam's Decree 33 leave sellable: local, explainable, human-gated** — and it is permissively licensed. |
+| AI-Proctored Examination System | [`SuyashMore/AI-Proctored-Examination-System`](https://github.com/SuyashMore/AI-Proctored-Examination-System) | 🟢 **MIT** (`main/LICENSE`, 1068 B, © 2020 Suyash More) | not read this pass | Global | Second independent permissive proctoring implementation, and an older one (2020 copyright). Its existence is what turns the correction above from *"one row was mis-probed"* into **"the shelf was never empty"**. |
+
+⚠️ **Both are small-team projects, and neither is a product.** The correction is about the **licence
+and the gap**, not about maturity: the KB was telling readers this space was legally unavailable and
+commercially unclaimed, and it was neither. Audit before use — the smaller surface is the point.
+
+### 🟡 The proctoring *platforms* are copyleft, and that is the whole architecture argument
+
+| Layer | Repo | Licence (payload) | Bytes | Commercial consequence |
+|---|---|---|---|---|
+| Open edX proctoring subsystem | [`openedx/edx-proctoring`](https://github.com/openedx/edx-proctoring) | 🟡 **AGPL-3.0** | 35119 (`master/LICENSE.txt`) | Network copyleft — re-confirms this KB's existing record |
+| Online proctoring platform | [`kamlendras/OpenProctor`](https://github.com/kamlendras/OpenProctor) | 🟡 **AGPL-3.0** | 34523 (`main/LICENSE`) | 🆕 Licence measured this pass; previously shelved without one |
+
+🟢 **Fifth independent instance of this KB's best-evidenced architectural rule.** The proctoring
+*platforms* are AGPL-3.0 and the proctoring *agents* are MIT. Same shape as `peancor/moodle-mcp-server`
+and `Jawadh-Salih/moodle-mcp-server` (MIT side-cars outside GPL-3.0 Moodle) and Apache-2.0 `XBlock`
+against AGPL-3.0 `edx-platform`. **When the platform is copyleft and the deliverable must not be, the
+agent lives outside the tree and talks over an API.**
+
+### 🟢 LATAM — the Latam-GPT tooling layer, and what "open source" actually covers
+
+Three repos in the [`latam-gpt`](https://github.com/latam-gpt) organisation, probed first-hand:
+
+| Repo | License (read from payload) | ★ | Region | What it is |
+|---|---|---|---|---|
+| [`latam-gpt/anonymization-filter`](https://github.com/latam-gpt/anonymization-filter) | 🟢 **MIT** (`main/LICENSE`, 1072 B, © 2025 GonzaloFuentes1) | not read this pass | LATAM | PII anonymisation filter from the Latam-GPT corpus pipeline. 🟢 **The most directly reusable of the three for education work** — a Spanish/Portuguese-language scrubber is exactly what a student-data pipeline needs before any model sees it. |
+| [`latam-gpt/lm-evaluation-harness`](https://github.com/latam-gpt/lm-evaluation-harness) | 🟢 **MIT** (`main/LICENSE.md`, 1067 B, © 2020 **EleutherAI**) | not read this pass | LATAM | ⚠️ **A fork of EleutherAI's harness, not original work** — the copyright holder in the payload says so. Useful as the regional evaluation entry point; cite upstream. |
+| [`latam-gpt/syco-bench`](https://github.com/latam-gpt/syco-bench) | 🟢 **MIT-0** — *MIT No Attribution* (`main/LICENSE`, 903 B, © 2025 Tim Duffy) | not read this pass | LATAM | ⚠️ **A different licence from MIT**, and a third-party holder. Sycophancy benchmark; MIT-0 drops even the attribution requirement. |
+
+🔴 **`P463` — "Chile launches open source Latam-GPT" is true at the code layer and not at the model
+layer, and not one of the three code grants is held by the project.** The holders read **Tim Duffy**,
+**EleutherAI** and an **individual contributor** — none of them CENIA, and none of them any of the
+60+ institutions across 15 countries the project is coordinated through. Two of the three are
+**upstream projects re-hosted** under the org. ⚠️ **And the model layer could not be verified at all
+from this environment:** `huggingface.co` returns **000**, so the widely-reported **Llama 3.1
+Community Licence** on the 70B weights is a **secondary-source claim in this KB, not a measurement**.
+That licence is **not OSI-approved** and carries acceptable-use and naming conditions.
+
+🟢 **So the usable reading for a LATAM engagement:** the *tooling* around Latam-GPT is permissive and
+vendorable today; the *weights* are not open source in the sense this KB uses the term, and must be
+read against the Llama community terms before any client deliverable depends on them. **The
+pedagogy layer on top of the regional sovereign model is still unbuilt** — that part of the gap the
+KB recorded stands.
+
+### 🟢 Re-confirmations — four gap repos re-probed with the branch-corrected prober, none moved
+
+Re-measured because `P461` showed the instrument could produce a false `ABSENT`. All four still
+carry **no licence payload** (13 filenames × 2 branches, with `.rst` and `pyproject.toml` existence
+fallbacks):
+
+| Repo | Verdict 2026-10-07 | Consequence |
+|---|---|---|
+| [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | 🔴 **No licence payload** (repo exists) | ⚠️ **Fourth reproduction of the false claim.** Search summaries again assert it is *"released under an MIT license"*. The paper says MIT; the repo does not. **The correction holds.** |
+| [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) | 🔴 **No licence payload** (repo exists) | Secondary sources now say **CC-BY-4.0**; the in-file self-contradiction this KB recorded is unresolved upstream |
+| [`kaushal0494/UnifyingAITutorEvaluation`](https://github.com/kaushal0494/UnifyingAITutorEvaluation) | 🔴 **No licence payload** (repo exists) | unchanged |
+| [`aisingapore/sealion`](https://github.com/aisingapore/sealion) | 🔴 **No licence payload** (repo exists) | **"No education agent layer on an APAC sovereign model" — STILL OPEN**, and still for a licence reason |
+
+🟢 **"No shippable permissive evaluator of tutoring quality" — STILL OPEN**, now re-confirmed with an
+instrument known to err the other way. That matters: a gap re-confirmed by a prober that has just
+been caught producing false absences is worth more than one asserted by a prober nobody had tested.
+
+### 🔴 `P461`–`P464` — four defects, and the first one destroyed a declared gap
+
+| ID | Defect | Proof | Cost if unfixed |
+|---|---|---|---|
+| **`P461`** | 🔴 **A `main`-first probe files a `master`-default repo as absent.** The existence fallback inherits the same bias, so the repo looks like it does not exist | `biswal-prem-5677/…`: `main/LICENSE` **404**, `main/README.md` **404**, `master/LICENSE` **200** (1068 B, MIT), `master/README.md` **200** (26560 B) | 🔴 **Fifth instance of this KB's "errs toward deleting a true row" family — and the first to delete an entire declared gap.** `P453` was case; this is branch |
+| **`P462`** | 🔴 **A declared gap that rests on one repo's negative verdict inverts when that verdict does.** The gap was quoted for 26 passes and ranked as a build opportunity | *"No permissive open-source exam proctoring agent"* rested on exactly one licence probe. Re-probing it refuted the gap, and a second MIT agent appeared in the same run | a studio declines or mis-prices work in a space it believes is legally unavailable |
+| **`P463`** | **A sovereign-model "open source" claim must be read by *layer* and by *holder*.** Both can differ from the headline | `latam-gpt`: 3 MIT/MIT-0 code grants held by Tim Duffy, EleutherAI and an individual — **none by the project**; model weights under the non-OSI Llama 3.1 Community Licence | a client deliverable built on "the open source regional model" inherits terms nobody read |
+| **`P464`** | 🆕 **`huggingface.co` is unreachable from this environment (000), so no model licence in this KB is payload-verified** | `huggingface.co/` → **000**; model-card and `LICENSE` raw paths → **000** | every weights-licence statement in this KB is a secondary-source claim; **say so rather than implying measurement** |
+
+🟢 **`P462` is the finding that pays for this pass.** `P453`–`P458` were defects that deleted *rows*,
+where the cost is one missing option. This one deleted a **conclusion**: the KB did not merely omit
+two MIT repositories, it published the inference *"nobody holds this space, go build it"* and ranked
+it. **A gap is a measurement too, and it decays faster than a row** — a row is wrong only if the repo
+changes, while a gap is wrong the moment *any* repo anywhere acquires a licence. 🔵 **The rule this
+pass adds: a declared gap must carry the probe scope that produced it and must be re-measured before
+it is quoted, not merely restated.** The row beside the mis-probed one in the same table recorded
+its scope (*"2 branches × 6 filenames"*); the one that mattered recorded none, which is why the
+correction above cannot distinguish *"the licence was added later"* from *"the probe was too
+narrow"* — and that undecidability is itself the defect.
+
 ## 🟢 Thirty-second pass, 2026-10-07 — 14 agents added, and four defects found in this shelf's own prober
 
 **Every licence below was read from the repository's own payload on `raw.githubusercontent.com` on
@@ -661,7 +763,7 @@ honestly:
 | Candidate | Channel | Why it is not in a table |
 |---|---|---|
 | [781991937/TOFAN-AI-2026](https://github.com/781991937/TOFAN-AI-2026) | Arabic | **No `LICENSE` payload** (2 branches × 6 filenames). The most substantial Arabic-language education agent found in any pass — *"مساعد تعليمي ذكي"*, ingests lesson files, extracts and analyses content, generates summaries and interactive tests; FastAPI backend with a PWA/Web-App front end, explicitly not a Telegram bot. **Real, well-shaped, and legally unusable.** The single highest-value upstream ask in this KB right now |
-| [biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent) | function-scoped (proctoring + grading) | **No `LICENSE` payload.** *"A fully local, mathematics-driven AI exam system for autonomous proctoring, explainable cheating-risk prediction, automated grading and student performance analysis — with no external AI APIs."* Fully local and explainable is exactly the shape Annex III and Vietnam's Decree 33 reward. No grant, no row |
+| [biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent) | function-scoped (proctoring + grading) | 🔴 **THIS VERDICT WAS WRONG — corrected in the thirty-third pass, 2026-10-07. The repo is `MIT`**, read from payload at **`master/LICENSE`, 1068 B, © 2026 Prem Biswal**, and its README carries an `MIT` badge on line 5. The repo has **no `main` branch at all** (`main/README.md` → 404, `master/README.md` → 200, 26560 B), so a `main`-first probe files it as absent. It is now shelved as a live row above. The original verdict, left standing so the correction is legible, read: **No `LICENSE` payload.** *"A fully local, mathematics-driven AI exam system for autonomous proctoring, explainable cheating-risk prediction, automated grading and student performance analysis — with no external AI APIs."* Fully local and explainable is exactly the shape Annex III and Vietnam's Decree 33 reward. No grant, no row |
 | [cs341-illinois/coursebook](https://github.com/cs341-illinois/coursebook) | GitHub weekly trending | 🟢 **NCSA** (code) **+ CC-BY-4.0** (generated PDFs) — grants live in a `LICENSE/` **directory**, so the rooted probe that first reported **"No `LICENSE` payload"** here was looking at the wrong level (`p441`, pass 26). ⚠️ **And the family is NCSA, not MIT** (corrected in the twenty-seventh pass): the University of Illinois/NCSA licence **contains MIT's grant sentence verbatim**, so a classifier probing for that sentence returns MIT. The repository's own `LICENSE/README.md` says *"licensed under the University of Illinois NCSA license under LICENSE.code"*. 🔵 **NCSA is a licence family new to this KB.** An open systems-programming textbook from **UIUC** that gained **~1,626★ in one week** — the highest-velocity education repository seen in any pass of this KB. A university's own trending course text, with no grant attached |
 
 **The Arabic result is the one to act on, and it is a regional finding.** MEA is
@@ -1063,6 +1165,15 @@ disagreeing with its own trending log, not new research** — which is the findi
 | "No LATAM-origin permissive education project" | **Unchanged this pass** — the native-language channel added Japanese, Korean, Arabic and Bahasa/Thai/Vietnamese, not Spanish or Portuguese, which the fourth pass had already used. `LabSirius/TutorIA` (MIT, Colombia, every code path 404) remains the state of the art |
 
 ### A new declared gap, from the function-scoped channel
+
+> 🔴 **REFUTED on 2026-10-07 by the thirty-third pass. Read this before quoting the gap below.**
+> The single candidate this gap rested on is **`MIT`** — read from payload at
+> **`master/LICENSE`, 1068 B, © 2026 Prem Biswal** — and a second permissive proctoring agent
+> ([`SuyashMore/AI-Proctored-Examination-System`](https://github.com/SuyashMore/AI-Proctored-Examination-System),
+> MIT, 1068 B, © 2020 Suyash More) was found in the same run. **There are at least two permissive
+> open-source exam proctoring agents.** The gap, and the build-opportunity ranking derived from it,
+> are withdrawn. Root cause in `P461`; the structural lesson in `P462`. The original text is left
+> standing below so the correction is legible.
 
 **There is no permissive open-source exam proctoring agent.** This pass searched
 the proctoring-plus-grading function directly — the one function-scoped shelf

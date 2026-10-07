@@ -4,6 +4,93 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🔴 Thirty-third pass, 2026-10-07 — five trends, and the first is that this KB re-acquired an error it had already fixed
+
+### T1 🔴 A declared gap decays faster than a row, and nobody re-measures gaps
+
+This KB declared *"there is no permissive open-source exam proctoring agent"* and ranked building one
+as its **second-best build opportunity**. The gap rested on a single repository's licence verdict.
+Re-probed this pass, that repository is **MIT** (`master/LICENSE`, 1068 B, © 2026 Prem Biswal), and a
+**second** permissive proctoring agent — MIT, copyright **2020** — surfaced in the same run.
+
+🔵 **The asymmetry is the trend, and it generalises past this KB.** A *row* is wrong only if the repo
+it names changes. A *gap* is wrong the moment **any repository anywhere** acquires a licence, is
+renamed, or is published — so a gap's error rate scales with the whole ecosystem while a row's
+scales with one project. **Yet rows get re-verified every pass and gaps get restated.** Twenty-six
+passes quoted this one without re-running the measurement beneath it.
+
+🟢 **The discipline: a declared gap must carry the probe scope that produced it, and must be
+re-measured — not restated — before it is quoted.** In the very table where this failed, the row
+*beside* the mis-probed one recorded its scope (*"2 branches × 6 filenames"*); the one that mattered
+recorded none. Because of that omission, the correction **cannot distinguish** *"the licence was
+added after the probe"* from *"the probe was too narrow"*. **A negative verdict without its scope is
+not a measurement — it is an opinion with a timestamp.**
+
+### T2 🔴 The freshest layer of a knowledge base is where stale claims live
+
+Pass 32's new top sections in three files asserted that EU AI Act Annex III enforcement for education
+began in **August 2026**. This KB had **already corrected that** — Regulation (EU) 2026/1744 moved
+Annex III stand-alone high-risk to **2027-12-02** — and the correct dates were sitting **deeper in the
+same files**, recorded as `P284`.
+
+🔵 **The mechanism is worth naming because it is structural, not careless.** A new pass drafts its top
+section from what the search channel returned this hour. The open web still overwhelmingly repeats
+*"the AI Act takes full effect in August 2026"*. So each pass that writes top-down from fresh
+summaries **re-imports the ecosystem's consensus error**, and it lands precisely where a reader looks
+first, while the correction sits a thousand lines below. 🟢 **The rule: draft the new section against
+the tree, not against the search results.** Grep your own corrections before writing the date.
+
+### T3 🟢 "Open source" for a sovereign model splits by layer and by holder
+
+**Latam-GPT** — Chile's CENIA with 60+ institutions across 15 countries, ~$550k — is reported
+everywhere as *"the open source model for Latin America"*. Measured:
+
+| Layer | What it actually is |
+|---|---|
+| Tooling code | 🟢 **MIT** / **MIT-0**, verified from payload — but held by **Tim Duffy**, **EleutherAI** and an **individual contributor**, and **two of three repos are upstream projects re-hosted** |
+| Model weights | 🔴 Reported **Llama 3.1 Community Licence** — **not OSI-approved**, with acceptable-use and naming conditions. ⚠️ **Unverifiable from this environment** (`huggingface.co` → **000**) |
+
+🔵 **Neither half matches the headline.** The code is genuinely permissive but is substantially other
+people's code; the model is not open source in the sense this KB uses the term. **Not one of the
+three grants is held by the project or any partner institution.** 🟢 **The generalisation, which now
+has instances in three industries' worth of sovereign-model announcements: read a sovereign-AI
+"open source" claim by layer (code / weights / data) and by holder (who actually grants it).** A
+national or regional AI programme is a consortium, and consortia publish grants held by whoever
+happened to write the file.
+
+### T4 🔴 The model layer of this industry cannot be verified, and that is a standing limit
+
+`huggingface.co` returns **000** from this environment, and `eur-lex.europa.eu` does too. So the two
+sources that would settle this industry's two hardest questions — **what licence do these weights
+carry** and **what does the regulation actually say** — are both closed.
+
+🔵 **This is not a small operational note; it bounds what this KB can assert.** Education AI is
+converging on open-weights models run on institution-owned hardware (the local-first trend this KB
+has tracked for passes), which means **the licence that matters most is increasingly the one on the
+weights** — and that is exactly the one unreachable here. 🟢 **The honest posture, and the one this
+pass adopts: say "reported as" for every weights licence, and prefer compositions where the
+permissive code is yours and the weights are a swappable, client-chosen dependency.** A pattern that
+hard-codes one open-weights model is one terms change away from a re-read nobody here can perform.
+
+### T5 🟢 LATAM is the most AI-positive region measured and the least governed — a 61-point gap
+
+| Signal | LATAM | Global |
+|---|---|---|
+| Faculty positive about AI in education | **72%** | 57% |
+| Faculty using AI in teaching | **79%** | — |
+| Faculty at only *minimal-to-moderate* engagement | 🔴 **88%** | — |
+| Institutions using AI in ≥1 area | **87%** | — |
+| Institutions with a formal AI strategy | 🔴 **26%** | — |
+
+🔵 **Enthusiasm 15 points above global, usage high, depth shallow, governance almost absent.** That
+combination is the exact inverse of EMEA, where regulation forces governance and appetite lags. 🟢 **So
+the same studio capability sells on opposite arguments in the two regions**: in EMEA, *"the law
+requires this by December"*; in LATAM, *"you already deployed it and nobody owns it"*. ⚠️ **And the
+regional-governance anchor now exists** — UNESCO's **Observatory on AI in Education for Latin America
+and the Caribbean**, launched **2026-04-14** — alongside **Uruguay** becoming the first LATAM
+signatory of the Council of Europe's **Framework Convention on AI**. A LATAM governance engagement no
+longer has to import a European framework to have something to point at.
+
 ## 🟢 Thirty-second pass, 2026-10-07 — six trends, and the first one is a correction to how this KB reads a licence
 
 ### T1 🔴 "It has a LICENSE file" stopped being a usable test
@@ -47,7 +134,10 @@ Three of four notable new learning workspaces this pass run inference on hardwar
 stays on the machine), `open-edge-platform/education-ai-suite` (OpenVINO on Intel CPU/iGPU/NPU).
 
 🔵 **The driver is regulatory arithmetic, and it points the same way in two regions at once.** EU AI
-Act Annex III makes educational assessment **high-risk** with full enforcement from **August 2026**;
+Act Annex III makes educational assessment **high-risk** with conformity duties due **2027-12-02**
+(⏸️ **pass 33, 2026-10-07: this line read *"full enforcement from August 2026"* — superseded by Reg.
+(EU) 2026/1744. The duty live since 2026-08-02 is **Article 50 transparency**, which was not
+deferred. See `P284`**);
 California **A.B. 1159** would bar training on student data unless the school benefits; Idaho
 **S.B. 1227** mandates data-privacy requirements for AI tools in K-12. A stack where student work
 **never leaves the building** does not need a cross-border transfer argument, a sub-processor

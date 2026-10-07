@@ -4,6 +4,111 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — thirty-third pass: a declared gap refuted, 15 repos probed, and two new closed channels
+
+> **Append-only.** Newest dated section on top; history preserved below.
+
+⏱️ **Measurement window 2026-10-07.** **15 repositories probed** first-hand against
+`raw.githubusercontent.com` with a **branch- and case-corrected** prober (13 filenames × `main` and
+`master`, with `README.rst` / `README.txt` / `pyproject.toml` / `package.json` existence fallbacks —
+the `P453`/`P454` fixes). **The census, with every class named so the denominator closes:
+5 carry a permissive grant** (4 × MIT, 1 × MIT-0), **2 are AGPL-3.0**, **4 exist but serve no licence
+payload**, and **4 could not be shown to exist at all** — 5 + 2 + 4 + 4 = **15**. ⚠️ **"No payload"
+and "unresolved" are different verdicts and are counted separately**; collapsing them is how
+`P461` happened.
+
+**Channel census, six channels, all re-measured this pass:**
+
+| Channel | Result | Note |
+|---|---|---|
+| `curl -sI` github.com landing page | **403** | unchanged |
+| `curl` GET github.com landing page | **403** | unchanged |
+| `api.github.com` | **403** | unchanged — **no star counts this pass** |
+| `raw.githubusercontent.com` | **200** | the only licence channel |
+| 🆕 `eur-lex.europa.eu` | **000** | **egress-blocked.** The KB's standing *"verify against EUR-Lex before client use"* action **cannot be executed from this environment** |
+| 🆕 `huggingface.co` | **000** | **egress-blocked.** No model-weights licence in this KB is payload-verified — see `P464` |
+| `pypi.org` | **200** | still open, as pass 41 used it for `edx-proctoring` |
+
+**Negative control** `totally-fake-org-zzz9/nope-repo-abc` → **404 on both `main` and `master`** in
+the same runs as the 200s below.
+
+### 🔴 The finding: this KB's second-ranked build opportunity did not exist
+
+Pass 7 declared **"there is no permissive open-source exam proctoring agent"** and ranked building
+one second among all build opportunities, with a regulatory argument attached (Vietnam Decree 33, EU
+Annex III point 3). The gap rested on **one repo's licence verdict**. Re-probed this pass:
+
+| Repo | Recorded in this KB | Measured 2026-10-07 |
+|---|---|---|
+| [`biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent`](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent) | 🔴 *"No `LICENSE` payload"*, *"NONE"*, *"Do not use"* — **in four places** | 🟢 **MIT**, `master/LICENSE`, **1068 B**, © 2026 Prem Biswal |
+
+**The proof of the mechanism, not just the verdict:**
+
+| Path | Code | Size |
+|---|---|---|
+| `main/LICENSE` | **404** | — |
+| `main/README.md` | **404** | — |
+| `master/LICENSE` | **200** | **1068 B** (MIT) |
+| `master/README.md` | **200** | 26560 B |
+
+🔴 **The repo has no `main` branch at all.** A `main`-first prober whose existence fallback is also
+`main`-rooted concludes the repository does not exist, and files it with the genuinely unlicensed
+rows. The README additionally carries an **`MIT` shields.io badge on line 5** — two independent
+declarations, both missed. That is **`P461`**.
+
+🟢 **And the shelf was never empty:** [`SuyashMore/AI-Proctored-Examination-System`](https://github.com/SuyashMore/AI-Proctored-Examination-System)
+is **MIT** (`main/LICENSE`, 1068 B, © **2020** Suyash More) — a second, older, independently held
+permissive proctoring implementation, found in the same run on the same query family. **Two
+permissive proctoring agents, one of them six years old.** The gap was not a close call.
+
+### 🟢 New this pass — permissive, licence read from payload
+
+| Repo | Licence (read from payload) | ★ | Region | What it is |
+|---|---|---|---|---|
+| [`biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent`](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent) | **MIT** (`master/LICENSE`, 1068 B, © 2026 Prem Biswal) | not read this pass | Global | Fully local proctoring **and** grading. OpenCV + MediaPipe on-device, **22-dimension behavioural feature vector**, logistic regression and anomaly detection written from scratch, risk-decay and risk-fusion formulas, TF-IDF scoring, SQLite. **Zero external AI APIs**, frames discarded after feature extraction, and it emits an **evidence breakdown** instead of a bare probability |
+| [`SuyashMore/AI-Proctored-Examination-System`](https://github.com/SuyashMore/AI-Proctored-Examination-System) | **MIT** (`main/LICENSE`, 1068 B, © 2020 Suyash More) | not read this pass | Global | Second independent permissive proctoring implementation; the one whose existence makes the correction structural rather than a single mis-probe |
+| [`latam-gpt/anonymization-filter`](https://github.com/latam-gpt/anonymization-filter) | **MIT** (`main/LICENSE`, 1072 B, © 2025 GonzaloFuentes1) | not read this pass | LATAM | PII anonymisation filter from the **Latam-GPT** corpus pipeline. 🟢 The most reusable of the three for education: a Spanish/Portuguese scrubber in front of any student-data pipeline |
+| [`latam-gpt/lm-evaluation-harness`](https://github.com/latam-gpt/lm-evaluation-harness) | **MIT** (`main/LICENSE.md`, 1067 B, © 2020 **EleutherAI**) | not read this pass | LATAM | ⚠️ **A fork of EleutherAI's harness** — the payload's own holder says so. Regional evaluation entry point; cite upstream |
+| [`latam-gpt/syco-bench`](https://github.com/latam-gpt/syco-bench) | **MIT-0** (*MIT No Attribution*, `main/LICENSE`, 903 B, © 2025 Tim Duffy) | not read this pass | LATAM | ⚠️ **MIT-0 is not MIT** — it drops the attribution requirement. Sycophancy benchmark, third-party holder |
+
+### 🟡 Copyleft measured this pass
+
+| Repo | Licence (payload) | Bytes | Note |
+|---|---|---|---|
+| [`openedx/edx-proctoring`](https://github.com/openedx/edx-proctoring) | **AGPL-3.0** | 35119 (`master/LICENSE.txt`) | 🟢 Re-confirms this KB's existing record |
+| [`kamlendras/OpenProctor`](https://github.com/kamlendras/OpenProctor) | **AGPL-3.0** | 34523 (`main/LICENSE`) | 🆕 Licence measured for the first time; it was shelved without one |
+
+🟢 **The split is the architecture argument, and it is now a five-instance rule.** Proctoring
+*platforms* are **AGPL-3.0**; proctoring *agents* are **MIT**. Same shape as the MIT Moodle MCP
+side-cars outside GPL-3.0 Moodle, and Apache-2.0 `XBlock` against AGPL-3.0 `edx-platform`.
+
+### 🔴 Re-confirmed: no licence payload (re-probed with the corrected instrument)
+
+| Repo | Verdict | Why it was re-probed |
+|---|---|---|
+| [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | **No payload** (repo exists) | ⚠️ **Fourth reproduction** of the *"released under an MIT license"* claim in search summaries. The paper says MIT; the repo does not. **The correction holds** |
+| [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) | **No payload** (repo exists) | Secondary sources now say **CC-BY-4.0**; the in-file self-contradiction is still unresolved upstream |
+| [`kaushal0494/UnifyingAITutorEvaluation`](https://github.com/kaushal0494/UnifyingAITutorEvaluation) | **No payload** (repo exists) | completeness of the tutoring-evaluation subfield |
+| [`aisingapore/sealion`](https://github.com/aisingapore/sealion) | **No payload** (repo exists) | **"No education agent layer on an APAC sovereign model" — STILL OPEN** |
+| `latam-gpt/latam-gpt`, `latam-gpt/.github`, `latam-gpt/latam-gpt-recipes` — **no link given on purpose** | 🔴 **UNRESOLVED — these repo paths could not be shown to exist** (13 filenames × 2 branches, plus 5 existence fallbacks, all non-200). The **org** page returns **403** (exists, unreadable), so the org is real and these three paths are not | 🔵 **There is no flagship `latam-gpt/latam-gpt` repository carrying the project's own grant.** The three MIT/MIT-0 repos above are the whole verified code surface. ⚠️ Written without hyperlinks because an unresolved path is not a finding |
+
+🟢 **Re-confirming these with a prober just caught producing false absences is worth more than the
+original assertion was.** *"No shippable permissive evaluator of tutoring quality"* now stands on an
+instrument tested against a case whose right answer was known.
+
+### Regional read — all four regions returned something, and one returned a correction
+
+| Region | What the channel returned |
+|---|---|
+| **North America** | 🟢 **Dense.** As of September 2026, **40 states plus Puerto Rico** have official AI guidance or policy frameworks for education; the PIE Network tracked **~100 state bills** touching student AI use in K-12. Enacted: **Idaho** and **Utah** this session, **New York** (RAISE Act) in late 2025; **4 more states** now require districts to adopt AI policies. Idaho's law mandates local district policies and AI-literacy standards and provides that **no AI may replace or eliminate a human teacher**. Live bills: **CA A.B. 1159** (no training on student data unless the school benefits), **VT HB 650** (annual edtech provider registration and privacy certification), **OR S.B. 1546** (minor-protective design, reducing compulsive use), **VA S.B. 394** (teacher-training guidance) |
+| **EMEA** | 🟢 **A corroboration, not news — and it corrects a regression inside this KB.** Independent secondary sources confirm the **Digital Omnibus** deferral: the Council gave final approval **2026-06-29**, moving **Annex III stand-alone high-risk — education named explicitly — from 2026-08-02 to 2027-12-02**, with Annex I embedded moving 2027-08-02 → **2028-08-02**. **Article 50 transparency did not move.** 🔴 **This KB's own pass-32 sections had reverted to *"full enforcement from August 2026"*** in `compose/patterns.md` P38, `intel/trends.md` and `intel/market.md` — corrected this pass. ⚠️ **Primary text still unverifiable:** `eur-lex.europa.eu` → **000** |
+| **APAC** | 🟢 **Three comprehensive AI statutes now in force.** **Vietnam's Law on AI** effective **2026-03-01**; **South Korea's AI Basic Act** in force **2026-01-22**, scoping *"high-impact AI"* in healthcare, **education**, finance, employment and essential services; **Taiwan's AI Basic Act** passed **2025-12**. Adoption **65–75% (2025) → 80–90% (2026 projected)**. Named players: Google, Microsoft, IBM, Pearson, Byju's |
+| **LATAM** | 🟢 **The richest regional return of this pass, and it is a governance story.** Digital Education Council survey of **7,319 faculty across 29 institutions**: **72%** hold positive views of AI in education vs **57%** globally, and **79%** use AI in teaching — but **88%** report only *minimal to moderate* engagement. **87%** of institutions use AI in at least one area while **only 26% have a formal AI strategy**. **Uruguay** became the first LATAM country to sign the Council of Europe's **Framework Convention on AI**. **UNESCO launched its Observatory on AI in Education for Latin America and the Caribbean on 2026-04-14**. **Latam-GPT** (CENIA Chile, 60+ institutions across 15 countries, ~**$550k**, funded largely by **CAF**) — tooling MIT, weights non-OSI; see `P463` |
+
+🔵 **No region returned nothing this pass.** The weakest return was EMEA, and only because the
+regional channel reproduced a date this KB had already corrected — which is how the pass-32
+regression was caught.
+
 ## 2026-10-07 — thirty-second pass: 33 repos probed, and the LATAM gap pass 31 declared is now closed
 
 ⏱️ **Measurement window 2026-10-07, reference date `2026-10-07`.** 33 repositories probed
