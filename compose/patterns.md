@@ -4,6 +4,176 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Forty-first pass, 2026-10-07 — two recipes: `P518` reopens `P507`'s seam as an **R** seam and prices it honestly, and `P520` delivers the chain **inside Moodle** instead of beside it
+
+⏱️ **Eighth pass of this date.** 🔵 **Licences below were read first-hand on 2026-10-07 from payload or
+registry — the channel is named per row (`P171`, `P482`, `P494`, `P501`, and new this pass `P510`,
+`P511`, `P517`, `P519`). No star counts (`P479`).**
+
+🔵 **Numbering.** 🟢 **`P490`'s interim rule followed.** The occupied set across the live tree **and**
+`archive/` was enumerated with word boundaries before allocation: **496 distinct numbers**, highest
+contiguous run ending at **`P507`**, with **`P593`, `P679`, `P900`, `P999`** occupied above it. 🟢 **So
+`P508`–`P592` was free, and this pass allocates thirteen from the bottom of that block:**
+
+| | Finding | Filed in |
+|---|---|---|
+| `P508` | `KernEqWPS` — **observed-score and kernel equating under MIT**; the GPL-only half of `P500` falls | `repos/foundations.md` |
+| `P509` | an MIT grant is not a permissive **closure** — `Imports: MASS` is GPL and the R runtime is GPL | `repos/foundations.md` |
+| `P510` | `git ls-remote` is a **working existence oracle**; `github.com` HTML is uniformly `403` here | `agents/top.md` |
+| `P511` | `master` on the raw channel is an **alias for the default branch**, not a branch fact | `repos/trending.md` |
+| `P512` | **supersedes `P497`** — the agent shelf is **saturated**, not the query broken | `agents/trending.md` |
+| `P513` | the **region acronym** is the regional channel's defect; country-named queries work | `intel/market.md` |
+| `P514` | `P505`'s stale Annex III date is a **corpus** property, not an EMEA one | `intel/market.md` |
+| `P515` | three irreconcilable market denominators, two in one summary; `P477` is necessary, not sufficient | `intel/market.md` |
+| `P516` | essay scoring: **permissive code, non-permissive intelligence**; the fully-open option is archived | `intel/trends.md` |
+| `P517` | `pypi.org/project/<name>/` returns **200 for nonexistent packages**; use the JSON API | `intel/trends.md` |
+| `P519` | a `404` on an **existing ref** is not evidence the file is absent from the project | `verticals/solutions.md` |
+| `P518`, `P520` | the two recipes below | this file |
+
+---
+
+## P518 — The comparable item bank, **honestly seamed**: `P507`'s Python chain plus an R equating service
+
+🔵 **Supersedes nothing. It *completes* `P507` and corrects its scope.** 🔴 **`P507` celebrated removing
+the JVM and said the chain then ran "in one Python dependency set". 🟢 **That was true of everything
+`P507` covered, and `P507` covered only *linking* and *true-score* equating.** 🔴 **Observed-score and
+kernel equating were absent from every permissive implementation then known (`P500`), so `P507` did not
+have to seam them. `P508` makes them available — in **R** — so the seam is back, in a new place, and this
+recipe is `P507` with that seam drawn where it actually falls.**
+
+🔵 **Region: unplaced by construction — this is a technical chain, and the regulatory calendar that prices
+it is per-region (`intel/market.md`).**
+
+### What it produces
+
+🟢 **Two exam variants on one reported scale, with a defensible answer to three questions a regulator or
+an exam board will ask:** *is form B as hard as form A?*, *does the conversion hold for every subgroup?*,
+and *how would the conversion differ under another accepted method?* 🔵 **The third question is the one
+`P507` could not answer at all, and it is the one that matters most in a dispute.**
+
+### The components, with licences read this pass
+
+| Step | Component | Licence (channel) | Runtime |
+|---|---|---|---|
+| 1 · **Calibrate** both forms (IRT) | `py-irt` / `irtorch` / `girth` | 🟢 **MIT** (held) | 🟢 Python |
+| 2 · **Link** B onto A's scale | `EqUMP` 0.3.6 — `linking/SL/Stocking_Lord.py`, `linking/HB/Haebara.py`, `linking/MM`, `linking/MS` | 🟢 **MIT** — registry `info.license = 'MIT'` + artefact `LICENSE` 1,068 B (`P499`, `P501`) | 🟢 Python |
+| 3 · **True-score** equate | `EqUMP` — `equating/true/` | 🟢 **MIT** | 🟢 Python |
+| 4 · 🆕 **Observed-score** equate (cross-check) | 🆕 `KernEqWPS` 1.0.7 — `LevineObservedEquate`, `PSEObservedEquate` | 🟢 **MIT** — payload `LICENSE` **1,077 B** + `DESCRIPTION` `License: MIT + file LICENSE` (`P508`) | 🔴 **R** (`P509`) |
+| 5 · 🆕 **Kernel** equate (second cross-check) | 🆕 `KernEqWPS` — `KernelEquateFromScoresEG`, `FindBestBandwidth` | 🟢 **MIT** | 🔴 **R** |
+| 6 · **DIF / fairness** gate | `difair` (`difair.dif`, `difair.poly`) + `aequitas` | 🟢 **MIT** (held) | 🟢 Python |
+| 7 · **Orchestrate + audit trail** | `temporal` | 🟢 **MIT** (held, `technology` shelf) | 🟢 Any |
+
+### How to wire it — the seam, concretely
+
+🔴 **Do not embed R in the product.** 🟢 **`P509` is the reason and it is a *runtime* reason: `KernEqWPS`
+is MIT, but it `Imports: MASS` (**GPL-2 | GPL-3**, `Priority: recommended`, 7.3-66) and runs on the R
+interpreter, which is GPL. The licence topology forces a process boundary whatever the package licence
+says.** 🔵 **So make the boundary a deliberate, narrow contract instead of an accident:**
+
+```
+┌──────────────── in-product, all MIT, one Python env ────────────────┐
+│  py-irt ──► EqUMP (link, true-score) ──► difair / aequitas (DIF)    │
+│                     │                                               │
+│                     └── writes: scores_A.csv, scores_B.csv,         │
+│                         anchor_map.json, conversion_truescore.json  │
+└─────────────────────────────┬───────────────────────────────────────┘
+                              │  files on a volume + one HTTP call
+                              ▼
+┌──── side-car: r-equating (own container, GPL stays inside) ─────────┐
+│  R 4.x + KernEqWPS 1.0.7 + MASS                                     │
+│  POST /equate/observed  → LevineObservedEquate | PSEObservedEquate  │
+│  POST /equate/kernel    → KernelEquateFromScoresEG                  │
+│                           (bandwidth via FindBestBandwidth)         │
+│  returns: conversion table + method label + bandwidth used          │
+└─────────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+        Temporal activity compares the 3 conversions and GATES:
+        max |true-score − Levine − kernel| across the score range
+```
+
+🟢 **Three rules that make the seam cheap to live with:**
+
+1. 🟢 **The contract is *data*, not R objects.** Scores in as CSV, a conversion table out as JSON, plus
+   **the method label and the bandwidth actually chosen**. 🔵 **Never return a fitted R object — that
+   is what turns a boundary into a dependency.**
+2. 🟢 **The side-car is a separate image with its own licence manifest.** 🔵 **GPL artefacts stay in one
+   container whose provenance is auditable, and the product image stays provably MIT-only.** 🔴 **Run the
+   `dependency-licence-closure` pattern against **both** images, not the repo.**
+3. 🟢 **Treat disagreement between the three methods as the *product*, not an error.** 🔵 **If true-score,
+   Levine and kernel agree to within a set tolerance across the reported range, that agreement **is** the
+   comparability evidence. 🔴 **If they diverge, the forms are not comparable and no single number should
+   be published** — which is precisely the finding an exam board needs before results day, not after.
+
+### Effort, and what is genuinely unknown
+
+| Piece | Estimate | Confidence |
+|---|---|---|
+| Steps 1–3, 6 (`P507`'s chain, unchanged) | 🟢 as `P507` scoped it | 🟢 **High** — `P507` shipped it |
+| Side-car container + two endpoints | 🟢 **~1 week** | 🟢 **High** — `KernEqWPS` exports the functions directly; no R to write beyond the wrappers |
+| Temporal comparison + gate | 🟢 **~1 week** | 🟢 High |
+| 🔴 **Choosing the divergence tolerance** | 🔴 **unestimated** | 🔴 **Low — this is the real open question.** 🔵 **It is a measurement decision an exam board must own, not a parameter a studio picks**, and nothing in this KB can supply it |
+
+🔵 **The alternative, for a client who will not accept a second runtime:** 🟢 **port the minimum slice —
+`KernelEquateFromScoresEG` + `LevineObservedEquate` + `FindBestBandwidth` — to Python, testing against
+`KernEqWPS` as the oracle.** 🟢 **That is the `P504` shape exactly (permissive code, incumbent as test
+oracle, contact confined to tests) and it is **Gap 234**. 🔴 **Scope it from `NAMESPACE`: 41 exported
+functions in total, but the bandwidth logic is the novel part and the rest is standard.**
+
+---
+
+## P520 — Deliver it **inside** Moodle: an `ai/provider` plugin instead of a portal nobody logs into
+
+🔵 **The failure mode this recipe exists to prevent is not technical.** 🔴 **Every chain above ends in a
+conversion table and a fairness report — artefacts that live in a studio's dashboard, which teachers do
+not open.** 🟢 **`verticals/solutions.md` measured a third delivery shape in Moodle's own tree this pass,
+and it changes the default.**
+
+### The three shapes, and when each is right
+
+| Shape | Component | Licence of **your** work | Survives upgrades | Choose it when |
+|---|---|---|---|---|
+| **Outside, agent-driven** | `peancor/moodle-mcp-server` | 🟢 **MIT** | 🟢 Yes | 🟢 **The client must own the IP**, or the consumer is an agent rather than a teacher |
+| 🆕 **Inside, in-tree plugin** | 🆕 `ai/provider/*` + `ai/placement/*` against Moodle's published contract | 🔴 **GPL-3.0** | 🟢 **Yes** | 🟢 **Teachers must meet it in the UI they already use**, and the client runs its **own** models |
+| **Fork and patch** | — | 🔴 GPL-3.0 | 🔴 **No** | 🔴 **Now the wrong default** |
+
+### The wiring, measured in-tree on `MOODLE_500_STABLE` (release `5.0.11`, Build `20261005`)
+
+🟢 **Three extension points, confirmed by payload with byte sizes as evidence of implementation
+(`P500`'s lesson), not by documentation — 🔴 `docs.moodle.org` is `EGRESS_BLOCKED` from this session:**
+
+```
+ai/classes/provider.php        (7,710 B)  ◄── implement this: your backend
+ai/classes/manager.php        (25,540 B)  ◄── the core that dispatches
+ai/classes/aiactions/
+    generate_text.php          (2,494 B)  ◄── an action = one thing a user does
+ai/provider/openai/     ─┐
+ai/provider/ollama/      ├── existing providers = your worked examples
+ai/placement/courseassist/ ┘   (a placement = WHERE it is offered)
+```
+
+🟢 **The build:** a provider plugin whose backend is **not** a chat model but **the `P518` chain** — it
+receives an item-bank or results request from a placement, calls the Python service, and returns the
+comparability verdict and DIF flags as the action's result. 🔵 **`ai/provider/ollama` is the template to
+copy: it is in core, so a **self-hosted** provider is a first-class citizen, which is what makes this
+viable for a ministry or exam board that will not send student data to a third party.**
+
+### Why this ordering is the commercial point
+
+| | |
+|---|---|
+| 🟢 **Upstreamable** | A plugin against a published contract survives Moodle upgrades; 🔴 **a fork is re-paid every release**, and Moodle shipped `5.0.11` two days before this pass |
+| 🟢 **Data stays home** | `ai/provider/ollama` in core means **"your models, your infrastructure"** is a configuration choice, not a custom build — the answer to the **EMEA** sovereignty objection and to **Vietnam's** pre-registration regime (`intel/market.md`) |
+| 🔴 **The licence cost is real and should be quoted up front** | 🔴 **In-tree work is GPL-3.0.** 🟢 **Decide it on IP ownership before writing code, because the two shapes are not refactorable into each other** |
+| 🟢 **Article 50 falls out of the placement** | 🔵 **A placement is the one point where the learner sees the AI** — so it is the natural home for the disclosure and synthetic-content marking that **Article 50 requires from 2026-08-02** (`compose/code/aiact-50-2-marking`), 🟢 **rather than a banner bolted on later** |
+
+🔴 **What this recipe does not claim.** 🔵 **No pass has built this plugin.** 🟢 **The three extension
+points, their byte sizes, the two provider examples, the placement example and the release string were
+all read first-hand from the tree this pass.** 🔴 **Everything about the *authoring* workflow — how
+actions are registered, what the provider interface's method signatures are — was **not** read, because
+the documentation channel is blocked and this pass did not fetch the class bodies.** 🔵 **Next pass:
+fetch `ai/classes/provider.php` and `ai/provider/ollama/` in full and write the signatures down.**
+
 ## 🟢 Fortieth pass, 2026-10-07 — one recipe, `P507`: the JVM seam `P496` called "the chain's only ugly seam" closes, because the Python reimplementation it proposed already exists and is MIT
 
 ⏱️ **Seventh pass of this date.** 🔵 **Licences below were read first-hand on 2026-10-07 from payload,

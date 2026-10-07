@@ -4,6 +4,113 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Forty-first pass, 2026-10-07 — three trends: permissive code over non-permissive intelligence, a registry channel that confirms packages that do not exist, and the agent shelf declared **saturated** rather than unmeasured
+
+⏱️ **Eighth pass of this date.** 🔵 **All market figures below are secondary and carry their series
+(`P477`, and now `P515`'s stricter rule: base year, scope definition and publisher, or do not quote).**
+
+### T1 🔴 `P516` — in the essay-scoring tier the licence is permissive and the **intelligence** is not, and the one dead end is the only thing that was ever fully open
+
+🔵 **This KB had no row in the automated-essay-scoring tier. This pass measured it, and the result is a
+shape worth naming because it will recur across every LLM-era education tier.**
+
+| Asset | Licence (payload · bytes · title block) | Existence (`P510`) | 🔴 What it actually gives you |
+|---|---|---|---|
+| [`edx/ease`](https://github.com/edx/ease) — the historical reference implementation | 🔴 **AGPL-3.0** · `master/LICENSE.txt` **35,136 B** · `GNU AFFERO GENERAL PUBLIC LICENSE Version 3` | 🟢 refs served | 🟢 **A complete, self-contained scoring model** — classical ML, trains on your own graded corpus, no external call. 🔴 **AGPL-3.0 and archived 2024-02-28.** 🔵 **Fully open, fully yours, and dead** |
+| 🆕 [`markm-io/ai-essay-evaluator`](https://github.com/markm-io/ai-essay-evaluator) **1.3.7** (2026-06) | 🟢 **MIT** · `main/LICENSE` **1,069 B** · `MIT License` | 🟢 `main` served | 🔴 **A harness.** Multiple scoring formats, batch processing, custom training — 🔴 **around a fine-tuned OpenAI `GPT-4o-mini`.** 🟢 **The MIT grant is real and covers everything that was written; none of what *scores* is in it** |
+| `AIRGOLAB-CEFET-RJ/textgrader` (LATAM-origin) | 🔴 **no licence payload on `main`, `master` or `develop`** | 🔴 **0 refs — does not resolve** | 🔴 **Nothing retrievable.** See `P517` |
+
+> **`P516`.** 🔴 **The tier inverted between 2024 and 2026: the fully-open option is archived, and the
+> live option is permissively-licensed scaffolding over a proprietary model.** 🔵 **"MIT" has stopped
+> answering the question a studio actually needs answered**, which is not *may I modify this?* but
+> **where does the judgement live, and can the client keep it?** 🟢 **Three consequences, and they are
+> procurement consequences rather than engineering ones:**
+>
+> | | |
+> |---|---|
+> | 🔴 **Per-score marginal cost** | A classical model has none after training; an API harness has one per essay, forever, priced by a third party |
+> | 🔴 **Scoring cannot be frozen** | 🔵 **An exam board must defend *this year's* marks against *last year's*. A provider that silently updates a model breaks comparability** — and the MIT harness gives no mechanism to pin it |
+> | 🔴 **Annex III lands on the judgement, not the wrapper** | 🟢 **2027-12-02 covers *exam scoring* (`P514`). The evidence obligations attach to whatever decides the score** — which, here, the client does not possess |
+>
+> 🟢 **The honest recommendation: use `ai-essay-evaluator` as a *rubric and harness* reference and treat
+> the scoring model as replaceable from day one.** 🔵 **`edx/ease`, AGPL and archived, remains the only
+> implementation in this tier that a client could fully own — so it is worth reading as a specification
+> even though it cannot be shipped.** ⚠️ **AGPL-3.0: reading and reimplementing is not copying, and no
+> pass of this KB has had counsel read any of this.**
+
+### T2 🔴 `P517` — `pypi.org/project/<name>/` returns **200 for packages that do not exist**, so "URL verified" on that channel is not evidence of anything
+
+🔴 **Reported against this pass's own verification step, before anything was written.** The instruction
+this KB runs under says *verify every URL; a 404 is not a finding*. 🔴 **This pass's verification pass
+returned `200` for two fictional packages:**
+
+| URL | HTML channel | 🟢 JSON API `pypi.org/pypi/<name>/json` | Truth |
+|---|---|---|---|
+| `pypi.org/project/EqUMP/` | 🟢 200 | 🟢 **200**, 26,427 B | 🟢 **Exists** — `info.license = 'MIT'`, v0.3.6 |
+| `pypi.org/project/pronounce-assess/` | 🟢 200 | 🟢 **200**, 6,611 B | 🟢 **Exists** — v0.1.0 |
+| 🔴 `pypi.org/project/NOTAREALPKG-zzz9/` (control) | 🔴 **200** | 🟢 **404**, 24 B | 🔴 **Does not exist** |
+| 🔴 `pypi.org/project/definitely-not-a-package-xyz987/` (control) | 🔴 **200** | 🟢 **404**, 24 B | 🔴 **Does not exist** |
+
+> **`P517`.** 🔴 **An HTTP `200` from `pypi.org/project/…` is worthless as an existence check here — it is
+> returned for arbitrary names.** 🟢 **The JSON API discriminates perfectly against two independent
+> negative controls and additionally returns the licence, so it is strictly better: one request, sound
+> existence, machine-readable licence.** 🔵 **This completes a set with `P510` (use `git ls-remote`, not
+> `github.com` HTML) — **in both cases the human-facing HTML surface is unreliable in this environment
+> and the machine-facing channel is sound.** 🟢 **The general rule for later passes: verify against the
+> channel that is *built* to answer the question, and prove it on a negative control in the same run.**
+
+🟢 **A second, smaller licence-channel finding from the same probe, worth recording because it will cause
+a false negative otherwise:**
+
+| Package | `info.license` | `info.license_expression` | Verdict |
+|---|---|---|---|
+| `EqUMP` 0.3.6 | 🟢 `'MIT'` | `None` | 🟢 MIT |
+| `pronounce-assess` 0.1.0 | 🔴 **`None`** | 🟢 **`MIT`** | 🟢 **MIT** |
+
+🔵 **The legacy `license` field is empty on a package that is plainly MIT; the **PEP 639**
+`license_expression` field carries it.** 🔴 **A probe reading only `license` would have recorded
+`pronounce-assess` as unlicensed — the same false-negative class as `P494`, in a new field.** 🟢 **Read
+`license`, `license_expression` **and** the `License ::` classifiers, and treat absence across all three
+as "undetermined", never as "unlicensed".**
+
+### T3 🟢 The education **agent** shelf is saturated at the permissive end — a conclusion, not a shrug
+
+🔵 **Three passes reported "zero new agents" and `P497` attributed it to the search string.** 🟢 **`P512`
+(`agents/trending.md`) shows a job-shaped query returns four real tutoring agents on the first attempt —
+`OATutor`, `OpenTutor`, `DeepTutor`, `TutorGPT` — of which three were already shelved and the fourth is
+**GPL-3.0**.**
+
+| | Permissive | Copyleft |
+|---|---|---|
+| **Mastery-model tutoring** | 🟢 `OATutor` (MIT) — Bayesian Knowledge Tracing | — |
+| **Agentic / lifelong tutoring** | 🟢 `DeepTutor` (Apache-2.0) · `OpenTutor` (MIT) | — |
+| 🆕 **Theory-of-Mind tutoring** | 🔴 **none** | 🔴 **`tutor-gpt` (GPL-3.0)** |
+| **Learner modelling** | 🟢 `pyKT` · `pyBKT` (MIT) | — |
+| **Pronunciation / speech** | 🟢 `OpenPronounce` (MIT) · `pronounce-assess` (MIT) | — |
+| **Essay scoring** | ⚠️ `ai-essay-evaluator` (MIT harness, proprietary model — `P516`) | 🔴 `edx/ease` (AGPL-3.0, archived) |
+
+🟢 **What follows from saturation is a change of activity, and it is the actionable trend of this pass:**
+
+| 🔴 Stop | 🟢 Start |
+|---|---|
+| Sweeping for undiscovered permissive education agents | **Composing the four that exist** (`compose/patterns.md`) |
+| Treating absence as "not yet found" | 🟢 **Treating the two *named* holes as a build list**: a permissive Theory-of-Mind layer (`tutor-gpt` is the spec), and a permissive observed-score/kernel equating port (`KernEqWPS` is the spec and the oracle — `P508`, Gap 234) |
+| Quoting market totals | 🔵 **Quoting the regulatory calendar** — it is dated, checkable, and `P514` shows the market is getting it wrong |
+
+### 🔴 `P517`'s sibling gap — the LATAM-origin asset that could not be shelved
+
+> 🔴 **Gap 235 (new).** 🔴 **`AIRGOLAB-CEFET-RJ/textgrader` — a Portuguese-language essay-and-short-answer
+> grader from CEFET-RJ, and the only LATAM-origin asset the essay-scoring sweep surfaced — has an
+> **unresolvable repo path**: `0` refs from `git ls-remote`, matching the negative control, and no licence
+> payload on `main`, `master` or `develop`, although a search result hyperlinks it as a repository.** 🟢
+> **Recorded as a declared gap rather than a finding, and deliberately not hyperlinked (`P501`).** 🔵 **Why
+> it matters out of proportion to one repo: every permissive asset in the tier above scores **English**.
+> A Portuguese or Spanish essay scorer is the single most region-specific gap in this KB's LATAM
+> coverage, and this pass could not confirm that one exists at all.** 🟢 **Next pass: query the
+> Portuguese-language corpus directly (`corretor automático de redação código aberto`), and check whether
+> CEFET-RJ publishes under a different organisation name — a renamed org is the most likely explanation
+> for a live search result pointing at a dead path.**
+
 ## 🟢 Fortieth pass, 2026-10-07 — three trends: the comparability tier starts migrating to permissive Python, query *shape* beats query *topic*, and a stale regulation date proves reproducible
 
 ⏱️ **Seventh pass of this date.** 🔵 **All market figures below are secondary and carry their series

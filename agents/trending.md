@@ -4,6 +4,85 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — forty-first pass: `P497` is superseded. A shaped query returns four education agents, three were already shelved, the fourth is GPL-3 — the shelf is **saturated**, not the query **broken**
+
+⏱️ **Eighth pass of this date.** **Licences from payload and registry, named per row. Title-block
+classified (`P171`). No star counts (`P479`). Existence by `git ls-remote` (`P510`).**
+
+### 🔴 The two mandated general sweeps — fourth consecutive identical outcome, recorded in full
+
+| Sweep | Returned | New to this KB |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | `openclaw` · `browser-use` · `Mem0` · `AutoGen` · `Flowise` · `dify` · `Hermes Agent` (Nous Research) · `Aider` · `Cline` · `CrewAI` · `LangGraph` · `free-ai-agents-resources` | 🔴 **0** — every name a **horizontal** framework or a resource list; all held by `globant-kb`'s `technology` shelf |
+| `github trending education AI 2026` | `rohitg00/ai-engineering-from-scratch` (#1 on GitHub Trending 2026-05-24) · *AI Engineering Hub* · *Awesome LLM* · *Agents Towards Production* · OpenAI Cookbook · LangChain · `speedyapply/2026-AI-College-Jobs` · `DietrichGebert/ponytail` | 🔴 **0** — all **teaching material about AI**, or job boards |
+
+🟢 **`P497`'s description of these two strings is confirmed a fourth time.** 🔴 **What `P497` got wrong is
+the conclusion it invited — that the education-agent shelf could not be measured through this channel.**
+
+### 🟢 `P512` — the shaped sweep, and why its result supersedes `P497`
+
+🔵 **`P503` (pass 40) established that query *shape* beats query *topic*, and demonstrated it on a
+library tier.** 🟢 **This pass applied it to the **agent** tier, which is the tier `P497` was about.**
+The query named the *job* instead of the *field*:
+
+`open source intelligent tutoring system agent 2026 github MIT Apache self-hosted student`
+
+| Agent returned | Licence (payload · bytes · title block) | Existence (`P510`) | 🟢 New to this KB? |
+|---|---|---|---|
+| **OATutor** | 🟢 **MIT** · 1,105 B · `MIT License` | 🟢 60 heads | 🔴 **No** — 22 live files |
+| **OpenTutor** | 🟢 **MIT** · 1,068 B · `MIT License` | 🟢 11 heads | 🔴 **No** — 13 live files |
+| **DeepTutor** | 🟢 **Apache-2.0** (held; `HKUDS/DeepTutor`) | — | 🔴 **No** — 14 live files |
+| 🆕 **TutorGPT** | 🔴 **GPL-3.0** · **35,149 B** · `GNU GENERAL PUBLIC LICENSE Version 3` | 🟢 49 heads | 🟢 **Yes — and copyleft** |
+
+> **`P512`. Supersedes `P497`.** 🔴 **`P497` said: *"education AI as a search string returns AI pedagogy,
+> not education software"*, and three passes read that as the reason the shelf gained nothing.** 🟢 **A
+> query shaped around the *job* — *intelligent tutoring system*, *self-hosted*, *student* — returns
+> education software on the first attempt: four tutoring agents, no pedagogy material, no horizontal
+> frameworks.** 🟢 **Three of the four were already shelved and the fourth is GPL-3.** 🔵 **So the correct
+> account of the three-pass streak is **saturation of the permissive education-agent shelf**, not a broken
+> channel. These are different claims with opposite consequences:**
+
+| Reading | What a studio does next |
+|---|---|
+| 🔴 `P497` — the channel is broken | Keep re-running sweeps; expect a backlog of undiscovered agents |
+| 🟢 `P512` — the shelf is saturated | 🟢 **Stop sweeping for agents. The permissive tutoring tier is known, and value now comes from *composing* it** (`compose/patterns.md`) **or from porting what is copyleft** (`tutor-gpt`'s Theory-of-Mind layer; `KernEqWPS`'s equating, `P508`) |
+
+🔵 **The honest limit on `P512`:** one shaped query on one pass. 🟢 **It is promoted anyway because its
+*positive* result is self-verifying — four named repos, three found already on the shelf by `grep`, all
+four licences read from payload — whereas `P497` rested on repeated *absence*.**
+
+### 🟢 Regional read — all four regions returned, and the acronym turns out to be the defect
+
+🔴 **The mandated per-region sweeps are recorded in full. Two of the four returned *no education content
+at all*, which is a channel finding rather than a regional one — see `P513` in `intel/market.md`.**
+
+| Region | What the mandated `AI education {region} 2026 adoption regulation players` sweep returned | New? |
+|---|---|---|
+| **North America** | NA = **36%** of the global market; **$951 M (2024) → $2,303.2 M (2029) at 15.9%** (🔴 **a third NA series, inconsistent with the held one — `P515`**); **86%** of students across **16** countries using AI in study; named players **IBM, Microsoft, Google**; **$169 M** government commitment to responsible AI in higher education in **Q1 2026**; **OpenAI** country-level education programme with **eight national partners**, Q1 2026; *"no FDA equivalent for educational technology"*, **Colorado** and **Texas** named as piecemeal state requirements | ⚠️ **2 new items** ($169 M; OpenAI 8-partner programme), **1 reproduced defect** (`P514`), **1 new inconsistency** (`P515`) |
+| **EMEA** | 🔴 **Zero education-specific content.** The sweep returned enterprise AI adoption: **94%** of organisations likely to invest in AI training in 2026; **60%** of EMEA finance teams between piloting and maturity; *"compliance complexity, data governance"*. 🔵 **One education item only as a bare event listing** (Council of Europe, 2nd working conference on the regulatory dimensions of AI in education, October) | 🔴 **0 — and see `P513`** |
+| **APAC** | 🔴 **Zero education-specific content.** Returned enterprise/governance material: **48%** of APAC governance leaders prioritising AI adoption for 2026; **57%** of Asian organisations with AI in at least one area; Singapore's financial-sector consultations; *"sovereign-by-design"* for ~half of APAC firms. 🟢 **The source summary itself stated the gap**: *"the search results focus primarily on enterprise AI adoption rather than education-specific information"* | 🔴 **0 — and see `P513`** |
+| **LATAM** | **200 higher-education institutions across 19 countries** surveyed Aug–Oct 2025 (UNU working paper) — 🆕 **a different instrument from the held DEC survey**; **99%** of LATAM startups using some AI, **85%** integrating it natively, **edtech named among the most disruptive sectors**; regulatory fragmentation across countries with different or absent frameworks | 🟢 **1 new instrument** (UNU, 200 HEIs / 19 countries), 🔴 **1 reproduced defect** (`P514`) |
+
+🟢 **No region returned nothing, and the two that returned nothing *about education* are recorded as
+exactly that.** 🔵 **The follow-up that fixed it is in `intel/market.md` (`P513`): naming **countries**
+instead of the acronym returned national policy instruments for both EMEA and APAC on the first attempt.**
+
+### 🔴 `P514` reproduced here — the stale EU date is no longer an EMEA-channel problem
+
+🔴 **Pass 40 filed `P505` as *"the **EMEA** regulatory channel is reproducibly stale on the Annex III
+date."* 🔴 **This pass found the same stale claim in the North America and LATAM sweeps, and did not find
+it in the EMEA sweep at all** (which returned no education content to be stale about):
+
+| Sweep | Stale claim returned |
+|---|---|
+| **North America** | *"the EU AI Act, taking full effect in **August 2026**, classifies both healthcare and education AI as **high-risk**"* |
+| **LATAM** | *"the AI Act, whose regulatory framework progressively entered into force from **August 2026**, establishing four risk levels"* |
+| EMEA (country-shaped follow-up) | *"The EU AI Act's general application date is **2 August 2026**"* — 🔵 **true as stated for the Act's general application, and the trap is that it is one sentence away from the false claim about Annex III** |
+
+🟢 **What this shelf holds, unchanged:** 🟢 **Article 50 transparency in force 2026-08-02**; 🔴 **Annex III
+stand-alone high-risk — education access, student evaluation, exam scoring — deferred to 2027-12-02 by the
+Digital Omnibus.** 🔵 **Full treatment and commercial consequence in `intel/market.md`.**
+
 ## 2026-10-07 — fortieth pass: zero new agents for the third consecutive pass, and the regional channel reproduced a superseded regulation date for the second time
 
 ⏱️ **Seventh pass of this date.** **Licences from payload, registry and artefact, named per row.

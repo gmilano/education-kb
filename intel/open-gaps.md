@@ -124,3 +124,21 @@ Kept for citation integrity: a later pass citing `gap N` must be able to resolve
 > read the **declaring line in full** from the archive path in the table above. `P492` exists because
 > pass 38 quoted the gap's last sentence and acted on it as though it were the gap.
 
+
+---
+
+## 🟢 Live gaps declared **after** the 2026-10-06 reset — a register that is a verdict, not a pointer
+
+🔵 **Everything above is a *reachability index* of pre-reset declarations, and its status column is
+explicitly not a verdict.** 🟢 **This section is different: these gaps were declared by a pass whose text
+is still in the live tree, so a later pass can read the declaring line without going into `archive/`.**
+🔵 **Keep it that way — append here when a pass declares a gap, and cite the file and finding.**
+
+| Gap | Declared | Declaring pass · file · finding | Status read from the declaring line |
+|---|---|---|---|
+| **233** | pre-reset ceiling | (highest gap number in the tree before pass 41) | — |
+| 🆕 **234** | **2026-10-07**, pass 41 | `repos/foundations.md` · `P508` / `P509` | 🔴 **OPEN.** *"There is no permissive implementation of observed-score or kernel equating in any language whose runtime is permissive."* 🟢 **Narrowed, not closed**: `KernEqWPS` 1.0.7 is **MIT** and implements both, but `Imports: MASS` (**GPL-2 \| GPL-3**) and runs on the **GPL** R interpreter, so the closure is not permissive. 🔵 **Remedy named and scoped**: port `KernelEquateFromScoresEG` + `LevineObservedEquate` + `FindBestBandwidth` to Python with `KernEqWPS` as the test oracle (`P504` shape). 🟢 **Interim workaround already specified** — the R side-car in `compose/patterns.md` `P518` |
+| 🆕 **235** | **2026-10-07**, pass 41 | `intel/trends.md` · `P516` / `P517` | 🔴 **OPEN.** **No confirmed open-source essay or short-answer scorer for Portuguese or Spanish.** The only LATAM-origin candidate, `AIRGOLAB-CEFET-RJ/textgrader` (CEFET-RJ), has an **unresolvable repo path** — `0` refs from `git ls-remote`, matching the negative control, no licence payload on `main`/`master`/`develop` — although a search result hyperlinks it as a repository. 🔴 **Every permissive asset in the essay-scoring tier scores English.** 🔵 **Next step named**: query the Portuguese-language corpus directly (`corretor automático de redação código aberto`) and check whether CEFET-RJ publishes under a renamed organisation |
+
+🔴 **Both gaps are declared with the remedy *and* its cost, which is what `P469` and `P492` exist to
+enforce.** 🟢 **Neither is a wish; each names the specific artefact a later pass would have to produce.**

@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — forty-first pass: two new permissive repos, and a channel defect that rewrites how every `master/` path in this KB should be read
+
+⏱️ **Eighth pass of this date** (34–40 earlier). **Licences from payload and registry, each named per
+row. Title-block classified (`P171`). No star counts (`P479`). Existence by `git ls-remote` (`P510`).**
+
+🟢 **The week's movement is two packages and one instrument correction.** 🔵 **The instrument correction
+is the more consequential of the two, because it applies retroactively to several hundred rows.**
+
+### 🟢 New rows — two, and the pass says two rather than six
+
+| Repo / package | Licence (channel · bytes · title block) | Existence (`P510`) | Why it is here |
+|---|---|---|---|
+| 🆕 [`CambridgeAssessmentResearch/KernEqWPS`](https://github.com/CambridgeAssessmentResearch/KernEqWPS) **1.0.7** — 🟢 **single ref `refs/heads/master`, confirmed (`P511`)** | 🟢 **MIT** · **three channels agree** — payload `LICENSE` **1,077 B** title block `MIT License` holder *"Copyright (c) 2017 Cambridge Assessment"*; payload `LICENSE.txt` **1,098 B** same title block; `DESCRIPTION` → `License: MIT + file LICENSE` | 🟢 refs served | 🟢 **Kernel *and* observed-score equating under MIT** — `LevineObservedEquate`, `PSEObservedEquate`, `KernelEquateFromScoresEG`, `KernelChainedEquate`, plus bandwidth selection and 🆕 **neural-network equating** (`EquateNN`, `EquateCNN`). **41 exported functions**, read from `NAMESPACE`. 🔴 **`Imports: MASS` = GPL-2 \| GPL-3, and R itself is GPL — MIT package, non-permissive closure (`P509`)**. Full treatment: `P508` |
+| 🆕 [`markm-io/ai-essay-evaluator`](https://github.com/markm-io/ai-essay-evaluator) **1.3.7** | 🟢 **MIT** · payload `main/LICENSE` **1,069 B** · title block `MIT License` | 🟢 `main` + CI/renovate heads | Python framework for automated essay evaluation: multiple scoring formats, batch processing, custom model training. 🔴 **The MIT grant covers a harness whose scoring intelligence is a fine-tuned **OpenAI GPT-4o-mini** — permissive code, non-permissive intelligence (`P516`)**. Latest release **2026-06**, v1.3.7 |
+
+🔴 **Not shelved, and the reason is stated rather than hidden:**
+
+| Candidate | Why it is not a row |
+|---|---|
+| `AIRGOLAB-CEFET-RJ/textgrader` | 🔴 **Repo path does not resolve** — `git ls-remote` returns **0 refs**, matching the negative control, and no licence payload on `main`, `master` or `develop`. 🔵 **A search result hyperlinked it as a repository; the oracle disagrees.** 🟢 **No hyperlink written here on purpose (`P501`).** ⚠️ **This was the only LATAM-origin asset in the essay-scoring tier — recorded as a declared gap in `intel/trends.md` (`P517`), not as a finding** |
+| [`edx/ease`](https://github.com/edx/ease) | 🔴 **AGPL-3.0** — payload `master/LICENSE.txt` **35,136 B**, title block `GNU AFFERO GENERAL PUBLIC LICENSE Version 3`. 🔴 **Archived 2024-02-28.** 🔵 Recorded because it is the historical *reference* implementation of essay scoring and a pass that did not know its licence might reach for it |
+| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 **GPL-3.0**, 35,149 B. Filed as a flagged row in `agents/top.md`, not here |
+| `pronounce-assess` **0.1.0** | 🟢 **MIT**, but **registry-only** — carried in `license_expression`, not `license` (see `P517`). 🔵 **Declares no repository this pass resolved**, and `OpenPronounce` already holds this tier under MIT with a resolving repo. Recorded, not promoted |
+
+### 🔴 `P511` — `master` on `raw.githubusercontent.com` is an **alias for the default branch**, not evidence of a `master` ref
+
+🔴 **Found while probing `OpenPronounce`, and reported against this pass's own method.** Every licence
+probe in this KB sweeps `master` **and** `main` and records which path returned `200`. 🔴 **That
+record is not a branch fact.** Measured in one run, with a negative control:
+
+| Probed path | HTTP | Bytes | `sha256` (first 16) |
+|---|---|---|---|
+| `Halleck45/OpenPronounce/**main**/LICENSE` | 🟢 **200** | 1,113 | `6f4d9645aa9f3df4` |
+| `Halleck45/OpenPronounce/**master**/LICENSE` | 🟢 **200** | 1,113 | 🔴 **`6f4d9645aa9f3df4` — byte-identical** |
+| `Halleck45/OpenPronounce/**HEAD**/LICENSE` | 🟢 200 | 1,113 | `6f4d9645aa9f3df4` |
+| `Halleck45/OpenPronounce/**zzz-definitely-not-a-branch-9f3a**/LICENSE` (control) | 🔴 **404** | 14 | — |
+
+🟢 **And `git ls-remote --heads` on that repo returns exactly one ref: `refs/heads/main`. There is no
+`master` branch.**
+
+> **`P511`.** 🔴 **A `200` at `…/master/<file>` does **not** establish that a `master` branch exists; the
+> host resolves `master` to the default branch.** 🟢 **The negative control rules out the weaker
+> explanation that the raw channel resolves any string — a nonsense branch returns `404`.** 🔵 **Scope
+> this correction precisely, because over-reading it would discard good data:**
+
+| Claim class | Affected by `P511`? |
+|---|---|
+| *"the licence payload is MIT, 1,077 B, title block `MIT License`"* | 🟢 **No.** The payload is the default branch's real file. **Every licence verdict in this KB stands** |
+| *"the payload was found on `master`, so this repo uses `master`"* | 🔴 **Yes — unsound.** This is an artefact of the alias |
+| *"the payload is on `master` **and** `main`, so the branches agree"* | 🔴 **Yes — vacuous.** It is one file reported twice. 🔵 **Rows in this KB written as `LICENSE@main` or `main/LICENSE` to distinguish them from `master` hits were distinguishing nothing** |
+| *"`…/main/LICENSE` 200 and `…/master/LICENSE` 404"* | 🟢 **No, and it is informative** — a `404` on the alias is the interesting case and means the probe hit a repo whose default branch differs from both, or a path that does not exist |
+
+🟢 **The remedy is cheap and this pass used it:** 🔵 **take the branch from `git ls-remote --heads`
+(authoritative) and read the payload from `HEAD` (unambiguous), rather than guessing `master` vs `main`
+and reporting the guess as a finding.**
+
+### 🔵 Re-measured this pass, not carried forward — the four permissive education agents
+
+🟢 **Licences re-read from payload on 2026-10-07, in one run, with the negative control returning 0 refs
+and no payload:** `CAHLR/OATutor` **MIT** (1,105 B) · `zijinz456/OpenTutor` **MIT** (1,068 B) ·
+`Halleck45/OpenPronounce` **MIT** (1,113 B) · `pykt-team/pykt-toolkit` **MIT** (1,066 B). 🔴 **None is
+new** — see `P512` in `agents/trending.md`, which is the finding that result supports.
+
+🟢 **`cran/MASS` 7.3-66 read on the mirror namespace** (🔵 **declared a mirror, `P506`**): `License:
+GPL-2 | GPL-3`, `Priority: recommended`, `Packaged: 2026-07-15`. 🔵 **Read only to close `KernEqWPS`'s
+dependency question (`P509`); not a row.**
+
 ## 2026-10-07 — fortieth pass: one new permissive repo, and it is the tier pass 39 said had only one implementation
 
 ⏱️ **Seventh pass of this date** (34–39 earlier). **Licences from payload, registry and — new this pass —

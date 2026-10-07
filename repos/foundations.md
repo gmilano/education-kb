@@ -4,6 +4,107 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Forty-first pass, 2026-10-07 — observed-score and kernel equating have a **permissive** implementation, and `P500`'s licence verdict falls while its deployment verdict survives for a reason it never stated
+
+⏱️ **Eighth pass of this date** (34–40 ran earlier). **Licences read first-hand on 2026-10-07** from the
+channels named per row: repository **payload** on `raw.githubusercontent.com` (title-block classified,
+`P171`), **registry** metadata, and the published **artefact**. **No star counts** (`P479`).
+
+🔴 **Pass 40 closed `P500` with this sentence:** *"`equating/kernel/`, `equating/obs/` and `scoring/` are
+declared and EMPTY, so **observed-score and kernel equating remain R-only and GPL-only**."* 🟢 **The
+R-only half holds. The GPL-only half is wrong, and this pass measured the counter-example.**
+
+### 🟢 `P508` — `KernEqWPS`: kernel *and* observed-score equating, under **MIT**, from an exam board
+
+🔵 **Why no earlier pass found it.** Every prior sweep of this tier queried `equating` against **CRAN**
+and against **Python**. `KernEqWPS` is on **neither**: it is an R package distributed from its author's
+GitHub, so a CRAN-shaped query cannot see it and a Python-shaped query cannot see it. 🟢 **`P503`'s
+lesson generalises — the missing axis here was *distribution channel*, not language or licence.**
+
+| Field | Value, and the channel it came from |
+|---|---|
+| Repo | [`CambridgeAssessmentResearch/KernEqWPS`](https://github.com/CambridgeAssessmentResearch/KernEqWPS) — 🟢 **existence confirmed independently**, `git ls-remote` serves refs (`P510`) |
+| Package | **`KernEqWPS` 1.0.7** — *"Kernel Equating Without Pre-Smoothing"* (`DESCRIPTION`, 575 B) |
+| Licence | 🟢 **MIT** — **three agreeing channels**: payload `master/LICENSE` **1,077 B**, title block `MIT License`, holder *"Copyright (c) 2017 Cambridge Assessment"*; payload `master/LICENSE.txt` **1,098 B**, same title block; and `DESCRIPTION` → `License: MIT + file LICENSE` |
+| Author / holder | **Tom Benton** (`aut`, `cre`), **Cambridge Assessment** — 🟢 **an exam board, not a university lab**: the first time this tier's permissive end is held by an operational assessment organisation |
+| Declared deps | `Depends: R (>= 3.0.0)` · `Imports: MASS, stats` · `Suggests: ggplot2` — 🔴 **see `P509`, this is where the permissiveness stops** |
+| Ref discipline (`P511`) | 🟢 **`git ls-remote --heads` returns exactly one ref, `refs/heads/master`** — so the `master/` paths above are a **genuine branch fact** for this repo, confirmed against the ref list rather than inferred from a `200` |
+
+🟢 **What is actually implemented, read from `NAMESPACE` — the *exported* surface, not a directory
+listing (`P500`'s lesson applied):** **41 exported functions.** The ones that close the gap:
+
+| Capability `P500` left open | Exported function(s) | 🟢 Status |
+|---|---|---|
+| 🔴 **Observed-score equating** | `LevineObservedEquate` · `PSEObservedEquate` · `OddsTransformLevineEquate` | 🟢 **Implemented and exported** |
+| 🔴 **Kernel equating** | `KernelEquateFromScoresEG` · `KernelEquateFromDists` · `KernelChainedEquate` | 🟢 **Implemented and exported** |
+| Bandwidth selection (the package's stated reason to exist) | `FindBestBandwidth` · `FindAVDBandwidth` · `FindBestBandwidth1Iter` | 🟢 Implemented |
+| Linear / Tucker / chained family | `TuckerEquate` · `ChainedLinearEquate` · `LinearEquate` · `TransformedTuckerEquate` · `TransformedChainedLinearEquate` | 🟢 Implemented |
+| Circle-arc family | `CircleArcEquate` · `CircleArcChainedEquate` · `CircleArcTuckerEquate` · `CircleArcFromMeans` | 🟢 Implemented |
+| 🆕 **Neural-network equating** | `EquateNN` · `EquateCNN` · `PredPercentileNN` · `PredPercentileCNN` | 🟢 **Present — and this KB had no row anywhere for ML-based equating under any licence** |
+
+> **`P508`.** 🟢 **Observed-score and kernel equating are *not* GPL-only. `KernEqWPS` implements both
+> under MIT, from Cambridge Assessment, and has since 2017.** 🔴 **`P500` asserted a licence property of
+> a *tier* from a sample that was drawn entirely from CRAN and PyPI — and the counter-example was on
+> neither.** 🔵 **The correction to carry forward is not about equating; it is that a licence claim about
+> a capability tier is only as wide as the **distribution channels** the sweep covered, and no earlier
+> pass wrote down which channels those were.**
+
+### 🔴 `P509` — the MIT grant is on the package, not on the **closure**: `Imports: MASS` is GPL, and so is R
+
+🟢 **Measured, not assumed.** `MASS` read from the **mirror** namespace `cran/MASS` (🔵 **declared a
+mirror per `P506`, not canonical**), existence confirmed by `git ls-remote`:
+
+| Field | Value |
+|---|---|
+| Package | `MASS` **7.3-66**, `Packaged: 2026-07-15` |
+| `Priority` | 🔵 **`recommended`** — ships with R itself, so it is present on every R installation |
+| `License:` | 🔴 **`GPL-2 \| GPL-3`** |
+
+🔵 **The consequence, stated carefully because it is easy to overstate in both directions:**
+
+| Claim | 🟢 True? |
+|---|---|
+| `KernEqWPS`'s own source may be read, modified and redistributed under MIT terms | 🟢 **Yes.** Three channels agree |
+| A deployed `KernEqWPS` is a **permissive closure** | 🔴 **No.** It `Imports: MASS` (GPL-2 \| GPL-3), and it runs on the **R interpreter**, itself GPL |
+| So `P500`'s **deployment** conclusion — observed-score/kernel equating is a **side-car**, not an in-product component — survives | 🟢 **Yes** |
+
+> **`P509`.** 🔴 **`P500` reached the right *architecture* for the wrong *reason*, and the difference is
+> commercially live.** 🔵 **If the obstacle were the package licence, the remedy would be *"find or fund a
+> permissive reimplementation"* — a procurement question. 🟢 **The obstacle is the **runtime**: R is GPL,
+> so even a perfectly MIT R package is reached across a process boundary.** The remedy is therefore an
+> *interface* decision — keep R as a service and define its contract — and that is a days-not-quarters
+> task, which is the opposite of the conclusion `P500`'s reason would have implied.** ⚠️ **Not legal
+> advice, and no pass of this KB has had counsel read it; it is recorded as a licence *topology*
+> measurement, which is what it is.**
+
+### 🔵 The comparability tier after this pass — three permissive implementations, three different runtimes
+
+| Capability | Python / MIT | Java / Apache-2.0 | 🆕 R / MIT | R / GPL |
+|---|---|---|---|---|
+| IRT **linking** (MM, MS, Haebara, Stocking-Lord) | 🟢 `EqUMP` (`P499`) | 🟢 `psychometrics` | — | `equateIRT`, `plink` |
+| **True-score** equating | 🟢 `EqUMP` | 🟢 `psychometrics` | — | `equateIRT` |
+| 🔴 **Observed-score** equating | 🔴 **absent** (`equating/obs/` empty, `P500`) | — | 🟢 **`KernEqWPS`** (`P508`) | `equate`, `SNSequate` |
+| 🔴 **Kernel** equating | 🔴 **absent** (`equating/kernel/` empty, `P500`) | — | 🟢 **`KernEqWPS`** (`P508`) | `kequate`, `SNSequate` |
+| 🆕 **NN / CNN** equating | 🔴 absent | 🔴 absent | 🟢 **`KernEqWPS`** | 🔴 absent |
+
+🟢 **`EqUMP` 0.3.6 re-verified this pass on the registry channel** — `info.license` = `'MIT'`, version
+`0.3.6` unchanged, [`pypi.org/project/EqUMP/`](https://pypi.org/project/EqUMP/) **200 on the JSON API**
+(🔴 **and the HTML channel is not evidence of anything — see `P517`**). 🔴 **Its declared repo
+`huni1023/EqUMP` still serves no refs**, now established by a *working* oracle rather than by absent
+payload — see `P510`.
+
+### 🔴 Gap carried forward, narrowed rather than closed
+
+> 🔴 **Gap 234 (new).** **There is no permissive implementation of observed-score or kernel equating in
+> any language whose runtime is permissive.** 🟢 **`P508` moved this from *"no permissive implementation
+> exists"* to *"one exists, behind a GPL runtime"*, which is a materially better position** — the
+> algorithms are now readable, citable and usable as a test oracle under MIT terms. 🔵 **What is still
+> missing is a Python or JVM port.** `KernEqWPS`'s `NAMESPACE` is 41 functions and the bandwidth logic is
+> the novel part; a port scoped to `KernelEquateFromScoresEG` + `LevineObservedEquate` + `FindBestBandwidth`
+> is the minimum useful slice, and `KernEqWPS` itself is the reference implementation to test it against —
+> 🟢 **which is exactly the `P504` shape: permissive code using the incumbent as its oracle, with contact
+> confined to tests.**
+
 ## 🟢 Fortieth pass, 2026-10-07 — the comparability tier has a **permissive Python** implementation, and `P493`'s count is extended while its mechanism is corroborated eight times over
 
 **Licences read first-hand on 2026-10-07.** Three channels, named per row: repository **payload** on

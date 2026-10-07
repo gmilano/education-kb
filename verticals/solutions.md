@@ -4,6 +4,111 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Forty-first pass, 2026-10-07 — the largest LMS on earth ships an **AI extension point in core**, measured in-tree rather than from its docs, and the platform shelf is saturated for the tenth consecutive pass
+
+**Licences read first-hand on 2026-10-07** from payload, named per row; title-block classified (`P171`).
+⏱️ **Eighth pass of this date.** **Existence by `git ls-remote` (`P510`).**
+
+🔵 **This file's job is platforms that can be customised with AI on top.** 🔴 **No new LMS, SIS or ERP
+again this pass — tenth consecutive pass to measure that rather than assume it.** 🟢 **What is new is that
+the *customisation surface* of the incumbent platform has been measured in its own source tree, and it is
+a documented plugin contract rather than the fork-and-patch this shelf has assumed since pass 1.**
+
+### 🔴 The mandated platform sweep, recorded in full so silence is not read as coverage
+
+| Sweep | Returned | New platforms |
+|---|---|---|
+| `open source platform education ERP CRM MIT Apache student information system` | **OpenEduCat** (on Odoo; **LGPL-3.0**, shelved since pass 28) · **Odoo** (*"260+ core modules"*) · **`.LRN`/OpenACS** (**GPL-2.0**, shelved) · *Campus On Click*, *Clofus* (🔴 **vendor-comparison listicles, not open source**) | 🔴 **0** |
+
+🔴 **The sweep repeated, for the second consecutive pass, the two claims this shelf has already
+corrected** — *"OpenEduCat trusted by 3M+ users, 300 modules, 65 languages, 45 localisations"* (⚠️ vendor
+marketing, unmeasured) and *"`.LRN` originally developed at MIT"* (🔴 **an institution, not a licence;
+`.LRN`/OpenACS is `GPL-2.0`**). 🟢 **`P504`-style note: this is now a *predicted* repetition — pass 40
+wrote it down, pass 41 reproduced it, so the shelf can stop re-adjudicating it.**
+
+### 🟢 Moodle's **AI subsystem** — in core since 4.5, and measured in the tree, not in the docs
+
+🔴 **Channel state first.** `docs.moodle.org` is 🔴 **`EGRESS_BLOCKED`** from this session (`000` on
+`/503/en/AI_subsystem` and `/500/en/AI_subsystem`), so **the documentation could not be fetched**. 🟢
+**Rather than quote a blocked page, this pass read the subsystem out of the source tree**, which is the
+better channel anyway — it answers *"what can I extend?"* instead of *"what is announced?"*
+
+| Field | Value, and the channel |
+|---|---|
+| Repo | [`moodle/moodle`](https://github.com/moodle/moodle) — 🟢 **40 heads** served (`P510`) |
+| Licence | 🔴 **GPL-3.0** — payload `COPYING.txt` **35,147 B**, title block `GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007`. 🟢 **Unchanged, and it is the whole reason the integration shape below matters** |
+| Release measured | 🟢 **`5.0.11 (Build: 20261005)`** — `$branch = '500'`, `$maturity = MATURITY_STABLE`, read from `version.php` on `MOODLE_500_STABLE`. 🔵 **Build date is two days before this pass** |
+
+🟢 **The subsystem, confirmed present in-tree by payload (byte sizes are the evidence that these are
+implementations and not stubs — `P500`'s lesson):**
+
+| Path on `MOODLE_500_STABLE` | Bytes | What it is |
+|---|---|---|
+| `ai/classes/manager.php` | 🟢 **25,540** | The subsystem core — 🟢 **the largest file in the set, so this is where the logic lives** |
+| `ai/classes/provider.php` | 🟢 **7,710** | The **provider** contract — the interface a new backend implements |
+| `ai/classes/aiactions/generate_text.php` | 🟢 **2,494** | An **action**: one specific thing a user can do |
+| `ai/provider/openai/version.php` | 🟢 **1,092** | Provider plugin — OpenAI |
+| 🟢 `ai/provider/ollama/version.php` | 🟢 **1,092** | Provider plugin — **Ollama**, i.e. 🟢 **a self-hosted model is a first-class, in-core provider** |
+| `ai/placement/courseassist/version.php` | 🟢 **1,113** | A **placement**: where in the UI an action is offered |
+
+🔵 **The architecture, as the tree shows it: three extension points — `placement` (where), `action`
+(what), `provider` (by whom).** ⚠️ **Secondary, from search summaries and *not* first-hand because the
+docs are blocked:** the subsystem has been in core since **4.5**; **5.0/5.1** added providers, granular
+controls and an *explain* function; four actions are available (text generation, image generation,
+summarisation, explanation); **LiteLLM**, **LocalAI**, **Groq** and — from **5.1** — **DeepSeek** are
+named as working providers. 🔵 **The three paths above are first-hand; the rest of that list is not.**
+
+> 🟢 **Why this changes the shelf's standing advice.** 🔴 **This KB's Moodle rows have treated GPL-3.0 as
+> forcing one of two shapes: an out-of-tree MCP server** (`peancor/moodle-mcp-server`, MIT — *"which is
+> why it is MIT while in-tree Moodle plugins are GPL-3.0"*) **or a fork.** 🟢 **A third shape is now
+> measured: an in-tree `ai/provider/*` plugin against a published contract.** 🔵 **It is still GPL-3.0 —
+> that does not change — but it is *upstreamable* and survives Moodle upgrades, where a fork does not.
+> The licence question and the maintenance question have different answers, and the shelf had been giving
+> one answer to both.**
+
+| Shape | Licence of the work | Survives upgrades | When to choose it |
+|---|---|---|---|
+| Out-of-tree **MCP server** | 🟢 **Can be MIT** | 🟢 Yes | Agent reads/writes Moodle **from outside**; client wants to own the IP |
+| 🆕 In-tree **`ai/provider` plugin** | 🔴 **GPL-3.0** | 🟢 **Yes — published contract** | Client wants AI **inside** Moodle's own UI, on **their own models** (`ollama`) |
+| **Fork and patch** | 🔴 GPL-3.0 | 🔴 **No** | 🔴 **Now the wrong default in most cases** |
+
+### 🔴 `P519` — a `404` on the raw channel for a ref that **exists** is not evidence the file is absent from the project
+
+🔴 **Found while reading Moodle, and it refines both `P494` and `P511`.** `git ls-remote` confirms
+`refs/heads/main` exists on `moodle/moodle`. 🔴 **Yet `main` serves only part of the tree:**
+
+| Path on `main` | HTTP | Same path on `MOODLE_500_STABLE` |
+|---|---|---|
+| `COPYING.txt` | 🟢 **200** | 🟢 200 |
+| `README.md` · `index.php` · `config-dist.php` · `composer.json` | 🟢 **200** | 🟢 200 |
+| 🔴 `version.php` | 🔴 **404** | 🟢 **200 — 1,640 B, real content** |
+| 🔴 `admin/index.php` | 🔴 **404** | 🟢 present |
+
+🟢 **Ruled out, in the same run:** transience — **9 consecutive attempts**, three of them with a
+cache-busting query string, all `404`; and channel failure — `COPYING.txt` on the **same ref** returned
+`200` throughout as the control.
+
+> **`P519`.** 🔴 **`404` on `raw.githubusercontent.com` means *"this ref does not serve this path"*, and
+> **not** *"the project does not contain this file"*.** 🟢 **`version.php` is a required file of every
+> Moodle installation and it 404s on a ref that exists.** 🔵 **`P494` established that absent payload is
+> not a licence verdict; `P511` established that a `200` on `master` is not a branch fact; `P519`
+> completes the set — **a `404` is not a fact about the project at all** until it has been reproduced on
+> the ref the project actually ships from.** 🟢 **Operational remedy, used by this pass: resolve the ref
+> list with `git ls-remote` **and** probe a known-present control file on the same ref; if the control
+> 404s too, the ref is the problem, not the file.**
+
+### 🟢 The assessment chain — link 5's licence topology corrected by `P508`
+
+| # | Layer | Implementation | Licence (channel) | 🆕 Shape after this pass |
+|---|---|---|---|---|
+| 1 | **Item generation** | `openedx-course-generator` + LLM | per-component | in-product |
+| 2 | **Delivery / proctoring** | Open edX (**AGPL-3.0**) · SEB Server · MIT proctoring side-cars | mixed | 🔴 side-car |
+| 3 | **Calibration** | `py-irt` · `irtorch` · `girth` | 🟢 **MIT** | 🟢 in-product |
+| 4 | **Linking** | 🟢 `EqUMP` (**MIT**, Python) — `P499`, `P507` | 🟢 **MIT** | 🟢 **in-product, no JVM** |
+| 5 | **Comparability — observed-score / kernel** | 🆕 `KernEqWPS` (**MIT**, R) — `P508` | 🟢 **MIT package**, 🔴 **GPL runtime** (`P509`) | 🔴 **side-car — and now for a *runtime* reason, not a licence one** |
+| 6 | **Fairness / DIF** | `difair` · `aequitas` | 🟢 **MIT** | 🟢 in-product |
+| 7 | 🆕 **Delivery into the LMS** | 🆕 Moodle `ai/provider` plugin **or** `moodle-mcp-server` | 🔴 GPL-3.0 / 🟢 MIT | 🟢 **choose by IP ownership, not by capability** |
+
 ## 🟢 Fortieth pass, 2026-10-07 — the fifth link in the assessment chain stops being a side-car, and the platform shelf is saturated for the ninth consecutive pass
 
 **Licences read first-hand on 2026-10-07** from payload, registry and published artefact, named per row;

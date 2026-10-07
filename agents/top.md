@@ -4,6 +4,83 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Forty-first pass, 2026-10-07 — `P502` asked for an independent existence check across four passes; this pass supplies one that **works**, and proves the channel `P502` implied is uniformly broken here
+
+**Licences read first-hand on 2026-10-07** from the channels named per row — repository **payload** on
+`raw.githubusercontent.com` (title-block classified, `P171`), **registry** metadata, and the published
+**artefact**. **No star counts** (`P479`). ⏱️ **Eighth pass of this date.**
+
+🟢 **One row added below, and it is added with a 🔴 licence flag rather than as a building block.** 🟢
+**The pass's main result for this file is not a row at all — it is that the oracle `P480` and `P502` have
+been requesting since pass 37 now exists, is tested against a negative control, and changes two standing
+verdicts.** Full sweep tables in `agents/trending.md`.
+
+### 🟢 `P510` — `git ls-remote` is a working existence oracle; `github.com` HTML is **uniformly 403** here
+
+🔴 **Reported against this pass's own instrument first, as `P502` requires.** The probe written for this
+pass used `https://github.com/<slug>` as its existence check, exactly as `P502` implied it should. 🔴 **It
+returned `403` for every input, including the negative control** — so it cannot distinguish a real repo
+from a fictional one, and any verdict built on it would have been an artefact:
+
+| Input | `github.com/<slug>` HTML | 🟢 Truth |
+|---|---|---|
+| `CambridgeAssessmentResearch/KernEqWPS` | 🔴 **403** | 🟢 **Exists** — MIT, 41 exported functions (`P508`) |
+| `pykt-team/pykt-toolkit` | 🔴 **403** | 🟢 **Exists** — MIT |
+| `totally-fake-org-zzz9/nope-repo-abc` (negative control) | 🔴 **403** | 🔴 **Does not exist** |
+
+🟢 **The channel that does discriminate, tested in the same run against the same control:**
+
+| Slug | `git ls-remote --heads` | Verdict |
+|---|---|---|
+| `CambridgeAssessmentResearch/KernEqWPS` | 🟢 refs served | 🟢 **exists** |
+| `CAHLR/OATutor` | 🟢 **60** heads | 🟢 exists |
+| `plastic-labs/tutor-gpt` | 🟢 **49** heads | 🟢 exists |
+| `zijinz456/OpenTutor` | 🟢 **11** heads | 🟢 exists |
+| `Halleck45/OpenPronounce` | 🟢 **1** head (`main` only) | 🟢 exists |
+| 🔴 `huni1023/EqUMP` | 🔴 **0 refs** | 🔴 **does not resolve** |
+| 🔴 `AIRGOLAB-CEFET-RJ/textgrader` | 🔴 **0 refs** | 🔴 **does not resolve** |
+| `totally-fake-org-zzz9/nope-repo-abc` (control) | 🔴 **0 refs** | 🔴 **does not exist** |
+
+> **`P510`.** 🟢 **The existence check `P480` and `P502` have been asking for is `git ls-remote --heads`,
+> and it is sound in this environment because it discriminates against a negative control in the same
+> run.** 🔵 **`P502` described the defect correctly — a licence probe that cannot tell *absent repo* from
+> *absent licence file* collapses three states into one string — but the remedy it implied (check the
+> repository's web page) is **unavailable here**: `github.com` HTML is `403` for everything, as is
+> `api.github.com`. 🟢 **The git transport is reachable where both HTTP channels are not**, which is the
+> part no earlier pass tested.
+
+🟢 **Two standing verdicts change as a direct result, from *undetermined* to *measured*:**
+
+| Subject | Status before this pass | 🟢 After `P510` |
+|---|---|---|
+| `huni1023/EqUMP` (`P501`) | *"unresolvable on the raw channel"* — inferred from **absent payload**, which `P494` says is not a verdict | 🟢 **Confirmed unresolvable by an independent oracle.** `P501`'s decision to shelve `EqUMP` on **artefact** evidence and withhold the hyperlink was 🟢 **correct**, and is now correct for a stated reason |
+| `AIRGOLAB-CEFET-RJ/textgrader` (new this pass) | — | 🔴 **Does not resolve**, although a search result links it as a repository. See `P517` and `intel/trends.md` |
+
+### 🔴 The one row added this pass — and it is here to be **ruled out**, not composed
+
+🟢 **`agents/trending.md` records the sweeps in full. One agent genuinely new to this KB came out of them,
+and its licence is the reason no earlier pass shelved it:**
+
+| Agent | Repo | Licence (read from payload) | Existence (`P510`) | What it is, and the verdict |
+|---|---|---|---|---|
+| 🆕 **TutorGPT** | [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 **GPL-3.0** — payload `main/LICENSE` **35,149 B**, title block `GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007`; 🟢 **identical payload on `master`, and see `P511` for why that is not a second branch** | 🟢 **49 heads** | Tutor that adapts explanations by **Theory-of-Mind** reasoning over the learner's inferred mental state; TypeScript. 🔵 **Pedagogically the most distinctive shape in this tier** — it models *what the learner believes*, where `OATutor` models *what the learner has mastered*. 🔴 **GPL-3.0 makes it a side-car or a read-only reference for Globant, not a component.** 🟢 **Shelved as an idea to reimplement, not a dependency to adopt** |
+
+🔵 **Re-measured this pass, not carried forward** — the three permissive education agents the shaped sweep
+returned were **already on this shelf**, and their licences were re-read from payload rather than quoted:
+
+| Agent | Repo | Licence re-read 2026-10-07 (payload · bytes · title block) | Already shelved? |
+|---|---|---|---|
+| **OATutor** | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 **MIT** · `LICENSE` **1,105 B** · `MIT License` · holder *"Copyright (c) 2023 Zachary A. Pardos (@zpardos) - CAHL research lab"* | 🟢 **Yes** — 22 live files |
+| **OpenTutor** | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** · `LICENSE` **1,068 B** · `MIT License` · holder *"Copyright (c) 2026 Zijin Zhang"* | 🟢 **Yes** — 13 live files |
+| **OpenPronounce** | [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) | 🟢 **MIT** · `LICENSE` **1,113 B** · `The MIT License (MIT)` · holder *"Copyright (c) 2025 Jean-François Lépine"* | 🟢 **Yes** — 3 live files |
+| **pyKT** | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** · `LICENSE` **1,066 B** · `MIT License` · holder *"Copyright (c) 2022 pykt-team"* | 🟢 **Yes** — long-held |
+
+> 🟢 **This is the result that matters for this file, and it is the opposite of a null result.** 🔴 **Three
+> passes have now reported "zero new agents" and attributed it to the query (`P497`).** 🟢 **A query of the
+> right *shape* returns four real education agents — and three of the four are already here, while the
+> fourth is copyleft.** 🔵 **The shelf is saturated at the permissive end. See `P512` in
+> `agents/trending.md`, which supersedes `P497`.**
+
 ## 🔵 Fortieth pass, 2026-10-07 — zero new agent rows for the third consecutive pass, and this pass's own probe reproduced the defect `P480`'s missing fixture exists to catch
 
 **Licences read first-hand on 2026-10-07** from three channels named per row — repository **payload** on
