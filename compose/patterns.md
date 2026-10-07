@@ -3795,3 +3795,65 @@ the two is out of date; nothing else does.**
 minutes, it is fully evidenced, and the output — *"these four components have moved owner, this
 one is a fork, this one vendors a library its licence does not mention"* — is exactly the content
 of the governance section a client's procurement team has to fill in and usually cannot.
+
+## `P-GRANT-ENUMERATION` — resolve a component's licence on three channels before you discard it
+
+**The problem it solves.** A candidate component is rejected because a scan reported no licence. On
+this KB's own shelf that verdict was wrong for **15 of 87** repositories, and the ones it was wrong
+about include an Open edX core API, a dual-licensed PDF/UA validator and a national OER library.
+
+**Why a filename probe is not enough.** Measured 2026-10-07 over the 87 repositories this shelf had
+published as unlicensed:
+
+| Channel | Grants found |
+|---|---|
+| 14 licence filenames, repository root | **0** |
+| 41 licence filenames, repository root | 1 |
+| 🟢 complete tree enumeration | **9** |
+| 🟢 package registry, with an ownership check | **6 more** |
+
+### The recipe
+
+| Step | Tool | Command | What it decides |
+|---|---|---|---|
+| 1 | `git` | `git clone --filter=blob:none --no-checkout --depth 1 <url>` then `git ls-tree -r --name-only HEAD` | every path at HEAD — no API, no pagination, **13 s for 87 repos** |
+| 2 | `compose/code/p441-tree-licence-enumeration/enumerate_licence.py` | pattern-match `licen[cs]e\|copying\|copyright` over all paths, case-insensitively | candidates at **any depth and any capitalisation** |
+| 3 | same | fetch each candidate blob, classify with `p436/sweep_payload.py:family_of` | **a path whose payload is not a licence text is a name, not a grant** |
+| 4 | same | reject depth > 2 and the container segments (`assets/`, `libraries/`, `plugins/`, `lib/`, `fonts/`…) | the **project's own** grant versus a **vendored dependency's** |
+| 5 | `compose/code/p440-unlicensed-registry-grant/grant.py` | read the publisher's declared `license` on PyPI · npm · Packagist · Maven · Hex | a grant made **only in the registry** |
+| 6 | same | compare the registry's declared repository URL against the slug | 🔴 **the ownership gate — without it, 7 of 15 grants belong to someone else** |
+| 7 | `compose/code/dependency-licence-closure/dep_licence.py` | classify the string | PERMISSIVE · WEAK- · STRONG-COPYLEFT · NONCOMMERCIAL · **NO-GRANT** · UNKNOWN |
+
+### The four verdicts to wire into a gate, and what each means for a deliverable
+
+| Verdict | Meaning | Action |
+|---|---|---|
+| `OWN-GRANT-*` | a licence text in the project's own tree | 🟢 the strongest evidence; quote the path |
+| `REGISTRY-GRANT` | declared by the publisher, absent from the tree | ⚠️ usable; **`P314`** — one written confirmation citing the publisher's own metadata |
+| `BUNDLED-GRANT-ONLY` | every grant found belongs to a vendored dependency | 🔴 the project's own grant is still absent — do not quote the dependency's |
+| `ABSENCE-ENUMERATED` | no licence text in the **complete** tree and no registry grant | 🔴 now a sustainable finding, which a filename probe could never produce |
+
+### Three failure modes this pattern exists to prevent, each measured
+
+- 🔴 **A name is not a grant.** The first run of step 2 published an **icon component** called
+  `copyright/baseline.vue`, an **XSLT transform**, three **vendored** licences and the European
+  Commission's `licence-EUPL 1.2-brightgreen.svg` — a **README badge image**. Step 3 removes all six.
+- 🔴 **A package is not necessarily yours.** `pnp-v/bo-google-classroom-mcp-server` declares
+  `"name": "class"`; npm's `class` is a 2013 Ruby-style class helper at `deadlyicon/class.js`. And
+  `Opetushallitus/aoe` resolves to a 2016 hobby package declaring **GPL-3.0**, while the agency's own
+  grant is **EUPL-1.2**. Step 6 is the only thing between those and a wrong licence in a client's SBOM.
+- 🔴 **A classifier's order is a verdict.** MPL-2.0 §1.12 names the GPL, LGPL and AGPL; EUPL-1.2's
+  Appendix names five families. Probe **EUPL, then MPL and EPL, then the GNU family**, or five MPL-2.0
+  components get filed as GPL blockers — which is what happened here. ⚠️ And where a payload names more
+  than one family and the granting one is not identifiable from the head — `nvaccess/nvda`'s *"GPL v2 or
+  later, with two special exceptions"* — **count the marks and hand over a reading list; do not guess.**
+
+🟢 **Effort: 2–3 days to wire steps 1–7 into an existing SBOM step, on any repository corpus.** The
+instruments are in `compose/code/` with **70 offline controls** between `p440` and `p441`, and the whole
+sweep over 87 repositories runs in under a minute.
+
+⚠️ **Declared limits.** RTF licence payloads are not read (`docs/LICENSE.rtf`, both `OS4ED/openSIS-*`
+rows). Maven Central's POM layer answers **429 intermittently**, so a single-shot probe cannot tell a
+POM with no licence from a POM that was rate-limited — retry before recording silence. And for **57 of
+87** repositories the registry channel has nothing to say at all, because a project that publishes no
+package has no metadata to read.

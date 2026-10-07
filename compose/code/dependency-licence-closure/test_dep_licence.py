@@ -184,6 +184,48 @@ check("licence TEXT with NO classifier is still reported, not dropped",
 check("no field and no classifier is absent, which is a finding not a default",
       pypi_licence({"info": {"license": None, "classifiers": []}}), (None, "absent"))
 
+# --- EUPL, the EMEA public-sector licence both classifiers could not read ----
+check("EUPL-1.2 is strong copyleft, not UNKNOWN",
+      classify_licence("EUPL-1.2"), "STRONG-COPYLEFT")
+check("EUPL-1.1, which 5 of the 8 Finnish national services carry",
+      classify_licence("EUPL-1.1"), "STRONG-COPYLEFT")
+check("the spelled-out name resolves too",
+      classify_licence("European Union Public Licence"), "STRONG-COPYLEFT")
+check("the American spelling resolves too",
+      classify_licence("European Union Public License, version 1.2"),
+      "STRONG-COPYLEFT")
+# The NEGATIVE: the EUPL's compatibility Appendix NAMES the GPL and the MPL, so a
+# classifier that read the licence TEXT rather than the name must not be dragged to
+# whichever of those it happens to probe first.  EUPL is probed before both.
+check("an EUPL string naming its compatible licences is still EUPL",
+      classify_licence("EUPL-1.2 (compatible: GPL-2.0, AGPL-3.0, MPL-2.0, EPL-1.0)"),
+      "STRONG-COPYLEFT")
+check("and a plain MPL string is still only WEAK, not promoted by the new rule",
+      classify_licence("MPL-2.0"), "WEAK-COPYLEFT")
+
+# --- npm's two reserved values, which are NOT licence names -----------------
+# Added 2026-10-07 with the defect they demonstrate.  Each positive is paired with
+# the value it must NOT be confused with, because a one-sided control here passes
+# whether the inversion is fixed or not (rule 2 of P126).
+check("UNLICENSED is npm's explicit REFUSAL to grant, not a permissive licence",
+      classify_licence("UNLICENSED"), "NO-GRANT")
+check("Unlicense is the public-domain dedication and stays PERMISSIVE",
+      classify_licence("Unlicense"), "PERMISSIVE")
+check("the-unlicense spelling stays PERMISSIVE",
+      classify_licence("The Unlicense"), "PERMISSIVE")
+check("case does not rescue the refusal", classify_licence("unlicensed"), "NO-GRANT")
+check("surrounding whitespace does not rescue it",
+      classify_licence("  UNLICENSED\n"), "NO-GRANT")
+# The NEGATIVE that stops the new rule from being over-eager: the refusal is only
+# the WHOLE field.  A licence text that happens to contain the word must not be
+# reclassified, or every BSD payload mentioning "unlicensed use" becomes NO-GRANT.
+check("the word inside a longer string is not the reserved value",
+      classify_licence("MIT; unlicensed use is prohibited"), "PERMISSIVE")
+check("SEE LICENSE IN <file> is a POINTER, not a grant, and stays UNKNOWN",
+      classify_licence("SEE LICENSE IN LICENSE.txt"), "UNKNOWN")
+check("legacy npm array form carries the refusal through",
+      classify_licence([{"type": "UNLICENSED"}]), "NO-GRANT")
+
 # --- verdict ordering ------------------------------------------------------
 check("clean", verdict("PERMISSIVE", ["PERMISSIVE", "PERMISSIVE"]), "CLEAN")
 check("weak", verdict("PERMISSIVE", ["PERMISSIVE", "WEAK-COPYLEFT"]), "REVIEW-WEAK")
@@ -194,7 +236,7 @@ check("nc beats strong",
 check("unknown is reported, not swallowed",
       verdict("PERMISSIVE", ["PERMISSIVE", "UNKNOWN"]), "REVIEW-UNKNOWN")
 
-TOTAL = 55
+TOTAL = 69
 if FAIL:
     print("FAIL (%d of %d)" % (len(FAIL), TOTAL))
     for f in FAIL:

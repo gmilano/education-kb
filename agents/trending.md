@@ -8,6 +8,165 @@ updated: 2026-10-07
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-07 — twenty-sixth pass: all three predictions held, and all three instruments were wrong somewhere this KB's own prose was already right
+
+⏱️ **Measurement window 2026-10-07 ~02:40 UTC → 05:10 UTC. Every age in days is computed against
+the reference date `2026-10-07`**, passed explicitly to each instrument, so the figures reproduce.
+
+🟢 **All three of pass 25's pre-registered predictions were confirmed.** 🔴 **And the pass's finding
+is not any of them: it is that every licence fact the actions surfaced was already written in this
+KB's prose, and what was wrong was the machinery.** Four instrument defects, each contradicted by a
+sentence a human had already written in these files.
+
+### 🟢 Verification level of this pass, stated before the findings
+
+| Layer | Endpoint / method | Status | Control |
+|---|---|---|---|
+| tree enumeration | `git clone --filter=blob:none --no-checkout --depth 1` + `git ls-tree -r` | 🟢 **87 of 87**, 13 s total | planted path name → absent ⇒ 🟢 **DISCRIMINATES** |
+| licence payload | `raw.githubusercontent.com/<slug>/HEAD/<path>` | 🟢 **200** on every candidate | `LICENSE.globant-kb-p440-planted` → **404 on all 87** ⇒ 🟢 **DISCRIMINATES** |
+| registry licence | `pypi.org` · `registry.npmjs.org` | 🟢 **200** | 12 real names → **404**, correctly ⇒ 🟢 **DISCRIMINATES** |
+| 🆕 registry ownership | the declared repository URL in the same payload | 🟢 read on all 28 resolvable | removed **7 of 15** claimed grants ⇒ 🟢 **DISCRIMINATES** |
+| 🆕 registry licence | `repo.packagist.org` · `hex.pm` | 🟢 **200** | — |
+| 🔴 registry licence | `repo1.maven.org/.../<a>-<v>.pom` | 🔴 **429 intermittently** — 200 and 429 for the **same URL** 10 s apart | see the calibration below |
+| version resolution | PEP 440-lite / semver-lite against the full release list | 🟢 **344 of 344** | 47 controls in `p437`, reused unchanged |
+| case oracle | `raw` · `git ls-remote` · `info/refs` · rendered `github.com` · `codeload` | 🔴 **200 / resolves / 200 / 403 / 403** | 🔴 **NO CHANNEL DISCRIMINATES — see gap** |
+| *(blocked, unchanged)* | `api.github.com` · rendered `github.com` | 🔴 **403 · 403** | unchanged |
+
+### 🔴 Finding 1 — the ownership gate removed 7 of 15 registry grants, and one would have put a strong-copyleft obligation on a national service
+
+Action A resolved the **87** slugs this shelf cites that ship no licence file against their package
+registries. The first build read the licence field and published **15 grants**. A licence read off a
+package is only *this* repository's licence if the registry agrees the package lives here, and seven
+did not:
+
+| Slug | Package it claims | The repository the registry names |
+|---|---|---|
+| `pnp-v/bo-google-classroom-mcp-server` | npm **`class`** | `deadlyicon/class.js`, *"a Ruby-like Class inheritance system"*, first published **2013** |
+| `plyght/canvas-mcp` | `canvas-mcp-server` | `DMontgomery40/mcp-canvas-lms` |
+| `lucanardinocchi/canvas-mcp` | `canvas-mcp` | `vishalsachdev/canvas-mcp` |
+| `joshuasoup/d2l-mcp` | `d2l-mcp-server` | 🆕 `general-mudkip/d2l-mcp-server` |
+| `Opetushallitus/aoe` | npm **`aoe`** | 🔴 **none** — v0.1.1, **2016-01-05**, `exolution@163.com`, no description, **GPL-3.0** |
+| `ink-waffle/moodle-mcp` · `ink-waffle/sisu-mcp` | `@ink-waffle/*` | none declared |
+
+🔴 **`Opetushallitus/aoe` is the row that justifies the gate.** Unguarded, this KB would have recorded
+**STRONG-COPYLEFT** on the **Finnish National Agency for Education**'s national OER library on the
+strength of a stranger's 2016 hobby package. 🟢 **The tree then showed the refusal was right for a
+second reason nobody predicted: the project's real grant is EUPL-1.2**, 303 B, in
+`aoe-web-backend/LICENSE` and `aoe-web-frontend/LICENSE`.
+
+🟢 **All four `FOREIGN-PACKAGE` rows reproduce `p436`'s declared slug, 4 for 4, on an independent
+run.** That is cross-channel calibration, not a new finding: `agents/top.md` already carried the
+`deadlyicon/class.js` collision and the two-rooted Canvas cohort. 🆕 **One repository in the chain is
+new to this KB** — `general-mudkip/d2l-mcp-server`, the declared home of npm `d2l-mcp-server`, which
+sixteen passes of the mandatory query set have never returned.
+
+**The eight that survived, 9.2% of 87 — so the prediction's "fewer than half" held by a wide margin:**
+six are grants made **only** in the registry (all **MIT**), and two are confirmed by the tree as well.
+
+### 🔴 Finding 2 — `UNLICENSED` was classified as the most permissive licence in the table
+
+`dep_licence.classify_licence`'s permissive rule carried the bare pattern `r"UNLICENSE"`. It matches
+inside **`UNLICENSED`** — npm's documented value for *"I do not wish to grant others the right to use
+a private or unpublished package under any terms"*. So an explicit **refusal to grant** returned
+`PERMISSIVE`, the same class as `Unlicense`, the public-domain dedication.
+
+🟢 **Latent, not live** — no published row carried it. 🔴 **And the population where it was most
+likely to appear is precisely the 87 this sweep was pointed at.** Fixed with a `NO-GRANT` class probed
+first and **8 controls**, each pairing the refusal against its one-letter neighbour, plus the legacy
+npm array form, which returned `UNKNOWN` — the same defect one indirection down.
+
+🔵 **`UNLICENSED` is also this KB's own status string for "no licence file found".** One spelling, two
+meanings, and one of them is a verdict about the publisher's intent rather than about a probe.
+
+### 🔴 Finding 3 — five MPL-2.0 repositories were filed as GPL, and the symptom was a zero nobody read
+
+MPL-2.0 **§1.12** defines *"Secondary License"* by naming the GNU GPL-2.0, LGPL-2.1 and AGPL-3.0, so
+every MPL-2.0 payload carries all three marks. `family_of` probed the GNU family first:
+
+| Repo | Filed | First line of its payload |
+|---|---|---|
+| `dequelabs/axe-core` | GPL | **Mozilla Public License, version 2.0** |
+| `ocrmypdf/OCRmyPDF` | GPL | **Mozilla Public License Version 2.0** |
+| `coqui-ai/TTS` · `idiap/coqui-ai-TTS` | GPL | **Mozilla Public License Version 2.0** |
+| `edrys-org/edrys` | GPL | **Mozilla Public License Version 2.0** |
+
+🔴 **Which of the three GNU rules fired was decided by LINE WRAPPING.** In these copies "lesser" and
+"general" are split across a newline, so the literal `gnu lesser general public license` did not match
+and the plain GPL rule caught it. **A whitespace difference chose between two opposite commercial
+verdicts** — GPL blocks a client deliverable; MPL-2.0 is file-level and does not reach the studio's own
+files.
+
+🟢 **All five are already correct as MPL-2.0 in `repos/foundations.md` and `agents/top.md`.** The prose
+was right; the instrument marked `authoritative` was wrong. 🔵 **And the symptom needed no fetch: the
+published family distribution over 412 licensed payloads contained ZERO MPL-2.0 rows** — a zero, for
+one of the most common licences on GitHub. Fixed by probing **EUPL, then MPL and EPL, then the GNU
+family**, with **15 controls** pairing each positive against a GNU payload that must not move.
+
+### 🟡 Finding 4 — the EUPL tier was machine-unreadable, across nine files that discuss it in prose
+
+**Eight Finnish national education services** on this shelf carry **EUPL-1.1 or EUPL-1.2** —
+`eperusteet`, `koski`, `aoe`, `ataru`, `organisaatio`, `oppijanumerorekisteri`, `ehoks`,
+`suorituspalvelu`. 🔴 **Both of this KB's licence classifiers returned `UNKNOWN` for the string**, so
+the single tier an EMEA public-sector engagement starts from was invisible to every automated check
+here. Now **STRONG-COPYLEFT** in both, with 6 controls, and probed **before** the GNU family because
+EUPL-1.2's Appendix names five other families.
+
+🔴 **Article 1's "Communication" covers network use, so the EUPL binds a hosted service**, not only a
+shipped binary. ⚠️ The Appendix is a re-licensing option for derivative works, not relief.
+
+### 🔵 Finding 5 — the registry's oldest trick, and the one row where an assertion is all there is
+
+⚠️ **`european-commission-empl/european-digital-credentials` asserts EUPL-1.2 in
+`edci-issuer/licence-EUPL 1.2-brightgreen.svg` — a README badge image — and ships no licence text
+anywhere in a fully enumerated tree.** That is `P342` (*an assertion of a licence is not a grant*) and
+`P314` (*a grant to request in writing, citing the holder's own claim*), and it is the cleanest instance
+of the badge class this KB has measured.
+
+### 🔴 Pre-registered actions from pass 25 — outcomes
+
+| # | Action | Prediction written before running it | Outcome |
+|---|---|---|---|
+| **A** | run `p436`'s stages over the 87 `UNLICENSED` rows, resolving each against its registry's licence field | ⚠️ *"fewer than half"*; the interesting class is a repo with no `LICENSE` whose package declares MIT | 🟢 **Confirmed, by a wide margin: 8 of 87 = 9.2%.** 🟢 **The named class exists and is exactly six repositories, all MIT.** 🔴 But the action's framing was incomplete: it took the **87 as given**, and the 87 is an overcount — see **C**'s neighbour, `p441` |
+| **B** | date the **pinned** depth-2 tier | 🔴 *"expect the depth-2 pinned median to exceed the depth-1 pinned median of 220 d"* | 🟢 **Confirmed: 334.5 d.** 🔴 **And the mechanism INVERTS** — at depth 1 the effect is in `EXACT` (49% of specifiers); at depth 2 `EXACT` is 21% with a median delta of **zero** and the whole effect is in `CAPPED` |
+| **C** | re-run `p439`'s canonical resolution as a **positive** sweep over all 496 | ⚠️ *"more than 9 slugs spelled differently from their own publisher's spelling"* | 🟢 **Confirmed: 11, or 14 counting channel disagreements.** 🔴 **And the action's premise is only partly sound** — no case oracle exists on this host, measured on five channels, so a disagreement is real and still cannot say which side is wrong |
+
+### 🔵 Pre-registered for the next pass
+
+| # | Action | Prediction written **before** running it |
+|---|---|---|
+| **A** | Run `p441`'s tree enumeration over the **412 `LICENSED`** rows, not the 87 — the slugs where a root filename *did* answer — and compare the family read from the root file against every other licence text in the tree | 🔴 Expect **more than five** repositories to carry a second, different grant somewhere below the root that the rooted probe never saw, concentrated in the **dual-licensed and monorepo** tiers. The interesting class is the inverse of this pass's: a repository whose root `LICENSE` is permissive and which ships a **copyleft** text deeper in |
+| **B** | Re-measure `family_of` over all 412 payloads with `family_marks()`, and publish the **count** of payloads naming more than one family | ⚠️ Expect **more than 20** of 412 to name two or more, and expect the MPL/EUPL/GPL-with-exception trio to account for most of them. If the count is large, the coarse p170 vocabulary is unfit for this shelf and the comparability it was kept for is worth less than the verdicts it costs |
+| **C** | Resolve the **186 `NO-ORACLE`** spellings by a fourth channel: the slug as written in **another repository's** manifest or README on this shelf, treating 495 cross-references as a consensus vote | 🔴 Expect fewer than **40** of the 186 to be named by any other repository on this shelf, which would make the gap structural rather than a sampling artefact — a repository nobody else cites has no external spelling at all |
+
+### The mandatory queries, run with the year **computed** (2026), not hardcoded
+
+| Query | Result against this KB |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **0 new** — openclaw (385.4k★), dify (151.6k★), browser-use (108.1k★), Mem0 (62.7k★), AutoGen (60.3k★), Flowise (55.2k★), CrewAI, LangGraph, Hermes Agent, `free-ai-agents-resources`: all already held by string; none education-specific |
+| `github trending education AI 2026` | 🔴 **0 new** — `ai-engineering-from-scratch`, Awesome LLM, Agents Towards Production, Semantic Kernel (27,470★): curricula *about* AI, not education product repos |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **0 new** — OpenEduCat, Odoo, ERPNext/Frappe, and **CK-ERP** again, the 2010 SourceForge-era Drupal connector rejected by pass 24 on currency grounds |
+| `AI education industry trends 2026` | 🔴 **0 new** — $7.52B→$10.6B at 40.9%, 92% student use, 86% higher-ed, cloud 71.22%, K-12 45.62%, STEM 34.78%: every figure checked by string and already held |
+| `AI education {North America, EMEA, APAC, LATAM} 2026 adoption regulation players` | 🔴 **0 new repositories.** NA $951M→$2,303.2M/15.9%; EMEA 94% training intent, 38% not piloting, 60% siloed, UK £200m+ summit, Claude Corps; APAC 48%/57%, Singapore consultations, LearnUpon Sydney, TCS–Pearson; LATAM third-largest genAI download market, 99%/85%, UNESCO IESALC 200 HEIs/19 countries, Ednova — **all held**. 🆕 **One new named datum in sixteen passes:** OpenAI appointed a policy lead for Australia and New Zealand. A personnel fact; it changes no shelf row |
+
+🔴 **Sixteenth consecutive pass in which the mandatory query set produced no new repository**, and the
+tenth with no new instrument. Everything in this section came from a **package registry**, from
+`git ls-tree`, or from re-reading a sentence this KB had already written.
+
+### The method note for this pass
+
+🔵 **Three predictions held and the pass was still mostly about defects, which is the opposite of
+pass 25.** Pass 25's lesson was that a pre-registration is worth running even when you expect it to be
+wrong. This pass's is narrower and less comfortable: **a pre-registration takes its denominator as
+given, and the denominator was wrong.** Action A was sent to resolve "the 87 `UNLICENSED` rows" and
+nine of the 87 were not unlicensed at all — findable, in `13` seconds, by a channel this KB had already
+proved (`P275`) and already warned about in prose, twice.
+
+🔴 **So the thing to carry forward is not "pre-register harder". It is: before executing an action over
+a published set, re-measure the set.** Four of this pass's five findings are instruments disagreeing
+with sentences in these files, and in four cases out of four **the sentence was right**. A corpus that
+versions both prose and instruments has to reconcile them, and nothing in this repository did — `p342`
+explicitly chose the other direction, asserting *"against the TSVs, not against the prose"*.
+
 ## 2026-10-07 — twenty-fifth pass: the answer to pass 24's headline gap was already a row in this KB, and the registry channel is wider than the repository
 
 ⏱️ **Measurement window 2026-10-07 ~01:40 UTC → 04:30 UTC. Every age in days is computed against

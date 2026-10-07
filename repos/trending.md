@@ -8,6 +8,174 @@ updated: 2026-10-07
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-07 — twenty-sixth pass: nine repositories this shelf had written off have a licence, and every level of the dependency graph is older than the one above it
+
+⏱️ **Measurement window 2026-10-07 ~02:40 UTC → 05:10 UTC; every age computed against the reference
+date `2026-10-07`**, passed explicitly to each instrument. Channels: `git clone --filter=blob:none`
++ `git ls-tree`, `raw.githubusercontent.com`, `pypi.org`, `registry.npmjs.org`,
+`repo.packagist.org`, `hex.pm`, `repo1.maven.org`. 🔴 `api.github.com` and rendered `github.com`
+remain **403**.
+
+### 🟢 Enumerating the tree found nine grants where two filename lists found zero and one
+
+Pass 25 published **87** of the 503 slugs this shelf cites as shipping no licence file, measured with
+**14 filenames at the repository root**. The 87 is an overcount, and the correction is not a longer
+list:
+
+| Instrument | Grants found in the 87 | Cost |
+|---|---|---|
+| 14 filenames, rooted (`p436`) | **0** | — |
+| 41 filenames, rooted (`p440/widen.py`) | 1 | 41 × 87 requests |
+| 🟢 complete tree enumeration (`p441`) | 🟢 **9** | **13 s for all 87** |
+
+| Repo | Licence | Path | Axis the list cannot reach |
+|---|---|---|---|
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | **Apache-2.0** | `LICENSE.TXT` | extension **case** |
+| [`SchoolUtils/WebUntis`](https://github.com/SchoolUtils/WebUntis) | **MIT** | `License` | a third **capitalisation** |
+| [`nvaccess/nvda`](https://github.com/nvaccess/nvda) | **GPL-2.0+ with two exceptions** | `copying.txt` | lowercase **`COPYING`** |
+| [`veraPDF/veraPDF-library`](https://github.com/veraPDF/veraPDF-library) | ⚠️ **GPL-3.0 + MPL-2.0** | `LICENSE.GPL` + `LICENSE.MPL` | **family suffix** |
+| [`Opetushallitus/aoe`](https://github.com/Opetushallitus/aoe) | 🟡 **EUPL-1.2** | `aoe-web-backend/` + `aoe-web-frontend/` | **depth** |
+| [`cs341-illinois/coursebook`](https://github.com/cs341-illinois/coursebook) | **MIT** + **CC-BY** ×2 | `LICENSE/LICENSE.{code,original,output}` | a licence **directory**, three grants |
+| [`learningequality/kolibri-server`](https://github.com/learningequality/kolibri-server) | **GPL** | `debian/copyright` | **packaging** convention |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) · [`-Responsive-Design`](https://github.com/OS4ED/openSIS-Responsive-Design) | 🔴 **unread** | `docs/License.txt` + `docs/LICENSE.rtf` | **format** — a limit, not an absence |
+
+🔴 **`openedx/XBlock` is the row that should not have needed finding.** `repos/foundations.md` already
+said, in prose: *"Found at `LICENSE.TXT` — uppercase extension. A nine-name lowercase probe reports
+this [as ungranted]… two characters away from a name the probe already tried."* `p436` was built one
+pass later with a **14**-name list that still does not contain it, and `p440`'s **41**-name widening
+missed it a third time. **Widening a list cannot fix a list.**
+
+🔵 **`cs341-illinois/coursebook` is the row that makes the case.** Separate grants for the **code**
+(MIT), the **original content** and the **output** (CC-BY) is the correct structure for a course
+repository and the one a single `LICENSE` file cannot express — so a rooted probe reports a teaching
+repository with exemplary licensing hygiene as having none. 🟢 **Copy this shape for any corporate-academy
+engagement that must keep content and code licences separable.**
+
+🔴 **And enumeration overshoots exactly as symmetrically as a list undershoots.** The first build
+published 14 hits. Six were not grants: an **icon component** named `copyright/baseline.vue`, an **XSLT
+transform** (`copyrightandotherrestrictions.xsl`), a vendored **pnpm** under `.corepack/`, a vendored
+**ontology tool**, vendored **fckeditor/tinymce**, and the European Commission's
+`licence-EUPL 1.2-brightgreen.svg` — a **README badge image**. Stage 2 reads each candidate blob and
+keeps only payloads that classify as a licence text. 🟢 **And separating a project's own grant from a
+dependency's needed DEPTH, not a vendor-name list**: a project states its licence at the root or one
+directory down; nothing states its own licence four levels into a static-assets tree.
+
+🔴 **The defect the controls caught and the sweep would have hidden:** the first inventory-exclusion
+regex was `(?:^|/)licenses?\.(?:json|xml|txt|csv|md)$` under `re.I`, intended for `licenses.json`. The
+`s?` plus `txt` matched **`LICENSE.TXT`** — the exact name the instrument exists to catch. **87 trees
+would have come back one grant short and the TSV would have looked clean.** Inventories are now
+plural-only and data-formats-only.
+
+### 🔴 Every level of the dependency graph is older than the one above it, and resolving the pin costs about as much as a level
+
+`p438` closed with *"a pinned depth-2 tier is not measured here and would be older"*. It is, and the
+ladder is now complete:
+
+| Tier | basis | n | median | cold > 1 yr |
+|---|---|---|---|---|
+| what this KB **cites** | head commit | 501 repos | **48 d** | 24.8% |
+| installed **depth 1** | latest release | 327 rows | 57 d | 27.2% |
+| installed **depth 1** | 🔴 **pinned** | 327 rows | **220 d** | 42.5% |
+| installed **depth 2** | latest release | 276 pkgs | 177 d | 37.0% |
+| installed **depth 2** | 🔴 **pinned** | 276 pkgs | 🔴 **334.5 d** | 🔴 **48.6%** |
+
+🟢 **The depth-2 latest column reproduces `p438`'s published 177 d and 37.0% exactly on an independent
+run** — the cross-run control for the whole table. 🟢 **Monotone on both axes and roughly additive.**
+**Nearly half of what a build installs two levels down is more than a year old**, and the number a
+client is shown is always the one from the top of that table.
+
+🔴 **The mechanism inverts between the tiers.** At depth 1, **49%** of specifiers are `EXACT` and carry
+the whole effect. At depth 2, `EXACT` is **21%** with a median delta of **zero**, and the effect is
+entirely in `CAPPED` — **694 d** pinned against 257 d latest. A depth-1 manifest is an **application's**
+and applications pin exactly; a depth-2 specifier is a **library's** constraint and libraries publish
+ranges so they can be co-installed. 🔵 **This is `p437`'s own warning coming true** — *"quote the class
+distribution with the ratio or the ratio does not transfer"* — on the next tier of the same shelf.
+
+**The concentration is narrow and therefore actionable:**
+
+| Parent | cold pins > 1 yr | worst row |
+|---|---|---|
+| `react-scripts` | **38** | the CRA layer under `CAHLR/OATutor`'s 2020-era front end, which `p438` reached from the licence side |
+| 🔴 `aws-sdk` (v2) | 10 | `querystring==0.2.0` **4,964 d** · `url==0.10.3` 4,240 d · `sax==1.2.1` **3,854 d against a current release 75 d old** · `events==1.1.1` 3,759 d |
+| `@material-ui/core` | 10 | `@material-ui/types==5.1.0`, 2,340 d |
+| `@nestjs/*` | 8 | `iterare==1.2.1`, 2,314 d, shared by three NestJS packages |
+
+🟢 **`aws-sdk` v2 → the modular `@aws-sdk/client-*` v3 packages removes the worst column in the table**
+in one substitution. `sax` at 3,854 d against 75 d is a **51×** gap, on an XML parser.
+
+🟢 **And the exception reproduces across ecosystems.** `p437` found one row of 327 where the pin is
+*newer* than the latest stable (`oppia/oppia` pinning the pre-release `webapp2==3.0.0b1`). One row of
+344 does the same here: `@material-ui/core` pins `popper.js@1.16.1-lts` at **2,375 d** against a latest
+stable `1.16.1` at **2,450 d**. **Two corpora, two ecosystems, one mechanism — a suffix-tagged release
+that postdates the last plain one** — so *"every published age is a lower bound"* holds in 343 of 344
+rows here and 326 of 327 there, and the exception is structural rather than anecdotal.
+
+### 🔴 Five MPL-2.0 repositories were filed as GPL, and the symptom was a zero in a table nobody read
+
+`dequelabs/axe-core`, `ocrmypdf/OCRmyPDF`, `coqui-ai/TTS`, `idiap/coqui-ai-TTS` and `edrys-org/edrys`
+all open their licence payload with *"Mozilla Public License Version 2.0"* and were all filed **GPL**,
+because MPL-2.0 §1.12 defines *"Secondary License"* by naming the GNU GPL, LGPL and AGPL, and
+`family_of` probed the GNU family first.
+
+🔴 **Which GNU rule fired was decided by line wrapping** — "lesser" and "general" split across a
+newline in these copies, so the plain GPL rule caught them. **A whitespace difference chose between
+two opposite commercial verdicts.** 🟢 **All five are already correct as MPL-2.0 in
+`repos/foundations.md`** — the prose was right and the instrument marked `authoritative` was wrong.
+
+🔵 **The symptom required no fetch: 412 licensed payloads, ZERO MPL-2.0 rows.** Fixed by probing
+**EUPL, then MPL and EPL, then the GNU family**, with 15 controls pairing each positive against a GNU
+payload that must not move. 🔴 **And one axis reordering cannot fix:** `nvaccess/nvda`'s `copying.txt`
+says *"GPL version 2 or later, with two special exceptions"* and an exception names the **LGPL**.
+Deciding which named licence is *granted* and which is *referenced* is a reading task, so the
+instrument now **counts** the marks and hands over a reading list instead of guessing.
+
+### 🟡 The EUPL national stack — eight Finnish services, and both classifiers read `UNKNOWN`
+
+`eperusteet` · `koski` · `aoe` · `ataru` · `organisaatio` · `oppijanumerorekisteri` · `ehoks` ·
+`suorituspalvelu`, all **EUPL-1.1 or 1.2**, published by one agency, with `organisaatio` as the join
+key: identity, institution register, curriculum, admissions, records, attainments, vocational plans and
+open content. 🔵 **A complete national education data stack under one licence family**, and nine of this
+KB's files discuss the EUPL in prose while 🔴 **both of its classifiers returned `UNKNOWN` for the
+string**. Now **STRONG-COPYLEFT** in both, with 6 controls, probed before the GNU family because
+EUPL-1.2's Appendix names five other families. 🔴 **Article 1's "Communication" covers network use, so
+the EUPL binds a hosted service**, not only a shipped binary.
+
+### 🔴 Maven Central's POM layer is not reliably reachable, and that is a measurement hazard
+
+Pass 25 declared Maven Central reachable on the strength of `maven-metadata.xml`. That file answers 200
+and carries **no licence element at all**; the grant lives in a version's POM. Calibration, three
+consecutive attempts seconds apart:
+
+| attempt | `maven-metadata.xml` | `verapdf-library-1.30.2.pom` | `junit-4.13.2.pom` |
+|---|---|---|---|
+| 1 | 🟢 200 | 🟢 200 | 🟢 200 |
+| 2 | 🟢 200 | 🟢 200 | 🔴 **429** |
+| 3 | 🔴 **429** | 🔴 **429** | 🟢 200 |
+
+🔴 **A single-shot probe cannot distinguish "this POM declares no licence" from "this POM was
+rate-limited"**, and the first build published `REGISTRY-SILENT` for `org.verapdf:verapdf-library` for
+exactly that reason. Non-200 is now `UNREACHABLE` with the status recorded, never `absent`.
+
+### 🔴 Huecos por región, dichos y no silenciados
+
+- **North America** — 1 new repo via the registry channel (`general-mudkip/d2l-mcp-server`); the
+  `aws-sdk` v2 remediation and the licence-reconciliation pass are both NA-weighted by market base.
+- **EMEA** — the richest region this pass: the 8-service EUPL stack, `veraPDF`'s dual grant,
+  `nvaccess/nvda`'s exceptions, the Commission's badge-without-a-grant, and `dini-ag-kim/
+  school-curriculum-pg`. **5 of the 9 tree-found grants are EMEA-published.**
+- 🔴 **APAC — 0 new repos and 0 new facts on 7 probes.** The sweep's denominator is this shelf's own
+  citations, so an APAC gap in the shelf reproduces as an APAC gap in the sweep: **the instrument cannot
+  find what was never cited.** The gap is structural and stays **OPEN** with its cause named.
+- 🔴 **LATAM — 0 new repos and 0 new facts, sixth consecutive pass.** Same cause, plus pass 22's
+  LATAM self-hosted-forge sweep **remains unrunnable** (15 hosts, 45 requests, all `000`, and a bogus
+  control `000` too — the probe does not discriminate, so **no conclusion about LATAM self-hosted supply
+  may be drawn**). ⚠️ The 186-row spelling gap bears on LATAM disproportionately: small
+  single-maintainer repositories are over-represented in the no-oracle class.
+
+🔴 **None of this asserts that APAC or LATAM repositories do not exist.** It asserts that **this pass's
+denominator — the 503 slugs this shelf already cites — contains none that were newly measurable**, and
+that the one channel built to look outside the shelf for LATAM supply is still broken.
+
 ## 2026-10-07 — twenty-fifth pass: the whole supply map at last, and the shelf Globant can redistribute is the older half of it
 
 ⏱️ **Measurement window 2026-10-07 ~01:40 UTC → 04:30 UTC; every age computed against the

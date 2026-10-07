@@ -1645,3 +1645,52 @@ names case-insensitively — and this page cited both spellings. Nine such pairs
 six non-append-only files, **18 references for 9 repositories**, each of which a compiler keying on
 the reference string would have emitted twice. All normalised, with
 `compose/code/p439-case-collision-gate/` (9 controls) added so they cannot come back.
+
+## The EUPL national-stack tier — a complete public education data layer under one licence family
+
+Measured 2026-10-07. These are not components to build on top of in the usual sense; they are the
+**systems of record** a European public buyer already runs, and an AI layer is procured as integration
+with them.
+
+| Platform | Repo | Licence | What it is of record for |
+|---|---|---|---|
+| ePerusteet | [`Opetushallitus/eperusteet`](https://github.com/Opetushallitus/eperusteet) | 🟡 **EUPL-1.1** | national core curriculum and qualifications |
+| Koski | [`Opetushallitus/koski`](https://github.com/Opetushallitus/koski) | 🟡 **EUPL-1.1** | national study records — qualifications and study rights |
+| AOE | [`Opetushallitus/aoe`](https://github.com/Opetushallitus/aoe) | 🟡 **EUPL-1.2** | national OER library (`aoe.fi`), 6,829 commits |
+| Ataru | [`Opetushallitus/ataru`](https://github.com/Opetushallitus/ataru) | 🟡 **EUPL-1.2** | admissions application forms |
+| Organisaatio | [`Opetushallitus/organisaatio`](https://github.com/Opetushallitus/organisaatio) | 🟡 **EUPL-1.1** | register of providers and institutions — the join key for the rest |
+| Oppijanumerorekisteri | [`Opetushallitus/oppijanumerorekisteri`](https://github.com/Opetushallitus/oppijanumerorekisteri) | 🟡 **EUPL-1.1** | national learner identity |
+| eHOKS | [`Opetushallitus/ehoks`](https://github.com/Opetushallitus/ehoks) | 🟡 **EUPL-1.1** | personal competence-development plans (vocational) |
+| Suorituspalvelu | [`Opetushallitus/suorituspalvelu`](https://github.com/Opetushallitus/suorituspalvelu) | 🟡 **EUPL-1.2** | attainment service (2025, the newest) |
+
+🔵 **Read the set, not the rows.** Identity (`oppijanumerorekisteri`), the institution register
+(`organisaatio`), curriculum (`eperusteet`), admissions (`ataru`), records (`koski`), attainments
+(`suorituspalvelu`), vocational plans (`ehoks`) and open content (`aoe`) is a **complete national
+education data stack**, published by one agency under one licence family, with `organisaatio` as the
+join key. 🟢 **For an EMEA public-sector engagement this is the integration surface**, and it is far
+more specific than "integrate with the LMS".
+
+🔴 **Three things to settle before the proposal, not during delivery:**
+
+1. **The EUPL binds a hosted service.** Article 5 carries the copyleft obligation and Article 1's
+   definition of *"Communication"* covers network use, so a SaaS deliverable incorporating an EUPL
+   component triggers it where a shipped binary would. ⚠️ The Appendix's compatibility list (GPL-2.0,
+   AGPL-3.0, LGPL-2.1, MPL-2.0, EPL-1.0) is a **re-licensing option for derivative works**, not relief.
+2. **`aoe`'s grant is in subdirectories**, `aoe-web-backend/LICENSE` and `aoe-web-frontend/LICENSE`,
+   303 B each — invisible to any rooted licence probe, including the one this KB ran until this pass.
+3. 🔴 **npm's `aoe` package is NOT this project.** It is v0.1.1, published 2016-01-05 by
+   `exolution@163.com`, with no description and no declared repository, and it declares **GPL-3.0**.
+   A tool that resolves the name would hand a procurement team the wrong licence for a national service.
+
+🟢 **And this is the normal case in EMEA rather than an exception**: the EUPL is the licence the
+European Commission recommends for public-sector software, so a studio that can answer the
+hosted-service question in writing is ahead of one whose scanner reports `UNKNOWN` — which is what both
+of this KB's classifiers did until this pass.
+
+⚠️ **Adjacent, same region, and unresolved:**
+[`european-commission-empl/european-digital-credentials`](https://github.com/european-commission-empl/european-digital-credentials)
+asserts **EUPL-1.2 in a README badge** (`edci-issuer/licence-EUPL 1.2-brightgreen.svg`) and ships **no
+licence text anywhere in its tree**, which a complete enumeration confirms. That is `P314`: a grant to
+request in writing from DG EMPL, citing the Commission's own badge. Its Maven artefacts are reachable
+for metadata but **the POM layer answers 429 intermittently** from this environment, so its
+machine-readable licence field is unmeasured rather than absent.

@@ -4810,3 +4810,103 @@ serve the same content at the same date (2026-08-18) under two accounts; pin one
 - ⚠️ **Region placement here is by the publishing institution's country, read from the repository
   or its licence holder — not by where the software is deployed.** `Polygl0t` is placed EMEA
   because Bonn publishes it; its models are multilingual by design.
+
+## Opportunities by region — twenty-sixth-pass additions
+
+Every opportunity below comes from a licence or recency fact this pass measured, not from a market
+summary. Placement is by the publishing institution's country, read from the repository or its licence
+holder — not by where the software is deployed.
+
+### North America
+
+- 🟢 **A licence-reconciliation pass before every SBOM hand-off, sold as a deliverable.** This pass
+  found **four** classes of defect in which an automated licence reading contradicted a correct human
+  reading, on this KB's own shelf: five MPL-2.0 repositories filed as GPL, `LICENSE.TXT` read as no
+  licence, EUPL-1.2 read as `UNKNOWN`, and npm's `UNLICENSED` read as the most permissive value in the
+  table. 🔴 **In the North American regulatory vacuum there is no FDA-equivalent to catch any of
+  this**, and adoption is decided school-by-school with Colorado and Texas piecemeal — so the SBOM a
+  district's counsel reads is whatever the vendor's scanner produced. **$951M (2024) → $2,303.2M (2029),
+  15.9% CAGR, 36% of the global market**: a reconciliation step that reads the licence file and the
+  registry and reports the disagreements is small, defensible work on a large base.
+- 🟢 **`aws-sdk` v2 → `@aws-sdk/client-*` v3 as a scoped remediation.** `aws-sdk` v2 exact-pins nine
+  packages more than two years old, including `sax@1.2.1` at **3,854 d against a current release 75
+  days old**. US K-12 and higher-ed SaaS is heavily AWS-hosted; this is one substitution, bounded,
+  with a measurable before and after.
+- 🟢 **`cs341-illinois/coursebook`'s three-grant structure** — MIT for code, CC-BY for original content
+  and for output — is a University of Illinois course repository and the right scaffold for a corporate
+  academy that must keep content and code licences separable.
+
+### EMEA
+
+- 🟢 **The EUPL public-sector tier is the clearest regional opportunity this pass produced, and it was
+  machine-unreadable here until now.** **Eight Finnish national education services** carry EUPL-1.1 or
+  EUPL-1.2 — `eperusteet` (national core curriculum), `koski` (national study records), `aoe` (national
+  OER library), `ataru` (admissions), `organisaatio` (provider register), `oppijanumerorekisteri`
+  (national learner identity), `ehoks` (vocational competence plans) and `suorituspalvelu`
+  (attainments). 🔵 **That is a complete national education data stack under one licence family**, and
+  a European public body procuring an AI layer over it is procuring integration with exactly these
+  services.
+- 🔴 **Price the EUPL clause into the proposal, because Article 1's "Communication" covers network
+  use.** An EUPL component inside a hosted service triggers the copyleft obligation that a shipped
+  binary would. ⚠️ The Appendix's compatibility list (GPL-2.0, AGPL-3.0, LGPL-2.1, MPL-2.0, EPL-1.0) is
+  a re-licensing option for derivative works, not relief from the EUPL. 🟢 **It is the licence the
+  European Commission recommends for public-sector software, so this is the normal case in EMEA, not
+  the exception** — and a studio that can answer the hosted-service question in writing is ahead of one
+  that files EUPL as `UNKNOWN`.
+- ⚠️ **`european-commission-empl/european-digital-credentials` asserts EUPL-1.2 in a README badge and
+  ships no licence text in its tree.** That is `P314` — a grant to request in writing from DG EMPL,
+  citing the Commission's own badge — and it is the cleanest instance of an assertion-without-a-grant
+  this KB has measured. For a European Digital Credentials engagement, resolve it before the proposal,
+  not during delivery.
+- 🟢 **`nvaccess/nvda` is GPL-2.0-or-later *with two special exceptions*, not plain GPL**, and it is the
+  screen reader a European accessibility-compliance engagement will meet. 🔴 Read `copying.txt`: this
+  KB's own classifier returns `LGPL` for that payload. **"GPL" and "GPL with a linking exception" are
+  different answers to a procurement question.**
+- 🟢 **`dequelabs/axe-core` and `ocrmypdf/OCRmyPDF` are MPL-2.0, not GPL** — file-level copyleft, usable
+  unmodified as dependencies without reaching the studio's own files. Both sit directly under the
+  EU accessibility and PDF/UA obligations, and both were filed as blockers by this KB's instrument
+  until this pass.
+
+### APAC
+
+- 🔴 **Nothing new was measured for APAC this pass, and that is stated rather than left as apparent
+  coverage.** No repository added, corrected or re-licensed in the 87-row sweep is published by an
+  APAC institution. The sweep's denominator is this shelf's existing citations, so an APAC gap in the
+  shelf reproduces as an APAC gap in the sweep — the instrument cannot find what was never cited.
+- 🟢 **What does transfer is the sovereignty framing, unchanged and still accurate.** APAC's 2026
+  posture is sovereign-by-design execution, with roughly half of APAC firms expecting sovereignty to
+  shape infrastructure choices, **48%** of governance leaders ranking AI adoption a top 2026 priority
+  and **57%** of Asian organisations already running AI in at least one area. 🟢 **An enumerated licence
+  provenance for every component — which is what `p441` now produces — is a sovereignty artefact**:
+  a buyer who must show where each dependency's grant comes from is served by a tree enumeration and
+  not by a filename probe.
+- 🆕 **One new named datum, and it is a personnel fact, not a repository:** OpenAI appointed a policy
+  lead for Australia and New Zealand as Canberra tightens AI governance. Recorded because it is the
+  only item the mandatory query set produced in sixteen passes; it changes no shelf row.
+- 🔵 Singapore's consultations on AI use in financial institutions — transparency, accountability, risk
+  oversight — remain the template APAC education regulators are expected to follow, as already recorded.
+
+### LATAM
+
+- 🔴 **No new LATAM repository, licence or instrument this pass.** The 87-row sweep produced no row
+  published by a LATAM institution. ⚠️ **This is the sixth consecutive pass in which LATAM returns
+  nothing new on this shelf's own denominator**, and the cause is named: the shelf's LATAM citations
+  are already measured, and pass 22's self-hosted-forge sweep — the one channel that could find
+  uncited LATAM supply — **remains unrunnable**, with 15 hosts returning `000` on all 45 requests and a
+  bogus control returning `000` too, so the probe does not discriminate and no conclusion about LATAM
+  self-hosted supply may be drawn.
+- 🟢 **The `P314` grant-clinic pattern is where LATAM demand and this pass's method meet.** LATAM is the
+  **third-largest market worldwide for generative-AI application downloads**, **99%** of LATAM startups
+  use AI internally and **85%** embed it in the product — a supply base that ships fast and documents
+  licences last. 🔵 **Six of the eight registry-only grants found this pass are exactly that shape**:
+  a working MCP server with no licence file and an MIT declaration in its package metadata. A studio
+  that can convert such a repository into a written grant has a reusable service for a region whose
+  edtech supply looks like this by default.
+- ⚠️ **The 186-row spelling gap bears on LATAM specifically.** Of 496 cited repositories, **186 have no
+  reachable spelling oracle** — no published package and no self-link naming them. Small,
+  single-maintainer repositories are over-represented in that class, and LATAM supply on this shelf is
+  disproportionately small and single-maintainer. **Entity resolution for a LATAM engagement should not
+  assume the slug as written is canonical.**
+- 🟢 **Ednova (Chile)** remains the named standout edtech, and UNESCO IESALC's survey of **200 higher
+  education institutions across 19 LAC countries** remains the adoption baseline. Both held against
+  this pass's queries; neither is new.

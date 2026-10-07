@@ -1944,3 +1944,92 @@ published the next paragraph of the licence as the holder**. All seven were file
 `HOLDER-UNRELATED` with a sentence of MIT boilerplate in the holder column. Fixed with four new
 controls — three negatives and the positive that forbids an instrument answering `NO-HOLDER`
 always — in `compose/code/p184-holder-mismatch/` (now 19/19).
+
+## Nine repositories this shelf had written off have their own grant — found by enumerating the tree, 2026-10-07
+
+Pass 25's licence probe used **14 filenames at the repository root** and published **87** slugs as
+shipping no licence. `p441` replaces the filename list with a complete tree enumeration — a
+`--filter=blob:none --no-checkout --depth 1` clone plus `git ls-tree -r`, which lists every path at
+HEAD with no API and no truncation, in **13 seconds for all 87**:
+
+| Instrument | Grants found in the 87 |
+|---|---|
+| 14 filenames, rooted (`p436`) | **0** |
+| 41 filenames, rooted (`p440/widen.py`) | 1 |
+| 🟢 complete tree enumeration (`p441`) | 🟢 **9** |
+
+| Repo | Licence | Where it actually is | The axis a filename list cannot reach |
+|---|---|---|---|
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | **Apache-2.0** | `LICENSE.TXT` | **extension case** |
+| [`SchoolUtils/WebUntis`](https://github.com/SchoolUtils/WebUntis) | **MIT** | `License` | **a third capitalisation** |
+| [`nvaccess/nvda`](https://github.com/nvaccess/nvda) | **GPL-2.0-or-later with two exceptions** | `copying.txt` | **lowercase `COPYING`**, which the probe list carries only in uppercase |
+| [`veraPDF/veraPDF-library`](https://github.com/veraPDF/veraPDF-library) | ⚠️ **GPL-3.0 + MPL-2.0**, dual | `LICENSE.GPL` **and** `LICENSE.MPL` | **family suffix** — two grants cannot both live in a file called `LICENSE` |
+| [`Opetushallitus/aoe`](https://github.com/Opetushallitus/aoe) | 🟡 **EUPL-1.2** | `aoe-web-backend/LICENSE` · `aoe-web-frontend/LICENSE`, 303 B each | **depth** |
+| [`cs341-illinois/coursebook`](https://github.com/cs341-illinois/coursebook) | **MIT** (code) **+ CC-BY** (content, output) | `LICENSE/LICENSE.code` · `LICENSE.original` · `LICENSE.output` | **a licence DIRECTORY holding three grants** |
+| [`learningequality/kolibri-server`](https://github.com/learningequality/kolibri-server) | **GPL** | `debian/copyright` | **the Debian packaging convention** |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) · [`OS4ED/openSIS-Responsive-Design`](https://github.com/OS4ED/openSIS-Responsive-Design) | 🔴 **unread — RTF** | `docs/License.txt` plus a `docs/LICENSE.rtf` the classifier cannot read | **format**, which is a limit and not an absence |
+
+🔵 **[`cs341-illinois/coursebook`](https://github.com/cs341-illinois/coursebook) is the row that makes
+the whole case.** Separate grants for the **code** (MIT), the **original content** and the **output**
+(CC-BY) is the *correct* structure for a course repository, and it is the structure a single `LICENSE`
+file cannot express. A rooted filename probe therefore reports a teaching repository with exemplary
+licensing hygiene as having none at all. For a client who wants a course scaffold whose content and
+code licences are separable — which is what every corporate-academy engagement needs — this is the
+shape to copy.
+
+⚠️ **`nvaccess/nvda` is GPL-2.0-or-later *with two special exceptions*, and the exceptions are the
+point.** The grant is not a plain GPL row: `copying.txt` opens *"NVDA is available under the GNU
+General Public License version 2 or later, with two special exceptions"*, one of which permits linking
+with certain non-GPL code. 🔴 **This KB's family classifier returns `LGPL` for that payload**, because
+the exception text names the LGPL — see the limit recorded in trend 62. **Read the file before quoting
+a verdict on NVDA**; it is the screen reader every accessibility engagement in the EMEA public sector
+will meet, and "GPL" and "GPL with a linking exception" are different answers to a client's question.
+
+### 🟡 The EUPL tier was machine-unreadable in this KB until this pass
+
+[`Opetushallitus/aoe`](https://github.com/Opetushallitus/aoe) is one of **eight Finnish national
+education services** this shelf already lists under **EUPL-1.1 or EUPL-1.2** — `eperusteet`, `koski`,
+`ataru`, `organisaatio`, `oppijanumerorekisteri`, `ehoks`, `suorituspalvelu` and `aoe`. Nine of this
+KB's files discuss the EUPL in prose. 🔴 **And both of its licence classifiers returned `UNKNOWN` for
+the string**, so the single tier a European public-sector engagement starts from was invisible to every
+automated check this repository runs.
+
+Both now recognise it, classified **STRONG-COPYLEFT**, with six controls:
+
+- 🔴 **Article 5 carries a copyleft obligation, and Article 1's definition of "Communication" covers
+  network use** — so the EUPL binds a **hosted service**, not only a shipped binary. For a SaaS
+  deliverable built on an EUPL component that is the clause that decides the engagement.
+- ⚠️ **EUPL-1.2's Appendix lists GPL-2.0, AGPL-3.0, LGPL-2.1, MPL-2.0 and EPL-1.0 as compatible
+  licences**, which is a **re-licensing option for derivative works** and not a softening of the EUPL
+  itself. Nothing in this KB treats it as one.
+- 🔵 The Appendix is also why the classifier has to probe EUPL **first**: an EUPL payload carries the
+  marks of five other families, exactly as an MPL-2.0 payload carries three GNU marks.
+- 🟢 **Commercially it is workable and it is the licence the European Commission recommends for
+  public-sector software**, so an EMEA public-sector engagement should expect it rather than treat it
+  as an exception.
+
+### 🔴 Five MPL-2.0 repositories were filed as GPL by this KB's own instrument, while its prose had them right
+
+`p436`'s family classifier probed the GNU family before Mozilla's. MPL-2.0 **section 1.12** defines
+*"Secondary License"* by naming the GNU **GPL-2.0, LGPL-2.1 and AGPL-3.0**, so every MPL-2.0 payload
+carries all three marks:
+
+| Repo | Filed | Actually, from the first line of its payload |
+|---|---|---|
+| [`dequelabs/axe-core`](https://github.com/dequelabs/axe-core) | GPL | **MPL-2.0** |
+| [`ocrmypdf/OCRmyPDF`](https://github.com/ocrmypdf/OCRmyPDF) | GPL | **MPL-2.0** |
+| [`coqui-ai/TTS`](https://github.com/coqui-ai/TTS) | GPL | **MPL-2.0** |
+| [`idiap/coqui-ai-TTS`](https://github.com/idiap/coqui-ai-TTS) | GPL | **MPL-2.0** |
+| [`edrys-org/edrys`](https://github.com/edrys-org/edrys) | GPL | **MPL-2.0** |
+
+🟢 **Every one of the five is already described correctly as MPL-2.0 in this file and in
+`agents/top.md`** — the prose was right and the measurement was wrong, which is trend 61. 🔴 **The
+commercial verdict inverts between the two answers:** GPL is strong copyleft and a blocker for a
+client deliverable; MPL-2.0 is **file-level** copyleft, so using the component unmodified as a
+dependency does not reach the studio's own files. **Four of the five are tools a studio would reach
+for** — `axe-core` is the engine inside every MIT accessibility agent on this shelf, and this KB's own
+`a11ymcp` row declares it at runtime.
+
+🔵 **The symptom needed no fetch: the published family distribution over 412 licensed payloads
+contained ZERO MPL-2.0 rows.** Fixed by probing EUPL, then MPL and EPL, before the GNU family, with
+**15 controls** that pair each positive against a GNU payload which must not move.

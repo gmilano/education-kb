@@ -17,13 +17,37 @@ import re
 # Non-commercial is probed first because "CC-BY-NC" names no GPL at all yet is
 # the hardest blocker of the four for a commercial engagement.
 _RULES = [
+    # Probed FIRST, and the reason is that this value is the INVERSE of a grant.
+    # npm documents `"license": "UNLICENSED"` as "I do not wish to grant others the
+    # right to use a private or unpublished package under any terms".  The PERMISSIVE
+    # rule below carried the bare pattern `r"UNLICENSE"`, which matches inside
+    # `UNLICENSED`, so an explicit REFUSAL returned the same class as `Unlicense` --
+    # the public-domain dedication, the single most permissive value in the table.
+    # Two maximally opposite verdicts collapsed into one string.  Found by `p440` on
+    # 2026-10-07 while sweeping the 87 repositories that ship no LICENSE file at all,
+    # i.e. exactly the population where npm's reserved value is most likely to appear.
+    ("NO-GRANT", [r"^\s*UNLICENSED\s*$"]),
     ("NONCOMMERCIAL", [r"\bNC\b", r"non-?commercial", r"CC-BY-NC", r"CC\s*BY\s*NC"]),
     ("STRONG-COPYLEFT", [r"\bAGPL", r"AFFERO"]),
     ("WEAK-COPYLEFT", [r"\bLGPL", r"\bMPL", r"MOZILLA PUBLIC", r"\bEPL",
                        r"ECLIPSE PUBLIC", r"\bCDDL"]),
+    # EUPL -- the European Commission's own licence, and the one this KB meets right
+    # across the EMEA public-sector tier: EIGHT Finnish national education services
+    # carry it (`Opetushallitus/eperusteet`, `koski`, `aoe`, `ataru`, `organisaatio`,
+    # `oppijanumerorekisteri`, `ehoks`, `suorituspalvelu`, EUPL-1.1 and 1.2).  Nine of
+    # this KB's files discussed EUPL in prose while BOTH its classifiers returned
+    # UNKNOWN for the string -- so the public-sector tier a European engagement starts
+    # from was machine-unreadable here.  Classified STRONG-COPYLEFT: Article 5 carries
+    # a copyleft obligation and Article 1's "Communication" covers network use, so it
+    # binds a hosted service, not only a shipped binary.
+    # It is probed BEFORE the GNU rules because EUPL-1.2's compatibility Appendix
+    # names GPL-2.0, AGPL-3.0, EPL and MPL-2.0 explicitly, so the text carries their
+    # marks.  The Appendix is a RE-LICENSING option for derivative works, not a
+    # softening of the EUPL itself, and nothing here treats it as one.
+    ("STRONG-COPYLEFT", [r"\bEUPL", r"EUROPEAN UNION PUBLIC LICEN[CS]E"]),
     ("STRONG-COPYLEFT", [r"\bGPL", r"GENERAL PUBLIC LICENSE"]),
     ("PERMISSIVE", [r"\bMIT\b", r"APACHE", r"\bBSD\b", r"BSD-\d", r"\bISC\b",
-                    r"\bZLIB\b", r"UNLICENSE", r"\b0BSD\b", r"PYTHON-2",
+                    r"\bZLIB\b", r"\bUNLICENSE\b", r"\b0BSD\b", r"PYTHON-2",
                     r"\bPSFL?\b", r"PYTHON SOFTWARE FOUNDATION",
                     r"HISTORICAL PERMISSION", r"\bHPND\b",
                     r"PUBLIC DOMAIN", r"\bCC0\b", r"BOOST",
@@ -39,12 +63,17 @@ _RULES = [
 
 
 def classify_licence(raw):
-    """Map a licence string to one of five classes.
+    """Map a licence string to one of six classes.
 
     Returns UNKNOWN for None, empty, or anything no rule recognises. UNKNOWN is
     a finding, not a default: it means the dependency ships without a readable
     grant, which is the condition this KB has already catalogued three ways at
     the repository layer.
+
+    NO-GRANT is NOT the same finding as UNKNOWN. UNKNOWN is silence -- the
+    publisher may simply not have filled the field in. NO-GRANT is npm's reserved
+    `UNLICENSED`, an affirmative statement that no rights are granted, and it is
+    the one value in this table that forbids redistribution outright.
     """
     if raw is None:
         return "UNKNOWN"
@@ -52,7 +81,12 @@ def classify_licence(raw):
         raw = raw.get("type") or ""
     if isinstance(raw, list):            # npm "licenses": [{...}, {...}]
         parts = [classify_licence(x) for x in raw]
-        for cls in ("NONCOMMERCIAL", "STRONG-COPYLEFT", "WEAK-COPYLEFT", "PERMISSIVE"):
+        # NO-GRANT first: an array mixing a refusal with a grant is a contradiction,
+        # and the restrictive reading is the only safe one to publish.  Omitting it
+        # here returned UNKNOWN for `[{"type": "UNLICENSED"}]` -- the legacy npm form --
+        # which is the same defect as the scalar one, one indirection down.
+        for cls in ("NO-GRANT", "NONCOMMERCIAL", "STRONG-COPYLEFT", "WEAK-COPYLEFT",
+                    "PERMISSIVE"):
             if cls in parts:
                 return cls
         return "UNKNOWN"

@@ -34,9 +34,50 @@ def get(url, timeout=25):
 
 
 def family_of(text):
-    """Coarse family, matching the p170 published vocabulary."""
+    """Coarse family, matching the p170 published vocabulary.
+
+    ORDER IS THE WHOLE FUNCTION, and this pass had to change it.  Probing the GNU
+    family first filed FIVE MPL-2.0 payloads as GPL -- `dequelabs/axe-core`,
+    `ocrmypdf/OCRmyPDF`, `coqui-ai/TTS`, `idiap/coqui-ai-TTS` and `edrys-org/edrys`,
+    every one of which this KB's own prose already described as MPL-2.0.  The cause is
+    in the licence text itself: MPL-2.0 section 1.12 DEFINES "Secondary License" by
+    naming "the GNU General Public License, Version 2.0, the GNU Lesser General Public
+    License, Version 2.1, the GNU Affero General Public License, Version 3.0", so every
+    MPL-2.0 payload contains all three GNU marks.
+
+    Which of the three fired was decided by LINE WRAPPING: in these copies the words
+    "lesser" and "general" are separated by a newline and indentation, so the literal
+    "gnu lesser general public license" did not match and the plain GPL rule caught it.
+    A whitespace difference chose between two opposite commercial verdicts.
+
+    The detectable symptom needed no fetch: the published family distribution over 412
+    licensed payloads contained **0 MPL-2.0 rows**, for one of the most common licences
+    on GitHub.
+
+    MPL and EPL are therefore probed BEFORE the GNU family, and EUPL
+    before all of them.  This is safe in the other
+    direction because no GPL, LGPL or AGPL text names the Mozilla or Eclipse licences,
+    which is the second half of what `test_family.py` asserts.
+    """
     t = text[:4000].lower()
     head = "\n".join(text.splitlines()[:6]).lower()
+    # EUPL FIRST, and that order is forced: EUPL-1.2's Appendix lists GPL-2.0,
+    # AGPL-3.0, LGPL-2.1, MPL-2.0 and EPL-1.0 as compatible licences BY NAME, so an
+    # EUPL payload carries the marks of five other families.  It is the European
+    # Commission's own licence and the one this KB meets right across the EMEA
+    # public-sector tier: EIGHT Finnish national education services carry it
+    # (`Opetushallitus/*`, EUPL-1.1 and 1.2).  It read UNKNOWN here and UNKNOWN in
+    # `dep_licence.classify_licence` until this pass, while nine of this KB's files
+    # discussed EUPL in prose.
+    # Matched on GRANT phrasings only, never on a bare mention of the word: a file
+    # that merely points a reader at the EUPL is not licensed under it.
+    if re.search(r"european union public licen[cs]e|licensed under the eupl"
+                 r"|under the eupl\b|eupl[,-]?\s*(?:version\s*)?1\.[12]", t):
+        return "EUPL"
+    if "mozilla public license" in t:
+        return "MPL-2.0"
+    if "eclipse public license" in t:
+        return "EPL"
     if "gnu affero general public license" in t:
         return "AGPL-3.0"
     if "gnu lesser general public license" in t:
@@ -45,10 +86,6 @@ def family_of(text):
         return "GPL"
     if "apache license" in t and "version 2.0" in t:
         return "Apache-2.0"
-    if "mozilla public license" in t:
-        return "MPL-2.0"
-    if "eclipse public license" in t:
-        return "EPL"
     if "educational community license" in t:
         return "ECL-2.0"
     if "mit license" in head or "permission is hereby granted, free of charge" in t:

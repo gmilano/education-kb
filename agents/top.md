@@ -2981,3 +2981,91 @@ genuine surprise runs the other way — **a live fork of a dead upstream**
 (`CNIT-Organization/ltitoolkit`, which vendors the abandoned `PyLTI1p3`; see
 `repos/foundations.md`). 🔵 **"Cold fork" was the wrong shape to predict. The shelf's lineage
 problem is duplication and stale naming, not abandonment.**
+
+## The grant that exists only in the package registry — six MCP servers, measured 2026-10-07
+
+Pass 25 published **87** of the 503 slugs this shelf cites as shipping **no licence file**. Asking
+each one's package registry what licence its publisher declared returns **8 ownership-verified
+grants**, of which **six are grants made in the registry and nowhere in the tree** — the tree being
+enumerated completely by `p441`, not probed by filename:
+
+| Agent | Repo | Registry grant | Tree |
+|---|---|---|---|
+| Udir (Norway) data MCP | [`3121n/nor-data-udir-mcp`](https://github.com/3121n/nor-data-udir-mcp) | **MIT**, npm `@nor-data/udir-mcp` | 🔴 no licence text anywhere |
+| Canvas LMS MCP | [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | **MIT**, npm `canvas-mcp-server` | 🔴 none |
+| District API MCP | [`DistrictAPI/districtapi-mcp`](https://github.com/DistrictAPI/districtapi-mcp) | **MIT**, PyPI `districtapi-mcp` | 🔴 none |
+| Google Classroom MCP | [`SalShah20/classroom_mcp`](https://github.com/SalShah20/classroom_mcp) | **MIT**, npm `@salshah20/google-classroom-mcp` | 🔴 none |
+| Kolibri design system | [`learningequality/kolibri-design-system`](https://github.com/learningequality/kolibri-design-system) | **MIT**, npm `kolibri-design-system` | 🔴 none |
+| Classroom MCP | [`zainf2327/mcp-classroom`](https://github.com/zainf2327/mcp-classroom) | **MIT**, PyPI `mcp-classroom` | 🔴 none |
+
+⚠️ **A registry grant is a grant, and it is weaker evidence than a file.** The publisher asserted MIT
+in metadata they control and can change with the next release, and nothing in the repository records
+it. 🟢 **For a client deliverable this is `P314`: usable, and worth one written confirmation from the
+holder that cites the publisher's own metadata.** All six are MIT, which is what pass 25 predicted the
+interesting class would be.
+
+🟢 **Where both channels answer, they agree.** [`SchoolUtils/WebUntis`](https://github.com/SchoolUtils/WebUntis)
+is **MIT** in its root `License` file and MIT on npm; [`openedx/XBlock`](https://github.com/openedx/XBlock)
+is **Apache-2.0** in `LICENSE.TXT` and Apache-2.0 in PyPI's `license_expression`. 🔴 **Where they
+disagree, the tree wins:** `veraPDF/veraPDF-library` carries a dual GPL-3.0/MPL-2.0 grant while Maven
+Central declares `null`.
+
+### 🔴 The ownership gate removed 7 of 15 apparent grants, and one of them would have been a serious error
+
+A licence read off a package is only *this* repository's licence if the registry agrees the package
+lives here. The first run of the sweep omitted that check and produced **15** grants. Seven were
+somebody else's:
+
+| Slug | Package it claims | The repository the registry names | Class |
+|---|---|---|---|
+| `pnp-v/bo-google-classroom-mcp-server` | npm **`class`** | `deadlyicon/class.js` — *"a simple yet powerful Ruby-like Class inheritance system"*, first published **2013** | name collision |
+| `plyght/canvas-mcp` | `canvas-mcp-server` | `DMontgomery40/mcp-canvas-lms` | derivative |
+| `lucanardinocchi/canvas-mcp` | `canvas-mcp` | `vishalsachdev/canvas-mcp` | derivative |
+| `joshuasoup/d2l-mcp` | `d2l-mcp-server` | 🆕 `general-mudkip/d2l-mcp-server` | derivative |
+| `Opetushallitus/aoe` | npm **`aoe`** | 🔴 **none declared** — v0.1.1, published **2016-01-05** by `exolution@163.com`, no description, declaring **GPL-3.0** | unowned |
+| `ink-waffle/moodle-mcp` · `ink-waffle/sisu-mcp` | `@ink-waffle/*` | none declared | unowned |
+
+🔴 **`Opetushallitus/aoe` is the row that justifies the gate.** Unguarded, this KB would have recorded
+a **strong-copyleft** obligation on the **Finnish National Agency for Education**'s national OER
+library on the strength of a stranger's 2016 hobby package. The tree then showed the refusal was right
+for a second reason nobody predicted: the project's actual grant is **EUPL-1.2**, 303 B, in
+`aoe-web-backend/LICENSE` and `aoe-web-frontend/LICENSE`.
+
+🟢 **All four `FOREIGN-PACKAGE` rows reproduce `p436`'s declared slug, 4 for 4, on an independent
+run** — cross-channel calibration, not a new finding. This KB's table *"the four ways a package
+registry names a repository other than the one you cited"* above already classified every one of them,
+`deadlyicon/class.js` included.
+
+⚠️ **The `ink-waffle` pair is where a gate must stay silent and a human need not.** An npm scope that
+equals the GitHub owner (`ink-waffle` → `@ink-waffle/*`) reads as ownership immediately; the
+declared-repository field is empty, so the instrument must say `GRANT-UNOWNED`. Both are almost
+certainly the owner's own MIT grant, and this KB does not publish "almost certainly" as a licence.
+
+### 🆕 `general-mudkip/d2l-mcp-server` — a repository the search channel has never returned
+
+| Agent | Repo | Head commit | How it was found |
+|---|---|---|---|
+| Brightspace / D2L MCP server | [`general-mudkip/d2l-mcp-server`](https://github.com/general-mudkip/d2l-mcp-server) | 2025-11-28 | the **registry**, as the declared home of npm `d2l-mcp-server`, which `joshuasoup/d2l-mcp` vendors |
+
+🔵 **Sixteen passes of the mandatory query set have never surfaced it**, and it is the second time the
+registry channel alone has added a repository to this shelf — `Polygl0t/Polygl0t` was the first.
+Searching for "education" does not return either. ⚠️ **It ships no licence file**; the grant is npm's
+MIT, under the same `P314` caveat as the six above, and `joshuasoup/d2l-mcp` is the derivative, not
+the root.
+
+### 🔴 The classifier this KB uses mapped npm's refusal-to-grant onto the most permissive licence in its table
+
+`dep_licence.classify_licence`'s permissive rule carried the bare pattern `r"UNLICENSE"`. That matches
+inside **`UNLICENSED`**, which is npm's documented value for *"I do not wish to grant others the right
+to use a private or unpublished package under any terms"*. So an explicit **refusal** returned
+`PERMISSIVE` — the same class as `Unlicense`, the public-domain dedication, and the two most opposite
+values the table contains.
+
+🟢 **Latent, not live:** no published row carried it. 🔴 **And the population where it was most likely
+to appear is exactly the 87 repositories this sweep was pointed at** — a package that ships no licence
+file is the one most likely to declare `UNLICENSED`. Fixed with a `NO-GRANT` class probed first and
+**eight controls**, each pairing the refusal with its one-letter-different neighbour.
+
+🔵 **The string collision deserves naming: `UNLICENSED` is this KB's own status for "no licence file
+found" and npm's value for "no licence granted".** One spelling, two meanings — and one of them is a
+verdict about the publisher's intent, not about a probe.

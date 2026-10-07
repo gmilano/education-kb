@@ -3439,3 +3439,152 @@ head-commit age of **48 d**; depth 1 installs at **57 d** (latest) and **220 d**
 installs at **177 d** (latest). ⚠️ **Depth 2's pinned tier is not measured and would be older
 still** — every level down is older than the one above it, and the number a client is shown is
 always the one from the top.
+
+## 61. Where this KB's prose and its instruments disagree about a licence, it has been the instrument — four times out of four
+
+This is a trend about **method**, and it is the finding of the twenty-sixth pass. Pass 25's action A
+was sent to resolve the **87 repositories this shelf cites that ship no licence file**. Every licence
+fact the action surfaced was **already written in this KB's prose**. What was wrong was the
+machinery:
+
+| Defect | Instrument | What the prose already said, and where | Scale |
+|---|---|---|---|
+| five **MPL-2.0** payloads filed **GPL** | `p436/sweep_payload.family_of` | all five correct as MPL-2.0 in `repos/foundations.md` and `agents/top.md` | 5 of 412 |
+| `LICENSE.TXT` read as **no licence** | `p436`'s 14-name rooted probe | `repos/foundations.md`: *"Found at `LICENSE.TXT` — uppercase extension. A nine-name lowercase probe reports this [as ungranted]… two characters away from a name the probe already tried"* | ≥3 of 87 |
+| **EUPL-1.2** → `UNKNOWN` | `family_of` **and** `dep_licence.classify_licence` | nine files discuss EUPL; `repos/foundations.md` lists **eight** Finnish national services carrying it | the whole EMEA public-sector tier |
+| npm `UNLICENSED` → `PERMISSIVE` | `dep_licence.classify_licence` | — latent; no prose, and no published row | would have fired on this sweep |
+
+🔴 **The detectable symptom was available without a single new fetch: the published family
+distribution over 412 licensed payloads contained ZERO MPL-2.0 rows.** A zero, for one of the most
+common licences on GitHub, in a 412-row table. Nobody read the distribution as a measurement of the
+classifier.
+
+🔵 **The structural cause is that `p342` deliberately chose the other direction.** Its README says,
+in so many words: *"the assertions run against the TSVs, not against the prose of the `.md` files."*
+That was the right call for catching prose that drifts from measurement. It leaves the **inverse**
+uncovered — and the inverse is what happened. **Where a human wrote the licence into the prose and an
+instrument later measured it wrong, nothing in this repository compares the two.**
+
+⚠️ **What this trend does NOT say:** that prose beats measurement. Prose is why `p342` exists. It says
+that a corpus which versions both must **reconcile** them, and that an instrument marked
+`authoritative` whose output contradicts a sentence a human wrote after reading the file is a defect
+until one of the two is retracted.
+
+**Consequence for Globant.** On a client engagement the same asymmetry appears as an SBOM that
+disagrees with the repository's own README. 🟢 **Reconcile the two before shipping either**, and when
+they disagree, read the licence file — the four rows above all resolve that way.
+
+## 62. A filename list can only find a licence; to sustain its absence you must enumerate the tree
+
+`P441`, and it closes a hole this KB had already named three times without closing.
+
+Run over the 87 repositories published as shipping no licence:
+
+| Instrument | Grants found |
+|---|---|
+| `p436`'s **14 filenames**, rooted | **0** |
+| `p440`'s **41 filenames**, rooted | 1 |
+| 🟢 `p441`'s **complete tree enumeration** | 🟢 **9** |
+
+A `--filter=blob:none --no-checkout --depth 1` clone plus `git ls-tree -r` lists the whole tree with
+no API, no pagination and no truncation, in **13 seconds for all 87**. The nine it finds fail the
+filename list on four distinct axes, and **no amount of widening reaches any of them reliably**:
+
+- **extension case** — `openedx/XBlock` ships `LICENSE.TXT`, **Apache-2.0**;
+- **a third capitalisation** — `SchoolUtils/WebUntis` ships `License`, **MIT**;
+- **family suffix** — `veraPDF/veraPDF-library` ships `LICENSE.GPL` *and* `LICENSE.MPL`, because two
+  grants cannot both live in a file called `LICENSE`;
+- **depth** — `Opetushallitus/aoe`'s **EUPL-1.2** is in `aoe-web-backend/` and `aoe-web-frontend/`;
+  `learningequality/kolibri-server`'s is `debian/copyright`; and
+  [`cs341-illinois/coursebook`](https://github.com/cs341-illinois/coursebook) carries **three** —
+  `LICENSE/LICENSE.code` (MIT), `LICENSE.original` and `LICENSE.output` (CC-BY).
+
+🔵 **`cs341-illinois/coursebook` is the row that makes the case.** Separate grants for the code, the
+original content and the output is the *correct* structure for a course repository and the one a
+single `LICENSE` file cannot express — so a rooted filename probe reports a teaching repository with
+exemplary licensing hygiene as having none at all.
+
+🔴 **And enumeration overshoots exactly as symmetrically as the list undershoots.** The first build
+published 14 hits; six were an **icon component** named `copyright`, an **XSLT transform**, a vendored
+**package manager**, a vendored **ontology tool**, a vendored **editor**, and — the cleanest `P342`
+instance this KB has measured — the European Commission's `licence-EUPL 1.2-brightgreen.svg`, a
+**README badge image**. So the pattern channel is a *finding* channel whose positives are a reading
+list, and stage 2 **reads each candidate blob** and keeps only payloads that classify as a licence
+text. 🟢 **Separating the project's own grant from a bundled dependency's needed DEPTH, not a
+vendor-name list**: a project states its licence at the root or one directory down, and nothing
+states its own licence four levels into a static-assets tree.
+
+**Consequence for Globant.** 🟢 **"No `LICENSE` file" is not a finding; it is a probe result.** Before
+discarding a candidate, enumerate the tree and read the registry (`p440`). On this shelf that moves
+**15 of 87** repositories out of the unusable column — 9 by the tree, 6 more by the registry alone.
+
+## 63. Every level of a dependency graph is older than the one above it, and resolving the pin costs about as much as a level
+
+`p442` closes the gradient `p438` left open with the words *"a pinned depth-2 tier is not measured
+here and would be older"*. It is, and it is:
+
+| Tier | basis | median age | cold > 1 yr |
+|---|---|---|---|
+| what this KB **cites** | head commit | **48 d** | 24.8% |
+| installed **depth 1** | latest release | 57 d | 27.2% |
+| installed **depth 1** | 🔴 **pinned** | **220 d** | 42.5% |
+| installed **depth 2** | latest release | 177 d | 37.0% |
+| installed **depth 2** | 🔴 **pinned** | 🔴 **334.5 d** | 🔴 **48.6%** |
+
+🟢 **Monotone on both axes, and roughly additive: one level down costs about what resolving the pin
+costs, and doing both costs the sum.** The figure a client is shown is always the one from the top of
+that table; the figure their build installs is the one from the bottom. **Nearly half of what lands on
+disk two levels down is more than a year old.**
+
+🔴 **But the MECHANISM inverts between the tiers, and that is the transferable part.** At depth 1,
+**49%** of specifiers are `EXACT` and they carry the whole effect. At depth 2, `EXACT` is **21%** and
+its median delta is **zero** — the effect lives entirely in `CAPPED`, at **694 d** pinned against
+257 d latest. The reason is structural: a depth-1 manifest is an **application's** and applications
+pin exactly; a depth-2 specifier is a **library's** constraint on its own dependency, and libraries
+publish ranges so they can be co-installed.
+
+🔵 **This is trend 59's own warning coming true on the next tier.** It wrote: *"quote the class
+distribution with the ratio or the ratio does not transfer."* Here is the corpus where it does not —
+same shelf, one level down, direction preserved and mechanism replaced.
+
+**The concentration is narrow and therefore actionable.** `react-scripts` contributes **38** cold pins
+— the CRA layer under `CAHLR/OATutor`'s 2020-era front end, which `p438` reached from the licence
+direction. 🔴 **`aws-sdk` v2 exact-pins nine packages more than two years old**, including
+`querystring==0.2.0` at **4,964 d** and `sax==1.2.1` at **3,854 d against a current release 75 days
+old** — a **51×** gap on an XML parser. 🟢 **Move to the modular `@aws-sdk/client-*` v3 packages**;
+that one substitution removes the worst column in the table.
+
+🟢 **And the exception reproduces.** Trend 59 found exactly one row of 327 where the pin is *newer*
+than the latest stable — `oppia/oppia` pinning the pre-release `webapp2==3.0.0b1`. One row of 344 does
+the same here: `@material-ui/core` pins `popper.js@1.16.1-lts`, **2,375 d**, against a latest stable
+`1.16.1` at **2,450 d**. **Two corpora, two ecosystems, one mechanism — a suffix-tagged release that
+postdates the last plain one.** So *"every published age is a lower bound on staleness"* holds in
+343 of 344 rows here and 326 of 327 there, and the exception is structural rather than anecdotal.
+
+## Declared gaps — twenty-sixth pass, 2026-10-07
+
+- 🔴 **No case oracle exists on this host.** `p443` measured five channels — `raw.githubusercontent`,
+  `git ls-remote`, the git smart-HTTP `info/refs` endpoint, rendered `github.com` and
+  `codeload.github.com` — and the first three serve **200 for any capitalisation with no redirect**
+  while the last two are **403**. So the canonical spelling of a slug is **unknowable from here**, and
+  `p439`'s canonicalisation for registry-decided rows is a preference rather than evidence. Its
+  collision *detection* is unaffected.
+- 🔴 **186 of 496 cited repositories (37.5%) have no spelling oracle at all** — neither a published
+  package nor a self-link that names them. Their spelling in this KB is an unverified assertion.
+- 🔴 **Maven Central's POM layer is not reliably reachable.** `maven-metadata.xml` answers 200 and
+  carries **no licence element**; the POM that does carry it answered **429 for the same URL that
+  answered 200 ten seconds earlier**, three times in a row under calibration. A single-shot probe
+  cannot distinguish a POM with no licence from a POM that was rate-limited.
+- 🔴 **RTF licence payloads are not read.** `docs/LICENSE.rtf` on both `OS4ED/openSIS-*` rows
+  classifies `UNKNOWN`, which is a limit of the classifier and not an absence.
+- 🔴 **A payload that NAMES other licences cannot be classified by substring order.** Reordering fixed
+  MPL-2.0 and EUPL-1.2, where the granting licence is identifiable from the head. It cannot fix
+  `nvaccess/nvda`'s *"GPL version 2 or later, with two special exceptions"* whose exception names the
+  LGPL. Deciding which named licence is granted and which is referenced is a reading task; the
+  instrument now counts the marks and hands over a reading list instead of guessing.
+- 🔴 **`NO-CHANNEL` at 57 of 87 bounds the registry approach.** Two thirds of the repositories that
+  ship no licence file also publish no package, so there is no second channel to ask.
+- 🔴 **Sixteenth consecutive pass in which the mandatory query set produced no new repository**, and
+  the tenth with no new instrument. One new named datum in sixteen passes: OpenAI appointed a policy
+  lead for Australia and New Zealand — a personnel fact, not a repository. Every repository added this
+  pass came from a **package registry** or from `git ls-tree`.
