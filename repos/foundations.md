@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-sixth pass, 2026-10-07 — the permissive in-tree option reaches the SIS tier
+
+**Licences read from each repo's own payload on `raw.githubusercontent.com`, 2026-10-07** (16 filenames
+× `main`/`master`), **re-classified through `compose/code/lib/license_family.sh`** and cross-checked
+against the registry each project publishes. No star counts: `api.github.com` **403**, `github.com`
+**403**. Cumulative channel census in `agents/top.md` — 🆕 **`registry.npmjs.org` is newly measured
+reachable (200)** and is the second-channel route for the JS/PHP tier.
+
+### 🟢 The structural find: the SIS tier now has an Apache-2.0 member
+
+Pass 35 withdrew `P467` and promoted `OpenOLAT` (Apache-2.0, Zurich) as **the permissive full-LMS
+foundation this KB had all along**. 🔵 **That left the parallel question open one tier down, and this
+shelf never asked it: the LMS tier had an in-tree option, but did the *SIS* tier?** Every student
+information system on these shelves is copyleft — **openSIS GPL, RosarioSIS GPL-2.0, OpenEduCat
+LGPL-3.0** — so every engagement touching enrolment, attendance, grades or fees has been a side-car by
+default.
+
+| Repo | Licence (payload → shared classifier) | Cross-channel | Language | Why it is a foundation |
+|---|---|---|---|---|
+| 🆕 [`rubelw/OSSS`](https://github.com/rubelw/OSSS) | 🟢 **Apache-2.0** — `main/LICENSE`, **11,363 B** → `Apache-2.0`, commercial use **OK** | 🟢 **Three channels.** `pyproject.toml` → `license = { text = "Apache-2.0" }`; **PyPI `open-schools`** → `License :: OSI Approved :: Apache Software License`, with `repository` resolving back to this repo (identity confirmed, not just licence) | Python (FastAPI) + TypeScript (Next.js) | 🟢 **The first Apache-2.0 student information system on these shelves — the SIS counterpart to what `OpenOLAT` is for the LMS tier.** FastAPI + **Keycloak SSO** + SQLAlchemy + PostgreSQL; modules for governance, student info, accounting, activities and transportation. 🔵 **And the agent tier is inside the tree, not bolted on**: `Ollama + MetaGPT + A2A` are named in the stated architecture, so an AI deliverable extends the SIS **as a module** rather than integrating with it across a boundary. 🟢 **Region: North America**, placed on its **data model** — districts as top-level tenant, district transportation, district accounting, board governance (`P474`) |
+
+⚠️ **The maturity caveat is load-bearing and belongs in any deck that names this repo.** The README opens
+with a self-declared warning — *"OSSS is still being developed"* — and records, dated **7 Nov 2026**,
+that the **state machine and workflow/gate logic are still being built**. 🔴 **For a system whose whole
+job is enrolment and grade workflows, that is the core, not the periphery.** Shelve it as the
+**pilot-tier permissive SIS and the architecture to study**, not as a production migration target. 🔵 **A
+foundation can be the right *reference* while being the wrong *dependency*, and this shelf should say
+which it means.**
+
+### 🟢 Also added — two foundations that are corpora as much as code
+
+| Repo | Licence | Region | Why it is a foundation |
+|---|---|---|---|
+| 🆕 [`AI-for-Education/lesson-plan-parse-mbsse`](https://github.com/AI-for-Education/lesson-plan-parse-mbsse) | 🟢 **MIT** (`main/LICENSE`, **1,065 B** → `MIT` / **OK**), © Fab Data | 🟢 **EMEA** | 🟢 **A national curriculum as structured data.** Sierra Leone **MBSSE** Maths and Language Arts lesson plans — all grades, Primary + JSS + SSS — parsed from PDF into JSON and LLM-cleaned. **Ships the corpus** (raw, parsed, cleaned `.json.gz`), so it is a *dataset* foundation and not only a parser. 🔵 **Rule-based parsing with LLMs confined to the cleaning step** — the auditable division of labour, and the reason the output is trustworthy enough to build on |
+| 🆕 [`eduagarcia/lm-evaluation-harness-pt`](https://github.com/eduagarcia/lm-evaluation-harness-pt) | 🟢 **MIT** (`main/LICENSE.md`, **1,067 B** → `MIT` / **OK**) | 🟢 **LATAM** | 🟢 **The measurement foundation for Portuguese-language delivery.** EleutherAI harness fork adapted to Portuguese; the evaluation suite behind the **Open Portuguese LLM Leaderboard**, backed by **CEIA, Federal University of Goiás (UFG), Brazil**. **Direct-response** evaluation (not log-probs only) so instruction-tuned chat models are measurable at all; automatic chat-template detection; **vLLM** and **LiteLLM** backends so local and API models are compared on one harness; F1-macro and Pearson aligned to each benchmark's own metric. 🔵 **This is the foundation that turns "which model for Brazil?" from a vendor conversation into a measurement** |
+
+### 🔵 What this does to the in-tree / side-car table
+
+| Tier | Permissive, in-tree option | Copyleft members forcing a side-car |
+|---|---|---|
+| **Full LMS** | 🟢 `OpenOLAT` (Apache-2.0, EMEA) · `Eloom LMS` (MIT, unplaced) | Moodle GPL-3.0+, Open edX AGPL-3.0, Chamilo GPL-3.0, ILIAS GPL |
+| **Assessment delivery** | 🟢 `qtiworks` (BSD-3-Clause, EMEA) | — |
+| 🆕 **SIS / school ERP** | 🟡 `OSSS` (Apache-2.0, NA) — **pilot-tier only** | openSIS GPL, RosarioSIS GPL-2.0, OpenEduCat LGPL-3.0 |
+| **Offline-first** | 🟢 `Kolibri` (MIT) | — |
+| **Evaluation** | 🟢 `AITutor-EvalKit` (MIT) · 🆕 `lm-evaluation-harness-pt` (MIT, LATAM) | — |
+| **Curriculum corpora** | 🆕 `lesson-plan-parse-mbsse` (MIT, EMEA) | 🔴 **and this is the tier where `CC BY-NC` appears — see `P473`** |
+
+🔴 **One standing caution this shelf must now carry, because it did not before.** The three tiers above
+that hold **content** rather than code — curriculum corpora, item banks, courseware — are where
+**NonCommercial** licences live. `CRSS-AI/agentic-se-course-early-2026` was probed this pass and is
+**`CC-BY-NC-4.0`, commercial use prohibited**; a filename-based probe called it `GRANTED` (`P473`).
+🟢 **Every content-tier row on this shelf must carry `P250`'s commercial-use column explicitly**, because
+for content, unlike for code, a permissive-looking licence file is genuinely often not a permissive
+grant.
+
+### ⚠️ Gaps this pass searched for and did not close — stated so silence is not mistaken for coverage
+
+- 🔴 **Mexico.** Searched explicitly (`open source education AI project Brazil Mexico Latin America
+  github 2026`). **No Mexico-origin permissive education asset surfaced.** LATAM representation on these
+  shelves remains **Brazil and Chile** (`lm-evaluation-harness-pt` UFG; `Latam-GPT`/CENIA recorded
+  earlier). ⚠️ **Scope: this is a statement about what these queries reached, not about Mexico.**
+- 🔴 **A permissive, production-maturity SIS.** `OSSS` is Apache-2.0 **and self-declared incomplete on
+  exactly the workflow logic a SIS exists for.** The gap is **maturity**, not licence, and it is a
+  different gap from the one pass 35 withdrew.
+- 🔴 **`AI-for-Education/fabdata-llm-retrieval`** — an end-to-end RAG platform from an organisation whose
+  **other seven repositories this KB already shelves**, and it serves **no licence payload**. 🔵 Worth a
+  direct enquiry: this is the single highest-value ungranted repo on these shelves, and the fix is an
+  email, not a search.
+
 ## 🔴 Thirty-fifth pass, 2026-10-07 — the EMEA gap this shelf declared for three passes is withdrawn
 
 **Licences read from each repo's own payload on `raw.githubusercontent.com`, 2026-10-07**, branch-

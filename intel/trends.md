@@ -4,6 +4,119 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-sixth pass, 2026-10-07 — five trends: the tutor stops being general, and a market series stops being one series
+
+⚠️ **T1 and T2 rest on payload-verified repositories. T3–T5 rest on secondary sources and every cited
+market/regulatory domain is blocked from this environment (000).** The distinction is load-bearing.
+
+### T1 🟢 The tutor is becoming jurisdiction-shaped, and that inverts what the differentiator is
+
+Three of the five permissive agents verified this pass are **bound to a named jurisdiction's assessment
+instrument**, not to a subject:
+
+| Asset | Bound to | Not |
+|---|---|---|
+| `BaijayantaRoy/bandup` (MIT) | **Singapore PSLE composition /40 and A-Level GP /50**, each marked against *that paper's own* band descriptors | "an essay marker" |
+| `dikshant182004/MathTutor` (MIT) | **India's JEE** | "a maths tutor" |
+| `AI-for-Education/lesson-plan-parse-mbsse` (MIT) | **Sierra Leone's MBSSE national lesson plans**, Primary + JSS + SSS | "a curriculum parser" |
+
+🔴 **None is a general tutor with a locale setting.** Earlier passes shelved breadth-first tutors whose
+selling point was subject coverage — `DeepTutor`, `Educhain`, `OATutor`. 🔵 **This is the orthogonal axis,
+and it is the one engagements are actually sold on: a client does not buy "maths tutoring", they buy
+"passes *our* exam, marked against *our* rubric."**
+
+🔵 **The consequence for build-vs-extend is the reverse of how these projects are pitched.** The agent
+scaffolding — LangGraph graph, retrieval, memory — is **commodity and now available MIT-licensed in
+working form**. The **rubric encoding, the band descriptors, the curriculum structure** are the
+differentiator, the thing no upstream repo can supply, and the thing a client already owns and cannot
+hand to a vendor's cloud. 🟢 **So the engagement shape is: take the scaffold, build the rubric layer,
+keep it on the client's infrastructure.**
+
+### T2 🔴 A licence string from a search summary will overwrite a verified shelf, and it did — three times in one pass
+
+Three independent instances, all caught, all inside the same pass:
+
+1. **`CC-BY-NC-4.0` read as a grant.** A fresh discovery probe reported
+   `CRSS-AI/agentic-se-course-early-2026` as **`GRANTED`** because a `LICENSE` file existed. The payload
+   forbids commercial use outright. 🟢 **This KB's shared classifier returns `CC-BY-NC-4.0` / `PROHIBIDO`
+   on the first call — it simply was not run, because the probe was new code (`P473`).**
+2. **`ECL-2.0` reported as `Apache-2.0`.** A search summary called Sakai *"Apache 2.0"*; that phrase was
+   written into this pass's own trending row **before anything checked it**. Payload: **`ECL-2.0`**. 🔴 **And
+   `repos/foundations.md` already said so.** Corrected in the same pass that introduced it (`P476`).
+
+3. **An unlicensed repo cited as `MIT` inside a compose recipe.** `kaushal0494/AITutor-EvalKit` was
+   written into this pass's `P47` as 🟢 MIT on a search summary's authority. **Payload: no licence at
+   all**, and 🔴 **this KB's `agents/top.md` had already recorded three prior reproductions of exactly
+   that false claim.** The fifth reproduction came from the pass that wrote the precedence rule, and it
+   would have shipped **a recipe whose CI gate was an unlicensed dependency** (`P478`).
+
+🔵 **The three share one mechanism and it is not carelessness: each is a case where a *plausible* licence
+string was available more cheaply than the true one.** `CC BY-NC` *looks* like a grant because it sits at
+`LICENSE`; `ECL-2.0` *is* Apache-2.0 in all but one section, so calling it Apache is 95% true — and the
+5% is the patent grant, which is the clause a legal review argues about.
+
+🔴 **The deeper pattern, and the reason this is a trend rather than three mistakes: every one was
+already paid for and the controls already existed.** `P237` (never rewrite the classifier), `P250`
+(family and commercial use are two columns), and a prior pass's record that **Sakai was missing for ten
+passes over a misread licence line**. 🔵 **A control that exists but is not *in the path* of new code is
+documentation, not a control** — which is the same shape as `P471`, where a passing gate judged nothing.
+
+> **Order of precedence, now explicit: payload > this KB's verified shelf > secondary prose.** Never the
+> other way, however confident the prose.
+
+### T3 🟢 Local-first inference is becoming a compliance feature rather than a cost decision
+
+`bandup` ships **local by default via Ollama** — no account, no telemetry, no essay leaving the machine —
+and shows a **persistent on-screen warning the moment a non-local model is selected**. It states the
+reason plainly: pasting children's writing into a cloud chatbot is a line many schools and parents will
+not cross.
+
+🔵 **Read that as architecture meeting regulation, because three jurisdictions now demand it
+independently:** California **AB 1159** (prohibits using student data to train AI models), Vietnam's Law
+on AI (**behavioural monitoring** named high-risk, in force 1 Mar 2026), and EMEA districts with
+data-residency rules already self-hosting open-weight models. 🟢 **The "degrade gracefully to a local
+model, and tell the user when you don't" pattern satisfies all three without a compliance review per
+jurisdiction** — and `bandup` additionally separates the **OCR model choice from the marking model
+choice**, so the most sensitive step (raw handwriting) can stay local while reasoning goes remote. 🔵 **That
+per-step data-boundary granularity is the transferable idea.**
+
+### T4 🔴 Education AI obligations are enforceable in APAC now, and deferred in the EU — the ordering is the roadmap
+
+Unchanged from pass 35 and worth restating because it keeps being read backwards: the EU moved education
+high-risk from **2 Aug 2026 to 2 Dec 2027** (Digital Omnibus), while **South Korea's AI Basic Act (22 Jan
+2026)** treats education as high-impact and **Vietnam's Law on AI (1 Mar 2026)** names education among six
+high-risk sectors, **explicitly including automated assessment and behavioural monitoring**.
+
+🔴 **The common error is reading the EU deferral as sixteen months of global breathing room. It is sixteen
+months of *European* breathing room during which two APAC statutes are already live**, and Article 50
+transparency applies in Europe from Aug 2026 regardless.
+
+🆕 **What this pass adds is the sub-national layer in North America, where the binding instrument is state
+statute.** **Ohio HB 96** required **every** K-12 district to adopt an AI-use policy by **1 July 2026 — a
+deadline that has passed.** 🟢 **So the engagement opening inverts: not "help us form a position" but "our
+policy is in force and our tooling does not comply."** 🔴 **And because the statute does not prescribe
+content, the policies differ district by district** — a product shipping into Ohio must read each
+district's policy, not the state model.
+
+### T5 🔴 A market figure without its series attached is not a number
+
+This file's companion, `intel/market.md`, obtained a **complete five-region 2026 split** for the first
+time and found it **sums to exactly the published global total** ($10.40B, 0.0% error), with the
+CAGR-implied 2030 sum landing **0.3%** from that series' published 2030. 🟢 **That closure identifies the
+series.** It also showed this KB has been dividing a figure from that series by a global total from a
+**different** series (41.5% CAGR vs 31.2%), producing a plausible and wrong conclusion: North America's
+share *"falling to ~25% by 2030"* when within its own series it is **35.4% → 33.6%**, roughly flat.
+
+🔵 **Why this is a trend and not an accounting note: the secondary tier republishes figures without their
+provenance, and figures from incompatible series circulate side by side as though comparable.** A share,
+a ratio or a CAGR computed across two of them looks exactly like a finding. 🔴 **The error is undetectable
+by inspection and detectable by addition** — which is the cheap test nobody runs (`P477`).
+
+🟢 **What survived the correction is worth noting, because not everything did:** the inference that mature
+markets grow below the global rate holds within the coherent series — NA (31.1%) and Europe (31.9%) below
+the implied 32.8%, while APAC (35.3%), MEA (34.3%) and LATAM (33.5%) are above it. **The conclusion was
+right; the arithmetic under it was borrowed from the wrong series.**
+
 ## 🔴 Thirty-fifth pass, 2026-10-07 — five trends, and the first is a gap that existed only on the shelf that declared it
 
 ### T1 🔴 A gap claim is the most dangerous kind of claim a knowledge base can hold, because nothing contradicts it

@@ -4,6 +4,165 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🟢 Thirty-sixth pass, 2026-10-07 — two recipes: P47, P48 — plus one new instrument
+
+**Every repo named below had its licence read from its own payload on `raw.githubusercontent.com` on
+2026-10-07**, branch- and case-aware, **and re-classified through `compose/code/lib/license_family.sh`**,
+which is also what the new instrument does. No star counts (`api.github.com` **403**), so these recipes
+are composed on **licence and documented capability**, not popularity. ⚠️ **No model-weights licence is
+verified anywhere here — `huggingface.co` is 000.** ⚠️ **Every regulatory date is secondary-sourced and
+every source domain is blocked from this environment** — re-verify against the Official Journal, each
+national gazette and each state's legislative record before it enters a client deliverable.
+
+### 🆕 New instrument — `compose/code/p473-probe-commercial-gate/` (**9/9**)
+
+The discovery probe a pass runs **instead of writing a fresh sweep**. It emits `P250`'s **commercial-use
+column** from the shared classifier, so a `CC BY-NC` payload cannot be written up as `GRANTED`
+(`P473`), and it folds in `P475` by giving the existence check the same case-variation the licence check
+gets. Fixtures are **real payloads**, including the 822-byte `CC-BY-NC-4.0` specimen that caused it and
+the 11,120-byte **`ECL-2.0`** Sakai payload that a search summary called *"Apache 2.0"* (`P476`).
+🔵 **Use it in step 0 of both recipes below** — every repo entering a client build passes through it first.
+
+---
+
+## P47 — A jurisdiction-bound marking service that never ships the student's work off-site
+
+**Problem it solves.** A client does not buy "essay marking"; they buy *"marked against **our** rubric,
+for **our** exam, without children's writing leaving **our** infrastructure."* 🔴 **Three constraints that
+are usually treated as a compliance tax, and all three are architectural:** the rubric is the client's
+and cannot be handed to a vendor, the data boundary is per-step rather than per-app, and somebody must be
+able to show that the marking is pedagogically sound rather than merely fluent.
+
+🟢 **Every component below is payload-verified permissive and already exists.** The build is the rubric
+layer and the wiring — nothing here requires training a model.
+
+| Component | Licence (payload) | Role |
+|---|---|---|
+| [`BaijayantaRoy/bandup`](https://github.com/BaijayantaRoy/bandup) | 🟢 **MIT**, 1,071 B | **The reference implementation and the starting fork.** Already marks named Singapore papers (**PSLE composition /40 = Content 20 + Language 20; A-Level GP /50 = Content 30 + Language 20**) against each paper's own band descriptors. Ships what is tedious to rebuild: **handwriting/OCR intake** (phone photos, scans, multi-page PDF, transcribed verbatim with mistakes preserved), **tracked-changes word-level diff**, per-error explanation with error-type breakdown, **next-band rewrite from the pupil's own words** |
+| [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 **MIT**, 1,064 B (payload, re-read this pass) | **The quality gate — the licensed one.** Pedagogical knowledge measured against teacher-qualification-exam questions. 🔵 **This is the shippable component; see the row below for the one that is not** |
+| [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | 🔴 **NO LICENCE PAYLOAD** — probed again this pass, 19 filenames × 2 branches: `UNGRANTED` | ⚠️ **Specification only, never a dependency.** Its **four dimensions — Mistake Identification, Mistake Location, Providing Guidance, Actionability** — are published in its EACL 2026 demo paper and a rubric is an idea, not code. 🔴 **The paper says MIT; the repository does not. Do not vendor it** (`P478`) |
+| [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | 🟢 **BSD-3-Clause**, 2,058 B | **Item-bank I/O without a vendor.** QTI 2.1 delivery engine + **JQTI+** for programmatic read/write/manipulate of QTI items and tests. Univ. of Edinburgh |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) **or** [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **Apache-2.0** (10,982 B) / 🟢 **ECL-2.0** (11,120 B) | **The system of record, extended in-tree.** Both are permissive, so the marking service is a **module**, not a side-car. 🔴 **Sakai is `ECL-2.0`, not Apache-2.0 — the patent grant in §3 differs and a legal review will ask (`P476`)** |
+| Ollama | — | Local inference. **Two separately configured models**, per `bandup`'s own design: an **OCR/vision** model and a **marking** model |
+
+**Wiring.**
+
+1. **Gate every dependency** through `p473-probe-commercial-gate` (**9/9**). 🔴 **On a marking product this
+   is not ceremony: the rubric descriptors, exemplar scripts and item banks you ingest are *content*, and
+   content is where `CC BY-NC` lives.** An NC-licensed exemplar corpus inside a commercial deliverable is
+   the failure this gate exists to prevent.
+2. **Fork `bandup` and replace the rubric layer, not the pipeline.** Its papers are defined as band
+   descriptors + mark allocation + word-count norms; a new jurisdiction is a new descriptor set. 🔵 **Keep
+   its `/40` and `/50` structures as worked examples of what a descriptor set has to specify.**
+3. **Set the data boundary per step, not per application.** Keep **OCR local always** — raw handwriting is
+   the most sensitive artefact in the system and the step least improved by a frontier model. Let the
+   *marking* model be configurable. 🟢 **Preserve `bandup`'s persistent on-screen warning when a non-local
+   model is selected**; it is a one-line UI element that makes the data boundary visible to the teacher,
+   and it is the thing an auditor asks to see.
+4. **Put a pedagogical quality gate in CI, not in the demo — and build it, because you cannot buy it.**
+   🔴 **This KB's standing gap "no shippable permissive evaluator of tutoring quality" is STILL OPEN and
+   the reason is structural: the whole pedagogy-evaluation subfield is unlicensed.** `AITutor-EvalKit`
+   (EACL 2026) claims MIT *in its paper* and serves **no `LICENSE` payload**; `eth-lre/mathtutorbench`
+   contradicts itself inside one README; `UnifyingAITutorEvaluation` states nothing; Open TutorAI is
+   **CC BY-NC-SA 4.0**. 🟢 **So: take the four dimensions from the published paper as a *specification*
+   — Mistake Identification, Mistake Location, Providing Guidance, Actionability — and implement them
+   over MIT-licensed `pedagogy-benchmark`.** A scoring rubric described in a paper is not copyrightable
+   as code; the repository you must not vendor is. Hold a set of pre-marked scripts and **fail the build
+   on regression in Mistake Location and Actionability** — those two degrade first and are the two a
+   teacher notices. 🔵 **This converts "the AI seems good" into a number that moves when you change
+   something**, and the implementation is ~2 of the 11 weeks below, which is why it is budgeted.
+5. **Exchange items and results as QTI 2.1 via `qtiworks`/JQTI+**, and write grades back through the
+   LMS's own gradebook. On `OpenOLAT` or Sakai this is an in-tree module; on Moodle (GPL-3.0+) or Open edX
+   (AGPL-3.0) the **same service** runs as a side-car over LTI 1.3 — 🔵 **the licence of the LMS decides the
+   deployment topology and nothing else about this build.**
+6. **Ship the disclaimer as a product feature.** `bandup` states its bands are **unofficial**; keep that.
+   🔴 **In Oklahoma- and Maryland-pattern jurisdictions, AI is barred from high-stakes decisions about
+   students, so "advisory, teacher-confirmed" is the only lawful posture** — and the tracked-changes diff
+   plus per-error explanations are what make the teacher's confirmation a real review rather than a
+   rubber stamp.
+
+**Where it sells, and why the regions differ.**
+
+- 🟢 **North America** — **Ohio HB 96's deadline passed 1 July 2026**, so districts hold board-adopted AI
+  policies *today* and their tooling does not comply. 🔵 **The opening is an audit against *this district's*
+  policy text**, because the statute does not prescribe content and the policies differ. California
+  **AB 1159**'s bar on training models with student data makes step 3 a **compliance feature**.
+- 🟢 **APAC** — Korea's AI Basic Act (**in force 22 Jan 2026**, education = high-impact) and Vietnam's Law
+  on AI (**1 Mar 2026**, naming **automated assessment** explicitly). 🔴 **A marking deliverable is in scope
+  today**, and steps 4 and 6 are how you evidence oversight.
+- 🟢 **EMEA** — the **2 Dec 2027** deferral makes this a design window rather than a remediation. Article 50
+  transparency still applies from Aug 2026. Both permissive LMS options are EMEA-origin.
+- 🟡 **LATAM** — run **P48's step 1 first**: at 26% of institutions holding a formal AI strategy, a marking
+  service lands without a policy to land in.
+
+⏱️ **8–11 weeks** for one jurisdiction's paper set: 1 week gating and rubric extraction, 3–4 rubric layer,
+2 eval harness in CI, 2–3 LMS integration and write-back, 1 pilot. **Each additional paper: ~2 weeks**,
+because the pipeline is already there.
+
+---
+
+## P48 — Measure the model before building the tutor: a national curriculum as grounded retrieval
+
+**Problem it solves.** The usual order is backwards. A tutor gets built on whichever model the vendor
+demonstrated, then someone asks whether it is any good in the language of instruction and against the
+national curriculum — and there is no instrument to answer with. 🔴 **In a non-English, low-resource or
+Global-South engagement, model choice is the single highest-variance decision and the one made with the
+least evidence.** Two artefacts verified this pass invert that order.
+
+| Component | Licence (payload) | Role |
+|---|---|---|
+| [`eduagarcia/lm-evaluation-harness-pt`](https://github.com/eduagarcia/lm-evaluation-harness-pt) | 🟢 **MIT**, 1,067 B | **Step 1, and the step that is usually skipped.** The evaluation suite behind the Open Portuguese LLM Leaderboard (**CEIA / Federal University of Goiás, Brazil**). Portuguese task suite; **direct-response** evaluation so instruction-tuned chat models are measurable at all; chat-template autodetection; **vLLM *and* LiteLLM backends, so a local open-weight model and a hosted API are scored on one harness**; F1-macro and Pearson aligned to each benchmark's own metric |
+| [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 already shelved | **Measures pedagogical knowledge, not language fluency** — questions drawn from teacher-qualification exams. 🔵 **Orthogonal to the harness above and both are needed: fluent and pedagogically wrong is the common failure** |
+| [`AI-for-Education/lesson-plan-parse-mbsse`](https://github.com/AI-for-Education/lesson-plan-parse-mbsse) | 🟢 **MIT**, 1,065 B | **The grounding corpus and the template for building another.** Sierra Leone **MBSSE** Maths + Language Arts lesson plans, all grades Primary/JSS/SSS, PDF → structured JSON → cleaned. **Ships the corpus itself**, so step 2 starts with data rather than a scraper |
+| [`dikshant182004/MathTutor`](https://github.com/dikshant182004/MathTutor) | 🟢 **MIT**, 1,068 B | **The architecture to copy, not the product to deploy.** 14-node LangGraph: intent routing → ReAct tool loop → **a critic agent that verifies the answer before it is shown** → explanation. **Episodic + semantic + procedural memory in Redis**; hybrid **BM25 + dense + reciprocal rank fusion**; SymPy for symbolic checking. ⚠️ README at **`master/Readme.md`** (`P475`) |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT**, 1,097 B (re-read this pass) | **Offline-first delivery.** The tier where this recipe is most needed is the tier with the least connectivity |
+
+**Wiring.**
+
+1. **Score candidate models *first*, on two axes, before any tutor code exists.** Run
+   `lm-evaluation-harness-pt` (or the same harness pattern retargeted to the language of instruction) for
+   **language competence**, and `pedagogy-benchmark` for **pedagogical knowledge**. 🟢 **Use the vLLM and
+   LiteLLM backends to put a self-hostable open-weight model and a frontier API on one scoreboard** — that
+   comparison is the deliverable, and it decides deployment topology, cost and data residency in one
+   measurement. ⚠️ **Model *weights* licences are unverifiable from this environment (`huggingface.co`
+   000)** — gate them separately before shipping.
+2. **Turn the national curriculum into structured JSON** following `lesson-plan-parse-mbsse`: **rule-based
+   parsing, LLMs confined to the cleaning pass.** 🔵 **That division is why the output is trustworthy enough
+   to ground on** — a fully LLM-driven parse produces a corpus whose errors you cannot find later. Ships
+   as a reusable asset the ministry can keep.
+3. **Ground retrieval on that corpus with `MathTutor`'s hybrid pattern** — BM25 for curriculum
+   terminology, dense for paraphrase, **reciprocal rank fusion** to combine. 🔵 **Curriculum documents are
+   exactly the case where lexical retrieval beats dense** (grade codes, syllabus references, prescribed
+   terms), which is why the hybrid matters here more than in open-domain RAG.
+4. **Copy the critic node.** `MathTutor` verifies its own answer with a dedicated agent before showing it,
+   with SymPy for symbolic steps. 🔴 **This is the cheapest available mitigation for the failure that
+   destroys trust fastest — a confident wrong answer to a child** — and it is a graph node, not a research
+   project.
+5. **Carry memory, but carry the *right* memory.** Redis episodic + semantic + procedural, tracking which
+   topics a learner struggles with and which strategies work for them. 🔵 **An earlier shelf find
+   (`Gnos`) names the distinction that makes this meaningful: "saw the explanation" / "solved with help" /
+   "solved alone". Without it, "mastery" is unmeasured.**
+6. **Deliver through `Kolibri`** where connectivity is intermittent, and re-run step 1 as a **regression
+   gate** whenever the model changes — the scoreboard from step 1 is a CI artefact, not a one-off slide.
+
+**Where it sells.**
+
+- 🟢 **EMEA, low-resource tier** — `lesson-plan-parse-mbsse` is **already Sierra Leone**, and the template
+  repeats against any ministry publishing lesson plans as PDF, which is most of them. Fits the
+  capacity-building posture of **Egypt, Morocco, Jordan** and the national-programme posture of
+  **Saudi Arabia, UAE, Qatar**. 🔵 **The Rwanda–Anthropic MoU (Feb 2026, health/education/public sector)
+  is the shape of counterparty to expect** — ⚠️ secondary, single-sourced.
+- 🟢 **LATAM** — `lm-evaluation-harness-pt` is **Brazilian and Portuguese-native**, and the
+  **87% using / 26% with a strategy** pair means step 1's scoreboard is *also* the evidence base for the
+  institution's first AI policy. 🔵 **Sell the measurement as governance, then the tutor.** Plan
+  **build-and-transfer with documented handover** — the regional talent gap has widened since 2022.
+- 🟢 **APAC** — India's JEE is `MathTutor`'s native target, so step 3–5 are closest to as-built there.
+- 🟡 **North America** — step 1's local-vs-API scoreboard is the direct answer to **AB 1159**-pattern
+  prohibitions on training with student data.
+
+⏱️ **10–13 weeks**: 2 weeks model scoring (step 1 — **do not compress this one**), 3 curriculum parsing,
+3 grounded retrieval + critic, 2 memory and mastery instrumentation, 2 offline delivery and CI gating.
+
 ## 🟢 Thirty-fifth pass, 2026-10-07 — two recipes: P45, P46
 
 **Every repo named below had its licence read from its own payload on `raw.githubusercontent.com` on

@@ -4,6 +4,94 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — thirty-sixth pass: five placed agents, one NonCommercial trap, and npm opens as a channel
+
+> **Append-only.** Newest dated section on top; history preserved below.
+
+⏱️ **Measurement window 2026-10-07**, **third pass of this date** (pass 34 and pass 35 both ran
+earlier today). **10 repositories probed** first-hand against `raw.githubusercontent.com`, branch- and
+case-aware (16 licence filenames × `main` **and** `master`), every payload then re-classified through
+`compose/code/lib/license_family.sh` and cross-checked against **PyPI** where the project publishes.
+
+**Census of the 10, every class named so the denominator closes: 5 permissive** (4 × MIT, 1 ×
+Apache-2.0), **1 granted but NonCommercial** (`CC-BY-NC-4.0`, commercial use **prohibited**), **4 real
+and serving no licence payload** — 5 + 1 + 4 = **10**. Negative control in the same run:
+`totally-fake-org-zzz9/nope-repo-abc` → **no payload** *and* **unresolved** on all existence filenames,
+correctly distinguished from the 4 ungranted-but-real repositories.
+
+### 🟢 The channel census moved for the first time in several passes
+
+| Channel | This pass | Note |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 **200** | the licence-payload route, unchanged |
+| `pypi.org` | 🟢 **200** | used for a **three-channel** confirmation on `OSSS` |
+| 🆕 `registry.npmjs.org` | 🟢 **200** | **newly measured and newly recorded.** Not previously listed as reachable here — the second-channel route for the JS tier that passes have been missing |
+| `api.github.com` · `github.com` | 🔴 **403** | no star counts, re-confirmed |
+| `huggingface.co` · `arxiv.org` · `aclanthology.org` | 🔴 **000** | **no model-weights licence and no paper is verifiable from here** |
+| `multistate.us` · `excelined.org` · `azumo.com` · `education.ohio.gov` · `finance.yahoo.com` | 🔴 **000** | 🔴 **every market and regulatory source cited in `intel/` is secondary and unconfirmable in this environment.** Measured, not assumed |
+
+### 🔴 The headline is a near-miss, caught by this KB's own control
+
+A fresh discovery probe reported `CRSS-AI/agentic-se-course-early-2026` as **GRANTED**. The payload is
+**Creative Commons Attribution-NonCommercial 4.0** — *"you may not use the material for commercial
+purposes"*. 🟢 **The shared classifier already in the tree returns `CC-BY-NC-4.0` / `PROHIBIDO` on the
+first call; the probe never asked it.** Full write-up as **`P473`** in `agents/top.md`; the rule is that
+a discovery probe must emit `P250`'s commercial-use column or its `GRANTED` rows are not shelf-ready.
+
+🔵 **Why education and not another industry: the OER tier is where `CC BY-NC` lives.** A KB that shelves
+lesson plans and courseware alongside code will keep meeting NC grants, and they sit at `LICENSE` at an
+ordinary size, invisible to a filename-based probe.
+
+### 🟢 New this week — 5 agents, 5 regions represented
+
+| Repo | Licence | Region | One line |
+|---|---|---|---|
+| [`rubelw/OSSS`](https://github.com/rubelw/OSSS) | 🟢 **Apache-2.0** (11,363 B; **3 channels** incl. PyPI `open-schools` OSI classifier) | 🟢 **North America** | K-12 **SIS with Ollama + MetaGPT + A2A in-tree**; districts, governance, accounting, transportation. ⚠️ self-declared active development |
+| [`BaijayantaRoy/bandup`](https://github.com/BaijayantaRoy/bandup) | 🟢 **MIT** (1,071 B) | 🟢 **APAC** | **Singapore PSLE /40 and A-Level GP /50 marked against each paper's own band rubric**, local-first via Ollama, handwriting OCR, EN + Hindi. ⚠️ bands explicitly unofficial |
+| [`dikshant182004/MathTutor`](https://github.com/dikshant182004/MathTutor) | 🟢 **MIT** (1,068 B) | 🟢 **APAC** | **India JEE maths tutor: 14-node LangGraph, critic agent that verifies its own answers, episodic/semantic/procedural memory in Redis, BM25 + dense + RRF retrieval** |
+| [`AI-for-Education/lesson-plan-parse-mbsse`](https://github.com/AI-for-Education/lesson-plan-parse-mbsse) | 🟢 **MIT** (1,065 B) | 🟢 **EMEA** | **Sierra Leone MBSSE national lesson plans → structured JSON**, all grades Primary/JSS/SSS; ships the parsed corpus, rule-based parse + LLM cleaning only |
+| [`eduagarcia/lm-evaluation-harness-pt`](https://github.com/eduagarcia/lm-evaluation-harness-pt) | 🟢 **MIT** (1,067 B) | 🟢 **LATAM** | **Portuguese LLM evaluation suite** behind the Open Portuguese LLM Leaderboard, **CEIA / Federal University of Goiás (UFG), Brazil**; vLLM + LiteLLM backends |
+
+🔵 **The trend worth recording across three of these five: the tutor is becoming jurisdiction-shaped.**
+`bandup` marks *named Singapore papers* against *their own* band descriptors; `MathTutor` targets *JEE*;
+`lesson-plan-parse-mbsse` encodes *Sierra Leone's* national lesson plans. 🔴 **None of them is a general
+tutor with a locale setting.** The rubric, the exam format and the curriculum are the product. Earlier
+passes shelved general tutors (`DeepTutor`, `Educhain`, `OATutor`) whose selling point was subject
+breadth; **this is the opposite axis and it is the one a Globant engagement is actually sold on.**
+
+### 🔴 Ungranted this pass — 4 of 10
+
+[`AI-for-Education/fabdata-llm-retrieval`](https://github.com/AI-for-Education/fabdata-llm-retrieval)
+(exists via `main/README.md`; 🔵 an end-to-end RAG platform from an org whose **other seven repos this KB
+already shelves**, and it carries no licence) ·
+[`shakyanaitik0-bot/Agentic_AI_Tutor`](https://github.com/shakyanaitik0-bot/Agentic_AI_Tutor) ·
+[`DeaY01/Essay-Marker-Bot`](https://github.com/DeaY01/Essay-Marker-Bot) ·
+[`ZeydSaeed/SIS`](https://github.com/ZeydSaeed/SIS) (exists via `main/package.json`).
+
+### ⚠️ Two method defects recorded against this pass's own instrument
+
+- **`P474`** — `OSSS` is placed **North America on its data model** (districts, district transportation,
+  district accounting, board governance = US district structure), **not** on the maintainer's name,
+  which is inadmissible evidence. Where nothing places a repo, leave it unplaced.
+- **`P475`** — the probe tried **16 licence filenames × 2 branches** but only **3 README spellings**, and
+  `MathTutor`'s README is `master/Readme.md`. Asymmetric rigor would have reported a real repo with the
+  **same verdict as the fabricated negative control**.
+
+### 🔵 Searches run and what each returned
+
+| Query | Outcome |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | ⚠️ **generic agent frameworks only** (CrewAI, OpenHands, OpenClaw) — all already shelved, none education-specific. **The generic-agent query is exhausted for this industry** |
+| `github trending education AI 2026` | ⚠️ course-and-curriculum repos, not agents |
+| `open source platform education LMS SIS ERP MIT Apache 2026` | 🟢 **led to `OSSS`**; otherwise re-confirmed the known platform tier (OpenOLAT Apache-2.0, Open edX AGPL, OpenEduCat LGPL). 🔴 **This row first read "Sakai Apache-2.0" — the secondary source's words, and wrong. Payload says `ECL-2.0`; this KB's own `repos/foundations.md` already said so. Corrected in the same pass that wrote it: `P476`** |
+| `AI education industry trends 2026` | 🟢 **the complete five-region market split** — see `intel/market.md`, where it overturns a share conclusion |
+| `open source AI tutor agent github 2026 intelligent tutoring system MIT` | ⚠️ 4 of 6 hits **already shelved** (`OATutor`, `AITutorAgent`, `mitodl/open-learning-ai-tutor`, `Tutor-AI`); yielded `MathTutor` |
+| `open source automated grading assessment agent github 2026 rubric LLM essay scoring` | 🟢 **led to `bandup`**; `essay-grader-llm` already shelved |
+| `open source education AI project Brazil Mexico LATAM github 2026` | 🟢 **led to `lm-evaluation-harness-pt`** (UFG Brazil). 🔴 **Mexico: nothing permissive and education-specific surfaced** |
+| `open source student information system SIS github 2026 MIT Apache` | 🟢 `OSSS`; `openSIS` (GPL) and `Academico` already shelved |
+| `new open source education AI agent released September October 2026 github` | 🔴 **0 education-specific** — returned coding-agent release notes only |
+| `AI {industry} {region} 2026 adoption regulation players` × 4 regions | 🟢 **all four returned substance**; see `intel/market.md`. 🟢 **No region came back empty this pass** |
+
 ## 2026-10-07 — thirty-fifth pass: the EMEA gap disproved from inside, 8 repos probed, 3 ungranted
 
 > **Append-only.** Newest dated section on top; history preserved below.

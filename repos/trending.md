@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 2026-10-07 — thirty-sixth pass: an Apache-2.0 SIS, two exam-shaped tutors, and a NonCommercial curriculum
+
+> **Append-only.** Newest dated section on top; history preserved below.
+
+**Method.** Licences read from payload on `raw.githubusercontent.com`, branch- and case-aware (16
+filenames × `main` **and** `master`), **each payload re-classified through
+`compose/code/lib/license_family.sh`** (not a fresh classifier — `P237`), cross-checked against PyPI
+where published. **10 repositories probed**, third pass of this date. `github.com` and `api.github.com`
+both **403** — **no star counts**. Negative control: `totally-fake-org-zzz9/nope-repo-abc` → no payload
+**and** unresolved across 6 existence filenames, correctly separated from the 4 real-but-ungranted rows.
+
+### 🟢 Granted — 5 of 10, every one placed in a region
+
+| Repo | Licence (payload → classifier) | Cross-channel | Why it matters |
+|---|---|---|---|
+| [`rubelw/OSSS`](https://github.com/rubelw/OSSS) | 🟢 **Apache-2.0** (`main/LICENSE`, 11,363 B) → commercial **OK** | 🟢 **3 channels**: `pyproject.toml` SPDX + **PyPI `open-schools`** OSI classifier, `repository` resolving back | 🆕 **The first Apache-2.0 SIS on these shelves** — the tier-below counterpart to pass 35's `OpenOLAT` finding. K-12 districts, governance, accounting, transportation; **Ollama + MetaGPT + A2A in-tree**. 🟢 **North America**, placed on its **data model** (`P474`). ⚠️ **self-declared active development; workflow/state-machine logic unfinished** — pilot-tier |
+| [`BaijayantaRoy/bandup`](https://github.com/BaijayantaRoy/bandup) | 🟢 **MIT** (`main/LICENSE`, 1,071 B) | 🟢 README badge; 🔴 PyPI absent | 🆕 **Singapore PSLE composition (/40) and A-Level GP (/50) marked against each paper's own band rubric.** Local-first via **Ollama**, no telemetry, **persistent warning when a non-local model is chosen**; handwriting/OCR as a separately chosen model; tracked-changes diff; next-band rewrite from the pupil's own words; EN + **Hindi**. 🟢 **APAC**. ⚠️ **bands explicitly unofficial** |
+| [`dikshant182004/MathTutor`](https://github.com/dikshant182004/MathTutor) | 🟢 **MIT** (`master/LICENSE`, 1,068 B) | — | 🆕 **India JEE maths tutor as a reference architecture**: 14-node LangGraph, ReAct tool loop, **a critic agent that verifies its own answers**, episodic + semantic + procedural memory in Redis, hybrid **BM25 + Cohere dense + RRF** retrieval, SymPy, Tavily MCP, FAISS. 🟢 **APAC**. ⚠️ README is **`master/Readme.md`** (`P475`) |
+| [`AI-for-Education/lesson-plan-parse-mbsse`](https://github.com/AI-for-Education/lesson-plan-parse-mbsse) | 🟢 **MIT** (`main/LICENSE`, 1,065 B) | — | 🆕 **Sierra Leone MBSSE national lesson plans → structured JSON**, all grades Primary/JSS/SSS, **corpus shipped** alongside the parser. Rule-based parse, LLM only for cleaning. 🟢 **EMEA** |
+| [`eduagarcia/lm-evaluation-harness-pt`](https://github.com/eduagarcia/lm-evaluation-harness-pt) | 🟢 **MIT** (`main/LICENSE.md`, 1,067 B) | — | 🆕 **Portuguese LLM evaluation suite** behind the Open Portuguese LLM Leaderboard; **CEIA / Federal University of Goiás (UFG)**. Direct-response eval, chat-template autodetect, **vLLM + LiteLLM** on one harness. 🟢 **LATAM** |
+
+### 🔴 Granted but NOT usable — the trap this pass nearly walked into
+
+[`CRSS-AI/agentic-se-course-early-2026`](https://github.com/CRSS-AI/agentic-se-course-early-2026) —
+`main/LICENSE`, 821 B, **`CC-BY-NC-4.0`**: *"NonCommercial — You may not use the material for commercial
+purposes."* 🔴 **A filename-based probe reported this as `GRANTED`.** The shared classifier returns
+`PROHIBIDO` on the first call. **`P473`** in `agents/top.md`. 🔵 **Logged here at true weight so no later
+pass promotes it off its name** — it is a good 5-session agentic-SE curriculum and an unusable
+delivery base.
+
+### 🔴 Ungranted this pass — 4 of 10
+
+[`AI-for-Education/fabdata-llm-retrieval`](https://github.com/AI-for-Education/fabdata-llm-retrieval)
+(exists via `main/README.md` — 🔵 **end-to-end RAG platform; this KB already shelves seven repos from the
+same org and this one carries no licence. Highest-value ungranted row on these shelves**) ·
+[`shakyanaitik0-bot/Agentic_AI_Tutor`](https://github.com/shakyanaitik0-bot/Agentic_AI_Tutor)
+(`main/README.md`) ·
+[`DeaY01/Essay-Marker-Bot`](https://github.com/DeaY01/Essay-Marker-Bot) (`main/README.md`) ·
+[`ZeydSaeed/SIS`](https://github.com/ZeydSaeed/SIS) (`main/package.json` — 🆕 **and `registry.npmjs.org`
+is reachable (200) this pass, so a future pass can cross-check this tier properly**).
+
+**5 + 1 + 4 = 10.** Census closes.
+
+### 🔵 The pattern across the week's finds: tutors are becoming jurisdiction-shaped
+
+Three of the five granted rows are **bound to a named jurisdiction's assessment instrument** — Singapore
+PSLE/A-Level GP band descriptors, India's JEE, Sierra Leone's MBSSE lesson plans. 🔴 **None is a general
+tutor with a locale setting.** Earlier passes shelved breadth-first tutors (`DeepTutor`, `Educhain`,
+`OATutor`); **this axis is the opposite and it is the one engagements are sold on**, because a client does
+not buy "maths tutoring", they buy "passes *our* exam, marked against *our* rubric". 🔵 **It also changes
+the build-vs-extend calculus**: the rubric logic is the differentiator and the agent scaffold is
+commodity, which is the reverse of how these projects are usually pitched.
+
+### 🟢 Channel news — `registry.npmjs.org` is reachable
+
+| Channel | Status |
+|---|---|
+| `raw.githubusercontent.com` | 🟢 200 |
+| `pypi.org` | 🟢 200 — gave the third channel on `OSSS` |
+| 🆕 `registry.npmjs.org` | 🟢 **200 — newly recorded** |
+| `api.github.com` · `github.com` | 🔴 403 |
+| `huggingface.co` · `arxiv.org` · `aclanthology.org` | 🔴 000 |
+
+🔵 **The npm result is worth more than one row.** This KB's PHP/JS platform tier (Chamilo, Eloom,
+Forma LMS, `ZeydSaeed/SIS`) has been **payload-only** for several passes, and `P470` is an unresolved
+Apache-2.0 claim on `formalms/formalms` that **Packagist 404 could not settle**. A reachable npm registry
+does not resolve Packagist, but it does mean the **JS half of that tier can get a second channel** —
+and it should be tried before any more rows are left unconfirmed.
+
 ## 2026-10-07 — thirty-fifth pass: two EMEA permissive foundations that were here all along, and an MIT full LMS
 
 > **Append-only.** Newest dated section on top; history preserved below.

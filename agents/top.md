@@ -4,6 +4,158 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🔴 Thirty-sixth pass, 2026-10-07 — the probe that found the agents misread one of their licences
+
+**Every licence below was read from the repository's own payload on `raw.githubusercontent.com` on
+2026-10-07**, branch- and case-aware (16 filenames × `main` **and** `master`), then **re-classified
+through this KB's shared classifier** `compose/code/lib/license_family.sh`. **No star counts.**
+
+🔵 **Channel census, re-measured this pass.** `api.github.com` → **403**, `github.com` → **403**,
+`huggingface.co` → **000**, `arxiv.org` → **000**, `aclanthology.org` → **000**. 🟢 **Two channels are
+open and both were used: `raw.githubusercontent.com` (200) and `pypi.org` (200).** 🆕
+**`registry.npmjs.org` → 200, newly measured and not previously recorded as reachable here** — a
+second-channel route for the JS/PHP tier that future passes should use.
+
+### 🔴 `P473` — the discovery probe said "GRANTED" about a licence that forbids commercial use
+
+This pass wrote a fresh probe to sweep candidates, because sweeping is what a discovery pass does. It
+reported `CRSS-AI/agentic-se-course-early-2026` as **`GRANTED … UNKNOWN`** on a 822-byte `main/LICENSE`.
+🔴 **The payload is Creative Commons Attribution-**NonCommercial**-4.0.** Read verbatim:
+*"NonCommercial — You may not use the material for commercial purposes."*
+
+| Classifier | Family | Commercial use |
+|---|---|---|
+| This pass's ad-hoc probe | `UNKNOWN` | — **not asked** |
+| 🟢 `compose/code/lib/license_family.sh` (shared, hardened) | 🟢 **`CC-BY-NC-4.0`** | 🔴 **`PROHIBIDO`** |
+
+🟢 **The control was already correct and already in the tree.** Sourcing it returns the right answer on
+the first call — it was never run, because the probe was new code. 🔴 **`P250` is explicit that
+`UNKNOWN` is indistinguishable from "commercial use is PROHIBITED", which are opposite answers to the
+only question this KB exists to answer**, and `P237` is explicit that a classifier written from scratch
+reintroduces defects the shared one already paid for. **Pass 36 proved both at the discovery stage
+rather than the instrument stage** — a layer neither finding had been tested on, because `P237`/`P250`
+hardened the *shelf* instruments and said nothing about the throwaway script that feeds them.
+
+> **`P473`.** A discovery probe is a shelf instrument. It must emit the **commercial-use column** from
+> the shared classifier, or its `GRANTED` rows are **not shelf-ready** and must not be written as
+> findings. "Has a `LICENSE` file" is a statement about a filename, not about a grant.
+
+🔵 **And this is where it bites hardest in *this* industry, which is why it surfaced here and not in
+gaming or financial.** Education KBs shelve **curricula, lesson plans, item banks and courseware**, not
+only code — and **the OER tier is where `CC BY-NC` actually lives**. A Creative Commons NC licence sits
+at `LICENSE` in the ordinary place, at an ordinary size, and is **invisible to a filename-based probe**.
+Every pass that widens this KB toward courseware raises the prior on meeting one. 🔵 **The shelf already
+had the right shape for it: `P250`'s two-column rule (family *and* commercial use) is what makes an NC
+row representable at all.**
+
+### 🟢 Agents added this pass — 5 granted, each placed in a region
+
+| Agent | Licence (payload → shared classifier) | Region | What it is |
+|---|---|---|---|
+| [`rubelw/OSSS`](https://github.com/rubelw/OSSS) | 🟢 **Apache-2.0** — `main/LICENSE`, **11,363 B** → `Apache-2.0` / commercial **OK**. **Three channels**: 🟢 `pyproject.toml` `license = { text = "Apache-2.0" }`; 🟢 **PyPI `open-schools`** → `License :: OSI Approved :: Apache Software License`, `repository` resolving back to this repo | 🟢 **North America** | 🆕 **Open Source School Software — a K-12 SIS with the agent tier inside the tree.** FastAPI + Keycloak SSO + SQLAlchemy + PostgreSQL, Next.js front end, polyglot monorepo; **Ollama + MetaGPT + A2A** named in the architecture. Covers governance, student info, accounting, activities and **transportation**. ⚠️ **Self-declared "active development"** — README, 7 Nov 2026: *"working to on step machine and logic for workflows, gates, boundaries"*. **Pilot-tier, not production-tier** |
+| [`BaijayantaRoy/bandup`](https://github.com/BaijayantaRoy/bandup) | 🟢 **MIT** — `main/LICENSE`, **1,071 B** → `MIT` / **OK**. 🟢 README badge agrees; 🔴 PyPI `bandup` **404** (not published) | 🟢 **APAC** | 🆕 **Rubric-bound marking for named Singapore papers.** PSLE composition (Content /20 + Language /20 = **/40**) and A-Level General Paper (Content /30 + Language /20 = **/50**); O-Level /30 declared as coming. **Local-first by default via Ollama**, no account and no telemetry, with a **persistent on-screen warning the moment a non-local model is selected**. Handwriting/OCR as a **separately chosen** model (phone photos, scans, multi-page PDF, transcribed verbatim with mistakes preserved). Tracked-changes word-level diff, per-error explanations, next-band rewrite from the pupil's own words. English + **Hindi** with script detection. ⚠️ **Bands are explicitly unofficial**, SEAB/Cambridge-*style* descriptors |
+| [`dikshant182004/MathTutor`](https://github.com/dikshant182004/MathTutor) | 🟢 **MIT** — `master/LICENSE`, **1,068 B** → `MIT` / **OK** | 🟢 **APAC** | 🆕 **A JEE (India) maths tutor that is a reference architecture, not a prompt.** **14-node LangGraph** pipeline: intent routing → ReAct tool loop → **a dedicated critic agent that verifies its own answer** → explanation generation. **Episodic + semantic + procedural long-term memory in Redis**, tracking which topics a student struggles with and which strategies work for them across sessions. **Hybrid CRAG retrieval: BM25 + Cohere dense + reciprocal rank fusion.** SymPy calculator, Tavily MCP web search, FAISS RAG. Text / image (OCR) / audio (ASR) input. 🔵 **The self-verification and memory layers are the transferable parts** |
+| [`AI-for-Education/lesson-plan-parse-mbsse`](https://github.com/AI-for-Education/lesson-plan-parse-mbsse) | 🟢 **MIT** — `main/LICENSE`, **1,065 B** → `MIT` / **OK**; © **Fab Data** | 🟢 **EMEA** | 🆕 **Sierra Leone's national lesson plans turned into structured data.** Parses the **MBSSE** (Ministry of Basic and Senior Secondary Education) Maths and Language Arts lesson-plan PDFs — **all grades across Primary, JSS and SSS** — into structured JSON, then cleans the text for human consumption. 🟢 **Ships the corpus, not just the code**: raw input plus parsed and cleaned outputs as public `.json.gz`. 🔵 **Most steps are rule-based; LLMs are used only for the cleaning pass** — the cheap, auditable division of labour |
+| [`eduagarcia/lm-evaluation-harness-pt`](https://github.com/eduagarcia/lm-evaluation-harness-pt) | 🟢 **MIT** — `main/LICENSE.md`, **1,067 B** → `MIT` / **OK** | 🟢 **LATAM** | 🆕 **The evaluation suite behind the Open Portuguese LLM Leaderboard.** Fork of EleutherAI's `lm-evaluation-harness` adapted for Portuguese, backed by **CEIA at the Federal University of Goiás (UFG), Brazil**. Portuguese task suite; **direct-response** evaluation (not log-probs only) so instruction-tuned chat models are measurable; automatic chat-template detection; **vLLM** and **LiteLLM** backends; F1-macro and Pearson to match each benchmark's original metric; reasoning extraction; UTF-8/accent handling. 🔵 **This is how a Portuguese-language tutor deployment justifies its model choice with evidence instead of vendor claims** |
+
+🔴 **Not added — and the row exists so no later pass promotes it off its name:**
+[`CRSS-AI/agentic-se-course-early-2026`](https://github.com/CRSS-AI/agentic-se-course-early-2026) —
+**`CC-BY-NC-4.0`, commercial use `PROHIBIDO`** (`P473`). A 5-session inverse-classroom agentic-SE
+curriculum; **readable, teachable, and unusable as a Globant delivery base.**
+
+### 🔴 Ungranted this pass — 4 of 10, each real and each named
+
+[`AI-for-Education/fabdata-llm-retrieval`](https://github.com/AI-for-Education/fabdata-llm-retrieval)
+(exists via `main/README.md` — 🔵 **an end-to-end RAG platform from an org whose other seven repos this
+KB already shelves, and it carries no licence payload**) ·
+[`shakyanaitik0-bot/Agentic_AI_Tutor`](https://github.com/shakyanaitik0-bot/Agentic_AI_Tutor)
+(`main/README.md`) ·
+[`DeaY01/Essay-Marker-Bot`](https://github.com/DeaY01/Essay-Marker-Bot) (`main/README.md`) ·
+[`ZeydSaeed/SIS`](https://github.com/ZeydSaeed/SIS) (`main/package.json`).
+
+**Census closes: 5 granted + 1 granted-but-NonCommercial + 4 ungranted = 10 real repositories probed.**
+Negative control in the same run, `totally-fake-org-zzz9/nope-repo-abc` → **no licence payload *and*
+unresolved on all existence filenames**, correctly separated from the 4 ungranted-but-real rows.
+
+### 🔴 `P474` — place a region from the artifact's domain model, never from the maintainer's name
+
+`rubelw/OSSS` is tagged 🟢 **North America** above. 🔴 **The tempting evidence was the maintainer's
+name in `pyproject.toml`, and that evidence is inadmissible** — a name is not a nationality, and this
+KB's own frontmatter rule says the region is a closed-vocabulary *field* with the country in prose.
+
+🟢 **What places it is the data model.** OSSS encodes **school districts** as the top-level tenant, with
+**district transportation**, **district accounting**, and **board governance** as first-class modules.
+That is the **US district structure**, not a generic school model: an EMEA or APAC deployment does not
+have a yellow-bus transportation department or an elected district board to govern. 🔵 **The schema is
+payload; the surname is not.**
+
+> **`P474`.** Place a region on **what the artifact models or states it serves** — a named national
+> curriculum (`lesson-plan-parse-mbsse` → Sierra Leone), a named national exam (`bandup` → PSLE/A-Level
+> GP; `MathTutor` → JEE), a named institution (`lm-evaluation-harness-pt` → UFG), or an encoded
+> administrative structure (`OSSS` → US districts). **Never on maintainer identity.** When nothing in
+> the payload places it, **leave it unplaced and say so** — this KB has done exactly that for
+> `Eloom-LMS-International` and that row is honest.
+
+🔵 **Why this pass is unusually well placed: 5 of 5 granted rows carry a region, and four different
+placement grounds are represented.** Contrast the standing problem that a finding with no region
+attached is worth less than one that is placed.
+
+### 🔴 `P478` — this pass reproduced the false MIT claim a fifth time, in a recipe, having just written the rule against it
+
+🔴 **`P476` was written earlier in this same pass: "a secondary source's licence string never overwrites a
+payload-verified shelf; order of precedence is payload > shelf > secondary prose." Then this pass drafted
+`P47` in `compose/patterns.md` with `kaushal0494/AITutor-EvalKit` labelled 🟢 MIT — on the authority of a
+search summary, with no probe.**
+
+| Channel | Says |
+|---|---|
+| 🔴 Search summary (the source actually used) | *"available at MIT-licensed python repository"* |
+| 🔴 Its EACL 2026 demo paper | *"released under an MIT license"* |
+| 🟢 **Payload, probed this pass, 19 filenames × `main`/`master`** | 🔴 **`UNGRANTED` — no licence payload.** Repo exists (`main/README.md`) |
+| 🟢 **This KB's own `agents/top.md:518`** | 🔴 **"Fourth reproduction of the false claim … The paper says MIT; the repo does not. The correction holds."** |
+
+🔴 **So the shelf had already caught this four times, named it a recurring false claim, and the fifth
+reproduction came from the pass that wrote the precedence rule.** It would have shipped a **recipe whose
+CI gate was an unlicensed dependency** — the error class with the worst blast radius here, because a
+pattern is *instructions to build something*, and a mislabelled licence inside one propagates into client
+deliverables rather than sitting on a shelf.
+
+🔵 **Why the rule did not protect the recipe, and this is the generalisable part.** `P473` put the
+commercial-use gate in the path of **discovery** — the sweep that finds *new* repos. 🔴 **`AITutor-EvalKit`
+is not a new repo. It was already shelved, so it entered `P47` by *recall*, and nothing gates recall.**
+The probe ran on 10 candidates and on none of the four already-known repos the recipe composed.
+
+> **`P478`.** A repo cited in a **compose pattern** is a dependency of a client build, so it is gated like
+> one **whether or not this pass discovered it**. Re-probe every component of every recipe at write time;
+> **a licence is a fact about today, not a property the shelf owns forever.** `P473`'s gate belongs in the
+> recipe path, not only the discovery path — 🟢 **and `compose/code/p473-probe-commercial-gate/` is now
+> cited as step 0 of both recipes for exactly this reason.**
+
+🟢 **What the correction produced is a better recipe than the wrong one was.** The fix is not a relabel:
+`P47`'s quality gate is now **MIT-verified `AI-for-Education/pedagogy-benchmark`** (payload **1,064 B**,
+re-read this pass) plus the four dimensions **reimplemented from the published paper as a
+specification** — because a scoring rubric described in a paper is an idea, while the repository is code
+you may not vendor. 🔵 **And it makes this KB's standing gap honest where the draft had silently
+"closed" it: "no shippable permissive evaluator of tutoring quality" is STILL OPEN**, and the subfield is
+unlicensed as a whole — `AITutor-EvalKit` no payload, `eth-lre/mathtutorbench` self-contradictory inside
+one README, `UnifyingAITutorEvaluation` silent, Open TutorAI **CC BY-NC-SA 4.0**. 🔴 **A recipe that
+pretends a gap is closed is worse than one that names it and budgets for it** — `P47` now budgets ~2 of
+its 11 weeks for building the evaluator.
+
+### ⚠️ `P475` — the existence probe was case-aware on licences and careless on everything else
+
+`dikshant182004/MathTutor` resolved its licence at **`master/LICENSE`** immediately. Its README then
+returned **404 on `README.md` and `readme.md` × both branches**. 🔴 **The file is
+`master/Readme.md`** — capital `R`, lowercase `e`. Had the licence not been found first, the repo would
+have been logged **`NOPAYLOAD` — "unresolved on all existence filenames"**, the same verdict the
+negative control earns. 🔵 **A fabricated repository and a real one with an unusual capitalisation would
+have been reported identically.**
+
+> **`P475`.** Asymmetric rigor is a defect, not a saving. This probe tried **16 licence filenames × 2
+> branches** and only **3 README spellings**. The existence check decides whether a repo is **real**;
+> it deserves at least the case-variation the licence check gets. Minimum: `README.md`, `readme.md`,
+> `Readme.md`, `README.rst`, `README.txt`, `README`.
+
 ## 🔴 Thirty-fifth pass, 2026-10-07 — a three-pass-old gap claim that this KB's own shelves disprove
 
 **Every licence below was read from the repository's own payload on `raw.githubusercontent.com` on

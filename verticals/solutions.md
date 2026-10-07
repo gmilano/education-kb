@@ -4,6 +4,101 @@ region: Global
 updated: 2026-10-07
 ---
 
+## 🔴 Thirty-sixth pass, 2026-10-07 — the SIS tier gets an in-tree option, and a secondary source tried to overwrite a verified licence
+
+**Licences read from payload on `raw.githubusercontent.com`, 2026-10-07** (branch- and case-aware),
+**each payload re-classified through `compose/code/lib/license_family.sh`** and cross-checked against
+PyPI where published. No star counts: `api.github.com` **403**. Channel census in `agents/top.md`.
+
+### 🔴 `P476` — the search summary said "Sakai, Apache 2.0". The payload and this KB both said ECL-2.0
+
+The query `open source platform education LMS SIS ERP MIT Apache 2026` returned, in prose, *"Sakai is an
+open-source LMS stewarded by the Apereo Foundation … under Apache 2.0 license."* 🔴 **That sentence was
+written into this pass's own trending row before anything checked it.** Measured minutes later:
+
+| Channel | Verdict |
+|---|---|
+| Secondary source (search summary) | 🔴 **"Apache 2.0"** |
+| 🟢 Payload `sakaiproject/sakai` `master/LICENSE`, **11,120 B** | 🟢 **`ECL-2.0`** — title block: *"Educational Community License, Version 2.0 (ECL-2.0)"* |
+| 🟢 This KB's own `repos/foundations.md:527` | 🟢 **already recorded `ECL-2.0` (Sakai, Opencast, Kuali Rice)** |
+
+🔵 **The payload explains exactly why the confusion is structural, and it is not a typo in the source.**
+ECL-2.0 states its own relationship to Apache in its preamble: *"The Educational Community License
+version 2.0 ('ECL') consists of the Apache 2.0 license, **modified to change the scope of the patent
+grant in section 3** to be specific to the needs of the education communities using this license."* 🔴 **So
+"it's basically Apache 2.0" is true about the copyright grant and false about the patent grant — and the
+patent grant is the clause a client's legal review actually argues about.** A summary that flattens ECL
+to Apache is not merely imprecise; it erases the one section that differs.
+
+🔴 **And this is a recurrence, not a new defect.** `agents/trending.md` records that **Sakai was missing
+from this KB for ten passes because of a misread licence line** — *"faltaba por una línea de licencia mal
+leída, no por falta de búsqueda."* The same platform, the same clause, the same direction of error.
+
+> **`P476`.** A secondary source's licence string **never** overwrites a payload-verified shelf row. When
+> prose and payload disagree the payload wins, and when the shelf already holds the payload-verified
+> answer the shelf wins over a fresh search. Order of precedence: **payload > shelf > secondary prose**.
+> 🔵 **Corrected inside the same pass that introduced it** — the row in `agents/trending.md` now reads
+> `ECL-2.0` and says why.
+
+🟢 **The consequence for the allowlist is one this KB already got right and should keep loud.** Sakai is
+**permissive and commercially usable** (`commercial_use_ok` → **OK** on the real payload); it is simply
+not called Apache. The standing education allowlist stays: **MIT, Apache-2.0, BSD (2/3-clause), ECL-2.0,
+PostgreSQL License, ISC** — a three-name `MIT|Apache|BSD` match throws Sakai, Opencast and Kuali Rice away.
+
+### 🟢 The platform licence table — rows re-read from payload this pass
+
+| Platform | Licence (payload, this pass) | Commercial use | Architecture consequence |
+|---|---|---|---|
+| **Sakai** | 🟢 **ECL-2.0** — `master/LICENSE`, **11,120 B**, re-read this pass | 🟢 **OK** | 🟢 **IN-TREE**, with the ECL patent-grant note above. Apereo Foundation; higher-ed consortia, peer assessment, portfolios |
+| **OpenOLAT** | 🟢 Apache-2.0 (pass 35; 10,982 B, `master`) | 🟢 OK | 🟢 **IN-TREE** — full LMS incl. assessment, QTI, SCORM. **EMEA** (Univ. Zurich → frentix GmbH) |
+| **Kolibri** | 🟢 **MIT** — `master/LICENSE`, **1,097 B**, re-read this pass | 🟢 **OK** | 🟢 in-tree — offline-first, not a full LMS |
+| 🆕 **OSSS** | 🟢 **Apache-2.0** — `main/LICENSE`, **11,363 B**; 🟢 PyPI `open-schools` OSI classifier | 🟢 **OK** | 🟢 **IN-TREE — and the first permissive SIS on this shelf.** See below |
+| **Eloom LMS** | 🟢 MIT (pass 35; 1,062 B) | 🟢 OK | 🟢 in-tree; region **unplaced** |
+| **Open edX** platform / extension | 🔴 AGPL-3.0 / 🟢 Apache-2.0 (XBlock) | 🟢 OK both | 🔴 side-car for the platform, 🟢 in-tree via **XBlock** |
+| **Moodle** | 🔴 GPL-3.0-or-later (Packagist `moodle/moodle`) | 🟢 OK | 🔴 **side-car only** — largest installed base. ⚠️ **`moodle/moodle` serves no payload at `LICENSE*` on `main`/`master` this pass** — its text is at `COPYING.txt`; the Packagist channel is what carries this row |
+| **Chamilo** · **ILIAS** | 🔴 GPL-3.0 / GPL | 🟢 OK | 🔴 side-car |
+| **OpenEduCat** | 🟡 LGPL-3.0 (declared) | 🟢 OK | 🟡 Odoo-module model; weaker copyleft, still copyleft. ⚠️ **`OpenEduCat/openeducat` serves no licence payload** — declared-only, unchanged |
+| **Frappe / Frappe Education** | 🟢 MIT (PyPI `frappe`, OSI classifier) | 🟢 OK | 🟢 in-tree. ⚠️ **`frappe/lms` serves no payload at the probed filenames** — the PyPI channel carries it |
+| **Forma LMS** | 🔴 **UNVERIFIED** (`P470`) | ⚠️ unknown | ⚠️ **do not place in either column.** 🆕 **`registry.npmjs.org` is reachable this pass (200)** — the JS half of this tier can finally get a second channel |
+
+### 🟢 `OSSS` — what changes now that the SIS tier has a permissive member
+
+🔵 **Pass 35 established that a full LMS can be extended in-tree (`OpenOLAT`). That left the tier where
+most education engagements actually land still entirely copyleft.** Enrolment, attendance, gradebook,
+fees, timetabling — the *administrative* system — has been **openSIS GPL, RosarioSIS GPL-2.0, OpenEduCat
+LGPL-3.0**, so an AI deliverable touching student records has always been a side-car by default.
+
+[`rubelw/OSSS`](https://github.com/rubelw/OSSS) is **Apache-2.0 on three channels** and is a **K-12 SIS
+with the agent tier inside the tree** — `Ollama + MetaGPT + A2A` named in its own architecture, over
+FastAPI + **Keycloak SSO** + SQLAlchemy + PostgreSQL, with a Next.js front end. Modules: governance,
+student info, accounting, activities, **transportation**. 🟢 **Region: North America**, placed on the data
+model — districts as top-level tenant, district transportation, district accounting, board governance
+(`P474`), which is US district structure rather than a generic school.
+
+🔴 **And the caveat has to travel with it every time, or this row does harm.** The README's own banner:
+*"OSSS is still being developed"*, with a dated note (**7 Nov 2026**) that the **state machine and
+workflow/gate logic are still being built**. 🔴 **For a student information system, enrolment and grade
+workflows are not a feature — they are the product.** So:
+
+| Use `OSSS` as | Verdict |
+|---|---|
+| 🟢 The **reference architecture** for "how does an agent tier live *inside* a SIS rather than beside it" | 🟢 **Yes — it is the only permissive example on this shelf** |
+| 🟢 A **pilot / greenfield** base where workflow logic is being written anyway | 🟡 **Defensible, with the maturity disclosed in writing** |
+| 🔴 A **migration target** for a district running openSIS or RosarioSIS today | 🔴 **No.** The workflow engine it would have to replace is the part that is unfinished |
+
+🔵 **The honest framing for a client: `OSSS` changes what is *architecturally possible* in the SIS tier
+without yet changing what is *operationally safe*.** That is still a real change, because it means the
+side-car is now a choice rather than a licence consequence.
+
+### ⚠️ The content tier needs `P250`'s second column, and this is the shelf where that bites
+
+This shelf lists **platforms**, and platforms are code. 🔴 **But the KB's adjacent tiers hold curricula,
+item banks and courseware, and that is where `CC BY-NC` lives.** `CRSS-AI/agentic-se-course-early-2026`
+was probed this pass: a normal `LICENSE` at a normal size, **`CC-BY-NC-4.0`, commercial use
+`PROHIBIDO`**, reported `GRANTED` by a filename-based probe (`P473`). 🟢 **For code, "has a permissive
+licence file" is nearly always a permissive grant. For content, it is often not** — so every
+content-tier row must carry the commercial-use column explicitly, not inherit the code tier's prior.
+
 ## 🔴 Thirty-fifth pass, 2026-10-07 — the permissive platform tier is bigger than this shelf said, and one Apache claim collapses
 
 **Licences read from payload on `raw.githubusercontent.com`, 2026-10-07** (branch- and case-aware,
