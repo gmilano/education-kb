@@ -4,6 +4,155 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-sixth pass, 2026-10-08 — the "non-monotonic capability" headline is **partly measurement noise**, the payload oracle **lies about branch names**, and one new MIT row lands
+
+> 🔵 **This pass's opening hypothesis was that pass 55's `P700` result — capabilities here *flap* —
+> was the correct reading of three passes of contradictory oracle measurements.
+> 🔴 That hypothesis is REFUTED in its causal claim.** 🟢 **Measured this pass with repeated trials,
+> a single probe has a **non-zero false-negative rate**, so "working → failing → working" is
+> *consistent with a stable capability plus one noisy probe*. 🟢 **The remedy is not more
+> suspicion, it is `n ≥ 3`.**
+
+### 🟢 `P713` — every oracle re-measured (`P700`), and this time **with repetition**, which changed the conclusion
+
+🟢 **Run before any finding was written. Single probe first, then `n = 6`:**
+
+| Oracle | Pass 54 | Pass 55 | 🟢 **Pass 56, 1 probe** | 🟢 **Pass 56, `n = 6`** |
+|---|---|---|---|---|
+| `git ls-remote` | 🔴 `FAILS` | 🟢 WORKS | 🟢 exit `0` | 🟢 **`0 0 0 0 0 0`** — and exit `128` on a nonexistent slug → **discriminates** |
+| `raw.githubusercontent.com` | 🟢 `200` | 🟢 `200` | 🟢 `200` | 🟢 **`200`×6**, `404` on a nonexistent slug |
+| `pypi.org` | 🟢 `200` | 🟢 `200` | 🟢 `200` | 🟢 **`200`×6** |
+| `registry.npmjs.org` | — | 🟢 `200` | 🟢 `200` | 🟢 **`200`×6** |
+| `repo.packagist.org` | — | 🟢 `200` | 🔴 **`000`** | 🟢 **`200`×6** — the single probe was **wrong** |
+| `packagist.org` (web host) | — | — | 🟢 `200` | 🟡 **`200 200 200 000 200 200`** — **1 failure in 6** |
+| `github.com` · `api.github.com` · `codeload` | 🔴 `403` | 🔴 `403` | 🔴 **`403`** | 🔴 **`403`** |
+
+🔴 **The first `repo.packagist.org` probe of this pass returned `000`, and six consecutive retries
+returned `200`.** 🟡 **`packagist.org` then failed 1 of 6 under identical conditions.** 🟢 **So the
+environment produces transient failures at a rate high enough to corrupt a one-probe measurement.**
+
+> 🟢 **`P713`.** *`P700` said "re-measure every pass". That is necessary and **not sufficient**: a
+> single probe cannot distinguish a lost capability from a transient, and the error is a **false
+> negative**, which `P701` already established is the expensive direction — it silently removes a
+> method. **Measure each oracle `n ≥ 3` and treat any success as success.*** 🔵 **Cost: ~20 `curl`
+> calls.** 🔵 **This does not overturn `P700`'s rule, it corrects its *rationale*: pass 54's
+> `ls-remote FAILS` is now better explained as one unlucky probe than as a capability that flapped.**
+
+### 🔴 `P714` — `raw.githubusercontent.com` silently resolves **`master` to the default branch**, so branch-name provenance is **not verifiable through the payload**
+
+🔴 **Noticed because `main/LICENSE` *and* `master/LICENSE` both returned `200` for four unrelated
+repos — which should be impossible if only one of those branches exists.** 🟢 **Measured:**
+
+| Repo | `refs/heads/main` | `refs/heads/master` | `main/LICENSE` | `master/LICENSE` |
+|---|---|---|---|---|
+| `The-LLM-Data-Company/rubric` | 🟢 exists | 🔴 **absent** | `200`, **1 077 B** | 🔴 `200`, **1 077 B** |
+| `CAHLR/OATutor` | 🟢 exists | 🔴 **absent** | `200`, **1 105 B** | 🔴 `200`, **1 105 B** |
+| `Dmoayad/essay-grader-llm` | 🟢 exists | 🔴 **absent** | `200`, **35 149 B** | 🔴 `200`, **35 149 B** |
+| `scaleapi/researchrubrics` | 🟢 exists | 🔴 **absent** | `200`, **1 078 B** | 🔴 `200`, **1 078 B** |
+
+🟢 **`ls-remote --symref` confirms all four default to `refs/heads/main`; none has a `master` head.**
+🟢 **The alias is specific, not blanket** — `nonexistent-branch-zzz9/LICENSE` returns **`404`**, while
+`HEAD/LICENSE` and `refs/heads/main/LICENSE` both return `200`.
+
+🔵 **Why this matters to a shelf that publishes byte counts as provenance (`P704`).** 🔴 **A
+provenance line reading `master/LICENSE … 1 105 B` would be *false about the ref* and still produce
+the correct bytes** — the payload cannot falsify it. 🟢 **Every `main/LICENSE` claim on this shelf is
+therefore really a claim about *the default branch at read time*, which is a moving target.**
+
+> 🔴 **`P714`.** *A branch name is **not** provenance through this oracle: `master` is aliased to the
+> default branch and cannot be distinguished from a real one by the payload. 🟢 **Provenance that
+> needs to be reproducible must pin the commit SHA** (available from `ls-remote`), not a branch
+> name.* 🆕 **`Gap 268` — no row on this shelf currently carries a SHA.**
+
+### 🔴 `P715` — the README-false-licence family has a **second shape**, and it is the more dangerous one
+
+🟢 **`P702` established that `kaushal0494/AITutor-EvalKit` asserts `MIT` in its own README with
+**no licence file at all**. 🟢 **This pass measured a second repo in the same family with the
+opposite structure** — the licence file *exists* and *contradicts* the README:
+
+| `Dmoayad/essay-grader-llm` | Measured first-hand |
+|---|---|
+| `main/LICENSE` | 🟢 **`200`, 35 149 B** — payload opens *"GNU GENERAL PUBLIC LICENSE / Version 3, 29 June 2007"* |
+| `README.md` line 44 | 🔴 *"This project is licensed under the MIT License."* |
+| 🟢 **This KB's existing row** | 🟢 **`GPL-3.0 ⚠️`** — **correct, and now confirmed from payload** |
+
+🟢 **The shelf wins this one.** 🔵 **But the taxonomy is the finding, because the two shapes fail
+differently:**
+
+| Shape | Example | Payload | Consequence of trusting the README |
+|---|---|---|---|
+| 🔴 **Ungranted** | `AITutor-EvalKit` | no licence file | you ship code with **no grant** |
+| 🔴 **Mis-granted** | `essay-grader-llm` | `GPL-3.0`, 35 149 B | you ship **copyleft** believing it permissive |
+
+> 🔴 **`P715`.** *A README licence assertion is **never** the grant — in both known shapes it was
+> false. 🔴 **Mis-granted is the worse error**: the code genuinely works and is genuinely usable, so
+> nothing stops a team shipping it, and the obligation surfaces only at distribution.* 🟢 **The grant
+> is the `LICENSE` payload, read first-hand, every time.** 🆕 **`Gap 269` — no systematic
+> README-vs-payload sweep exists across the 643 shelved repos.**
+
+### 🟢 `P716` — one new MIT row, confirmed by **three independent oracles**
+
+🟢 **The mandated agent query was run globally and in all four regions. Its education-specific yield
+was already shelved (`P497`, seventh week). 🟢 **One genuinely new row came from a narrower
+assessment query** and is admitted because three oracles agree:
+
+| Oracle | Reading |
+|---|---|
+| 🟢 `raw` payload | `MIT License` / *"Copyright (c) 2025 The LLM Data Company"* — **1 077 B stored, 1 076 B stripped** (`P704` convention: stored) |
+| 🟢 `pypi.org/pypi/rubric/json` | `license_expression: MIT`, classifier `License :: OSI Approved :: MIT License`, **v2.2.0**, homepage resolves to the same repo |
+| 🟢 `ls-remote` | exists, **84 refs**, `main` @ `eb0755a1c4682cd20c490550bd6260ccea8bafe0` |
+| 🟢 README badge | `license-MIT-blue.svg` → `blob/main/LICENSE`, which **exists** (🔵 contrast `P702`, where the identical badge pattern pointed at a `404`) |
+
+| Agent / library | Repo | Licence (read first-hand) | Holder | What it is |
+|---|---|---|---|---|
+| **rubric** | https://github.com/The-LLM-Data-Company/rubric | 🟢 **MIT** · `main/LICENSE` **1 077 B** · SHA `eb0755a1` | *The LLM Data Company, 2025* | Python library for **LLM-based evaluation against weighted rubrics**; multi-provider (OpenAI / Anthropic / local). 🟢 **84 refs**, **v2.2.0 on PyPI**. 🟡 **Not education-specific** — it is the scoring primitive, not a grading product; the pedagogy is yours. 🟢 **Drops directly into `P710`'s defensible-grading pipeline as the rubric layer.** |
+
+🟢 **This is the first shelf row to carry a **commit SHA**, per `P714`.**
+
+### 🔴 `P724` — `P704` named a byte convention and **the same pass applied the other one to 3 of its 4 rows**
+
+🟢 **`P704` (pass 55) diagnosed a `1 104` / `1 105 B` contradiction as a **convention** problem and
+concluded: *"This pass publishes file size including the trailing newline, and says so."*
+🔴 **Re-measured both ways this pass, every row that pass published:**
+
+| Row | 🟢 **stored** (`curl \| wc -c`) | **stripped** (`printf '%s' "$(curl)"`) | Pass 55 published | Which convention it actually used |
+|---|---|---|---|---|
+| `CAHLR/OATutor` | **1 105** | 1 104 | **1 105** | 🟢 **stored** — as declared |
+| `Ebimsv/AITutorAgent` | **1 072** | 1 071 | **1 071** | 🔴 **stripped** |
+| `mitodl/open-learning-ai-tutor` | **1 069** | 1 068 | **1 068** | 🔴 **stripped** |
+| `zijinz456/OpenTutor` | **1 068** | 1 067 | **1 067** | 🔴 **stripped** |
+
+🔴 **Three of four rows contradict the convention stated in the sentence directly above them.**
+🔵 **The irony is load-bearing, not decorative:** `P704`'s own argument was that *"a byte count
+published as provenance must name its convention, or it manufactures a contradiction between two
+correct readings"* — 🔴 **and it then manufactured exactly that contradiction, in 3 of 4 rows, by
+naming one convention and applying the other.**
+
+> 🔴 **`P724`.** *Naming a convention does not apply it. 🟢 **A declared convention needs a check that
+> re-derives every published figure under it** — otherwise the declaration is documentation of an
+> intention, and the figures stay mixed.* 🔵 **Same shape as `P723`: the instrument was right and its
+> **scope** excluded the document it was written in.*
+
+### 🟢 Rows re-confirmed this pass — re-read first-hand, **stored** convention, SHA-pinned
+
+🟢 **All four re-read from payload this pass (`n ≥ 3`, `P713`), byte counts corrected to the stored
+convention per `P704`, and SHA-pinned per `P714`:**
+
+| Agent / library | Licence (read first-hand) | Bytes (stored) | Refs | HEAD SHA |
+|---|---|---|---|---|
+| **OATutor** | 🟢 `MIT License` | **1 105 B** | 60 | `939eb0e3` |
+| **AITutorAgent** | 🟢 `MIT License` | 🔴 **1 072 B** (was 1 071) | 1 | `09fdd672` |
+| **MIT Open Learning AI Tutor** | 🟢 `MIT License` | 🔴 **1 069 B** (was 1 068) | 66 | `5709ef2c` |
+| **OpenTutor** | 🟢 `MIT License` | 🔴 **1 068 B** (was 1 067) | 11 | `5fea390a` |
+| **rubric** 🆕 | 🟢 `MIT License` | **1 077 B** | 84 | `eb0755a1` |
+
+🔴 **Read `P703` before using `OATutor`**: its content enters by submodule and is granted **per
+item**, 75,7 %, not in bulk.
+🔴 **Still refused:** `AITutor-EvalKit` — no grant text exists (`P702`), fifth refusal.
+🔴 **Still flagged copyleft:** `Dmoayad/essay-grader-llm` — `GPL-3.0`, **35 149 B**, now
+payload-confirmed against its own README's MIT claim (`P715`).
+🔴 **No star counts published**: both channels that carry them are `403` (`P713`).
+
 ## 🟢 Fifty-fifth pass, 2026-10-08 — the capability claim inverted **again, in the other direction**, and the shelf's worst row is one the instruments already fixed
 
 > 🔵 **This pass's opening hypothesis was that pass 54's oracle map could be inherited, since it was

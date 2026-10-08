@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-sixth pass, 2026-10-08 — week of 2026-10-08: the mandated query is saturated for the **seventh** week, and the week's movement is a **new MIT rubric layer** plus an oracle that lies about refs
+
+⏱️ **Tenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+🟢 **Oracle map re-measured before any datum, and this pass `n = 6` rather than one probe
+(`P713`, `agents/top.md`):** `raw.githubusercontent.com` **`200`×6** (`404`-discriminating),
+`pypi.org` **`200`×6**, `registry.npmjs.org` **`200`×6**, `repo.packagist.org` **`200`×6 after a
+first probe returned `000`**, `git ls-remote` **exit `0`×6**. 🟡 `packagist.org` **failed 1 of 6**.
+🔴 `github.com` `403`, `api.github.com` `403`, `codeload.github.com` `403` — **no star counts again.**
+
+### 🟢 What actually moved this week
+
+| Movement | Datum |
+|---|---|
+| 🆕 **New MIT row admitted** | `The-LLM-Data-Company/rubric` — MIT (**1 077 B**), **v2.2.0** on PyPI, **84 refs**, SHA `eb0755a1`. Weighted-rubric LLM evaluation library. 🟢 **Three oracles agree** (`P716`). |
+| 🔴 **Method defect found in the oracle** | `raw.githubusercontent.com` aliases **`master` → default branch**: 4/4 repos tested have **no `refs/heads/master`** yet return byte-identical `200` from `master/LICENSE` (`P714`). |
+| 🔴 **Licence-claim taxonomy extended** | `Dmoayad/essay-grader-llm` README asserts **MIT**; payload is **GPL-3.0, 35 149 B**. The KB's existing `GPL-3.0 ⚠️` row is **confirmed** (`P715`). |
+| 🟡 **A headline reinterpreted** | Pass 55's "capabilities are non-monotonic" is **partly single-probe noise** (`P713`). |
+
+### 🔴 The mandated query, counted
+
+🟢 **`top open source AI agents education 2026 github MIT`, run globally and once per region.**
+🔴 **Education-specific yield: zero new.** 🟢 **Named returns were general-purpose agent lists**
+(OpenHands, CrewAI, opencode, OpenClaw, browser-use, Vocode, `500-AI-Agents-Projects`,
+`awesome-ai-agents-2026`, Microsoft `AI Agents for Beginners`, HF Agents Course) — 🔵 **all of them
+either already shelved or not education software at all.** 🟡 **The channel itself said so:**
+*"I didn't find a ranking specifically for education-focused open-source agents under MIT."*
+
+> 🔴 **`P497` holds for a seventh week.** *The mandated agent query no longer discriminates education
+> from general agent tooling. 🟢 **The one new row this pass came from a narrower assessment query,
+> not from the mandated one** — which is now the reliable pattern, recorded for the fourth pass
+> running.*
+
+### 🔵 Declared gaps this week
+
+🔴 **No star counts** (both channels `403`, seventh week).
+🔴 **No SHA-pinned provenance** on any shelved row but the new one — 🆕 `Gap 268`.
+🔴 **No README-vs-payload licence sweep** across the 643 shelved repos — 🆕 `Gap 269`.
+🔴 **No education-specific agent in the mandated channel** — seventh week, and now attributable to
+query shape rather than to an absence of projects.
+
+
 ## 🟢 Fifty-fifth pass, 2026-10-08 — week of 2026-10-08: the mandated query is saturated for the **sixth** week, and the week's movement is that **`ls-remote` came back from the dead**
 
 ⏱️ **Ninth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

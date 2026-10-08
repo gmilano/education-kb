@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-sixth pass, 2026-10-08 — the vertical channel returns the **same structural answer for the seventh week**, and this pass states it as a finding instead of a gap
+
+⏱️ **Tenth pass of this date.** 🟢 **The mandated vertical query returned a genuine ERP/CRM channel
+again** (as in pass 55, unlike pass 54's translated glossaries). 🔴 **No new education platform is
+admitted**, and for the seventh consecutive week the reason is the same — which is now enough
+repetition to publish as a structural property of this market rather than as a missing datum.
+
+### 🔴 `P717` — the education-vertical licence trade, confirmed seven weeks running
+
+🟢 **Every platform the mandated query named, with its licence as this shelf records it:**
+
+| Platform | Education-specific? | Licence | Permissive? |
+|---|---|---|---|
+| **OpenEduCat** (`openeducat/openeducat_erp`) | 🟢 **yes** — full institute ERP | 🔴 **LGPL-3.0** | 🔴 **no** (weak copyleft) |
+| **Frappe Education / ERPNext** | 🟢 **yes** — enrolment, assessment, fees | 🔴 **GPL-3.0** | 🔴 **no** |
+| **Moodle** | 🟢 **yes** — LMS | 🔴 **GPL-3.0** | 🔴 **no** |
+| **Open edX** | 🟢 **yes** — LMS/MOOC | 🟡 **AGPL-3.0** (platform) | 🔴 **no** |
+| **Canvas LMS** | 🟢 **yes** — LMS | 🟡 **AGPL-3.0** | 🔴 **no** |
+| **Apache OFBiz** | 🔴 **no** — generic suite | 🟢 **Apache-2.0** | 🟢 **yes** |
+| **Aureus ERP** | 🔴 **no** — generic, Laravel/Filament | 🟢 **MIT** | 🟢 **yes** |
+| **Huly** | 🔴 **no** — generic platform | 🟢 **Apache-2.0** | 🟢 **yes** |
+| **Odoo** (Community) | 🔴 **no** — generic, education via OpenEduCat | 🔴 **LGPL-3.0** | 🔴 **no** |
+
+> 🔴 **`P717`.** *In education verticals the two axes are **anti-correlated**: every platform that
+> already knows what a student, a course and an assessment are is **copyleft**; every permissively
+> licensed platform is **domain-ignorant**. 🟢 **There is no permissive education platform to adopt —
+> the choice is between accepting copyleft and building the domain model.*** 🔵 **Seven weeks of the
+> mandated query have produced no counterexample, and the channel independently reached the same
+> conclusion this pass.**
+
+### 🟢 What this means for a build, concretely
+
+🟢 **The trade is not symmetric, and the deciding factor is *where the AI sits*, not the platform:**
+
+| If the AI… | Then | Because |
+|---|---|---|
+| 🟢 **sits beside** the LMS (own service, talks LTI / xAPI / REST) | 🟢 **copyleft platform is fine** | GPL/AGPL obligations attach to the platform's own code and its derivatives — **a separate service across a network/LTI boundary is not a derivative** |
+| 🔴 **is a plugin inside** Moodle / Open edX / Canvas | 🔴 **obligations reach your code** | a plugin links into the platform; AGPL additionally reaches **users over a network** |
+| 🟢 **needs a permissive base** and the domain model is yours | 🟢 **OFBiz / Aureus / Huly + your own schema** | you pay in domain modelling, not in licence obligation |
+
+🟢 **So the default recommendation this shelf has converged on: keep the AI out-of-process and
+integrate over LTI 1.3 / xAPI.** 🔵 **It is also the architecture the regional instruments push
+toward independently (`intel/market.md`), because an out-of-process scorer is where a human-review
+gate can actually be placed.**
+
+### 🔵 Declared gaps
+
+🔴 **No permissive education-specific platform exists** — seventh week, now stated as `P717` rather
+than carried as an open gap.
+🟡 **Licences in the table above are as recorded by this shelf across prior passes; this pass
+re-read only the four repos in `P714`.** 🟢 **Named so the provenance is not overstated.**
+
 ## 🟢 Fifty-fifth pass, 2026-10-08 — the vertical query finally returned a **real channel** instead of a translated glossary, and the answer is a licence trade this shelf had not stated
 
 ⏱️ **Ninth pass of this date.** 🟢 **The mandated vertical query behaved differently from pass 54** —

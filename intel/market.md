@@ -4,6 +4,121 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-sixth pass, 2026-10-08 — the EU deadline this KB beat the channel on four times is a **ceiling, not a floor**, and that inverts the runway
+
+> 🔵 **This pass's opening hypothesis was that the mandated regional channel would again yield
+> instruments already shelved, making the pass a confirmation.
+> 🟡 That hypothesis is CONFIRMED for the instruments and REFUTED for their reading.** 🟢 **The four
+> regional queries returned nothing this shelf did not hold — but the EU date it holds turns out to
+> have a *mechanism* nobody recorded, and the mechanism points the opposite way from the comfort the
+> deferral implied.**
+
+### 🟢 `P718` — `2027-12-02` is the **backstop**, not the start, so the Annex III runway is **not guaranteed**
+
+🔴 **The channel claimed, again, that education high-risk duties "apply from August 2026".** 🟢 **This
+KB's `2027-12-02` is confirmed correct for the fifth pass running** — August 2026 is the
+**pre-Omnibus baseline**, superseded. 🟢 **But the newly measured detail is the conditionality:**
+
+| Element | Reading obtained this pass |
+|---|---|
+| 🟢 Annex III stand-alone high-risk (where education sits) | **moved `2026-08-02` → `2027-12-02`** by the Digital Omnibus |
+| 🔴 **Nature of that date** | 🔴 **an absolute backstop** — *"absolute backstop dates are set regardless … December 2, 2027 for Annex III"* |
+| 🔴 **Can it bite earlier?** | 🔴 **Yes** — the deferral is **tied to publication of harmonised standards**; obligations can begin **sooner** if standards publish sooner |
+| 🟢 Annex I embedded products | **2028-08-02** |
+| 🟢 **Article 50 transparency / marking** | 🟢 **NOT deferred — live since `2026-08-02`**, with the already-deployed backstop at **`2026-12-02`** |
+| 🟢 Prohibited practices | enforceable since **2025-02-02** |
+
+🟡 **Sources disagree on whether Official-Journal publication has completed**; one holds that until
+it does, `2026-08-02` remains the technical legal baseline. 🔵 **Recorded as a live ambiguity, not
+resolved — `api`/EUR-Lex primary text was not reachable from this environment
+(`digital-strategy.ec.europa.eu` and law-firm hosts are both egress-blocked).**
+
+> 🟢 **`P718`.** *This shelf has repeatedly read the Annex III deferral as **runway**, and paired it
+> with the opportunity that *"harmonised standards are not ready, so standards-neutral evidence
+> tooling holds value"*. 🔴 **That opportunity is right and the runway framing is wrong**: the same
+> standards whose absence created the deferral are the trigger that **ends** it, so progress on
+> standards **shortens** the window rather than extending it. 🟢 **The correct planning assumption is
+> "Annex III duties can arrive before `2027-12-02`", and `2026-12-02` Article 50 is unaffected and
+> three weeks out.*** 🆕 **`Gap 270`: the OJ publication status is unresolved from this environment.**
+
+### 🟢 Regional measures re-confirmed this pass
+
+🟢 **Four mandated regional queries run. 🔴 **Zero new instruments** — every one returned is already
+shelved, which at pass 56 is the correct outcome and is recorded as confirmation:**
+
+| Region | Instruments re-confirmed | Adoption measured |
+|---|---|---|
+| **North America** | **134 bills / 31 states**; **35+** states with departmental guidance; **Ohio** district AI policy due **2026-07-01**; **Oklahoma SB 1734** (educator supervision, no high-stakes AI, annual parent disclosure, written policy before 2027–28); **California AB 1159** (bars student data for model training, private right of action); **Illinois SB 3735** (family opt-out of AI grading); **Alabama HB 329** (CS+AI required to graduate); US DoE AI grant priority final **2026-04-13** | **NYC**: generative-AI moratorium Pre-K–8, ~**600 000** students, HS AI-literacy required; **Boston**: first major district to mandate HS AI literacy |
+| **EMEA** | **EU AI Act** Annex III — 🟢 **`2027-12-02` backstop (`P718`)**, Art. 50 **live**; UNESCO GenAI guidance; **OECD 2026 Digital Education Outlook** (move beyond general-purpose to purpose-built educational AI); UK AI Opportunities Action Plan | 🔴 **only 10 %** of 450+ institutions have formal AI guidelines; Finland / Estonia / Netherlands lead K-12 integration; UK **£4 m** for lesson-planning and marking tools |
+| **APAC** | **South Korea AI Basic Act** live **2026-01-22** + enforcement decree (foreign providers need a domestic representative above thresholds); **Vietnam AI law** live **2026-03-01**, extraterritorial, **education among six high-risk sectors** (automated assessment, behavioural monitoring), high-risk **only where output is the sole basis without meaningful human review** (`P706`); **Taiwan AI Basic Act** Dec 2025 | **>50 %** of APAC digital-native businesses still at "repeatable" AI maturity; China / India / Japan lead investment |
+| **LATAM** | 🔴 **no binding education-AI instrument anywhere in the region** — Brazil **PL 2.338/2023** in the Chamber, Chile's risk-based executive bill, Colombia **CONPES 4144** (policy-first, budget to **2030**); **IDB TN-3241** argues for enabling regulation | 🟢 **UNESCO IESALC, 200 institutions / 19 countries: 87 % use AI in ≥1 area, only 26 % have any formal framework** (private non-profit **84 %** > public **68 %** > private for-profit **52 %**); TALIS 2024 teachers: Brazil **56 %**, Chile **55 %**, Colombia **53 %**, Costa Rica **52 %** vs OECD **36 %**; Uruguay **Ceibal 75 %** (2026); UNESCO LAC **Observatory** launched **2026-04-14** at ECLAC Santiago |
+
+🔵 **The four-region convergence on assessment (`P705`) holds, and `P718` sharpens its EMEA leg:**
+🟢 **three regions constrain automated assessment by instrument, LATAM constrains it by nothing while
+adopting it fastest** — and that asymmetry is the whole regional opportunity map below.
+
+## Opportunities by region
+
+🟢 **One `###` per region, closed vocabulary. 🔵 Country names live in the prose; the region is the
+field.**
+
+### North America
+
+🟢 **The buyer is a district or state that has been *ordered to produce a policy* and has no
+engineering to implement it.** 🔴 **Ohio's deadline (`2026-07-01`) has passed and Oklahoma's lands
+before 2027–28, so the demand is immediate and procedural, not visionary.**
+🟢 **Sell: the human-review gate as an auditable artefact.** Oklahoma requires educator supervision
+and bars AI from high-stakes decisions; Illinois requires an **opt-out of AI grading**; NYC bars
+student-facing generative AI below grade 9. 🔵 **Each of those is a *logged decision boundary* —
+build the log, not the model.** 🟢 **`AB 1159`'s bar on training from student data makes
+**no-training-by-default** a saleable default, and its private right of action makes it a liability
+control rather than a feature.** 🟡 **Canada and Mexico returned nothing in this channel — an
+informed gap, not coverage.**
+
+### EMEA
+
+🟢 **The buyer is an institution that will be a *deployer* of a high-risk system and has **no**
+governance — 90 % of 450+ institutions have no formal guideline.** 🔴 **`P718` changes the pitch:
+stop selling "you have until December 2027" and sell "the date is a ceiling that standards can pull
+forward, and Article 50 marking is live now with its backstop on `2026-12-02`."**
+🟢 **Sell: the conformity technical file as a deliverable** — Annex III duties attach to systems that
+evaluate learners or affect access to qualifications, and a vendor who can hand a client a
+pre-assembled technical file plus **standards-neutral** evidence tooling is selling the scarce
+thing. 🔵 **Standards-neutral is the operative word: benchmarks that do not exist yet cannot be
+coded against, so build the evidence *pipeline* and leave the criteria pluggable.** 🟢 **OECD's
+"purpose-built over general-purpose" line is the EMEA procurement argument in one sentence.**
+
+### APAC
+
+🟢 **The buyer is a vendor with extraterritorial exposure it has not modelled.** 🔴 **Korea and
+Vietnam both reach foreign providers; Korea additionally requires a **domestic representative**
+above revenue thresholds, which is a corporate-structure question, not a software one — flag it
+early.**
+🟢 **Sell the `P706` lever, which is unique to this region: Vietnam classifies education AI as
+high-risk *only where its output is the sole basis for a decision without meaningful human review*.**
+🔵 **That makes human review **classification-determining**, not merely a control inside a high-risk
+regime — the opposite of the EU, where Annex III status attaches to the use case regardless.** 🟢 **So
+in APAC a well-placed, well-logged human-review gate can keep a system **out** of the high-risk tier
+entirely; in EMEA the same gate is a requirement *within* it.** 🔴 **Build the gate once, claim
+different things with it per region — and never claim the EU benefit.**
+
+### LATAM
+
+🟢 **The buyer is a university with **87 % adoption and 26 % governance** — the widest
+adoption-to-governance gap measured anywhere this pass, and the only region with no binding
+instrument to anchor a procurement.** 🔴 **That means no compliance deadline to sell against, so
+compliance framing fails here.**
+🟢 **Sell institutional capability instead: the framework itself** — policy, inventory, review
+workflow, teacher-facing guardrails — because **74 %** of institutions must build one and almost
+none has staff for it. 🔵 **Segment by control type: private non-profit (84 % adoption) buys
+capability, public (68 %) buys through ministries and UNESCO/IDB programmes, private for-profit
+(52 %) buys cost reduction.** 🟢 **Entry points are named and funded: UNESCO's LAC **Observatory**
+(ECLAC Santiago, since `2026-04-14`), **CONPES 4144** with budget to 2030, Uruguay's **Ceibal**
+(75 % teacher use — the most mature public deployment in the region), and **IDB TN-3241**'s
+enabling-regulation agenda.** 🔵 **Teacher-side adoption already exceeds the OECD average in four
+countries, so the pitch is *govern what is already happening*, not *adopt AI*.**
+
+
 ## 🟢 Fifty-fifth pass, 2026-10-08 — **automated assessment is now constrained in all four regions by four unrelated instruments**, and the region with no rule is the one already doing it
 
 > 🔵 **This pass's opening hypothesis was that pass 54's `P648` grading pipeline was an EMEA+LATAM
@@ -105,7 +220,7 @@ representative** above revenue/user thresholds) · **Taiwan** (AI Basic Act, Dec
 Australia's **AI Safety Institute** expected operational early 2026). 🟡 **Named APAC market players:
 Google, Microsoft, IBM, Pearson, Byju's; China, India and Japan reported as dominating.**
 
-## Opportunities by region
+## Opportunities by region — superseded (the live block is at the top of this file)
 
 ### North America
 
@@ -204,7 +319,7 @@ instruments, bodies, repos and figures came back; 6 had zero prior reference in 
 🟢 **The six cluster into one layer — assessment — which is why one pass could close it.** 🔵 **A
 clustered yield is more actionable than a scattered one of the same size.**
 
-## Opportunities by region
+## Opportunities by region — superseded (the live block is at the top of this file)
 
 ### North America
 

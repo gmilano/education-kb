@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-sixth pass, 2026-10-08 — week of 2026-10-08: the trending channel is empty of education for the **seventh** week, and the week's real repo news is a **measurement defect**
+
+⏱️ **Tenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+🟢 **Oracle map re-measured first, `n = 6` this pass (`P713`):** `raw` **`200`×6**, `pypi`
+**`200`×6**, `npm` **`200`×6**, `repo.packagist.org` **`200`×6** (first probe `000` — **a false
+negative**), `ls-remote` **exit `0`×6**. 🟡 `packagist.org` **1 failure in 6**. 🔴 `github.com`,
+`api.github.com`, `codeload.github.com` all **`403`**.
+
+### 🔴 `github trending education AI 2026`, counted name by name
+
+🟢 **Run globally and once per region. Education-specific trending repos: zero.** 🟢 **What the
+channel actually returned, and why each was rejected:**
+
+| Returned | Verdict |
+|---|---|
+| `AI Agents for Beginners` (Microsoft, ~56 002★ per channel) | 🔴 **a course, not education software** — and ★ unverifiable (`403`) |
+| `microsoft/generative-ai-for-beginners` | 🔴 same — learning material about AI, not AI for learning |
+| `kamranahmedse/developer-roadmap` | 🔴 general engineering learning paths |
+| `karpathy/nanochat` | 🔴 LLM training stack; pedagogically *useful*, not an education product |
+| `jamwithai/production-agentic-rag-course` | 🔴 a course |
+| `kouweizhu/agents-radar` (digest, 2026-10-04) | 🟡 **a channel, not a repo** — its own listings were "mostly coding and agent tools rather than education" |
+| CEU × GitHub partnership (2026-04) | 🔴 **institutional news, not a repo** — recorded so the gap is not mistaken for coverage |
+
+🟢 **The distinction this channel keeps collapsing is *AI-about-education* vs *education-about-AI*.**
+🔴 **Seventh consecutive week with no education-specific trending repo.**
+
+### 🟢 The week's actual repo finding is about **how this shelf reads repos**
+
+🔴 **`raw.githubusercontent.com` silently resolves `master` to the default branch** (`P714`,
+`agents/top.md`). 🟢 **Measured on four repos — `The-LLM-Data-Company/rubric`, `CAHLR/OATutor`,
+`Dmoayad/essay-grader-llm`, `scaleapi/researchrubrics` — none of which has a `refs/heads/master`,
+all of which return a byte-identical `200` from `master/LICENSE`.** 🟢 **A nonexistent non-alias
+branch (`nonexistent-branch-zzz9`) correctly `404`s**, so the alias is specific, not a blanket `200`.
+
+🔵 **Consequence for every row on this shelf:** a `main/…` provenance line means *the default branch
+when it was read*, not a fixed ref. 🟢 **SHA-pinning is now the standard for new rows** — the first
+is `rubric` @ `eb0755a1c4682cd20c490550bd6260ccea8bafe0`. 🆕 **`Gap 268`.**
+
+### 🟢 New this week
+
+| Repo | Licence (first-hand) | Signal | Note |
+|---|---|---|---|
+| https://github.com/The-LLM-Data-Company/rubric | 🟢 **MIT** · **1 077 B** · SHA `eb0755a1` | **84 refs**, PyPI **v2.2.0** | Weighted-rubric LLM evaluation. 🟡 Not education-specific; it is the scoring primitive for `P710`. |
+| https://github.com/scaleapi/researchrubrics | 🟡 **licence file exists, 1 078 B — not yet classified** | **8 refs** | ICLR 2026 rubric benchmark for *deep-research agents*. 🔴 **Not education** — recorded to close the query, not as a row. |
+
+### 🔵 Declared gaps this week
+
+🔴 **No star counts, seventh week** (`403` on both channels).
+🔴 **No education-specific trending repo, seventh week** — attributable to query shape.
+🔴 **No SHA on any pre-existing row** — 🆕 `Gap 268`.
+
+
 ## 🟢 Fifty-fifth pass, 2026-10-08 — week of 2026-10-08: the trending channel is empty of education for the **sixth** week, and the vertical query changed shape
 
 ⏱️ **Ninth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

@@ -4,6 +4,122 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-sixth pass, 2026-10-08 — four trends: a headline downgraded from physics to noise, an oracle that lies about refs, a licence lie with two shapes, and a deadline that runs backwards
+
+### 🟡 Trend 1 — "capabilities here are non-monotonic" was **over-read**; the mechanism is measurement noise
+
+🔴 **Pass 53: `ls-remote` is "the only working oracle". Pass 54: it `FAILS`. Pass 55: it WORKS, and
+concluded that capabilities *flap*.** 🟢 **Pass 56 measured each oracle six times instead of once:**
+`ls-remote` **exit `0` six times out of six**; `repo.packagist.org` returned **`000` on the first
+probe and `200` on all six retries**; `packagist.org` failed **1 of 6** under identical conditions.
+
+🟢 **So the environment has a measurable transient failure rate, and three passes of contradictory
+one-probe readings are fully explained by it.** 🔵 **The practical difference is large: "capabilities
+flap" licenses re-measuring forever and trusting nothing; "single probes are noisy" prescribes
+`n ≥ 3` and then trusting the result.** 🔴 **And the error direction is the dangerous one — a false
+negative *removes a working method*, which `P701` showed cost this KB fifteen passes of publication.**
+
+> 🟢 **`P713`.** *Re-measure every pass (`P700`) **and** repeat each probe. One probe is not a
+> measurement.*
+
+### 🔴 Trend 2 — the payload oracle **cannot verify a branch name**, so provenance needs a SHA
+
+🔴 **`raw.githubusercontent.com` silently resolves `master` to the default branch.** 🟢 **Four repos,
+none holding a `refs/heads/master`, all returning byte-identical payloads from `master/LICENSE`;
+`HEAD/LICENSE` and `refs/heads/main/LICENSE` also `200`; an invented branch name correctly `404`s.**
+
+🔵 **The deeper point is about what a byte count can and cannot prove.** 🟢 **`P704` made this shelf
+publish byte counts as provenance, which correctly pins *content*.** 🔴 **It does not pin *location* —
+a false ref claim returns the right bytes, so the payload can never falsify it.** 🟢 **Commit SHAs
+are free from `ls-remote`, and the new row carries one.**
+
+> 🔴 **`P714`.** *Content-addressed provenance needs a content address. 🆕 `Gap 268` — 643 shelved
+> rows have none.*
+
+### 🔴 Trend 3 — the README licence lie has **two shapes**, and the shelf had only catalogued one
+
+🟢 **`P702` found `AITutor-EvalKit` asserting MIT twice in its README with no licence file at all.**
+🟢 **This pass found `Dmoayad/essay-grader-llm` asserting MIT in its README while its `LICENSE`
+payload is **GNU GPL v3, 35 149 B**.**
+
+| Shape | Payload | What a README-trusting pipeline ships |
+|---|---|---|
+| 🔴 **Ungranted** | no licence file | code with **no grant at all** |
+| 🔴 **Mis-granted** | a *different*, real licence | **copyleft believed permissive** |
+
+🔴 **Mis-granted is worse.** 🔵 **Ungranted code tends to fail review for other reasons — it is
+unmaintained, unpackaged, unfinished. Mis-granted code works**, so nothing stops a team shipping it,
+and the obligation surfaces at distribution, when it is expensive. 🟢 **This shelf's `GPL-3.0 ⚠️` row
+was already right; what is new is knowing *which* failure mode to sweep for.** 🆕 **`Gap 269`.**
+
+### 🔴 Trend 4 — the EU deadline the shelf treated as **runway** is a **ceiling**
+
+🟢 **`2027-12-02` for Annex III stand-alone high-risk is confirmed for the fifth pass** (the channel's
+"August 2026" is the superseded pre-Omnibus baseline). 🔴 **But it is an *absolute backstop* tied to
+publication of harmonised standards — so obligations can begin earlier if standards land earlier.**
+
+🔵 **This inverts a reading this shelf has carried for several passes.** 🟢 **The shelf correctly
+spotted that absent standards create an opportunity for standards-neutral evidence tooling. 🔴 **It
+then paired that with the assumption of a fixed runway to December 2027 — and those two cannot both
+be relaxed: the standards whose absence creates the opportunity are the trigger that ends the
+deferral.** 🟢 **Progress on standards shortens the window.** 🟢 **Meanwhile Article 50 marking is
+**not** deferred, is live since `2026-08-02`, and its already-deployed backstop lands
+**`2026-12-02` — three weeks out.**
+
+> 🟢 **`P718`.** *Plan for Annex III duties arriving **before** `2027-12-02`, and treat Article 50 as
+> the live obligation it is.* 🆕 **`Gap 270` — Official-Journal publication status unresolved;
+> both the Commission's own domain and the law-firm analyses are **egress-blocked** from here.**
+
+### 🔴 Trend 5 — the pass that **documented** the frontmatter-mimic bug **reintroduced it**, in the sentence describing the fix
+
+🟢 **An earlier pass found a body line reading `region:` at line-start — a wrapped prose sentence a
+compiler scanning `^region:` would read as a region field with an empty value — swept all nine
+working files, fixed one instance, and recorded "re-checked clean".**
+🔴 **Measured this pass: there was one instance live, and it was **inside that pass's own write-up**,
+where the quoted phrase *"per region:"* wrapped so that `region:"*)` began a line.**
+
+🟢 **Fixed by re-wrapping, and the sweep re-run across **every** `.md` in the repo (not the nine
+working files): `region:` / `industry:` / `updated:` at the start of any post-frontmatter line —
+**0 hits**.
+
+> 🔴 **`P723`.** *A sweep that excludes the document reporting the sweep is not a sweep. 🟢 **Prose
+> that quotes a metadata key will reproduce the hazard it describes**, so the check must run over
+> the whole corpus **after** the write, not over the inputs before it.* 🔵 **This is the same shape
+> as `P713` and `P714`: the instrument was sound and its **scope** was wrong.**
+
+### 🔴 Trend 6 — a declared convention is not an applied one: **3 of 4 published byte counts used the convention the same pass rejected**
+
+🟢 **`P704` found a one-byte contradiction, correctly diagnosed it as an unnamed convention, and
+declared: publish the size **including** the trailing newline.** 🔴 **Re-measured this pass, three of
+the four rows that pass published used the **stripped** convention instead** — `AITutorAgent`
+**1 071** (stored: 1 072), `open-learning-ai-tutor` **1 068** (stored: 1 069), `OpenTutor` **1 067**
+(stored: 1 068). 🟢 **Only `OATutor` (1 105) matched the declaration.** 🟢 **All four corrected and
+SHA-pinned** (`P724`, `agents/top.md`).
+
+🔵 **Three of this pass's six trends have the same shape, and that is the pass's real result:**
+
+| Finding | The instrument was | Its scope excluded |
+|---|---|---|
+| `P713` | sound (re-measure every pass) | repetition — one probe is not a measurement |
+| `P723` | sound (sweep for frontmatter mimics) | the document reporting the sweep |
+| `P724` | sound (name the byte convention) | re-deriving the figures under it |
+
+> 🔴 **`P724`.** *A rule published in prose is not a rule applied to data. 🟢 **Every convention this
+> KB declares needs a check that re-derives the published values under it**, or the declaration and
+> the data drift apart in the same pass that introduces both.* 🔵 **`P713`, `P723` and `P724` are one
+> lesson at three scales: **correct method, wrong scope** — and scope is the thing none of the three
+> original findings thought to state.**
+
+### 🔵 Carried forward unchanged
+
+🟢 **`P705`/`P706`** — four regions converge on constraining automated assessment; Vietnam's
+*"sole basis without meaningful human review"* remains the only **classification-determining**
+human-review clause measured, and so the only place a review gate buys tier relief.
+🟢 **`P703`** — `OATutor-Content` is granted **per item**, 75,7 %, not per repo.
+🟢 **`P717`** — education platforms and permissive licences remain **anti-correlated** (`verticals/`).
+🔴 **`P497`** — the mandated agent and trending channels are education-empty for a **seventh** week.
+
+
 ## 🟢 Fifty-fifth pass, 2026-10-08 — four trends: a capability that flaps, four regions converging on one engineering requirement, a correction the instruments already held, and a query whose noun hid a continent
 
 ### 🔴 Trend 1 — a capability claim here is not stale, it is **non-monotonic**
@@ -682,8 +798,8 @@ them had been red for five.
 — `P383-MISSING-REGION`), and 🟢 **`p383` now exits 0, re-run and recorded.**
 
 🔴 **And a second instance of the same class, found by sweeping for it rather than by luck.**
-`intel/trends.md:319` was the bare line **`region:`** — a prose sentence (*"Measured this pass, per
-region:"*) that **line-wrapped onto a line indistinguishable from a frontmatter field**. 🔴 **A
+`intel/trends.md:319` was the bare line **`region:`** — a prose sentence (*"Measured this pass,
+per region:"*) that **line-wrapped onto a line indistinguishable from a frontmatter field**. 🔴 **A
 compiler scanning for `^region:` reads it as a region field with an **empty value***, which is
 precisely the failure mode the brief warns about: each variant becomes its own bucket and the filter
 stops working. 🟢 **Swept across all nine working files, one instance found, re-wrapped, re-checked

@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-sixth pass, 2026-10-08 — **one row added**, and the shelf's provenance convention upgraded from branch name to **commit SHA**
+
+⏱️ **Tenth pass of this date.** 🟢 **One row added** — the mandated foundations channel is saturated
+for the seventh week, but a narrower assessment query yielded a repo that three oracles confirm.
+🔴 **What changed structurally is more important than the row:** this shelf's provenance format was
+**not reproducible**, and now is.
+
+### 🔴 Why `main/LICENSE` was never provenance (`P714`)
+
+🟢 **`raw.githubusercontent.com` aliases `master` to the default branch.** 🟢 **Four repos measured,
+none with a `refs/heads/master`, all returning byte-identical `200` from `master/LICENSE`:**
+
+| Repo | `master` head exists? | `main/LICENSE` | `master/LICENSE` | default ref |
+|---|---|---|---|---|
+| `The-LLM-Data-Company/rubric` | 🔴 no | **1 077 B** | 🔴 **1 077 B** | `refs/heads/main` |
+| `CAHLR/OATutor` | 🔴 no | **1 105 B** | 🔴 **1 105 B** | `refs/heads/main` |
+| `Dmoayad/essay-grader-llm` | 🔴 no | **35 149 B** | 🔴 **35 149 B** | `refs/heads/main` |
+| `scaleapi/researchrubrics` | 🔴 no | **1 078 B** | 🔴 **1 078 B** | `refs/heads/main` |
+
+🟢 **A nonexistent non-alias branch `404`s**, so the oracle discriminates *arbitrary* branch names
+but not the `master` alias.
+
+> 🔴 **`P714`.** *A branch name cannot be falsified by the payload it returns. 🟢 **Provenance on this
+> shelf is therefore `repo + path + byte count (stored, `P704`) + commit SHA`**, and the SHA comes
+> from `ls-remote`, which `P713` confirmed working `6/6`.* 🆕 **`Gap 268`: the 643 rows already
+> shelved carry no SHA, so none is reproducible against a moved default branch.**
+
+### 🟢 Row added this pass
+
+| Repo | Licence (read first-hand) | Holder | Signal | What it is |
+|---|---|---|---|---|
+| https://github.com/The-LLM-Data-Company/rubric | 🟢 **MIT** · `LICENSE` **1 077 B** stored / 1 076 stripped · SHA **`eb0755a1`** | *The LLM Data Company, 2025* | **84 refs** · PyPI **v2.2.0**, `license_expression: MIT` | Provider-agnostic Python library scoring text against **weighted rubrics**. 🟢 **The missing scoring primitive under `P710`** — it does not know what a student is, which is exactly why it composes. |
+
+🟢 **Admitted on three agreeing oracles** (payload, PyPI registry, `ls-remote`) — the shelf's standing
+bar since `P456`. 🟢 **Its README badge points at a `LICENSE` that exists**, which is the
+discriminator `P702` lacked.
+
+### 🔴 Re-confirmed, and one correction propagated
+
+🟢 **`CAHLR/OATutor` MIT `1 105 B` holds** (stored convention, `P704`).
+🔴 **`CAHLR/OATutor-Content` remains the shelf's sharpest trap** — no licence file, a blanket
+`CC BY 4.0` README grant, and a per-item grant holding for **75,7 %** of 13 371 problems (`P703`).
+🟢 **The adoptable unit is the item, not the repo.**
+🔴 **`Dmoayad/essay-grader-llm` is `GPL-3.0` (35 149 B payload), not the MIT its README claims**
+(`P715`) — the existing `⚠️` row is confirmed, not changed.
+
+### 🔴 Byte counts on this shelf corrected to the declared convention
+
+🔴 **`P724` (`agents/top.md`): `P704` declared the **stored** convention (trailing newline included)
+and 3 of its 4 rows were published **stripped**.** 🟢 **Corrected, re-read first-hand, SHA-pinned:**
+`AITutorAgent` **1 072 B** (`09fdd672`), `open-learning-ai-tutor` **1 069 B** (`5709ef2c`),
+`OpenTutor` **1 068 B** (`5fea390a`). 🟢 **`OATutor` **1 105 B** (`939eb0e3`) was already correct.**
+🔵 **The figures moved by one byte each; the point is that a stated convention needs a check, not
+that the licences changed — all four remain `MIT License` by payload.**
+
+### 🔵 What the mandated foundations channel returned, and why nothing came from it
+
+🟢 **`open source platform education ERP CRM MIT Apache`, globally and per region.** 🔴 **Every named
+project is already shelved:** `openeducat/openeducat_erp` (**LGPL-3.0**, not permissive),
+Frappe/ERPNext education module, Apache **OFBiz** (Apache-2.0), **Aureus ERP** (MIT),
+**Huly** (Apache-2.0), Odoo. 🟢 **The channel's own conclusion matches this shelf's standing
+finding:** *"None of the results show an education-specific ERP/CRM released under MIT or
+Apache 2.0."* 🔵 **That is the seventh week of the same structural answer, and it is recorded as a
+confirmed structural fact rather than as a channel failure.**
+
 ## 🟢 Fifty-fifth pass, 2026-10-08 — **no new row**, and the shelf's licence column re-derived from payload with its measurement convention named
 
 ⏱️ **Ninth pass of this date.** 🔴 **No row added**: the mandated foundations channel is saturated for

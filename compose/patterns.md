@@ -4,6 +4,90 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-sixth pass, 2026-10-08 — `P710`'s **step 5 was the shelf's longest-standing open gap, and it now has an MIT component**, plus a pre-flight every recipe needs and a regional claim correction
+
+### 🟢 `P719` — step 5 of `P710` ("evaluating the grader") is **no longer empty**
+
+🔴 **`P710` has carried, for several passes:** *step 5, evaluating the grader — **nothing adoptable**,
+budget ~2 of 11 weeks to build it.* 🔴 **Its three candidates all failed on licence:**
+`AITutor-EvalKit` (**no grant**, `P702`), `mathtutorbench` (self-contradictory),
+Open TutorAI (**CC BY-NC-SA 4.0** — non-commercial).
+
+🟢 **A component admitted this pass fills it** (`P716`, `agents/top.md`):
+
+| Step 5 component | Licence (first-hand) | Why it fits |
+|---|---|---|
+| [`The-LLM-Data-Company/rubric`](https://github.com/The-LLM-Data-Company/rubric) | 🟢 **MIT** · `LICENSE` **1 077 B** · SHA `eb0755a1` · PyPI **v2.2.0**, `license_expression: MIT` | Provider-agnostic **weighted-rubric scoring of LLM output**. 🟢 **Point it at the grader's own output** and the meta-rubric criteria become *"did it cite a span?"*, *"did it apply the stated weight?"*, *"is the justification consistent with the score?"* — which is exactly the evidence an Annex III technical file needs. |
+
+🔵 **Why this is a real fit and not a forced one.** 🟢 **`autorubric` (step 2) scores *student work*;
+`rubric` scores *model output against weighted criteria*.** 🔴 **They are not substitutes** — and
+because step 5's job is to judge the step-2 grader, a library built to score model output is the
+right shape. 🟢 **Both are MIT, so the pair carries no licence interaction.**
+
+> 🟢 **`P719`.** *Step 5 drops from **~2 weeks of build** to **integration of an MIT library plus
+> writing the meta-rubric** — and the meta-rubric is the part that was always the real work, because
+> it is pedagogy and jurisdiction-specific, not code.* 🟡 **The gap is **narrowed, not closed**: there
+> is still no education-specific *benchmark* (no items, no gold grades). 🟢 **`rubric` supplies the
+> harness; the corpus is still yours** — and `OATutor-Content`'s **75,7 % `CC BY 4.0`** item-level
+> grant (`P703`) is the cheapest legitimate source for it.
+
+### 🟢 `P720` — the **two-independent-scorers** cross-check, which this shelf already trusts for licences, applied to grades
+
+🟢 **This KB admits a licence only on agreeing oracles (`P456`, `P716`). 🟢 **The same discipline is
+available for grades now that two independently implemented MIT rubric scorers exist:**
+
+| Role | Component | Licence |
+|---|---|---|
+| Primary scorer | [`delip/autorubric`](https://github.com/delip/autorubric) — documented position/verbosity-bias mitigations | 🟢 MIT |
+| Independent cross-check | [`The-LLM-Data-Company/rubric`](https://github.com/The-LLM-Data-Company/rubric) — different codebase, different prompt construction | 🟢 MIT |
+| Divergence handler | route to the human approver (`P710` step 3/4) | — |
+
+🟢 **Wire it as: score twice, compare, and escalate only on disagreement.** 🔵 **The operational
+payoff is that the human-review budget stops being uniform** — agreement means a light touch,
+divergence means a real look. 🟢 **And the divergence rate is itself the metric an EMEA conformity
+file and a North American "educator supervision" audit both want**, because it quantifies how often
+the machine was not trustworthy on its own.
+
+> 🟢 **`P720`.** *Two independent MIT scorers turn "a human reviewed it" from a blanket cost into a
+> **targeted** one, and produce the divergence statistic that the regional instruments ask for.*
+> 🔴 **Do not ensemble them into one number** — that destroys the signal the review gate runs on.
+
+### 🟢 `P721` — the pre-flight every recipe in this file now needs
+
+🔴 **Two defects measured this pass mean a recipe built from this shelf can be wrong in ways nothing
+downstream detects:**
+
+| Before you build | Check | Why (`agents/top.md`) |
+|---|---|---|
+| 🟢 **Pin the SHA, not the branch** | `git ls-remote <repo> refs/heads/<branch>` | 🔴 `raw.githubusercontent.com` **aliases `master` to the default branch**, so a branch-pinned provenance claim returns correct bytes while being false about the ref (`P714`) |
+| 🟢 **Read `LICENSE`, never the README** | `curl raw…/LICENSE \| head -4` | 🔴 README licence claims failed in **both** known shapes — *ungranted* (`AITutor-EvalKit`) and *mis-granted* (`essay-grader-llm`, README says MIT, payload is **GPL-3.0, 35 149 B**) (`P715`) |
+| 🟢 **Probe each oracle `n ≥ 3`** | any success = success | 🔴 single probes produce **false negatives** at a measurable rate (`P713`); a false negative removes a working method (`P701`) |
+| 🟢 **Check the item, not the repo, for content** | per-item licence field | 🔴 `OATutor-Content`: **75,7 %** `CC BY 4.0`, **24,3 %** unknown (`P703`) |
+
+🟢 **Cost: four commands.** 🔵 **Each one corresponds to a mistake this KB actually made and
+published.**
+
+### 🔴 `P722` — the regional framing of `P710` needs one correction: the EU leg is **not** a runway
+
+🔴 **`P710`'s regional table lists EMEA as 🟡 `2027-12-02`, which has been read as time in hand.**
+🟢 **`P718` (`intel/market.md`) measured the mechanism: that date is an **absolute backstop** tied to
+publication of harmonised standards, so Annex III duties can bite **earlier**.** 🟢 **And Article 50
+marking is **not** deferred — live since `2026-08-02`, backstop `2026-12-02`, **three weeks out.**
+
+🟢 **The sequencing consequence for anyone building `P710` today:**
+
+| Build order | Why |
+|---|---|
+| 1️⃣ **Article 50 marking / provenance on generated feedback** | 🔴 **live obligation, backstop in three weeks** — the only genuinely urgent item |
+| 2️⃣ **The human-review gate (`P706`)** | 🟢 satisfies North America (educator supervision, no sole-basis), buys **tier relief** in APAC, and is a required control in EMEA — one build, three claims |
+| 3️⃣ **Rubric trace + divergence stats (`P719`/`P720`)** | 🟢 the evidence body of an Annex III technical file, and **standards-neutral**, so it survives whatever the harmonised standards say |
+| 4️⃣ **The conformity file itself** | 🟡 assemble against `2027-12-02` **as a ceiling, not a date** |
+
+🔴 **Never claim the APAC tier-relief argument in the EU.** 🔵 **Vietnam makes human review
+*classification-determining*; Annex III attaches to the use case regardless. The same gate, two
+different legal effects — `intel/market.md` states both.**
+
+
 ## 🟢 Fifty-fifth pass, 2026-10-08 — `P648` upgraded from a two-region pattern to a **four-region** one, a cheap pre-flight every recipe now needs, and a component correction that *restores* an asset
 
 ### 🟢 `P710` — the **defensible-grading pipeline** is now justified by four instruments, and the trigger condition tells you exactly what to build
