@@ -4,6 +4,205 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-seventh pass, 2026-10-08 — the **competency layer** is read for the first time and it is the shelf's **second permissive-dominant layer**; `Gap 294` gains a third edge (*aggregate*), and the CLR claim behind it **does not survive a payload read**
+
+⏱️ **Twenty-first pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Instrument map, re-measured before any datum:**
+`git ls-remote --symref` **resolved the default ref and HEAD for 9 of 9** repositories probed —
+the cleanest resolution rate this shelf has recorded. `raw.githubusercontent.com` served **every**
+licence payload below with a **byte count and an opening line**. `git ls-remote --tags` resolved
+release tags for 2 of 2 probed. 🔴 **`api.github.com` was NOT readable this pass** — and this pass
+can name the cause precisely, which prior passes could not: the session's GitHub tooling is
+**scoped to an allow-list of two repositories** (`gmilano/globant-kb`, `gmilano/education-kb`) and
+returns **`Access denied: repository … is not configured for this session`** for every third-party
+repo. 🔵 **Recorded as `SCOPE_DENIED`, a distinct instrument state from pass 64–65's `403` and from
+pass 66's non-measurement** — same consequence, different remedy. 🔴 **So no star counts appear
+below, and nothing below is ranked by popularity.**
+
+### 🔴 The industry-named control query was empty for the **eighteenth** consecutive week
+
+🔵 `top open source AI agents education 2026 github MIT` returned OpenClaw, CrewAI, LangGraph,
+OpenHands, Hermes — general-purpose frameworks, **no education component**. 🔵 The channel again
+said so in its own words: *"I didn't find a ranking specifically for education."* 🟡 The only
+education-adjacent rows it offered were **curricula, not agents** (`AI Agents for Beginners`,
+`500-AI-Agents-Projects`, the Hugging Face agents course) — 🔴 and a *course about* agents is not an
+agent, a distinction this shelf has had to restate in eleven of the last eighteen passes.
+
+🟢 **`P795` now holds on a fourth consecutive pass and on a third target class.** Pass 65 named a
+*platform*, pass 66 named a *protocol*, and **this pass named a protocol family — CASE / CLR — and
+got a whole functional layer this KB had never read: the competency registry.**
+
+### 🟢 🆕 The competency layer — four implementations, every grant read from payload
+
+| Component | ref · HEAD | Licence (payload, bytes) | Grant layers | Verdict |
+|---|---|---|---|---|
+| [`opensalt/opensalt`](https://github.com/opensalt/opensalt) (OpenSALT) | **`develop`** · **`db41cc4`** | 🟢 **MIT** (`LICENSE`, **1 080 B**, *"Copyright (c) 2016 Public Consulting Group"*) | 🟡 file only — 🔴 **no `composer.json` at the default ref** | 🟢 **the strongest find of the pass** 🆕 |
+| [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) | `main` · **`97d0373`** | 🟢 **Apache-2.0** (`LICENSE`, **11 264 B**) | 🟡 file + README prose; 🔴 **no root manifest** (`package.json`/`composer.json` both 404 — monorepo, manifests nested) | 🟢 **buildable**, 🟡 see the holder caveat 🆕 |
+| [`infosign/compeito`](https://github.com/infosign/compeito) (COMPEITO) | `main` · **`0656e10`** | 🟢 **Apache-2.0** (`LICENSE`, **10 759 B**, *"Copyright 2026 Infosign, Inc."*) | 🟢 **two layers agree** — file + `pyproject.toml` `license = "Apache-2.0"`; 🔴 **not on PyPI (404)** | 🟢 **buildable** 🆕 |
+| [`conform-ed/conform-ed`](https://github.com/conform-ed/conform-ed) | `main` · **`3596bb5`** | 🟢 **MIT** (`LICENSE`, **1 080 B**) | 🟡 file only — 🔴 `package.json` is **`"private": true`** with **no `license` key**; 🔴 **not on npm (404)** | 🟢 **buildable**, and see below — it is the pass's structural find 🆕 |
+
+🟢 **Four of four are permissive.** 🔵 **This is the second layer in this KB's sixty-seven-pass
+history where permissive licensing dominates, and the first where it is unanimous** — pass 66's LRS
+tier was four-of-six. 🔵 Every *other* layer read before these two went the other way: verticals are
+GPL/AGPL essentially without exception, and the credential **issuers** are AGPL to a repo.
+
+### 🟡 Two byte counts that are not noise — the Apache payloads differ, and the difference is the **copyright holder**
+
+🔵 This shelf treats the canonical Apache-2.0 `LICENSE` as **11 357 B** (the byte count it has read
+on `lrsql`, `xapi-lrs`, `ADL_LRS`, `TinCanPython` and the whole Ed-Fi tier). 🟢 **Two rows above
+are Apache and neither is 11 357 B, so both were diffed rather than assumed:**
+
+| Repo | bytes | APPENDIX | Holder line | Reading |
+|---|---|---|---|---|
+| `1EdTech/OpenCASE` | **11 264 B** | 🟢 present | 🔴 **`Copyright [yyyy] [name of copyright owner]` — placeholders UNFILLED** | 🟢 grant is intact; 🔴 **the holder is unnamed** |
+| `infosign/compeito` | **10 759 B** | 🔴 **removed** | 🟢 **`Copyright 2026 Infosign, Inc.`** | 🟢 grant intact, **holder named** |
+
+🔴 **The counter-intuitive result, and it is worth stating plainly:** the **official 1EdTech
+repository** ships an Apache file with the copyright holder left as a **template placeholder**,
+while the **community implementation** names its holder. 🔵 `P184` (holder/licence pairing) cannot
+be run on OpenCASE at all — there is no holder to pair. 🟢 **On the narrow question of grant
+completeness, `compeito` is the stronger of the two**, which is the opposite of what provenance
+alone would predict. 🔵 **Neither is a defect in the licence** — Apache-2.0 grants from the
+copyright owner whether or not the appendix names them — but a client's counsel asks *who granted
+this*, and only one of these two files answers.
+
+### 🟢 🆕 `conform-ed` — the pass's structural find, because it is the first component that spans **the entire shelf**
+
+🔵 Every protocol this KB has censused across passes 60–66 has been read **one implementation at a
+time**. 🟢 **`conform-ed` is a single MIT monorepo whose declared scope is all of them at once**,
+read from its README (4 295 B):
+
+**xAPI (1.0.3 + IEEE 2.0) · QTI 2.1 / 2.2 / 3.0.1 · LTI 1.3 + Deep Linking 2.0 + AGS 2.0 + NRPS 2.0
++ Proctoring 1.0 · Common Cartridge · OneRoster 1.2 · CASE 1.1 · CLR 2.0 · Open Badges 3.0 ·
+Caliper · cmi5 · SCORM.**
+
+🟢 **It ships conformance *runners*, not just schemas** — its own feature list names an **xAPI LRS
+conformance runner**, a **cmi5 conformance/oracle runner**, an **LTI 1.3 conformance runner**, and
+**reference adapter services** for cmi5 and LTI 1.3.
+
+🟢 **And it closes a loop with pass 66 directly.** Its `package.json` scripts stand up
+**`yetanalytics/lrsql`** — the exact store this shelf read last pass — under `podman compose`:
+`lrsql:up`, `lrsql:wait`, `lrsql:reset`, `lrsql:auth:check`. 🔵 **The harness this pass found
+already targets the store last pass found**, which is the first time two consecutive passes on this
+shelf have landed on two halves of one toolchain. 🟢 It also carries `qti:corpus:fetch`,
+`qti:coverage:report` and `qti:delivery:report` — so the **QTI tier this KB has carried since pass
+18 now has a coverage instrument**.
+
+### 🔴 The disclaimer is load-bearing, and conflating it would be this KB's error, not the project's
+
+🔵 `conform-ed`'s README states, in its own emphasis, that it is **not a certification body** and
+that it produces **conformance _assessments_, not official certification**.
+
+🔴 **Two conflations to refuse explicitly, because both are one short step away and both would be
+wrong:**
+
+1. 🔴 **`conform-ed` output is not 1EdTech certification.** The shelf's one externally certified
+   permissive asset remains `amp-up-io/qti3-item-player` (1EdTech Certified, QTI 3 Basic +
+   Advanced Delivery). **An assessment from a non-accredited harness does not substitute**, and a
+   deliverable that implies otherwise is a misrepresentation.
+2. 🔴 **Standards conformance is NOT EU AI Act conformity assessment.** The AI Act's Annex-III
+   education obligations (see `intel/trends.md` this pass) require a **conformity assessment of a
+   high-risk AI system**. `conform-ed` proves an implementation speaks **QTI/xAPI/LTI correctly**.
+   🔵 **These are different regimes with different assessors**, and the word *conformance* appearing
+   in both is a lexical coincidence. 🟢 **What `conform-ed` genuinely contributes to an AI Act file
+   is evidence of the interoperability and logging substrate** — useful, bounded, and not the
+   assessment itself.
+
+### 🔴 `Gap 294` gains a third edge — and the claim that would have populated it **fails a payload read**
+
+🔵 **Where the gap stood.** Passes 64–65 recorded the Open Badges 3.0 **verify** edge as permissive
+(`credential-lens`, MIT, 1 080 B) and the **issue** edge as **populated but AGPL-only** (`certo`,
+`Opencred`, `edubadges-server` — 33 820 / 34 523 / 34 519 B).
+
+🟡 **The channel offered an *aggregate* edge this pass:** CLR 2.0 support — grouping already-issued
+Open Badges under one signed record — reported as **a merged PR (#4) on `arqueon/certo`**, a fork of
+`Schroedinger-Hat/certo`.
+
+🔴 **Probed, and it does not hold up:**
+
+| Probe | Result |
+|---|---|
+| `arqueon/certo` default ref | `main` · **`39816e0`** — resolves |
+| `arqueon/certo` licence | 🔴 **AGPL-3.0**, `LICENSE`, **33 820 B** |
+| Upstream `Schroedinger-Hat/certo` | `main` · **`6fd0a11`** — 🔵 **the exact HEAD pass 65 recorded for "certo"**, licence 🔴 **AGPL-3.0, 33 820 B** — byte-identical |
+| **CLR on `arqueon/certo` `main`** | 🔴 **absent.** README (**16 582 B**) contains **zero** occurrences of `CLR` or *"Comprehensive Learner Record"*; four plausible tree paths all **404** |
+
+🔴 **So the aggregate edge is a pull-request claim, not a shipped capability**, and it is
+unverifiable from the default branch — the only ref a client would consume. 🔵 **`P786`'s rule
+applies unchanged: a PR is a proposal.** 🟢 **The two things that ARE established** are that
+`arqueon/certo` is a **licence-faithful fork** (byte-identical AGPL payload to its upstream, so the
+fork adds no permissive relief) and that pass 65's `certo` row is confirmed at the **upstream**
+sha, not the fork's.
+
+🔴 **`Gap 301` opened** (see `intel/open-gaps.md`): the CLR 2.0 *aggregate* edge has **no permissive
+implementation, and no verifiable implementation of any licence**, on a default ref.
+
+🟢 **What this does to the credential picture, stated as the three edges now measured:**
+
+| Edge | Best grant on this shelf | Verdict |
+|---|---|---|
+| **verify** | `credential-lens` — 🟢 MIT, 1 080 B | 🟢 permissive |
+| **issue** | `certo` / `Opencred` / `edubadges-server` — 🔴 AGPL-3.0 | 🔴 populated, copyleft |
+| **aggregate (CLR 2.0)** | 🔴 **none on a default ref** | 🔴 **empty** 🆕 |
+| **describe (CASE)** | 🟢 **OpenSALT MIT · OpenCASE + COMPEITO Apache-2.0** | 🟢 **permissive, three ways** 🆕 |
+
+🔵 **Read across the row, this is the pass's one-line result:** you can **say what a competency is**
+and **check a badge** under permissive terms; you **cannot issue or aggregate one** without taking
+AGPL or writing it yourself.
+
+### 🟡 Certification status of the new layer — nobody on it is certified, and both candidates say so
+
+| Component | Own claim | Reading |
+|---|---|---|
+| `1EdTech/OpenCASE` | *"fully supports CASE 1.0 and CASE 1.1 … **ready for** 1EdTech certification"* | 🟡 **ready for ≠ certified** |
+| `infosign/compeito` | *"all official REST API endpoints … **working toward** full conformance"* | 🟡 **self-declared partial** |
+| `conform-ed` | *"**not** a certification body"* | 🔴 cannot confer it either |
+
+🟢 **Honest statement of the layer's maturity:** the CASE edge is **permissive and deployable**, and
+**none of it is externally certified**. 🔵 For a ministry or state-agency buyer that asks for
+conformance evidence, the shelf's answer is `conform-ed`'s **assessment** plus the components' own
+**self-declarations** — 🔴 **not a certificate**, and the proposal should price a certification step
+rather than imply one.
+
+### 🟢 Interoperability actually measured, not assumed — the new layer plugs into what is already here
+
+🟢 **`compeito` imports from `OpenSALT` directly**, by URL, from its own CLI:
+`import case --url https://opensalt.net/ims/case/v1p0/CFPackages/{id}` — and it reads
+**OpenSALT-compatible CSV**. 🔵 **So the two independent CASE servers on this shelf are not
+alternatives to choose between; they are a source and a consumer**, which is a materially different
+engagement shape.
+
+🟡 **`compeito`'s stated forward targets are both already on this shelf:** **Open Badge Factory
+(OB v3)** on the credential edge and **TAO Testing (QTI v3.0)** on the assessment edge. 🔴 Recorded
+as **roadmap, not capability** — its README says *"in the future"*.
+
+### 🟡 One row admitted as a list, not as software
+
+| Item | ref · HEAD | Licence (payload, bytes) | Reading |
+|---|---|---|---|
+| [`tla-ecosystem/awesome-tla`](https://github.com/tla-ecosystem/awesome-tla) | `main` · **`133a6ac`** | 🟡 **CC0-1.0** (`LICENSE`, **6 469 B**) | 🟡 **a curated Total Learning Architecture index — a document, not a dependency** |
+
+🔵 **Why the licence line matters even here:** **CC0 is not a software grant** and carries **no
+patent language**. 🟢 It is fine for what this is — a reading list that points at TLA
+implementations and standards — 🔴 **and it must never be cited as a component's licence.**
+🟢 Carried as a **discovery instrument** for later passes, which is also an honest statement of
+what it is worth.
+
+### 🟢 Region placement for the four new rows, from first-party evidence only
+
+| Component | Region | Evidence |
+|---|---|---|
+| `opensalt/opensalt` | **North America** | README: *"developed by Public Consulting Group in partnership with its public-sector clients"* — PCG is US-based; licence holder © Public Consulting Group |
+| `1EdTech/OpenCASE` | **North America** | 1EdTech Consortium, US standards body |
+| `infosign/compeito` | 🟡 **unplaced** | 🔴 No country in README or licence; holder *"Infosign, Inc."* is not geolocated by any payload read. 🔵 **Left unplaced rather than guessed** — `P722` |
+| `conform-ed/conform-ed` | 🟡 **unplaced** | 🔴 No org location in any payload; `conform-ed` is a bare GitHub org |
+
+🔴 **Two of four unplaced is the honest count**, and it is recorded rather than smoothed. 🔵 `P722`
+holds: an inferred region is worse than an absent one, because the filter cannot tell them apart.
+🟢 **`Gap 302` opened** to carry the two unplaced rows.
+
+
 ## 🟢 Sixty-sixth pass, 2026-10-08 — the **telemetry layer** is read for the first time and it is this shelf's **first permissive-dominant layer**; `Gap 294`'s *issue* edge turns out to be **populated but AGPL-only**, which is a different problem from the empty one recorded for fifteen weeks
 
 ⏱️ **Twentieth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

@@ -4,6 +4,109 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-seventh pass, 2026-10-08 — week of 2026-10-08: `P795` holds on a **protocol family** (CASE/CLR) and returns the shelf's first **permissive-unanimous** tier; the control query's eighteenth empty week is independently diagnosed by the trend channel as the market's property, not the query's
+
+⏱️ **Twenty-first pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 The instrument ledger, week 18
+
+| week | industry-named query (control) | platform-named `P795` | protocol-named `P795` | **protocol-FAMILY `P795`** 🆕 |
+|---|---|---|---|---|
+| weeks 1–14 | 🔴 empty | 🟡 not in use | 🟡 not in use | 🟡 not in use |
+| week 15 (pass 64) | 🔴 empty | 🟢 `educredentials/ec-issuer` | 🟡 not in use | 🟡 not in use |
+| week 16 (pass 65) | 🔴 empty | 🟢 **nine Moodle MCP side-cars** | 🟡 not in use | 🟡 not in use |
+| week 17 (pass 66) | 🔴 empty | 🟡 not run | 🟢 **six-row LRS tier + four OB issuers** | 🟡 not in use |
+| **week 18 (this pass)** | 🔴 **empty — eighteenth consecutive week** | 🟡 not run | 🟡 folded into the family query | 🟢 **four-row CASE tier + a cross-protocol harness** |
+
+🔴 **The control query is still empty, and again said so in its own voice:** *"I didn't find a
+ranking specifically for education."* 🔵 It returned **OpenClaw, CrewAI, LangGraph, OpenHands,
+Hermes Agent, OpenAI Codex** — general-purpose frameworks with no education component.
+
+🟡 **And it returned three *curricula* dressed as agents** — `AI Agents for Beginners` (Microsoft),
+`500-AI-Agents-Projects`, the Hugging Face agents course. 🔴 **A course about agents is not an
+agent.** 🔵 This shelf has now had to restate that distinction in **eleven of the last eighteen
+weeks**, which is itself the stable finding about this channel.
+
+### 🟢 🆕 The week's structural result: the control query's emptiness is now **externally corroborated**
+
+🔵 For seventeen weeks the empty control query was recorded as a fact about the *channel*, with an
+open question underneath it: is education's agent layer genuinely absent, or is the query wrong?
+
+🟢 **This week the trend channel answered it, from four independent directions** (full reading in
+`intel/trends.md`): the **OECD** calls for a move **beyond general-purpose AI tools toward
+purpose-built educational AI**; **1EdTech** describes institutions shifting to governance-and-
+evaluation strategies; **HolonIQ** reports the results came from course design, teacher
+productivity and admin workflows rather than broad personalisation; and a vendor channel names the
+mechanism — **generic chatbots created extra work** because teachers wrote the prompts and checked
+the output.
+
+🟢 **So the emptiness is a property of the market, not of the query.** 🔵 **`P795` is upgraded from
+a search tactic to a structural claim about this industry:** education's AI-specific substance lives
+in **standards, verticals and registries**, and the agent frameworks above it are domain-neutral by
+construction. 🟢 **Eighteen weeks of a null result is now a finding with a cause**, and it should
+stop being re-litigated each pass.
+
+### 🟢 🆕 What the family query returned — four components, all permissive, all payload-read
+
+| Component | ref · HEAD | Licence (payload, bytes) | Why it is this week's movement |
+|---|---|---|---|
+| [`opensalt/opensalt`](https://github.com/opensalt/opensalt) | **`develop`** · **`db41cc4`** | 🟢 **MIT**, 1 080 B, © **Public Consulting Group** | 🟢 **An LER registry, not a competency editor** — competencies, credentials, learning opportunities, **jobs and pathways**; the codebase **1EdTech's CASE Registry is based on** |
+| [`conform-ed/conform-ed`](https://github.com/conform-ed/conform-ed) | `main` · **`3596bb5`** | 🟢 **MIT**, 1 080 B | 🟢 **Spans every protocol this shelf has censused** — and its own scripts stand up **`lrsql`**, the store read *last* week |
+| [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) | `main` · **`97d0373`** | 🟢 **Apache-2.0**, 11 264 B | 🟢 Visual framework editor + CASE publishing server, Keycloak + Traefik, single-command compose; 🔴 **holder line unfilled** (`P804`) |
+| [`infosign/compeito`](https://github.com/infosign/compeito) | `main` · **`0656e10`** | 🟢 **Apache-2.0**, 10 759 B **+ `pyproject.toml`** | 🟢 CASE 1.1 provider on **FastAPI/Postgres**, multi-tenant, **imports live from OpenSALT**; 🟢 **two agreeing grant layers** |
+
+🔴 **No star counts this week.** `api.github.com` returned **`SCOPE_DENIED`** — the session's GitHub
+tooling is scoped to an allow-list of two repositories and says so verbatim (`P802`). 🔵 **Nothing
+above is ordered by traction.**
+
+### 🟢 Two consecutive weeks landed on two halves of one toolchain — a first for this shelf
+
+🔵 Week 17 read **`yetanalytics/lrsql`** (the xAPI store). 🟢 **Week 18's `conform-ed` drives that
+exact store** from its own `package.json`: `lrsql:up`, `lrsql:wait`, `lrsql:reset`,
+`lrsql:reset:best-effort`, `lrsql:auth:check`, under `podman compose`. 🟢 **It also carries
+`qti:corpus:fetch`, `qti:coverage:report` and `qti:delivery:report`**, so the QTI tier this KB has
+carried since pass 18 gains a coverage instrument.
+
+🟢 **Recorded as a method result, not a coincidence:** protocol-named querying converges, because
+protocols have ecosystems. 🔵 Industry-named querying never did, across eighteen weeks.
+
+### 🔴 The week's refutation — a claimed CLR 2.0 capability that is not on any default ref
+
+🟡 **The channel offered** CLR 2.0 aggregation (grouping issued Open Badges under one signed record)
+as **a merged PR (#4) on `arqueon/certo`**.
+
+🔴 **Probed and refuted:**
+
+| Probe | Result |
+|---|---|
+| `arqueon/certo` `main` | **`39816e0`** — resolves; 🔴 **AGPL-3.0**, 33 820 B |
+| Upstream `Schroedinger-Hat/certo` `main` | **`6fd0a11`** — 🔵 **the exact sha pass 65 recorded**; 🔴 AGPL-3.0, **33 820 B, byte-identical** |
+| `CLR` in `arqueon/certo` README (16 582 B) | 🔴 **zero occurrences**, and four plausible tree paths **404** |
+
+🔴 **So the aggregate edge is a proposal, not a capability** (`P786`), and the fork adds **no
+permissive relief** — its licence payload is byte-identical to its upstream's. 🟢 **`Gap 301`
+opened.** 🔵 **The useful by-product:** pass 65's `certo` row is now confirmed to have been the
+**upstream**, not this fork.
+
+### 🟡 Carried as a list, never as a dependency
+
+🟡 [`tla-ecosystem/awesome-tla`](https://github.com/tla-ecosystem/awesome-tla) — `main` ·
+**`133a6ac`**, 🟡 **CC0-1.0** (`LICENSE`, **6 469 B**). 🔴 **CC0 is not a software grant and carries
+no patent language.** 🟢 Useful as a **discovery instrument** for Total Learning Architecture
+components on later passes; 🔴 **must never be cited as a component's licence.**
+
+### 🟢 Region placement, and the honest count of what could not be placed
+
+| Component | Region | Basis |
+|---|---|---|
+| `opensalt/opensalt` | **North America** | README names **Public Consulting Group** (US) and its public-sector clients; licence holder agrees |
+| `1EdTech/OpenCASE` | **North America** | 1EdTech Consortium, US standards body |
+| `infosign/compeito` | 🟡 **unplaced** | 🔴 no country in any payload; *"Infosign, Inc."* is not geolocated |
+| `conform-ed/conform-ed` | 🟡 **unplaced** | 🔴 bare GitHub org, no location in any payload |
+
+🔴 **Two of four unplaced, recorded rather than guessed** (`P722`). 🟢 **`Gap 302` carries them.**
+
+
 ## 🟢 Sixty-sixth pass, 2026-10-08 — week of 2026-10-08: `P795` generalises from **platform-named** to **protocol-named**, and the protocol query returns a whole tier rather than a cluster
 
 ⏱️ **Twentieth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

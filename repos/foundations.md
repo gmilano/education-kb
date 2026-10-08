@@ -4,6 +4,169 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-seventh pass, 2026-10-08 — the **CASE tier** lands permissive-unanimous, a **cross-protocol conformance harness** arrives MIT, and the Ed-Fi substrate this shelf has carried since pass 13 turns out to have a **shipped successor** (`v8.0.0`)
+
+⏱️ **Twenty-first pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🔵 **What pass 66 left open by construction.** It read the **store** tier for xAPI and closed the
+telemetry arrow (spec → emitter → store). 🔴 **But a store full of statements answers *what
+happened*, never *what it proves*.** 🟢 **This pass reads the tier that answers the second
+question — the competency registry — and it is the shelf's second permissive-dominant tier and its
+first unanimous one.**
+
+### 🟢 🆕 The CASE / competency tier, every grant read from payload
+
+| Registry | ref · HEAD | Licence (payload, bytes) | Engine / stack | Verdict |
+|---|---|---|---|---|
+| [`opensalt/opensalt`](https://github.com/opensalt/opensalt) | **`develop`** · **`db41cc4`** | 🟢 **MIT** (`LICENSE`, **1 080 B**, © **2016 Public Consulting Group**) | PHP / Symfony, **docker-compose**, **MySQL** | 🟢 **the production default of this tier** |
+| [`infosign/compeito`](https://github.com/infosign/compeito) | `main` · **`0656e10`** | 🟢 **Apache-2.0** (**two layers**: `LICENSE` **10 759 B** + `pyproject.toml`) | **Python 3.12 / FastAPI / PostgreSQL**, Docker | 🟢 **the forward path** |
+| [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) | `main` · **`97d0373`** | 🟢 **Apache-2.0** (`LICENSE`, **11 264 B**) | Monorepo: visual **editor** + publishing **server** + **Keycloak** + **Traefik**, single-command compose | 🟢 **the authoring front end** |
+| [`conform-ed/conform-ed`](https://github.com/conform-ed/conform-ed) | `main` · **`3596bb5`** | 🟢 **MIT** (`LICENSE`, **1 080 B**) | **Bun + turbo** monorepo, podman compose | 🟢 **the cross-protocol harness — see below** |
+
+🟢 **Four of four permissive.** 🔵 **Unanimous, which no prior tier on this shelf has been.**
+
+### 🟢 The row that changes what this tier is *for*: OpenSALT is no longer a competency editor
+
+🔵 **This KB would have filed OpenSALT as "the CASE framework manager" from its name and history.**
+🔴 **Its own README refutes that, in its first paragraph**, and the correction is the reason it
+takes the default slot rather than a footnote:
+
+> *"OpenSALT is an open-source **Learning and Employment Record (LER) registry platform** … It
+> enables organizations to define, manage, align, publish, and exchange **competencies, standards,
+> credentials, learning opportunities, jobs, pathways, and issuer information** … OpenSALT has
+> **evolved from a competency framework management system into a standards-based registry
+> service**."*
+
+🟢 **Standards it names itself as aligned to:** **1EdTech CASE®** (1.1-compatible content structures
+and extensions), **Credential Engine CTDL**, and **W3C Verifiable Credentials**. 🟢 **Interfaces:**
+an interactive web application **and** headless **secure REST APIs** for system-to-system
+integration.
+
+🔵 **Why that is a foundations-level fact and not marketing.** The thing a skills-based engagement
+needs is a **join** between a competency, a credential that asserts it, and an occupation or
+pathway that demands it. 🔴 **This shelf has had no permissive component that holds that join** —
+it had CASE-shaped nothing, badge issuers under AGPL, and an Ed-Fi substrate that models
+*enrolment*, not *skills*. 🟢 **OpenSALT holds it, under MIT, from a named holder.**
+
+🟢 **And it is the basis of the official registry.** 1EdTech's own announcement of the **CASE
+Registry** states the Registry is **based on the OpenSALT open-source project**. 🔵 **So the
+permissive component and the consortium's reference deployment are the same codebase** — a
+provenance position this shelf has not been able to claim for any other 1EdTech-adjacent row
+(contrast `1EdTech/openbadges-specification`, which carries **no licence file at all**).
+
+🔴 **Two caveats priced rather than buried:** the grant rests on **one layer** (🔴 **no
+`composer.json` at `develop`**, which for a Symfony application is an absence worth noting, and it
+is **not on Packagist** — 404), and the **default ref is `develop`, not `main`** — so 🔴 **pinning
+the commit is not optional here**, it is the grant. 🟡 Release tags resolve to **3.2.1** (plus a
+stray `ky` tag, which is noise, not a version).
+
+### 🟢 🆕 `conform-ed` — the first component on this shelf that spans **every protocol the shelf has censused**
+
+🔵 Passes 60–66 read education's protocols **one implementation at a time**: LTI 1.3 (launch),
+OneRoster (who), SCORM/cmi5 (content), xAPI (what happened), Open Badges (what it proves), Caliper
+(unreadable). 🟢 **`conform-ed` declares all of them, in one MIT monorepo**, per its README
+(4 295 B):
+
+**xAPI 1.0.3 + IEEE 2.0 · QTI 2.1 / 2.2 / 3.0.1 · LTI 1.3 + Deep Linking 2.0 + AGS 2.0 + NRPS 2.0 +
+Proctoring 1.0 · Common Cartridge · OneRoster 1.2 · CASE 1.1 · CLR 2.0 · Open Badges 3.0 · Caliper ·
+cmi5 · SCORM.**
+
+🟢 **It ships runners, not only schemas:** an **xAPI LRS conformance runner**, a **cmi5
+conformance/oracle runner**, an **LTI 1.3 conformance runner**, and **reference adapter services**
+for cmi5 and LTI 1.3.
+
+🟢 **It also stands up pass 66's store itself.** Its `package.json` scripts drive
+**`yetanalytics/lrsql`** under `podman compose` — `lrsql:up`, `lrsql:wait`, `lrsql:reset`,
+`lrsql:reset:best-effort`, `lrsql:auth:check` — and it carries **`qti:corpus:fetch`**,
+**`qti:coverage:report`**, **`qti:delivery:report`**. 🔵 **Two consecutive passes landed on two
+halves of one toolchain**, which has not happened before on this shelf: the store read last pass is
+the store this harness drives.
+
+🔴 **What it is not, stated here because the word invites the error.** Its README says it is **not a
+certification body** and produces **conformance *assessments*, not official certification**.
+🔴 **And standards conformance is not EU AI Act conformity assessment** — different regime,
+different assessor; full reading in `agents/top.md` and `intel/trends.md`. 🟢 Its honest value is
+**regression evidence against a spec corpus**, which is exactly what this shelf's interop rows have
+lacked.
+
+🟡 **Grant caveat:** `LICENSE` is clean MIT at **1 080 B**, but `package.json` is
+**`"private": true`** with **no `license` key**, and the package is **not on npm (404)**.
+🔴 **One-layer grant on an unpublished monorepo — pin `3596bb5`.**
+
+### 🟢 🆕 The Ed-Fi substrate has a **successor, and it has shipped** — this is a tier replacement, not an addition
+
+🔵 **This KB has carried `Ed-Fi-Alliance-OSS/Ed-Fi-ODS` and its four-repo substrate since the
+thirteenth pass**, and completed the licence census of it at pass 62. 🔴 **Those repositories are
+now the *legacy* line, and the shelf did not know it.**
+
+| Repo | ref · HEAD | Licence (payload, bytes) | Reading |
+|---|---|---|---|
+| [`Ed-Fi-Alliance-OSS/Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service) | `main` · **`9203e19`** | 🟢 **Apache-2.0** (**two layers**: `LICENSE` **11 357 B** — canonical — + README prose) | 🟢 **The successor.** Resources + Descriptors + Discovery APIs 🆕 |
+| [`Ed-Fi-Alliance-OSS/DMS-Configuration-Service`](https://github.com/Ed-Fi-Alliance-OSS/DMS-Configuration-Service) | `main` · **`782b0d3`** | 🟢 **Apache-2.0** (`LICENSE`, **11 357 B**) | 🟢 Implements the Ed-Fi **Management API** — successor to **ODS Admin API** 🆕 |
+
+🟢 **The README states the replacement in its own words:** *"These applications **replace the
+legacy** Ed-Fi ODS/API and Ed-Fi ODS Admin API."*
+
+🟢 **And unlike the channel's account, 8.0 is not merely an alpha.** 🔴 The channel reported only
+`dms-v8.0.1-alpha.0.188` pre-releases and said it *"can't confirm the exact release date of the
+stable 8.0"*. 🟢 **`git ls-remote --tags` resolves a plain `v8.0.0` tag at `d911abb`** — a shipped
+version tag, measured from the git protocol rather than inferred from a release feed this session
+cannot read.
+
+🟡 **Tag hygiene, recorded because it affects pinning:** the tag list is
+`v0.1.0 · v0.2.0 · v0.4.0 · v0.5.0 · v0.6.0 · v0.7.0 · v8.0.0` — 🔴 **`v0.3.0` is absent and a bare
+`temp` tag exists**. 🔵 The jump from `v0.7.0` straight to `v8.0.0` is deliberate: Ed-Fi aligned the
+DMS version to the **Ed-Fi API version**, so "8.0" names the API contract, not the eighth major
+release of this codebase. 🔴 **A proposal that reads `v8.0.0` as seven prior majors of maturity has
+misread it.**
+
+🟢 **Operational shape, from `GETTING_STARTED.md` (10 021 B) read as bytes:** 🔴 **.NET 10 SDK**
+required to build; **PostgreSQL** for OLTP; `docker compose` (Docker Engine + Compose plugin
+sufficient on Linux, Podman supported with a find-and-replace in `eng/docker-compose`). 🟡 The
+release-candidate notes add **OpenSearch/Elasticsearch**, **Kafka** realtime streaming, and
+**Keycloak** OAuth. 🟢 **Data Standard 5.2 out of the box**, with a `docs/DATA-STANDARD-VERSIONS.md`
+matrix in-tree.
+
+🔴 **The migration question this opens is not answered this pass**, and it is the expensive one:
+whether a district on `Ed-Fi-ODS` can move to DMS without a data migration — the question pass 66
+*could* answer for `lrsql → xapi-lrs` (it was a no-op). 🔴 **No equivalent claim was found in any
+payload read.** 🟢 **`Gap 303` opened** to carry it.
+
+🟢 **Shelf consequence, stated plainly:** the Ed-Fi rows below in this file remain **correct and
+Apache-2.0**, and they are now **the legacy line**. 🟢 **A new engagement starting today should
+read `Data-Management-Service` first and `Ed-Fi-ODS` as the system it will interoperate with or
+replace** — and the whole path, old and new, stays **Apache-2.0**, so the licence does not change
+across the migration either.
+
+### 🟢 The protocol census, restated with this pass's tier
+
+| Protocol | Permissive implementation on this shelf | Grant |
+|---|---|---|
+| **LTI 1.3** | `Cvmcosta/ltijs` | 🟢 Apache-2.0 (11 361 B) |
+| **xAPI** — spec / emitter / **store** | `adlnet/xAPI-Spec` · `TinCanPython` · **`lrsql`** / **`xapi-lrs`** | 🟢 Apache-2.0 throughout |
+| **QTI 2.x / 3.0** | `amp-up-io/qti3-item-player` (🟢 **1EdTech Certified**) · `longsightgroup/qti3` · `Kennisnet/php-qti3` | 🟢 MIT |
+| **OneRoster 1.2** | `Ed-Fi-Alliance-OSS/edfi-oneroster` | 🟢 Apache-2.0 (10 173 B) |
+| **SCORM / cmi5** | `jcputney/scorm-again` · `adlnet/CATAPULT` · `xapijs/cmi5` | 🟢 MIT / Apache-2.0 |
+| **CASE 1.1** 🆕 | **`opensalt`** · **`compeito`** · **`OpenCASE`** | 🟢 **MIT / Apache-2.0** |
+| **Open Badges 3.0** — *verify* | `credential-lens` | 🟢 MIT (1 080 B) |
+| **Open Badges 3.0** — *issue* | 🔴 none — `certo` / `Opencred` / `edubadges-server` | 🔴 AGPL-3.0 |
+| **CLR 2.0** — *aggregate* 🆕 | 🔴 **none on a default ref** — see `Gap 301` | 🔴 **empty** |
+| **Caliper Analytics** | 🔴 none readable — `1EdTech/caliper-js` behind membership | 🔴 **unreadable, third consecutive pass** |
+| **Conformance across all of the above** 🆕 | **`conform-ed/conform-ed`** | 🟢 **MIT (1 080 B)** |
+
+🟢 **Eight of eleven edges are permissive and deployable.** 🔴 **Three are not, and they are the
+three a credential engagement needs most:** badge **issuance** (AGPL), CLR **aggregation** (empty),
+and Caliper (unreadable). 🔵 **That ratio, not any single row, is the shelf's honest answer to
+"can Globant build this on open source?"** — the evidence and description layers yes, the issuance
+layer no.
+
+🔴 **Completeness of this pass.** 9 of 9 refs resolved; every licence above read as payload bytes.
+🔴 **Not probed:** Common Cartridge (declared by `conform-ed`, no standalone implementation read),
+and **Caliper was not re-attempted** — it has failed on three consecutive passes and `P798` says a
+fourth identical probe is not a measurement. 🔴 **No star counts** — `api.github.com` returned
+`SCOPE_DENIED` this pass (see `agents/top.md`).
+
+
 ## 🟢 Sixty-sixth pass, 2026-10-08 — the standards-layer census gains its **missing tier**: xAPI had a spec and a client on this shelf but **no store**, and the store tier turns out to be the one permissive tier in education infrastructure
 
 ⏱️ **Twentieth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

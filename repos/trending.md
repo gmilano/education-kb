@@ -4,6 +4,89 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-seventh pass, 2026-10-08 — the GitHub-trending channel repeats its category error for the nth consecutive week, and the week's real repo movement is a **permissive CASE tier** plus a **shipped Ed-Fi successor** (`v8.0.0`)
+
+⏱️ **Twenty-first pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🔴 **No star counts this week.** `api.github.com` returned **`SCOPE_DENIED`** — the GitHub tooling is
+scoped to an allow-list of two repositories (`gmilano/globant-kb`, `gmilano/education-kb`) and
+refuses every third-party repo **in those words** (`P802`). 🔵 **Consequence, stated because it
+changes how this section reads:** nothing below is ordered by traction, and figures the channel
+volunteered are **not** reproduced here as data.
+
+### 🔴 The trending channel's category error, now in its nth consecutive week
+
+🟢 `github trending education AI 2026` returned, in order: **`rohitg00/ai-engineering-from-scratch`**
+(the channel volunteered *"about 63K stars"* — 🔴 **not carried, unverifiable this week**),
+**`rasbt/LLMs-from-scratch`**, **`microsoft/generative-ai-for-beginners`** (channel-reported as last
+updated **2026-10-08**), **`karpathy/nanochat`**, and two awesome-lists of agent courses.
+
+🔴 **Every one of these is a learning resource ABOUT AI, not a component FOR education.** 🔵 The
+channel's own framing confirms the shape of the error: it describes `ai-engineering-from-scratch` as
+*"AI engineering education"* — 🔴 **the word "education" there modifies the audience, not the
+domain.** 🟢 **The query asks for education repos and is answered with repos that teach AI**, and that
+has now been true every week this channel has been run.
+
+🟡 **The one genuinely education-sector item** was institutional, not a repo: **Central European
+University announced a collaboration with GitHub** (April 2026) for open teaching materials and
+AI-supported learning formats. 🟡 **Carried as a market signal, not a component.** 🔵 Region:
+**EMEA** (Hungary).
+
+🔴 **The channel also could not reach GitHub's live trending page**, and said so — so the ranking
+above is third-party roundups, including one auto-generated GitHub issue. 🔴 **Treated as
+directional at best.**
+
+### 🟢 🆕 The week's real repo movement, read by grant rather than by traction
+
+| Repo | ref · HEAD | Licence (payload, bytes) | Movement |
+|---|---|---|---|
+| [`opensalt/opensalt`](https://github.com/opensalt/opensalt) | **`develop`** · **`db41cc4`** | 🟢 **MIT**, 1 080 B, © 2016 Public Consulting Group | 🟢 **Newly read.** Repositioned by its own README from competency editor to **LER registry**; tags to **3.2.1** (🔴 plus a stray `ky` tag) |
+| [`conform-ed/conform-ed`](https://github.com/conform-ed/conform-ed) | `main` · **`3596bb5`** | 🟢 **MIT**, 1 080 B | 🟢 **Newly read.** Cross-protocol conformance runners; 🔴 `package.json` **`"private": true`, no `license` key**, not on npm |
+| [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) | `main` · **`97d0373`** | 🟢 **Apache-2.0**, 11 264 B | 🟢 **Newly read.** 🔴 Holder line left as `[yyyy] [name of copyright owner]` (`P804`) |
+| [`infosign/compeito`](https://github.com/infosign/compeito) | `main` · **`0656e10`** | 🟢 **Apache-2.0**, 10 759 B + `pyproject.toml` | 🟢 **Newly read.** 🟢 Two agreeing grant layers; 🔴 not on PyPI |
+| 🆕 [`Ed-Fi-Alliance-OSS/Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service) | `main` · **`9203e19`** · tag **`v8.0.0`** = **`d911abb`** | 🟢 **Apache-2.0**, **11 357 B** (canonical) | 🟢 **The week's most consequential movement — see below** |
+| 🆕 [`Ed-Fi-Alliance-OSS/DMS-Configuration-Service`](https://github.com/Ed-Fi-Alliance-OSS/DMS-Configuration-Service) | `main` · **`782b0d3`** | 🟢 **Apache-2.0**, **11 357 B** | 🟢 Implements the Ed-Fi **Management API**; successor to **ODS Admin API** |
+| 🟡 [`tla-ecosystem/awesome-tla`](https://github.com/tla-ecosystem/awesome-tla) | `main` · **`133a6ac`** | 🟡 **CC0-1.0**, 6 469 B | 🟡 **A list, not a dependency** — CC0 is not a software grant |
+
+### 🟢 🆕 The Ed-Fi line has a successor and it has **shipped** — correcting the channel in the process
+
+🔵 **This KB has carried `Ed-Fi-ODS` and its four-repo substrate since the thirteenth pass** and
+completed its licence census at pass 62. 🔴 **Those repos are now the *legacy* line.** The DMS
+README states it plainly: *"These applications **replace the legacy** Ed-Fi ODS/API and Ed-Fi ODS
+Admin API."*
+
+🔴 **The channel reported only alpha pre-releases** (`dms-v8.0.1-alpha.0.188`, 2026-10-06) and said
+it *"can't confirm the exact release date of the stable 8.0"*. 🟢 **`git ls-remote --tags` resolves a
+plain `v8.0.0` tag at `d911abb`** — measured from the git protocol, which this session **can** read
+even while the release API is `SCOPE_DENIED`. 🔵 **A worked instance of `P802`: the right instrument
+answered a question the refused one could not.**
+
+🟡 **Tag hygiene affects pinning:** `v0.1.0 · v0.2.0 · v0.4.0 · v0.5.0 · v0.6.0 · v0.7.0 · v8.0.0`
+— 🔴 **`v0.3.0` absent, a bare `temp` tag present**. 🔵 The `v0.7.0 → v8.0.0` jump is **alignment to
+the Ed-Fi API version**, not seven prior majors of this codebase. 🔴 **Reading it as maturity is a
+misread.**
+
+🟢 **Stack, from `GETTING_STARTED.md` (10 021 B):** 🔴 **.NET 10 SDK** to build; **PostgreSQL** OLTP;
+`docker compose` (Podman supported via find-and-replace in `eng/docker-compose`); **Data Standard
+5.2** out of the box. 🟡 RC notes add **OpenSearch/Elasticsearch**, **Kafka** streaming, **Keycloak**
+OAuth.
+
+🔴 **Unanswered and expensive:** whether an `Ed-Fi-ODS` deployment migrates to DMS without a data
+migration — the question pass 66 *could* answer for `lrsql → xapi-lrs` (a no-op). 🔴 **No payload
+read this pass makes any such claim.** 🟢 **`Gap 303` opened.**
+
+### 🟢 Freshness, stated as what was and was not measurable
+
+🟢 **Measurable this week:** HEAD shas for **9 of 9** repos probed (the cleanest resolution rate this
+shelf has recorded), and release **tags** for 2 of 2 probed.
+🔴 **Not measurable:** commit dates, release dates, star counts, contributor counts — all behind
+`api.github.com` (`SCOPE_DENIED`).
+🔵 **So "fresh" this week means *a ref that resolves and a licence that reads*, and nothing stronger.**
+🔴 **`P781` stands: a resolved sha is not evidence of activity.** 🟡 The one dated signal carried is
+channel-reported and held at channel weight: a DMS pre-release on **2026-10-06** and a merged DMS
+documentation PR on **2026-10-08**, both suggesting an actively worked tree.
+
+
 ## 🟢 Sixty-sixth pass, 2026-10-08 — the GitHub-trending channel repeats its category error for the nth week, and the week's real repo movement is an **Apache-2.0 LRS tier** read by grant
 
 ⏱️ **Twentieth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

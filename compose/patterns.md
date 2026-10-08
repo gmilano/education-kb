@@ -4,6 +4,145 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-seventh pass, 2026-10-08 — `P10`: the shelf's **second zero-copyleft recipe**, and the first that answers *what the evidence proves* rather than only *what happened*; plus three practices (`P802`–`P804`) earned by this pass's instrument states
+
+⏱️ **Twenty-first pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🔵 **Rule applied, unchanged (`P759`/`P800`):** every named component has a **licence file read as
+bytes** and a **HEAD pinned**, and no component enters a recipe on a README claim. 🔴 **A recipe
+naming a prose-only grant is a proposal with an unpriced legal step in it.**
+
+### 🆕 `P10` — Competency-anchored learning evidence, **MIT + Apache-2.0 throughout**
+
+🟢 **The gap it fills.** `P8` (pass 66) built an Apache-2.0 evidence spine that records **what
+happened** — statements, actors, review events. 🔴 **It could not say what any of it proved**, because
+the competency layer was unread. 🟢 **`P10` adds the semantic anchor: every statement points at a
+competency with a stable CASE identifier**, so the record answers *this learner demonstrated this
+competency, on this evidence, reviewed by this person, on this date.*
+
+🟢 **It is the second pattern on this shelf with no copyleft component anywhere**, and therefore the
+second that can ship **inside** a closed client deliverable.
+
+🟢 **It is also the direct answer to this pass's two strongest market signals:** 1EdTech naming
+**digital credentials as the mechanism for skills-based learning and hiring**, and the **EU AI Act's
+four-limb high-risk test**, whose limbs 1 and 4 (evaluates learners; influences access to
+qualifications) are exactly the decisions this record makes auditable.
+
+| Layer | Component | Grant (payload, bytes) | Pin |
+|---|---|---|---|
+| **Competency registry (default)** | [`opensalt/opensalt`](https://github.com/opensalt/opensalt) | 🟢 **MIT**, 1 080 B, © 2016 Public Consulting Group | **`develop`** · **`db41cc4`** 🆕 |
+| **Competency provider (Postgres path)** | [`infosign/compeito`](https://github.com/infosign/compeito) | 🟢 **Apache-2.0**, 10 759 B + `pyproject.toml` | `main` · **`0656e10`** 🆕 |
+| **Framework authoring UI** | [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) | 🟢 **Apache-2.0**, 11 264 B ⚠️ `P804` | `main` · **`97d0373`** 🆕 |
+| Tool launch from the LMS | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 Apache-2.0, 11 361 B | `master` · `0ec24fe` |
+| Statement emitter | [`RusticiSoftware/TinCanPython`](https://github.com/RusticiSoftware/TinCanPython) | 🟢 Apache-2.0, 11 358 B | **`3.x`** · `bbc3f9d` ⚠️ `P793` |
+| Evidence store | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 Apache-2.0, 11 357 B | `main` · `cb794e4` |
+| Assessment delivery | [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | 🟢 MIT — 🟢 **1EdTech Certified**, QTI 3 Basic + Advanced Delivery | per `agents/trending.md` |
+| Rostering | [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 Apache-2.0, 10 173 B | `main` · `6de5476` |
+| **Conformance regression** | [`conform-ed/conform-ed`](https://github.com/conform-ed/conform-ed) | 🟢 **MIT**, 1 080 B | `main` · **`3596bb5`** 🆕 |
+| Orchestration | **LangGraph** | 🟢 MIT | per `agents/top.md` |
+| LMS (optional, remote) | **Moodle / Canvas / Open edX** | 🔴 GPL/AGPL — **service, never a dependency** | deployment, not linkage |
+
+🟢 **Wiring, concretely:**
+
+1. **Define.** Load the client's standards into **OpenSALT** as CASE frameworks. 🟢 **The import path
+   is measured, not assumed:** `compeito`'s CLI reads **OpenSALT-compatible CSV** and pulls
+   frameworks straight from a live endpoint —
+   `import case --tenant {uuid} --url https://opensalt.net/ims/case/v1p0/CFPackages/{id}` — and
+   also takes `xlsx`, which is the format a ministry's standards actually arrive in. 🔵 Use
+   **OpenCASE**'s visual editor when the client authors frameworks rather than importing them.
+2. **Launch.** `ltijs` receives the **LTI 1.3** launch from the LMS (remote, never linked) and
+   yields verified context: learner, course, role.
+3. **Deliver.** `qti3-item-player` renders the assessment item. 🟢 **This is the one externally
+   certified component in the recipe** — the only place the word *certified* is literally true.
+4. **Emit, anchored.** `TinCanPython` writes an **xAPI statement per meaningful event**, and 🟢 **the
+   statement's object or context carries the CASE competency URI** returned by the registry.
+   🔵 **That single field is what distinguishes `P10` from `P8`:** the evidence is self-describing
+   and survives the LMS it was produced in.
+5. **Store.** `lrsql` persists statements — **SQLite 3.42 embedded for a pilot, Postgres 14 for
+   production**, same binary.
+6. **Review.** A **LangGraph** node holds the decision. 🔴 **Anything that would become a grade, a
+   placement, a proctoring flag or a qualification gate stops here** — those are limbs 1–4 of the
+   EU test — and the **human review event is itself written as an xAPI statement**.
+7. **Prove it still works.** 🟢 **`conform-ed` in CI**: its `lrsql:up` / `lrsql:wait` /
+   `lrsql:auth:check` scripts stand up the very store in step 5, and its `qti:coverage:report` /
+   `qti:delivery:report` scripts measure the step-3 player against a QTI corpus. 🔵 **So the recipe
+   ships with a regression harness for its own interop surface** — which no prior pattern here had.
+
+🔴 **What `P10` does NOT do, priced explicitly:**
+
+| Not included | Why | Lawful shape |
+|---|---|---|
+| 🔴 **Issuing a badge or verifiable credential** | 🔴 every issuer on this shelf is **AGPL-3.0** | **`P9`** — arm's-length hosted issuer, or write one |
+| 🔴 **Aggregating into a CLR 2.0 record** | 🔴 **no verifiable implementation on any default ref** (`Gap 301`) | build, or wait |
+| 🔴 **EU AI Act conformity assessment** | 🔴 **different regime from standards conformance** (`P803`) | name the assessor; this recipe builds the technical file |
+| 🟡 **1EdTech certification of the CASE tier** | 🟡 OpenCASE is *"ready for"*, COMPEITO *"working toward"* | price the certification step |
+
+🟢 **Effort, honestly banded: 8–10 weeks** for a single-tenant pilot (framework import is the
+variable — a clean CSV is days, a PDF standards corpus is weeks), **12–16 weeks** multi-tenant with
+`conform-ed` wired into CI and a documented AI Act technical file. 🔴 **Add discovery, not an
+estimate, for anything touching issuance.**
+
+🟢 **Regional fit:** **North America** — state competency registries, and OpenSALT is the codebase
+1EdTech's own CASE Registry is based on. **EMEA** — the five national instruments read this pass are
+curriculum-and-competence programmes (Italy, Ireland, Slovakia, France, Czechia), which is what this
+models. **LATAM** — workforce reskilling needs the competency-to-occupation join, and OpenSALT
+carries jobs and pathways natively. **APAC** — the per-jurisdiction policy nodes go in step 6.
+
+### 🆕 `P802` — `SCOPE_DENIED` is a third instrument state, distinct from `403` and from non-measurement
+
+🔴 **Earned this pass.** `api.github.com` has now failed three ways across four passes, and the
+remedies are different: passes 64–65 recorded a **`403`** (gateway refusal), pass 66 recorded a
+**non-measurement** (the probe was never issued), and this pass the GitHub tooling answered
+**`Access denied: repository … is not configured for this session`** — an **allow-list of two
+repositories**, naming them.
+
+🟢 **The rule:** record *which* refusal, with its own words, never a generic "unavailable".
+🔵 **`P798`'s lesson generalises** — the instrument's limit must not be published as the subject's
+property, and *three different limits* must not be published as one. 🟢 **Practical consequence:**
+`SCOPE_DENIED` is **not** fixable by waiting or retrying (unlike a rate-limit `403`) and **is**
+fixable by attaching a repository — so it changes what a later pass should attempt, which is the
+only reason an instrument state deserves a number.
+
+### 🆕 `P803` — *conformance* and *conformity* are different regimes; never let the shared word bridge them
+
+🔴 **Earned this pass, and it is the highest-consequence practice of the three.**
+
+| | Standards **conformance** | AI Act **conformity assessment** |
+|---|---|---|
+| Authority | 1EdTech / ADL specifications | 🟢 EU AI Act, Annex III |
+| Question | does it speak QTI/xAPI/LTI correctly? | is this high-risk AI system lawful to place in service? |
+| Assessor | certification body — 🔴 or a **non-accredited harness** | 🟢 internal assessment or third-party audit |
+| Timing | any time | 🔴 **before placing on market / putting into service** |
+
+🟢 **The rule:** when a component's name or README contains *conform*, state which regime it serves
+**in the same sentence**. 🔵 `conform-ed` says of itself that it is **not a certification body** and
+produces **assessments, not official certification** — 🟢 **quote that, don't paraphrase it.**
+🔴 **Never write that a `conform-ed` run contributes to AI Act compliance without naming the
+assessor it does not replace.**
+
+### 🆕 `P804` — an off-canonical Apache byte count is a question about the **copyright holder**, not a defect
+
+🟢 **Earned by two rows this pass.** This shelf reads the canonical Apache-2.0 `LICENSE` at
+**11 357 B**. Two new Apache components were neither that size nor each other's:
+
+| Repo | bytes | Δ | APPENDIX | Holder line |
+|---|---|---|---|---|
+| canonical (e.g. `Data-Management-Service`) | 11 357 | — | 🟢 present | varies |
+| `1EdTech/OpenCASE` | **11 264** | −93 | 🟢 present | 🔴 **`[yyyy] [name of copyright owner]` — unfilled** |
+| `infosign/compeito` | **10 759** | −598 | 🔴 **removed** | 🟢 **`Copyright 2026 Infosign, Inc.`** |
+
+🟢 **The rule:** when an Apache payload is off-canonical, **diff it and read the tail** before
+recording anything. 🟢 **The grant is almost never the issue** — Apache-2.0 grants from the owner
+whether or not the appendix names them. 🔵 **What changes is whether `P184` (holder/licence pairing)
+can be run at all**: an unfilled placeholder means there is **no holder to pair**, so `P184` returns
+*not applicable* rather than *clean*. 🔴 **Recording that as "clean" is the error this practice
+exists to prevent.**
+
+🟡 **And the counter-intuitive corollary, worth keeping:** provenance does not predict grant
+completeness. 🔴 **The official standards-body repository left its holder as a template
+placeholder; the community implementation named its own.**
+
+
 ## 🟢 Sixty-sixth pass, 2026-10-08 — the shelf's **first pattern with no copyleft component anywhere** (`P8`), and the AGPL credential fence priced into the **two lawful shapes** that remain (`P9`)
 
 ⏱️ **Twentieth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

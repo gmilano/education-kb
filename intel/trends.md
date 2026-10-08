@@ -4,6 +4,121 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-seventh pass, 2026-10-08 — the trend channel converges on **purpose-built over general-purpose**, which is the first time the market's stated direction and this shelf's measured result agree; plus **skills-based credentials** named as a 2026 mechanism by the body that writes the standard
+
+⏱️ **Twenty-first pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 🆕 Trend 1 — **purpose-built beats general-purpose**, and this is the trend that retro-justifies eighteen weeks of empty control queries
+
+🔵 **Four independent channels say the same thing this pass**, in different vocabularies:
+
+| Channel | Claim |
+|---|---|
+| **1EdTech** (standards body) | institutions shifting to **comprehensive AI strategies** covering **governance, compliance and evaluation processes** |
+| **OECD** (Digital Education Outlook 2026) | 🟢 move **beyond general-purpose AI tools toward purpose-built educational AI** designed for **durable learning gains** |
+| **HolonIQ** | clearest results came from **course design support, teacher productivity, admin workflows** — not broad personalisation; expects **"selective AI acceleration"** |
+| 🟡 **Teachbetter.ai** (vendor) | generic chatbots **created extra work** — teachers spent time writing prompts and checking accuracy; 2026's defining shift is **away from generic tools toward education-purpose-built platforms** |
+
+🟢 **Why this matters structurally and not just as a quote.** 🔴 **This shelf's industry-named
+control query has returned general-purpose frameworks and nothing else for eighteen consecutive
+weeks** (OpenClaw, CrewAI, LangGraph, OpenHands — see `agents/top.md`). 🔵 **The trend channel has
+now independently diagnosed that same emptiness as the market's problem, not as this KB's
+instrument failure.** 🟢 **So `P795` — name the platform or the protocol, never the industry — is
+not merely a search tactic; it is the correct response to a real property of this market: the
+education-specific layer lives in standards and verticals, not in the agent frameworks.**
+
+🟡 **The vendor row is carried at vendor weight**, but it is the one that names the mechanism
+(prompt-writing and output-checking as *added* teacher labour), and it agrees with the three
+non-vendor rows on direction.
+
+### 🟢 🆕 Trend 2 — **digital credentials as the mechanism for skills-based learning and hiring**, said by the body that writes the specification
+
+🟢 **1EdTech's own 2026 outlook names digital credentials as a core mechanism for skills-based
+learning and hiring**; **HolonIQ** independently notes growing interest in **competency frameworks
+and adaptive training**.
+
+🔵 **This is the trend that sent this pass at the CASE/LER tier**, and the result is in
+`repos/foundations.md`: 🟢 **the describe edge is permissive three ways** (OpenSALT MIT; OpenCASE and
+COMPEITO Apache-2.0), and OpenSALT models **competencies, credentials, learning opportunities, jobs
+and pathways** with **Credential Engine CTDL** and **W3C VC** alignment.
+
+🔴 **And here is the counter-fact the trend does not mention, which this shelf can supply:**
+🔴 **badge *issuance* is AGPL-only and CLR 2.0 *aggregation* has no verifiable implementation on any
+default ref** (`Gap 294`, `Gap 301`). 🟢 **So the trend is real and the permissive tooling to act on
+it is incomplete in a specific, nameable place** — which is a more useful sentence for a studio than
+either the trend or the gap alone.
+
+### 🟢 🆕 Trend 3 — governance moved from *guidance* to *enforcement*, and the two are being conflated
+
+🟢 **The hard dates, re-measured this pass** (full table and sourcing in `intel/market.md`):
+**EU AI Act enforcement began `2026-08-02`**; the **AI omnibus amendments entered force
+`2026-07-27`**; **Vietnam's Law on AI has been in force since `2026-03-01` with education named on
+its high-risk list**; **South Korea's AI Basic Act took effect January 2026 in an explicit pilot
+year**.
+
+🔴 **The conflation to refuse, and it is now the most likely error in this whole subject area:**
+
+| Not the same | Regime | Assessor |
+|---|---|---|
+| **Standards conformance** (QTI/xAPI/LTI correctness) | 1EdTech / ADL specifications | 🟡 certification bodies, or 🔴 **a non-accredited harness** |
+| **AI Act conformity assessment** | EU AI Act, Annex III high-risk | 🟢 internal assessment or third-party audit, **before service** |
+
+🔵 **The word "conformance" appears in both and they share no machinery.** 🟢 **`conform-ed`
+(MIT, found this pass) produces the first and contributes evidence toward the second's technical
+file. It is not the second.** 🔴 **A deliverable that implies otherwise is a misrepresentation to a
+regulated buyer** — recorded as a standing caution, not a one-pass note.
+
+### 🟢 Trend 4 — the policy gap is the sector's defining number, and it is now measured in all four regions
+
+| Region | Adoption | Formal framework | Deficit |
+|---|---|---|---|
+| **North America** | 🟡 **86 %** orgs (🟢 **32 %** teachers *weekly*) | 🟡 >30 states publish guidance | 🟡 guidance ≠ policy |
+| **EMEA** | 🔴 unmeasured | 🔴 **10 %** of 450+ institutions | 🔴 **worst position: lowest governance, live enforcement** |
+| **APAC** | 🔴 unmeasured | 🔴 unmeasured | 🔴 regulation-led, adoption unknown |
+| **LATAM** | 🟢 **87 %** of 200 HEIs | 🔴 **26 %** | 🔴 **61-point deficit**, best-evidenced |
+
+🟢 **K-12 Academics adds the student/teacher split for North America:** **54 % of K-12 students**
+and **92 % of university students** use AI; **86 %** of education organisations use generative AI
+**and most lack a policy**; weekly-using teachers save **~5.9 hours a week**.
+🟡 **Teachbetter.ai's threshold claim** — teachers adopt readily when AI saves **five to ten hours
+a week without compromising instructional quality** — 🟢 **brackets the 5.9-hour measurement**, so
+vendor claim and survey figure are consistent here rather than in conflict.
+
+🔵 **The sellable reading:** the deficit is not an awareness problem, it is an **artefact** problem.
+🟢 **Every one of these institutions can say it uses AI and none of them can show what it did** —
+which is what an xAPI evidence spine plus a recorded human-review event produces.
+
+### 🟡 Trend 5 — the shift from *time saved* to *learning gained*, which changes how a pilot is measured
+
+🟡 **eSchool News** expects schools to move from AI as a **time saver** to AI as a **driver of better
+teaching and learning**; 🟢 **OECD** frames the same shift as purpose-built tools aimed at
+**durable learning gains**.
+
+🔵 **Consequence for an engagement, stated concretely:** a pilot justified on **hours saved** (5.9 to
+10 per teacher per week) is measurable from the start; 🔴 **one justified on learning gains needs a
+baseline, an instrument and a comparison window that must be designed before launch, not after.**
+🟢 **This is an argument for the evidence spine as the *first* deliverable rather than the last**:
+without a statement store, the learning-gain claim is unfalsifiable and therefore unsellable to the
+buyer now asking for it.
+
+🔴 **Unverified figures held out of the trend list**, because the channel itself flagged them:
+one vendor's *"83 % of institutions plan AI teaching assistant deployment"* (attributed to EDUCAUSE)
+was **not confirmed by the channel that carried it**. 🔴 **Not carried.** 🔵 Recorded here so a later
+pass does not rediscover it as new.
+
+### 🔴 What the trend channel did **not** yield this pass, stated as measurement
+
+🔴 **No education-specific agent framework** — eighteenth consecutive week (see Trend 1 for why this
+is now a finding about the market rather than the query).
+🔴 **No adoption or market figure for APAC or LATAM** (`Gap 305`).
+🔴 **No UK education-specific instrument** (`Gap 306`).
+🔴 **No Caliper Analytics movement** — the protocol 1EdTech places at the centre of learning
+analytics has been unreadable for three consecutive passes, and the trend channel does not mention
+it either. 🔵 **Absence in both the code channel and the trend channel is a stronger signal than
+absence in one**: it suggests Caliper is not merely closed to this session but quiet in the market.
+🟡 **Carried as a hypothesis, not a conclusion.**
+
+
 ## 🟢 Sixty-sixth pass, 2026-10-08 — the governance convergence gains a **fifth channel (OECD)** and, more importantly, a **licence-level corroboration no analyst can give**: the ecosystem fences credential *issuance* and leaves *measurement* free
 
 ⏱️ **Twentieth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

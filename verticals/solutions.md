@@ -4,6 +4,116 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-seventh pass, 2026-10-08 — the shelf's **copyleft law gets its first genuine exception**, and the exception has a precise shape: the **registry** is permissive even though the **system of record** is not
+
+⏱️ **Twenty-first pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🔵 **The law as pass 66 stated it:** *"education administrative software is copyleft, essentially
+without exception"* — eleven systems, zero permissive (Moodle GPL-3.0 · Open edX AGPL-3.0 · Canvas
+AGPL-3.0 · Chamilo GPL · ILIAS GPL · RosarioSIS GPL · Gibbon GPL · OpenEduCat LGPL-3.0 ·
+`frappe/lms` AGPL-3.0 · ERPNext GPL-3.0 · Learning Locker GPL-3.0), with the complement that the
+permissive systems that exist (OFBiz, Krayin) are permissive **because they contain no education
+domain**.
+
+🟢 **This pass found a system that breaks the complement: it carries a genuine education domain AND
+it is permissive.**
+
+### 🟢 🆕 The exception, read from payload
+
+| System | ref · HEAD | Licence (payload, bytes) | Education domain | Verdict |
+|---|---|---|---|---|
+| [`opensalt/opensalt`](https://github.com/opensalt/opensalt) (OpenSALT) | **`develop`** · **`db41cc4`** | 🟢 **MIT** (`LICENSE`, **1 080 B**, © **2016 Public Consulting Group**) | 🟢 **yes, and deep** — competencies, standards, credentials, learning opportunities, jobs, pathways, issuer information | 🟢 **permissive WITH the domain** 🆕 |
+| [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) | `main` · **`97d0373`** | 🟢 **Apache-2.0** (`LICENSE`, **11 264 B**) | 🟢 yes — CASE 1.0/1.1 framework authoring and publishing | 🟢 **permissive WITH the domain** 🆕 |
+| [`infosign/compeito`](https://github.com/infosign/compeito) (COMPEITO) | `main` · **`0656e10`** | 🟢 **Apache-2.0** (**two layers**) | 🟢 yes — CASE 1.1 provider, multi-tenant | 🟢 **permissive WITH the domain** 🆕 |
+
+🔴 **So "eleven systems, zero permissive" is no longer the whole picture, and the correction is
+owed.** 🟢 **The law survives, but it must be stated about the right object.**
+
+### 🟢 The law, restated precisely — and the restatement is more useful than the original
+
+🟢 **What is copyleft is the system of record for PEOPLE and COURSES.** Enrolments, grades,
+submissions, fees, discipline, timetables. 🔴 **Eleven systems, zero permissive, unchanged.**
+
+🟢 **What is permissive is the registry and the instrumentation AROUND it.** Three tiers now
+measured:
+
+| Tier | Grant | Read in |
+|---|---|---|
+| **Telemetry** — xAPI spec, emitter, **store** | 🟢 **Apache-2.0 end to end** | pass 66 |
+| **Description** — CASE competency / LER registry | 🟢 **MIT + Apache-2.0, unanimous** | 🟢 **this pass** |
+| **Conformance** — cross-protocol harness | 🟢 **MIT** (`conform-ed`) | 🟢 **this pass** |
+| **Interop edges** — LTI 1.3, OneRoster, QTI, SCORM/cmi5 | 🟢 Apache-2.0 / MIT | passes 60–62 |
+| 🔴 **Credential issuance** | 🔴 **AGPL-3.0 only** | passes 64–65 |
+| 🔴 **CLR aggregation** | 🔴 **no verifiable implementation** | 🟢 this pass (`Gap 301`) |
+
+🔵 **Why the distinction is load-bearing and not pedantry.** Pass 66's conclusion was *"the
+permissive surface in education is not the system of record — it is the instrumentation around
+it."* 🟢 **That was right about licences and wrong about categories.** 🔴 **OpenSALT *is* a system of
+record** — its README calls itself a **registry platform** and a **"trusted source of semantic
+metadata"** consumed by awarding systems, wallets, transcript services, SIS, and workforce
+applications. 🟢 **It is simply a system of record for a different noun: competencies rather than
+students.**
+
+🟢 **The engagement consequence, which is the point of this file:** the choice is no longer only
+*"inherit copyleft with the domain, or a permissive frame without it."* 🟢 **There is now a third
+shape: own the competency and evidence layers outright under permissive terms, and treat the
+student system of record as a remote GPL service** (`P7`'s arm's-length rule, which all eleven
+copyleft systems satisfy via their APIs). 🔵 **That is a deliverable a client can hold the IP in**,
+and it is written up as **`P10`** in `compose/patterns.md`.
+
+### 🟢 🆕 OpenSALT is the consortium's own reference deployment, which is unusual on this shelf
+
+🟢 **1EdTech's announcement of the CASE Registry states the Registry is based on the OpenSALT
+open-source project.** 🔵 **So the permissive codebase and the standards body's reference
+deployment are the same software.**
+
+🔴 **Contrast, recorded because it is the normal case here:** `1EdTech/openbadges-specification`
+carries **no licence file and no licence prose** (six candidate names 404, pass 65) and falls under
+the **1EdTech Spec Document Licence**; **`1EdTech/caliper-js`** has been **unreadable behind
+membership for three consecutive passes**. 🟢 **CASE is the one 1EdTech-adjacent area where the
+consortium's own path and the permissive path coincide**, and that is a procurement argument, not a
+licence trivium: a state agency can deploy the same code the Registry runs, and fork it.
+
+### 🟡 What the new tier does NOT replace — stated so no proposal overreaches
+
+🔴 **OpenSALT is not an LMS.** No courses, no enrolment, no gradebook, no delivery.
+🔴 **It is not a badge issuer.** It describes and aligns what a credential asserts; **issuance
+remains AGPL-only** (`certo`, `Opencred`, `edubadges-server`).
+🔴 **It is not an SIS or ERP.** The education ERP finding of pass 66 stands unchanged: **ERPNext
+(GPL-3.0) is the only real education ERP and it is copyleft**; OFBiz (Apache-2.0) and Krayin (MIT)
+remain permissive-but-empty frames.
+🟡 **And none of the three new systems is externally certified** — OpenCASE says *"ready for"*
+1EdTech certification, COMPEITO says *"working toward"* full conformance. 🔴 **Ready-for is not
+certified**, and a bid should price the certification step.
+
+🟡 **Operational caveats priced, not buried:** OpenSALT's default ref is **`develop`** (🔴 pin the
+commit), its grant is **single-layer** (🔴 no `composer.json`, not on Packagist), and its stack is
+**PHP/Symfony on MySQL via docker-compose** — 🔵 a different substrate from the Postgres-centred
+tiers elsewhere on this shelf, which is an integration cost to name rather than discover.
+🟢 **COMPEITO is the Postgres/FastAPI alternative and imports frameworks directly from a live
+OpenSALT CASE endpoint**, so the two compose rather than compete.
+
+### 🟢 The vertical shelf, as it now stands
+
+| Layer | Best permissive option | Fallback |
+|---|---|---|
+| **Competency / LER registry** | 🟢 **OpenSALT (MIT)** · OpenCASE, COMPEITO (Apache-2.0) 🆕 | — |
+| **Learning record store** | 🟢 `lrsql` / `xapi-lrs` (Apache-2.0) | — |
+| **Assessment delivery** | 🟢 `amp-up-io/qti3-item-player` (MIT, **1EdTech Certified**) | — |
+| **Tool launch** | 🟢 `ltijs` (Apache-2.0) | — |
+| **Rostering** | 🟢 `edfi-oneroster` (Apache-2.0); 🟢 **`Data-Management-Service` v8.0.0** 🆕 | Ed-Fi ODS (legacy, Apache-2.0) |
+| **Conformance evidence** | 🟢 **`conform-ed` (MIT)** 🆕 — 🔴 assessments, **not certification** | — |
+| **LMS / student system of record** | 🔴 **none permissive** | Moodle, Open edX, Canvas — 🟢 **remote service only** (`P7`) |
+| **Credential issuance** | 🔴 **none permissive** | AGPL issuers — 🔴 **AGPL § 13 defeats the arm's-length rule** (`P9`) |
+| **Education ERP** | 🔴 **none permissive** | ERPNext (GPL-3.0), OpenEduCat (LGPL-3.0) |
+
+🟢 **Six of nine layers now have a permissive option.** 🔴 **The three that do not are the student
+system of record, credential issuance, and education ERP** — and all three are the same kind of
+thing: **the systems that hold authoritative records about a named person.** 🔵 **Stated as a
+hypothesis for a later pass, because three instances is a pattern and not yet a law:** education's
+copyleft boundary tracks **personal authoritative data**, not software category.
+
+
 ## 🟢 Sixty-sixth pass, 2026-10-08 — the shelf asks for a **permissive education ERP/CRM** and gets a clean negative: the permissive systems have no education, the education systems are GPL, and that is now a measured result rather than an absence
 
 ⏱️ **Twentieth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

@@ -4,6 +4,210 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-seventh pass, 2026-10-08 — six gaps opened (`Gap 301`–`Gap 306`), `Gap 293` re-confirmed **with its cause newly named**, and `Gap 286` closed as **unanswerable by this session** rather than left open indefinitely
+
+⏱️ **Twenty-first pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🔵 **Note on the registry's own continuity:** pass 66 wrote to the seven shelf files but **not to
+this one**, so the newest section below this one is pass **65**'s. 🟢 **Pass 66's gap movement is
+folded into this section where it bears on a gap**, and 🔴 **that omission is itself recorded** —
+`Gap 307`.
+
+### 🆕 `Gap 301` — the CLR 2.0 *aggregate* edge has **no verifiable implementation on any default ref**
+
+🔴 **The gap.** `Gap 294` recorded the Open Badges 3.0 **issue** edge as populated-but-AGPL. 🟢 This
+pass probed the **aggregate** edge — CLR 2.0, grouping issued badges into one signed record — and
+found **nothing consumable**.
+
+🟢 **Measured:**
+
+| Probe | Result |
+|---|---|
+| `arqueon/certo` `main` | **`39816e0`**; 🔴 **AGPL-3.0**, `LICENSE` **33 820 B** |
+| `Schroedinger-Hat/certo` (upstream) `main` | **`6fd0a11`** — 🔵 **the sha pass 65 recorded as "certo"**; 🔴 AGPL-3.0, **33 820 B — byte-identical** |
+| `CLR` / *"Comprehensive Learner Record"* in `arqueon/certo` README (16 582 B) | 🔴 **zero occurrences** |
+| four plausible CLR tree paths on `main` | 🔴 **all 404** |
+
+🔴 **So the capability exists only as a pull request** (`P786`: a PR is a proposal), and the fork
+offers **no permissive relief** — its licence payload is byte-identical to its upstream's.
+🟡 **The only CLR-touching permissive code read this pass is `conform-ed`'s CLR v2.0 *schemas and
+conformance runners* (MIT)** — 🔴 **which validate a CLR, they do not assemble or sign one.**
+
+🟢 **Remedy, in cost order:** **(i)** re-probe `arqueon/certo` `main` on a later pass for a merged
+CLR path — one `curl`, minutes; **(ii)** probe PR #4's head ref directly via
+`git ls-remote … refs/pull/4/head` — minutes, and it would establish whether the branch exists even
+while `api.github.com` is refused; **(iii)** 🔴 accept that CLR assembly is **build-not-buy** and
+price it. 🔵 **(ii) is the next instrument to try**, because it needs no API access.
+
+### 🆕 `Gap 302` — two of this pass's four new components are **unplaced by region**
+
+🔴 **The gap.** `infosign/compeito` and `conform-ed/conform-ed` carry **no country or org location in
+any payload read** — not in `LICENSE`, not in README, not in a manifest. 🟡 `"Infosign, Inc."` is a
+named holder that is **not geolocated**; `conform-ed` is a bare GitHub org.
+
+🟢 **Left unplaced rather than inferred** (`P722`): an inferred region is worse than an absent one,
+because the compiled filter cannot distinguish them. 🔵 **Two of four is the honest count for this
+pass** — the other two (OpenSALT, OpenCASE) are **North America** on first-party evidence.
+
+🟢 **Remedy:** read each project's own site or org profile when the channel allows (**cheap**); or
+leave permanently unplaced and 🟢 **say so in any deck that filters by region** — which is the
+honest default, not a failure.
+
+### 🆕 `Gap 303` — whether `Ed-Fi-ODS` migrates to the **Data Management Service** without a data migration is unmeasured, and it is the expensive question
+
+🔴 **The gap.** `Data-Management-Service` **replaces** the legacy ODS/API by its own README, and has
+a shipped **`v8.0.0`** tag (`d911abb`). 🔴 **No payload read this pass states whether an existing ODS
+database can be taken over in place.**
+
+🔵 **Why it matters more than most gaps here:** pass 66 could answer exactly this question for
+`lrsql → xapi-lrs` — the README documented a **no-op, same `DATABASE_URL`**, with a precise list of
+what does and does not carry over. 🟢 **That precedent is why the absence is conspicuous:** a
+successor project that *does* support in-place takeover normally says so.
+
+🔴 **Consequence for a proposal:** every US district and state agency on `Ed-Fi-ODS` has a migration
+ahead of it, and 🔴 **a bid must price the discovery rather than assume either answer.**
+
+🟢 **Remedy, in cost order:** **(i)** read `docs/DATA-STANDARD-VERSIONS.md` and any upgrade or
+migration doc in-tree — one `curl` each, minutes; **(ii)** read the `v8.0.0` tag's release notes —
+🔴 blocked by `SCOPE_DENIED`; **(iii)** clone and inspect migration scripts — under an hour.
+🟢 **(i) was not run this pass and should be first on the next.**
+
+### 🆕 `Gap 304` — Vietnam's AI statute is carried from a **secondary channel**, with a live source conflict
+
+🔴 **The gap.** This pass records Vietnam's **Law on Artificial Intelligence** as passed
+**`2025-12-10`**, in force **`2026-03-01`**, with a high-risk list naming **education — *"automated
+assessment and behavioural monitoring"***. 🔴 **The statute text was not reachable**, and 🔴 **two
+channels disagreed**: one called the instrument a *Digital Technology Industry Law* effective 2026.
+
+🟢 **The more specific reading is carried** (named law, exact dates, explicit education limb), and
+🔴 **it is explicitly not confirmed from a primary source.**
+
+🔵 **Why this gap is worth a number rather than a caveat:** this is the **second** jurisdiction on
+this shelf to put education on a statutory high-risk list, and that claim does regulatory work in
+`intel/market.md` and `intel/trends.md`. 🔴 **A claim that carries weight must carry its provenance.**
+
+🟢 **Remedy:** probe an official or legal-database copy of the statute (**cheap**, likely blocked by
+the egress allowlist — `Gap 293`); or 🟡 downgrade to *"reported"* language in any client-facing
+artefact until primary-sourced. 🟢 **The downgrade is free and should be the default.**
+
+### 🆕 `Gap 305` — no 2026 market figure exists for **APAC or LATAM**, and the regional figures do not reconcile with the global one
+
+🔴 **The gap, measured:**
+
+| Scope | 2026 figure | Status |
+|---|---|---|
+| Global | **$10.6 B** (→ $42.48 B 2030, CAGR 41.5 %) | 🟡 held four passes |
+| Global (conflicting) | **$12.3 B** | 🔴 **~16 % disagreement, same year, same scope** |
+| North America | **$3.68 B** (36 % share) | 🟡 aggregator |
+| EMEA (Europe) | **$2.64 B** | 🔴 low confidence, research origin unnamed |
+| **APAC** | 🔴 **none returned** | 🔴 **empty** |
+| **LATAM** | 🔴 **none returned** | 🔴 **empty** |
+
+🔴 **The two named regions sum to ~$6.3 B against a $10.6 B global**, which requires APAC + LATAM
+together to be ~40 % — 🔴 **unverifiable, since neither has a figure.** 🔵 **So the regional
+breakdown cannot currently be presented as a market map without an unsourced residual.**
+
+🟢 **Remedy:** a region-named market query per region (**cheap**, one search each); or 🟢 **present
+share-of-global rather than absolute figures**, which is honest with the data actually held.
+
+### 🆕 `Gap 306` — the **UK** returned no education-specific AI instrument, which is conspicuous for a market this size
+
+🔴 **The gap.** The EMEA probe returned EU AI Act enforcement, six national European instruments
+(Italy, Ireland, Slovakia, France, Czechia, Netherlands), and nascent MEA policy — 🔴 **and nothing
+for the United Kingdom**, which is outside the AI Act and is one of EMEA's largest education-
+technology markets.
+
+🔵 **Recorded as a measured hole, not as "no UK regulation exists"** — the channel was not asked a
+UK-named question, and 🔴 **an unprobed jurisdiction and an unregulated one are indistinguishable
+later.**
+
+🟢 **Remedy:** one UK-named query (**cheap**) on the next EMEA pass. 🔵 Also unresolved from the same
+probe: **how the AI Act's delayed high-risk timelines apply specifically to schools**, and **any
+EMEA education adoption rate** — neither returned anything usable.
+
+### 🆕 `Gap 307` — pass 66 did not write to this registry, and the gap ledger silently fell a pass behind
+
+🔴 **The gap.** Pass 66 appended to all seven shelf files and **not to `intel/open-gaps.md`**. 🔵 So
+between pass 66 and this pass, the registry's newest section was **pass 65's**, while the shelf files
+referenced gap movement the registry did not record.
+
+🟢 **Why this is a gap and not housekeeping:** this registry is the only file that says **which gaps
+are open**. 🔴 **When it falls behind, every other file's gap citation becomes unverifiable from the
+registry itself** — which is precisely the failure mode `P351` (the star-count gate) exists to catch
+in the data, and nothing catches in the gap ledger.
+
+🟢 **Remedy, in cost order:** **(i)** write this registry on **every** pass that opens or closes a
+gap, without exception — free, procedural; **(ii)** add a gate asserting that each
+`Gap N` cited in a shelf file resolves to a section in this registry — 🔴 **not written this pass**,
+and `P237` applies: this session cannot run plain `python3` on this tree to validate a new gate, and
+🔴 **an unvalidated gate is worse than a documented absence.**
+
+### 🟢 `Gap 293` — re-confirmed, and this pass can finally name the **mechanism** for the GitHub refusal
+
+🔵 **`Gap 293`** records that this session's outbound reach is an **allowlist**, not a fact about the
+hosts refused. 🟢 **Re-confirmed this pass from a refusal that names itself**, which prior passes
+could only infer:
+
+> 🔴 `Access denied: repository "…" is not configured for this session. Allowed repositories:`
+> `gmilano/globant-kb, gmilano/education-kb`
+
+🟢 **This upgrades the evidence class.** Passes 64–65 recorded a bare **`403`** from
+`api.github.com`; pass 66 recorded a **non-measurement**. 🟢 **This pass has the refusing layer
+stating its own rule and enumerating the allowlist** — the same evidence class that closed
+`Gap 293` originally, now reproduced for the GitHub tooling specifically.
+
+🔵 **Written up as `P802`**, because the three refusals have **three different remedies**: a
+rate-limit `403` is fixed by waiting, a non-measurement by issuing the probe, and `SCOPE_DENIED`
+**only** by attaching a repository. 🔴 **Publishing them as one generic "unavailable" would lose
+that**, which is the `P798` error in a new place.
+
+🟢 **And the constructive half, worth keeping:** `git ls-remote` and `raw.githubusercontent.com`
+remain fully readable. 🟢 **The `v8.0.0` tag that the refused release API could not confirm was
+resolved from the git protocol instead** — 9 of 9 refs and every licence payload read this pass.
+🔵 **The allowlist constrains the instrument, not the question.**
+
+### 🟢 `Gap 286` — **CLOSED as unanswerable by this session**, after four passes of no movement
+
+🔴 **The gap:** *"no reachable registry date for the Ed-Fi tier."*
+
+🟢 **Closed, and closed honestly rather than by achievement.** 🔵 The gap asks for **dates** —
+registry publication dates, release dates. 🔴 **Every instrument that serves a date for this tier is
+behind `api.github.com`**, which is now established as `SCOPE_DENIED` with the allowlist enumerated
+(above). 🔴 **The Ed-Fi packages are not on a public language registry** either: the tier is .NET,
+and pass 62 measured its one candidate package id returning `none`.
+
+🟢 **So the honest verdict is not "open pending more effort" — it is "not answerable with this
+session's instruments"**, and 🔵 **keeping it open implies a remedy that does not exist.**
+🟢 **What replaced it is better than a date:** this pass resolved **`v8.0.0` = `d911abb`** from
+`git ls-remote --tags` — 🔵 **a version, pinned, without any registry.**
+
+🔴 **Explicitly recorded so a later pass does not mistake this for a dated finding:** a resolved tag
+is **not** a release date (`P781`). 🟢 **If a date is ever genuinely needed, the remaining instrument
+is a clone plus `git log` on the tag** — under an hour, and 🔴 not run this pass.
+
+### 🟢 Open gap ledger after this pass
+
+| Gap | Subject | Status |
+|---|---|---|
+| **301** 🆕 | CLR 2.0 aggregate edge — no verifiable implementation | 🔴 open |
+| **302** 🆕 | Two new components unplaced by region | 🔴 open |
+| **303** 🆕 | Ed-Fi ODS → DMS migration path unmeasured | 🔴 open |
+| **304** 🆕 | Vietnam AI statute secondary-sourced, channels conflict | 🔴 open |
+| **305** 🆕 | No APAC/LATAM market figure; regional sum unreconciled | 🔴 open |
+| **306** 🆕 | UK education-AI instrument unprobed | 🔴 open |
+| **307** 🆕 | Pass 66 skipped this registry | 🔴 open (procedural) |
+| **300** | 41 `unread` suites on the board | 🔴 open |
+| **296** | `p351` red — pass attributor and band signal decayed | 🔴 open |
+| **294** | Open Badges *issue* edge AGPL-only | 🔴 open, 🟢 **third edge now measured (301)** |
+| **293** | Egress is an allowlist | 🟢 **closed, re-confirmed with mechanism named (`P802`)** |
+| **286** | No registry date for the Ed-Fi tier | 🟢 **CLOSED — unanswerable by this session** |
+
+🟢 **Net: +6 opened, 1 closed, 1 re-confirmed.** 🔴 **The count going up is the expected shape of a
+pass that reads a new layer** — four new components and two new jurisdictions cannot be read without
+exposing what was not read. 🔵 **A pass that opens no gaps has either closed a frontier or stopped
+looking at one.**
+
+
 ## 🟢 Sixty-fifth pass, 2026-10-08 — **`Gap 257`/`Gap 258` CLOSED by running the board**, `Gap 295` closed by one `curl`, `Gap 294` SPLIT, `Gap 293` re-confirmed from a first-party ledger, and four gaps opened
 
 ⏱️ **Nineteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
