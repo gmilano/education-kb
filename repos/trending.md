@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-second pass, 2026-10-08 — week of 2026-10-08: nine rows enter across two layers, and a 13-repo two-instrument cross-run finds the licence gate wrong **twice**
+
+⏱️ **Sixteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 New to the shelf this week — nine payload-read rows, one new protocol layer
+
+| Repo | Licence (payload · bytes · ref) | Registry | Layer |
+|---|---|---|---|
+| [`digitalcredentials/vc`](https://github.com/digitalcredentials/vc) | 🟢 BSD-3-Clause · 1 524 B · `15fb018` | 🟢 npm v10.0.2 **2025-11-19** | 🆕 credential (W3C VC core) |
+| [`digitalcredentials/verifier-core`](https://github.com/digitalcredentials/verifier-core) | 🟢 MIT · 1 086 B · `276ebd2` | 🟡 npm v1.0.0-beta.11 2025-12-16 | 🆕 credential (verification) |
+| [`digitalcredentials/issuer-coordinator`](https://github.com/digitalcredentials/issuer-coordinator) | 🟢 MIT · 1 086 B · `e663eea` | 🟡 — | 🆕 credential (issuing service) |
+| [`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) | 🟢 MIT · 1 091 B · `1c46a82` | 🟡 — | 🆕 credential (learner wallet) |
+| [`digitalcredentials/sign-and-verify`](https://github.com/digitalcredentials/sign-and-verify) | 🟢 MIT · 1 074 B · `6be5b41` | 🔴 npm v0.0.1 **2020-11-08** | 🆕 credential (🔴 stale — superseded) |
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | 🟢 Apache-2.0 · 10 172 B · `e453cd2` | 🔴 none reachable | student record (ODS + REST API) |
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation) | 🟢 Apache-2.0 · 10 172 B · `37ff595` | 🔴 none reachable | student record (extensions) |
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Docker`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Docker) | 🟢 Apache-2.0 · 11 356 B · `29c571a` | 🔴 none reachable | student record (deployment) |
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-API-Publisher`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-API-Publisher) | 🟢 Apache-2.0 · 11 356 B · `dabdd14` | 🔴 none reachable | student record (replication) |
+
+🟢 **Nine rows, nine permissive grants, zero copyleft** — four MIT, one BSD-3-Clause, four Apache-2.0.
+🔵 **`P763` now holds across six protocol edges** (LTI, OneRoster, SCORM/cmi5, xAPI, Ed-Fi,
+credential) 🔴 **with one measured exception this pass, and the exception is instructive:**
+`luisgf/openbadgeslib` is **LGPL-3.0** at the same edge, and it is the row the search channel
+ranked **first** (`P789`).
+
+### 🟢 The cross-run, which is this week's real result
+
+🟢 **`p784-licence-scope-map` (16 rooted filenames) and `p441-tree-licence-enumeration` (complete
+`git ls-tree -r`) were run over the same 13 slugs, declared by name before either ran** (`P744`).
+🟢 **13 of 13 reachable.**
+
+🟢 **Committed verdict counts, from `p786-scope-verdict-agreement/result.2026-10-08.tsv`:**
+🔴 `DISAGREE-ABSENCE` **1** · 🟡 `NEEDS-PROSE-READ` **12** · `DISAGREE-PRESENCE` **0** · `ABSENCE-ENUMERATED` **0**.
+🔴 **So the instruments disagree once and are *jointly wrong* once more** — 2 of 13 rows wrong, one of which no disagreement counter could have caught:
+
+🔴 **`1EdTech/openbadges-specification` `@5f86f31`** — `p784` → **`UNGRANTED`** (0 of 16 names);
+`p441` → **`BUNDLED-GRANT-ONLY`, `CC-BY;CC0-1.0`**, from **342** enumerated paths.
+🟢 **Truth, payload-read: `ob_v3p0/license.md` answers `200` at 12 324 B and is the *IMS Global
+Specification Document License*** — a bespoke, non-OSI grant — and `ob_v2p1/LICENSE-INPROGRESS.md`
+is a **members-only** one. 🔴 **`p441` found both and put them in `rejected_paths`, then reported
+`CC-BY`/`CC0` drawn from `extensions/licenseExtension/` — documentation of an Open Badges
+*metadata field*, not a grant.** 🆕 **`Gap 288`: a false presence admits an unlicensed repo, which
+is worse than refusing a usable one.**
+
+🔴 **`luisgf/openbadgeslib` `@e7736b6`** — `p784` → `SINGLE, LGPL-3.0`; `p441` → `OWN-GRANT-AT-ROOT`,
+`LGPL?`, flagging `LICENSE.txt=GPL+LGPL`. 🟢 **Truth: genuinely PARTITIONED** — library LGPL-3.0,
+five CLI entry points **BSD-2-Clause** — 🔴 **and it is declared in `wiki/Authors-License-and-FAQ.md`
+and nowhere else.** 🟢 Checked, all negative: `LICENSE.txt` (LGPL only), `pyproject.toml`
+(`license = { text = "LGPLv3" }`, one classifier), PyPI metadata (LGPLv3), **0 of 40 `.py` headers**.
+🆕 **`P786` / `Gap 287`.**
+
+### 🔴 Oracle notes, recorded because they changed
+
+🟢 **`packagist.org` answers `200 × 2` this pass, where pass 61 recorded a `404`** — recorded,
+not explained.
+🆕 **`api.nuget.org` enters the map at `200 × 2`, and it is the fifth registry** — control-verified
+discriminating (`newtonsoft.json` 86 versions, `serilog` 601, invented package none).
+🔴 **Its name-resolving service does not:** `azuresearch-usnc.nuget.org`, the `SearchQueryService`
+NuGet's own index names, is **`000 × 2`**. 🟡 `www.nuget.org` is **`200`** and resolves names as HTML.
+🆕 **`P787`: reachability is per host, not per registry.**
+🔴 **7 of 7 guessed Ed-Fi package ids returned nothing**; the true id came from the repo's
+`.nuspec` payload, and it too is absent from the public registry → 🆕 **`Gap 286`**.
+
 ## 🟢 Sixty-first pass, 2026-10-08 — week of 2026-10-08: the **content-packaging** layer enters the shelf, and a 23-repo frame sweep prices the evaluation cell at **48 % unusable**
 
 ⏱️ **Fifteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

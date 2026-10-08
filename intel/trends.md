@@ -4,6 +4,109 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-second pass, 2026-10-08 — four trends, and the strongest is that the **exit** of the learning loop has become the part with a public mandate behind it while the **tooling that proves a licence** turns out to be the fragile link
+
+⏱️ **Sixteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+🟡 **Band note: every regulatory and survey sentence below is `reported`, single-channel, per `P784`** — policy and report hosts are **`000`, 4 of 4** this pass. 🟢 **Every repo, licence, ref and byte count is payload-read.**
+
+### 🟢 Trend 1 — **credentialing is the first edge on this shelf with a public mandate pulling it**, and it arrives permissively implemented
+
+🟢 **Measured this pass: six permissive implementations of Open Badges 3.0 / CLR 2.0 / W3C
+Verifiable Credentials** — four MIT, one BSD-3-Clause, one Apache-2.0, all payload-read at pinned
+refs (`repos/foundations.md`). 🟡 **And the demand is a named programme rather than an inference:**
+the **2022 Council Recommendation on a European approach to micro-credentials**, with **European
+Digital Credentials for Learning** described as *a central product of Europass*, **ELM v3**, **ESCO**
+alignment and **EBSI**-compliant infrastructure.
+
+🔵 **Why this is a different kind of trend from the other five edges.** 🔴 LTI, OneRoster, SCORM and
+xAPI are **integration** standards — nobody outside the institution ever sees them, and the buyer is
+IT. 🟢 **A credential is the one artefact in the loop a learner carries away and a third party
+verifies**, so its buyer is the registrar, the ministry or the employer, and its value does not
+decay when the platform is replaced.
+
+🟡 **The commercial tell is a failure report, not an adoption statistic:** a German Higher Education
+Forum analysis says providers *still struggle with the issuing process*. 🟢 **That is a named,
+specific, buildable gap, and this pass put four implementations of exactly that step on the shelf.**
+🔴 **With one measured unknown that must go in the proposal rather than be discovered in delivery:
+`p782` has no `credential_issuance` row in any jurisdiction, so this KB cannot yet say whether
+issuing is a gated function anywhere** (🆕 `Gap 289`, and `NO ROW` is never a permission, `P476`).
+
+### 🔴 Trend 2 — the **licence gate**, not the licence, is now the weakest link, and it was measured failing in both directions in one pass
+
+🔴 **Two instruments, 13 repos. They disagree once; they are *jointly wrong* once more. 2 of 13
+rows are wrong and only one is a disagreement — so a disagreement counter would have caught half
+of it:**
+
+| Direction | Instance, payload-read | What it costs |
+|---|---|---|
+| 🔴 **False absence** | `1EdTech/openbadges-specification` → `p784` says **`UNGRANTED`**; the grant is at `ob_v3p0/license.md`, **`200`, 12 324 B**, the *IMS Global Specification Document License* | 🔴 refuses a repo whose terms you could have read and complied with |
+| 🔴 **False presence** | the same repo → `p441` reports **`CC-BY;CC0-1.0`** from `extensions/licenseExtension/…`, which documents an Open Badges **metadata field**, not a grant | 🔴 **ships an unlicensed repo believing it is CC-BY** |
+| 🔴 **Invisible partition** | `luisgf/openbadgeslib` → both instruments say one family; truth is **LGPL-3.0 library + BSD-2-Clause CLI**, declared only in `wiki/Authors-License-and-FAQ.md` | 🔴 forfeits five BSD CLI entry points, **or** links LGPL into a closed product |
+
+🔵 **The shape of the risk has inverted since pass 61, and it is worth stating plainly.** 🔴 Pass 61's
+finding was *the assets are badly licensed* (48 % of the benchmark shelf unusable). 🔴 **This pass's
+finding is that the instrument which measures licences is itself wrong at a rate of 2 in 13** —
+so the 48 % is a measurement from a tool now known to produce both false absences and false
+presences. 🟢 **`P786`: a scope partition can live entirely in prose**, and no file-enumerating
+probe — however many filenames, however complete the tree — can find it by construction.
+
+🔵 **What a studio should take from it is procedural and cheap:** 🟢 **read the README and the
+project wiki before the licence file**, treat `SINGLE` as *"one grant was found"* rather than
+*"one grant exists"*, and 🔴 **never quote an "unlicensed" verdict from a rooted filename probe**
+(🆕 `Gap 287`, 🆕 `Gap 288`).
+
+### 🔴 Trend 3 — the governance deficit is **universal, not regional**, and the artefact that closes it is the same one in four jurisdictions
+
+🟢 **Measured across two regions this pass, with figures close enough to be the same phenomenon:**
+
+| Region | Institutions using AI | Institutions with a formal framework |
+|---|---|---|
+| 🟡 LATAM (IESALC, 200 institutions / 19 countries) | **87 %** | 🔴 **26 %** |
+| 🟡 North America | — | 🔴 **~10 % have formal AI guidelines**; **71 %** of US teachers untrained |
+| 🔴 EMEA | 🔴 **not returned this pass** | 🔴 **not returned this pass** |
+| 🔴 APAC | 🔴 **not returned this pass** | 🔴 **not returned this pass** |
+
+🔴 **The two empty cells are an informed gap, not an omission, and the cause is named:** the EMEA and
+APAC regional queries returned **enterprise** AI content with no education sector in it at all
+(`intel/market.md`, 🆕 `P790`). 🔴 **So this trend is established on two regions and is *claimed* for
+four only on the strength of the artefact being identical** — the statutory teacher-in-the-loop
+instruments this KB already holds for **PH**, **SG** and **US-Idaho**, and the EU's Annex III human-
+oversight obligation from **2027-12-02**. 🟢 **An EMEA or APAC adoption-versus-framework ratio would
+confirm or break it, and this pass does not have one.**
+
+🔵 **So "institutions are behind their own users" is not a LATAM caveat a North American engagement
+can skip** — it is the same gap in the wealthier market, slightly worse. 🟢 **And the artefact that
+closes it is already specified for us by regulation: a human-oversight surface with an evidence
+trail**, which is what the EU's **Annex III** obligations ask for from **2027-12-02** and what the
+PH, SG and Idaho teacher-in-the-loop instruments ask for now. 🟢 **Build the oversight surface once
+and it serves the compliance requirement in EMEA, the statutory requirement in APAC and North
+America, and the *governance deficit as a product* in LATAM.**
+
+🟢 **The sharpest instance is one function with a measured 31-point demand gap:** **50 %** of LATAM
+students support AI-assisted assignment feedback and **19 %** of faculty do it. 🔴 **And `p782`
+reports that exact function (`assessment_grading`) GATED in the EU and in Vietnam** — so the gap is
+real, the demand is on the student side, and the build is only portable if the oversight artefact
+ships with it.
+
+### 🟢 Trend 4 — the **oracle surface is fragmenting per host**, and that changes what "we verified it" can mean
+
+🆕 **`P787`, measured this pass:** a registry's reachability is a property of **hosts**, not of
+registries. 🟢 **NuGet's date service answers (`api.nuget.org`, `200 × 2`, control-verified
+discriminating: 86 and 601 versions against an invented package's none) while the
+`SearchQueryService` its own index names does not (`azuresearch-usnc.nuget.org`, `000 × 2`).**
+
+🔵 **Why that is a trend and not a footnote:** this KB's verification method rests on a registry
+being able to answer **two** questions — *what is this called* and *when did it last ship*. 🔴 **The
+fifth registry to enter the map answers only the second.** 🟢 **And the fallback that worked is
+worth generalising: the repository payload named the artefact** — `Ed-Fi-ODS` ships
+`EdFi.OdsApi.Sdk.nuspec`, so the first-party package id came from the source tree, and *that* is
+what made its absence from the public registry provable rather than merely unfound
+(🆕 `Gap 286`, `P787b`).
+
+🔴 **The consequence for every dated claim on this shelf: "no registry date" now has two distinct
+causes** — the project does not publish (Ed-Fi), or the host that would name it is blocked. 🟢 **They
+are different facts about a repo and this pass is the first to tell them apart.**
+
 ## 🟢 Sixty-first pass, 2026-10-08 — four trends, and the strongest one is that **teacher-in-the-loop has stopped being a positioning choice and become statute** in three jurisdictions on two continents
 
 ⏱️ **Fifteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

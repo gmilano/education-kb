@@ -1,0 +1,15 @@
+slug	p784_verdict	p784_families	p441_verdict	p441_families	class	note
+1EdTech/openbadges-specification	UNGRANTED	-	BUNDLED-GRANT-ONLY	CC-BY;CC0-1.0	DISAGREE-ABSENCE	p784 found no grant at 16 ROOTED names; the tree carries licence paths. Read `UNGRANTED` as UNGRANTED-AT-ROOT, never as unlicensed
+luisgf/openbadgeslib	SINGLE	LGPL-3.0	OWN-GRANT-AT-ROOT	LGPL?	NEEDS-PROSE-READ	both instruments agree on a single family (LGPL-3.0); read README and wiki/ before treating it as the whole grant (P786)
+digitalcredentials/vc	SINGLE	BSD-3-Clause	OWN-GRANT-AT-ROOT	BSD	NEEDS-PROSE-READ	both instruments agree on a single family (BSD-3-Clause); read README and wiki/ before treating it as the whole grant (P786)
+digitalcredentials/verifier-core	SINGLE	MIT	OWN-GRANT-AT-ROOT	MIT	NEEDS-PROSE-READ	both instruments agree on a single family (MIT); read README and wiki/ before treating it as the whole grant (P786)
+digitalcredentials/sign-and-verify	SINGLE	MIT	OWN-GRANT-AT-ROOT	MIT	NEEDS-PROSE-READ	both instruments agree on a single family (MIT); read README and wiki/ before treating it as the whole grant (P786)
+digitalcredentials/issuer-coordinator	SINGLE	MIT	OWN-GRANT-AT-ROOT	MIT	NEEDS-PROSE-READ	both instruments agree on a single family (MIT); read README and wiki/ before treating it as the whole grant (P786)
+digitalcredentials/learner-credential-wallet	SINGLE	MIT	OWN-GRANT-AT-ROOT	MIT	NEEDS-PROSE-READ	both instruments agree on a single family (MIT); read README and wiki/ before treating it as the whole grant (P786)
+1EdTech/openbadges-validator-core	SINGLE	Apache-2.0	OWN-GRANT-AT-ROOT	Apache-2.0	NEEDS-PROSE-READ	both instruments agree on a single family (Apache-2.0); read README and wiki/ before treating it as the whole grant (P786)
+Ed-Fi-Alliance-OSS/Ed-Fi-ODS	SINGLE	Apache-2.0	OWN-GRANT-AT-ROOT	Apache-2.0	NEEDS-PROSE-READ	both instruments agree on a single family (Apache-2.0); read README and wiki/ before treating it as the whole grant (P786)
+Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation	SINGLE	Apache-2.0	OWN-GRANT-AT-ROOT	Apache-2.0	NEEDS-PROSE-READ	both instruments agree on a single family (Apache-2.0); read README and wiki/ before treating it as the whole grant (P786)
+Ed-Fi-Alliance-OSS/Ed-Fi-API-Publisher	SINGLE	Apache-2.0	OWN-GRANT-AT-ROOT	Apache-2.0	NEEDS-PROSE-READ	both instruments agree on a single family (Apache-2.0); read README and wiki/ before treating it as the whole grant (P786)
+Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Docker	SINGLE	Apache-2.0	OWN-GRANT-AT-ROOT	Apache-2.0	NEEDS-PROSE-READ	both instruments agree on a single family (Apache-2.0); read README and wiki/ before treating it as the whole grant (P786)
+Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard	SINGLE	Apache-2.0	OWN-GRANT-AT-ROOT	Apache-2.0	NEEDS-PROSE-READ	both instruments agree on a single family (Apache-2.0); read README and wiki/ before treating it as the whole grant (P786)
+#	total	13	DISAGREE-ABSENCE=1 NEEDS-PROSE-READ=12

@@ -4,6 +4,209 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-second pass, 2026-10-08 — **two of the four regional queries returned nothing about education at all**, and that is written down; LATAM returned the figures `Gap 242` has been asking for since pass 44
+
+⏱️ **Sixteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+🟢 **Per the convention, pass 61's `## Opportunities by region` heading is retitled *superseded*; the live block is below.**
+🟡 **Band, stated once and applying to every regulatory and survey sentence in this section:** 🔴 policy and report hosts are **`000`, 4 of 4** this pass — `unu.edu`, `www.digitaleducationcouncil.com`, `ess.iesalc.unesco.org`, `www.ed-fi.org` — so every figure below is **`reported`, single-channel**, per `P784`. 🟢 **Every repo, licence and ref is payload-read.**
+
+> 🔵 **Opening hypothesis: that pass 61's refutation of saturation would repeat, and all four
+> regional queries would again yield named instruments. 🟡 HALF REFUTED, and the half that failed
+> failed in a way worth more than a yield.** 🔴 **EMEA and APAC returned *enterprise* AI content
+> with no education sector in it at all** — not thin education data, *no* education data. 🟢 **LATAM
+> returned the primary-source figures `Gap 242` named as its remedy.**
+
+### 🔴 The two empty channels, named explicitly so silence is not read as coverage
+
+🔴 **`AI education EMEA 2026 adoption regulation players`** returned CompTIA's EMEA IT outlook,
+a **2023** Workday study, a Bandwidth/Cavell enterprise report and a Google Cloud EMEA engineering
+lead. 🔴 **No school, university, ministry, edtech vendor or education regulator appears in the
+result set.** 🔴 **`AI education APAC 2026 adoption regulation players`** returned APAC enterprise
+tech priorities, Singapore's **financial-sector** AI consultations, an OpenAI ANZ policy hire and a
+OneTrust governance survey. 🔴 **No education ministry, no school policy, no national AI-in-schools
+programme.**
+
+🟢 **This is a property of the query, not of the regions** — and this KB can prove it, because it
+already holds APAC school-sector instruments from earlier passes (**PH DepEd Order 003 s. 2026**,
+**CHED CMO 21 s. 2026**, **SG MOE Student Learning Space**, **VN decree 142/2026/ND-CP**). 🆕
+**`P790`: the four-region query template mixes an industry term with a region term, and `P769`
+already established that the industry term is the part that fails.** 🔵 **The remedy is the one
+this KB found two months ago on the repo channel: name the *function* or the *instrument*, not the
+industry.** 🟢 **Demonstrated in the same pass** — a targeted re-query of the EMEA channel
+(`EU AI Act high-risk education`, `micro-credentials Europass`) returned the richest EMEA
+regulatory and demand material of the last four passes, in the `### EMEA` block below.
+
+### 🟢 `Gap 242` ADVANCES — the IESALC figures are quoted for the first time, and the contradiction it was opened for narrows
+
+🔵 **What the gap said.** Pass 44: the UNESCO IESALC + UNU-IAS working paper is *"located and named,
+**NOT read** — no figure from it is quoted anywhere this pass"*, so the Digital Education Council's
+regional ordering stays unusable in a pitch.
+
+🟢 **Quoted now, from a frame whose sampling is stated:** **200 higher-education institutions across
+19 countries**, fielded **August–October 2025**. 🟢 **Adoption by area:** teaching and learning
+**73.5 %**, research **57.0 %**, administration **34.1 %**, community engagement **20.0 %**.
+🟢 **By sector:** private non-profit **84 %**, public **68 %**, private for-profit **52 %**.
+🔴 **And the figure that matters commercially: 87 % use AI somewhere, 26 % have any formal AI
+framework.**
+
+🔴 **Still open, and the reason is the channel, not the search:** `unu.edu` and
+`ess.iesalc.unesco.org` are both **`000`**, so this is a search-backend summary of the paper, not a
+read of it. 🟡 **And a second figure contradicts it at the margin** — a Tec de Monterrey-linked
+source says **30 %** of LATAM universities have published AI policies against IESALC's **26 %**,
+which is the same definitional looseness `Gap 242` was opened about. 🟡 **So the gap narrows from
+"no figure" to "figures from one channel, with one unresolved variant"** and stays open.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The placed, payload-read opportunity this pass is `Ed-Fi`, and it is specifically North
+American:** the **US K-12 student-record standard**, five repos, **all Apache-2.0**, read at pinned
+refs (`repos/foundations.md`). 🔵 **It is the only edge on this shelf whose adopters are *state
+education agencies*** — which makes it a public-procurement motion, not a campus-by-campus one.
+🔴 **And the constraint is measured: there is no public first-party package surface** — the
+Alliance's own `.nuspec` names `EdFi.OdsApi.Sdk` and that id is absent from the reachable registry,
+`api.github.com` is 403 and `ed-fi.org` is 000 (🆕 **`Gap 286`**). 🟢 **Quote it as a
+source-and-installer build from `Ed-Fi-ODS-Docker`, not a package pull.**
+
+🟢 **The credential stack is also North American in origin** — `digitalcredentials/*`, the MIT-hosted
+Digital Credentials Consortium, **four MIT and one BSD-3-Clause**, payload-read. 🔵 So a US or
+Canadian engagement can take both the record substrate and the credential edge from permissive,
+US-originated code.
+
+🟡 **Market and adoption, `reported`:** North America **~$951 M (2024) → ~$2 303 M (2029), 15.9 %
+CAGR**; **36 %** of regional adoption share. 🔴 **~10 % of institutions have formal AI guidelines**
+and **71 % of US teachers lack AI training** — the same governance deficit LATAM shows, in a
+wealthier market. 🟡 Named: **IBM, Microsoft, Google**; an **OpenAI** country-level education
+programme with **8 national partners (Q1 2026)**; **Carnegie Mellon + Gates Foundation, $55 M** for
+AI courseware in gateway college courses.
+🔴 **One figure refused:** a **"$169 M for responsible AI in higher education, Q1 2026"** claim whose
+source **does not name the government** — unusable in a pitch (`P476`), recorded so a later pass
+does not launder it.
+
+🟡 **Regulation is a vacuum with a patchwork over it:** no federal equivalent of a product
+regulator for educational technology, adoption decided school-by-school and district-by-district,
+with **Colorado** and **Texas** named as introducing piecemeal requirements. 🔵 **Commercial
+consequence: in North America the binding constraint is procurement and institutional policy, not
+statute** — the inverse of EMEA, and it changes who the buyer is in the room.
+
+### EMEA
+
+🟢 **The strongest regional finding of the pass, and it is a demand signal that lines up with a
+permissive stack found in the same hour.** 🟡 `reported`: the **2022 Council Recommendation on a
+European approach to micro-credentials** is the policy base, and **European Digital Credentials for
+Learning (EDC)** is described as *a central product of Europass* — issuing qualifications,
+certificates and micro-credentials in tamper-resistant, EU-comparable digital form. 🟡 Named
+alongside it: **ELM v3**, **ESCO** competence alignment for EQF portability, and **EBSI**-compliant
+credential infrastructure in the **Erasmus+ MCEU** pilot. 🟡 In practice: the **University of
+Padua** issues Europass digital credentials into a Europass wallet after professional-development
+courses; 🔴 a German Higher Education Forum analysis reports that **providers still struggle with
+the issuing process**.
+
+🔵 **That last sentence is the opportunity, stated plainly: the policy mandates the credential, the
+standard exists, and the issuing step is where institutions are failing** — and this pass put four
+permissive implementations of exactly that step on the shelf (`digitalcredentials/vc` BSD-3-Clause,
+`verifier-core` MIT, `issuer-coordinator` MIT, `1EdTech/openbadges-validator-core` Apache-2.0).
+🔴 **The one thing this KB cannot yet say is whether issuing a credential is a gated function
+anywhere** — `p782` has no `credential_issuance` row in any jurisdiction (🆕 **`Gap 289`**), and
+`NO ROW` is not a permission (`P476`).
+
+🟢 **Regulatory position, re-corroborated and unchanged** — recorded as corroboration, not news,
+because this KB already holds it: **Reg. (EU) 2026/1744 (*Digital Omnibus on AI*)**, Parliament
+**2026-06-16**, Council **2026-06-29**, in force **2026-07-27**, moving **Annex III stand-alone
+high-risk — education access, assessment and exam proctoring named explicitly — from 2026-08-02 to
+2027-12-02**, and Annex I embedded to **2028-08-02**. 🟢 **Article 50 transparency did not move and
+is live since 2026-08-02.** 🟢 **Article 5 prohibitions are live since 2025-02-02, and emotion
+recognition in an education institution is among them.** 🔴 **Primary text still unverifiable:
+`eur-lex.europa.eu` → `000`.** 🔵 **The deferral is runway, not relief** — one source this pass puts
+it at roughly **17 months** from the June 2026 vote.
+
+### APAC
+
+🔴 **The mandated regional query returned no education-sector content whatsoever this week** — see
+the named-channel finding above. 🟢 **The school-sector instruments this KB relies on for APAC are
+from earlier passes and are unchanged**: **PH DepEd Order 003 s. 2026** and **CHED CMO 21 s. 2026**
+(AI is *supplementary*, not a replacement for teachers), **SG MOE Student Learning Space**
+(Primary 4 AI tools **teacher-supervised**, reached through the SLS), **VN decree 142/2026/ND-CP**
+(grading **gated**). 🔴 **Nothing new was measured about them this pass, and nothing is asserted
+about them as if it had been.**
+
+🟡 **What the channel did return is the *corporate upskilling* market, not the school sector** —
+and it is worth separating rather than discarding: a **TCS–Pearson** multi-year AI learning alliance
+aimed at employer skills gaps; **LearnUpon** opening a Sydney HQ with `Create+` AI course authoring;
+**Alteryx** relaunching its Academy with personalised AI learning paths and credentials; **NIIT MTS**
+on Training Industry's Top 20 custom content developers for 2026. 🔵 **Three of those four are
+credentialing or authoring plays**, which is the same edge the EMEA block names — so the
+credential layer is the one axis with a signal in two regions this pass.
+
+🟡 **Adoption constraints, `reported` and enterprise-wide rather than education-specific:** **49 %**
+of APAC businesses cite insufficient infrastructure for real-time data processing as an AI barrier;
+**87 %** of organisations encourage AI-agent use while only **47 %** have governance and controls
+for them. 🟡 Regulators are described as converging on shared principles applied locally, with
+success tied to tuning for **local data, language and social context** — 🔵 which for this shelf is
+an argument for the `P736` architecture (build beside the substrate, speak the protocol) over a
+single regional product.
+
+### LATAM
+
+🟢 **The richest channel of the pass, and the one that advanced a gap.** 🟡 `reported`, from the
+**UNESCO IESALC + UNU-IAS** mapping of **200 institutions across 19 countries** (fielded Aug–Oct
+2025): adoption is **73.5 %** in teaching and learning, **57.0 %** in research, **34.1 %** in
+administration, **20.0 %** in community engagement; **84 %** of private non-profit universities
+versus **68 %** public and **52 %** private for-profit. 🟡 From the **Digital Education Council**
+LATAM 2026 survey (**30 000+ responses, 29 institutions**): **92 %** of students and **79 %** of
+faculty actively engage with AI.
+
+🔴 **The governance deficit is the opportunity, and it is the largest measured anywhere this pass:
+87 % of institutions use AI and 26 % have any formal framework.** 🔵 **So the first deliverable in
+a LATAM higher-education engagement is frequently not a model — it is the institutional AI policy,
+the oversight surface and the evidence trail**, and this KB can price that from artefacts it
+already holds.
+
+🟢 **The sharpest single opportunity in the data is a named function gap:** **50 % of students
+support AI-assisted feedback on assignments and only 19 % of faculty use AI that way.** 🔵 **That is
+a 31-point gap on one function, with demand on the student side** — and it is actionable rather
+than merely interesting because this shelf has both halves: the tutoring/knowledge-tracing rows
+from pass 60, and the policy gate that says what the function costs. 🔴 **The gate's warning applies
+directly: assignment feedback is `assessment_grading`, which `p782` reports GATED in the EU and in
+Vietnam** — so a LATAM-built feedback product is **not** portable to an EMEA engagement without the
+oversight artefact, which is the `P782` design rule rather than a surprise.
+
+🟡 **Regulation is heterogeneous, and the ranking matters for sequencing:** **Chile** is the
+frontrunner with a national AI policy since **2021** and a bill under discussion; **Brazil** and
+**Colombia** have national strategies with **no education-sector rules**; 🔴 **Mexico's SEP and
+ANUIES have issued recommendations that are expressly non-binding.** 🟢 Instruments worth holding:
+the **IDB** regulatory-framework paper for LAC, and the **ILIA index** (3rd edition, 19 countries)
+for readiness, adoption and governance. 🔵 **Sequencing consequence: Chile for a
+regulated-reference engagement, Mexico and Brazil where the absence of binding rules makes the
+institution the whole buyer** — and in Mexico the non-binding status is a selling point for
+governance work, not an obstacle to it.
+
+### Global
+
+🟢 **What the four regions say together and none says alone: the governance deficit is universal and
+the numbers are close.** 🔴 **LATAM: 87 % use AI, 26 % have a framework. North America: ~10 % of
+institutions have formal AI guidelines and 71 % of US teachers lack AI training.** 🔵 **So the
+"institutions are behind their own users" finding is not a LATAM story that a North American
+engagement can skip** — it is the same gap in both regions, and the artefact that closes it (an
+oversight surface, a policy, an evidence trail) is the same artefact the EU's Annex III human-
+oversight obligation will require from **2027-12-02**. 🟢 **Build it once, sell it in four regions.**
+
+🟢 **The credential edge has a signal in two regions in the same pass, which no edge on this shelf
+has had before**: EMEA as **public policy** (Council Recommendation 2022, European Digital
+Credentials for Learning as a central Europass product, institutions failing at the *issuing* step)
+and APAC as **corporate demand** (three of the four named APAC education players are credentialing
+or authoring plays). 🟢 **And the implementations are North American and permissive**
+(`digitalcredentials/*`, four MIT and one BSD-3-Clause, payload-read). 🔵 **A permissive US
+implementation against an EU public mandate and an APAC corporate pull is the cleanest
+cross-regional shape this KB has recorded.**
+
+🔴 **The global constraint on all of it is the evidence layer, unchanged from pass 61 and not
+re-measured here: 11 of 23 (48 %) of this shelf's benchmark and evaluation repos cannot go into a
+paid deliverable.** 🔴 **And this pass weakened that count's floor rather than its ceiling** — the
+8 "no grant at all" rows were judged by `p784` alone, which is now measured returning a false
+absence (`Gap 285` / `Gap 287`).
+
 ## 🟢 Sixty-first pass, 2026-10-08 — `Gap 270` is **RE-POSED**: the regulatory shelf's problem was never the hosts, it is that this session has **one** policy channel and **zero** direct-fetch channels — and the four-region sweep **refutes `P777`'s saturation claim**
 
 ⏱️ **Fifteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
@@ -91,7 +294,7 @@ regulated there"*.
 (PROPOSED only) — for a function exposed by an **MIT** repo that clears every licence gate this KB
 has ever written.
 
-## Opportunities by region
+## Opportunities by region — superseded (the live block is at the top of this file)
 
 🟡 **Band note, applying to every regulatory sentence below: `reported`, single channel, per
 `P784`.** 🟢 **The repo and licence rows are payload-read.**

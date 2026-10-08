@@ -4,6 +4,113 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-second pass, 2026-10-08 — the pre-flight gains a **third layer it cannot automate**, and `R62a` wires the credential edge into a deployable shape beside the LMS
+
+⏱️ **Sixteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 The pre-flight, corrected — two instruments and one **manual** read, because `P786` proved the third cannot be a probe
+
+🔴 **Pass 61 shipped this as two runnable gates and called the licence axis closed. It is not.**
+🟢 **Measured this pass over 13 repos and committed** (`compose/code/p786-scope-verdict-agreement/result.2026-10-08.tsv`): 🔴 **`p784` and `p441` disagree on 1, and agree-while-both-wrong on a
+second** — and that second failure is unreachable by any file-enumerating probe, however complete
+(`P786`). 🔴 **Which is why the gate below emits `NEEDS-PROSE-READ` on unanimity instead of a pass.**
+
+```sh
+# Gate 1 — may we use the CODE and the DATA?   (Gap 282 / Gap 283)
+bash compose/code/p784-licence-scope-map/probe.sh <owner/repo> [ref]
+#   0 SINGLE · 3 PARTITIONED · 4 UNGRANTED · 5 unreachable
+#   🔴 16 ROOTED filenames only — read `4 UNGRANTED` as "no grant AT THE ROOT" (Gap 287)
+
+# Gate 1b — NEW IN THE PRE-FLIGHT: enumerate the TREE before trusting Gate 1's absence
+cd compose/code/p441-tree-licence-enumeration && python3 enumerate_licence.py <slugs-file>
+#   🔴 run it from ITS OWN directory — its sys.path insert is relative (P355)
+#   🔴 and distrust a CC-BY/CC0 family it reports: its regex matches `licenseExtension` (Gap 288)
+
+# Gate 2 — may we DEPLOY this function in this jurisdiction?   (Gap 278)
+bash compose/code/p782-policy-gate/gate.sh <function> [jurisdiction|region]
+#   0 clear · 3 GATED · 4 PROHIBITED · 5 PROPOSED · 6 NEVER MEASURED · 2 bad region
+#   🔴 `credential_issuance` is NOT in the 14-function vocabulary (Gap 289)
+```
+
+| Axis | Question | Instrument | Failure it prevents |
+|---|---|---|---|
+| **Code** | is the grant permissive? | `p784` + `p441` | building on copyleft, or on a repo with **no grant at all** |
+| **Data** | is the *corpus* shippable? | `p784` (`PARTITIONED`/`UNCLASSIFIED`) | 🔴 **the `P783` failure**: MIT code over a corpus that forbids training |
+| **Policy** | may the function be deployed there? | `p782` | 🔴 **the `P764` failure**: an MIT repo exposing a **prohibited** function |
+| 🆕 **Prose** | is the grant **split**, in a place no probe reads? | 🔴 **a human, reading `README` + `wiki/`** | 🔴 **the `P786` failure**, measured this pass |
+
+🔴 **The fourth row has no instrument and this pass is not pretending otherwise.**
+🟢 **The worked instance:** `luisgf/openbadgeslib` declares **LGPL-3.0 library / BSD-2-Clause CLI**
+in `wiki/Authors-License-and-FAQ.md` **only** — `LICENSE.txt` says LGPL-3.0 alone, `pyproject.toml`
+carries one classifier, PyPI agrees, and **0 of 40 `.py` headers** name BSD. 🔴 **So a probe that
+read every file in the tree would still return one family.** 🟢 **The remedy is two minutes of
+reading per candidate, and it is cheaper than either gate.**
+
+### 🟢 `R62a` — "issue verifiable credentials from the client's LMS, without touching the LMS"
+
+🔵 **The recipe the EMEA micro-credentials mandate asks for, and the first on this shelf whose
+demand signal is a named public programme** (`intel/market.md`: Council Recommendation 2022,
+European Digital Credentials for Learning as a central Europass product, 🔴 providers *failing at
+the issuing step*).
+
+🔴 **What not to do:** build issuing *inside* Moodle (**GPL-3.0**) or Open edX / Canvas
+(**AGPL-3.0**, §13 reaches network use). 🔴 **And specifically not here** — a credential must
+outlive the platform that issued it, so putting the issuer inside a copyleft substrate couples the
+one durable artefact to the one component you most expect to replace.
+
+| # | Role | Component | Licence · ref | Wiring |
+|---|---|---|---|---|
+| 1 | **Trigger** — course completion | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 Apache-2.0 · npm **v7.0.7, 2026-10-06** | LTI 1.3 launch from the LMS into your service; the launch carries the user and context claims |
+| 2 | **Who the learner is** | [`longsightgroup/oneroster`](https://github.com/longsightgroup/oneroster) | 🟢 MIT · `8c14777` | resolve the LTI subject to a roster identity — never trust a display name as a credential subject |
+| 3 | **Evidence it happened** | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 Apache-2.0 · `cb794e4` | xAPI statements are the **evidence** field of the credential; the LRS is the audit trail a verifier may ask for |
+| 4 | **Sign** | [`digitalcredentials/vc`](https://github.com/digitalcredentials/vc) | 🟢 BSD-3-Clause · `15fb018` · npm **v10.0.2, 2025-11-19** | issue a W3C VC / OpenBadgeCredential; `did:web` on the institution's own domain |
+| 5 | **Operate the issuer** | [`digitalcredentials/issuer-coordinator`](https://github.com/digitalcredentials/issuer-coordinator) | 🟢 MIT · `e663eea` | the HTTP surface + batch issuance the registrar actually runs; keeps keys out of the LMS |
+| 6 | **Verify** | [`digitalcredentials/verifier-core`](https://github.com/digitalcredentials/verifier-core) | 🟢 MIT · `276ebd2` · 🟡 npm **v1.0.0-beta.11** | status lists and revocation for the third party checking the badge |
+| 7 | **Prove conformance** | [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | 🟢 Apache-2.0 · `0a66b52` | the artefact a ministry or employer buyer asks for; run it in CI against every issued credential shape |
+| 8 | **Learner-side** | [`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) | 🟢 MIT · `1c46a82` | optional, and the only component on this shelf the *learner* installs |
+
+🟢 **Eight components, eight permissive grants, every one payload-read at a pinned ref. Nothing
+copyleft touches the deliverable, and the LMS is never forked.**
+
+🔴 **Three things to get right, each from a measurement in this pass:**
+🔴 **(a) do not `npm install @digitalcredentials/sign-and-verify`** — the package is **v0.0.1 from
+2020-11-08** while its repo HEAD moves; use steps 4 and 6 instead.
+🔴 **(b) `verifier-core` is beta at ten months** — pin the version and own the upgrade.
+🔴 **(c) run Gate 2 before promising a jurisdiction**: `credential_issuance` is **not measured
+anywhere** (`Gap 289`), so the correct proposal sentence is *"we will establish the regulatory
+position for issuance in your jurisdiction"*, not *"issuance is unregulated"*.
+
+🔵 **Estimate shape:** 6–8 weeks for steps 1–5 against one LMS and one credential type;
+🔴 **+2 weeks if the client wants `did:web` on a domain they do not already control**, which is a
+procurement task rather than an engineering one.
+
+### 🟢 `R62b` — "stand up a state-agency student-record spine" (North America), and why it is a *build*, not an install
+
+🔵 **For the one edge on this shelf whose buyer is a state education agency rather than a campus.**
+🟢 **All Apache-2.0, payload-read this pass.**
+
+| # | Component | Licence · ref | Role |
+|---|---|---|---|
+| 1 | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Docker`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Docker) | 🟢 Apache-2.0 · `29c571a` | stand the ODS + API up on PostgreSQL for the pilot — the cheapest honest starting point |
+| 2 | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | 🟢 Apache-2.0 · `e453cd2` | the Operational Data Store and REST API itself |
+| 3 | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation) | 🟢 Apache-2.0 · `37ff595` | the **extension** mechanism — a district's local fields without forking the core |
+| 4 | [`Ed-Fi-Alliance-OSS/Ed-Fi-API-Publisher`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-API-Publisher) | 🟢 Apache-2.0 · `dabdd14` | district → state-agency replication between instances of the same version |
+| 5 | [`Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard) | 🟢 Apache-2.0 · `3d24df6` | the standard the whole thing conforms to |
+
+🔴 **The measured constraint that changes the estimate: there is no public first-party package
+surface.** The Alliance's own `.nuspec` names **`EdFi.OdsApi.Sdk`**, and that id returns **`none`**
+on the reachable, control-verified NuGet date oracle; `api.github.com` is **403**; `ed-fi.org` is
+**000**. 🔴 **So the plan carries a source build, and no component in this recipe may be quoted with
+a version** (🆕 `Gap 286`). 🟡 **The only public `EdFi`-named packages are third-party**
+(`EdNexusData.EdFi.OdsApi.Sdk`, v1.0.19) 🔴 **whose GitHub org does not resolve** — do not take the
+dependency.
+
+🟢 **Where the AI goes, and it is the same `P736` shape as every other recipe here:** beside the
+spine, across the REST API, never inside the ODS schema. 🔴 **And run Gate 2 first** — a model that
+scores or flags students off this spine is `assessment_grading` or `admissions_access`, both of which
+`p782` reports **GATED** in the EU, and the US-federal row for `admissions_access` is 🔴 **never
+measured**, which is not a permission.
+
 ## 🟢 Sixty-first pass, 2026-10-08 — the pre-flight becomes **executable** (two gates, two instruments, 38 assertions), and `R61a` wires the four protocol edges into one deployable shape
 
 ⏱️ **Fifteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

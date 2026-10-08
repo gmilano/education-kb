@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-second pass, 2026-10-08 — week of 2026-10-08: a **fifth registry** enters the oracle map, and it is the first one whose *identity* half is blocked while its *date* half answers
+
+⏱️ **Sixteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+🟢 **Oracle map re-measured before any datum (`P713`, `P745`), `n = 2`:** `raw` **200** (404-discriminating), `pypi` **200 × 2**, `npm` **200 × 2**, `maven` **200 × 2**, 🟢 `packagist` **200 × 2 — recovered from pass 61's 404**, 🆕 `api.nuget.org` **200 × 2**, `ls-remote` discriminates. 🔴 `api.github.com/repos/{third-party}` **403** — **no star counts** (`P745`). 🔴 Policy/report hosts **`000`, 4 of 4**.
+
+### 🟢 What is actually new this week — dated by registry, not by a blog
+
+| Package | Repo | Licence | Version · published | Why it matters this week |
+|---|---|---|---|---|
+| `@digitalcredentials/vc` | [`digitalcredentials/vc`](https://github.com/digitalcredentials/vc) | 🟢 **BSD-3-Clause** | 🟢 **v10.0.2 · 2025-11-19** | 🆕 **The signing/verification core of the credential edge.** 🟢 Registry licence **agrees with the payload read** (`LICENSE`, 1 524 B, `15fb018`) — a cross-oracle agreement, not a single channel. |
+| `@digitalcredentials/verifier-core` | [`digitalcredentials/verifier-core`](https://github.com/digitalcredentials/verifier-core) | 🟢 **MIT** | 🟡 **v1.0.0-beta.11 · 2025-12-16** | 🆕 The verification half, 🟡 **still beta at ten months**. Recorded as usable, 🔴 not as stable — and the version string is the evidence. |
+| `@digitalcredentials/sign-and-verify` | [`digitalcredentials/sign-and-verify`](https://github.com/digitalcredentials/sign-and-verify) | 🟢 **MIT** | 🔴 **v0.0.1 · 2020-11-08** | 🔴 **Six years old on npm.** 🟢 **The repo HEAD is live (`6be5b41`) and the package is not** — exactly the divergence the registry layer exists to expose (`P741`). 🔴 **Do not `npm install` this one.** |
+| `openbadgeslib` | [`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib) | 🔴 **LGPL-3.0** (lib) · 🟢 BSD-2-Clause (CLI) | 🟢 **v4.5.0 · 2026-09-12** | 🔴 **The search channel's first-ranked Open Badges implementation, and the only copyleft row this pass** (`P789`). 🔴 **Pass 11's shelf recorded `v4.0.0`; the registry says 4.5.0** — and a secondary source this pass said `4.0.0 · 2026-07-22`, which the registry refutes. |
+
+🟢 **One dated observation, free from the verification pass:** [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) **moved HEAD from `a882b22` to `a4fa3de` within this same date** — pass 61 pinned the former this morning. 🔵 Corroborates its "freshest row on the shelf" standing with a second, independent kind of evidence: a registry date *and* an intraday commit. 🟢 **Refs quoted elsewhere in this pass stay pinned to the commit they were payload-read at, which is the point of pinning them.**
+
+### 🆕 `P787` — a registry's reachability is **per host**, and a v3 API fans out across hosts
+
+🔵 **Every registry on this map until now was one host doing two jobs:** `pypi.org` and
+`registry.npmjs.org` each **date** a package *and* **name** it (`P780` — the `repository` field is
+how `xapijs/cmi5` was resolved). 🟢 **NuGet splits the two jobs across hosts, and this session
+reaches exactly one of them:**
+
+| Host | role | `curl -sI`, `n = 2` |
+|---|---|---|
+| 🟢 `api.nuget.org/v3/index.json` + `/v3-flatcontainer/` | 🟢 **dates** versions | 🟢 **200 200** |
+| 🔴 `azuresearch-usnc.nuget.org/query` — the `SearchQueryService` **NuGet's own index names** | 🔴 **resolves names** | 🔴 **000 000** |
+| 🟢 `www.nuget.org` | 🟡 resolves names, as **HTML** | 🟢 **200 200** |
+
+🟢 **The date half is control-verified discriminating**, so its negatives are real: `newtonsoft.json`
+**86 versions**, `serilog` **601**, `zzz.invented.package.nope9981` **none**.
+
+🆕 **`P787`: "is the registry up?" is not a question with one answer.** 🔵 Three consequences:
+🟢 **(a)** a reachable registry can still be unable to answer *"what is this package called?"`;
+🟢 **(b)** the allowlist `P784` identified operates on **hostnames, not on services**, so a vendor
+splitting one API across subdomains splits its usefulness here; 🟢 **(c)** the fallback is not
+another registry — **it is the repository payload**, which is where this pass went next.
+
+### 🟢 `P787b` — when the identity host is blocked, the **repo payload** names the artefact, and naming it is what makes an absence provable
+
+🔴 **Seven plausible Ed-Fi NuGet ids were guessed and all seven returned nothing**
+(`edfi.suite3.ods.webapi`, `edfi.suite3.restapi.databases`, `edfi.common`, `edfi.suite3.common`,
+`edfi.suite3.ods.standard`, `edfi.suite3.apipublisher`, `edfi.suite3.installer.webapi`) —
+🔵 `P780`'s lesson replayed in a new registry: **guessing ids is unbounded**.
+
+🟢 **So the id was read from the repository instead.** `Ed-Fi-Alliance-OSS/Ed-Fi-ODS` ships
+`Utilities/SdkGen/EdFi.SdkGen.Console/EdFi.OdsApi.Sdk.nuspec`, and its payload is unambiguous:
+**`<id>EdFi.OdsApi.Sdk</id>`, `<authors>Ed-Fi Alliance</authors>`,
+`<projectUrl>https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS</projectUrl>`**.
+
+🔴 **That exact id returns `none` on the reachable, control-verified date oracle.** 🟢 **So the
+finding is no longer "we could not find it" — it is "the Alliance builds this package and does not
+publish it to nuget.org"**, which is a different and much more useful sentence. 🆕 **`Gap 286`.**
+
+### 🔴 Named gap: the Ed-Fi stack has **no version or date from any channel this session can reach**
+
+🔴 **Measured, three channels, all shut:** the public registry does not carry the first-party id
+(above); `api.github.com` is **403**; `ed-fi.org` is **000**. 🔴 **And the repo's own
+`Application/Directory.Build.props` carries `AssemblyVersion 1.0.0` — a placeholder, not a product
+version.** 🟡 **The only `EdFi`-named packages on nuget.org are third-party**:
+`EdNexusData.EdFi.OdsApi.Sdk` (**v1.0.19**, 2 versions) and `…Sdk.v73` (**v1.0.8**, 3 versions),
+🔴 **and the GitHub org `EdNexusData` does not resolve at `ls-remote`** — so they are not admitted.
+
+🟢 **What the shelf *can* still say about Ed-Fi is a licence, from payload, at a pinned ref** —
+five repos, all Apache-2.0 (`repos/foundations.md`). 🔵 **What it cannot say is how old any of it
+is, and that is now written down rather than estimated.**
+
 ## 🟢 Sixty-first pass, 2026-10-08 — week of 2026-10-08: the industry-named query is saturated for the **twelfth** week, and the registry layer is promoted from a *date* oracle to an *identity* oracle
 
 ⏱️ **Fifteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

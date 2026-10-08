@@ -4,6 +4,97 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-second pass, 2026-10-08 — the **licence gate under every agent row on this shelf is measurably wrong on 2 of 13 repos**, and one of the two failures is a defect of *premise*, not of code
+
+⏱️ **Sixteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Oracle map re-measured before any datum (`P713`, `P745`), `n = 2`:** `raw` **200** against a
+404-discriminating control (real file 200 / invented 404), `pypi` **200 × 2**, `npm` **200 × 2**,
+`repo1.maven.org` **200 × 2**, 🟢 **`packagist.org` 200 × 2 — recovered from pass 61's `404`**,
+🆕 **`api.nuget.org` 200 × 2 (new oracle, see `P787`)**, `ls-remote` discriminates.
+🔴 `api.github.com/repos/{third-party}` **403** — **no star counts this pass** (`P745`).
+🔴 Policy and report hosts **`000`, 4 of 4** (`unu.edu`, `digitaleducationcouncil.com`,
+`ess.iesalc.unesco.org`, `ed-fi.org`) — every regulatory and survey sentence below is
+`reported`, single-channel, per `P784`.
+
+### 🔴 The agent-discovery channel returned **nothing admissible** for the thirteenth consecutive week, stated so no reader mistakes silence for coverage
+
+🔴 **Both mandated industry-named queries were run** — `top open source AI agents education 2026
+github MIT` and `github trending education AI 2026`. 🔴 **Neither returned an education-specific
+agent.** The first returned general-purpose agents and *courses* (`microsoft/ai-agents-for-beginners`,
+`pguso/agents-from-scratch`, `avinash201199/free-ai-agents-resources`, Hermes Agent, browser-use,
+AutoGen, CrewAI, LangGraph, aider); the second returned learning paths and a job board
+(`rohitg00/ai-engineering-from-scratch`, Karpathy's *Zero to Hero*, `speedyapply/2026-AI-College-Jobs`).
+
+🟢 **`P769` / `P776` hold for a thirteenth week: name the protocol or the function, never the
+industry.** 🟢 **Every row admitted this pass came from a protocol-named query** (Open Badges 3.0,
+verifiable credentials, Ed-Fi) — and they are libraries and data standards, so they are in
+`repos/foundations.md`, not here.
+
+🟢 **So this pass admits no new agent, and says so rather than padding the table.** 🔵 The budget
+went instead to the thing that sits *under* every agent row on this shelf: **the licence gate**.
+
+### 🔴 `P786` — a licence scope partition can live **entirely in prose**, and that refutes `Gap 282`'s premise
+
+🔵 **Why this belongs on the agent shelf:** every agent row here is admitted or rejected by
+`p784`, and `p784` was built (pass 61) to answer *"may we use the code AND the data?"* by
+enumerating **16 licence filenames**. 🔴 **Measured this pass: a repo whose commercially decisive
+partition appears at none of them, in no manifest, and in no source header.**
+
+🟢 [`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib) `@e7736b6` — the Open Badges
+3.0 issuer library the protocol query ranks first. **Every machine-readable surface says LGPL-3.0
+and nothing else:**
+
+| Surface | What it says | Read |
+|---|---|---|
+| `LICENSE.txt` (7 650 B) | 🔴 **LGPL-3.0**, and only that | 🟢 payload |
+| `pyproject.toml` | `license = { text = "LGPLv3" }`; one classifier, `LGPLv3` | 🟢 payload |
+| PyPI metadata | `license: 'LGPLv3'`, classifier `OSI Approved :: LGPLv3` | 🟢 registry |
+| Source headers | 🟢 **0 of 40 `.py` files name BSD** | 🟢 payload |
+| 🟢 **`wiki/Authors-License-and-FAQ.md`** | 🟢 **"openbadgeslib uses **dual licensing**… The **library** → LGPLv3. The **command-line wrapper tools** — `openbadges-init`, `openbadges-keygenerator`, `openbadges-signer`, `openbadges-verifier`, `openbadges-publish` → **BSD 2-Clause**"** | 🟢 payload |
+
+🆕 **`P786`: the partition is real, it is commercially decisive, and it is declared in a prose
+document.** 🔴 **`p784` returns `SINGLE — LGPL-3.0` and `p441` returns `OWN-GRANT-AT-ROOT / LGPL?`.
+Both are correct about every file either one is built to read, and both are wrong about the repo.**
+
+🔴 **And the cost runs in the direction nobody guards against.** A team that runs the gate, reads
+LGPL-3.0 and walks away **forfeits five BSD-2-Clause CLI entry points it was entitled to ship**;
+a team that reads the wiki page and concludes "basically BSD" **links an LGPL-3.0 library into a
+closed product**. 🟢 **The gate's false negative costs a usable asset — which is the first time on
+this shelf that a licence error has been measured costing something other than legal exposure.**
+
+### 🔴 `P789` — the search channel's **first-ranked** implementation of an edge is not licence-filtered, and this pass is the clean instance
+
+🟢 **Measured, same pass, same query.** The Open Badges query returned `openbadgeslib` (🔴 LGPL-3.0)
+and *Certo* (🔴 **no repository URL in any result — not admitted**, `P476`). 🟢 **The permissive
+stack that actually serves this edge — six repos, four MIT, one BSD-3-Clause, one Apache-2.0,
+all payload-read this pass — appeared nowhere in that result set** (`repos/foundations.md`).
+
+🆕 **`P789`: ranking is relevance, never licence.** 🔵 **The consequence for a studio is procedural,
+not intellectual: the licence gate must run on the repo you were *going* to pick, before the
+architecture is drawn around it** — because the first result and the shippable result were
+different repos this pass, for the same protocol, in the same hour.
+
+### 🔴 The policy gate has **no verdict at all** for the function this pass's new rows perform
+
+🟢 **Run, not assumed:** `bash compose/code/p782-policy-gate/gate.sh credential_issuance EU`
+→ 🔴 **`NO ROW: function='credential_issuance' scope='EU' was never measured.`**
+🔴 **`credential_issuance` is absent from the gate's 14-function vocabulary** (`admissions_access`,
+`ai_coordinator`, `ai_literacy_instruction`, `assessment_grading`, `district_ai_policy`,
+`emotion_recognition`, `fundamental_rights_assessment`, `learning_path_steering`,
+`proctoring_behaviour`, `regulatory_sandbox`, `student_data_training`, `teacher_replacement`,
+`tutoring_supplementary`, `vendor_registration`).
+
+🟢 **Which is the correct answer and not a permission** — `P476`, and the gate says so itself:
+*"This is an UNMEASURED pair, not a permission."* 🆕 **`Gap 289`.** 🔵 **It matters because the
+EMEA demand signal for this exact function is the strongest regional finding of the pass**
+(`intel/market.md`): European Digital Credentials for Learning is a central Europass product, and
+this KB cannot yet say whether issuing one is a gated function anywhere.
+
+🔴 **Also measured and worth recording:** `student_data_training` has **no row in EU, US-federal or
+BR** — three of the most likely jurisdictions for the question *"may we train on this cohort's
+data?"*, which is the question every tutoring agent row on this shelf raises.
+
 ## 🟢 Sixty-first pass, 2026-10-08 — the **evaluation** cell is measured rather than extended, and the result is that **48 % of it cannot ship**; no new education agent was admitted, and the reason is stated
 
 ⏱️ **Fifteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-second pass, 2026-10-08 — the **credential** edge lands with a permissive stack (6 payload-read rows), the Ed-Fi substrate is completed (4 rows), and the licence gate that admitted them is shown wrong on 2 of 13
+
+⏱️ **Sixteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Oracle map re-measured before any datum (`P713`, `P745`), `n = 2`:** `raw` **200** against a
+404-discriminating control, `pypi` **200 × 2**, `npm` **200 × 2**, `maven` **200 × 2**,
+🟢 `packagist` **200 × 2** (recovered from pass 61's `404`), 🆕 `api.nuget.org` **200 × 2**,
+`ls-remote` **discriminates** (real → SHA, invented → fail). 🔴 `api.github.com` **403**.
+🔴 Policy/report hosts **`000`, 4 of 4** — every regulatory or survey sentence in this pass is
+`reported`, single-channel (`P784`).
+
+### 🟢 Why a credential layer, and why it is the edge with the clearest buyer
+
+🟢 **Pass 61 closed four edges — LTI 1.3 (launch), OneRoster (who), SCORM/cmi5 (content),
+xAPI (what happened).** 🔴 **It then searched for the fifth, Caliper Analytics, and found no
+permissive implementation at all — `Gap 284`, still open.** 🟢 **This pass went after a different
+fifth edge and found the opposite: six permissive implementations, all payload-read.**
+
+🔵 **The question this edge answers is the one that ends an engagement rather than starting it:
+*when the learner finishes, what do they walk away with, and can anyone else verify it?*** 🟢 And
+unlike the other four, its demand signal is a **named public programme** rather than an inference:
+European Digital Credentials for Learning is a central Europass product, resting on the 2022
+Council Recommendation on micro-credentials (`intel/market.md`, 🟡 `reported`).
+
+| Repo | Licence (payload · bytes · ref) | Registry date | Region of origin | What it contributes |
+|---|---|---|---|---|
+| 🆕 [`digitalcredentials/vc`](https://github.com/digitalcredentials/vc) | 🟢 **BSD-3-Clause** · 1 524 B · `15fb018` | 🟢 npm **v10.0.2, 2025-11-19** | North America (US · MIT-hosted DCC) | **Issue and verify W3C Verifiable Credentials.** 🟢 The cryptographic core of the edge, and the row whose **registry licence agrees with its payload** — two channels, one answer. |
+| 🆕 [`digitalcredentials/verifier-core`](https://github.com/digitalcredentials/verifier-core) | 🟢 **MIT** · 1 086 B (`LICENSE.md`) · `276ebd2` | 🟡 npm **v1.0.0-beta.11, 2025-12-16** | North America (US) | **Verification engine** — status lists, revocation, issuer registries. 🟡 **Beta at ten months**; usable, not stable. |
+| 🆕 [`digitalcredentials/issuer-coordinator`](https://github.com/digitalcredentials/issuer-coordinator) | 🟢 **MIT** · 1 086 B · `e663eea` | 🟡 no registry row | North America (US) | **The deployable service** that batches signing behind an HTTP API — the piece that turns the libraries into something a registrar operates. |
+| 🆕 [`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) | 🟢 **MIT** · 1 091 B · `1c46a82` | 🟡 no registry row | North America (US) | **The learner-side wallet** (mobile). 🔵 The only row on this shelf, at any edge, that the *learner* installs rather than the institution. |
+| 🆕 [`digitalcredentials/sign-and-verify`](https://github.com/digitalcredentials/sign-and-verify) | 🟢 **MIT** · 1 074 B · `6be5b41` | 🔴 npm **v0.0.1, 2020-11-08** | North America (US) | 🔴 **Superseded in practice — six years stale on npm while HEAD moves.** On the shelf so a later pass does not rediscover it as live; 🟢 use `vc` + `verifier-core` instead. |
+| 🟢 [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | 🟢 **Apache-2.0** · 13 184 B · `0a66b52` | 🟡 no registry row | North America (US · 1EdTech) | 🔵 **Re-confirmed, not admitted** — already on this shelf. **Conformance validation from the body that authored the spec**, which is the artefact a ministry buyer asks for. |
+
+🟢 **Five admissions and one re-confirmation. Four MIT, one BSD-3-Clause, one Apache-2.0 — nothing
+copyleft, nothing NonCommercial, every grant read from payload at a pinned ref.**
+
+### 🟢 The Ed-Fi substrate, completed — and this is a *licence* completion with a measured date gap
+
+🔵 **This KB has carried `Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard` since the thirteenth pass.**
+🟢 **The four repos that make it runnable were never payload-read here. They are now, and all four
+are Apache-2.0:**
+
+| Repo | Licence (payload · bytes · ref) | What it contributes |
+|---|---|---|
+| 🆕 [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | 🟢 **Apache-2.0** · 10 172 B · `e453cd2` | **The Operational Data Store + REST API** — the core of the US K-12 student-record stack. 3 478 tree paths. |
+| 🆕 [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation) | 🟢 **Apache-2.0** · 10 172 B · `37ff595` | End-user applications and the **extension mechanism** — where a district's local fields live without forking the core. |
+| 🆕 [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Docker`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Docker) | 🟢 **Apache-2.0** · 11 356 B · `29c571a` | **Container deployment.** 🔵 The cheapest way to stand the stack up for a pilot; PostgreSQL as well as SQL Server. |
+| 🆕 [`Ed-Fi-Alliance-OSS/Ed-Fi-API-Publisher`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-API-Publisher) | 🟢 **Apache-2.0** · 11 356 B · `dabdd14` | **ODS-to-ODS replication** between instances of the same version — the district → state-agency hop. |
+
+🔴 **And the gap, measured rather than guessed: not one of them carries a version or date from any
+channel this session can reach.** 🟢 The repo's own
+`Utilities/SdkGen/EdFi.SdkGen.Console/EdFi.OdsApi.Sdk.nuspec` names the first-party package
+**`EdFi.OdsApi.Sdk`, authored "Ed-Fi Alliance"**; 🔴 that exact id returns **`none`** on the
+reachable, control-verified NuGet date oracle, `api.github.com` is **403**, `ed-fi.org` is **000**,
+and `Application/Directory.Build.props` carries the placeholder `AssemblyVersion 1.0.0`.
+🆕 **`Gap 286`** — and the commercial consequence is in `verticals/solutions.md`.
+
+### 🔴 `P787b` / `P788` — the two licence instruments were run **against each other** over all 13 repos, and they disagree twice
+
+🟢 **Both were run over the same 13 slugs, in the same pass: `p784-licence-scope-map` (16 rooted
+filenames) and `p441-tree-licence-enumeration` (the complete `git ls-tree -r` of every path).**
+🟢 **Reconciled against the committed run** (`compose/code/p786-scope-verdict-agreement/result.2026-10-08.tsv`), **which is stricter than the first reading of it**: the instruments **disagree on 1 of 13**, and are **jointly wrong on a second** — 🔴 **2 of 13 rows are wrong, but only one of them is a *disagreement*.** 🔵 **That distinction is the finding, not a correction of it:**
+
+| Repo | `p784` says | `p441` says | 🟢 What is true, payload-read this pass |
+|---|---|---|---|
+| 🔴 [`1EdTech/openbadges-specification`](https://github.com/1EdTech/openbadges-specification) `@5f86f31` | 🔴 **`UNGRANTED`** (0 of 16) | 🔴 **`BUNDLED-GRANT-ONLY`**, families **`CC-BY;CC0-1.0`** | 🔴 **Two bespoke non-OSI grants, both of which `p441` found and *rejected*:** `ob_v3p0/license.md` — 🟢 **`200`, 12 324 B, "IMS GLOBAL LEARNING CONSORTIUM, INC. SPECIFICATION DOCUMENT LICENSE"** — and `ob_v2p1/LICENSE-INPROGRESS.md`, 🔴 **"for IMS Global Contributing Member and/or Invited Guests only"** |
+| 🔴 [`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib) `@e7736b6` | 🔴 `SINGLE — LGPL-3.0` | 🔴 `OWN-GRANT-AT-ROOT`, `LGPL?` | 🔴 **PARTITIONED, and declared only in prose** (`P786`): library **LGPL-3.0**, five CLI entry points **BSD-2-Clause**, per `wiki/Authors-License-and-FAQ.md` |
+
+🆕 **`P788` — and it is the worse of the two defects, because it admits rather than refuses.**
+🔴 **`p441`'s `LICENCE_RE` matches the path `extensions/licenseExtension/…`**, so three
+documentation files became *confirmed* grant paths and the repo was reported as **CC-BY / CC0-1.0**.
+🟢 **Read this pass, the matched file is not a grant at all** — `extensions/licenseExtension/README.md`
+opens *"# Creative Commons Content License … enables **issuers** to indicate what permissions are
+granted to the public to reuse **BadgeClass metadata**"*. 🔴 **It documents a badge metadata field.
+`p441` turned a schema extension about licences into a licence.**
+
+🔴 **A false *absence* makes a pass refuse a usable repo. A false *presence* makes it ship an
+unlicensed one.** 🟢 **So the ordering of the two gaps follows the direction of the error:**
+🆕 **`Gap 288`** (`p441`'s false presence, plus its silent rejection of bespoke non-OSI grants)
+is declared ahead of 🆕 **`Gap 287`** (`p784` has no tree layer and no prose layer).
+
+🔵 **And `Gap 287` is not a new idea — it is `P441`'s own warning, applied to the instrument built
+after it.** `p441`'s README states it in as many words: ***"a filename list can only FIND a licence.
+To sustain its ABSENCE you must ENUMERATE the tree"*** and ***"widening a list cannot fix a list."***
+🔴 **`p784` was then built, one pass later, as a list of 16 rooted filenames.** 🟢 **This is the
+fifth recorded instance of this defect family in this KB, and the first inside its newest gate.**
+
+🔴 **This bears directly on `Gap 285`.** The 8 benchmark repos pass 61 reported as carrying **no
+grant at all** were judged by `p784` alone. 🔴 **They have not been tree-enumerated, and there is
+now a proven false-absence case to calibrate against** — so "8 ungranted" is an upper bound on
+usable repos being refused, not a settled count.
+
 ## 🟢 Sixty-first pass, 2026-10-08 — the **content-packaging** layer lands (5 payload-read rows), and a bounded sweep of the benchmark frame finds **48 % of it unusable in a commercial deliverable**
 
 ⏱️ **Fifteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

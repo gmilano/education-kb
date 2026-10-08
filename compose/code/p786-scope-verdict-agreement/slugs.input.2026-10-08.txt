@@ -1,0 +1,13 @@
+1EdTech/openbadges-specification
+luisgf/openbadgeslib
+digitalcredentials/vc
+digitalcredentials/verifier-core
+digitalcredentials/sign-and-verify
+digitalcredentials/issuer-coordinator
+digitalcredentials/learner-credential-wallet
+1EdTech/openbadges-validator-core
+Ed-Fi-Alliance-OSS/Ed-Fi-ODS
+Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation
+Ed-Fi-Alliance-OSS/Ed-Fi-API-Publisher
+Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Docker
+Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard

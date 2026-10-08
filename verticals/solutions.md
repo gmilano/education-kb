@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-second pass, 2026-10-08 — the **sixth** edge lands and it is the *exit* of the learning loop: launch → roster → content → record → **credential**, with the student-record substrate completed in Apache-2.0
+
+⏱️ **Sixteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Pass 61 closed four edges and then searched for a fifth, Caliper Analytics, and found no
+permissive implementation at all (`Gap 284`, still open).** 🟢 **This pass found a different fifth
+and sixth, and both have permissive implementations read from payload at pinned refs.**
+
+### 🟢 The six edges, each with a payload-read permissive implementation
+
+| Edge | Standard | Permissive implementation | Licence · ref | Registry date |
+|---|---|---|---|---|
+| **Who may be told what** | **LTI 1.3** | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 Apache-2.0 | 🟢 npm **v7.0.7, 2026-10-06** |
+| **Who is in the class** | **OneRoster** | [`longsightgroup/oneroster`](https://github.com/longsightgroup/oneroster) · [`TCI/OneRoster`](https://github.com/TCI/OneRoster) | 🟢 MIT · `8c14777` / `5f8a15a` | 🟡 — |
+| **What the content is** | **SCORM 1.2 / 2004 · AICC · cmi5** | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) · [`adlnet/CATAPULT`](https://github.com/adlnet/CATAPULT) | 🟢 MIT · `a882b22` · 🟢 Apache-2.0 · `806c0ba` | 🟢 npm **v3.4.5, 2026-10-05** |
+| **What the learner did** | **xAPI** | [`xapijs/xapi`](https://github.com/xapijs/xapi) · [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) · [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 MIT · `5e28e9b` · 🟢 Apache-2.0 · `cb794e4` · 🟢 MIT · `53cc58c` | 🟢 npm **v3.0.3, 2026-04-27** |
+| 🆕 **What the record is** | **Ed-Fi Data Standard v6** | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) · [`…-ODS-Docker`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Docker) · [`…-API-Publisher`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-API-Publisher) | 🟢 Apache-2.0 · `e453cd2` · `29c571a` · `dabdd14` | 🔴 **none reachable** (`Gap 286`) |
+| 🆕 **What the learner keeps** | **Open Badges 3.0 · CLR 2.0 · W3C VC** | [`digitalcredentials/vc`](https://github.com/digitalcredentials/vc) · [`…/verifier-core`](https://github.com/digitalcredentials/verifier-core) · [`…/issuer-coordinator`](https://github.com/digitalcredentials/issuer-coordinator) · [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | 🟢 BSD-3-Clause · `15fb018` · 🟢 MIT · `276ebd2` · 🟢 MIT · `e663eea` · 🟢 Apache-2.0 · `0a66b52` | 🟢 npm **v10.0.2, 2025-11-19** |
+| 🔴 **What the analytics are** | **Caliper Analytics** | 🔴 **none found — `Gap 284`, second pass open** | — | — |
+
+🟢 **Six of seven edges are permissive, every implementation is payload-read at a pinned ref, and
+nothing copyleft touches Globant's deliverable.** 🔴 **Two named holes rather than one:** no Caliper
+implementation (`Gap 284`), and no reachable date for the Ed-Fi tier (`Gap 286`).
+
+### 🟢 `P747a` extended — the substrate stays copyleft, the edges stay permissive, across **six** protocols
+
+🔴 **The substrates have not moved and will not:** Moodle **GPL-3.0**, Open edX **AGPL-3.0**,
+Canvas **AGPL-3.0**, OpenEduCat **LGPL-3.0**; 🟢 Kolibri **MIT**, OpenOLAT **Apache-2.0**.
+🟢 **The edges are permissive at six of the seven protocols measured.** 🟢 **So `P747a`'s rule now
+rests on six independent instances: build *beside* the substrate, across a spec-defined boundary,
+and the substrate's copyleft never reaches the deliverable.**
+
+🔵 **And the new edge sharpens *why* the rule pays, in a way the first four did not.** 🟢 **A
+credential is the one artefact in the loop that must outlive the platform that issued it** — a
+verifiable credential a learner holds in a wallet is still verifiable after the LMS is replaced.
+🔴 **Which makes it the worst possible thing to implement inside an AGPL-3.0 substrate**, where
+§13 reaches network use, and the best possible thing to implement at a permissive edge.
+
+### 🔴 The Ed-Fi commercial note, measured this pass, and it changes how the stack gets quoted
+
+🟢 **Ed-Fi is the US K-12 student-record standard and its whole estate is Apache-2.0** — five repos
+payload-read (`repos/foundations.md`). 🔴 **But there is no public first-party package surface,
+and that is measured, not inferred:**
+
+| Channel | Result |
+|---|---|
+| 🟢 `api.nuget.org` flat container, control-verified discriminating | 🔴 **`EdFi.OdsApi.Sdk` → `none`** — and that id is read from the Alliance's own `.nuspec` |
+| 🔴 7 further plausible ids guessed | 🔴 **7 of 7 `none`** |
+| 🟡 `www.nuget.org?q=EdFi` | 🟡 only **third-party** `EdNexusData.EdFi.OdsApi.Sdk` (v1.0.19) / `…v73` (v1.0.8); 🔴 **the org `EdNexusData` does not resolve at `ls-remote`** — not admitted |
+| 🔴 `api.github.com` · 🔴 `ed-fi.org` | 🔴 **403** · 🔴 **000** |
+
+🔵 **The consequence for a proposal is concrete: an Ed-Fi integration is a *source-and-installer*
+build, not a `nuget install`.** 🟢 **`Ed-Fi-ODS-Docker` (Apache-2.0, `29c571a`) is therefore the
+cheapest honest path to a pilot**, and the estimate should carry a build step that a
+package-manager-shaped plan would not.
+🔴 **And no row in this tier may be quoted with a version**: the Alliance publishes to a feed this
+session cannot reach, and `Application/Directory.Build.props` carries the placeholder
+`AssemblyVersion 1.0.0`. 🆕 **`Gap 286`.**
+
+### 🔴 The licence gate that admitted this architecture is wrong on 2 of 13 repos — and the platform layer is where that costs most
+
+🔴 **`P786`: a scope partition can be declared in prose alone.** `luisgf/openbadgeslib` splits
+**LGPL-3.0 library / BSD-2-Clause CLI** in `wiki/Authors-License-and-FAQ.md`, and in no licence
+file, no manifest, no classifier and no source header. 🔴 **Both of this KB's licence instruments
+return a single family for it.**
+
+🔵 **Why that lands hardest at this layer rather than on the agent shelf:** a platform integration
+is *linked*, not called. 🔴 **The LGPL's trigger is linkage**, so the library/CLI distinction is
+precisely the distinction that decides whether a client's closed-source LMS plugin inherits an
+obligation — and it is the distinction neither gate can see. 🟢 **Operational rule for this layer,
+until `Gap 287` closes: at the platform edge, read the README and the project wiki before the
+licence file, and treat `SINGLE` from `p784` as "one grant was found", never as "one grant exists".**
+
 ## 🟢 Sixty-first pass, 2026-10-08 — the **fourth** protocol edge lands, and the customisation loop is now closed end to end: *launch → roster → content → record*
 
 ⏱️ **Fifteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
