@@ -4,6 +4,229 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-seventh pass, 2026-10-08 — `Gap 269` is **measured**: 1 020 shelved repos swept, **5 confirmed misgrants**, and the sweep's own **31 % false-positive rate** is the headline
+
+> 🔵 **This pass's opening hypothesis was that `Gap 269`'s sweep would mostly confirm the shelf.
+> 🟡 CONFIRMED for the shelf and REFUTED for the method.** 🟢 **The sweep ran over all **1 020**
+> unique slugs on the eight shelves and found **5 misgrants nobody had caught** — 🔴 **and it also
+> produced 4 false positives in that same 13-row class and 5 in the ungranted class.** 🟢 **So the
+> publishable result is not the count, it is the count *plus its error rate*, and this pass refuses
+> to publish the former without the latter.**
+
+### 🟢 `P725` — the README-vs-payload sweep exists, and `Gap 269` moves from declared to measured
+
+🟢 **New instrument: `compose/code/p725-readme-payload-sweep/`.** 🔴 **Not run from this repository —
+`[Code from External]` still denies execution here for a fourth pass (`Gap 267`)** — so it was
+written and run as this pass's own code, then committed with its results.
+
+| Verdict over **1 020** slugs | n | % |
+|---|---|---|
+| `NO_ASSERTION` — README makes no licence claim at all | 558 | **54,7 %** |
+| `AGREE` | 225 | 22,1 % |
+| `UNPARSED_ASSERTION` | 126 | 12,4 % |
+| `NO_README` | 67 | 6,6 % |
+| 🔴 **`UNGRANTED`** — README claims a licence, **no payload exists** | **29** | 2,8 % |
+| 🔴 **`MISGRANTED`** — README claims one family, payload grants another | **13** | 1,3 % |
+| `DUAL_LAYER` — CC asserted, code licence granted | 2 | 0,2 % |
+
+🟢 **The dominant result is `NO_ASSERTION` at 54,7 %:** 🔵 **more than half of the shelved repos make
+no licence claim in prose at all, so for them the payload is not merely better evidence than the
+README (`P476`) — it is the *only* evidence.**
+
+> 🟢 **`P725`.** *The README-vs-payload divergence `P715` found by hand is **rare but not isolated**:
+> 42 of 1 020 shelved repos (**4,1 %**) assert a licence their payload does not support. 🔴 **And an
+> instrument that finds them has a false-positive rate high enough (31 % on its worst class) that
+> its output is a **worklist, not a verdict**.*** 🟡 **`Gap 269` → MEASURED, not closed:** the
+> `UNPARSED_ASSERTION` (126) and `NO_README` (67) classes are **193 repos the sweep could not
+> adjudicate**, and that is the honest remainder. 🆕 **`Gap 271`.**
+
+### 🔴 `P725a` — the **5 confirmed misgrants**, every one read from payload by hand
+
+🟢 **All 13 `MISGRANTED` rows were adjudicated individually — `adjudication.2026-10-08.tsv` carries
+the reason for each. These five survive:**
+
+| Repo | README asserts | 🔴 Payload actually grants | Bytes | Harm |
+|---|---|---|---|---|
+| **`kamlendras/OpenProctor`** | *"licensed under the MIT License"* | 🔴 **AGPL-3.0** | **34 523** | 🔴 **Highest on this shelf** — §13 *"remote network interaction"* clause **present**, and a **proctoring** tool is network-served by definition, so the clause triggers on its *intended* deployment |
+| **`ahmedEid1/lumen`** | badge `license-MIT-yellow` | 🔴 **GPL-3.0** | **35 149** | 🔴 Copyleft believed permissive (`P715` shape) |
+| **`Dmoayad/essay-grader-llm`** | *"licensed under the MIT License"* | 🔴 **GPL-3.0** | **35 149** | 🟢 Already held (`P715`) — re-confirmed |
+| **`indobenchmark/indonlu`** | badge `license-MIT-blue` | 🟡 **Apache-2.0** | **11 131** | 🟡 Low — both permissive, but patent grant and `NOTICE` duties differ |
+| **`trilogy-group/oneroster-ts`** | badge → `opensource.org/licenses/MIT` | 🟡 **0BSD** | **711** | 🟢 **Inverted** — 0BSD drops the attribution MIT requires, so the README **overstates** the obligation |
+
+🔴 **`OpenProctor` is the row to act on.** 🔵 **An education client shipping a hosted proctoring
+service on it, trusting the README, would owe source to every examinee** — and this KB had the repo
+shelved without the contradiction recorded.
+
+### 🟡 `P725b` — the 4 real defects that are **not** misgrants, and why the distinction pays
+
+🟢 **Four more rows are genuinely divergent but belong to other classes, and collapsing them into
+"misgranted" would be wrong:**
+
+| Repo | Structure measured | Why it is not a misgrant |
+|---|---|---|
+| 🔴 **`leemonade/leemons`** | README: *"**previously** licensed under the MIT License … transitioned to a fair code **Sustainable Use License**"*; payload **composite**, 10 830 B | 🔴 **Relicensed.** The MIT claim is *historical and true*. 🔴 **SUL is not OSI-approved** — a shelf row reading "MIT" here would be wrong in the **not-open-source** direction |
+| **`pupilfirst/pupilfirst`** | payload opens *"Portions of this software are licensed as follows"*, carves out `docs/`, 1 684 B | **Segmented** grant (`p228-segmented-coverage`) — one family cannot describe it |
+| **`Utdanningsdirektoratet/moodle-mod_adobeconnect_maintained`** | README: *"GPL v3 … **except for specific file(s)**"*, `Cryptor.php` MIT; payload GPL-3.0 **35 147 B** | **Per-file** (`p199-perfile-license`) — correctly GPL; the extractor caught the exception, not the rule |
+| 🔴 **`masakhane-io/lafand-mt`** | code payload **GPL-3.0**; MT dataset 🔴 **CC-BY-4.0-NC**; dependency Apache-2.0 | **Three layers.** 🔴 **The NC dataset is the commercially load-bearing fact** and no single family describes the repo |
+
+> 🟡 **`P725b`.** *"README disagrees with payload" has **at least seven** shapes, not two: ungranted,
+> mis-granted, **relicensed**, **segmented**, **per-file**, **multi-layer**, and
+> **filename-without-content**. 🔴 **`P715`'s two-shape taxonomy was too small**, and a comparator
+> that knows only two manufactures false mismatches on the other five.*
+
+### 🔴 `P726` — a whole-body AGPL-first classifier reads **every GPL-3.0 payload as AGPL**
+
+🔴 **This instrument's first run reported `Dmoayad/essay-grader-llm` as **AGPL**, against this KB's
+own correct `GPL-3.0`.** 🟢 **Cause, measured in the canonical payload:**
+
+| Measurement | Reading |
+|---|---|
+| Title line of the payload | 🟢 *"GNU GENERAL PUBLIC LICENSE / Version 3, 29 June 2007"* |
+| Occurrences of *"Affero"* in that same file | 🔴 **3** — lines **552**, **556**, **559** |
+| The line that fooled it | 🔴 *"13. Use with the GNU Affero General Public License."* |
+
+🟢 **GPL-3.0 §13 names the Affero licence by full title**, so any AGPL-before-GPL match over the
+whole body inverts the family on every GPL-3.0 file in existence.
+
+> 🔴 **`P726`.** *The licence-family discriminator is the **title window** — the first few non-empty
+> lines — **never** the body. 🟢 **Caught only because a control with a known answer was run first**:
+> the KB already held `essay-grader-llm = GPL-3.0`, and the instrument contradicted it.* 🔵 **A
+> sweep without known-answer controls would have published the inversion as a finding.**
+
+### 🔴 `P727` — omitting `COPYING.txt` biases the blind spot **into the copyleft family**
+
+🔴 **The first run called `moodle/moodle` **ungranted**.** 🟢 **Measured:**
+
+| Repo | Filename the first list missed | Bytes |
+|---|---|---|
+| `moodle/moodle` | 🟢 **`COPYING.txt`** | **35 147** |
+| `nvaccess/nvda` | 🟢 **`copying.txt`** | **53 408** |
+| `languagetool-org/languagetool` | 🟢 **`COPYING.txt`** | **26 432** |
+
+🟢 **`COPYING` / `COPYING.txt` is the GNU projects' own convention**, so a filename list carrying
+`COPYING` but not `COPYING.txt` fails *selectively on GPL-family repos*. 🟢 **Corrected list re-run
+over the 101 affected rows: `UNGRANTED` **34 → 29**, a measured **15 %** artefact rate.**
+
+> 🔴 **`P727`.** *A licence-file filename list is a **licence-family sampling frame**, and omitting
+> `COPYING.txt` biases it against copyleft. 🔴 **The error direction is the expensive one** (`P701`):
+> it reports a strongly-copyleft repo as having **no grant**, which a reader hears as
+> **unencumbered**.*
+
+### 🟢 `P728` — two slugs, one repository: identity proved through a **`403`** channel
+
+🟢 **The narrower assessment query returned `paper-instruments/rubric` as a *new* rubric library.
+🔴 **It is not new — it is the row this shelf already holds**, and `github.com` being `403` does not
+prevent proving it:**
+
+| Oracle | `paper-instruments/rubric` | `The-LLM-Data-Company/rubric` |
+|---|---|---|
+| `ls-remote` HEAD SHA | `eb0755a1` | 🟢 **`eb0755a1`** — identical |
+| All advertised refs | 84 | 🟢 **84** — identical |
+| `LICENSE` bytes (stored) | 1 077 | 🟢 **1 077** — identical |
+| 🟢 **`LICENSE` sha256** | `c5cc7d2cd1eb24dd…` | 🟢 **`c5cc7d2cd1eb24dd…`** — identical |
+
+🟢 **Canonical name broken by *owner-controlled* self-reference, which a redirect cannot fake:** the
+README's own badge links `github.com/**The-LLM-Data-Company**/rubric/blob/main/LICENSE`, and PyPI
+`rubric` **2.2.0** (uploaded **2026-01-21**) carries `Homepage`, `Issues` and `Repository` all naming
+**`The-LLM-Data-Company`**. 🟢 **So the existing row is canonical and correctly spelled; the new slug
+is an alias.**
+
+> 🟢 **`P728`.** *Same-repo identity is provable without the web channel: **HEAD SHA + ref count +
+> licence-payload hash** is a fingerprint, and three agreeing is conclusive. 🔴 **`ls-remote` cannot
+> break the canonical tie** — both directions of a rename answer identically — so **owner-controlled
+> self-references (README links, registry `project_urls`) decide which name is canonical.*** 🟢 **A
+> duplicate row was prevented, which is what `p311-duplicate-alta-gate` exists for.**
+
+### 🔴 `P729` — an MIT grant whose **copyright holder cannot be located**
+
+🟢 **`maxew6/ai-tutor-project` surfaced as a 2026 MIT tutor agent. Measured:**
+
+| Measurement | Reading |
+|---|---|
+| `maxew6/ai-tutor-project` `ls-remote` | 🟢 exists — HEAD `2af1c6be`, 2 refs |
+| `LICENSE` payload | 🟢 `MIT License` / 🔴 ***"Copyright (c) 2026 krishna16-origin"*** |
+| 🔴 **`krishna16-origin/ai-tutor-project`** | 🔴 **exit `128` ×3** — does not exist |
+| 🟢 Positive control, same loop | 🟢 exit `0` ×3 — so the `128` is absence, not transient (`P713`) |
+| README's own text | 🔴 carries **no** upstream attribution — the claim lives only in the repo *description* |
+
+> 🔴 **`P729`.** *A grant can name a copyright holder that **no reachable oracle can locate**. 🔴 **The
+> attribution chain terminates in a void**: the holder of record owns the grant, so there is nobody
+> to ask for clarification, relicensing, or a patent assurance. 🟢 **Refuse the row** — not because
+> the licence text is defective, but because **an unlocatable holder is an unenforceable grant**.*
+> 🔵 **Extends `p394-holder-absent-census`: the holder is not absent, it is *named and unfindable*,
+> which is worse, because the row looks complete.**
+
+### 🔴 `P732` — the **ref-count** column has no declared convention, and pass 56 mixed two **in the same table**
+
+🟢 **Re-measuring the shelf's five rows, every HEAD SHA was **identical** to pass 56 — no upstream
+movement. 🔴 **But four of five ref counts differed wildly, which is impossible at a fixed SHA.**
+🟢 **Decomposed:**
+
+| Repo | **ALL** advertised | 🟢 `refs/heads` | `refs/tags` | 🔴 `refs/pull` | Pass 56 published |
+|---|---|---|---|---|---|
+| `CAHLR/OATutor` | 204 | **60** | 4 | 🔴 **139** | **60** → `heads` |
+| `Ebimsv/AITutorAgent` | 2 | **1** | 0 | 0 | **1** → `heads` |
+| `mitodl/open-learning-ai-tutor` | 185 | **66** | 30 | 🔴 **88** | **66** → `heads` |
+| `zijinz456/OpenTutor` | 97 | **11** | 0 | 🔴 **85** | **11** → `heads` |
+| 🔴 **`The-LLM-Data-Company/rubric`** | **84** | 19 | 20 | 🔴 **44** | 🔴 **84** → **ALL** |
+
+🔴 **Four rows used `refs/heads`; the fifth — the row that pass added — used all-advertised-refs.**
+🔵 **And the inflation is not small: GitHub advertises `refs/pull/*`, which is **139 of 204** on
+OATutor and **85 of 97** on OpenTutor.** 🔴 **So `rubric`'s "84 refs", cited as evidence of a healthy
+project, is really **19 branches + 20 tags + 44 pull-request refs** — the smallest of the three
+readings, dressed as the largest.**
+
+> 🔴 **`P732`.** *This is the **third** instance of one failure: `P704` (bytes, convention unnamed) →
+> `P724` (bytes, convention named then not applied) → **`P732` (refs, convention never named and two
+> used in one table)**. 🟢 **The family is now stable enough to state generally: every numeric
+> provenance column this shelf publishes needs a declared convention **and** a check that re-derives
+> every row under it.** 🔴 **A ref count in particular must name `heads` or `all`, or it silently
+> reports review traffic as project activity.***
+
+### 🟢 One new row — the only admissible find of this pass
+
+🟢 **The mandated agent query was run globally and in all four regions. 🔴 **Education-specific yield:
+zero new** — eighth consecutive week (`P497`). 🟢 **Narrower assessment queries produced four
+candidates; three were refused (below). One is admitted:**
+
+| Agent / library | Repo | Licence (read first-hand) | Provenance (declared conventions) | What it is |
+|---|---|---|---|---|
+| **automated-summary-evaluation-llm** | https://github.com/baker-jr-john/automated-summary-evaluation-llm | 🟢 **MIT** · `LICENSE` title `MIT License` · **1 071 B** stored | HEAD `e7a4cc5d` · **1** `refs/heads` · 0 tags · 0 pull | Rubric-based automated evaluation of **middle-school summaries** on Llama 3.1 8B. 🟡 **Explicitly a proof-of-concept built in Colab, 1 branch, no tags, no release** — it is a *worked method*, not a component. 🟢 **Value is the rubric-to-prompt mapping and its validation setup**, which is the part `P710` step 5 still lacks a reference for |
+
+🔴 **Admitted with its weakness stated: 1 branch and 0 tags is the weakest activity signal on this
+shelf.** 🔵 **Shelved as a method reference, not a dependency.**
+
+### 🔴 Three candidates **refused** this pass, each for a different reason
+
+| Candidate | Measured | Refusal |
+|---|---|---|
+| **`Xiaochr/LLM-AES`** (LAK25 paper code) | 🔴 `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`, `license`, `LICENSE-MIT`, `pyproject.toml`, `setup.py` — 🔴 **all `404`** · exists, HEAD `b0716f4b`, 2 refs | 🔴 **Ungranted.** Second repo in the `AITutor-EvalKit` family (`P702`): published research code, no grant |
+| **`maxew6/ai-tutor-project`** | 🟢 MIT, 1 073 B · 🔴 holder `krishna16-origin` unlocatable (`P729`) | 🔴 **Unenforceable grant** |
+| **`paper-instruments/rubric`** | 🟢 byte- and SHA-identical to the shelved row (`P728`) | 🟢 **Duplicate**, not a find |
+| 🔴 **"ArguLens"** (claimed Apache-2.0 AES system) | 🔴 **Channel contradicts itself**: one query returns *arXiv 2608.17356, "open-source … Apache 2.0", Aug 2026*; a second returns **no such repo**, a different id (`2602.04604`), and a **2020 paper of the same name about usability discussions in OSS issue trackers**. 🔴 **No repository URL located by any oracle** | 🔴 **Refused as unverifiable.** 🆕 **`Gap 272`** — a named, licensed, education-relevant system that may or may not exist, and this environment cannot settle it |
+
+🟢 **One channel claim *was* independently confirmed:** the channel said `edx/ease` is **AGPL**, and
+the sweep measured `LICENSE.txt` **AGPL, 35 136 B** first-hand. 🔵 **Recorded because agreement
+between prose and payload is as much a datum as divergence.**
+
+### 🟢 Rows re-confirmed this pass — stored bytes (`P704`), SHA-pinned (`P714`), **`refs/heads`** (`P732`)
+
+| Agent / library | Licence (payload title) | Bytes (stored) | `refs/heads` | HEAD SHA |
+|---|---|---|---|---|
+| **OATutor** | 🟢 `MIT License` | **1 105** | 60 | `939eb0e3` |
+| **AITutorAgent** | 🟢 `MIT License` | **1 072** | 1 | `09fdd672` |
+| **MIT Open Learning AI Tutor** | 🟢 `MIT License` | **1 069** | 66 | `5709ef2c` |
+| **OpenTutor** | 🟢 `MIT License` | **1 068** | 11 | `5fea390a` |
+| **rubric** | 🟢 `MIT License` | **1 077** | 🔴 **19** (not 84 — `P732`) | `eb0755a1` |
+| **automated-summary-evaluation-llm** 🆕 | 🟢 `MIT License` | **1 071** | 1 | `e7a4cc5d` |
+
+🟢 **All five pre-existing HEAD SHAs are unchanged from pass 56** — `P714`'s SHA pinning works, and
+it is what made `P732` detectable at all. 🟢 **All six byte counts re-derived under the stored
+convention, independently reproducing pass 56's corrected figures.**
+🔴 **Read `P703` before using `OATutor`**: content enters by submodule, granted **per item**, 75,7 %.
+🔴 **Still refused:** `AITutor-EvalKit` — no grant text (`P702`), **sixth** refusal.
+🔴 **No star counts published**: `github.com` and `api.github.com` are `403` ×3 (`P731`).
+
 ## 🟢 Fifty-sixth pass, 2026-10-08 — the "non-monotonic capability" headline is **partly measurement noise**, the payload oracle **lies about branch names**, and one new MIT row lands
 
 > 🔵 **This pass's opening hypothesis was that pass 55's `P700` result — capabilities here *flap* —

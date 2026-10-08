@@ -4,6 +4,150 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-seventh pass, 2026-10-08 — the market shelf and the repo shelf are **different evidence classes**, and only one of them is verifiable here
+
+> 🔵 **This pass's opening hypothesis was that `Gap 270` (EU Official-Journal publication status)
+> could be resolved by reaching a primary source.
+> 🔴 **REFUTED, and the refutation generalises.** 🟢 **Measured: **every** candidate primary host is
+> unreachable from this environment, while **five** repo oracles answer `200` on three probes each.
+> 🔴 **So this KB has been publishing payload-verified repo rows and prose-only regulatory rows in
+> the same visual register, with the same emphasis marks, for 57 passes.**
+
+### 🔴 `P731` — the market channel has **no** first-hand verification path, and the repo channel has five
+
+🟢 **Measured this pass, `n ≥ 2` per host:**
+
+| Channel | Hosts probed | Reading |
+|---|---|---|
+| 🟢 **Repo / registry** | `raw.githubusercontent.com` · `pypi.org` · `registry.npmjs.org` · `repo.packagist.org` · `gitlab.com/api/v4` · `git ls-remote` | 🟢 **`200` / exit `0`, ×3 each** |
+| 🔴 **Primary regulatory & market** | `digital-strategy.ec.europa.eu` · `eur-lex.europa.eu` · `unesco.org` · `iesalc.unesco.org` · `publications.iadb.org` · `nasbe.org` · `multistate.us` · `lw.com` · `timeshighereducation.com` · `nearshoreamericas.com` | 🔴 **`000` ×2 on all ten**; `WebFetch` returns **`EGRESS_BLOCKED`** |
+| 🔴 GitHub web / API | `github.com` · `api.github.com` | 🔴 **`403` ×3** |
+| 🔴 Model hub | `huggingface.co/api` | 🔴 **`000` ×3** |
+
+🟡 **An authenticated GitHub channel exists in this environment but is scoped to this session's own
+repositories**, so it is not a metadata oracle for third-party repos. 🔵 **Recorded so no later pass
+reads the `403` as the whole story.**
+
+> 🔴 **`P731`.** *Two evidence classes, and they are not comparable. 🟢 **A repo row on this KB is
+> payload-verified: a byte count, a SHA, a licence title read first-hand.** 🔴 **A regulatory or
+> market row is, in this environment, **irreducibly second-hand** — a search engine's summary of a
+> source nobody here can open.** 🟢 **The remedy is not to stop publishing market rows — they are the
+> mandate — it is to **mark the class**, so a reader can tell a measured date from a reported one.***
+> 🆕 **`Gap 275` — no shelf on this KB carries an evidence-class marker, and `intel/market.md` is
+> where it matters most.**
+
+### 🟡 `Gap 270` — **NARROWED**, in the affirmative, and still not first-hand
+
+🔴 **Pass 56 left open whether Official-Journal publication of the Digital Omnibus had completed,
+noting that until it did, `2026-08-02` arguably remained the legal baseline.** 🟢 **This pass's EMEA
+query returned a specific answer attributed to the Commission's own page:**
+
+| Element | Reported this pass | Class |
+|---|---|---|
+| Council approval of the Digital Omnibus on AI | **June 2026** | 🟡 second-hand |
+| 🟢 **Amendments entered into force** | 🟢 **`2026-07-27`** | 🟡 second-hand, attributed to the Commission page |
+| Enforcement by AI Office + national authorities | from **`2026-08-02`** | 🟡 second-hand |
+| Annex III stand-alone high-risk (education) | **`2027-12-02`** | 🟢 fifth pass confirmed |
+| Annex I embedded | **`2028-08-02`** | 🟢 confirmed |
+
+🟢 **If entry into force was `2026-07-27`, it preceded `2026-08-02` and the deferral was already
+operative when the old baseline would have bitten — which resolves `Gap 270`'s ambiguity in the
+affirmative.** 🔴 **But the page asserting it is `EGRESS_BLOCKED` here, so this is a *narrowing on
+reported evidence*, not a closure.** 🟢 **`P718` stands unchanged and is the planning rule:
+`2027-12-02` is a **ceiling** that harmonised standards can pull forward, and **Article 50 marking
+is live now** with its backstop at `2026-12-02` — **eight weeks out** as of this pass.**
+
+### 🟢 Regional channel — run independently, and it **reproduced the shelf**
+
+🟢 **All four mandated regional queries run. 🔴 **Zero new instruments in any region.** 🔵 **Recorded
+as calibration, which is a stronger statement than "saturated": an independent re-run reproducing
+pass 56's regional table is evidence the table is **complete**, not evidence the channel failed.**
+
+| Region | Re-confirmed independently this pass | Status |
+|---|---|---|
+| **North America** | **134 bills / 31 states**; **30+** states with guidance; **Ohio** first state to require a district AI policy, due **`2026-07-01`**; **California AB 1159** (bars student data for model training); **Oklahoma** and **Maryland** human-oversight / no-high-stakes-AI; **Oregon SB 1546** (compulsive-use design limits for minors); **Alabama** model procurement clause; **H.R. 8747** K-12 AI Literacy Act advanced in committee **July 2026**; teacher use **60 %** in 2024-25, **32 %** weekly | 🟢 all shelved |
+| **EMEA** | EU AI Act Annex III **`2027-12-02`**, Art. 50 **live** (`P718`, `Gap 270` narrowed); remote-exam platforms using **facial recognition or behaviour analysis** carry bias-testing, human-oversight and notification duties; UNESCO GenAI guidance; 🔴 **only ~10 %** of 450+ institutions have formal AI guidelines | 🟢 all shelved |
+| **APAC** | **Vietnam** AI law live **`2026-03-01`**, first standalone AI statute in SEA, **Decision 33/2026/QD-TTg** names **education** among six high-risk sectors with **automated assessment** and **behavioural monitoring** as the examples; **South Korea** AI Basic Act live **`2026-01-22`**, **one-year penalty grace** so 2026 is effectively a pilot year; **Taiwan** AI Basic Act **Dec 2025**; China binding algorithm/GenAI rules; Singapore & Japan voluntary | 🟢 all shelved |
+| **LATAM** | 🔴 **still no binding education-AI instrument** — Brazil **PL 2.338/2023** in the Chamber, Chile's bill in first constitutional stage, Colombia **CONPES 4144** (budget to **2030**); **UNESCO IESALC: 200 institutions / 19 countries, 87 % use AI, only 26 % have any formal framework**, teaching use **74 %**, private non-profit **84 %** > public **68 %**; TALIS 2024 teachers Brazil **56 %** / Chile **55 %** / Colombia **53 %** / Costa Rica **52 %** vs OECD **36 %**; Uruguay **Ceibal 75 %**; UNESCO LAC **Observatory** launched **April 2026**; **IDB TN-3241** | 🟢 all shelved |
+
+🟡 **Canada and Mexico again returned nothing education-specific in this channel** — 🟢 **an informed
+gap, stated explicitly, not coverage.** 🟡 **Middle East and Africa likewise returned nothing
+education-specific beyond the observation that parts of the region have no AI framework at all**, and
+🔴 **the UAE mandate date (`Gap 266`) remains unresolved for a second pass.**
+
+## Opportunities by region
+
+🟢 **One `###` per region, closed vocabulary (`P265` / `p383-region-heading-gate`). 🔵 Country names
+in the prose; the region is the field.** 🟢 **This pass adds one opportunity that is **new and
+derived from measurement**, not from the channel: the proctoring licence trap (`P725a`).**
+
+### North America
+
+🟢 **The buyer is a district or state **ordered to produce a policy** with no engineering to
+implement it** — Ohio's deadline has passed, Oklahoma's lands before 2027-28.
+🟢 **Sell the human-review gate as an auditable artefact**: Oklahoma bars AI from high-stakes
+decisions, Illinois requires an **opt-out of AI grading**, NYC bars student-facing generative AI
+below grade 9. 🔵 **Each is a *logged decision boundary* — build the log, not the model.**
+🟢 **`AB 1159` makes **no-training-by-default** a saleable default**, and its private right of action
+makes it a liability control rather than a feature.
+🔴 **New this pass — the proctoring licence trap.** 🔴 **`kamlendras/OpenProctor` says MIT in its
+README and is **AGPL-3.0** in its payload (`P725a`).** 🔵 **Proctoring is the single most
+licence-dangerous category in education software, because AGPL §13 triggers on *hosting* and a
+proctoring service is hosted by definition.** 🟢 **A ten-line licence provenance check, run over a
+client's existing edtech stack, is a saleable engagement on its own** — and this KB now has the
+instrument (`compose/code/p725-readme-payload-sweep/`).
+🟡 **Canada and Mexico: nothing in this channel. Informed gap.**
+
+### EMEA
+
+🟢 **The buyer is an institution that will be a *deployer* of a high-risk system with **no**
+governance — ~90 % of 450+ institutions have no formal guideline.**
+🔴 **`P718` sets the pitch: stop selling "you have until December 2027".** 🟢 **Sell "the date is a
+ceiling that harmonised standards can pull forward, and **Article 50 marking is live now** with its
+backstop eight weeks out."**
+🟢 **Sell the conformity technical file as a deliverable**, with **standards-neutral** evidence
+tooling — benchmarks that do not exist yet cannot be coded against, so build the evidence *pipeline*
+and leave the criteria pluggable.
+🔴 **The proctoring finding lands hardest here.** 🔵 **Remote-exam platforms using facial recognition
+or behaviour analysis are squarely Annex III *and* the category where the AGPL trap sits** — so a
+single engagement can carry both the conformity file and the licence remediation.
+🟢 **And `P734` changes the build recommendation**: if permissive is a hard constraint, **Sakai
+(ECL-2.0)** and **Kolibri (MIT)** are the education-native starting points — not a general ERP with
+an education layer written from scratch.
+
+### APAC
+
+🟢 **The buyer is a vendor with **extraterritorial exposure it has not modelled**.** 🔴 **Vietnam's
+Decision 33/2026/QD-TTg names education high-risk and gives **automated assessment** and
+**behavioural monitoring** as its examples** — which is to say, it names *exactly* the two product
+categories this shelf tracks.
+🟢 **Korea's one-year penalty grace makes 2026 the cheap year to get compliant**, and its
+domestic-representative threshold is a **corporate-structure** question, not a software one — flag
+it early, because engineering cannot fix it.
+🔵 **Vietnam's high-risk trigger is narrow in a useful way (`P706`): it bites where the output is the
+**sole basis** without meaningful human review.** 🟢 **So the same human-review gate sold in North
+America is the APAC compliance artefact too** — one build, two regulatory markets.
+🟢 **Behavioural monitoring being named explicitly makes the proctoring licence check an APAC
+opportunity as much as an EMEA one.**
+
+### LATAM
+
+🔴 **The asymmetry is still the whole opportunity: three regions constrain automated assessment by
+instrument; LATAM constrains it by nothing while adopting it fastest.** 🟢 **87 % of institutions
+use AI and 26 % have any framework — a 61-point governance gap, measured.**
+🟢 **The buyer is a university or ministry that has already adopted and has no policy**, and the
+sellable artefact is the **framework itself**, not a model: an institutional AI policy, an
+AI-grading opt-out, a human-review log, and a staff training path.
+🔵 **The public/private split (**68 %** vs **84 %**) says where the budget is and where the need is,
+and they are not the same place** — private non-profits adopt faster, public institutions carry more
+students.
+🟢 **Uruguay's Ceibal (**75 %** of public-school teachers) is the reference deployment to cite in
+any public-sector pitch in the region**, and the UNESCO LAC Observatory is the policy counterpart to
+align to.
+🟢 **`P734` matters most here:** 🔵 **Kolibri is MIT **and offline-first**, which is the correct
+technical answer to uneven connectivity across the region** — permissive, education-native, and
+built for exactly this constraint.
+
 ## 🟢 Fifty-sixth pass, 2026-10-08 — the EU deadline this KB beat the channel on four times is a **ceiling, not a floor**, and that inverts the runway
 
 > 🔵 **This pass's opening hypothesis was that the mandated regional channel would again yield

@@ -4,6 +4,97 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-seventh pass, 2026-10-08 — five trends: a measured misgrant rate, seven licence shapes where there were two, a permissive platform the queries cannot see, proctoring as the risk concentrate, and the third convention failure
+
+> 🔵 **This pass's opening hypothesis was that the trend shelf would gain from the mandated channel.
+> 🔴 REFUTED — the channel added nothing in eight weeks.** 🟢 **Every trend below came from
+> **measuring the shelf this KB already had**, which is now demonstrably the more productive channel.**
+
+### 🟢 Trend 1 — the README-vs-payload divergence is **rare, real, and measured**: 4,1 %
+
+🟢 **First census of its kind on this KB (`P725`): of **1 020** shelved repos, **42 (4,1 %)** assert
+a licence their payload does not support — **29** with no payload at all, **13** with a contradicting
+one.** 🔴 **Hand-adjudicated, 5 of those 13 are confirmed misgrants.**
+
+🔵 **The trend worth naming is not the rate, it is the **asymmetry of harm**:**
+
+| Direction | Example measured | Consequence |
+|---|---|---|
+| 🔴 **Copyleft believed permissive** | `OpenProctor` MIT→**AGPL**, `lumen` MIT→**GPL** | 🔴 **Ship and owe source** |
+| 🟡 Permissive believed different-permissive | `indonlu` MIT→Apache | 🟡 Patent / `NOTICE` duties differ |
+| 🟢 **Obligation overstated** | `oneroster-ts` MIT→**0BSD** | 🟢 Harmless — you comply with more than you owe |
+
+> 🟢 **The direction that matters is one-way.** 🔴 **A README is never evidence of a grant** (`P476`),
+> and 54,7 % of shelved repos make no prose claim at all — so for the majority, payload is not the
+> better source, it is the **only** source.
+
+### 🟡 Trend 2 — "README disagrees with payload" has **seven shapes**, not two
+
+🟢 **`P715` named two (ungranted, mis-granted). 🟢 **This pass measured five more** (`P725b`,
+`P733`, `P735`):**
+
+| Shape | Measured instance | Why a two-shape comparator gets it wrong |
+|---|---|---|
+| 🔴 Ungranted | `AITutor-EvalKit`, `Xiaochr/LLM-AES` | — |
+| 🔴 Mis-granted | `OpenProctor`, `lumen` | — |
+| 🔴 **Relicensed** | `leemonade/leemons`: *"previously MIT"* → **Sustainable Use Licence**, not OSI | The MIT claim is **historically true** and currently misleading |
+| 🟡 **Segmented** | `pupilfirst`: *"Portions … licensed as follows"*, `docs/` carved out | One family cannot describe the repo |
+| 🟡 **Per-file** | `moodle-mod_adobeconnect_maintained`: GPL-3.0 *"except specific file(s)"* | The exception reads as the rule |
+| 🔴 **Multi-layer** | `lafand-mt`: code **GPL-3.0** · dataset **CC-BY-NC-4.0** · dependency Apache | 🔴 **The NC dataset is the commercially binding layer** |
+| 🔴 **Reference-to-nothing** | `nmarafo/open-lex-edu` (`LICENSE.md` holds **no grant**) · `openeducat` (`LICENSE` → `COPYRIGHT`, **404**) · `maxew6` (holder **unlocatable**) | The artefact exists and is empty |
+
+🔴 **A `badge-without-assertion` eighth shape arrived with `P733`:** a *dynamic*
+`shields.io/github/license/{slug}` badge commits to nothing and defers to an API that is `403` here.
+
+### 🟢 Trend 3 — the permissive education platform exists; the **search string** cannot see it
+
+🔴 **The vertical channel has answered, for eight weeks, that no education-native platform is
+MIT/Apache and the education layer must be built on a general ERP.** 🟢 **Payload refutes it
+(`P734`): **Sakai is ECL-2.0** — literally Apache-2.0 *"modified to change the scope of the patent
+grant … to the needs of the education communities"* — and **Kolibri is MIT**.**
+
+> 🔵 **The mechanism is the trend.** 🔴 **Queries search for licence **strings**; ECL-2.0 matches
+> neither "MIT" nor "Apache" while being Apache-2.0 in substance**, so a string-matching channel is
+> structurally blind to it. 🟢 **Licence **families** must be resolved from payload, not matched as
+> names** — which is the same lesson as `P726`, one layer up.
+
+### 🔴 Trend 4 — **proctoring** is where education's licence risk concentrates
+
+🟢 **Three independent facts measured this pass converge on one product category:**
+
+| Fact | Source |
+|---|---|
+| 🔴 The shelf's worst misgrant is a **proctoring** tool: MIT asserted, **AGPL-3.0** granted, §13 clause present | 🟢 Payload (`P725a`) |
+| 🔴 EU Annex III explicitly reaches **remote-exam platforms using facial recognition or behaviour analysis** | 🟡 Channel, EMEA |
+| 🔴 Vietnam's Decision 33/2026/QD-TTg names **behavioural monitoring** as a high-risk education example | 🟡 Channel, APAC |
+
+> 🔴 **Proctoring is simultaneously the most regulated and the most licence-trapped category in
+> education software**, and the two risks compound: 🔵 **AGPL §13 triggers on hosting, and a
+> proctoring service is hosted by definition — so the licence obligation attaches at exactly the
+> moment the regulatory one does.** 🟢 **This is the most actionable finding of the pass.**
+
+### 🔴 Trend 5 — the **third** instance of one convention failure, now in the ref column
+
+🟢 **`P704`** (bytes, convention unnamed) → **`P724`** (bytes, convention named then not applied) →
+🔴 **`P732`** (refs, convention never named, **two used in one table**).
+
+🔴 **Pass 56 published `refs/heads` for four rows and all-advertised-refs for the fifth.** 🔵 **And
+GitHub advertises `refs/pull/*`, which is **139 of 204** on OATutor and **85 of 97** on OpenTutor —
+so `rubric`'s "84 refs" is really **19 branches + 20 tags + 44 pull refs**, the smallest reading
+dressed as the largest.**
+
+> 🔴 **The family is stable enough to state as a rule:** 🟢 ***every numeric provenance column needs a
+> declared convention **and** a check that re-derives every row under it.*** 🔵 **Three instances in
+> three passes says the discipline does not survive a new column being added — the failure recurs
+> wherever a figure is published without its definition.**
+
+### 🟡 Trend 6 — the two shelves this KB publishes are **not equally verifiable**, and never have been
+
+🔴 **Measured (`P731`): five repo oracles answer `200`; **ten** candidate primary regulatory and
+market hosts answer **`000`**, and `WebFetch` returns `EGRESS_BLOCKED`.** 🟢 **So every repo row is
+payload-verified and every market row is irreducibly second-hand — and for 57 passes both have been
+published in the same register.** 🆕 **`Gap 275`.**
+
 ## 🟢 Fifty-sixth pass, 2026-10-08 — four trends: a headline downgraded from physics to noise, an oracle that lies about refs, a licence lie with two shapes, and a deadline that runs backwards
 
 ### 🟡 Trend 1 — "capabilities here are non-monotonic" was **over-read**; the mechanism is measurement noise

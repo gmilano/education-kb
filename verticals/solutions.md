@@ -4,6 +4,90 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-seventh pass, 2026-10-08 — the vertical channel's structural answer is **wrong**, and payload proves it: two education-native platforms **are** permissive
+
+> 🔵 **This pass's opening hypothesis was that the vertical channel would return the same structural
+> answer for an eighth week — *"no education-specific platform under MIT or Apache; build the
+> education layer yourself on a permissive general ERP"*.
+> 🔴 **The channel did return exactly that, and measuring it REFUTES it on both halves.** 🟢 **Two
+> education-native platforms are permissively licensed, and the "permissive general ERP" the channel
+> recommends most confidently is **not permissive at all**.**
+
+### 🔴 `P733` — the channel's recommended permissive ERP is **EPL-2.0**, not Apache-2.0
+
+🔴 **The channel stated: *"Huly Platform is licensed under Apache License 2.0"*, and offered it as a
+foundation to build an education layer on. 🟢 **Payload, read first-hand:**
+
+| `hcengineering/platform` | Measured |
+|---|---|
+| `LICENSE` title | 🔴 **`Eclipse Public License - v 2.0`** |
+| Bytes (stored) | **14 197** |
+| `refs/heads` | 67 |
+| 🔴 **README's licence assertion** | 🔴 **a *dynamic* `shields.io/github/license/...` badge — and nothing else** |
+
+🔴 **EPL-2.0 is file-level reciprocal copyleft, not permissive**: modify a covered file and you owe
+source for it. 🔵 **So the channel's one-line recommendation would have put a client's education
+layer on a reciprocal base while believing it was Apache.**
+
+> 🔴 **`P733`.** *A **dynamic** licence badge (`shields.io/github/license/{slug}`) asserts **nothing
+> checkable**: it carries no family name in the source and defers to the GitHub API — 🔴 **which is
+> `403` in this environment**, so it is unresolvable here *and* unfalsifiable from the repository.
+> 🟢 **A dynamic badge is weaker evidence than prose**, because prose at least commits to a claim.*
+> 🔵 **New sub-shape under `P725b`: `filename-without-content` has a sibling,
+> `badge-without-assertion`.**
+
+### 🟢 `P734` — the education-native platforms, every licence read from payload
+
+| Platform | Grant (payload title, first-hand) | Bytes | `refs/heads` | Education-native? | Permissive? |
+|---|---|---|---|---|---|
+| **Moodle** | 🔴 **GPL-3.0** (`COPYING.txt`) | 35 147 | 40 | 🟢 yes | 🔴 no |
+| **Open edX** (`openedx/edx-platform`) | 🔴 **AGPL-3.0** | 35 136 | **290** | 🟢 yes | 🔴 no |
+| **Canvas LMS** (`instructure/canvas-lms`) | 🔴 **AGPL-3.0** | 34 520 | **377** | 🟢 yes | 🔴 no |
+| 🟢 **Sakai** | 🟢 **ECL-2.0** — *Apache-2.0 "modified to change the scope of the patent grant in section 3 to be specific to the needs of the education communities"* | 11 120 | 34 | 🟢 yes | 🟢 **YES** |
+| 🟢 **Kolibri** (`learningequality/kolibri`) | 🟢 **MIT** | 1 097 | 12 | 🟢 yes | 🟢 **YES** |
+| **BigBlueButton** | 🔴 **LGPL-3.0** | 7 652 | 20 | 🟢 yes | 🟡 linking only |
+| **H5P** (`h5p/h5p-php-library`) | 🔴 **GPL-3.0** | 35 146 | 61 | 🟢 yes | 🔴 no |
+| **OpenEduCat** | 🔴 **LGPL-3.0** | 8 241 | 17 | 🟢 yes | 🟡 linking only |
+| **ERPNext** (`frappe/erpnext`) | 🔴 **GPL-3.0** (`license.txt`) | 35 149 | **689** | 🟡 education *module* | 🔴 no |
+
+> 🟢 **`P734`.** *The channel's claim that **no** education-native platform is permissive is **false**:
+> 🟢 **Sakai is ECL-2.0 and Kolibri is MIT**, both OSI-approved and both education-native. 🔵 **The
+> reason the channel misses them is that it searches for "MIT / Apache" as **strings**, and ECL-2.0
+> is neither string while being Apache-2.0 in substance.*** 🔴 **ECL-2.0's one material difference
+> from Apache-2.0 is a **narrower patent grant** — read it before relying on patent peace.**
+
+🟢 **For a Globant engagement this reorders the shelf.** 🔵 **If permissive is a hard constraint,
+the honest starting points are **Sakai (ECL-2.0)** for a full LMS and **Kolibri (MIT)** for
+offline-first delivery** — not a general ERP with an education layer written from scratch. 🔴 **If
+the client wants Moodle or Canvas (the two with real market presence), permissive is simply off the
+table**, and the engagement is an integration-and-hosting conversation, not a licensing one.
+
+### 🟡 `P735` — a licence file that opens with a **pointer** defeats a title-window classifier
+
+🟢 **`openeducat/openeducat_erp`'s `LICENSE` opens:** *"For copyright information, please see the
+COPYRIGHT file."* 🔴 **`COPYRIGHT`, `COPYRIGHT.txt` and `COPYRIGHT.md` are all `404`.** 🟢 **The
+grant itself is sound and three lines further down:** *"OpenEduCat is published under the GNU LESSER
+GENERAL PUBLIC LICENSE, Version 3 (LGPLv3), as included below."*
+
+> 🟡 **`P735`.** *`P726`'s title-window rule is correct **when the title is in the window**. 🔴 **A
+> file that opens with a cross-reference pushes the family out of the window**, so the window needs a
+> fallback body scan — and this one's pointer **dangles**, so the attribution it defers to cannot be
+> read at all.* 🔵 **Third instance this pass of a reference that resolves to nothing**, after
+> `P729`'s unlocatable holder and `nmarafo/open-lex-edu`'s licence-file-with-no-licence.
+
+### 🟢 The permissive general platforms, measured — and a shared holder worth noticing
+
+| Platform | Grant (payload) | Bytes | `refs/heads` | Note |
+|---|---|---|---|---|
+| **Apache OFBiz** | 🟢 **Apache-2.0** | 11 906 | 8 | Genuinely permissive; heavy Java ERP, no education module |
+| **Corteza** | 🟢 **Apache-2.0** | 11 358 | 44 | Low-code; the most plausible permissive base for a custom education layer |
+| **AureusERP** | 🟢 **MIT** — *"Copyright 2010-2025, **Webkul Software**"* | 1 077 | 🔴 **1** | 🔴 **One branch, no tags** — weakest activity signal of any platform here |
+| **Krayin CRM** | 🟢 **MIT** — *"Copyright 2010-2025, **Webkul Software**"* | 1 078 | 7 | 🟡 **Same copyright holder as AureusERP** |
+| 🔴 **Huly** | 🔴 **EPL-2.0**, not Apache (`P733`) | 14 197 | 67 | 🔴 Reciprocal at file level |
+
+🟡 **AureusERP and Krayin share one copyright holder, `Webkul Software`** — so choosing "two
+permissive options" from that pair is **one vendor relationship, not two** (`p255-holder-shared-control`).
+
 ## 🟢 Fifty-sixth pass, 2026-10-08 — the vertical channel returns the **same structural answer for the seventh week**, and this pass states it as a finding instead of a gap
 
 ⏱️ **Tenth pass of this date.** 🟢 **The mandated vertical query returned a genuine ERP/CRM channel

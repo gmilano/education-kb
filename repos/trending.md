@@ -4,6 +4,39 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-seventh pass, 2026-10-08 — week of 2026-10-08: the trending channel is empty of education for the **eighth** week, and the week's repo news is a **census**, not a release
+
+> 🟢 **`github trending {industry} AI {year}` re-run independently this week. 🔴 **No education
+> repository in the result** — eighth consecutive week.** 🟢 **What the channel returns instead is
+> stable and worth naming once: general agent frameworks and *learning-about-AI* curricula
+> (`LLMs-from-scratch` ~105 957★ claimed, `generative-ai-for-beginners`, `ai-engineering-from-scratch`
+> ~63 183★ claimed, `nanochat`, `developer-roadmap`).** 🔴 **Those are education **about** AI, not AI
+> **for** education** — the distinction this KB has drawn since `P497`, and the channel has never
+> once crossed it.
+
+🔴 **Star counts above are channel-reported and **unverifiable here**: `github.com` and
+`api.github.com` answered `403` on three probes each.** 🔵 **They are recorded as claims with their
+source, never as measurements (`P731`).**
+
+### 🟢 This week's real repo movement
+
+| Movement | Reading |
+|---|---|
+| 🟢 **First payload-measured licence census of the shelf** (`P730`) | **1 020** slugs → **74,0 %** permissive of the **807** with a readable payload; 🔴 **213 (20,9 %) with no grant locatable at 19 filenames** |
+| 🔴 **45 AGPL repos on the shelf**, concentrated in the **platform** layer | The hosting obligation lands exactly where education software is hosted |
+| 🔴 **`moodle/moodle` nearly mis-filed as ungranted** | Grant is `COPYING.txt`, **35 147 B** — the GNU convention this sweep's first filename list omitted (`P727`) |
+| 🟢 **One new MIT repo** | `baker-jr-john/automated-summary-evaluation-llm`, **1 071 B**, HEAD `e7a4cc5d`, 🟡 1 branch / 0 tags |
+| 🔴 **Ref counts on this shelf were never convention-declared** (`P732`) | `refs/pull/*` is **139 of 204** on OATutor and **85 of 97** on OpenTutor |
+
+🟡 **A note for later passes on what "trending" can mean here:** 🔴 **the trending channel has
+produced zero education repos in eight weeks, so continuing to read it as a discovery channel is
+now a measured mistake.** 🟢 **The two channels that *did* produce every real find of the last two
+passes are narrower topic queries and the shelf itself** — pass 56's `rubric` and this pass's
+`baker-jr-john` row both came from assessment-specific queries, and this pass's five misgrants came
+from re-reading repos already shelved. 🆕 **`Gap 274` — the mandated trending query is kept because
+it is mandated, and its measured yield over eight weeks is zero; no pass has yet proposed a
+replacement to run *alongside* it.**
+
 ## 🟢 Fifty-sixth pass, 2026-10-08 — week of 2026-10-08: the trending channel is empty of education for the **seventh** week, and the week's real repo news is a **measurement defect**
 
 ⏱️ **Tenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

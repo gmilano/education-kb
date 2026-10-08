@@ -1,0 +1,1021 @@
+slug	readme_assert	payload_family	payload_file	bytes	verdict
+0xnavarro/IA-PARA-TODOS		Apache	LICENSE	11471	NO_ASSERTION
+1alexandrer/moodle-mcp	MIT	MIT	LICENSE	1074	AGREE
+1EdTech/digital-credentials-public-validator	UNPARSED	Apache	LICENSE	11357	UNPARSED_ASSERTION
+1111philo/learn	UNPARSED	AGPL	LICENSE	35240	UNPARSED_ASSERTION
+1EdTech/openbadges-validator-core	UNPARSED	Apache	LICENSE	13185	UNPARSED_ASSERTION
+1EdTech/lti-1-3-php-library		Apache	LICENSE	11343	NO_ASSERTION
+24kchengYe/human-skill-tree	AGPL	AGPL	LICENSE	1134	AGREE
+1EdTech/OpenCASE		Apache	LICENSE	11264	NO_ASSERTION
+3iPunt/wordpress-lti-1-3		Apache	LICENSE	11357	NO_ASSERTION
+1EdTech/caliper-spec	UNPARSED	OTHER	LICENSE.md	12402	UNPARSED_ASSERTION
+17zuoye/pyirt		MIT	LICENSE.txt	1083	NO_ASSERTION
+6a6179/myschoolapp-mcp		MIT	LICENSE	1085	NO_ASSERTION
+AFLucas-UOM/AI-Early-Detection-System-for-Dyslexia-ADHD	MIT	MIT	LICENSE	1079	AGREE
+100205ivan/EyeEP		NONE		0	NO_ASSERTION
+1EdTech/ltibootcamp		NONE		0	NO_ASSERTION
+1EdTech/openbadges-specification		NONE		0	NO_ASSERTION
+3121n/nor-data-udir-mcp		NONE		0	NO_ASSERTION
+AI-for-Education/edu-qurating		MIT	LICENSE	1063	NO_ASSERTION
+AI-for-Education/fabdata-llm		MIT	LICENSE	1065	NO_ASSERTION
+AI-for-Education/lesson-plan-parse-mbsse		MIT	LICENSE	1065	NO_ASSERTION
+781991937/TOFAN-AI-2026		NONE		0	NO_ASSERTION
+A-R007/Multi-Agent-Study-Assistant		NONE		0	NO_ASSERTION
+710git/course-drift-oracle	UNPARSED	NONE		0	UNGRANTED
+AI-for-Education/fabdata-parsedoc		MIT	LICENSE	1065	NO_README
+AI-for-Education/voice-ai-evaluation-framework		MIT	LICENSE	1074	NO_ASSERTION
+54yyyu/school-mcp		NONE		0	NO_ASSERTION
+443pablo/mcp-powerschool		NONE		0	NO_ASSERTION
+AI-for-Education/pedagogy-benchmark		MIT	LICENSE	1064	NO_ASSERTION
+AI-EDU-LAB/E-EVAL		NONE		0	NO_ASSERTION
+AI-for-Education/Luganda-linguistic-benchmarks		NONE		0	NO_ASSERTION
+AI4Bharat/IndicLLMSuite	MIT	MIT	LICENSE	1129	AGREE
+AI4Bharat/IndicTrans2	UNPARSED	MIT	LICENSE	1128	UNPARSED_ASSERTION
+AI4Bharat/Shoonya	MIT	MIT	LICENSE	1079	AGREE
+AI4Bharat/Indic-TTS		MIT	LICENSE.txt	1067	NO_ASSERTION
+AKIVA-AI/toolkit-ml-provenance	UNPARSED	Apache	LICENSE	11358	UNPARSED_ASSERTION
+AI-for-Education/fabdata-llm-retrieval		NONE		0	NO_ASSERTION
+Aaradhya-Dev-Tamrakar/google-classroom-mcp	MIT	MIT	LICENSE	1078	AGREE
+AarambhDevHub/exam-cheating-detection	UNPARSED	MIT	LICENSE	1068	UNPARSED_ASSERTION
+AI4Bharat/IndicWav2Vec	UNPARSED	MIT	LICENSE	1080	UNPARSED_ASSERTION
+AStheTECH/mewcp-google-classroom		OTHER	LICENSE.md	6489	NO_ASSERTION
+AbdelStark/eu-ai-act-toolkit		MIT	LICENSE	1056	NO_ASSERTION
+AgenticAiLabs/Ai-Engineering-Roadmap	MIT	MIT	LICENSE	1067	AGREE
+AkshitIreddy/AI-Powered-Video-Tutorial-Generator		MIT	LICENSE	1070	NO_ASSERTION
+Akulen/PrivGen		MIT	LICENSE	1069	NO_ASSERTION
+All-Hands-AI/OpenHands		MIT	LICENSE	1096	NO_ASSERTION
+AI4Bharat/indicnlp_catalog		NONE		0	NO_ASSERTION
+AmirF194/canvas-mcp	MIT	MIT	LICENSE	1071	AGREE
+AkizumiFox/NTU-COOL-Assignment-Status-Viewer		MIT	LICENCE	1056	NO_ASSERTION
+ASEpochs/ai-digital-teacher		NONE		0	NO_ASSERTION
+ANTONIOALGMAR/StudyAgent		NONE		0	NO_ASSERTION
+AccessLint/skills		NONE		0	NO_ASSERTION
+Aditya7808/AI-Powered-Adaptive-Curriculum-Assignment-Generator-Agent		NONE		0	NO_ASSERTION
+Apereo-Learning-Analytics-Initiative/OpenDashboard-api		OTHER	LICENSE	9919	NO_ASSERTION
+Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor		OTHER	LICENSE	9919	NO_ASSERTION
+Ahmed-html/unlimited-ai-platform		NONE		0	NO_README
+ArnaudGuiovanna/tutor-mcp	MIT	MIT	LICENSE	1073	AGREE
+AmericasNLP/americasnlp2021		NONE		0	NO_ASSERTION
+AyushBinjola1/Swar-Setu	MIT	MIT	LICENSE	1070	AGREE
+AmericasNLP/americasnlp2023		NONE		0	NO_ASSERTION
+Apereo-Learning-Analytics-Initiative/OpenLRW		OTHER	LICENSE	9878	NO_ASSERTION
+AmericasNLP/americasnlp2022		NONE		0	NO_ASSERTION
+CAHLR/OATutor	UNPARSED	MIT	LICENSE	1105	UNPARSED_ASSERTION
+AngelitUX/EstudiaUni		NONE		0	NO_README
+BartMassey-upstream/canvas-mcp	MIT	MIT	LICENSE	1071	AGREE
+BaijayantaRoy/bandup	MIT	MIT	LICENSE	1071	AGREE
+AmericasNLP/americasnlp2024		NONE		0	NO_README
+Bentheghost/Adaptive-Learning-System		MIT	LICENSE	1080	NO_ASSERTION
+Apereo-Learning-Analytics-Initiative/OpenLRS		OTHER	LICENSE	11087	NO_ASSERTION
+CSOAI-ORG/education-ai-mcp	MIT	MIT	LICENSE	1069	AGREE
+CSOAI-ORG/quiz-generator-ai-mcp	MIT	MIT	LICENSE	1081	AGREE
+CSOAI-ORG/flashcard-ai-mcp	MIT	MIT	LICENSE	1081	AGREE
+CAHLR/pyBKT		MIT	LICENSE	1132	NO_ASSERTION
+CaioCastro1/usp-mcp		MIT	LICENSE	1107	NO_ASSERTION
+CRSS-AI/agentic-se-course-early-2026		CC	LICENSE	822	NO_ASSERTION
+CNIT-Organization/ltitoolkit		MIT	LICENSE	1070	NO_ASSERTION
+CambridgeAssessmentResearch/KernEqWPS		MIT	LICENSE	1077	NO_ASSERTION
+Cicatriiz/openedu-mcp	MIT	MIT	LICENSE	1072	AGREE
+CaviraOSS/PageLM	UNPARSED	MIT	LICENSE.md	8563	UNPARSED_ASSERTION
+CharlieCardenasToledo/mcp-canvas-server	MIT	MIT	LICENSE	1081	AGREE
+Aryan6238/EduAgent		NONE		0	NO_ASSERTION
+Citolab/lti-1p3-platform-example	UNPARSED	GPL	LICENSE	35149	UNPARSED_ASSERTION
+CodeWithJV/ai-tutor		MIT	LICENSE	1068	NO_ASSERTION
+CAHLR/OATutor-Content	UNPARSED	NONE		0	UNGRANTED
+Cogniledger/cogniledger-mcp-makuri		MIT	LICENSE	1085	NO_ASSERTION
+Community-Access/accessibility-agents		MIT	LICENSE	1069	NO_ASSERTION
+Coursemology/coursemology2	MIT	MIT	LICENSE	1119	AGREE
+Citolab/qti-convert		GPL	LICENSE	35196	NO_ASSERTION
+ClassroomIO/ClassroomIO		AGPL	LICENSE	34523	NO_ASSERTION
+Crosstalk-Solutions/project-nomad	UNPARSED	Apache	LICENSE	10779	UNPARSED_ASSERTION
+CybroOdoo/EducationalERP		GPL	LICENSE	35147	NO_ASSERTION
+Citolab/qti-components	GPL	GPL	LICENSE.md	35199	AGREE
+DFE-Digital/education-benchmarking-and-insights		MIT	LICENSE	1091	NO_ASSERTION
+Cvmcosta/ltijs		Apache	LICENSE	11361	NO_ASSERTION
+DECK6/korean-elementary-learning-map		MIT	LICENSE	1544	NO_ASSERTION
+Capmus-Team/supost-mcp		NONE		0	NO_ASSERTION
+DFE-Digital/publish-teacher-training		MIT	LICENSE	1091	NO_ASSERTION
+DFE-Digital/teaching-vacancies		MIT	LICENSE	1092	NO_ASSERTION
+DannyAvilaL/agente_clases		MIT	LICENSE	1071	NO_ASSERTION
+Daisybastioned440/lite-research-agents		MIT	LICENSE	1069	NO_ASSERTION
+DPlazma/assessapp		MIT	LICENSE	1064	NO_ASSERTION
+DaoyuanLi2816/labelbank	MIT	MIT	LICENSE	1068	AGREE
+Data-Provenance-Initiative/Data-Provenance-Collection	UNPARSED	Apache	LICENSE	11357	UNPARSED_ASSERTION
+DFE-Digital/apply-for-teacher-training		MIT	LICENCE	1094	NO_ASSERTION
+DFE-Digital/get-information-about-schools		MIT	LICENCE	1116	NO_ASSERTION
+CreveXTech/canvas-lms-mcp		NONE		0	NO_ASSERTION
+DavidLMS/learnmcp-xapi	MIT	MIT	LICENSE	1069	AGREE
+Dmoayad/essay-grader-llm	MIT	GPL	LICENSE	35149	MISGRANTED
+DFE-Digital/get-into-teaching-app		MIT	LICENCE	1091	NO_ASSERTION
+Deeptanshuu/mydy-lms-helper		MIT	LICENSE	1070	NO_ASSERTION
+DFE-Digital/register-trainee-teachers		MIT	LICENCE	1091	NO_ASSERTION
+Drone9/mereos		MIT	LICENSE	1063	NO_ASSERTION
+Django-CRM/Django-CRM	MIT	MIT	LICENSE	1069	AGREE
+DMontgomery40/mcp-canvas-lms	UNPARSED	NONE		0	UNGRANTED
+Dymayo/moodler-mcp	MIT	MIT	LICENSE	1072	AGREE
+Ebimsv/AITutorAgent		MIT	LICENSE	1072	NO_ASSERTION
+Eason0in/classdojo-mcp	MIT	MIT	LICENSE	1066	AGREE
+EASOL/edfi-to-oneroster	Apache	Apache	LICENSE	11357	AGREE
+Dolibarr/dolibarr	UNPARSED	GPL	COPYING	35151	UNPARSED_ASSERTION
+EbookFoundation/free-programming-books	UNPARSED	CC	LICENSE	18658	UNPARSED_ASSERTION
+Ed-Fi-Alliance-OSS/edfi-oneroster	UNPARSED	Apache	LICENSE	10173	UNPARSED_ASSERTION
+Ed-Fi-Alliance-OSS/Ed-Fi-Standard	UNPARSED	Apache	LICENSE	10173	UNPARSED_ASSERTION
+DeaY01/Essay-Marker-Bot		NONE		0	NO_ASSERTION
+DaviPac/Classroom-mcp		NONE		0	NO_ASSERTION
+EduBase/mcp		MIT	LICENSE	1064	NO_ASSERTION
+Ed-Fi-Exchange-OSS/Ed-Fi-Clever-Integration		Apache	LICENSE	11357	NO_README
+DistrictAPI/districtapi-mcp		NONE		0	NO_ASSERTION
+Elmaldelego/OPEN-TUTOR-IA		AGPL	LICENSE	34523	NO_ASSERTION
+Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard	UNPARSED	Apache	LICENSE	10173	UNPARSED_ASSERTION
+Ed-Fi-Alliance-OSS/Ed-Fi-ODS	UNPARSED	Apache	LICENSE.txt	10172	UNPARSED_ASSERTION
+EastArctica/canvas-mcp		NONE		0	NO_README
+EquateItAu/classquill-mcp		MIT	LICENSE	1078	NO_ASSERTION
+FWU-DE/ais-chat		AGPL	LICENSE	34523	NO_ASSERTION
+EduNLP/EduCoder	MIT	MIT	LICENSE	1067	AGREE
+FWU-DE/mem-mcp		Unlicense	LICENSE	1211	NO_ASSERTION
+GarethManning/education-agent-skills	UNPARSED	CC	LICENSE	1230	UNPARSED_ASSERTION
+GeminiLight/gen-mentor		CC	LICENSE	7048	NO_ASSERTION
+GhaithAlHallak8/moodler-mcp	MIT	MIT	LICENSE	1072	AGREE
+GeovaneSchmitz/sigaa-api		MIT	LICENSE	1108	NO_ASSERTION
+GokuMohandas/Made-With-ML		MIT	LICENSE	1069	NO_ASSERTION
+GarphenGate/moltline-mcp	UNPARSED	MIT	LICENSE	1072	UNPARSED_ASSERTION
+GibbonEdu/core	UNPARSED	GPL	LICENSE	35121	UNPARSED_ASSERTION
+Gego-K12/gegok12		MIT	LICENSE	1150	NO_ASSERTION
+EnvCommons/RubricHub		NONE		0	NO_ASSERTION
+GoogleCloudPlatform/aira		Apache	LICENSE.md	11357	NO_ASSERTION
+GoogleChrome/lighthouse		Apache	LICENSE	11358	NO_ASSERTION
+HKUDS/ClawTeam	MIT	MIT	LICENSE	1062	AGREE
+Halleck45/OpenPronounce	MIT	MIT	LICENSE	1113	AGREE
+H1bertto/professor-agent		MIT	LICENSE	1072	NO_ASSERTION
+FWU-DE/schulfach-ontologie		NONE		0	NO_ASSERTION
+Harry24k/machine-unlearning-pytorch	MIT	MIT	LICENSE	1065	AGREE
+FWU-DE/schulart-ontologie		NONE		0	NO_ASSERTION
+HKUDS/DeepTutor	Apache	Apache	LICENSE	11408	AGREE
+HandsOnLLM/Hands-On-Large-Language-Models		Apache	LICENSE	11364	NO_ASSERTION
+FWU-DE/lehrplan-ontologie		NONE		0	NO_ASSERTION
+Harvard-University-iCommons/django-lti		MIT	LICENSE	1098	NO_ASSERTION
+HumphreySun98/Smart-Study-Agent	MIT	MIT	LICENSE	1067	AGREE
+HugeCatLab/ChatTutor		AGPL	LICENSE	34522	NO_ASSERTION
+IBMa/equal-access	Apache	Apache	LICENSE	11362	AGREE
+IBM/differential-privacy-library		MIT	LICENSE.md	1078	NO_ASSERTION
+ILIAS-eLearning/ILIAS	UNPARSED	GPL	LICENSE	35147	UNPARSED_ASSERTION
+IndoNLP/nusa-crowd	UNPARSED	Apache	LICENSE	11357	UNPARSED_ASSERTION
+INGInious/INGInious		AGPL	LICENSE	34764	NO_README
+JOSETRA44/DUTIC-mcp		MIT	LICENSE	1066	NO_ASSERTION
+GradeAI/gradeai		NONE		0	NO_ASSERTION
+ICT-CONNECT-21/CSCode2023		MIT	LICENSE.md	1082	NO_ASSERTION
+IMSGlobal/LTI-Tool-Provider-Library-PHP		Apache	LICENSE	11357	NO_ASSERTION
+Jazy1/rumi-pinokio	Apache	Apache	LICENSE	11287	AGREE
+Jawadh-Salih/moodle-mcp-server		MIT	LICENSE	1063	NO_ASSERTION
+JohannsenLum/canvas-api-mcp	MIT	MIT	LICENSE	1070	AGREE
+JonasJoKuJonas/homeassistant-WebUntis		MIT	LICENSE	1062	NO_ASSERTION
+JhostinAleck/brightspace-mcp	MIT	MIT	LICENSE	1070	AGREE
+IC-Redacoes-UTFPR/CorrecaoRedacao		NONE		0	NO_ASSERTION
+IFRN/suapi		NONE		0	NO_ASSERTION
+Jona-Zwetsloot/Somtoday-Mod		CC	LICENSE.md	17056	NO_ASSERTION
+K-Dense-AI/scientific-agent-skills	MIT	MIT	LICENSE.md	1068	AGREE
+JuneYaooo/lineage-skill	UNPARSED	Apache	LICENSE	11358	UNPARSED_ASSERTION
+IMSGlobal/openbadges-specification		NONE		0	NO_ASSERTION
+KSAklfszf921/skolverket-mcp	MIT	MIT	LICENSE	1093	AGREE
+KamoliddinS/AI-Assignment-Grader	MIT	MIT	LICENSE	1077	AGREE
+JayVora-SerpentCS/OdooEduERP		NONE		0	NO_ASSERTION
+KeWang0622/kaogong-skill		MIT	LICENSE	1083	NO_ASSERTION
+Kamuyin/bitsygrader	BSD	BSD	LICENSE	1494	AGREE
+Kennisnet/OaiPmh		MIT	LICENSE	1066	NO_ASSERTION
+Kennisnet/phpEdurepSearch		MIT	LICENSE	1086	NO_ASSERTION
+Kennisnet/phpNLLOM		MIT	LICENSE	1087	NO_ASSERTION
+Kennisnet/php-qti3		MIT	LICENSE	1066	NO_ASSERTION
+Kennisnet/py-eduterm-client		MIT	LICENSE	1066	NO_ASSERTION
+Jeremiah0067/Ai_Rubric		NONE		0	NO_README
+Johnson1662/OpenTutor		NONE		0	NO_ASSERTION
+Kennisnet/pylom		MIT	LICENSE	1066	NO_ASSERTION
+Kaiman-p/tutor-adaptativo-ia		NONE		0	NO_ASSERTION
+KonstantinosPetrakis/esco-skill-extractor		MIT	LICENSE	1068	NO_ASSERTION
+Kimmahone/edu-workspace-mcp		MIT	LICENSE	1087	NO_ASSERTION
+LabSirius/TutorIA		MIT	LICENSE	1069	NO_ASSERTION
+LearningLocker/learninglocker		GPL	LICENSE	35141	NO_ASSERTION
+LEARNableLabs/opentutor	MIT	MIT	LICENSE	1079	AGREE
+Kennisnet/qti-components	GPL	GPL	LICENSE.md	35199	AGREE
+Khan/tutoring-accuracy-dataset		OTHER	LICENSE	2690	NO_README
+Li-Evan/Bloom	MIT	MIT	LICENSE	1069	AGREE
+Kennisnet/edurep-xslt		NONE		0	NO_ASSERTION
+Kaylazagelbaum/ORF_Calculator_6th		NONE		0	NO_ASSERTION
+Lendarixon/awesome-ai-detection		CC	LICENSE	7048	NO_ASSERTION
+KualiCo/rice		OTHER	LICENSE.txt	11182	NO_ASSERTION
+Lilly-Tech-Collab/ai-school-mcp	UNPARSED	MIT	LICENSE	1405	UNPARSED_ASSERTION
+Llamacha/IWSLT2023_Quechua_data	UNPARSED	Apache	LICENSE	11357	UNPARSED_ASSERTION
+Limekiller/moodle-block_openai_chat		GPL	LICENSE	35149	NO_ASSERTION
+Kennisnet/qti-editor-angular		NONE		0	NO_ASSERTION
+LibreTexts/conductor		MIT	LICENSE.md	1067	NO_ASSERTION
+LtiLibrary/LtiAdvantagePlatform		MIT	LICENSE	1068	NO_ASSERTION
+LibreTexts/LibreOne		MIT	LICENSE.md	1067	NO_README
+MIT-OL-AI-Tutoring/Open_Learning_AI_Tutor		MIT	LICENSE	1069	NO_ASSERTION
+LongsightGroup/qti3		MIT	LICENSE.md	1072	NO_ASSERTION
+LongsightGroup/oneroster		MIT	LICENSE	1090	NO_ASSERTION
+MadsLorentzen/ai-job-search		MIT	LICENSE	1071	NO_ASSERTION
+Marsmanleo/LinguaMCP	UNPARSED	Apache	LICENSE	10763	UNPARSED_ASSERTION
+MartinSA04/ntnu-mcp		MIT	LICENSE	1077	NO_ASSERTION
+MarcosNahuel/moodle-mcp	MIT	MIT	LICENSE	1065	AGREE
+Mcp-Brasil/mcp-brasil	MIT	MIT	LICENSE	1072	AGREE
+Miaotofu01/Study-Mate		MIT	LICENSE	1064	NO_ASSERTION
+MicroPyramid/Django-CRM	MIT	MIT	LICENSE	1069	AGREE
+MauroDruwel/Smartschool-MCP	MIT	MIT	LICENSE	1069	AGREE
+MicroPyramid/opensource-startup-crm		MIT	LICENSE	1068	NO_ASSERTION
+MysterionRise/adaptive-knowledge-graph	MIT	MIT	LICENSE	1094	AGREE
+MuhammadUsman0005/Student-Dropout-Prediction-System		MIT	LICENSE	1071	NO_README
+Litarvan/pronote-api		NONE		0	NO_ASSERTION
+NKAmapper/school2osm		OTHER	LICENSE	6555	NO_ASSERTION
+NVIDIA/NeMo	Apache	Apache	LICENSE	11357	AGREE
+Naitik-xd/CurriculumCraft-AI	UNPARSED	MIT	LICENSE	1091	UNPARSED_ASSERTION
+NannyML/nannyml	MPL	Apache	LICENSE	11348	MISGRANTED
+Llamacha/IWSLT2025_Quechua_data	UNPARSED	NONE		0	UNGRANTED
+NiccoloSalvini/mcp-blackboard-ucsc		MIT	LICENSE	1073	NO_ASSERTION
+NiccoloSalvini/mcp-moodle-teacher		MIT	LICENSE	1073	NO_ASSERTION
+Noggin-Labs/noggimigo	MIT	MIT	LICENSE	1093	AGREE
+NiccoloSalvini/mcp-moodle-staff		MIT	LICENSE	1073	NO_ASSERTION
+Nkluge-correa/Tucano	Apache	Apache	LICENSE	10773	AGREE
+OPTML-Group/Unlearn-Saliency	MIT	MIT	LICENSE	1068	AGREE
+NCSIS/InfiniteCampus-Vendor-Integration		NONE		0	NO_ASSERTION
+OmarNiazi/classroom-mcp		MIT	LICENSE	1067	NO_ASSERTION
+OpenEMIS/core		GPL	LICENSE	15518	NO_ASSERTION
+NousResearch/hermes-agent	MIT	MIT	LICENSE	1070	AGREE
+NLP2CT/LLM-generated-Text-Detection	MIT	NONE		0	UNGRANTED
+Open-TutorAi/open-tutor-ai-CE	BSD	BSD	LICENSE	1531	AGREE
+OpenEduCat/openeducat_erp	LGPL	LGPL	LICENSE	8241	AGREE
+OHF-Voice/piper1-gpl		GPL	COPYING	35148	NO_ASSERTION
+OngWinKent/MachineUnlearning	UNPARSED	BSD	LICENSE.txt	1447	UNPARSED_ASSERTION
+OpenMined/PySyft	Apache	Apache	LICENSE	11941	AGREE
+Nutlope/llamatutor		NONE		0	NO_ASSERTION
+OpenOLAT/OpenOLAT	Apache	Apache	LICENSE	10982	AGREE
+OpenStudy-dev/OpenStudy	MIT	MIT	LICENSE	1068	AGREE
+OS4ED/openSIS-Responsive-Design	UNPARSED	NONE		0	UNGRANTED
+OS4ED/openSIS-Classic	UNPARSED	NONE		0	UNGRANTED
+Opetushallitus/ehoks		OTHER	LICENSE	632	NO_ASSERTION
+OpenLineage/OpenLineage	Apache	Apache	LICENSE	11357	AGREE
+Opetushallitus/ataru		OTHER	LICENSE.md	296	NO_ASSERTION
+OpenOLAT/qtiworks		BSD	LICENSE.txt	2058	NO_ASSERTION
+Opetushallitus/suorituspalvelu		OTHER	LICENSE	653	NO_ASSERTION
+Opetushallitus/koski		OTHER	LICENSE.txt	654	NO_ASSERTION
+Opetushallitus/eperusteet		OTHER	LICENSE.txt	632	NO_ASSERTION
+OpenLLM-Europe/European-OpenLLM-Projects		NONE		0	NO_ASSERTION
+Opetushallitus/organisaatio		OTHER	LICENSE.txt	632	NO_ASSERTION
+Opetushallitus/oppijanumerorekisteri		OTHER	LICENSE.txt	632	NO_ASSERTION
+Orenda-Project/rumi-platform	Apache	Apache	LICENSE	11287	AGREE
+Ovsyanka83/autograder		GPL	LICENSE	35149	NO_ASSERTION
+PabloPC05/mcp-usc	MIT	MIT	LICENSE	1066	AGREE
+Pearson-Advance/openedx-lti-tool-plugin		Apache	LICENSE	11357	NO_README
+Opetushallitus/valtionavustus		OTHER	LICENSE.txt	653	NO_ASSERTION
+Opetushallitus/aoe		NONE		0	NO_ASSERTION
+Polycentric-Labs/regrails	UNPARSED	Apache	LICENSE	11282	UNPARSED_ASSERTION
+Polygl0t/Polygl0t	Apache	Apache	LICENSE	10774	AGREE
+Projeto-SIAC/suap-wrapper		MIT	LICENSE	1061	NO_ASSERTION
+PyThaiNLP/pythainlp	Apache	Apache	LICENSE	11357	AGREE
+PucaVaz/sigaa-tools		MIT	LICENSE	1065	NO_ASSERTION
+OptiKey/OptiKey	UNPARSED	GPL	LICENSE.txt	35144	UNPARSED_ASSERTION
+Priyamakeshwari/TeachGPT		MIT	LICENSE.md	1057	NO_ASSERTION
+Principled-Evolution/gopal	Apache	Apache	LICENSE	11357	AGREE
+RD2100/blackboard-mcp	MIT	MIT	LICENSE	1059	AGREE
+RakeshBabuGajula/Exam_Intellect	MIT	MIT	LICENSE	1075	AGREE
+RichardSlater/bromcom-timetable-formatter	MIT	MIT	LICENSE	1071	AGREE
+Redomic/intellicode-backend		MIT	LICENSE	1067	NO_ASSERTION
+P1ckle3/blackboard-mcp		NONE		0	NO_ASSERTION
+RohanMuppa/brightspace-mcp-server	MIT	MIT	LICENSE	1068	AGREE
+RusticiSoftware/TinCanPython		Apache	LICENSE	11358	NO_ASSERTION
+RusticiSoftware/TinCanPHP		Apache	LICENSE	11358	NO_ASSERTION
+RohanMuppa/purdue-mcp		MIT	LICENSE	1080	NO_ASSERTION
+RadiantCrystal/SafeTutors	MIT	NONE		0	UNGRANTED
+SaadRahman01/moodle-mcp	MIT	MIT	LICENSE	1068	AGREE
+SYSTRAN/faster-whisper		MIT	LICENSE	1064	NO_ASSERTION
+SapuSeven/BetterUntis		GPL	LICENSE	35149	NO_ASSERTION
+SafeExamBrowser/seb-server		MPL	LICENSE	16725	NO_README
+ScottDaniels/labaaoom		BSD	LICENSE	2266	NO_README
+Rodrigo0876/PAESnet		NONE		0	NO_ASSERTION
+Selleo/mentingo	MIT	MIT	LICENSE	1062	AGREE
+SafeExamBrowser/seb-win-refactoring		MPL	LICENSE.txt	16726	NO_ASSERTION
+RutujaDeshmukh29/Adaptive-AI		NONE		0	NO_ASSERTION
+ShubhamMahajan880/studyAlpha-Ai-Agent		NONE	LICENSE	0	NO_ASSERTION
+SenmuuuuW/universal-diagnostic-tutor-skill	MIT	MIT	LICENSE	1102	AGREE
+SidneyBissoli/ibge-br-mcp	MIT	MIT	LICENSE	1088	AGREE
+SidneyBissoli/educabR		OTHER	LICENSE	61	NO_ASSERTION
+SabioTechTeam/Teacher-Hub	MIT	NONE		0	UNGRANTED
+Shubhamsaboo/awesome-llm-apps		Apache	LICENSE	11357	NO_ASSERTION
+SalShah20/classroom_mcp		NONE		0	NO_ASSERTION
+SidneyBissoli/uis-mcp-server	MIT	MIT	LICENSE.md	1088	AGREE
+Siesher/MITS	MIT	MIT	LICENSE	1091	AGREE
+SimonsTang/haoyun-stem-tutor	MIT	MIT	LICENSE	1078	AGREE
+SimonsTang/feifei-companion	Apache	Apache	LICENSE	10227	AGREE
+Simon-Initiative/lti_1p3		MIT	LICENSE	1082	NO_ASSERTION
+SimonsTang/xiaofei-liberal-arts	MIT	MIT	LICENSE	1112	AGREE
+SchoolUtils/WebUntis		NONE		0	NO_README
+SirhanMacx/Claw-ED		MIT	LICENSE	1078	NO_ASSERTION
+Skolverket/dnp-ss12000-reference-api		Apache	LICENSE	11340	NO_ASSERTION
+SonAIengine/ku-portal-mcp	MIT	MIT	LICENSE	1068	AGREE
+Snaw80/moodle-mcp		MIT	LICENSE	1072	NO_ASSERTION
+Smartoire/paxaver-mcp	Apache	Apache	LICENSE	11345	AGREE
+Sunbird-Ed/SunbirdEd-consumption-ngcomponents		MIT	LICENSE	1078	NO_ASSERTION
+Sunbird-Ed/SunbirdEd-portal		MIT	LICENSE	1072	NO_ASSERTION
+Submitty/Submitty	BSD	BSD	LICENSE.md	1542	AGREE
+Sunbird-Ed/SunbirdEd-mobile-app		MIT	LICENSE	1078	NO_ASSERTION
+SwarupRock/attendai		MIT	LICENSE	1078	NO_ASSERTION
+SunbirdAI/salt		Apache	LICENSE	11357	NO_ASSERTION
+SuyashMore/AI-Proctored-Examination-System		MIT	LICENSE	1068	NO_ASSERTION
+SwissLearningAnalytics/LLMTutor		MPL	LICENSE	16726	NO_ASSERTION
+Skolverket/dnp-provplattform		NONE		0	NO_ASSERTION
+Skolverket/dnp-access-management		NONE		0	NO_ASSERTION
+TEAMSchools/powerschool		GPL	LICENSE	35149	NO_ASSERTION
+Skolverket/dnp-usermanagement		NONE		0	NO_ASSERTION
+THU-MAIC/OpenMAIC	MIT	MIT	LICENSE	1065	AGREE
+The-LLM-Data-Company/rubric	MIT	MIT	LICENSE	1077	AGREE
+THU-BPM/MarkLLM		Apache	LICENSE	11357	NO_ASSERTION
+Tampere/trevaka	UNPARSED	LGPL	LICENSE	27030	UNPARSED_ASSERTION
+Sujal-Shejwal/adaptive-ai-tutor		NONE		0	NO_ASSERTION
+Skolverket/learning-assessments-f1		NONE		0	NO_ASSERTION
+Trusted-AI/AIF360		Apache	LICENSE	11372	NO_ASSERTION
+Transcordia/jupiter		MIT	LICENSE	1079	NO_ASSERTION
+UKGovernmentBEIS/inspect_ai		MIT	LICENSE	1081	NO_ASSERTION
+UOC/java-lti-1.3		MIT	LICENSE	1060	NO_ASSERTION
+UOC/java-lti-1.3-provider-example		MIT	LICENSE	1060	NO_ASSERTION
+UniTime/unitime	UNPARSED	Apache	LICENSE	11357	UNPARSED_ASSERTION
+UOC/spring-boot-lti-advantage		MIT	LICENSE	1060	NO_ASSERTION
+Unicon/tool13demo		Apache	LICENSE	11323	NO_ASSERTION
+TarunRaina/FedGNN-for-Personalized-Knowledge-Tracing		NONE		0	NO_ASSERTION
+UniversalDependencies/UD_Portuguese-CINTIL	CC	CC	LICENSE.txt	224	AGREE
+Timadey/proctor	MIT	NONE		0	UNGRANTED
+UniversalDependencies/UD_Portuguese-Bosque	CC	CC	LICENSE.txt	269	AGREE
+UBC-NLP/IndT5		NONE		0	NO_ASSERTION
+Universita-di-Ferrara/moodle-aiprovider_gemini	UNPARSED	GPL	LICENSE	35149	UNPARSED_ASSERTION
+UniversalDependencies/UD_Portuguese-PUD	UNPARSED	CC	LICENSE.txt	19556	UNPARSED_ASSERTION
+UniversalDependencies/UD_Portuguese-GSD	UNPARSED	CC	LICENSE.txt	202	UNPARSED_ASSERTION
+UOC/java-lti-1.3-platform		NONE		0	NO_ASSERTION
+UniversalDependencies/UD_Spanish-AnCora	UNPARSED	CC	LICENSE.txt	189	UNPARSED_ASSERTION
+UniversalDependencies/UD_Portuguese-Petrogold	CC	CC	LICENSE.txt	202	AGREE
+Underlyingglitch/SomtodaySSOLogin		NONE		0	NO_ASSERTION
+UniversalDependencies/UD_Spanish-PUD	UNPARSED	CC	LICENSE.txt	19556	UNPARSED_ASSERTION
+UniversalDependencies/UD_Spanish-GSD	UNPARSED	CC	LICENSE.txt	202	UNPARSED_ASSERTION
+Utdanningsdirektoratet/PAS-scoop-public		Apache	LICENSE	11357	NO_ASSERTION
+Utdanningsdirektoratet/Grep_SPARQL		OTHER	LICENSE.md	1783	NO_ASSERTION
+Utdanningsdirektoratet/PAS2-Public		Apache	LICENSE	11325	NO_ASSERTION
+Utdanningsdirektoratet/VFKL		MIT	LICENSE	1063	NO_ASSERTION
+Utdanningsdirektoratet/designsystem		MIT	LICENSE	1079	NO_ASSERTION
+Utdanningsdirektoratet/moodle-mod_adobeconnect_maintained	MIT	GPL	LICENSE	35147	MISGRANTED
+Utdanningsdirektoratet/moodle-block_hero	UNPARSED	GPL	LICENSE	35148	UNPARSED_ASSERTION
+Utdanningsdirektoratet/xmldataimport		MIT	LICENSE	1079	NO_ASSERTION
+WCAG-Compliance/wcagc-mcp	UNPARSED	MIT	LICENSE	1072	UNPARSED_ASSERTION
+Vacademy-io/vacademy_platform	AGPL	AGPL	LICENSE	34523	AGREE
+WakeelDev/EduGenius		Apache	LICENSE	11357	NO_ASSERTION
+WangyiNTU/nanobot-study	MIT	MIT	LICENSE	1066	AGREE
+YuanGongND/gopt		BSD	LICENSE	1517	NO_ASSERTION
+WhenWen/AC2	UNPARSED	Apache	LICENSE	11358	UNPARSED_ASSERTION
+Yunfeng-Wan/CSTutorBench		CC	LICENSE	313	NO_ASSERTION
+Yusuprozimemet/LearnX-Radar		MIT	LICENSE	1065	NO_ASSERTION
+Utdanningsdirektoratet/KL06-LK20-public		NONE		0	NO_ASSERTION
+ZIYINGJERRY/difair	MIT	MIT	LICENSE	1075	AGREE
+Yuanpeng-Li/gradescope-mcp		MIT	LICENSE	1068	NO_ASSERTION
+Zenglian990/AI_Tutor_Release	MIT	MIT	LICENSE	1068	AGREE
+ZeKaiNie/universal-examprep-skill	MIT	MIT	LICENSE	1065	AGREE
+Utdanningsdirektoratet/pifu		NONE		0	NO_ASSERTION
+Vashishtha05/An-Adaptive-LLM-Based-AI-Tutor-for-Multi-Level-Learning		NONE		0	NO_ASSERTION
+abdomoaz58-tech/OpenLearn-AI	AGPL	AGPL	LICENSE	35184	AGREE
+abr-Projects/canvas-mcp	MIT	MIT	LICENSE	1071	AGREE
+YuriMatsumotoSantos/CorrecaoRedacao		NONE		0	NO_ASSERTION
+XCINDYZ/AFRIA		NONE		0	NO_ASSERTION
+adap/flower		Apache	LICENSE	11358	NO_ASSERTION
+YL1N/EduGuardBench		NONE		0	NO_ASSERTION
+adity982/OpenTutor		MIT	LICENSE	1068	NO_ASSERTION
+academic-innovation/django-lti		MIT	LICENSE	1098	NO_ASSERTION
+adlnet/ADL_LRS	Apache	Apache	LICENSE	11357	AGREE
+adlnet/lrs-conformance-test-suite		MIT	LICENSE	1046	NO_ASSERTION
+adlnet/xAPI-Spec		Apache	LICENSE	11525	NO_ASSERTION
+agno-agi/agno		Apache	LICENSE	11343	NO_ASSERTION
+agentanywhere/shuddhi	Apache	Apache	LICENSE	11358	AGREE
+adlnet/xapi-profiles		Apache	LICENSE	11357	NO_ASSERTION
+agencyenterprise/qti-3-player		MIT	LICENSE	1066	NO_ASSERTION
+ahmedEid1/lumen	MIT	GPL	LICENSE	35149	MISGRANTED
+aemonge/opencode-sit		MIT	LICENSE	1056	NO_ASSERTION
+ZeydSaeed/SIS		NONE		0	NO_README
+a-bobadilla/Asistente-Pedagogico-IA		NONE		0	NO_ASSERTION
+a5anka/ai-lab-2026-africa-agent-manager		NONE		0	NO_ASSERTION
+ahans30/Binoculars		BSD	LICENSE.md	1535	NO_ASSERTION
+ai-builders-foundation/ai-builders-curriculum	MIT	MIT	LICENSE	1079	AGREE
+ai4ed/XES3G5M	UNPARSED	MIT	LICENSE	1062	UNPARSED_ASSERTION
+aiverify-foundation/aiverify	Apache	Apache	LICENSE	11350	AGREE
+adelahladka/difNLR		NONE		0	NO_ASSERTION
+aiverify-foundation/aiverify-developer-tools	Apache	Apache	LICENSE	11350	AGREE
+aiverify-foundation/moonshot	UNPARSED	Apache	LICENSE.md	11347	UNPARSED_ASSERTION
+aiverify-foundation/moonshot-data		Apache	LICENSE.md	11347	NO_ASSERTION
+algenlab/adaptive-tutor		MIT	LICENSE	1068	NO_ASSERTION
+alirezadir/AIMLInterviews	MIT	MIT	LICENSE	1074	AGREE
+aisingapore/sealion	UNPARSED	NONE		0	UNGRANTED
+aisingapore/sea-lion	UNPARSED	NONE		0	UNGRANTED
+amp-up-io/qti3-item-player-vue3	UNPARSED	MIT	LICENSE	1071	UNPARSED_ASSERTION
+ankimcp/anki-mcp-server	MIT	MIT	LICENSE	1074	AGREE
+ankitects/anki		AGPL	LICENSE	1930	NO_ASSERTION
+alfredang/ai4kids		NONE		0	NO_ASSERTION
+alfredang/ai-mms		NONE		0	NO_ASSERTION
+amp-up-io/qti3-item-player	UNPARSED	MIT	LICENSE	1076	UNPARSED_ASSERTION
+alphacep/vosk-api		Apache	COPYING	10173	NO_ASSERTION
+aiverify-foundation/LLM-Evals-Catalogue		NONE		0	NO_ASSERTION
+algorithm0r/canvas-lms-mcp	MIT	MIT	LICENSE	1070	AGREE
+alfredang/AI-LMS-TMS		NONE		0	NO_ASSERTION
+anthropics/k12-teacher-skills		Apache	LICENSE	11357	NO_ASSERTION
+alvarogregori/moodle-ai-graded-assignment		NONE		0	NO_ASSERTION
+armandokeller/SAEP2026-Agentes-IA-e-Ferramentas		MIT	LICENSE	1071	NO_ASSERTION
+aquario-ufpb/aquario	MIT	MIT	LICENSE	1070	AGREE
+ashishpatel26/500-AI-Agents-Projects	MIT	MIT	LICENSE	1070	AGREE
+apache/ofbiz-framework	Apache	Apache	LICENSE	11906	AGREE
+aryankeluskar/canvas-mcp		ISC	LICENSE	746	NO_ASSERTION
+artcc/freelingo	AGPL	AGPL	LICENSE	34514	AGREE
+amosblomqvist/learn		NONE		0	NO_ASSERTION
+ashleycribb/learnmcp-xapi	MIT	MIT	LICENSE	1069	AGREE
+ashutoshrana/haystack-ferpa-filter	Apache	Apache	LICENSE	12101	AGREE
+asterics/AsTeRICS-Grid	UNPARSED	AGPL	LICENSE	34523	UNPARSED_ASSERTION
+aprincar/curriculum-bncc		AGPL	LICENSE	34523	NO_ASSERTION
+aswanth9495/exam-guard		Apache	LICENSE	11357	NO_ASSERTION
+aureuserp/aureuserp		MIT	LICENSE	1077	NO_ASSERTION
+autolab/Autolab	UNPARSED	Apache	LICENSE	11324	UNPARSED_ASSERTION
+avinash201199/free-ai-agents-resources		MIT	LICENSE	1070	NO_ASSERTION
+aoncevay/quechua-nlp		NONE		0	NO_ASSERTION
+bain3/pronotepy	UNPARSED	MIT	LICENSE	1062	UNPARSED_ASSERTION
+aydenp/PowerSchool-API	UNPARSED	MIT	LICENSE	1072	UNPARSED_ASSERTION
+baker-jr-john/automated-summary-evaluation-llm	MIT	MIT	LICENSE	1071	AGREE
+baoguangsheng/fast-detect-gpt		MIT	LICENSE	1071	NO_ASSERTION
+aoncevay/mt-peru		NONE		0	NO_ASSERTION
+awesome-german/ai-tools		CC	LICENSE	18659	NO_ASSERTION
+avps82/mentar	AGPL	AGPL	LICENSE	34523	AGREE
+bigdata-ustc/CAT4AI		MIT	LICENSE	1062	NO_ASSERTION
+bigdata-ustc/EduCDM		Apache	LICENSE	11346	NO_ASSERTION
+bgwdotdev/go-oneroster		MIT	LICENSE	1064	NO_ASSERTION
+bigdata-ustc/EduCAT		MIT	LICENSE	1062	NO_ASSERTION
+bigdata-ustc/EduKTM		Apache	LICENSE	11367	NO_ASSERTION
+bigdata-ustc/EduNLP		Apache	LICENSE	11346	NO_ASSERTION
+bigdata-ustc/EduRec		MIT	LICENSE	1063	NO_ASSERTION
+bigdata-ustc/EduSim		MIT	LICENSE	1063	NO_ASSERTION
+aungkhantmyat/The-Online-Exam-Proctor		NONE		0	NO_ASSERTION
+bigdata-ustc/EduData		Apache	LICENSE	11346	NO_ASSERTION
+attoyibi/lms-with-ai		NONE		0	NO_ASSERTION
+blackboard/BBDN-lti-1p3-tool-example		Apache	LICENSE	11357	NO_ASSERTION
+biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent	MIT	MIT	LICENSE	1068	AGREE
+bncc-dev/bncc-dados		MIT	LICENSE	1073	NO_ASSERTION
+bonafe/inteligencia-aberta		MIT	LICENSE	1092	NO_ASSERTION
+browser-use/browser-use	MIT	MIT	LICENSE	1069	AGREE
+bruchris/canvas-lms-mcp	MIT	MIT	LICENSE	1070	AGREE
+bojieli/ai-agent-book	Apache	Apache	LICENSE	11338	AGREE
+buriro-ezekia/mwalimulens-agent	UNPARSED	Apache	LICENSE	11357	UNPARSED_ASSERTION
+brahm-ai-official/brahm-ai	UNPARSED	OTHER	LICENSE	21119	UNPARSED_ASSERTION
+bunizao/moodle-cli	MIT	MIT	LICENSE	1064	AGREE
+caiuc/equipo-1-haCAIthon-2026	UNPARSED	MIT	LICENSE	1063	UNPARSED_ASSERTION
+caiuc/equipo-12-haCAIthon-2026	UNPARSED	MIT	LICENSE	1063	UNPARSED_ASSERTION
+caiocarvalhofre/moodle-mod_maici	UNPARSED	GPL	LICENSE.md	35178	UNPARSED_ASSERTION
+caiuc/equipo-16-haCAIthon-2026	UNPARSED	MIT	LICENSE	1063	UNPARSED_ASSERTION
+caiuc/equipo-19-haCAIthon-2026	UNPARSED	MIT	LICENSE	1063	UNPARSED_ASSERTION
+caiuc/equipo-6-haCAIthon-2026		MIT	LICENSE	1063	NO_ASSERTION
+caleb-media-studio/canvas-mcp	MIT	MIT	LICENSE	1066	AGREE
+bigdata-ustc/EduX		NONE		0	NO_ASSERTION
+caramaschiHG/awesome-ai-agents-2026	UNPARSED	OTHER	LICENSE	2207	UNPARSED_ASSERTION
+bnnadi/Sky		NONE		0	NO_ASSERTION
+brettlballard/DIF		NONE		0	NO_ASSERTION
+canyongbs/advisingapp	UNPARSED	OTHER	LICENSE	3860	UNPARSED_ASSERTION
+cassproject/CASS	UNPARSED	Apache	LICENSE	11588	UNPARSED_ASSERTION
+caiuc/equipo-8-haCAIthon-2026	AGPL	AGPL	LICENSE	34932	AGREE
+chamilo/chamilo-lms		GPL	LICENSE	35147	NO_ASSERTION
+chrischall/infinitecampus-mcp		MIT	LICENSE	1067	NO_ASSERTION
+chaz-clark/canvas-toolbox	MIT	MIT	LICENSE	1072	AGREE
+cgrevisse/moodle-qbank_genai	UNPARSED	GPL	LICENSE.md	35178	UNPARSED_ASSERTION
+cerpus/Edlib	UNPARSED	GPL	LICENSE	34915	UNPARSED_ASSERTION
+cisco-ai-defense/model-provenance-kit	Apache	Apache	LICENSE	11357	AGREE
+christophse/django-lti-tool		BSD	LICENSE	1525	NO_ASSERTION
+classmoji/classmoji	AGPL	AGPL	LICENSE	34523	AGREE
+classroomio/classroomio		AGPL	LICENSE	34523	NO_ASSERTION
+cloudtoolbox/deeptutor	Apache	Apache	LICENSE	11408	AGREE
+chrisliu298/awesome-llm-unlearning		Apache	LICENSE	11357	NO_ASSERTION
+codeXsidd/Studivexa	MIT	MIT	LICENSE	1068	AGREE
+commonstandardsproject/api		Apache	LICENSE	10266	NO_ASSERTION
+cboard-org/cboard	UNPARSED	GPL	LICENSE.txt	35141	UNPARSED_ASSERTION
+compl-ai/compl-ai	Apache	Apache	LICENSE	10141	AGREE
+condecon/adaptivetesting	UNPARSED	MPL	LICENSE	16661	UNPARSED_ASSERTION
+conform-ed/conform-ed		MIT	LICENSE	1080	NO_ASSERTION
+codit04/TechMCP	MIT	MIT	LICENSE	1064	AGREE
+caiuc/proyectos-hacaithon-2026		NONE		0	NO_README
+codelitdev/courselit		AGPL	LICENSE.md	34143	NO_README
+course-code-framework/coursecode		MIT	LICENSE	1069	NO_ASSERTION
+crpf-mitadt/Indian-AI-for-Education	UNPARSED	CC	LICENSE	7048	UNPARSED_ASSERTION
+csmediapro/moodle-mcp-server		AGPL	LICENSE	34523	NO_ASSERTION
+crewAIInc/crewAI	MIT	MIT	LICENSE	1055	AGREE
+dasgltd/mcp-brasil	MIT	MIT	LICENSE	1072	AGREE
+coqui-ai/TTS	MPL	MPL	LICENSE.txt	16726	AGREE
+contentauth/c2pa-python	Apache	MIT	LICENSE-MIT	1083	MISGRANTED
+davidlms/learnmcp-xapi	MIT	MIT	LICENSE	1069	AGREE
+delip/autorubric	UNPARSED	MIT	LICENSE	1402	UNPARSED_ASSERTION
+deepchecks/deepchecks		AGPL	LICENSE	36012	NO_ASSERTION
+datakind/student-success-tool		MIT	LICENSE.md	1080	NO_ASSERTION
+contentauth/c2pa-rs	UNPARSED	MIT	LICENSE-MIT	1083	UNPARSED_ASSERTION
+dequelabs/axe-core		MPL	LICENSE	15921	NO_ASSERTION
+datawhalechina/hello-agents	CC	CC	LICENSE.txt	20849	AGREE
+cqm3ron/bromcom-scraper		NONE		0	NO_README
+cs341-illinois/coursebook		NONE		0	NO_ASSERTION
+datacamp/catsim		GPL	COPYING	35147	NO_README
+cran/difR		NONE		0	NO_README
+dajiaohuang/WayMarker		NONE		0	NO_ASSERTION
+dfdb76/bncc-mcp	MIT	MIT	LICENSE	1218	AGREE
+digestionadiabaticprocess828/claude-war-room		MIT	LICENSE	1076	NO_ASSERTION
+dexter-psychometrics/dexter		LGPL	LICENSE	7639	NO_ASSERTION
+digillab-lmu/smart-rag	UNPARSED	OTHER	LICENSE	4642	UNPARSED_ASSERTION
+digitalcredentials/issuer-coordinator		MIT	LICENSE	1087	NO_ASSERTION
+digitalcredentials/learner-credential-wallet		MIT	LICENSE	1092	NO_ASSERTION
+dini-ag-kim/schulfaecher		CC	LICENSE	7048	NO_ASSERTION
+digitalcredentials/verifier-plus		MIT	LICENSE	1087	NO_ASSERTION
+dikshant182004/MathTutor		MIT	LICENSE	1068	NO_README
+dmitry-viskov/pylti1.3		MIT	LICENSE	1070	NO_README
+delphiki/hass-pronote		NONE		0	NO_ASSERTION
+dougpenny/PyPowerSchool	MIT	MIT	LICENSE	1082	AGREE
+dmitry-viskov/pylti1.3-flask-example		MIT	LICENSE	1070	NO_README
+dmitry-viskov/pylti1.3-django-example		MIT	LICENSE	1070	NO_README
+douglasrizzo/catsim		BSD	LICENSE	1514	NO_ASSERTION
+dssg/aequitas	MIT	MIT	LICENSE	1083	AGREE
+dssg/student-early-warning		OTHER	LICENSE	2069	NO_ASSERTION
+duanyytop/agents-radar		MIT	LICENSE	1062	NO_ASSERTION
+eclipse/paho.mqtt.java		EPL	LICENSE	519	NO_ASSERTION
+edrys-org/edrys		MPL	LICENSE	16725	NO_ASSERTION
+dhakalaashish/knowledge_tracing_foundationalASSIST	CC	NONE		0	UNGRANTED
+eclipse-ee4j/jersey	UNPARSED	EPL	LICENSE.md	35082	UNPARSED_ASSERTION
+dini-ag-kim/school-curriculum-pg		NONE		0	NO_ASSERTION
+eduagarcia/lm-evaluation-harness-pt		MIT	LICENSE.md	1067	NO_ASSERTION
+douglas150206/IF_VEST_Redacao_Correcao		NONE		0	NO_ASSERTION
+eduNEXT/openedx-lti-tool-plugin		Apache	LICENSE	11357	NO_README
+drsanjayagal/SynEdu-HEDL		NONE		0	NO_ASSERTION
+elisaado/somtoday.js		MIT	LICENSE	1066	NO_ASSERTION
+edx/ease		AGPL	LICENSE.txt	35136	NO_README
+ervin-mo/humanizar-es	MIT	MIT	LICENSE	1255	AGREE
+eloompty/Eloom-LMS-International	MIT	MIT	LICENSE	1062	AGREE
+espnet/espnet		Apache	LICENSE	11372	NO_ASSERTION
+espoon-voltti/evaka	UNPARSED	OTHER	LICENSE	1001	UNPARSED_ASSERTION
+eribean/girth	MIT	MIT	LICENSE.txt	1064	AGREE
+eecs-autograder/autograder.io		NONE		0	NO_ASSERTION
+elisaado/somtoday-api-docs		NONE		0	NO_ASSERTION
+evidentlyai/evidently		Apache	LICENSE	11353	NO_ASSERTION
+emorynlp/LLM-Grading		NONE		0	NO_ASSERTION
+examplary/qti	MIT	MIT	LICENSE	1069	AGREE
+explosion/spaCy		MIT	LICENSE	1128	NO_ASSERTION
+ernestosrf/sigaa-horarios-extension		NONE		0	NO_ASSERTION
+facebookresearch/seamless_communication	UNPARSED	CC	LICENSE	19333	UNPARSED_ASSERTION
+fairlearn/fairlearn		MIT	LICENSE	1168	NO_README
+eth-lre/mathtutorbench	UNPARSED	NONE		0	UNGRANTED
+eth-lre/MathTutorBench	UNPARSED	NONE		0	UNGRANTED
+fdis111/canvas-mcp	MIT	MIT	LICENSE	1071	AGREE
+fedcal/open-jarvis	AGPL	AGPL	LICENSE	35613	AGREE
+european-commission-empl/european-digital-credentials		NONE		0	NO_ASSERTION
+faizan45640/google-classroom-mcp-server		MIT	LICENSE	1063	NO_ASSERTION
+fffnite/go-oneroster		MIT	LICENSE	1064	NO_ASSERTION
+european-commission-empl/European-Learning-Model	UNPARSED	NONE		0	UNGRANTED
+felipedias-ie/blackboard-mcp		MIT	LICENSE	1084	NO_ASSERTION
+examplary/qti.git		NONE		0	NO_README
+flysheep-ai/education-skills		MIT	LICENSE	1068	NO_ASSERTION
+folio-org/mod-inventory		Apache	LICENSE	11357	NO_ASSERTION
+fnshr/kyo-kan		OTHER	LICENSE	6555	NO_ASSERTION
+folio-org/platform-complete		Apache	LICENSE	11357	NO_ASSERTION
+explosion/spacy-models		NONE		0	NO_ASSERTION
+francoisjacquet/rosariosis	UNPARSED	GPL	LICENSE	15214	UNPARSED_ASSERTION
+fh-yarbouh/oak-curriculum-ontology		NONE		0	NO_README
+frappe/frappe	MIT	MIT	LICENSE	1118	AGREE
+felipedias-ie/blackboard-mcp.git		NONE		0	NO_README
+gerardbourguett/mcp-chilegob-dataset	MIT	MIT	LICENSE	1073	AGREE
+gafapa/moodle-core-cli		MIT	LICENSE	1070	NO_ASSERTION
+ggml-org/whisper.cpp	MIT	MIT	LICENSE	1078	AGREE
+giacomomaria81/scorm-mcp-server	MIT	MIT	LICENSE	1070	AGREE
+gibbonedu/core	UNPARSED	GPL	LICENSE	35121	UNPARSED_ASSERTION
+formalms/formalms		NONE		0	NO_ASSERTION
+fracabu/scorm-course-generator	MIT	NONE		0	UNGRANTED
+foradian/fedena		NONE		0	NO_README
+frappe/education		NONE		0	NO_ASSERTION
+gnowledge/OpenAssessmentsClient		MIT	LICENSE	1390	NO_ASSERTION
+frappe/lms		NONE		0	NO_ASSERTION
+google/differential-privacy	UNPARSED	Apache	LICENSE	13333	UNPARSED_ASSERTION
+frappe/erpnext		NONE		0	NO_ASSERTION
+grant-mccurdy/instructional-ai-workflows		MIT	LICENSE	1070	NO_ASSERTION
+grantholle/powerschool-api		MIT	LICENSE	1101	NO_ASSERTION
+glenn-watt/lti-1p3-reference-tool	UNPARSED	MIT	LICENSE	1067	UNPARSED_ASSERTION
+gotranseo/oneroster		Apache	LICENSE.txt	11357	NO_ASSERTION
+great-expectations/great_expectations		Apache	LICENSE	11357	NO_ASSERTION
+harrywang/canvas-mcp	MIT	MIT	LICENSE	1071	AGREE
+hcengineering/platform		EPL	LICENSE	14197	NO_ASSERTION
+hemantkarekar/MyProctorAI		MIT	LICENSE	1071	NO_ASSERTION
+general-mudkip/d2l-mcp-server		NONE		0	NO_ASSERTION
+helixnow/deep-student	AGPL	AGPL	LICENSE	34532	AGREE
+hicsail/opencat-pro	UNPARSED	MIT	LICENSE	1106	UNPARSED_ASSERTION
+h2database/h2database		MPL	LICENSE.txt	27754	NO_ASSERTION
+huggingface/agents-course		Apache	LICENSE	11357	NO_ASSERTION
+h5p/h5p-php-library		GPL	LICENSE.txt	35146	NO_README
+hqanhh/EduGPT		MIT	LICENSE	1072	NO_ASSERTION
+huggingface/parler-tts		Apache	LICENSE	11359	NO_ASSERTION
+huggingface/smolagents	Apache	Apache	LICENSE	11357	AGREE
+hwl668/Scientific-learning-skills-	MIT	MIT	LICENSE	1096	AGREE
+iDavi/heidy_backend		GPL	LICENSE	35149	NO_ASSERTION
+iDavi/usp-mcp		GPL	LICENSE	35149	NO_ASSERTION
+haanhtuandev/vgu-mcp	MIT	NONE		0	UNGRANTED
+idempiere/idempiere	GPL	GPL	LICENSE.md	15057	AGREE
+henriquebotelhogomes/educacao		NONE		0	NO_ASSERTION
+haolpku/Omni-Edu		NONE		0	NO_ASSERTION
+ictinnovations/ictexam-mcp		MIT	LICENSE	1114	NO_ASSERTION
+horaciohudson/corretor-redacao		NONE		0	NO_README
+idiap/coqui-ai-TTS	MPL	MPL	LICENSE.txt	16725	AGREE
+hulylabs/huly		MIT	LICENSE-MIT	1066	NO_ASSERTION
+huni1023/EqUMP		NONE		0	NO_README
+inclusionAI/ABench	Apache	Apache	LICENSE	11379	AGREE
+indobenchmark/indonlu	MIT	Apache	LICENSE	11131	MISGRANTED
+hxxdtd/Awesome-Diffusion-Model-Unlearning		NONE		0	NO_ASSERTION
+inepdadosabertos/api		GPL	LICENSE	18025	NO_ASSERTION
+idiap/coqui-ai-tts	MPL	MPL	LICENSE.txt	16725	AGREE
+infosign/compeito	UNPARSED	Apache	LICENSE	10759	UNPARSED_ASSERTION
+instructure/canvas-lms	UNPARSED	AGPL	LICENSE	34520	UNPARSED_ASSERTION
+instructure/qti		MIT	LICENSE	1084	NO_ASSERTION
+issuebadge/mcp-server		MIT	LICENSE	1072	NO_ASSERTION
+isakskogstad/Skolverket-MCP	MIT	MIT	LICENSE	1093	AGREE
+hxwujinze/federated-deep-knowledge-tracing		NONE		0	NO_README
+inuyasha2012/pypsy		MIT	LICENSE	1068	NO_README
+iterative/dvc		Apache	LICENSE	11340	NO_README
+jamwithai/production-agentic-rag-course	UNPARSED	MIT	LICENSE	1068	UNPARSED_ASSERTION
+ivmelo/suap-api-php		MIT	LICENSE	1071	NO_ASSERTION
+ink-waffle/moodle-mcp		NONE		0	NO_ASSERTION
+jdolny/OneRoster.NET		MIT	LICENSE	1066	NO_ASSERTION
+ink-waffle/sisu-mcp		NONE		0	NO_ASSERTION
+idoforgod/Vibe-learning-AgenticWorkflow		NONE		0	NO_ASSERTION
+jingyaogong/minimind	UNPARSED	Apache	LICENSE	11357	UNPARSED_ASSERTION
+johnswyou/autograder		MIT	LICENSE	1065	NO_ASSERTION
+jadrianlg16/learning-tutor	AGPL	NONE		0	UNGRANTED
+iqiipo-dev/PS-HK19_MindForge_MindForge		NONE		0	NO_README
+jsrodr/canvas-mcp	MIT	MIT	LICENSE	1071	AGREE
+jrissler/ex_oneroster		Apache	LICENSE	11357	NO_ASSERTION
+joakimwallmark/irtorch		MIT	LICENSE.txt	1073	NO_ASSERTION
+jgabriel-sntx/Corretor-de-redacao-ENEM		NONE		0	NO_ASSERTION
+jeanlucio/moodle-local_aihub	GPL	NONE		0	UNGRANTED
+jimbozhang/speechocean762		NONE		0	NO_ASSERTION
+jnehring/awesome-low-resource-languages	Apache	NONE		0	UNGRANTED
+jupyter/nbgrader		BSD	LICENSE	1512	NO_ASSERTION
+jupyter/notebook	UNPARSED	BSD	LICENSE	1588	UNPARSED_ASSERTION
+junchenfeng/pyirt		MIT	LICENSE.txt	1083	NO_ASSERTION
+jjbrophy47/machine_unlearning		NONE		0	NO_ASSERTION
+jp-cos/jp-cos.github.io		NONE		0	NO_ASSERTION
+joshuasoup/d2l-mcp		NONE		0	NO_ASSERTION
+jupyterhub/jupyterhub	UNPARSED	BSD	LICENSE	1475	UNPARSED_ASSERTION
+jupyterhub/jupyterhub-deploy-teaching		BSD	LICENSE	1528	NO_ASSERTION
+jupyterhub/ltiauthenticator		BSD	LICENSE	1528	NO_ASSERTION
+jupyterlab/jupyter-ai		BSD	LICENSE	1516	NO_ASSERTION
+jxmorris12/language_tool_python	GPL	GPL	LICENSE	35151	AGREE
+k2-fsa/sherpa-onnx		Apache	LICENSE	11358	NO_ASSERTION
+kamlendras/OpenProctor	MIT	AGPL	LICENSE	34523	MISGRANTED
+kaorii-ako/Shiori-v1		MIT	LICENSE	1073	NO_ASSERTION
+jude-miller-dev/Milky-institute-online		NONE		0	NO_ASSERTION
+junit-team/junit4		NONE		0	NO_ASSERTION
+karanb192/algo-sensei	MIT	MIT	LICENSE	1081	AGREE
+kirill-markin/flashcards-open-source-app	MIT	MIT	LICENSE	1070	AGREE
+kc0506/ntucool		MIT	LICENSE	1066	NO_ASSERTION
+kaldi-asr/kaldi		Unlicense	COPYING	17264	NO_ASSERTION
+kohlsalem/schulmanager-mcp		Unlicense	LICENSE	1212	NO_ASSERTION
+koukekoukej-glitch/feynman-tutor		MIT	LICENSE	1056	NO_ASSERTION
+ksaklfszf921/skolverket-mcp	MIT	MIT	LICENSE	1093	AGREE
+krayin/laravel-crm		MIT	LICENSE	1078	NO_ASSERTION
+kiwix/kiwix-android	GPL	GPL	COPYING	35068	AGREE
+kouweizhu/agents-radar		MIT	LICENSE	1062	NO_ASSERTION
+kltn-moolde/moodle-adaptive-learning-plugin	MIT	MIT	LICENSE	1086	AGREE
+kaushal0494/UnifyingAITutorEvaluation	UNPARSED	NONE		0	UNGRANTED
+kiwix/libkiwix	GPL	GPL	COPYING	35065	AGREE
+kaushal0494/AITutor-EvalKit	MIT	NONE		0	UNGRANTED
+kiwix/kiwix-tools	GPL	GPL	COPYING	35068	AGREE
+kesaruhasun/mcp-sliit-courseweb		NONE		0	NO_ASSERTION
+langchain-ai/langgraph		MIT	LICENSE	1072	NO_ASSERTION
+langfuse/langfuse		MIT	LICENSE	1612	NO_ASSERTION
+kmamit5296/Online-Proctoring-System		NONE		0	NO_ASSERTION
+kuali/kfs		AGPL	LICENSE	33755	NO_ASSERTION
+kuang-che/NTU-COOL-Preview-Tool-extension		MIT	LICENSE	1066	NO_ASSERTION
+kvnloo/tutor-mcp	MIT	MIT	LICENSE	1073	AGREE
+latam-gpt/anonymization-filter		MIT	LICENSE	1072	NO_ASSERTION
+kuali/rice	UNPARSED	OTHER	LICENSE.txt	11182	UNPARSED_ASSERTION
+kuali/kc		NONE		0	NO_ASSERTION
+latam-gpt/lm-evaluation-harness		MIT	LICENSE.md	1067	NO_ASSERTION
+latam-gpt/syco-bench	MIT	MIT	LICENSE	903	AGREE
+learningequality/kolibri		MIT	LICENSE	1097	NO_ASSERTION
+lavsharmaa/proctxam-ai-proctoring		MIT	LICENSE	1098	NO_ASSERTION
+laurauguc/grading_assistant		MIT	LICENSE	1072	NO_ASSERTION
+learning-commons-org/agent-skills	UNPARSED	Apache	LICENSE	10173	UNPARSED_ASSERTION
+learningequality/kolibri-installer-android		MIT	LICENSE	1097	NO_ASSERTION
+learnhouse/learnhouse		AGPL	LICENSE	34523	NO_ASSERTION
+learningequality/morango		MIT	LICENSE	1074	NO_ASSERTION
+learningequality/ricecooker		MIT	LICENSE	1087	NO_ASSERTION
+learningequality/studio	MIT	MIT	LICENSE	1115	AGREE
+languagetool-org/languagetool	UNPARSED	NONE		0	UNGRANTED
+learningequality/le-utils	UNPARSED	MIT	LICENSE.txt	1084	UNPARSED_ASSERTION
+lakshya85664/Assessment_Agent_LLM		NONE		0	NO_ASSERTION
+liamdugan/raid	MIT	MIT	LICENSE	1068	AGREE
+lindsay-cheng/canvas-mcp	MIT	MIT	LICENSE	1071	AGREE
+locuslab/open-unlearning	MIT	MIT	LICENSE	1069	AGREE
+lmscloud-io/moodle-mcp-server	UNPARSED	GPL	LICENSE	35148	UNPARSED_ASSERTION
+livekit/livekit	Apache	Apache	LICENSE	11358	AGREE
+licensee/licensee		MIT	LICENSE.md	1088	NO_README
+leemonade/leemons	MIT	OTHER	LICENSE.md	10830	MISGRANTED
+littlecookie0722/AI-Teaching-Agent	UNPARSED	MIT	LICENSE	1069	UNPARSED_ASSERTION
+loqganesh-hue/aulalibre		MIT	LICENSE	1077	NO_ASSERTION
+learningequality/kolibri-design-system		NONE		0	NO_ASSERTION
+longsightgroup/qti3		MIT	LICENSE.md	1072	NO_ASSERTION
+lplnufpi/essay-br		MIT	LICENSE	1114	NO_ASSERTION
+learningequality/kolibri-server		NONE		0	NO_README
+lebmatter/exampro		NONE		0	NO_ASSERTION
+m-bain/whisperX	CC	BSD	LICENSE	1297	DUAL_LAYER
+lowwwbank/anything-to-course	MIT	MIT	LICENSE	1066	AGREE
+luthierycosta/ConsertandoHorariosSIGAA		MIT	LICENSE	1082	NO_ASSERTION
+macewan-cs/lti	MIT	MIT	LICENSE	1108	AGREE
+macsnoeren/genai-open-assessment	UNPARSED	GPL	LICENSE	35149	UNPARSED_ASSERTION
+madhvantyagi/Gnos		MIT	LICENSE	1070	NO_ASSERTION
+malaysia-ai/malaya-speech		MIT	LICENSE	1072	NO_README
+loyaniu/moodle-mcp		NONE		0	NO_ASSERTION
+manceras/horarios-escolares-manager	MIT	MIT	LICENSE	1078	AGREE
+luisgf/openbadgeslib	LGPL	LGPL	LICENSE.txt	7650	AGREE
+marcellodesales/mcp-brasil	MIT	MIT	LICENSE	1072	AGREE
+magister-api/magister		MIT	LICENSE	1085	NO_ASSERTION
+marcorojasb/tero		MIT	LICENSE	1068	NO_ASSERTION
+malaysia-ai/malaya		MIT	LICENSE	1068	NO_README
+markm-io/ai-essay-evaluator		MIT	LICENSE	1069	NO_ASSERTION
+lucasmation/microdadosBrasil		NONE		0	NO_ASSERTION
+lucanardinocchi/canvas-mcp		NONE		0	NO_ASSERTION
+maxxeddev/open-badges-mcp		MIT	LICENSE	1079	NO_ASSERTION
+marsley01/Edyfra	UNPARSED	OTHER	LICENSE	806	UNPARSED_ASSERTION
+masakhane-io/masakhane-mt		MIT	LICENSE	1068	NO_ASSERTION
+metyatech/qti-html-renderer		MIT	LICENSE	1067	NO_ASSERTION
+masakhane-io/masakhane-ner	UNPARSED	Apache	LICENSE	30929	UNPARSED_ASSERTION
+mahseema/aibooks		NONE		0	NO_ASSERTION
+mhw32/variational-item-response-theory-public		MIT	LICENSE	1064	NO_ASSERTION
+malaysia-ai/malaysian-dataset		NONE		0	NO_README
+mazhar266/fedena		Apache	LICENSE.md	11357	NO_README
+masakhane-io/lafand-mt	Apache	GPL	LICENSE	35149	MISGRANTED
+microsoft/Shiksha-Copilot	UNPARSED	MIT	LICENSE	1141	UNPARSED_ASSERTION
+microsoft/accessibility-insights-web	MIT	MIT	LICENSE	1092	AGREE
+microsoft/agent-framework	UNPARSED	MIT	LICENSE	1141	UNPARSED_ASSERTION
+microsoft/ai-agents-for-beginners	UNPARSED	MIT	LICENSE	1141	UNPARSED_ASSERTION
+michael-milette/moodle-local_aiid	GPL	GPL	LICENSE.md	32477	AGREE
+marcusgreen/moodle-tool_aiconnect		NONE		0	NO_ASSERTION
+michael-borck/assessment-rubrics-for-ai		OTHER	LICENSE.md	2859	NO_ASSERTION
+microsoft/agent-governance-toolkit	MIT	MIT	LICENSE	1074	AGREE
+microsoft/autogen	UNPARSED	CC	LICENSE	18650	UNPARSED_ASSERTION
+mendezjerick/ReaDirect-V2		NONE		0	NO_ASSERTION
+microsoft/shiksha-copilot	UNPARSED	MIT	LICENSE	1141	UNPARSED_ASSERTION
+microsoft/generative-ai-for-beginners		MIT	LICENSE	1141	NO_ASSERTION
+microsoft/o365-moodle	GPL	GPL	LICENSE	35147	AGREE
+mitodl/open-learning-ai-tutor		MIT	LICENSE	1069	NO_ASSERTION
+meyerjp3/psychometrics	Apache	NONE		0	UNGRANTED
+mikhailvs/loqui		MIT	LICENSE	1074	NO_ASSERTION
+mlabonne/llm-course		Apache	LICENSE	11357	NO_ASSERTION
+mizcausevic-dev/mcp-ai-tutor		AGPL	LICENSE	34523	NO_ASSERTION
+moodlehq/moodle-tool_dataprivacy		GPL	LICENSE	35147	NO_ASSERTION
+mlcommons/croissant	Apache	Apache	LICENSE.md	10174	AGREE
+moon0825/jbnu-lms-student		MIT	LICENSE	1082	NO_ASSERTION
+mlflow/mlflow		Apache	LICENSE.txt	11382	NO_ASSERTION
+motiolabs-space/open-academic		MIT	LICENSE	1087	NO_ASSERTION
+mtgibbs/canvas-lms-mcp	MIT	MIT	LICENSE	1064	AGREE
+murderszn/open-tutor	UNPARSED	OTHER	LICENSE	869	UNPARSED_ASSERTION
+mozilla/rhino	UNPARSED	MPL	LICENSE.txt	16780	UNPARSED_ASSERTION
+mietiainvestigacion-creator/API-EduAdapt		NONE		0	NO_ASSERTION
+neuralmind-ai/portuguese-bert		MIT	LICENSE	1138	NO_ASSERTION
+moarshy/mcp-tutor		NONE		0	NO_ASSERTION
+nd-ball/py-irt	UNPARSED	MIT	LICENSE	1121	UNPARSED_ASSERTION
+monirome/asr-indigenous-languages		NONE		0	NO_ASSERTION
+ninocss/UntisPlus		MIT	LICENSE	1064	NO_ASSERTION
+moodle/moodle	UNPARSED	NONE		0	UNGRANTED
+natiworldclass/adaptive-tutor		NONE		0	NO_ASSERTION
+nitsuah/bb-mcp		MIT	LICENSE	1063	NO_ASSERTION
+myxineglutinosameniere4389/STUTIFY	UNPARSED	NONE		0	UNGRANTED
+nmarafo/OpenDidactia	UNPARSED	CC	LICENSE.md	2123	UNPARSED_ASSERTION
+nextcloud/context_chat		AGPL	COPYING	34519	NO_ASSERTION
+nextcloud/assistant		AGPL	COPYING	34519	NO_ASSERTION
+neiltonsantana9-star/redacao		NONE		0	NO_ASSERTION
+nguyentrieu210/edu		NONE		0	NO_ASSERTION
+nullnet-app/contextmint-bridge		MIT	LICENSE	1067	NO_ASSERTION
+nmarafo/open-lex-edu	CC	OTHER	LICENSE.md	2874	MISGRANTED
+nexB/scancode-toolkit		NONE		0	NO_README
+oaknational/oak-ai-lesson-assistant	MIT	MIT	LICENSE	1077	AGREE
+nocobase/nocobase		OTHER	LICENSE.txt	8592	NO_ASSERTION
+oat-sa/lib-lti1p3-core	GPL	GPL	LICENSE	18091	AGREE
+oat-sa/extension-tao-testqti		GPL	LICENSE	18025	NO_ASSERTION
+oat-sa/qti-sdk	GPL	GPL	LICENSE	18025	AGREE
+oat-sa/tao-core		GPL	LICENSE	18025	NO_ASSERTION
+ocrmypdf/OCRmyPDF	MPL	MPL	LICENSE	16725	AGREE
+oliverhruby/edupage-mcp		MIT	LICENSE	1070	NO_ASSERTION
+ocrmypdf/ocrmypdf	MPL	MPL	LICENSE	16725	AGREE
+ollama/ollama		MIT	LICENSE	1058	NO_ASSERTION
+novatrix-2030/SIH-2026		NONE		0	NO_ASSERTION
+open-behavior-analysis/aba-clinical-agent	AGPL	AGPL	LICENSE	34523	AGREE
+openai/whisper		MIT	LICENSE	1063	NO_ASSERTION
+open-edge-platform/education-ai-suite	UNPARSED	Apache	LICENSE	11351	UNPARSED_ASSERTION
+open-spaced-repetition/py-fsrs	MIT	MIT	LICENSE	1079	AGREE
+opencast/opencast		OTHER	LICENSE	11340	NO_ASSERTION
+openeducat/openeducat_erp	LGPL	LGPL	LICENSE	8241	AGREE
+oaknational/oak-open-curriculum-ecosystem	MIT	MIT	LICENCE	1086	AGREE
+opendp/opendp	MIT	MIT	LICENSE	1102	AGREE
+opendatalab/MinerU	UNPARSED	Apache	LICENSE.md	3301	UNPARSED_ASSERTION
+nvaccess/nvda	UNPARSED	NONE		0	UNGRANTED
+openedx/openedx-aspects		Apache	LICENSE	11357	NO_ASSERTION
+openedx/openedx-platform		AGPL	LICENSE	35136	NO_README
+openedx/edx-platform		AGPL	LICENSE	35136	NO_README
+omerbbbb/ai-graded-assessment-platform		NONE		0	NO_ASSERTION
+openedx/platform-plugin-aspects		Apache	LICENSE	11357	NO_README
+openedx/xblock-lti-consumer		AGPL	LICENSE	34520	NO_README
+openedx/tutor-contrib-aspects		Apache	LICENSE	11357	NO_README
+openedx/event-routing-backends		AGPL	LICENSE.txt	35139	NO_README
+openfun/joanie		MIT	LICENSE	1086	NO_ASSERTION
+openedx/edx-proctoring		AGPL	LICENSE.txt	35119	NO_README
+openolat/OpenOLAT	Apache	Apache	LICENSE	10982	AGREE
+opensalt/opensalt		MIT	LICENSE	1080	NO_ASSERTION
+openemis/core		GPL	LICENSE	15518	NO_ASSERTION
+openedx/XBlock		NONE		0	NO_README
+openstax/osbooks-biology-bundle		CC	LICENSE	21442	NO_ASSERTION
+openfun/ralph		MIT	LICENSE.md	1094	NO_ASSERTION
+openfun/richie		MIT	LICENSE	1079	NO_ASSERTION
+openstax/openstax-cms		AGPL	LICENSE	34541	NO_ASSERTION
+openstax/osbooks-college-algebra-bundle		CC	LICENSE	21013	NO_ASSERTION
+openstax/osbooks-calculus-bundle		CC	LICENSE	21444	NO_ASSERTION
+openstax/osbooks-college-success		CC	LICENSE	21442	NO_ASSERTION
+openstax/osbooks-physics		CC	LICENSE	19104	NO_ASSERTION
+openstax/osbooks-statistics		CC	LICENSE	18706	NO_ASSERTION
+openstax/osbooks-college-physics		CC	LICENSE	21442	NO_ASSERTION
+openstax/osbooks-introductory-statistics-bundle		CC	LICENSE	21442	NO_ASSERTION
+openstax/osbooks-university-physics-bundle		CC	LICENSE	21013	NO_ASSERTION
+ossu/computer-science	CC	MIT	LICENSE	1102	DUAL_LAYER
+openstax/osbooks-prealgebra-bundle		CC	LICENSE	21442	NO_ASSERTION
+oppia/oppia		Apache	LICENSE	11358	NO_README
+panaversity/learn-agentic-ai		MIT	LICENSE	1068	NO_ASSERTION
+packbackbooks/lti-1-3-php-library		Apache	LICENSE.md	11343	NO_ASSERTION
+paper-instruments/rubric	MIT	MIT	LICENSE	1077	AGREE
+parcheesime/rubric-agent	UNPARSED	Apache	LICENSE	11357	UNPARSED_ASSERTION
+pablocaeg/sloptotal		MIT	LICENSE	1071	NO_ASSERTION
+openzim/libzim	GPL	GPL	COPYING	15132	AGREE
+pawtograder/assignment-action		GPL	LICENSE	674	NO_ASSERTION
+pawtograder/platform	GPL	GPL	LICENSE	658	AGREE
+paulocymbaum/ed-tech-system-mcp		MIT	LICENSE	1077	NO_ASSERTION
+peancor/moodle-mcp-server		MIT	LICENSE	1064	NO_ASSERTION
+overhangio/tutor		AGPL	LICENSE.txt	34523	NO_README
+pelotech/xapi-lrs		Apache	LICENSE	11357	NO_ASSERTION
+pguso/agents-from-scratch	UNPARSED	MIT	LICENSE	1091	UNPARSED_ASSERTION
+oxctl/spring-security-lti13		Apache	LICENSE.txt	11358	NO_ASSERTION
+pgvector/pgvector		OTHER	LICENSE	1104	NO_ASSERTION
+php-xapi/client	UNPARSED	MIT	LICENSE	1068	UNPARSED_ASSERTION
+php-xapi/model		MIT	LICENSE	1068	NO_ASSERTION
+pengusto/google-classroom-mcp	MIT	MIT	LICENSE	1145	AGREE
+plastic-labs/honcho	AGPL	AGPL	LICENSE	34523	AGREE
+pipeworx-io/mcp-datos-cl		MIT	LICENSE	1070	NO_ASSERTION
+pie-framework/pie-qti		ISC	LICENSE	752	NO_ASSERTION
+pie-framework/pie-elements		OTHER	LICENSE.md	728	NO_ASSERTION
+plastic-labs/tutor-gpt	GPL	GPL	LICENSE	35149	AGREE
+project-sunbird/sunbird-devops	MIT	MIT	LICENSE	1072	AGREE
+project-sunbird/sunbird-analytics		MIT	LICENSE	1074	NO_ASSERTION
+project-sunbird/sunbird-lms-mw	MIT	MIT	LICENSE	1072	AGREE
+portabilis/i-educar		GPL	LICENSE	18092	NO_ASSERTION
+pranav-vijayananth/brightspace-mcp-server		Apache	LICENSE	11357	NO_ASSERTION
+prometheus-eval/prometheus-eval		Apache	LICENSE	10141	NO_ASSERTION
+project-sunbird/sunbird-telemetry-sdk		MIT	LICENSE	1072	NO_README
+project-sunbird/sunbird-lms-service	MIT	MIT	LICENSE	1072	AGREE
+planejaia/OpenMAIC-Brasil		NONE		0	NO_README
+promptster-ai/rubric	MIT	MIT	LICENSE	1067	AGREE
+pupilfirst/pupilfirst	MIT	CC	LICENSE	1684	MISGRANTED
+philchalmers/mirt		NONE		0	NO_ASSERTION
+plyght/canvas-mcp		NONE		0	NO_ASSERTION
+pykt-team/pykt-toolkit		MIT	LICENSE	1066	NO_ASSERTION
+pythpythpython/openstax-mcp-server	UNPARSED	MIT	LICENSE	1071	UNPARSED_ASSERTION
+pydantic/pydantic-ai		MIT	LICENSE	1100	NO_ASSERTION
+pytorch/opacus	Apache	Apache	LICENSE	10241	AGREE
+pytorch/audio	UNPARSED	BSD	LICENSE	1338	UNPARSED_ASSERTION
+pnp-v/bo-google-classroom-mcp-server		NONE		0	NO_ASSERTION
+qazasd2518995/prosody	MIT	MIT	LICENSE	1063	AGREE
+pywirrarika/naki		GPL	LICENSE	35141	NO_ASSERTION
+r-huijts/canvas-mcp		MIT	LICENSE	1065	NO_ASSERTION
+r1ckyIn/canvas-ed-mcp	MIT	MIT	LICENSE	1056	AGREE
+python-webuntis/python-webuntis		BSD	LICENSE	1505	NO_README
+rodrigmatrix/sigaa_ufc_android	Apache	Apache	LICENSE	11357	AGREE
+rohanmuppa/brightspace-mcp-server	MIT	MIT	LICENSE	1068	AGREE
+rohitg00/ai-engineering-from-scratch		MIT	LICENSE	1070	NO_ASSERTION
+redbeard-26/asfai-education	UNPARSED	Apache	LICENSE	11357	UNPARSED_ASSERTION
+rhasspy/piper		MIT	LICENSE.md	1071	NO_ASSERTION
+ronantakizawa/a11ymcp		MIT	LICENSE	1071	NO_ASSERTION
+ronda-ai/Ronda-App		GPL	LICENSE	35094	NO_ASSERTION
+rasbt/LLMs-from-scratch		Apache	LICENSE.txt	11505	NO_ASSERTION
+radhepa/Teacher-MCP		NONE		0	NO_README
+rubelw/OSSS	UNPARSED	Apache	LICENSE	11363	UNPARSED_ASSERTION
+sakaiproject/sakai	UNPARSED	OTHER	LICENSE	11120	UNPARSED_ASSERTION
+saniales/ai-lesson-planner	GPL	GPL	LICENSE	35149	AGREE
+rachelproject/module-template	CC	NONE		0	UNGRANTED
+sas-fossdev/saspes		AGPL	LICENSE	34522	NO_ASSERTION
+raif-s-naffah/xapi-rs		NONE		0	NO_ASSERTION
+scaleapi/researchrubrics	MIT	MIT	LICENSE	1078	AGREE
+satvik314/educhain	MIT	MIT	LICENSE	1092	AGREE
+rachelproject/contentshell		NONE		0	NO_ASSERTION
+saylordotorg/moodle-local_ai_course_assistant		GPL	LICENSE	35149	NO_ASSERTION
+riiid/ednet	CC	NONE		0	UNGRANTED
+schroedinger-hat/certo	AGPL	AGPL	LICENSE	33820	AGREE
+sdrangan/llmgrader		MIT	LICENSE	1224	NO_ASSERTION
+sdv-dev/SDV		OTHER	LICENSE	4818	NO_ASSERTION
+shareAI-lab/learn-claude-code		MIT	LICENSE	1068	NO_ASSERTION
+sevenc-nanashi/google-classroom-mcp-server		MIT	LICENSE	1063	NO_ASSERTION
+shawnmcb/a11y-mcp-server		MIT	LICENSE	1071	NO_ASSERTION
+sharziki/purdue-mcp		MIT	LICENSE	1080	NO_ASSERTION
+securefederatedai/openfl	UNPARSED	Apache	LICENSE	11356	UNPARSED_ASSERTION
+shawnmcb/claude-a11y-skills		MIT	LICENSE	1071	NO_ASSERTION
+sabuhi-huseynli-grc/High-Risk-Deployer-FRIA-Governance-Toolkit		NONE		0	NO_README
+shinyquagsire23/InfiniteCampusAPI		WTFPL	LICENSE.md	474	NO_ASSERTION
+shivanireddyk/tutoreval		MIT	LICENSE	1074	NO_ASSERTION
+samrathreddy/Tutor-multi-ai-agent		NONE		0	NO_ASSERTION
+sikkepitje/TeamSync		GPL	LICENSE	35149	NO_README
+sign/translate	UNPARSED	CC	LICENSE.md	17404	UNPARSED_ASSERTION
+sodadata/soda-core		OTHER	LICENSE	3804	NO_ASSERTION
+sirdanielm/canvas-mcp	MIT	MIT	LICENSE	1071	AGREE
+sololabstr/uisight		MIT	LICENSE	1101	NO_ASSERTION
+skyzh/tiny-llm		Apache	LICENSE	11357	NO_ASSERTION
+soumics/llm-rag-assistant		MIT	LICENSE	1070	NO_ASSERTION
+soumics/adaptive-ai-tutor		MIT	LICENSE	1070	NO_ASSERTION
+speechbrain/speechbrain	GPL	Apache	LICENSE	11357	MISGRANTED
+shakyanaitik0-bot/Agentic_AI_Tutor	MIT	NONE		0	UNGRANTED
+speechsuper/SpeechSuper-API-Samples		MIT	LICENSE	1068	NO_ASSERTION
+shrutika00/StudyMate		NONE		0	NO_ASSERTION
+suren-kk/armenian-national-library-mcp	UNPARSED	MIT	LICENSE	1073	UNPARSED_ASSERTION
+surlabs/AIChatForMoodle		GPL	LICENSE	35149	NO_ASSERTION
+stanfordnlp/edu-convokit		MIT	LICENSE	1068	NO_ASSERTION
+shimahikojin/google-classroom-mcp		NONE		0	NO_README
+sudosylabs/Proctor		AGPL	LICENSE	32386	NO_ASSERTION
+taybenlor/runno		MIT	LICENSE	1106	NO_ASSERTION
+tamlhp/awesome-machine-unlearning		MIT	LICENSE	1063	NO_ASSERTION
+terracotta-education/terracotta		Apache	LICENSE	11323	NO_ASSERTION
+tensorflow/privacy		Apache	LICENSE	12551	NO_ASSERTION
+tesseract-ocr/tesseract	Apache	Apache	LICENSE	11358	AGREE
+spal740/GradeScribe		NONE		0	NO_ASSERTION
+spdx/license-list-data	UNPARSED	NONE		0	UNGRANTED
+speedyapply/2026-AI-College-Jobs		NONE		0	NO_ASSERTION
+thiagoluzin/pemara-edu-mira		MIT	LICENSE	1068	NO_ASSERTION
+theopenem/OneRoster.NET		MIT	LICENSE	1066	NO_ASSERTION
+talbano/equate		NONE		0	NO_ASSERTION
+tl-its-umich-edu/caliper-php-public	UNPARSED	LGPL	LICENSE	7438	UNPARSED_ASSERTION
+towardsai/ai-tutor-app		Apache	LICENSE	11386	NO_ASSERTION
+teacherspet-cloud/schul-apps		NONE		0	NO_ASSERTION
+toshieji/moodle-grading-mcp		MIT	LICENSE	1120	NO_ASSERTION
+tomaszboloz/WCAG-Accessibility-Skills	MIT	MIT	LICENSE	1070	AGREE
+tejpalvirk/student	MIT	NONE		0	UNGRANTED
+the-glasgow-academy/oneroster-api-to-csv-sds		NONE		0	NO_ASSERTION
+trilogy-group/oneroster-ts	MIT	BSD	LICENSE	711	MISGRANTED
+ucbds-infra/otter-grader		BSD	LICENSE	1560	NO_ASSERTION
+ucfopen/Materia		AGPL	LICENSE	34523	NO_ASSERTION
+the-glasgow-academy/oneroster-api-to-csv-asm		NONE		0	NO_ASSERTION
+uPortal-Project/uPortal		Apache	LICENSE	11359	NO_ASSERTION
+this-org-does-not-exist-zzz9/nope		NONE		0	NO_README
+ucfopen/UDOIT	UNPARSED	GPL	LICENSE	35147	UNPARSED_ASSERTION
+ucfopen/canvasapi		MIT	LICENSE	1130	NO_ASSERTION
+ucfopen/cookiecutter-python-lti	UNPARSED	MIT	LICENSE	1130	UNPARSED_ASSERTION
+ucfopen/Obojobo		AGPL	LICENSE	34520	NO_ASSERTION
+udondan/lanis-mcp		MIT	LICENSE	1073	NO_ASSERTION
+ucfopen/pylti1.3		MIT	LICENSE	1070	NO_README
+unb-mds/2025-2-InfoSchool		MIT	LICENSE	1060	NO_ASSERTION
+trilogy-group/oneroster-ts.git		NONE		0	NO_README
+undertheseanlp/underthesea		Apache	LICENSE	10765	NO_ASSERTION
+vardanagarwal/Proctoring-AI	MIT	MIT	LICENSE	1071	AGREE
+untisapi/untis4j	UNPARSED	LGPL	LICENSE	7378	UNPARSED_ASSERTION
+unicon/tool13demo		Apache	LICENSE	11323	NO_ASSERTION
+vanderschaarlab/synthcity	Apache	Apache	LICENSE	11357	AGREE
+vasanthsreeram/Alvarmethod		MIT	LICENSE	1072	NO_ASSERTION
+tutornew/OpenTutor		NONE		0	NO_ASSERTION
+vincenzo-afk/Proctored-MCQ-Exam-Platform	MIT	MIT	LICENSE	1072	AGREE
+virgiliojr94/book-to-skill	MIT	MIT	LICENSE.md	1068	AGREE
+virtualryder/edu-ai-agents		MIT	LICENSE	832	NO_ASSERTION
+vishalsachdev/canvas-mcp	MIT	MIT	LICENSE	1071	AGREE
+vllm-project/vllm		Apache	LICENSE	11357	NO_ASSERTION
+ucfopen/pylti1.3.git		NONE		0	NO_README
+webtech-network/autograder	Apache	Apache	LICENSE	11357	AGREE
+weAAAre/a11y-agents-kit	MIT	MIT	LICENSE	1064	AGREE
+veraPDF/veraPDF-library		NONE		0	NO_ASSERTION
+whylabs/whylogs		Apache	LICENSE	11358	NO_ASSERTION
+wiwaszko-intel/education-ai-suite	UNPARSED	Apache	LICENSE	11351	UNPARSED_ASSERTION
+wwrwbs/AI_AWE	UNPARSED	Apache	LICENSE	1865	UNPARSED_ASSERTION
+woodstocksoftware/student-progress-tracker	MIT	MIT	LICENSE	1069	AGREE
+victor934034/simulade		NONE		0	NO_ASSERTION
+xmike04/canvas-student-mcp	MIT	MIT	LICENSE	1064	AGREE
+virginiandujar/educa-ia		NONE		0	NO_ASSERTION
+xapi-labs/xapi-cli		MIT	LICENSE	1066	NO_ASSERTION
+vilcaaguilerandrea-oss/carrera-lectora		NONE		0	NO_ASSERTION
+wenchao-ma/GDINA		NONE		0	NO_ASSERTION
+vitorr2101/Projeto-Agente-IA-Educacional		NONE		0	NO_ASSERTION
+ydataai/ydata-synthetic		MIT	LICENSE	1062	NO_ASSERTION
+vnschneider/suap-mcp		NONE		0	NO_ASSERTION
+ybai-nlp/EduBench		MIT	LICENSE	1063	NO_ASSERTION
+yetanalytics/lrsql	UNPARSED	Apache	LICENSE	11357	UNPARSED_ASSERTION
+yetanalytics/datasim	Apache	Apache	LICENSE	11357	AGREE
+yh2072/edgameclaw	AGPL	AGPL	LICENSE	34523	AGREE
+wenjing1170/llm_grader		NONE		0	NO_ASSERTION
+yongsoojoo/esd2026-agent-workflow		MIT	LICENSE	1068	NO_ASSERTION
+yedidiaklein/moodle-local_aiquestions	UNPARSED	GPL	LICENSE.md	35178	UNPARSED_ASSERTION
+yetanalytics/xapipe	UNPARSED	Apache	LICENSE	11357	UNPARSED_ASSERTION
+yunger7/enem-api		GPL	LICENSE	18092	NO_ASSERTION
+zcsabbagh/knowledge-graph-mcp		MIT	LICENSE	1066	NO_ASSERTION
+zhamanov-seabus/nau-ai-advisor	Apache	Apache	LICENSE	11375	AGREE
+zijinz456/OpenTutor		MIT	LICENSE	1068	NO_ASSERTION
+zeeshanparwez/EduAssist	MIT	MIT	LICENSE	1070	AGREE
+zaikaman/SGU-Academic-MCP	MIT	MIT	LICENSE	1068	AGREE
+zmievsa/autograder		GPL	LICENSE	35149	NO_ASSERTION
+zhangl1001/civil-ai	MIT	MIT	LICENSE	1067	AGREE
+xzhaopsy/MIRT		NONE		0	NO_ASSERTION
+znecho9/knowledge-forest-mcp		Apache	LICENSE	10863	NO_ASSERTION
+yonatanlop/detectoria		NONE		0	NO_ASSERTION
+zainf2327/mcp-classroom	MIT	NONE		0	UNGRANTED
+zuvy/ps-mcp-server		NONE		0	NO_ASSERTION

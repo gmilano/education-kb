@@ -4,6 +4,131 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-seventh pass, 2026-10-08 — **LTI 1.3 is the licence-isolation boundary**, the licence pre-flight is now an instrument rather than advice, and `P710` gains a permissive substrate
+
+> 🔵 **This pass's opening hypothesis was that the licence census would mostly reorder the shelf.
+> 🟢 CONFIRMED, and it produced one recipe nobody had written:** 🟢 **the measured fact that
+> education's **platform** layer is copyleft (Moodle GPL, Open edX and Canvas **AGPL**) while its
+> **integration** layer is permissive (`pylti1.3` MIT) is not a coincidence to note — it is an
+> architecture to adopt.**
+
+### 🟢 `P736` — `R57a`: integrate through **LTI 1.3**, and the platform's copyleft never reaches your code
+
+🔴 **The recurring question on this KB is "can Globant build on Moodle / Canvas / Open edX given
+GPL and AGPL?"** 🟢 **Measured answer (`P734`): you do not build *in* them. You build *beside* them
+and speak LTI.**
+
+| Layer | Component | Licence (first-hand, stored bytes) | Why it sits here |
+|---|---|---|---|
+| **Platform (client-hosted)** | Moodle · Canvas · Open edX | 🔴 **GPL-3.0** 35 147 B · 🔴 **AGPL-3.0** 34 520 B · 🔴 **AGPL-3.0** 35 136 B | 🔴 **Never modified, never vendored, never linked** — the client already runs it |
+| 🟢 **Isolation boundary** | **LTI 1.3 / LTI Advantage** — an HTTP + JWT protocol, not a library dependency | 🟢 **n/a — a specification** | 🟢 **This is the whole trick**: a separate process over a network protocol is not a derivative work |
+| 🟡 **Your tool (Globant-built)** | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) + its django/flask examples | 🟢 **MIT** · **1 070 B** each | 🟢 LTI 1.3 tool-side in permissive Python. 🔴 **Read `P740` before adopting — it is stale** |
+| 🟢 Grading core | [`delip/autorubric`](https://github.com/delip/autorubric) + [`The-LLM-Data-Company/rubric`](https://github.com/The-LLM-Data-Company/rubric) | 🟢 MIT **1 402 B** · MIT **1 077 B** | 🟢 `P720`'s two-scorer cross-check, unchanged |
+| 🟢 Grade return | LTI **Assignment and Grade Services** (AGS) | 🟢 n/a | 🟢 Writes the score back without touching platform source |
+| 🟢 Rostering, if needed | [`Ed-Fi-Exchange-OSS/Ed-Fi-Clever-Integration`](https://github.com/Ed-Fi-Exchange-OSS/Ed-Fi-Clever-Integration) | 🟢 **Apache-2.0** **11 357 B** | 🟢 Permissive rostering |
+
+🟢 **Wiring, concretely:** 🔵 **(1)** register the tool in the platform as an LTI 1.3 tool (client id,
+deployment id, JWKS URL); 🔵 **(2)** `pylti1.3` validates the launch JWT and gives you the user,
+context and resource-link claims; 🔵 **(3)** the launch hands off to `autorubric` → `rubric`
+cross-check (`P720`); 🔵 **(4)** the human-review gate (`P710` steps 3–4) logs the decision; 🔵 **(5)**
+AGS posts the score back. 🟢 **Your repository contains MIT code only.**
+
+> 🟢 **`P736`.** *The licence question in education software is **architectural, not legal**. 🔴 **"Can
+> we use Moodle?" is the wrong question** — you are not using it, the client is. 🟢 **LTI 1.3 is a
+> process and network boundary, so GPL's and AGPL's derivative-work and §13 triggers do not reach a
+> tool on the other side of it.*** 🔵 **This is why the shelf's licence split (AGPL in platforms, MIT
+> in integration — `P730`) is the map of where to stand.** 🔴 **Two conditions, or the boundary
+> leaks:** 🔴 **do not vendor platform code or link its libraries**, and 🔴 **do not ship a modified
+> platform** — the moment you distribute a patched Moodle, you are inside GPL again.
+
+### 🔴 `P740` — `R57a`'s LTI component is **MIT and four years stale**, and the registry is what reveals it
+
+🔴 **`pylti1.3` is load-bearing in `R57a`, so it was measured properly rather than cited. The repo
+channel looks healthy and the registry channel does not:**
+
+| Oracle | Reading |
+|---|---|
+| `ls-remote` | exists · HEAD `d8fa43e1` · 🟡 **1** `refs/heads` · 🟢 **29** `refs/tags` · 88 `refs/pull` · 119 all |
+| 🟢 Licence payload | 🟢 `MIT License`, **1 070 B** |
+| 🟢 PyPI `PyLTI1p3` | 🟢 **v2.0.0**, `license: MIT`, homepage resolves to the same repo, **29 releases** |
+| 🔴 **PyPI latest upload** | 🔴 **`2022-11-20`** — **no release in ~3 years 11 months** |
+
+🟡 **88 inbound pull refs say people are still sending patches; 1 branch and a 2022 release say
+nothing is being cut.** 🔵 **LTI 1.3 is a *stable specification*, so a stale implementation is far
+less alarming here than it would be for a model-facing library** — the protocol it implements has not
+moved either.
+
+> 🔴 **`P740`.** *The repo channel cannot see staleness: `ls-remote` showed 29 tags and a valid HEAD.
+> 🟢 **The registry's `upload_time` is the recency oracle**, and it is the only channel here that
+> dates anything.* 🟢 **Adopt `pylti1.3` with eyes open**: pin the version, expect to maintain the
+> fork, and budget a security review of the JWT validation path — 🔴 **which is the one part of an
+> LTI tool where staleness is genuinely dangerous**, because it is the authentication boundary.
+> 🆕 **`Gap 276` — no permissive, actively-released LTI 1.3 tool-side library has been identified;
+> the alternatives on this shelf were not licence-measured this pass.**
+
+### 🟢 `P737` — `R57b`: the licence **pre-flight**, now an instrument instead of advice
+
+🟢 **Every recipe on this shelf has needed this and none had a runnable form. `P725` built it:
+`compose/code/p725-readme-payload-sweep/`.**
+
+🟢 **Run it before an engagement, over the client's existing edtech stack:**
+
+```
+grep -rhoE 'https://github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+' <client-manifests>/ \
+  | sort -u > stack.txt
+./readme_vs_payload.sh stack.txt stack.txt 12 > verdicts.tsv
+```
+
+| Then adjudicate, in this order | Because |
+|---|---|
+| 🔴 **`MISGRANTED` rows first** | 🔴 Copyleft believed permissive is the only direction that creates an obligation you did not plan for |
+| 🔴 **`UNGRANTED` next** | 🔴 No grant means no right to use at all — but check the registry and tree layers first (`Gap 273`), a **15 %** artefact rate is measured |
+| 🟡 `UNPARSED` / `NO_README` | 🟡 **193 of 1 020** land here — unadjudicated, not clean |
+| 🟢 `AGREE` | 🟢 Still verify the **family**, not the string (`P734`: ECL-2.0 is Apache in substance) |
+
+🔴 **Adjudicate by hand against the seven shapes** (`P725b`): the instrument's own false-positive rate
+is **31 %** on its worst class, so 🔴 **never hand a client the raw TSV as a finding**.
+🔵 **Cost: minutes of network time plus an hour of adjudication per ~50 repos.** 🟢 **Sellable on its
+own in North America and EMEA** (`intel/market.md`).
+
+### 🔴 `P738` — `R57c`: the **proctoring** recipe, which is the one place both risks land at once
+
+🔴 **Measured convergence (`Trend 4`): proctoring is simultaneously EU Annex III, a Vietnamese
+high-risk example, and the shelf's worst licence trap.**
+
+| Decision | Recipe |
+|---|---|
+| 🔴 **`kamlendras/OpenProctor`** | 🔴 **Do not host it.** README says MIT; payload is **AGPL-3.0, 34 523 B**, §13 present. 🔴 **Hosting a proctoring service on it obliges you to offer source to every examinee.** 🟢 **Legitimate uses: run it on the *client's own* infrastructure as *their* deployment, or read it as a reference implementation and write your own** |
+| 🟡 **`SafeExamBrowser/seb-server`** | 🟡 **MPL, 16 725 B** — reciprocal **per file**. 🟢 **Usable**: keep your code in new files, contribute back changes to theirs. 🔵 Materially safer than AGPL |
+| 🟢 **The permissive path** | 🟢 Build the *decision log*, not the detector: LTI 1.3 launch (`pylti1.3`, MIT) → your evidence pipeline → human review gate → AGS. 🟢 **The regulated artefact in both jurisdictions is the human-review record, not the biometric model** |
+| 🔴 **Biometrics boundary** | 🔴 **Facial recognition / behaviour analysis is what triggers Annex III duties and Vietnam's "behavioural monitoring" class.** 🟢 **Scoping it *out* is a legitimate product decision that removes a compliance tier** — say so in the proposal rather than treating it as a feature gap |
+
+> 🔴 **`P738`.** *In proctoring the licence trap and the regulatory trigger attach at the **same
+> moment** — hosting. 🟢 **So the architecture that solves one solves the other**: a separate,
+> permissive, LTI-attached service whose output is a logged human decision, with biometrics
+> explicitly out of scope.*
+
+### 🟢 `P739` — `P710` gains a **permissive substrate**, which it never had
+
+🔴 **`P710` has always assumed the client's platform, because every education-native platform on this
+shelf was copyleft.** 🟢 **`P734` measured two that are not:**
+
+| Substrate | Licence (first-hand) | Use it when |
+|---|---|---|
+| 🟢 **Sakai** | 🟢 **ECL-2.0**, 11 120 B — Apache-2.0 with a **narrowed patent grant** | 🟢 **A full LMS is needed and permissive is a hard constraint.** 🔴 **Read the patent clause** — it is the one real difference from Apache-2.0 |
+| 🟢 **Kolibri** | 🟢 **MIT**, 1 097 B | 🟢 **Offline-first delivery** — the correct technical answer to uneven connectivity, which is the LATAM constraint by name |
+
+🟢 **So `P710` now has three deployment shapes, not one:** 🔵 **(a)** LTI tool beside the client's
+GPL/AGPL platform (`P736`, the default); 🔵 **(b)** full permissive stack on **Sakai**, when the
+client has no platform and wants to own everything; 🔵 **(c)** **Kolibri** for offline/low-connectivity
+cohorts. 🟡 **The 11-week estimate is unchanged** — the substrate choice moves integration risk, not
+build effort.
+
+🔴 **One correction to this shelf's own recipes:** 🔴 **any pattern here that cited `rubric`'s
+"**84 refs**" as an activity signal was reading all advertised refs, of which **44 are pull
+requests** (`P732`).** 🟢 **The honest figure is **19 branches + 20 tags**, and the real health signal
+is PyPI **v2.2.0** with `license_expression: MIT`.**
+
 ## 🟢 Fifty-sixth pass, 2026-10-08 — `P710`'s **step 5 was the shelf's longest-standing open gap, and it now has an MIT component**, plus a pre-flight every recipe needs and a regional claim correction
 
 ### 🟢 `P719` — step 5 of `P710` ("evaluating the grader") is **no longer empty**

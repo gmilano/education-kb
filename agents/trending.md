@@ -4,6 +4,31 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-seventh pass, 2026-10-08 — week of 2026-10-08: the mandated query is saturated for the **eighth** week, and the week's movement is a **sweep of the whole shelf** rather than a new agent
+
+> 🟢 **Independently re-run this week, the mandated agent query returned **nothing** this shelf did
+> not already hold — the eighth consecutive week.** 🔵 **Recorded as calibration, not as failure: an
+> independent re-run reproducing the shelf is evidence the shelf is **complete**, which is a
+> different claim from "the channel is broken".**
+
+### 🟢 This week's movement, in order of weight
+
+| # | Movement | Evidence class |
+|---|---|---|
+| 1 | 🔴 **5 confirmed licence misgrants found across the 1 020 shelved repos** (`P725a`), the worst being **`kamlendras/OpenProctor`** — README says MIT, payload is **AGPL-3.0** with §13 present, in a **proctoring** tool | 🟢 **Payload, first-hand** |
+| 2 | 🔴 **The sweep's own 31 % false-positive rate** on that class (`P725`) — 4 of 13 were artefacts | 🟢 **Hand-adjudicated, all 13** |
+| 3 | 🔴 **GPL-3.0 §13 names the Affero licence 3×**, so whole-body AGPL-first classifiers invert every GPL-3.0 file (`P726`) | 🟢 **Canonical payload, line numbers** |
+| 4 | 🔴 **`rubric`'s "84 refs" is 19 heads + 20 tags + 44 pull refs** (`P732`) — the ref column mixed two conventions in one table | 🟢 **`ls-remote`, decomposed** |
+| 5 | 🟢 **`paper-instruments/rubric` ≡ `The-LLM-Data-Company/rubric`** — same SHA, refs and licence hash; a duplicate row prevented (`P728`) | 🟢 **Four agreeing oracles** |
+| 6 | 🔴 **An MIT grant whose copyright holder cannot be located** (`P729`) — `maxew6/ai-tutor-project` names `krishna16-origin`, which returns `128` ×3 | 🟢 **`ls-remote`, with control** |
+| 7 | 🟢 **One new MIT row**: `baker-jr-john/automated-summary-evaluation-llm` — rubric-based summary scoring, **1 071 B**, HEAD `e7a4cc5d`, 🟡 **1 branch, 0 tags** | 🟢 **Payload + `ls-remote`** |
+| 8 | 🔴 **"ArguLens" refused** — the channel contradicts itself on its arXiv id, its year and its existence (`Gap 272`) | 🔴 **Prose only, unresolvable here** |
+
+🔴 **Zero star counts again this week**: `github.com` and `api.github.com` answered `403` on every
+one of three probes. 🟡 **An authenticated GitHub channel *does* exist in this environment, but it is
+scoped to this session's own repositories**, so it cannot serve as a metadata oracle for third-party
+education repos — recorded so no later pass assumes the `403` is the whole story (`P731`).
+
 ## 🟢 Fifty-sixth pass, 2026-10-08 — week of 2026-10-08: the mandated query is saturated for the **seventh** week, and the week's movement is a **new MIT rubric layer** plus an oracle that lies about refs
 
 ⏱️ **Tenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

@@ -4,6 +4,112 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Pass 57, 2026-10-08 — **`Gap 269` measured**, `Gap 270` narrowed, `Gap 267` open for a fourth pass, six gaps declared
+
+> 🔵 **This pass's opening hypothesis was that a primary source could be reached to close `Gap 270`.
+> 🔴 REFUTED — and measuring the refusal produced `P731`:** 🟢 **ten candidate primary hosts answer
+> `000`, five repo oracles answer `200`, so this KB's two shelves have never been equally
+> verifiable.**
+
+### 🟢 `Gap 269` — **MEASURED** (declared pass 56, the sweep now exists and has run)
+
+🟢 **`compose/code/p725-readme-payload-sweep/` swept all **1 020** unique slugs on the eight shelves.
+🟢 **Result: 42 repos (4,1 %) assert a licence their payload does not support** — **29** ungranted,
+**13** contradicting. 🔴 **5 of the 13 confirmed misgrants by hand**, the worst being
+`kamlendras/OpenProctor` (MIT asserted, **AGPL-3.0** granted, §13 present, proctoring).
+
+🟡 **MEASURED, not CLOSED, and the distinction is deliberate:** 🔴 **`UNPARSED_ASSERTION` (126) and
+`NO_README` (67) are **193 repos the instrument could not adjudicate**, and its own false-positive
+rate is **31 %** on its worst class and **15 %** on the ungranted class. 🟢 **Both rates are published
+with the counts** (`README.md`, `adjudication.2026-10-08.tsv`) so no later pass can read the raw TSV
+as a verdict. 🆕 **Succeeded by `Gap 271`.**
+
+### 🟡 `Gap 270` — **NARROWED in the affirmative**, not closed
+
+🟢 **The EMEA channel returned a specific answer attributed to the Commission's own page: the Digital
+Omnibus amendments **entered into force `2026-07-27`**, which precedes `2026-08-02` and would resolve
+the Official-Journal ambiguity in favour of the deferral being operative.** 🔴 **The page asserting
+it is `EGRESS_BLOCKED` from this environment, so this is reported evidence, not first-hand.**
+🟢 **`P718` is unchanged and remains the planning rule.**
+
+### 🔴 `Gap 267` — **OPEN for a fourth pass**: this KB's instruments are unrunnable here
+
+🔴 **Re-tested this pass, not assumed: `python3 -m pytest compose/code/p370-gap-gate/` is denied with
+`[Code from External]`.** 🟢 **The denial is a sandbox policy on executing code from the cloned
+repository, and it was **not** worked around.** 🔴 **Consequence, stated rather than hidden:
+`Gap 257` and `Gap 258` are **unmeasured for a fourth pass**, and the `110 / 112` suite figure is now
+**five passes old** and is carried forward **as reported, never as confirmed**.**
+
+🟢 **What this pass did instead, and why it is not a workaround:** 🟢 **the `P725` sweep was written
+as this pass's own code, run in this pass's own scratch directory, and only then committed with its
+results** — 🔵 **so the instrument is new work that happens to be verifiable, not an existing suite
+smuggled past the denial.** 🔴 **It therefore ships with its suite **unrun**, like every other
+instrument here, and its claims rest on the seven known-answer controls documented in its README.**
+
+### 🆕 `Gap 271` — the sweep's **193 unadjudicated repos**
+
+🔴 **126 `UNPARSED_ASSERTION` + 67 `NO_README`.** 🟢 **Bounded remedy:** the `UNPARSED` class needs the
+assertion extractor's precedence fixed — 🔴 **it matches loose prose before specific forms, which is
+how `CAHLR/OATutor`'s `licenses/by/4` lost to the sentence *"license for each hint, scaffold, and
+problem"***. 🔵 **Same precedence failure shape as `P726`'s AGPL-before-GPL bug, in the other
+function of the same file.** 🔵 **Cost: one reordering plus a re-run of 126 rows.**
+
+### 🆕 `Gap 272` — "ArguLens" cannot be resolved from this environment
+
+🔴 **One query returns *arXiv 2608.17356, "ArguLens: An Open-Source System for Automated Essay
+Scoring", Apache-2.0, Aug 2026*; a second returns **no such repository**, a different id
+(`2602.04604`), and a **2020 paper of the same name about usability discussions in OSS issue
+trackers**.** 🔴 **No repository URL located by any oracle; `arxiv.org` is not reachable for a
+first-hand read.** 🟢 **The row is refused** (`P476`). 🔵 **If real, it is an Apache-2.0 AES system
+with a **CC-BY-NC** training corpus (PERSUADE 2.0), which would make it a `p317-data-license-layer`
+case, not a clean permissive row.**
+
+### 🆕 `Gap 273` — the **213** no-payload repos have not been through the registry and tree layers
+
+🔴 **`P730` measured 213 of 1 020 (20,9 %) with no grant locatable at 19 filenames at `HEAD`.**
+🟢 **That is an upper bound on "ungranted", not a count of it** — this KB's own
+`p441-tree-licence-enumeration` and `p440-unlicensed-registry-grant` exist because grants also live
+in subdirectories, `setup.py` classifiers, `LICENSES/` trees and registry records. 🟢 **Cheapest
+remaining licence work on this KB**, and the oracles it needs (`pypi`, `npm`, `packagist`, `gitlab`)
+all answer `200` ×3.
+
+### 🆕 `Gap 274` — the mandated trending query's measured yield is **zero over eight weeks**
+
+🔴 **`github trending {industry} AI {year}` has returned no education repository for eight
+consecutive weeks.** 🟢 **It is kept because it is mandated.** 🟢 **But both real finds of the last two
+passes came from **narrow assessment-specific queries** (`rubric`, pass 56;
+`automated-summary-evaluation-llm`, this pass), and this pass's five misgrants came from
+**re-reading the shelf**. 🔴 **No pass has yet proposed a named replacement to run *alongside* the
+mandated one.**
+
+### 🆕 `Gap 275` — no shelf carries an **evidence-class marker**
+
+🔴 **`P731`: repo rows are payload-verified; market and regulatory rows are irreducibly second-hand
+in this environment — and 57 passes have published both in the same visual register.** 🟢 **Bounded
+remedy: a single marker convention (e.g. 🟢 measured / 🟡 reported) applied in `intel/market.md`
+first, where it matters most.** 🔵 **Cost: a convention plus one pass of application** — 🔴 **and
+`P732` is the warning that declaring a convention is not applying it.**
+
+### 🆕 `Gap 276` — no actively-released permissive LTI 1.3 tool-side library identified
+
+🔴 **`P740`: `pylti1.3` is MIT and sound, and its last PyPI release is `2022-11-20` — ~3 years
+11 months.** 🟢 **It is `R57a`'s authentication boundary**, so staleness lands on the JWT validation
+path. 🔴 **Alternatives were not licence-measured this pass.**
+
+### 🟡 Gaps **not advanced** this pass, stated so no pass reads this one as progress
+
+🔴 **`Gap 253`** — none of the 21 remaining `P541` empty-input instruments were fixed. 🟢 **The new
+`p725` instrument ships *with* the guard (refuses empty input and no-argument with exit 2), so the
+defect was not added to.**
+🔴 **`Gap 264`** — the two false `OATutor-Content` sentences are **still standing** on `agents/top.md`
+and `intel/trends.md`. 🔵 **Deliberate: left auditable, and the sweep independently re-confirmed
+`OATutor-Content` carries no repo-level payload, which is consistent with `P703`'s three-part
+reading.**
+🔴 **`Gap 265`** — `AITutor-EvalKit` still ships no grant; **sixth** refusal. 🟢 **And a second repo
+joined its family this pass: `Xiaochr/LLM-AES`, 9 filenames `404`.**
+🔴 **`Gap 266`** — the UAE mandate date is **still unresolved**, second pass.
+🔴 **`Gap 254` / `Gap 255`** — not advanced.
+
 ## 🟢 Pass 55, 2026-10-08 — three gaps declared, **one closed**, and the capability rule tightened from "re-measure" to "re-measure every pass"
 
 > 🔵 **This pass's opening hypothesis was that pass 54's freshly measured oracle map could be

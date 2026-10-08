@@ -1,0 +1,102 @@
+slug	readme_assert	payload_family	payload_file	bytes	verdict
+Ed-Fi-Exchange-OSS/Ed-Fi-Clever-Integration		Apache	LICENSE	11357	NO_README
+Khan/tutoring-accuracy-dataset		OTHER	LICENSE	2690	NO_README
+INGInious/INGInious		AGPL	LICENSE	34764	NO_README
+MuhammadUsman0005/Student-Dropout-Prediction-System		MIT	LICENSE	1071	NO_README
+AI-for-Education/fabdata-parsedoc		MIT	LICENSE	1065	NO_README
+LibreTexts/LibreOne		MIT	LICENSE.md	1067	NO_README
+Pearson-Advance/openedx-lti-tool-plugin		Apache	LICENSE	11357	NO_README
+SafeExamBrowser/seb-server		MPL	LICENSE	16725	NO_README
+ScottDaniels/labaaoom		BSD	LICENSE	2266	NO_README
+Ahmed-html/unlimited-ai-platform		NONE		0	NO_README
+710git/course-drift-oracle	UNPARSED	NONE		0	UNGRANTED
+EastArctica/canvas-mcp		NONE		0	NO_README
+AngelitUX/EstudiaUni		NONE		0	NO_README
+CAHLR/OATutor-Content	UNPARSED	NONE		0	UNGRANTED
+DMontgomery40/mcp-canvas-lms	UNPARSED	NONE		0	UNGRANTED
+OS4ED/openSIS-Responsive-Design	UNPARSED	NONE		0	UNGRANTED
+Jeremiah0067/Ai_Rubric		NONE		0	NO_README
+OS4ED/openSIS-Classic	UNPARSED	NONE		0	UNGRANTED
+Llamacha/IWSLT2025_Quechua_data	UNPARSED	NONE		0	UNGRANTED
+AmericasNLP/americasnlp2024		NONE		0	NO_README
+NLP2CT/LLM-generated-Text-Detection	MIT	NONE		0	UNGRANTED
+RadiantCrystal/SafeTutors	MIT	NONE		0	UNGRANTED
+codelitdev/courselit		AGPL	LICENSE.md	34143	NO_README
+dmitry-viskov/pylti1.3		MIT	LICENSE	1070	NO_README
+dikshant182004/MathTutor		MIT	LICENSE	1068	NO_README
+dmitry-viskov/pylti1.3-flask-example		MIT	LICENSE	1070	NO_README
+datacamp/catsim		GPL	COPYING	35147	NO_README
+dmitry-viskov/pylti1.3-django-example		MIT	LICENSE	1070	NO_README
+eduNEXT/openedx-lti-tool-plugin		Apache	LICENSE	11357	NO_README
+fairlearn/fairlearn		MIT	LICENSE	1168	NO_README
+edx/ease		AGPL	LICENSE.txt	35136	NO_README
+SabioTechTeam/Teacher-Hub	MIT	NONE		0	UNGRANTED
+Timadey/proctor	MIT	NONE		0	UNGRANTED
+SchoolUtils/WebUntis		NONE		0	NO_README
+aisingapore/sealion	UNPARSED	NONE		0	UNGRANTED
+aisingapore/sea-lion	UNPARSED	NONE		0	UNGRANTED
+ZeydSaeed/SIS		NONE		0	NO_README
+caiuc/proyectos-hacaithon-2026		NONE		0	NO_README
+cqm3ron/bromcom-scraper		NONE		0	NO_README
+cran/difR		NONE		0	NO_README
+h5p/h5p-php-library		GPL	LICENSE.txt	35146	NO_README
+dhakalaashish/knowledge_tracing_foundationalASSIST	CC	NONE		0	UNGRANTED
+european-commission-empl/European-Learning-Model	UNPARSED	OTHER	license	13865	UNPARSED_ASSERTION
+eth-lre/MathTutorBench	UNPARSED	NONE		0	UNGRANTED
+eth-lre/mathtutorbench	UNPARSED	NONE		0	UNGRANTED
+inuyasha2012/pypsy		MIT	LICENSE	1068	NO_README
+examplary/qti.git		NONE		0	NO_README
+fh-yarbouh/oak-curriculum-ontology		NONE		0	NO_README
+iterative/dvc		Apache	LICENSE	11340	NO_README
+felipedias-ie/blackboard-mcp.git		NONE		0	NO_README
+jeanlucio/moodle-local_aihub	GPL	GPL	COPYING.txt	35149	AGREE
+fracabu/scorm-course-generator	MIT	NONE		0	UNGRANTED
+licensee/licensee		MIT	LICENSE.md	1088	NO_README
+languagetool-org/languagetool	UNPARSED	LGPL	COPYING.txt	26432	UNPARSED_ASSERTION
+haanhtuandev/vgu-mcp	MIT	NONE		0	UNGRANTED
+foradian/fedena		NONE		0	NO_README
+malaysia-ai/malaya-speech		MIT	LICENSE	1072	NO_README
+malaysia-ai/malaya		MIT	LICENSE	1068	NO_README
+horaciohudson/corretor-redacao		NONE		0	NO_README
+hxwujinze/federated-deep-knowledge-tracing		NONE		0	NO_README
+mazhar266/fedena		Apache	LICENSE.md	11357	NO_README
+huni1023/EqUMP		NONE		0	NO_README
+openedx/openedx-platform		AGPL	LICENSE	35136	NO_README
+jadrianlg16/learning-tutor	AGPL	NONE		0	UNGRANTED
+jnehring/awesome-low-resource-languages	Apache	NONE		0	UNGRANTED
+kaushal0494/UnifyingAITutorEvaluation	UNPARSED	NONE		0	UNGRANTED
+moodle/moodle	UNPARSED	GPL	COPYING.txt	35147	UNPARSED_ASSERTION
+iqiipo-dev/PS-HK19_MindForge_MindForge		NONE		0	NO_README
+openedx/edx-platform		AGPL	LICENSE	35136	NO_README
+kaushal0494/AITutor-EvalKit	MIT	NONE		0	UNGRANTED
+openedx/platform-plugin-aspects		Apache	LICENSE	11357	NO_README
+openedx/tutor-contrib-aspects		Apache	LICENSE	11357	NO_README
+openedx/xblock-lti-consumer		AGPL	LICENSE	34520	NO_README
+nvaccess/nvda	UNPARSED	GPL	copying.txt	53408	UNPARSED_ASSERTION
+oppia/oppia		Apache	LICENSE	11358	NO_README
+project-sunbird/sunbird-telemetry-sdk		MIT	LICENSE	1072	NO_README
+openedx/event-routing-backends		AGPL	LICENSE.txt	35139	NO_README
+overhangio/tutor		AGPL	LICENSE.txt	34523	NO_README
+meyerjp3/psychometrics	Apache	NONE		0	UNGRANTED
+openedx/edx-proctoring		AGPL	LICENSE.txt	35119	NO_README
+python-webuntis/python-webuntis		BSD	LICENSE	1505	NO_README
+learningequality/kolibri-server		NONE		0	NO_README
+malaysia-ai/malaysian-dataset		NONE		0	NO_README
+sikkepitje/TeamSync		GPL	LICENSE	35149	NO_README
+myxineglutinosameniere4389/STUTIFY	UNPARSED	NONE		0	UNGRANTED
+ucfopen/pylti1.3		MIT	LICENSE	1070	NO_README
+nexB/scancode-toolkit		NONE		0	NO_README
+radhepa/Teacher-MCP		NONE		0	NO_README
+planejaia/OpenMAIC-Brasil		NONE		0	NO_README
+openedx/XBlock		NONE		0	NO_README
+sabuhi-huseynli-grc/High-Risk-Deployer-FRIA-Governance-Toolkit		NONE		0	NO_README
+rachelproject/module-template	CC	NONE		0	UNGRANTED
+shakyanaitik0-bot/Agentic_AI_Tutor	MIT	NONE		0	UNGRANTED
+spdx/license-list-data	UNPARSED	NONE		0	UNGRANTED
+this-org-does-not-exist-zzz9/nope		NONE		0	NO_README
+shimahikojin/google-classroom-mcp		NONE		0	NO_README
+riiid/ednet	CC	NONE		0	UNGRANTED
+tejpalvirk/student	MIT	NONE		0	UNGRANTED
+trilogy-group/oneroster-ts.git		NONE		0	NO_README
+ucfopen/pylti1.3.git		NONE		0	NO_README
+zainf2327/mcp-classroom	MIT	NONE		0	UNGRANTED

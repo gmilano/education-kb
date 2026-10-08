@@ -4,6 +4,97 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-seventh pass, 2026-10-08 — the shelf's **licence-family census**, measured from payload for the first time: **74 % permissive**, and **one repo in five has no locatable grant**
+
+> 🔵 **This pass's opening hypothesis was that the foundations shelf's licence column was broadly
+> right and the question was which rows to add.
+> 🟡 CONFIRMED on direction, REFUTED on completeness.** 🟢 **Sweeping all **1 020** shelved slugs
+> (`P725`) produced the first payload-measured census this KB has ever had of what it is actually
+> standing on — and the finding is not the permissive share, it is the **213 repos with no grant
+> this environment can locate**.
+
+### 🟢 `P730` — the census: what the 1 020 shelved repos actually grant
+
+🟢 **Every family below read from the licence **payload** at `HEAD`, never from prose, a badge, or a
+GitHub sidebar (which is `403` here). 🟢 **19 filenames tried per repo**, `COPYING.txt` included
+after `P727`:**
+
+| Family | n | % of 1 020 |
+|---|---|---|
+| 🟢 **MIT** | **423** | **41,5 %** |
+| 🔴 **no payload locatable** | **213** | **20,9 %** |
+| 🟢 **Apache-2.0** | **147** | 14,4 % |
+| 🔴 GPL | 67 | 6,6 % |
+| 🔴 **AGPL** | **45** | 4,4 % |
+| 🟡 unclassified (`OTHER`) | 40 | 3,9 % |
+| 🟡 CC (content) | 34 | 3,3 % |
+| 🟢 BSD | 21 | 2,1 % |
+| 🔴 MPL | 13 | 1,3 % |
+| 🔴 LGPL | 8 | 0,8 % |
+| 🟢 Unlicense · ISC · WTFPL | 3 · 2 · 1 | 0,6 % |
+| 🔴 EPL | 3 | 0,3 % |
+
+🟢 **Grouped, over the **807** slugs that have a readable payload:**
+
+| Group | n | % of 807 with payload |
+|---|---|---|
+| 🟢 **Permissive** (MIT · Apache · BSD · ISC · Unlicense · WTFPL) | **597** | 🟢 **74,0 %** |
+| 🔴 **Copyleft** (GPL · AGPL · LGPL · MPL · EPL) | **136** | 🔴 **16,9 %** |
+| 🟡 Content (CC) | 34 | 4,2 % |
+| 🟡 Unclassified | 40 | 5,0 % |
+
+> 🟢 **`P730`.** *Three quarters of what this KB shelves is permissive, so the mandate's
+> "focus on MIT / Apache / BSD" is **satisfied by the shelf as it stands**, not aspirational. 🔴 **But
+> `AGPL` at 45 repos is the number to plan around**: it is the one family where *hosting* a service
+> triggers the obligation, and education delivery is hosted by default.* 🔵 **`MIT` at 41,5 % is also
+> the reason `P725`'s misgrants matter: MIT is what a README claims when it is wrong.**
+
+🔴 **The 213 are an upper bound on "ungranted", not a count of it.** 🟢 **Stated precisely: *no grant
+was locatable at 19 filenames at `HEAD`*.** 🔵 **A grant may still live in a subdirectory, a
+`setup.py` classifier, a registry record, or a sibling `LICENSES/` tree** — this KB's own
+`p441-tree-licence-enumeration` and `p440-unlicensed-registry-grant` exist precisely because those
+layers carry grants. 🆕 **`Gap 273` — the 213 have not been run through the registry and tree
+layers, which is the cheapest remaining licence work on this KB.**
+
+### 🟢 `P727a` — three foundational repos were wrongly readable as ungranted, and all three are copyleft
+
+🟢 **Corrected by `P727`'s filename fix and re-read first-hand:**
+
+| Foundational repo | Grant, read first-hand | Bytes (stored) | Filename |
+|---|---|---|---|
+| **`moodle/moodle`** | 🔴 **GPL-3.0** | **35 147** | 🟢 `COPYING.txt` |
+| **`nvaccess/nvda`** | 🔴 **GPL** (53 408 B — carries appended terms) | **53 408** | 🟢 `copying.txt` |
+| **`languagetool-org/languagetool`** | 🔴 **LGPL family** | **26 432** | 🟢 `COPYING.txt` |
+
+🔵 **Moodle is the single most-cited platform on this KB**, and a sweep that mis-filed it as
+ungranted would have been the most consequential error of the pass. 🟢 **It was caught by the
+filename fix, which is why `P727` is written as a sampling-frame rule rather than a typo.**
+
+### 🟢 Foundational rows measured first-hand this pass, with the **AGPL** layer called out
+
+🟢 **All read from payload at `HEAD`, stored bytes (`P704`):**
+
+| Repo | Grant (payload) | Bytes | Note for a Globant engagement |
+|---|---|---|---|
+| **`INGInious/INGInious`** | 🔴 **AGPL** | **34 764** | Auto-grading platform. 🔴 **Hosted grading = §13 triggers.** Self-host for a client **on the client's own infrastructure**, or keep it an internal oracle |
+| **`edx/ease`** | 🔴 **AGPL** | **35 136** | Essay-scoring library, archived. 🟢 **Channel claim and payload agree** — recorded as a positive control on the prose channel |
+| **`codelitdev/courselit`** | 🔴 **AGPL** | **34 143** | Course platform — same hosting constraint |
+| **`datacamp/catsim`** | 🔴 **GPL** | **35 147** | CAT / item-response simulation, via `COPYING` |
+| **`SafeExamBrowser/seb-server`** | 🔴 **MPL** | **16 725** | File-level copyleft — safer than AGPL, still not permissive |
+| **`Ed-Fi-Exchange-OSS/Ed-Fi-Clever-Integration`** | 🟢 **Apache-2.0** | **11 357** | Rostering integration |
+| **`eduNEXT/openedx-lti-tool-plugin`** · **`Pearson-Advance/openedx-lti-tool-plugin`** | 🟢 **Apache-2.0** | **11 357** each | LTI tool plugins for Open edX |
+| **`dmitry-viskov/pylti1.3`** (+ django/flask examples) | 🟢 **MIT** | **1 070** each | 🟢 **LTI 1.3 in permissive Python** — the integration primitive |
+| **`LibreTexts/LibreOne`** | 🟢 **MIT** | **1 067** | Identity / SSO for an OER estate |
+| **`AI-for-Education/fabdata-parsedoc`** | 🟢 **MIT** | **1 065** | Document parsing aimed at education content |
+| **`ScottDaniels/labaaoom`** | 🟢 **BSD** | **2 266** | — |
+| 🟡 **`Khan/tutoring-accuracy-dataset`** | 🟡 **unclassified**, 2 690 B | 2 690 | 🔴 **Read before use** — a dataset grant, not a code licence; `p317-data-license-layer` applies |
+
+> 🔵 **The engagement-relevant split is not permissive-vs-copyleft, it is **hosted**-vs-shipped.**
+> 🔴 **Every AGPL row above is a platform a client would *host*, which is exactly where §13 bites**,
+> while the permissive rows are libraries you *link*. 🟢 **So the shelf's AGPL concentration is in
+> the platform layer and its MIT concentration is in the integration layer** — plan the architecture
+> around that, not around a licence count.
+
 ## 🟢 Fifty-sixth pass, 2026-10-08 — **one row added**, and the shelf's provenance convention upgraded from branch name to **commit SHA**
 
 ⏱️ **Tenth pass of this date.** 🟢 **One row added** — the mandated foundations channel is saturated
