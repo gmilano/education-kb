@@ -12,6 +12,11 @@ instrument was checked term by term against the tree before being called new.** 
 
 ### 🔴 The regional yield, with its denominator
 
+🔵 **Denominator stated, because `intel/trends.md` publishes a different one for this same channel:**
+this table counts **instruments, bodies *and* market figures** (33); `intel/trends.md` counts
+**instruments and bodies only** (31), excluding the two EMEA market figures. 🟢 **Same channel, same
+result — 🔴 1 new in both — and both denominators are published so neither reads as a contradiction.**
+
 | Region | Instruments / figures the channel named | 🟢 Already held | 🆕 New |
 |---|---|---|---|
 | **North America** | Ohio's mandatory district AI policy (by **2026-07-01**), CA **A.B. 1159** (no training on student data unless it benefits the school), ID **SB 1227**, **H.R. 8747** (committee **2026-07-21**, *not enacted*), OK + MD human-oversight bans on high-stakes decisions, **NYC** one-year K-8 student-facing moratorium, GA + MS CS credit requirements, AASA student-authored framework | 🟢 **8 / 8** | 🔴 **0** |

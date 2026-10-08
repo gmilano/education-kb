@@ -61,8 +61,13 @@ query said so about itself for the second consecutive pass.**
 
 ### 🔴 Trend 5 — the regional channel's new-information yield is **zero for the fourth consecutive pass**, and this time it was counted
 
-🔵 **Four regional queries ran verbatim. 23 of 24 named instruments, bodies and figures were already
-held by this KB**, checked term by term against the tree:
+🔵 **Four regional queries ran verbatim. 30 of 31 named *instruments and bodies* were already held by
+this KB**, checked term by term against the tree. 🔵 **The table in `intel/market.md` for this same
+pass counts 32 of 33 — it is the same channel and the same result, with two EMEA *market figures*
+(EU `$2.64 B → $8.0 B`, `10 %` of 450+ institutions with formal guidelines) included in its
+denominator and excluded from this one, which counts instruments only.** 🔴 **Both denominators are
+published rather than one, because a single unexplained total across two files is how a corpus
+contradicts itself.**
 
 | Region | Named this pass | Already held |
 |---|---|---|
