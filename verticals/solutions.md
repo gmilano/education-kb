@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-eighth pass, 2026-10-08 — the vertical shelf has **three copyleft bands, not one**, and the education **ERP** band is **LGPL** — which is the one band Globant can build proprietary modules on
+
+⏱️ **Twelfth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+> 🔵 **This pass's opening hypothesis was that the vertical channel would repeat its structural answer and that `openeducat` was ungranted, as pass 57 filed it.
+> 🔴 **Both REFUTED by payload.** 🟢 **`openeducat` is **LGPL-3.0**, its substrate Odoo is **LGPL-3.0** too, and that pairing is architecturally different from every other platform on this shelf.**
+
+### 🟢 `P747` — the four substrates, every grant read first-hand this pass
+
+🟢 **Payload at `HEAD`, grant name matched in the title window (`P726`), byte counts stored:**
+
+| Platform | Role | 🟢 **Grant (payload, first-hand)** | File | Bytes | `refs/heads` |
+|---|---|---|---|---|---|
+| **`odoo/odoo`** | ERP framework | 🟡 **LGPL-3.0** | `LICENSE` | **43 529** | 97 |
+| **`openeducat/openeducat_erp`** | 🟢 **education-native ERP on Odoo** | 🟡 **LGPL-3.0** | `LICENSE` | **8 241** | **992** |
+| **`frappe/erpnext`** | ERP + CRM | 🔴 **GPL-3.0** | 🟡 **`license.txt`** | **35 149** | 689 |
+| **`twentyhq/twenty`** | CRM | 🔴 **AGPL-3.0** | `LICENSE` | **39 965** | **2 133** |
+
+🔴 **`odoo/odoo` carries the `P742` shape too** — its `LICENSE` pairs a reference phrase with an in-file grant, verdict **`GRANTED_DESPITE_REFERENCE`** from this pass's instrument. 🔵 **Two of the four substrates here would be mis-filed as ungranted by a reference-resolving test, and both are the **LGPL** ones** — 🟢 **so the band this pass makes available for `R58a` is exactly the band the old instrument was blind to (`P730a`).**
+
+🔴 **The channel got one of these wrong, and it is the one it was most specific about.** 🟢 **It stated `twentyhq/twenty` uses *"the Business Source License 1.1, which restricts large-scale commercial use and SaaS deployment, so it isn't OSI-approved open source"*. 🔴 **Payload at `HEAD` is `GNU Affero General Public License, Version 3` — 39 965 B.** 🔵 **BSL and AGPL are both obstacles to a hosted product, so the channel's *advice* happened to land safely while its *fact* was wrong — and a reader who trusted the fact would have mis-planned the remedy** (BSL expires into a permissive grant on a date; AGPL never does).
+
+> 🟢 **`P747`.** *The vertical shelf has **three** copyleft bands, and the distinction is the whole planning input:*
+> 🟡 **LGPL-3.0 — trigger is *linking*.** Odoo, OpenEduCat. 🟢 **A separate add-on module can stay proprietary.**
+> 🔴 **GPL-3.0 — trigger is *distribution of a derivative*.** Moodle (`P734`), ERPNext. 🔴 **Ship a modified build and you owe source.**
+> 🔴 **AGPL-3.0 — trigger is *network use* (§13).** Canvas, Open edX (`P734`), Twenty. 🔴 **Host it and you owe source to every user.**
+> 🔵 **Pass 57 concluded "education's platform layer is copyleft" and stopped there. 🟢 **That is true and too coarse to act on: the band decides whether a client engagement is possible at all.***
+
+### 🟢 `P747a` — why **LGPL** is the band that changes what Globant can sell
+
+🟢 **This is the first permissive-adjacent *platform* answer this KB has been able to give in eight passes of the vertical channel returning *"no education-specific platform under MIT or Apache; build it yourself."***
+
+| Question | Moodle / Canvas / Open edX | 🟢 **OpenEduCat on Odoo** |
+|---|---|---|
+| Can Globant ship a **custom module** without publishing it? | 🔴 **No** — GPL derivative / AGPL §13 | 🟢 **Yes** — LGPL §4: a work that *links* the library may ship under your own terms |
+| Can Globant **host** it for a client? | 🔴 **AGPL: owe source to every user** | 🟢 **Yes** — LGPL has **no** network clause |
+| Must Globant publish changes to the **platform itself**? | 🔴 Yes | 🔴 **Yes** — modify Odoo/OpenEduCat core and that file stays LGPL |
+| Integration route if the answer above is unacceptable | 🟢 **LTI 1.3 boundary (`P736`/`R57a`)** | 🟢 **Odoo addon boundary — a module directory, not a patch** |
+
+🔴 **The condition, stated so no later pass softens it:** 🟢 **the LGPL add-on route holds only while the module is an *addon* — a separate directory loaded by the framework.** 🔴 **The moment Globant patches Odoo or OpenEduCat core files, those files are LGPL and owed back.** 🔵 **Same discipline as `P736`'s two conditions, one layer down: the boundary is real but it is **structural**, and a "quick fix in core" dissolves it.**
+
+🆕 **`Gap 279` — whether an Odoo addon is a "work that uses the library" under LGPL §4, or a derivative of it, depends on how Odoo's ORM loads modules, and this KB has not read that mechanism.** 🟡 **Odoo's own commercial addon ecosystem is strong practical evidence for the permissive reading, and practice is not a licence analysis.** 🔴 **Recorded as open, not as settled — the `P744` constraint does not apply here, so a later pass can close this by reading the loader.**
+
+### 🟡 `P747b` — a fourth filename convention, and it is lowercase
+
+🟢 **`frappe/erpnext` ships its grant as `license.txt` — lowercase, `.txt`.** 🔵 **`P727` added `COPYING.txt` after three repos were mis-filed; this pass adds the observation that case matters too.** 🟢 **The sweep's 19-filename list did catch it; recorded because the **family** of near-misses is now four (`COPYING`, `COPYING.txt`, `license.txt`, and attribution-split-from-grant per `P742`) and every one of them sits in a **copyleft** repo (`P730a`).**
+
+### 🔴 The mandated vertical query, run and counted — **ninth** structurally identical week
+
+🟢 **`open source platform education ERP CRM MIT Apache`, run globally and once per region.** 🔴 **Education-specific platforms under MIT or Apache: zero — the channel's own words: *"None of the results showed an Apache-2.0 education ERP or CRM."***
+
+| Returned | Channel's claim | 🟢 **This pass's payload reading** |
+|---|---|---|
+| **OpenEduCat** | *"built on an open-source ERP framework… uses Odoo's ORM"*; 🟡 **licence not stated** | 🟢 **LGPL-3.0, 8 241 B — measured** |
+| Odoo | 🟡 **licence not stated** — *"you'd need to check that directly"* | 🟢 **LGPL-3.0, 43 529 B — measured** |
+| **ERPNext** | *"GPL v3, which is copyleft"* | 🟢 **CONFIRMED — GPL-3.0, 35 149 B** |
+| **Twenty** | 🔴 *"Business Source License 1.1 … isn't OSI-approved"* | 🔴 **REFUTED — AGPL-3.0, 39 965 B** |
+| *"Several other CRM/ERP projects under MIT or AGPL-3.0"* | 🔴 **unnamed** | 🔴 **unverifiable — an unnamed row is not a finding** |
+
+> 🟢 **The structural answer the channel has given for nine weeks is now **half wrong**.** 🔴 *"No education-specific platform under MIT or Apache"* — 🟢 **true, and still true.** 🔴 *"So build the education layer yourself on a permissive general ERP"* — 🔴 **there is no permissive general ERP in this result set either: the three it named are LGPL, GPL and AGPL.** 🟢 **The real answer is better than the channel's and only payload reveals it: build on the **LGPL** band, where an addon boundary does the work the channel wrongly expected a permissive licence to do.**
+
+---
+
+
 ## 🟢 Fifty-seventh pass, 2026-10-08 — the vertical channel's structural answer is **wrong**, and payload proves it: two education-native platforms **are** permissive
 
 > 🔵 **This pass's opening hypothesis was that the vertical channel would return the same structural

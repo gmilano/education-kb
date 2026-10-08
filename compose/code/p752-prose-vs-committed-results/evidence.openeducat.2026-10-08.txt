@@ -1,0 +1,51 @@
+=== committed evidence this KB already holds for openeducat/openeducat_erp ===
+compose/code/p444-root-vs-tree-family/result.2026-10-07.tsv:331:openeducat/openeducat_erp	LICENSE	LGPL	ROOT-ONLY	-	-	-	-	-	-
+compose/code/p444-root-vs-tree-family/slugs.input.2026-10-07.txt:330:openeducat/openeducat_erp
+compose/code/p444-root-vs-tree-family/payloads.licensed.2026-10-07.tsv:330:openeducat/openeducat_erp	LICENSED	LICENSE	8241	LGPL
+compose/code/p204-writesurface-axis/result.2026-10-04.tsv:14:openeducat/openeducat_erp	master	LICENSE	200	8241	528f84036800	LGPL	NOT-APPLICABLE (LGPL: holder not in the license text by construction)
+compose/code/licence-grant-gate/README.md:116:| `openeducat/openeducat_erp` | LGPL-3.0 | `information, please see the COPYRIGHT file` |
+compose/code/p275-tree-enumeration/README.md:44:| `openeducat/openeducat_erp` | `18.0` | **raíz del repo** | 15 | 173 | 🟢 `SIN-AI-EN-NUCLEO` |
+compose/code/p275-tree-enumeration/result.2026-10-04.tsv:14:openeducat/openeducat_erp	18.0	<raiz>	SIN-AI-EN-NUCLEO	componentes=15	arbol=173
+compose/code/p443-canonical-spelling/result.2026-10-07.tsv:334:openeducat/openeducat_erp	openeducat/openeducat_erp	openeducat/openeducat_erp	SPELLING-MATCH	self-link:README.md
+compose/code/git-recency-channel/data/recency-2026-10-06.tsv:712:openeducat/openeducat_erp	2026-09-07T17:27:28+05:30	1c95cef	OK
+compose/code/git-recency-channel/data/references-2026-10-06.txt:714:openeducat/openeducat_erp
+compose/code/p637-cross-instrument-licence-agreement/README.md:11:Medido sobre `openeducat/openeducat_erp` (`master/LICENSE`, 8 241 B), la única plataforma LGPL
+compose/code/p445-classifier-divergence/result.2026-10-07.pass29.tsv:331:openeducat/openeducat_erp	LICENSE	8241	LGPL	LGPL-3.0	YES	AGREE
+compose/code/p445-classifier-divergence/result.2026-10-07.tsv:331:openeducat/openeducat_erp	LICENSE	8241	LGPL	LGPL	YES	AGREE
+compose/code/p448-crossref-oracle/shelf.input.2026-10-07.txt:403:openeducat/openeducat_erp
+compose/code/p206-erp-layer-license/result-D2corrected.2026-10-03.tsv:11:openeducat/openeducat_erp	LGPL	LICENSE	8240	sha256:8f4ce028f93d	NOT-APPLICABLE	(steward copyright, not the project's -- P184)
+compose/code/p206-erp-layer-license/result.2026-10-03.tsv:5:openeducat/openeducat_erp	LGPL	LICENSE	8240	sha256:8f4ce028f93d	NOT-APPLICABLE	(steward copyright, not the project's -- P184)
+compose/code/p206-erp-layer-license/targets-all.tsv:11:openeducat/openeducat_erp
+compose/code/p206-erp-layer-license/targets.tsv:5:openeducat/openeducat_erp
+compose/code/p742-grant-body-vs-reference/result.2026-10-08.tsv:2:openeducat/openeducat_erp	LICENSE	8241	LGPL	yes	yes	GRANTED_DESPITE_REFERENCE
+compose/code/p742-grant-body-vs-reference/README.md:8:Pass 57 filed `openeducat/openeducat_erp` under *"Reference-to-nothing — the
+compose/code/p742-grant-body-vs-reference/README.md:33:| `openeducat/openeducat_erp` | `LICENSE` | 8 241 | **LGPL** | **`GRANTED_DESPITE_REFERENCE`** |
+compose/code/p269-provider-release-matrix/platform-layer.2026-10-04.tsv:12:openeducat/openeducat_erp	requirements.txt	404	-	NO-CLAIM (el manifiesto no esta en esa ruta; no se afirma ausencia)
+compose/code/p269-provider-release-matrix/licenses.2026-10-04.tsv:10:openeducat/openeducat_erp	HEAD/LICENSE	200	"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3"	LGPL-3.0
+compose/code/p269-provider-release-matrix/README.md:101:| `openeducat/openeducat_erp` | `requirements.txt` → **404** | — | ⚠️ **`NO-CLAIM`** (el manifiesto no está en esa ruta; **no se afirma ausencia**) |
+compose/code/p269-provider-release-matrix/README.md:121:| `openeducat/openeducat_erp` | 🔵 **LGPL-3.0** |
+compose/code/p342-license-claim-vs-file/actionC-fingerprints.2026-10-05.tsv:3:openeducat/openeducat_erp	master/LICENSE	200	8241	528f84036800	8f4ce028f93d	0a
+compose/code/p273-platform-provider-dir/platform-tally.2026-10-04.tsv:12:openeducat/openeducat_erp	MANIFIESTO-REAL + ARBOL	3	SIN-PROVEEDOR	NO-CLAIM -> MEDIDO	92
+compose/code/p273-platform-provider-dir/controls.2026-10-04.tsv:10:compuerta-openeducat-mala	raw/openeducat/openeducat_erp/zzz-fake-ref-92/README.md	404	DISCRIMINA
+compose/code/p273-platform-provider-dir/README.md:43:| `openeducat/openeducat_erp` | MANIFIESTO-REAL + ÁRBOL | 3 | SIN-PROVEEDOR | 🟢 **NO-CLAIM → MEDIDO** |
+compose/code/p273-platform-provider-dir/README.md:105:🟢 **`openeducat/openeducat_erp` pasa de NO-CLAIM a MEDIDO, y es P270 otra vez.** El pase 90 probó
+compose/code/p459-unified-verdict/result.2026-10-07.tsv:331:openeducat/openeducat_erp	LICENSE	root	8241	LGPL	LGPL-3.0	YES	LGPL-3.0	ALLOWED	-
+compose/code/p447-deep-grant-divergence/licensed.input.2026-10-07.tsv:330:openeducat/openeducat_erp	LICENSE	8241	LGPL
+compose/code/p447-deep-grant-divergence/payloads-corrected.2026-10-07-pass27.tsv:330:openeducat/openeducat_erp	LICENSED	LICENSE	-	LGPL
+compose/code/p447-deep-grant-divergence/divergence.tsv:331:openeducat/openeducat_erp	ROOT-ONLY	LICENSE	LGPL	LGPL	same	2	GPL,LGPL	2	GPL,LGPL	0	-	-
+compose/code/p449-prose-tsv-reconciliation/reconcile.tsv:232:openeducat/openeducat_erp	AGREE	LGPL	LGPL	LGPL	../../../verticals/solutions.md:57	row	2
+compose/code/p184-holder-mismatch/result.2026-10-07.tsv:330:openeducat/openeducat_erp	NOT-APPLICABLE	(LGPL: holder not in the license text by construction)	LGPL	LICENSE	8241
+compose/code/p436-fork-hypothesis/slugs.input.2026-10-07.txt:407:openeducat/openeducat_erp
+compose/code/p436-fork-hypothesis/holder.2026-10-07.tsv:330:openeducat/openeducat_erp	NOT-APPLICABLE	(LGPL: holder not in the license text by construction)	LGPL	LICENSE	8241
+compose/code/p436-fork-hypothesis/recency.2026-10-07.tsv:407:openeducat/openeducat_erp	2026-09-07T17:27:28+05:30	1c95cef	OK
+compose/code/p436-fork-hypothesis/payloads.2026-10-07.tsv:407:openeducat/openeducat_erp	LICENSED	LICENSE	8241	LGPL
+
+=== licence families named alongside it in committed TSVs ===
+     31 LGPL
+      2 GPL
+
+🔴 CONTRADICTION: you are asserting 'UNGRANTED', and this KB holds
+   committed evidence of a 'LGPL' grant for openeducat/openeducat_erp.
+   This is the pass-57 regression shape (P752). Read the payload again
+   before publishing — and scan the whole licence file for a grant
+   body rather than resolving a reference inside it (P742).

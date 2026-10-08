@@ -4,6 +4,87 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-eighth pass, 2026-10-08 — five trends: copyleft is **systematically under-counted**, the governance gap is the real market, permission ≠ reachability, the registry is a dated oracle, and a channel fact failed where its advice held
+
+⏱️ **Twelfth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+> 🔵 **This pass's opening hypothesis was that the mandated channels would contribute at least one trend.
+> 🔴 REFUTED for the ninth week.** 🟢 **Four of the five trends below came from **re-reading the shelf**, and the fifth came from **measuring the environment itself**. Neither is a channel.**
+
+### 🔴 Trend 1 — every licence-instrument defect this KB has found under-counts **copyleft**, four for four
+
+🟢 **This is now a pattern with enough instances to name as a trend rather than a run of bad luck:**
+
+| Defect | Repos mis-filed as ungranted | 🔴 **True family** |
+|---|---|---|
+| 🔴 `P727` — `COPYING.txt` absent from the filename list | `moodle/moodle` · `nvaccess/nvda` · `languagetool-org/languagetool` | 🔴 **GPL** ×3 |
+| 🔴 **`P742`** — attribution reference mistaken for the grant | **`openeducat/openeducat_erp`** | 🔴 **LGPL-3.0** |
+
+🟢 **Four corrections, four copyleft repos, zero permissive.** 🔵 **The mechanism is not chance: the conventions these instruments miss — `COPYING`, `COPYING.txt`, lowercase `license.txt` (`P747b`), and separating copyright attribution from the grant — **are the GNU house conventions**, so a naive instrument's blind spot is *shaped like the copyleft family*.**
+
+> 🔴 **Trend 1, stated for planning.** *The shelf's **213 "no grant locatable"** repos (`P730`) must be read as **"unknown, skewed copyleft"**, never as "unencumbered".* 🔴 **A team triaging that bucket as low-risk has the risk precisely inverted**, and the error direction is the expensive one (`P701`): 🟢 **a false *permissive* reading ships; a false *copyleft* reading merely delays.**
+
+### 🟢 Trend 2 — the education AI market's measurable scarcity is **governance, not tooling**
+
+🟢 **Two independent regional studies, different methods, same shape (`P749`):** 🟡 **LATAM — 87 % of institutions use AI, ~26 % have any formal framework (61-pt gap).** 🟡 **North America — 92 % student usage reported against 10 % of institutions with formal AI guidelines and 71 % of teachers untrained (~82-pt gap).** 🟡 **APAC — governance *"gaps widen"*, unquantified.**
+
+🔵 **Why this is a trend and not a statistic:** 🟢 **every market forecast on this shelf disagrees with every other (2025 base **6,4–8,3 B**, CAGR **25,9–40,9 %** — `intel/market.md`), while the governance gap reproduces across two unrelated studies on two continents.** 🟢 **The reproducible number is the one to build on.**
+
+🔴 **And it closes a loop with this KB's own licence work:** 🟢 **an institution with no AI framework has no licence-compliance step** — which is the mechanism by which `kamlendras/OpenProctor` (README asserts MIT, payload is **AGPL-3.0** with §13 present, `P725a`) reaches production inside a hosted proctoring service and silently owes source to every examinee. 🔵 **The governance gap and the misgrant risk are the same exposure seen from two directions.**
+
+### 🔴 Trend 3 — **permission and reachability are orthogonal**, and this KB had never separated them
+
+🟢 **Every capability finding in 57 passes was a *network* fact — a `403`, a `000`, an `EGRESS_BLOCKED`.** 🔴 **This pass hit a different class (`P744`): the environment's own request classifier **denied bulk enumeration of third-party repo slugs**, twice, under two distinct reasons — while `raw.githubusercontent.com` answered `200` on every probe and individually named repos remained fully readable.**
+
+| Axis | Measured this pass |
+|---|---|
+| 🟢 **Reachable** | `raw` `200`×3 · `pypi` `200`×3 · `npm` `200`×3 · `ls-remote` exit `0`×3 |
+| 🔴 **Permitted** | 🟢 named individual probes **yes** · 🔴 1 020-repo sweep **no** |
+
+> 🔴 **Trend 3.** *A KB whose instruments all assume a **sweep** (138 of 138 in `compose/code/`) is built on an assumption that is **not a network property** and can be withdrawn independently of connectivity.* 🟢 **The durable instrument shape is the **named sample with a declared `n` and no published rate** — which is what this pass used, and why it publishes a retraction rather than an error estimate.* 🆕 **`Gap 276` recorded: no instrument on this KB is designed for that shape.**
+
+### 🟢 Trend 4 — the registry is a **second grant oracle** and the only **dated** one
+
+🟢 **Measured (`P741`): PyPI returns a licence from packaging metadata — different host, different artefact from the repository `LICENSE` — and it agreed with the payload on all three packages tested.** 🔴 **It also carries what no `LICENSE` file ever does: a date.**
+
+| Package | Grant | Last upload | Reading |
+|---|---|---|---|
+| `autorubric` | 🟢 MIT | 🟢 **2026-09-27** | 🟢 **11 days — alive** |
+| `rubric` | 🟢 MIT | 🟡 **2026-01-21** | 🟡 ~8,5 months |
+| **`PyLTI1p3`** | 🟢 MIT | 🔴 **2022-11-20** | 🔴 **3 y 11 mo — the `R57a` risk** |
+
+🔴 **With a prerequisite this KB has an instrument for and pass 57 skipped:** 🟢 **a repo slug is not a package name.** `pylti1.3` → **`NOT_FOUND`**; the distribution is **`PyLTI1p3`** (`P743`). 🔵 **So "the registry reveals staleness" is true only after an identity step (`p253-registry-first-identity`), and without it the registry returns a **false negative** that looks like absence.**
+
+### 🔴 Trend 5 — a channel's **facts** are failing while its **advice** survives, and that is the dangerous combination
+
+🟢 **Two instances now, one per pass:**
+
+| Pass | Channel claim | 🟢 **Payload** | Advice it carried |
+|---|---|---|---|
+| 🔴 `P733` (57) | Huly Platform *"licensed under Apache License 2.0"* | 🔴 **EPL-2.0**, 14 197 B | *"build your education layer on it"* — 🔴 **would have put client code on a reciprocal base** |
+| 🔴 **`P747` (58)** | `twentyhq/twenty` *"Business Source License 1.1 … isn't OSI-approved"* | 🔴 **AGPL-3.0**, 39 965 B | 🟡 *"so avoid it for SaaS"* — 🟡 **advice lands safely, fact is wrong** |
+
+> 🔴 **Trend 5.** *This is **worse** than a channel that is plainly wrong.* 🟡 **When the advice happens to be right, the wrong fact is never audited** — and the two licences differ in a way that changes the remedy: 🔵 **BSL converts to a permissive grant on a date, so "wait" is a strategy; AGPL never does, so "wait" is not.** 🟢 **A reader who accepted the BSL fact and the correct advice would still have planned the wrong mitigation.*** 🔴 **Operational rule, unchanged and now twice-earned: a channel may *nominate* a platform; only payload may *classify* it (`P476`).**
+
+### 🔴 Trend 6 — the binding constraint has moved from **measurement** to **recall**
+
+🟢 **Five trends above are about reading the world better. 🔴 **This one is about reading *ourselves*, and it is now the dominant failure mode.**
+
+🟢 **Measured (`P752`): when pass 57 published that `openeducat` had no locatable grant, this repository already held `openeducat … LICENSE 8241 LGPL` in **31 committed TSV lines across 8 instruments**, plus a `licence-grant-gate` table row carrying the **exact** `COPYRIGHT`-reference trap next to the correct `LGPL-3.0` verdict.**
+
+| Era | Binding constraint | Remedy |
+|---|---|---|
+| 🟡 Passes ~1–50 | **Coverage** — too few repos on the shelf | sweep wider |
+| 🟡 Passes ~50–57 | **Instrument quality** — filename lists, title windows, registry identity | 🟢 better probes (`P726`, `P727`, `P743`, `P745`) |
+| 🔴 **Pass 58 →** | 🔴 **Recall** — 138 instrument directories, and no pass can hold them in mind | 🟢 **`p752-prose-vs-committed-results`, a gate on the KB's own data** |
+
+> 🔴 **Trend 6.** *A knowledge base large enough to be useful is large enough to contradict itself, and **it will do so silently** — a wrong prose verdict and thirty-one right TSV rows coexist with no error raised.* 🟢 **The counter-measure is not discipline, it is a gate**, and it is the cheapest one here: it reads local files only, so it runs where `P744` forbids the sweeps.* 🔵 **Stated as the pass's one-line lesson: **this KB's next marginal gain is in reading itself, not the world.***
+
+🔵 **A secondary observation worth keeping:** 🟢 **an outside roundup independently warned that some *"open source"* agents ship source-available terms that *"quietly block you from competing with the vendor's own hosted product"*** — 🟢 **the `relicensed` shape (`P725b`, `leemonade/leemons`) seen off this shelf, which is weak evidence that the shape generalises beyond education.**
+
+---
+
+
 ## 🟢 Fifty-seventh pass, 2026-10-08 — five trends: a measured misgrant rate, seven licence shapes where there were two, a permissive platform the queries cannot see, proctoring as the risk concentrate, and the third convention failure
 
 > 🔵 **This pass's opening hypothesis was that the trend shelf would gain from the mandated channel.

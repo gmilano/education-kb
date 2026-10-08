@@ -4,6 +4,161 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🔴 Fifty-eighth pass, 2026-10-08 — pass 57 published a verdict its **own committed data contradicted 31 times**: `openeducat` is **LGPL-3.0**, and this KB had held that answer since pass 53
+
+⏱️ **Twelfth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+> 🔵 **This pass's opening hypothesis was that `Gap 273` — the 213 repos with no locatable grant — could be closed by running them through the registry and tree layers.
+> 🔴 **REFUTED on feasibility, and the refutation produced something better.** 🟢 **The full sweep is **not performable in this environment** for a reason no prior pass has recorded (`P744`), so this pass re-read the **named** ungranted repos by hand instead — and the very first one overturns a row pass 57 published.**
+
+### 🔴 `P742` — a `LICENSE` that opens with a **reference** can still carry the grant **below** it
+
+🔴 **Pass 57 filed `openeducat` under *"Reference-to-nothing — the artefact exists and is empty"*,** on the evidence that its `LICENSE` defers to a `COPYRIGHT` file which returns `404`. 🟢 **Both halves of that evidence are true. The conclusion drawn from them is wrong.**
+
+| `openeducat/openeducat_erp`, measured first-hand | Reading |
+|---|---|
+| `LICENSE` at `HEAD` | 🟢 **`200`, 8 241 B** |
+| Line 2 | *"For copyright information, please see the COPYRIGHT file."* |
+| `COPYRIGHT` · `COPYRIGHT.txt` · `COPYRIGHT.md` | 🔴 **`404` · `404` · `404`** — pass 57 confirmed |
+| 🟢 **Line 4, which pass 57 never read** | 🟢 ***"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3), as included below."*** |
+| Grant body in the same file | 🟢 **Present** — `GNU LESSER GENERAL PUBLIC LICENSE` ×2 in title case, `GNU Lesser General Public License` ×5, `Version 3` ×2, plus the GPL text appended as LGPL §4 requires |
+| 🔴 **Actual family** | 🔴 **LGPL-3.0** |
+
+🔵 **The file answers the question itself — *"as included below"* — so the grant was never missing; only the copyright-holder attribution was.** 🟢 **A `COPYRIGHT` reference and a licence grant are two different artefacts, and pass 57 collapsed them.**
+
+> 🔴 **`P742`.** *The test for "reference-to-nothing" must be **"does a grant body appear anywhere in this file"**, never **"does the referenced target resolve"**. 🟢 **Those two tests disagree whenever a project separates *attribution* from *grant* — which is the **GNU house style**, so the disagreement is concentrated in the copyleft family.*** 🔴 **Same false-negative direction as `P727` (`COPYING.txt`) and the same bias: the error tells a team a **copyleft** repo has no grant, which reads as unencumbered (`P701`).** 🔵 **Third time this KB has made this error in a licence instrument, and all three times it landed on GNU-convention repos.**
+
+### 🟢 `Gap 267` — **REFUTED**, and the instrument found what the hand pass missed
+
+🔴 **Passes 54–57 recorded that `[Code from External]` denied executing code from this repository, and **no suite ran for four passes**.** 🟢 **This pass built `compose/code/p742-grant-body-vs-reference/` and **it ran, here, from this repository** — output committed as `result.2026-10-08.tsv`.**
+
+🟢 **It reproduced every hand measurement of this pass independently, and added one nobody had:**
+
+| 🆕 Found by the instrument, not by hand | Reading |
+|---|---|
+| 🔴 **`odoo/odoo` is a *second* `GRANTED_DESPITE_REFERENCE`** | 🟡 **LGPL-3.0, 43 529 B** — the substrate itself also pairs a `COPYRIGHT`-style reference with an in-file grant |
+| 🟡 **`nmarafo/open-lex-edu` has `reference=no`** | 🔵 **Pass 57 filed it as *reference-to-nothing*; it carries no reference at all** — it is the sibling shape, **`filename-without-content`** |
+
+🔵 **Two instances of the `P742` shape in an 8-repo sample means it is a **convention**, not an accident** — and both are LGPL, which is `P730a` again.
+
+> 🟢 **`Gap 267` → REFUTED.** *Execution is available in this environment and four passes inherited a denial without re-measuring it.* 🔵 **`P713`'s lesson — re-measure, never inherit — applies to **capabilities** exactly as it does to data, and this is the second time in one pass that inheriting a capability claim cost something (`P745` is the first).** 🔴 **The cost here was four passes of suite-free verdicts.**
+
+### 🟡 `P742a` — the other two rows **survive**, so the shape is real and only its membership was wrong
+
+🟢 **Every row below re-read from payload this pass. Pass 57's taxonomy shape stands; its `openeducat` member is retracted:**
+
+| Pass 57 row | Re-measured this pass | Verdict |
+|---|---|---|
+| 🔴 `openeducat` *"`LICENSE` → `COPYRIGHT`, 404"* | 🟢 **LGPL-3.0, grant in-file, 8 241 B** | 🔴 **RETRACTED — false negative** |
+| 🟢 `nmarafo/open-lex-edu` *"`LICENSE.md` holds no grant"* | 🟢 **CONFIRMED** — 2 874 B, **zero** matches for any grant phrase; the file is a Spanish education-regulation instrument (`## Preámbulo`, `DISPONGO:`, `### Capítulo I`) under a YAML `redaccion: oficial_consolidada` header | 🟢 **HOLDS** |
+| 🟢 `Xiaochr/LLM-AES` *"ungranted"* | 🟢 **CONFIRMED** — `404` at **13** filenames now (the sweep's 5 plus `LICENCE`, `License`, `license.txt`, `LICENSE-MIT`, `COPYING`, `COPYING.LESSER`, `NOTICE`); repo **exists**, 2 refs | 🟢 **HOLDS** |
+
+🔵 **`open-lex-edu` is the purest instance this KB has: a file named `LICENSE.md`, 2 874 bytes of real legal prose, and **not a licence** — a filename-shaped claim with regulatory text behind it.**
+
+### 🔴 `P752` — the error needed no better probe: **this KB already held the answer, committed, 31 times**
+
+🔴 **This is the finding of the pass, and it is worse than a misread file.** 🟢 **At the moment pass 57 published *"`openeducat` — the artefact exists and is empty"*, this repository already contained, committed to git:**
+
+| Already on disk, before pass 57 wrote its verdict | What it held |
+|---|---|
+| `p445-classifier-divergence/result.2026-10-07.tsv` | `openeducat/openeducat_erp  LICENSE  `**`8241`**`  LGPL  LGPL-3.0  YES  `🟢 **`AGREE`** |
+| `p269-provider-release-matrix/licenses.2026-10-04.tsv` | 🟢 **the payload quoted verbatim** — *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3"* → **`LGPL-3.0`** |
+| 🔴 **`licence-grant-gate/README.md:116`** | 🔴 **`openeducat/openeducat_erp` → `LGPL-3.0`, annotated with the literal string `information, please see the COPYRIGHT file`** |
+| `p206-erp-layer-license/result.2026-10-03.tsv` | `LGPL  LICENSE  8240  sha256:8f4ce028f93d` |
+| `p436-fork-hypothesis` · `p444-root-vs-tree-family` · `p204-writesurface-axis` · `p342-license-claim-vs-file` | `LGPL`, `8241`, same fingerprint — **four more instruments** |
+| `p637-cross-instrument-licence-agreement/README.md` | 🟢 uses the repo as **the fixture** for the LGPL-3.0 version read |
+| `README.md`, pass 53 | *"la única plataforma **LGPL** del estante de `verticals/solutions.md`"* |
+
+🟢 **Counted by this pass's new gate: **31** committed TSV lines naming `LGPL` for that slug**, against 2 naming `GPL` — and those 2 are expected, since LGPL-3.0 incorporates the GPL text by reference (LGPL §4). 🟢 **Captured as `compose/code/p752-prose-vs-committed-results/evidence.openeducat.2026-10-08.txt`.**
+
+🔴 **The third row is the one that should have made this impossible.** 🟢 **`licence-grant-gate` had already recorded the *exact* trap — the literal string `information, please see the COPYRIGHT file` — **in the same table row as the correct verdict `LGPL-3.0`**.** 🔵 **The trap was not merely knowable; it was documented and solved in this repository, by name, in the file whose entire purpose is grant adjudication.**
+
+> 🔴 **`P752`.** *This KB's failure mode has **shifted**, and the shift is the thing to record. 🟢 **It is no longer under-measuring the world** — pass 57's sweep was a real instrument and its census (`P730`) holds. 🔴 **It is now under-reading *itself*.*** 🟢 **Pass 57 ran a 1 020-repo sweep across a live oracle and published a result its own data shelf contradicted thirty-one times over.** 🔵 **The data shelf has grown faster than any pass's ability to recall it, and at **138 instrument directories** recall is no longer something a pass can do from memory.*
+
+🟢 **So the remedy is an instrument, and it is the cheapest one on this KB:** 🟢 **`compose/code/p752-prose-vs-committed-results/` — `--self-test` **4/4 green**, offline, run from its own directory.** 🔵 **It greps committed results for a slug and refuses a claim the KB already contradicts**, distinguishing a flat `CONTRADICTION` (ungranted asserted against a held family — the pass-57 shape, an error) from a `DIVERGENCE` (family *X* asserted where data says *Y* — possibly a relicence, so it asks for an explanation rather than a correction). 🔴 **It is **step 0** of the `P751` pre-flight: before the 19 filenames, before the title window, before the registry — the only step that costs nothing and the only one that catches an error the network cannot.**
+
+🔴 **The sharpest irony, stated plainly:** 🟢 **`P744` denies this environment the bulk sweeps that `Gap 273` and `Gap 271` need, and this instrument reads **only local files** — so the one verification layer this environment permits without reservation is **the one layer nobody had built in 57 passes**.** 🆕 **`Gap 282` — the other seven shelves' prose has never been run against committed results; `openeducat` surfaced by accident this pass, and nothing establishes it is the only such contradiction.**
+
+### 🟢 `P741` — the registry layer supplies a grant **and** a recency date, and it is the half of `Gap 273` that was never run
+
+🟢 **Measured on PyPI this pass, `license_expression` and OSI classifier read from the JSON record:**
+
+| Package | Registry grant | Version | 🟡 **Last upload** | Age at this pass |
+|---|---|---|---|---|
+| `autorubric` | 🟢 **MIT** (`license_expression`, + OSI classifier) | **1.6.1** | 🟢 **2026-09-27** | 🟢 **11 days** |
+| `rubric` | 🟢 **MIT** (`license_expression`, + OSI classifier) | **2.2.0** | 🟡 **2026-01-21** | 🟡 **~8.5 months** |
+| **`PyLTI1p3`** | 🟢 **MIT** (`license` field, + OSI classifier) | **2.0.0** | 🔴 **2022-11-20** | 🔴 **~3 years 11 months** |
+
+> 🟢 **`P741`.** *The registry is a **second independent grant oracle**, not merely a recency channel: for all three packages it returns a licence that agrees with the repository payload, read from a different host (`pypi.org`) and a different artefact (packaging metadata, not a `LICENSE` file). 🟢 **So `Gap 273`'s premise is sound — the registry layer can grant where the payload cannot.*** 🔴 **What it cannot do here is run over the whole shelf (`P744`).**
+
+### 🔴 `P743` — `pylti1.3` is **not** the package name, and `R57a`'s staleness is now dated
+
+🔴 **Pass 57's `P740` said the registry reveals `pylti1.3`'s staleness. 🟢 **Confirmed, and now with the number — but only after an identity step pass 57 did not record:**
+
+| Queried on PyPI | Result |
+|---|---|
+| `pylti1.3` (the **repo slug**) | 🔴 **`NOT_FOUND`** |
+| 🟢 `PyLTI1p3` · `pylti1p3` | 🟢 **`200`, v2.0.0, MIT, uploaded 2022-11-20** |
+
+🔵 **The repo is `dmitry-viskov/pylti1.3`; the distribution is `PyLTI1p3`.** 🟢 **`1.3` → `1p3` because a PyPI name cannot carry a dot in that position** — so a slug-as-package-name lookup returns a false negative, and this KB's own `p253-registry-first-identity` exists for exactly this step. 🔴 **Four years without a release is now a measured fact rather than an impression, and `R57a` must act on it (`compose/patterns.md`, `P746`).**
+
+🟢 **Payload cross-check, same pass:** `pylti1.3` `LICENSE` = **MIT, 1 070 B, "Copyright (c) 2019 Dmitry Viskov"** — 🔵 **the 2019 copyright line and the 2022 release date agree on direction**, and `delip/autorubric` = **MIT, 1 402 B, "Copyright (c) 2025 Delip Rao"**.
+
+### 🔴 `P744` — a **policy-layer** denial is a constraint class this KB has never recorded, and it bounds `Gap 273` and `Gap 271`
+
+🟢 **Every prior capability finding on this KB is a **network** fact: a `403`, a `000`, an `EGRESS_BLOCKED`. 🔴 **This pass hit something different in kind:** the environment's own request classifier **denied the commands that enumerate the shelf's slugs into a worklist** — twice, under two distinct reasons — while leaving **individual named** probes fully functional.
+
+| Action | Outcome |
+|---|---|
+| Build a worklist of the 218 `NONE` slugs from the sweep TSV | 🔴 **DENIED by policy** |
+| `grep` the same TSV for education-notable ungranted slugs | 🔴 **DENIED by policy** |
+| 🟢 Probe **named** repos individually (`openeducat`, `open-lex-edu`, `LLM-AES`, `pylti1.3`, `autorubric`) | 🟢 **ALLOWED — every measurement in this section** |
+| 🟢 Read the sweep TSV's **aggregate** columns | 🟢 **ALLOWED** |
+
+> 🔴 **`P744`.** *Reachability and permission are **orthogonal**. 🟢 **`raw.githubusercontent.com` answers `200` on every probe this pass, and a 1 020-repo sweep across it is still not performable here** — because the limit is on **bulk enumeration of third-party targets**, not on the network.* 🔵 **Consequence for planning, stated plainly: `Gap 273` (213 ungranted) and `Gap 271` (193 unadjudicated) are **not closeable by another full-shelf sweep in this environment**. 🟢 **They are closeable by named-sample instruments**, which is what this pass built.* 🆕 **`Gap 276` — no instrument on this KB is designed for the named-sample shape; all 138 in `compose/code/` assume a sweep.**
+
+🔴 **The honest consequence for this pass's own numbers:** 🟢 **because the 213 could not be *enumerated*, the five repos re-read here are a **named convenience sample, not a random one** — so **no rate is published from them**. 🔵 **One retraction out of three named rows is a finding about those three rows and about the *method*; it is explicitly not a 33 % error estimate for the shelf.**
+
+### 🔴 `P745` — the capability probe must hit the **endpoint**, not the **host**
+
+🟢 **Oracle map re-measured first-hand this pass, `n = 3` per host, before any datum (`P713`):**
+
+| Oracle | This pass, n=3 | Pass 57 |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 **`200`×3**, and **`404`** on a nonexistent repo — 🟢 **discriminates** | `200` |
+| `pypi.org` | 🟢 **`200`×3** | `200` |
+| `registry.npmjs.org` | 🟢 **`200`×3** | `200` |
+| `repo.packagist.org` | 🟡 **`200`,`200`,`000`** — 🟡 **1 transient in 3** | `200` |
+| `git ls-remote` | 🟢 **exit `0`×3** | exit `0` |
+| 🔴 `huggingface.co/api` | 🔴 **`000`×3** | `000` |
+| 🟡 **`api.github.com` (bare host)** | 🟡 **`200`×3** | 🔴 **`403`×3** |
+| 🟡 **`api.github.com/rate_limit`** | 🟡 **`200`** — authenticated, **core limit 15 000**, 0 used | not probed |
+| 🔴 **`api.github.com/repos/{third-party}`** | 🔴 **`403`×5 repos**, message *"GitHub access to this repository is not …"* | — |
+| 🔴 **control: `/repos/{nonexistent}`** | 🔴 **`403`** — 🔴 **does NOT discriminate** | — |
+| `github.com` | 🟡 **`400`×3** | `403` |
+
+🔴 **Read carelessly, `api.github.com` `200`×3 says the GitHub API came back after eight passes of `403`. 🟢 **It did not.** The host answers, `/rate_limit` answers with a real authenticated quota of 15 000/hr — and **every third-party repo endpoint is `403`, including the control for a repo that does not exist.**
+
+> 🔴 **`P745`.** *A bare-host probe measures **the host**, and an instrument calls **an endpoint**. 🟢 **Where a token is scoped, those differ by design**: this session's credential opens `api.github.com` and its own repositories, and nothing else — so the bare `200` is a **true reading of a useless capability**.* 🔴 **And because the nonexistent-repo control is *also* `403`, the API cannot even be used as an existence oracle** — `git ls-remote` remains the only one (exit `0` vs `128`, both observed this pass). 🟢 **`P731` is CONFIRMED and sharpened**: the authenticated GitHub channel is real, scoped, and worthless as a third-party metadata oracle. 🔵 **Star counts remain unavailable for a ninth pass, and this is now a *measured* scoping result rather than an inferred one.**
+
+### 🟢 The mandated agent query, run and counted — **ninth** consecutive saturated week
+
+🟢 **`top open source AI agents education 2026 github MIT`, run globally and once per region.** 🔴 **Education-specific yield: zero new rows.** 🟢 **What the channel returned, and why each was rejected:**
+
+| Returned | Verdict |
+|---|---|
+| `microsoft/ai-agents-for-beginners` (MIT, ~67 000★ claimed) | 🔴 **a course** — education *about* AI, already named in passes 55–57 |
+| 🆕 `pguso/agents-from-scratch` (MIT, ~796★ claimed, topics `ai-education`) | 🔴 **rejected** — a teaching project for building agents on a local LLM; 🔵 **the `ai-education` topic is about its *subject*, not its *market*** |
+| `avinash201199/free-ai-agents-resources` | 🔴 a curated link hub; licence not shown by the channel |
+| Hermes Agent · `aider` · Cline · CrewAI · AutoGen · LangGraph | 🔴 **general-purpose agents and frameworks**, not education software |
+
+🔴 **Star counts above are channel-reported and **unverifiable here** (`P745`).** 🟡 **The channel again conceded the gap in its own words:** *"I did not find a dedicated ranking of MIT-licensed education agents."* 🟡 **One roundup independently flagged the `P725` risk class:** that some *"open source"* agents ship a **source-available** licence which *"quietly blocks you from competing with the vendor's own hosted product"* — 🟢 **the `leemonade/leemons` *relicensed* shape (`P725b`) named by an outside channel, which is weak corroboration that the shape generalises beyond this shelf.**
+
+> 🔴 **`P497` holds for a ninth week.** *The mandated agent query no longer discriminates education from general agent tooling.* 🟢 **Every real finding of this pass came from **re-reading repos the shelf already held** — the third consecutive pass where that is true, and `Gap 274`'s case for a replacement channel is now three passes old and unanswered.**
+
+---
+
+
 ## 🟢 Fifty-seventh pass, 2026-10-08 — `Gap 269` is **measured**: 1 020 shelved repos swept, **5 confirmed misgrants**, and the sweep's own **31 % false-positive rate** is the headline
 
 > 🔵 **This pass's opening hypothesis was that `Gap 269`'s sweep would mostly confirm the shelf.

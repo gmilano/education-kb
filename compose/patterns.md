@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-eighth pass, 2026-10-08 — `R57a`'s LTI component is **3 y 11 mo stale** and gets a decision, and `R58a` is a **second substrate** on the LGPL band where a proprietary module is lawful
+
+⏱️ **Twelfth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+> 🔵 **This pass's opening hypothesis was that `R57a` needed only a freshness note.
+> 🔴 **REFUTED twice over:** 🔴 **the staleness is worse than pass 57 could state (and its package name was wrong — `P743`), and the licence census correction (`P742`) opened a substrate `R57a` could not have used.**
+
+### 🔴 `P746` — `R57a`'s `pylti1.3` row, measured and decided
+
+🔴 **Pass 57 flagged the component stale and left the recipe pointing at it.** 🟢 **Measured this pass:**
+
+| `dmitry-viskov/pylti1.3` | Reading |
+|---|---|
+| Repository payload | 🟢 **MIT**, `LICENSE`, **1 070 B**, *"Copyright (c) 2019 Dmitry Viskov"* |
+| 🔴 **PyPI name** | 🔴 **not `pylti1.3`** — that returns `NOT_FOUND`. The distribution is **`PyLTI1p3`** |
+| Registry grant | 🟢 **MIT** (`license` field + OSI classifier) — 🟢 **agrees with payload** |
+| Version | **2.0.0** |
+| 🔴 **Last release** | 🔴 **2022-11-20 — 3 years 11 months before this pass** |
+
+🟢 **The licence is not the problem; the maintenance is.** 🔵 **LTI 1.3 is a *specification*, and `pylti1.3` implements the tool side of a spec that has itself moved (LTI Advantage services, `NDC`-style version increments on the 1EdTech side) — so a four-year gap is a security and conformance question, not merely a tidiness one.**
+
+> 🟢 **`P746` — the decision, so no later pass re-litigates it.** *Keep `PyLTI1p3` in `R57a`, and **pin, vendor and own it**:*
+> 🟢 **(1)** pin `PyLTI1p3==2.0.0` explicitly — 🔵 **MIT permits the fork, and an unmaintained MIT dependency is the cheapest possible thing to take over**;
+> 🟢 **(2)** treat it as **Globant-maintained** from day one: budget the JWT/JWKS review in the engagement, do not assume upstream;
+> 🔴 **(3)** do **not** swap it for a maintained alternative on licence grounds without reading payload first — 🔴 **`P733` and `P747` are two consecutive passes of a channel naming the wrong licence for a platform it recommended.**
+> 🔵 **The boundary argument of `P736` is untouched by this**: LTI 1.3 is still a network protocol, and a stale *client library* is a maintenance liability inside Globant's own repository, not a copyleft exposure.
+
+### 🟢 `P750` — `R58a`: build an education ERP module on the **LGPL band**, where the addon may stay proprietary
+
+🟢 **New recipe, made possible only by this pass's correction (`P742`) and the band taxonomy (`P747`).** 🔴 **For eight passes the vertical channel's answer was *"no permissive education platform exists, so build it yourself"*, and this KB had no platform-layer answer but LTI isolation.** 🟢 **There is now a second one.**
+
+| Layer | Component | 🟢 **Licence (payload, first-hand)** | Why it sits here |
+|---|---|---|---|
+| **ERP framework (client-hosted)** | [`odoo/odoo`](https://github.com/odoo/odoo) | 🟡 **LGPL-3.0** · **43 529 B** · 97 heads | 🟢 **No network clause** — hosting triggers nothing |
+| **Education domain layer** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 **LGPL-3.0** · **8 241 B** · **992 refs** | 🟢 **Education-native**: admissions, courses, faculty, exams already modelled |
+| 🟢 **Isolation boundary** | **An Odoo addon directory** — a module the framework loads, never a core patch | 🟢 **n/a — a packaging boundary** | 🟢 **LGPL §4**: a work that *links* the library may ship under your own terms |
+| 🟡 **Your module (Globant-built)** | custom models + AI endpoints | 🟢 **Globant's own terms — proprietary is lawful here** | 🟡 **Read `Gap 279` before relying on this** |
+| 🟢 Grading core | [`delip/autorubric`](https://github.com/delip/autorubric) + [`The-LLM-Data-Company/rubric`](https://github.com/The-LLM-Data-Company/rubric) | 🟢 MIT **1 402 B** · MIT **1 077 B** | 🟢 `P720` two-scorer cross-check; 🟢 **`autorubric` released 2026-09-27 — 11 days (`P741`)** |
+| 🟢 Human gate | `P710` steps 3–4 | 🟢 n/a | 🔴 **Non-negotiable** — and it is what the LATAM 19 %/79 % gap actually needs |
+
+🟢 **Wiring, concretely:** 🔵 **(1)** client runs Odoo + OpenEduCat (their deployment, their LGPL obligations, unchanged); 🔵 **(2)** Globant ships `globant_edu_ai/` as an **addon directory** — `__manifest__.py`, new models inheriting `op.student` / `op.exam` via Odoo's ORM, no edits to core files; 🔵 **(3)** the addon calls `autorubric` → `rubric` for the two-scorer cross-check (`P720`); 🔵 **(4)** disagreement between scorers routes to the human gate and the decision is logged; 🔵 **(5)** the score is written back through OpenEduCat's own exam models, not a side table.
+
+> 🟢 **`P750`.** *`R57a` and `R58a` are **not** alternatives — they answer different client estates.* 🟢 **`R57a` (LTI 1.3) is for an estate built on an **LMS**: Moodle GPL-3.0, Canvas and Open edX **AGPL-3.0** — where you must stay outside the process.** 🟢 **`R58a` (Odoo addon) is for an estate built on an **ERP/SIS**: Odoo and OpenEduCat **LGPL-3.0** — where you may stand inside the framework and keep your module.* 🔵 **The band, not the product, picks the recipe (`P747`).**
+
+🔴 **Two conditions, or `R58a` leaks — the same structural discipline as `P736`:** 🔴 **(a)** the moment Globant patches an Odoo or OpenEduCat **core file**, that file is LGPL and owed back — *"a quick fix in core"* dissolves the boundary; 🔴 **(b)** 🆕 **`Gap 279` is open**: whether an Odoo addon is a *"work that uses the library"* (LGPL §4) or a derivative of it depends on how Odoo's ORM loads modules, and **this KB has not read that loader**. 🟡 **Odoo's own commercial addon ecosystem is strong practical evidence for the permissive reading, and practice is not a licence analysis.** 🟢 **`P744` does not block closing this — it is a single named repository to read, so a later pass can settle it.**
+
+### 🟢 `P751` — the licence pre-flight gains the two checks that caught this pass's errors
+
+🟢 **`P710`'s pre-flight is an instrument, not advice (pass 57). 🔴 **It would have passed `openeducat` as ungranted and `pylti1.3` as absent from PyPI.** 🟢 **Two steps added, both earned by a measured failure:**
+
+| # | Check | 🔴 **The failure it prevents** |
+|---|---|---|
+| 🆕 **0** | 🟢 **Ask whether this KB already holds a committed verdict on the slug** — `compose/code/p752-prose-vs-committed-results/check_claim.sh owner/repo [family]` | 🔴 **`P752` — pass 57 published "ungranted" for `openeducat` against **31** committed TSV lines reading `LGPL`, in 8 instruments.** 🟢 **Costs nothing, needs no network, and is the only step that catches an error no probe can** |
+| 1 | Try **19** filenames including `COPYING`, `COPYING.txt`, lowercase `license.txt` | 🔴 `P727` — 3 GPL repos read as ungranted |
+| 2 | Classify from the **title window**, never the whole body | 🔴 `P726` — GPL-3.0 §13 names Affero 3×, inverting every GPL file |
+| 3 | 🆕 **Scan the whole licence file for a *grant body*; never conclude from an unresolved *reference*** | 🔴 **`P742` — `openeducat` LGPL-3.0 read as ungranted because its `COPYRIGHT` pointer `404`s while the grant sat 2 lines below** |
+| 4 | 🆕 **Resolve slug → **distribution name** before any registry query** | 🔴 **`P743` — `pylti1.3` returns `NOT_FOUND`; the package is `PyLTI1p3`** |
+| 5 | Cross-check the registry record (`license_expression`, OSI classifier) **and its upload date** | 🟢 `P741` — a second grant oracle, and the only dated one |
+| 6 | 🔴 **Never accept a channel's licence claim as the classification** | 🔴 `P733` (Huly: Apache→**EPL-2.0**) · 🔴 **`P747` (Twenty: BSL→**AGPL-3.0**)** |
+
+🔴 **And one check this pass can specify but **not** automate (`P744`):** 🟢 **steps 1–6 run fine on a **named** repo and the environment denies running them over a **shelf**.** 🔵 **So the pre-flight is a per-engagement gate — which is in fact its real use — and not a monitoring sweep.** 🆕 **`Gap 276` — the named-sample instrument shape has no implementation on this KB; all 138 in `compose/code/` assume enumeration.**
+
+### 🟢 Which recipe for which engagement — the one-line selector
+
+| Client estate | Recipe | Boundary | Your code's licence |
+|---|---|---|---|
+| Moodle (**GPL-3.0**) · Canvas / Open edX (**AGPL-3.0**) | 🟢 **`R57a`** (`P736`) | 🟢 **LTI 1.3** — HTTP + JWT, a separate process | 🟢 **MIT / your own** |
+| Odoo · OpenEduCat (**LGPL-3.0**) | 🟢 **`R58a`** (`P750`) | 🟢 **Odoo addon directory** — LGPL §4 linking | 🟢 **Your own, proprietary lawful** |
+| ERPNext (**GPL-3.0**) · Twenty (**AGPL-3.0**) | 🔴 **Neither — treat as LMS-class** | 🔴 No weak-copyleft route: GPL derivative / AGPL §13 | 🔴 **Owed back if you modify or host** |
+| Unknown platform | 🔴 **Run `P751` first** | — | 🔴 **Undecidable until payload is read** |
+
+---
+
+
 ## 🟢 Fifty-seventh pass, 2026-10-08 — **LTI 1.3 is the licence-isolation boundary**, the licence pre-flight is now an instrument rather than advice, and `P710` gains a permissive substrate
 
 > 🔵 **This pass's opening hypothesis was that the licence census would mostly reorder the shelf.

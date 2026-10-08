@@ -1,0 +1,15 @@
+slug	file	bytes	family	grant_body	reference	verdict
+openeducat/openeducat_erp	LICENSE	8241	LGPL	yes	yes	GRANTED_DESPITE_REFERENCE
+nmarafo/open-lex-edu	LICENSE.md	2874	NONE	no	no	ARTEFACT_WITHOUT_GRANT
+Xiaochr/LLM-AES	-	0	NONE	no	-	UNGRANTED
+odoo/odoo	LICENSE	43529	LGPL	yes	yes	GRANTED_DESPITE_REFERENCE
+frappe/erpnext	license.txt	35149	GPL	yes	no	GRANTED
+twentyhq/twenty	LICENSE	39965	AGPL	yes	no	GRANTED
+dmitry-viskov/pylti1.3	LICENSE	1070	MIT	yes	no	GRANTED
+delip/autorubric	LICENSE	1402	MIT	yes	no	GRANTED
+
+# n=8  granted=6  artefact_without_grant=1  ungranted=1  repo_absent=0
+# NO RATE IS PRINTED. Slugs are supplied by name, so this is a convenience
+# sample, not a draw from the shelf (P744). Publishing a percentage from it
+# would invite exactly the inference pass 57 was careful to avoid when it
+# published its sweep's 31% false-positive rate alongside its count.

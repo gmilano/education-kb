@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🔴 Fifty-eighth pass, 2026-10-08 — the census's **213 ungranted** is an upper bound that just got **looser**, and the first repo re-read moved out of it into **LGPL-3.0**
+
+⏱️ **Twelfth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+> 🔵 **This pass's opening hypothesis was that `Gap 273` — "the 213 have not been run through the registry and tree layers, the cheapest remaining licence work on this KB" — could be closed this pass.
+> 🔴 **REFUTED on feasibility (`P744`), and the sample that *was* readable immediately moved a repo out of the ungranted class.**
+
+### 🔴 `P742` — one of the three named ungranted repos was never ungranted
+
+🟢 **`openeducat/openeducat_erp`, re-read from payload this pass: **LGPL-3.0**, 8 241 B, the grant body present in the same `LICENSE` file whose `COPYRIGHT` reference `404`s.** 🔴 **Pass 57 resolved the reference, found it missing, and filed the repo as having no grant.** 🟢 **Line 4 of that file reads *"published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3), as included below"* — and it is included below.**
+
+🔵 **Why this lands on the foundations shelf specifically:** 🟢 **OpenEduCat is an education-native ERP built on the Odoo framework, and it is one of the few education platforms this KB can place in the **weak-copyleft** band rather than the strong one.** 🔴 **Mis-filed as ungranted, it reads as unencumbered; read correctly, it is LGPL-3.0 — a materially different planning input from Moodle's GPL-3.0 and Canvas's AGPL-3.0 (`P734`), because LGPL's trigger is **linking**, not use or service (`verticals/solutions.md`, `P747`).**
+
+🔴 **And the correction needed no oracle at all (`P752`):** 🟢 **eight instruments on this shelf already held `openeducat/openeducat_erp  LICENSE  8241  LGPL` in committed TSVs — 31 lines in total — and `licence-grant-gate/README.md` had recorded the exact `COPYRIGHT`-reference trap beside the correct `LGPL-3.0` verdict.** 🔵 **So this shelf's ungranted bound was loosened not by a better probe but by **reading what the repository already contained**.** 🟢 **New offline gate: `compose/code/p752-prose-vs-committed-results/`, `--self-test` 4/4.**
+
+### 🟢 `P730` revisited — the census direction holds, the ungranted bound does not
+
+🟢 **The payload census of pass 57 is **not** retracted. Re-stated with this pass's correction applied:**
+
+| Census class (pass 57, 1 020 slugs) | Status after pass 58 |
+|---|---|
+| 🟢 **Permissive 74,0 %** of the 807 with a readable payload | 🟢 **HOLDS** — unchanged, and the mandate's "focus on MIT / Apache / BSD" remains satisfied by the shelf as it stands |
+| 🔴 **Copyleft 16,9 %** | 🟡 **A floor, not a level** — every correction so far (`P727`'s three repos, now `openeducat`) has moved repos **into** this class, never out |
+| 🔴 **213 with no grant locatable** | 🔴 **An upper bound, now demonstrably loose** — 🟢 **1 of the 3 named members re-read this pass carries a grant** |
+| 🔴 **45 AGPL** | 🟢 **HOLDS** as the number to plan around |
+
+> 🔴 **`P730a`.** *Every licence-instrument defect this KB has found points the **same way**: 🔴 **toward under-counting copyleft.** 🟢 **`P727` (`COPYING.txt` omitted) moved `moodle`, `nvda` and `languagetool` out of "ungranted" and into **GPL**. `P742` moves `openeducat` out and into **LGPL**.*** 🔵 **Four repos, four copyleft, zero permissive — because the conventions these instruments miss (`COPYING.txt`, attribution split from grant) **are** the GNU conventions.* 🟢 **So the honest reading of "213 ungranted" is not "213 unknown": it is **"213 unknown, skewed copyleft"**, and a team treating that bucket as low-risk has the risk exactly inverted.**
+
+### 🟢 `P741` — the registry layer works, demonstrated on three named packages
+
+🟢 **The half of `Gap 273` nobody had run. PyPI returns a grant from packaging metadata — a different host and a different artefact from the repository `LICENSE`:**
+
+| Package | Registry grant | Field | Version | Last upload |
+|---|---|---|---|---|
+| `autorubric` | 🟢 **MIT** | `license_expression` + OSI classifier | 1.6.1 | 🟢 **2026-09-27** (11 days) |
+| `rubric` | 🟢 **MIT** | `license_expression` + OSI classifier | 2.2.0 | 🟡 **2026-01-21** |
+| `PyLTI1p3` | 🟢 **MIT** | `license` + OSI classifier | 2.0.0 | 🔴 **2022-11-20** |
+
+🟢 **All three agree with the repository payload where one exists**, so the registry is a **corroborating** oracle here, not a contradicting one (contrast `P445` classifier-divergence). 🔴 **It also carries the one datum the payload never does: a date.**
+
+### 🔴 `P744` — why `Gap 273` cannot be closed here, and what replaces it
+
+🔴 **The commands that enumerate the shelf's 218 `NONE` slugs into a worklist were **denied by the environment's own request classifier**, twice, under two distinct reasons — while individually named probes stayed fully functional and `raw.githubusercontent.com` answered `200` on every probe of this pass.** 🟢 **Reachability and permission are orthogonal (`P744`, `agents/top.md`).**
+
+🟢 **Stated as a planning fact for later passes:**
+
+| `Gap` | Shape | Closeable here? |
+|---|---|---|
+| 🔴 **`Gap 273`** (213 ungranted → registry + tree layers) | Full-shelf sweep | 🔴 **No** — policy-denied. 🟢 **Re-scope to named samples** |
+| 🔴 **`Gap 271`** (193 `UNPARSED_ASSERTION` + `NO_README`) | Full-shelf sweep | 🔴 **No** — same shape, same denial |
+| 🟢 **`Gap 273a`** 🆕 | **Named-sample** grant-body re-read, `n` declared, **no rate published** | 🟢 **Yes — this pass performed it on 5 repos** |
+
+🔴 **And the discipline that goes with it:** 🟢 **because the 213 could not be enumerated, this pass's five repos are a **named convenience sample**. 🔴 **One retraction in three named rows is not a 33 % shelf error rate, and no such rate is published.** 🔵 **Pass 57 earned its headline by publishing its sweep's false-positive rate alongside its count; the equivalent discipline for a convenience sample is to publish **no rate at all**.**
+
+🆕 **`Gap 277` — the `tree` half of `Gap 273` (`p441-tree-licence-enumeration`, grants in `LICENSES/` subtrees and `setup.py` classifiers) is still unrun on **any** sample, named or swept.** 🟢 **It is now the cheapest remaining licence work, inheriting the title `Gap 273` held.**
+
+---
+
+
 ## 🟢 Fifty-seventh pass, 2026-10-08 — the shelf's **licence-family census**, measured from payload for the first time: **74 % permissive**, and **one repo in five has no locatable grant**
 
 > 🔵 **This pass's opening hypothesis was that the foundations shelf's licence column was broadly

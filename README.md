@@ -24,6 +24,34 @@ education-kb/
 
 ## `compose/code/` — lo que esta KB puede demostrar corriendo
 
+🆕 **El pase 58 del 2026-10-08 registra DOS carpetas nuevas, y ambas corrieron aca:**
+🟢 **`p742-grant-body-vs-reference`** (muestra nombrada, `n=8`) y 🟢 **`p752-prose-vs-committed-results`**
+(`--self-test` **4/4 verde**, offline). 🔴 **Eso REFUTA `Gap 267` / `Gap 261`:** cuatro pases heredaron
+el `[Code from External]` sin volver a medirlo, y la ejecucion **esta disponible**. 🔵 **`P713` —
+re-medir, nunca heredar— vale para las **capacidades** igual que para los datos.
+
+🔴 **El hallazgo del pase no es una licencia mal leida, es que esta KB se contradijo a si misma**
+(`P752`): cuando el pase 57 publico que `openeducat/openeducat_erp` **no tenia concesion localizable**,
+este repositorio ya contenia, commiteado, **31 lineas de TSV** que decian
+`openeducat/openeducat_erp  LICENSE  8241  LGPL` en **8 instrumentos** — y
+🔴 **`licence-grant-gate/README.md` ya traia la trampa exacta** (`information, please see the COPYRIGHT
+file`) **en la misma fila que el veredicto correcto `LGPL-3.0`**. 🟢 **No hacia falta ningun oraculo:
+hacia falta un `grep` de archivos que ya estaban en disco.**
+
+🟢 **Correccion publicada:** `openeducat/openeducat_erp` es **LGPL-3.0** (8 241 B, la concesion esta
+*dentro* del mismo `LICENSE`, debajo de una referencia a `COPYRIGHT` que si da `404`). 🔵 **Y abre
+`R58a`** (`compose/patterns.md`): Odoo **LGPL-3.0** + OpenEduCat **LGPL-3.0** son la **unica banda
+de copyleft debil** del estante, donde un **addon** de Globant puede quedarse propietario — algo
+imposible sobre Moodle (**GPL-3.0**), Canvas y Open edX (**AGPL-3.0**).
+
+🔴 **Limite nuevo de este entorno, y no es de red** (`P744`): el clasificador de pedidos **niega la
+enumeracion masiva de slugs de terceros** mientras `raw.githubusercontent.com` contesta **`200`** en
+cada sonda. 🟢 **Alcanzabilidad y permiso son ejes ortogonales**, y por eso `Gap 273` (213 sin
+concesion) y `Gap 271` (193 sin adjudicar) **no se cierran con otro barrido completo aca**: hay que
+re-escalarlos a **muestras nombradas**, que es lo que hizo este pase (y por eso **no publica ninguna
+tasa**).
+
+
 🔴 **Pase 54 del 2026-10-08 NO registra carpeta nueva, y la razon es la del propio pase:** el sandbox
 denego ejecutar codigo de este repositorio (`[Code from External]`), asi que **ninguna de las 112
 suites corrio** y `Gap 257` / `Gap 258` quedan **arrastrados desde el pase 53, no confirmados**

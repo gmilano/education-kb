@@ -4,6 +4,41 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🔴 Fifty-eighth pass, 2026-10-08 — week of 2026-10-08: the trending channel is empty of education for the **ninth** week, and the week's repo news is a **retraction**
+
+⏱️ **Twelfth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+🟢 **Oracle map re-measured first, `n = 3` (`P745`):** `raw` **`200`×3** (`404`-discriminating), `pypi` **`200`×3**, `npm` **`200`×3**, `ls-remote` **exit `0`×3**. 🟡 `repo.packagist.org` **1 transient in 3**. 🔴 `huggingface.co/api` **`000`×3**. 🟡 **`api.github.com` bare host `200`×3 — `/repos/{third-party}` `403`×5, control also `403`: no stars, not even existence (`P745`).**
+
+### 🔴 `github trending education AI 2026`, counted name by name
+
+🟢 **Run globally and once per region. Education-specific trending repos: zero — ninth consecutive week.** 🟢 **What the channel returned, and why each was rejected:**
+
+| Returned | Verdict |
+|---|---|
+| `rohitg00/ai-engineering-from-scratch` (#1 on a third-party trending list, 2026-06-21) | 🔴 **learning material about AI engineering**, not AI for education |
+| `microsoft/ai-agents-for-beginners` (~47 300★ claimed) | 🔴 **a course** — named in passes 55–58 |
+| `GokuMohandas/made-with-ml` (~45 200★ claimed) | 🔴 an ML course |
+| `karpathy/nn-zero-to-hero` · `d2l-ai/d2l-en` | 🔴 AI curricula — 🔵 **pedagogically excellent, and still education *about* AI** |
+| `speedyapply/2026-AI-College-Jobs` · `MadsLorentzen/ai-job-search` | 🔴 **job boards**, not education software |
+| AI Engineering Hub · Awesome LLM · AI Terminology Glossary | 🔴 curated link lists from a community "github-trending" mirror, 🟡 **not GitHub's own Trending page** |
+
+🔴 **Every star count above is channel-reported and unverifiable here.** 🟡 **The channel disclosed its own limit:** *"I didn't find a live, official GitHub Trending page for education-specific AI repos as of today, October 8, 2026"* — 🟢 **and one source reported that **9 of the top 10** repos on GitHub's February 2026 monthly ranking were AI-related, which is context for why the channel saturates on general AI.**
+
+### 🔴 This week's real repo movement
+
+| Movement | Reading |
+|---|---|
+| 🔴 **This KB contradicted itself 31 times over** (`P752`) | 8 instruments' committed TSVs held `openeducat … LICENSE 8241 LGPL`; 🔴 **`licence-grant-gate/README.md` held the exact `COPYRIGHT`-reference trap beside the right verdict.** 🟢 **New offline gate `p752-prose-vs-committed-results`, 4/4** |
+| 🔴 **`openeducat/openeducat_erp` moves OUT of "ungranted" into `LGPL-3.0`** (`P742`) | **8 241 B**, grant in-file below a `COPYRIGHT` reference that `404`s at all three spellings; 🟢 **992 refs** |
+| 🔴 **Pass 57's taxonomy row RETRACTED**, shape intact | The other two members re-read and **CONFIRMED**: `open-lex-edu` (2 874 B, zero grant phrases), `Xiaochr/LLM-AES` (`404` × **13** filenames, 2 refs, exists) |
+| 🔴 **Four instrument defects, four copyleft repos, zero permissive** (`P730a`) | `moodle` · `nvda` · `languagetool` (`P727`) + `openeducat` (`P742`) — 🔴 **the "213 ungranted" bucket is skewed copyleft, so treating it as low-risk inverts the risk** |
+| 🟢 **Registry recency, first dated measurements on this shelf** (`P741`) | `autorubric` **2026-09-27** · `rubric` **2026-01-21** · `PyLTI1p3` **2022-11-20** |
+| 🔴 **A repo slug is not a package name** (`P743`) | `pylti1.3` → `NOT_FOUND` on PyPI; the distribution is **`PyLTI1p3`** (a dot cannot sit there), **3 y 11 mo** since release |
+| 🔴 **Bulk sweeps are policy-denied, not network-denied** (`P744`) | 🟢 `raw` `200` on every probe, and a 1 020-repo sweep still will not run here |
+
+🟡 **A note for later passes, sharpening `Gap 274`:** 🔴 **nine weeks, zero education repos from the mandated trending channel.** 🟢 **The channels that produced every real find of passes 56–58 are (a) narrow topic queries and (b) **re-reading the shelf itself** — this pass's entire yield came from (b).** 🆕 **`Gap 278` — `Gap 274` asked for a replacement channel to run *alongside* the mandated one and no pass has proposed a concrete query; the obvious untried shape is a **registry-side** query (PyPI/npm education-topic classifiers), which `P741` shows is reachable here while `github.com` is not.**
+
+
 ## 🟢 Fifty-seventh pass, 2026-10-08 — week of 2026-10-08: the trending channel is empty of education for the **eighth** week, and the week's repo news is a **census**, not a release
 
 > 🟢 **`github trending {industry} AI {year}` re-run independently this week. 🔴 **No education

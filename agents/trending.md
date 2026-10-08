@@ -4,6 +4,35 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🔴 Fifty-eighth pass, 2026-10-08 — week of 2026-10-08: the mandated query is saturated for the **ninth** week, and the week's movement is a **retraction of last week's own finding**
+
+⏱️ **Twelfth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+🟢 **Oracle map re-measured before any datum, `n = 3` (`P713`, `P745`):** `raw` **`200`×3** (`404`-discriminating), `pypi` **`200`×3**, `npm` **`200`×3**, `ls-remote` **exit `0`×3**. 🟡 `repo.packagist.org` **1 transient `000` in 3**. 🔴 `huggingface.co/api` **`000`×3**. 🟡 **`api.github.com` bare host `200`×3 — but `/repos/{third-party}` `403`×5 with a non-discriminating control, so still no star counts (`P745`).**
+
+### 🔴 This week's movement, in order of weight
+
+| # | Movement | Evidence class |
+|---|---|---|
+| 1 | 🔴 **Pass 57's verdict was contradicted by this KB's OWN committed data, 31 times** (`P752`) — `p445-classifier-divergence`, `p269-provider-release-matrix`, `p206-erp-layer-license` and 5 more instruments all held `openeducat … LICENSE 8241 LGPL`, and 🔴 **`licence-grant-gate/README.md` had recorded the exact `COPYRIGHT`-reference trap beside the correct `LGPL-3.0` verdict**. 🟢 **New gate `p752-prose-vs-committed-results`, `--self-test` 4/4, offline** | 🟢 **Committed artefacts, counted** |
+| 2 | 🔴 **Pass 57's `openeducat` "no grant" row is RETRACTED** — `LICENSE` is **LGPL-3.0**, 8 241 B, grant included in-file below a `COPYRIGHT` reference that genuinely `404`s (`P742`) | 🟢 **Payload, first-hand** |
+| 3 | 🔴 **The reference test was the wrong test** — "does the referenced target resolve" disagrees with "does a grant body exist" exactly on **GNU-convention** repos, so the error is **biased into the copyleft family** for the **third** time (`P727`, `P701`, now `P742`) | 🟢 **Method, with a worked instance** |
+| 4 | 🔴 **A new constraint class: policy, not network** (`P744`) — bulk enumeration of third-party slugs is **denied by the environment's classifier** while `raw` answers `200` on every probe; `Gap 273` and `Gap 271` are **not closeable by another full-shelf sweep here** | 🟢 **Measured, two denials** |
+| 5 | 🟢 **The registry is a second grant oracle, not just a recency channel** (`P741`) — `autorubric` **MIT v1.6.1 2026-09-27**, `rubric` **MIT v2.2.0 2026-01-21**, `PyLTI1p3` **MIT v2.0.0 2022-11-20** | 🟢 **PyPI JSON, first-hand** |
+| 6 | 🔴 **`R57a`'s LTI component is 3 y 11 mo stale, and its package name was wrong** (`P743`) — the slug is `pylti1.3`, the distribution is **`PyLTI1p3`**; a slug-as-package lookup returns `NOT_FOUND` | 🟢 **Registry + payload** |
+| 7 | 🟢 **Two pass-57 rows re-read and CONFIRMED** — `open-lex-edu` (2 874 B of Spanish education *regulation* filed as `LICENSE.md`, **zero** grant phrases) and `Xiaochr/LLM-AES` (`404` at **13** filenames, repo exists) | 🟢 **Payload, first-hand** |
+| 8 | 🟡 **`api.github.com` looks restored and is not** (`P745`) — bare host `200`×3, `/rate_limit` `200` with a real **15 000/hr** authenticated quota, every third-party repo `403` | 🟢 **Endpoint-level, with control** |
+| 9 | 🟢 **`Gap 267` REFUTED — code from this repository **ran** after four passes of inherited denial**; the new instrument `p742-grant-body-vs-reference` reproduced every hand measurement and found a **second** `GRANTED_DESPITE_REFERENCE` repo (`odoo/odoo`, LGPL, 43 529 B) the hand pass had missed | 🟢 **Suite output, committed** |
+| 10 | 🔴 **One new MIT candidate rejected** — `pguso/agents-from-scratch` (MIT, ~796★ claimed) carries the topic `ai-education`, 🔵 **but about its subject, not its market** | 🟡 **Prose + topic metadata** |
+
+### 🔴 The mandated query, counted name by name
+
+🟢 **`top open source AI agents education 2026 github MIT`, run globally and once per region. Education-specific new rows: zero.** 🟢 **Returned: `microsoft/ai-agents-for-beginners` (a course), `pguso/agents-from-scratch` (a teaching project), `avinash201199/free-ai-agents-resources` (a link hub), Hermes Agent, `aider`, Cline, CrewAI, AutoGen, LangGraph (general agents).** 🟡 **The channel said so itself:** *"I did not find a dedicated ranking of MIT-licensed education agents."*
+
+🟢 **One piece of outside corroboration worth keeping:** a roundup independently warned that some *"open source"* agents ship **source-available** terms that *"quietly block you from competing with the vendor's own hosted product"* — 🔵 **the `relicensed` shape (`P725b`, `leemonade/leemons`) observed off this shelf.**
+
+> 🔴 **`P497` holds for a ninth week**, and 🔴 **`Gap 274` is now three passes old and unanswered**: the mandated trending and agent queries have a **measured nine-week yield of zero**, while re-reading the shelf produced a retraction, five confirmations and three new propositions in this pass alone. 🟢 **The productive channel is the shelf.**
+
+
 ## 🟢 Fifty-seventh pass, 2026-10-08 — week of 2026-10-08: the mandated query is saturated for the **eighth** week, and the week's movement is a **sweep of the whole shelf** rather than a new agent
 
 > 🟢 **Independently re-run this week, the mandated agent query returned **nothing** this shelf did
