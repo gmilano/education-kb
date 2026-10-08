@@ -4,6 +4,111 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🔴 Fifty-first pass, 2026-10-08 — the regional channel yields **zero** for the fourth consecutive pass, counted name by name, and EMEA reproduced a superseded date for the **fourth** time
+
+⏱️ **Fifth pass of this date.** Four regional queries ran verbatim, one per region. **Every named
+instrument was checked term by term against the tree before being called new.** No star counts
+(`P479`).
+
+### 🔴 The regional yield, with its denominator
+
+| Region | Instruments / figures the channel named | 🟢 Already held | 🆕 New |
+|---|---|---|---|
+| **North America** | Ohio's mandatory district AI policy (by **2026-07-01**), CA **A.B. 1159** (no training on student data unless it benefits the school), ID **SB 1227**, **H.R. 8747** (committee **2026-07-21**, *not enacted*), OK + MD human-oversight bans on high-stakes decisions, **NYC** one-year K-8 student-facing moratorium, GA + MS CS credit requirements, AASA student-authored framework | 🟢 **8 / 8** | 🔴 **0** |
+| **EMEA** | EU AI Act **Annex III** education high-risk, **Art. 50** transparency, **Art. 4** AI literacy, Digital Omnibus (Council **2026-06-29**), OECD *Digital Education Outlook 2026*, UNESCO GenAI guidance, UK **£4 M** lesson-planning/marking, FI/EE/NL leading K-12 integration, EU market **$2.64 B → $8.0 B at 31.9 %**, **10 %** of 450+ institutions with formal guidelines | 🟢 **10 / 10** | 🔴 **0** |
+| **APAC** | Korea **AI Framework Act** in force **2026-01-22** (+ foreign-provider domestic representative), **Vietnam**'s AI law listing education high-risk — *automated assessment and behavioural monitoring*, high-risk only where output is the sole basis without meaningful human review, effective **2026-03-01**, extraterritorial — Taiwan **AI Basic Act** (Dec 2025), Singapore **60.9 %** diffusion, **1 in 10** APAC enterprises "very mature", Sarvam / SEA-LION / HyperCLOVA X / TAIDE | 🟢 **7 / 7** | 🔴 **0** |
+| **LATAM** | UNESCO **Observatory on AI in Education for LAC** (announced **April 2026**), Mexico centres-of-excellence pilot with **CONALEP** and **DGETI** (Aug 2026), **Tec de Monterrey** PPP, Brazil **PL 2.338/2023** (still in the Chamber; ANPD sandbox to **Dec 2026**), Chile's executive bill, Colombia **CON-IA**, Mexico's enacted 2026 amendments, UNESCO competency frameworks | 🟢 **7 / 7** | 🔴 **0** |
+| 🔵 **The only thing not held** | **Nebraska** — advocates pushing for NYC-style K-8 limits | — | 🟡 **1, and it is not an instrument.** Advocacy, no bill number, no date. Recorded here and **not** shelved as regulation |
+
+🟢 **Written down explicitly because an informed gap is information and silence looks exactly like
+coverage.** 🔴 **No region returned nothing. All four returned material, and all four returned
+material this KB already held — which makes the channel *saturated*, not *broken*, and the
+denominator is how that stays distinguishable.**
+
+🔴 **EMEA's date defect, fourth occurrence.** A source again dated the Act's full effect to *August
+2026*. 🟢 **This KB's record is unchanged and is the one to quote:** enforcement from **2026-08-02**
+with the AI omnibus in force **2026-07-27**, and Reg. (EU) **2026/1744** deferred **Annex III
+stand-alone** high-risk — the class education sits in: access, assessment of learning outcomes,
+educational path, exam monitoring — to **2027-12-02**, with Annex I embedded to **2028-08-02**.
+🟢 **Article 50 transparency was not moved and runs from 2026-08-02.** 🔴 **`eur-lex.europa.eu` and
+`gnu.org` are both unreachable from this environment (403 at the proxy), so the OJ citation remains
+second-hand by channel and first-hand only by repetition across passes — stated, not hidden.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **The licence-provenance pack is still the sellable artefact, and this pass makes it cheaper and
+more defensible.** OK and MD require **human oversight** of high-stakes student decisions, CA
+**A.B. 1159** restricts training on student data, and Ohio now obliges **every district** to hold a
+formal AI policy. 🟢 **`P620` adds a column that pack was silently missing: the licence *version*,
+recovered for five components whose grant ships as Markdown.** 🔴 **GPL-2.0 vs GPL-3.0 is not a
+cosmetic difference in an auditable artefact — GPL-2.0 carries no patent grant and is
+Apache-2.0-incompatible** — and four Moodle AI plugins a US K-12 engagement would plausibly reach for
+(`moodle-mod_maici`, `moodle-qbank_genai`, `moodle-local_aiquestions`, `moodle-local_aiid`) had no
+version on this shelf until this pass. 🔵 **Offer: per-artefact grant, read at the **pinned ref**,
+with HTTP status, byte count *and file format* recorded.**
+🔵 **Federal timing stays a watch item, not a plan:** H.R. 8747 cleared committee **2026-07-21** and
+is **not** enacted.
+
+### EMEA
+
+🟢 **Scope Annex III stand-alone education high-risk to 2027-12-02, not August 2026** — 16 months of
+runway that four independent secondary channels would now have spent for a client (`P617`, and this
+pass is the fourth occurrence). 🟢 **And scope Article 50 transparency as live today**, because the
+channels conflate the two obligations into one sentence.
+🟢 **`P622` is directly useful in EMEA.** An admissions/CRM layer for an EU institution can now be
+built on **two independent permissive suppliers** — `MicroPyramid` (MIT, 1,068 B) alongside
+`Webkul`'s Krayin/AureusERP — where pass 46 proved the shelf had only one vendor wearing two names.
+🔵 **Vendor independence is a procurement requirement in EU public tenders far more often than it is
+a technical one**, so the second supplier is commercially load-bearing even though neither has an
+education domain model.
+🔴 **The EMEA permissive-education gap is unchanged:** the one EMEA-origin higher-ed assessment
+framework on any shelf here (`macsnoeren/genai-open-assessment`, NL) is **GPL-3.0**.
+
+### APAC
+
+🟢 **Vietnam is the most actionable instrument in this region and the wording is the opportunity.**
+Education is on its high-risk list specifically as **automated assessment and behavioural
+monitoring**, and many listed systems are high-risk **only where the output is the sole basis for a
+decision without meaningful human review**. 🟢 **That is a design constraint a studio can satisfy by
+architecture rather than by paperwork: keep a human decision step in the loop and the system leaves
+the high-risk class.** 🔴 **The law is extraterritorial (effective 2026-03-01), so it binds a
+Globant delivery team serving Vietnamese learners from anywhere.**
+🟢 **Korea's AI Framework Act (in force 2026-01-22) adds a concrete, billable obligation**: a
+non-Korean provider serving Korean users directly must designate a **domestic representative**.
+🔵 **Sovereign-model integration remains the region's distinguishing engagement shape** (SEA-LION,
+Sarvam, HyperCLOVA X Think, TAIDE), and it is an integration brief, not a licence brief.
+
+### LATAM
+
+🟢 **The UNESCO LAC Observatory (April 2026) is the region's convening body, and the Mexico pilot
+names the counterparties** — **CONALEP** and **DGETI**, with **Tec de Monterrey** in a public-private
+partnership. 🟢 **Those are nameable doors for a studio, which is rarer in this region's channel than
+market figures.**
+🔴 **Adoption is ahead of rules here, stated by the channel in as many words** — *"education systems
+are quietly integrating AI tools into classrooms, often without oversight or guidelines"* — and
+Brazil's **PL 2.338/2023** is still in the Chamber, so the text can still change. 🟢 **The sellable
+consequence: a governance-first engagement sells in LATAM on the strength of the EU Act's
+extraterritorial reach plus the ANPD sandbox (to Dec 2026), without waiting for a local statute.**
+🔵 **And the EU's 2027-12-02 Annex III date is the planning anchor for LATAM edtech selling into
+Europe**, which is where the `P514` correction earns money a second time.
+
+### Global
+
+🟢 **This pass's transferable product is `P624`'s format-aware grant read** (`compose/patterns.md`),
+and it is not education-specific: it applies to any dependency whose licence is probed by **filename**
+rather than enumerated from the **tree**. 🔴 **The evidence it is needed is a project that ships its
+grant twice and answers 404 to six standard filenames** (`idempiere/idempiere`), plus **26 of 412
+shelf rows (6.3 %)** whose grant is Markdown or HTML — five of which were carrying a licence *family*
+with no *version*.
+🔴 **And the control it retires: byte count as licence identity.** Five GPL-3.0 payloads read today
+span **34,674 → 35,151 B**, two *different* payloads sit at exactly **35,148 B**, and the ±1 B
+"trailing-newline tolerance" this KB had been using decomposes into three unrelated edits that happen
+to sum to 1 (`P621`). 🟢 **`P420`'s rule — size is a tell-tale, never an identifier — now has
+evidence from both directions, and `Dolibarr/dolibarr` `develop/COPYING` is named as the
+SPDX-conformant GPL-3.0 specimen to stage in future.**
+
 ## 🔴 Fiftieth pass, 2026-10-08 — the regional channel yields **zero** for the third consecutive pass, and the EMEA channel reproduced a superseded date for the **third** time
 
 ⏱️ **Fourth pass of this date.** 🔵 **All market and regulatory figures below are secondary and carry
@@ -73,7 +178,7 @@ so that a later pass does not re-pay for the search:
 coverage.** 🔴 **No region returned nothing: all four returned something, and four of four returned
 material this KB already had.**
 
-## Opportunities by region
+## Opportunities by region — superseded (the live block is at the top of this file)
 
 ### North America
 

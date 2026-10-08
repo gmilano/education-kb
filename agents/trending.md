@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🔴 Fifty-first pass, 2026-10-08 — week of 2026-10-08: zero new agents (**eleventh** pass), and the week's movement is **five licence versions this KB already had the payloads to read**
+
+⏱️ **Fifth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+Read from payload on 2026-10-08, HTTP status and byte count per filename. **No star counts
+(`P479`).**
+
+### 🔴 Zero new agents, measured name by name
+
+The mandated query ran verbatim — globally and once for each of North America, EMEA, APAC and
+LATAM — and every slug it returned was **already on the tree** (1,152 unique slugs tree-wide, 382 in
+`agents/top.md`):
+
+| Class | Names returned this week | New? |
+|---|---|---|
+| Horizontal agents | OpenHands, CrewAI, LangGraph, OpenClaw, OpenAI Codex, `browser-use` | 🔴 **0 new** |
+| Agent **catalogues** | `ashishpatel26/500-AI-Agents-Projects`, `ARUNAGIRINATHAN-K/awesome-ai-agents-2026`, `caramaschiHG/awesome-ai-agents-2026`, `kouweizhu/agents-radar` | 🔴 **0 new** |
+| **Courses** (not composable agents) | `microsoft/ai-agents-for-beginners`, `huggingface/agents-course`, `pguso/agents-from-scratch`, `rohitg00/ai-engineering-from-scratch`, `microsoft/generative-ai-for-beginners`, `LLMs-from-scratch` | 🔴 **0 new** |
+| 🔵 Education-**specific** | [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) (curriculum design / pedagogy, TypeScript), [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🔴 **0 new** — both already filed, `ChatTutor` as *seen and declined* (a demo tutor, not a composable agent) |
+
+🔵 **The one thing the global channel said that is worth recording as a trend rather than a row:** its
+own 2026-10-08 trends report states the trending list is *"dominated by projects focused on
+engineering skills for coding agents"*. 🔴 **That is the eleventh consecutive week in which the
+education-agent tier moves because the *horizontal* tier moves, and not on its own.**
+
+### 🟢 The week's actual movement: five rows gain a licence **version** (`P620`)
+
+🟢 **Not a new repo — a new *read* of repos this shelf already held.** `p419`'s header window is two
+non-empty lines, measured on plain text; a `LICENSE.md` that opens `<center>` pushes `Version N`
+outside it, and `familia()` answers `GPL-?`. Over all **26** `.md`/`.html` licence payloads on the
+shelf plus two `idempiere` files — **28 payloads, all 200** — 🟢 **5 `REPAIRED`**, 🔴 **1
+`WINDOW-STILL-SHORT`**, 22 `AGREE`.
+
+| Row | Was | 🟢 Now | Why it was lost |
+|---|---|---|---|
+| 🆕 [`idempiere/idempiere`](https://github.com/idempiere/idempiere) | not on any shelf | 🟢 **GPL-2.0** | `LICENSE.md` opens `<center>`; six other filenames **404** |
+| [`caiocarvalhofre/moodle-mod_maici`](https://github.com/caiocarvalhofre/moodle-mod_maici) | `GPL` | 🟢 **GPL-3.0** | Markdown wrapper |
+| [`cgrevisse/moodle-qbank_genai`](https://github.com/cgrevisse/moodle-qbank_genai) | `GPL` | 🟢 **GPL-3.0** | Markdown wrapper |
+| [`yedidiaklein/moodle-local_aiquestions`](https://github.com/yedidiaklein/moodle-local_aiquestions) | `GPL` | 🟢 **GPL-3.0** | Markdown wrapper |
+| [`michael-milette/moodle-local_aiid`](https://github.com/michael-milette/moodle-local_aiid) | `GPL` | 🟢 **GPL-3.0** | Markdown wrapper |
+
+🔵 **Four of the five are the shelf's GPL *size* outliers** (35,178 ×3 and 32,477 against a modal
+35,149) — outliers **because** they are Markdown wrappers. The format axis and the size anomaly are
+the same thing, and neither column carried it.
+
+### 🔴 Correction to this file: the GPL-3.0 byte tolerance recorded here on 2026-10-07
+
+🔴 **This file states that `datacamp/catsim`'s 35,147 B payload is corroborated as canonical GPL-3.0
+because it falls "within the ±1 B trailing-newline tolerance" of the staged `lmscloud` specimen at
+35,148 B. The mechanism is wrong and the specimen is the outlier.** Five GPL-3.0 payloads read today
+span **34,674 → 35,151 B**; the 35,147→35,148 delta decomposes as **+4 B** (`http://`→`https://` ×4)
+**−2 B** (`philosophy`→`licenses`) **−1 B** (no final newline); two *different* payloads both measure
+exactly 35,148 B; and **`lmscloud` is the only one of the five whose `why-not-lgpl` URL disagrees with
+SPDX**. 🟢 **`catsim` is still GPL-3.0 — by its header, which is how `p419` says to read it.** Full
+table and arithmetic: `agents/top.md`, `P621`, this date.
+
 ## 🔴 Fiftieth pass, 2026-10-08 — week of 2026-10-08: zero new agents (tenth pass), and the week's finding is a licence that expired in 2021 and still ships
 
 ⏱️ **Fourth pass of this date.** 🔵 **APPEND-ONLY — the history below this section is intact.**

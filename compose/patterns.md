@@ -4,6 +4,90 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-first pass, 2026-10-08 — two recipes (`P624` the format-aware grant read; `P625` the two-supplier admissions layer) and a **correction** to every recipe that priced a GPL component without its version
+
+⏱️ **Fifth pass of this date.** Both recipes name the exact repos, refs, payload filenames and byte
+counts measured on 2026-10-08. **No star counts (`P479`).**
+
+## 🔴 Correction — every recipe that named a Moodle AI plugin was pricing a **GPL of unknown version**
+
+🔴 **Four components several recipes in this file reach for carried the family `GPL` and no
+version**: [`caiocarvalhofre/moodle-mod_maici`](https://github.com/caiocarvalhofre/moodle-mod_maici),
+[`cgrevisse/moodle-qbank_genai`](https://github.com/cgrevisse/moodle-qbank_genai),
+[`yedidiaklein/moodle-local_aiquestions`](https://github.com/yedidiaklein/moodle-local_aiquestions),
+[`michael-milette/moodle-local_aiid`](https://github.com/michael-milette/moodle-local_aiid).
+🟢 **All four read GPL-3.0 under `P620`.** 🔵 **The correction does not move a deliverable here** —
+GPL-3.0 was the working assumption, Moodle's own licence, and the side-car shape every recipe already
+imposed. 🟢 **But it was an assumption, and now it is a reading.**
+
+🔴 **Where the same defect *does* move a deliverable:**
+[`idempiere/idempiere`](https://github.com/idempiere/idempiere) reads **GPL-2.0**, not GPL-3.0.
+🔴 **GPL-2.0 carries no patent grant and is incompatible with Apache-2.0**, so any recipe that would
+have combined it with an Apache-2.0 component on the assumption "GPL means GPL-3.0" was wrong about
+the one thing that decides whether the combination may ship. 🟢 **No recipe in this file named it
+before this pass; it is recorded so none does so unversioned.**
+
+## 🟢 `P624` — the **format-aware grant read**: six filenames is not a probe, it is a guess
+
+🔵 **The problem, measured.** A licence sweep that probes `LICENSE`, `LICENSE.txt`, `COPYING`,
+`COPYING.txt`, `LICENSE.html`, `legal/LICENSE` — the shape most sweeps in this corpus use — returns
+**404 six times** on `idempiere/idempiere`, a project that ships its grant **twice**. 🔴 **It would be
+filed `UNKNOWN` ("grant not found") and dropped from a shortlist.** And where a probe *does* hit a
+`.md` payload, the version is lost to the wrapper.
+
+**The recipe, four stages, each with the thing that makes it fail:**
+
+1. **Enumerate, do not guess.** `git clone --filter=blob:none --no-checkout --depth 1` then
+   `git ls-tree -r --name-only HEAD` — `p441`'s `tree_paths`. 🔴 **Not a filename list:** that is the
+   stage `idempiere` defeats. Add `.md` / `.html` / `.rst` to the grant-path pattern.
+2. **Confirm existence separately.** `git ls-remote --heads` with a **negative control in the same
+   run** (`P510`). 🔴 **Without it a 0-ref answer and a dead channel are indistinguishable** — which
+   is exactly how `bottlecrm/bottlecrm` would have been read as "project does not exist" when the
+   project is real and the *slug* is not (`P622`).
+3. **Unwrap, then read the header.** `p620`'s pre-stage (drop markup-only lines, strip inline tags
+   and Markdown lead markers) then `p419`'s **unmodified** `familia()`. 🔴 **Do not widen the header
+   window to compensate** — at `n=3`+ body text re-enters it and GPL-3.0 §13 makes the payload read
+   `AGPL`, which `p419`'s suite already refuted.
+4. **Record format beside size.** 🟢 **`format` is the column that explains the size outliers**
+   (35,178 ×3 and 32,477 against a modal 35,149 are Markdown wrappers, not anomalies).
+   🔴 **Never use byte count as licence identity at any tolerance:** five GPL-3.0 payloads measured
+   today span **34,674 → 35,151 B**, and two *different* payloads sit at exactly 35,148 B.
+
+**Wire-up:** `compose/code/p620-licence-header-window/probe_window.py` over the output of
+`p441-tree-licence-enumeration`, verdicts fed to `licence-grant-gate`. Suite 🟢 **30/30**, offline.
+🔴 **Declared blind spot to carry into the client report, not to hide:** a payload that **names a
+second licence above its own title** (`idempiere`'s `license.html` opens
+`Compiere Public License`) still answers `GPL-?` and is classed `WINDOW-STILL-SHORT`. 🟢 **Route
+those to a human read; there is one in 412 rows, so the queue is affordable.**
+
+## 🟢 `P625` — the admissions/CRM layer with **two real suppliers**, which is what makes `P568` sellable
+
+🔵 **`P568` (pass 46) built a permissive admissions/CRM layer over a copyleft academic core and its
+"swap the CRM" clause was nominal**, because `P564` had just proved the shelf's two "independent MIT
+options" shipped **byte-identical `LICENSE` payloads under one holder**, `Webkul Software`.
+🟢 **This pass supplies the second supplier.**
+
+| Layer | Component | Ref / payload | Licence |
+|---|---|---|---|
+| Academic core | `moodle/moodle` or ERPNext school module | — | 🔴 GPL-3.0 — **stays a separate process** |
+| 🟢 **Admissions/CRM, supplier A** 🆕 | [`MicroPyramid/opensource-startup-crm`](https://github.com/MicroPyramid/opensource-startup-crm) | `main` = `master` = `b51c85d` (**one ref, two names** — `P511`); `LICENSE` **1,068 B** | 🟢 **MIT** — holder `MicroPyramid`, Django + DRF + SvelteKit |
+| 🟢 **Admissions/CRM, supplier B** | [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | `2.2` (🔴 **not `main`** — `P565`); `LICENSE` **1,077 B** | 🟢 MIT — holder `Webkul Software`, Laravel/PHP |
+| Boundary | HTTP/REST between CRM and academic core | — | 🟢 **Keeps the copyleft core out of the deliverable's linkage** |
+
+🟢 **Why two suppliers is the point and not a nicety:** EU public procurement asks for vendor
+independence far more often than architecture does, so the second source is **commercially**
+load-bearing (see `intel/market.md`, EMEA, this pass). 🔴 **Different holders also mean different
+stacks** — Python/Django against PHP/Laravel — so "swap" is a port, not a drop-in; price it as a
+port.
+
+🔴 **Two things to put in the proposal, not bury.** (1) **Neither has an education domain model** —
+no admissions funnel, cohort, programme or enrolment entity. Both are generic CRMs, filed exactly as
+the archive filed Huly and Apache OFBiz: **a layer to be modelled**, and the modelling is the
+engagement. (2) 🔴 **Supplier A's MIT grant is single-channel** — read from payload, with **no
+manifest licence field anywhere in the tree** (`package.json`, `pyproject.toml`, `setup.py` all
+404), and a 2026 third-party roundup claims GPL-3.0. 🟢 **The payload refutes the roundup; pin the
+ref in the contract so the reading is reproducible.**
+
 ## 🟢 Fiftieth pass, 2026-10-08 — `P619`: the **two-ref licence read**, and the recipe that unpins a Spanish assessment build from GPL-3.0
 
 ⏱️ **Fourth pass of this date.** 🔵 **All licences read first-hand on 2026-10-08** from payload or model

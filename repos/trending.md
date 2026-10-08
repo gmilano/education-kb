@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-first pass, 2026-10-08 — week of 2026-10-08: three new permissive-or-not repos, and one of them is a **slug the channel invented**
+
+⏱️ **Fifth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+Existence by `git ls-remote --heads` with a negative control in the same run (`P510`):
+`gmilano/education-kb-NEGATIVE-CONTROL-no-existe-51` → **0 refs**. Licences read from payload. **No
+star counts (`P479`).**
+
+🔴 **Channel measurement first:** `github.com` **HTML** returns **403** through this environment's
+proxy for every slug tried this week, as `api.github.com` has since pass 37. 🟢 **`git ls-remote` and
+`raw.githubusercontent.com` both answer 200**, so existence and licence remain readable and nothing
+in this section rests on a secondary source.
+
+### 🆕 This week's repos
+
+| Repo | Ref read | Payload | Family | Verdict |
+|---|---|---|---|---|
+| 🟢 🆕 [`MicroPyramid/opensource-startup-crm`](https://github.com/MicroPyramid/opensource-startup-crm) | `main` = `master` = `b51c85d` (**one ref, two names** — `P511`) | `LICENSE`, **1,068 B**, `sha256 d483565f…` | 🟢 **MIT** | 🟢 **Admitted.** The code behind *BottleCRM*. 🟢 **Holder `MicroPyramid` — the independent second supplier `P564` said the ERP/CRM shelf lacked.** 🔴 Single channel: no manifest licence field in tree |
+| 🟢 🆕 [`Django-CRM/Django-CRM`](https://github.com/Django-CRM/Django-CRM) | `master` (**1 head**) | `LICENSE`, **1,069 B**, `sha256 b197caf2…` | 🟢 **MIT** | 🟡 Same holder, same year (2017). 🔵 **The 1 B against the row above *is* a trailing newline** — `diff` shows `SOFTWARE.` with `\ No newline at end of file`. Same vendor as the row above, so not a third supplier |
+| 🔴 🆕 [`idempiere/idempiere`](https://github.com/idempiere/idempiere) | `HEAD` (**27 refs**) | 🔴 `LICENSE`, `LICENSE.txt`, `COPYING`, `COPYING.txt`, `LICENSE.html`, `legal/LICENSE` → **404 ×6**; `LICENSE.md` **15,057 B** and `license.html` **15,955 B** → 200 | 🔴 **GPL-2.0** | 🟡 Filed to `verticals/`, not here as a foundation. 🔴 **No patent grant, Apache-2.0-incompatible** |
+| 🔴 🆕 [`Dolibarr/dolibarr`](https://github.com/Dolibarr/dolibarr) | `develop` (**63 refs**) | `COPYING`, **35,151 B** | 🔴 **GPL-3.0** | 🟡 Generic ERP, no education domain model. 🟢 **But its payload is this week's most useful *specimen*** — see below |
+| 🔴 `bottlecrm/bottlecrm` | — | — | — | 🔴 **0 refs, and `bottlecrm/BottleCRM` also 0**, in the run where the control gave 0 and three known slugs gave 27 / 63 / 7. **The project is real, the slug the channel named is not** |
+
+### 🟢 Why `Dolibarr`'s `COPYING` is the week's most valuable payload
+
+🟢 **It is the most SPDX-conformant GPL-3.0 text this corpus has measured, and it breaks the byte
+tolerance this KB was using.** SPDX `license-list-data` `text/GPL-3.0-only.txt` reads
+`https://www.gnu.org/philosophy/why-not-lgpl.html`; so does `Dolibarr` (35,151 B), `datacamp/catsim`
+(35,147 B, with `http://`) and `OHF-Voice/piper1-gpl` (35,148 B). 🔴 **The staged specimen
+`lmscloud-io/moodle-mcp-server` (35,148 B) is the only one of the five reading `licenses/`** — and it
+is the one the ±1 B tolerance was measured *from*.
+
+| Payload | Bytes | Lines | `why-not-lgpl` |
+|---|---|---|---|
+| SPDX `GPL-3.0-only.txt` | **34,674** | 232 (reflowed) | 🟢 `philosophy/` |
+| 🆕 `Dolibarr/dolibarr` `develop/COPYING` | 🟢 **35,151** | 674 | 🟢 `philosophy/` |
+| `datacamp/catsim` `master/COPYING` | 35,147 | 674 | 🟢 `philosophy/` |
+| `OHF-Voice/piper1-gpl` `HEAD/COPYING` | 35,148 | **675** | 🟢 `philosophy/` |
+| `lmscloud-io/moodle-mcp-server` `main/LICENSE` | 35,148 | 673 | 🔴 **`licenses/`** |
+
+🔴 **Spread 477 B across five payloads of the same licence; two distinct payloads at the same byte
+count.** 🟢 **Size is a tell-tale, never an identifier (`P420`) — now shown in the converse
+direction.** Full arithmetic: `agents/top.md`, `P621`, this date.
+
+### 🟢 And the shelf's own data already said so
+
+The GPL rows of `compose/code/p444-root-vs-tree-family/payloads.licensed.2026-10-07.tsv` span
+**35,065 → 35,199 B over 11 distinct sizes in 29 rows**. 🔵 **The four rows furthest out (35,178 ×3,
+32,477) are `LICENSE.md` wrappers, and `P620` recovers their *version* at the same time as explaining
+their *size*.** Nothing new had to be fetched to refute the tolerance — only cross-read.
+
 ## 🟢 Fiftieth pass, 2026-10-08 — week of 2026-10-08: the week's repos are **licence channels**, read per git ref
 
 ⏱️ **Fourth pass of this date.** 🔵 **APPEND-ONLY — the history below this section is intact.**

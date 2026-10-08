@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🔴 Fifty-first pass, 2026-10-08 — five trends: a tolerance built on the one divergent specimen, a version lost to `<center>`, a CRM whose slug does not exist, a shelf that is never both permissive and educational, and a regional channel measured empty for the fourth pass
+
+⏱️ **Fifth pass of this date.** Every figure below is read from payload or from a named channel on
+2026-10-08. **No star counts (`P479`).**
+
+### 🔴 Trend 1 — a corroboration mechanism can be **backwards** and still agree with the right answer for eleven passes
+
+🔵 **This corpus admitted `datacamp/catsim` as canonical GPL-3.0 because it fell "within the ±1 B
+trailing-newline tolerance" of a staged specimen.** 🔴 **Three of that sentence's four load-bearing
+parts are wrong.** The ±1 B is **+4 B** (`http://`→`https://` ×4) **−2 B** (`philosophy`→`licenses`)
+**−1 B** (no final newline), so it is not a newline; two *different* payloads measure exactly
+35,148 B, so equality proves nothing; and the **specimen** is the only one of five whose
+`why-not-lgpl` URL disagrees with SPDX. 🟢 **The conclusion was right the whole time** — `catsim`
+*is* GPL-3.0, by its header. 🔵 **The transferable shape: a test that keeps agreeing with a correct
+oracle is not thereby a correct test, and a corroboration whose direction nobody checked can run from
+the divergent payload toward the canonical one.**
+
+### 🟢 Trend 2 — the **file format** of a licence is an axis, and omitting it looks exactly like noise
+
+🔴 **`6.3 %` of this shelf (26 of 412 rows) ships its grant as `.md` or `.html`.** On five of them a
+two-line header window — correct for plain text, and measured as correct — admits markup instead of
+the version line, and a plainly-versioned payload answers `GPL-?`. 🔵 **The same property produced a
+second, apparently unrelated symptom:** those rows are the shelf's **byte-size outliers** (35,178 ×3,
+32,477 against a modal 35,149), because a Markdown wrapper adds bytes. 🟢 **One cause, two columns,
+and neither column named it.** 🔴 **A corpus that records a *size* and a *family* but not a *format*
+will keep attributing format effects to whichever column it does carry.**
+
+### 🔴 Trend 3 — a secondary channel can get a project's **existence** right and its **address** wrong
+
+🔵 **The vertical query returned BottleCRM as an MIT CRM, pointing at `bottlecrm.io`.** 🔴 The site is
+real, the licence claim is **correct**, and the GitHub slug the channel implied — `bottlecrm/bottlecrm`
+— returns **0 refs**, as does `bottlecrm/BottleCRM`, in a run where the negative control gave 0 and
+three known slugs gave 27 / 63 / 7. 🟢 **The code is `MicroPyramid/opensource-startup-crm`, MIT read
+from payload (1,068 B).** 🔵 **This is a new failure class for this corpus's channel audits: not a
+wrong licence and not a non-existent project, but a *correct claim filed under an address that does
+not resolve*.** 🔴 **A sweep keyed on the slug would have recorded "project does not exist" about a
+project that does** — and the same query's third-party roundup put the licence at GPL-3.0, which the
+payload refutes.
+
+### 🔴 Trend 4 — on this shelf, "permissive" and "has an education domain model" are still **disjoint**, now measured three ways
+
+| | Education domain model | Licence |
+|---|---|---|
+| ERPNext (school module: admissions, records, fees, outcomes) | 🟢 **yes** | 🔴 GPL-3.0 |
+| `idempiere/idempiere` 🆕 | 🔴 no | 🔴 GPL-2.0 (no patent grant, Apache-incompatible) |
+| `Dolibarr/dolibarr` 🆕 | 🔴 no | 🔴 GPL-3.0 |
+| `MicroPyramid/opensource-startup-crm` 🆕 | 🔴 no | 🟢 **MIT** |
+| `krayin/laravel-crm` + `aureuserp/aureuserp` | 🔴 no | 🟢 MIT — 🔴 but **one vendor** (`P564`) |
+| Apache OFBiz, Huly | 🔴 no | Apache-2.0 / 🔴 EPL-2.0 (`P563`) |
+
+🟢 **The one thing that did improve is supplier count, not licence coverage.** `MicroPyramid` is a
+genuinely different holder from `Webkul Software`, so `P568`'s "swap the CRM" clause stops being
+nominal. 🔴 **Nothing on this shelf is both permissive and educational, and the mandated vertical
+query said so about itself for the second consecutive pass.**
+
+### 🔴 Trend 5 — the regional channel's new-information yield is **zero for the fourth consecutive pass**, and this time it was counted
+
+🔵 **Four regional queries ran verbatim. 23 of 24 named instruments, bodies and figures were already
+held by this KB**, checked term by term against the tree:
+
+| Region | Named this pass | Already held |
+|---|---|---|
+| **North America** | Ohio's mandatory district AI policy (2026-07-01), CA A.B. 1159, ID SB 1227, H.R. 8747, OK/MD human-oversight rules, NYC K-8 moratorium, GA/MS CS credit, AASA student framework | 🟢 **8 / 8** |
+| **EMEA** | EU AI Act Annex III high-risk, Art. 50, Art. 4 literacy, Digital Omnibus (Council 2026-06-29), OECD *Digital Education Outlook 2026*, UNESCO GenAI guidance, UK £4 M, FI/EE/NL | 🟢 **8 / 8** |
+| **APAC** | Korea AI Framework Act (2026-01-22), Vietnam's education high-risk list, Taiwan AI Basic Act, Sarvam / SEA-LION / HyperCLOVA X / TAIDE | 🟢 **7 / 7** |
+| **LATAM** | UNESCO LAC Observatory, Mexico/CONALEP/DGETI pilot, Tec de Monterrey, Brazil PL 2.338, Chile, Colombia CON-IA, Mexico 2026 amendments | 🟢 **7 / 7** |
+| 🔵 **Not held** | **Nebraska** — advocates pushing for K-8 limits | 🔴 **1** — advocacy, **not an instrument**; recorded and not shelved |
+
+🔴 **And EMEA reproduced a superseded date for the fourth time.** One source again dated full effect
+to *August 2026*; the Commission's own page gives enforcement from **2026-08-02** with the AI omnibus
+in force **2026-07-27**, and the Omnibus deferred **Annex III stand-alone** — which is where education
+sits — to **2027-12-02** (`P514`, Reg. (EU) 2026/1744). 🟢 **This KB's record stands unchanged.**
+🔵 **The trend worth naming is about the *instrument*, not the region: a channel that returns the same
+23 facts four passes running is saturated, and saying so with a denominator is the only way the
+difference between "saturated" and "unmeasured" stays visible.**
+
 ## 🔴 Fiftieth pass, 2026-10-08 — five trends: a licence that expired five years ago and is still shipping, a classifier that invented a version, a suite that framed its own dependency, a detector blind by vocabulary, and a channel saturated three passes running
 
 ⏱️ **Fourth pass of this date.** 🔵 **All market and regulatory figures are secondary and carry their

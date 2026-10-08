@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-first pass, 2026-10-08 — the foundational shelf's **licence-version coverage** was overstated, and the 6.3 % of rows that broke it share one property
+
+⏱️ **Fifth pass of this date.** Payloads read 2026-10-08 from `raw.githubusercontent.com` at `HEAD`,
+status and byte count per filename. **No star counts (`P479`).**
+
+🔵 **The mandated foundations query returned nothing new**, for the reason passes 48–50 recorded: the
+global channel answers with *courses* and *catalogues* (`microsoft/generative-ai-for-beginners`,
+`LLMs-from-scratch`, `rohitg00/ai-engineering-from-scratch`, `caramaschiHG/awesome-ai-agents-2026`),
+all already filed. 🟢 **So this pass measured the shelf instead of extending it, and the measurement
+moved five rows.**
+
+### 🟢 `P620` — `6.3 %` of the shelf ships its grant as **Markdown or HTML**, and that is where the version column is empty
+
+🔵 **The rule is `p419`'s and it is not changed here:** the family is read from the **header** — title
+plus `Version N`, the first two non-empty lines — never from the body, because a pristine licence
+text names its relatives (GPL-3.0 §13 names AGPL; GPL-2.0 closes naming the Lesser GPL). `p419`'s own
+suite refuted a wider window, so `n=2` is measured, not chosen.
+
+🔴 **The window was measured on plain text.** A `LICENSE.md` need not be plain text.
+`idempiere/idempiere` opens its with `<center>`, so the two lines the window admits are `<center>`
+and the title — and `Version 2, June 1991` falls outside. The answer is `GPL-?`: *names GPL without a
+version, not inferred (`P286`)*. 🔵 **A legal answer, which is why no suite went red, and the one that
+stops a commercial verdict.**
+
+🟢 **`compose/code/p620-licence-header-window/` — suite 🟢 30/30, offline.** Repair is a pre-stage
+(drop markup-only lines, strip inline tags and Markdown lead markers), then `p419`'s **unmodified**
+`familia()` (`P126`). Measured over every `.md`/`.html` licence payload in
+`p444-root-vs-tree-family/payloads.licensed.2026-10-07.tsv` — **26 of 412 rows** — plus the two
+`idempiere` payloads: **28 payloads, all 200.**
+
+| Verdict | n | |
+|---|---|---|
+| `AGREE` | **22** | no markup in the window; the repair is a no-op |
+| 🟢 `REPAIRED` | **5** | a licence **version** recovered |
+| 🔴 `WINDOW-STILL-SHORT` | **1** | `idempiere/idempiere` `license.html` — **declared blind spot** |
+
+🔴 **The blind spot is published, not cured.** `license.html`'s first heading is
+**`Compiere Public License`** (iDempiere's lineage runs Compiere → ADempiere → iDempiere) and its
+second is `GNU General Public License`, so after the strip the window holds two licence **titles**
+and the version is *still* outside. 🔴 **Widening to `n=3` would pass it and re-admit body text,
+recommitting `P419`'s original defect** — the suite's own refuted `n=6` case. Left red.
+
+🟡 **And the `22 AGREE` is not `22 identified`.** 7 of the 28 answer `UNCLASSIFIED` both raw and
+unwrapped, two of which `p444`'s body-reading `family_of` calls `CC-BY`
+(`Jona-Zwetsloot/Somtoday-Mod`, `sign/translate`). A header rule cannot name a grant that has no
+title line; the two instruments answer different questions, and that is recorded rather than
+reconciled.
+
+### 🔵 `P621` — and this explains an anomaly the shelf's **size** column had been carrying unexplained
+
+🟢 **The four repaired Moodle rows are exactly the GPL size outliers** — `35,178` ×3 and `32,477`
+against a modal `35,149`. 🔵 **They are outliers because they are Markdown wrappers.** One property,
+two symptoms: a missing version and an anomalous byte count. **The size column never carried a
+file-format axis**, so the variance read as noise.
+
+🔴 **Which collapses the byte tolerance this corpus had been using as corroboration.** Five GPL-3.0
+payloads read today span **34,674 → 35,151 B** (SPDX's own reflowed canonical at the bottom,
+`Dolibarr/dolibarr` `develop/COPYING` at the top), two *different* payloads measure exactly 35,148 B,
+and the shelf's own GPL rows already spanned **35,065 → 35,199 B over 11 distinct sizes**.
+🟢 **`P420` was right that size does not identify; this pass shows it from the other side — same
+licence, five sizes — and names `Dolibarr`'s payload as the SPDX-conformant specimen to stage in
+future.** Arithmetic: `agents/top.md`, `P621`.
+
 ## 🔴 Fiftieth pass, 2026-10-08 — the shared licence classifier read the **family** and invented the **version**, on the branch pass 46 did not audit
 
 ⏱️ **Fourth pass of this date.** Licences read first-hand on 2026-10-08 from payload and from model

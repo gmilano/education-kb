@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-first pass, 2026-10-08 — the ERP/CRM shelf finally gets a **second vendor**, and the slug its own channel named **does not exist**
+
+⏱️ **Fifth pass of this date.** **Licences read first-hand on 2026-10-08 from payload, channel named
+per row (`P237`, `P171`, `P250`, `P510`). No star counts (`P479`).**
+
+🔵 **The mandated vertical query (`open source platform education ERP CRM MIT Apache`) ran verbatim.**
+🔴 **It returned no MIT/Apache *education* platform for the second consecutive pass** — it offered
+ERPNext (GPL-3.0, has a school module), Dolibarr (GPL-3.0), Apache OFBiz, Huly, Krayin and
+**BottleCRM**, and said in as many words that it *"didn't find an education-focused ERP or CRM
+released under MIT or Apache"*. 🟢 **Three of those six were not on any shelf here, and all three
+resolve this pass.**
+
+### 🟢 `P622` — `BottleCRM` is MIT, and it is the **independent second supplier** `P564` said this shelf did not have
+
+🔴 **Start with the slug, because the channel got it wrong.** The query presented BottleCRM as *"a
+free, open-source CRM for startups"* under MIT, pointing at `bottlecrm.io`. 🔴 **`bottlecrm/bottlecrm`
+→ 0 refs**, as did `bottlecrm/BottleCRM`, in the same `git ls-remote` run where the negative control
+`gmilano/education-kb-NEGATIVE-CONTROL-no-existe-51` → **0 refs** and three known slugs answered
+27 / 63 / 7. 🟢 **The project is real; the slug is not.** The code is held under `MicroPyramid`.
+
+| | 🆕 `MicroPyramid/opensource-startup-crm` | 🆕 `Django-CRM/Django-CRM` |
+|---|---|---|
+| Existence (`P510`) | 🟢 **4 heads** | 🟢 **1 head** |
+| Default branch | 🟡 **`main` and `master` point at the same commit** `b51c85d` — one ref, two names (`P511`), **not** two branches | `master` only |
+| Payload | `LICENSE`, **1,068 B** | `LICENSE`, **1,069 B** |
+| Family (header read, `p419`) | 🟢 **MIT** — title block `MIT License` | 🟢 **MIT** |
+| Holder (`holder_of`) | 🟡 **`MicroPyramid`**, 2017 | 🟡 **`MicroPyramid`**, 2017 |
+| Second channel | 🔴 **none in tree** — `package.json`, `pyproject.toml`, `setup.py` all **404** | 🔴 **none in tree** |
+| Commercial use (`P250`) | 🟢 **ALLOWED**, and it may ship closed | 🟢 **ALLOWED** |
+
+🟢 **This is the finding `P564` asked for.** Pass 46 measured the shelf's two "independent MIT
+options" — `krayin/laravel-crm` and `aureuserp/aureuserp` — and found their `LICENSE` payloads
+**byte-identical at 1,077 B** under one holder, `Webkul Software`: *"one supplier, not two"*.
+🟢 **`MicroPyramid` is a different holder, a different payload (1,068 B, `sha256` `d483565f…`) and a
+different stack** — Django + DRF + SvelteKit against Krayin's Laravel/PHP. 🟢 **The admissions/CRM
+layer of `P568` now has a genuine second source, which is what makes that recipe's "swap the CRM"
+clause real rather than nominal.**
+
+🔵 **And the 1 B between the two MicroPyramid payloads *is* a trailing newline** — `diff` shows one
+changed line, `SOFTWARE.` with `\ No newline at end of file` on the `opensource-startup-crm` side.
+🔵 **Worth stating beside `P621` (`agents/top.md`), where a ±1 B delta on GPL-3.0 payloads turned out
+not to be a newline at all. The same ±1 B means different things on different payloads, which is the
+whole reason size is not an identity test.**
+
+🔴 **Two caveats that keep this off the *education* shelf proper.** (1) **No educational domain
+model** — no admissions funnel, cohort, programme or enrolment entity; it is a startup CRM, and it is
+filed exactly as the archive filed Huly and Apache OFBiz, as a **generic layer to be modelled**, not
+an education platform. (2) 🔴 **Single channel.** The MIT grant is read from payload and **nothing in
+the tree corroborates it** — no manifest licence field at all. The project's own site and docs claim
+MIT (secondary), and a 2026 third-party roundup claims **GPL-3.0**. 🟢 **The payload settles it
+against the roundup**, but a client contract should pin the ref.
+
+### 🔴 `P623` — the two ERPs the query offered are both copyleft, and one of them hides its grant from a `LICENSE` probe
+
+| | [`idempiere/idempiere`](https://github.com/idempiere/idempiere) 🆕 | [`Dolibarr/dolibarr`](https://github.com/Dolibarr/dolibarr) 🆕 |
+|---|---|---|
+| Existence (`P510`) | 🟢 **27 refs** | 🟢 **63 refs** |
+| Grant filename | 🔴 `LICENSE`, `LICENSE.txt`, `COPYING`, `COPYING.txt`, `LICENSE.html`, `legal/LICENSE` → **all 404**. Only **`LICENSE.md`** (15,057 B) and **`license.html`** (15,955 B) answer | `develop/COPYING`, **35,151 B** |
+| Family | 🔴 **GPL-2.0** — `LICENSE.md` header reads `# GNU General Public License` / `Version 2, June 1991`, recovered only by `P620`'s pre-stage | 🔴 **GPL-3.0**, title block verbatim |
+| Regime | 🔴 Strong copyleft; **GPL-2.0 carries no patent grant and is Apache-2.0-incompatible** | 🔴 Strong copyleft |
+| Shelf verdict | 🟡 Side-car or standalone host; **never a component of a permissive deliverable** | 🟡 Same |
+
+🔴 **iDempiere is the row that matters as a channel lesson, not as a platform.** A six-filename
+`LICENSE`/`COPYING` probe — the shape most of this corpus's sweeps use — returns **404 six times** and
+would file it `UNKNOWN`, i.e. *grant not found*, on a project that ships its grant twice.
+🔴 **And its `license.html` opens by naming the `Compiere Public License`, which is not the grant** —
+iDempiere's lineage runs Compiere → ADempiere → iDempiere, and the HTML keeps the ancestor's heading
+above the GPL-2.0 text. 🔵 **A first-named licence is not the granting licence; that is `P419`'s rule
+reaching a payload where the *neighbouring heading*, not the body, is what misleads.**
+
+🟡 **ERPNext stays as recorded** — GPL-3.0, with a real school module (admissions, student records,
+fees, learning outcomes). 🔵 **It remains the only *education-domain* ERP on this shelf, and it is
+copyleft.** 🔴 **So the shape is unchanged and now measured three ways: the education domain model is
+copyleft, the permissive options have no education domain model, and nothing on this shelf is both.**
+
 ## 🟡 Fiftieth pass, 2026-10-08 — the verticals query returned **no MIT/Apache education platform**, and said so itself
 
 ⏱️ **Fourth pass of this date.** Licences read first-hand on 2026-10-08 from the repository **payload**

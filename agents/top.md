@@ -4,6 +4,144 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🔴 Fifty-first pass, 2026-10-08 — the GPL-3.0 **byte tolerance** this file publishes is wrong three ways, and the specimen it is measured from is the one payload that diverges from SPDX
+
+⏱️ **Fifth pass of this date.** Licences read first-hand on 2026-10-08 **from payload**, with HTTP
+status and byte count recorded per filename. Existence by `git ls-remote --heads` against a negative
+control in the same run (`P510`): `gmilano/education-kb-NEGATIVE-CONTROL-no-existe-51` → **0 refs**,
+while `idempiere/idempiere` → 27, `Dolibarr/dolibarr` → 63, `krayin/laravel-crm` → 7 in the same
+sweep. **No star counts (`P479`).**
+
+🔴 **Channel note, measured this pass:** `github.com` **HTML** answers **403** through this
+environment's proxy for every slug tried, as `api.github.com` has since pass 37. `git ls-remote` and
+`raw.githubusercontent.com` both answer **200**. Every verdict below is read from one of those two.
+
+🔴 **Zero new education agents for the eleventh consecutive pass; the shelf is declared saturated for
+the nineteenth.** The mandated query ran verbatim, globally and once per region, and returned the
+same three classes passes 48–50 recorded: horizontal agents (OpenHands, CrewAI, LangGraph, OpenClaw,
+OpenAI Codex), agent *catalogues* (`ashishpatel26/500-AI-Agents-Projects`,
+`ARUNAGIRINATHAN-K/awesome-ai-agents-2026`, `caramaschiHG/awesome-ai-agents-2026`,
+`kouweizhu/agents-radar`) and *courses* (`microsoft/ai-agents-for-beginners`,
+`huggingface/agents-course`, `pguso/agents-from-scratch`, `rohitg00/ai-engineering-from-scratch`).
+🟢 **Every name was checked against the live tree — 1,152 unique slugs tree-wide, 382 in this file —
+and every one was already recorded**, including the two education-specific names the global query
+returned (`GarethManning/education-agent-skills`, `HugeCatLab/ChatTutor`), both already filed.
+
+### 🔴 `P621` — the "**±1 B trailing-newline tolerance**" is not a trailing newline, and it is not a GPL-3.0 identity test
+
+🔵 **The claim under test is in this file.** Line 1021 admits `datacamp/catsim` as *"an independent
+GPL-3.0 payload… within the **±1 B** trailing-newline tolerance pass 37 recorded (`35,148` there)"*,
+and `agents/trending.md` repeats it. 🔴 **Five GPL-3.0 payloads read today refute the mechanism, the
+tolerance, and the choice of specimen.**
+
+| Payload | Bytes | `fsf.org` | `why-not-lgpl` path | Final newline | Lines |
+|---|---|---|---|---|---|
+| SPDX `license-list-data` `text/GPL-3.0-only.txt` — **the licence-list authority** | **34,674** | `https` | 🟢 `philosophy/` | — | **232** (reflowed) |
+| [`Dolibarr/dolibarr`](https://github.com/Dolibarr/dolibarr) `develop/COPYING` 🆕 | 🟢 **35,151** | `https` | 🟢 `philosophy/` | yes | 674 |
+| [`datacamp/catsim`](https://github.com/datacamp/catsim) `master/COPYING` | 35,147 | `http` | 🟢 `philosophy/` | yes | 674 |
+| [`OHF-Voice/piper1-gpl`](https://github.com/OHF-Voice/piper1-gpl) `HEAD/COPYING` | 35,148 | `http` | 🟢 `philosophy/` | — | **675** |
+| [`lmscloud-io/moodle-mcp-server`](https://github.com/lmscloud-io/moodle-mcp-server) `main/LICENSE` — 🔴 **the staged specimen** | 35,148 | `https` | 🔴 **`licenses/`** | 🔴 **no** | 673 |
+
+🔴 **(1) The ±1 B delta is not whitespace.** `diff` over the two payloads the tolerance relates —
+`catsim` 35,147 → `lmscloud` 35,148 — returns **four** changed lines, and the arithmetic is
+**+4 B** (`http://` → `https://`, four URLs) **−2 B** (`philosophy` → `licenses`, ten chars to eight)
+**−1 B** (no final newline) = **+1 B**. 🔵 **The "trailing newline" is the coincidental sum of three
+unrelated edits, and one of the three is the trailing newline going the *other* way.**
+
+🔴 **(2) Equality at 35,148 B proves nothing either.** `piper1-gpl` and `lmscloud` both measure
+**exactly 35,148 B** with different digests and different line counts (**675** vs **673**). Size
+collides across non-identical texts, so the test fails at ±0 before it fails at ±1.
+
+🔴 **(3) The specimen is the outlier.** SPDX's canonical text reads
+`https://www.gnu.org/philosophy/why-not-lgpl.html`. So do `Dolibarr`, `catsim` and `piper1-gpl`.
+**`lmscloud` is the only one of the five that reads `licenses/why-not-lgpl.html`** — a path no
+canonical source in this set uses. 🔵 **`Dolibarr/dolibarr` matches SPDX on both URL forms and is
+therefore the most SPDX-conformant payload here — and it sits 4 B from `catsim`, 3 B outside the
+tolerance.** The corroboration ran backwards: the canonical payload was being validated against the
+divergent one.
+
+🔴 **(4) And the refutation was already in this repository.** The GPL rows of
+`compose/code/p444-root-vs-tree-family/payloads.licensed.2026-10-07.tsv` span **35,065 → 35,199 B
+over 11 distinct sizes in 29 rows**. A ±1 B band around 35,148 covers **two** of those sizes. Nobody
+had cross-read the prose against the data this corpus had already measured.
+
+🟢 **What survives, and it is the part that matters.** `catsim` **is** GPL-3.0 — read from its header,
+which is how `p419` says to read it. `P420` already ruled that **size does not identify** (three
+AGPL-3.0 payloads at 34,523 B with different digests) and `p419`'s `PRISTINOS` table labels its sizes
+*"DELATOR, no identificador"*. 🟢 **This pass supplies the converse evidence `P420` lacked: `P420`
+had *same size, different digests*; this has *same licence, five sizes spanning 477 B*.** The
+instrument was right and the prose had drifted from it. 🔴 **Lines 854 and 1021 of this file, and the
+matching line in `agents/trending.md`, are to be read as corroborating `catsim` by its *header*,
+never by its *size*.**
+
+### 🟢 `P620` — five shelf rows gain a licence **version**, because the header window cannot see past `<center>`
+
+🔵 **`p419`'s rule is right and this pass does not touch it:** read the family from the header — title
+plus `Version N`, the first two non-empty lines — never from the body, because a pristine licence
+text names its relatives. 🔴 **What `n=2` never had to survive is a payload that is not plain text.**
+`idempiere/idempiere` ships `HEAD/LICENSE.md` whose first non-empty line is `<center>`, so the window
+admits `<center>` and the title, and `Version 2, June 1991` — the third line — falls outside it.
+`familia()` answers **`GPL-?`**. 🔵 **Nothing went red, because `GPL-?` is a legal answer.** It is
+also the answer that stops a commercial verdict: GPL-2.0 and GPL-3.0 differ on the patent grant and
+on Apache-2.0 compatibility.
+
+🟢 **New folder `compose/code/p620-licence-header-window/`, suite 🟢 30/30, no network.** The repair
+is a **pre-stage** — drop markup-only lines, strip inline tags and Markdown lead markers, then hand
+the text to `p419`'s **unmodified** `familia()` (`P126`). Measured over **every** `.md`/`.html`
+licence payload on the shelf (**26 of 412 rows, 6.3 %**) re-fetched at `HEAD`, plus the two
+`idempiere` payloads — **28 payloads, all 200**: 🟢 **5 `REPAIRED`**, 🔴 **1 `WINDOW-STILL-SHORT`**,
+22 `AGREE`.
+
+| Row | `p444` family | 🟢 Read this pass | Payload |
+|---|---|---|---|
+| [`idempiere/idempiere`](https://github.com/idempiere/idempiere) 🆕 | — not previously on any shelf | 🟢 **GPL-2.0** | `LICENSE.md`, 15,057 B |
+| [`caiocarvalhofre/moodle-mod_maici`](https://github.com/caiocarvalhofre/moodle-mod_maici) | `GPL` | 🟢 **GPL-3.0** | `LICENSE.md`, 35,178 B |
+| [`cgrevisse/moodle-qbank_genai`](https://github.com/cgrevisse/moodle-qbank_genai) | `GPL` | 🟢 **GPL-3.0** | `LICENSE.md`, 35,178 B |
+| [`yedidiaklein/moodle-local_aiquestions`](https://github.com/yedidiaklein/moodle-local_aiquestions) | `GPL` | 🟢 **GPL-3.0** | `LICENSE.md`, 35,178 B |
+| [`michael-milette/moodle-local_aiid`](https://github.com/michael-milette/moodle-local_aiid) | `GPL` | 🟢 **GPL-3.0** | `LICENSE.md`, 32,477 B |
+
+🔵 **And `P620` explains `P621`'s outliers — the two axes are one.** Those four Moodle plugins are
+*exactly* the size outliers in the shelf's GPL distribution (35,178 ×3 and 32,477 against a modal
+35,149). They are outliers **because they are Markdown wrappers** — the same property that cost them
+their version. 🔴 **The size column never carried a file-format axis, so the variance read as
+unexplained.**
+
+🔴 **Declared blind spot, published rather than cured.** `idempiere/idempiere` also ships
+`HEAD/license.html`, whose first heading is **`Compiere Public License`** and whose second is
+`GNU General Public License`. Raw, that window matches no family at all (`UNCLASSIFIED`); unwrapped,
+the two lines are two licence **titles**, so the version is still outside and the verdict is
+`GPL-?`. 🔴 **Widening the window to `n=3` would pass it and re-admit body text, recommitting
+`P419`'s original defect** — so it is classed `WINDOW-STILL-SHORT` and left red.
+
+🟡 **Honest limit:** 7 of the 28 answer `UNCLASSIFIED` both ways, two of which `p444`'s body-reading
+`family_of` calls `CC-BY`. A header rule cannot name a grant with no title line; the `22 AGREE` is
+not `22 identified`.
+
+🔵 **And the suite's first run was 16/24 — three of the eight failures were this pass's own
+mis-specifications, not code defects:** the word-conservation control split on whitespace, so a
+legitimate `<pre>Copyright` → `Copyright` strip looked like an invented word; the HTML case was
+predicted `REPAIRED` and is actually *worse*; and the asserted cause ("Markdown breaks the window")
+was wrong — a `#` heading does **not** break it, an extra non-empty line *between* title and version
+does. 🟢 **All three corrections are kept in the suite as comments, because the corrected expectation
+is the finding.**
+
+### 🟡 `P626` — the `README.md` board has stopped registering new folders, and this pass did not paper over it
+
+🔵 **Noticed while filing `p620`.** The root `README.md` carries a table of `compose/code/` folders
+with the invocation and today's count for each — the corpus's own register. 🔴 **`p598-register-
+freshness-gate` and `p613-gnu-version-read` appear in it **zero** times**, so passes 48–50 added
+folders without registering them; the board is stale by at least three. 🟡 **This pass deliberately
+did not add a `p620` row**, because the README publishes a board **total** (`77/77`, last measured at
+pass 122 and explicitly flagged there as not re-measured) and appending one row to a total nobody
+re-measured would make the register *look* current while making its arithmetic wrong — the exact
+defect `P399` named, in the register instead of the census. 🔴 **So the honest state is recorded
+rather than cured: **133** folders on disk, **102** with a `test_*.py` (both counts include `p620`
+itself, measured after writing it — the first reading of this pass said 132/101 because it was taken
+*before* the write, which is `P428`'s census-after-write defect committed inside the sentence that
+reports it), and a board that names a fraction of them against a total measured 29 passes ago.** 🔵 **Pre-registered as the next pass's action: re-run
+the board and republish the total with its date, or drop the total and publish per-folder counts
+only.**
+
 ## 🟢 Fiftieth pass, 2026-10-08 — the Spanish pipeline is **not** GPL-locked: the corpus relicensed five years ago and the restriction is a **version pin**
 
 ⏱️ **Fourth pass of this date.** Licences read first-hand on 2026-10-08 from the repository
