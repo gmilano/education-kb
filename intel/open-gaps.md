@@ -4,6 +4,105 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Pass 54, 2026-10-08 — three gaps declared, one **refuted statically**, and the register's own cadence held
+
+> 🔵 **This pass's opening hypothesis was that a title-less MIT payload would under-read in the
+> shared classifier the way an LGPL version did in `Gap 256`.
+> 🔴 REFUTED** — the grant anchor already covers it (`P456`, since pass 29). 🟢 **The pass's real
+> finding sits one layer up: pass 53 **inherited** an environment capability claim instead of
+> measuring it, and the claim was false in the direction that removes a method.**
+
+### 🆕 `Gap 261` — this KB's instruments are **unrunnable** in this environment
+
+🔴 **Measured:** sourcing `compose/code/lib/license_family.sh` was denied by the sandbox
+(`[Code from External]`). 🔴 **So no suite ran this pass — not one of the 112** — and
+**`p351-star-digit-sweep` / `Gap 257` and `p213` / `Gap 258` were NOT re-measured**; pass 53's reds
+are **carried forward as reported, not confirmed.**
+
+🔵 **Why this is a gap and not just a limitation to shrug at:** this KB's whole credibility model is
+*"`compose/code/` — what this KB can demonstrate by running"*. 🟢 **A pass that cannot run anything can
+still measure the world first-hand (and this one did, extensively) but it cannot certify its own
+instruments** — and those are different kinds of claim. 🟢 **Every `P` in pass 54 is labelled as
+either a direct measurement I made or a static reading of source, and never as a suite result.**
+
+🟡 **Bounded remedy, for a pass that has execution:** re-run the `P621` whole-tree harness and
+confirm `110 / 112`, then re-measure `Gap 257` and `Gap 258`. 🔵 **Cost: one harness run, no content
+change.** 🔴 **Do not assume `110 / 112` still holds — it is three passes old as of this writing.**
+
+### 🆕 `Gap 262` — a **CC-BY-SA-4.0** repo sits in the live opportunity blocks with no *content, not code* marker
+
+🔴 **Measured first-hand, all 1 230 B:** `GarethManning/education-agent-skills` is
+**CC-BY-SA-4.0**, scoped to *"the educational skills, documentation, examples, and curriculum
+materials in this repository"*, with **no software carve-out anywhere in the file**.
+
+🔴 **The exposure:** it is recommended in this KB's live opportunity blocks and named in
+`compose/patterns.md` recipes **as a component**, which invites an engagement to adapt it — and
+**ShareAlike then reaches whatever is derived from it.** 🔴 **A CC-BY-SA artefact cannot go into a
+client product or an Annex III technical file.**
+
+🟢 **Landed this pass:** the correction is written at the top of `compose/patterns.md`, and
+`repos/foundations.md` and `verticals/solutions.md` now carry the licence with the constraint.
+🟡 **Still open:** the **older** recipe blocks further down `compose/patterns.md` that name this repo
+are **append-only and unmarked**. 🔵 **This is `P582`/`P636`'s positional class again** — the remedy is
+a marker at each point of competition, never a rewrite. 🔴 **Not done this pass; declared so it is
+collectable.**
+
+### 🆕 `Gap 263` — the assessment layer has exactly **one** licensed implementation
+
+🔴 **Measured** (`P641`): of four grading candidates, **one** is adoptable —
+`delip/autorubric` (**MIT**). `emorynlp/LLM-Grading` and `wenjing1170/llm_grader` **exist and carry no
+grant at all** (four filenames × two branches `404`; **zero** licence strings in either README →
+**all rights reserved**). `AutoSCORE` (AAAI, arXiv `2509.21910`) has **no locatable repo** (five
+slugs probed, all `404`).
+
+🔵 **Why it is a gap rather than a win:** `P648`'s defensible-grading pipeline now rests on **a single
+MIT library with no licensed alternative**. 🔴 **There is no permissive multi-agent *scoring*
+implementation in existence that this pass could find** — and `autorubric`'s own provenance is a
+**fork** carrying two copyright holders (`P640`), so the single point of dependency is also a single
+point of attribution.
+
+🟢 **Concrete, cheap remedy this KB has never tried:** **ask.** Both unlicensed repos are university
+work (Emory NLP; the *Grade Like a Human* authors) whose papers *say* the code is released — an
+author who intended release and omitted a `LICENSE` will usually add one. 🔵 **One email converts a
+refused row into an admissible one, which is a better return than another week of the same query.**
+
+### 🔴 `P645` — the title-less-MIT hypothesis: **REFUTED**, and the verdict's status is declared
+
+| Pass 54's opening framing | Verdict |
+|---|---|
+| *"`Priyamakeshwari/TeachGPT`'s LICENSE has no `MIT License` title — it opens at `Copyright (c) 2023`"* | 🟢 **STANDS** — measured, 1 057 B, read first-hand |
+| *"so the shared classifier will under-read it, as in `Gap 256`"* | 🔴 **REFUTED** — `license_family.sh:426` anchors MIT on the **grant** (`Permission is hereby granted, free of charge`), which is line 3 of that payload |
+| implied: *this is a new gap* | 🔴 **REFUTED** — the comment at lines 487–488 names this exact payload shape; `P456`/`P304` paid for it already |
+| 🔴 **status of this verdict** | 🔴 **STATIC READING, NOT A MEASUREMENT** — the classifier was **not run** (`Gap 261`) |
+
+🟢 **Published as a refutation with its status attached**, because a refuted hypothesis recorded as
+*reviewed* is honest and one recorded as *tested* would be false. 🔵 **The useful residue: `Gap 256`
+and this were the same shape — the identifying token missing from where the classifier anchors — and
+the KB had already generalised past it once. 🟢 A second instance of a solved class is a sign the
+control works.**
+
+### 🟢 `Gap 256` — closed in pass 53, and **unchanged** this pass
+
+🟢 **No action, stated so the cadence is legible:** pass 53 closed it; this pass neither re-opened nor
+re-measured it (`Gap 261`). 🔵 **Its payload `openeducat/openeducat_erp` *was* re-read first-hand this
+pass** — **8 241 B, byte-identical to pass 53's figure**, LGPLv3 named at **line 4** — 🟢 **so the
+datum the closure rests on is independently re-derived, even though the instrument that consumes it
+was not run** (`P644`).
+
+### 🟡 `Gap 257` / `Gap 258` — carried forward, **not** re-measured
+
+🔴 **`Gap 257`** (`p351-star-digit-sweep` red; a genuine `P479` instance at `agents/trending.md:8231`
+inside an append-only file) and 🔴 **`Gap 258`** (`p213`, `pyo3`, environmental) are **reported from
+pass 53, not confirmed** — see `Gap 261`. 🟢 **Both still declared open.** 🔵 **`Gap 257`'s stated
+remedy is unchanged:** derive `p351`'s thresholds from the tree and treat pre-`P479` rows as a
+declared historical band.
+
+### 🟢 `Gap 260` — the register's cadence, held this pass
+
+🟢 **Pass 54 is recorded here in the same pass it happened**, which is what `Gap 260` was declared to
+make collectable after passes 51 and 52 went unregistered. 🔵 **Two consecutive passes now on
+cadence.**
+
 ## 🟢 Pass 53, 2026-10-08 — one gap **closed with code**, one **refuted at its stated cause**, one declared; and this register was **three passes stale**
 
 > 🔵 **This pass's opening hypothesis was that `Gap 256` needed an LGPL version reader written.

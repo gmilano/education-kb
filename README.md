@@ -24,6 +24,38 @@ education-kb/
 
 ## `compose/code/` — lo que esta KB puede demostrar corriendo
 
+🔴 **Pase 54 del 2026-10-08 NO registra carpeta nueva, y la razon es la del propio pase:** el sandbox
+denego ejecutar codigo de este repositorio (`[Code from External]`), asi que **ninguna de las 112
+suites corrio** y `Gap 257` / `Gap 258` quedan **arrastrados desde el pase 53, no confirmados**
+(🆕 `Gap 261`). 🟢 **Dicho en vez de implicado:** todo veredicto del pase 54 es o una **medicion
+directa** que hice yo, o una **lectura estatica** del fuente — nunca un resultado de suite.
+
+🟢 **Lo que el pase 54 SI midio, y contradice una afirmacion de capacidad del pase 53** (`P639`):
+`raw.githubusercontent.com` responde **`200`** aca —y **`404`** sobre un repo inexistente, o sea que
+**discrimina**— y `pypi.org` responde **`200`**. 🔴 **El que FALLA es `git ls-remote`**, justo el que
+el pase 53 declaro *"el unico oraculo que funciona"*. 🔵 **Un dato viejo cuesta una fila; una
+afirmacion de CAPACIDAD vieja cuesta un METODO** — tres pases dejaron de leer licencias de primera
+mano por heredarla sin medirla.
+
+🟢 **Fila nueva, la primera en cinco pases:** `delip/autorubric` (**MIT**, confirmada por **cuatro**
+oraculos independientes: `LICENSE`, `README` §License, `pyproject.toml` + clasificador OSI, y PyPI
+`license_expression`; **v1.6.1**, subida **2026-09-27**). 🔵 **Abre una celda que esta KB no tenia —
+el **scoring**— que es justo la funcion que el AI Act europeo lista como Anexo III de alto riesgo.
+🟡 **Y trae un detalle de la forma de `P255`:** el MIT nombra **dos** titulares, partidos por version
+(fork de `rubric` v1.2.8).
+
+🔴 **El hallazgo filoso es un vacio de licencias, no una abundancia** (`Gap 263`): de cuatro
+candidatos de correccion automatica, **uno** es adoptable. `emorynlp/LLM-Grading` y
+`wenjing1170/llm_grader` **existen y no tienen concesion alguna** —cuatro nombres de archivo por dos
+ramas, todo `404`, y **cero** cadenas de licencia en sus README— o sea **todos los derechos
+reservados**, que es un veredicto mas firme que *"licencia desconocida"*. `AutoSCORE` (AAAI) **no
+tiene repo localizable** (cinco slugs probados).
+
+🔴 **Correccion que toca recetas ya publicadas** (🆕 `Gap 262`): `GarethManning/education-agent-skills`
+es **CC-BY-SA-4.0**, con alcance textual a *"educational skills, documentation, examples, and
+curriculum materials"* y **sin excepcion para codigo** en sus 1 230 B. 🟢 **ShareAlike alcanza lo
+derivado**, asi que sirve **como material** y es la forma equivocada para empaquetar en un producto.
+
 🆕 **Pase 53 del 2026-10-08 registra UNA carpeta nueva y su suite:
 `p637-cross-instrument-licence-agreement` 🟢 `9/9` verdes, offline, corrida desde su propio
 directorio.** Es la **compuerta de acuerdo entre instrumentos**, y existe porque `Gap 256`

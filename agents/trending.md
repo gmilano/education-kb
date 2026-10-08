@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-fourth pass, 2026-10-08 — week of 2026-10-08: the mandated query is saturated for the **fifth** week, and the week's real movement is that **first-hand verification came back**
+
+⏱️ **Eighth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+🟢 **Correction to pass 53's environment claim, stated before any datum:** `raw.githubusercontent.com`
+answers **`200`** here (and `404` on a nonexistent repo), and `pypi.org` answers **`200`**.
+🔴 **`git ls-remote` — pass 53's "only working oracle" — now FAILS.** 🟢 **So unlike the last three
+passes, every licence below was read first-hand from the payload** (`P639`, `agents/top.md`).
+🔴 **Still no star counts published**: `github.com` HTML is `403` and `api.github.com` is `403`, so
+no popularity figure could be read first-hand, and none is printed.
+
+### 🔴 The mandated queries, run globally, and what they returned
+
+| Query (mandated form) | Result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **saturated, 5th consecutive week** — general-purpose agents + AI *pedagogy* courses |
+| `github trending education AI 2026` | 🔴 **no education-AI trending cell exists**; general AI roundups only |
+
+🔵 **Named by the channel and already held by this KB:** `microsoft/ai-agents-for-beginners` (MIT,
+verified `200`/`MIT License` this pass), `rohitg00/ai-engineering-from-scratch` (MIT, verified),
+`avinash201199/free-ai-agents-resources` (MIT, verified — a **catalogue**, not a tool),
+`pguso/agents-from-scratch` (MIT, verified), `plastic-labs/tutor-gpt`, `Priyamakeshwari/TeachGPT`,
+`THU-MAIC/OpenMAIC` (MIT, verified), plus OpenClaw / OpenHands / CrewAI / LangGraph / browser-use.
+🟢 **`P497` holds for the fifth week: the query's noun returns pedagogy *about* AI, not software
+*for* education.**
+
+🟢 **But the licence column is no longer second-hand.** Four of those were asserted by third-party
+directories in earlier passes and are now **read from their own `LICENSE`**:
+
+| Repo | Channel claimed | 🟢 Read first-hand this pass |
+|---|---|---|
+| `pguso/agents-from-scratch` | MIT | 🟢 **`MIT License`** — confirmed |
+| `THU-MAIC/OpenMAIC` | MIT | 🟢 **`MIT License`**, `Copyright (c) 2026 THU-MAIC` — confirmed |
+| `avinash201199/free-ai-agents-resources` | 🟡 *unknown, "check before relying"* | 🟢 **`MIT License`** — **resolved** |
+| `plastic-labs/tutor-gpt` | GPL-3.0 | 🟢 **GPL-3.0** — `Version 3, 29 June 2007`, 35 149 B — confirmed |
+| `Priyamakeshwari/TeachGPT` | 🟡 *license not shown* | 🟢 **MIT** — **title-less**, grant line only (`P645`) |
+
+🔵 **That is the week's quiet yield:** no new agent, but **five licence cells promoted from
+second-hand to first-hand**, and one that was an open question is now answered.
+
+### 🟢 The week's one genuinely new agent-layer row — and it scores rather than tutors
+
+🟢 **`delip/autorubric` (MIT), confirmed by four independent oracles**, v1.6.1 on PyPI uploaded
+**2026-09-27**. 🔵 **A rubric/evaluation layer is a cell this shelf did not have**, and it is the
+function the EU AI Act names as Annex III high-risk. 🟢 **Full provenance at `P640`,
+`agents/top.md`.**
+
+🔴 **And the finding beside it is a licence vacuum, not an abundance** (`P641`): of four grading
+candidates the channel named, `emorynlp/LLM-Grading` and `wenjing1170/llm_grader` **exist with no
+grant at all** (four filenames × two branches all `404`, zero licence strings in either README), and
+`AutoSCORE` (AAAI, arXiv `2509.21910`) has **no locatable repo** across five probed slugs.
+🟢 **One of four is adoptable.**
+
+### 🟢 The search channel missed a repo that exists (`P642`)
+
+🔴 **The channel reported: *"None of the results link to a GitHub repository for Autorubric."***
+🟢 **A direct slug probe found it on the first guess.** 🔵 **For a named paper with a named author,
+probe `owner/repo` at `raw.githubusercontent.com` before trusting a "no repo" verdict** — and
+`AutoSCORE`'s five `404`s are the negative control proving the method does not invent repositories.
+
+### 🔵 The regional channel at the agent layer — 5 of 20 names new, and the new ones cluster
+
+🟢 **20 names from this pass's eight searches were checked against this KB's existing text.**
+
+| New to this KB | Already held |
+|---|---|
+| `emorynlp/LLM-Grading`, `wenjing1170/llm_grader`, **Autorubric**, **AutoSCORE**, Noodle Factory, Codestral-22B grading result | TeachGPT, agents-from-scratch, tutor-gpt, OpenMAIC, free-ai-agents-resources, Digital Omnibus, IESALC, Digital Education Council, ANUIES, TRAIGA, RAISE Act, LearnUpon, AI textbooks |
+
+🟢 **The new names are all in one cell — assessment/scoring.** 🔵 **That is more informative than the
+raw count:** the channel is not returning scattered novelty, it is returning a **single layer this
+KB had not shelved**, which is why one pass could close it.
+
+🔴 **Declared, so the gap is not mistaken for coverage:** no new **tutoring** agent, no new
+**authoring** agent, and no education agent from EMEA, APAC or LATAM appeared this week in any of
+the eight searches. 🟢 **Fifth consecutive week with no regionally-originated education agent.**
+
 ## 🔴 Fifty-third pass, 2026-10-08 — week of 2026-10-08: the mandated query is **saturated again**, and the week's only movement at the agent layer is a classifier this KB owns
 
 ⏱️ **Seventh pass of this date. Append-only: this section is new; nothing below it was rewritten.**

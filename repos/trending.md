@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-fourth pass, 2026-10-08 — week of 2026-10-08: **one slug admitted**, and the admission came from a probe after the channel said the repo did not exist
+
+⏱️ **Eighth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+🟢 **Oracle correction first** (`P639`): `raw.githubusercontent.com` answers **`200`** here and
+**`404`** on a nonexistent repo; `pypi.org` answers **`200`**. 🔴 **`git ls-remote` — the oracle pass
+53 called "the only working one" — FAILS this pass.** 🔴 `github.com` HTML `403`, `api.github.com`
+`403`, so **no star counts are published** and none was read first-hand.
+
+### 🔴 The mandated trending query still has no education cell — stated, not worked around
+
+| Query | Result |
+|---|---|
+| `github trending education AI 2026` | 🔴 **There is no education-AI trending list.** General AI roundups only |
+
+🔵 **What the channel named**, all general-purpose and all already held: `developer-roadmap`,
+`karpathy/nanochat`, Karpathy's *Neural Networks: Zero to Hero*, `rohitg00/ai-engineering-from-scratch`
+(reported #1 on GitHub Trending **2026-05-24**, *second-hand*), `aneelv75/github-trending`,
+`speedyapply/2026-AI-College-Jobs`, plus the Microsoft and Hugging Face course repos. 🔴 **Not one is
+education *software*** — they are learning material, which is `P497`'s distinction and the **fifth**
+consecutive week it has been the whole result of this query.
+
+🟡 **One second-hand figure recorded as second-hand and not shelved:** a Japanese trend review claims
+**nine of ten** of GitHub's February 2026 monthly trending projects were AI-related. 🔵 **Directional
+only** — no first-hand source, and it says nothing about education.
+
+### 🟢 One slug admitted, and the route it arrived by is the week's method finding
+
+| Slug | Licence (first-hand) | Admitted? |
+|---|---|---|
+| https://github.com/delip/autorubric | 🟢 **MIT**, 4 oracles, PyPI v1.6.1 (**2026-09-27**) | 🟢 **ADMITTED** — `agents/top.md`, `repos/foundations.md` |
+| https://github.com/emorynlp/LLM-Grading | 🔴 **no grant** (4 filenames × 2 branches `404`; README has zero licence strings) | 🔴 **REFUSED — all rights reserved** |
+| https://github.com/wenjing1170/llm_grader | 🔴 **no grant** (same measurement) | 🔴 **REFUSED — all rights reserved** |
+| `AutoSCORE` (AAAI; arXiv `2509.21910`) | — | 🔴 **REFUSED — no repo**, 5 slugs probed, all `404` |
+
+🟢 **`P642` — the channel was wrong about existence, and a probe was cheaper than believing it.**
+🔴 **The channel's verdict:** *"None of the results link to a GitHub repository for Autorubric."*
+🟢 **The probe:** `raw.githubusercontent.com/delip/autorubric/main/README.md` → **`200`, first
+guess**, derived from the author name the paper already supplied.
+
+🔵 **The reusable rule:** for a named paper with a named author, **probe `owner/repo` directly before
+accepting a "no repository" answer** — it asks the origin instead of an index, and costs one request.
+🟢 **`AutoSCORE` is the negative control that keeps the rule honest:** five plausible slugs, five
+`404`s, and it stays refused. 🔵 **A method that finds what exists and declines to invent what does
+not is a method; one that only ever confirms is a bias.**
+
+🔴 **And the two refusals are refusals of *different kinds*, which is worth keeping distinct:**
+`AutoSCORE` is **absent** (nothing to license), while `LLM-Grading` and `llm_grader` are **present
+and ungranted** — code you can read, run and not ship. 🟢 **The second kind is the more dangerous on
+a trending shelf**, because it looks exactly like an admissible row until someone checks.
+
+### 🟢 Re-verification, which is the other thing this channel can usefully do in a dry week
+
+🟢 **6 / 6 live recommendations reachable, and for the first time their licences were read rather
+than inferred** — `MIT`, `MIT`, `Apache-2.0`, `LGPL-3.0`, `GPL-3.0`, **`CC-BY-SA-4.0`** (`P643`,
+`agents/top.md`). 🔴 **The last one is not a software licence**, and it is in this KB's live
+opportunity blocks. 🆕 **`Gap 262`.**
+
+### 🟡 `Gap 257` restated — unchanged, and still blocked by this file's own rule
+
+🔴 **`p351-star-digit-sweep` was red at `HEAD` as of pass 53**, with one genuine `P479` instance at
+**`agents/trending.md:8231`** — a star figure attributed to a pass but carrying none of the required
+classes. 🔴 **That line lives in an append-only file, so correcting it in place is forbidden here.**
+🔴 **Not re-measured this pass:** the sandbox denied running the repository's instruments
+(`Gap 261`), so pass 53's red is **carried forward as reported, not confirmed.** 🟢 **Stated rather
+than assumed resolved.** 🔵 **Remedy unchanged:** derive `p351`'s thresholds from the tree and treat
+pre-`P479` rows as a declared historical band — one instrument change, no content rewrite.
+
 ## 🔴 Fifty-third pass, 2026-10-08 — week of 2026-10-08: **zero new slugs admitted**, and the trending channel has no education cell to read
 
 ⏱️ **Seventh pass of this date. Append-only: this section is new; nothing below it was rewritten.**

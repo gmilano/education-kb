@@ -4,6 +4,109 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-fourth pass, 2026-10-08 — one new recipe (`P648` the **defensible-grading pipeline**), one **correction** to every recipe that names `education-agent-skills`, and a cheap pre-flight every recipe should start with
+
+### 🔴 The correction first, because it constrains recipes already published here
+
+🔴 **Any recipe in this file that treats `GarethManning/education-agent-skills` as a component is
+treating a **CC-BY-SA-4.0** work as if it were software.** 🟢 **Read first-hand this pass** (`P643`):
+all **1 230 B** of its licence, which scopes itself to *"the educational skills, documentation,
+examples, and curriculum materials in this repository"* and **carves out nothing for code**.
+
+🔴 **Consequence for a delivery, stated plainly:** **ShareAlike reaches derivatives.** Prompts, skill
+definitions, rubrics or curriculum adapted from that repo must be redistributed under CC-BY-SA-4.0.
+🟢 **So it is usable as *material* — read it, learn from it, cite it — and is the wrong shape to
+vendor into a client product or an Annex III technical file.** 🔵 **Creative Commons advises against
+CC licences for software, which is the cleanest way to put it to a client.**
+
+🟢 **Concretely, the fix in the recipes that name it:** keep it as a **reference** step, never as a
+**bundled** step, and if an engagement wants its structure, re-derive the artefacts from the
+client's own curriculum rather than adapting the files. 🆕 **`Gap 262`.**
+
+### 🟢 `P648` — the **defensible-grading pipeline**, with the specific repos and what each contributes
+
+🔵 **The problem it solves is the one `intel/market.md` measures in two regions at once:** LATAM's
+**50 % of students want AI feedback / 19 % of faculty give it** asymmetry, and EMEA's **Annex III**
+classification of assessment as high-risk. 🟢 **Both are the same engineering requirement — a grade a
+human can defend — and neither is solved by a better model.**
+
+🔴 **And it could not be built from this KB's shelves before this pass**, because the shelves named a
+tutor, an authoring tool and an SIS but **no licensed thing that produces a score** (`P640`).
+
+| Step | Component | Licence (first-hand) | What it contributes |
+|---|---|---|---|
+| 1 | https://github.com/delip/autorubric | 🟢 **MIT** | **the scorer**: binary / ordinal / nominal criteria, configurable weights, **multi-judge ensemble**, few-shot calibration, documented **position-** and **verbosity-bias** mitigation |
+| 2 | open-weight model behind it (**Codestral-22B** class, or Llama-3.1 / Qwen) | 🟢 varies — **check per model** | **the judge**, self-hosted: **85 %** micro-accuracy vs instructor rubrics on code **with no fine-tuning** |
+| 3 | https://github.com/openeducat/openeducat_erp | 🟡 **LGPL-3.0** (8 241 B) | **the system of record**: enrolment, cohorts, gradebook. 🔴 **Separate process, linked — never modified** |
+| 4 | https://github.com/macsnoeren/genai-open-assessment | 🟡 **GPL-3.0** (35 149 B) | **assessment authoring**, run as a **standalone service**. 🔴 **Strong copyleft: do not vendor into the product** |
+| 5 | https://github.com/grant-mccurdy/instructional-ai-workflows | 🟢 **MIT** | **the instructional wrapper**: workflow shapes a faculty member recognises |
+| 6 | https://github.com/wwrwbs/AI_AWE | 🟢 **Apache-2.0** | **the writing-assessment surface**, with a patent grant — the one component safe to embed in a commercial deliverable |
+
+**Wiring, and the ordering is the point:**
+
+```
+student artefact
+  -> (5) instructional-ai-workflows   : frames the task + the rubric a human authored
+  -> (1) autorubric                   : scores against THAT rubric, multi-judge, calibrated
+        |  emits: per-criterion score + the criterion text + the judge + the mitigation applied
+  -> (6) AI_AWE                       : renders the feedback surface the student sees
+  -> (3) openeducat (separate proc)   : records the grade against the enrolment
+  -> (4) genai-open-assessment (svc)  : authors the NEXT assessment from what the cohort missed
+```
+
+🟢 **What makes it *defensible* rather than merely automated**, and each is a property of step 1 and
+not of the model: the **rubric is human-authored and stored**, the **per-criterion** score is emitted
+rather than a single number, the **judge is named**, a **multi-judge ensemble** exists so one model's
+quirk is visible, and the **bias mitigations applied are recorded**. 🔵 **That set is exactly what an
+Annex III technical file has to assert and what a faculty member has to stand behind** — and it is
+why the pipeline is built around a rubric library rather than a bigger model.
+
+🔴 **The licence topology is load-bearing and is why the steps sit where they do.** 🟢 **Steps 1, 5 and
+6 (MIT / MIT / Apache-2.0) are the only ones that may be *vendored*.** 🔴 **Steps 3 and 4 (LGPL-3.0,
+GPL-3.0) must stay **separate processes** behind an interface** — LGPL-3.0 permits linking a separate
+process, GPL-3.0 does not permit vendoring at all. 🟢 **A client asking "what ships in our product?"
+gets the answer from the licence column, read first-hand, not from a vendor's claim.**
+
+🔴 **Declared limits, so nobody inherits an untested recipe as tested:** this pipeline is **composed
+from first-hand licence readings and published benchmark numbers; it has not been stood up
+end-to-end.** 🔴 **No instrument of this repository was run this pass at all** (`Gap 261` — the
+sandbox denied executing repo code), so there is **no suite behind `P648`**, unlike `P637`. 🟢 **Stated
+rather than implied.** 🔵 **The benchmark figures (85 %, 88.56 %, 0.78 Pearson) are from papers, on
+their datasets, and are not a promise about a client's rubric.**
+
+### 🟢 `P649` — the five-call **oracle pre-flight** every recipe in this file should now open with
+
+🔵 **Cost: five `curl` calls. Benefit, measured this pass: three passes of this KB stopped reading
+licences because a capability claim was inherited instead of checked** (`P639`).
+
+```
+# run before any verification step; print the result, do not assume last pass's answer
+curl -sS -o /dev/null -w '%{http_code}\n' https://raw.githubusercontent.com/<known-repo>/main/README.md   # expect 200
+curl -sS -o /dev/null -w '%{http_code}\n' https://raw.githubusercontent.com/<owner>/<nonexistent>/main/README.md  # expect 404 -> it DISCRIMINATES
+curl -sS -o /dev/null -w '%{http_code}\n' https://pypi.org/pypi/<known-package>/json                      # expect 200
+curl -sSI -o /dev/null -w '%{http_code}\n' https://github.com/<known-repo>                                # 403 here
+git ls-remote --exit-code -h https://github.com/<known-repo> HEAD >/dev/null 2>&1 && echo OK || echo FAIL  # FAIL here
+```
+
+🟢 **The second call is the one most often skipped and the only one that makes the first meaningful:**
+an oracle that answers `200` for everything is not an existence oracle. 🔵 **`P641`'s refusals and
+`P642`'s admission both depend on that `404`.**
+
+🟢 **A licence is then read, never inferred — four filenames, both branches, then the README:**
+
+```
+for b in main master; do for f in LICENSE LICENSE.md LICENSE.txt COPYING; do
+  curl -s -o lic -w "$b/$f %{http_code}\n" https://raw.githubusercontent.com/$SLUG/$b/$f ; done ; done
+# all 404 across both branches?  then grep the README before concluding:
+grep -inE 'licen[cs]e|MIT|Apache|BSD|GPL|copyright|all rights reserved' README.md
+# still nothing -> ALL RIGHTS RESERVED.  That is a measured refusal, not "unknown licence".
+```
+
+🔵 **And a third, independent oracle when the project is packaged** — `pypi.org/pypi/<pkg>/json`
+carries `license_expression` and the OSI classifier, which is how `P640` reached **four** agreeing
+readings on `autorubric`. 🟢 **The `P637` lesson applies to oracles as much as to classifiers: run
+them against each other on one real payload.**
+
 ## 🟢 Fifty-third pass, 2026-10-08 — one recipe (`P637` the **cross-instrument licence agreement check**) and a **correction** to every recipe that reads an LGPL component's licence as a family
 
 ### 🔴 The correction first, because it changes recipes already published here

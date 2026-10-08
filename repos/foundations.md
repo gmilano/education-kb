@@ -4,6 +4,89 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-fourth pass, 2026-10-08 — **one new row**, and the shelf's whole licence column is promoted from *asserted* to *read*
+
+⏱️ **Eighth pass of this date.** 🟢 **One row added** — the first in five passes. 🟢 **Seven licence
+cells re-derived from their own payloads**, which this shelf has not been able to do since pass 51.
+
+### 🟢 Why this shelf can suddenly do its job again (`P639`)
+
+🔴 **Pass 53 recorded that no licence could be read first-hand here** and fell back to existence
+checks. 🟢 **Measured this pass: `raw.githubusercontent.com` answers `200`** (and `404` on a
+nonexistent repo, so it discriminates), and **`pypi.org` answers `200`**. 🔴 **What actually broke is
+`git ls-remote`**, the oracle pass 53 named as the only working one.
+
+🔵 **This shelf's question is *"may Globant build on it"*, and that question is answered by a
+**grant**, never by a repository's existence.** 🟢 **So for three passes this shelf was confirming the
+wrong property.** `P639` is the correction, and the lesson is that an environment capability must be
+re-measured each pass rather than inherited.
+
+### 🟢 `P640` — the new row, and it is a **layer**, not another entry
+
+| Repo | Licence (read first-hand) | Why it is foundational |
+|---|---|---|
+| https://github.com/delip/autorubric | 🟢 **MIT** — 4 independent oracles | **Rubric-based evaluation of LLM/VLM output**: binary / ordinal / nominal criteria, configurable weights, single- and multi-judge ensembles, few-shot calibration, documented **position-** and **verbosity-bias** mitigations. COLM 2026, arXiv `2603.00077`. PyPI `autorubric` **v1.6.1**, uploaded **2026-09-27**, 9 releases. |
+
+🟢 **The four oracles**, because a foundational row should carry its provenance: `main/LICENSE`
+(1 402 B, `MIT License`); `README.md` line 195 (*"MIT License"*); `pyproject.toml`
+(`license = "MIT"` **and** `License :: OSI Approved :: MIT License`); PyPI JSON
+(`license_expression: MIT`). 🔵 **No third-party directory was trusted for any of them.**
+
+🟡 **Declared about the row itself:** the MIT text names **two** copyright holders — Delip Rao for
+changes after the fork from `rubric` v1.2.8, and The LLM Data Company for v1.2.8 and earlier.
+🟢 **Forked-provenance MIT: one grant, two holders, split by version** — so an attribution line that
+names only the fork author is incomplete (`P255`'s shape; detail at `P640`, `agents/top.md`).
+
+🔵 **Why a foundations shelf wants a scorer.** 🔴 **Assessment is the one education function the EU
+AI Act lists in Annex III as high-risk**, and this shelf could name a tutor, an authoring tool and an
+SIS but **not one licensed thing that produces a grade**. 🟢 **That cell is now filled, permissively,
+by a maintained package** — which is the difference between recommending an assessment pipeline and
+being able to ship one.
+
+### 🟢 Re-verified this pass — the six live recommendations, now **with their grants**
+
+🟢 **6 / 6 reachable, and 6 / 6 licences read from the payload** (pass 53 could only prove they
+resolved):
+
+| Repo | Licence, first-hand | Shelf consequence |
+|---|---|---|
+| https://github.com/grant-mccurdy/instructional-ai-workflows | 🟢 **MIT** | 🟢 build on freely |
+| https://github.com/MicroPyramid/Django-CRM | 🟢 **MIT** | 🟢 build on freely |
+| https://github.com/wwrwbs/AI_AWE | 🟢 **Apache-2.0** (1 865 B) | 🟢 build on freely, patent grant |
+| https://github.com/openeducat/openeducat_erp | 🟢 **LGPL-3.0** (8 241 B, named at line 4) | 🟡 link a separate process |
+| https://github.com/macsnoeren/genai-open-assessment | 🟡 **GPL-3.0** (35 149 B) | 🔴 strong copyleft — do not vendor |
+| https://github.com/GarethManning/education-agent-skills | 🔴 **CC-BY-SA-4.0** (1 230 B) | 🔴 **content licence, ShareAlike** |
+
+🔴 **The last row changes a recommendation this shelf was making without qualification.** Its licence
+scopes itself to *"the educational skills, documentation, examples, and curriculum materials in this
+repository"*, and **nothing in its 1 230 B carves out code**. 🟢 **So ShareAlike reaches anything
+derived from it** — usable **as material**, wrong shape to vendor into a product. 🆕 **`Gap 262`.**
+
+🟢 **And one near-miss published with its method (`P644`):** this pass's first-line extraction on
+`openeducat` returned *"For copyright information, please see the COPYRIGHT file."*, which **looks
+like** a contradiction of pass 53's LGPLv3 quote. 🟢 **It is not** — the naming is at **line 4**, and
+the payload is **8 241 B, byte-identical to pass 53's figure.** 🔵 **A first-line heuristic is not a
+licence reading**, and recording the near-miss is cheaper than letting a later pass rediscover it.
+
+### 🔴 The mandated foundational query, and the honest result for the fifth pass running
+
+🔴 **`open source platform education ERP CRM MIT Apache` returned no new permissive education
+platform** — **fifth consecutive pass.** 🔴 **This pass's run was worse than usual: ten of the ten
+results were the same vendor's glossary page in ten languages** (`openeducat.org/*/glossary/*`),
+which is a saturated index, not a channel.
+
+🟢 **Stated rather than padded.** The channel's nearest permissive fits remain **Apache OFBiz**
+(Apache-2.0) and **Aureus ERP** / **Krayin** (MIT) — all general-purpose, **none with an education
+domain model** — and all already on this KB's shelves. 🟢 **`P631` is unmoved: this shelf is still
+never both permissive and educational.** 🔵 **Fewer real rows beat padding — no second row was
+added.**
+
+🔴 **Declared limit on the new row's own neighbours:** `emorynlp/LLM-Grading` and
+`wenjing1170/llm_grader` were both candidates for this shelf and **both were refused for cause** —
+no `LICENSE` under four filenames on two branches, and no licence string anywhere in either README,
+so they are **all rights reserved** rather than "unknown" (`P641`). 🟢 **A refusal with a measured
+reason is a shelf result.**
+
 ## 🟡 Fifty-third pass, 2026-10-08 — **no new foundational row**, and the pass's contribution to this shelf is that its licence column got a reader it was missing
 
 ⏱️ **Seventh pass of this date.** 🔴 **Zero rows added.** 🟢 **One column strengthened across every

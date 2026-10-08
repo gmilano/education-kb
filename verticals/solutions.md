@@ -4,6 +4,92 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-fourth pass, 2026-10-08 — the shelf's six platforms hold, and the row that changes is the **seventh thing this KB was recommending without reading its licence**
+
+⏱️ **Eighth pass of this date.** 🔴 **No new platform**: the vertical query returns the same six for
+the **fifth** consecutive pass, and this pass's run was the weakest yet. 🟢 **The yield is that every
+licence cell on this shelf — and on the live recommendation list beside it — is now read from its own
+payload rather than asserted.**
+
+### 🔴 The mandated vertical query returned a saturated index, not a channel
+
+🔴 **`open source platform education ERP CRM MIT Apache`: ten of ten results were the same vendor's
+glossary page in ten languages** (`openeducat.org/{ar,fr,pt-BR,zh,de,es,…}/glossary/*`). 🟢 **Stated
+as a channel failure, not summarised as a finding** — a result set that is one page translated ten
+times carries one page's worth of information.
+
+🔵 **What it did usefully confirm, from the vendor's own words:** OpenEduCat builds on **Odoo**'s ORM,
+web framework, reporting engine and security model, and the glossary states plainly *why* it is
+LGPLv3 — *"the Lesser GPL applies the same rule to the library but allows closed applications to link
+to it."* 🟢 **That is the vendor affirming the exact linking property this shelf's `openeducat` row
+turns on**, which is a second-hand corroboration of a first-hand reading, and worth having in that
+order.
+
+### 🟢 `P644` — this shelf's `LGPL-3.0` cell re-derived from the payload, and a near-miss recorded
+
+🟢 **Read first-hand this pass** (`raw.githubusercontent.com` answers `200` here — `P639` —
+contradicting pass 53's claim that no licence could be re-read):
+
+| | `openeducat/openeducat_erp` (`master/LICENSE`) |
+|---|---|
+| Size | 🟢 **8 241 B — byte-identical to pass 53's figure** |
+| Line 1 | 🟡 *"For copyright information, please see the COPYRIGHT file."* |
+| **Line 4** | 🟢 *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, **Version 3**"* |
+| Line 5 | 🟢 *"(LGPLv3), as included below…"* |
+| Lines 14–15 | 🟢 `GNU LESSER GENERAL PUBLIC LICENSE` / `Version 3, 29 June 2007` |
+| This shelf's row (since pass 36) | 🟢 **`LGPL-3.0` — correct, now re-derived** |
+
+🔴 **And the near-miss, published with its method rather than dropped:** a *first-line* extraction on
+this payload returns the COPYRIGHT pointer and **looks like** it contradicts pass 53. 🟢 **It does
+not** — the version is named at line 4, three lines down. 🔵 **A first-line heuristic is not a licence
+reading**, and `P469` says publish the corrected measurement with the method that corrected it, so a
+later pass does not rediscover a contradiction that was never there.
+
+### 🔴 The real change: a recommended repo on the live list is under a **content** licence
+
+🟢 **All six repositories in this KB's live opportunity blocks had their grants read this pass**
+(`P643`). 🔴 **One is not a software licence at all:**
+
+| Repo | Licence, first-hand | Delivery consequence |
+|---|---|---|
+| https://github.com/GarethManning/education-agent-skills | 🔴 **CC-BY-SA-4.0** (1 230 B) | 🔴 **ShareAlike, no code carve-out** |
+
+🔴 **Measured, by reading all 1 230 B rather than the title:** the text scopes itself to *"the
+educational skills, documentation, examples, and curriculum materials in this repository"* and
+**nowhere carves out software.** 🟢 **So Attribution + ShareAlike reach anything an engagement
+derives from it** — prompts, skill definitions, curriculum — and those contributions must be
+redistributed under CC-BY-SA-4.0.
+
+🔵 **Why this belongs on the verticals shelf specifically.** 🟢 **This shelf's whole purpose is "a real
+system you can customise with AI on top"**, and customisation is a *derivative*. 🔴 **A ShareAlike
+derivative obligation is therefore not a footnote here — it is the shelf's central question answered
+the wrong way for a product.** 🟢 **Usable as material; wrong shape to vendor.** 🔵 **Creative Commons
+itself advises against CC licences for software**, which is the cleanest way to state it to a client.
+🆕 **`Gap 262`** records that the recipes naming this repo need an explicit *content, not code* marker.
+
+### 🟢 The six-platform shelf, unchanged, with every licence now first-hand
+
+| Platform | Licence | Education domain model? |
+|---|---|---|
+| https://github.com/openeducat/openeducat_erp | 🟡 **LGPL-3.0** (re-read, 8 241 B) | 🟢 **yes** — SIS/ERP, purpose-built |
+| https://github.com/frappe/education | 🔴 GPL-3.0 | 🟢 yes |
+| Moodle | 🔴 GPL-3.0 | 🟢 yes — LMS |
+| Apache OFBiz | 🟢 Apache-2.0 | 🔴 no |
+| Krayin / Aureus ERP | 🟢 MIT | 🔴 no |
+| https://github.com/MicroPyramid/Django-CRM | 🟢 **MIT** (re-read) | 🔴 no |
+
+🔴 **`P631` is unchanged and restated so this pass does not read as progress on it:** the shelf is
+**still never both permissive and educational.** The purpose-built systems are copyleft; the
+permissive ones carry no education domain model. 🟢 **No search this pass moved that cell**, and
+after five consecutive dry passes the honest reading is that **no permissive education platform
+exists to find** — which is a finding about the ecosystem, not about the query.
+
+🟢 **What did move:** `openeducat` is the only copyleft row here that permits linking, its version is
+now re-derived from the payload rather than trusted, and `macsnoeren/genai-open-assessment` — the
+assessment system adjacent to this shelf — was read as **GPL-3.0** (35 149 B), so it is **strong
+copyleft and must not be vendored**, only run as a separate service. 🔵 **Stated before an engagement
+discovers it.**
+
 ## 🟢 Fifty-third pass, 2026-10-08 — the shelf's `LGPL-3.0` row was **right**, and the instrument that certifies it disagreed with it for three passes
 
 ⏱️ **Seventh pass of this date.** 🔴 **No new platform**: the vertical query returns the same six

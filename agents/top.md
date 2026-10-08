@@ -4,6 +4,162 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-fourth pass, 2026-10-08 — the oracle pass 53 declared dead is alive, and with it the **first new agent row in four passes**: a rubric layer, MIT, confirmed four ways
+
+> 🔵 **This pass's opening hypothesis was that a title-less MIT would under-read in the shared
+> classifier the way an LGPL version did in `Gap 256`.
+> 🔴 That hypothesis is REFUTED** — the grant anchor already covers it, since `P456`.
+> 🟢 **The pass's real result is upstream of that: pass 53 inherited an environment claim instead
+> of re-measuring it, and the claim was wrong in the direction that costs the most** — it said
+> first-hand licence reads were impossible. They were available the whole time.
+
+### 🔴 `P639` — the capability claim was pinned to the wrong oracle, and it was **inherited, not measured**
+
+🔴 **Pass 53 published:** *"`git ls-remote` … the only working oracle in this environment"* and
+*"no licence was re-read first-hand this pass"*. 🟢 **Measured this pass, every oracle, before any
+finding was written:**
+
+| Oracle | Pass 53's claim | 🟢 Measured this pass |
+|---|---|---|
+| `git ls-remote` | 🟢 the working one | 🔴 **FAILS** (non-zero, empty output) |
+| `raw.githubusercontent.com` | 🔴 unusable | 🟢 **`200`**, and **`404`** on a nonexistent repo — it *discriminates* |
+| `pypi.org` | not considered | 🟢 **`200`** (it is in the proxy's `noProxy` set) |
+| `github.com` HTML | 🔴 `400` | 🔴 **`403`** — still unusable, different code |
+| `api.github.com` | 🔴 blocked | 🔴 **`403`** — confirmed |
+
+🔵 **The two claims inverted.** The oracle pass 53 trusted is the one that broke; the one it wrote
+off answers payloads. 🟢 **So this pass reads licences first-hand — the thing three passes said
+could not be done** — and the lesson is the generalisable one: **an environment capability is a
+per-pass measurement, never an inheritance.** A stale *capability* claim is more expensive than a
+stale *datum*, because it silently removes a whole method from later passes.
+
+### 🟢 `P640` — **new row**: `delip/autorubric`, MIT, and the shelf gains a layer it did not have
+
+🟢 **Confirmed MIT by four independent oracles**, which is the strongest provenance any row on this
+shelf carries:
+
+| # | Oracle | Reading |
+|---|---|---|
+| 1 | `main/LICENSE` (1 402 B) | 🟢 `MIT License` |
+| 2 | `README.md` §License (line 195) | 🟢 *"MIT License - see LICENSE file for details."* |
+| 3 | `pyproject.toml` | 🟢 `license = "MIT"` **+** `License :: OSI Approved :: MIT License` |
+| 4 | PyPI `/pypi/autorubric/json` | 🟢 `license_expression: MIT`, **v1.6.1**, uploaded **2026-09-27**, **9** releases |
+
+| Agent / library | Repo | Licence | What it is |
+|---|---|---|---|
+| **Autorubric** | https://github.com/delip/autorubric | 🟢 **MIT** | Rubric-based LLM/VLM evaluation framework: binary, ordinal and nominal criteria with configurable weights, single-judge and multi-judge ensembles, few-shot calibration, and documented mitigations for **position** and **verbosity** bias. COLM 2026 (arXiv `2603.00077`, Rao & Callison-Burch, UPenn). On PyPI as `autorubric`. |
+
+🔵 **Why this is a new *cell*, not just a new row.** Every agent on this shelf until now either
+*tutors* or *authors*. 🟢 **Autorubric *scores*** — and scoring is the one education function the EU
+AI Act names as Annex III high-risk, so a shelf that recommends an assessment pipeline and cannot
+name a licensed scorer is incomplete exactly where the regulation bites.
+
+🟡 **And a `P255`-shaped detail worth recording rather than smoothing.** The MIT file carries **two
+copyright holders**, not one:
+
+```
+Copyright (c) 2025 Delip Rao (AutoRubric - all changes after fork from rubric v1.2.8)
+Copyright (c) 2025 The LLM Data Company (rubric v1.2.8 and earlier)
+```
+
+🟢 **Forked-provenance MIT: the grant is single, the holders are two, split by version.** 🔵 **`P255`
+is this KB's "three answers to *who is the holder?*" finding** — here the honest answer is *two*,
+and a per-component attribution line that names only the fork author is incomplete.
+
+### 🔴 `P641` — of the four grading candidates the channel named, exactly **one** is adoptable
+
+🟢 **Measured, each one, first-hand:**
+
+| Candidate | Exists? | Licence | Verdict |
+|---|---|---|---|
+| https://github.com/delip/autorubric | 🟢 yes | 🟢 **MIT** | 🟢 **adoptable** |
+| https://github.com/emorynlp/LLM-Grading | 🟢 yes (`master`, README 3 173 B) | 🔴 **none** | 🔴 **not adoptable** |
+| https://github.com/wenjing1170/llm_grader | 🟢 yes (`main`, README 2 727 B) | 🔴 **none** | 🔴 **not adoptable** |
+| `AutoSCORE` (AAAI; arXiv `2509.21910`) | 🔴 **no locatable repo** | — | 🔴 **paper only** |
+
+🔴 **"None" is measured, not assumed.** For both unlicensed repos this pass fetched **four**
+conventional filenames (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`) on **both** `main` and
+`master` — all `404` — **and** grepped each README for any of
+`licence|license|MIT|Apache|BSD|GPL|copyright|all rights reserved`: **zero matches in either.**
+🟢 **A repository with no grant is "all rights reserved" by default**, so these are not
+"unknown licence" — they are **known to be unusable**, which is a firmer and more useful verdict.
+
+🔴 **`AutoSCORE` was probed, not assumed absent:** five plausible slugs (`ai4stem-uga/AutoSCORE`,
+`AI4STEM-UGA/AutoSCORE`, `xiaomingzhai/AutoSCORE`, `zhaojunding/AutoSCORE`, `delip/autoscore`) all
+`404`. 🟢 **Declared as unreleased rather than as "not found".**
+
+🔵 **The shape of the finding:** the assessment *research* channel is busy — AAAI, COLM, four arXiv
+preprints this window — while the **licensed** channel holds one library. 🟢 **That asymmetry is the
+opportunity**, and it is the opposite of `P497`'s usual complaint: here the software exists, and
+what is missing is the grant.
+
+### 🟢 `P642` — the search channel said the repo did not exist; a slug probe found it on the first guess
+
+🔴 **The channel's own words:** *"None of the results link to a GitHub repository for Autorubric."*
+🟢 **`raw.githubusercontent.com/delip/autorubric/main/README.md` → `200`, first guess**, from the
+author name the paper already gave.
+
+🔵 **Method finding, cheap and reusable:** for a named paper with a named author, **probing
+`owner/repo` directly is a better oracle than the search channel** — it answers from the origin
+instead of from an index, and it costs one request. 🟢 **`P641`'s `AutoSCORE` row is the negative
+control that keeps this honest:** the same probe run five ways returned `404` every time, so the
+method finds repositories that exist and does **not** manufacture ones that do not.
+
+### 🟡 `P643` — the six live recommendations, re-verified **with licences**, and one of them is not a software licence
+
+🟢 **6 / 6 reachable** — and because `raw` works, this is the first pass that reads their **grants**
+rather than merely confirming they resolve.
+
+| Repo | Licence, read first-hand | Note |
+|---|---|---|
+| https://github.com/grant-mccurdy/instructional-ai-workflows | 🟢 **MIT** | permissive |
+| https://github.com/MicroPyramid/Django-CRM | 🟢 **MIT** | permissive |
+| https://github.com/wwrwbs/AI_AWE | 🟢 **Apache-2.0** (1 865 B) | permissive, patent grant |
+| https://github.com/openeducat/openeducat_erp | 🟢 **LGPL-3.0** (8 241 B, named line 4) | copyleft, links out |
+| https://github.com/macsnoeren/genai-open-assessment | 🟡 **GPL-3.0** (35 149 B) | strong copyleft |
+| https://github.com/GarethManning/education-agent-skills | 🔴 **CC-BY-SA-4.0** (1 230 B) | 🔴 **not a software licence** |
+
+🔴 **The last row is a delivery constraint this KB was recommending without stating.** Its licence
+text scopes itself to *"the educational skills, documentation, examples, and curriculum materials in
+this repository"* — 🔴 **and there is no software carve-out anywhere in the 1 230 B.** 🟢 **So
+**ShareAlike** reaches whatever Globant adapts from it**: an engagement that derives prompts, skill
+definitions or curriculum from this repo must redistribute those contributions under CC-BY-SA-4.0.
+🔵 **CC-BY-SA is a content licence; applying it to code is something Creative Commons itself advises
+against** — so the repo is usable **as material**, and is the wrong shape to vendor into a product.
+🆕 **`Gap 262`** records that the recipes naming it need a *content, not code* marker.
+
+### 🟢 `P644` — a contradiction that was not one, published with its method
+
+🔴 **First reading looked like a conflict with pass 53.** Pass 53 quoted `openeducat`'s `LICENSE` as
+naming *"Version 3 (LGPLv3)"*; this pass's first-line extraction returned
+*"For copyright information, please see the COPYRIGHT file."* 🟢 **Re-measured: no conflict.** The
+LGPLv3 naming is at **line 4**; line 1 is a pointer to a sibling file. 🟢 **And the size is
+8 241 B — byte-identical to pass 53's figure.**
+
+🔵 **Recorded rather than quietly dropped, per `P469`:** a *first-line* heuristic is not a *licence*
+reading, and an append-only KB that silently discards its own near-miss teaches nothing. 🟢 **Pass
+53's datum stands, re-derived from the payload by a second pass.**
+
+### 🔴 `P645` — the title-less-MIT hypothesis, refuted **statically**, and the limit is declared
+
+🟢 **The payload that prompted it is real:** `Priyamakeshwari/TeachGPT`'s `LICENSE` (1 057 B) opens
+directly at `Copyright (c) 2023 Priyadharshini` — **no `MIT License` title line at all.** 🔵 **That
+is structurally the `Gap 256` shape**: the identifying token absent from the place the classifier
+anchors on.
+
+🔴 **It is already handled.** `lib/license_family.sh:426` anchors MIT on the **grant** —
+`Permission is hereby granted, free of charge` — which is line 3 of that payload, and the comment at
+lines 487–488 names this exact case: *"un MIT sin titulo (el que abre directamente en «Copyright
+(c) …») no tiene otra via que esta"*. 🟢 **`P456`/`P304` paid for this already.**
+
+🔴 **Declared limit, and it is a real one: no instrument was *run* this pass.** The sandbox denied
+sourcing the repository's shell library (`[Code from External]`), so **every verdict above is either
+a direct measurement I made myself or a static reading of the source** — 🔴 **never an instrument
+run, and never a suite result.** 🟢 **Said plainly so no later pass reads `P645` as a measurement:
+it is a code review.** 🆕 **`Gap 261`** records that this KB's 112 suites are **unrunnable** in this
+environment, which matters more than any single verdict — it is the `P639` lesson again, one layer
+down.
+
 ## 🟢 Fifty-third pass, 2026-10-08 — the shared licence classifier **under-read a version this KB already knew how to read**, and the payload that proves it is the one LGPL platform on this KB's own shelf
 
 > 🔵 **This pass's opening hypothesis was that `Gap 256` needed a version reader written.

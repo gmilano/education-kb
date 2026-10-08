@@ -4,6 +4,100 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-fourth pass, 2026-10-08 — four trends: an inherited capability claim that was false, a layer whose code exists but whose grants do not, a search channel that denied a repo that exists, and a region that was never thin
+
+### 🔴 Trend 1 — the most expensive stale datum is a **capability** claim, not a fact claim
+
+🔴 **Pass 53 published that `git ls-remote` was *"the only working oracle in this environment"* and
+that no licence could be read first-hand.** 🟢 **Measured this pass, before anything else:
+`raw.githubusercontent.com` answers `200` — and `404` on a nonexistent repo, so it discriminates —
+`pypi.org` answers `200`, and `git ls-remote` is the one that FAILS** (`P639`).
+
+🔵 **Both claims inverted.** 🟢 **And the generalisable lesson is about the *class* of claim:** a
+stale **fact** costs you one wrong row, which the next pass corrects. A stale **capability** claim
+costs you a **method** — three passes stopped reading grants and started confirming existence
+instead, which is not the same question and is not the one this KB's shelves ask.
+
+🔵 **This is `P469`'s sibling on a new axis.** `P469` says *a number asserted from a convenient sweep
+is not measured*; this pass adds: **an environment capability inherited from a previous pass is not
+measured either**, and it is the cheaper thing to re-check — five `curl` calls at the top of a pass.
+🟢 **Pass 52 did read payloads from `raw.githubusercontent.com`, so the capability was demonstrably
+present one pass before it was declared absent** — the regression was in the claim, not the network.
+
+### 🔴 Trend 2 — in the assessment layer, capability is abundant and the **licence** is the scarce resource
+
+🟢 **This pass opened a cell this KB did not have — scoring — and found it lopsided.** 🔴 **Of four
+grading candidates the channel named, one is adoptable** (`P641`): `delip/autorubric` (**MIT**, four
+oracles, PyPI v1.6.1 **2026-09-27**). 🔴 **`emorynlp/LLM-Grading` and `wenjing1170/llm_grader` both
+exist and carry no grant whatsoever** — four filenames across two branches all `404`, and **zero**
+licence strings in either README — so they are **all rights reserved**, not "unknown". 🔴 **`AutoSCORE`
+(AAAI, arXiv `2509.21910`) has no locatable repository** across five probed slugs.
+
+🟢 **Meanwhile the capability is clearly there:** **Codestral-22B** hits **85 %** micro-accuracy
+against instructor rubrics on code **with no fine-tuning**, and a 2026 paper reports **88.56 %**
+per-criterion accuracy with **0.78** Pearson on UML diagrams **using only open-source models**.
+
+🔵 **So the shape is the inverse of `P497`'s usual complaint.** `P497` is *"the channel returns
+pedagogy about AI, not software for education"* — an **absence of software**. 🟢 **Here the software
+exists, works, and is published by universities; what is missing is a grant.** 🔵 **Two different
+scarcities need two different responses:** `P497` calls for a better query, this calls for **asking
+an author for a licence**, which is a cheap email and a real route this KB has not used.
+
+🔴 **And "present but ungranted" is the more dangerous of the two on a trending shelf**, because it
+reads exactly like an admissible row until someone fetches the LICENSE.
+
+### 🟢 Trend 3 — the search channel will deny the existence of a repository that exists, and a probe is cheaper than believing it
+
+🔴 **The channel's verdict, verbatim:** *"None of the results link to a GitHub repository for
+Autorubric."* 🟢 **`raw.githubusercontent.com/delip/autorubric/main/README.md` → `200`, on the first
+guess**, from the author name the paper itself supplied (`P642`).
+
+🔵 **Why this generalises past one lucky hit:** a search index answers *"what has been written about
+this?"* while a slug probe answers *"does this exist?"* — 🟢 **and for a named paper by a named
+author, the second question has a cheap, authoritative oracle and the first does not.** 🔵 **An index
+that has not crawled a two-week-old repository reports absence indistinguishably from nonexistence.**
+
+🟢 **The negative control is what makes this a method rather than a bias:** the same probe run five
+ways on `AutoSCORE` returned `404` every time, and `AutoSCORE` stayed refused. 🔴 **A technique that
+only ever confirms what you hoped is not a technique.**
+
+### 🟢 Trend 4 — a "thin region" was a thin **query**, and the fix was free
+
+🔴 **Pass 53 declared EMEA's regional yield an informed gap.** 🟢 **This pass refuted the stated
+cause.** 🔴 **The mandated form `AI education EMEA 2026 adoption regulation players` returned
+enterprise-AI commentary for the fourth pass running** — Workday (2023), CompTIA (US respondents),
+an enterprise telecoms report — **zero education-specific 2026 data.**
+
+🟢 **One country-level search returned four national frameworks:** England's **DfE** guidance
+(modules updated **2026-05-19**, GenAI **product safety standards** updated Jan 2026, a 450 000-pupil
+tutoring ambition); France's ministry framework (Jun 2025, autonomous use from **4e**, a **sovereign
+AI** for teachers); the Netherlands' **NOLAI** consortium and TU Delft's *"permitted, unless"* rule;
+Germany's **DigitalPakt 2.0** to **2030**. 🟢 **Plus the regional baseline, OECD *Digital Education
+Outlook 2026*.**
+
+🔵 **The diagnosis: *EMEA* is a vendor's sales territory, not a term any education ministry uses
+about itself.** 🟢 **So the mandated regional query is structurally mismatched to the education
+channel in exactly one region**, and the same effect appeared in APAC — every APAC education datum
+this pass (Korea's textbook reversal, Singapore's MOE posture) came from the **country** query, not
+the mandated one. 🔴 **LATAM is the exception and shows why:** it has genuine *regional* bodies —
+UNESCO IESALC, IDB, the Digital Education Council — so a regional query finds regional institutions.
+🟢 **EMEA and APAC have national ministries and no regional education regulator, so a regional query
+finds vendors talking about sales.**
+
+🟡 **Recorded as a method correction, not as new coverage:** the mandated queries were still run and
+their results still published as `P497`/saturation evidence. 🟢 **The country queries are an
+*addition* to the mandate, and the four regional blocks in `intel/market.md` say which datum came
+from which form.**
+
+### 🔵 A fourth consecutive instance of a channel being **behind** this KB on the AI Act date
+
+🔴 **One search this pass returned *"high-risk systems on August 2, 2027"*.** 🟢 **This KB holds
+**2027-12-02** stand-alone / **2028-08-02** embedded / Art. 50 live **2026-08-02**, under Reg. (EU)
+**2026/1744** with the omnibus in force **2026-07-27** — and a second search this pass independently
+confirmed the December date.** 🟢 **The KB's record stands unchanged for the fourth pass**, and the
+useful reading is about the channel: 🔵 **on a date that moved once, secondary sources stay wrong for
+months, so a KB that pinned the Regulation number is worth more than one that pinned the month.**
+
 ## 🟢 Fifty-third pass, 2026-10-08 — four trends: a KB that already knew what its gate could not read, a suite holding both answers, a supersession marker applied backwards, and a regional channel saturated at **2 of 42**
 
 ### 🟢 Trend 1 — the expensive defect is *divergence between instruments*, not absence of capability
