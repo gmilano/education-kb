@@ -24,6 +24,36 @@ education-kb/
 
 ## `compose/code/` — lo que esta KB puede demostrar corriendo
 
+🆕 **El pase 65 del 2026-10-08 CORRIÓ EL TABLERO COMPLETO por primera vez, y con eso
+`Gap 257`/`Gap 258` CIERRAN.** 🟢 **106 suites — no 112, que nunca se midió** — repartidas así:
+**63 verdes** (incluida `p471`, verde en 137,5 s), **41 ilegibles** bajo la única bandera de
+intérprete que esta sesión puede usar, **1 roja por entorno** (`p213`, el binding Rust de
+`cryptography` panica con y sin `-I`), y 🔴 **exactamente UNA roja de verdad: `p351`**, la compuerta
+que esta KB escribió para vigilar sus propias cifras de estrellas. 🟢 Censo fila por fila en
+`p799-board-census/board.2026-10-08.tsv`, con suite que afirma la partición (**12/12**).
+
+🔴 **Dos cifras que esta KB venía repitiendo quedan corregidas.** (1) El tablero es de **106** suites
+sobre **143** carpetas — **37 carpetas no tienen suite**. (2) **41 de las 44 rojas del primer barrido
+eran un artefacto del instrumento:** `python3 -I` implica `-P`, que saca el directorio del script de
+`sys.path[0]`, así que toda suite que importa su módulo hermano lanza `ModuleNotFoundError`.
+🟢 **Verificado con sonda de control** — script propio, módulo hermano propio: `python3` importa,
+`-I` y `-P` fallan. 🔵 **Es un hecho sobre la BANDERA**, y por eso van anotadas como `unread`, nunca
+como verdes.
+
+🔵 **El tercer artefacto es el más instructivo:** `p471` se anotó roja porque el barrido cortaba a
+los 120 s. Sin corte: **27/27, después 25/25, exit 0, 137,5 s.** 🔴 **El límite del instrumento se
+había publicado como propiedad del sujeto** — la misma forma de defecto que un `000` leído como
+caída de un host.
+
+🆕 **Tres carpetas nuevas, las tres de UN SOLO ARCHIVO a propósito, y las tres corren igual con
+`python3` y con `python3 -I`** (29 verdes entre ellas): **`p798-proxy-refusal-ledger`** (9/9) lee el
+registro de fallos del propio proxy y deja de INFERIR un rechazo; **`p799-board-census`** (12/12)
+sostiene el censo; **`p800-region-provenance`** (8/8) prohíbe deducir una región del nombre de una
+persona. 🔵 **Ese patrón de un solo archivo es la vía más barata para cerrar `Gap 300`**, las 41 que
+siguen sin leerse.
+
+---
+
 🆕 **El pase 63 del 2026-10-08 registra UNA carpeta nueva y su suite: `p791-registry-id-provenance`
 🟢 `37/37 verde` sin red, con `python3`, con `python3 -I` y DESDE UN DIRECTORIO AJENO (`p355`)** —
 🟢 lo que **REFUTA `Gap 267` por tercer pase consecutivo**. 🔴 **Lo que sigue sin medir es el tablero

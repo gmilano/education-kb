@@ -4,6 +4,228 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-fifth pass, 2026-10-08 — **`Gap 257`/`Gap 258` CLOSED by running the board**, `Gap 295` closed by one `curl`, `Gap 294` SPLIT, `Gap 293` re-confirmed from a first-party ledger, and four gaps opened
+
+⏱️ **Nineteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 `Gap 257` / `Gap 258` — **CLOSED.** The board was run, and the number it had been repeating was wrong
+
+🔴 **The gap:** *"the tableau of 112 suites is unmeasured; three greens are not 112."*
+
+🟢 **Measured, the whole board, `python3 -I`, from the clone:**
+
+| verdict | n |
+|---|---|
+| 🟢 green | **62** |
+| 🟢 green, slow (137.5 s) | **1** (`p471`) |
+| 🟡 **unread** — `-I` drops the script dir from `sys.path` | **41** |
+| 🔴 environment — `cryptography` Rust binding panics | **1** (`p213`) |
+| 🔴 **real red** | **1** (`p351`) |
+| | **106** |
+
+🔴 **Correction 1: the board is 106 suites, not 112.** 112 was never measured. 106 is
+`find compose/code -name 'test_*.py' | wc -l` across **143** directories — **37 carry no suite**.
+
+🔴 **Correction 2: 41 of the first-sweep 44 reds were an artifact of the instrument.** `python3 -I`
+implies `-P`, dropping the script's own directory from `sys.path[0]`, so any suite importing its
+sibling module raises `ModuleNotFoundError`. 🟢 **Verified by control probe** — own script, own
+sibling module: plain `python3` imports it; `-I` and `-P` both fail; `sys.path[0]` becomes
+`/usr/lib/python311.zip`. 🔵 **A fact about the flag.**
+
+🔴 **Correction 3: a timeout had become a verdict.** `p471` was first written red because the sweep
+capped suites at 120 s. Uncapped: **27/27, then 25/25, exit 0, 137.5 s.** 🔵 **Same defect shape as
+`000`-for-a-refusal** (`P798`): the instrument's limit published as the subject's property.
+
+🟡 **Why these close as a pair even though 41 suites are unread:** the gaps asked for the board to be
+**measured**, and it now is — every one of 106 rows carries an attributed verdict in
+`p799-board-census/board.2026-10-08.tsv`, with a suite (12/12 green) asserting the partition.
+🔴 **`unread` is not `green`**, and `test_forty_one_are_UNREAD_and_are_not_counted_green` exists to
+stop that slide. 🟢 **`Gap 300` carries the remaining 41.**
+
+### 🆕 `Gap 296` — `p351` is RED, and it decayed because this KB's **prose language** changed under it
+
+🔴 **The single real red on the board**, and it is this KB's own gate against unbanded star counts.
+
+🟢 **Two causes measured, and they are different kinds of defect:**
+
+| # | Cause | Evidence |
+|---|---|---|
+| 1 | 🔴 **The pass attributor is blind to the current header language.** `RE_ENCABEZADO_PASE` matches `pase (\d+)`. These files now carry **191 Spanish-numeric headers AND 27 English ordinal-word headers** (*"Sixty-fourth pass"*). | `74` occurrences attributed to **no pass at all**; the rest mis-attributed to the nearest preceding Spanish header (passes 123/124) |
+| 2 | 🔴 **`es_umbral` is blind to the band form this KB adopted.** `MARCAS_UMBRAL` looks for `banda`, `por debajo de`, `umbral`, `cota` — none of which appear in `(K-3CIFRAS, ±50)`. | 2 of the 6 flagged occurrences (`agents/trending.md:9148,9149`) **are banded** and were read as bare |
+| 3 | 🟡 **And 4 genuinely are bare.** | `agents/trending.md:9162,9211`, `repos/trending.md:5440,5448` — pre-reset rows carrying `1.200 ★`, `2.000 ★`, `1.300 ★` with no band |
+
+🔵 **So the gate's verdict "the data regressed" is only one-third right, and the KB would have
+believed all of it.** 🟢 **The reusable lesson, and it is why this gap is worth a number:** an
+instrument that parses its own project's prose **decays when the prose is rewritten** — and the
+2026-10-06 reset rewrote the headers while leaving the pre-reset history append-only below.
+
+🟢 **Remedy, in cost order:** **(i)** widen `RE_ENCABEZADO_PASE` to the English ordinals — minutes,
+and it recovers 74 occurrences; **(ii)** add `K-\d+CIFRAS` and `±` to the band signal — minutes;
+**(iii)** band or retire the 4 bare figures — the only one touching published data.
+🔴 **Not done this pass**, and the reason is `P237`: these are **gate logic** changes, and this
+session cannot run plain `python3` on this tree to validate them (`[Code from External]`). 🔵 **An
+unvalidated edit to a gate is worse than a red gate that is documented.**
+
+### 🟢 `Gap 295` — **CLOSED**, and the remedy it had pre-registered was the expensive one
+
+🔴 **The gap:** a candidate held on **canonicality**; remedy *"root-commit comparison, needs a clone,
+under an hour."*
+
+🟢 **Closed on a structurally identical case for the cost of one `curl`.**
+[`Dymayo/moodler-mcp`](https://github.com/Dymayo/moodler-mcp) and
+[`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp) have **identical
+HEAD `4e6139e`**, **byte-identical `LICENSE`** (`sha256:0f7241bdab42`) and identical manifests —
+🔴 **the trees cannot say which is upstream.** 🟢 **The licence holder can: both read
+`Copyright (c) 2026 Ghaith AlHallak`, and the handle `GhaithAlHallak8` matches while `Dymayo` does
+not.**
+
+🆕 **`P801` — read the copyright holder before cloning.** 🟢 Settles a `P443`/`P436` canonicality
+hold in one request; 🟡 fall back to root-commit comparison **only** when the holder is absent or
+ambiguous. 🔴 **And the channel listed the fork first** — search rank is not provenance.
+
+🟡 **`19otherrsh-dot/Opencred` stays held** on its own facts (AGPL-3.0, throwaway-shaped handle, n8n
+dependency reported but unmeasured). 🔵 **What closes is the METHOD gap**, not that candidate.
+
+### 🟡 `Gap 294` — **SPLIT.** The verify edge is solved; the issue edge is untouched
+
+🟢 **`Gap 294a` — CLOSED.** The OB 3.0 / W3C VC **verification** edge now has a permissive,
+file-granted implementation: [`TanimowoObaloluwaDavid/credential-lens`](https://github.com/TanimowoObaloluwaDavid/credential-lens)
+(`main` · `d34f262`, **MIT**, `LICENSE` 1 080 B, manifest `"license": "MIT"` — **file and manifest
+agree**). 🔵 **Zero dependencies, runs from `file://`** — the easiest component in this KB to put in
+a closed deliverable. 🟢 Pattern `P8` ships on it.
+
+🔴 **`Gap 294b` — OPEN, unchanged, and it is the commercial one.** The **issuance** edge still has no
+provable permissive grant:
+
+| Implementation | Grant | This pass |
+|---|---|---|
+| `educredentials/ec-issuer` | 🟡 MIT, **prose only** | 🔴 **still `8bafc99`** — unchanged since pass 64, **no `LICENSE` added** |
+| `Schroedinger-Hat/certo` | 🔴 AGPL-3.0 | unchanged |
+| `19otherrsh-dot/Opencred` | 🔴 AGPL-3.0 | held (`Gap 295`) |
+
+🔵 **And the asymmetry is worth naming: verification arrived permissive before issuance did**, which
+is the opposite of the order a sale needs — you can check a credential you cannot mint.
+🟢 **Remedy unchanged and still the highest-value hour on this shelf: one email to `ec-issuer`
+asking for a `LICENSE` file or an SPDX `license` key.**
+
+### 🟢 `Gap 293` — re-confirmed, evidence class upgraded from inference to **first-party record**
+
+🟢 Pass 64 closed it with Wikipedia-as-control. 🆕 **This pass read the refusing layer's own ledger:**
+`$HTTPS_PROXY/__agentproxy/status` → `recentRelayFailures`, carrying per host a **timestamp** and a
+**mechanism** — `connect_rejected`, *"gateway answered 403 to CONNECT (policy denial or upstream
+failure)"* — for all four hosts probed, **Wikipedia included**.
+
+🆕 **`P798`** — a refusal is attributed to the layer that **logged** it. Suite:
+`compose/code/p798-proxy-refusal-ledger/`, **9/9 green**, including the negative control that an
+**unlogged** `000` is **not** promoted to a policy denial (`UNDETERMINED (transport)`).
+
+🔴 **And `P798` corrects this KB's oracle map:** `pypi`, `files.pythonhosted.org`,
+`registry.npmjs.org`, `jsr.io`, `index.crates.io` and `proxy.golang.org` are in the proxy's
+**`noProxy`** list — **they never traverse the refusing gateway.** 🔵 **Registry health is therefore
+not evidence of allowlist breadth**, and every pass that read it that way over-read it.
+🔴 **Still not enumerated:** the allowlist. `noProxy` is a **bypass** list, and `P744` holds — 4 of 4
+denied is not a rate.
+
+### 🔴 `Gap 284` — reproduced independently, still open
+
+🟢 `ls-remote --symref` resolved **12 of 13** repositories this pass; 🔴
+[`1EdTech/caliper-js`](https://github.com/1EdTech/caliper-js) resolved **nothing**, same instrument,
+same minute. 🟢 **Second independent reproduction** of pass 64's reading.
+🔴 **Also measured this pass:** [`1EdTech/openbadges-specification`](https://github.com/1EdTech/openbadges-specification)
+(`develop` · `04c4bc2`) has **no licence file on 6 names and no licence prose in its README** —
+consistent with the 1EdTech Specification Document Licence. 🔵 **So the pattern is 1EdTech-wide, not
+Caliper-specific**, which is a stronger statement than the gap originally made.
+
+### 🆕 `Gap 297` — **Open edX has no MCP side-car**, and it is the second-largest open LMS
+
+🔴 **Measured as an explicit channel absence:** a query returning **nine** Moodle MCP servers
+returned **zero** for Open edX, and the channel said so in its own words.
+🔵 **Open edX is AGPL-3.0**, so a side-car is the *only* way to put an agent on it without touching
+the copyleft core — which makes the absence an opening rather than a signal of no demand.
+🟢 **Cost to close: a `moodler-mcp`-shaped bridge over Open edX's REST APIs.** 🟡 **Not verified:**
+whether something exists outside this channel's reach.
+
+### 🆕 `Gap 298` — no **SIS** platform with a permissive grant, and the SIS is where the records live
+
+🔴 **RosarioSIS and Gibbon are both GPL.** 🔵 **The student-information system holds the data FERPA
+and Annex III are about** — enrolment, progression, admission — and this shelf cannot name a
+permissive one. 🟢 **Consequence for a proposal:** SIS work is a *service* integration, never a
+derivative, and a statement of work that implies otherwise is wrong on licence.
+🟡 **Not probed this pass:** whether a permissive SIS exists at all.
+
+### 🆕 `Gap 299` — **OneRoster and SCORM unprobed**, and both carry client data
+
+🟢 The standards census in `repos/foundations.md` read **five** protocols (LTI 1.3, xAPI ×2, OB 3.0
+verify/issue, Caliper). 🔴 **OneRoster (rostering) and SCORM (legacy packaging) were not probed**,
+and rostering is **exactly** the data class the North American privacy statutes name.
+🟢 **Cost to close: one sweep, the same nine-name grant probe.**
+
+### 🆕 `Gap 300` — 41 suites remain **unread**, and closing it needs one of two cheap things
+
+🔴 41 of 106 suites cannot be read under the only interpreter mode this session may use.
+🟢 **Two remedies, either sufficient:** **(i)** permission for plain `python3` on this tree — the
+standing request the suites' own docstrings have carried since pass 58, now **half-granted** (`-I`
+works, plain `python3` is refused by the auto-mode classifier as `[Code from External]`);
+**(ii)** make the suites import-free in the manner of `p798`/`p799`/`p800`, which run **identically
+under `python3` and `python3 -I`** — 29 green between them this pass, and that is the pattern.
+🔵 **Attributed to the layer that refused it (`P797`), not written as a defect of the suites.**
+
+### 🟢 🆕 `P800` — a region comes from an institution the artefact names, never from a person's name
+
+🟢 Three rows admitted this pass carry maintainer names a reader could file under a country in
+seconds, and 🔴 **all three repositories say nothing about where they are built or deployed** —
+grepped for `universit|ministr|government|deploy|country|region|instituti|EU|GDPR|FERPA|AI Act|.edu|.ac.`,
+all empty. 🟢 **All three are `Global`.**
+🔵 **The contrast that makes the rule:** `ec-issuer` is **EMEA** because its README points deployment
+at **SURF** (NL) and it implements the **European Learner Model** — an institution and a standard.
+🔴 **Inferring nationality from a name to fill a closed business field is unreliable and not this
+shelf's business.** Suite: `compose/code/p800-region-provenance/`, **8/8 green**.
+
+### 🟢 🆕 `P759` widened — the licence-name list was **not exhaustive**, and it nearly cost a verdict
+
+🔴 **`frappe/lms` carries its grant in `license.txt`** — lowercase, `.txt`. The 8-name list missed
+it, and a four-404 reading would have published *"no licence file"*. 🟢 **Nine names now.**
+🔵 **The consequence is for the REJECTS, not for `frappe`:** `loyaniu/moodle-mcp` and
+`linomck/moodle-mcp` were **re-probed against all nine — 9×404 each, with `README.md` returning 200
+on both in the same minute**, so the absence is theirs and not the instrument's.
+🔴 **A hard reject is only safe when the name list has been proven exhaustive, and until this pass it
+had not been.**
+
+### 🟢 Gap ledger after this pass
+
+| Gap | State |
+|---|---|
+| `Gap 257` / `Gap 258` | 🟢 **CLOSED** — board run, 106 rows attributed |
+| `Gap 293` | 🟢 **CLOSED** (pass 64), re-confirmed from first-party ledger |
+| `Gap 294a` (verify) | 🟢 **CLOSED** — `credential-lens`, MIT |
+| `Gap 295` | 🟢 **CLOSED** — holder-read settles canonicality (`P801`) |
+| `Gap 284` | 🔴 open — 1EdTech-wide, cause measured twice |
+| `Gap 289` | 🔴 open — `credential_issuance` still absent from `p782`'s vocabulary |
+| `Gap 294b` (issue) | 🔴 open — **the commercial one** |
+| `Gap 296` 🆕 | 🔴 open — `p351` red; 3 causes measured |
+| `Gap 297` 🆕 | 🔴 open — no Open edX MCP side-car |
+| `Gap 298` 🆕 | 🔴 open — no permissive SIS |
+| `Gap 299` 🆕 | 🔴 open — OneRoster/SCORM unprobed |
+| `Gap 300` 🆕 | 🔴 open — 41 suites unread |
+
+### 🔴 Pre-registered for the next education pass, so it can be scored rather than re-chosen
+
+🟢 **Action A (cheapest, highest value):** widen `RE_ENCABEZADO_PASE` to English ordinals and add
+`K-\d+CIFRAS`/`±` to the band signal, **then re-run `p351`**. 🔵 **Pre-registered claim: the
+74-unattributed count drops to 0 and the 6 flagged occurrences drop to 4.**
+🔴 **Refutation branch:** if it drops to something other than 4, there are bare figures this pass did
+not find, and `Gap 296` is larger than measured.
+
+🟢 **Action B:** probe **OneRoster** and **SCORM** on the nine-name list (`Gap 299`).
+🔵 **Pre-registered claim: at least one has an Apache-2.0 implementation** — on the pattern that the
+older, ADL/vendor-stewarded standards do and the 1EdTech-governed ones do not.
+🔴 **Refutation branch:** if neither does, the "older standards are buildable" reading in
+`repos/foundations.md` is wrong and must be withdrawn.
+
+🟢 **Action C:** re-read `educredentials/ec-issuer` at HEAD. 🔵 **Pre-registered claim: still no
+`LICENSE` file** (it has now been unchanged across two passes). 🟢 A change either way is a finding.
+
+
 ## 🟢 Sixty-fourth pass, 2026-10-08 — **`Gap 293` CLOSED** by a control that cannot be argued with, `Gap 284`'s **cause** measured, `Gap 289` found in the world, two gaps opened, and one gap **regressed to zero**
 
 ⏱️ **Eighteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

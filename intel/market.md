@@ -4,6 +4,178 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-fifth pass, 2026-10-08 — the policy channel is **saturated** (10 of 12 probed data points already held), the EU's `2027-12-02` position gets its **second independent channel**, and `Gap 293`'s closure is re-confirmed from the refusing layer's **own ledger**
+
+⏱️ **Nineteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 `Gap 293` re-confirmed, and the evidence class is upgraded
+
+🟢 Pass 64 closed it by a **control** (Wikipedia refused identically to four policy hosts → the
+variable is the allowlist). 🆕 **This pass read the refusing layer's own record.**
+`$HTTPS_PROXY/__agentproxy/status` → `recentRelayFailures` carries, per host, a **timestamp and a
+mechanism**:
+
+```
+connect_rejected · "gateway answered 403 to CONNECT (policy denial or upstream failure)"
+en.wikipedia.org:443 · digital-strategy.ec.europa.eu:443
+www.iesalc.unesco.org:443 · www.multistate.us:443          2026-10-08T19:52:0?Z
+```
+
+🟢 **So every policy citation below is `EGRESS_DENIED (allowlist)` — a reading of a first-party
+record, not a deduction from a pattern** (🆕 `P798`, suite in `compose/code/p798-proxy-refusal-ledger/`,
+9/9 green). 🔴 **Nothing in this section was verified at a primary source**, and that is a property
+of this environment, **not** of the sources.
+
+🔴 **And a correction this pass owes its own instrument map:** `pypi` and `npm` sit in the proxy's
+**`noProxy`** list, so they **never traverse the gateway that refused those four hosts**. 🔵 **Their
+clean 200/404 behaviour is therefore not evidence that the allowlist is broad** — two instruments,
+two network paths. A map that conflated them over-read every registry datum it took.
+
+### 🟢 The EU `2027-12-02` position — **second independent channel, same answer**
+
+🟡 `market.md:359` has carried this as *"reported, single-channel."* 🟢 **A fresh channel this pass
+reports the same shift:** the **Digital/AI Omnibus** postpones **Annex III** stand-alone high-risk
+obligations — education among them — from `2026-08-02` to **`2027-12-02`**, with the amendments
+entering into force **2026-07-27** and AI Office/national-authority **enforcement machinery live
+from `2026-08-02`**.
+
+🟢 **Upgraded: single-channel → two-channel, independent, agreeing.** 🔴 **Still not primary** — the
+Official Journal is `EGRESS_DENIED`.
+
+🔴 **And the superseded date is still circulating.** One source this pass asserted Annex III
+compliance by **`2026-08-02`** *"with no extension available."* 🔵 **`P785` vindicated a third time:**
+a channel that is current on one entry is not current on all of them, and the KB's rule — **prefer
+the position with the later legislative act attached** — is what separated them. 🟡 The conflicting
+source is recorded here precisely so it is not re-read as a finding.
+
+### 🔴 The policy channel is **saturated** for this KB, and that is a result
+
+🟢 **Twelve data points from four regional sweeps, probed against this tree:**
+
+| Already held (10) | New (2) |
+|---|---|
+| Korea AI Basic Act · Vietnam `134/2025/QH15` · UNESCO IESALC · California AB 1159 · Idaho SB 1227 · Ohio district-policy mandate · Colombia CONPES 4144 · Uruguay Ceibal · OECD TALIS · US H.R. 8747 | 🆕 **India MeitY** synthetic-content due-diligence duties for intermediaries, in force **`2026-02-20`** · 🆕 **US: 134 AI-in-education bills across 31 states** in the 2026 session |
+
+🔵 **Ten of twelve already recorded is the first time this shelf has measured its own policy
+coverage**, and the reading is that **regional policy sweeps have reached diminishing returns** —
+the marginal hour is now better spent on components than on jurisdictions. 🔴 **`P744` holds: 10 of
+12 is a count on one sweep, not a coverage rate**; it does not license *"the policy layer is done."*
+
+🟡 **India `2026-02-20` is carried with a caveat:** it is an **intermediary** duty under the IT
+rules, **not an education-specific instrument**, and it does not get a `policy-matrix.tsv` row on a
+single channel. 🔵 It matters to an education product only where that product publishes
+AI-generated content to Indian users.
+
+### 🟢 Market size — the spread is the datum, not any single figure
+
+🟡 **Every figure below is channel-reported; no vendor report was reachable** (`EGRESS_DENIED`).
+
+| 2026 AI-in-education market | source class |
+|---|---|
+| **$10.6 B → $42.48 B by 2030 (41.5 % CAGR)** | Research and Markets, repeated by two independent channels this pass |
+| $11.4 B (2026) | second market-research house |
+| $9.58 B (2026) | third market-research house |
+| $136.79 B by 2035 | long-horizon house, different methodology |
+| APAC: **$2 282.9 M (2025), 28.1 % CAGR 2026–2033** | Grand View |
+
+🔴 **Three houses give three different 2026 values for the same market, spanning ~19 %.** 🔵 **So the
+honest client sentence is the band, not the point:** *"independent houses put 2026 between roughly
+**$9.6 B and $11.4 B**, with CAGRs from **26 % to 41 %**."* 🔴 **A proposal quoting one figure to two
+decimals is quoting a methodology it has not read.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **The posture: regulation is dense, state-level, and now MANDATES work this shelf can do.**
+🔴 **134 AI-in-education bills across 31 states** in the 2026 session; **33–35 state education
+departments plus Puerto Rico** publish official AI guidance. 🔵 **The buying trigger is a deadline,
+not a vision:** **Ohio and Tennessee require districts to write their own AI policies** (Ohio's
+deadline **2026-07-01**, now past), which is a per-district compliance artefact at scale.
+🟢 **Hard prohibitions to design around, not sell past:** **California AB 1159** bars using student
+data to train models; **Idaho SB 1227** mandates privacy protections; **Oklahoma and Maryland**
+require human oversight and ban AI from high-stakes student decisions; **New York City** prohibits AI
+for grading, discipline, promotion/graduation and IEP/504 development, with a reported student-facing
+moratorium through grade eight. 🔴 **FERPA is the baseline on every row in `agents/top.md`.**
+🟢 **The fit:** the four Canvas side-cars plus this pass's Moodle rows are **read-scoped by
+configuration** — `canvas-mcp`'s withheld-tool design (pass 64) is the single most sellable control
+in this KB against the NYC/Oklahoma/Maryland prohibition shape.
+🟡 **Federal is slower and should not anchor a proposal:** the Department of Education's AI
+grant-priority rule was finalised **2026-04-13**; **H.R. 8747** (K-12 AI Literacy) is **in committee
+only**.
+
+### EMEA
+
+🟢 **The posture: one regime, a known date, and a window that is open right now.**
+🔴 **Annex III** makes education high-risk where a system determines access or admission, evaluates
+learning outcomes, steers an educational path, or monitors behaviour in proctoring. 🟢 **Obligations
+land `2027-12-02`** (two channels, above) — 🔵 **which is the opportunity, not relief:** ~14 months to
+build conformity in, versus retrofitting it. 🟢 **Article 4 AI-literacy duty is already in force**,
+and **public schools owe a FRIA as deployers** under Art. 27 while private providers do not — a
+distinction that changes who buys.
+🟢 **The component fit is the best of any region:** **OpenOLAT (Apache-2.0)** 🆕 is a university-grade
+LMS a closed derivative may build on; **`educredentials/ec-issuer`** is EMEA-placed (SURF, NL) and
+speaks the **European Learner Model**; **credential-lens (MIT)** 🆕 verifies OB 3.0 offline, with
+**zero dependencies** — 🔵 which is exactly the supply-chain story a European procurement asks for.
+🔴 **The blocker is `Gap 294`:** the credential **issuer** edge has no provable permissive grant, and
+ELM/OB 3.0 issuance is the EMEA-specific demand. 🟢 **One email to `ec-issuer` remains the
+highest-value hour on this shelf.**
+🟡 **Named supervisors** (reported, unverified list): Germany **Bundesnetzagentur**, France **CNIL**
+on fundamental rights, Spain **AESIA**. 🟢 **Also in frame:** Digital Education Action Plan,
+Convention 108+.
+
+### APAC
+
+🟢 **The posture: no single regime — the region is a compliance MATRIX, and that is the service.**
+🔴 **Korea's AI Basic Act is in force from January 2026** and names **education** a *high-impact*
+sector: disclosure that the user is interacting with AI, and **a local representative for foreign
+providers** — 🔵 a market-entry obligation, not just a product one. 🔴 **Vietnam** enacted
+**Law No. 134/2025/QH15** (2026-03-01) with **Decree 142/2026/ND-CP** naming education high-risk and
+requiring providers to **self-classify** into one of three tiers before deployment.
+🟡 **India** is light-touch (MeitY under the IT rules), with synthetic-content due diligence from
+**`2026-02-20`**. 🟢 **China** enforces algorithm filings, synthetic-content labelling and security
+review for public models. 🟡 **Singapore** governs by framework and toolkit (**AI Verify**) and leads
+the ASEAN AI governance working group; **Japan and Taiwan** are drafting while standing up testing
+institutes; **Australia/New Zealand** are light-touch — and 🔴 **ANZ records the region's
+*highest* public support for banning AI in schools**, which is a sales-cycle fact.
+🔴 **Least developed frameworks: Laos, Myanmar, Brunei, Cambodia, Timor-Leste.** The **Philippines**
+plans a regional framework under its **2026 ASEAN chairmanship**.
+🟢 **The fit:** `LangGraph` policy-node per jurisdiction (pattern P6, earlier pass) is the right
+shape; 🔵 **and `policy-matrix.tsv` is the asset** — a (function × jurisdiction) verdict table is
+precisely what a multi-country APAC engagement cannot assemble in a sprint.
+🔴 **Readiness is uneven in infrastructure, not just policy** (UNESCO): connectivity and teacher
+training gate deployment regardless of licence.
+
+### LATAM
+
+🟢 **The posture: the region's defining number is a GOVERNANCE GAP, and it is a deliverable.**
+🟢 **UNESCO IESALC, 200 institutions across 19 countries: 87 % use AI in at least one area, and only
+26 % have any formal framework.** 🔵 **That 61-point spread is the engagement** — the adoption
+already happened and the policy did not.
+🟢 **Adoption splits by sector in a way that targets a pitch:** **84 %** private non-profit,
+**68 %** public, **52 %** private for-profit. 🟢 **Teachers are ahead of their institutions:** TALIS
+2024 puts **Brazil, Chile, Colombia and Costa Rica at ~50 %+** against an **OECD average of 36 %**,
+and **Uruguay reports 75 %** of public-school teachers (Ceibal, 2026).
+🟡 **Regulation is at bill/policy stage, not in force:** **Brazil PL 2.338/2023** is in the Chamber of
+Deputies (text can still change); **Chile** has a risk-based government bill; **Colombia** went
+policy-first with **CONPES 4144** (Feb 2025), funded through 2030. 🔵 **So LATAM is the one region
+where a framework can be designed before a statute constrains it** — the inverse of EMEA.
+🟢 **Institutional anchors:** UNESCO's **Observatory on AI in Education** for the region launched
+**2026-04-14** at **ECLAC, Santiago**; IESALC published with UNU-IAS at **Digital Learning Week 2026**.
+🟢 **The fit:** **Kolibri (MIT)** for offline-first deployment where connectivity is the constraint,
+plus **Moodle** — dominant across the region — now with **four MIT side-car options** from this pass.
+🔴 **Declared gap:** the LATAM sweep returned **no commercial edtech vendor names, no national
+curriculum AI mandates, and nothing education-specific for Mexico, Argentina or Peru.** 🔵 **Stated
+so it is not read as coverage** — this is the thinnest vendor map of the four regions.
+
+### 🟢 Region coverage of this pass, stated plainly
+
+🟢 **All four regional sweeps returned relevant material. No region is an informed gap this pass** —
+which has not been true in every pass, and is the reason it is written down. 🔴 **The gaps are
+*within* regions**: LATAM vendors (above), APAC's five least-developed frameworks, and North
+America's bill-status verification (trackers, not bill text).
+
+
 ## 🟢 Sixty-fourth pass, 2026-10-08 — **`Gap 293` CLOSES**: the refusal is at the proxy, the proxy says so **in its own words**, and an unimpeachable control proves it is an **allowlist** rather than a fact about policy hosts
 
 ⏱️ **Eighteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

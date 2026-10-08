@@ -4,6 +4,110 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-fifth pass, 2026-10-08 — two new patterns built **only** from components whose grant was read from payload this pass, and one pattern **retired** because its licence premise was false
+
+⏱️ **Nineteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🔵 **Rule applied to both recipes below (`P759`/`P800`):** every named component has a **licence file
+read as bytes** and a **HEAD pinned**, and no component enters a recipe on a README claim. 🔴 **A
+recipe naming a prose-only grant is a proposal with an unpriced legal step in it.**
+
+### 🆕 `P7` — Moodle read-scoped study assistant, **permissive end to end**
+
+🟢 **The gap it fills:** this shelf had **four Canvas side-cars and zero Moodle** before this pass,
+and Moodle is the **largest LMS in the world** — the default in LATAM, strong across EMEA and APAC.
+
+| Layer | Component | Grant (payload) | Pin |
+|---|---|---|---|
+| LMS | **Moodle** | 🔴 GPL-3.0 — **run as a service, do not link** | deployment, not dependency |
+| LMS bridge | **`GhaithAlHallak8/moodler-mcp`** | 🟢 MIT, 1 072 B | `main` · `4e6139e` |
+| Standards bridge | **`Cvmcosta/ltijs`** | 🟢 Apache-2.0, 11 361 B | `master` · `0ec24fe` |
+| Telemetry | **`RusticiSoftware/TinCanPython`** | 🟢 Apache-2.0, 11 358 B | **`3.x`** · `bbc3f9d` ⚠️ `P793` |
+| Orchestration | **LangGraph** | 🟢 MIT | per `agents/top.md` |
+
+🟢 **Wiring, concretely:**
+1. **Moodle stays a remote service.** 🔵 GPL-3.0 is a distribution condition; calling a Moodle
+   instance over its Web Services API is **use**, not distribution, so the client's own code stays
+   closed. 🔴 **Bundling a Moodle plugin into a deliverable is the step that changes that** — don't.
+2. **`moodler-mcp` as the read surface**, launched with its write paths unset. 🟢 It is MIT, so it
+   may be forked and trimmed. 🔵 **Trim rather than configure:** pass 64's `canvas-mcp` lesson is
+   that **a tool withheld from the model's tool list cannot be argued into calling itself** — delete
+   the write tools from the fork and the control becomes structural.
+3. **`ltijs` for launch context** so the assistant is entered *from* a course with the learner's
+   role already asserted, rather than re-authenticating.
+4. **`TinCanPython` emits xAPI statements** for every assistant interaction. 🔵 **This is the
+   deliverable that survives the engagement:** an xAPI stream is the evidence base for HolonIQ's
+   *"proven instructional benefit"* and for the EU's Art. 14 human-oversight record.
+5. **LangGraph node per jurisdiction**, reading `intel/policy-matrix.tsv` as data.
+   🔴 **Hard-stop the `assessment_grading` and `admissions_access` functions in EU deployments** —
+   Annex III, `2027-12-02`.
+
+🔴 **Pin `3.x`, not `main`, for `TinCanPython`.** `raw.githubusercontent.com/.../main/LICENSE`
+returns **404** on that repository; a build file assuming `main` fails and a licence sweep assuming
+`main` reports *"unlicensed."* 🟢 **Resolve the symref.**
+
+🟡 **Cost shape:** 4–6 weeks. 🔵 **The schedule risk is not the code, it is the Moodle Web Services
+token scope** — institutions issue over-broad tokens by default, and narrowing one is a
+committee conversation.
+
+### 🆕 `P8` — Offline credential verification at the door, **EMEA-shaped**
+
+🟢 **The gap it fills:** `Gap 294` says the credential **issue** edge is unbuildable permissively.
+🔵 **It says nothing about the VERIFY edge, and that edge turned permissive this pass** — so this is
+the credential pattern that can actually ship today.
+
+| Layer | Component | Grant (payload) | Pin |
+|---|---|---|---|
+| Verifier | **`TanimowoObaloluwaDavid/credential-lens`** | 🟢 MIT, 1 080 B, **file + manifest agree** | `main` · `d34f262` |
+| Spec | **Open Badges 3.0 / W3C VC** | 🟡 free to implement; 🔴 1EdTech spec repo has **no licence file** | — |
+| LMS/host | **OpenOLAT** | 🟢 **Apache-2.0**, 10 982 B | `master` · `e2a733c` |
+| Issuer | `educredentials/ec-issuer` | 🔴 **prose-only MIT** | 🔴 **NOT in the deliverable** |
+
+🟢 **Wiring, concretely:**
+1. **`credential-lens` is vendored, not depended on.** 🔵 **Zero dependencies and it runs from
+   `file://`** — so it goes into the deliverable as source, with **no lockfile and no supply-chain
+   surface**. 🟢 That is the single most procurement-friendly property in this entire KB.
+2. **Verify at the admissions/enrolment door**, not at issuance: inspect an incoming OB 3.0 or W3C VC
+   for the four defects its README names — **fake signature value, legacy 1.x badge no verifier
+   accepts, award with no expiry, award with no revocation path**.
+3. **Run it air-gapped.** 🔵 Offline verification means **the credential never leaves the
+   institution** — which answers the EU data-boundary question before it is asked, and makes the
+   component viable where connectivity is the constraint (LATAM, per `intel/market.md`).
+4. **Host inside OpenOLAT** when the client wants it in the LMS: **Apache-2.0**, so a closed
+   derivative is permitted.
+5. 🔴 **Do NOT promise issuance in the same statement of work.** 🟢 Price it separately against
+   `Gap 294`'s three options — email `ec-issuer` for a real grant (hours), accept a self-hosted AGPL
+   issuer (free, constrains the client), or implement OB 3.0 from spec (weeks, the only closed-source
+   path). 🔵 **A proposal that does not name which one it means is underpriced.**
+
+🟡 **Cost shape:** 2–3 weeks for verification alone. 🔵 **It is deliberately small** — and `Gap 294`
+is the reason the big version does not exist yet.
+
+### 🔴 Retired: any pattern naming **Frappe Learning** as a permissive base
+
+🔴 **The channel reported `frappe/lms` as MIT.** 🟢 **Measured: AGPL-3.0** — `license.txt`,
+**33 893 B**, `sha256:db1a87ba81e8`, with `package.json` declaring `AGPL-3.0-or-later`. 🔵 **Two
+layers agreeing against the channel.**
+
+🔴 **A pattern built on that claim would have promised a closed-source LMS derivative on a
+network-copyleft base** — and §13 is an **operating** condition for an LMS, which is network-facing
+by definition. 🟢 **No such pattern was published**, because the licence was probed before the
+recipe was written. 🔵 **Recorded as a near-miss on purpose:** the probe-before-recipe rule is what
+made this a non-event, and the rule is the asset.
+
+### 🟢 Pattern inventory, by whether the grant is PROVABLE
+
+| | Patterns |
+|---|---|
+| 🟢 **Permissive end-to-end** | **`P7`** Moodle study assistant 🆕 · **`P8`** offline credential verification 🆕 · P4 EMEA sovereign stack |
+| 🟡 **Permissive core, copyleft service** | P1 agentic platform · P5 PoC-to-production LATAM |
+| 🔴 **Blocked on a grant** | credential **issuance** (`Gap 294`) · Caliper analytics (`Gap 284`) · permissive **SIS** (`Gap 298`) · Open edX agent bridge (`Gap 297`) |
+
+🔵 **Three of the four blocked items are blocked by a LICENCE, not by missing technology.** 🟢 **That
+is the single most useful sentence this shelf can hand a studio lead** — it means the unblocking work
+is procurement and email, measured in hours, not engineering measured in quarters.
+
+
 ## 🟢 Sixty-fourth pass, 2026-10-08 — one new recipe for the **credential-issuance** edge, and it is the first recipe on this shelf whose **first step is a licence conversation**; plus a capability-gating pattern lifted from an implementation rather than a spec
 
 ⏱️ **Eighteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

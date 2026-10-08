@@ -4,6 +4,100 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-fifth pass, 2026-10-08 — the 2026 trend reports converge on **governance**, and the convergence is now corroborated by what the REPOSITORIES do: the permissive components arriving are **read-scoped and offline**, not autonomous
+
+⏱️ **Nineteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟡 **Every figure here is channel-reported.** All analyst and policy hosts are **`EGRESS_DENIED
+(allowlist)`**, confirmed this pass from the proxy's own failure ledger (`P798`). 🔴 **Not one trend
+below was read at a primary source.**
+
+### 🟢 The convergence: four independent channels, one direction
+
+| Channel | 2026 claim |
+|---|---|
+| **HolonIQ** | *selective* acceleration — ethics, transparency, **agentic use cases**, and **proven instructional benefit** over broad personalisation promises |
+| **1EdTech** | from **experimentation to governance**: clear policies, data boundaries, oversight. **Digital credentials becoming a core mechanism** for skills-based learning and hiring |
+| **K-12 Academics** | 🔴 **86 % of education organisations use gen-AI — and most lack a policy** |
+| **eSchool News (practitioner)** | shift from AI as **time-saver** to AI as a driver of better teaching |
+
+🔵 **The 86 %-with-no-policy figure is the same shape as UNESCO IESALC's LATAM reading
+(87 % adoption / 26 % with a framework).** 🟢 **Two independent instruments, two populations, the
+same gap** — which is the strongest corroboration this pass produced on any trend, and it is the
+one that is *not* about a market size.
+
+### 🟢 🆕 The trend this KB can corroborate from PAYLOAD, which no analyst can
+
+🔵 **Analysts say *"governance."* This shelf can say what the governance actually looks like in
+code**, because it read nine new components this pass:
+
+| Component | Control it ships |
+|---|---|
+| `zhenghh04/canvas-mcp` (pass 64) | 🟢 three tiers; **a withheld tool is never published to the model's tool list** |
+| `songsterq/gradebook-mcp` (pass 64) | 🟢 **read-only by construction**; auto-sync off until enabled |
+| `GhaithAlHallak8/moodler-mcp` 🆕 | 🟢 explicit **prohibited-use** section; unaffiliated-with-vendor statement |
+| `TanimowoObaloluwaDavid/credential-lens` 🆕 | 🟢 **zero dependencies, runs from `file://`** — offline, no supply chain |
+| `csmediapro/moodle-mcp-server` 🆕 | 🟢 **read-only, no server-side plugin** required |
+
+🟢 **Five of the last eleven education components this shelf read lead with a RESTRICTION as their
+headline feature.** 🔵 **That is the governance trend arriving as engineering** — and it is a
+measurable claim, not a forecast. 🔴 **Counter-evidence recorded in the same breath:**
+`Jawadh-Salih/moodle-mcp-server` can **submit assignments** and recommends third-party cloud
+deployment. 🟡 **So the trend is a majority, not a consensus**, and the market has not settled on
+read-scoped-by-default.
+
+### 🔴 The gap between what the analysts call central and what is BUILDABLE
+
+🟢 **1EdTech puts digital credentials at the centre of 2026.** 🔴 **Measured this pass
+(`repos/foundations.md`): the credential ISSUE edge has no provable permissive implementation, and
+Caliper analytics has no reachable one at all** — while **LTI 1.3 and xAPI**, the two older
+protocols, each have **Apache-2.0** code.
+
+🔵 **So the two edges the 2026 narrative is built on are the two a studio cannot build permissively
+today.** 🟢 **This is the most commercially consequential line in this pass**, and it is a
+licence fact rather than a technology one: free to *implement* ≠ code you may *link*.
+
+### 🟡 Trend claims this pass declined to record as findings
+
+| Claim | Why not |
+|---|---|
+| *"42 % outcome improvement"*, *"83 % institutional adoption"* | 🔴 vendor blog, cited to studies the channel itself could not confirm |
+| *"$12.3 B global 2026 (HolonIQ)"* | 🔴 channel could not confirm against HolonIQ; conflicts with the $9.6–11.4 B band in `market.md` |
+| *"education-specific platforms are replacing generic chatbots"* | 🟡 commentary, explicitly flagged as not an established finding |
+| *teacher use doubled; 60 % in 2024-25; 54 % of K-12 and 92 % of university students* | 🟡 single channel, vendor-adjacent; **directionally consistent** with TALIS/Ceibal but not independently sourced |
+
+🔵 **Recorded so they are not re-offered as fresh next pass** — the thirty-first pass's discipline
+applied to statistics instead of repositories.
+
+### 🟢 The regulatory clock, re-stated with this pass's corroboration
+
+| Region | Instrument | Date | Status |
+|---|---|---|---|
+| **EMEA** | AI Office + national enforcement live | 🟢 **`2026-08-02`** | in force |
+| **EMEA** | Omnibus amendments in force | 🟢 **`2026-07-27`** | 🆕 second channel |
+| **EMEA** | **Annex III** high-risk (education) | 🟢 **`2027-12-02`** | 🆕 **two independent channels agreeing** |
+| **EMEA** | Art. 4 AI-literacy duty | 🟢 already in force | unchanged |
+| **APAC** | Korea **AI Basic Act**, education = *high-impact* | 🟢 **Jan 2026** | in force |
+| **APAC** | Vietnam **Law 134/2025/QH15** | 🟢 **`2026-03-01`** | + Decree 142/2026/ND-CP |
+| **APAC** | India MeitY synthetic-content duties | 🆕 **`2026-02-20`** | 🟡 intermediary duty, not education-specific |
+| **North America** | Ohio district AI-policy deadline | 🟢 **`2026-07-01`** | past |
+| **North America** | ED AI grant-priority rule | 🟢 **`2026-04-13`** | finalised |
+| **LATAM** | UNESCO regional AI-in-Education Observatory | 🟢 **`2026-04-14`**, ECLAC Santiago | launched |
+
+🔴 **One channel this pass still asserted the superseded `2026-08-02` Annex III date *"with no
+extension available."*** 🟢 **`P785` again:** prefer the position with the later legislative act
+attached.
+
+### 🔵 And a trend about this KB's own instruments, because it changed a verdict
+
+🟢 **The board of suites was RUN for the first time** (`p799-board-census/`): **106 suites**, not the
+112 this KB had been repeating; **63 green**; **41 unread** under the permitted interpreter flag;
+**1 environment failure**; 🔴 **exactly 1 real red — `p351`, the gate guarding this file's own star
+counts.** 🔵 **The trend worth naming: an instrument that is never run drifts from the prose it
+measures**, and `p351` drifted because this KB's headers changed from `pase N` to English ordinals
+underneath it. 🟢 `Gap 296`.
+
+
 ## 🟢 Sixty-fourth pass, 2026-10-08 — the year's thesis ("purpose-built beats generic") stops being a vendor slogan and gets a **number**, measured twice on two continents; and the credential trend collides with a licence wall
 
 ⏱️ **Eighteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

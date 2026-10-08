@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-fifth pass, 2026-10-08 — week of 2026-10-08: the GitHub-trending channel returns **learning MATERIAL, not education software**, for the nth week; and the week's real repo movement is a **nine-row Moodle MCP cluster** read by grant
+
+⏱️ **Nineteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🔴 **No star counts this week.** `api.github.com/repos/{third-party}` returned **403** (`P745`).
+🔵 **Consequence, stated because it changes how this section reads:** nothing below is ordered by
+traction, and the figures the channel volunteered are **not** reproduced here as data.
+
+### 🔴 The trending channel's standing category error, now named
+
+🟢 `github trending education AI 2026` returned, in order: **`rasbt/LLMs-from-scratch`**,
+**`microsoft/generative-ai-for-beginners`**, **`rohitg00/ai-engineering-from-scratch`**,
+**`karpathy/nanochat`**, **`developer-roadmap`**.
+
+🔴 **Every one of those is material for LEARNING ABOUT AI. None of them is software for RUNNING
+EDUCATION.** 🔵 **The query word "education" is doing two jobs and the channel picks the wrong
+one every time** — it reads "education" as the *subject* of the repository, not the *industry* it
+serves. 🟢 **This is the same defect class as the fifteen-week agent streak** (see
+`agents/trending.md`), and it has the same fix: **name the platform or the protocol, not the
+industry.** 🔴 **Recorded as a channel property, not as a market fact** — a tutorial repository
+trending says nothing about whether education software shipped this week.
+
+🟡 **The channel also surfaced a non-repo item worth one line:** Central European University
+announced a GitHub collaboration for AI-ready teaching (**2026-04**). 🔵 Institutional adoption
+signal, **EMEA**, not a component — it belongs in `intel/`, not on a shelf.
+
+### 🟢 The week's actual repo movement: nine Moodle side-cars, every grant from payload
+
+🟢 **`ls-remote --symref` resolved all nine.** 🔵 **The cluster is the finding** — Moodle is the
+largest LMS in the world and this shelf had **no** Moodle agent row before this pass.
+
+| Repo | ref · HEAD | Licence (payload, bytes) | Verdict |
+|---|---|---|---|
+| [`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp) | `main` · **`4e6139e`** | 🟢 **MIT**, 1 072 B, `sha256:0f7241bdab42` | 🟢 **canonical** (holder = `Ghaith AlHallak`) |
+| [`Dymayo/moodler-mcp`](https://github.com/Dymayo/moodler-mcp) | `main` · **`4e6139e`** | 🟢 MIT, 1 072 B, **same sha256** | 🟡 **fork address — do not cite** |
+| [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server) | `main` · **`a65aefa`** | 🟢 **MIT**, 1 063 B | 🟡 shelved, **WRITE warning** |
+| [`SaadRahman01/moodle-mcp`](https://github.com/SaadRahman01/moodle-mcp) | `main` · **`2260553`** | 🟢 **MIT**, 1 068 B | 🟢 shelved (dev-docs, not learner data) |
+| [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | `main` · **`5a194a5`** | 🔴 **AGPL-3.0**, 34 523 B | 🔴 self-host only |
+| [`lmscloud-io/moodle-mcp-server`](https://github.com/lmscloud-io/moodle-mcp-server) | `main` · **`4b11494`** | 🔴 **GPL-3.0**, 35 148 B | 🔴 self-host only |
+| [`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) | `main` · **`22cc56c`** | 🔴 **none** — 5 names 404 | 🔴 **HARD REJECT** |
+| [`linomck/moodle-mcp`](https://github.com/linomck/moodle-mcp) | `main` · **`acb3046`** | 🔴 **none** — 5 names 404 | 🔴 **HARD REJECT** |
+| [`TanimowoObaloluwaDavid/credential-lens`](https://github.com/TanimowoObaloluwaDavid/credential-lens) | `main` · **`d34f262`** | 🟢 **MIT**, 1 080 B, manifest agrees | 🟢 shelved (OB 3.0 / VC verifier) |
+
+🟢 **Four permissive, two copyleft, two unlicensed, one duplicate address.** 🔵 **The 2-of-9
+unlicensed rate is the number to remember about this cluster**: MCP side-cars are weekend-scale
+projects, and a shelf that skips the licence probe on small repos would have taken both.
+
+### 🔴 A name-list defect this pass found in its OWN probe, and it cuts the other way
+
+🔴 **`frappe/lms` carries its grant in `license.txt` — lowercase, `.txt`.** The probe list
+(`LICENSE`, `LICENCE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `MIT-LICENSE`, `license`,
+`license.md`) **missed it**, and a four-404 reading would have published *"no licence file"* —
+the same verdict this pass just handed `loyaniu` and `linomck`. 🟢 **`license.txt` added; the list
+is nine names** (`P759` widened). 🔵 **The lesson is about the two REJECTS above, not about
+`frappe`:** they were re-probed against the widened list before being written down. 🟢 **Both re-probed against all nine: 9×404 each, with a positive control** —
+`README.md` returns **200** on both repositories in the same minute, so the probe reaches the
+tree and the absence is the repository's, not the instrument's.
+
+### 🔴 Declared empty, so silence is not read as coverage
+
+🔴 **Open edX: zero MCP side-cars found**, stated by the channel in its own words. 🟢 `Gap 297`.
+🔴 **No Apache-2.0 Open Badges implementation found** — this week's credential entry is MIT.
+🔴 **OneRoster and SCORM: not probed this pass.** 🟢 `Gap 299`.
+🔴 **`1EdTech/caliper-js`: no ref resolved**, twelfth-of-thirteen on a discriminating instrument.
+🟢 `Gap 284` unchanged.
+
+
 ## 🟢 Sixty-fourth pass, 2026-10-08 — week of 2026-10-08: **six rows measured by function**, two defaults that are neither `main` nor `master`, and the week's one unresolvable repository is the most informative row in the table
 
 ⏱️ **Eighteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

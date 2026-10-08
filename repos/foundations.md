@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-fifth pass, 2026-10-08 — the **standards layer** read by grant for the first time: three of five education protocols have an Apache-2.0 implementation, and the two that do not are the two the analysts call central
+
+⏱️ **Nineteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🔵 **Why a standards-layer census, and why it belongs in `foundations`:** every pattern this KB ships
+crosses a protocol boundary — a tutor reads a roster, a grader writes a grade, an issuer mints a
+credential. 🔴 **Whether that boundary can be crossed in a closed deliverable is a licence question
+about the PROTOCOL's implementations, not about the agent on top**, and this shelf had never read it
+as one table.
+
+### 🟢 The five protocols, every grant read from payload this pass
+
+| Protocol | Reference implementation | ref · HEAD | Licence (payload, bytes) | Verdict |
+|---|---|---|---|---|
+| **LTI 1.3** (tool launch) | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | `master` · **`0ec24fe`** | 🟢 **Apache-2.0** (`LICENSE`, **11 361 B**) | 🟢 **buildable** |
+| **xAPI** (statement spec) | [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | `master` · **`ca782a1`** | 🟢 **Apache-2.0** (`LICENSE`, **11 525 B**) | 🟢 **buildable** |
+| **xAPI** (client library) | [`RusticiSoftware/TinCanPython`](https://github.com/RusticiSoftware/TinCanPython) | **`3.x`** · **`bbc3f9d`** | 🟢 **Apache-2.0** (`LICENSE`, **11 358 B**, *"Version 2.0, January 2004"*) | 🟢 **buildable** |
+| **Open Badges 3.0 / W3C VC** — *verify* | [`TanimowoObaloluwaDavid/credential-lens`](https://github.com/TanimowoObaloluwaDavid/credential-lens) | `main` · **`d34f262`** | 🟢 **MIT** (`LICENSE`, **1 080 B**; manifest agrees) | 🟢 **buildable** 🆕 |
+| **Open Badges 3.0 / W3C VC** — *issue* | `educredentials/ec-issuer` | `main` · **`8bafc99`** | 🟡 **prose-only MIT**, no file, no SPDX key, not on pypi | 🔴 **unprovable** |
+| **Open Badges** (specification) | [`1EdTech/openbadges-specification`](https://github.com/1EdTech/openbadges-specification) | `develop` · **`04c4bc2`** | 🔴 **NO LICENCE FILE** — 6 names 404, and **no licence prose in the README either** | 🔴 **1EdTech Spec Document Licence** |
+| **Caliper Analytics** (sensor) | [`1EdTech/caliper-js`](https://github.com/1EdTech/caliper-js) | — | 🔴 **no ref resolved** on an instrument that resolved 12 of 13 | 🔴 **behind membership** |
+
+### 🔵 The shape of it, and it is uncomfortable
+
+🟢 **The two OLDEST protocols are the two that are cleanly buildable.** LTI 1.3 and xAPI each have an
+Apache-2.0 implementation, and xAPI has one at **both** the spec and client layers.
+
+🔴 **The two protocols 1EdTech puts at the centre of 2026 — digital credentials and Caliper
+analytics — are the two with no permissive reference implementation this shelf can reach.** Credential
+*verification* arrived permissive this pass; credential *issuance* did not; Caliper resolves nothing.
+
+🔵 **That inverts the usual assumption that newer standards are easier to adopt.** 🟢 **The reason is
+structural, not accidental:** LTI and xAPI matured under ADL and vendor stewardship that shipped
+Apache-licensed code, while the credential and analytics specs sit under the **1EdTech Specification
+Document License** with member-gated repositories. 🔴 **A standard that is free to IMPLEMENT is not
+the same as a standard with code you may LINK**, and this table is the first time this KB has
+separated the two.
+
+### 🟢 `P793` widened again — a **third** non-PHP instance, and this one is a foundation row
+
+🔴 `RusticiSoftware/TinCanPython`'s default ref is **`3.x`** — a **version-named default branch**,
+resolved by `ls-remote --symref`, not assumed.
+
+🟢 Pass 63 measured this on 7 of 25 PHP/composer rows and called it ecosystem-concentrated; pass 64
+widened it with two non-PHP instances. 🔵 **This is the third, in Python, and it sits on a
+FOUNDATION row rather than a trending one** — so the defect reaches the rows most likely to be
+copied into a build file. 🔴 **`P793` is no longer plausibly a PHP phenomenon**, and the practical
+consequence is unchanged and cheap: **never hardcode `main` or `master` when pinning; resolve the
+symref.** A `raw.githubusercontent.com/…/main/LICENSE` against this repository returns **404**, and
+a sweep that reads that as *"no licence"* publishes the opposite of the truth.
+
+### 🔴 What this census does NOT establish
+
+🔴 **Currency.** Every row is a HEAD, not a release; nothing here says any of these libraries is
+maintained. `TinCanPython` on a `3.x` branch is the row most in need of that check.
+🔴 **Completeness.** Five protocols, seven rows — **OneRoster / rostering and SCORM were not probed
+this pass**, and both carry client data. 🟢 **`Gap 299`.**
+🔴 **Fitness.** A permissive licence says you may link it; it does not say it works. No row here was
+executed.
+
+
 ## 🟢 Sixty-fourth pass, 2026-10-08 — **two foundational platforms have a licence file that is a POINTER, and one of the pointers is dangling**; and `P793`'s version-named-default-branch habit is **not PHP-specific**
 
 ⏱️ **Eighteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-fifth pass, 2026-10-08 — the channel's **one MIT LMS is AGPL**, refuted on two layers; and the shelf gains its **first genuinely permissive LMS**, whose own manifest misspells the licence
+
+⏱️ **Nineteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🔵 **Why this pass went looking:** this shelf's verticals have been **GPL/AGPL-dominated for its
+whole history** — Moodle GPL-3.0, Open edX AGPL-3.0, Canvas AGPL-3.0, Chamilo GPL, ILIAS GPL,
+OpenEduCat LGPL-3.0, RosarioSIS GPL, Gibbon GPL. 🟢 **A permissive LMS would change what a client
+engagement can deliver**, so the query asked for one by licence.
+
+### 🔴 `frappe/lms` (Frappe Learning) — the channel called it MIT. **It is AGPL-3.0.**
+
+🟢 **Measured at `develop` · `9d00b3d`, four layers:**
+
+| Grant layer | Measured | Verdict |
+|---|---|---|
+| **File** | 🔴 `LICENSE` **404**, `LICENSE.md` **404**, `LICENSE.txt` **404**, `COPYING` **404** — but **`license.txt` 200, 33 893 B**, `sha256:db1a87ba81e8`, opening *"GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007"* | 🔴 **AGPL-3.0** |
+| **Manifest** | 🔴 `package.json` → **`"license": "AGPL-3.0-or-later"`** | 🔴 **agrees — AGPL** |
+| **Manifest (2)** | 🟡 `pyproject.toml` → `name = "lms"`, **no `license` key** | 🟡 silent |
+| **Prose** | 🟡 `README.md` — no licence sentence matched | 🟡 silent |
+
+🔴 **The channel's exact claim was *"MIT-licensed with self-hosted data ownership."*** 🟢 **Refuted
+on the two layers that can grant anything**, by a 33 893-byte payload and an SPDX identifier that
+agree with each other. 🔵 **"Self-hosted data ownership" is true and it is not a licence** — the
+two were welded into one sentence, and the true half carried the false half onto a shelf.
+
+🔵 **And note the lowercase filename.** A sweep that probes `LICENSE`, `LICENSE.md`, `LICENSE.txt`
+and `COPYING` finds **nothing** here and would have written *"no licence file"* — which is the
+`loyaniu`/`linomck` verdict, and it would have been **wrong**. 🟢 **`license.txt` is now in the probe
+list** (`P759` widened: 8 names → 9, lowercase `license.txt` added). 🔴 **A four-404 reading is only
+a finding when the name list is exhaustive, and it was not.**
+
+### 🟢 `OpenOLAT/OpenOLAT` — **Apache-2.0, confirmed from payload.** The shelf's first permissive LMS
+
+🟢 **Measured at `master` · `e2a733c`:**
+
+| Grant layer | Measured | Verdict |
+|---|---|---|
+| **File** | 🟢 `LICENSE` **200, 10 982 B**, `sha256:6dbc5b605ed0`, reading *"Apache License / Version 2.0, January 2004"* | 🟢 **Apache-2.0, pristine** |
+| **Manifest** | 🟡 `pom.xml` → `<licenses><license><name>`**`Apache 2.0 Open Source L6icense`**`</name>`, `url` = the canonical Apache 2.0 URL | 🟡 **right licence, typo'd name** |
+
+🔵 **The typo is a finding, not trivia.** `L6icense` is in **OpenOLAT's own `pom.xml`**, and
+`<name>` in Maven is **free text**. 🔴 **An SPDX-matching scanner reading the manifest gets no match
+on `Apache-2.0`** and will report this project as *unknown licence* — while the `LICENSE` file is
+pristine and the `url` is exactly right. 🟢 **The file layer is authoritative here and the manifest
+layer is noise**, which is the inverse of the `ec-issuer` case where the file was absent and the
+manifest was the only structured thing available. 🔵 **So "which layer wins" is not a fixed
+ranking — it is read per repository, and this pass has one case each way.**
+
+🟢 **What it is:** a Java LMS aimed at universities and corporate training, with a modular course
+editor and compliance tracking. 🟡 **Region: EMEA** — OpenOLAT is the Swiss-originated successor to
+OLAT (Universität Zürich); 🔴 **the institutional binding was NOT re-measured from the repository
+this pass**, so it is carried as `reported`, not `read` (`P800` requires a quotable placement string
+and this pass did not pull one).
+
+### 🟢 The verticals shelf, by grant, after this pass
+
+| Licence class | Platforms |
+|---|---|
+| 🟢 **Permissive** | **OpenOLAT (Apache-2.0)** 🆕 · Kolibri (MIT) · Sakai (Apache-2.0) |
+| 🔴 **Strong copyleft (network)** | Open edX (AGPL-3.0) · Canvas (AGPL-3.0) · **Frappe Learning (AGPL-3.0)** 🆕 *corrected* · CourseLit (AGPL-3.0) |
+| 🔴 **Copyleft** | Moodle (GPL-3.0) · Chamilo (GPL) · ILIAS (GPL) · RosarioSIS (GPL) · Gibbon (GPL) · OpenEduCat (LGPL-3.0) |
+| 🔴 **Non-OSI** | `canyongbs/advisingapp` (Elastic 2.0) · `leemonade/leemons` (Fair code) · PageLM (*"Community License"*) |
+
+🔵 **Three permissive LMS platforms out of fourteen**, and only OpenOLAT is a full university-grade
+system. 🟢 **That is the sentence an engagement needs before it promises a closed-source
+derivative** — and it is the first time this shelf can say it from payload on all three.
+
+### 🔴 What this pass did NOT measure about the verticals
+
+🔴 **No release currency check.** `e2a733c` and `9d00b3d` are HEADs, not releases; nothing here says
+either project is actively maintained. 🔴 **No AI-feature audit** — Moodle 4.5's agentic features
+and Open edX's AI Course Creator are carried from earlier passes and were **not** re-read.
+🔴 **`verticals/solutions.md` still has no SIS row with a permissive grant**: RosarioSIS and Gibbon
+are both GPL, and the student-information layer is where client data actually lives. 🟢 **`Gap 298`.**
+
+
 ## 🟢 Sixty-fourth pass, 2026-10-08 — the **credential-issuance** edge is characterised for the first time, and it is this shelf's only edge where **every** reachable implementation is unusable in a proprietary deliverable
 
 ⏱️ **Eighteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

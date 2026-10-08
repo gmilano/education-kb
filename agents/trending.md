@@ -4,6 +4,89 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-fifth pass, 2026-10-08 — week of 2026-10-08: **the fifteen-week empty streak ENDS**, and the mechanism that ended it is the query shape, not the week
+
+⏱️ **Nineteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 The streak ends at fifteen — and the week did not change, the **instrument** did
+
+| week | industry-named query | protocol-named query (`P795`) |
+|---|---|---|
+| weeks 1–14 | 🔴 empty | 🟡 not yet in use / partial |
+| week 15 (pass 64) | 🔴 empty | 🟢 found `educredentials/ec-issuer` |
+| **week 16 (this pass)** | 🔴 **empty again** | 🟢 **nine Moodle MCP side-cars in one sweep** |
+
+🔴 **The industry-named query was empty for the sixteenth consecutive week.** `top open source AI
+agents education 2026 github MIT` returned **CrewAI, LangGraph, OpenHands, Hermes, OpenClaw** — 🔵
+general-purpose frameworks, none of them an education component, and the channel's own answer said
+so: *"I didn't find a ranking of MIT-licensed AI agents built specifically for education."*
+
+🟢 **A platform-and-protocol-named query returned nine**, every one a real repository with a
+resolvable HEAD. 🔵 **So the correct reading of the previous fifteen weeks is not "nothing shipped"
+— it is "this KB was asking the wrong question for fifteen weeks."** 🟢 `P795` is now the default
+shape and this is its second consecutive win. 🔴 **The industry-named query is kept as a control,
+not as a source.**
+
+### 🟢 What is new this week, by function, every grant read from payload
+
+🔴 **No star counts this week** — `api.github.com/repos/{third-party}` returned **403** (`P745`), so
+nothing here is ranked by traction.
+
+| function | new this week | grant (payload) |
+|---|---|---|
+| **lms_read** (student, own account) | `GhaithAlHallak8/moodler-mcp` · `4e6139e` | 🟢 MIT, 1 072 B |
+| **lms_read + assignment_write** | `Jawadh-Salih/moodle-mcp-server` · `a65aefa` | 🟢 MIT, 1 063 B |
+| **developer_docs_read** | `SaadRahman01/moodle-mcp` · `2260553` | 🟢 MIT, 1 068 B |
+| **credential_verification** | `TanimowoObaloluwaDavid/credential-lens` · `d34f262` | 🟢 MIT, 1 080 B, file+manifest agree |
+| lms_read (copyleft) | `csmediapro/moodle-mcp-server` · `5a194a5` | 🔴 AGPL-3.0, 34 523 B |
+| lms_read (copyleft) | `lmscloud-io/moodle-mcp-server` · `4b11494` | 🔴 GPL-3.0, 35 148 B |
+
+🟢 **`credential_verification` is a function this shelf did not have**, and `Gap 289` named
+`credential_issuance` as the missing vocabulary entry. 🔵 **The verify side arrived first, and it
+arrived permissive** — which is the opposite of the order a sales conversation wants, and worth
+saying out loud.
+
+### 🔴 The week's defect: the channel's **ordering** pointed at the fork
+
+🔴 It listed [`Dymayo/moodler-mcp`](https://github.com/Dymayo/moodler-mcp) **before**
+[`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp). 🟢 **Identical HEAD
+`4e6139e`, byte-identical `LICENSE` (`sha256:0f7241bdab42`), identical manifest** — and the licence
+holder in **both** is **`Ghaith AlHallak`**. 🔵 **Search rank is not provenance.** A shelf that takes
+the first result publishes an address whose owner cannot cut a release. 🟢 **One `curl` of the
+licence holder settled it** — cheaper than `Gap 295`'s pre-registered clone, and the gap's remedy is
+amended accordingly.
+
+### 🔴 Declared empty, so silence is not read as coverage
+
+🔴 **Open edX MCP: searched, nothing found.** The query returned nine Moodle servers and **zero**
+for Open edX; the channel said so explicitly. 🔵 **Open edX is the second-largest open LMS and has no
+MCP side-car this channel can see** — recorded as an opening, not as an absence of demand.
+🟢 **`Gap 297`.**
+
+🔴 **No Apache-2.0 Open Badges 3.0 issuer or verifier found.** The permissive entry this week is
+**MIT**, and the channel stated the Apache gap in its own words.
+
+🔴 **Caliper: still nothing.** [`1EdTech/caliper-js`](https://github.com/1EdTech/caliper-js)
+resolved no ref on an instrument that resolved 12 of 13. `Gap 284` unchanged.
+
+### 🟡 Three rows the channel offered that are NOT findings, written down so they are not re-offered
+
+| offered | why it is not a finding |
+|---|---|
+| `loyaniu/moodle-mcp` · `22cc56c` | 🔴 **no licence file** (5 names 404). Public is not licensed. Also reported stale (~552 d) by an aggregator — unverified, and the licence alone settles it. |
+| `linomck/moodle-mcp` · `acb3046` | 🔴 **no licence file** (5 names 404). |
+| `moodle-community` (via `mymcptools.com`) | 🔴 **not resolvable to a repository.** An aggregator listing is not an address; the channel itself flagged it unverified. |
+
+### 🔵 One correction to how this file reads its own history
+
+🔴 **`p351` — the gate that guards this very file against unbanded star counts — is RED**, and it
+has been red while this file kept being appended to. 🟢 Measured this pass: **6 star figures carry no
+band**, 4 of them genuinely bare, and 🔴 **74 occurrences cannot be attributed to any pass at all**
+because the gate's attributor matches `pase (\d+)` and this file now carries **27 English
+ordinal-word headers** it cannot parse. 🔵 **The file's own history outgrew the instrument reading
+it.** `Gap 296`, and `p799-board-census/` has the census.
+
+
 ## 🟢 Sixty-fourth pass, 2026-10-08 — week of 2026-10-08: the agent channel's **fifteenth** empty week, and this week the channel did something worse than return nothing — it returned a row this KB had already refuted
 
 ⏱️ **Eighteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

@@ -4,6 +4,104 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-fifth pass, 2026-10-08 — the agent channel's **empty streak ends**, and it ends on **Moodle**; canonicality is settled by **copyright holder** against the channel's own ordering; and `Gap 294`'s **verify** edge gets a permissive implementation while its **issue** edge still has none
+
+⏱️ **Nineteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Oracle map re-measured before any datum (`P713`, `P745`, `P791`, 🆕 `P798`):**
+`raw.githubusercontent.com` discriminates **four ways** on one repository — real file **200**,
+invented path **404**, invented *branch* **404**, invented *repo* **404**. `pypi` **200/404** and
+`npm` **200/404** against their own pairs. `ls-remote --symref` **resolved the default ref and HEAD
+for 12 of 13** repositories probed. 🔴 `api.github.com/repos/{third-party}` **403** — **no star
+counts this pass** (`P745`); nothing below is ranked by popularity. 🔴 Policy and report hosts
+**refused at the egress proxy**, now confirmed from the proxy's **own failure ledger** (`P798`, and
+see `p798-proxy-refusal-ledger/`).
+
+### 🟢 The fifteen-week empty streak ends — and what ended it is a **cluster**, not a repo
+
+🔵 **Why this is the finding and not a row:** fifteen consecutive weeks of industry-named queries
+returned general-purpose frameworks (CrewAI, LangGraph, OpenHands) that are not education
+components. 🟢 **A protocol-and-platform-named query (`P795`) returned nine Moodle MCP side-cars in
+one sweep** — and Moodle is the **largest LMS in the world**. 🔵 **The channel was never empty of
+education agents; it was empty of them under an industry-shaped query.** `P795` is now the default
+shape, and this is its second consecutive win.
+
+🟢 **All nine probed at payload level. The grant splits them four ways:**
+
+| Agent / tool | Repo · ref · HEAD | Licence (payload, bytes) | ★ | Region | Verdict |
+|---|---|---|---|---|---|
+| **moodler-mcp** (student) | [`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp) · `main` · **`4e6139e`** | 🟢 **MIT** (`LICENSE`, **1 072 B**, `sha256:0f7241bdab42`) · manifest `license = { text = "MIT" }`, v`1.1.2` | not read (`P745`) | **Global** (`P800`) | 🟢 **shelved — canonical** |
+| moodler-mcp (duplicate address) | [`Dymayo/moodler-mcp`](https://github.com/Dymayo/moodler-mcp) · `main` · **`4e6139e`** | 🟢 MIT, **1 072 B**, `sha256:0f7241bdab42` — **byte-identical** | not read | Global | 🟡 **not canonical — do not cite** |
+| **moodle-mcp-server** (student, Go) | [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server) · `main` · **`a65aefa`** | 🟢 **MIT** (`LICENSE`, **1 063 B**) | not read | **Global** (`P800`) | 🟡 **shelved with a WRITE warning** |
+| **moodle-mcp** (dev-docs) | [`SaadRahman01/moodle-mcp`](https://github.com/SaadRahman01/moodle-mcp) · `main` · **`2260553`** | 🟢 **MIT** (`LICENSE`, **1 068 B**) | not read | Global | 🟢 **shelved — different function** |
+| moodle-mcp-server | [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) · `main` · **`5a194a5`** | 🔴 **AGPL-3.0** (`LICENSE`, **34 523 B**) | not read | Global | 🔴 **self-host only** |
+| moodle-mcp-server | [`lmscloud-io/moodle-mcp-server`](https://github.com/lmscloud-io/moodle-mcp-server) · `main` · **`4b11494`** | 🔴 **GPL-3.0** (`LICENSE`, **35 148 B**) | not read | Global | 🔴 **self-host only** |
+| moodle-mcp | [`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) · `main` · **`22cc56c`** | 🔴 **NO LICENCE FILE** — 5 names 404 against a pair returning 200 in the same minute | — | — | 🔴 **HARD REJECT** |
+| moodle-mcp | [`linomck/moodle-mcp`](https://github.com/linomck/moodle-mcp) · `main` · **`acb3046`** | 🔴 **NO LICENCE FILE** — 5 names 404 | — | — | 🔴 **HARD REJECT** |
+
+🔴 **The two unlicensed rows are rejected on the thirty-first pass's precedent:
+public is not licensed.** 🔵 No permission is granted by visibility, and a client deliverable cannot
+rest on one.
+
+### 🟢 Canonicality settled by **copyright holder**, and it inverts the channel's ordering
+
+🔴 **Two repositories, identical HEAD (`4e6139e`) and byte-identical `LICENSE`
+(`sha256:0f7241bdab42`, 1 072 B) and identical `pyproject.toml` (`moodler-mcp`, v`1.1.2`).** One is
+a fork of the other and the trees cannot tell you which.
+
+🟢 **The licence payload can, and did.** Both files read **`Copyright (c) 2026 Ghaith AlHallak`**.
+🔵 **The owner handle `GhaithAlHallak8` matches the holder; `Dymayo` does not.** 🟢 **So
+`GhaithAlHallak8/moodler-mcp` is the canonical address** (`P184` holder-read, settling a `P443`/`P436`
+hold **in one probe and without a clone**).
+
+🔴 **The channel listed `Dymayo` first.** 🔵 **That is the defect worth naming:** search ordering is
+not provenance, and a shelf that takes the first result takes the fork — publishing an address whose
+owner cannot cut a release. 🟢 **`Gap 295`'s remedy was "root-commit comparison, needs a clone,
+under an hour." The holder line is cheaper and it was decisive here** — so the remedy is amended:
+**read the holder first, clone only if the holder is ambiguous.**
+
+### 🆕 `credential-lens` — `Gap 294`'s **verify** edge, permissive and file-granted
+
+| Agent / tool | Repo · ref · HEAD | Licence (payload) | Region | What it does |
+|---|---|---|---|---|
+| **credential-lens** | [`TanimowoObaloluwaDavid/credential-lens`](https://github.com/TanimowoObaloluwaDavid/credential-lens) · `main` · **`d34f262`** | 🟢 **MIT** (`LICENSE`, **1 080 B**, holder *Tanimowo Obaloluwa David*) · manifest `"license": "MIT"` — 🟢 **file and manifest AGREE** · 🔴 npm **404** (unpublished, read against npm's calibrated pair) | **Global** (`P800`) | Inspects and validates **Open Badges 3.0** and **W3C Verifiable Credentials**. 🟢 **Zero dependencies, no lockfile, no supply chain**; web UI is static files and runs from `file://` — **fully offline**. Catches the document-level defects its README names: a fake signature value shipped to production, a legacy 1.x badge no verifier recognises, an award that can never expire or be revoked. |
+
+🔵 **Why this is a real advance on `Gap 294` and still does not close it:** the gap says the
+credential edge has no permissive, file-grant implementation. 🟢 **The VERIFY half now does** — and
+a zero-dependency offline verifier is the easiest possible thing to put in a closed deliverable.
+🔴 **The ISSUE half still does not:** `educredentials/ec-issuer` is **still at `8bafc99`**, unchanged
+since pass 64 — 🔴 **no `LICENSE` file was added, so its grant is still two words of README prose.**
+🟢 **So `Gap 294` SPLITS rather than closes** — see `intel/open-gaps.md`.
+
+### 🔴 `Gap 284` — reproduced independently, on a 12-of-13 discriminating instrument
+
+🟢 `ls-remote --symref … HEAD` **resolved 12 of 13** repositories this pass. 🔴 For
+[`1EdTech/caliper-js`](https://github.com/1EdTech/caliper-js) it resolved **nothing** — the same
+instrument, the same minute. 🔵 **An instrument that discriminates 12 of 13 makes the thirteenth a
+measurement, not an outage**, and this is now the **second independent reproduction** of pass 64's
+reading. 🔴 **`Gap 284` stays open:** the Caliper sensors are behind 1EdTech membership, and knowing
+why a thing cannot be found does not make it findable.
+
+### 🟡 Capability warnings that travel with these rows
+
+🔴 **`Jawadh-Salih/moodle-mcp-server` can SUBMIT ASSIGNMENTS.** 🔵 That is a **write on assessed
+coursework** by a model, and it is a different risk class from reading a grade: a mis-fired tool call
+is an academic-integrity event, not a bad answer. 🔴 **It also recommends deploying to Cloud Run,
+Heroku or DigitalOcean for ChatGPT/Gemini use** — which moves student coursework to a third-party
+host. 🟢 **Pin it read-scoped, or keep it local; do not take the cloud path without a DPA.**
+
+🟢 **`GhaithAlHallak8/moodler-mcp` ships an explicit prohibited-use section** naming academic
+dishonesty and institutional-ToS violation, and states it is unaffiliated with Moodle Pty Ltd.
+🔵 **Read it the way pass 64 read `canvas-mcp`'s withheld tools: a control stated in the artefact is
+worth more than one assumed by the integrator** — though a README is a weaker control than a tool
+the model cannot see, and the distinction should be kept.
+
+🔴 **FERPA / GDPR apply to every student-facing row above.** 🔵 **And note what these are:** a
+student pointing a model at **their own** coursework via their own token is a materially different
+posture from an institution deploying a side-car over **all** students' records. The first is
+self-service; the second is a processor relationship. 🟢 **Price them differently.**
+
+
 ## 🟢 Sixty-fourth pass, 2026-10-08 — the function `Gap 289` named is **found**, and its grant is **prose and nothing else**; two MCP rows enter payload-read; and `1EdTech/caliper-js` **does not resolve**, which is `Gap 284`'s cause measured rather than assumed
 
 ⏱️ **Eighteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

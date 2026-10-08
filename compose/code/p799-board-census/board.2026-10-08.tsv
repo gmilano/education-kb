@@ -1,0 +1,107 @@
+verdict	dir	file	tail
+red-minusI-syspath	action-gap-crosscheck	test_crosscheck.py	ModuleNotFoundError: No module named 'crosscheck'
+green	aiact-50-2-exposure	test_exposure.py	ALL CHECKS PASSED
+green	aiact-50-2-marking	test_marking.py	envelope. The signature seam (MarkLLM / SynthID, P33) is declared and NOT filled.
+green	aiact-50-2-pack	test_pack.py	27/27 checks passed
+green	dependency-licence-closure	test_dep_licence.py	69/69 assertions pass, no network
+red-minusI-syspath	description-drift-audit	test_audit.py	ModuleNotFoundError: No module named 'audit_drift'
+red-minusI-syspath	fork-lineage-audit	test_audit.py	ModuleNotFoundError: No module named 'audit_lineage'
+red-minusI-syspath	git-recency-channel	test_git_recency.py	ModuleNotFoundError: No module named 'git_recency'
+green	gitlab-api-channel	test_gitlab_channel.py	32/32 passed
+red-minusI-syspath	grading-draft-gate	test_gate.py	ModuleNotFoundError: No module named 'gate'
+green	lib	test_region.py	79/79 checks passed
+green	licence-grant-gate	test_grant_gate.py	ok - 47 checks, 0 failures (offline, no network)
+red-minusI-syspath	markingworkflow-read-before-write	test_read_before_write.py	ModuleNotFoundError: No module named 'read_before_write'
+green	mcp-allowlist-gateway	test_gateway.py	ALL CHECKS PASSED
+red-minusI-syspath	npm-surface-probe	test_probe.py	ModuleNotFoundError: No module named 'probe'
+green	openedx-course-generator	test_plan.py	ALL CHECKS PASSED
+red-minusI-syspath	p172-payload-license-sweep	test_extract.py	ModuleNotFoundError: No module named 'extract_license'
+red-minusI-syspath	p183-nongithub-denominator	test_denominator.py	ModuleNotFoundError: No module named 'denominator'
+red-minusI-syspath	p184-holder-mismatch	test_holder.py	ModuleNotFoundError: No module named 'extract_holder'
+green	p190-holder-package-layer	test_pkg_holder.py	all 7 cases pass
+red-minusI-syspath	p191-spec-license-sweep	test_classify.py	ModuleNotFoundError: No module named 'classify_spec'
+green	p206-erp-layer-license	test_family.py	5/5 passed
+red-env-cryptography	p213-envelope-aad	test_envelope.py	pyo3_runtime.PanicException: Python API call failed
+red-minusI-syspath	p215-disclosure-axis	test_classify.py	ModuleNotFoundError: No module named 'classify_disclosure'
+red-minusI-syspath	p228-segmented-coverage	test_coverage.py	ModuleNotFoundError: No module named 'coverage'
+green	p238-fork-testsuite-contradiction	test_check_contract.py	8/8
+red-minusI-syspath	p239-table-integrity	test_check_tables.py	ModuleNotFoundError: No module named 'check_tables'
+red-minusI-syspath	p243-frontmatter-coverage	test_check_frontmatter.py	ModuleNotFoundError: No module named 'check_frontmatter'
+red-minusI-syspath	p249-channel-calibration	test_calibrate.py	ModuleNotFoundError: No module named 'calibrate'
+red-minusI-syspath	p251-cohort-lineage	test_lineage.py	ModuleNotFoundError: No module named 'lineage'
+green	p253-registry-first-identity	test_identity.py	27/27
+red-minusI-syspath	p257-provider-binding	test_binding.py	ModuleNotFoundError: No module named 'classify_binding'
+green	p262-mandate-level	test_classify.py	47/47
+green	p265-region-contract	test_measure.py	30/30 checks passed
+green	p268-capability-surface	test_surface.py	25/25 checks passed
+green	p275-tree-enumeration	test_layout.py	OK
+green	p276-provider-allowlist	test_allowlist.py	OK
+red-minusI-syspath	p280-manifest-ownership	test_license_probe.py	ModuleNotFoundError: No module named 'license_probe'
+green	p283-manifest-named-license	test_manifest_license.py	34/34
+green	p284-deferral-adjacency	test_adjacency.py	24/24
+green	p287-regional-saturation	test_measure.py	15/15
+red-minusI-syspath	p289-maven-manifest	test_maven_license.py	ModuleNotFoundError: No module named 'maven_license'
+green	p294-pom-in-production	test_wiring.py	27/27
+green	p317-data-license-layer	test_corpus_axis.py	37/37
+red-minusI-syspath	p322-content-item-license	test_classify.py	ModuleNotFoundError: No module named 'classify_item'
+green	p326-titleholder-book-license	test_verdict.py	TODO EN VERDE
+red-minusI-syspath	p328-cession-narrowing	test_verdict.py	ModuleNotFoundError: No module named 'verdict'
+green	p332-figure-layer	test_p332.py	OK
+green	p336-figure-contradiction-delta	test_p336.py	OK
+green	p342-license-claim-vs-file	test_p342.py	OK
+green	p344-claim-class-denominator	test_p344.py	OK
+green	p345-oer-four-forms	test_p345.py	OK (skipped=1)
+green	p348-figure-weight-bias	test_p348.py	OK
+green	p349-star-resolution-band	test_p349.py	OK
+green	p350-contact-surface	test_p350.py	OK
+red-real	p351-star-digit-sweep	test_p351.py	FAILED (failures=5)
+green	p355-cwd-portability	test_p355.py	OK
+green	p356-citation-origin	test_origin.py	OK
+green	p357-hint-layer-cession	test_p357.py	OK
+red-minusI-syspath	p370-gap-gate	test_gap_gate.py	ModuleNotFoundError: No module named 'gap_gate'
+red-minusI-syspath	p383-region-heading-gate	test_check_headings.py	ModuleNotFoundError: No module named 'check_headings'
+red-minusI-syspath	p385-binding-interval	test_binding_interval.py	ModuleNotFoundError: No module named 'binding_interval'
+red-minusI-syspath	p386-pristine-dedup-gate	test_dedup_gate.py	ModuleNotFoundError: No module named 'dedup_gate'
+red-minusI-syspath	p387-shared-date-control	test_fusion_verdict.py	ModuleNotFoundError: No module named 'fusion_verdict'
+green	p391-structured-binding	test_structured_binding.py	17/17
+green	p394-holder-absent-census	test_holder_census.py	19/19
+green	p399-census-order-gate	test_census_order.py	21/21 OK
+red-minusI-syspath	p411-cession-identity-gate	test_gate.py	ModuleNotFoundError: No module named 'gate_cesion'
+red-minusI-syspath	p419-copyleft-identity	test_identidad.py	ModuleNotFoundError: No module named 'identidad_copyleft'
+red-minusI-syspath	p428-census-after-write	test_gate_censo.py	ModuleNotFoundError: No module named 'gate_censo'
+red-minusI-syspath	p429-cession-claim-audit	test_audit.py	ModuleNotFoundError: No module named 'audit_claim'
+green	p436-fork-hypothesis	test_family.py	15/15 assertions pass, no network
+green	p436-fork-hypothesis	test_resolve.py	6/6 checks passed
+green	p437-pinned-version	test_pinned.py	47/47 checks passed
+green	p438-depth2-closure	test_depth2.py	13/13 assertions pass, no network
+green	p439-case-collision-gate	test_case_gate.py	9/9 assertions pass, no network
+green	p440-unlicensed-registry-grant	test_grant.py	30/30 assertions pass, no network
+green	p441-tree-licence-enumeration	test_enumerate.py	40/40 assertions pass, no network
+green	p442-depth2-pinned	test_depth2_pinned.py	21/21 assertions pass, no network
+green	p443-canonical-spelling	test_canonical.py	15/15 assertions pass, no network
+red-minusI-syspath	p444-root-vs-tree-family	test_root_vs_tree.py	ModuleNotFoundError: No module named 'root_vs_tree'
+red-minusI-syspath	p445-classifier-divergence	test_divergence.py	ModuleNotFoundError: No module named 'divergence'
+red-minusI-syspath	p446-pinned-parent-chain	test_parent_chain.py	ModuleNotFoundError: No module named 'parent_chain'
+green	p447-deep-grant-divergence	test_divergence.py	p447 controls: 61/61
+green	p448-crossref-oracle	test_crossref.py	p448 controls: 20/20
+green	p449-prose-tsv-reconciliation	test_reconcile.py	p449 controls: 59/59
+green	p459-unified-verdict	test_unified.py	30/30 assertions pass
+green-slow-137s	p471-gap-gate-language	test_gap_language.py	..........
+green	p533-qti3-template-emitter	test_emit_template.py	All assertions passed, and every one has a paired control that fails.
+red-minusI-syspath	p542-empty-input-sweep	test_sweep_empty_input.py	ModuleNotFoundError: No module named 'sweep_empty_input'
+green	p571-cession-family-delegation	test_delegacion.py	🟢 TODO VERDE — 33 casos
+red-minusI-syspath	p598-register-freshness-gate	test_freshness_gate.py	ModuleNotFoundError: No module named 'freshness_gate'
+red-minusI-syspath	p620-licence-header-window	test_window.py	ModuleNotFoundError: No module named 'probe_window'
+green	p627-multi-grant-repo	test_grant_shape.py	p627-multi-grant-repo: 31/31 green, 0 red
+red-minusI-syspath	p637-cross-instrument-licence-agreement	test_agreement.py	ModuleNotFoundError: No module named 'agreement'
+green	p786-scope-verdict-agreement	test_agree.py	OK
+green	p791-registry-id-provenance	test_provenance.py	37/37 green
+green	pattern-citation-audit	test_audit.py	OK
+red-minusI-syspath	patterns-figure-audit	test_crossref.py	ModuleNotFoundError: No module named 'extract_figures'
+green	proctoring-reach-audit	test_reach.py	5 of 14 SPI methods, not 2, and from NONE of them directly.
+green	registry-license-remeasure	test_anchor.py	24/24 controles pasados
+green	registry-recency-channel	test_registry_recency.py	OK
+red-minusI-syspath	sebserver-mcp-gate	test_gate.py	ModuleNotFoundError: No module named 'gate'
+green	suite-total-control	test_control.py	ALL CHECKS PASSED
+red-minusI-syspath	trend-backlink-audit	test_trends.py	ModuleNotFoundError: No module named 'audit_trends'
+green	unitime-mcp-gate	test_gate.py	ALL CHECKS PASSED
