@@ -4,6 +4,85 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixtieth pass, 2026-10-08 — week of 2026-10-08: the industry-named query is saturated for the **eleventh** week, and every new row this week came from a **protocol-** or **function-**named query
+
+⏱️ **Fourteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+🟢 **Oracle map re-measured before any datum (`P713`, `P745`), `n = 2`:** `raw` **200 × 2** (404-discriminating), `pypi` **200 × 2**, `npm` **200 × 2**, `ls-remote` discriminates. 🔴 `api.github.com/repos/{third-party}` still **`403`** — no star counts (`P745`). 🔴 Primary policy hosts **`000` × 2, 6 of 6** (`Gap 270`, fourth pass).
+
+### 🟢 `Gap 280` — **TESTED**, and the one-pass rule does **not** hold as stated
+
+🟢 **Pass 59 declared the rule "name the protocol or the function, never the industry" on four
+queries in one pass, and flagged it as insufficient evidence. This pass ran the prescribed test:
+two protocol-named and two function-named queries, defects counted.**
+
+| Query | Class | Rows verified | Defects found |
+|---|---|---|---|
+| `OneRoster open source implementation github` | 🟢 protocol | **2** (both MIT, payload-read) | 🟡 **2 non-rows**: ClassLink dev centre dead since 2024-04-01; Ed-Fi service documented without a repo name |
+| `xAPI learning record store open source github` | 🟢 protocol | **4** (Apache-2.0 ×2, MIT, GPL-2.0) | 🔴 **1 licence defect**: source said lxHive *"GPL v3"*, payload is **GPL-2.0** |
+| `open source automated essay scoring github 2026` | 🟡 function | **3** (Apache-2.0, MIT, AGPL-3.0) | 🔴 **1 archived** (`edx/ease`, read-only since Feb 2024); 🟡 1 is an OpenAI-API wrapper, not self-hostable |
+| `open source adaptive learning engine github 2026` | 🟡 function | **1** (`zijinz456/OpenTutor`, MIT) | 🔴 **3 unverifiable**: DeepTutor / LearnOS / OpenLanguage listed on `aiindigo.com` as marketing copy with **no repository** |
+
+🟢 **Tally: protocol-named — 6 rows verified, 1 licence defect. Function-named — 4 rows verified,
+3 unverifiable + 1 archived.** 🟢 **Direction is consistent with `P769`: the protocol channel is
+cleaner.** 🔴 **But the rule as written is wrong, and the counter-evidence is this pass's single most
+valuable result:** the function channel is what closed **`Gap 272`**, a gap the protocol channel had
+left refused for three passes.
+
+🆕 **`P776` — the corrected rule, now on two passes of data:** 🟢 **protocol-named queries for
+licence-clean inventory; function-named queries for discovery, with a heavier verification budget.**
+🔴 **Neither is a rate** — four queries per pass is not a sample frame, and the defect classes differ
+in kind (a wrong licence vs. a nonexistent repo), so they are not summable. 🟢 **`Gap 280` closes as
+*answered*; the measurement convention it produced is the durable part.**
+
+### 🟢 New this week — 12 rows, all payload-read and SHA-pinned
+
+🟢 **Tutoring / knowledge tracing (the cell `Gap 279` named as stalest):**
+[`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) **MIT** `5fea390` (FSRS 4.5 + BKT +
+LOOM + LECTOR, local-first) · [`098765d/AI_Tutor`](https://github.com/098765d/AI_Tutor) **MIT**
+`e7503b7` (KG-RAG) · [`tswsxk/TKT`](https://github.com/tswsxk/TKT) **MIT** `6f33e4a` ·
+[`tswsxk/XKT`](https://github.com/tswsxk/XKT) **MIT** `351e344` ·
+[`jdxyw/deepKT`](https://github.com/jdxyw/deepKT) **MIT** `985c67f` ·
+🔴 [`avps82/mentar`](https://github.com/avps82/mentar) **AGPL-3.0** `9d9d43c` (measured, not reported).
+
+🟢 **Assessment:** [`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE) **Apache-2.0** `41ae3bd`
+(ArguLens — **`Gap 272` closed**) · [`markm-io/ai-essay-evaluator`](https://github.com/markm-io/ai-essay-evaluator)
+**MIT** `8ee5c7c` · 🔴 [`edx/ease`](https://github.com/edx/ease) **AGPL-3.0** `056da0a` (archived).
+
+🟢 **Interop / records (new layer — see `repos/foundations.md`):**
+[`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) **Apache-2.0** `cb794e4` ·
+[`openfun/ralph`](https://github.com/openfun/ralph) **MIT** `53cc58c` ·
+[`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) **Apache-2.0** `efa045e` ·
+🔴 [`leogaggl/lxHive`](https://github.com/leogaggl/lxHive) **GPL-2.0** `cffee6d` ·
+[`longsightgroup/oneroster`](https://github.com/longsightgroup/oneroster) **MIT** `8c14777` ·
+[`TCI/OneRoster`](https://github.com/TCI/OneRoster) **MIT** `5f8a15a` ·
+[`haolpku/K12-KGraph`](https://github.com/haolpku/K12-KGraph) **MIT code / 🔴 CC BY-NC-SA data** `865bc35`.
+
+🔴 **Ungranted this week, through four layers — ALL RIGHTS RESERVED** (`P476`, `P628`):
+[`btgaskin/studykit`](https://github.com/btgaskin/studykit) `18da52f` ·
+[`seewoo5/KT`](https://github.com/seewoo5/KT) `094611c` ·
+[`0awei0/kt`](https://github.com/0awei0/kt) `403b107`.
+
+### 🔴 `Gap 279` — 2 of 5 closed, and the other **3 are unclosable as the gap was written**
+
+🟢 **Closed:** `mentar` → `avps82/mentar` **AGPL-3.0** measured; `OpenTutor` → slug resolved to
+**`zijinz456/OpenTutor`**, **MIT**. 🔴 **Not closed: `UniKT`, `AI_EDU`, `LookatStudy`** — no oracle
+returns a slug for any of them. `UniKT` has documentation at `unikt.readthedocs.io`, which is
+**`EGRESS_BLOCKED`** here; `AI_EDU` and `LookatStudy` return only near-neighbours
+(`098765d/AI_Tutor`, `btgaskin/studykit`), which are **different repositories**, now measured on
+their own merits rather than conflated with the names.
+
+🆕 **`P774`, and it generalises `Gap 266`'s lesson:** 🔴 **a gap that records a repository by *name*
+cannot be closed by a later pass, because a name is not an address.** 🟢 **Convention from this pass
+on: record `owner/repo` at first sighting, or do not record the repository.** 🟡 `Gap 279` stays open
+for the 3, but **re-scoped to "re-discover", not "measure"** — the measurement is cheap and the
+discovery is the cost.
+
+### 🔴 The mandated query, for the record — **eleventh** saturated week
+
+🟢 `top open source AI agents education 2026 github MIT` → OpenHands, CrewAI, LangGraph, Hermes,
+OpenClaw, Microsoft AI-Agents-for-Beginners, HF Agents Course, 500-AI-Agents-Projects.
+🔴 **Byte-for-byte pass 59's list. Zero education-native agents, eleven weeks running.**
+
 ## 🟢 2026-10-08 — pass 59: **12 agent/connector rows admitted, 4 refused**, and a category that did not exist on this shelf yesterday (LMS MCP connectors)
 
 ⏱️ **Thirteenth pass of this date. APPEND-ONLY: this section is new; the history below it is untouched.**

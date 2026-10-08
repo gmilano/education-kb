@@ -4,6 +4,46 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixtieth pass, 2026-10-08 — week of 2026-10-08: trending surfaced **no education repo**, and the week's real movement is a **new layer** (xAPI / OneRoster) rather than a new star count
+
+⏱️ **Fourteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🔴 **`github trending education AI 2026` returned no live trending page and no education-native
+repo.** What it returned was **courseware and general AI education content**:
+`ai-engineering-from-scratch` (🟡 reported ~63 k★, auto-generated trend issue dated 2026-10-04),
+`rasbt/LLMs-from-scratch`, `jamwithai/production-agentic-rag-course`, `developer-roadmap`,
+Karpathy's `nanochat`. 🔴 **"Education" in the trending channel means *learning to build AI*, not
+*AI for education*** — the eleventh consecutive week this holds, and the same conflation the
+industry-named agent query produces (`P776`).
+
+🔴 **No star counts are published this week.** `api.github.com/repos/{third-party}` is **`403`**
+with a non-discriminating control (`P745`); third-party trackers are carried as 🟡 **reported** only.
+
+### 🟢 The week's movement — a layer the shelf did not have
+
+🟢 **Six interop rows, payload-read and SHA-pinned**, admitted to `repos/foundations.md`:
+`yetanalytics/lrsql` **Apache-2.0** `cb794e4` · `openfun/ralph` **MIT** `53cc58c` ·
+`adlnet/ADL_LRS` **Apache-2.0** `efa045e` · 🔴 `leogaggl/lxHive` **GPL-2.0** `cffee6d` ·
+`longsightgroup/oneroster` **MIT** `8c14777` · `TCI/OneRoster` **MIT** `5f8a15a`.
+
+🔵 **Why it counts as movement even though none of them is new code:** an LMS customisation recipe
+that cannot read a roster or write a learning record is a demo. 🟢 **This week the recipes got both
+edges, permissively licensed** — see `compose/patterns.md` `R60a`.
+
+### 🟡 Registry dating, the only dated oracle (`P741`)
+
+🟡 `longsightgroup/oneroster` **v0.3.0, July 2026** (reported — adds REST clients alongside CSV).
+🟡 `markm-io/ai-essay-evaluator` **v1.3.7, 2026-06-03** (reported, from its documentation).
+🔴 **Neither read from `npm` / `pypi` JSON this pass** — the registries answered `200`, but the
+budget went to licence payloads; declared as the cheap half of `Gap 277`, unspent.
+
+### 🔴 Correction carried from this pass's own work
+
+🔴 **`leogaggl/lxHive` is `GPL-2.0`, not `GPL-3.0`** as the discovering source stated — title line
+*"GNU GENERAL PUBLIC LICENSE / Version 2, June 1991"*, 18 092 B @ `cffee6d`. 🟢 **The misread was
+caught before the row was written**, by comparing this pass's classifier output against the payload's
+own title line. 🔴 **The classifier was wrong too, in the other direction (`LGPL`) — see `P773`.**
+
 ## 🟢 2026-10-08 — pass 59: the mandated trending query is **zero for ten weeks**, and the four named queries that replace it returned **12 repos**
 
 ⏱️ **Thirteenth pass of this date. APPEND-ONLY: this section is new; the history below it is untouched.**

@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixtieth pass, 2026-10-08 — the **learning-record / rostering** layer enters the shelf (6 rows, all payload-read), and a **dual-licence** repo defeats every probe this KB has written
+
+⏱️ **Fourteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Why this layer is foundational and not an agent row:** every recipe in `compose/patterns.md`
+ends at a model or an agent, and then has nowhere to *write*. An LRS (xAPI) is where learner events
+land; OneRoster is how classes, teachers and enrolments arrive. 🔴 **Neither layer had a single row
+on this shelf before this pass** — which is why the recipes integrated with "the SIS" in prose.
+
+### 🆕 `P772` — a **scope-partitioned dual-licence** repo defeats a first-match licence-file probe, and `p759`'s four layers have no layer for it
+
+🟢 **Measured first-hand, both payloads SHA-pinned at `865bc35`:**
+
+| path | title line | bytes | scope, per README `## License` |
+|---|---|---|---|
+| `LICENSE` | `Attribution-NonCommercial-ShareAlike 4.0 International` | **2 244 B** | 🔴 **dataset** — graph, benchmark, training data |
+| `LICENSE-CODE` | `MIT License` | **1 075 B** | 🟢 **code** — "this repository" |
+
+🔴 **A probe that stops at the first of 15 filenames reads `LICENSE` and returns `CC BY-NC-SA 4.0`
+— and wrongly rejects usable MIT code.** 🔴 **A probe that happened to order `LICENSE-CODE` first
+would return MIT — and wrongly admit an NC dataset.** Both directions are wrong, and the repo is
+honest: the README states the split at lines 291–292 and the badge points at the NC file.
+
+🟢 **`p759`'s four layers are file → below-reference → manifest → headers.** 🔴 **None of them is
+"more than one licence file, each governing a different artefact"** — the layers are about *where a
+grant hides*, and this is about *what a grant covers*. 🆕 **Declared `Gap 282`: scope, not location,
+is a fifth axis**, and the bounded remedy is to enumerate **all** matches of the 15 filenames rather
+than break on the first.
+
+🔵 **The engagement consequence, stated plainly:** for an education benchmark the **data licence is
+usually the binding one**, because the asset a client wants is the corpus. 🟢 **MIT code + NC corpus
+is a shippable architecture with an unshippable dataset** — the same shape as `Gap 272`'s ArguLens
+(Apache-2.0 code, CC BY-NC-SA PERSUADE 2.0). 🟡 **Two instances in one pass makes it a pattern worth
+a pre-flight, not a coincidence.**
+
+### 🟢 Rows admitted — learning-record stores (xAPI), the layer that was missing
+
+| Repo | Licence (payload · bytes · ref) | Region of origin | What it contributes |
+|---|---|---|---|
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** · 11 357 B · `cb794e4` | North America (Yet Analytics, US) | **SQL-backed LRS.** 🟢 **The permissive row this layer needed** — runs on an RDBMS the client already operates, so no new datastore in the architecture. |
+| [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 **MIT** · 1 094 B · `53cc58c` | EMEA (France Université Numérique) | LRS **plus** a learning-analytics toolkit. 🟢 **The most permissive row on the layer, and EMEA-origin** — relevant where data residency and an EU-funded provenance both matter. |
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | 🟢 **Apache-2.0** · 11 357 B · `efa045e` | North America (US ADL Initiative) | The **reference** LRS from the body that authored xAPI. Python. 🟡 Value is conformance, not throughput. |
+| [`leogaggl/lxHive`](https://github.com/leogaggl/lxHive) | 🔴 **GPL-2.0** · 18 092 B · `cffee6d` | APAC (Australia) | Lightweight PHP/MongoDB xAPI LRS, OAuth 2.0, pluggable storage. 🔴 **GPL-2.0, and the source that named it said "GPL v3"** — see `P773`. Carried as the measured correction, not as a build-on candidate. |
+
+### 🟢 Rows admitted — OneRoster / rostering, the SIS-facing edge
+
+| Repo | Licence (payload · bytes · ref) | Region of origin | What it contributes |
+|---|---|---|---|
+| [`longsightgroup/oneroster`](https://github.com/longsightgroup/oneroster) | 🟢 **MIT** · 1 090 B · `8c14777` | North America (Longsight, US) | TypeScript OneRoster client. 🟡 Reported **v0.3.0, July 2026**, adding **REST clients alongside CSV** — the two ways schools actually exchange rosters. 🟢 **The freshest row on this layer.** |
+| [`TCI/OneRoster`](https://github.com/TCI/OneRoster) | 🟢 **MIT** · 1 079 B · `5f8a15a` | North America (TCI, US) | Ruby OneRoster API wrapper: students, teachers, classes, courses, enrolments. |
+
+🔴 **Two rostering defects recorded rather than carried as rows:** the **ClassLink** Ruby/PHP
+examples sit behind a developer centre its own notice says is **inaccessible after 2024-04-01**, and
+the **Ed-Fi** OneRoster service is documented as *"built from the open-source project"* **without
+naming a repository**. 🟢 **Neither becomes a row** (`P476`).
+
+### 🟢 Dataset / benchmark row, with its split stated
+
+| Repo | Licence (payload · bytes · ref) | Region | What it contributes |
+|---|---|---|---|
+| [`haolpku/K12-KGraph`](https://github.com/haolpku/K12-KGraph) | 🟢 **code MIT** (`LICENSE-CODE`, 1 075 B) · 🔴 **data CC BY-NC-SA 4.0** (`LICENSE`, 2 244 B) · both `865bc35` | APAC (Peking University) | **Curriculum-aligned knowledge graph for benchmarking educational LLMs.** 🔵 The first row on this shelf that is explicitly a *curriculum-aligned* evaluation asset — which is what a ministry-facing engagement is asked for. 🔴 **NC on the data**: usable to evaluate, not to resell. |
+
 ## 🟢 Fifty-ninth pass, 2026-10-08 — `Gap 273`'s **213 ungranted** splits into **three measured classes**, and the named-sample method `P744` demanded is the one that did it
 
 ⏱️ **Thirteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

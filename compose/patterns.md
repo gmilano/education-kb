@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixtieth pass, 2026-10-08 — `R60a`: the first recipe on this shelf that can **read a roster and write a learning record**, both permissively licensed
+
+⏱️ **Fourteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🔴 **Every recipe before this pass ended at a model or an agent and then integrated with "the SIS"
+in prose.** 🟢 **The two standard edges now have payload-read permissive implementations**, so the
+loop closes in named components.
+
+### 🟢 `R60a` — governed AI tutoring on an existing LMS, evidence-first
+
+**Target:** a district or university that already runs Moodle / Open edX / Canvas and must show a
+regulator *what the AI did, to whom, and who reviewed it.*
+
+| # | Layer | Component, pinned | Licence | Wiring |
+|---|---|---|---|---|
+| 1 | **Launch** | `Cvmcosta/ltijs` (npm **v7.0.7**, 2026-10-06) | 🟢 Apache-2.0 | LTI 1.3 tool provider. The LMS launches the tutor; `ltijs` validates the platform JWT and yields the user, context and roles. **Nothing downstream trusts a request without this.** |
+| 2 | **Identity / scope** | [`longsightgroup/oneroster`](https://github.com/longsightgroup/oneroster) `8c14777` (TS) or [`TCI/OneRoster`](https://github.com/TCI/OneRoster) `5f8a15a` (Ruby) | 🟢 MIT | Resolves the launch context into **section, teacher-of-record and enrolment**. This is what makes per-teacher audit and per-section opt-out expressible. |
+| 3 | **Mastery model** | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) `5fea390` | 🟢 MIT | **BKT** for mastery + **FSRS 4.5** for scheduling, local-first (FastAPI + Next.js). Pin BKT per skill from the roster's course mapping. 🟢 Alternatives on the same licence: `tswsxk/TKT` `6f33e4a`, `jdxyw/deepKT` `985c67f`. |
+| 4 | **Retrieval** | [`098765d/AI_Tutor`](https://github.com/098765d/AI_Tutor) `e7503b7` | 🟢 MIT | KG-RAG: course PDFs → `[Entity, Relation, Entity]` triples → graph traversal. Use **instead of** flat RAG where the curriculum has prerequisite structure, because the graph is also the explanation. |
+| 5 | **Evidence** | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) `cb794e4` (SQL) or [`openfun/ralph`](https://github.com/openfun/ralph) `53cc58c` (MIT, EMEA-origin) | 🟢 Apache-2.0 / MIT | **Every** tutor turn, mastery update and human override is an xAPI statement. 🔵 This is the layer that answers a regulator; steps 3–4 answer the learner. |
+| 6 | **Human-review gate** | the deployment's own code | — | 🔴 **Non-negotiable, and jurisdiction-shaped** — see the gate below. |
+
+🟢 **Why `lrsql` is the default at step 5:** it runs on an RDBMS the client already operates, so the
+architecture adds no datastore and no new backup/retention story — the two things that stall a
+public-sector review. 🟢 **Choose `ralph` instead when the buyer is EU public sector**: MIT, and its
+provenance (France Université Numérique) is itself procurement evidence.
+
+### 🔴 The two-axis pre-flight, and it is **still prose** (`Gap 278`)
+
+🔴 **Licence clear ≠ lawful.** `algorithm0r/canvas-lms-mcp` is **MIT** and exposes grading, comments
+and rubrics — it clears every licence check this KB has written and is **prohibited** in US K-12
+public (`P764`). 🟢 **Run both axes before wiring step 6:**
+
+| Axis | Question | Instrument |
+|---|---|---|
+| **Grant** | may we build on it? | 🟢 `p419-copyleft-identity` for the family; the four-layer locator for *where the grant is*; 🆕 **and now `Gap 282`: enumerate *all* licence files, because scope can be partitioned** |
+| **Data** | may we ship the corpus? | 🆕 `P779` — **check the dataset licence separately.** ArguLens is Apache-2.0 over a **CC BY-NC-SA** corpus; K12-KGraph is **MIT code / CC BY-NC-SA data** |
+| **Function** | is this function lawful *here*? | 🔴 prose only — `(function, jurisdiction) → GATED \| PROHIBITED \| UNREGULATED` is still unbuilt |
+
+🟢 **Jurisdiction shape for step 6, as currently shelved:** **US K-12 public** — AI-assisted grading
+of record is **prohibited** in the largest district and gated elsewhere, so the gate is *draft-only,
+teacher commits*. **EMEA** — gated: Annex III conformity file, Art. 50 marking live. **APAC
+(Vietnam)** — high-risk **only** where the output is the sole basis without meaningful human review,
+so a logged human decision is the compliance artefact. **LATAM** — unregulated, so the gate is the
+institution's own framework and the ~74 % without one are the buyers.
+
+### 🟢 `R60b` — permissive automated essay scoring, with the corpus problem stated up front
+
+| # | Component, pinned | Licence | Note |
+|---|---|---|---|
+| 1 | [`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE) `41ae3bd` (ArguLens) | 🟢 Apache-2.0 | Discourse-move classifier + **LightGBM** over 31 linguistic features + LLM feedback. 🟡 Reported mean QWK **0.813**, component-level under an oracle-feature protocol — **not** end-to-end. |
+| 2 | 🔴 **the corpus** | 🔴 CC BY-NC-SA 4.0 | **PERSUADE 2.0 cannot ship commercially, and ShareAlike reaches derivatives.** 🟢 **The engagement must bring its own scored corpus** — which is normally the client's own historical marking, and that is a *better* asset anyway because it encodes their rubric. |
+| 3 | [`haolpku/K12-KGraph`](https://github.com/haolpku/K12-KGraph) `865bc35` | 🟢 MIT code / 🔴 NC data | Curriculum-aligned evaluation. **Use to measure, not to resell.** |
+| 4 | human-review gate + `lrsql` | 🟢 Apache-2.0 | Scores are **drafts**; the teacher commits; the LRS records both the draft and the override. 🔵 This is simultaneously the US prohibition work-around and Vietnam's exemption condition. |
+
+🔴 **Do not reach for `edx/ease`** (`056da0a`): **AGPL-3.0** and **archived read-only since Feb
+2024**. 🟡 **`markm-io/ai-essay-evaluator`** (`8ee5c7c`, MIT) is a usable harness — batch grading,
+multi-pass consistency, fine-tuning on your exemplars — but it **wraps the OpenAI API**, so it is
+permissive code and **not** a self-hostable scorer. 🔵 **State that distinction to any client who
+said "on-prem".**
+
 ## 🟢 Fifty-ninth pass, 2026-10-08 — `R57a`'s stale authentication boundary gets a **live component released two days ago**, the pre-flight gains a **policy gate** beside its licence gate, and `R59a` is the first recipe whose selector starts with a jurisdiction
 
 ⏱️ **Thirteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

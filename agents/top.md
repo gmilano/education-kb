@@ -4,6 +4,142 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixtieth pass, 2026-10-08 — the tutoring / knowledge-tracing cell is refreshed with **12 payload-read rows**, `Gap 272` is **CLOSED** by a repository URL, and this pass's own hand-rolled classifier made **the same error as passes 58 and 59**
+
+⏱️ **Fourteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+> 🔵 **Opening hypothesis: that `Gap 279`'s five named repos were a bounded list that one
+> measurement run would close.
+> 🔴 PARTLY REFUTED — 2 of 5 closed, and the other 3 are *unclosable as written*:** the gap recorded
+> **names, not slugs**, and a name is not an address (`P774`).
+
+🟢 **Oracle map re-measured before any datum (`P713`, `P745`), `n = 2`:** `raw` **200 × 2** against a
+**404-discriminating** control, `pypi` **200 × 2**, `npm` **200 × 2**, `ls-remote` **discriminates**
+(real → SHA, invented → fail). 🔴 **Primary policy hosts: 6 of 6 at `000` × 2** — `Gap 270`, now a
+**fourth** consecutive confirmation of `P731`: the repo shelf has working oracles, the policy shelf
+has none.
+
+### 🔴 `P771` — the `[Code from External]` denial **is in force this session**, so `Gap 267` reopens
+
+🔴 **`bash compose/code/p759-four-layer-grant-probe/probe.sh --self-test` was refused** by the
+permission classifier with reason **`[Code from External]`**, executed from inside the clone —
+exactly the denial pass 54 recorded and pass 59 declared *"REFUTED for a second consecutive pass"*.
+
+🟢 **Both passes measured correctly; the disagreement is not about the code.** The denial is a
+property of the **session**, not of the repository, so *"can this KB's instruments run?"* has no
+single answer and must be re-measured per environment like any other oracle (`P713`).
+
+🔵 **Why it is not cosmetic, stated for a client engagement:** this KB's 235 committed instruments
+are its accumulated verification capital. A pass that cannot execute them must re-derive every
+verdict by hand — which is precisely how `P773` below happened. 🟢 **Mitigation that worked: read
+the instrument's source and follow its documented method.** 🔴 **Mitigation that failed: trusting a
+method summary instead of the instrument.**
+
+### 🔴 `P773` — third consecutive pass in which a **hand-rolled** classifier mislabelled a licence, and the shelved instrument already handled it
+
+🔴 **This pass read `leogaggl/lxHive` as `LGPL`. It is `GPL-2.0`** — title line
+*"GNU GENERAL PUBLIC LICENSE / Version 2, June 1991"*, **18 092 B** @ `cffee6d`, read from payload.
+
+🟢 **Cause, measured not supposed:** the hand-rolled test lowercased a **40-line window** and
+substring-matched `lesser`, and **GPL-2.0's preamble names the LGPL at line 18** —
+*"(Some other Free Software Foundation software is covered by the GNU Lesser General Public License
+instead.)"* — which is **inside** that window. 🔴 **This is `P753` / `P171` on the LGPL axis**: every
+GNU text names its relatives, so a body-substring test mislabels in *both* directions, and the
+40-line "title block" is wide enough to swallow a preamble.
+
+🟢 **`lib/license_family.sh` survives this payload, and the reason is measurable:** its LGPL tests
+are an **uppercase** `case` glob (`*"GNU LESSER GENERAL PUBLIC LICENSE"*`) plus the anchor
+`licensed under the GNU Lesser General Public License`. Measured first-hand on this exact payload:
+
+| test the shared lib applies | result on `lxHive` payload (first 4 000 B) |
+|---|---|
+| `grep -c 'GNU LESSER GENERAL PUBLIC LICENSE'` (uppercase, exact) | **0** |
+| `grep -ci 'licensed under the GNU Lesser General Public License'` | **0** |
+| mixed-case `GNU Lesser General Public License` present? | **1** — the preamble, which neither test reads |
+
+🟢 **Both gates return 0, so the payload falls through to the GPL branch, which finds `version 2`
+and emits `GPL-2.0`. Correct.** 🟢 **The rule restated, and it is pass 59's rule unchanged:
+re-measure the data every pass; reuse the instrument.** 🔴 **What is new is the failure mode when
+the instrument cannot be executed (`P771`) — the method must then be read from source, not
+remembered.**
+
+### 🆕 `P775` — the shared lib's GPL-2.0 protection is **case-dependent**, on the axis `P288` already found fragile
+
+🔴 **Read from source, not executed** (execution denied, `P771`): the LGPL gate at
+`license_family.sh:323` is a `case` glob and therefore **case-sensitive**. A **reflowed or
+uppercased** GPL-2.0 payload whose preamble renders `GNU LESSER GENERAL PUBLIC LICENSE` in caps
+would match that glob and be emitted as **LGPL**.
+
+🟡 **This is exactly `P288`'s shape** — which was an AGPL payload (`kuali/kfs`, 33 755 B) losing its
+title line to reflow and being caught by a case-insensitive GPL branch below. 🟢 **`P288` was fixed
+on the AGPL axis; the LGPL axis was never measured.** 🔴 **No real uppercased GPL-2.0 payload has
+been located, so no rate and no instance** — declared as `Gap 281`, not written as a defect.
+
+### 🟢 `Gap 272` — **CLOSED.** ArguLens has a repository URL, and its licence is payload-read
+
+🔴 **`Gap 272` has been refused since pass 57 for one reason: *"no repository URL from any
+oracle"*.** 🟢 **A *function*-named query returned it:**
+
+| field | value, measured |
+|---|---|
+| Repo | [`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE) — published as **ArguLens** |
+| Existence | 🟢 `ls-remote` → `41ae3bd` (`refs/heads/main`) |
+| Licence | 🟢 **Apache-2.0**, `LICENSE`, **1 865 B** @ `41ae3bd`, read from payload |
+| Paper | arXiv [`2608.17356`](https://arxiv.org/abs/2608.17356), Fudan University |
+| Architecture | discourse-move classifier + **LightGBM** scorer over 31 linguistic features + LLM feedback generator |
+| 🔴 Corpus | **PERSUADE 2.0 is CC BY-NC-SA 4.0** — *ShareAlike reaches derivatives* |
+
+🔵 **The row Globant can use, with the split stated:** the **code is permissive, the training corpus
+is not**. An engagement may ship the architecture and must bring its own scored corpus. 🟡 **The
+reported mean QWK 0.813 is component-level under an oracle-feature protocol, and the feedback
+generator's human-rater study is the authors' own future work** — not an end-to-end claim.
+
+### 🟢 Rows admitted this pass — **12**, every grant read from payload and SHA-pinned (`P732`)
+
+🟢 **Tutoring / knowledge-tracing — the cell `Gap 279` called this shelf's oldest and least refreshed:**
+
+| Agent | Repo | Licence (payload · bytes · ref) | What it contributes |
+|---|---|---|---|
+| OpenTutor | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** · 1 068 B · `5fea390` | 🟢 **`Gap 279`'s `OpenTutor` slug, resolved.** Block-based, **local-first** adaptive workspace; FastAPI + Python 3.11 / Next.js; implements **FSRS 4.5, BKT, LOOM, LECTOR** and Cognitive Load Theory. The only row on this shelf that pairs a modern scheduler (FSRS) with BKT mastery. 🟡 Reported 62★ / last push 2026-08-06 — third-party tracker, `api.github.com` still `403` (`P745`). |
+| mentar | [`avps82/mentar`](https://github.com/avps82/mentar) | 🔴 **AGPL-3.0** · 34 523 B · `9d9d43c` | 🟢 **`Gap 279`'s "reported AGPL" is now measured.** BKT intelligent tutoring. 🔴 **AGPL network clause — not a Globant build-on candidate**; carried so the next pass does not re-measure it. 🟡 34 523 B is neither canonical GPL-3.0 (35 147 B) nor AGPL-3.0 (35 136 B); **bytes identify a text, never a family** (`P704`, `P754`) — the title line is the verdict. |
+| AI_Tutor | [`098765d/AI_Tutor`](https://github.com/098765d/AI_Tutor) | 🟢 **MIT** · 1 059 B · `e7503b7` | **KG-RAG** tutor: chunks course PDFs, extracts `[Entity, Relation, Entity]` triples, answers by graph traversal rather than flat retrieval. The knowledge-graph retrieval layer this shelf lacked. |
+| TKT | [`tswsxk/TKT`](https://github.com/tswsxk/TKT) | 🟢 **MIT** · 1 063 B · `6f33e4a` | Knowledge-tracing model implementations (toolkit form). |
+| XKT | [`tswsxk/XKT`](https://github.com/tswsxk/XKT) | 🟢 **MIT** · 1 063 B · `351e344` | Companion KT library, same author — MXNet/Gluon lineage. |
+| deepKT | [`jdxyw/deepKT`](https://github.com/jdxyw/deepKT) | 🟢 **MIT** · 1 062 B · `985c67f` | PyTorch deep knowledge-tracing implementations. |
+
+🟢 **Assessment and interoperability — from the `Gap 280` query pairs:**
+
+| Agent / library | Repo | Licence (payload · bytes · ref) | What it contributes |
+|---|---|---|---|
+| ArguLens | [`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE) | 🟢 **Apache-2.0** · 1 865 B · `41ae3bd` | See `Gap 272` above. **Permissive AES architecture**; corpus is CC BY-NC-SA. |
+| AI Essay Evaluator | [`markm-io/ai-essay-evaluator`](https://github.com/markm-io/ai-essay-evaluator) | 🟢 **MIT** · 1 069 B · `8ee5c7c` | Batch grading, multi-pass consistency checks, fine-tuning on your own exemplars. 🔴 **Wraps the OpenAI API — permissive code, not a self-hostable scorer.** The distinction matters for a data-residency engagement. |
+| EASE | [`edx/ease`](https://github.com/edx/ease) | 🔴 **AGPL-3.0** · 35 136 B · `056da0a` | The original edX scoring library. 🔴 **Archived read-only since Feb 2024, and AGPL** — recorded as the category's history, not as a candidate. 🟢 Its 35 136 B is the canonical AGPL-3.0 text, and serves as this pass's positive control that the title-line method discriminates. |
+
+🔴 **Ungranted — a verdict, not an absence (`P476`, `P628`).** All three measured through **four**
+layers: 12 licence filenames, no `package.json` / `pyproject.toml` / `setup.py` / `setup.cfg` /
+`Cargo.toml` / `composer.json`, README present **with no licence section**, and **0** grant lines in
+the first 15 lines of a located source file:
+
+| Repo | Ref | Layers checked | Verdict |
+|---|---|---|---|
+| [`btgaskin/studykit`](https://github.com/btgaskin/studykit) | `18da52f` | file ✗ · manifest ✗ · README ✗ · headers ✗ | 🔴 **ALL RIGHTS RESERVED** |
+| [`seewoo5/KT`](https://github.com/seewoo5/KT) | `094611c` | file ✗ · manifest ✗ · README ✗ · `main.py` headers ✗ | 🔴 **ALL RIGHTS RESERVED** |
+| [`0awei0/kt`](https://github.com/0awei0/kt) | `403b107` | file ✗ · manifest ✗ · README ✗ · `train.py` headers ✗ | 🔴 **ALL RIGHTS RESERVED** |
+
+🟢 **And they share `P760`'s property, now 6 of 6 across two passes: the repos the registry layer
+cannot rescue are the ones that ship no manifest** — typical of young research code. 🔴 **Still no
+rate**: `P744`'s denial of mass third-party slug enumeration stands, so this is named samples, not a
+sample frame (`Gap 277`).
+
+### 🔴 The mandated query, for the record — **eleventh** saturated week
+
+🟢 `top open source AI agents education 2026 github MIT` → OpenHands, CrewAI, LangGraph, Hermes,
+OpenClaw, Microsoft AI-Agents-for-Beginners, HF Agents Course, 500-AI-Agents-Projects.
+🔴 **Byte-for-byte the list pass 59 recorded. General-purpose frameworks and courseware; zero
+education-native agents, eleven weeks running.** 🟢 **The saturation is now a finding about the
+query, not about the shelf** — every education-native row this pass admitted came from a
+**protocol-** or **function-**named query (`Gap 280`), none from the industry-named one.
+
 ## 🔴 Fifty-ninth pass, 2026-10-08 — this pass **repeated pass 58's exact error inside its own instrument**: a hand-rolled §13 test that `p419` has refuted and regression-tested since pass 123, and it read **Moodle as AGPL**
 
 ⏱️ **Thirteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

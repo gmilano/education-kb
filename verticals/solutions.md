@@ -4,6 +4,37 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixtieth pass, 2026-10-08 — the platform shelf gains its **integration edge**: an LMS is only customisable where it exposes rostering and learning records
+
+⏱️ **Fourteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **The shelf already holds the platforms** — Moodle (GPL-3.0, read from payload, *not* AGPL:
+`P753`), Open edX (AGPL-3.0), Canvas (AGPL-3.0), Sakai, OpenOLAT (Apache-2.0), Kolibri, OpenEduCat
+(LGPL-3.0, `P742`), BigBlueButton, H5P, Richie, Tutor. 🔴 **What it did not hold is the layer that
+makes "customise an LMS with AI on top" an architecture rather than an intention.**
+
+### 🟢 The two standard edges, and the permissive implementation for each
+
+| Edge | Standard | Permissive implementation measured this pass | Why it is the edge that matters |
+|---|---|---|---|
+| **Who is in the class** | **OneRoster** (1EdTech) | 🟢 [`longsightgroup/oneroster`](https://github.com/longsightgroup/oneroster) **MIT** · `8c14777` (TS, REST + CSV); 🟢 [`TCI/OneRoster`](https://github.com/TCI/OneRoster) **MIT** · `5f8a15a` (Ruby) | An AI tutor with no roster cannot be assigned, scoped to a section, or audited per-teacher. |
+| **What the learner did** | **xAPI** | 🟢 [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) **Apache-2.0** · `cb794e4`; 🟢 [`openfun/ralph`](https://github.com/openfun/ralph) **MIT** · `53cc58c` | Without a learning-record store, mastery estimates live in the agent's memory and die with the session — and there is **nothing to show a regulator**. |
+| **Who may be told what** | **LTI 1.3** | 🟢 `Cvmcosta/ltijs` **Apache-2.0** (npm v7.0.7, 2026-10-06) — `Gap 276`, pass 59 | The launch/authentication boundary; already on the shelf. |
+
+🔵 **Read together, these three close the loop a customisation engagement actually needs:** LTI
+launches the tool, OneRoster says who the learner is, the LRS records what happened. 🟢 **All three
+now have a payload-read permissive implementation** — which was not true of this shelf before this
+pass.
+
+### 🔴 The platform-layer caveat this pass re-confirms
+
+🔴 **The LMS cores are copyleft and that does not change**: Moodle **GPL-3.0**, Open edX / Canvas
+**AGPL-3.0**. 🟢 **The permissive work is at the edges** — the tool that launches over LTI, the
+connector that reads the roster, the store that takes the records. 🟢 **OpenOLAT (Apache-2.0) remains
+the only permissive full LMS core on this shelf**, and `OpenEduCat` (**LGPL-3.0**) the only
+permissive-ish combined LMS + SIS. 🔵 **Architectural consequence: build beside the LMS, not inside
+it** — which is also what keeps the client's AGPL obligations off Globant's deliverable.
+
 ## 🟢 Fifty-ninth pass, 2026-10-08 — the vertical shelf gains an **integration tier**, and its licence split is the opposite of the substrate tier: the **connectors are MIT, the substrates are copyleft**
 
 ⏱️ **Thirteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

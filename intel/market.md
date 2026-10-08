@@ -4,6 +4,127 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixtieth pass, 2026-10-08 — the four-region **regulatory** shelf is re-queried and comes back **correct on every date**, so this pass's market finding is about the **oracle**, not the data
+
+⏱️ **Fourteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+🟢 **Per the convention, pass 59's `## Opportunities by region` heading is retitled *superseded*; the live block is below.**
+
+### 🟢 `P777` — four regional queries returned **nothing this KB does not already hold**, and that is a positive result about the shelf
+
+🟢 **The four mandated regional queries were run** (`AI education {region} 2026 adoption regulation
+players`, for North America, EMEA, APAC, LATAM). 🟢 **Every regulatory instrument they returned was
+already shelved, at equal or finer resolution:**
+
+| Instrument the query returned | Already held? | KB's value, and it is confirmed |
+|---|---|---|
+| EU AI Act Annex III high-risk, education | 🟢 yes | **`2027-12-02`** — Digital Omnibus, Parliament 2026-06-16, Council 2026-06-29, **Reg. (EU) 2026/1744** in force **2026-07-27** |
+| Korea AI Basic / Framework Act | 🟢 yes | in force **`2026-01-22`**, 2026 a pilot year, **one-year penalty grace** |
+| Vietnam AI law + high-risk list | 🟢 yes | live **`2026-03-01`**, extraterritorial, **Decision 33/2026/QD-TTg**, education among six high-risk sectors |
+| Taiwan AI Basic Act | 🟢 yes | **Dec 2025** |
+| Ohio district AI-policy mandate | 🟢 yes | **ORC 3301.24**, due **`2026-07-01`** |
+| California **AB 1159** | 🟢 yes | bars student data for model training, **private right of action** |
+| **H.R. 8747** K-12 AI Literacy Act | 🟢 yes | advanced in committee **July 2026** |
+| UNESCO IESALC higher-ed study | 🟢 yes | 200 institutions / 19 countries, **87 %** use AI, **~26 %** have a framework |
+| UNESCO LAC **Observatory** | 🟢 yes | launched **April 2026**, ECLAC Santiago |
+| Uruguay **Ceibal** | 🟢 yes | **75 %** of public-school teachers |
+
+🔴 **One query served the *superseded* `2026-08-02` Annex III date again** — the EMEA channel defect
+`P718` / `Gap 270` predicts, now observed in a third consecutive pass. 🟢 **The planning rule is
+unchanged: `2027-12-02` is a *backstop*, not a start, and Article 50 marking duties are live now.**
+
+🔴 **And the oracle blockade is confirmed for a fourth pass, `n = 2` each:** `digital-strategy.ec.europa.eu`,
+`artificialintelligenceact.eu`, `eur-lex.europa.eu`, `iesalc.unesco.org`, `unesco.org`,
+`multistate.us` — **6 of 6 at `000`**. 🟢 **`P731` restated: the repository shelf has four working
+oracles and the regulatory shelf has none, so every regulatory row here is 🟡 *reported* by
+construction** — and the right response is to re-query for *contradiction*, which is what this pass
+did and found none.
+
+### 🟡 Market sizing — two new regional figures, both low-confidence, neither displacing the shelf
+
+🟡 **EMEA:** one forecast puts Europe at **USD 2.11 bn (2026) → 19.97 bn (2034), CAGR 32.47 %**.
+🟡 **APAC:** another puts the region at **USD 2 282.9 m (2025)**. 🔴 **Both are single-vendor
+forecasts and they conflict with the global series this KB already carries** (**USD 10.6 bn 2026 →
+42.48 bn 2030**) and with the North America share (**36 %**, **USD 3.68 bn 2026**). 🟢 **Recorded as
+range evidence only**: the shelf's rule stands — *use the global series for scale and the regional
+share for mix; never add two vendors' regional numbers together.*
+
+## Opportunities by region
+
+### North America
+
+🟢 **The interop edge is now permissively covered, and this is where it pays first.** OneRoster is a
+**1EdTech / US-origin** standard and US K-12 rostering is where it is actually enforced in
+procurement. 🟢 **Two MIT clients measured this pass** —
+[`longsightgroup/oneroster`](https://github.com/longsightgroup/oneroster) (`8c14777`, TS, REST + CSV)
+and [`TCI/OneRoster`](https://github.com/TCI/OneRoster) (`5f8a15a`, Ruby) — plus **two US-origin
+permissive LRS rows**, [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) (Apache-2.0)
+and [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) (Apache-2.0, from the body that wrote
+xAPI).
+
+🔵 **The offer, placed:** the binding constraints here are **policy**, not capability — Ohio's
+district-policy mandate (`2026-07-01`, passed), Oklahoma's educator-supervision rule landing before
+2027-28, **AB 1159**'s no-training-on-student-data default, NYC's Pre-K–8 generative-AI moratorium.
+🟢 **Every one of them is satisfied by evidence, and an LRS is the evidence layer**: an Apache-2.0
+SQL LRS gives a district an auditable record of what the AI did, per learner, on infrastructure it
+already runs. 🔴 **`P764` still governs the function axis** — a grading connector can be MIT and
+**prohibited**; the licence gate never answers the policy question.
+
+### EMEA
+
+🟢 **The permissive, EU-origin row landed this pass:**
+[`openfun/ralph`](https://github.com/openfun/ralph) — **MIT**, `53cc58c`, from **France Université
+Numérique**: an LRS *plus* a learning-analytics toolkit. 🔵 **Why its provenance is part of the
+offer:** a public-sector EU buyer weighing data residency and procurement defensibility gets an
+EU-funded, MIT-licensed record store rather than a US-hosted SaaS.
+
+🟢 **Timing, restated:** **Annex III stand-alone high-risk reaches `2027-12-02` as a backstop**,
+Article 50 marking is **live**, Article 4 AI-literacy duties are **in force** (the 2026 Omnibus
+dropped the "sufficient level" wording but kept the obligation), and **emotion recognition in
+education is prohibited outright** since 2025-02-02. 🟢 **The sellable artefact is the Annex III
+technical file** — a conformity dossier a vendor can hand its client — and the LRS is where its
+human-oversight and logging evidence comes from. 🔴 **Only ~10 % of 450+ institutions have formal AI
+guidelines**, so the policy-to-practice gap is the same product as in North America, against a
+harder instrument.
+
+### APAC
+
+🟢 **This region supplied the most *technical* substance this pass, and it is all research-grade:**
+[`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE) (**Apache-2.0**, Fudan — essay scoring,
+`Gap 272` closed), [`haolpku/K12-KGraph`](https://github.com/haolpku/K12-KGraph) (**MIT code**,
+Peking University — curriculum-aligned KG benchmark), `tswsxk/TKT` and `tswsxk/XKT` (**MIT**,
+knowledge tracing), and the GPL-2.0 Australian LRS
+[`leogaggl/lxHive`](https://github.com/leogaggl/lxHive).
+
+🔵 **The offer, placed:** APAC has the hardest **binding** instruments and the most usable code.
+**Vietnam** (live `2026-03-01`, extraterritorial, education high-risk where the output is the sole
+basis without meaningful human review) is the clearest written specification of an
+assessment-governance build anywhere; **Korea**'s penalty grace makes 2026 the cheap year to become
+compliant. 🟢 **An Apache-2.0 scorer plus a curriculum-aligned benchmark plus a human-review gate is
+exactly Vietnam's trigger condition, satisfied in code.** 🔴 **Both regional corpora are
+non-commercial** (PERSUADE 2.0 and K12-KGraph's data are CC BY-NC-SA 4.0) — **the architecture
+travels, the data does not**.
+
+### LATAM
+
+🔴 **Stated explicitly, because silence would look like coverage: this pass found no new LATAM
+repository, no new LATAM instrument, and no new LATAM figure.** 🟢 **The four-region query ran for
+LATAM and returned only material already shelved** — UNESCO IESALC (87 % adoption / ~26 % with a
+framework), the LAC Observatory (April 2026), Ceibal's 75 %, TALIS 2024 teacher rates above the OECD
+average in Brazil, Chile, Colombia and Costa Rica, and the still-pending bills (Brazil **PL
+2.338/2023** in the Chamber, Chile's bill in its first constitutional stage, Colombia **CONPES
+4144** running to 2030).
+
+🔵 **So the LATAM opportunity is unchanged and it is now sharper by contrast with the other three
+regions:** LATAM is the only region of the four with **high measured adoption and no binding
+education-AI instrument**. 🟢 **That makes the deliverable governance-first, not compliance-first** —
+an institution-level AI framework for the **~74 %** of universities that have none, with the
+**61-point** adoption-to-governance gap as the stated baseline. 🔴 **And the asset gap is real: of
+the 19 repositories measured this pass, zero are LATAM-origin.** 🟡 **The nearest shelved
+Spanish-language asset remains `0xnavarro/IA-PARA-TODOS` (Apache-2.0), which is enablement material,
+not a runtime** — so a LATAM engagement composes North American and APAC code against a
+Spanish/Portuguese-language gap that nobody on this shelf has filled. 🔵 **That absence has now been
+recorded for enough consecutive passes to be a market observation rather than a search failure.**
+
 ## 🔴 Fifty-ninth pass, 2026-10-08 — the four-region assessment constraint has **two modes, not one**: the largest US district does not *gate* AI grading, it **prohibits** it — and no human-in-the-loop engineering satisfies a prohibition
 
 ⏱️ **Thirteenth pass of this date. Append-only: this section is new. One declared edit below:
@@ -74,7 +195,7 @@ available and it travels.**
 🟢 **no figure in this table was verifiable first-hand from this environment** (`P731`).
 🔵 **Use them for direction, never for a business case.**
 
-## Opportunities by region
+## Opportunities by region — superseded (the live block is at the top of this file)
 
 ### North America
 

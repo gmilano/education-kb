@@ -4,6 +4,110 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Pass 60, 2026-10-08 — **`Gap 272` CLOSED**, **`Gap 280` ANSWERED**, `Gap 279` half-closed and re-scoped, `Gap 267` **REOPENED**, three gaps declared
+
+> 🔵 **This pass's opening hypothesis was that `Gap 279`'s five named repos were a bounded list one
+> measurement run would close.
+> 🔴 PARTLY REFUTED:** 🟢 **2 of 5 closed; the other 3 are unclosable as written, because the gap
+> recorded names and not slugs (`P774`).**
+
+### 🟢 `Gap 272` — **CLOSED** (declared pass 57, open three passes)
+
+🟢 **ArguLens has a repository URL and a payload-read grant:**
+[`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE), **Apache-2.0**, `LICENSE` **1 865 B** @
+`41ae3bd`, existence by `ls-remote`. arXiv id **`2608.17356`** resolves consistently (Fudan
+University). 🔴 **The corpus caveat pass 57 found is confirmed and stays: PERSUADE 2.0 is
+CC BY-NC-SA 4.0**, ShareAlike reaching derivatives. 🔵 **Found by a *function*-named query, which is
+the counter-evidence that corrected `Gap 280`'s rule.**
+
+### 🟢 `Gap 280` — **ANSWERED**, and the rule it tested is **wrong as written**
+
+🟢 **The prescribed test ran: two protocol-named, two function-named queries, defects counted.**
+🟢 **Protocol-named: 6 rows verified, 1 licence defect.** 🟡 **Function-named: 4 rows verified, 3
+unverifiable + 1 archived.** 🟢 **Direction supports `P769` — the protocol channel is cleaner.**
+🔴 **But the function channel closed `Gap 272`, which the protocol channel had left refused for three
+passes.** 🆕 **`P776` replaces the rule: protocol-named for licence-clean *inventory*, function-named
+for *discovery* with a heavier verification budget.** 🔴 **Still not a rate** — four queries is not a
+sample frame, and the two defect classes (a wrong licence vs. a nonexistent repo) are not summable.
+
+### 🟡 `Gap 279` — **half closed, and RE-SCOPED** (declared pass 59)
+
+🟢 **Closed, both payload-read:** `mentar` → [`avps82/mentar`](https://github.com/avps82/mentar)
+**AGPL-3.0**, 34 523 B @ `9d9d43c` (upgrades pass 59's *"reported AGPL"* to measured); `OpenTutor` →
+slug resolved to [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor), **MIT**, 1 068 B @
+`5fea390`.
+
+🔴 **Not closed, and not closable by measurement: `UniKT`, `AI_EDU`, `LookatStudy`.** No oracle
+returns a slug. `unikt.readthedocs.io` is **`EGRESS_BLOCKED`**; the other two return only
+near-neighbours (`098765d/AI_Tutor`, `btgaskin/studykit`) which are **different repositories** and
+were measured on their own merits rather than conflated with the names.
+
+🆕 **`P774`, generalising `Gap 266`'s lesson:** 🔴 **a gap that records a repository by *name* cannot
+be closed by a later pass — a name is not an address.** 🟢 **Convention from this pass on: record
+`owner/repo` at first sighting, or do not record the repository.** 🟡 **`Gap 279` stays open for the
+3, re-scoped from "measure" to "re-discover"** — the measurement is cheap and the discovery is the
+whole cost.
+
+### 🔴 `Gap 267` — **REOPENED**, and both prior passes measured correctly
+
+🔴 **`bash compose/code/p759-four-layer-grant-probe/probe.sh --self-test` was refused this session**
+by the permission classifier, reason **`[Code from External]`**, run from inside the clone — the
+denial pass 54 recorded and pass 59 declared *"REFUTED for a second consecutive pass"*.
+🟢 **Neither pass was wrong: the denial is a property of the session, not of the repository.**
+🆕 **`P771`: "can this KB's instruments run?" has no durable answer and must be re-measured per
+environment, like any other oracle (`P713`).** 🔵 **The consequence is not cosmetic — a pass that
+cannot execute the shelf re-derives verdicts by hand, which is exactly how `P773` happened.**
+
+### 🆕 `Gap 281` — the shared classifier's GPL-2.0 protection is **case-dependent** and unmeasured on that axis
+
+🟢 **Measured first-hand this pass:** `lib/license_family.sh` classifies the real `lxHive` GPL-2.0
+payload **correctly**, because its LGPL gates are an **uppercase** `case` glob and the anchor
+`licensed under the GNU Lesser General Public License`, and the payload returns **0** for both while
+containing **1** mixed-case `GNU Lesser General Public License` in its preamble (line 18).
+🔴 **But the protection is therefore case-dependent, on the exact axis `P288` already found
+fragile** — a **reflowed or uppercased** GPL-2.0 payload would match the glob and be emitted as
+**LGPL**. 🔴 **Read from source, not executed** (`P771`), and **no real uppercased GPL-2.0 payload
+has been located**, so there is no instance and no rate. 🔵 **Bounded remedy: add an uppercased
+GPL-2.0 fixture to the suite and assert `GPL-2.0`.** 🟢 **Cost: one fixture.**
+
+### 🆕 `Gap 282` — licence **scope** is a fifth axis, and no probe on this shelf has it
+
+🔴 **`haolpku/K12-KGraph` @ `865bc35` ships two licence files with different scopes:** `LICENSE` =
+**CC BY-NC-SA 4.0** (2 244 B, the dataset), `LICENSE-CODE` = **MIT** (1 075 B, the code), with the
+split stated in the README. 🔴 **A probe that breaks on the first of 15 filenames returns NC and
+wrongly rejects usable MIT code; one that happened to order `LICENSE-CODE` first returns MIT and
+wrongly admits an NC dataset.** 🟢 **`p759`'s four layers are about *where a grant hides*; this is
+about *what a grant covers*.** 🔵 **Bounded remedy: enumerate **all** matches of the 15 filenames
+instead of breaking on the first, and emit a `{scope → family}` map rather than a scalar.**
+🟢 **Cost: one instrument; the discriminating fixture already exists in this row.**
+
+### 🆕 `Gap 283` — no recipe has a **data-licence** gate, and two of this pass's rows need one
+
+🔴 **`P779`: in education AI the *data* licence is usually the binding one**, because the asset the
+buyer wants is the corpus. 🔴 **Two instances measured in one pass** — ArguLens (Apache-2.0 code /
+CC BY-NC-SA corpus) and K12-KGraph (MIT code / CC BY-NC-SA data). 🟢 **`R60a`'s pre-flight now has a
+*Data* row**, but 🔴 **it is prose in `compose/patterns.md`, like `Gap 278`'s function axis** — and a
+code-licence-only shelf will keep admitting architectures whose datasets cannot ship.
+🔵 **Bounded remedy: extend the pre-flight table to a third column and read dataset licences as
+first-class payloads.**
+
+### 🟡 Gaps **not advanced** this pass, stated so no pass reads this one as progress
+
+🔴 **`Gap 270`** — **fourth consecutive confirmation.** 6 of 6 primary policy hosts at **`000` × 2**
+(EC digital-strategy, artificialintelligenceact.eu, EUR-Lex, UNESCO IESALC, UNESCO, MultiState).
+🟢 **`P731` holds: four working repo oracles, zero regulatory oracles.** 🟢 **Mitigated this pass by
+re-querying for *contradiction* rather than confirmation — and none was found (`P777`).**
+🔴 **`Gap 277`** — **not advanced.** The registry layer is the only *dated* oracle and `pypi` / `npm`
+both answered `200` this pass, but the budget went to licence payloads. 🟢 **Still the cheapest open
+gap on the board.**
+🔴 **`Gap 278`** — **not advanced as code.** The two-axis pre-flight gained a *Data* row and a
+four-region jurisdiction shape, but remains **prose**, not an instrument.
+🔴 **`Gap 257` / `Gap 258`** — unmeasured; the `110/112` figure is now **seven** passes old. 🔴 **And
+this pass could not have measured them: `P771`'s denial covers the suites too.**
+🔴 **`Gap 253`** — none of the 21 `P541` empty-input instruments fixed. 🟢 **This pass committed no
+new instrument, so it added no new instance.**
+🔴 **`Gap 264`** — the two false `OATutor-Content` sentences still stand, deliberately auditable.
+
 ## 🟢 Pass 59, 2026-10-08 — **`Gap 276` CLOSED**, **`Gap 266` RESOLVED as mis-posed**, `Gap 273` split into three measured classes, `Gap 270` refuted again, four gaps declared
 
 > 🔵 **This pass's opening hypothesis was that the §13/Affero confusion was an undiscovered

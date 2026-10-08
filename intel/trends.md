@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixtieth pass, 2026-10-08 — the industry trend confirmed from the market side is **governance over tool sprawl**, and this pass's instrument trend is that **a method summary is not an instrument**
+
+⏱️ **Fourteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 Trend 1 — "from experimentation to governance" is now the **consensus** reading, and it is what this shelf has been building toward
+
+🟡 **Reported, and consistent across four independent 2026 sources:** the shift is **not** more AI
+tools but **governed, measurable** use — ethics and transparency first, agentic use cases where the
+value is proven, and course design plus teacher productivity outperforming broad personalisation
+promises. 🟡 **1EdTech frames it as governance replacing experimentation**; 🟡 **the strongest
+reported adoption-vs-policy gap is 86 % of education organisations using generative AI while most
+lack a policy.**
+
+🟢 **Why it matters to this shelf and not just to a slide:** a governance deliverable needs an
+**evidence layer**, and until this pass the shelf had none. 🟢 **`P778`: the xAPI LRS is the trend's
+missing primitive** — "measurable use" is unimplementable without a store of what the learner and
+the model each did. 🟢 **Now permissively available**: `yetanalytics/lrsql` (Apache-2.0),
+`openfun/ralph` (MIT).
+
+### 🟢 Trend 2 — **teachers as the entry point**, and the shelf's rows line up with it
+
+🟡 **Reported:** deployments starting with educators scale better than those starting with students,
+and the defining 2026 movement is away from generic AI tools toward **purpose-built** educational
+platforms. 🟢 **Cross-check from the repository side, measured not reported:** the industry-named
+query has returned **general-purpose frameworks and courseware for eleven consecutive weeks**, while
+every education-native row admitted this pass came from a **protocol-** or **function-**named query.
+🔵 **The two observations are the same fact seen from two sides: the generic layer is saturated and
+the purpose-built layer is where the remaining work is.**
+
+### 🔴 Trend 3 — the licence/corpus split is now a **pattern**, not a coincidence
+
+🔴 **Two instances in one pass, both payload-read:** ArguLens — **Apache-2.0 code, CC BY-NC-SA 4.0
+corpus** (PERSUADE 2.0, ShareAlike reaching derivatives); K12-KGraph — **MIT code, CC BY-NC-SA 4.0
+data**. 🟢 **`P779`: in education AI the *data* licence is usually the binding one**, because the
+asset a ministry or publisher wants is the corpus, not the trainer. 🔵 **Operational consequence:
+every recipe needs a data-licence gate beside its code-licence gate**, and a shelf that only checks
+code licences will keep admitting architectures whose datasets cannot ship.
+
+### 🔴 Trend 4 — the instrument trend: **a method summary is not an instrument** (`P773`)
+
+🔴 **Three consecutive passes have hand-rolled a licence classifier and three have mislabelled a
+licence.** Pass 58 and 59 read **Moodle as AGPL**; this pass read **`lxHive` as LGPL** when it is
+**GPL-2.0**. 🟢 **Each time, a shelved instrument already handled the case correctly.**
+
+🟢 **What is new, and it is the generalisable part:** pass 59's remedy was *"reuse the instrument"*,
+and this pass **could not** — the clone's scripts are refused in this session with
+**`[Code from External]`** (`P771`). 🔴 **So "reuse the instrument" has a precondition nobody had
+written down: that the instrument is executable.** 🟢 **The working fallback, demonstrated: read the
+instrument's source and apply its method literally** — which is how `P775` was found and how the
+`lxHive` misread was caught before the row was written. 🔴 **The failing fallback: remembering what
+the method was.** 🔵 **`P780`: an instrument shelf needs its methods stated precisely enough to be
+executed by hand, because execution is an environment property that can be withdrawn.**
+
+### 🟢 Trend 5 — regional divergence is now **binding instruments in APAC, a backstop in EMEA, policy patchwork in North America, and none in LATAM**
+
+🟢 **Re-confirmed this pass against four fresh regional queries, with no contradiction found:**
+
+| Region | Binding on education AI *now*? | Shape |
+|---|---|---|
+| **APAC** | 🟢 **Yes** — Vietnam `2026-03-01`, Korea `2026-01-22` (penalty grace), Taiwan Dec 2025 | Education named in high-risk lists; Vietnam's trigger is the sharpest written spec |
+| **EMEA** | 🟡 **Partly** — Art. 50 marking and Art. 4 literacy live; emotion recognition in education **prohibited** | Annex III high-risk is a **`2027-12-02` backstop**, pulled forward by harmonised standards |
+| **North America** | 🟡 **State-level only** — Ohio, Oklahoma, California, Illinois, Maryland | 134 bills / 31 states; guidance in 30+; federal bill in committee |
+| **LATAM** | 🔴 **No** | Highest adoption-to-governance gap measured anywhere (**87 %** vs **~26 %**) |
+
+🔵 **The trend, stated for an engagement:** the regions are diverging in **kind**, not in speed — so
+a single global compliance posture is the wrong product. 🟢 **What travels is the evidence layer**
+(roster + learning records + human-review gate); 🔴 **what does not travel is the verdict**, because
+the same MIT grading connector is a compliance artefact in Vietnam and a prohibited function in US
+K-12 public (`P764`).
+
 ## 🔴 Fifty-ninth pass, 2026-10-08 — six trends: the pass-58 error recurred **in this pass's own hand**, the copyleft family is **two-sided**, a prohibition is not a gate, the productive channel is the defective one, the integration layer out-contaminates the platform, and a two-pass gap was **mis-posed, not unresolved**
 
 ⏱️ **Thirteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
