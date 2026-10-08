@@ -4,6 +4,92 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-sixth pass, 2026-10-08 — the standards-layer census gains its **missing tier**: xAPI had a spec and a client on this shelf but **no store**, and the store tier turns out to be the one permissive tier in education infrastructure
+
+⏱️ **Twentieth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🔵 **What pass 65 got wrong by omission.** Its five-protocol census read xAPI through
+**`adlnet/xAPI-Spec`** (the specification) and **`RusticiSoftware/TinCanPython`** (a client that
+*emits* statements). 🔴 **Neither of those stores anything.** A telemetry protocol with a spec and an
+emitter and no store is not a usable foundation — it is half an arrow. 🟢 **This pass read the
+store tier, and it is the richest permissive tier this shelf has.**
+
+### 🟢 🆕 The LRS tier, every grant read from payload
+
+| Store | ref · HEAD | Licence (payload, bytes) | Engine / stack | Verdict |
+|---|---|---|---|---|
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | `main` · **`cb794e4`** | 🟢 **Apache-2.0** (`LICENSE`, **11 357 B**) | Clojure; **SQLite 3.42 embedded** or **Postgres 14** | 🟢 **the production default** |
+| [`pelotech/xapi-lrs`](https://github.com/pelotech/xapi-lrs) | `main` · **`4d18e0c`** | 🟢 **Apache-2.0** (`LICENSE`, **11 357 B**) | TypeScript, **Hono** + Postgres (or **PGlite** embedded) | 🟢 **the forward path** |
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | `master` · **`efa045e`** | 🟢 **Apache-2.0** (`LICENSE`, **11 357 B**) | Python / Django | 🟡 **conformance reference**, not a deployment |
+| [`EscolaLMS/LRS`](https://github.com/EscolaLMS/LRS) | `main` · **`b1ad9a4`** | 🟢 **MIT** (**three layers**: `LICENSE` **1 066 B** + `composer.json` + packagist) | PHP / **Laravel package** | 🟢 **a package, not a server** — see caveat |
+| [`openHPI/openLRS`](https://github.com/openHPI/openLRS) | `main` · **`db284a9`** | 🟢 **MIT** (`LICENSE`, **1 122 B**) | H5P-oriented | 🔴 **archived / read-only** |
+| [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) | `master` · **`5fec948`** | 🔴 **GPL-3.0** (`LICENSE`, **35 141 B**) | Node / Mongo | 🔴 **copyleft + unmaintained since 2021** |
+
+🔵 **The `EscolaLMS/LRS` caveat matters for shelf placement.** Its README is explicit — install is
+`composer require escolalms/lrs`, then a Laravel seeder, and the endpoints it exposes are
+**`/api/cmi5/**`** returning `x-experience-api-version: 1.0.3`. 🟢 **So it is an LRS *inside a
+Laravel application*, not a standalone store**, and it is **cmi5/xAPI 1.0.3**, not 2.0. 🔵 It earns
+its row on the strength of its grant — **three agreeing layers, the cleanest on this shelf** — and
+on being the only permissive option for a team already in PHP. 🔴 **It is not a drop-in for
+`lrsql`.**
+
+### 🟢 🆕 The one row that changes what this shelf can promise: a **migration path inside one licence**
+
+🟢 `pelotech/xapi-lrs`'s README, read as bytes (18 968 B), states that its bundled schema is
+**catalog-parity with `yetanalytics/lrsql` v0.9.5's Postgres shape, CI-enforced**, and that it can
+**take over a live `lrsql` database in place** — no dump, no restore, point it at the same
+`DATABASE_URL` and run migrations.
+
+🔵 **Why this is a foundations-level fact and not a trivium:** the usual cost of adopting an
+open-source store is that leaving it later is a data migration. 🟢 **Here the exit is a no-op**, and
+**both ends of it are Apache-2.0** — so the licence does not change across the migration either.
+
+🟢 **What ports, and what does not, from the README's own list:**
+
+| Carries over | Does **not** carry over |
+|---|---|
+| 🟢 statements, actors, documents | 🔴 **admin accounts** — `lrsql` hashes with a buddy `bcrypt+sha512$...` format `xapi-lrs` cannot verify; existing admin logins **fail 401, not 500** |
+| 🟢 **API credentials** — `api_key`/`secret_key` pairs and scopes read as-is from `lrs_credential` / `credential_to_scope`; statement traffic keeps working with **no key re-issuing** | 🔴 **pre-0.6 `xapi-lrs` databases** — v0.6.0 rewrote the schema to match `lrsql` v0.9.5 byte-for-byte; older ones **cannot migrate forward** and the startup probe **refuses to boot** rather than serve a mismatched schema |
+
+🔵 **Bootstrap a fresh admin via `XAPI_LRS_ADMIN_USER` / `XAPI_LRS_ADMIN_PASSWORD`** on startup.
+🟡 **Deprecated env prefixes still accepted with a startup warning:** `LRS_*` (shipped in 0.6.0) and
+**`LRSQL_*`** (`lrsql`'s own names) both map to `XAPI_LRS_*`, which wins when both are set.
+
+🟢 **`xapi-lrs` also carries what `lrsql` does not:** **xAPI 2.0** alongside 1.0.3, negotiated
+per-request via the **`X-Experience-API-Version`** header and **verified in CI against the official
+ADL conformance suite**; and **OpenTelemetry** export built in (🟡 default sampler is *every*
+request — set `OTEL_TRACES_SAMPLER=parentbased_traceidratio` with `OTEL_TRACES_SAMPLER_ARG=0.1` or
+lower before production ingest).
+🔴 **Its PGlite mode is single-connection and serialises concurrent transactions** — the README says
+local development and low-concurrency only, **not production**. 🔵 Recorded because "zero-dependency
+embedded Postgres" reads like a deployment option and is not one.
+
+### 🟢 The five-protocol census, restated with this pass's additions
+
+| Protocol | Reference implementation | Grant | Verdict |
+|---|---|---|---|
+| **LTI 1.3** | `Cvmcosta/ltijs` — `master` · `0ec24fe` | 🟢 Apache-2.0 (11 361 B) | 🟢 buildable |
+| **xAPI** — spec | `adlnet/xAPI-Spec` — `master` · `ca782a1` | 🟢 Apache-2.0 (11 525 B) | 🟢 buildable |
+| **xAPI** — client | `RusticiSoftware/TinCanPython` — **`3.x`** · `bbc3f9d` | 🟢 Apache-2.0 (11 358 B) | 🟢 buildable ⚠️ `P793` |
+| **xAPI** — **store** 🆕 | `yetanalytics/lrsql` — `main` · `cb794e4` · **and** `pelotech/xapi-lrs` — `main` · `4d18e0c` | 🟢 **Apache-2.0 both** (11 357 B each) | 🟢 **buildable — tier closed this pass** |
+| **Open Badges 3.0 / W3C VC** — *verify* | `TanimowoObaloluwaDavid/credential-lens` — `main` · `d34f262` | 🟢 MIT (1 080 B) | 🟢 buildable |
+| **Open Badges 3.0 / W3C VC** — *issue* | `certo` `6fd0a11` · `Opencred` `d14619e` · `edubadges-server` `9775cc2` | 🔴 **AGPL-3.0 all three** (33 820 / 34 523 / 34 519 B) | 🔴 **populated, not permissive** 🆕 |
+| **Open Badges** — spec | `1EdTech/openbadges-specification` — `develop` · `04c4bc2` | 🔴 no licence file, no licence prose | 🔴 1EdTech Spec Document Licence |
+| **Caliper Analytics** — sensor | `1EdTech/caliper-js` | 🔴 **auth challenge on `ls-remote`, second consecutive pass** | 🔴 **not publicly readable** |
+
+🟢 **Score: xAPI is now readable end to end under Apache-2.0 — spec, emitter, and store.** 🔵 **It
+is the only education protocol on this shelf that is.** LTI 1.3 is Apache but single-implementation;
+Open Badges splits permissive-verify / copyleft-issue; Caliper is unreadable; the Open Badges
+specification itself is not open-licensed.
+
+🔴 **The uncomfortable shape, now with a second data point.** Pass 65 observed that the two
+protocols analysts call central (Open Badges, Caliper) are the two with the weakest grants. 🟢 **This
+pass adds the converse and it is the more actionable half:** the protocol nobody markets — **xAPI,
+plumbing, invisible to a buyer** — is the one that is **completely and permissively implemented**.
+🔵 **Licence freedom in this industry tracks how little commercial trust a layer carries**, not how
+important the layer is. 🔴 **Issuance and analytics certification are where the fences are**, because
+those are the layers someone sells.
+
 ## 🟢 Sixty-fifth pass, 2026-10-08 — the **standards layer** read by grant for the first time: three of five education protocols have an Apache-2.0 implementation, and the two that do not are the two the analysts call central
 
 ⏱️ **Nineteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

@@ -4,6 +4,155 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-sixth pass, 2026-10-08 — the shelf's **first pattern with no copyleft component anywhere** (`P8`), and the AGPL credential fence priced into the **two lawful shapes** that remain (`P9`)
+
+⏱️ **Twentieth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🔵 **Rule applied to both recipes (`P759`/`P800`):** every named component has a **licence file read as
+bytes** and a **HEAD pinned**, and no component enters a recipe on a README claim. 🔴 **A recipe
+naming a prose-only grant is a proposal with an unpriced legal step in it.**
+
+### 🆕 `P8` — Apache-2.0 learning-evidence spine, **with a documented exit**
+
+🟢 **The gap it fills.** Every pattern on this shelf before it contains a copyleft component —
+`P7` keeps **Moodle (GPL-3.0)** at arm's length, and the rest inherit an LMS. 🟢 **`P8` contains no
+copyleft at all**, because the entire xAPI tier read this pass is Apache-2.0. 🔵 **It is therefore the
+first pattern here that can ship *inside* a closed client deliverable** rather than alongside one.
+
+🟢 **It is also what all four regional governance figures are asking for** (86 % / 26 % / 10 % / 1 % —
+see `intel/market.md`): an **auditable record of what the AI did and who reviewed it**.
+
+| Layer | Component | Grant (payload, bytes) | Pin |
+|---|---|---|---|
+| Tool launch from the LMS | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 Apache-2.0, 11 361 B | `master` · `0ec24fe` |
+| Statement emitter | [`RusticiSoftware/TinCanPython`](https://github.com/RusticiSoftware/TinCanPython) | 🟢 Apache-2.0, 11 358 B | **`3.x`** · `bbc3f9d` ⚠️ `P793` |
+| **Store (default)** | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 Apache-2.0, 11 357 B | `main` · **`cb794e4`** 🆕 |
+| **Store (forward path)** | [`pelotech/xapi-lrs`](https://github.com/pelotech/xapi-lrs) | 🟢 Apache-2.0, 11 357 B | `main` · **`4d18e0c`** 🆕 |
+| Conformance reference | [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | 🟢 Apache-2.0, 11 357 B | `master` · **`efa045e`** 🆕 |
+| Spec of record | [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | 🟢 Apache-2.0, 11 525 B | `master` · `ca782a1` |
+| Orchestration | **LangGraph** | 🟢 MIT | per `agents/top.md` |
+| LMS (optional, remote) | **Moodle** | 🔴 GPL-3.0 — **service, never a dependency** | deployment, not linkage |
+
+🟢 **Wiring, concretely:**
+1. **Launch.** `ltijs` receives the **LTI 1.3** launch from the LMS (Moodle, Canvas, Open edX — all
+   remote services, none linked). It yields a verified roster context: who the learner is, which
+   course, what role.
+2. **Emit.** The tutor or assistant does its work; `TinCanPython` writes an **xAPI statement** per
+   meaningful event — including **the human review event**, which is the artefact the regulators in
+   `intel/trends.md` actually require.
+3. **Store.** `lrsql` persists statements. 🟢 **SQLite 3.42 embedded for a pilot, Postgres 14 for
+   production** — same binary, no re-architecture between the two.
+4. **Review.** A **LangGraph** node holds the decision: anything that would be a grade, a discipline
+   action or an IEP input **stops** and requires a human action, which is itself emitted as a
+   statement in step 2. 🔵 **This node is the pattern's regulatory core**, not a feature — see the
+   three-jurisdiction table in `intel/trends.md`.
+5. **Exit, if needed.** Point `pelotech/xapi-lrs` at the **same Postgres database** (`DATABASE_URL`)
+   and run `node dist/migrate.js` (or boot with `AUTO_MIGRATE=true`). 🟢 Its schema is **catalog-parity
+   with `lrsql` v0.9.5, CI-enforced**, so this is a **no-op except for adding an SSE `NOTIFY`
+   trigger** (`trg_xapi_statement_stored`). You gain **xAPI 2.0** (negotiated per request via
+   `X-Experience-API-Version`) and **OpenTelemetry** export.
+
+🔴 **The four things that will bite, all from the components' own documentation:**
+- 🔴 **Admin accounts do not port.** `lrsql` hashes with a buddy `bcrypt+sha512$...` format
+  `xapi-lrs` cannot verify. Existing admin logins **fail 401, not 500**. Bootstrap fresh via
+  `XAPI_LRS_ADMIN_USER` / `XAPI_LRS_ADMIN_PASSWORD`. 🟢 **API credentials DO port** — `api_key` /
+  `secret_key` pairs and scopes are read as-is from `lrs_credential` / `credential_to_scope`, so
+  **statement traffic keeps working with no key re-issuing**.
+- 🔴 **Pre-0.6 `xapi-lrs` databases are a dead end.** v0.6.0 rewrote the schema; older ones cannot
+  migrate forward and the **startup probe refuses to boot**. Drop and re-provision.
+- 🔴 **PGlite is not a deployment target.** Single connection, concurrent transactions serialised;
+  the README says local development and low-concurrency only.
+- 🔴 **Default OTel sampling is every request.** Set
+  `OTEL_TRACES_SAMPLER=parentbased_traceidratio` with `OTEL_TRACES_SAMPLER_ARG=0.1` or lower.
+
+🟡 **One grant caveat, and it is the reason the pin is mandatory:** `pelotech/xapi-lrs`'s Apache-2.0
+rests on **one layer** — a clean `LICENSE` payload and a README `## License` section. 🔴 Its
+`package.json` **omits the `license` key** and the package is **not on npm (404)**. 🟢 **Vendor the
+commit, record the 11 357-byte payload hash in the engagement's licence file, and the grant is
+documented.** 🔵 `lrsql` and `ltijs` need no such care.
+
+🟡 **`ADL_LRS` is in the table as a conformance oracle only** — 🔴 its maintainers' own caution that it
+targets a small number of users as a proof of concept is **channel-reported, not payload-read** (the
+repository serves **no README at any canonical name**; `requirements.txt` 200 confirms it is live).
+🟢 Use it to check statement conformance, **never as the deployment**.
+
+🟢 **Effort: 6–8 weeks** for launch + emit + store + review node against one LMS. **+1–2 weeks** per
+additional LMS (the LTI 1.3 launch generalises; the roster mapping does not).
+🟢 **Why a client buys it:** it is the evidence layer that makes an existing, already-adopted AI
+defensible — the deliverable the governance gap in all four regions is actually shaped for.
+
+### 🆕 `P9` — Open Badges 3.0 credentialing, and the **two lawful shapes** past the AGPL fence
+
+🔵 **The constraint, measured this pass and not negotiable.** The **verify** edge is permissive; the
+**issue** edge is **AGPL-3.0 in every open implementation**:
+
+| Edge | Component | Grant (payload, bytes) | Pin |
+|---|---|---|---|
+| **Verify** | [`TanimowoObaloluwaDavid/credential-lens`](https://github.com/TanimowoObaloluwaDavid/credential-lens) | 🟢 **MIT**, 1 080 B | `main` · `d34f262` |
+| **Issue** | [`schroedinger-Hat/certo`](https://github.com/schroedinger-Hat/certo) | 🔴 **AGPL-3.0**, 33 820 B | `main` · **`6fd0a11`** 🆕 |
+| **Issue** | [`edubadges/edubadges-server`](https://github.com/edubadges/edubadges-server) (SURF) | 🔴 **AGPL-3.0**, 34 519 B | **`develop`** · **`9775cc2`** 🆕 |
+| **Issue** | [`19otherrsh-dot/Opencred`](https://github.com/19otherrsh-dot/Opencred) | 🔴 **AGPL-3.0**, 34 523 B | `main` · **`d14619e`** 🆕 — 🔴 **do not use**, see below |
+| **Issue** | `educredentials/ec-issuer` | 🟡 **prose-only MIT**, no file | 🔴 **unprovable — excluded** |
+| Library | [`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib) | 🔴 **LGPL-3.0**, 7 650 B (`LICENSE.txt`) | `master` · **`e7736b6`** 🆕 |
+
+🔴 **`P7`'s arm's-length move does not rescue an AGPL issuer, and this is the one place on this shelf
+where that rule fails.** 🔵 GPL attaches to **conveyance**; calling a GPL Moodle over its API is
+**use**, so the client's code stays clean. 🔴 **AGPL § 13 attaches to conveying a *modified* version
+over a network — and a hosted issuer is exactly that shape.** 🟢 **So "just run it remotely" is the
+*trigger* here, not the escape.**
+
+🟢 **Shape (a) — issuer as an *unmodified* remote service.**
+Deploy `certo` or `edubadges-server` **as published, at the pinned commit, with zero source
+modification**; call it over HTTP from the client's own system. 🔵 The obligation AGPL § 13 creates is
+a **source offer for the version being conveyed** — and an unmodified upstream version is satisfied
+by **pointing at upstream**. 🟢 **The client's own code never links to it and is never AGPL.**
+🔴 **The discipline this requires is real:** configuration only — themes, keys, issuer profiles,
+environment. **The first patch to its source makes the deployment a modified conveyance** and the
+offer becomes the client's to make.
+
+🟢 **Shape (b) — verify inside the product, issue outside it.**
+Ship **`credential-lens` (MIT, 1 080 B)** *inside* the deliverable: the product **consumes and
+verifies** credentials — checks signatures, resolves `did:web` issuer identity, reads revocation
+status. 🟢 **Issuance stays with the institution's own AGPL deployment or a commercial issuer**, and
+never enters the client's codebase. 🔵 **This is the recommended default**, because it matches where
+the value usually is: most engagements need to *trust* a credential, not *mint* one.
+
+🔴 **What you cannot do, stated plainly because it is the shape clients ask for:** fork `certo`,
+`Opencred` or `edubadges-server`, modify it, and ship it as a component of a closed product or a
+hosted white-label service. 🔴 **Three independent licences forbid it and there is no permissive
+alternative to substitute** — `Gap 294` stays open precisely here.
+
+🔴 **`Opencred` is excluded on a second, independent ground, and it would fail even if AGPL were
+acceptable:** its own README states that **`n8n` is source-available, not OSI open source**. 🟢 An
+AGPL root with a **non-OSI leaf** fails dependency closure outright — run it through
+`compose/code/dependency-licence-closure/` and it is a 🔴 verdict before the licence of the root is
+even reached.
+
+🟡 **`openbadgeslib` (LGPL-3.0) is the one middle option**, for signing and verifying assertions
+embedded in SVG/PNG, including JWT-VC for 3.0. 🔵 LGPL permits **dynamic linking from
+non-copyleft code** if the library stays replaceable. 🔴 **It is a library, not an issuer** — it does
+not give you the issuance service, and 🔴 its grant lives at **`LICENSE.txt`, not `LICENSE`**, which
+is the second repository this pass to hide its licence from a single-path probe.
+
+🟢 **Effort: 3–4 weeks** for shape (b). **6–9 weeks** for shape (a), of which a meaningful share is
+**deployment hygiene and a written no-modification policy**, not code.
+🔴 **This is a licence reading, not legal advice.** 🔵 The hinge is AGPL § 13's
+**modified/unmodified** line, and it is the single point a client's counsel must confirm per
+engagement. 🟢 **Recorded as the pattern's named risk rather than buried in it.**
+
+### 🟢 Pattern inventory after this pass
+
+| Pattern | Copyleft component? | Shippable inside a closed deliverable? |
+|---|---|---|
+| `P7` Moodle read-scoped study assistant | 🔴 Moodle GPL-3.0 (remote service) | 🟡 **yes, around** a service the client deploys |
+| 🆕 **`P8` Apache-2.0 learning-evidence spine** | 🟢 **none** | 🟢 **yes, entirely** |
+| 🆕 **`P9(b)` verify-in / issue-out** | 🟢 none *in the deliverable* | 🟢 **yes** |
+| 🆕 **`P9(a)` unmodified remote issuer** | 🔴 AGPL-3.0 (unmodified, remote) | 🟡 **yes, with a no-modification discipline** |
+
+🟢 **Nothing was retired this pass.** 🔵 Pass 65 retired a pattern whose licence premise (`frappe/lms`
+= MIT) proved false; **every premise under `P7`–`P9` is a payload reading at a pinned ref**, and none
+of them moved.
+
 ## 🟢 Sixty-fifth pass, 2026-10-08 — two new patterns built **only** from components whose grant was read from payload this pass, and one pattern **retired** because its licence premise was false
 
 ⏱️ **Nineteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

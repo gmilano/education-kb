@@ -4,6 +4,114 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-sixth pass, 2026-10-08 — the **telemetry layer** is read for the first time and it is this shelf's **first permissive-dominant layer**; `Gap 294`'s *issue* edge turns out to be **populated but AGPL-only**, which is a different problem from the empty one recorded for fifteen weeks
+
+⏱️ **Twentieth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Instrument map, re-measured before any datum — and one instrument changed hands this pass:**
+`raw.githubusercontent.com` served every licence payload below with a **byte count and an opening
+line**. `git ls-remote --symref` **resolved the default ref and HEAD for 12 of 13** repositories
+probed. `repo.packagist.org` **200**. 🔴 **`P798` (the egress ledger) was NOT readable this pass** —
+not because the gateway refused, but because the **local auto-mode classifier declined the probe**.
+🔵 **Recorded as a distinct instrument state**, because it has a different cause and a different
+remedy than `EGRESS_DENIED`: the ledger is a *local-policy* gap this pass, not an allowlist gap.
+🔴 **`api.github.com` was NOT re-measured this pass** — so **no star counts** appear below, and
+unlike passes 64–65 that is a **non-measurement, not a 403**. Nothing below is ranked by popularity.
+
+### 🟢 What actually happened: the empty streak ended last pass; this pass the shelf gained a **layer**
+
+🔵 Pass 65 ended a fifteen-week drought by changing the query shape (`P795` — name the platform or
+the protocol, not the industry). 🟢 **This pass applied `P795` to a *protocol* rather than a
+platform** — `xAPI`, `Open Badges 3.0` — and the result is not nine side-cars but **a whole
+functional layer this KB had never read**: the **Learning Record Store**.
+
+🔴 **The industry-named control query was empty for the seventeenth consecutive week** (CrewAI,
+LangGraph, OpenHands, LangChain, OpenCode — general-purpose frameworks, no education component).
+🔵 The channel said so in its own words again: *"I didn't find a ranking of open source AI agents
+specifically for education with MIT licenses."* 🟢 **`P795` is now confirmed on a third consecutive
+pass, and on a second target class (protocol, not just platform).**
+
+### 🟢 🆕 The LRS layer — six implementations, every grant read from payload
+
+| Component | ref · HEAD | Licence (payload, bytes) | Grant layers | Verdict |
+|---|---|---|---|---|
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) (SQL LRS) | `main` · **`cb794e4`** | 🟢 **Apache-2.0** (`LICENSE`, **11 357 B**) | file + README prose agree | 🟢 **buildable** 🆕 |
+| [`pelotech/xapi-lrs`](https://github.com/pelotech/xapi-lrs) | `main` · **`4d18e0c`** | 🟢 **Apache-2.0** (`LICENSE`, **11 357 B**) | file + README prose; 🟡 `package.json` **has no `license` key**; 🔴 **npm 404** | 🟢 **buildable**, one-layer grant 🆕 |
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | `master` · **`efa045e`** | 🟢 **Apache-2.0** (`LICENSE`, **11 357 B**) | 🟡 file only — **no README at any canonical name** (`README.md`/`.rst`/bare all 404; `requirements.txt` 200, so the repo is live) | 🟢 **buildable**, reference only 🆕 |
+| [`EscolaLMS/LRS`](https://github.com/EscolaLMS/LRS) | `main` · **`b1ad9a4`** | 🟢 **MIT** (`LICENSE`, **1 066 B**) | 🟢 **three layers agree** — file + `composer.json` `"license": "MIT"` + packagist `["MIT"]`, 13 versions, latest **0.0.13** | 🟢 **strongest grant on this shelf** 🆕 |
+| [`openHPI/openLRS`](https://github.com/openHPI/openLRS) | `main` · **`db284a9`** | 🟢 **MIT** (`LICENSE`, **1 122 B**) | file | 🟡 **buildable but 🔴 archived / read-only** 🆕 |
+| [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) | `master` · **`5fec948`** | 🔴 **GPL-3.0** (`LICENSE`, **35 141 B**) | file | 🔴 **copyleft**, 🔴 FOSS edition **unmaintained since 2021** 🆕 |
+
+🟢 **Four of six are permissive and two of those are maintained.** 🔵 **This is the first layer in
+this KB's sixty-six-pass history where permissive licensing DOMINATES.** Every layer read before it
+went the other way — verticals are GPL/AGPL almost without exception (Moodle, Open edX, Canvas,
+Chamilo, ILIAS, RosarioSIS, Gibbon, and `frappe/lms` once the channel's "MIT" claim was refuted),
+and the credential issuers below are AGPL to a repo.
+
+🔵 **Why `pelotech/xapi-lrs` carries a caveat despite a clean Apache payload:** its grant rests on
+**one layer**. `package.json` names the package and version **0.9.6** but **omits `license`**, and
+the package is **not on npm (404)**. 🟢 The `LICENSE` file is unambiguous and the README's own
+`## License` section reads *"Apache 2.0"* — 🔴 **but a single-layer grant on an unpublished package
+means pinning the commit is not optional**, it is the grant.
+
+### 🔴 `Gap 294` — the *issue* edge is **not empty**. It is **AGPL-only**, which is worse for a client deliverable
+
+🔵 Passes 64–65 recorded the Open Badges 3.0 **issue** edge as having *no permissive
+implementation*, against a **verify** edge that gained one (`credential-lens`, MIT, 1 080 B).
+🟢 **This pass read four more issuers from payload. The edge is populated. Not one is permissive.**
+
+| Issuer | ref · HEAD | Licence (payload, bytes) | Verdict |
+|---|---|---|---|
+| `educredentials/ec-issuer` | `main` · `8bafc99` *(pass 65)* | 🟡 **prose-only MIT** — no file, no SPDX key, not on pypi | 🔴 **unprovable** |
+| [`schroedinger-Hat/certo`](https://github.com/schroedinger-Hat/certo) | `main` · **`6fd0a11`** | 🔴 **AGPL-3.0** (`LICENSE`, **33 820 B**) | 🟡 OSI, 🔴 network copyleft 🆕 |
+| [`19otherrsh-dot/Opencred`](https://github.com/19otherrsh-dot/Opencred) | `main` · **`d14619e`** | 🔴 **AGPL-3.0** (`LICENSE`, **34 523 B**) | 🔴 **fails closure before licence** — see below 🆕 |
+| [`edubadges/edubadges-server`](https://github.com/edubadges/edubadges-server) | **`develop`** · **`9775cc2`** | 🔴 **AGPL-3.0** (`LICENSE`, **34 519 B**) | 🟡 OSI, 🔴 network copyleft 🆕 |
+| [`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib) | `master` · **`e7736b6`** | 🔴 **LGPL-3.0** (**`LICENSE.txt`**, **7 650 B**) — 🔴 `LICENSE` **404** | 🟡 library, weak copyleft 🆕 |
+
+🔴 **AGPL on an *issuer* is the worst possible placement of a copyleft fence**, and the reason is
+mechanical: **issuing a credential is a network service**, which is exactly the act AGPL § 13
+attaches to. 🔵 A GPL LMS can be kept at arm's length by running it as a remote service (this shelf
+has done that with Moodle since `P7`). 🔴 **An AGPL issuer cannot be held at arm's length by the
+same move, because the remote-service shape is the triggering shape.**
+
+🟢 **So the finding reverses in character, not in sign:** the edge is no longer *unimplemented*, it
+is *unshippable in a closed deliverable*. 🔵 **That is a sharper and more useful statement**, and it
+is the first time this gap has been priced rather than merely noted. 🔴 `Gap 294` **stays open** —
+it was always a gap for a *permissive* issuer, and there still is none.
+
+🔴 **`Opencred` fails dependency closure before the licence question is even reached:** its own
+README states that **`n8n` is source-available, not OSI open source**. 🔵 This shelf has a tool for
+exactly that reading (`compose/code/dependency-licence-closure/`), and this is a textbook row for
+it — an AGPL root with a **non-OSI leaf**. 🔴 **Two independent disqualifications, either one
+sufficient.**
+
+### 🟢 🆕 An instrument rule, earned twice: the licence file is not always called `LICENSE`
+
+🔵 `luisgf/openbadgeslib` serves **`LICENSE` 404 / `LICENSE.txt` 200 (7 650 B, LGPL-3.0)**. 🔵
+`frappe/lms` served **`LICENSE`/`LICENSE.md`/`LICENSE.txt`/`COPYING` all 404 / `license.txt` 200
+(33 893 B, AGPL-3.0)** in pass 65. 🟢 **Two repositories, two passes, the same failure mode — and
+in both cases the 404 on the canonical name would have been read as "no licence" by anything that
+probed one path.** 🔴 **A single-path licence probe produces false "unlicensed" verdicts**, which is
+the most expensive error this KB can make: it discards buildable components *and* it mislabels
+copyleft ones as grant-free. 🟢 **Rule, now standing: probe `LICENSE`, `LICENSE.md`, `LICENSE.txt`,
+`license.txt`, `COPYING` — case included — before any "no licence" verdict.**
+
+### 🔴 Declared gaps, stated so that silence is not mistaken for coverage
+
+🔴 **No region attribution on any repository above.** The protocol-named channel returns components
+without geography; `ADL`/`ADLNET` is US-government-adjacent and `SURF`/`edubadges` is Dutch, but
+**neither is a regional market signal** and neither is recorded as one. 🔵 **The regional readings in
+`intel/market.md` come from the policy and survey channels, not from this one** — the repo channel
+has produced no placeable regional signal in sixty-six passes, and that is a property of the
+channel.
+🔴 **No star counts** — `api.github.com` not re-measured this pass.
+🔴 **`1EdTech/caliper-js` failed to resolve for the second consecutive pass**, and this time with a
+**mechanism**: `git ls-remote` returned *"could not read Username for 'https://github.com'"* — an
+**authentication challenge**, which is what GitHub serves for a repository that is not publicly
+readable. 🟢 **That upgrades pass 65's "behind membership" from an inference to a measurement.**
+Caliper remains the one education protocol on this shelf with **no readable reference
+implementation**.
+
 ## 🟢 Sixty-fifth pass, 2026-10-08 — the agent channel's **empty streak ends**, and it ends on **Moodle**; canonicality is settled by **copyright holder** against the channel's own ordering; and `Gap 294`'s **verify** edge gets a permissive implementation while its **issue** edge still has none
 
 ⏱️ **Nineteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

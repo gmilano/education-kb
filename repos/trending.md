@@ -4,6 +4,78 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-sixth pass, 2026-10-08 — the GitHub-trending channel repeats its category error for the nth week, and the week's real repo movement is an **Apache-2.0 LRS tier** read by grant
+
+⏱️ **Twentieth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🔴 **No star counts this week.** `api.github.com` was **not re-measured** this pass. 🔵 **Consequence,
+stated because it changes how this section reads:** nothing below is ordered by traction, and the
+figures the channel volunteered are **not** reproduced here as data.
+
+### 🔴 The trending channel's category error, now in its nth consecutive week
+
+🟢 `github trending education AI 2026` returned, in order: **`rasbt/LLMs-from-scratch`**,
+**`microsoft/generative-ai-for-beginners`**, **`rohitg00/ai-engineering-from-scratch`**,
+**`karpathy/nanochat`**, **`developer-roadmap`**.
+
+🔴 **Every one is material for LEARNING ABOUT AI. Not one is software for RUNNING EDUCATION.** 🔵
+Identical to pass 65's result, down to the ordering of the first three — **the channel reads
+"education" as the repository's *subject*, never as the *industry* it serves.** 🟢 **Recorded as a
+stable channel property**, now well enough established that this query needs no further analysis in
+future passes: run it as a control, score it pass/fail, nothing more.
+
+🟡 The channel also surfaced two non-repo items, kept to one line each and not treated as repo
+movement: an **auto-generated AI-trends issue dated 2026-10-04** (`kouweizhu/agents-radar` #328), and
+**Central European University's GitHub collaboration for AI-ready teaching (2026-04)** — 🔵 the
+latter is **institutional adoption, six months stale, and already recorded in pass 65**.
+
+### 🟢 The week's actual repo movement, found by protocol name rather than by trending
+
+🔵 **Where it came from:** not the trending channel. 🟢 **A protocol-named query (`P795`) for xAPI
+stores returned a six-row tier**, every grant read as bytes and every ref pinned.
+
+| Repo | ref · HEAD | Licence (payload, bytes) | Movement signal |
+|---|---|---|---|
+| [`pelotech/xapi-lrs`](https://github.com/pelotech/xapi-lrs) | `main` · **`4d18e0c`** | 🟢 **Apache-2.0** (11 357 B) | 🟢 **the week's real story** — `0.9.6`, v0.6.0 schema rewrite to `lrsql` v0.9.5 parity, **xAPI 2.0**, OTel, documented in-place takeover of an `lrsql` database |
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | `main` · **`cb794e4`** | 🟢 **Apache-2.0** (11 357 B) | 🟡 **incumbent** — SQLite + Postgres; long-standing, not new |
+| [`EscolaLMS/LRS`](https://github.com/EscolaLMS/LRS) | `main` · **`b1ad9a4`** | 🟢 **MIT** (1 066 B; **3 layers**) | 🟢 **live release channel** — packagist `0.0.13`, 13 versions |
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | `master` · **`efa045e`** | 🟢 **Apache-2.0** (11 357 B) | 🟡 reference implementation; 🔴 **no README at any canonical name** |
+| [`openHPI/openLRS`](https://github.com/openHPI/openLRS) | `main` · **`db284a9`** | 🟢 MIT (1 122 B) | 🔴 **archived / read-only** |
+| [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) | `master` · **`5fec948`** | 🔴 **GPL-3.0** (35 141 B) | 🔴 **FOSS edition unmaintained since 2021** |
+
+🟢 **The one row that is genuinely *trending* in the sense this file means:** `pelotech/xapi-lrs`
+**rewrote its own schema to byte-for-byte parity with the incumbent's**, CI-enforced, and documents
+pointing itself at a **live `lrsql` Postgres database** and taking it over — credentials and
+statements port, 🔴 admin accounts do not (`bcrypt+sha512$` vs bcrypt; **401, not 500**). 🔵 **A
+project does that to contest an installed base.** 🟢 **That is current competitive movement inside
+one licence (both ends Apache-2.0)**, and it is the only item this week that would change a
+recommendation.
+
+🔴 **Everything else in that table is a coverage event, not a release event.** 🟢 Said plainly: this
+KB had **no LRS tier at all** before this pass, so four of six rows are new *to us* and old *to the
+world*. 🔵 **Logging them as "trending" would turn our own prior blind spot into a fabricated
+market trend** — the precise failure this append-only file exists to prevent.
+
+### 🟡 Also read this week, outside the trending channel
+
+🔴 **The permissive-education-ERP query came back empty of anything education-specific:**
+`apache/ofbiz-framework` is **Apache-2.0** but has **no education modules**; `krayin/laravel-crm` is
+**MIT** (`LICENSE`, **1 078 B**, payload-read) but is a **general CRM**; **ERPNext**'s education
+module is **GPL-3.0**. 🔵 Full reasoning in `verticals/solutions.md`.
+🔴 **Four Open Badges 3.0 issuers read, none permissive** — `certo` `6fd0a11` AGPL-3.0 (33 820 B),
+`Opencred` `d14619e` AGPL-3.0 (34 523 B), `edubadges-server` `9775cc2` AGPL-3.0 (34 519 B),
+`openbadgeslib` `e7736b6` LGPL-3.0 (7 650 B). 🔵 Full reading in `agents/top.md`.
+
+### 🔴 Declared gaps for the week
+
+🔴 **No star counts** (instrument not re-measured).
+🔴 **No region** on any repo above; the trending and protocol channels are both geography-free.
+🔴 **No non-US/EU trending education-infrastructure repo** this window — 🟢 and the honest version of
+that sentence is that **the channel cannot tell us either way**, since it returns tutorials rather
+than industry software regardless of origin.
+🔴 **`1EdTech/caliper-js` unresolvable for a second consecutive pass**, now with a mechanism: an
+**auth challenge** from `git ls-remote`, i.e. **not publicly readable**.
+
 ## 🟢 Sixty-fifth pass, 2026-10-08 — week of 2026-10-08: the GitHub-trending channel returns **learning MATERIAL, not education software**, for the nth week; and the week's real repo movement is a **nine-row Moodle MCP cluster** read by grant
 
 ⏱️ **Nineteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

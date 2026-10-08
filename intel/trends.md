@@ -4,6 +4,131 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-sixth pass, 2026-10-08 — the governance convergence gains a **fifth channel (OECD)** and, more importantly, a **licence-level corroboration no analyst can give**: the ecosystem fences credential *issuance* and leaves *measurement* free
+
+⏱️ **Twentieth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟡 **Every analyst figure here is channel-reported.** 🔴 **Not one trend below was read at a primary
+source.** 🔵 **Instrument note, changed this pass:** the `EGRESS_DENIED (allowlist)` attribution is
+**carried forward from pass 65, not re-measured** — the proxy's own failure ledger (`P798`) was
+**declined by the local auto-mode classifier** this pass rather than refused by the gateway. 🟢 A
+different instrument state with a different remedy, and recorded as such.
+
+### 🟢 The convergence: now five independent channels, one direction
+
+| Channel | 2026 claim |
+|---|---|
+| **HolonIQ** | *selective* acceleration — ethics, transparency, **agentic use cases**, and **proven instructional benefit** over broad personalisation promises; growing traction for **competency frameworks and career navigation** |
+| **1EdTech** | from **experimentation to governance**: clear policies, data boundaries, oversight, **evaluation processes**. **Digital credentials becoming a currency** for skills-based hiring |
+| **K-12 Academics** | 🔴 **86 % of education organisations use gen-AI — and most lack a policy**; teacher use roughly **doubled in a year** (60 % in 2024–25) |
+| **eSchool News** (practitioner) | shift from AI as **time-saver** to AI as a driver of **better teaching** |
+| 🆕 **OECD** — *Digital Education Outlook 2026* | 🟢 move **beyond general-purpose AI tools toward purpose-built educational AI** designed to produce **durable learning gains** |
+
+🟢 **The OECD arrival matters more than a fifth tally mark**, for two reasons. 🔵 **First, it is the
+only intergovernmental body in the set** — the other four are a consultancy, a standards consortium,
+a research outfit and a trade publication. 🔵 **Second, it says the same thing as the vendor-side
+channel for opposite reasons**: Teachbetter.ai argues purpose-built tools win because *generic
+chatbots create teacher workload* (prompt-crafting, output verification); the OECD argues it because
+*general-purpose tools do not produce durable learning gains*. 🟢 **A commercial argument and a
+pedagogical argument converging on one architectural conclusion is stronger than either alone.**
+
+🟢 **Also newly corroborated across the set: credentials.** 1EdTech calls digital credentials a core
+mechanism for skills-based learning and hiring; HolonIQ independently reports traction for
+competency frameworks and career-navigation tools. 🔵 **Two channels, same layer** — and this pass
+read that layer's code, which is where the interesting part starts.
+
+### 🟢 🆕 The trend this KB can corroborate from PAYLOAD, which no analyst reports
+
+🟢 **The observation.** This pass read two adjacent infrastructure layers by licence payload:
+
+| Layer | What it does | Licences found (payload-read) |
+|---|---|---|
+| **Telemetry / measurement** (xAPI store) | records what a learner did | 🟢 **Apache-2.0 ×3** (`lrsql`, `xapi-lrs`, `ADL_LRS`), **MIT ×2** (`EscolaLMS/LRS`, `openLRS`), GPL-3.0 ×1 |
+| **Credential issuance** (Open Badges 3.0 / W3C VC) | asserts what a learner is worth | 🔴 **AGPL-3.0 ×3** (`certo`, `Opencred`, `edubadges-server`), **LGPL-3.0 ×1**, 🟡 prose-only-MIT ×1. **Permissive: zero.** |
+
+🔵 **Two layers that sit next to each other in every architecture, with opposite licensing cultures.**
+🟢 **The reading: the ecosystem leaves *measurement* free and fences *attestation*.** Recording a
+learning event carries no commercial trust and is given away under Apache-2.0; **minting a claim
+about a person is the trust-bearing act, and every open implementation of it is copyleft** — three
+of them under the one licence (AGPL) whose § 13 attaches specifically to **network services**, which
+is the only shape an issuer takes.
+
+🔵 **Why this is a trend and not a licence trivium:** 1EdTech's prediction is that **credentials
+become the currency of skills-based hiring**. 🟢 **If that is right, the layer about to carry the most
+commercial weight is the layer with no permissive implementation** — and that is a structural
+constraint on what any studio, Globant included, can deliver into it. 🔴 **The analysts naming
+credentials as the growth layer are not reporting that its code is unshippable in a closed product.**
+🟢 **This KB can, because it read the bytes.**
+
+🟡 **Stated as the inference it is:** this is **one pass, nine repositories, two layers**. 🔵 The
+asymmetry is clean and the mechanism (trust-bearing acts get fenced) is plausible, 🔴 **but it is an
+interpretation of a licence distribution, not a measured intention.** 🟢 **Falsifiable and worth
+testing:** if a permissive Open Badges 3.0 **issuer** appears in a later pass, the claim weakens; if
+the next trust-bearing layer read (proctoring, identity, grade attestation) is also copyleft-only,
+it strengthens. 🟢 **`Gap 294` is now also this hypothesis's test case.**
+
+### 🟢 🆕 Human-in-the-loop has become a legal category, not a design preference
+
+🟢 **Three jurisdictions, written independently, landing on one test:**
+
+| Jurisdiction | The test |
+|---|---|
+| **EU** (AI Act) | education access and assessment is **high-risk**; **human oversight** is a named obligation before deployment |
+| **Vietnam** | education systems (automated assessment, behavioural monitoring) are high-risk **only when the AI output is the sole basis for a decision without meaningful human review** |
+| **US states** | **Oklahoma, Maryland** reportedly require human oversight and bar AI from high-stakes student decisions; **NYC's red tier prohibits** AI for grading, discipline, IEP development |
+
+🔵 **Vietnam's phrasing is the one worth memorising**, because it is conditional: the review checkpoint
+does not mitigate high-risk status, it can **remove it**. 🟢 **So human-in-the-loop is now the single
+design decision that sets a system's regulatory class in NA, EMEA and APAC simultaneously** — and the
+one architectural requirement that is portable across all three without rework.
+
+🟢 **It also converts the trend channels' soft advice into a hard requirement.** 🔵 eSchool News's
+"AI as a driver of better teaching, not a time-saver" and teachbetter.ai's "teacher-first rollouts
+scale better" read as cultural guidance. 🟢 **Under these three regimes they are the compliant
+architecture**: the teacher in the loop is the legal artefact, and the record of their review is the
+evidence.
+
+### 🟢 Adoption outruns governance, and it now does so in all four regions
+
+🟢 **Four unrelated instruments, four populations, one direction** — 86 % adoption with most lacking
+policy (global/US K-12) · 87 % adoption / **26 %** with a framework (LATAM higher ed, 200
+institutions, 19 countries) · **10 %** with formal guidelines (EMEA, 450+ institutions) · **1 %** with
+fully operationalised responsible AI (APAC organisations). 🔵 Full figures, sources and caveats in
+`intel/market.md`. 🔴 **The four are not numerically comparable** — different denominators, different
+definitions, different years — 🟢 **and the trend does not depend on their comparability**, only on
+every one of them pointing the same way.
+
+🟢 **The trend consequence:** the governance gap is **not a regional characteristic**, so it is not
+addressable by regional strategy. 🔵 **It is the market's default state.** 🟢 **The reusable asset is
+therefore a governance-and-evidence layer that is region-parameterised rather than region-specific**
+— one spine, four rule sets — which is exactly what `P8` is built as.
+
+### 🟡 One trend this pass deliberately did **not** record
+
+🔴 **"Agentic education AI" as a 2026 trend.** 🟡 HolonIQ names **agentic use cases** among the areas
+getting selective attention. 🔴 **This KB has no payload evidence for it.** 🔵 The **industry-named
+agent query has returned nothing education-specific for seventeen consecutive weeks**; the only
+education-agent cluster ever found (pass 65's nine Moodle MCP side-cars) is **read-scoped**, and this
+pass's additions are **stores and issuers — infrastructure, not agents**. 🟢 **So the honest position
+is that the analyst channel reports agentic momentum that the repository channel does not show**, and
+the discrepancy is recorded rather than resolved. 🔵 **The most likely explanation is that agentic
+education AI is being built in closed products**, which would be consistent with everything above
+about where this industry puts its fences — 🟡 **but that is a guess, and it is labelled as one.**
+
+### 🔴 Declared gaps
+
+🔴 **Nothing above read at a primary source.** HolonIQ, 1EdTech, K-12 Academics, eSchool News, OECD,
+UNESCO — **all channel-summarised**.
+🔴 **The OECD *Digital Education Outlook 2026* was NOT read** — its recommendation reaches this file
+through a single channel mention and should be read directly before it is quoted to a client.
+🔴 **Most trend sources are vendors and consultancies with a stake in the market.** 🟢 Per pass 65's
+standing rule, **survey data and adoption figures are weighted above predictions**, and one vendor
+blog's claims (42 % better outcomes, 83 % planning AI teaching assistants) are **explicitly rejected**
+in `intel/market.md`, not merely discounted.
+🔴 **No APAC or North America trend instrument of its own** — the five channels above are
+global/US-weighted; the regional readings this pass are **policy and survey instruments, not trend
+instruments**.
+
 ## 🟢 Sixty-fifth pass, 2026-10-08 — the 2026 trend reports converge on **governance**, and the convergence is now corroborated by what the REPOSITORIES do: the permissive components arriving are **read-scoped and offline**, not autonomous
 
 ⏱️ **Nineteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

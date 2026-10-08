@@ -4,6 +4,92 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-sixth pass, 2026-10-08 — the shelf asks for a **permissive education ERP/CRM** and gets a clean negative: the permissive systems have no education, the education systems are GPL, and that is now a measured result rather than an absence
+
+⏱️ **Twentieth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🔵 **Why this query ran again.** Pass 65 found this shelf's **first genuinely permissive LMS
+candidate** and then refuted it — `frappe/lms` is **AGPL-3.0** (`license.txt`, 33 893 B), not the MIT
+the channel claimed. 🟢 That left the standing question unanswered: **is there any permissive
+administrative system for education at all?** This pass asked it as a licence question, in the
+shelf's own terms (`open source platform education ERP CRM MIT Apache`).
+
+### 🔴 The answer is no, and the shape of the no is the finding
+
+| Candidate | ref · HEAD | Licence (payload, bytes) | Education coverage | Verdict |
+|---|---|---|---|---|
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | **`trunk`** · **`a37c9c7`** | 🟢 **Apache-2.0** (`LICENSE`, **11 906 B**, payload-read) | 🔴 **none** — ERP, CRM, e-commerce, SCM, MRP; **no education module** | 🔴 **permissive, but you would build the domain** |
+| [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | — | 🟢 **MIT** (`LICENSE`, **1 078 B**, payload-read) | 🔴 **none** — general CRM (contacts, pipeline, tasks) | 🔴 **permissive, generic** |
+| **ERPNext** (education module) | — | 🔴 **GPL-3.0-only** | 🟢 **yes** — admissions, student records, fees, learning outcomes | 🔴 **the only real education ERP, and it is copyleft** |
+| **Dolibarr** | — | 🔴 **GPL-3.0** | 🔴 generic ERP/CRM | 🔴 copyleft and generic |
+| **OpenEduCat** *(already on shelf)* | — | 🔴 **LGPL-3.0** | 🟢 yes — education ERP on Odoo | 🟡 weak copyleft, prior pass |
+| **Huly Platform** | — | 🟡 Apache-2.0 *(channel-claimed, not payload-read)* | 🔴 none | 🟡 unverified, generic |
+
+🟢 **Stated as a law of this shelf, because three passes now agree:** **education administrative
+software is copyleft, essentially without exception.** Moodle GPL-3.0 · Open edX AGPL-3.0 · Canvas
+AGPL-3.0 · Chamilo GPL · ILIAS GPL · RosarioSIS GPL · Gibbon GPL · OpenEduCat LGPL-3.0 ·
+`frappe/lms` AGPL-3.0 · ERPNext GPL-3.0 · Learning Locker GPL-3.0. 🔴 **Eleven systems, zero
+permissive.**
+
+🔵 **And the complement, which this pass establishes for the first time:** the permissive systems
+that exist (**OFBiz**, **Krayin**) are **permissive precisely because they contain no education
+domain** — they are empty frames. 🟢 **So the choice is not "find a permissive education platform."
+It does not exist. The choice is between inheriting copyleft with the domain, or inheriting a
+permissive frame without it.**
+
+🟢 **Which is why the LRS tier read this pass matters here and not only in `repos/foundations.md`:**
+the **telemetry layer is Apache-2.0 end to end** (see that file). 🔵 **The permissive surface in
+education is not the system of record — it is the instrumentation around it.** That is where a
+closed deliverable can actually live, and it is a materially different engagement shape from
+"replace the LMS."
+
+### 🟢 The standing architectural consequence, restated with this pass's evidence
+
+🟢 **`P7`'s arm's-length rule (pass 65) generalises to every row above:** a **GPL** system can be
+**deployed as a remote service** and called over its API — that is *use*, not *conveyance*, so the
+client's own code stays unencumbered. 🟢 **Moodle, Open edX, Canvas, ERPNext and Chamilo all
+qualify**, and all expose usable APIs or web services.
+
+🔴 **The rule breaks on exactly one class, and this pass found that class:** **AGPL issuers**. 🔵
+AGPL § 13 attaches to *conveying a modified version over a network* — which is the shape of a hosted
+credential issuer. 🟢 **So "run it remotely" rescues a GPL LMS and does not rescue an AGPL issuer.**
+🔵 Full reading in `agents/top.md`; the two lawful shapes are written up as `P9` in
+`compose/patterns.md`.
+
+### 🟡 One correction owed to this shelf's own vocabulary
+
+🔵 Pass 65 called `frappe/lms` *"the channel's one MIT LMS"* and refuted it. 🟡 **This pass found the
+same failure mode in a second repository** — `luisgf/openbadgeslib` serves **`LICENSE` 404 /
+`LICENSE.txt` 200 (LGPL-3.0, 7 650 B)**, just as `frappe/lms` served every canonical name 404 and
+**`license.txt` 200**. 🟢 **The lesson is an instrument rule, not a vertical fact, and it is recorded
+as such in `agents/top.md`:** probe `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license.txt`, `COPYING`
+before any "no licence" verdict. 🔴 **A single-path probe would have mislabelled both repositories as
+grant-free** — the most expensive error available here, because it discards buildable components and
+hides copyleft ones in the same stroke.
+
+### 🔴 Declared gaps
+
+🔴 **ERPNext, Dolibarr and Huly were NOT payload-verified this pass.** 🟢 **`apache/ofbiz-framework`
+and `krayin/laravel-crm` were** — OFBiz `trunk` · `a37c9c7`, Apache-2.0, **11 906 B**; Krayin MIT,
+**1 078 B**. 🟢 The remaining GPL claims (ERPNext GPL-3.0-only, Dolibarr GPL-3.0) are consistent with
+this shelf's prior passes and with each project's own documentation, 🔴 **but they are
+channel-reported here and are not upgraded to measured.** Huly's Apache-2.0 is 🟡 **unverified** and
+should not be quoted.
+🟡 **A one-byte discrepancy worth recording, since this shelf trades on payload bytes.** An earlier
+pass recorded OFBiz's `trunk/LICENSE` at **11 905 B**; this pass measured **11 906 B** at
+`trunk` · `a37c9c7`. 🔵 Both readings are Apache-2.0 and the verdict does not move, 🟢 **but the
+figure did** — either the file changed or one of the two measurements is off by a byte. 🔴 **Not
+resolved here.** 🔵 Recorded so the newer figure is not silently treated as a correction of the older
+one, and so a future pass measuring 11 905 again knows this is a known oscillation rather than a
+fresh finding.
+🔴 **No region.** The vertical channel returned no geography. 🟡 Known from prior passes and not
+re-measured this pass: **Moodle is the LATAM default and strong in EMEA/APAC**; **Canvas leads North
+American higher education**. 🔵 Regional readings in `intel/market.md` come from the policy and
+survey channels, not from this one.
+🔴 **No AI-native education vertical appeared this pass** — the query returned ERP/CRM frames and
+copyleft LMSs. 🟢 The AI surface in education remains, as every prior pass found, **a side-car on a
+copyleft platform**, not a platform of its own.
+
 ## 🟢 Sixty-fifth pass, 2026-10-08 — the channel's **one MIT LMS is AGPL**, refuted on two layers; and the shelf gains its **first genuinely permissive LMS**, whose own manifest misspells the licence
 
 ⏱️ **Nineteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

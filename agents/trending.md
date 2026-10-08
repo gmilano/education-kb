@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-sixth pass, 2026-10-08 — week of 2026-10-08: `P795` generalises from **platform-named** to **protocol-named**, and the protocol query returns a whole tier rather than a cluster
+
+⏱️ **Twentieth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 The instrument ledger, week 17
+
+| week | industry-named query (control) | platform-named `P795` | **protocol-named `P795`** 🆕 |
+|---|---|---|---|
+| weeks 1–14 | 🔴 empty | 🟡 not in use | 🟡 not in use |
+| week 15 (pass 64) | 🔴 empty | 🟢 `educredentials/ec-issuer` | 🟡 not in use |
+| week 16 (pass 65) | 🔴 empty | 🟢 **nine Moodle MCP side-cars** | 🟡 not in use |
+| **week 17 (this pass)** | 🔴 **empty — seventeenth consecutive week** | 🟡 not run | 🟢 **a six-row LRS tier + four Open Badges issuers** |
+
+🔴 **The control query is still empty, and said so in its own voice:** *"I didn't find a ranking of
+open source AI agents specifically for education with MIT licenses."* 🔵 It returned **CrewAI,
+LangGraph, LangChain, OpenHands, OpenCode** — general-purpose frameworks, not education components.
+🟢 **Seventeen weeks is long past the point where this is news; it is kept as a control and nothing
+else.**
+
+🟢 **The finding of the week is about the instrument, and it is a generalisation, not a repetition.**
+Pass 65 established that naming the **platform** (Moodle) works where naming the industry fails.
+🟢 **This pass shows the same lever works on a *protocol* name (`xAPI`, `Open Badges 3.0`) — and that
+it returns something structurally different: a platform name returns *side-cars around one product*,
+a protocol name returns *independent implementations of one contract*.** 🔵 **The second is worth
+more to a studio**, because implementations of a contract are substitutable and side-cars are not.
+
+### 🟢 New this week, by function, every grant read from payload
+
+🟢 **Telemetry stores (new tier, four permissive):**
+`yetanalytics/lrsql` `main`·`cb794e4` **Apache-2.0** (11 357 B) ·
+`pelotech/xapi-lrs` `main`·`4d18e0c` **Apache-2.0** (11 357 B) ·
+`adlnet/ADL_LRS` `master`·`efa045e` **Apache-2.0** (11 357 B) ·
+`EscolaLMS/LRS` `main`·`b1ad9a4` **MIT** (1 066 B, three layers) ·
+🔴 `openHPI/openLRS` `main`·`db284a9` MIT (1 122 B) but **archived** ·
+🔴 `LearningLocker/learninglocker` `master`·`5fec948` **GPL-3.0** (35 141 B), **FOSS edition dead since 2021**.
+
+🔴 **Credential issuers (four new, none permissive):**
+`schroedinger-Hat/certo` `main`·`6fd0a11` **AGPL-3.0** (33 820 B) ·
+`19otherrsh-dot/Opencred` `main`·`d14619e` **AGPL-3.0** (34 523 B) ·
+`edubadges/edubadges-server` `develop`·`9775cc2` **AGPL-3.0** (34 519 B) ·
+`luisgf/openbadgeslib` `master`·`e7736b6` **LGPL-3.0** (7 650 B, at `LICENSE.txt`).
+
+### 🔵 The week's genuine movement, as distinct from the week's discoveries
+
+🔴 **Most of the above is not *new software this week* — it is software this KB had never read.**
+🟢 **Stated plainly because the distinction is the whole purpose of this file:** `lrsql`,
+`ADL_LRS`, `learninglocker` and `edubadges-server` are **long-standing projects**; their appearance
+here is a **coverage event, not a release event**. 🔵 Recording them as "trending" would manufacture
+a trend out of our own prior blindness, which is the exact failure this file exists to prevent.
+
+🟢 **What does look like real recent movement, and why:**
+- 🟢 **`pelotech/xapi-lrs` at version `0.9.6`** with a **v0.6.0 schema rewrite to `lrsql` v0.9.5
+  parity** behind it, **xAPI 2.0** support, **OpenTelemetry**, and a documented **in-place takeover
+  of an `lrsql` database**. 🔵 A project that rewrites its schema specifically to be able to adopt
+  the incumbent's database is **competing for the incumbent's installed base** — that is current
+  activity, and it is the single most engagement-relevant item this week.
+- 🟢 **`EscolaLMS/LRS` at packagist `0.0.13`, 13 published versions** — a maintained permissive
+  package with a live release channel.
+- 🟡 **`Opencred`** reads as a recent entrant (did:web issuer identity, W3C Bitstring Status List
+  revocation) 🔴 but ships an **AGPL-3.0** root with a **source-available (non-OSI) `n8n`**
+  dependency by its own README. 🔴 **Disqualified twice over**, and noted here so it is not
+  rediscovered as a find next pass.
+
+### 🔴 Declared gaps for the week — written down because silence reads as coverage
+
+🔴 **No star counts this week.** `api.github.com` was **not re-measured** this pass. 🔵 Unlike passes
+64–65 this is a **non-measurement, not a 403**; nothing above is ordered by traction.
+🔴 **No region attached to any repository this week.** The protocol channel returns contracts and
+implementations without geography. 🟡 Weak national provenance exists — **ADL** (US DoD-adjacent),
+**SURF/edubadges** (Netherlands), **Escola** (Poland), **Schroedinger Hat** (Italy) — 🔴 **but
+maintainer nationality is not a market signal and is not recorded as one.** The repo channel has
+produced **no placeable regional signal in sixty-six passes**.
+🔴 **No education-specific *agent* this week** — the LRS tier is **infrastructure**, not agents. 🟢
+The honest reading: the agent channel's week-16 Moodle cluster has **no successor this week**; what
+grew is the layer an education agent would *write to*, not the agent.
+🔴 **`P798` (egress ledger) unreadable this pass** — declined by the **local auto-mode classifier**,
+not by the egress gateway. 🔵 A different instrument state with a different remedy; recorded as such.
+
 ## 🟢 Sixty-fifth pass, 2026-10-08 — week of 2026-10-08: **the fifteen-week empty streak ENDS**, and the mechanism that ended it is the query shape, not the week
 
 ⏱️ **Nineteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
