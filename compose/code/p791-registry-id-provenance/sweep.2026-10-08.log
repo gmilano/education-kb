@@ -1,0 +1,1 @@
+CALIBRATE packagist good=200 bad=404 | raw good=200 bad=404

@@ -24,6 +24,63 @@ education-kb/
 
 ## `compose/code/` — lo que esta KB puede demostrar corriendo
 
+🆕 **El pase 63 del 2026-10-08 registra UNA carpeta nueva y su suite: `p791-registry-id-provenance`
+🟢 `37/37 verde` sin red, con `python3`, con `python3 -I` y DESDE UN DIRECTORIO AJENO (`p355`)** —
+🟢 lo que **REFUTA `Gap 267` por tercer pase consecutivo**. 🔴 **Lo que sigue sin medir es el tablero
+de 112 suites** (`Gap 257`/`Gap 258`): este pase corrió **tres** verdes desde el clon
+(`p759 --self-test` 4/4, `p419` 10/10, `p791` 37/37), 🔴 **y tres no son 112.**
+
+🔴 **El hallazgo del pase, y es un hallazgo sobre el MAPA DE ORÁCULOS de esta KB, no sobre un
+repositorio:** el pase 61 escribió `packagist 404` y el pase 62 escribió
+`packagist 200 — recuperado`, 🔴 **y ninguna de las dos líneas midió packagist.** Las dos sondearon
+`packbackbooks/lti-1-3-php-library` — **el slug del repositorio**, con forma de id de paquete —
+que **nadie publica** (`404 × 2` en `packagist.org/packages`, `404 × 2` en
+`repo.packagist.org/p2`). 🟢 **En el mismo minuto el host contestó `200` a `monolog/monolog` y
+`404` a un id inventado: el host nunca se movió.**
+
+🆕 **`P791`: la alcanzabilidad se lee de un PAR DE CALIBRACIÓN — un id que existe y uno que no. Un
+código suelto de un id objetivo es un hecho sobre ESE id.** 🔵 `P787` cortó la alcanzabilidad por
+**host**; este corte va **por debajo**, porque un solo host sirvió las dos respuestas contradictorias.
+🟢 **Y el dato del pase 62 sobrevive:** el `composer.json` del árbol declara
+`packbackbooks/lti-1p3-tool`, ese id da **200**, y su release no-dev más nuevo es **`v6.4.4`,
+`2026-09-23`, `Apache-2.0`**. 🔵 **Tenía razón sobre el paquete y no sobre el host, y al mapa sólo
+entró la segunda mitad.**
+
+🆕 **`P792` — y éste es sobre `P713` mismo.** 🔴 Correr `p253-registry-first-identity` **de punta a
+punta** falla: su capa de sondeo emite `git+https://github.com/Cvmcosta/ltijs.git` y su compuerta
+compara esa **URL** con el **slug** `Cvmcosta/ltijs`, devolviendo **`PUBLISHED-BY-OTHER` para un
+paquete que apunta exactamente a su propio repositorio.** 🟢 **Su tabla commiteada NO está mal** —
+la columna fue normalizada **a mano** y el script nunca se cambió. 🔵 **De ahí el complemento de
+`P713`: reusar el instrumento NO ALCANZA — hay que reusarlo DE PUNTA A PUNTA, porque el defecto
+puede vivir en la COSTURA.** 🟢 El pase 59 aprendió a hacer `grep` antes de anunciar una
+**propiedad**; el pase 63 es la misma lección para una **interfaz**. 🟢 **La compuerta no se tocó.**
+
+🆕 **`P793` — `master` es un PSEUDO-REF en `raw`.** 🟢 Medido 3 de 3 con control discriminante:
+`raw.githubusercontent.com` sirve la rama **por defecto** para el nombre literal `master` aunque no
+exista `master` (`main` **404**, rama inventada **404**, `master` **200**, `HEAD` **200**), en
+repositorios cuyos defaults reales son `refs/heads/0.7`, `refs/heads/public` y `refs/heads/2.12`.
+🔴 **Así que «payload-read en `master`» nunca fue procedencia.** 🟢 **Defaults que no son `main` ni
+`master`: 7 de 25** — incluido **`v31.0.00`**, una *rama con forma de tag*. 🟢 **Y 0 de 12** en la
+capa de evaluación, cuyos 12 SHA citados siguen coincidiendo: 🔵 **el defecto tiene forma de
+ECOSISTEMA, no de estante.** 🟢 **`ref.sh` es la Compuerta 0 del pre-flight y corre primero.**
+
+🆕 **`P794` — dos capas de licencia pueden caer en BANDAS OPUESTAS, no sólo diferir en precisión.**
+🔴 `tl-its-umich-edu/caliper-php-public` @ `refs/heads/public` (`e35b0ec`), la única implementación
+alcanzable de Caliper Analytics (`Gap 284`): el **archivo** `LICENSE` (7 438 B) dice *"GNU LESSER
+GENERAL PUBLIC LICENSE / Version 3"* → **LGPL-3.0** por `p419.familia()`; el **manifiesto** dice
+`"license": "proprietary"`; el **registro** dice `["proprietary"]`, último `1.0.1` de
+**2016-01-27**. 🔴 **Dos de tres capas dicen que no hay concesión abierta.** 🔵 Un pre-flight de una
+sola capa publica la que leyó primero.
+
+🆕 **`P795` — el canal de agentes no tiene mala suerte, tiene AMBIGÜEDAD.** 🔴 Catorce semanas
+seguidas sin un agente específico de educación. 🔵 `AI {industry}` nombra un **dominio** en todas
+las industrias de la rotación **menos educación**, que nombra además el acto de **enseñar la
+tecnología** — así que la frase rankea *cursos sobre IA* por encima de *agentes que hacen
+educación*. 🟢 **Prueba, del mismo pase:** las consultas por **protocolo** devolvieron cuatro filas
+con payload leído (QTI 3, LTI 1.3, cliente de SIS, Caliper) donde las dos consultas por industria
+devolvieron **cero**. 🟢 **Las consultas por industria se quedan en la corrida**, porque `P785` dice
+que declarar un canal saturado es la conclusión más cara que puede escribir un pase.
+
 🆕 **El pase 59 del 2026-10-08 registra UNA carpeta nueva y su suite:
 `p759-four-layer-grant-probe` 🟢 `--self-test` **4/4 verde**, corrida DESDE EL CLON** — 🟢 lo que
 **REFUTA `Gap 267` por segundo pase consecutivo**: la negacion `[Code from External]` no esta

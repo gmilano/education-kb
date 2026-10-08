@@ -1,0 +1,26 @@
+slug	default_ref	head_sha	served_at	tree_name	declared_license	tree_name_http	guessed_http	pub_name	pub_repo	pub_dir	pub_maintainer	latest	latest_time	probe_kind
+1EdTech/lti-1-3-php-library	master	3a192de	master	imsglobal/lti-1p3-tool	-	404	404	-	-	-	-	-	-	declared+guessed
+3iPunt/wordpress-lti-1-3	master	10313a1	master	tresipunt/wordpress-lti-1-3	-	404	404	-	-	-	-	-	-	declared+guessed
+GibbonEdu/core	v31.0.00	683d2c4	v31.0.00	gibbonedu/core	GPL-3.0	404	404	-	-	-	-	-	-	declared+guessed
+IMSGlobal/LTI-Tool-Provider-Library-PHP	master	c9cbfdd	master	imsglobal/lti	Apache-2.0	200	404	imsglobal/lti	IMSGlobal/LTI-Tool-Provider-Library-PHP	-	imsglobal	3.0.2	2016-09-18T04:22:22+00:00	declared+guessed
+Kennisnet/OaiPmh	main	a994e27	main	kennisnet/oaipmh	MIT	200	200	kennisnet/oaipmh	kennisnet/OaiPmh	-	kennisnet	2.2.3	2025-09-16T14:47:10+00:00	declared+guessed
+Kennisnet/php-qti3	main	0ba4f78	main	wikiwijs/php-qti3	MIT	200	404	wikiwijs/php-qti3	kennisnet/php-qti3	-	kennisnet	0.7.0	2026-09-22T07:26:18+00:00	declared+guessed
+Kennisnet/phpEdurepSearch	master	5f975bf	master	kennisnet/edurepsearch	MIT	200	404	kennisnet/edurepsearch	kennisnet/phpEdurepSearch	-	kennisnet	1.0.7	2022-12-19T12:15:11+00:00	declared+guessed
+Kennisnet/phpNLLOM	master	f328730	master	kennisnet/nllom	MIT	200	404	kennisnet/nllom	kennisnet/phpNLLOM	-	kennisnet	1.1.2	2022-06-28T09:38:59+00:00	declared+guessed
+LongsightGroup/qti3	main	ab92d85	-	-	-	-	404	-	-	-	-	-	-	guessed
+OS4ED/openSIS-Classic	master	5d546f2	-	-	-	-	404	-	-	-	-	-	-	guessed
+francoisjacquet/rosariosis	mobile	899f6da	mobile	francoisjacquet/rosariosis	GPL-2.0-or-later	200	200	francoisjacquet/rosariosis	francoisjacquet/rosariosis	-	francoisjacquet	12.9.x-dev	2026-09-02T12:47:49+00:00	declared+guessed
+grantholle/powerschool-api	main	f54e292	main	grantholle/powerschool-api	MIT	200	200	grantholle/powerschool-api	grantholle/powerschool-api	-	grantholle	4.5	2026-03-18T03:00:13+00:00	declared+guessed
+h5p/h5p-php-library	master	cb64a1f	master	h5p/h5p-core	GPL-3.0	200	404	h5p/h5p-core	h5p/h5p-php-library	-	H5P	1.28.0	2026-03-03T12:00:37+00:00	declared+guessed
+krayin/laravel-crm	2.2	fa4eeca	2.2	krayin/laravel-crm	MIT	200	200	krayin/laravel-crm	krayin/laravel-crm	-	Jitendra Singh,devansh.bawari419@webkul.com	2.2.x-dev	2026-10-07T05:55:14+00:00	declared+guessed
+leogaggl/lxHive	master	cffee6d	master	g3i/lxhive	GPL-3.0	404	404	-	-	-	-	-	-	declared+guessed
+moodle/moodle	main	f205347	main	moodle/moodle	GPL-3.0-or-later	200	200	moodle/moodle	moodle/moodle	-	abgreeve,andrewnicols,junpataleta,stronk7	v5.3.0	2026-10-03T09:34:45+00:00	declared+guessed
+oat-sa/lib-lti1p3-core	master	7884c3c	master	oat-sa/lib-lti1p3-core	GPL-2.0-only	200	200	oat-sa/lib-lti1p3-core	oat-sa/lib-lti1p3-core	-	Wazelin,oat-lionel	7.3.2	2026-07-13T16:00:38+00:00	declared+guessed
+oat-sa/qti-sdk	master	634a9b8	master	qtism/qtism	GPL-2.0-only	200	404	qtism/qtism	oat-sa/qti-sdk	-	Wazelin,bugalood,jbout,julien-sebire,krampstudio,oat-lionel	v19.7.2	2026-07-09T16:04:32+00:00	declared+guessed
+opensalt/opensalt	develop	db41cc4	-	-	-	-	404	-	-	-	-	-	-	guessed
+packbackbooks/lti-1-3-php-library	master	a20c71b	master	packbackbooks/lti-1p3-tool	Apache-2.0	200	404	packbackbooks/lti-1p3-tool	packbackbooks/lti-1-3-php-library	-	dbhynds,packback-deployer	v6.4.4	2026-09-23T21:17:20+00:00	declared+guessed
+php-xapi/client	0.7	b39735b	0.7	php-xapi/client	MIT	200	200	php-xapi/client	php-xapi/client	-	xabbuh	0.7.x-dev	2021-03-24T13:46:13+00:00	declared+guessed
+php-xapi/model	3.x	e005084	3.x	php-xapi/model	MIT	200	200	php-xapi/model	php-xapi/model	-	xabbuh	3.x-dev	2025-01-20T10:38:08+00:00	declared+guessed
+portabilis/i-educar	2.12	cd1da68	2.12	portabilis/i-educar	GPL-2.0-or-later	404	404	-	-	-	-	-	-	declared+guessed
+rachelproject/contentshell	master	1f3ca1f	-	-	-	-	404	-	-	-	-	-	-	guessed
+tl-its-umich-edu/caliper-php-public	public	e35b0ec	public	umich-its-tl/caliper-php	proprietary	200	404	umich-its-tl/caliper-php	tl-its-umich-edu/caliper-php-public	-	lsloan	1.0.1	2016-01-27T19:20:14+00:00	declared+guessed

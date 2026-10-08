@@ -4,6 +4,264 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-third pass, 2026-10-08 — **all four regional queries returned education-specific material** (pass 62 had two empty), and the band line itself was measured wrong: the policy channel is blocked **at the proxy**, not at the hosts
+
+⏱️ **Seventeenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+🟢 **Per the convention, pass 62's `## Opportunities by region` heading is retitled *superseded*; the live block is below.**
+
+🟢 **Oracle map re-measured before any datum (`P713`, `P745`), `n = 2`:** `raw` **200** against a
+404-discriminating control (real file 200 / invented 404 / **invented *branch* 404**), `pypi`
+**200 × 2**, `npm` **200 × 2**, `maven` **200 × 2**, `packagist` **200 × 2 against its own
+calibration pair**, `api.nuget.org` **200 × 2**, `ls-remote` discriminates **and resolves the
+default ref**. 🔴 `api.github.com/repos/{third-party}` **403 × 2** — **no star counts** (`P745`).
+
+### 🔴 The band, corrected — and the correction is the same defect as the oracle-map line this pass refutes
+
+🔴 **Policy and report hosts: `000`, 8 of 8** — `www.unesco.org`, `www.iesalc.unesco.org`,
+`www.digitaleducationcouncil.com`, `www.worldbank.org`, `www.multistate.us`, `dig.watch`,
+`www.lw.com`, `www.1edtech.org`. 🟢 **Twice the denominator pass 62 used, same verdict.**
+
+🔴 **But pass 62 wrote it as "policy and report hosts are `000`"** — a statement about the
+**hosts**. 🟢 **What the wire says, on two independent channels, is narrower and different:**
+
+| Channel | What it returned | What it licenses you to say |
+|---|---|---|
+| `curl` | `CONNECT tunnel failed, response 403`, 8 of 8 hosts × 2 | the **egress proxy** refused the tunnel |
+| `WebFetch` | `EGRESS_BLOCKED`, naming the domain | the **egress proxy** refused the fetch |
+
+🔵 **No request reached any of those eight hosts, so nothing was measured about any of them.**
+🔵 **This is `P791` in a second place:** a code produced by an **intermediary** is not a fact about
+the **endpoint**, exactly as a code produced by a **target id** is not a fact about the **host**.
+🟡 **The practical band is unchanged — every regulatory and survey figure below is `reported`,
+single-channel, per `P784`** — 🟢 but the reason is now correct, and it is a reason that will not
+change when a host comes back up.
+
+🟢 **Every repo, licence, ref and registry date in this pass is payload-read.**
+
+### 🟢 The regional channel recovered — 4 of 4 returned education-specific material
+
+🔴 **Pass 62 recorded two of four regional queries returning nothing about education at all.**
+🟢 **This pass all four returned education-specific regulation, adoption figures and named
+programmes.** 🔵 So `P785` holds and is worth restating: *"this channel is saturated" is the most
+expensive conclusion a pass can record* — the regional channel was not saturated, it was quiet for
+one window.
+
+🟢 **And the EMEA channel defect did not recur.** 🔴 Pass 59 recorded one query serving the
+**superseded `2026-08-02`** Annex III date. 🟢 This pass the channel served the **current**
+position: Annex III high-risk obligations **postponed to `2027-12-02`** under the Digital Omnibus,
+Council final green light **`2026-06-29`**, 🟡 **still awaiting Official Journal publication** —
+which is why the date is `reported` and carries a conditional, not a deadline.
+
+## Opportunities by region
+
+🔵 **Framing, per `P790`/`P769`: each opportunity names a protocol or a function, never a brand.**
+🔵 **Every component named below is a row this shelf has payload-read at a pinned ref.**
+
+### North America
+
+🟡 **What the market is doing (`reported`, single-channel):** two trackers disagree on the
+denominator — **134 bills across 31 states** in the 2026 session on one count, **68 across 27** on
+another, 🔵 **and the disagreement is the finding: the category is defined differently, so neither
+number is a rate.** 🟢 **What both agree on is the shape:** guidance outruns statute —
+**33–35 state departments of education plus Puerto Rico** publish official AI guidance, while
+`OH HB 96` and `TN SB 1711` push the obligation down to districts to write their own policy.
+
+🟡 **The binding constraints, named:** `CA AB 1159` prohibits using student data to train AI
+models; `ID SB 1227` requires privacy protections for AI tools in schools; **Oklahoma and Maryland
+require human oversight and bar AI from high-stakes decisions about students**; `MD SB 720`
+requires the state to offer teachers AI professional development; `AL HB 329` makes an approved CS
+course that includes AI instruction a graduation requirement. 🟡 Federally, the Education
+Department finalised a rule prioritising grants for projects on AI understanding and ethical use,
+and `H.R. 8747` (K-12 AI Literacy and Readiness Act) advanced in committee in July 2026.
+
+🔴 **The constraint that decides the product, and it is this shelf's `P764`:** NYC's guidance of
+**2026-03-24** puts grading, promotion, discipline, advising, crisis intervention, IEP/504
+assembly and academic placement in the **red** tier — **a prohibition, not a condition.**
+🔴 **No amount of human-in-the-loop converts a prohibited use into a permitted one**, so in US
+public K-12 **the grading pipeline is not the product**; the green teacher-facing tier is.
+
+🟢 **Where the engagement lands:** the **district-policy obligation** created by `OH HB 96` and
+`TN SB 1711` is a build, not a memo — a per-district policy register wired to the function-level
+red/yellow/green classification this shelf already encodes, with `CA AB 1159`'s training-data
+prohibition expressed as a **data-flow** constraint rather than a clause. 🟢 The permissive
+substrate exists: **Ed-Fi Data Standard v6** (`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`,
+`-ODS-Docker`, `-API-Publisher`, Apache-2.0 at pinned refs) is the US student-record layer, and
+**`grantholle/powerschool-api`** is a payload-read **MIT** PHP client for the dominant SIS,
+package `grantholle/powerschool-api` **v4.5, 2026-03-18** — 🟢 re-measured this pass at its real
+default ref `main` (`f54e292`), manifest and licence file agreeing on MIT.
+
+🔴 **Declared gap, and it is a gap in the *region*, not in the shelf:** **nothing on Canada or
+Mexico returned.** 🔵 "North America" in this pass's evidence means the United States. 🟢 A Canadian
+or Mexican engagement is **not** served by the rows above, and saying so costs one line while
+pretending otherwise costs a proposal.
+
+### EMEA
+
+🟡 **The regulatory shape (`reported`, single-channel):** the AI Act's **Annex III** makes
+education high-risk for four named functions — determining **access or admission**, **assigning**
+people to institutions, **evaluating learning outcomes where those outcomes steer the learning
+process**, and **monitoring prohibited behaviour during tests**. 🔴 **Emotion recognition in
+education institutions is prohibited outright** (from `2025-02-02`, medical/safety exception
+aside). 🟡 **Article 4** AI-literacy duties on staff have been in force since February 2025 and
+supervision and enforcement rules apply from **August 2026**; 🟡 **Annex III high-risk obligations
+are postponed to `2027-12-02`** under the Digital Omnibus (Council green light `2026-06-29`,
+awaiting OJ publication). 🟡 Public schools additionally owe an **Article 27 Fundamental Rights
+Impact Assessment**.
+
+🔵 **Read as engineering, that list is a specification, which is what `P710` already knows how to
+build:** four conditioned functions, one prohibited function, one assessment artefact, and a
+literacy obligation with a date already past. 🔵 **The `2027-12-02` shift is not relief** — it moves
+the conformity deadline, not the Article 4 duty or the emotion-recognition ban.
+
+🟢 **Where the engagement lands:** the **assessment** edge, because it is the one Annex III
+conditions and the one this shelf can now build permissively on both sides.
+🆕 **Measured this pass: the QTI 3 layer splits by licence.** `oat-sa/qti-sdk` is **GPL-2.0-only**
+(manifest, `master`) — 🔴 it cannot sit inside a client deliverable — while
+**`Kennisnet/php-qti3`** is **MIT** on both layers, package `wikiwijs/php-qti3` **v0.7.0,
+2026-09-22**, default ref `main` (`0ba4f78`), 🟢 **the freshest permissive assessment component on
+this shelf.** 🟢 Beside it, `LongsightGroup/qti3` (MIT) authors and banks items and
+`amp-up-io/qti3-item-player` (MIT) delivers them. 🔵 **So "evaluate learning outcomes" can be built
+with a permissive chain end to end, and the `-only` copyleft is avoidable rather than merely
+disclosed.**
+
+🟡 **Named programmes and players (`reported`):** a Commission/OECD draft **AI Literacy Framework**
+for primary and secondary education, G7-endorsed; **AI-ENTR4YOUTH** running applied AI student
+projects in **10 European countries** over three years, coordinated by JA Europe with Intel and
+Commission support; vendor lists that recur include Kahoot!, Sanoma Learning, Century Tech,
+Pearson and Bridge-U alongside the hyperscalers. 🟡 **Teacher readiness, not procurement, is the
+reported bottleneck**, and education policy stays national while the Act is union-wide.
+
+### APAC
+
+🟡 **The region has no single framework, and that is the engineering fact (`reported`):**
+
+| Jurisdiction | Instrument | Status as reported | What it binds |
+|---|---|---|---|
+| South Korea | **AI Basic Act** | in force **2026-01-22**; MSIT pilot year, one-year penalty grace | AI-generated content must be **labelled** so origin is recognisable |
+| Vietnam | **Law on Artificial Intelligence** | passed **2025-12-10**, effective **2026-03-01** | education among **six high-risk sectors**, naming **automated assessment** and **behavioural monitoring** |
+| Taiwan | **AI Basic Act** | passed December 2025 | framework |
+| China | algorithm, deep-synthesis and generative-AI rules | enforced | binding, at the strict end |
+| Singapore · Japan | voluntary guidelines over existing law | in force | guidance, not statute |
+| Australia | AI Safety Institute (Nov 2025) · National AI Plan (Dec 2025) | established | institutional |
+
+🔴 **So a regional platform crosses at least three incompatible regimes**, and
+🔵 **Vietnam's wording matters most to this shelf: it names exactly the function the EU
+conditions and NYC prohibits.** 🟢 **Three jurisdictions, three postures, one function** — which is
+why the policy layer belongs in a **per-jurisdiction policy node** rather than in a config flag.
+🟢 Korea's labelling duty is the cheapest of the three to satisfy and the only one that is a
+**provenance** requirement: it wants a marking on the artefact, which is the shape
+`compose/code/aiact-50-2-marking/` already emits.
+
+🟡 **Players (single vendor report, no second channel):** Google, Microsoft, IBM, Pearson and
+Byju's named for the APAC AI-in-education market, with China, India and Japan reported as
+dominating it and China credited with the heaviest state backing.
+
+🔴 **Declared gap:** **no dedicated APAC report on school or university AI adoption returned** —
+the regulatory channel answered well and the adoption channel did not. 🔵 So the regimes above are
+placed and the **adoption rates are not**; an APAC engagement can be scoped against regulation
+this pass but not sized against uptake.
+
+### LATAM
+
+🟢 **This is the region with the strongest *measured* numbers this pass — and every one of them is
+`reported`, single-channel, because all four report hosts were refused at the proxy.**
+
+| Figure | As reported | Source channel |
+|---|---|---|
+| **87%** of institutions use AI in **at least one** area · **26%** have a formal AI strategy | 200 institutions, **19 countries** | UNESCO IESALC + UNU-IAS |
+| **92%** of students · **79%** of faculty actively engaging with AI | **>30 000** responses, **29** institutions | Digital Education Council LATAM 2026 |
+| **53%** of school administrators use AI · **22%** report school guidelines | Brazil | Cetic.br, 2026 |
+| **75%** usage in high socio-economic class vs **42%** in low | Argentina | Kids Online Argentina, 2025 |
+
+🔴 **The 87 / 26 pair is the whole opportunity in two numbers:** adoption is near-universal and
+**governance is absent in three institutions out of four.** 🔵 The gap between them is not a
+training problem, it is an **artefact** problem — a policy register, a function-level
+classification, and a record of which system touched which decision.
+
+🟢 **Named programmes and players:** the **UNESCO Observatory on AI in Education for Latin America
+and the Caribbean**, launched **14 April** with a **2026–2029** roadmap; UNESCO–**CENIA** (Chile)
+on AI literacy; a **Tecnológico de Monterrey**–UNESCO agreement (March 2026); **Nvidia AI Week
+LATAM 2026** extending to Mexico and Chile beside Colombia, hosted at universities rather than at
+trade venues. 🟡 **In Peru**, a World-Bank-documented programme with **uDocz, Anthropic and
+Microsoft** reached **85 public schools and ~4 500 fifth-year secondary students in Lima since
+March 2026**.
+
+🟡 **Regulation, and it is converging on precisely this shelf's constraint:** Brazil's bill is
+reported as the region's most developed and is modelled on the EU Act with tiered risk and civil
+liability; Chile's draft is built on transparency, fairness and human oversight; 🔴 **Peru's draft
+would classify educational admissions and student evaluations as high-risk** — the Annex III
+functions again, a third continent; Colombia and Paraguay have proposals naming education;
+Argentina has momentum and no formal law.
+
+🟢 **Where the engagement lands, and LATAM is the one region where the *substrate* is local:**
+**`portabilis/i-educar`** is Brazil's municipal school system, and this pass re-measured it at its
+**real** default ref — 🔴 **not `master`:** `ls-remote --symref` resolves `refs/heads/2.12`
+(`cd1da68`), and `raw` only served `master` because `master` is a **pseudo-ref** for the default
+(`P793`). 🔴 **Its licence lands copyleft on both layers but not the same copyleft:** the licence
+file at `2.12` is bare **GPL-2.0** ("Version 2, June 1991") while `composer.json` declares
+**`GPL-2.0-or-later`**. 🔵 **The `-or-later` exists only in the manifest**, and it is the difference
+between a substrate frozen at v2 and one that can be combined forward — so the integration
+boundary has to be read from the manifest layer, not from the file.
+
+🟢 **So the LATAM shape is: a copyleft local substrate, a permissive edge, and a governance
+artefact that three institutions in four do not have.** 🔵 Globant's deliverable sits on the edge
+and in the artefact, never inside the substrate — which is `P747a`, now with a Brazilian instance.
+
+🟢 **And the regional model is NOT a gap — this shelf already holds two of its repositories, and
+re-measuring them this pass turned up a label that is wrong.** 🔵 **The `latam-gpt` GitHub org
+resolves**, and `agents/top.md` has carried two rows from it since pass 60:
+
+| Repository | Default ref · HEAD | Licence payload, re-read this pass | Shelf label |
+|---|---|---|---|
+| [`latam-gpt/lm-evaluation-harness`](https://github.com/latam-gpt/lm-evaluation-harness) | `main` · **`9fa381a`** | 🟢 `LICENSE.md`, 1 067 B, *"MIT License"* | 🟢 **MIT — correct** |
+| [`latam-gpt/syco-bench`](https://github.com/latam-gpt/syco-bench) | `main` · **`5ecc005`** | 🔴 `LICENSE`, 903 B, *"**MIT No Attribution**"* | 🔴 **recorded as "MIT" — it is `MIT-0`** |
+
+🟢 **Both cited SHAs match the oracle exactly**, so the provenance was right and only the licence
+*name* was wrong. 🔵 **`MIT-0` is *more* permissive than MIT, not less** — it drops the attribution
+condition — 🔴 **so the correction creates no exposure and still has to be made**, because a KB
+whose licence column is approximate cannot be used as a pre-flight (`P443`'s lesson about
+spellings, applied to licence identifiers).
+
+🔴 **What genuinely did not resolve is a *model* repository.** 🔵 Three conjectured slugs were tried
+against `ls-remote` and none resolved, 🔴 **and per `P253` that is a fact about the three guesses,
+not about the project.** 🔵 **Bounded remedy: resolve it from the org's own repository listing or
+from the Observatory's payload (`P780`), not from more spellings** — and note that the two rows
+above were found by **grepping this shelf**, which is the cheaper channel and the one pass 59
+already told this KB to try first.
+
+### Global
+
+🟢 **One opportunity is genuinely cross-regional, and this pass is the reason it can be stated:
+the *same function* is now regulated on three continents, and the regimes disagree.**
+
+| Function | EU | Vietnam | Peru (draft) | South Korea | NYC public K-12 |
+|---|---|---|---|---|---|
+| **automated assessment / scoring** | 🟡 **conditioned** (Annex III) | 🟡 **conditioned** (high-risk sector) | 🟡 **conditioned** (`reported`) | 🟡 **labelling** | 🔴 **PROHIBITED** |
+| **admissions / placement** | 🟡 conditioned | 🟡 conditioned | 🟡 conditioned | 🟡 labelling | 🔴 **PROHIBITED** |
+| **affect / emotion inference** | 🔴 **PROHIBITED** since `2025-02-02` | — | — | — | 🔴 red tier |
+| **teacher-facing draft generation** | 🟢 clear | 🟢 clear | 🟢 clear | 🟡 labelling | 🟢 **green tier** |
+
+🔵 **Read across the rows and the product is already decided:** the **bottom** row is clear
+everywhere this pass measured, and every row above it is conditioned somewhere and prohibited
+somewhere. 🟢 **So the globally deployable artefact is the teacher-facing draft plus the record of
+who decided what** — and the per-jurisdiction difference is a **policy node in the control flow**,
+not a feature flag (`R63a`).
+
+🟢 **The permissive chain that implements it is global too**, because none of it is
+jurisdiction-specific: **LTI 1.3** launch (Apache-2.0), **QTI 3** authoring and delivery
+(MIT throughout, freshest release `2026-09-22`), **xAPI** records (MIT), **Open Badges 3.0 / W3C
+VC** credentials (BSD-3-Clause + MIT), with the copyleft LMS substrate left untouched (`P747a`).
+🔴 **The one edge that is globally missing is analytics** — `Gap 284`, whose only reachable
+implementation is `proprietary` in two layers of three and nine years stale.
+
+🟡 **The one global *market* number this pass can place, and it is placed loosely:** reports put AI
+in education at **USD ~10.6B in 2026** rising to **~USD 42.5B by 2030** on one publisher's figures,
+with other publishers giving materially different totals. 🔴 **`reported`, single-channel, and the
+publishers disagree by more than the growth they project**, so it is a direction and not a number.
+🔵 **The adoption figures are the better global signal:** on the surveys above, student and faculty
+use is already near-universal while formal institutional strategy sits around a quarter —
+🔵 **the gap between use and governance is the engagement, in every region this pass measured.**
+
 ## 🟢 Sixty-second pass, 2026-10-08 — **two of the four regional queries returned nothing about education at all**, and that is written down; LATAM returned the figures `Gap 242` has been asking for since pass 44
 
 ⏱️ **Sixteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
@@ -56,7 +314,7 @@ source says **30 %** of LATAM universities have published AI policies against IE
 which is the same definitional looseness `Gap 242` was opened about. 🟡 **So the gap narrows from
 "no figure" to "figures from one channel, with one unresolved variant"** and stays open.
 
-## Opportunities by region
+## Opportunities by region — superseded (the live block is at the top of this file)
 
 ### North America
 

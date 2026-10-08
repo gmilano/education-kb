@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-third pass, 2026-10-08 — week of 2026-10-08: the agent channel's fourteenth empty week gets a **mechanism** (`P795`), and the week's only real movement is on the **assessment** protocol
+
+⏱️ **Seventeenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+🟢 **Oracle map re-measured before any datum (`P713`, `P745`), `n = 2`:** `raw` **200** (404-discriminating, **branch-level too**), `pypi` **200 × 2**, `npm` **200 × 2**, `maven` **200 × 2**, 🟢 `packagist` **200 × 2 against its own calibration pair — and pass 61's `404` and pass 62's "recovery" were both misreads** (`P791`), `api.nuget.org` **200 × 2**, `ls-remote` discriminates **and resolves the default ref**. 🔴 `api.github.com/repos/{third-party}` **403 × 2** — **no star counts** (`P745`). 🔴 Policy/report hosts **`000`, 8 of 8 — refused at the egress proxy**, not measured at the hosts.
+
+### 🔴 The agent channel, fourteenth consecutive empty week — and the reason is now named
+
+🔴 **Both industry-named queries run; neither returned an education-specific agent.** 🟢 What came
+back was **courses and learning paths** in both cases — a 500-project catalogue, a beginners'
+agents curriculum, an AI-engineering-from-scratch repo, a developer roadmap, two "awesome" lists.
+
+🆕 **`P795`:** `AI {industry}` names a **domain** for every other industry on the rotation.
+🔴 **For education it names a domain *and* the act of teaching the technology**, so the phrase ranks
+*courses about AI* above *agents doing education*. 🔵 **The emptiness is a property of the query,
+not of the field** — and the same pass's **protocol-named** queries returned four payload-read rows.
+🟢 **Remedy, specific: ask by protocol or function.** 🟢 **The industry-named queries stay in the
+run**, because `P785` says a saturation claim is the most expensive thing a pass can write.
+
+### 🟢 What is actually new this week — dated by registry, not by a blog
+
+| Component | Protocol / function | Licence (layer) | Registry date | Why it is new to this shelf |
+|---|---|---|---|---|
+| [`Kennisnet/php-qti3`](https://github.com/Kennisnet/php-qti3) | **QTI 3** assessment library | 🟢 **MIT** · file *and* manifest | 🟢 packagist `wikiwijs/php-qti3` **v0.7.0, 2026-09-22** | 🆕 **the freshest permissive component on the edge table**, and it makes the assessment edge permissive end to end |
+| [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | **LTI 1.3** tool library | 🟢 **Apache-2.0** · manifest @ `master` (`a20c71b`) | 🟢 packagist `packbackbooks/lti-1p3-tool` **v6.4.4, 2026-09-23** | 🟢 **pass 62's datum confirmed by the id the tree declares** — the id pass 62 probed does not exist |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | SIS substrate | 🔴 GPL-2.0-or-later · manifest @ `mobile` (`899f6da`) | 🟢 packagist **`12.9.x-dev`, 2026-09-02** | 🆕 **rescued by `P793`**: a `{main,master}` probe reported no manifest at all |
+| [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | CRM substrate (PHP) | 🟢 **MIT** · manifest @ `2.2` (`fa4eeca`) | 🟢 packagist **`2.2.x-dev`, 2026-10-07** | 🟢 **the most recent registry timestamp in the sweep — yesterday** |
+| [`tl-its-umich-edu/caliper-php-public`](https://github.com/tl-its-umich-edu/caliper-php-public) | **Caliper Analytics** | 🔴 **LGPL-3.0 (file) vs `proprietary` (manifest + registry)** · @ `public` (`e35b0ec`) | 🔴 packagist `umich-its-tl/caliper-php` **v1.0.1, 2016-01-27** | 🆕 **`Gap 284`'s only reachable implementation, found and characterised** |
+
+🔵 **Five rows, and not one of them came from the agent channel.** 🟢 **All five are payload-read at
+a ref the oracle resolved**, never at a guessed branch name.
+
+### 🔴 Three defects found by RUNNING instruments, not by reading them
+
+🆕 **`P791` — a code from a TARGET is not a fact about the HOST.** Pass 61 wrote `packagist 404`
+and pass 62 wrote `packagist 200 — recovered`; both probed
+`packbackbooks/lti-1-3-php-library`, the **repository slug**, which nothing publishes
+(**404 × 2** on `packagist.org`, **404 × 2** on `repo.packagist.org/p2`). 🟢 In the same minute the
+host answered **200** to `monolog/monolog` and **404** to an invented id. 🔵 **A host line comes
+from a calibration pair or it does not come at all** — `host_verdict()` in the new instrument takes
+no target id, and a single-code call raises `TypeError`.
+
+🆕 **`P792` — a gate and its own probe layer can disagree about the shape of the field they
+share.** 🔴 `p253-registry-first-identity/sweep_identity.sh ltijs` emits
+`git+https://github.com/Cvmcosta/ltijs.git`, and `identity.py` compares that **URL** to the
+**slug** `Cvmcosta/ltijs` — returning **`PUBLISHED-BY-OTHER` for a package pointing at exactly its
+own repository.** 🟢 `p253`'s committed table is correct because its column was hand-normalised;
+🔴 **the script was never changed to match**, so the table is right and a re-run is wrong.
+🔵 **`P713`'s complement: reuse the instrument END TO END.** 🟢 Fixed in the new probe layer; the
+gate is untouched.
+
+🆕 **`P793` — `master` is a PSEUDO-REF on `raw`.** It serves the **default** branch for that
+literal name even where no `master` exists (`main` 404, invented branch 404, `master` 200,
+`HEAD` 200 — 3 of 3). 🟢 **Defaults that are neither `main` nor `master`: 7 of 25**, among them
+**`v31.0.00`** — a *tag-shaped branch* — on `GibbonEdu/core`. 🟢 **And 0 of 12** on this shelf's
+evaluation tier, whose SHAs all still match. 🔵 **The defect is ecosystem-shaped, not shelf-shaped.**
+
+### 🟢 Corrected this week
+
+🔴 **`latam-gpt/syco-bench` is `MIT-0` (*"MIT No Attribution"*, 903 B @ `main`/`5ecc005`), recorded
+here as "MIT".** 🔵 More permissive, not less — 🔴 and still a wrong label on a shelf used as a
+pre-flight. 🟢 `latam-gpt/lm-evaluation-harness` re-confirmed **MIT** (1 067 B @ `main`/`9fa381a`).
+
+🔴 **`h5p/h5p-php-library` publishes as `h5p/h5p-core`, not as its slug** — one of **8** rows in
+the sweep where a slug-shaped probe would have reported the package absent.
+
+### 🔴 Declared empty, so silence is not read as coverage
+
+🔴 **No education-specific agent from either industry-named query** — fourteenth week (`P795`
+explains the mechanism; it does not fill the gap).
+🔴 **`Gap 284` not closed.** The protocol-name channel returned a **homonym**: `pypi.org/pypi/caliper`
+is **200** and is `vsoch/caliper`, a package-version analysis tool. 🔴 `caliper-python`, `caliperpy`
+**404**; npm `caliper-js`, `caliper-sensor`, `caliperjs`, `@1edtech/caliper` **404, 4 of 4**.
+🔴 `1EdTech/caliper-spec` carries a **specification-document licence** (12 402 B `LICENSE.md`, not
+OSI) and its README links **zero** implementations.
+🔴 **No `latam-gpt` *model* repository resolved** from three conjectured slugs — a fact about the
+three guesses (`P253`), not about the project; 🟢 **the org itself resolves and two of its repos
+were already on this shelf.**
+🔴 **No APAC school-adoption figures returned** — the APAC regulatory channel answered and the
+adoption channel did not (`intel/market.md`).
+🔴 **No Canada or Mexico coverage returned** — "North America" in this pass's evidence means the
+United States.
+
 ## 🟢 Sixty-second pass, 2026-10-08 — week of 2026-10-08: a **fifth registry** enters the oracle map, and it is the first one whose *identity* half is blocked while its *date* half answers
 
 ⏱️ **Sixteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

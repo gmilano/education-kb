@@ -4,6 +4,130 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-third pass, 2026-10-08 — four trends, and the strongest is that **every measurement error this pass had the same shape**: a code produced by something *in between* was read as a fact about the thing at the end
+
+⏱️ **Seventeenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+🟡 **Band note: every regulatory and survey sentence below is `reported`, single-channel, per `P784`** — policy and report hosts are **`000`, 8 of 8**, 🔴 **refused at the egress proxy on two independent channels** (`curl`: `CONNECT tunnel failed, response 403`; `WebFetch`: `EGRESS_BLOCKED`), so no request reached any of them. 🟢 **Every repo, licence, ref, byte count and registry date is payload-read.**
+
+### 🆕 Trend 1 — **the intermediary problem**, and it is one shape with four instances this pass
+
+🔵 **Four errors were found this pass. They look unrelated and are not:**
+
+| Where | What was read | What it was taken to mean | What it actually measured |
+|---|---|---|---|
+| oracle map, passes 61–62 | `packagist` **404**, then **200** | *the host is down, then recovered* | 🔴 one **package id** that nothing publishes |
+| band line, pass 62 | `000` from 8 policy hosts | *the hosts are down* | 🔴 the **egress proxy** refused the tunnel |
+| `p253` end to end | `pub_repo` = a **URL** | *the package points elsewhere* | 🔴 the **probe layer's spelling**, not the pointer |
+| every `master` ref on this shelf | `raw` **200** at `master` | *the bytes are from `master`* | 🔴 the **default branch**, whatever it is called |
+
+🆕 **`P791` generalised, and this is the pass's proposition:** **a code produced by an
+intermediary — a proxy, a registry lookup of a guessed id, a probe layer's formatting, an alias
+ref — is never a fact about the endpoint.** 🔵 Each instance was invisible *because* the
+intermediary answered successfully: a 404 is a real HTTP response, a URL is a real string, a 200 at
+`master` is real bytes. 🟢 **The only defence is a control that discriminates** — a pair of ids, one
+known to exist and one invented; a channel that names what it refused; a ref oracle independent of
+the content channel.
+
+🟢 **So the gate written this pass takes no target at all:** `host_verdict(good, bad)` requires a
+**pair**, and calling it with one code raises `TypeError`. 🔵 **Passes 61 and 62 never had a pair.**
+
+🔵 **`P787` cut reachability by host; `P791` cuts underneath it.** One host served both of pass 61's
+and pass 62's contradictory answers, in the same minute it answered 200 to a real id and 404 to an
+invented one.
+
+### 🆕 Trend 2 — the **seam** is where instruments fail, and `P713` needs its complement
+
+🔴 **`p253-registry-first-identity` is correct, its committed table is correct, and running it end
+to end is wrong.** Its probe layer emits `git+https://github.com/Cvmcosta/ltijs.git`; its gate
+compares that string to the slug `Cvmcosta/ltijs` and returns **`PUBLISHED-BY-OTHER`** — for a
+package pointing at exactly its own repository. 🟢 The committed TSV escaped it because the column
+was **hand-normalised** and the script never updated.
+
+🆕 **`P792`: *reuse the instrument* is not enough — reuse it END TO END.** 🔵 Pass 59 learned to
+`grep` the instruments before announcing a **property**; pass 63 is the same lesson for an
+**interface**, and the direction of travel is clear: this KB's defects have migrated from *data*
+(passes 40s) to *verdicts* (pass 58) to *properties* (pass 59) to **contracts between
+instruments** (pass 63). 🔵 **235+ committed instruments is enough that the seams now outnumber the
+instruments**, and nothing on this shelf measures a seam except by running one.
+
+🟢 **Corollary with a measurement:** 🆕 **`P792a`** — this pass's own new script shifted two
+columns of a row because `set -- $(…)` splits on whitespace and a maintainer name contained a
+space. 🔵 Same class, found the same way: **by running it.**
+
+### 🆕 Trend 3 — the **assessment** edge is where the licence line actually falls, and the regulation agrees
+
+🟢 **Measured this pass: QTI 3 splits by licence, and not subtly.** 🔴 `oat-sa/qti-sdk` is
+**`GPL-2.0-only`** — *only*, so it cannot even be combined forward — while
+🟢 `Kennisnet/php-qti3` is **MIT on both layers**, published `wikiwijs/php-qti3` **v0.7.0,
+2026-09-22**, 🟢 **the freshest release date on this shelf's edge table.**
+
+🔵 **And the function is the one every regime this pass measured has decided to touch:**
+
+| Regime | Posture toward automated assessment | Status (`reported`) |
+|---|---|---|
+| EU | **conditioned** — Annex III, "evaluating learning outcomes where those outcomes steer learning" | high-risk duties postponed to **2027-12-02**; Art. 4 literacy duty already in force |
+| Vietnam | **conditioned** — education among six high-risk sectors, naming automated assessment | law effective **2026-03-01** |
+| 🆕 Peru | **conditioned** — draft would classify admissions and student evaluations as high-risk | draft |
+| South Korea | **labelling** — AI-generated content must be recognisable as such | in force **2026-01-22**, penalty grace to 2027 |
+| 🔴 NYC public K-12 | **PROHIBITED** — grading, promotion, discipline, placement in the red tier | guidance **2026-03-24** |
+
+🔵 **Three continents now condition the same function and one large district forbids it**, so the
+licence question and the policy question land on the *same component*. 🟢 **The good news is that
+both answers are now favourable:** the permissive QTI chain exists
+(`Kennisnet/php-qti3` + `LongsightGroup/qti3` + `amp-up-io/qti3-item-player`, MIT throughout), and
+`P764`'s red/green split says what to build with it — 🔴 **the grading decision is not the product;
+the teacher-facing draft is.**
+
+🔵 **`P789` with a second instance:** search ranking is relevance, never licence. The
+`GPL-2.0-only` SDK is the better-known name; the MIT library is the one that ships.
+
+### 🆕 Trend 4 — the **analytics** edge is not missing, it is **contradictory**, and that is a harder problem
+
+🟢 **`Gap 284` has been "no permissive Caliper implementation found" for three passes. This pass
+found the implementation and it is worse than absent.**
+`tl-its-umich-edu/caliper-php-public` @ `refs/heads/public` (`e35b0ec`) — 🔴 **no `main`, no
+`master`**:
+
+- 🔴 licence **file**: `LICENSE`, **7 438 B**, title line *"GNU LESSER GENERAL PUBLIC LICENSE /
+  Version 3, 29 June 2007"*, 0 Affero mentions → **LGPL-3.0** by `p419.familia()` (self-test
+  **10/10 green**)
+- 🔴 **manifest**: `composer.json` → `"license": "proprietary"`
+- 🔴 **registry**: packagist `umich-its-tl/caliper-php` **200**, licence `["proprietary"]`, latest
+  **`1.0.1`, 2016-01-27**
+
+🆕 **`P794`: two licence layers can land in opposite *bands*, not merely differ in precision.**
+🔵 The divergences this shelf had on the board were `-or-later` suffixes and version reads; 🔴 **this
+one is open vs not open**, and a one-layer pre-flight publishes whichever layer it happens to read
+first. 🟢 **Neither reading is permissive, so the engineering answer is unchanged** — and
+`Gap 284` is now a *characterised* hole: one reachable implementation, a decade stale, internally
+inconsistent about whether it is open source.
+
+🟡 **The `-or-later` class, also measured:** `portabilis/i-educar`'s licence file at `2.12` is bare
+**GPL-2.0** while its manifest says **`GPL-2.0-or-later`**; `moodle/moodle` splits the same way.
+🔵 **A licence *file* structurally cannot express `-or-later`** — the GNU text is byte-identical
+either way, and the suffix lives in the manifest or the headers (`P620`). 🔵 **So the combination
+question can only be answered at the manifest layer**, which is a reason to read it that has
+nothing to do with catching contradictions.
+
+### 🟡 Standing trends, re-measured and unchanged
+
+🟢 **The substrate/edge rule (`P747a`) holds, now across seven protocols** — substrates copyleft
+(Moodle GPL-3.0-or-later @ `main`/`f205347`, Open edX AGPL-3.0, Canvas AGPL-3.0, OpenEduCat
+LGPL-3.0, Gibbon GPL-3.0 @ `v31.0.00`, H5P's PHP core GPL-3.0), edges permissive at six of seven.
+🔴 **Pass 59's Moodle correction stands for a fourth pass: GPL-3.0, never AGPL.**
+
+🔴 **The agent-discovery channel is empty for a fourteenth week, and now has a mechanism.**
+🆕 **`P795`:** `AI {industry}` names a domain for every industry on the rotation **except
+education**, which also names the act of teaching the technology — so the phrase ranks *courses
+about AI* above *agents doing education*. 🔵 **Fourteen weeks of emptiness is a property of the
+query.** 🟢 **Evidence: the protocol-named queries returned four payload-read rows in the same
+pass that the two industry-named queries returned zero.**
+
+🟢 **The regional channel recovered: 4 of 4 returned education-specific material** (pass 62 had two
+empty), and 🟢 **the EMEA date defect did not recur** — the channel served the current
+`2027-12-02` position rather than the superseded `2026-08-02` one. 🔵 **`P785` vindicated: the
+channel was quiet for one window, not saturated.**
+
 ## 🟢 Sixty-second pass, 2026-10-08 — four trends, and the strongest is that the **exit** of the learning loop has become the part with a public mandate behind it while the **tooling that proves a licence** turns out to be the fragile link
 
 ⏱️ **Sixteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

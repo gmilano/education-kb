@@ -4,6 +4,144 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-third pass, 2026-10-08 — the **assessment** edge turns out to have a permissive implementation beside its copyleft one, and the seventh edge is finally *characterised*: `Gap 284`'s only reachable implementation declares itself **`proprietary`** while shipping an **LGPL-3.0** licence file
+
+⏱️ **Seventeenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Oracle map re-measured before any datum (`P713`, `P745`), `n = 2`:** `raw` **200** against a
+404-discriminating control, including an **invented *branch* 404**; `packagist` **200 × 2 against
+its own calibration pair** (`monolog/monolog` 200 · invented id 404); `ls-remote` discriminates and
+**resolves the default ref**. 🔴 `api.github.com/repos/{third-party}` **403 × 2** — **no star
+counts** (`P745`). 🔴 Policy and report hosts **`000`, 8 of 8 — refused at the egress proxy, so
+nothing was measured about the hosts themselves** (see `intel/market.md` for the band).
+
+### 🆕 The assessment edge **splits by licence**, and the permissive half is the freshest component on this shelf
+
+🔴 **This file has carried QTI 3 as a platform row since pass 42 and never as an *edge*.** 🟢 It is
+one: *"what the question is"* sits between *"what the content is"* (SCORM/cmi5) and *"what the
+learner did"* (xAPI), and it is the exact function the EU Act's **Annex III** conditions, Vietnam's
+AI law names, and NYC's March guidance puts in the red tier. 🟢 **Measured this pass at pinned
+refs, both layers:**
+
+| Component | Function | Default ref · SHA | Licence file | `composer.json` | Registry · date |
+|---|---|---|---|---|---|
+| [`Kennisnet/php-qti3`](https://github.com/Kennisnet/php-qti3) | QTI 3 support library (PHP) | 🟢 `main` · `0ba4f78` | 🟢 **MIT** (© 2026 Kennisnet) | 🟢 **MIT** | 🟢 packagist **`wikiwijs/php-qti3` v0.7.0, 2026-09-22** |
+| [`oat-sa/qti-sdk`](https://github.com/oat-sa/qti-sdk) | QTI 1.2/2.x/3 SDK (PHP) | 🟢 `master` · `634a9b8` | — | 🔴 **GPL-2.0-only** | 🟢 packagist **`qtism/qtism` v19.7.2, 2026-07-09** |
+| [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) | item parser · validator · writer (TS) | 🟢 `main` · `ab92d85` | 🟢 **MIT** · 1 072 B | 🟡 no `composer.json` at the default ref | — |
+| [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | QTI 3 delivery (Vue) | 🟢 shelved · `main/LICENSE` 1 076 B | 🟢 **MIT** | — | — |
+
+🔵 **The architectural point, and it is the one a proposal gets wrong:** the most *capable* PHP QTI
+component is **`GPL-2.0-only`** — 🔴 *only*, so it cannot even be combined forward to GPL-3.0 — and
+the permissive alternative is **not a toy**: `wikiwijs/php-qti3` published **v0.7.0 on 2026-09-22**,
+🟢 **the most recent release date of any component on this shelf's edge table.**
+🟢 **So the assessment edge is permissive end to end if it is *composed deliberately*, and copyleft
+by default if the first search result is taken.**
+
+🔵 **`P789` restated with a second instance:** search ranking is relevance, never licence. The
+GPL-2.0-only SDK is the better-known name; the MIT library is the one Globant can ship.
+
+### 🔴 `Gap 284` — Caliper Analytics: not closed, but no longer merely *unfound*
+
+🟢 **Pass 62 left `Gap 284` with a bounded remedy: resolve the implementation from a registry
+`repository` field (`P780`) instead of guessing slugs.** 🟢 **That remedy was run this pass, and it
+produced three answers, two of which are new:**
+
+**1. The protocol-name channel returns a homonym.** 🔴 `pypi.org/pypi/caliper/json` answers **200** —
+and it is **`vsoch/caliper`**, a Python *package-version analysis* tool with nothing to do with
+learning analytics. 🔴 `caliper-python`, `caliperpy` **404**; npm `caliper-js`, `caliper-sensor`,
+`caliperjs`, `@1edtech/caliper` **404, 4 of 4**. 🔵 **So the registry answered and the answer was
+wrong** — `P791`'s `FALSE-PRESENCE` class arriving through the **protocol-name** channel rather
+than the slug channel. 🔵 **A pass that accepted the 200 would have shelved an unrelated package
+under an education protocol.**
+
+**2. The specification itself is not open, and its README names no implementation.**
+🟢 `1EdTech/caliper-spec` @ `master`: **no `LICENSE`** (404) and a **`LICENSE.md` of 12 402 B whose
+first line is `IMS GLOBAL LEARNING CONSORTIUM, INC.` and whose heading is
+`# SPECIFICATION DOCUMENT LICENSE`**, pointing at `imsglobal.org/speclicense.html`. 🔴 **Not an OSI
+licence** (`P191`). 🔴 **Its README mentions the Sensor API once and links to zero repositories** —
+so the "resolve it from the spec" path is measured shut, not assumed shut.
+
+**3. The one reachable implementation contradicts itself, and this is the finding.**
+🟢 `tl-its-umich-edu/caliper-php-public`, 🔴 **whose default ref is `refs/heads/public` (`e35b0ec`)
+— there is no `master` and no `main`** (`P793`):
+
+| Layer | Read | Verdict |
+|---|---|---|
+| licence **file** `LICENSE` @ `public` | 7 438 B, title line `GNU LESSER GENERAL PUBLIC LICENSE / Version 3, 29 June 2007`, **0** Affero mentions | 🔴 **LGPL-3.0** — by `p419.familia()`, self-test **10/10 green** |
+| **manifest** `composer.json` @ `public` | `"license": "proprietary"`, `"name": "umich-its-tl/caliper-php"` | 🔴 **`proprietary`** |
+| **registry** packagist `umich-its-tl/caliper-php` | **200**, `repository` → this repo, maintainer `lsloan` | 🔴 **`["proprietary"]`**, latest **`1.0.1`, 2016-01-27** |
+
+🔴 **Two of three layers say `proprietary`; the licence file says LGPL-3.0; the newest release is
+nine years and eight months old.** 🔵 **Both readings are hostile to a client deliverable**, so
+`Gap 284` stays open — 🟢 **but it is now a characterised hole rather than an empty cell:** the
+seventh edge has exactly one reachable implementation, it is a decade stale, and its own layers
+disagree about whether it is open source at all.
+
+🔵 **`P794`: a licence-file read and a manifest read can land in opposite *bands*, not merely
+differ in precision.** 🔵 The divergences this shelf had seen were `-or-later` suffixes and
+version reads; this one is **open vs not open**, and a one-layer pre-flight picks whichever layer
+it happens to read first.
+
+### 🟢 The seven edges, re-measured — with the assessment edge added and the ref column corrected
+
+| Edge | Standard | Permissive implementation | Licence · default ref | Registry date |
+|---|---|---|---|---|
+| **Who may be told what** | **LTI 1.3** | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) · 🆕 [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | 🟢 Apache-2.0 · 🟢 **Apache-2.0** (`master`, `a20c71b`) | 🟢 npm **v7.0.7, 2026-10-06** · 🟢 packagist **`packbackbooks/lti-1p3-tool` v6.4.4, 2026-09-23** |
+| **Who is in the class** | **OneRoster** · 🆕 **SIS API (PowerSchool)** | [`longsightgroup/oneroster`](https://github.com/longsightgroup/oneroster) · [`TCI/OneRoster`](https://github.com/TCI/OneRoster) · 🆕 [`grantholle/powerschool-api`](https://github.com/grantholle/powerschool-api) | 🟢 MIT · MIT · 🟢 **MIT** on both layers (`main`, `f54e292`) | 🟡 — · 🟢 packagist **v4.5, 2026-03-18** |
+| **What the content is** | **SCORM · AICC · cmi5** | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) · [`adlnet/CATAPULT`](https://github.com/adlnet/CATAPULT) | 🟢 MIT · Apache-2.0 | 🟢 npm **v3.4.5, 2026-10-05** |
+| 🆕 **What the question is** | **QTI 3** | [`Kennisnet/php-qti3`](https://github.com/Kennisnet/php-qti3) · [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) · [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | 🟢 **MIT** on both layers (`main`, `0ba4f78`) · MIT · MIT | 🟢 packagist **`wikiwijs/php-qti3` v0.7.0, 2026-09-22** |
+| **What the learner did** | **xAPI** | [`xapijs/xapi`](https://github.com/xapijs/xapi) · [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) · [`openfun/ralph`](https://github.com/openfun/ralph) · 🆕 [`php-xapi/model`](https://github.com/php-xapi/model) | 🟢 MIT · Apache-2.0 · MIT · 🟢 **MIT** (🔴 default ref **`3.x`**, `e005084`) | 🟢 npm **v3.0.3, 2026-04-27** · 🟡 packagist **`3.x-dev`, 2025-01-20** |
+| **What the record is** | **Ed-Fi v6** | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) + 3 | 🟢 Apache-2.0 at pinned refs | 🔴 **none reachable** (`Gap 286`) |
+| **What the learner keeps** | **Open Badges 3.0 · CLR 2.0 · W3C VC** | [`digitalcredentials/vc`](https://github.com/digitalcredentials/vc) + 3 | 🟢 BSD-3-Clause · MIT · MIT · Apache-2.0 | 🟢 npm **v10.0.2, 2025-11-19** |
+| 🔴 **What the analytics are** | **Caliper Analytics** | 🔴 **one reachable, and it is `proprietary` in two layers of three** | 🔴 LGPL-3.0 *file* vs `proprietary` *manifest+registry* (`public`, `e35b0ec`) | 🔴 **`1.0.1`, 2016-01-27** |
+
+🟢 **Seven edges, six permissive, every implementation payload-read at a ref resolved by
+`ls-remote --symref` rather than guessed.** 🔴 **Two named holes, both now characterised:** the
+Caliper edge has one stale self-contradicting implementation (`Gap 284`), and the Ed-Fi tier still
+has no reachable registry date (`Gap 286`).
+
+### 🔴 `P793` — three of this file's conventions rested on a ref that does not exist
+
+🔴 **`raw.githubusercontent.com` serves the DEFAULT branch for the literal ref `master`, even when
+the repository has no `master`.** 🟢 Measured with a control: `main` **404**, an invented branch
+name **404**, `master` **200**, `HEAD` **200** — on three repositories whose real defaults are
+`refs/heads/0.7`, `refs/heads/public` and `refs/heads/2.12`.
+
+🔴 **So "payload-read at `master`" was never provenance on this shelf**, and the pseudo-ref cuts
+both ways: 🟢 it **rescued** a row too — `francoisjacquet/rosariosis` showed **no manifest at all**
+under a `{main,master}` probe, and its real default ref **`mobile`** (`899f6da`) carries a
+`composer.json` declaring **`GPL-2.0-or-later`**, published as `francoisjacquet/rosariosis`
+**`12.9.x-dev`, 2026-09-02**. 🔵 **A false absence and a false provenance from the same cause.**
+
+🟢 **Defaults that are neither `main` nor `master`, measured, **7 of 25**:** `GibbonEdu/core` →
+**`v31.0.00`** (a *tag-shaped branch*), `francoisjacquet/rosariosis` → `mobile`,
+`krayin/laravel-crm` → `2.2`, `php-xapi/client` → `0.7`, `php-xapi/model` → `3.x`,
+`portabilis/i-educar` → `2.12`, `tl-its-umich-edu/caliper-php-public` → `public`.
+🔵 **Nearly a third of a PHP-layer population, so this is not an edge case in this ecosystem** —
+🔴 **and no rate is published:** 22 slugs this shelf already cites is not a sampling frame
+(`P744`).
+
+### 🟡 The substrate/edge rule, with a Brazilian instance and a correction to its licence
+
+🟢 **`P747a` holds and gains a row.** 🔴 The substrates have not moved: Moodle **GPL-3.0-or-later**
+(🟢 manifest @ `main`, `f205347` — *not* AGPL, which is pass 59's correction standing for a fourth
+pass), Open edX **AGPL-3.0**, Canvas **AGPL-3.0**, OpenEduCat **LGPL-3.0**, 🆕 Gibbon **GPL-3.0**
+(manifest @ `v31.0.00`, `683d2c4`), 🆕 H5P's PHP core **GPL-3.0** (manifest @ `master`, `cb64a1f`,
+published as **`h5p/h5p-core`** — 🔴 *not* `h5p/h5p-php-library`), 🟢 Kolibri **MIT**,
+OpenOLAT **Apache-2.0**.
+
+🆕 **`portabilis/i-educar`, Brazil's municipal school system, re-measured at its real default ref
+`2.12` (`cd1da68`):** 🔴 the licence **file** is bare **GPL-2.0** (*"Version 2, June 1991"*) while
+`composer.json` declares **`GPL-2.0-or-later`**. 🔵 **The `-or-later` exists only in the manifest**,
+and the difference decides whether the substrate can be combined forward at all. 🔵 **A licence
+*file* structurally cannot express `-or-later`** — the bare GNU text is identical either way, and
+the suffix lives in the manifest or in the source headers (`P620`), never in the text.
+🟢 **Moodle shows the same split in the same direction** (`GPL-3.0-or-later` in the manifest), so
+this is a property of the ecosystem's conventions, not of one project.
+
+🟢 **Globant's deliverable still sits on the edges and never inside the substrate** — six of seven
+edges permissive, and the one that is not is a decade stale.
+
 ## 🟢 Sixty-second pass, 2026-10-08 — the **sixth** edge lands and it is the *exit* of the learning loop: launch → roster → content → record → **credential**, with the student-record substrate completed in Apache-2.0
 
 ⏱️ **Sixteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

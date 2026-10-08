@@ -4,6 +4,102 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-third pass, 2026-10-08 — week of 2026-10-08: **25 PHP/composer rows enter at a manifest layer**, 10 of them permissive, and the provenance under all of them is corrected — `master` is a pseudo-ref
+
+⏱️ **Seventeenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Oracle map re-measured before any datum (`P713`, `P745`), `n = 2`:** `raw` **200** against a
+404-discriminating control, **including an invented *branch* → 404**; `packagist` **200 × 2 against
+its own calibration pair**; `pypi`, `npm`, `maven`, `api.nuget.org` each **200 × 2**; `ls-remote`
+discriminates **and resolves the default ref**. 🔴 `api.github.com/repos/{third-party}` **403 × 2**
+— **no star counts, so nothing below is ranked by popularity** (`P745`). 🔴 Policy/report hosts
+**`000`, 8 of 8 — refused at the egress proxy.**
+
+### 🟢 New to the shelf this week — a layer, not a list
+
+🔵 **This is not a trending-by-stars block, because stars are unreachable here.** 🟢 **It is the
+PHP/composer tier of this shelf read at a channel this KB had never swept: the `composer.json`
+grant, plus the packagist publication and date for the id the tree actually declares.**
+
+🟢 **Freshest first, by registry timestamp — the only dated oracle reachable this pass:**
+
+| Registry date | Component | Declared package | Manifest licence | Default ref · SHA |
+|---|---|---|---|---|
+| 🟢 **2026-10-07** | [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | `krayin/laravel-crm` | 🟢 **MIT** | 🔴 `2.2` · `fa4eeca` |
+| 🟢 **2026-10-03** | [`moodle/moodle`](https://github.com/moodle/moodle) `v5.3.0` | `moodle/moodle` | 🔴 GPL-3.0-**or-later** | `main` · `f205347` |
+| 🟢 **2026-09-23** | [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) `v6.4.4` | **`packbackbooks/lti-1p3-tool`** | 🟢 **Apache-2.0** | `master` · `a20c71b` |
+| 🟢 **2026-09-22** | [`Kennisnet/php-qti3`](https://github.com/Kennisnet/php-qti3) `v0.7.0` | **`wikiwijs/php-qti3`** | 🟢 **MIT** | `main` · `0ba4f78` |
+| 🟢 **2026-09-02** | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `francoisjacquet/rosariosis` | 🔴 GPL-2.0-or-later | 🔴 `mobile` · `899f6da` |
+| 🟢 2026-07-13 | [`oat-sa/lib-lti1p3-core`](https://github.com/oat-sa/lib-lti1p3-core) `v7.3.2` | `oat-sa/lib-lti1p3-core` | 🔴 **GPL-2.0-only** | `master` · `7884c3c` |
+| 🟢 2026-07-09 | [`oat-sa/qti-sdk`](https://github.com/oat-sa/qti-sdk) `v19.7.2` | **`qtism/qtism`** | 🔴 **GPL-2.0-only** | `master` · `634a9b8` |
+| 🟢 2026-03-18 | [`grantholle/powerschool-api`](https://github.com/grantholle/powerschool-api) `v4.5` | `grantholle/powerschool-api` | 🟢 **MIT** | `main` · `f54e292` |
+| 🟢 2026-03-03 | [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) `v1.28.0` | **`h5p/h5p-core`** | 🔴 GPL-3.0 | `master` · `cb64a1f` |
+| 🟡 2025-09-16 | [`Kennisnet/OaiPmh`](https://github.com/Kennisnet/OaiPmh) `v2.2.3` | `kennisnet/oaipmh` | 🟢 **MIT** | `main` · `a994e27` |
+| 🟡 2025-01-20 | [`php-xapi/model`](https://github.com/php-xapi/model) | `php-xapi/model` | 🟢 **MIT** | 🔴 `3.x` · `e005084` |
+| 🔴 2022-12-19 | [`Kennisnet/phpEdurepSearch`](https://github.com/Kennisnet/phpEdurepSearch) `v1.0.7` | **`kennisnet/edurepsearch`** | 🟢 **MIT** | `master` · `5f975bf` |
+| 🔴 2022-06-28 | [`Kennisnet/phpNLLOM`](https://github.com/Kennisnet/phpNLLOM) `v1.1.2` | **`kennisnet/nllom`** | 🟢 **MIT** | `master` · `f328730` |
+| 🔴 2021-03-24 | [`php-xapi/client`](https://github.com/php-xapi/client) | `php-xapi/client` | 🟢 **MIT** | 🔴 `0.7` · `b39735b` |
+| 🔴 **2016-09-18** | [`IMSGlobal/LTI-Tool-Provider-Library-PHP`](https://github.com/IMSGlobal/LTI-Tool-Provider-Library-PHP) `v3.0.2` | **`imsglobal/lti`** | 🟢 **Apache-2.0** | `master` · `c9cbfdd` |
+| 🔴 **2016-01-27** | [`tl-its-umich-edu/caliper-php-public`](https://github.com/tl-its-umich-edu/caliper-php-public) `v1.0.1` | **`umich-its-tl/caliper-php`** | 🔴 **`proprietary`** (file says LGPL-3.0) | 🔴 `public` · `e35b0ec` |
+
+🟡 **Five rows carry a manifest but publish nothing** — `gibbonedu/core`, `portabilis/i-educar`,
+`g3i/lxhive`, `imsglobal/lti-1p3-tool`, `tresipunt/wordpress-lti-1-3` each **404** on packagist for
+the id their own tree declares. 🔵 **A declared id's 404 IS informative** (the tree named it), and
+it still says nothing about the project, only about that id.
+
+🟡 **Four rows carry no `composer.json` at the default ref** — `LongsightGroup/qti3` (`main`),
+`OS4ED/openSIS-Classic` (`master`), `opensalt/opensalt` (🔴 `develop`),
+`rachelproject/contentshell` (`master`). 🔴 **Not probed at depth > 0**, which is exactly `p253`'s
+subdirectory finding and is declared rather than guessed at.
+
+🟢 **Counts, stated as counts over this named population and never as rates (`P744`):**
+**25** slugs · **19** with a manifest · 🟢 **10 permissive** (MIT ×8, Apache-2.0 ×2) ·
+🔴 **8 GPL in four distinct flavours** · 🔴 **1 `proprietary`** · **16** `PUBLISHED-AT-ROOT` ·
+**5** `DECLARED-NOT-PUBLISHED` · **4** `UNDETERMINED`.
+
+### 🔴 Why the whole table needed its ref column rebuilt — `P793`
+
+🟢 **Measured with a 404-discriminating control, 3 of 3:**
+`raw.githubusercontent.com` serves the **default branch** for the literal ref `master`, even where
+there is no `master`. `main` **404** · invented branch **404** · `master` **200** · `HEAD` **200**,
+on repositories whose real defaults are `refs/heads/0.7`, `refs/heads/public`, `refs/heads/2.12`.
+
+🔴 **So "payload-read at `master`" was never provenance**, and this sweep resolves every ref with
+`git ls-remote --symref … HEAD` (`P732`) before reading a byte.
+
+🟢 **Defaults that are neither `main` nor `master`: 7 of 25** — **`v31.0.00`** (a *tag-shaped
+branch*, `GibbonEdu/core`), `mobile`, `2.2`, `0.7`, `3.x`, `2.12`, `public`.
+🟢 **And it rescued a row:** `francoisjacquet/rosariosis` reported **no manifest at all** under a
+`{main,master}` probe; at `mobile` it carries one. 🔵 **A false provenance and a false absence from
+one cause.**
+
+### 🔴 And the oracle map itself — `P791`
+
+| Pass | Map line | What it probed |
+|---|---|---|
+| 61 | `packagist` **404** | `packbackbooks/lti-1-3-php-library` — the **repository slug** |
+| 62 | `packagist` **200 × 2 — recovered** | the same slug-shaped id |
+| **63** | 🟢 `packagist` **200 × 2 against a calibration pair** | `monolog/monolog` 200 × 2 · invented id 404 × 2 |
+
+🔴 **Nothing publishes the slug-shaped id**: **404 × 2** on `packagist.org/packages`, **404 × 2** on
+`repo.packagist.org/p2`. 🟢 **The host never moved.** 🟢 **Pass 62's *datum* survives** — the tree
+declares `packbackbooks/lti-1p3-tool`, which answers 200 with `v6.4.4, 2026-09-23, Apache-2.0`.
+🔵 **Right about the package, wrong about the host; only the second half went into the map.**
+
+🟢 **`FALSE-ABSENCE-RISK`, measured: 8 of the 21 rows with a declaration** would be reported absent
+by a slug-shaped probe — `imsglobal/lti`, `wikiwijs/php-qti3`, `kennisnet/edurepsearch`,
+`kennisnet/nllom`, `h5p/h5p-core`, `qtism/qtism`, `packbackbooks/lti-1p3-tool` and
+`umich-its-tl/caliper-php`. 🔵 **Every one is a package that exists under a name its repository
+does not spell.**
+
+### 🟢 New instrument, committed with its results
+
+`compose/code/p791-registry-id-provenance/` — **37/37 offline**, `python3` and `python3 -I`, and
+from a foreign working directory (`p355`). 🟢 **It imports `p253/identity.py` unchanged**; the new
+code is the probe layer, the ref oracle and three verdicts. 🔴 **It also records `P792` and
+`P792a`**, two defects in *seams* rather than in either half — and both were found by running
+instruments end to end, which is the week's actual lesson.
+
 ## 🟢 Sixty-second pass, 2026-10-08 — week of 2026-10-08: nine rows enter across two layers, and a 13-repo two-instrument cross-run finds the licence gate wrong **twice**
 
 ⏱️ **Sixteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

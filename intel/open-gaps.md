@@ -4,6 +4,130 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-third pass, 2026-10-08 — three gaps advanced by measurement, one closed, four opened, and `Gap 284` moves from *unfound* to *characterised*
+
+⏱️ **Seventeenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 `Gap 284` — **advanced, not closed**, and its pre-registered remedy was run and found insufficient
+
+🟢 **Pass 62 left a bounded remedy: *resolve the 1EdTech implementation from a registry `repository`
+field (`P780`) rather than guessing slugs.* 🟢 It was run. Three results, two of them new:**
+
+1. 🔴 **The protocol-name channel returns a HOMONYM.** `pypi.org/pypi/caliper/json` is **200** and
+   resolves to **`vsoch/caliper`**, a Python *package-version analysis* tool. 🔴 `caliper-python`
+   and `caliperpy` **404**; npm `caliper-js`, `caliper-sensor`, `caliperjs`, `@1edtech/caliper`
+   **404, 4 of 4**. 🔵 **The registry answered and the answer was wrong** — `P791`'s
+   `FALSE-PRESENCE` class arriving through the *protocol-name* channel.
+2. 🔴 **The specification is not open and names no implementation.** `1EdTech/caliper-spec` @
+   `master`: `LICENSE` **404**, `LICENSE.md` **12 402 B** opening
+   `IMS GLOBAL LEARNING CONSORTIUM, INC.` under the heading `# SPECIFICATION DOCUMENT LICENSE`
+   (`P191`: not OSI). 🔴 Its README mentions the Sensor API **once** and links **zero**
+   repositories.
+3. 🔴 **The one reachable implementation contradicts itself** —
+   `tl-its-umich-edu/caliper-php-public` @ `refs/heads/public` (`e35b0ec`): licence **file**
+   LGPL-3.0 (7 438 B, `p419.familia()`, self-test 10/10), **manifest** `"proprietary"`, **registry**
+   `["proprietary"]` with latest `1.0.1` **2016-01-27**.
+
+🔴 **So the gap stands: the analytics edge still has no permissive implementation.**
+🟢 **What changed is its shape — it is now a *characterised* hole, not an empty cell:** one
+reachable implementation, nine years and eight months stale, internally inconsistent about whether
+it is open source at all.
+🔵 **Remaining bounded remedy, and it is the last cheap one:** the 1EdTech **Sensor API** samples
+are reported to be multi-language; ask the **org listing** for repository names rather than the
+search channel or the spec README. 🟢 **Cost: a handful of requests.** 🔴 **After that, the honest
+conclusion is that this protocol has no permissive implementation and the edge must be written, not
+adopted** — which is a scoping fact worth more than another search.
+
+### 🟢 `Gap 276`-adjacent — **CLOSED: the `latam-gpt` "missing model repo" was partly not missing**
+
+🟢 **The `latam-gpt` org resolves, and this shelf has carried two of its repositories since pass
+60** — found by **grepping the shelf**, which is the channel pass 59 already named as the one to try
+first. 🟢 Re-measured at the ref the oracle names: `latam-gpt/lm-evaluation-harness` `main` ·
+**`9fa381a`** · `LICENSE.md` 1 067 B *"MIT License"* → **MIT**; `latam-gpt/syco-bench` `main` ·
+**`5ecc005`** · `LICENSE` 903 B *"**MIT No Attribution**"* → 🔴 **`MIT-0`, recorded here as "MIT".**
+🔴 **The label is corrected; a *model* repository still does not resolve** from three conjectured
+slugs, 🔵 and per `P253` that is a fact about the three guesses.
+
+### 🆕 `Gap 290` — the **seams** between this KB's 235+ instruments are unmeasured, and one of them is broken
+
+🔴 **`p253-registry-first-identity` run END TO END returns `PUBLISHED-BY-OTHER` for a package
+pointing at exactly its own repository**: its probe layer emits
+`git+https://github.com/Cvmcosta/ltijs.git`, its gate compares that to the slug `Cvmcosta/ltijs`.
+🟢 Its committed table is correct because the column was **hand-normalised**; 🔴 the script was never
+changed to match. 🆕 **`P792`: reuse the instrument END TO END** — the defect can live in the seam.
+
+🔴 **The gap is the population, not the case:** **nothing on this shelf has ever run an instrument's
+own probe layer into its own gate** except by accident. 🔵 **Bounded remedy: for each instrument
+that ships both a `sweep*.sh` and a verdict module, run one target through the pair and compare the
+verdict to the committed table.** 🟢 **Denominator is enumerable from `compose/code/`** — it is a
+directory listing, not a sampling frame, so `P744` does not apply. 🟡 **Cost: one pass, and it
+should be ordered by how many downstream passes cite each instrument.**
+
+### 🆕 `Gap 291` — every `master` ref cited on this shelf is unverified provenance
+
+🔴 **`P793`: `raw.githubusercontent.com` serves the DEFAULT branch for the literal ref `master`,
+even where no `master` exists** (control: `main` 404, invented branch 404, `master` 200, `HEAD` 200;
+3 of 3 on repositories whose defaults are `refs/heads/0.7`, `refs/heads/public`,
+`refs/heads/2.12`). 🔴 **So "payload-read at `master`"** — a phrase this shelf has used for dozens
+of rows — **names a branch, not necessarily the branch the bytes came from.**
+
+🟢 **Measured scope so far: 7 of 25 PHP/composer rows have a default that is neither `main` nor
+`master`** (`v31.0.00`, `mobile`, `2.2`, `0.7`, `3.x`, `2.12`, `public`); 🟢 **0 of 12 on the
+evaluation tier, whose 12 cited SHAs all still match the oracle.** 🔵 **The defect is
+ecosystem-shaped**, which bounds the remedy usefully.
+🔵 **Bounded remedy: run `p791/ref.sh` over the rows this shelf cites with a `master` ref, PHP and
+Java first.** 🟢 **It is one `ls-remote` pair per row and it exits 3 on exactly the rows that need
+re-reading.** 🔴 **No rate is claimed from 7 of 25** (`P744`).
+
+### 🆕 `Gap 292` — the oracle map has never been written from calibration pairs
+
+🔴 **`P791`: a code from a target id is not a fact about a host.** Pass 61 wrote `packagist 404`
+and pass 62 wrote `packagist 200 — recovered`; 🔴 **both probed the repository slug as a package id,
+which nothing publishes** (404 × 2 on `packagist.org/packages`, 404 × 2 on
+`repo.packagist.org/p2`), while the host answered 200 to `monolog/monolog` and 404 to an invented
+id in the same minute.
+
+🔴 **The gap: the map's other lines were written the same way** — a single probe per host, with no
+stated pair. 🔵 **Bounded remedy: give every host in the map a named calibration pair (one id known
+to exist, one invented) and record both codes, as this pass did for `packagist` and `raw`.**
+🟢 **`host_verdict()` in `p791` already refuses a single code**, so the remedy is to route the map
+through it. 🟡 **Cost: 2 requests per host per pass, which is what `n = 2` already spends.**
+
+### 🆕 `Gap 293` — the policy band blames hosts for a refusal that happens at the proxy
+
+🔴 **Measured on two independent channels: `curl` returns `CONNECT tunnel failed, response 403` and
+`WebFetch` returns `EGRESS_BLOCKED`, naming the domain, for 8 of 8 policy and report hosts**
+(`unesco.org`, `iesalc.unesco.org`, `digitaleducationcouncil.com`, `worldbank.org`,
+`multistate.us`, `dig.watch`, `lw.com`, `1edtech.org`). 🔵 **No request reached any of them**, so
+pass 62's *"policy and report hosts are `000`"* said something it had not measured.
+
+🟡 **The practical band is unchanged** — every regulatory and survey figure stays `reported`,
+single-channel (`P784`) — 🟢 **but the reason now survives a host coming back up.**
+🔵 **Bounded remedy: write the band as "refused at the egress proxy" and stop re-probing the same
+eight hosts each pass.** 🔵 **The useful question instead is whether ANY policy-grade host is
+reachable**, which is one probe against a host class, not eight against a list. 🟢 **Cost: one
+probe. 🔵 And if the answer is none, that is a standing property of this environment and belongs in
+the map, not in eight rows per pass.**
+
+### 🟡 Gaps **not advanced** this pass, stated so no pass reads this one as progress
+
+🔴 **`Gap 286`** — no reachable registry date for the Ed-Fi tier. 🔵 `api.nuget.org` is up and
+404-discriminating, and `EdFi.OdsApi.Sdk` returns **none**; untouched this pass.
+🔴 **`Gap 287`** — `p784` reads 16 **rooted** filenames only; untouched.
+🔴 **`Gap 288`** — `p441`'s regex matches `licenseExtension`; untouched, and 🔴 **still a
+false-presence defect, which `P788` calls the worse direction.**
+🔴 **`Gap 289`** — `credential_issuance` is absent from `p782`'s 14-function vocabulary. 🔴 **And
+`R63a` now needs a second one: `automated_assessment` is in the vocabulary, but `item_authoring`
+and `item_delivery` are not, and this pass's recipe branches on all three.**
+🔴 **`Gap 257` / `Gap 258`** — the 112-suite board is still unmeasured as a whole. 🟢 **Three suites
+were run green from the clone this pass** (`p759 --self-test` 4/4, `p419` 10/10, `p791` 37/37),
+🔴 **which is three, not 112**, and `Gap 267`'s negation is refuted for a **third** consecutive pass.
+🔴 **The agent-discovery gap** — fourteenth empty week. 🆕 **`P795` gives it a mechanism** (`AI
+education` ranks courses about AI above agents doing education) 🔴 **but a mechanism is not a
+filling**: no education-specific agent entered the shelf this pass.
+🔴 **No APAC school-adoption figures**; 🔴 **no Canada or Mexico coverage** — both declared in
+`intel/market.md`, both still open.
+
 ## 🟢 Pass 62, 2026-10-08 — `Gap 242` ADVANCED, `Gap 285` WEAKENED (its count is now an upper bound), four gaps declared, `P785`'s saturation rule applied to the *regional* channel for the first time
 
 > 🔵 **Opening hypothesis: that the four regional queries would again return named instruments, as

@@ -4,6 +4,104 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-third pass, 2026-10-08 — the agent-discovery channel is empty for a **fourteenth** week, and this pass can finally say **why** rather than only that; a licence label on this shelf is corrected to `MIT-0`; and the provenance audit the new `P793` demands comes back **12 of 12 clean**
+
+⏱️ **Seventeenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Oracle map re-measured before any datum (`P713`, `P745`), `n = 2`:** `raw` **200** against a
+404-discriminating control (real file 200 / invented file 404 / **invented *branch* 404**), `pypi`
+**200 × 2**, `npm` **200 × 2**, `maven` **200 × 2**, `packagist` **200 × 2 against its own
+calibration pair**, `api.nuget.org` **200 × 2**, `ls-remote` discriminates **and resolves the
+default ref**. 🔴 `api.github.com/repos/{third-party}` **403 × 2** — **no star counts this pass**
+(`P745`). 🔴 Policy and report hosts **`000`, 8 of 8 — refused at the egress proxy**, so nothing was
+measured about those hosts (see `intel/market.md`).
+
+### 🆕 `P795` — the channel is not unlucky, it is **ambiguous**, and education is the one industry where it is
+
+🔴 **Both mandated queries were run.** 🔴 **Neither returned an education-specific agent**, for a
+fourteenth consecutive week. 🟢 **What they returned, written down so no reader mistakes silence
+for coverage:**
+
+| Query | What came back |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | general-purpose agents (a self-hosted assistant, a coding agent, two orchestration frameworks) and **courses**: `ashishpatel26/500-AI-Agents-Projects`, `microsoft/ai-agents-for-beginners`, a Hugging Face agents course |
+| `github trending education AI 2026` | **learning material only**: `rohitg00/ai-engineering-from-scratch`, `microsoft/generative-ai-for-beginners`, `kamranahmedse/developer-roadmap`, a minimal LLM-training repo, two "awesome AI agents 2026" lists, one automated trends issue |
+
+🆕 **`P795`, and it is a mechanism rather than a complaint:** in `AI {industry}`, every other
+industry on the rotation names a **domain**. 🔴 **Education names both a domain and the activity of
+teaching the technology**, so `AI education` ranks *courses that teach AI* above *agents that do
+education*. 🔵 **Fourteen weeks of emptiness is therefore a property of the phrase, not of the
+world** — and the four repositories above are the same class of result every week: syllabi.
+
+🟢 **Which makes the remedy specific instead of "search harder":** query by the **function** or the
+**protocol**, never by the industry word (`P769`/`P776`, already this shelf's rule for *writing*,
+now also for *asking*). 🟢 **Evidence it works, from this very pass:** the protocol-named queries
+returned a QTI 3 library, an LTI 1.3 tool library, a PowerSchool client and a Caliper
+implementation — 🟢 **four payload-read rows, where the two industry-named queries returned
+zero.** 🔵 **The industry-named queries stay in the run because their emptiness is itself a
+measurement**, and `P785` is why: declaring a channel saturated is the most expensive conclusion a
+pass can draw, so it is recorded, not retired.
+
+🔴 **No row admitted from either industry-named query** (`P476`). 🔵 A course is not an agent, and a
+curated list is not a repository this shelf can build on.
+
+### 🔴 Corrected — `latam-gpt/syco-bench` is **`MIT-0`**, not MIT
+
+🟢 **Re-measured from payload at the ref the oracle names (`P713`):**
+
+| Repository | Default ref · HEAD | Licence payload | Shelf label | Verdict |
+|---|---|---|---|---|
+| [`latam-gpt/lm-evaluation-harness`](https://github.com/latam-gpt/lm-evaluation-harness) | `main` · **`9fa381a`** | `LICENSE.md`, **1 067 B**, *"MIT License"* | MIT | 🟢 **correct** |
+| [`latam-gpt/syco-bench`](https://github.com/latam-gpt/syco-bench) | `main` · **`5ecc005`** | `LICENSE`, **903 B**, *"**MIT No Attribution**"* | MIT | 🔴 **wrong — it is `MIT-0`** |
+
+🔵 **`MIT-0` is *more* permissive than MIT**: it drops the attribution condition entirely.
+🟢 **So the correction creates no exposure** — 🔴 **and it still has to be made**, because a shelf
+whose licence column is *approximately* right cannot be used as a pre-flight. 🔵 **Byte count is
+the tell** (`P704`): MIT is ~1 070 B and MIT-0 is ~900 B, and the 903 B here was already on the
+shelf unexamined. 🔵 **`P443` taught this KB to ask a repository how it spells its own name; this
+is the same discipline for how it spells its own licence.**
+
+### 🟢 The provenance audit `P793` demands — **12 of 12 clean**, and the contrast is the finding
+
+🔴 **`P793`, measured this pass:** `raw.githubusercontent.com` serves the **default branch** for
+the literal ref `master` even when no `master` exists (control: `main` **404**, invented branch
+**404**, `master` **200**, `HEAD` **200**, on 3 of 3 repositories whose real defaults are
+`refs/heads/0.7`, `refs/heads/public`, `refs/heads/2.12`). 🔵 **So every row on this shelf whose
+provenance reads "at `master`" needed re-checking.**
+
+🟢 **This shelf's evaluation tier re-checked against `ls-remote --symref … HEAD`:**
+
+| Rows audited | Default ref | Cited SHA vs oracle HEAD |
+|---|---|---|
+| 12 (the regional evaluation/benchmark tier) | 🟢 **11 × `main`, 1 × `master`** | 🟢 **12 of 12 MATCH** |
+
+🟢 **`latam-gpt/lm-evaluation-harness` `9fa381a`, `latam-gpt/syco-bench` `5ecc005`,
+`eduagarcia/lm-evaluation-harness-pt` `ab24923`, `DFE-Digital/education-benchmarking-and-insights`
+`70eb566`, `AI-for-Education/pedagogy-benchmark` `21a43a3`, `…/edu-qurating` `e007bad`,
+`…/voice-ai-evaluation-framework` `f25f128`, `prometheus-eval/prometheus-eval` `dcfb442`,
+`indobenchmark/indonlu` `ce728f6`, `shivanireddyk/tutoreval` `e781cc0`,
+`markm-io/ai-essay-evaluator` `8ee5c7c`, `baker-jr-john/automated-summary-evaluation-llm`
+`e7a4cc5`** — every one resolving, every SHA current.
+
+🔵 **The contrast is what makes this worth a section:** the same probe found **7 of 25** PHP rows
+served from a ref that is neither `main` nor `master` (`v31.0.00`, `mobile`, `2.2`, `0.7`, `3.x`,
+`2.12`, `public`), and **0 of 12** here. 🔵 **The defect is concentrated in an *ecosystem*, not
+spread across the shelf**: Python and JavaScript projects default to `main`, while PHP/Composer
+projects routinely make a **version-named** branch the default. 🟢 **So the re-check is owed to the
+composer tier and was not owed here — and the only way to know that was to run it.**
+
+🔴 **No rate from either number.** 12 rows and 25 rows are named populations this shelf already
+cites, not sampling frames (`P744`).
+
+### 🟡 Standing, unchanged this pass
+
+🟡 **The scoring gate still governs the evaluation tier.** `markm-io/ai-essay-evaluator` (MIT) and
+`baker-jr-john/automated-summary-evaluation-llm` (MIT) implement the function that the EU Act's
+**Annex III** conditions, Vietnam's AI law names as high-risk, **Peru's draft would classify as
+high-risk** (🆕 this pass, `reported`), and 🔴 **NYC's `2026-03-24` guidance prohibits outright** in
+public K-12. 🔵 **Run `compose/code/p782-policy-gate/` before building on either**, and remember
+`P764`: a prohibition is not a condition, and no human-in-the-loop converts one into the other.
+
 ## 🟢 Sixty-second pass, 2026-10-08 — the **licence gate under every agent row on this shelf is measurably wrong on 2 of 13 repos**, and one of the two failures is a defect of *premise*, not of code
 
 ⏱️ **Sixteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

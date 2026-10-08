@@ -4,6 +4,148 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-third pass, 2026-10-08 — the pre-flight gains a **Gate 0**, because every gate below it takes a `[ref]` and `master` is a **pseudo-ref**; and `R63a` wires the assessment edge, the one place where the licence line and the policy line fall on the same component
+
+⏱️ **Seventeenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 The pre-flight, corrected again — and this time the defect is **upstream of every gate**
+
+🔴 **Gates 1, 1b and 2 all take a `[ref]` argument, and this shelf has been handing them
+`master`.** 🟢 **Measured this pass, 3 of 3, with a 404-discriminating control:**
+`raw.githubusercontent.com` serves the **default branch** for the literal ref `master` even where
+no `master` exists — `main` **404**, invented branch **404**, `master` **200**, `HEAD` **200** —
+on repositories whose real defaults are `refs/heads/0.7`, `refs/heads/public`, `refs/heads/2.12`.
+
+🔵 **So a `0 SINGLE` from Gate 1 "at `master`" was a grant read from *some* branch, named wrongly.**
+🟢 **`P714` warned about exactly this; `P793` is the measurement, with a control, and a gate.**
+
+```sh
+# Gate 0 — NEW, and it runs FIRST: what ref are the gates below actually reading?   (P793)
+sh compose/code/p791-registry-id-provenance/ref.sh <owner/repo> [...]
+#   0 DEFAULT-IS-NAMED (main|master)  -> the usual assumption holds
+#   3 DEFAULT-IS-NEITHER             -> 🔴 pass THIS ref to every gate below
+#   5 UNRESOLVED                     -> 🔴 no gate below may claim an absence
+#   🟢 7 of 25 PHP/composer rows exit 3 — v31.0.00, mobile, 2.2, 0.7, 3.x, 2.12, public
+#   🟢 0 of 12 evaluation-tier rows exit 3 — the defect is ECOSYSTEM-shaped, not shelf-shaped
+
+# Gate 1 — may we use the CODE and the DATA?   (Gap 282 / Gap 283)
+bash compose/code/p784-licence-scope-map/probe.sh <owner/repo> <ref-from-Gate-0>
+#   0 SINGLE · 3 PARTITIONED · 4 UNGRANTED · 5 unreachable
+#   🔴 16 ROOTED filenames only — read `4 UNGRANTED` as "no grant AT THE ROOT" (Gap 287)
+
+# Gate 1b — enumerate the TREE before trusting Gate 1's absence
+cd compose/code/p441-tree-licence-enumeration && python3 enumerate_licence.py <slugs-file>
+#   🔴 run it from ITS OWN directory — its sys.path insert is relative (P355)
+#   🔴 distrust a CC-BY/CC0 family it reports: its regex matches `licenseExtension` (Gap 288)
+
+# Gate 1c — NEW: read the MANIFEST, because it is the only layer that can say `-or-later`
+echo "<owner/repo>" | sh compose/code/p791-registry-id-provenance/sweep_composer.sh
+#   🟢 emits default_ref, head_sha, served_at, the composer.json grant, and the DECLARED package id
+#   🟢 and it resolves the registry id from the TREE, never from the slug (P791)
+
+# Gate 2 — may we DEPLOY this function in this jurisdiction?   (Gap 278)
+bash compose/code/p782-policy-gate/gate.sh <function> [jurisdiction|region]
+#   0 clear · 3 GATED · 4 PROHIBITED · 5 PROPOSED · 6 NEVER MEASURED · 2 bad region
+#   🔴 `credential_issuance` is NOT in the 14-function vocabulary (Gap 289)
+```
+
+| Axis | Question | Instrument | Failure it prevents |
+|---|---|---|---|
+| 🆕 **Ref** | **which branch are we even reading?** | 🟢 `p791/ref.sh` | 🔴 **the `P793` failure**: a grant read at a pseudo-ref and cited as `master` |
+| **Code** | is the grant permissive? | `p784` + `p441` | building on copyleft, or on a repo with no grant at all |
+| 🆕 **Combination** | is it `-only` or `-or-later`? | 🟢 `p791/sweep_composer.sh` | 🔴 **the `P794` failure**: a file that cannot express the suffix that decides forward-combination |
+| **Data** | is the *corpus* shippable? | `p784` (`PARTITIONED`/`UNCLASSIFIED`) | the `P783` failure: MIT code over a corpus that forbids training |
+| **Policy** | may the function be deployed there? | `p782` | the `P764` failure: an MIT repo exposing a **prohibited** function |
+| **Prose** | is the grant split where no probe reads? | 🔴 **a human, reading `README` + `wiki/`** | the `P786` failure |
+
+🔴 **And a new worked instance for why Gate 1c is not optional.**
+🟢 `tl-its-umich-edu/caliper-php-public` @ `refs/heads/public` (`e35b0ec`) — 🔴 no `main`, no
+`master`, so Gate 0 is the only reason a gate reads the right tree at all:
+
+| Layer | Says | Band |
+|---|---|---|
+| licence **file** (`LICENSE`, 7 438 B) | *"GNU LESSER GENERAL PUBLIC LICENSE / Version 3"* | 🔴 **LGPL-3.0** — open, copyleft |
+| **manifest** (`composer.json`) | `"license": "proprietary"` | 🔴 **not open at all** |
+| **registry** (packagist `umich-its-tl/caliper-php`) | `["proprietary"]`, latest `1.0.1` **2016-01-27** | 🔴 **not open at all** |
+
+🔴 **A pre-flight that ran only Gate 1 would publish "LGPL-3.0" and a reviewer would read "open
+source, copyleft, keep it at arm's length". 🔴 Two of three layers say there is no grant.**
+🆕 **`P794`: two layers can land in opposite *bands*, not merely differ in precision.**
+
+🟡 **The cheaper, commoner instance of the same gate:** `portabilis/i-educar`'s licence file at
+`2.12` is bare **GPL-2.0** (*"Version 2, June 1991"*) and its manifest says
+**`GPL-2.0-or-later`** — and `moodle/moodle` splits the same way (`GPL-3.0-or-later` in the
+manifest). 🔵 **A licence file structurally cannot express `-or-later`:** the GNU text is
+byte-identical either way, so the suffix lives in the manifest or the headers (`P620`).
+🔵 **Which means the "can we combine this forward?" question has only ever been answerable at a
+layer this pre-flight did not run.**
+
+### 🟢 `R63a` — "automated assessment the client can actually deploy": a permissive QTI 3 pipeline behind a per-jurisdiction policy node
+
+🔵 **Why this recipe, and why now:** 🟢 the assessment edge is the **only** place on this shelf
+where the licence line and the policy line fall on the *same component*, and this pass measured
+both. 🔴 The best-known PHP QTI component is **`GPL-2.0-only`**; 🟢 the permissive alternative
+shipped **v0.7.0 on 2026-09-22**, the freshest release on the edge table. 🔴 And the function is
+conditioned in the EU, Vietnam and (draft) Peru, labelled in South Korea, and **prohibited** in NYC
+public K-12.
+
+🔴 **What not to do:** reach for `oat-sa/qti-sdk`. 🔴 It is the most capable PHP QTI library and it
+is **`GPL-2.0-only`** — *only*, so it cannot even be combined forward to GPL-3.0, and it cannot sit
+inside a client deliverable. 🔴 **And do not build the grading decision at all** where `p782`
+returns `4 PROHIBITED`: `P764` says no amount of human-in-the-loop converts a prohibited use into
+a permitted one.
+
+🟢 **The components, each payload-read at a ref Gate 0 resolved:**
+
+| Layer | Component | Licence (both layers where both exist) | Ref · SHA | Registry date |
+|---|---|---|---|---|
+| Item model · parse · validate · write | [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) | 🟢 **MIT** · `LICENSE.md` 1 072 B | `main` · `ab92d85` | 🟡 no composer manifest |
+| QTI 3 support library (PHP) | [`Kennisnet/php-qti3`](https://github.com/Kennisnet/php-qti3) | 🟢 **MIT** · file **and** manifest | `main` · `0ba4f78` | 🟢 **`wikiwijs/php-qti3` v0.7.0, 2026-09-22** |
+| Delivery / rendering | [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | 🟢 **MIT** · `LICENSE` 1 076 B | `main` · shelved | — |
+| Launch (who may be told what) | [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | 🟢 **Apache-2.0** · manifest | `master` · `a20c71b` | 🟢 **`packbackbooks/lti-1p3-tool` v6.4.4, 2026-09-23** |
+| Roster (who is in the class) | [`grantholle/powerschool-api`](https://github.com/grantholle/powerschool-api) | 🟢 **MIT** · file **and** manifest | `main` · `f54e292` | 🟢 **v4.5, 2026-03-18** |
+| Learning record (what the learner did) | [`php-xapi/model`](https://github.com/php-xapi/model) | 🟢 **MIT** · manifest | 🔴 **`3.x`** · `e005084` | 🟡 `3.x-dev`, 2025-01-20 |
+| Policy node | `compose/code/p782-policy-gate/` + `p764` red/green split | 🟢 this KB | — | — |
+| Provenance marking (Korea) | `compose/code/aiact-50-2-marking/` | 🟢 this KB | — | — |
+
+🔵 **Wiring, and the policy node is not a feature flag — it is the control flow:**
+
+1. **Gate 0 on all six repos.** 🔴 `php-xapi/model`'s default ref is **`3.x`**, not `main` — pin it
+   or a later pre-flight reads a tree nobody chose.
+2. **Launch** from the client's LMS over **LTI 1.3** with the Apache-2.0 tool library. 🔵 Nothing
+   is installed inside Moodle (GPL-3.0) or Canvas/Open edX (AGPL-3.0), so `P747a` holds and the
+   deliverable stays permissive.
+3. **Resolve the roster** through the SIS client (MIT) or OneRoster, never by exporting students
+   into the assessment service's own store — 🔴 `CA AB 1159` prohibits using student data to train
+   models, which is a **data-flow** constraint, not a clause to paste into a contract.
+4. **Author and bank items** with the MIT TypeScript toolchain; **deliver** with the MIT player;
+   **parse and score server-side** with `Kennisnet/php-qti3`. 🟢 **MIT end to end, and the
+   `GPL-2.0-only` SDK never enters the dependency graph.**
+5. 🔴 **Branch on jurisdiction before the score becomes a decision**, by calling `p782` with the
+   function, not the product:
+   - `4 PROHIBITED` (NYC public K-12 and anywhere `p782` reports the red tier) → 🟢 **emit a
+     teacher-facing draft and stop.** The score is an input to a person; it is never written to a
+     record. 🔵 This is the green tier NYC left open in March and again in the 2026-09-02 K-8
+     moratorium.
+   - `3 GATED` (EU Annex III, Vietnam, 🆕 Peru draft) → 🟢 **build the Article 27 FRIA artefact and
+     the human-review step as *products*, not as paperwork**: the conformity obligation moved to
+     **2027-12-02**, 🔴 but the Article 4 literacy duty and the emotion-recognition ban are already
+     in force, so **no affect-inference signal may enter the pipeline at all.**
+   - South Korea → 🟢 **mark the generated artefact** with `aiact-50-2-marking/`; the labelling duty
+     is the cheapest of the three to satisfy because it is a *provenance* requirement, and this KB
+     already emits that shape.
+6. **Record** the attempt as xAPI statements with the MIT model library, 🔵 so the learning record
+   outlives the assessment service — the same argument `R62a` makes for credentials.
+
+🟡 **What `R63a` does NOT claim.** 🔴 `Kennisnet/php-qti3` is **v0.7.0** — pre-1.0, and this shelf
+has read its licence and its registry date, **not its QTI 3 conformance coverage.** 🔵 The honest
+scoping line is *"permissive and current, coverage unmeasured"*, and measuring it means running its
+own test suite, which is one pass's work and is **not** claimed here.
+🔴 **`php-xapi/client` (MIT) is dated 2021-03-24 at `0.7`** — shelved as permissive and **stale**;
+`R63a` uses the **model**, not the client, and a deployment needs a maintained transport.
+🔴 **No Caliper analytics leg**, because `Gap 284`'s only reachable implementation is `proprietary`
+in two layers of three and nine years stale.
+
 ## 🟢 Sixty-second pass, 2026-10-08 — the pre-flight gains a **third layer it cannot automate**, and `R62a` wires the credential edge into a deployable shape beside the LMS
 
 ⏱️ **Sixteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
