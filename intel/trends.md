@@ -4,6 +4,122 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-eighth pass, 2026-10-08 — the OECD independently states this shelf's measured conclusion (**purpose-built over general-purpose**), the governance-lag finding gets its **first non-vendor instrument** (UNESCO IESALC, 200 institutions), and the pass finds a **sequencing fact worth more than either**: the use case every high-risk regime targets is the one the market has least adopted
+
+⏱️ **Twenty-second pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 Trend 1 — **purpose-built over general-purpose**, now stated by a third independent body
+
+🔵 Pass 67 recorded the trend channel converging on this, and called it the first agreement between
+the market's stated direction and this shelf's measured result. 🟢 **Two further bodies say it this
+pass, and one of them is the OECD:** its 2026 outlook **recommends moving beyond general-purpose AI
+tools toward purpose-built educational AI designed to produce durable learning gains**. 🟡 A vendor
+channel states the mechanism: general chatbots left teachers *"spending excessive time crafting
+prompts, verifying factual accuracy."*
+
+🟢 **The shelf's own nineteen-week control-query result is the same finding from the other
+direction.** 🔵 `top open source AI agents education 2026 github MIT` has returned **general-purpose
+frameworks and zero education components, nineteen weeks running**. 🔴 **The thing the market says it
+wants is the thing the open-source channel does not supply.** 🟢 **And the last four passes located
+what *is* supplied instead: the protocol surface** — LRS (pass 66), CASE/CLR (pass 67), conformance
+harnesses (pass 67), systems of record (this pass). 🔵 **Purpose-built, in open source, currently
+means *interoperable*, not *agentic*.**
+
+### 🟢 Trend 2 — governance lag, with its **first non-vendor measurement**
+
+🔵 This shelf has carried "86% adoption, most without a policy" since pass 54, from a report channel.
+🟢 **UNESCO IESALC now measures the same lag directly**, launched September 2026: **87% of
+institutions use AI in at least one area**, across **200 higher education institutions in 19
+countries**, with the explicit finding that **governance frameworks and institutional strategies are
+struggling to keep pace**. 🔵 **Two independent instruments, 86% and 87%, one vendor-adjacent and one
+UN-agency** — 🟢 **this shelf's two-independent-scorers rule (`P720`) is satisfied on the adoption
+number for the first time.**
+
+🟢 **1EdTech frames the same shift normatively:** AI in education is moving **from experimentation to
+governance**, making **clear policies, data boundaries and oversight essential**. 🔵 **Note who is
+saying it** — the body that writes the interoperability standards this shelf has been censusing for
+nine passes. 🟢 **That is the demand signal for the substrate tier**: policies and data boundaries
+are implemented with protocols, not with prompts.
+
+### 🔴 🆕 Trend 3 — the regulatory clock moved, and "deferred" is being read as "cancelled"
+
+🔴 **The fact:** Annex III high-risk obligations, education included, moved from **`2026-08-02` to
+`2027-12-02`** under **Regulation (EU) 2026/1744**. 🔵 Full correction and confidence statement in
+`intel/market.md` this pass.
+
+🔴 **The trend to watch is the *reaction*, and it is already visible in the channel.** 🔵 One source
+read this pass still asserts that *"any AI assessment tool deployed after August 2026 must comply"* —
+**stale, and it predates the amendment**. 🟡 Others frame the move as a **"reprieve"**. 🟢 **The
+accurate framing, and the one a client file should carry, is the research-note formulation:
+*deferred, not cancelled* (`P808`).** 🔴 **Sixteen months of relief on a regime whose implementing
+standards are unfinished is not an argument for building nothing; it is the only window in which
+building it calmly is possible.**
+
+🟡 **And one Omnibus change runs the other way, which the "reprieve" framing hides:** **profiling is
+now always high-risk**, with no Article 6(3) filter. 🔴 **Whether routine learner progress-tracking
+is profiling is unsettled** (`Gap 310`) — so a deliverable that builds a learner profile should
+assume the filter is gone.
+
+### 🟢 🆕 Trend 4 — the sequencing fact, which is this pass's most useful finding
+
+🟢 **Put three independently-sourced measurements next to each other:**
+
+| Measurement | Source class | Reading |
+|---|---|---|
+| **Assessment is the *lowest*-adopted AI use case among LATAM faculty** | 🟢 survey, 200+ institutions / 19 countries | the market has **not** automated assessment |
+| **Annex III point 3(b) — "evaluating learning outcomes" — is a high-risk trigger** | 🟢 statute | assessment is **exactly** what the law targets |
+| **Vietnam's high-risk list names "automated assessment"** explicitly | 🟢 statute | and so does the other statute |
+
+🟢 **So the use case that carries nearly all of education's regulatory exposure is the one
+institutions have least deployed.** 🔵 **Both regimes are, in effect, regulating a future state.**
+
+🟢 **Two consequences, and they are commercial rather than academic:**
+
+1. 🟢 **An engagement can build the oversight layer *before* the exposure exists** — cheaper by a
+   large factor than retrofitting it, and the 2027 deferral is the window. 🔵 Retrofitting oversight
+   into a deployed assessment pipeline is the expensive shape; this is the chance not to be in it.
+2. 🔴 **The low adoption number is not evidence of low risk.** 🔵 **Faculty engagement being 88%
+   "minimal to moderate"** means assessment is where the *growth* goes next, and it will arrive into
+   a regime that is already written. 🟢 **The honest client sentence: you are not late, and you will
+   be.**
+
+### 🟡 Trend 5 — teachers as the adoption path, and the hours figure that anchors it
+
+🟢 **The consistent non-vendor finding across channels this pass:** deployments that begin with
+**teachers** rather than students succeed more often, and the threshold is quantified — teachers
+adopt most readily when a tool saves them **5–10 hours/week**, with weekly users reporting
+**~5.9 hours/week** actually saved. 🔵 **The UK's £4M went to exactly this** (lesson planning,
+marking), and the HolonIQ reading is the same: the clearest gains so far are in **course-design
+support, teacher productivity, and administrative workflow** — 🔴 **not in the broad personalisation
+promises**.
+
+🟢 **For this shelf that is a licence-relevant statement:** teacher-productivity tools sit **beside**
+the platform (lesson planning, marking support), not **inside** the system of record. 🔵 **Which is
+the side of the LTI 1.3 boundary where permissive code is lawful** (`P736`, `P809`). 🟢 **The
+commercially easiest deliverable and the licensing-safest one are the same deliverable.**
+
+### 🟡 Trend 6 — skills and credentials, carried forward with this pass's measured constraint
+
+🟢 **1EdTech names digital credentials a core mechanism for skills-based learning and hiring in
+2026**, and HolonIQ reports gains in **real-time skills visibility, adaptive training and competency
+frameworks**. 🟢 **The shelf can now serve the describe-and-verify half of that permissively** —
+CASE via **OpenSALT (MIT)** / **OpenCASE + COMPEITO (Apache-2.0)**, verification via
+**`credential-lens` (MIT)**. 🔴 **It cannot serve issuance or aggregation permissively:** issuers are
+**AGPL-3.0 to a repo**, and **CLR 2.0 aggregation has no verifiable implementation at any ref** —
+measured at two refs this pass, not one (`Gap 301`, now closed negatively). 🟢 **Quote the trend;
+price the fence.**
+
+### 🟢 Trend 7 — evidence of learning as the purchasing criterion
+
+🟡 **Systems increasingly expect evidence that products improve learning quality, persistence,
+well-being or job-relevant skills**, with engagement and well-being re-emerging as value indicators
+and some states piloting AI companions under strict boundaries (**UK, Greece** named). 🟢 **This is
+the trend that makes the xAPI/LRS tier a commercial asset rather than a technical one:** "evidence of
+learning" is a data-model problem, and the permissive store (`lrsql`, Apache-2.0) plus the permissive
+competency registry (OpenSALT, MIT) is the shelf's answer to a procurement question, not just an
+engineering one.
+
+
 ## 🟢 Sixty-seventh pass, 2026-10-08 — the trend channel converges on **purpose-built over general-purpose**, which is the first time the market's stated direction and this shelf's measured result agree; plus **skills-based credentials** named as a 2026 mechanism by the body that writes the standard
 
 ⏱️ **Twenty-first pass of this date. Append-only: this section is new; nothing below it was rewritten.**

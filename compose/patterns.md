@@ -4,6 +4,169 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-eighth pass, 2026-10-08 — `P11`: the shelf's **first dated recipe**, because its deadline is **`2026-12-02`** and it is built from code this KB already wrote; plus seven practices (`P805`–`P811`) earned by this pass's measurements, two of them by errors caught before publication
+
+⏱️ **Twenty-second pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+### 🆕 `P11` — Article 50(2) marking readiness, **deadline `2026-12-02`**, zero copyleft
+
+🔴 **Why this recipe has a date on it.** Regulation (EU) 2026/1744 deferred Annex III high-risk to
+`2027-12-02` but **left Article 50 untouched**. 🔴 **Providers of generative AI systems placed on the
+EU market before `2026-08-02` must have machine-readable marking in place by `2026-12-02`** — eight
+weeks from this pass. 🔵 Systems placed from `2026-08-02` onward had **no grace at all**.
+
+🟢 **Who this is for:** any edtech provider (or any Globant client shipping a generative education
+feature into the EU) whose product predates August 2026. 🔵 **Deployers are a different role with
+different duties — establish which the client is before quoting** (`P803` applies: this is Article 50
+transparency, **not** a conformity assessment).
+
+🟢 **Components, every grant read from payload on this shelf:**
+
+| Step | Component | Licence | Why this one |
+|---|---|---|---|
+| 1. Exposure scan | 🟢 **this KB's `compose/code/aiact-50-2-exposure`** | 🟢 in-repo | Determines which surfaces emit generated content at all — the question that sizes the work |
+| 2. Span identification | 🟢 **`compose/code/aiact-50-2-spans`** | 🟢 in-repo | Locates the generated spans inside mixed human/AI output |
+| 3. Marking | 🟢 **`compose/code/aiact-50-2-marking`** | 🟢 in-repo | Applies the machine-readable mark; ships `fixtures-provenance-policy.md` |
+| 4. Packaging + schema | 🟢 **`compose/code/aiact-50-2-pack`** (`aiact-50-2.xsd`) | 🟢 in-repo | Makes the marking record validatable rather than asserted |
+| 5. Evidence store | 🟢 [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** | Self-hostable xAPI LRS — the audit trail lives on the client's infrastructure, which EMEA sovereignty requires |
+| 6. Conformance check | 🟢 [`conform-ed/conform-ed`](https://github.com/conform-ed/conform-ed) | 🟢 **MIT** | Its `package.json` **already stands up `lrsql`** (`lrsql:up`, `lrsql:wait`, `lrsql:auth:check`) — step 5 and step 6 are one toolchain |
+| 7. Competency anchoring | 🟢 [`opensalt/opensalt`](https://github.com/opensalt/opensalt) | 🟢 **MIT** | Ties marked output to the competency it claims to serve, so the record answers *what was taught*, not only *what was generated* |
+| 8. Platform integration | 🟡 **LTI 1.3** into the LMS/SIS | 🟢 permissive tool-side libs (`P766`) | 🔴 **The only lawful way to touch the copyleft tier** — see `P809` |
+
+🟢 **Zero copyleft components. This is the shelf's third zero-copyleft recipe** (after `P8` and
+`P10`) and the first with a **statutory deadline** attached.
+
+🔴 **Three refusals built into the recipe, because each is one short step away:**
+
+1. 🔴 **`conform-ed` output is not certification** (its own README says it is *not* a certification
+   body). It evidences that you speak xAPI/QTI/LTI correctly.
+2. 🔴 **None of this is a conformity assessment.** Article 50 transparency and Chapter III high-risk
+   are **different regimes with different assessors** (`P803`). 🟢 Delivering `P11` does **not**
+   advance the client's 2027 Annex III file beyond supplying substrate evidence.
+3. 🔴 **Do not sell `P11` as "AI Act compliance".** It is **one article, one paragraph, one
+   deadline**. 🟢 Say exactly that; it is sellable on its own.
+
+🟢 **Sequencing advice, which is the part a client will actually thank you for:** run `P11` now
+against the December date, and use the **sixteen-month Annex III deferral** to build the oversight
+layer (`P10`, `P8`) calmly rather than under assessment pressure. 🔴 **`P808`: deferred is not
+cancelled.**
+
+### 🆕 `P805` — a licence file too small to contain a grant is a **name, not a licence**
+
+🔵 **Measured:** `frappe/education` `[develop]` ships `license.txt` at **19 bytes**, reading in full:
+**`License: GNU GPL V3`**. 🔴 **GPL-3.0's text is ~35 100 B.** 🔴 There is **no manifest licence key**
+(`package.json` is `"private": true`; `pyproject.toml` has no licence line) and **no README
+mention** — so the 19 bytes are the repository's **entire** licence evidence.
+
+🟢 **The practice:** compare the licence payload's byte count against the canonical count for the
+licence it names. 🔴 **An order-of-magnitude shortfall means the file *names* a licence without
+*conveying* it**, and the question for counsel is whether a bare name grants anything.
+🟢 **Operationally:** record it as the named licence (**assume GPL-3.0 and its obligations** — the
+conservative reading), 🔴 **never as "permissive-unknown"**, and 🟡 **raise it in writing** before any
+code is written against it (`Gap 312`).
+
+🔵 **Why this is not pedantry:** the byte count is what catches it. A sweep that records *"licence:
+GPL-3.0, present"* passes this repository and a sweep that records *bytes* does not.
+
+### 🆕 `P806` — `refs/pull/N/head` is readable when `api.github.com` is not
+
+🔵 **Measured:** `git ls-remote <repo> 'refs/pull/*'` returned **27 refs** on `arqueon/certo` and
+`refs/pull/4/head` resolved to **`c62d8c9`**, in a session where `api.github.com` returns **`403`**.
+🟢 **`raw.githubusercontent.com` then served the README at that bare sha** (15 618 B).
+
+🟢 **The practice:** when a channel attributes a capability to a pull request, **do not stop at
+`P786` ("a PR is a proposal")** — open the proposal. 🔵 Two refs, two readings: the **default ref**
+tells you what a client would consume; the **PR head** tells you whether the capability exists at
+all.
+
+🔴 **And read the sizes against each other.** `arqueon/certo`'s PR-head README (**15 618 B**) is
+*smaller* than its `main` README (**16 582 B**). 🟢 **A PR branch behind its own default branch is
+stale or superseded, not pending** — which is a conclusion the default ref alone cannot support.
+
+### 🆕 `P807` — `DNS_BLOCKED` is a fourth instrument state, and it is the one that touches the law
+
+🔵 **Measured:** `eur-lex.europa.eu`, `digital-strategy.ec.europa.eu` and
+`artificialintelligenceact.eu` **all failed DNS resolution** while `raw.githubusercontent.com` and
+`api.github.com` resolved normally. 🟢 **The instrument states this shelf now distinguishes:**
+`403` (refused) · `SCOPE_DENIED` (refused, allow-list named) · **`DNS_BLOCKED` 🆕** (host
+unresolvable) · non-measurement (not attempted).
+
+🟢 **The practice, and it is a publication rule rather than a probe rule:** 🔴 **a regulatory claim
+that cannot be checked against primary text is published with its channel count attached, or not
+published.** 🔵 This pass's AI Act correction carries **"four independent secondary channels in
+agreement"** and names the single-channel items it refuses to build on. 🟢 **A gap is opened so a
+later pass with DNS closes it in one fetch** (`Gap 308`).
+
+🔵 **The asymmetry is the thing to remember:** this session can verify **code** to the byte and
+cannot verify **statute** at all. 🔴 Those two confidences must never be reported in the same voice.
+
+### 🆕 `P808` — deferred is not cancelled, and the surviving obligation is where the budget goes
+
+🔵 **Measured:** Annex III high-risk moved `2026-08-02` → **`2027-12-02`**; Article 50 **did not
+move**, and its 50(2) marking grace expires **`2026-12-02`**.
+
+🔴 **Two symmetrical errors, and this pass caught the shelf making the first one:** pass 67 reported
+an obligation as **live** that was deferred (a client would have bought a conformity assessment
+sixteen months early); the opposite error reads the deferral as **relief** and builds nothing.
+
+🟢 **The practice:** when a regime slips, re-read it **article by article** and find what *didn't*
+slip. 🟢 **That is where the near-term deliverable is** — here, Article 50(2) on an eight-week clock,
+which is exactly where this KB's own code tier already sits. 🔵 **A slipped deadline reallocates
+work; it does not remove it.**
+
+### 🆕 `P809` — the grant follows the **author class**, not the functional layer
+
+🔵 **Measured across the shelf's layers:** standards bodies and alliances publish **permissively**
+(Ed-Fi DMS **Apache-2.0, 11 357 B**; 1EdTech OpenCASE **Apache-2.0**; OpenSALT **MIT**; the xAPI-LRS
+tier); sector product communities publish **copyleft** (this pass's system-of-record tier: **5 of
+5**); credential issuers are **AGPL-3.0 to a repo**.
+
+🔴 **This replaces pass 67's framing** ("the registry is permissive, the system of record is not"),
+which **this pass's own tier refutes**: Ed-Fi DMS *is* a system of record and *is* Apache-2.0.
+
+🟢 **The practice:** use author class as a **prior** — it predicts the grant before you read a byte,
+and it tells you which side of the **LTI 1.3** boundary (`P736`) to build on: **on the substrate,
+beside the product.** 🔴 **A prior is not a substitute for the payload read**; it tells you what to
+expect and how surprised to be.
+
+### 🆕 `P810` — a substring licence grep fails two ways: **sub-word** and **homonym**
+
+🔴 **Both were caught this pass, and the second would have been the pass's false headline.**
+
+| Reported | Actually | Class |
+|---|---|---|
+| `Apache 2` in `OS4ED/openSIS-Classic` README | 🔴 **`Apache 2.4 or above`** — the **web server**, under *Installation* | 🔴 **homonym** |
+| `MIT` in `rosariosis` README | 🔴 **`ad`MIT`tance`** | 🔴 **sub-word** |
+| `MIT` in `GibbonEdu/core` README | 🔴 **`sub`MIT`ting issues`** | 🔴 **sub-word** |
+
+🟢 **The practice:** 🟢 use **word boundaries** (`\bMIT\b` — re-run gave **zero** hits in both
+repositories); 🟢 for Apache, **require the licence form** (`Apache-2.0`, `Apache License`) and never
+the bare `Apache 2`, because `Apache 2.x` is the **commonest web server on earth** and appears in
+every LAMP install guide; 🔴 **and never let a prose grep stand in for a payload read.**
+
+🔴 **The stakes, stated concretely:** trusting the first sweep would have published **openSIS as a
+permissive system of record** — the inverse of this pass's actual finding, and the sort of error a
+client builds on.
+
+### 🆕 `P811` — 404 on every conventional licence path is **"read the README"**, not "no licence"
+
+🔵 **Measured:** `OS4ED/openSIS-Classic` `[master]` returns **404** for `LICENSE`, `LICENSE.md`,
+`LICENSE.txt`, `license.txt` and `COPYING`. 🔴 A sweep stopping there records *"no licence"*.
+🟢 **Its README's own `## License` section points at `docs/License.txt`**, which served **17 286 B**
+of **GPL-2.0** (*"Version 2, June 1991"*, BOM-prefixed).
+
+🟢 **The practice:** on a conventional-path miss, **read the README's licence section and follow its
+link** before recording an absence. 🔴 **"No licence file" and "licence in a non-standard path" have
+opposite consequences** — the first means *no grant, do not build*; the second means *GPL-2.0, build
+accordingly*.
+
+🟡 **And a refinement to `P804`:** this GPL-2.0 payload is **17 286 B** while `rosariosis`'s is
+**15 214 B** — same licence, same version line, different bytes, because openSIS's copy is
+**reflowed and BOM-prefixed**. 🟢 **An off-canonical byte count is a question with more than one
+answer** — a different copyright holder (`P804`) *or* a reformatted text. 🔴 **Byte count flags a
+payload for reading; it never identifies one by itself.**
+
+
 ## 🟢 Sixty-seventh pass, 2026-10-08 — `P10`: the shelf's **second zero-copyleft recipe**, and the first that answers *what the evidence proves* rather than only *what happened*; plus three practices (`P802`–`P804`) earned by this pass's instrument states
 
 ⏱️ **Twenty-first pass of this date. Append-only: this section is new; nothing below it was rewritten.**

@@ -4,6 +4,113 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-eighth pass, 2026-10-08 — the **system-of-record tier** is read for the first time and it is the shelf's **first wholly non-permissive layer** (5 of 5); `Ed-Fi`'s successor is confirmed **Apache-2.0 at the canonical byte count**, and the licence law gets a sharper shape: the grant follows the **author class**, not the layer
+
+⏱️ **Twenty-second pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Instruments:** `git ls-remote --symref` **7 of 7**; `raw.githubusercontent.com` served every
+payload below; `git ls-remote --tags` resolved **7 tags** on the Ed-Fi successor. 🔴 `api.github.com`
+re-measured **`403`** — no star counts, nothing ranked by popularity.
+
+### 🟢 🆕 The student-information-system tier — five systems of record, every grant read from payload
+
+🔵 This KB has carried LMS, LRS, assessment, roster, credential and competency layers. 🔴 **It had
+never read the layer that actually holds the student record.** 🟢 Read now, and the first thing to
+report is the **ref**, because not one of these repositories answers to `main`:
+
+| Component | default ref · HEAD | Licence (payload, bytes) | Grant layers | Verdict |
+|---|---|---|---|---|
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) (RosarioSIS) | 🔵 **`mobile`** · **`899f6da`** | 🔴 **GPL-2.0** (`LICENSE`, **15 214 B**, *"Version 2, June 1991"*) | 🟢 **three layers agree** — `LICENSE` + `composer.json` **and** `package.json`, both `"license": "GPL-2.0-or-later"` | 🟢 **the cleanest licence record in the tier**, 🔴 and copyleft 🆕 |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) (Gibbon) | 🔵 **`v31.0.00`** · **`683d2c4`** | 🔴 **GPL-3.0** (`LICENSE`, **35 121 B**, *"Version 3, 29 June 2007"*) | 🟢 **two agree** — `LICENSE` + `composer.json` `"license": "GPL-3.0"` | 🔴 copyleft; 🟡 **note the ref is a version** 🆕 |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) (OpenEduCat) | 🔵 **`19.0`** · **`1c95cef`** | 🟡 **LGPL-3.0** (`LICENSE`, **8 241 B** — a *short notice*: *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3"*) | 🟢 **two agree** — `LICENSE` + README prose (3×) | 🟡 **the one usable band in the tier** — see `P750` 🆕 |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) (openSIS CE 9.3) | `master` · **`5d546f2`** | 🔴 **GPL-2.0** — 🔴 **not at any conventional path**; found only at **`docs/License.txt`**, **17 286 B**, *"Version 2, June 1991"*, **BOM-prefixed** | 🟡 payload + README prose; 🔴 **no manifest, no root `LICENSE`** | 🔴 copyleft, 🔴 **and nearly mis-read — see below** 🆕 |
+| [`frappe/education`](https://github.com/frappe/education) | 🔵 **`develop`** · **`444cc8e`** | 🔴 **GPL-3.0 *asserted*** — `license.txt` is **19 B** and reads, in full, **`License: GNU GPL V3`** | 🔴 **one layer, and it contains no grant** — `package.json` is `"private": true` with no `license` key; `pyproject.toml` has **no licence line at all**; README has **no licence mention** | 🔴 **the weakest grant this shelf has recorded** 🆕 |
+
+🔴 **Five of five are non-permissive. There is no MIT and no Apache-2.0 anywhere in this tier.**
+🔵 **This is the exact inverse of the two layers before it** — pass 66's LRS tier was four-of-six
+permissive, pass 67's CASE tier was four-of-four — and it is the **first wholly non-permissive layer
+in sixty-eight passes**.
+
+### 🔵 🆕 Five of five default refs are **not `main`**, and two are version-shaped
+
+🟢 **`develop` · `mobile` · `master` · `v31.0.00` · `19.0`.** 🔵 Gate 0 of the pre-flight
+(`compose/patterns.md`, pass 63) says every gate below it takes a `[ref]` because `master` is a
+pseudo-ref. 🟢 **This tier is the strongest evidence yet for that gate:** a client who clones
+`GibbonEdu/core` without a ref gets **`v31.0.00`**, a ref whose name will be *wrong* at the next
+release; one who clones `openeducat_erp` gets **`19.0`**, pinned to an Odoo major line; and
+🔴 **one who clones `rosariosis` gets `mobile`** — a branch name that reads like a feature branch
+and is in fact the default. 🔵 **Any instruction in a deck that says "clone and build" is incomplete
+in this tier without a `[ref]`.**
+
+### 🔴 🆕 The near-miss, recorded because it would have been this pass's false headline
+
+🔵 A case-insensitive prose sweep for licence names reported **`Apache 2`** in
+`OS4ED/openSIS-Classic`'s README and **`MIT`** in two others. 🔴 **All three were artifacts, and the
+first would have published a *permissive system of record* — which would have been the pass's
+headline and would have been false:**
+
+| Reported hit | What it actually was | Class of error |
+|---|---|---|
+| `Apache 2` in openSIS README | 🔴 **`Apache 2.4 or above`** — the **web server**, in the Installation section | 🔴 **homonym** |
+| `MIT` in rosariosis README | 🔴 **`ad`MIT`tance`** | 🔴 **sub-word** |
+| `MIT` in Gibbon README | 🔴 **`sub`MIT`ting issues`** | 🔴 **sub-word** |
+
+🟢 **Re-run with word boundaries (`\bMIT\b`): zero hits in both.** 🟢 **And openSIS's real grant was
+then found where the README pointed** — `docs/License.txt`, GPL-2.0, 17 286 B. 🔵 Two practices fall
+out of this and both are now in `compose/patterns.md`: **`P810`** (a substring licence grep fails in
+two distinct ways — sub-word and homonym) and **`P811`** (**404 on every conventional licence path is
+not "no licence"; it is "read the README"**).
+
+### 🟡 🆕 Two GPL-2.0 payloads, two byte counts — so byte count is a **flag**, not an identity
+
+🔵 `rosariosis` ships GPL-2.0 at **15 214 B**; `openSIS-Classic` ships GPL-2.0 at **17 286 B**.
+🟢 **Same licence, same version line, different bytes** — openSIS's copy is **reflowed** (paragraphs
+unwrapped onto single lines) and carries a **BOM**. 🔵 This refines `P804`, which read an
+off-canonical Apache byte count as a question about the copyright holder: 🟢 **an off-canonical count
+is a question, and "the text was reformatted" is one of its answers.** 🔴 **Byte count flags a
+payload for reading; it never identifies one on its own.**
+
+### 🟢 🆕 The Ed-Fi successor, confirmed — and the version line has a discontinuity
+
+🔵 Pass 67 reported a shipped `v8.0.0` on the Ed-Fi **Data-Management-Service**. 🔴 **The slug pass 67
+implied does not exist:** `Ed-Fi-Alliance-OSS/Ed-Fi-Data-Management-Service` returns a credential
+prompt (this environment's signature for *absent or private*). 🟢 **The repository is
+[`Ed-Fi-Alliance-OSS/Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service)**, and it measures:
+
+| Probe | Result |
+|---|---|
+| default ref · HEAD | `main` · **`9203e19`** 🆕 |
+| Licence | 🟢 **Apache-2.0**, `LICENSE`, **11 357 B** — 🟢 **the shelf's canonical count, exactly** |
+| README | **3 239 B**; *"These applications replace the legacy Ed-Fi ODS/API and Ed-Fi ODS Admin API"* |
+| Tags | `v0.2.0` → `v0.7.0`, then 🔵 **`v8.0.0`** (**`d911abb`**) |
+| `Ed-Fi-Alliance-OSS/Ed-Fi-ODS` (legacy) | `main` · **`e453cd2`** — 🟢 still resolves |
+
+🔵 **Two things to flag.** 🟡 First, **`main` (`9203e19`) is not `v8.0.0` (`d911abb`)** — the tag pass
+67 recorded is not the head a client clones. 🟡 Second, the tag line jumps **`0.7.0` → `8.0.0`**,
+and 🔴 **no payload read this pass explains the jump** (`Gap 311`); the obvious reading is alignment
+with the legacy ODS/API major line, but that is an inference and is left as one.
+
+### 🟢 The law this pass sharpens: the grant follows the **author class**, not the functional layer
+
+🔵 Pass 67 framed the shelf's licence law by *layer* — registries permissive, systems of record not.
+🔴 **This pass breaks that framing with a counter-example from inside its own tier:** the Ed-Fi
+Data-Management-Service **is** a system of record, and it is **Apache-2.0 at 11 357 B**.
+
+🟢 **The framing that survives all sixty-eight passes is about *who wrote it*:**
+
+| Author class | Examples read on this shelf | Grant |
+|---|---|---|
+| 🟢 **Standards bodies & alliances** | Ed-Fi DMS (Apache-2.0) · 1EdTech OpenCASE (Apache-2.0) · OpenSALT (MIT) · the xAPI/LRS tier | 🟢 **permissive, near-uniformly** |
+| 🔴 **Sector product vendors & communities** | RosarioSIS · Gibbon · openSIS · frappe/education · OpenEduCat · Moodle · Open edX | 🔴 **copyleft, 5 of 5 this pass and essentially without exception before it** |
+| 🔴 **Credential issuers** | `certo` · `Opencred` · `edubadges-server` | 🔴 **AGPL-3.0, to a repo** |
+
+🟢 **`P809` states the consequence** (`compose/patterns.md`): **build on the substrate, integrate with
+the product at arm's length.** 🔵 The arm's length already has an instrument on this shelf —
+**LTI 1.3** (`P736`/`R57a`), which pass 57 established as the licence-isolation boundary. 🟢 **So the
+negative result in this tier does not cost the shelf a deliverable; it tells it which side of the
+boundary to build on.**
+
+
 ## 🟢 Sixty-seventh pass, 2026-10-08 — the **CASE tier** lands permissive-unanimous, a **cross-protocol conformance harness** arrives MIT, and the Ed-Fi substrate this shelf has carried since pass 13 turns out to have a **shipped successor** (`v8.0.0`)
 
 ⏱️ **Twenty-first pass of this date. Append-only: this section is new; nothing below it was rewritten.**

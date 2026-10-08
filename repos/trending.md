@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-eighth pass, 2026-10-08 — the GitHub-trending channel repeats its category error for the nth consecutive week, and the week's real repo movement is a **five-component system-of-record tier** (zero permissive) plus a **slug correction** on the Ed-Fi successor
+
+⏱️ **Twenty-second pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 The trending channel, and the error is the same error
+
+🔵 `github trending education AI 2026` returned, as its education rows:
+
+| Returned | What it is | Verdict |
+|---|---|---|
+| `ai-engineering-from-scratch` | a **course** on AI engineering | 🔴 curriculum, not a component |
+| `rasbt/LLMs-from-scratch` | a **teaching** notebook series | 🔴 curriculum |
+| `microsoft/generative-ai-for-beginners` | a **21-lesson course** | 🔴 curriculum |
+| `karpathy/nanochat` | a minimal LLM training stack, *"useful for learning"* | 🔴 **learning *about* AI, not AI *for* education** |
+| `xai-org/grok-build`, OpenClaw, n8n, Dify | general AI projects | 🔴 not education |
+
+🔴 **Every education-labelled row is a repository that *teaches*, not one a school could *deploy*.**
+🔵 The conflation is lexical: *"AI education"* parses as both *"AI for education"* and *"education
+about AI"*, and the channel returns the second while this shelf needs the first.
+🟢 **The channel also conceded the structural point in its own words:** *"The search didn't turn up
+a GitHub Trending page filtered to education and AI."* 🔵 **There is no such view.** 🟢 Recorded
+again, because a reader who sees these names in a trending list should know they were **examined and
+rejected on category**, not overlooked.
+
+🟡 **One row is worth keeping for a different reason:** `kouweizhu/agents-radar` publishes dated
+AI open-source trend issues (the pass read issue **#328**, dated **2026-10-04**). 🔵 It is a
+**channel**, not a component — but it is a *dated* channel, which is rarer than it sounds and may be
+cheaper to poll than the trending page this shelf keeps failing to find.
+
+### 🟢 🆕 The week's real repo movement
+
+🟢 **Five systems of record, every grant read from payload** — full table, grant layers and byte
+counts in `repos/foundations.md` this pass:
+
+| Repo | default ref · HEAD | Licence (payload) |
+|---|---|---|
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔵 `mobile` · `899f6da` | 🔴 GPL-2.0, 15 214 B — 🟢 **three layers agree** |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔵 `v31.0.00` · `683d2c4` | 🔴 GPL-3.0, 35 121 B |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔵 `19.0` · `1c95cef` | 🟡 LGPL-3.0, 8 241 B |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | `master` · `5d546f2` | 🔴 GPL-2.0, **only at `docs/License.txt`**, 17 286 B |
+| [`frappe/education`](https://github.com/frappe/education) | 🔵 `develop` · `444cc8e` | 🔴 **GPL-3 asserted in a 19-byte file** |
+
+🔴 **Zero permissive. The shelf's first wholly non-permissive layer in sixty-eight passes**, and the
+exact inverse of pass 66 (LRS, 4/6) and pass 67 (CASE, 4/4).
+
+🔵 **And five of five default refs are not `main`** — `mobile`, `v31.0.00`, `19.0`, `master`,
+`develop`. 🟢 **Two are version-shaped**, so the ref a client clones today is a ref whose *name* will
+be wrong at the next release. 🟢 Gate 0 of the pre-flight exists for this and has never had better
+evidence.
+
+### 🟡 🆕 A slug correction, which is the kind of error that propagates if left
+
+🔴 `Ed-Fi-Alliance-OSS/Ed-Fi-Data-Management-Service` — the name pass 67's prose implies —
+**does not exist** (credential prompt: this environment's signature for absent-or-private).
+🟢 **The repository is [`Ed-Fi-Alliance-OSS/Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service)**: `main` · **`9203e19`**, 🟢 **Apache-2.0, 11 357 B** (canonical),
+README **3 239 B**, tags `v0.2.0`→`v0.7.0` then 🔵 **`v8.0.0`** (`d911abb`). 🟡 `main` is **not** the
+`v8.0.0` tag, and 🔴 the `0.7.0 → 8.0.0` jump is unexplained by any payload (`Gap 311`).
+
+
 ## 🟢 Sixty-seventh pass, 2026-10-08 — the GitHub-trending channel repeats its category error for the nth consecutive week, and the week's real repo movement is a **permissive CASE tier** plus a **shipped Ed-Fi successor** (`v8.0.0`)
 
 ⏱️ **Twenty-first pass of this date. Append-only: this section is new; nothing below it was rewritten.**

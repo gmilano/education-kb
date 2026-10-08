@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-eighth pass, 2026-10-08 — week of 2026-10-08: `P795` returns its **first wholly non-permissive tier** (systems of record, 5 of 5), a **new instrument** reads a pull-request head ref and closes `Gap 301` negatively, and the week's largest movement is **not in a repository at all** — it is a statute that moved sixteen months
+
+⏱️ **Twenty-second pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 The control query's **nineteenth** consecutive empty week
+
+🔵 `top open source AI agents education 2026 github MIT` → OpenClaw, Hermes, OpenHands, CrewAI,
+LangGraph, Browser Use. 🔴 **No education component.** 🔵 The channel's own words: *"I found no
+ranking specifically for open-source AI agents in education for 2026."* 🟡 Its education-adjacent
+offers were again **curricula and indexes** — `AI Agents for Beginners`, the Hugging Face Agents
+Course, `500-AI-Agents-Projects`. 🔵 **Nineteen weeks is no longer a query defect to be fixed; it is
+a property of the market, and pass 67's trend channel diagnosed it independently.** 🟢 What a
+general-purpose framework cannot supply is the education-specific *protocol surface* — which is
+precisely what the last four passes have been finding instead.
+
+### 🟢 🆕 What actually moved this week
+
+| Movement | Measured | Why it matters |
+|---|---|---|
+| 🆕 **The system-of-record tier, read for the first time** | RosarioSIS `mobile`·`899f6da` 🔴 GPL-2.0 · Gibbon `v31.0.00`·`683d2c4` 🔴 GPL-3.0 · OpenEduCat `19.0`·`1c95cef` 🟡 LGPL-3.0 · openSIS `master`·`5d546f2` 🔴 GPL-2.0 · `frappe/education` `develop`·`444cc8e` 🔴 GPL-3 *asserted in 19 bytes* | 🔴 **5 of 5 non-permissive — the shelf's first wholly copyleft layer** |
+| 🆕 **`refs/pull/*` enters the instrument set** | 🟢 27 pull refs on `arqueon/certo`; `refs/pull/4/head` = **`c62d8c9`** | 🟢 **a PR can now be *read*, not just refused** (`P806`) |
+| 🆕 **`Gap 301` closed negatively** | CLR occurrences at `c62d8c9`: 🔴 **zero**; README there **15 618 B**, *smaller* than `main`'s 16 582 B | 🔴 the claim fails at **both** refs — the branch is **behind** `main`, not ahead |
+| 🆕 **Ed-Fi successor slug corrected and confirmed** | [`Ed-Fi-Alliance-OSS/Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service) `main`·**`9203e19`**, 🟢 **Apache-2.0, 11 357 B** | 🟡 `main` ≠ the `v8.0.0` tag (`d911abb`) pass 67 recorded |
+| 🆕 **A statute moved 16 months** | 🔴 **Annex III high-risk: `2026-08-02` → `2027-12-02`** (Reg. (EU) 2026/1744) | 🔴 **it corrects pass 67's headline claim** — see `intel/market.md` |
+
+### 🔴 🆕 The correction, stated here because a trend file that only adds is not a trend file
+
+🔵 Pass 67 opened `intel/market.md` with *"the EU AI Act is **in enforcement** (since
+`2026-08-02`)"* and read education's high-risk trigger as a four-part test. 🟢 **The four-part test
+survives this week unchanged** (Annex III point 3: access/admission/assignment · evaluating learning
+outcomes · assessing appropriate level · monitoring prohibited behaviour during tests).
+🔴 **The date does not.** The **Digital Omnibus on AI**, Regulation (EU) 2026/1744 — of 8 July 2026,
+OJ **2026-07-24**, in force **2026-07-27** — defers Chapter III Sections 1–3 for Annex III systems
+to **2027-12-02**. 🔵 **So education's high-risk obligations are not in application, and were not in
+application when pass 67 said they were.**
+
+🟢 **What did not move, and this is where the week's real urgency sits:** **Article 50 transparency
+has applied since `2026-08-02`**, with a narrow Article 50(2) grace to 🔴 **`2026-12-02`** for
+machine-readable marking of generative systems already on the market before August. 🔵 **That is
+eight weeks from this pass.** 🟢 **The irony is worth recording in a trend file:** this shelf's
+*prose* claim about high-risk enforcement was wrong, while its *code* — `compose/code/aiact-50-2-*`,
+four directories built across passes 60–66 — targets **Article 50(2)**, the one obligation the
+Omnibus left standing, on a deadline that is now imminent. 🟢 **The code tier became more
+load-bearing this week, not less.**
+
+### 🔵 Instrument states this week
+
+🟢 `git ls-remote --symref` **7/7** · 🟢 `refs/pull/*` **worked, first use** · 🟢
+`raw.githubusercontent.com` served every payload including one at a **bare sha** · 🔴
+`api.github.com` **`403`** (pass 67 recorded `SCOPE_DENIED`; this week it was a plain `403`) ·
+🔴 **`DNS_BLOCKED` 🆕** — `eur-lex.europa.eu`, `digital-strategy.ec.europa.eu` and
+`artificialintelligenceact.eu` **all fail DNS resolution** while GitHub hosts resolve normally.
+🔴 **Consequence: this week verified code and could not verify statute**; the correction above rests
+on **four independent secondary channels in agreement**, not on the Official Journal text (`Gap 308`).
+
+
 ## 🟢 Sixty-seventh pass, 2026-10-08 — week of 2026-10-08: `P795` holds on a **protocol family** (CASE/CLR) and returns the shelf's first **permissive-unanimous** tier; the control query's eighteenth empty week is independently diagnosed by the trend channel as the market's property, not the query's
 
 ⏱️ **Twenty-first pass of this date. Append-only: this section is new; nothing below it was rewritten.**

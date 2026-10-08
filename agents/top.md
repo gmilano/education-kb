@@ -4,6 +4,97 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-eighth pass, 2026-10-08 — the agent-side result is a **refusal that finally measured itself**: `Gap 301`'s CLR claim is read at the **pull-request head ref** and is **absent there too**, which converts "a PR is a proposal" from a rule into a finding; the control query is empty for the **nineteenth** week
+
+⏱️ **Twenty-second pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Instrument map, re-measured before any datum:**
+`git ls-remote --symref` **resolved the default ref and HEAD for 7 of 7** repositories probed.
+🟢 **A new instrument entered the shelf this pass and it worked on first use:**
+`git ls-remote <repo> 'refs/pull/*'` — **27 pull refs resolved** on `arqueon/certo`, which is the
+instrument `Gap 301` nominated last pass as "the next one to try, because it needs no API access."
+🔵 It needed no API access, and it answered. 🟡 `raw.githubusercontent.com` served **every** payload
+requested below, including one read at a **bare commit sha**. 🔴 **`api.github.com` re-measured:
+`403`** — the state passes 64–65 recorded, *not* pass 67's `SCOPE_DENIED` body. 🔵 Both are refusals
+with the same consequence; recorded as `403` because that is what was returned. 🔴 **So no star
+counts appear below, and nothing below is ranked by popularity.**
+
+🔴 **A fourth instrument state is recorded this pass — `DNS_BLOCKED`** — and it does not touch the
+repositories, it touches the **law**. See `intel/market.md`: every European primary-source host
+(`eur-lex.europa.eu`, `digital-strategy.ec.europa.eu`, `artificialintelligenceact.eu`) **fails DNS
+resolution in this session**, while `raw.githubusercontent.com` resolves normally. 🔵 The
+consequence is scoped and worth stating plainly: **this pass can verify code and cannot verify
+statute**, so the one legal correction it makes below is carried **with its channel count attached**
+(`P807`).
+
+### 🔴 The industry-named control query was empty for the **nineteenth** consecutive week
+
+🔵 `top open source AI agents education 2026 github MIT` returned OpenClaw, Hermes, OpenHands,
+CrewAI, LangGraph, Browser Use — general-purpose frameworks, **no education component**. 🔵 The
+channel again said so in its own words: *"I found no ranking specifically for open-source AI agents
+in education for 2026."*
+
+🟡 **The education-adjacent rows it offered were, for the nineteenth time, the wrong category:**
+`AI Agents for Beginners` (Microsoft, a 12-lesson course), the Hugging Face Agents Course, and
+`ashishpatel26/500-AI-Agents-Projects` — a curated **index** whose education entries ("Study
+Partner", "Research Scholar") are 🔴 **examples to adapt, which the channel itself said**, not
+deployable components. 🔴 **A course about agents is not an agent, and an index of agents is not an
+agent** — a distinction this shelf has now had to restate in **twelve of nineteen** passes.
+
+🟢 **`P795` holds on a fifth consecutive pass — and this is the first time it returned a tier that
+is *entirely non-permissive*.** 🔵 Passes 65–67 named a platform, a protocol and a protocol family,
+and each handed back permissive components. 🔴 **This pass named the system-of-record layer (student
+information systems) and got five of five copyleft** — see `repos/foundations.md` and
+`verticals/solutions.md`. 🟢 **That the rule keeps producing findings when the yield is negative is
+the evidence that it is a rule and not a lucky streak.**
+
+### 🟢 🆕 `Gap 301` resolved — **negatively, and at a ref no prior pass could reach**
+
+🔵 **Where the gap stood.** Pass 67 recorded a channel claim that CLR 2.0 support — grouping issued
+Open Badges under one signed record — arrived as **merged PR #4 on `arqueon/certo`**. Pass 67 probed
+`main`, found **zero** CLR occurrences, and left the gap open with a named remedy: *probe the PR's
+own head ref directly.*
+
+🟢 **Done, and the measurement is unambiguous:**
+
+| Probe | Result |
+|---|---|
+| `refs/pull/*` on `arqueon/certo` | 🟢 **27 refs resolve** — the instrument works without `api.github.com` 🆕 |
+| `refs/pull/4/head` | 🟢 **`c62d8c9`** — **the PR branch exists** 🆕 |
+| README at `c62d8c9` (bare sha read) | 🟢 served, **15 618 B** |
+| `CLR` / *"Comprehensive Learner Record"* at `c62d8c9` | 🔴 **zero occurrences** 🆕 |
+| `package.json` at `c62d8c9` | 🔴 **404** |
+
+🔴 **So the claim fails at both refs.** 🔵 **This is a stronger negative than pass 67's, and the
+difference matters:** pass 67 could say only *"not on the default branch"*, which is consistent with
+a real feature awaiting a merge. 🔴 **This pass can say the capability is not on the branch it was
+attributed to either** — so the claim is not an unmerged feature, it is **unsupported by any ref in
+the repository**.
+
+🔵 **One incidental datum that corroborates the shape:** the PR head's README (**15 618 B**) is
+*smaller* than `main`'s (**16 582 B**, pass 67). 🟢 The PR branch is **behind** `main`, not ahead of
+it — which is what a stale or superseded branch looks like, and not what a freshly merged feature
+looks like.
+
+🟢 **`P806` is the practice this earns** (see `compose/patterns.md`): `refs/pull/N/head` is readable
+when `api.github.com` is not, so **"a PR is a proposal" (`P786`) no longer has to be a refusal to
+measure** — the proposal itself can be opened and read.
+
+### 🔴 The credential picture, with the aggregate edge now **closed as empty on evidence**
+
+| Edge | Best grant on this shelf | Verdict |
+|---|---|---|
+| **verify** | `credential-lens` — 🟢 MIT, 1 080 B | 🟢 permissive |
+| **issue** | `certo` / `Opencred` / `edubadges-server` — 🔴 AGPL-3.0 | 🔴 populated, copyleft |
+| **aggregate (CLR 2.0)** | 🔴 **none — and now measured at two refs, not one** | 🔴 **empty, on evidence** 🆕 |
+| **describe (CASE)** | 🟢 OpenSALT MIT · OpenCASE + COMPEITO Apache-2.0 | 🟢 permissive, three ways |
+
+🔵 **The one-line consequence for a client, unchanged in direction and firmer in support:** you can
+**describe** a competency permissively and **verify** a badge permissively; you must **take the AGPL
+or build** to issue one; and 🔴 **CLR aggregation is build-not-buy**, which this pass establishes
+rather than suspects. 🟢 **Price it as engineering, not as integration.**
+
+
 ## 🟢 Sixty-seventh pass, 2026-10-08 — the **competency layer** is read for the first time and it is the shelf's **second permissive-dominant layer**; `Gap 294` gains a third edge (*aggregate*), and the CLR claim behind it **does not survive a payload read**
 
 ⏱️ **Twenty-first pass of this date. Append-only: this section is new; nothing below it was rewritten.**

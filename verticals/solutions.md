@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-eighth pass, 2026-10-08 — the **student information system** tier joins the shelf: five real, deployable, customisable systems of record, **none of them permissive**; and pass 67's "registry vs. system of record" law is **replaced** by a sharper one that survives its own counter-example
+
+⏱️ **Twenty-second pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🔵 This file has carried the **delivery** platforms since pass 1 — Moodle, Open edX, Canvas,
+Sakai, BigBlueButton, H5P, Kolibri. 🔴 **It had never carried the platforms that hold the student
+record**, which is the system a district actually runs its year on, and the system any AI deliverable
+has to read from. 🟢 **Five are now read, each with its grant taken from payload.**
+
+### 🟢 🆕 The system-of-record tier — what each one *is*, and what its licence permits
+
+| Platform | What it is | ref · HEAD | Licence (payload) | What you may build on it |
+|---|---|---|---|---|
+| **[RosarioSIS](https://github.com/francoisjacquet/rosariosis)** | 🟢 Full K-12 **SIS**: students, scheduling, attendance, grades, gradebook, report cards, transcripts, billing. PHP/PostgreSQL. Modular — it ships a documented module system. | 🔵 **`mobile`** · `899f6da` | 🔴 **GPL-2.0** (15 214 B) — 🟢 **three layers agree**, both manifests say `GPL-2.0-or-later` | 🟡 **Modules inherit GPL-2.0-or-later.** 🟢 Deploy-and-customise is fine; 🔴 a proprietary module distributed to a client is not. |
+| **[Gibbon](https://github.com/GibbonEdu/core)** | 🟢 School management platform with a **module marketplace**: timetabling, attendance, behaviour, planner, library, finance. PHP. Strong i18n — relevant to multi-jurisdiction work. | 🔵 **`v31.0.00`** · `683d2c4` | 🔴 **GPL-3.0** (35 121 B), `composer.json` agrees | 🔴 **GPL-3.0 reaches modules.** 🟡 The ref is **version-shaped** — pin it explicitly or your build breaks at the next release. |
+| **[OpenEduCat](https://github.com/openeducat/openeducat_erp)** | 🟢 Education **ERP on Odoo**: admissions, courses, faculty, exams, library, hostel, fees, plus **CRM-style admissions pipeline**. The closest thing in education to "Odoo for schools" — because it *is* Odoo. | 🔵 **`19.0`** · `1c95cef` | 🟡 **LGPL-3.0** (8 241 B, short notice) | 🟢 **The one usable band in this tier.** Under LGPL-3.0 an **Odoo addon may stay proprietary** (`P750`, pass 58) — so a client-specific AI module is lawful here and nowhere else in the tier. |
+| **[openSIS Classic](https://github.com/OS4ED/openSIS-Classic)** | 🟢 K-12/trade/higher-ed SIS, **Community Edition 9.3** (release date `06/02/2026` per README). Students, staff, scheduling, attendance, grades, transcripts, bulk import. LAMP stack. | `master` · `5d546f2` | 🔴 **GPL-2.0**, **17 286 B — only at `docs/License.txt`** | 🟡 Deploy-and-customise; 🔴 **no manifest and no root licence file**, so a procurement review will ask — have the path ready. |
+| **[frappe/education](https://github.com/frappe/education)** | 🟢 School management on the **Frappe/ERPNext** stack (Python + Vue): students, admissions, programmes, assessment, fees. Inherits ERPNext's accounting and HR. | 🔵 **`develop`** · `444cc8e` | 🔴 **GPL-3 *asserted***: `license.txt` is **19 B**, reading only `License: GNU GPL V3` | 🔴 **Treat as GPL-3.0 and raise it.** No manifest, no README mention, **no grant text** — see `P805` and `Gap 312`. |
+
+🔴 **Five of five non-permissive. Zero MIT, zero Apache-2.0.** 🔵 That is the inverse of the two
+layers read immediately before (pass 66's LRS tier, pass 67's CASE tier), and it is this shelf's
+**first wholly copyleft layer**.
+
+### 🔴 🆕 Pass 67's law was wrong in its framing, and this pass's own tier is what refutes it
+
+🔵 **Pass 67 wrote:** the copyleft law gets its first exception, and the shape is that *the
+**registry** is permissive even though the **system of record** is not.*
+
+🔴 **That cannot be right, because this pass read a permissive system of record.** The **Ed-Fi
+Data-Management-Service** is a system of record by its own README — *"these applications replace the
+legacy Ed-Fi ODS/API"* — and it is 🟢 **Apache-2.0 at 11 357 B**, the canonical count.
+
+🟢 **The framing that survives is about the author, not the layer:**
+
+| Author class | On this shelf | Grant |
+|---|---|---|
+| 🟢 **Standards bodies / alliances** | Ed-Fi DMS · 1EdTech OpenCASE · OpenSALT · the xAPI-LRS tier | 🟢 **permissive, near-uniformly** |
+| 🔴 **Sector product vendors / communities** | RosarioSIS · Gibbon · openSIS · frappe/education · OpenEduCat · Moodle · Open edX · Sakai | 🔴 **copyleft, essentially without exception** |
+| 🔴 **Credential issuers** | `certo` · `Opencred` · `edubadges-server` | 🔴 **AGPL-3.0 to a repo** |
+
+🔵 **Why this is the better law:** it *predicts*. A standards alliance publishes a substrate so that
+many vendors adopt it, and permissive licensing is the instrument of adoption. A product community
+publishes a system so that it stays a commons, and copyleft is the instrument of that. 🟢 **Knowing
+the author class tells you the likely grant before you read a byte** — and the shelf still reads the
+byte, because `P809` is a prior, not a substitute.
+
+### 🟢 The consequence for delivery, which is the point of this file
+
+🔴 **Do not build the AI *inside* the system of record.** In four of these five, your code inherits
+GPL and your client's counsel will stop the engagement at the licence review.
+
+🟢 **Build beside it, and cross the boundary with a protocol.** The shelf already has the boundary
+and it is instrumented:
+
+1. 🟢 **LTI 1.3** (`P736`/`R57a`, pass 57) — **the licence-isolation boundary**. Your tool is a
+   separate service; the platform's copyleft never reaches it.
+2. 🟢 **xAPI → an LRS** (pass 66 tier, `lrsql` Apache-2.0) — write learning evidence out of the
+   platform into a store you own permissively.
+3. 🟢 **CASE** (pass 67 tier, OpenSALT MIT / OpenCASE + COMPEITO Apache-2.0) — hold the competency
+   definitions permissively, outside the SIS.
+4. 🟢 **Ed-Fi DMS** (Apache-2.0) — where the client will accept a **new** system of record, this is
+   the only one in this pass's reading you can build into directly.
+5. 🟡 **OpenEduCat / LGPL-3.0** — the single in-tier exception: a **proprietary addon is lawful**, so
+   this is the one platform where "customise the ERP itself" is a sellable shape.
+
+🔵 **And one deployment note that is pure licence hygiene:** all five of these refs are **not
+`main`** (`mobile`, `v31.0.00`, `19.0`, `master`, `develop`). 🟢 **Every build instruction in a deck
+must carry a `[ref]`**, or it is wrong in this tier by default.
+
+
 ## 🟢 Sixty-seventh pass, 2026-10-08 — the shelf's **copyleft law gets its first genuine exception**, and the exception has a precise shape: the **registry** is permissive even though the **system of record** is not
 
 ⏱️ **Twenty-first pass of this date. Append-only: this section is new; nothing below it was rewritten.**

@@ -4,6 +4,166 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-eighth pass, 2026-10-08 — `Gap 301` **CLOSED negatively** by the instrument it nominated, `Gap 303` **re-confirmed by direct payload read**, and six gaps opened (`Gap 308`–`Gap 313`), one of which has a **statutory deadline eight weeks out**
+
+⏱️ **Twenty-second pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Registry continuity:** pass 67 wrote to this file, so the section below this one is pass 67's and
+no fold-forward is needed (contrast pass 66, recorded as `Gap 307`).
+
+### 🟢 `Gap 301` — **CLOSED, negatively**, and closed by the remedy it named
+
+🔵 **The gap asked:** does CLR 2.0 *aggregate* capability exist anywhere on a consumable ref? Pass 67
+found **zero** CLR occurrences on `arqueon/certo` `main` and nominated remedy **(ii)**: *probe PR #4's
+head ref via `git ls-remote … refs/pull/4/head` — it needs no API access.*
+
+🟢 **Remedy (ii) was run and it worked:**
+
+| Probe | Result |
+|---|---|
+| `refs/pull/*` on `arqueon/certo` | 🟢 **27 refs resolve** — new instrument, first use 🆕 |
+| `refs/pull/4/head` | 🟢 **`c62d8c9`** — the PR branch **exists** 🆕 |
+| README at `c62d8c9` (bare-sha read) | 🟢 served, **15 618 B** |
+| `CLR` / *"Comprehensive Learner Record"* at `c62d8c9` | 🔴 **zero occurrences** 🆕 |
+| `package.json` at `c62d8c9` | 🔴 **404** |
+| PR-head README vs `main` README | 🔴 **15 618 B < 16 582 B — the branch is *behind* `main`** 🆕 |
+
+🔴 **Closed negatively:** the CLR claim fails at **both** refs. 🔵 **This is a stronger result than
+pass 67's.** "Absent from the default branch" is consistent with a real feature awaiting merge;
+**"absent from the branch it was attributed to, and that branch is behind main"** is not. 🟢 **CLR 2.0
+aggregation is build-not-buy, established rather than suspected** — price it as engineering.
+
+🟢 **Method note worth keeping:** a gap that names its own next instrument got closed one pass later
+at the cost of two commands. 🔵 **Remedies in cost order are worth writing even when the gap looks
+dead.**
+
+### 🔴 `Gap 303` — **RE-CONFIRMED OPEN** by direct payload read, and it is still the expensive question
+
+🔵 **The gap asks:** can an existing Ed-Fi ODS database be taken over **in place** by the
+Data-Management-Service, or does adoption require a data migration?
+
+🟢 **Measured this pass** (and note the slug correction — the repository is
+[`Ed-Fi-Alliance-OSS/Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service), **not** the `Ed-Fi-`prefixed name pass 67's prose implied, which returns a credential prompt):
+
+| Probe | Result |
+|---|---|
+| `main` · HEAD | `main` · **`9203e19`** |
+| README | **3 239 B** — 🟡 *"These applications **replace** the legacy Ed-Fi ODS/API and Ed-Fi ODS Admin API"* |
+| `migrat*` in README | 🔴 **one hit, and it is unrelated** — a *UniqueId Validation* reference custom validator |
+| in-place / existing-database language | 🔴 **absent** |
+| Licence | 🟢 **Apache-2.0, 11 357 B** (canonical) |
+
+🔴 **So "replace" is asserted and the migration path is undocumented at the default ref.** 🔵 The
+README is **3 239 B** — too small to carry a migration story, which is itself the finding.
+🟢 **Remedy, in cost order:** **(i)** read `docs/` and any `MIGRATION*`/`UPGRADE*` path in the tree —
+minutes; **(ii)** read the `v8.0.0` release notes once an instrument can reach releases (🔴 blocked:
+`api.github.com` `403`); **(iii)** 🔴 price adoption as a **data migration** until proven otherwise,
+which is the conservative and probably correct default.
+
+### 🆕 `Gap 308` — the AI Act correction is **unverified against primary text**, and the session cannot verify it
+
+🔴 **The gap.** This pass corrects pass 67's central claim (Annex III high-risk deferred
+`2026-08-02` → **`2027-12-02`** by **Regulation (EU) 2026/1744**). 🔴 **No primary source was
+readable:** `eur-lex.europa.eu`, `digital-strategy.ec.europa.eu` and `artificialintelligenceact.eu`
+**all failed DNS resolution**, while GitHub hosts resolved normally — recorded as **`DNS_BLOCKED`**
+(`P807`).
+
+🟢 **What the correction rests on:** **four independent secondary channels in agreement** on the two
+load-bearing dates (`2027-12-02` Annex III; `2028-08-02` Annex I), including two law-firm client
+notes, a research note, and a **EUR-Lex record title** returned by search.
+🟡 **Single-channel and explicitly not built on:** public-authority high-risk deferral to
+`2030-08-02`; sandbox obligation to `2027-08-02`.
+
+🟢 **Remedy:** **one fetch of `eur-lex.europa.eu/eli/reg/2026/1744/oj/eng`** from any session with DNS
+to that host — 🔵 **cheapest high-value remedy in this registry**, and it would also settle the
+single-channel items. 🔴 **Until then, the dates are published with their channel count attached and
+must be quoted that way in any client file.**
+
+### 🆕 `Gap 309` — the system-of-record tier has **no permissive implementation at all**
+
+🔴 **The gap.** Five systems of record read from payload this pass: **5 of 5 non-permissive** —
+RosarioSIS GPL-2.0, Gibbon GPL-3.0, openSIS GPL-2.0, `frappe/education` GPL-3 (asserted),
+OpenEduCat LGPL-3.0. 🔴 **Zero MIT, zero Apache-2.0.** 🔵 A client who needs a student system of
+record **whose code they can keep closed** has nothing in this tier.
+
+🟡 **Two partial answers exist and neither is a full one:** 🟡 **OpenEduCat's LGPL-3.0** permits a
+**proprietary addon** (`P750`) but not a closed fork of the platform; 🟢 **Ed-Fi DMS (Apache-2.0)** is
+a permissive system of record but is a **data-standard API substrate**, not an administrative SIS —
+no timetabling, gradebook, report cards or fees.
+
+🟢 **Remedy, in cost order:** **(i)** census the SIS tier further for a permissive outlier — the five
+read were the channel's top returns, not an exhaustive list (**cheap**); **(ii)** price **Ed-Fi DMS +
+build the administrative surface** (expensive, and the only fully-permissive shape currently known);
+**(iii)** 🟢 **accept the boundary**: deploy a copyleft SIS unmodified and build beside it across
+**LTI 1.3** (`P736`, `P809`) — 🔵 **which is what this shelf recommends, because it is lawful,
+cheap and already instrumented.**
+
+### 🆕 `Gap 310` — whether routine learner progress-tracking is **"profiling"** under the Omnibus is unread
+
+🔴 **The gap.** Regulation (EU) 2026/1744 makes **profiling always high-risk**, removing the Article
+6(3) filter that would otherwise exempt narrow use cases. 🔴 **No source read this pass states
+whether ordinary LMS/LRS progress-tracking constitutes profiling**, and the distinction decides
+whether a large share of deployed edtech is in Annex III at all from `2027-12-02`.
+
+🟡 **Why it is not academic:** this shelf's own recommended architecture **writes learner evidence to
+an LRS** (`P8`, `P10`, `P11`). 🔵 If that is profiling, the recipes carry a high-risk classification
+the shelf has not priced.
+
+🟢 **Remedy:** **(i)** read Article 6 as amended, plus recital language, against the GDPR Article
+4(4) profiling definition — 🔴 blocked by `DNS_BLOCKED`, so it rides with `Gap 308`'s single fetch;
+**(ii)** 🟢 **in the meantime, assume the filter is unavailable wherever a deliverable builds a
+learner profile** — the conservative reading, and cheap to design for now and expensive to retrofit.
+
+### 🆕 `Gap 311` — Ed-Fi DMS's version line jumps `0.7.0 → 8.0.0`, unexplained, and `main` is not the tag
+
+🔴 **The gap, two parts.** 🟡 **(a)** Tags resolve `v0.2.0`→`v0.7.0` then **`v8.0.0`** (`d911abb`) —
+🔴 **no payload read explains the jump**; the plausible reading is alignment with the legacy ODS/API
+major line, and it is **left as an inference, not recorded as a fact** (`P722`). 🟡 **(b)** `main` is
+**`9203e19`**, which is **not** `v8.0.0` — so pass 67's tag is not the head a client clones, and no
+read establishes what `main` carries beyond it.
+
+🟢 **Remedy:** **(i)** `git ls-remote --tags` again next pass to see whether a `v8.0.x` lands on
+`main` (**cheap**); **(ii)** read `CHANGELOG`/`docs` for the versioning policy (**cheap**);
+**(iii)** 🟢 **in any deliverable, pin `v8.0.0` explicitly** rather than tracking `main` — which is
+sound practice regardless of how the gap closes.
+
+### 🆕 `Gap 312` — whether a **19-byte licence assertion** conveys GPL-3.0 is a legal question this shelf cannot answer
+
+🔴 **The gap.** `frappe/education` `[develop]`'s **entire** licence evidence is `license.txt` at
+**19 bytes**: `License: GNU GPL V3`. 🔴 No grant text (**GPL-3.0 is ~35 100 B**), no manifest licence
+key, no README mention. 🔵 **Whether a bare licence *name* effects the grant is a question for
+counsel, not for a payload read** (`P805`).
+
+🟢 **What this shelf does in the meantime:** 🟢 **record it as GPL-3.0 and assume every GPL-3.0
+obligation** — the conservative reading; 🔴 **never record it as "unknown" or "permissive-unknown"**,
+which would invite a build.
+
+🟢 **Remedy:** **(i)** check whether the upstream **Frappe/ERPNext** stack's licence terms govern the
+app (**cheap**, and likely decisive — ERPNext's own licensing is the real question); **(ii)** ask the
+client's counsel before any code is written against it; **(iii)** 🟢 **prefer another component** —
+four alternatives were read this pass and three have **two or more agreeing licence layers**.
+
+### 🆕 `Gap 313` — no read establishes whether **any** shelf component marks generated output, and the deadline is `2026-12-02`
+
+🔴 **The gap, and it is the one with a clock.** `P11` assembles an Article 50(2) marking recipe from
+this KB's own `compose/code/aiact-50-2-*` tier plus permissive components. 🔴 **But no probe this
+pass established whether any *third-party* component on this shelf emits a machine-readable mark on
+generated content** — not `conform-ed`, not `lrsql`, not the CASE tier. 🔵 **The shelf's marking
+capability is its own code, and its coverage against the Article 50(2) obligation is self-assessed.**
+
+🔵 **Why it matters commercially:** `2026-12-02` is **eight weeks** from this pass, and `P11` is the
+only dated recipe in `compose/patterns.md`. 🔴 **If `P11`'s marking step is weaker than the
+obligation, a client acts on it and misses the date.**
+
+🟢 **Remedy, in cost order:** **(i)** run this KB's own `aiact-50-2-pack` test suite and
+`aiact-50-2.xsd` against the **Commission's July 2026 Article 50 guidelines** and the AI Office
+**Code of Practice on transparency of AI-generated content** (`2026-07-31`) — 🔴 both currently
+**`DNS_BLOCKED`**, so this rides with `Gap 308`; **(ii)** grep the shelf's permissive components for
+provenance/C2PA/watermark support (**cheap, and should be done next pass regardless**);
+**(iii)** 🟢 **until (i) is possible, present `P11` as a readiness programme rather than a compliance
+guarantee** — which is how `P11` is written, and `P803`'s refusal list says why.
+
+
 ## 🟢 Sixty-seventh pass, 2026-10-08 — six gaps opened (`Gap 301`–`Gap 306`), `Gap 293` re-confirmed **with its cause newly named**, and `Gap 286` closed as **unanswerable by this session** rather than left open indefinitely
 
 ⏱️ **Twenty-first pass of this date. Append-only: this section is new; nothing below it was rewritten.**
