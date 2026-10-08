@@ -1,8 +1,62 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-07
+updated: 2026-10-08
 ---
+
+## 🟢 Forty-seventh pass, 2026-10-08 — the permissive LMS on this shelf was being refused for the name of its licence
+
+⏱️ **First pass of this date.** **Licences read first-hand on 2026-10-08 from payload, channel named
+per row (`P237`, `P171`, `P250`, `P510`). No star counts (`P479`).**
+
+🔵 **This file lists real systems a studio can stand up and customise.** 🟢 **One row changes
+category this pass, and it is the row that matters most for what a studio may ship.**
+
+### 🟢 `P576` — Sakai is `ECL-2.0` and **permissive**, and the cession gate was rejecting it as NO-OSI
+
+| | Measured 2026-10-08 |
+|---|---|
+| Repo | [`github.com/sakaiproject/sakai`](https://github.com/sakaiproject/sakai) |
+| Existence (`P510`) | 🟢 **34 refs**; negative control `gmilano/nope-567-control` **0 refs** in the same run |
+| Payload | `LICENSE`, **11 119 B**, read live from `raw.githubusercontent.com` |
+| Family | 🟢 **`ECL-2.0`** — *Educational Community License, Version 2.0*, **OSI-approved** |
+| Reciprocity | 🟢 **None.** ECL-2.0 is Apache-2.0 with an education-specific patent clause |
+| Gate's old verdict | 🔴 `NO-OSI (community license)` — refused by **substring match on its own name** |
+
+🔵 **The licence-regime map of the LMS shelf, which is the first question every engagement asks**
+(all four read from payload this pass or held from a prior pass's payload read):
+
+| Platform | Licence | Reciprocity on a hosted delivery | What a studio may ship closed |
+|---|---|---|---|
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** | 🟢 **none** | 🟢 **derivative work, closed** |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 **GPL-3.0** (not `AGPL-3.0` — `P571`) | 🟡 on **distribution**, not on network use | 🟡 separate plugins; not a modified core |
+| Open edX | 🔴 **AGPL-3.0** | 🔴 **yes — §13 covers network interaction** | 🔴 source must be offered to users |
+| [`hcengineering/platform`](https://github.com/hcengineering/platform) (Huly) | 🟡 **EPL-2.0** (not Apache-2.0 — `P563`) | 🟡 file-level, weak | 🟡 own files stay closed |
+
+🔴 **Two of those four rows were wrong until this pass or the last one**, and both errors pointed the
+same way: **toward telling a client it had less freedom than it does.** Moodle labelled `AGPL-3.0`
+says *you cannot host a closed derivative*, which is false; Sakai labelled `NO-OSI` says *do not use
+this at all*, which is also false — and Sakai is the **only genuinely permissive full LMS** on the
+shelf.
+
+🔵 **Why `ECL-2.0` deserves its own line in a vertical file:** it exists *because* of this industry.
+Sakai's licence is Apache-2.0 restated with a patent grant scoped so that a university contributing
+code does not expose its wider patent portfolio. 🟢 **For a studio, the practical consequence is that
+Sakai is the cheapest LMS on this shelf to build commercial, closed-source work on top of.**
+
+### 🟡 The admissions/ERP layer, unchanged this pass and still carrying pass 46's warning
+
+The mandated vertical query (`open source platform education ERP CRM MIT Apache`) returned, again,
+the **vendor glossary** of OpenEduCat and nothing new. 🔵 **Reproduced; written down rather than left
+silent.** The query's premise is itself the finding: 🔴 **there is no MIT- or Apache-licensed
+education ERP of any maturity.** The real options are LGPLv3 (OpenEduCat, on Odoo) or the generic
+permissive CRMs with **no academic model at all** — and pass 46 measured that
+[`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) and
+[`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) ship a **byte-identical** MIT payload
+from the same holder (`Webkul Software`): 🔴 **one vendor, not two options** (`P564`).
+
+🟡 **Still open:** `Gap 249` (dual licences report one arm) and 🆕 **`Gap 250`**
+(`p419-copyleft-identity` inlines a third licence classifier).
 
 ## 🔴 Forty-sixth pass, 2026-10-07 — Huly is **not** Apache-2.0, and the two "independent MIT options" on the ERP/CRM shelf ship **one vendor's licence file**
 

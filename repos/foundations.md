@@ -1,8 +1,83 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-07
+updated: 2026-10-08
 ---
+
+## 🔴 Forty-seventh pass, 2026-10-08 — the foundational shelf's **delivery risk** was mislabelled in both directions, and one row comes back from the dead
+
+⏱️ **First pass of this date.** **Licences read first-hand on 2026-10-08 from payload, classified by
+the shared hardened classifier `compose/code/lib/license_family.sh` (`P237`, title-block, `P171`),
+commercial use by its `commercial_use_ok()` (`P250`). Existence by `git ls-remote --heads` against a
+negative control in the same run (`P510`). **No star counts** (`P479`).
+
+🔵 **No new foundational repo was admitted this pass** — the mandated queries returned curricula,
+catalogues and job boards (see `repos/trending.md`). 🟢 **But the licence verdict attached to
+foundational rows changed, because the gate that produces those verdicts was wrong on 18 of 29 real
+payloads** (`P571`–`P579`, full instrument in `compose/code/p571-cession-family-delegation/`).
+
+### 🟢 `P576` — Sakai is readmitted: `ECL-2.0`, permissive, and it was being refused by name
+
+| | Measured 2026-10-08 |
+|---|---|
+| Repo | [`github.com/sakaiproject/sakai`](https://github.com/sakaiproject/sakai) |
+| Existence (`P510`) | 🟢 **34 refs**; negative control `gmilano/nope-567-control` **0 refs** in the same run |
+| Payload | `LICENSE`, **11 119 B** read live from `raw.githubusercontent.com` |
+| Family | 🟢 **`ECL-2.0`** — Educational Community License v2.0, **OSI-approved** |
+| Gate's old verdict | 🔴 `NO-OSI (community license)` |
+
+🔴 **The cession gate was rejecting it because its licence is *named* "Educational Community
+License", and `'community license'` was a NO-OSI trigger put there for `PageLM`.** A substring match
+on a licence's own name. 🟢 **ECL-2.0 is Apache-2.0 plus a patent clause**, so it carries **no
+reciprocal obligation** — a studio can build on Sakai and ship the result closed, which is the
+opposite of what the shelf was recording.
+
+🔵 **This is the most consequential row of the pass**, because Sakai is one of very few genuinely
+permissive full LMS platforms. Moodle (`GPL-3.0`) and Open edX (`AGPL-3.0`) both impose reciprocity;
+ECL-2.0 does not.
+
+### 🟡 `P571` / `P572` — Moodle is `GPL-3.0`, not `AGPL-3.0`, and OpenEMIS is `GPL-2.0`, not `LGPL`
+
+| Repo | Existence | Payload | Gate said | Is |
+|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 **40 refs** | `COPYING.txt`, **35 146 B** | 🔴 `AGPL-3.0` | 🟡 **`GPL-3.0`** |
+| [`OpenEMIS/core`](https://github.com/OpenEMIS/core) | 🟢 **1 ref** | `LICENSE` | 🔴 `LGPL` | 🟡 **`GPL-2.0`** |
+
+🔵 **The GPL-3.0 / AGPL-3.0 distinction is not cosmetic for a hosted engagement — it is the whole
+question.** AGPL-3.0 §13 extends reciprocity to users who interact with the software **over a
+network**, so a SaaS delivery of an AGPL component must offer its source. GPL-3.0 does not. 🔴 **A
+shelf that labels Moodle `AGPL-3.0` tells a studio it cannot host a closed Moodle derivative, which
+is false.** The cause is `P171`: **GPL-3.0 §13 is titled *"Use with the GNU Affero General Public
+License"***, so a probe over the licence **body** finds the word *affero* in every GPL-3.0 text.
+
+🔴 **`P572` is the same mistake in a second place:** GPL-2.0's closing paragraph recommends *"use the
+GNU Lesser General Public License instead of this License"*, and the inlined ladder tested
+`gnu lesser` **before** `gnu general public`.
+
+### 🟡 `P573` / `P574` / `P575` — MPL and EPL were being read as GNU copyleft
+
+MPL-2.0 §1.12 and EPL-2.0's *Secondary Licenses* clause **define their GPL compatibility by naming
+GPL, LGPL and AGPL**, so every MPL-2.0 and EPL-2.0 payload carries the GNU marks. The inlined ladder
+tested the GNU branches first:
+
+| Payload | Gate said | Is |
+|---|---|---|
+| [`mozilla/rhino`](https://github.com/mozilla/rhino) | 🔴 `AGPL-3.0` | 🟡 **`MPL-2.0`** |
+| [`hcengineering/platform`](https://github.com/hcengineering/platform) (Huly) | 🔴 `GPL` | 🟡 **`EPL-2.0`** |
+| [`eclipse-ee4j/jersey`](https://github.com/eclipse-ee4j/jersey) | 🔴 `GPL` | 🟡 **`EPL-2.0`** |
+| canonical **MPL-1.1** (SPDX) | 🔴 `MPL-2.0` | 🟡 **`MPL-1.1`** |
+
+🔵 **`lib/` already knew all of this** — it is `P454`, and its header says *MPL and EPL go before the
+GNU family*. 🔴 **The gate inherited none of it, because it wrote its own ladder.** That is the exact
+failure `lib/README.md` was created to prevent: *«a rule you have to remember is not a control»*.
+
+🟢 **Fixed by delegation**, not by patching the ladder. 🔵 **And the delegation could not be blind:
+the shared classifier reads `PageLM` as `MIT`**, the very payload the gate exists to refuse — so the
+family question is delegated and the cession question is kept. If the shared classifier is missing,
+`familia_compartida()` **raises** rather than falling back to an inlined ladder (`P197`).
+
+🟡 **Open:** `Gap 249` — `h2database` offers **MPL-2.0 or EPL-1.0** and the answer is still only the
+MPL arm (`P578`). 🟡 **`Gap 250`** 🆕 — `p419-copyleft-identity` inlines a **third** classifier.
 
 ## 🔴 Forty-sixth pass, 2026-10-07 — the licence **version** of a foundational repo was being invented, and two consumers were asking for a string the classifier could not produce
 

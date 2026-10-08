@@ -25,8 +25,65 @@ Tres defectos distintos, medidos este pase, que un clasificador por palabra clav
 
 La compuerta decide con TRES senales, en este orden: tamano, TITULO, y la seccion de
 limitaciones. Nunca con la frase de concesion sola.
+
+-----------------------------------------------------------------------------------------
+PASE 47 DEL 2026-10-08 — LA COMPUERTA YA NO CLASIFICA LA FAMILIA. LA DELEGA.
+
+El pase 46 declaro abierto que este archivo «todavia inlinea un clasificador de licencias
+y todavia carga `P561`». Medido este pase sobre los 29 payloads REALES del arbol, la
+escalera inlineada divergia del clasificador endurecido en **18 de 29**. No era una
+discrepancia de estilo: ocho clases de respuesta equivocada, y dos de ellas RECHAZAN
+software usable.
+
+  `P571`  GPL-3.0 -> AGPL-3.0.  `P171` VERBATIM, en el sexto instrumento. La seccion 13 de
+          GPL-3.0 se titula «Use with the GNU Affero General Public License», asi que
+          `'gnu affero' in bajo` (el CUERPO entero) marca todo GPL-3.0 como AGPL-3.0.
+          Medido sobre el `COPYING` de **Moodle**: la plataforma insignia de esta KB.
+  `P572`  GPL-2.0 -> LGPL.  El parrafo de cierre de GPL-2.0 dice «use the GNU Lesser
+          General Public License instead of this License», y la rama `gnu lesser` va antes
+          que `gnu general public`. Medido sobre `OpenEMIS/core`.
+  `P573`  MPL-2.0 -> AGPL-3.0.  `P454`: la seccion 1.12 de MPL-2.0 DEFINE «Secondary
+          License» nombrando GPL-2.0, LGPL-2.1 y AGPL-3.0, asi que todo payload MPL-2.0
+          trae las tres marcas GNU. Un copyleft debil se lee como el copyleft de red mas
+          fuerte que existe: el error en la direccion mas cara.
+  `P574`  EPL-2.0 -> GPL.  La misma trampa de «Secondary Licenses». Medido sobre
+          `hcengineering/platform` (Huly, que el canal vertical publica) y `eclipse-ee4j/jersey`.
+  `P575`  MPL-1.1 -> MPL-2.0.  `P561` VERBATIM: `'mozilla public' in bajo` ESTAMPABA la
+          version. Declarado abierto por el pase 46; aqui queda medido y cerrado.
+  `P576`  ECL-2.0 -> NO-OSI.  🔴 **FALSO RECHAZO.** El disparador `'community license'`
+          existe por `PageLM`, pero la **Educational Community License** —aprobada por la
+          OSI, Apache-2.0 mas clausula de patentes— lo contiene como SUBCADENA. La
+          compuerta rechazaba **Sakai** por el nombre de su licencia.
+  `P577`  BSD-3 -> NO-OSI.  🔴 **FALSO RECHAZO.** El disparador `'all rights reserved'`
+          es, en BSD y MIT, parte del ENCABEZADO DE COPYRIGHT convencional
+          («Copyright (c) 2022, Yuan Gong / All rights reserved.»). La compuerta leia la
+          convencion de BSD como una declaracion propietaria.
+  `P578`  dual MPL-2.0-or-EPL-1.0 -> AGPL-3.0. Los DOS brazos perdidos (`Gap 249` sigue
+          abierto: el clasificador compartido reporta el brazo MPL).
+  `P579`  Unlicense -> usable=NO.  🔴 **TERCER FALSO RECHAZO, y lo encontro esta suite al
+          exigir un corpus real.** `LIMITACIONES_FATALES` contiene la SUBCADENA
+          `'non-commercial'`, y el texto del Unlicense —la licencia mas permisiva que
+          existe— dice «for any purpose, commercial or non-commercial». La enumeracion
+          que CONCEDE se leia como la clausula que PROHIBE. Misma clase que `P576` y
+          `P577`: una subcadena no distingue una concesion de una prohibicion.
+
+🔵 **Y la razon de que sobreviviera 1 pase: el corpus de `test_gate.py` no tenia NI UN
+payload copyleft, ni uno OSI que no fuera MIT.** Siete casos, todos sinteticos, todos
+verdes. Una suite verde porque nunca pregunto.
+
+🟢 **La arquitectura, y es composicion y no reemplazo:** `family_of` contesta QUE TEXTO DE
+CONCESION ES ESTE; esta compuerta contesta SI EL DOCUMENTO CEDE DE VERDAD ESOS DERECHOS.
+Son dos preguntas distintas con contratos opuestos, como las dos de region en `P265`. La
+prueba de que no se puede delegar ciego: el clasificador compartido lee `PageLM` como
+**MIT**, que es exactamente el payload que `P411` existe para atrapar. Asi que la familia
+se delega y la compuerta de TITULO se conserva — estrechada, porque un disparador NO-OSI
+no puede invalidar un texto de concesion que el clasificador endurecido reconoce, salvo
+que el documento traiga limitaciones fatales.
 """
-import hashlib, re, sys
+import hashlib, os, re, subprocess, sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+LIB = os.path.join(HERE, '..', 'lib', 'license_family.sh')
 
 PISO_DE_CESION = 200          # debajo de esto no hay texto de licencia posible
 PISO_MIT = 900                # un MIT real mide ~1.040-1.150 B
@@ -45,8 +102,67 @@ LIMITACIONES_FATALES = (
 )
 PLACEHOLDERS = ('<name of author>', '[name of copyright owner]', '<year>', '[yyyy]')
 
+# `P579`: fraseos en los que la limitacion aparece para CONCEDERSE, no para prohibirse.
+# Se borran del texto ANTES de buscar limitaciones fatales. El Unlicense es el caso que
+# lo destapo: «for any purpose, commercial or non-commercial».
+FRASEOS_DE_CONCESION = (
+    'commercial or non-commercial', 'commercial or noncommercial',
+    'non-commercial or commercial', 'noncommercial or commercial',
+    'commercial and non-commercial', 'commercial and noncommercial',
+)
 
-def clasificar(texto: str) -> dict:
+# `P576`: nombres OSI cuyo TITULO contiene un disparador NO-OSI como SUBCADENA. Sin esta
+# exencion, la Educational Community License de Sakai se rechaza por su propio nombre.
+TITULOS_OSI_EXENTOS = ('educational community license',)
+
+# El vocabulario que `lib/license_family.sh::family_of` puede emitir, partido en las dos
+# preguntas que esta compuerta necesita. NO se re-clasifica nada aqui: solo se interpreta.
+OSI_RECONOCIDAS = frozenset({
+    '0BSD', 'AGPL-3.0', 'Apache-2.0', 'BSD', 'ECL-2.0', 'EPL-1.0', 'EPL-2.0',
+    'EPL-UNVERSIONED', 'EUPL', 'EUPL-1.1', 'EUPL-1.2', 'GPL-2.0', 'GPL-3.0', 'ISC',
+    'LGPL', 'LGPL-3.0', 'MIT', 'MPL-1.0', 'MPL-1.1', 'MPL-2.0', 'MPL-UNVERSIONED',
+    'Unlicense',
+})
+# Permisivas = las que esta base puede construir encima sin obligacion reciproca.
+# ECL-2.0 entra porque ES Apache-2.0 mas una clausula de patentes (`P576`).
+PERMISIVAS = frozenset({
+    'MIT', 'Apache-2.0', 'BSD', '0BSD', 'ISC', 'Unlicense', 'ECL-2.0', 'CC0-1.0',
+})
+# Familias NOMBRADAS que no son OSI: se reportan por su nombre, no como UNCLASSIFIED.
+# `P412` se conserva —el balde es senal— pero una senal con nombre vale mas.
+NO_OSI_NOMBRADAS = ('Elastic', 'BUSL', 'PolyForm', 'NONCOMMERCIAL-NOT-OSI', 'CC-')
+
+# `P445`: el payload va por STDIN y no por argv — varios de estos pasan los 35 kB y una
+# lista de argv tiene limite duro, asi que el texto se truncaria en silencio y el fallo
+# parecerIa un desacuerdo de clasificadores y no una falla de plomeria.
+_PUENTE = '. "$1"\nT=$(cat)\nprintf "%s" "$(family_of "$T")"\n'
+
+
+class SinClasificador(RuntimeError):
+    """El clasificador compartido no esta disponible.
+
+    `P197`: esto se LEVANTA, no se degrada a una escalera inlineada. Una correccion
+    sobrevive solo si el instrumento que re-mide la conoce; un fallback silencioso
+    re-importa los ocho defectos que este pase acaba de pagar.
+    """
+
+
+def familia_compartida(texto: str, lib: str = LIB) -> str:
+    """La FAMILIA, de `lib/license_family.sh::family_of`. No se clasifica aqui."""
+    if not os.path.exists(lib):
+        raise SinClasificador(f'no existe {lib}')
+    try:
+        p = subprocess.run(['sh', '-c', _PUENTE, 'sh', lib], input=texto,
+                           capture_output=True, text=True, timeout=60)
+    except Exception as e:                                   # noqa: BLE001
+        raise SinClasificador(str(e)) from e
+    fam = (p.stdout or '').strip()
+    if not fam:
+        raise SinClasificador(f'respuesta vacia (exit {p.returncode})')
+    return fam
+
+
+def clasificar(texto: str, lib: str = LIB) -> dict:
     """Devuelve el veredicto de la compuerta para el PAYLOAD de un archivo de cesion."""
     bytes_ = len(texto.encode('utf-8'))
     sha = hashlib.sha256(texto.encode('utf-8')).hexdigest()[:12]
@@ -65,46 +181,63 @@ def clasificar(texto: str) -> dict:
                  motivo=f'P414: {bytes_} B — NOMBRA una licencia, no la otorga')
         return v
 
-    # 2 — TITULO (`P411`/`P412`): manda sobre cualquier frase del cuerpo
+    # 2 — FAMILIA: delegada al clasificador endurecido (`P571`..`P578`). Va ANTES de la
+    # compuerta de titulo porque la compuerta necesita su respuesta para no rechazar un
+    # texto de concesion real (`P576`/`P577`).
+    fam = familia_compartida(texto, lib)
+    v['familia_compartida'] = fam
+    base = fam.split(' (')[0]
+    declaracion = fam.endswith('(declaracion)')
+    reconocida = base in OSI_RECONOCIDAS
+
+    # 3 — LIMITACIONES: una concesion permisiva no las tiene. `P579`: se descuentan
+    # primero los fraseos en los que la limitacion se CONCEDE en vez de prohibirse.
+    prohibitivo = bajo
+    for frase in FRASEOS_DE_CONCESION:
+        prohibitivo = prohibitivo.replace(frase, ' ')
+    fatales = [l for l in LIMITACIONES_FATALES if l in prohibitivo]
+
+    # 4 — TITULO (`P411`/`P412`), ESTRECHADA. Un disparador NO-OSI ya no invalida por si
+    # solo un texto que el clasificador reconoce: hace falta que NO sea reconocido o que
+    # el documento traiga limitaciones fatales. Sin esto, `P576` rechaza Sakai por el
+    # nombre «Educational Community License» y `P577` rechaza BSD por su encabezado.
     primeras = '\n'.join(texto.splitlines()[:6]).lower()
-    for t in TITULOS_NO_OSI:
-        if t in primeras:
-            v.update(familia=f'NO-OSI ({t})',
-                     motivo=f'P411/P412: el titulo declara «{t}» — la frase de concesion no decide')
-            return v
+    exento = any(n in primeras for n in TITULOS_OSI_EXENTOS)
+    disparador = next((t for t in TITULOS_NO_OSI if t in primeras), None)
+    if disparador and not exento and (not reconocida or fatales):
+        motivo = f'P411/P412: el titulo declara «{disparador}» — la frase de concesion no decide'
+        if reconocida and fatales:
+            motivo = (f'P411: el titulo declara «{disparador}» y el cuerpo trae '
+                      f'{fatales[:2]} — {base} nombrado, no cedido')
+        v.update(familia=f'NO-OSI ({disparador})', motivo=motivo)
+        return v
 
-    # 3 — LIMITACIONES: una concesion permisiva no las tiene
-    fatales = [l for l in LIMITACIONES_FATALES if l in bajo]
-
-    if 'apache license' in bajo:
-        v['familia'] = 'Apache-2.0'
-    elif 'gnu affero' in bajo:
-        v['familia'] = 'AGPL-3.0'
-    elif 'gnu lesser' in bajo:
-        v['familia'] = 'LGPL'
-    elif 'gnu general public' in bajo:
-        v['familia'] = 'GPL'
-    elif 'mozilla public' in bajo:
-        v['familia'] = 'MPL-2.0'
-    elif 'redistributions of source code' in bajo:
-        v['familia'] = 'BSD'
-    elif 'permission is hereby granted, free of charge' in bajo:
-        # `P411`: la frase MIT con tamano de MIT es MIT; con tamano de tratado, no lo es
-        if bytes_ > PISO_MIT * 3:
-            v.update(familia='NO-OSI (frase MIT en documento largo)',
-                     motivo=f'P411: {bytes_} B con la frase MIT — el cuerpo agrega terminos')
+    # 5 — la familia delegada, interpretada
+    if not reconocida:
+        if any(fam.startswith(n) for n in NO_OSI_NOMBRADAS):
+            v.update(familia=f'NO-OSI ({fam})',
+                     motivo=f'P412: {fam} es una familia NOMBRADA que no es OSI')
             return v
-        v['familia'] = 'MIT'
-    else:
         v.update(familia='UNCLASSIFIED',
                  motivo='P412: sin familia OSI reconocible — tratar como NO-OSI hasta leerla')
         return v
 
-    if fatales:
-        v.update(motivo=f'P411: familia {v["familia"]} con limitaciones fatales: {fatales[:2]}')
+    v['familia'] = base
+    if declaracion:
+        v.update(motivo=f'P414: el payload NOMBRA {base}, no lo otorga — nombrar no es ceder')
         return v
 
-    v['usable'] = v['familia'] in ('MIT', 'Apache-2.0', 'BSD')
+    # `P411`: la frase MIT con tamano de MIT es MIT; con tamano de tratado, no lo es.
+    if base == 'MIT' and bytes_ > PISO_MIT * 3:
+        v.update(familia='NO-OSI (frase MIT en documento largo)',
+                 motivo=f'P411: {bytes_} B con la frase MIT — el cuerpo agrega terminos')
+        return v
+
+    if fatales:
+        v.update(motivo=f'P411: familia {base} con limitaciones fatales: {fatales[:2]}')
+        return v
+
+    v['usable'] = base in PERMISIVAS
     titular = next((l.strip() for l in texto.splitlines()
                     if re.search(r'copyright (\(c\)|©|[0-9])', l, re.I)), '')
     if any(p in titular for p in PLACEHOLDERS):

@@ -1,8 +1,84 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-07
+updated: 2026-10-08
 ---
+
+## 🔴 Forty-seventh pass, 2026-10-08 — the gate that decides whether a licence **cedes** anything was rejecting software this shelf exists to recommend
+
+⏱️ **First pass of this date.** **Licences read first-hand on 2026-10-08 from the repository
+**payload**, classified by the shared hardened classifier `compose/code/lib/license_family.sh`
+(`P237`, title-block, `P171`), commercial use gated by its own `commercial_use_ok()` (`P250`).
+Existence by `git ls-remote --heads` against a negative control in the same run (`P510`).
+**No star counts** (`P479`).
+
+🔴 **Zero new education agents for the seventh consecutive pass; the shelf is declared saturated for
+the fifteenth.** The mandated query ran verbatim and returned the **horizontal** agent shelf plus
+"learn AI" curricula and agent *catalogues* (`microsoft/ai-agents-for-beginners`,
+`pguso/agents-from-scratch`, `ashishpatel26/500-AI-Agents-Projects`). 🔵 **Reproduced on a fresh run
+and in all four regional runs. That is information, not silence** — and the fifteenth consecutive
+reproduction is a finding about the *channel*, not about this pass.
+
+🟢 **So this pass spent its budget where the measurement was wrong, and this time the error was in
+the direction that costs a shelf its rows.** For the whole life of `p411-cession-identity-gate`, the
+gate that decides whether a licence file actually **grants** rights was classifying licence families
+with its own inlined keyword ladder. Measured against the hardened classifier on the **29 real
+cession payloads** in the tree, it diverged on **18**, in eight distinct classes — and **three of
+those classes reject usable software**:
+
+| Finding | Real payload | The gate said | It is |
+|---|---|---|---|
+| 🔴 **`P576`** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `NO-OSI (community license)` | 🟢 **`ECL-2.0`, usable** |
+| 🔴 **`P577`** | [`YuanGongND/gopt`](https://github.com/YuanGongND/gopt) | `NO-OSI (all rights reserved)` | 🟢 **`BSD`, usable** |
+| 🔴 **`P579`** | [`FWU-DE/mem-mcp`](https://github.com/FWU-DE/mem-mcp) | `usable=NO` | 🟢 **`Unlicense`, usable** |
+| 🔴 **`P571`** | [`moodle/moodle`](https://github.com/moodle/moodle) | `AGPL-3.0` | 🟡 **`GPL-3.0`** |
+| 🔴 **`P572`** | [`OpenEMIS/core`](https://github.com/OpenEMIS/core) | `LGPL` | 🟡 **`GPL-2.0`** |
+| 🔴 **`P573`** | [`mozilla/rhino`](https://github.com/mozilla/rhino) | `AGPL-3.0` | 🟡 **`MPL-2.0`** |
+| 🔴 **`P574`** | [`hcengineering/platform`](https://github.com/hcengineering/platform) | `GPL` | 🟡 **`EPL-2.0`** |
+| 🔴 **`P575`** | canonical **MPL-1.1** | `MPL-2.0` | 🟡 **`MPL-1.1`** (`P561` verbatim, closed) |
+| 🔴 **`P578`** | `h2database` dual | `AGPL-3.0` | 🟡 **`MPL-2.0`** (`Gap 249` open) |
+
+### 🔴 The three false rejections matter more than the six misreadings
+
+A family read too strictly (`GPL-3.0` reported as `AGPL-3.0`) makes an engagement **more** cautious
+than it needs to be. 🔴 **A false NO-OSI deletes a candidate from the shelf entirely**, and nobody
+re-checks a row that was already refused:
+
+- **`P576`** — the trigger `'community license'` exists because of `PageLM`'s *"PageLM Community
+  License"*. The **Educational Community License** — OSI-approved, Apache-2.0 plus a patent clause —
+  contains that phrase as a **substring**. 🔴 **Sakai, which this KB's own vertical channel
+  recommends, was being refused for the name of its licence.**
+- **`P577`** — `'all rights reserved'` is, in BSD and MIT, part of the **conventional copyright
+  header** (`Copyright (c) 2022, Yuan Gong / All rights reserved.`). The gate read the BSD convention
+  as a proprietary declaration.
+- **`P579`** — the Unlicense, the most permissive text in existence, says *"for any purpose,
+  commercial or non-commercial"*. The bare substring `'non-commercial'` **cannot tell a grant from a
+  prohibition**, so the enumeration that *permits* read as the clause that *forbids*.
+
+🟢 **All nine are fixed.** The gate now delegates the family question to the shared hardened
+classifier and keeps only the question that is genuinely its own.
+
+🔵 **And the delegation could not be blind, which is the architectural finding:** the shared
+classifier reads `PageLM` as **`MIT`** — precisely the payload `P411` exists to catch. `family_of`
+answers *which grant text is this*; the gate answers *whether the document actually cedes those
+rights*. 🟢 **Two questions with opposite contracts, composed — exactly the shape of `P265`'s two
+region questions.** The title gate survives, narrowed: a NO-OSI trigger no longer overrides a grant
+the hardened classifier recognises **unless** the body carries fatal limitations. `PageLM` is still
+`NO-OSI` by that second condition; Sakai no longer is.
+
+🔵 **Why nine defects survived under a green suite: `p411/test_gate.py` held no copyleft payload and
+no OSI payload other than MIT.** Seven synthetic cases, all green. **A suite green because it never
+asked.** 🟢 **The durable repair was corpus, not another assertion** — that suite now carries real
+payloads (**7 → 11 cases**), and the full instrument lives in
+`compose/code/p571-cession-family-delegation/` (**33/33**, 6 mutants, reproducible before/after).
+
+🟢 **Whole tree: 107 suites pass.** 🔴 **Two are red and this pass caused neither** — both verified red
+at pristine `HEAD` (`bbf3f55`) in a separate worktree before this was written: `p351-star-digit-sweep`
+(`P479`'s own debt) and `p213-envelope-aad` (the environment's `cryptography` wheel panics on import).
+
+🟡 **Open:** `Gap 249` (a dual licence still reports one arm); **`Gap 250`** 🆕 (`p419-copyleft-identity`
+inlines a **third** classifier, by header — correct method, no inheritance from `lib/`; measured, not
+repaired, per `P562`).
 
 ## 🔴 Forty-sixth pass, 2026-10-07 — the agent shelf is saturated for the fourteenth time, and the pass's real finding is that this KB could not **see** the licence regime of an EPL component at all
 

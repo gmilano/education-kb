@@ -1,8 +1,124 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-07
+updated: 2026-10-08
 ---
+
+## 🔴 Forty-seventh pass, 2026-10-08 — six trends: a gate that refused usable software by name, a suite green because it never asked, a substring that cannot tell a grant from a prohibition, a maturity contradiction that resolves, a regional channel going stale, and an agent shelf saturated for the fifteenth time
+
+⏱️ **First pass of this date.** 🔵 **All market and regulatory figures are secondary and carry their
+series (`P477`, `P515`); `eur-lex.europa.eu` stays proxy-blocked (`Gap 56`), so the EU education
+dates are NOT cited as primary (`Gap 241`, and `P555`'s contradiction is unresolved).** Existence by
+`git ls-remote --heads` against a negative control in the same run (`P510`); licences from payload
+via the shared classifier (`P237`). **No star counts** (`P479`).
+
+🔵 **Numbering.** 🟢 **`P490`'s rule followed before allocation**: the occupied set was read from the
+live tree **and** `archive/` at pristine `HEAD` (`bbf3f55`), and this pass allocates **`P571`–`P581`**.
+🔴 **The first allocation attempted was `P567`–`P575` and it COLLIDED** — pass 46 had already spent
+`P567`–`P570` in `intel/market.md`, `intel/trends.md` and `compose/patterns.md` on four unrelated
+findings. 🟢 **Caught before the write and re-allocated**, which is the only reason this file does not
+now carry two different `P567`s.
+
+### T1 🔴 `P576` — a gate rejected an OSI licence because its NAME contained a NO-OSI phrase
+
+The cession gate (`p411-cession-identity-gate`) refuses a payload whose title declares a
+source-available licence. The trigger list contains `'community license'`, put there for `PageLM`'s
+*"PageLM Community License"*. 🔴 **The Educational Community License — OSI-approved, Apache-2.0 plus a
+patent clause — contains that phrase as a substring, so `sakaiproject/sakai` was being refused as
+`NO-OSI`.**
+
+🔵 **The direction of this error is what makes it a trend and not a bug.** A family read too strictly
+makes an engagement more cautious than necessary; **a false NO-OSI deletes a candidate from the shelf
+entirely, and nobody re-checks a row that was already refused.** 🟢 **Sakai is the only genuinely
+permissive full LMS on this shelf** — the error removed the single most commercially useful row.
+
+### T2 🔴 `P577` / `P579` — a bare substring cannot tell a GRANT from a PROHIBITION
+
+Two more false rejections, same shape, different lists:
+
+| | The text | Read as | Is |
+|---|---|---|---|
+| 🔴 `P577` | `Copyright (c) 2022, Yuan Gong` / **`All rights reserved.`** | proprietary declaration | 🟢 the **conventional BSD/MIT copyright header** |
+| 🔴 `P579` | *"for any purpose, commercial or **non-commercial**"* | a non-commercial restriction | 🟢 the **Unlicense**, the most permissive text there is |
+
+🔵 **`P579` is the sharper one: the phrase appears in order to be GRANTED.** An enumeration that
+permits both commercial and non-commercial use was read as the clause that forbids commercial use.
+🟢 **Fixed by discounting known grant phrasings before the limitation test**, with a mutant proving
+the discount has teeth.
+
+### T3 🔴 A suite can be green because it never asked — and this one was, for a whole pass
+
+🔵 **This is the trend with the longest reach, because it is about how this KB knows anything.** Nine
+distinct defects (`P571`–`P579`) lived in the cession gate under a **green** suite. The reason:
+**`p411/test_gate.py` held seven cases, all synthetic, with no copyleft payload and no OSI payload
+other than MIT.** 🔴 **The gate was never asked a question it could get wrong.**
+
+🟢 **So the durable repair was CORPUS, not another assertion** — that suite now carries real payloads
+(**7 → 11 cases**), and a dedicated instrument carries the rest
+(`compose/code/p571-cession-family-delegation/`, **33/33**, 6 mutants). 🔵 **A green suite is evidence
+about the questions it asks, and nothing else.**
+
+### T4 🟡 `P571`–`P575` — a correction that lives in a shared control still does not travel to an instrument that writes its own
+
+The sixth consecutive appearance of this trend, and `lib/README.md` exists because of it: *«a rule
+you have to remember is not a control»*. 🔴 **The cession gate inlined its own licence ladder and
+therefore re-imported every defect `lib/` had already paid for:**
+
+| Finding | The body names a licence it does not grant | Gate said | Is |
+|---|---|---|---|
+| `P571` | GPL-3.0 **§13 is titled** *"Use with the GNU Affero GPL"* | `AGPL-3.0` | **`GPL-3.0`** (Moodle) |
+| `P572` | GPL-2.0's closing paragraph recommends the **Lesser** GPL | `LGPL` | **`GPL-2.0`** |
+| `P573` | MPL-2.0 **§1.12 defines** *Secondary License* by naming GPL/LGPL/AGPL | `AGPL-3.0` | **`MPL-2.0`** |
+| `P574` | EPL-2.0's *Secondary Licenses* clause names GPL-2.0-or-later | `GPL` | **`EPL-2.0`** (Huly) |
+| `P575` | — | `MPL-2.0` stamped on any Mozilla text | **`MPL-1.1`** |
+
+🔵 **`P573`/`P574` are the expensive direction: a weak, file-level copyleft read as the strongest
+network copyleft that exists.** That turns a shippable component into a refused one.
+
+🟢 **Fixed by delegation — and the delegation could not be blind**, which is the architectural
+finding: the shared classifier reads `PageLM` as **`MIT`**, the exact payload the gate exists to
+catch. `family_of` answers *which grant text is this*; the gate answers *whether the document
+actually cedes those rights*. 🟢 **Two questions with opposite contracts, composed, exactly as `P265`
+split the two region questions.**
+
+### T5 🟢 `P580` — the market's "maturity" contradiction resolves into a measurable gap, and it is the pass's one global finding
+
+Two 2026 outlooks in the same run: one says *"transitioning from pilot programmes to mainstream
+deployment"*, the other scores maturity **35 / 100** with **most institutions still in pilot mode**.
+🟢 **Both are true of different populations**, and this pass has both measured separately:
+
+🔴 **Institutions run AI at ~87% and govern it at ~26%** (UNESCO IESALC, 200 institutions across 19
+countries), while **92% of students and 79% of faculty** are already engaging (Digital Education
+Council, 30 000+ responses). 🔵 **Individual adoption is mainstream; institutional adoption is not.**
+
+🟢 **It is the only finding this pass can place in all four regions with evidence rather than
+inference**, and every regional subsection of `intel/market.md` is now written against it. 🟡 **In
+North America the same gap reads 10% with formal guidelines and 71% of teachers untrained** — same
+shape, different instrument.
+
+### T6 🔴 The regional channel is going stale in EMEA and empty in APAC, and the agent shelf is saturated for the fifteenth time
+
+🔵 **An informed gap is information; silence looks exactly like coverage.** Measured this pass, per
+region:
+
+| Region | What the mandated query returned |
+|---|---|
+| 🟢 **LATAM** | two independent institutional surveys, named players, per-country regulation — **the best-measured region in this channel** |
+| 🟡 **North America** | adoption and funding figures, but a regional CAGR that **contradicts** the global series (`P515`) |
+| 🔴 **EMEA** | enterprise-AI material, a **2023** study and an **October 2024** conference presented as current. **No 2026 schools/universities data at all** |
+| 🔴 **APAC** | enterprise AI and board governance. Education-specific: **nothing**. What returned is **corporate learning** (Pearson+TCS, LearnUpon, Alteryx, NIIT MTS), which is a different buyer |
+
+🔴 **EMEA's staleness is the new part.** The region with the only hard deadline in any geography — the
+**EU AI Act's high-risk classification for education, in full effect August 2026** — is the region
+whose channel returns two-year-old sources. 🔵 **Next probes named rather than left implicit:**
+national ministry programmes and the Europe EdTech 200 for EMEA; the Singapore, Australia, India and
+China ministries for APAC.
+
+🔴 **And the agent channel reproduced its nil for the fifteenth consecutive pass**, in every region:
+the mandated query returns the **horizontal** shelf plus curricula (`microsoft/ai-agents-for-beginners`,
+`pguso/agents-from-scratch`) and **catalogues** (`ashishpatel26/500-AI-Agents-Projects`). 🔵 **That is
+now a stable property of the channel rather than a hole waiting to close**, and it is why this KB's
+composable value sits in the verticals plus a horizontal agent, never in an education-native agent.
 
 ## 🔴 Forty-sixth pass, 2026-10-07 — five trends: a correction that did not travel one line, a consumer asking for a string that could not exist, plurality that resolves to one vendor, a free tier priced to zero, and a rationale its own suite refuted
 

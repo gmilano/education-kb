@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Suite de la compuerta. Cada caso es un PAYLOAD medido este pase, no un invento."""
+import os
 import sys
 from gate_cesion import clasificar
 
@@ -41,6 +42,30 @@ CASOS = [
     ('P414 campo de metadata de 3 B',        METADATA,     'SIN-CESION', False),
     ('P404 archivo de 0 B',                  VACIO,        'SIN-CESION', False),
 ]
+
+# -------------------------------------------------------------------------------------
+# PASE 47: el CORPUS REAL que esta suite no tenia.
+#
+# Los siete casos de arriba son sinteticos y ninguno es copyleft, asi que la suite estuvo
+# verde mientras la escalera inlineada leia el `COPYING` de Moodle como AGPL-3.0. Ocho
+# clases de respuesta equivocada sobrevivieron un pase entero debajo de un verde. El
+# arreglo durable no es un assert mas: es que esta suite PREGUNTE.
+# El instrumento completo —13 payloads, controles negativos y 6 mutantes— vive en
+# `../p571-cession-family-delegation/`.
+_HERE = os.path.dirname(os.path.abspath(__file__))
+_REALES = [
+    ('P571 GPL-3.0 real (Moodle)',   '../p184-holder-mismatch/fixtures/gpl-3.0-moodle-COPYING.txt',
+     'GPL-3.0', False),
+    ('P573 MPL-2.0 real (rhino)',    '../p560-epl-mpl-version-read/fixtures/mpl-2.0-rhino-partial-grant.LICENSE',
+     'MPL-2.0', False),
+    ('P576 ECL-2.0 real (Sakai)',    '../p473-probe-commercial-gate/fixtures/ecl-2.0-sakai.LICENSE',
+     'ECL-2.0', True),
+    ('P579 Unlicense real (mem-mcp)', '../p308-phrase-anchor-sweep/fixtures/unlicense-FWU-DE-mem-mcp.LICENSE',
+     'Unlicense', True),
+]
+for _n, _rel, _f, _u in _REALES:
+    with open(os.path.join(_HERE, _rel), encoding='utf-8') as _fh:
+        CASOS.append((_n, _fh.read(), _f, _u))
 
 fallos = 0
 for nombre, payload, familia_esperada, usable_esperado in CASOS:

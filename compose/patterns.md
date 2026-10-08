@@ -1,8 +1,113 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-07
+updated: 2026-10-08
 ---
+
+## 🟢 Forty-seventh pass, 2026-10-08 — two recipes (`P576` the permissive-LMS AI overlay that can ship closed; `P578` the licence-regime intake gate) and a **correction** to every recipe that priced Sakai out or priced Moodle too dear
+
+⏱️ **First pass of this date.** 🔵 **Licences read first-hand on 2026-10-08 from payload in the
+repository, channel named per row (`P237`, `P250`, `P510`). No star counts (`P479`).**
+
+🔵 **Numbering.** 🟢 **`P490`'s rule followed before allocation**: the occupied set was read from the
+live tree **and** `archive/` at pristine `HEAD` (`bbf3f55`); this pass allocates **`P571`–`P581`**.
+🔴 **The first attempt, `P567`–`P575`, COLLIDED with pass 46's own `P567`–`P570` in this very file** —
+caught before the write and re-allocated.
+
+## 🔴 Correction — every recipe that chose an LMS was choosing against two wrong licence labels
+
+🔵 **Not a correction to a step, but to the constraint the steps were optimised under.** Until this
+pass the cession gate reported **Sakai as `NO-OSI`** (`P576`) and **Moodle as `AGPL-3.0`** (`P571`).
+Both are wrong, and they are wrong in the same direction: **toward telling a client it has less
+freedom than it does.**
+
+| | Before this pass | 🟢 After (payload read 2026-10-08) |
+|---|---|---|
+| `sakaiproject/sakai` | 🔴 `NO-OSI` — **not eligible for any recipe** | 🟢 **`ECL-2.0`**, permissive, **no reciprocity** |
+| `moodle/moodle` | 🔴 `AGPL-3.0` — *"source must be offered to network users"* | 🟡 **`GPL-3.0`** — reciprocity on **distribution**, not on network use |
+| `hcengineering/platform` (Huly) | 🔴 `GPL` | 🟡 **`EPL-2.0`** — file-level, weak |
+| `FWU-DE/mem-mcp` | 🔴 `usable=NO` | 🟢 **`Unlicense`**, usable |
+
+🔴 **The consequence is concrete: every recipe that needed a closed deliverable had to route around
+the LMS layer entirely, because the one permissive LMS on the shelf was marked ineligible.** 🟢 **That
+routing is no longer necessary**, and the recipe below is the one that was not previously
+expressible.
+
+## 🟢 `P576` — AI tutor/feedback overlay on a **permissive** LMS, deliverable closed
+
+🔵 **The gap this sells into is measured, not inferred:** **19% of faculty use AI for assignment
+feedback while 50% of students support it** (Digital Education Council, 30 000+ responses, 29
+institutions) — and **institutions run AI at 87% while only 26% have a governance framework**
+(UNESCO IESALC, 200 institutions / 19 countries).
+
+**Wiring, every component licence-read from payload this pass or a prior pass:**
+
+| Layer | Component | Licence | Why this one |
+|---|---|---|---|
+| LMS core | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) — **34 refs** | 🟢 **ECL-2.0** | 🟢 **the only permissive full LMS on this shelf**; your overlay can stay closed |
+| Grade/roster boundary | Sakai's own gradebook + roster services | 🟢 ECL-2.0 | no copyleft boundary to draw — the reason this recipe is simple |
+| Agent runtime | a **horizontal** agent (`CrewAI`, `LangGraph`, `OpenHands`) | 🟢 MIT / Apache-2.0 | 🔴 **there is no education-native agent** — fifteenth consecutive nil (`T6`) |
+| Draft-before-write gate | `compose/code/grading-draft-gate/` | this KB | 🔴 **no feedback reaches a student record without a human accept step** |
+| Marking / provenance | `compose/code/aiact-50-2-marking/` + `-pack/` | this KB | EMEA: AI Act Art. 50 transparency marking, **high-risk, full effect Aug 2026** |
+| Licence intake gate | `compose/code/p571-cession-family-delegation/` | this KB | 🟢 **run it before admitting any new dependency** (see `P578`) |
+
+**Steps:**
+1. Stand up Sakai; **do not fork the core** — bind through its service APIs so the overlay stays a
+   separate work even though ECL-2.0 would permit a closed fork anyway.
+2. Put the horizontal agent behind the **draft-before-write gate**: the agent emits a *draft*
+   comment; a human accepts, edits or rejects; only an accepted draft is written to the gradebook.
+   🔵 **That is what makes the 19%/50% gap addressable** — students want AI-assisted feedback, faculty
+   will not cede the record.
+3. Mark every generated artefact through `aiact-50-2-marking/` and pack provenance with
+   `aiact-50-2-pack/`. 🟢 **Required for EMEA from August 2026; harmless elsewhere.**
+4. Keep the overlay's own licence closed if the engagement needs it. 🟢 **ECL-2.0 permits it. This step
+   was impossible in every previous pass of this file.**
+
+🟡 **Moodle variant:** if the client is already on Moodle, the same overlay works, but the boundary
+matters — **`GPL-3.0` reciprocity attaches on distribution**, so ship the overlay as a **separate
+plugin**, not as a patched core, and do not link it into core GPL code. 🔵 **Hosting a closed overlay
+against an unmodified Moodle is fine; `P571` was wrongly saying otherwise.** 🔴 **Open edX is the
+exception: `AGPL-3.0` §13 reaches network users, so a closed hosted derivative is not available.**
+
+**Regional fit:** 🟢 **LATAM** — the 26%/87% gap is the clearest buy in any region, and private
+non-profits lead adoption at **84%**. 🟢 **EMEA** — lead with the Art. 50 conformance pack, not the
+tutor. 🟡 **North America** — lead with policy and staff enablement (10% have guidelines, 71% of
+teachers untrained). 🟡 **APAC** — self-host it; **sovereignty is the regional frame**, and the buyer
+the channel actually surfaces is **corporate learning**, not a university.
+
+## 🟢 `P578` — a licence-regime intake gate, because this pass proved the shelf cannot be trusted to self-report
+
+🔵 **Why this is a pattern and not a chore:** this pass measured the gate that decides whether a
+licence **cedes** anything and found it diverged from the hardened classifier on **18 of 29 real
+payloads**, in eight classes, **three of which refuse usable software**. 🔴 **A studio that inherits a
+component list without re-reading payloads inherits those errors silently.**
+
+**Wiring:**
+1. `compose/code/lib/license_family.sh` → `family_of <payload>` for the **family** question. 🔴 **Never
+   write your own ladder**: a licence body *names* other licences (GPL-3.0 §13 names the Affero GPL;
+   MPL-2.0 §1.12 and EPL-2.0 name GPL), so a keyword probe over the body reads the licence cited
+   rather than the one granted (`P571`–`P575`).
+2. `compose/code/p411-cession-identity-gate/gate_cesion.py` → `clasificar()` for the **cession**
+   question: does this document actually grant those rights, at this size, under this title, without
+   fatal limitations? 🔵 **Two different questions** — the shared classifier reads `PageLM` as `MIT`,
+   and `PageLM` prohibits commercial use and demands revenue sharing.
+3. `compose/code/p429-cession-claim-audit/` → delivery class (`PERMISIVA` / `COPYLEFT` / …) for the
+   ship/no-ship decision.
+4. `compose/code/p571-cession-family-delegation/medir.py --check` in CI. 🟢 **It refuses to pass unless
+   the historical before/after reproduces**, so a regression in the shared classifier fails the build
+   rather than quietly re-labelling the shelf.
+
+**What it catches, with this pass's real examples:** a repo whose licence **name** contains a
+NO-OSI phrase (`ECL-2.0`, `P576`); a **BSD header** read as proprietary (`P577`); the **Unlicense**
+read as non-commercial (`P579`); an **MPL/EPL** component read as GNU copyleft (`P573`/`P574`); a
+**dual** licence reported by one arm only (`P578` → 🟡 `Gap 249`, still open); and a repo with **no
+licence payload at all** — `speedyapply/2026-AI-College-Jobs` exists, is public, and grants nothing
+(`P440` class, not admitted).
+
+🟡 **Known limits, declared:** `Gap 249` — a dual MPL-2.0-**or**-EPL-1.0 grant still reports only the
+MPL arm, so a component whose EPL arm you actually need will be scored on the wrong one. 🟡 **`Gap 250`**
+🆕 — `p419-copyleft-identity` inlines a **third** licence classifier; it classifies by header, which
+is the correct method, so it does not carry `P571`–`P575`, but it inherits nothing from `lib/`.
 
 ## 🟢 Forty-sixth pass, 2026-10-07 — three recipes (`P568` a permissive admissions layer with the copyleft boundary **measured**; `P569` a cross-component contract suite; `P570` sell against a free tier) and a **correction** to every recipe that cited an EPL or MPL component
 

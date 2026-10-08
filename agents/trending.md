@@ -1,8 +1,123 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-07
+updated: 2026-10-08
 ---
+
+## 2026-10-08 — pass 47 (first of this date)
+
+🔵 **APPEND-ONLY.** History below is untouched.
+
+🔴 **Zero new education agents for the seventh consecutive pass, and the shelf is declared
+saturated for the fifteenth.** The mandated query ran verbatim (`top open source AI agents
+education 2026 github MIT`) and returned the horizontal agent shelf plus "learn AI" curricula and
+agent **catalogues** — `microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`,
+`ashishpatel26/500-AI-Agents-Projects`. 🔵 **Reproduced on a fresh run and in every region, which
+is information rather than silence, and is now a stable property of the channel.** No
+education-native agent appeared in any of the four regional runs.
+
+🟢 **So the pass spent its budget on the instrument, and what it found is that this KB's cession
+gate was rejecting software this KB exists to recommend.**
+
+### 🔴 The gate that reads whether a licence actually cedes anything diverged from the hardened classifier on **18 of 29 real payloads**
+
+The pass 46 note declared it open in these words: *`p411-cession-identity-gate` still inlines a
+licence classifier and still carries `P561`*. Measured this pass against every real cession payload
+in the tree, the inlined ladder was wrong in **eight classes**, and **three of them reject usable
+software**:
+
+| Finding | Real payload | The gate said | It is |
+|---|---|---|---|
+| 🔴 **`P571`** | **Moodle**'s `COPYING`, and `gpl-3.0-lmscloud` | `AGPL-3.0` | **`GPL-3.0`** |
+| 🔴 **`P572`** | `OpenEMIS/core` | `LGPL` | **`GPL-2.0`** |
+| 🔴 **`P573`** | `mozilla/rhino` | `AGPL-3.0` | **`MPL-2.0`** |
+| 🔴 **`P574`** | `hcengineering/platform` (Huly), `eclipse-ee4j/jersey` | `GPL` | **`EPL-2.0`** |
+| 🔴 **`P575`** | canonical **MPL-1.1** (SPDX) | `MPL-2.0` | **`MPL-1.1`** — 🔵 `P561` verbatim, closed here |
+| 🔴 **`P578`** | `h2database` (dual MPL-2.0 **or** EPL-1.0) | `AGPL-3.0` | **`MPL-2.0`** (`Gap 249` still open) |
+| 🔴 **`P576`** | **`sakaiproject/sakai`** | `NO-OSI` | 🟢 **`ECL-2.0`, usable** |
+| 🔴 **`P577`** | `YuanGongND/gopt` | `NO-OSI` | 🟢 **`BSD`, usable** |
+| 🔴 **`P579`** | `FWU-DE/mem-mcp` (**Unlicense**) | `usable=NO` | 🟢 **usable** |
+
+🔵 **Three different causes, and conflating them is why they survived together:**
+
+1. **A licence body names other licences.** GPL-3.0 §13 is titled *"Use with the GNU Affero General
+   Public License"*; GPL-2.0's closing paragraph recommends *"use the GNU Lesser General Public
+   License instead"*; MPL-2.0 §1.12 and EPL-2.0's *Secondary Licenses* clause **define**
+   compatibility by naming GPL. A probe over the **body** reads the licence that is *cited*, not the
+   one that is *granted*. This is `P171` and `P454` — already paid for in `lib/` — re-imported by an
+   instrument that wrote its own ladder.
+2. **A NO-OSI trigger that is a substring of an OSI name.** `'community license'` exists because of
+   `PageLM`, but the **Educational** Community License contains it, and `'all rights reserved'` is
+   part of the conventional BSD/MIT copyright header.
+3. **A limitation that appears in order to be GRANTED.** The Unlicense reads *"for any purpose,
+   commercial or non-commercial"*; the bare substring `'non-commercial'` cannot tell a grant from a
+   prohibition.
+
+🔴 **`P576` was rejecting Sakai — an LMS this KB's own vertical channel recommends — for the name of
+its licence.** 🟢 **All nine are fixed; the gate now delegates the family question to the shared
+hardened classifier and keeps only the question that is its own.**
+
+🔵 **Why it survived a whole pass under a green suite: the corpus of `p411/test_gate.py` held no
+copyleft payload and no OSI payload other than MIT.** Seven cases, all synthetic, all green. **A
+suite green because it never asked.** So the durable repair was corpus, not another assertion.
+
+🟢 **Existence and licence measured first-hand this pass** (`git ls-remote --heads`, negative control
+`gmilano/nope-567-control` → **0 refs** in the same run; payloads read live from
+`raw.githubusercontent.com`; **no star counts**, `P479`):
+
+| Repo | Existence (`P510`) | Licence (payload read 2026-10-08) | Why it is here |
+|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 **40 refs** | 🟡 **GPL-3.0** (35 146 B) | 🔴 the payload that proved `P571` — the gate called it `AGPL-3.0` |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **34 refs**, HEAD `34` heads | 🟢 **ECL-2.0** (11 119 B) | 🟢 **reinstated**: `P576` was rejecting it as NO-OSI |
+| [`FWU-DE/mem-mcp`](https://github.com/FWU-DE/mem-mcp) | 🟢 **1 ref** | 🟢 **Unlicense** (1 210 B) | 🔴 the payload that proved `P579` |
+| [`YuanGongND/gopt`](https://github.com/YuanGongND/gopt) | 🟢 **3 refs** | 🟢 **BSD** (1 516 B) | 🔴 the payload that proved `P577` |
+| [`OpenEMIS/core`](https://github.com/OpenEMIS/core) | 🟢 **1 ref** | 🟡 **GPL-2.0** | 🔴 the payload that proved `P572` |
+
+🔵 **A probe this pass returned 0 refs and the KB was right, not wrong:** `sakai/sakai` → **0 refs**,
+identical to the negative control. The canonical path is `sakaiproject/sakai`, which is what all 23
+of this KB's existing references already publish. 🟢 **The negative control did its job on the
+probe, not on the corpus.**
+
+### 🔴 `P581` — the prescribed URL check (`curl -sI`) cannot tell a real repo from a nonexistent one in this environment
+
+🔵 **Measured directly, with a negative control, because every URL in this pass had to be verified
+somehow:**
+
+| Probe | Real repo (`moodle/moodle`) | Nonexistent control (`gmilano/nope-567-control`) | Discriminates? |
+|---|---|---|---|
+| `curl -sI https://github.com/…` | 🔴 **403** | 🔴 **403** | 🔴 **NO** |
+| `curl -sI https://raw.githubusercontent.com/…/LICENSE` | 🟢 **200** | 🟢 **404** | 🟢 **yes** |
+| `git ls-remote --heads` | 🟢 **40 refs** | 🟢 **0 refs** | 🟢 **yes** |
+
+🔴 **The agent proxy answers 403 to every `github.com` HTML HEAD request, real or not**, so a
+`curl -sI` sweep over the 16 repo URLs written this pass returned **403 sixteen times** — which looks
+like sixteen failures and is in fact sixteen non-answers. 🔵 **A probe whose output is constant across
+the positive and negative control is not a measurement**, which is the same class as `P445`'s
+constant-column defect.
+
+🟢 **So every URL in this pass was verified on the two channels that do discriminate**, both run
+against the negative control in the same session: `git ls-remote --heads` for existence and
+`raw.githubusercontent.com` for the licence payload. 🔵 **This is why `P510` specifies `ls-remote`
+with a control rather than a status code.**
+
+🟢 **New in the tree this pass — this KB's own code:**
+`compose/code/p571-cession-family-delegation/` (13 real payloads, suite **33/33**, **6 mutants**,
+`P197` no-silent-fallback control, reproducible before/after sweep) plus the repair to
+`p411/gate_cesion.py` and real corpus added to its suite (**7 → 11 cases**).
+🟢 **Whole tree: 107 suites pass.**
+
+🔴 **Two suites in the tree are red and this pass caused neither — both verified red at pristine
+`HEAD` (`bbf3f55`) in a separate worktree before this claim was written:** `p351-star-digit-sweep`
+(5 failures, historical `★` rows inside this very append-only history — `P479`'s own debt, still
+open) and `p213-envelope-aad` (the environment's `cryptography` wheel panics on import). 🔵 **Neither
+reads the cession gate.**
+
+🟡 **Declared and left open:** `Gap 249` (a **dual** licence still reports one arm — `h2database`
+offers MPL-2.0 **or** EPL-1.0 and the answer is `MPL-2.0`); **`Gap 250`** 🆕 —
+`p419-copyleft-identity` inlines a **third** licence classifier, by header; classifying by header is
+the correct method (`P171`) so it does not carry `P571`–`P575`, but it inherits nothing from `lib/`
+either (measured, not repaired: `P562` says do not touch an instrument whose contract you have not
+measured); `Gap 241` / `P555` (the EU education AI Act channel).
 
 ## 2026-10-07 — pass 46 (thirteenth of this date)
 

@@ -1,8 +1,57 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-07
+updated: 2026-10-08
 ---
+
+## 2026-10-08 — pass 47 (first of this date)
+
+🔵 **APPEND-ONLY.** History below is untouched.
+
+🔴 **The GitHub-trending channel returned no education-industry software for this pass either —
+it returned learning material and job boards.** The mandated query ran verbatim (`github trending
+education AI 2026`). 🔵 **Every row below exists and was licence-read first-hand; none of them is a
+system a studio would deploy for a client.** That distinction is the finding: the channel's
+"education" bucket is *people learning AI*, not *AI for education providers*.
+
+🟢 **Existence by `git ls-remote --heads`, negative control `gmilano/nope-567-control` → 0 refs in
+the same run. Licences read from the payload at `raw.githubusercontent.com` on 2026-10-08.
+No star counts (`P479`).**
+
+| Repo | Existence (`P510`) | Licence (payload) | What it actually is |
+|---|---|---|---|
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | 🟢 **21 refs**, HEAD `7e88115` | 🟢 **MIT** (1 069 B) | course/curriculum. The channel's top trending row |
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 **11 refs**, HEAD `39f1ae5` | 🟢 **MIT** (1 140 B) | 12-lesson curriculum. **Teaching material, not a tutor** |
+| [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) | 🟢 **4 refs**, HEAD `930c017` | 🟢 **MIT** (1 069 B) | **catalogue** of agents, not an agent |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | 🟢 **1 ref**, HEAD `da3f9df` | 🟢 **MIT** (1 091 B) | teaching repo: agents on a local LLM, no framework |
+| [`MadsLorentzen/ai-job-search`](https://github.com/MadsLorentzen/ai-job-search) | 🟢 **1 ref**, HEAD `895c021` | 🟢 **MIT** (1 070 B) | job search. 🟡 default branch is **`master`**, not `main` |
+| [`speedyapply/2026-AI-College-Jobs`](https://github.com/speedyapply/2026-AI-College-Jobs) | 🟢 **1 ref**, HEAD `25fdd8e` | 🔴 **NO-PAYLOAD** | job list. **No grant at all** — see below |
+
+🔴 **And every one of the six was already published in this KB by an earlier pass.** Measured with
+`compose/code/p311-duplicate-alta-gate/check_duplicate.py`: **6 slugs checked, 6 already published.**
+🔵 **So none of these is an admission, and none is new** — the trending channel returned this KB its
+own held rows. 🟢 **That is the saturation finding stated from a second instrument**: the channel is
+not merely returning the wrong *kind* of repo, it is returning the same ones.
+
+### 🔴 `speedyapply/2026-AI-College-Jobs` has no licence file, and the channel presented it as a resource
+
+Probed for `LICENSE`, `LICENSE.md` and `LICENSE.txt` on both `main` and `master`: **all six return
+non-200.** The repo exists (1 ref) and the content is public, but **no copyright licence is granted**,
+so by default nothing is permitted beyond viewing. 🔵 **This is the `P440` class — a repo the channel
+surfaces as usable with no grant behind it — and it is why this KB reads payloads instead of badges.**
+🟡 **Not admitted to any shelf.** A row with no grant is not a finding this KB can build on; it is a
+reason not to.
+
+🔵 **Search-result star counts were discarded, not recorded (`P479`).** The run surfaced conflicting
+figures for the same repos across aggregators — one listing put `microsoft/ai-agents-for-beginners`
+at 67 223 and another source claimed 180 000 for an unrelated agent it could not corroborate. 🔴 **A
+number that two sources contradict is not a measurement**, and this KB has its own debt in that
+class (`p351-star-digit-sweep`, still red).
+
+🟡 **Declared gap — the channel itself:** there is **no authoritative GitHub Trending list for
+"education AI"**. The mandated query returns third-party trackers (`trendshift.io`, `gittrend.io`)
+and personal curated mirrors, which lag and disagree with `github.com/trending`. 🔵 **Written down
+rather than left silent: the absence is a property of the channel, reproduced for several passes.**
 
 ## 2026-10-07 — pass 46 (thirteenth of this date)
 
