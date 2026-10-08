@@ -4,6 +4,129 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Pass 59, 2026-10-08 — **`Gap 276` CLOSED**, **`Gap 266` RESOLVED as mis-posed**, `Gap 273` split into three measured classes, `Gap 270` refuted again, four gaps declared
+
+> 🔵 **This pass's opening hypothesis was that the §13/Affero confusion was an undiscovered
+> property with blast radius across the 235 committed instruments.
+> 🔴 REFUTED, twice:** 🟢 **the property is real (`P753`), this KB has held it named and
+> regression-tested since pass 123, and the only instrument it broke is the one this pass wrote.**
+
+### 🟢 `Gap 276` — **CLOSED** (declared pass 57, open one pass)
+
+🟢 **Two actively-released permissive LTI 1.3 tool-side libraries, payload-read and SHA-pinned,
+each with a registry date:** `Cvmcosta/ltijs` **Apache-2.0**, npm **v7.0.7 published 2026-10-06**
+(two days before this pass); `packbackbooks/lti-1-3-php-library` **Apache-2.0**, packagist
+**v6.4.4 2026-09-23**. 🟢 **Three more permissive options measured without release dates**
+(1EdTech Apache-2.0, UOC MIT, SanDiegoCodeSchool MIT-but-Core-only).
+🟢 **And the incumbent is now dated through the right package name:** `PyLTI1p3` MIT,
+PyPI **v2.0.0 2022-11-20** — 🟢 **which also resolves `P743`**, since `pypi.org/pypi/pylti1.3/json`
+is a `404`. 🔵 **`R57a`'s authentication boundary has a live component** (`P766`).
+
+### 🟢 `Gap 266` — **RESOLVED**, and the reason it survived two passes is that it was **mis-posed**
+
+🔴 **The gap asked for "the UAE mandate date". There is no such scalar.** 🟡 **There are two
+dates:** **2025-26** — AI as an official subject, KG–Grade 12, **public** schools, delivered inside
+the existing "Computing, Creative Design and Innovation" course, project-assessed with **no written
+exams**, 1 000 trained teachers; **2026-27** — a **standalone** subject, "Artificial Intelligence
+and Technology", replacing CCDI and extended to **private schools following the MoE curriculum**.
+🔴 **Private schools on other curricula (ADEK, KHDA, SPEA) are outside the federal mandate.**
+🔴 **One claim refused:** that the Cabinet approved AI curriculum for *all* public and private
+schools on 2026-09-02 with 22 000 teachers trained — **no official release located**.
+🔵 **Generalised as Trend 6: a gap phrased as a scalar cannot absorb a staged instrument.**
+
+### 🟢 `Gap 273` — **SPLIT into three measured classes** (declared pass 58), by named samples
+
+🟢 **`P744` had ruled out another whole-tree sweep, so this pass used named samples, which is what
+`P744` prescribed.** 🟢 **The registry/tree layer rescued 2 of 5:**
+
+1. 🟢 **grant below a reference in the same file** — `openeducat/openeducat_erp` → **LGPL-3.0**;
+2. 🟢 **grant only in source-file headers** — `onbirdev/moodle-webservice_mcp` →
+   **GPL-3.0-or-later** (0 of 15 filenames, no manifest, grant in every `.php` header) — 🆕 `P757`;
+3. 🔴 **genuinely ungranted, 3 of 3** — `Hieub26/IELTS-Writing-Part-1-Scoring`,
+   `Guo-coding/llm-l2-essay-scoring`, `master72o/universal-llm-evaluation-rubric-library`:
+   no licence file, **and no packaging manifest at all** → **all rights reserved**.
+
+🟢 **The operational finding: the 3 the layer did not rescue share a property — they ship no
+manifest**, which is typical of young research repos. 🔴 **No rate is published**: five named
+samples are not a sample frame, and `P744`'s denial still forbids the sweep that would build one.
+🆕 **Succeeded by `Gap 277`.**
+
+### 🔴 `Gap 270` — **NOT closed**, and the refusal is now measured three passes running
+
+🔴 **6 of 6 named primary policy hosts answer `000`** (EC digital-strategy, artificialintelligenceact.eu,
+EUR-Lex, UNESCO IESALC, UNESCO, MultiState). 🟡 **The omnibus amendments remain *reported* as
+adopted June 2026 and in force 2026-07-27**; 🟡 **AI Office and national-authority enforcement
+reported as beginning 2026-08-02.** 🟢 **`P718` stands as the planning rule: `2027-12-02` is a
+backstop, not a start.** 🔵 **Third consecutive confirmation of `P731`** — the repo shelf has five
+working oracles and the market/regulatory shelf has none.
+
+### 🟡 `Gap 272` — **NARROWED**, still refused
+
+🟡 **The arXiv id resolves consistently this pass: `2608.17356`, "ArguLens: An Open-Source System
+for Automated Essay Scoring and Label-Aware Feedback Generation"** — pass 57's rival id
+(`2602.04604`) did not reappear. 🟡 **And its corpus licence is sharper than pass 57 recorded:
+PERSUADE 2.0 is **CC BY-NC-SA 4.0**, not merely CC-BY-NC — ShareAlike reaches derivatives.**
+🔴 **Still no repository URL from any oracle, and `arxiv.org` is `000` here.** 🟢 **The row stays
+refused** (`P476`).
+
+### 🆕 `Gap 277` — the **packaged** half of the former 213 has not been through the registry layer
+
+🔴 **`P760` split the population but measured only five named samples.** 🟢 **The tractable subset
+is the one that ships a manifest**, because `pypi`, `npm` and `packagist` all answer `200` here and
+the registry is the only **dated** oracle (`P741`). 🔵 **Bounded remedy: enumerate manifests —
+not slugs — for the shelved repos, which is a payload read per repo and does not trip `P744`'s
+mass-enumeration denial.** 🟢 **Cost: one pass.**
+
+### 🆕 `Gap 278` — no recipe in this KB has a **policy** gate, only a licence gate
+
+🔴 **`P764`: `algorithm0r/canvas-lms-mcp` is MIT and exposes grading, comments and rubrics — it
+clears every licence check this KB has ever written and is **prohibited** in US K-12 public.**
+🟢 **`P768` writes the first two-axis pre-flight**, but 🔴 **it is prose in `compose/patterns.md`,
+not an instrument**, and the jurisdiction table covers four regions at the level of a sentence each.
+🔵 **Bounded remedy: a `(function, jurisdiction) → GATED | PROHIBITED | UNREGULATED` table as data,
+with the instrument that reads it.** 🔴 **Hard part, stated honestly: every row would be 🟡 reported,
+because `Gap 270` shows the primary sources are unreachable here.**
+
+### 🆕 `Gap 279` — five named tutoring/knowledge-tracing repos not licence-measured
+
+🟡 `mentar` (reported AGPL, BKT, 2026-09-03), `UniKT` (2026-09-12), `AI_EDU` (2026-09-13),
+`LookatStudy` (2026-09-14), `OpenTutor` (2026-10-04). 🟢 **Named rather than written as rows,
+because none was read from payload here.** 🔵 **Cost: one `measure` run of five slugs.**
+🔴 **Relevant because the tutoring cell is this shelf's oldest and least refreshed.**
+
+### 🆕 `Gap 280` — `P769`'s query rule is a **one-pass** result and may not generalise
+
+🟢 **The rule "name the protocol or the function, never the industry" is supported by four queries
+in one pass** (yields 5, 4, 7, 0). 🔴 **Four queries is not evidence of a rule**, and the 57 %
+defect rate on the one *function*-named query is a counterweight the rule does not yet account for:
+protocol-named queries returned 0 defects in 9 rows, function-named returned 4 in 7.
+🔵 **Bounded remedy: run two protocol-named and two function-named queries next pass and compare
+defect rates.** 🟢 **If it holds, the rule is "name the protocol" and the function channel needs a
+heavier verification budget, not equal footing.**
+
+### 🟡 Gaps **not advanced** this pass, stated so no pass reads this one as progress
+
+🟢 **`Gap 267`** — **REFUTED for a second consecutive pass, and this time from inside the clone.**
+🟢 `bash compose/code/p759-four-layer-grant-probe/probe.sh --self-test` runs **4/4 green** executed
+from the cloned repository, so the `[Code from External]` denial that pass 54 recorded is **not**
+in force here. 🔴 **What remains untouched is the 112-suite board:** no pre-existing suite was run,
+so `Gap 257` / `Gap 258` are still unmeasured and the `110/112` figure is **six passes old**.
+🔵 **The distinction matters — "can code from this repo run?" is now answered YES; "do its 112
+suites still pass?" is unanswered, and conflating them is what kept `Gap 267` open for four passes.**
+🔴 **`Gap 257` / `Gap 258`** — unmeasured; the `110/112` figure is **six passes old**, carried as
+reported.
+🔴 **`Gap 253`** — none of the 21 `P541` empty-input instruments fixed. 🟢 **This pass committed no
+new instrument, so it added no new instance.**
+🔴 **`Gap 264`** — the two false `OATutor-Content` sentences still stand, deliberately auditable.
+🔴 **`Gap 265`** — `AITutor-EvalKit` still ungranted; **seventh** refusal.
+🔴 **`Gap 271`** — the 193 unadjudicated repos: extractor precedence not fixed.
+🔴 **`Gap 274`** — the mandated trending query is **zero for ten weeks**; 🟢 **`P769` is the first
+pass to name replacements *and* publish their yields**, but the mandated query is unchanged.
+🔴 **`Gap 275`** — closed by pass 58; 🟢 **this pass applied the 🟢/🟡 marker convention to every
+regional row in `intel/market.md`**, which is the application `P732` warned declaring does not
+guarantee.
+
+
 ## 🟢 Pass 57, 2026-10-08 — **`Gap 269` measured**, `Gap 270` narrowed, `Gap 267` open for a fourth pass, six gaps declared
 
 > 🔵 **This pass's opening hypothesis was that a primary source could be reached to close `Gap 270`.

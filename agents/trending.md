@@ -4,6 +4,86 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 2026-10-08 — pass 59: **12 agent/connector rows admitted, 4 refused**, and a category that did not exist on this shelf yesterday (LMS MCP connectors)
+
+⏱️ **Thirteenth pass of this date. APPEND-ONLY: this section is new; the history below it is untouched.**
+
+🔵 **What is new this week, in one line each — every grant read from payload and SHA-pinned
+(`P732`), because the channel that produced them has a 57 % defect rate (Trend 4).**
+
+### 🟢 New this week — the LTI 1.3 authentication boundary (closes `Gap 276`)
+
+- 🟢 **[Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs)** — Apache-2.0 (11 361 B @ `0ec24fe`).
+  **npm `ltijs` v7.0.7 published 2026-10-06 — two days before this pass.** Node/Express LTI 1.3
+  Advantage tool provider: Deep Linking, Assignment&Grades, Names&Roles, Dynamic Registration.
+  🟡 README claims IMS LTI Advantage Complete certification. 🔵 **This is the row that retires a
+  2022-frozen component from `R57a`'s JWT validation path.**
+- 🟢 **[packbackbooks/lti-1-3-php-library](https://github.com/packbackbooks/lti-1-3-php-library)** —
+  Apache-2.0 (`LICENSE.md`, 11 343 B @ `a20c71b`). packagist `packbackbooks/lti-1p3-tool`
+  **v6.4.4, 2026-09-23**. Maintained PHP fork of the spec body's library.
+- 🟢 **[1EdTech/lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library)** — Apache-2.0
+  (11 343 B @ `3a192de`). The spec body's own reference implementation.
+- 🟢 **[UOC/java-lti-1.3](https://github.com/UOC/java-lti-1.3)** — MIT (1 060 B @ `e673616`). JVM.
+- 🟡 **[SanDiegoCodeSchool/lti-node-library](https://github.com/SanDiegoCodeSchool/lti-node-library)** —
+  MIT (1 078 B @ `8bfe9af`). 🔴 LTI 1.3 **Core only**: no NRPS, no Deep Linking.
+
+### 🆕 New category this week — **LMS MCP connectors**
+
+🔵 **Agents driving an institutional LMS through a documented protocol. The licence split is the
+architectural point, not a footnote (`P763`, `P763a`).**
+
+- 🟢 **[vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp)** — MIT (1 071 B
+  @ `eeeb479`). Canvas LMS MCP server, ~103 tools / 8 agent skills. The original; several forks.
+- 🟢 **[algorithm0r/canvas-lms-mcp](https://github.com/algorithm0r/canvas-lms-mcp)** — MIT (1 070 B
+  @ `2a5a7f1`). TypeScript, **165 tools including grading, comments and rubrics.**
+  🔴 **Permissive licence, prohibited function in US K-12 public (`P764`).**
+- 🔴 **[csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server)** —
+  **AGPL-3.0** (34 523 B @ `5a194a5`). External server over Moodle Web Services, read-only by
+  design. 🔴 **§13 binds a hosted service — the connector is more contagious than Moodle's own
+  GPL-3.0 substrate.**
+- 🔴 **[onbirdev/moodle-webservice_mcp](https://github.com/onbirdev/moodle-webservice_mcp)** —
+  **GPL-3.0-or-later**, and 🆕 **the grant is in every source header; there is no licence file at
+  all** (0 of 15 filenames, no manifest) — `P757`, a shape this KB had not recorded.
+
+### 🟢 New this week — assessment and scoring
+
+- 🟢 **[The-LLM-Data-Company/rubric](https://github.com/The-LLM-Data-Company/rubric)** — MIT
+  (1 077 B @ `eb0755a`), PyPI `rubric` **2.2.0, 2026-01-21**. Weighted-rubric LLM evaluation.
+  🔵 **The upstream of `delip/autorubric`**, the row pass 54 admitted as a fork of `rubric` v1.2.8.
+- 🟢 **[akturkumut/Automated-Exam-Scoring-LLM](https://github.com/akturkumut/Automated-Exam-Scoring-LLM)** —
+  Apache-2.0 (11 357 B @ `5e141c4`). Open-ended exam scoring: Qwen3-4B + SBERT + LoRA, Tesseract
+  OCR for handwritten scripts. 🟡 README asserts **both** MIT and Apache-2.0; payload decides.
+- 🟡 **[microsoft/LLM-Rubric](https://github.com/microsoft/LLM-Rubric)** — MIT (1 141 B @ `030ab16`).
+  Calibrated multidimensional evaluation, ACL 2024 — older than the rest of this shelf.
+
+### 🔴 Refused this week — 4 of 7 from the assessment channel
+
+- 🔴 **[Dmoayad/essay-grader-llm](https://github.com/Dmoayad/essay-grader-llm)** — README asserts
+  MIT three times; payload is **GPL-3.0** (35 149 B @ `8107703`). **Confirmed misgrant**, in the
+  dangerous direction.
+- 🔴 **[Hieub26/IELTS-Writing-Part-1-Scoring](https://github.com/Hieub26/IELTS-Writing-Part-1-Scoring)** —
+  README MIT; **nothing at 15 filenames and no manifest** @ `a988441`. **All rights reserved.**
+- 🔴 **[Guo-coding/llm-l2-essay-scoring](https://github.com/Guo-coding/llm-l2-essay-scoring)** —
+  README mit; nothing at 15 filenames, no manifest @ `d619b16`. **All rights reserved.**
+- 🔴 **[master72o/universal-llm-evaluation-rubric-library](https://github.com/master72o/universal-llm-evaluation-rubric-library)** —
+  README asserts MIT **four times**; nothing at 15 filenames, no manifest @ `5a1500a`.
+  **All rights reserved.**
+
+### 🟡 Named but NOT licence-measured this pass — carried as `Gap 279`, not as rows
+
+🟡 From the tutoring/knowledge-tracing channel: **`mentar`** (tagged BKT + intelligent tutoring,
+reported AGPL, updated 2026-09-03), **`UniKT`** (2026-09-12), **`AI_EDU`** (knowledge graph +
+Socratic tutoring, 2026-09-13), **`LookatStudy`** (BKT + SM-2, 2026-09-14), **`OpenTutor`**
+(block-based adaptive workspace, 2026-10-04). 🔴 **None is written as a row, because none was
+read from payload here.** 🟢 **Named so the next pass has a bounded list instead of a channel.**
+
+### 🔴 The mandated query, for the record — **tenth** saturated week
+
+🟢 `top open source AI agents education 2026 github MIT` → OpenHands, CrewAI, LangGraph, Hermes,
+OpenClaw, Microsoft AI-Agents-for-Beginners, HF Agents Course, 500-AI-Agents-Projects.
+🔴 **General-purpose frameworks and courseware. Zero education-native agents, ten weeks running.**
+
+
 ## 🔴 Fifty-eighth pass, 2026-10-08 — week of 2026-10-08: the mandated query is saturated for the **ninth** week, and the week's movement is a **retraction of last week's own finding**
 
 ⏱️ **Twelfth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

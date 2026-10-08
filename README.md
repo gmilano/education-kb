@@ -24,6 +24,74 @@ education-kb/
 
 ## `compose/code/` — lo que esta KB puede demostrar corriendo
 
+🆕 **El pase 59 del 2026-10-08 registra UNA carpeta nueva y su suite:
+`p759-four-layer-grant-probe` 🟢 `--self-test` **4/4 verde**, corrida DESDE EL CLON** — 🟢 lo que
+**REFUTA `Gap 267` por segundo pase consecutivo**: la negacion `[Code from External]` no esta
+vigente aca. 🔴 **Lo que sigue sin medir es el tablero de 112 suites** (`Gap 257`/`Gap 258`, el
+`110/112` ya tiene seis pases). 🔵 **"¿puede correr codigo de este repo?" ahora es SI; "¿siguen
+pasando sus 112 suites?" sigue sin respuesta — confundir las dos mantuvo `Gap 267` abierto cuatro
+pases.**
+
+🔴 **Y el instrumento existe por el hallazgo del pase:** este pase **repitio el error del pase 58
+dentro de su propio instrumento.** 🟢 Escribio a mano un
+marcador de `§13` para clasificar copyleft, y ese marcador **leyo `moodle/moodle` como AGPL-3.0** —
+la plataforma educativa mas desplegada del mundo, mal puesta en la unica banda con clausula de red.
+🔴 **No hacia falta escribirlo:** `compose/code/p419-copyleft-identity/` tiene la respuesta
+**desde el pase 123**, con la trampa en su docstring, la discriminacion por **linea de titulo** en
+`familia()`, el parentesco aislado en `menciones_cruzadas()` (*«parentesco, nunca identidad»*) y un
+caso de regresion con nombre propio (`ahmedEid1/lumen`, GPL-3.0 que nombra Affero en §13).
+
+🟢 **La regla que sale de ahi, y es el complemento de `P713`: re-medir el DATO cada pase; REUSAR el
+instrumento.** 🔵 El pase 58 aprendio a hacer `grep` antes de publicar un **veredicto**; el pase 59
+es la misma leccion para una **propiedad** — hacer `grep` de los instrumentos antes de anunciar un
+descubrimiento sobre textos de licencia. 🟢 **Radio de impacto medido sobre los 235 instrumentos
+commiteados: cero** (44 mencionan `affero`; los dos que deciden con eso son correctos, uno por
+ventana de encabezado y otro porque `AFFERO` y `GPL` caen en la misma banda).
+
+🟢 **`Gap 276` CERRADO, y con un componente publicado dos dias antes de este pase:**
+`Cvmcosta/ltijs` **Apache-2.0** (11 361 B @ `0ec24fe`), npm **v7.0.7 del 2026-10-06**, y
+`packbackbooks/lti-1-3-php-library` **Apache-2.0** (11 343 B @ `a20c71b`), packagist **v6.4.4 del
+2026-09-23**. 🔵 **`R57a` tenia un agujero en su frontera de autenticacion y ahora tiene fila.**
+🟢 **Y `P743` queda resuelto:** el paquete es **`PyLTI1p3`** (MIT, PyPI **v2.0.0 del 2022-11-20**);
+`pypi.org/pypi/pylti1.3/json` da **`404`**, que es por que el sondeo del pase 57 no fechaba nada.
+
+🔴 **El hallazgo que cambia recetas ya publicadas, y no es de licencias:** `P764` — **la restriccion
+sobre evaluacion automatica tiene DOS modos, no uno.** 🟡 La UE (Anexo III), Vietnam y Corea la
+**condicionan**, y eso es una especificacion de ingenieria que `P710` ya sabe construir.
+🔴 **NYC la PROHIBE**: su guia del **2026-03-24** pone calificar, promover, disciplinar, aconsejar,
+intervenir en crisis, armar IEP/504 y decidir ubicacion academica en el tramo **rojo**.
+🔴 **Ninguna cantidad de human-in-the-loop convierte un uso prohibido en permitido**, asi que en
+K-12 publico de EE.UU. la pipeline de calificacion **no es producto** — lo es el tramo verde
+docente, que NYC dejo abierto en marzo y otra vez en septiembre (moratoria 2K–8 del 2026-09-02).
+
+🆕 **Categoria nueva en el estante: los conectores MCP de LMS**, y su reparto de licencias es el
+punto arquitectonico (`P763a`): 🟢 Canvas es **MIT** por los dos lados
+(`vishalsachdev/canvas-mcp` 1 071 B, `algorithm0r/canvas-lms-mcp` 1 070 B) pero
+🔴 `csmediapro/moodle-mcp-server` es **AGPL-3.0** (34 523 B) — **§13 ata un servicio alojado**,
+cuando el sustrato Moodle es **GPL-3.0 sin clausula de red**. 🔴 **La capa de integracion puede
+contagiar mas que la plataforma que integra**, y un pre-flight que lee solo el sustrato no lo ve.
+
+🆕 **`P757` — una concesion puede vivir SOLO en los encabezados del fuente:**
+`onbirdev/moodle-webservice_mcp` no tiene archivo de licencia en **15** nombres ni manifiesto, y
+**cada `.php`** abre con GPL-3.0-or-later. 🟢 **Con eso `Gap 273` se parte en tres clases medidas**
+(concesion bajo una referencia · concesion en encabezados · realmente sin conceder, 3 de 3 sin
+manifiesto). 🔴 **No se publica ninguna tasa:** cinco muestras con nombre no son un marco de
+muestreo, y la negacion de `P744` sigue prohibiendo el barrido que lo construiria.
+
+🔴 **`P770` — y una advertencia sobre la propia barra de calidad:** `curl -sI https://github.com/<slug>`
+**no es una prueba de existencia aca**. 🟢 Devuelve **403 para `moodle/moodle` y 403 para un slug
+inventado**: es un canal ciego. 🟢 **Los 21 slugs de este pase se verificaron con los dos oraculos
+que SI discriminan** (`git ls-remote` dio SHA en 21 de 21 y fallo en el control negativo;
+`raw.githubusercontent.com` da `200`/`404`), y cada SHA publicado es aquel en que se leyo el payload.
+
+🔵 **Canal estrecho vs canal mandatado, con tasas lado a lado** (`P769`): la consulta mandatada de
+trending lleva **diez semanas** devolviendo cero repos educativos. 🟢 Las cuatro consultas con
+nombre produjeron **12 filas**; 🔴 pero la de *funcion* trae **4 defectos de 7 (57 %)** contra el
+**4,1 %** medido del estante (`P725`). 🟢 **Regla provisoria: nombrar el PROTOCOLO o la FUNCION,
+nunca la industria** — y verificar payload en cada fila, porque el canal que encuentra es el que
+miente. 🔴 **Declarado como `Gap 280`: cuatro consultas no son evidencia de una regla.**
+
+
 🆕 **El pase 58 del 2026-10-08 registra DOS carpetas nuevas, y ambas corrieron aca:**
 🟢 **`p742-grant-body-vs-reference`** (muestra nombrada, `n=8`) y 🟢 **`p752-prose-vs-committed-results`**
 (`--self-test` **4/4 verde**, offline). 🔴 **Eso REFUTA `Gap 267` / `Gap 261`:** cuatro pases heredaron

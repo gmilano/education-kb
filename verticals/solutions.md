@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-ninth pass, 2026-10-08 — the vertical shelf gains an **integration tier**, and its licence split is the opposite of the substrate tier: the **connectors are MIT, the substrates are copyleft**
+
+⏱️ **Thirteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 `P762` — the four substrates, re-read this pass with `P753`'s title-line rule
+
+🔴 **Re-read rather than carried, because `P753` means a substring test would have mislabelled the
+first row:**
+
+| Platform | Repo | Licence (**title line**) | stored B | HEAD sha | Band |
+|---|---|---|---|---|---|
+| Moodle | [moodle/moodle](https://github.com/moodle/moodle) | **GPL-3.0** (`COPYING.txt`) | 35 147 | `f205347` | strong copyleft, **non-network** |
+| Open edX | [openedx/edx-platform](https://github.com/openedx/edx-platform) | **AGPL-3.0** | 35 136 | `bf699a5` | strong copyleft, **network** (§13) |
+| Canvas LMS | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | **AGPL-3.0** | 34 520 | `1c9f0bb` | strong copyleft, **network** (§13) |
+| OpenEduCat | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | **LGPL-3.0** | 8 241 | `1c95cef` | **weak copyleft** |
+| Kolibri | [learningequality/kolibri](https://github.com/learningequality/kolibri) | **MIT** | 1 097 | `6cfad10` | permissive, offline-first |
+
+🟢 **`P747a` holds and is now sharper: the LGPL row is still the only band where a Globant addon
+may stay proprietary**, and `P761` confirms the ERP band is `LGPL-3.0` from payload for the second
+consecutive pass.
+
+### 🟢 `P763` — the **integration tier**, which this shelf has never had, and why it changes the trade
+
+🔵 **Every pass from 52 to 58 framed this shelf as a single choice: pick a substrate, inherit its
+licence.** 🔴 **That framing is incomplete.** 🟢 **An LMS can be driven from outside through a
+documented protocol, and then the substrate's copyleft never reaches Globant's code** — which
+`P736` already established for **LTI 1.3**. 🟢 **This pass measures the *second* such boundary and
+finds it cheaper:**
+
+| Boundary | Protocol | Reference component | Licence | Reaches Globant's code? |
+|---|---|---|---|---|
+| **LTI 1.3** | OIDC + JWT launch, AGS, NRPS | [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) `0ec24fe` | Apache-2.0, 11 361 B | 🟢 **No** — separate service, spec-defined boundary |
+| **MCP over LMS web services** | JSON-RPC 2.0 / MCP | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) `eeeb479` | MIT, 1 071 B | 🟢 **No** — external client against the REST API |
+| **MCP as an in-platform plugin** | Moodle external functions | [onbirdev/moodle-webservice_mcp](https://github.com/onbirdev/moodle-webservice_mcp) `198246e` | **GPL-3.0-or-later** (source headers) | 🔴 **Yes** — it *is* a Moodle plugin, inside the GPL boundary |
+| **MCP as an external server** | Moodle Web Services | [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) `5a194a5` | **AGPL-3.0**, 34 523 B | 🔴 **Yes, if hosted** — §13 binds a network service |
+
+### 🔴 `P763a` — the trap in that table, and it is the one a delivery would actually hit
+
+🔴 **The two Moodle connectors sit on opposite sides of the boundary, and neither is permissive.**
+🟢 **Spelled out:** choosing `csmediapro/moodle-mcp-server` for a **hosted** Globant service
+triggers AGPL-3.0 §13 on the connector — 🔵 **the substrate was `GPL-3.0`, which has no network
+clause, so the *integration layer* is strictly more contagious than the platform it integrates
+with.** 🔴 **A licence pre-flight that only reads the substrate misses this entirely.**
+
+🟢 **The permissive path exists and is Canvas-side:** both Canvas connectors are **MIT**
+(`1 071 B` and `1 070 B`). 🔵 **And the Moodle-side permissive option is to skip MCP and use
+LTI 1.3 with `ltijs` (Apache-2.0)** — which is exactly `R57a`, now with a live component
+(`compose/patterns.md`, `P765`).
+
+### 🟡 `P763b` — a fifth filename convention, and this one is a **directory**, not a file
+
+🟢 `packbackbooks/lti-1-3-php-library` grants through **`LICENSE.md`**, not `LICENSE` — 🟢 already
+in the 15-name probe. 🔴 **But `onbirdev/moodle-webservice_mcp` grants through *no file at all***,
+which no filename list of any length can reach (`P757`). 🔵 **The convention count is therefore not
+the useful number; the number of *layers* is — and it is four: licence file, file-below-reference,
+manifest/registry, source header.**
+
+### 🔴 The mandated vertical query, run and counted — **tenth** structurally identical week
+
+🟢 `open source platform education ERP CRM MIT Apache` → OpenEduCat vendor glossary (×6 locales),
+CK-ERP (2010), a 2017 paper, a general CRM directory. 🔴 **Zero Apache/MIT education ERP, tenth
+week.** 🟢 **`P717`'s licence trade is confirmed for the tenth consecutive week, and `P763` is the
+first structural *answer* to it this shelf has produced rather than another restatement:
+the way out of the trade is not a permissive substrate, it is a permissive boundary.**
+
+
 ## 🟢 Fifty-eighth pass, 2026-10-08 — the vertical shelf has **three copyleft bands, not one**, and the education **ERP** band is **LGPL** — which is the one band Globant can build proprietary modules on
 
 ⏱️ **Twelfth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

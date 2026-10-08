@@ -4,6 +4,141 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🔴 Fifty-ninth pass, 2026-10-08 — this pass **repeated pass 58's exact error inside its own instrument**: a hand-rolled §13 test that `p419` has refuted and regression-tested since pass 123, and it read **Moodle as AGPL**
+
+⏱️ **Thirteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+> 🔵 **Opening hypothesis: that the §13/Affero confusion was an undiscovered property with blast
+> radius across this KB's 235 committed instruments.
+> 🔴 REFUTED, twice over** — the property is real, but this KB **already holds it**, named and
+> regression-tested, and the only instrument it actually broke is the one **this pass wrote**.
+
+### 🔴 `P753` — GPL-3.0 names Affero **three times** and titles its §13 after it, so both the "§13 present" and the "contains Affero" tests read GPL-3.0 as AGPL-3.0
+
+🟢 **Measured first-hand on two payloads, SHA-pinned:**
+
+| payload | §13 heading as written | `grep -ci affero` |
+|---|---|---|
+| `moodle/moodle` `COPYING.txt` @ `f205347` (GPL-3.0) | `13. Use with the GNU Affero General Public License.` | **3** |
+| `openedx/edx-platform` `LICENSE` @ `bf699a5` (AGPL-3.0) | `13. Remote Network Interaction; Use with the GNU General Public License.` | 15 |
+
+🔴 **The mirror fails symmetrically:** AGPL-3.0's §13 names the plain GPL, so a "names GPL" test
+mislabels AGPL too. 🟢 **The only discriminating oracle is the title line**, which is what this
+pass keyed its published verdicts on.
+
+### 🔴 `P754` — and byte count cannot break the tie: the two families are **11 bytes apart**
+
+🟢 GPL-3.0 **35 147 B** vs AGPL-3.0 **35 136 B** (stored bytes, `P704`). 🔴 **So a byte count
+identifies a *text*, never a *family*** — which bounds `P630`/`P704`/`P721` in the one place it
+matters most, because these are the two licences the education shelf is actually built on
+(Moodle GPL-3.0; Canvas and Open edX AGPL-3.0).
+
+### 🔴 `P755` — the error this pass made, stated plainly, because it is the same error as pass 58's
+
+🔴 **This pass wrote an ad-hoc `AGPL§13-marker` and it returned `1` for Moodle** — i.e. it
+classified the most widely deployed education platform in the world as **AGPL-3.0**. 🟢 **It was
+caught only because the published verdict was keyed on the title line instead**, so the wrong
+intermediate never reached a row.
+
+🔴 **And the marker never needed to be written.** `compose/code/p419-copyleft-identity/` has held
+the answer since **pass 123**:
+
+- 🟢 its module docstring, lines 16–18: *«GPL-3.0 trae la seccion «Use with the GNU Affero General
+  Public License» (§13) … Un clasificador que busca `affero` o `lesser` en el cuerpo lee la MENCION
+  como identidad»*;
+- 🟢 its suite carries the named case `('ahmedEid1/lumen — GPL-3.0 que NOMBRA Affero en §13', GPL3,
+  'GPL-3.0')`, with the true-AGPL control beside it;
+- 🟢 `familia()` windows to the **header**, and `menciones_cruzadas()` returns kinship in a
+  **separate field** documented as *«parentesco, nunca identidad»*;
+- 🟢 line 51 even records that a **6-line** window was refuted *because §13 enters it*.
+
+🟢 **Blast radius across the committed instruments: measured, and it is zero.** 44 instruments
+mention `affero`; the two that gate on it are both safe, and for different reasons —
+`p419` windows to the header (above), and `dependency-licence-closure` maps `AFFERO` and `GPL` to
+the **same** `STRONG-COPYLEFT` band, so matching the wrong rule yields the right class.
+
+### 🟢 `P756` — the rule that follows, and it is **not** "re-measure"
+
+🔵 **`P713` says re-measure capabilities, never inherit them. That is about data, and it is right.**
+🔴 **This pass failed the other half:** it re-implemented a **classifier** that was already vetted,
+and the re-implementation was worse than the thing it replaced. 🟢 **Stated as a rule:
+re-measure the data every pass; reuse the instrument.** 🔵 **Pass 58 learned to `grep` the repo
+before publishing a *verdict*; pass 59 is the same lesson for a *property* — grep the instruments
+before announcing a discovery about licence texts.**
+
+### 🟢 Rows admitted this pass — **8**, every grant read from payload and SHA-pinned (`P732`)
+
+🔵 **Two new cells this KB did not have: the LTI authentication boundary, and the LMS MCP connector.**
+
+| Name | Repo | Licence | payload (stored B) | HEAD sha | Release oracle | What it contributes |
+|---|---|---|---|---|---|---|
+| ltijs | [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | Apache-2.0 | `LICENSE` 11 361 | `0ec24fe` | 🟢 npm `ltijs` **v7.0.7, 2026-10-06** | Node/Express LTI 1.3 Advantage tool provider; Deep Linking, AGS, NRPS, Dynamic Registration. 🟡 README claims IMS LTI Advantage Complete certification. |
+| lti-1-3-php-library (Packback) | [packbackbooks/lti-1-3-php-library](https://github.com/packbackbooks/lti-1-3-php-library) | Apache-2.0 | `LICENSE.md` 11 343 | `a20c71b` | 🟢 packagist `packbackbooks/lti-1p3-tool` **v6.4.4, 2026-09-23** | Maintained PHP fork of the 1EdTech library; Names&Roles + Assignment&Grades. |
+| lti-1-3-php-library (1EdTech) | [1EdTech/lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library) | Apache-2.0 | `LICENSE` 11 343 | `3a192de` | — | The spec body's own reference implementation; declines vendor-specific changes. |
+| java-lti-1.3 | [UOC/java-lti-1.3](https://github.com/UOC/java-lti-1.3) | MIT | `LICENSE` 1 060 | `e673616` | — | Java/Maven LTI Advantage tool library (holder: UOC). |
+| lti-node-library | [SanDiegoCodeSchool/lti-node-library](https://github.com/SanDiegoCodeSchool/lti-node-library) | MIT | `LICENSE` 1 078 | `8bfe9af` | — | LTI 1.3 **Core only** — 🔴 no NRPS, no Deep Linking. Weakest of the five; listed for completeness. |
+| rubric | [The-LLM-Data-Company/rubric](https://github.com/The-LLM-Data-Company/rubric) | MIT | `LICENSE` 1 077 | `eb0755a` | 🟢 PyPI `rubric` **2.2.0, 2026-01-21** | Weighted-rubric LLM evaluation library. 🔵 **The upstream of `delip/autorubric`**, the row pass 54 added as a fork of `rubric` v1.2.8. |
+| Automated-Exam-Scoring-LLM | [akturkumut/Automated-Exam-Scoring-LLM](https://github.com/akturkumut/Automated-Exam-Scoring-LLM) | Apache-2.0 | `LICENSE` 11 357 | `5e141c4` | — | Open-ended exam scoring: Qwen3-4B + SBERT + LoRA, Tesseract OCR for handwritten scripts. 🟡 README asserts **both** MIT and Apache-2.0; payload decides. |
+| LLM-Rubric | [microsoft/LLM-Rubric](https://github.com/microsoft/LLM-Rubric) | MIT | `LICENSE` 1 141 | `030ab16` | — | Calibrated multidimensional text evaluation (ACL 2024). 🟡 Older than the shelf's 2026 rows. |
+
+### 🟢 The LMS **MCP connector** — a category this KB has never carried, and its licence split is the architectural point
+
+| Name | Repo | Licence | payload | HEAD sha | Note |
+|---|---|---|---|---|---|
+| canvas-mcp | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT | `LICENSE` 1 071 B | `eeeb479` | Canvas LMS MCP server, ~103 tools / 8 agent skills. The original; several forks exist. |
+| canvas-lms-mcp | [algorithm0r/canvas-lms-mcp](https://github.com/algorithm0r/canvas-lms-mcp) | MIT | `LICENSE` 1 070 B | `2a5a7f1` | TypeScript, 165 tools — **including grading, comments and rubrics**. 🔴 See `P758`: that is NYC's prohibited tier. |
+| moodle-mcp-server | [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) | **AGPL-3.0** | `LICENSE` 34 523 B | `5a194a5` | External server over Moodle Web Services; read-only by design. 🔴 **§13 binds a hosted service** — the Moodle connector is the one copyleft row in this cell. |
+| moodle-webservice_mcp | [onbirdev/moodle-webservice_mcp](https://github.com/onbirdev/moodle-webservice_mcp) | **GPL-3.0-or-later** | 🔴 **no licence file at 15 filenames** — grant is in **every source header** | `198246e` | Moodle *plugin* exposing external functions as MCP tools over JSON-RPC 2.0. See `P757`. |
+
+### 🔴 `P757` — a grant can live **only in source-file headers**, and that is a shape this KB had not recorded
+
+🟢 `onbirdev/moodle-webservice_mcp`: **0 of 15** licence filenames return `200`; **no** `setup.py`,
+`pyproject.toml` or `package.json`. 🟢 **But `version.php` and `lib.php` both open with
+*«Moodle is free software: you can redistribute it and/or modify it under the terms of the GNU
+General Public License … either version 3 of the License, or (at your option) any later
+version»*.** 🔵 **It is the Moodle plugin convention**, and the plugin directory requires GPL.
+
+🔴 **A filename-enumerating instrument cannot see this**, which is precisely what
+`p441-tree-licence-enumeration` enumerates. 🟢 **And the class is systematically copyleft**, because
+the convention that puts grants in headers is the GNU one — a **fifth** instance of the
+under-counted-copyleft family. 🔵 **`P753` is the first member that errs the *other* way**
+(over-ranking GPL as AGPL), so the family's honest statement is now two-sided: **instruments that
+fail to *locate* a grant under-count copyleft; instruments that mis-*classify* a located grant
+mis-rank it *within* copyleft.**
+
+### 🔴 Four candidates **refused** this pass — and the narrow channel's defect rate is **57 %**
+
+| Repo | README asserts | Payload says | Verdict |
+|---|---|---|---|
+| [Dmoayad/essay-grader-llm](https://github.com/Dmoayad/essay-grader-llm) | MIT (×3) | **GPL-3.0**, `LICENSE` 35 149 B @ `8107703` | 🔴 **Confirmed misgrant**, the dangerous direction. Refused. |
+| [Hieub26/IELTS-Writing-Part-1-Scoring](https://github.com/Hieub26/IELTS-Writing-Part-1-Scoring) | MIT | nothing at 15 filenames, no manifest @ `a988441` | 🔴 **All rights reserved.** Refused. |
+| [Guo-coding/llm-l2-essay-scoring](https://github.com/Guo-coding/llm-l2-essay-scoring) | mit | nothing at 15 filenames, no manifest @ `d619b16` | 🔴 **All rights reserved.** Refused. |
+| [master72o/universal-llm-evaluation-rubric-library](https://github.com/master72o/universal-llm-evaluation-rubric-library) | MIT (×4) | nothing at 15 filenames, no manifest @ `5a1500a` | 🔴 **All rights reserved.** Refused. |
+
+🟢 **So: 7 narrow-channel candidates → 3 admissible, 4 defective = 57 %**, against the shelf's
+measured **4,1 %** (`P725`, 42 of 1 020). 🔵 **That is `P759`**, and it is the price of the channel
+that actually finds things.
+
+### 🟢 The mandated agent query, run and counted — **tenth** consecutive saturated week
+
+🟢 `top open source AI agents education 2026 github MIT` returned **OpenHands, CrewAI, LangGraph,
+Hermes, OpenClaw, Microsoft AI-Agents-for-Beginners, HF Agents Course, 500-AI-Agents-Projects** —
+🔴 **general-purpose frameworks and courseware, zero education-native agents, for the tenth week.**
+🟢 **Kept because mandated; `P759` names what to run beside it.**
+
+### 🟢 Rows re-confirmed this pass — title-line read (`P753`), stored bytes (`P704`), SHA-pinned (`P732`)
+
+| Repo | Licence (title line) | stored B | HEAD sha |
+|---|---|---|---|
+| `HKUDS/DeepTutor` | Apache-2.0 | 11 408 | `6cf793b` (tag `v1.6.9`) |
+| `pykt-team/pykt-toolkit` | MIT | 1 066 | `77c3e90` |
+| `CAHLR/OATutor` | MIT | 1 105 | `939eb0e` |
+
+🟡 **`Gap 264` unchanged and still standing:** `OATutor`'s README names **CC BY** alongside MIT,
+consistent with `P703`'s three-part reading; the two false `OATutor-Content` sentences on this file
+are **deliberately left auditable** and are **not** repaired this pass.
+
+
 ## 🔴 Fifty-eighth pass, 2026-10-08 — pass 57 published a verdict its **own committed data contradicted 31 times**: `openeducat` is **LGPL-3.0**, and this KB had held that answer since pass 53
 
 ⏱️ **Twelfth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

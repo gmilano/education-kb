@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-ninth pass, 2026-10-08 — `Gap 273`'s **213 ungranted** splits into **three measured classes**, and the named-sample method `P744` demanded is the one that did it
+
+⏱️ **Thirteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 `P760` — the three classes, each from a named sample read first-hand
+
+🔴 **Pass 58 left `Gap 273` with its bound "looser" and no method, because `P744` had ruled out
+another whole-tree sweep (the request classifier denies mass third-party slug enumeration).**
+🟢 **Named samples work, and four of them resolve the class structure:**
+
+| Class | Named sample | What the layer found | Rescued? |
+|---|---|---|---|
+| **1 — grant below a reference, same file** | `openeducat/openeducat_erp` @ `1c95cef` | `LICENSE` 8 241 B opens with a `COPYRIGHT` pointer that `404`s; the grant is **below it, in the same file** | 🟢 **Yes — LGPL-3.0** (pass 58's `P742`, re-confirmed here) |
+| **2 — grant only in source headers** | `onbirdev/moodle-webservice_mcp` @ `198246e` | **0 of 15** licence filenames; no manifest; **every** `.php` header carries *«GNU General Public License … either version 3 … or any later version»* | 🟢 **Yes — GPL-3.0-or-later** (`P757`) |
+| **3 — genuinely ungranted** | `Hieub26/IELTS-Writing-Part-1-Scoring` @ `a988441`, `Guo-coding/llm-l2-essay-scoring` @ `d619b16`, `master72o/universal-llm-evaluation-rubric-library` @ `5a1500a` | **0 of 15** licence filenames **and** no `setup.py` / `pyproject.toml` / `package.json` / `LICENSES/` / `licenses/` / `docs/` / `src/` grant | 🔴 **No — all rights reserved**, 3 of 3 |
+
+🟢 **So the registry/tree layer is not a uniform rescue:** it rescued **2 of 5** named samples, and
+the **3 it did not rescue share a property** — they ship **no packaging manifest at all**, which is
+typical of young research repos. 🔵 **That is the operational split `Gap 273` was missing:
+the 213 contains a *packaged* sub-population the registry layer can adjudicate and an
+*unpackaged* one where "no payload grant" is already the final answer.**
+
+🔴 **No rate is published from this.** 🟢 **Five named samples are not a sample frame**, and
+`P744`'s denial still forbids the sweep that would produce one. 🆕 **Succeeded by `Gap 277`.**
+
+### 🟢 `P761` — the foundational shelf re-read from payload, with `P753`'s title-line rule applied
+
+🔴 **This matters here more than anywhere else on the KB**, because this shelf's two most-used
+substrates are the exact pair `P753` confuses:
+
+| Repo | Licence (**title line**, not a substring test) | stored B | HEAD sha | layer |
+|---|---|---|---|---|
+| `moodle/moodle` | **GPL-3.0** — `COPYING.txt` | 35 147 | `f205347` | LMS substrate |
+| `openedx/edx-platform` | **AGPL-3.0** | 35 136 | `bf699a5` | LMS substrate |
+| `instructure/canvas-lms` | **AGPL-3.0** | 34 520 | `1c9f0bb` | LMS substrate |
+| `openeducat/openeducat_erp` | **LGPL-3.0** | 8 241 | `1c95cef` | education ERP |
+| `learningequality/kolibri` | **MIT** | 1 097 | `6cfad10` | offline-first delivery |
+| `HKUDS/DeepTutor` | **Apache-2.0** | 11 408 | `6cf793b` | tutoring agent |
+| `pykt-team/pykt-toolkit` | **MIT** | 1 066 | `77c3e90` | knowledge tracing |
+
+🔴 **`moodle` ships its grant as `COPYING.txt`** — the exact filename `P727` identified as the
+omission that biases a blind spot into the copyleft family. 🟢 **Read here deliberately, and
+`moodle` is `GPL-3.0`, *not* AGPL**, despite its payload naming Affero three times (`P753`).
+
+### 🟢 The grant-oracle layer, re-measured this pass (`P713` — never inherited)
+
+| Oracle | Result | Discriminates? |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 `200` | 🟢 Yes — `404` on a non-existent slug |
+| `git ls-remote` | 🟢 **OK** | 🟢 Yes — fails on a non-existent slug |
+| `pypi.org` | 🟢 `200` | 🟢 Yes — `404` on `pylti1.3` (`P743`) |
+| `registry.npmjs.org` | 🟢 `200` | — |
+| `repo.packagist.org` | 🟢 `200` | — |
+| `api.github.com` | 🔴 `403` | — |
+| `arxiv.org` | 🔴 `000` | — |
+| 6 named primary policy hosts | 🔴 `000`, **6 of 6** | — |
+
+🔵 **`git ls-remote` works this pass.** 🟡 **That is the fourth recorded inversion of this one
+capability** (pass 53 "only oracle that works" → pass 54 the one that fails → pass 56 noise →
+here, working). 🟢 **It is load-bearing now, not incidental:** it is what supplies the `refs/heads`
+SHA that `P732` requires, and with `api.github.com` at `403` it is **the only** SHA oracle
+available here.
+
+### 🔴 The mandated foundational query, and the honest result for the **seventh** pass running
+
+🟢 `open source platform education ERP CRM MIT Apache` returned **OpenEduCat** (vendor glossary
+pages in six languages), **CK-ERP** (a 2010 mailing-list post), a 2017 teaching-ERP paper, and a
+general CRM directory. 🔴 **No Apache-licensed education ERP exists in the channel's answer, for
+the seventh pass** — 🟢 **and `P761` now explains why that is a real property and not a query
+defect: the education ERP band is `LGPL-3.0`, and `verticals/solutions.md` `P747a` is where that
+pays.**
+
+
 ## 🔴 Fifty-eighth pass, 2026-10-08 — the census's **213 ungranted** is an upper bound that just got **looser**, and the first repo re-read moved out of it into **LGPL-3.0**
 
 ⏱️ **Twelfth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

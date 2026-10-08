@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 2026-10-08 — pass 59: the mandated trending query is **zero for ten weeks**, and the four named queries that replace it returned **12 repos**
+
+⏱️ **Thirteenth pass of this date. APPEND-ONLY: this section is new; the history below it is untouched.**
+
+### 🔴 The mandated query, run and counted
+
+🟢 `github trending education AI 2026` returned: `rohitg00/ai-engineering-from-scratch`
+(learning-to-build-AI repo, reported #1 on GitHub Trending 2026-05-24), AI Engineering Hub,
+Awesome LLM, AI Terminology, `aneelv75/github-trending`, a 2026 AI/ML internship list, and a
+Japanese write-up of February 2026's monthly trending (nine of the top ten AI-related).
+
+🔴 **Not one education-sector repository. Tenth consecutive week.** 🟢 **`Gap 274`'s measured yield
+stands at zero, and it is kept because it is mandated.**
+
+### 🟢 What replaced it — named queries and their measured yield (`P769`)
+
+| Query | Repos returned and verified | Defect rate |
+|---|---|---|
+| `open source LTI 1.3 library MIT Apache tool provider 2026 maintained` | 🟢 **5** — all permissive, 2 with live release dates | 🟢 0 of 5 |
+| `github open source LMS AI agent Moodle Canvas plugin MCP 2026` | 🟢 **4** — new category | 🟢 0 of 4 |
+| `github open source automated essay scoring rubric grading LLM 2026 MIT license` | 🟢 **3** admitted / 🔴 4 refused | 🔴 **57 %** |
+| `github open source intelligent tutoring system agent knowledge tracing 2026 release` | 🟡 5 named, 0 measured | — (`Gap 279`) |
+
+🔵 **The rule the yields imply: name the PROTOCOL or the FUNCTION, never the industry.**
+🟢 `"LTI 1.3"`, `"MCP"`, `"rubric"`, `"knowledge tracing"` return education-native software.
+🔴 `"education AI"` returns courseware and general agent frameworks, for the tenth week.
+
+### 🟢 Trending repos this week, with grants read from payload
+
+**LTI 1.3 / integration tier**
+- 🟢 `Cvmcosta/ltijs` — Apache-2.0, 11 361 B @ `0ec24fe` — **npm v7.0.7, 2026-10-06**
+- 🟢 `packbackbooks/lti-1-3-php-library` — Apache-2.0, 11 343 B @ `a20c71b` — packagist v6.4.4, 2026-09-23
+- 🟢 `1EdTech/lti-1-3-php-library` — Apache-2.0, 11 343 B @ `3a192de`
+- 🟢 `UOC/java-lti-1.3` — MIT, 1 060 B @ `e673616`
+- 🟡 `SanDiegoCodeSchool/lti-node-library` — MIT, 1 078 B @ `8bfe9af` — Core only
+
+**LMS MCP connectors (new category)**
+- 🟢 `vishalsachdev/canvas-mcp` — MIT, 1 071 B @ `eeeb479`
+- 🟢 `algorithm0r/canvas-lms-mcp` — MIT, 1 070 B @ `2a5a7f1` — 165 tools, grading included
+- 🔴 `csmediapro/moodle-mcp-server` — **AGPL-3.0**, 34 523 B @ `5a194a5`
+- 🔴 `onbirdev/moodle-webservice_mcp` — **GPL-3.0-or-later via source headers**, no licence file @ `198246e`
+
+**Assessment**
+- 🟢 `The-LLM-Data-Company/rubric` — MIT, 1 077 B @ `eb0755a` — PyPI 2.2.0, 2026-01-21
+- 🟢 `akturkumut/Automated-Exam-Scoring-LLM` — Apache-2.0, 11 357 B @ `5e141c4`
+- 🟡 `microsoft/LLM-Rubric` — MIT, 1 141 B @ `030ab16`
+
+🔴 **Refused:** `Dmoayad/essay-grader-llm` (README MIT ×3, payload **GPL-3.0**),
+`Hieub26/IELTS-Writing-Part-1-Scoring`, `Guo-coding/llm-l2-essay-scoring`,
+`master72o/universal-llm-evaluation-rubric-library` (the last three: **no grant at any of 4 layers**).
+
+### 🟢 `P630` confirmed twice more on fresh data, which is why these byte counts are published
+
+🟢 Two MIT texts differ by **exactly** the length of the copyright line:
+`SanDiegoCodeSchool` 1 078 B − `UOC` 1 060 B = **18 B** = len("San Diego Code School") − len("UOC") = 21 − 3.
+🟢 And again: `vishalsachdev` 1 071 B − `algorithm0r` 1 070 B = **1 B** = len("Vishal Sachdev") − len("Christian Bru") = 14 − 13.
+
+🔴 **But `P754` bounds this hard:** GPL-3.0 (35 147 B) and AGPL-3.0 (35 136 B) are **11 B apart**,
+so a byte count identifies a **text**, never a **family**.
+
+
 ## 🔴 Fifty-eighth pass, 2026-10-08 — week of 2026-10-08: the trending channel is empty of education for the **ninth** week, and the week's repo news is a **retraction**
 
 ⏱️ **Twelfth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

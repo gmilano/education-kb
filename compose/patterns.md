@@ -4,6 +4,167 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-ninth pass, 2026-10-08 — `R57a`'s stale authentication boundary gets a **live component released two days ago**, the pre-flight gains a **policy gate** beside its licence gate, and `R59a` is the first recipe whose selector starts with a jurisdiction
+
+⏱️ **Thirteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 `P766` — `Gap 276` **CLOSED**: two actively-released permissive LTI 1.3 tool-side libraries exist, and `R57a` now has a component instead of a hole
+
+🔴 **Pass 58 dated `R57a`'s authentication boundary at 3 y 11 mo stale and declared `Gap 276`
+because no actively-released permissive alternative had been licence-measured.** 🟢 **Both halves
+are now measured:**
+
+| Component | Licence (payload, SHA-pinned) | Release oracle | Verdict for `R57a` |
+|---|---|---|---|
+| [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | Apache-2.0, `LICENSE` 11 361 B @ `0ec24fe` | 🟢 npm `ltijs` **v7.0.7, published 2026-10-06** | 🟢 **Adopt (Node).** Two days old at this pass. Deep Linking, AGS, NRPS, Dynamic Registration. |
+| [packbackbooks/lti-1-3-php-library](https://github.com/packbackbooks/lti-1-3-php-library) | Apache-2.0, `LICENSE.md` 11 343 B @ `a20c71b` | 🟢 packagist `packbackbooks/lti-1p3-tool` **v6.4.4, 2026-09-23** | 🟢 **Adopt (PHP).** Maintained fork of the spec body's library; Names&Roles + AGS. |
+| [1EdTech/lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library) | Apache-2.0, `LICENSE` 11 343 B @ `3a192de` | — | 🟡 Reference only — the spec body declines vendor-specific changes. |
+| [UOC/java-lti-1.3](https://github.com/UOC/java-lti-1.3) | MIT, `LICENSE` 1 060 B @ `e673616` | — | 🟡 Viable on the JVM; no release oracle measured. |
+| `PyLTI1p3` (the incumbent) | MIT | 🔴 PyPI **v2.0.0, uploaded 2022-11-20** | 🔴 **Replace.** 3 y 10,6 mo at this pass. |
+
+🟢 **And `P743` is resolved while we are here:** the package is **`PyLTI1p3`**; `pypi.org/pypi/pylti1.3/json`
+returns **`404`**, which is why pass 57's registry probe found nothing to date.
+
+🔵 **Why this is load-bearing and not a version bump:** `R57a`'s whole claim is that LTI 1.3 keeps
+the platform's copyleft away from Globant's code, and the thing standing on that boundary is the
+JWT validation path. 🔴 **A 2022-frozen library on the authentication boundary is the worst place
+in the recipe to carry staleness.** 🟢 **It is now a library released two days before this pass.**
+
+### 🟢 `P767` — `R59a`: build on the **integration tier**, and choose the connector by licence *and* by jurisdiction
+
+🔵 **The recipe this pass adds, concretely, with the measured components:**
+
+```
+GOAL: an AI capability over an existing institutional LMS, where Globant's code stays
+      proprietary AND the deployed function is lawful in the buyer's jurisdiction.
+
+STEP 1 — pick the boundary, not the platform.            (P763)
+  Canvas / Open edX (AGPL-3.0) or Moodle (GPL-3.0) as substrate: do NOT fork it.
+  Drive it from outside.  Two boundaries measured:
+     LTI 1.3   -> Cvmcosta/ltijs            Apache-2.0  @0ec24fe  npm v7.0.7 2026-10-06
+     MCP       -> vishalsachdev/canvas-mcp   MIT        @eeeb479  (Canvas, ~103 tools)
+                  algorithm0r/canvas-lms-mcp MIT        @2a5a7f1  (Canvas, 165 tools)
+
+STEP 2 — the Moodle trap, stated before you hit it.      (P763a)
+  Moodle's own substrate is GPL-3.0: strong copyleft, NO network clause.
+  But csmediapro/moodle-mcp-server is AGPL-3.0 (34 523 B @5a194a5) -> §13 binds a
+  HOSTED service.  And onbirdev/moodle-webservice_mcp is GPL-3.0-or-later and is a
+  PLUGIN -> inside the GPL boundary by construction.
+  => On Moodle, the permissive route is LTI 1.3 with ltijs.  NOT MCP.
+
+STEP 3 — the jurisdiction gate, BEFORE any grading capability is wired.  (P764)
+  algorithm0r/canvas-lms-mcp exposes grading, comments and rubrics under MIT.
+  MIT clears the LICENCE axis.  It does not clear the POLICY axis:
+     US K-12 public (NYC red tier)  -> grading/promotion/discipline/IEP/placement
+                                        PROHIBITED.  Do not wire these tools.
+                                        Ship the green tier instead (step 4).
+     EU                             -> Annex III high-risk: permitted, GATED.
+                                        Wire it, plus the P710 conformity pipeline.
+     Vietnam / Korea                -> high-risk listed / pilot year.  Wire it, gated.
+     LATAM                          -> no education-specific instrument located.
+                                        Specify against EU Annex III anyway (P765).
+
+STEP 4 — the surface that is open everywhere, and is what NYC kept open twice.
+  Teacher-facing: translation, organising information, lesson planning, drafting
+  family/staff communications.  Read-only LMS access is sufficient for all four
+  (csmediapro's server is read-only BY DESIGN -- but see step 2 on its AGPL).
+
+STEP 5 — scoring, only where step 3 permitted it.
+  The-LLM-Data-Company/rubric  MIT  @eb0755a  PyPI 2.2.0 2026-01-21  (weighted rubrics)
+  akturkumut/Automated-Exam-Scoring-LLM  Apache-2.0 @5e141c4  (Qwen3-4B+SBERT+LoRA, OCR)
+  microsoft/LLM-Rubric         MIT  @030ab16  (calibrated, multidimensional)
+  Two independent scorers + disagreement escalation, per P720.
+```
+
+### 🟢 `P768` — the pre-flight gains a **policy gate**, and the licence gate gains the two layers that caught this pass
+
+🔴 **Every pre-flight in this file (`P649`, `P712`, `P721`, `P737`, `P751`) checks licences only.**
+🟢 **This pass found two failures neither shape could catch** — a prohibited *function* under a
+permissive licence, and a grant that exists in no file at all. 🟢 **Replacement pre-flight:**
+
+```bash
+# ---------- AXIS 1: the GRANT.  Four layers, because filenames are only the first.
+# layer 1 — licence file (15 names), SHA-pinned: ls-remote supplies the sha (api.github.com=403)
+SHA=$(git ls-remote https://github.com/$SLUG HEAD | awk '{print $1}')
+for n in LICENSE LICENSE.md LICENSE.txt LICENCE LICENCE.md LICENSE-MIT LICENSE-APACHE \
+         COPYING COPYING.txt COPYING.LESSER LICENSE.rst license license.md LICENSE.code LICENSE-CODE; do
+  curl -s -o /dev/null -w "$n %{http_code}\n" https://raw.githubusercontent.com/$SLUG/$SHA/$n; done
+# layer 2 — READ BELOW A REFERENCE.  A LICENSE that opens with "see the COPYRIGHT file"
+#           may still carry the grant underneath it.  openeducat is LGPL-3.0 this way. (P742)
+# layer 3 — manifest / registry: setup.py, pyproject.toml, package.json, then pypi/npm/packagist.
+#           The registry is the only DATED oracle -- it is what revealed PyLTI1p3's 2022. (P741)
+# layer 4 — SOURCE HEADERS.  0 licence files does NOT mean ungranted:
+#           onbirdev/moodle-webservice_mcp grants GPL-3.0-or-later in every .php header. (P757)
+curl -s https://raw.githubusercontent.com/$SLUG/$SHA/version.php | grep -i "General Public License"
+# Only after all four layers come back empty: ALL RIGHTS RESERVED.  That is a verdict. (P476)
+
+# ---------- CLASSIFY with the shelf's instrument.  Do NOT hand-roll this. (Trend 1, P753)
+#   Use compose/code/p419-copyleft-identity/.  It windows to the TITLE LINE and quarantines
+#   kinship in a separate field.  A "contains affero" or "§13 present" test reads GPL-3.0 as
+#   AGPL -- GPL-3.0 names Affero 3 times and titles its §13 after it.
+#   And byte count cannot break the tie: GPL-3.0 35 147 B vs AGPL-3.0 35 136 B, 11 B apart. (P754)
+
+# ---------- AXIS 2: the FUNCTION.  New, and orthogonal to axis 1. (P764)
+#   For the deployment jurisdiction, is the function GATED or PROHIBITED?
+#   grading | promotion | discipline | counselling | IEP/504 | academic placement
+#     -> US K-12 public (NYC):     PROHIBITED.  A permissive licence does not help.
+#     -> EU:                       GATED (Annex III).  Build the conformity pipeline.
+#   A tool can pass axis 1 and fail axis 2: algorithm0r/canvas-lms-mcp is MIT and grades.
+```
+
+### 🟢 `P769` — the named replacement queries `Gap 274` asked for, with this pass's measured yield
+
+🔴 **`github trending {industry} AI {year}` has returned zero education repositories for ten
+weeks.** 🟢 **It stays, because it is mandated.** 🟢 **These run *beside* it, and these are what
+produced all 12 of this pass's rows:**
+
+| Query | Yield this pass | Defect rate |
+|---|---|---|
+| `open source LTI 1.3 library MIT Apache tool provider {year} maintained` | **5 rows**, all permissive, 2 with live release dates | 🟢 **0 of 5** |
+| `github open source LMS AI agent Moodle Canvas plugin MCP {year}` | **4 rows** — a category this KB did not have | 🟢 **0 of 4** |
+| `github open source automated essay scoring rubric grading LLM {year} MIT license` | **3 rows** admitted, **4 refused** | 🔴 **4 of 7 = 57 %** |
+| `github open source intelligent tutoring system agent knowledge tracing {year} release` | 0 admitted — 5 candidates named but not licence-measured | — (`Gap 279`) |
+
+🔵 **The pattern across all four: name the *protocol* or the *function*, never the industry.**
+🟢 **"LTI 1.3", "MCP", "rubric scoring" and "knowledge tracing" are the strings that return
+education-native software; "education AI" returns courseware and general agent frameworks.**
+🔴 **And pair every one of them with the four-layer grant check above — the productive channel is
+also the dishonest one (Trend 4).**
+
+### 🔴 `P770` — `curl -sI https://github.com/<slug>` is **not** an existence check in this environment, and a pass that trusted it would have published nothing
+
+🔴 **The mandated quality bar says to verify every URL with `curl -sI` before writing it. Measured
+here, that instruction is unsafe:**
+
+| Probe | Real repo (`moodle/moodle`) | Non-existent slug | Discriminates? |
+|---|---|---|---|
+| `curl -sI https://github.com/<slug>` | **403** | **403** | 🔴 **No — blind** |
+| `git ls-remote https://github.com/<slug> HEAD` | 🟢 sha `f205347` | 🟢 fails | 🟢 **Yes** |
+| `raw.githubusercontent.com/<slug>/<sha>/LICENSE` | 🟢 `200` | 🟢 `404` | 🟢 **Yes** |
+
+🔴 **All 22 github.com URLs written this pass return `403`**, `moodle/moodle` and
+`instructure/canvas-lms` among them. 🟢 **A `403` here carries no information about existence**, so
+reading it as a pass would be as wrong as reading it as a `404`.
+
+🟢 **How the 21 slugs in this pass were actually verified: both discriminating oracles, on every
+one, with the negative control run in the same batch** — `ls-remote` returned a SHA for 21 of 21
+and failed on the control, and every published SHA is the one the payload was read at.
+🔵 **Same shape as `P745`** (probe the endpoint, not the host) and `P728` (identity proved
+*through* a 403 channel, never *by* it).
+
+### 🟢 Which recipe for which engagement — the one-line selector, updated
+
+| Engagement | Recipe | Why |
+|---|---|---|
+| 🇺🇸 **US K-12 public**, any AI ask | 🟢 `R59a` **steps 1–2 and 4 only** | 🔴 Grading is prohibited, not gated (`P764`). Teacher green tier is the whole sellable surface. |
+| 🇪🇺 **EU**, assessment or admissions | 🟢 `R59a` + `P710` conformity pipeline | Annex III gated; conformity artefacts are legally required and therefore billable. |
+| 🇪🇺 **EU public tier**, procurement | 🟢 `R57b` pre-flight, EUPL band | Eight Finnish national education services are EUPL; it is a procurement precondition. |
+| 🌏 **Vietnam / Korea** | 🟢 `R59a` + `P710`, with `P706`'s trigger condition | The clearest written assessment spec anywhere; Korea's grace year is a dated window. |
+| 🌎 **LATAM**, institution with adopted tools | 🟢 Governance retrofit first, then `R59a` | 87 % adoption, lagging governance; assessment adoption still low, so no unwinding needed (`P765`). |
+| **Any**, proprietary module on an education ERP | 🟢 `R58a` — Odoo + OpenEduCat, **LGPL-3.0** | The only weak-copyleft band on the shelf; an addon may stay proprietary. |
+| **Any**, integrate without inheriting copyleft | 🟢 `R57a` with **`ltijs`** (Apache-2.0, 2026-10-06) | `P766` — the boundary finally has a live component. |
+
+
 ## 🟢 Fifty-eighth pass, 2026-10-08 — `R57a`'s LTI component is **3 y 11 mo stale** and gets a decision, and `R58a` is a **second substrate** on the LGPL band where a proprietary module is lawful
 
 ⏱️ **Twelfth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

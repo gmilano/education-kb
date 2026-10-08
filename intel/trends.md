@@ -4,6 +4,122 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🔴 Fifty-ninth pass, 2026-10-08 — six trends: the pass-58 error recurred **in this pass's own hand**, the copyleft family is **two-sided**, a prohibition is not a gate, the productive channel is the defective one, the integration layer out-contaminates the platform, and a two-pass gap was **mis-posed, not unresolved**
+
+⏱️ **Thirteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 Trend 1 — the most expensive mistake available here is **re-implementing a vetted instrument**, and this pass made it
+
+🔴 **Pass 58's headline was that this KB contradicted itself: it published a verdict its own
+committed data refuted 31 times.** 🔴 **Pass 59 did the same thing one level up.** It hand-rolled a
+§13 presence marker to classify copyleft, and that marker **read `moodle/moodle` as AGPL-3.0** —
+the most widely deployed education platform in the world, mislabelled into the one band with a
+network clause.
+
+🟢 **`p419-copyleft-identity` has held the correct answer since pass 123**, with the trap in its
+module docstring, the discrimination in `familia()`'s header window, kinship quarantined in a
+separate `menciones_cruzadas()` field documented as *«parentesco, nunca identidad»*, and a named
+regression case (`ahmedEid1/lumen`, GPL-3.0 that names Affero in §13) in its suite.
+
+🔵 **So the rule `P713` states needs its complement, and this is it:**
+🟢 **re-measure the *data* every pass; *reuse* the instrument.** 🔴 **A re-measured datum costs one
+`curl`. A re-implemented classifier costs a wrong verdict on the shelf's biggest row** — and the
+only thing that saved this pass was keying the published column on a different oracle (the title
+line) than the marker it had just written.
+
+### 🔴 Trend 2 — the copyleft-undercount family is **two-sided**, and pass 58 had only seen one side
+
+🟢 **Pass 58: "every licence-instrument defect this KB has found under-counts copyleft, four for
+four."** 🟢 **This pass adds a fifth that fits** — `P757`, the grant that lives only in source-file
+headers, which a filename-enumerating instrument reads as *ungranted* and which is systematically
+copyleft, because headers-as-grant **is** the GNU convention.
+
+🔴 **And it adds one that does not fit:** `P753` over-ranks GPL-3.0 as AGPL-3.0. 🟢 **The honest
+generalisation is therefore two-sided and mechanical, not a tendency:**
+
+- 🔴 **instruments that fail to *locate* a grant under-count copyleft** (headers, `COPYING.txt`,
+  grants below a reference — `P757`, `P727`, `P742`);
+- 🔴 **instruments that mis-*classify* a located grant mis-rank it *within* copyleft** (`P753`,
+  `P726`) — because **every GNU text names its relatives**: GPL-3.0 names Affero 3 times, GPL-2.0
+  closes by naming the Lesser.
+
+🔵 **Why the distinction pays:** the first class costs a missed obligation; the second costs a
+**false** obligation. 🔴 **Telling a client that Moodle is AGPL would stop a lawful deployment** —
+an error in the opposite direction from the one this KB has been guarding against for five passes.
+
+### 🔴 Trend 3 — **a prohibition is not a gate**, and five passes of recipes assumed it was
+
+🟢 `P705` measured that automated assessment is constrained in all four regions. 🔴 **Every recipe
+since read *constrained* as *gated*** — i.e. as an engineering requirement that human oversight,
+audit trails and two independent scorers could discharge. 🟢 **NYC's 2026-03-24 red tier is
+different in kind: grading, promotion, discipline, counselling, crisis intervention, IEP/504
+development and academic placement are *prohibited* uses.** 🔴 **No amount of oversight
+engineering converts a prohibited use into a permitted one.**
+
+🔵 **The practical consequence is a change to the recipe selector, not a caveat:** in US K-12
+public, the defensible-grading pipeline is not a product. 🟢 **The teacher-facing green tier is** —
+translation, organising information, lesson planning, drafting family and staff communications —
+and NYC kept it open in both March and September.
+
+### 🔴 Trend 4 — the channel that **finds** things is the channel that **lies** most, and the rates are now measured side by side
+
+🟢 **Narrow, function-specific queries: 7 candidates → 3 admissible, 4 defective = 57 %.**
+🟢 **The shelf as a whole: 42 of 1 020 = 4,1 %** (`P725`).
+
+🔴 **A fourteen-fold difference, and it is not noise — it is selection.** 🟢 **The mandated broad
+queries return saturated, well-known, well-licensed repos (and, for the tenth week, no education
+agent at all). The narrow queries reach young research repos, which is exactly the population that
+asserts MIT in a README and ships no `LICENSE`** — three of this pass's four refusals did precisely
+that, one of them asserting MIT **four times** over an empty grant.
+
+🔵 **So the replacement channel `Gap 274` asked for is real and is worth running, on one
+condition: every row it returns must be payload-verified before it is written down.** 🟢 **The
+named queries, with their measured yield this pass, are recorded in `compose/patterns.md`
+(`P768`).**
+
+### 🔴 Trend 5 — the **integration layer** can be more contagious than the platform it integrates with
+
+🟢 **Measured, and it inverts the assumption this shelf has carried since pass 52:**
+`moodle/moodle` is **GPL-3.0** — strong copyleft, **no network clause**. 🔴 **But
+`csmediapro/moodle-mcp-server`, the external MCP connector for it, is **AGPL-3.0** (34 523 B), and
+§13 binds a hosted service.**
+
+🔴 **So integrating a non-network-copyleft platform through a network-copyleft connector is
+*strictly worse* than the platform alone** — and a licence pre-flight that reads the substrate and
+stops there cannot see it. 🟢 **The permissive escape routes exist and are named:** Canvas-side MCP
+is MIT (`vishalsachdev/canvas-mcp`, `algorithm0r/canvas-lms-mcp`), and Moodle-side the route is
+LTI 1.3 with `ltijs` (Apache-2.0), not MCP.
+
+🔵 **And one more edge the same measurement exposes:** `algorithm0r/canvas-lms-mcp` ships **165
+tools including grading, comments and rubrics** under MIT. 🔴 **Permissive licence, prohibited
+function** (Trend 3). 🟢 **Licence clearance and policy clearance are orthogonal axes, and this KB
+has only ever built a pre-flight for the first.**
+
+### 🟢 Trend 6 — a gap that survives two passes may be **mis-posed** rather than unresolved
+
+🟢 **`Gap 266` asked for "the UAE mandate date" and went unresolved for two passes.** 🟢 **It
+resolves the moment the question stops assuming a single date** (`P767`): **2025-26** for public
+schools, AI delivered inside the existing CCDI course, project-assessed with no written exams;
+**2026-27** for the standalone "Artificial Intelligence and Technology" subject that replaces CCDI
+and extends to private schools on the MoE curriculum.
+
+🔵 **The generalisable form:** a gap phrased as a scalar (*the* date, *the* licence, *the* rate)
+cannot absorb a staged instrument, and will read as unresolved indefinitely while the underlying
+fact is perfectly well attested. 🟢 **Same shape as `P627`** — a repo's grant is a *set* of
+`(path, family)` pairs, not a value. 🔵 **Two instances now: `Gap 266` was a scalar question about
+a staged rollout; `Gap 273`'s "213 ungranted" was a scalar question about what `P760` shows to be
+three distinct classes.**
+
+### 🔵 Carried forward unchanged, stated so this pass does not read as progress on them
+
+🔴 **`Gap 270`** — not closed; 6 of 6 primary policy hosts `000`. Third consecutive confirmation of
+`P731`. 🔴 **`Gap 264`** — the two false `OATutor-Content` sentences still stand, deliberately.
+🔴 **`Gap 265`** — `AITutor-EvalKit` still ungranted; seventh refusal. 🔴 **`Gap 253`** — none of
+the 21 `P541` empty-input instruments fixed; this pass added no new committed instrument, so it
+added no new instance either. 🔴 **`Gap 257` / `Gap 258`** — still unmeasured; the `110/112` figure
+is now **six passes old** and is carried **as reported, never as confirmed**.
+
+
 ## 🟢 Fifty-eighth pass, 2026-10-08 — five trends: copyleft is **systematically under-counted**, the governance gap is the real market, permission ≠ reachability, the registry is a dated oracle, and a channel fact failed where its advice held
 
 ⏱️ **Twelfth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
