@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-second pass, 2026-10-08 — the foundational shelf gains **one** row, and the pass's real yield is a **verdict class** the shelf did not have
+
+⏱️ **Sixth pass of this date.** Payloads read 2026-10-08 from `raw.githubusercontent.com`, status and
+byte count per filename. **No star counts (`P479`).**
+
+🔴 **The mandated foundations query returned nothing new**, for the fifth consecutive pass and for the
+reason passes 48–51 recorded: the global channel answers with *courses* and *catalogues*
+(`microsoft/generative-ai-for-beginners`, `LLMs-from-scratch`, `karpathy/nanochat`,
+`developer-roadmap`, `caramaschiHG/awesome-ai-agents-2026`), all already filed. 🟢 **The row below
+came from a task-shaped query instead** — see `agents/trending.md` for why that distinction is now
+recorded as method.
+
+### 🟢 The one admission
+
+| Repo | Refs (`P510`) | Grant | Family | Why it is a *foundation* and not just an agent |
+|---|---|---|---|---|
+| 🟢 🆕 [`grant-mccurdy/instructional-ai-workflows`](https://github.com/grant-mccurdy/instructional-ai-workflows) | **1 head**, `refs/heads/main` = `a4c5e832` | `LICENSE` **1,070 B** `sha256 a8d6cd41…` | 🟢 **MIT** for code | 🟡 **Admitted as a *pattern source*, not a runtime.** It supplies the four-stage shape an assessment pipeline needs — rubric evidence → feedback drafting → reviewer packet → remediation action — with **human review named at each stage**. 🟢 That shape is the scarce thing; `compose/patterns.md` `P632` wires it |
+
+🔴 **And the obligation that travels with it (`P627`):** the same repo ships **two further grants** —
+`LICENSE-CONTENT.md` (**662 B**, `sha256 c8b2ae96…`) and `LICENSE-DATA.md` (**722 B**,
+`sha256 79fe1044…`), both **CC BY 4.0**, covering the written documentation, diagrams, generated
+charts and the **original synthetic datasets**. 🟢 **The code may ship closed. The rubric content and
+the synthetic student records may not be used without attributing Grant McCurdy.**
+
+### 🔴 `P629` — the shelf now has a verdict for *"exists, and grants nothing"*
+
+🔵 **Two refusals were measured this pass, and they are different refusals.** The shelf had been
+recording both as *"not added"*, which is a disposition, not a reading.
+
+| Slug | Refs | What the tree says | Family | Shelf verdict |
+|---|---|---|---|---|
+| 🔴 [`GradeAI/gradeai`](https://github.com/GradeAI/gradeai) | **1 head**, `main` = `4de8e861` | 🔴 **full `--filter=blob:none` tree enumeration finds no licence path at all**, and `LICENSE`, `LICENSE.txt`, `LICENSE.md`, `COPYING`, `COPYING.txt`, `legal/LICENSE` return **404 ×6** | 🔴 **UNLICENSED** | 🔴 **Refused.** Absent a grant, the default is all rights reserved — a public repo is not a licensed one |
+| 🔴 [`michael-borck/assessment-rubrics-for-ai`](https://github.com/michael-borck/assessment-rubrics-for-ai) | **1 head**, `main` = `00294979` | `LICENSE.md` **200**, **2,859 B**, 92 lines | 🔴 **PROPRIETARY** | 🔴 **Refused.** Curtin-University-internal; the payload itself lists `✗ Commercial use` and `✗ Distribution to other institutions` |
+
+🟢 **The distinction is operational, not taxonomic.** `UNLICENSED` is *read the whole tree, there is
+no grant*; `PROPRIETARY` is *read the grant, and it refuses*; `UNKNOWN` is *not read*. 🔴 **Only the
+third justifies another probe.** The first two are settled, and a shelf that files them as `UNKNOWN`
+will keep paying for probes that cannot change the answer — and will present them to a human as
+*licence not determined*, which reads as permission.
+
+### 🟢 `P629`'s negative control ran in the same sweep
+
+🟢 `gmilano/education-kb-NEGATIVE-CONTROL-no-existe-52` → **0 refs**, while `Dolibarr/dolibarr` → **64**
+(🔵 **63 last pass — the one movement a ref count showed this week**), `idempiere/idempiere` → 27,
+`krayin/laravel-crm` → 7. 🟢 **So a 404 *path* on a live repo is distinguishable from a dead slug**,
+and `GradeAI/gradeai`'s six 404s are a real repo's real silence rather than a bad slug. 🔵 **The
+suite asserts exactly that**, `compose/code/p627-multi-grant-repo/` — 🟢 **31/31 green, offline**.
+
+### 🟢 `P630` — the shelf's MIT rows, and why their byte counts must stop being compared directly
+
+🔵 **The shelf carries three MIT payloads within 2 B of each other and had no account of the spread.**
+🟢 Now it does, measured:
+
+| Payload | Bytes | Final byte | Holder line | Length |
+|---|---|---|---|---|
+| 🆕 `grant-mccurdy/instructional-ai-workflows` | **1,070** | `0x0a` | `Copyright (c) 2026 Grant McCurdy` | **32** |
+| `Django-CRM/Django-CRM` | 1,069 | `0x0a` | `Copyright (c) 2017 MicroPyramid` | 31 |
+| `MicroPyramid/opensource-startup-crm` | 1,068 | 🔴 `0x2e` (no final newline) | `Copyright (c) 2017 MicroPyramid` | 31 |
+
+🟢 **`diff` is clean apart from the copyright line in all three**, and the deltas decompose exactly:
+`+1` holder character and `+1` newline for the first pair, a **pure newline** for the second.
+🔴 **So the two 1 B steps on this shelf have different causes**, and no tolerance band on bytes
+distinguishes an MIT payload from a non-MIT one. 🟢 **`P627` is a third independent MIT supplier** by
+holder — Grant McCurdy, against `MicroPyramid` (pass 51) and `Webkul Software` (pass 46) — which is
+what `P564` asked this shelf to find.
+
+### 🔴 Declared gaps
+
+- 🔴 **Still no permissively licensed, education-domain *platform* on this shelf** — the admission
+  above is a pattern source, not a system. The ERP/CRM layer remains generic (see
+  `verticals/solutions.md`).
+- 🔴 **`package.json` is present in `grant-mccurdy/instructional-ai-workflows` and was not read for
+  a `license` field this pass.** Single channel, stated rather than implied.
+- 🔴 **`creativecommons.org` measured `000`**, so the CC BY 4.0 family is read from the repo's own
+  side-car payloads and not corroborated against the licence steward.
+
 ## 🟢 Fifty-first pass, 2026-10-08 — the foundational shelf's **licence-version coverage** was overstated, and the 6.3 % of rows that broke it share one property
 
 ⏱️ **Fifth pass of this date.** Payloads read 2026-10-08 from `raw.githubusercontent.com` at `HEAD`,

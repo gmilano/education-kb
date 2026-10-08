@@ -4,6 +4,87 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🔴 Fifty-second pass, 2026-10-08 — the vertical query returns the **same six platforms for the third consecutive pass**, and the shelf's gap is now a measured property rather than a complaint
+
+⏱️ **Sixth pass of this date.** **Licences read first-hand on 2026-10-08 from payload, channel named
+per row (`P237`, `P171`, `P250`, `P510`). No star counts (`P479`).**
+
+🔵 **The mandated vertical query (`open source platform education ERP CRM MIT Apache`) ran verbatim.**
+🔴 **It returned no MIT/Apache *education* platform for the third consecutive pass**, and this time it
+said so in its own words: *"The search didn't turn up an education-specific ERP or CRM released under
+MIT or Apache."* 🟢 **Every platform it named is already on this shelf:**
+
+| Platform | Family (held, read from payload) | Education domain model? | Shelf status |
+|---|---|---|---|
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔴 **GPL-3.0** | 🟢 **yes** — admissions, student records, fees, learning outcomes | held |
+| [`Dolibarr/dolibarr`](https://github.com/Dolibarr/dolibarr) | 🔴 **GPL-3.0** (`COPYING`, 35,151 B) | 🔴 no | held — 🔵 **64 heads this pass, 63 last** |
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0** | 🔴 **no** — would have to be built | held |
+| [`hcengineering/platform`](https://github.com/hcengineering/platform) (Huly) | 🟢 **Apache-2.0** | 🔴 no | held |
+| [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | 🟢 **MIT** | 🔴 no | held — 7 heads |
+| [`MicroPyramid/opensource-startup-crm`](https://github.com/MicroPyramid/opensource-startup-crm) (BottleCRM) | 🟢 **MIT** (`LICENSE`, 1,068 B) | 🔴 no | held since pass 51 |
+| [`idempiere/idempiere`](https://github.com/idempiere/idempiere) | 🔴 **GPL-2.0** (`LICENSE.md`, 15,057 B) | 🔴 no | held — 27 heads |
+
+### 🔴 `P631` — the shelf is **never both permissive and educational**, and that is now a measured regularity
+
+🔵 **Three passes have run this query and the result has not moved**, so the statement can stop being
+an observation and become a property of the shelf:
+
+| | 🟢 Permissive (MIT / Apache-2.0) | 🔴 Copyleft (GPL-2.0 / GPL-3.0 / AGPL) |
+|---|---|---|
+| 🟢 **Has an education domain model** | 🔴 **∅ — empty, three passes running** | 🟢 ERPNext (Education module), Moodle, Open edX, Chamilo, ILIAS, Kolibri, OpenEduCat, Sakai |
+| 🔴 **Generic business platform** | 🟢 OFBiz, Huly, Krayin, BottleCRM | 🔴 Dolibarr, iDempiere |
+
+🔴 **The empty cell is the finding.** It is not that the query is bad or that the search channel is
+weak — it is that **the education vertical's domain knowledge was built inside GPL projects**, and the
+permissive layer is horizontal. 🟢 **The operational consequence for a Globant engagement is
+concrete and it is the reason this table exists:**
+
+- 🟢 **A client who may accept GPL** gets the domain model for free — ERPNext's education module or
+  Moodle — and AI goes **beside** it as a side-car service, never linked into it.
+- 🟢 **A client who may not** gets a permissive generic platform (OFBiz or Huly) and **pays to build
+  the student/enrolment/assessment model**. 🔴 **That cost is the price of the empty cell, and it
+  should be quoted at the start of an engagement rather than discovered in week six.**
+
+### 🔴 This pass's new refusal is a *vertical*-shaped one too
+
+🔴 [`michael-borck/assessment-rubrics-for-ai`](https://github.com/michael-borck/assessment-rubrics-for-ai)
+(**1 head**, `main` = `00294979`) is the first thing this shelf has had to refuse on
+**institutional-scope** grounds rather than on copyleft grounds. Its `LICENSE.md` (**2,859 B**, 92
+lines, read from payload) grants use **within Curtin University** and lists
+`✗ Distribution to other institutions`, `✗ Commercial use`,
+`✗ Incorporation into another institution's materials without permission`.
+
+🔵 **Why that belongs here and not only in `agents/`:** an assessment-rubric suite *is* vertical
+content — it is the domain model, in prose. 🔴 **So the empty cell above has a second, subtler
+population: education domain knowledge that is published openly and licensed privately.** 🟢 A
+vertical shortlist must read the grant of the **content**, not only of the code (`P627`).
+
+### 🟢 What a vertical shortlist should now probe, as a recipe
+
+🔵 **Derived from `P624` and this pass's two refusals, in the order that fails cheapest first:**
+
+1. **Enumerate, don't guess.** `git clone --filter=blob:none --no-checkout --depth 1`, then
+   `ls-tree -r --name-only HEAD | grep -iE '(^|/)(licen[cs]e|copying|notice)'`. 🔴 Six-filename
+   probing filed `idempiere` as `UNKNOWN` (pass 51) and would file it so again.
+2. **Expect a *set*, not a value (`P627`).** If more than one licence path exists, read **all** of
+   them — code, content and data grants differ, and for a vertical the **content is the product**.
+3. **Read the payload's own prohibitions, not just its title (`P628`).** `# License & Usage Terms` at
+   **200** is not an open grant.
+4. **Separate the three refusals (`P629`).** `UNKNOWN` → probe again. `PROPRIETARY` / `UNLICENSED`
+   → **stop**; no further probe changes the answer.
+
+🟢 **Suite: `compose/code/p627-multi-grant-repo/` — 🟢 31/31 green, offline**, with the defective
+classifiers retained as controls.
+
+### 🔴 Declared gaps
+
+- 🔴 **No MIT/Apache education platform exists on this shelf, and three passes of the mandated query
+  have not found one.** 🟢 Written down as an **informed gap**: the cell is empty because of how the
+  vertical's history ran, not because the search was skipped.
+- 🔴 **No LMS-side licence was re-read this pass.** Moodle, Open edX, Chamilo, ILIAS, Kolibri,
+  OpenEduCat and Sakai carry their families from earlier passes; this pass re-read **none** of them,
+  and says so rather than implying freshness.
+
 ## 🟢 Fifty-first pass, 2026-10-08 — the ERP/CRM shelf finally gets a **second vendor**, and the slug its own channel named **does not exist**
 
 ⏱️ **Fifth pass of this date.** **Licences read first-hand on 2026-10-08 from payload, channel named

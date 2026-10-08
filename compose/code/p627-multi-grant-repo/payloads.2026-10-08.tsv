@@ -1,0 +1,14 @@
+slug	ref	path	http	bytes	sha256_8	lines	family	verdict
+michael-borck/assessment-rubrics-for-ai	main	LICENSE.md	200	2859	2723fe30	92	PROPRIETARY	REFUSE
+michael-borck/assessment-rubrics-for-ai	main	LICENSE-NO-EXISTE-52	404	-	-	-	-	NEGATIVE-CONTROL
+grant-mccurdy/instructional-ai-workflows	main	LICENSE	200	1070	a8d6cd41	21	MIT	ADMIT-CODE
+grant-mccurdy/instructional-ai-workflows	main	LICENSE-CONTENT.md	200	662	c8b2ae96	15	CC-BY-4.0	ADMIT-ATTRIB
+grant-mccurdy/instructional-ai-workflows	main	LICENSE-DATA.md	200	722	79fe1044	16	CC-BY-4.0	ADMIT-ATTRIB
+GradeAI/gradeai	main	LICENSE	404	-	-	-	-	UNLICENSED
+GradeAI/gradeai	main	LICENSE.txt	404	-	-	-	-	UNLICENSED
+GradeAI/gradeai	main	LICENSE.md	404	-	-	-	-	UNLICENSED
+GradeAI/gradeai	main	COPYING	404	-	-	-	-	UNLICENSED
+GradeAI/gradeai	main	COPYING.txt	404	-	-	-	-	UNLICENSED
+GradeAI/gradeai	main	legal/LICENSE	404	-	-	-	-	UNLICENSED
+MicroPyramid/opensource-startup-crm	main	LICENSE	200	1068	d483565f	21	MIT	HELD-SPECIMEN
+Django-CRM/Django-CRM	master	LICENSE	200	1069	b197caf2	21	MIT	HELD-SPECIMEN

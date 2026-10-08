@@ -4,6 +4,124 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-second pass, 2026-10-08 — the zero-new-agents streak **breaks at eleven**, with three education-specific repos; and only **one of the three may be built on**
+
+⏱️ **Sixth pass of this date.** Licences read first-hand on 2026-10-08 **from payload**, with HTTP
+status, byte count and `sha256` prefix recorded per filename. Existence by `git ls-remote --heads`
+against a negative control in the same run (`P510`):
+`gmilano/education-kb-NEGATIVE-CONTROL-no-existe-52` → **0 refs**, while
+`Dolibarr/dolibarr` → **64**, `idempiere/idempiere` → 27, `krayin/laravel-crm` → 7 in the same sweep.
+**No star counts (`P479`).**
+
+🔵 **Channel note, measured this pass:** `github.com` **HTML** answers **403** through this
+environment's proxy, as `api.github.com` has since pass 37. 🔴 **New this pass: every *non-GitHub*
+host answers `000`** — `gov.uk`, `unesco.org`, `creativecommons.org` and `multistate.us` are all
+unreachable, and `WebFetch` returns `EGRESS_BLOCKED` for them. 🟢 `raw.githubusercontent.com` and
+`git ls-remote` answer **200**, so every licence verdict below is still read from payload.
+
+### 🟢 The streak breaks — but the mandated query is not what broke it
+
+🔴 **The mandated query (`top open source AI agents education 2026 github MIT`) returned the same
+three classes passes 48–51 recorded** — horizontal agents (OpenHands, CrewAI, LangGraph, OpenClaw,
+OpenAI Codex, MetaGPT, `browser-use`, Vocode), agent *catalogues*
+(`ashishpatel26/500-AI-Agents-Projects`, `ARUNAGIRINATHAN-K/awesome-ai-agents-2026`,
+`caramaschiHG/awesome-ai-agents-2026`, `kouweizhu/agents-radar`) and *courses*
+(`microsoft/ai-agents-for-beginners`, `huggingface/agents-course`,
+`microsoft/generative-ai-for-beginners`, `LLMs-from-scratch`, `karpathy/nanochat`,
+`developer-roadmap`). 🟢 **Every name was checked against the live tree and every one was already
+recorded.**
+
+🟢 **What broke the streak was narrowing the query to the *task* rather than the industry** — AI
+tutoring **grading and rubric** work specifically. 🔵 **Recorded as method, not as luck: eleven
+passes of "zero new" were partly an artefact of querying the industry noun.** Three slugs came back
+that no pass had filed, all three exist, and all three were read from payload.
+
+| Repo | Refs (`P510`) | Grant read from payload | Family | 🟢 Globant verdict |
+|---|---|---|---|---|
+| 🟢 🆕 [`grant-mccurdy/instructional-ai-workflows`](https://github.com/grant-mccurdy/instructional-ai-workflows) | **1 head**, `refs/heads/main` = `a4c5e83` | 🔴 **three payloads** — `LICENSE` **1,070 B** `sha256 a8d6cd41…`; `LICENSE-CONTENT.md` **662 B** `c8b2ae96…`; `LICENSE-DATA.md` **722 B** `79fe1044…` | 🟢 **MIT** (code) + 🟡 **CC BY 4.0** (content) + 🟡 **CC BY 4.0** (synthetic data) | 🟢 **ADMITTED, with an obligation.** Rubric-evidence, feedback-drafting, reviewer-packet and remediation workflows. The *code* may ship closed; the **rubric content and the datasets may not be used without attribution** |
+| 🔴 🆕 [`michael-borck/assessment-rubrics-for-ai`](https://github.com/michael-borck/assessment-rubrics-for-ai) | **1 head**, `main` = `0029497` | `LICENSE.md`, **2,859 B**, `sha256 2723fe30…`, **92 lines** | 🔴 **PROPRIETARY** — *"All materials … are the intellectual property of Michael Borck"* | 🔴 **REFUSED.** Permitted **within Curtin University** only; the payload lists `✗ Commercial use`, `✗ Distribution to other institutions`, `✗ Incorporation into another institution's materials`. **Globant cannot build on it, and cannot ship it to a client** |
+| 🔴 🆕 [`GradeAI/gradeai`](https://github.com/GradeAI/gradeai) | **1 head**, `main` = `4de8e86` | 🔴 **no grant at all** — full tree enumeration finds no licence path, and `LICENSE`, `LICENSE.txt`, `LICENSE.md`, `COPYING`, `COPYING.txt`, `legal/LICENSE` all **404** | 🔴 **UNLICENSED** | 🔴 **REFUSED.** No grant means all rights reserved by default. An essay auto-grader, and its own README points at GPT-3.5 — dated as well as unusable |
+
+🔵 **One slug the channel named does not exist, and the tree was already right.** The channel
+presented *"Pawtograder"* as an open autograding platform. 🔴 `pawtograder/pawtograder` → **0 refs**,
+and so does `Pawtograder/pawtograder`. 🟢 **This KB already holds the correct slug**,
+[`pawtograder/platform`](https://github.com/pawtograder/platform), filed in `repos/foundations.md`.
+🟢 **The probe was the wrong guess, not the record** — logged because `P510`'s value is exactly that
+it distinguishes the two.
+
+### 🔴 `P628` — a `LICENSE.md` that answers **200** is not evidence of an open grant
+
+🔵 **This is the most load-bearing finding of the pass, because it is a false *positive* and every
+other licence defect this corpus has recorded was a false negative.** `idempiere` (pass 51) was a
+project whose grant a six-filename probe **missed**. 🔴 **The Curtin repo is the opposite: the probe
+*hits*, the filename is licence-shaped, the header reads `# License & Usage Terms` — and the document
+is a refusal.**
+
+🔴 **A classifier keyed on the presence of a licence-shaped filename calls this repo usable.** So
+would one keyed on the word *License* in the header. 🟢 **`P628` names the class and separates two
+verdicts this corpus had been collapsing:**
+
+| Verdict | Means | What a pass should do next |
+|---|---|---|
+| `UNKNOWN` | 🟡 **not read** — no payload found, or found and not parsed | 🟢 probe harder (`P624`: enumerate, don't guess) |
+| 🔴 `PROPRIETARY` | 🔴 **read, and it refuses** | 🔴 **stop.** No further probe changes the answer |
+| 🔴 `UNLICENSED` | 🔴 **read the whole tree; there is no grant** | 🔴 **stop.** Default is all rights reserved |
+
+🔴 **Collapsing `PROPRIETARY` into `UNKNOWN` turns a refusal into a retry** — a pass would keep
+spending probes on a repo whose answer is settled, and worse, a shortlist that reports "licence
+unknown" invites a human to assume *probably fine*. 🟢 **Suite:
+`compose/code/p627-multi-grant-repo/` — 🟢 31/31 green, offline**, and it keeps the defective
+filename-keyed classifier as a **control** asserting that it *still* misfiles this payload.
+
+### 🟢 `P627` — a repository's grant is a **set**, not a value
+
+🟢 **`grant-mccurdy/instructional-ai-workflows` ships three grants, and they govern different
+things:** code under **MIT**, written documentation / diagrams / generated charts under **CC BY
+4.0**, and original **synthetic datasets** under CC BY 4.0. Each side-car payload names its own
+exclusions (third-party material, likeness, trademarks, acquired sources).
+
+🔴 **A sweep that reads only `LICENSE` reports `MIT` — and it is not wrong, it is incomplete.** That
+is the dangerous shape: the answer it gives is *true of the code* and silently false of the
+deliverable, because for a rubric repo **the rubrics are the product**. 🟢 **The suite keeps that
+single-`LICENSE` sweep as a control**, asserting both that it still answers `MIT` and that it still
+misses the CC BY obligation.
+
+🔵 **Why this matters for a Globant engagement and not just for this corpus:** a studio that lifts
+the workflow code is MIT-clean and may ship closed; a studio that lifts the **rubric text or the
+synthetic student records into a client deliverable owes attribution to Grant McCurdy**, and nothing
+in `LICENSE` says so.
+
+### 🟢 `P630` — the MIT byte deltas decompose exactly, which finishes what `P621` started
+
+🔵 **Pass 51 refuted the "±1 B trailing-newline tolerance" as a GPL-3.0 identity test.** 🟢 **This
+pass shows the same thing constructively on MIT, with the decomposition measured rather than
+asserted.** Three MIT payloads, three different byte counts, `diff` clean apart from the copyright
+line:
+
+| Payload | Bytes | Final byte | Copyright line | Its length |
+|---|---|---|---|---|
+| 🆕 `grant-mccurdy/instructional-ai-workflows` `LICENSE` | **1,070** | `0x0a` — newline | `Copyright (c) 2026 Grant McCurdy` | **32** |
+| `Django-CRM/Django-CRM` `LICENSE` | 1,069 | `0x0a` — newline | `Copyright (c) 2017 MicroPyramid` | 31 |
+| `MicroPyramid/opensource-startup-crm` `LICENSE` | 1,068 | 🔴 `0x2e` — **`.`, no final newline** | `Copyright (c) 2017 MicroPyramid` | 31 |
+
+🟢 **`1,070 − 1,068 = 2`, and it decomposes to exactly `+1` (holder name one character longer) `+1`
+(final newline).** 🟢 **`1,069 − 1,068 = 1`, and it is a *pure* final newline.** 🔴 **So a 1 B delta
+has two distinct causes inside one corpus of three payloads**, and the suite asserts that the two
+decompositions differ. 🔵 **The transferable rule: byte equality is neither necessary nor sufficient
+for licence identity. The decomposition is the test; the byte count is a fingerprint.**
+
+### 🔴 Declared gaps, so silence does not read as coverage
+
+- 🔴 **Still no education-specific *composable agent* under a permissive licence from the mandated
+  query** — eleven passes, and the three admissions above came from a narrowed query, not that one.
+  🟢 Recorded as a **method** finding: `agents/trending.md` now runs the task-shaped query alongside
+  the industry-shaped one.
+- 🔴 **`grant-mccurdy/instructional-ai-workflows` carries no second licence channel** —
+  `package.json` is present in the tree but was not read for a `license` field this pass. Single
+  channel, stated.
+- 🔴 **No non-GitHub source is first-hand this pass.** Every regional instrument in
+  `intel/market.md` is second-hand by channel because all non-GitHub egress measured `000`.
+
 ## 🔴 Fifty-first pass, 2026-10-08 — the GPL-3.0 **byte tolerance** this file publishes is wrong three ways, and the specimen it is measured from is the one payload that diverges from SPDX
 
 ⏱️ **Fifth pass of this date.** Licences read first-hand on 2026-10-08 **from payload**, with HTTP

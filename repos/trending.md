@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-second pass, 2026-10-08 — week of 2026-10-08: three new slugs, **one admitted**, and the two refusals are refusals of *different kinds*
+
+⏱️ **Sixth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+Existence by `git ls-remote --heads` with a negative control in the same run (`P510`):
+`gmilano/education-kb-NEGATIVE-CONTROL-no-existe-52` → **0 refs**. Licences read from payload. **No
+star counts (`P479`).**
+
+🔵 **Channel measurement first:** `github.com` **HTML** returns **403** through this environment's
+proxy, as `api.github.com` has since pass 37. 🔴 **New this week: every non-GitHub host returns
+`000`** — `gov.uk`, `unesco.org`, `creativecommons.org`, `multistate.us` — and `WebFetch` answers
+`EGRESS_BLOCKED` for them. 🟢 **`git ls-remote` and `raw.githubusercontent.com` both answer 200**, so
+existence and licence remain first-hand and nothing below rests on a secondary source.
+
+### 🆕 This week's repos
+
+| Repo | Ref read | Payload | Family | Verdict |
+|---|---|---|---|---|
+| 🟢 🆕 [`grant-mccurdy/instructional-ai-workflows`](https://github.com/grant-mccurdy/instructional-ai-workflows) | `main` = `a4c5e832` (**1 head**) | 🔴 **three**: `LICENSE` **1,070 B** `sha256 a8d6cd41…`; `LICENSE-CONTENT.md` **662 B** `c8b2ae96…`; `LICENSE-DATA.md` **722 B** `79fe1044…` | 🟢 **MIT** (code) + 🟡 **CC BY 4.0** (content) + 🟡 **CC BY 4.0** (synthetic data) | 🟢 **Admitted.** 🟢 **Holder `Grant McCurdy` — a third independent MIT supplier** against `MicroPyramid` (pass 51) and `Webkul Software` (pass 46) |
+| 🔴 🆕 [`michael-borck/assessment-rubrics-for-ai`](https://github.com/michael-borck/assessment-rubrics-for-ai) | `main` = `00294979` (**1 head**) | `LICENSE.md`, **2,859 B**, `sha256 2723fe30…`, **92 lines** | 🔴 **PROPRIETARY** | 🔴 **Refused** (`P628`). Curtin-internal; `✗ Commercial use`. 🔴 **The filename and the 200 are both licence-shaped and both uninformative** |
+| 🔴 🆕 [`GradeAI/gradeai`](https://github.com/GradeAI/gradeai) | `main` = `4de8e861` (**1 head**) | 🔴 **none** — tree enumeration finds no licence path; `LICENSE`, `LICENSE.txt`, `LICENSE.md`, `COPYING`, `COPYING.txt`, `legal/LICENSE` → **404 ×6** | 🔴 **UNLICENSED** | 🔴 **Refused** (`P629`). A real repo's real silence, not a bad slug — the control gave 0 and three known slugs gave 64 / 27 / 7 |
+| 🔵 `pawtograder/pawtograder` | — | — | — | 🔴 **0 refs**, and `Pawtograder/pawtograder` also 0. 🟢 **The project is real and this KB already holds the right slug** — [`pawtograder/platform`](https://github.com/pawtograder/platform). **The probe was the wrong guess, not the record** |
+
+### 🟢 The one ref count that moved
+
+🟢 **`Dolibarr/dolibarr` → 64 heads, against 63 last pass.** 🔵 Recorded because it is the only
+*existence-channel* movement this week, and because `P479` forbids the star-count column that would
+otherwise be where a reader looked for motion. 🔴 **A head count is not activity** — it is branch
+bookkeeping, and this KB does not infer maintenance from it.
+
+### 🔴 Why `GradeAI/gradeai` is this week's most instructive *rejection*
+
+🔵 **It is the first repo this corpus has filed where the tree enumeration and the filename probe
+agree that there is nothing to read.** `P624` (pass 51) existed because a six-filename probe returned
+404 ×6 on `idempiere`, **a project that ships its grant twice** — the probe was the defect.
+🟢 **Running `P624`'s enumerate-first stage here gives the same answer as the probe**, and that
+agreement is what licenses the conclusion:
+
+```
+git clone --filter=blob:none --no-checkout --depth 1 https://github.com/GradeAI/gradeai
+git -C … ls-tree -r --name-only HEAD | grep -iE '(^|/)(licen[cs]e|copying|notice)'
+→ (no output)
+```
+
+🔴 **No licence path, no manifest** (`package.json`, `pyproject.toml`, `setup.py` all absent from the
+tree), **no grant.** 🟢 **`UNLICENSED` is therefore a *reading*, not a failure to read** — which is
+precisely the distinction `P629` was written to hold, and the reason it must not be filed as
+`UNKNOWN`.
+
+### 🟢 `P630` — the MIT byte table, completed
+
+🔵 **Pass 51 left the MIT rows at 1,068 and 1,069 B with the 1 B attributed to a trailing newline.**
+🟢 **This week's row is 1,070 B, and it shows the spread has two axes, not one:**
+
+| Payload | Bytes | Final byte | Holder line | Length | `diff` vs 1,068 B row |
+|---|---|---|---|---|---|
+| 🆕 `grant-mccurdy/instructional-ai-workflows` | **1,070** | `0x0a` | `Copyright (c) 2026 Grant McCurdy` | **32** | 🟢 clean apart from the copyright line |
+| `Django-CRM/Django-CRM` | 1,069 | `0x0a` | `Copyright (c) 2017 MicroPyramid` | 31 | 🟢 clean apart from nothing — **same holder line**, pure newline |
+| `MicroPyramid/opensource-startup-crm` | 1,068 | 🔴 `0x2e` | `Copyright (c) 2017 MicroPyramid` | 31 | — |
+
+🔴 **Two 1 B steps, two different causes.** 🟢 **The decomposition `cp + nl == measured delta` is
+asserted in the suite** (`compose/code/p627-multi-grant-repo/`, 🟢 **31/31 green**) and holds for any
+pair of MIT payloads, so it does not expire when next week adds a row.
+
+### 🔴 Declared gaps for the week
+
+- 🔴 **The mandated `github trending education AI 2026` query returned no repo this week** — only
+  aggregator and blog lists, plus `kouweizhu/agents-radar`'s own 2026-10-04 report, all already
+  filed. 🟢 The three slugs above came from a **task-shaped** query.
+- 🔴 **GitHub's own trending page could not be read** (`github.com` HTML 403), so *"trending"* this
+  week means *named by the channel and then verified by `ls-remote`*, never ranked.
+- 🔴 **No region contributed a repo.** All four regional runs returned the horizontal/catalogue/course
+  classes. Stated, because four empty regions and four unrun regions look identical in a file that
+  only records hits.
+
 ## 🟢 Fifty-first pass, 2026-10-08 — week of 2026-10-08: three new permissive-or-not repos, and one of them is a **slug the channel invented**
 
 ⏱️ **Fifth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

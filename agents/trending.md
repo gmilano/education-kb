@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-second pass, 2026-10-08 — week of 2026-10-08: the **eleven-pass zero breaks**, and what broke it was changing the *shape of the query*, not the week
+
+⏱️ **Sixth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+Read from payload on 2026-10-08, HTTP status and byte count per filename. **No star counts
+(`P479`).**
+
+### 🔴 The mandated query, run verbatim: still zero
+
+🟢 **Run globally and once for each of North America, EMEA, APAC and LATAM.** Every slug it returned
+was already on the tree:
+
+| Class | Names returned this week | New? |
+|---|---|---|
+| Horizontal agents | OpenHands, CrewAI, LangGraph, OpenClaw, OpenAI Codex, MetaGPT, `browser-use`, Vocode, OpenCode | 🔴 **0 new** |
+| Agent **catalogues** | `ashishpatel26/500-AI-Agents-Projects`, `ARUNAGIRINATHAN-K/awesome-ai-agents-2026`, `caramaschiHG/awesome-ai-agents-2026`, `kouweizhu/agents-radar` | 🔴 **0 new** |
+| **Courses** (not composable agents) | `microsoft/ai-agents-for-beginners`, `huggingface/agents-course`, `microsoft/generative-ai-for-beginners`, `LLMs-from-scratch`, `karpathy/nanochat`, `developer-roadmap` | 🔴 **0 new** |
+| 🔵 Already-filed education-specific | `promptster-ai/rubric` (**1 head**, `main` = `1e359cd`), `learning-commons-org/evaluators` (**42 heads**), `laurauguc/grading_assistant`, `pawtograder/platform` | 🔴 **0 new** |
+
+🔴 **That is the twelfth consecutive week in which the industry-shaped query returns nothing new.**
+
+### 🟢 The query that did yield — and why this is a method finding, not a lucky week
+
+🔵 **The mandated query names the *industry* (`education`). This pass also ran one naming the
+*task*** — AI **grading and rubric** work — and three unfiled slugs came back immediately.
+🟢 **All three exist; all three were read from payload in the same sweep as the negative control
+(`gmilano/education-kb-NEGATIVE-CONTROL-no-existe-52` → 0 refs).**
+
+| 🆕 Repo | Refs | Grant | Family | Verdict |
+|---|---|---|---|---|
+| 🟢 [`grant-mccurdy/instructional-ai-workflows`](https://github.com/grant-mccurdy/instructional-ai-workflows) | 1 head, `main` = `a4c5e83` | 🔴 **3 payloads**: `LICENSE` 1,070 B, `LICENSE-CONTENT.md` 662 B, `LICENSE-DATA.md` 722 B | 🟢 **MIT** + 🟡 **CC BY 4.0** ×2 | 🟢 **Admitted** (`P627`) |
+| 🔴 [`michael-borck/assessment-rubrics-for-ai`](https://github.com/michael-borck/assessment-rubrics-for-ai) | 1 head, `main` = `0029497` | `LICENSE.md`, 2,859 B, 92 lines | 🔴 **PROPRIETARY** | 🔴 **Refused** (`P628`) — Curtin-internal only, `✗ Commercial use` |
+| 🔴 [`GradeAI/gradeai`](https://github.com/GradeAI/gradeai) | 1 head, `main` = `4de8e86` | 🔴 none — tree enumeration empty, six probes **404 ×6** | 🔴 **UNLICENSED** | 🔴 **Refused** (`P629`) |
+
+🔵 **The transferable lesson, written down because eleven passes paid for it:** *"zero new agents"*
+was partly a property of the **query noun**. An industry term retrieves industry *commentary* —
+catalogues, courses, market lists. A **task** term retrieves code. 🟢 **Both queries now run every
+week**; the mandated one stays, verbatim, because its yield is itself the trend being recorded.
+
+### 🔴 The week's second finding: a false *positive* in licence classification
+
+🔵 **Every licence defect this KB had recorded was a false negative** — a grant the probe missed
+(`idempiere`, pass 51, 404 ×6 on a project that ships its licence twice). 🔴 **This week's is the
+mirror image.** The Curtin repo's `LICENSE.md` answers **200**, its filename is licence-shaped, and
+its header reads `# License & Usage Terms` — 🔴 **and the document withholds every right Globant
+would need.** Read from payload:
+
+> `✗ Distribution to other institutions` · `✗ Publication` · `✗ Commercial use` ·
+> `✗ Incorporation into another institution's materials without permission`
+
+🟢 **`P628` separates `PROPRIETARY` (read, and it refuses) from `UNKNOWN` (not read).** 🔴 Collapsing
+them turns a settled refusal into a retry, and a shortlist row reading *"licence unknown"* invites a
+human to assume *probably fine*.
+
+### 🟢 The week's third finding: `P630` finishes `P621`'s refutation on MIT
+
+🔵 Pass 51 refuted the **±1 B trailing-newline tolerance** as a GPL-3.0 identity test. 🟢 This week
+the same claim is settled constructively on MIT, with the delta **decomposed rather than tolerated**:
+`1,070` (newline, 32-char holder line) − `1,068` (**no** final newline, `0x2e`, 31-char holder line)
+= **+1 holder char, +1 newline**; `1,069` − `1,068` = **a pure newline**. 🔴 **Two 1 B deltas, two
+different causes, one corpus of three payloads — all MIT.**
+
+### 🔴 Declared gaps for the week
+
+- 🔴 **No new *permissively licensed, education-specific, composable* agent** even from the narrowed
+  query: of the three admissions, **one** is usable, and its code is a workflow prototype rather than
+  a runtime.
+- 🔴 **No region contributed an agent this week.** All four regional runs of the mandated query
+  returned the horizontal/catalogue/course classes above. 🟢 **Stated explicitly: four regions ran,
+  four returned material, none returned a new agent** — saturated, not skipped.
+- 🔴 **Every non-GitHub host measured `000` this week** (`gov.uk`, `unesco.org`,
+  `creativecommons.org`, `multistate.us`), and `WebFetch` returned `EGRESS_BLOCKED`. The CC BY 4.0
+  family above is read from the **repo's own side-car text**, not from `creativecommons.org`.
+
 ## 🔴 Fifty-first pass, 2026-10-08 — week of 2026-10-08: zero new agents (**eleventh** pass), and the week's movement is **five licence versions this KB already had the payloads to read**
 
 ⏱️ **Fifth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

@@ -4,6 +4,127 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-second pass, 2026-10-08 — two recipes (`P632` the human-in-every-stage assessment pipeline; `P633` the grant-set gate) and a **correction** to every recipe that treated a repo's licence as a single value
+
+⏱️ **Sixth pass of this date.** Both recipes name the exact repos, refs, payload filenames and byte
+counts measured on 2026-10-08. **No star counts (`P479`).**
+
+## 🔴 Correction — every recipe in this file read a repo's grant as a **value**, and a grant is a **set**
+
+🔴 **No recipe here has ever asked whether a component ships more than one licence.** Each names a
+component and a family — *"MIT"*, *"GPL-3.0"* — as though a repository had one. 🟢 **`P627` measured
+a counter-example on a component this pass admits:**
+[`grant-mccurdy/instructional-ai-workflows`](https://github.com/grant-mccurdy/instructional-ai-workflows)
+ships **three** grants, and they govern different artefacts:
+
+| Payload | Bytes | `sha256` | Family | Governs |
+|---|---|---|---|---|
+| `LICENSE` | **1,070** | `a8d6cd41…` | 🟢 **MIT** | the code |
+| `LICENSE-CONTENT.md` | **662** | `c8b2ae96…` | 🟡 **CC BY 4.0** | documentation, diagrams, generated charts |
+| `LICENSE-DATA.md` | **722** | `79fe1044…` | 🟡 **CC BY 4.0** | original **synthetic datasets** |
+
+🔴 **Where this moves a deliverable:** a recipe that lifts this component's **code** is MIT-clean and
+may ship closed. 🔴 **A recipe that lifts its rubric text or its synthetic student records into a
+client deliverable incurs an attribution obligation that `LICENSE` does not mention.** 🟢 **For a
+rubric component the content *is* the product**, so the obligation is the normal case, not the edge.
+
+🟢 **The correction applied here, to every recipe in this file, as a rule rather than a re-edit:**
+a component's licence line must state **which artefact class** the family covers, and a component
+whose grant has not been enumerated (`P624` stage 1) carries the family **`GRANT-NOT-ENUMERATED`**
+rather than a family guessed from `LICENSE`. 🔵 **No recipe below asserts a single family without
+having enumerated.**
+
+## 🟢 `P632` — the **human-in-every-stage assessment pipeline**, and the first recipe this KB can tie to a statute
+
+🔵 **The problem.** Automated assessment is the one education AI use case that regulators in three
+regions name explicitly — EU AI Act **Annex III** (access, assessment of learning outcomes,
+educational path, exam monitoring; stand-alone high-risk, deferred to **2027-12-02**), **Vietnam**'s
+AI law (effective **2026-03-01**, education among six high-risk sectors, *automated assessment and
+behavioural monitoring* named), and **Oklahoma + Maryland**, which ban AI from making high-stakes
+decisions about students. 🟢 **Vietnam's text is the useful one because it describes an
+architecture**: a system is high-risk *only where its output is the sole basis for a decision without
+meaningful human review*. 🔴 **So "human in the loop" is not a soft commitment here — it is the
+property that changes the regulatory class.**
+
+**The components, each with its grant enumerated this pass:**
+
+| Stage | Component | Grant (enumerated, `P624` stage 1) | Why this one |
+|---|---|---|---|
+| 1. Rubric evidence | [`grant-mccurdy/instructional-ai-workflows`](https://github.com/grant-mccurdy/instructional-ai-workflows) `main` = `a4c5e832` | 🟢 **MIT** (code) + 🟡 **CC BY 4.0** (content, data) — **3 payloads, enumerated** | 🟢 **It is the only component this KB holds whose published shape already names human review at every stage.** Supplies the four-stage decomposition, not a runtime |
+| 2. Feedback drafting | [`frappe/erpnext`](https://github.com/frappe/erpnext) Education module **or** Moodle | 🔴 **GPL-3.0** | 🟢 The domain model (students, enrolments, assessments) — 🔴 **side-car only, never linked** (`P631`) |
+| 3. Reviewer packet | [`hcengineering/platform`](https://github.com/hcengineering/platform) (Huly) **or** [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0** | 🟢 Permissive workflow/queue layer for the reviewer's inbox, so the **review step itself** is not inside a GPL boundary |
+| 4. Remediation action | [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) (7 heads) **or** [`MicroPyramid/opensource-startup-crm`](https://github.com/MicroPyramid/opensource-startup-crm) | 🟢 **MIT** (`LICENSE`, 1,068 B) | 🟢 Case/pipeline tracking for the intervention that follows a grade — two **independent** suppliers (`P564`) |
+
+**The wiring, and the thing that makes each stage fail:**
+
+1. **Stage 1 emits evidence, never a grade.** The model's output is a *rubric-criterion citation with
+   a span*, written to an append-only store. 🔴 **If the pipeline can emit a grade at stage 1, stages
+   2–4 are decoration and the system is high-risk under Vietnam's test.**
+2. **Stage 3 is a blocking gate, not a notification.** The reviewer packet must be **acknowledged**
+   before stage 4 can run. 🔴 **A packet that can be auto-approved on timeout re-creates the "sole
+   basis" condition** — and that is the single most likely way this architecture quietly fails an
+   audit.
+3. **The audit trail is the deliverable.** Every stage writes who/what/when. 🟢 **This is also what
+   Alabama's model procurement clause and North Carolina's DPI guidance ask a vendor to produce**, so
+   one build serves the EU, Vietnamese and US-state asks.
+4. **The GPL boundary is a process boundary.** Stages 2's domain data reaches the pipeline over HTTP
+   from the GPL system; 🔴 **nothing in stages 1, 3 or 4 links GPL code**, which is what keeps the
+   deliverable shippable to a client who cannot take copyleft.
+
+🔵 **Cost, stated as a range because this KB has not built it:** 8–12 weeks for stages 1, 3 and 4
+against an existing Moodle or ERPNext install; 🔴 **add the student/enrolment/assessment model itself
+if the client refuses GPL** (`P631`'s empty cell), which is the larger number and must be quoted
+separately.
+
+🔴 **What this recipe does *not* have:** a graded corpus to evaluate stage 1 against. 🔵 **`Gap 237`
+is still open** — no national Spanish essay exam, so no public rubric and no graded Spanish essay
+corpus. 🟢 **The synthetic datasets in `LICENSE-DATA.md`'s scope are a scaffold, not an evaluation
+set**, and the payload says so itself: *"provided for demonstration and evaluation and does not
+represent real students."*
+
+## 🟢 `P633` — the **grant-set gate**: refuse a component on what its payload says, not on whether a payload exists
+
+🔵 **The problem, measured twice this pass.** Two components were offered and both had to be refused,
+**for different reasons that a single `UNKNOWN` verdict would have merged:**
+
+| Slug | Refs | What the probe found | 🔴 Verdict | Next action |
+|---|---|---|---|---|
+| [`michael-borck/assessment-rubrics-for-ai`](https://github.com/michael-borck/assessment-rubrics-for-ai) | 1 head, `00294979` | `LICENSE.md` **200**, 2,859 B, header `# License & Usage Terms` | 🔴 **PROPRIETARY** — Curtin-internal; `✗ Commercial use` | 🔴 **stop** |
+| [`GradeAI/gradeai`](https://github.com/GradeAI/gradeai) | 1 head, `4de8e861` | 🔴 tree enumeration empty **and** six probes **404 ×6** | 🔴 **UNLICENSED** | 🔴 **stop** |
+
+**The gate, four stages, each with the thing that makes it fail:**
+
+1. **Exist first (`P510`).** `git ls-remote --heads`, **with a negative control in the same run**.
+   🟢 This pass: `gmilano/education-kb-NEGATIVE-CONTROL-no-existe-52` → **0 refs** while
+   `Dolibarr/dolibarr` → **64**, `idempiere/idempiere` → 27, `krayin/laravel-crm` → 7. 🔴 **Without
+   the control, a proxy failure and a dead slug are the same observation** — and this pass proved the
+   point the other way round: `pawtograder/pawtograder` → 0 refs, while the project is real and this
+   KB already held the correct slug, [`pawtograder/platform`](https://github.com/pawtograder/platform).
+2. **Enumerate, don't guess (`P624`).**
+   `git clone --filter=blob:none --no-checkout --depth 1`, then
+   `git ls-tree -r --name-only HEAD | grep -iE '(^|/)(licen[cs]e|copying|notice)'`. 🔴 **Six-filename
+   probing filed `idempiere` as `UNKNOWN` (pass 51) on a project that ships its grant twice.**
+3. **Read **every** path the enumeration returned (`P627`).** Expect a **set**. 🔴 **Reading only
+   `LICENSE` returns a value that is true of the code and false of the deliverable.**
+4. **Classify into three refusals, not one (`P628`, `P629`).** `UNKNOWN` = *not read* → probe again.
+   `PROPRIETARY` = *read, and it refuses*. `UNLICENSED` = *whole tree read, no grant; default is all
+   rights reserved*. 🔴 **Only the first justifies another probe; filing the other two as `UNKNOWN`
+   spends probes that cannot change the answer and prints "licence not determined" where the answer
+   is "determined, and it says no".**
+
+🟢 **Suite: `compose/code/p627-multi-grant-repo/` — 🟢 31/31 green, offline.** It retains both
+defective instruments as **controls**: `single_license_sweep()` still answers `MIT` for the
+three-grant repo *and* still misses the CC BY obligation; `filename_keyed_classifier()` still calls
+the Curtin `LICENSE.md` open. 🔵 **A fix that deletes the defect also deletes the detector**
+(`P237`), so neither is removed.
+
+🔴 **One defect the suite found in itself, kept because it is the transferable part:** the `P479`
+no-star-counts check was first written `"star" not in blob.lower()` and went **red on clean data** —
+`MicroPyramid/opensource-startup-crm` contains the substring `star`. 🟢 **A substring is not a
+token.** The check now tokenises, and the substring form is retained as a control asserting it is
+still the wrong instrument. 🔵 **Same class as `P409`**, whose case-sensitive regex passed by accident
+for ~11 passes.
+
 ## 🟢 Fifty-first pass, 2026-10-08 — two recipes (`P624` the format-aware grant read; `P625` the two-supplier admissions layer) and a **correction** to every recipe that priced a GPL component without its version
 
 ⏱️ **Fifth pass of this date.** Both recipes name the exact repos, refs, payload filenames and byte

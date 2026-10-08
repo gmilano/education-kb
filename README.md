@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-07
+updated: 2026-10-08
 ---
 
 # 📚 Education KB
@@ -23,6 +23,31 @@ education-kb/
 ```
 
 ## `compose/code/` — lo que esta KB puede demostrar corriendo
+
+🆕 **Pase 52 del 2026-10-08 registra UNA carpeta nueva y su suite: `p627-multi-grant-repo`
+🟢 `31/31` verdes, offline, corrida desde su propio directorio.** Mide cuatro propiedades del
+*grant* de un repositorio: **`P627`** el grant es un **conjunto** de pares `(path, familia)` y no un
+valor — `grant-mccurdy/instructional-ai-workflows` publica **tres** (MIT para el código, CC BY 4.0
+para el contenido y CC BY 4.0 para los datos sintéticos); **`P628`** `PROPRIETARY` es un **veredicto**
+y no una ausencia, y no debe colapsar en `UNKNOWN`; **`P629`** un slug puede **existir y no otorgar
+nada**, medido por enumeración del árbol *y* por el sondeo de seis nombres; **`P630`** la diferencia
+de bytes entre dos textos MIT se descompone exactamente en **largo de la línea de copyright + salto
+final**, lo que cierra lo que `P621` abrió.
+
+🟢 **La suite conserva los instrumentos defectuosos como CONTROLES** (`P237`: un arreglo que borra
+el defecto también borra el detector): el barrido que lee sólo `LICENSE` sigue contestando `MIT` para
+el repo de tres grants *y* sigue perdiendo la obligación CC BY, y el clasificador por nombre de
+archivo sigue llamando *abierto* al `LICENSE.md` propietario de Curtin.
+
+🔴 **Y la suite encontró un defecto en SÍ MISMA:** el chequeo `P479` (sin conteos de estrellas) se
+escribió primero como `"star" not in blob.lower()` y dio **rojo sobre datos limpios**, porque
+`MicroPyramid/opensource-startup-crm` contiene la subcadena `star`. 🟢 **Una subcadena no es un
+token**: ahora tokeniza, y la forma por subcadena queda como control que afirma que sigue siendo el
+instrumento equivocado. 🔵 **Misma clase que `P409`.**
+
+⚠️ **Dicho con precisión: las DEMÁS suites del tablero NO se re-corrieron en este pase.** El
+`77/77` de más abajo sigue siendo la última medición del pase 122; el total honesto es
+*`77/77` (pase 122) + `31/31` (nuevo)*, no un tablero re-medido.
 
 🟢 **Pase 122 del 2026-10-05 (lectura `19:45Z`) — el tablero cierra `71/71` y las 2 suites que
 estaban ROTAS quedaron verdes por la acción M, no por retocar sus números.** Las dos afirmaban

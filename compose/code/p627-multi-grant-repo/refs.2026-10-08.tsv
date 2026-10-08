@@ -1,0 +1,12 @@
+slug	heads	symref_HEAD	head_sha	channel
+gmilano/education-kb-NEGATIVE-CONTROL-no-existe-52	0	-	-	ls-remote
+michael-borck/assessment-rubrics-for-ai	1	refs/heads/main	002949796d515506f4a16fc56754c247cda6c58d	ls-remote
+grant-mccurdy/instructional-ai-workflows	1	refs/heads/main	a4c5e832eb6f0ee14ed96ffcf2855cd729853d25	ls-remote
+GradeAI/gradeai	1	refs/heads/main	4de8e86145826fad59697956fbb24a5c96006fa4	ls-remote
+promptster-ai/rubric	1	refs/heads/main	1e359cd12a5519b1a192f5a117f45c51829b7745	ls-remote
+learning-commons-org/evaluators	42	-	-	ls-remote
+pawtograder/pawtograder	0	-	-	ls-remote
+Pawtograder/pawtograder	0	-	-	ls-remote
+Dolibarr/dolibarr	64	-	-	ls-remote
+idempiere/idempiere	27	-	-	ls-remote
+krayin/laravel-crm	7	-	-	ls-remote

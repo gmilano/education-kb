@@ -1,0 +1,4 @@
+payload	bytes	last_byte	final_newline	copyright_line	cp_len	family
+grant-mccurdy/instructional-ai-workflows LICENSE	1070	0x0a	yes	Copyright (c) 2026 Grant McCurdy	32	MIT
+Django-CRM/Django-CRM LICENSE	1069	0x0a	yes	Copyright (c) 2017 MicroPyramid	31	MIT
+MicroPyramid/opensource-startup-crm LICENSE	1068	0x2e	no	Copyright (c) 2017 MicroPyramid	31	MIT

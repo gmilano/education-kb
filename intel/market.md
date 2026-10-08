@@ -4,6 +4,146 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟡 Fifty-second pass, 2026-10-08 — the regional channel yields **2 instruments and 2 bodies out of 51**, which is the first non-zero yield in five passes, and every one of them is **second-hand by force**
+
+⏱️ **Sixth pass of this date.** Four regional queries ran verbatim, one per region. **Every named
+instrument was checked term by term against the tree before being called new.** No star counts
+(`P479`).
+
+### 🔴 Channel integrity, stated before any figure
+
+🔴 **Every non-GitHub host measured `000` at the egress proxy this pass** — `gov.uk`, `unesco.org`,
+`creativecommons.org`, `multistate.us` — and `WebFetch` returned `EGRESS_BLOCKED` by name for
+`multistate.us`. 🟢 **`raw.githubusercontent.com` and `git ls-remote` answer 200.** 🔴 **So no
+instrument below is first-hand, and none can be made first-hand from this environment.** It is
+recorded as a channel limit, not as a confidence level: a legislature's own bill page was *attempted*
+and is unreachable, which is different from not having been tried.
+
+### 🟡 The regional yield, with its denominator
+
+🔵 **Denominator stated, because `intel/trends.md` publishes a different one for this same channel:**
+this table counts **instruments, bodies *and* market/adoption figures** (**51** = 16 + 12 + 10 + 13);
+`intel/trends.md` counts **instruments and bodies only** (**42**), excluding the **9** market and
+adoption figures (NA 2, EMEA 2, APAC 1, LATAM 4). 🟢 **Same channel, same
+result — 🟡 4 new in both — and both denominators are published so neither reads as a contradiction.**
+
+| Region | What the channel named | 🟢 Already held | 🆕 New |
+|---|---|---|---|
+| **North America** | **134 bills across 31 states** (MultiState), CA **A.B. 1159**, ID **SB 1227**, OR **SB 1546**, **H.R. 8747** (committee 2026-07-21, *not enacted*), OK + MD human-oversight bans, **NYC** K-8 moratorium, GA + MS CS credits, Alabama model procurement clause, North Carolina DPI guidance, AASA / *STUDENTS FIRST Act of 2026*, UChicago Law 1L device pilot, NEA + AFT frameworks, 60 % of US K-12 teachers using AI in 2024-25, **$3.68 B → $32 B by 2030** | 🟢 **15 / 16** | 🟡 **1 — WA `HB 2225`** |
+| **EMEA** | EU AI Act **Annex III** education high-risk, **Art. 50** transparency, **Art. 4** AI literacy, AI omnibus (in force **2026-07-27**), revised dates **2027-12-02** stand-alone / **2028-08-02** embedded, OECD *Digital Education Outlook 2026*, UNESCO GenAI guidance, FI/EE/NL leading K-12, EU market **$2.64 B**, **10 %** of 450+ institutions with formal guidelines, UK **principles-based** regime | 🟢 **11 / 12** | 🟡 **1 — UK *AI Opportunities Action Plan* (published Jan 2025)** |
+| **APAC** | Korea **AI Framework Act** in force **2026-01-22** (+ MSIT pilot year, one-year penalty grace), **Vietnam** AI law passed **2025-12-10**, effective **2026-03-01**, education among six high-risk sectors (automated assessment, behavioural monitoring), Taiwan **AI Basic Act** (Dec 2025), Australian **AI Safety Institute** (announced Nov 2025), China binding algorithm / deep-synthesis / generative rules, Singapore + Japan voluntary guidance, >50 % of APAC digital natives at *"repeatable"* AI maturity, Google / Microsoft / IBM / Pearson named | 🟢 **9 / 10** | 🟡 **1 — Byjus**, named as an APAC market player. 🔴 **A vendor, not an instrument** |
+| **LATAM** | UNESCO **IESALC** study (200 HEIs, 19 countries; **~25 %** with a formal AI framework, **87 %** using AI, **74 %** in teaching), **TALIS** (BR 56 %, CL 55 %, CO 53 %, CR 52 % vs OECD 36 %), Digital Education Council LATAM survey (**92 %** students / **79 %** faculty), Observatory on AI in Education for LAC (**April 2026**), UNESCO–CENIA + **Latam-GPT**, **Ceibal** 75 % of Uruguayan public-school teachers, Brazil **PL 2.338/2023**, Chile's executive bill, Colombia **CONPES 4144**, **ILIA** third edition, AI Week LATAM 2026 (SoftServe + NVIDIA), CAF / CETIC.br / ECLAC / Tec de Monterrey / ProFuturo | 🟢 **12 / 13** | 🟡 **1 — Fundación Santillana**, as an Observatory partner. 🔴 **A body, not an instrument** |
+
+🟢 **Written down explicitly because an informed gap is information and silence looks exactly like
+coverage.** 🔴 **No region returned nothing. All four returned material; all four returned material
+this KB overwhelmingly already held.** 🟡 **But the yield is 4/51 rather than pass 51's 0/33, and the
+honest reading is that two of the four are *not* instruments** — a vendor name and a foundation name.
+🔴 **The instrument yield is 2 / 51.** 🔵 **The channel is saturated, not broken, and the denominator
+is how that stays distinguishable.**
+
+### 🟡 The two genuinely new instruments
+
+| | 🆕 Washington **HB 2225** | 🆕 UK ***AI Opportunities Action Plan*** |
+|---|---|---|
+| Region | **North America** | **EMEA** |
+| What the channel says | Adds **reporting requirements** for AI tools in the context of minors' use, alongside Oregon **SB 1546** (which targets *compulsive* use by minors and this KB already held) | The instrument behind the UK's **principles-based** rather than statutory approach; **published January 2025** |
+| 🔴 Channel status | 🔴 **Second-hand.** `app.leg.wa.gov` measured `000`; no bill text read | 🔴 **Second-hand.** `gov.uk` measured `000`; no publication read |
+| 🟢 Why it is still recorded | 🟢 It completes a **pair**: OR + WA are the first two states this KB holds that regulate the *minor's pattern of use* rather than the *school's decision* | 🟢 It explains a gap this KB had been recording as absence — the UK has **no education-specific AI statute** because its instrument is a plan, not a law |
+
+🔴 **Both are filed as *named and unverified*.** 🔵 **`P237`: a convention a pass has to remember is
+not a control** — so they carry the channel in the row rather than in a footnote.
+
+### 🔴 The EMEA date defect did **not** recur this pass, and that is worth recording
+
+🟢 **Four consecutive passes recorded a source dating the AI Act's full effect to *August 2026*.**
+🔵 **This pass's EMEA channel got it right**: it reported enforcement beginning **2026-08-02**, the
+omnibus **in force 2026-07-27**, and the revised application dates **2027-12-02** (stand-alone
+high-risk — the class education sits in: access, assessment of learning outcomes, educational path,
+exam monitoring) and **2028-08-02** (embedded in regulated products). 🔴 **It also flagged that the
+revision *"still awaits publication in the Official Journal"***, and 🔴 **`eur-lex.europa.eu` is
+unreachable from here**, so the OJ citation remains second-hand by channel and first-hand only by
+repetition across passes. 🟢 **Article 50 transparency was not moved and runs from 2026-08-02.**
+
+## Opportunities by region
+
+🔵 **One `###` per region, the five-value closed vocabulary, and the country in the prose rather than
+in the field.** 🔴 **Each opportunity below names the licence constraint that decides whether it can
+be delivered**, because `P631` (`verticals/solutions.md`) measured that this shelf is **never both
+permissive and educational**.
+
+### North America
+
+🟢 **The opportunity is compliance plumbing, not tutoring.** 🔴 **134 bills across 31 states**, with
+OK and MD banning AI from high-stakes decisions about students, CA A.B. 1159 restricting training on
+student data, and now OR **SB 1546** + WA **HB 2225** regulating minors' *use patterns* and reporting.
+🟢 **A district cannot buy one product that satisfies 31 statutes, so the deliverable is a
+policy-parameterised layer**: `grant-mccurdy/instructional-ai-workflows` (MIT) supplies the
+human-review-at-every-stage shape that OK/MD-style oversight rules require, and the audit trail is
+what Alabama's model procurement clause asks a vendor to produce. 🔵 **Pitch against the 60 % of US
+K-12 teachers already using AI informally** — the gap is governance, not adoption. 🔴 **Constraint:
+if the client's SIS is ERPNext or Moodle, the AI runs *beside* it as a side-car, never linked in.**
+
+### EMEA
+
+🟢 **The opportunity is Annex III conformity work with a known deadline.** Education sits in the
+**stand-alone high-risk** class deferred to **2027-12-02**, which is far enough out to build properly
+and close enough to sell now. 🔴 **Article 50 transparency already applies (2026-08-02)**, so marking
+and disclosure is immediate work. 🟢 **Only 10 % of 450+ institutions have formal guidelines** —
+that is the addressable gap. 🔵 **The UK is a different sale**: its instrument is the *AI
+Opportunities Action Plan*, principles-based, so the deliverable there is **assurance** rather than
+conformity. 🟢 **Sovereignty favours the permissive stack** (local inference + a permissive
+orchestration layer) because data-residency arguments are easier when nothing phones home.
+
+### APAC
+
+🟢 **Vietnam is the sharpest single opportunity this KB holds, in any region.** Its AI law (passed
+**2025-12-10**, effective **2026-03-01**) names education among six high-risk sectors and is explicit
+about **automated assessment and behavioural monitoring** — and treats a system as high-risk *only
+where its output is the sole basis for a decision without meaningful human review*. 🟢 **That is a
+statutory description of an architecture**, and it is the one
+`grant-mccurdy/instructional-ai-workflows` implements: reviewer packets and remediation actions with
+a human in each stage. 🔵 **Korea is the second sale**, with the Framework Act in force
+**2026-01-22** and MSIT running 2026 as a pilot year with a one-year penalty grace — 🟢 **a window
+for building compliant systems before enforcement bites**. 🔴 **Caution: Korea requires a domestic
+representative for foreign providers**, which is a structuring question before it is a technical one.
+
+### LATAM
+
+🟢 **The opportunity is the governance gap, measured.** UNESCO IESALC: **87 %** of 200 institutions
+across 19 countries use AI in at least one area, **74 %** in teaching — but **only ~25 % have a
+formal AI framework**. 🔵 **TALIS puts LATAM teacher adoption far above the OECD average** (Brazil
+56 %, Chile 55 %, Colombia 53 %, Costa Rica 52 % vs **36 %**), and Ceibal reports **75 %** of
+Uruguayan public-school teachers using these tools. 🔴 **Adoption is not the problem here either; it
+is that almost nobody has written the rules.** 🟢 **So the deliverable is an institutional AI
+framework plus the technical controls that make it auditable**, and the regional assets to compose
+with are **Latam-GPT** (via UNESCO–CENIA, being integrated into ministry-facing tools) and the
+Observatory's partner network (CAF, CENIA, CETIC.br, ECLAC, Tec de Monterrey, ProFuturo, Ceibal and
+🆕 **Fundación Santillana**). 🔴 **Regulation is still pending everywhere that matters** — Brazil's
+**PL 2.338/2023** is in the Chamber, Chile's bill in first constitutional stage, Colombia's
+**CONPES 4144** a programme to 2030 rather than an obligation — 🟢 **which means a framework built now
+is a differentiator, not a compliance cost.**
+
+### Global
+
+🟢 **Cross-region, the one thing every channel agreed on: the market is moving from experimentation to
+governance.** 🔵 **Market figures, with their disagreement published rather than averaged:** $10.6 B
+→ **$42.48 B by 2030 at 41.5 % CAGR** (Research and Markets); **$12.3 B by 2026** (HolonIQ);
+**$136.79 B by 2035** (Azumo); North America **$3.68 B → $32 B by 2030**; EU **$2.64 B**. 🔴 **These
+rest on different definitions and are not reconcilable** — quoted as a range, never as a point.
+🟢 **The durable, licence-independent demand across all five regions is the same: purpose-built
+education AI with a human in the loop and an audit trail**, which is why `P632`
+(`compose/patterns.md`) wires exactly that.
+
+### 🔴 Declared gaps
+
+- 🔴 **No instrument in this file is first-hand this pass, and none can be** — all non-GitHub egress
+  is `000`.
+- 🔴 **No APAC education *adoption* rate was found** — ministry-level school AI policy for China,
+  India and Japan returned nothing, and the one APAC maturity figure (>50 % at *"repeatable"*) is
+  about businesses, not schools. 🟢 **Named as a gap rather than back-filled from a global figure.**
+- 🔴 **No LATAM instrument has been enacted**, so the region's regulatory column is still
+  forward-looking in every country this KB tracks.
+
 ## 🔴 Fifty-first pass, 2026-10-08 — the regional channel yields **zero** for the fourth consecutive pass, counted name by name, and EMEA reproduced a superseded date for the **fourth** time
 
 ⏱️ **Fifth pass of this date.** Four regional queries ran verbatim, one per region. **Every named

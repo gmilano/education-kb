@@ -4,6 +4,123 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-second pass, 2026-10-08 — five trends: a **false positive** in licence reading, a grant that is a set, a query noun that hid eleven passes of findings, a vertical cell that is structurally empty, and a regional channel that yielded **4 of 42**
+
+⏱️ **Sixth pass of this date.** Every figure below is read from payload or from a named channel on
+2026-10-08. **No star counts (`P479`).**
+
+### 🔴 Trend 1 — every licence defect this corpus had recorded was a false **negative**. This pass found the **mirror image**, and it is the more dangerous shape
+
+🔵 **Pass 51's `P624` existed because a six-filename probe returned 404 ×6 on `idempiere/idempiere`,
+a project that ships its grant twice.** The probe under-read: a real grant, missed, filed `UNKNOWN`.
+🔴 **This pass measured the opposite failure.**
+[`michael-borck/assessment-rubrics-for-ai`](https://github.com/michael-borck/assessment-rubrics-for-ai)
+ships `LICENSE.md` at **200**, **2,859 B**, header `# License & Usage Terms` — 🔴 **and the document
+is a refusal**: use is granted **within Curtin University** only, with
+`✗ Commercial use`, `✗ Distribution to other institutions`,
+`✗ Incorporation into another institution's materials` written in the payload.
+
+🔵 **Why the mirror image is worse.** A false negative costs probes and shows up as a gap — visible,
+and it nags. 🔴 **A false positive produces a shortlist row that a human reads as permission.** A
+filename-keyed classifier calls this repo open; so does one keyed on the word *License* in the
+header. 🟢 **`P628` is the fix and it is a taxonomy, not a parser**: `UNKNOWN` (not read) →
+probe again; `PROPRIETARY` (read, and it refuses) and `UNLICENSED` (read the whole tree, no grant) →
+**stop**. 🔴 **Collapsing the last two into the first turns a settled refusal into a retry** — and
+prints *"licence not determined"* where the honest answer is *"licence determined, and it says no"*.
+
+### 🟢 Trend 2 — a repository's grant is a **set of (path, family) pairs**, and for a content repo the code licence is the least important member
+
+🟢 [`grant-mccurdy/instructional-ai-workflows`](https://github.com/grant-mccurdy/instructional-ai-workflows)
+ships **three** grants, read from payload: `LICENSE` **1,070 B** (**MIT**, code),
+`LICENSE-CONTENT.md` **662 B** (**CC BY 4.0** — documentation, diagrams, generated charts),
+`LICENSE-DATA.md` **722 B** (**CC BY 4.0** — original **synthetic datasets**).
+
+🔴 **A sweep reading only `LICENSE` answers `MIT`, and that answer is not wrong — it is incomplete.**
+🔵 **That is the dangerous shape of this trend: the reported value is true of the code and silently
+false of the deliverable**, because in an assessment-rubric repo **the rubrics are the product**.
+🟢 **The operational consequence:** lift the workflow code and you are MIT-clean and may ship closed;
+lift the rubric text or the synthetic student records into a client deliverable and **you owe
+attribution to Grant McCurdy** — and nothing in `LICENSE` says so. 🔴 **This corpus had no column for
+a second grant, so it would have recorded the obligation nowhere.**
+
+### 🟢 Trend 3 — "zero new agents for eleven passes" was partly a property of the **query noun**, not of the shelf
+
+🔵 **Eleven consecutive passes ran `top open source AI agents education 2026 github MIT` and recorded
+zero new agents; nineteen declared the shelf saturated.** 🟢 **This pass ran the mandated query
+verbatim — it returned the same horizontal/catalogue/course classes, zero new — and then ran a query
+naming the *task* instead of the industry** (AI **grading and rubric** work). 🔴 **Three unfiled
+slugs came back on the first attempt**, all three verified by `ls-remote` against a negative control,
+all three read from payload.
+
+🔵 **The mechanism, stated so it transfers:** an **industry** term retrieves industry *commentary* —
+market lists, awesome-lists, courses — because that is what is written *about* an industry. A
+**task** term retrieves *code*, because that is what code is named after. 🔴 **A saturation claim is
+therefore relative to a query shape, and this corpus had been publishing it as a property of the
+world.** 🟢 **Both queries now run weekly**; the mandated one stays verbatim because its yield is
+itself the trend being recorded.
+
+### 🔴 Trend 4 — the education vertical is **never both permissive and educational**, and three passes make that a regularity rather than an observation
+
+🟢 **The mandated vertical query has now returned the same six platforms three passes running**, and
+this pass it stated the finding in its own words: *"didn't turn up an education-specific ERP or CRM
+released under MIT or Apache."* 🟢 **Cross-tabulated (`P631`, `verticals/solutions.md`):**
+
+| | 🟢 Permissive | 🔴 Copyleft |
+|---|---|---|
+| 🟢 **Education domain model** | 🔴 **∅ — empty, three passes** | ERPNext, Moodle, Open edX, Chamilo, ILIAS, Kolibri, OpenEduCat, Sakai |
+| 🔴 **Generic business platform** | OFBiz, Huly, Krayin, BottleCRM | Dolibarr, iDempiere |
+
+🔵 **The empty cell has a cause, not a deficiency: the vertical's domain knowledge was built inside
+GPL projects, and the permissive layer of this ecosystem is horizontal.** 🔴 **And this pass found
+the cell has a second, subtler population** — education domain knowledge **published openly and
+licensed privately** (Trend 1's Curtin suite). 🟢 **So the engagement cost is quotable up front:**
+a GPL-tolerant client gets the domain model free and AI goes beside it as a side-car; a client who
+cannot take GPL takes a permissive generic platform and **pays to build the student, enrolment and
+assessment model**.
+
+### 🟡 Trend 5 — the regional channel yielded **4 of 42**, its first non-zero in five passes, and two of the four are not instruments
+
+🔵 **Denominator stated, and it differs from `intel/market.md`'s by design:** this file counts
+**instruments and bodies only** (**42**); `market.md` counts those **plus the 9 market and adoption
+figures** (**51**). 🟢 **Same channel, same result — 🟡 4 new in both.**
+
+| 🆕 | Region | Class |
+|---|---|---|
+| Washington **HB 2225** | **North America** | 🟢 **instrument** — pairs with OR **SB 1546**; the first two states this KB holds that regulate a *minor's pattern of use* rather than a *school's decision* |
+| UK ***AI Opportunities Action Plan*** (Jan 2025) | **EMEA** | 🟢 **instrument** — and it **explains an absence** this KB had recorded as a gap: the UK has no education-specific AI statute because its instrument is a plan |
+| **Byjus** | **APAC** | 🔴 **not an instrument** — a vendor named in a market report |
+| **Fundación Santillana** | **LATAM** | 🔴 **not an instrument** — an Observatory partner body |
+
+🔴 **So the instrument yield is 2 / 42**, and pass 51's zero was closer to the truth than a bare
+"4 new" would suggest. 🟢 **Published this way because `P469` is this KB's own record of what happens
+when a status is asserted instead of measured.**
+
+🔴 **And the whole regional layer is second-hand by force this pass:** every non-GitHub host measured
+**`000`** at the egress proxy (`gov.uk`, `unesco.org`, `creativecommons.org`, `multistate.us`), with
+`WebFetch` returning `EGRESS_BLOCKED` by name. 🔵 **A bill page that was attempted and is unreachable
+is a different epistemic state from one never tried** — recorded as a channel limit, not as
+confidence.
+
+🟢 **One thing that did *not* recur: the EMEA date defect.** Four consecutive passes caught a source
+dating the AI Act's full effect to *August 2026*. 🟢 This pass's channel reported enforcement from
+**2026-08-02**, omnibus in force **2026-07-27**, and the deferred dates **2027-12-02** (stand-alone
+high-risk — education's class) and **2028-08-02** (embedded). 🔴 It also flagged the revision *"still
+awaits publication in the Official Journal"*, which this KB cannot check (`eur-lex.europa.eu`
+unreachable).
+
+### 🟢 The measurement trend underneath all five: byte counts are fingerprints, not tests (`P630`)
+
+🔵 **Pass 51 refuted a "±1 B trailing-newline tolerance" as a GPL-3.0 identity test. This pass
+settles the constructive half on MIT**: three payloads at **1,070** / **1,069** / **1,068 B**, all
+MIT, `diff` clean apart from the copyright line. `1,070 − 1,068` decomposes to **+1** (holder name
+one character longer) **+1** (final newline, `0x0a` vs `0x2e`); `1,069 − 1,068` is a **pure
+newline**. 🔴 **Two 1 B deltas, two different causes, in a corpus of three.** 🟢 **The decomposition
+`cp + nl == measured delta` is the test; the byte count is a fingerprint** — asserted in
+`compose/code/p627-multi-grant-repo/`, 🟢 **31/31 green, offline**, which also retains a defect it
+found in **itself**: the `P479` no-stars check was first keyed on the substring `star` and went red
+on clean data, because `opensource-startup-crm` contains it. 🔵 **A substring is not a token** —
+same class as `P409`.
+
 ## 🔴 Fifty-first pass, 2026-10-08 — five trends: a tolerance built on the one divergent specimen, a version lost to `<center>`, a CRM whose slug does not exist, a shelf that is never both permissive and educational, and a regional channel measured empty for the fourth pass
 
 ⏱️ **Fifth pass of this date.** Every figure below is read from payload or from a named channel on
