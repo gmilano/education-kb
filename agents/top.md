@@ -4,6 +4,116 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fiftieth pass, 2026-10-08 — the Spanish pipeline is **not** GPL-locked: the corpus relicensed five years ago and the restriction is a **version pin**
+
+⏱️ **Fourth pass of this date.** Licences read first-hand on 2026-10-08 from the repository
+**payload** and from model **metadata** served by `raw.githubusercontent.com`, with HTTP status
+recorded per filename **and per git ref**. Existence by `git ls-remote --heads` against a negative
+control in the same run (`P609`: `UniversalDependencies/UD_Spanish-NEGATIVE-CONTROL-no-existe-50`
+→ **0 refs**). **No star counts** (`P479`).
+
+🔴 **Zero new education agents for the tenth consecutive pass; the shelf is declared saturated for
+the eighteenth.** The mandated query ran verbatim, globally and once per region, and returned the
+same three classes passes 48 and 49 recorded: horizontal agents (OpenHands, CrewAI, LangGraph,
+OpenClaw, OpenAI Codex), agent *catalogues* (`ashishpatel26/500-AI-Agents-Projects`,
+`ARUNAGIRINATHAN-K/awesome-ai-agents-2026`, `caramaschiHG/awesome-ai-agents-2026`) and *courses*
+(`microsoft/ai-agents-for-beginners`, `huggingface/agents-course`, `pguso/agents-from-scratch`).
+🟢 **Every name was checked against the live tree and every one was already recorded.** 🔵 Two
+course-tier names the global query added — `rohitg00/ai-engineering-from-scratch` and
+`HugeCatLab/ChatTutor` — are **courses and a demo tutor**, not composable agents, and are recorded
+here as *seen and declined* rather than added to the shelf.
+
+### 🟢 `P609` — `UD_Spanish-AnCora` is **CC BY 4.0**, and has been since **r2.9** (2021-11-15)
+
+🔴 **Pass 49 recorded this corpus as GPL-3.0 and called the restriction structural.** It quoted the
+README, from payload, correctly: *"The GNU license is inherited from the original dataset,
+downloaded from the AnCora website."* 🔴 **That sentence is vestigial.** It sits in the README's
+**Introduction** and it survived the relicensing that the README's **own changelog** records.
+
+Read first-hand this pass, **one probe per git ref**, `LICENSE.txt` and `README.md` at each:
+
+| Tag | `LICENSE.txt` | Bytes | README `License:` | GNU/GPL mentions in README |
+|---|---|---|---|---|
+| `r2.7` | 🔴 `GNU GENERAL PUBLIC LICENSE 3.0` | 68 | 🔴 **GNU GPL 3.0** | 2 |
+| **`r2.8`** | 🔴 `GNU GENERAL PUBLIC LICENSE 3.0` | 68 | 🔴 **GNU GPL 3.0** | 2 |
+| **`r2.9`** | 🟢 **CC BY 4.0** | 189 | 🟢 **CC BY 4.0** | 🟡 **1** — the vestigial sentence |
+| `r2.10` | 🟢 **CC BY 4.0** | 189 | 🟢 **CC BY 4.0** | 🟡 1 |
+| `r2.18` | 🟢 **CC BY 4.0** | 189 | 🟢 **CC BY 4.0** | 🟡 1 |
+
+🟢 **The changelog entry, quoted from payload at `r2.18`:**
+
+> `* 2021-11-15 v2.9` — *"The license changed to CC BY 4.0 (https://doi.org/10.5281/zenodo.4762030)."*
+
+🟢 **The mention count is the mechanism, and it is measurable:** the relicensing changed the
+machine-readable `License:` field and the `LICENSE.txt` payload, and left the prose paragraph
+standing. 🔴 **2 → 1, not 2 → 0.** A reader who greps for `GNU` still finds a hit at `r2.18`.
+
+⚠️ **Primary refused, stated rather than claimed.** `doi.org` (the Zenodo record the changelog
+cites) → 🔴 **`403 CONNECT tunnel failed`** from this environment's egress proxy. 🔵 Same class as
+`Gap 56` / `Gap 251`. 🟢 **It is not load-bearing:** the relicensing is established from the
+repository payload at two tags, which is a stronger read than the DOI landing page.
+
+### 🟢 `P610` — spaCy's GPL-3.0 is **correct**, and frozen at the version it pinned
+
+🔵 **The obvious hypothesis on finding `P609` is "spaCy is wrong". It is not.** Read first-hand from
+`explosion/spacy-models`, `meta/es_core_news_sm-<ver>.json`, HTTP 200 each:
+
+| Model version | `license` | `sources[0].name` | `sources[0].license` |
+|---|---|---|---|
+| `3.5.0` | 🔴 GNU GPL 3.0 | **UD Spanish AnCora v2.8** | 🔴 GNU GPL 3.0 |
+| `3.6.0` | 🔴 GNU GPL 3.0 | **UD Spanish AnCora v2.8** | 🔴 GNU GPL 3.0 |
+| `3.7.0` | 🔴 GNU GPL 3.0 | **UD Spanish AnCora v2.8** | 🔴 GNU GPL 3.0 |
+| `3.8.0` | 🔴 GNU GPL 3.0 | **UD Spanish AnCora v2.8** | 🔴 GNU GPL 3.0 |
+| `3.8.1` · `3.9.0` · `4.0.0` | — | — | 🔵 **HTTP 404** — `3.8.0` is the latest |
+
+🟢 **`v2.8` was GPL-3.0** (`P609`, measured at the tag). 🟢 **So the declaration is faithful to the
+artefact Explosion actually trained on, and the restriction is real for anyone installing
+`es_core_news_sm` today.** 🔴 **What is *not* real is the reason pass 49 gave for it.** The licence
+is not inherited from an immovable upstream; it is **pinned to a ref that was superseded on
+2021-11-15** and has not been revisited across **four** minor model releases.
+
+🔵 **Why this distinction is the whole finding.** *"The Spanish corpus is GPL"* closes the question.
+*"The Spanish model is built from a five-year-old tag of a corpus that is now CC BY 4.0"* opens a
+route, and `P614` in `compose/patterns.md` prices it.
+
+### 🟢 `P611` — the Spanish treebank shelf, measured end to end (`Gap 254`'s own next probe, executed)
+
+🔵 **`Gap 254` named this as its cheapest next probe** — *"enumerate the other UD Spanish treebanks
+for a non-GPL grant, exactly as pass 47 did for Portuguese."* 🟢 **Run this pass.** All three read
+from payload, classified through this KB's **shared** hardened classifier (`lib/license_family.sh`,
+never an inlined one):
+
+| Treebank | Refs | `LICENSE.txt` | Bytes | `family_of` | README `License:` |
+|---|---|---|---|---|---|
+| [`UD_Spanish-AnCora`](https://github.com/UniversalDependencies/UD_Spanish-AnCora) (`r2.9`+) | 4 | 🟢 **CC BY 4.0** | 189 | 🟢 `CC-BY-4.0` | 🟢 CC BY 4.0 |
+| [`UD_Spanish-GSD`](https://github.com/UniversalDependencies/UD_Spanish-GSD) | 3 | 🟡 **CC BY-SA 4.0** | 202 | 🟡 `CC-BY-SA-4.0` | 🟡 CC BY-SA 4.0 |
+| [`UD_Spanish-PUD`](https://github.com/UniversalDependencies/UD_Spanish-PUD) | 3 | 🟡 **CC BY-SA 3.0** | 19 556 | 🟡 `CC-BY-SA-3.0` | 🟡 CC BY-SA 3.0 |
+
+🟢 **`LICENSE` and `LICENSE.md` returned 404 for all three; only `LICENSE.txt` carries the grant** —
+the `P502` shape, and the reason a probe that reads one filename and stops records "no grant" for a
+corpus that has one.
+
+🟢 **The verdict `Gap 254` was waiting for: the most permissive Spanish treebank is AnCora itself.**
+🔴 **`Gap 254`'s Route C — *"retrain on a permissive Spanish corpus — none found by this KB"* — is
+REFUTED.** The corpus was found, and it is the same one the model already uses, five tags later.
+
+### 🟢 `P613` — and the payload that found all this broke this KB's **shared** licence classifier
+
+🔵 **Full treatment in `repos/foundations.md` and `intel/trends.md` Trend C.** In one line: the 68-byte
+`r2.8` payload reads `GNU GENERAL PUBLIC LICENSE 3.0`, and `lib/license_family.sh` answered 🔴
+**`GPL-2.0`** — a version the payload never names. 🟢 **Fixed this pass, with 16 new assertions
+(152 → 168), 6/6 mutants killed, and zero regressions across all 110 suites in the tree.**
+
+### 🔴 The corrections this pass makes to its own predecessor, stated in one place
+
+| Claim | Pass | Status after `P609`–`P611` |
+|---|---|---|
+| *"`es_core_news_sm` declares GNU GPL 3.0 at 3.8.0 and 3.7.0"* | 49 | 🟢 **STANDS**, and extended to 3.5.0 and 3.6.0 (`P610`) |
+| *"inherited from `UD_Spanish-AnCora`"* | 49 | 🟡 **TRUE OF `v2.8` ONLY.** AnCora is CC BY 4.0 from `r2.9` (`P609`) |
+| *"the GNU licence is inherited from the original dataset"* (quoted as current) | 49 | 🔴 **VESTIGIAL PROSE**, superseded by the same README's changelog (`P609`) |
+| *"no permissive Spanish corpus found by this KB"* (`Gap 254` Route C) | 49 | 🔴 **REFUTED** — AnCora `r2.9`+, CC BY 4.0 (`P611`) |
+| *"the restriction is structural, a tier above `Gap 237`"* | 49 | 🔴 **REFRAMED** — it is a **version pin**, and pins move (`P610`) |
+
 ## 🔴 Forty-ninth pass, 2026-10-08 — the Spanish feature layer is **GPL-3.0**, and this KB had never looked at it
 
 ⏱️ **Third pass of this date.** Licences read first-hand on 2026-10-08 from the repository

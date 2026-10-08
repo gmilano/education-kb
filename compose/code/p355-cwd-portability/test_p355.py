@@ -132,5 +132,71 @@ class Inventario(unittest.TestCase):
         self.assertTrue(any(s.endswith('.sh') for s in ss))
 
 
+class P615RutaAbsolutaALaRaizDelRepo(unittest.TestCase):
+    """`P615` (pase 50): la clase que el vocabulario EFIMERO no cubria.
+
+    `P614` es el especimen: `p550/test_sweep.sh:144` hacia
+    `. /home/user/education-kb/compose/code/lib/license_family.sh`, o sea que la suite solo
+    corria en la maquina del pase que la escribio. En cualquier otro clon el `source` falla,
+    la funcion queda sin definir y la suite ACUSA a su dependencia -- una forma de fallo peor
+    que `CRASH` o `SILENCIOSO`, porque produce un veredicto falso con nombre de culpable.
+    """
+
+    def _hit(self, linea):
+        return bool(P.EFIMERA.search(linea)
+                    or (P.ABSOLUTA.search(linea) and not P._es_comentario(linea)))
+
+    # Las fixtures se ARMAN por partes a proposito. Si la ruta apareciera literal en una
+    # linea de este archivo, `test_el_arbol_vivo_esta_limpio_de_esta_clase` marcaria su
+    # propia suite -- el detector acusandose a si mismo. La alternativa era eximir este
+    # archivo del barrido, y una exencion por nombre de archivo es justo donde se esconderia
+    # una ocurrencia real mañana. `P598` v1 pago esta leccion con 4 falsos positivos de 6.
+    @staticmethod
+    def _ruta(verbo, base, usuario, repo):
+        return verbo + ' /' + base + '/' + usuario + '/' + repo + '/compose/code/lib/x.sh'
+
+    def test_el_especimen_p614_se_detecta(self):
+        self.assertTrue(self._hit(self._ruta('.', 'home', 'user', 'education-kb')))
+
+    def test_la_palabra_source_tambien(self):
+        self.assertTrue(self._hit(self._ruta('source', 'home', 'alice', 'education-kb')))
+
+    def test_users_de_macos_tambien(self):
+        self.assertTrue(self._hit(self._ruta('.', 'Users', 'bob', 'gaming-kb')))
+
+    def test_el_vocabulario_efimero_original_no_se_rompe(self):
+        self.assertTrue(self._hit('TMP=/tmp/foo'))
+        self.assertTrue(self._hit('cd "$TMPDIR"'))
+        self.assertTrue(self._hit('x=/var/tmp/y'))
+
+    def test_la_ruta_relativa_que_es_el_arreglo_no_se_marca(self):
+        self.assertFalse(self._hit('. ../lib/license_family.sh'))
+
+    def test_un_comentario_que_CITA_la_ruta_vieja_no_se_marca(self):
+        """La leccion de `P598` v1: un detector que castiga el acto de corregir se apaga.
+
+        El arreglo de `P614` documenta la ruta vieja textualmente en un comentario. Si este
+        barrido la marcara, el pase siguiente borraria la documentacion para poner el gate
+        en verde -- exactamente al reves de lo que se quiere.
+        """
+        self.assertFalse(self._hit(
+            '#     ' + self._ruta('.', 'home', 'user', 'education-kb')))
+        self.assertFalse(self._hit(
+            '  #  ' + self._ruta('source', 'home', 'user', 'education-kb')))
+
+    def test_una_ruta_absoluta_que_no_es_la_raiz_del_repo_no_se_marca(self):
+        self.assertFalse(self._hit('echo "see /home/docs"'))
+
+    def test_el_arbol_vivo_esta_limpio_de_esta_clase(self):
+        """La prueba de aceptacion de `P614`: cero ocurrencias en las suites del arbol."""
+        root = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
+        sucias = []
+        for rel in P.suites(root):
+            for i, l in P.ephemeral_refs(root, rel):
+                if P.ABSOLUTA.search(l) and not P._es_comentario(l):
+                    sucias.append((rel, i, l.strip()))
+        self.assertEqual(sucias, [], f'rutas absolutas a la raiz del repo: {sucias}')
+
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)

@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fiftieth pass, 2026-10-08 — week of 2026-10-08: the week's repos are **licence channels**, read per git ref
+
+⏱️ **Fourth pass of this date.** 🔵 **APPEND-ONLY — the history below this section is intact.**
+Licences from **payload**, per filename and **per git ref**, HTTP status recorded. **No star counts**
+(`P479`). Negative control in the same run: `UD_Spanish-NEGATIVE-CONTROL-no-existe-50` → **0 refs**.
+
+### 🟢 The Spanish treebank tier, enumerated — `Gap 254`'s own next probe, executed
+
+| Repo | Refs | `LICENSE.txt` | Bytes | `family_of` | Note |
+|---|---|---|---|---|---|
+| [`UniversalDependencies/UD_Spanish-AnCora`](https://github.com/UniversalDependencies/UD_Spanish-AnCora) | 4 | 🟢 **CC BY 4.0** (`r2.9`+) · 🔴 GPL-3.0 (`≤ r2.8`) | 189 / 68 | 🟢 `CC-BY-4.0` | 🆕 **the relicensing `P609` found: `r2.9`, 2021-11-15** |
+| [`UniversalDependencies/UD_Spanish-GSD`](https://github.com/UniversalDependencies/UD_Spanish-GSD) | 3 | 🟡 **CC BY-SA 4.0** | 202 | 🟡 `CC-BY-SA-4.0` | 🆕 ShareAlike travels to derivatives |
+| [`UniversalDependencies/UD_Spanish-PUD`](https://github.com/UniversalDependencies/UD_Spanish-PUD) | 3 | 🟡 **CC BY-SA 3.0** | 19 556 | 🟡 `CC-BY-SA-3.0` | 🆕 full licence text, not a pointer; parallel corpus |
+| [`UniversalDependencies/UD_Portuguese-Bosque`](https://github.com/UniversalDependencies/UD_Portuguese-Bosque) | 5 | 🟡 **CC BY-SA 4.0** at **both** `r2.8` **and** `r2.18` | 269 | 🟡 `CC-BY-SA-4.0` | 🟢 **the control: unchanged, so the PT chain was sound by luck of stability** |
+| [`explosion/spaCy`](https://github.com/explosion/spaCy) | 78 | 🟢 **MIT** | 1 128 | 🟢 `MIT` | 🟢 re-confirmed; © 2016-2024 ExplosionAI GmbH / spaCy GmbH / Matthew Honnibal |
+| [`explosion/spacy-models`](https://github.com/explosion/spacy-models) | 2 | 🔴 **none at root** | — | — | 🟢 the channel: licences live **per artefact** in `meta/<model>-<ver>.json`, **with the pinned corpus version in `sources[].name`** |
+| [`spdx/license-list-data`](https://github.com/spdx/license-list-data) | — | 🟢 canonical texts, HTTP 200 | 34 674 / 17 337 / 42 098 | — | 🟢 the **negative controls** that licensed the `P613` fix |
+
+🔴 **`LICENSE` and `LICENSE.md` are 404 for all three Spanish treebanks; only `LICENSE.txt` carries
+the grant.** 🔵 **The `P502` shape — a probe that reads one filename and stops records "no grant" for a
+corpus that has one.**
+
+### 🟢 The verticals tier, re-read from payload this week
+
+| Repo | Refs | Payload | `family_of` |
+|---|---|---|---|
+| [`frappe/education`](https://github.com/frappe/education) | 20 | 🔴 **lowercase `license.txt`, 19 B**: `License: GNU GPL V3` | 🔴 `GPL-3.0 (declaracion)` |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 17 | 🔴 `master/LICENSE`, 8 241 B | 🔴 `LGPL-3.0` |
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 8 | 🟢 `master/LICENSE`, 11 906 B | 🟢 `Apache-2.0` |
+| [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | 7 | 🟢 `master/LICENSE`, 1 078 B | 🟢 `MIT` |
+| [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) | 1 | 🟢 `master/LICENSE`, 1 077 B | 🟢 `MIT` |
+| [`hcengineering/platform`](https://github.com/hcengineering/platform) | 67 | 🟡 `main/LICENSE`, 14 197 B | 🟡 **`EPL-2.0`** — 🔴 the roundups say Apache-2.0 |
+
+🔴 **`frappe/education`'s grant was missed by a four-filename probe** (`LICENSE`, `LICENSE.txt`,
+`LICENSE.md`, `COPYING` → **404 on `main`, `master` and `develop`**) and found only at lowercase
+**`license.txt`**.
+
+### 🔴 The GitHub trending channel, measured rather than summarised
+
+🟡 **`github trending education AI 2026` returned no new education agent or platform repository for the
+tenth pass.** What it returned was the **course tier** — `microsoft/generative-ai-for-beginners`,
+`rohitg00/ai-engineering-from-scratch`, `LLMs-from-scratch`, `karpathy/nanochat`,
+`HugeCatLab/ChatTutor`, `pguso/agents-from-scratch`, `TovTechOrg/Tov-learn` — 🟢 **recorded as seen and
+declined**, because a course is not a composable artefact for a studio engagement.
+
+⚠️ **Channel limit, stated:** GitHub's live `/trending` page was **not reachable** through this
+channel; the results are third-party tracker snapshots and topic pages. 🔵 **Same class of limit as
+the blocked primaries, and the reason this KB does not publish star counts (`P479`).**
+
 ## 2026-10-08 — pass 49 (third of this date)
 
 🔵 **APPEND-ONLY.** History below is untouched.

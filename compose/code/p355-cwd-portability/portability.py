@@ -23,6 +23,21 @@ import os, re, subprocess, sys
 
 EFIMERA = re.compile(r'/tmp/|\$TMPDIR|\bTMPDIR\b|/var/tmp')
 
+# `P615` (pase 50 del 2026-10-08). El vocabulario de arriba son rutas EFIMERAS, y se deja
+# INTACTO para que `resultado.2026-10-05.tsv` siga siendo reproducible. Lo que no cubria es
+# una ruta ABSOLUTA A LA RAIZ DEL REPO (`. /home/<user>/<algo>-kb/...`): la misma clase
+# --una suite que solo corre en la maquina que la escribio-- con una forma de fallo PEOR,
+# porque no crashea ni calla: ACUSA a su dependencia. `P614` es el especimen, en
+# `p550/test_sweep.sh:144`, y sobrevivio 112 pases de este barrido por vocabulario.
+ABSOLUTA = re.compile(r'^\s*(?:\.|source)\s+/(?:home|Users|root)/'
+                      r'|^[^#]*\b(?:\.|source)\s+/(?:home|Users|root)/[^/\s]+/[^/\s]*-kb/')
+
+# Una linea COMENTADA no es una invocacion. Sin esta guarda el barrido marca el comentario
+# que DOCUMENTA el defecto --el de `p550` cita la ruta vieja textualmente-- y un detector que
+# castiga el acto de corregir se apaga en una semana (la leccion de `P598` v1).
+def _es_comentario(l):
+    return l.lstrip().startswith('#')
+
 
 def suites(root):
     """Las suites del arbol: `test_*.py` y `test*.sh` bajo `compose/code/`."""
@@ -39,7 +54,8 @@ def suites(root):
 def ephemeral_refs(root, rel):
     """Lineas de la suite que nombran una ruta efimera. La clase de `P352`."""
     with open(os.path.join(root, rel), encoding='utf-8', errors='replace') as fh:
-        return [(i, l.rstrip('\n')) for i, l in enumerate(fh, 1) if EFIMERA.search(l)]
+        return [(i, l.rstrip('\n')) for i, l in enumerate(fh, 1)
+                if EFIMERA.search(l) or (ABSOLUTA.search(l) and not _es_comentario(l))]
 
 
 def run(root, rel, cwd, timeout=300):

@@ -300,8 +300,41 @@ osi_family_of() {
   # El control NEGATIVO que lo afirma vive en `p288-agpl-casefold/test_casefold.sh`.
   printf '%s' "$t" | grep -qi 'refers to version 3 of the GNU Affero General Public License' \
       && { echo "AGPL-3.0"; return; }
+  # P613 (pase 50 del 2026-10-08).  La rama GNU leia la version con un `grep -qi 'Version 3'`
+  # suelto, o sea que EXIGIA la palabra «version».  Un payload que nombra la version como
+  # NUMERO no la trae, y entonces esta rama caia al `||` y estampaba GPL-2.0 -- una version
+  # que el payload no nombra nunca.  Es P561 verbatim (el clasificador lee la FAMILIA e INVENTA
+  # la VERSION), en la rama que el pase 46 no audito cuando lo cerro para MPL y EPL.
+  #
+  # El payload que lo encontro es REAL y de 68 B, `UD_Spanish-AnCora` en su tag r2.8:
+  #     GNU GENERAL PUBLIC LICENSE 3.0
+  #     http://www.gnu.org/licenses/gpl.html
+  # Veredicto viejo: `GPL-2.0`.  GPL-2.0 y GPL-3.0 son INCOMPATIBLES entre si, y el error va
+  # hacia la version VIEJA -- la que no tiene concesion de patentes ni clausula anti-tivoization
+  # -- asi que un estudio que planifica sobre este veredicto razona sobre las obligaciones
+  # equivocadas.
+  #
+  # POR QUE LA SUITE NO LO VEIA, y es la leccion de P126 pt.2 otra vez: los cuatro textos
+  # CANONICOS (GPL-2.0, GPL-3.0, AGPL-3.0, LGPL-3.0 de SPDX) clasifican BIEN, porque todos
+  # escriben «Version 3, 29 June 2007» con la palabra entera.  El defecto es visible SOLO en
+  # los STUBS de titulo, que son justo lo que publican los treebanks y los datasets.  Medido:
+  # 4 de 5 formas reales de stub fallaban; la unica que pasaba era la que deletrea «Version 3».
+  #
+  # PRECISION, medida y no supuesta: el texto canonico de GPL-2.0 (17.337 B) contiene CERO
+  # ocurrencias de `version 3`, `v3`, `gplv3`, `3.0` y `License 3`, asi que ensanchar el
+  # discriminador de la 3 no puede robarle un payload GPL-2.0 legitimo.  El control NEGATIVO
+  # que lo afirma es el payload real de `OpenEMIS/core` (15.518 B) en la suite.
+  #
+  # Y «no declara version» pasa a ser una respuesta PROPIA, `GPL-UNVERSIONED`, igual que
+  # `EPL-UNVERSIONED` (P560), `MPL-UNVERSIONED` (P561) y `CC-BY...-UNVERSIONED` (P551): la
+  # rama GNU era la ultima que seguia adivinando.  P562: la correccion viaja al consumidor
+  # -- `GPL-UNVERSIONED` queda agregado a `OSI_RECONOCIDAS` en `p411-cession-identity-gate`.
   if printf '%s' "$t" | grep -qi 'GNU GENERAL PUBLIC LICENSE'; then
-     printf '%s' "$t" | grep -qi 'Version 3' && echo "GPL-3.0" || echo "GPL-2.0"; return; fi
+     if printf '%s' "$t" | grep -qiE 'version[[:space:]]+3|licen[cs]e[[:space:],]*v?3(\.0)?([^0-9]|$)|gpl[[:space:]]*-?v?3(\.0)?([^0-9]|$)'; then
+        echo "GPL-3.0"; return; fi
+     if printf '%s' "$t" | grep -qiE 'version[[:space:]]+2|licen[cs]e[[:space:],]*v?2(\.0)?([^0-9]|$)|gpl[[:space:]]*-?v?2(\.0)?([^0-9]|$)'; then
+        echo "GPL-2.0"; return; fi
+     echo "GPL-UNVERSIONED"; return; fi
   printf '%s' "$t" | grep -qi 'Educational Community License' && { echo "ECL-2.0"; return; }
   printf '%s' "$t" | grep -qi 'Apache License' && { echo "Apache-2.0"; return; }
   printf '%s' "$t" | grep -qi 'MIT License' && { echo "MIT"; return; }

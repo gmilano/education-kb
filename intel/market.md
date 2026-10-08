@@ -4,6 +4,132 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🔴 Fiftieth pass, 2026-10-08 — the regional channel yields **zero** for the third consecutive pass, and the EMEA channel reproduced a superseded date for the **third** time
+
+⏱️ **Fourth pass of this date.** 🔵 **All market and regulatory figures below are secondary and carry
+their source.** The four mandated regional queries ran verbatim, plus the global trends query.
+
+### 🔴 `P616` — measured name by name, and the one channel that returned something returned it **wrong**
+
+🔵 **Measured, not estimated.** Each named instrument, body, statistic and actor returned by the five
+queries was checked by name against the live tree:
+
+| Region | Named items returned | Already held | New |
+|---|---|---|---|
+| **North America** | 134 bills / 31 states, CA A.B. 1159, ID SB 1227, OK/MD human-oversight rules, H.R. 8747 (committee, 2026-07-21 markup), GA + MS CS-credit-with-AI, NYC K-8 moratorium, NC DPI guidance, *STUDENTS FIRST Act of 2026* (non-binding student framework), 86% org adoption, 60% US K-12 teacher use | 🟢 **all** | 🔴 **0** |
+| **EMEA** | EU AI Act Annex III education high-risk, Art. 50 transparency, Art. 4 AI literacy, *Digital Omnibus* (Council 2026-06-29), OECD *Digital Education Outlook 2026*, UNESCO GenAI guidance, EU market $2.64 B → $8.0 B at 31.9%, FI/EE/NL leading, UK £4 M, 10% of 450+ institutions with formal guidelines | 🟢 **all** | 🔴 **0** |
+| **APAC** | KR AI Basic Act (in force 2026-01-22), VN Law on AI (effective 2026-03-01, education high-risk), TW AI Basic Act (Dec 2025), CN *"AI + Education"* mandatory K-12 + Beijing 8 h/yr, AU AI Safety Institute + National AI Plan, SG MOE teacher-supervised P4, IN AI from Grade 3 (2026-27), Ipsos *Education Monitor 2026* | 🟡 **all but 3 figures** | 🟡 **3, all secondary** |
+| **LATAM** | UNESCO LAC Observatory (2026-04-14), IESALC/UNU-IAS 200 HEIs / 19 countries / 87% / 26% / 74% / 57% / 84-68-52% split, TALIS 2024 (BR 56 / CL 55 / CO 53 / CR 52 vs OECD 36), UNESCO–CENIA, IADB 193 solutions, Ceibal, Digital Education Council LATAM survey, MarketsandMarkets $105.6 M (2024) → $204.7 M (2029) | 🟢 **all** | 🟡 **2, both secondary** |
+
+🔵 **Pass 48 measured 23 of 24 held; pass 49 measured 24 of 24; pass 50 measures saturation again with
+five low-value secondary residuals.** 🟢 **Three consecutive passes at or near total saturation is a
+settled finding about the channel, not a run of bad luck:** the secondary regional-policy channel for
+education is **fully harvested for this window**, and `P601`'s prediction — *"the next new regional
+datum will come from a primary source or not at all"* — 🟢 **held for a second pass.**
+
+### 🔴 `P617` — the EMEA channel served the **superseded** enforcement date again, and this is the third instance
+
+🔴 **Returned this pass, verbatim from a secondary source:** *"the AI Office and national authorities
+started to enforce the AI Act from 2 August 2026"*, with education access and assessment named
+high-risk.
+
+🟢 **This KB holds the correction and holds it with the instrument number:** **Regulation (EU)
+2026/1744** (*Digital Omnibus on AI*) — Parliament **2026-06-16**, Council **2026-06-29**, OJ
+**2026-07-24**, in force **2026-07-27** — deferred **Annex III stand-alone** high-risk, *education
+named explicitly*, from **2026-08-02** to **2027-12-02**, and Annex I embedded from 2027-08-02 to
+**2028-08-02**. 🟢 **Article 50 transparency was NOT touched: its clock still runs from 2026-08-02.**
+
+| Instance | Pass | What the channel said |
+|---|---|---|
+| 1st | ~32 → caught at 58 | *"full enforcement from August 2026"* — and this KB's own sections had **reverted** to it |
+| 2nd | 49 (`P505` lineage) | same superseded date, re-served |
+| 🔴 **3rd** | **50** | same superseded date, re-served again |
+
+🔴 **Three instances is a property of the channel, not an accident.** 🟢 **The commercial consequence,
+stated so it can be quoted in a pitch:** an EMEA engagement scoped to *"Annex III conformity
+assessment required before August 2026"* is scoped **16 months early** for stand-alone high-risk
+education systems — 🔴 **but an engagement that therefore relaxes Article 50 transparency is wrong in
+the other direction**, because Art. 50 is live **now**, 67 days in as of this pass.
+
+⚠️ **Primary still refused.** `eur-lex.europa.eu` (CELEX 32024R1689) and
+`digital-strategy.ec.europa.eu` were re-probed in this run — 🔴 **both `000`.** `Gap 56` / `Gap 241`
+stay open for that reason and no other.
+
+### 🟡 `P618` — the five secondary residuals, named and ranked rather than padded into the tables
+
+🔵 **These are the only items the five queries returned that are not in the live tree.** 🔴 **All five
+are secondary, none is a repository or an instrument, and none changes a verdict.** They are recorded
+so that a later pass does not re-pay for the search:
+
+| Datum | Region | Source class | Why it is not in a table |
+|---|---|---|---|
+| World Bank: AI maths tutor + career coach, **85 public schools**, ~**4 500** fifth-year secondary students, **Lima**, since **2026-03** | **LATAM** | World Bank *results* page (secondary) | 🟡 **The most useful of the five** — a named, sized, dated public-sector deployment. 🔵 Distinct from `eai6/ai-tutor` (MIT, World Bank Group holder), which this KB already holds and which is **Seychelles/EMEA** |
+| Google.org **AI Opportunity Fund**: +$10 M APAC, $37 M cumulative | **APAC** | vendor blog | 🔴 funding, not capability; no artefact to probe |
+| UNESCO LAC Observatory partners **ProFuturo**, **IRCAI** | **LATAM** | UNESCO (primary-ish) | 🟡 two partner names missing from an otherwise complete partner list already held |
+| KenResearch: APAC AI-in-education **$2.85 B (2026)**, **35.3% CAGR**; players incl. Byju's | **APAC** | commercial research | 🔴 unverifiable forecast; the CAGR figure already appears in this KB from another vendor |
+| Charlotte-Mecklenburg district AI policy | **North America** | policy tracker | 🔴 one more district in a list already held at Chicago and Denver |
+
+🟢 **Written down explicitly because an informed gap is information and silence looks exactly like
+coverage.** 🔴 **No region returned nothing: all four returned something, and four of four returned
+material this KB already had.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **The `P613` finding is the sellable one here, and it is a compliance artefact, not a feature.**
+State rules now require **human oversight** for high-stakes decisions (OK, MD) and restrict training
+on student data (CA A.B. 1159, ID SB 1227). 🔴 **A licence verdict that names the wrong GPL version is
+a defect in exactly the artefact those rules make auditable.** Offer: a **licence-provenance pack**
+per deliverable — per-artefact grant, read at the **pinned ref**, with HTTP status and byte count —
+which is cheap to produce once (`P619`, `compose/patterns.md`) and is the evidence an oversight
+requirement actually consumes.
+🔵 **Federal timing stays a watch item, not a plan:** H.R. 8747 passed committee on **2026-07-21** and
+is **not** enacted.
+
+### EMEA
+
+🔴 **The date correction is worth money twice.** Scope **Annex III stand-alone** education high-risk
+to **2027-12-02** — not August 2026 — which buys a client 16 months of runway that three independent
+secondary channels would have spent for them (`P617`). 🟢 **And scope Article 50 transparency as live
+today**, because the Omnibus did not move it and the channels conflate the two.
+🟢 **`P609` is directly commercial in EMEA.** A Spanish-language deliverable for a public institution
+in Spain no longer has to choose between GPL-3.0 and a reimplementation: **AnCora `r2.9`+ is CC BY
+4.0** (`P611`), so the permissive route is a **retrain**, not a rewrite.
+
+### APAC
+
+🟢 **Mandate-driven curriculum work is the live demand** — CN mandatory K-12 AI with Beijing at 8 h/yr,
+IN from Grade 3 in 2026-27, KR's AI-focused secondary pipeline — against **SG**'s explicitly cautious,
+teacher-supervised posture. 🔵 **The regulatory spread is the constraint to design for:** KR's AI Basic
+Act is in force (2026-01-22) with a foreign-provider domestic-representative duty, and **VN** names
+education among its high-risk sectors (effective 2026-03-01), with high-risk generally conditioned on
+the AI output being the **sole** basis for a decision without meaningful human review.
+🟢 **So the architecture that sells across APAC is the one with a human-decision seam**, documented —
+the same seam OK/MD require in North America.
+
+### LATAM
+
+🟢 **The region's own measured defect is the opening: 87% of 200 HEIs across 19 countries use AI in at
+least one area, and only 26% have a formal framework** (UNESCO IESALC/UNU-IAS). 🟢 **That is a
+governance engagement, not a tooling one**, and it is the gap UNESCO's LAC Observatory
+(**2026-04-14**, Santiago, roadmap 2026–2029) exists to close.
+🟢 **`P609`/`P611` land hardest here.** Spanish is the delivery language for most of the region, and
+the finding converts *"the Spanish NLP pipeline is GPL"* into *"the Spanish corpus is **CC BY 4.0**
+and the shipped model is pinned to a 2021 tag."* 🔴 **For public-sector work GPL-3.0 is usually
+acceptable anyway** — but the client's own procurement rules often are not aware of that, and now
+there is a permissive answer when they are not.
+🔵 **The World Bank Peru deployment (`P618`: 85 schools, ~4 500 students, Lima, since 2026-03) is the
+nearest public-sector reference case**, flagged secondary.
+
+### Global
+
+🟢 **The pass's own transferable product is `P619`'s pre-flight** (`compose/patterns.md`): read every
+third-party licence **at the ref the consuming artefact pins**, and read the default branch too, and
+**compare**. 🔴 **`P612` is the evidence it is needed** — two independent reads agreed on "GPL" and the
+agreement was an accident of a five-year-old sentence. 🔵 **This is not an education-specific control**;
+it applies to any dependency whose grant is read once and inherited thereafter, which is all of them.
+
 ## 🔴 Forty-ninth pass, 2026-10-08 — the regional channel's new-information yield this window is **zero**, measured name by name
 
 ⏱️ **Third pass of this date.** 🔵 **All market and regulatory figures below are secondary and carry
@@ -48,7 +174,7 @@ into force *"27 July 2026"* — 🔴 **which is exactly the identifier `Gap 241`
 this environment cannot read.** 🔵 **So the date must still not appear in a client deliverable as
 settled law.**
 
-## Opportunities by region
+## Opportunities by region — superseded (the live block is at the top of this file)
 
 ### North America
 

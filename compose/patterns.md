@@ -4,6 +4,145 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fiftieth pass, 2026-10-08 — `P619`: the **two-ref licence read**, and the recipe that unpins a Spanish assessment build from GPL-3.0
+
+⏱️ **Fourth pass of this date.** 🔵 **All licences read first-hand on 2026-10-08** from payload or model
+metadata, **per git ref**, HTTP status recorded per filename.
+
+### 🟢 `P619` — Recipe: the two-ref licence read (this **replaces** `P604` step 3)
+
+🔴 **Why `P604` step 3 is being rewritten one pass after it was published.** It said *"each corpus's own
+`LICENSE`"* and did not say **at which ref**. Pass 49 ran it against the default branch, got an answer
+that agreed with the artefact's metadata, and retired the question. 🔴 **Both legs were wrong and they
+agreed** (`P612`): the metadata was right about a **2021 tag**, and the default-branch read matched a
+**vestigial prose sentence** that the relicensing left behind.
+
+🔵 **The defect is not a missing probe. It is a missing *comparison*.**
+
+**The pre-flight, four probes, minutes of work:**
+
+| # | Probe | Command shape | What it answers |
+|---|---|---|---|
+| 1 | the artefact's own metadata | `curl …/meta/<model>-<ver>.json` → `.license` | the licence of the thing you actually ship |
+| 2 | the artefact's **`sources[]`**, including **the version string in the name** | same payload → `.sources[].name`, `.sources[].license` | *which ref* the verdict was derived from |
+| 3 | the upstream's `LICENSE*` **at that pinned ref** | `curl …/<upstream>/<PINNED-TAG>/LICENSE.txt` | 🟢 whether the artefact's claim is faithful |
+| 4 | 🆕 the upstream's `LICENSE*` **at the default branch** | `curl …/<upstream>/master/LICENSE.txt` | 🟢 whether the restriction **still exists upstream** |
+
+🟢 **Probe 2 is the one that was being skipped, and it is free** — the pinned version is already sitting
+in the `sources[].name` string (`"UD Spanish AnCora v2.8"`). 🔴 **Probes 3 and 4 are worthless
+individually and decisive together.**
+
+**The verdict table — and the four cases are genuinely different engagements:**
+
+| Probe 3 (pinned) | Probe 4 (live) | Verdict | What to do |
+|---|---|---|---|
+| permissive | permissive | 🟢 **CLEAN** | ship |
+| restrictive | restrictive | 🔴 **STRUCTURAL** | re-architect or accept the copyleft |
+| 🟡 **restrictive** | 🟢 **permissive** | 🟡 **STALE PIN** | 🟢 **retrain / rebuild at the newer ref — the cheapest fix in this table** |
+| 🟢 permissive | 🔴 restrictive | 🔴 **UPSTREAM TIGHTENED** | 🔴 pin hard, vendor the artefact, and never bump blindly |
+
+🔴 **Pass 49 placed Spanish in row 2 (STRUCTURAL) and priced three expensive routes against it.**
+🟢 **Measured this pass, it is row 3 (STALE PIN).**
+
+**Worked example, every value measured on 2026-10-08:**
+
+```
+# probe 1 + 2
+curl -s raw.githubusercontent.com/explosion/spacy-models/master/meta/es_core_news_sm-3.8.0.json
+  .license                -> "GNU GPL 3.0"
+  .sources[0].name        -> "UD Spanish AnCora v2.8"      <-- THE PIN
+  .sources[0].license     -> "GNU GPL 3.0"
+
+# probe 3 -- at the pinned ref
+curl -s .../UniversalDependencies/UD_Spanish-AnCora/r2.8/LICENSE.txt     # 200, 68 B
+  -> "GNU GENERAL PUBLIC LICENSE 3.0"                        [faithful]
+
+# probe 4 -- at the default branch
+curl -s .../UniversalDependencies/UD_Spanish-AnCora/r2.18/LICENSE.txt    # 200, 189 B
+  -> "...Creative Commons License Attribution 4.0 International"   [RELICENSED]
+```
+
+🟢 **Verdict: STALE PIN.** 🔵 **The changelog names the moment** (`r2.9`, 2021-11-15) and the
+`README.md` **still carries the old GNU sentence in its Introduction**, which is why a prose read
+reproduces the dead answer.
+
+🔴 **Do not read prose for a licence verdict.** `LICENSE*` payload and the machine-readable
+`License:` field were both correct at every ref; **only the narrative paragraph was stale.**
+
+### 🟢 `P620` — Recipe: a permissive Spanish assessment feature layer, with the route `Gap 254` said did not exist
+
+🔵 **`Gap 254` priced three routes and called C unavailable.** 🟢 **Route C is available and is now the
+default recommendation.**
+
+| Route | What it costs | Verdict after `P609`–`P611` |
+|---|---|---|
+| **A** — ship `es_core_news_sm` as GPL-3.0 | zero engineering | 🟢 **still right for most public-sector work.** 🔵 GPL-3.0 is OSI and permits commercial use; the obligation is reciprocity on derivatives, not a ban |
+| **B** — `xx_ent_wiki_sm` (**MIT**) + reimplemented indices | 🔴 an **agreement study**, not an extractor | 🔴 **no longer the permissive route of choice** — it was only preferred because C looked closed |
+| 🟢 **C** — **retrain on `UD_Spanish-AnCora` `r2.9`+ (CC BY 4.0)** | one training run on a **CC BY 4.0** corpus | 🟢 **AVAILABLE.** The corpus is the *same* one the shipped model already uses, five tags later |
+
+**The wiring, concretely:**
+
+1. 🟢 **Corpus** — `UD_Spanish-AnCora` at `r2.18` (or any ref `≥ r2.9`): **CC BY 4.0**, 189-byte
+   `LICENSE.txt`, attribution only, **no ShareAlike**. 🔵 Cite Taulé, Martí & Recasens (2008) — the
+   README makes that citation a condition, and CC BY makes attribution the whole obligation.
+2. 🟢 **Trainer** — `spaCy` itself is 🟢 **MIT** (`master/LICENSE`, 1 128 B, © ExplosionAI GmbH /
+   spaCy GmbH / Matthew Honnibal). 🟢 **The code was never the problem.**
+3. 🟡 **NER, if you need it** — `es_core_news_sm` also sources **WikiNER** (🟢 CC BY 4.0). 🟢 Both
+   non-code inputs for a retrained Spanish pipeline are therefore **CC BY 4.0**: attribution-only,
+   permissive, shippable.
+4. 🟢 **Verify the output artefact, not the plan** — emit your own `meta.json` with
+   `license: "CC BY 4.0"` and `sources[].name: "UD Spanish AnCora r2.18"`. 🔴 **Name the ref, not the
+   project**, or you have rebuilt the defect `P610` found.
+5. 🟢 **Gate it** — `lib/license_family.sh::family_of` now answers `CC-BY-4.0` for that payload and
+   `GPL-3.0` for the `r2.8` one (`P613`), so the two are **distinguishable by the shared control**
+   rather than by a reader's eye.
+
+🔴 **Scope stated honestly.** This recipe makes the **pipeline artefact** permissive. 🔴 **It does not
+touch `Gap 237`**, which is the tier underneath: there is still **no national Spanish essay exam, so
+no public rubric and no graded Spanish essay corpus.** 🟢 **Routes A and C differ in licence, not in
+capability**, and neither produces a scorer without the data `Gap 237` says is missing.
+
+### 🟢 `P621` — Recipe: a pre-commit gate run, which is `Gap 255`'s remedy done rather than described
+
+🔵 **`Gap 255` asked for *"one invocation list — the gates every pass runs before committing, with
+expected exit codes."*** 🟢 **Run this pass over all 110 suites, and the run is what found `P614`.**
+
+```sh
+# from compose/code/ -- every suite, from its own directory, exit code recorded
+for t in $(find . -name 'test_*.sh' -o -name 'test_*.py' | sort); do
+  d=$(dirname "$t"); b=$(basename "$t")
+  case "$b" in
+    *.sh) (cd "$d" && timeout 180 bash    "$b" >/dev/null 2>&1) ;;
+    *)    (cd "$d" && timeout 180 python3 "$b" >/dev/null 2>&1) ;;
+  esac
+  echo "$t $?"
+done
+```
+
+🔴 **Two things about this are not optional, and both were learned by getting them wrong in this run:**
+
+| Rule | Why |
+|---|---|
+| 🔴 **run each suite from its OWN directory** | they resolve fixtures relatively (`p355`'s whole subject) |
+| 🔴 **do NOT use `python3 -I`** | isolated mode drops the script's directory from `sys.path`, so **28 suites** reported `ModuleNotFoundError` against their own module. 🔴 **A harness defect that looks exactly like 28 broken instruments** |
+
+🟢 **And the result is only interpretable against a baseline.** This pass ran the same sweep on a
+**pristine clone of `HEAD`** and diffed:
+
+| | Pristine `HEAD` | This pass |
+|---|---|---|
+| suites passing | **107 / 110** | 🟢 **108 / 110** |
+| diff | — | 🟢 **one line: `p550` red → green** |
+
+🟢 **That diff is the acceptance test for `P613`** — a change to the file 46 instruments source, with
+**zero** regressions and zero accidental passes. 🔴 **Without the baseline, "107 passing" would have
+been read as this pass breaking three suites.**
+
+🔴 **`Gap 255` stays open and its scope is narrowed, not claimed closed.** The list exists and was run;
+🔴 **nothing yet *obliges* a pass to run it**, and a convention a pass has to remember is not a control
+(`P237`). 🟢 **What this pass can claim: the first full invocation found one red gate that had been
+accusing the shared control, and two that are red for reasons now named** (`Gap 257`, `Gap 258`).
+
 ## 🟢 Forty-ninth pass, 2026-10-08 — `P604`: the **licence-by-language pre-flight**, and the recipe that routes a non-English assessment build around a GPL pipeline
 
 ⏱️ **Third pass of this date.** 🔵 **All licences read first-hand on 2026-10-08** from payload or from

@@ -1,0 +1,7 @@
+fixture	source_url	ref	http	bytes	read_on
+gpl-3.0-numeric-ud-spanish-ancora-r2.8.LICENSE	https://raw.githubusercontent.com/UniversalDependencies/UD_Spanish-AnCora/r2.8/LICENSE.txt	r2.8	200	68	2026-10-08
+cc-by-4.0-ud-spanish-ancora-r2.9.LICENSE	https://raw.githubusercontent.com/UniversalDependencies/UD_Spanish-AnCora/r2.9/LICENSE.txt	r2.9	200	189	2026-10-08
+cc-by-sa-4.0-ud-spanish-gsd.LICENSE	https://raw.githubusercontent.com/UniversalDependencies/UD_Spanish-GSD/master/LICENSE.txt	master	200	202	2026-10-08
+gpl-3.0-spdx-canonical.LICENSE	https://raw.githubusercontent.com/spdx/license-list-data/main/text/GPL-3.0-only.txt	main	200	34674	2026-10-08
+gpl-2.0-spdx-canonical.LICENSE	https://raw.githubusercontent.com/spdx/license-list-data/main/text/GPL-2.0-only.txt	main	200	17337	2026-10-08
+lgpl-3.0-spdx-canonical.LICENSE	https://raw.githubusercontent.com/spdx/license-list-data/main/text/LGPL-3.0-only.txt	main	200	42098	2026-10-08

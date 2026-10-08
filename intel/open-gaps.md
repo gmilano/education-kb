@@ -4,6 +4,123 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Pass 50, 2026-10-08 — one gap **refuted at its stated cause**, one **narrowed by a full gate run**, three declared
+
+> 🔵 **This pass's opening hypothesis was that `Gap 254` needed its cheapest next probe run.
+> 🟢 That hypothesis was CORRECT and the probe refuted the gap's own Route C.** The register
+> pointed at the right work for the first time in three passes — 🟢 **which is what `P598`'s
+> freshness gate was built to make possible**, and is recorded here as the gate earning its cost.
+
+### 🟢 `Gap 254` (pass 49) — **REFRAMED and partially REFUTED.** The Spanish restriction is a version pin, not a structural fact
+
+| Pass 49's claim | Verdict after `P609`–`P611` |
+|---|---|
+| *"`es_core_news_sm` declares GNU GPL 3.0"* | 🟢 **STANDS** — and extended to 3.5.0 / 3.6.0 (`P610`); 3.8.0 is the latest release |
+| *"inherited from `UD_Spanish-AnCora`"* | 🟡 **TRUE OF `v2.8` ONLY** — the ref spaCy pins |
+| *"the GNU licence is inherited from the original dataset"* (quoted as current) | 🔴 **VESTIGIAL PROSE.** The same README's changelog records `r2.9` (**2021-11-15**): *"The license changed to CC BY 4.0"* |
+| *"the restriction is structural, a tier above `Gap 237`"* | 🔴 **REFRAMED** — it is a **five-year-old version pin** |
+| Route **C**: *"retrain on a permissive Spanish corpus — none found by this KB"* | 🔴 **REFUTED** — `UD_Spanish-AnCora` `r2.9`+ is **CC BY 4.0** (`P611`), and it is the *same corpus* |
+
+🟢 **What remains open, and it is narrower:** nothing in this KB has **built** the retrained pipeline.
+🔵 **Cost: one training run on a CC BY 4.0 corpus with an MIT trainer** — recipe and wiring at `P620`,
+`compose/patterns.md`. 🔴 **And `Gap 237` is untouched**: no national Spanish essay exam, so still no
+public rubric and no graded Spanish essay corpus. 🟢 **Routes A and C differ in licence, not in
+capability.**
+
+### 🟡 `Gap 255` (pass 49) — **NARROWED, not closed.** The invocation list exists and was run; nothing yet obliges it
+
+🟢 **Remedy part 1 LANDED (`P621`):** all **110** suites in `compose/code/` were run from their own
+directories, exit codes recorded, and diffed against the same sweep on a **pristine clone of `HEAD`**.
+
+| | Pristine `HEAD` | After this pass |
+|---|---|---|
+| suites passing | **107 / 110** | 🟢 **108 / 110** |
+| diff | — | 🟢 **one line: `p550` red → green** |
+
+🟢 **The run paid for itself immediately: it found `P614`** — `p550` red at `HEAD` and **accusing the
+shared classifier of two defects it does not have**.
+
+🔴 **Why it stays open.** Running the list once is not a control. 🔵 **`P237`: a convention a pass has
+to remember is not a control.** 🟢 **What is now true and was not: the list is written down as a
+runnable recipe (`P621`), with the two harness rules that invalidate it if broken** — run each suite
+from its own directory, and **never** with `python3 -I` (isolated mode drops the script's directory
+from `sys.path` and reported **28** suites as `ModuleNotFoundError` against their own modules — 🔴 **a
+harness defect indistinguishable from 28 broken instruments**).
+
+### 🟢 `Gap 253` (pass 49) — **no instruments fixed this pass.** Stated so no pass reads this one as progress
+
+🔴 **This pass fixed none of the `P541` instruments `Gap 253` enumerates.** 🔵 **The count is pass
+49's (21), carried forward rather than re-measured** — this pass did not re-run the `p542` acceptance
+sweep to completion, and so does not assert a current number. 🟢 **That is the honest form: `P469` is
+this KB's own record of what happens when a gap's status is asserted instead of measured.** 🔵 The enumeration stands at
+`p542-empty-input-sweep/result.2026-10-07.tsv`, so there is still no search step. 🟢 **One adjacent
+instance was fixed for a different reason:** `p550`'s suite now **refuses** when its shared dependency
+fails to load (`P614`) — 🔵 **the same discipline as `Gap 243`/`Gap 245` applied to a failed `source`
+rather than to empty `argv`**, which is a class those gaps did not cover.
+
+### 🔴 `Gap 256` (new, pass 50) — the **LGPL** branch under-reads a version the payload names
+
+**Statement.** *"`lib/license_family.sh` reads the LGPL version only from a full-text anchor, so an
+LGPL title stub answers bare `LGPL` even when it names Version 3."*
+
+🟢 **Measured** (`P613` side-channel), all in one run:
+
+| Input | Answer |
+|---|---|
+| `GNU LESSER GENERAL PUBLIC LICENSE` + `Version 3, 29 June 2007` (stub) | 🔴 **`LGPL`** |
+| `GNU LESSER GENERAL PUBLIC LICENSE 3.0` (numeric stub) | 🔴 **`LGPL`** |
+| canonical SPDX `LGPL-3.0-only` (42 098 B) | 🟢 **`LGPL-3.0`** |
+
+🔵 **Why this is NOT `P613`.** The GNU branch **stamped** a version the payload never names
+(*invention*); the LGPL branch **discards** one the payload does name (*under-read*). 🟡 **A version
+too few is honest and coarse; a wrong version makes a reader reason about another licence's
+obligations.** 🟢 **That asymmetry is why `P613` was repaired and this is declared.**
+
+**Why it matters here.** 🔴 **`openeducat/openeducat_erp` is the LGPL-3.0 platform on this KB's
+verticals shelf**, and LGPL-3.0 vs LGPL-2.1 is exactly the distinction a linking question turns on.
+
+**Why it is open rather than fixed.** 🔴 **The fix moves a second contract:** `LGPL-2.1` is **absent**
+from `OSI_RECONOCIDAS` in `p411-cession-identity-gate`, so emitting it would have that gate reject a
+string its own library produces. 🔵 **`P562` — the correction must travel to the consumer — and
+`P562` also says you do not touch an instrument whose contract you have not read.** 🟢 **Bounded:
+one branch, one allowlist entry, one suite re-run.** 🟢 **The suite ASSERTS the current behaviour**
+(`Gap 256` ×2 in `lib/test_license_family.sh`) so it cannot drift silently.
+
+### 🔴 `Gap 257` (new, pass 50) — `p351-star-digit-sweep` is red at `HEAD` on **hard-coded tree counts**
+
+**Statement.** *"`p351` fails at `HEAD` on three assertions that encode absolute counts of a growing
+tree, plus one real unattributed star occurrence."*
+
+🟢 **Measured** (`P621`, and present on the pristine `HEAD` clone, so **not** caused by this pass):
+
+| Assertion | Failure |
+|---|---|
+| prediction threshold | 🔴 `244 not greater than or equal to 254` |
+| attribution sweep | 🔴 `74` occurrences with no pass attributed |
+| class sweep | 🔴 `agents/trending.md:8231` — `6.400 ★ (K-3CIFRAS, ±50)` attributed to pass 124 but carrying **none** of the 4 required classes |
+
+🔴 **Two different defects on one gate, and they need opposite treatments.** The **threshold**
+assertions go red on **growth alone** — an append-only tree crossing a hardcoded number is not a
+finding, it is a treadmill. 🟡 **The third is a real `P479` instance**, in a historical row of an
+**append-only** file.
+
+**Why it is open rather than fixed.** 🔴 **The remedy for the real instance would be rewriting history
+in `agents/trending.md`, which this KB's own append-only rule forbids.** 🟢 **The honest remedy is
+stated instead:** derive `p351`'s thresholds from the tree rather than from a literal, and treat
+pre-`P479` rows as a **declared historical band** rather than as live violations. 🔵 **Cost: one
+instrument change, no content rewrite.**
+
+### 🟡 `Gap 258` (new, pass 50) — `p213-envelope-aad` cannot run in this environment
+
+**Statement.** *"`p213-envelope-aad/test_envelope.py` fails at import with
+`pyo3_runtime.PanicException` from the `cryptography` package."*
+
+🟢 **Measured on the pristine `HEAD` clone as well**, so it is environmental and **not** a regression.
+🔵 **Not a logic defect and not a licence defect** — a native-extension load failure in a third-party
+dependency. 🟢 **Declared rather than left in the red column unexplained**, so a later pass does not
+spend budget debugging this KB's code for it. 🔴 **It does mean `p213`'s property is unverified in this
+environment**, and that is the part that is actually open.
+
 ## 🔴 Pass 48, 2026-10-08 — this register is **maintained**, and still misroutes a top-down reader: three verdicts on one row, oldest first
 
 > 🔵 **This pass's opening hypothesis was that nobody had re-adjudicated `Gap 39`'s first half.

@@ -4,6 +4,131 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🔴 Fiftieth pass, 2026-10-08 — five trends: a licence that expired five years ago and is still shipping, a classifier that invented a version, a suite that framed its own dependency, a detector blind by vocabulary, and a channel saturated three passes running
+
+⏱️ **Fourth pass of this date.** 🔵 **All market and regulatory figures are secondary and carry their
+source; all licences were read first-hand from payload or model metadata on 2026-10-08, per git ref.**
+
+### 🔴 Trend A — `P609`/`P610`: **a dependency's licence is a licence read at the version it pinned**, and pins outlive relicensings
+
+🟢 **The measurement.** `es_core_news_sm` declares **GNU GPL 3.0** and names its corpus as
+**`UD Spanish AnCora v2.8`**. `UD_Spanish-AnCora` relicensed to **CC BY 4.0 at `r2.9`**, on
+**2021-11-15**. 🔴 **The model has been pinned to the GPL-era tag across four minor releases
+(3.5.0 → 3.8.0) and 3.8.0 is the latest.**
+
+| What you read | What you conclude | Correct? |
+|---|---|---|
+| the model's `license` field | *"Spanish spaCy is GPL-3.0"* | 🟢 **yes, today, as shipped** |
+| the model's `sources[].license` | *"because the corpus is GPL-3.0"* | 🔴 **no — because the corpus WAS, at `v2.8`** |
+| the corpus's live `LICENSE.txt` | *"the corpus is CC BY 4.0"* | 🟢 **yes, since `r2.9`** |
+
+🔵 **The general trend, well beyond this KB and beyond NLP.** A licence is treated as a property of a
+**project**, and it is a property of a **version**. 🔴 **Relicensings move in the permissive direction
+far more often than the reverse** — a maintainer clearing rights, a funder requiring openness, a
+corpus moving off an inherited grant — 🔴 **and a downstream pin freezes the restrictive answer and
+carries it forward indefinitely.** 🟢 **The restriction outlives its cause, and nobody downstream has
+any reason to re-check**, because the field they read has not changed.
+
+🔴 **The trap is that the stale answer is not a bug in the downstream project.** Explosion's
+declaration is **correct** for the artefact it ships. 🟢 **There is nobody to report this to and
+nothing to fix upstream** — which is exactly why it can persist for five years, and why the only
+place it can be caught is in the consumer's own pre-flight (`P619`).
+
+### 🔴 Trend B — `P612`: **two independent reads agreed, and the agreement was an accident**
+
+🔵 **This is the methodological finding of the pass, and it is a criticism of this KB's own recipe.**
+`compose/patterns.md`'s `P604` prescribed a three-probe licence pre-flight, and step 3 was
+*"each corpus's own `LICENSE`"* — 🔴 **with no instruction to pin the ref.**
+
+Pass 49 ran it faithfully and got a consistent answer:
+
+| Probe | What it read | Answer |
+|---|---|---|
+| 1 — artefact metadata | `es_core_news_sm` → `.license` | 🔴 GPL-3.0 |
+| 3 — corpus corroboration | `UD_Spanish-AnCora` **`master`** README prose | 🔴 "GNU" |
+
+🟢 **Two sources, one verdict, confidence high. 🔴 And both legs were wrong in different ways:** probe 1
+was right *about `v2.8`*, probe 3 matched a **vestigial sentence** the relicensing had left standing.
+🔴 **A corroboration that agrees for the wrong reason is worse than no corroboration**, because it
+retires the question.
+
+🟢 **The control that proves it is the pin and not the method** — the Portuguese chain, measured this
+pass at the same two refs:
+
+| Corpus | `r2.8` (the pinned ref) | `r2.18` (live) | Verdict |
+|---|---|---|---|
+| `UD_Portuguese-Bosque` | 🟡 CC BY-SA 4.0 | 🟡 CC BY-SA 4.0 | 🟢 **unchanged — the PT chain was sound BY LUCK OF STABILITY** |
+| `UD_Spanish-AnCora` | 🔴 GPL-3.0 | 🟢 **CC BY 4.0** | 🔴 **moved — and the unpinned read did not notice** |
+
+🔵 **Passes 45–49 went four tiers deep on Portuguese and the method never failed, because the artefact
+underneath it never moved.** 🔴 **A method validated only against stable dependencies is not validated
+against the drift it exists to catch** — `P126` pt. 2, in the recipe layer rather than the test layer.
+🟢 **Remedy landed, not just named:** `P619` replaces step 3 with a **two-ref read and a comparison**.
+
+### 🔴 Trend C — `P613`: the shared control read the **family** and invented the **version**, and the canonical fixtures hid it
+
+🟢 **Measured:** 4 of 5 real-world GNU **title-stub** spellings answered `GPL-2.0`; all 4 **canonical**
+SPDX texts answered correctly. 🔴 **So 152 passing assertions and the defect coexisted**, because every
+fixture was a canonical text and every canonical text spells *"Version 3"* in words.
+
+🔵 **The trend worth carrying out of this KB.** A classifier's fixtures are drawn from the **well-formed
+end** of its input distribution, because that is where documents are easy to find. 🔴 **The failures
+live at the malformed end — the 68-byte stub, the reflowed text, the title-only pointer** — and those
+are disproportionately what **datasets, corpora and research artefacts** publish. 🟢 **The direction of
+this particular error is the lesson in miniature: it resolved to the OLDER, less compatible licence**,
+so the error was silent *and* unsafe.
+
+🟢 **And the fix's precision was measured before the edit, not after:** the canonical GPL-2.0 text
+contains **zero** occurrences of `version 3`, `v3`, `gplv3`, `3.0` and `License 3`, which is what
+licensed widening the discriminator. 🔵 **`P171` is this KB's own record of what a widened licence
+probe costs when that measurement is skipped.**
+
+### 🔴 Trend D — `P614`: a suite that **frames its own dependency**, and why "the gate is red" is not the finding
+
+🔵 **`Gap 255` said a correct gate nobody invokes is worth nothing. This pass invoked all 110 suites
+and found something worse than neglect.**
+
+🔴 **`p550` was red at `HEAD`, and its two failure messages named `commercial_use_ok` in the shared
+control.** The actual cause was line 144 of the suite itself: an absolute path,
+`/home/user/education-kb/…`, that fails to source in any other clone — leaving the function
+**undefined**, so *"command not found"* was reported as **`PROHIBITED`** and a `grep -c` over a
+non-existent function returned **0**.
+
+| Failure shape | How a reader reads it | Cost |
+|---|---|---|
+| `CRASH` | broken tooling | 🟡 ignored, correctly |
+| `SILENCIOSO` | passing | 🔴 invisible |
+| 🔴 **accusation** (this one) | *"the shared classifier is broken"* | 🔴 **a pass spends its budget "fixing" correct code** |
+
+🔵 **`p355` enumerated the first two shapes. This is a third, and it is the expensive one** — it
+produces a **false verdict with a named culprit**, and the culprit it named is the single file every
+other instrument is instructed to reuse. 🟢 **`P597` is this KB's own record of a pass paying to
+re-measure settled work; this is the same waste with an accusation attached to recruit it.**
+
+🟢 **Fixed with a relative path AND a refusal**, because the path was the instance and the silent
+degradation was the class: a dependency that fails to load now **exits 2** instead of letting every
+downstream assertion report a false verdict. 🔵 **`Gap 243`/`Gap 245` made instruments refuse empty
+`argv`; this extends the same rule to a failed `source`.**
+
+### 🟡 Trend E — `P616`/`P617`: the regional channel is saturated, and a **superseded date keeps coming back**
+
+🟢 **Three consecutive passes at or near total saturation** (48: 23/24 held; 49: 24/24; 50: all four
+regions returning held material, five secondary residuals). 🟢 **`P601`'s prediction held a second
+time:** the next new regional datum will be primary or nothing.
+
+🔴 **And the EMEA channel served the superseded **2026-08-02** Annex III enforcement date for the
+**third** recorded time**, against **Regulation (EU) 2026/1744**'s deferral to **2027-12-02**.
+🔵 **The trend is about append-only error in the *outside world*, which this KB cannot fix and must
+therefore absorb:** a superseded regulatory date does not get retracted from the secondary web, it
+gets **re-indexed**. 🔴 **So a KB that re-derives its EMEA timeline from search each pass will revert
+to the wrong date on a schedule** — which this KB has already done once, at pass 32, and caught at
+pass 58.
+
+🟢 **The defensive posture, and it is cheap:** the date lives in this KB **with its instrument
+number** (`Regulation (EU) 2026/1744`, OJ 2026-07-24), so a search result that disagrees is a *channel
+defect to record*, not a correction to apply. 🔵 **`P602`/`P617`: the primaries that would settle it —
+`eur-lex.europa.eu`, `digital-strategy.ec.europa.eu` — were re-probed this pass and are still `000`.**
+
 ## 🔴 Forty-ninth pass, 2026-10-08 — five trends: a register row that charged a pass for settled work, permissiveness that tracks money rather than openness, an "Apache-2.0" platform that overrides Apache-2.0, a gate that went red unnoticed, and a regional channel measured empty
 
 ⏱️ **Third pass of this date.** 🔵 **All market and regulatory figures are secondary and carry their

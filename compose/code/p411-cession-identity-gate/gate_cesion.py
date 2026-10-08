@@ -119,7 +119,11 @@ TITULOS_OSI_EXENTOS = ('educational community license',)
 # preguntas que esta compuerta necesita. NO se re-clasifica nada aqui: solo se interpreta.
 OSI_RECONOCIDAS = frozenset({
     '0BSD', 'AGPL-3.0', 'Apache-2.0', 'BSD', 'ECL-2.0', 'EPL-1.0', 'EPL-2.0',
-    'EPL-UNVERSIONED', 'EUPL', 'EUPL-1.1', 'EUPL-1.2', 'GPL-2.0', 'GPL-3.0', 'ISC',
+    # `P613`: `GPL-UNVERSIONED` se agrega aqui porque la rama GNU del clasificador dejo de
+    # adivinar GPL-2.0 cuando el payload no nombra version. Es `P562`: la correccion viaja
+    # al consumidor, o el gate rechaza por desconocido un string que su propia libreria emite.
+    'EPL-UNVERSIONED', 'EUPL', 'EUPL-1.1', 'EUPL-1.2', 'GPL-2.0', 'GPL-3.0',
+    'GPL-UNVERSIONED', 'ISC',
     'LGPL', 'LGPL-3.0', 'MIT', 'MPL-1.0', 'MPL-1.1', 'MPL-2.0', 'MPL-UNVERSIONED',
     'Unlicense',
 })

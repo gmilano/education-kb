@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🔴 Fiftieth pass, 2026-10-08 — week of 2026-10-08: zero new agents (tenth pass), and the week's finding is a licence that expired in 2021 and still ships
+
+⏱️ **Fourth pass of this date.** 🔵 **APPEND-ONLY — the history below this section is intact.**
+**No star counts** (`P479`). Existence by `git ls-remote --heads` with a negative control in the same
+run (`globant/NEGATIVE-CONTROL-no-existe-50` → **0 refs**).
+
+### 🔴 The mandated agent queries, and the tenth consecutive empty week
+
+| Query | Result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **0 new.** Horizontal agents (OpenHands, CrewAI, LangGraph, OpenClaw, Codex), catalogues (`ashishpatel26/500-AI-Agents-Projects`, `ARUNAGIRINATHAN-K/awesome-ai-agents-2026`, `caramaschiHG/awesome-ai-agents-2026`), courses (`microsoft/ai-agents-for-beginners`, `huggingface/agents-course`, `pguso/agents-from-scratch`) — 🟢 **every name already in the live tree** |
+| `github trending education AI 2026` | 🟡 **0 new agents, 2 names seen and declined.** `rohitg00/ai-engineering-from-scratch` and `HugeCatLab/ChatTutor` are a **course** and a **demo tutor**, not composable agents. 🔵 `microsoft/generative-ai-for-beginners`, `karpathy/nanochat`, `LLMs-from-scratch`, `TovTechOrg/Tov-learn` likewise course-tier |
+| `open source platform education ERP CRM MIT Apache` | 🟡 **0 new education platforms**, and 🟢 **the channel conceded the gap in its own words** — *"I found no MIT or Apache education platform in these results"* |
+| `AI education industry trends 2026` | 🟡 governance-over-experimentation, education-specific platforms over generic chatbots, teacher-first adoption, digital credentials — 🟢 all held |
+
+🟢 **The shelf is declared saturated for the eighteenth pass, and the declaration is now
+load-bearing rather than apologetic:** ten passes of the same verbatim query returning the same three
+classes is a measurement of the **channel**, and the next education agent will come from a primary
+source (a ministry org, a university lab, a vendor release) or not at all.
+
+### 🔴 The week's real finding: `P609` — **`UD_Spanish-AnCora` has been CC BY 4.0 since 2021-11-15**
+
+| Tag | `LICENSE.txt` | Bytes | README `License:` | GNU mentions |
+|---|---|---|---|---|
+| `r2.7` · **`r2.8`** | 🔴 `GNU GENERAL PUBLIC LICENSE 3.0` | 68 | 🔴 GNU GPL 3.0 | 2 |
+| **`r2.9`** · `r2.10` · `r2.18` | 🟢 **CC BY 4.0** | 189 | 🟢 **CC BY 4.0** | 🟡 **1** (vestigial) |
+
+🔴 **spaCy's `es_core_news_sm` pins `UD Spanish AnCora v2.8` across 3.5.0, 3.6.0, 3.7.0 and 3.8.0**
+(3.8.0 is the latest; 3.8.1 / 3.9.0 / 4.0.0 → **404**). 🟢 **So its GPL-3.0 declaration is faithful to
+the tag it trained on**, and the restriction a studio inherits today is a **five-year-old version
+pin**, not a property of the corpus.
+
+🟢 **`Gap 254` Route C — *"retrain on a permissive Spanish corpus — none found"* — is REFUTED.** The
+permissive corpus is the **same corpus**, five tags later. Recipe at `P620`.
+
+### 🔴 `P613` — and the 68-byte payload that found it broke this KB's shared licence classifier
+
+🔴 `GNU GENERAL PUBLIC LICENSE 3.0` → **`GPL-2.0`**. The version read required the **word**
+*"version"*; a numeric spelling fell through to a hardcoded `GPL-2.0`. 🟢 **`P561` verbatim, on the GNU
+branch pass 46 did not audit when it closed MPL and EPL.**
+
+🔵 **Measured:** 4 of 5 real stub spellings failed; **all 4 canonical SPDX texts passed**, which is why
+152 assertions never saw it. 🟢 **Fixed; 152 → 168 assertions; 6/6 mutants; `GPL-UNVERSIONED` added and
+travelled to `p411` (`P562`); zero regressions across all 110 suites against a pristine `HEAD`
+baseline.**
+
+### 🔴 `P614`/`P615` — the first full gate run, and the suite that was **accusing** the shared control
+
+🟢 **`Gap 255` asked for an invocation list; this pass ran all 110 suites.** 🔴 **`p550` was red at
+`HEAD` with two failures naming `commercial_use_ok` — both false.** Cause: line 144 hardcoded
+`/home/user/education-kb/…`, so the `source` failed, the function was undefined, and *"command not
+found"* was reported as a licence verdict.
+
+🔵 **A third failure shape, worse than `p355`'s `CRASH` and `SILENCIOSO`: an accusation with a named
+culprit**, pointing at the one file every instrument is told to reuse. 🟢 **Fixed with a relative path
+plus a refusal; `p550` 24/26 → 26/26.** 🟢 **`p355`'s detector extended to see the class it was built
+for (`P615`), with a comment guard so it cannot punish the documentation of the fix, and fixtures
+assembled from parts so it cannot accuse itself: 16 → 24 tests.**
+
+### 🟡 Channel notes for the week
+
+| Channel | Observation |
+|---|---|
+| **EMEA policy** | 🔴 **Third** recorded re-service of the superseded **2026-08-02** Annex III date, against **Reg. (EU) 2026/1744**'s deferral to **2027-12-02**. 🔵 Art. 50 unmoved and live |
+| **Verticals roundups** | 🔴 **Fourth consecutive pass** with a wrong licence claim — **Huly** billed as Apache-2.0; payload is **EPL-2.0** (`main/LICENSE`, 14 197 B, read this pass) |
+| **Regional** | 🟢 Four of four regions returned held material; **five secondary residuals** named in `intel/market.md` `P618` rather than padded into tables |
+| **Primaries** | 🔴 `eur-lex.europa.eu`, `digital-strategy.ec.europa.eu` → `000`; 🔴 `doi.org` → **403 CONNECT tunnel failed** (new this pass, blocks the Zenodo relicensing record — **not** load-bearing) |
+
 ## 2026-10-08 — pass 49 (third of this date)
 
 🔵 **APPEND-ONLY.** History below is untouched.

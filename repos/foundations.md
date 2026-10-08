@@ -4,6 +4,184 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🔴 Fiftieth pass, 2026-10-08 — the shared licence classifier read the **family** and invented the **version**, on the branch pass 46 did not audit
+
+⏱️ **Fourth pass of this date.** Licences read first-hand on 2026-10-08 from payload and from model
+metadata, HTTP status recorded per filename **and per git ref**. **No star counts** (`P479`).
+
+### 🔴 `P613` — `GNU GENERAL PUBLIC LICENSE 3.0` answered **`GPL-2.0`**, and 152 passing assertions never saw it
+
+🔵 **Found by a real payload, not by a test.** The `r2.8` tag of `UD_Spanish-AnCora` carries a
+**68-byte** `LICENSE.txt`:
+
+```
+GNU GENERAL PUBLIC LICENSE 3.0
+http://www.gnu.org/licenses/gpl.html
+```
+
+Fed to `lib/license_family.sh::family_of` — the **shared, hardened** classifier whose own header
+says *"source this, do not rewrite it"* — the answer was 🔴 **`GPL-2.0`**.
+
+🔴 **The defective line, verbatim, as it stood:**
+
+```bash
+if printf '%s' "$t" | grep -qi 'GNU GENERAL PUBLIC LICENSE'; then
+   printf '%s' "$t" | grep -qi 'Version 3' && echo "GPL-3.0" || echo "GPL-2.0"; return; fi
+```
+
+🔴 **The version read required the WORD `version`.** A payload that names the version as a **number**
+does not contain it, so the probe fell to the `||` and **stamped `GPL-2.0`**.
+
+🟢 **This is `P561` verbatim** — *"the shared classifier read the licence family and invented the
+version"* — which pass 46 found and closed **for MPL and EPL**. 🔴 **It did not audit the GNU
+branch, and the GNU branch had the same defect all along.**
+
+### 🔴 Why 152 assertions scored 152/152 while this was live — measured, not supposed
+
+| Input class | Example | Verdict before the fix |
+|---|---|---|
+| **canonical full texts** | SPDX `GPL-3.0-only` (34 674 B), `GPL-2.0-only` (17 337 B), `AGPL-3.0-only`, `LGPL-3.0-only` | 🟢 **all four CORRECT** |
+| **title stubs, numeric version** | `GNU GENERAL PUBLIC LICENSE 3.0` (the real AnCora payload) | 🔴 **`GPL-2.0`** |
+| **title stubs, `v3` form** | `GNU General Public License v3.0` | 🔴 **`GPL-2.0`** |
+| **title stubs, `GPLv3` form** | `GNU GENERAL PUBLIC LICENSE` + `GPLv3` | 🔴 **`GPL-2.0`** |
+| **title stubs, spelled** | `GNU GENERAL PUBLIC LICENSE, Version 3` | 🟢 correct — **the only stub form that worked** |
+
+🔴 **Four of five real stub forms failed.** 🟢 **And every canonical text passed**, because the FSF
+texts all spell *"Version 3, 29 June 2007"* in words. 🔵 **This is `P126` pt. 2 exactly: a classifier
+validated only on the shape you have fixtures for scores 100% while broken.** The stubs are what
+**treebanks and datasets** publish, which is precisely the corpus tier this KB spent passes 45–49 on.
+
+🔴 **The direction of the error is the commercial consequence.** GPL-2.0 and GPL-3.0 are **mutually
+incompatible**, and the error pointed at the **older** licence — the one with no patent grant and no
+anti-tivoization clause. 🔴 **A studio that priced an obligation off this verdict priced the wrong
+licence.**
+
+### 🟢 The fix, and the precision measurement that licensed it
+
+🔵 **The easy fix is to widen the version probe, and the easy fix is how `P171` got introduced.** So
+the widening was measured against the payload it could steal first:
+
+| Token | Occurrences in the **canonical GPL-2.0** text (17 337 B) |
+|---|---|
+| `version 3` | 🟢 **0** |
+| `v3` | 🟢 **0** |
+| `gplv3` | 🟢 **0** |
+| `3.0` | 🟢 **0** |
+| `License 3` | 🟢 **0** |
+
+🟢 **Zero across the board, so a wider version-3 discriminator cannot take a legitimate GPL-2.0
+payload.** 🔵 **Measured before the edit, not asserted after it.**
+
+🟢 **And `"names no version"` became its own answer, `GPL-UNVERSIONED`** — matching the convention
+this KB already had for three other families: `CC-BY…-UNVERSIONED` (`P551`), `EPL-UNVERSIONED`
+(`P560`), `MPL-UNVERSIONED` (`P561`). 🔴 **The GNU branch was the last one still guessing.**
+
+🟢 **`P562` honoured: the correction travelled to the consumer.** `GPL-UNVERSIONED` is added to
+`OSI_RECONOCIDAS` in `p411-cession-identity-gate/gate_cesion.py`, or that gate would have rejected as
+unknown a string its own library had started emitting.
+
+### 🟢 The validation, run rather than claimed
+
+| Control | Result |
+|---|---|
+| `lib/test_license_family.sh` | 🟢 **152 → 168** assertions, **168/168**, exit 0 |
+| **Mutants** on the new branch | 🟢 **6/6 killed** — revert to the bare `'Version 3'` grep (4 assertions fail), drop the numeric arm (3), drop the `GPLv3` arm (1), restore the `GPL-2.0` guess for unversioned (1), break the version-2 read (6), swap the v3 verdict (16) |
+| **Regression sweep, all 110 suites in `compose/code/`** | 🟢 run on a **pristine clone of `HEAD`** and on this tree, and the two results are **identical**: **107 pass / 3 fail** before, **108 / 2** after. 🟢 **Zero regressions, zero accidental passes** |
+| Fixtures | 🟢 `lib/fixtures-p613/` — 6 real payloads with `PROVENANCE.tsv` (URL, ref, HTTP, bytes, read date) |
+
+🔵 **The one change in the regression diff is `p550` going red → green**, which is `P614` below and
+not a side effect of `P613`.
+
+### 🔴 `P614` — `p550` was **red at `HEAD`**, and it was accusing the shared control of a defect it does not have
+
+🔵 **The regression sweep's real purpose was to prove `P613` safe. What it surfaced was that three
+suites were already failing at `HEAD` before this pass touched anything.** One of them was lying.
+
+`p550-duplicate-definition-sweep/test_sweep.sh` reported two failures:
+
+```
+FAIL live gate: Unlicense allowed  (returned PROHIBITED)
+FAIL live gate: NO-CESSION branch present (hardened body is live)  (want=1 got=0)
+```
+
+🔴 **Both name `commercial_use_ok` in the shared control. Both are false.** Reproduced by hand with
+the library sourced over a **relative** path, same payloads, same run:
+
+```
+osi_family_of(UNL)             = [Unlicense]
+commercial_use_ok(UNL)         = ALLOWED
+declare -f | grep -c NO-CESSION = 1
+```
+
+🟢 **The shared control is sound.** 🔴 **Line 144 of the suite was:**
+
+```bash
+. /home/user/education-kb/compose/code/lib/license_family.sh
+```
+
+🔴 **An absolute path to the repository root on the machine of the pass that wrote it.** In any other
+clone the `source` **fails**, `commercial_use_ok` is left **undefined**, and then
+`commercial_use_ok "$UNL"` is a *command not found* — non-zero exit, reported as `PROHIBITED` — while
+`declare -f … | grep -c` counts **0**. 🔵 Lines 138 and 140 of the *same suite* already used the
+relative form.
+
+🔴 **The failure shape is worse than a crash.** A crash is read as broken tooling. This suite **runs,
+reports, and names a culprit** — and the culprit it names is the one file every other instrument is
+told to reuse. 🔴 **A pass that had acted on it would have "fixed" a correct classifier**, which is
+`P597` (pass 49 paying to re-measure settled work) with a sharper edge.
+
+🟢 **Fixed two ways.** The path is relative, and the `source` now **refuses** instead of degrading:
+
+```bash
+LIB=../lib/license_family.sh
+[ -r "$LIB" ] || { echo "REFUSE: ..." >&2; exit 2; }
+. "$LIB"
+declare -F commercial_use_ok >/dev/null || { echo "REFUSE: ..." >&2; exit 2; }
+```
+
+🟢 **`p550`: 24/26 → 26/26.** 🔵 **The refusal is the part that matters** — `Gap 243`/`Gap 245` made
+instruments honest about empty **argv**; this applies the same rule to a failed **source**, so a
+missing dependency can never again dress itself as a defect in the thing it failed to load.
+
+### 🟢 `P615` — and the sweep built to catch this class could not see it, by **vocabulary**
+
+🟢 **Swept the whole tree** for hard-coded absolute repository paths in `*.sh` / `*.py` under
+`compose/code/`: 🟢 **exactly one occurrence**, the `P614` specimen. 🔵 **A specimen, not yet a class
+— and that is the honest reading, as `P352` was.**
+
+🔴 **But `p355-cwd-portability` exists to answer exactly this question and has run for 112 passes
+without flagging it.** Its detector was:
+
+```python
+EFIMERA = re.compile(r'/tmp/|\$TMPDIR|\bTMPDIR\b|/var/tmp')
+```
+
+🔴 **Ephemeral paths only.** An absolute path under `/home/<user>/<repo>-kb/` is the same class — *a
+suite that only runs on the machine that wrote it* — and was outside the vocabulary. 🔵 **The
+probe-vocabulary failure mode, for the fourth recorded time in this KB.**
+
+🟢 **Extended this pass, and the original vocabulary left byte-identical** so
+`resultado.2026-10-05.tsv` stays reproducible:
+
+```python
+ABSOLUTA = re.compile(r'^\s*(?:\.|source)\s+/(?:home|Users|root)/'
+                      r'|^[^#]*\b(?:\.|source)\s+/(?:home|Users|root)/[^/\s]+/[^/\s]*-kb/')
+```
+
+🔴 **And the first version of it flagged the comment that documents the fix.** The `P614` repair
+quotes the old path verbatim so a future reader knows what was wrong; a detector that marks that
+comment teaches the next pass to **delete the documentation to get the gate green**. 🔵 **`P598` v1
+paid for this lesson with 4 false positives of 6, and the lesson travelled this time.** 🟢 A comment
+guard (`_es_comentario`) was added before publishing, not after.
+
+🟢 **And the detector is prevented from accusing itself**: its own fixtures are **assembled from
+parts** at runtime rather than written as literal paths, so the acceptance test — *"zero occurrences
+in the live tree"* — does not match its own test file. 🔴 **The alternative was to exempt the test
+file by name, and a by-name exemption is exactly where a real occurrence hides next.**
+
+🟢 **`p355`: 16 → 24 tests, all passing**, including the acceptance test that the live tree is clean
+of the class.
+
 ## 🟢 Forty-ninth pass, 2026-10-08 — `explosion/spacy-models` read as a licence **channel**, and it answers a question this KB had only asked for Portuguese
 
 ⏱️ **Third pass of this date.** Model metadata read first-hand on 2026-10-08 from

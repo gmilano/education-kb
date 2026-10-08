@@ -141,7 +141,30 @@ chk "repaired shared control has exactly one commercial_use_ok" \
 
 # ---------- the shared control must stay sound regardless ----------
 # Whatever this pass does to the duplicate, the LIVE gate must answer these three.
-. /home/user/education-kb/compose/code/lib/license_family.sh
+# `P614` (pase 50 del 2026-10-08). Esta linea decia:
+#     . /home/user/education-kb/compose/code/lib/license_family.sh
+# una ruta ABSOLUTA a la raiz del repo, en la maquina del pase que la escribio. En cualquier
+# otro clon el `source` FALLA, `commercial_use_ok` queda SIN DEFINIR, y entonces:
+#   - `commercial_use_ok "$UNL"` -> «command not found» -> exit != 0 -> se reporta PROHIBITED
+#   - `declare -f commercial_use_ok | grep -c NO-CESSION` -> 0
+# o sea que la suite ACUSA al control compartido de dos defectos que NO TIENE. Medido este
+# pase: con el lib sourceado por ruta relativa las dos aserciones pasan, y `p550` quedo ROJO
+# en HEAD sin que ningun pase lo mirara -- la evidencia exacta de `Gap 255`.
+#
+# La ruta ahora es relativa, como las lineas 138/140 de esta misma suite ya la usaban. Y el
+# `source` REHUSA en vez de degradar: una dependencia que no carga no puede volver a
+# disfrazarse de defecto del control compartido (la leccion de Gap 243/245, aplicada al
+# source y no solo a argv).
+LIB=../lib/license_family.sh
+if [ ! -r "$LIB" ]; then
+  echo "REFUSE: no se puede leer $LIB desde $(pwd) — la suite no juzga nada sin el control compartido" >&2
+  exit 2
+fi
+. "$LIB"
+if ! declare -F commercial_use_ok >/dev/null; then
+  echo "REFUSE: $LIB se cargo pero no define commercial_use_ok" >&2
+  exit 2
+fi
 NC=$'Creative Commons Attribution-NonCommercial 4.0 International\nYou may not use the material for commercial purposes.'
 if commercial_use_ok "$NC"; then bad "live gate: CC-BY-NC prohibited" "returned ALLOWED"; else ok "live gate: CC-BY-NC prohibited"; fi
 UNL=$'This is free and unencumbered software released into the public domain.\nAnyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.'

@@ -775,5 +775,77 @@ else
   echo "SKIP P560/P561 — fixtures ausentes en $FIXP560" >&2
 fi
 
+# ---------------------------------------------------------------------------
+# P613 (pase 50 del 2026-10-08) -- la rama GNU leia la FAMILIA e INVENTABA la VERSION.
+#
+# Es P561 verbatim en la rama que el pase 46 no audito. El `grep -qi 'Version 3'` exigia la
+# PALABRA «version»; un payload que la nombra como NUMERO caia al `||` y salia GPL-2.0.
+#
+# LA RAZON POR LA QUE ESTA SUITE NO LO VEIA, y por eso los canonicos son casos OBLIGATORIOS
+# aca: los cuatro textos canonicos de SPDX clasifican BIEN, porque todos deletrean «Version 3».
+# El defecto vive SOLO en los stubs de titulo -- lo que publican los treebanks y los datasets.
+FIXP613=fixtures-p613
+if [ -d "$FIXP613" ]; then
+  # --- el payload REAL que lo encontro: 68 B, UD_Spanish-AnCora en su tag r2.8 ---
+  check "P613 stub numerico REAL (AnCora r2.8, 68 B) contesta 3.0 y no el estampado 2.0" GPL-3.0 \
+    "$(family_of "$(cat "$FIXP613/gpl-3.0-numeric-ud-spanish-ancora-r2.8.LICENSE")")"
+  # --- las formas de stub medidas en el pase: 4 de 5 fallaban ---
+  check "P613 stub 'LICENSE 3.0' (numerico, sin la palabra version)" GPL-3.0 \
+    "$(family_of 'GNU GENERAL PUBLIC LICENSE 3.0')"
+  check "P613 stub 'License v3.0' (caja mixta + v)" GPL-3.0 \
+    "$(family_of 'GNU General Public License v3.0')"
+  check "P613 stub 'GPLv3' junto al titulo" GPL-3.0 \
+    "$(family_of 'GNU GENERAL PUBLIC LICENSE
+GPLv3')"
+  check "P613 stub ', Version 3' (la UNICA forma que ya pasaba -- control positivo)" GPL-3.0 \
+    "$(family_of 'GNU GENERAL PUBLIC LICENSE, Version 3')"
+  # --- NEGATIVOS: ensanchar el discriminador de la 3 no puede robar un GPL-2.0 legitimo ---
+  # El canonico de GPL-2.0 (17.337 B) tiene CERO ocurrencias de `version 3`, `v3`, `gplv3`,
+  # `3.0` y `License 3`. Medido en el pase 50, no supuesto.
+  check "P613 NEG canonico GPL-2.0 (SPDX, 17.337 B) sigue 2.0" GPL-2.0 \
+    "$(family_of "$(cat "$FIXP613/gpl-2.0-spdx-canonical.LICENSE")")"
+  check "P613 NEG canonico GPL-3.0 (SPDX, 34.674 B) sigue 3.0" GPL-3.0 \
+    "$(family_of "$(cat "$FIXP613/gpl-3.0-spdx-canonical.LICENSE")")"
+  check "P613 NEG stub 'LICENSE 2.0' numerico contesta 2.0, no 3.0" GPL-2.0 \
+    "$(family_of 'GNU GENERAL PUBLIC LICENSE 2.0')"
+  # --- el control que importa: P171 no se reabre por este ensanche ---
+  check "P613 NEG seccion 13 de GPL-3.0 sigue GPL-3.0 (P171 no reabierto)" GPL-3.0 \
+    "$(family_of "$GPL3")"
+  check "P613 NEG AGPL-3.0 no se come la rama GPL" AGPL-3.0 "$(family_of "$AGPL3")"
+  # `Gap 256`, declarado en el pase 50 y AFIRMADO aca en vez de callado (patron de Gap 249).
+  # La rama LGPL lee su version SOLO del ancla de texto completo («refers to version 3 of the
+  # GNU Lesser General Public License», linea 276), no del bloque de TITULO. Asi que un stub
+  # LGPL contesta `LGPL` a secas AUNQUE nombre la version: medido este pase, las tres formas
+  # (`Version 3, 29 June 2007`, `3.0` numerico, y sin version) dan `LGPL`, mientras el canonico
+  # de SPDX (42.098 B) si da `LGPL-3.0`.
+  #
+  # NO es el defecto de P613: la rama GPL ESTAMPABA una version que el payload no nombra
+  # (invencion); esta DESCARTA una que si nombra (sub-lectura). Una version de menos es
+  # honesta y gruesa; una version equivocada hace razonar sobre las obligaciones de otra
+  # licencia. Por eso P613 se arregla y Gap 256 se declara: el arreglo de LGPL mueve un
+  # SEGUNDO contrato (`LGPL-2.1` no esta en `OSI_RECONOCIDAS` de p411) y P562 dice que no se
+  # toca un instrumento cuyo contrato no se leyo.
+  check "Gap 256 stub LGPL que NOMBRA Version 3 contesta LGPL a secas (sub-lectura, declarada)" LGPL \
+    "$(family_of "$LGPL")"
+  check "Gap 256 NEG el canonico LGPL-3.0 de SPDX si lee la version" LGPL-3.0 \
+    "$(family_of "$(cat "$FIXP613/lgpl-3.0-spdx-canonical.LICENSE")")"
+  # --- «no declara version» es una respuesta PROPIA, no un GPL-2.0 adivinado (P551/P560/P561) ---
+  check "P613 GNU sin version alguna no se adivina en 2.0" GPL-UNVERSIONED \
+    "$(family_of 'GNU GENERAL PUBLIC LICENSE
+
+ Everyone is permitted to copy and distribute verbatim copies of this
+ license document, but changing it is not allowed.')"
+  # --- el eje de uso comercial no se mueve: GPL es OSI en toda version ---
+  check "P613 el stub numerico GPL-3.0 permite uso comercial" ALLOWED \
+    "$(cu "$(cat "$FIXP613/gpl-3.0-numeric-ud-spanish-ancora-r2.8.LICENSE")")"
+  # --- y los vecinos del mismo directorio de fixtures, que son la razon del hallazgo ---
+  check "P613 AnCora r2.9 (la MISMA ruta, relicenciada) contesta CC-BY-4.0" CC-BY-4.0 \
+    "$(family_of "$(cat "$FIXP613/cc-by-4.0-ud-spanish-ancora-r2.9.LICENSE")")"
+  check "P613 UD_Spanish-GSD contesta CC-BY-SA-4.0" CC-BY-SA-4.0 \
+    "$(family_of "$(cat "$FIXP613/cc-by-sa-4.0-ud-spanish-gsd.LICENSE")")"
+else
+  echo "SKIP P613 — fixtures ausentes en $FIXP613" >&2
+fi
+
 printf '\n%d/%d\n' "$((n-fail))" "$n"
 [ "$fail" = 0 ] || exit 1

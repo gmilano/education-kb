@@ -4,6 +4,85 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟡 Fiftieth pass, 2026-10-08 — the verticals query returned **no MIT/Apache education platform**, and said so itself
+
+⏱️ **Fourth pass of this date.** Licences read first-hand on 2026-10-08 from the repository **payload**
+over `raw.githubusercontent.com`, HTTP status recorded per filename. **No star counts** (`P479`).
+
+🔵 **The mandated verticals query ran verbatim** (`open source platform education ERP CRM MIT Apache`)
+and returned: ERPNext / Frappe Education, Apache OFBiz, **Huly**, **Krayin CRM**, **Aureus ERP**,
+iDempiere, Dolibarr, Compiere. 🟢 **The education-shaped results are already on this shelf**; the new
+names are **horizontal** ERP/CRM with no education module.
+
+🟡 **And the channel conceded the gap in its own words this pass** — *"I found no MIT or Apache
+education platform in these results"*, recommending building education modules on OFBiz or Krayin.
+🟢 **That matches what this shelf has recorded for several passes and is worth keeping as a channel
+observation**: the permissive-licence constraint and the education-vertical constraint are **not
+jointly satisfiable** in the ERP/CRM tier.
+
+### 🟡 `P622` — the education-vertical ERP tier is copyleft, re-confirmed name by name
+
+🟢 **Every row read first-hand this pass:** existence by `git ls-remote --heads` (negative control
+`globant/NEGATIVE-CONTROL-no-existe-50` → **0 refs**), licence from **payload** with the filename and
+byte count recorded, family through the **shared** classifier.
+
+| Platform | Repo | Refs | Licence payload (filename, bytes, HTTP 200) | `family_of` | Education fit |
+|---|---|---|---|---|---|
+| ERPNext + Frappe Education | [`frappe/education`](https://github.com/frappe/education) | 20 | 🔴 **`license.txt`** — **19 B**, verbatim: `License: GNU GPL V3` | 🔴 **`GPL-3.0 (declaracion)`** | 🟢 **purpose-built** — admissions, student records, fees, learning outcomes |
+| OpenEduCat | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 17 | 🔴 `master/LICENSE`, **8 241 B** | 🔴 **`LGPL-3.0`** | 🟢 purpose-built, Odoo-based |
+| Apache OFBiz | [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 8 | 🟢 `master/LICENSE`, **11 906 B** | 🟢 **`Apache-2.0`** | 🔴 **none** — accounting, manufacturing, HR, CRM, e-commerce; education is a build, not a module |
+| Krayin CRM | [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | 7 | 🟢 `master/LICENSE`, **1 078 B**, © 2010-2025 Webkul Software | 🟢 **`MIT`** | 🔴 CRM only — no student records |
+| Aureus ERP | [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) | 1 | 🟢 `master/LICENSE`, **1 077 B**, © 2010-2025 Webkul Software | 🟢 **`MIT`** | 🔴 retail / wholesale / services / distribution / manufacturing |
+| Huly | [`hcengineering/platform`](https://github.com/hcengineering/platform) | 67 | 🟡 `main/LICENSE`, **14 197 B**, *"Eclipse Public License - v 2.0"* | 🟡 **`EPL-2.0`** (🔴 *not* Apache-2.0, as the roundups say) | 🔴 horizontal; *"foundational infrastructure"* by the channel's own description |
+
+🔴 **`frappe/education`'s grant is a 19-byte lowercase `license.txt`, and a four-filename probe missed
+it.** `LICENSE`, `LICENSE.txt`, `LICENSE.md` and `COPYING` returned **404 on all three branches**
+(`main`, `master`, `develop`); only lowercase **`license.txt`** carries it. 🔵 **The `P502` shape
+again, on the single most important education platform on this shelf** — and the reason this KB's
+classifier has a **declaration branch** at all: it was added at pass 77 *for this repo*, and it
+answers `GPL-3.0 (declaracion)` correctly. 🟢 **Re-confirmed working this pass rather than assumed.**
+
+🔵 **A correction this pass makes to its own working notes:** an intermediate probe in this run
+reported `UNCLASSIFIED` for that payload. 🔴 **That was a harness defect, not a classifier defect** —
+the file being classified had been overwritten by a later 404 body in the same loop. 🟢 **The
+classifier is correct; the probe that accused it was not.** 🔵 **Third instance this pass of the
+`P614` shape: an instrument reporting a false verdict about its own dependency.**
+
+🔴 **The roundup licence claim was wrong again, and this is the fourth consecutive pass it has been
+wrong.** 🟡 **Huly** is presented by the secondary sources as *"licensed under Apache License 2.0"*;
+this KB already holds it as **EPL-2.0**, read from payload and distinguished from EPL-1.0 by `P560`.
+🔵 **Pass 47: a roundup licence claim wrong. Pass 48: another. Pass 49: NocoBase's `LICENSE.txt`
+*subordinating* Apache-2.0 (§4.2) with a §7.5 resale bar. Pass 50: Huly.** 🟢 **Four for four is a
+property of the channel: the verticals roundups report the licence a project's marketing claims, not
+the licence in its payload.**
+
+### 🟢 `P623` — the licence that decides an education ERP engagement is now **version-readable**, which it was not this morning
+
+🔵 **Directly relevant to this shelf, not a cross-reference.** The two purpose-built education ERPs are
+**GPL-3.0** (`frappe/education`) and **LGPL-3.0** (`openeducat/openeducat_erp`), and the question a
+studio actually asks is *"can I combine my module with this?"* — which **depends on the version**:
+GPL-2.0 and GPL-3.0 are mutually incompatible, and LGPL-3.0 permits linking where GPL-3.0 does not.
+
+🔴 **Until this pass, `lib/license_family.sh` answered `GPL-2.0` for any GNU payload that named its
+version as a number rather than spelling the word *"version"*** (`P613`, `repos/foundations.md`).
+🟢 **Fixed, with the canonical GPL-2.0 text measured as a negative control (zero version-3 tokens) and
+6/6 mutants killed.**
+
+🟡 **And the companion limit is declared rather than left to be discovered:** `Gap 256` — an **LGPL**
+payload that is a *title stub* answers bare **`LGPL`** even when it names Version 3, because the LGPL
+version is read only from a full-text anchor. 🔵 **`openeducat` is the LGPL-3.0 repo on this shelf, so
+this is the family where the under-read would bite.** 🟢 **Not repaired this pass, and the reason is
+written down: the fix moves a second contract (`LGPL-2.1` is absent from `p411`'s recognised
+vocabulary), and `P562` says you do not touch an instrument whose contract you have not read.**
+
+### 🟢 Unchanged this pass, and re-stated so the shelf reads correctly top-down
+
+🟢 **The customisable-platform recommendation does not move:** Moodle, Open edX and OpenMRS-class
+systems remain the real systems to build AI on top of, and the ERP tier remains a **choice between
+permissive-and-horizontal (OFBiz, Apache-2.0) and education-shaped-and-copyleft (ERPNext GPL-3.0,
+OpenEduCat LGPL-3.0)**. 🔴 **No pass has yet found a platform that is both**, and five passes of the
+mandated query have now said so explicitly rather than by omission.
+
 ## 🔴 Forty-ninth pass, 2026-10-08 — the vertical query's **MIT/Apache** headline is a licence that *subordinates* Apache-2.0, read from payload
 
 ⏱️ **Third pass of this date.** Licences read first-hand on 2026-10-08 from the repository
