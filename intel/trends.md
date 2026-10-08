@@ -4,6 +4,96 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-fifth pass, 2026-10-08 — four trends: a capability that flaps, four regions converging on one engineering requirement, a correction the instruments already held, and a query whose noun hid a continent
+
+### 🔴 Trend 1 — a capability claim here is not stale, it is **non-monotonic**
+
+🔴 **Pass 53: `git ls-remote` is "the only working oracle". Pass 54: it `FAILS`. 🟢 Pass 55, measured:
+it WORKS** — exit `0` with 4 refs on a real slug, exit `128` on a nonexistent one, so it
+discriminates (`P700`).
+
+🔵 **`P639` taught "re-measure, don't inherit", and this pass tightens it.** 🟢 **The drift has no
+direction**: a capability that failed last pass may work now, so a pass that skips the probe because
+"pass 54 already measured it" is exactly as wrong as one that trusts pass 53. 🟢 **Two oracles nobody
+had tried — `registry.npmjs.org` and `repo.packagist.org` — both answer `200`**, which matters
+because the platform shelf is PHP (Moodle, Krayin) and the agent shelf is Python and TypeScript.
+
+> 🟢 **The operational form of this trend: eight `curl` calls and one `ls-remote` at the top of every
+> pass, unconditionally.** 🔴 **The alternative has now cost three passes a method.**
+
+### 🟢 Trend 2 — the most expensive inherited claim was not about an oracle, it was about **publishing**
+
+🔴 **Many passes recorded `push-blocked-proxy` / `push-blocked-access-restriction` and committed
+locally.** 🟢 **Measured this pass: the repository simply was not attached to the session. Attaching
+it with push access makes the push work** (`P701`).
+
+🔵 **This is Trend 1 applied to the KB's own plumbing, and it is the costliest instance on record** —
+🔴 **a stale capability claim about an oracle costs a datum; a stale capability claim about *pushing*
+costs every finding the pass produced**, because the work existed only in a container that is
+reclaimed. 🟢 **The generalisable lesson: probe the *delivery* path with the same discipline as the
+*evidence* path.**
+
+### 🟢 Trend 3 — four regions, four instruments, **one** engineering requirement
+
+🟢 **The single most useful thing in this pass, and it was invisible until the four mandated regional
+queries were read against each other** (`P705`, `intel/market.md`):
+
+| Region | Instrument | Live? |
+|---|---|---|
+| APAC | Vietnam AI law + 2026 decree — education high-risk, **automated assessment** named | 🔴 **yes, 2026-03-01** |
+| North America | NYC DOE red tier — AI **barred** from grading, discipline, promotion, special-ed | 🔴 **yes** |
+| EMEA | EU AI Act Annex III — assessment high-risk | 🟡 **2027-12-02** |
+| LATAM | 🔴 nothing education-specific | 🔴 **and 74 % of institutions already grade with AI** |
+
+🟢 **And the four agree on the trigger: autonomy, not capability** (`P706`). 🟢 **Vietnam's decree
+says it plainest — flagged where output drives decisions *without meaningful human review*** — which
+is NYC's "may not be the decider" and Charleston's "sole basis" and the EU's "affects access,
+progression or assessment".
+
+🔵 **Why this is a trend and not a compliance note.** 🟢 **It means the regulatory answer and the
+pedagogical answer are the same build.** The OECD's 2026 Digital Education Outlook argues for
+purpose-built education AI with durable, demonstrable gains over general-purpose tools; four
+regulators are independently demanding that a grade carry a traceable, human-approved rationale.
+🟢 **Those are one product: a rubric trace with a cited span and a named approver.** 🔴 **A studio
+building "an AI grader" is building the one artefact every one of the four forbids.**
+
+### 🔴 Trend 4 — this KB's **shelves** can lag its **instruments**, and the gap faces the reader
+
+🔴 **`agents/top.md:4016` says `OATutor-Content` *"carries no licence at all"*; `intel/trends.md:4341`
+says it *"is ungranted"*.** 🟢 **`compose/code/p322-content-item-license/` measured, on a systematic
+sample of 1 216 of 13 371 problems with two agreeing step sizes: 75,7 % carry `CC BY 4.0`, 19,3 %
+carry an empty field, 3,6 % name no clauses, 1,4 % point at exam PDFs** (`P703`).
+
+🟢 **Confirmed first-hand this pass:** no licence *file* exists, **and** the README expressly grants
+`CC BY 4.0` over "all content in this repository". 🔵 **So both shelf sentences are false, and false
+in the direction that writes off three quarters of a usable corpus while concealing the real risk —
+the 24,3 % whose permissions are unknown, concentrated by course.**
+
+> 🟢 **The trend: a KB that keeps its measurements in `compose/code/` and its claims on shelves will
+> drift, because nothing forces the shelf to re-read the instrument.** 🔴 **A top-down reader — which
+> is every client-facing reader — gets the blanket claim and never reaches the measurement.**
+> 🆕 **`Gap 264`** records the reconciliation as owed work rather than smoothing it over here.
+
+🔵 **And its sibling, measured the same pass:** 🟢 **the `1 104` / `1 105 B` disagreement between
+`p322` and `agents/top.md:1284` for the same payload is a trailing-newline convention, not an
+error** (`P704`) — 🔴 **two correct readings manufactured a contradiction because neither named its
+method.**
+
+### 🟢 Trend 5 — the regional query's noun can hide a continent, and the fix is the **institution that publishes**
+
+🟢 **Pass 54 found that `AI education EMEA 2026 …` returns vendor commentary because *EMEA* is a
+sales region, and that asking by **country** worked.** 🟢 **This pass confirms it and sharpens the
+fix** (`P707`): the mandated EMEA form again returned a vendor article and US state activity, and
+**naming the publishing institution — ministries, curriculum authorities — returned seven countries
+of first-order material in one search**: Saudi Arabia's 6 M-student rollout with SDAIA, the UAE's
+standalone *Artificial Intelligence and Technology* subject for 2026-27, Ghana, Rwanda, Kenya, South
+Africa's draft policy, and the AU's Continental AI Strategy.
+
+🔵 **The generalisable form:** 🔴 **a region name is a *vendor's* category**; 🟢 **a ministry is a
+*publisher*. Query the publisher.** 🟢 **This is the first substantial Middle East & Africa material
+this KB carries, and it existed the whole time** — the gap was in the question, which is the same
+shape of error as Trend 1 at the level of method rather than capability.
+
 ## 🟢 Fifty-fourth pass, 2026-10-08 — four trends: an inherited capability claim that was false, a layer whose code exists but whose grants do not, a search channel that denied a repo that exists, and a region that was never thin
 
 ### 🔴 Trend 1 — the most expensive stale datum is a **capability** claim, not a fact claim

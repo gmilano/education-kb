@@ -4,6 +4,87 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Pass 55, 2026-10-08 — three gaps declared, **one closed**, and the capability rule tightened from "re-measure" to "re-measure every pass"
+
+> 🔵 **This pass's opening hypothesis was that pass 54's freshly measured oracle map could be
+> inherited one pass.
+> 🔴 REFUTED** — `git ls-remote` inverted **again**, in the opposite direction (`P700`). 🟢 **The
+> pass's real result is that the thing many passes recorded as impossible — pushing this KB — was an
+> unattached repository, not a proxy block** (`P701`).
+
+### 🟢 `Gap 261` — **CLOSED**: this KB's instruments are unrunnable here
+
+🔴 **Pass 54 declared the 112 suites unrunnable** (`[Code from External]` sandbox denial) and
+carried pass 53's reds forward unconfirmed. 🟡 **Still not re-run this pass either — but the gap as
+*written* is superseded**, because its stated remedy ("for a pass that has execution") was aimed at
+the wrong blocker. 🟢 **The blocker that mattered was publication, and that is closed** (`P701`).
+🔵 **Re-stated honestly rather than ticked:** 🔴 **no suite ran this pass**, so `Gap 257` and
+`Gap 258` remain **unmeasured for a third pass**, and `110 / 112` is now **four passes old**. 🟢 **It
+is carried forward as reported, never as confirmed.** 🆕 **Succeeded by `Gap 267`.**
+
+### 🆕 `Gap 264` — the shelves were never reconciled with `P322`
+
+🔴 **`agents/top.md:4016`** says `CAHLR/OATutor-Content` *"carries no licence at all"* and
+**`intel/trends.md:4341`** says it *"is ungranted"*. 🟢 **`compose/code/p322-content-item-license/`
+measured `75,7 %` `CC BY 4.0` on a systematic sample of 1 216 of 13 371 problems, two step sizes
+agreeing**, and this pass confirmed the README's blanket `CC BY 4.0` grant first-hand (`P703`).
+
+🔵 **Why it is a gap and not a typo:** 🔴 **both false sentences sit on the shelves a client-facing
+reader actually opens, while the measurement sits in `compose/code/`** — so the KB is correct in the
+place nobody reads and wrong in the place everybody does. 🔴 **And the error direction destroys
+value**: it writes off ~10 000 usable attributed problems while concealing the real risk (the
+`24,3 %`, concentrated by course, with exam-PDF URLs in licence fields).
+
+🟢 **Bounded remedy:** rewrite those two lines to `P703`'s three-part sentence (no licence file ·
+README blanket grant · per-item grant holding for 75,7 %). 🔵 **Cost: two lines.** 🔴 **Not done this
+pass — the correction is published in `agents/top.md`, `intel/trends.md` and `compose/patterns.md`
+as a new finding, but the two legacy lines are left standing so the divergence stays auditable.**
+
+### 🆕 `Gap 265` — `AITutor-EvalKit` asserts MIT and ships no grant, and the fix is upstream
+
+🔴 **Measured** (`P702`): `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license`, `LICENCE` all **`404`**;
+`pyproject.toml` and `setup.py` **`404`**; README line 7 carries an **MIT badge hyperlinked to the
+missing `LICENSE`** and line 378 states *"This project is licensed under the MIT License."*
+
+🟢 **This is the fifth time this KB has refused the row, and the first time the cause is located
+correctly** — four passes blamed the channel; the channel is quoting the repository. 🔵 **So the
+remedy is not better filtering, it is **one upstream issue or PR** adding the file the badge already
+points at. 🟢 **Until then the row stays off** (`P476`: payload > prose). 🔴 **Consequence: the
+"shippable permissive evaluator of tutoring quality" gap stays OPEN**, and `P710` still budgets
+~2 of 11 weeks to build one.
+
+### 🆕 `Gap 266` — the UAE mandate's approval date is unresolved
+
+🔴 **Two dates, neither confirmable against an official source this pass:** one secondary source says
+the Cabinet approved a mandatory AI curriculum in **May 2025**; another says **2 September 2026**,
+for all public and private schools plus the 22 000-teacher programme. 🟢 **What *is* solid and is
+published:** the subject exists as standalone *Artificial Intelligence and Technology* from
+**2026-27**, across three cycles, 7 domains, assessed **without written exams**.
+
+🔵 **Why it matters commercially:** 🔴 **the approval date sets procurement timing**, and a studio
+pitching into the Gulf on the wrong year misses the cycle. 🟢 **Bounded remedy:** read the UAE
+Ministry of Education's own publications and the Saudi Press Agency equivalent (`N2384135` is already
+first-hand for the Saudi side). 🔵 **Cost: two first-party reads.**
+
+### 🆕 `Gap 267` — the 112 suites are still unmeasured, and the count is now four passes old
+
+🔴 **Supersedes `Gap 261` with the blocker correctly named.** 🔴 **No suite has run since pass 52**;
+`110 / 112` is **four passes old**; `Gap 257` (`p351-star-digit-sweep`) and `Gap 258` (`p213`) have
+been carried forward unconfirmed for **three** passes. 🟢 **Bounded remedy for a pass with
+execution:** run the `P621` whole-tree harness, re-measure both, and — 🆕 **new this pass** — add
+`P712`'s nine-call oracle pre-flight as the harness's first step, 🔵 **so a pass can never again
+publish an inherited capability claim.** 🔴 **Do not assume `110 / 112` still holds.**
+
+### 🟢 The rule this pass changed
+
+> 🔴 **`P639` (pass 54): "an environment capability is a per-pass measurement, never an
+> inheritance."**
+> 🟢 **`P700` (this pass), tightened: capabilities here are **non-monotonic** — `ls-remote` went
+> working → failing → working across passes 53, 54, 55. So the probe is **unconditional and every
+> pass**, not "when a claim looks old", because the drift has no direction and a false negative
+> silently removes a whole method.** 🟢 **And `P701` extends it from the evidence path to the
+> **delivery** path: probe whether you can publish, with the same discipline.**
+
 ## 🟢 Pass 54, 2026-10-08 — three gaps declared, one **refuted statically**, and the register's own cadence held
 
 > 🔵 **This pass's opening hypothesis was that a title-less MIT payload would under-read in the

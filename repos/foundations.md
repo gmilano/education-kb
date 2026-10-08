@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-fifth pass, 2026-10-08 — **no new row**, and the shelf's licence column re-derived from payload with its measurement convention named
+
+⏱️ **Ninth pass of this date.** 🔴 **No row added**: the mandated foundations channel is saturated for
+the sixth week and every education-specific repo it named is already shelved (`agents/trending.md`).
+🟢 **What changed is provenance quality** — licences re-read first-hand, and the byte-count
+convention that was silently producing contradictions is now stated.
+
+### 🟢 Why this shelf can read grants this pass (`P700`)
+
+🟢 **Measured, not inherited:** `raw.githubusercontent.com` **`200`** and `404`-discriminating,
+`pypi.org` **`200`**, 🆕 `registry.npmjs.org` **`200`**, 🆕 `repo.packagist.org` **`200`**, and
+🟢 **`git ls-remote` WORKS** — which pass 54 measured as failing. 🔴 `api.github.com` and `github.com`
+remain `403`, and `codeload.github.com` is **`403`**, so no star figure is published.
+
+🔵 **The two new registries matter to *this* shelf specifically:** 🟢 **Packagist answers for the PHP
+platforms (Moodle, Krayin) and npm for the JS layer** — so a dependency-level licence question is
+answerable here again without the GitHub API.
+
+### 🟢 `P704` — the convention this shelf was missing
+
+🔴 **`p322` published `1 104 B` and `agents/top.md:1284` published `1 105 B` for the same
+`CAHLR/OATutor` `LICENSE`.** 🟢 **Both are correct: `1105` is the file as stored, `1104` is the
+payload with its trailing newline stripped** — `curl | wc -c` versus `printf '%s' "$(curl)" | wc -c`.
+
+> 🟢 **This shelf now publishes the file as stored, including the trailing newline, and says so.**
+> 🔴 **A provenance figure without its convention invents disagreements between correct readings.**
+
+### 🟢 Licences re-derived from payload this pass
+
+| Repo | Licence (first-hand, file as stored) | Holder | Standing |
+|---|---|---|---|
+| https://github.com/CAHLR/OATutor | 🟢 **MIT** · `main/LICENSE` **1 105 B** | Zachary A. Pardos — CAHL research lab, 2023 | 🟢 holds · 🔴 **read `P703` on its content submodule before deploying** |
+| https://github.com/Ebimsv/AITutorAgent | 🟢 **MIT** · `main/LICENSE` **1 071 B** | Ebrahim Mousavi, 2025 | 🟢 holds · 🟡 1 ref |
+| https://github.com/mitodl/open-learning-ai-tutor | 🟢 **MIT** · `main/LICENSE` **1 068 B** | Romain Puech, 2024 | 🟢 holds · 🟢 66 refs, MIT Open Learning provenance |
+| https://github.com/zijinz456/OpenTutor | 🟢 **MIT** · `main/LICENSE` **1 067 B** | Zijin Zhang, **2026** | 🟢 holds · 🟢 newest grant on the shelf |
+| https://github.com/apache/ofbiz-framework | 🟢 **Apache-2.0** · `trunk/LICENSE` **11 905 B** | ASF | 🟢 holds — 🔴 **general ERP, not education** (`P708`) |
+| https://github.com/delip/autorubric | 🟢 **MIT** — cross-checked on PyPI this pass: **v1.6.1**, `license: MIT`, 9 releases | Rao & Callison-Burch, UPenn | 🟢 **pass 54's row confirmed still live** |
+
+🔴 **Explicitly NOT shelved, with reasons, so the next pass does not re-litigate them:**
+
+| Repo | Why not |
+|---|---|
+| `kaushal0494/AITutor-EvalKit` | 🔴 **No grant text.** 5 licence paths `404`; `pyproject.toml`/`setup.py` `404`; README asserts MIT twice and its badge links to a missing `LICENSE` (`P702`). 🆕 `Gap 265` |
+| `hulylabs/huly` | 🔴 **No payload.** 4 licence paths `404` on `main`; the Apache-2.0 claim is secondary prose only (`P709`) |
+| `frappe/erpnext` | 🔴 **GPL-3.0** (`develop/license.txt`, **35 148 B**). 🟢 Education-specific and genuinely capable — but a copyleft decision, not a drop-in (`P708`) |
+
+🔵 **Fewer real rows beat padding:** 🟢 **six verified rows re-derived and three explicit refusals is
+this pass's honest yield**, and the refusals carry more decision value than a seventh row would.
+
 ## 🟢 Fifty-fourth pass, 2026-10-08 — **one new row**, and the shelf's whole licence column is promoted from *asserted* to *read*
 
 ⏱️ **Eighth pass of this date.** 🟢 **One row added** — the first in five passes. 🟢 **Seven licence

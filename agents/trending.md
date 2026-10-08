@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-fifth pass, 2026-10-08 — week of 2026-10-08: the mandated query is saturated for the **sixth** week, and the week's movement is that **`ls-remote` came back from the dead**
+
+⏱️ **Ninth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+🟢 **Oracle map re-measured before any datum** (`P700`, `agents/top.md`): `raw.githubusercontent.com`
+**`200`** (and `404` on a nonexistent slug), `pypi.org` **`200`**, 🆕 `registry.npmjs.org` **`200`**,
+🆕 `repo.packagist.org` **`200`**. 🟢 **`git ls-remote` WORKS this pass — pass 54 measured it as
+`FAILS`.** 🔴 **`github.com` HTML `403`, `api.github.com` `403`, `codeload` `403` → no star count is
+published this pass and none was read first-hand.**
+
+### 🔴 The mandated queries, run globally, and what they returned
+
+| Query (mandated form) | Result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **saturated, 6th consecutive week** — general-purpose agent roundups + AI *pedagogy* courses |
+| `github trending education AI 2026` | 🔴 **no education-AI trending cell exists**, 6th week; general AI roundups only |
+
+🟢 **`P497` holds for the sixth week: the query's noun returns pedagogy *about* AI, not software
+*for* education.** 🔵 **The education-specific repos the channel did name were, without exception,
+already on this shelf** — `Ebimsv/AITutorAgent`, `mitodl/open-learning-ai-tutor`,
+`zijinz456/OpenTutor`, `CAHLR/OATutor`, `kaushal0494/AITutor-EvalKit`, `plastic-labs/tutor-gpt`.
+🟢 **Recorded as saturation, not dressed up as discovery** — at pass 55 a saturated query against a
+mature shelf is the expected result, and claiming five "new" rows would have been false.
+
+### 🟢 Licences re-read from payload this week (byte counts = file as stored, `P704`)
+
+| Repo | Licence | Holder |
+|---|---|---|
+| `CAHLR/OATutor` | 🟢 **MIT**, **1 105 B** | Zachary A. Pardos — CAHL research lab, 2023 |
+| `Ebimsv/AITutorAgent` | 🟢 **MIT**, **1 071 B** | Ebrahim Mousavi, 2025 |
+| `mitodl/open-learning-ai-tutor` | 🟢 **MIT**, **1 068 B** | Romain Puech, 2024 |
+| `zijinz456/OpenTutor` | 🟢 **MIT**, **1 067 B** | Zijin Zhang, **2026** |
+| `jamwithai/production-agentic-rag-course` | 🟢 **MIT**, **1 068 B** | Jam With AI, 2025 |
+| `kaushal0494/AITutor-EvalKit` | 🔴 **NO GRANT** — 5 licence paths `404`, README asserts MIT twice | — |
+
+### 🔴 This week's correction: the false `AITutor-EvalKit` MIT claim is **upstream**, not downstream
+
+🟢 **Four previous passes blamed the channel. Measured this pass (`P702`): the repo's own README
+carries an `MIT` badge hyperlinked to `(LICENSE)` — a file that `404`s — and states "This project is
+licensed under the MIT License" at line 378.** 🔵 **The channel is repeating the repository
+faithfully.** 🔴 **Verdict unchanged (no grant text, not adoptable); cause and remedy both move
+upstream.** 🆕 **`Gap 265`.**
+
+🟡 **One trending datum, recorded as second-hand:** a 2026-10-04 AI-trends snapshot built from GitHub
+Trending data names `jamwithai/production-agentic-rag-course` (🟢 **MIT**, verified above) — 🔵 **the
+closest thing to an education item the trending channel produced in six weeks, and it is a *course*,
+which is `P497` again.**
+
 ## 🟢 Fifty-fourth pass, 2026-10-08 — week of 2026-10-08: the mandated query is saturated for the **fifth** week, and the week's real movement is that **first-hand verification came back**
 
 ⏱️ **Eighth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

@@ -4,6 +4,90 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-fifth pass, 2026-10-08 — `P648` upgraded from a two-region pattern to a **four-region** one, a cheap pre-flight every recipe now needs, and a component correction that *restores* an asset
+
+### 🟢 `P710` — the **defensible-grading pipeline** is now justified by four instruments, and the trigger condition tells you exactly what to build
+
+🟢 **Pass 54 proposed `P648` on an EMEA + LATAM argument. This pass measured two more regions and the
+pattern is the same build in all four** (`P705`, `intel/market.md`):
+
+| Region | What forbids or exposes autonomous grading | Live? |
+|---|---|---|
+| APAC | Vietnam's 2026 decree — education high-risk, **automated assessment** named explicitly | 🔴 **2026-03-01** |
+| North America | NYC DOE **red tier** — AI barred from grading, discipline, promotion, special-ed; Charleston County bars **sole basis** | 🔴 **live** |
+| EMEA | EU AI Act **Annex III** — assessment high-risk, conformity assessment before market | 🟡 **2027-12-02** |
+| LATAM | 🔴 no rule — and **74 %** of institutions grade with AI, **~25 %** have a framework | 🔴 **exposure now** |
+
+🟢 **`P706` is the design specification, and it comes from Vietnam's own drafting:** the high-risk
+flag attaches where output **drives decisions without meaningful human review**.
+
+> 🟢 **`P710`.** *Build the grader as a **proposer**, never a decider. The regulated object in all four
+> jurisdictions is an **unreviewed** machine grade; a proposed grade with a rubric trace, a cited
+> span and a named human approver is a different object.* 🔵 **Human-in-the-loop is not the
+> compliance cost — it is the mechanism that moves the artefact out of the prohibited class in four
+> jurisdictions with one implementation.**
+
+🟢 **The concrete wiring, with the licence of every component read first-hand this pass:**
+
+| Step | Component | Licence | What it contributes |
+|---|---|---|---|
+| 1. Mastery state | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 **MIT** · 1 105 B | **Bayesian Knowledge Tracing** — an auditable per-skill mastery estimate, so "why this grade" has a model behind it, not a vibe. 🔴 **See `P711` for its content layer** |
+| 2. Rubric scoring | [`delip/autorubric`](https://github.com/delip/autorubric) | 🟢 **MIT** · PyPI **v1.6.1** (re-confirmed this pass) | Binary / ordinal / nominal criteria, weights, multi-judge ensembles, documented **position-** and **verbosity-bias** mitigations — the scorer that produces a *rubric trace* rather than a number |
+| 3. Tutoring / feedback | [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) · [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | 🟢 **MIT** · 1 068 B · 1 071 B | The learner-facing explanation layer; `AITutorAgent` is **LangGraph**-native, so the approver step is a graph node, not an afterthought |
+| 4. Delivery surface | Moodle / Open edX gradebook | GPL-3.0 / AGPL-3.0 | 🔴 **The approver step must live in the LMS workflow** (`verticals/solutions.md`), because that is where the grade of record is written |
+| 5. Evaluating the grader | 🔴 **nothing adoptable** | — | 🔴 **`AITutor-EvalKit` has no grant** (`P702`); `mathtutorbench` self-contradictory; Open TutorAI **CC BY-NC-SA 4.0**. 🟢 **Budget ~2 of 11 weeks to build it** — the gap is still open and still named |
+
+🔴 **What NOT to put in this pipeline:** 🟢 **`plastic-labs/tutor-gpt` is GPL-3.0** — a reference for
+its Theory-of-Mind approach, not a component. 🟢 **`GarethManning/education-agent-skills` is
+CC-BY-SA-4.0** (pass 54, `P643`) — **ShareAlike reaches derivatives**, so it is reading material,
+never a bundled step.
+
+### 🟢 `P711` — the correction that **restores** an asset, and the licence distinction that makes it safe
+
+🔴 **Every recipe here that warned OATutor's content was *"ungranted"* was repeating a shelf claim
+this KB's own instrument had already falsified** (`P703`, `agents/top.md`). 🟢 **Measured:
+`CAHLR/OATutor-Content` carries no licence *file*, a blanket **`CC BY 4.0`** grant in its README, and
+a per-item grant that holds for **75,7 %** of 13 371 problems and fails for **24,3 %**.**
+
+🟢 **So the corrected recipe instruction is per-item, and it is a build step:**
+
+> 🟢 **`P711`.** *Gate OATutor's content **at the item**, not at the repository. Admit the **75,7 %**
+> that declare `CC BY 4.0` — attribute and ship. 🔴 **Quarantine the 24,3 %**: 19,3 % empty licence
+> fields, 3,6 % naming no clauses, and 1,4 % whose licence field holds an **exam-PDF URL** copied
+> from the provenance field.* 🔵 **One pass over the item JSON, run once at ingest, converts a repo
+> this KB was writing off into roughly ten thousand usable, attributed problems.**
+
+🔵 **And the distinction a client needs in one sentence, because this KB now holds three CC-licensed
+education corpora and they are not interchangeable:**
+
+| Work | Licence | Reaches your derivative? | Usable in a client product? |
+|---|---|---|---|
+| `OATutor-Content` (the 75,7 %) | 🟢 **CC BY 4.0** | 🟢 **No** — attribution only | 🟢 **Yes, with attribution** |
+| `education-agent-skills` | 🔴 **CC-BY-SA-4.0** | 🔴 **Yes** — ShareAlike | 🔴 **No** — reference only |
+| `OATutor-Content` (the 24,3 %) | 🔴 **unknown** | 🔴 unknowable | 🔴 **No** — quarantine |
+
+### 🟢 `P712` — the pre-flight every recipe in this file should start with
+
+🔴 **Three passes in a row have been wrong about what this environment can do** (`P639`, `P700`), and
+🔴 **many passes were wrong about whether work could be published at all** (`P701`). 🟢 **So every
+recipe here inherits a nine-call pre-flight, and it is cheap:**
+
+```sh
+# oracles — run before trusting any licence or existence claim in this file
+curl -sI -o /dev/null -w "raw=%{http_code}\n"  https://raw.githubusercontent.com/delip/autorubric/main/LICENSE
+curl -sI -o /dev/null -w "raw404=%{http_code}\n" https://raw.githubusercontent.com/delip/zzz-no-repo/main/LICENSE  # must be 404: proves discrimination
+curl -sI -o /dev/null -w "pypi=%{http_code}\n"   https://pypi.org/pypi/autorubric/json
+curl -sI -o /dev/null -w "npm=%{http_code}\n"    https://registry.npmjs.org/h5p-standalone
+curl -sI -o /dev/null -w "pkgst=%{http_code}\n"  https://repo.packagist.org/p2/moodle/moodle.json
+git ls-remote --heads https://github.com/delip/autorubric >/dev/null 2>&1; echo "lsremote=$?"   # 0 = usable
+```
+
+> 🟢 **`P712`.** *A recipe that names a component is asserting a licence fact about today (`P478`).
+> 🔴 **Re-probe at write time, and probe the oracle's ability to say "no" — a channel that answers
+> `200` to everything confirms nothing.*** 🔵 **The `raw404` line is the whole point: it is the
+> negative control, and `P700` only trusts `ls-remote` because exit `128` on a nonexistent slug
+> proved it discriminates.**
+
 ## 🟢 Fifty-fourth pass, 2026-10-08 — one new recipe (`P648` the **defensible-grading pipeline**), one **correction** to every recipe that names `education-agent-skills`, and a cheap pre-flight every recipe should start with
 
 ### 🔴 The correction first, because it constrains recipes already published here

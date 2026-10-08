@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-fifth pass, 2026-10-08 — the vertical query finally returned a **real channel** instead of a translated glossary, and the answer is a licence trade this shelf had not stated
+
+⏱️ **Ninth pass of this date.** 🟢 **The mandated vertical query behaved differently from pass 54** —
+where that pass got ten translations of one vendor glossary, this pass got a genuine ERP/CRM channel.
+🔴 **No new education platform is admitted**, and the reason is now a stated structural finding
+rather than a channel failure.
+
+### 🟢 `P708` — in education ERP the trade is **domain fit against licence**, and this shelf should say so
+
+🟢 **Every row read first-hand this pass** (`raw.githubusercontent.com` **`200`**, file as stored per
+`P704`):
+
+| Platform | Repo | Licence (first-hand) | Models a school? | Verdict for Globant |
+|---|---|---|---|---|
+| **ERPNext** | https://github.com/frappe/erpnext | 🔴 **GPL-3.0** · `develop/license.txt` **35 148 B** · *Version 3, 29 June 2007* | 🟢 **Yes** — admissions, student records, fees, learning outcomes | 🟡 **Capable and copyleft.** Deployable and customisable; distributing a modified derivative triggers GPL-3.0. 🟢 **Fine as a hosted deployment for one client; wrong as a vendored product core** |
+| **Apache OFBiz** | https://github.com/apache/ofbiz-framework | 🟢 **Apache-2.0** · `trunk/LICENSE` **11 905 B** | 🔴 **No** — ERP/CRM/SCM/MRP for a business | 🟢 **Permissive and buildable-on** — 🔴 **but the education domain is yours to write.** Java |
+| **Krayin CRM** | https://github.com/krayin/laravel-crm | 🟢 **MIT** · `master/LICENSE` **1 077 B** | 🔴 **No** — general CRM | 🟢 **Cleanest grant here.** Laravel/PHP; useful for the **admissions-and-enrolment funnel**, which is CRM-shaped, not ERP-shaped |
+| **Huly** | https://github.com/hulylabs/huly | 🔴 **NO PAYLOAD** — `LICENSE`, `LICENSE.md`, `license.txt`, `COPYING` all `404` on `main` | 🔴 No | 🔴 **NOT admitted** (`P709`). Secondary prose says Apache-2.0; `P476` puts payload above prose |
+
+> 🟢 **`P708`.** *The education-specific ERP is **GPL-3.0**; the permissive ERPs are not
+> education-specific. There is no permissively licensed system that already models a school.* 🔵 **So
+> every education-ERP engagement is explicitly one of three decisions — deploy copyleft per client,
+> build the school domain on Apache-2.0 foundations, or buy — and this shelf's job is to make the
+> client choose knowingly rather than discover it at integration.**
+
+🔵 **The practical refinement worth carrying into a proposal:** 🟢 **the admissions funnel and the
+student-records system are different licence problems.** 🟢 **Admissions is CRM-shaped and has an
+`MIT` answer (Krayin); records-and-fees is ERP-shaped and the good answer is copyleft (ERPNext).**
+🔴 **A single-platform decision takes the worse licence for both halves.**
+
+### 🟢 The six platform rows hold, and one gains a regulatory hook
+
+🟢 **No change to Moodle · Open edX · Canvas · BigBlueButton · H5P · Kolibri · OpenEduCat · Sakai**
+— the vertical channel named none of them this pass. 🟢 **`repo.packagist.org` answers `200` this
+pass** (`P700`), 🔵 **which restores a first-hand dependency-licence channel for the PHP platforms
+(Moodle, Krayin) that this shelf has lacked since the GitHub API went `403`.**
+
+🔴 **The regulatory hook, and it lands on this shelf rather than on `intel/`:** 🟢 **four
+jurisdictions now constrain automated assessment** (`P705`), and 🟢 **the LMS is where assessment
+runs.** 🔵 **So a Moodle or Open edX engagement that bolts on AI marking is touching the Annex III /
+Vietnam-decree surface through the platform's gradebook** — 🟢 **and `P706`'s human-approver step has
+to exist *in the LMS workflow*, not beside it. That is a platform-integration requirement, which is
+this shelf's business.**
+
 ## 🟢 Fifty-fourth pass, 2026-10-08 — the shelf's six platforms hold, and the row that changes is the **seventh thing this KB was recommending without reading its licence**
 
 ⏱️ **Eighth pass of this date.** 🔴 **No new platform**: the vertical query returns the same six for

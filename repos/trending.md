@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-fifth pass, 2026-10-08 — week of 2026-10-08: the trending channel is empty of education for the **sixth** week, and the vertical query changed shape
+
+⏱️ **Ninth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+🟢 **Oracle map re-measured first** (`P700`): `raw.githubusercontent.com` **`200`** / `404`-discriminating,
+`pypi.org` **`200`**, 🆕 `registry.npmjs.org` **`200`**, 🆕 `repo.packagist.org` **`200`**, 🟢 **`ls-remote`
+WORKS** (pass 54 said it failed). 🔴 `github.com` `403`, `api.github.com` `403`, `codeload` **`403`**
+— 🔴 **no star counts published, and tarball enumeration is now measured as unavailable.**
+
+### 🔴 The mandated trending query, sixth consecutive empty week
+
+| Query | Result |
+|---|---|
+| `github trending education AI 2026` | 🔴 **No education-AI trending list exists.** General AI roundups only |
+
+🔵 **What the channel named, all general-purpose:** `developer-roadmap`, `karpathy/nanochat`,
+`microsoft/semantic-kernel`, plus curated *awesome* lists (`ARUNAGIRINATHAN-K/awesome-ai-agents-2026`,
+`caramaschiHG/awesome-ai-agents-2026`, `ashishpatel26/500-AI-Agents-Projects`). 🔴 **Not one is
+education software; the lists are catalogues, which `P497` separates from tools.**
+
+🟢 **One slug admitted, verified first-hand:** `jamwithai/production-agentic-rag-course` — 🟢 **MIT**,
+`main/LICENSE` **1 068 B**, *Copyright (c) 2025 Jam With AI*, 🟢 2 refs, named by a **2026-10-04**
+trending snapshot. 🔵 **Admitted as a *course* with a clean grant, not as education infrastructure.**
+
+🟡 **Institutional signal, second-hand:** Central European University announced a GitHub
+collaboration (April 2026) for AI-ready teaching and research. 🔵 **Directional; no software.**
+
+### 🟢 `P708` — the vertical query's own nouns steer it away from education, and the finding is a licence pattern
+
+🟢 **`open source platform education ERP CRM MIT Apache` behaved differently from pass 54** — it
+returned general ERP/CRM instead of the ten-language vendor glossary. 🔴 **But the yield is the same
+shape: the education-specific option is copyleft and the permissive options are not
+education-specific.**
+
+| Repo | Licence (read first-hand) | Education-specific? |
+|---|---|---|
+| `frappe/erpnext` | 🔴 **GPL-3.0** — `develop/license.txt` **35 148 B**, *GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007* | 🟢 **Yes** — has an education vertical (admissions, student records, fees, outcomes) |
+| `apache/ofbiz-framework` | 🟢 **Apache-2.0** — `trunk/LICENSE` **11 905 B** | 🔴 No — general ERP/CRM/SCM |
+| `krayin/laravel-crm` | 🟢 **MIT** — `master/LICENSE` **1 077 B** | 🔴 No — general CRM |
+| `hulylabs/huly` | 🔴 **NO PAYLOAD** — `LICENSE`, `LICENSE.md`, `license.txt`, `COPYING` all `404` on `main` | 🔴 No |
+
+> **`P708`.** *In education ERP the trade is **fit against licence**: the system that already models
+> admissions and student records is **GPL-3.0**, and the permissively licensed systems model a
+> business, not a school.* 🔵 **So "adopt ERPNext" is a copyleft decision, and "adopt OFBiz" is a
+> build-the-education-domain decision. Neither is free.**
+
+🔴 **`P709` — `hulylabs/huly` is NOT shelved.** 🟡 **A secondary source called it Apache-2.0**; 🔴 **four
+licence paths `404` on `main`.** 🟢 **`P476` governs: payload > shelf > secondary prose, so it stays
+off.** 🔵 **Recorded so the next pass does not re-litigate it from the same blog.**
+
 ## 🟢 Fifty-fourth pass, 2026-10-08 — week of 2026-10-08: **one slug admitted**, and the admission came from a probe after the channel said the repo did not exist
 
 ⏱️ **Eighth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

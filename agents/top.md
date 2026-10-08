@@ -4,6 +4,145 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-fifth pass, 2026-10-08 — the capability claim inverted **again, in the other direction**, and the shelf's worst row is one the instruments already fixed
+
+> 🔵 **This pass's opening hypothesis was that pass 54's oracle map could be inherited, since it was
+> measured only one pass ago.
+> 🔴 That hypothesis is REFUTED.** 🟢 **`git ls-remote` — which pass 54 measured as `FAILS` and pass
+> 53 called "the only working oracle" — works this pass**, and two oracles nobody had tried answer
+> `200`. 🟢 **The generalisable result is sharper than `P639`'s:** a capability here is not merely
+> *stale-able*, it is **non-monotonic** — it flaps between passes, so "measure, don't inherit"
+> cannot be relaxed to "measure occasionally".
+
+### 🟢 `P700` — every oracle re-measured, and the map changed in **four** cells
+
+🟢 **Run before any finding was written, same method as `P639`:**
+
+| Oracle | Pass 53 | Pass 54 | 🟢 **Pass 55 (measured)** |
+|---|---|---|---|
+| `git ls-remote` | 🟢 "the only working one" | 🔴 `FAILS` | 🟢 **WORKS** — exit `0` + 4 refs on `delip/autorubric`; exit `128` on a nonexistent slug → **discriminates** |
+| `raw.githubusercontent.com` | 🔴 unusable | 🟢 `200` | 🟢 **`200`**, and `404` on a nonexistent slug → **discriminates** |
+| `pypi.org` | not considered | 🟢 `200` | 🟢 **`200`** |
+| `registry.npmjs.org` | — | — | 🟢 **`200`** — 🆕 **new oracle, not previously tried** |
+| `repo.packagist.org` | — | — | 🟢 **`200`** — 🆕 **new oracle** (matters: Moodle and Krayin are PHP) |
+| `github.com` HTML | 🔴 `400` | 🔴 `403` | 🔴 **`403`** |
+| `api.github.com` | 🔴 blocked | 🔴 `403` | 🔴 **`403`** |
+| `codeload.github.com` | — | — | 🔴 **`403`** — 🆕 measured, so tarball enumeration is **out** |
+
+🔴 **Still no star counts**: both channels that carry them are `403`, so **no popularity figure is
+published this pass** and none was read first-hand. 🔵 **`ls-remote`'s ref count is the only
+popularity-adjacent integer available, and it measures branches, not stars** — it is reported as
+what it is.
+
+> **`P700`.** *An environment capability here is **non-monotonic**: `ls-remote` went working →
+> failing → working across three consecutive passes. So the rule is not "re-measure when a claim
+> looks old", it is **re-measure every pass, before the first finding**, because the direction of
+> drift is unpredictable and a false negative silently removes a method.* 🟢 **Cost: eight `curl`
+> calls and one `ls-remote`.**
+
+### 🟢 `P701` — the push that fifteen passes recorded as impossible is **not** impossible
+
+🔴 **This KB's rotation log carries, repeatedly:** `education-kb-push-blocked-proxy` and
+`push-blocked-access-restriction`, and the local commits piled up behind it. 🟢 **Measured this
+pass: the block is not a proxy limit — it is an unattached repository.** Attaching
+`gmilano/education-kb` to the session with push access makes `git push --dry-run` return
+`Everything up-to-date` against the real remote.
+
+> **`P701`.** *"The push is blocked" was a **capability claim**, and it was inherited for many passes
+> exactly as `P639`/`P700` describe. The remedy was one call, not a workaround.* 🔵 **This is the
+> most expensive stale capability claim this KB has carried, because it did not cost a datum — it
+> cost the publication of every pass that recorded it.**
+
+### 🔴 `P702` — the `AITutor-EvalKit` false `MIT` claim originates in the **repo's own README**, not in the channel
+
+🟢 **This KB has correctly refused this row four times** (`agents/top.md:2328`), each time
+attributing the false claim to *"search summaries"* and to the EACL 2026 demo paper. 🔴 **Measured
+first-hand this pass, the call is coming from inside the repository:**
+
+| Probe on `kaushal0494/AITutor-EvalKit` `main` | Result |
+|---|---|
+| `LICENSE` | 🔴 **`404`** |
+| `LICENSE.md` · `LICENSE.txt` · `license` · `LICENCE` | 🔴 **`404`** on all four |
+| `pyproject.toml` · `setup.py` | 🔴 **`404`** — so no packaging metadata carries a classifier either |
+| `README.md` line 7 | 🔴 badge `license-MIT-green.svg`, **hyperlinked to `(LICENSE)`** — a link to a file that does not exist |
+| `README.md` line 378 | 🔴 *"This project is licensed under the MIT License."* |
+
+🔵 **Why this sharpens the finding rather than repeating it.** Four passes treated this as a
+*secondary-source* error, which implies the upstream is merely silent. 🔴 **It is not silent — it
+asserts `MIT` twice, and points its own badge at a missing file.** 🟢 **So the channel is not
+hallucinating; it is faithfully repeating the repository.** 🔴 **The verdict does not change — a
+repo with no grant text is not adoptable — but the *cause* does, and so does the remedy: it is
+upstream and it is cheap.** 🆕 **`Gap 265`.**
+
+### 🔴 `P703` — the shelves say `OATutor-Content` is **ungranted**; this KB's own instrument measured that **75,7 %** of it is `CC BY 4.0`
+
+🔴 **Two live shelf claims:**
+
+| Where | Claim |
+|---|---|
+| `agents/top.md:4016` | *"Its content repository … **carries no licence at all.** The pedagogy is the asset; it is the part that is not granted."* |
+| `intel/trends.md:4341` | *"**`CAHLR/OATutor-Content` is ungranted.**"* |
+
+🟢 **What `compose/code/p322-content-item-license/` actually measured** (1 216 of 13 371 problems,
+systematic every-11th sample, two independent step sizes agreeing):
+
+| Class | n | % |
+|---|---|---|
+| 🟢 `CC-BY-4.0` | 920 | **75,7 %** |
+| 🔴 `VACIA` (field present, empty) | 235 | **19,3 %** |
+| 🔴 `OTRO` (`CC4.0`, `openstax` — name no clauses) | 44 | **3,6 %** |
+| 🔴 `URL-NO-LICENCIA` | 17 | **1,4 %** |
+
+🟢 **Confirmed first-hand this pass:** `OATutor-Content` has **no licence file** (`LICENSE`,
+`LICENSE.md`, `license.txt` all `404`) **and** its `README.md` line 37 expressly grants *"all content
+in this repository … under the Creative Commons Attribution 4.0 International (CC BY 4.0) license"*,
+line 38 adding that attribution sits in each json.
+
+🔵 **So "no licence at all" is false twice over** — there is a blanket README grant, and three
+quarters of the items carry the per-item grant to match. 🔴 **And "ungranted" is wrong in the
+direction that destroys value**: it writes off a usable corpus. 🔴 **But the shelf's *replacement*
+must not be "it is CC BY 4.0" either — `P322` falsified that in magnitude.** 🟢 **The true,
+useful sentence is the third one:**
+
+> 🟢 **`P703`.** *`CAHLR/OATutor-Content` carries **no licence file**, a **blanket `CC BY 4.0` grant in
+> its README**, and a **per-item grant that holds for 75,7 % of problems and fails for 24,3 %**. The
+> adoptable unit is therefore **the item, not the repository** — and the 24,3 % is not "unlicensed
+> noise", it is material whose permissions are unknown, concentrated by course, with exam-PDF URLs
+> copied into licence fields in the worst 17 cases.*
+
+🔵 **The lesson is about propagation, not about licences.** 🔴 **`P322` closed this in
+`compose/code/` and the two shelves a reader actually consults were never reconciled** — so a
+top-down reader gets the blanket claim and never reaches the measurement. 🆕 **`Gap 264`.**
+
+### 🟢 `P704` — and the KB's own `1 104` / `1 105 B` disagreement on this file is a **convention**, not an error
+
+🔴 **`p322` publishes `LICENSE` **1 104 B**; `agents/top.md:1284` publishes **1 105 B**, for the same
+`CAHLR/OATutor` payload.** 🟢 **Measured both ways this pass: the file is `1105` bytes written to
+disk and `1104` bytes with the trailing newline stripped** (`curl … | wc -c` vs
+`printf '%s' "$(curl …)" | wc -c`).
+
+> **`P704`.** *Both figures were right under different shell idioms. 🟢 **A byte count published as
+> provenance must name its convention**, or it manufactures a contradiction between two correct
+> readings.* 🟢 **This pass publishes file size including the trailing newline, and says so.**
+
+### 🟢 Rows re-derived from their own payloads this pass
+
+🟢 **Every licence below was read from `raw.githubusercontent.com` this pass, with the byte count of
+the file as stored (`P704`), and existence confirmed independently by `ls-remote` (`P700`):**
+
+| Agent / library | Repo | Licence (read first-hand) | Holder | What it is |
+|---|---|---|---|---|
+| **OATutor** | https://github.com/CAHLR/OATutor | 🟢 **MIT** · `main/LICENSE` **1 105 B** | *Zachary A. Pardos (@zpardos) — CAHL research lab, 2023* | ITS with **Bayesian Knowledge Tracing**; ReactJS + Firebase, deployable to GitHub Pages with LTI middleware for Canvas. 🔴 **Read `P703` before deploying: the content enters by submodule and is granted per item, not in bulk.** |
+| **AITutorAgent** | https://github.com/Ebimsv/AITutorAgent | 🟢 **MIT** · `main/LICENSE` **1 071 B** | *Ebrahim Mousavi, 2025* | **LangGraph**-built tutoring system: structured tutorials, Q&A, knowledge evaluation. 🔵 **1 ref only** — a single-branch project, which is a maintenance signal, not a quality one. |
+| **MIT Open Learning AI Tutor** | https://github.com/mitodl/open-learning-ai-tutor | 🟢 **MIT** · `main/LICENSE` **1 068 B** | *Romain Puech, 2024* | Backend for a tutor that helps students work course problems, from **MIT Open Learning** (`mitodl`). 🟢 **66 refs.** 🟡 **Institutionally the most credible provenance in this tier; check recency before adopting.** |
+| **OpenTutor** | https://github.com/zijinz456/OpenTutor | 🟢 **MIT** · `main/LICENSE` **1 067 B** | *Zijin Zhang, **2026*** | Local-first block-based adaptive workspace; three-agent split (Tutor / Planner / Layout), 10+ LLM providers, self-hosted. 🟢 **11 refs.** 🟢 **The only row here with a 2026 copyright** — the newest grant on the shelf. |
+
+🔴 **No new agent row is claimed as a discovery this pass.** 🟢 **The mandated agent query was run
+and its education-specific yield — `AITutorAgent`, `open-learning-ai-tutor`, `OpenTutor`,
+`OATutor`, `AITutor-EvalKit` — was **already shelved**, which is the correct outcome for a shelf at
+pass 55 and is recorded instead of being dressed up as new.** 🔵 **`P497` holds for a sixth week
+(`agents/trending.md`).**
+
 ## 🟢 Fifty-fourth pass, 2026-10-08 — the oracle pass 53 declared dead is alive, and with it the **first new agent row in four passes**: a rubric layer, MIT, confirmed four ways
 
 > 🔵 **This pass's opening hypothesis was that a title-less MIT would under-read in the shared
