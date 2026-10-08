@@ -124,7 +124,12 @@ OSI_RECONOCIDAS = frozenset({
     # al consumidor, o el gate rechaza por desconocido un string que su propia libreria emite.
     'EPL-UNVERSIONED', 'EUPL', 'EUPL-1.1', 'EUPL-1.2', 'GPL-2.0', 'GPL-3.0',
     'GPL-UNVERSIONED', 'ISC',
-    'LGPL', 'LGPL-3.0', 'MIT', 'MPL-1.0', 'MPL-1.1', 'MPL-2.0', 'MPL-UNVERSIONED',
+    # `Gap 256` cerrado en el pase 53: la rama LGPL del clasificador compartido ya LEE la
+    # version, asi que puede emitir `LGPL-2.1`. Se agrega aca por `P562` --la correccion
+    # viaja al consumidor-- o esta compuerta rechazaria por desconocido un string que su
+    # propia libreria produce. Es el mismo movimiento que `P613` hizo con `GPL-UNVERSIONED`.
+    'LGPL', 'LGPL-2.1', 'LGPL-3.0', 'MIT', 'MPL-1.0', 'MPL-1.1', 'MPL-2.0',
+    'MPL-UNVERSIONED',
     'Unlicense',
 })
 # Permisivas = las que esta base puede construir encima sin obligacion reciproca.

@@ -4,6 +4,42 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟡 Fifty-third pass, 2026-10-08 — **no new foundational row**, and the pass's contribution to this shelf is that its licence column got a reader it was missing
+
+⏱️ **Seventh pass of this date.** 🔴 **Zero rows added.** 🟢 **One column strengthened across every
+LGPL row this shelf will ever hold.**
+
+### 🟢 `P634` — the licence column can now distinguish `LGPL-2.1` from `LGPL-3.0`
+
+🔴 **Before this pass, every LGPL payload that named its version in a *title block* rather than in
+the full licence text was recorded by the shared classifier as bare `LGPL`.** 🟢 **Now the version
+is read** — from a title stub, a numeric stub, or a prose grant (`P634`, `agents/top.md`).
+
+🔵 **Why a foundations shelf cares:** this shelf's job is to answer *"may Globant build on it"*, and
+for the LGPL family the answer turns on the **version**, not the family. 🟢 **`LGPL-2.1` is now an
+emittable, allow-listed answer** (`p411-cession-identity-gate`), where before it was a string this
+KB's own gate would have rejected as unknown.
+
+🔴 **Measured limits, declared:** the **declaration** branch (an SPDX-style `lgpl` token in a
+manifest, not a licence text) still answers `LGPL (declaracion)` with **no version**. 🔵 **Out of
+scope this pass and recorded so no later pass assumes it covered.**
+
+### 🟢 Re-verified this pass — six live-layer recommendations, `6/6` reachable
+
+🟢 `git ls-remote` over every repository named in the live opportunity blocks
+(`P638`, `agents/top.md`): `grant-mccurdy/instructional-ai-workflows`,
+`openeducat/openeducat_erp`, `MicroPyramid/Django-CRM`, `macsnoeren/genai-open-assessment`,
+`wwrwbs/AI_AWE`, `GarethManning/education-agent-skills`. 🔴 **Existence only** — `github.com` HTML
+is `400` here and every non-GitHub host is `000`, so no licence was re-read first-hand this pass.
+
+### 🔴 The mandated foundational query, and the honest result
+
+🔴 **`open source platform education ERP CRM MIT Apache` returned no new permissive education
+platform for the fourth consecutive pass.** 🟢 **Stated rather than padded:** the channel's
+nearest permissive fits are **Apache OFBiz** (Apache-2.0) and **Huly** (Apache-2.0), both
+general-purpose and both already on this KB's shelves; **Aureus ERP** (MIT) likewise, with **no
+education module**. 🔵 **Fewer real rows beat padding** — no row was added.
+
 ## 🟢 Fifty-second pass, 2026-10-08 — the foundational shelf gains **one** row, and the pass's real yield is a **verdict class** the shelf did not have
 
 ⏱️ **Sixth pass of this date.** Payloads read 2026-10-08 from `raw.githubusercontent.com`, status and

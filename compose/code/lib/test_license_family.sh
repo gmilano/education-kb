@@ -57,7 +57,7 @@ check() { # name expected actual
 check "GPL-3.0 with sec.13 is NOT AGPL (P171)" GPL-3.0   "$(family_of "$GPL3")"
 check "GPL-2.0 predates the AGPL"              GPL-2.0   "$(family_of "$GPL2")"
 check "real AGPL-3.0 by title"                 AGPL-3.0  "$(family_of "$AGPL3")"
-check "LGPL is not GPL"                        LGPL      "$(family_of "$LGPL")"
+check "LGPL is not GPL (y ahora con version: Gap 256)" LGPL-3.0 "$(family_of "$LGPL")"
 check "Apache-2.0 by title"                    Apache-2.0 "$(family_of "$APACHE")"
 check "MIT by title"                           MIT       "$(family_of "$MIT")"
 check "MIT with no title line, by grant"       MIT       "$(family_of "$MITNOTITLE")"
@@ -628,7 +628,10 @@ Documentation on this repository is licensed CC BY-SA 4.0.'
 check "P455 AGPL-3.0 concedida en prosa, caja mixta"    AGPL-3.0 "$(family_of "$ANKI")"
 LGPL_PROSE='This library is licensed under the GNU Lesser General Public License,
 version 2.1 or later.'
-check "P455 LGPL concedida en prosa, caja mixta"        LGPL     "$(family_of "$LGPL_PROSE")"
+# `Gap 256` (pase 53): la hermana AGPL de la linea 628 YA esperaba una respuesta CON version
+# (`AGPL-3.0`); esta esperaba `LGPL` a secas tres lineas despues, sobre un payload que dice
+# «version 2.1 or later». La inconsistencia vivia DENTRO de esta misma suite.
+check "P455 LGPL concedida en prosa, caja mixta"        LGPL-2.1 "$(family_of "$LGPL_PROSE")"
 # EL CONTROL NEGATIVO DE P455, y es el que atrapo dos intentos de este mismo pase:
 # el payload de GPL-2.0 NOMBRA la LGPL en su recomendacion de cierre.  Una sonda suelta
 # sobre el cuerpo se lo lleva; esta no.
@@ -825,8 +828,21 @@ GPLv3')"
   # licencia. Por eso P613 se arregla y Gap 256 se declara: el arreglo de LGPL mueve un
   # SEGUNDO contrato (`LGPL-2.1` no esta en `OSI_RECONOCIDAS` de p411) y P562 dice que no se
   # toca un instrumento cuyo contrato no se leyo.
-  check "Gap 256 stub LGPL que NOMBRA Version 3 contesta LGPL a secas (sub-lectura, declarada)" LGPL \
+  check "Gap 256 CERRADO stub LGPL que NOMBRA Version 3 ahora contesta LGPL-3.0" LGPL-3.0 \
     "$(family_of "$LGPL")"
+  check "Gap 256 CERRADO stub LGPL numerico (3.0) lee la version" LGPL-3.0 \
+    "$(family_of 'GNU LESSER GENERAL PUBLIC LICENSE 3.0')"
+  check "Gap 256 CERRADO stub LGPL que NOMBRA Version 2.1 contesta LGPL-2.1" LGPL-2.1 \
+    "$(family_of 'GNU LESSER GENERAL PUBLIC LICENSE
+Version 2.1, February 1999')"
+  # El payload REAL que motivo el cierre: `openeducat/openeducat_erp`, la unica plataforma
+  # LGPL del estante de `verticals/solutions.md`. `p419` lo leia LGPL-3.0 desde el pase 123;
+  # el clasificador COMPARTIDO contestaba `LGPL`. Ahora coinciden.
+  check "Gap 256 CERRADO openeducat (payload real del estante) es LGPL-3.0" LGPL-3.0 \
+    "$(family_of 'OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3), as included below. Since the LGPL is a set of additional permissions on top of the GPL, the text of t')"
+  # NEG — «no nombra version» sigue siendo una respuesta PROPIA y gruesa, no una invencion.
+  check "Gap 256 NEG LESSER sin version alguna sigue LGPL a secas" LGPL \
+    "$(family_of 'GNU LESSER GENERAL PUBLIC LICENSE')"
   check "Gap 256 NEG el canonico LGPL-3.0 de SPDX si lee la version" LGPL-3.0 \
     "$(family_of "$(cat "$FIXP613/lgpl-3.0-spdx-canonical.LICENSE")")"
   # --- «no declara version» es una respuesta PROPIA, no un GPL-2.0 adivinado (P551/P560/P561) ---

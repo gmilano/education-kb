@@ -24,6 +24,35 @@ education-kb/
 
 ## `compose/code/` — lo que esta KB puede demostrar corriendo
 
+🆕 **Pase 53 del 2026-10-08 registra UNA carpeta nueva y su suite:
+`p637-cross-instrument-licence-agreement` 🟢 `9/9` verdes, offline, corrida desde su propio
+directorio.** Es la **compuerta de acuerdo entre instrumentos**, y existe porque `Gap 256`
+sobrevivió **tres pases** por una razón que ninguna suite podía ver: esta KB tiene **tres**
+implementaciones de *"¿qué familia de licencia es este payload?"* y **nadie las había corrido una
+contra otra** — cada una pasaba sus propias fixtures.
+
+🔴 **Medido sobre `openeducat/openeducat_erp`**, la única plataforma LGPL del estante de
+`verticals/solutions.md`, cuyo `LICENSE` dice *"GNU LESSER GENERAL PUBLIC LICENSE, **Version 3
+(LGPLv3)**"*: el clasificador **compartido** —el que consumen las compuertas— contestaba `LGPL`,
+mientras `p419-copyleft-identity` contestaba `LGPL-3.0` **desde el pase 123**.
+🟢 **`P634` cierra `Gap 256`**: el compartido ahora lee la versión de un stub de título, un stub
+numérico y una concesión en prosa, y `LGPL-2.1` se agregó a `OSI_RECONOCIDAS` de
+`p411-cession-identity-gate` (`P562`: la corrección viaja al consumidor).
+🔵 **Barrido de árbol completo con el arnés de `P621`: `110/112`, byte-idéntico al baseline** —
+los dos rojos son `Gap 258` (p213, `pyo3`, ambiental) y `Gap 257` (p351), ambos previos.
+
+🔴 **Y la propiedad que la compuerta afirma es que NO se vota:** sobre ese payload la **mayoría
+decía `LGPL` y estaba equivocada**; el desempate es la lectura de primera mano del estante.
+🟢 **La suite conserva el estado previo como control** (`P237`), simulando los tres lectores
+anteriores para afirmar que la clase habría sido `DEFECTO` y que la mayoría habría cementado el
+defecto. 🟡 **`grant_gate.py` queda grueso a propósito y declarado como `Gap 259`**, con la
+diferencia en un allowlist explícito: si alguna vez diverge en **familia** y no en **versión**, la
+clase salta a `CONTRADICCION` y la suite falla.
+
+🟢 **`P635`**: la suite que certificaba el defecto ya contenía su refutación — afirmaba `LGPL` a
+secas para una concesión en prosa **tres líneas debajo** de una que esperaba `AGPL-3.0` versionado,
+para la misma forma de payload. 🔵 **Verde e internamente inconsistente al mismo tiempo.**
+
 🆕 **Pase 52 del 2026-10-08 registra UNA carpeta nueva y su suite: `p627-multi-grant-repo`
 🟢 `31/31` verdes, offline, corrida desde su propio directorio.** Mide cuatro propiedades del
 *grant* de un repositorio: **`P627`** el grant es un **conjunto** de pares `(path, familia)` y no un

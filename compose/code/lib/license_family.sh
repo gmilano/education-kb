@@ -21,6 +21,45 @@
 # substring of permit/submit/limit/commit/omit.  A licence token is a word or it is noise.
 __decl() { printf '%s' "$1" | grep -qE "(^|[^a-z0-9])($2)([^a-z0-9]|\$)"; }
 
+# `Gap 256` (declarado en el pase 50) -- CERRADO en el pase 53 del 2026-10-08.
+#
+# La rama LGPL leia la version SOLO del ancla de texto completo, asi que un stub de TITULO
+# contestaba `LGPL` a secas AUNQUE NOMBRARA la version.  Medido en el pase 53, y el payload
+# que lo prueba NO es una fixture: es `openeducat/openeducat_erp`, la UNICA plataforma LGPL
+# del estante de `verticals/solutions.md`.  Su LICENSE dice textual «GNU LESSER GENERAL
+# PUBLIC LICENSE, Version 3 (LGPLv3)» y este clasificador contestaba `LGPL`.
+#
+# Y el pase 53 midio algo mas fuerte que la sub-lectura: esta KB YA SABIA leer la version.
+# `p419-copyleft-identity/identidad_copyleft.py::familia` contesta `LGPL-3.0` sobre EL MISMO
+# payload desde el pase 123.  O sea que el defecto no era «falta implementar el lector»:
+# era que el clasificador COMPARTIDO --el que consumen las compuertas-- divergia de su
+# hermano.  Es `P255` otra vez (tres instrumentos, tres respuestas, un payload), ahora sobre
+# la pregunta de la VERSION y no sobre la del titular.
+#
+# Por que la version importa y no es cosmetica: LGPL-2.1 y LGPL-3.0 difieren en la clausula
+# de patentes y en la de anti-tivoizacion, y la pregunta de ENLACE que un cliente hace sobre
+# openeducat se decide exactamente ahi.  Una version de menos es honesta y gruesa; pero aca
+# la version ESTA en el payload, asi que descartarla es perder un dato leido.
+#
+# __lgpl_ver <texto-normalizado> -> 3.0 | 2.1 | '' (cuando el payload no nombra version).
+# La ventana de 80 B despues del nombramiento LESSER es deliberada: el cuerpo de la LGPL-2.1
+# nombra versiones de la GPL mas adelante, y leer el texto entero las confundiria.
+__lgpl_ver() {
+  local seg
+  seg=$(printf '%s' "$1" | grep -oi 'LESSER GENERAL PUBLIC LICENSE.\{0,80\}' | head -1)
+  [ -z "$seg" ] && seg=$(printf '%s' "$1" | grep -oi 'LGPL[ v.-]*[0-9][0-9.]*' | head -1)
+  case "$(printf '%s' "$seg" | tr 'A-Z' 'a-z')" in
+    *"version 2.1"*|*"v2.1"*|*"lgpl-2.1"*|*" 2.1"*) echo "2.1" ;;
+    *"version 3"*|*"v3"*|*"lgpl-3"*|*" 3.0"*)       echo "3.0" ;;
+    *) echo "" ;;
+  esac
+}
+# Emite la familia LGPL con version cuando el payload la nombra, y `LGPL` a secas cuando no.
+__emit_lgpl() {
+  local v; v=$(__lgpl_ver "$1")
+  if [ -n "$v" ]; then echo "LGPL-$v"; else echo "LGPL"; fi
+}
+
 osi_family_of() {
   local t n
   # -------------------------------------------------------------------------
@@ -278,10 +317,10 @@ osi_family_of() {
   printf '%s' "$t" | grep -qi 'licensed under the GNU Affero General Public License' \
       && { echo "AGPL-3.0"; return; }
   printf '%s' "$t" | grep -qi 'licensed under the GNU Lesser General Public License' \
-      && { echo "LGPL"; return; }
+      && { __emit_lgpl "$t"; return; }
   case "$t" in
     *"GNU AFFERO GENERAL PUBLIC LICENSE"*) echo "AGPL-3.0"; return ;;
-    *"GNU LESSER GENERAL PUBLIC LICENSE"*) echo "LGPL"; return ;;
+    *"GNU LESSER GENERAL PUBLIC LICENSE"*) __emit_lgpl "$t"; return ;;
   esac
   # P288 (pase 96).  La rama AGPL de arriba es un glob de `case`, o sea SENSIBLE A LA CAJA, y
   # TODAS las fixtures AGPL de la suite traian el titulo canonico EN MAYUSCULAS -- asi que las

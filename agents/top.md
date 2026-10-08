@@ -4,6 +4,89 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-third pass, 2026-10-08 — the shared licence classifier **under-read a version this KB already knew how to read**, and the payload that proves it is the one LGPL platform on this KB's own shelf
+
+> 🔵 **This pass's opening hypothesis was that `Gap 256` needed a version reader written.
+> 🔴 That hypothesis is REFUTED.** The reader already exists, in a sibling instrument, since
+> pass 123. 🟢 **The defect was never a missing implementation — it was a divergence between
+> two instruments in this repository**, and that reframing is the pass's main result.
+
+### 🟢 `P634` — `Gap 256` **CLOSED**, and the finding is the *divergence*, not the under-read
+
+🟢 **Measured first, on the payload that matters.** `openeducat/openeducat_erp` is the **only
+LGPL platform on the `verticals/solutions.md` shelf**, and its `LICENSE` says, textually:
+*"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, **Version 3 (LGPLv3)**"*.
+
+| Instrument | Answer on that **same** payload | |
+|---|---|---|
+| `p419-copyleft-identity/identidad_copyleft.py::familia` | **`LGPL-3.0`** | 🟢 correct, **since pass 123** |
+| `lib/license_family.sh::osi_family_of` (**the shared one the gates consume**) | **`LGPL`** | 🔴 version discarded |
+| `licence-grant-gate/grant_gate.py::family_of` (its **own** table) | **`LGPL`** | 🟡 coarse **by contract** |
+
+🔴 **Three instruments, three readings of one payload — and the one that is wrong is the one
+every gate depends on.** 🔵 **This is `P255` recurring on a new axis.** `P255` found three
+answers to *"who is the holder?"*; this pass finds the same shape on *"which version?"*.
+
+🟢 **The under-read was broader than `Gap 256` stated.** The register named two forms; this pass
+measured **five**, and two of them are the `LGPL-2.1` cases:
+
+| Input | Before | After |
+|---|---|---|
+| title stub + `Version 3, 29 June 2007` | 🔴 `LGPL` | 🟢 `LGPL-3.0` |
+| numeric stub `… LICENSE 3.0` | 🔴 `LGPL` | 🟢 `LGPL-3.0` |
+| title stub + `Version 2.1, February 1999` | 🔴 `LGPL` | 🟢 **`LGPL-2.1`** |
+| prose *"licensed under … version 2.1 or later"* | 🔴 `LGPL` | 🟢 **`LGPL-2.1`** |
+| SPDX canonical full text (42 098 B) | 🟢 `LGPL-3.0` | 🟢 `LGPL-3.0` *(unchanged)* |
+| **`GNU LESSER GENERAL PUBLIC LICENSE`, no version named** | `LGPL` | 🟢 **`LGPL` — deliberately unchanged** |
+
+🔵 **The last row is the control that keeps this from becoming `P613`.** `P613`'s defect was a
+classifier **stamping** a version the payload never names. 🟢 **A version too few stays a legal
+answer here**; what is fixed is discarding one the payload *does* name.
+
+🔴 **Why the version is not cosmetic.** LGPL-2.1 and LGPL-3.0 differ on the patent clause and on
+anti-tivoisation, and **the linking question a client asks about `openeducat` is decided exactly
+there.** 🟢 **The implementation reuses `p419`'s logic rather than inventing a second one**, and
+cites it in the source, so the two instruments cannot drift apart again silently.
+
+### 🟢 `P635` — the suite asserting the defect already contained its own refutation, three lines above it
+
+🔴 `lib/test_license_family.sh` asserted the bare answer as correct —
+`check "P455 LGPL concedida en prosa, caja mixta" **LGPL**` — while **three lines earlier** its
+AGPL sibling asserted a **versioned** one: `check "P455 AGPL-3.0 concedida en prosa" **AGPL-3.0**`.
+
+🟢 **Same branch, same pass, same payload shape, two different expectations.** 🔵 **So the
+evidence that the LGPL answer was the outlier was inside the suite that certified it** — which is
+why `Gap 256` survived three passes as *declared* rather than being caught as *wrong*.
+
+### 🟢 `P638` — the six repositories the live layer recommends were re-verified, and all six exist
+
+🟢 `git ls-remote` (`P510`'s oracle, still the only working one) over every repo named in the live
+opportunity blocks: `grant-mccurdy/instructional-ai-workflows`, `openeducat/openeducat_erp`,
+`MicroPyramid/Django-CRM`, `macsnoeren/genai-open-assessment`, `wwrwbs/AI_AWE`,
+`GarethManning/education-agent-skills` — 🟢 **6/6 reachable, 0 dead rows.**
+🔴 **`github.com` HTML answers `400` to a `HEAD` in this environment and every non-GitHub host
+answers `000`**, so this is existence, not licence re-verification.
+
+### 🔴 Zero new agent rows — the streak restarts at **one**, and the query noun is why
+
+🔴 **The mandated query `top open source AI agents education {year} github MIT` returned, again,
+general-purpose agents (OpenClaw, OpenHands, CrewAI, LangGraph, browser-use) and AI *pedagogy*
+courses (`AI Agents for Beginners`, `GenAI for Beginners`, Hugging Face Agents Course).**
+🟢 **Pass 52 broke an eleven-pass zero by changing the query's *shape*; this pass ran the mandated
+form and it is saturated again** — which confirms `P497` rather than contradicting pass 52.
+🔵 **No row is added to this file's agent table this pass.** `P512`'s saturation verdict stands.
+
+### 🔴 Declared gaps, so silence does not read as coverage
+
+- 🔴 **`grant_gate.py` still answers bare `LGPL`** and was **not** changed: its contract is
+  grant-versus-mention, where family granularity is not load-bearing. 🟢 **Declared, not
+  silently aligned** (`P562`: you do not touch an instrument whose contract you have not read).
+  🆕 **`Gap 259`.**
+- 🔴 **The declaration branch** (`__decl … 'lgpl'` → `LGPL (declaracion)`) is **untouched** by this
+  pass and still carries no version. 🔵 Out of `Gap 256`'s stated scope; recorded so it is not
+  assumed covered.
+- 🔴 **No education-specific, permissively licensed *agent* was found in any channel this pass.**
+
 ## 🟢 Fifty-second pass, 2026-10-08 — the zero-new-agents streak **breaks at eleven**, with three education-specific repos; and only **one of the three may be built on**
 
 ⏱️ **Sixth pass of this date.** Licences read first-hand on 2026-10-08 **from payload**, with HTTP

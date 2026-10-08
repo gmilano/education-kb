@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-third pass, 2026-10-08 — the shelf's `LGPL-3.0` row was **right**, and the instrument that certifies it disagreed with it for three passes
+
+⏱️ **Seventh pass of this date.** 🔴 **No new platform**: the vertical query returns the same six
+platforms for the **fourth** consecutive pass. 🟢 **The yield is that this shelf's own licence cell
+is now machine-confirmable, where before it was asserted by prose only.**
+
+### 🟢 `P634` — the shelf said `LGPL-3.0`; the shared classifier said `LGPL`; the shelf was correct
+
+🔵 **Line 229 of this file has recorded the defect since pass 51**: *"version is read only from a
+full-text anchor… `openeducat` is the LGPL-3.0 repo on this shelf"*. 🔴 **So the row and the gate
+that is supposed to certify the row have disagreed, in writing, in the same file** — and the
+unreliable one was the gate.
+
+| | `openeducat/openeducat_erp` (`master/LICENSE`, 8 241 B) |
+|---|---|
+| Payload text | *"published under the GNU LESSER GENERAL PUBLIC LICENSE, **Version 3 (LGPLv3)**"* |
+| This shelf's row (since pass 36) | 🟢 **`LGPL-3.0`** — correct |
+| `lib/license_family.sh` before this pass | 🔴 **`LGPL`** |
+| `lib/license_family.sh` after `P634` | 🟢 **`LGPL-3.0`** |
+
+🟢 **The row did not change. What changed is that it can now be *re-derived* from the payload**
+rather than trusted. 🔵 **That is the difference between a shelf and a claim.**
+
+### 🔴 Why this is load-bearing for a delivery, not a tidy-up
+
+🔴 **`openeducat` is the only education-purpose-built SIS/ERP on this shelf with a copyleft that
+permits linking at all**, and the question every engagement asks about it is *"can the AI service
+sit beside it without the copyleft reaching the AI service?"*
+🟢 **LGPL-3.0 answers yes for linking a separate process; LGPL-2.1 would answer the same on
+linking but differs on patents and anti-tivoisation** — 🔴 **and until this pass the gate could
+not tell a reader which of the two it was looking at.** 🔵 **The six-platform shelf is unchanged;
+the confidence in one of its six cells is not.**
+
+### 🔴 `P631` is unchanged and restated, so this pass does not read as progress on it
+
+🔴 **This shelf is still never both permissive and educational**: the purpose-built systems
+(`openeducat` LGPL-3.0, `frappe/education` GPL-3.0, Moodle GPL-3.0) are copyleft, and the
+permissive systems (OFBiz Apache-2.0, Krayin/AureusERP MIT, `MicroPyramid/Django-CRM` MIT) carry
+**no education domain model**. 🟢 **No search this pass moved that cell**, and the mandated
+`open source platform education ERP CRM MIT Apache` query returned the same split a fourth time —
+Apache-2.0 **OFBiz** and **Huly** as the nearest permissive fits, both general-purpose.
+🔵 **So the side-car architecture remains the recommendation, and now for a reason a gate can
+re-check.**
+
 ## 🔴 Fifty-second pass, 2026-10-08 — the vertical query returns the **same six platforms for the third consecutive pass**, and the shelf's gap is now a measured property rather than a complaint
 
 ⏱️ **Sixth pass of this date.** **Licences read first-hand on 2026-10-08 from payload, channel named

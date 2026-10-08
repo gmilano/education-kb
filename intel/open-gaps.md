@@ -4,6 +4,90 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Pass 53, 2026-10-08 — one gap **closed with code**, one **refuted at its stated cause**, one declared; and this register was **three passes stale**
+
+> 🔵 **This pass's opening hypothesis was that `Gap 256` needed an LGPL version reader written.
+> 🔴 That hypothesis is REFUTED.** The reader already existed in a sibling instrument. 🟢 **The
+> register pointed at real work and mis-stated its cause**, which is a better outcome than
+> silence and is recorded as such.
+
+### 🔴 First, a defect in this file itself: the newest block was labelled **Pass 50** while the KB was at pass 52
+
+🔴 **Passes 51 and 52 landed findings (`P620`–`P633`) and this register was not advanced.**
+🟢 **So a pass reading top-down saw "Pass 50" and could not tell whether 51/52 had declared or
+closed anything.** 🔵 **Stated rather than quietly fixed by relabelling** — the pass-50 block's
+*content* was accurate; what was missing is that nothing after it was recorded here.
+🟢 **This pass restores the cadence.** 🆕 **`Gap 260`** below makes the omission collectable.
+
+### 🟢 `Gap 256` (pass 50) — **CLOSED**, and its stated cause was wrong in an instructive way
+
+| Pass 50's framing | Verdict after `P634`/`P635` |
+|---|---|
+| *"`lib/license_family.sh` reads the LGPL version only from a full-text anchor"* | 🟢 **STANDS** — reproduced exactly, plus **three more** forms pass 50 did not list |
+| *"an LGPL title stub answers bare `LGPL` even when it names Version 3"* | 🟢 **STANDS** |
+| implied: *the fix is to write a version reader* | 🔴 **REFUTED.** `p419-copyleft-identity::familia` has read `LGPL-3.0` correctly **since pass 123** |
+| *"the fix moves a second contract (`LGPL-2.1` absent from `OSI_RECONOCIDAS`)"* | 🟢 **STANDS, and it was the whole blast radius** — one allowlist entry |
+| *"Bounded: one branch, one allowlist entry, one suite re-run"* | 🟢 **CORRECT.** Measured: **1 suite** went red, and it was the one asserting the defect |
+
+🟢 **What closed it.** The shared classifier now reads the version from a title stub, a numeric
+stub and a prose grant; `p411-cession-identity-gate` gained `LGPL-2.1`; the suite's two
+`Gap 256` assertions became five closure assertions plus a negative control.
+
+🟢 **Measured, whole-tree, with the `P621` harness** (each suite from its own directory, never
+`python3 -I`):
+
+| | Before | After |
+|---|---|---|
+| suites green | **110 / 112** | 🟢 **110 / 112** |
+| diff | — | 🟢 **byte-identical**; the two reds are `Gap 258` (p213) and `Gap 257` (p351), both pre-existing |
+
+🔵 **The real finding is `P634`:** three instruments, two answers, on this KB's own shelf
+platform — **and the majority was wrong.** 🟢 **It is now a runnable gate**
+(`compose/code/p637-cross-instrument-licence-agreement`, `9/9`).
+
+### 🟡 `Gap 259` (new, pass 53) — `grant_gate.py` answers bare `LGPL`, and was **not** aligned
+
+**Statement.** *"`licence-grant-gate/grant_gate.py::family_of` maps a licence title to a family
+with no version, so it answers `LGPL` where the shared classifier now answers `LGPL-3.0`."*
+
+🟢 **Why it is declared rather than fixed.** Its contract is **grant-versus-mention**: it decides
+whether a payload *cedes* anything, a question where family granularity is not load-bearing.
+🔵 **`P562`: you do not touch an instrument whose contract you have not read** — and having read
+it, the coarse answer is correct *for that question*.
+🔴 **What is genuinely open:** nothing obliges the two to stay deliberately different rather than
+accidentally different. 🟢 **`P637`'s gate classifies this disagreement as `CONTRATO` by an
+explicit allowlist (`CONTRATO_GRUESO`)**, so if `grant_gate` ever diverges on a *family* rather
+than a *version*, the class flips to `CONTRADICCION` and the suite fails. 🟢 **Bounded and
+already instrumented.**
+
+### 🔴 `Gap 260` (new, pass 53) — this register has no freshness check against the pass number
+
+**Statement.** *"Nothing detects that `intel/open-gaps.md`'s newest block is older than the
+newest pass block in the other eight files."*
+
+🔴 **Measured: this file's newest heading said `Pass 50` while `agents/top.md`, `intel/trends.md`
+and six others carried a fifty-second pass.** 🟢 **A three-pass lag, invisible from inside this
+file.** 🔵 **`P598` built a freshness gate for the *rows*; nothing gates the *file*.**
+🟢 **Remedy, bounded:** one assertion comparing the highest pass ordinal in this file against the
+highest across the tree. 🔵 **Cost: one instrument, no content change.** 🔴 **Not written this
+pass** — stated so the next pass can collect it rather than rediscover it.
+
+### 🟢 `Gap 257` / `Gap 258` — **unchanged**, and restated so this pass does not read as progress
+
+🔴 **Neither was touched.** `p351-star-digit-sweep` is still red at `HEAD` on two hardcoded
+tree-count thresholds plus one real `P479` instance at `agents/trending.md:8231`, inside an
+**append-only** file. `p213-envelope-aad` still dies at import on a `pyo3` panic from
+`cryptography` — 🟢 **environmental, reproduced on a pristine `HEAD` clone, not a regression.**
+🔵 **Both re-confirmed present in this pass's sweep**, which is the only new information.
+
+### 🟡 `Gap 255` / `Gap 254` / `Gap 253` — not advanced this pass
+
+🔴 **No instruments from `Gap 253`'s `P541` enumeration were fixed.** 🔴 **The retrained permissive
+Spanish pipeline (`Gap 254`) was not built.** 🟢 **`Gap 255` gained one datum and no closure:** the
+`P621` invocation list was run again, whole-tree, and reproduced **110/112 byte-identical** — 🔵
+**which is a second observation, still not a control.** `P237` stands: a convention a pass has to
+remember is not a control.
+
 ## 🟢 Pass 50, 2026-10-08 — one gap **refuted at its stated cause**, one **narrowed by a full gate run**, three declared
 
 > 🔵 **This pass's opening hypothesis was that `Gap 254` needed its cheapest next probe run.

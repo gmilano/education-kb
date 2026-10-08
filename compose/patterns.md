@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-third pass, 2026-10-08 — one recipe (`P637` the **cross-instrument licence agreement check**) and a **correction** to every recipe that reads an LGPL component's licence as a family
+
+### 🔴 The correction first, because it changes recipes already published here
+
+🔴 **Any recipe in this file that recorded an LGPL component as `LGPL` was recording a family where
+the delivery question needs a version.** 🟢 **Fixed at the source this pass** (`P634`):
+`lib/license_family.sh` now emits `LGPL-2.1` or `LGPL-3.0` when the payload names a version, and
+bare `LGPL` **only** when it genuinely does not.
+
+🔵 **Concretely, for the one place it bites:** the side-car recipes that put an AI service beside
+`openeducat/openeducat_erp` were correct in their conclusion (link a separate process, do not
+modify the library) 🟢 **and are now correct for a checkable reason** — the component reads
+**`LGPL-3.0`**, so the patent and anti-tivoisation clauses that distinguish it from `LGPL-2.1` are
+known rather than assumed.
+🔴 **`p411-cession-identity-gate` gained `LGPL-2.1` in `OSI_RECONOCIDAS`** (`P562`: the correction
+travels to the consumer, or the gate rejects as unknown a string its own library produces — the
+same move `P613` made for `GPL-UNVERSIONED`).
+
+### 🟢 `P637` — the **cross-instrument agreement check**: run your own classifiers against each other on one real payload
+
+🔵 **The problem this recipe solves is the one that cost this KB three passes.** `Gap 256` survived
+because every instrument passed its **own** fixtures. 🔴 **Nothing compared the instruments to each
+other**, and the disagreement was only visible on a real payload both of them could read.
+
+**Wiring, with the specific files in this repository:**
+
+| Step | Component | What it contributes |
+|---|---|---|
+| 1 | `lib/license_family.sh::osi_family_of` | the **shared** classifier the gates consume |
+| 2 | `p419-copyleft-identity/identidad_copyleft.py::familia` | an **independent** header-window reader |
+| 3 | `licence-grant-gate/grant_gate.py::family_of` | a **third**, deliberately coarse title map |
+| 4 | the shelf row itself (`verticals/solutions.md`) | the human-read answer, which is the tie-breaker |
+| 5 | `p411-cession-identity-gate` | the **consumer** whose allowlist must accept whatever 1 emits |
+
+```
+for payload in real LICENSE payloads this KB already recommends:
+    a = osi_family_of(payload)          # shared
+    b = identidad_copyleft.familia(payload)[0]
+    c = grant_gate.family_of(payload)
+    if a != b or a != c:
+        report(payload, a, b, c)        # a disagreement is a finding, not a flake
+        # then: which one does the SHELF say? that one is probably right.
+```
+
+🟢 **Run on `openeducat/openeducat_erp` this pass it returned `LGPL` / `LGPL-3.0` / `LGPL`** — and
+the shelf said `LGPL-3.0`, so the **majority was wrong and the shelf was right.**
+🔴 **A majority vote would have cemented the defect.** 🔵 **Hence step 4: the tie-breaker is the
+first-hand read, never the count.**
+
+🟡 **Step 3 legitimately disagrees and is NOT aligned** (🆕 **`Gap 259`**): `grant_gate.py`'s
+contract is grant-versus-mention, where family granularity is not load-bearing. 🟢 **So the recipe
+reports a *classified* disagreement, not a flat one** — a disagreement is either a defect or a
+documented contract difference, and the recipe must name which.
+
+**Cost and where it pays:** 🟢 **one sweep script, no new dependency, runs offline.** 🔵 **Pays on
+any engagement where more than one tool answers the same compliance question** — which is the normal
+condition in a client's estate, not a property of this KB.
+
+### 🔵 Where this plugs into the delivery shape the live market block recommends
+
+🟢 **The EMEA Annex III conformity sale (deadline **2027-12-02**) and the North American
+policy-parameterised layer both require an auditable artefact per component.** 🔴 **A per-component
+licence line that cannot distinguish `LGPL-2.1` from `LGPL-3.0` is not auditable.**
+🟢 **`P637` is the cheapest way to show an auditor that the licence column was *derived twice
+independently* and agreed** — and, when it did not, that the disagreement was adjudicated against
+the payload and written down. 🔵 **Wire it beside `grant-mccurdy/instructional-ai-workflows`
+(MIT), which supplies the human-review-at-every-stage shape the same regulations ask for.**
+
 ## 🟢 Fifty-second pass, 2026-10-08 — two recipes (`P632` the human-in-every-stage assessment pipeline; `P633` the grant-set gate) and a **correction** to every recipe that treated a repo's licence as a single value
 
 ⏱️ **Sixth pass of this date.** Both recipes name the exact repos, refs, payload filenames and byte

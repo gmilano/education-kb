@@ -4,6 +4,178 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟡 Fifty-third pass, 2026-10-08 — the regional channel yields **2 of 42**, both second-hand by force; and this file's supersession marker was being applied to the blocks nobody scrolls to
+
+> 🔵 **This pass's opening hypothesis was that the AI-omnibus deferral might still be mis-stated
+> somewhere live in this file. 🔴 REFUTED — the live block is correct and was correct before this
+> pass.** 🟢 **What the check did find is `P636`: the marker that tells a reader which block is
+> live was missing from the one block that competes with it.**
+
+### 🔴 `P636` — of 27 `## Opportunities by region` blocks, exactly **two** were bare: the live one and the one directly beneath it
+
+🟢 **Measured, heading by heading — and the first count this pass made was wrong, so the method is
+recorded with the result.** A sweep that treated every heading without the word *superseded* as
+unmarked reported **16 unmarked**. 🔴 **That was an artefact**: 13 of those carry a
+self-identifying suffix (`— thirty-third-pass update, 2026-10-07`, `— twenty-third-pass
+additions`, …) and cannot be read as current. 🟢 **Re-measured by suffix:**
+
+| Heading suffix, before this pass | Count | Readable as live? |
+|---|---|---|
+| `— superseded (the live block is at the top of this file)` | **12** | 🟢 no |
+| a pass number and/or date (`— thirty-sixth-pass update, 2026-10-07`, …) | **13** | 🟢 no |
+| 🔴 **bare — nothing at all after the heading** | 🔴 **2** | 🔴 **yes, both** |
+
+🔴 **And the two bare ones were the live block and pass 51's, adjacent.** 🟢 **So the defect was
+not "most of this file is unmarked" — it was the sharper thing: the *only* two headings a reader
+cannot tell apart were the current one and its immediate predecessor.** 🔵 **This is `P582`'s class
+— a *positional* defect in an append-only file, not a status error** — and the remedy is the same:
+a marker at the point of competition, never a rewrite.
+
+🔵 **`P469` is why the corrected count is published instead of the first one**: a number asserted
+from a convenient sweep is not measured.
+
+🟢 **Landed this pass:** pass 52's and pass 51's blocks are both now marked `— superseded`, so
+**exactly one bare `## Opportunities by region` heading exists in this file, and it is the live
+one.** 🟢 **Verified after the edit**: 28 blocks, 14 superseded, 13 pass-labelled, **1 bare.**
+
+### 🟡 `P637` — the regional channel, counted name by name: **2 of 42**
+
+🟢 **All four mandated regional queries were run.** 🔴 **42 named instruments, bodies and figures
+came back; 2 had zero prior reference in this KB.**
+
+| Region | New to this KB this pass | Verdict |
+|---|---|---|
+| **North America** | 🔴 **none of 14** | saturated |
+| **EMEA** | 🔴 **none of 11** | saturated |
+| **APAC** | 🟡 **1 of 9** — *Australian AI Safety Institute*, announced **2025-11** | near-saturated |
+| **LATAM** | 🟡 **1 of 8** — Brazil's ***`ConectAI`***, Microsoft-funded, 26 partners, target **5 M** learners by end **2027** | near-saturated |
+
+🔴 **Neither is first-hand and neither can be**: every non-GitHub host answers `000` in this
+environment, and `github.com` HTML answers `400` to a `HEAD`. 🟢 **Both are recorded as
+second-hand with the channel's own date, and neither is promoted to a shelf row.**
+
+🟢 **The more useful result is a falsification that failed.** On the two dates this KB has been
+burned on before, the channel reported them **less** precisely than this KB already holds them:
+
+| | Channel said | This KB holds | |
+|---|---|---|---|
+| EU high-risk education | *"August 2026"* in older guides; *"2 Dec 2027 / 2 Aug 2028"* in current ones | **2027-12-02** stand-alone, **2028-08-02** Annex I, Art. 50 live **2026-08-02** | 🟢 **KB correct, and finer** |
+| Korea | *"one-year grace period, 2026 a pilot year"* | Act **2026-01-22**, decree **2026-07-21**, fines deferred ~**2027-07-21**, 🔴 **labelling duty with no grace at all** | 🟢 **KB correct, and finer** |
+
+🔵 **A channel this KB has out-measured is a channel to run for falsification, not discovery.**
+
+## Opportunities by region
+
+🔵 **One `###` per region, the five-value closed vocabulary, and the country in the prose rather than
+in the field.** 🔴 **Each opportunity below names the licence constraint that decides whether it can
+be delivered**, because `P631` (`verticals/solutions.md`) measured that this shelf is **never both
+permissive and educational**.
+
+### North America
+
+🟢 **The opportunity is compliance plumbing, not tutoring, and it is unchanged this pass.**
+🔴 **134 bills across 31 states**, with OK and MD banning AI from high-stakes decisions about
+students, CA **A.B. 1159** restricting training on student data, ID **SB 1227** mandating a
+statewide framework, and OH obliging **every district** to hold a formal AI policy from
+**2026-07-01**. 🟢 **A district cannot buy one product that satisfies 31 statutes, so the
+deliverable is a policy-parameterised layer**: `grant-mccurdy/instructional-ai-workflows` (MIT,
+🟢 **re-verified reachable this pass**) supplies the human-review-at-every-stage shape the OK/MD
+oversight rules require.
+🆕 **New this pass, and it is a counter-signal worth selling against:** the restriction trend is
+real — **NYC's one-year pause on student-facing AI through grade 8** is being copied (Nebraska),
+so 🔵 **the K-8 pitch is teacher-facing tooling and governance, never student-facing tutoring.**
+🔵 **Pitch against the 60 % of US K-12 teachers already using AI informally** (32 % weekly) — the
+gap is governance, not adoption. 🔴 **Federal timing stays a watch item:** H.R. 8747 cleared
+committee **2026-07-21** and is **not** enacted.
+🔴 **Constraint: if the client's SIS is ERPNext or Moodle, the AI runs *beside* it as a side-car,
+never linked in.**
+
+### EMEA
+
+🟢 **The opportunity is Annex III conformity work with a known deadline.** Education sits in the
+**stand-alone high-risk** class deferred to **2027-12-02** (Annex I, embedded in regulated
+products: **2028-08-02**), which is far enough out to build properly and close enough to sell now.
+🔴 **Article 50 transparency already applies (2026-08-02)**, and AI Office enforcement began the
+same day, so marking and disclosure is immediate work. 🔵 **The deferral came from the *AI omnibus*
+(in force 2026-07-27), which is why four independent secondary channels have quoted the superseded
+August-2026 date** — 🟢 **a client who scoped to the old date is over-spending by 16 months, and
+that is a conversation opener.**
+🟢 **Only 10 % of 450+ institutions have formal guidelines** — that is the addressable gap.
+🟢 **`P634` is directly useful here:** an Annex III artefact needs a per-component licence line, and
+this KB's gate can now derive **`LGPL-2.1` vs `LGPL-3.0`** instead of recording a family — 🔴 **the
+distinction an auditor asks about when the SIS is `openeducat`.**
+🔵 **The UK is a different sale**: its instrument is the *AI Opportunities Action Plan*,
+principles-based, so the deliverable there is **assurance** rather than conformity.
+🔴 **The EMEA permissive-education gap is unchanged:** the one EMEA-origin higher-ed assessment
+framework on any shelf here (`macsnoeren/genai-open-assessment`, NL) is **GPL-3.0**.
+
+### APAC
+
+🟢 **Vietnam remains the sharpest single opportunity this KB holds, in any region.** Its AI law
+(passed **2025-12-10**, effective **2026-03-01**) names education among six high-risk sectors and is
+explicit about **automated assessment and behavioural monitoring** — and treats a system as
+high-risk *only where its output is the sole basis for a decision without meaningful human review*.
+🟢 **That is a statutory description of an architecture**, and it is the one
+`grant-mccurdy/instructional-ai-workflows` implements. 🔵 **Education's compliance date is
+**2027-09-01***, grouped with health and finance — 18 months later than general application, which
+is the runway.
+🔵 **Korea is the second sale**: Framework Act in force **2026-01-22**, enforcement decree
+**2026-07-21**, and fact-finding investigations and administrative fines deferred roughly to
+**2027-07-21** — 🔴 **but the generated-content labelling duty has no grace period at all**, so
+marking is work today. 🔴 **Korea requires a domestic representative for foreign providers**, a
+structuring question before a technical one.
+🆕 **New this pass:** the **Australian AI Safety Institute** (announced **2025-11**) alongside the
+**National AI Plan** (**2025-12**) — 🔵 **an assurance-shaped counterpart to the UK**, recorded
+second-hand.
+🔴 **Declared gap, unchanged: no APAC school-level *adoption* rate.** Ministry-level policy for
+China, India and Japan returned nothing measurable this pass; the one APAC maturity figure
+(>50 % at *"repeatable"*) is about businesses, not schools. 🟢 **Named rather than back-filled.**
+
+### LATAM
+
+🟢 **The opportunity is the governance gap, measured.** UNESCO IESALC: **87 %** of 200 institutions
+across 19 countries use AI in at least one area, **74 %** in teaching — but **only ~25 % have a
+formal AI framework**. 🔵 **TALIS puts LATAM teacher adoption far above the OECD average** (Brazil
+56 %, Chile 55 %, Colombia 53 %, Costa Rica 52 % vs **36 %**), and Ceibal reports **75 %** of
+Uruguayan public-school teachers using these tools. 🔵 **Adoption also splits by institution type**
+— 84 % private non-profit, 68 % public, 52 % private for-profit — 🟢 **so the buyer with budget and
+the buyer with the gap are not the same institution.**
+🔴 **Adoption is not the problem here; almost nobody has written the rules.** 🟢 **So the
+deliverable is an institutional AI framework plus the technical controls that make it auditable**,
+composing with **Latam-GPT** (via UNESCO–CENIA) and the Observatory's partner network (CAF, CENIA,
+CETIC.br, ECLAC, Tec de Monterrey, ProFuturo, Ceibal, Fundación Santillana).
+🆕 **New this pass:** Brazil's **`ConectAI`** — Microsoft-funded, 26 official partners, target
+**5 M** learners by end **2027**, 🔵 **a skilling channel rather than a procurement channel, and so
+a route to practitioners rather than to budget.** Recorded second-hand.
+🔴 **Regulation is still pending everywhere that matters** — Brazil's **PL 2.338/2023** is in the
+Chamber, Chile's bill in first constitutional stage, Colombia's **CONPES 4144** a programme to 2030
+rather than an obligation — 🟢 **which means a framework built now is a differentiator, not a
+compliance cost.**
+
+### Global
+
+🟢 **Cross-region, the one thing every channel agreed on: the market is moving from experimentation
+to governance.** 🔵 **Market figures, with their disagreement published rather than averaged:**
+$10.6 B → **$42.48 B by 2030 at 41.5 % CAGR** (Research and Markets); **$12.3 B by 2026** (HolonIQ);
+**$136.79 B by 2035** (Azumo); North America **$3.68 B → $32 B by 2030** (36 % of the global market);
+EU **$2.64 B → $8.0 B by 2030 at 31.9 % CAGR**. 🔴 **These rest on different definitions and are not
+reconcilable** — quoted as a range, never as a point.
+🟢 **The durable, licence-independent demand across all five regions is the same: purpose-built
+education AI with a human in the loop and an audit trail**, which is why `P632` and 🆕 **`P637`**
+(`compose/patterns.md`) wire exactly that — the second one so the audit trail's licence column is
+derived twice and independently.
+
+### 🔴 Declared gaps
+
+- 🔴 **No instrument in this file is first-hand this pass, and none can be** — all non-GitHub egress
+  is `000` and `github.com` HTML is `400`.
+- 🔴 **No APAC education *adoption* rate was found**, for the fifth consecutive pass.
+- 🔴 **No LATAM instrument has been enacted**, so the region's regulatory column is still
+  forward-looking in every country this KB tracks.
+- 🟡 **The IESALC formal-framework figure is held as `~25 %` here and reported as `26 %` by this
+  pass's channel.** 🔵 **Recorded as a ±1 pp disagreement rather than silently overwritten** — the
+  primary study could not be re-read first-hand (`000`).
+
 ## 🟡 Fifty-second pass, 2026-10-08 — the regional channel yields **2 instruments and 2 bodies out of 51**, which is the first non-zero yield in five passes, and every one of them is **second-hand by force**
 
 ⏱️ **Sixth pass of this date.** Four regional queries ran verbatim, one per region. **Every named
@@ -64,7 +236,7 @@ revision *"still awaits publication in the Official Journal"***, and 🔴 **`eur
 unreachable from here**, so the OJ citation remains second-hand by channel and first-hand only by
 repetition across passes. 🟢 **Article 50 transparency was not moved and runs from 2026-08-02.**
 
-## Opportunities by region
+## Opportunities by region — superseded (the live block is at the top of this file)
 
 🔵 **One `###` per region, the five-value closed vocabulary, and the country in the prose rather than
 in the field.** 🔴 **Each opportunity below names the licence constraint that decides whether it can
@@ -179,7 +351,7 @@ educational path, exam monitoring — to **2027-12-02**, with Annex I embedded t
 `gnu.org` are both unreachable from this environment (403 at the proxy), so the OJ citation remains
 second-hand by channel and first-hand only by repetition across passes — stated, not hidden.**
 
-## Opportunities by region
+## Opportunities by region — superseded (the live block is at the top of this file)
 
 ### North America
 

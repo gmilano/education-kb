@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Fifty-third pass, 2026-10-08 — four trends: a KB that already knew what its gate could not read, a suite holding both answers, a supersession marker applied backwards, and a regional channel saturated at **2 of 42**
+
+### 🟢 Trend 1 — the expensive defect is *divergence between instruments*, not absence of capability
+
+🔴 **`Gap 256` was declared for three passes as "the LGPL branch under-reads a version".** 🟢 **It was
+really "two instruments in this repository answer the same question differently, and the gates
+consume the wrong one."** `p419-copyleft-identity` has read `LGPL-3.0` correctly **since pass 123**;
+`lib/license_family.sh` answered bare `LGPL` until this pass (`P634`).
+
+🔵 **This is the third time this KB has found that shape** — `P255` (three answers to *"who is the
+holder?"*), pass 29 (*"the shared classifier still carried every defect pass 28 had just fixed in
+the other one"*), and now the version question. 🟢 **The generalisable lesson: when a KB owns more
+than one implementation of a question, the cheapest audit is to run them against each other on one
+real payload, not to test either against fixtures.** 🔴 **Fixtures agreed with both.**
+
+### 🟢 Trend 2 — a suite can certify a defect while already containing its refutation
+
+🔴 **`lib/test_license_family.sh` asserted bare `LGPL` for a prose grant, three lines below an
+assertion expecting a *versioned* `AGPL-3.0` for the identical payload shape** (`P635`).
+🟢 **Both assertions passed. The suite was green and internally inconsistent at the same time.**
+🔵 **So "the suite is green" survives as a statement about coverage, never about correctness** —
+and the asymmetry between two sibling branches is a cheap thing to sweep for, which this KB has
+now been bitten by twice (`P626`, and here).
+
+### 🟡 Trend 3 — a supersession marker is worth nothing if it is applied to the *old* rows and not the *recent* one
+
+🔴 **`intel/market.md` carried 27 `## Opportunities by region` blocks, and exactly **two** were
+bare: the live one and the one directly beneath it** (`P636`). 🟢 **The other 25 all
+self-identify** — 12 marked `— superseded`, 13 carrying a pass number or date. 🔴 **So the two
+headings a reader could not tell apart were the current block and its immediate predecessor.**
+🟢 **Fixed this pass.** 🔵 **And the first measurement of this was wrong** — a sweep keyed on the
+word *superseded* called 16 blocks unmarked, counting the pass-labelled ones. 🟢 **`P469`: the
+corrected count is published, with the method, instead of the convenient one.**
+
+🔵 **`P582` found the same class in `intel/open-gaps.md`** (three verdicts on one row, oldest
+first). 🟢 **An append-only KB does not have a staleness problem; it has a *positional* problem**,
+and the remedy is always a marker at the point of competition rather than a rewrite.
+
+### 🔴 Trend 4 — the regional channel is saturated, and the honest number is **2 of 42**
+
+🟢 **Measured name by name**, not summarised: 42 named instruments, bodies and figures across the
+four mandated regional queries; **2** had zero prior reference in this KB.
+
+| Region | Yield |
+|---|---|
+| North America | 🔴 **0 new** |
+| EMEA | 🔴 **0 new** |
+| APAC | 🟡 **1** — Australian AI Safety Institute (**2025-11**) |
+| LATAM | 🟡 **1** — Brazil `ConectAI` (**5 M** learners target by end **2027**) |
+
+🔴 **Both are second-hand by force** (`000` to every non-GitHub host). 🟢 **The regulatory layer is
+genuinely saturated, and this pass confirms it against the primary-channel dates rather than
+assuming it**: EMEA's AI-omnibus deferral (**2027-12-02** / **2028-08-02**) and Korea's decree
+(**2026-07-21**, fines deferred ~**2027-07-21**) were both already held, and held **more precisely**
+than the channel reported them. 🔵 **A channel this KB has out-measured is a channel to run for
+falsification, not for discovery** — which is how it was run this pass.
+
 ## 🟢 Fifty-second pass, 2026-10-08 — five trends: a **false positive** in licence reading, a grant that is a set, a query noun that hid eleven passes of findings, a vertical cell that is structurally empty, and a regional channel that yielded **4 of 42**
 
 ⏱️ **Sixth pass of this date.** Every figure below is read from payload or from a named channel on

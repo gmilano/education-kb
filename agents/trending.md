@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🔴 Fifty-third pass, 2026-10-08 — week of 2026-10-08: the mandated query is **saturated again**, and the week's only movement at the agent layer is a classifier this KB owns
+
+⏱️ **Seventh pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+🔴 **All non-GitHub egress is `000` in this environment and `github.com` HTML answers `400` to a
+`HEAD`**, so every external datum below is **second-hand by force** and labelled as such.
+**No star counts are published this pass** — none could be read first-hand.
+
+### 🔴 The mandated query, run globally, and what it returned
+
+| Query (mandated form) | Result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **saturated** — returns general-purpose agents + AI *pedagogy* courses, **zero** education-specific permissive agents |
+| `github trending education AI 2026` | 🔴 **no education-AI trending list exists**; results are general AI roundups and learning courses |
+
+🔵 **Named by the channel, and already held by this KB:** OpenClaw (MIT), OpenHands (MIT core),
+CrewAI (MIT), LangGraph (MIT), browser-use (MIT), `aider`, Codex, Gemini CLI.
+🟡 **Education-adjacent but not agents:** `microsoft/ai-agents-for-beginners` (course, ~56 k★
+*second-hand*), `microsoft/generative-ai-for-beginners` (21-lesson course), Hugging Face Agents
+Course, `ashishpatel26/500-AI-Agents-Projects` (MIT, a **catalogue**, not a tool).
+🔴 **None is an education agent.** 🟢 **`P497` holds: the query's noun returns pedagogy *about* AI,
+not software *for* education.** Pass 52's break came from changing the query shape, not the week.
+
+### 🟢 `P634` — the week's real agent-layer movement is internal, and it is a licence reading
+
+🟢 **`Gap 256` closed.** The shared classifier `lib/license_family.sh` now reads the **LGPL
+version** from a title stub, a numeric stub and a prose grant, instead of only from the
+full-text anchor. 🔴 **The payload that proves it was needed is `openeducat/openeducat_erp`** —
+the only LGPL platform on this KB's verticals shelf — whose `LICENSE` names *"Version 3
+(LGPLv3)"* and was being published as bare `LGPL`.
+
+🔴 **And the finding underneath it is a divergence, not an under-read:**
+`p419-copyleft-identity` has answered `LGPL-3.0` on that same payload **since pass 123**.
+🟢 **Full detail at `P634`/`P635`, `agents/top.md`.**
+
+### 🔵 The regional channel, measured name by name rather than summarised
+
+🟢 **42 names checked against this KB's existing text. 2 returned zero prior reference.**
+
+| Region | New to this KB | Already held |
+|---|---|---|
+| **North America** | 🔴 **none** | 134 bills/31 states, OH policy mandate (2026-07-01), CA A.B. 1159, ID SB 1227, OK + MD oversight bans, H.R. 8747, NYC K-8 pause |
+| **EMEA** | 🔴 **none** | AI-omnibus deferral (**2027-12-02** stand-alone / **2028-08-02** Annex I), Art. 50 live **2026-08-02**, UK AI Opportunities Action Plan, 10 %-of-450 guidelines figure |
+| **APAC** | 🔴 **none** | KR Framework Act **2026-01-22** + decree **2026-07-21** + fines deferred ~**2027-07-21**; VN law **2026-03-01**, education **2027-09-01**; TW Act **2025-12**; JP framework law |
+| **LATAM** | 🟡 **Brazil `ConectAI`** — Microsoft-funded skilling programme, 26 partners, target **5 M** learners by end **2027** | UNESCO IESALC 87 %/~25 %, TALIS country figures, Latam-GPT, CONPES 4144, PL 2.338/2023, Chile bill, Observatory (Apr 2026) |
+| **APAC (gov't body)** | 🟡 **Australian AI Safety Institute** — announced **2025-11**, alongside the National AI Plan (**2025-12**) | — |
+
+🔴 **Both new names are bodies/programmes, not repositories, and neither could be verified
+first-hand** (`000` to every non-GitHub host). 🟢 **Recorded as second-hand, with the channel's
+own date, rather than promoted to a table row.**
+🔴 **The APAC *school-adoption rate* gap is unchanged** — still no ministry-level figure for
+China, India or Japan. 🟢 **Declared rather than back-filled from a global number.**
+
 ## 🟢 Fifty-second pass, 2026-10-08 — week of 2026-10-08: the **eleven-pass zero breaks**, and what broke it was changing the *shape of the query*, not the week
 
 ⏱️ **Sixth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
