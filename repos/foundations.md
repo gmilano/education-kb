@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Forty-eighth pass, 2026-10-08 — upstream `qti3` re-read from a fresh clone: the measurement pass 43 recorded is still exactly current, and the *reason* the writer lacks the mechanism prices the upstream PR
+
+⏱️ **Second pass of this date.** Licence and source read first-hand on 2026-10-08 from a **fresh
+shallow clone** of upstream, not from this KB's own prose. Existence by `git ls-remote --heads`
+against a negative control in the same run (`P510`). **No star counts** (`P479`).
+
+🔵 **Why re-read something this KB already recorded.** `P582` (`agents/top.md`) found the open-gap
+register asserting that nobody had measured the QTI 3 authoring layer, when passes 42 and 43 had.
+🔴 **Re-adjudicating that from the KB's own text would be exactly the error `P469` names** — a status
+asserted from prose rather than measured. So the upstream payload was read again, independently.
+
+### 🟢 `P584` — upstream has not moved since pass 43, so the measurement is still live
+
+| Measurement | This pass, 2026-10-08 | Pass 43 recorded | Verdict |
+|---|---|---|---|
+| `refs/heads/main` | `0ca7d6fc451393925ac8f1ba2b1dd2df5117cac5` | `0ca7d6fc` | 🟢 **identical — upstream has not moved in 5 passes** |
+| `package.json` version | `0.13.2` | `0.13.2` | 🟢 match |
+| `main/LICENSE.md` | **MIT**, © 2026 Longsight, Inc., **1,072 B** | MIT, © 2026 Longsight, Inc., 1,072 B | 🟢 match, byte-for-byte on size |
+| `packages/writer/src/index.ts` exports | **33** | 33 | 🟢 match |
+| …of which reference the template mechanism | **0** | 0 | 🟢 **match — the asymmetry is real and current** |
+| `packages/core/src` files referencing it | **30** (hyphen forms) / **47** (incl. camelCase) | 34 | ⚠️ **pattern-dependent, not a discrepancy** — see note |
+| `randomInteger` occurrences in `core/src` | **24** | — | 🟢 new this pass |
+| `qti-template-constraint` parsed + enforced | 🟢 `parser-processing.ts:109`, `session.ts:464`, `validation-processing.ts:181` | — | 🟢 new this pass |
+
+⚠️ **The one number that differs is the instrument, not the tree.** This pass counted `30` core files
+with the hyphen-only pattern (`qti-template-declaration|qti-template-processing`) and `47` with
+camelCase variants included; pass 43 recorded `34`. 🔵 **Three patterns, three counts, same corpus** —
+recorded as a pattern sensitivity rather than as a correction to pass 43, because nothing here
+establishes which pattern pass 43 used. 🟢 **The figure the gap actually turns on — writer `0` — is
+pattern-insensitive and reproduced exactly.**
+
+🟢 **Negative control in the same run:** `git ls-remote` against a non-existent
+`LongsightGroup/qti3-does-not-exist-xyz` fails rather than returning refs, so the positive result is
+not an artefact of the proxy answering everything.
+
+### 🔴 `P585` — the writer references the mechanism zero times for a **structural** reason, and that changes what the upstream PR costs
+
+🔵 **`Gap 238` described the zero as a missing feature. It is a missing *axis*.** Read end to end,
+all 33 exports have the same two shapes:
+
+```
+export { buildQti3ChoiceItem,       validateQti3ChoiceItem }       from "./choice.js";
+export { buildQti3GapMatchItem,     validateQti3GapMatchItem }     from "./gap-match.js";
+export { buildQti3ExtendedTextItem, validateQti3ExtendedTextItem } from "./extended-text.js";
+export { buildQti3HotspotItem,      validateQti3HotspotItem }      from "./hotspot.js";
+```
+
+🔴 **The writer's entire API surface is indexed by *interaction type*.** The template mechanism is
+**orthogonal** to interaction type — `qti-template-declaration` parametrises a choice item, a
+gap-match item or an extended-text item alike. 🟢 **So there is no "missing builder" to add next to
+the other 33.** `P533`'s contribution is a **second axis** the writer's API shape does not currently
+have, and that is why the zero is uniform rather than patchy.
+
+**Why this matters beyond the gap.** It prices the contribution honestly for whoever lands it
+upstream:
+
+- 🟢 **Cheap, and genuinely cheap:** emitting the template elements themselves. `P533` did it in one
+  pass, stdlib only, 43 assertions / 19 negative controls.
+- 🔴 **Not cheap:** threading parametrisation through 33 per-interaction builders **without forking
+  the API shape**. That is a design decision for the maintainer, not a patch. 🔵 **Record it as such
+  in any proposal** — "we wrote the emitter" is true; "we extended the writer" would not be.
+
+🟢 **The delivery half is confirmed independently and is not in doubt.** `core` parses
+`qti-template-constraint` (`parser-processing.ts:109`), enforces it in the session
+(`session.ts:464`) and validates it (`validation-processing.ts:181`), with `randomInteger` present
+24 times across `core/src`. 🔵 **That corroborates `compose/patterns.md`'s standing claim through a
+fresh clone rather than by citation** — the stack can *deliver* parametric variants, and now (via
+`P533`) *author* them.
+
 ## 🔴 Forty-seventh pass, 2026-10-08 — the foundational shelf's **delivery risk** was mislabelled in both directions, and one row comes back from the dead
 
 ⏱️ **First pass of this date.** **Licences read first-hand on 2026-10-08 from payload, classified by

@@ -4,6 +4,131 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🔴 Forty-eighth pass, 2026-10-08 — the regional channel returned **one** datum this KB did not hold, and it does not survive verification
+
+⏱️ **Second pass of this date.** 🔵 **All market and regulatory figures below are secondary and carry
+their source.** The four mandated regional queries ran verbatim, plus the global trends query.
+
+### 🔴 `P586` — the single new regional datum fails verification, so it enters no table
+
+🔵 **The channel's yield was measured, not estimated.** Every distinct named instrument, body,
+statistic and actor the five queries returned was checked by name against the live tree:
+**23 of 24 were already recorded.** 🔴 **The one new item does not hold up.**
+
+The claim, from a US state-policy tracker: *"Alabama's HB 329 requires an approved CS course that
+includes AI instruction to graduate from high school."* Three defects, each of which alone would
+keep it out of a table:
+
+| # | The claim | What the sources actually say |
+|---|---|---|
+| 1 | 🔴 reads as **law in force** | It is a **bill**. Passage and enactment **unconfirmed** in every source reached |
+| 2 | 🔴 bill number given as `HB 329` | One committee summary of the same proposal calls it **`HB 332`**. 🔴 **The identifier is contested** |
+| 3 | 🔴 presented as a **2026 AI mandate** | The graduation requirement **predates the bill**: 2024 Alabama Administrative Code updates, effective **class of 2032**. The bill *codifies* what the State Board already did. The lead secondary article is dated **2025-04-02**, not 2026 |
+
+🔴 **Why this would have reached a client.** An engagement planning to "an Alabama 2026 AI curriculum
+mandate" would be planning to the wrong instrument **and six years early** — the requirement bites
+with the **class of 2032**, with voluntary implementation first and required implementation in
+**2027–28** per the State Board's course of study. 🟢 **Declared as `Gap 251` rather than recorded as
+a fact.**
+
+### 🔴 `P587` — three primaries blocked, so `Gap 251` cannot be closed from this environment
+
+| Primary attempted | Result |
+|---|---|
+| `alison.legislature.state.al.us` (the bill text itself) | 🔴 **`EGRESS_BLOCKED`** by the network egress proxy |
+| `billtrack50.com` (status and last action) | 🔴 **`EGRESS_BLOCKED`** |
+| `cs4alabama.org` (the administrative-code instrument) | 🔴 **`EGRESS_BLOCKED`** |
+
+🔵 **Same class as `Gap 56`** (`eur-lex.europa.eu`), **`Gap 92`** (`docs.moodle.org`) and **`P533`**
+(`purl.imsglobal.org`) — a primary source refused by policy, **recorded rather than silently
+replaced by a secondary**. 🔴 **Three secondaries that disagree with each other are not a
+substitute for one primary**, and this pass does not treat them as one.
+
+### 🔵 What the regional runs confirmed (already held, re-read this pass)
+
+🟢 **Confirmation is not nothing** — these are the figures a proposal quotes, and they were returned
+again by an independent run this pass. **No figure below is new to this KB.**
+
+- **EU AI Act, education = high-risk** (admissions, evaluation, exam scoring); high-risk obligations
+  from **2026-08-02**, with the **AI omnibus** adopted June 2026 and in force **2026-07-27** having
+  moved the high-risk timeline. 🔴 **Obligation dates must be re-checked against the official text**
+  — and `Gap 56` is exactly why this KB cannot do that here.
+- **APAC:** Vietnam's **Law on AI** (passed 2025-12-10, effective **2026-03-01**), the first
+  standalone AI statute in SE Asia, whose high-risk list **includes education** — automated
+  assessment and behavioural monitoring. Korea's **AI Basic Act** in force Jan 2026 with 2026 as a
+  pilot year and a one-year grace on penalties. Taiwan's AI Basic Act (Dec 2025). Australia's AI
+  Safety Institute + National AI Plan (Dec 2025).
+- **LATAM:** UNESCO **IESALC** — 200 HEIs across 19 countries, **87%** using AI in ≥1 area, **26%**
+  with any formal framework; 84% private non-profit / 68% public / 52% private for-profit. TALIS 2024
+  teacher use: Brazil 56%, Chile 55%, Colombia 53%, Costa Rica 52% vs **OECD 36%**. Uruguay
+  (**Ceibal**) 75% of public-school teachers. Brazil **PL 2.338/2023** in the Chamber of Deputies;
+  Colombia **CONPES 4144**; Chile's risk-based bill tied to its forthcoming DPA.
+- **North America:** 134 bills / 31 states on one tracker vs 68 bills / 27 states / 10 enacted on
+  another — 🔴 **the methodology conflict is itself the finding and is already recorded**. California
+  **AB 1159**, Idaho **SB 1227**, Oklahoma **SB 1734**, Maryland's AI Ready Schools Act, NYC's
+  traffic-light guidance (Mar 2026, red tier bars AI grading), ED's AI grant-priority rule
+  (2026-04-13), **H.R. 8747** advanced in committee 2026-07-21, 35+ states with official guidance.
+
+## Opportunities by region
+
+🔵 **One heading, five subsections, every region answered — including the ones where the answer is
+"nothing new this pass".** An unplaced finding is worth less than a placed one, and a region left
+silent is indistinguishable from a region covered.
+
+### North America
+
+🟢 **The opportunity is the conflict, not the count.** Two reputable trackers disagree on how many
+AI-in-education bills exist (134/31 states vs 68/27 states), and **35+ states** now publish
+guidance. 🟢 **Sell the reconciliation:** a per-state obligations matrix an institution can act on,
+anchored on the instruments that are unambiguous — **AB 1159** (no student data for model training),
+**SB 1734** (written district AI policy before 2027–28), NYC's **red tier** (no AI grading,
+discipline, promotion, placement, IEP/504). 🔴 **The red tier is the architectural constraint**: a
+grading agent sold into a US district must be advisory-only with a human decision point, which is
+precisely the shape `compose/patterns.md`'s draft-gate recipe already has.
+
+### EMEA
+
+🟡 **The timeline is the risk and the billable work.** High-risk obligations from **2026-08-02**, and
+the **AI omnibus** (in force 2026-07-27) moved that timeline. 🔴 **No two secondaries in this
+channel agree on the current dates, and the primary is blocked (`Gap 56`).** 🟢 **That is a
+conformance-readiness engagement, not a compliance claim** — scope it as *evidence assembly*
+(bias testing, human oversight, user notification for proctoring) which is required under every
+reading of the dates. 🔵 **Outside the EU the picture is genuinely thin** — Gulf national AI
+strategies drive spend (UAE, Saudi) and parts of MEA have **no framework at all**, which is an
+opportunity to arrive before the regulation does, and a risk to price accordingly.
+
+### APAC
+
+🟢 **Vietnam is the sharpest named opportunity in this channel.** Its Law on AI is **in force since
+2026-03-01** and its high-risk list **names education** — automated assessment and behavioural
+monitoring. 🟢 **So an assessment product sold in Vietnam needs the high-risk evidence pack now, not
+in 2027**, and almost nobody has built one for that statute. Korea's pilot year with a penalty grace
+is a **window to deploy and document before enforcement bites**; Singapore and Japan remain
+voluntary-guidance, so the differentiator there is proof of learning gain rather than compliance.
+
+### LATAM
+
+🟢 **The gap between adoption and governance is the engagement, and it is measured:** **87%** of
+HEIs using AI, **26%** with a formal framework. 🟢 **The 61-point spread is the proposal** — an AI
+governance framework for a university system, with UNESCO IESALC's own instrument as the baseline so
+the client is not buying a bespoke standard. 🔵 **Teacher adoption is already above OECD average**
+(Brazil 56%, Chile 55%, Colombia 53%, Costa Rica 52% vs 36%; Uruguay 75%), so this is **not** an
+enablement sell — the tools are in use and ungoverned. 🔴 **Pair it with cost discipline:** the
+local-first, permissive stack on this KB's shelf (Kolibri, OpenTutor, Ollama defaults) exists because
+LATAM budgets and connectivity make the hosted-API architecture the wrong one.
+
+### Global
+
+🟢 **The OECD 2026 Digital Education Outlook's recommendation — move beyond general-purpose AI to
+purpose-built educational AI with durable learning gains — is the thesis this KB's whole shelf
+serves**, and 1EdTech's read (experimentation → governance) says the buyer is now procuring evidence
+and policy, not demos. 🟢 **The parametric-assessment chain is the clearest global offer**, because
+it is now complete end to end on permissive components for the first time — see `P594` in
+`compose/patterns.md`. 🔴 **Market sizing stays contradictory and is quoted as a range, never a
+number:** $10.6B (2026) → $42.48B (2030) at 41.5% from one house, $12.3B (2026) → $136.79B (2035)
+from another, Europe $2.64B (2026) → $8.0B (2030) at 31.9%. 🔵 **Three incompatible definitions of
+the same sector; cite the range and the disagreement.**
+
 ## 🔵 Forty-seventh pass, 2026-10-08 — LATAM is the best-measured region in this channel, and that is a fact about the other three channels
 
 ⏱️ **First pass of this date.** The four mandated regional queries ran verbatim

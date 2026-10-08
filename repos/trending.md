@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 2026-10-08 — pass 48 (second of this date)
+
+🔵 **APPEND-ONLY.** History below is untouched.
+
+🔴 **No new education repository entered this shelf from the trending channel.** The mandated query
+(`github trending education AI 2026`) ran verbatim, globally and once per region.
+
+### What the trending channel returned
+
+| Repo / asset | Class | Verdict |
+|---|---|---|
+| `ai-engineering-from-scratch` | AI-engineering education | 🟢 **Already recorded** |
+| `LLMs-from-scratch` | build-an-LLM tutorial | 🟢 **Already recorded** |
+| `thedotmack/claude-mem` | agent memory, TypeScript | 🔴 **Horizontal**, not education |
+| `microsoft/generative-ai-for-beginners` | course | 🟢 Already recorded as enablement |
+| `GarethManning/education-agent-skills` | education skills collection | 🟢 **Already recorded** |
+| `pguso/agents-from-scratch` | local-LLM agent tutorial | 🟢 Already recorded |
+| `kouweizhu/agents-radar` | automated trend-report channel | 🟢 **Already recorded** — a *channel*, not a repo to vendor |
+
+🔴 **The channel's own resolution is too coarse for this shelf, and that is now the finding.**
+`agents-radar`'s 2026-10-04 report lists `ai-engineering-from-scratch`; its 2026-10-07 report lists
+**no LLM or training project at all**. 🔵 **A channel whose education content disappears entirely
+between two consecutive daily reports cannot be used to establish a trend** — it can only be used to
+confirm a name this KB already holds.
+
+### 🔵 The honest gap in this channel, stated
+
+🔴 **GitHub's own Trending page was not read directly this pass** — the search channel returned
+*descriptions of* trending, not the page itself. 🔵 **So "nothing new is trending in education AI" is
+supported for the aggregator channel and is NOT established for `github.com/trending`.** 🟢 **A
+future pass with direct access to `github.com/trending` and `github.com/topics/ai-education` would
+settle it;** this pass states the limit rather than overclaiming the negative.
+
+### 🟢 What was re-measured first-hand in this channel instead
+
+🔵 Rather than accept the channel's licence claims, one upstream repository central to this KB's
+assessment chain was **re-cloned and re-read**:
+
+| Measurement | Value at 2026-10-08 |
+|---|---|
+| [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) `refs/heads/main` | `0ca7d6fc451393925ac8f1ba2b1dd2df5117cac5` — 🟢 **unmoved since pass 43** |
+| version | `0.13.2` |
+| `main/LICENSE.md` | 🟢 **MIT**, © 2026 Longsight, Inc., **1,072 B** |
+| `packages/writer/src/index.ts` | **33** exports, 🔴 **0** referencing the template mechanism |
+| `packages/core/src` | **30** files (hyphen pattern) / **47** (incl. camelCase); `randomInteger` ×**24** |
+| 🟢 negative control | `git ls-remote` on a non-existent sibling slug **fails** rather than returning refs |
+
+🟢 **Full write-up: `P584` and `P585` in `repos/foundations.md`.** 🔴 **And `P595`
+(`compose/patterns.md`): upstream's delivery engine retries a violated template constraint 100 times
+and then proceeds with the violating draw, silently** — `packages/core/src/session.ts:464-477`, read
+this pass.
+
+⚠️ **The 109-suite board was not re-run** (`[Code from External]`, as at passes 79–81).
+
 ## 2026-10-08 — pass 47 (first of this date)
 
 🔵 **APPEND-ONLY.** History below is untouched.

@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🔴 Forty-eighth pass, 2026-10-08 — the vertical query's own "Apache-2.0 option" is **EPL-2.0**, read from payload, and the architecture decision it changes
+
+⏱️ **Second pass of this date.** Licences read first-hand on 2026-10-08 from the repository
+**payload** over `raw.githubusercontent.com`, with the HTTP status recorded per filename. **No star
+counts** (`P479`).
+
+🔵 **The mandated verticals query ran verbatim** (`open source platform education ERP CRM MIT
+Apache`) and returned: Apache OFBiz, Huly, Krayin CRM, Aureus ERP, ERPNext/Frappe Education,
+Dolibarr, iDempiere, Compiere. 🟢 **All eight are already on this shelf** — checked by name against
+the live tree. 🔴 **And one of them is recorded upstream under the wrong licence.**
+
+### 🔴 `P589` — the roundups call Huly **Apache-2.0**; its payload is **Eclipse Public License v2.0**
+
+The query's single education-adjacent "Apache 2.0 option" was Huly
+([`hcengineering/platform`](https://github.com/hcengineering/platform)), presented by the secondary
+roundups as *"licensed under Apache License 2.0"*. Read first-hand this pass:
+
+| Filename probed | HTTP | Payload |
+|---|---|---|
+| `main/LICENSE` | 🟢 **200** | 🔴 **`Eclipse Public License - v 2.0`**, **14,197 B**, verbatim EPL-2.0 preamble |
+| `main/LICENSE.md` | 404 | — |
+| `main/COPYING` | 404 | — |
+
+🟢 **This independently corroborates `P574`** (pass 47), which read the same repository as EPL-2.0
+through a different channel, and 🔴 **refutes the secondary sources outright**. Two channels, one
+answer, and the answer is not the one the roundups give.
+
+### 🔴 Why EPL-2.0 ≠ Apache-2.0 for an education engagement
+
+🔵 **Both are OSI-approved and both are usable** — this is not a refusal, and `P576`'s lesson applies
+(a licence read too strictly deletes a candidate nobody re-checks). 🔴 **But they are not
+interchangeable, and a proposal that writes "Apache-2.0" against Huly is wrong in a way the client's
+counsel will find:**
+
+- 🔴 **EPL-2.0 is weak-copyleft with *file-level* reciprocity.** Modify an EPL-2.0 file and that
+  file's source must be offered under EPL-2.0. Apache-2.0 asks for attribution and a NOTICE, and
+  nothing more.
+- 🔴 **It carries a secondary-licence clause and a litigation-termination clause** — the patent grant
+  terminates on asserting patent claims over the program. Apache-2.0's §3 grant is differently
+  shaped.
+- 🟢 **The practical consequence is narrow and plannable:** keep customisation **beside** the EPL
+  files rather than inside them, exactly the side-car discipline this KB already prescribes for the
+  MCP shelf and for in-tree Moodle plugins (see the licence-boundary note). 🔵 **Build the AI overlay
+  as a separate module and EPL-2.0 reciprocity never triggers.**
+
+🔵 **The generic MIT options the query surfaced stay generic.** Krayin CRM (MIT) and Aureus ERP (MIT,
+Laravel + FilamentPHP) are **business** platforms with no education domain model — already recorded
+on this shelf as such, and 🔴 **neither is an education vertical**, whatever an ERP roundup implies by
+listing them next to Frappe Education. 🟡 **ERPNext/Frappe Education remains the only education-shaped
+ERP in the set and remains GPL-3.0** — so it is a deployment, not a thing to vendor into a product.
+
+### 🟢 The honest state of this shelf after the query
+
+| Question the query could have answered | Answer |
+|---|---|
+| Is there a **new** education vertical platform this KB does not hold? | 🔴 **No.** Eight returned, eight already held |
+| Is there an **MIT or Apache-2.0** *education* ERP? | 🔴 **Still no.** The education-shaped one is GPL-3.0; the permissive ones are not education |
+| Did the query change a licence on this shelf? | 🟢 **It confirmed one against a wrong secondary** — `P589` |
+
+🔵 **That the mandated query returned no new platform for this shelf is recorded as a channel
+finding rather than left as silence.** 🔴 **It is not claimed as a streak** — this pass did not
+re-read earlier passes' verticals query results, and asserting a consecutive count without reading
+them is the error `P469` names.
+
 ## 🟢 Forty-seventh pass, 2026-10-08 — the permissive LMS on this shelf was being refused for the name of its licence
 
 ⏱️ **First pass of this date.** **Licences read first-hand on 2026-10-08 from payload, channel named

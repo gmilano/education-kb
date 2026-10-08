@@ -4,6 +4,96 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🔴 Forty-eighth pass, 2026-10-08 — five trends: a reachability index that misroutes the passes it exists to guide, the same question declared twice under two numbers, an engine that delivers a broken item silently on the 101st try, a vertical roundup wrong about its own headline licence, and a regional channel whose last new datum fails verification
+
+⏱️ **Second pass of this date.** 🔵 **All market and regulatory figures are secondary and carry their
+source; all licences and source claims were read first-hand from payload on 2026-10-08.**
+
+### 🔴 Trend A — in an append-structured log, the **superseded** verdict is the one read first
+
+🔵 **Correction first, because this pass's own opening hypothesis was wrong.** `P582` set out to show
+that `intel/open-gaps.md` had never re-adjudicated `Gap 39`'s first half. 🔴 **It had** — pass 42
+re-adjudicated it, declared the successor `Gap 238`, and pass 43 recorded that closure. 🟢 **The
+register is maintained, and this pass records its own hypothesis as refuted.**
+
+🔴 **What survives is sharper.** The same file carries **three live verdicts on one row** (lines 191,
+236, 265), in chronological order — so the **oldest** is encountered first, and the oldest says *"the
+cheapest remaining win on this KB"* while sitting in the block headed *"the rows a future pass should
+read first"*.
+
+🔵 **The general trend, well beyond this KB.** Append-only logs — changelogs, decision records, risk
+registers, incident timelines — are correct by construction and **misleading by ordering**. 🔴 **Every
+entry is true as of its date, so nothing is ever *wrong*, and a reader who stops at the first match
+is nonetheless misinformed.** 🟢 **The cheap fix is a supersession marker on the old entry, not a
+rewrite of history**; the expensive fix is a derived current-state view. 🔵 **For a client:** any ADR
+or compliance log that teams actually read top-down needs the former before anyone trusts it, and
+this is the cheapest governance artefact on offer in an EMEA conformance engagement.
+
+### 🔴 Trend B — a register's **priority** column is read as an instruction, and it decays faster than its status column
+
+🔵 **`intel/open-gaps.md` already warns readers to distrust its status column** — *"Treat every row as
+a pointer to read, not a verdict to quote."* 🔴 **`P582` shows the warning guarded the wrong
+column.** The status on line 191 was merely stale; the words that would have cost a pass its budget
+were **"the cheapest remaining win on this KB"**.
+
+🔴 **A status is a claim; a priority is a recommendation**, and a recommendation is acted on without
+being re-verified. 🟢 **So a stale priority is strictly more dangerous than a stale status**, and the
+hedge that covers one does not cover the other. 🔵 **The generalisation:** in any backlog, scorecard
+or risk register, the ranking is the part consumers obey and the part nobody re-derives. 🔴 **Ranked
+outputs need freshness guarantees at least as strong as the facts they rank** — and a register that
+hedges its facts while ranking them confidently has it exactly backwards. 🟢 **Declared as
+`Gap 252`.**
+
+### 🔴 Trend C — a standards-conformant engine can fail **silently** at exactly the point a high-stakes exam cannot tolerate it
+
+`P595`, read in upstream source this pass: `qti3`'s delivery engine retries a violated
+`qti-template-constraint` **100 times, then proceeds with the violating draw** — no throw, no log
+(`packages/core/src/session.ts:464-477`). 🔴 **At an acceptance probability of 0.001, ~90% of
+delivered items are degenerate and nothing reports it.**
+
+🔵 **This is not a bug report about one library; it is the shape of the risk in the whole category.**
+Assessment engines are judged on **conformance** — does it implement the spec — and the spec says
+nothing about what to do when an author's constraint is unsatisfiable. 🔴 **So the conformance badge
+and the safety property are independent**, and a procurement that checks only the former buys the
+latter untested. 🟢 **The control is author-side and cheap** (`estimate_constraint_restarts`), which
+is why this KB now ships it as a build gate rather than a footnote.
+
+### 🔴 Trend D — the secondary roundups that rank open source are wrong about licences often enough to be unusable as a channel
+
+🔵 **`P589`**: the mandated verticals query's one Apache-2.0 recommendation, Huly
+([`hcengineering/platform`](https://github.com/hcengineering/platform)), ships
+**`Eclipse Public License - v 2.0`** in `main/LICENSE` (14,197 B, read this pass). 🟢 **Two
+independent channels in this KB now agree on EPL-2.0** (`P574`, pass 47) and 🔴 **the roundups are
+simply wrong**.
+
+🔴 **The pattern is now well evidenced across this KB and is a standing rule, not an anecdote:** the
+licence field in ranking content, awesome-lists and vendor roundups is **unreliable**, and the error
+is not random — it drifts toward the **better-known permissive name** (Apache-2.0, MIT), because that
+is what a reader expects. 🟢 **Read the payload. Every time.** The same pass that found this also
+found this KB's *own* gate refusing Sakai and the Unlicense for substring reasons (`P576`–`P579`,
+pass 47), so the rule cuts both ways: 🔵 **a licence claim is a measurement, whoever makes it.**
+
+### 🔴 Trend E — a regional-intel channel can saturate, and the last thing it yields is worse than nothing
+
+🔵 **Measured, not asserted** (`P586`): of **24** distinct named instruments, bodies, statistics and
+actors returned by the five mandated queries, **23 were already in this KB**. 🔴 **The single new
+item — Alabama `HB 329` — fails verification on three counts**: it is a bill not a law, its
+identifier is contested (`HB 332` in one committee summary), and the graduation requirement it is
+credited with **predates it** (2024 administrative code, class of **2032**).
+
+🔴 **So the channel's marginal yield this pass is negative**: it produced one item, and acting on it
+would have put a client's roadmap on the wrong instrument and six years early. 🟢 **Pass 47 recorded
+this channel "going stale"; this pass puts a number on it and names the failure mode.** 🔵 **The
+operational consequence:** regional intel should shift from *query-the-aggregators* to
+**primary-source monitoring**, and 🔴 **`P587` shows why that is blocked here** — three Alabama
+primaries all refused by the egress proxy, the same class as `Gap 56` and `Gap 92`.
+
+### ⚠️ What this pass did not measure
+
+🔴 **The 109-suite board was not re-run** — `[Code from External]`, the same environment limit this
+KB hit at passes **79**, **80** and **81**. 🔵 **Pass 47's "107 pass, 2 red" is cited, not
+re-measured.** This pass changed no code in the tree, so it caused neither red.
+
 ## 🔴 Forty-seventh pass, 2026-10-08 — six trends: a gate that refused usable software by name, a suite green because it never asked, a substring that cannot tell a grant from a prohibition, a maturity contradiction that resolves, a regional channel going stale, and an agent shelf saturated for the fifteenth time
 
 ⏱️ **First pass of this date.** 🔵 **All market and regulatory figures are secondary and carry their

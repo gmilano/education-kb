@@ -1,8 +1,92 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-07
+updated: 2026-10-08
 ---
+
+## 🔴 Pass 48, 2026-10-08 — this register is **maintained**, and still misroutes a top-down reader: three verdicts on one row, oldest first
+
+> 🔵 **This pass's opening hypothesis was that nobody had re-adjudicated `Gap 39`'s first half.
+> 🔴 That hypothesis is REFUTED and is recorded as such.** Pass 42 re-adjudicated it (line 236), pass
+> 42 declared the successor `Gap 238` (line 250), and pass 43 recorded `Gap 238`'s closure (line 265).
+> 🟢 **Credit where it is due: this file did its job.** What `P582` finds is a **positional** defect,
+> not a maintenance one.
+
+### 🔴 `P582` — three live verdicts on one row, in chronological order, with the superseded one on top
+
+| Line | Pass | Verdict on `Gap 39` first half |
+|---|---|---|
+| **191** | 40 | 🔴 *"STILL OPEN and still untested… **the cheapest remaining win on this KB after `P480`**"* |
+| **236** | 42 | 🟢 *"TESTED, and it splits."* Refuted for the writer, confirmed for the runtime |
+| **265** | 43 | 🟢 `Gap 238` **closed**, with its two stated limits |
+
+🔴 **Because this file appends, the oldest verdict is encountered first** — and line 191 sits inside
+the block introduced as *"the rows a future pass should read first"*. 🟢 **A pass reading top-down
+finds a target labelled "cheapest remaining win", and it is settled work.** 🔴 **Nothing on line 191
+says it has been superseded**, and nothing obliges a reader to scroll 45 lines on.
+
+🔵 **This is a supersession defect, not a status error.** The status is recorded correctly three
+times. 🟢 **Remedy landed in place this pass:** line 191's row now carries a forward pointer to lines
+236 and 265, so the superseded verdict cannot be read as current.
+
+### 🟢 `Gap 39` (first half) — the citation form, fixed so no pass quotes it bare
+
+🔵 **Pass 42's split verdict stands and was re-confirmed this pass from a fresh clone** (`P584`:
+upstream `main` = `0ca7d6fc`, unmoved since pass 43; writer **33 exports / 0** template references).
+🔴 **What was missing was the one-line form**, and the bare form misleads:
+
+- 🔴 **Never:** *"`Gap 39` closed"* / *"the QTI 3 authoring tool emits parametric variant families."*
+- 🟢 **Always:** *"first half — **refuted** for upstream's writer (pass 42), **remedied** by this KB's
+  own emitter `P533` (pass 43); second half closed for **IRT linking** only."*
+
+🟢 **Second half unchanged:** closed for IRT linking (`EqUMP` 0.3.6, MIT — Mean-Mean, Mean-Sigma,
+Haebara, Stocking-Lord, true-score), 🔴 **not** for observed-score or kernel equating (`P500`:
+0-byte stubs; only GPL implementations). 🟢 **Both halves now sit in one worked recipe** — `P594`,
+`compose/patterns.md`.
+
+### 🔴 `Gap 251` (new, pass 48) — the Alabama instrument cannot be identified from this environment
+
+**Statement.** A US state-policy tracker reports *"Alabama's `HB 329` requires an approved CS course
+that includes AI instruction to graduate."* 🔴 **Three defects** (`P586`): it is a **bill**, not a
+law, with passage unconfirmed; the identifier is **contested** (`HB 332` in one committee summary of
+the same proposal); and the graduation requirement it is credited with **predates it** — 2024
+Alabama Administrative Code, effective **class of 2032**, with required implementation **2027–28**.
+
+**Why it matters.** 🔴 An engagement planning to "an Alabama 2026 AI curriculum mandate" would be
+planning to the wrong instrument **and six years early**.
+
+**Why it is open rather than closed.** 🔴 **Three primaries all refused by the egress proxy**
+(`P587`): `alison.legislature.state.al.us` (the bill text), `billtrack50.com` (status/last action),
+`cs4alabama.org` (the administrative-code instrument). 🔵 **Same class as `Gap 56`** (eur-lex),
+**`Gap 92`** (docs.moodle.org) and **`P533`** (purl.imsglobal.org).
+
+**What would close it.** One read of the enrolled bill text or the Alabama Administrative Code
+section, from an environment whose proxy permits `.gov`/`.state.al.us`. 🟢 **Bounded and cheap — for
+a pass that can reach the primary.** 🔴 **Until then the claim stays out of every table in this KB.**
+
+### 🔴 `Gap 252` (new, pass 48) — this register has no **supersession marker**, and its priority column has no freshness guarantee
+
+**Statement.** When a later pass revises a row, the earlier row is **left exactly as written**
+(`P582`). Correct as a log, misleading as an index: a top-down reader meets the oldest verdict first.
+🔴 **And the column that misleads hardest is not status but *priority*** — line 191's *"cheapest
+remaining win on this KB"* is a recommendation, and recommendations are acted on without being
+re-derived.
+
+**Why this file's existing hedge does not cover it.** 🔵 The preamble warns *"Treat every row as a
+pointer to read, not a verdict to quote"* — a warning about **status**. 🔴 **No warning covers a stale
+ranking**, and the ranking is what recruits a pass's budget.
+
+**The three remedies, and which one landed.**
+
+| Remedy | Cost | Status |
+|---|---|---|
+| **Forward pointer** on a superseded row | 🟢 one line | 🟢 **LANDED this pass** for `Gap 39` first half (line 191 → 236, 265) |
+| **Freshness rule for the priority column**: no row may carry "cheapest/next win" unless re-asserted by the latest pass that touched it | 🟡 a convention plus a check | 🔴 **OPEN** — the honest next instrument |
+| Re-adjudicate the remaining **11 open** + **5 undeterminable** rows and forward-point each | 🔴 more than one pass can do honestly, as this file already says | 🔴 **OPEN**, and `P582` is the evidence it is not optional |
+
+🔵 **Scope stated honestly:** this pass forward-pointed **one** row — the one it could prove was
+superseded by reading both corrections in full. 🔴 **It did not audit the other 16**, and does not
+claim the defect is confined to `Gap 39`.
 
 # 🔴 Open-gap register — restored to the live tree
 
@@ -107,7 +191,7 @@ Kept for citation integrity: a later pass citing `gap N` must be able to resolve
 | Gap | Pass 39 said | 🟢 Pass 40 says |
 |---|---|---|
 | **39** (second half — *equivalence/comparability*) | 🔴 **Open.** *"la equivalencia psicométrica entre variantes no la cubre ninguna pieza open source de esta KB"*, with only one permissive implementation (Java, Apache-2.0) and one GPL R package found | 🟢 **CLOSED for *IRT linking*, and closed permissively in Python.** 🆕 **`EqUMP` 0.3.6 — MIT**, artefact-verified: Mean-Mean, Mean-Sigma, **Haebara** and **Stocking-Lord**, all four with test files, plus **true-score equating**. See `P499` (`repos/foundations.md`) and the chain at `P507` (`compose/patterns.md`). 🔴 **NOT closed for *observed-score* or *kernel* equating** — `EqUMP` declares those directories and they are **0-byte stubs** (`P500`), so for those two methods the gap stands and the only implementations remain **GPL** |
-| **39** (first half — *parametric variant generation*) | *"inferido de la descripción de los paquetes, no probado"* | 🔴 **STILL OPEN and still untested.** 🔵 **No pass has yet verified that the QTI 3 authoring tool emits *parametric* variant families.** 🟢 **It is the chain's oldest untested assumption and the cheapest remaining win on this KB after `P480`** |
+| **39** (first half — *parametric variant generation*) | *"inferido de la descripción de los paquetes, no probado"* | 🔴 **⛔ SUPERSEDED — DO NOT ACT ON THIS ROW.** Pass 40 wrote: *"STILL OPEN and still untested… the cheapest remaining win on this KB after `P480`"*. 🔴 **That verdict was overturned by pass 42 and the gap was remedied by pass 43** — see **"The rows pass 42 changed"** (🟢 *"TESTED, and it splits"*) and the **`Gap 238`** closure row below. 🟢 **Current verdict:** refuted for upstream's writer, remedied by this KB's own emitter (`P533`). 🔵 Forward pointer added by pass 48 (`P582`); the pass-40 text is kept verbatim above for citation integrity |
 
 > 🔵 **Note on how this closure was reached, because `P492` exists to prevent the opposite.** The
 > declaring line was read in full from `archive/2026-10-06-pre-reset/repos-foundations.md:6013` before

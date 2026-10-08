@@ -4,6 +4,131 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Forty-eighth pass, 2026-10-08 — `P594`: the **parametric high-stakes assessment chain** is complete end to end on permissive components for the first time, and this pass is the one that can say so
+
+⏱️ **Second pass of this date.** 🔵 **Licences read first-hand on 2026-10-08 from payload.** Upstream
+`qti3` re-measured from a fresh clone at `main` = `0ca7d6fc` (`P584`, `repos/foundations.md`).
+
+🔵 **Why this recipe only becomes writable now.** `P49` named this chain at pass 25 and `Gap 39`
+named its two unmeasured links. The register still calls the first link *"the cheapest remaining
+win"* (`P582`) — but passes 40, 42 and 43 closed **both** links, 18 passes apart and under three
+different numbers. 🟢 **Nothing was missing except a pass that read all three results together.**
+
+### 🟢 `P594` — the chain, link by link, with what closed it
+
+| # | Link | Component | Licence (payload) | Status |
+|---|---|---|---|---|
+| 1 | **Author** N parametric variants of one item | 🟢 `compose/code/p533-qti3-template-emitter/` (this KB) | 🟢 **MIT** base (`qti3` `main/LICENSE.md`, 1,072 B) | 🟢 **`Gap 238` closed at pass 43.** 43 assertions, 19 negative controls |
+| 2 | Write them as a **QTI 3 item-bank package** | [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) `packages/writer` | 🟢 **MIT** · © 2026 Longsight, Inc. | 🟢 33 exports, bank writer verified first-hand |
+| 3 | **Deliver** the variants, drawing per learner | same repo, `packages/core` + `packages/player` | 🟢 **MIT** | 🟢 **Verified this pass from a fresh clone:** `randomInteger` ×24, `qti-template-constraint` parsed (`parser-processing.ts:109`), enforced (`session.ts:464`), validated (`validation-processing.ts:181`) |
+| 4 | **Equate** the variants so scores are comparable | `EqUMP` 0.3.6 | 🟢 **MIT** | 🟡 **`Gap 39` second half closed *for IRT linking*** — Mean-Mean, Mean-Sigma, Haebara, Stocking-Lord + true-score equating (`P499`). 🔴 **NOT closed for observed-score or kernel equating** — those dirs are 0-byte stubs (`P500`); only GPL implementations exist |
+| 5 | Human decision point before any consequence lands | `compose/code/grading-draft-gate/` | 🟢 this KB | 🟢 required by NYC's red tier and by OK/MD human-oversight rules |
+
+🟢 **Links 1–4 are permissive end to end.** 🔴 **Link 4 carries a method qualifier that must travel
+with it** — see the caveat below, which is the one thing that can make this recipe wrong in front of
+a psychometrician.
+
+### 🟢 How to wire it
+
+🔴 **Read this first: `emit_template.py` is a *library*, not a CLI.** It declares no `argparse` and no
+`__main__`, so there is no `--spec` flag to pass — checked in the payload this pass, because quoting
+an invented command line is how a recipe stops being reproducible. The entry point is
+`build_parametric_item(**kwargs)`.
+
+```python
+# 1. AUTHOR — one item spec -> a parametric qti-assessment-item (this KB's emitter, stdlib only)
+from emit_template import (
+    build_parametric_item, RandomInteger, TemplateDeclaration,
+    TemplateProcessing, SetTemplateValue, SetCorrectResponse, TemplateConstraint,
+    qti_sum, qti_product, qti_gte,
+)
+
+a = TemplateDeclaration(identifier="A", base_type="integer")   # the drawn parameter
+xml = build_parametric_item(
+    identifier="add-two-ints", title="Add two integers",
+    template_declarations=[a, ...],
+    template_processing=TemplateProcessing(rules=[
+        SetTemplateValue("A", RandomInteger(minimum=2, maximum=20, step=2)),
+        TemplateConstraint(qti_gte(...)),      # reject degenerate draws; core retries
+        SetCorrectResponse("RESPONSE", qti_sum(...)),   # the key follows the draw
+    ]),
+    response_declaration=..., outcome_declaration=...,
+    item_body=..., response_processing=...,
+)
+# Child order is the XSD's required sequence, not core's parser order --
+# core is order-insensitive, the schema is not. The emitter handles this.
+```
+
+```
+# 2. BANK — package the family with the MIT writer (packages/writer)
+#    buildQti3ChoiceItem / validateQti3ChoiceItem (+31 more, indexed BY INTERACTION TYPE)
+#    NOTE (P585): the writer has no template axis of its own -- step 1 supplies it
+
+# 3. DELIVER — packages/core draws per learner and enforces the constraints
+#    randomInteger over min/max/step; templateConstraint retried until satisfied
+#    (estimate_constraint_restarts() in step 1 prices that retry before you ship)
+
+# 4. EQUATE — calibrate delivered responses, then link the variant forms
+#    EqUMP 0.3.6 (MIT): Mean-Mean | Mean-Sigma | Haebara | Stocking-Lord | true-score
+
+# 5. GATE — no score becomes a consequence without a human decision
+python3 -I compose/code/grading-draft-gate/gate.py   # see that dir's README for arguments
+```
+
+🟢 **`estimate_constraint_restarts()` is the part a studio will actually thank the emitter for**: a
+`TemplateConstraint` that rejects too many draws makes delivery stall, and this prices the restart
+rate **before** the item reaches a learner.
+
+### 🔴 `P595` — the delivery engine **silently delivers a constraint-violating item** on the 101st retry, confirmed in upstream source
+
+🔵 **`P533`'s module docstring asserts this; this pass confirmed it in upstream's own source** at
+HEAD `0ca7d6fc`, `packages/core/src/session.ts:464-477`:
+
+```js
+restarts += 1;
+if (restarts <= 100) index = -1;   // restart the rule list
+// ...and on the 101st failure: no reset, no throw, no log.
+// The loop advances past the constraint and finishes with the VIOLATING draw.
+```
+
+🔴 **There is no error path.** A `qti-template-constraint` whose acceptance probability is too low
+does not fail loudly — it **delivers a degenerate item to a learner as though it were valid**. At an
+acceptance probability of `0.001`, `(1 - p)**101` ≈ **90%**: nine items in ten are wrong, and nothing
+in the stack says so.
+
+🟢 **The mitigation is already built and is the reason to use this emitter rather than hand-written
+XML.** `estimate_constraint_restarts(draws, predicate)` returns the satisfying fraction of the
+cartesian product of the declared grids, so the author prices the restart rate **before** an item
+ships. 🔴 **Make it a gate in the build, not an optional check** — this is the single highest-value
+line in the whole chain for a high-stakes deployment.
+
+🔵 **Why it belongs in this file and not only in the emitter's README:** it is a property of
+**upstream delivery**, so it applies to *every* parametric item delivered on this stack, including
+items this KB's emitter did not author.
+
+### 🔴 The caveats that must travel with this recipe
+
+1. 🔴 **Step 4 is closed for *IRT linking* only.** If the client's psychometrics require
+   **observed-score** or **kernel** equating, the permissive chain **breaks at link 4** and the only
+   implementations are **GPL** (`P500`). 🔵 **Ask which method their standards body mandates before
+   quoting this recipe as permissive end to end.**
+2. 🔴 **Step 1 is this KB's code, not upstream's.** `P585` explains why that is unlikely to change
+   cheaply: the writer's API is indexed by **interaction type** and parametrisation is **orthogonal**
+   to it, so threading it through all 33 builders is a maintainer's design decision, not a patch.
+   🟢 **Say "we wrote the emitter", never "the writer supports it".**
+3. 🔴 **The whole chain is high-risk under the EU AI Act and under Vietnam's Law on AI** — both name
+   automated assessment explicitly. 🟢 **Step 5 is not optional polish; it is the control that makes
+   the rest deployable**, and the same control satisfies NYC's red tier.
+
+### 🟢 Why this is the pass's most sellable output
+
+🔵 **The thesis every trends source in this channel converged on** — OECD 2026's *purpose-built
+educational AI with durable learning gains*, 1EdTech's *experimentation → governance* — describes
+this chain. 🟢 **It replaces proctoring with equivalent-variant delivery**, which is the original
+`Gap 39` motivation (*"que es lo que vuelve innecesario el proctoring"*), it is permissive at every
+link that matters, and 🟢 **its weakest link is now named with its method qualifier rather than
+hidden behind "IRT, closed"**.
+
 ## 🟢 Forty-seventh pass, 2026-10-08 — two recipes (`P576` the permissive-LMS AI overlay that can ship closed; `P578` the licence-regime intake gate) and a **correction** to every recipe that priced Sakai out or priced Moodle too dear
 
 ⏱️ **First pass of this date.** 🔵 **Licences read first-hand on 2026-10-08 from payload in the

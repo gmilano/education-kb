@@ -4,6 +4,87 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🔴 Forty-eighth pass, 2026-10-08 — the index built so no pass re-does settled work is **stale in the one row it advertises as the next pass's best target**
+
+⏱️ **Second pass of this date.** Licences read first-hand on 2026-10-08 from the repository
+**payload**; existence by `git ls-remote --heads` against a negative control in the same run
+(`P510`). **No star counts** (`P479`).
+
+🔴 **Zero new education agents for the eighth consecutive pass; the shelf is declared saturated for
+the sixteenth.** The mandated query ran verbatim and returned, again, the **horizontal** agent shelf
+(OpenHands, CrewAI, LangGraph, OpenClaw, Vocode), agent *catalogues*
+(`ashishpatel26/500-AI-Agents-Projects`, `ARUNAGIRINATHAN-K/awesome-ai-agents-2026`,
+`caramaschiHG/awesome-ai-agents-2026`) and *courses* (`microsoft/ai-agents-for-beginners`,
+`huggingface/agents-course`, `pguso/agents-from-scratch`). 🔵 **Reproduced on a fresh run and in all
+four regional runs. That is information, not silence** — and a sixteenth consecutive reproduction is
+a finding about the **channel**, not about this pass.
+
+🔵 **Every education-shaped name the channel surfaced this pass is already on this shelf.**
+`GarethManning/education-agent-skills`, `kouweizhu/agents-radar`, `ai-engineering-from-scratch`,
+`LLMs-from-scratch` — checked by name against the live tree, all four already recorded. 🟢 **The
+channel returned nothing this KB did not hold, and that is now measured rather than asserted.**
+
+### 🔴 `P582` — the open-gap register holds **two contradictory verdicts on the same row**, and the superseded one is in the block the file says to read first
+
+🟢 **So this pass spent its budget on the instrument that decides what every *future* pass works on.**
+
+🔵 **State the correction before the finding, because the first reading of this was wrong.** This
+pass began from the hypothesis that nobody had re-adjudicated `Gap 39`'s first half. 🔴 **That
+hypothesis is false and is recorded here as refuted:** pass 42 re-adjudicated it precisely, pass 42
+declared the successor `Gap 238`, and pass 43 recorded `Gap 238`'s closure — all three are in
+`intel/open-gaps.md` already. 🟢 **The register is maintained.** The defect is narrower and it is
+about **position**, not maintenance.
+
+| Line | Pass | What that row says about `Gap 39` first half |
+|---|---|---|
+| **191** | 40 | 🔴 *"**STILL OPEN and still untested.** No pass has yet verified… **the cheapest remaining win on this KB after `P480`**"* |
+| **236** | 42 | 🟢 *"**TESTED, and it splits.** Refuted for the writer… confirmed for the runtime"* |
+| **265** | 43 | 🟢 `Gap 238` **closed**, with its two stated limits |
+
+🔴 **Three verdicts, one question, one file — and they are in chronological order, which puts the
+superseded one on top.** The register is an append-structured log, so for any row a later pass
+revises, **the stale verdict is read first**. 🔴 **And line 191 sits inside the block this file
+introduces as *"the rows a future pass should read first"*, carrying the words *"the cheapest
+remaining win on this KB"*.** 🟢 **A pass reading top-down, finding its target, and starting work
+would spend its budget on settled work** — and would have no reason to scroll 45 lines further to
+find out.
+
+🔵 **This is not a status error; the status is recorded correctly three times.** 🔴 **It is a
+**supersession** error: nothing marks the old row as overridden.** A reader has to reconstruct
+chronology from section headings to know which of three live verdicts is current.
+
+🟢 **Landed this pass, in place:** line 191's row now carries a forward pointer to its own
+corrections, so the superseded verdict can no longer be read as current. 🔵 **`Gap 252`** is declared
+for the general case — the register has no supersession marker, and `Gap 39` is merely the row where
+it cost the most.
+
+### 🔵 `P583` — the citation form, so no pass quotes this closure bare
+
+🟢 **Pass 42 got the verdict right and this pass re-confirms it from a fresh clone** (`P584`). What
+no pass has written down is the **one-line form** a proposal should use, and the bare form is
+genuinely misleading:
+
+- 🔴 **Never:** *"`Gap 39` closed"*, or *"the QTI 3 authoring tool emits parametric variant
+  families."* 🔴 **Upstream's writer does not, and never did** — **33 exports, 0 references**,
+  reproduced at `main` = `0ca7d6fc` on 2026-10-08.
+- 🟢 **Always:** *"`Gap 39` first half — **refuted** for upstream's writer at pass 42, **remedied** by
+  this KB's own emitter (`P533`) at pass 43. Second half closed for **IRT linking** only."*
+
+🔵 **Why the distinction reaches a client.** `Gap 39`'s declaring line (pass 25) inferred the writer's
+support *"de la descripción de los paquetes, no probado"*. 🔴 **The inference was false.** The chain
+works because this KB **built** the missing piece. 🟢 **"We wrote the emitter" is a stronger claim
+than "upstream supports it" — and it is the true one.**
+
+### ⚠️ The board was **not** re-measured this pass — `[Code from External]`
+
+🔴 Re-running the 109 suites was **refused by this environment** (`[Code from External]`), the same
+limit this KB recorded at passes **79**, **80** and **81**. 🔵 **So pass 47's "107 pass, 2 red"
+stands as *cited*, not as *re-measured*, and this pass does not claim otherwise.** The two red suites
+were verified red by pass 47 and this pass touched no code in the tree, so it caused neither.
+
+🟢 **What this pass *could* measure first-hand, it did** — upstream `qti3` was re-read from a fresh
+clone rather than from this KB's own prose; see `P584` and `P585` in `repos/foundations.md`.
+
 ## 🔴 Forty-seventh pass, 2026-10-08 — the gate that decides whether a licence **cedes** anything was rejecting software this shelf exists to recommend
 
 ⏱️ **First pass of this date.** **Licences read first-hand on 2026-10-08 from the repository

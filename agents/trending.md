@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 2026-10-08 — pass 48 (second of this date)
+
+🔵 **APPEND-ONLY.** History below is untouched.
+
+🔴 **Zero new education agents — sixteenth consecutive saturation reproduction.** The mandated query
+(`top open source AI agents education 2026 github MIT`) ran verbatim, globally and once per region.
+
+### What the channel returned, by class
+
+| Class | Names returned | Verdict |
+|---|---|---|
+| **Horizontal agents** (not education) | OpenHands, CrewAI, LangGraph, OpenClaw, Vocode, OpenAI Codex | 🔴 **Out of scope** — general agent frameworks, already on the horizontal shelf |
+| **Catalogues of agents** | `ashishpatel26/500-AI-Agents-Projects`, `ARUNAGIRINATHAN-K/awesome-ai-agents-2026`, `caramaschiHG/awesome-ai-agents-2026` | 🔴 **Not agents.** Lists, and the first is already recorded |
+| **Courses / curricula** | `microsoft/ai-agents-for-beginners`, `huggingface/agents-course`, `pguso/agents-from-scratch`, DeepLearning.AI agent courses | 🟢 **Already on the shelf** as enablement assets, not as agents |
+| **Education-shaped** | `GarethManning/education-agent-skills`, `kouweizhu/agents-radar`, `ai-engineering-from-scratch`, `LLMs-from-scratch` | 🟢 **All four already recorded** — checked by name against the live tree this pass |
+
+🟢 **The fourth row is the one worth stating plainly: the channel surfaced four education-adjacent
+names and this KB held all four.** 🔵 **That is a measured zero, not an unexamined one.**
+
+### 🔵 Regional runs — all four executed, all four reproduced the saturation
+
+| Region | New education agent found | Note |
+|---|---|---|
+| **North America** | 🔴 none | Channel returned **policy**, not software — state trackers, district guidance, federal rulemaking |
+| **EMEA** | 🔴 none | Returned EU AI Act conformance material and one vendor LMS page; no permissive agent |
+| **APAC** | 🔴 none | Returned **regulation** (Vietnam, Korea, Taiwan, Australia) and one vendor market report naming only proprietary players (Google, Microsoft, IBM, Pearson, Byju's) |
+| **LATAM** | 🔴 none | Returned **UNESCO/IESALC governance research**, the richest regional material in the channel and entirely non-software |
+
+🔴 **A clear regional finding, stated rather than left implicit: in all four regions the
+education-AI channel now returns governance and regulation, not repositories.** 🟢 **That is
+consistent with the OECD/1EdTech read that the category has moved from experimentation to
+governance** — the open-source supply side stopped growing in this channel some sixteen passes ago,
+while the policy side accelerated.
+
+### 🔴 The pass's actual yield was at the instrument layer
+
+🔵 **Recorded here so the trending history shows what the pass did, not only what it failed to
+find:**
+
+- **`P582`** — `intel/open-gaps.md` carries **three live verdicts on one row** (`Gap 39` first half,
+  lines 191 / 236 / 265) in chronological order, so the **superseded** one is read first — and it sits
+  in the block headed *"the rows a future pass should read first"* saying *"the cheapest remaining win
+  on this KB"*. 🟢 **Positional defect, not a maintenance one: the register is maintained.** 🔴 **This
+  pass's opening hypothesis — that nobody had re-adjudicated the row — is recorded as REFUTED.**
+  Forward pointer landed in place.
+- **`P583`** — the citation form, fixed: *"first half — **refuted** for upstream's writer (pass 42),
+  **remedied** by this KB's emitter `P533` (pass 43)"*. 🔴 **Never "the QTI 3 authoring tool emits
+  parametric variant families"** — upstream's writer does not, and never did.
+- **`P584`** — upstream `qti3` re-read from a **fresh clone**: `main` = `0ca7d6fc…`, unmoved since
+  pass 43; `0.13.2`; MIT 1,072 B; writer **33 exports / 0** template references. Measurement still
+  live.
+- **`P585`** — the writer's zero is **structural**: its API is indexed by interaction type and
+  parametrisation is orthogonal to it.
+- **`Gap 252`** — the register has **no supersession marker**, and its *priority* column has no
+  freshness guarantee: a stale ranking recruits a pass's budget harder than a stale status does.
+- **`P589`** — Huly is **EPL-2.0** in payload, not Apache-2.0 as the roundups claim.
+- **`P595`** — upstream delivery **silently delivers a constraint-violating item** on the 101st retry
+  (`session.ts:464-477`).
+- **`P586`/`P587`** — regional channel yielded 1 new datum in 24; it fails verification; three
+  primaries blocked.
+
+⚠️ **The 109-suite board was not re-run** (`[Code from External]`, as at passes 79–81). Pass 47's
+"107 pass, 2 red" is **cited, not re-measured**; this pass changed no tree code.
+
 ## 2026-10-08 — pass 47 (first of this date)
 
 🔵 **APPEND-ONLY.** History below is untouched.
