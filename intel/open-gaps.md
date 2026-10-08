@@ -4,6 +4,172 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Pass 61, 2026-10-08 — **`Gap 278`, `Gap 281`, `Gap 282`, `Gap 283` CLOSED**, **`Gap 270` RE-POSED** (and with it `P731` replaced), `Gap 277` advanced, `P777` refuted, two gaps declared
+
+> 🔵 **This pass's opening hypothesis was that the regional channel was saturated, as pass 60's
+> `P777` concluded, so the budget should go entirely to instruments.
+> 🔴 REFUTED on the data half:** 🟢 **the same four regional queries returned eight named, dated
+> regulatory instruments this KB did not hold** — and the saturation claim turned out to be a rate
+> generalised from four queries in one pass (`P785`).
+
+🟢 **Oracle map re-measured before any datum (`P713`, `P745`), `n = 2`:** `raw` **200 × 2** against
+a 404-discriminating control, `pypi` **200 × 2**, `npm` **200 × 2**, `maven` **200**, `ls-remote`
+**discriminates**. 🔴 `api.github.com/repos/{third-party}` **403** — no star counts. 🔴 `packagist`
+**404** where pass 59 read it.
+
+### 🟢 `Gap 270` — **RE-POSED**, which retires `P731` and is this pass's most consequential finding
+
+🔴 **Four passes recorded "6 of 6 primary policy hosts at `000`" and concluded the policy shelf has
+no oracles. The measurement was right; the diagnosis was incomplete.** 🟢 **Measured this pass:
+12 of 12 policy hosts at `000` — *and* `example.com`, `google.com` and `en.wikipedia.org` at
+`000`** — while `raw.githubusercontent.com`, `pypi`, `npm` and `repo1.maven.org` answer **200**.
+🟢 **The proxy names the mechanism:** `$HTTPS_PROXY/__agentproxy/status` lists
+**`connect_rejected`, "gateway answered 403 to CONNECT"** per host, and **`pypi.org` /
+`registry.npmjs.org` appear in its own `noProxy` allowlist**. 🔴 **`WebFetch` → `EGRESS_BLOCKED`.**
+
+🆕 **`P784` replaces `P731`:** 🔴 **it is not that regulatory sources refuse this KB — it is that
+this session has exactly ONE policy channel (a search backend's server-side fetch) and ZERO
+direct-fetch channels.** 🟢 **Therefore: (1)** no policy datum here can be payload-read, so the 🟡
+band is permanent in this environment, not a backlog item; **(2)** no policy datum can be
+cross-checked against a second *independent* oracle, so 🔴 **a 🟢 band on a policy row is a
+defect** — now asserted in `p782`'s README and matrix header; **(3)** it is a property of the
+*session*, like `P771`'s `[Code from External]` denial, and must be **re-measured per environment**.
+🔵 **Not closed, because the gap asked for a reachable primary source and there is none. But it is
+no longer a mystery, and a future session with different egress closes it in an afternoon.**
+
+### 🟢 `Gap 278` — **CLOSED**: the policy axis is data plus an instrument
+
+🟢 **`intel/policy-matrix.tsv`: 31 rows, 7 columns, all four regions populated** — EMEA 7,
+North America 7, APAC 7, LATAM 8 — with a closed `verdict` vocabulary
+(`PROHIBITED | GATED | MANDATED | PROPOSED | UNREGULATED`).
+🟢 **`compose/code/p782-policy-gate/gate.sh` reads it; 21 assertions, offline, green.**
+🟢 **Exit status is the verdict, and `6` ≠ `0`** — four assertions pin that an unmeasured
+`(function, jurisdiction)` pair returns *never measured*, not *allowed* (`P476`). 🟢 **The region
+vocabulary fails loudly:** `--region Latam` / `Europe` / `Brazil` each exit `2`, rather than
+returning an empty set that reads like "nothing is regulated there".
+🔴 **Pass 60 predicted every row would be 🟡 reported, and that is exactly what happened** —
+`P784` says it can be nothing else here.
+
+### 🟢 `Gap 281` — **CLOSED**, with a real instance *and* a real fix
+
+🟢 **Pass 60 declared the shared classifier's GPL-2.0 protection case-dependent but could locate
+no uppercased GPL-2.0 payload. This pass derived one from the real payload by `tr`.** Measured:
+
+| payload | `license_family.sh:323` (`case` glob, whole payload) | emitted |
+|---|---|---|
+| real `leogaggl/lxHive`, 18 092 B | 🟢 misses (mention is mixed-case, line 18) | **GPL-2.0** ✅ |
+| same payload uppercased | 🔴 **hits** (mention now in caps, **offset 849**) | **LGPL** ❌ |
+
+🔵 **So the instrument that exists to prevent `P753` commits `P753` internally**, and survives only
+because real GPL-2.0 payloads happen to be title-cased. 🔴 **The mutation class is not synthetic:**
+`p288/fixtures/agpl-3.0-kuali-kfs-reflowed.LICENSE` is a real reflowed GNU payload already here.
+🟢 **The fix is not casefolding** — that is strictly worse, matching the mixed-case original too.
+🟢 **The fix is scoping the gate to the title block**: `p784` applies it to the first **400 B** of
+an uppercased copy, the mention sits at **849**, and both payloads classify **GPL-2.0**.
+🆕 **`P781`: a gate that tests for a *relative's* name must be scoped to the title block.
+Casefolding changes which accident protects you; scoping removes the accident.**
+🟢 **Fixtures committed** (`p784/fixtures/gpl2-{real,uppercased}-lxhive.LICENSE`) **with three
+assertions that the trap is still present**, so the suite cannot go vacuously green (`P126` pt. 2).
+
+### 🟢 `Gap 282` — **CLOSED** by an instrument, and the phenomenon is **rare**
+
+🟢 **`p784` enumerates all 16 licence filenames instead of breaking on the first, emitting a
+`{path → family}` map and a `SINGLE | PARTITIONED | UNGRANTED` verdict; 17 assertions green.** It
+reproduces every pass-60 verdict by hand, **including `lxHive` as GPL-2.0** — the licence three
+consecutive hand-rolled classifiers read as LGPL.
+🟢 **Run on a frame of 23 benchmark/dataset repos declared by name before any payload was read**
+(`P744`'s method, not the mass sweep `P744` forbids), **23 of 23 reachable**:
+🟢 `SINGLE` **14** · 🔴 `UNGRANTED` **8** · 🟡 `PARTITIONED` **1**.
+🔴 **So the scope split is 1 in 23 on the frame where `P779` predicted it most likely.** 🟢 **A real
+negative that reprioritises:** worth an instrument (it has one), not worth a pre-flight row.
+
+### 🟢 `Gap 283` — **CLOSED**: the data licence is a first-class payload, and the pre-flight has its third column
+
+🟢 **The pre-flight in `compose/patterns.md` is now a three-axis table — code, data, policy — with
+an instrument behind each axis** rather than prose. 🟢 **And the data axis paid for itself
+immediately:** 🔴 **11 of 23 (48 %)** of the benchmark frame cannot enter a paid deliverable —
+**8 ungranted**, 1 **CC BY-NC 4.0**, 1 **MIT code / CC BY-NC-SA data**, 1 **bespoke**.
+
+🆕 **`P783`, the sharpest instance and a new licence *class* for this shelf:**
+`Khan/tutoring-accuracy-dataset` `@fbbeff8` ships a **2 690 B bespoke "Evaluation Dataset
+License"** — internal non-commercial **evaluation only**; **model training, production use and
+redistribution expressly prohibited**; not sublicensable; **viral into any combined dataset**.
+🟢 **`p784` emitted `UNCLASSIFIED` and did not guess**, which is an asserted case in its suite.
+🔴 **The cheapest wrong guess — "no copyleft marker, treat as permissive" — would have licensed a
+client to do the two things the licence most explicitly forbids.** 🆕 **Assume an education corpus
+carries a bespoke evaluation licence until a payload read says otherwise, and treat `UNCLASSIFIED`
+as a result rather than a classifier failure.**
+
+### 🟢 `Gap 277` — **ADVANCED**, and the registry layer gained a second job
+
+🟢 **The registry answered for four packages this pass with licence *and* date:** `scorm-again`
+**v3.4.5 2026-10-05**, `ltijs` **v7.0.7 2026-10-06**, `@xapi/xapi` **v3.0.3 2026-04-27**,
+`@xapi/cmi5` **v1.4.0 2024-10-06** — 🔴 the last showing **two years without a release**, which is
+exactly the judgement the date layer exists to support.
+🆕 **`P780`: the registry resolves *slugs*, not just dates.** 🔴 Four guessed Caliper/cmi5 slugs
+returned nothing from `ls-remote` (`Brightspace/ims-caliper-python`, `xapijs/xAPI.js`,
+`1EdTech/caliper-java`, `IMSGlobal/caliper-java`); 🟢 `registry.npmjs.org/@xapi%2fcmi5` returned
+the true slug `xapijs/cmi5` in its `repository` field and the payload read followed in one request.
+🔴 **Counter-case in the same pass, keeping `P253` honest:** `pypi.org/pypi/caliper/json` answers
+**200** and is **`vsoch/caliper`**, a package-diffing tool unrelated to 1EdTech Caliper.
+🆕 **`P780b`: a registry `200` proves a package of that name exists, never that it is the artefact
+you wanted.**
+🔴 **Not closed:** the manifest enumeration over the shelved repos is still unbought.
+
+### 🔴 `P777` — **REFUTED**, and the method error generalised
+
+🔴 **Pass 60: the four regional queries "returned nothing this KB does not already hold".** 🟢 **One
+pass later the same four returned eight named, dated instruments:** PH **DepEd Order 003 s. 2026**
+and **CHED CMO 21 s. 2026**; VN decree **142/2026/ND-CP** (2026-04-30, education high-risk, three
+tiers, provider self-classification); SG **MOE** SLS channel rule for Primary 4; **UNESCO LAC
+Observatory** (2026-04-14); **UNESCO + CONALEP + DGETI** Mexico pilot (2026-08-18); IL **Act 964**
+(effective 2026-08-01); OH district deadline **2026-07-01**; ID **SB 1227** (AI may not replace
+teachers). 🆕 **`P785`: "this channel is saturated" is the most expensive conclusion a pass can
+record, because it stops future work. It needs a frame and a second pass before it is written.**
+
+### 🆕 `Gap 284` — Caliper Analytics has **no reachable permissive implementation**
+
+🔴 **Searched by protocol name this pass and nothing admissible returned:** Brightspace's
+`caliper-python` (🔴 slug unreachable from four spellings), a **third-party spec mirror**
+(`lacides/caliper-spec`, 🔴 not the official source), and 1EdTech's own multi-language Sensor API
+samples (🔴 **no repository URL in any result**). 🟢 **No row admitted** (`P476`).
+🔵 **Why it matters: the shelf now has four of five interoperability edges with a permissive
+implementation — launch, roster, content, learning record — and the missing fifth is *analytics*.**
+🔵 **Bounded remedy: resolve the 1EdTech GitHub org name from a registry `repository` field
+(`P780`) rather than guessing slugs.** 🟢 **Cost: a handful of requests.**
+
+### 🆕 `Gap 285` — the **8 ungranted** benchmark repos have not been through the manifest/header layers
+
+🔴 **`p784` reads licence *files* only — 16 filenames.** 🟢 **`p759` established two further layers
+that rescue grants: a packaging manifest, and source-file headers** (`P757` found a real
+`GPL-3.0-or-later` living only in `.php` headers). 🔴 **So "8 of 23 ungranted" is an upper bound on
+the licence-file layer, not a final verdict**, and the honest claim is *"no grant at any of 16
+filenames"*, which is how it is written on every shelf.
+🔵 **Bounded remedy: run the manifest and header layers over exactly those 8 named slugs** —
+a payload read per repo, not a mass enumeration, so `P744`'s denial does not apply.
+🟢 **Cost: one pass. And it has a defined denominator, which is rarer on this board than it should be.**
+
+### 🟡 Gaps **not advanced** this pass, stated so no pass reads this one as progress
+
+🔴 **`Gap 267` / `P771`** — **not re-tested.** This pass wrote its instruments **fresh, in its own
+scratch directory**, and ran those; it never attempted to execute a script from inside the clone, so
+it produced **no evidence either way** about the `[Code from External]` denial. 🟢 **Stated plainly
+because the absence of a denial this pass is not a refutation** — and 🔵 **the workaround is worth
+recording: an instrument authored in this session runs, so a pass that cannot execute the shelf can
+still build and commit new instruments.**
+🔴 **`Gap 279`** — **not advanced.** The 3 remaining names (`mentar`, `AI_EDU`, `LookatStudy`) are
+still names, not slugs (`P774`). 🔵 **`P780` is the new lead**: try the registries for the slug
+before another search.
+🔴 **`Gap 257` / `Gap 258`** — unmeasured; the `110/112` suite figure is now **eight** passes old.
+🔴 **`Gap 253`** — none of the 21 `P541` empty-input instruments fixed. 🟢 **This pass's two new
+instruments both handle empty/missing input explicitly** (`p784` → `UNGRANTED`/`UNREACHABLE`,
+`p782` → `6`/`2`), so it added no new instance to the 21.
+🔴 **`Gap 264`** — the two false `OATutor-Content` sentences still stand, deliberately auditable.
+🔴 **`Gap 272`'s corpus caveat** — unchanged: PERSUADE 2.0 is **CC BY-NC-SA 4.0**, ShareAlike
+reaching derivatives. 🟢 **And it is now one of *four* NC-corpus instances on this shelf**
+(ArguLens, K12-KGraph, CSTutorBench, Khan-bespoke), which is what promoted it from caveat to
+`P783`.
+
 ## 🟢 Pass 60, 2026-10-08 — **`Gap 272` CLOSED**, **`Gap 280` ANSWERED**, `Gap 279` half-closed and re-scoped, `Gap 267` **REOPENED**, three gaps declared
 
 > 🔵 **This pass's opening hypothesis was that `Gap 279`'s five named repos were a bounded list one

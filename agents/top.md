@@ -4,6 +4,89 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-first pass, 2026-10-08 — the **evaluation** cell is measured rather than extended, and the result is that **48 % of it cannot ship**; no new education agent was admitted, and the reason is stated
+
+⏱️ **Fifteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 The agent-discovery channel returned **nothing admissible**, stated so no reader mistakes silence for coverage
+
+🔴 **Two industry-named queries were run — `top open source AI agents education 2026 github MIT`
+and `github trending education AI 2026`.** 🔴 **Both returned roundup listicles**
+(`openalternative.co`, `dev.to`, `nocobase.com`, `digitalapplied.com`, …) naming **general-purpose**
+agents — OpenClaw, OpenHands, opencode, CrewAI, LangGraph, AutoGen, Agent Zero, Gemini CLI —
+🔴 **not one education-specific repository among them**, and the one education item either query
+surfaced was a *course* (`huggingface/agents-course`), not an agent.
+
+🟢 **This is the eleventh consecutive week the industry-named query has returned nothing new, and
+it is now the twelfth** — `P769` / `P776` hold: **name the protocol or the function, never the
+industry.** 🟢 **Every row admitted this pass came from a protocol-named query** (SCORM, cmi5,
+xAPI, Caliper), and those rows are foundations, not agents — they are in `repos/foundations.md`.
+
+🟢 **So this pass admits no new agent, and says so rather than padding the table.** 🔵 The
+tutoring/knowledge-tracing cell was refreshed with 12 payload-read rows in pass 60; 🔴 re-running
+the same channel one pass later was not going to beat it, and the budget went where it bought
+something: the **evaluation** cell below, the **policy** gate, and the **scope** instrument.
+
+### 🔴 `P782` — the assets that *prove an agent works* are half unusable, measured on a declared frame
+
+🔵 **Why this belongs on the agent shelf and not only in `repos/`:** every agent row in this KB
+invites the client question *"how will you prove it is accurate?"*, and the answer is a benchmark.
+🟢 **So the benchmark cell was swept with `p784` on a frame of 23 repos, selected by name before
+any payload was read** (`P744`'s named-sample method). 🟢 **23 of 23 reachable, every grant
+payload-read:**
+
+| grant | n | usable in a paid deliverable? |
+|---|---|---|
+| 🟢 MIT | 10 | 🟢 yes |
+| 🟢 Apache-2.0 | 2 | 🟢 yes |
+| 🔴 **no grant at all** (0 of 16 filenames, no manifest) | **8** | 🔴 **no** |
+| 🔴 CC BY-NC 4.0 | 1 | 🔴 no |
+| 🟡 MIT code / CC BY-NC-SA 4.0 data | 1 | 🟡 code yes, corpus no |
+| 🔴 bespoke non-SPDX (`P783`) | 1 | 🔴 no |
+
+🟢 **12 of 23 (52 %) permissive; 11 of 23 (48 %) not usable as-is.** 🔴 **And the dominant cause is
+the *absence* of a licence, not an awkward one.**
+
+🔴 **The single most expensive row, read in full this pass:**
+[`Khan/tutoring-accuracy-dataset`](https://github.com/Khan/tutoring-accuracy-dataset) `@fbbeff8`
+carries a **2 690 B bespoke Khan Academy "Evaluation Dataset License"** — **internal
+non-commercial evaluation only**, with **model training, production use and redistribution
+expressly prohibited**, not sublicensable, and **viral into any combined dataset**. 🟢 **`p784`
+returned `UNCLASSIFIED` and did not guess**, which is the designed behaviour and an asserted case
+in its suite. 🔵 **For a tutoring agent this is the most relevant-looking asset on the shelf and
+the least usable** — it will evaluate your tutor, and it will not let you train on it, ship it, or
+publish the result.
+
+🆕 **`P783`: assume an education corpus carries a bespoke evaluation licence until a payload read
+says otherwise, and treat `UNCLASSIFIED` as a *result*, not a classifier failure.**
+
+### 🟢 The 12 evaluation assets an agent row may actually cite, with regions
+
+🟢 **Permissive, payload-read, and placed** — 🔵 which matters because an evaluation asset in the
+client's language is worth more than a better one in English:
+
+| Repo | Licence | Region | Note |
+|---|---|---|---|
+| [`latam-gpt/lm-evaluation-harness`](https://github.com/latam-gpt/lm-evaluation-harness) | 🟢 MIT · `9fa381a` | LATAM | 🔵 Regionally authored and permissive — the Spanish-language evaluation route. |
+| [`latam-gpt/syco-bench`](https://github.com/latam-gpt/syco-bench) | 🟢 MIT · `5ecc005` | LATAM | Sycophancy benchmark. 🔵 Directly relevant to a tutor that must not simply agree with the learner. |
+| [`eduagarcia/lm-evaluation-harness-pt`](https://github.com/eduagarcia/lm-evaluation-harness-pt) | 🟢 MIT · `ab24923` | LATAM | Portuguese harness — the Brazil-facing counterpart. |
+| [`DFE-Digital/education-benchmarking-and-insights`](https://github.com/DFE-Digital/education-benchmarking-and-insights) | 🟢 MIT · `70eb566` | EMEA | 🔵 A national education ministry publishing benchmarking code under MIT — the reference for a public-sector conversation. |
+| [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 MIT · `21a43a3` | EMEA | Pedagogical quality, not just answer accuracy. |
+| [`AI-for-Education/edu-qurating`](https://github.com/AI-for-Education/edu-qurating) | 🟢 MIT · `e007bad` | EMEA | Content quality rating. |
+| [`AI-for-Education/voice-ai-evaluation-framework`](https://github.com/AI-for-Education/voice-ai-evaluation-framework) | 🟢 MIT · `f25f128` | EMEA | 🔵 Voice is the modality for low-literacy and low-bandwidth deployments. |
+| [`prometheus-eval/prometheus-eval`](https://github.com/prometheus-eval/prometheus-eval) | 🟢 Apache-2.0 · `dcfb442` | APAC | LLM-as-judge with rubric grading. |
+| [`indobenchmark/indonlu`](https://github.com/indobenchmark/indonlu) | 🟢 Apache-2.0 · `ce728f6` | APAC | Indonesian NLU. |
+| [`shivanireddyk/tutoreval`](https://github.com/shivanireddyk/tutoreval) | 🟢 MIT · `e781cc0` | 🟡 unplaced | Tutor-specific evaluation. |
+| [`markm-io/ai-essay-evaluator`](https://github.com/markm-io/ai-essay-evaluator) | 🟢 MIT · `8ee5c7c` | 🟡 unplaced | Essay scoring. 🔴 **Scoring is GATED in the EU and Vietnam** — run `p782` before building on it. |
+| [`baker-jr-john/automated-summary-evaluation-llm`](https://github.com/baker-jr-john/automated-summary-evaluation-llm) | 🟢 MIT · `e7a4cc5` | 🟡 unplaced | Summary evaluation. |
+
+🔴 **The 8 ungranted, named so the claim is auditable:** `AI-EDU-LAB/E-EVAL`,
+`AI-for-Education/Luganda-linguistic-benchmarks`, `AI-for-Education/fabdata-llm-retrieval`,
+`aiverify-foundation/LLM-Evals-Catalogue`, `eth-lre/mathtutorbench`, `kaushal0494/AITutor-EvalKit`,
+`malaysia-ai/malaysian-dataset`, `master72o/universal-llm-evaluation-rubric-library`.
+🔵 **Three of those eight are the Africa-, Switzerland- and Malaysia-facing assets**, so the gap is
+not evenly distributed — the regions with the fewest alternatives also have the least granted.
+
 ## 🟢 Sixtieth pass, 2026-10-08 — the tutoring / knowledge-tracing cell is refreshed with **12 payload-read rows**, `Gap 272` is **CLOSED** by a repository URL, and this pass's own hand-rolled classifier made **the same error as passes 58 and 59**
 
 ⏱️ **Fourteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

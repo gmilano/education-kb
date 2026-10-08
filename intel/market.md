@@ -4,6 +4,221 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-first pass, 2026-10-08 — `Gap 270` is **RE-POSED**: the regulatory shelf's problem was never the hosts, it is that this session has **one** policy channel and **zero** direct-fetch channels — and the four-region sweep **refutes `P777`'s saturation claim**
+
+⏱️ **Fifteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+🟢 **Per the convention, pass 60's `## Opportunities by region` heading is retitled *superseded*; the live block is below.**
+
+> 🔵 **Opening hypothesis: that the four regional queries were saturated, as pass 60's `P777`
+> concluded, and that this pass's yield would be in instruments rather than regional data.
+> 🔴 REFUTED.** 🟢 **APAC and LATAM each returned named, dated regulatory instruments this KB
+> does not hold** — and the EMEA date pass 60 carried as settled turns out to rest on a vote
+> whose **Council adoption this pass could not confirm**.
+
+### 🟢 `Gap 270` — **RE-POSED**, which is worth more than a fifth confirmation
+
+🔴 **Passes 57–60 each recorded "6 of 6 primary policy hosts at `000`" and concluded the policy
+shelf has no oracles.** 🟢 **The measurement was right every time. The diagnosis was incomplete**,
+and this pass measured the difference:
+
+| host | `curl -sI` | kind |
+|---|---|---|
+| EUR-Lex · artificialintelligenceact.eu · EC digital-strategy · UNESCO | `000` | policy |
+| PH DepEd · PH CHED · SG MOE · VN gazette · IL General Assembly · Idaho Legislature | `000` | policy |
+| 🔴 **`example.com` · `google.com` · `en.wikipedia.org`** | 🔴 **`000`** | 🔴 **control, unimpeachably up** |
+| 🟢 `raw.githubusercontent.com` · `pypi.org` · `registry.npmjs.org` · `repo1.maven.org` | 🟢 `200` | code / registry |
+
+🟢 **12 of 12 policy hosts at `000` — and so are three controls that are certainly reachable from
+the internet at large.** 🟢 **The proxy names the mechanism itself**, from
+`$HTTPS_PROXY/__agentproxy/status`: **`connect_rejected`, "gateway answered 403 to CONNECT (policy
+denial or upstream failure)"**, listed per host. 🟢 **And `pypi.org` / `registry.npmjs.org` appear
+literally in the proxy's own `noProxy` allowlist** — so the hosts that answer are exactly the
+code-and-package hosts, by configuration.
+
+🔴 **`WebFetch` against the same policy hosts returns `EGRESS_BLOCKED`** — the second channel is
+shut too.
+
+🆕 **`P784`, replacing `P731` as stated:** 🔴 **it is not that regulatory sources refuse this KB.
+It is that this session has exactly ONE policy channel — a search backend's server-side fetch —
+and ZERO direct-fetch channels.** 🟢 **Three consequences that change how every policy row must be
+written:**
+
+1. 🔴 **No policy datum here can ever be *payload-read*.** The 🟡 band on every policy row is
+   permanent in this environment, not a backlog item.
+2. 🔴 **No policy datum can be cross-checked against a second *independent* oracle**, because
+   there is only one. 🟢 **So a 🟢 band on a policy row in this KB is a *defect*** — and that is now
+   asserted in code, in `p782`'s README and matrix header.
+3. 🟢 **It is a property of the *session*, like `P771`'s `[Code from External]` denial — and must be
+   re-measured per environment, not inherited.** 🔵 In a session whose egress policy admits
+   `eur-lex.europa.eu`, these rows become verifiable the same day.
+
+### 🔴 `P777` — **PARTLY REFUTED**: the regional channel was not saturated
+
+🔴 **Pass 60 concluded the four regional queries "returned nothing this KB does not already hold".**
+🟢 **This pass ran the same four and they returned, in named-and-dated form:** Philippines
+**DepEd Order 003 s. 2026** (basic education) and **CHED Memorandum Order 21 s. 2026** (higher
+education); Vietnam's implementing decree **142/2026/ND-CP, issued 2026-04-30**, which lists
+**education** among high-risk sectors and names **automated assessment** and **behavioural
+monitoring**, with **three risk tiers and provider self-classification before deployment**;
+Singapore **MOE**'s rule that Primary 4 AI tools be **structured, teacher-supervised and reached
+through the Student Learning Space, not open platforms**; the **UNESCO Observatory on AI in
+Education for Latin America and the Caribbean**, launched **2026-04-14**; a **UNESCO + CONALEP +
+DGETI** centres-of-excellence pilot in Mexico, **2026-08-18**; Illinois **HB 316 → Act 964**,
+law without signature **2026-06-25**, effective **2026-08-01**; Ohio's district AI-policy deadline
+of **2026-07-01**; and Idaho **SB 1227**, framework reported approved **mid-August 2026**, which
+**prohibits AI from replacing human teachers**.
+
+🟢 **All of it is 🟡 reported** — `P784` says it can be nothing else here. 🔵 **The lesson is about
+the *query*, not the region: `P777` generalised from four queries in one pass, and four queries is
+not a sample frame.** 🆕 **`P785`: "the channel is saturated" needs a frame and a second pass
+before it is written down, because it is the one conclusion that stops future work.**
+
+### 🟢 `Gap 278` — **CLOSED**: the policy axis is now **data plus an instrument**, not prose
+
+🟢 **`intel/policy-matrix.tsv` — 31 rows, 4 regions, 7 columns** — and
+**`compose/code/p782-policy-gate/gate.sh`**, which reads it and answers *"may this **function** be
+deployed in this **jurisdiction**?"*. 🟢 **21 assertions, offline, green.**
+
+🟢 **Exit status is the verdict:** `4` PROHIBITED · `3` GATED · `5` PROPOSED · `0` clear ·
+🔴 **`6` no row — which is NOT `0`.** 🔵 **That last one is the whole point of building it**: four
+assertions pin that an unmeasured `(function, jurisdiction)` pair returns **"never measured"** and
+not **"allowed"** (`P476`). 🟢 **And the region vocabulary fails loudly** — `--region Latam` exits
+`2` with a message, rather than returning an empty set that reads exactly like *"nothing is
+regulated there"*.
+
+🟢 **The row that justifies the build (`P764`):** `bash gate.sh assessment_grading` returns
+**GATED**, spanning **EU** (Annex III pt 3), **Vietnam** (decree 142/2026/ND-CP) and **Brazil**
+(PROPOSED only) — for a function exposed by an **MIT** repo that clears every licence gate this KB
+has ever written.
+
+## Opportunities by region
+
+🟡 **Band note, applying to every regulatory sentence below: `reported`, single channel, per
+`P784`.** 🟢 **The repo and licence rows are payload-read.**
+
+### North America
+
+🟢 **The buyer is the district and the binding layer is the *state*, not the federal government.**
+🟡 No federal statute located; reported **31 state education departments** had issued K-12 AI
+guidance by **Jan 2026**, within **~100** K-12 AI bills this session out of **>1 500** AI bills.
+
+🟢 **Three dated obligations that are already live, and each is a service line:**
+**Ohio** required districts to *adopt an AI-use policy* by **2026-07-01** — 🔵 every district now
+has a policy document, and a policy nobody can implement is a procurement waiting to happen.
+**Illinois Act 964** mandates **AI literacy, grades 6–12**, effective **2026-08-01** — 🔵 curriculum
+and teacher-training work, not platform work. **Maryland SB 720** requires a **non-instructional
+central-office AI coordinator** per local system, with AI literacy in standards by **June 2027** —
+🔴 **status contested between trackers; verify before planning.**
+
+🔴 **The constraint to design around: Idaho SB 1227 prohibits AI from replacing human teachers.**
+🔵 Combined with the Philippine and Singaporean rules below, *teacher-in-the-loop is not a
+positioning choice in this market — in a growing number of jurisdictions it is the law*, and an
+architecture that cannot show the human in the loop is unsellable in them.
+🟡 **Also pending: California** (bar student data from training models absent direct school
+benefit) and **Vermont HB 650** (edtech vendor registration + annual privacy certification) —
+🔵 both would make *vendor-side evidence* a deliverable.
+🔴 **Named gap: no Canadian provincial or Mexican federal K-12 source was located this pass**, so
+"North America" here means the United States. 🟢 Stated rather than left to look like coverage.
+
+🟢 **Payload-read assets placed here:** `jcputney/scorm-again` **MIT**, npm **v3.4.5 2026-10-05**;
+`adlnet/CATAPULT` **Apache-2.0** (cmi5 conformance — 🔵 the evidence artefact a public buyer asks
+for); `Khan/tutoring-accuracy-dataset` — 🔴 **bespoke evaluation-only licence, no training, no
+production (`P783`)**.
+
+### EMEA
+
+🟡 **The timetable, and it moved:** the AI Act reported generally applicable **2026-08-02**, with
+**Annex III** high-risk obligations — education among them — **postponed to 2027-12-02** by the
+Digital Omnibus. 🔴 **Parliament's vote is reported as 2026-06-16; Council adoption could not be
+confirmed this pass.** 🟢 **`P718` stands and is now the planning rule: `2027-12-02` is a backstop,
+not a start.**
+
+🔴 **What already binds, and is the sharpest line in any region:** **emotion recognition in
+education institutions is prohibited** — reported from **2025-02-02**, medical/safety exception
+only. 🔵 **This is the one place where a whole product category is simply off the table**, and
+"engagement detection" in a proctoring or classroom-analytics pitch is that category under another
+name. 🟢 **Also live: the AI-literacy duty** (🟡 the 2026 omnibus reported to have dropped the
+"sufficient level" wording), and 🟢 **an Article 27 Fundamental Rights Impact Assessment for public
+schools as deployers** — 🔵 a deliverable Globant can produce, and one private providers do not owe.
+
+🟢 **Annex III pt 3 covers four functions:** admissions/access, assessment of learning outcomes,
+steering an educational path, and proctoring. 🔵 **So the EMEA pre-flight is mechanical:** if the
+agent touches any of those four, it is high-risk, and bias testing, human oversight and user
+notification are scope items rather than nice-to-haves.
+
+🟢 **Payload-read assets placed here:** `DFE-Digital/education-benchmarking-and-insights` **MIT**
+(🔵 a national education ministry publishing benchmarking code permissively — the reference for a
+public-sector conversation), `openfun/ralph` **MIT** (LRS, EU-funded provenance, 🔵 which is the
+data-residency answer), `PerfectlyNormal/scorm` **MIT** (Norway), `AI-for-Education/*` **MIT**
+(🔵 incl. Luganda benchmarks — Africa-facing, and 🔴 the Luganda repo is **ungranted**).
+🔴 `eth-lre/mathtutorbench` (Switzerland) is **ungranted**.
+
+### APAC
+
+🟢 **The region moved furthest this pass, and it is the only one where a *national* instrument
+names education as high-risk in statute.**
+
+🔴 **Vietnam — decree `142/2026/ND-CP`, issued 2026-04-30.** Education is a high-risk sector;
+**automated assessment** and **behavioural monitoring** named. **Three risk tiers, and the
+*provider* self-classifies before deployment.** 🔵 **Self-classification is a billable artefact** —
+somebody must write the justification, and getting the tier wrong is the provider's exposure, not
+the school's.
+
+🟢 **Philippines — `DepEd Order 003 s. 2026`** (basic education) and **`CHED Memorandum Order 21
+s. 2026`** (higher education), both positioning AI as **supplementary, not a replacement for
+teachers or critical thinking**. 🟢 **Singapore — MOE**: Primary 4 AI tools must be **structured,
+teacher-supervised and delivered through the Student Learning Space, not open platforms.**
+🔵 **Singapore's is a *channel* constraint, which is the most architecturally specific rule in any
+region: it dictates the integration surface, and an SLS-reachable tool is a different build from a
+web app.**
+
+🟡 **Japan and South Korea:** reported to be introducing education AI data-protection rules by
+**one weak secondary source only** — 🔴 **carried as a gap, not a row.** 🟡 Korea is separately
+widening an AI Korean-language platform to immigrant-background students.
+🟡 **Sentiment, which cuts against the regulation:** the Ipsos Education Monitor 2026 reports
+**Australia and New Zealand with higher support for banning AI in schools** than the Asian markets
+examined. 🔵 **So ANZ is the APAC market where the obstacle is consent, not compliance** — a
+different sale entirely.
+🟡 Reported regional share: Asia growing from **25 % of the AI-in-education market in 2026 to 38 %
+by 2036**. 🔴 APAC market-size figures disagree by more than 2× between firms (**USD 987 M** vs
+**USD 2 282.9 M**) and 🟢 **neither should be quoted.**
+
+🟢 **Payload-read assets placed here:** `indobenchmark/indonlu` **Apache-2.0** (Indonesia),
+`haolpku/K12-KGraph` — 🟡 **MIT code / CC BY-NC-SA data**, the curriculum-aligned KG a ministry
+conversation asks for, 🔴 **evaluable but not resellable**; `leogaggl/lxHive` **GPL-2.0**
+(Australia). 🔴 **Ungranted:** `malaysia-ai/malaysian-dataset`. 🔴 **CC BY-NC 4.0, commercial use
+"strictly prohibited":** `Yunfeng-Wan/CSTutorBench`.
+
+### LATAM
+
+🔴 **No AI statute is in force anywhere in the region, and that is the finding — not an absence of
+one.** 🟡 **Brazil `PL 2.338/2023`**: Senate-approved **Dec 2024**, now in the **Chamber of
+Deputies**, so the text can still change; risk-based, with an **Algorithmic Impact Assessment** for
+high-risk deployers, and education named a priority in the **2024** strategy revision.
+🟡 **Mexico:** no AI law enacted as of early 2026; bills pending; early-2026 copyright/labour/film
+amendments awaiting Official Gazette publication; government stresses **"technological
+sovereignty"**; reported **6th in LATAM on government AI readiness**. 🟡 **Chile** reported at an
+advanced legislative stage; 🟡 **Argentina and Colombia** rely on **general data protection only**.
+
+🟢 **Two concrete, dated public-sector entry points — the most actionable LATAM items this pass:**
+the **UNESCO Observatory on AI in Education for LAC**, launched **2026-04-14**, the first
+UN-anchored regional platform on this axis; and a **UNESCO + CONALEP + DGETI** centres-of-excellence
+pilot in Mexico, **2026-08-18**. 🔵 **CONALEP and DGETI are federal technical-and-vocational
+systems with hundreds of campuses** — a centres-of-excellence model there is a reference engagement
+with a ready replication path.
+
+🟢 **And LATAM is the region whose *open-source* position is strongest on this shelf, which inverts
+the usual framing:** 🟢 **`latam-gpt/lm-evaluation-harness` (MIT)** and 🟢 **`latam-gpt/syco-bench`
+(MIT)**, plus 🟢 **`eduagarcia/lm-evaluation-harness-pt` (MIT)** for Portuguese — **three permissive,
+regionally-authored evaluation assets**, where APAC's equivalents are NC or ungranted.
+🔵 **Read with `P782`: LATAM is the one region where the evaluation layer is permissively licensed
+by the people who built it**, so a Spanish/Portuguese assessment engagement can be evidenced
+without a licence negotiation. 🔵 **Combined with no statute in force, LATAM is the lowest-friction
+region to *build* in and the highest-uncertainty region to *commit* in** — the sandbox in Brazil
+being the one supervised route.
+🔴 **Named gap, unchanged from pass 60 and searched again: no classroom or university AI adoption
+*metric* for Brazil or Mexico, and no named regional edtech vendor, was located.**
+
 ## 🟢 Sixtieth pass, 2026-10-08 — the four-region **regulatory** shelf is re-queried and comes back **correct on every date**, so this pass's market finding is about the **oracle**, not the data
 
 ⏱️ **Fourteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
@@ -48,7 +263,7 @@ forecasts and they conflict with the global series this KB already carries** (**
 range evidence only**: the shelf's rule stands — *use the global series for scale and the regional
 share for mix; never add two vendors' regional numbers together.*
 
-## Opportunities by region
+## Opportunities by region — superseded (the live block is at the top of this file)
 
 ### North America
 

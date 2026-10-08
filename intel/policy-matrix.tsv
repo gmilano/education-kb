@@ -1,0 +1,62 @@
+# Gap 278's bounded remedy: the (function, jurisdiction) -> verdict table AS DATA.
+#
+# WHY THIS FILE EXISTS.  P764: `algorithm0r/canvas-lms-mcp` is MIT and exposes grading,
+# comments and rubrics.  It clears every licence check this KB has ever written and is
+# GATED-to-PROHIBITED in several jurisdictions.  A licence-only shelf keeps admitting
+# architectures that cannot be deployed.  Passes 59 and 60 wrote the two-axis pre-flight as
+# PROSE in `compose/patterns.md`; prose is not readable by an instrument, so this is the data.
+#
+# BAND -- READ THIS BEFORE CITING ANY ROW.  Every row is `reported`, and that is not
+# modesty, it is a measured property of the channel (Gap 270, re-posed pass 61):
+#   - 12 of 12 primary policy hosts answer 000 to curl, AND so do example.com, google.com
+#     and wikipedia, while raw.githubusercontent.com / pypi / npm answer 200.  The proxy
+#     names the mechanism itself: `connect_rejected`, "gateway answered 403 to CONNECT".
+#   - WebFetch against the same hosts returns EGRESS_BLOCKED.
+#   So this session has exactly ONE regulatory channel -- a search backend's server-side
+#   fetch -- and ZERO direct-fetch channels.  No row here can be payload-read, and no row
+#   can be cross-checked against a second INDEPENDENT oracle.  A `verified` band on a
+#   policy row in this KB would therefore be a defect, today and in any session that
+#   measures the same egress policy.
+#
+# VERDICT vocabulary (closed):
+#   PROHIBITED  - the function may not be deployed at all
+#   GATED       - deployable subject to named obligations (assessment, oversight, logging)
+#   MANDATED    - the jurisdiction REQUIRES the function be taught/performed
+#   PROPOSED    - a bill or draft, not in force; never plan against this
+#   UNREGULATED - searched and nothing specific found.  An informed gap, not a green light.
+#
+# REGION vocabulary (closed, five values, per the KB-wide convention):
+#   North America | EMEA | APAC | LATAM | Global
+#
+# Columns: region	jurisdiction	function	verdict	effective	instrument	note
+region	jurisdiction	function	verdict	effective	instrument	note
+EMEA	EU	emotion_recognition	PROHIBITED	2025-02-02	AI Act Art. 5	In education institutions; medical/safety exception only. The one unambiguous prohibition on this axis.
+EMEA	EU	assessment_grading	GATED	2027-12-02	AI Act Annex III pt 3	High-risk. Obligations moved from 2026-08-02 by the Digital Omnibus; EP vote reported 2026-06-16, Council adoption NOT confirmed here.
+EMEA	EU	admissions_access	GATED	2027-12-02	AI Act Annex III pt 3	High-risk: systems determining access or admission.
+EMEA	EU	learning_path_steering	GATED	2027-12-02	AI Act Annex III pt 3	High-risk: influencing an individual's educational path.
+EMEA	EU	proctoring_behaviour	GATED	2027-12-02	AI Act Annex III pt 3	Bias testing, human oversight, user notification. Facial/behaviour analysis also hits Art. 5 where it infers emotion.
+EMEA	EU	ai_literacy_instruction	MANDATED	2025-02-02	AI Act Art. 4	Duty persists; the 2026 omnibus is reported to have dropped the "sufficient level" wording.
+EMEA	EU-public-sector	fundamental_rights_assessment	MANDATED	2027-12-02	AI Act Art. 27	Public schools owe a FRIA as deployers. Private providers do not.
+North America	US-federal	assessment_grading	UNREGULATED	-	-	No federal statute located. The binding layer is state and district.
+North America	US-OH	district_ai_policy	MANDATED	2026-07-01	Ohio district policy duty	Districts, community and STEM schools had to ADOPT an AI-use policy by this date. Deployment is gated by a local policy that now exists.
+North America	US-ID	teacher_replacement	PROHIBITED	2026-08	Idaho SB 1227	Statewide framework reported approved mid-August 2026; AI may not replace human teachers. Companion standards still draft.
+North America	US-IL	ai_literacy_instruction	MANDATED	2026-08-01	Illinois HB 316 / Act 964	Law without signature 2026-06-25; AI literacy instruction, grades 6-12.
+North America	US-MD	ai_coordinator	MANDATED	2027-06	Maryland SB 720	Non-instructional central-office AI coordinator per local system; AI literacy in standards by June 2027. STATUS CONTESTED between trackers - verify before planning.
+North America	US-CA	student_data_training	PROPOSED	-	CA bill	Would bar student data from training models absent direct school benefit. Not in force.
+North America	US-VT	vendor_registration	PROPOSED	-	Vermont HB 650	Would require edtech providers to register and certify privacy compliance annually.
+North America	US-states	district_ai_policy	GATED	2026-01	31 state guidance documents	Reported: 31 state education departments had issued K-12 AI guidance as of Jan 2026; ~100 K-12 AI bills this session within >1500 AI bills. Guidance, not statute.
+APAC	VN	assessment_grading	GATED	2026-04-30	Decree 142/2026/ND-CP	Vietnam's AI law lists EDUCATION among high-risk sectors and names automated assessment. Providers SELF-CLASSIFY into one of three risk tiers before deployment.
+APAC	VN	proctoring_behaviour	GATED	2026-04-30	Decree 142/2026/ND-CP	Behavioural monitoring named explicitly as a high-risk education use.
+APAC	PH	tutoring_supplementary	GATED	2026	DepEd Order 003 s. 2026	Basic education framework: AI positioned as supplementary, not a replacement for teachers or critical thinking.
+APAC	PH	tutoring_supplementary	GATED	2026	CHED Memorandum Order 21 s. 2026	Higher education counterpart of the above.
+APAC	SG	tutoring_supplementary	GATED	2026	MOE Student Learning Space policy	Primary 4 AI tools must be structured, teacher-supervised and reached THROUGH the SLS, not open platforms. A channel constraint, not a ban - it dictates integration surface.
+APAC	JP	student_data_training	UNREGULATED	-	-	Reported as introducing data-protection rules for AI in education by ONE secondary market report only. Not corroborated; carried as a gap, not a row to plan against.
+APAC	KR	student_data_training	UNREGULATED	-	-	As JP above - single weak secondary source. Separately, an AI Korean-language platform is being widened to immigrant-background students.
+LATAM	BR	assessment_grading	PROPOSED	-	PL 2.338/2023	Senate-approved Dec 2024, now in the Chamber of Deputies, so the text can still change. Risk-based; high-risk deployers would file an Algorithmic Impact Assessment. Education named a priority in the 2024 AI strategy revision. NOT IN FORCE.
+LATAM	BR	regulatory_sandbox	GATED	2025	ANPD sandbox	Reported as the region's first AI regulatory sandbox - the one LATAM route to a supervised pilot.
+LATAM	MX	assessment_grading	UNREGULATED	-	-	No AI law enacted as of early 2026; bills pending. Early-2026 copyright/labour/film amendments await Official Gazette publication. Government stresses "technological sovereignty".
+LATAM	MX	tutoring_supplementary	GATED	2026-08-18	UNESCO + CONALEP + DGETI pilot	Centres-of-excellence pilot. The concrete LATAM public-sector entry point measured this pass.
+LATAM	AR	assessment_grading	UNREGULATED	-	general data protection	No AI-specific framework; general DP law governs.
+LATAM	CO	assessment_grading	UNREGULATED	-	general data protection	As AR above.
+LATAM	CL	assessment_grading	PROPOSED	-	AI framework bill	Reported at an advanced legislative stage alongside BR and MX.
+LATAM	regional	tutoring_supplementary	GATED	2026-04-14	UNESCO LAC Observatory	Observatory on AI in Education for Latin America and the Caribbean - first UN-anchored regional platform for this axis. A convening/standards body, not a regulator.

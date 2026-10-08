@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-first pass, 2026-10-08 — the **fourth** protocol edge lands, and the customisation loop is now closed end to end: *launch → roster → content → record*
+
+⏱️ **Fifteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Pass 60 closed three edges — LTI 1.3 (launch), OneRoster (who), xAPI (what happened).**
+🔴 **It left the one every incumbent client already owns thousands of units of: the *content*.**
+🟢 **A client's existing estate is authored to SCORM, increasingly to cmi5, and a customisation
+engagement that cannot ingest it is not a customisation engagement — it is a replacement, which is
+a different sale at a different price with a different risk.**
+
+### 🟢 The four edges, each with a payload-read permissive implementation
+
+| Edge | Standard | Permissive implementation | Licence · ref | Registry date |
+|---|---|---|---|---|
+| **Who may be told what** | **LTI 1.3** | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 Apache-2.0 | 🟢 npm **v7.0.7, 2026-10-06** |
+| **Who is in the class** | **OneRoster** | [`longsightgroup/oneroster`](https://github.com/longsightgroup/oneroster) · [`TCI/OneRoster`](https://github.com/TCI/OneRoster) | 🟢 MIT · `8c14777` / `5f8a15a` | 🟡 — |
+| 🆕 **What the content is** | **SCORM 1.2 / 2004 · AICC · cmi5** | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) · [`adlnet/CATAPULT`](https://github.com/adlnet/CATAPULT) · [`xapijs/cmi5`](https://github.com/xapijs/cmi5) | 🟢 MIT · `a882b22` · 🟢 Apache-2.0 · `806c0ba` · 🟢 MIT · `5ea9bda` | 🟢 npm **v3.4.5, 2026-10-05** |
+| **What the learner did** | **xAPI** | [`xapijs/xapi`](https://github.com/xapijs/xapi) (client) · [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) · [`openfun/ralph`](https://github.com/openfun/ralph) (stores) | 🟢 MIT · `5e28e9b` · 🟢 Apache-2.0 · `cb794e4` · 🟢 MIT · `53cc58c` | 🟢 npm **v3.0.3, 2026-04-27** |
+
+🟢 **All four edges are now permissive, all nine implementations are payload-read, and three of the
+four carry a live registry date.** 🔵 **This is the architecture a customisation engagement needs,
+and the licence position is the same at every edge: nothing copyleft touches Globant's deliverable.**
+
+### 🟢 `P763` extended — the licence split holds across **four** protocols, not two
+
+🔴 **The substrates have not moved and will not:** Moodle **GPL-3.0**, Open edX **AGPL-3.0**,
+Canvas **AGPL-3.0**, OpenEduCat **LGPL-3.0**, Kolibri **MIT**, OpenOLAT **Apache-2.0**.
+🟢 **The edges are permissive at every one of the four protocols measured** — Apache-2.0, MIT, MIT,
+MIT. 🟢 **So `P747a`'s architectural rule is now supported by four independent instances instead of
+two: build *beside* the LMS, across a spec-defined boundary, and the substrate's copyleft never
+reaches the deliverable.**
+
+### 🆕 The licence gate is no longer sufficient at this layer, and there is now an instrument for the second gate
+
+🔴 **`P764` is a platform-layer problem, not an agent-layer one:** an **MIT** connector against an
+LMS REST API can expose **grading** — and grading is **GATED** in the EU (Annex III pt 3) and in
+**Vietnam** (decree 142/2026/ND-CP), while **emotion recognition** inside an education institution
+is **PROHIBITED** in the EU outright. 🔵 **A proctoring or "engagement analytics" module bolted onto
+any platform on this shelf is that prohibited category under another name.**
+
+🟢 **So a platform choice now runs two gates, and both are executable:**
+
+```sh
+bash compose/code/p784-licence-scope-map/probe.sh <owner/repo>        # may we use the code AND the data?
+bash compose/code/p782-policy-gate/gate.sh <function> <jurisdiction>  # may we deploy the function there?
+```
+
+🔴 **And the second gate returns `6` — "never measured" — rather than `0` for any pair nobody has
+measured**, which is the behaviour that keeps an unmeasured jurisdiction from reading as a cleared
+one (`P476`).
+
 ## 🟢 Sixtieth pass, 2026-10-08 — the platform shelf gains its **integration edge**: an LMS is only customisable where it exposes rostering and learning records
 
 ⏱️ **Fourteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

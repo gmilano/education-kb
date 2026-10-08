@@ -4,6 +4,116 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-first pass, 2026-10-08 — the pre-flight becomes **executable** (two gates, two instruments, 38 assertions), and `R61a` wires the four protocol edges into one deployable shape
+
+⏱️ **Fifteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 The pre-flight, now three columns and **runnable** — `Gap 278` and `Gap 283` closed
+
+🔴 **Passes 59–60 wrote this as prose and said so twice.** 🟢 **It is now two instruments:**
+
+```sh
+# Gate 1 — may we use the CODE and the DATA?   (Gap 282 / Gap 283)
+bash compose/code/p784-licence-scope-map/probe.sh <owner/repo> [ref]
+#   0 SINGLE · 3 PARTITIONED · 4 UNGRANTED · 5 unreachable
+
+# Gate 2 — may we DEPLOY this function in this jurisdiction?   (Gap 278)
+bash compose/code/p782-policy-gate/gate.sh <function> [jurisdiction|region]
+#   0 clear · 3 GATED · 4 PROHIBITED · 5 PROPOSED · 6 NEVER MEASURED · 2 bad region
+```
+
+| Axis | Question | Instrument | Failure it prevents |
+|---|---|---|---|
+| **Code** | is the grant permissive? | `p784` | building on copyleft, or on a repo with **no grant at all** — 🔴 35 % of the benchmark frame |
+| 🆕 **Data** | is the *corpus* shippable? | `p784` (`PARTITIONED`/`UNCLASSIFIED`) | 🔴 **the `P783` failure**: MIT code, and a corpus that forbids training and production |
+| 🆕 **Policy** | may the function be deployed there? | `p782` | 🔴 **the `P764` failure**: an MIT repo exposing a **prohibited** function |
+
+🔴 **Run both. Either one alone passes an architecture that cannot ship:** `p784` clears
+`algorithm0r/canvas-lms-mcp` (MIT) whose grading function `p782` reports **GATED** in the EU and
+Vietnam; `p782` clears a tutoring agent in Mexico whose evaluation corpus `p784` reports
+**UNCLASSIFIED** and whose licence forbids training.
+🔴 **And `6` is not `0`:** an unmeasured jurisdiction is an unmeasured jurisdiction (`P476`).
+
+### 🟢 `R61a` — "customise the client's LMS with AI on top", as four edges instead of a fork
+
+🔵 **The recipe every education engagement actually asks for, and the first version of it on this
+shelf where every component is payload-read and permissive.**
+
+🔴 **What not to do:** fork Moodle (**GPL-3.0**) or Open edX / Canvas (**AGPL-3.0**, §13 reaches
+network use). 🟢 **What to do: sit beside the substrate and speak four protocols.**
+
+| # | Edge | Component | Licence · ref | Wiring |
+|---|---|---|---|---|
+| 1 | **Launch / identity** | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 Apache-2.0 · npm **v7.0.7 2026-10-06** | LMS launches the tool over **LTI 1.3** (OIDC + JWT). Globant's service is a separate deployable; the substrate's copyleft never reaches it (`P736`). |
+| 2 | **Roster / scoping** | [`longsightgroup/oneroster`](https://github.com/longsightgroup/oneroster) (TS) or [`TCI/OneRoster`](https://github.com/TCI/OneRoster) (Ruby) | 🟢 MIT · `8c14777` / `5f8a15a` | **OneRoster** supplies sections, teachers, enrolments → the agent can be scoped to a section and audited per teacher. 🔵 Without this an AI tutor cannot be *assigned*. |
+| 3 | 🆕 **Content ingest** | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) + [`adlnet/CATAPULT`](https://github.com/adlnet/CATAPULT) | 🟢 MIT · `a882b22`, npm **v3.4.5 2026-10-05** · 🟢 Apache-2.0 · `806c0ba` | Replay the client's **existing SCORM/AICC estate**; `CATAPULT` supplies the **cmi5 conformance suites** that evidence the migration. 🔵 This is the edge that makes it customisation rather than replacement. |
+| 4 | **Record / evidence** | [`xapijs/xapi`](https://github.com/xapijs/xapi) → [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) or [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 MIT · `5e28e9b` · 🟢 Apache-2.0 · `cb794e4` · 🟢 MIT · `53cc58c` | Every interaction lands in an **LRS** as xAPI. 🟢 **This is the component that answers a regulator**, and mastery estimates stop dying with the session. 🔵 `ralph` for EU data residency; `lrsql` to run on an RDBMS the client already operates. |
+
+🟢 **Pre-flight for `R61a`, run before the proposal:**
+
+```sh
+for r in Cvmcosta/ltijs longsightgroup/oneroster jcputney/scorm-again \
+         adlnet/CATAPULT xapijs/xapi yetanalytics/lrsql openfun/ralph; do
+  bash compose/code/p784-licence-scope-map/probe.sh "$r" || echo "REVIEW: $r"
+done
+bash compose/code/p782-policy-gate/gate.sh --region <the client's region>
+```
+
+🔴 **Then the function gate, per feature, not per product:** if the tool **grades**, `p782` returns
+**GATED** in the EU and Vietnam → human oversight, bias testing and user notification are **scope
+items**. 🔴 **If any feature infers engagement, attention or emotion and the client is in the EU,
+it is `PROHIBITED` — cut it in the proposal, not in UAT.**
+
+### 🟢 `R61b` — "prove the tutor works", with assets you are allowed to ship
+
+🔵 **The recipe that `P782` says half this shelf cannot support — so this is the version that
+survives the licence read.**
+
+1. 🟢 **Pick the harness by *language*, not by stars**, because an evaluation in the learner's
+   language is worth more than a better one in English:
+   **Spanish →** [`latam-gpt/lm-evaluation-harness`](https://github.com/latam-gpt/lm-evaluation-harness) (MIT) ·
+   **Portuguese →** [`eduagarcia/lm-evaluation-harness-pt`](https://github.com/eduagarcia/lm-evaluation-harness-pt) (MIT) ·
+   **Indonesian →** [`indobenchmark/indonlu`](https://github.com/indobenchmark/indonlu) (Apache-2.0) ·
+   **English/general →** [`prometheus-eval/prometheus-eval`](https://github.com/prometheus-eval/prometheus-eval) (Apache-2.0).
+2. 🟢 **Add a *pedagogy* dimension, not just accuracy:**
+   [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) (MIT).
+   🔵 A tutor that is right and unteacherly fails the pilot.
+3. 🟢 **Add the failure mode specific to tutors:**
+   [`latam-gpt/syco-bench`](https://github.com/latam-gpt/syco-bench) (MIT) — sycophancy. 🔵 A tutor
+   that agrees with a wrong answer is worse than no tutor, and this is the only asset on the shelf
+   that measures it.
+4. 🟢 **Voice deployments:**
+   [`AI-for-Education/voice-ai-evaluation-framework`](https://github.com/AI-for-Education/voice-ai-evaluation-framework) (MIT).
+5. 🔴 **Do not build on these, and know why before someone proposes them:**
+   `Khan/tutoring-accuracy-dataset` — 🔴 **bespoke licence: evaluation only, no training, no
+   production, no publication** (`P783`); `Yunfeng-Wan/CSTutorBench` — 🔴 **CC BY-NC 4.0**;
+   `haolpku/K12-KGraph` — 🟡 **MIT code, CC BY-NC-SA data** (evaluate, don't resell);
+   and the **8 ungranted** repos named in `repos/foundations.md`.
+6. 🟢 **Gate the finished evaluation harness itself:**
+   `bash p782-policy-gate/gate.sh assessment_grading <jurisdiction>` — 🔵 **an automated scorer is
+   a regulated function even when it is only scoring your own system in a lab**, if its output
+   reaches a learner's record.
+
+### 🟢 `R61c` — the teacher-in-the-loop checkpoint, built once and lawful in three regions
+
+🔵 **Trend 1 makes this the highest-leverage component to get right, because the same artefact
+discharges three different obligations.**
+
+🟢 **Build:** a review queue between the agent's output and any **write** to the learner's record —
+LTI AGS grade passback, an LMS comment, or an xAPI statement of mastery. 🟢 **Each queued item
+carries** the agent's proposal, its evidence, the teacher's accept/modify/reject, and the identity
+of the teacher who decided. 🟢 **Persist the decision to the LRS as its own xAPI statement**, so
+the audit trail and the learning record are the same store.
+
+🟢 **What it discharges:** **US-Idaho** — AI has not replaced the teacher, the teacher decided ·
+**Philippines** — AI is demonstrably supplementary · **Singapore** — teacher supervision is
+structural, not procedural · **EU Annex III** — "human oversight" has an artefact from
+**2027-12-02**, and 🟢 **the FRIA an EU public school owes under Article 27 can cite it.**
+
+🔴 **The anti-pattern to name in the proposal:** a checkpoint the teacher can bulk-approve without
+reading. 🔵 It satisfies an architecture diagram and none of the four obligations, because the
+evidence it produces shows nobody looked.
+
 ## 🟢 Sixtieth pass, 2026-10-08 — `R60a`: the first recipe on this shelf that can **read a roster and write a learning record**, both permissively licensed
 
 ⏱️ **Fourteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

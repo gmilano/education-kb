@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-first pass, 2026-10-08 — week of 2026-10-08: the **content-packaging** layer enters the shelf, and a 23-repo frame sweep prices the evaluation cell at **48 % unusable**
+
+⏱️ **Fifteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 New to the shelf this week — five payload-read rows, one new protocol layer
+
+| Repo | Licence (payload · bytes · ref) | Registry | Layer |
+|---|---|---|---|
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 MIT · 1 072 B · `a882b22` | 🟢 npm v3.4.5 **2026-10-05** | 🆕 content packaging (SCORM/AICC) |
+| [`adlnet/CATAPULT`](https://github.com/adlnet/CATAPULT) | 🟢 Apache-2.0 · 11 358 B · `806c0ba` | 🟡 — | 🆕 content packaging (cmi5 + conformance suites) |
+| [`xapijs/cmi5`](https://github.com/xapijs/cmi5) | 🟢 MIT · 1 070 B · `5ea9bda` | 🟡 npm v1.4.0 2024-10-06 | 🆕 content packaging (cmi5 profile) |
+| [`xapijs/xapi`](https://github.com/xapijs/xapi) | 🟢 MIT · 1 071 B · `5e28e9b` | 🟢 npm v3.0.3 **2026-04-27** | learning record (client half) |
+| [`PerfectlyNormal/scorm`](https://github.com/PerfectlyNormal/scorm) | 🟢 MIT · 1 079 B · `9149389` | 🟡 — | content packaging (Ruby; 🔴 © 2013) |
+
+🟢 **Five rows, five permissive licences, zero copyleft** — `P763` now holds across four protocol
+edges rather than two.
+
+### 🟢 The frame sweep, which is this week's real result
+
+🟢 **`p784` (new this pass) run over the 23 benchmark/dataset/evaluation repos already on this
+shelf — frame declared by name *before* any payload was read, per `P744`.** 🟢 **23 of 23
+reachable.**
+
+🟢 `SINGLE` **14** (10 MIT · 2 Apache-2.0 · 1 CC BY-NC 4.0 · 1 bespoke) ·
+🔴 `UNGRANTED` **8** · 🟡 `PARTITIONED` **1**
+
+🔴 **8 of 23 (35 %) carry no grant at any of 16 filenames and ship no packaging manifest** → all
+rights reserved. 🔴 **11 of 23 (48 %) cannot go into a paid deliverable as-is.**
+🟡 **`Gap 282`'s scope-partition is 1 of 23** — rare on the very frame where it was predicted most
+likely, which is a real and useful negative.
+
+🔴 **The row worth reading in full: `Khan/tutoring-accuracy-dataset` `@fbbeff8`, a 2 690 B bespoke
+"Evaluation Dataset License"** — internal non-commercial evaluation only; **training, production use
+and redistribution expressly prohibited**; viral into any combined dataset. 🟢 **`p784` emitted
+`UNCLASSIFIED` rather than guessing** (`P783`).
+
+### 🔴 Oracle notes, recorded because they changed
+
+🔴 **`packagist.org/packages/packbackbooks/lti-1-3-php-library.json` answered `404` this pass**
+where pass 59 read a version and a date from it. 🟢 **Recorded, not explained** — one probe is not
+a diagnosis, and the row it supported is pass 59's, not this pass's.
+🔴 **`api.github.com/repos/{third-party}` remains `403`: no star counts anywhere in this pass**
+(`P745`). 🟢 **Every "freshest"/"newest" claim above is a *registry publish date*, not a star
+trend** — which is the stronger evidence anyway.
+
 ## 🟢 Sixtieth pass, 2026-10-08 — week of 2026-10-08: trending surfaced **no education repo**, and the week's real movement is a **new layer** (xAPI / OneRoster) rather than a new star count
 
 ⏱️ **Fourteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

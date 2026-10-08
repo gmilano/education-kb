@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-first pass, 2026-10-08 — four trends, and the strongest one is that **teacher-in-the-loop has stopped being a positioning choice and become statute** in three jurisdictions on two continents
+
+⏱️ **Fifteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+🟡 **Band note: every regulatory sentence below is `reported`, single-channel, per `P784`. The repo and licence rows are payload-read.**
+
+### 🟢 Trend 1 — **"AI must not replace the teacher" is now law, not marketing**, and it converged independently in three jurisdictions
+
+🟢 **Measured this pass across three regions that did not coordinate:**
+
+| Jurisdiction | Instrument | What it says |
+|---|---|---|
+| North America · **US-Idaho** | SB 1227 (framework reported approved mid-Aug 2026) | 🔴 **AI may not replace human teachers** |
+| APAC · **Philippines** | DepEd Order 003 s. 2026 · CHED Memorandum Order 21 s. 2026 | 🔴 AI is **supplementary**, not a replacement for teachers or critical thinking |
+| APAC · **Singapore** | MOE Student Learning Space policy | 🔴 Primary 4 AI tools must be **teacher-supervised** and reached through the SLS |
+
+🔵 **Why this is the most actionable trend on the shelf:** an architecture whose value proposition
+is *autonomy* — an agent that tutors, grades and reports without a teacher in the path — is
+**unsellable in these jurisdictions regardless of how good it is**. 🟢 **And the converse is a
+design rule with a compliance payoff: a human-in-the-loop checkpoint is not a UX compromise, it is
+the artefact that makes the system lawful**, and it is the same artefact the EU's Annex III
+"human oversight" obligation will ask for from **2027-12-02**. 🟢 **Build the oversight surface
+once and it satisfies three regions.**
+
+### 🟢 Trend 2 — the **evidence layer is where engagements will fail**, and it is half unlicensed
+
+🔴 **Measured, not asserted: 11 of 23 (48 %) of this shelf's benchmark/dataset/evaluation repos
+cannot be used in a paid deliverable** — **8** carry **no grant at all**, 1 is **CC BY-NC 4.0**
+("commercial use is strictly prohibited"), 1 is **MIT code over CC BY-NC-SA data**, and 1 is a
+**bespoke evaluation-only licence**.
+
+🔵 **The shape of the risk is counter-intuitive and worth stating plainly:** the *models* and the
+*frameworks* in education AI are permissively licensed and plentiful; 🔴 **the scarce, awkwardly
+licensed asset is the thing that proves any of it works.** 🔵 So the question that sinks a
+fixed-price engagement is not *"can we build the tutor?"* but *"can we prove it, with assets we are
+allowed to ship?"* — and that question has to be asked in the proposal, not in delivery.
+🟢 **`P783` is the sharpest instance:** Khan Academy's tutoring dataset will **evaluate** a tutor
+and forbids **training on it, shipping it, or publishing the result**.
+
+### 🟢 Trend 3 — regulation is converging on the **function**, not the technology, and that makes it designable
+
+🟢 **Across all four regions, every instrument measured this pass gates a *named function*** —
+assessment/grading, admissions/access, path steering, proctoring/behavioural monitoring, emotion
+recognition — 🟢 **and none of them gates "AI" or a model class.** 🔵 **This is good news for
+architecture:** the regulated surface is a short, stable, enumerable list, so a system can be
+*partitioned* so that the regulated functions sit in one auditable component and everything else
+stays out of scope.
+
+🟢 **It is also what makes `intel/policy-matrix.tsv` possible at all** — a `(function,
+jurisdiction) → verdict` table only works because jurisdictions legislate functions.
+🔴 **The one prohibition rather than gate, and the one to design *out* early: emotion recognition
+in education institutions, EU, reported from 2025-02-02.** 🔵 "Engagement detection" and
+"attention analytics" are that category renamed.
+
+### 🟢 Trend 4 — the **protocol edges** are where the permissive licences live, and the loop is now closed
+
+🟢 **Four protocol edges, four permissive implementations, measured over passes 59–61:** LTI 1.3
+(Apache-2.0), OneRoster (MIT), SCORM/cmi5 (MIT + Apache-2.0, 🆕 this pass), xAPI (MIT + Apache-2.0).
+🔴 **Four substrates, all copyleft:** Moodle GPL-3.0, Open edX AGPL-3.0, Canvas AGPL-3.0,
+OpenEduCat LGPL-3.0.
+
+🔵 **The trend is not that LMSs are copyleft — that is old news. It is that the *interoperability
+surface has become complete enough to build a whole product against*** without touching a
+substrate: launch, roster, content and learning-record all now have a maintained permissive
+implementation, three of four with a 2026 registry date. 🟢 **`P747a`'s "build beside the LMS" has
+gone from a licence-avoidance tactic to the architecturally better choice.**
+🔴 **The gap in the surface: Caliper Analytics — the *analytics* protocol — has no reachable
+permissive implementation (`Gap 284`).**
+
+### 🔴 Trend 5, stated as a correction to this KB's own method
+
+🔴 **Pass 60 wrote that the four regional queries were saturated (`P777`). One pass later the same
+four queries returned eight named, dated instruments this KB did not hold.** 🟢 **The error was not
+the measurement — it was generalising a *rate* from four queries in one pass.** 🆕 **`P785`:
+"this channel is saturated" is the single most expensive conclusion a pass can record, because it
+stops future work. It needs a frame and a second pass before it goes in writing.**
+
 ## 🟢 Sixtieth pass, 2026-10-08 — the industry trend confirmed from the market side is **governance over tool sprawl**, and this pass's instrument trend is that **a method summary is not an instrument**
 
 ⏱️ **Fourteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

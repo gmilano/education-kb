@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-first pass, 2026-10-08 — week of 2026-10-08: the industry-named query is saturated for the **twelfth** week, and the registry layer is promoted from a *date* oracle to an *identity* oracle
+
+⏱️ **Fifteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+🟢 **Oracle map re-measured before any datum (`P713`, `P745`), `n = 2`:** `raw` **200 × 2** (404-discriminating), `pypi` **200 × 2**, `npm` **200 × 2**, `maven` **200**, `ls-remote` discriminates. 🔴 `api.github.com/repos/{third-party}` still **403** — **no star counts this pass** (`P745`). 🔴 `packagist.org/packages/{pkg}.json` **404** where pass 59 read it. 🔴 Primary policy hosts **`000`, 12 of 12** — and `Gap 270` is **re-posed**: the cause is the channel, not the hosts (`P784`).
+
+### 🟢 What is actually new this week — dated by registry, not by a blog
+
+| Package | Repo | Licence | Version · published | Why it matters this week |
+|---|---|---|---|---|
+| `scorm-again` | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 MIT | 🟢 **v3.4.5 · 2026-10-05** | 🟢 **Three days old at this pass — the freshest row on the shelf.** SCORM 1.2/2004 + AICC run-time. 🔵 The bridge to a client's existing content estate, which no edge on this shelf covered before this pass. |
+| `ltijs` | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 Apache-2.0 | 🟢 **v7.0.7 · 2026-10-06** | 🟢 **Two days old, and independently re-confirmed this pass** — pass 59 recorded the same version from the same oracle. 🔵 The LTI launch boundary is actively maintained, which is what makes `P736`'s "build beside the LMS" rule durable rather than aspirational. |
+| `@xapi/xapi` | [`xapijs/xapi`](https://github.com/xapijs/xapi) | 🟢 MIT | 🟢 **v3.0.3 · 2026-04-27** | The maintained xAPI **client**, pairing with pass 60's `lrsql` / `ralph` **stores**. |
+| `@xapi/cmi5` | [`xapijs/cmi5`](https://github.com/xapijs/cmi5) | 🟢 MIT | 🟡 **v1.4.0 · 2024-10-06** | 🔴 **Two years without a release.** Reported complete against cmi5 Quartz 1st Ed. 🟢 Recorded as usable, 🔴 not as live — and the date is the evidence, which is exactly why the registry layer is worth its requests. |
+
+### 🆕 `P780` — the registry resolves **slugs**, and that is a bigger deal than the dates
+
+🔴 **`ls-remote` found nothing for four guessed Caliper/cmi5 slugs this pass:**
+`Brightspace/ims-caliper-python`, `xapijs/xAPI.js`, `1EdTech/caliper-java`, `IMSGlobal/caliper-java`
+— 🔵 all four plausible, all four named by search results or by the org-rename history, none real.
+🟢 **`registry.npmjs.org/@xapi%2fcmi5` returned the true slug in its `repository` field —
+`xapijs/cmi5` — and the payload read followed in one request.**
+
+🆕 **So the order of operations changes: when a project has been renamed or re-orged, go to the
+registry for the *name* before guessing at `ls-remote`.** 🔵 Guessing slugs is unbounded; a registry
+lookup is one request with an authoritative answer.
+
+🔴 **And the counter-case, measured in the same pass, which keeps `P253` honest:**
+`pypi.org/pypi/caliper/json` answers **200** — and it is **`vsoch/caliper`, "a tool for measuring
+and assessing change in packages"**, unrelated to 1EdTech Caliper Analytics. 🆕 **`P780b`: a
+registry `200` proves a package of that name exists, never that it is the artefact you wanted.**
+
+### 🔴 Named gap: **Caliper Analytics has no reachable permissive implementation**
+
+🔴 **Searched this pass and not found.** The protocol-named query returned: Brightspace's
+`caliper-python` (🔴 slug unreachable), a **third-party mirror** of the spec (`lacides/caliper-spec`,
+🔴 not the official source), and 1EdTech's own multi-language Sensor API samples (🔴 **no repository
+URL in any result**). 🟢 **No row is admitted** (`P476`). 🔵 **Worth flagging because Caliper is the
+*analytics* protocol** — the shelf now has launch, roster, content and learning-record edges, and
+the fifth edge is the one with no permissive implementation this KB can find. 🆕 **`Gap 284`.**
+
+### 🔴 The industry-named channel, twelfth consecutive week
+
+🔴 **`top open source AI agents education 2026 github MIT` and `github trending education AI 2026`
+returned roundup listicles naming only general-purpose agents** — OpenClaw, OpenHands, opencode,
+CrewAI, LangGraph, AutoGen, Agent Zero — 🔴 **zero education-specific repositories**, and the one
+education hit was a *course*, not an agent. 🟢 **Recorded as a dated negative so no future pass
+re-buys this query expecting a different answer.**
+
 ## 🟢 Sixtieth pass, 2026-10-08 — week of 2026-10-08: the industry-named query is saturated for the **eleventh** week, and every new row this week came from a **protocol-** or **function-**named query
 
 ⏱️ **Fourteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

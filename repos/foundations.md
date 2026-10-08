@@ -4,6 +4,134 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-first pass, 2026-10-08 — the **content-packaging** layer lands (5 payload-read rows), and a bounded sweep of the benchmark frame finds **48 % of it unusable in a commercial deliverable**
+
+⏱️ **Fifteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Oracle map re-measured before any datum (`P713`, `P745`), `n = 2`:** `raw` **200 × 2** against a
+404-discriminating control, `pypi` **200 × 2**, `npm` **200 × 2**, `repo1.maven.org` **200**,
+`ls-remote` **discriminates** (real → SHA, invented → fail). 🔴 `packagist.org/packages/{pkg}.json`
+**404** this pass where pass 59 read it — recorded, not explained. 🔴 Primary policy hosts
+**`000`, 12 of 12** — but see `Gap 270`, **re-posed** this pass: the cause is the **channel**.
+
+### 🟢 Why a content-packaging layer, and why it was the last one missing
+
+🟢 **Pass 60 closed the loop LTI → OneRoster → xAPI**: the tool launches, the roster says who the
+learner is, the LRS records what happened. 🔴 **What no layer on this shelf answered is how the
+*learning content itself* arrives and reports** — which is the one thing every incumbent client
+already has thousands of units of, authored to **SCORM** and increasingly **cmi5**. 🔵 A
+customisation engagement that cannot ingest a client's existing SCORM estate is not a
+customisation engagement.
+
+| Repo | Licence (payload · bytes · ref) | Registry date | Region of origin | What it contributes |
+|---|---|---|---|---|
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 **MIT** · 1 072 B · `a882b22` | 🟢 npm **v3.4.5, 2026-10-05** | North America (US) | **SCORM 1.2 / 2004 + AICC run-time, in JavaScript.** 🟢 **Three days old at this pass and the freshest row on the whole shelf** — the live option for replaying a client's existing SCORM estate beside a new agent. |
+| [`adlnet/CATAPULT`](https://github.com/adlnet/CATAPULT) | 🟢 **Apache-2.0** · 11 358 B · `806c0ba` | 🟡 no registry | North America (US ADL Initiative) | **cmi5 player prototype + conformance test suites**, from the body that authored cmi5 and xAPI. 🔵 Value is **conformance evidence**, which is what a ministry or defence buyer asks for. |
+| [`xapijs/cmi5`](https://github.com/xapijs/cmi5) | 🟢 **MIT** · 1 070 B · `5ea9bda` | 🟡 npm **v1.4.0, 2024-10-06** | 🟡 unplaced | cmi5 profile library, reported complete against **cmi5 Quartz 1st Edition**. 🔴 **Two years without a release** — carried as usable, not as live. |
+| [`xapijs/xapi`](https://github.com/xapijs/xapi) | 🟢 **MIT** · 1 071 B · `5e28e9b` | 🟢 npm **v3.0.3, 2026-04-27** | 🟡 unplaced | The xAPI **client** under the same org, and the maintained half of the pair. 🟢 Pairs with pass 60's `lrsql` / `ralph` rows: client here, store there. |
+| [`PerfectlyNormal/scorm`](https://github.com/PerfectlyNormal/scorm) | 🟢 **MIT** · 1 079 B · `9149389` | 🟡 no registry | EMEA (Norway) | Ruby SCORM **package** parser/builder. 🔴 **Copyright line reads 2013** — on the shelf for the Ruby estates that exist, not as a recommendation. |
+
+🟢 **All five are permissive and none is copyleft**, which continues `P763`'s finding that the
+**protocol edges are permissive while the substrates are copyleft** — now across four protocols.
+
+### 🆕 `P780` — the **registry** layer resolves *slugs*, not just dates, and that makes it an identity oracle
+
+🟢 **Measured this pass.** `ls-remote` could not find a Caliper or cmi5 implementation under any
+name this pass guessed: `Brightspace/ims-caliper-python`, `xapijs/xAPI.js`, `1EdTech/caliper-java`
+and `IMSGlobal/caliper-java` **all returned nothing**. 🟢 **`registry.npmjs.org/@xapi%2fcmi5`
+returned the real slug in its `repository` field — `xapijs/cmi5`** — and the payload read followed
+immediately. 🆕 **So the registry is not only the one *dated* oracle (`P741`); it is a *naming*
+oracle, and it is the cheaper way in when a project has been renamed or re-orged.**
+
+🔴 **And the counter-case, in the same pass, which keeps `P253` honest:** `pypi.org/pypi/caliper/json`
+answers **200** — and it is **`vsoch/caliper`, "a tool for measuring and assessing change in
+packages"**, nothing to do with 1EdTech Caliper Analytics. 🆕 **`P780b`: a registry `200` establishes
+that *a package of that name* exists, never that it is the artefact you were looking for.** Identity
+needs the `repository` field or the payload, not the HTTP status.
+
+### 🟢 `Gap 282` — **CLOSED** by an instrument, and the phenomenon it names turns out to be **rare**
+
+🟢 **`compose/code/p784-licence-scope-map/` enumerates all 16 licence filenames instead of breaking
+on the first, and emits a `{path → family}` map with a `SINGLE | PARTITIONED | UNGRANTED` verdict.**
+🟢 **17 assertions, offline, green.** It reproduces every verdict pass 60 derived by hand — including
+`leogaggl/lxHive` as **GPL-2.0**, the licence that *three consecutive hand-rolled classifiers*
+(passes 58, 59, 60) read as LGPL.
+
+🟢 **Then it was run on a bounded, pre-declared frame** — the **23** benchmark / dataset / evaluation
+repos on this shelf, selected by name before any payload was read, which is `P744`'s named-sample
+method rather than the mass enumeration `P744` forbids. 🟢 **23 of 23 reachable.**
+
+| verdict | n | share |
+|---|---|---|
+| 🟢 `SINGLE` | **14** | 61 % |
+| 🔴 `UNGRANTED` — no grant at any of 16 filenames | **8** | **35 %** |
+| 🟡 `PARTITIONED` | **1** | 4 % |
+
+🔴 **So `Gap 282`'s phenomenon is 1 in 23 on the very frame where `P779` predicts it is most
+likely.** 🟢 **That is a real result and it reprioritises:** the scope split is worth an instrument
+(it now has one) and is **not** worth a pre-flight row of its own. 🔵 **The instrument earned its
+cost by measuring that its own motivating phenomenon is rare — and by finding, in the same run,
+something an order of magnitude more common.**
+
+### 🆕 `P782` — **48 % of this shelf's benchmark frame cannot ship in a commercial deliverable**, and the reason is almost never a licence this KB was watching for
+
+🟢 **Families across the frame, `n = 23`, every one payload-read:**
+
+| grant | n | may Globant build a paid deliverable on it? |
+|---|---|---|
+| 🟢 **MIT** | 10 | 🟢 yes |
+| 🟢 **Apache-2.0** | 2 | 🟢 yes |
+| 🔴 **no grant at all** | **8** | 🔴 **no — all rights reserved** |
+| 🔴 **CC BY-NC 4.0** | 1 | 🔴 no — *"Commercial use is strictly prohibited"*, read from a 312 B payload |
+| 🟡 **MIT code / CC BY-NC-SA 4.0 data** | 1 | 🟡 architecture yes, corpus no |
+| 🔴 **bespoke, non-SPDX** | 1 | 🔴 **no** — see `P783` |
+
+🟢 **12 of 23 (52 %) are permissive. 11 of 23 (48 %) are not usable as-is in a paid deliverable.**
+🔴 **And the dominant failure is not an awkward licence — it is the *absence* of one**: 8 repos,
+**0 of 16 filenames and no packaging manifest**, which is `P760`'s young-research-repo shape and
+means all rights reserved.
+
+🔴 **The 8 ungranted, named so this is auditable:** `AI-EDU-LAB/E-EVAL` `@8351bd4`,
+`AI-for-Education/Luganda-linguistic-benchmarks` `@d4f3a68`,
+`AI-for-Education/fabdata-llm-retrieval` `@577f77c`, `aiverify-foundation/LLM-Evals-Catalogue`
+`@cec508e`, `eth-lre/mathtutorbench` `@6faed17`, `kaushal0494/AITutor-EvalKit` `@a710784`,
+`malaysia-ai/malaysian-dataset` `@87c0562`,
+`master72o/universal-llm-evaluation-rubric-library` `@5a1500a`.
+
+🔵 **The engagement consequence, stated plainly:** when a client asks *"how will you prove the
+tutor is accurate?"*, half this shelf's answer cannot be used in the deliverable that answers.
+🟢 **The 12 that can** are `AI-for-Education/edu-qurating` · `pedagogy-benchmark` ·
+`voice-ai-evaluation-framework` (MIT), `DFE-Digital/education-benchmarking-and-insights` (MIT),
+`baker-jr-john/automated-summary-evaluation-llm` (MIT), `eduagarcia/lm-evaluation-harness-pt` (MIT),
+`latam-gpt/lm-evaluation-harness` · `latam-gpt/syco-bench` (MIT),
+`markm-io/ai-essay-evaluator` (MIT), `shivanireddyk/tutoreval` (MIT),
+`indobenchmark/indonlu` (Apache-2.0), `prometheus-eval/prometheus-eval` (Apache-2.0).
+
+### 🆕 `P783` — the binding grant in education AI is often **not an SPDX family at all**, and a classifier that guesses here is the most expensive bug available
+
+🔴 **`Khan/tutoring-accuracy-dataset` `@fbbeff8` ships a 2 690 B `LICENSE` that is a bespoke
+Khan Academy *"Evaluation Dataset License"*, read in full this pass.** Its terms, quoted:
+
+- 🔴 **"Use of the Dataset shall be restricted to internal non-commercial evaluation of models."**
+- 🔴 **"use for model training, or any production use … is expressly prohibited"**
+- 🔴 **"any re-distribution or publication … is expressly prohibited"**
+- 🔴 **not sublicensable**
+- 🔴 **viral:** *"any such modified, merged, or combined dataset containing any portion of the
+  Dataset remains subject to this license"*
+- 🟢 **permitted, and worth knowing:** evaluating products *intended* for commercial use, and
+  commercial use of the *insights* gained.
+
+🟢 **`p784` emitted `UNCLASSIFIED` on this payload, which is the correct answer and the designed
+one** — `unknown → UNCLASSIFIED, never a guess` is an asserted case in its suite. 🔴 **Every
+SPDX-shaped classifier on this shelf would have had to either guess or fall through**, and the
+cheapest wrong guess here — "no recognised copyleft marker, treat as permissive" — would have
+published a row licensing a client to do the two things this licence most explicitly forbids:
+**train on it and ship it**.
+
+🆕 **`P783` stated for reuse: in education AI, assume the corpus carries a bespoke evaluation
+licence until a payload read says otherwise. The correct classifier output for a bespoke grant is
+a refusal to classify, and the correct next step is a human reading the 2 690 B.**
+
 ## 🟢 Sixtieth pass, 2026-10-08 — the **learning-record / rostering** layer enters the shelf (6 rows, all payload-read), and a **dual-licence** repo defeats every probe this KB has written
 
 ⏱️ **Fourteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
