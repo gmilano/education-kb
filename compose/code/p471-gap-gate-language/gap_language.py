@@ -190,6 +190,20 @@ def coverage(root):
 
 
 def main(argv):
+    # 🔴 `Gap 245` / `P541`, remediado en el pase 49 del 2026-10-08.
+    # Sin argumentos esta compuerta imprimia su docstring y salia **0**: el barrido
+    # `p542` la clasifico `P541-FALSE-PASS` con el oraculo de lectura — exit 0 habiendo
+    # abierto CERO archivos del arbol, indistinguible de un arbol limpio. `Gap 245`
+    # nombro estas dos compuertas como las PRIMERAS a arreglar, por lo que son: las que
+    # existen para cachar huecos no declarados.
+    if not argv:
+        print(
+            "P541-NO-INPUT\tREFUSED: esta compuerta no mide nada sin una RAIZ.  "
+            "Salir 0 aca seria indistinguible de un arbol limpio.  "
+            "Uso: %s --sweep RAIZ  |  --self-test" % 'gap_language.py',
+            file=sys.stderr,
+        )
+        return 2
     if "--self-test" in argv:
         import test_gap_language
         return test_gap_language.run()

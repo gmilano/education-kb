@@ -4,6 +4,105 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Forty-ninth pass, 2026-10-08 — `P604`: the **licence-by-language pre-flight**, and the recipe that routes a non-English assessment build around a GPL pipeline
+
+⏱️ **Third pass of this date.** 🔵 **All licences read first-hand on 2026-10-08** from payload or from
+model metadata (`explosion/spacy-models`, `meta/<model>-<version>.json`, HTTP 200).
+
+### 🟢 `P604` — Recipe: licence-by-language pre-flight (run this before the architecture, not after)
+
+🔴 **Why this is a recipe and not a checklist item.** `P596` measured that spaCy's **code** is MIT
+while its **artefacts** are licensed per-language — MIT for English, CC BY-SA 4.0 for Portuguese,
+**GPL-3.0 for Spanish** — and that the restriction gets *tighter* one tier down. 🔴 **A team that
+reads "spaCy is MIT" and starts building a Spanish product has already made the wrong decision**, and
+will discover it at delivery.
+
+**The pre-flight, three probes, minutes of work:**
+
+| # | Probe | Command shape | What it answers |
+|---|---|---|---|
+| 1 | the **artefact's own** metadata | `curl raw.githubusercontent.com/explosion/spacy-models/master/meta/<model>-<ver>.json` → `.license` | the licence of the thing you actually ship |
+| 2 | the artefact's **`sources[]`** | same payload → `.sources[].license` | *why* it carries that licence, and whether it can change |
+| 3 | each corpus's **own** `LICENSE` | `curl .../UniversalDependencies/<treebank>/master/LICENSE.txt` | corroboration one tier deeper (`P510` shape) |
+
+🔴 **Probe 1 alone is not enough** — it tells you the verdict without the mechanism, so you cannot
+tell a licence that *could* be renegotiated from one that is structural. 🟢 **Probe 2 is what told
+this pass that English is permissive because Explosion bought OntoNotes**, which is the fact that
+makes the whole table predictable instead of arbitrary.
+
+**Verdict table, measured:**
+
+| Language | Artefact | Licence | Ship permissively? | Route if not |
+|---|---|---|---|---|
+| English | `en_core_web_sm/lg` | 🟢 **MIT** | 🟢 yes | — |
+| Portuguese | `pt_core_news_sm/md/lg` | 🟡 **CC BY-SA 4.0** | 🟡 publishable, ShareAlike travels to derivatives | accept SA, or retrain on a licensed corpus |
+| Spanish | `es_core_news_sm` | 🔴 **GPL-3.0** | 🔴 **no** | see the three routes below |
+| language-agnostic NER | `xx_ent_wiki_sm` | 🟢 **MIT** | 🟢 yes | 🔵 **the permissive escape hatch, with reduced capability** |
+
+### 🟢 `P605` — the three routes for a **Spanish** assessment product, priced
+
+🔴 **`Gap 237` framed Spanish as a *data* problem** — no national essay exam, so no rubric and no
+graded corpus. 🟢 **True, and one tier too high.** `P595` adds that the **pipeline artefact** is
+GPL-3.0, so the feature layer is blocked *before* the corpus question is reached.
+
+| Route | What it is | Cost | When to choose it |
+|---|---|---|---|
+| **A · Copyleft delivery** | ship the product under GPL-3.0 | 🟢 **zero engineering** | 🔵 internal tooling, public-sector work where source delivery is already required — **the cheapest honest answer, and usually the right one** |
+| **B · Permissive escape hatch** | `xx_ent_wiki_sm` (**MIT**) + reimplemented lexical indices from published definitions | 🟡 days, plus 🔴 **an agreement study** — accuracy is lower and must be measured, not assumed | a product that must ship permissively and can accept weaker features |
+| **C · Retrain** | train a pipeline on a permissively-licensed Spanish corpus | 🔴 **expensive; and this KB has not found such a corpus** | only with corpus budget already approved |
+
+🔴 **Route B's trap, stated so nobody walks into it:** the **index definitions** (TTR, MTLD, MATTR,
+HD-D, syntactic-complexity indices) are published statistics and free to reimplement — 🟢 that part
+is settled (`Gap 246`). 🔴 **What is not free is the validation**: the published tools carry years of
+it and a reimplementation inherits none (`P504` shape). 🟢 **So Route B's real deliverable is an
+agreement study, not an extractor.**
+
+🔵 **Portuguese is the better LATAM first engagement, and now for a measured reason rather than
+momentum:** its artefact is **ShareAlike, not GPL**, and `lplnufpi/essay-br` (**MIT**, human-graded
+on ENEM C1–C5, peer-reviewed) gives it a corpus Spanish does not have. 🔴 **Do not quote a Spanish
+timeline derived from a Portuguese one.**
+
+### 🟢 `P606` — the assessment chain, with this pass's constraint folded in
+
+🔵 **Unchanged and still permissive end to end for the *parametric* chain** (`P594`, pass 48):
+`qti3` **MIT** authoring via this KB's emitter → `qti3` `core`/`player` **MIT** delivery →
+`EqUMP` 0.3.6 **MIT** IRT linking → `grading-draft-gate` human decision point. 🔴 **Limit that
+travels with it:** `EqUMP` closes **IRT linking only** — not observed-score or kernel equating
+(`P500`, `Gap 234`).
+
+🔴 **What this pass adds is the branch point.** The parametric chain is **language-neutral** (it
+scores *items*, not *prose*); the essay chain is **language-bound** and inherits the table above.
+
+| If the engagement needs… | Chain | Licence posture |
+|---|---|---|
+| parametric high-stakes items, any language | `qti3` + `EqUMP` + `grading-draft-gate` | 🟢 **permissive end to end** |
+| English essay scoring | `wwrwbs/AI_AWE` (Apache-2.0) + `en_core_web_*` (MIT) | 🟢 **permissive end to end** |
+| Portuguese essay scoring | `essay-br` (MIT) + `pt_core_news_*` (CC BY-SA 4.0) | 🟡 **ShareAlike travels** |
+| Spanish essay scoring | 🔴 **no permissive chain exists** | 🔴 Route A / B / C above |
+
+🟢 **Sell the parametric chain into a Spanish-language engagement first.** 🔵 It is the one assessment
+capability this KB can deliver permissively in **any** language, and it sidesteps `Gap 237`,
+`Gap 254` and the whole feature-layer question — 🔴 **which is a scoping decision, not a workaround,
+and it should be made before the proposal rather than after the licence review.**
+
+### 🟢 `P607` — governance recipe: the supersession marker, now with a control behind it
+
+🔵 **Named in `P582`/`Gap 252`, mechanised this pass.** The artefact is
+`compose/code/p598-register-freshness-gate/` — 58 assertions, 7/7 mutants, refuses empty input.
+
+| Step | Component | Why |
+|---|---|---|
+| 1 | classify each register row's claim: **MEDICION** or **PRIORIDAD** | the two go stale for different reasons and need different evidence |
+| 2 | 🔴 **exempt rows that carry their own correction** (`CITA`) | without this the tool flags *the act of correcting*, and gets switched off (`P598` v1: 3 of 4 false positives) |
+| 3 | refute **MEDICION** with a measurement of its subject elsewhere in the tree | a status claim is falsified by a reading |
+| 4 | refute **PRIORIDAD** with a later **closure** of that gap | 🔴 a licence measurement cannot tell you whether a gap is still open (`P598` v1's fourth error) |
+| 5 | forward-point every flagged row; never rewrite history | 🟢 the cheap fix, per `Gap 252` |
+
+🔵 **Client-facing form:** this is the audit any team with an ADR log, a risk register or a
+compliance tracker needs **before** anyone trusts the document top-down. 🟢 **It is days of work, it
+is demonstrable on their own repository on day one, and `P597` is the case study** — a register that
+was being maintained correctly and still charged a reader for settled work.
+
 ## 🟢 Forty-eighth pass, 2026-10-08 — `P594`: the **parametric high-stakes assessment chain** is complete end to end on permissive components for the first time, and this pass is the one that can say so
 
 ⏱️ **Second pass of this date.** 🔵 **Licences read first-hand on 2026-10-08 from payload.** Upstream

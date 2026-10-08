@@ -221,6 +221,15 @@ class TestP472AssertionClass(unittest.TestCase):
 
 
 def run():
+    # 🔴 `Gap 245` / `P541`, regresion del pase 49 del 2026-10-08: esta compuerta
+    # salia 0 sin juzgar nada.  Un contrato de uso que hay que recordar no es un
+    # control (`P237`), asi que el rechazo se asegura aca y no solo se documenta.
+    import gap_language as _m
+    _r = _m.main([])
+    if _r != 2:
+        print(f'FAIL  P541-NO-INPUT: main([]) dio {_r}, se esperaba 2')
+        globals().setdefault('_P541_FAIL', True)
+
     loader = unittest.TestLoader()
     suite = loader.loadTestsFromModule(sys.modules[__name__])
     res = unittest.TextTestRunner(verbosity=1).run(suite)

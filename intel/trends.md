@@ -4,6 +4,143 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🔴 Forty-ninth pass, 2026-10-08 — five trends: a register row that charged a pass for settled work, permissiveness that tracks money rather than openness, an "Apache-2.0" platform that overrides Apache-2.0, a gate that went red unnoticed, and a regional channel measured empty
+
+⏱️ **Third pass of this date.** 🔵 **All market and regulatory figures are secondary and carry their
+source; all licences were read first-hand from payload or model metadata on 2026-10-08.**
+
+### 🔴 Trend A — `P597`: the register said "unmeasured", it was measured, and this pass **paid** to find out
+
+🔵 **Correction first, because this pass's opening hypothesis was wrong.** Pass 49 read
+`intel/open-gaps.md` top-down, found `Gap 246` stating that the spaCy **`pt_core_news_*` model
+artefact licences "are unmeasured"**, judged it the cheapest open item, and went and measured them.
+🔴 **They were already measured and published** — `agents/top.md:338` and
+`verticals/solutions.md:258` both carry **CC-BY-SA-4.0**, and the latter says in as many words
+*"was published as 'unmeasured', now measured."*
+
+🔴 **So the budget went to settled work, and the register is why.** 🔵 **`P582` (pass 48) found this
+same positional defect on `Gap 39` by *inspection*; pass 49 found it on `Gap 246` by *paying for
+it*.** 🟢 **Two instances, two different rows, two independent discovery modes — the defect is not
+confined to `Gap 39`, which is exactly what pass 48 said it could not yet claim.**
+
+🔵 **The general trend, well beyond this KB.** Any append-only register — ADRs, risk logs, compliance
+trackers, incident timelines — is **correct by construction and misleading by ordering**. 🔴 **The
+column that misleads hardest is not status but *priority*: a recommendation is acted on without
+being re-derived.** 🟢 **Remedy landed, not just named** — see Trend D.
+
+### 🔴 Trend B — `P596`: permissiveness tracks **who paid for the corpus**, not who opened it
+
+🟢 **The measurement** (first-hand, `explosion/spacy-models` metadata, two minor versions each):
+
+| Artefact | Licence | Training corpus | Corpus licence |
+|---|---|---|---|
+| `en_core_web_*` | 🟢 **MIT** | OntoNotes 5 | 🔴 **commercial (licensed by Explosion)** |
+| `pt_core_news_*` | 🟡 **CC BY-SA 4.0** | `UD_Portuguese-Bosque` | 🟡 CC BY-SA 4.0 |
+| `es_core_news_*` | 🔴 **GNU GPL 3.0** | `UD_Spanish-AnCora` | 🔴 GNU GPL 3.0 |
+
+🔴 **English is the permissive one *because the corpus was bought*. Portuguese and Spanish are
+copyleft *because theirs are free*.** 🟢 **The open corpus is precisely what makes the artefact
+unusable in a permissive product** — the inverse of what a procurement rule rewarding "open data"
+would predict.
+
+🔵 **Why this is a trend and not a spaCy quirk.** The same mechanism governs every trained artefact:
+weights inherit from data, and permissive *code* says nothing about the *artefact*. 🔴 **"The library
+is MIT" is the single most load-bearing false statement in open-source AI procurement**, and it is
+false in a way that only shows up at delivery. 🟢 **For a client: in any non-English language, price
+either a licensed corpus or an annotation programme into the first week.**
+
+### 🔴 Trend C — `P600`: a platform can incorporate Apache-2.0 and **subordinate** it, and the roundups will still call it Apache-2.0
+
+NocoBase's `LICENSE.txt` (**8,592 B**, read from payload; `LICENSE` itself **404**) incorporates
+Apache-2.0 by reference and then, §4.2, *"in case of any inconsistency … the supplementary terms of
+this Agreement shall prevail."* 🔴 **§7.5 then forbids a Standard Edition licensee from selling an
+Upper Layer Application to Customers without a commercial licence** — which is what a studio
+engagement *is*.
+
+🔴 **Third consecutive pass in which a verticals roundup's licence claim fails first-hand reading**
+(47: Huly "Apache-2.0" → EPL-2.0; 48: same, corroborated; 49: NocoBase). 🟢 **Three for three makes it
+a property of the channel.** 🔵 **And the trap defeats both naive readings**: an automated probe of
+`LICENSE` gets 404 and records *"ungranted"*; a human reading the roundup records *"Apache-2.0"*.
+🟢 **The answer sits in a non-default filename, one tier down — the same shape as Trend B.**
+
+### 🔴 Trend D — `P598`: the freshness control landed, and its **first version accused four rows falsely**
+
+🟢 **`Gap 252` remedy 2 is implemented**: `compose/code/p598-register-freshness-gate/`. 🔴 **And the
+honest part is the run history.** v1 flagged **6** rows; hand-adjudication found **4 false positives**
+(two quotation cells, two ALL-CAPS pseudo-subjects) and one right-verdict-on-wrong-evidence:
+
+| Defect in v1 | What it did | Fix in v2 |
+|---|---|---|
+| **Quotation cells** | flagged the *"rows pass N changed"* tables — i.e. **the act of correcting** | `CORRECTION_MARKERS` → verdict `CITA`, exempt |
+| **ALL-CAPS tokens as subjects** | extracted `REFUSES`, `MEASURES` (verdict classes) and `PATH` (an env var that collides with the word "path" tree-wide) | explicit `^[A-Z][A-Z0-9_*-]{2,}$` rejection |
+| **Evidence not matched to claim class** | refuted a **priority** claim with a *licence measurement* of an unrelated artefact | `MEDICION` → measurement of its subject; `PRIORIDAD` → a later **closure** of that gap |
+
+🟢 **v2: 2 flagged, both true positives on the right evidence** (`Gap 238` line 253 — declared *"the
+cheapest gap on this KB"* and **closed** 15 lines later; `Gap 246` line 310 — *"unmeasured"*, and
+measured).
+
+🔴 **And v2 had a fourth defect of its own, found only by running it again after the fix.** Once
+pass 49's forward pointers landed, the sweep flagged **`Gap 240`** — on the evidence of the
+**`Gap 245`** row, which says *"PARTIALLY CLOSED"* of itself and happens to mention *"cheaper than
+`Gap 240`"*. 🔴 **Two gap numbers on one line, and the closure was attributed to the wrong one.**
+🟢 **Fixed in v3:** a closure counts only for the gap a row **declares in bold**, read with the same
+`declared_gap()` helper the sweep itself uses — because two different definitions of *"the row for
+this gap"* is the `P480` error, and this is the second time this KB has paid for it.
+
+🔵 **The mutant for that fix is worth recording, because the obvious one is useless.** Loosening the
+row regex does *not* reproduce the bug — it still captures the declared number first — so a mutant
+built that way **survives while telling you nothing**. 🟢 **The faithful mutant makes
+`declared_gap()` accept a line that merely *mentions* the gap**, which is what the defect actually
+was. 🔴 **A mutant that cannot fail is worse than no mutant: it reports coverage it does not have.**
+
+🟢 **Final state, measured:** **58 assertions, 7/7 mutants killed, refuses its own empty input**; the
+register sweep now returns **0 `RANCIA`**, **7 `CITA`**, **5 `SOSTENIDA`** and **exit 0**.
+
+🔵 **The trend worth carrying to a client: a staleness detector is a *classifier*, and its naive form
+punishes exactly the behaviour you want.** 🔴 **A tool that flags "you corrected this" as "this is
+stale" will be switched off in a week.** 🟢 **The discrimination — does the row carry its own
+correction? — is the whole product.**
+
+### 🔴 Trend E — `P603`: this KB's own region-heading gate was **red at HEAD** and nobody noticed
+
+🟢 **Measured, not suspected.** `p383-region-heading-gate` run against `intel/market.md` at `HEAD`
+(before this pass): 🔴 **`P383-MULTIPLE-BLOCKS`, 2 canonical blocks, exit 1.** 🔵 Pass 48 prepended a
+new `## Opportunities by region` block, did not mark the previous one superseded — the convention
+this file already uses in six older blocks — and **did not re-run the gate it inherited**.
+
+🔴 **Why this is Trend A's twin rather than a separate nit.** `Gap 243`/`P542` built the sweep that
+proves instruments refuse empty input; `P541` fixed `p383` so it cannot fake a pass. 🔴 **Neither
+makes anyone *run* it.** 🟢 **A control that exists, is correct, and is not invoked is worth exactly
+nothing**, and this KB has now spent four passes building gates and one pass discovering that one of
+them had been red for five.
+
+🟢 **Fixed this pass:** both older blocks marked superseded, 🟢 **`### Global` added** (it was absent
+— `P383-MISSING-REGION`), and 🟢 **`p383` now exits 0, re-run and recorded.**
+
+🔴 **And a second instance of the same class, found by sweeping for it rather than by luck.**
+`intel/trends.md:319` was the bare line **`region:`** — a prose sentence (*"Measured this pass, per
+region:"*) that **line-wrapped onto a line indistinguishable from a frontmatter field**. 🔴 **A
+compiler scanning for `^region:` reads it as a region field with an **empty value***, which is
+precisely the failure mode the brief warns about: each variant becomes its own bucket and the filter
+stops working. 🟢 **Swept across all nine working files, one instance found, re-wrapped, re-checked
+clean.** 🔵 **The lesson generalises past this KB:** when a document's **body** and its **metadata
+header** share a syntax, prose wrapping becomes a data-integrity hazard, and no amount of care in
+the frontmatter prevents it. 🔵 **The standing fix is
+a convention, not another instrument: every pass that touches `intel/market.md` runs `p383` before
+committing.** 🔴 **Declared as `Gap 255`** — nothing *enforces* that, and this pass is not going to
+claim a convention is a control (`P237`).
+
+### 🔵 Trend F — the regional channel is measured empty, and that changes where the next datum comes from
+
+🔴 **`P601`: 24 of 24 named regional items already held**, across all four regions, to the figure.
+Pass 48 measured 23 of 24. 🟢 **Two consecutive passes at saturation is a channel finding**: the
+secondary regional-policy channel is harvested out for this window. 🔴 **And `P602`: all seven
+blocked primaries re-probed, all seven still refused (`000`)**, with `raw.githubusercontent.com` at
+**200** in the same run as the control. 🔵 **So the next new regional datum must come from a primary
+source, and the primaries are exactly what this environment cannot reach** — `Gap 241` is the
+expensive instance: this pass *saw* a Commission page assert the amendment dates and could not read
+it.
+
 ## 🔴 Forty-eighth pass, 2026-10-08 — five trends: a reachability index that misroutes the passes it exists to guide, the same question declared twice under two numbers, an engine that delivers a broken item silently on the 101st try, a vertical roundup wrong about its own headline licence, and a regional channel whose last new datum fails verification
 
 ⏱️ **Second pass of this date.** 🔵 **All market and regulatory figures are secondary and carry their
@@ -188,8 +325,8 @@ shape, different instrument.
 
 ### T6 🔴 The regional channel is going stale in EMEA and empty in APAC, and the agent shelf is saturated for the fifteenth time
 
-🔵 **An informed gap is information; silence looks exactly like coverage.** Measured this pass, per
-region:
+🔵 **An informed gap is information; silence looks exactly like coverage.** Measured this pass, per region:
+
 
 | Region | What the mandated query returned |
 |---|---|

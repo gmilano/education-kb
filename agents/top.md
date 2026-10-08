@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🔴 Forty-ninth pass, 2026-10-08 — the Spanish feature layer is **GPL-3.0**, and this KB had never looked at it
+
+⏱️ **Third pass of this date.** Licences read first-hand on 2026-10-08 from the repository
+**payload** and from the model **metadata** served by `raw.githubusercontent.com`, with HTTP status
+recorded per filename. Existence by `git ls-remote --heads` against a negative control in the same
+run (`P510`: `globant/NEGATIVE-CONTROL-no-existe-49` → **0 refs**). **No star counts** (`P479`).
+
+🔴 **Zero new education agents for the ninth consecutive pass; the shelf is declared saturated for
+the seventeenth.** The mandated query ran verbatim, globally and once per region, and returned the
+same three classes pass 48 recorded: horizontal agents (OpenHands, CrewAI, LangGraph, OpenClaw,
+OpenAI Codex), agent *catalogues* (`ashishpatel26/500-AI-Agents-Projects`,
+`ARUNAGIRINATHAN-K/awesome-ai-agents-2026`, `caramaschiHG/awesome-ai-agents-2026`) and *courses*
+(`microsoft/ai-agents-for-beginners`, `huggingface/agents-course`, `pguso/agents-from-scratch`).
+🟢 **Every name was checked against the live tree and every one was already recorded.**
+
+### 🔴 `P595` — `es_core_news_*` is **GNU GPL 3.0**, and the string `es_core_news` appeared in **zero** files of this KB before this pass
+
+🔵 **Why nobody had looked.** This KB has gone very deep on the **Portuguese** scorer chain —
+`essay-br`, `nilcmetrix`, the PT treebank census, `Gap 236`/`239`/`246`. Spanish was handled by
+`Gap 237`, which framed the problem as **structural**: no national essay exam, so no rubric and no
+graded corpus. 🔴 **That framing is correct and incomplete.** It is a statement about the *training
+data* tier, and nobody measured the tier underneath it — the **pipeline artefact** a Spanish scorer
+would tokenise and parse with.
+
+Read first-hand this pass, from `explosion/spacy-models` (`meta/<model>-<version>.json`, HTTP 200):
+
+| Model artefact | 3.8.0 | 3.7.0 | Training corpus | Corpus licence |
+|---|---|---|---|---|
+| `en_core_web_sm` / `en_core_web_lg` | 🟢 **MIT** | 🟢 **MIT** | OntoNotes 5 | 🔴 **commercial (licensed by Explosion)** |
+| `xx_ent_wiki_sm` | 🟢 **MIT** | 🟢 **MIT** | WikiNER | 🟢 CC BY 4.0 |
+| `pt_core_news_sm` / `md` / `lg` | 🟡 **CC BY-SA 4.0** | 🟡 **CC BY-SA 4.0** | `UD_Portuguese-Bosque` v2.8 | 🟡 CC BY-SA 4.0 |
+| `es_core_news_sm` | 🔴 **GNU GPL 3.0** | 🔴 **GNU GPL 3.0** | `UD_Spanish-AnCora` v2.8 | 🔴 **GNU GPL 3.0** |
+
+🟢 **Corroborated one tier deeper, as `compose/patterns.md` step 5 requires.** `UD_Spanish-AnCora`'s
+own README, read from payload: *"The GNU license is inherited from the original dataset, downloaded
+from the AnCora website."* 🔵 Both treebanks exist and are reachable (`UD_Portuguese-Bosque` **5
+refs**, `UD_Spanish-AnCora` **4 refs**).
+
+🔴 **What this changes for a Spanish engagement.** Portuguese gets its feature layer as
+**ShareAlike** — restrictive, but a derivative can still be published. 🔴 **Spanish gets it as
+GPL-3.0**, so a scorer that tokenises with `es_core_news_*` cannot ship permissively *at all*, and
+the "reuse the Portuguese plan for Spanish" move fails **one tier earlier** than `Gap 237` says.
+🟢 **Declared as `Gap 254`.**
+
+### 🔴 `P596` — the mechanism, and it inverts the intuition: permissiveness tracks **who paid**, not who opened
+
+🔵 **spaCy's *code* is MIT** — re-read this pass from payload (`explosion/spaCy` `master/LICENSE`,
+**1,128 B**, *"The MIT License (MIT)"*, © 2016-2024 ExplosionAI GmbH / spaCy GmbH / Matthew
+Honnibal). 🔴 **The model artefacts are licensed per-language, and each one inherits from its
+training corpus.** So "spaCy is MIT" is true about the code and **false about the exact artefact a
+Portuguese or Spanish scorer would ship**.
+
+🔴 **The ordering is the finding.** English is the permissive one **because Explosion bought a
+commercial licence to OntoNotes 5**. Portuguese and Spanish are copyleft **because their corpora are
+free**. 🟢 **The open corpus is what makes the artefact unusable permissively** — the exact opposite
+of what a procurement checklist that rewards "open data" would predict.
+
+🔵 **The reusable rule, and it extends `compose/patterns.md` step 5 with a *direction*.** Walking one
+tier deeper is not enough; a reader must also expect the licence to get **more** restrictive going
+down, and to get *less* restrictive only where money changed hands. 🔵 **For a client:** in any
+non-English language, budget for either a licensed corpus or an annotation programme — the free
+treebank is the thing you cannot build a product on.
+
+### 🟢 What the regional runs returned
+
+| Region | New education agent | Note |
+|---|---|---|
+| **North America** | 🔴 none | policy, not software — state bill trackers, federal rulemaking, district guidance |
+| **EMEA** | 🔴 none | AI Act conformance commentary and vendor guides |
+| **APAC** | 🔴 none | national AI statutes (KR, VN, TW) — regulation, not repositories |
+| **LATAM** | 🔴 none | UNESCO/IESALC and IADB programme coverage, no code |
+
+🔵 **All four executed; all four reproduced the saturation.** 🟢 **That is a measured zero, written
+down rather than left as silence.**
+
 ## 🔴 Forty-eighth pass, 2026-10-08 — the index built so no pass re-does settled work is **stale in the one row it advertises as the next pass's best target**
 
 ⏱️ **Second pass of this date.** Licences read first-hand on 2026-10-08 from the repository

@@ -88,6 +88,83 @@ ranking**, and the ranking is what recruits a pass's budget.
 superseded by reading both corrections in full. 🔴 **It did not audit the other 16**, and does not
 claim the defect is confined to `Gap 39`.
 
+### 🟢 `Gap 252` (pass 48) — remedy 2 **LANDED at pass 49**
+
+| Remedy | Status |
+|---|---|
+| **Forward pointer** on a superseded row | 🟢 **LANDED** — pass 48 (`Gap 39`), pass 49 (`Gap 246`, `Gap 238`, `Gap 245`) |
+| **Freshness rule for the priority column** + a check | 🟢 **LANDED pass 49** — `compose/code/p598-register-freshness-gate/` (`P598`): **58 assertions, 7/7 mutants killed, refuses its own empty input.** Sweep after this pass's forward pointers: **12** rows carry a freshness claim → 🟢 **0 RANCIA**, **7 CITA**, **5 SOSTENIDA**, exit **0** |
+| Re-adjudicate the remaining open + undeterminable rows | 🔴 **OPEN** — but 🟢 **now mechanical**: `p598 --sweep` names the stale rows instead of a pass reading 40 by hand |
+
+🟢 **The rule, stated so it can be cited.** *No row may carry a priority superlative ("cheapest
+win", "smallest gap") if a later row closes that gap; and no row may assert a measurement claim
+("unmeasured", "untested", "unjudged") whose subject is measured elsewhere in the live tree.*
+🔵 **Enforced by `python3 freshness_gate.py --sweep RAIZ`, exit 1 on any `P598-RANCIA`.**
+
+🔴 **Honest limit, from the instrument's own first run.** v1 produced **4 false positives of 6**. The
+three defects and their fixes are at `P598` (`intel/trends.md`, Trend D); the one that matters most
+is that v1 flagged the *"rows pass N changed"* correction tables — 🔴 **a staleness detector whose
+naive form punishes the act of correcting will be switched off in a week.**
+
+### 🔴 `Gap 253` (new, pass 49) — the **21** remaining `P541` instruments
+
+**Statement.** *"Twenty-one instruments in `compose/code/` still exit `0` having judged nothing."*
+
+🟢 **`Gap 245` enumerated 23; pass 49 fixed the two it named as priority** — `p370-gap-gate` and
+`p471-gap-gate-language`, the gates that exist to catch undeclared gaps — each with an `if not
+argv:` refusal **and** a regression assertion, suites **27/27** and **25/25**. 🟢 **Acceptance test
+re-run rather than asserted:** `p542` sweep `P541-FALSE-PASS` **16 → 14**, `P541-SILENT-SUCCESS`
+**7 → 7**, 🟢 **total 23 → 21**.
+
+🔴 **The other 21 are untouched**, enumerated by path and class in
+`p542-empty-input-sweep/result.2026-10-07.tsv`, so there is no search step. 🔵 **Cost: mechanical,
+~21 guards and 21 assertions, each needing its own suite re-run.** 🟢 **The sweep is the acceptance
+test — it must reach 0.** 🔵 **Renumbered rather than left inside `Gap 245` so that no pass can read
+`Gap 245` as closed.**
+
+### 🔴 `Gap 254` (new, pass 49) — the **Spanish** pipeline artefact is GPL-3.0, one tier above `Gap 237`
+
+**Statement.** *"There is no permissively-licensed Spanish NLP pipeline artefact for an assessment
+feature layer."*
+
+🟢 **Measured, not inferred** (`P595`): `es_core_news_sm` declares **GNU GPL 3.0** at **3.8.0 and
+3.7.0**, inherited from `UD_Spanish-AnCora`, whose own README — read from payload — says *"The GNU
+license is inherited from the original dataset, downloaded from the AnCora website."*
+
+🔴 **Why this is a new gap and not part of `Gap 237`.** `Gap 237` is a **data** gap: no national
+essay exam, so no rubric and no graded corpus. 🔴 **This one bites a tier higher** — even with a
+rubric and a corpus in hand, the default pipeline cannot ship permissively. 🔵 **The string
+`es_core_news` appeared in ZERO files of this KB before pass 49**: the Portuguese chain was measured
+to four tiers and Spanish was never examined below the corpus.
+
+**Routes, priced at `P605`** (`compose/patterns.md`): **A** ship GPL-3.0 — zero engineering, and
+usually the right answer for public-sector work; **B** `xx_ent_wiki_sm` (**MIT**) plus reimplemented
+indices — 🔴 **the cost is an agreement study, not an extractor**; **C** retrain on a permissive
+Spanish corpus — 🔴 **none found by this KB**.
+
+🔵 **Cheapest next probe:** enumerate the other UD Spanish treebanks (`UD_Spanish-GSD`,
+`UD_Spanish-PUD`) for a non-GPL grant, exactly as pass 47 did for Portuguese.
+
+### 🔴 `Gap 255` (new, pass 49) — a correct gate that nobody invokes is worth nothing
+
+**Statement.** *"Nothing in this KB's workflow invokes its own gates, and one of them was red at
+`HEAD` for five passes."*
+
+🟢 **Measured** (`P603`): `p383-region-heading-gate` run against `intel/market.md` at `HEAD`, before
+pass 49 → **`P383-MULTIPLE-BLOCKS`, 2 canonical blocks, exit 1**. Pass 48 prepended a new
+`## Opportunities by region` block, did not mark the previous one superseded — the convention six
+older blocks in that same file already follow — and **did not re-run the gate it inherited**.
+
+🟢 **Instance fixed this pass:** both older blocks marked superseded, 🟢 **`### Global` added** (it was
+absent — `P383-MISSING-REGION`), 🟢 **`p383` re-run → exit 0**.
+
+🔴 **Why it stays open after being fixed.** The *instance* is fixed; the *class* is not. `Gap 243`
+and `Gap 245` made the instruments honest about empty input; 🔴 **neither makes anyone invoke them.**
+🔵 **Remedy and cost:** one invocation list — the gates every pass runs before committing, with
+expected exit codes — and ideally a single entry point that runs all of them. 🔴 **A convention a
+pass has to remember is not a control (`P237`)**, which is exactly why this is declared rather than
+called done.
+
 # 🔴 Open-gap register — restored to the live tree
 
 > **This file exists because `P483` prescribed it at pass 38 and pass 38 did not create it.**
@@ -250,7 +327,7 @@ unusable rather than with a usable scorer.
 |---|---|---|---|
 | 🆕 **236** | **2026-10-07**, pass 42 | `agents/top.md` · `P522`; `repos/foundations.md` · `P524` | 🔴 **OPEN.** *"There is no permissively-licensed essay **scorer** for Portuguese — only a permissively-licensed graded **corpus**."* 🟢 **Narrowed hard, not closed**: every layer a scorer needs now exists permissively or ownably (corpus MIT via `P524`; open weights at the proprietary baseline via `P526`; calibration worth more than model size; LanguageTool as an LGPL-2.1 service via `P525`) — 🔴 **but nobody has published the assembled scorer under a permissive licence.** 🔵 **Remedy named and scoped**: fine-tune an open-weight model on `essay-br` with theme-separated folds, per-competency prompting, anchors and bias calibration, and publish it MIT — the chain is written step-by-step at `P532` (`compose/patterns.md`). 🔴 **Cost stated: GPU time for the fine-tune, which is the exact constraint that pushed `P526`'s source onto hosted APIs mid-run; and the realistic target is QWK ~0.63 (mid-band of the published 0.60–0.73), not state-of-the-art** |
 | 🆕 **237** | **2026-10-07**, pass 42 | `intel/trends.md` · `P531` | 🔴 **OPEN, and structural rather than unmeasured.** **No open-source essay scorer for Spanish**, searched this pass in Spanish (`corrector automático ensayos español código abierto licencia MIT github`). The channel returns only the **orthography/grammar** tier — none of which grades against a rubric. 🔵 **Why it is structural, which changes the remedy**: Brazil has one national essay-graded exam with a published five-competency rubric (ENEM), which produced both `essay-br` and a community; **Spanish-speaking LATAM has no single equivalent instrument**, so there is no rubric to standardise on and no graded corpus to train against. 🔴 **Remedy and cost**: the first deliverable is **a rubric and a human-graded corpus**, per target country — an annotation programme, not an engineering sprint, and far more expensive than `Gap 236`. 🔵 **Cheaper next probe before committing: query per country (`prueba de egreso`, `PAES`, `examen de admisión`) rather than pan-Spanish, since `P521` is this KB's own evidence that the query's shape hides tiers** |
-| 🆕 **238** | **2026-10-07**, pass 42 | `repos/foundations.md` · `P527`; `compose/patterns.md` | 🔴 **OPEN, and it is the cheapest gap on this KB.** *"`LongsightGroup/qti3`'s `writer` cannot emit `qti-template-declaration` / `qti-template-processing`, so parametric item variants cannot be **authored** on the stack that can **deliver** them."* 🟢 **Remedy named, scoped and unusually small**: add a `buildQti3TemplateDeclaration` + template-processing emitter to the `writer` package — 🟢 **`qti3` is MIT (© 2026 Longsight, Inc.), so this is a contribution, not a procurement** — and `core`'s parser plus `packages/fixtures/xml/random-integer-template-reference.xml` give it a **ready-made round-trip oracle** (write → parse → execute → assert the draw lands on the declared grid). 🔵 **Interim workaround already specified and costs nothing**: hand-author the template XML from that fixture (~35 lines) and let `core` execute it — `compose/patterns.md`, corrected step 1. 🔴 **Prerequisite for whoever takes it: run the suite.** `P527` is read from source and fixtures because installing a third-party repository's dependencies is not permitted in this environment |
+| 🆕 **238** | **2026-10-07**, pass 42 | `repos/foundations.md` · `P527`; `compose/patterns.md` | 🔴 **⛔ SUPERSEDED — DO NOT ACT ON THIS PRIORITY CLAIM.** 🟢 **`Gap 238` was CLOSED at pass 43** with a tested artefact (`P533`) — the closure row is 15 lines below. 🔵 Forward pointer added by pass 49, **flagged mechanically by `P598`** rather than by inspection. Pass-42 text kept verbatim: OPEN, and it is the cheapest gap on this KB. *"`LongsightGroup/qti3`'s `writer` cannot emit `qti-template-declaration` / `qti-template-processing`, so parametric item variants cannot be **authored** on the stack that can **deliver** them."* 🟢 **Remedy named, scoped and unusually small**: add a `buildQti3TemplateDeclaration` + template-processing emitter to the `writer` package — 🟢 **`qti3` is MIT (© 2026 Longsight, Inc.), so this is a contribution, not a procurement** — and `core`'s parser plus `packages/fixtures/xml/random-integer-template-reference.xml` give it a **ready-made round-trip oracle** (write → parse → execute → assert the draw lands on the declared grid). 🔵 **Interim workaround already specified and costs nothing**: hand-author the template XML from that fixture (~35 lines) and let `core` execute it — `compose/patterns.md`, corrected step 1. 🔴 **Prerequisite for whoever takes it: run the suite.** `P527` is read from source and fixtures because installing a third-party repository's dependencies is not permitted in this environment |
 
 🔴 **All three are declared with the remedy *and* its cost, and none is a wish: each names the specific
 artefact a later pass would have to produce.** 🟢 **`Gap 238` is the one a single pass could close
@@ -306,8 +383,8 @@ merely English-locked** — its blocker is now a **licence**, not a language.
 | Gap | Declared | Declaring pass · file · finding | Status read from the declaring line |
 |---|---|---|---|
 | 🆕 **244** | **2026-10-07**, pass 44 | `repos/foundations.md` · `P542`; `compose/code/p542-empty-input-sweep/README.md` | 🔴 **OPEN, and it is the half of `Gap 243` that did not close.** *"The read-count oracle does not reach shell, so 31 shell instruments that exit `0` after emitting output are unjudged, and 9 more time out."* 🟢 **Bounded, not vague**: the exact 40 rows are named in `result.2026-10-07.tsv` as `P542-UNADJUDICATED-OUTPUT` (31) and `P542-UNADJUDICATED-TIMEOUT` (9). 🔵 **Why it matters rather than being completeness for its own sake**: oracle B (silence) already caught **7** shell defects, so the shell population is **known to contain** this defect class and the 31 are where the rest would be. 🔵 **Remedy named and scoped**: a `PATH` shim exporting logging wrappers for `grep`/`cat`/`sed`/`awk`/`curl`/`git` ahead of the real tools, so a shell gate's judged-input count becomes measurable the way the audit hook makes Python's. 🔴 **Cost: one pass.** 🔴 **A tracer is NOT the remedy here — `strace` works but wrapping the cloned tree's code in it is not permitted in this environment** |
-| 🆕 **245** | **2026-10-07**, pass 44 | `repos/foundations.md` · `P542` | 🔴 **OPEN, and it is the cheapest gap on this KB — cheaper than `Gap 240`.** *"The 23 instruments that report success over an empty input are identified and not one of them is fixed."* 🟢 **The fix is known, written and already proven once**: `p383-region-heading-gate` is the worked example — `if not argv:` → print a refusal naming the correct invocation, `return 2`, plus a regression assertion. 🟢 **The 23 are enumerated by path and class** in `result.2026-10-07.tsv`, so there is no search step. 🔴 **Cost: mechanical, one pass, ~23 guards and 23 assertions** — and the sweep itself is the acceptance test, since it must drop to **0** `P541-*` rows. 🔴 **Why it was not done this pass, stated rather than hidden**: 23 edits across 23 directories, each needing its own suite re-run, is a second pass's work and bundling it with the instrument that found them would have left neither verifiable. 🔵 **Priority order named: `p370-gap-gate` and `p471-gap-gate-language` first** — they are the gates that exist to catch undeclared gaps |
-| 🆕 **246** | **2026-10-07**, pass 44 | `agents/top.md` · `P544`; `compose/patterns.md` · corrected step | 🔴 **OPEN, and it is now the binding constraint on `Gap 236` in place of `Gap 239`'s language framing.** *"No permissively-licensed Portuguese text-complexity feature extractor exists, and the spaCy `pt_core_news_*` **model artefact** licences are unmeasured."* 🟢 **Narrowed by measurement on both halves**: the index definitions (TTR, MTLD, MATTR, HD-D, syntactic-complexity indices) are **published statistics, free to reimplement**, and spaCy's **code** is **MIT** (payload read at HEAD `c2dabfc`, holder `ExplosionAI GmbH / spaCy GmbH / Matthew Honnibal`). 🔴 **What is unmeasured is the model artefacts**, which ship separately from the MIT code and may carry different terms — and a scorer that cannot license its tokeniser has no feature layer at all. 🔵 **Remedy and cost, split**: (a) read the `pt_core_news_*` artefact licence — minutes, and it gates everything else; (b) reimplement the index set over that pipeline — days; (c) 🔴 **the expensive part is validation**, since the published tools carry years of it and a reimplementation inherits none, so an agreement study against `essay-br`'s human scores is part of the work. 🔵 **Use nilcmetrix as a local comparison oracle only — never vendored, never hosted** (`P504` shape, and AGPL §13 is why) |
+| 🆕 **245** | **2026-10-07**, pass 44 | `repos/foundations.md` · `P542` | 🟡 **PARTIALLY CLOSED at pass 49 — 2 of 23.** 🟢 The two this row names as priority (`p370-gap-gate`, `p471-gap-gate-language`) are fixed, each with a guard **and** a regression assertion; suites **27/27** and **25/25**; 🟢 **`p542` sweep re-run: 23 → 21 defects** (`P599`). 🔴 **The remaining 21 are re-declared as `Gap 253`** so this row cannot be read as closed. 🔵 Pass-44 text kept verbatim: OPEN, and it is the cheapest gap on this KB — cheaper than `Gap 240`. *"The 23 instruments that report success over an empty input are identified and not one of them is fixed."* 🟢 **The fix is known, written and already proven once**: `p383-region-heading-gate` is the worked example — `if not argv:` → print a refusal naming the correct invocation, `return 2`, plus a regression assertion. 🟢 **The 23 are enumerated by path and class** in `result.2026-10-07.tsv`, so there is no search step. 🔴 **Cost: mechanical, one pass, ~23 guards and 23 assertions** — and the sweep itself is the acceptance test, since it must drop to **0** `P541-*` rows. 🔴 **Why it was not done this pass, stated rather than hidden**: 23 edits across 23 directories, each needing its own suite re-run, is a second pass's work and bundling it with the instrument that found them would have left neither verifiable. 🔵 **Priority order named: `p370-gap-gate` and `p471-gap-gate-language` first** — they are the gates that exist to catch undeclared gaps |
+| 🆕 **246** | **2026-10-07**, pass 44 | `agents/top.md` · `P544`; `compose/patterns.md` · corrected step | 🔴 **OPEN, and it is now the binding constraint on `Gap 236` in place of `Gap 239`'s language framing.** *"No permissively-licensed Portuguese text-complexity feature extractor exists, and the spaCy `pt_core_news_*` **model artefact** licences are unmeasured."* 🟢 **Narrowed by measurement on both halves**: the index definitions (TTR, MTLD, MATTR, HD-D, syntactic-complexity indices) are **published statistics, free to reimplement**, and spaCy's **code** is **MIT** (payload read at HEAD `c2dabfc`, holder `ExplosionAI GmbH / spaCy GmbH / Matthew Honnibal`). 🔴 **⛔ SUPERSEDED IN PART — the artefact licences ARE measured.** 🔵 Forward pointer added by pass 49 (`P597`): `pt_core_news_sm/md/lg` are **CC-BY-SA-4.0** at **3.8.0 and 3.7.0** (`agents/top.md`, `verticals/solutions.md`), inherited from `UD_Portuguese-Bosque`; measured **before** pass 49 and re-confirmed by it. 🔴 **Pass 49 read this row top-down, believed "unmeasured", and spent budget re-measuring settled work** — the second instance of `P582`, and the first found by paying for it. 🟢 **Still genuinely open: halves (b) and (c) only** — the *extractor* and its validation. 🔴 **And `P595` adds what this row never covered: `es_core_news_*` is GPL-3.0** → **`Gap 254`**. 🔵 Pass-44 text kept verbatim for citation integrity: what was unmeasured is the model artefacts, which ship separately from the MIT code and may carry different terms — and a scorer that cannot license its tokeniser has no feature layer at all. 🔵 **Remedy and cost, split**: (a) read the `pt_core_news_*` artefact licence — minutes, and it gates everything else; (b) reimplement the index set over that pipeline — days; (c) 🔴 **the expensive part is validation**, since the published tools carry years of it and a reimplementation inherits none, so an agreement study against `essay-br`'s human scores is part of the work. 🔵 **Use nilcmetrix as a local comparison oracle only — never vendored, never hosted** (`P504` shape, and AGPL §13 is why) |
 
 🔴 **All three are declared with the remedy *and* its cost, and none is a wish.** 🟢 **`Gap 245` is
 the one a single pass could close outright, and `Gap 246`'s first step is minutes of work that gates

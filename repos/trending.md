@@ -4,6 +4,40 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 2026-10-08 — pass 49 (third of this date)
+
+🔵 **APPEND-ONLY.** History below is untouched.
+
+🔴 **No new education repository entered this shelf from the trending channel.** The mandated query
+(`github trending education AI 2026`) ran verbatim, globally and once per region.
+
+### What the trending channel returned
+
+| Repo / asset | Class | Verdict |
+|---|---|---|
+| `kouweizhu/agents-radar` (issues #328, #370) | automated daily trend digest | 🟢 **Already recorded** — a *channel*, not a repo to vendor |
+| `thedotmack/claude-mem` | agent memory, TypeScript | 🔴 **Horizontal**, not education |
+| `msitarzewski/agency-agents` | agent scaffolding | 🔴 **Horizontal**, not education |
+| `microsoft/generative-ai-for-beginners` | course | 🟢 Already recorded as enablement |
+| `LLMs-from-scratch`, `ai-engineering-from-scratch` | build-an-LLM tutorials | 🟢 Already recorded |
+| `karpathy/nanochat` | minimal LLM training stack | 🔴 **Horizontal**; AI-engineering education, not education-sector software |
+| `github.com/topics/ai-education` | GitHub topic page | 🟡 **Stale** — the channel's own update dates are inconsistent |
+
+🔴 **The resolution problem pass 48 recorded reproduces.** `agents-radar`'s 2026-10-04 digest lists
+`ai-engineering-from-scratch`; its 2026-10-07 digest lists **no LLM or RAG project at all**. 🔵 **A
+channel whose education content vanishes between two consecutive daily reports cannot establish a
+trend** — only confirm a name already held.
+
+### 🟢 New to this shelf as a **licence channel**, not as a trending repo
+
+| Repo | Refs | Licence (first-hand) | Why it is here |
+|---|---|---|---|
+| [`explosion/spacy-models`](https://github.com/explosion/spacy-models) | 2 | 🔴 **none** — `LICENSE`/`LICENSE.md`/`license.txt` all **404** | 🟢 the channel that answers `Gap 246` **and** `Gap 254`: licences live **per artefact** in `meta/<model>-<ver>.json`, not at repo root |
+| [`UniversalDependencies/UD_Spanish-AnCora`](https://github.com/UniversalDependencies/UD_Spanish-AnCora) | 4 | 🔴 **GNU GPL 3.0** | 🆕 the treebank **under** spaCy's ES models — the source of their GPL (`P595`) |
+
+🔵 **Negative control in the same run:** `globant/NEGATIVE-CONTROL-no-existe-49` → **0 refs**, so a
+non-zero ref count is a measurement and not an artefact of the probe (`P510`).
+
 ## 2026-10-08 — pass 48 (second of this date)
 
 🔵 **APPEND-ONLY.** History below is untouched.

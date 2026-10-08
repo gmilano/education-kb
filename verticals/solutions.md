@@ -4,6 +4,78 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🔴 Forty-ninth pass, 2026-10-08 — the vertical query's **MIT/Apache** headline is a licence that *subordinates* Apache-2.0, read from payload
+
+⏱️ **Third pass of this date.** Licences read first-hand on 2026-10-08 from the repository
+**payload** over `raw.githubusercontent.com`, with the HTTP status recorded per filename. **No star
+counts** (`P479`).
+
+🔵 **The mandated verticals query ran verbatim** (`open source platform education ERP CRM MIT
+Apache`) and returned: ERPNext / Frappe Education, OpenEduCat, Apache OFBiz, **NocoBase**, Aureus
+ERP, OpenTaps. 🟢 **Five of the six are already on this shelf.** 🔴 **The sixth is the one the
+roundups call Apache-2.0, and its payload says something materially different.**
+
+### 🔴 `P600` — NocoBase incorporates Apache-2.0 and then **overrides it**, and clause 7.5 is a direct blocker for a studio engagement
+
+The query's headline "Apache 2.0" option was NocoBase
+([`nocobase/nocobase`](https://github.com/nocobase/nocobase), **487 refs**), presented by the
+secondary roundups as *"fully open-source and licensed under Apache License 2.0."* Probed
+first-hand this pass:
+
+| Filename probed | HTTP | Payload |
+|---|---|---|
+| `main/LICENSE` | 🔴 **404** | — |
+| `main/LICENSE.txt` | 🟢 **200** | 🔴 **`NocoBase License Agreement`**, **8,592 B**, NOCOBASE PTE. LTD. (Singapore), *"Updated Date: February 24, 2026"* |
+| `main/LICENSE.md` · `main/COPYING` · `main/LICENSE-APACHE` · `main/packages/core/LICENSE` | 404 | — |
+
+🔴 **The clause that decides it, quoted from payload (§4.2):**
+
+> *"This Agreement incorporates and references the full text of the Apache License, Version 2.0 …
+> Users must comply with the Apache-2.0 License **as well as the supplementary terms set forth in
+> this Agreement. In case of any inconsistency between Apache-2.0 and this Agreement, the
+> supplementary terms of this Agreement shall prevail.**"*
+
+🔴 **So Apache-2.0 is present but *subordinated*** — and the supplementary terms add restrictions
+Apache-2.0 does not have. §7.5, verbatim: *"It is not allowed for the User holding a Standard
+Edition license to sell Upper Layer Application to Customers without a Commercial license."*
+
+🔴 **Why this would have reached a client.** Building a client-specific application on top of a
+platform and delivering it **is** selling an Upper Layer Application to a Customer. 🟢 **Under
+Apache-2.0 that is unambiguously permitted.** 🔴 **Under this agreement it requires a commercial
+licence** — a procurement line item, discovered after the architecture is chosen if the shelf had
+recorded "Apache-2.0" from the roundup.
+
+🔵 **And note the shape of the trap, because it defeats both naive readings.** An automated probe of
+`LICENSE` gets **404** and would record *"ungranted"*; a human reading the roundups records
+*"Apache-2.0"*. 🟢 **Both are wrong; the answer is in a non-default filename.**
+
+### 🔴 Third consecutive pass in which a verticals roundup's licence claim fails first-hand reading
+
+🔵 **This is now a property of the channel, not of one repository.**
+
+| Pass | Finding | Roundup said | Payload said |
+|---|---|---|---|
+| 47 | `P574` | Huly *"Apache-2.0"* | 🔴 **EPL-2.0** |
+| 48 | `P589` | Huly *"Apache-2.0"* (corroborated independently) | 🔴 **EPL-2.0**, 14,197 B |
+| **49** | **`P600`** | NocoBase *"fully open-source, Apache-2.0"* | 🔴 **proprietary agreement that overrides Apache-2.0**, 8,592 B |
+
+🔴 **Three for three.** 🟢 **The operational rule, and it is cheap:** no platform enters this shelf
+on a roundup's licence claim — the payload is read, and **every** candidate filename is probed, not
+just `LICENSE`. 🔵 **Declared as a standing rule rather than a per-repo caveat.**
+
+### 🟢 Re-confirmed this pass, unchanged
+
+| Platform | Licence (first-hand) | Note |
+|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 **LGPL-3.0** (`master/LICENSE`, **8,241 B**: *"published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3"*) | education-specific ERP on Odoo; 17 refs. Shelf entry **confirmed correct** |
+| ERPNext / Frappe Education | 🟡 **GPL-3.0** | already recorded; the ready-made education option, copyleft |
+| Apache OFBiz | 🟢 **Apache-2.0** | already recorded; genuinely permissive, needs education modules built |
+
+🔵 **So the permissive-vertical picture is unchanged by this pass and is worth restating plainly:**
+🔴 **every *education-specific* platform on this shelf is copyleft (LGPL-3 or GPL-3)**, and every
+permissive option is a **general** business platform that needs the education layer built. 🟢 **That
+is a stable, three-pass-old measurement, and it is the architecture decision, not a gap.**
+
 ## 🔴 Forty-eighth pass, 2026-10-08 — the vertical query's own "Apache-2.0 option" is **EPL-2.0**, read from payload, and the architecture decision it changes
 
 ⏱️ **Second pass of this date.** Licences read first-hand on 2026-10-08 from the repository

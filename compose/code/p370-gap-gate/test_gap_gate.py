@@ -210,6 +210,15 @@ class TestFalsoNegativoDelDetectorDeCelda(unittest.TestCase):
 
 
 def run():
+    # 🔴 `Gap 245` / `P541`, regresion del pase 49 del 2026-10-08: esta compuerta
+    # salia 0 sin juzgar nada.  Un contrato de uso que hay que recordar no es un
+    # control (`P237`), asi que el rechazo se asegura aca y no solo se documenta.
+    import gap_gate as _m
+    _r = _m.main([])
+    if _r != 2:
+        print(f'FAIL  P541-NO-INPUT: main([]) dio {_r}, se esperaba 2')
+        globals().setdefault('_P541_FAIL', True)
+
     loader = unittest.TestLoader()
     suite = unittest.TestSuite(
         loader.loadTestsFromTestCase(c) for c in

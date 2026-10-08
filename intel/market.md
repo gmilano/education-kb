@@ -4,6 +4,124 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🔴 Forty-ninth pass, 2026-10-08 — the regional channel's new-information yield this window is **zero**, measured name by name
+
+⏱️ **Third pass of this date.** 🔵 **All market and regulatory figures below are secondary and carry
+their source.** The four mandated regional queries ran verbatim, plus the global trends query.
+
+### 🔴 `P601` — every distinct datum the five queries returned was **already in this KB**, to the figure
+
+🔵 **Measured, not estimated.** Each named instrument, body, statistic and actor returned by the
+five queries was checked by name against the live tree:
+
+| Region | Named items returned | Already held | New |
+|---|---|---|---|
+| **North America** | Ohio first-state AI-policy mandate (2026-07-01), CA A.B. 1159, OK/MD human-oversight rules, H.R. 8747 (committee), 134 bills / 31 states, NYC K-8 moratorium | 🟢 **all** | 🔴 **0** |
+| **EMEA** | EU AI Act Annex III education high-risk, Art. 50 transparency, Art. 4 AI literacy, enforcement from 2026-08-02, OECD *Digital Education Outlook 2026*, UNESCO GenAI guidance | 🟢 **all** | 🔴 **0** |
+| **APAC** | KR AI Basic Act (in force 2026-01-22, grace year), VN Law on AI (effective 2026-03-01, education among six high-risk sectors), TW AI Basic Act, AU AI Safety Institute + National AI Plan | 🟢 **all** | 🔴 **0** |
+| **LATAM** | UNESCO LAC Observatory (2026-04-14, roadmap 2026–2029), IESALC/UNU-IAS 200 HEIs / 19 countries / 87% / 26%, TALIS 2024 (BR 56 / CL 55 / CO 53 / CR 52 vs OECD 36), Cetic.br (BR 53% admins / 22% guidelines), UNESCO–CENIA, IADB EduIA Lab / Gestão Presente, Ceibal | 🟢 **all** | 🔴 **0** |
+
+🔵 **Pass 48 measured 23 of 24 already held and its one new datum failed verification (`Gap 251`).
+🔴 Pass 49 measures 24 of 24.** 🟢 **Two consecutive passes at or near total saturation is a finding
+about the channel**: the secondary regional-policy channel has been fully harvested for this window,
+and the next new regional datum will come from a **primary** source or not at all.
+
+### 🔴 `P602` — the seven blocked primaries were re-probed and **all seven are still refused**
+
+🔵 **Re-probed rather than assumed, because a network policy can change between passes.** One
+`curl -sSI` per URL, same run:
+
+| Primary | Gap it blocks | HTTP |
+|---|---|---|
+| `eur-lex.europa.eu` (CELEX 32024R1689) | `Gap 56`, **`Gap 241`** | 🔴 **000** |
+| `digital-strategy.ec.europa.eu` | **`Gap 241`** (the amending instrument) | 🔴 **000** |
+| `alison.legislature.state.al.us` | **`Gap 251`** | 🔴 **000** |
+| `billtrack50.com` | **`Gap 251`** | 🔴 **000** |
+| `cs4alabama.org` | **`Gap 251`** | 🔴 **000** |
+| `purl.imsglobal.org` (QTI 3 ASI XSD) | `Gap 240` | 🔴 **000** |
+| `docs.moodle.org` | `Gap 92` | 🔴 **000** |
+
+🟢 **Control in the same run:** `raw.githubusercontent.com` → **200**, so the refusals are the
+egress policy and not a dead network. 🔴 **`Gap 241` is the costly one**: this pass's EMEA run
+surfaced a Commission page stating the AI Act amendments were *"adopted in June 2026"* and entered
+into force *"27 July 2026"* — 🔴 **which is exactly the identifier `Gap 241` needs, from a domain
+this environment cannot read.** 🔵 **So the date must still not appear in a client deliverable as
+settled law.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **Governance instrumentation, sold as a control rather than a policy document.** 134 bills across
+31 states means every multi-state district group now has a conformance surface, and Ohio's mandate
+(every district with a formal AI policy by **2026-07-01**) has already passed its deadline — so the
+market is **audit**, not authoring. 🔵 **What this KB can put behind it:** the human-decision gate
+(`compose/code/grading-draft-gate/`) satisfies the OK/MD human-oversight rules and NYC's red tier
+directly. 🔴 **Licence note that decides the build:** an English-language scorer can be assembled
+**permissively end to end** — `en_core_web_*` is **MIT** (`P595`) and `wwrwbs/AI_AWE` is Apache-2.0
+with permissive closure. 🟢 **North America is the one region where the essay-scoring chain has no
+licence blocker.**
+
+### EMEA
+
+🟢 **AI Act conformance packaging, with the Article 50 marking instruments this KB already holds**
+(`compose/code/aiact-50-2-marking/`, `-pack/`, `-exposure/`). 🔵 Education sits in Annex III
+high-risk, so admissions, evaluation and exam scoring carry risk management, data governance, human
+oversight and conformity assessment. 🔴 **Sell the Article 4 AI-literacy and Article 50 transparency
+work now and treat the Annex III deferral date as unsettled** — `Gap 241`/`P602`: the deferral to
+December 2027 is consistent across every secondary source and **citable from none of them primarily
+from this environment**. 🟢 **The cheapest governance artefact on offer here is the supersession
+marker for ADRs and compliance logs** (`P582`, and `P598` now mechanises it).
+
+### APAC
+
+🟢 **Multi-jurisdiction policy routing, and it is the region where regulation is genuinely ahead of
+the tooling.** Vietnam's Law on AI (effective **2026-03-01**, the first standalone AI statute in
+South-East Asia) names **education** among six high-risk sectors and reaches **automated assessment
+and behavioural monitoring** by name; Korea's AI Basic Act is in force (**2026-01-22**) with a
+stated grace year. 🔵 **The deliverable is a policy-node architecture** — one assessment pipeline,
+per-jurisdiction gates — because a single compliance posture cannot satisfy KR, VN, TW, CN, SG, JP
+and AU simultaneously. 🔴 **No new APAC *repository* this pass or in the last nine**; the region
+imports its software and writes its own rules.
+
+### LATAM
+
+🟢 **The governance gap is the whole opportunity, and it is now a two-source measurement.**
+IESALC/UNU-IAS: **87%** of 200 HEIs across 19 countries run AI in at least one area, **26%** have
+any formal framework. Cetic.br: **53%** of Brazilian school administrators use AI, **22%** have
+guidelines. 🔵 **Institutions are already running AI; almost none can describe how** — that is a
+framework-and-audit engagement, not a build.
+
+🔴 **And this pass adds the licence constraint that changes a Spanish-language proposal.** `P595`:
+`es_core_news_*` is **GNU GPL 3.0** (inherited from `UD_Spanish-AnCora`), against Portuguese's
+CC BY-SA 4.0 and English's MIT. 🔴 **So a Spanish assessment product cannot ship permissively on the
+default NLP pipeline at all** — one tier *earlier* than `Gap 237`'s rubric-and-corpus problem bites.
+🟢 **Portuguese remains the viable LATAM build** (ShareAlike is restrictive but publishable, and
+`lplnufpi/essay-br` is MIT); 🔴 **Spanish needs either a licensed pipeline, a reimplementation, or a
+copyleft-accepting delivery model — priced before the pitch, not after.** 🟢 **Declared `Gap 254`.**
+
+### Global
+
+🟢 **The cross-region deliverable this pass makes concrete: a licence-by-language pre-flight for any
+assessment or language product.** 🔴 **`P596` is the reason it is not optional** — "the library is
+MIT" is true of spaCy's code and **false of the artefact a non-English product ships**, and the
+licence gets *more* restrictive one tier down, not less. 🔵 **The check is three lines of work and
+belongs in the first week of any engagement**: read the model artefact's own metadata, then its
+`sources[]` corpora, then each corpus's own `LICENSE`.
+
+| Target language | Pipeline artefact | Can the product ship permissively? |
+|---|---|---|
+| English | `en_core_web_*` 🟢 **MIT** | 🟢 **yes**, end to end |
+| Portuguese | `pt_core_news_*` 🟡 **CC BY-SA 4.0** | 🟡 **publishable, but ShareAlike travels** |
+| Spanish | `es_core_news_*` 🔴 **GPL-3.0** | 🔴 **no** — needs a licensed pipeline, a reimplementation, or copyleft delivery |
+
+🔵 **And the governance artefact that sells in every region, because it is cheap and this pass
+mechanised it:** append-only logs — ADRs, compliance registers, risk logs, incident timelines — are
+*correct by construction and misleading by ordering*. 🔴 **Every entry is true as of its date, so
+nothing is ever wrong, and a reader who stops at the first match is nonetheless misinformed.**
+🟢 **`compose/code/p598-register-freshness-gate/` is the control**, and `P597` is this KB paying the
+cost in its own register before selling the fix.
+
 ## 🔴 Forty-eighth pass, 2026-10-08 — the regional channel returned **one** datum this KB did not hold, and it does not survive verification
 
 ⏱️ **Second pass of this date.** 🔵 **All market and regulatory figures below are secondary and carry
@@ -69,7 +187,7 @@ again by an independent run this pass. **No figure below is new to this KB.**
   traffic-light guidance (Mar 2026, red tier bars AI grading), ED's AI grant-priority rule
   (2026-04-13), **H.R. 8747** advanced in committee 2026-07-21, 35+ states with official guidance.
 
-## Opportunities by region
+## Opportunities by region — superseded (the live block is at the top of this file)
 
 🔵 **One heading, five subsections, every region answered — including the ones where the answer is
 "nothing new this pass".** An unplaced finding is worth less than a placed one, and a region left
@@ -394,7 +512,7 @@ Europe, MOE, national curriculum authority) before concluding anything. 🔵 **T
 are cheap and two need a different query — knowing which is which is worth more than running all four
 identically.**
 
-## Opportunities by region
+## Opportunities by region — superseded (the live block is at the top of this file)
 
 🔵 **The file's single canonical block (`P383`), refreshed by pass 47 on 2026-10-08.** Every
 subsection states what the regional channel returned **and what it did not** — an informed gap is

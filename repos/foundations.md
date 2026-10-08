@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Forty-ninth pass, 2026-10-08 — `explosion/spacy-models` read as a licence **channel**, and it answers a question this KB had only asked for Portuguese
+
+⏱️ **Third pass of this date.** Model metadata read first-hand on 2026-10-08 from
+`raw.githubusercontent.com`; code licences from the repository **payload**. Existence by
+`git ls-remote --heads` against a negative control in the same run (**0 refs**). **No star counts**
+(`P479`).
+
+### 🟢 `P595` / `P596` — the per-language licence table, measured across two minor versions
+
+🔵 **Why two versions.** A single version's metadata could carry a typo; the same value at 3.7.0 and
+3.8.0 is a **policy**, not an artefact of one release.
+
+| Repo / artefact | Refs | Licence (first-hand) | Source |
+|---|---|---|---|
+| [`explosion/spaCy`](https://github.com/explosion/spaCy) | 78 | 🟢 **MIT**, **1,128 B**, © 2016-2024 ExplosionAI GmbH / spaCy GmbH / Matthew Honnibal | `master/LICENSE`, HTTP 200 |
+| [`explosion/spacy-models`](https://github.com/explosion/spacy-models) | 2 | 🔴 **no licence payload** — `LICENSE`, `LICENSE.md`, `license.txt` all **404** | metadata repo; licences live *per model* in `meta/` |
+| `en_core_web_sm` / `en_core_web_lg` | — | 🟢 **MIT** (3.8.0 **and** 3.7.0) | `meta/en_core_web_*-3.8.0.json` |
+| `pt_core_news_sm` / `md` / `lg` | — | 🟡 **CC BY-SA 4.0** (3.8.0 **and** 3.7.0) | `meta/pt_core_news_*-3.8.0.json` |
+| `es_core_news_sm` | — | 🔴 **GNU GPL 3.0** (3.8.0 **and** 3.7.0) | `meta/es_core_news_sm-3.8.0.json` |
+| `xx_ent_wiki_sm` | — | 🟢 **MIT** (3.8.0 **and** 3.7.0) | `meta/xx_ent_wiki_sm-3.8.0.json` |
+| [`UniversalDependencies/UD_Portuguese-Bosque`](https://github.com/UniversalDependencies/UD_Portuguese-Bosque) | 5 | 🟡 **CC BY-SA 4.0** | already recorded; re-confirmed as the PT models' `sources[]` entry |
+| [`UniversalDependencies/UD_Spanish-AnCora`](https://github.com/UniversalDependencies/UD_Spanish-AnCora) | 4 | 🔴 **GNU GPL 3.0** | 🆕 **README from payload:** *"The GNU license is inherited from the original dataset, downloaded from the AnCora website"* |
+
+🔴 **The repo that holds the models carries no licence of its own**, which is exactly the shape
+`P502` warns about: a probe of `LICENSE` returns **404** and an instrument that reads 404 as *"no
+grant"* would record the whole model family as ungranted, while a reader who trusts the roundups
+would record it as MIT. 🟢 **Both are wrong, and the right answer is one level down, per artefact,
+in `meta/`.**
+
+### 🟢 `P599` — `Gap 245` partially closed, and the acceptance test was re-run rather than asserted
+
+`Gap 245` enumerated **23** instruments in `compose/code/` that exit `0` having judged nothing
+(`P541`), named the fix, and named the priority order: 🔵 *"`p370-gap-gate` and
+`p471-gap-gate-language` first — they are the gates that exist to catch undeclared gaps."*
+
+🟢 **Both are fixed this pass**, with the `p383` guard shape (`if not argv:` → refusal on stderr →
+`return 2`) plus a **regression assertion in each suite**, because a usage contract you have to
+remember is not a control (`P237`).
+
+| Instrument | `p542` class, pass 44 | `p542` class, **re-run this pass** | Suite |
+|---|---|---|---|
+| `p370-gap-gate/gap_gate.py` | 🔴 `P541-FALSE-PASS` | 🟢 **`REFUSES`** (exit 2) | 🟢 **27/27** |
+| `p471-gap-gate-language/gap_language.py` | 🔴 `P541-FALSE-PASS` | 🟢 **`REFUSES`** (exit 2) | 🟢 **25/25** |
+| `p598-register-freshness-gate/freshness_gate.py` 🆕 | — | 🟢 **`REFUSES`** (exit 2) | 🟢 **58/58**, 7/7 mutants |
+
+🟢 **The sweep was re-run, not reasoned about:** `P541-FALSE-PASS` **16 → 14**,
+`P541-SILENT-SUCCESS` **7 → 7**, 🟢 **total defects 23 → 21**.
+
+### 🟢 `P608` — incidental re-measurement: the Java/Maven education shelf has not drifted in four days
+
+🔵 **Not planned — produced by the `p542` sweep invoking `p294-pom-in-production`**, which re-ran its
+POM licence measurement against live upstream and wrote `result.2026-10-08.tsv` beside the existing
+`result.2026-10-04.tsv`. 🟢 **Kept, because it is real measured output and the directory's convention
+is dated results side by side.**
+
+🟢 **Diffed rather than assumed.** 7 rows vs 7 rows, and **one byte** of difference in total:
+
+| Repo | Declared in POM | Family | 10-04 → 10-08 |
+|---|---|---|---|
+| [`kuali/kc`](https://github.com/kuali/kc) | GNU Affero GPL v3 | 🔴 **AGPL-3.0** | 🟢 unchanged |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | Educational Community License v2.0 | 🟡 **ECL-2.0** | 🟢 unchanged |
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) | Apache Software License v2.0 | 🟢 **Apache-2.0** | 🟢 unchanged |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | *"Apache 2.0 Open Source L6icense"* (upstream's own typo, preserved) | 🟢 **Apache-2.0** | 🟡 POM **84,781 → 84,780 B** |
+
+🟢 **Every licence verdict and every `ACUERDO` is identical**; the only change is one byte in
+OpenOLAT's `pom.xml`. 🔵 **Worth one line rather than a section, and worth more than silence:** it
+turns "we measured this four days ago" into "this has not moved", which is the claim a client
+engagement actually needs.
+
+🔴 **Scope stated honestly: 2 of 23.** The remaining **21** are untouched and are re-declared as
+**`Gap 253`** rather than left inside a gap this pass can be read as having closed. 🔵 **And the new
+instrument this pass adds classified `REFUSES` on its first sweep** — it did not reproduce the
+defect it was built to document.
+
 ## 🟢 Forty-eighth pass, 2026-10-08 — upstream `qti3` re-read from a fresh clone: the measurement pass 43 recorded is still exactly current, and the *reason* the writer lacks the mechanism prices the upstream PR
 
 ⏱️ **Second pass of this date.** Licence and source read first-hand on 2026-10-08 from a **fresh

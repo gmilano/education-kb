@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 2026-10-08 — pass 49 (third of this date)
+
+🔵 **APPEND-ONLY.** History below is untouched.
+
+🔴 **Zero new education agents — seventeenth consecutive saturation reproduction.** The mandated
+query (`top open source AI agents education 2026 github MIT`) ran verbatim, globally and once per
+region.
+
+### What the channel returned, by class
+
+| Class | Names returned | Verdict |
+|---|---|---|
+| **Horizontal agents** (not education) | OpenHands, CrewAI, LangGraph, OpenClaw, OpenAI Codex | 🔴 **Out of scope** — general frameworks, already on the horizontal shelf |
+| **Catalogues of agents** | `ashishpatel26/500-AI-Agents-Projects`, `ARUNAGIRINATHAN-K/awesome-ai-agents-2026`, `caramaschiHG/awesome-ai-agents-2026` | 🔴 **Not agents.** Lists, all three already recorded |
+| **Courses / curricula** | `microsoft/ai-agents-for-beginners`, `huggingface/agents-course`, `pguso/agents-from-scratch` | 🟢 Already on the shelf as enablement assets |
+
+🟢 **Every name checked against the live tree; the channel returned nothing this KB did not hold.**
+
+### 🔴 The one measurement that is new, and it is in the **feature layer**, not the agent shelf
+
+`P595` (`agents/top.md`): **`es_core_news_*` is GNU GPL 3.0**, inherited from `UD_Spanish-AnCora`.
+🔴 **The string `es_core_news` appeared in zero files of this KB before this pass.**
+
+| Artefact | Licence (metadata, HTTP 200) | Corpus | Corpus licence |
+|---|---|---|---|
+| `en_core_web_sm` / `lg` | 🟢 **MIT** | OntoNotes 5 | 🔴 commercial (licensed by Explosion) |
+| `pt_core_news_sm` / `md` / `lg` | 🟡 **CC BY-SA 4.0** | `UD_Portuguese-Bosque` v2.8 | 🟡 CC BY-SA 4.0 |
+| `es_core_news_sm` | 🔴 **GNU GPL 3.0** | `UD_Spanish-AnCora` v2.8 | 🔴 GNU GPL 3.0 |
+| `xx_ent_wiki_sm` | 🟢 **MIT** | WikiNER | 🟢 CC BY 4.0 |
+
+🔵 **`P596`:** English is permissive **because the corpus was bought**; PT and ES are copyleft
+**because theirs are free**. 🔴 **A Spanish scorer cannot ship permissively on this pipeline at all.**
+
+### 🔵 Regional runs — all four executed, all four reproduced the saturation
+
+| Region | Result | What came back instead |
+|---|---|---|
+| **North America** | 🔴 no new agent | 134 AI-in-education bills across 31 states; H.R. 8747 in committee |
+| **EMEA** | 🔴 no new agent | AI Act high-risk conformance guides; OECD *Digital Education Outlook 2026* |
+| **APAC** | 🔴 no new agent | KR AI Basic Act (in force 2026-01-22), VN AI Law (2026-03-01), TW AI Basic Act |
+| **LATAM** | 🔴 no new agent | UNESCO LAC Observatory (2026-04-14), IESALC/UNU-IAS study, IADB programmes |
+
+🔴 **Every regional datum above was already in this KB, to the figure.** Pass 48 measured 23 of 24
+already held; 🔴 **pass 49 measures 100% held — the regional channel's new-information yield this
+window is zero.** 🔵 **That is a finding about the channel, not about the regions.**
+
 ## 2026-10-08 — pass 48 (second of this date)
 
 🔵 **APPEND-ONLY.** History below is untouched.
