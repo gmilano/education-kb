@@ -4,6 +4,92 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-fourth pass, 2026-10-08 — week of 2026-10-08: **six rows measured by function**, two defaults that are neither `main` nor `master`, and the week's one unresolvable repository is the most informative row in the table
+
+⏱️ **Eighteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Oracle map re-measured before any datum (`P713`, `P745`, `P791`), from calibration pairs:** `raw`
+discriminates **four ways on a single repository** — real file **200**, invented path **404**,
+invented **branch** **404**, invented **repo** **404**; `pypi` **200 / 404** against its own pair;
+`npm` **200 / 404** against its own pair; `ls-remote --symref` discriminates **and resolves the
+default ref**. 🔴 `api.github.com/repos/{third-party}` **403** — **no star counts, so nothing below
+is ranked by popularity** (`P745`). 🔴 Policy/report hosts **refused at the egress proxy, which names
+itself in the refusal** (`Gap 293`).
+
+### 🟢 This week's sweep, ordered by what it is FOR — because stars are unreachable and dates mostly are too
+
+🔵 **This is not a trending-by-stars block.** 🟢 **It is the credential-issuance and rostering tier
+read at its grant layers, plus every default ref resolved from the oracle before any payload was
+fetched.**
+
+| Component | Function | Default ref · HEAD | Grant, by layer | Region | Verdict |
+|---|---|---|---|---|---|
+| [`educredentials/ec-issuer`](https://github.com/educredentials/ec-issuer) | **Open Badges 3.0 + ELM** issuing/signing, OID4VCI to wallets, revocation with reason tracking | `main` · **`8bafc99`** | 🔴 file **absent** (8 names, all 404) · 🔴 manifest **silent** (`pyproject.toml` 1 453 B, no `license` key) · 🔴 registry **absent** (pypi 404 ×2 vs its pair) · 🟡 prose **`MIT`**, two words | **EMEA** (NL) | 🟡 **LEAD — not a foundation row** |
+| [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | OB 3.0 **issue and verify**, Strapi + Nuxt | `main` · **`6fd0a11`** | 🔴 file **AGPL-3.0**, 33 820 B, *"Version 3, 19 November 2007"* | **EMEA** (IT) | 🔴 **copyleft — self-host only** |
+| [`19otherrsh-dot/Opencred`](https://github.com/19otherrsh-dot/Opencred) | OB 3.0 platform, `did:web` issuer identity | `main` · **`d14619e`** | 🔴 file **AGPL-3.0**, 34 523 B | 🔴 **unplaced** | 🔴 **HELD — canonicality unresolved** |
+| [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | **OneRoster 1.2** server over Ed-Fi ODS 4.0/5.x | `main` · **`6de5476`** | 🟢 file **Apache-2.0**, 10 173 B | **North America** | 🟢 **reconfirmed at a resolved ref** |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | Education **ERP** substrate (Odoo) | 🔴 **`19.0`** · **`1c95cef`** | 🔴 **LGPL-3.0** from the **body**; its own first line points at `COPYRIGHT`, which **404s** | **Global** | 🔴 **copyleft substrate** |
+| [`frappe/education`](https://github.com/frappe/education) | School-management module on ERPNext/Frappe | 🔴 **`develop`** · **`444cc8e`** | 🔴 `license.txt` **19 B** — `License: GNU GPL V3`, **no body, no "or later", no holder, no year** | **Global** | 🔴 **copyleft substrate, grant under-specified** |
+| [`1EdTech/caliper-js`](https://github.com/1EdTech/caliper-js) | **Caliper Analytics** Sensor API (JS) | 🔴 **does not resolve** | 🔴 **unreadable** | — | 🔴 **`Gap 284`'s cause, measured** |
+
+🟢 **Seven rows. Every grant read from payload at a ref the oracle resolved.** 🔴 **Zero star counts,
+because `api.github.com` is 403 and `P745` forbids inferring one.** 🔴 **One permissive row with a
+file-layer grant** (`edfi-oneroster`), 🟡 **one permissive row with only a prose grant**
+(`ec-issuer`), 🔴 **four copyleft, one unreadable.**
+
+### 🔴 The most informative row is the one that returned nothing
+
+🟢 **`ls-remote --symref … HEAD` resolved the default ref and HEAD for **7 of 8** repositories probed
+this pass — six `main`, one `master`, two version/branch-named among the eight. 🔴 For
+[`1EdTech/caliper-js`](https://github.com/1EdTech/caliper-js) it resolved nothing**, on the same
+instrument, in the same minute, under the same proxy.
+
+🔵 **An instrument that discriminates 7 of 8 makes the eighth a measurement rather than an outage.**
+🟢 **And it agrees with 1EdTech's own published position**, which the channel surfaced this week: the
+Caliper Sensor API repositories are *"available for 1EdTech Contributing and Affiliate Members"*, who
+*"can request Github access"*; the specification repository carries the **1EdTech Specification
+Document License**, which is neither Apache nor MIT. 🟢 **So `Gap 284` is measured at its cause: the
+reference sensors are behind membership, not missing from the channel.** 🔴 **The gap stays open**,
+with `tl-its-umich-edu/caliper-php-public` (pass 63) still the only reachable implementation and its
+LGPL-file-versus-`proprietary`-manifest split unresolved.
+
+### 🟢 `P793`, widened — and the widening is the week's most reusable datum
+
+🟢 **Pass 63 measured the version-named default branch on 7 of 25 PHP/composer rows and called the
+defect ecosystem-concentrated.** 🟢 **This week adds two non-PHP instances, both ERP-shaped Python:**
+`openeducat/openeducat_erp` defaults to **`19.0`** and `frappe/education` defaults to **`develop`**.
+🔴 **A `{main,master}` probe reports "no licence file" for both** — and both have one.
+
+🔵 **So the predictor is release-branch discipline, not language.** 🟢 **Operational rule, unchanged
+and now better supported: resolve the default ref from the oracle before fetching any payload, on
+every ecosystem, every time.** 🔴 **No rate claimed from 2 of 2** (`P744`) — two named repositories,
+both named above.
+
+### 🔴 What the channel offered that is NOT a row, written down so it is not re-offered
+
+| Offered | Why it is not a row |
+|---|---|
+| [`Transcordia/jupiter`](https://github.com/Transcordia/jupiter) *"LRS supporting xAPI and Caliper"* | 🔴 **already refuted in this KB**: tree measured at 31 files / 100 040 B / `HEAD` **2015-04-19** with **zero** Caliper and **no query path**. 🟢 Licence reconfirmed this pass (`master` · **`fb32fee`**, MIT, 1 079 B); 🔴 the role is the README's wish. 🆕 **`P796`** |
+| `imsglobal/caliper` (packagist, PHP) | 🔴 channel-reported as having lost its canonical repository and been **frozen**. Not measured from source; a lead to kill, not a row |
+| `jrissler/ex_oneroster` (Elixir, Apache-2.0) | 🔴 **archived by its owner 2018-12-18**, read-only |
+| `bgwdotdev/libre-oneroster` (Rust, AGPL-3.0) | 🔴 already shelved, and it implements **OneRoster 1.1**. 🔵 **The channel's result title says "1.2" and its README says 1.1** — the version, not the licence, is what disqualifies it against a 1.2 requirement |
+| `TCI/OneRoster` (Ruby, MIT) · `gotranseo/oneroster` (Swift, Apache-2.0) · `vossenv/oneroster-python` (MIT) | 🔵 **client libraries, not servers** — and all three are already inventoried here |
+
+### 🟢 One datum the registry layer could NOT supply this week, stated as an absence
+
+🔴 **`educredentials/ec-issuer` is not on pypi** — `pypi/ec-issuer` **404** and
+`pypi/educredentials-ec-issuer` **404**, both read against pypi's calibrated **200 / 404** pair, so
+these are facts about the **ids** and not about the host (`P791`). 🔵 **Which removes the registry as
+a recency oracle for the single freshest component this pass found**: its only version datum is
+`version = "0.12.0"` declared in its own `pyproject.toml`, 🔴 **self-reported, undated, single-channel.**
+🟢 **Stated rather than approximated.**
+
+🔴 **`Gap 286` untouched** — still no reachable registry date for the Ed-Fi tier.
+🔴 **`Gap 257` / `Gap 258` untouched, and this pass ran ZERO suites**: the session refused to execute
+the repository's own test scripts, so the board was not measured at all. 🔵 **Pass 63 ran three and
+said three is not 112. 🔴 Zero is not three.**
+
+
 ## 🟢 Sixty-third pass, 2026-10-08 — week of 2026-10-08: **25 PHP/composer rows enter at a manifest layer**, 10 of them permissive, and the provenance under all of them is corrected — `master` is a pseudo-ref
 
 ⏱️ **Seventeenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

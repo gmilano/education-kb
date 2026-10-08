@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-fourth pass, 2026-10-08 — the **credential-issuance** edge is characterised for the first time, and it is this shelf's only edge where **every** reachable implementation is unusable in a proprietary deliverable
+
+⏱️ **Eighteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Oracle map re-measured before any datum (`P713`, `P745`, `P791` — pairs, not loose codes):**
+`raw` discriminates **four ways on one repository** (real file **200** / invented path **404** /
+invented **branch** **404** / invented **repo** **404**); `pypi` **200 / 404** against its own pair;
+`npm` **200 / 404** against its own pair; `ls-remote --symref` discriminates **and resolves the
+default ref**. 🔴 `api.github.com/repos/{third-party}` **403** — no star counts (`P745`). 🔴 Policy
+and report hosts **refused at the egress proxy, which names itself in the refusal** — `Gap 293`
+closes in `intel/market.md`.
+
+### 🆕 The eighth edge: **credential issuance**, and why it has never appeared on this shelf
+
+🔵 **This shelf's edges answer "what passes between two systems":** *what the content is*
+(SCORM/cmi5), *what the question is* (QTI 3), *what the learner did* (xAPI), *who the learner is*
+(OneRoster/Ed-Fi), *how the tool is launched* (LTI 1.3), *what was observed* (Caliper), *what the
+record says* (SIS). 🆕 **The eighth is *what the learner can prove*: a signed, verifiable claim that
+leaves the institution and survives it.** 🟢 **Its protocol stack is settled** — **Open Badges 3.0**
+(1EdTech, voted Final June 2024) expressed as a **W3C Verifiable Credential**, delivered over
+**OID4VCI**, with **`did:web`** or an equivalent for issuer identity.
+
+🔴 **It has never been on this shelf because the industry-named channel cannot see it.** 🟢 `AI
+education` returns courses (`P795`); 🟢 **a function-named query returned the whole edge in one pass.**
+
+### 🔴 The edge, measured — and the finding is that the permissive column is EMPTY
+
+| Implementation | What it does | Default ref · HEAD | Grant, read from payload | Region | Usable in a proprietary deliverable? |
+|---|---|---|---|---|---|
+| [`educredentials/ec-issuer`](https://github.com/educredentials/ec-issuer) | Issues and signs **OB 3.0 + European Learner Model**; OID4VCI delivery to wallets; ELM as downloadable files; **revocation with reason tracking**; expiry-driven status updates. Flask. | `main` · **`8bafc99`** | 🟡 **`MIT` in README prose ONLY.** 🔴 No licence file — `LICENSE`, `LICENCE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `MIT-LICENSE`, `license`, `license.md` **all 404**. 🔴 `pyproject.toml` (1 453 B) has **no `license` key**. 🔴 **Not on pypi** (404 ×2 vs its calibrated pair) | **EMEA** (NL — SURF edubadges) | 🟡 **Not yet.** Permissive *if* the grant is put in a file |
+| [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | **Issue *and* verify** OB 3.0 / W3C VC; Strapi + Nuxt | `main` · **`6fd0a11`** | 🔴 **AGPL-3.0** (`LICENSE`, **33 820 B**, *"Version 3, 19 November 2007"*) | **EMEA** (IT) | 🔴 **No.** AGPL reaches network use |
+| [`19otherrsh-dot/Opencred`](https://github.com/19otherrsh-dot/Opencred) | OB 3.0 credentialling platform; `did:web` issuer identity | `main` · **`d14619e`** | 🔴 **AGPL-3.0** (`LICENSE`, **34 523 B**) | 🔴 **unplaced** | 🔴 **No**, twice over — see the dependency note |
+
+🔴 **Three reachable implementations. Zero that a client can link into a billable, closed
+deliverable today.** 🔵 **And the shape of the three is the point:**
+
+- 🟡 **One is permissive and unprovable.** `ec-issuer` is the *best-fit* component on the edge — it is
+  the only one that speaks **ELM**, which is what a European credential engagement actually needs —
+  and its entire licence is a two-word README heading with no holder and no year. 🟢 **The remedy is
+  one email, not a rewrite**: ask for a `LICENSE` file or an SPDX `license` key.
+- 🔴 **Two are AGPL-3.0**, which on a *credential service* is the worst placement of copyleft
+  available: a credential issuer is **network-facing by definition**, so AGPL's §13 is not a dormant
+  clause here — it is the operating condition. 🟢 **Self-host freely. Never vendor into a product.**
+- 🔴 **`19otherrsh-dot/Opencred` is HELD, not shelved** (`P443`/`P436`): the owner handle has the
+  shape of a throwaway account and **no upstream was identified this pass.** 🔴 Channel-reported and
+  unmeasured here: its README declares an **n8n** dependency, and n8n ships under the **Sustainable
+  Use Licence — source-available, not OSI.** 🔵 **An AGPL core with a non-OSI dependency is two
+  rejections, and the second one travels into whatever vendors it.**
+
+### 🔵 What this edge does to a proposal, stated plainly
+
+🟢 **1EdTech's own 2026 trend note puts digital credentials at the centre of skills-based learning and
+hiring** (`intel/trends.md`), 🔴 **and this is the one edge on this shelf with no permissive,
+file-grant implementation.** 🔵 **Those two facts together are a commercial finding, not a licence
+footnote:** an engagement that promises verifiable credentials is promising either a **self-hosted
+AGPL deployment** the client must accept, a **grant conversation with a Dutch research-infrastructure
+project**, or **greenfield build against the OB 3.0 / VC specifications**, which are open to implement.
+🟢 **Those are three different proposals with three different prices, and the licence column is what
+chooses between them.**
+
+### 🔴 Two ERP substrates re-read, and both have a licence file that is a POINTER
+
+🟢 **Default refs resolved from the oracle, and neither is `main` or `master`:**
+
+| Platform | Default ref · HEAD | What the licence file actually is | Verdict |
+|---|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 **`19.0`** · **`1c95cef`** | `LICENSE` **8 241 B**. 🔴 First non-blank line: *"For copyright information, please see the COPYRIGHT file"* — and `COPYRIGHT` **404s**. 🟢 Body line 4: *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3"*; title block *"Version 3, 29 June 2007"* | 🔴 **LGPL-3.0**, confirmed from the body. 🟢 Self-host ERP substrate; LGPL permits linking, so an AI layer calling it over its API is clean |
+| [`frappe/education`](https://github.com/frappe/education) | 🔴 **`develop`** · **`444cc8e`** | `license.txt` **19 B** — the entire content is `License: GNU GPL V3`. 🔴 No `LICENSE`, no `LICENSE.md`, no `COPYING`. 🔴 `pyproject.toml` has **no `license` key** | 🔴 **GPL-3.0, reference only.** 🔴 **No "or later", no holder, no year** — the `-only`/`-or-later` question has no answer in the repository |
+
+🔵 **Both are usable as *substrates* and neither as a *component*** — which is this shelf's standing
+distinction for copyleft platforms (Moodle, Open edX, Sakai all sit here). 🟢 **The AI layer goes
+beside them over an API, never linked into them.** 🔴 **What changes this pass is the confidence
+label**: `frappe/education` should read `GPL-3.0 (reference only, 19 B, version qualifier absent)`,
+because a 19-byte string incorporates no terms.
+
+🟡 **One channel-reported discrepancy, NOT measured:** OpenEduCat's marketing claims **73+ integrated
+modules** while its README lists a narrower set. 🔴 No tree enumeration ran this pass — a
+description-drift lead, not a finding.
+
+### 🟡 Standing, unchanged
+
+🟡 **The Caliper edge is still the weakest on this shelf**, and this pass measured **why**:
+🔴 [`1EdTech/caliper-js`](https://github.com/1EdTech/caliper-js) **does not resolve under
+`ls-remote`**, on an instrument that resolved 7 of 8 other repositories in the same minute. 🔵 1EdTech
+states its Sensor API repositories are *"available for 1EdTech Contributing and Affiliate Members"*.
+🟢 **So the reference sensors are behind membership** — `Gap 284` has its cause and **stays open**,
+with `tl-its-umich-edu/caliper-php-public` still its only reachable implementation.
+
+
 ## 🟢 Sixty-third pass, 2026-10-08 — the **assessment** edge turns out to have a permissive implementation beside its copyleft one, and the seventh edge is finally *characterised*: `Gap 284`'s only reachable implementation declares itself **`proprietary`** while shipping an **LGPL-3.0** licence file
 
 ⏱️ **Seventeenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

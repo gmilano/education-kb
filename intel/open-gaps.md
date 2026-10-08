@@ -4,6 +4,181 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-fourth pass, 2026-10-08 — **`Gap 293` CLOSED** by a control that cannot be argued with, `Gap 284`'s **cause** measured, `Gap 289` found in the world, two gaps opened, and one gap **regressed to zero**
+
+⏱️ **Eighteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 `Gap 293` — **CLOSED**, and the closure corrects the band language in six files
+
+🔴 **The gap:** *"the policy band blames hosts for a refusal that happens at the proxy."*
+
+🟢 **Measured, `n = 5`, one allow and four denies in the same minute, on the fetch channel:**
+`raw.githubusercontent.com` **returned a payload**; `www.iesalc.unesco.org`,
+`digital-strategy.ec.europa.eu`, `www.multistate.us` and 🔴 **`en.wikipedia.org`** each returned a
+**structured `EGRESS_BLOCKED` error naming the proxy itself** — *"Access to … is blocked by the network
+egress proxy."*
+
+🔵 **Wikipedia is the closure.** 🔴 **It is not a policy host, not a regulator, not a vendor report, not
+rate-limiting this KB, and not down** — and it is refused with the identical error. 🟢 **Therefore the
+variable is the channel's allowlist, and nothing was ever measured about `unesco.org`,
+`eur-lex.europa.eu`, `ec.europa.eu`, `nasbe.org` or `multistate.us`.**
+
+🆕 **`P797` — a refusal is attributed to the layer that issued it.** 🟢 Write **`EGRESS_DENIED
+(allowlist)`**; 🔴 **never `000` against a hostname.** 🔵 **The two license different conclusions:**
+`000` invites *"retry, the host may be up"* and casts doubt on the **source**; `EGRESS_DENIED
+(allowlist)` is terminal here and says **the source is fine and this environment may not read it** —
+which is the sentence a client-facing citation needs.
+
+🟢 **Passes 57–60 were right and for an unmeasured reason.** 🔵 Pass 59 learned to `grep` before
+announcing a property; this is the same lesson for an **error code**.
+
+🔴 **What this pass did NOT do:** enumerate the allowlist. 🟢 Five hosts probed, five results recorded;
+🔴 **four of five denied is not a rate** (`P744`), and nothing here says which hosts would be allowed.
+
+### 🟢 `Gap 284` — **CAUSE MEASURED, gap stays OPEN**, and the distinction is the point
+
+🔴 **The gap:** *"Caliper Analytics has no reachable permissive implementation."*
+
+🟢 **`ls-remote --symref … HEAD` resolved the default ref and HEAD for 7 of 8 repositories probed this
+pass. 🔴 For [`1EdTech/caliper-js`](https://github.com/1EdTech/caliper-js) it resolved nothing**, on the
+same instrument, in the same minute, under the same proxy. 🔵 **An instrument that discriminates 7 of 8
+makes the eighth a measurement rather than an outage.**
+
+🟢 **It agrees with 1EdTech's own published position**, surfaced by the channel this pass: the Caliper
+Sensor API repositories are *"available for 1EdTech Contributing and Affiliate Members"* who *"can
+request Github access"*, and the specification repository carries the **1EdTech Specification Document
+License** — neither Apache nor MIT.
+
+🟢 **So `Gap 284` is not a search failure: the reference sensors are behind membership.** 🔴 **The gap
+stays open** — knowing *why* a thing cannot be found does not make it findable. 🟢 Pass 63's
+[`tl-its-umich-edu/caliper-php-public`](https://github.com/tl-its-umich-edu/caliper-php-public) remains
+its only reachable implementation, LGPL-file-versus-`proprietary`-manifest split unresolved.
+
+### 🟢 `Gap 289` — the function **exists in the world**, and finding it opened a worse problem
+
+🔴 **The gap:** *"`credential_issuance` is absent from `p782`'s 14-function vocabulary — and it is the
+one that unblocks a sale."*
+
+🟢 **A function-named query (`P795`) found the component**:
+[`educredentials/ec-issuer`](https://github.com/educredentials/ec-issuer) — OB 3.0 **+ European Learner
+Model**, OID4VCI wallet delivery, revocation with reason tracking. 🟢 **EMEA, SURF edubadges (NL).**
+
+🔴 **A `P759` four-layer grant probe then came back empty on three of four layers:** no licence file (8
+names, all 404 at `main` · `8bafc99`), no `license` key in `pyproject.toml` (1 453 B), not on pypi (404
+×2 against its calibrated pair) — 🟡 **and `MIT` as a two-word README heading with no holder and no
+year.**
+
+🔴 **`Gap 289` therefore does NOT close, and it is now two gaps wearing one number:**
+🔴 **(a)** the vocabulary entry is still missing, so `p782` returns **no verdict** for a credential
+recipe — and 🔴 **a silent gate must never be read as a permissive one**;
+🔴 **(b)** the function's best-fit implementation is unprovable, which is `Gap 294` below.
+🟢 **Remedy for (a), unchanged and still cheap:** add `credential_issuance` to the vocabulary with its
+Annex III binding (credential issuance *determines access to and progression through* education).
+🔴 **Cost of (a): it cannot be validated in this session, because the session refuses to execute this
+repository's test scripts.** 🟢 **So the edit is not made this pass** — an unvalidated change to a gate
+that governs a prohibition is worse than a missing entry (`P237`).
+
+### 🆕 `Gap 294` — the credential edge has **no permissive, file-grant implementation**, and that is a commercial gap, not a licence footnote
+
+🟢 **Measured this pass**: three reachable implementations of the OB 3.0 / W3C VC issuance edge, and
+🔴 **zero that a client can link into a closed deliverable today.**
+
+| Implementation | Grant | Verdict |
+|---|---|---|
+| `educredentials/ec-issuer` | 🟡 MIT, **prose only** | 🟡 permissive and unprovable |
+| `Schroedinger-Hat/certo` | 🔴 **AGPL-3.0** (33 820 B) | 🔴 self-host only |
+| `19otherrsh-dot/Opencred` | 🔴 **AGPL-3.0** (34 523 B) | 🔴 self-host only, **and `Gap 295`** |
+
+🔵 **AGPL on a credential *service* is the worst placement of copyleft available:** an issuer is
+network-facing by definition, so §13 is its operating condition, not a dormant clause.
+🔴 **And 1EdTech puts digital credentials at the centre of 2026** (`intel/trends.md`) — 🔵 **so the edge
+the analysts call central is the edge this shelf cannot build permissively.**
+
+🟢 **Remedy, with cost:** **(i)** one email asking `ec-issuer` for a `LICENSE` file or SPDX key — hours,
+and it is the highest-value hour available on this shelf; **(ii)** accept a self-hosted AGPL deployment
+and say so in the proposal — free, and it constrains the client; **(iii)** build against the OB 3.0 /
+W3C VC specifications, which are open to implement — weeks, and it is the only path to a closed-source
+verifier. 🔴 **Three different proposals at three different prices, and a proposal that does not name
+which one it means is underpriced.**
+
+### 🆕 `Gap 295` — a candidate is HELD on **canonicality**, and the question is unanswered
+
+🔴 [`19otherrsh-dot/Opencred`](https://github.com/19otherrsh-dot/Opencred) (`main` · **`d14619e`**,
+AGPL-3.0, 34 523 B) is **held, not shelved** (`P443`/`P436`): the owner handle has the shape of a
+throwaway account, the project name duplicates an established one, and 🔴 **no upstream was identified
+this pass.** 🔵 **A copyleft row costs a reader one rejection; a row at the wrong address costs them a
+build on code that moves.**
+🔴 **Also unmeasured, channel-reported only:** its README is reported to declare an **n8n** dependency,
+and n8n ships under the **Sustainable Use Licence — source-available, not OSI**. 🔵 **An AGPL core with
+a non-OSI dependency is two rejections, and the second travels into whatever vendors it.**
+🟢 **Remedy:** root-commit comparison against any candidate upstream, as the seventeenth pass did for
+`Mcp-Brasil/mcp-brasil`. 🟡 **Cost: under an hour, and it needs a clone.**
+
+### 🟢 `P793` — **WIDENED by two non-PHP instances**, which is a correction to its scope and not to its rule
+
+🟢 **Pass 63 measured the version-named default branch on 7 of 25 PHP/composer rows and called the
+defect ecosystem-concentrated.** 🟢 **Two non-PHP instances this pass:**
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) defaults to **`19.0`**
+(Odoo/Python) and [`frappe/education`](https://github.com/frappe/education) defaults to **`develop`**
+(Frappe/Python). 🔴 **A `{main,master}` probe reports "no licence file" for both — and both have one.**
+🔵 **The predictor is release-branch discipline, not language.** 🟢 **The operational rule is unchanged
+and better supported: resolve the default ref from the oracle before fetching any payload, every
+ecosystem, every time.** 🔴 **No rate from 2 of 2** (`P744`).
+
+### 🆕 `P796` — a discovery channel's description is the repository's **ambition**
+
+🔴 **Measured:** a protocol-named query returned [`Transcordia/jupiter`](https://github.com/Transcordia/jupiter)
+as *"an LRS supporting the xAPI and Caliper specifications."* 🟢 **Pass 77 had already cloned that tree
+— 31 files, 100 040 B, `HEAD` 2015-04-19 — and measured zero Caliper and no query path: an ingestor,
+not an LRS.** 🟢 **Licence reconfirmed this pass** (`master` · **`fb32fee`**, MIT, 1 079 B).
+🔵 **`P234` said a shelf row inherits capability, not ambition. 🆕 `P796` extends it to the channel: a
+search result's one-line description *is* the README's self-description, so the channel will re-offer a
+refuted row indefinitely, having no memory of this KB's refutations.** 🟢 **Only the writing-down caught
+it** — which is the operational argument for a refutation log.
+
+### 🔴 `Gap 257` / `Gap 258` — **REGRESSED TO ZERO**, and the reason must be recorded, not the number
+
+🔴 **Pass 63 ran three suites from the clone and said plainly that three is not 112.** 🔴 **This pass ran
+ZERO.** 🟢 **The reason, stated so no later pass reads it as a property of the suites:** 🔴 **the session
+this pass ran in refuses to execute the cloned repository's own test scripts** — a sandbox policy on
+running code from a fetched repository, not a failure of any suite.
+
+🔵 **This is `P797`'s lesson applied to this KB's own instruments:** 🔴 **"zero suites green" and "zero
+suites runnable" are different facts**, and writing the first when the second is true would slander 117
+test files that were never invoked. 🟢 **Measured: 143 directories under `compose/code/`, 106
+`test_*.py` and 11 `test_*.sh`. 🔴 Executed: none.**
+
+🔴 **Consequence for this pass, applied throughout:** every instrument referenced in `compose/patterns.md`
+is cited **as existing**, never as having been re-run (`P752`). 🔴 **And `Gap 289`'s cheap remedy was
+deliberately NOT applied**, because an unvalidated edit to the gate that governs a prohibition is worse
+than a missing vocabulary entry (`P237`).
+
+🟢 **Remedy, pre-registered for the next pass that has execution:** run the board with a bounded timeout
+from each suite's own directory, classify outcomes into **GREEN / RED / NETWORK / TIMEOUT** as distinct
+tokens — 🔵 **because collapsing an egress refusal into "red" is exactly the attribution error `P797`
+names** — and commit the TSV beside a README. 🟡 **Cost: a session that permits executing the
+repository's tests.**
+
+### 🟡 Gaps **not advanced** this pass, stated so no reader mistakes this section for progress
+
+🔴 **`Gap 286`** — still no reachable registry date for the Ed-Fi tier. 🟢 `edfi-oneroster` was
+re-confirmed at `main` · `6de5476` (Apache-2.0, 10 173 B), 🔴 **but that is a payload, not a date.**
+🔴 **`Gap 287`** — `p784` still reads 16 **rooted** filenames only, no tree layer, no prose layer.
+🔵 **This pass produced two findings of exactly the class it predicts it would miss** (`ec-issuer`'s
+prose-only grant; `openeducat`'s body behind a dangling pointer). 🔴 **Untouched.**
+🔴 **`Gap 288`** — `p441`'s `LICENCE_RE` still matches `extensions/licenseExtension/…`. 🔴 Untouched, and
+🔴 **still the dangerous error direction**, because it admits rather than refuses.
+🔴 **`Gap 290`** — the seams between this KB's 235+ instruments remain unmeasured. 🔴 **And this pass
+could not measure them for the same reason the board was not run.**
+🔴 **`Gap 291`** — pass 63 audited the 12-row evaluation tier against `ls-remote` and found 12 of 12
+matching; 🔴 **the composer tier it identified as owed the re-check is still owed it.**
+🔴 **`Gap 292`** — 🟢 **partially addressed in method, not closed in instrument:** this pass wrote its
+oracle map from calibration **pairs** throughout (`raw` four-way, `pypi` 200/404, `npm` 200/404), 🔴 **but
+no instrument was changed, because nothing could be validated.**
+🔴 **`Gap 285`** — the 8 ungranted benchmark repos are still unexamined at the manifest/header layers.
+🔴 **`Gap 284`** — open, cause now measured (above).
+
+
 ## 🟢 Sixty-third pass, 2026-10-08 — three gaps advanced by measurement, one closed, four opened, and `Gap 284` moves from *unfound* to *characterised*
 
 ⏱️ **Seventeenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

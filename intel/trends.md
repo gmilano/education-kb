@@ -4,6 +4,124 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-fourth pass, 2026-10-08 — the year's thesis ("purpose-built beats generic") stops being a vendor slogan and gets a **number**, measured twice on two continents; and the credential trend collides with a licence wall
+
+⏱️ **Eighteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟡 **Band, stated once and applying to every trend below (`P784`, `P797`):** every figure in this
+section is 🟡 **`reported`, single-channel**, because 🔴 **every primary policy and report host is
+`EGRESS_DENIED (allowlist)`** — measured this pass with a Wikipedia control, in `intel/market.md`,
+where `Gap 293` closes. 🟢 **Every repository, licence, ref and SHA cited is payload-read.**
+
+### 🆕 Trend — **adoption has outrun believed efficacy, and the gap is now measured on two continents**
+
+🔵 **Every 2026 trend piece says the same thing: the market is moving from generic chatbots to
+purpose-built education tooling.** 🔴 **Most of them assert it.** 🟢 **This pass can put two numbers
+under it, from unrelated surveys that never cite each other:**
+
+| Region | Instrument | Use AI | Believe it works / use it for the hard task |
+|---|---|---|---|
+| **EMEA** | Sanoma Learning — **20 000+ teachers, 14 European countries** | 🟡 **63 %** | 🔴 **16 %** believe general-purpose AI improves learning outcomes |
+| **LATAM** | Digital Education Council — **7 319 faculty** | 🟡 **79 %** | 🔴 **19 %** use AI for assignment feedback |
+
+🟢 **Different continents, different questions, different samples — and the gap runs the same direction
+at nearly the same width.** 🔵 **That convergence is what makes this a trend and not a survey result.**
+
+🔴 **The commercial reading, and it inverts the usual pitch:** the market is **not** short of AI usage.
+🔴 **It is short of AI anyone believes in.** 🟢 **So "AI adoption" is not a sellable outcome in either
+region — 87 % of LATAM institutions and 63 % of EMEA teachers already have it.** 🟢 **What is absent is
+*evidence*, concentrated in the places general-purpose chat is measurably not used: feedback on student
+work, assessment, integrity checking, curriculum alignment.** 🔵 **In EMEA three in four teachers say
+general-purpose AI threatens education quality; only one in three support student use. A product whose
+pitch is "it is not a general chatbot" has, unusually, a measured audience.**
+
+🔴 **What this pass did NOT measure:** no causal claim. 🟡 Whether purpose-built tools *do* improve
+outcomes is untested here — 🟢 **the finding is about belief and use, which is what a market responds
+to, and the distinction is kept explicit** (`P744`: neither figure is a rate over a sampling frame this
+KB constructed).
+
+### 🆕 Trend — **experimentation → governance**, and 2026 is the year the dates became real
+
+🟡 **1EdTech frames 2026 as the shift from experimentation to governance**, with policies, data
+boundaries and oversight as the condition of adoption rather than a follow-up to it. 🟢 **The dates
+gathered this pass make that concrete rather than aspirational:**
+
+| Jurisdiction | Instrument | Date that matters |
+|---|---|---|
+| **EMEA** | EU AI Act **Article 4** AI-literacy duty | 🔴 **live since `2025-02-02`, NOT deferred** |
+| **EMEA** | AI Office + national authorities begin enforcing | 🟢 **`2026-08-02`** |
+| **EMEA** | Digital omnibus, final Council approval | 🟢 **`2026-06-29`** — high-risk dates reset to **`2027-12-02`** (stand-alone) and **`2028-08-02`** (embedded) |
+| **APAC** | South Korea AI Basic Act in force; education = *high-impact* | 🟢 **January 2026**, with 2026 a limited-enforcement pilot year and a **one-year penalty grace** |
+| **APAC** | Vietnam Law No. 134/2025/QH15, **extraterritorial** | 🟢 **`2026-03-01`**; follow-on decision names **automated assessment** and **behavioural monitoring** high-risk in education |
+| **APAC** | Taiwan AI Basic Act | 🟢 **December 2025** |
+| **North America** | Ohio — every district must adopt a formal AI-use policy | 🔴 **`2026-07-01`, already passed** |
+| **North America** | NYC moratorium on student-facing AI through grade 8 | 🔴 **one year, in force** |
+
+🔵 **The pattern across the table is a scissors, and it is the trend:** 🟢 **the *high-risk product*
+clocks are being pushed out** (EU to late 2027, Korea's penalties to 2027) 🔴 **while the *duty* and
+*prohibition* clocks are already running** (Article 4 since 2025, Ohio's deadline passed, NYC in force).
+🔵 **This shelf's standing phrase holds and now has dates: the deferral is runway, not relief.** 🔴 **A
+roadmap that treats 2027 as the compliance date is already late on three obligations that are not
+deferred.**
+
+### 🆕 Trend — **credentials move to the centre, and this pass found the licence wall behind them**
+
+🟡 **1EdTech names digital credentials as a core mechanism for skills-based learning and hiring**, and
+the surrounding trend talk — real-time skills visibility, adaptive training, competency frameworks — all
+routes through the same artefact: a signed, portable, verifiable claim. 🟢 **The protocol stack is
+settled**: **Open Badges 3.0** (Final, June 2024) as a **W3C Verifiable Credential**, delivered over
+**OID4VCI**, issuer identified by **`did:web`** or equivalent.
+
+🔴 **And this pass measured what is actually available to build it:**
+
+| Implementation | Grant, payload-read | Usable in a proprietary deliverable |
+|---|---|---|
+| [`educredentials/ec-issuer`](https://github.com/educredentials/ec-issuer) (OB 3.0 **+ ELM**, OID4VCI, revocation) | 🟡 **`MIT` in README prose only** — 🔴 no licence file (8 names 404), 🔴 no manifest `license` key, 🔴 unpublished on pypi | 🟡 **not until the grant is in a file** |
+| [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) (issue **and verify**) | 🔴 **AGPL-3.0**, 33 820 B | 🔴 **no** |
+| [`19otherrsh-dot/Opencred`](https://github.com/19otherrsh-dot/Opencred) (`did:web`) | 🔴 **AGPL-3.0**, 34 523 B; 🔴 canonicality unresolved | 🔴 **no** |
+
+🔵 **So the trend the analysts put at the centre of 2026 lands on the one edge of this shelf with no
+permissive, file-grant implementation** — and AGPL on a credential *service* is the worst possible
+placement of copyleft, because an issuer is network-facing by definition and §13 is therefore its
+operating condition rather than a dormant clause. 🟢 **The trend is real; the build path is three
+different proposals at three different prices** (`verticals/solutions.md`). 🔴 **A proposal that promises
+verifiable credentials without naming which of the three it means is underpriced.**
+
+### 🟡 Trends carried forward, re-confirmed by this pass's channel but not advanced
+
+🟡 **Teacher-first adoption gated on time saved.** The threshold circulating is **5–10 hours/week**, and
+the measured figure is **~5.9 hours/week** for weekly-using teachers. 🔵 **Adoption follows workflow
+relief — course design support, instructional and administrative workflow — not capability demos.**
+
+🟡 **The governance gap is the headline statistic of the year:** **86 %** of education organisations use
+generative AI 🔴 **and most lack a policy.** In the US, teacher use roughly **doubled** year on year to
+**60 %** in 2024-25 (**32 %** weekly); **54 %** of K-12 students and **92 %** of university students use
+AI. 🔵 **That asymmetry — near-universal use, minority policy coverage — is the same finding as the
+LATAM "87 % adoption, governance lags" result, and it is why the governance layer, not the model, is
+the product.**
+
+🟡 **Evidence expectations are rising.** Systems increasingly expect proof that a product improves
+learning quality, persistence, wellbeing or job-relevant skills. 🔵 **Combined with the 63-vs-16 gap,
+this is one trend and not two:** buyers stopped believing capability claims, so the thing that closes a
+deal is now a measurement, and 🟢 **a regional evaluation harness** (the `latam-gpt` tier,
+`eduagarcia/lm-evaluation-harness-pt`) **is therefore a commercial asset, not an engineering nicety.**
+
+🟡 **Engagement and wellbeing as the residual.** As AI absorbs classroom and back-office tasks, systems
+are doubling down on motivation, connection and purpose; the UK and Greece are reported to have piloted
+AI companions **with strict boundaries.** 🔴 **"With strict boundaries" is the operative phrase and the
+only part of this trend that is buildable.**
+
+### 🔴 Trend claims this pass DECLINES to carry
+
+🔴 **A `$12.3 B by 2026` market figure attributed to HolonIQ** that the channel could not confirm
+against HolonIQ's own material. 🔴 **"83 % of institutions plan AI teaching assistant deployment"**
+attributed to EDUCAUSE with no verifiable primary link. 🔴 **A "42 % learning-outcome improvement."**
+🟢 **All three circulate in 2026 trend pieces; none has a reachable primary source from this
+environment; declining is an answer** (`P460`). 🔵 **And `P797` matters here too: they are declined for
+being *unattributable*, not for being unreachable — the reachability of every primary host is a fact
+about this environment's allowlist, not about the sources.**
+
+
 ## 🟢 Sixty-third pass, 2026-10-08 — four trends, and the strongest is that **every measurement error this pass had the same shape**: a code produced by something *in between* was read as a fact about the thing at the end
 
 ⏱️ **Seventeenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

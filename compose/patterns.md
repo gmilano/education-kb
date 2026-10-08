@@ -4,6 +4,115 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-fourth pass, 2026-10-08 — one new recipe for the **credential-issuance** edge, and it is the first recipe on this shelf whose **first step is a licence conversation**; plus a capability-gating pattern lifted from an implementation rather than a spec
+
+⏱️ **Eighteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Every repository named below is payload-read at a ref resolved by `ls-remote --symref` this pass.**
+🔴 **No star counts** (`api.github.com` 403, `P745`). 🔴 **No suite was run this pass** — the session
+refused to execute this repository's own test scripts, so every instrument referenced below is cited as
+existing, 🔴 **not as having been re-run** (`Gap 257`/`Gap 258`, and `P752`: prose must not imply a
+result it did not measure).
+
+### 🆕 Recipe — **"Verifiable achievement, governed": OB 3.0 credentials out of an existing LMS, with the grant resolved before the build**
+
+🔵 **Why this recipe exists:** 1EdTech puts digital credentials at the centre of 2026
+(`intel/trends.md`), and this pass found that the edge has **no permissive, file-grant
+implementation** (`verticals/solutions.md`). 🟢 **So the recipe is honest about starting with a
+blocker, which is more useful than a recipe that pretends the blocker is not there.**
+
+🟢 **The wiring, component by component, all payload-verified this pass:**
+
+| Layer | Component | Ref · HEAD | Licence (payload) | What it contributes |
+|---|---|---|---|---|
+| Learning substrate | [`moodle/moodle`](https://github.com/moodle/moodle) | `main` · `f205347` (pass 63) | 🔴 **GPL-3.0-or-later** | Course, activity completion and competency data. 🔴 **Substrate, not component — deploy beside it, never link into it** |
+| Rostering / identity | [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | `main` · **`6de5476`** | 🟢 **Apache-2.0** (10 173 B) | Serves **OneRoster 1.2** from an Ed-Fi ODS (DS 4.0/5.x) — the authoritative "who the learner is", licence-clean |
+| Achievement → credential | [`educredentials/ec-issuer`](https://github.com/educredentials/ec-issuer) | `main` · **`8bafc99`** | 🟡 **`MIT` in README prose ONLY** | Issues and signs **OB 3.0 + ELM**, delivers over **OID4VCI**, **revocation with reason tracking**, expiry-driven status. 🔴 **BLOCKED at the licence gate — see step 1** |
+| Copyleft fallback | [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | `main` · **`6fd0a11`** | 🔴 **AGPL-3.0** (33 820 B) | Issue **and verify**, Strapi + Nuxt. 🟢 Use when the client accepts a self-hosted AGPL deployment |
+| Agent edge | [`zhenghh04/canvas-mcp`](https://github.com/zhenghh04/canvas-mcp) | `main` · **`0ef723f`** | 🟢 **MIT** (1 069 B) | Instructor-side read of gradebook/completion, **with its write tier pinned off for this path** |
+
+🟢 **Steps, in the order that keeps a client out of trouble:**
+
+1. 🔴 **Resolve `ec-issuer`'s grant BEFORE any integration work.** Its licence is a two-word README
+   heading — no file, no manifest key, no registry publication, no holder, no year. 🟢 **Ask the
+   maintainer for a `LICENSE` file or an SPDX `license` key in `pyproject.toml`.** 🔵 **This is a day
+   of email, and it is the difference between a shippable component and an unprovable one.** 🔴 **If the
+   answer does not come, do not substitute optimism — take the AGPL fallback and tell the client it is
+   self-host-only, or build against the OB 3.0 / W3C VC specifications, which are open to implement.**
+2. 🟢 **Stand up rostering first, not credentials.** `edfi-oneroster` over the client's Ed-Fi ODS gives a
+   stable learner identity; a credential issued against an unstable identity is worse than no credential,
+   because it is signed.
+3. 🟢 **Define the achievement rule in the substrate, not the agent.** Moodle competency / activity
+   completion is the evidence; the agent reads it. 🔴 **An LLM must not be the thing that decides an
+   achievement was earned** — that is the function Annex III conditions.
+4. 🟢 **Pin the agent edge read-only for this path.** With `zhenghh04/canvas-mcp`, set
+   `CANVAS_ENABLE_WRITES=0`; its 24 read tools remain, its 18 write tools are **not published to the
+   model's tool list at all**, and its 5 destructive tools are off by default and cannot bypass the write
+   gate. 🔵 **A credential pipeline needs to read the gradebook and must never write it.**
+5. 🔴 **Gate the function by jurisdiction — and know that the gate cannot answer yet.** Credential
+   issuance *determines access to and progression through* education, which is the EU Act's **Annex III**
+   trigger. 🔴 **`Gap 289` is exactly this: `credential_issuance` is NOT in `compose/code/p782-policy-gate/`'s
+   14-function vocabulary**, so running the gate on this recipe today returns **no verdict**, not a
+   permissive one. 🟢 **State that to the client as an open item**; 🔴 **do not read a silent gate as a
+   green one.**
+6. 🟢 **Issue to a wallet, not to a database.** OID4VCI delivery is what makes the credential portable
+   and therefore worth issuing; an "achievement row" in the client's own schema is a report, not a
+   credential.
+
+🔴 **Known holes in this recipe, stated rather than smoothed over:** the best-fit component's licence is
+unprovable (step 1); the policy gate has no vocabulary entry for the function (step 5); and the
+verification side is only available under AGPL (`certo`), so **a closed-source verifier is a build, not
+an integration.**
+
+### 🆕 Pattern — **capability gating by non-publication**, taken from an implementation
+
+🔵 **This shelf has taken patterns from specifications and from architectures. This one comes from a
+single repository's configuration design, and it generalises past education entirely.**
+
+🟢 **What [`zhenghh04/canvas-mcp`](https://github.com/zhenghh04/canvas-mcp) (MIT, `main` · `0ef723f`)
+does, read from its own README:** three tiers — `read` (24 tools, always on), `write` (18 tools, **on by
+default**, disabled by `CANVAS_ENABLE_WRITES=0`), `destructive` (5 tools, **off by default**, enabled by
+`CANVAS_ALLOW_DESTRUCTIVE=1`). 🟢 **The destructive flag cannot bypass the write gate.** 🟢 **And the
+load-bearing detail: a tool that is disabled is never published to the model's tool list at all** — it
+is not refused at call time, it is **absent**.
+
+🔵 **Why that is the stronger control, and it is an agent-design argument rather than a security one:**
+🔴 **a tool the model can see is a tool the model can be argued into calling** — by a prompt, by a
+document it reads, by a user's framing. 🟢 **A tool that was never published cannot be argued into
+existence, and it also costs zero context.** 🔵 **Refusal is a runtime decision under adversarial
+pressure; non-publication is a deployment decision made once, in the clear.**
+
+🟢 **How to apply it on any engagement in this KB:** express the agent's tool surface as **tiers bound
+to environment configuration**, not as per-call permission checks; make the destructive tier
+**independently gated and subordinate** to the write tier, so one flag cannot unlock two levels; and
+**emit the surface** — a `tools` listing that shows exactly what is published under the current posture,
+so the deployed surface is auditable without reading code. 🔵 **For this industry, pin it to the
+regulation: Korea's AI Basic Act requires meaningful human monitoring and intervention *at any time* in
+high-impact systems, and a tiered, enumerable tool surface is how that requirement becomes something a
+reviewer can inspect rather than something a vendor asserts.**
+
+🔴 **One honest limit:** this is a **pattern read from a README**, not a measured property of the running
+code. 🟢 The licence and the ref are payload-read; 🔴 **the behaviour is the repository's own
+description**, and `P796` (this pass) is precisely the rule that a README's self-description is its
+ambition. 🔵 **The pattern is worth adopting on its own logic; the claim that this repository implements
+it correctly is unverified here.**
+
+### 🟡 Recipes carried forward, with one correction to their pre-flight
+
+🟡 **Every recipe on this shelf that touches scoring, essay evaluation or summary assessment keeps its
+standing gate:** run `compose/code/p782-policy-gate/` first, and remember `P764` — 🔴 **NYC's
+`2026-03-24` guidance *prohibits* student-facing AI in public K-12 through grade 8, and no
+human-in-the-loop converts a prohibition into a condition.**
+
+🔴 **The correction, and it applies to every recipe's citation style from here forward (`P797`):** where
+a recipe's rationale cites a regulation or a market figure, it must now say **`EGRESS_DENIED
+(allowlist)`** rather than **`000`** for the primary source. 🔵 **The difference is not cosmetic for a
+client-facing document:** `000` reads as *"the source may be unreliable or down"*, 🟢 **while
+`EGRESS_DENIED (allowlist)` reads as *"the source is fine; this build environment is fenced"*** — which
+is the true statement, and the one a reviewer needs. 🟢 **`Gap 293` closed in `intel/market.md` with a
+Wikipedia control; the band language follows it here.**
+
+
 ## 🟢 Sixty-third pass, 2026-10-08 — the pre-flight gains a **Gate 0**, because every gate below it takes a `[ref]` and `master` is a **pseudo-ref**; and `R63a` wires the assessment edge, the one place where the licence line and the policy line fall on the same component
 
 ⏱️ **Seventeenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

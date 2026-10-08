@@ -4,6 +4,117 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-fourth pass, 2026-10-08 — the function `Gap 289` named is **found**, and its grant is **prose and nothing else**; two MCP rows enter payload-read; and `1EdTech/caliper-js` **does not resolve**, which is `Gap 284`'s cause measured rather than assumed
+
+⏱️ **Eighteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Oracle map re-measured before any datum (`P713`, `P745`, `P791` — pairs, not loose codes):**
+`raw.githubusercontent.com` discriminates **four ways** on one repository — real file **200**,
+invented path **404**, invented *branch* **404**, invented *repo* **404**. `pypi` **200 / 404**
+against its own pair, `npm` **200 / 404** against its own pair, `ls-remote --symref` discriminates
+**and resolves the default ref**. 🔴 `api.github.com/repos/{third-party}` **403** — **no star counts
+this pass** (`P745`); nothing below is ranked by popularity. 🔴 Every policy and report host is
+**refused at the egress proxy, in the proxy's own words** — see `intel/market.md`, where `Gap 293`
+closes.
+
+### 🆕 `educredentials/ec-issuer` — the `credential_issuance` function, and a **four-layer grant probe that comes back empty on three of four layers**
+
+🟢 **`Gap 289` said `credential_issuance` is absent from `p782`'s 14-function vocabulary and called it
+"the one that unblocks a sale."** 🟢 **A protocol-named query (`P795`) found the component.**
+🔴 **A `P759` four-layer probe then found that its licence is a README sentence.**
+
+| Grant layer | Measured at `main` · **`8bafc99`** | Verdict |
+|---|---|---|
+| **File** | `LICENSE`, `LICENCE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `MIT-LICENSE`, `license`, `license.md` — 🔴 **all 404**, against a pair that returns 200 for a real path on a neighbouring repo in the same minute | 🔴 **absent** |
+| **Manifest** | `pyproject.toml` **200, 1 453 B** — declares `name = "ec-issuer"`, `version = "0.12.0"`, author *Bèr Kessels*. 🔴 **No `license` key. No classifier.** | 🔴 **silent** |
+| **Registry** | 🔴 `pypi/ec-issuer` **404**, `pypi/educredentials-ec-issuer` **404** — read against pypi's calibrated 200/404 pair, so this is a fact about the ids, not the host (`P791`) | 🔴 **unpublished** |
+| **Prose** | 🟡 `README.md` §`License` → **`MIT`**. Two words. 🔴 **No holder, no year, no SPDX identifier.** | 🟡 **a claim** |
+
+🔴 **And the search channel reported this repository flatly as "MIT."** 🔵 **That is the defect worth
+naming:** a hosting sidebar infers a licence from a two-word README heading, the channel repeats the
+inference as a fact, and a shelf that copies the channel publishes a grant nobody granted in a file.
+
+🟡 **So it is admitted as a LEAD, not to the buildable shelf**, and the distinction is deliberate:
+🔵 this is **not** the `a5anka/ai-lab-2026-africa-agent-manager` case the thirty-first pass hard-
+rejected. That repository had **nothing** — public is not licensed. This one has a statement by the
+party able to make it, which is a real permission and a weak record of one. 🟢 **The pre-flight is
+one email:** ask the maintainer for a `LICENSE` file, or an SPDX `license` key in `pyproject.toml`.
+🔴 **Until one exists, it does not go into a client deliverable.**
+
+🟢 **What it is, because the function is the reason it matters:** a Flask credential service that
+**issues and signs Open Badges 3.0 and European Learner Model (ELM) credentials**, delivers OB 3.0
+to wallets over **OID4VCI**, writes ELM as downloadable files, and carries **revocation with reason
+tracking** plus expiry-driven status updates. 🟢 **Region: EMEA** — its own README points deployment
+at `git.ia.surfsara.nl/surf-internal/educational-logistics/edubadges/`, which places it inside
+**SURF's edubadges programme in the Netherlands**. 🔵 **ELM is the binding that makes it EMEA rather
+than Global:** an issuer that speaks the European Learner Model is built for European credential
+infrastructure, not adapted to it.
+
+### 🟢 Two MCP rows enter payload-read — and one of them is on this shelf for its **authorisation design**, not its coverage
+
+| Agent / tool | Repo · ref · HEAD | Licence (payload, bytes) | ★ | Region | What it does |
+|---|---|---|---|---|---|
+| canvas-mcp (instructor) | [`zhenghh04/canvas-mcp`](https://github.com/zhenghh04/canvas-mcp) · `main` · **`0ef723f`** | 🟢 **MIT** (`LICENSE`, **1 069 B**, *"MIT License"*) | not read this pass (`P745`) | **North America** | Canvas LMS side-car, **47 tools**, built for instructors. 🟢 **Three safety tiers read from its own README: `read` 24 tools always on; `write` 18 tools **on by default** (`CANVAS_ENABLE_WRITES=0` disables); `destructive` 5 tools **off by default**, and the destructive flag **cannot bypass the write gate**.** 🟢 **A withheld tool is never published to the model's tool list at all** — it cannot be called and costs no context. Default posture publishes 42 of 47. |
+| gradebook-mcp (parent) | [`songsterq/gradebook-mcp`](https://github.com/songsterq/gradebook-mcp) · `main` · **`27bcdaf`** | 🟢 **MIT** (`LICENSE`, **1 066 B**, *"MIT License"*) | not read this pass (`P745`) | **North America** | **ParentVUE** gradebook side-car plus dashboard. 🟢 **Read-only by construction** — never writes to ParentVUE, keeps a local snapshot, and auto-sync is **off until explicitly enabled.** |
+
+🔵 **Why `zhenghh04/canvas-mcp` earns a row on a shelf that already carries four Canvas side-cars:**
+every other one is distinguished by **tool count**. This one is distinguished by **what it refuses to
+publish**. 🟢 **Withholding a tool from the model's tool list is a stronger control than refusing the
+call**, because a tool the model cannot see cannot be argued into. 🔵 **That is the reusable idea
+even for an engagement that never touches Canvas** — it is a capability-surface pattern, and this
+shelf should take patterns from implementations rather than only components.
+
+🔴 **FERPA applies to both rows.** Grades and enrollments are student records; pin write tiers off
+and prefer read-scoped tokens.
+
+### 🔴 `Gap 284` — the cause is now **measured**: 1EdTech's own sensor repository does not resolve
+
+🟢 **`ls-remote --symref … HEAD` resolved the default ref and HEAD for 7 of the 8 repositories
+probed this pass.** 🔴 **For [`1EdTech/caliper-js`](https://github.com/1EdTech/caliper-js) it
+returned nothing** — on the same instrument, in the same minute, that resolved `main` for six others
+and `master` for one.
+
+🔵 **This agrees with 1EdTech's own published statement**, which the channel surfaced: the Sensor API
+repositories are *"available for 1EdTech Contributing and Affiliate Members"*, and members *"can
+request Github access."* 🟢 **So `Gap 284` is not that a permissive Caliper implementation was
+missed — it is that the reference implementations are behind membership**, and the specification
+repository is under the **1EdTech Specification Document License**, which is neither Apache nor MIT.
+
+🟢 **Pass 63's [`tl-its-umich-edu/caliper-php-public`](https://github.com/tl-its-umich-edu/caliper-php-public)
+remains `Gap 284`'s only reachable implementation**, and its own split — LGPL-3.0 in the file versus
+`proprietary` in manifest and registry — is unchanged by this pass. 🔴 **`Gap 284` stays open.**
+
+### 🔴 The channel re-offered a row this KB had already **refuted** — and only the writing-down caught it
+
+🔴 **A protocol-named query returned [`Transcordia/jupiter`](https://github.com/Transcordia/jupiter)
+described as *"an open source Learning Record Store (LRS) supporting the xAPI and Caliper
+specifications."*** 🟢 **Pass 77 of this file cloned that tree and measured it:** 31 files,
+100 040 B, `HEAD` **2015-04-19** — **zero** Caliper (no file named `*caliper*`, no occurrence in
+`.java`/`.json`/`.xml`), and no query path at all, so **an ingestor of statements, not an LRS.**
+
+🟢 **Re-confirmed this pass at a resolved ref:** `master` · **`fb32fee`**, `LICENSE` **1 079 B**,
+*"The MIT License (MIT)"*. 🟢 **The licence was right; the role was the README's wish.**
+
+🔵 **The generalisation, and it is about the channel rather than the repository:** a search result's
+one-line description **is the README's self-description**, so it inherits every overclaim the README
+makes. 🔴 **Which means the channel can re-offer, as a fresh finding, a row this KB has already
+measured false.** 🟢 **The only defence is that the refutation was written down** — pass 77 wrote it,
+so pass 64 recognised it in a result list instead of shelving it a second time. 🔵 **`P234` said a
+row inherits capability, not ambition; this adds that the *channel* inherits ambition too, and a KB
+without a refutation log has no way to tell the difference.**
+
+### 🟡 Standing, unchanged this pass
+
+🟡 **The scoring gate still governs the evaluation tier**, and the policy band under it is unchanged:
+`markm-io/ai-essay-evaluator` and `baker-jr-john/automated-summary-evaluation-llm` implement a
+function the EU Act's **Annex III** conditions, Vietnam's AI law names high-risk, Peru's draft would
+classify high-risk, and **NYC's `2026-03-24` guidance prohibits outright** in public K-12. 🟢 Run
+`compose/code/p782-policy-gate/` first, and remember `P764`: a prohibition is not a condition.
+
+🔴 **No row admitted from either industry-named query, for a fifteenth consecutive week** — see
+`agents/trending.md` for what they returned, written down so silence is not read as coverage.
+
+
 ## 🟢 Sixty-third pass, 2026-10-08 — the agent-discovery channel is empty for a **fourteenth** week, and this pass can finally say **why** rather than only that; a licence label on this shelf is corrected to `MIT-0`; and the provenance audit the new `P793` demands comes back **12 of 12 clean**
 
 ⏱️ **Seventeenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

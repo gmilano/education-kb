@@ -4,6 +4,102 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-fourth pass, 2026-10-08 — week of 2026-10-08: the agent channel's **fifteenth** empty week, and this week the channel did something worse than return nothing — it returned a row this KB had already refuted
+
+⏱️ **Eighteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Oracle map re-measured before any datum (`P713`, `P745`, `P791`), pairs not loose codes:** `raw`
+discriminates **four ways on one repository** (real file 200 / invented path 404 / invented **branch**
+404 / invented **repo** 404), `pypi` **200 / 404** against its own pair, `npm` **200 / 404** against
+its own pair, `ls-remote --symref` discriminates **and resolves the default ref**. 🔴
+`api.github.com/repos/{third-party}` **403** — **no star counts** (`P745`). 🔴 Policy/report hosts
+**refused at the egress proxy, which names itself in the refusal** — `Gap 293` closes in
+`intel/market.md`.
+
+### 🔴 The two industry-named queries, fifteenth consecutive empty week — written down, row by row
+
+🔴 **Both mandated queries were run with the year computed, not hardcoded.** 🔴 **Neither returned an
+education-specific agent.** 🟢 **What they returned, so no reader mistakes silence for coverage:**
+
+| Query | What came back |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **general-purpose agents and courses, again**: `OpenHands`, `CrewAI`, `LangGraph`, `OpenClaw`, `browser-use`, a Hermes agent — all already inventoried here — plus `ashishpatel26/500-AI-Agents-Projects`, `microsoft/ai-agents-for-beginners`, a Hugging Face agents course, and three blog rankings whose star counts **disagree with each other** |
+| `github trending education AI 2026` | 🔴 **learning material only**: `rohitg00/ai-engineering-from-scratch`, `microsoft/generative-ai-for-beginners`, `kamranahmedse/developer-roadmap`, Karpathy's `nanochat`, two "awesome AI agents 2026" lists, one automated trends issue, and a university–GitHub partnership announcement |
+
+🟢 **`P795` holds for a second pass, and the evidence is the same shape:** `AI education` ranks
+*courses that teach AI* over *agents that do education*, because for this one industry the phrase
+names both a domain and the act of teaching the technology. 🔵 **Fifteen weeks is a property of the
+phrase.** 🟢 **The protocol-named queries, run in the same pass, returned four payload-read
+components and one measured absence.** 🟢 **The industry-named queries stay in the run** — `P785`:
+declaring a channel saturated is the most expensive conclusion a pass can draw, so its emptiness is
+recorded, not retired.
+
+🔴 **No row admitted from either industry-named query** (`P476`). A course is not an agent.
+
+### 🔴 The week's actual finding: the channel re-offered a REFUTED row as a fresh one
+
+🔴 **A protocol-named query returned [`Transcordia/jupiter`](https://github.com/Transcordia/jupiter)
+with the description *"an open source Learning Record Store (LRS) supporting the xAPI and Caliper
+specifications."*** 🟢 **This file already measured that tree in pass 77** — 31 files, 100 040 B,
+`HEAD` **2015-04-19**, **zero** Caliper anywhere in it, and no query path, therefore **a statement
+ingestor and not an LRS.**
+
+🟢 **Re-measured this pass at a ref the oracle resolved:** `master` · **`fb32fee`**, `LICENSE`
+**1 079 B**, *"The MIT License (MIT)"* — 🟢 **licence reconfirmed, role still wrong.**
+
+🔵 **Why this is a finding and not a footnote:** a search result's one-line description **is the
+README's self-description**. 🔴 **So the channel inherits every overclaim a README makes, and will
+re-offer a refuted row indefinitely, because the channel has no memory of this KB's refutations.**
+🟢 **Only the writing-down caught it.** 🔵 **`P234` ruled that a shelf row inherits *capability*, not
+*ambition*. 🆕 **`P796` extends it to the channel: a description from a discovery channel is a
+repository's ambition by default, and a KB without a refutation log cannot tell a new finding from a
+re-offered one.**
+
+### 🟢 What is genuinely new this week — by function, every grant read from payload
+
+| Component | Protocol / function | Ref · HEAD | Licence (layer, bytes) | Region | Status |
+|---|---|---|---|---|---|
+| [`educredentials/ec-issuer`](https://github.com/educredentials/ec-issuer) | **Open Badges 3.0 + ELM** issuance, OID4VCI wallet delivery, revocation | `main` · **`8bafc99`** | 🟡 **MIT in README PROSE ONLY** — 🔴 no licence file (8 names, all 404), 🔴 no `license` key in `pyproject.toml`, 🔴 unpublished on pypi (404 against its pair) | **EMEA** (NL · SURF edubadges) | 🟡 **LEAD, not shelved.** The `credential_issuance` function `Gap 289` named |
+| [`zhenghh04/canvas-mcp`](https://github.com/zhenghh04/canvas-mcp) | Canvas LMS MCP, **47 tools**, 3 safety tiers | `main` · **`0ef723f`** | 🟢 **MIT** (`LICENSE`, **1 069 B**) | **North America** | 🟢 **shelved** — `agents/top.md` |
+| [`songsterq/gradebook-mcp`](https://github.com/songsterq/gradebook-mcp) | ParentVUE gradebook, **read-only by construction** | `main` · **`27bcdaf`** | 🟢 **MIT** (`LICENSE`, **1 066 B**) | **North America** | 🟢 **shelved** — `agents/top.md` |
+| [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | Open Badges 3.0 issue **and verify**, Strapi + Nuxt | `main` · **`6fd0a11`** | 🔴 **AGPL-3.0** (`LICENSE`, **33 820 B**, *"Version 3, 19 November 2007"*) | **EMEA** (IT) | 🔴 **flagged** — self-host only, no proprietary linking |
+| [`19otherrsh-dot/Opencred`](https://github.com/19otherrsh-dot/Opencred) | OB 3.0 credentialling platform, `did:web` issuer identity | `main` · **`d14619e`** | 🔴 **AGPL-3.0** (`LICENSE`, **34 523 B**) | 🔴 **not placed** | 🔴 **HELD — canonicality unresolved** |
+| [`1EdTech/caliper-js`](https://github.com/1EdTech/caliper-js) | Caliper Analytics Sensor API (JS) | 🔴 **does not resolve** | 🔴 **unreadable** | — | 🔴 **`Gap 284`'s cause, measured** |
+
+🔴 **`19otherrsh-dot/Opencred` is held and not shelved, and the reason is `P443`/`P436`, not its
+licence.** The owner handle has the shape of a throwaway account, the project name duplicates an
+established one, and 🔴 **no upstream was identified this pass.** 🔵 **A copyleft row on a shelf costs
+a reader one rejection; a row at the wrong address costs them a build on code that moves.** 🟢 **It
+is written here, in the trending log, so the next pass starts from a named question rather than
+rediscovering the candidate.**
+
+🔴 **One dependency caveat on `19otherrsh-dot/Opencred`, channel-reported and not measured here:** its
+README is reported to declare an **n8n** dependency, and n8n ships under the **Sustainable Use
+Licence — source-available, not OSI**. 🔵 **An AGPL core with a non-OSI dependency is two separate
+rejections**, and the second one travels into any deliverable that vendors it.
+
+### 🟢 `Gap 284` — its CAUSE measured, which is not the same as closing it
+
+🟢 **`ls-remote --symref` resolved the default ref and HEAD for 7 of 8 repositories probed this
+pass. 🔴 For `1EdTech/caliper-js` it returned nothing**, in the same minute, on the same instrument.
+🔵 **That agrees with 1EdTech's own published statement** that the Sensor API repositories are
+*"available for 1EdTech Contributing and Affiliate Members"* who *"can request Github access"* — and
+the specification repository is under the **1EdTech Specification Document License**, not Apache or
+MIT. 🟢 **So `Gap 284` is not a search failure; the reference implementations are behind
+membership.** 🔴 **It stays open**, with pass 63's `tl-its-umich-edu/caliper-php-public` still its
+only reachable implementation.
+
+### 🟡 Three rows the channel offered that are NOT findings, stated so they are not re-offered
+
+🔴 [`imsglobal/caliper`](https://packagist.org/packages/imsglobal/caliper) (PHP) — channel-reported as
+having lost its canonical repository and been **frozen** as a result. 🔴 Not measured from source this
+pass; recorded as a lead to kill, not a row.
+🔴 `jrissler/ex_oneroster` (Elixir, Apache-2.0) — **archived by its owner on 2018-12-18**, read-only.
+🔴 `bgwdotdev/libre-oneroster` (Rust, AGPL-3.0) — already on this shelf, and it implements **OneRoster
+1.1**, not 1.2. 🔵 **The version matters more than the licence here:** a 1.1 server does not answer a
+1.2 requirement, and the channel's result title says "1.2" while its README says 1.1.
+
+
 ## 🟢 Sixty-third pass, 2026-10-08 — week of 2026-10-08: the agent channel's fourteenth empty week gets a **mechanism** (`P795`), and the week's only real movement is on the **assessment** protocol
 
 ⏱️ **Seventeenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

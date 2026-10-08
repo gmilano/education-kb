@@ -4,6 +4,103 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-fourth pass, 2026-10-08 — **two foundational platforms have a licence file that is a POINTER, and one of the pointers is dangling**; and `P793`'s version-named-default-branch habit is **not PHP-specific**
+
+⏱️ **Eighteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Oracle map re-measured before any datum (`P713`, `P745`, `P791`), from pairs:** `raw` four-way
+discriminating on one repository (real file **200** / invented path **404** / invented **branch**
+**404** / invented **repo** **404**), `pypi` **200 / 404**, `npm` **200 / 404**, `ls-remote --symref`
+discriminates **and resolves the default ref**. 🔴 `api.github.com` **403** — no star counts
+(`P745`). 🔴 Policy/report hosts **refused at the egress proxy** (`Gap 293`, `intel/market.md`).
+
+### 🔴 `frappe/education` — the whole grant is **19 bytes**, and it is a reference with no body
+
+🟢 **Default ref resolved from the oracle, not guessed:** `refs/heads/`**`develop`** · HEAD
+**`444cc8e`**. 🔵 **Not `main`. Not `master`.**
+
+| Grant layer | Measured at `develop` · `444cc8e` | Verdict |
+|---|---|---|
+| **File** | `license.txt` **200 — 19 B**, whose entire content is `License: GNU GPL V3`. 🔴 `LICENSE` **404**, `LICENSE.md` **404**, `COPYING` **404** | 🔴 **a reference, not a grant** |
+| **Manifest** | `pyproject.toml` **200** — `name = "education"`, author *Frappe Technologies Pvt. Ltd.*, `dynamic = ["version"]`. 🔴 **no `license` key** | 🔴 **silent** |
+
+🔴 **Nineteen bytes incorporate no terms.** 🔵 **And the string is under-specified in a way that
+matters:** `GNU GPL V3` does **not** say *"or later"*, names **no copyright holder** and gives **no
+year**, so the `-only` / `-or-later` question — the one that decides whether a downstream relicensing
+path exists at all — **has no answer in the repository.** 🟢 **This is `P742`'s class exactly: a
+licence *reference* is not a licence *body*.** 🔴 **Either way it is copyleft, so the practical verdict
+does not move: Frappe Education is a self-host substrate, never a component linked into a proprietary
+deliverable.** 🔵 **What moves is the confidence**: this row should read `GPL-3.0 (reference only,
+19 B, version qualifier absent)` and not `GPL-3.0`.
+
+### 🔴 `openeducat/openeducat_erp` — LGPL-3.0 **confirmed from the body**, while the file's own first line points at a file that **404s**
+
+🟢 **Default ref resolved from the oracle:** `refs/heads/`**`19.0`** · HEAD **`1c95cef`**.
+🔵 **A version-named default branch — on an Odoo/Python project.**
+
+| What was read | Result |
+|---|---|
+| `LICENSE` @ `19.0` | 🟢 **200, 8 241 B** |
+| its **first non-blank line** | 🔴 *"For copyright information, please see the COPYRIGHT file."* |
+| `COPYRIGHT` @ `19.0` | 🔴 **404 — the pointer is dangling** |
+| its **body**, line 4 | 🟢 *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3"* |
+| its **title block**, lines 14–15 | 🟢 *"GNU LESSER GENERAL PUBLIC LICENSE / Version 3, 29 June 2007"* |
+
+🟢 **So the grant is real and the label is right: LGPL-3.0, read from payload body.** 🔴 **And a
+reader who trusts the file's own first line is sent to a 404.** 🔵 **The direction of this error is
+the benign one** — a dangling pointer loses *attribution* data, not *permission* data — 🔴 **but it is
+the same failure mode as `frappe/education` in the opposite order: one file is a pointer with no body,
+the other has a body behind a pointer that does not resolve.** 🟢 **Both are only visible to a probe
+that reads the payload instead of the first line.**
+
+🟡 **One channel-reported discrepancy, NOT measured here:** OpenEduCat's marketing pages claim **73+
+integrated modules** while its GitHub README lists a narrower set (admissions, exams, fees,
+attendance, library). 🔴 **No tree enumeration was run this pass**, so this is recorded as a
+description-drift *lead* for `compose/code/description-drift-audit/`, not as a finding.
+
+### 🟢 `P793` generalises — the version-named default branch is **not a PHP habit**
+
+🟢 **Pass 63 found 7 of 25 PHP/composer rows served from a ref that is neither `main` nor `master`
+(`v31.0.00`, `mobile`, `2.2`, `0.7`, `3.x`, `2.12`, `public`) and concluded the defect was
+concentrated in an ecosystem.** 🟢 **This pass adds two non-PHP instances:**
+
+| Repository | Ecosystem | Default ref | A `{main,master}` probe would have reported |
+|---|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | Odoo / Python | 🔴 **`19.0`** | 🔴 **no licence at all** |
+| [`frappe/education`](https://github.com/frappe/education) | Frappe / Python | 🔴 **`develop`** | 🔴 **no licence at all** |
+
+🔵 **So the correction to `P793` is a widening, not a reversal:** the habit tracks **release-branch
+discipline**, which PHP/Composer projects adopt most consistently but ERP-shaped Python projects
+adopt too. 🟢 **The operational rule is unchanged and now better supported: resolve the default ref
+from `ls-remote --symref` before reading any payload, on every ecosystem.** 🔴 **Never probe
+`{main,master}` and report an absence.**
+
+🔴 **No rate from these numbers.** 2 of 2 non-PHP platforms probed this pass is not a sampling frame
+(`P744`); it is two named repositories, and they are named.
+
+### 🟢 Re-confirmed at a resolved ref — the OneRoster 1.2 server tier
+
+| Repository | Ref · HEAD | Licence (payload, bytes) | Region | Note |
+|---|---|---|---|---|
+| [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | `main` · **`6de5476`** | 🟢 **Apache-2.0** (`LICENSE`, **10 173 B**, *"Apache License"*) | **North America** | 🟢 Serves a **OneRoster 1.2** API from an **Ed-Fi ODS** (Data Standard 4.0 and 5.x). 🟢 **Already on this shelf; what is new is the resolved ref and the payload byte count.** 🔵 Channel-reported: its licence notice names **1EdTech Consortium** as copyright holder — a holder/licence pairing worth a `P184` check on a later pass |
+
+🔴 **Still no reachable registry date for the Ed-Fi tier** — `Gap 286` is untouched this pass.
+
+### 🟡 Standing gaps this pass did NOT advance, stated so no reader reads this section as progress
+
+🔴 **`Gap 287`** — `p784` still reads 16 **rooted** filenames only, with no tree and no prose layer.
+🔵 **This pass's two findings are exactly what that gap predicts it would miss**: `frappe/education`'s
+grant is a non-rooted-name file (`license.txt` is rooted, but the *body* is absent) and
+`openeducat`'s is a body behind a dangling pointer. 🔴 **Untouched.**
+🔴 **`Gap 288`** — `p441`'s `LICENCE_RE` still matches `extensions/licenseExtension/…`. 🔴 Untouched,
+and 🔴 **still the dangerous error direction**, because it *admits* rather than refuses.
+🔴 **`Gap 290`** — the seams between this KB's 235+ instruments remain unmeasured.
+🔴 **`Gap 257` / `Gap 258`** — the suite board remains unmeasured, and this pass must state **why**
+rather than restate the gap: 🔴 **the session this pass ran in refuses to execute the repository's own
+test scripts**, so not one suite could be run from the clone. 🟢 **Zero suites this pass, declared as
+zero** — pass 63 ran three, and three were not 112; 🔴 **zero is not three.**
+
+
 ## 🟢 Sixty-third pass, 2026-10-08 — the **PHP/composer tier** gets a manifest-layer licence map (25 rows, 19 with a manifest, **10 permissive**), and the provenance under every one of them was wrong: `master` is a **pseudo-ref**
 
 ⏱️ **Seventeenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**

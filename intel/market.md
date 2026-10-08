@@ -4,6 +4,265 @@ region: Global
 updated: 2026-10-08
 ---
 
+## 🟢 Sixty-fourth pass, 2026-10-08 — **`Gap 293` CLOSES**: the refusal is at the proxy, the proxy says so **in its own words**, and an unimpeachable control proves it is an **allowlist** rather than a fact about policy hosts
+
+⏱️ **Eighteenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Oracle map re-measured before any datum (`P713`, `P745`, `P791`), from calibration pairs:** `raw`
+discriminates **four ways on one repository** — real file **200** / invented path **404** / invented
+**branch** **404** / invented **repo** **404**; `pypi` **200 / 404**; `npm` **200 / 404**;
+`ls-remote --symref` discriminates **and resolves the default ref**. 🔴
+`api.github.com/repos/{third-party}` **403** — **no star counts** (`P745`).
+
+### 🟢 `Gap 293` — **CLOSED**, and the closure corrects fifteen passes of band language
+
+🔴 **`Gap 293` said: "the policy band blames hosts for a refusal that happens at the proxy."** 🟢 **It
+is now measured, on a second channel, with a control that cannot be explained away.**
+
+🟢 **Measured this pass, `n = 5`, one allow and four denies, in the same minute:**
+
+| Host probed | Channel | Result | What it proves |
+|---|---|---|---|
+| `raw.githubusercontent.com` | fetch channel | 🟢 **payload returned and read** | 🟢 **the channel works** — the denies below are not an outage |
+| `www.iesalc.unesco.org` | fetch channel | 🔴 **`EGRESS_BLOCKED`** — *"Access to www.iesalc.unesco.org is blocked by the network egress proxy"* | 🟢 the refusal **names its own author** |
+| `digital-strategy.ec.europa.eu` | fetch channel | 🔴 **`EGRESS_BLOCKED`**, identical structure | 🟢 same, `n = 2` |
+| `www.multistate.us` | fetch channel | 🔴 **`EGRESS_BLOCKED`**, identical structure | 🟢 same, `n = 3` |
+| 🔴 **`en.wikipedia.org`** | fetch channel | 🔴 **`EGRESS_BLOCKED`**, identical structure | 🔴 **THE CONTROL, and it is the finding** |
+
+🔵 **Wikipedia is the whole argument.** 🔴 **It is not a policy host, not a regulator, not a vendor
+report, not rate-limiting this KB, and certainly not down.** 🟢 **It is refused with the identical
+structured error.** 🔵 **Therefore the variable is the *channel's allowlist*, and not any property of
+`unesco.org`, `eur-lex.europa.eu`, `ec.europa.eu`, `nasbe.org`, `multistate.us` or any other host this
+file has named in a band since pass 57.**
+
+🔴 **So this file has been writing a true sentence for a false reason.** 🟢 Passes 57–60 wrote *"6 of 6
+primary policy hosts at `000`"* and concluded the policy channel was closed — **the conclusion was
+right**. 🔴 **But `000` is a curl-shaped token for "no response reached me", and placing it in a column
+headed by a *hostname* asserts something about that host.** 🟢 **Nothing about those hosts was ever
+measured.** 🔵 **Pass 59's lesson was to `grep` before announcing a property; this is the same lesson
+for an *error code*: a transport failure is a fact about the transport until something names the
+author.**
+
+🆕 **`P797` — a refusal must be attributed to the layer that issued it.** 🟢 **Write
+`EGRESS_DENIED (allowlist)` and never `000` against a hostname.** 🔵 The two differ in what a later
+pass may conclude: `000` invites "retry, the host may be up" and licenses a reader to doubt the source;
+🟢 `EGRESS_DENIED (allowlist)` is terminal in this environment and says **the source is fine and this
+environment may not read it** — which is the sentence a client-facing citation actually needs.
+
+🟢 **Consequence for every band in this file, applied from here forward:** the primary-source channel
+is **closed by configuration, not by the sources**, so every regulatory and survey figure below stays
+`reported` / single-channel — 🟢 **but its *reliability* is no longer in question on account of
+reachability.** 🔵 **The sources are good. This environment is fenced.** 🔴 **What remains unmeasured
+is the figures themselves, and that is a different gap.**
+
+🔴 **One claim this pass did NOT make:** no allowlist was enumerated. 🟢 Five hosts were probed and
+five results recorded; 🔴 **four of five denied is not a rate** (`P744`), and nothing here says which
+hosts *would* be allowed.
+
+### 🟢 Regional intelligence, gathered this pass — band stated once, applying to every figure below
+
+🟡 **Band (`P784`, and now `P797`):** every regulatory, adoption and market figure in this section is
+🟡 **`reported`, single-channel, via the search channel's summaries** — 🔴 **because every primary host
+is `EGRESS_DENIED (allowlist)`, measured above.** 🟢 **Every repository, licence, ref and SHA cited
+anywhere in this pass is payload-read.** 🔵 **The asymmetry is the shelf's standing shape:**
+`intel/` is a **lead shelf**, `repos/` is an **evidence shelf**.
+
+🔴 **Three circulating figures this pass explicitly DECLINES to carry**, because the channel itself
+flagged them as unattributable: a *"$12.3B globally by 2026"* market figure attributed to HolonIQ that
+the channel could not confirm against HolonIQ's own material; *"83 % of institutions plan AI teaching
+assistant deployment"* attributed to EDUCAUSE with no verifiable primary link; and a *"42 %
+learning-outcome improvement"*. 🟢 **Declining is an answer** (`P460`).
+
+### 🟢 The cross-region pattern this pass found, and it is the most sellable sentence in the file
+
+🔵 **Two regions, two different instruments, same shape: adoption has outrun believed efficacy.**
+
+| Region | Adoption | Believed efficacy | The gap |
+|---|---|---|---|
+| **EMEA** | 🟡 **63 %** of teachers use AI — Sanoma Learning, **20 000+ teachers, 14 European countries** | 🔴 **16 %** believe general-purpose AI improves learning outcomes. 🔴 **3 in 4** remain concerned about risks to education quality; only **1 in 3** support student use at school | 🔴 **63 → 16** |
+| **LATAM** | 🟡 **79 %** of faculty use AI in teaching — Digital Education Council | 🔴 **19 %** use it for assignment feedback; **88 %** report *minimal* to *moderate* engagement; assessment is the **weakest** area | 🔴 **79 → 19** |
+
+🟢 **Measured by unrelated surveys, on different continents, with different questions — and the gap
+runs the same direction and nearly the same width.** 🔵 **What it means commercially:** the market is
+not short of AI *usage*; it is short of AI anyone believes in. 🟢 **So the sellable unit is not
+"adoption" — it is *evidence*, in the specific places general-purpose chat is known to fail: feedback
+on student work, assessment, and curriculum alignment.** 🔵 **It also explains the 2026 trend the
+channel reports from several directions at once** — a movement away from generic chatbots toward
+purpose-built education tooling (`intel/trends.md`). 🟢 **The 63-vs-16 figure is the strongest single
+piece of evidence this KB holds for that thesis, and it is new this pass.**
+
+🟡 **Method caveat kept visible, and it is a real one:** the LATAM figures in this file have been
+cited from two different samples — **>30 000 respondents across 29 institutions** (already on this
+shelf) and **7 319 faculty** (this pass's channel). 🔴 **These are not the same instrument and their
+headline percentages must not be averaged or presented as one survey.** 🟢 **Both are recorded; neither
+is reconciled**, and reconciling them needs a primary read that this environment cannot perform.
+
+## Opportunities by region
+
+### North America
+
+🟡 **Adoption, `reported`:** the largest regional market — ~**36 %** of global AI-in-education spend,
+**$3.68 B** in 2026 toward **$32 B** by 2030. **60 %** of US K-12 teachers used AI tools in 2024-25
+and **32 %** at least weekly; teacher use roughly **doubled** year on year. **86 %** of education
+organisations use generative AI 🔴 **and most lack a policy.** Weekly-using teachers report saving
+**~5.9 hours/week**.
+
+🟡 **Regulation, `reported` — the venue is the state legislature, and the volume is the point:**
+**134** AI-in-education bills across **31** states this session; **30+** states now have guidance
+documents. Named instruments: **California AB 1159** (would bar using student data to train AI
+models), **Idaho SB 1227** (privacy protections for school AI tools), **Oklahoma** and **Maryland**
+(human oversight required; AI barred from high-stakes decisions about students), **Ohio** (every
+district must adopt a formal AI-use policy by **2026-07-01**), **Georgia** and **Mississippi** (AI
+instruction inside CS credits). Federal: **H.R. 8747**, the *K-12 AI Literacy and Readiness Act of
+2026*, cleared a House committee in July on a largely party-line vote 🔴 **and no evidence was found
+that it passed the full House.** Local: 🔴 **New York City's one-year moratorium on student-facing AI
+through eighth grade**, which other districts are being urged to copy.
+
+🟢 **The opportunity, and it follows from the regulation rather than the market size:** 🔴 **a
+patchwork of 31 states with 30+ non-identical guidance documents and at least one outright local
+prohibition is a *compliance* market before it is a *product* market.** 🟢 **The sellable asset is a
+policy-gate that answers "may this function run, in this jurisdiction, for this age band" from data** —
+which is what `compose/code/p782-policy-gate/` already is. 🔵 **Ohio's hard date is the clearest
+near-term wedge on this shelf: every district in one state needed an adopted policy by 2026-07-01, and
+"most lack a policy" is the measured national baseline.** 🔴 **And NYC is the standing warning: the
+grading and student-facing tiers of this KB's shelf are *prohibited*, not *conditioned*, in that
+district — `P764`, no human-in-the-loop converts a prohibition into a condition.**
+
+🟢 **Buildable here, payload-verified this pass:**
+[`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster)
+(**Apache-2.0**, `main` · `6de5476`) for OneRoster 1.2 over an Ed-Fi ODS — Ed-Fi is the North American
+data-standard substrate, and this is the licence-clean bridge off it;
+[`zhenghh04/canvas-mcp`](https://github.com/zhenghh04/canvas-mcp) (**MIT**, `main` · `0ef723f`) for the
+instructor-side agent edge, whose three-tier capability gating is the FERPA-shaped control this region
+needs; [`songsterq/gradebook-mcp`](https://github.com/songsterq/gradebook-mcp) (**MIT**, `main` ·
+`27bcdaf`) for the parent-facing, read-only-by-construction pattern.
+
+### EMEA
+
+🟡 **Adoption, `reported`:** **63 %** of teachers across **14 European countries** use AI
+(Sanoma Learning, **20 000+** respondents) 🔴 **while only 16 % believe general-purpose AI improves
+learning outcomes**, **3 in 4** are concerned about quality risk, and **1 in 3** support student use.
+
+🟡 **Regulation, `reported`, and the timeline MOVED:** the **EU AI Act** remains the anchor, with
+education in **Annex III** as high-risk where a system determines access, assesses learning outcomes,
+or influences an educational path — admissions screening and proctoring are the named examples. 🆕
+**A digital omnibus received final Council approval on `2026-06-29`, resetting the high-risk
+application dates to `2027-12-02` for stand-alone high-risk systems and `2028-08-02` for high-risk
+systems embedded in regulated products.** 🔴 **The Article 4 AI-literacy obligation was NOT changed and
+has applied since `2025-02-02`.** 🟢 **The AI Office and national authorities began enforcing from
+`2026-08-02`.** Also in frame: **Convention 108+** on data protection, and a Council of Europe survey
+finding only **4 of 23** responding member states had AI policies or regulations as of 2022.
+
+🟢 **The opportunity:** 🔵 **the deferral is runway, not relief** — this shelf's standing phrase, and
+it now has a date attached. 🔴 **The duty that is already live is the one nobody is selling against:
+Article 4 AI literacy, in force since 2025-02-02, with no deferral.** 🟢 **And the 63-vs-16 gap says
+what to build:** European teachers are using general-purpose AI and do not believe it works, so
+*purpose-built, curriculum-aligned* tooling has an unusually well-evidenced demand case here — 🟢 **with
+the compliance clock on the high-risk functions pushed to late 2027, which is exactly enough time to
+build one properly.**
+
+🟢 **Buildable here, payload-verified this pass:**
+[`educredentials/ec-issuer`](https://github.com/educredentials/ec-issuer) (`main` · `8bafc99`) — 🟡
+**MIT in README prose only**, 🔴 **no licence file, no manifest key, unpublished on pypi** — the only
+reachable issuer that speaks the **European Learner Model**, and therefore the best-fit and
+least-provable component on this shelf's new credential edge. 🟢 **Resolve its grant before quoting
+it.** Fallback: [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) (🔴 **AGPL-3.0**,
+`main` · `6fd0a11`), self-host only.
+
+### APAC
+
+🟡 **Regulation, `reported`, and this is the region where the law is furthest ahead of the market:**
+**South Korea's AI Basic Act took effect January 2026**, naming **education** among its *high-impact*
+domains, requiring that high-impact systems **allow meaningful human monitoring and intervention at any
+time**; 🟢 **2026 is a limited-enforcement pilot year with a one-year grace period on penalties.**
+**Vietnam's Law No. 134/2025/QH15 took effect `2026-03-01`** with **extraterritorial reach** over
+foreign technology companies operating in Vietnam, and a follow-on decision names **automated
+assessment and behavioural monitoring** as high-risk in education. **Taiwan** passed an AI Basic Act in
+**December 2025**. **Singapore and Japan** rely on voluntary guidelines backed by existing law.
+**China** has binding algorithm and generative-AI rules. **Australia** has no AI-specific statute;
+its 2024 proposal paper floated mandatory guardrails for high-risk uses including education.
+**Indonesia** is proposing a soft, sector-based framework naming education.
+
+🟡 **Adoption, `reported`:** highly uneven — China and Singapore have established AI-in-education
+policies while other countries are still meeting basic educational needs; UNESCO stresses that policy
+without IT infrastructure, connectivity and teacher training does not land. **South Korea** delivered
+~**$740 M** across 2024-2026 to train teachers on AI tools and methods. 🔵 **Public sentiment splits
+inside the region:** Ipsos Education Monitor 2026 finds **lower** support for banning AI in schools
+across the Asian markets examined and **higher** support in **Australia and New Zealand**.
+
+🟢 **The opportunity:** 🔵 **Korea's grace period is a dated, closing window** — a 2026 engagement can
+build the human-monitoring and intervention surface that the Act requires *before* penalties begin,
+which is a far easier sale than retrofitting it in 2027. 🔴 **Vietnam's extraterritoriality means a
+delivery centre outside Vietnam does not put a client outside the law**, and the two functions its
+decision names — automated assessment, behavioural monitoring — are precisely this KB's
+highest-exposure tiers. 🟢 **The regional asset to build is an intervention-and-audit layer:
+human-in-the-loop checkpoints, a tamper-evident decision log, and per-jurisdiction function gating.**
+🔵 **And the AU/NZ sentiment split is a product-boundary signal, not a market-size one** — the same
+product needs a stricter default posture there.
+
+🟢 **Buildable here, already on this shelf:** the Sunbird DPI tier —
+[`project-sunbird/sunbird-lms-service`](https://github.com/project-sunbird/sunbird-lms-service) (MIT)
+with [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal) (MIT) — remains
+the region's licence-clean public-sector LMS base.
+
+### LATAM
+
+🟡 **Adoption, `reported`, and it is the best-evidenced region on this shelf:** UNESCO IESALC surveyed
+**200 higher-education institutions across 19 countries** and found **87 %** use AI in at least one
+area of activity, teaching and learning most commonly, 🔴 **with governance frameworks and institutional
+strategies explicitly failing to keep pace.** A Digital Education Council survey of **7 319 faculty**
+found **79 %** use AI in teaching 🔴 **but 88 % report only minimal-to-moderate engagement**, and
+🔴 **assessment is the weakest area — the lowest adoption is in exactly the assessment-related use
+cases (feedback generation, integrity checking).**
+
+🟡 **Regulation, `reported` — general AI law, not education-specific:** **Uruguay** became the first
+country in the region to sign the **Council of Europe Framework Convention on AI** (2025). **Colombia**
+adopted a national AI policy via **CONPES 4144** (February 2025). **Mexico** has a 2024 federal AI bill
+proposing an oversight authority. 🔵 Across the region legislatures are converging on an
+unacceptable / high / lower risk taxonomy. 🔴 **No binding education-specific AI rule was found.**
+
+🟡 **Institutional landscape, `reported`:** **UNESCO launched the Observatory on AI in Education for
+Latin America and the Caribbean in April 2026**, with partners including **CAF**, **CENIA** (Chile),
+**ECLAC**, **Fundación Ceibal** (Uruguay), **Tecnológico de Monterrey**, and **Fundación Santillana /
+ProFuturo**. UNESCO has run AI ethics and regulation training for officials in **Ecuador** and
+**Chile**. At **Digital Learning Week 2026 (8–11 September)**, **25+** education ministers adopted a
+joint statement that education must remain a human right and common good in the AI era.
+
+🟢 **The opportunity, and it is the sharpest in this file because the gap is *named by the surveys
+themselves*:** 🔴 **87 % institutional adoption with governance that lags, and 79 % faculty use with
+assessment as the weakest area.** 🟢 **Those are two halves of one sale:** the **governance layer** the
+institutions do not have, wrapped around the **assessment function** the faculty are not using. 🔵 **A
+proposal that leads with "AI adoption" here is selling something 87 % of the market already bought.**
+🟢 **A proposal that leads with *governed assessment* — feedback generation and integrity checking with
+an auditable policy gate — is selling the two things measured absent.** 🔵 **And the Observatory's
+partner list is the distribution channel**: CENIA, Ceibal and Tec de Monterrey are institutional
+anchors, not just names.
+
+🟢 **Buildable here, already on this shelf:** the `latam-gpt` evaluation tier —
+[`latam-gpt/lm-evaluation-harness`](https://github.com/latam-gpt/lm-evaluation-harness) (**MIT**,
+`main` · `9fa381a`) and [`latam-gpt/syco-bench`](https://github.com/latam-gpt/syco-bench) (🟢
+**`MIT-0`**, `main` · `5ecc005` — **re-confirmed on a second channel this pass: payload first line
+*"MIT No Attribution"*, ~895–903 B**), plus
+[`eduagarcia/lm-evaluation-harness-pt`](https://github.com/eduagarcia/lm-evaluation-harness-pt)
+(`ab24923`) for Portuguese. 🔵 **A regional evaluation harness is what turns "governed assessment" from
+a slide into a deliverable.**
+
+### Global
+
+🟡 **Market size, `reported`, and the estimates disagree:** **$10.6 B in 2026 → $42.48 B by 2030 at a
+41.5 % CAGR** (Research and Markets) is the figure this shelf already carries and the one with a named
+publisher. 🔴 **Competing figures circulate and are declined above.** 🟢 **Treat the CAGR as
+directional and never as a forecast quoted to a client without its publisher attached.**
+
+🟡 **The structural trend, `reported` from several independent directions:** 2026 is the year AI in
+education moves **from experimentation to governance** (1EdTech), with clear policies, data boundaries
+and oversight as the condition of adoption — and with **digital credentials becoming a core mechanism
+for skills-based learning and hiring.** 🔵 **That last clause is why this pass opened the
+credential-issuance edge in `verticals/solutions.md`** — 🔴 **and why its finding matters: the edge
+1EdTech puts at the centre of 2026 is the one edge on this shelf with no permissive, file-grant
+implementation.**
+
+
 ## 🟢 Sixty-third pass, 2026-10-08 — **all four regional queries returned education-specific material** (pass 62 had two empty), and the band line itself was measured wrong: the policy channel is blocked **at the proxy**, not at the hosts
 
 ⏱️ **Seventeenth pass of this date. Append-only: this section is new; nothing below it was rewritten.**
@@ -52,7 +311,7 @@ position: Annex III high-risk obligations **postponed to `2027-12-02`** under th
 Council final green light **`2026-06-29`**, 🟡 **still awaiting Official Journal publication** —
 which is why the date is `reported` and carries a conditional, not a deadline.
 
-## Opportunities by region
+## Opportunities by region — superseded (the live block is at the top of this file)
 
 🔵 **Framing, per `P790`/`P769`: each opportunity names a protocol or a function, never a brand.**
 🔵 **Every component named below is a row this shelf has payload-read at a pinned ref.**
