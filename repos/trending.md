@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 — pass 89: `topics/scorm` bought (220 repos), the "Load more" wall falls to `?page=2`, and a topic channel's TAIL degrades by publisher
+
+⏱️ **Twentieth pass of this date. APPEND-ONLY — history is below.**
+
+### 🟢 🆕 `P951` — the "Load more" wall is passable with `?page=N`, and `Gap 360` discharges on it
+
+🔴 **`Gap 360` was opened because `topics/open-badges` reports 30 repos, showed 20, and *"10 are behind
+'Load more' and were never read"*.** 🟢 **`https://github.com/topics/open-badges?page=2` returned the
+remaining 10 on the first attempt.**
+
+🟢 **Consequence beyond the gap: `topics/scorm` reports 220 repos and is therefore FULLY buyable in ~11
+page reads**, where before this shelf could only ever read a channel's first 20. 🔵 **Every "channel
+exhausted at N" judgement made from a first-page read is re-openable**, and the cost of a full channel is
+now known: one `WebFetch` per 20 rows.
+
+### 🔴 🆕 `P952` — a topic channel's TAIL degrades, and it degrades by PUBLISHER CONCENTRATION
+
+🟢 **Measured on `topics/open-badges`, page 1 vs page 2:**
+
+| | page 1 (rows 1–20) | page 2 (rows 21–30) |
+|---|---|---|
+| star range | 🟢 **85 → 0** | 🔴 **0 for all ten** |
+| non-software rows | 🟢 ~1 | 🔴 **4 of 10 — all `api-evangelist/*`**, self-described *"independent third-party profile of a public API surface"* |
+| grant readable | 🟢 high | 🔴 `api-evangelist/badgr` → **NO PAYLOAD in 16 names** (consistent with not being software) |
+
+🔵 **40% of page 2 is one publisher's bulk-tagged non-code rows.** 🟢 **So channel precision is not uniform
+and does not decay randomly — it decays because a single publisher tags in volume at the zero-star tail.**
+🟢 **Operating rule: read page 1 for rows, read the tail only to establish the denominator, and expect the
+tail to be dominated by one or two bulk taggers.** 🔵 **This is the costing rule `P923` was missing.**
+
+### 🟢 `topics/scorm` — the buy, and the channel's quality
+
+🟢 **220 repos reported. 20 read (page 1). 16 probed through the grant ladder. 14 granted, 12 permissive.**
+🟢 **Precision ~90%**: of 20 rows, 18 are genuinely education/e-learning. 🔴 **Two false positives:**
+`edmozley/freeitsm` (98★, an **ITSM tool**) and `Totsukawaii/writeup-on-scorm-cheat` (24★, a **writeup on
+cheating SCORM packages** — 🟡 not a build row, but a live academic-integrity artefact).
+🔵 **Against `topics/autograding` (94 repos, closed at 94/94) and `topics/question-generation` (refused at
+~30% precision), `topics/scorm` is the best channel this shelf has bought: 2.3× the volume of autograding
+at comparable precision.**
+
+| row | grant · bytes · ref · SHA | ★ | signal |
+|---|---|---|---|
+| 🔴 [`adaptlearning/adapt_framework`](https://github.com/adaptlearning/adapt_framework) | 🔴 **GPL** · 35 129 · `master` · `f0a705d` | 629 | 🔴 **Channel's top row by stars is copyleft** — responsive HTML5 course authoring |
+| 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** · 10 982 · `master` · `cccdcda` | 447 | 🟢 **The permissive production LMS this shelf said did not exist** (`P945`) |
+| 🟢 [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 **MIT** · 1 072 · `master` · `882f3b8` | 354 | 🟢 Modern SCORM runtime — the universal content↔LMS shim |
+| 🟢 [`numbas/Numbas`](https://github.com/numbas/Numbas) | 🟢 **Apache-2.0** · 11 357 · `master` · `39b03e5` | 215 | 🟢 Browser e-assessment, maths-first; **canonical Apache byte count** |
+| 🟢 [`dhodges47/SCORM-LearningManagementSystem`](https://github.com/dhodges47/SCORM-LearningManagementSystem) | 🟢 **MIT** · 1 091 · `master` · `87a57d9` | 184 | 🟡 Demo-grade SCORM LMS (C#) |
+| 🔴 [`cybercussion/SCOBot`](https://github.com/cybercussion/SCOBot) | 🔴 **Creative Commons** · 837 · `main` · `017a47e` | 164 | 🔴 **`P947` — CC on software, needs counsel** |
+| 🔴 [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | 🔴 **NO PAYLOAD / 16 names** · `master` · `3e532b8` | 99 | 🔴 **US DoD authored SCORM and did not licence this** |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** · 1 062 · `main` · `2bca285` | 91 | 🟢 **AI-native LMS**, EMEA |
+| 🔴 [`skfriese/simple-scorm-api`](https://github.com/skfriese/simple-scorm-api) | 🔴 **NO PAYLOAD / 16 names** · `master` · `cfec748` | 70 | 🔴 Self-declared **NOT MAINTAINED** |
+| 🟢 [`S4-NetQuest/react-scorm-provider`](https://github.com/S4-NetQuest/react-scorm-provider) | 🟢 **MIT** · 1 068 · `master` · `b4c31bb` | 67 | 🟢 SCORM for React SPAs |
+| 🟢 [`sr258/scorm-h5p-wrapper`](https://github.com/sr258/scorm-h5p-wrapper) | 🟢 **MIT** · 1 073 · `master` · `3e7755a` | 58 | 🟢 **H5P → SCORM** packaging |
+| 🟢 [`adlnet/xAPI-SCORM-Profile`](https://github.com/adlnet/xAPI-SCORM-Profile) | 🟢 **Apache-2.0** · 11 324 · `master` · `ea17c40` | 42 | 🟢 **ADL's granted spec** — North America anchor |
+| 🟢 [`gamestdio/scorm`](https://github.com/gamestdio/scorm) | 🟢 **MIT by signature** · 1 091 · `master` · `845d4e4` | 38 | 🟡 **`P943` third instance** |
+| 🟢 [`raccoongang/edx_xblock_scorm`](https://github.com/raccoongang/edx_xblock_scorm) | 🟢 **Apache-2.0** · 11 342 · `master` · `a5741e3` | 32 | 🟢 SCORM inside **Open edX Studio** |
+| 🟢 [`LiaScript/LiaScript-Exporter`](https://github.com/LiaScript/LiaScript-Exporter) | 🟢 **BSD** · 1 523 · `master` · `1d13a11` | 29 | 🟢 One source → SCORM/IMS/xAPI/ePub/APK |
+| 🟢 [`savvides/idstack`](https://github.com/savvides/idstack) | 🟢 **MIT** · 1 077 · `main` · `1767027` | 27 | 🟢 **AI checker** for instructional alignment + accessibility |
+
+🔴 **Trap `T1` paid 13 of 16** — only `mentingo`, `SCOBot` and `idstack` resolve to `main`. 🔵 **A `main`-only
+assumption would have missed 81% of this channel.**
+
+### 🟢 Credentialing tier extended — `Gap 360`'s ten rows plus page-1 remainder, all payload-read
+
+🟢 **11 probed, 10 granted, 6 permissive.** 🔴 **Issuing servers are AGPL 3 of 3:** `fedora-infra/tahrir`
+(34 917 B, `develop` · `ddbff5c`), `edubadges/badgr-server` (34 519 B, `develop` · `9419acc`),
+`edubadges/badgr-ui` (34 519 B, `master` · `9aa1f3f`). 🟢 **Permissive:**
+`MyKnowledgeMap/openbadges-google-sheets` (MIT, 1 071 B), `opensalt/OB3DefinitionWidget` (MIT, 1 080 B),
+`iblai/wallet` (MIT, 1 063 B), `godmode2k/open_badges_cert` (**Apache-2.0**, 11 357 B),
+`ishandutta2007/Awesome-Digital-Credentialing` (MIT, 1 068 B),
+`ishandutta2007/Awesome-Credential-Management` (MIT, 1 068 B).
+🔴 **Two against `P942`:** `hoijui/obadgen` — a pure badge-**baking CLI**, i.e. a transform, is
+**AGPL-3.0** (34 020 B, `master` · `58989c1`); and `my-language-skills/open-badges-framework` is
+**GPL at exactly 35 147 B** because it is a **WordPress plugin** (`P948` — host ecosystem beats artefact
+type). 🔴 `andyfmiller/vc-dotnet-demos` → **NO PAYLOAD in 16 names**.
+
 ## 🟢 2026-10-09 (pass 88) — `topics/openbadges` + `topics/open-badges` bought; the channel is **hyphen-split**, and its licence boundary falls on artefact type
 
 ⏱️ **Nineteenth pass of this date.** 🟢 **Append-only: this section is new; the history below it is unchanged.**

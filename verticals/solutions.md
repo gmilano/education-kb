@@ -4,6 +4,89 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🔴 Eighty-ninth pass, 2026-10-09 — **the `P945` WRITE-BACK: this file contradicts itself 72 lines apart**, and the permissive platform path it already documented was overridden by a census claim it never made
+
+⏱️ **Twentieth pass of this date.** 🟢 **This is the file that carries the claim, so this is where the
+correction goes** (`P938`), not only in the pass log.
+
+### 🔴 The contradiction, both halves quoted from this file
+
+| line | what this file says |
+|---|---|
+| **29–32** | 🔴 *"**8 of 8 copyleft. Not one MIT, Apache-2.0 or BSD row.**"* → *"`OpenEduCat` — **the only established platform you can build *on* rather than *beside***"* |
+| **101** | 🟢 *"**OpenOLAT** · `OpenOLAT/OpenOLAT` · **Apache-2.0** · Mature European HE LMS; **permissive alternative to Moodle** for EMEA sovereignty asks"* |
+| **513** | 🟢 *"`corteza` joins `aureuserp` (**MIT**) and `OpenOLAT` (**Apache-2.0**) as one of the few substrates a studio **can wrap in a proprietary client deliverable without a copyleft conversation**"* |
+| **581** | 🟢 *"`OpenOLAT/OpenOLAT` · **Apache-2.0** · 10 982 B · `master` · `d62921e` · **Confirmed by payload read, not by badge**"* |
+
+🔵 **Three rows of this file already held the counter-example, one of them a payload read. The census
+sentence at line 29 was never a measurement of the tier — it was a count of the eight rows `Gap 334`
+happened to sample, with *"established"* doing the quantifier's work.** 🟢 **`P945` adopted in
+`agents/top.md`; the correction is applied here.**
+
+### 🟢 The corrected platform/LMS tier read — superseding lines 29–32 and line 251
+
+🟢 **Re-measured this pass from the payload, pinned to the resolved SHA:**
+
+| platform | ref · SHA | bytes | grant | build posture |
+|---|---|---|---|---|
+| 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `master` · `cccdcda` | **10 982** | 🟢 **Apache-2.0**, clauses **1–9 intact** | 🟢 **ON TOP, and closable.** Permissive, production, named deployment |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `main` · `2bca285` | **1 062** | 🟢 **MIT** | 🟡 ON TOP — 🔴 open-core unverified (`Gap 362`) |
+| 🟡 [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | 🔴 `19.0` · `1c95cef` | 8 241 | 🟡 **LGPL-3.0** | 🟡 link only |
+| 🔴 `moodle` · `edx-platform` · `canvas-lms` · `chamilo-lms` · `rosariosis` · `GibbonEdu/core` | per passes 83–88 | — | 🔴 **GPL / AGPL / GPL-2.0** | 🔴 BESIDE |
+| 🟡 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master` · `5eef83d` | 11 120 | 🟡 **ECL-2.0** (`P940`: narrowed patent grant) | 🟡 BESIDE |
+
+🟢 **Corrected statement, with its membership criterion attached (`P945`): of the TEN established
+platform/LMS rows this shelf holds — the eight sampled by `Gap 334`, plus `OpenOLAT` and `mentingo` —
+EIGHT are copyleft, ONE is Apache-2.0 and ONE is MIT.**
+
+🔴 **What this costs the standing recommendation.** *"The platform is the client's; the intelligence on top
+is ours"* was presented as *"what eight byte counts say"*. 🟢 **It is what eight byte counts say about eight
+rows that were chosen.** 🟢 **A permissive, production, build-on-top LMS path exists and has existed on this
+shelf since pass 35.** 🔵 **For an engagement whose deliverable must be closed, the entry point is
+`OpenOLAT` (Apache-2.0), with `OpenEduCat` the fallback where LMS+SIS in one database matters more than
+the licence.**
+
+🟢 **`OpenOLAT` anchor, verified this pass:** maintained by **frentix GmbH (Switzerland)**; lineage **OLAT,
+University of Zurich, 1999**; 🟢 **named current deployment — *"OpenOLAT is the central learning management
+system (LMS) of Koblenz University"*** (uni-koblenz.de). 🔴 **The *"all faculties of UZH and ETH Zurich,
+50 000+ users"* figures are OLAT-era and describe the parent platform — excluded deliberately.**
+🟢 **This is the first payload-verified PERMISSIVE platform row on this shelf with a named EMEA
+institutional deployment.**
+
+🟢 **A byte datum for `Gap 355`:** pass 42-era recorded `OpenOLAT` at **10 982 B** at SHA `d62921e`; this
+pass measures **10 982 B** at `cccdcda`. 🔵 **Byte-identical across two different commits means the LICENSE
+file did not change between them** — which is the ordinary case, and it extends pass 88's condition:
+cross-pass byte comparison is valid at a matching SHA, and a match at *differing* SHAs is positive evidence
+the payload is stable, not a contradiction.
+
+### 🟢 The SCORM/content-interop layer, newly bought and overwhelmingly permissive
+
+🟢 **`topics/scorm` — 220 repos, bought this pass.** 🟢 **This is the content-interoperability layer sitting
+*between* the authoring tool and the LMS, and it is where the permissive supply is.**
+
+| layer | row | grant | why a studio cares |
+|---|---|---|---|
+| runtime | 🟢 [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) · 354★ | 🟢 **MIT** (1 072 B) | 🟢 Drop-in SCORM 1.2/2004 runtime — the shim between any content and any LMS |
+| React binding | 🟢 [`S4-NetQuest/react-scorm-provider`](https://github.com/S4-NetQuest/react-scorm-provider) · 67★ | 🟢 **MIT** (1 068 B) | 🟢 Makes a modern SPA SCORM-reportable without touching the LMS |
+| packaging | 🟢 [`sr258/scorm-h5p-wrapper`](https://github.com/sr258/scorm-h5p-wrapper) · 58★ | 🟢 **MIT** (1 073 B) | 🟢 H5P interactive content → SCORM package |
+| export | 🟢 [`LiaScript/LiaScript-Exporter`](https://github.com/LiaScript/LiaScript-Exporter) · 29★ | 🟢 **BSD** (1 523 B) | 🟢 One source → SCORM, IMS, xAPI, ePub, PDF, APK |
+| spec bridge | 🟢 [`adlnet/xAPI-SCORM-Profile`](https://github.com/adlnet/xAPI-SCORM-Profile) · 42★ | 🟢 **Apache-2.0** (11 324 B) | 🟢 ADL's own mapping from SCORM data to xAPI statements |
+| in-LMS | 🟢 [`raccoongang/edx_xblock_scorm`](https://github.com/raccoongang/edx_xblock_scorm) · 32★ | 🟢 **Apache-2.0** (11 342 B) | 🟢 SCORM inside Open edX, editable in Studio |
+| assessment | 🟢 [`numbas/Numbas`](https://github.com/numbas/Numbas) · 215★ | 🟢 **Apache-2.0** (11 357 B) | 🟢 Browser e-assessment, maths-first, SCORM-packageable |
+| authoring | 🔴 [`adaptlearning/adapt_framework`](https://github.com/adaptlearning/adapt_framework) · 629★ | 🔴 **GPL** (35 129 B) | 🔴 **The channel's top row by stars is the one you cannot close** |
+
+🔴 **And it inverts `P942`.** 🔵 `P942` (pass 88) put the permissive/copyleft line along **artefact type** —
+format/transform/validate permissive, the **serving** layer copyleft. 🔴 **In this tier it runs the other
+way: two LMS rows (the serving layer) are permissive — `OpenOLAT` Apache-2.0, `mentingo` MIT — while the
+authoring framework `adapt_framework` is GPL.** 🟢 **And within credentialing, the pure *transform*
+`hoijui/obadgen` (a badge-baking CLI) is AGPL-3.0**, against `P942`'s own prediction.
+
+🟢 **`P948`: artefact type is a WEAK PRIOR, not the rule — at least three predictors compete, and host
+ecosystem beats it.** 🔴 `my-language-skills/open-badges-framework` is **GPL at exactly 35 147 B** because
+it is a **WordPress plugin**, and WordPress's ecosystem is GPL; its artefact type (a form/profiling widget)
+predicts permissive and is simply overridden. 🔵 **Odoo→LGPL explains `OpenEduCat` the same way.**
+🟢 **Ask the host ecosystem first, the artefact type second, and read the payload regardless.**
+
 ## 🟢 Eighty-eighth pass, 2026-10-09 — **the `Gap 334` WRITE-BACK: this is the file that carried the stale claim for three passes**, and the LMS tier is now payload-read 8 of 8
 
 ⏱️ **Nineteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

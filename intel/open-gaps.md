@@ -4,6 +4,115 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-ninth pass, 2026-10-09 — **three gaps DISCHARGE, a census claim is FALSIFIED by its own shelf, `P944` is corrected to an egress allowlist, and the eleven-pass instrument block is partly UNBLOCKED**
+
+⏱️ **Twentieth pass of this date. Append-only.**
+
+### 🔴 🆕 The defect this pass exists to fix — `P945`
+
+🔴 **`agents/top.md` and `verticals/solutions.md` both assert:** *"The established platform tier is **8 of 8
+copyleft. Not one MIT, Apache-2.0 or BSD row**"* → *"`OpenEduCat` is **the only established platform** you
+can build *on* rather than *beside*"*.
+
+🟢 **False, and falsified by rows already on this shelf — in the same file, 72 lines apart:**
+
+| line in `verticals/solutions.md` | content |
+|---|---|
+| **29–32** | 🔴 the census claim |
+| **101** | 🟢 *"**OpenOLAT** · **Apache-2.0** · permissive alternative to Moodle for EMEA sovereignty asks"* |
+| **513** | 🟢 *"`aureuserp` (MIT) and `OpenOLAT` (Apache-2.0) … substrates a studio **can wrap in a proprietary client deliverable**"* |
+| **581** | 🟢 *"`OpenOLAT` · Apache-2.0 · 10 982 B · **confirmed by payload read, not by badge**"* |
+
+🔵 **This is NOT `P938`'s shape.** The register and the shelf **agreed**; both were wrong, because neither
+**enumerated**. 🔴 **A sample of eight was reported as a census of "the tier", with *"established"* doing the
+quantifier's work, and a commercial recommendation was derived from the hole in the sample.**
+
+🟢 **`P945` adopted: a tier-level quantifier ships with (a) its membership criterion and (b) a grep for
+counter-examples across the shelf.** 🔴 **Cost: `OpenOLAT` has been on this shelf since pass 35 — the shelf
+told clients for ~54 passes that no permissive build-on platform existed while carrying one.**
+🟢 **Corrected in both files, not merely reported here.**
+
+### 🟢 Discharged, falsified, corrected, carried
+
+| gap | status | evidence |
+|---|---|---|
+| 🆕 **`Gap 357`** — Mexico, five empty passes | 🟢 **DISCHARGED on the first query** | 🟢 **SEP's 10 recomendaciones for ethical/critical genAI use in higher education, 15 Apr 2026**; 🟢 **Encuesta Nacional: >60% of students AND teachers use genAI daily, from 1.5 M+ students / 166 k+ teachers**; 🟢 **ATDT Plan Nacional de IA (Apr 2026), three pillars incl. *software público***. 🔴 10 recommendations ≠ binding rule; regulation reported as *in preparation*. 🟢 **`P870` confirmed a third time.** |
+| 🆕 **`Gap 358`** — Brazil PL 2338 / Chile bill unprobed | 🟢 **DISCHARGED, both limbs** | 🟡 **Brazil:** Senate approved 10 Dec 2024, in the Chamber since, 🔴 *"Aguardando Parecer"* at 2 Sep 2026, vote after the October elections; 730-day / 180-day phasing. 🔴 **Education-as-high-risk NOT verifiable.** 🟡 **Chile:** Boletín 16821-19, first trámite Oct 2025, second in the Senate, 🔴 **and the Executive will REPLACE it**. 🔴 **Neither in force; neither citable as a compliance driver.** 🆕 **`P949`.** |
+| 🆕 **`Gap 360`** — hyphen-split channel unfinished | 🟢 **DISCHARGED** | 🟢 **`?page=2` returned the 10 rows behind "Load more" on the first attempt** (`P951`). 🔴 **And the tail is poor: 4 of 10 are one publisher's non-software API profiles** (`P952`). |
+| **`Gap 359`** — `api.github.com` cannot discriminate | 🟢 **CONFIRMED, second measurement, and RECORDED in the oracle map** | 🟢 **403 for `torvalds/linux` AND the invented slug.** 🟢 Now written into `compose/code/grant-ladder/README.md` so it is not rediscovered. |
+| **`P944`** — "policy channel is DNS-unreachable" | 🔴 **CORRECTED — it is an EGRESS ALLOWLIST, and a REGRESSION** | 🟢 **9 hosts measured; `arxiv.org` — not a policy host — is denied identically.** 🟢 Proxy names it: **`connect_rejected`, organization policy.** 🟢 **`WebFetch` fails like `curl` (`ENOTFOUND`).** 🔴 **`verticals/solutions.md` already said *"refused at the egress proxy"* before pass 88 relabelled it "DNS".** 🆕 **`P950`: stop costing per-host retries.** |
+| **`Gap 356`** — no register→shelf reconciliation | 🟡 **RUN BY HAND, and it found a THIRD desync** | 🔴 Register: *"No permissive education or credentialing row with APAC or LATAM institutional backing."* 🟢 Shelf, in **five files**: **`iVishalr/BigHOST` — MIT, PES University Bangalore, CCGridW 2023, APAC.** 🟢 **The APAC half is corrected; the LATAM half stands** (`INGInious` is AGPL-3.0). 🔴 **Still not versionable as a runnable check.** |
+| **`Gap 352`** — successor channel | 🟢 **DISCHARGED — named AND bought** | 🟢 **`topics/scorm`, 220 repos**, chosen by `P923`. 🟢 **16 probed, 14 granted, 12 permissive, ~90% precision** — 🟢 **2.3× the volume of `topics/autograding` at comparable precision.** |
+| **`Gap 353`** — the RIDER layer | 🔴 **CARRIED, and GROWN** | 🆕 🔴 **`cybercussion/SCOBot` (164★): a Creative Commons licence on SOFTWARE** — CC addresses neither source distribution nor patents (`P947`). 🟡 Joins `kangwonlee/gemini-python-tutor` as needing counsel. |
+| **`Gap 354`** — upstream-askable negatives | 🔴 **CARRIED, GROWN to TEN** | 🆕 🔴 **`adlnet/SCORM-to-xAPI-Wrapper` (99★) — the US DoD initiative that AUTHORED SCORM, NO payload in 16 names.** 🟢 **Now the priority ask**: its sibling `xAPI-SCORM-Profile` *is* Apache-2.0, so this is one missing file, not a policy. 🆕 Also `skfriese/simple-scorm-api` (70★), `andyfmiller/vc-dotnet-demos`. |
+| **`Gap 355`** — pre-pass-84 byte figures | 🟢 **SECOND POSITIVE DATUM** | 🟢 `moodle` **35 147 B** reproduced at the same SHA. 🟢 **And canonical GPL-3.0 = 35 147 B confirmed in an unrelated repo** (`my-language-skills/open-badges-framework`). 🟢 **Byte EQUALITY is strong evidence.** 🔴 **Byte PROXIMITY is none — `P946`.** |
+| **`Gap 334`** / **`Gap 341`** / **`Gap 350`** / **`Gap 351`** / **`Gap 344`** / **`Gap 346`** | 🟢 carried as discharged per passes 83–88 | 🔴 **But `Gap 334`'s CONCLUSION is now superseded by `P945`** — the eight measurements stand; the tier-level sentence drawn from them does not. |
+| **`Gap 335`** — knowledge tracing | 🔴 **CARRIED, untouched — SEVENTH pass** | 🔴 **The oldest untouched item on this shelf.** Named explicitly rather than quietly carried. |
+| **`Gap 349`** — proctoring capability audit | 🔴 **CARRIED, untouched** | Only `Proctoring-AI` audited (0 of 7 functions infer affect). |
+
+### 🆕 Opened this pass
+
+- 🆕 🟡 **`Gap 362` — `Selleo/mentingo` may be open-core.** 🟢 Payload is **MIT at `main` · `2bca285`,
+  1 062 B**. 🔴 But the vendor offers it as *"SaaS, open source, or custom-built"*, documents an **AI Mentor
+  with Teacher/Mentor/Roleplay modes** and lists a **white-label B2B** product on AWS Marketplace.
+  🔵 **An MIT file at a vendor-operated product's root is a statement about the repo, not the product.**
+  🟢 **Costed: read the repo tree for the AI-Mentor implementation and compare against the vendor's feature
+  list.** 🔴 **Until resolved, `mentingo` stays out of every costed pattern.**
+- 🆕 🔴 **`Gap 363` — India returned nothing substantive.** 🔴 The "NEP"-phrased query gave a section heading
+  and no provisions, while the same sweep placed Japan and Singapore with dated instruments.
+  🔵 **`P870` says re-point the vocabulary:** 🟢 **costed as one `extended` query naming **AICTE**, **UGC**
+  and **CBSE** rather than "NEP".**
+- 🆕 🔴 **`Gap 364` — the CHECKER tier has exactly one row.** 🟢 `savvides/idstack` (MIT, 27★) is the only
+  row on this shelf that **audits** instructional design rather than generating it. 🔵 **It is the easier
+  enterprise sale** (it does not displace the educator) and maps onto North America's ~10% guideline
+  coverage. 🟢 **Costed: probe accessibility ∩ education channels for more of this shape.**
+- 🆕 🟡 **`Gap 365` — `topics/scorm` is bought at 20 of 220.** 🟢 **`P951` makes the rest cheap: ~10 more
+  page reads.** 🔴 **But `P952` says expect the tail to be bulk-tagger noise** — 🟢 **costed as pages 2–4
+  only, then stop and record the denominator.**
+
+### 🟢 Probes adopted this pass
+
+| probe | statement |
+|---|---|
+| **`P945`** | 🔴 **A tier-level quantifier is only as strong as the enumeration that defines the tier.** *"8 of 8"*, *"not one"*, *"the only platform"* were a count of a chosen sample, published as a census, with a commercial recommendation derived from the sample's hole. 🟢 **Ships with its membership criterion and a counter-example grep.** 🔵 **`P938` one level up: as the per-row method hardens, the aggregate sentence becomes the weakest link, because it inherits the datum's credibility without its verification.** |
+| **`P946`** | 🟡 **A byte shortfall can be a replaced non-normative APPENDIX, and byte PROXIMITY then proves nothing.** `OpenOLAT` **10 982 B** vs canonical Apache **11 356–11 358**: `APPENDIX` → **0**, `9. Accepting Warranty` → **1**, clauses **1–9 intact**; the appendix was replaced by a project attribution block. 🔴 **Three distinct grants sit in one 375 B band** — Apache intact (11 357), Apache appendix-replaced (10 982), ECL-2.0 narrowed (11 120). 🟢 **Equality is evidence; proximity is none.** 🔵 The bound `P940` needed. |
+| **`P947`** | 🔴 **A Creative Commons licence on software is a defect, not a permissive grant.** `SCOBot`, 837 B of CC text, 164★. CC addresses neither source distribution nor patent grants, and Creative Commons advises against its use for software. 🟡 **Flag for counsel; do not shelve it as permissive.** 🔵 **"CC" reads permissive at a glance and is a different instrument from MIT/Apache/BSD.** |
+| **`P948`** | 🟢 **Artefact type is a WEAK PRIOR; host ecosystem beats it.** 🔴 `P942` inverts in the platform tier — the serving layer is permissive twice (`OpenOLAT` Apache-2.0, `mentingo` MIT) while the authoring framework `adapt_framework` is GPL, and the pure transform `hoijui/obadgen` is AGPL-3.0. 🟢 **WordPress→GPL explains `open-badges-framework` (GPL at exactly 35 147 B); Odoo→LGPL explains `OpenEduCat`.** 🔵 **Ask the host ecosystem first, the artefact type second, read the payload regardless.** |
+| **`P949`** | 🔵 **A bill's status must carry its REPLACEMENT RISK, not just its stage.** Chile's Boletín 16821-19 is in second reading *and* slated for replacement by the incoming government; the stage alone reads as "advancing". 🟢 **Consequence: neither LATAM bill is a 2026 compliance driver, so LATAM's AI-education risk is regulatory UNCERTAINTY, not burden** — the inverse of the usual regional framing. |
+| **`P950`** | 🔴 **The denial is an EGRESS ALLOWLIST and it is categorical — stop costing per-host retries.** 🟢 9 hosts refused including **`arxiv.org`**, which is no policy host; proxy reports **`connect_rejected`, organization policy**; **`WebFetch` fails identically to `curl`**. 🟢 **`WebSearch` is the only channel to that content and returns SECONDARY reporting.** 🔵 **Licence facts on this shelf are strong because GitHub is allowlisted; policy facts are weak for the same structural reason. Label which is which.** |
+| **`P951`** | 🟢 **The topic channel's "Load more" wall is passable with `?page=N`.** 🟢 `topics/open-badges?page=2` returned the missing 10 first time. 🔵 **Every "channel exhausted at N" judgement made from a first-page read is re-openable, and a full channel now costs one read per 20 rows.** |
+| **`P952`** | 🔴 **A topic channel's TAIL degrades by PUBLISHER CONCENTRATION, not randomly.** `topics/open-badges` page 1: 85★→0★, ~1 non-software row. Page 2: **0★ throughout, 4 of 10 from a single publisher**, all *"independent third-party profile of a public API surface"*, one confirmed **NO-PAYLOAD**. 🟢 **Read page 1 for rows; read the tail for the denominator only.** 🔵 The costing rule `P923` was missing. |
+| **`P953`** | 🟢 **The eleven-pass instrument block is about PROVENANCE, and that is the unblock.** 🔴 Pass 52 measured *"offline suites run; only network-going cloned code is denied"*; 🔴 **that no longer holds — the offline `suite-total-control/test_control.py` was DENIED.** 🟢 **Two-sided control: a session-authored script ran (`2/2 checks passed`).** 🟢 **So: author in-session, run, confirm controls, then version.** 🟢 **`compose/code/grant-ladder/` exists by that route and passes 10/10.** 🔴 **The 106 inherited suites stay CARRIED, NOT CONFIRMED.** |
+
+### 🔴 Declared gaps this pass, so silence is not read as coverage
+
+- 🟢 **Mexico BROKE after five passes** (`Gap 357`) — and the fix was the query's language, not more effort.
+- 🟢 **Africa BROKE after four passes**: Kenya (national AI plan in schools, **>62 000 teachers ICT-trained
+  by Jul 2026**, AI literacy routed through the Competency-Based Curriculum), Nigeria (🔴 a **May 2025**
+  announcement, *"aspirational rather than systemic"*), South Africa (🔴 a **2021**-sourced curriculum
+  proposal), plus a 2026 **Pan-African ethical AI curriculum framework** (arXiv:2604.27708, 🔴 host
+  egress-denied, quoted from search). 🔴 **NOT ONE of the three has a binding 2026 ministry instrument this
+  pass could name.** 🔵 **The opportunity there is policy-vacuum advisory, not compliance.**
+- 🔴 **Middle East: FIFTH pass with no education-specific instrument.** 🟡 General AI governance only
+  (Dubai's Universal Blueprint and its per-entity Chief AI Officer, Saudi's ~US$40 bn AI fund, UAE leading
+  regional governance). 🟡 MEED (Jul 2026) places education among sectors moving to *"sector-scale
+  rollouts"* — the strongest MEA education signal on this shelf, and still a trade-press sector mention.
+- 🔴 **India: nothing substantive — `Gap 363`.**
+- 🔴 **Still no PERMISSIVE row with LATAM institutional backing.** 🟢 **The APAC half of that claim was
+  FALSE and is corrected** (`BigHOST`, MIT, PES University). 🔴 LATAM's named institutional platform
+  `INGInious` (UNCode, Universidad Nacional de Colombia) is **AGPL-3.0**.
+- 🔴 **Market sizing got WORSE, not better: six publishers now, ~4× disagreement at the 2026 base.** 🔴 Two
+  North America forecasts disagree **2.6× on growth rate for the same region and year** (15.9% vs 41.7%).
+  🟢 **The shelf keeps the 35/100 maturity read and prefers SAMPLED adoption figures — SEP's 1.5 M-student
+  survey outweighs any of the six models.**
+- 🔴 **`P795` reproduces an EIGHTH time.** The four mandated generic queries returned **zero** new
+  education-industry rows; the two topic reads returned **26 rows, 21 payload-read**. 🟢 **Eight passes is
+  the channel's measured yield, not bad luck — keep the generic query as a market-sentiment probe only.**
+- 🔴 **`Gap 335` (knowledge tracing) UNTOUCHED FOR A SEVENTH PASS** — the oldest untouched item here.
+- 🔴 **ELEVENTH consecutive pass without running any INHERITED code from this clone.** 🟢 **But the block is
+  now diagnosed (`P953`) and one instrument was authored, controlled 10/10 and versioned** — the first in
+  eleven passes (`P126`).
+
 ## 🟢 Eighty-eighth pass, 2026-10-09 — **`Gap 334` was DISCHARGED IN PASS 83 and this registry carried it as unspent for three more passes**; `Gap 352` discharges, `Gap 340` is re-characterised as unbuyable, and `P938` names the defect
 
 ⏱️ **Nineteenth pass of this date.** 🔴 **Pass 87 wrote to the shelf but NOT to this file**, so pass 86's

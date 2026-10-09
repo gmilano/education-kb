@@ -24,6 +24,90 @@ education-kb/
 
 ## `compose/code/` — lo que esta KB puede demostrar corriendo
 
+🔴 **Pase 89 del 2026-10-09 — el estante se contradijo a sí mismo DENTRO DE UN MISMO ARCHIVO, a 72 líneas
+de distancia** (`P945`). 🔴 **`verticals/solutions.md` afirma en la línea 29 que *«el tier de plataformas es
+8 de 8 copyleft, ni una fila MIT, Apache-2.0 ni BSD»* y que *«`OpenEduCat` es la ÚNICA plataforma establecida
+sobre la que se puede construir ENCIMA»*** — 🟢 **mientras la línea 101 del mismo archivo dice
+*«**OpenOLAT** · **Apache-2.0** · alternativa permisiva a Moodle para pedidos de soberanía EMEA»*, la 513 lo
+nombra entre los sustratos *«que un estudio puede envolver en un entregable propietario»*, y la 581 registra
+su licencia **leída del payload, no del badge**.**
+
+🔵 **No es una desincronización registro↔estante (la forma de `P938`): el registro y el estante estaban de
+acuerdo, y los dos estaban mal, porque ninguno ENUMERÓ.** 🔴 **Ocho filas medidas correctamente se
+publicaron como un censo del tier, con la palabra *«establecido»* haciendo el trabajo del cuantificador, y
+de ese hueco en la muestra se derivó una recomendación comercial** (*«la plataforma es del cliente; la
+inteligencia encima es nuestra»*). 🟢 **`P945`: un cuantificador de tier viaja con su criterio de membresía
+y con un grep de contraejemplos sobre el propio estante.**
+
+🟢 **La corrección vale dinero: existe un camino de plataforma PERMISIVA, de producción, cerrable.**
+🟢 `OpenOLAT/OpenOLAT` — **Apache-2.0**, 10 982 B, `master` · `cccdcda`, **cláusulas 1–9 intactas**,
+mantenido por **frentix GmbH (Suiza)**, linaje **OLAT / Universidad de Zúrich 1999**, y con un despliegue
+actual nombrado: 🟢 ***«OpenOLAT is the central learning management system (LMS) of Koblenz University»***.
+🔴 **Las cifras de *«todas las facultades de UZH y ETH Zúrich, 50 000+ usuarios»* son de la era OLAT y se
+excluyeron a propósito.** 🟢 Más `Selleo/mentingo` — **MIT**, 1 062 B — 🔴 con la salvedad de posible
+open-core sin resolver (`Gap 362`). 🟢 **Lectura corregida: de las DIEZ filas de plataforma del estante,
+ocho son copyleft, una es Apache-2.0 y una es MIT.**
+
+🟡 **`P946` — un déficit de bytes puede ser un APÉNDICE reemplazado, y entonces la proximidad de bytes no
+prueba nada.** `OpenOLAT` mide **10 982 B** contra los **11 356–11 358 B** del Apache canónico del estante:
+🟢 medido, no inferido — `APPENDIX` **0** veces, `9. Accepting Warranty` **1**, cláusulas **1–9 intactas**;
+el apéndice no normativo fue sustituido por un bloque de atribución del proyecto. 🔴 **Tres concesiones
+distintas viven en una banda de 375 B**: Apache intacto (11 357), Apache con apéndice reemplazado (10 982) y
+**ECL-2.0 con grant de patentes recortado** (11 120). 🟢 **La IGUALDAD de bytes es evidencia fuerte —
+GPL-3.0 canónico = 35 147 B confirmado en dos repos sin relación; la PROXIMIDAD no es evidencia.**
+
+🟢 **`Gap 357` DESCARGADO tras CINCO pases vacíos, y el arreglo fue el idioma de la consulta** (`P870`,
+confirmado por tercera vez): una sola búsqueda en español nombrando a la **SEP** devolvió las
+**10 recomendaciones para el uso ético y crítico de la IA generativa en educación superior (15 abr 2026)**,
+la **Encuesta Nacional** (🟢 **más del 60% de alumnos Y docentes usan IAG a diario, sobre 1,5 M+ estudiantes
+y 166 k+ docentes**) y el **Plan Nacional de IA de la ATDT** con su pilar de ***software público***.
+🟢 **África rompió una sequía de CUATRO pases** (Kenia la más avanzada: **+62 000 docentes formados en
+integración TIC a jul 2026**), 🔴 **pero ninguno de los tres países tiene un instrumento ministerial
+vinculante de 2026 que este pase pudiera nombrar** — 🔵 **ahí la oportunidad es asesoría sobre vacío
+normativo, no cumplimiento.** 🟢 **APAC con instrumentos fechados por primera vez**: **MEXT Guidelines
+V2.0 (dic 2024)**, que **quitó el lenguaje restrictivo** y apunta a una revisión curricular en **FY2030**, y
+**Singapur**, que **veda la IA antes de Primary 4** y canaliza todo por el **Student Learning Space**.
+
+🔴 **`P950` — `P944` estaba mal etiquetado y era una REGRESIÓN: no es DNS, es una LISTA BLANCA DE EGRESO, y
+es categórica.** 🟢 Medido sobre 9 hosts: todos los de ministerios, congresos y revistas rechazados —
+🔴 **incluido `arxiv.org`, que no es un host de política** — mientras `raw.githubusercontent.com` resuelve;
+🟢 el proxy lo nombra: **`connect_rejected`, organization policy**; 🟢 **`WebFetch` falla igual que `curl`**.
+🔴 **Y `verticals/solutions.md` ya decía *«refused at the egress proxy»* antes de que el pase 88 lo
+rebautizara «DNS».** 🟢 **Consecuencia: dejar de costear reintentos host por host; citar documentos
+primarios vía `WebSearch` y etiquetarlos SECUNDARIOS.** 🔵 **Por eso los hechos de licencia de esta KB son
+fuertes —GitHub está en la lista blanca— y los de política no.**
+
+🟢 **`P953` — el bloqueo de once pases es de PROCEDENCIA, y ahí está el desbloqueo.** 🔴 El pase 52 había
+medido *«las suites offline corren; sólo se niega el código clonado que sale a la red»* — 🔴 **ya no se
+sostiene: la suite OFFLINE `compose/code/suite-total-control/test_control.py` fue NEGADA (`[Code from
+External]`)**. 🟢 **Control de dos lados: un script escrito en esta sesión corrió y publicó `2/2 checks
+passed`.** 🟢 **Procedimiento que funciona: escribir el instrumento en sesión, correrlo, confirmar sus
+controles y después versionarlo.** 🟢 **Así existe `compose/code/grant-ladder/`, el primer instrumento
+nuevo en once pases, con sus controles en 10/10** — negativo incluido: un slug inventado **DENEGADO**, y
+`moodle` reproducido **byte a byte** (35 147 B) contra la cifra del pase 88 al mismo SHA.
+
+🟢 **Canal nuevo comprado: `topics/scorm`, 220 repos** (elegido por `P923`). 🟢 **16 sondeados, 14 con
+concesión, 12 permisivos, ~90% de precisión — 2,3× el volumen de `topics/autograding` con precisión
+comparable.** 🟢 **`P951`: el muro de «Load more» se pasa con `?page=N`**, así que `Gap 360` se descarga y
+cualquier canal es comprable a razón de una lectura por 20 filas. 🔴 **`P952`: pero la cola se degrada por
+CONCENTRACIÓN DE PUBLICADOR** — 4 de 10 filas de la página 2 son perfiles de API no-software de un solo
+publicador. 🔴 **`P948`: el tipo de artefacto es un prior DÉBIL; el ecosistema anfitrión le gana**
+(WordPress→GPL explica `open-badges-framework`, GPL en exactamente 35 147 B; Odoo→LGPL explica
+`OpenEduCat`), y `P942` **se invierte** en el tier de plataformas.
+
+🔴 **`P795` se reproduce por OCTAVA vez:** las cuatro consultas genéricas obligatorias devolvieron **cero**
+filas nuevas de la industria educativa —roundups comerciales, repos de educación *para desarrolladores*,
+glosarios de vendor y seis pronósticos de mercado que se contradicen ~4×—, 🟢 **mientras dos lecturas de
+topic pages devolvieron 26 filas, 21 con concesión leída del payload.**
+
+🔴 **Huecos declarados para que el silencio no se lea como cobertura:** Medio Oriente sin instrumento
+educativo por **quinto** pase; India sin nada sustantivo (`Gap 363`); 🔴 **sin fila permisiva con respaldo
+institucional LATAM** (`INGInious` es AGPL-3.0) — 🟢 **aunque la mitad APAC de esa afirmación era FALSA y se
+corrigió: `iVishalr/BigHOST`, MIT, PES University, vivía en cinco archivos del estante** (tercera
+desincronización en dos pases, `Gap 356`); y 🔴 **`Gap 335` (knowledge tracing) sin tocar por SÉPTIMO pase**,
+el ítem más viejo sin atender.
+
+
 🔴 **Pase 88 del 2026-10-09 — el REGISTRO de huecos y el ESTANTE se desincronizaron en AMBAS
 direcciones, dentro del mismo repositorio** (`P938`). 🔴 **`Gap 334` se declaró «CARRIED, UNSPENT —
 TERCER PASE, el ítem costeado más viejo del estante»** y se escaló a *«la sonda barata de mayor valor

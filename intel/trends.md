@@ -4,6 +4,107 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-ninth pass, 2026-10-09 — a census claim falsified by its own shelf, the permissive platform path reopened, and the policy channel's limit finally named correctly
+
+⏱️ **Twentieth pass of this date.**
+
+### `T1` — 🔴 **The tier claim, not the datum, is now this shelf's main failure mode**
+
+🟢 **Passes 83–88 hardened the DATUM: existence by `ls-remote`, licence from the payload, bytes with the
+method stated. That worked — `moodle` reproduced byte-identical across six passes.** 🔴 **Pass 89's defect
+is one level up: eight correctly measured rows were summarised as *"the established platform tier is 8 of 8
+copyleft, not one MIT, Apache-2.0 or BSD row"*, and a commercial recommendation was derived from the hole in
+the sample.** 🟢 **The counter-example — `OpenOLAT`, Apache-2.0 — was in the same file, 72 lines away, and
+had been on this shelf since pass 35.**
+🔵 **`P945`: a tier-level quantifier ships with its membership criterion and a grep for counter-examples.**
+🔵 **The trend to watch: as the per-row method gets stronger, the aggregate sentence becomes the weakest
+link, because it inherits the datum's credibility without inheriting its verification.**
+
+### `T2` — 🟢 **The permissive supply is layered, and the layer map is now the commercially useful artefact**
+
+🟢 **Three tiers measured on this shelf, each with a consistent licence character:**
+
+| tier | permissive share | reading |
+|---|---|---|
+| 🟢 **content interop** (SCORM/xAPI/QTI libraries) | 🟢 **9 of 9** | 🟢 **Own it. Standardise the studio's toolkit here, across every client.** |
+| 🟡 **platform / LMS** | 🟡 **2 of 10** (`OpenOLAT` Apache-2.0, `mentingo` MIT) | 🟡 **Build on `OpenOLAT` when the deliverable must close; build beside otherwise.** |
+| 🔴 **issuing / hosted services** | 🔴 **0 of 3** (all AGPL-3.0) | 🔴 **Integrate across a network boundary; never fork-and-close — §13 attaches to hosted services.** |
+
+🔵 **`P942` predicted this by ARTEFACT TYPE and is now demoted:** the serving layer turned out permissive
+twice (`OpenOLAT`, `mentingo`) and a pure transform turned out AGPL (`hoijui/obadgen`).
+🟢 **`P948`: artefact type is a weak prior; HOST ECOSYSTEM beats it** — WordPress→GPL explains
+`open-badges-framework` (GPL at exactly 35 147 B), Odoo→LGPL explains `OpenEduCat`.
+
+### `T3` — 🔴 **The policy layer is structurally secondary, and that is now a measured property of the environment, not a research shortfall**
+
+🟢 **Nine hosts measured: every ministry, congress and journal host is refused, and so is `arxiv.org`.**
+🟢 **The proxy named the cause: `connect_rejected` — organization policy.** 🟢 **`WebFetch` fails
+identically to `curl`.** 🔴 **So four passes of *"not quotable without the Official Journal"* and three of
+*"Eurydice unbought"* were spent against an allowlist, and pass 88's `P944` mis-labelled it "DNS" after an
+earlier pass had already written *"refused at the egress proxy"* correctly.**
+🔵 **`P950`: the denial is categorical — stop costing per-host retries. Quote primary documents through
+`WebSearch` snippets, label them SECONDARY, never record them as verified.**
+🟢 **The useful consequence: this shelf's licence facts are strong *because* GitHub is allowlisted, and its
+policy facts are weak for the same structural reason. Say which is which when quoting.**
+
+### `T4` — 🟢 **Regional holes are vocabulary problems, three for three**
+
+🟢 **`P870` has now paid in every region it has been pointed at.** 🔴 Mexico: five empty passes on
+*"Mexico AI education"*. 🟢 One Spanish query naming **SEP** returned a dated national instrument, a
+**1.5 M-student survey** and a national AI plan with a ***software público*** pillar. 🟢 Africa: four empty
+passes; naming **ministries and countries** returned Kenya (>62 000 teachers trained), Nigeria and South
+Africa. 🟢 APAC: naming **MEXT** and **MOE** returned Japan's **Guidelines V2.0 (Dec 2024)** and Singapore's
+**Primary-4 gate + Student Learning Space** routing.
+🔵 **The generalisation: a region reads as empty when the query is phrased in the analyst's language rather
+than the jurisdiction's.** 🔴 **Still open: India (`Gap 363`) — the "NEP" phrasing failed and should be
+re-pointed at AICTE/UGC/CBSE.**
+
+### `T5` — 🟡 **Regulatory divergence is now the primary regional differentiator, and LATAM's risk is UNCERTAINTY not burden**
+
+🟢 **EMEA**: AI Act in force, education conditioned by Annex III → **compliance-led**, 🔴 exact education
+date unresolvable here (three candidates).
+🟢 **APAC**: Japan moved from restriction to **encouragement** (V2.0) with an **FY2030** curriculum horizon;
+Singapore **gates by age** and routes through a state platform → **platform-and-curriculum-led**.
+🟢 **North America**: FERPA plus state patchwork, ~10% of institutions with formal guidelines, a federal
+pre-emption fight → **governance-scaffolding-led**.
+🔴 **LATAM**: Brazil's **PL 2338** stalled in the Chamber (*"Aguardando Parecer"*, 2 Sep 2026; vote after
+the October elections); Chile's **Boletín 16821-19** in second reading **and slated for replacement by the
+incoming government**. 🆕 **`P949`: a bill's status must carry its replacement risk, not just its stage.**
+🔵 **Neither LATAM bill is citable as a compliance driver — the sale there is Mexico's *software público*
+procurement door, not risk mitigation.**
+
+### `T6` — 🟢 **The channel is the sourcing instrument; the generic query is not, and the ratio is now 26 : 0**
+
+🔴 **`P795` reproduces an EIGHTH time.** The four mandated generic queries yielded **zero** education-industry
+rows new to this shelf — they returned commercial roundups, developer-education repos
+(`microsoft/ai-agents-for-beginners`), vendor glossaries and six mutually contradictory market forecasts.
+🟢 **The two topic-page reads in the same pass yielded 26 rows, 21 payload-read.**
+🟢 **And the channel got cheaper this pass: `P951` — `?page=N` passes the "Load more" wall**, so
+`topics/scorm`'s 220 rows are fully buyable at ~11 reads. 🔴 **`P952` — but the tail degrades by publisher
+concentration**: 4 of 10 rows on `topics/open-badges` page 2 are one publisher's non-software API profiles.
+🔵 **Read page 1 for rows; read the tail for the denominator only.**
+
+### `T7` — 🟢 **The scarce AI shape is the CHECKER, not the generator**
+
+🟢 **This shelf is dense with generators** — DeepTutor, Educhain, Instructional Agents, `mentingo`'s AI
+Mentor, `dcc-credential-co-writer`. 🟢 **`savvides/idstack` (MIT, 27★) is the first row that CHECKS
+instructional design: 11 AI skills auditing alignment and accessibility.**
+🔵 **Why it matters commercially: a checker does not displace the educator, so it clears procurement that a
+generator does not — and it maps directly onto North America's ~10% guideline coverage and the EU Act's
+documentation duties.** 🆕 **Costed: probe accessibility ∩ education channels for more of this shape.**
+
+### `T8` — 🔴 **Eleven passes without executing this repository's own code, and the frontier has MOVED**
+
+🔴 **Pass 52 measured the boundary as *"offline suites run; only network-going cloned code is denied"*.
+🔴 **That no longer holds: the OFFLINE suite `compose/code/suite-total-control/test_control.py` was denied
+this pass (`[Code from External]`).** 🟢 **Two-sided control: a script authored in this session ran and
+printed `2/2 checks passed`.**
+🔵 **So the denial is about PROVENANCE — code that arrived by clone — not about network and not about
+Python.** 🟢 **The unblock that follows, and it is the useful half: an instrument can be AUTHORED in-session,
+run, and then versioned into the repository.** 🟢 **That is how `compose/code/grant-ladder/` exists and how
+every figure in this pass was measured.** 🔴 **What stays blocked: re-running the 106 inherited suites, so
+`shelf_gate.sh`, `measure`, `license_family.sh` and `p351` remain CARRIED, NOT CONFIRMED.**
+
 ## 🟢 Eighty-eighth pass, 2026-10-09 — **adoption has outrun governance, and the number that proves it is LATAM's**; the credentialing layer turns out to split permissive/copyleft along the artefact boundary
 
 ⏱️ **Nineteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

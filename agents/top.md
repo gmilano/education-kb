@@ -4,6 +4,141 @@ region: Global
 updated: 2026-10-09
 ---
 
+## Curated shelf, 2026-10-09 — pass 89: the platform tier was never 8 of 8, and the counter-example has been on this shelf since pass 35
+
+**Method this pass.** Existence resolved with `git ls-remote --symref` (authoritative). Licence read from the
+**actual payload** at `raw.githubusercontent.com/<slug>/<SHA>/<file>`, pinned to the resolved SHA, never to a
+branch name (`P793`). Bytes are `curl -w '%{size_download}'` (`P929` — method stated with the figure). 🟢 **The
+whole ladder ran from a NEW instrument authored in this session and versioned at
+`compose/code/grant-ladder/`**, two-sided control first: invented slug **DENIED**, `moodle/moodle` returned
+`COPYING.txt` **35 147 B** — 🟢 **byte-identical to pass 88's record at the same SHA**.
+
+🔴 **`P880` reproduces for a third pass** — `curl -sI https://github.com/<slug>` returns **403 for
+`moodle/moodle` and for an invented slug alike**. 🔴 **`api.github.com` likewise: 403 for `torvalds/linux`
+AND for the invented slug** (`Gap 359`, second measurement). 🔵 Neither can discriminate; star figures below
+are **topic-page reads dated 2026-10-09**, labelled as such.
+
+### 🔴 🆕 The finding of this pass: `P945` — a tier-level quantifier is only as strong as the enumeration that defines the tier
+
+🔴 **This file, 8 lines below its own pass-88 heading, asserts:**
+
+> *"The established platform tier is **8 of 8 copyleft. Not one MIT, Apache-2.0 or BSD row.** … `OpenEduCat`'s
+> LGPL-3.0 is **the one established platform** that can be built *on* rather than *beside*."*
+
+🔴 **It is false, and it is falsified by a row already on this shelf.** 🟢 `OpenOLAT/OpenOLAT` is
+**Apache-2.0, read from payload**, and this KB has carried it **since pass 35** — 9 mentions in this file, 35
+in `verticals/solutions.md`.
+
+| | |
+|---|---|
+| what the claim counted | the **eight rows selected for `Gap 334`**: `moodle`, `edx-platform`, `sakai`, `canvas-lms`, `chamilo-lms`, `rosariosis`, `GibbonEdu/core`, `openeducat_erp` |
+| what the claim said | *"the established platform tier"*, *"not one"*, *"the one platform"* — 🔴 **census quantifiers** |
+| what was outside the sample | 🟢 `OpenOLAT` **Apache-2.0** · 🟢 `Selleo/mentingo` **MIT** · 🟢 `OpenOLAT` is the **central LMS of Koblenz University** |
+
+🔵 **The defect is not a register→shelf desync (`P938`'s shape). It is a SAMPLE REPORTED AS A CENSUS**, with
+the word *"established"* silently doing the quantifier's work, and 🔴 **a commercial recommendation derived
+from the hole in the sample** — *"the platform is the client's; the intelligence on top is ours"*.
+
+🟢 **`P945` adopted: a tier-level quantifier ships with (a) its membership criterion and (b) a grep for
+counter-examples across the shelf.** 🔵 Pass 88 adopted `P938` for *gap declarations*; this is the same
+disease one level up, on *claims*. 🔴 **`P938` would not have caught it:** the register and the shelf agreed —
+both were wrong, because neither enumerated.
+
+### 🟢 The corrected platform read, and it changes the commercial advice
+
+| platform | ref · SHA | licence file | bytes | grant, from payload | build posture |
+|---|---|---|---|---|---|
+| 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `master` · `cccdcda` | `LICENSE` | **10 982** | 🟢 **Apache-2.0** — clauses **1–9 intact** | 🟢 **BUILD ON TOP. Permissive, production, named deployment.** |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `main` · `2bca285` | `LICENSE` | **1 062** | 🟢 **MIT** | 🟡 **BUILD ON TOP — but see the open-core caveat below.** |
+| 🟡 [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | 🔴 **`19.0`** | `LICENSE` | 8 241 | 🟡 **LGPL-3.0** | 🟡 link-only |
+| 🔴 moodle · edx-platform · canvas-lms · chamilo · rosariosis · Gibbon · sakai | per pass 88 | — | — | 🔴 GPL/AGPL/ECL | 🔴 build *beside* |
+
+🟢 **So the standing advice is wrong in a way that costs money: a permissive, production, build-on-top LMS
+path EXISTS.** 🔵 Corrected statement: **of the nine established platform rows this shelf holds, eight are
+copyleft and one — `OpenOLAT` — is Apache-2.0.** 🟢 **For a client who needs to own and close their
+derivative, `OpenOLAT` is the starting point, not `OpenEduCat`.**
+
+🟢 **`OpenOLAT` placement and anchor, verified separately:** maintained by **frentix GmbH, Switzerland**
+(repo page verbatim: *"developed and maintaned by frentix GmbH, a Switzerland based company specialized in
+e-learning services"*); lineage **OLAT, University of Zurich, 1999**; 🟢 **named current deployment:
+*"OpenOLAT is the central learning management system (LMS) of Koblenz University"*** (uni-koblenz.de).
+🔴 **Separated deliberately:** the widely-quoted *"all faculties of UZH and ETH Zurich, 50 000+ users"*
+figures are **OLAT-era**, describing the parent platform, and are **not** evidence about OpenOLAT.
+🔴 **The repo page states no licence in text** — only an OSI badge links to Apache-2.0. 🟢 **The payload is
+the authority, and the payload says Apache-2.0.**
+
+### 🟡 `P946` — a byte shortfall can be a replaced APPENDIX, and byte proximity then proves nothing
+
+🔴 `OpenOLAT`'s `LICENSE` is **10 982 B** against canonical Apache-2.0's **11 356–11 358 B** on this shelf —
+**374 B short**, inside the band where `P940` put ECL-2.0 (**11 120 B**, −237 B). 🟢 **Measured, not inferred:**
+`APPENDIX` → **0 occurrences**; `9. Accepting Warranty` → **1**; `TERMS AND CONDITIONS` → **1**; `OpenOLAT` →
+**2**; `frentix` → **1**. 🟢 **The non-normative appendix *"How to apply the Apache License to your work"* has
+been removed and replaced by a project attribution statement; the normative clauses 1–9 are intact.**
+🟢 **The grant is Apache-2.0, unmodified where it matters.**
+
+🔵 **`P946`: three different grants sit inside one 375-byte band on this shelf** — Apache-2.0 intact-with-
+appendix (11 357), Apache-2.0 appendix-replaced (10 982), ECL-2.0 narrowed-patent-grant (11 120). 🔴 **Byte
+PROXIMITY cannot separate a narrowed grant from an intact one; only reading the numbered clauses can.**
+🟢 **Byte EQUALITY remains strong evidence, and got an independent confirmation this pass:** canonical
+GPL-3.0 = **35 147 B** in two unrelated repos (`moodle` `COPYING.txt`, `my-language-skills/open-badges-framework`
+`LICENSE.md`). 🟢 **Equality is evidence; proximity is none.** 🔵 This is the bound `P940` needed.
+
+### 🟡 The open-core caveat on `mentingo`, recorded rather than glossed
+
+🟢 `Selleo/mentingo` — **MIT at `main` · `2bca285`, 1 062 B, payload-read**, 91★ (topic page, 2026-10-09).
+🟢 Vendor describes **AI Mentor with Teacher / Mentor / Roleplay modes** and AI generation of *"course
+structure, lessons, and materials"*; an AWS Marketplace listing calls it a **white-label B2B** platform;
+a directory lists it as *"SaaS, open source, or custom-built"*. 🔴 **That tri-modal offer is the open-core
+shape.** 🟡 **What is verified: the repository's payload is MIT. What is NOT verified: that the hosted
+product's feature set is the repository's feature set.** 🆕 **`Gap 362`.** 🔵 **An MIT file at the root of a
+vendor-operated product is a statement about the repo, not about the product.**
+
+### 🟢 New permissive rows, payload-read this pass — the `topics/scorm` channel
+
+🟢 **Channel bought this pass: `topics/scorm`, 220 repos** — selected by `P923` (*a term with no use outside
+education*). 🟢 **16 probed, 14 granted, 12 permissive.**
+
+| row | ref · SHA | licence | bytes | what it is |
+|---|---|---|---|---|
+| 🟢 [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) · 354★ | `master` · `882f3b8` | 🟢 **MIT** | 1 072 | Modern SCORM JavaScript **runtime** library |
+| 🟢 [`numbas/Numbas`](https://github.com/numbas/Numbas) · 215★ | `master` · `39b03e5` | 🟢 **Apache-2.0** | 11 357 | Browser-based **e-assessment**, maths emphasis |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) · 91★ | `main` · `2bca285` | 🟢 **MIT** | 1 062 | 🟢 **AI-native LMS, AI Mentor + role-play** |
+| 🟢 [`S4-NetQuest/react-scorm-provider`](https://github.com/S4-NetQuest/react-scorm-provider) · 67★ | `master` · `b4c31bb` | 🟢 **MIT** | 1 068 | SCORM API components for React |
+| 🟢 [`sr258/scorm-h5p-wrapper`](https://github.com/sr258/scorm-h5p-wrapper) · 58★ | `master` · `3e7755a` | 🟢 **MIT** | 1 073 | Packs **H5P** content into SCORM objects |
+| 🟢 [`adlnet/xAPI-SCORM-Profile`](https://github.com/adlnet/xAPI-SCORM-Profile) · 42★ | `master` · `ea17c40` | 🟢 **Apache-2.0** | 11 324 | ADL spec: reporting SCORM data to xAPI |
+| 🟢 [`gamestdio/scorm`](https://github.com/gamestdio/scorm) · 38★ | `master` · `845d4e4` | 🟢 **MIT** | 1 091 | 🟡 **`P943` third instance** — MIT by **body signature**, family unnamed |
+| 🟢 [`raccoongang/edx_xblock_scorm`](https://github.com/raccoongang/edx_xblock_scorm) · 32★ | `master` · `a5741e3` | 🟢 **Apache-2.0** | 11 342 | SCORM XBlock **inside Open edX** |
+| 🟢 [`LiaScript/LiaScript-Exporter`](https://github.com/LiaScript/LiaScript-Exporter) · 29★ | `master` · `1d13a11` | 🟢 **BSD** | 1 523 | Export courses → SCORM / IMS / xAPI / ePub |
+| 🟢 [`savvides/idstack`](https://github.com/savvides/idstack) · 27★ | `main` · `1767027` | 🟢 **MIT** | 1 077 | 🟢 **11 AI skills checking instructional alignment + accessibility** |
+| 🟢 [`dhodges47/SCORM-LearningManagementSystem`](https://github.com/dhodges47/SCORM-LearningManagementSystem) · 184★ | `master` · `87a57d9` | 🟢 **MIT** | 1 091 | Demo SCORM LMS (C#) |
+| 🔴 [`adaptlearning/adapt_framework`](https://github.com/adaptlearning/adapt_framework) · 629★ | `master` · `f0a705d` | 🔴 **GPL** | 35 129 | HTML5 e-learning **authoring** toolkit |
+| 🟡 [`cybercussion/SCOBot`](https://github.com/cybercussion/SCOBot) · 164★ | `main` · `017a47e` | 🔴 **Creative Commons** | 837 | 🔴 **A CC licence on SOFTWARE — see `P947`** |
+| 🔴 [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) · 99★ | `master` · `3e532b8` | 🔴 **NO PAYLOAD in 16 names** | — | 🔴 **ADL = US DoD, the body that AUTHORED SCORM** |
+| 🔴 [`skfriese/simple-scorm-api`](https://github.com/skfriese/simple-scorm-api) · 70★ | `master` · `cfec748` | 🔴 **NO PAYLOAD in 16 names** | — | Self-described **NOT MAINTAINED** |
+
+🔴 **`P947` — a Creative Commons licence on software is a defect, not a permissive grant.** `SCOBot` ships
+**837 B** of CC text. 🔴 **Creative Commons itself advises against CC for software**: the licences address
+neither source distribution nor patents, and CC-BY's attribution machinery has no software-specific terms.
+🟡 **Not rejected — flagged as needing counsel before a client build**, along
+`kangwonlee/gemini-python-tutor` (`Gap 353`). 🔵 **"CC" reads as permissive at a glance and is not the same
+instrument as MIT/Apache/BSD.**
+
+🔴 **`adlnet/SCORM-to-xAPI-Wrapper` is the pass's sharpest negative:** the **US Department of Defense**
+initiative that authored SCORM publishes its own SCORM→xAPI reference wrapper **with no licence payload in
+16 candidate filenames**. 🟢 **Upstream-askable, and the highest-value ask on the list** — a named government
+standards body, a 99★ reference implementation, zero grant. 🆕 **Added to `Gap 354`, now ten.**
+
+### 🔴 `P795` reproduces an EIGHTH time, and the contrast is now quantified
+
+🔴 **The four mandated generic queries** (`top open source AI agents education 2026 github MIT`,
+`github trending education AI 2026`, `open source platform education ERP CRM MIT Apache`,
+`AI education industry trends 2026`) returned: commercial roundups, `microsoft/ai-agents-for-beginners`
+(**teaching developers about agents — not edtech**), `pguso/agents-from-scratch`, vendor glossary pages, and
+six market-sizing estimates that disagree by ~4×. 🟢 **Education-industry rows new to this shelf: ZERO.**
+🟢 **The two topic-page reads in the same pass returned 26 rows, 21 with a payload-read grant.**
+🔵 **Eight passes is no longer a run of bad luck; it is the channel's measured yield. The generic query is
+kept only as a market-sentiment probe, never as a sourcing channel.**
+
 ## Curated shelf, 2026-10-09 — pass 88: the gap REGISTER and the SHELF have desynchronised **in both directions**, and the credentialing tier that was declared empty already had rows
 
 **Method this pass.** Existence resolved with `git ls-remote --symref` (authoritative; negative control

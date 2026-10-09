@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 — pass 89: the AI rows in the SCORM and credentialing channels, and an AI-native LMS that is MIT
+
+⏱️ **Twentieth pass of this date. APPEND-ONLY — history is below.**
+
+### 🟢 New AI rows, payload-read this pass
+
+| row | grant (payload, pinned SHA) | ★ | region | why it matters |
+|---|---|---|---|---|
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** · 1 062 B · `main` · `2bca285` | 91 | 🟢 **EMEA** (Selleo, Poland) | 🟢 **AI-native LMS.** Vendor documents an **AI Mentor with Teacher / Mentor / Roleplay modes** and AI generation of *"course structure, lessons, and materials"*. 🔴 **Open-core unverified — `Gap 362`.** |
+| 🟢 [`savvides/idstack`](https://github.com/savvides/idstack) | 🟢 **MIT** · 1 077 B · `main` · `1767027` | 27 | 🔵 unplaced | 🟢 **11 AI skills that check instructional ALIGNMENT and ACCESSIBILITY.** 🔵 An AI *reviewer* of instructional design, not a generator — the scarcest shape on this shelf. |
+| 🟢 [`oneorigin-2-0/dcc-credential-co-writer-monorep`](https://github.com/oneorigin-2-0/dcc-credential-co-writer-monorep) | 🟢 **MIT** · 1 087 B · `main` · `7be74ba` | 0 | 🔵 unplaced | 🟢 **AI-assisted Open Badges v3 authoring**, Next.js + FastAPI + **local Ollama SLM**. 🟢 First row joining the AI tier to the credentialing tier. 🔴 0★. |
+| 🟡 [`aion-context/aion-edu`](https://github.com/aion-context/aion-edu) | 🟢 **Apache-2.0** · 11 342 B · `main` · `252aec3` | 0 | 🔵 unplaced | 🟡 *"AI-native university"* reference implementation — credentials cryptographically sealed and **verifiable offline**. 🔴 0★, aspirational. |
+| 🟢 [`brody-0125/signet-campus`](https://github.com/brody-0125/signet-campus) | 🟢 **MIT** · 1 070 B · `main` · `0592f53` | 0 | 🔵 unplaced | 🟡 Campus skills + learning pathways on **Open Badges 3.0** (React + Kotlin/Spring). 🔴 0★. |
+
+🔵 **The shape worth noticing: `idstack` reviews instructional design, it does not produce it.** 🟢 **This
+shelf is dense with generators (DeepTutor, Educhain, Instructional Agents, `mentingo`) and nearly empty of
+*checkers*.** 🟢 **A checker is the easier enterprise sale** — it does not replace the educator, it
+evidences compliance with accessibility and alignment standards, which is exactly what North America's
+10%-guideline-coverage gap needs. 🆕 **Costed for a later pass: probe `topics/accessibility` ∩ education.**
+
+### 🔴 The negative that matters most this pass
+
+🔴 [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) — **99★,
+`master` · `3e532b8`, NO LICENCE PAYLOAD in 16 candidate filenames.** 🔴 **ADL is the US Department of
+Defense initiative that AUTHORED SCORM.** 🟢 Its sibling `adlnet/xAPI-SCORM-Profile` **is** granted
+(Apache-2.0, 11 324 B), so this is not an organisational policy against licensing — it is one repository
+missing a file. 🟢 **Highest-value upstream ask on this shelf: a named government standards body, a 99★
+reference implementation, zero grant.** 🆕 **`Gap 354` grows to ten.**
+
+### 🟡 `P947` — a Creative Commons licence on software is a defect, not a permissive grant
+
+🔴 [`cybercussion/SCOBot`](https://github.com/cybercussion/SCOBot) — 164★, `main` · `017a47e`,
+**837 B of Creative Commons text**. 🔴 **Creative Commons itself advises against CC licences for
+software:** they address neither source distribution nor patent grants. 🟡 **Not rejected — flagged as
+needing counsel**, alongside `kangwonlee/gemini-python-tutor` (`Gap 353`). 🔵 **"CC" reads permissive at a
+glance and is a different instrument from MIT/Apache/BSD.** 🟢 **`P943`'s lesson generalises: the family
+name on the tin is not the grant, and neither is the family's reputation.**
+
+### 🟡 `P943` reproduces a THIRD time
+🟢 [`gamestdio/scorm`](https://github.com/gamestdio/scorm) — 1 091 B, `master` · `845d4e4`, **no family
+name in the title block**; resolved **MIT by body signature** (`sublicense` + *"The above copyright
+notice"*). 🟢 **The ladder's signature fallback is now the deciding step in 3 of ~40 permissive reads —
+roughly one in thirteen.**
+
 ## 🟢 2026-10-09 (pass 88) — **a gap declared "unspent for three passes" had been DISCHARGED in pass 83**, and a tier declared "no rows at all" already had 56 of them
 
 ⏱️ **Nineteenth pass of this date.** 🟢 **Append-only: this section is new. Pass 87's section is below and nothing in it was rewritten.**

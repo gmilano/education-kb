@@ -4,6 +4,137 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-ninth pass, 2026-10-09 — three patterns the permissive-platform correction makes possible, and one it retires
+
+⏱️ **Twentieth pass of this date.** 🟢 **Every repo named below is payload-read at the pinned SHA in this
+pass (`compose/code/grant-ladder/`), with its licence file and byte count stated.**
+
+### 🔴 `P89-RETIRED` — "the platform is always the client's" is no longer the only option
+
+🔴 **This file has carried the posture *build BESIDE the copyleft LMS, never ON it* as a near-universal
+rule, on the strength of the `8 of 8` finding.** 🟢 **With `OpenOLAT` (Apache-2.0) and `mentingo` (MIT)
+on the shelf, the rule becomes a CHOICE with a decision criterion:**
+
+| if the engagement needs… | then | why |
+|---|---|---|
+| 🟢 the deliverable **closed and owned** | 🟢 **`OpenOLAT` (Apache-2.0)** — build ON it, fork it, close it | 🟢 Permissive, production, named university deployment |
+| 🟡 **LMS + SIS in one database** | 🟡 `OpenEduCat` (LGPL-3.0) — link, don't modify | 🟡 LGPL permits linking; modifications must publish |
+| 🔴 the client's **existing Moodle/Canvas/Open edX** kept | 🔴 build **BESIDE**, integrate by LTI/SCORM/xAPI | 🔴 GPL/AGPL reciprocity follows the modified work |
+
+### 🟢 `P90` — The sovereign, fully-permissive European teaching stack (EMEA)
+
+🔵 **The ask it answers:** a European public institution wants an LMS it can host itself, extend with AI,
+and receive as a **closed deliverable** — the sovereignty conversation EMEA keeps having, which this shelf
+previously had to answer with *"no permissive platform exists"*.
+
+🟢 **Every component permissive. No copyleft anywhere in the stack.**
+
+| layer | component | grant · bytes · ref · SHA |
+|---|---|---|
+| platform | 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) · 447★ | 🟢 **Apache-2.0** · 10 982 · `master` · `cccdcda` |
+| content runtime | 🟢 [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) · 354★ | 🟢 **MIT** · 1 072 · `master` · `882f3b8` |
+| assessment | 🟢 [`numbas/Numbas`](https://github.com/numbas/Numbas) · 215★ | 🟢 **Apache-2.0** · 11 357 · `master` · `39b03e5` |
+| interactive content | 🟢 [`sr258/scorm-h5p-wrapper`](https://github.com/sr258/scorm-h5p-wrapper) · 58★ | 🟢 **MIT** · 1 073 · `master` · `3e7755a` |
+| audit trail | 🟢 [`adlnet/xAPI-SCORM-Profile`](https://github.com/adlnet/xAPI-SCORM-Profile) · 42★ | 🟢 **Apache-2.0** · 11 324 · `master` · `ea17c40` |
+| design QA | 🟢 [`savvides/idstack`](https://github.com/savvides/idstack) · 27★ | 🟢 **MIT** · 1 077 · `main` · `1767027` |
+
+🟢 **Wiring, concretely:**
+1. 🟢 **Fork `OpenOLAT` at `master` · `cccdcda`.** 🔴 **`T1`: the default branch is `master`, not `main`** —
+   a `main`-only clone script fails here. 🟢 Apache-2.0 §4 requires retaining notices and stating changes;
+   it does **not** require publishing the fork. 🔴 **Keep `NOTICE.TXT` and the attribution block that
+   replaced the appendix (`P946`) — that file is the compliance artefact.**
+2. 🟢 **Embed `scorm-again` as the content runtime** so existing SCORM 1.2/2004 packages run unmodified.
+   🔵 This is what makes the stack a migration target and not a greenfield rewrite.
+3. 🟢 **Author assessment in `Numbas`**, export as SCORM, deliver through the runtime above.
+4. 🟢 **Bring H5P interactives in via `scorm-h5p-wrapper`** rather than integrating H5P directly — 🔵 the
+   wrapper keeps H5P's own licensing at arm's length behind a spec boundary.
+5. 🟢 **Emit every learner interaction as xAPI using `xAPI-SCORM-Profile`'s mapping.** 🔵 **This is the EU
+   AI Act answer:** Annex III exposure is argued with a record of what the system did to a learner, and
+   ADL's profile is the authoritative mapping for producing it.
+6. 🟢 **Gate every course release through `idstack`'s alignment and accessibility checks** — 🔵 accessibility
+   evidence is a procurement requirement in European public tenders, not a nice-to-have.
+
+🟡 **Estimate: 8–10 weeks** to a hostable, extended, closed-deliverable instance, assuming no SIS
+integration. 🔴 **Not estimated here: `OpenOLAT` is a large Java/Maven codebase — budget the build
+toolchain separately, and note the repo ships a `CLAUDE.md`, so upstream already assumes agent tooling.**
+
+### 🟢 `P91` — The state-platform content pipeline (APAC)
+
+🔵 **The ask it answers:** Japan's MEXT curriculum revision lands **FY2030** and Singapore routes all
+student AI through the national **Student Learning Space**. 🟢 **Neither wants a new platform. Both need
+content converted INTO a state platform's format, with human-judgment checkpoints.**
+
+| layer | component | grant · bytes · ref · SHA |
+|---|---|---|
+| single-source authoring | 🟢 [`LiaScript/LiaScript-Exporter`](https://github.com/LiaScript/LiaScript-Exporter) · 29★ | 🟢 **BSD** · 1 523 · `master` · `1d13a11` |
+| packaging | 🟢 [`sr258/scorm-h5p-wrapper`](https://github.com/sr258/scorm-h5p-wrapper) · 58★ | 🟢 **MIT** · 1 073 · `master` · `3e7755a` |
+| Open edX target | 🟢 [`raccoongang/edx_xblock_scorm`](https://github.com/raccoongang/edx_xblock_scorm) · 32★ | 🟢 **Apache-2.0** · 11 342 · `master` · `a5741e3` |
+| React/SPA target | 🟢 [`S4-NetQuest/react-scorm-provider`](https://github.com/S4-NetQuest/react-scorm-provider) · 67★ | 🟢 **MIT** · 1 068 · `master` · `b4c31bb` |
+| grading | 🟢 [`iVishalr/BigHOST`](https://github.com/iVishalr/BigHOST) · 2★ | 🟢 **MIT** · 1 083 · `main` · `0348cc7` |
+
+🟢 **Wiring:**
+1. 🟢 **Author once in LiaScript markdown; export with `LiaScript-Exporter` to SCORM, xAPI, ePub and APK
+   from the same source.** 🔵 **The APK target is the APAC-specific reason to pick this tool** — offline
+   mobile delivery matters across Indonesia, Vietnam and rural India.
+2. 🟢 **Wrap H5P interactives with `scorm-h5p-wrapper`;** deliver into Open edX via `edx_xblock_scorm`
+   (Apache-2.0) 🔵 **which is the licence-hygiene move: Open edX itself is AGPL-3.0 (claim falsified from
+   Apache in pass 83), so integrate through the XBlock boundary and never patch the platform.**
+3. 🟢 **Insert a human-review gate before publication** and log the reviewer's decision as an xAPI
+   statement. 🔵 **This implements MEXT V2.0 verbatim: output is *"one reference, with human judgment and
+   responsibility at the end"*.** 🟢 **It is a feature, not a compliance tax — it is the thing that makes
+   the pipeline sellable to a ministry.**
+4. 🟢 **Keep `BigHOST` (MIT) as a separate grading service** behind the LMS bridge for programming and
+   big-data assignments. 🟢 **It carries APAC institutional backing** — PES University, Bangalore, CCGridW
+   2023.
+
+🟡 **Estimate: 6–8 weeks** per subject pipeline. 🔴 **Singapore's SLS is a closed state platform — its
+integration surface is not readable from here; treat SLS delivery as an unknown and scope it with the
+client.**
+
+### 🟢 `P92` — The AI-use evidence generator (North America)
+
+🔵 **The ask it answers:** ~10% of North American institutions have formal AI guidelines, ~71% of US
+teachers report no AI training, Maryland and Oklahoma now require human oversight for high-stakes
+decisions, and a federal/state pre-emption fight is live. 🟢 **Nobody is buying an AI tutor into that.
+They are buying the ability to EVIDENCE what the AI did.**
+
+| layer | component | grant · bytes · ref · SHA |
+|---|---|---|
+| event spec | 🟢 [`adlnet/xAPI-SCORM-Profile`](https://github.com/adlnet/xAPI-SCORM-Profile) · 42★ | 🟢 **Apache-2.0** · 11 324 · `master` · `ea17c40` |
+| design + a11y audit | 🟢 [`savvides/idstack`](https://github.com/savvides/idstack) · 27★ | 🟢 **MIT** · 1 077 · `main` · `1767027` |
+| credential of record | 🟢 [`opensalt/OB3DefinitionWidget`](https://github.com/opensalt/OB3DefinitionWidget) · 1★ | 🟢 **MIT** · 1 080 · `main` · `896596a` |
+| wallet | 🟢 [`iblai/wallet`](https://github.com/iblai/wallet) · 0★ | 🟢 **MIT** · 1 063 · `main` · `0be99d0` |
+| runtime | 🟢 [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) · 354★ | 🟢 **MIT** · 1 072 · `master` · `882f3b8` |
+
+🟢 **Wiring:**
+1. 🟢 **Instrument every AI-assisted interaction as an xAPI statement** using ADL's SCORM profile mapping —
+   actor, verb, object, result, and **the human who approved it**.
+2. 🟢 **Run `idstack`'s 11 checks on every published unit** and attach the alignment/accessibility report to
+   the unit's record. 🔵 **This is the artefact a district shows a school board.**
+3. 🟢 **Issue outcomes as Open Badges 3.0** with `OB3DefinitionWidget` for the achievement definition and
+   `iblai/wallet` for learner-held credentials. 🔴 **Do NOT fork an issuing server to do this:** `tahrir`,
+   `badgr-server` and `badgr-ui` are **AGPL-3.0, 3 of 3**, and §13 attaches to hosted services. 🟢 **Run a
+   stock issuer as a separate service across a network boundary; keep the MIT format layer as the studio's
+   deliverable** (`P942`, which holds in this tier even though it inverts in the platform tier).
+4. 🔴 **Blocked dependency, stated plainly:** `adlnet/SCORM-to-xAPI-Wrapper` (99★) is the obvious library
+   for step 1 and **has no licence payload in 16 candidate filenames**. 🟢 **Use `xAPI-SCORM-Profile`
+   (granted, Apache-2.0) as the spec and implement the wrapper, or ask upstream** (`Gap 354`).
+
+🟡 **Estimate: 6–8 weeks.** 🟢 **The commercial point: this is a compliance product, so it sells into the
+~90% of institutions with no guidelines, and it does not require the client to adopt an AI tutor first.**
+
+### 🔴 What these patterns do NOT rest on, stated so the estimates are honest
+
+- 🔴 **No primary policy document in any pattern above was read.** Every ministry, congress and journal host
+  is refused at the egress proxy, `arxiv.org` included (`P950`). 🟢 **MEXT V2.0, SEP's 10 recommendations and
+  Singapore's Primary-4 gate are quoted from `WebSearch` snippets and are SECONDARY.**
+- 🔴 **`mentingo` is deliberately absent from all three stacks** despite being MIT and AI-native: the
+  open-core question is unresolved (`Gap 362`), and an estimate should not depend on a feature set that may
+  live only in the hosted product.
+- 🔴 **No figure in these patterns comes from a suite in `compose/code/`** — the inherited suites cannot be
+  run from this clone for an eleventh pass. 🟢 **Only `grant-ladder/`, authored this pass, is confirmed
+  running**, and every licence and byte figure above came from it.
+
 ## 🟢 Eighty-eighth pass, 2026-10-09 — two new recipes: a **permissive credentialing spine** that leaves the AGPL issuer alone, and a **high-risk assessment conformance pack** built once for Vietnam + EU Annex III
 
 ⏱️ **Nineteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

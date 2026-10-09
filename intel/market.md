@@ -4,6 +4,224 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-ninth pass, 2026-10-09 — **Mexico discharges after FIVE empty passes on a vocabulary change**, Africa's four-pass drought breaks, APAC gets dated named instruments, and `P944` is corrected from "DNS" to "egress allowlist"
+
+⏱️ **Twentieth pass of this date.** 🟢 **Three regional holes this shelf had declared were closed with the
+same move: `P870` — change the VOCABULARY, not the region.**
+
+### 🟢 🆕 `Gap 357` DISCHARGED — Mexico, and the fix was one query in Spanish naming the ministry
+
+🔴 **Five consecutive passes returned nothing for Mexico**, including pass 88's jurisdiction-phrased sweep.
+🟢 **`Gap 357` costed exactly one `extended` query naming SEP and Spanish-language terms. It returned a
+dated, named, national instrument on the first attempt.**
+
+| instrument | date | what it is |
+|---|---|---|
+| 🟢 **SEP — 10 recomendaciones / acciones for ethical and critical use of generative AI in higher education** | 🟢 **15 Apr 2026** | 🟢 Presented with the results of the national survey; 🟡 framed by press as the basis of a coming **regulation** for genAI in universities |
+| 🟢 **Encuesta Nacional (SEP)** | 🟢 **Apr 2026** | 🟢 **>60% of university students AND teachers use generative AI daily**, from **1.5 M+ students and 166 k+ teachers** |
+| 🟢 **Plan Nacional de Inteligencia Artificial (ATDT)** | 🟢 **Apr 2026** | 🟢 Three pillars: ethical/legal framework · **talent + *software público*** · infrastructure for **technological sovereignty**; carries an education→employment component |
+| 🟡 **Saberes MX** — AI, data and cybersecurity training platform | 🟡 classes from **Jan 2026** | 🟡 Public upskilling channel |
+
+🔴 **Declared, not glossed:** the SEP document is **10 recommendations, not a binding rule** — press reports
+a regulation is *"in preparation"*, and this shelf does not record it as in force. 🔴 **A blog figure of
+*73.4% weekly student use* and *"only 2 in 10 universities have published guidelines"* conflicts with SEP's
+own >60% daily and is NOT used.** 🟢 **`P870` CONFIRMED a third time: the variable was the language and the
+institution's name, never the region's existence.**
+
+### 🟢 🆕 Africa's FOUR-PASS drought breaks — three countries, named, and honestly ranked
+
+| country | what exists | status |
+|---|---|---|
+| 🟢 **Kenya** | 🟢 National AI plan integrates technology into schools; **>62 000 teachers ICT-integration trained by Jul 2026** (Ministry of Education); Sep 2026 Cabinet Secretary engagement on aligning the system to AI; 🟢 **AI literacy routed through the existing Competency-Based Curriculum rather than a new subject** | 🟡 **Most advanced in the region — but no binding instrument** |
+| 🟡 **Nigeria** | 🟡 Federal Ministry of Education announced **AI integration into curriculum delivery** | 🔴 **May 2025 announcement, not a 2026 guideline**; independent analysis calls the commitments *"aspirational rather than systemic"* |
+| 🔴 **South Africa** | 🔴 Department of Basic Education curriculum reviews proposing coding/robotics with AI elements — 🔴 **source dated 2021, current status unclear**; 🟡 draft national AI policy published | 🔴 **Weakest of the three** |
+| 🟢 **Pan-African** | 🟢 *"Towards an Ethical AI Curriculum: A Pan-African, Culturally Contextualized Framework for Primary and Secondary Education"* (arXiv:2604.27708, 2026) | 🟢 Academic framework, citable; 🔴 **host denied at the egress proxy, so the abstract is quoted from search, not read** |
+
+🔴 **The honest headline: NOT ONE of Kenya, Nigeria or South Africa has a binding 2026 ministry
+AI-in-education instrument that this pass could name.** 🟢 **That is an informed gap, and it is the useful
+finding** — a studio pitching into these markets is pitching into a **policy vacuum**, which is an
+opportunity and a risk at once, not the compliance-led sale that EMEA-as-EU is.
+
+🔴 **Middle East: FIFTH pass without an education-specific instrument.** 🟡 General AI governance only —
+Dubai's **Universal Blueprint for AI** (a Chief AI Officer required in each government entity), **Saudi
+Arabia's ~US$40 bn AI fund**, and UAE leading regional AI-governance adoption (Dubai Future Foundation +
+IBM). 🔴 **No named education vendor, no ministry education instrument.** 🟢 **MEED (Jul 2026) does place
+education among the sectors moving "from isolated pilot projects to comprehensive sector-scale rollouts"** —
+the strongest MEA education signal on this shelf, and it is still a sector mention in a trade publication.
+
+### 🟢 🆕 APAC — dated, named instruments for the first time at this level
+
+| jurisdiction | instrument | detail |
+|---|---|---|
+| 🟢 **Japan (MEXT)** | 🟢 **"Guidelines on the Use of Generative AI in Elementary and Secondary Education", Version 2.0** | 🟢 **Published Dec 2024**; 🟢 **V2.0 REMOVED much of V1's restrictive language and encourages more active classroom use**; frames output as *"one reference, with human judgment and responsibility at the end"*. 🟢 **Curriculum revision in progress, implementation expected FY2030.** |
+| 🟢 **Singapore (MOE)** | 🟢 Phased national approach, no single document | 🟢 **AI withheld from lower primary** to protect foundational skills; 🟢 **structured, supervised, in-class use from Primary 4**; 🟢 delivered through the national **Student Learning Space (SLS)**, *not* public chatbots; 🟢 **teacher AI training at all levels by 2026**; 🟡 Feb 2026 — Education Minister confirms a formal study of impact, citing **over-reliance** risk |
+| 🔴 **India** | 🔴 **NOTHING SUBSTANTIVE FOUND** | 🔴 The NEP-targeted query returned a section heading and no provisions. 🟢 **Declared, and costed as a separate query naming AICTE/UGC/CBSE rather than "NEP".** 🆕 **`Gap 363`.** |
+
+🔵 **The APAC pattern worth selling against: Singapore gates by AGE and routes through a state platform;
+Japan has moved from restriction to encouragement and has a 2030 curriculum horizon.** 🟢 **Both are
+*platform-and-curriculum* asks, not compliance-audit asks** — the opposite of the EU posture.
+
+### 🟡 🆕 `Gap 358` DISCHARGED — Brazil and Chile, and both bills are PRE-ENACTMENT AND UNSTABLE
+
+| | Brazil — **PL 2338/2023** | Chile — **Boletín 16821-19** |
+|---|---|---|
+| stage | 🟡 **Senate approved 10 Dec 2024; in the Chamber of Deputies since** | 🟡 **First trámite completed Oct 2025 (Cámara de Diputados); second trámite in the Senate** |
+| latest | 🔴 **"Aguardando Parecer", entry dated 2 Sep 2026**; rapporteur **Aguinaldo Ribeiro** said the vote comes **after the October elections**; text then returns to the Senate | 🔴 **The Executive announced it will table a NEW AI bill REPLACING the one in the Senate** (Ministerio de Ciencia) |
+| in force? | 🔴 **NO** | 🔴 **NO — Chile has no AI law in force** |
+| risk model | 🟡 Risk-tiered (excessive / high / significant); 🔴 **whether EDUCATION is listed high-risk could NOT be verified** | 🟡 Prohibits unacceptable-risk uses, sets high-risk obligations, fines to **20 000 UTM** |
+| education | 🔴 Not verifiable from available sources | 🟡 **Ministry of Education is among the co-sponsoring ministries**; 🔴 no education-specific provision found |
+| timing | 🟡 Most provisions **730 days** after publication; genAI, prohibited practices and author rights at **180 days** | 🔴 Unknowable — the vehicle is being replaced |
+
+🆕 🔵 **`P949` — a named bill's "status" must carry its REPLACEMENT RISK, not just its stage.** 🔴 Chile's
+bill is in second reading *and simultaneously slated for replacement by the incoming government*; a stage
+alone would have read as "advancing". 🟢 **Consequence for the shelf: NEITHER LATAM bill may be cited as a
+compliance driver in a 2026 engagement.** 🔵 **That is the sharp contrast with EMEA** — where the EU AI Act
+is in force and dated — and it inverts the usual regional framing: **LATAM's AI-education risk is
+regulatory UNCERTAINTY, not regulatory burden.**
+
+### 🔴 🆕 `P944` CORRECTED — it is an egress ALLOWLIST, not a DNS or policy-host problem, and the shelf knew this before pass 88
+
+🟢 **Measured, widest sample yet (9 hosts):** `www.mext.go.jp`, `mext.go.jp`, `www.moe.gov.sg`,
+`education.gov.ng`, `www.education.gov.za`, `senado.leg.br`, `www.bcn.cl`, `digitalkodomo.jp` and
+🔴 **`arxiv.org`** all return **NXDOMAIN**, while `raw.githubusercontent.com` resolves (185.199.111.133).
+🟢 **The agent proxy named the cause directly: `connect_rejected` — *"the egress proxy denied the CONNECT
+(organization policy)"*.**
+
+🔴 **`arxiv.org` is the decisive control: it is a preprint host, not a policy host, and it is denied
+identically.** 🔴 **`WebFetch` was tested against the MEXT PDF and fails the same way (`ENOTFOUND`)** — so
+this is not a tool-choice problem either.
+
+| channel | reaches allowlisted hosts (GitHub, `raw`) | reaches everything else |
+|---|---|---|
+| `curl` | 🟢 yes | 🔴 **no — `connect_rejected`** |
+| `WebFetch` | 🟢 yes | 🔴 **no — `ENOTFOUND`** |
+| `WebSearch` | 🟢 yes | 🟢 **yes, but returns SECONDARY reporting with quoted snippets, never the document** |
+
+🔴 **And this is a REGRESSION, not a discovery:** `verticals/solutions.md` already recorded *"Policy and
+report hosts `000`, 8 of 8 — **refused at the egress proxy**, so nothing was measured about the hosts
+themselves"*. 🔴 **Pass 88's `P944` restated that correct diagnosis as "DNS-UNREACHABLE", which is weaker
+and wrong**, and then costed per-host re-probing against it.
+
+🟢 **`P950`: the denial is categorical, so STOP COSTING per-host retries.** 🔴 Four passes of *"not quotable
+without the Official Journal"*, three of *"Eurydice unbought"* and this pass's MEXT-PDF attempt were all
+spent against one allowlist. 🟢 **Primary-document reading is structurally unavailable on this shelf.**
+🟢 **Operating rule: quote the primary document through `WebSearch` snippets, label it SECONDARY, and never
+record it as payload-verified.** 🔵 **Exactly the inverse of the licence ladder, where GitHub *is*
+allowlisted and the payload is therefore always readable — which is why licence facts on this shelf are
+strong and policy facts are not.**
+
+### 🔴 Market sizing — the spread WIDENED again, to six publishers
+
+🔴 **Two more publishers entered this pass and made the disagreement worse, not better:**
+
+| publisher | base | horizon | CAGR |
+|---|---|---|---|
+| 🔴 IMARC | **~$6.4 bn (2025)** | ~$79.6 bn (2034) | ~31% |
+| 🔴 The Business Research Company | **$7.52 bn (2025) → ~$10.6 bn (2026)** | — | **40.9%** |
+| 🔴 MarketsandMarkets (North America only) | **$951 m (2024)** | $2 303 m (2029) | **15.9%** |
+| 🔴 Technavio (North America) | — | — | **41.7%** |
+| 🔴 prior shelf band (4 publishers, passes ≤88) | **$4.09–11.4 bn (2026)** | — | — |
+
+🔴 **The two North America figures disagree by 2.6× on growth rate for the same region in the same year.**
+🟢 **The shelf's standing read is unchanged and now better evidenced: market sizing in AI-education is
+unusable as a single figure, and the shelf quotes the 35/100 maturity read instead.** 🔵 **Use the
+*adoption* numbers, which are sampled rather than modelled** — SEP's 1.5 M-student survey is worth more
+than any of the six forecasts.
+
+## Opportunities by region
+
+### North America
+
+🟢 **Posture: fragmented, institution-led, lightly regulated — a GOVERNANCE-SCAFFOLDING sale.**
+🟡 Governed mainly by **FERPA** plus emerging state law; adoption decided school-by-school and
+district-by-district. 🔴 **Only ~10% of institutions have formal AI guidelines while ~71% of US teachers
+report no AI training** (secondary survey, treat as directional). 🟡 Named district/state movement: **Boston
+Public Schools** reportedly making AI fluency a graduation requirement from **Sep 2026**; **Maryland** and
+**Oklahoma** restricting AI from high-stakes decisions without human oversight; 🟡 a **Dec executive order**
+seeking to pre-empt conflicting state AI laws. 🟢 **Canada stays placed** (provincial jurisdiction; ON/QC/AB/BC
+guidelines; BC's K-12 document 🔴 named but unreadable — egress-denied).
+🟢 **Shelf rows that place here:** 🔴 **`adlnet/SCORM-to-xAPI-Wrapper` (99★, US DoD/ADL) — NO LICENCE
+PAYLOAD**, the single highest-value upstream ask on this shelf; 🟢 **`adlnet/xAPI-SCORM-Profile`
+(Apache-2.0)** is the same body's granted spec and is safe to build on.
+🟢 **Opportunity: the compliance artefact nobody has.** With 10% guideline coverage and a pre-emption fight
+running, the sellable deliverable is an **AI-use policy + audit trail generator** wired to `xAPI-SCORM-Profile`
+so a district can *evidence* what AI did to a learner record.
+
+### EMEA
+
+🟢 **Posture: compliance-led, and now PERMISSIVE-PLATFORM-ENABLED.**
+🟢 **The pass's biggest EMEA change is not policy, it is supply: `OpenOLAT` is Apache-2.0, Swiss-maintained
+(frentix GmbH), and is the central LMS of Koblenz University.** 🟢 **That gives EMEA sovereignty asks a
+permissive, production, closable platform** — previously this shelf told clients no such row existed.
+🟡 Instruments stay as placed in pass 88: Germany (**KMK** Oct 2024; **DigitalPakt 2.0** to 2030), France
+(framework Jun 2025), Netherlands (2024 genAI vision, 🔴 not education-specific), Spain (Digital Spain 2026,
+🔴 non-binding). 🔴 **The EU AI Act's education application date stays UNRESOLVABLE here** — three candidate
+dates, Official Journal egress-denied (`P950`).
+🟢 **Shelf rows that place here:** 🟢 **`OpenOLAT` (Apache-2.0, CH/DE)** · 🟢 **`mentingo` (MIT, Selleo,
+Poland)** · 🟢 **`edubadges/badgr-server` + `badgr-ui` (AGPL-3.0, SURF, Netherlands)** · 🟢 **ESCO**.
+🟢 **Opportunity: the sovereign, closable LMS stack.** `OpenOLAT` + `scorm-again` (MIT) + `Numbas`
+(Apache-2.0) is an **entirely permissive** European teaching stack a studio can wrap and deliver closed —
+see `compose/patterns.md` `P90`.
+🔴 **Africa and the Middle East remain inside this bucket only by the vocabulary's reach.** 🟢 **Africa now
+has named programmes (Kenya strongest), but a binding instrument exists in none of the three countries
+probed** — the opportunity there is **policy-vacuum advisory**, not compliance.
+
+### APAC
+
+🟢 **Posture: platform-and-curriculum, state-channelled — a CONTENT-PIPELINE sale.**
+🟢 **Japan (MEXT V2.0, Dec 2024) has moved from restriction to encouragement, with a FY2030 curriculum
+horizon** — a long, funded runway. 🟢 **Singapore gates by age (nothing below Primary 4) and routes all
+student AI through the national Student Learning Space**, with teacher training at all levels by 2026.
+🔴 **India: nothing substantive found — `Gap 363`.**
+🟢 **Shelf rows that place here:** 🟢 **`iVishalr/BigHOST` (MIT, PES University Bangalore, CCGridW 2023)** —
+🔴 **and see the register correction below, because this shelf declared it did not exist**; 🟡 `gegok12`
+(MIT) with 23 school-level deployment forks across India, Indonesia and Vietnam (`P933`), 🔴 unmaintained.
+🟢 **Opportunity: the state-platform content pipeline.** Singapore's SLS and Japan's FY2030 revision both
+need **content converted into the state platform's format under supervision**. `LiaScript-Exporter` (BSD) +
+`scorm-h5p-wrapper` (MIT) + `edx_xblock_scorm` (Apache-2.0) is a permissive pipeline that targets exactly
+that, and **Japan's human-judgment-last framing is an audit requirement a studio can productise**.
+
+### LATAM
+
+🟢 **Posture: regulatory UNCERTAINTY, large sampled adoption, strong public-sector demand.**
+🟢 **Mexico is now the best-documented LATAM market on this shelf** — SEP's 10 recommendations (Apr 2026),
+a **1.5 M-student / 166 k-teacher national survey showing >60% daily genAI use**, and the ATDT **Plan
+Nacional de IA** with an explicit ***software público*** pillar. 🔵 **That pillar is a procurement door: a
+national plan that names public software as a pillar is a buyer of open-source platform work.**
+🔴 **Brazil's PL 2338 and Chile's bill are both PRE-ENACTMENT, and Chile's is slated for replacement
+(`P949`) — neither is a compliance driver.**
+🟢 **Shelf rows that place here:** 🟢 **`JuezUN/INGInious` (UNCode, AGPL-3.0) — production at Universidad
+Nacional de Colombia, Bogotá**, autograding C/C++/Java/Python/**Verilog/VHDL** + an LMS bridge; `i-educar`
+(GPL, Brazil).
+🟢 **Opportunity: build the permissive layer the region's own stack lacks.** LATAM's two named institutional
+platforms are **both copyleft**, so the studio-ownable work is the **AI tutor + analytics tier above them**,
+integrated across a network boundary — and Mexico's *software público* pillar is where that gets bought.
+🔴 **Declared: still no PERMISSIVE row with LATAM institutional backing** — `INGInious` is AGPL.
+
+### Global
+
+🟢 **The licence facts are strong and the policy facts are weak, and now we know exactly why** (`P950`):
+GitHub is allowlisted, every ministry and journal host is not. 🟢 **So the shelf's durable asset is its
+payload-read grant map, and its policy layer should always be labelled secondary.**
+🔴 **Market sizing: six publishers, ~4× disagreement at the 2026 base and worse at the horizon. Do not
+quote a single figure.**
+
+### 🔴 `P938` reconciliation run by hand this pass — and it found a THIRD desynchronisation
+
+🟢 **`Gap 356` asked for one grep per open gap. Run manually, it paid immediately.**
+
+🔴 **The register declares:** *"No permissive education or credentialing row with APAC or LATAM
+institutional backing, second pass."*
+🟢 **The shelf holds, in FIVE files** (`agents/trending.md:162`, `repos/foundations.md:181`,
+`repos/trending.md:152`, `compose/patterns.md:311`, `intel/market.md:434`): **`iVishalr/BigHOST` — MIT,
+1 083 B, `main` · `0348cc7`, *"Cloud Computing and Big Data, PES University"* (Bangalore), `staff.pes.edu`,
+CCGridW 2023** — 🟢 **a permissive row with APAC institutional backing, opened deliberately as `Gap 350`'s
+APAC limb.**
+
+🟢 **Corrected: a permissive APAC row with named institutional backing EXISTS. The LATAM half of the
+declaration stands** — `INGInious` is AGPL-3.0. 🔵 **Third desynchronisation in two passes, all three found
+by hand.** 🔴 **`Gap 356`'s instrument still cannot be versioned as a runnable check — see `P951`.**
+
 ## 🟢 Eighty-eighth pass, 2026-10-09 — **the primary-source policy channel is DNS-UNREACHABLE from this environment**, which is the measured cause of `Gap 340` and of four passes of "the EU date is unsettled"; and the EMEA drought BREAKS on jurisdiction phrasing
 
 ⏱️ **Nineteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

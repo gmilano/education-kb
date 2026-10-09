@@ -4,6 +4,46 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-ninth pass, 2026-10-09 — the content-interoperability layer joins the foundations, and it is the most permissive tier on this shelf
+
+⏱️ **Twentieth pass of this date.** 🟢 **All rows below are payload-read at a pinned SHA by
+`compose/code/grant-ladder/` (authored and controlled this pass).**
+
+### 🟢 New foundational rows — the SCORM / content-interop layer
+
+🔵 **Why these are FOUNDATIONS and not merely trending:** every education engagement eventually has to move
+content into, and learner data out of, a platform the client already owns. 🟢 **That boundary is
+spec-defined (SCORM, xAPI, cmi5, QTI), and the libraries that implement it are permissive almost without
+exception.** 🟢 **It is the one tier where a studio can standardise its toolkit across clients regardless of
+which copyleft LMS the client runs.**
+
+| row | grant · bytes · ref · SHA | ★ | region | role in a build |
+|---|---|---|---|---|
+| 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** · 10 982 · `master` · `cccdcda` | 447 | 🟢 **EMEA** (frentix GmbH, CH) | 🟢 **The permissive production LMS.** Named deployment: central LMS of **Koblenz University**. 🟢 **Clauses 1–9 intact; the 374 B shortfall is a replaced APPENDIX (`P946`)** |
+| 🟢 [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 **MIT** · 1 072 · `master` · `882f3b8` | 354 | 🔵 unplaced | 🟢 **The runtime shim.** SCORM 1.2/2004 API surface for any content in any LMS |
+| 🟢 [`numbas/Numbas`](https://github.com/numbas/Numbas) | 🟢 **Apache-2.0** · 11 357 · `master` · `39b03e5` | 215 | 🟡 EMEA (Newcastle lineage) | 🟢 Browser-native e-assessment with real maths; SCORM-packageable |
+| 🟢 [`adlnet/xAPI-SCORM-Profile`](https://github.com/adlnet/xAPI-SCORM-Profile) | 🟢 **Apache-2.0** · 11 324 · `master` · `ea17c40` | 42 | 🟢 **North America** (US DoD / ADL) | 🟢 **The authoritative mapping** from SCORM data to xAPI statements — the audit-trail spec |
+| 🟢 [`raccoongang/edx_xblock_scorm`](https://github.com/raccoongang/edx_xblock_scorm) | 🟢 **Apache-2.0** · 11 342 · `master` · `a5741e3` | 32 | 🔵 unplaced | 🟢 SCORM content inside **Open edX**, editable in Studio — the AGPL-safe integration point |
+| 🟢 [`LiaScript/LiaScript-Exporter`](https://github.com/LiaScript/LiaScript-Exporter) | 🟢 **BSD** · 1 523 · `master` · `1d13a11` | 29 | 🟡 EMEA (DE lineage) | 🟢 Single-source → **SCORM / IMS / xAPI / ePub / PDF / APK** |
+| 🟢 [`sr258/scorm-h5p-wrapper`](https://github.com/sr258/scorm-h5p-wrapper) | 🟢 **MIT** · 1 073 · `master` · `3e7755a` | 58 | 🔵 unplaced | 🟢 Brings the **H5P** interactive-content ecosystem into any SCORM LMS |
+| 🟢 [`S4-NetQuest/react-scorm-provider`](https://github.com/S4-NetQuest/react-scorm-provider) | 🟢 **MIT** · 1 068 · `master` · `b4c31bb` | 67 | 🔵 unplaced | 🟢 Makes a React SPA SCORM-reportable without LMS changes |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** · 1 062 · `main` · `2bca285` | 91 | 🟢 **EMEA** (Selleo, PL) | 🟡 **AI-native LMS** — 🔴 open-core unverified (`Gap 362`) |
+
+🟢 **9 of 9 granted. 9 of 9 permissive — 4 MIT, 4 Apache-2.0/BSD, 1 Apache-2.0 platform.**
+🔵 **Compare the platform tier (8 copyleft of 10) and the issuing-server tier (3 AGPL of 3): the
+interop layer is where permissive supply concentrates, and it is the layer a studio should own outright.**
+
+### 🔴 What is NOT here, stated so silence is not read as coverage
+
+- 🔴 **`adlnet/SCORM-to-xAPI-Wrapper` (99★) is excluded from the foundations: NO LICENCE PAYLOAD in 16
+  candidate filenames.** 🟢 Its granted sibling `xAPI-SCORM-Profile` carries the row instead.
+- 🔴 **`cybercussion/SCOBot` (164★) is excluded: Creative Commons on software (`P947`), counsel needed.**
+- 🔴 **`adaptlearning/adapt_framework` (629★) is the channel's most-starred row and is GPL** — usable, but
+  not a foundation a studio can close over.
+- 🔴 **`Gap 352`'s successor-channel question is answered** (`topics/scorm`), but 🔴 **`Gap 335` — the
+  knowledge-tracing layer, this shelf's least placeable tier — is now UNTOUCHED FOR A SEVENTH PASS.**
+  🟢 Named here rather than quietly carried, which is the failure `P938` exists to prevent.
+
 ## 🟢 Eighty-eighth pass, 2026-10-09 — **the platform tier is settled at 8 of 8 copyleft, payload-read**, and the ERP/CRM question finally has a payload-backed answer instead of an asserted one
 
 ⏱️ **Nineteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

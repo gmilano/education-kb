@@ -1,0 +1,17 @@
+slug	branch	sha	licence_file	bytes	family
+adaptlearning/adapt_framework	master	f0a705d	LICENSE	35129	GPL
+OpenOLAT/OpenOLAT	master	cccdcda	LICENSE	10982	Apache-2.0
+jcputney/scorm-again	master	882f3b8	LICENSE	1072	MIT
+numbas/Numbas	master	39b03e5	LICENSE	11357	Apache-2.0
+dhodges47/SCORM-LearningManagementSystem	master	87a57d9	LICENSE.txt	1091	MIT
+cybercussion/SCOBot	main	017a47e	LICENSE	837	CC
+adlnet/SCORM-to-xAPI-Wrapper	master	3e532b8	-	-	NO-PAYLOAD-IN-16-NAMES
+Selleo/mentingo	main	2bca285	LICENSE	1062	MIT
+skfriese/simple-scorm-api	master	cfec748	-	-	NO-PAYLOAD-IN-16-NAMES
+S4-NetQuest/react-scorm-provider	master	b4c31bb	LICENSE	1068	MIT
+sr258/scorm-h5p-wrapper	master	3e7755a	LICENSE	1073	MIT
+adlnet/xAPI-SCORM-Profile	master	ea17c40	LICENSE	11324	Apache-2.0
+gamestdio/scorm	master	845d4e4	LICENSE	1091	MIT-by-signature
+raccoongang/edx_xblock_scorm	master	a5741e3	LICENSE	11342	Apache-2.0
+LiaScript/LiaScript-Exporter	master	1d13a11	LICENSE	1523	BSD
+savvides/idstack	main	1767027	LICENSE	1077	MIT

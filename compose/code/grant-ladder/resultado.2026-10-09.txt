@@ -1,0 +1,12 @@
+two-sided control for grant_ladder.sh
+  ok   — invented slug is DENIED, not granted
+  ok   — invented slug yields no byte figure
+  ok   — moodle resolves a default ref
+  ok   — moodle licence file is COPYING.txt
+  ok   — moodle canonical GPL-3.0 byte count
+  ok   — moodle family named GPL
+  ok   — OpenOLAT default ref is master (T1)
+  ok   — OpenOLAT grant is Apache-2.0
+  ok   — OpenOLAT byte figure is 10982
+  ok   — unnamed MIT resolves by signature
+10/10 controls passed

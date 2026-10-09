@@ -1,0 +1,12 @@
+slug	branch	sha	licence_file	bytes	family
+MyKnowledgeMap/openbadges-google-sheets	master	4976235	LICENSE	1071	MIT
+my-language-skills/open-badges-framework	master	a41c504	LICENSE.md	35147	GPL
+opensalt/OB3DefinitionWidget	main	896596a	LICENSE	1080	MIT
+edubadges/badgr-ui	master	9aa1f3f	LICENSE	34519	AGPL-3.0
+iblai/wallet	main	0be99d0	LICENSE	1063	MIT
+hoijui/obadgen	master	58989c1	LICENSE.txt	34020	AGPL-3.0
+godmode2k/open_badges_cert	main	740e997	LICENSE	11357	Apache-2.0
+ishandutta2007/Awesome-Digital-Credentialing	main	fe8e9cb	LICENSE	1068	MIT
+andyfmiller/vc-dotnet-demos	main	c6ecfb7	-	-	NO-PAYLOAD-IN-16-NAMES
+fedora-infra/tahrir	develop	ddbff5c	LICENSE	34917	AGPL-3.0
+edubadges/badgr-server	develop	9419acc	LICENSE	34519	AGPL-3.0
