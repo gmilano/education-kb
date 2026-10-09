@@ -4,6 +4,34 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-first pass, 2026-10-09 — **one Apache-2.0 platform added**, and it arrives with a `T1` variant that defeats every fallback list
+
+⏱️ **Thirteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 Added this pass — one row, and it is a substrate rather than an education product
+
+| platform | licence (payload-read) | bytes | ref · sha | what it is | education fit |
+|---|---|---|---|---|---|
+| 🆕 [`cortezaproject/corteza`](https://github.com/cortezaproject/corteza) | 🟢 **Apache-2.0**, unmodified full text | 11 358 | 🔴 **`2024.9.x`** · `3835dfc` | Low-code platform with CRM and case-management modules, self-hosted, Go + Vue | 🟡 **adjacent, not vertical** — see below |
+
+🔴 **State the limit before the opportunity: `corteza` has no education module.** 🟢 It is a **permissive low-code substrate** with records, workflow, roles and a UI builder — the layer on which a student-lifecycle or admissions-case application gets built, not one that ships with the domain modelled.
+
+🔵 **Why it still earns a row on a shelf that already carries ERP:** 🔴 **this shelf's education-specific systems of record are overwhelmingly copyleft** — `OpenEduCat` (LGPL-3.0), `openSIS` (GPL), `i-educar` (GPL), `Gibbon` (GPL-3.0), `frappe/education` (GPL-3.0), `OpenEMIS`. 🟢 **The permissive count on this tier remains very small**, and `corteza` joins `aureuserp` (MIT) and `OpenOLAT` (Apache-2.0) as one of the few substrates a studio can wrap in a proprietary client deliverable without a copyleft conversation.
+
+🟢 **Honest comparison, so nobody reaches for it by default:** 🔴 **against `OpenEduCat` or `frappe/education`, `corteza` is strictly more work** — admissions, enrolment, fees and academic records already exist there and would have to be modelled here. 🔵 **It wins on exactly one axis — the licence — and that axis only matters when the client's terms require it.** 🟢 **Decision rule:** copyleft acceptable → take the education-specific ERP and its domain model; copyleft excluded by contract → `corteza` or `aureuserp`, and budget the domain modelling.
+
+### 🔴 `P882` — the default branch is **`2024.9.x`**, and that is a new form of `T1`
+
+🟢 **Measured:** `git ls-remote --symref https://github.com/cortezaproject/corteza HEAD` → 🟢 `ref: refs/heads/2024.9.x`, SHA `3835dfc`.
+
+🔴 **`T1`'s two known shapes were `master` (old code never migrated) and `dev`.** A **release-numbered** default branch is the third, and it is categorically worse: 🔵 **`master` and `dev` are guessable; `2024.9.x` encodes a version the prober cannot know in advance.** 🟢 So no fallback list — not `main`, not `main`-then-`master`, not a three-name list — can reach this repository's payload.
+
+🔴 **And note the stratum, because it corrects a diagnosis:** `P876` attributed `T1`'s bite to the **research-code layer** defaulting to `master` at ~3× the platform rate. 🟢 **`corteza` is a platform**, and this is the worst `T1` case measured so far. 🔵 **`P882`: `--symref` is not an optimisation over a fallback list — it is the only correct way to name a ref**, and a vendor whose repos all carry version branches would read as entirely absent to a guessing probe.
+
+🟢 **Licence-ladder note, measured on this row:** `corteza`'s Apache-2.0 payload is **11 358 B**, against **650 B** for the same grant on `ram-polisetti/ai-act-checker`. 🔴 **A byte threshold would have accepted one and rejected the other** (`P884`) — bytes are provenance, never a licence test.
+
+---
+
 ## 🟢 Eightieth pass, 2026-10-09 — **three platforms added**, and the limb gets its first *learning-analytics* tier (the layer that reads an LMS rather than replacing it)
 
 ⏱️ **Twelfth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-first pass, 2026-10-09 — **three new recipes**, and the first one is the compliance tier this shelf has been composing around for eighty passes
+
+⏱️ **Thirteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Every repo named below is on this shelf with a payload-read licence.** 🔴 **New rows from this pass carry their verified ref and SHA inline**, because a grant claim is only as good as the commit it was read at (`P880`).
+
+### 🟢 `R81a` — **Annex III classification + Article 27 dossier for a learner-facing tutor** (EMEA, 6–8 weeks)
+
+🔵 **The engagement this shelf could describe but not build until this pass.** EMEA is the region with the most binding education statute, and `AbdelStark/eu-ai-act-toolkit` was its only tool — one row, no alternatives, no audit trail.
+
+| step | component | grant · ref |
+|---|---|---|
+| 1. 🔴 **Prohibition screen, FIRST** | [`Hiepler/EuConform`](https://github.com/Hiepler/EuConform) — Art. 5 check | 🟢 MIT · `main` · `011a5ad` |
+| 2. Tier + duties + dates | [`tomdxb0004/eu-ai-act-risk-checker`](https://github.com/tomdxb0004/eu-ai-act-risk-checker) — Reg. (EU) 2024/1689 | 🟢 MIT · `main` · `41da87f` |
+| 3. Annex IV technical documentation | `EuConform`'s report generation + schema validation | 🟢 MIT · as above |
+| 4. Tamper-evident evidence trail | [`ram-polisetti/ai-act-checker`](https://github.com/ram-polisetti/ai-act-checker) — article citations, **hash-chained log** | 🟢 Apache-2.0 · `main` · `992333f` |
+| 5. Cross-check against the shelf's incumbent | `AbdelStark/eu-ai-act-toolkit` — decision tree + checklists | 🟢 MIT |
+| 6. The system under assessment | `HKUDS/DeepTutor` (tutor) inside `moodle/moodle` (oversight surface) | 🟢 Apache-2.0 / 🔴 GPL-3.0 |
+
+🔴 **Step 1 is not interchangeable with step 2, and getting the order wrong is the expensive mistake.** 🟢 **Emotion recognition in education is PROHIBITED outright under Art. 5** — not high-risk, banned. 🔵 **A tier-checker asked first returns *"high-risk, here are your duties"* and sends the client down a conformity path for a feature they may never lawfully ship.** 🟢 If the tutor infers learner affect, engagement or attention, the deliverable is a **redesign**, and that finding is worth more in week one than in week six.
+
+🔴 **Licence boundary, stated:** steps 1–5 are MIT/Apache-2.0 and composable into a proprietary client deliverable; 🔴 **`moodle` is GPL-3.0**, so it is the *deployment target*, not something to link into a studio-owned artefact. 🟢 Where that matters, substitute `OpenOLAT/OpenOLAT` (Apache-2.0), this shelf's permissive LMS.
+
+🟡 **Date discipline, because the client will ask:** four dates are now in circulation for the high-risk obligations (late July 2026, August 2026, and the **2 December 2027** Omnibus postponement, against a contested Omnibus approval date). 🟢 **The dossier is built to the obligations, not to a date** — and *"we cannot tell you the date, we can tell you the duty, and here is the Official Journal check"* is a defensible position that a client cannot reach alone.
+
+🔵 **Why it sells outside EMEA too:** 🟢 **NYC's prohibition list** (grading, discipline, promotion/graduation, placement, IEP/504, behavioural surveillance) tracks Annex III's categories closely enough that **one classification design serves both**, and 🟢 **Brazil's PL 2.338/2023 and Chile's bill both adopt the risk-based grammar**, so the same dossier transfers into LATAM with its vocabulary intact. 🔴 **The dossier is the most portable asset this shelf composes** — built once for the strictest regime, reusable in three regions.
+
+### 🟢 `R81b` — **Curriculum alignment and gap closure, standards-anchored** (any region, 4–6 weeks)
+
+| step | component | grant · ref |
+|---|---|---|
+| 1. Collect + semantically analyse the catalogue | [`fwornle/curriculum-alignment`](https://github.com/fwornle/curriculum-alignment) (**MACAS**) — multi-agent collection → analysis → **gap identification** → unified documentation | 🟢 MIT · `main` · `7761d54` |
+| 2. Anchor outcomes to a competency framework | `opensalt/opensalt` + `1EdTech/OpenCASE` (CASE) | 🟢 shelf rows |
+| 3. Emit into the LMS | `openedx/XBlock` → `openedx/edx-platform`, or `OpenOLAT` | 🟢 Apache-2.0 |
+| 4. Prove the gap closed | `ZhijieXiong/pyedmine` (KT + **cognitive diagnosis**) | 🟢 MIT |
+
+🔵 **Step 4 is what makes this a deliverable rather than a report.** 🔴 **Curriculum alignment's normal failure mode is a PDF of identified gaps that nobody can show were closed.** 🟢 Pass 80 rebuilt the measurement layer precisely so this step exists; **MACAS finds the gap, `pyedmine` measures whether learners' mastery moved**, and the engagement has an acceptance test.
+
+🟢 **Why this fits the market better than a tutor build:** 🟢 **HolonIQ and 1EdTech both report that institutions now demand evidence a product improves learning, persistence or job-relevant skills**, and **competency frameworks and real-time skills visibility are the stated direction**. 🔵 **This recipe produces exactly that evidence shape** — competency-anchored, measured, interoperable — and it is **MIT + Apache-2.0 end to end** (step 2 and 3 substitutions aside), so nothing blocks a proprietary wrapper.
+
+🟢 **Regional fit, honestly:** 🟢 **LATAM is the strongest first market** — 74% of 200 institutions already use AI for lesson planning and grading while only 26% have a framework, so the catalogue work is wanted and the governance scaffold sells alongside it. 🟢 **North America's accreditation cycles** make it the natural second.
+
+### 🟢 `R81c` — **Pronunciation assessment with a measured baseline** (language learning, 5–7 weeks)
+
+🔵 **The pattern pass 80's rebuilt measurement layer makes possible, now that its speech half exists.**
+
+| step | component | grant · ref |
+|---|---|---|
+| 1. Scoring engine | `Halleck45/OpenPronounce` (Wav2Vec2 + DTW, phoneme-level) **or** [`CyanXLab/Phonos`](https://github.com/CyanXLab/Phonos) (local-first, no audio upload by default) | 🟢 MIT · Phonos `main` · `8a13a3b` |
+| 2. 🟢 **Score the scorer** | [`Fuann/open-apa`](https://github.com/Fuann/open-apa) — benchmark + eval toolkit, **open-response** scenarios | 🟢 BSD-3-Clause · `master` · `2c92c0d` |
+| 3. Fix a published baseline | `YuanGongND/gopt` + [`doheejin/HiPAMA`](https://github.com/doheejin/HiPAMA) (hierarchical, ICASSP 2023) | 🟢 BSD-3-Clause · HiPAMA `main` · `89e3f65` |
+| 4. ASR + delivery | `SYSTRAN/faster-whisper` / `k2-fsa/sherpa-onnx`; real-time via `livekit/agents` | 🟢 MIT / Apache-2.0 |
+| 5. Learner-facing surface | `moodle/moodle` or `learningequality/kolibri` (offline-capable) | 🔴 GPL-3.0 / 🟢 MIT |
+
+🔴 **Step 2 is the point of the recipe, and it is the step every pronunciation pilot skips.** 🟢 **Without it the deliverable is a demo**: the engine returns a score, the client has no way to know whether the score is right, and *"it sounds about right"* is the acceptance criterion. 🔵 **With `open-apa` and a `gopt`/`HiPAMA` baseline, the proposal states a measured figure against a published benchmark before the build starts.**
+
+🟢 **`Phonos`'s privacy posture is a procurement argument, not a footnote:** no audio upload in default mode, every network feature behind an explicit switch, commercial APIs off by default, and **`/api/data/export` + `/api/data/purge`** endpoints. 🔵 **For a school buyer handling minors' voice data, that is a GDPR/COPPA conversation that ends early** — and it is why this recipe can run on-premise where a cloud speech API cannot.
+
+🔴 **Licence note that must survive into the SOW:** 🟢 the chain is MIT + BSD-3-Clause + Apache-2.0 — fully composable — 🔴 **but `OpenPronounce` pulls two Wav2Vec2 checkpoints (~1.2 GB each) from the Hugging Face Hub, and MODEL WEIGHTS CARRY THEIR OWN TERMS, which this pass did not verify.** 🔵 **`P794`'s lesson applied to a new layer: the repository's licence does not govern the weights it downloads**, and a client asking *"can we ship this"* needs the checkpoint licence read too. 🟢 Flagged as unresolved rather than assumed permissive.
+
+🟡 **Regional fit:** 🟢 **LATAM and APAC are the demand centres** — language learning is reported as the fastest-growing segment on this shelf, and 🟢 `Phonos` is zh-primary, which makes it the natural engine for an APAC build. 🔴 **`OpenPronounce` is calibrated for English only**, with French, Spanish, German, Italian, Portuguese and Dutch **experimental** — so a Spanish- or Portuguese-language LATAM engagement starts at step 2, measuring how bad the experimental path actually is, rather than assuming it works.
+
+---
+
 ## 🟢 Eightieth pass, 2026-10-09 — **three new recipes**, and the first one closes the hole the shelf has been building over for eighty passes
 
 ⏱️ **Twelfth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

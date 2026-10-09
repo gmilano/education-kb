@@ -4,6 +4,109 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-first pass, 2026-10-09 — **seven new agent rows**, the licence ladder gets a **FOURTH** blind spot, and `P870`'s regional verdict **does not reproduce**
+
+⏱️ **Thirteenth pass of this date.** Pass 80 closed earlier today with five rows. **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 Capability boundary, re-measured in its narrowest case first (`P860`)
+
+| what was attempted | result |
+|---|---|
+| inline `curl` / `git ls-remote`, one per repo | 🟢 **ALLOWED** — every figure below comes from these |
+| inline compound command with a `for` loop over repos | 🟢 **ALLOWED**, re-confirmed — pass 80's read holds: the loop is not the boundary, the **file** is |
+| any script from this clone (`lib/`, `measure`, the 106 suites) | 🔴 **not attempted** — passes 78/79 measured it DENIED and nothing suggests it moved |
+
+🔴 **Fourth consecutive pass without running the board:** `shelf_gate.sh`, `measure`, `license_family.sh`, `p351` and the 106 suites stay **CARRIED, NOT CONFIRMED**. 🟢 Every figure below is live inline measurement or a static read. 🔴 **No new instrument versioned** — `P126` forbids committing an instrument that could not be run.
+
+### 🟢 Discriminating controls, run BEFORE any candidate
+
+| control | result |
+|---|---|
+| `raw.githubusercontent.com`, real path | 🟢 **200**, 496 B (`torvalds/linux` `COPYING`) |
+| same host, invented path | 🟢 **404**, body exactly **14 B** |
+| `git ls-remote --symref`, real slug | 🟢 SHA `af32da41` + `ref: refs/heads/master` |
+| `git ls-remote --symref`, invented slug (`zzz-invented-owner-81/…`) | 🟢 **fails** — no silent empty success |
+| `curl -sI https://github.com/…` (the brief's command), real | 🔴 **403** |
+| same, invented slug | 🔴 **403** |
+
+🔴 **`P880` reproduces exactly.** The brief's `curl -sI` carries **zero information** on this host: the most famous repo on the platform and a slug invented thirty seconds earlier return the **same code**. 🔵 Existence is read only from a channel whose **calibration pair separates**.
+
+### 🟢 Added this pass — seven rows, every licence payload-read inline at the resolved ref
+
+| agent | grant (payload-read inline) | bytes | ref · sha | region | what it is |
+|---|---|---|---|---|---|
+| 🆕 [`fwornle/curriculum-alignment`](https://github.com/fwornle/curriculum-alignment) | 🟢 **MIT** | 1 083 | `main` · `7761d54` | 🟢 **EMEA** (institution named in the grant) | **MACAS** — multi-agent curriculum alignment: source collection → semantic analysis of curriculum content → **gap identification** → unified curriculum documentation. Holder line reads `Copyright (c) 2025 Central European University`. 🔵 **The strongest new row this pass:** it does the thing an engagement actually gets paid for, and it is permissive. |
+| 🆕 [`Hiepler/EuConform`](https://github.com/Hiepler/EuConform) | 🟢 **MIT** | 1 073 | `main` · `011a5ad` | 🟡 **EMEA by subject, not by holder** (see below) | Interactive assessment implementing **AI Act Article 5** (prohibited) and **Article 6 + Annex III** (high-risk), plus **Annex IV**-style report generation and schema validation. 🔴 Its own README says it is technical guidance and **does not replace a notified body's conformity assessment** — quote that line to a client before the tool. |
+| 🆕 [`tomdxb0004/eu-ai-act-risk-checker`](https://github.com/tomdxb0004/eu-ai-act-risk-checker) | 🟢 **MIT** | 1 073 | `main` · `41da87f` | 🟢 **EMEA** (legal-entity form in the grant) | Risk-tier checker for **Regulation (EU) 2024/1689** — prohibited / high / limited / minimal + GPAI, with obligations and compliance deadlines attached to the tier. Holder line reads `Copyright (c) 2026 Crux Digits B.V.` |
+| 🆕 [`ram-polisetti/ai-act-checker`](https://github.com/ram-polisetti/ai-act-checker) | 🟢 **Apache-2.0** — **short notice form**, not the full text (see `P884`) | **650** | `main` · `992333f` | 🔴 **unplaced** | Deterministic conformity checker: risk-tier triage with **article citations** and a **hash-chained audit log**. 🔵 The audit log is the differentiator — it is the only one of the three Act tools whose output is tamper-evident, which is what an Article 27 dossier needs. |
+| 🆕 [`CyanXLab/Phonos`](https://github.com/CyanXLab/Phonos) | 🟢 **MIT** — **bare word in the README, no licence file anywhere** (see `P883`) | **0 file** | `main` · `8a13a3b` | 🟡 **APAC** (single-language zh README — medium tier) | Phoneme-level pronunciation engine, **local-first by default**: no audio upload in default mode, every network feature behind an explicit switch, commercial APIs off by default, and `/api/data/export` + `/api/data/purge` endpoints. 🔵 **The privacy posture is a product feature for a school buyer**, and it is unusual enough to be worth citing. |
+| 🆕 [`Fuann/open-apa`](https://github.com/Fuann/open-apa) | 🟢 **BSD-3-Clause** | 1 528 | `master` · `2c92c0d` | 🔴 **unplaced** | **OpenAPA** — benchmark **and evaluation toolkit** for pronunciation assessment in **open-response** scenarios. Holder `OpenAPA contributors, 2026`. 🔵 Continues pass 80's rebuilt measurement layer: this is the instrument that **scores a scorer**, not another scorer. |
+| 🆕 [`doheejin/HiPAMA`](https://github.com/doheejin/HiPAMA) | 🟢 **BSD-3-Clause** — 🔴 **but the holder is NOT this project's** (see `P885`) | 1 526 | `main` · `89e3f65` | 🔴 **unplaced, deliberately** | Hierarchical pronunciation assessment model (ICASSP 2023). Payload holder line reads `Copyright (c) 2022, Yuan Gong` — the author of [`YuanGongND/gopt`](https://github.com/YuanGongND/gopt), **already on this shelf**. |
+
+🔴 **No row above carries a star count, and that is a deliberate omission** (`Gap 338`). The HTML channel is **403** and the API channel is outside this session's scope, so there was no way to measure one. 🔵 **`P351` is red precisely because this shelf has carried unmeasured star figures before** — an unmeasured number is omitted, not carried.
+
+### 🔴 `P883` — the licence ladder has a FOURTH blind spot, and it is the first where the GRANT exists but no FILE does
+
+🟢 **`CyanXLab/Phonos` was probed at every layer this shelf knows:**
+
+| layer probed | result |
+|---|---|
+| 7 standard licence filenames (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license`, `license.txt`, `COPYING`, `LICENCE`) | 🔴 **all 404** |
+| 10 manifest paths (`pyproject.toml`, `package.json`, `setup.py`, `setup.cfg`, `Cargo.toml`, `DESCRIPTION`, `composer.json`, `LICENSE-MIT`, `LICENSE_MIT`, `NOTICE`) | 🔴 **all 404** |
+| `README.md` | 🟢 **200**, 3 972 B — and under `## License`, the body is the single word **`MIT`** |
+
+🔴 **So all three of `P871`'s rules are blind at once:** title-line discrimination has **no file to read**; `grep -i 'MIT License'` **fails**, because the payload never contains the phrase — only the token `MIT`; and the manifest rule has **no manifest**. 🟢 The grant was found only by reading the README's own `## License` section.
+
+🔵 **`P883`: the ladder's rungs all assume a FILE. A repository can grant in prose, in three characters, with no file at all** — and a pass that reports `NO-PAYLOAD` as "no grant" will write a permissive repo down as all-rights-reserved. 🔴 **That is the expensive direction of the error**: it discards a usable row, silently, and the shelf never learns what it lost.
+
+### 🔴 `P884` — a byte-size heuristic would reject a VALID Apache grant, measured side by side in this pass
+
+| row | grant | payload bytes |
+|---|---|---|
+| `cortezaproject/corteza` | Apache-2.0 | **11 358** |
+| `ram-polisetti/ai-act-checker` | Apache-2.0 | **650** |
+
+🟢 **Same licence, a 17× difference in payload size.** The 650-byte form is the Act's **appendix notice** — *"Licensed under the Apache License, Version 2.0 … You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0"* — which grants by reference rather than reproducing the text.
+
+🔴 **This shelf records payload bytes on every row, which makes "an Apache payload is ~11 kB" exactly the kind of rule it is tempted to form.** 🔵 **`P884`: bytes are provenance, never a licence test.** A grant can be complete at 650 B and a payload can be 11 kB of text that grants nothing.
+
+### 🔴 `P885` — an inherited LICENSE file carries the ORIGINAL holder, and that breaks this shelf's strongest region rule
+
+🟢 **`P800`'s top tier is "holder named in the payload."** 🔴 **Applied naively to `doheejin/HiPAMA`, it places the repo by `Yuan Gong` — who did not write it.** HiPAMA is a derivative of **GOPT**, and it copied GOPT's BSD-3-Clause file verbatim, holder line and 2022 date included.
+
+🟢 **Measured:** HiPAMA's payload is **1 526 B**; the holder reads `Copyright (c) 2022, Yuan Gong`; `YuanGongND/gopt` is already on this shelf, so the collision was visible from the shelf itself.
+
+🔵 **`P885`: the holder line is evidence about the GRANT's origin, not the REPOSITORY's.** 🔴 **A copied licence file is the normal case in research code**, which is the layer `T1` already showed defaults to `master` at ~3× the platform rate — so the two defects live in the same stratum and compound. 🟢 **HiPAMA is therefore logged `unplaced`**, with the trap named, rather than placed on a holder it does not own.
+
+### 🔴 Two named negatives — probed, and granting nothing at any layer
+
+🟢 Both were fetched successfully and then found empty, per `P873` (**assert the fetch, then assert the match** — a silent `grep` is indistinguishable from a failed fetch):
+
+| row | layers probed | result |
+|---|---|---|
+| [`amangupta05/agent-engineering-curriculum`](https://github.com/amangupta05/agent-engineering-curriculum) | 7 licence filenames + 10 manifests → **404**; `README.md` → 🟢 **200, 3 746 B** | 🔴 **zero** `licen[sc]e` / `MIT` / `Apache` matches → **all rights reserved** |
+| [`KnowledgeLab/AI-Agents-for-Social-Science-and-Society-2026`](https://github.com/KnowledgeLab/AI-Agents-for-Social-Science-and-Society-2026) | same ladder; `README.md` → 🟢 **200, 50 775 B** | 🔴 **zero** matches across 50 kB → **all rights reserved** |
+
+🔵 Both are **courses about AI**, not instruments that do education — the exact category `P795` named as the reason the generic agent query underdelivers. 🟢 They are written down because "a 50 kB README and a university org" is precisely the surface that reads as safe and is not.
+
+🔴 **And one slug that does not exist:** `bottlecrm/bottlecrm`, reached for after a vendor page named "BottleCRM", returned **NO-RESOLVE** from `git ls-remote`. 🟢 **This is `P872`'s shape** — a name assembled from a product title rather than read from an index. 🔵 It is recorded as a non-finding, not quietly dropped, because a guessed slug that *had* resolved would have entered the shelf unexamined.
+
+### 🟡 Region provenance, by tier (`P800`), because four of seven rows sit below the strong bar
+
+| row | evidence actually read | tier |
+|---|---|---|
+| `fwornle/curriculum-alignment` | 🟢 payload holder is an **institution**: `Central European University` (Vienna/Budapest) | 🟢 **strong** |
+| `tomdxb0004/eu-ai-act-risk-checker` | 🟢 payload holder `Crux Digits B.V.` — **`B.V.` is a Dutch legal-entity form**, i.e. a jurisdiction read off the entity type, not off a personal name | 🟢 **strong** |
+| `CyanXLab/Phonos` | 🟢 README is **zh-primary and single-language**: 660 CJK chars vs 911 ASCII letters, **73 of 129 lines** contain CJK, and 🟢 **no `README_*` translation link exists in the index** | 🟡 **medium** (`P874`: the decider is the SIZE of the language set — here it is **one**) |
+| `Hiepler/EuConform` | 🟡 **subject-matter jurisdiction only** — the tool implements EU law. 🔴 Holder is an unaffiliated individual; **no institution anywhere in the payload** | 🟡 **weak, and labelled** |
+| `ram-polisetti/ai-act-checker` | 🔴 **none** — individual holder, no affiliation; 🔵 **and `P800` forbids reading a region off a person's name**, which is the only other thing on offer here | 🔴 **unplaced** |
+| `Fuann/open-apa` | 🔴 **none** — holder is `OpenAPA contributors`, a project collective with no stated seat | 🔴 **unplaced** |
+| `doheejin/HiPAMA` | 🔴 **worse than none** — the holder line belongs to **another project** (`P885`) | 🔴 **unplaced** |
+
+🔵 **Two of the three AI-Act tools are EMEA-relevant without being EMEA-origin, and the shelf now says so explicitly.** 🔴 **A compliance tool's region is ambiguous in a way a tutor's is not**: `EuConform` is as useful to a Brazilian vendor selling into Europe as to a German school. 🟢 **The honest encoding is "EMEA by subject", stated inline** — because dropping it into the EMEA bucket unlabelled would tell a later reader it came from there.
+
+---
+
 ## 🟢 Eightieth pass, 2026-10-09 — **five new agent rows**, and the licence ladder is measured to have **three independent blind spots**, each on a real row
 
 ⏱️ **Twelfth pass of this date.** Pass 79 closed earlier today with four rows. **Append-only: this section is new; nothing below it was rewritten.**

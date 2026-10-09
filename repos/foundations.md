@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-first pass, 2026-10-09 — **five foundational repos**, and the compliance layer becomes a FIRST-CLASS tier on this shelf
+
+⏱️ **Thirteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 The structural finding: this shelf had no conformity tier, and EMEA is its most regulated region
+
+🔴 **Eighty passes produced a rich LMS tier, a tutoring tier, an SIS tier, an analytics tier and (as of pass 80) a measurement tier — and no tier for the artefact an EMEA education buyer is legally required to produce.** 🟢 `AbdelStark/eu-ai-act-toolkit` has sat on the shelf as a single row; the three rows below make it a layer with alternatives.
+
+🔵 **Why that matters more here than in most industries:** 🟢 **AI Act Annex III, point 3 places education in high-risk** — admissions, grading and assessment, and monitoring students during tests — so a learner-facing tutor sold into the EU is a high-risk system by classification, and 🔴 **it cannot be placed on the market or put into service without a conformity assessment.** 🟢 **The conformity artefact is not overhead attached to the build; for this industry it is part of the deliverable.**
+
+### 🟢 Added this pass — five rows, every grant payload-read inline at the resolved ref
+
+| repo | licence (payload-read) | bytes | ref · sha | why it is foundational | AI base? |
+|---|---|---|---|---|---|
+| [`fwornle/curriculum-alignment`](https://github.com/fwornle/curriculum-alignment) | 🟢 **MIT** | 1 083 | `main` · `7761d54` | Multi-agent curriculum alignment (**MACAS**): multi-source collection, semantic analysis of curriculum content, **gap identification**, unified documentation. Holder: `Central European University`. | ✅ the agent layer **is** the product |
+| [`Hiepler/EuConform`](https://github.com/Hiepler/EuConform) | 🟢 **MIT** | 1 073 | `main` · `011a5ad` | AI Act **Art. 5** + **Art. 6/Annex III** classification with **Annex IV**-style report generation and schema validation. 🔴 Explicitly not a substitute for a notified body. | ✅ classification + dossier scaffold |
+| [`tomdxb0004/eu-ai-act-risk-checker`](https://github.com/tomdxb0004/eu-ai-act-risk-checker) | 🟢 **MIT** | 1 073 | `main` · `41da87f` | Risk-tier checker for **Regulation (EU) 2024/1689** with obligations and deadlines per tier. Holder: `Crux Digits B.V.` | ✅ tier triage, cross-check layer |
+| [`ram-polisetti/ai-act-checker`](https://github.com/ram-polisetti/ai-act-checker) | 🟢 **Apache-2.0** (**650 B** notice form — `P884`) | 650 | `main` · `992333f` | Deterministic conformity checker: **article citations** + **hash-chained audit log**. 🔵 The only tamper-evident output of the three. | ✅ evidence trail for Art. 27 |
+| [`Fuann/open-apa`](https://github.com/Fuann/open-apa) | 🟢 **BSD-3-Clause** | 1 528 | `master` · `2c92c0d` | **OpenAPA** — benchmark + evaluation toolkit for pronunciation assessment in **open-response** settings. | ✅ scores the scorer |
+
+🟢 **Five rows, five real repos, five payload-read grants.** 🔴 **No row is padding and no header or example row appears as data on this shelf** — the brief's `| Nombre | Repo | Licencia |` failure mode was checked for explicitly after writing.
+
+### 🔵 How the three Act tools differ, because "EU AI Act toolkit" is not one product
+
+| need | tool | what it actually gives |
+|---|---|---|
+| *Is my tutor high-risk, and is any part of it prohibited outright?* | `EuConform` | Art. 5 prohibitions **and** Art. 6/Annex III — the only one that checks the **ban** first |
+| *What obligations and dates attach to that tier?* | `eu-ai-act-risk-checker` | tier → obligations → compliance deadlines, cited to 2024/1689 |
+| *Can I prove to an auditor what was assessed and when?* | `ai-act-checker` | article-cited findings in a **hash-chained log** |
+
+🔴 **The ordering is not interchangeable, and `EuConform` must run first for an education build**, because **emotion recognition in education is prohibited under Art. 5** — a product that infers learner affect needs a redesign, not a conformity assessment. 🔵 **A tier-checker asked first would return "high-risk, here are your duties" and send a client down a compliance path for a feature they may not lawfully ship at all.**
+
+### 🟢 `Fuann/open-apa` closes the half of the measurement layer pass 80 left open
+
+🟢 Pass 80 rebuilt the **knowledge-tracing / cognitive-diagnosis** half (`pyedmine`, `EduStudio`, `knowledge-tracing-collection-pytorch`, `ktm`, `GKT`, `measr`) after finding it had been archived in the 2026-10-06 reset and never restored. 🔴 **The speech half was still absent**, even though this shelf carries pronunciation engines (`OpenPronounce`, `piper`, `whisperX`, `sherpa-onnx`) and `YuanGongND/gopt`.
+
+🔵 **`open-apa` is the missing acceptance test**: with it, a language-learning engagement states a measured baseline instead of a demo. 🟢 Paired with `doheejin/HiPAMA` (BSD-3-Clause, `main` · `89e3f65`, logged in `agents/top.md`) and the already-shelved `gopt`, the layer now has a benchmark, a published model and a reference baseline.
+
+🔴 **`P885`, recorded here because it is a FOUNDATIONS-layer trap:** `HiPAMA`'s BSD payload reads `Copyright (c) 2022, Yuan Gong` — **`gopt`'s** author, not HiPAMA's. 🟢 The grant is valid and the licence is BSD-3-Clause; 🔴 **but the holder line cannot be used to place the repo**, and in research code a copied licence file is the normal case. 🔵 **The strongest region rule this shelf has (`P800`: holder named in the payload) is unsafe in exactly the stratum where `T1` also bites.**
+
+### 🟢 Dedup, stated as a measurement
+
+🟢 All five rows were greped against the live shelf (**1 211** slugs) **and** `archive/2026-10-06-pre-reset/` (**678** slugs; **1 301** unique combined) — 🟢 **0 hits in both**, so none is a re-purchase of a row the reset dropped (`P875`). 🔴 Two candidates were **dropped as already-shelved** by that same check (`dssg/student-early-warning`, `novatrix-2030/SIH-2026`), and one (`bottlecrm/bottlecrm`) **failed to resolve at all** — a slug assembled from a product name rather than read from an index (`P872`).
+
+---
+
 ## 🟢 Eightieth pass, 2026-10-09 — **six new foundational repos**, and the finding is a REGRESSION: the measurement layer was archived on 2026-10-06 and never rebuilt
 
 ⏱️ **Twelfth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

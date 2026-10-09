@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 81) — the channel that paid is **the adjacent regulated niche**, and `P870`'s acronym verdict **does not reproduce**
+
+⏱️ **Thirteenth pass of this date.** 🟢 **Append-only: this section is new. Pass 80's section is immediately below and nothing in it was rewritten.**
+
+### 🔴 `P881` — the regional acronym channel is **high-variance, not broken**, and the variable this shelf never recorded is the **search MODE**
+
+🟢 **Pass 80 (`P870`) measured the brief's literal query — `AI {industry} {region} {year} adoption regulation players` — returning ZERO education instruments for EMEA and APAC, called the acronym the six-pass defect, and switched the limb to jurisdiction queries.**
+
+🔴 **This pass ran all four of those queries verbatim, and all four returned dated, named education instruments.**
+
+| region, literal acronym query | what came back this pass |
+|---|---|
+| North America | 🟢 **134 bills across 31 states**; CA **AB 1159**, Idaho **SB 1227**, Oregon **SB 1546**, Alabama **HB 329**, Virginia **SB 394**, Maryland **SB 720**; **H.R. 8747**; NYC's traffic-light guidance; the US DoE grant-priority rule |
+| EMEA | 🟢 **AI Act Annex III** education classification, the conformity-assessment and human-oversight duties, the **UK's £4 M** lesson-planning/marking investment, **OECD DEO 2026** |
+| APAC | 🟢 Korea **AI Basic Act in force 22 Jan 2026** + MSIT pilot-period and domestic-representative duty, Vietnam **Law 134/2025/QH15**, Taiwan **AI Basic Act Dec 2025**, Australia's **AI Safety Institute** |
+| LATAM | 🟢 **UNESCO IESALC** 200 institutions / 19 countries, Brazil **PL 2.338/2023**, Colombia **CONPES 4144**, the **UNESCO Observatory** launch, **IDB-TN-3241** |
+
+🔵 **So the PREDICTION `P870` published ("acronym → zero") does not hold, while its MECHANISM (no ministry publishes under a sales acronym) remains true and remains a good reason to ALSO ask by jurisdiction.** 🔴 **The distinction matters because pass 80 wrote the zero up as a structural defect of the channel, and a structural defect should reproduce on demand. This one did not.**
+
+🔴 **And the honest confound, named rather than buried: this pass ran every query in `extended` mode, and the shelf has never recorded which mode any previous pass used.** 🟢 So the cleanest available explanation for a six-pass run of zeros followed by a four-for-four is **an uncontrolled instrument setting**, not a property of the word *EMEA*. 🔵 **`P881`: a channel measured once on one day is a SAMPLE. Record the instrument's settings with the result, or a later pass cannot tell variance from structure** — which is exactly the cut `P880` made about calibration pairs, now applied to the search tool itself.
+
+🟢 **Operationally nothing is lost:** jurisdiction queries are still strictly better, because they are what produced the Länder/MEXT/CONPES detail the acronym queries never reach. 🔴 **What changes is the claim this shelf is entitled to make** — the acronym channel is unreliable, not dead, and a single zero from it is not evidence of coverage either way.
+
+### 🟢 The channel that paid this pass: the **adjacent regulated niche**
+
+🔴 **`P795`/`P876` named the agent drought's two causes — the query ranks courses *about* AI above agents that *do* education, and a `main`-hardcoded probe silently drops the older half of the research layer.** 🟢 Both were avoided this pass (symref resolution on every row, and the generic query treated as a known-barren control).
+
+🟢 **The productive move was to stop asking for "education agents" and ask for the instrument a regulated education buyer must produce.** Measured yield:
+
+| query shape | new rows that survived verification |
+|---|---|
+| 🔴 `top open source AI agents education 2026 github MIT` (brief's literal) | **0** — returned OpenClaw, CrewAI, LangGraph, OpenHands, Hermes: general-purpose, all already shelved |
+| 🔴 `github trending education AI 2026` (brief's literal) | **0** — every education-tagged hit (`ChatTutor`, `education-agent-skills`, `agents-from-scratch`, `generative-ai-for-beginners`, `ai-engineering-from-scratch`) was **already on this shelf** |
+| 🟢 EU AI Act conformity tooling | **3** (`EuConform`, `eu-ai-act-risk-checker`, `ai-act-checker`) |
+| 🟢 pronunciation assessment + its **benchmark** layer | **3** (`Phonos`, `open-apa`, `HiPAMA`) |
+| 🟢 curriculum alignment | **1** (`curriculum-alignment`, and the strongest row of the seven) |
+
+🔵 **The pattern: the brief's two agent queries are now measured barren on this shelf — two passes running — while a query naming the REGULATORY ARTEFACT pays.** 🟢 The buyer in EMEA does not search for an education agent; they need an Annex III classification and an Article 27 dossier, and the tools that produce those are not tagged `education` at all. 🔴 **Which is why eighty passes of education-tagged queries never surfaced them.**
+
+### 🔴 `P882` — `T1` has a THIRD form: the default branch can be a **version branch**
+
+🟢 **Measured across the 11 candidates that resolved this pass: 3 are not `main`.**
+
+| repo | default ref |
+|---|---|
+| `Fuann/open-apa` | `master` |
+| `amangupta05/agent-engineering-curriculum` | `master` |
+| 🔴 `cortezaproject/corteza` | **`2024.9.x`** |
+| (control) `torvalds/linux` | `master` |
+
+🔴 **`corteza` is the new form.** `T1`'s two known shapes were `master` (old code never migrated) and `dev`. 🔵 **A release-numbered default branch defeats even a `main`-then-`master` fallback pair** — the ref is unguessable in principle, because it encodes a version the prober cannot know.
+
+🟢 **`P882`: there is no fallback list that works. `--symref` is not an optimisation, it is the only correct way to name a ref**, and a probe that guesses will mis-read an entire vendor's repos as absent. 🔴 **Note the stratum:** `corteza` is a **platform**, so this one did not come from the research layer `P876` blamed — the defect is wider than that diagnosis implied.
+
+---
+
 ## 🟢 2026-10-09 (pass 80) — **five new agents**, and the fourteen-week drought gets a SECOND cause: `P795` blamed the query, and half the blame was the REF
 
 ⏱️ **Twelfth pass of this date.** 🟢 **Append-only: this section is new. Pass 79's section is immediately below and nothing in it was rewritten.**

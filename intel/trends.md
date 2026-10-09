@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-first pass, 2026-10-09 — the **OECD** supplies the sector's own argument against general-purpose chatbots, and North America's statute layer turns out to be **far thicker** than this shelf recorded
+
+⏱️ **Thirteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 Trend — **"purpose-built over general-purpose" is now the OECD's position, not a vendor's**
+
+🟢 **`OECD Digital Education Outlook 2026`**, published **January 2026**, titled *Exploring Effective Uses of Generative AI in Education* (DOI `10.1787/062a7394-en`). 🔵 **This shelf has recorded the report's existence since pass 80; this pass reads its argument.**
+
+🟢 **The core claim:** to unlock generative AI's potential, education must **move beyond generic chatbots towards purpose-built tools for education** — because general-purpose tools are not designed for learning, and governments should actively encourage tools aimed at improving teaching and learning.
+
+🟢 **The design prescription, and it is unusually concrete for an OECD recommendation:** tools should be **co-created with teachers and students**, giving educators control over how the machine behaves — 🔵 **including letting teachers set the tool's level of hallucination** and give feedback on their students' AI interactions.
+
+🔴 **The counterweight, stated in the same report:** overreliance **reduces students' metacognitive engagement**, risks turning students into passive consumers and teachers into supervisors, and — the sentence to quote to a client — 🔴 **successfully performing a task with generative AI does not automatically lead to learning.**
+
+🔵 **Why this is a trend and not a paper:** 🟢 a trade analysis independently reaches the same conclusion from the buyer side — the defining 2026 movement is **away from generic AI tools toward platforms purpose-built for education**, because generic tools shifted teacher effort into supervising prompts and checking accuracy. 🟢 **Supply side and demand side now agree**, which is what distinguishes this from the personalisation claims of 2024–25.
+
+🔴 **The commercial read for a studio: this is an argument for the engagement model and against the licence model.** 🟢 "Purpose-built, co-created with teachers, teacher-controllable" describes bespoke delivery on open substrates — 🔵 which is precisely what the shelf's permissive tiers exist to make cheap, and precisely what a general-purpose chatbot subscription is not.
+
+### 🔴 Trend — **teacher time recovery is the adoption test, and it now has a measured number**
+
+🟢 **Weekly AI-using teachers save ~5.9 hours per week** (K-12 Academics, *State of AI in Education 2026*). 🟢 Independently, teachers are reported to adopt most readily when a tool saves **5–10 hours per week without compromising instructional quality**.
+
+🔵 **The two figures agree, and that is the useful part: the measured saving (5.9 h) sits at the bottom of the threshold band (5–10 h) at which adoption actually happens.** 🔴 **So the margin is thin** — a deployment that recovers four hours is below the line at which teachers keep using it, and this is the first number on this shelf that prices an adoption risk rather than describing one.
+
+🟢 **Pair it with the figure this shelf already carries:** Korea's AI-textbook rollout failed at **under 30% adoption** on **teacher-preparation** grounds (`P879`). 🔵 **Two independent sources, one measured and one from a national failure, both say the binding constraint is teacher time and preparation — not model quality.**
+
+### 🔴 Trend — **adoption has outrun governance everywhere, and the global figure is worse than the regional ones**
+
+| scope | using AI | has a policy / framework |
+|---|---|---|
+| LATAM higher ed (UNESCO IESALC, 200 institutions / 19 countries) | 🟢 **87%** | 🔴 **26%** |
+| Education organisations (K-12 Academics 2026) | 🟢 **86%** use generative AI | 🔴 **most lack a policy** |
+| 450+ institutions, global | — | 🔴 **~10%** have formal AI guidelines |
+| Students | 🟢 **54%** K-12, **92%** university | — |
+
+🔵 **This shelf has recorded the gap as a LATAM finding for several passes. It is not regional — it is the industry's condition**, and the global guideline figure (~10%) is **worse** than the best-measured region's (26%).
+
+🟢 **1EdTech frames the 2026 institutional response the same way:** AI strategies now **define governance structures, clarify compliance expectations and establish evaluation processes** rather than selecting tools. 🔴 **So the buying unit has moved** — from a department picking a product to an institution standing up a process.
+
+### 🟢 Trend — **interoperability and evidence become procurement conditions**
+
+🟢 **1EdTech:** interoperability is becoming a **requirement** for institutions, and **digital credentials** a core mechanism for skills-based hiring. 🟢 **HolonIQ:** systems increasingly expect **evidence that an EdTech product improves learning, persistence or job-relevant skills**, and engagement and well-being are regaining weight as value signals; the **skills economy** brings real-time skills visibility and competency frameworks forward.
+
+🔵 **Both conditions are met by shelf infrastructure rather than by a model:** 🟢 interoperability → `1EdTech/caliper-js`, `adlnet/xAPI-Spec`, `openedx/xblock-lti-consumer`, `theopenem/OneRoster.NET`, `Ed-Fi-Alliance-OSS/Ed-Fi-ODS`; credentials → `digitalcredentials/*`, `1EdTech/openbadges-specification`, `european-commission-empl/european-digital-credentials`; competency frameworks → `opensalt/opensalt`, `1EdTech/OpenCASE`; **evidence** → the measurement tier (`pyedmine`, `EduStudio`, and as of this pass `open-apa`). 🔴 **A client asked to prove a learning gain cannot do it from a chatbot's logs**, which is the same conclusion the OECD reaches from the pedagogy side.
+
+### 🟢 Trend — **North America's statute layer is thicker than this shelf recorded**, and it is the regional correction of this pass
+
+🔴 **This shelf's North America position has read "regulation is the thinnest of any region" with state action "piecemeal (Colorado and Texas)".** 🟢 **The direction is right — there is still no federal framework — but the volume figure was far too low.**
+
+🟢 **Measured this pass: 134 AI-in-education bills introduced across 31 states in 2026.** 🟡 A second tracker reports **35+ states** with official education-department guidance and **10 of 68 tracked bills enacted** in 2026 — 🔴 **the trackers disagree on denominators and both are recorded, neither overwritten.**
+
+🟢 **And the bills are specific, which is what changes the engagement:** named instruments now cover **student-data use for model training** (CA **AB 1159**), **privacy duties for school AI tools** (Idaho **SB 1227**), **compulsive-use design duties where the user is a child** (Oregon **SB 1546**), **bans on AI making high-stakes student decisions** (Oklahoma, Maryland), **mandated district-level AI policies** (Ohio — deadline **1 July 2026** — and Tennessee), **teacher professional development** (Virginia **SB 394**, Maryland **SB 720**) and **AI content inside a graduation requirement** (Alabama **HB 329**).
+
+🔵 **The sharpest single artefact is not a statute: New York City's guidance uses a traffic-light system that PROHIBITS AI for grading, discipline, promotion and graduation decisions, placement, IEP/504 development, and behavioural surveillance.** 🟢 **That list is a product specification for the largest school district in the United States** — and it is close enough to the AI Act's Annex III high-risk categories that a single design satisfies both. 🔴 **Which inverts this shelf's standing assumption** that EMEA's rules are the binding constraint and North America is permissive: the NYC list is a flat prohibition, where Annex III is a conformity duty.
+
+🟢 **Federal movement, both sides of it:** the **US Department of Education finalised a rule prioritising federal education grants** for projects expanding understanding of AI or its ethical use — 🔵 **money attached to AI work, which is a demand signal, not a restriction** — and the **K-12 AI Literacy and Readiness Act (H.R. 8747)** advanced in committee on **21 July**, largely along party lines, which would let schools spend federal funds on AI curriculum.
+
+🟡 **Higher education is diverging rather than converging:** **UC Berkeley School of Law bans generative AI for exams and credited coursework from Summer 2026**, while **UChicago Law pilots device-free core 1L classes**. 🔴 **No sector-wide direction is readable from this**, and a shelf that reported one would be inventing it.
+
+### 🔴 `P881` — and the methodological trend this pass is obliged to record about ITSELF
+
+🟢 **Pass 80 (`P870`) reported the brief's literal regional query returning ZERO education instruments for EMEA and APAC across six passes, and named the acronym as the cause.** 🔴 **This pass ran all four literal queries and all four returned dated, named education instruments** (see `agents/trending.md` for the table).
+
+🔵 **The mechanism `P870` identified is still sound** — no ministry publishes under *EMEA* or *APAC*, and jurisdiction queries are what produced the Länder, MEXT and CONPES detail on this shelf. 🔴 **But the prediction it published — acronym implies zero — did not reproduce**, and a structural defect should reproduce on demand.
+
+🔴 **The confound, named rather than buried: this pass ran every query in `extended` mode, and no previous pass recorded which mode it used.** 🟢 **So the most defensible reading is an uncontrolled instrument setting, not a property of the word.** 🔵 **`P881`: record the instrument's settings alongside the result, or a later pass cannot separate variance from structure.** 🟢 Nothing about the shelf's practice changes — jurisdiction queries stay, because they reach deeper — but **the claim is narrowed from "the channel is broken" to "the channel is unreliable."**
+
+---
+
 ## 🟢 Eightieth pass, 2026-10-09 — the 2026 trend line gets its first **REVERSAL**, and the one-way story this shelf has told for eighty passes is now wrong
 
 ⏱️ **Twelfth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

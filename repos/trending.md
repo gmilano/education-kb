@@ -4,6 +4,34 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 81) — **two measurement-layer repos and one Apache platform**, and the licence ladder's fourth blind spot is found on a trending row
+
+⏱️ **Thirteenth pass of this date.** 🟢 **Append-only: pass 80's section sits immediately below, unchanged.**
+
+### 🟢 What came in, and from which channel
+
+| repo | grant | ref · sha | channel that found it |
+|---|---|---|---|
+| 🆕 [`Fuann/open-apa`](https://github.com/Fuann/open-apa) | 🟢 BSD-3-Clause (1 528 B) | `master` · `2c92c0d` | pronunciation-assessment niche — **benchmark** layer, not model layer |
+| 🆕 [`doheejin/HiPAMA`](https://github.com/doheejin/HiPAMA) | 🟢 BSD-3-Clause (1 526 B) | `main` · `89e3f65` | same niche; 🔴 holder line belongs to `YuanGongND/gopt` (`P885`) |
+| 🆕 [`CyanXLab/Phonos`](https://github.com/CyanXLab/Phonos) | 🟢 MIT — **README prose only, no licence file** (`P883`) | `main` · `8a13a3b` | same niche |
+| 🆕 [`cortezaproject/corteza`](https://github.com/cortezaproject/corteza) | 🟢 Apache-2.0 (11 358 B) | 🔴 **`2024.9.x`** · `3835dfc` | ERP/CRM platform sweep (`P882`) |
+| 🆕 [`fwornle/curriculum-alignment`](https://github.com/fwornle/curriculum-alignment) | 🟢 MIT (1 083 B) | `main` · `7761d54` | curriculum-alignment niche |
+
+🔴 **Zero of the five came from the brief's `github trending {industry} AI {year}` query.** 🟢 That query returned six education-tagged repos and **all six were already on this shelf** (`ChatTutor`, `education-agent-skills`, `agents-from-scratch`, `generative-ai-for-beginners`, `ai-engineering-from-scratch`, `awesome-ai-agents-2026`). 🔵 **Second consecutive pass in which the literal trending query yields nothing new** — recorded as a measured property of the query, not a quiet blank.
+
+### 🟢 The measurement layer keeps paying, one pass after it was rebuilt
+
+🔴 **Pass 80 found that `cognitive diagnosis` had gone to **zero** on the live shelf while appearing **23 times** in `archive/2026-10-06-pre-reset/` — the measurement layer had been archived in the reset and never rebuilt, and eighty passes ran tutoring and retention work over the hole.**
+
+🟢 **This pass adds the speech half of that layer.** `open-apa` is a **benchmark and evaluation toolkit**, and `HiPAMA` is a published model with a baseline (`gopt`) already on the shelf. 🔵 **So a pronunciation engagement can now be specified with an acceptance test instead of a demo:** `OpenPronounce` or `Phonos` scores the learner, `open-apa` scores the scorer, `gopt`/`HiPAMA` fix the published baseline.
+
+🟢 **Dedup discipline, stated:** all five rows were greped against **both** the live shelf (1 211 slugs) **and** `archive/` (678 slugs) — **0 hits in both**, so these are first-time entries and not re-purchases of something the reset dropped. 🔵 `P875`'s rule holds: *"new to the live shelf" is not "new to this KB."*
+
+🔴 **Two trending candidates were rejected for granting nothing**, both fetched successfully first (`P873`): `amangupta05/agent-engineering-curriculum` (README 🟢 200, 3 746 B, **zero** licence matches) and `KnowledgeLab/AI-Agents-for-Social-Science-and-Society-2026` (README 🟢 200, **50 775 B**, zero matches). 🟢 Logged as named negatives in `agents/top.md`.
+
+---
+
 ## 🟢 2026-10-09 (pass 80) — **two tags bought for the first time in 80 passes** and they pay **11 of 40**; the measurement layer turns out to be a LOSS, not a gap
 
 ⏱️ **Twelfth pass of this date.** 🟢 **Append-only: pass 79's section (the `intelligent-tutoring-system` tag) sits immediately below, unchanged.**
