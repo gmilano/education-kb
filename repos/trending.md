@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 80) — **two tags bought for the first time in 80 passes** and they pay **11 of 40**; the measurement layer turns out to be a LOSS, not a gap
+
+⏱️ **Twelfth pass of this date.** 🟢 **Append-only: pass 79's section (the `intelligent-tutoring-system` tag) sits immediately below, unchanged.**
+
+### 🟢 The channel that paid: GitHub topic tags, continuing `P865`
+
+🔴 **Pass 79 named the exhausted thing — the TAG, not the channel — and bought one unmined tag. This pass tested that by buying four, two of them never touched on this shelf.**
+
+| surface | rows read | already shelved | 🟢 unshelved | notes |
+|---|---|---|---|---|
+| 🟢 **`topics/knowledge-tracing`** | 20 of **~20** tagged | 2 | 🟢 **7** | 🟢 **zero prior mentions on this shelf** |
+| 🟢 **`topics/cognitive-diagnosis`** | 19 of **~19** tagged | 2 | 🟢 **4** | 🟢 **zero prior mentions on this shelf** |
+| `topics/learning-analytics` | 20 | 4 | 🟡 3 | 🟡 partially mined via `openfun/ralph`, `OpenLRW`, `terracotta` |
+| `topics/adaptive-learning` | 20 | 4 | 🔴 1 | 🔴 **mostly off-vertical** — `python-adaptive/adaptive` (function approximation), `wluma` (screen brightness), flight-control and materials-science rows all carry this tag |
+| `topics/automated-grading` | 20 | 0 | 🟡 1 usable | 🔴 **the long tail is REAL but tiny**: top row **7★**, then 5, 3, 2, 2, and **eight rows at 0★**. Five rows are one-off Gemini/Colab scripts. |
+| `topics/teaching-assistant` | 20 | 2 | 🟡 2 | 🔴 **half the tag is course material, not software** (lab handouts, CV templates, a 40-year-old BASICA collection) |
+
+🟢 **Yield: 11 new rows from the two virgin tags, 18 from all six.** 🔵 **`P865` holds: the exhausted unit is the tag.** 🔴 **But two of the six tags were exhausted on ARRIVAL, for a different reason — see below.**
+
+### 🔴 `P878` — a tag can be unmined and still worthless, and the two failure shapes are different
+
+🟢 **Measured, and they need different responses:**
+
+| shape | tag | what it looks like | response |
+|---|---|---|---|
+| 🔴 **off-vertical collision** | `adaptive-learning` | the phrase means **active learning / online learning** in ML, and **adaptive optics/control** in engineering. 🟢 **4 of the top 5 rows are not education at all.** | 🔴 **do not re-buy** — the tag is a homonym, and its education rows arrive via other tags anyway |
+| 🔴 **wrong artefact class** | `teaching-assistant`, `automated-grading` | the rows **are** education, but they are **coursework and single-author scripts**: 8 of 20 at **0★** on `automated-grading` | 🟡 **buy rarely** — real, but the yield per probe is one usable row |
+
+🔵 **This refines `P795`, which blamed the agent drought on query ambiguity in the phrase `AI {industry}`.** 🟢 **The same ambiguity exists in the TAG namespace**, and `adaptive-learning` is the cleanest example on this shelf: a tag that reads perfectly on-vertical and is dominated by screen-brightness daemons and flight control.
+
+### 🟢 The rows (all licences payload-read inline; full tables in `repos/foundations.md` and `agents/top.md`)
+
+| repo | grant | bytes | ref · sha | tag it came from |
+|---|---|---|---|---|
+| [`hcnoh/knowledge-tracing-collection-pytorch`](https://github.com/hcnoh/knowledge-tracing-collection-pytorch) | 🟢 MIT | 1 071 | `main` · `6151f49` | `knowledge-tracing` |
+| [`ZhijieXiong/pyedmine`](https://github.com/ZhijieXiong/pyedmine) | 🟢 MIT | 1 085 | `main` · `20af796` | `knowledge-tracing` + `cognitive-diagnosis` |
+| [`HFUT-LEC/EduStudio`](https://github.com/HFUT-LEC/EduStudio) | 🟢 MIT | 1 064 | `main` · `d5862bd` | `cognitive-diagnosis` |
+| [`jilljenn/ktm`](https://github.com/jilljenn/ktm) | 🟢 MIT | 1 071 | 🔴 `master` · `12084d6` | `knowledge-tracing` |
+| [`jhljx/GKT`](https://github.com/jhljx/GKT) | 🟢 MIT | 1 061 | 🔴 `master` · `271c72d` | `knowledge-tracing` |
+| [`r-dcm/measr`](https://github.com/r-dcm/measr) | 🟡 GPL-3.0-or-later | 34 904 | `main` · `93a2e87` | `cognitive-diagnosis` |
+| [`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics) | 🟢 Apache-2.0 | 11 379 | 🔴 `master` · `44dbf90` | `learning-analytics` |
+| [`PlaypowerLabs/EdOptimize`](https://github.com/PlaypowerLabs/EdOptimize) | 🔴 GPL-3.0 | 35 149 | 🔴 `master` · `fbcc8bd` | `learning-analytics` |
+| [`sagefy/sagefy`](https://github.com/sagefy/sagefy) | 🟢 Apache-2.0 (APPENDIX stripped) | 10 174 | 🔴 `master` · `bff53f1` | `adaptive-learning` |
+| [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 Apache-2.0 | 11 342 | `main` · `e930e81` | `teaching-assistant` |
+| [`jaluoma/pruju-ai`](https://github.com/jaluoma/pruju-ai) | 🟢 MIT | 1 068 | `main` · `dbeae0b` | `teaching-assistant` |
+| [`Hyr1sky/TheGrandQuiz`](https://github.com/Hyr1sky/TheGrandQuiz) | 🟢 MIT | 1 064 | `main` · `b56f814` | `adaptive-learning` |
+| [`ZelinZhou-THU/stem-tutor-agent`](https://github.com/ZelinZhou-THU/stem-tutor-agent) | 🔴 **AGPL-3.0-only** | 35 211 | 🔴 `master` · `833e4b6` | `automated-grading` |
+| 🔴 [`bigdata-ustc/Agent4Edu`](https://github.com/bigdata-ustc/Agent4Edu) | 🔴 **no grant, 4 layers** | — | `main` · `ecf065d` | `cognitive-diagnosis` |
+| 🔴 [`yxonic/DTransformer`](https://github.com/yxonic/DTransformer) | 🔴 **no grant, 11 names** | — | `main` · `1dc4598` | `knowledge-tracing` |
+
+🔴 **2 of 15 rows grant nothing**, and both are the best-cited names in their own sub-layer. 🔵 **That ratio is the argument for payload-reading every row rather than sampling.**
+
+### 🔴 The pass's own correction: this was a LOSS, and only the archive could say so
+
+🟢 **`cognitive diagnosis` appears 0 times across the live shelf and 23 times across all 8 archived files.** 🔴 **So the layer this pass "discovered" was archived on 2026-10-06 and never rebuilt** — full detail and `P875` in `repos/foundations.md`. 🟢 **All 15 rows above were grepped against `archive/` as well as the live tree: 0 hits in either**, so they are genuine firsts for this KB and not re-purchases.
+
+### 🟡 Carry-forward
+
+🔴 **Unread and named, so the next pass does not re-decide it:** `topics/educational-data-mining`, `topics/item-response-theory`, `topics/spaced-repetition`, `topics/plagiarism-detection`, `topics/proctoring`, `topics/qti`. 🟢 **Do not re-buy** `adaptive-learning` (homonym, `P878`). 🟡 **Buy `automated-grading` and `teaching-assistant` only with a star floor**, since their yield is one usable row per sweep.
+
+---
+
 ## 🟢 2026-10-09 (pass 79) — the **`intelligent-tutoring-system` tag is bought for the first time in 79 passes** and pays 5 of 7; `trending` proper is measured WRONG for this vertical on three surfaces
 
 ⏱️ **Eleventh pass of this date.** 🟢 **Append-only: pass 78's section (the `ai-education` topic page, 492 repos) sits immediately below, unchanged.**

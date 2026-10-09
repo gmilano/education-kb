@@ -4,6 +4,86 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eightieth pass, 2026-10-09 — the 2026 trend line gets its first **REVERSAL**, and the one-way story this shelf has told for eighty passes is now wrong
+
+⏱️ **Twelfth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 Trend 1 — **Regulation is not monotonic: Korea tightened and retreated in the same year**
+
+🔴 **Pass 79 wrote: "the argument has moved from *may students use AI* to *may the INSTITUTION run it*", with three jurisdictions answering in statute. That is still true. What was wrong was the implied direction.**
+
+| Korea, 2026 | instrument | direction |
+|---|---|---|
+| **January 2026** | **AI Basic Act** in force; education inside "high-impact AI"; one-year grace on penalties | 🟢 **tighter** |
+| **March 2026** | AI-textbook adoption measured **below 30%** | 🟡 the signal |
+| **August 2026** | **National Assembly strips AI textbooks of official textbook status**, unions arguing the pace outran preparation | 🔴 **LOOSER — a withdrawal** |
+
+🟢 **`P879`: horizontal AI law and sectoral education mandate are DIFFERENT INSTRUMENTS with different politics, and a jurisdiction can move them in opposite directions in the same year.** 🔵 **The one a school procurement follows is the sectoral one.** 🔴 **So "Korea regulates AI in education" — true of January — would have put a studio on exactly the wrong side of what happened in August.**
+
+🟢 **And the substantive lesson, which is not about law:** the rollback was not caused by model quality, a scandal, or a court. 🔴 **It was caused by TEACHER PREPARATION.** 🔵 A nationally mandated, state-certified deployment failed at **<30%** uptake because the people required to use it were not ready — which makes enablement the binding constraint, not capability.
+
+### 🟢 Trend 2 — **The prohibitions are now the sharpest product spec available, and two are in force**
+
+🔵 **The shelf has been reading regulation as *obligations to satisfy*. The 2026 instruments that bite hardest are PROHIBITIONS, and a prohibition specifies a product more precisely than any guideline.**
+
+| prohibition | jurisdiction | in force | what it rules out |
+|---|---|---|---|
+| 🔴 **Emotion recognition in schools**, except medical/safety | 🟢 **EU** (AI Act) | 🟢 **NOW — explicitly NOT delayed with the high-risk obligations** | 🔴 the entire engagement/attention-detection category |
+| 🔴 **Primary pupils may not independently use open-ended content generation** | 🟢 **China** (MOE, 2025) | 🟢 **in force** | 🔴 an open chat box in primary education |
+| 🔴 **Teachers may not use GenAI as a substitute for core teaching responsibilities** | 🟢 **China** (MOE, 2025) | 🟢 **in force** | 🔴 teacher-replacement framing in any pitch |
+
+🟢 **Read positively, those three lines describe a buildable product**: closed-form generation, teacher-in-the-loop by construction, no affect inference. 🔵 **That is a NARROWER and CHEAPER build than a general tutor** — and almost nothing on this shelf's agent limb targets it, because everything open-source defaults to an open chat surface.
+
+### 🟢 Trend 3 — **Consumer adoption is saturated; the institution is the only remaining variable**
+
+🟢 **Measured on both sides, in one region, this pass** (LATAM, the only region with both figures — see `intel/market.md`):
+
+| side of the gap | figure |
+|---|---|
+| students actively engaging | 🟢 **92%** |
+| **faculty** actively engaging | 🟢 **79%** |
+| institutions with any formal framework | 🔴 **26%** (🟡 a second source: 30%) |
+
+🔴 **The received framing — "students are ahead of their teachers" — is refuted by the middle row.** 🟢 **Faculty are at 79%, inside the institution.** 🔵 **The gap is not generational or cultural; it is purely administrative.** 🟢 **The corroborating figure elsewhere: ~10% of North American institutions have formal AI guidelines and 71% of U.S. teachers lack AI training** — same shape, worse governance numbers, and a training gap on top.
+
+🟢 **The use case that makes this concrete:** **19%** of faculty use AI for assignment feedback while **~50%** of students support their doing so. 🔵 **A named task, demand on both sides, and no policy permitting it. That is the 2026 engagement in one line.**
+
+### 🟢 Trend 4 — **Mandatory AI literacy became a national instrument, and it is not a Western story**
+
+🟢 **China joins the UAE and India on mandatory AI literacy**, with **8 hours/year** compulsory in Beijing (primary and secondary) and **6 hours/year** in Guangdong (lower grades), under a **2026 national action plan** targeting AI-literacy infrastructure by **2030**. 🟢 **France** adds AI instruction to the lycée curriculum from **2027**. 🟢 **Singapore** commits to AI training for **all teachers including trainees by 2026**.
+
+🔵 **Note the asymmetry: the countries mandating AI *literacy* are largely the ones restricting AI *tools* in the classroom.** 🔴 **Teaching about AI and deploying AI are moving in opposite directions in the same jurisdictions** — and a proposal that conflates them reads as naive to a ministry buyer.
+
+### 🟢 Trend 5 — **Sovereign public build-outs have started, and they are high-risk systems by their own law**
+
+🔴 **The new row, and it is a 2026 event:** 🟢 **France is standing up a state-funded SOVEREIGN AI tool for teachers — funded by France 2030, available from the start of the 2026 school year — for lesson preparation AND pupil assessment.** 🔵 **Assessment is named in Annex III of the EU AI Act.** 🟢 So a member state is deploying a public, assessment-touching, high-risk system in the same window the Annex III obligations were postponed to **2 December 2027**.
+
+🟢 **Spain is doing the same at platform level** (a ministry AI platform reported rolling out across **2026–2027** — 🟡 single-source). 🟢 **Korea's pivot** after the textbook rollback is also a state build: an **AI Korean-language platform for immigrant-background students**.
+
+🔵 **The pattern: ministries are becoming BUILDERS, not just buyers.** 🟢 **That changes what a studio sells** — not a product to a procurement office, but delivery capacity and compliance scaffolding to a public programme that already has funding and a deadline.
+
+### 🟢 Trend 6 — **The measurement layer is the shelf's own blind spot, and the market's too**
+
+🟢 **Measured this pass: `cognitive diagnosis` appears 0 times across this KB's live shelf** and **23 times across its archive** (see `repos/foundations.md`, `P875`). 🔴 **Eighty passes of tutoring and retention patterns were built on a shelf that could not estimate whether a learner knows anything.**
+
+🔵 **And the market has the same hole in the same place.** 🟢 Every vendor trend list this pass returned names *adaptive learning*, *personalised pathways* and *intelligent tutoring* — all of which **require** a mastery estimate — while **none** names knowledge tracing, cognitive diagnosis or item response theory. 🔴 **"Adaptive" is being sold as a generation feature and delivered as one.** 🟢 **The permissively licensed models to do it properly exist and are cheap** — `pyedmine`, `EduStudio`, `ktm`, `GKT`, all MIT, all added this pass.
+
+🔵 **This is the clearest differentiation available on this shelf in 2026:** everyone can generate an explanation; almost nobody can produce a defensible, uncertainty-bearing claim about what a learner knows — 🟢 **and that claim is exactly what an institution needs to put a tutor into production under any of the governance regimes in Trend 2.**
+
+### 🟡 Trend 7 — **The forecast is conditional, and the condition has not been met**
+
+🟡 **Market estimates span $6.4–8.3 B (2025) → $10.6–11.4 B (2026)**, with claimed CAGRs between **31.35%** and **40.9%**. 🔴 **One analysis scores sector maturity at 35/100, with most institutions still in pilot mode.** 🔵 **So the growth is a bet on a pilot-to-procurement transition that is still pending** — gated on governance, which is Trend 3, which is unblocked by measurement, which is Trend 6.
+
+### 🔴 Declared gaps, so that silence is not read as coverage
+
+🔴 **`Gap 335` — the knowledge-tracing layer is the least PLACEABLE layer on this shelf.** 🟢 Measured: of 6 new foundational rows, 🔴 **2 have individual copyright holders with no stated affiliation** (`jilljenn/ktm`, and `TheGrandQuiz` on the agent limb), so their region is **unassignable** under `P800`. 🔵 Research code is published by people, not institutions, far more often than platform code is.
+
+🔴 **`Gap 336` — there is no permissively licensed learner simulator.** 🟢 `bigdata-ustc/Agent4Edu` (**97★**) is the only one found and it **grants nothing at four probed layers**. 🔵 **This matters more than its star count suggests:** simulated learners are how you test a tutor's safety and pedagogy **before** it touches a real student — which is precisely what every governance regime in Trend 2 will ask for.
+
+🔴 **`Gap 337` — no ministry in Germany, France or Spain has published guidance interpreting the AI Act's high-risk obligations FOR SCHOOLS.** 🟢 Searched by jurisdiction and found guidance that *references* the AI Act (Bavaria, Spain) but none that operationalises Annex III. 🔵 **The absence is the product opportunity, and it is written down as an absence rather than left as silence.**
+
+---
+
 ## 🟢 Seventy-ninth pass, 2026-10-09 — the 2026 trend, stated in one line: **the argument has moved from "may students use AI" to "may the INSTITUTION run it"** — and three jurisdictions now answer that in statute
 
 ⏱️ **Eleventh pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

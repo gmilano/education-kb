@@ -4,6 +4,40 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eightieth pass, 2026-10-09 — **three platforms added**, and the limb gets its first *learning-analytics* tier (the layer that reads an LMS rather than replacing it)
+
+⏱️ **Twelfth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔵 What this tier is, and why it belongs in the Odoo/OpenMRS/Moodle slot
+
+🟢 Pass 79 added the **assessment-feedback** layer on top of an LMS. 🟢 This pass adds the layer **beside** it: **learning analytics** — systems that consume an LMS's event stream and return dashboards, early-warning flags and curriculum-level findings. 🔵 **They are verticals, not agents, because they are deployed institutional infrastructure with their own data model** — and they are the natural AI surface for the governance product `intel/market.md` identifies as the sellable unit in 2026.
+
+| platform | grant (payload-read inline) | bytes | ref · sha | region | why it is a VERTICAL |
+|---|---|---|---|---|---|
+| 🆕 [`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics) | 🟢 **Apache-2.0** | 11 379 | 🔴 **`master`** · `44dbf90` | 🟢 **North America** (U. Michigan) | **MyLA** — student-facing learning-analytics dashboards, **integrated with Canvas**. 🟢 `Dockerfile` **200** and `docker-compose.yml` **200**: containerised, not a notebook. **36★**. 🟢 Run by a university's Teaching & Learning / ITS group, which is the platform-vs-demo line. |
+| 🆕 [`PlaypowerLabs/EdOptimize`](https://github.com/PlaypowerLabs/EdOptimize) | 🔴 **GPL-3.0** | 35 149 | 🔴 **`master`** · `fbcc8bd` | 🔴 **unplaced** | **K-12 learning-analytics platform** — its README names **Curriculum Dashboards**, content analytics and **learning outcomes** as the three surfaces. **31★**. 🔴 **Copyleft — see the verdict below.** |
+| 🆕 [`sagefy/sagefy`](https://github.com/sagefy/sagefy) | 🟢 **Apache-2.0** (🔴 `APPENDIX` stripped — `P877`) | 10 174 | 🔴 **`master`** · `bff53f1` | 🔴 **unplaced** | **Adaptive learning platform**: learners move through a topic graph tailored to them. **120★**. 🟢 `docker-compose.yml` **200**, `package.json` **200**. 🔵 The closest thing on this shelf to an *openly licensed* adaptive-sequencing platform rather than an adaptive *library*. |
+
+🔴 **`T1` paid on all three: every one of them defaults to `master`, none to `main`** — see `P876` in `repos/foundations.md`. 🟢 A hardcoded `main` loses this entire tier in one sweep.
+
+### 🔴 The GPL row, and the reason it changes what you can sell rather than just what you can read
+
+🟢 **`EdOptimize` is GPL-3.0** — canonical text, **35 149 B** exactly, title line `GNU GENERAL PUBLIC LICENSE / Version 3, 29 June 2007`. 🔴 **And it is the row on which `P171` paid again this pass:** its §13 names *"the GNU Affero General Public License"* at **line 552**, so a `grep Affero` classifies the most deployable analytics platform of the three into the one band that carries a **network** clause. 🟢 **It does not have one.**
+
+🔵 **What that difference is worth, concretely:** under **GPL-3.0**, hosting EdOptimize for a client and letting their staff use it over the network is **not** distribution and triggers **no** source obligation. 🔴 Under **AGPL-3.0** it would. 🟢 **So the `grep` would have moved this platform from "host it for the client" to "cannot host it for the client" — a commercial verdict, produced by a one-line defect.** 🔴 **Distribution still triggers GPL-3.0:** shipping it inside a client-delivered product carries the licence to the whole combined work.
+
+### 🟡 What was NOT confirmed on `EdOptimize`, stated rather than implied
+
+🔴 **The run surface was not located this pass.** 🟢 Measured: `requirements.txt` **404**, `app.py` **404**, `Dockerfile` **404** at the repository root. 🔵 The README describes three dashboard applications, so the entry points are presumably inside subdirectories — 🔴 **but "presumably" is not a measurement, and this row is therefore shelved as a platform by its README and its licence, with its deployability UNVERIFIED.** 🟢 A later pass should read the tree before any recipe depends on it standing up.
+
+### 🔴 Region: two of three rows are unplaced, and they are written that way
+
+🟢 **`my-learning-analytics` is placed, and by institutional provenance rather than a surname (`P800`):** the org slug `tl-its-umich-edu` names a university unit, and the README itself carries `umich`. 🔴 **Its Apache payload has no copyright-holder line at all** — the stock Apache text names no holder — 🔵 **so the strongest tier (holder named inside the grant) was unavailable, and the org slug is the tier actually used.** That is weaker than pass 79's `feedbacksystem` row, where the licence itself read *"Copyright 2021 Technische Hochschule Mittelhessen"*.
+
+🔴 **`EdOptimize` and `sagefy` are unplaced and stay unplaced.** 🟢 Neither payload names an institution; neither README states a location. 🔵 **An informed gap is information; a guessed region is damage** — and this limb is the one where a wrong region sends an engagement the wrong platform.
+
+---
+
 ## 🟢 Seventy-ninth pass, 2026-10-09 — **one platform added and one re-verified**, and the verticals limb gets its first *deployed university infrastructure* row
 
 ⏱️ **Eleventh pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

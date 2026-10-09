@@ -4,6 +4,87 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eightieth pass, 2026-10-09 — **three new recipes**, and the first one closes the hole the shelf has been building over for eighty passes
+
+⏱️ **Twelfth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+🔵 **Licence note governing all three recipes, because two bands are new here:**
+- 🟢 **The spine is MIT/Apache-2.0** — `pyedmine`, `EduStudio`, `GKT`, `ktm`, `TheGrandQuiz`, `ai-shifu`, `my-learning-analytics`. No reciprocal obligation.
+- 🟡 **`r-dcm/measr` is GPL-3.0-*or-later*.** 🟢 **Running it to fit a model and acting on its output triggers nothing** — GPL attaches to **distributing** a combined work. 🔴 **Shipping it inside a client deliverable carries GPL-3.0 to the whole work.** 🟢 **So it sits on the analysis side of the boundary in `R80b`, never in the product.**
+- 🔴 **`ZelinZhou-THU/stem-tutor-agent` is AGPL-3.0-*only*.** 🔴 **§13: serving it over a network triggers source release to those users.** 🟢 **`R80c` therefore takes its ARCHITECTURE and not its code** — stated explicitly in the recipe, because this is the exact distinction a "permissive ✅" column erases.
+
+---
+
+### 🟢 `R80a` — **Mastery-bearing tutor spine**: the first recipe on this shelf that can say *what a learner knows*
+
+🔴 **The gap it closes, and it is this shelf's own:** `cognitive diagnosis` appears **0 times** across the live shelf (**23 times** in the archive — `P875`). 🟢 Pass 79's `R79a` schedules **retention**; 🔴 **but FSRS schedules a review, it does not estimate mastery.** 🔵 Those are different quantities, and every "adaptive" claim this shelf has shipped rested on the one it did not have.
+
+**Wiring, concretely:**
+
+1. 🟢 **Mastery estimate — [`ZhijieXiong/pyedmine`](https://github.com/ZhijieXiong/pyedmine) (MIT, 1 085 B, `main`·`20af796`).** The one library carrying **knowledge tracing + cognitive diagnosis + recommendation** under a single API. Feed it the response log `(learner, item, concept, correct, timestamp)`; it returns a per-concept mastery estimate. 🔵 **This is the component the shelf was missing — everything else here already existed.**
+2. 🟢 **Prerequisite structure — [`jhljx/GKT`](https://github.com/jhljx/GKT) (MIT, 1 061 B, 🔴 `master`·`271c72d`).** Graph-based KT: models the concept graph instead of a flat skill vector. 🔵 **This is what turns a mastery estimate into a *next concept*** — you cannot teach the next thing without knowing what it depends on.
+3. 🟢 **Baseline you must beat before buying depth — [`jilljenn/ktm`](https://github.com/jilljenn/ktm) (MIT, 1 071 B, 🔴 `master`·`12084d6`).** Factorization machines, repeatedly competitive with deep KT at a fraction of the cost. 🔴 **Run this first.** If it matches `pyedmine`'s deep models on the client's data, ship it and spend the budget elsewhere.
+4. 🟢 **Comparability harness — [`HFUT-LEC/EduStudio`](https://github.com/HFUT-LEC/EduStudio) (MIT, 1 064 B, `main`·`d5862bd`).** Fixes datasets, splits and metrics so steps 1–3 produce numbers that can actually be compared. 🔵 **Without this the model choice is an opinion.**
+5. 🟢 **Explanation surface — [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) (Apache-2.0, 11 342 B, `main`·`e930e81`).** The tutor the learner talks to. 🔴 **It receives the target concept from step 2 — it does not choose it.** 🔵 That inversion is the whole recipe: the model generates, the measurement decides.
+6. 🟢 **Retention — `fsrs-rs` / `py-fsrs` (BSD-3 / MIT), already on the shelf via `R79a`.** Schedules the review *once mastery is established*, rather than in place of knowing it.
+
+🔵 **What this sells:** a defensible answer to *"how do you know the student learned anything?"* — which is the question that gates every pilot-to-procurement transition in `intel/trends.md` Trend 7.
+🟢 **Effort:** 6–8 weeks to a measured pilot on one course's historical response log. 🔴 **Hard prerequisite: the client must have a response log.** Without one, step 1 has no input and this recipe cannot start — ask on the first call.
+
+---
+
+### 🟢 `R80b` — **EU Article 27 dossier pipeline**: the EMEA governance product, built from the audit side
+
+🟢 **The gap it closes, measured this pass (`Gap 337`):** no ministry in Germany, France or Spain has published guidance operationalising the AI Act's **high-risk obligations for schools**. 🟢 **Meanwhile Annex III, point 3 names admissions, grading and assessment, and exam monitoring; Article 27 requires a public institution to run a Fundamental Rights Impact Assessment before deploying.** 🔴 **Nobody has supplied the template, and France is standing up a state-funded, assessment-touching teacher tool from the start of the 2026 school year.**
+
+**Wiring, concretely:**
+
+1. 🔴 **Gate 0 — the prohibition sweep, and it runs first because it can end the project.** 🟢 **Emotion recognition in schools is PROHIBITED in the EU now, and was NOT postponed with the high-risk obligations.** Inventory the client's deployed tools and flag any inferring affect, attention or engagement from face, voice or posture. 🔵 **This is a one-week engagement on its own, and it is the easiest door-opener on this shelf: you are telling an institution which of its live systems are already unlawful.**
+2. 🟢 **Classification dossier — Annex III, point 3, per system.** For each tool: does it touch admissions, grading/assessment, or test-time monitoring? 🟡 **And then the exception, which is where the real work is:** the Act exempts systems performing a *preparatory or supporting task* posing no significant risk. 🔴 **The institution must assess and DOCUMENT that exemption per application** — it is not automatic, and it is the paragraph nobody has written for them.
+3. 🟢 **Accuracy and uncertainty evidence — [`r-dcm/measr`](https://github.com/r-dcm/measr) (🟡 GPL-3.0-or-later, 34 904 B, `main`·`93a2e87`).** Bayesian diagnostic classification models via Stan: produces **credible intervals**, not point scores. 🔵 **An FRIA asks how wrong the system can be about a student. A point score cannot answer that; a posterior can.** 🔴 **Licence boundary, enforced by construction: `measr` runs on the ANALYSIS side and its outputs — numbers and the dossier — are what reach the client. The R package is never shipped.**
+4. 🟢 **Human-oversight surface — [`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics) (Apache-2.0, 11 379 B, 🔴 `master`·`44dbf90`).** Canvas-integrated, containerised (`Dockerfile` + `docker-compose.yml` both **200**), already run as university infrastructure. 🔵 **Article 27 needs a documented human decision point; this is a deployed one rather than a diagram of one.**
+5. 🟢 **The deliverable** is a dossier, not software: prohibition sweep result, per-system Annex III classification with the documented exemption assessment, accuracy-and-uncertainty evidence from step 3, the oversight architecture from step 4, data-minimisation notes, and the dated instrument list from `intel/market.md`.
+
+🔴 **Quote the timing carefully.** 🟡 High-risk Annex III obligations are reported postponed to **2 December 2027** via the Digital Omnibus, 🔴 **but two dates circulate for the Omnibus itself** (this pass: EP approval **16 June 2026**, Council adoption pending; pass 79: a **July 2026** Omnibus), and several guides still cite the pre-Omnibus **August 2026**. 🟢 **Verify against the Council's current status before putting a date in a proposal.** 🔵 **The client's confusion about the deadline is itself part of what they are buying.**
+🟢 **Effort:** 2 weeks for Gate 0 alone; 8–10 weeks for the full dossier across an institution's tool estate.
+
+---
+
+### 🟢 `R80c` — **Primary-compliant tutor**: built from prohibitions, which specify a product better than any guideline
+
+🟢 **The gap it closes:** 🔴 **every tutor on this shelf defaults to an open chat surface, and that surface is illegal for primary pupils in China and outside Singapore's deployment model.** 🔵 **Read positively, the 2026 prohibitions describe a narrower and cheaper product that almost nothing open-source targets.**
+
+**The spec, taken directly from the instruments:**
+
+| constraint | source | consequence for the build |
+|---|---|---|
+| 🔴 no independent open-ended generation for primary pupils | 🟢 China MOE guidelines (2025) | 🔴 **no open chat box.** Pupil input is a selection or a worked step, never a free prompt |
+| 🔴 no GenAI substituting for core teaching | 🟢 China MOE guidelines (2025) | 🟢 every pupil-facing output passes a **teacher approval gate** |
+| 🔴 no emotion recognition | 🟢 EU AI Act (in force) | 🔴 **no affect, attention or engagement inference.** Ever — it also kills the "engagement analytics" upsell |
+| 🟢 structured, teacher-supervised, inside the institutional platform, taught before use | 🟢 Singapore MOE model + 2024 Ethics Framework | 🟢 ship **into the LMS**, not as a destination app |
+
+**Wiring, concretely:**
+
+1. 🟢 **Step verification, symbolic — SymPy (BSD-3).** 🔵 **This is the architectural lesson of [`ZelinZhou-THU/stem-tutor-agent`](https://github.com/ZelinZhou-THU/stem-tutor-agent), and it is taken as an IDEA, not as code:** that agent is 🔴 **AGPL-3.0-*only*** and §13 would force source release on a hosted client service. 🟢 **Read it, reimplement the pattern on SymPy directly.** 🔵 **Why it matters here: a symbolic verdict is reproducible and auditable; a model's verdict is neither — and under these regimes the audit trail is the product.**
+2. 🟢 **Closed item bank + assessment/memory — [`Hyr1sky/TheGrandQuiz`](https://github.com/Hyr1sky/TheGrandQuiz) (MIT, 1 064 B, `main`·`b56f814`).** Carries assessment, memory and evaluation in one tree, and is **local-first** — 🔵 which satisfies data-minimisation without extra architecture. 🟢 **The bank is the generation boundary: items are authored and approved in advance, so the pupil never reaches an open model.**
+3. 🟢 **Next-concept selection — `pyedmine` + `GKT` from `R80a`.** 🔵 **With the chat surface removed, the sequencing is the entire product** — which is why `R80a` is a prerequisite rather than an alternative.
+4. 🟢 **Teacher approval gate.** Every item, hint and feedback string is queued for teacher approval before a pupil sees it. 🔵 **This is the China constraint and the Singapore model agreeing**, and it is cheap: a review queue, not a model change.
+5. 🟢 **Delivery into the institutional platform** via LTI 1.3 (already on the shelf). 🔴 **Not a standalone app** — Singapore's Student Learning Space model is the reference, and it is also the easier procurement.
+
+🔵 **Why this is a real opportunity rather than a compliance chore:** 🟢 **K-12 is 45.62% of AI-in-education adoption**, and 🔴 **the constraints above exclude essentially every general-purpose tutor from it in the two most regulated large markets.** 🟢 A build that is compliant by construction has very little competition.
+🟢 **Effort:** 10–12 weeks, dominated by item-bank authoring and the approval workflow, not by modelling.
+🔴 **Carries a dependency on `R80a`.** Without a mastery estimate, step 3 degenerates into a fixed playlist — which is what most "adaptive" K-12 products actually are.
+
+---
+
+### 🔴 What these recipes CANNOT do yet, stated rather than left silent
+
+🔴 **None of the three can be validated against simulated learners before touching real students.** 🟢 **`Gap 336`: `bigdata-ustc/Agent4Edu` (97★) is the only learner simulator found and it grants nothing at four probed layers.** 🔵 **This is the most governance-relevant hole in the pass's yield** — every regime in `intel/trends.md` Trend 2 will eventually ask how a system was validated, and the honest current answer is *"on historical response logs, replayed"*.
+
+🟢 **The workaround, which is weaker and should be described as weaker:** hold out a time-slice of the client's real response log and replay it through steps 1–4 of `R80a`. 🔴 **That tests calibration, not behaviour** — it cannot show what the tutor does to a learner it has never seen. 🔵 **A permissively licensed simulator is the single highest-value acquisition this shelf could make next.**
+
+---
+
 ## 🟢 Seventy-ninth pass, 2026-10-09 — **three new recipes**, each wired from grants this pass payload-read inline, with the BSD-3 obligation stated where it lands
 
 ⏱️ **Eleventh pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

@@ -24,6 +24,74 @@ education-kb/
 
 ## `compose/code/` — lo que esta KB puede demostrar corriendo
 
+🟢 **Pase 80 del 2026-10-09 — el canal regional tenía un defecto de SEIS PASES y era la SIGLA** (`P870`).
+🔴 La consulta del brief, `AI education EMEA|APAC 2026 …`, corrida textual, devolvió **CERO**
+instrumentos educativos en dos de cuatro regiones — prensa de TI corporativa (CompTIA, Workday,
+Forrester, Boomi), no educación. 🟢 **Las mismas dos regiones, preguntadas por JURISDICCIÓN, devolvieron
+quince instrumentos fechados y con nombre.** 🔵 **Ningún ministerio de educación publica bajo «EMEA» ni
+«APAC»; son términos de territorio de venta.** 🔴 **EMEA y APAC resultan ser las regiones con MÁS
+estatuto educativo del estante — el inverso exacto de lo que el canal por sigla reportó seis pases
+seguidos.** 🟢 `LATAM` sí funciona, porque UNESCO y el BID publican bajo «América Latina».
+
+🔴 **El hallazgo de estante es una PÉRDIDA, no un hueco** (`P875`): `cognitive diagnosis` aparece
+**0 veces** en el estante vivo y **23 veces** en `archive/2026-10-06-pre-reset/` (8 de 8 archivos).
+🔴 **La capa de medición se archivó en el reset del 2026-10-06 y nunca se reconstruyó** — ochenta pases
+de tutoría y de retención sobre un hueco donde estaba la medición. 🟢 **«Nuevo para el estante vivo» NO
+es «nuevo para esta KB»: las 15 filas de este pase se grepearon también contra `archive/` — 0 hits en
+ambos**, así que son primicias reales y no recompras.
+
+🟢 **15 filas nuevas, las 15 con licencia leída del payload inline en el ref resuelto.** 🟢 Capa de
+medición reconstruida permisiva: `pyedmine` (MIT, KT+diagnóstico cognitivo+recomendación),
+`EduStudio` (MIT), `knowledge-tracing-collection-pytorch` (MIT), `ktm` (MIT), `GKT` (MIT), más
+`measr` (🟡 GPL-3.0-**or-later**, y el `or-later` vive SÓLO en el manifiesto). 🔴 **2 de 15 no conceden
+nada:** `Agent4Edu` (97★, 4 capas sondeadas) y `DTransformer` (46★, 11 nombres) — **todos los derechos
+reservados**, anotados como negativos con nombre.
+
+🔴 **La escalera de licencias tiene TRES puntos ciegos y ninguna regla documentada cubre más de dos**
+(`P871`), medidos en filas reales de este pase: `stem-tutor-agent` (la primera línea es el **nombre del
+proyecto** tras un **BOM**; la concesión está en el cuerpo → la discriminación por línea de título es
+**ciega**, `grep Affero` **acierta**); `EdOptimize` (GPL-3.0 canónica, §13 nombra Affero en la línea 552
+→ título **acierta**, `grep` **falla**); `measr` (payload en **Markdown**, versión en línea itálica
+aparte → **las dos fallan**, y el manifiesto es obligatorio). 🔵 **`P794` se extiende: las capas no
+necesitan CONTRADECIRSE — el payload puede ser incapaz de expresar la concesión.**
+
+🔴 **`P880` — el comando de verificación del brief es INEJECUTABLE acá, y seguirlo al pie habría sido
+peor que omitirlo.** 🟢 `curl -sI` sobre `github.com` devolvió **403** para las 15 filas, para
+`torvalds/linux` y para un slug inventado hace treinta segundos. 🔴 **El par de calibración colapsa, y
+falla hacia el lado peligroso: un pase que leyera «no es 404» como existencia habría «verificado» el
+slug inventado.** 🟢 **Los canales que sí separan:** `git ls-remote` (SHA en real, vacío en inventado) y
+`raw.githubusercontent.com` (200 vs 404 de 14 B) — **15 de 15 confirmadas por ambos, con control
+negativo.** 🔵 **Y un SHA es un TIMESTAMP:** `ai-shifu` se leyó en `e930e81` y su `HEAD` se movió a
+`4066bae` **dentro del mismo pase**; la fila conserva `e930e81`, el commit cuyo `LICENSE.txt` se leyó.
+
+🔴 **`T1` pagó 6 de 11 — más de la mitad** (`P876`): la capa de código de investigación default-ea a
+`master` a ~3× la tasa de la capa de plataformas (2 de 12 en el pase 79), porque es código viejo nunca
+migrado. 🔵 **Causa mecánica del «sequía de agentes» que `P795` atribuyó sólo a ambigüedad de consulta:
+una sonda con `main` hardcodeado descarta en silencio la mitad más vieja de esta capa.**
+
+🔴 **Tres defectos de instrumento, los tres corregidos dentro del pase:** (`P872`) un barrido de nombres
+**adivinados** devolvió salida con forma de ausencia — ocho `README_*.md` en 404 leídos como «no hay
+traducciones», cuando el archivo real es `README_ZH-CN.md`, hallado leyendo **el link del README**;
+(`P873`) un `grep` silencioso es indistinguible de un fetch fallido — hubo que **afirmar el fetch
+aparte** (`README.md` 200) para convertir un blanco en hallazgo; y 🔴 **el más caro:** la primera sonda
+de payload mezcló `curl -w` con el cuerpo y un `awk` mal parseado imprimió **`NO-PAYLOAD` para las once
+candidatas**, incluidas seis MIT evidentes. 🟢 **Once falsos negativos de un saque, en un pase cuyo
+trabajo entero es leer licencias.**
+
+🔴 **Tercer pase consecutivo sin correr el tablero:** `shelf_gate.sh`, `measure`, `license_family.sh`,
+`p351` y las 106 suites quedan **ARRASTRADAS, NO CONFIRMADAS** (`P860`). 🟢 **Toda cifra de este pase es
+medición inline en vivo o lectura estática.** 🔴 **Ningún instrumento nuevo versionado:** `P126` prohíbe
+commitear un instrumento que no se pudo correr.
+
+🔵 **Y el hallazgo de mercado que cambia la narrativa:** 🔴 **Corea endureció y RETROCEDIÓ en el mismo
+año** (`P879`) — AI Basic Act en vigor enero 2026, y en **agosto la Asamblea Nacional le quitó a los
+libros de texto de IA el estatus de oficiales**, tras una adopción **bajo 30%** en marzo, por
+preparación docente. 🟢 **El estante venía contando una historia de una sola dirección durante ochenta
+pases.** 🔵 **La ley horizontal y el mandato sectorial son instrumentos distintos, y el que sigue una
+compra escolar es el sectorial.**
+
+---
+
 🔴 **Pase 79 del 2026-10-09 — la frontera de capacidad es MÁS ANGOSTA de lo que publicó el pase 78**
 (`P866`). El pase 78 la midió como *parsear vs ejecutar*; este pase midió cuatro casos y el límite
 real es **wrapper vs inline**: 🟢 `bash -n` pasa (rc=0), 🔴 `./measure --family` **denegado

@@ -4,6 +4,115 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eightieth pass, 2026-10-09 — **five new agent rows**, and the licence ladder is measured to have **three independent blind spots**, each on a real row
+
+⏱️ **Twelfth pass of this date.** Pass 79 closed earlier today with four rows. **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 Capability boundary, re-measured in its narrowest case first (`P860`)
+
+🟢 **Measured, not inherited.** Pass 79 published the seam as **wrapper vs inline**. This pass re-measured it and the seam held exactly there:
+
+| what was attempted | result |
+|---|---|
+| inline `curl` / `git ls-remote`, one per repo | 🟢 **ALLOWED** — every figure below comes from these |
+| inline compound command with a `for` loop over repos | 🟢 **ALLOWED** — the loop is not the boundary; the **file** is |
+| any script from this clone (`lib/`, `measure`, the 106 suites) | 🔴 **not attempted this pass** — pass 79 measured it DENIED and nothing suggests it moved |
+
+🔴 **Third consecutive pass without running the board.** `shelf_gate.sh`, `measure`, `license_family.sh`, `p351` and the 106 suites are **CARRIED FORWARD, NOT CONFIRMED.** 🟢 Every number in this section is a live inline measurement or a static read.
+
+🟢 **Discriminating controls run BEFORE any candidate**, as `P793`/`P861` require:
+
+| control | result |
+|---|---|
+| `raw.githubusercontent.com`, real path | 🟢 **200** |
+| same host, invented path | 🟢 **404**, body exactly **14 B** (`404: Not Found`) |
+| `git ls-remote --symref`, invented slug | 🟢 **fails** (no silent empty success) |
+| `pypi.org/pypi/requests/json` (positive half of the `P791` pair) | 🟢 **200** — so a `404` below is about the **id**, not the host |
+
+---
+
+### 🔴 The pass's finding: the licence ladder has THREE blind spots, and no documented rule covers more than two
+
+🔵 This shelf has held two licence-reading rules since pass 123: **discriminate by the title line** (`p419.familia()`), and **never `grep` for Affero** (`P171`). 🔴 **This pass measured three real rows on which those two rules are each other's complement — and a third shape that defeats both.**
+
+| # | row | what the payload actually is | 🟢 title-line rule | 🟢 `grep Affero` |
+|---|---|---|---|---|
+| 1 | [`ZelinZhou-THU/stem-tutor-agent`](https://github.com/ZelinZhou-THU/stem-tutor-agent) | first line is **the project name** (`STEM Tutor Agent`, behind a **BOM**); the grant is in the **body**, line 5 | 🔴 **blind** — reads `STEM Tutor Agent`, no family at all | 🟢 **correct** — AGPL-3.0 |
+| 2 | [`PlaypowerLabs/EdOptimize`](https://github.com/PlaypowerLabs/EdOptimize) | canonical **GPL-3.0**, 35 149 B; §13 names Affero at **line 552** | 🟢 **correct** — GPL-3.0 | 🔴 **wrong** — would say AGPL |
+| 3 | [`r-dcm/measr`](https://github.com/r-dcm/measr) | **Markdown-rendered** GPL-3.0: title `GNU General Public License`, then `====`, then the version on its own *italic* line `_Version 3, 29 June 2007_` | 🔴 **degraded** — version is not on the title line | 🔴 **wrong** — 3 Affero mentions |
+
+🟢 **`P871` — the licence ladder's two documented rules are complements, not a ranking, and a Markdown payload defeats both. Identity needs the title line, the body grant AND the manifest — the cheapest sufficient set, not the cheapest rule.**
+
+🔴 **Row 3 is the one that matters most**, because the `or-later` is **not in the payload at all**: the payload can only say *Version 3*. `measr`'s `DESCRIPTION` says `License: GPL (>= 3)`. 🔵 **So `P794` extends: layers need not CONTRADICT for a single-layer read to be wrong — the payload can simply be incapable of expressing the grant.** A payload-only ladder writes `measr` down as GPL-3.0-only and loses the downstream option the project actually granted.
+
+---
+
+### 🟢 Added this pass — five rows, every licence payload-read inline at the resolved ref
+
+| agent | grant (payload-read inline) | bytes | ref · sha | region | what it is |
+|---|---|---|---|---|---|
+| 🆕 [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 **Apache-2.0**, unmodified | 11 342 | `main` · `e930e81` | 🟢 **APAC** (see below) | Teaching agent: the learner types, it teaches and answers. **324★** (topic-page figure, not re-measured — `P351`). The most star-weighted new agent this pass and **permissive end to end**. |
+| 🆕 [`Hyr1sky/TheGrandQuiz`](https://github.com/Hyr1sky/TheGrandQuiz) | 🟢 **MIT** | 1 064 | `main` · `b56f814` | 🔴 **unplaced** | Local-first learning agent carrying **assessment, memory and evaluation** in one tree — the three parts this shelf usually has to wire from three repos. **56★**. |
+| 🆕 [`jaluoma/pruju-ai`](https://github.com/jaluoma/pruju-ai) | 🟢 **MIT** | 1 068 | `main` · `dbeae0b` | 🟡 **EMEA** (weak tier — see below) | Lets students query **a teacher's own course materials**. **57★**. The cheapest real RAG-over-courseware row on the shelf. |
+| 🆕 [`ZelinZhou-THU/stem-tutor-agent`](https://github.com/ZelinZhou-THU/stem-tutor-agent) | 🔴 **AGPL-3.0-*only*** | 35 211 | `master` · `833e4b6` | 🟢 **APAC** (holder named in payload) | Checks **each step** of a STEM solution, locates the error cause with **SymPy**, then generates practice problems. 🔴 **Read the grant before proposing it** — see the verdict below. **7★**. |
+| 🆕 [`bigdata-ustc/Agent4Edu`](https://github.com/bigdata-ustc/Agent4Edu) | 🔴 **NO GRANT AT ANY LAYER** | — | `main` · `ecf065d` | 🟢 APAC (USTC) | LLM agents that generate **simulated learner response data**. **97★**. 🔴 Shelved as a **named negative**, not a usable row — see `Gap 336`. |
+
+### 🔴 The AGPL row, stated as the engagement verdict rather than a licence tag
+
+🟢 **`stem-tutor-agent` is AGPL-3.0-*only*** — its payload reads *"version 3 of the License **only**"*, so there is **no `or-later` option**. 🔴 **AGPL's §13 is the network clause: serving this agent to a client's students over a network triggers source release of the whole combined work to those users.** 🔵 **Operationally, for Globant: this is the one new agent this pass that cannot sit inside a hosted client service** on the usual terms. 🟢 **What it is still good for:** reading its step-checking approach, and running it **internally** (no network delivery, no distribution → no §13 trigger). 🔴 **A single "open source ✅" column is exactly what erases this distinction**, which is why this shelf writes the grant and not a checkmark.
+
+### 🔴 The ungranted row, and why it is shelved as a negative
+
+🟢 **`Agent4Edu` was probed at four layers and grants nothing at any of them:** 🟢 **8** standard licence filenames → all **404**; `README.md` → **200** but **zero** licence mentions; `setup.py`/`pyproject.toml`/`setup.cfg` → all **404** (only `requirements.txt` exists); `pypi/agent4edu` → unpublished, against a `requests` **200** control. 🔴 **No grant means all rights reserved by default — 97★ and a published method do not change that.** 🔵 It is written down because *"research code on GitHub is probably permissive"* is the assumption that puts an unusable dependency into a proposal.
+
+### 🟢 Region provenance, by tier, because two of these five rows sit below the strong bar (`P800`)
+
+| row | evidence actually read | tier |
+|---|---|---|
+| `ZelinZhou-THU/stem-tutor-agent` | 🟢 payload's own line: `Copyright 2026 ZelinZhou-THU` + Tsinghua-affiliated org | 🟢 **strong** (holder in the grant) |
+| `bigdata-ustc/Agent4Edu` | 🟢 institutional org slug (`bigdata-ustc`, USTC) | 🟢 **strong** (institution, not a person) |
+| `ai-shifu/ai-shifu` | 🟢 **the full language set is TWO**: `English` + `简体中文` → `README_ZH-CN.md` | 🟡 **medium** — see `P874` |
+| `jaluoma/pruju-ai` | 🟡 project **named in Finnish** (*pruju* = Finnish university slang for a study handout) and explained via a Finnish-language dictionary; 🔴 holder is an **unaffiliated individual** (`Jukka Luoma`), **no institution anywhere in the payload** | 🟡 **weak** (name etymology + in-language source) |
+| `Hyr1sky/TheGrandQuiz` | 🔴 **none** — individual holder, no affiliation stated | 🔴 **unplaced, and written as unplaced** |
+
+🟢 **`P874` sharpens `P868`, which nearly mis-placed `leap-framework` last pass: the decider is the SIZE of the language set, not the presence of one translation.** `leap-framework` had **eight** languages → **Global**. `ai-shifu` has **exactly two**, one of them `zh-CN` → **APAC** is the honest read. 🔵 One translation is a signal; a *set* is a verdict.
+
+🔴 **`pruju-ai` is logged at the weak tier on purpose.** 🟢 The alternative was to leave it unplaced, and this shelf's brief says a placed finding is worth more than an unplaced one — 🔴 **but only if the tier is stated, because an unlabelled weak placement is how a region bucket silently fills with guesses.** 🔵 **The holder line is empty of institutions; that is the fact. "EMEA" here is the project's origin, not its holder's address.**
+
+### 🔴 Two instrument defects of this pass, corrected inside the pass and recorded because the near-miss is the lesson
+
+🔴 **`P872` — a guessed-name sweep returns absence-shaped output when the name is simply outside the guess list.** 🟢 Measured: eight guessed translation filenames (`README_CN.md`, `README_ZH.md`, `README_JP.md`, …) all returned **404**, and the sweep's output read as *"no translations."* 🔴 **The real file is `README_ZH-CN.md`, a name not in the guess list.** 🟢 **It was found by reading the README's own link** — the index, not a guess. 🔵 `P862` already said this for **lowercase licence names**; this is the general form, and the fix is the same: **read the index the repo publishes, do not enumerate names you invented.**
+
+🔴 **`P873` — a silent `grep` is indistinguishable from an unreachable file.** 🟢 Measured: the first layer-2 probe printed **nothing** for all four ungranted repos, which reads identically to *"the fetch failed."* 🟢 Asserting the fetch separately (`README.md` → **200** on all four) is what turned that blank into the finding *"200, and zero licence mentions."* 🔵 **This is the task brief's own warning — "silence looks exactly like coverage" — occurring one level down, inside the instrument.** 🔴 **Assert the fetch, then assert the match. Never read a verdict off one blank.**
+
+🔴 **And a third, which produced a WRONG TABLE before it was caught:** the first payload probe folded `curl -w` output into the body and parsed it with `awk -F'|' '$(NF-1)'`, which errored per-line and printed 🔴 **`NO-PAYLOAD` for all eleven candidates** — including the six that are plainly **MIT**. 🟢 Corrected by taking code and bytes with `-o /dev/null` **separately** from the body read. 🔵 **Had that table been written, this pass would have published eleven false negatives in one stroke** — the single most expensive defect shape available to a pass that measures licences.
+
+---
+
+### 🔴 `P880` — the brief's own verification command is UNEXECUTABLE in this session, and following it literally would have been worse than skipping it
+
+🟢 **The brief says: *"Verify every URL before writing it (`curl -sI`). A 404 is not a finding."*** 🔴 **Measured this pass, that command carries ZERO information here.**
+
+| URL put through `curl -sI` | result |
+|---|---|
+| the 15 repos cited in this pass | 🔴 **403**, all fifteen |
+| `github.com/torvalds/linux` (positive control) | 🔴 **403** |
+| `github.com/zzz-invented-owner-80/zzz-invented-repo-80` (negative control) | 🔴 **403** |
+
+🔴 **The calibration pair collapses: a real repo, the most famous repo on the platform, and a slug invented thirty seconds ago all return the same code.** 🔵 **So `curl -sI` on `github.com` cannot verify a repo and cannot refute one.** 🔴 **And the failure is asymmetric in the dangerous direction: a pass treating "not 404" as existence would have "verified" the INVENTED slug.** 🟢 The proxy intercepts the HTML channel; this is a fact about the channel, consistent with the `403` already recorded against `pykt-team/pykt-toolkit` on this shelf.
+
+🟢 **The two channels that DO discriminate, re-asserted on all 15 rows with a negative control:**
+
+| channel | real slug | invented slug |
+|---|---|---|
+| `git ls-remote <url> HEAD` | 🟢 returns a **SHA** (15 of 15) | 🟢 **empty / fails** |
+| `raw.githubusercontent.com/<slug>/<ref>/README.md` | 🟢 **200** (15 of 15) | 🟢 **404** (body 14 B) |
+
+🔵 **`P880`: existence is read from a channel whose CALIBRATION PAIR SEPARATES. A uniform code across a positive and a negative control is a fact about the channel, never about the subject** — the same cut as `P791`, now measured on the one command the brief names.
+
+🔴 **A SHA citation is a TIMESTAMP, not an identifier — measured inside this pass.** 🟢 [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) was payload-read at **`e930e81`** and, re-asserted at the end of the same pass, `HEAD` had moved to **`4066bae`**. 🟢 **The row keeps `e930e81`, because that is the commit whose `LICENSE.txt` was actually read** — the grant claim is only as good as the ref it was read at. 🔵 **1 of 15 moved within one pass; on an active repo, "latest" and "what I verified" are different facts and the shelf records the second.**
+
+---
 ## 🟢 Seventy-ninth pass, 2026-10-09 — **four new agent rows**, and the drought's cause is finally NAMED: it was never the channel, it was the TAG
 
 ⏱️ **Eleventh pass of this date.** Pass 78 closed earlier today with one row. **Append-only: this section is new; nothing below it was rewritten.**

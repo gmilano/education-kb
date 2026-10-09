@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 80) — **five new agents**, and the fourteen-week drought gets a SECOND cause: `P795` blamed the query, and half the blame was the REF
+
+⏱️ **Twelfth pass of this date.** 🟢 **Append-only: this section is new. Pass 79's section is immediately below and nothing in it was rewritten.**
+
+### 🔴 `P876` — the drought had a mechanical cause alongside the semantic one
+
+🟢 **`P795` (pass 63) diagnosed fourteen weeks without an education-specific agent as QUERY AMBIGUITY: `AI education` ranks courses *about* AI above agents that *do* education. 🟢 That was right, and it is not the whole story.**
+
+🟢 **Measured this pass, 11 of 11 candidates resolved with `git ls-remote --symref`:**
+
+| default ref | count | share |
+|---|---|---|
+| `main` | 🟢 5 | 45% |
+| 🔴 `master` | 🔴 **6** | 🔴 **55%** |
+
+🔴 **A `main`-hardcoded probe rejects more than half of this layer before any ranking happens.** 🟢 **Pass 79's platform layer measured 2 of 12 on `master` — about 17%.** 🔵 **So the research- and tool-code layer, which is where education agents actually live, defaults to `master` at roughly three times the platform rate, because it is older code that was never migrated.**
+
+🔵 **Two causes, two different fixes:** 🟢 the semantic one is fixed by asking by **protocol or tag** instead of by industry (`P795`, `P865`); 🟢 the mechanical one is fixed by **`ref.sh` as Gate 0**. 🔴 **A pass that fixed only the query would still have been silently discarding the oldest half of every candidate list.**
+
+### 🟢 The five new agents (full table, grants and region tiers in `agents/top.md`)
+
+| agent | grant | bytes | ref · sha | why it is new to the shelf |
+|---|---|---|---|---|
+| 🆕 [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 **Apache-2.0** | 11 342 | `main` · `e930e81` | **324★** — the most star-weighted new agent this pass, and permissive end to end |
+| 🆕 [`Hyr1sky/TheGrandQuiz`](https://github.com/Hyr1sky/TheGrandQuiz) | 🟢 **MIT** | 1 064 | `main` · `b56f814` | **56★** — carries **assessment + memory + evaluation** in one tree |
+| 🆕 [`jaluoma/pruju-ai`](https://github.com/jaluoma/pruju-ai) | 🟢 **MIT** | 1 068 | `main` · `dbeae0b` | **57★** — RAG over **a teacher's own course materials** |
+| 🆕 [`ZelinZhou-THU/stem-tutor-agent`](https://github.com/ZelinZhou-THU/stem-tutor-agent) | 🔴 **AGPL-3.0-only** | 35 211 | 🔴 `master` · `833e4b6` | **7★** — **step-level** STEM checking with **SymPy**, not answer-level |
+| 🔴 🆕 [`bigdata-ustc/Agent4Edu`](https://github.com/bigdata-ustc/Agent4Edu) | 🔴 **no grant, 4 layers** | — | `main` · `ecf065d` | **97★** — shelved as a **named negative** (`Gap 336`) |
+
+### 🔵 The agent that is architecturally interesting rather than popular
+
+🟢 **`stem-tutor-agent` is 7★ and is the most instructive row of the five.** 🔵 **Every tutor on this shelf grades or explains an ANSWER. This one verifies each STEP of a derivation, locates the step where the reasoning breaks, and uses SymPy — a symbolic engine — rather than the model to decide whether a step is valid.**
+
+🟢 **Why that matters under 2026 governance:** 🔵 a step-level verdict from a **symbolic** checker is **auditable and reproducible**; a model's answer-level verdict is neither. 🟢 **That is the difference between a tutor an institution can defend and one it cannot** — see `intel/trends.md` Trend 2.
+
+🔴 **And it is AGPL-3.0-*only*** — *"version 3 of the License only"*, no `or-later`. 🔴 **§13 means serving it to a client's students over a network triggers source release of the combined work to those users.** 🟢 **So: read it, learn from it, run it internally — do not put it inside a hosted client service.** 🔵 The architecture is the transferable asset here, not the code.
+
+### 🔴 The negative row, and why a 97★ repo is written down as unusable
+
+🟢 **`Agent4Edu` generates SIMULATED LEARNER RESPONSES** — synthetic students for testing a tutor before it meets a real one. 🔵 **That is the most governance-relevant capability in this pass's entire yield**, because every regime in `intel/trends.md` Trend 2 will eventually ask how a system was validated.
+
+🔴 **It grants nothing.** 🟢 Probed at four layers: **8** licence filenames → **404**; `README.md` → **200**, zero licence mentions; `setup.py`/`pyproject.toml`/`setup.cfg` → **404**; `pypi/agent4edu` → unpublished against a `requests` **200** control. 🔴 **No grant = all rights reserved.** 🟢 **`Gap 336` is declared on this: there is no permissively licensed learner simulator on this shelf, and the gap is written down rather than papered over.**
+
+### 🔴 Three instrument defects this pass, all caught inside the pass
+
+🔴 **`P872` — a guessed-name sweep returns absence-shaped output when the name is outside the guess list.** 🟢 Eight guessed translation filenames all **404**'d, and the sweep read as *"no translations"*; 🔴 the real file is **`README_ZH-CN.md`**, found by reading the README's own **link**. 🔵 `P862` said this for lowercase licence names; this is the general form. 🟢 **Read the index the repo publishes; do not enumerate names you invented.**
+
+🔴 **`P873` — a silent `grep` is indistinguishable from an unreachable file.** 🟢 The first layer-2 probe printed **nothing** for four repos, which reads exactly like a failed fetch; asserting the fetch separately (`README.md` **200** on all four) converted a blank into the finding. 🔵 **The task brief's own warning — "silence looks exactly like coverage" — happening inside the instrument.**
+
+🔴 **And the one that would have been most expensive:** the first payload probe folded `curl -w` output into the body and mis-parsed it with `awk`, printing 🔴 **`NO-PAYLOAD` for all eleven candidates**, including six plainly **MIT** ones. 🟢 Corrected by measuring code and bytes with `-o /dev/null`, separately from the body. 🔵 **Eleven false negatives in one stroke — the worst available defect for a pass whose whole job is reading licences.** 🟢 **It was caught because the output contradicted the `awk` error text printed beside it; a quieter instrument would have shipped it.**
+
+### 🟡 Carry-forward for the next pass
+
+🟢 **Channels that paid:** `topics/knowledge-tracing` and `topics/cognitive-diagnosis`, both virgin, **11 new rows between them**.
+🔴 **Do not re-buy:** `topics/adaptive-learning` — a homonym, 4 of its top 5 rows are not education (`P878`).
+🟡 **Buy with a star floor:** `topics/automated-grading`, `topics/teaching-assistant` — real but dominated by coursework and 0★ scripts.
+🔴 **Unread, named:** `topics/educational-data-mining`, `topics/item-response-theory`, `topics/spaced-repetition`, `topics/qti`, `topics/proctoring`, `topics/plagiarism-detection`.
+🔴 **Still carried, not confirmed:** the 106-suite board, `p351`, `shelf_gate.sh` — third consecutive pass without running them (`P860`).
+
+---
+
 ## 🟢 2026-10-09 (pass 79) — **four new agents in one pass**, and the four-pass drought's cause is named: the exhausted thing was the **TAG**, not the channel
 
 ⏱️ **Eleventh pass of this date.** 🟢 **Append-only: this section is new. Pass 78's section is immediately below and nothing in it was rewritten.**

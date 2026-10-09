@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eightieth pass, 2026-10-09 — **six new foundational repos**, and the finding is a REGRESSION: the measurement layer was archived on 2026-10-06 and never rebuilt
+
+⏱️ **Twelfth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 The finding first, and it is about this shelf, not about a repository
+
+🟢 **Measured across every live file, this pass:**
+
+| phrase | live shelf (`agents/`+`repos/`+`verticals/`+`intel/`+`compose/`) | `archive/2026-10-06-pre-reset/` |
+|---|---|---|
+| `cognitive diagnosis` / `diagnóstico cognitivo` | 🔴 **0 occurrences** | 🟢 **23**, across **8 of 8** files |
+
+🔴 **The live shelf cannot MEASURE mastery, and it used to be able to.** 🟢 The archive's own pass-87 entry records the layer being added deliberately — *"no son siete piezas sueltas sino UNA CAPA DE MEDICIÓN EDUCATIVA completa — trazado de conocimiento, diagnóstico cognitivo, testing adaptativo, datasets, NLP de ítems y simulación"* (the BigData Lab @USTC family: `EduData`, `EduCDM`, `EduKTM`, `EduNLP`, `EduSim`, `EduCAT`). 🔴 **The 2026-10-06 reset archived it, and eighty passes of the live shelf have shipped tutoring and — since pass 79 — retention scheduling on top of a hole where the measurement used to be.**
+
+🔵 **Why that matters concretely:** pass 79's `R79a` sells *"retention is the measurable outcome an institution will actually buy."* 🔴 **FSRS schedules a review; it does not estimate whether a learner knows a concept.** Those are different quantities, and the live shelf has had only the scheduler.
+
+🟢 **`P875` — "new to the live shelf" is NOT "new to this KB". The archive is part of the record and is checked before a row is called a first.** 🟢 Applied this pass: all **15** new rows were grepped against `archive/` as well as the live tree — **0 hits in either**, so they are genuine firsts. 🔴 **Had this pass only grepped the live tree, it would have announced "the measurement layer is new here" — and that sentence would have been false.** 🔵 A reset is not a blank slate; it is a *move*, and a shelf that forgets where it moved things re-buys them or, worse, declares a gap that is really a loss.
+
+---
+
+### 🟢 Added: the knowledge-tracing / cognitive-diagnosis layer, rebuilt from live payload reads
+
+🔵 **These are the models that answer *"does this learner know concept X, and how sure are we?"*** — the input a tutor needs before it chooses what to teach, and the input a scheduler needs before it decides what to review.
+
+| repo | grant (payload-read inline) | bytes | ref · sha | role |
+|---|---|---|---|---|
+| 🆕 [`hcnoh/knowledge-tracing-collection-pytorch`](https://github.com/hcnoh/knowledge-tracing-collection-pytorch) | 🟢 **MIT** | 1 071 | `main` · `6151f49` | **Reference implementations** of the main KT models (DKT, DKVMN, SAKT, …) in one PyTorch tree. **194★**. The cheapest way to get a working baseline rather than a paper. |
+| 🆕 [`ZhijieXiong/pyedmine`](https://github.com/ZhijieXiong/pyedmine) | 🟢 **MIT** | 1 085 | `main` · `20af796` | **The widest single library**: knowledge tracing **+ cognitive diagnosis + exercise recommendation** under one API. **82★**. 🟢 Actively the successor to `ZhijieXiong/dlkt`, which its own README marks as migrated here. |
+| 🆕 [`HFUT-LEC/EduStudio`](https://github.com/HFUT-LEC/EduStudio) | 🟢 **MIT** | 1 064 | `main` · `d5862bd` | **Unified student cognitive-modelling framework** — the configurable harness (datasets, splits, metrics) rather than a model zoo. **78★**. This is the row that makes results comparable. |
+| 🆕 [`jilljenn/ktm`](https://github.com/jilljenn/ktm) | 🟢 **MIT** | 1 071 | `master` · `12084d6` | **Factorization machines for knowledge tracing** — the strong classical baseline that repeatedly matches deep KT at a fraction of the cost. **140★**. 🔵 Worth having precisely because it is the thing to beat before buying a transformer. |
+| 🆕 [`jhljx/GKT`](https://github.com/jhljx/GKT) | 🟢 **MIT** | 1 061 | `master` · `271c72d` | **Graph-based KT**: models the prerequisite graph between concepts instead of a flat skill vector. **141★**. The row that connects a curriculum map to a mastery estimate. |
+| 🆕 [`r-dcm/measr`](https://github.com/r-dcm/measr) | 🟡 **GPL-3.0-*or-later*** | 34 904 | `main` · `93a2e87` | **Bayesian diagnostic classification models via Stan** — the psychometrics-grade option, with real uncertainty intervals instead of a point score. **13★**. 🔴 **Copyleft: see the grant note.** |
+
+### 🔴 `yxonic/DTransformer` — probed, and REJECTED, with the reason recorded
+
+| repo | layers probed | verdict |
+|---|---|---|
+| 🔴 [`yxonic/DTransformer`](https://github.com/yxonic/DTransformer) (`main` · `1dc4598`) | 🟢 **11** licence filenames → all **404**; `README.md` **200** with **zero** licence mentions; `pyproject.toml` **200** (417 B) with **no** licence field; `setup.py` **404** | 🔴 **NO GRANT AT ANY LAYER → all rights reserved** |
+
+🟢 **46★ and a WWW '23 paper behind it, and it still cannot be used.** 🔵 It is written down as a named negative so that no later pass spends the probe again, and so that nobody reaches for the best-cited name in this layer without knowing it is closed.
+
+### 🔴 The copyleft row, stated as the obligation rather than the tag
+
+🟢 **`measr` is GPL-3.0-*or-later*, and the `or-later` exists ONLY in the manifest.** 🟢 Measured: `LICENSE.md` can say no more than *Version 3*; `DESCRIPTION` reads `License: GPL (>= 3)`. 🔴 **A payload-only read records this as GPL-3.0-only and throws away the downstream option the project actually granted.**
+
+🔵 **What GPL-3.0 means where this row lands:** `measr` is an **R package**, so the realistic use is *analysis*, not linking. 🟢 **Running it to fit a model and acting on the numbers triggers nothing** — GPL obligations attach to **distributing** a combined work. 🔴 **Shipping it inside a client-delivered product does**, and then the whole combined work carries GPL-3.0. 🟢 **The permissive alternative in the same slot is `pyedmine`, which carries cognitive diagnosis under MIT** — so this shelf now has both a permissive and a psychometrics-grade option, and the choice is explicit rather than accidental.
+
+### 🔴 `T1` paid harder here than anywhere on this shelf, and the reason is structural
+
+🟢 **Measured, 11 of 11 candidates resolved with `git ls-remote --symref`:**
+
+| default ref | count | which |
+|---|---|---|
+| `main` | 🟢 5 | `knowledge-tracing-collection-pytorch`, `pyedmine`, `EduStudio`, `DTransformer`, `measr` |
+| 🔴 `master` | 🔴 **6** | `ktm`, `GKT`, `EdOptimize`, `my-learning-analytics`, `sagefy`, `stem-tutor-agent` |
+
+🔴 **A hardcoded `main` writes off SIX of eleven rows — more than half.** 🟢 **Compare pass 79's platform layer: 2 of 12.** 🔵 **`P876` — the research-code layer defaults to `master` at roughly three times the platform layer's rate, because it is older code that was never migrated.** 🟢 **So `ref.sh` as Gate 0 is not a nicety on this layer; it is the difference between finding it and concluding it does not exist.** 🔴 **And this is a plausible partial cause of the fourteen-week agent drought `P795` diagnosed as query ambiguity: a `main`-only probe silently rejects the oldest half of exactly this layer.**
+
+### 🟢 Byte counts across the MIT rows, and why the shelf's "1 079 B = MIT" shorthand has to go
+
+🟢 **Measured this pass, six MIT payloads, all confirmed `MIT License` by title line:** `1 061` (`GKT`) · `1 064` (`EduStudio`, `TheGrandQuiz`) · `1 068` (`pruju-ai`) · `1 071` (`knowledge-tracing-collection-pytorch`, `ktm`) · `1 085` (`pyedmine`).
+
+🔴 **That is a 24-byte spread, and the shelf has been writing `1 079 B` as if it were MIT's signature.** 🟢 **The variance is the copyright line — holder name and year — which is part of the licence text.** 🔵 **So bytes CORROBORATE an identity; they never establish one.** 🟢 `P859`'s regression cases (`OpenTutor` **1 068 B**, `aureuserp` **1 077 B**) were the first two sightings of this; six more in one pass settles it.
+
+🟢 **`P877` — and this is the sharper half: a byte count OUTSIDE the canonical value can mean a NON-NORMATIVE section was stripped, not that the licence differs.** 🔴 Measured on [`sagefy/sagefy`](https://github.com/sagefy/sagefy): `LICENSE.txt` is **10 174 B** against Apache-2.0's canonical **11 358** — a **1 184-byte** shortfall that looks like a different licence. 🟢 **It is not.** The title block reads `Apache License / Version 2.0, January 2004`, `Grant of Copyright License` is present, and the file ends on `END OF TERMS AND CONDITIONS`; 🟢 **what is missing is the `APPENDIX` — 0 occurrences — the non-normative *"How to apply the License to your work"* boilerplate.** 🔴 **The grant is complete Apache-2.0; only the instructions for reusing the licence were cut.** 🔵 A byte-identity gate marks this unrecognised and the row is lost.
+
+---
+
 ## 🟢 Seventy-ninth pass, 2026-10-09 — **three new foundational repos, and the shelf had the BINDING without the ENGINE for 79 passes**
 
 ⏱️ **Eleventh pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
