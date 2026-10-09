@@ -4,6 +4,197 @@ region: Global
 updated: 2026-10-09
 ---
 
+## Curated shelf, 2026-10-09 — pass 88: the gap REGISTER and the SHELF have desynchronised **in both directions**, and the credentialing tier that was declared empty already had rows
+
+**Method this pass.** Existence resolved with `git ls-remote --symref` (authoritative; negative control
+`invented-org-xyz/not-a-real-repo-999` correctly DENIED — no SHA returned). Licence read from the
+**actual payload** at `raw.githubusercontent.com/<slug>/<SHA>/<file>`, pinned to the resolved SHA, never
+to a branch name (`P793`). Byte figures are `curl -w '%{size_download}'` (`P929` — method stated with
+the figure).
+
+🔴 **`P880` reproduces for a second pass.** `curl -sI https://github.com/<slug>` returns **403 for
+`moodle/moodle` and for an invented slug alike**. It cannot discriminate and must not be used as the
+existence test. 🆕 🔴 **And `api.github.com` fails the same way — 403 for `torvalds/linux` AND for the
+invented slug.** 🔵 So the API cannot supply star counts *and cannot establish existence either*. Star
+figures in this section are **topic-page reads dated 2026-10-09**, not API reads, and are labelled as such.
+
+### 🔴 🆕 The finding of this pass: `P938` — a declared gap must carry the grep that establishes it
+
+🔴 **Two gap declarations were checked against the shelf they describe. Both were wrong, in opposite
+directions.**
+
+| declaration | register said | shelf actually holds | direction |
+|---|---|---|---|
+| **`Gap 334`** — platform/LMS licences contradicted | 🔴 *"CARRIED, UNSPENT — THIRD PASS. Oldest costed unspent item on this shelf."* (pass 86), *"named as pass 87's FIRST action"* | 🟢 **DISCHARGED IN PASS 83**, 8 of 8 payload-read, written to `agents/trending.md` | register says **open**, shelf has the **answer** |
+| **credentialing tier** | 🔴 *"No credentialing row on this shelf at all — unchanged since pass 82"* (pass 86) | 🟢 **4 slugs across 56 table rows**: `Schroedinger-Hat/certo` (16), `educredentials/ec-issuer` (20), `luisgf/openbadgeslib` (11), `TanimowoObaloluwaDavid/credential-lens` (9) | register says **empty**, shelf has **rows** |
+
+🔵 **Same defect, one sentence: a gap was declared without grepping the file that carries the claim.**
+🔴 Pass 83 wrote its discharge to the **pass log** and never to `verticals/solutions.md`, where the row
+*"Moodle · Open edX · Canvas · Sakai · OpenEduCat · Chamilo — ASSERTED, CONTRADICTED, UNVERIFIED"* sat
+for three more passes, escalating to *"the single highest-value cheap probe on this shelf"*. 🟢 **The
+answer was in the repository the whole time.** 🟢 **`P938`: a discharge is not done when the pass log
+says so — it is done when the file carrying the claim is edited. A gap declaration ships with its grep.**
+
+🟢 **Both are corrected in this pass's files**, not just reported.
+
+### 🟢 `Gap 334` — re-measured 8 of 8, and pass 83 reproduces exactly
+
+🟢 **Re-measured rather than carried forward (`P713`: re-measure the DATUM, reuse the instrument).**
+
+| Platform | default ref | SHA | licence file | bytes | licence read from payload |
+|---|---|---|---|---|---|
+| [moodle/moodle](https://github.com/moodle/moodle) | `main` | `f205347` | 🔵 **`COPYING.txt`** | 35 147 | 🔴 **GPL-3.0** |
+| [openedx/edx-platform](https://github.com/openedx/edx-platform) | `master` | `2e46ebd` | `LICENSE` | 35 136 | 🔴 **AGPL-3.0** — Apache-2.0 claim **falsified** |
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | `master` | `5eef83d` | `LICENSE` | 11 120 | 🟡 **ECL-2.0** |
+| [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | `master` | `1c9f0bb` | `LICENSE` | 34 520 | 🔴 **AGPL-3.0** |
+| [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | `master` | `0b2bc44` | `LICENSE` | 35 147 | 🔴 **GPL-3.0** |
+| [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | 🔴 **`mobile`** | `541c509` | `LICENSE` | 15 214 | 🔴 **GPL-2.0** |
+| [GibbonEdu/core](https://github.com/GibbonEdu/core) | 🔴 **`v31.0.00`** | `1d83c2b` | `LICENSE` | 35 121 | 🔴 **GPL-3.0** |
+| [OpenEduCat/openeducat_erp](https://github.com/OpenEduCat/openeducat_erp) | 🔴 **`19.0`** | `1c95cef` | `LICENSE` | 8 241 | 🟡 **LGPL-3.0** — vendor claim **VERIFIED** |
+
+🔴 **The established platform tier is 8 of 8 copyleft. Not one MIT, Apache-2.0 or BSD row.** 🟢 The
+commercial reading is unchanged and now payload-backed rather than asserted: **the platform is the
+client's; the intelligence on top is ours.** 🟢 **`OpenEduCat`'s LGPL-3.0 is the one established platform
+that can be built *on* rather than *beside*, because LGPL permits linking.**
+
+🔴 **`T1` is 7 of 8 — only Moodle is on `main`**, and three defaults are shapes no fallback catches:
+`mobile` (feature-named), `v31.0.00` and `19.0` (version-numbered). 🔵 **A `main`-then-`master` fallback
+still loses three of eight.**
+
+### 🔴 🆕 `P939` — a licence payload can make a FALSE claim about its own contents, and the arithmetic catches it
+
+🔴 **`OpenEduCat/openeducat_erp`'s `LICENSE` says, at lines 5–7:** *"(LGPLv3), as included below. Since
+the LGPL is a set of additional permissions on top of the GPL, the text of the GPL is included at the
+**bottom as well**."* 🔴 **It is not.**
+
+🟢 **Measured with a two-sided control:**
+
+| marker | full GPL-3.0 control (`moodle` `COPYING.txt`, 35 147 B) | canonical LGPL-3.0 control (`openbadgeslib` `LICENSE.txt`, 7 650 B) | `OpenEduCat` (8 241 B) |
+|---|---|---|---|
+| `GNU GENERAL PUBLIC LICENSE` | 🟢 **1** | 0 | 🔴 **0** |
+| `TERMS AND CONDITIONS` | 🟢 **2** | 0 | 0 |
+| `Preamble` | 🟢 **1** | 0 | 0 |
+
+🟢 **And the arithmetic is decisive: 8 241 B − 7 650 B = 591 B of OpenEduCat preamble.** 🔴 **The GPL-3.0
+text it promises is 35 147 B. There is no room for it.**
+
+🟢 **Verdict: the grant is LGPL-3.0 and the declaration is unambiguous — this is not a re-classification.**
+🔴 **It is a redistribution-compliance defect:** LGPL-3.0 is by construction a set of additional
+permissions over GPL-3.0 and incorporates it by reference, so **anyone redistributing OpenEduCat must
+supply the GPL-3.0 text themselves, because upstream does not.** 🔵 **New rung: read the payload against
+its OWN claims, not only against a family.**
+
+🟢 **`P861` paid again.** The canonical LGPL-3.0 control could not be fetched from `gnu.org`
+(🔴 **CONNECT denied by egress policy, measured: `000`**). 🟢 **It was found inside the shelf instead** —
+`luisgf/openbadgeslib`'s `LICENSE.txt` is a standalone 7 650 B LGPL-3.0. **A denial suspends execution,
+not knowledge.**
+
+### 🟡 🆕 `P940` — ECL-2.0 is byte-ADJACENT to Apache-2.0 and commercially narrower
+
+🟢 `sakaiproject/sakai` serves **11 120 B**; Apache-2.0 on this shelf measures **11 356 / 11 357 / 11 358 B**.
+🔴 **237 B apart — inside the range a byte-fingerprint check treats as "an Apache variant".** 🟢 Its own
+title block says why: *"the Apache 2.0 license, modified to change the scope of the patent grant in
+section 3"*. 🔴 **The patent grant is narrowed to the contributor's own contributions rather than the
+combination.** 🔵 **So "Apache-ish" is the wrong read for a client who cares about patent peace, and the
+byte count is what invites the error.**
+
+### 🟢 🆕 Credentialing tier — 13 rows new to this KB, 7 of them permissive
+
+🟢 **Channel bought this pass (`Gap 352`): `topics/openbadges` + `topics/open-badges`.** 🟢 Selected by
+`P923` — *openbadges* has no use outside education/credentialing. 🟢 **`P935` applied: the whole of
+`topics/openbadges` is 16 repos on ONE page, so there is no type cliff to find.**
+
+🆕 🔴 **`P941` — the topic channel is HYPHEN-SENSITIVE.** `topics/openbadges` reports **16** repos;
+`topics/open-badges` reports **30**. 🔵 **They are different buckets with partial overlap** — GitHub
+topics are literal strings. 🔴 **A channel buy on one spelling silently misses the other**, which is
+`P932`'s spelling defect reappearing one level up, at the **channel** instead of the manifest.
+
+🟢 **Novelty established against the live shelf AND `archive/` on the FULL SLUG, with controls**
+(`HKUDS/DeepTutor` → PRESENT, invented slug → the single pass-87 mention).
+
+#### 🟢 Permissive — new to this KB
+
+| Repo | Licence | ★ (topic page) | ref · SHA | What it is |
+|---|---|---|---|---|
+| [impierce/credential-converter](https://github.com/impierce/credential-converter) | 🟢 **Apache-2.0** (11 356 B) | 12 | `main` · `f3ff22a` | **Rust** converter between W3C VC, **OpenBadges** and the **European Learner Model**, with a mapping CLI |
+| [CoopCodeCommun/pyopenbadges](https://github.com/CoopCodeCommun/pyopenbadges) | 🟡 **LGPL-2.1** (26 526 B) | 8 | `main` · `e38e189` | Python library to create, validate and manage **OpenBadge v3.0** badges |
+| [impierce/digital-credential-data-models](https://github.com/impierce/digital-credential-data-models) | 🟢 **Apache-2.0** (11 357 B) | 5 | 🔴 **`dev`** · `6ca306e` | **Rust** data models for OB v3.0 + **ELM** — the typed layer under the converter |
+| [BeBadges/escobadges](https://github.com/BeBadges/escobadges) | 🟢 **MIT** (1 067 B) | 5 | 🔴 `master` · `2f71bef` | Badge builder on the **ESCO** EU skills classification. 🟢 **EMEA** |
+| [brody-0125/signet-core](https://github.com/brody-0125/signet-core) | 🟢 **Apache-2.0** (11 358 B) | 1 | `main` · `5b3949d` | **Java** W3C VC 2.0 + OB 3.0: EdDSA, ECDSA, **selective disclosure** |
+| [opensalt/OB3DefinitionWidget](https://github.com/opensalt/OB3DefinitionWidget) | 🟢 **MIT** (1 080 B) | 1 | `main` · `896596a` | OB3 **achievement-definition** builder. 🟢 Holder **Public Consulting Group** → **North America** |
+| [CogniPilot/credentials](https://github.com/CogniPilot/credentials) | 🟢 **Apache-2.0** (11 357 B) | 0 | `main` · `17b6821` | Credentials platform for OpenBadges 3.0 |
+| [iblai/wallet](https://github.com/iblai/wallet) | 🟢 **MIT** (1 063 B) | 0 | `main` · `0be99d0` | **Next.js/TypeScript wallet** for collecting and sharing VCs and badges. Holder `ibl.ai`, **2026** |
+
+#### 🔴 Copyleft — new to this KB
+
+| Repo | Licence | ★ | ref · SHA | Note |
+|---|---|---|---|---|
+| [fedora-infra/tahrir](https://github.com/fedora-infra/tahrir) | 🔴 **AGPL-3.0** (34 917 B) | **85** | 🔴 **`develop`** · `ddbff5c` | 🟢 **Top-starred row in the whole channel.** Fedora's own badge-issuing web app — a **production issuer with a named operator** |
+| [edubadges/badgr-server](https://github.com/edubadges/badgr-server) | 🔴 **AGPL-3.0** (34 519 B) | 5 | 🔴 **`develop`** · `9419acc` | **SURF** (Dutch national ICT cooperative for education/research). 🟢 **EMEA, named institutional operator** |
+| [hoijui/obadgen](https://github.com/hoijui/obadgen) | 🔴 **AGPL-3.0** (34 020 B) | 0 | 🔴 `master` · `58989c1` | CLI that **bakes** OB 2.0 data into images |
+
+#### 🔴 Named negatives — grant nothing, upstream-askable
+
+| Repo | ★ | ref · SHA | Finding |
+|---|---|---|---|
+| [activitypods/activitybadges](https://github.com/activitypods/activitybadges) | 6 | `master` · `194555c` | 🔴 **NO-PAYLOAD in 11 probed names** |
+| [wantaekchoi/vc-verifier](https://github.com/wantaekchoi/vc-verifier) | 1 | `main` · `1cf593a` | 🔴 **NO-PAYLOAD in 11 probed names** |
+
+### 🔵 🆕 `P942` — the credentialing tier's licence split is the EXACT INVERSE of the platform tier, and it is architectural
+
+🔴 **Platform tier: 8 of 8 copyleft, 0 permissive.** 🟢 **Credentialing tier: the split runs along the
+ARTEFACT TYPE, not the project.**
+
+- 🟢 **Permissive: the format layer** — converters (`credential-converter`), data models
+  (`digital-credential-data-models`), signing/selective-disclosure libraries (`signet-core`),
+  validators (`credential-lens`), wallets (`iblai/wallet`), definition builders (`OB3DefinitionWidget`).
+- 🔴 **AGPL-3.0: the ISSUING SERVER** — `tahrir` (85★), `badgr-server`/`edubadges-server` (SURF),
+  `certo` (63★).
+
+🔵 **So the buildable commercial boundary is sharp: Globant can own the credential format, validation,
+signing and wallet layer under MIT/Apache, but the issuer is AGPL-3.0 — and `§13` attaches to a HOSTED
+service, which is exactly how an issuer is deployed.** 🟢 **Either run the issuer unmodified, or write
+one; do not fork `tahrir` or `badgr-server` into a closed SaaS.**
+
+### 🟢 🆕 `P943` — an MIT payload can contain NO family name at all
+
+🔴 **`BeBadges/escobadges` serves 1 067 B whose first non-empty line is
+`Copyright (c) 2017 BeBadges & contributors.`** 🟢 Measured: `MIT License` appears **0 times in the whole
+file**. 🔴 **Pass 87's rule — classify on the first 6 non-empty lines — returns NO FAMILY here**, and a
+title-block classifier would record a real permissive grant as unclassifiable.
+
+🟢 **The body signature identifies it unambiguously, all four markers present:**
+`Permission is hereby granted, free of charge` (1), `sublicense` (1), `The above copyright notice` (1),
+`WITHOUT WARRANTY OF ANY KIND` (1). 🔵 **`sublicense` + `The above copyright notice` is what separates
+MIT from ISC**, which has neither. 🟢 **1 067 B is MIT-canonical range.**
+
+🔵 **This extends `P871`'s ladder to a THIRD blind spot shape: not a contradiction between layers and
+not an inexpressible grant, but a payload that states the grant WITHOUT EVER NAMING IT.**
+
+### 🟢 Byte values, five AGPL-3.0 payloads, five figures — and one cross-pass reproduction
+
+🟢 **AGPL-3.0 measured this pass: 34 917 / 34 519 / 34 519 / 34 020 / 33 820 B.** 🔵 **No licence family
+on this shelf has a single byte fingerprint**, now confirmed on a fifth family. 🟢 The two `edubadges`
+repos are **byte-identical at 34 519 B** — same payload, fork relation.
+
+🟢 **And against `Gap 355`'s worry, one positive datum:** `Schroedinger-Hat/certo` was recorded by an
+earlier pass at `main` · `6fd0a11`, **AGPL-3.0, 33 820 B**. 🟢 **Re-measured independently this pass:
+`main` · `6fd0a11`, AGPL-3.0, 33 820 B — byte-identical, same SHA.** 🔵 **A cross-pass byte comparison
+held where the SHA also held**, which is the condition `P929` should have stated.
+
+### 🔴 Declared gaps — searched, genuinely absent, so silence is not read as coverage
+
+- 🔴 **`P795` reproduces a SEVENTH time.** The brief's `top open source AI agents education 2026 github MIT`
+  returned **Khanmigo** (commercial, Khan Academy), **MagicSchool AI** (commercial), a **February 2025**
+  agent directory listing AutoGen/AutoGPT/BabyAGI, tutorial collections and Hugging Face courses.
+  🔴 **Zero education-specific open-source agents with a verified licence.** 🟢 `P901` predicted exactly
+  this; the budget belongs on topic pages, and this pass spent it there.
+- 🔴 **No permissive education agent with APAC or LATAM institutional backing, for a second pass.** The
+  new permissive credentialing rows place to **EMEA** (ESCO/EU, SURF) and **North America** (Public
+  Consulting Group); `impierce` and `signet-core` are not institutionally placeable from their payloads.
+- 🔴 **`educredentials/ec-issuer` still grants nothing** — re-confirmed NO-PAYLOAD at `main` · `8bafc99`,
+  and it is **already on this shelf in 20 table rows**. 🔵 A row can be well-documented and still unusable.
+
 ## Curated shelf, 2026-10-09 — pass 87: the `ai-tutor` topic is **one-third unusable**, and a split-grant row was caught pretending to be MIT
 
 **Method this pass.** Existence resolved with `git ls-remote` (authoritative; negative control

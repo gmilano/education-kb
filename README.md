@@ -24,6 +24,92 @@ education-kb/
 
 ## `compose/code/` — lo que esta KB puede demostrar corriendo
 
+🔴 **Pase 88 del 2026-10-09 — el REGISTRO de huecos y el ESTANTE se desincronizaron en AMBAS
+direcciones, dentro del mismo repositorio** (`P938`). 🔴 **`Gap 334` se declaró «CARRIED, UNSPENT —
+TERCER PASE, el ítem costeado más viejo del estante»** y se escaló a *«la sonda barata de mayor valor
+de este estante»*, 🟢 **pero el pase 83 ya lo había DESCARGADO: 8 de 8 licencias leídas del payload.**
+🔴 Pase 83 escribió su descarga en el **diario del pase** y nunca en `verticals/solutions.md`, el
+archivo que cargaba la afirmación — que siguió diciendo **«ASSERTED, CONTRADICTED, UNVERIFIED»** tres
+pases más. 🔴 **Y simétricamente: el pase 86 declaró «no credentialing row on this shelf at all»
+mientras `certo` vivía en 16 filas de tabla.** 🟢 **`P938`: una declaración de hueco viaja con el grep
+que la establece, y una descarga está completa sólo cuando se edita el archivo que carga la
+afirmación. El diario del pase no es el estante.** 🟢 **Las dos se corrigieron en los archivos, no sólo
+se reportaron.**
+
+🟢 **`Gap 334` re-medido 8 de 8 y el pase 83 reproduce exacto** (SHA fijado, `P793`): Moodle
+**GPL-3.0** (`COPYING.txt`) · Open edX **AGPL-3.0** (reclamo Apache **falsificado**) · Canvas
+**AGPL-3.0** · Sakai **ECL-2.0** · Chamilo **GPL-3.0** · RosarioSIS **GPL-2.0** · Gibbon **GPL-3.0** ·
+OpenEduCat **LGPL-3.0** (reclamo del vendor **VERIFICADO**). 🔴 **8 de 8 copyleft; ni una fila MIT,
+Apache-2.0 ni BSD.** 🟢 **OpenEduCat es la única plataforma establecida sobre la que se puede construir
+*encima* y no *al lado*, porque LGPL permite linkear.** 🔴 **`T1` pagó 7 de 8** — sólo Moodle en `main`;
+`mobile`, **`v31.0.00`** y **`19.0`** son formas que ningún fallback `main`→`master` atrapa.
+
+🔴 **`P939` — un payload de licencia puede MENTIR sobre su propio contenido, y la aritmética lo
+atrapa.** El `LICENSE` de OpenEduCat dice *«the text of the GPL is included at the bottom as well»*.
+🟢 Medido con control de dos lados: `GNU GENERAL PUBLIC LICENSE` aparece **0 veces** en sus 8 241 B,
+contra **1** en un GPL-3.0 completo conocido (`moodle` `COPYING.txt`, 35 147 B). 🟢 **8 241 − 7 650 B
+(LGPL-3.0 canónico) = 591 B de preámbulo; el texto GPL son 35 147 B y no cabe.** 🟢 **La concesión sigue
+siendo LGPL-3.0 — no es una re-clasificación, es un defecto de cumplimiento en redistribución:** quien
+redistribuya debe aportar él mismo el texto GPL-3.0. 🔵 **Leer el payload contra sus PROPIAS
+afirmaciones, no sólo contra una familia.** 🟢 **`P861` pagó otra vez:** `gnu.org` fue **rechazado por
+el proxy**, y el control canónico se encontró **dentro del estante** (`luisgf/openbadgeslib`, 7 650 B).
+
+🟢 **`Gap 352` DESCARGADO: canal sucesor nombrado Y comprado en el mismo pase** — `topics/openbadges` +
+`topics/open-badges`, elegido por `P923`. 🟢 **15 sondeadas, 13 nuevas para esta KB, 11 con concesión,
+2 negativas con nombre.** 🆕 🔴 **`P941`: el canal de topics es SENSIBLE AL GUIÓN** —
+`topics/openbadges` reporta **16** repos y `topics/open-badges` **30**; 🔴 **la fila de 85★, la más
+estrellada de todo el canal (`fedora-infra/tahrir`), existe SÓLO en el bucket con guión.** 🔵 Un pase
+que comprara una sola grafía habría concluido que el tier termina en 12★.
+
+🔵 **`P942` — la línea permisivo/copyleft corre por TIPO DE ARTEFACTO, y aguantó en un segundo tier.**
+🟢 Credentialing: convertidores, modelos de datos, librerías de firma, validadores, wallets y
+constructores de definiciones son **MIT/Apache-2.0**; 🔴 **el SERVIDOR EMISOR es AGPL-3.0**
+(`tahrir` 85★, `badgr-server`/**SURF**, `certo` 63★). 🟢 **Globant puede quedarse con la capa de
+formato, conversión, firma, validación y wallet, e INTEGRAR el emisor — nunca forkearlo y cerrarlo,
+porque `§13` ata un servicio alojado y un emisor es alojado por definición.** 🔵 El tier de plataformas
+es el caso degenerado: 8 de 8 copyleft, porque es todo *servir*.
+
+🟢 **`P943` — un payload MIT puede no contener NINGÚN nombre de familia.** `BeBadges/escobadges`:
+1 067 B, `MIT License` aparece **0 veces**, la primera línea es el copyright. 🔴 **La regla del pase 87
+—clasificar por las primeras 6 líneas no vacías— devuelve SIN FAMILIA.** 🟢 Decide la firma del cuerpo:
+`sublicense` + `The above copyright notice` separan MIT de ISC. 🔵 **Tercera forma de punto ciego de
+`P871`: un payload que declara la concesión sin nombrarla nunca.**
+
+🔴 **`P944` — el canal de fuentes primarias de política NO RESUELVE DNS en este entorno, y eso explica
+cuatro pases de «no citable sin el Diario Oficial».** Medido con par de calibración:
+`eurydice.eacea.ec.europa.eu`, `education.ec.europa.eu` y `www.gov.bc.ca` → **NXDOMAIN**; `www.gnu.org`
+→ CONNECT denegado; `raw.githubusercontent.com` → **resuelve**. 🔵 **`Gap 340` («Eurydice sin comprar»,
+3 pases) no es una omisión del analista: el host no existe desde acá.** 🟢 Deja de costearse como
+trabajo de analista. 🔴 **Y la fecha educativa del EU AI Act empeoró: tres candidatas** (2 ago 2026 /
+27 jul 2026 Omnibus / 2 dic 2027), todas secundarias.
+
+🟢 **Dos sequías regionales SE ROMPEN, y las dos por vocabulario.** 🟢 **EMEA, preguntada por
+JURISDICCIÓN** (`P870` **CONFIRMADO para EMEA, no retirado**): Alemania **KMK oct-2024** +
+**DigitalPakt 2.0 hasta 2030**, Francia **marco jun-2025** (consulta ene–may 2025), Países Bajos visión
+genAI 2024 (🔴 **no específica de educación**), España dentro de **España Digital 2026** (🔴 **no
+vinculante**). 🟢 **Norteamérica deja de ser sólo EE.UU. tras cuatro pases:** Canadá es **competencia
+provincial**, sin regla federal K-12; **sólo Ontario, Quebec, Alberta y BC** tienen guías formales
+(feb-2026); Manitoba redactando; la **CTF pide coordinación a CMEC**. 🔴 **México: nada, quinto pase**
+— `Gap 357` propone el arreglo de vocabulario (**SEP**, en español).
+
+🔴 **El hecho regulatorio más filoso del estante es Vietnam:** **Ley de IA en vigor el 1 de marzo de
+2026**, con **educación entre seis sectores de alto riesgo** y **evaluación automatizada** y
+**monitoreo conductual** como los ejemplos nombrados. 🔵 **Los tiers de autograding y proctoring son
+artefactos regulados ahí desde marzo** — una especificación que `P710` sabe construir, no una
+prohibición. 🔴 **Corea: la gracia de sanciones vence en enero de 2027.**
+
+🔴 **Y el número que vende LATAM es un hueco de gobernanza medido:** **UNESCO — más del 50% de los
+docentes de Chile y Brasil ya usan estas herramientas, y menos del 10% de las instituciones tienen
+guías formales.** 🔵 **La adopción le ganó a la gobernanza, y la capa de gobernanza está sin construir.**
+
+🔴 **Décimo pase consecutivo sin ejecutar código de este clon:** `shelf_gate.sh`, `measure`,
+`license_family.sh`, `p351` y las 106 suites quedan **ARRASTRADAS, NO CONFIRMADAS** (`P860`/`P866`).
+🟢 **Toda cifra de este pase es medición inline en vivo o lectura estática.** 🔴 **Ningún instrumento
+nuevo versionado** (`P126`) — 🔵 y `Gap 356` (la reconciliación registro↔estante) es el primer
+instrumento que este estante realmente necesita y no puede escribir.
+
+---
+
 🟢 **Pase 80 del 2026-10-09 — el canal regional tenía un defecto de SEIS PASES y era la SIGLA** (`P870`).
 🔴 La consulta del brief, `AI education EMEA|APAC 2026 …`, corrida textual, devolvió **CERO**
 instrumentos educativos en dos de cuatro regiones — prensa de TI corporativa (CompTIA, Workday,

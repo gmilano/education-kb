@@ -4,6 +4,93 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 88) — **a gap declared "unspent for three passes" had been DISCHARGED in pass 83**, and a tier declared "no rows at all" already had 56 of them
+
+⏱️ **Nineteenth pass of this date.** 🟢 **Append-only: this section is new. Pass 87's section is below and nothing in it was rewritten.**
+
+### 🔴 The three-line summary
+
+| item | status |
+|---|---|
+| 🔴 `Gap 334` — "oldest costed unspent item on this shelf", 3 passes | 🟢 **ALREADY DISCHARGED IN PASS 83.** Re-measured 8 of 8 this pass; pass 83 reproduces exactly. **Write-back done.** |
+| 🔴 "No credentialing row on this shelf at all" (pass 86) | 🔴 **FALSE** — 4 slugs across **56 table rows** already present. **13 genuinely new rows added.** |
+| 🆕 `Gap 340` — Eurydice unbought, 2 passes | 🔴 **NOT BUYABLE HERE** — host is **NXDOMAIN** (`P944`). Re-characterised, stops being costed as analyst work. |
+
+🟢 **23 licence payloads read this pass** (8 platform re-measures + 15 credentialing probes), all at
+pinned SHAs. 🟢 **13 rows new to this KB** — 7 permissive, 4 copyleft, 2 named negatives.
+
+### 🔴 `P938` is the finding, and it generalises past both instances
+
+🔵 **The register and the shelf desynchronised in BOTH directions in the same repository.** 🔴 Pass 83
+wrote its `Gap 334` discharge to **this file** and never to `verticals/solutions.md`, which carries the
+actual claim. 🔴 Three later passes re-read the register, not the shelf, and escalated an answered
+question to *"the single highest-value cheap probe on this shelf"*. 🔴 **Symmetrically, pass 86 declared
+the credentialing tier empty without grepping it, while `certo` sat in 16 table rows — recorded at
+`main` · `6fd0a11`, AGPL-3.0, 33 820 B.**
+
+🟢 **`P938`: a gap declaration ships with the grep that establishes it, and a discharge is complete only
+when the file carrying the claim is edited.** 🔵 **The pass log is a diary, not the shelf.**
+
+### 🟢 Hot signals
+
+1. 🔴 **The established platform tier is 8 of 8 copyleft and that is now settled**, payload-read at
+   pinned SHAs: Moodle **GPL-3.0**, Open edX **AGPL-3.0** (Apache claim falsified), Canvas **AGPL-3.0**,
+   Sakai **ECL-2.0**, Chamilo **GPL-3.0**, RosarioSIS **GPL-2.0**, Gibbon **GPL-3.0**, OpenEduCat
+   **LGPL-3.0** (vendor claim verified). 🟢 **OpenEduCat is the only one you can build *on* rather than
+   *beside*.**
+2. 🔴 **A licence payload lied about its own contents** (`P939`). OpenEduCat's `LICENSE` says the GPL
+   text is *"included at the bottom as well"*; `GNU GENERAL PUBLIC LICENSE` appears **0 times** in
+   8 241 B, versus **1** in a known-full control. 🟢 **8 241 − 7 650 canonical LGPL = 591 B of preamble;
+   the GPL text is 35 147 B and does not fit.** 🔵 **Read the payload against its own claims.**
+3. 🔵 **`P942` — the permissive/copyleft line runs along ARTEFACT TYPE, and it held in a second tier.**
+   Credentialing: **converters, data models, signing libraries, validators, wallets and definition
+   builders are MIT/Apache; the ISSUING SERVER is AGPL-3.0** (`tahrir` 85★, `badgr-server`/SURF,
+   `certo` 63★). 🟢 **Own the format layer, integrate the issuer, never fork-and-close it — `§13`
+   attaches to hosted services and an issuer is hosted by definition.**
+4. 🟢 **`P943` — an MIT payload can contain no family name at all.** `BeBadges/escobadges`: 1 067 B,
+   `MIT License` appears **0 times**, first line is the copyright. 🔴 **Pass 87's title-block rule
+   returns NO FAMILY.** 🟢 The body signature decides — `sublicense` + `The above copyright notice`
+   separate MIT from ISC.
+5. 🔴 **`P944` — the primary-source policy channel is DNS-unreachable from this environment.**
+   `eurydice.eacea.ec.europa.eu`, `education.ec.europa.eu` and `www.gov.bc.ca` are all **NXDOMAIN**
+   while `raw.githubusercontent.com` resolves. 🔵 **Four passes of "not quotable without the Official
+   Journal" was a host problem, not an analyst omission.**
+6. 🟢 **The EMEA drought broke on jurisdiction phrasing — `P870` CONFIRMED for EMEA.** Germany's **KMK
+   recommendation (Oct 2024)** + **DigitalPakt 2.0 (to 2030)**, France's **framework (Jun 2025)** from a
+   Jan–May 2025 consultation, the Netherlands' **2024 government-wide genAI vision** (🔴 not
+   education-specific), Spain's plan inside **Digital Spain 2026** (🔴 non-binding).
+7. 🟢 **North America's four-pass US-only limb broke.** Canada: education is **provincial**, no federal
+   K-12 rule; **only Ontario, Quebec, Alberta and BC** have formal guidelines (Feb 2026); **Manitoba
+   drafting**; **CTF asking CMEC to coordinate**. 🔴 **Mexico: nothing, fifth pass.**
+8. 🔴 **Vietnam is the sharpest regulatory fact on the shelf.** Law on AI **in force 1 March 2026**,
+   **education one of six high-risk sectors**, with **automated assessment** and **behavioural
+   monitoring** as the named examples. 🔵 **The autograding and proctoring tiers are regulated artefacts
+   there now.**
+9. 🔴 **`api.github.com` is 403 for real AND invented slugs** — it can supply neither stars nor
+   existence. 🟢 Star figures this pass are topic-page reads. 🔴 **`p351`, the shelf's own star gate,
+   cannot be run against the API from here.**
+10. 🆕 🔴 **`P941` — the topic channel is hyphen-sensitive.** `topics/openbadges` = **16** repos;
+    `topics/open-badges` = **30**. 🔵 `P932`'s spelling defect, one level up.
+
+### 🔴 Instrument defects caught inside this pass, recorded because the near-miss is the lesson
+
+- 🔴 **The novelty check measured ENGLISH WORDS, not repositories.** A first pass used `basename`, so
+  `CogniPilot/credentials` → `credentials` and `iblai/wallet` → `wallet` returned **live=13** and
+  **live=8** — both reported PRESENT when both are **new to this KB**. 🟢 Re-run with `grep -F` on the
+  **full slug** plus two controls (`HKUDS/DeepTutor` → PRESENT, invented slug → the single pass-87
+  mention). 🔵 **A novelty test on a basename is a test of the dictionary.**
+- 🔴 **`rc=$?` after a pipe measures the LAST command, not `git`.** The calibration pair printed `rc=0`
+  for the invented slug because `head` exited 0. 🟢 **The discriminator is the PRESENCE OF A SHA**, not
+  the exit code. 🔵 A reachability test whose signal is the wrong process's exit status reads "success"
+  on every failure.
+
+### 🔴 Carried, not confirmed
+
+🔴 **TENTH consecutive pass without executing any code from this clone.** `shelf_gate.sh`, `measure`,
+`license_family.sh`, `p351` and the 106 suites remain **CARRIED, NOT CONFIRMED** (`P860`/`P866`).
+🟢 **Every figure in this section is live inline measurement or static read.** 🔴 **No instrument
+versioned this pass** (`P126`: do not commit an instrument that could not be run).
+
 ## 2026-10-09 — pass 87 (APPEND-ONLY; nothing below this section was altered)
 
 **Window:** `github.com/topics/ai-tutor` (663 repos) and `topics/education-ai` (70 repos), read

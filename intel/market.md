@@ -4,6 +4,179 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-eighth pass, 2026-10-09 — **the primary-source policy channel is DNS-UNREACHABLE from this environment**, which is the measured cause of `Gap 340` and of four passes of "the EU date is unsettled"; and the EMEA drought BREAKS on jurisdiction phrasing
+
+⏱️ **Nineteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 🆕 `P944` — three passes of "Eurydice unbought" was never an analyst omission. The host does not resolve.
+
+🟢 **Measured with a calibration pair rather than inferred (`P791`/`P798`):**
+
+| host | DNS | HTTP |
+|---|---|---|
+| `eurydice.eacea.ec.europa.eu` (`Gap 340`) | 🔴 **NXDOMAIN** | `000` |
+| `education.ec.europa.eu` (EU ethical guidelines) | 🔴 **NXDOMAIN** | `000` |
+| `www.gov.bc.ca` (BC K-12 AI guidance) | 🔴 **NXDOMAIN** | `000` |
+| `raw.githubusercontent.com` (control) | 🟢 **185.199.110.133** | 🟢 `301` |
+| `www.gnu.org` (licence canon) | — | 🔴 **CONNECT denied by egress policy** |
+
+🔵 **So the shelf's inability to quote a primary policy source is an ENVIRONMENT CONSTRAINT, not a
+sourcing choice.** 🟢 `WebSearch` reaches search-engine summaries of these documents and `WebFetch`
+reaches `github.com`; 🔴 **the government hosts themselves are unreachable.**
+
+🔴 **This re-characterises two standing items.** `Gap 340` ("Eurydice unbought, second pass") is **not
+buyable from here** and should stop being costed as an analyst action. 🔴 **And the four-pass
+"EU AI Act high-risk education date is unsettled, not quotable without the Official Journal" is
+UNRESOLVABLE in this environment** — the Official Journal cannot be fetched. 🟢 **It needs a fetch from
+a host that resolves, or a human.** 🔵 **Naming the mechanism stops the shelf paying for it a fifth time.**
+
+🟡 **And the date spread got WIDER, not narrower.** Sources this pass put the Annex III high-risk
+education obligations at **2 August 2026**; the shelf's standing best reading is **2 December 2027**; an
+**AI Omnibus amendment** is recorded in force **27 July 2026** with a **provisional agreement on
+amendments in May 2026**. 🔴 **Three candidate dates, all secondary.** 🟢 **Not quotable. Recorded as
+unsettled with the reason now measured.**
+
+### 🟢 Market size — still unusable as a single figure, now on 2026 bases
+
+| source | 2026 base | horizon | CAGR |
+|---|---|---|---|
+| Research and Markets | **USD 10.6 B** | USD 42.48 B (2030) | 41.5% |
+| Grand View Research | **USD 11.4 B** | USD 57.2 B (2033) | 25.9% |
+| The Business Research Company (higher-ed only) | **USD 4.09 B** | USD 13.46 B (2030) | 34.7% |
+| Technavio | — | +USD 3 367.8 M (2026–2030) | 45% |
+
+🔴 **The publishers disagree by roughly 4× depending on methodology, and by more at the horizon than at
+the base.** 🟢 **The shelf continues to quote the 35/100 maturity read rather than a dollar figure**, and
+🔵 **the structural facts below are what a client engagement can actually act on.**
+
+🟢 **Two structural figures that ARE usable, because they describe a gap rather than a market:**
+🔴 **68% of urban teachers have received no AI training** (aggregator-sourced, treat as indicative), and
+🔴 **UNESCO: >50% of teachers in Chile and Brazil already use these tools while <10% of institutions
+have formal guidelines.** 🔵 **Both say the same thing: adoption has outrun governance, and the
+governance layer is unbuilt.** 🟢 **That is a deliverable, not a trend.**
+
+🟢 **Vendor motion worth one line:** **Microsoft updated its Education AI Toolkit with agentic
+capabilities in April 2026** — the incumbent suite is moving from assistant to agent, which is the
+layer this shelf's permissive rows compete in.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The four-pass US-only limb BREAKS: Canada is now placed with named instruments.**
+
+- 🔴 **Education is provincial; there is no federal Canadian K-12 AI rule.** Ottawa has said explicitly
+  that education falls under provincial jurisdiction.
+- 🟢 **Only Ontario, Quebec, Alberta and British Columbia have released formal AI guidelines**
+  (McGill Policy Association analysis, **February 2026**).
+- 🟢 **British Columbia** publishes *"Considerations for Using AI Tools in K-12 Schools"* — 🔴 the host is
+  NXDOMAIN from here, so the document is **named but unread** (`P944`).
+- 🟡 **Manitoba's education minister says guiding principles are in development**; BC says districts set
+  their own policy while the province considers an advisory committee.
+- 🟢 **The Canadian Teachers' Federation is asking the federal government and CMEC** (Council of
+  Ministers of Education, Canada) **to support provincial guidance**, and a January 2026 *Policy Options*
+  piece argues for a pan-Canadian approach.
+- 🔴 **Mexico returned NOTHING for a fifth consecutive pass** — no federal or state education AI
+  guidance surfaced. 🔵 **Declared, not inferred: the North America limb is now US + Canada, and Mexico
+  is a genuine hole.**
+- 🔴 **US K-12 public: `P764` stands.** NYC's guidance puts grading, promotion, discipline, crisis
+  intervention, IEP/504 assembly and academic placement in the **prohibited** band. **No amount of
+  human-in-the-loop converts a prohibited use into a permitted one** — the grading pipeline is not
+  product there; the teacher-facing green band is.
+
+🟢 **Opportunity:** a **province-by-province policy conformance layer**. Four provinces with formal
+guidance, several drafting, no federal floor, and a national teachers' federation actively asking for
+coordination — 🔵 **that is a compliance-mapping engagement with a named buyer (CMEC) and a named
+boundary (provincial jurisdiction).** 🟢 `opensalt/OB3DefinitionWidget` (MIT, Public Consulting Group)
+is the one new permissive credentialing row with a North American institutional holder.
+
+### EMEA
+
+🟢 **The three-pass "zero named EMEA instruments" drought BREAKS — and `P870` is CONFIRMED for EMEA, not
+retired.** 🔴 The acronym phrasing returned corporate IT press for six passes. 🟢 **Asked by
+JURISDICTION, the same window returned named, dated instruments:**
+
+| jurisdiction | instrument | date |
+|---|---|---|
+| 🟢 **Germany** | **KMK** (Conference of Ministers of Education) recommendation to education administrations on AI in school processes | **October 2024** |
+| 🟢 **Germany** | **DigitalPakt 2.0** — school digital infrastructure funding | **runs to 2030** |
+| 🟢 **France** | **Framework for the use of AI in education** — AI permitted subject to the framework; from a national consultation held **Jan–May 2025** | **June 2025** |
+| 🟡 **Netherlands** | Government-wide vision on **generative AI** | **2024** — 🔴 **NOT education-specific; declared as such** |
+| 🟡 **Spain** | Strategic plan for AI in education, inside **Digital Spain 2026** | 🔴 **non-binding reference framework; no AI-specific education legislation** |
+| 🟢 **EU** | Commission **ethical guidelines on AI and data in teaching and learning** (updated) | — 🔴 host unreachable (`P944`) |
+
+🟢 **Named EMEA institutional operators, newly on the shelf:** **SURF** (Dutch national ICT cooperative
+for education and research — `edubadges/badgr-server`, AGPL-3.0) and **ESCO**, the EU skills
+classification (`BeBadges/escobadges`, MIT). 🟢 **`impierce`'s two Apache-2.0 Rust libraries target the
+European Learner Model (ELM)** — the EU's own credential data model.
+
+🔴 **Africa and the Middle East remain absent for a fourth pass.** 🟡 UAE and Saudi national AI
+strategies surface; 🔴 **no education instrument and no named education vendor.** 🔵 **On this shelf,
+"EMEA" still means "EU", and that is now a statement about the query's reach, not the region's activity.**
+
+🟢 **Opportunity:** **ELM/Europass-conformant credentialing** is the sharpest permissive opening on this
+shelf. 🔵 The EU has a named data model, a named skills taxonomy (ESCO), a national-consortium operator
+(SURF) already running an AGPL issuer, and **Apache-2.0 Rust libraries that already speak ELM**. 🟢 A
+studio can own the conversion, validation and wallet layer permissively and integrate the client's
+existing issuer.
+
+### APAC
+
+🟢 **`P937` holds: the acronym query works here in `extended` mode**, and returned dated statute.
+
+| jurisdiction | instrument | status |
+|---|---|---|
+| 🟢 **South Korea** | **AI Basic / Framework Act** + enforcement decree | 🟢 **in force 22 January 2026**; 🟡 **MSIT treats 2026 as a pilot year with a one-year penalty grace period** |
+| 🔴 **Vietnam** | **Law on AI** | 🟢 **in force 1 March 2026** — 🔴 **education is one of SIX high-risk sectors**, with **automated assessment** and **behavioural monitoring** given as the named examples |
+| 🟢 **Taiwan** | **AI Basic Act** | passed **December 2025** |
+| 🟢 **Australia** | **National AI Plan** + AI Safety Institute being established | **December 2025** |
+| 🟡 **China** | binding rules on algorithms, deep synthesis and generative AI | in force |
+| 🟡 **Singapore, Japan** | voluntary guidelines backed by existing law | — |
+
+🔴 **Vietnam is the one that changes engineering, and it is the most specific instrument on this shelf.**
+🔵 **"Automated assessment" and "behavioural monitoring" named as high-risk examples in a law already in
+force means the autograding and proctoring tiers are regulated artefacts in Vietnam from 1 March 2026** —
+🟢 which is a specification `P710` already knows how to build to, not a prohibition.
+
+🟡 **Korea's retreat still stands** (`P879`): AI textbooks lost official status in August 2026 after
+sub-30% adoption, on teacher-preparedness grounds. 🔵 **Hardening the horizontal law and retreating on
+the sectoral mandate in the same year — and the sectoral one is what a school purchase follows.**
+
+🟢 **Opportunity:** a **high-risk conformance pack for automated assessment**, built once against
+Vietnam's in-force list and the EU's Annex III and reused across both. 🔴 **Korea's grace period expires
+in January 2027** — a dated, closing window. 🔴 **APAC open-source supply remains Chinese-language-primary
+and individually maintained; no APAC institutional permissive credentialing row was found.**
+
+### LATAM
+
+🟢 **The region's defining number this pass is a governance gap, and it is quantified.**
+
+- 🔴 **UNESCO: more than 50% of teachers in Chile and Brazil already use AI tools, while fewer than 10%
+  of institutions in the region have formal guidelines.** 🔵 **That ratio is the engagement.**
+- 🟢 **UNESCO launched its Observatory on AI in Education for Latin America and the Caribbean**, in
+  **Santiago, 2026**.
+- 🟢 **CENIA (Chile)** coordinates **Latam-GPT**, and **signed a cooperation agreement with UNESCO's
+  Santiago regional office in early 2026** on AI literacy and ethical AI development.
+- 🟢 **Google.org + Raspberry Pi Foundation: USD 4.6 M** to expand AI education across Latin America —
+  **nine countries** including Brazil, Chile and Colombia, **target 1.25 M students by 2028**.
+- 🟢 **SoftServe + NVIDIA, AI Week LATAM 2026**, **29 September – 3 October 2026**, expanded from
+  Colombia to **Colombia, Mexico and Chile**; academic partners **Tecnológico de Monterrey** and
+  **Universidad Técnica Federico Santa María**.
+- 🟢 **Brazil holds 68.93% of Latin America's 898 active EdTech startups.**
+- 🔴 **Regulation is thin: no national AI-in-education rule surfaced for Brazil, Chile or Colombia.**
+  🟡 Brazil's PL 2338 and a Chilean AI bill were not reachable this pass and are **named as unprobed**,
+  not reported as absent.
+
+🔵 **LATAM mirrors the global platform picture:** the deployed school-management supply (the `portabilis`
+suite, `ipti/br.tag`) is AGPL-3.0 and GPL-2.0, and 🟢 `JuezUN/INGInious` (UNCode, AGPL-3.0) is the
+region's autograding deployment at Universidad Nacional de Colombia. 🟢 **The commercial layer is what
+the studio writes on top.**
+
+🟢 **Opportunity:** an **institutional AI-governance starter kit** — policy templates, an acceptable-use
+baseline, an assessment-integrity posture and a teacher-training path — aimed at the **>90% of
+institutions with no formal guidelines** while teacher adoption is already past half. 🔵 **UNESCO
+Santiago and CENIA are the credible co-signers, and Latam-GPT is the sovereign-model anchor.**
+
 ## Market map, 2026-10-09 — pass 87
 
 **Sourcing note.** Education-AI market sizing is **unusually unreliable**: for 2026 alone, published

@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-eighth pass, 2026-10-09 — **adoption has outrun governance, and the number that proves it is LATAM's**; the credentialing layer turns out to split permissive/copyleft along the artefact boundary
+
+⏱️ **Nineteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 Trend 1 — the governance deficit is now measurable, and it is the sellable one
+
+🔴 **UNESCO: >50% of teachers in Chile and Brazil use AI tools; <10% of institutions have formal
+guidelines.** 🔴 **Separately: 68% of urban teachers have had no AI training at all** (aggregator
+source, indicative). 🔵 **Two independent measurements of the same shape — the tools arrived, the
+policy did not.** 🟢 **This is the single most actionable trend on the shelf**, because it names a buyer
+(the institution), a deliverable (guidelines + training path + integrity posture) and a deadline
+(whenever the first incident lands).
+
+### 🟢 Trend 2 — regulation has moved from drafting to IN FORCE, and education is named
+
+🟢 **Three APAC statutes are now in force, not pending:** Korea's AI Basic/Framework Act
+(**22 Jan 2026**, with MSIT running 2026 as a pilot year and a **one-year penalty grace**), Vietnam's
+Law on AI (**1 Mar 2026**), Taiwan's AI Basic Act (**Dec 2025**). 🔴 **Vietnam names education as one of
+six high-risk sectors and gives automated assessment and behavioural monitoring as the examples.**
+
+🔵 **The trend is a change in kind: "AI in education is high-risk" has stopped being a European
+proposition.** 🟢 A conformance pack built once now amortises across the EU's Annex III and Vietnam's
+in-force list. 🔴 **And the EU's own education date remains unsettled across three candidate dates
+(2 Aug 2026 / 27 Jul 2026 Omnibus / 2 Dec 2027)** — 🟢 with the cause now measured: `P944`, the Official
+Journal host does not resolve from this environment.
+
+### 🔵 Trend 3 — the permissive/copyleft boundary runs along ARTEFACT TYPE, in two tiers now
+
+🟢 **Measured twice this pass, in unrelated tiers, and it is the same line both times:**
+
+| tier | permissive part | copyleft part |
+|---|---|---|
+| **platform / LMS** | 🔴 **none — 8 of 8 copyleft** | Moodle, Open edX, Canvas, Sakai, Chamilo, RosarioSIS, Gibbon, OpenEduCat |
+| **credentialing** | 🟢 converters, data models, signing libs, validators, wallets, definition builders | 🔴 **the ISSUING SERVER** — `tahrir`, `badgr-server`, `certo` |
+
+🔵 **`P942`: the thing that STORES or SERVES is copyleft; the thing that TRANSFORMS or VALIDATES is
+permissive.** 🟢 **Strategic read for the studio: own the format, the transformation and the client
+surface; integrate — never fork-and-close — the server.** 🔴 AGPL `§13` attaches to hosted services, and
+an issuer is by definition hosted.
+
+### 🟢 Trend 4 — the incumbent suite is going agentic
+
+🟢 **Microsoft shipped agentic capabilities into its Education AI Toolkit in April 2026.** 🔵 That moves
+the incumbent from assistant to agent in exactly the layer this shelf's permissive rows occupy. 🟢 **The
+differentiator stops being "we have a tutor" and becomes "ours is auditable, placeable and licence-clean"** —
+which is what 88 passes of payload reading is actually for.
+
+### 🟢 Trend 5 — sovereign and regional models keep consolidating
+
+🟢 **Latam-GPT (CENIA, Chile)** is now paired with a **UNESCO Santiago cooperation agreement (early
+2026)** and a **UNESCO Observatory for Latin America and the Caribbean launched in Santiago, 2026**.
+🔵 The regional-model story has acquired institutional scaffolding rather than just a model checkpoint.
+
+### 🔴 Counter-trend, recorded because it cuts against the shelf's own narrative
+
+🟡 **Korea hardened its horizontal law and RETREATED on its sectoral mandate in the same year**
+(`P879`): AI textbooks lost official status in **August 2026** after **sub-30% adoption** in March, on
+teacher-preparedness grounds. 🔵 **A school purchase follows the sectoral mandate, not the horizontal
+law.** 🟢 And it is the same root cause as Trend 1: **the constraint is teacher readiness, not model
+capability.**
+
+### 🔴 Channel observations
+
+- 🔴 **`P795` reproduces a SEVENTH time.** The generic agent query returned two commercial products
+  (Khanmigo, MagicSchool), a **February 2025** framework directory, and courses. 🟢 Topic pages returned
+  **13 rows new to this KB** in the same pass.
+- 🆕 🔴 **`P941`: the topic channel is hyphen-sensitive** — `topics/openbadges` (16 repos) and
+  `topics/open-badges` (30) are different buckets. 🔵 A channel buy on one spelling silently misses the other.
+- 🔴 **`api.github.com` is 403 for real AND invented slugs**, so star counts and existence both have to
+  come from elsewhere. 🟢 Stars here are topic-page reads dated 2026-10-09.
+
 ## Trends, 2026-10-09 — pass 87
 
 ### 1. 🟢 Governance has overtaken capability as the buying trigger

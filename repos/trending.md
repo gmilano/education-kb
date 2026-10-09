@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 88) — `topics/openbadges` + `topics/open-badges` bought; the channel is **hyphen-split**, and its licence boundary falls on artefact type
+
+⏱️ **Nineteenth pass of this date.** 🟢 **Append-only: this section is new; the history below it is unchanged.**
+
+🟢 **`Gap 352` DISCHARGED — the channel ledger has a named successor and it was bought in the same pass.**
+🟢 Selected by `P923` (a tag whose term has no use outside education/credentialing). 🟢 **`P935` applied:
+`topics/openbadges` is 16 repos on ONE page, so there is no artefact-type cliff to locate.**
+
+### 🆕 🔴 `P941` — the channel is hyphen-split, and one spelling hides the other
+
+| channel | repos reported | top row |
+|---|---|---|
+| `topics/openbadges` | **16** (single page) | `impierce/credential-converter`, 12★ |
+| `topics/open-badges` | **30** (20 shown + "Load more") | **`fedora-infra/tahrir`, 85★** |
+
+🔴 **The 85★ row — the most-starred repository in the whole credentialing channel — is ONLY in the
+hyphenated bucket.** 🔵 A pass that bought `topics/openbadges` alone would have concluded the tier tops
+out at 12★. 🟢 **GitHub topics are literal strings: buy both spellings, or state which one you bought.**
+
+### 🟢 Rows harvested — 15 probed, 13 new to this KB, 11 granted
+
+🟢 **Novelty established on the full slug against the live shelf AND `archive/`, with controls.**
+
+| Repo | ★ | Licence (payload, bytes) | ref · SHA | New? |
+|---|---|---|---|---|
+| [fedora-infra/tahrir](https://github.com/fedora-infra/tahrir) | **85** | 🔴 AGPL-3.0 (34 917 B) | 🔴 `develop` · `ddbff5c` | 🟢 **new** |
+| [impierce/credential-converter](https://github.com/impierce/credential-converter) | 12 | 🟢 **Apache-2.0** (11 356 B) | `main` · `f3ff22a` | 🟢 **new** |
+| [CoopCodeCommun/pyopenbadges](https://github.com/CoopCodeCommun/pyopenbadges) | 8 | 🟡 LGPL-2.1 (26 526 B) | `main` · `e38e189` | 🟢 **new** |
+| [activitypods/activitybadges](https://github.com/activitypods/activitybadges) | 6 | 🔴 **NO-PAYLOAD** (11 names) | 🔴 `master` · `194555c` | 🟢 **new** |
+| [impierce/digital-credential-data-models](https://github.com/impierce/digital-credential-data-models) | 5 | 🟢 **Apache-2.0** (11 357 B) | 🔴 **`dev`** · `6ca306e` | 🟢 **new** |
+| [BeBadges/escobadges](https://github.com/BeBadges/escobadges) | 5 | 🟢 **MIT** (1 067 B, 🔴 **no family name in payload**) | 🔴 `master` · `2f71bef` | 🟢 **new** |
+| [edubadges/badgr-server](https://github.com/edubadges/badgr-server) | 5 | 🔴 AGPL-3.0 (34 519 B) | 🔴 `develop` · `9419acc` | 🟢 **new** |
+| [brody-0125/signet-core](https://github.com/brody-0125/signet-core) | 1 | 🟢 **Apache-2.0** (11 358 B) | `main` · `5b3949d` | 🟢 **new** |
+| [opensalt/OB3DefinitionWidget](https://github.com/opensalt/OB3DefinitionWidget) | 1 | 🟢 **MIT** (1 080 B) | `main` · `896596a` | 🟢 **new** |
+| [wantaekchoi/vc-verifier](https://github.com/wantaekchoi/vc-verifier) | 1 | 🔴 **NO-PAYLOAD** (11 names) | `main` · `1cf593a` | 🟢 **new** |
+| [iblai/wallet](https://github.com/iblai/wallet) | 0 | 🟢 **MIT** (1 063 B) | `main` · `0be99d0` | 🟢 **new** |
+| [CogniPilot/credentials](https://github.com/CogniPilot/credentials) | 0 | 🟢 **Apache-2.0** (11 357 B) | `main` · `17b6821` | 🟢 **new** |
+| [hoijui/obadgen](https://github.com/hoijui/obadgen) | 0 | 🔴 AGPL-3.0 (34 020 B) | 🔴 `master` · `58989c1` | 🟢 **new** |
+| [Schroedinger-Hat/certo](https://github.com/schroedinger-Hat/certo) | 63 | 🔴 AGPL-3.0 (33 820 B) | `main` · `6fd0a11` | 🔴 already shelved |
+| [luisgf/openbadgeslib](https://github.com/luisgf/openbadgeslib) | 1 | 🟡 LGPL-3.0 (**7 650 B**) | 🔴 `master` · `e7736b6` | 🔴 already shelved |
+
+🟢 **`luisgf/openbadgeslib` earned its keep twice:** it is a credentialing row AND **its `LICENSE.txt` is
+a canonical standalone LGPL-3.0 at 7 650 B**, which became the control that proved `P939` after
+`gnu.org` was refused by the egress proxy. 🔵 **`P861`: a denial suspends execution, not knowledge.**
+
+### 🔴 `T1` pays again, and in a NEW shape
+
+🔴 **8 of 15 rows do not resolve to `main`** — and four are **`develop`/`dev`**, not `master`:
+`tahrir` (`develop`), `badgr-server` (`develop`), `edubadges-server` (`develop`),
+`digital-credential-data-models` (**`dev`**). 🔵 **A `main`-then-`master` fallback — the obvious fix —
+loses all four.** 🟢 `P793` stands: resolve the ref, pin the SHA.
+
+### 🟢 Byte observations
+
+🟢 **Five AGPL-3.0 payloads, five byte values: 34 917 / 34 519 / 34 519 / 34 020 / 33 820.** 🔵 **No
+licence family on this shelf has a single byte fingerprint**, now confirmed on a fifth family. 🟢 The two
+`edubadges` repos are byte-identical at 34 519 B (same payload, fork relation).
+
+🟢 **Against `Gap 355`'s worry, one positive datum:** `certo` re-measured **byte-identical at the same
+SHA** an earlier pass recorded (`6fd0a11`, 33 820 B). 🔵 **Cross-pass byte comparison is valid when the
+SHA also matches** — which is the condition `P929` should have stated instead of forbidding the
+comparison outright.
+
+### 🔴 Declared absent
+
+- 🔴 **No permissive credentialing row with APAC or LATAM institutional backing.** The placeable
+  permissive rows are **EMEA** (ESCO/EU, SURF) and **North America** (Public Consulting Group).
+- 🔴 **`educredentials/ec-issuer` grants nothing**, re-confirmed at `main` · `8bafc99` — and it is
+  **already on this shelf in 20 table rows**. 🔵 Well-documented and still unusable.
+
 ## 2026-10-09 — pass 87 (APPEND-ONLY; nothing below this section was altered)
 
 **Window:** GitHub topic channels `ai-tutor` (663) and `education-ai` (70), plus general AI-trending

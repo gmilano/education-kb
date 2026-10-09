@@ -4,6 +4,129 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-eighth pass, 2026-10-09 — two new recipes: a **permissive credentialing spine** that leaves the AGPL issuer alone, and a **high-risk assessment conformance pack** built once for Vietnam + EU Annex III
+
+⏱️ **Nineteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Every repo named below was payload-read at a pinned SHA this pass or an earlier one, and carries its
+licence and ref inline.** 🔴 **No row in these recipes is a secondary-source claim.**
+
+---
+
+### 🟢 `R58` — Permissive credentialing spine on top of a client's existing issuer (EMEA-first)
+
+🔵 **Why this shape:** `P942` — the credential **format** layer is MIT/Apache, the **issuing server** is
+AGPL-3.0. 🔴 **Forking the issuer into a closed hosted product trips `§13`.** 🟢 **So the recipe leaves the
+issuer alone and owns everything around it.**
+
+**Wiring, concretely:**
+
+1. 🟢 **Data model —** [`impierce/digital-credential-data-models`](https://github.com/impierce/digital-credential-data-models)
+   (**Apache-2.0**, 11 357 B, 🔴 **`dev`** · `6ca306e`). Rust types for **OB v3.0 + the European Learner
+   Model (ELM)**. 🔵 This is the typed spine; everything else converts into or out of it.
+2. 🟢 **Conversion —** [`impierce/credential-converter`](https://github.com/impierce/credential-converter)
+   (**Apache-2.0**, 11 356 B, `main` · `f3ff22a`). W3C VC ⇄ OpenBadges ⇄ ELM with a mapping CLI. 🟢 Same
+   authors as the models, so the seam is upstream-maintained rather than yours.
+3. 🟢 **Signing + selective disclosure —** [`brody-0125/signet-core`](https://github.com/brody-0125/signet-core)
+   (**Apache-2.0**, 11 358 B, `main` · `5b3949d`). W3C VC 2.0, EdDSA, ECDSA. 🔵 **Selective disclosure is
+   the feature that makes a credential privacy-safe for a minor** — a learner proves a competency without
+   revealing the transcript.
+4. 🟢 **Achievement definitions —** [`opensalt/OB3DefinitionWidget`](https://github.com/opensalt/OB3DefinitionWidget)
+   (**MIT**, 1 080 B, `main` · `896596a`). The authoring surface for what a badge actually asserts.
+5. 🟢 **Skills vocabulary —** [`BeBadges/escobadges`](https://github.com/BeBadges/escobadges)
+   (**MIT**, 1 067 B, 🔴 `master` · `2f71bef`) binds achievements to **ESCO**, the EU skills
+   classification. 🔵 **This is what makes the credential portable across EU employers instead of being
+   a logo.**
+6. 🟢 **Learner-held wallet —** [`iblai/wallet`](https://github.com/iblai/wallet) (**MIT**, 1 063 B,
+   `main` · `0be99d0`). Next.js/TypeScript; the client surface you brand.
+7. 🟢 **Verification —** [`TanimowoObaloluwaDavid/credential-lens`](https://github.com/TanimowoObaloluwaDavid/credential-lens)
+   (**MIT**, 1 080 B, `main` · `d34f262`). Zero-dependency, **works offline** — 🔵 which matters for a
+   verifier run by an employer or a border authority with no network guarantee.
+8. 🔴 **Issuer — INTEGRATE, DO NOT FORK.** [`edubadges/badgr-server`](https://github.com/edubadges/badgr-server)
+   (**AGPL-3.0**, 34 519 B, 🔴 `develop` · `9419acc`) if the client is in Dutch/EU higher education
+   (operator: **SURF**), or [`fedora-infra/tahrir`](https://github.com/fedora-infra/tahrir)
+   (**AGPL-3.0**, 34 917 B, 🔴 `develop` · `ddbff5c`, **85★**) as a reference issuer. 🟢 **Run it
+   unmodified behind its own API, or write your own issuer against the Apache-2.0 models in step 1.**
+
+🟡 **Licence posture:** steps 1–7 are **MIT/Apache-2.0** and compose into closed deliverables.
+🔴 Step 8 stays at arm's length across a network boundary. 🟢 **The whole spine except the issuer is
+Globant's.**
+
+⏱️ **Shape of effort:** 8–10 weeks to a credential issued, held and verified end-to-end, with the
+issuer integrated rather than built. 🔴 **Add time if the client has no issuer at all** — writing one
+against the Apache-2.0 models is a larger piece of work than the other seven steps combined.
+
+🔵 **Where it sells:** EMEA higher education and sector skills bodies — the EU supplies the data model
+(ELM), the taxonomy (ESCO) and a live consortium operator (SURF). 🟢 **North America variant:**
+`opensalt/OB3DefinitionWidget`'s holder is **Public Consulting Group**, a US firm already in this layer.
+
+---
+
+### 🟢 `R59` — High-risk assessment conformance pack, built once for Vietnam + EU Annex III
+
+🔵 **Why now:** 🔴 **Vietnam's Law on AI has been in force since 1 March 2026 and names education as one
+of six high-risk sectors, with *automated assessment* and *behavioural monitoring* as its examples.**
+🟢 The EU's Annex III says the same thing about education. 🔴 **Korea's penalty grace period expires in
+January 2027.** 🔵 **One pack, three jurisdictions, and the engineering is the same.**
+
+🔴 **Scope boundary first, because it is a prohibition and not a control:** `P764` — **in US public K-12
+(NYC guidance) grading, promotion, discipline, crisis intervention, IEP/504 assembly and academic
+placement are PROHIBITED uses. No human-in-the-loop converts a prohibited use into a permitted one.**
+🟢 **So this pack is for the jurisdictions that CONDITION the use (EU, Vietnam, Korea), and the US K-12
+deliverable is the teacher-facing green band instead.**
+
+**Wiring, concretely:**
+
+1. 🟢 **Autograding substrate —** [`autolab/Tango`](https://github.com/autolab/Tango) (**Apache-2.0**) or
+   [`Submitty/Submitty`](https://github.com/Submitty/Submitty) (**BSD-3-Clause**, 1 542 B,
+   `main` · `80d7d66`), both with named institutional operators (CMU, RPI). 🔴 **`P934`: `autolab/docker`,
+   Tango's own installer, grants NOTHING — deploy from your own manifests, not theirs.**
+2. 🟢 **Measurement layer —** `pyedmine` (**MIT**) for knowledge tracing + cognitive diagnosis, with
+   `py-irt` / `catsim` for IRT and adaptive testing. 🔵 **This is the layer that produces the evidence a
+   high-risk audit asks for: what was measured, on what model, with what uncertainty.**
+3. 🟢 **Human-review gate —** the conditioning regimes require a human decision point on the
+   consequential step. 🔵 **Build it as a state transition that cannot be skipped, not as a UI
+   suggestion** — an auditor reads the state machine, not the screen.
+4. 🟢 **Proctoring, only where lawful —** `SafeExamBrowser/seb-win-refactoring` (**MPL-2.0**, ETH Zürich
+   consortium). 🔴 **`Gap 349` stands: this tier has not been audited against EU Art. 5(1)(f)
+   emotion-inference prohibition.** 🟢 **Of the one row audited, `Proctoring-AI`, 0 of 7 functions infer
+   affect.** 🔴 **Do not ship affect inference; it is prohibited, not high-risk.**
+5. 🟢 **Credential out —** hand the result to `R58`'s spine so a passed assessment becomes a portable,
+   ESCO-bound, selectively-disclosable credential.
+
+🟡 **Deliverable that clients actually buy:** a **conformance dossier** — the model card, the
+measurement provenance, the human-review state machine, the data-retention posture, and the
+jurisdiction matrix (EU Annex III / Vietnam's six sectors / Korea's grace clock / NYC's red band).
+🔵 **The code is half of it; the dossier is what passes an audit.**
+
+⏱️ **Shape of effort:** 10–12 weeks, and 🟢 **it amortises** — the second jurisdiction is a matrix row,
+not a rebuild.
+
+---
+
+### 🟡 `R60` — LATAM institutional AI-governance starter kit
+
+🔵 **Why:** 🔴 **UNESCO measures >50% teacher adoption in Chile and Brazil against <10% of institutions
+having formal guidelines.** 🟢 **The gap is the product, and it is not primarily software.**
+
+1. 🟢 **Policy baseline:** acceptable-use, assessment-integrity posture, disclosure rules, data-retention
+   defaults. 🔵 Anchor it to **UNESCO's Observatory on AI in Education for Latin America and the
+   Caribbean** (launched Santiago, 2026) rather than a vendor framework.
+2. 🟢 **Teacher-readiness path** — 🔴 **the binding constraint, and Korea proves it**: AI textbooks lost
+   official status in August 2026 after sub-30% adoption *on teacher-preparedness grounds*. 🔵 **A
+   governance kit without a training path reproduces Korea's outcome.**
+3. 🟢 **Sovereign-model anchor:** **Latam-GPT**, coordinated by **CENIA** (Chile), which signed a
+   cooperation agreement with **UNESCO Santiago in early 2026** on AI literacy and ethical AI.
+4. 🟡 **Platform reality:** the region's deployed supply is copyleft — the `portabilis` suite (AGPL-3.0),
+   `ipti/br.tag` (GPL-2.0), `JuezUN/INGInious` / UNCode (AGPL-3.0, Universidad Nacional de Colombia).
+   🟢 **Build beside it; the studio's layer is the governance and the intelligence.**
+5. 🔴 **Regulatory state: no national AI-in-education rule surfaced for Brazil, Chile or Colombia.**
+   🟡 Brazil's **PL 2338** and a Chilean AI bill are **named as unprobed**, not reported as absent —
+   🔵 which means the kit should be written to be re-pointed, not hard-coded to today's vacuum.
+
+⏱️ **Shape of effort:** 6–8 weeks for the first institution, and 🟢 **most of it is reusable across the
+>90% of institutions in the same position.**
+
 ## Recipes, 2026-10-09 — pass 87
 
 Every repo named below was existence-checked with `git ls-remote` and licence-read from its payload at

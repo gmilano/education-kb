@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-eighth pass, 2026-10-09 — **the platform tier is settled at 8 of 8 copyleft, payload-read**, and the ERP/CRM question finally has a payload-backed answer instead of an asserted one
+
+⏱️ **Nineteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+🔴 **`Gap 334` was DISCHARGED IN PASS 83 and this file never said so.** 🟢 `P938` — the write-back is
+done here, with the datum re-measured this pass rather than copied forward (`P713`).
+
+### 🟢 The foundational platform tier — 8 of 8, payload-read at the pinned SHA
+
+🟢 **Method:** `git ls-remote --symref` for existence and default ref (negative control
+`invented-org-xyz/not-a-real-repo-999` correctly DENIED), payload from
+`raw.githubusercontent.com/<slug>/<SHA>/<file>`, bytes by `curl -w '%{size_download}'` (`P929`),
+family from the title block (`P419`), **never** from a body-wide `grep affero`.
+
+| Repo | Licence | bucket | default ref · SHA | bytes | Role |
+|---|---|---|---|---|---|
+| [moodle/moodle](https://github.com/moodle/moodle) | 🔴 **GPL-3.0** | 🔴 work-scoped, **no network clause** | 🟢 `main` · `f205347` | 35 147 (`COPYING.txt`) | The world's most-deployed LMS |
+| [openedx/edx-platform](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0** | 🔴 **work-scoped + §13 network** | `master` · `2e46ebd` | 35 136 | MOOC-scale platform. 🔴 **The Apache-2.0 claim is FALSIFIED** |
+| [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | 🔴 **AGPL-3.0** | 🔴 **work-scoped + §13** | `master` · `1c9f0bb` | 34 520 | HE incumbent in North America |
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 🟡 **ECL-2.0** | 🟢 **permissive-family, narrowed patent grant** | `master` · `5eef83d` | 11 120 | HE collaboration/learning environment |
+| [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | 🔴 **GPL-3.0** | 🔴 work-scoped | `master` · `0b2bc44` | 35 147 | LMS with strong LATAM/EMEA deployment |
+| [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** | 🔴 work-scoped | 🔴 **`mobile`** · `541c509` | 15 214 | **Student Information System** |
+| [GibbonEdu/core](https://github.com/GibbonEdu/core) | 🔴 **GPL-3.0** | 🔴 work-scoped | 🔴 **`v31.0.00`** · `1d83c2b` | 35 121 | School management platform |
+| [OpenEduCat/openeducat_erp](https://github.com/OpenEduCat/openeducat_erp) | 🟡 **LGPL-3.0** | 🟡 **file-scoped / linking** | 🔴 **`19.0`** · `1c95cef` | 8 241 | **LMS + SIS in one database**, on Odoo |
+
+🔴 **Not one MIT, Apache-2.0 or BSD row in the established platform tier.** 🟢 **Two rows are
+commercially different from the other six:**
+
+- 🟢 **`OpenEduCat` (LGPL-3.0) is the one established platform that can be built *on* rather than
+  *beside*** — LGPL permits linking, so an AI layer that links can stay closed while modifications to
+  OpenEduCat itself must be published. 🟢 **The vendor claim is now VERIFIED from the payload**, not
+  carried as an assertion.
+- 🟡 **`Sakai` (ECL-2.0) is in the permissive family** — but see `P940`: its patent grant is narrowed to
+  the contributor's own contributions, not the combination.
+
+### 🔴 🆕 `P939` — OpenEduCat's payload claims to include the GPL text and does not
+
+🟢 **Its own lines 5–7:** *"the text of the GPL is included at the bottom as well."* 🔴 **Measured: it is
+absent.** `GNU GENERAL PUBLIC LICENSE` appears **0 times** in 8 241 B, against **1** in a known-full
+GPL-3.0 control (`moodle` `COPYING.txt`). 🟢 **8 241 − 7 650 (canonical LGPL-3.0, control found in-shelf
+at `luisgf/openbadgeslib`) = 591 B of preamble.** 🔴 **The GPL text is 35 147 B. It does not fit.**
+
+🟢 **Action, not re-classification:** the grant is LGPL-3.0; 🔴 **but a redistributor must supply the
+GPL-3.0 text themselves, because upstream does not.** 🔵 **Read a payload against its own claims.**
+
+### 🟡 The LMS/ERP/CRM question — re-asked, and for the first time answered from payloads
+
+🟢 **Searched `open source platform education ERP CRM MIT Apache student information system` this pass.**
+🔴 **Result unchanged for the Nth pass: there is no education ERP or CRM under MIT or Apache-2.0.**
+🔵 **What changed is the evidence class:** the four candidates the query returns — **Odoo/OpenEduCat**
+(LGPL-3.0), **RosarioSIS** (GPL-2.0), **Moodle** (GPL-3.0), **Sakai** (ECL-2.0) — are now **payload-read
+at pinned SHAs** instead of asserted from vendor glossaries and comparison sites.
+
+🔴 **`.LRN` surfaced as "originally developed at MIT"** — 🔵 **that is an institution, not a licence**,
+and the shelf records it as unprobed rather than letting the string "MIT" do work it cannot do.
+
+🔴 **`P906` stands: no permissive open-source Student Information System exists.** 🟢 The permissive
+production-platform tier remains the four institutional rows (`Artemis` MIT, `Submitty` BSD-3,
+`okpy/ok` Apache-2.0, `Tango` Apache-2.0), none of which is an SIS.
+
+### 🟢 `T1` in this tier — 7 of 8, with three shapes no fallback catches
+
+🟢 Only `moodle/moodle` resolves to `main`. 🔴 `mobile` (feature-named), **`v31.0.00`** (a branch shaped
+like a tag) and **`19.0`** are version- or feature-named defaults. 🔵 **A `main`-then-`master` fallback
+still loses three of eight** — and a probe with `main` hardcoded loses seven.
+
 ## Curated shelf, 2026-10-09 — pass 87: **every open-source SIS on the shelf is copyleft**, and three licences live outside the root
 
 **Method.** Existence via `git ls-remote`; licence classified from the title block of the payload at

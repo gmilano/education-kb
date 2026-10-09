@@ -4,6 +4,78 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-eighth pass, 2026-10-09 — **`Gap 334` was DISCHARGED IN PASS 83 and this registry carried it as unspent for three more passes**; `Gap 352` discharges, `Gap 340` is re-characterised as unbuyable, and `P938` names the defect
+
+⏱️ **Nineteenth pass of this date.** 🔴 **Pass 87 wrote to the shelf but NOT to this file**, so pass 86's
+section sits immediately below this one. 🟢 **Registry continuity: pass 87's gap activity is folded
+forward here explicitly rather than left to look discharged.** **Append-only.**
+
+### 🔴 🆕 The registry defect this pass exists to fix — `P938`
+
+🔴 **Two declarations were checked against the shelf they describe. Both were wrong, in OPPOSITE directions.**
+
+| declaration | register said | shelf actually held |
+|---|---|---|
+| **`Gap 334`** | 🔴 *"CARRIED, UNSPENT — THIRD PASS. Oldest costed unspent item on this shelf."* → escalated to *"the single highest-value cheap probe"* → *"pass 87's FIRST action"* | 🟢 **DISCHARGED IN PASS 83**, 8 of 8 payload-read, recorded in `agents/trending.md` |
+| **credentialing tier** | 🔴 *"No credentialing row on this shelf at all — unchanged since pass 82"* | 🟢 **4 slugs across 56 table rows**: `certo` (16), `ec-issuer` (20), `openbadgeslib` (11), `credential-lens` (9) |
+
+🔵 **One sentence: pass 83 wrote its discharge to the pass LOG and never to `verticals/solutions.md`,
+which carried the claim — and three later passes re-read the register instead of the shelf.**
+
+🟢 **`P938` adopted: a gap declaration ships with the grep that establishes it, and a discharge is
+complete only when the file carrying the claim is edited. The pass log is a diary, not the shelf.**
+
+🔴 **Cost measured:** three passes of attention on an answered question, one of them naming it as the
+single highest-value probe available. 🟢 **Both are corrected in this pass's files, not merely reported.**
+
+### 🟢 Closed, discharged, re-characterised, carried
+
+| gap | status | evidence |
+|---|---|---|
+| **`Gap 334`** — platform/LMS licences contradicted | 🟢 **DISCHARGED (pass 83), RE-MEASURED, WRITTEN BACK** | 🟢 8 of 8 payload-read at pinned SHAs this pass; **pass 83 reproduces exactly**. Moodle GPL-3.0 · Open edX **AGPL-3.0** (Apache falsified) · Canvas AGPL-3.0 · Sakai **ECL-2.0** · Chamilo GPL-3.0 · RosarioSIS **GPL-2.0** · Gibbon GPL-3.0 · OpenEduCat **LGPL-3.0** (vendor claim verified). 🟢 Write-back done in `verticals/solutions.md` + `repos/foundations.md`. |
+| **`Gap 352`** — channel ledger has no named successor | 🟢 **DISCHARGED — named AND bought in the same pass** | 🟢 `topics/openbadges` + `topics/open-badges`, selected by `P923`. **15 probed, 13 new to this KB, 11 granted, 2 named negatives.** |
+| **credentialing tier empty** (pass 86 declared gap) | 🔴 **FALSIFIED**, and then **genuinely extended** | 🔴 The tier was never empty. 🟢 **13 new rows added, 7 permissive**, and `P942` gives the tier its architecture. |
+| **`Gap 340`** — Eurydice (EACEA) unbought | 🔵 **RE-CHARACTERISED — NOT BUYABLE FROM HERE** | 🔴 `eurydice.eacea.ec.europa.eu` is **NXDOMAIN**; so are `education.ec.europa.eu` and `www.gov.bc.ca`, while `raw.githubusercontent.com` resolves (`P944`). 🟢 **Stops being costed as analyst work.** Needs a reachable host or a human. |
+| **EU AI Act education date** — unsettled 4 passes | 🔵 **RE-CHARACTERISED — UNRESOLVABLE IN THIS ENVIRONMENT** | 🔴 Official Journal host unreachable (`P944`). 🔴 **Spread WIDENED to three candidate dates:** 2 Aug 2026 (Annex III, secondary), 27 Jul 2026 (Omnibus in force), 2 Dec 2027 (shelf's standing read). 🟢 Not quotable. |
+| **`Gap 335`** — knowledge-tracing layer least placeable | 🔴 **CARRIED, untouched — sixth pass** | Not probed. 🟢 Now the oldest untouched item on this shelf. |
+| **`Gap 353`** — the RIDER layer is unmapped | 🔴 **CARRIED** | 🟢 No new rider shape found this pass; the 15 credentialing payloads were all canonical-family or NO-PAYLOAD. 🔴 `kangwonlee/gemini-python-tutor` still needs counsel. |
+| **`Gap 354`** — six named negatives upstream-askable | 🔴 **CARRIED, and GROWN to eight** | 🆕 `activitypods/activitybadges` (6★, `master` · `194555c`) and `wantaekchoi/vc-verifier` (1★, `main` · `1cf593a`) both **NO-PAYLOAD in 11 names**. 🔴 `educredentials/ec-issuer` re-confirmed ungranted at `main` · `8bafc99`. |
+| **`Gap 355`** — pre-pass-84 byte figures of unknown method | 🟡 **ONE POSITIVE DATUM** | 🟢 `certo` re-measured **byte-identical at the same SHA** an earlier pass recorded (`6fd0a11`, 33 820 B). 🔵 **Cross-pass byte comparison IS valid when the SHA also matches** — the condition `P929` should have stated. |
+| **`Gap 349`** — proctoring tier capability audit | 🔴 **CARRIED, untouched** | Only `Proctoring-AI` audited (0 of 7 functions infer affect). Rest unaudited against Art. 5(1)(f). |
+| **`Gap 341`** / **`Gap 350`** / **`Gap 351`** / **`Gap 344`** / **`Gap 346`** | 🟢 carried as discharged/falsified per passes 85–86 | No change. |
+
+### 🆕 Opened this pass
+
+- 🆕 🔴 **`Gap 356` — the shelf has no systematic register→shelf reconciliation, and `P938` only names the rule.** 🟢 Two desynchronisations were found by hand this pass; 🔴 **nothing checks for a third.** 🟢 **Costed: one grep per open gap — for each gap, grep its subject slugs across the live shelf and report register-vs-shelf disagreement.** 🔴 **Cannot be versioned as an instrument until it can be RUN from this clone (`P126`), which is now 10 passes blocked.**
+- 🆕 🔴 **`Gap 357` — Mexico is a five-pass hole and should be queried differently.** 🔴 Five consecutive passes of nothing, including this pass's jurisdiction-phrased sweep. 🔵 **`P870` says the vocabulary is the variable:** Mexico's instruments would publish under **SEP** (Secretaría de Educación Pública) and in Spanish. 🟢 **Costed: one `extended` query naming SEP and Spanish-language terms, not "Mexico AI education".**
+- 🆕 🟡 **`Gap 358` — Brazil's PL 2338 and Chile's AI bill are NAMED BUT UNPROBED.** 🔴 Recorded as unprobed rather than reported absent, because `R60` is written to be re-pointed at them. 🟢 **Costed: two targeted queries.**
+- 🆕 🔴 **`Gap 359` — `api.github.com` cannot discriminate existence OR supply stars from here.** 🟢 Measured: **403 for `torvalds/linux` AND for the invented slug.** 🔴 **So `p351`, this shelf's own star-count gate, cannot be run against the API in this environment** — and every star figure on the shelf is a topic-page or web read. 🔵 **That is a fact about the oracle map (`P791`), and it should be recorded there once rather than rediscovered.**
+- 🆕 🔴 **`Gap 360` — the hyphen-split channel is unfinished.** 🟢 `topics/open-badges` reports **30** repos and showed **20**; 🔴 **10 are behind "Load more" and were never read.** 🟢 **Costed: one more page read.**
+
+### 🟢 Probes adopted this pass
+
+| probe | statement |
+|---|---|
+| **`P938`** | 🟢 **A gap declaration ships with the grep that establishes it; a discharge is complete only when the file carrying the claim is edited.** 🔴 Measured twice in this repository, in opposite directions: `Gap 334` declared open while discharged, credentialing declared empty while holding 56 table rows. 🔵 **The pass log is a diary, not the shelf.** |
+| **`P939`** | 🔴 **A licence payload can make a FALSE claim about its own contents, and arithmetic catches it.** `OpenEduCat` says the GPL text is *"included at the bottom as well"*; `GNU GENERAL PUBLIC LICENSE` → **0** occurrences in 8 241 B vs **1** in a known-full control. 🟢 8 241 − 7 650 canonical LGPL = **591 B** of preamble; the GPL text is **35 147 B**. 🟢 **Grant stands (LGPL-3.0); the redistribution obligation does not travel with the file.** 🔵 **Read a payload against its own claims, not only against a family.** |
+| **`P940`** | 🟡 **ECL-2.0 is byte-ADJACENT to Apache-2.0 and commercially narrower.** `sakai` 11 120 B vs Apache's 11 356–11 358 B on this shelf — **237 B apart**, inside byte-fingerprint range. 🔴 Its patent grant is narrowed to the contributor's own contributions, not the combination. 🔵 **"Apache-ish" is the wrong read for a client buying patent peace.** |
+| **`P941`** | 🔴 **The GitHub topic channel is HYPHEN-SENSITIVE.** `topics/openbadges` = **16** repos; `topics/open-badges` = **30**; different buckets, partial overlap. 🔴 **The channel's 85★ top row exists only in the hyphenated bucket** — a single-spelling buy would have concluded the tier tops out at 12★. 🔵 `P932`'s spelling defect, one level up at the channel. |
+| **`P942`** | 🔵 **The permissive/copyleft line runs along ARTEFACT TYPE, and it held in a second tier.** Credentialing: format/transform/validate/hold layers are **MIT/Apache**; the **ISSUING SERVER** is **AGPL-3.0** (`tahrir`, `badgr-server`, `certo`). 🟢 **Own the format layer, integrate the issuer, never fork-and-close it — `§13` attaches to hosted services and an issuer is hosted by definition.** 🔵 Platform tier is the degenerate case: 8 of 8 copyleft, because it is all *serve*. |
+| **`P943`** | 🟢 **An MIT payload can contain NO family name at all.** `BeBadges/escobadges`: 1 067 B, `MIT License` appears **0 times**, first line is the copyright. 🔴 **Pass 87's title-block rule returns NO FAMILY.** 🟢 Body signature decides: `sublicense` + `The above copyright notice` separate MIT from ISC. 🔵 **`P871`'s third blind-spot shape — a payload that states the grant without ever naming it.** |
+| **`P944`** | 🔴 **The primary-source policy channel is DNS-UNREACHABLE from this environment.** `eurydice.eacea.ec.europa.eu`, `education.ec.europa.eu`, `www.gov.bc.ca` → **NXDOMAIN**; `www.gnu.org` → CONNECT denied; `raw.githubusercontent.com` → **resolves**. 🔵 **Four passes of "not quotable without the Official Journal" and three of "Eurydice unbought" were a HOST problem, not an analyst omission.** 🟢 Measured with a calibration pair, never inferred. |
+
+### 🔴 Declared gaps this pass, so silence is not read as coverage
+
+- 🔴 **Mexico: nothing, FIFTH consecutive pass** — see `Gap 357` for the vocabulary fix.
+- 🔴 **Africa and the Middle East absent for a FOURTH pass.** 🟡 UAE/Saudi national AI strategies surface; 🔴 no education instrument, no named education vendor. 🟢 **On this shelf "EMEA" still means "EU"** — now a statement about the query's reach, not the region.
+- 🟢 **But the three-pass "zero named EMEA instruments" drought BROKE** on jurisdiction phrasing: Germany (KMK, Oct 2024; DigitalPakt 2.0 to 2030), France (framework, Jun 2025), Netherlands (2024 genAI vision, 🔴 not education-specific), Spain (Digital Spain 2026, 🔴 non-binding). 🟢 **`P870` CONFIRMED for EMEA, not retired.**
+- 🟢 **North America's four-pass US-only limb BROKE:** Canada placed with named instruments (provincial jurisdiction, ON/QC/AB/BC formal guidelines, BC's K-12 document, Manitoba drafting, CTF→CMEC). 🔴 BC's document is **named but unread** — host NXDOMAIN.
+- 🔴 **No permissive education or credentialing row with APAC or LATAM institutional backing**, second pass. Permissive placements are EMEA (ESCO, SURF) and North America (Public Consulting Group).
+- 🔴 **Market sizing remains unusable as a single figure:** 2026 bases span **USD 4.09–11.4 B** across four publishers, disagreeing by ~4× and by more at the horizon than at the base. 🟢 The shelf quotes the **35/100 maturity** read.
+- 🔴 **`P795` reproduces a SEVENTH time** — the generic agent query returned two commercial products, a Feb-2025 directory and courses. 🟢 Topic pages returned 13 new rows in the same pass.
+- 🔴 **TENTH consecutive pass without executing any code from this clone.** `shelf_gate.sh`, `measure`, `license_family.sh`, `p351` and the 106 suites stay **CARRIED, NOT CONFIRMED** (`P860`/`P866`). 🔴 **No instrument versioned this pass** (`P126`). 🔵 **`Gap 356`'s reconciliation check is the first instrument this shelf actually needs and cannot write.**
+- 🔴 **`Gap 335` (knowledge tracing) is now the oldest untouched item on this shelf — sixth pass.** 🟢 Named here rather than quietly carried, which is the failure `P938` was just adopted to prevent.
+
 ## 🟢 Eighty-sixth pass, 2026-10-09 — **two gaps DISCHARGE, four open, and `Gap 334` is carried UNSPENT for a third pass and named as pass 87's first action**
 
 ⏱️ **Eighteenth pass of this date.** Pass 85 wrote to the shelf but not to this file; pass 82's section sits below this one. **Append-only.** 🟢 **Registry continuity: passes 83–85's gap activity is folded forward here explicitly rather than left to look discharged.**

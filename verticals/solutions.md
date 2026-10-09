@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-eighth pass, 2026-10-09 — **the `Gap 334` WRITE-BACK: this is the file that carried the stale claim for three passes**, and the LMS tier is now payload-read 8 of 8
+
+⏱️ **Nineteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+🔴 **Pass 86's row in this file read:**
+*"Moodle · Open edX · Canvas · Sakai · OpenEduCat · Chamilo | **ASSERTED, CONTRADICTED, UNVERIFIED** |
+unknown | — | `Gap 334`, unspent 3 passes"* — 🔴 **and the answer had existed since pass 83.** 🟢 `P938`:
+a discharge is complete only when the file carrying the claim is edited. **Corrected here, re-measured.**
+
+### 🟢 The LMS / platform tier — SETTLED, payload-read at pinned SHAs
+
+| Platform | Licence (payload) | copyleft bucket | Region evidence | Can Globant build on it? |
+|---|---|---|---|---|
+| [moodle/moodle](https://github.com/moodle/moodle) | 🔴 **GPL-3.0** (35 147 B, `COPYING.txt`, `main` · `f205347`) | 🔴 work-scoped, **no network clause** | Global | 🟡 **Beside it** — plugins/integrations; no embedding into closed code |
+| [openedx/edx-platform](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0** (35 136 B, `master` · `2e46ebd`) | 🔴 **work-scoped + §13 network** | Global | 🔴 **Beside it only** — §13 attaches to a hosted service |
+| [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | 🔴 **AGPL-3.0** (34 520 B, `master` · `1c9f0bb`) | 🔴 **work-scoped + §13** | North America HE incumbent | 🔴 **Beside it only** |
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 🟡 **ECL-2.0** (11 120 B, `master` · `5eef83d`) | 🟢 **permissive family** | HE, global | 🟢 **Yes** — 🔴 but see `P940`, the patent grant is narrowed |
+| [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | 🔴 **GPL-3.0** (35 147 B, `master` · `0b2bc44`) | 🔴 work-scoped | EMEA + LATAM deployment | 🟡 **Beside it** |
+| [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** (15 214 B, 🔴 `mobile` · `541c509`) | 🔴 work-scoped | **SIS** | 🟡 **Beside it** |
+| [GibbonEdu/core](https://github.com/GibbonEdu/core) | 🔴 **GPL-3.0** (35 121 B, 🔴 `v31.0.00` · `1d83c2b`) | 🔴 work-scoped | School management | 🟡 **Beside it** |
+| [OpenEduCat/openeducat_erp](https://github.com/OpenEduCat/openeducat_erp) | 🟡 **LGPL-3.0** (8 241 B, 🔴 `19.0` · `1c95cef`) | 🟡 **file-scoped / linking** | **LMS + SIS, one DB**, on Odoo | 🟢 **ON it** — LGPL permits linking |
+
+🔴 **8 of 8 copyleft. Not one MIT, Apache-2.0 or BSD row.** 🟢 **Two rows are the commercially useful
+exceptions, and both were previously asserted rather than read:**
+
+1. 🟢 **`OpenEduCat` — LGPL-3.0, vendor claim VERIFIED.** 🔵 **The only established platform you can
+   build *on* rather than *beside*:** an AI layer that **links** to it may stay closed; modifications to
+   OpenEduCat itself must be published. 🟢 **And it is the only LMS+SIS in a single database**, which is
+   why it keeps being the most commercially interesting row in the tier.
+2. 🟡 **`Sakai` — ECL-2.0, in the permissive family.** 🔴 **`P940`: 11 120 B sits 237 B below Apache-2.0's
+   11 356–11 358 B on this shelf**, close enough for a byte-fingerprint to call it an Apache variant.
+   🟢 Its title block states the difference: *"the Apache 2.0 license, modified to change the scope of the
+   patent grant in section 3"*. 🔴 **The patent grant covers the contributor's own contributions, not the
+   combination** — material for a client who is buying patent peace.
+
+### 🔴 🆕 `P939` — OpenEduCat's licence file does not contain what it says it contains
+
+🟢 Its `LICENSE` states the GPL text is *"included at the bottom as well."* 🔴 **Measured against a
+two-sided control, it is absent:** `GNU GENERAL PUBLIC LICENSE` → **0** occurrences in OpenEduCat's
+8 241 B, **1** in a known-full GPL-3.0 (`moodle` `COPYING.txt`). 🟢 **8 241 − 7 650 B canonical LGPL-3.0
+= 591 B of preamble; the GPL text is 35 147 B.**
+
+🟢 **Engagement action:** the grant is **LGPL-3.0** and unambiguous — 🔴 **but if the client redistributes
+OpenEduCat (or a derivative appliance/image), they must ship the GPL-3.0 text themselves, because
+upstream does not.** 🔵 **A one-line fix in a compliance checklist, and invisible to any single-layer
+pre-flight.**
+
+### 🟢 The permissive production-platform tier — unchanged, and still the place to build
+
+| Platform | Licence | Region | Operator |
+|---|---|---|---|
+| 🟢 **`ls1intum/Artemis`** | 🟢 **MIT** | 🟢 EMEA | TU München, `artemis.tum.de` |
+| 🟢 **`Submitty/Submitty`** | 🟢 **BSD-3-Clause** (1 542 B, `main` · `80d7d66`) | 🟢 North America | RPI |
+| 🟢 `okpy/ok` | 🟢 Apache-2.0 — 🔴 multi-grant (`P916`) | 🟢 North America | UC Berkeley |
+| 🟢 `autolab/Tango` | 🟢 Apache-2.0 — 🔴 installer ungranted (`P934`) | 🟢 North America | Carnegie Mellon |
+| 🟢 **`JuezUN/INGInious` (UNCode)** | 🔴 AGPL-3.0 | 🟢 **LATAM** | U. Nacional de Colombia |
+| 🟡 `SafeExamBrowser/seb-win-refactoring` | 🟡 MPL-2.0 | 🟢 EMEA | ETH Zürich consortium |
+| 🟡 `Gego-K12/gegok12` | 🟢 MIT | 🟢 APAC (deployment, `P933`) | 🔴 unmaintained; 23 school forks |
+
+🔴 **`P906` stands: there is still no permissive open-source Student Information System.** 🟢 The four
+permissive production platforms are **assessment/coursework** systems, not SIS or LMS.
+
+### 🟢 🆕 The credentialing layer — and its boundary is the architectural point (`P942`)
+
+🟢 **A customisable platform tier the shelf did not have as a *tier*.** 🔴 **Its licence split is the
+exact inverse of the LMS tier, and it falls on ARTEFACT TYPE:**
+
+| layer | licence | rows |
+|---|---|---|
+| 🟢 **Format / transform / validate / hold** | 🟢 **MIT & Apache-2.0** | `impierce/credential-converter` (Apache-2.0), `impierce/digital-credential-data-models` (Apache-2.0, **ELM**), `brody-0125/signet-core` (Apache-2.0, selective disclosure), `CogniPilot/credentials` (Apache-2.0), `iblai/wallet` (MIT), `opensalt/OB3DefinitionWidget` (MIT), `BeBadges/escobadges` (MIT, **ESCO**), `credential-lens` (MIT) |
+| 🔴 **ISSUE / serve** | 🔴 **AGPL-3.0** | `fedora-infra/tahrir` (85★), `edubadges/badgr-server` + `edubadges-server` (**SURF**), `Schroedinger-Hat/certo` (63★) |
+| 🟡 Python libs | 🟡 LGPL-2.1 / LGPL-3.0 | `CoopCodeCommun/pyopenbadges`, `luisgf/openbadgeslib` |
+
+🔵 **So the buildable boundary is sharp and it is good news: Globant can own the credential format,
+conversion, signing, validation and wallet layer under MIT/Apache, and integrate the client's issuer.**
+🔴 **Do not fork `tahrir` or `badgr-server` into a closed hosted product — `§13` attaches to hosted
+services, and an issuer is hosted by definition.** 🟢 **Run the issuer unmodified, or write one.**
+
+🟢 **`escobadges` and `impierce`'s ELM models make the EMEA path concrete:** the EU has a named
+credential data model (**ELM**), a named skills taxonomy (**ESCO**), and a national-consortium operator
+already running an AGPL issuer (**SURF**).
+
 ## Platform shelf, 2026-10-09 — pass 87
 
 Real, deployed systems that can be customised with AI on top — the education analogue of Odoo for ERP.
