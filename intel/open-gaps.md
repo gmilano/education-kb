@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-second pass, 2026-10-09 — **two gaps close, one is re-characterised, two open**, and the four-pass topic standing item is DISCHARGED
+
+⏱️ **Fourteenth pass of this date.** Pass 81 wrote to this file; this section sits above it and supersedes only the claims it names. **Append-only.**
+
+### 🟢 Closed, re-characterised, carried
+
+| gap | status | evidence |
+|---|---|---|
+| **`Gap 338`** — star counts unmeasurable (HTML 403, API out of scope) | 🟢 **CLOSED** | `P886`: the same `github.com/topics` URL is **403 via `curl`** and **200 via `WebFetch`**, with star counts. Calibration pair separates (real topic → 20 rows; invented topic → "NO REPOSITORIES LISTED"). Every row this pass carries a star figure. |
+| **`Gap 339`** — no APAC education-specific instrument comparable to Annex III | 🟢 **CLOSED, PREMISE FALSIFIED** | Vietnam **Decision 33/2026/QD-TTg** (signed 30 Jun 2026, effective **15 Aug 2026**) under **Law 134/2025/QH15** + **Decree 142/2026/ND-CP**: four education uses high-risk; content labelling; **72-hour** incident clock. Two obligations the AI Act lacks. |
+| **`Gap 337`** — no DE/FR/ES ministry guidance on AI Act high-risk for schools | 🟡 **RE-CHARACTERISED** | Narrow claim **HOLDS**: none of the four instruments found reads Annex III for schools. Broad implication **FALSE**: Germany (KMK, Oct 2024), Italy (MIM, Nov 2025), Ireland (Dec 2025), Denmark have published school AI guidance. 🔴 France, Spain, Netherlands still bare. |
+| **`Gap 336`** — no permissively licensed learner simulator | 🟡 **RE-CHARACTERISED, refused with named negatives** | The layer EXISTS and is **ungranted**: `AdaptaLearn`, `RL-for-Intelligent-Tutoring-Systems`, `energy-storage-ITS`, `tecmap` — all four probed at 5 filenames + manifests + README, **zero grants**. 🔵 A licensing gap, not a research gap — and these four are upstream-askable. |
+| **`Gap 334`** — platform-tier licences asserted by contradicting sources | 🔴 **CARRIED, UNSPENT** | Probe budget went to the four-pass topic standing item instead (11 granted rows). 🟢 `P890` + `P888` cut its cost from 7 probes to **7 single-fetch title reads**. 🔴 **Now the oldest costed unspent item on this shelf.** |
+| **`Gap 335`** — knowledge-tracing layer least placeable | 🔴 **CARRIED, untouched** | Not probed this pass. |
+
+### 🟢 The pass-77 standing item is **DISCHARGED**
+
+🔴 Carried verbatim through passes 77–81: *"19 of 39 repos on `topics/intelligent-tutoring-system` unread."* 🟢 **Finished: 39 of 39**, via two `WebFetch` reads (20 + 19). 🟢 **30 repos new to the shelf, 11 granted and published, 10 named negatives recorded.** 🔵 **The channel was never exhausted — it was never read**, and it outperformed every other channel bought this pass.
+
+### 🆕 Opened this pass
+
+- 🆕 **`Gap 340` — Eurydice (EACEA) is unbought.** 🟢 All four ministry instruments above came from it **incidentally**. 🔴 It is the authoritative per-country index for European education policy and this shelf has never queried it deliberately. 🔵 **Costed: one page per jurisdiction**, and it would have closed `Gap 337` eighty passes ago.
+- 🆕 **`Gap 341` — APAC rows are PLACEABLE but not GRANTABLE**, which inverts the shelf's standing complaint. 🟢 `ZQR1101/xueyoujing-companion` placed APAC on strong single-language evidence (1 608 CJK chars, **77/152** lines, all three `README_en` variants **404**) — 🔴 **and it grants nothing.** 🔵 For five passes the shelf recorded "no APAC row placeable by artefact evidence"; the real blocker is **licensing**.
+
+### 🔴 Declared gaps this pass, so silence is not read as coverage
+
+- 🔴 **Canada and Mexico returned nothing again** — the North America limb is **US-only for a second consecutive pass**.
+- 🔴 **Africa and the Middle East remain absent from the EMEA sweep** — EU material only, second pass running.
+- 🔴 **No new row placed in LATAM by artefact evidence.** Pass 78's `Jeanikt/tutor-ai-agent` is still the only artefact-grounded LATAM agent on this shelf.
+- 🔴 **Vietnamese primary texts not retrieved.** Decision 33 / Decree 142 detail is from English secondary summaries with **conflicting dates** (Decree 142 effective 1 May vs AI Law 1 Mar 2026; one article calls these "the July 2026 rules" against a 30 Jun signing). 🔵 The Vietnam limb of `P892` must be built against the official text.
+- 🔴 **`mskljns/Intelligent_Tutor_ComprehensionProblems_DAiSEE` (0★) unexamined** — near-duplicate of the probed `mskljns/ComprehensionProblems_DAiSEE` (5★), same owner and dataset. Recorded as unexamined rather than assumed identical.
+- 🔴 **No credentialing row on this shelf at all**, while 1EdTech calls digital credentials a core 2026 mechanism. Thinnest adjacency on the shelf.
+- 🔴 **Fifth consecutive pass with no code from this clone executed** — `shelf_gate.sh`, `measure`, `license_family.sh`, `p351` and the 106 suites stay **CARRIED, NOT CONFIRMED** (`P860`). 🔴 No instrument versioned this pass (`P126`).
+- 🔴 **Every `standard`-mode regional verdict on this shelf is now conditioned on an unrecorded variable** (`P887`). 🔵 Not wrong — conditioned. The six passes that built `P870` did not record their search mode.
+
+### 🟢 Probes adopted this pass
+
+| probe | statement |
+|---|---|
+| **`P886`** | "The channel is 403" was a claim about **one egress path**. The same GitHub HTML URL is 403 via `curl` and 200 via `WebFetch`. Four passes omitted star counts from a surface that was reachable all along. |
+| **`P887`** | Regional search is **MODE-SENSITIVE**. Same query, `standard` → zero education instruments for EMEA; `extended` → dated, named instruments. This reconciles six passes of `P870` with pass 81's `P881`: both right, under different modes. **Buy regional work in `extended`.** |
+| **`P888`** | `P800`'s holder tier is **structurally unavailable on three of five licence families**: Apache-2.0 canonical has only a `"Licensor"` *definition*; GPL/AGPL payloads put the **FSF's** copyright first. Measured on this pass's 11 granted rows: holder readable on 6, of which 5 are personal names `P800` forbids → **1 of 11 placeable by holder**. |
+| **`P889`** | A **14-byte** body **is** the 404 (control `C2`). A "README" found at 14 B is no README. Asserting the byte count distinguishes *ungranted with a README* from *no README at all* — different conclusions are licensed by each. |
+| **`P890`** | The shelf's AGPL/GPL discriminator was a **precedence bug**: `GNU GENERAL PUBLIC` is a **substring** of `GNU AFFERO GENERAL PUBLIC LICENSE`, so an ordered `grep` let the later test overwrite the truth. Correct discriminator is the **title line + Affero occurrence count**, measured: **~15 = AGPL-3.0, exactly 3 = GPL-3.0** (GPL-3.0's §13 names Affero). Third classifier defect found in this shelf's own instruments after `P845` and `P854`. |
+
+---
+
 ## 🟢 Seventy-ninth pass, 2026-10-09 — the **four-pass "channel exhausted" verdict is OVERTURNED** and its cause named (`P865`); the capability boundary is re-measured NARROWER than pass 78 published (`P866`); `P867`–`P869` adopted; `Gap 334` opens
 
 ⏱️ **Eleventh pass of this date.** 🟢 **Registry continuity:** pass 77 wrote the section below this one; pass 78 did **not** write to this file, so its standing items are folded forward here explicitly rather than left to look discharged.

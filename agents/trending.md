@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 82) — the **four-pass standing item is DISCHARGED** (39 of 39 read), and the regional channel's six-pass defect is finally explained: it is the **search MODE**
+
+⏱️ **Fourteenth pass of this date.** 🟢 **Append-only: this section is new. Pass 81's section is immediately below and nothing in it was rewritten.**
+
+### 🟢 The standing item, carried since pass 77, is **DISCHARGED**
+
+🔴 Passes 77–81 carried this item verbatim: *"Unread and named rather than left implicit: … 19 of 39 repos on `topics/intelligent-tutoring-system`. Next pass finishes both before buying any new channel."* 🔴 **Four passes deferred it, because the channel was priced as 403.**
+
+🟢 **Finished this pass: 39 of 39.** Two `WebFetch` reads — page 1 (20 rows) and `?page=2` (19 rows) — exhaust the topic.
+
+| | rows | already on the shelf | 🆕 new | granted | ungranted |
+|---|---|---|---|---|---|
+| page 1 | 20 | 8 | **12** | 6 | 6 |
+| page 2 | 19 | 1 | **18** | 5 probed → 5 granted | 4 probed → 4 ungranted |
+| **total read** | **39** | 9 | **30** | **11 published** | **10 named negatives** |
+
+🔵 **The channel was never exhausted; it was never READ.** 🟢 **Yield on the unread half was the best of any channel this shelf has bought**: 11 granted rows from 39 listed repos, against the generic agent query's repeated zero.
+
+### 🔴 `P887` — the regional channel is MODE-SENSITIVE, and that reconciles six passes of `P870` with pass 81's `P881`
+
+🟢 **This is a controlled A/B: the SAME query string, the same pass, two search modes.**
+
+Query, run verbatim from the brief: `AI education EMEA 2026 adoption regulation players`
+
+| mode | what came back | education instruments |
+|---|---|---|
+| `standard` | CompTIA *"five tech trends shaping EMEA's IT strategy"*, Workday *"EMEA Sets Itself Apart on AI Adoption"* (**2023**), a Bandwidth-Cavell enterprise study, `gend.co` predictions | 🔴 **ZERO** — the engine itself returned *"I didn't find sources specifically about AI in education across EMEA in 2026"* |
+| `extended` | EU AI Act enforcement from **2 Aug 2026**; AI omnibus adopted **Jun 2026**, in force **27 Jul 2026**; European AI-in-education market **$2.64 B (2026) → $8.0 B (2030) @ 31.9 %**; Finland/Estonia/Netherlands leading K-12; UK **£4 M** lesson-planning programme; OECD *2026 Digital Education Outlook*; **134 bills across 31 US states** | 🟢 **MANY, dated and named** |
+
+🔵 **`P887`: the acronym was never the whole defect.** 🔴 **`P870` measured "EMEA returns corporate IT trade press" across six passes and was RIGHT — in `standard` mode.** 🟢 **`P881` measured the opposite on pass 81 and was also right — in a different mode.** 🔵 **The shelf recorded a contradiction for a whole pass because it was recording the query and not the MODE.**
+
+🟢 **Operational consequence, and it is the useful part:** regional work is bought in `extended` mode. 🔴 **Every `standard`-mode regional verdict on this shelf is now suspect**, including the six passes that built `P870` — not wrong, but conditioned on a variable nobody wrote down.
+
+🟡 **And the jurisdiction remedy still works and is still cheaper:** `ministry of education artificial intelligence guidance schools Germany France Spain Netherlands 2026` in **`standard`** mode returned **four named ministry instruments** (see `intel/market.md`). 🔵 So there are two independent fixes — change the mode, or change the noun — and the shelf now knows both.
+
+### 🟢 New this pass, by channel
+
+| channel | bought | listed | 🆕 unshelved | granted |
+|---|---|---|---|---|
+| `topics/intelligent-tutoring-system` via `WebFetch` | 🟢 **yes** | 39 | 30 | **11** |
+| `top open source AI agents education 2026 github MIT` (brief, `standard`) | 🟢 yes | ~9 links | 🔴 **0 education instruments** | 0 |
+| `github trending education AI 2026` (brief, `standard`) | 🟢 yes | ~9 links | 🔴 **0 education instruments** | 0 |
+
+🔴 **`P795` reproduces for a fifth pass.** Both generic agent queries returned **courses ABOUT AI** — `microsoft/ai-agents-for-beginners`, `rohitg00/ai-engineering-from-scratch`, `pguso/agents-from-scratch`, Karpathy's *Zero to Hero*, *Made With ML* — plus third-party star-count aggregators that **contradict each other** (one listing claims 180 k★ for an agent, sourced to a single site). 🔵 **That asset class is teaching material, not instruments that DO education**, and this shelf has now measured it five passes running. 🟢 **`github.com/trending` likewise stays the wrong channel for this vertical**, consistent with the pass-77 finding.
+
+### 🟢 Hot signals — what the full topic read actually showed
+
+1. 🟢 **Failure-cause routing is the new idea.** [`sohan1611/BloodCoded_Agentic`](https://github.com/sohan1611/BloodCoded_Agentic) (MIT, 1★) routes on **why** a learner failed, not what they answered. 🔵 Every adaptive tutor on this shelf before it branches on correctness; this one branches on diagnosis.
+2. 🟢 **The audit layer has arrived, pre-registered.** [`bydeng01/ability-levels-audit`](https://github.com/bydeng01/ability-levels-audit) (MIT, 4★) and [`bydeng01/conv-vs-ped-tutor`](https://github.com/bydeng01/conv-vs-ped-tutor) (MIT, 2★) ship **frozen data and pre-registration** for LLM-judge audits of tutor behaviour, including **answer leakage**. 🔵 Continues the measurement layer rebuilt in passes 80–81 — these score the scorer.
+3. 🟢 **MCP is now a tutoring substrate, twice.** [`znecho9/knowledge-forest-mcp`](https://github.com/znecho9/knowledge-forest-mcp) (Apache-2.0) joins `tutor-mcp` and `leap-framework` — 🔵 **three MCP-native rows on one topic page** is a pattern, not a coincidence.
+4. 🔴 **Reinforcement learning is the ungranted layer.** Four RL/curriculum-adaptation tutors on this topic (`AdaptaLearn`, `RL-for-Intelligent-Tutoring-Systems`, `energy-storage-ITS`, `tecmap`) — **all four grant nothing**. See `Gap 336` in `intel/market.md`.
+5. 🟡 **The long tail is real and it is zero-star.** 19 of 39 rows have **0★**; the whole page-2 cohort does. 🔵 Useful as evidence of what people are building, not as evidence of adoption.
+6. 🔴 **One near-duplicate pair, flagged not merged:** `mskljns/ComprehensionProblems_DAiSEE` (5★, page 1) and `mskljns/Intelligent_Tutor_ComprehensionProblems_DAiSEE` (0★, page 2) — same owner, same dataset, two slugs. 🟢 Only the first was probed; the second is recorded as unexamined rather than assumed identical.
+
+### 🟡 Star counts return, with their provenance stated
+
+🟢 **`Gap 338` closes** (see `agents/top.md`): the `WebFetch` HTML read publishes star counts, so every row this pass carries one. 🔵 **These are rendered-page figures, not API figures**, and they are labelled that way on the rows. 🔴 **This shelf has carried pipeline-inflated star counts before**, which is why the provenance is written next to the number rather than assumed.
+
+---
+
 ## 🟢 2026-10-09 (pass 81) — the channel that paid is **the adjacent regulated niche**, and `P870`'s acronym verdict **does not reproduce**
 
 ⏱️ **Thirteenth pass of this date.** 🟢 **Append-only: this section is new. Pass 80's section is immediately below and nothing in it was rewritten.**

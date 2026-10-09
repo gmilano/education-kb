@@ -4,6 +4,103 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-second pass, 2026-10-09 — **seven new agent rows WITH STAR COUNTS**, `Gap 338` closes on a second egress path, and `P800`'s holder tier turns out to be structurally unavailable on **three of five** licence families
+
+⏱️ **Fourteenth pass of this date.** Pass 81 closed earlier today with seven rows and no star figures. **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 Capability boundary, re-measured — and it MOVED
+
+| what was attempted | result |
+|---|---|
+| inline `curl` to `raw.githubusercontent.com`, one per repo | 🟢 **ALLOWED** — every licence figure below comes from these |
+| inline compound command with a `for` loop over repos | 🟢 **ALLOWED**, re-confirmed a third pass running |
+| `git ls-remote --symref` per repo | 🟢 **ALLOWED** — every ref · sha below comes from these |
+| `curl` to `github.com` HTML (`/topics`, `/trending`, `/search`) | 🔴 **403** — all three surfaces, bodies of 378 / 249 / 249 B |
+| `curl` to `api.github.com` | 🔴 **403**, 378 B |
+| **`WebFetch` to the same `github.com/topics` URL** | 🟢 **200 — the page renders, with STAR COUNTS** |
+| any script from this clone (`lib/`, `measure`, the 106 suites) | 🔴 **not attempted** — passes 78–81 measured it DENIED |
+
+🔴 **Fifth consecutive pass without running the board:** `shelf_gate.sh`, `measure`, `license_family.sh`, `p351` and the 106 suites stay **CARRIED, NOT CONFIRMED**. 🔴 **No new instrument versioned** — `P126` forbids committing an instrument that could not be run.
+
+### 🟢 `P886` — the GitHub HTML channel is NOT closed; there are TWO egress paths and only one of them is 403
+
+🟢 **Measured on the same URL in the same pass:**
+
+| path | `github.com/topics/intelligent-tutoring-system` |
+|---|---|
+| inline `curl` | 🔴 **403**, 378 B |
+| `WebFetch` | 🟢 **200** — 20 repositories, descriptions **and star counts** |
+
+🟢 **And the WebFetch channel's calibration pair separates**, which is the only thing that makes it usable (`P873`):
+
+| control | result |
+|---|---|
+| real topic (`intelligent-tutoring-system`) | 🟢 **20 repositories listed** |
+| invented topic (`zzz-invented-topic-nonexistent-82`) | 🟢 **"NO REPOSITORIES LISTED"** — no silent fabrication |
+
+🔵 **`P886`: "the channel is 403" was a statement about ONE egress path, not about the channel.** 🔴 **Four passes priced the HTML surface as unavailable and omitted star counts on every row.** 🟢 The surface was reachable the whole time by a tool this session already had.
+
+### 🟢 `Gap 338` **CLOSES** — star counts are measurable again, and every row below carries one
+
+🔴 Pass 81 omitted star counts on all seven rows and declared `Gap 338`, correctly, rather than carrying an unmeasured number (`P351`). 🟢 **The HTML channel reached by `WebFetch` publishes them.** 🟢 Every figure below is read from that channel; 🔵 **it is a rendered-page read, not an API read, so it is recorded as a channel figure and not as a verified count** — the API channel remains outside this session's repository scope.
+
+### 🟢 Added this pass — seven rows, every licence payload-read inline at the resolved ref
+
+| agent | grant (payload-read inline) | bytes | ref · sha | ★ | region | what it is |
+|---|---|---|---|---|---|---|
+| 🆕 [`bydeng01/ability-levels-audit`](https://github.com/bydeng01/ability-levels-audit) | 🟢 **MIT** | 1 154 | `master` · `b5cec75` | 4 | 🔴 **unplaced** (`P800`) | Code and frozen data from a **pre-registered LLM-judge audit** of whether a tutor actually adapts to stated ability levels, with an arXiv reference. 🔵 **The strongest row this pass for the rebuilt measurement layer:** it is an instrument that audits a tutor, pre-registered, with its data frozen — the thing an engagement needs when a client asks "does the adaptation work?" |
+| 🆕 [`bydeng01/conv-vs-ped-tutor`](https://github.com/bydeng01/conv-vs-ped-tutor) | 🟢 **MIT** | 1 150 | `main` · `eb9f6e4` | 2 | 🔴 **unplaced** (`P800`) | Companion pre-registered audit: conversational vs pedagogical tutor **helpfulness and ANSWER LEAKAGE**. 🔵 Answer leakage is the failure mode a school buyer actually fears and almost nobody measures. 🟢 Same holder group as the row above. |
+| 🆕 [`ujwal2311/proofpilot`](https://github.com/ujwal2311/proofpilot) | 🟢 **MIT** | 1 078 | `main` · `95bcb39` | 0 | 🔴 **unplaced** (`P800`) | **Step-level** feedback on propositional-logic arguments, with **BKT** underneath. 🟢 Step-level (not answer-level) feedback plus a mastery model is the `OATutor` shape in a narrower domain, permissively licensed. |
+| 🆕 [`sohan1611/BloodCoded_Agentic`](https://github.com/sohan1611/BloodCoded_Agentic) | 🟢 **MIT** | 1 104 | `main` · `078612b` | 1 | 🔴 **unplaced** (`P800`) | **LangGraph** tutoring agent that changes its objective according to **WHY** a learner is failing, rather than what they got wrong. 🔵 Failure-cause routing is the single most composable idea on this shelf this pass, and it is 1 100 bytes of MIT on a graph runtime this shelf already carries. |
+| 🆕 [`khayyam-math/khayyam-math`](https://github.com/khayyam-math/khayyam-math) | 🟢 **MIT** | 1 079 | `main` · `230e4e4` | 4 | 🔴 **unplaced** (`P800`) | **Voice-narrated maths figures generated from one-line prompts**, with a live tutor attached. 🟢 The narration-plus-figure pairing is an accessibility surface, which is a procurement requirement in several jurisdictions rather than a feature. |
+| 🆕 [`znecho9/knowledge-forest-mcp`](https://github.com/znecho9/knowledge-forest-mcp) | 🟢 **Apache-2.0** | 10 863 | `main` · `1fa9da6` | 0 | 🔴 **unplaced** — 🔵 **and the payload CANNOT place it** (`P888`) | **Local-first MCP server** for personal knowledge management and learning memory. 🟢 Second MCP-native row on this shelf after `tutor-mcp`; local-first means the learner model never leaves the device, which is the `Phonos` privacy posture applied to memory instead of audio. |
+| 🆕 [`ocala/peolatsi`](https://github.com/ocala/peolatsi) | 🟢 **Apache-2.0** | 11 357 | `master` · `6857180` | 1 | 🔴 **unplaced** — 🔵 **payload cannot place it** (`P888`) | Prototype **virtual electronics lab** monitored by a **CTAT**-based tutoring layer. 🟡 Prototype-grade, and recorded as such; it is on the shelf because the lab-plus-tutor pairing is rare and because CTAT provenance means a real ITS authoring tool behind it. |
+
+🔴 **Trap `T1` paid AGAIN, and harder than the platform tier:** 🟢 **four of twelve** new candidates resolved to **`master`**, not `main` — `ability-levels-audit`, `peolatsi`, `AVLTree`, `logicits`. 🔵 **33% off-`main` in the research stratum**, against the platform tier's two-of-twelve. 🔴 A hardcoded `main` would have written four of these down as non-existent.
+
+### 🔴 `P888` — `P800`'s holder tier is structurally unavailable on THREE of FIVE licence families, and this pass measured it on its own rows
+
+🟢 **`P800`'s top tier is "holder named in the payload." Measured across this pass's eleven granted rows:**
+
+| family | rows | first `Copyright` line in the payload | holder usable? |
+|---|---|---|---|
+| **MIT** | 5 | 🟢 the project's own (`Shuyi Fan, Boyuan Deng…`, `Arash Kermani Kolankeh`, `CVS Ujwal, Keshav Raj`, `Sohan Mandal and contributors`) | 🟢 **yes** |
+| **Apache-2.0** canonical | 2 | 🔴 `"Licensor" shall mean the copyright owner…` — **a definition, not a holder** | 🔴 **no** |
+| **AGPL-3.0** | 2 | 🔴 one reads `Copyright (C) 2007 Free Software Foundation, Inc.` | 🟡 **only if the appendix was filled in** |
+| **GPL-3.0** | 1 | 🔴 `Copyright (C) 2007 Free Software Foundation, Inc.` | 🔴 **no** |
+| **ISC** (manifest rung) | 1 | 🔴 no holder field at all | 🔴 **no** |
+
+🔴 **So the holder line is readable on 6 of 11 rows — and of those 6, FIVE are personal names, which `P800` itself forbids reading a region from.** 🟢 **Net: ONE of eleven rows is placeable by holder**, and it is placeable by French prose in a manifest rather than by a holder at all.
+
+🔵 **`P888`: `P885` said a holder line can belong to another PROJECT. The stronger statement is that on Apache and GPL-family payloads the first holder line belongs to the LICENCE DOCUMENT, and no project holder exists in the payload at all.** 🔴 **This is the structural reason this shelf's placement rate is low**, and it is not a research failure: three of five families simply do not carry the evidence `P800`'s top tier asks for. 🟢 **Recorded so later passes stop spending probes looking for a holder that cannot be there.**
+
+### 🔴 `P889` — a 14-byte README is the 404 BODY, and only a byte assertion tells them apart
+
+🟢 **`LeParisien-dev/EduAI`'s `README.md` fetch returned a body of exactly 14 B** — byte-identical to this shelf's standing 404 control (`C2`: invented path → 404, body **14 B**).
+
+🔴 **A pass that read the body without asserting its size would have logged "README present, zero licence matches" → ungranted-with-a-README.** 🟢 **The truth is there is no README at all.** 🔵 **`P889`: `P873` says assert the fetch then assert the match; this pass measured WHY — the 404 body is short enough to pass for a thin file.** The two states differ in what they license a later pass to conclude: a README with no grant is a declaration of nothing, while no README is a bare absence.
+
+### 🔴 Ten named negatives — probed at every rung this shelf knows, granting nothing
+
+🟢 All were fetched successfully and then found empty, per `P873` — 9 licence filenames, then 7 manifests, then `README.md`:
+
+| row | ★ | rungs probed | result |
+|---|---|---|---|
+| [`luffycodes/Tutorbot-Spock-Phys`](https://github.com/luffycodes/Tutorbot-Spock-Phys) | 9 | 9 filenames → 404; 7 manifests → 404; `README.md` → 🔴 **404** | 🔴 **ungranted, and no README either** (`P889`) |
+| [`gautamyadavs/AVLTree`](https://github.com/gautamyadavs/AVLTree) | 8 | same ladder; `README.md` → 🟢 **200, 443 B** | 🔴 **zero** `licen[sc]e`/`MIT`/`Apache`/`GPL` matches |
+| [`mskljns/ComprehensionProblems_DAiSEE`](https://github.com/mskljns/ComprehensionProblems_DAiSEE) | 5 | same ladder; `README.md` → 🟢 **200, 3 187 B** | 🔴 **zero** matches |
+| [`HyeonahKang/LatentVariableModel-IntelligentTutor`](https://github.com/HyeonahKang/LatentVariableModel-IntelligentTutor) | 4 | same ladder; `README.md` → 🔴 **404** | 🔴 **ungranted, no README** |
+| [`tianshuo/trainingllm`](https://github.com/tianshuo/trainingllm) | 2 | 9 filenames → 404; 🟢 `package.json` **200** | 🔴 **no `license` key in the manifest** |
+| [`ZQR1101/xueyoujing-companion`](https://github.com/ZQR1101/xueyoujing-companion) | 2 | same ladder; `README.md` → 🟢 **200, 8 708 B** | 🔴 **zero** matches across 8.7 kB |
+| [`010Ankushsharma/AdaptaLearn`](https://github.com/010Ankushsharma/AdaptaLearn) | 0 | 5 filenames → 404; 🟢 `requirements.txt` **200** | 🔴 **no licence key** |
+| [`munzahmed07/RL-for-Intelligent-Tutoring-Systems`](https://github.com/munzahmed07/RL-for-Intelligent-Tutoring-Systems) | 0 | same; 🟢 `requirements.txt` **200** | 🔴 **no licence key** |
+| [`gokhanmeteerturk/energy-storage-ITS`](https://github.com/gokhanmeteerturk/energy-storage-ITS) | 0 | same; `README.md` → 🟢 **200, 764 B** | 🔴 **zero** matches |
+| [`tobydragon/tecmap`](https://github.com/tobydragon/tecmap) | 0 | same; 🟢 `pom.xml` **200** | 🔴 **no licence declaration in the POM** |
+
+🔵 **Six of the ten are research code, and the four `requirements.txt`/`pom.xml` cases are the same stratum `T1` already showed defaults to `master`.** 🟢 They are written down by name because an unrecorded negative is indistinguishable from an unexamined repo, and the next pass would re-buy them.
+
+---
+
 ## 🟢 Eighty-first pass, 2026-10-09 — **seven new agent rows**, the licence ladder gets a **FOURTH** blind spot, and `P870`'s regional verdict **does not reproduce**
 
 ⏱️ **Thirteenth pass of this date.** Pass 80 closed earlier today with five rows. **Append-only: this section is new; nothing below it was rewritten.**

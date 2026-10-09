@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 82) — **the whole topic, 39 of 39, with star counts restored**, and the trending channel's real shape is a zero-star long tail
+
+⏱️ **Fourteenth pass of this date.** 🟢 **Append-only: pass 81's section sits immediately below, unchanged.**
+
+### 🟢 What came in, and from which channel
+
+🟢 **`Gap 338` closes** — star counts are measurable again via the `WebFetch` read of the GitHub HTML channel (`P886`). 🔵 **Every figure in this section is a rendered-page figure, labelled as such**, not an API count.
+
+| repo | grant (payload-read) | bytes | ref · sha | ★ | signal |
+|---|---|---|---|---|---|
+| 🆕 [`bydeng01/ability-levels-audit`](https://github.com/bydeng01/ability-levels-audit) | 🟢 **MIT** | 1 154 | `master` · `b5cec75` | **4** | 🟢 Pre-registered LLM-judge audit of ability-level adaptation, **frozen data** + arXiv ref. The audit tier's anchor row. |
+| 🆕 [`khayyam-math/khayyam-math`](https://github.com/khayyam-math/khayyam-math) | 🟢 **MIT** | 1 079 | `main` · `230e4e4` | **4** | 🟢 Voice-narrated maths figures from one-line prompts, live tutor attached. Accessibility surface. |
+| 🆕 [`bydeng01/conv-vs-ped-tutor`](https://github.com/bydeng01/conv-vs-ped-tutor) | 🟢 **MIT** | 1 150 | `main` · `eb9f6e4` | **2** | 🟢 Pre-registered audit of tutor helpfulness and **answer leakage**. |
+| 🆕 [`sohan1611/BloodCoded_Agentic`](https://github.com/sohan1611/BloodCoded_Agentic) | 🟢 **MIT** | 1 104 | `main` · `078612b` | **1** | 🟢 **LangGraph tutor that re-routes on WHY the learner failed** — the most composable new idea this pass. |
+| 🆕 [`ocala/peolatsi`](https://github.com/ocala/peolatsi) | 🟢 **Apache-2.0** | 11 357 | `master` · `6857180` | **1** | 🟡 CTAT-monitored virtual electronics lab. Prototype-grade, recorded as such. |
+| 🆕 [`ujwal2311/proofpilot`](https://github.com/ujwal2311/proofpilot) | 🟢 **MIT** | 1 078 | `main` · `95bcb39` | **0** | 🟢 Step-level BKT feedback on propositional-logic proofs. |
+| 🆕 [`znecho9/knowledge-forest-mcp`](https://github.com/znecho9/knowledge-forest-mcp) | 🟢 **Apache-2.0** | 10 863 | `main` · `1fa9da6` | **0** | 🟢 Local-first MCP learning-memory server — third MCP-native row on this topic. |
+| 🆕 [`braivo/braivo`](https://github.com/braivo/braivo) | 🟡 **AGPL-3.0** | 34 561 | `main` · `51a80df` | **0** | 🟡 White-label platform turning educational content into AI tutors — see `verticals/solutions.md`. Copyleft, flagged. |
+| 🆕 [`avps82/mentar`](https://github.com/avps82/mentar) | 🟡 **AGPL-3.0** | 34 523 | `main` · `9d9d43c` | **0** | 🟡 **Offline-first, local** AI tutor for children. Copyleft, flagged. |
+| 🆕 [`IgorFonck/logicits`](https://github.com/IgorFonck/logicits) | 🟡 **GPL-3.0** | 35 149 | `master` · `54325a2` | **1** | 🟡 Natural-deduction tutor (propositional + first-order logic). Copyleft, flagged. |
+| 🆕 [`LeParisien-dev/EduAI`](https://github.com/LeParisien-dev/EduAI) | 🟡 **ISC** — 🔴 **manifest rung ONLY, and probably an `npm init` default** | n/a | `main` · `d4ddd58` | **2** | 🔴 See the caveat below before using this row. |
+
+🟢 **Eleven granted rows. Ten named negatives are recorded in `agents/top.md`** rather than dropped.
+
+### 🔴 The `EduAI` row is published with its grant DOUBTED, and the doubt is the finding
+
+🟢 **Measured:** no licence file at any of 9 filenames; `package.json` **200**, carrying `"license": "ISC"`.
+
+🔴 **But the same manifest carries `"private": true`, an empty `"author": ""`, and empty `"keywords": []`.** 🔵 **`ISC` is precisely what `npm init` writes when the field is left untouched** — a fact this shelf already recorded. 🔴 **So the manifest rung returned a token that is indistinguishable from a default nobody chose.**
+
+🟢 **The row is published, flagged, and NOT counted toward the permissive tier.** 🔵 **This is the manifest rung's weakness stated as a measurement, not a rule:** `P871`'s third rule treats the manifest as authoritative when the file layer is silent, and here the manifest is authoritative for a value that was never authored. 🔴 **An `ISC` in a `private: true` workspace root with an empty author is a default until an upstream confirms it.**
+
+### 🟢 Region placement — `EduAI` is the ONLY row this pass the payload can place
+
+| row | evidence actually read | tier |
+|---|---|---|
+| `LeParisien-dev/EduAI` | 🟢 **French prose inside the manifest itself**: `"Choisis l'app à lancer (frontend ou backend)"`, `"Build global des apps"` | 🟢 **EMEA — medium-strong** (payload artefact, not a name) |
+| `ZQR1101/xueyoujing-companion` | 🟢 README **zh-primary and single-language**: 1 608 CJK chars vs 1 632 ASCII letters, **77 of 152 lines** carry CJK, and 🟢 **all three `README_en` variants return 404** → language set size = **one** (`P874`) | 🟡 **APAC — medium**, 🔴 **but the repo grants NOTHING** |
+| all nine other granted rows | 🔴 personal-name holders (`P800` forbids), Apache "Licensor" definitions, or FSF boilerplate (`P888`) | 🔴 **unplaced** |
+
+🔴 **Declared, because silence would read as coverage:** **no new row placed in LATAM or APAC by artefact evidence this pass.** 🔵 **But the shape of the failure has changed and it is worth the line:** `xueyoujing-companion` IS placeable in APAC on strong single-language evidence and is simply **ungranted**. 🟢 **The APAC blocker on this shelf is licensing, not placement evidence** — `Gap 341`.
+
+### 🟡 What the full-topic read says about the channel itself
+
+```
+topics/intelligent-tutoring-system — 39 of 39 rows read (pass 82)
+  ≥1 000 ★ :  1   (fsrs4anki, 4.1k — already shelved)
+   100-999 ★:  2   (education-agent-skills 837, gen-mentor 133 — already shelved)
+    10-99 ★ :  5   (Tutorbot-Spock 56, tutor-mcp 44, feedbacksystem 24, LTLTutor 12 — shelved)
+     1-9  ★ : 12
+        0  ★ : 19   ← the whole page-2 cohort
+```
+
+🔴 **Half the topic is zero-star.** 🔵 That is evidence of what people are BUILDING, not of what anyone has adopted, and the two must not be read as the same signal. 🟢 **The useful consequence: this channel's value is idea discovery, not adoption ranking** — `BloodCoded_Agentic`'s failure-cause routing is worth more at 1★ than a 4 000★ flashcard scheduler is to an engagement.
+
+🔴 **The brief's two discovery queries returned zero education instruments again** (`P795`, fifth consecutive pass): `microsoft/ai-agents-for-beginners`, `rohitg00/ai-engineering-from-scratch`, `pguso/agents-from-scratch`, *Made With ML*, Karpathy's *Zero to Hero* — **courses about AI**, not instruments that do education. 🔵 Third-party star aggregators also **contradicted each other** on the same repos, which is why no figure from them entered this shelf.
+
+---
+
 ## 🟢 2026-10-09 (pass 81) — **two measurement-layer repos and one Apache platform**, and the licence ladder's fourth blind spot is found on a trending row
 
 ⏱️ **Thirteenth pass of this date.** 🟢 **Append-only: pass 80's section sits immediately below, unchanged.**

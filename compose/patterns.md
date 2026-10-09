@@ -4,6 +4,101 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-second pass, 2026-10-09 — **three new recipes, and the first one is the artefact four regulators now demand and none of them specifies**
+
+⏱️ **Fourteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Every repo named below is on this shelf with a payload-read licence.** 🔴 **Rows verified in THIS pass carry their ref and SHA inline; rows verified in an earlier pass are marked `(pass 81)` and their SHA is NOT re-asserted here** — a grant claim is only as good as the commit it was read at (`P880`), and this pass did not re-read them.
+
+---
+
+### 🟢 `P891` — **The oversight evidence pack** (primary region: 🟢 **North America**; reusable in EMEA and LATAM)
+
+🔵 **The problem, stated as a buyer states it:** Maryland and Oklahoma now bar AI from "high-stakes" decisions **without human oversight**; FERPA governs the records; **134 bills across 31 states** are in flight. 🔴 **Every one of those rules demands evidence that the system was checked, and NOT ONE of them names an instrument.** 🔴 Meanwhile **10–13 %** of institutions have any AI policy and **71 %** of US teachers report no training.
+
+🟢 **The composition:**
+
+| layer | repo | grant | ref · sha |
+|---|---|---|---|
+| audit — does adaptation work? | [`bydeng01/ability-levels-audit`](https://github.com/bydeng01/ability-levels-audit) | 🟢 **MIT** | `master` · `b5cec75` |
+| audit — helpfulness + **answer leakage** | [`bydeng01/conv-vs-ped-tutor`](https://github.com/bydeng01/conv-vs-ped-tutor) | 🟢 **MIT** | `main` · `eb9f6e4` |
+| tamper-evident record | [`ram-polisetti/ai-act-checker`](https://github.com/ram-polisetti/ai-act-checker) | 🟢 **Apache-2.0** | *(pass 81)* |
+| mastery model under audit | [`ujwal2311/proofpilot`](https://github.com/ujwal2311/proofpilot) (BKT, step-level) | 🟢 **MIT** | `main` · `95bcb39` |
+| scoring the scorer | [`Fuann/open-apa`](https://github.com/Fuann/open-apa) | 🟢 **BSD-3-Clause** | *(pass 81)* |
+
+🟢 **Wiring, in order:**
+1. 🟢 **Pre-register before touching the model.** Fork `ability-levels-audit`, keep its pre-registration structure, swap in the client's ability tiers. 🔵 **The pre-registration is the deliverable's spine** — a hypothesis fixed after seeing results is not evidence, and a reviewer can tell.
+2. 🟢 **Run the leakage audit as a gate, not a report.** `conv-vs-ped-tutor` measures whether the tutor hands over answers; wire it into CI so a prompt change that increases leakage fails the build.
+3. 🟢 **Freeze the dataset and hash-chain the log.** Take `ai-act-checker`'s **hash-chained audit log** and write every audit run into it. 🔵 **This is the piece that makes the pack survive a challenge:** the log is tamper-evident, so "we audited in March" is checkable rather than asserted.
+4. 🟢 **Point the audits at a mastery model that can be inspected** — `proofpilot`'s step-level BKT, not an opaque score.
+5. 🟡 **Calibrate the judge with `open-apa`** before trusting any LLM-judge number.
+
+🟢 **Deliverable:** a pre-registered, frozen-data, tamper-evidently-logged audit pack, re-runnable by the client. 🟢 **Estimate: 4–6 weeks**, five permissive repos, no model training.
+🔴 **What it does NOT do:** it does not make the tutor better and it does not constitute legal advice on any state statute. 🔵 It makes the oversight claim **checkable**, which is the only part currently unsupplied.
+
+---
+
+### 🟢 `P892` — **The jurisdiction-routed conformity graph** (primary region: 🟢 **APAC**; the EU limb is 🟢 **EMEA**)
+
+🔵 **The problem:** 🔴 **there is no single APAC posture, and this pass measured why.** Vietnam's **Decision 33/2026/QD-TTg** (effective **15 Aug 2026**) makes **automated assessment, learner ranking, behavioural monitoring and uncontrolled-data self-learning** high-risk, with content labelling and a **72-hour** incident clock under Decree 142. Korea's AI Basic Act is live (**22 Jan 2026**) with a **one-year penalty grace period**. Taiwan passed **Dec 2025**. Singapore and Japan are voluntary. 🔴 **One compliance posture mis-prices at least three of six jurisdictions.**
+
+🟢 **The composition:**
+
+| layer | repo | grant | ref · sha |
+|---|---|---|---|
+| routing shape | [`sohan1611/BloodCoded_Agentic`](https://github.com/sohan1611/BloodCoded_Agentic) — LangGraph, branches on **cause** | 🟢 **MIT** | `main` · `078612b` |
+| EU limb — risk tiering | [`tomdxb0004/eu-ai-act-risk-checker`](https://github.com/tomdxb0004/eu-ai-act-risk-checker) | 🟢 **MIT** | *(pass 81)* |
+| EU limb — Annex III/IV assessment | [`Hiepler/EuConform`](https://github.com/Hiepler/EuConform) | 🟢 **MIT** | *(pass 81)* |
+| audit trail across jurisdictions | [`ram-polisetti/ai-act-checker`](https://github.com/ram-polisetti/ai-act-checker) | 🟢 **Apache-2.0** | *(pass 81)* |
+| portable learner model | [`znecho9/knowledge-forest-mcp`](https://github.com/znecho9/knowledge-forest-mcp) | 🟢 **Apache-2.0** | `main` · `1fa9da6` |
+
+🟢 **Wiring, in order:**
+1. 🟢 **Take the routing shape, not the tutor.** `BloodCoded_Agentic`'s contribution is a LangGraph that selects a branch from a **diagnosis**; re-key the branch selector from "why the learner failed" to **"which jurisdiction governs this deployment."**
+2. 🟢 **One policy node per jurisdiction, each owning its own obligation set** — Vietnam: the four Decision 33 education categories + labelling + 72-hour reporting; EU: Annex III high-risk + conformity assessment; Korea: Basic Act with the grace period noted; Singapore/Japan: voluntary-guideline node that still logs.
+3. 🟢 **Reuse the EU limb that already exists** — `eu-ai-act-risk-checker` for tiering, `EuConform` for the Annex III/IV assessment. 🔴 **Quote `EuConform`'s own disclaimer to the client before the tool:** it states it does not replace a notified body's conformity assessment.
+4. 🟢 **Put the learner model behind MCP** (`knowledge-forest-mcp`) so the same memory serves every jurisdictional deployment. 🔵 **This is what makes the graph deployable rather than a diagram:** without a portable learner model, each jurisdiction forks the data layer.
+5. 🟢 **Write every routing decision into the hash-chained log**, so the record shows which obligation set was applied and when.
+
+🟢 **Deliverable:** one codebase, jurisdiction-selected obligations, one audit trail. 🟢 **Estimate: 10–14 weeks.**
+🟢 **The dated commercial hook:** 🔵 **Vietnamese education systems already in operation before 15 Aug 2026 have until 1 Sep 2027** — a finite, named window, which is the rarest thing in a compliance pitch.
+🔴 **What it does NOT do:** the Vietnamese primary texts were **not retrieved** this pass (English secondary summaries only, with conflicting dates on Decree 142). 🔴 **The Vietnam node must be built against the official Decision 33 text, not against this shelf.**
+
+---
+
+### 🟢 `P893` — **The institutional framework kit** (primary region: 🟢 **LATAM**; the gap it closes is regional, so the kit is reusable across 19 countries)
+
+🔵 **The problem, and it is the best-evidenced number on this shelf:** 🟢 **UNESCO IESALC, 200 institutions, 19 countries — 87 % use AI in at least one area, 26 % have any formal framework.** 🔴 **A 61-point gap.** 🟢 Teacher use already runs at Brazil **56 %**, Chile **55 %**, Colombia **53 %**, Costa Rica **52 %** (OECD average 36 %) and **75 %** of Uruguay's public-school teachers. 🔴 **No education-specific AI law exists anywhere in the region** — Brazil's PL 2.338/2023 and Chile's unified bill are both still moving; 🟢 **Colombia's CONPES 4144 is adopted, government-wide, and funded through 2030.**
+
+🟢 **The composition:**
+
+| layer | repo | grant | ref · sha |
+|---|---|---|---|
+| audit instruments | [`bydeng01/ability-levels-audit`](https://github.com/bydeng01/ability-levels-audit) + [`bydeng01/conv-vs-ped-tutor`](https://github.com/bydeng01/conv-vs-ped-tutor) | 🟢 **MIT** | `master` · `b5cec75` · `main` · `eb9f6e4` |
+| curriculum gap analysis | [`fwornle/curriculum-alignment`](https://github.com/fwornle/curriculum-alignment) (MACAS) | 🟢 **MIT** | *(pass 81)* |
+| portable learner memory | [`znecho9/knowledge-forest-mcp`](https://github.com/znecho9/knowledge-forest-mcp) | 🟢 **Apache-2.0** | `main` · `1fa9da6` |
+| LMS seam | `ltijs` — LTI 1.3 incl. AGS | 🟢 **Apache-2.0** | *(pass 75/76; 🔴 SHA not re-read this pass)* |
+
+🟢 **Wiring, in order:**
+1. 🟢 **Start from the framework, not the tooling.** The 26 % figure says the missing artefact is a **written institutional policy**; produce that first, with the UNESCO Observatory for LAC (launched **14 Apr 2026**) as the reference frame.
+2. 🟢 **Instrument the policy so it is auditable** — the two MIT audit repos give each policy clause a measurement, which is what turns a framework from a PDF into something a rector can enforce.
+3. 🟢 **Use `curriculum-alignment` for the gap analysis** the institution actually buys: source collection → semantic analysis → **gap identification** → unified curriculum documentation.
+4. 🟢 **Integrate through LTI 1.3 via `ltijs`, not through a per-LMS adapter.** 🔴 **The platform tier's licences are still unverified (`Gap 334`)** — Moodle, Open edX, Canvas and Sakai are all asserted by contradicting sources — 🔵 **so standing on the LTI standard rather than on a specific LMS is a licence-risk decision as much as an architectural one.**
+5. 🟢 **Keep learner memory behind MCP** so an institution changing LMS does not lose its learner models.
+
+🟢 **Deliverable:** an institutional AI framework with audit instruments wired in and an LTI-standard integration path. 🟢 **Estimate: 6–8 weeks per institution, 2–3 weeks after the first** — the gap is regional, so the kit amortises across 19 countries.
+🟢 **Funded channel:** 🔵 **Colombia's CONPES 4144 carries a budget line through 2030** and is the one identified funded procurement route in the region.
+🔴 **What it does NOT do:** it does not assume any national AI law, because none exists for education in the region. 🔵 **A framework built on a bill that is still moving through Brazil's Chamber of Deputies would need rewriting; one built on UNESCO's frame would not.**
+
+---
+
+### 🔴 Recipes this pass did NOT write, and why
+
+- 🔴 **No RL/simulated-learner recipe.** The layer exists — `AdaptaLearn`, `RL-for-Intelligent-Tutoring-Systems`, `energy-storage-ITS`, `tecmap` — and 🔴 **all four grant nothing** (`Gap 336`). 🔵 A recipe naming an ungranted repo is a recipe a client cannot ship.
+- 🔴 **No credentialing recipe**, though 1EdTech calls digital credentials a core 2026 mechanism: 🔴 **this shelf has no credentialing row at all**, and the gap is declared in `intel/trends.md` rather than filled with a guess.
+- 🔴 **No white-label platform recipe.** [`braivo/braivo`](https://github.com/braivo/braivo) is the right shape and is 🟡 **AGPL-3.0** (`main` · `51a80df`): 🔴 **network use triggers the source obligation**, so a hosted multi-tenant client deployment publishes its modifications. 🔵 Named with the obligation attached rather than recommended.
+
+---
+
 ## 🟢 Eighty-first pass, 2026-10-09 — **three new recipes**, and the first one is the compliance tier this shelf has been composing around for eighty passes
 
 ⏱️ **Thirteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

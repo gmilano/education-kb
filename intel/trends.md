@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-second pass, 2026-10-09 — **"adoption ahead of governance" stops being a slogan and becomes a measured 61-point gap**, and the shelf's region-strictness model is falsified
+
+⏱️ **Fourteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 Trend — **the strictest education-AI regime measured this pass is in APAC, not EMEA**
+
+🔴 **For eighty-one passes this shelf carried an implicit model: EMEA strict, APAC light-touch, LATAM unregulated.** 🟢 **Vietnam falsifies the APAC half of it by name and date.** Decision 33/2026/QD-TTg (effective **15 Aug 2026**) puts **automated assessment, learner ranking, behavioural monitoring and uncontrolled-data self-learning** in the high-risk tier, and Decree 142 adds **two obligations the AI Act does not impose**: mandatory labelling of AI-generated content and a **72-hour** serious-incident clock.
+
+🔵 **Why this is a trend and not a fact about one country:** 🟢 South Korea's AI Basic Act took effect **22 Jan 2026**, Taiwan's passed **Dec 2025**, China's binding generative-AI rules are live. 🔴 **Four APAC jurisdictions moved to binding instruments inside fourteen months.** 🟡 Singapore and Japan remain voluntary and Australia's guardrails are still proposed — 🔵 **so the regional generalisation itself is the thing that no longer works: the jurisdiction is the unit, and a single "APAC posture" will misprice three of six.**
+
+### 🔴 Trend — **adoption ahead of governance, now with a number attached**
+
+🟢 **UNESCO IESALC, 200 institutions, 19 countries: 87 % use AI in at least one area; 26 % have any formal framework.** 🔵 **A 61-point gap, measured on named institutions rather than asserted.**
+
+🟢 **The same shape appears in every region this pass, from independent sources:**
+
+| region | adoption | governance |
+|---|---|---|
+| LATAM | 🟢 **87 %** institutional use (IESALC) | 🔴 **26 %** have a framework |
+| North America | 🟢 teacher use **doubled** in a year | 🔴 **10–13 %** of institutions have a policy; **71 %** of US teachers untrained |
+| EMEA | 🟢 Finland/Estonia/Netherlands leading K-12 | 🔴 **four ministries published school guidance; NONE reads Annex III for schools** |
+| Global | 🟡 **86 %** of education orgs use gen-AI | 🔴 "most lack a policy" |
+
+🔵 **The trend is not "AI is spreading in education" — that is four years old. It is that the GAP is stable across four regions with different regulators**, which means it is structural rather than a lag. 🟢 **Structural gaps are addressable products; lags are not.**
+
+### 🟢 Trend — **"purpose-built over general-purpose" is the OECD's position, and the sector now has an intergovernmental citation for it**
+
+🟢 The **OECD *2026 Digital Education Outlook*** argues for purpose-built educational AI designed to produce durable learning gains. 🟢 Independently, **1EdTech** frames 2026 as the shift *from experimentation to governance* — clear policies, data boundaries, oversight. 🟢 Trade analysis calls the move away from generic tools toward education-specific platforms the defining trend of the year.
+
+🔵 **What changed is the provenance, not the claim.** 🔴 **This shelf has carried "purpose-built beats general-purpose" as a vendor talking point for several passes.** 🟢 **It is now attributable to the OECD and to a standards body**, which is the difference between a pitch and a citation in a procurement document.
+
+### 🟢 Trend — **the audit tier is emerging, pre-registered, and permissive**
+
+🟢 Passes 80–81 rebuilt the measurement layer (`pyedmine`, `EduStudio`, `GKT`, `ktm`, then `open-apa`, the first instrument that scores a scorer). 🟢 **This pass found the audit tier proper:** [`bydeng01/ability-levels-audit`](https://github.com/bydeng01/ability-levels-audit) and [`bydeng01/conv-vs-ped-tutor`](https://github.com/bydeng01/conv-vs-ped-tutor) — both **MIT**, both **pre-registered**, both shipping **frozen data**, one measuring **answer leakage**.
+
+🔵 **Why this is the most commercially significant trend on the shelf this pass:** 🔴 every regulator named above requires human oversight or conformity assessment of education AI, and **none of them specifies an instrument**. 🟢 **A pre-registered audit with frozen data is the only artefact that satisfies "we verified the adaptation works" in a form a reviewer can re-run.** 🔵 The supply is two repositories at 4★ and 2★ — 🔴 **which is the definition of an unoccupied layer, not of a mature one.**
+
+### 🟢 Trend — **agents replace chatbots in the sector's own language, and the new differentiator is failure-cause routing**
+
+🟢 Education publishers now describe the year's development as **agents that plan a teaching sequence, find resources and draft an assessment** for a teacher to review, explicitly against *"chatbots that answer specific questions."* 🟢 HoloniQ reports the clearest measured gains in **course design support, teacher productivity and administrative workflow** — 🔵 **not in personalised tutoring**, which is where the shelf's attention has been for eighty passes.
+
+🟢 **The shelf's own discovery agrees and sharpens it:** [`sohan1611/BloodCoded_Agentic`](https://github.com/sohan1611/BloodCoded_Agentic) (MIT) routes on **why** a learner failed rather than on what they answered. 🔵 **Every other adaptive tutor on this shelf branches on correctness.** 🔴 At 1★ it is not an adoption signal; 🟢 as an architecture it is the first new idea in the tutoring tier in several passes.
+
+### 🟡 Trend — **MCP becomes a tutoring substrate, three rows deep**
+
+🟢 `tutor-mcp` (44★), `Vinger-lee/leap-framework` and now [`znecho9/knowledge-forest-mcp`](https://github.com/znecho9/knowledge-forest-mcp) (Apache-2.0) — 🟢 **three MCP-native rows on a single topic page.** 🔵 **The consequence worth naming is data portability:** a learner model behind MCP serves any MCP-speaking tutor, which is the only structural answer this shelf has to per-vendor lock-in of student records — and lock-in is what a ministry procurement actually fears.
+
+### 🔴 Trend — **digital credentials and skills visibility move from adjacent to core**
+
+🟢 1EdTech expects **digital credentials to become a core mechanism for skills-based learning and hiring**; HoloniQ reports real-time skills visibility, adaptive training and competency frameworks gaining traction. 🔴 **This shelf has no credentialing row at all** — 🔵 named here as the thinnest adjacency on the shelf, since a competency framework is the natural consumer of the knowledge-tracing layer the shelf already carries.
+
+### 🔴 Figures this pass refused, and why
+
+| figure | source grade | disposition |
+|---|---|---|
+| **83 %** institutional deployment, **42 %** outcome gain | 🔴 vendor marketing content | 🔴 **refused** — named so a later pass recognises them as already-rejected |
+| **$12.3 B** AI-in-education 2026 | 🔴 conflicts with Research and Markets' **$10.6 B** for the same year | 🔴 **refused**; the $7.52 B → $10.6 B → $42.48 B series is retained |
+| **180 k★** for a general agent framework | 🔴 single aggregator site, contradicted by others | 🔴 **refused** (`P351`) |
+| **30 000+ institutions** on OpenEduCat | 🔴 vendor's own page | 🟡 **carried as a vendor claim**, labelled |
+| **86 %** of education orgs using gen-AI | 🟡 recurs across low-authority sites, no primary source | 🟡 **carried with the flag attached**, as in prior passes |
+
+🔵 **A refused figure is written down rather than dropped**, because an unrecorded refusal is indistinguishable from an unexamined claim and the next pass re-buys it.
+
+---
+
 ## 🟢 Eighty-first pass, 2026-10-09 — the **OECD** supplies the sector's own argument against general-purpose chatbots, and North America's statute layer turns out to be **far thicker** than this shelf recorded
 
 ⏱️ **Thirteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-second pass, 2026-10-09 — **three copyleft platforms added and flagged as copyleft**, and the AGPL/GPL discriminator is corrected with a measured threshold
+
+⏱️ **Fourteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 Added this pass — three platforms, every licence payload-read inline, none of them permissive
+
+🔵 **Flagged before the table, not after it:** all three are copyleft. 🔴 **None is a "Globant can build on it" row** in the sense the brief means; they are on the shelf because a white-label tutoring platform is a real asset class and because a client who has already deployed one needs the obligation named.
+
+| platform | grant (payload-read inline) | bytes | ref · sha | ★ | what it is, and what the licence costs |
+|---|---|---|---|---|---|
+| 🆕 [`braivo/braivo`](https://github.com/braivo/braivo) | 🟡 **AGPL-3.0** | 34 561 | `main` · `51a80df` | 0 | Open-source platform that turns educational **content** into **white-label AI tutors**. 🔵 **The most commercially shaped new row this pass** — it is the product an edtech buyer thinks they are buying. 🔴 **AGPL §13 means network use triggers the source obligation**: a hosted multi-tenant deployment for a client must publish modifications. 🟢 Holder is filled in properly (`Copyright (C) 2026 Konstantin Tarkus`), so the appendix was authored rather than left blank. |
+| 🆕 [`avps82/mentar`](https://github.com/avps82/mentar) | 🟡 **AGPL-3.0** | 34 523 | `main` · `9d9d43c` | 0 | **Offline-first, local** AI tutor for children, positioned as a supplement to school. 🟢 **Offline-first is the procurement feature**: no learner data leaves the device, which answers the K-12 privacy question before it is asked. 🔴 Same AGPL obligation; 🔴 **and its payload's only copyright line is the FSF's** — the appendix was never filled in (`P888`). |
+| 🆕 [`IgorFonck/logicits`](https://github.com/IgorFonck/logicits) | 🟡 **GPL-3.0** | 35 149 | `master` · `54325a2` | 1 | Tutoring system for **natural deduction** in propositional and first-order logic. 🟡 Narrow but complete vertical; 🔴 GPL-3.0, so linking it into a proprietary stack is out, though running it alongside one is not. 🔴 Resolves to **`master`** (`T1`). |
+
+🟡 **A fourth row sits in `repos/trending.md` rather than here:** [`LeParisien-dev/EduAI`](https://github.com/LeParisien-dev/EduAI) (2★, `main` · `d4ddd58`) is a full-stack LMS **demo** — monorepo with `apps/`, `services/`, `libs/`, `ai/` workspaces — whose only grant is `"license": "ISC"` in a `private: true` manifest with an empty author. 🔴 **A demo with a probably-defaulted licence is not a platform**, and it is not listed as one.
+
+### 🔴 `P890` — the shelf's AGPL/GPL discriminator was WRONG, and the correction has a measured threshold
+
+🔴 **This pass's first classifier run reported `braivo` and `mentar` as GPL and `logicits` as GPL — one of the three correctly, by accident.** 🟢 **The defect was in the instrument, found by re-measuring before publishing:** the rule tested `grep -i 'GNU AFFERO'` and then `grep -i 'GNU GENERAL PUBLIC'`, and **the second pattern is a SUBSTRING of the first** — `GNU AFFERO GENERAL PUBLIC LICENSE` matches both, so the later test silently overwrote the earlier verdict.
+
+🟢 **Re-measured properly, title line plus Affero occurrence count:**
+
+| row | title line (first 3 lines) | `affero` occurrences | verdict |
+|---|---|---|---|
+| `braivo/braivo` | `GNU AFFERO GENERAL PUBLIC LICENSE` | **15** | 🟢 **AGPL-3.0** |
+| `avps82/mentar` | `GNU AFFERO GENERAL PUBLIC LICENSE` | **15** | 🟢 **AGPL-3.0** |
+| `IgorFonck/logicits` | `GNU GENERAL PUBLIC LICENSE` + `Version 3, 29 June 2007` | **3** | 🟢 **GPL-3.0** |
+
+🔵 **`P890`: the Affero COUNT is the discriminator, and the threshold is measured — ~15 for AGPL-3.0, exactly 3 for GPL-3.0.** 🔴 **A boolean `grep affero` classifies GPL-3.0 as AGPL**, because GPL-3.0's **§13 cross-references the Affero licence by name**. 🟢 **This is the same §13 the shelf already met on `EdOptimize`** (`P871`) — the shelf knew the text contained the word and still built a boolean rule on it.
+
+🔵 **The general lesson, and it is the reason this is written down rather than quietly fixed:** 🔴 **ordered `grep` tests where one pattern contains another are not a classifier, they are a precedence bug**, and the last test wins regardless of truth. 🟢 **`P854` and `P845` were both defects in this shelf's own classifiers; `P890` is the third.** 🔵 **Three of the last forty passes found the error in the instrument rather than in the data** — which is an argument for the discriminating-controls habit, not against it.
+
+### 🟡 The platform tier's licence claims are STILL unverified — `Gap 334` carried
+
+🔴 **Open edX** (AGPL-3.0 vs Apache-2.0 across sources), **Sakai** (ECL-2.0 vs Apache-2.0), **OpenEduCat** (LGPL-3.0, claimed by its own vendor page and unverified), **Moodle** GPL-3.0, **Canvas** AGPL-3.0, **Chamilo** GPL-3.0, **RosarioSIS**/**Gibbon** GPL — 🔴 **all still asserted by comparison sites that contradict each other, none payload-read.**
+
+🟢 **This pass added evidence that makes the probe cheaper, even though it did not run it:** `P890` gives a reliable AGPL-vs-GPL discriminator and `P888` shows the holder read can be skipped entirely for these families. 🔵 **`Gap 334`'s cost drops from 7 probes to 7 single-fetch title reads.** 🔴 **It is the oldest costed unspent item on this shelf and is named as such rather than re-deferred silently.**
+
+🟡 **One vendor claim recorded as a claim:** OpenEduCat's own site states LGPL-3.0, an Odoo-framework base covering students/courses/attendance/fees/timetables/exams plus an **enrolment CRM**, and **30 000+ institutions**. 🔴 **Vendor-sourced, every figure of it**, and the 30 000 number in particular is marketing until something independent carries it.
+
+---
+
 ## 🟢 Eighty-first pass, 2026-10-09 — **one Apache-2.0 platform added**, and it arrives with a `T1` variant that defeats every fallback list
 
 ⏱️ **Thirteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

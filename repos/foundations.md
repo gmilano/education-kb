@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-second pass, 2026-10-09 — **FOUR foundational repos, not five**, and the fifth is named rather than padded: the learner-simulator layer exists and grants nothing
+
+⏱️ **Fourteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 The structural finding: the audit tier is now a FIRST-CLASS tier on this shelf
+
+🔴 Pass 80 rebuilt the **measurement** layer (`pyedmine`, `EduStudio`, `GKT`, `ktm`) — instruments that *score a learner*. 🟢 Pass 81 added `open-apa`, the first instrument that **scores a scorer**. 🟢 **This pass makes that a tier**, with two pre-registered audit repos whose data is frozen and whose claims are falsifiable.
+
+🔵 **Why this belongs in `foundations` and not in `agents`:** an audit instrument is not composed into the product, it is composed into the **engagement**. It is what answers "does the adaptation actually work?" at the point a client asks — and on this shelf that question has had no permissive answer for eighty-one passes.
+
+### 🟢 Added this pass — four rows, every licence payload-read inline at the resolved ref
+
+| repo | grant (payload-read inline) | bytes | ref · sha | ★ | tier | why it is a foundation |
+|---|---|---|---|---|---|---|
+| 🆕 [`bydeng01/ability-levels-audit`](https://github.com/bydeng01/ability-levels-audit) | 🟢 **MIT** | 1 154 | `master` · `b5cec75` | 4 | 🟢 **audit** | **Pre-registered** LLM-judge audit of whether a tutor adapts to stated ability levels, shipped with **frozen data** and an arXiv reference. 🔵 Pre-registration is the part that matters: the hypothesis was fixed before the measurement, which is what makes the result quotable to a client. |
+| 🆕 [`bydeng01/conv-vs-ped-tutor`](https://github.com/bydeng01/conv-vs-ped-tutor) | 🟢 **MIT** | 1 150 | `main` · `eb9f6e4` | 2 | 🟢 **audit** | Pre-registered audit of conversational vs pedagogical tutor **helpfulness and ANSWER LEAKAGE**. 🔴 **Answer leakage is the failure that destroys a tutoring deployment's credibility** and this is the only permissive instrument on the shelf that measures it. |
+| 🆕 [`znecho9/knowledge-forest-mcp`](https://github.com/znecho9/knowledge-forest-mcp) | 🟢 **Apache-2.0** | 10 863 | `main` · `1fa9da6` | 0 | 🟢 **substrate** | **Local-first MCP server** for learning memory and personal knowledge management. 🔵 A learner model behind MCP is a *portable* learner model: the same memory serves any MCP-speaking tutor, which is the only structural answer this shelf has to per-vendor lock-in of student data. |
+| 🆕 [`ujwal2311/proofpilot`](https://github.com/ujwal2311/proofpilot) | 🟢 **MIT** | 1 078 | `main` · `95bcb39` | 0 | 🟡 **mastery model** | **BKT** with **step-level** granularity over propositional-logic proofs. 🟢 Joins `OATutor` and `pykt-toolkit` as a permissive BKT reference; 🟡 narrow domain and 0★, recorded as a reference implementation rather than a dependency. |
+
+🔴 **Trap `T1` again:** `ability-levels-audit` resolves to **`master`**. 🟢 Four of twelve candidates this pass were off-`main` — **33 %** in the research stratum.
+
+### 🔴 The fifth row does not exist, and `Gap 336` is why — refused with four named negatives
+
+🔴 **`Gap 336` (opened pass 81): "there is no permissively licensed learner simulator on this shelf."** 🟢 **This pass found the layer and measured it. It is not missing — it is ungranted.**
+
+🟢 Four reinforcement-learning / curriculum-adaptation tutors sit on `topics/intelligent-tutoring-system`, every one of which trains against a simulated learner:
+
+| candidate | ★ | ladder probed | grant |
+|---|---|---|---|
+| [`010Ankushsharma/AdaptaLearn`](https://github.com/010Ankushsharma/AdaptaLearn) — PPO + **DKVMN** knowledge tracing | 0 | 5 filenames → 404; 🟢 `requirements.txt` **200** | 🔴 **no licence key** |
+| [`munzahmed07/RL-for-Intelligent-Tutoring-Systems`](https://github.com/munzahmed07/RL-for-Intelligent-Tutoring-Systems) — PPO + DQN curriculum difficulty | 0 | same; 🟢 `requirements.txt` **200** | 🔴 **no licence key** |
+| [`gokhanmeteerturk/energy-storage-ITS`](https://github.com/gokhanmeteerturk/energy-storage-ITS) — ontology-based + RL | 0 | same; 🟢 `README.md` **200, 764 B** | 🔴 **zero** matches |
+| [`tobydragon/tecmap`](https://github.com/tobydragon/tecmap) — concept mapping for curriculum organisation | 0 | same; 🟢 `pom.xml` **200** | 🔴 **no declaration in the POM** |
+
+🔵 **`Gap 336` is therefore RE-CHARACTERISED, not closed:** the shelf's gap is not a research gap but a **licensing** gap, and it is concentrated in exactly one stratum — student and research RL code that ships `requirements.txt` and no LICENSE. 🟢 **That is a far more actionable entry than "none exists":** these four are upstream-askable, because there is an author to ask. 🔴 **`Tutorbot-Spock`'s bare absence was not askable** — nothing had been declared at all.
+
+🟢 **Four real rows are published above and the fifth is left unwritten**, because a padded fifth row would be the one thing on this shelf a reader could not check.
+
+### 🔴 `Gap 334` is NOT closed this pass, and is carried deliberately
+
+🔴 **`Gap 334` (platform-tier licence claims that comparison sites CONTRADICT — Open edX AGPL-3.0 vs Apache-2.0, Sakai ECL-2.0 vs Apache-2.0, OpenEduCat LGPL-3.0 unverified, plus Moodle/Canvas/Chamilo/RosarioSIS/Gibbon) was costed at 7 repositories / 7 inline probes.** 🟢 **This pass spent its probe budget discharging the four-pass topic standing item instead**, which had been deferred longer and which yielded 11 granted rows.
+
+🔵 **Stated rather than quietly re-deferred:** `Gap 334` is now the oldest costed, unspent item on this shelf. 🟢 **It is cheap, the budget is known, and `P888` makes it cheaper than it looks** — Apache-2.0 and GPL-family payloads are identifiable from the title line and payload size alone, without any holder read.
+
+---
+
 ## 🟢 Eighty-first pass, 2026-10-09 — **five foundational repos**, and the compliance layer becomes a FIRST-CLASS tier on this shelf
 
 ⏱️ **Thirteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
