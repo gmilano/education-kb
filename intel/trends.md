@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventieth pass, 2026-10-09 — the pass's first trend is a **retraction of this shelf's own twenty-week reading**, and its cause is a selection effect in the shelf's own query; plus the **trust gap in general-purpose AI** is now measured at 20 000 teachers, and **education enters binding AI law** in APAC
+
+⏱️ **Second pass of this date.** Pass 69 closed earlier today (commit `abf91da`, 00:07 UTC). **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🆕 Trend 1 — **the open education-agent tier exists, and a licence filter hid it for twenty weeks**
+
+🔴 **What this shelf said for twenty weeks:** the open education-agent tier is empty. 🔵 **What pass 69 revised it to:** the tier is captured by closed LTI vendors. 🟢 **What pass 70 measured:** **five real education agents, read from payload in one pass** — `CAHLR/OATutor` (**MIT**), `HKUDS/DeepTutor` (**Apache-2.0**), `Open-TutorAi/open-tutor-ai-CE` (**BSD-3**), `HugeCatLab/ChatTutor` (**AGPL-3.0**), `24kchengYe/human-skill-tree` (**AGPL-3.0 + MIT rider**).
+
+🔴 **The cause is a selection effect in the instrument, not a change in the field.** 🟢 **The control query contains the literal token `MIT`; the two agents the other channel returned are `AGPL`.** 🔴 **A query that names a licence family cannot discover the family it does not name** — and the absence it produces looks exactly like an empty market.
+
+🟢 **Why this belongs in a trends file rather than only in a methods note:** 🔵 **the same filter is in everyone's search.** 🔴 **Any studio, analyst or procurement team that discovers open source by querying `open source … MIT` is systematically blind to the AGPL tier** — and in education that tier contains working tutors. 🟢 **The trend to act on: discover licence-blind, then read `LICENSE` bytes and *decide*.** 🔵 Adopted here as `P825`.
+
+### 🆕 Trend 2 — **trust in general-purpose AI is low, flat, and now measured at scale** — the clearest demand signal in this KB
+
+🟢 **The Sanoma Learning 2026 European Teacher Survey — 20 000+ teachers, 14 countries:**
+
+| Measure | Value | Direction |
+|---|---|---|
+| Teacher AI use | 🟢 **63%** | 🟢 up from **49%** intent (2023–2025) |
+| Confidence in generative tools | 🟢 **42%** | 🟢 up from **28%** |
+| 🔴 **Believe general-purpose AI improves learning outcomes** | 🔴 **16%** | — |
+| 🔴 Concerned about risks to education quality | 🔴 **three in four** | — |
+| 🔴 Support students using it at school | 🔴 **one in three** | 🔴 **flat since 2023** |
+
+🔴 **Adoption is rising while belief in general-purpose tools stays at 16% and student-use support has not moved in three years.** 🟢 **That divergence is the trend:** teachers are using tools they do not think work. 🔵 **Corroborated independently and from a different direction in LATAM** — the Digital Education Council's **30 000+** responses show **79%** faculty use with **88%** at *"minimal to moderate"* engagement. 🟢 **Two regions, two instruments, one shape: wide, shallow, distrustful adoption.**
+
+🟢 **What follows commercially:** 🔴 **a general-purpose chatbot wrapper is selling into a 16% belief rate.** 🟢 **The differentiators are the ones that address *why* trust is low — LMS integration so it sits in the workflow, a human approval gate so the teacher stays the decision-maker, and evidence of instructional effect.** 🔵 **Independently, HolonIQ reports systems increasingly demanding evidence that products improve learning quality, persistence, wellbeing or job-relevant skills** — 🟢 **so "show the effect" is becoming a procurement requirement, not a marketing choice.** 🔵 **OATutor's in-tree A/B testing framework is, in that light, a commercial feature.**
+
+### 🆕 Trend 3 — **education crosses from guidance into binding law, and APAC got there first**
+
+🟢 **The shelf has recorded "governance lags adoption" for several passes. That is still true in aggregate — and it is no longer true everywhere.**
+
+| Jurisdiction | Instrument | Education's status | Date |
+|---|---|---|---|
+| 🆕 **South Korea** | AI Basic Act | 🔴 **named inside *"high-impact AI"*** | **effective January 2026** |
+| 🆕 **Vietnam** | Law No. 134/2025/QH15 | in scope of a dedicated AI law | **`2026-03-01`** |
+| **EU** | AI Act Annex III | 🔴 admissions, assessment, proctoring **high-risk** | deferred to **`2027-12-02`** |
+| 🆕 **Ohio, USA** | state mandate | 🔴 **every K-12 district must adopt an AI policy** | **`2026-07-01`** |
+| **EU** | AI Act **Article 4** | 🔴 AI literacy binds deployers **now** | since **`2025-02-02`** |
+
+🔴 **So the lag is closing from two directions at once** — a general AI law that names education (Korea, Vietnam) and an education mandate that names AI (Ohio). 🟢 **The trend: education-AI compliance becomes a dated, billable deliverable in 2026–2027 rather than a policy conversation.**
+
+🟡 **The aggregate lag still stands where it was measured:** UNESCO IESALC **87%** adoption against **~26%** with any formal framework (LATAM); CESGA **>90%** use with **~half** unaware of institutional guidelines (EMEA); **10%** of institutions with formal guidelines and **71%** of US teachers untrained (North America); Diligent Institute on APAC frameworks *"struggling to keep pace."* 🟢 **Four bodies, four regions, same direction.**
+
+### 🆕 Trend 4 — **the permissive ceiling is a protocol version, and it is now measured at n = 2 of 2**
+
+🔵 Pass 69 found one permissive LTI component stuck on **LTI 1.1**. 🟢 **Pass 70 found the second and it is on 1.1 too** — `CAHLR/OATutor`: `oauth_consumer_key` ×3, `replaceResult` ×1, an `imslticc_v1p0` cartridge, an **LTI 1.1** library pinned to an **unpinned fork**, and **zero** `id_token` / `jwks` / `lineitem` / `client_id`.
+
+🔴 **Both permissive components with an LMS seam speak LTI 1.1. Neither speaks LTI 1.3 + AGS. Six closed vendors do.** 🟢 **The open tier's ceiling is therefore not intelligence, funding or pedagogy — it is one protocol hop at the LMS boundary**, and it is the same hop in both components. 🔵 **A trend because it predicts where the next permissive release will or will not be competitive**, and because 🟢 **the fix is small, well-specified and now has two possible starting points.**
+
+### 🟡 Trend 5 — **"open source" keeps getting stretched, and education is no exception**
+
+🟢 **Three instances measured on this shelf, all from payload:**
+- 🔴 **Source-available sold as open:** a 2026 guide flags **Suna's Elastic License 2.0** as source-available, not open.
+- 🟡 **Open-core by suffix:** `open-tutor-ai-**CE**` — 🟢 the CE grant is genuine BSD-3-Clause, 🔴 but a `-CE` suffix implies an edition that is not (`Gap 322`, `P822`).
+- 🔴 **A bibliographic record contradicting the repository:** a ResearchGate entry lists *Open TutorAI* as **CC BY-NC-SA 4.0**; the repository's `LICENSE` is canonical **BSD-3-Clause**. 🟢 **Payload wins; the paper's licence governs the paper** (`P824`).
+
+🟢 **Plus a fourth shape, new this pass: the short-form grant with a rider.** `24kchengYe/human-skill-tree`'s **1 134 B** `LICENSE` asserts AGPL-3.0 in summary and then **dual-licenses `skills/*.md` under MIT at the user's option** while keeping `app/` AGPL-only. 🔴 **A badge, an SPDX guess or a byte-count heuristic would all have missed that.** 🟢 **The trend and the practice are the same sentence: read the whole licence file, every time** (`P820`).
+
+### 🟢 Trend 6 — **what has not changed, stated so stability is not mistaken for a gap in measurement**
+
+🟢 **The seven `P12` components are sha- and byte-identical to pass 69** — no drift within the day. 🟢 **The system-of-record tier remains 0-of-6 permissive** (FenixEdu, OpenEduCat, RosarioSIS, Gibbon, openSIS, `frappe/education` — LGPL or GPL throughout), with **Ed-Fi DMS (Apache-2.0)** still the lone permissive substrate and still **without OneRoster or a change feed**. 🔴 **Article 50's marking deadline is still `2026-12-02`, eight weeks out.** 🔵 **The EU primary-text block widened to a third host** and `Gap 308` stays open.
+
 ## 🟢 Sixty-ninth pass, 2026-10-09 — the pass finds a trend by **measuring a market structure rather than reading a forecast**: the education agent layer is populated and closed, which inverts twenty weeks of this shelf's reading; plus the **governance-lag** finding reaches four independent bodies and the **permissive-substrate ceiling** becomes a trend in its own right
 
 ⏱️ **First pass of this date (pass 68 closed 2026-10-08; the date rolled over during this pass's measurements, which are dated by their publication here). Append-only: this section is new; nothing below it was rewritten.**

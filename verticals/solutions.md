@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventieth pass, 2026-10-09 — the **delivery** tier gains its first permissive, learner-modelling option, while the **system-of-record** tier stays at **zero permissive across six systems**. The two tiers are now measurably different markets, not one market with gaps
+
+⏱️ **Second pass of this date.** Pass 69 closed earlier today (commit `abf91da`, 00:07 UTC). **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 The finding: the two tiers have **opposite** licence structures, and that is actionable
+
+🔵 This file has tracked two tiers since pass 68 — **delivery** (Moodle, Open edX, Canvas, Sakai, BigBlueButton, H5P, Kolibri) and **system of record** (SIS/ERP). 🟢 **Pass 70 can state the contrast as a measurement:**
+
+| Tier | Permissive options found | Reads as |
+|---|---|---|
+| **System of record** (SIS/ERP) | 🔴 **0 of 6** — FenixEdu LGPL-3.0, OpenEduCat LGPL-3.0, RosarioSIS GPL-2.0, Gibbon GPL-3.0, openSIS GPL-2.0, `frappe/education` GPL-3.0 | 🔴 **copyleft is the market norm** |
+| **Delivery / tutoring** | 🟢 **4 permissive**: OATutor (MIT), DeepTutor (Apache-2.0), Open TutorAI CE (BSD-3), `lti-ai-grader` (Apache-2.0) | 🟢 **permissive is available** |
+
+🟢 **So the advice splits cleanly by tier, and it is the clearest procurement line this file has produced:** 🔴 **do not promise a client a permissive system of record** — it does not exist in open source, and the census is now wide enough (six systems, all read from payload) to call that a property of the market. 🟢 **Do build the learner-facing and tutoring layers permissively** — as of this pass there are four real options across three regions.
+
+🔵 **The architectural consequence:** a client who needs closed code should take a **copyleft SIS as a system of record they run but do not modify or redistribute**, and keep every piece they intend to own in the delivery tier. 🟡 **"Run but do not redistribute" is a posture counsel must confirm per licence and per deployment model** — AGPL and GPL differ exactly here, and a SaaS wrapper is where that distinction bites (`P827`).
+
+### 🆕 The delivery tier's new entry, and why it belongs in this file rather than only in `agents/`
+
+[`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) — 🟢 **MIT**, `main` **`939eb0e`**, `LICENSE` **1 105 B**, **8 338 files**
+
+🟢 **It is a deployable vertical surface, not a library:** it ships an **LTI tool** that launches from an LMS (`public/lti-consumer-config.xml`, an `imslticc_v1p0` cartridge), an **AWS middleware** (`aws/lti-middleware/`, Express + `aws-serverless-express` + Firebase), **Bayesian Knowledge Tracing** in-tree (`src/models/BKT/BKT-brain.js`), an **A/B testing framework**, and **bundled CC BY 4.0 problem content**. 🔵 **That is the Moodle-plus-AI pattern this file exists to recommend, except the tutoring intelligence is already inside it.**
+
+| Caveat | Measurement | What to do |
+|---|---|---|
+| 🔴 LTI version | **1.1** — `oauth_consumer_key` ×3, `replaceResult` ×1; **no** `id_token`/`jwks`/`lineitem` | 🟢 Port the launch layer to **1.3 + AGS** (`P12`) |
+| 🔴 Unpinned dependency | `"ims-lti": "github:CAHLR/ims-lti"` — no tag, no sha | 🟢 **Vendor it at a sha before quoting** (`Gap 319`) |
+| 🟡 Two launch paths | `old-lti-middleware/` still in `main` | 🟢 Pin which one you build on |
+| 🟡 Split grant | code **MIT**, content **CC BY 4.0** | 🟢 Track and attribute as two licences |
+| 🟡 Stack assumption | AWS Lambda + Firebase in the shipped middleware | 🟢 Price a re-host if the client is not on AWS |
+
+### 🟢 The other two permissive tutoring surfaces, placed by region
+
+| Platform | Repo | Licence (payload) | Region | Shape |
+|---|---|---|---|---|
+| **DeepTutor** | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0**, 11 408 B (`P804`: completed appendix) | 🔵 **APAC** — HKU Data Intelligence Lab | Agent-native tutoring orchestration |
+| **Open TutorAI CE** | [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **BSD-3-Clause**, 1 531 B, read in full | 🔵 **EMEA** — R2D-dev | Multimodal / immersive tutoring platform |
+
+🟡 **Open TutorAI CE carries an open-core signal and it is recorded, not resolved:** the `-CE` suffix implies a non-community edition. 🟢 **The CE grant is genuine BSD-3-Clause from payload**; 🔴 **whether CE is feature-crippled relative to a paid edition is unmeasured** (`Gap 322`). 🔵 **`P822`: a `-CE` suffix is a question about parity, never about the licence.**
+
+🟢 **A secondary-source conflict resolved the right way round:** a ResearchGate record lists *Open TutorAI* as **CC BY-NC-SA 4.0**, which would bar commercial use. 🟢 **The repository's `LICENSE` is canonical three-clause BSD.** 🔴 **The paper's licence governs the paper, not the code** (`P824`).
+
+### 🔴 Two delivery-tier options that must be refused, and the refusal is the service
+
+| Platform | Licence (payload) | Why it cannot ship in a closed deliverable |
+|---|---|---|
+| [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🔴 **AGPL-3.0**, 34 522 B, `main` `7d9e905` | 🔴 **Network copyleft.** Serving a modified version over a network obliges you to offer source to every user — fatal for a hosted client deliverable |
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 🟡 `app/` **AGPL-3.0 only**; `skills/*.md` **dual MIT-or-AGPL** | 🟡 **The application is out. The curricula are in** — the `skills/` directory may be taken under MIT at your option, and that is a genuine, lawful permissive harvest |
+
+🟢 **Recorded as a vertical-tier fact because this is exactly where a licence mistake is most expensive:** a tutoring surface is the part the client's users touch, so it is the part most likely to be hosted, modified and branded — 🔴 **the three things AGPL prices highest.**
+
+### 🟢 The system-of-record census, unchanged at six and unchanged at zero permissive
+
+🟢 **No new probes this pass; pass 69's six readings stand** — FenixEdu Academic (**LGPL-3.0**, `master` `675b540`, 7 652 B), OpenEduCat (**LGPL-3.0**, 8 241 B), RosarioSIS (**GPL-2.0**), Gibbon (**GPL-3.0**), openSIS Classic (**GPL-2.0**, `master` `5d546f2`), `frappe/education` (**GPL-3.0** asserted in 19 B, `develop` `444cc8e`, `Gap 312`). 🔴 **Zero MIT, zero Apache-2.0, zero BSD.** 🟢 **Ed-Fi DMS (Apache-2.0, `ab82466`) remains the only permissive system-of-record substrate, and it is a data-standard API — no OneRoster, no change feed** (`Gap 309`).
+
+🟡 **A branch-name caution now applies retroactively to this table and is discharged:** `P819` found that `raw.githubusercontent.com` serves the **default branch** for a legacy `master` ref even when no `master` branch exists. 🟢 **Every `master` above was resolved by `git ls-remote --symref` before its licence was read**, so these rows are sound — 🔵 **but the guard is now written down rather than merely habitual.**
+
 ## 🟢 Sixty-ninth pass, 2026-10-09 — the system-of-record census widens to **six, and stays at zero permissive**; a **permissive analytics layer** is found where the SIS tier has none; and the one Apache-2.0 substrate is measured to be **missing OneRoster and any change feed**
 
 ⏱️ **First pass of this date (pass 68 closed 2026-10-08; the date rolled over during this pass's measurements, which are dated by their publication here). Append-only: this section is new; nothing below it was rewritten.**

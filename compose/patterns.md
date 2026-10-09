@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventieth pass, 2026-10-09 — `P14`: the first recipe on this shelf whose **pedagogical core is permissive and already written** — an MIT mastery-estimating tutor wired to a human-gated LTI 1.3 grade return; plus nine practices (`P819`–`P827`), three earned by instruments, three by licence anomalies and one by a retracted twenty-week reading
+
+⏱️ **Second pass of this date.** Pass 69 closed earlier today (commit `abf91da`, 00:07 UTC). **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🆕 `P14` — A permissive **mastery-estimating tutor** with a human-gated **LTI 1.3 + AGS** grade return
+
+🟢 **Why this recipe exists and why it is not `P12`.** 🔵 `P12` builds a **grading surface**: free-text work in, a model-proposed score, a teacher approval, a grade posted. 🟢 **`P14` builds the loop underneath it**: estimate per-skill mastery, choose the next problem from that estimate, and only then grade. 🔴 **Every prior recipe on this shelf had to specify the mastery model as *"build this part"*** — 🟢 **as of this pass it does not, because `CAHLR/OATutor` ships Bayesian Knowledge Tracing in-tree under MIT.**
+
+🟢 **Every component licence-verified from payload this pass.**
+
+| Role | Component | Licence | Verified |
+|---|---|---|---|
+| 🆕 **Mastery model + problem selection** | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 **MIT** | `main` **`939eb0e`**; `LICENSE` **1 105 B**; **8 338 files**; `src/models/BKT/BKT-brain.js` + `problem-select-heuristics/{default,experimental}Heuristic.js` read from the tree |
+| LTI 1.3 launch + AGS grade return | [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) *(or a per-stack equivalent)* | 🟢 **Apache-2.0** | `master` **`3a192de`**; `LICENSE` **11 343 B** — 🟡 off-canonical by 14 B, resolved under `P804` (completed appendix, *"Copyright 2018 Turnitin, LLC"*) |
+| Free-text grading core | [`moocupv/lti-ai-grader`](https://github.com/moocupv/lti-ai-grader) | 🟢 **Apache-2.0** | `main` **`5b96722`**; `LICENSE` **11 357 B** |
+| Learner evidence stream | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** | `main` **`cb794e4`**; **11 357 B** |
+| Competency anchoring | [`opensalt/opensalt`](https://github.com/opensalt/opensalt) | 🟢 **MIT** | **`develop`** `db41cc4`; **1 080 B** |
+| Conformance gate (xAPI 2.0, Caliper 1.2, OneRoster 1.2) | [`conform-ed/conform-ed`](https://github.com/conform-ed/conform-ed) | 🟢 **MIT** | `main` **`3596bb5`**; **1 080 B** |
+| Article 50(2) structural marking | this KB's `compose/code/aiact-50-2-{marking,pack}` | 🟢 own code | 🟢 **23/23** and **27/27** |
+| Signature seam (`P33`) | [`THU-BPM/MarkLLM`](https://github.com/THU-BPM/MarkLLM) | 🟢 **Apache-2.0** | `main` **`0a4fe8c`**; **11 357 B** |
+
+🟢 **How it wires together:**
+
+1. 🟢 **Take OATutor for the model, not the plumbing.** Its value is `src/models/BKT/BKT-brain.js` and the two problem-selection heuristics — a per-skill mastery estimate and a next-item decision derived from it. 🔴 **Its LMS seam is LTI 1.1**: `aws/lti-middleware/index.js` (25 422 B) signs with `oauth_consumer_key` and returns grades via `replaceResult`, and `public/lti-consumer-config.xml` is an `imslticc_v1p0` cartridge. 🟢 **Replace that seam; keep the model.**
+2. 🔴 **Pin the fork before you quote.** `aws/lti-middleware/package.json` declares `"ims-lti": "github:CAHLR/ims-lti"` — **a GitHub fork resolved by branch name, with no tag and no sha.** 🟢 **Measured this pass: the fork is `master` `9b712f6` with 0 release tags; upstream `omsmith/ims-lti` is `master` `4df2936` with 24.** 🔴 **So it is an unreleased, diverged fork of a released library.** 🟢 **Pin `9b712f6` explicitly, or drop it with the 1.1 seam you are replacing anyway.** 🔴 **Never ship a client a `github:` dependency resolved by branch** (`Gap 319`).
+3. 🟡 **Delete one of the two launch paths.** `old-lti-middleware/` is still in `main` beside `aws/lti-middleware/`. 🟢 **Choose, document, remove the other** — two launch paths in a graded system is an audit finding waiting to happen.
+4. 🟢 **Put the LTI 1.3 tool in front.** OAuth 2.0 / JWKS launch validation; **AGS** (`Assignment and Grade Services`) for the score post; deep linking for item placement. 🔵 **This is the same port `P12` specifies, and the two recipes share it** — build it once, reuse it in both.
+5. 🔴 **Gate the grade return on a recorded human approval.** 🟢 **Make it structural, not procedural:** the AGS post should be unreachable in code without an approval record carrying the approver's identity and a timestamp. 🔵 **In Oklahoma and Maryland this is law** — human oversight required, AI barred from high-stakes decisions about students — 🟢 **so the gate is a feature you can name in a bid, not overhead.**
+6. 🟢 **Keep the two-pool isolation from `P12`** (`P812`): the LLM-blocking path and the LTI launch path must not share a worker pool, or one burst of grading stalls every launch.
+7. 🟢 **Emit evidence as you go.** Every mastery update and every approved grade becomes an xAPI statement in `lrsql`, with skills referenced against an `opensalt` competency framework so the mastery estimate means something outside the tool. 🔵 **Gate the whole surface with `conform-ed` before delivery.**
+8. 🔴 **Mark the generated text.** Any model-written feedback is synthetic content: run it through `aiact-50-2-marking`/`-pack` and declare the signature seam. 🔴 **Article 50's marking grace expires `2026-12-02`** — 🟢 and the same implementation answers **China's synthetic-content labelling** rules, which matters if the engagement is APAC.
+9. 🟡 **Track two licences, not one.** 🟢 OATutor's **code is MIT**; its bundled problem content is **CC BY 4.0**. 🔴 **If the client ships the content, they owe attribution** — and if they replace it, the CC BY obligation disappears with it. 🟢 **Decide which, in writing, at the start.**
+10. 🟡 **Price a re-host if the client is not on AWS.** The shipped middleware assumes Lambda (`aws-serverless-express`) and Firebase.
+
+🟢 **Where this is sellable, by region, from this pass's measurements:**
+- 🟢 **North America** — Oklahoma and Maryland **require** human oversight and bar AI high-stakes decisions; **Ohio** requires every district to hold an AI policy (`2026-07-01`). 🔵 OATutor's UC Berkeley provenance reads well in US higher ed.
+- 🟢 **LATAM** — **assessment is the lowest-adoption use case** in the Digital Education Council's 30 000+ response survey, and **87%** of institutions already use AI somewhere (UNESCO IESALC). 🔵 `lti-ai-grader` already ships multi-language templates.
+- 🟢 **EMEA** — only **16%** of 20 000+ teachers believe general-purpose AI improves outcomes, against **63%** using it. 🔵 A purpose-built, LMS-integrated, human-gated tool is the stated gap; AI Act readiness is the differentiator against the closed vendors.
+- 🟡 **APAC** — **Korea's AI Basic Act names education inside "high-impact AI"** from January 2026. 🔵 `DeepTutor` (Apache-2.0, HKU) is the regionally-provenanced base if that matters to the buyer.
+
+🔴 **What `P14` does not yet know:** the size of the LTI 1.3 port measured in real work (`Gap 316(i)` — **unmeasured, do not quote it**), whether `CAHLR/ims-lti` diverges from upstream (`Gap 319`), and whether **OATutor 2.0**'s GenAI chatbot layer — described in a Springer chapter, June 2026 — is in `main` at all (`Gap 321`).
+
+### 🆕 Practices earned this pass
+
+🟢 **`P819` — a `200` at `raw.githubusercontent.com/<repo>/master/<path>` does not prove a `master` branch exists.** 🔴 GitHub serves the **default branch** for the legacy ref `master` when the repo has none, with byte-identical content. 🟢 Measured with controls: `pguso/agents-from-scratch` (heads: `main` only) → `master/LICENSE` **`200`, 1 091 B, identical to `main`**, `bogus-xyz/LICENSE` → `404`; `24kchengYe/human-skill-tree` (heads: `master` only) → `main/LICENSE` → **`404`**. 🟢 **The aliasing is one-directional and specific to the legacy name.** 🟢 **Always resolve the branch with `git ls-remote --symref` (or `--heads`) before attributing a byte count to a branch.**
+
+🟢 **`P820` — read the whole licence file, especially a short one.** 🔴 A **1 134 B** file whose first line says *"GNU AFFERO GENERAL PUBLIC LICENSE"* is a **grant by reference**, not the licence text, and the interesting terms live after it: `24kchengYe/human-skill-tree` dual-licenses `skills/*.md` **MIT-or-AGPL at the user's option** while keeping `app/` **AGPL-only**. 🔴 **A badge, an SPDX guess or a byte-count heuristic would each have missed a usable MIT harvest inside an AGPL repo.**
+
+🟢 **`P821` — blobless clone, then one targeted fetch, settles a protocol question cheaply.** `git clone --depth 1 --filter=blob:none` → `ls-files | grep -iE 'lti|grade|outcome'` → **one** `raw` fetch of the single decisive file. 🟢 OATutor's LTI version settled in **two network operations** over an **8 338-file** tree. 🔴 Do **not** grep contents over a blobless clone — blobs fetch on demand and a content sweep costs real bytes; use `--depth 1` (full) for grep work.
+
+🟢 **`P822` — a `-CE` / "Community Edition" suffix is a question about *parity*, never about the licence.** `open-tutor-ai-CE` is genuine **BSD-3-Clause** from payload; 🔴 what the non-community edition adds is unmeasured (`Gap 322`). 🟢 Verify the grant from bytes, then ask separately what the paid edition holds back.
+
+🟢 **`P823` — determine an LTI version from payload signals, never from documentation.** 🔴 **LTI 1.1:** `oauth_consumer_key`, `oauth_signature`, `replaceResult`, and an `imslticc_v1p0` / `imsbasiclti_v1p0` cartridge XML. 🟢 **LTI 1.3 + AGS:** `id_token`, `jwks`, `client_id`, `lineitem`/`line_items`, `deep_link`. 🔵 The two are mutually exclusive in practice, so a single grep over the launch file is decisive.
+
+🟢 **`P824` — a payload read beats a bibliographic record.** A ResearchGate entry listed *Open TutorAI* as **CC BY-NC-SA 4.0**, which would bar commercial use; the repository's `LICENSE` is canonical **BSD-3-Clause**. 🔴 **A paper's licence governs the paper, not the code it describes.** 🟢 Same rule already applied to vendor glossaries (Gibbon) — now it applies to academic records too.
+
+🟢 **`P825` — discover licence-blind; decide on licence afterwards.** 🔴 A discovery query containing the token `MIT` cannot return AGPL projects, and for **twenty weeks** this shelf read that selection effect as an empty market. 🟢 **Query by capability** (`tutor`, `grading`, `knowledge tracing`, `LTI`, `adaptive`), **then read `LICENSE` bytes and decide.** 🔵 The licence-naming query is retained **only as a control**, where its constancy is the measurement.
+
+🟢 **`P826` — follow a trending channel's roundups to the primary topic page before concluding a field is empty.** 🔴 The roundup layer of `github trending education AI` returns courses exclusively; 🟢 GitHub's own `ai-education` topic page, which those roundups cite, returned two real tutoring systems. 🔵 Prior passes read only the roundups and recorded *"zero systems."*
+
+🟡 **`P827` — "run but do not redistribute" is a posture counsel confirms, not an assumption the architect makes.** 🟢 The clean split this pass measured — **copyleft systems of record, permissive delivery** — suggests taking a GPL SIS as infrastructure the client *operates* while owning only the delivery layer. 🔴 **AGPL and GPL diverge exactly here, and a SaaS wrapper is where the divergence bites.** 🟢 Confirm per licence **and** per deployment model, in writing, before the architecture depends on it.
+
+### 🟢 Suites run this pass, and the one red is **proven pre-existing**
+
+🟢 **Run directly (not under `unittest discover`, which mis-reports a self-executing script's `SystemExit: 0` as an error):**
+
+| Suite | Result |
+|---|---|
+| `p370-gap-gate` | 🟢 **27/27** |
+| `p471-gap-gate-language` | 🟢 **25/25** (132 s) |
+| `aiact-50-2-pack` | 🟢 **27/27** (🟡 xmllint checks skipped — needs `--with-xmllint` plus `SCORM_SCHEMAS`) |
+| `aiact-50-2-marking` | 🟢 **verified** — Article 50(2) span-level marking holds, 🔴 **signature seam declared and still NOT filled** (`P33`) |
+| `p351-star-digit-sweep` | 🔴 **5 failures — pre-existing, not caused by this pass** |
+
+🟢 **`p351`'s redness was isolated rather than inherited on trust.** 🔵 The suite was run against the **pristine pass-69 tree** (this pass's additions stashed) and against the tree with them:
+
+| Measurement | Pristine (pass 69) | With pass 70 |
+|---|---|---|
+| failures | 🔴 **5** | 🔴 **5** — identical set |
+| star-digit occurrences | **244** (threshold asks ≥ 254) | 🟢 **244 — unchanged** |
+| unattributed occurrences | **74** | 🟢 **74 — unchanged** |
+| the offending occurrence | `agents/trending.md:9512`, `'6.400 ★'`, pass 124 | 🟢 same occurrence at **`:9555`** — **shifted by exactly this pass's 43 inserted lines** |
+
+🟢 **So this pass added zero star-digit occurrences** — which is the intended result, because it published no star count as a datum. 🔴 **The failing occurrence is pre-reset Spanish-era content (`'6.400 ★'` attributed to `pase 124`) carrying a measurement with no band and no date** — 🟢 **exactly what `p351` exists to catch, and it is still catching it.** 🔵 **Fixing it means editing history below this pass's section, which the append-only convention forbids without a declared correction** — 🟡 **recorded, not silently patched.**
+
 ## 🟢 Sixty-ninth pass, 2026-10-09 — `P12`: the shelf's **first recipe aimed at a measured market gap** rather than a standard — a wholly permissive **LTI 1.3 + AGS grading surface**, which six closed vendors sell and open source does not have; plus seven practices (`P812`–`P818`), three of them earned by instruments and two by corrections
 
 ⏱️ **First pass of this date (pass 68 closed 2026-10-08; the date rolled over during this pass's measurements, which are dated by their publication here). Append-only: this section is new; nothing below it was rewritten.**

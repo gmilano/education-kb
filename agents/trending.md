@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventieth pass, 2026-10-09 — week of 2026-10-09, second reading: the week's movement is a **retraction**. The education agent layer was never empty and was never only captured — it has an **AGPL tier** that this shelf's own control query was structurally unable to return
+
+⏱️ **Second pass of this date.** Pass 69 closed earlier today (commit `abf91da`, 00:07 UTC). **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 The control query, twenty-first consecutive empty week — and this week the emptiness is **explained**
+
+🔵 `top open source AI agents education 2026 github MIT` → `microsoft/ai-agents-for-beginners` (MIT), `pguso/agents-from-scratch` (MIT, `main` **`da3f9df`**, `LICENSE` **1 091 B** — verified, and **a course**), `avinash201199/free-ai-agents-resources`, then OpenHands, CrewAI, LangGraph, Aider, Cline, AutoGen, Hermes.
+
+🔴 **Twenty-one weeks, zero education agents.** 🟢 **And this week the cause is measured rather than inferred: the query names `MIT`, and the education agents that exist are `AGPL-3.0`.** 🔵 **The control query was selecting against the tier it was meant to discover** — `Gap 317(ii)` **closes** on this.
+
+### 🆕 The channel that did work, and it was the trending channel
+
+🔵 `github trending education AI 2026` has returned seven courses and zero agents for weeks. 🟢 **This week, read past the roundups to the `ai-education` topic page it cites, it returned two real education agents** — and both are the licence family the control query excludes:
+
+| Repo | Licence (payload) | What it is | Verification |
+|---|---|---|---|
+| 🆕 [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🔴 **AGPL-3.0** | Visual, interactive AI tutor | `main` **`7d9e905`**; `LICENSE` **34 522 B** (canonical AGPL-3.0 measured at **34 523 B** on a control repo the same pass — one byte under) |
+| 🆕 [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 🟡 **AGPL-3.0, with `skills/` dual-licensed MIT-or-AGPL at the user's option; `app/` AGPL-only** | Interactive AI tutor as an agent skill, spaced repetition | `master` **`be589dd`** (no `main` branch); `LICENSE` **1 134 B**, short-form grant, rider read in full |
+
+🟡 **The channel's star counts remain mutually contradictory and none is used here** — `microsoft/ai-agents-for-beginners` was reported at **~67 000** by one source and **47.3k** by another in prior weeks, and the `ai-education` topic page's own timestamps look stale. 🟢 **With `api.github.com` serving `403` for unattached repositories, this shelf still cannot arbitrate a star count, so it records none.** 🔵 **This is `p351`'s reason for existing.**
+
+### 🆕 And the targeted, **licence-blind** query returned three permissive agents in one attempt
+
+🟢 `open source AI tutor agent Apache 2.0 MIT licensed adaptive learning knowledge tracing repository 2026` — 🔵 **note what it does *not* do: it does not restrict to a licence before reading one.**
+
+| Repo | Licence (payload) | Region | Note |
+|---|---|---|---|
+| 🆕 [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 **MIT**, 1 105 B | **North America** (UC Berkeley CAHLR) | `main` **`939eb0e`**; **BKT in-tree**; **LTI 1.1** with `replaceResult`; 🟡 content under **CC BY 4.0**, a separate grant |
+| 🆕 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0**, 11 408 B (`P804`: completed appendix) | **APAC** (HKU) | `main` **`6cf793b`** |
+| 🆕 [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **BSD-3-Clause**, 1 531 B | **EMEA** (R2D-dev) | `main` **`196c547`**; 🟡 `-CE` open-core signal (`P822`) |
+
+🟢 **Three permissive education agents, three regions, one query, zero weeks of waiting.** 🔴 **The twenty-week absence was an artefact of asking for `MIT` by name.**
+
+### 🟢 A secondary-source conflict **resolved in payload's favour** — Open TutorAI is BSD-3, not CC BY-NC-SA
+
+🔵 **A ResearchGate record for *Open TutorAI* lists the licence as `CC BY-NC-SA 4.0`** — non-commercial, which would disqualify it outright. 🟢 **The repository's `LICENSE` (1 531 B, read in full) is the canonical three-clause BSD text with the standard disclaimer.** 🔴 **The paper's licence governs the paper.** 🟢 **The code is BSD-3-Clause, and a payload read beats a bibliographic record** (`P824`).
+
+🟡 **Still unmeasured and not built on:** whether the CE edition is feature-crippled relative to a paid edition (`Gap 322`), and whether the **OATutor 2.0** GenAI chatbot layer described in a Springer chapter (June 2026) is in `main` or lives elsewhere (`Gap 321`).
+
+### 🔴 What this week does **not** retract
+
+🟢 **Pass 69's commercial-capture finding stands untouched:** **EduGears AI, LearnWise, ibl.ai, campusmind.ai, Asyntai, edusageai** sell AI grading over **LTI 1.3 with AGS grade return behind a teacher-approval gate**, and 🔴 **no permissive component does** — now measured at **2 of 2** permissive LTI components on **1.1** (`Gap 316`). 🔵 **So the market map is now three-tiered, not two:** 🔴 **closed vendors hold LTI 1.3 + AGS**, 🟡 **an AGPL tier exists and cannot be used in a closed deliverable**, 🟢 **and a permissive tier exists but stops at LTI 1.1.** 🟢 **`P12` is aimed at exactly the seam between the second and third.**
+
 ## 🟢 Sixty-ninth pass, 2026-10-09 — week of 2026-10-09: the control query is empty for the **twentieth** week but the week's real movement is a **cause**, not an absence — the education agent layer turns out to be **populated and closed**, while the permissive tier gains **one** real grader and **one** watermarking toolkit
 
 ⏱️ **First pass of this date (pass 68 closed 2026-10-08; the date rolled over during this pass's measurements, which are dated by their publication here). Append-only: this section is new; nothing below it was rewritten.**

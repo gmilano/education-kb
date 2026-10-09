@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventieth pass, 2026-10-09 — the control query's **twenty-first** empty week, and this pass finds the **cause in the query itself**: the string `MIT` was selecting against the tier that exists. **Five real education agents** read from payload — **three permissive, two AGPL** — and the shelf's twenty-week "empty layer" reading is retired
+
+⏱️ **Second pass of this date.** Pass 69 closed earlier today (commit `abf91da`, 00:07 UTC). **Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Instrument map, re-measured before any datum:** `git ls-remote --symref` **resolved HEAD for 13 of 13** repositories probed. `raw.githubusercontent.com` served every licence payload below. 🆕 **One instrument hazard was found and is recorded as `P819` before any branch name in this section is trusted** — see *The instrument correction*.
+
+### 🟢 `Gap 317(ii)` — **CLOSED.** The fault was the instrument, and the mechanism is now nameable
+
+🔵 **What pass 69 suspected:** *"at twenty weeks, the query is the likelier fault than the field."* 🟢 **Measured this pass, and it is worse and simpler than suspected.**
+
+🔴 **The control query is `top open source AI agents education 2026 github MIT`. It contains the literal token `MIT`.** 🟢 **Both real education agents the *other* channel returned this pass are `AGPL-3.0`.** 🔴 **A query that names one licence family cannot discover the family it does not name** — and for twenty weeks this shelf read that selection effect as a property of the field.
+
+🔵 **The control query, run for the twenty-first time, returned exactly what it always returns:** `microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`, `avinash201199/free-ai-agents-resources`, then the general tier (OpenHands, CrewAI, LangGraph, Aider, Cline, AutoGen, Hermes). 🔴 **Still no education component; still every "education" row a repository that teaches AI to developers.** 🟢 **That finding stands — but it is now a finding about the query, not about education.**
+
+🟢 **The remedy is adopted, not proposed:** the control query is retained **as a control** (its constancy is the measurement), and the shelf's discovery channel is the **licence-blind** query from here on. 🔵 Recorded as `P825`.
+
+### 🆕 Five real education agents, every licence read from payload this pass
+
+🟢 **Three are permissive and usable in a closed deliverable. Two are AGPL and are not.** 🔴 **The AGPL tier is new to this shelf — twenty weeks of `github MIT` could not see it.**
+
+| Agent | Repo | Licence | Description | Verification |
+|---|---|---|---|---|
+| 🆕 **OATutor** | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 **MIT** | Adaptive tutoring system with **real Bayesian Knowledge Tracing in-tree** (`src/models/BKT/BKT-brain.js` plus two problem-selection heuristics, `defaultHeuristic` and `experimentalHeuristic`), an A/B testing framework, and an **LTI tool integration with grade return**. 🔵 UC Berkeley **CAHLR** — **North America**. 🟡 Problem content ships under **CC BY 4.0, a separate grant from the code** — treat content and code as two licences. | `main` **`939eb0e`**; `LICENSE` **1 105 B** (*"MIT License, Copyright (c) 2023 Zachary A. Pardos (@zpardos) - CAHL research lab"*); **8 338 files** (blobless clone); BKT and LTI paths enumerated from the tree |
+| 🆕 **DeepTutor** | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** | Agent-native tutoring system from the HKU Data Intelligence Lab. 🔵 **APAC** — The University of Hong Kong. | `main` **`6cf793b`**; `LICENSE` **11 408 B** — 🟡 **off-canonical by +51 B, resolved under `P804`**: the appendix is **completed** (*"Copyright 2025 Data Intelligence Lab, The University of Hong Kong"*) rather than left as the `[yyyy] [name of copyright owner]` placeholder. 🟢 Genuine Apache-2.0 |
+| 🆕 **Open TutorAI CE** | [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **BSD-3-Clause** | Open-source personalised/immersive tutoring platform. 🔵 **EMEA** — *"Mohamed El hajji On behalf of all R2D-dev"*. 🟡 **Open-core signal:** the `-CE` suffix implies a non-community edition exists; the CE grant is real but says nothing about feature parity (`P822`). | `main` **`196c547`**; `LICENSE` **1 531 B**, read **in full**: the three canonical BSD clauses plus the standard warranty disclaimer. 🟢 **Genuine BSD-3-Clause** |
+| 🆕 **ChatTutor** | [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🔴 **AGPL-3.0** | Visual and interactive AI tutor. 🔴 **Network-copyleft: unusable in a deliverable a client needs to keep closed, because serving it over a network triggers the source obligation.** | `main` **`7d9e905`**; heads: `main`, `feat/pause-chat`. `LICENSE` **34 522 B** — 🟡 **one byte under the canonical AGPL-3.0 34 523 B measured on a control repo this pass**; full AGPL-3.0 text, header read |
+| 🆕 **Human Skill Tree** | [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 🟡 **AGPL-3.0 with an explicit MIT dual-licence rider** | Interactive AI tutor built as an agent skill, using **spaced repetition**. 🟢 **The rider is the finding:** *"The `SKILL.md` files in the `skills/` directory may be used under either this AGPL-3.0 license **OR the MIT license, at your option**… The web application code in the `app/` directory is licensed **exclusively** under AGPL-3.0."* 🟢 **So the pedagogical content layer is MIT-usable and the application layer is not.** | `master` **`be589dd`** (**no `main` branch** — verified, see `P819`); `LICENSE` **1 134 B**, a **short-form grant-by-reference**, read in full because the rider is only visible in full text (`P820`) |
+
+🔴 **One row that is *not* an agent, recorded to keep the category honest:** [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) — 🟢 MIT, `LICENSE` **1 091 B**, `main` **`da3f9df`** — is **a course that teaches agent construction**, returned by both the control and trending channels as an "education" row. 🟢 **A course about agents is not an agent**, and this is the twenty-first week that error has gone unretracted by the channels.
+
+### 🆕 The capability finding: **the permissive tier is 2-of-2 on LTI 1.1**, and that is now a pattern rather than an anecdote
+
+🔵 Pass 69 recorded *"exactly one real cross-LMS permissive component, `moocupv/lti-ai-grader` (Apache-2.0), on LTI 1.1 rather than 1.3"* and opened `Gap 316`. 🟢 **OATutor is the second, and it is on LTI 1.1 too** — measured from payload, not documentation (`P823`):
+
+| Probe on `CAHLR/OATutor` | Result | Reads as |
+|---|---|---|
+| `aws/lti-middleware/index.js` (**25 422 B**) | 🔴 `oauth_consumer_key` **×3**, `replaceResult` **×1** | **LTI 1.1** — OAuth 1.0a signing, Basic Outcomes grade return |
+| the same file | 🟢 **zero** occurrences of `id_token`, `jwks`, `lineitem`, `client_id`, `deep_link`, `LTI-1p3` | 🔴 **no LTI 1.3, no AGS** |
+| `public/lti-consumer-config.xml` | 🔴 `imslticc_v1p0` + `imsbasiclti_v1p0` cartridge | **LTI 1.0/1.1 cartridge** — 🟢 LTI 1.3 registers over JSON and uses no cartridge XML |
+| `aws/lti-middleware/package.json` | 🔴 `"ims-lti": "github:CAHLR/ims-lti"` | an **LTI 1.1** library, and 🔴 **an unpinned fork — no tag, no sha** (`Gap 319`) |
+| `old-lti-middleware/` | 🟡 a second, superseded middleware still in `main` | two launch paths in-tree; pin which one you build on |
+
+🟢 **So the gap `P12` was written against is confirmed across the whole permissive tier, n = 2 of 2:** both permissive education graders/tutors speak **LTI 1.1 + `replaceResult`**, and **neither speaks LTI 1.3 + AGS** — the capability six closed vendors sell. 🔵 **This strengthens `P12`'s premise considerably:** the LTI 1.3 port is not one repository's omission, it is the permissive tier's single missing piece. 🔴 **It also doubles the candidate base for that port** — `P12` may now start from either component, and OATutor brings BKT mastery estimation that `lti-ai-grader` has not.
+
+### 🆕 The instrument correction — `P819`, stated before any branch name above is relied on
+
+🔴 **`raw.githubusercontent.com` serves the *default branch* for the legacy ref `master` when the repository has no `master` branch** — with a `200` and byte-identical content. 🟢 **Measured, with controls:**
+
+| Repository | Heads, per `ls-remote --heads` | `…/main/LICENSE` | `…/master/LICENSE` | `…/bogus-xyz/LICENSE` |
+|---|---|---|---|---|
+| `pguso/agents-from-scratch` | 🟢 `main` **only** | `200`, 1 091 B | 🔴 **`200`, 1 091 B — identical** | 🟢 `404` |
+| `HugeCatLab/ChatTutor` | 🟢 `main`, `feat/pause-chat` | `200`, 34 522 B | 🔴 **`200`, 34 522 B — identical** | — |
+| `24kchengYe/human-skill-tree` | 🟢 `master` **only** | 🟢 **`404`** | `200`, 1 134 B | 🟢 `404` |
+
+🟢 **The aliasing is one-directional:** `master` resolves to the default branch when absent; `main` does **not**. 🟢 **A bogus ref `404`s, and a real ref with a missing file `404`s** (`main/NOPE.md` → `404`) — so the fallback is specific to the legacy `master` name, not a blanket "always 200".
+
+🔴 **The consequence for this shelf:** a `200` at `…/master/<path>` **never proves a `master` branch exists**, and any byte count attributed to `master` without a symref read may really be the default branch. 🟢 **This shelf is largely protected by habit** — `git ls-remote --symref` has resolved HEAD before every licence read since pass ~60 — 🔵 **but the habit was never justified in writing, and now it is** (`P819`).
+
+### 🟢 Stability: the seven headline components re-measured, and nothing moved
+
+🟢 **All seven `P12` components re-probed this pass and every one is sha- and byte-identical to pass 69** — `moocupv/lti-ai-grader` `main` `5b96722` / 11 357 B · `1EdTech/lti-1-3-php-library` `master` `3a192de` / 11 343 B · `yetanalytics/lrsql` `main` `cb794e4` / 11 357 B · `opensalt/opensalt` **`develop`** `db41cc4` / 1 080 B · `conform-ed/conform-ed` `main` `3596bb5` / 1 080 B · `THU-BPM/MarkLLM` `main` `0a4fe8c` / 11 357 B · `Ed-Fi-Alliance-OSS/Data-Management-Service` `main` `ab82466` / 11 357 B. 🔵 **A quiet result worth recording: the recipe's substrate did not drift within a day.**
+
 ## 🟢 Sixty-ninth pass, 2026-10-09 — the control query's **twentieth** empty week, but a targeted query finds **one real permissive education agent** — and its licence, its sha and its *LTI version* are all read from payload before it is written down
 
 ⏱️ **First pass of this date (pass 68 closed 2026-10-08; the date rolled over during this pass's measurements, which are dated by their publication here). Append-only: this section is new; nothing below it was rewritten.**

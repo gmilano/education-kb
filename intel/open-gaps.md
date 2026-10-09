@@ -4,6 +4,105 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventieth pass, 2026-10-09 — `Gap 317` **CLOSES on both limbs**, and the cause is a selection effect in this shelf's own control query; `Gap 316` **hardens from n=1 to n=2 of 2**; `Gap 308` is refused by a **third** egress path; four new gaps open (`319`–`322`)
+
+⏱️ **Second pass of this date.** Pass 69 closed earlier today (commit `abf91da`, 00:07 UTC). **Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Registry continuity:** pass 69 wrote to this file, so the section below this one is pass 69's and no fold-forward is needed.
+
+### 🟢 `Gap 317` — **CLOSED, both limbs.** The education agent layer is populated; the twenty-week absence was the instrument
+
+🔵 **The gap asked two things.** **(i)** How many education agents exist, how funded, and does any publish a permissive core? **(ii)** At twenty weeks of an empty control query, is the query the fault rather than the field?
+
+🟢 **(ii) CLOSED first, because it explains (i).** 🔴 **The control query is `top open source AI agents education 2026 github MIT` — it contains the literal token `MIT`.** 🟢 **The two real education agents the trending channel returned this pass are `AGPL-3.0`.** 🔴 **A licence-named query cannot return the licence family it does not name.** 🟢 **The field was never empty; the query was filtered.** 🔵 Remedy adopted as `P825`: discover licence-blind, decide on licence afterwards.
+
+🟢 **(i) CLOSED by measurement — five agents, every licence read from payload:**
+
+| Agent | Licence | Head | `LICENSE` | Permissive core? |
+|---|---|---|---|---|
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 **MIT** | `main` `939eb0e` | 1 105 B | 🟢 **yes** |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** | `main` `6cf793b` | 11 408 B (`P804`) | 🟢 **yes** |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **BSD-3-Clause** | `main` `196c547` | 1 531 B | 🟢 **yes** |
+| [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🔴 **AGPL-3.0** | `main` `7d9e905` | 34 522 B | 🔴 no |
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 🟡 **AGPL-3.0 + MIT rider on `skills/`** | `master` `be589dd` | 1 134 B | 🟡 **content layer only** |
+
+🟢 **So the answer to "does any publish a permissive core" is yes, three times, in three regions** — North America (UC Berkeley), APAC (HKU), EMEA (R2D-dev). 🔴 **The funding question is dropped rather than answered:** it was asked about the *commercial* vendors, and with `api.github.com` refusing unattached repositories and no permissive channel to funding data, it is not cheaply measurable from this shelf. 🟢 **Recorded as out of scope rather than open, so the registry does not carry a gap nobody will close.**
+
+🔴 **What survives of pass 69's capture thesis, and it survives intact:** the six closed vendors (EduGears AI, LearnWise, ibl.ai, campusmind.ai, Asyntai, edusageai) still hold **LTI 1.3 + AGS with a human-approval gate**, and 🔴 **no permissive component does.** 🟢 **The market is three-tiered — closed, AGPL, permissive — and the open seam is one protocol hop wide.**
+
+### 🟢 `Gap 316` — **HARDENED from an anecdote to a pattern: n = 2 of 2**
+
+🔵 **The gap recorded:** *"the one real cross-LMS permissive component is on LTI 1.1 / Basic Outcomes."* 🔴 **It is now two of two.**
+
+| Component | Launch signals read from payload | Verdict |
+|---|---|---|
+| [`moocupv/lti-ai-grader`](https://github.com/moocupv/lti-ai-grader) | `lti-receiver.py`, `replaceResult` | 🔴 **LTI 1.1** |
+| 🆕 [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | `aws/lti-middleware/index.js` (**25 422 B**): `oauth_consumer_key` **×3**, `replaceResult` **×1**; 🟢 **zero** `id_token` / `jwks` / `lineitem` / `client_id` / `deep_link`; `public/lti-consumer-config.xml` = `imslticc_v1p0` cartridge; dep `"ims-lti": "github:CAHLR/ims-lti"` | 🔴 **LTI 1.1** |
+
+🟢 **Both permissive components with an LMS seam speak 1.1. Neither speaks 1.3 + AGS.** 🟢 **This is no longer one repository's omission — it is the permissive tier's single shared ceiling**, which is exactly what makes `P12` and `P14` worth building. 🔵 **And it doubles the port's candidate base:** OATutor brings BKT mastery estimation that `lti-ai-grader` lacks.
+
+🔴 **`Gap 316(i)` stays OPEN and is the most commercially urgent unmeasured number on this shelf:** the real size of the LTI 1.1 → 1.3 + AGS port. 🟢 **Remedy:** implement the launch-plus-AGS seam against one component and record the actual effort. 🔴 **Until then, do not quote it.**
+
+### 🔴 `Gap 308` — **OPEN, and refused by a third egress path.** The block is EU-host-wide, not `eur-lex`-specific
+
+🟢 **The correction itself now rests on five independent secondary channels in agreement:** Regulation (EU) **2026/1744** deferred **Annex III** to **`2027-12-02`** and **Annex I** to **`2028-08-02`**. 🆕 **The fifth channel adds the procedural step:** the **Council gave final approval `2026-06-29`**.
+
+🆕 **Two dates new to the registry:** 🟢 **Article 4 (AI literacy) unchanged and in force since `2025-02-02`** — 🔴 **live now, binds school and university deployers, no deferral.** 🟢 **AI Office and national authorities enforcing from `2026-08-02`.**
+
+🔴 **A third path was tried and refused:**
+
+| Egress path | Host | Result |
+|---|---|---|
+| Bash via agent proxy | `eur-lex.europa.eu` | 🔴 DNS FAIL, HTTP `000` |
+| 🆕 Bash via agent proxy | `digital-strategy.ec.europa.eu` | 🔴 **DNS FAIL, HTTP `000`** — new host, new institution, same refusal |
+| Bash via agent proxy | `artificialintelligenceact.eu` | 🔴 DNS FAIL, HTTP `000` |
+| control | `api.github.com`, `raw.githubusercontent.com` | 🟢 `200` |
+
+🟢 **So the diagnosis sharpens: the allowlist excludes EU institutional hosts generally, not one domain.** 🔴 **New sub-conflict folded in:** the Commission's page is reported to list the Omnibus as **entering into force `2026-07-27`** while another guide had it awaiting Official Journal publication — 🟡 **entry into force and deferred application dates are different things and the channels blur them.** 🟢 **Remedy unchanged and still the cheapest high-value item in this registry: one fetch of `eur-lex.europa.eu/eli/reg/2026/1744/oj/eng` from any session with egress to that host.**
+
+🟡 **`Gap 310` rides with it, unchanged and unread:** whether routine learner progress-tracking is *profiling*, and therefore always high-risk with no Article 6(3) filter. 🟢 **Design as if it is.**
+
+### 🆕 `Gap 319` — OATutor's LTI library is an **unpinned fork**, and its divergence is unread
+
+🔴 `aws/lti-middleware/package.json` declares `"ims-lti": "github:CAHLR/ims-lti"` — **a GitHub fork with no tag and no commit pin.** 🔴 **Three exposures, none measured:** (a) the resolved commit can change under the client between two installs; (b) how far `CAHLR/ims-lti` diverges from upstream `ims-lti` is unknown; (c) the fork's own maintenance status is unknown.
+
+🟢 **Remedy (i) was run in this same pass, and it both closes (a) and settles (b) directionally:**
+
+| Probe | Fork `CAHLR/ims-lti` | Upstream `omsmith/ims-lti` |
+|---|---|---|
+| HEAD | 🟢 **`master` `9b712f6`** — 🟢 **a pinnable sha now exists** | `master` **`4df2936`** |
+| release tags | 🔴 **0** | 🟢 **24** |
+
+🟢 **(a) CLOSED:** pin `CAHLR/ims-lti` at **`9b712f6`**, not at a branch name. 🔴 **(b) CONFIRMED NON-ZERO and still unquantified:** the fork's head is **not** upstream's head, so it has diverged; **how far, and in which direction, is unread.** 🔴 **(c) ANSWERED and it is the worst of the three:** the fork carries **zero release tags** against upstream's **24** — 🟢 **an unreleased, untagged fork of a released library.**
+
+🟢 **Remaining remedies:** **(ii)** blobless-clone both and diff the file lists to size the divergence (`P821`); **(iii)** moot the gap entirely by replacing the 1.1 seam, which `P12` and `P14` already prescribe. 🔴 **Never ship it pinned to `master`; pin `9b712f6` or remove it.**
+
+### 🆕 `Gap 320` — the **AGPL education tier has never been censused**
+
+🔴 **Two AGPL education agents were found this pass by one channel, in one week, after twenty weeks in which a licence-filtered query structurally could not return any.** 🟢 **So the tier's size is unknown and was never measured** — the shelf has no basis for saying whether it is two projects or fifty.
+
+🔵 **Why it matters even though AGPL is unusable in a closed deliverable:** 🟢 **(a)** it is where the working pedagogy may be, and pedagogy is readable without being redistributable; 🟢 **(b)** a dual-licence rider can make part of it usable — `human-skill-tree` already proves that shape; 🟢 **(c)** an AGPL incumbent is a competitor for a client who *can* accept copyleft, and the shelf currently cannot name them.
+
+🟢 **Remedy:** run the licence-blind capability queries of `P825` with no licence token, census every education agent returned, and record the licence distribution. 🔵 **One pass's work.**
+
+### 🆕 `Gap 321` — is **OATutor 2.0**'s GenAI layer in `main`?
+
+🟡 **Single-channel and not built on:** a **Springer** chapter (*"Open Adaptive Tutor 2.0: Chatbot Integration, Community Deployments, and Future Directions"*, **June 2026**) describes a GenAI chatbot-integration framework for educational system-prompt design. 🔴 **Nothing in the 8 338-file tree read this pass was identified as that layer**, and the shelf did not search for it specifically.
+
+🔴 **Why it matters:** if the chatbot layer is in `main`, OATutor supplies **mastery estimation *and* a tutoring dialogue** under MIT, and `P14` gets materially cheaper. 🟢 **Remedy:** `ls-files | grep -iE 'chat|gpt|llm|prompt|genai'` over the existing blobless clone, then one targeted `raw` fetch (`P821`) — 🟢 **two operations, and the clone is already on disk.**
+
+### 🆕 `Gap 322` — what does **Open TutorAI's** non-community edition hold back?
+
+🟢 **The CE grant is genuine BSD-3-Clause, 1 531 B, read in full this pass.** 🔴 **The `-CE` suffix implies a non-community edition, and its feature delta is unmeasured** (`P822`).
+
+🔴 **Why it matters:** recommending a base whose open edition is deliberately short of the features a client will ask for first is a predictable way to lose an engagement in month three. 🟢 **Remedy:** read the project's own site and `docs/` for an edition comparison, and 🔵 note the copyright line already reads **2023-2025** — 🟡 **so check commit recency on `main` (`196c547`) at the same time.**
+
+### 🟡 Gaps carried forward unchanged this pass
+
+🟢 **`Gap 309`** — Ed-Fi DMS is the only permissive system of record and has **no OneRoster and no change feed**; the SIS census stands at **six systems, zero permissive**. 🟢 **`Gap 312`** — `frappe/education`'s **19 B** licence assertion; narrowed to a question for counsel (upstream `frappe/frappe` is **MIT, 1 118 B**, and does not govern the app's grant). 🟢 **`Gap 311(b)`** — Ed-Fi DMS `main` (`ab82466`) tracks an unreleased **8.1.0** whose changelog opens under *"Breaking changes"*; **pin `v8.0.0` (`d911abb`)**. 🟢 **`Gap 318`** — carried, unmeasured this pass.
+
+🔵 **And one non-gap recorded so it is not re-opened:** the seven `P12` components were re-probed this pass and are **sha- and byte-identical to pass 69**. 🟢 **Stability measured, not assumed.**
+
 ## 🟢 Sixty-ninth pass, 2026-10-09 — a **new instrument** (blobless clone) closes `Gap 303` and `Gap 311(a)` from primary payload on first use, `Gap 313` **CLOSES negatively at 0 of 3**, `Gap 312` narrows to a corroborated question, and the `api.github.com` **`403` is corrected** — it was never a blanket block
 
 ⏱️ **First pass of this date (pass 68 closed 2026-10-08; the date rolled over during this pass's measurements, which are dated by their publication here). Append-only: this section is new; nothing below it was rewritten.**

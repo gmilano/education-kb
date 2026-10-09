@@ -4,6 +4,38 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventieth pass, 2026-10-09 — the trending channel is **partly exonerated**: read past the roundups to the `ai-education` topic it cites and it does return education systems. The category error was half the channel's and half this shelf's query
+
+⏱️ **Second pass of this date.** Pass 69 closed earlier today (commit `abf91da`, 00:07 UTC). **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟡 The channel, re-read — and the verdict changes
+
+🔵 `github trending education AI 2026` returned, at the roundup layer, the same thing it always returns: `rohitg00/ai-engineering-from-scratch`, `LLMs-from-scratch`, `microsoft/generative-ai-for-beginners` (*"21 Lessons"*, updated **2026-10-08**), Karpathy's `nanochat`, AI Engineering Hub, Awesome LLM, DeepLearning.AI and HuggingFace agent courses. 🔴 **Courses, every one.**
+
+🟢 **But the channel also surfaced GitHub's own `ai-education` topic page, and that page returned real systems:**
+
+| Repo | Licence (payload, this pass) | What it is |
+|---|---|---|
+| 🆕 [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🔴 **AGPL-3.0**, 34 522 B | Visual and interactive AI tutor — 🟢 **a system, not a course** |
+| 🆕 [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 🟡 **AGPL-3.0 + MIT rider on `skills/`**, 1 134 B | Interactive AI tutor, spaced repetition |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | 🟢 MIT, 1 091 B | 🔴 a **course** — the category error, confirmed at payload level |
+
+🟢 **So the honest version is narrower than "seven rows, seven courses, zero systems":** the **roundup** layer of this channel is all courses, and the **topic-page** layer is not. 🔵 **Prior passes read only the roundups.** 🟢 **Recorded as `P826`: when a trending channel returns aggregator blogs, follow them to the primary topic or trending page before concluding the field is empty.**
+
+### 🟡 Star counts: still unavailable, still not estimated
+
+🔵 The channel offered, as before, mutually contradictory figures — `microsoft/ai-agents-for-beginners` at **~67 000** (one source) and **47.3k** (another); `HugeCatLab/ChatTutor` at **~1.2k** via the topic page, whose timestamps the channel itself flags as stale. 🔴 **`api.github.com` serves `403` for repositories not attached to this session** (pass 69's correction: a per-repository authorisation boundary, not a host block). 🟢 **So no repo on this shelf is ranked by popularity, and none of the above numbers is recorded as a datum.** 🔵 `p351` exists to keep it that way.
+
+### 🆕 The week's instrument movement — one hazard found, one method confirmed cheap
+
+🔴 **Hazard (`P819`): `raw.githubusercontent.com` returns the default branch for the legacy ref `master` when no `master` branch exists** — `200`, byte-identical content. Measured with controls: `pguso/agents-from-scratch` (heads: `main` only) served `master/LICENSE` at **`200`, 1 091 B, identical to `main`**, while `bogus-xyz/LICENSE` → `404`; `24kchengYe/human-skill-tree` (heads: `master` only) served `main/LICENSE` → **`404`**. 🟢 **One-directional aliasing on the legacy name only.** 🔴 **A `200` at `…/master/<path>` is not evidence that `master` exists** — resolve with `git ls-remote --symref` first, always.
+
+🟢 **Method confirmed (`P821`): a blobless clone plus one targeted `raw` fetch settles a protocol question for almost nothing.** On `CAHLR/OATutor`: `git clone --depth 1 --filter=blob:none` enumerated **8 338 files**, `ls-files | grep -iE 'lti|grade|outcome'` isolated the launch layer, and **a single 25 422 B fetch of `aws/lti-middleware/index.js`** settled the LTI version. 🔵 **Two fetches, one decisive answer** — against the path-guessing that `Gap 301` once burned two passes on.
+
+### 🟢 Repo stability, measured rather than assumed
+
+🟢 **The seven `P12` components were re-probed and all seven are sha- and byte-identical to pass 69** (`5b96722`, `3a192de`, `cb794e4`, `db41cc4`, `3596bb5`, `0a4fe8c`, `ab82466`). 🔵 **No drift within the day** — recorded because a shelf that only reports movement cannot tell stability from a missed measurement.
+
 ## 🟢 Sixty-ninth pass, 2026-10-09 — the trending channel repeats its category error for the nth week, and the week's real repo movement is **instrumental**: a new clone mode reads whole trees without the API, and the `api.github.com` `403` this shelf has recorded for weeks turns out to be **the wrong diagnosis**
 
 ⏱️ **First pass of this date (pass 68 closed 2026-10-08; the date rolled over during this pass's measurements, which are dated by their publication here). Append-only: this section is new; nothing below it was rewritten.**

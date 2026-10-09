@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventieth pass, 2026-10-09 — the permissive substrate gains a **real tutoring foundation with mastery estimation in-tree**, and the shelf's licence-reading method gains a hazard guard. `CAHLR/OATutor` (MIT) is the first foundation here that models a learner rather than moving a record
+
+⏱️ **Second pass of this date.** Pass 69 closed earlier today (commit `abf91da`, 00:07 UTC). **Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Instruments:** `git ls-remote --symref` **13 of 13**; `git ls-remote --heads` used as the branch-existence authority (see `P819`); `git clone --depth 1 --filter=blob:none` enumerated **8 338 files** on OATutor; `raw.githubusercontent.com` served every licence payload. 🔴 **`api.github.com` serves `403` for unattached repositories** — no third-party star counts, nothing here ranked by popularity.
+
+### 🆕 A new permissive foundation, and what makes it a *foundation* rather than an agent
+
+[`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) — 🟢 **MIT**
+
+| Probe | Result |
+|---|---|
+| `main` · HEAD | 🟢 **`939eb0e`** |
+| `LICENSE` | 🟢 **MIT, 1 105 B** — *"Copyright (c) 2023 Zachary A. Pardos (@zpardos) - CAHL research lab"* |
+| tree | 🟢 **8 338 files** (blobless clone) |
+| mastery model | 🟢 **`src/models/BKT/BKT-brain.js`** — Bayesian Knowledge Tracing, in-tree, not a dependency |
+| problem selection | 🟢 `src/models/BKT/problem-select-heuristics/defaultHeuristic.js` + `experimentalHeuristic.js` |
+| LMS integration | 🟡 **`aws/lti-middleware/`** (25 422 B `index.js`) — **LTI 1.1**: `oauth_consumer_key` ×3, `replaceResult` ×1; 🔴 **no `id_token`, `jwks`, `lineitem`, `client_id`** |
+| launch descriptor | 🟡 `public/lti-consumer-config.xml` — **`imslticc_v1p0` / `imsbasiclti_v1p0` cartridge** (LTI 1.1) |
+| LTI library | 🔴 `"ims-lti": "github:CAHLR/ims-lti"` — **an unpinned fork: no tag, no sha** (`Gap 319`) |
+| superseded code | 🟡 `old-lti-middleware/` still present in `main` — **two launch paths in-tree** |
+| content grant | 🟡 problem content under **CC BY 4.0** — 🔴 **a different licence from the code; attribute accordingly** |
+
+🟢 **Why this matters to this shelf specifically.** 🔵 Every permissive foundation recorded here so far is an **infrastructure** layer: Ed-Fi DMS moves records, `lrsql` stores learner evidence, `opensalt` anchors competencies, `conform-ed` gates conformance. 🔴 **None of them models a learner.** 🟢 **OATutor is the first MIT component on this shelf that estimates per-skill mastery and selects the next problem from that estimate** — the pedagogical core that every one of this shelf's recipes has so far had to specify as *"build this part."*
+
+🔴 **Two caveats that must travel with it in any deliverable.** 🟡 **(i) The code is MIT and the content is CC BY 4.0** — a client shipping the bundled algebra content owes attribution, and the two grants must be tracked separately. 🔴 **(ii) The LTI layer is 1.1 and depends on an unpinned GitHub fork** — vendor the fork at a sha, or replace the layer outright, which is what `P12` already prescribes.
+
+### 🟢 The permissive tutoring tier, now three components across three regions
+
+| Component | Licence (payload) | Region | Layer it supplies |
+|---|---|---|---|
+| 🆕 [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 **MIT**, 1 105 B, `main` `939eb0e` | **North America** — UC Berkeley | 🟢 **Mastery estimation (BKT) + problem selection** |
+| 🆕 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0**, 11 408 B (`P804`), `main` `6cf793b` | **APAC** — HKU | Agent-native tutoring orchestration |
+| 🆕 [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **BSD-3-Clause**, 1 531 B, `main` `196c547` | **EMEA** — R2D-dev | Multimodal/immersive tutoring surface |
+| [`moocupv/lti-ai-grader`](https://github.com/moocupv/lti-ai-grader) | 🟢 **Apache-2.0**, 11 357 B, `main` `5b96722` | **EMEA** — UPV, Spain | LLM grading + LMS grade return (**LTI 1.1**) |
+
+🟢 **Four permissive components, three regions, and for the first time a tutoring stack that is permissive end to end** — mastery model, orchestration, surface, grading. 🔴 **Its one shared weakness is the LMS seam: 2 of 2 components with an LTI layer speak 1.1, and none speaks 1.3 + AGS** (`Gap 316`).
+
+### 🔴 The AGPL tier, recorded here because a foundation's licence decides whether it can be a foundation at all
+
+| Component | Licence (payload) | Verdict for a closed deliverable |
+|---|---|---|
+| [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🔴 **AGPL-3.0**, 34 522 B, `main` `7d9e905` | 🔴 **Not usable.** Network copyleft: serving it triggers the source obligation |
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 🟡 **AGPL-3.0**; `skills/*.md` **dual MIT-or-AGPL at the user's option**; `app/` **AGPL-only** | 🟡 **Content layer usable under MIT; application layer not.** 🟢 The only lawful permissive harvest here is the `skills/` curricula |
+
+🟢 **This tier is new to the shelf and it is recorded as a foundation-layer fact, not a curiosity:** 🔴 **an AGPL component cannot be a foundation for a client who needs to keep their code closed**, however good it is. 🔵 **Twenty-one weeks of a query containing the token `MIT` hid this tier rather than clearing it.**
+
+### 🟢 Substrate stability — all seven prior components unmoved
+
+🟢 `moocupv/lti-ai-grader` `5b96722`/11 357 B · `1EdTech/lti-1-3-php-library` `3a192de`/11 343 B · `yetanalytics/lrsql` `cb794e4`/11 357 B · `opensalt/opensalt` **`develop`** `db41cc4`/1 080 B · `conform-ed/conform-ed` `3596bb5`/1 080 B · `THU-BPM/MarkLLM` `0a4fe8c`/11 357 B · `Ed-Fi-Alliance-OSS/Data-Management-Service` `ab82466`/11 357 B. 🔵 **Every sha and every byte count identical to pass 69.** 🟢 **Ed-Fi DMS: still pin `v8.0.0` (`d911abb`) explicitly — `main` tracks an unreleased 8.1.0 whose changelog opens under *"Breaking changes."***
+
 ## 🟢 Sixty-ninth pass, 2026-10-09 — a **new instrument** reads whole trees without the API, and with it the permissive substrate's **capability gaps** are read for the first time: the shelf's only Apache-2.0 system of record has **no rostering standard and no change feed**
 
 ⏱️ **First pass of this date (pass 68 closed 2026-10-08; the date rolled over during this pass's measurements, which are dated by their publication here). Append-only: this section is new; nothing below it was rewritten.**
