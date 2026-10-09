@@ -4,6 +4,26 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 75) — **no new agent this week, measured for the second consecutive pass**; the week's agent-adjacent finding is a **licence defect inside an agent's own dependency closure**
+
+🔵 **Append-only: this dated section is new; every section below it is prior history and is unchanged.**
+
+### 🔴 Nothing new to add to the shelf, and the number is the point
+
+🟢 **The prescribed battery ran in full** — four global queries, four regional — and returned **13 candidates, of which 13 were already shelved** (word-bounded census, substring delta 0; table in `agents/top.md`). 🟢 **Two consecutive passes at 0 new agents, from 17 and 13 candidates respectively.**
+
+🟡 **Returned again this week, all already shelved:** `microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`, `avinash201199/free-ai-agents-resources`, `rohitg00/ai-engineering-from-scratch`, Hermes Agent, and the generic framework tier (AutoGen, CrewAI, LangGraph, aider, Cline, browser-use, OpenHands). 🔴 **One licence flag worth keeping visible:** **Suna** is **Elastic License 2.0** — source-available, **not OSI open source**, and it keeps appearing in "best open source agents" roundups. 🟢 Already on this shelf; re-confirmed, not newly found.
+
+### 🟢 What the week actually produced: `ltijs`'s closure, and a notice defect in it
+
+🟢 **`Cvmcosta/ltijs` — the library this shelf has named for five passes as the one that closes the LTI 1.3 + AGS seam — had its runtime closure measured for the first time.** 🟢 `ltijs@7.0.7`, `LICENSE` **11 361 B**, family **Apache-2.0** from payload; **10 runtime dependencies, 10 of 10 resolved to GitHub paths, 9 of 10 payload-verified MIT.** 🔴 **`sprightly@2.0.1` declares MIT and ships no notice of any kind** — detail and remedy in `repos/foundations.md`, trend in `intel/trends.md`.
+
+🔵 **Why it belongs in a *trending* file:** 🟢 **it is the first week this shelf could answer "is the protocol hop safe to build on?" with a measurement instead of a licence string**, and the answer is yes with one named caveat. 🔴 **The `@iblai/*` chain, by contrast, now reads `NO-REPO` / `NO-REPO` / `UNRESOLVABLE-HOST`** — mechanically, where three prior passes caught it by hand.
+
+### 🔵 Watch items for next week, unchanged plus one
+
+🔵 (a) Whether `ec-issuer` (`main` `8bafc99`) **adds a `LICENSE`** — still the only Open Badges 3.0 + ELM + OID4VCI implementation and still with no grant (`Gap 325`). 🔵 (b) Whether `zijinz456/OpenTutor` holds its ~weekly cadence. 🔵 (c) Whether **any** permissive component acquires an **LTI 1.3 + AGS** seam — 🔴 not this week; the battery that would find one is saturated. 🆕 🟢 (d) **Answered within the pass, so it is not a watch item:** [`obadakhalili/sprightly`](https://github.com/obadakhalili/sprightly) **does** carry `main/LICENSE` — 🟢 **1 070 B, MIT, Copyright (c) 2024 Obada Khalili.** 🔴 **The grant exists; `files: ["dist"]` keeps it out of the tarball.** 🔵 The channel this shelf had recorded as refused answers **200** here (`P844`), which is how the question got asked at all.
+
 ## 🔴 2026-10-09 — pass 74: **nothing was new this week, and this is the first section in this file to say so with a number**
 
 ⏱️ **Sixth pass of this date.** Pass 73's section and `73-C`'s correction of it are below, unchanged. **Append-only.**

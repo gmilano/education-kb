@@ -4,6 +4,32 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-fifth pass, 2026-10-09 — a trend this shelf can state because it finally measured one: **the permissive dependency graph of education infrastructure is clean, and its weak point is NOTICE, not licence**
+
+⏱️ **Seventh pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 Trend — **"permissive but unnoticed": the next licence defect is a packaging defect**
+
+🔵 This shelf has tracked two licence-defect shapes for several passes: 🔴 **assertion without a grant** (`Gap 312`, `Gap 325` — a README says MIT, no file exists) and 🔴 **a grant without a subject** (`Gap 327` — ISC/MIT over an unfetchable artefact). 🟢 **This pass measured a third, and it is the most common of the three because it is invisible to everyone involved.**
+
+🔴 **`sprightly@2.0.1`, inside the runtime closure of `ltijs`, declares `"license": "MIT"` and ships 8 files containing no `LICENSE` and no copyright notice anywhere** — `grep -rliE "copyright|MIT License"` over the whole tarball returns **0 files**. 🔴 **The MIT text itself requires that the notice travel with all copies**, so the artefact cannot satisfy the condition of the licence it relies on. 🟢 **Mechanism: `files: ["dist"]`** — a field set for build hygiene that silently excludes the grant.
+
+🔵 **Why this is a trend and not one bad package.** 🟢 `files` allowlists are now standard practice in the npm ecosystem, and 🔴 **every one of them excludes `LICENSE` unless the author remembered to add it.** 🟢 **The defect scales with the practice**, it is invisible in the registry's own metadata (which reports MIT), and it is invisible in the repository (where the file **was measured to exist**). 🔴 **It is visible in exactly one place: the tarball the client deploys.** 🟢 **Measured, not supposed:** `sprightly`'s repository *does* carry `main/LICENSE` — **1 070 B, MIT, Copyright (c) 2024 Obada Khalili** — so the grant exists and only the packaging loses it, which is why the remedy is an upstream PR rather than a counsel question. 🟢 **Which is why `P843` requires reporting declared and payload licence separately, and why a licence audit that stops at the registry field — or at the repository — will keep missing it.**
+
+🟡 **Scope, stated because it is easy to overstate:** 🟢 **9 of the 10 dependencies measured DO ship their grant**, so this is a minority defect, not a broken ecosystem. 🔴 **But it took one command to find one instance in the first ten packages this shelf ever checked**, which is the relevant base rate for an engagement.
+
+### 🟢 Trend — the discovery channel for this industry's open source is **measurably exhausted**, and that is a planning fact
+
+🔴 Pass 74: 17 agent candidates, 17 shelved. 🔴 Pass 75: the full prescribed battery — four global queries **and** four regional ones — **13 candidates, 13 shelved, 0 new**, taken word-bounded with a substring control. 🟢 **Three consecutive passes in which a general web search for this industry's open source returned this shelf's own contents.**
+
+🔵 **The planning consequence, which is the only reason to record it:** 🟢 **this shelf's open-source map of education AI is now more complete than the public listicle layer it was built from.** 🔴 **So further discovery has to change instrument, not try harder** — GitHub `/trending` with a language filter, release feeds of the already-censused `OpenTutor` eight-fork family, and conference artefact tracks (`DeepTutor` arrived via ICLR). 🟡 **None of those were bought this pass**, and they are named here so the exhaustion is not mistaken for completeness of the world.
+
+### 🔴 Trend — market sizing is getting **worse**, and now the regional figures are affected too
+
+🔴 **Eighth consecutive pass without an adoptable 2026 figure.** This pass's channel returned **three mutually inconsistent global series in one result set** ($6.4B→$79.6B by 2034; $8.3B→$11.4B in 2026; $7.52B→$10.6B in 2026). 🔴 **And the regional consistency pass 73 recorded has broken:** a North American series of **$951M (2024) → $2 303.2M (2029)** cannot be reconciled with the shelf's **$3.68B (2026) → $32B (2030)** — the second puts 2029 **below** the first's 2026. 🟢 **No figure adopted, and the claim that regional figures behave better than global ones is withdrawn** (`intel/market.md`).
+
+🔵 **The honest reading:** the spread is not measurement noise around a true value, it is **definitional** — "AI in education" means a different market to each firm, and no amount of re-probing will collapse it. 🟢 **Nothing on this shelf is sized by one of these figures, and the regional opportunity statements are built from adoption and regulatory counts instead**, which is why they have survived eight passes of this.
+
 ## 🟢 Seventy-fourth pass, 2026-10-09 — the first **falling** adoption series on this shelf, and the trend that adoption was never the market: **88 % use against 57 % inadequate guidance**
 
 ⏱️ **Sixth pass of this date.** Pass 73 closed earlier today (commit `7ce7b79`). **Append-only: this section is new; nothing below it was rewritten.**

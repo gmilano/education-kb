@@ -1,0 +1,82 @@
+#!/usr/bin/env bash
+# `lib/pkgrepo` — argument-invocable front end for the package→repository mapping.
+#
+# Pass 75 of 2026-10-09, closing `Gap 329`.  The NETWORK half; every parse it uses lives in
+# `package_repo.sh` and is tested offline there.
+#
+#   pkgrepo --pypi <name>              → owner/repo | NO-REPO | NON-GITHUB | NO-METADATA
+#   pkgrepo --npm  <name>              → same
+#   pkgrepo --packagist <vendor/name>  → same
+#   pkgrepo --parse <url>              → normalise a declared URL, no network
+#   pkgrepo --deps <manifest>          → core (runtime) dependency names
+#   pkgrepo --closure <ecosystem> <manifest>  → name<TAB>verdict per core dep
+#   pkgrepo --self-test                → run the offline suite
+#
+# 🔴 Exits non-zero when a name cannot be resolved, per `lib/measure`'s precedent: a caller
+# that forgets to check still fails loudly instead of probing the empty string.
+set -u
+_D="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+. "$_D/package_repo.sh"
+
+_fetch() {  # $1 url → stdout body.  Piped straight out: never through $(…) (`P834`).
+  curl -sS --max-time 30 "$1" 2>/dev/null
+}
+
+_resolve() { # $1 ecosystem  $2 name
+  local eco="$1" name="$2" tmp url
+  tmp="$(mktemp)"; trap 'rm -f "$tmp"' RETURN
+  case "$eco" in
+    pypi)      url="https://pypi.org/pypi/${name}/json" ;;
+    npm)       url="https://registry.npmjs.org/${name}" ;;
+    packagist) url="https://repo.packagist.org/p2/${name}.json" ;;
+    *) echo "pkgrepo: unknown ecosystem '$eco'" >&2; return 2 ;;
+  esac
+  _fetch "$url" > "$tmp"
+  case "$eco" in
+    pypi)      repo_from_pypi_json "$tmp" ;;
+    npm)       repo_from_npm_json "$tmp" ;;
+    packagist) repo_from_packagist_json "$tmp" ;;
+  esac
+}
+
+case "${1:-}" in
+  --pypi|--npm|--packagist)
+    [ $# -ge 2 ] || { echo "pkgrepo: $1 needs a package name" >&2; exit 2; }
+    v=$(_resolve "${1#--}" "$2") || exit $?
+    printf '%s\n' "$v"
+    case "$v" in */*) exit 0 ;; *) exit 1 ;; esac ;;
+  --parse)
+    [ $# -ge 2 ] || { echo "pkgrepo: --parse needs a URL" >&2; exit 2; }
+    v=$(normalise_repo_url "$2"); printf '%s\n' "$v"
+    case "$v" in */*) exit 0 ;; *) exit 1 ;; esac ;;
+  --deps)
+    [ $# -ge 2 ] || { echo "pkgrepo: --deps needs a manifest path" >&2; exit 2; }
+    [ -s "$2" ] || { echo "pkgrepo: no such manifest: $2" >&2; exit 1; }
+    case "$2" in
+      *package.json)   core_deps_of_package_json "$2" ;;
+      *pyproject.toml) core_deps_of_pyproject "$2" ;;
+      *)               core_deps_of_requirements "$2" ;;
+    esac ;;
+  --closure)
+    [ $# -ge 3 ] || { echo "pkgrepo: --closure needs <ecosystem> <manifest>" >&2; exit 2; }
+    eco="$2"; man="$3"
+    [ -s "$man" ] || { echo "pkgrepo: no such manifest: $man" >&2; exit 1; }
+    case "$man" in
+      *package.json)   deps=$(core_deps_of_package_json "$man") ;;
+      *pyproject.toml) deps=$(core_deps_of_pyproject "$man") ;;
+      *)               deps=$(core_deps_of_requirements "$man") ;;
+    esac
+    rc=0
+    while IFS= read -r d; do
+      [ -z "$d" ] && continue
+      v=$(_resolve "$eco" "$d") || true
+      printf '%s\t%s\n' "$d" "$v"
+      case "$v" in */*) : ;; *) rc=1 ;; esac
+    done <<< "$deps"
+    exit $rc ;;
+  --self-test)
+    exec bash "$_D/../p840-package-repo/test_package_repo.sh" ;;
+  *)
+    sed -n '3,14p' "$0" | sed 's/^# \{0,1\}//' >&2
+    exit 2 ;;
+esac

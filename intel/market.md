@@ -4,6 +4,93 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-fifth pass, 2026-10-09 — the battery is **saturated on the regional limbs too** (13/13 shelved); 🔴 **the regional figures' internal consistency does NOT survive a fourth channel**; `P839` stops this pass from declaring an EMEA gap the shelf itself refutes
+
+⏱️ **Seventh pass of this date.** Pass 74 closed earlier today. **Append-only: this section is new; nothing below it was rewritten. The live `## Opportunities by region` block is the one in this section; pass 74's has been retitled *superseded* per this file's convention.**
+
+### 🟢 The channel audit, as a number, continuing pass 74's
+
+| Probe class | Candidates returned | 🔴 Already shelved | 🟢 Unshelved |
+|---|---|---|---|
+| Repositories / agents (4 global queries) | **7** | **7** | 🔴 **0** |
+| Regional players and institutions (4 regional queries) | **6** | **6** | 🔴 **0** |
+| Regulatory / market / adoption facts | ~**22** | ~**19** | 🟢 **3** |
+
+🟢 **The three genuinely absent:** the **North American 2029 forecast** below, the **Carnegie Mellon / Gates Foundation $55 million** courseware commitment, and **Baker McKenzie** as a named channel on LATAM regulatory fragmentation (0 occurrences; it *confirms* a position this shelf already holds rather than adding one).
+
+### 🔴 `P839` discharged, and it stopped a false gap before it was written
+
+🔵 **This pass's EMEA query returned almost nothing education-specific** — CompTIA's IT outlook, a Workday study from its **2023** edition, a general enterprise-AI barriers report. 🔴 **The tempting write-up was "no EMEA education material found this pass."** 🟢 **`P839` requires grepping the shelf before declaring a gap, and the shelf refutes it flatly:**
+
+| what the shelf holds on EMEA | measured |
+|---|---|
+| `### EMEA` blocks in this file | 🟢 **dozens**, one per pass |
+| `Annex III` | 🟢 **10 files** |
+| `GDPR` | 🟢 **9 files** |
+| France / Germany / Nordic / Gulf / UAE / Saudi | 🟢 **10 / 7 / 7 / 8 / 9 / 4 files** |
+| the EU AI Literacy Framework, OECD Digital Education Outlook 2026 | 🟢 held, pass 74 |
+
+🔴 **And the decisive one, which this shelf had already written down:** line **54** of this file records that the query `AI education EMEA Europe 2026 adoption regulation players` — **verbatim from the prompt that schedules these passes** — was already run and already recorded as spent. 🟢 **So the thinness is a property of the CHANNEL, not of the region and not of the shelf.** 🔵 **Pass 73 made precisely this mistake on APAC and `P839` was written to stop it; this is the first pass where it actually fired.** 🟢 **No EMEA gap is declared. EMEA remains the best-documented regulatory region on this shelf.**
+
+### 🔴 The regional figures were praised for cross-checking. A fourth channel breaks that
+
+🔵 Pass 73 recorded the regional figures as *"the first on this shelf that are internally consistent with each other"* — **North America $3.68B in 2026**, claimed **36 %** of global, implying ~$10.2B global, within 4 % of the Research-and-Markets $10.6B. 🟢 **That cross-check was real and is not withdrawn.**
+
+🔴 **This pass's channel gives a North American series that cannot be reconciled with it:**
+
+| source | North America | year | horizon |
+|---|---|---|---|
+| shelf (pass 73, two channels) | 🟢 **$3.68B** | 2026 | $32B by 2030 |
+| this pass's channel | 🔴 **$951M** | 2024 | 🔴 **$2 303.2M by 2029**, 15.9 % CAGR |
+
+🔴 **The second series puts 2029 at $2.30B — below what the first puts 2026 at, and an order of magnitude below its 2030.** 🟢 **No reconciliation is attempted and no figure is adopted.** 🔵 **What this changes is a claim about the shelf's own confidence, which is why it is recorded rather than dropped:** regional figures are **not** better-behaved than global ones — pass 73's two happened to agree, and a third disagrees by ~14× at the horizon. 🟡 **`Gap 308` is a global-figure gap in its wording and a regional one in fact.** 🟢 The same channel also restated the global spread at **$6.4B (2025) → $79.6B (2034)**, **$8.3B → $11.4B (2026)** and **$7.52B → $10.6B (2026)** — 🔴 **three mutually inconsistent series in one result set**, which is the eighth pass in a row this has happened.
+
+### 🟢 The one genuinely new North American datum worth a studio's attention
+
+🟢 **Carnegie Mellon University and the Gates Foundation have committed $55 million to AI courseware targeting gateway college courses** (the high-failure first-year courses that gate degree progression), and 🟡 **OpenAI is reported to have launched a country-level education programme with eight national partners in Q1 2026.** 🟡 **Both single-channel and secondary; neither is adopted as a market figure.** 🔵 **The first is directionally important because gateway courses are exactly where an auditable, human-in-the-loop assessment pipeline is both pedagogically justified and legally exposed** — the artefact this shelf has been describing for ten passes.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The standing position is unchanged and this pass makes it cheaper to quote.** The oversight cluster — **Ohio** (every K-12 district on a formal AI-use policy, deadline **2026-07-01**, now past), **Oklahoma SB 1734**, **Connecticut**'s human-oversight requirement for AI-assisted grading, plus piecemeal **Colorado** and **Texas** requirements — is a **product requirement**, and the component exists on this shelf (`littlecookie0722/AI-Teaching-Agent`'s contract-specified review gate).
+
+🟢 **New this pass, and it removes a contingency rather than adding a feature:** 🟢 **the LMS-seam library's licence closure is now measured clean** — `ltijs@7.0.7` Apache-2.0 over **10 runtime dependencies, 9 payload-verified MIT, zero copyleft, zero sourceless** (`repos/foundations.md`). 🔵 **An oversight-and-audit engagement built on it can be quoted without a licence contingency**, which is the first time that is true of any protocol hop on this shelf. 🔴 **One named exception to carry into the SOW:** `sprightly` ships no copyright notice, so the deployment's third-party notices file must be populated by hand.
+
+🟡 **The demand-side caution carried from pass 74, unchanged and still single-channel:** faculty intent fell **76 % → 67 %** (2025→2026), with only **22 %** of higher-education faculty regular AI users against **83 %** of K-12 teachers. 🔵 **Sell K-12 and administration before faculty-facing tooling.**
+
+### EMEA
+
+🟢 **Still the best-documented regulatory region on this shelf, and no gap is declared** (see `P839` above). 🟢 **Not in dispute:** the EU AI Act classifies AI used in educational access, progression and assessment — admissions, evaluation, exam scoring, proctoring — as **high-risk under Annex III**. 🔴 **In dispute, for the eighth pass:** whether those obligations bite at **2026-08-02** or are deferred to **2027-12-02** / **2028-08-02** by the Digital Omnibus, `Regulation (EU) 2026/1744` of **8 July 2026** — `Gap 308`, refused again this pass on two channels and the proxy's own ledger.
+
+🟢 **Where the studio sells, unchanged:** **Annex III conformity work** — documentation, logging, human oversight, accuracy and robustness evidence — built once and shared with North America, whose oversight mandates ask for the same artefact. 🔵 **The 57 %-of-students-report-inadequate-assessment-guidance figure is the assessment-policy engagement**, procurable today and independent of the date dispute. 🟡 **MEA named rather than folded into "Europe":** UAE **National AI Strategy 2031**, Saudi **SDAIA**; Kenya, South Africa and Nigeria drafting. 🔴 **No education-specific MEA instrument on this shelf yet** — and that gap *is* grep-verified, unlike the EMEA one this pass declined to invent.
+
+### APAC
+
+🟢 **Holds the clearest education-specific AI regulation anywhere.** **Vietnam's high-risk list names education explicitly** — automated assessment and behavioural monitoring (**33/2026/QD-TTg**, decree **142/2026/ND-CP**). 🟢 **Curriculum mandates:** **India — AI and computational thinking compulsory from Class 3** in **2026-27**, backed by the IndiaAI Mission; China's reported compulsory-from-age-6 programme. 🟡 **Readiness order:** Singapore, then Australia, Korea, Taiwan.
+
+🟡 **This pass's channel adds commercial rather than regulatory signal, all of it already shelved:** the **TCS × Pearson** multi-year learning alliance, **LearnUpon**'s Sydney HQ with `Create+` AI authoring, **NIIT MTS**, **Alteryx** Academy, and **OpenAI**'s ANZ policy appointment as Canberra tightens AI governance and copyright rules. 🔴 **Singapore's current consultation is on AI in FINANCIAL institutions, not education** — recorded because it is easy to miscount as an education instrument.
+
+🔴 **Pass 74's standing limb is re-confirmed and stays open:** there is still **no APAC education-ministry instrument on student DATA specifically** — the one limb of pass 73's withdrawn gap that survived. 🟡 This pass's governance datum is enterprise-wide, not education: **87 %** of organisations encourage AI-agent use, **47 %** have governance for it.
+
+🟢 **Where the studio sells:** **Vietnam and Korea** remain the two most tractable compliance engagements — Vietnam because the obligation is in force and names assessment, Korea because the grace period makes 2026 the year to build before penalties attach. 🔵 **Sovereignty is the infrastructure constraint** (~half of APAC firms), which favours the self-hostable permissive stack this shelf curates over hosted vendors.
+
+### LATAM
+
+🟢 **Still the best-evidenced region, and the evidence is institutional rather than vendor.** 🟢 **UNESCO IESALC with UNU-IAS, 200 higher-education institutions across 19 countries (surveyed Aug–Oct 2025): 87 % use AI in at least one area; only 26 % have any formal framework; teaching leads at 74 %.** 🟡 Re-confirmed by this pass's channel, which also dates the publication to **September 2026** — 🟢 consistent with the shelf.
+
+🟡 **Regulation is general-purpose, not education-specific**, and this pass adds a fourth channel saying so: **Baker McKenzie** reports most LATAM countries without harmonised AI law, with privacy, consumer-protection, labour, cybersecurity and IP regimes already constraining deployments. 🟢 **Brazil's PL 2.338/2023** sits in the Chamber of Deputies; 🟢 **ANPD's AI-and-data-protection regulatory sandbox runs through December 2026** — the only compliance on-ramp in the region a studio can actually enter. 🟡 **CENIA**: the region is the third-largest market worldwide for generative-AI application downloads.
+
+🟢 **Where the studio sells:** 🟢 **the 87 %-use / 26 %-framework gap — 61 points — is the offer, and it is a governance engagement before it is a build.** 🟢 **Public institutions are the underserved half.** 🔴 **Caveat carried forward:** the 200-institution UNESCO sample and the 29-institution Digital Education Council survey are **not comparable** and are not compared here.
+
+### Global
+
+🟢 **Cross-regional, and it is what places the rest:** all four regions want the **same** artefact — an auditable, human-in-the-loop assessment and feedback pipeline a regulator or accreditor can inspect. North America mandates the oversight in at least five states, EMEA classifies it high-risk, APAC legislates it by name in Vietnam, LATAM needs it as governance.
+
+🔴 **The blocker is identical in all four and it is two-sided:** of every LMS and SIS this shelf has censused — Moodle **GPL-3.0**, Canvas **AGPL**, Open edX **AGPL-3.0**, OpenEduCat **LGPL-3.0** — 🔴 **0 of 6 are permissive**, and the permissive agents never reach for the protocol (`DeepTutor`: **0 LTI / 0 xAPI / 0 Caliper / 0 SCORM / 0 OneRoster** across 3 763 files).
+
+🟢 **What moved this pass:** the **licence** half of that seam is now measured, not assumed. 🟢 **`ltijs` — the one library this shelf says closes the hop — carries an Apache-2.0 grant in its published artefact over a closure of 10 dependencies that is 9/10 payload-verified MIT and free of copyleft.** 🔵 **So the remaining cost of the seam is engineering only** (`Gap 316(i)`'s wiring limb, still the highest-value unmeasured number here) **with no licence contingency behind it** — and that is a materially more sellable position than the one this shelf carried into today.
+
 ## 🟢 Seventy-fourth pass, 2026-10-09 — the prescribed search battery is **measurably saturated**: **0 unshelved repositories in 17 probed** and 2 unshelved facts in ~45; 🔴 **pass 73's declared APAC gap is contradicted by pass 72's own block, 70 lines below it in this file**; `Gap 308` refused a **seventh** time on a **wider** spread
 
 ⏱️ **Sixth pass of this date.** Pass 73 and its correction `73-C` closed earlier today (commit `7ce7b79`). **Append-only: this section is new; nothing below it was rewritten. The live `## Opportunities by region` block is the one in this section; pass 73's has been retitled *superseded* per this file's convention.**
@@ -53,7 +140,7 @@ updated: 2026-10-09
 
 🔴 **The most economical evidence that this battery is spent:** the query `AI education EMEA Europe 2026 adoption regulation players` — **verbatim from the prompt that schedules these passes** — is already recorded in `repos/trending.md:6616` with its result. 🟢 **The battery is now a re-confirmation instrument, not a discovery one, and should be priced as one.**
 
-## Opportunities by region
+## Opportunities by region — superseded (the live block is at the top of this file)
 
 ### North America
 

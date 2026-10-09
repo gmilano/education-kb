@@ -4,6 +4,26 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-fifth pass, 2026-10-09 — the vertical-platform battery returns **OpenEduCat and nothing else**, which this shelf already holds; the usable addition is a **licence-closure gate the platform question can now be run through**
+
+⏱️ **Seventh pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 The prescribed vertical query is spent too
+
+🟢 `open source platform education ERP CRM MIT Apache` returned **one vendor's own site in ten languages** — `openeducat.org` glossary pages — and no education ERP or CRM under MIT or Apache. 🟢 **Already on this shelf, with the licence resolved from payload by a prior pass:** [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp), 🔴 **LGPL-3.0, 8 241 B**, default ref 🟡 `19.0`, built on Odoo.
+
+🟢 **The channel's own glossary confirms the shelf's position rather than moving it:** OpenEduCat uses **LGPLv3** so that closed applications may link to it. 🔴 **So the answer to "is there a permissive education ERP?" is still no**, and it has now been reached from a fourth channel. 🟡 **The named verticals are unchanged:** Moodle (**GPL-3.0**), Open edX (**AGPL-3.0**), Canvas (**AGPL**), Sakai (**Apache-2.0**), Kolibri (**MIT**, offline-first), BigBlueButton, H5P, Koha, OpenEduCat (**LGPL-3.0**). 🔵 **Of the systems of record, 0 of 6 are permissive** — `Gap 316`'s licence half, re-confirmed.
+
+### 🟢 What is actually new: the platform decision now has a gate under it
+
+🔵 **The recurring vertical question on this shelf is not "which platform is open source" — every candidate is — but "what does adopting it oblige us to publish?"** 🔴 **Until this pass that was answered by reading each platform's root `LICENSE`, which is stage 1 of `P15` and the stage that cannot tell `ltijs` apart from `PyMuPDF`.**
+
+🟢 **`Gap 329` closed this pass, so stage 3 is executable** (`compose/patterns.md`): resolve every runtime dependency of a candidate platform to its repository, then read each grant from the artefact that ships. 🟢 **Demonstrated end to end on `ltijs`: 10 of 10 resolved, 9 of 10 payload-verified MIT under an Apache-2.0 root, one assertion-only.**
+
+🔵 **Why this matters for the copyleft platforms specifically, and it cuts the other way from the obvious reading:** 🟢 **a GPL/AGPL platform's dependency closure is not the studio's exposure — the platform's own copyleft already dominates it.** 🔴 **The exposure is in the PERMISSIVE components a studio builds *beside* the LMS**, because those are the ones shipped as part of a client deliverable and the ones whose notices a client must reproduce. 🟢 **So the gate's value is highest exactly where this shelf's `P736` rule already points — "build beside the LMS" — and `sprightly`'s missing notice is the first instance it caught.**
+
+🟡 **Operationally, for a platform-adoption engagement:** run `pkgrepo --closure` over the component stack the studio writes, not over Moodle. 🔴 **And do not run it over a `requirements.txt` that was written from import names** — PyPI `fitz` is a `0.0.0` stub with no licence, while the real dependency is `pymupdf`, the AGPL-or-commercial core this shelf already measured (`P842`).
+
 ## 🟢 Seventy-fourth pass, 2026-10-09 — the LMS licence wall re-measured on a **fourth independent channel**: 🔴 **0 of 6 platforms permissive**, and the one AI roadmap the channel names belongs to the **AGPL** incumbent
 
 ⏱️ **Sixth pass of this date.** Pass 73 closed earlier today (commit `7ce7b79`). **Append-only: this section is new; nothing below it was rewritten.**

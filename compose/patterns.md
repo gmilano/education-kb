@@ -4,6 +4,89 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-fifth pass, 2026-10-09 — **`P15` stage 3 is executable for the first time.** `Gap 329` closes with `lib/package_repo.sh` + `lib/pkgrepo` + `p840-package-repo` 🟢 **37/37**, and the fetch limb **ran live** against all three registries
+
+⏱️ **Seventh pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔵 The gap, restated so the closure can be checked against it
+
+🔴 **`Gap 329`:** *"`P15` needs stage 3 — probe the payload of each core dependency. A PyPI/npm/Packagist name is not a GitHub path, and nothing on this shelf maps one to the other. `core_deps_of` and `repo_of_pypi` are named in `P15` and **not written**."* 🔴 **Consequence:** `P836`'s gate had its most expensive stage blocked on a human, which is the arrangement `Gap 328` existed to end — and `73-C`'s `PyMuPDF` catch was made by hand.
+
+### 🟢 Shipped, and split on the seam `P838` requires
+
+🟢 **`P838` says split a shared instrument on the capability the environment DENIES, not on its calling convention.** 🟢 **Measured this pass, not inferred:**
+
+| host | result |
+|---|---|
+| `pypi.org/pypi/<name>/json` | 🟢 **200** |
+| `registry.npmjs.org/<name>` | 🟢 **200** |
+| `repo.packagist.org/p2/<vendor>/<pkg>.json` | 🟢 **200** |
+| `eur-lex.europa.eu` | 🔴 **403 to CONNECT** (`Gap 308`, eighth refusal) |
+
+🔵 **All three registries sit in the proxy's own `noProxy` list, so unlike `Gap 328`'s payload probe the network limb WORKS here.** 🟢 **The seam is kept anyway** — every parse lives in the network-free half and is asserted offline, so the suite stays green in a session whose egress differs. 🔴 **An instrument that only works where it was written is the failure `P838` names.**
+
+| artefact | what it gives |
+|---|---|
+| `compose/code/lib/package_repo.sh` | `normalise_repo_url`, `repo_from_pypi_json`, `repo_from_npm_json`, `repo_from_packagist_json`, and **`core_deps_of_requirements` / `core_deps_of_package_json` / `core_deps_of_pyproject`** — the `core_deps_of` that `P15` named and nobody had written |
+| `compose/code/lib/pkgrepo` | argument-invocable front end: `--pypi`, `--npm`, `--packagist`, `--parse`, `--deps`, **`--closure <eco> <manifest>`**, `--self-test`. 🔴 **Exits non-zero on anything that is not a resolved path** |
+| `compose/code/p840-package-repo/test_package_repo.sh` | 🟢 **37/37**, offline, single file on purpose |
+
+### 🟢 The verdict vocabulary, and why absence has to be loud
+
+🟢 `lib/measure` set the precedent — a missing payload is `NO-PAYLOAD`, never `0 B`. Same discipline, and it buys this shelf something it has wanted:
+
+| verdict | meaning |
+|---|---|
+| `owner/repo` | 🟢 resolved — the only verdict `P15` stage 3 can probe |
+| `NO-REPO` | 🔴 metadata exists, declares **no source** → **this is `Gap 327`'s category** |
+| `UNRESOLVABLE-HOST` | 🔴 source declared at an **SSH-config alias** — an address only the publisher can resolve |
+| `NON-GITHUB` | 🟡 real source on GitLab/Bitbucket/other — not probeable by this shelf's instruments |
+| `NO-METADATA` | 🔴 the registry has no such package |
+
+🔵 **`NO-REPO` is the valuable one: `Gap 327` ("permissive but sourceless") was hit three times in one chain and caught by hand every time.** 🟢 **Now it is a measurement** — the chain reads, live:
+
+```
+npm:@iblai/iblai-js            NO-REPO              exit=1
+npm:@iblai/iblai-api           NO-REPO              exit=1
+npm:@iblai/iblai-web-mentor    UNRESOLVABLE-HOST    exit=1
+npm:ltijs                      Cvmcosta/ltijs       exit=0
+```
+
+🔴 **Never collapse `NO-REPO` into `NO-METADATA`.** The first is a package that exists and publishes no source; the second is a name that does not exist. They license opposite next actions — *ask upstream for a repo* vs *correct the name* — and this shelf has written both in the same voice before (`P827`, `Gap 301`). 🟢 Asserted as a test, not only as a rule.
+
+### 🔴 The finding that matters most, because the offline suite could not see it
+
+🔴 **The suite was 32/32 green and the instrument was still wrong.** Pass 74 wrote the honest limit on `Gap 328`'s closure: *"the fetch branch is **unexecuted** … the first pass with network must run it."* 🟢 **This pass ran it, and that warning landed within four commands:**
+
+🔴 `@iblai/iblai-web-mentor` declares `repository.url = "git@ibl_connection:iblai/iblai-web-mentor.git"` under a 🟢 `"license": "MIT"`. 🔴 **`ibl_connection` is not a host — it is an SSH-config alias resolvable only inside the publisher's own machine.** 🔴 **The parser emitted `ibl_connection:iblai/iblai-web-mentor` and exited 0**, so a caller would have gone on to probe a GitHub path **that was never declared**, and `P827` forbids exactly that. 🟢 Fixed, verdict `UNRESOLVABLE-HOST` added, both the alias case **and** the real `git@github.com:owner/repo` case asserted so the fix cannot swallow the good one.
+
+🟢 **`P841` adopted — an offline suite green on fixtures is not evidence the fetch limb is correct.** 🔵 The fixtures encode the formats the author already knew; the registries hold the ones they did not. 🟢 **Every verdict class must be re-asserted against at least one live payload before the instrument is cited**, and the live-found cases go back into the suite as regressions (five were added this pass, 32 → 37).
+
+🔵 **And it sharpens `Gap 327` rather than just detecting it:** an MIT grant over an address nobody outside the vendor can resolve is a *stronger* form of "permissive but sourceless" than a missing field. 🔴 **A missing `repository` is visibly absent. An alias address looks like provenance and is not.**
+
+### 🟢 `P842` — the import name is not the package name, and the stub is real
+
+🔴 Measured live on PyPI: **`fitz` is version `0.0.0`, with `license: null`, `home_page: null`, `project_urls: null`, and an empty summary** → `NO-REPO`. 🔴 **`fitz` is also PyMuPDF's *import* name.** 🟢 So a `requirements.txt` — or an LLM-generated manifest — that lists `fitz` because the code says `import fitz` pins **an unrelated empty stub**, and a licence audit of it returns a clean nothing while 🔴 **the actual dependency, `pymupdf` → [`pymupdf/pymupdf`](https://github.com/pymupdf/pymupdf), is the AGPL-or-commercial core `73-C` found by hand.**
+
+🟢 **`P842`: resolve dependencies by DISTRIBUTION name, never by import name, and treat a `0.0.0` release with no URLs and no licence as a stub rather than a dependency.** 🔵 **This is the one place in the gate where a wrong answer is worse than no answer:** it does not fail, it returns *reassurance* about the wrong package.
+
+### 🟢 `P15` stage 3, end to end, on the closure this shelf most needed
+
+```sh
+# runtime closure of the library that closes Gap 316's protocol hop
+curl -sS https://registry.npmjs.org/ltijs > /tmp/ltijs.json      # dist-tags.latest → 7.0.7
+#   ... write {"dependencies": …} of the latest version to ./package.json ...
+bash compose/code/lib/pkgrepo --closure npm ./package.json
+```
+
+🟢 **Result: 10 of 10 resolved, exit 0** — `cors`→`expressjs/cors`, `debug`→`debug-js/debug`, `express`→`expressjs/express`, `helmet`→`helmetjs/helmet`, `ioredis`→`redis/ioredis`, `jsonwebtoken`→`auth0/node-jsonwebtoken`, `mongoose`→`Automattic/mongoose`, `parse-link-header`→`thlorenz/parse-link-header`, `sprightly`→`obadakhalili/sprightly`, `zod`→`colinhacks/zod`. 🟢 **The licence verdict that follows from it is in `repos/foundations.md`: 9 payload-verified MIT under an Apache-2.0 root, and `sprightly` an assertion without a grant.**
+
+🔵 **Which is the point of the whole gate.** 🔴 **Stage 1 alone — read the root `LICENSE` — returns "Apache-2.0, clean" for `ltijs` and for `PyMuPDF` both.** 🟢 **Stage 3 is what separates them**, and it is now one command instead of a human.
+
+### 🟡 Where the gate still stops
+
+🔴 **Payload verification of a dependency's grant worked here only because npm publishes tarballs and `registry.npmjs.org` is reachable.** 🟢 The 9-of-10 column above was read from **inside the `.tgz` of each installed artefact**, which is the strongest form of this measurement — it is the file the client actually deploys. 🔴 **For PyPI and Packagist the equivalent read is unexercised this pass.** 🟢 **But the repository read is NOT blocked, contrary to what this shelf had recorded:** `raw.githubusercontent.com` answers **200** in this session, and `lib/test_probe_payload.sh` ran **12/12 green against 12 live repositories** — discharging pass 74's standing instruction. 🟢 **So stage 4 is available too: when a dependency ships no grant, read its repository.** Run that way, `sprightly` resolves to 🟢 **`main/LICENSE`, 1 070 B, MIT, Copyright (c) 2024 Obada Khalili** — a grant that exists and is merely unpackaged. 🔵 **`Gap 330` keeps only its PyPI/Packagist and `NON-GITHUB` limbs**, and `P844` records why a stale refusal record is expensive.
+
 ## 🟢 Seventy-fourth pass, 2026-10-09 — `P836` gets the **instrument it was missing**: a new pattern `P15` that gates a base on its **dependency closure**, built on the probe half this pass made runnable. `P14-R` is its first test case and **fails it**
 
 ⏱️ **Sixth pass of this date.** Pass 73 and its correction `73-C` closed earlier today (commit `7ce7b79`). **Append-only: this section is new; nothing below it was rewritten.**

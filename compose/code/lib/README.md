@@ -178,3 +178,38 @@ un componente **MIT** que es **inentregable** exactamente por eso.
 **Suite:** `bash lib/test_probe_payload.sh` → **12/12**. Los doce casos son repositorios
 reales y pegan a la red a propósito, por la lección de este mismo README: *un fixture lo
 bastante corto para ser cómodo es lo bastante corto para no ver el defecto.*
+
+---
+
+## 🆕 `package_repo.sh` + `pkgrepo` — package name → repository (pass 75, `Gap 329`)
+
+🔵 *Written in English, consistent with every pass since the 2026-10-06 reset; the Spanish
+above is pass 15's and is left as it stands.*
+
+🟢 **`package_repo.sh`** is the **network-free** half: `normalise_repo_url`,
+`repo_from_pypi_json`, `repo_from_npm_json`, `repo_from_packagist_json`, and the three
+`core_deps_of_*` manifest readers that `P15` named and no pass had written. 🟢 **`pkgrepo`** is
+the argument-invocable front end (`--pypi --npm --packagist --parse --deps --closure
+--self-test`) and holds the only `curl`, per `P838`'s seam.
+
+🟢 **Suite:** `bash ../p840-package-repo/test_package_repo.sh` → **37/37**, offline.
+
+🔴 **The verdicts are loud on purpose**, following `measure`'s `NO-PAYLOAD` precedent:
+`NO-REPO` (metadata exists, no source declared — **`Gap 327`'s category**),
+`UNRESOLVABLE-HOST` (an SSH-config alias, e.g. `git@ibl_connection:…` — an address only the
+publisher can resolve), `NON-GITHUB`, `NO-METADATA`. 🔴 **Never collapse `NO-REPO` into
+`NO-METADATA`**: one is a package that publishes no source, the other a name that does not
+exist.
+
+⚠️ **The limit this file inherits, and it is the same shape as the one above:** a resolved
+path answers **where the source is**, not whether the **grant** is in it. 🟢 **Both reads are
+available in this session:** the shipped tarball (npm) *and* the repository —
+`raw.githubusercontent.com` answers **200** here, and `lib/test_probe_payload.sh` runs
+**12/12** against live repositories. 🔴 **The shelf had recorded that channel as refused and
+the record was stale**, which is `P844`. 🟡 What remains of **`Gap 330`** is the PyPI/Packagist
+payload read and the `NON-GITHUB` case — not a defect of this library.
+
+🔴 **And the lesson the suite encodes:** it was **32/32 green while the instrument was wrong**,
+on the first real address it met. 🟢 **`P841` — re-assert every verdict class against a live
+payload before citing the instrument.** 🔵 Pass 74 predicted this about its own unexecuted
+fetch branch and was right.

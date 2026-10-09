@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-fifth pass, 2026-10-09 — the prescribed research battery is measured **SATURATED**: 13 candidates across the global **and all four regional** limbs, 🔴 **13 already on this shelf, 0 new**. Pass 74's channel finding extends from agents to regions
+
+⏱️ **Seventh pass of this date.** Pass 74 and its sections closed earlier today. **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 No agent row is added, and for the second consecutive pass that is the measurement
+
+🔵 Pass 74 measured the listicle-and-topic-page channel spent **for agents** — 17 candidates probed, 17 already shelved. 🟢 **Pass 75 ran the whole battery the run prescribes, both halves — the four global searches *and* the four regional ones — and the yield is identical:**
+
+| Candidate the battery returned | limb | 🔴 shelf files naming it | word-bounded hits |
+|---|---|---|---|
+| `microsoft/ai-agents-for-beginners` | global / agents | **9** | — |
+| `pguso/agents-from-scratch` | global / agents | **7** | — |
+| `avinash201199/free-ai-agents-resources` | global / agents | **3** | — |
+| `rohitg00/ai-engineering-from-scratch` | global / trending | **5** | — |
+| Hermes Agent (Nous Research) | global / agents | **3** | **58** |
+| Suna (Elastic License 2.0 — not OSI) | global / licence flag | **2** | **2** |
+| OpenEduCat | global / verticals | *(already a shelf row)* | — |
+| UNESCO **IESALC** | LATAM | **6** | **111** |
+| **UNU-IAS** | LATAM | **4** | **27** |
+| **CENIA** (Chile) | LATAM | **6** | **43** |
+| **Ednova** (Chile) | LATAM | **3** | **30** |
+| **LearnUpon** (Sydney HQ, Create+) | APAC | **4** | **26** |
+| TCS × Pearson learning alliance | APAC | **1** | — |
+
+🔴 **Thirteen candidates. Thirteen already shelved. Zero new.** 🟢 **No row is added to this file by this pass and none is padded in to meet the run's minimum of five** — the five are long since exceeded, and a duplicate row would subtract from this shelf, not add to it.
+
+### 🟢 The instrument note, because a bare `grep -F` would have been the wrong one
+
+🔴 **`P835` says grep the shelf before writing a row as new. It does not say which grep, and that gap is `P831`-shaped.** 🟢 **So the census above was taken word-bounded and the substring delta was measured as a control:**
+
+| token | substring count | word-bounded count | delta |
+|---|---|---|---|
+| `Suna` | 2 | 2 | 🟢 **0** |
+| `Hermes` | 58 | 58 | 🟢 **0** |
+| `CENIA` | 43 | 43 | 🟢 **0** |
+
+🟢 **Zero artefact this time, so the 13/13 verdict stands as measured.** 🔵 **Recorded anyway, because `P831` was bought when a substring grep over `lti` returned 4 where word-bounded returned 1** — a zero delta is a *result*, not a reason to stop running the control. 🟢 **`P840` adopted:** a `P835` shelf-grep is **word-bounded**, and the substring count is reported beside it.
+
+### 🔵 What this pass did **not** buy, named so pass 76 does not have to rediscover it
+
+🟢 Pass 74 named four channels it expected to pay: **GitHub's own `/trending` with a language filter**, the **trending-tracker** channel, **release feeds of the eight-fork `OpenTutor` family** already censused here, and **conference artefact tracks** (`DeepTutor` arrived via ICLR). 🔴 **This pass bought none of them.** 🟢 **It ran the prescribed battery — which the run requires and which returned 0 — and spent the remaining budget closing `Gap 329`**, the package→repository mapping that had `P15`'s most expensive stage blocked on a human since it was opened.
+
+🔵 **Stated as a trade, not as coverage:** the discovery limb of pass 75 is **one more confirmation of saturation and nothing else**. 🟢 **The four channels above are still the ones with unmeasured yield, and they are pass 76's cheapest real work on this file.** 🔴 **A general web search for "top open source AI agents education" returned this shelf's own contents for the third consecutive pass; it should not be run a fourth time.**
+
 ## 🟢 Seventy-fourth pass, 2026-10-09 — **no agent row is added, and that is the measurement**: 17 candidates probed, 🔴 **17 already on this shelf, 0 new**. The defect that produced pass 73's duplicates is found **inside the shared instrument** and fixed
 
 ⏱️ **Sixth pass of this date.** Pass 73 and its correction `73-C` closed earlier today (commit `7ce7b79`). **Append-only: this section is new; nothing below it was rewritten.**

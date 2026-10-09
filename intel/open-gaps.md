@@ -4,6 +4,89 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-fifth pass, 2026-10-09 — `Gap 329` **CLOSES and its fetch limb is EXECUTED, which immediately found a defect the offline suite could not**; `Gap 308` refused an **eighth** time with 🔴 **nothing new to add, because the shelf already held the mechanism**; `Gap 330` opens **and its first limb closes in the same pass**; `P840`–`P844` adopted
+
+⏱️ **Seventh pass of this date.** Pass 74 wrote to this file; this section sits above it and supersedes only the claims it names. **Append-only.**
+
+🟢 **Registry continuity:** pass 74 wrote to this file, so the section below this one is pass 74's and no fold-forward is needed.
+
+### 🟢 `Gap 329` — **CLOSED.** The mapping exists, is tested, and has run live
+
+🔵 **The gap recorded:** *"There is no package-name → repository mapping on this shelf. `core_deps_of` and `repo_of_pypi` are named in `P15` and not written… `P836` has a gate that still needs a human for its most expensive stage."*
+
+🟢 **Shipped** (full detail in `compose/patterns.md`): `compose/code/lib/package_repo.sh` (network-free parses + the three `core_deps_of` manifest readers), `compose/code/lib/pkgrepo` (argument-invocable, `--closure` included, 🔴 **non-zero on anything that is not a resolved path**), `compose/code/p840-package-repo/test_package_repo.sh` 🟢 **37/37 offline, single file on purpose** (the cheapest route out of `Gap 300`).
+
+🟢 **And unlike `Gap 328`'s closure, the fetch limb is not left unexecuted.** Measured live: `pypi.org` 🟢 **200**, `registry.npmjs.org` 🟢 **200**, `repo.packagist.org` 🟢 **200** — all three are in the proxy's `noProxy` list. `P15` stage 3 ran end to end on the `ltijs` runtime closure: 🟢 **10 of 10 resolved, exit 0.**
+
+🔴 **The honest part, and it is the most useful thing in this pass:** the suite was **32/32 green and the instrument was still wrong.** Pass 74 wrote *"the first pass with network must run `test_probe_payload.sh`"* about its own unexecuted branch; the same warning applied here and landed within four commands. 🔴 `@iblai/iblai-web-mentor` declares `git@ibl_connection:iblai/iblai-web-mentor.git` under MIT; `ibl_connection` is an **SSH-config alias, not a host**; the parser emitted a plausible GitHub path and **exited 0**, which `P827` forbids. 🟢 Fixed (`UNRESOLVABLE-HOST`), with the real `git@github.com:` form asserted alongside so the fix cannot swallow it, and five live-found cases folded back as regressions (32 → 37).
+
+### 🔴 `Gap 308` — **OPEN. Eighth consecutive refusal, and this pass adds nothing except the discipline of not pretending otherwise**
+
+🟢 **Re-probed on two independent channels, and the proxy's own ledger read rather than inferred:**
+
+| channel | result |
+|---|---|
+| `curl` via the agent proxy → `eur-lex.europa.eu` | 🔴 **`000`**; `recentRelayFailures` names it: `connect_rejected · gateway answered 403 to CONNECT` |
+| `WebFetch` → the same URL | 🔴 **`getaddrinfo ENOTFOUND`** |
+| `getent hosts eur-lex.europa.eu` / `europa.eu` | 🔴 **NXDOMAIN** (control: `api.github.com` 🟢 resolves, **200**) |
+
+🔴 **And then `P835` was applied to this pass's own finding, which is where it earned its keep: `intel/market.md` lines **428–429** and this file's lines **717–718** already hold that exact two-channel table.** 🟢 **So the "sharper measurement on an independent channel" this pass thought it had taken was already shelved, and it is recorded here as a re-confirmation and nothing more.**
+
+🔵 **One inference in the shelf's older wording is worth tightening, since the ledger was read again:** pass 71 recorded *"the allowlist excludes EU institutional hosts generally."* 🟡 The proxy reports `selective: false` and answers **403 to CONNECT** per host. 🟢 **The effect is identical and no date on this shelf moves**; the mechanism is better described as a **gateway policy denial** than as an allowlist omission. 🟡 **Recorded as a wording refinement, not a finding** — `P839` is explicit that a declared gap is a research instruction, and this one's instruction is unchanged.
+
+🟢 **Remedy unchanged and still the highest-value item in this registry:** one fetch of the primary consolidated text from a session with egress to `eur-lex.europa.eu`. 🔴 **Eight passes have now tried from inside this network. Pass 74 recorded that it would stop re-buying this channel; pass 75 confirms the refusal and does not re-buy it either.** 🟡 `Gap 310` rides unchanged.
+
+### 🆕 `Gap 330` — **OPENED and its first limb CLOSED in the same pass**, because the channel the shelf recorded as refused is open in this session
+
+🔵 **Why it was opened:** this pass payload-verified 9 of 10 `ltijs` dependencies **from inside each installed `.tgz`** — the strongest form of the measurement, since it reads the file the client deploys. 🔴 **`sprightly` shipped no grant**, and the shelf's standing record said the follow-up question — *does the repository carry one?* — could not be asked here.
+
+🟢 **Limb 1 — CLOSED, and in the cheap direction.** `obadakhalili/sprightly` `main/LICENSE` → 🟢 **HTTP 200, 1 070 B, `MIT License` / `Copyright (c) 2024 Obada Khalili`**, family **MIT** by `P171`. 🟢 **The grant exists upstream and is merely unpackaged** (`files: ["dist"]`), so this is a one-line upstream PR plus a notices-file entry — **not** the counsel question the gap was opened on. 🟢 Detail and remedy in `repos/foundations.md`.
+
+🟡 **Limbs still open:** 🟡 **(2)** PyPI and Packagist payload reads remain unexercised — only resolution was run there. 🔴 **(3)** `NON-GITHUB` members are resolvable but not probeable by this shelf's instruments; none appeared in the `ltijs` closure, and the first that does will stop the gate.
+
+🔵 **Pair limb 1's result with `Gap 312` and `Gap 325`:** those are grants **not found**; this is a grant **measured and misplaced**. 🟢 **Three instances of the family, now distinguishable by evidence instead of by assumption** — and `sprightly` is the first found mechanically and the first found inside a runtime closure.
+
+### 🆕 `P844` — **the shelf's own record of what this environment refuses was STALE, and it cost a gap that did not need to exist**
+
+🔴 **What the shelf held**, from `Gap 328` and repeated through pass 74: that a `curl` of `raw.githubusercontent.com` is refused by the command classifier, with the general conclusion that **the network limb is the blocker**.
+
+🟢 **Measured this pass:**
+
+| probe | result |
+|---|---|
+| `raw.githubusercontent.com/expressjs/cors/master/LICENSE` | 🟢 **HTTP 200**, payload read |
+| `raw.githubusercontent.com/obadakhalili/sprightly/main/LICENSE` | 🟢 **HTTP 200**, 1 070 B |
+| `lib/test_probe_payload.sh` (12 live repositories, network on purpose) | 🟢 **12/12 passed** |
+| `github.com/<owner>/<repo>` (HTML) | 🔴 **403** |
+| `api.github.com/repos/<owner>/<repo>` | 🔴 **403** — a first-party message stating GitHub access for that repository is not enabled for this session, naming the repository-attach tool as the remedy |
+| `eur-lex.europa.eu` | 🔴 **403 to CONNECT** (`Gap 308`, unchanged) |
+
+🟢 **So pass 74's standing instruction is discharged: it wrote that the first pass with network must run `test_probe_payload.sh`, and this pass ran it — 12/12 green, which validates the `_row_from_fetch` fix live.** 🔵 **`Gap 328`'s closure is no longer carrying an unexecuted fetch branch.**
+
+🔴 **And the boundary is sharper than "the network limb":** 🟢 **raw payload reads are open; the GitHub *API* and HTML are closed by this session's REPOSITORY SCOPE, not by egress policy** — the 403 is a first-party scope message, not a gateway denial. 🔵 **Three mechanisms this shelf had been writing as one:** a gateway 403 to CONNECT (EU hosts), a session-scope 403 (GitHub API/HTML for unattached repositories), and a classifier refusal of a *command* (what pass 74 hit). 🟢 **`P844`: re-probe the refusal boundary at the start of a pass that depends on it, and record which of the three mechanisms answered.** 🔴 **A refusal recorded in one session is evidence about that session, not a property of the shelf** — and this one blocked a whole family of measurements for several passes after it stopped being true.
+
+⚠️ **Honest scope, so this is not over-read:** 🔴 pass 74's classifier denial was real when it was recorded, and the classifier can refuse the same command again — it refused one of this pass's own edits. 🟢 **The correction is to the generalisation** — *"the network limb is the blocker"* — **not to pass 74's observation.** 🟡 **`Gap 308` is untouched:** EU hosts are refused by a different mechanism and remain refused on the eighth probe.
+
+### 🟢 Protocols adopted
+
+🟢 **`P840` — a `P835` shelf-grep is word-bounded, and the substring count is reported beside it.** 🔵 `P835` says grep the shelf before writing a row as new; it does not say which grep, and that gap is `P831`-shaped. 🟡 This pass measured a **zero** substring delta on all three short tokens tested — recorded because a zero delta is a result, not a reason to stop running the control.
+
+🟢 **`P841` — an offline suite green on fixtures is not evidence the fetch limb is correct.** 🔴 The fixtures encode the formats the author already knew; the registries hold the ones they did not. 🟢 Re-assert every verdict class against at least one live payload before citing the instrument, and fold the live-found cases back in as regressions. 🔵 **Bought twice now:** `Gap 328` shipped an unexecuted fetch branch and said so; `Gap 329` shipped one and it was wrong.
+
+🟢 **`P842` — resolve dependencies by DISTRIBUTION name, never by import name.** 🔴 PyPI `fitz` is a `0.0.0` stub with no licence and no URLs, and `fitz` is PyMuPDF's *import* name. 🔵 **The danger is the direction of the error:** the audit does not fail, it returns *reassurance* about the wrong package, while the real dependency `pymupdf` is the AGPL-or-commercial core `73-C` found by hand. 🟢 Treat a `0.0.0` release with no URLs and no licence as a stub, not a dependency.
+
+🟢 **`P843` — a licence declaration in package metadata and a licence file in the shipped artefact are two different measurements, and the shelf must name which one it took.** 🔴 `sprightly` is MIT in metadata and carries no notice in any shipped file, so it cannot satisfy the MIT condition that the notice travel with all copies. 🟢 Report declared **and** payload, in that order, and never let the first stand for the second.
+
+### 🟢 Carried, re-confirmed, or unmeasured this pass
+
+🟢 **`Gap 328`'s closure independently re-confirmed:** `p837-payload-measure` re-ran 🟢 **27/27** in this session, and `lib/measure --family` was used as the classifier for all nine payload verdicts above — 🔵 **the first pass to consume pass 74's instrument rather than re-measure beside it, which is the whole argument of `P838`.**
+
+🟢 **`Gap 316(i)`'s licence limb — PAID.** 🔴 **Its wiring limb remains the highest-value unmeasured number on this shelf** and is still best paid once inside `P14-R`. 🟡 This pass makes it cheaper, not smaller: the closure is now known clean, so the remaining number is engineering effort only, with no licence contingency behind it.
+
+🟢 **`Gap 327`** — now **mechanically detectable** (`NO-REPO`, `UNRESOLVABLE-HOST`) and sharpened: an alias address is a stronger instance than a missing field, because it *looks* like provenance. 🟢 **`Gap 312` / `Gap 325`** — carried, now a three-instance pattern with `sprightly`. 🟢 **`Gap 300`** — `p840` is a seventh single-file folder, green however invoked; the 41 unread suites are otherwise untouched. 🟢 **`Gap 309`**, **`Gap 311(b)`**, **`Gap 294b`**, **`Gap 284`**, **`Gap 267`**, **`Gap 303`**, **`Gap 318`**, **`Gap 310`** — carried, unmeasured this pass. 🟢 **`Gap 316`'s main limb** — unchanged; no permissive component acquired an LTI 1.3 + AGS seam this pass, and the discovery battery that would have found one is measured saturated (`agents/top.md`).
+
+🔴 **And one standing item is re-flagged rather than quietly dropped:** pass 74's note that three `P85` citations in this repository's prose have **no artefact implementing them** is untouched by this pass. 🟢 Pass 76 should either produce the gateway or withdraw the three citations.
+
 ## 🟢 Seventy-fourth pass, 2026-10-09 — `Gap 328` **CLOSES, and its recorded remedy was wrong**; 🔴 **pass 73's declared APAC gap is contradicted by this shelf itself**; `Gap 308` refused a **seventh** time on a wider spread; `Gap 329` opens; `P837`–`P839` adopted
 
 ⏱️ **Sixth pass of this date.** Pass 73 and its correction `73-C` wrote to this file; this section sits above them and supersedes only the claims it names. **Append-only.**

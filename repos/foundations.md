@@ -4,6 +4,89 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-fifth pass, 2026-10-09 — **`Gap 316(i)`'s licence limb is PRICED from payload**: the `ltijs` runtime closure is **10 packages, 9 payload-verified MIT under an Apache-2.0 root, and 1 assertion without a grant**. The third instance of `Gap 312`/`325` on this shelf, and the first found **mechanically**
+
+⏱️ **Seventh pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔵 Why this number existed to be taken
+
+🟢 This shelf has called [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) *"the library that would close"* `Gap 316`'s LTI 1.3 + AGS seam for five consecutive passes, and `Gap 316(i)` — **the real wiring cost** — *"the highest-value unmeasured number on this shelf."* 🔴 **What no pass had taken is the cheaper half of that number: what the dependency closure LICENSES.** 🟢 **`Gap 329`'s closure this pass (`lib/pkgrepo`, below) made it a single command**, and `73-C`'s `PyMuPDF` finding — an Apache-2.0 root over an AGPL-or-commercial core dependency, caught **by hand** — is exactly the hazard it had to be checked for.
+
+### 🟢 The root grant, read from the artefact that actually ships
+
+| what | measured |
+|---|---|
+| npm artefact | 🟢 `ltijs@7.0.7`, tarball `ltijs-7.0.7.tgz` |
+| declared licence | 🟢 `Apache-2.0` |
+| **payload** `LICENSE` | 🟢 **11 361 B**, family **`Apache-2.0`** by `P171` (`lib/measure --family`) |
+| runtime dependencies | 🟢 **10** |
+| `engines.node` | 🔴 **`">=24"`** — re-confirmed in the npm artefact, not just the git tree |
+
+### 🟢 The closure, all ten, declared **and** payload-verified
+
+🔵 **Both columns are taken because they are different facts.** The registry `license` field is a **declaration in metadata**; a `LICENSE` file inside the tarball is **the grant that travels with the installed artefact**. 🟢 This shelf's own `Gap 312`/`Gap 325` exist precisely because the first can be present while the second is absent.
+
+| package | declared | payload file | bytes | family (`P171`) |
+|---|---|---|---|---|
+| [`expressjs/cors`](https://github.com/expressjs/cors) | MIT | `LICENSE` | 1 095 | 🟢 MIT |
+| [`debug-js/debug`](https://github.com/debug-js/debug) | MIT | `LICENSE` | 1 139 | 🟢 MIT |
+| [`expressjs/express`](https://github.com/expressjs/express) | MIT | `LICENSE` | 1 249 | 🟢 MIT |
+| [`helmetjs/helmet`](https://github.com/helmetjs/helmet) | MIT | `LICENSE` | 1 089 | 🟢 MIT |
+| [`redis/ioredis`](https://github.com/redis/ioredis) | MIT | `LICENSE` | 1 080 | 🟢 MIT |
+| [`auth0/node-jsonwebtoken`](https://github.com/auth0/node-jsonwebtoken) | MIT | `LICENSE` | 1 121 | 🟢 MIT |
+| [`Automattic/mongoose`](https://github.com/Automattic/mongoose) | MIT | `LICENSE.md` | 1 130 | 🟢 MIT |
+| [`thlorenz/parse-link-header`](https://github.com/thlorenz/parse-link-header) | MIT | `LICENSE` | 1 078 | 🟢 MIT |
+| [`obadakhalili/sprightly`](https://github.com/obadakhalili/sprightly) | MIT | 🔴 **none** | — | 🔴 **ASSERTION-ONLY** |
+| [`colinhacks/zod`](https://github.com/colinhacks/zod) | MIT | `LICENSE` | 1 072 | 🟢 MIT |
+
+🟢 **So the answer `Gap 316(i)`'s licence limb was waiting for is good, and it is the opposite of the `PyMuPDF` case: no copyleft anywhere in the closure, no `NON-GITHUB` member, no sourceless member.** 🟢 **Nine of ten carry their grant in the shipped artefact.**
+
+### 🔴 The exception, and it is worse than a missing file
+
+🟡 `sprightly@2.0.1` is a 100-line template renderer — the kind of dependency nobody reads. 🔴 **Measured in its tarball:**
+
+| what | measured |
+|---|---|
+| `package.json` `license` | 🟢 `"MIT"` |
+| `files` | 🔴 `["dist"]` |
+| files shipped | **8** — `README.md`, `package.json`, `dist/*` |
+| `LICENSE` / `COPYING` | 🔴 **absent** |
+| any shipped file carrying a copyright notice | 🔴 **none** — `grep -rliE "copyright\|MIT License"` returns **0 files** |
+
+🔴 **The consequence is not cosmetic.** The MIT licence's own operative sentence requires that *"the above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software."* 🔴 **The published artefact contains neither notice**, so a client redistributing it cannot satisfy the condition of the licence it is relying on — 🔵 **not because the grant is withheld, but because the text that constitutes it was never packaged.**
+
+🟢 **And the mechanism is an idiom this shelf had already flagged for a different reason:** `files: ["dist"]`. 🔵 **Caution (b) below records that same field on `ltijs` as a *build* hazard. This is the same field with a *licence* consequence**, and `sprightly` is the member of the closure where it bites.
+
+🟢 **Remedy, cheap and external, identical in shape to `Gap 325`:** ask upstream to add `LICENSE` and include it in `files`. 🟡 **Interim, and this is what a client engagement should actually do:** vendor the notice from the repository into the deployment's third-party notices file, and pin `sprightly@2.0.1`.
+
+### 🟢 **RESOLVED within this same pass — the grant exists upstream, so this is a packaging bug and not a counsel question**
+
+🔴 **This section was first written as an unmeasured limit**, on the shelf's standing record that `raw.githubusercontent.com` payload reads are refused in this environment. 🟢 **That record is out of date for this session: the channel answers 200** (see `intel/open-gaps.md`, `P844`). 🟢 **So the question was asked rather than deferred, and it has the better answer:**
+
+| probe | result |
+|---|---|
+| `obadakhalili/sprightly` `main/LICENSE` | 🟢 **HTTP 200 · 1 070 B** |
+| first lines | 🟢 `MIT License` / `Copyright (c) 2024 Obada Khalili` |
+| family (`lib/measure --family`, `P171`) | 🟢 **MIT** |
+| `main/package.json` `files` | 🔴 **`["dist"]`** — unchanged from the published artefact |
+
+🟢 **The grant is real, it is MIT, it is attributable to a named holder, and it is in the repository.** 🔴 **It is simply not in the tarball**, because `files: ["dist"]` excludes it. 🟢 **So the verdict moves from "assertion without a grant" to a strictly better category: a grant that exists and is not packaged.**
+
+🔵 **Which is the distinction this section said was commercially decisive, now settled in the cheap direction:**
+
+| if | then |
+|---|---|
+| the grant existed nowhere | 🔴 a counsel question before any client ships it |
+| 🟢 **the grant exists and is unpackaged** | 🟢 **a one-line upstream PR, and a notices-file entry in the interim** |
+
+🟢 **Remedy, now exact:** upstream, add `"LICENSE"` to `files` (npm includes `LICENSE` automatically in most toolchains, which is why this is easy to miss when an explicit allowlist is set). 🟢 **Interim, and quotable in an SOW:** vendor the notice verbatim — **`MIT License · Copyright (c) 2024 Obada Khalili`** — into the deployment's third-party notices file, and pin `sprightly@2.0.1`.
+
+🟡 **What this does NOT change:** the deployed artefact still carries no notice, so a client that ships it without the vendored entry is still out of compliance with the licence it relies on. 🟢 **The defect is real; only its remedy got cheaper.** 🔵 **And `Gap 312`/`Gap 325` are now distinguishable from it by evidence rather than by assumption** — `frappe/education` and `ec-issuer` have no grant *found*; `sprightly` has one *measured*.
+
+### 🟢 A clarification to caution (b) below, not a correction
+
+🔵 Caution (b) records `"files": ["dist"]` with `main: dist/index.js` on `ltijs`. 🟢 **Measured in the npm `7.0.7` artefact this pass:** `files` is 🟢 **`null`**, `main` is 🟢 **`"index.js"`**, and the tarball ships a flat `index.js`, `index.d.ts`, `index.js.map`, `README.md` **and `LICENSE`**. 🟢 **Both readings are true of different objects** — caution (b) describes the **git tree**, this describes the **published artefact** — and the difference *is* caution (c)'s point, that npm is ahead of the tagged history. 🟢 **So caution (b) is hereby scoped to a git-dependency install, which is exactly the install its own remedy tells you not to do**, and 🟢 **the npm artefact is now measured clean and complete, which makes "install from npm, not from GitHub" an instruction with a measurement under it.**
+
 ## 🟢 Seventy-fourth pass, 2026-10-09 — **no repository row is added**; the pass's foundation contribution is an **instrument**, and the LMS licence wall is re-confirmed from an independent channel: 🔴 **0 of 6 platforms permissive**
 
 ⏱️ **Sixth pass of this date.** Pass 73 and its correction `73-C` closed earlier today (commit `7ce7b79`). **Append-only: this section is new; nothing below it was rewritten.**

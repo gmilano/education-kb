@@ -4,6 +4,32 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 75) — **0 new repositories from the prescribed battery for the third consecutive pass**; the week's repository work is an instrument, and it runs
+
+🔵 **Append-only: this dated section is new; every section below it is prior history and is unchanged.**
+
+### 🔴 The trending channel, measured rather than described
+
+🟢 **`github trending education AI 2026` returned no GitHub Trending page at all** — only third-party snapshots (Trendshift, GitTrend) and blog roundups, with star counts that disagree between sources. 🟡 **Candidates returned and already shelved:** `rohitg00/ai-engineering-from-scratch` (reported #1 in a tracker's Programming Examples category, first #1 on 2026-05-24), `microsoft/ai-agents-for-beginners`, Made With ML, `D2L`, Karpathy's *Zero to Hero*. 🔴 **0 unshelved.**
+
+🔵 **One datum about the channel is worth keeping:** a secondary source reports **nine of the top ten** projects in GitHub's February 2026 monthly trend were AI-related. 🟡 Single-channel, not adopted. 🔵 **If true it explains the saturation**: a generic "AI" trending list is now mostly agent frameworks and courseware, and an education-specific repo has to be found by a filter this channel does not apply. 🟢 **Which is why the named next instrument is GitHub `/trending` with a LANGUAGE filter plus release feeds, not another roundup.**
+
+### 🟢 Shipped this week, in this repository, and green
+
+| artefact | state |
+|---|---|
+| `compose/code/lib/package_repo.sh` | 🟢 the network-free package→repo parses + the three `core_deps_of` manifest readers `P15` named and nobody had written |
+| `compose/code/lib/pkgrepo` | 🟢 argument-invocable: `--pypi --npm --packagist --parse --deps --closure --self-test`; 🔴 non-zero on any unresolved verdict |
+| `compose/code/p840-package-repo/test_package_repo.sh` | 🟢 **37/37**, offline, single file (so it runs however it is invoked — `Gap 300`) |
+
+🟢 **Registry reachability measured, not assumed:** `pypi.org` **200**, `registry.npmjs.org` **200**, `repo.packagist.org` **200** — all three in the proxy's `noProxy` list. 🔴 `eur-lex.europa.eu` **403 to CONNECT** (`Gap 308`, eighth refusal).
+
+🔴 **And the week's most useful negative result:** the suite was **32/32 green and the instrument was still wrong** on the first real-world address it met (`git@ibl_connection:…`, an SSH-config alias it turned into a plausible GitHub path and exited 0). 🟢 **`P841` adopted; five live-found cases folded back as regressions, 32 → 37.** 🔵 **Pass 74 predicted this in writing about its own unexecuted fetch branch. It was right.**
+
+### 🟢 Repositories resolved from payload this week (all pre-existing, now with paths recorded)
+
+🟢 **The `ltijs` runtime closure, resolved and licence-read** — [`expressjs/cors`](https://github.com/expressjs/cors), [`debug-js/debug`](https://github.com/debug-js/debug), [`expressjs/express`](https://github.com/expressjs/express), [`helmetjs/helmet`](https://github.com/helmetjs/helmet), [`redis/ioredis`](https://github.com/redis/ioredis), [`auth0/node-jsonwebtoken`](https://github.com/auth0/node-jsonwebtoken), [`Automattic/mongoose`](https://github.com/Automattic/mongoose), [`thlorenz/parse-link-header`](https://github.com/thlorenz/parse-link-header), [`obadakhalili/sprightly`](https://github.com/obadakhalili/sprightly), [`colinhacks/zod`](https://github.com/colinhacks/zod). 🟢 **9 of 10 ship a payload-verified MIT grant; `sprightly` ships none.** 🟡 **None of these ten had ever been named on this shelf** (all returned 0 files before this pass) — 🔵 **they are not finds, they are the dependency graph of something this shelf already recommended, which nobody had looked at.**
+
 ## 🔴 2026-10-09 — pass 74: the listicle channel's yield is now **measured at zero**, and the channel reported a status this shelf had already superseded
 
 ⏱️ **Sixth pass of this date.** Pass 73's section is below, unchanged. **Append-only.**
