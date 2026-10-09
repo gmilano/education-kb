@@ -4,6 +4,120 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-sixth pass, 2026-10-09 — **`P870` is RETIRED for APAC and survives for EMEA** (`P937`): the acronym channel was never the defect, the MODE was. Plus: the US limb is a **district-delegation** regime, not a state-regulation one, and that changes who the buyer is
+
+⏱️ **Eighteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Four regional queries run in `extended` mode, using the brief's own plain-language acronym phrasing as the instrument rather than as a control** — because `P887` said mode was the live variable and this pass tests exactly that.
+
+### 🟢 🆕 `P937` — six passes blamed the vocabulary; the measurement says it was the **mode**
+
+🔴 **`P870`, built over six passes and restated as recently as pass 85:** *"No ministry of education publishes under «EMEA» or «APAC»; those are sales-territory terms, and the acronym channel returns corporate IT press."*
+
+🟢 **Pass 86 ran `AI education APAC 2026 adoption regulation players` — the brief's exact phrasing — in `extended` mode. It returned dated, named, education-specific statutory instruments:**
+
+| jurisdiction | instrument | education hook |
+|---|---|---|
+| 🟢 **South Korea** | **AI Basic Act, in force 22 Jan 2026**, enforcement decree same date | 🟡 horizontal; 🟢 **one-year penalty grace period** — 2026 is effectively a pilot year |
+| 🟢 **Vietnam** | **Law on Artificial Intelligence, effective 1 Mar 2026** — first standalone AI statute in SE Asia | 🟢 **education named among six high-risk sectors**, incl. automated assessment and behavioural monitoring |
+| 🟢 **Taiwan** | **AI Basic Act, passed Dec 2025** | 🟡 horizontal |
+| 🟢 **China** | binding rules on algorithms, deep synthesis, generative AI | 🟡 horizontal, binding end of the spectrum |
+| 🟡 **Singapore, Japan** | voluntary guidelines on existing law | 🟡 light-touch |
+| 🟡 **Australia** | **AI Safety Institute announced Nov 2025**, operating early 2026; mandatory guardrails in consultation | 🟡 pre-legislative |
+
+🟢 **`P937` adopted: `P870` conflated the query's VOCABULARY with the search MODE.** 🔵 `P887` suspected it; this pass confirms it on the acronym channel `P870` specifically condemned. 🟢 **Retired for APAC. 🔴 Still holding for EMEA** — see the EMEA limb below, where the same phrasing in the same mode still failed in the same way.
+
+🔵 **Methodological consequence, stated because six passes of regional verdicts depend on it:** 🔴 **every `standard`-mode regional conclusion on this shelf remains conditioned**, per `P887`. 🟢 **But the fix is cheaper than `P870` implied: re-run in `extended`, no re-phrasing required.**
+
+### 🔴 `P925` reproduces — the **EMEA** channel again returned material BEHIND this shelf
+
+🔴 **Same phrasing, same `extended` mode, and the EMEA limb still underperforms.** 🟢 **What it returned:** EU AI Act high-risk framing for education (systems that evaluate learners, assign them to programmes, or influence access to qualifications → high-risk, conformity assessment required before placing on market); 🟡 **an AI Omnibus amendment in force 27 Jul 2026**, with sources unable to reconcile the high-risk dates.
+
+🔴 **What it did NOT return, and this is the third pass running:**
+- 🔴 **Zero named EMEA EdTech vendors.** The "players" limb came back as regulators and standard-setters only.
+- 🔴 **Zero education-specific market or adoption figures for EMEA.**
+- 🔴 **US state legislation bleeding into an EMEA query** — `multistate.us`, `excelined.org` and `pursuit.us` were top results for a query naming EMEA.
+- 🔴 **Africa and the Middle East: absent again.** 🟡 The run surfaced UAE and Saudi **national AI strategies and infrastructure spend**, but **no education instrument and no named education vendor**. 🔵 Thinner than a gap and recorded as such, not as coverage.
+
+🟡 **The EU AI Act high-risk education date is STILL not settled** — fourth consecutive pass. 🟢 Best available reading carried forward: 🟡 **2 December 2027**, with the Omnibus amendment in force 27 Jul 2026 and the official text unreconciled across sources. 🔴 **Not to be quoted to a client without reading the Official Journal.**
+
+### 🟢 The **North America** limb — and the structural finding is *who the buyer is*
+
+🟢 **The regime is DELEGATION, not regulation.** 🔵 **This is the pass's most commercially load-bearing market finding:**
+
+| mechanism | evidence |
+|---|---|
+| 🟢 **Districts write the policy, not states** | 🟢 **Ohio and Tennessee** enacted laws *requiring districts to develop their own AI policies* rather than setting statewide rules. 🟢 **Oklahoma S.B. 1734** — every district must adopt a written AI policy before the **2027-28** school year. 🟢 **Maryland's 24 districts** have **120 days** from state guidance to adopt their own. |
+| 🟡 **Volume is high, bindingness is low** | 🟡 Counts disagree by definition: **134 bills across 31 states** on one tracker, **68 bills across 27 states with 10 enacted in 2026** on another. 🟢 **33–35 state education departments plus Puerto Rico** have published *guidance*. |
+| 🟢 **Privacy and human-oversight are the binding constraints** | 🟢 **California AB 1159** bars using student data to train AI models. 🟢 **Idaho S.B. 1227** requires privacy protections. 🟢 **Oklahoma and Maryland** require human oversight and bar AI from high-stakes decisions about students. |
+| 🔴 **Grading is being prohibited outright in places** | 🔴 **NYC's March 2026 preliminary guidance** uses a traffic-light framework and **prohibits AI for grading, discipline, placement and IEP development.** 🟡 A reported one-year moratorium on student-facing AI through 8th grade could not be confirmed from a primary source. |
+| 🟢 **Curriculum mandates are arriving** | 🟢 **Alabama H.B. 329** requires a CS course including AI instruction to graduate; Georgia and Mississippi moving similarly. 🟢 **Virginia S.B. 394** and **Maryland S.B. 720** mandate teacher training/PD. |
+| 🟡 **Federal action is funding-shaped** | 🟡 Education Dept. grant-priority rule finalised **13 Apr 2026** favouring AI understanding/ethical use; **H.R. 8747** (K-12 AI Literacy and Readiness Act) advanced in committee **21 Jul 2026**, largely along party lines. |
+
+🔵 **Why this matters more than the bill counts:** 🟢 **a delegation regime multiplies the number of buyers and makes each one small.** 🔴 **There is no single statewide procurement to win.** 🟢 **The sellable artefact is therefore not a platform — it is a POLICY-CONFORMANT CONFIGURATION plus the evidence pack that proves it**, repeatable across hundreds of districts. 🔴 **And NYC's prohibition on AI grading means an autograding deliverable must be able to run with the AI scoring path disabled** and still be useful. 🟢 **`repo-grading-assistant`'s human-sets-the-final-grade design is exactly this posture, by construction.**
+
+🔴 **Canada and Mexico returned nothing again — the North America limb is US-only for a FOURTH consecutive pass.** 🟢 Declared, not inferred.
+
+### 🟢 The **LATAM** limb — the adoption/governance gap is now quantified from a primary institution
+
+🟢 **UNESCO IESALC, ~200 higher-education institutions across 19 countries:**
+
+| measure | value |
+|---|---|
+| 🟢 institutions using AI in ≥1 area | 🟢 **87%** |
+| 🔴 institutions with **any formal AI framework** | 🔴 **26%** |
+| 🟢 using it for teaching tasks (lesson planning, **grading**) | 🟢 **74%** |
+| 🟢 adoption by type | 🟢 private non-profit **84%** · public **68%** · private for-profit **52%** |
+| 🟢 drivers named by leaders | 🟢 **staff training** and **internal AI advocates** |
+| 🟢 schools | 🟢 teacher AI use **above the OECD 36% average**; 🟢 **Uruguay 75% of public-school teachers** (Ceibal, 2026) |
+
+🟢 **Governance instruments:** 🟡 **Brazil PL 2.338/2023**, risk-based, still in the Chamber of Deputies (text can change); 🟡 **Chile** government-sponsored risk-based bill; 🟢 **Colombia CONPES 4144 (Feb 2025)** — policy-first, no statute. 🟢 **UNESCO launched the Observatory on AI in Education for LAC on 14 April**; 🟢 **IDB technical note** argues for enabling regulation and names education among the accelerating sectors.
+
+🔵 **The 87%-vs-26% spread is the engagement, stated plainly:** 🟢 **74% are already using AI to grade, and three-quarters of institutions have no framework governing it.** 🔴 **That is an unmanaged-risk position, not a greenfield** — the work is retrofitting governance onto deployed practice.
+
+### 🟢 Market size — the spread is the finding, not any single number
+
+🔴 **Four sources, four incompatible figures, all vendor research:** 🟡 IMARC **USD 6.4 B (2025) → 79.6 B (2034)**; 🟡 another **USD 8.3 B (2025)**, CAGR **25.9%** 2026–33; 🟡 The Business Research Company **USD 7.52 B (2025) → 10.6 B (2026)**; 🟡 segment claims: cloud **71.22%** share (2024), K-12 **45.62%** of adoption, STEM **34.78%** of revenue, language learning fastest-growing.
+
+🔴 **Spread at 2034 is wider than the 2025 base is large.** 🟢 **Treat as directional only; do not put a single figure in a client deck without naming the source.** 🟡 **One maturity read is more useful than the sizes: the sector scores 35/100 on maturity — most institutions still in pilot.** 🟢 **Consistent with LATAM's 26% framework coverage and with `P910`'s artefact-type finding.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **The buyer is the DISTRICT, and the product is a conformant configuration.** 🟢 Build on 🟢 **`Submitty` (BSD-3-Clause, RPI)** or 🟢 **`okpy/ok` / `Tango` (Apache-2.0)**, both permissive and institutionally operated, plus 🟢 **`ottr` + `tblcheck` + `ggcheck`** for R/notebook/table/figure grading — the full non-numeric answer surface, all permissive, all North American.
+🟢 **The differentiator is compliance evidence, not features:** AB 1159 (no student data to training), Idaho S.B. 1227 (privacy), Oklahoma/Maryland (human oversight, no high-stakes AI decisions), NYC (AI grading prohibited outright).
+🔴 **Hard requirement: the AI scoring path must be switchable off** and the system still useful. 🟢 **`repo-grading-assistant` (MIT) models this.** 🟡 **Secondary motion: teacher PD** — Virginia S.B. 394 and Maryland S.B. 720 mandate it and nothing on this shelf addresses it.
+🔴 **Canada and Mexico: no evidence, fourth pass. Do not quote this limb as North America.**
+
+### EMEA
+
+🟢 **The strongest permissive stack on the shelf is European and it is deployable today:** 🟢 **`Artemis` (MIT, TU München, live at `artemis.tum.de`) + `Ares2` (MIT test sandbox) + `phobos` (MIT, Landlock + network allow-list)** — platform, test isolation and OS confinement, one research group, all MIT. 🟢 **Recipe `P86-R1`.**
+🟢 **The binding constraint is the AI Act, not the licence.** Learner evaluation, programme assignment and qualification access are high-risk → conformity assessment before placing on market. 🔵 **So the sellable work is the conformity dossier wrapped around a permissive stack** — and the stack being MIT is what makes the dossier ownable.
+🟡 **`SafeExamBrowser` (MPL-2.0) is the proctoring entry**, file-scoped copyleft: modified MPL files stay open, the larger work need not. 🔴 **Audit for affect/emotion inference first** — Art. 5(1)(f) prohibition, in force since 2025-02-02 (`Gap 349`, unaudited beyond one row).
+🔴 **Africa and the Middle East are NOT covered by this limb.** 🟡 UAE and Saudi have national AI strategies and infrastructure spend; 🔴 no education instrument, no named vendor. 🟢 **An informed gap: EMEA here means EU.**
+
+### APAC
+
+🟢 **Regulation is now concrete enough to sell against, which is new this pass.** 🟢 **Vietnam names education a high-risk sector (Law on AI, 1 Mar 2026)** — automated assessment and behavioural monitoring explicitly. 🟢 **Korea's AI Basic Act is in force (22 Jan 2026) with a one-year penalty grace** — 🔵 **that grace period is a dated, closing window for compliance work.** 🟢 Taiwan Dec 2025; China binding; Singapore/Japan voluntary; Australia pre-legislative.
+🔴 **A multi-jurisdiction deployment cannot assume one posture** — the region spans binding statute to voluntary guidance.
+🟢 **Shelf rows that place here:** 🟢 **`BigHOST` (MIT, PES University)** for big-data assignment grading; 🟢 **`Questgen.ai` (MIT, 951★)** for item authoring; 🟢 **`Proctoring-AI` (MIT, 633★)** — 🟢 **audited: zero of its seven functions infers emotion or affect**, so permitted-but-high-risk, not prohibited; 🟡 **`gegok12` (MIT)** with 23 school-level deployment forks across India, Indonesia and Vietnam (`P933`) — 🔴 unmaintained, adopt to own.
+🔴 **`gemini-python-tutor` is APAC and must NOT be used:** its licence adds field-of-use restrictions (`P930`, `Gap 353`).
+
+### LATAM
+
+🟢 **The opportunity is governance retrofit, and the numbers are from UNESCO rather than a vendor:** 🟢 **87% of institutions using AI, 74% using it to grade, 🔴 26% with any formal framework.** 🔵 **Lead with the framework, not the platform** — the platforms are already in use.
+🟢 **The shelf finally has a LATAM production anchor: `UNCode` at the Universidad Nacional de Colombia** — multi-language autograding including **Verilog/VHDL**, a capability no other row on this shelf has in any region. 🔴 **AGPL-3.0**: 🟢 fine or advantageous for ministry and public-university work, 🔴 disqualifying for a closed SaaS wrapper. 🟡 **And its upstream's LICENSE says "most of the files"** — read the exception list before redistributing (`P936`).
+🟢 **Policy entry points:** Colombia **CONPES 4144** (policy-first, no statute — so institutional frameworks are the live instrument); 🟡 Brazil **PL 2.338/2023** and Chile's bill still moving. 🟢 **UNESCO's LAC Observatory (launched 14 April)** and the **IDB** are the funded channels.
+🟢 **Uruguay is the reference deployment** — 75% of public-school teachers using AI tools (Ceibal), the highest concrete adoption figure on this limb.
+
+### Global
+
+🟢 **Two findings this pass are region-independent and both are about trusting evidence:**
+🔴 **`P930`** — a licence titled with a permissive family name can carry field-of-use restrictions. 🟢 Any engagement licence review must read the title line **to its end** and compare the byte count against the canonical payload.
+🔴 **`P934`** — a granted platform can ship an ungranted installer. 🟢 Clear the **install path** as a separate artefact.
+🟡 **Market sizing is not usable as a single number:** four vendor sources span USD 6.4–8.3 B for 2025 and disagree by more at 2034 than the 2025 base. 🟢 **Use the maturity read instead — 35/100, most institutions in pilot** — which is both better evidenced and better aligned to what a studio actually sells into.
+
 ## 🟢 Eighty-fifth pass, 2026-10-09 — **`Gap 348` CLOSES and its premise is REFRAMED: Mexico and Colombia have no *sectoral* AI-education instrument because their horizontal policy DELEGATES to the education ministry and the deadline slipped.** `P879` reproduces in LATAM. And the EMEA channel returned material **behind this shelf** for a second time — recorded as a channel measurement, not published as a finding
 
 ⏱️ **Seventeenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

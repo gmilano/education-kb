@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-sixth pass, 2026-10-09 — the licence chokepoint moves a **fourth** time, and this pass it is not a licence FAMILY but a **RIDER**; plus the US regime is revealed as **district delegation**, which changes the shape of the sellable artefact; and the shelf's own measuring instrument is found unreliable across passes
+
+⏱️ **Eighteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 `T1` — the licence chokepoint has now moved **four passes running**, and the movement is still the trend
+
+| pass | where the chokepoint sat |
+|---|---|
+| 83 | 🔴 platform tier copyleft-by-default |
+| 84 | 🔴 psychometrics tier GPL-by-default |
+| 85 | 🟢 **left the licence domain** — delivery tier permissive, constraint became the AI Act's prohibition line |
+| 🟢 **86** | 🔴 **back in the licence domain, but one level DOWN: not the family, the RIDER** |
+
+🔵 **This pass the obstacle is not "which licence" but "is the licence what its title says".** 🔴 **`kangwonlee/gemini-python-tutor` is titled `BSD 3-Clause License + Do Not Harm` and adds two field-of-use clauses** (`P930`). 🔴 **`artitw/text2text` (pass 85) is MIT with a dependency-closure rider** (`P922`). 🔴 **`UCL-INGI/INGInious` opens with "Most of the files …"** (`P936`). 🔴 **`okpy/ok` is a bundled multi-grant notice file** (`P916`).
+
+🟢 **Four rows, four different ways the declared family is incomplete.** 🔵 **`T1` restated for pass 87: the licence TIER is now adequately mapped (permissive → file-scoped → work-scoped → non-commercial). The unmapped layer is the RIDER layer, and nothing on this shelf systematically probes it.** 🆕 **That is the shape of `Gap 353`.**
+
+### 🟢 `T2` — the US regime is **DELEGATION**, and it changes what a studio sells
+
+🟢 **Measured this pass:** 🟢 **Ohio and Tennessee** require districts to write their own AI policies instead of setting state rules; 🟢 **Oklahoma S.B. 1734** requires a written district policy before 2027-28; 🟢 **Maryland's 24 districts** have 120 days from state guidance. 🟢 **33–35 state education departments publish guidance**, while binding statute stays rare.
+
+🔵 **The trend is not "more AI regulation in US education". It is regulation being pushed DOWN to the district.** 🟢 **Consequences, which are commercial rather than legal:**
+- 🔴 **No single statewide procurement exists to win.** The buyer count multiplies and each buyer shrinks.
+- 🟢 **The repeatable artefact is a policy-conformant CONFIGURATION plus its evidence pack**, not a platform licence.
+- 🔴 **Capability must be switchable.** 🔴 **NYC prohibits AI for grading, discipline, placement and IEP development** — so an autograding deliverable has to remain useful with AI scoring off.
+- 🟢 **Human-in-the-loop is becoming a legal requirement, not a design preference** (Oklahoma, Maryland: human oversight, no high-stakes AI decisions about students).
+
+### 🟢 `T3` — **adoption has decoupled from governance, and the gap is now measured rather than asserted**
+
+🟢 **UNESCO IESALC, ~200 institutions, 19 LATAM countries: 🟢 87% using AI, 🟢 74% using it to GRADE, 🔴 26% with any formal framework.**
+
+🔵 **The 74% figure is the one that matters, because grading is precisely what both the EU and several US states treat as high-risk or prohibited.** 🔴 **So the most-deployed use case is the most-regulated one, and three-quarters of institutions are doing it ungoverned.** 🟢 **This is a retrofit market, not a greenfield one** — and it reframes the studio offer from "build a grader" to "govern the grader they already run".
+
+🟡 **Corroborated independently:** the sector scores **35/100 on maturity** (most institutions in pilot), and LATAM school-teacher AI use is **above the OECD 36% average**, with **Uruguay at 75%** of public-school teachers.
+
+### 🟢 `T4` — the **permissive production platform** is now a tier, not an exception
+
+🔴 **For 84 passes this shelf's platform tier was copyleft-by-default and its permissive rows were research code.** 🟢 **Pass 85 broke that with Artemis; pass 86 shows it was not a fluke:**
+
+🟢 **`Artemis` MIT (TU München) · `Submitty` BSD-3-Clause (RPI) · `okpy/ok` Apache-2.0 (UC Berkeley) · `Tango` Apache-2.0 (CMU)** — 🟢 **four permissive platforms, four named institutional operators, two regions.**
+
+🔵 **`P920`'s artefact-type prediction holds a third time: platforms universities RUN are permissive; code attached to PAPERS is not.** 🟢 **And this pass extends it downward — the COMPONENTS of those platforms are permissive too** (`Ares2`, `phobos`, `tblcheck`, `ottr`: all MIT or BSD-3).
+
+🔴 **The exception is the LMS tier — Moodle, Open edX, Canvas, Sakai, OpenEduCat, Chamilo — which remains asserted, contradicted and unverified** (`Gap 334`, unspent three passes). 🔵 **That is the tier a client most likely already runs, which is what makes it the highest-value cheap probe on the shelf.**
+
+### 🟢 `T5` — **APAC is now the most statutorily concrete region for AI in education**, which inverts the shelf's standing read
+
+🔴 **For six passes this shelf recorded APAC as unplaceable and under-instrumented.** 🟢 **Measured this pass:**
+
+🟢 **Vietnam — education named among six high-risk sectors**, automated assessment and behavioural monitoring explicit (Law on AI, effective 1 Mar 2026, first standalone AI statute in SE Asia). 🟢 **Korea — AI Basic Act in force 22 Jan 2026** with a **one-year penalty grace**. 🟢 **Taiwan — AI Basic Act Dec 2025.** 🟢 **China — binding algorithm/deep-synthesis/genAI rules.**
+
+🔵 **Two of these are obligations the EU AI Act does not impose**, and Korea's grace period is a **dated, closing compliance window** — the most time-boxed commercial trigger on any limb of this shelf.
+🔴 **The region has no single framework**, spanning binding statute to voluntary guidance, so a multi-country deployment needs per-jurisdiction posture rather than one control set.
+
+🟡 **And the shelf's own instrument was part of why APAC looked empty** — see `T7`.
+
+### 🔴 `T6` — **the EMEA evidence channel is behind this shelf for a third pass**
+
+🔴 **Third consecutive pass where the EMEA regional query returns less than the shelf already holds.** 🔴 **This pass, in `extended` mode and with the brief's own phrasing: zero named EMEA EdTech vendors, zero education-specific adoption figures, and US state legislation as top results for a query naming EMEA.**
+
+🟡 **The EU AI Act high-risk education date is unsettled for a fourth pass** — best reading **2 December 2027**, with an **AI Omnibus amendment in force 27 Jul 2026** and sources unable to reconcile the dates. 🔴 **Not quotable to a client without the Official Journal.**
+
+🔴 **Africa and the Middle East remain outside this limb.** 🟡 UAE and Saudi national AI strategies and infrastructure spend exist; 🔴 no education instrument, no named vendor. 🟢 **Recorded as an informed gap: on this shelf, "EMEA" currently means "EU".**
+
+### 🔴 `T7` — the trend the shelf least wants: **its own instruments keep failing silently**
+
+🔴 **Fourth defect found in this shelf's own measuring instruments, after `P845`, `P854` and `P890`.** 🟢 **This pass: `P929` — byte figures were taken with `$(…)`, which strips the trailing newline, so ~8 of 9 recorded values are 1 B low.**
+
+🔴 **And it is not a uniform offset.** 🟢 `Submitty` is newline-terminated **and recorded correctly**, so the shelf holds figures from at least two methods with no record of which. 🔵 **A uniform offset is correctable arithmetic; a mixed one is not correctable at all.**
+
+🔵 **Why this belongs in a TRENDS file and not just a gap ledger:** 🔴 **three of the four instrument defects misread SILENTLY**, and two of them (`P869`, `P929`) would have produced confident regional or drift claims from broken measurements. 🟢 **The pattern across four passes is that this shelf's error rate is dominated by its instruments, not by its sources.** 🟢 **The standing countermeasure, now proven three times: calibrate against a control of KNOWN value before trusting any probe** (`P915`, and the negative-control discipline run first in passes 85 and 86).
+
+🟡 **`P937` is the same trend in a happier form:** 🔴 six passes of `P870` blamed the regional vocabulary; 🟢 the measurement says the **search mode** was the variable. 🔵 **An instrument artefact, published for six passes as a fact about the world.**
+
 ## 🟢 Eighty-fifth pass, 2026-10-09 — the licence chokepoint **moves off the platform entirely**: the delivery tier is permissive by default and the constraint is now the **AI Act's prohibition line**, not copyleft. Plus: the measurement deficit is quantified at **9%**, and a national mandate is shown to reverse on **teacher readiness**
 
 ⏱️ **Seventeenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

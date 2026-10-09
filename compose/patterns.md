@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-sixth pass, 2026-10-09 — **three recipes, and the first one is the shelf's first END-TO-END permissive stack from a single institution**: platform + test sandbox + OS confinement, all MIT. Plus a LATAM public-sector recipe where AGPL is an asset, and a district-scale US recipe built to run with the AI switched OFF
+
+⏱️ **Eighteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+🔵 **Every component named below was payload-read inline this pass at a recorded ref · sha, with the measurement method stated (`curl -w '%{size_download}'`, per `P929`).** 🔴 **No recipe here has been executed end to end** — these are compositions of verified grants, not delivered systems, and each closes with what that leaves unproven.
+
+---
+
+### 🟢 `P86-R1` — **Programming-course autograding, fully permissive, fully sandboxed** (EMEA-first)
+
+🔵 **Why this recipe is different from every prior one on this shelf:** 🟢 **all three components are MIT, from the same research group, and one of them is in production at a named university.** 🔴 **Every earlier autograding composition here mixed licence families or stopped at the platform and left execution safety unspecified.**
+
+| layer | component | grant · bytes · ref · sha | role |
+|---|---|---|---|
+| platform | 🟢 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) · 816★ | 🟢 **MIT** · **1 091 B** · 🔴 `develop` · `760e2e1` | Course delivery, exercise management, automated feedback, live at **`artemis.tum.de`** |
+| test isolation | 🟢 [`ls1intum/Ares2`](https://github.com/ls1intum/Ares2) · 5★ | 🟢 **MIT** · 1 345 B (5 holders, `P931`) · `main` · `47cbe8c` | Java test sandbox: static analysis + runtime instrumentation, hidden tests |
+| OS confinement | 🟢 [`ls1intum/phobos`](https://github.com/ls1intum/phobos) · 🔴 **0★** | 🟢 **MIT** · 1 241 B · `main` · `945c76b` | **Landlock + network allow-list** — student code cannot reach the network |
+| CI entry (optional) | 🟢 [`uhafner/autograding-github-action`](https://github.com/uhafner/autograding-github-action) · 32★ | 🟢 **MIT** · 1 095 B · `main` · `4e65432` | Grade against metrics in CI you already run |
+| non-numeric answers | 🟢 [`rstudio/tblcheck`](https://github.com/rstudio/tblcheck) + [`rstudio/ggcheck`](https://github.com/rstudio/ggcheck) | 🟢 **MIT** (R `DESCRIPTION` rung) · `main` · `539b54e` / `70543ad` | Grade **tables** and **figures**, not just values |
+
+🟢 **Wiring:**
+1. 🟢 Deploy **Artemis** as the course platform; it already expects an external execution service.
+2. 🟢 Run student submissions through **Ares2** for the test harness, and wrap that execution in **phobos** so the sandbox is enforced at the OS level rather than trusted at the JVM level. 🔴 **Do not skip phobos** — Artemis executes untrusted code by design, and `phobos` is the confinement boundary.
+3. 🟡 For courses already on GitHub, put **`autograding-github-action`** in front as a zero-infrastructure on-ramp, then migrate to Artemis when the course outgrows it.
+4. 🟢 Add **`tblcheck`/`ggcheck`** for data-science courses where the answer is a table or a plot.
+
+🔴 **Why `phobos` is the load-bearing piece and why you would miss it:** 🔴 **it has zero stars and sits 90 rows deep in the channel.** 🔵 **Star-ordered discovery finds the platform and loses its security boundary** (`P935`).
+
+🔴 **What this leaves unproven:** 🔴 none of the three has been deployed or run by this shelf — the composition is inferred from READMEs and payloads at the refs above. 🔴 **`develop` is Artemis's default branch (`T1`)**, so the pinned-release story is unverified. 🔴 Landlock requires a recent Linux kernel; no version floor was established. 🟡 **EU AI Act**: grading that influences qualification access is **high-risk** → a conformity assessment is required before placing on market, and that dossier is not part of this recipe.
+
+---
+
+### 🟢 `P86-R2` — **Public-university autograding for LATAM, where AGPL-3.0 is an ASSET** (LATAM-first)
+
+🔵 **The premise this recipe inverts:** 🔴 **this shelf has treated AGPL as a disqualifier for 86 passes.** 🟢 **For a ministry or public-university engagement it is frequently the opposite** — §13's source-offer obligation is what a public body wants from a publicly funded system, and it blocks a vendor from later enclosing it.
+
+| layer | component | grant · bytes · ref · sha | role |
+|---|---|---|---|
+| platform | 🟢 [`JuezUN/INGInious`](https://github.com/JuezUN/INGInious) — **UNCode** · 8★ | 🔴 **AGPL-3.0** · 34 840 B · 🔴 `master` · `4a45903` | 🟢 **In production at the Universidad Nacional de Colombia, Bogotá.** Grades C/C++, Java, Python 3, **Verilog/VHDL**, Jupyter. Has an **LMS bridge**. |
+| big-data assignments | 🟢 [`iVishalr/BigHOST`](https://github.com/iVishalr/BigHOST) · 2★ | 🟢 **MIT** · 1 083 B · `main` · `0348cc7` | Parallel grading of Big Data jobs (PES University, CCGridW 2023) |
+| item authoring | 🟢 [`asahi417/lm-question-generation`](https://github.com/asahi417/lm-question-generation) · 366★ | 🟢 **MIT** · 1 064 B · 🔴 `master` · `dde629c` | 🟢 **Multilingual** question generation — the Spanish/Portuguese path |
+| formative loop | 🟢 [`athina-edu/athina`](https://github.com/athina-edu/athina) · 3★ | 🟢 **MIT** · 1 099 B (at **`LICENCE`**) · 🔴 `master` · `5c12c2f` | Formative-assessment microservice, sits beside the platform rather than inside it |
+
+🟢 **Wiring:**
+1. 🟢 Adopt **UNCode** as the platform — it is the only row on this shelf, in any region, that grades **hardware description languages**, which matters for engineering faculties.
+2. 🟢 Keep **BigHOST** and **athina** as *separate services* behind the LMS bridge. 🔵 **This is the licence-hygiene move:** AGPL's reciprocity follows the modified work, so leaving the MIT components as independent services across a network boundary keeps them MIT.
+3. 🟢 Use **`lm-question-generation`** for Spanish-language item authoring — 🔵 it is the only multilingual row in the item tier.
+4. 🟢 Lead the engagement with the **governance framework**, not the platform: 🟢 **87% of LATAM institutions use AI, 74% to grade, and only 26% have any formal framework** (UNESCO IESALC). 🔵 **The platform is table stakes; the framework is the deliverable.**
+
+🔴 **What this leaves unproven:** 🔴 **UNCode's upstream (`UCL-INGI/INGInious`) opens its LICENSE with "Most of the files … are distributed under the GNU AGPL v3 licence"** — 🔴 **the per-file exception list has NOT been read** (`P936`), and it must be before any redistribution. 🔴 UNCode tracks INGInious **v0.5**; upstream drift unmeasured. 🔴 The network-boundary argument in step 2 is a licensing *posture*, not legal advice — have counsel confirm it. 🔴 Colombia has **no AI statute** (CONPES 4144 is policy), so the compliance target is institutional, not statutory.
+
+---
+
+### 🟢 `P86-R3` — **District-scale US autograding that still works with the AI switched OFF** (North America-first)
+
+🔵 **This recipe exists because of a regulatory finding, not a technical one.** 🔴 **NYC's March 2026 guidance prohibits AI for grading, discipline, placement and IEP development.** 🔴 **Oklahoma and Maryland require human oversight and bar AI from high-stakes decisions about students.** 🟢 **So the deliverable must degrade gracefully to deterministic grading and remain useful.**
+
+| layer | component | grant · bytes · ref · sha | role |
+|---|---|---|---|
+| platform | 🟢 [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 **BSD-3-Clause** · **1 542 B** · `main` · `80d7d66` | Autograding + course management (RPI) |
+| grading service | 🟢 [`autolab/Tango`](https://github.com/autolab/Tango) · 49★ | 🟢 **Apache-2.0** · **11 324 B** · 🔴 `master` · `24558e3` | 🟢 **RESTful autograding service** — a clean service boundary (CMU Autolab) |
+| deterministic checks | 🟢 [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) · 3★ · + [`earthlab/matplotcheck`](https://github.com/earthlab/matplotcheck) · 23★ | 🟢 **BSD-3-Clause** · 108 B stub (`P932`) / **1 508 B** · `master` · `693b3df` / `main` · `c1b6a3b` | R / notebook / **figure** grading, **no model in the loop** |
+| 🟢 **AI layer, switchable** | 🟢 [`professor-john-fulton/repo-grading-assistant`](https://github.com/professor-john-fulton/repo-grading-assistant) · 🔴 0★ | 🟢 **MIT** · 1 070 B · `main` · `7fa9446` | 🟢 **Rubric-based AI feedback where the EDUCATOR sets the final grade** |
+| local dev | 🟢 [`naasanov/gslocal`](https://github.com/naasanov/gslocal) · 4★ | 🟢 **MIT** · 1 071 B · `main` · `66ce3d1` | Run Gradescope-shaped autograders locally in Docker |
+
+🟢 **Wiring:**
+1. 🟢 **Submitty** (or Tango behind an existing LMS) as the platform; 🔵 **Tango is the better choice when the district already owns an LMS**, because it is a service rather than an application.
+2. 🟢 Make **ottr + matplotcheck** the *default* grading path. 🔵 These are deterministic — they satisfy NYC's prohibition and Oklahoma/Maryland's human-oversight rules without any carve-out.
+3. 🟢 Add **`repo-grading-assistant`** as a **feature-flagged** advisory layer: it generates rubric feedback and 🟢 **by design does not set the grade.** 🔴 **Flag it off by default**; turn it on only where district policy permits.
+4. 🟢 Ship **`gslocal`** to instructors so they can develop autograders without the hosted service.
+5. 🟢 **Package the evidence, not just the software:** AB 1159 (no student data to model training), Idaho S.B. 1227 (privacy), the human-oversight attestation, and the switch state per district. 🔵 **With 33–35 states issuing guidance and districts writing their own policy, the configuration-plus-evidence pack is the repeatable product** — there is no statewide procurement to win.
+
+🔴 **What this leaves unproven:** 🔴 **`autolab/docker`, Tango's own official installer, declares NO licence across 14 probed paths** (`P934`) — 🔴 **so the documented install route is unlicensed and a Compose file must be written from scratch.** 🔴 Submitty's own install path was not probed this pass. 🔴 The feature-flag design is asserted from the README's "educator sets the final grade" claim; 🔴 **the repo has 0★ and no deployment evidence** — treat as a pattern to implement, not a component to depend on. 🟡 The reported NYC moratorium on student-facing AI through 8th grade could not be confirmed from a primary source.
+
+---
+
+### 🔴 Recipes this pass deliberately did NOT write
+
+- 🔴 **No APAC recipe.** 🟢 Reason stated rather than left blank: APAC's statutory picture is now the most concrete of any region (`T5`), 🔴 **but it has no single posture** — Vietnam binding and education-specific, Korea in force with a grace period, Singapore and Japan voluntary. 🔵 **A recipe that averaged them would be wrong in every jurisdiction.** 🟢 **Costed for pass 87: one recipe per jurisdiction, starting with Vietnam, because its high-risk list names automated assessment explicitly.**
+- 🔴 **No LMS-integration recipe.** 🔴 **`Gap 334` is unspent for a third pass**: Moodle, Open edX, Canvas, Sakai, OpenEduCat and Chamilo licences are asserted by sources that contradict each other. 🔵 **Writing an integration recipe onto an unverified licence base would be the most expensive error available on this shelf**, because the LMS is the component the client already owns.
+- 🔴 **No recipe uses `kangwonlee/gemini-python-tutor`**, despite it being an on-topic APAC AI tutor — 🔴 its licence adds **field-of-use restrictions** (`P930`, `Gap 353`) and is unadjudicated.
+
 ## 🟢 Eighty-fifth pass, 2026-10-09 — **three new recipes, and the first one replaces a greenfield build with a permissive production platform a European university already operates.** The proctoring recipe pass 84 refused to write is now writable — and its constraint turns out to be the AI Act, not the licence
 
 ⏱️ **Seventeenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

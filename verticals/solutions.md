@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-sixth pass, 2026-10-09 — **the shelf gets its first LATAM production platform**, and it is AGPL-3.0; the **fork network** turns out to be a better deployment signal than stars (`P933`); and a granted platform is found shipping an **ungranted installer** (`P934`)
+
+⏱️ **Eighteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 `UNCode` — a production autograding platform at the **Universidad Nacional de Colombia**
+
+🟢 **[`JuezUN/INGInious`](https://github.com/JuezUN/INGInious)** · 🔴 **AGPL-3.0** (34 840 B, title `GNU AFFERO GENERAL PUBLIC LICENSE`, Affero ×14 → `P890`) · 🔴 `master` · `4a45903` · 8★ · 🟢 **LATAM**
+
+🟢 **Read verbatim from the README:** *"UNCode is currently used at the Universidad Nacional De Colombia, Campus Bogotá."*
+
+| property | value |
+|---|---|
+| built on | 🟢 **INGInious v0.5** (UCLouvain, Belgium) — a fork, localised and operated |
+| languages graded | 🟢 C/C++, Java 7/8, Python 3, **Verilog, VHDL**, Jupyter Notebooks |
+| integration | 🟢 **pluggable LMS interface** |
+| courses in production | 🟢 Basic Programming, Data Structures, Machine Learning, AI, **Quantum Programming**, Programming Languages |
+| architecture | 🟢 Docker-managed grading backend + student frontend + teacher admin UI |
+
+🔵 **Why this is the most consequential verticals row in several passes:** 🔴 **For five passes the shelf recorded "no artefact-grounded LATAM platform" and the only LATAM agent row was a single small tutor repo.** 🟢 **UNCode is a flagship-university production system with hardware-description-language grading — a capability no other row on this shelf has, in any region.**
+
+🔴 **And it is AGPL-3.0, which is the whole problem.** 🔵 **Hosting a modified UNCode as a service triggers §13: the modified source must be offered to every user.** 🟢 **For a ministry or public-university engagement that is often acceptable or even desirable.** 🔴 **For a commercial SaaS wrapper it is disqualifying.**
+
+### 🟡 `P936` — the **FORK** can be cleaner to read than the **UPSTREAM**
+
+🟢 **Both were probed this pass:**
+
+| repo | payload | first line |
+|---|---|---|
+| 🟢 **fork** — `JuezUN/INGInious` (UNCode) | **34 840 B**, Affero ×14 | 🟢 **`GNU AFFERO GENERAL PUBLIC LICENSE`** — clean, unqualified |
+| 🔴 **upstream** — `UCL-INGI/INGInious` (`main` · `8f90cc8`) | **34 764 B**, Affero ×14 | 🔴 **`Most of the files in INGInious are distributed under the GNU AGPL v3 licence,`** |
+
+🔴 **The upstream's LICENSE opens by telling you it does not cover everything.** 🔵 **"Most of the files" is a `P916`-class multi-grant signal, and it sits on the *parent* of the row this shelf is adopting.** 🟢 **`P936`: probe the fork's own payload — a fork may have relicensed, consolidated or clarified.** 🔴 **But do not stop there: the upstream's qualification is inherited by whatever files it covers, so a UNCode deployment still needs the upstream's exception list read before any redistribution.** 🆕 **Costed for pass 87: one read of the upstream's per-file exceptions.**
+
+### 🟢 `P933` — read the **fork network**, not the star count, to find who actually DEPLOYS a platform
+
+🔴 **`Gap 351` asked why `Gego-K12/gegok12` has 98 forks against 54★ and 123 commits.** 🟢 **Answered by reading the fork list directly: 23 active forks, top fork 1★, the other 22 at zero. No fork is a maintained line.**
+
+🟢 **The fork names are the answer:** `gegok12-vietnam` · `gegok12-delhiconvent` · `lionslalgudi-school/gegok12` · `sekolahgego` · `lms-jitu` · `school-management-system` · `yethu` · `new-erp` · `gegok12-new`.
+
+🔵 **Every one is an institution standing up its own instance.** 🟢 **High forks + near-zero fork stars + institution-shaped names = a DEPLOYMENT-fork network.**
+
+🟢 **Three things follow, and they are all useful to a studio:**
+1. 🟢 **The ratio is a positive signal, not a red flag** — each fork is a reference deployment.
+2. 🟢 **It places the row: India, Indonesia, Vietnam → `gegok12` deployment is 🟢 APAC**, on artefact evidence.
+3. 🔴 **It also means no community is maintaining it.** 🟡 123 commits, 2026-dated MIT payload (1 149 B, `main` · `99da145`, confirmed pass 85 and HEAD unchanged this pass) — 🔴 **adopt it as a starting point to own, never as a dependency to track.**
+
+### 🔴 `P934` — a granted platform can ship an **UNGRANTED installer**
+
+| artefact | grant |
+|---|---|
+| 🟢 `autolab/Tango` — the autograding job runner behind **CMU's Autolab** | 🟢 **Apache-2.0**, 11 324 B, `master` · `24558e3` |
+| 🔴 **`autolab/docker`** — the project's **official Docker Compose install**, 9★, `master` · `66de098` | 🔴 **NOTHING.** 14 paths probed, 0 `licen[sc]e` mentions in the README |
+
+🔴 **A studio that clears "Tango — Apache-2.0" and then follows the project's own installation instructions is deploying an unlicensed artefact.** 🟢 **`P934`: the install path is a separate repository with a separate licence, and must be probed separately.** 🔵 **This generalises past Autolab — Helm charts, Compose files, Ansible roles and Terraform modules are routinely split out and routinely undeclared.** 🟢 **Upstream-askable (`Gap 354`).**
+
+### 🟢 The platform tier on this shelf, updated
+
+| platform | licence | bucket (`P905` four-bucket order) | region | operated by |
+|---|---|---|---|---|
+| 🟢 **`ls1intum/Artemis`** | 🟢 **MIT** | 🟢 **permissive** | 🟢 EMEA | TU München, `artemis.tum.de` |
+| 🟢 **`Submitty/Submitty`** | 🟢 **BSD-3-Clause** (1 542 B, `main` · `80d7d66`) | 🟢 **permissive** | 🟢 North America | RPI |
+| 🟢 `okpy/ok` | 🟢 Apache-2.0 🔴 multi-grant (`P916`) | 🟢 permissive | 🟢 North America | UC Berkeley |
+| 🟢 `autolab/Tango` | 🟢 Apache-2.0 — 🔴 installer ungranted (`P934`) | 🟢 permissive | 🟢 North America | Carnegie Mellon |
+| 🟢 **`JuezUN/INGInious` (UNCode)** | 🔴 **AGPL-3.0** | 🔴 **work-scoped copyleft** | 🟢 **LATAM** | **U. Nacional de Colombia** |
+| 🟡 `SafeExamBrowser/seb-win-refactoring` | 🟡 MPL-2.0 | 🟡 **file-scoped copyleft** | 🟢 EMEA | ETH Zürich consortium |
+| 🟡 `Gego-K12/gegok12` | 🟢 MIT | 🟢 permissive | 🟢 **APAC** (deployment, `P933`) | 🔴 unmaintained; 23 school forks |
+| 🔴 `cgtuebingen/infomark-backend` | 🔴 GPL-3.0 | 🔴 work-scoped | 🟢 EMEA | U. Tübingen |
+| 🔴 `foundation50/classroom50` · `infomark-org/infomark` · `GatorEducator/gatorgrade` | 🔴 GPL-3.0 | 🔴 work-scoped | — | — |
+| 🔴 Moodle · Open edX · Canvas · Sakai · OpenEduCat · Chamilo | 🔴 **ASSERTED, CONTRADICTED, UNVERIFIED** | 🔴 **unknown** | — | 🔴 **`Gap 334`, unspent 3 passes** |
+
+🟢 **Four permissive production platforms, with named institutional operators, across two regions.** 🔴 **The LMS tier — the one a client most likely already runs — is still the unverified part.** 🔵 **`Gap 334` is now the single highest-value cheap probe on this shelf, and pass 86 names it rather than quietly carrying it a fourth time.**
+
+### 🟡 The LMS/ERP question, re-asked this pass and still answered the same way
+
+🟢 **Searched `open source platform education ERP CRM MIT Apache` this pass.** 🔴 **Result: no education ERP or CRM under MIT or Apache-2.0 was found.** 🟡 **`OpenEduCat` — the one LMS+SIS in a single database, and so the most commercially interesting — is **LGPL-3.0** per its own vendor glossary**, built on Odoo's framework.
+
+🔵 **LGPL-3.0 places it in the 🟡 file-scoped/linking bucket, not the 🔴 work-scoped one** — so an AI layer that *links* to it can stay closed, while modifications to OpenEduCat itself must be published. 🔴 **This remains a VENDOR claim, not a payload read, and it is precisely what `Gap 334` exists to settle.** 🟢 **Recorded as unverified, with the bucket it would fall into if confirmed.**
+
 ## 🟢 Eighty-fifth pass, 2026-10-09 — **`Gap 346` DISCHARGED: a permissive, production-grade, institutionally-operated platform exists and it is MIT.** `P906` does not apply to it, and the reason the shelf missed it for two passes is that it was looking in the wrong CHANNEL, not at a thin supply
 
 ⏱️ **Seventeenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

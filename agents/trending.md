@@ -4,6 +4,85 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 86) — **two gaps discharge by reading surfaces rather than searching**, a `BSD 3-Clause`-titled licence turns out to restrict fields of use, and the shelf's byte-count ruler is found broken in a way that is **not correctable**
+
+⏱️ **Eighteenth pass of this date.** 🟢 **Append-only: pass 85's section sits immediately below and nothing in it was rewritten.**
+
+### 🟢 The summary
+
+| item | status |
+|---|---|
+| `topics/autograding` | 🟢 **CLOSED, 94 of 94 read** — pages 2–5 bought this pass |
+| **`Gap 350`** (autograding tier had 0 APAC, 0 LATAM) | 🟢 **DISCHARGED — both limbs placed** |
+| **`Gap 351`** (`gegok12`: 98 forks vs 54★) | 🟢 **DISCHARGED — explained, and it yielded a new placement method** |
+| `Gap 334` (contradicted platform licences) | 🔴 **CARRIED, UNSPENT — third pass. Oldest item on the shelf.** |
+| rows probed / granted / negatives | 🟢 **24 / 17 / 6**, plus 🔴 **1 FLAGGED non-OSI** |
+| new principles | 🟢 **`P929`–`P937`** |
+| new gaps | 🆕 **`Gap 352`–`Gap 355`** |
+
+### 🟢 `Gap 350` — **DISCHARGED**, and both rows are production deployments rather than research code
+
+🔴 **Pass 85 recorded: "the autograding tier placed 4 EMEA, 3 North America, 0 APAC, 0 LATAM — an informed gap, not coverage."** 🟢 **Both limbs are now placed on artefact evidence read from the repository itself:**
+
+| limb | row | evidence (read from the payload / README, not inferred) |
+|---|---|---|
+| 🟢 **LATAM** | [`JuezUN/INGInious`](https://github.com/JuezUN/INGInious) — **UNCode**, 8★, 🔴 AGPL-3.0, 34 840 B, `master` · `4a45903` | 🟢 README, verbatim: *"UNCode is currently used at the Universidad Nacional De Colombia, Campus Bogotá."* 🟢 Autograding for C/C++, Java, Python 3, **Verilog/VHDL** and Jupyter, with an LMS bridge. 🟢 Named courses incl. Data Structures, ML, **Quantum Programming**. |
+| 🟢 **APAC** | [`iVishalr/BigHOST`](https://github.com/iVishalr/BigHOST) — 2★, 🟢 **MIT**, 1 083 B, `main` · `0348cc7` | 🟢 README names five authors and *"Cloud Computing and Big Data, **PES University**"* (Bangalore), with a `staff.pes.edu` link and a **CCGridW 2023** paper. |
+
+🔵 **Note the asymmetry, because it is the engagement-relevant part:** 🟢 **the APAC row is MIT and small; the LATAM row is AGPL-3.0 and is a full platform.** 🔴 **So LATAM's best autograding artefact is the one a commercial engagement can least easily build on** — the fourth time this shelf has hit that shape (`Gap 336`, `Gap 341`, `P906`).
+
+### 🟢 `Gap 351` — **DISCHARGED**, and it produced a placement method the shelf did not have
+
+🔴 **Pass 85 asked: `Gego-K12/gegok12` has 98 forks against 54★ and only 123 commits — is a FORK the maintained line?** 🟢 **Answered by reading the fork network directly (a new `WebFetch` surface): 23 active forks, sorted by stars.**
+
+🟢 **Answer: NO. The top fork has 1★ and the other 22 have zero.** 🔴 **No fork is a maintained upstream.**
+
+🟢 **But the fork NAMES explain the 98:**
+
+| fork | what the name says |
+|---|---|
+| `ramamoorthiselvan/gegok12-vietnam` | 🟢 a Vietnam deployment |
+| `captainmohit/gegok12-delhiconvent` | 🟢 a named Delhi school |
+| `lionslalgudi-school/gegok12` | 🟢 a named Tamil Nadu school |
+| `afdhalpower/sekolahgego`, `nian88/lms-jitu`, `rifqiabd/gegok12` | 🟢 Indonesian (*sekolah* = school) |
+| `rkvschool-netizen/gegok12`, `mdkhaled/school-management-system`, `MtronikaSP/yethu`, `axtonank-hash/new-erp` | 🟢 further per-institution instances |
+
+🔵 **`P933`: this is a DEPLOYMENT-fork network, not a contribution-fork network.** 🟢 **A high fork-to-star ratio with near-zero fork stars and institution-shaped fork names is the signature of software that institutions RUN, not software that developers EXTEND.** 🔵 **That inverts how the ratio should be read: for a studio it is the *better* signal, because every fork is a reference deployment.**
+
+🟢 **And it places the row: the fork network is overwhelmingly India, Indonesia and Vietnam → `gegok12` deployment is 🟢 APAC**, on artefact evidence, by a route pass 85 did not anticipate when it costed this gap.
+
+### 🔴 The finding that changes how this shelf reads its own history — `P929`
+
+🔴 **Pass 85's headline row `Artemis` was recorded at 1 090 B. It is 1 091 B.** 🟢 **Traced to `$(…)` stripping the trailing newline**, reproduced exactly on seven rows, and confirmed by `od -c`.
+
+🔴 **But `Submitty` ends in a newline and is recorded CORRECTLY** — so the shelf holds figures from at least two different measuring methods with no record of which. 🔵 **A uniform offset is correctable arithmetic; a mixed one is not correctable at all.** 🔴 **Practical cost: a pass that measures correctly will see a false "payload changed" on ~8 of 9 rows written by passes 84–85.** 🟢 **Method is now recorded alongside every figure: `curl -w '%{size_download}'`.** 🆕 **`Gap 355`.**
+
+### 🔴 The licence trap of the pass — `P930`
+
+🔴 **`kangwonlee/gemini-python-tutor` serves `BSD 3-Clause License + Do Not Harm`** — canonical BSD-3 clauses 1–3 plus **two added field-of-use clauses** forbidding harm to humans and to living beings.
+
+🔴 **Not OSI-approved. No SPDX id. `grep 'BSD 3-Clause'` ACCEPTS it.** 🟢 **The byte count rejects it: 1 662 vs 1 508 canonical.** 🔵 **First row on this shelf where the byte count is the decisive discriminator — arriving in the same pass that proved the byte counts were mismeasured.**
+
+🟢 **Ladder rule added:** a title line matches a family only when the line **ends** at the family name.
+
+### 🟢 `P937` — the brief's own regional queries work in `extended` mode, and the ACRONYM was never the defect
+
+🔴 **Six passes built `P870` on this claim: "no ministry publishes under «EMEA» or «APAC»; the acronym channel returns corporate IT press."** 🟢 **Pass 86 ran the brief's four plain-language acronym queries in `extended` mode, as `P887` instructs — and the APAC query returned dated, named, education-specific instruments:**
+
+🟢 **Korea's AI Basic Act in force 22 Jan 2026** (enforcement decree same date, one-year penalty grace); 🟢 **Vietnam's Law on AI effective 1 Mar 2026** with education named among six high-risk sectors; 🟢 **Taiwan's AI Basic Act passed Dec 2025**; 🟢 **Australia's AI Safety Institute announced Nov 2025**.
+
+🔵 **`P937`: `P870` conflated two variables. The acronym was never the problem — the MODE was.** 🟢 **`P887` already suspected this; this pass confirms it on the acronym channel specifically, which is the one `P870` condemned.** 🔴 **The EMEA acronym query still underperforms** — it returned EU AI Act material plus US state legislation bleed-through, and **named zero EMEA EdTech vendors**. 🟡 **So `P870` survives for EMEA and is retired for APAC.** 🔵 **Jurisdiction-shaped queries remain better; they are no longer the only thing that works.**
+
+### 🔴 What this pass did NOT do, named so silence is not read as coverage
+
+- 🔴 **`Gap 334` unspent a third time.** 🟢 Costed at 7 single-fetch title reads; 🟢 **named as pass 87's first buy.**
+- 🔴 **Canada and Mexico returned nothing again** — the North America limb is **US-only for a fourth consecutive pass**.
+- 🔴 **Africa and the Middle East remain absent from the EMEA sweep.** 🟡 The extended run surfaced UAE and Saudi **national AI strategies** but **no education instrument and no named vendor** — thinner than a gap, and recorded as such.
+- 🔴 **No credentialing row on this shelf still** — unchanged since pass 82 flagged it as the thinnest adjacency.
+- 🔴 **Ninth consecutive pass with no code from this clone executed.** `shelf_gate.sh`, `measure`, `license_family.sh`, `p351`, the 106 suites: **CARRIED, NOT CONFIRMED.** No instrument versioned (`P126`).
+- 🔴 **`Gap 335`** (knowledge-tracing placeability) untouched, fourth pass. 🔴 **`Gap 340`** (Eurydice) untouched, second pass. 🔴 **`Gap 349`** (proctoring-tier capability audit) untouched.
+- 🟡 **`topics/question-generation` rows 21–227 remain deliberately uncosted** at ~30% precision — a decision, re-affirmed, not an omission.
+
 ## 🟢 2026-10-09 (pass 85) — **`Gap 346` DISCHARGED and `Gap 344` FALSIFIED in the same pass**, both by reading rows rather than searching for new ones; `topics/autograding` is the first channel made of platforms a university actually runs
 
 ⏱️ **Seventeenth pass of this date.** 🟢 **Append-only: this section is new. Pass 84's section is immediately below and nothing in it was rewritten.**

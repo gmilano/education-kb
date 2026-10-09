@@ -3,6 +3,132 @@ industry: education
 region: Global
 updated: 2026-10-09
 ---
+
+## 🟢 Eighty-sixth pass, 2026-10-09 — **the shelf's byte-count instrument is found to be PER-PASS, not per-shelf** (`P929`), which makes every cross-pass byte comparison invalid; and a row whose title line reads `BSD 3-Clause License` is found to carry **field-of-use restrictions** (`P930`). `Gap 350` and `Gap 351` DISCHARGE
+
+⏱️ **Eighteenth pass of this date.** Pass 85 discharged `Gap 346`, falsified `Gap 344`, adopted `P905`–`P928`. **Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **24 repositories probed, 17 granted rows, 6 named negatives, 1 licence FLAGGED non-OSI.** 🟢 **`topics/autograding` closed at 94 of 94.** 🔵 **Every licence figure payload-read inline at a per-repo resolved ref.**
+
+### 🟢 Capability boundary — re-measured, and it is **UNCHANGED for the first time in three passes**
+
+| what was attempted | result |
+|---|---|
+| inline `curl` to `raw.githubusercontent.com` | 🟢 **200 / 1 091 B** real, 🟢 **404 / 14 B** invented — **discriminating, negative control run FIRST** |
+| `git ls-remote --symref` per repo | 🟢 **ALLOWED**, discriminating — SHA on a real slug, 🔴 `could not read Username` on the invented control |
+| inline `for` loop compounding `curl` / `git` / `grep` / `od` | 🟢 **ALLOWED** |
+| `WebFetch` to `github.com/topics/...?page=N` | 🟢 **200**, with per-repo ★ and the channel total — 🟢 **paginates: pages 2–5 read this pass** |
+| `WebFetch` to `github.com/<owner>/<repo>/forks?...` | 🟢 **200**, with per-fork ★ and last-updated — 🟢 **new surface, discharged `Gap 351`** |
+| `curl -sI` to `github.com` (the brief's verification command) | 🔴 **403 for the real slug AND the invented one**, behind a proxy `200` — `P880`/`P914` **reproduced a third time** |
+| any script from this clone | 🔴 **not attempted** — passes 78–85 measured it DENIED |
+
+🟢 **`P914` holds exactly: the first status line is the proxy's `HTTP/1.1 200 Connection Established` and GitHub's `403` is second.** 🔴 **A probe reading `curl -sI | head -1` still reads `200` for every slug on earth.** 🟢 **The brief's verification step is therefore still satisfied by the two channels above, not by the command it names** — stated plainly rather than silently substituted.
+
+🟢 **`P894`/`P915` compliance: the CJK instrument was calibrated against a freshly written six-codepoint control BEFORE use** — `LC_ALL=C.UTF-8 grep -oP '[\x{4e00}-\x{9fff}]'` returned **6 of 6**. 🔵 **Third distinct symptom across four passes** (silent 1-of-6, hard error, now correct), which is `P915`'s whole point: assert the count, never the absence of an error.
+
+### 🔴 🆕 `P929` — **the byte-count instrument is PER-PASS, and that is strictly worse than being wrong**
+
+🔴 **Found by accident:** `ls1intum/Artemis`, pass 85's headline row, recorded at **1 090 B**. 🟢 **Measured this pass at 1 091 B.** 🔵 **One byte, on a canonical MIT payload, is not noise — so it was traced rather than shrugged off.**
+
+🟢 **The cause, proven on two payloads and then on five more:**
+
+| method | Artemis | GPL-3.0 payload |
+|---|---|---|
+| `curl -w '%{size_download}'` | 🟢 **1 091** | 🟢 **35 149** |
+| `curl \| wc -c` | 🟢 **1 091** | — |
+| 🔴 `printf '%s' "$(curl -s …)" \| wc -c` | 🔴 **1 090** | 🔴 **35 148** |
+
+🔴 **Command substitution `$(…)` strips the trailing newline.** 🟢 **Confirmed by `od -c`: the payload's last bytes are `E . \n`.** 🟢 **Pass 85's recorded figures are reproduced EXACTLY by the stripping form, on both payloads.**
+
+🟢 **Then measured across seven rows to find the scope — and the result is NOT a uniform offset:**
+
+| row | recorded | true | ends in `\n` | verdict |
+|---|---|---|---|---|
+| `Artemis` MIT | 1 090 | **1 091** | 🔴 yes | 🔴 **1 low** |
+| `kit-sdq/autograder` MIT | 1 067 | **1 068** | 🔴 yes | 🔴 **1 low** |
+| `uhafner/autograding-github-action` MIT | 1 094 | **1 095** | 🔴 yes | 🔴 **1 low** |
+| `Questgen.ai` MIT | 1 076 | **1 077** | 🔴 yes | 🔴 **1 low** |
+| `autolab/Tango` Apache-2.0 | 11 323 | **11 324** | 🔴 yes | 🔴 **1 low** |
+| `google/prog-edu-assistant` Apache-2.0 | 11 357 | **11 358** | 🔴 yes | 🔴 **1 low** |
+| `infomark` GPL-3.0 | 35 148 | **35 149** | 🔴 yes | 🔴 **1 low** |
+| 🟢 `earthlab/matplotcheck` BSD-3 | 1 508 | **1 508** | 🟢 **no** | 🟢 **correct** |
+| 🟢 `Submitty/Submitty` BSD-3 | 1 542 | **1 542** | 🔴 **yes** | 🟢 **correct — measured by a DIFFERENT pass** |
+
+🔵 **Two things fall out, and the second is the dangerous one.**
+
+🟢 **First: the error is content-dependent.** `matplotcheck` has no trailing newline, so the stripping form cannot hurt it — which is why it was the one row that matched and nearly hid the defect.
+
+🔴 **Second, and worse: `Submitty` ends in a newline AND is recorded correctly.** 🔴 **So the shelf contains byte figures measured by at least two different methods, and the recorded number carries no record of which.** 🔵 **A uniform offset would be correctable with one pass of arithmetic. A mixed one is not correctable at all.**
+
+🔴 **The cost is not the lost byte. It is that any future pass measuring correctly will read a FALSE "the payload changed" on every newline-terminated row recorded by pass 84 or 85** — a drift alarm on roughly 8 of every 9 rows, pointing at nothing. 🟢 **`P929`: byte figures are comparable WITHIN a pass and must not be compared ACROSS passes unless the method is recorded. 🟢 From this pass forward the method is `curl -w '%{size_download}'`, stated with the figure.**
+
+🔵 **Fourth defect found in this shelf's own instruments, after `P845`, `P854` and `P890`** — and the third of the four that misread **silently**.
+
+🟢 **`P929` does NOT retract the shelf's licence-family readings.** 🔵 Family identification rests on the title line, the Affero count and the clause structure; the byte value is corroborating. 🟢 **Within pass 86 the byte values still discriminate cleanly — three distinct Apache-2.0 payloads measured 11 324, 11 357 and 11 358, which are genuinely different files, not measurement noise.**
+
+### 🔴 🆕 `P930` — a **permissive title line** can sit on top of a **field-of-use restriction**, and only the byte count caught it
+
+🔴 **[`kangwonlee/gemini-python-tutor`](https://github.com/kangwonlee/gemini-python-tutor)** (1★, `main` · `e9345c5`, **1 662 B**, 🟢 APAC) serves a LICENSE whose first line is:
+
+> `BSD 3-Clause License + Do Not Harm`
+
+🟢 **Clauses 1–3 are canonical BSD-3-Clause. Clauses 4 and 5 are additions, read verbatim:** *"No human must purposefully be harmed using this software"*; *"No living being must purposefully be harmed using this software."*
+
+🔴 **This is a field-of-use restriction. It is not OSI-approved, has no SPDX identifier, and fails OSD §6.** 🔴 **It must not be shelved as BSD-3-Clause**, and it is recorded as 🔴 **FLAGGED**, not granted.
+
+🟢 **Discriminator behaviour, measured on this payload:**
+
+| test | result | verdict |
+|---|---|---|
+| `grep -c 'BSD 3-Clause'` | **1** | 🔴 **accepts — wrong, in the costly direction** |
+| full title line | `BSD 3-Clause License + Do Not Harm` | 🟢 catches |
+| numbered clauses | **5** (canonical: **3**) | 🟢 catches |
+| 🟢 **byte count** | **1 662** vs **1 508** canonical | 🟢 **catches — 154 B over** |
+
+🔵 **`P930` is the exact inverse of pass 85's `measr`/`EdOptimize` pair:** there the title was authoritative and `grep` failed; 🟢 **here the substring `grep` fails and the BYTE COUNT is the decisive test.** 🔴 **Which means `P929` and `P930` arrived in the same pass and point the same way: the byte count is load-bearing evidence, and the shelf's byte counts were being taken with a broken ruler.**
+
+🟢 **Ladder rule added: a title line is only read as a family match when the line ENDS at the family name.** 🔴 Anything appended — `+ Do Not Harm`, `with Commons Clause`, `(modified)` — is a different licence until read in full.
+
+### 🔵 🆕 `P931` — multi-**HOLDER** is not multi-**GRANT**
+
+🔴 **Two rows this pass carried MIT payloads at non-canonical sizes, which `P916` would read as a multi-grant bundle:**
+
+| repo | bytes | `Copyright` lines | verdict |
+|---|---|---|---|
+| [`ls1intum/Ares2`](https://github.com/ls1intum/Ares2) | 🔴 **1 345** | **5** | 🟢 **single-grant MIT**, five holders: TUM's Applied Education Technologies group + 4 named individuals |
+| [`ls1intum/phobos`](https://github.com/ls1intum/phobos) | 🔴 **1 241** | **2** | 🟢 **single-grant MIT**, two holders |
+
+🟢 **Both read in full: one permission paragraph, one warranty disclaimer, no second grant, no rider.** 🔵 **The inflation is holders, not terms.** 🟢 **`P931`: before escalating an oversized MIT payload to `P916`, count `Copyright` lines — ~55 B per extra holder explains it, and a multi-holder MIT is still plain MIT.** 🔴 **Mis-escalating is not harmless: it would have sent two clean, deployable TUM components to legal review for nothing.**
+
+### 🟢 `P800`'s holder tier finally pays — and it is the INSTITUTIONAL rows that pay
+
+🔴 **`P888` measured holder-readability at 1 of 11 and `P800`'s tier looked structurally dead.** 🟢 **This pass it placed three rows outright, because institutional payloads name the institution:**
+
+| row | holder, read from the payload | placed |
+|---|---|---|
+| `ls1intum/Ares2` | *Technical University of Munich, … Research Group of Applied Education Technologies* | 🟢 **EMEA** |
+| `ucbds-infra/ottr` | *UC Berkeley Data Science Education Program* (in the 108 B R stub) | 🟢 **North America** |
+| `illinois/zephyr`, `broadway-on-demand` | *University of Illinois* ×4 occurrences | 🟢 **North America** |
+
+🔵 **`P888` was right about research code and wrong as a general rule.** 🟢 **The predictor is `P910`/`P920`'s artefact type again: platform and infrastructure payloads name organisations; paper code names people.**
+
+### 🟢 Agent-tier rows added this pass
+
+🔵 **The autograding tail is a COMPONENT tier, not an agent tier — but two rows are agentic in the sense this file tracks:**
+
+| repo | grant | bytes | ref · sha | ★ | region | why it is an agent row |
+|---|---|---|---|---|---|---|
+| 🆕 [`professor-john-fulton/repo-grading-assistant`](https://github.com/professor-john-fulton/repo-grading-assistant) | 🟢 **MIT** | 1 070 | `main` · `7fa9446` | 0 | 🟡 unplaced | Generates **AI rubric-based feedback** on programming work; 🟢 **the educator sets the final grade.** 🔵 **Human-in-the-loop by construction** — which is exactly the posture NYC's 2026 guidance and Maryland's S.B. 720 require, and the posture the AI Act's high-risk tier assumes. |
+| 🆕 [`BridgeSuite/GradeBridge-AI`](https://github.com/BridgeSuite/GradeBridge-AI) | 🟢 **MIT** | 1 064 | `main` · `8b94519` | 0 | 🟡 unplaced | AI autograding against a Gradescope-shaped workflow. |
+| 🔴 [`kangwonlee/gemini-python-tutor`](https://github.com/kangwonlee/gemini-python-tutor) | 🔴 **FLAGGED — see `P930`** | 1 662 | `main` · `e9345c5` | 1 | 🟢 APAC | Gemini-backed **AI tutor for coding assignments**, wired into a GitHub Classroom grading loop. 🔴 **Capability is relevant; the licence is not usable as-is.** |
+
+🔴 **Both granted agent rows are 0★.** 🟡 **Recorded as a thin tier, not a strong one:** the autograding channel's agentic layer is nascent, and the shelf's 85-pass tutoring tier remains far deeper. 🔵 **Named so the thinness is visible rather than inferred from a short table.**
+
+### 🟢 `P935`'s corollary — **stars do not rank engagement value in this tier**
+
+🔴 **The single most useful row of this pass has ZERO stars:** [`ls1intum/phobos`](https://github.com/ls1intum/phobos) — MIT, the **Landlock + network-allow-list sandbox** for Artemis programming exercises. 🔵 **Artemis (816★) is the platform a studio would deploy; `phobos` (0★) is what stops a student's submission from reaching the network.** 🟢 **You cannot responsibly ship the first without the second**, and a star-ordered read of the channel puts them 90 rows apart.
+
+🔵 **Same shape, same org, same pass: `Ares2` (5★) is the test sandbox inside Artemis.** 🟢 **Three TUM rows now compose into one deployable stack — see `compose/patterns.md`, recipe `P86-R1`.**
 ## 🟢 Eighty-fifth pass, 2026-10-09 — **`topics/autograding` is bought for the first time in 85 passes and it holds the permissive, production-grade platform `Gap 346` said did not exist**; `Gap 344` is **FALSIFIED** by reading the two rows pass 84 itself named; and the licence ladder gains **three new rungs**, one of which misreads *in the direction that costs the engagement*
 
 ⏱️ **Seventeenth pass of this date.** Pass 84 discharged `Gap 343`, opened `Gaps 344–348` and adopted `P905`–`P913`. **Append-only: this section is new; nothing below it was rewritten.**

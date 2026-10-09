@@ -4,6 +4,93 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-sixth pass, 2026-10-09 — the autograding channel's **tail is a COMPONENT tier**, and it completes the pass-85 platforms rather than competing with them. `P935` names the exhaustion boundary; the **NCSA** family gets its second and third rows; `P800`'s holder tier finally pays
+
+⏱️ **Eighteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **`topics/autograding` read 94 of 94 — the first channel this shelf has ever closed completely.** 🔵 **Pass 85 bought rows 1–20 and called the remaining 74 "the highest-value unbought budget on the shelf." This pass bought all 74 and can now price that claim precisely.**
+
+### 🔴 `P935` — the budget was real in **COUNT** and nearly worthless in **TYPE**
+
+| page | rows | top ★ | what the rows actually are |
+|---|---|---|---|
+| 1 (pass 85) | 1–20 | 🟢 **816** | 🟢 **institutional platforms** |
+| 2 | 21–40 | 🟡 11 | 🟢 **institutional COMPONENTS** — sandboxes, graders, LTI bridges, deployment |
+| 3 | 41–60 | 🔴 4 | 🟡 microservices + templates, mixed |
+| 4 | 61–80 | 🔴 **0 (all 20)** | 🔴 **single-assignment coursework**, incl. **8 rows** of one German C# series |
+| 5 | 81–94 | 🔴 **0 (all 14)** | 🔴 coursework + one vendored copy of `Catch2` |
+
+🔴 **~56 of the 74 tail rows are GitHub Classroom assignment repositories that carry the tag automatically.** 🟢 **The useful tail is pages 2–3, about 18 rows — and it is the single most engagement-ready tier this shelf has bought, for a reason that is not about licences.**
+
+🟢 **`P935`'s cheap test, which this shelf has never run: READ THE LAST PAGE FIRST.** 🔵 A tag's population is not homogeneous, so the tail tells you where the type boundary is for the price of one fetch. 🔴 **Had pass 86 done that, this channel costs ~40 rows instead of 74**, and the difference goes to `Gap 334`.
+
+### 🟢 The finding that matters more than any single row — the tail **completes** the platforms
+
+🔵 **Eighty-five passes of channel-buying produced either research code or, at pass 85, four platforms.** 🟢 **This pass produced the parts those platforms are made of**, from the same institutions:
+
+| pass-85 platform | pass-86 component, same org | what it adds |
+|---|---|---|
+| 🟢 `ls1intum/Artemis` — MIT, 816★, TU München, live at `artemis.tum.de` | 🟢 **`ls1intum/Ares2`** — MIT, 5★ | **Java test sandbox**: static analysis + runtime instrumentation, hidden tests |
+| 🟢 same | 🟢 **`ls1intum/phobos`** — MIT, 🔴 **0★** | **OS-level sandboxing**: **Landlock + network allow-list**, so student code cannot reach the network |
+| 🟢 `autolab/Tango` — Apache-2.0, 49★, CMU Autolab's job runner | 🔴 **`autolab/docker`** — 9★, 🔴 **UNGRANTED** | the official Compose install — **and it declares nothing** (`P934`) |
+| 🟢 `rstudio/ggcheck` — MIT, grades **figures** | 🟢 **`rstudio/tblcheck`** — MIT, 9★ | grades **tables** — together they cover both non-numeric answer types |
+| 🟢 `okpy/ok` — Apache-2.0, UC Berkeley | 🟢 **`ucbds-infra/ottr`** — BSD-3-Clause, 3★ | the **R arm** of Otter-Grader: R scripts, R Markdown, R-kernel notebooks |
+
+🟢 **This is the first pass where the shelf can assemble a complete, permissively licensed, institutionally operated stack from its own rows** — platform + test sandbox + OS sandbox, all MIT, all one research group. 🔵 **Recipe `P86-R1` in `compose/patterns.md`.**
+
+### 🔴 The 0★ row is the load-bearing one
+
+🔴 **`ls1intum/phobos` has zero stars and is the security boundary of the highest-value platform on this shelf.** 🔵 **Artemis executes untrusted student code; `phobos` is what confines it.** 🟢 **A studio cannot responsibly deploy Artemis without it** — and a star-ordered read of the channel puts them 90 rows apart, which is `P935` stated as a risk rather than as a cost.
+
+### 🟢 Foundational rows added this pass
+
+| repo | grant (payload-read inline, `size_download`) | bytes | ref · sha | ★ | region | why foundational |
+|---|---|---|---|---|---|---|
+| 🆕 [`ls1intum/Ares2`](https://github.com/ls1intum/Ares2) | 🟢 **MIT** — 🔵 5 holders (`P931`) | 1 345 | `main` · `47cbe8c` | 5 | 🟢 **EMEA** | 🟢 **The execution-safety layer for programming exercises.** Reusable independently of Artemis. |
+| 🆕 [`ls1intum/phobos`](https://github.com/ls1intum/phobos) | 🟢 **MIT** — 🔵 2 holders | 1 241 | `main` · `945c76b` | 🔴 0 | 🟢 **EMEA** | 🟢 **Landlock + network allow-list confinement.** 🔵 The only OS-level sandbox row on this shelf. |
+| 🆕 [`JuezUN/INGInious`](https://github.com/JuezUN/INGInious) — **UNCode** | 🔴 **AGPL-3.0** (title `GNU AFFERO…`, Affero ×14 → `P890`) | 34 840 | 🔴 `master` · `4a45903` | 8 | 🟢 **LATAM** | 🟢 **A production multi-language autograding platform at a flagship LATAM public university.** 🔴 Work-scoped copyleft. |
+| 🆕 [`jacquard-autograder/jacquard`](https://github.com/jacquard-autograder/jacquard) | 🟢 **Apache-2.0** | 11 357 | `main` · `8fbf8ea` | 10 | 🟡 unplaced | 🟢 Platform-independent Java autograding **with Gradescope as a target** — the bridge to the dominant commercial grader. |
+| 🆕 [`illinois/zephyr`](https://github.com/illinois/zephyr) | 🟢 **NCSA** | 1 661 | 🔴 `master` · `82fa514` | 8 | 🟢 **North America** | 🟢 Unified grading platform for student code, **UIUC**. |
+| 🆕 [`illinois-cs241/broadway-on-demand`](https://github.com/illinois-cs241/broadway-on-demand) | 🟢 **NCSA** | 1 818 | 🔴 `master` · `203ac6b` | 11 | 🟢 **North America** | 🟢 On-demand grading front end for the Broadway autograder, **UIUC**. |
+| 🆕 [`rstudio/tblcheck`](https://github.com/rstudio/tblcheck) | 🟢 **MIT** — 🔵 `DESCRIPTION` rung | 🔴 46 (stub) | `main` · `539b54e` | 9 | 🟢 **North America** | 🟢 **Grades tabular answers.** Completes `ggcheck`. **Posit/RStudio.** |
+| 🆕 [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) | 🟢 **BSD-3-Clause** — 🔵 `DESCRIPTION`, spelling variant (`P932`) | 🔴 108 (stub) | 🔴 `master` · `693b3df` | 3 | 🟢 **North America** | 🟢 **R autograding** for scripts, R Markdown and notebooks. **UC Berkeley DSEP.** |
+| 🆕 [`athina-edu/athina`](https://github.com/athina-edu/athina) | 🟢 **MIT** — 🔴 at **`LICENCE`** | 1 099 | 🔴 `master` · `5c12c2f` | 3 | 🟡 unplaced | 🟢 **Formative-assessment microservice** — a service boundary, like Tango. |
+| 🆕 [`iVishalr/BigHOST`](https://github.com/iVishalr/BigHOST) | 🟢 **MIT** | 1 083 | `main` · `0348cc7` | 2 | 🟢 **APAC** | 🟢 Autograding for **Big Data** assignments with parallel job scheduling. **PES University**, CCGridW 2023. |
+| 🆕 [`naasanov/gslocal`](https://github.com/naasanov/gslocal) | 🟢 **MIT** | 1 071 | `main` · `66ce3d1` | 4 | 🟡 unplaced | 🟢 Runs Gradescope autograders **locally in Docker** — develop without the hosted service. |
+| 🆕 [`Elan456/cu-autograder-framework`](https://github.com/Elan456/cu-autograder-framework) | 🟢 **MIT** | 1 071 | `main` · `f855a34` | 2 | 🟡 unplaced | 🟢 Language-agnostic Gradescope autograder scaffold. |
+| 🆕 [`cgtuebingen/infomark-backend`](https://github.com/cgtuebingen/infomark-backend) | 🔴 **GPL-3.0** (Affero ×3 → `P890`) | 35 149 | 🔴 `master` · `4ba9c06` | 2 | 🟢 **EMEA** | Course management + automated tests, Go REST API. **Tübingen.** |
+| 🆕 [`DigiKlausur/e2x-docs`](https://github.com/DigiKlausur/e2x-docs) | 🔴 **GPL-3.0** | 35 149 | 🔴 `master` · `101649e` | 🔴 0 | 🟢 **EMEA** | **E2x** digital-exam toolchain docs (nbgrader family). |
+
+🟢 **14 rows. 11 permissive (6 MIT, 1 Apache-2.0, 1 BSD-3-Clause, 2 NCSA, +1 MIT stub), 3 work-scoped copyleft.** 🟢 **`P920`/`P907` hold a second time: this is a platform/infrastructure tier and it is permissive by default** — the inverse of every research tier bought before pass 85.
+
+### 🟢 The **NCSA** family gets rows 2 and 3 — and it was already on the shelf
+
+🟡 **Checked before claiming novelty:** `NCSA` already appears in **6** live files, so this is **not** a new family. 🟢 **What is new is that it now has a tier:** both UIUC rows carry the **University of Illinois/NCSA Open Source License** — 🟢 **permissive, OSI-approved, BSD-3-shaped with the MIT no-endorsement clause folded in.**
+
+🔴 **Two rows, two byte values: 1 818 and 1 661.** 🔵 **Like BSD-3-Clause (1 496 / 1 508 / 1 542) and Apache-2.0 (11 324 / 11 357 / 11 358), NCSA has no single fingerprint** — 🟢 which is `P929`'s companion point: byte values identify a *payload*, never a *family*.
+
+### 🔵 🆕 `P932` — the R `DESCRIPTION` rung has a **SPELLING** variant that defeats a family grep
+
+🟢 **Measured on two R rows this pass:**
+
+| repo | `LICENSE` file | `DESCRIPTION` `License:` field |
+|---|---|---|
+| `rstudio/tblcheck` | 🔴 **46 B** — `YEAR: 2021` / `COPYRIGHT HOLDER: tblcheck authors` | 🟢 **`MIT + file LICENSE`** |
+| `ucbds-infra/ottr` | 🔴 **108 B** — `YEAR: 2020-2022` / `COPYRIGHT HOLDER: UC Berkeley Data Science Education Program` | 🟢 **`BSD_3_clause + file LICENSE`** |
+
+🔴 **`BSD_3_clause` — underscores, lowercase `clause`.** 🔴 **A `grep -i 'BSD-3-Clause'` returns ZERO on it.** 🟢 **`P932` extends `P895`: on the R rung the family name is written in R's own vocabulary, so the grant must be matched case-insensitively with `[-_]` between tokens, not by the SPDX string.**
+
+🔵 **And both stubs are useful despite being stubs:** 🟢 **`ottr`'s 108 B names UC Berkeley's DSEP as the holder, which is what placed the row** — a 108-byte file carrying the region evidence the whole repository otherwise lacks.
+
+### 🔴 Declared gaps — carried to pass 87
+
+- 🔴 **`Gap 334` UNSPENT for a third pass** and now unambiguously the oldest costed item on this shelf. 🟢 **7 single-fetch title reads. Named as pass 87's first action, before any channel.**
+- 🔴 **`Gap 352`: no successor channel is named.** 🟢 `autograding` is closed; `question-generation` is refused. 🟢 **`P923`-shaped candidates, costed but unopened: `topics/learning-analytics`, `topics/nbgrader`, `topics/lti`, `topics/scorm`, `topics/student-information-system`.**
+- 🔴 **`Gap 355`: byte figures recorded before pass 84 are of UNKNOWN method** (`Submitty` proves at least two were in use). 🔵 Not re-measurable cheaply — **~300 rows**. 🟡 **Recorded as a known-unreliable column rather than silently trusted.**
+- 🔴 **`autolab/docker` is the install path for a granted service and declares nothing** — `P934`, and part of `Gap 354`.
+- 🔴 **`Gap 335`** untouched a fourth pass; 🔴 **`Gap 340`** (Eurydice) a second; 🔴 **`Gap 349`** untouched.
+- 🔴 **Ninth consecutive pass without executing the board.** No instrument versioned (`P126`).
+
 ## 🟢 Eighty-fifth pass, 2026-10-09 — the **autograding / automated-feedback tier is bought for the first time in 85 passes**, and it inverts `P907`: this tier is **permissive by default (11 of 15)** because it is made of *platforms universities run*, not *code attached to papers*
 
 ⏱️ **Seventeenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

@@ -4,6 +4,118 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 86) — **`topics/autograding` is read 94 of 94 and EXHAUSTED**, and pass 85's verdict on it is **half right**: the budget was real in COUNT and nearly worthless in TYPE. `P935` names the boundary; `Gap 350` and `Gap 351` both DISCHARGE
+
+⏱️ **Eighteenth pass of this date.** 🟢 **Append-only: pass 85's section sits immediately below, unchanged.**
+
+🟢 **24 repositories probed, 17 granted rows, 6 named negatives, 1 🔴 licence FLAGGED as non-OSI despite a permissive title line.**
+🔵 **Every licence figure below is payload-read inline at a ref resolved per-repo, and the two probe channels were calibrated against a negative control before any candidate was touched.**
+
+### 🟢 The channel ledger, this pass
+
+| channel | repos | read | on-topic | granted | negatives | precision | verdict |
+|---|---|---|---|---|---|---|---|
+| 🟢 **`topics/autograding` rows 21–94** | **94** | 🟢 **94 of 94 — EXHAUSTED** | 🔴 **~18 of 74 are instruments; ~56 are single-assignment templates** | 🟢 **17** | 🔴 6 | 🔴 **~24% on the tail** vs 🟢 55% on rows 1–20 | 🔴 **DO NOT RE-BUY — channel is closed.** 🟢 Paid anyway: see below |
+
+🔴 **Pass 85 called rows 21–94 "the highest-value unbought budget on the shelf."** 🟡 **Half right, and the half that was wrong is the expensive half.**
+
+### 🟢 🆕 `P935` — **channel depth decays by ARTEFACT TYPE, not by star count**, and the decay is a cliff
+
+🟢 **Measured across all five pages of one channel:**
+
+| page | rows | top ★ | dominant artefact type |
+|---|---|---|---|
+| 1 (pass 85) | 1–20 | 🟢 **816** | 🟢 **institutional platforms** — Artemis (TUM), `okpy/ok` (Berkeley), Tango (CMU), prog-edu-assistant (Google) |
+| 2 | 21–40 | 🟡 **11** | 🟡 **institutional components** — sandboxes, graders, LTI bridges |
+| 3 | 41–60 | 🔴 **4** | 🟡 mixed microservices + templates |
+| 4 | 61–80 | 🔴 **0 (all 20)** | 🔴 **single-assignment templates** — incl. **8 rows** of one German C# homework series (`GSO-SW/csharp-*-lerngruppe`) |
+| 5 | 81–94 | 🔴 **0 (all 14)** | 🔴 templates + one vendored copy of `Catch2` |
+
+🔵 **The cliff is between pages 3 and 4, and it is a TYPE change, not a popularity gradient.** 🔴 **Rows 61–94 are student coursework repositories that carry the topic tag because GitHub Classroom adds it automatically.** 🟢 **So "is the channel exhausted?" has a cheap answer the shelf has never used: read the LAST page first.** 🔴 **Had pass 86 done that, it would have costed this channel at ~40 rows, not 74, and spent the difference on `Gap 334`.**
+
+🟢 **`P935` corrects `P865` without overturning it.** 🔵 `P865` established that "the channel is dead" needs to name the surface. 🟢 **`P935` adds the test: name the surface AND sample its tail, because a tag's population is not homogeneous.**
+
+### 🟢 New granted rows — the autograding **component** tier
+
+🔵 **The tail's real yield is not new platforms. It is the INFRASTRUCTURE OF THE PLATFORMS PASS 85 ALREADY BOUGHT** — which is a better outcome than a fresh platform, because it makes the pass-85 rows deployable.
+
+| repo | grant (payload-read inline) | bytes | ref · sha | ★ | region | what it does |
+|---|---|---|---|---|---|---|
+| 🆕 [`illinois-cs241/broadway-on-demand`](https://github.com/illinois-cs241/broadway-on-demand) | 🟢 **NCSA** (U. Illinois/NCSA Open Source License) | 1 818 | 🔴 `master` · `203ac6b` | 11 | 🟢 **North America** | On-demand grading front end for the Broadway autograder. 🟢 **UIUC CS.** |
+| 🆕 [`jacquard-autograder/jacquard`](https://github.com/jacquard-autograder/jacquard) | 🟢 **Apache-2.0** | 11 357 | `main` · `8fbf8ea` | 10 | 🟡 unplaced | Platform-independent **Java autograder with Gradescope support**. 🔵 The only row in the tier that targets a commercial LMS as a first-class output. |
+| 🆕 [`rstudio/tblcheck`](https://github.com/rstudio/tblcheck) | 🟢 **MIT** — 🔵 **R `DESCRIPTION` rung (`P895`)** | 🔴 **46** (stub) | `main` · `539b54e` | 9 | 🟢 **North America** | Grades **tabular data** in learning exercises. 🟢 **Posit/RStudio — the sibling of pass 85's `ggcheck`**, and together they cover figure + table grading. |
+| 🆕 [`illinois/zephyr`](https://github.com/illinois/zephyr) | 🟢 **NCSA** | 1 661 | 🔴 `master` · `82fa514` | 8 | 🟢 **North America** | Unified grading platform for student code. 🟢 **UIUC**, C++. |
+| 🆕 [`JuezUN/INGInious`](https://github.com/JuezUN/INGInious) — **UNCode** | 🔴 **AGPL-3.0** | 34 840 | 🔴 `master` · `4a45903` | 8 | 🟢 **LATAM** | 🟢 **Production platform at the Universidad Nacional de Colombia, Bogotá.** Autograding for C/C++, Java, Python, **Verilog/VHDL** and Jupyter, plus an LMS bridge. 🟢 **This is the row `Gap 350`'s LATAM limb was opened for.** |
+| 🆕 [`ls1intum/Ares2`](https://github.com/ls1intum/Ares2) | 🟢 **MIT** — 🔵 **5 copyright holders (`P931`)** | 🔴 **1 345** | `main` · `47cbe8c` | 5 | 🟢 **EMEA** | **Java test sandbox** using static analysis + runtime instrumentation to run student submissions against hidden tests. 🟢 **TUM Applied Education Technologies — the sandbox INSIDE Artemis.** |
+| 🆕 [`naasanov/gslocal`](https://github.com/naasanov/gslocal) | 🟢 **MIT** | 1 071 | `main` · `66ce3d1` | 4 | 🟡 unplaced | Runs **Gradescope autograders locally in Docker**, mirroring the hosted container workflow. 🔵 The cheapest way to develop against Gradescope without paying for it. |
+| 🆕 [`athina-edu/athina`](https://github.com/athina-edu/athina) | 🟢 **MIT** — 🔴 at **`LICENCE`**, British spelling (`P932`-adjacent) | 1 099 | 🔴 `master` · `5c12c2f` | 3 | 🟡 unplaced | **Formative-assessment microservice** for programming assignments. 🔴 **Found on the fifth path probe** — four standard spellings returned 404 first. |
+| 🆕 [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) | 🟢 **BSD-3-Clause** — 🔵 **`DESCRIPTION` rung, spelling variant (`P932`)** | 🔴 **108** (stub) | 🔴 `master` · `693b3df` | 3 | 🟢 **North America** | Autograder for **R scripts, R Markdown and R-kernel notebooks** — the R arm of Otter-Grader. 🟢 **UC Berkeley Data Science Education Program**, named as the copyright holder in the stub. |
+| 🆕 [`iVishalr/BigHOST`](https://github.com/iVishalr/BigHOST) | 🟢 **MIT** | 1 083 | `main` · `0348cc7` | 2 | 🟢 **APAC** | Autograding for **Big Data assignments**, scalable parallel job execution. 🟢 **PES University, Bangalore; CCGridW 2023.** 🟢 **This is the row `Gap 350`'s APAC limb was opened for.** |
+| 🆕 [`Elan456/cu-autograder-framework`](https://github.com/Elan456/cu-autograder-framework) | 🟢 **MIT** | 1 071 | `main` · `f855a34` | 2 | 🟡 unplaced | Gradescope autograder framework, language-agnostic. |
+| 🆕 [`ls1intum/phobos`](https://github.com/ls1intum/phobos) | 🟢 **MIT** — 🔵 2 holders (`P931`) | 🔴 **1 241** | `main` · `945c76b` | 🔴 **0** | 🟢 **EMEA** | **Sandboxing for Artemis programming exercises using Landlock + a network allow-list.** 🟢 **TUM.** 🔴 **Zero stars, and it is the security boundary of the highest-value platform on this shelf — see `P935`'s corollary below.** |
+| 🆕 [`professor-john-fulton/repo-grading-assistant`](https://github.com/professor-john-fulton/repo-grading-assistant) | 🟢 **MIT** — 🔵 `LICENSE.md`, title line is a **Markdown heading** `# MIT License` | 1 070 | `main` · `7fa9446` | 🔴 **0** | 🟡 unplaced | Generates **AI rubric-based feedback** for programming assignments; the educator sets the final grade. 🔵 **Human-in-the-loop by construction** — which is what NYC and Maryland guidance now requires (see `intel/market.md`). |
+| 🆕 [`BridgeSuite/GradeBridge-AI`](https://github.com/BridgeSuite/GradeBridge-AI) | 🟢 **MIT** | 1 064 | `main` · `8b94519` | 🔴 **0** | 🟡 unplaced | AI-based autograding targeting Gradescope. |
+| 🆕 [`cgtuebingen/infomark-backend`](https://github.com/cgtuebingen/infomark-backend) | 🔴 **GPL-3.0** | 35 149 | 🔴 `master` · `4ba9c06` | 2 | 🟢 **EMEA** | Course management + automated programming tests, REST API (Go). 🟢 **Tübingen.** |
+| 🆕 [`DigiKlausur/e2x-docs`](https://github.com/DigiKlausur/e2x-docs) | 🔴 **GPL-3.0** | 35 149 | 🔴 `master` · `101649e` | 🔴 **0** | 🟢 **EMEA** | Documentation for **E2x**, the nbgrader-family digital-exam toolchain. |
+
+🟢 **17 granted. 12 permissive (7 MIT, 1 Apache-2.0, 1 BSD-3-Clause, 2 NCSA), 3 work-scoped copyleft (1 AGPL, 2 GPL), 1 flagged non-OSI, 1 stub-resolved.**
+
+### 🔴 The row that must NOT be read as permissive — `P930`
+
+| repo | what the title line says | what the payload actually grants |
+|---|---|---|
+| 🔴 [`kangwonlee/gemini-python-tutor`](https://github.com/kangwonlee/gemini-python-tutor) · 1★ · `main` · `e9345c5` · **1 662 B** · 🟢 APAC | 🟡 **`BSD 3-Clause License + Do Not Harm`** | 🔴 **BSD-3-Clause plus TWO added field-of-use clauses.** 🔴 **NOT OSI-approved. Do not shelve as BSD-3-Clause.** |
+
+🔴 **Clauses 4 and 5, read verbatim from the payload:** *"No human must purposefully be harmed using this software"* and *"No living being must purposefully be harmed using this software."*
+
+🟢 **Measured discriminator behaviour on this one payload:**
+
+| test | result | verdict |
+|---|---|---|
+| `grep -c 'BSD 3-Clause'` | **1** | 🔴 **ACCEPTS it as BSD-3-Clause — wrong, and in the direction that costs the engagement** |
+| title line read **in full** | `BSD 3-Clause License + Do Not Harm` | 🟢 **catches it — but only if you read past the known family name** |
+| numbered clauses | **5** (canonical BSD-3 has **3**) | 🟢 **catches it** |
+| byte count vs canonical | **1 662** vs **1 508** (`matplotcheck`) | 🟢 **catches it — 154 B over** |
+
+🔵 **`P930`: this is the exact INVERSE of pass 85's `measr`/`EdOptimize` pair.** 🔴 There, the title line was authoritative and `grep` failed. 🟢 **Here the substring `grep` fails and the BYTE COUNT is the test that works** — the first row on this shelf where byte count is the decisive discriminator. 🔵 **Which is why `P929` below matters more than a one-byte bookkeeping note.**
+
+### 🔴 Named negatives — 6 of 24, and all 6 declare **nothing anywhere**
+
+| repo | ★ | ref · sha | paths probed | README `licen[sc]e` hits |
+|---|---|---|---|---|
+| 🔴 [`autolab/docker`](https://github.com/autolab/docker) | 9 | `master` · `66de098` | 14 | 🔴 **0** |
+| 🔴 [`GuillaumeDerval/JavaGrading`](https://github.com/GuillaumeDerval/JavaGrading) | 9 | `master` · `fe7aad6` | 14 | 🔴 **0** |
+| 🔴 [`snap-cloud/lambda`](https://github.com/snap-cloud/lambda) | 6 | `master` · `a5f537e` | 14 | 🔴 **0** |
+| 🔴 [`Zyzzyva0381/answer-paper`](https://github.com/Zyzzyva0381/answer-paper) | 5 | `master` · `bfca016` | 7 | 🔴 **0** |
+| 🔴 [`yves-chevallier/quiz-ai`](https://github.com/yves-chevallier/quiz-ai) | 4 | `main` · `9f56b9c` | 7 | 🔴 **0** |
+| 🔴 [`adriangilr/gradeops`](https://github.com/adriangilr/gradeops) | 1 | `main` · `616f016` | 7 | 🔴 **0** |
+
+🟢 **All six are upstream-askable: nothing was declared, so there is no contradiction to resolve — only a question to ask.** 🆕 **`Gap 354`.**
+
+### 🔴 🆕 `P934` — **a granted service can ship an UNGRANTED deployment wrapper**
+
+🟢 **Measured inside one GitHub org, this pass:** 🟢 `autolab/Tango` is **Apache-2.0** (pass 85, re-measured true **11 324 B**). 🔴 **`autolab/docker` — the official Docker Compose install for it — declares NOTHING across 14 probed paths and has zero licence mentions in its README.**
+
+🔵 **The product is granted and the way you are told to run it is not.** 🔴 **A studio that cleared "Tango, Apache-2.0" and then followed the project's own install instructions would be deploying an unlicensed artefact.** 🟢 **`P934`: probe the INSTALL PATH, not just the product.** 🔵 This generalises beyond Autolab — Helm charts, Compose files, Ansible roles and Terraform modules are routinely separate repos, and routinely undeclared.
+
+### 🔴 `T1` — the trap pays again, **10 of 23 refs**
+
+| ref value | rows | notable |
+|---|---|---|
+| `master` | 🔴 **10** | 🟢 **`JuezUN/INGInious`** — the LATAM platform; a `main`-hardcoded probe drops it |
+| `main` | 🟢 13 | — |
+
+🟢 **43% non-`main` this pass**, against pass 85's 53% and pass 79's 2-of-12. 🔵 **Three consecutive passes above 15%: `T1` is a standing property of this vertical, not a streak.**
+
+### 🔴 Declared gaps — carried to pass 87
+
+- 🔴 **`Gap 334` is now the oldest unspent item on this shelf for the THIRD consecutive pass** (opened pass 79). 🟢 **Costed at 7 single-fetch title reads** by `P888`+`P890` — cheaper than any channel buy. 🔴 **Pass 86 spent its budget finishing the channel pass 85 named instead, and says so rather than letting the omission look like coverage.** 🟢 **Named as the FIRST buy of pass 87.**
+- 🔴 **`Gap 352` — the channel ledger now has NO named successor.** 🟢 `topics/autograding` is closed at 94/94 and `topics/question-generation` is refused at ~30% precision. 🔵 **`P923`'s rule gives the shape of a good next tag — a term with no use outside education.** 🟢 **Costed candidates, none yet opened: `topics/learning-analytics`, `topics/nbgrader`, `topics/lti`, `topics/scorm`, `topics/student-information-system`.**
+- 🔴 **`Gap 353` — the `Do Not Harm` row is UNADJUDICATED.** 🔵 Its restriction is unbounded and has no OSI status, no case law and no SPDX identifier. 🔴 **It cannot be cleared or rejected by payload reading alone** — it needs counsel. 🟢 Recorded as flagged, not as granted.
+- 🔴 **Ninth consecutive pass without running the board:** `shelf_gate.sh`, `measure`, `license_family.sh`, `p351` and the 106 suites stay **CARRIED, NOT CONFIRMED**. 🔴 **No instrument versioned** (`P126`).
+- 🔴 **`Gap 335` (knowledge-tracing placeability) and `Gap 340` (Eurydice unbought) untouched for a fourth and second pass respectively.**
+- 🟡 **`Submitty/Submitty` was re-measured and is already shelved** (`live=1`): **BSD-3-Clause, 1 542 B, `main` · `80d7d66`**. 🟢 Recorded here because it is a **third** BSD-3-Clause byte value after 1 496 and 1 508 — the family does not have one fingerprint.
+
 ## 🟢 2026-10-09 (pass 85) — **two channels bought, 94-repo `topics/autograding` opened for the first time**, and the channel ledger pays its largest dividend yet: the row two passes declared impossible was in an unopened channel all along
 
 ⏱️ **Seventeenth pass of this date.** 🟢 **Append-only: pass 84's section sits immediately below, unchanged.**
