@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🔴 Seventy-third pass, **correction (73-C)**, 2026-10-09 — pass 73 cited `P828` and then did not perform it: **two agents published as new were already shelved**, and one hand-rolled probe produced **two** independent measurement defects. `P834`–`P836` adopted
+
+⏱️ **Correction published within the same date, append-only. The pass-73 section below is not rewritten; its erroneous claims stand visible and are corrected here.**
+
+🟢 **Registry continuity:** pass 73 wrote to this file; this correction sits above it and supersedes only the specific claims it names.
+
+### 🔴 What was wrong
+
+| Pass-73 claim | Correction |
+|---|---|
+| *"Two new agent rows"* (`HKUDS/DeepTutor`, `zijinz456/OpenTutor`) | 🔴 **Both already shelved**, identical shas; `DeepTutor` had **21 mentions in `agents/top.md`** alone |
+| *"Canonicality settled by copyright holder"* presented as this pass's finding | 🔴 **Already settled.** A prior pass logged `adity982/OpenTutor` as *"Fork of the above, **not a find** — logged so it is not double-counted later."* 🔴 Pass 73 double-counted it, and analysed 2 forks where the shelf knew **8** |
+| `DeepTutor` `LICENSE` **11 407 B** | 🟢 **11 408 B** — the shelf was right; see `P834` |
+| *"It is Apache-2.0, so it can be carried"* | 🔴 Incomplete: 🔴 **`PyMuPDF>=1.26.0` in the core array is AGPL-3.0-or-Artifex**, shelf verdict REVIEW-STRONG since 2026-10-06 |
+
+### 🆕 `P834` — command substitution strips the trailing newline; every pass-73 byte count is **one byte low**
+
+🟢 **Measured, controls in one command:** `p=$(curl …); printf '%s' "$p" | wc -c` → 🔴 **11 407**; `curl … | wc -c` → 🟢 **11 408**.
+
+🟢 **`P834`: never size a payload through `$(…)`. Pipe it to `wc -c`.** 🔵 **Corrected figures for pass 73:** `iblai/os` **1 070 B**, `iblai/lms` **1 063 B**, `zijinz456/OpenTutor` **1 069 B**, `aureuserp` **1 078 B**, `ofbiz` **11 906 B**, Huly EPL-2.0 **14 197 B**, `openeducat` **8 241 B**, `DeepTutor` **11 408 B**. 🟢 **No licence *family* verdict changes; only the sizes.** 🟡 **The Huly correction to EPL-2.0 is unaffected** — a family verdict, not a size.
+
+### 🆕 `P835` — never infer absence from a truncated listing
+
+🔴 **Mechanical cause of the duplicate rows:** pass 73 enumerated **451** shelved repository URLs, **printed only the first 70 alphabetically**, and read `HKUDS/…` and `zijinz456/…` as absent from a list that stopped at `E`. 🟢 **`P835`: before writing any row as new, `grep -c` the shelf for the candidate by name.** 🔵 One command, never run.
+
+### 🆕 `P836` — clear a pattern's base on its **dependency closure**, not its `LICENSE`
+
+🔴 `P14-R` was re-based on an Apache-2.0 `LICENSE` while its base's core array carries an AGPL-or-commercial dependency **this shelf had already measured**. 🟢 Corrected in `compose/patterns.md` with the three-way PDF-layer decision priced. 🔵 **`Gap 327` inverted:** that gap is a permissive grant over **no source**; this is a permissive grant over a **copyleft closure**. 🟢 Neither survives a probe that stops at `LICENSE`.
+
+### 🔴 The compounding cause, and it is the most reusable finding in this correction
+
+🔴 **Pass 73's payload probe was hand-rolled because `probe_payload.sh` could not be sourced in this environment.** 🔴 **That single substitution produced both the byte undercount (`P834`) and the substring overcount (`P831`, `tooLTIp`/`muLTI-tenancy`).** 🟢 **Two independent measurement defects, one hand-rolled loop, one pass** — exactly what that file's header predicts: *"a control nobody has to assemble is the only kind that gets used."*
+
+🟢 **`Gap 328` opened:** `probe_payload.sh` is unusable under this environment's execution policy, so every pass here will hand-roll its probe and re-buy these defects. 🟢 **Remedy:** make the shared probe invocable as a plain script with arguments rather than a sourced library, so a future pass gets the controls without assembling them. 🔴 **Until that lands, `P831` and `P834` must be applied by hand on every pass, which is precisely the fragile arrangement the shared library exists to end.**
+
+### 🟢 What stands, unaffected
+
+🟢 **`Gap 326`'s closure** (the `iblai` org resolution, MIT payload, the ISC/ISC/MIT sourceless SDK chain, the enterprise backend, the absent AGS, the line-61-vs-line-237 contradiction), 🟢 **`Gap 327`**, 🟢 **`P831`/`P832`/`P833`**, 🟢 **`Gap 309`'s OpenEduCat path resolution**, 🟢 **`Gap 308`'s sixth refusal and its three-way date conflict**, 🟢 **the Huly EPL-2.0 correction**, 🟢 **the 4-of-4 non-`main` default-ref finding**, 🟢 **the `P793` provenance audit (5 of 5)**, and 🟢 **the regional intelligence in `intel/market.md`.** 🟢 **None of these rests on the two duplicated agent rows.**
+
+🟢 **And one finding is strengthened rather than weakened:** `DeepTutor`'s **0 LTI / 0 xAPI / 0 Caliper / 0 SCORM / 0 OneRoster / 0 LMS** across 3 763 files is genuinely new — 🔴 **this shelf has carried `DeepTutor` for multiple passes with its licence, sha, release and dependency posture all recorded, and had never once censused its interoperability surface.** 🟢 **That is `Gap 316`'s missing half, and it survives intact.**
+
 ## 🟢 Seventy-third pass, 2026-10-09 — `Gap 326` **CLOSES on the org pass 72 could not resolve, and the vendor claim is TRUE**; `Gap 316` is **re-characterised, not merely re-confirmed**; `Gap 308` refused a **sixth** time *and gets materially worse*; one gap opens (`327`) and one instrument hazard is caught inside this pass's own grep
 
 ⏱️ **Fifth pass of this date.** Pass 72 closed earlier today (commit `e99be83`). **Append-only: this section is new; nothing below it was rewritten.**

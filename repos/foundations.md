@@ -4,6 +4,18 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🔴 Seventy-third pass, **correction (73-C)**, 2026-10-09 — the rows this file added were **already on this shelf**, and one build-on recommendation was published without its licence caveat
+
+🔴 **`HKUDS/DeepTutor` and `zijinz456/OpenTutor` were already shelved before pass 73.** 🟢 Read the section below as a re-measurement. 🟡 Every byte count in it is **one byte low** (`P834`): `OpenTutor` MIT is **1 069 B**, `aureuserp` **1 078 B**, `ofbiz` **11 906 B**, `DeepTutor` **11 408 B**.
+
+### 🔴 The omission that matters: `DeepTutor`'s dependency closure is **not** permissive
+
+🔴 The section below calls `DeepTutor` *"Apache-2.0, so it can be carried."* 🟢 **This shelf has recorded since 2026-10-06 that `PyMuPDF>=1.26.0` is in its core dependency array, dual-licensed 🔴 *AGPL-3.0 or Artifex Commercial*, shelf verdict REVIEW-STRONG: "AGPL, or pay Artifex, or replace the PDF layer."**
+
+🟢 **Corrected recommendation:** `DeepTutor` remains the strongest permissive tutoring foundation on this shelf **and** adopting it is a three-way decision on the PDF layer, not a free carry. 🔵 **A probe that reads `LICENSE` and stops cannot see this**, which is the same blind spot `Gap 327` names from the other side (permissive grant, no source) — here it is permissive grant, copyleft closure.
+
+🟢 **Genuinely new and unaffected:** the `iblai` "permissive but sourceless" tier, `P832`, and `DeepTutor`'s **0-of-6** protocol census across 3 763 files.
+
 ## 🟢 Seventy-third pass, 2026-10-09 — the foundation layer gains a **multi-tenant tutoring runtime**, and a new rule for reading a licence off a package instead of a repository
 
 ⏱️ **Fifth pass of this date.** Pass 72 closed earlier today (commit `e99be83`). **Append-only: this section is new; nothing below it was rewritten.**

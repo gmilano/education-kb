@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🔴 Seventy-third pass, **correction (73-C)**, 2026-10-09 — pass 73 published **two agents as new that this shelf had already shelved**, re-settled a canonicality question a prior pass had explicitly logged *"so it is not double-counted later"*, and under-measured a licence by one byte with a hand-rolled probe. **`P828` failed, and it failed in the pass that cited it**
+
+⏱️ **Correction to the section below, published within the same date. Append-only: nothing below was rewritten; the erroneous claims stand visible and are corrected here.**
+
+### 🔴 Correction 1 — **neither agent was new.** Both were already on this shelf
+
+| Claim in pass 73 | 🔴 What this shelf already held |
+|---|---|
+| *"Two new agent rows"*; `HKUDS/DeepTutor` 🆕 | 🔴 **Already shelved, extensively** — **21 mentions in this file alone** before pass 73. Same sha `6cf793b`, Apache-2.0, tag `v1.6.9` / release `v1.6.13` (2026-10-04), described as agent-native lifelong tutoring with per-learner TutorBot workspaces |
+| `zijinz456/OpenTutor` 🆕 | 🔴 **Already shelved** with the *identical* measurement: 🟢 MIT **1 068 B**, `main` **`f0142f2`** · 2026-10-08, *"only permissive component with FSRS + knowledge graph + a cold-start-aware block-decision engine"* |
+
+🔴 **And the second one is worse than a duplicate.** A prior pass had already censused the `OpenTutor` family at **eight forks** — `Johnson1662`, `LEARNableLabs`, `adity982`, `tutornew`, `zijinz456`, `anoopreddy2007`, `iriseye395`, `itsnone-liu` — and logged `adity982/OpenTutor` in exactly these words:
+
+> 🟡 **Fork of the above, not a find** — logged so it is not double-counted later
+
+🔴 **Pass 73 double-counted it anyway**, presented the holder-based canonicality ruling as this pass's work, and analysed **two** forks where the shelf already knew **eight**. 🟢 **The ruling itself is correct and unchanged — `zijinz456` is canonical. It was simply not new, and the note warning against this exact error was already in the file.**
+
+### 🔴 Correction 2 — the licence byte count was **11 408 B**, not 11 407 B, and the defect was in this pass's instrument
+
+🔴 Pass 73 published `HKUDS/DeepTutor` `LICENSE` at **11 407 B**. 🟢 **This shelf holds 11 408 B**, with the one-byte question already resolved under `P804` (the Apache appendix is *completed* — *"Copyright 2025 Data Intelligence Lab, The University of Hong Kong"* — rather than left as the `[yyyy] [name of copyright owner]` placeholder, putting it +51 B off canonical).
+
+🟢 **Cause found, measured, and it is general:**
+
+| Measurement | Bytes |
+|---|---|
+| `p=$(curl …); printf '%s' "$p" \| wc -c` | 🔴 **11 407** |
+| `curl … \| wc -c` | 🟢 **11 408** |
+
+🔴 **Command substitution strips trailing newlines.** 🟢 **The shelf was right and this pass's probe was wrong by exactly the final `\n`.** 🟢 **`P834` adopted:** never size a payload through `$(…)`; pipe it straight to `wc -c`. 🔵 **Retroactive:** every byte count in pass 73's sections was taken through `$(…)` and is therefore **one byte low** — `iblai/os` MIT reads **1 070 B**, `iblai/lms` **1 063 B**, `zijinz456/OpenTutor` **1 069 B**, `aureuserp` **1 078 B**, `ofbiz` **11 906 B**, Huly EPL-2.0 **14 197 B**, `openeducat` **8 241 B**. 🟡 **No licence *family* verdict changes** — only the sizes.
+
+### 🔴 Correction 3 — `P828` was cited in this pass and then not performed
+
+🔵 **Pass 72 recorded the rule:** *"check what the shelf says before writing a correction to it."* 🔴 **Pass 73 quoted that rule approvingly in `verticals/solutions.md` — for Huly, where it did discharge it — and skipped it for the two agent rows, which is where it would have paid.**
+
+🔴 **The mechanical cause, stated so the next pass does not repeat it:** pass 73 enumerated 451 shelved repository URLs, **printed only the first 70 alphabetically**, and read "H" and "z" as absent from a list truncated at "E". 🟢 **A `grep -c` for each candidate against the shelf costs one command and was never run.** 🟢 **`P835`: before writing any row as new, grep the shelf for the candidate by name. Never infer absence from a truncated listing.**
+
+🔵 **Compounding cause, recorded because it is the same shape as `P831`:** pass 73's payload probe was hand-rolled because `probe_payload.sh` could not be sourced in this environment. 🔴 **That one substitution produced both the byte error and the substring error (`tooLTIp`), which is precisely the failure `probe_payload.sh`'s own header predicts** — *"a control nobody has to assemble is the only kind that gets used."* 🟢 **Two independent defects from one hand-rolled loop, in one pass. The strongest evidence this shelf has that the shared instrument is not optional.**
+
+### 🟢 What in pass 73 **survives** this correction
+
+🟢 **The protocol census is genuinely new and stands.** This shelf had `DeepTutor`'s licence, sha, release and dependency posture, but 🟢 **had never censused its interoperability surface.** Re-stated, word-bounded per `P831`: 🔴 **`HKUDS/DeepTutor` holds 0 LTI, 0 xAPI, 0 Caliper, 0 SCORM, 0 OneRoster and 0 LMS paths in 3 763 files.** 🟡 For `OpenTutor` the shelf already held the LTI limb — *"whether any of the eight adds an LTI 1.3 seam — none has one today"* — so only the xAPI/SCORM limbs there are new.
+
+🟢 **Also surviving, and unaffected by any of the above:** `Gap 326`'s closure (the `iblai` org resolution, the ISC sourceless SDK chain, the enterprise backend, the absent AGS), `Gap 327`, `P831`, `P832`, `P833`, the Huly **EPL-2.0** correction, `Gap 309`'s OpenEduCat path resolution, `Gap 308`'s sixth refusal and its three-way date conflict, and the regional intelligence. 🟢 **None of those rest on the two agent rows.**
+
+### 🔴 Correction 4 — a material caveat pass 73 omitted from a build-on recommendation
+
+🔴 **Pass 73 wrote of `DeepTutor`: *"It is Apache-2.0, so it can be carried."*** 🔴 **That sentence is incomplete in a way that matters.** 🟢 **This shelf already records, from 2026-10-06:** `PyMuPDF>=1.26.0` sits in `DeepTutor`'s **core dependency array** and is 🔴 **dual-licensed *GNU AGPL-3.0 or Artifex Commercial*** (v1.28.2), with the shelf's own verdict **REVIEW-STRONG**: *"AGPL, or pay Artifex, or replace the PDF layer."*
+
+🔴 **So the repository's own grant is permissive and its core dependency closure is not.** 🟢 **`P14-R` is corrected accordingly in `compose/patterns.md`** — the pattern still stands, with the PDF layer named as a licence decision rather than passed over. 🔵 **This is `Gap 327`'s lesson arriving from the opposite direction:** that gap is a permissive licence over no source; this is a permissive licence over a copyleft dependency. 🟢 **Neither is visible to a probe that reads `LICENSE` and stops.**
+
 ## 🟢 Seventy-third pass, 2026-10-09 — `Gap 316`'s capture thesis **flips from a licence finding to a seam finding**: two fresh permissive tutors are censused at **3 763 and 890 files** and hold **zero** education protocols between them, while the one component that *does* hold LTI 1.3 is **permissive and sourceless**. Two real agents admitted
 
 ⏱️ **Fifth pass of this date.** Pass 72 closed earlier today (commit `e99be83`). **Append-only: this section is new; nothing below it was rewritten.**

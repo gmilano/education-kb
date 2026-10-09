@@ -4,6 +4,28 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🔴 Seventy-third pass, **correction (73-C)**, 2026-10-09 — `P14-R`'s re-base is sound, but it was published **without the AGPL dependency in its base's core**
+
+### 🔴 `P14-R` — corrected. The tutoring runtime is Apache-2.0; its PDF layer is **AGPL-or-Artifex**
+
+🔴 **The section below re-bases `P14-R` onto `HKUDS/DeepTutor` and says *"It is Apache-2.0, so it can be carried."*** 🟢 **The repository's grant is Apache-2.0. Its core dependency closure is not.** 🟢 **This shelf has held since 2026-10-06:** `PyMuPDF>=1.26.0`, **core array**, 🔴 **dual-licensed *GNU AGPL-3.0 or Artifex Commercial*** (v1.28.2) — shelf verdict 🔴 **REVIEW-STRONG**, *"AGPL, or pay Artifex, or replace the PDF layer."*
+
+🟢 **`P14-R` stands with one row added to its build sheet, which the pattern cannot ship without resolving:**
+
+| Decision | Option | Consequence |
+|---|---|---|
+| PDF ingestion | 🔴 Keep `PyMuPDF` under AGPL-3.0 | 🔴 Network copyleft reaches the deployed tutor — **fails the "no copyleft in the learner path" premise this pattern was built on** |
+| | 🟡 Buy the Artifex commercial licence | 🟡 Per-deployment cost; keeps the stack permissive downstream |
+| | 🟢 Replace the PDF layer (e.g. `pypdfium2`, BSD-3-Clause) | 🟢 Keeps the closure permissive; 🔴 net-new integration work against `DeepTutor`'s ingestion seam |
+
+🟢 **Recommendation: price the third option.** 🔵 It is the only one that preserves what `P14-R` is *for* — an end-to-end auditable grade path with **no copyleft and no closed component in it** — and `DeepTutor`'s plugin model (single-shot Tools / multi-stage Capabilities) is the seam to do it at.
+
+🔴 **Why this correction exists at all:** pass 73 re-based the pattern on a licence file and did not read the dependency closure, **although this shelf had already measured it and marked it REVIEW-STRONG.** 🟢 **`P836`: a pattern's base must be cleared on its dependency closure, not only on its `LICENSE`.** 🔵 Same lesson as `Gap 327` inverted: that gap is a permissive grant with no source; this is a permissive grant with a copyleft closure. 🟢 **Neither survives a probe that stops at `LICENSE`.**
+
+### 🟡 `P26-R` and `P27` — unchanged by this correction
+
+🟢 **`P26-R`** uses `OpenTutor` for *teacher-side* material prep, so the PDF-layer question does not reach a learner path; 🟡 it should still be resolved before deployment. 🔵 **Note `OpenTutor` was already on this shelf** — `P26-R` is a new *composition* of known components, which is what a pattern is, and that claim is unaffected. 🟢 **`P27`** is a refusal and rests on the `iblai` measurements, which stand.
+
 ## 🟢 Seventy-third pass, 2026-10-09 — `P14-R` is **re-based onto a repo with its own multi-tenant access layer**, and one new pattern exists only because this pass measured that the seam it needs is **absent on both sides**
 
 ⏱️ **Fifth pass of this date.** Pass 72 closed earlier today (commit `e99be83`). **Append-only: this section is new; nothing below it was rewritten.**

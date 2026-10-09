@@ -4,6 +4,16 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🔴 2026-10-09 — **correction (73-C)**: this file's pass-73 section is headed *"New this week"* and **neither row was new**
+
+🔴 **Both `HKUDS/DeepTutor` and `zijinz456/OpenTutor` were already shelved before pass 73** — with identical shas (`6cf793b`, `f0142f2`) and, for `OpenTutor`, an identical licence reading (MIT, `main`, 2026-10-08). 🔴 **`adity982/OpenTutor` had already been logged by a prior pass as *"Fork of the above, not a find — logged so it is not double-counted later."*** 🔴 **Pass 73 double-counted it.**
+
+🟢 **Read the pass-73 section below as a re-measurement, not a discovery.** 🟢 **The canonicality ruling is correct (`zijinz456` canonical, holder *Zijin Zhang*, 191 commits vs 183) and was already this shelf's position; the family is eight forks, not two.** 🟡 Byte counts in that section are one byte low — `P834`, see `agents/top.md`.
+
+🟢 **What is genuinely new there and stands:** 🔴 **`DeepTutor` holds 0 LTI / 0 xAPI / 0 Caliper / 0 SCORM / 0 OneRoster / 0 LMS paths across 3 763 files** — this shelf had its licence, sha and release but had never censused its interoperability surface. 🟡 `OpenTutor`'s LTI zero was already held ("none of the eight has one today"); its xAPI/SCORM zeros are new.
+
+🔴 **And the trend claim in that section needs one word changed.** It reads *"the permissive education-agent tier is growing in capability and flat at zero on interoperability."* 🟢 **"Growing" is not supported by this pass, which added no agents.** 🟢 **The supported claim is the stronger half: the tier is flat at zero on interoperability, now measured on its two strongest members rather than inferred from the closed side.**
+
 ## 🟢 2026-10-09 — pass 73: the week's two real education agents both arrive from **capability-shaped** channels, and the licence-shaped control is empty for the **twenty-third** week
 
 🟢 **Append-only. This section is new; every section below it is prior history and was not rewritten.**
