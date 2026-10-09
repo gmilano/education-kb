@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 76) — **no new agent for the third consecutive pass**; the week's finding is that the shelf's **own licence classifier** was wrong about Python, and an **LGPL dependency inside an MIT-declared LTI library**
+
+🔵 **Append-only: this dated section is new; every section below it is prior history and is unchanged.**
+
+### 🔴 Nothing new to add to the shelf, and the number is now a trend
+
+🟢 **The prescribed battery ran in full** — four global queries, four regional — and returned **18 candidates, of which 18 were already shelved** (census table in `agents/top.md`). 🔴 **Three consecutive passes at 0 new agents, from 17, 13 and 18 candidates respectively.**
+
+🟡 **Returned again this week, all already shelved:** `microsoft/ai-agents-for-beginners`, `rohitg00/ai-engineering-from-scratch`, `rasbt/LLMs-from-scratch`, `ashishpatel26/500-AI-Agents-Projects`, Hermes Agent, and the generic framework tier (AutoGen, CrewAI, LangGraph, OpenHands, OpenClaw, aider, Cline, browser-use).
+
+🔴 **One licence flag re-confirmed rather than newly found:** the "best open source AI agents" channel keeps returning **OpenClaw** as MIT and **Suna** as Elastic License 2.0 — 🟡 source-available, **not OSI**. 🟢 Both already shelved.
+
+### 🟢 What the week actually produced: an **LGPL-3.0 dependency inside the MIT Python LTI library**
+
+🟢 **`PyLTI1p3` — the canonical Python LTI 1.3 library, which this shelf has recorded as MIT since pass 62 — had its runtime closure measured for the first time.** 🔴 **It is not permissive-clean:**
+
+| closure member | declared | payload | family |
+|---|---|---|---|
+| `PyLTI1p3` **2.0.0** | 🟢 MIT | 🟢 `dist-info/LICENSE` **1 070 B** | 🟢 **MIT** |
+| **`jwcrypto` 1.6.1** | 🔴 **`LGPL-3.0-or-later`** | 🔴 **7 651 B** | 🔴 **LGPL-3.0** |
+| `pyjwt` 2.15.1 | 🟢 MIT | 🟢 1 085 B | 🟢 MIT |
+| `requests` 2.34.2 | 🟢 Apache-2.0 | 🟢 10 142 B | 🟢 Apache-2.0 |
+| `typing-extensions` 4.16.0 | 🟢 PSF-2.0 | 🟢 13 936 B | 🟢 **PSF-2.0** |
+
+🔴 **`jwcrypto` has ZERO prior occurrences on this shelf** — word-bounded and substring, 0 files, 0 hits. 🟢 **It is the first genuinely unshelved licence-bearing component this shelf has found in four passes, and the battery did not find it: a dependency closure did.**
+
+🔵 **Why it belongs in a *trending* file, and it is not the LGPL itself.** 🟢 **It is the same hazard shape as `73-C`'s `PyMuPDF` — a permissive root over a copyleft core — but found MECHANICALLY and on the exact seam `Gap 316` is about.** 🔴 **A studio reading the root grant alone concludes "MIT, safe to build on"**, and the root grant is what every listicle, every registry badge and every README reports.
+
+### 🟢 The consequence a studio can act on: for `Gap 316`'s adapter, the LANGUAGE is a licence decision
+
+🟢 **All three LTI 1.3 implementations on this shelf now have priced closures, and they do not agree** (full table in `repos/foundations.md`):
+
+| route | root | closure verdict |
+|---|---|---|
+| **npm** — `Cvmcosta/ltijs` 7.0.7 | Apache-2.0 | 🟢 **permissive-clean**, 9/10 payload-MIT, 1 packaging defect (`sprightly`) |
+| **PyPI** — `PyLTI1p3` 2.0.0 | MIT | 🔴 **NOT clean — `jwcrypto` LGPL-3.0-or-later** |
+| **PHP** — `packbackbooks/lti-1p3-tool` v6.4.4 | Apache-2.0 | 🟢 **permissive-clean, 3/3, declared == payload on all three** |
+
+🔵 **Nobody on this shelf had measured this**, and it inverts the obvious reading: 🔴 **the Python route is the one a studio would reach for first** (every permissive tutor on this shelf is Python) 🔴 **and it is the only one of the three that carries a copyleft obligation.**
+
+### 🔵 Watch items for next week
+
+🔵 (a) 🔴 **Re-confirmed OPEN, not cleared:** `educredentials/ec-issuer` still carries **no `LICENSE` at `main` or `master`** (`LICENSE`, `LICENSE.md`, `COPYING` all 404) — still the only Open Badges 3.0 + ELM + OID4VCI implementation and still with no grant (`Gap 325`). 🔵 (b) Whether `zijinz456/OpenTutor` holds its ~weekly cadence. 🆕 🔵 (c) Whether any **permissive AI-grading component** adopts one of the two clean LTI routes above — 🟢 **that is now a cheaper question than it was, because the licence contingency behind it is gone on two of three routes.** 🆕 🟡 (d) `firebase/php-jwt` resolves to **`googleapis/php-jwt`** — the package name says Firebase, the repository says Google. 🟢 Recorded because a provenance audit that trusts the package name gets the wrong owner.
+
 ## 🟢 2026-10-09 (pass 75) — **no new agent this week, measured for the second consecutive pass**; the week's agent-adjacent finding is a **licence defect inside an agent's own dependency closure**
 
 🔵 **Append-only: this dated section is new; every section below it is prior history and is unchanged.**

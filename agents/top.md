@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-sixth pass, 2026-10-09 — the battery is **saturated for a fourth consecutive pass**, and the pass's own control grep caught the pass **about to declare a gap that does not exist**
+
+⏱️ **Eighth pass of this date.** Pass 75 closed earlier today. **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 No agent row is added, and for the third consecutive pass that is the measurement
+
+🟢 **The prescribed battery ran in full — four global queries and four regional ones.** 🔴 **Candidates returned: 18. Already shelved: 18. Unshelved: 0.**
+
+| Candidate the battery returned | limb | 🔴 shelf files naming it | substring control |
+|---|---|---|---|
+| `microsoft/ai-agents-for-beginners` | global / agents | **9** | — |
+| `rasbt/LLMs-from-scratch` | global / trending | shelved | — |
+| `rohitg00/ai-engineering-from-scratch` | global / trending | **5** | — |
+| `ashishpatel26/500-AI-Agents-Projects` | global / agents | shelved | — |
+| Hermes Agent (Nous Research) | global / agents | **3** | **58** |
+| CrewAI · LangGraph · OpenHands · OpenClaw | global / agents | shelved (framework tier) | — |
+| Apache OFBiz · Huly · Krayin · Aureus · BottleCRM · ERPNext | global / verticals | **12 · 11 · 9 · 15 · 4 · 24** | — |
+| Vietnam AI law (education = high-risk) | APAC | **19** | **579** |
+| South Korea AI Basic Act · Taiwan | APAC | **6 · 9** | **59 · 63** |
+| UNESCO **IESALC** · Digital Education Council | LATAM | **12 · 9** | **252 · 139** |
+| Ceibal · Uruguay · CONPES · `PL 2.338` | LATAM | **4 · 11 · 8 · 7** | **35 · 153 · 138 · 57** |
+| Germany · OECD *Digital Education Outlook* | EMEA | **9 · 5** | **34 · —** |
+| Ohio · Oregon `S.B. 1546` · Alabama · `H.R. 8747` | North America | **12 · 4 · 6 · 7** | — |
+
+### 🔴 `P840` earned its keep against the pass that wrote it, and the lesson is about the INSTRUMENT, not the shelf
+
+🔵 **This pass's LATAM limb returned the IDB technical note on enabling AI regulation, and the shelf-grep said `0 files, 0 hits`.** 🔴 **The write-up was one keystroke from "the Inter-American Development Bank is a new LATAM channel."**
+
+🟢 **It is not. The grep was broken.** 🔴 The probe was run as `grep -rilE "\b$t"` with `t` set to `IDB\|Inter-American` — an alternation escaped for basic `grep` passed to `-E`, where `\|` is a literal pipe. 🟢 **Re-run correctly: `IDB` **22** hits, `iadb` **158** hits.** 🔵 **The IDB is one of this shelf's most-cited LATAM sources.**
+
+🟢 **`P840` says a shelf-grep is word-bounded and the substring count is reported beside it. This pass adds the reason the control is not optional:** 🔴 **a zero from a malformed pattern is indistinguishable from a zero from an absent fact**, and the first produces a false *finding* while the second produces a true *gap*. 🟢 **`P849` is adopted below.**
+
+### 🟢 What this pass added instead, and it is not an agent
+
+🔵 **Three passes of zero new agents is a planning fact, not a failure** (`intel/trends.md`). 🟢 **So this pass spent the budget on the shelf's highest-value open limb instead, and the result is a defect in the shelf's OWN shared classifier** — detail in `repos/foundations.md`, protocol in `intel/trends.md`:
+
+| what | measured |
+|---|---|
+| `lib/license_family.sh` on Python's own `LICENSE` | 🔴 answered **`0BSD`**, must answer **`PSF-2.0`** |
+| specimen | 🟢 `typing_extensions-4.16.0`, `dist-info/licenses/LICENSE`, **13 936 B**, read live from the wheel |
+| error direction | 🔴 **declared LESS obligation than real** — 0BSD asks nothing; PSF-2.0 asks for the notice **and** a summary of changes |
+| prior verdicts contaminated | 🟢 **ZERO, measured:** 169 `0BSD` lines on this shelf, **0** in a Python/PyPI context |
+| fixed, carried to the consumer, regressed | 🟢 classifier **178/178**, `p837` **27/27**, `p840` **37/37**, `p411` **11/11**, new `p845` **55/55** |
+
+### 🟢 And the standing item pass 74 and pass 75 both re-flagged is **DISCHARGED as stale**
+
+🔴 **What the registry held:** *"three `P85` citations in this repository's prose have no artefact implementing them. Pass 76 should either produce the gateway or withdraw the three citations."*
+
+🟢 **Measured before writing either:** the gateway **exists**.
+
+| artefact | state |
+|---|---|
+| `compose/code/mcp-allowlist-gateway/gateway.py` | 🟢 **128 lines** — the stdio proxy `P85` describes |
+| `…/policy.py` · `…/fake_upstream.py` | 🟢 **105** · **71** lines |
+| `…/test_gateway.py` | 🟢 **34/34 checks, ALL PASSED, exit 0**, re-run this pass |
+| its own README | 🟢 *"the generic `P85` piece (gap 103, **closed in pass 48**)"* |
+
+🔴 **Pass 47 found the code absent and was right. Pass 48 wrote it and closed `Gap 103`. Pass 74 re-flagged pass 47's finding without checking pass 48's closure, and pass 75 carried the re-flag forward.** 🟢 **So neither branch of the instruction is taken: nothing needs producing, and the citations stand.**
+
+🟡 **What IS withdrawn is one number and only that:** 🔴 `P85`'s *«175 líneas»*. 🟢 The artefact measures **128 / 113 / 108** by the three counting rules its README states, and **none of them is 175**. 🔵 **The pattern is real and tested; the line count was never right.**
+
+🟢 **`P848` adopted:** before re-flagging a standing ABSENCE, run the **artefact** census, not the prose grep. 🔴 **This is `P844` turned inward** — pass 75 proved a stale record about the ENVIRONMENT cost a gap; this is a stale record about the SHELF ITSELF, and it cost two passes of re-flagging plus the risk of deleting three correct citations.
+
 ## 🟢 Seventy-fifth pass, 2026-10-09 — the prescribed research battery is measured **SATURATED**: 13 candidates across the global **and all four regional** limbs, 🔴 **13 already on this shelf, 0 new**. Pass 74's channel finding extends from agents to regions
 
 ⏱️ **Seventh pass of this date.** Pass 74 and its sections closed earlier today. **Append-only: this section is new; nothing below it was rewritten.**

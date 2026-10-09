@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 76) — **0 new repositories for the fourth consecutive pass**; the week's repository work is an instrument, and it found a defect in an older one
+
+🔵 **Append-only: this dated section is new; every section below it is prior history and is unchanged.**
+
+### 🔴 The trending channel, measured rather than described
+
+🟢 **`github trending education AI 2026` again returned no GitHub Trending page** — only third-party trackers (Trendshift monthly, an automated `agents-radar` issue dated 2026-10-04), vendor blogs and listicles, 🔴 **with star counts that disagree between sources.**
+
+🟡 **Candidates returned and already shelved:** `rasbt/LLMs-from-scratch` (~106k★ per one tracker), `rohitg00/ai-engineering-from-scratch` (~63k★ in the same snapshot), `microsoft/generative-ai-for-beginners`, `microsoft/ai-agents-for-beginners`, `developer-roadmap`, Karpathy's `nanochat`, `ashishpatel26/500-AI-Agents-Projects`. 🔴 **0 unshelved.**
+
+🔴 **Star counts are NOT adopted into this shelf**, for the reason `p351` exists: 🟡 the figures above come from third-party snapshots that disagree, and 🔴 **`github.com` and `api.github.com` are 403 in this session** (`P844` mechanism #2), so no count was readable at source.
+
+🔵 **The named next instrument is unchanged and was again not bought:** GitHub `/trending` with a **language filter**, release feeds of the already-censused `OpenTutor` fork family, and conference artefact tracks. 🟢 **Recorded so exhaustion is not mistaken for completeness of the world.**
+
+### 🟢 Shipped this week, in this repository, and green
+
+| artefact | state |
+|---|---|
+| `compose/code/lib/dist_payload.sh` | 🟢 the network-free distribution-payload reader: `licence_paths_in`, `notice_hits_in`, `measure_dist_dir`, plus the two `declared_from_*_json` parses |
+| `compose/code/lib/distpayload` | 🟢 argument-invocable: `--pypi --packagist --closure-pypi --dir --self-test`, with a `--wheel`/`--sdist` selector; 🔴 non-zero on any unresolved verdict |
+| `compose/code/p845-dist-payload/test_dist_payload.sh` | 🟢 **55/55**, offline, single file (`Gap 300`) |
+| `compose/code/lib/license_family.sh` | 🔴 **a defect FIXED** — Python's own composite `LICENSE` classified as `0BSD`; now `PSF-2.0` (`P845`) |
+| `compose/code/lib/fixtures-p845/` | 🟢 the real 13 936 B payload that proves it |
+| `compose/code/p411-cession-identity-gate/gate_cesion.py` | 🟢 `PSF-2.0` carried to the consumer (`P562`) |
+
+🟢 **Registry reachability measured, not assumed, at the start of the pass that depended on it (`P844`):**
+
+| host | result |
+|---|---|
+| `pypi.org` | 🟢 **200** |
+| `files.pythonhosted.org` | 🟢 **200** — the artefact host, probed separately from the metadata host |
+| `repo.packagist.org` | 🟢 **200** |
+| `raw.githubusercontent.com` | 🟢 **200** |
+| `api.github.com` | 🔴 **403** — session scope, first-party body |
+| `eur-lex.europa.eu` | 🔴 **000** (`Gap 308`, **ninth** refusal) |
+
+🔵 **`files.pythonhosted.org` is listed on its own because a metadata host answering 200 says nothing about the host that serves the tarball**, and the payload read needs the second one.
+
+### 🟢 Re-run, all of it, because the change was to a SHARED instrument
+
+🟢 `lib/test_license_family.sh` **178/178** · `p837-payload-measure` **27/27** · `p840-package-repo` **37/37** · `p411-cession-identity-gate` **11/11** · `p845-dist-payload` **55/55** · `mcp-allowlist-gateway` **34/34**.
+
+🔵 **The last row is not routine:** it was run to settle a standing registry item claiming the `P85` gateway had no artefact. 🟢 **It has one, and it passes** — detail in `agents/top.md`, registry in `intel/open-gaps.md`.
+
 ## 🟢 2026-10-09 (pass 75) — **0 new repositories from the prescribed battery for the third consecutive pass**; the week's repository work is an instrument, and it runs
 
 🔵 **Append-only: this dated section is new; every section below it is prior history and is unchanged.**

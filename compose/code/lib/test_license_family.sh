@@ -863,5 +863,61 @@ else
   echo "SKIP P613 — fixtures ausentes en $FIXP613" >&2
 fi
 
+# --------------------------------------------------------------------------------------
+# `P845` (pase 76 del 2026-10-09).  `P171` otra vez, en una familia que faltaba.
+#
+# El payload es REAL y esta en `fixtures-p845/`: es el `dist-info/licenses/LICENSE` de
+# `typing_extensions-4.16.0` tal como lo publica PyPI, 13.936 B, bajado en vivo por el pase
+# que escribio esta seccion.  Es el LICENSE de Python entero, un documento COMPUESTO cuyo
+# grant operativo es la PSF License Version 2 y que incluye mas abajo una seccion titulada
+# «ZERO-CLAUSE BSD LICENSE FOR CODE IN THE PYTHON DOCUMENTATION».
+#
+# Antes de este pase, este clasificador contestaba `0BSD` sobre ese archivo, porque la rama
+# 0BSD matcheaba primero dentro de la ventana de 4.000 B y RETORNABA.  La direccion del
+# error es la que no se puede permitir: 0BSD no pide nada, PSF-2.0 pide aviso de copyright
+# Y un resumen de los cambios.
+#
+# La ruta se resuelve desde la UBICACION del script, no desde el cwd: `FIXP613` arriba usa
+# una ruta relativa y por eso esa seccion solo corre desde este directorio (`Gap 300`).
+# Esta no hereda la limitacion.
+_H845="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+FIXP845="$_H845/fixtures-p845"
+if [ -d "$FIXP845" ]; then
+  PSF_REAL="$FIXP845/psf-2.0-typing-extensions-4.16.0.LICENSE"
+  check "P845 el LICENSE compuesto de Python contesta PSF-2.0, no 0BSD" PSF-2.0 \
+    "$(family_of "$(cat "$PSF_REAL")")"
+  # El tamanio se afirma para que una fixture truncada no haga pasar la prueba por accidente.
+  check "P845 la fixture es el payload completo, no un recorte" 13936 \
+    "$(wc -c < "$PSF_REAL" | tr -d ' ')"
+  # La seccion subordinada 0BSD SIGUE estando en el archivo: si desapareciera, la regresion
+  # dejaria de probar lo que dice probar.
+  check "P845 la fixture conserva la seccion 0BSD subordinada" 1 \
+    "$(grep -ci 'ZERO-CLAUSE BSD LICENSE FOR CODE IN THE PYTHON DOCUMENTATION' "$PSF_REAL")"
+  # Y el titulo PSF que es el ancla de la rama nueva, DENTRO de la ventana de 4.000 B.
+  check "P845 la fixture conserva el titulo PSF que ancla la rama" 1 \
+    "$(head -c 4000 "$PSF_REAL" | grep -c 'PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2')"
+else
+  echo "SKIP P845 — fixtures ausentes en $FIXP845" >&2
+fi
+
+# NEGATIVO, y es la mitad que importa: un 0BSD legitimo NO nombra la PSF License Version 2,
+# asi que anteponer la rama PSF no puede robarle su payload.  Texto canonico de 0BSD.
+check "P845 NEG un 0BSD canonico sigue contestando 0BSD" 0BSD \
+  "$(family_of 'BSD Zero Clause License
+
+Copyright (c) 2019 Some Holder
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.')"
+# Y el otro negativo: un MIT real no se vuelve PSF por nombrar Python en la prosa.
+check "P845 NEG un MIT que menciona Python sigue siendo MIT" MIT \
+  "$(family_of 'MIT License
+
+Copyright (c) 2025 Someone
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this Python software and associated documentation files (the "Software"),
+to deal in the Software without restriction.')"
+
 printf '\n%d/%d\n' "$((n-fail))" "$n"
 [ "$fail" = 0 ] || exit 1

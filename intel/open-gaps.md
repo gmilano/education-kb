@@ -4,6 +4,92 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-sixth pass, 2026-10-09 — `Gap 330`'s **PyPI limb CLOSES** and its Packagist limb becomes `Gap 331` with a **named mechanism**; 🔴 **a defect is found in the shelf's own SHARED classifier and fixed**; the **`P85` standing item is DISCHARGED as stale**; `Gap 308` refused a **ninth** time; `P845`–`P849` adopted
+
+⏱️ **Eighth pass of this date.** Pass 75 wrote to this file; this section sits above it and supersedes only the claims it names. **Append-only.**
+
+🟢 **Registry continuity:** pass 75 wrote to this file, so the section below this one is pass 75's and no fold-forward is needed.
+
+### 🟢 `Gap 330` limb 2 — **PyPI half CLOSED.** The payload read is executed, not just shipped
+
+🔵 **The gap recorded:** *"PyPI and Packagist payload reads remain unexercised — only resolution was run there."*
+
+🟢 **Shipped** (detail in `repos/foundations.md`): `compose/code/lib/dist_payload.sh` (network-free: `licence_paths_in`, `notice_hits_in`, `measure_dist_dir`, `declared_from_pypi_json`, `declared_from_packagist_json`), `compose/code/lib/distpayload` (argument-invocable fetch half, `--wheel`/`--sdist`), `compose/code/p845-dist-payload/` 🟢 **55/55 offline, single file** (`Gap 300`), green from its own directory, from `/`, and via `--self-test`.
+
+🟢 **Executed live, which is the part `P841` exists to demand:** the full `PyLTI1p3` runtime closure — **5 of 5 payload-read**, wheel **and** sdist for the root. 🟢 **`files.pythonhosted.org` probed separately from `pypi.org`** (200 each), because a metadata host answering says nothing about the artefact host.
+
+🔴 **And `P841` was bought a THIRD time, twice inside one pass.** The suite was **45/45 green** and the first live run was wrong **twice**:
+1. 🔴 the declared read missed **PEP 639** — `jwcrypto` declares only `license_expression`, so the reader answered `-`; 🟢 fixed, moved into the library where it is offline-testable, pinned as **H1–H9**;
+2. 🔴 the family read was wrong about **Python itself** — and that one was **not** this pass's instrument.
+
+### 🆕 🔴 `P845` — **the SHARED classifier was wrong, and it is `P171` in a family the hardening never covered**
+
+🔴 **`lib/license_family.sh` answered `0BSD` on Python's own `LICENSE`** (`typing_extensions-4.16.0`, `dist-info/licenses/LICENSE`, **13 936 B**, read from the live wheel). 🟢 **The operative grant is the PSF License Version 2.**
+
+🟢 **Mechanism, measured:** the title block is *"A. HISTORY OF THE SOFTWARE"* and names **no licence**, so `P171`'s title-block rule yields nothing; the 4 000 B window then holds *both* *"Python Software Foundation License Version 2."* (line 63) and *"and the Zero-Clause BSD license."* (line 67). 🔴 **With no PSF branch, the 0BSD branch matched first and returned.** 🟢 The 0BSD text in that file is real but **subordinate** — its own heading scopes it to *"CODE IN THE PYTHON DOCUMENTATION"*.
+
+🔴 **Error direction, which is why it matters:** 0BSD asks **nothing**; PSF-2.0 §2 asks for the copyright notice **and** *"a brief summary of the changes made"*. 🔴 **The classifier declared LESS obligation than real** — the one direction this base cannot afford.
+
+🟢 **Fixed** with a `PSF-2.0` branch ahead of 0BSD, anchored on the **Version 2 title** rather than the word "Python" (🔵 a legitimate 0BSD payload never names the PSF License Version 2, so the new branch cannot steal one). 🟢 **`P562` discharged in the same pass:** `PSF-2.0` added to **`OSI_RECONOCIDAS`** and **`PERMISIVAS`** in `p411-cession-identity-gate/gate_cesion.py` — the same move `P613` made for `GPL-UNVERSIONED` and `Gap 256` for `LGPL-2.1`. 🟡 **Flagged as a judgement, not a measurement:** PSF-2.0 is non-reciprocal (so permissive) but carries one condition MIT does not, so a closure containing it costs **one extra notices row**.
+
+🟢 **Regressed on the REAL payload**, `lib/fixtures-p845/psf-2.0-typing-extensions-4.16.0.LICENSE`, with assertions that the fixture stays un-truncated **and** keeps both the subordinate 0BSD heading and the PSF anchor.
+
+🟢 **Every consumer re-run, not only the touched one:** `test_license_family.sh` **178/178** · `p837` **27/27** · `p840` **37/37** · `p411` **11/11** · `p845` **55/55** · `mcp-allowlist-gateway` **34/34**.
+
+🟢 **Blast radius bounded by measurement:** 🔴 169 lines on this shelf mention `0BSD`; 🟢 **0 in a Python/PyPI context.** 🔵 **The defect was latent for many passes and contaminated nothing, because no pass had ever read a PyPI payload** — `P841` stated forward.
+
+### 🆕 🔴 `Gap 331` — **OPENED.** The Packagist published-zip read is refused, and the mechanism is named
+
+🟢 **Measured:** Packagist's `dist.url` for `packbackbooks/lti-1p3-tool` is `api.github.com/repos/packbackbooks/lti-1-3-php-library/zipball/a20c71b7…` → 🔴 **403**, body: *"GitHub access to this repository is not enabled for this session."*
+
+🟢 **`P844` mechanism #2 — SESSION SCOPE**, not a gateway denial, not a classifier refusal. 🟢 **The instrument was changed because of it** (`P847`): a bare `UNEXTRACTABLE` would have **blamed the artefact for an access boundary**; the row now reads `FETCH-REFUSED-403` and carries the URL.
+
+🟡 **Worked around, with the weaker measurement NAMED (`P843`):** the four PHP grants were read at the **pinned commit** via `raw.githubusercontent.com` (open, **200**). 🟢 That proves the grant exists at the exact ref the distribution pins; 🔴 **it does not prove the published zip contains it.**
+
+🟢 **Remedy:** attach the repository to the session (`add_repo`), or read `dist` from a Packagist mirror that serves archives directly. 🟡 **Limb 3 of `Gap 330` rides unchanged:** `NON-GITHUB` members remain resolvable but not probeable; none appeared in either closure measured this pass.
+
+### 🟢 The `P85` standing item — **DISCHARGED, and the registry's own record was the stale thing**
+
+🔴 **What this registry held, for two consecutive passes:** *"three `P85` citations in this repository's prose have no artefact implementing them. Pass 76 should either produce the gateway or withdraw the three citations."*
+
+🟢 **Measured before taking either branch — the gateway EXISTS:** `compose/code/mcp-allowlist-gateway/` with `gateway.py` **128 lines**, `policy.py` **105**, `fake_upstream.py` **71**, `test_gateway.py` **215** → 🟢 **34/34 checks, ALL PASSED, exit 0** this pass. 🟢 Its README states plainly: *"the generic `P85` piece (gap 103, **closed in pass 48**)."*
+
+🔴 **Pass 47 found the code absent and was right. Pass 48 wrote it and closed `Gap 103`. Pass 74 re-flagged pass 47's finding without checking pass 48's closure, and pass 75 carried the re-flag forward.** 🟢 **Neither branch of the instruction is taken: nothing needs producing, and the three citations stand.**
+
+🟡 **What IS withdrawn is one number:** 🔴 `P85`'s *«175 líneas»*. 🟢 The artefact measures **128 / 113 / 108** by the three counting rules its own README states, and **none is 175**. 🔵 **The pattern is real and tested; the line count never was.**
+
+🟢 **`P848` adopted:** before re-flagging a standing **absence**, run the **artefact** census, not the prose grep. 🔴 **This is `P844` turned inward** — pass 75 showed a stale record about the *environment* cost a gap; this is a stale record about the *shelf itself*, and it cost two passes of re-flagging plus the risk of deleting three correct citations.
+
+### 🔴 `Gap 308` — **OPEN. Ninth consecutive refusal**, and not re-bought
+
+🟢 **Re-probed once, as a boundary check for a pass that depended on the network (`P844`), not as a sixth attempt to buy the channel:** `eur-lex.europa.eu` → 🔴 **`000`** (gateway **403 to CONNECT**). 🟢 Controls in the same sweep: `pypi.org` **200**, `files.pythonhosted.org` **200**, `repo.packagist.org` **200**, `raw.githubusercontent.com` **200**, `api.github.com` **403 (scope)**.
+
+🔴 **And the EMEA channel came back BEHIND the shelf again** (`intel/market.md`): it reported *"from 2 August 2026 the AI Office started to enforce"* and the Omnibus as *"came into force July 2026"*. 🟢 **This shelf holds `Regulation (EU) 2026/1744` of 8 July 2026, the Annex III clock deferred to 2027-12-02, and Article 50 untouched** — verified by three channels in pass 58. 🔴 **`Gap 308` is NOT re-dated on a channel that reports a corrected claim as current** (`P505`). 🟡 `Gap 310` rides unchanged.
+
+### 🟢 Protocols adopted
+
+🟢 **`P845` — classify a COMPOSITE licence document on its OPERATIVE grant.** 🔴 Some `LICENSE` files contain several grants at different scopes, and for those neither the title block nor the body identifies the family. 🔵 `P171`'s title-block rule is **necessary, not sufficient**.
+
+🟢 **`P846` — read the licence declaration from PEP 639 `license_expression` BEFORE the legacy `license` field and before classifiers, and name which answered.** 🔴 `jwcrypto` declares only the expression; a legacy-only reader answers `-`, and 🔴 **`-` is the verdict a reviewer skips rather than escalates.** 🔵 Same error direction as `P842`: the audit succeeds about the wrong thing.
+
+🟢 **`P847` — a refused fetch must NAME the refusal mechanism, never blame the artefact.** 🔴 `UNEXTRACTABLE` reads as *"corrupt archive"*; `FETCH-REFUSED-403` reads as *"access boundary"*, and `P844` requires knowing which of the three mechanisms answered. 🟢 Corollary measured the hard way: **a 404 body written to a file measures as a payload** — 14 B of `404: Not Found` classified `UNCLASSIFIED` instead of erroring.
+
+🟢 **`P848` — before re-flagging a standing absence, census the ARTEFACTS, not the prose.** (Above.)
+
+🟢 **`P849` — validate a `P835`/`P840` shelf-grep against a token known to be PRESENT before believing its zero.** 🔴 This pass was one keystroke from declaring the **IDB** a new LATAM channel on a `0 hits` result produced by a malformed `-E` alternation; the real counts are **22** and **158**. 🔵 **A zero from a broken probe and a zero from an absent fact are indistinguishable and have opposite consequences.**
+
+### 🟢 Carried, re-confirmed, or unmeasured this pass
+
+🟢 **`Gap 316`'s main limb — NOT closed, and this pass sharpens what remains.** 🔴 No permissive AI-grading component acquired an LTI 1.3 + AGS seam; the discovery battery that would find one is saturated (18/18). 🟢 **What changed is the cost of the adapter pass 73 named as the cheap side:** all three LTI 1.3 routes are now payload-priced, and **two of three are permissive-clean** (`compose/patterns.md`, `P850`). 🔵 **The licence contingency behind `Gap 316(i)`'s wiring estimate is gone; the engineering is not.**
+
+🟢 **`Gap 316(i)` — licence limb paid for the PHP and PyPI routes too** (pass 75 paid it for npm). 🔴 **Its wiring limb remains the highest-value unmeasured number on this shelf**, still best paid once inside `P14-R`.
+
+🔴 **`Gap 325` — re-confirmed OPEN by probe, not carried on assumption:** `educredentials/ec-issuer` has **no grant** at `main` or `master` (`LICENSE`, `LICENSE.md`, `COPYING` all **404**). 🟢 Still the only Open Badges 3.0 + ELM + OID4VCI implementation on this shelf, still without a licence.
+
+🟢 **`Gap 330` limb 1** — closed by pass 75, independently consistent with this pass: `sprightly`'s defect is **packaging**, and the `NO-NOTICE` verdict class that names it is now a tested verdict in `p845` (case **A2**). 🟢 **`Gap 312`/`327`** — carried; the four-shape family is now *assertion without grant*, *grant without subject*, *grant unpackaged*, 🆕 **and *permissive root over copyleft hop* (`jwcrypto`)**. 🟢 **`Gap 300`** — `p845` is an eighth single-file folder, green however invoked; the 41 unread suites are otherwise untouched. 🟢 **`Gap 309`**, **`Gap 311(b)`**, **`Gap 294b`**, **`Gap 284`**, **`Gap 267`**, **`Gap 303`**, **`Gap 318`**, **`Gap 310`** — carried, unmeasured this pass.
+
+🔴 **Standing item for pass 77, stated so it is not quietly dropped:** 🟢 the discovery channel is measured exhausted at **four passes**, and **none** of the named replacement instruments has been bought — GitHub `/trending` with a **language filter**, the `OpenTutor` eight-fork release feeds, and conference artefact tracks. 🔵 **Pass 76 bought a cheaper one instead and it worked** (dependency closures yielded 4 unshelved components against the battery's 0), 🔴 **but that channel is bounded by what is already shelved and cannot find a new ROOT.** 🟢 **Pass 77 should buy one of the three named instruments or record why it is not worth buying.**
+
 ## 🟢 Seventy-fifth pass, 2026-10-09 — `Gap 329` **CLOSES and its fetch limb is EXECUTED, which immediately found a defect the offline suite could not**; `Gap 308` refused an **eighth** time with 🔴 **nothing new to add, because the shelf already held the mechanism**; `Gap 330` opens **and its first limb closes in the same pass**; `P840`–`P844` adopted
 
 ⏱️ **Seventh pass of this date.** Pass 74 wrote to this file; this section sits above it and supersedes only the claims it names. **Append-only.**

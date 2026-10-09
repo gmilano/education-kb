@@ -130,12 +130,24 @@ OSI_RECONOCIDAS = frozenset({
     # propia libreria produce. Es el mismo movimiento que `P613` hizo con `GPL-UNVERSIONED`.
     'LGPL', 'LGPL-2.1', 'LGPL-3.0', 'MIT', 'MPL-1.0', 'MPL-1.1', 'MPL-2.0',
     'MPL-UNVERSIONED',
+    # `P845` (pase 76): la rama PSF del clasificador compartido se agrego porque el LICENSE
+    # de Python es un documento COMPUESTO y la rama 0BSD se lo quedaba (ver
+    # `lib/license_family.sh`). Se agrega aca por `P562` --la correccion viaja al
+    # consumidor-- igual que `GPL-UNVERSIONED` (`P613`) y `LGPL-2.1` (`Gap 256`).
+    # PSF-2.0 ES aprobada por la OSI.
+    'PSF-2.0',
     'Unlicense',
 })
 # Permisivas = las que esta base puede construir encima sin obligacion reciproca.
 # ECL-2.0 entra porque ES Apache-2.0 mas una clausula de patentes (`P576`).
+#
+# `P845`: PSF-2.0 entra porque NO es reciproca --no obliga a publicar el derivado-- pero
+# entra CON una condicion que MIT no tiene y que el entregable debe cumplir: la seccion 2
+# pide reproducir el aviso de copyright de la PSF Y «a brief summary of the changes made».
+# Un closure que la contiene es construible; su archivo de avisos tiene una fila mas.
 PERMISIVAS = frozenset({
     'MIT', 'Apache-2.0', 'BSD', '0BSD', 'ISC', 'Unlicense', 'ECL-2.0', 'CC0-1.0',
+    'PSF-2.0',
 })
 # Familias NOMBRADAS que no son OSI: se reportan por su nombre, no como UNCLASSIFIED.
 # `P412` se conserva —el balde es senal— pero una senal con nombre vale mas.

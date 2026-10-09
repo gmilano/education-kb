@@ -4,6 +4,109 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-sixth pass, 2026-10-09 — `Gap 330`'s **PyPI limb CLOSES**, and the first PyPI payload this shelf ever read found **a defect in the shelf's own shared classifier**. The LTI 1.3 seam is now priced in **all three ecosystems**
+
+⏱️ **Eighth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔵 The gap, restated so the closure can be checked against it
+
+🔴 **`Gap 330` limb 2:** *"PyPI and Packagist payload reads remain unexercised — only resolution was run there."*
+
+🟢 Pass 75 payload-verified the `ltijs` npm closure from inside each `.tgz`. 🔴 **The equivalent read for the other two ecosystems had never been taken**, so every PyPI and Packagist licence on this shelf was a **declaration**, not a payload (`P843`).
+
+### 🟢 Shipped, split on the seam `P838` requires
+
+| artefact | what it gives |
+|---|---|
+| `compose/code/lib/dist_payload.sh` | the network-free half: `licence_paths_in`, `notice_hits_in`, `measure_dist_dir`, `declared_from_pypi_json`, `declared_from_packagist_json`. 🟢 **No `grep` for a licence name anywhere in it** — every family verdict delegates to `license_family.sh`, so `P171` is inherited |
+| `compose/code/lib/distpayload` | argument-invocable fetch half — `--pypi`, `--packagist`, `--closure-pypi`, `--dir`, `--self-test`; `--wheel`/`--sdist` selector. 🔴 **non-zero on any row that is not a resolved payload verdict** (`P827`) |
+| `compose/code/p845-dist-payload/test_dist_payload.sh` | 🟢 **55/55**, offline, single file (`Gap 300`) — green from its own directory, from `/`, and via `--self-test` |
+
+🟢 **The verdict vocabulary is the point of the instrument:** `PAYLOAD-<family>` · `NOTICE-ONLY` · `NO-NOTICE` (the `sprightly` class) · `NO-PAYLOAD` · `FETCH-REFUSED-<code>` · `UNEXTRACTABLE`.
+
+### 🔴 `P841` bought a third time, and this time the defect was in the SHARED instrument
+
+🔴 **The suite was 45/45 green and the first live run was still wrong — twice**, both within minutes:
+
+**(1) The declared read missed PEP 639.** 🔴 `jwcrypto` 1.6.1 leaves the legacy `license` field **null**, ships **no** `License ::` classifier, and declares `license_expression: "LGPL-3.0-or-later"`. 🔴 **The reader answered `-`.** 🟢 **`-` is the one verdict a licence audit waves through**, so the error direction was *reassurance about a copyleft dependency*. 🟢 Fixed, moved into the library where it is testable offline, and pinned as regressions **H1–H9**.
+
+**(2) The family read was wrong about Python itself, and this one is not my instrument.** 🔴 **`lib/license_family.sh` — the hardened, shared classifier that five-plus instruments consume — answers `0BSD` on Python's own `LICENSE`.**
+
+| what | measured |
+|---|---|
+| payload | 🟢 `typing_extensions-4.16.0`, `dist-info/licenses/LICENSE`, **13 936 B**, read from the live wheel |
+| classifier said | 🔴 **`0BSD`** |
+| operative grant actually is | 🟢 **PSF License Version 2** |
+| mechanism | 🔴 the 4 000 B title-block window holds **both** strings: line 63 *"Python Software Foundation License Version 2."*, line 67 *"and the Zero-Clause BSD license."*, line 73 the title *"PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2"*. 🔴 **With no PSF branch, the 0BSD branch matched first and returned** |
+| what the 0BSD section really is | 🟢 line 267: *"ZERO-CLAUSE BSD LICENSE **FOR CODE IN THE PYTHON DOCUMENTATION**"* — a **subordinate** grant, scoped to the docs |
+| error direction | 🔴 **less obligation than real**: 0BSD asks nothing; PSF-2.0 §2 asks for the PSF copyright notice **and** *"a brief summary of the changes made"* |
+
+🟢 **This is `P171` exactly, in a family the hardening never covered.** 🔵 `P171` fixed *"a licence BODY names other licences"* by classifying on the **title block**. 🔴 **Necessary, not sufficient:** here the title block itself is *"A. HISTORY OF THE SOFTWARE"*, which names no licence at all, and the window reaches a **second, real grant** belonging to a different scope. 🟢 **A composite licence document must be classified on its OPERATIVE grant** — `P845`.
+
+### 🟢 Fixed, carried to the consumer, and regressed on the REAL payload
+
+🟢 **`PSF-2.0` branch added ahead of the 0BSD branch**, anchored on the *Version 2* title rather than the word "Python" — 🔵 **a legitimate 0BSD payload never names the PSF License Version 2, so the new branch cannot steal one.**
+
+🟢 **`P562` discharged in the same pass:** `PSF-2.0` added to **`OSI_RECONOCIDAS`** *and* **`PERMISIVAS`** in `p411-cession-identity-gate/gate_cesion.py`, 🔵 **or that gate would reject as unknown a string its own library emits** — the same move `P613` made for `GPL-UNVERSIONED` and `Gap 256` for `LGPL-2.1`. 🟡 **Stated explicitly because it is a judgement, not a measurement:** PSF-2.0 is **non-reciprocal**, so it is permissive; it carries **one condition MIT does not** — the change summary — so a closure containing it is buildable with **one more row in the notices file**.
+
+🟢 **The fixture is the real artefact, not an invention:** `lib/fixtures-p845/psf-2.0-typing-extensions-4.16.0.LICENSE`, **13 936 B**, with assertions that it stays un-truncated **and** keeps both the subordinate 0BSD heading and the PSF anchor — 🔵 **so a later edit cannot make the regression stop testing what it claims.**
+
+🟢 **Every consumer re-run, not just the one I touched:**
+
+| suite | result |
+|---|---|
+| `lib/test_license_family.sh` | 🟢 **178/178** |
+| `p837-payload-measure` | 🟢 **27/27** |
+| `p840-package-repo` | 🟢 **37/37** |
+| `p411-cession-identity-gate` | 🟢 **11/11, TODO VERDE** |
+| `p845-dist-payload` | 🟢 **55/55** |
+| `mcp-allowlist-gateway` | 🟢 **34/34** |
+
+🟢 **And the blast radius is bounded by measurement, not by hope:** 🔴 169 lines on this shelf mention `0BSD`; 🟢 **0 of them in a Python or PyPI context.** 🔵 **The defect sat in the instrument for many passes and contaminated nothing, because no pass had ever read a PyPI payload.** 🟢 **Which is `P841`'s argument stated forward: an unexercised branch is a latent defect, and it surfaced within four commands of first use.**
+
+### 🟢 The measurement the gap was opened for: the LTI 1.3 seam in all three ecosystems
+
+🟢 **`PyLTI1p3` 2.0.0 runtime closure, wheel, payload-read:**
+
+| member | declared | payload path | bytes | family |
+|---|---|---|---|---|
+| `PyLTI1p3` | 🟢 MIT | `PyLTI1p3-2.0.0.dist-info/LICENSE` | **1 070** | 🟢 MIT |
+| **`jwcrypto` 1.6.1** | 🔴 **LGPL-3.0-or-later** | `jwcrypto-1.6.1.dist-info/licenses/LICENSE` | **7 651** | 🔴 **LGPL-3.0** |
+| `pyjwt` 2.15.1 | 🟢 MIT | `pyjwt-2.15.1.dist-info/licenses/LICENSE` | **1 085** | 🟢 MIT |
+| `requests` 2.34.2 | 🟢 Apache-2.0 | `requests-2.34.2.dist-info/licenses/LICENSE` | **10 142** | 🟢 Apache-2.0 |
+| `typing-extensions` 4.16.0 | 🟢 PSF-2.0 | `typing_extensions-4.16.0.dist-info/licenses/LICENSE` | **13 936** | 🟢 PSF-2.0 |
+
+🟢 **Cross-channel agreement worth recording:** the root's payload reads **1 070 B, MIT, "Copyright (c) 2019 Dmitry Viskov"** — 🔵 **byte-for-byte what a prior pass read from the REPOSITORY.** 🟢 **Two independent channels, one number.**
+
+🟢 **And wheel vs sdist AGREE for this package** — both ship the grant at 1 070 B (`dist-info/LICENSE` vs `PyLTI1p3-2.0.0/LICENSE`). 🔵 **Asked because npm's `files:` defect taught that one artefact can ship a grant the other drops**, and on PyPI there are two artefacts built by different code paths. 🟡 **One package is not a base rate**, but the question is now one flag away.
+
+🟢 **PHP route, priced for the first time:**
+
+| member | declared (Packagist) | payload | family |
+|---|---|---|---|
+| `packbackbooks/lti-1p3-tool` **v6.4.4** | 🟢 Apache-2.0 | `master/LICENSE.md` **11 343 B** | 🟢 Apache-2.0 |
+| `firebase/php-jwt` **v7.2.1** | 🟢 BSD-3-Clause | **1 529 B** | 🟢 BSD |
+| `guzzlehttp/guzzle` **8.2.0** | 🟢 MIT | **1 460 B** | 🟢 MIT |
+| `phpseclib/phpseclib` **4.0.2** | 🟢 MIT | **1 081 B** | 🟢 MIT |
+
+🟢 **4 of 4 permissive, and declared == payload on every one.** 🟢 **The root's 11 343 B matches this shelf's existing record exactly** (`P839`/`P835` applied before writing: `packbackbooks` has **96** prior mentions, so the root grant is a **re-confirmation**, not a finding).
+
+🆕 **What IS new here, measured against a 0-occurrence census:** 🔴 **`guzzle` 0 · `phpseclib` 0 · `php-jwt` 0 · `googleapis/php-jwt` 0.** 🟢 **The shelf held the root grant for many passes and had never priced what the library pulls in.**
+
+🟡 **One provenance datum:** `firebase/php-jwt` resolves to **`googleapis/php-jwt`**. 🔵 **The package name says Firebase; the repository says Google.**
+
+🟢 **And the AGS claim is now evidence instead of prose.** 🔵 This shelf has carried *"Names&Roles + Assignment&Grades"* about this library without enumerating it. 🟢 **Read at the pinned `a20c71b7`:** **11** public AGS methods (`createLineitem`, `putGrade`, `getGrades`, `findOrCreateLineitem`, `updateLineitem`, `deleteLineitem`, `getLineItems`, `getLineItem`, `findLineItem`, `getResourceLaunchLineItem`, `getScope`) and **all four** IMS AGS scopes — `lineitem`, `lineitem.readonly`, `result.readonly`, `score`. 🔴 **`lti-ags/scope` had 0 prior occurrences on this shelf.**
+
+### 🔴 The Packagist limb does NOT close, and the mechanism is named rather than guessed
+
+🔴 **`Gap 331` opens.** 🟢 **Measured:** Packagist's `dist.url` for `packbackbooks/lti-1p3-tool` is `https://api.github.com/repos/packbackbooks/lti-1-3-php-library/zipball/a20c71b7…`, which this session answers **403** with a first-party body: *"GitHub access to this repository is not enabled for this session."*
+
+🟢 **That is `P844` mechanism #2 — SESSION SCOPE, not a gateway denial and not a classifier refusal.** 🔵 **The instrument was changed because of it:** a bare `UNEXTRACTABLE` reads as *"the archive is corrupt"* and would have **blamed the artefact for an access boundary**. 🟢 **Now the row says `FETCH-REFUSED-403` and carries the URL** — `P847`.
+
+🟡 **So the PHP grants above were read at the PINNED COMMIT via `raw.githubusercontent.com` (open, 200), which is a REPOSITORY read, not a published-distribution read.** 🟢 **`P843` requires naming which measurement was taken, and this is the weaker one** — it proves the grant exists at the exact ref the dist pins, 🔴 **not that the published zip contains it.**
+
+🔴 **And one self-inflicted trap, recorded because it nearly became data:** probing `LICENSE`, `LICENSE.md` and `COPYING` in a loop wrote **all three** response bodies to files. 🔴 **`LICENSE` 404'd, and its 14-byte body `404: Not Found` measured as a payload** — `UNCLASSIFIED`, 14 B. 🟢 **The real grant is `LICENSE.md`.** 🔵 **A 404 body written to a file is indistinguishable from a tiny licence unless the status is checked**, which is the same lesson as `P847` arriving from the other direction.
+
 ## 🟢 Seventy-fifth pass, 2026-10-09 — **`Gap 316(i)`'s licence limb is PRICED from payload**: the `ltijs` runtime closure is **10 packages, 9 payload-verified MIT under an Apache-2.0 root, and 1 assertion without a grant**. The third instance of `Gap 312`/`325` on this shelf, and the first found **mechanically**
 
 ⏱️ **Seventh pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

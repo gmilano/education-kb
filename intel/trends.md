@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-sixth pass, 2026-10-09 — a trend this shelf can state because it measured its own instrument: **the licence risk in education infrastructure is a TRANSITIVE risk, and the tools everyone uses to look for it read only the root**
+
+⏱️ **Eighth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 Trend — **"permissive at the root, copyleft one hop down"**, and it is invisible to every channel a studio actually reads
+
+🔵 Pass 75 recorded a licence-defect family in three shapes: assertion without a grant (`Gap 312`/`325`), a grant without a subject (`Gap 327`), and a grant that exists but is unpackaged (`sprightly`, `Gap 330` limb 1). 🟢 **This pass measured a fourth, and it is the most consequential because it is the only one where the root looks perfect.**
+
+🔴 **`PyLTI1p3` 2.0.0 — the canonical Python LTI 1.3 library — declares MIT, ships MIT in both its wheel and its sdist at 1 070 B, and pulls `jwcrypto` 1.6.1, which is `LGPL-3.0-or-later` in declaration and LGPL-3.0 in payload.** 🟢 **`jwcrypto` had ZERO prior occurrences on this shelf.**
+
+🔵 **Why it is a trend and not one unlucky package.** 🟢 **Every channel that reports a licence reports the ROOT:** the registry badge, the README, the GitHub sidebar, the "best open source X" listicle, and this shelf's own tables up to pass 74. 🔴 **None of them traverses one hop.** 🟢 **And the one hop is where the obligation lives**, because a JOSE/JWT implementation is exactly the kind of component a protocol library must depend on and exactly the kind that gets written by a security-focused project with a copyleft preference.
+
+🟡 **Scope, stated because it is easy to overstate:** 🟢 **4 of the 5 members of that closure are permissive**, and the npm and PHP routes to the same protocol are **clean at 9/10 and 3/3**. 🔴 **But it took one command to find one LGPL in the first PyPI closure this shelf ever read**, which is the relevant base rate for an engagement.
+
+🟢 **The planning consequence, which is the whole reason to record it:** 🔵 **for the LTI adapter `Gap 316` calls for, the choice of language IS the licence decision** — and the language a studio would reach for first (Python, because every permissive tutor on this shelf is Python) is the only one of the three that carries the obligation.
+
+### 🔴 Trend — the audit tooling's blind spot has MOVED, from the file to the FIELD
+
+🟢 **Measured, and it broke this pass's own instrument before it broke anything else:** 🔴 **`jwcrypto` declares its licence ONLY in PEP 639 `license_expression`.** Legacy `license` field: **null**. `License ::` classifier: **absent**.
+
+🔵 **PEP 639 is the new normal** — `license_expression` plus `license_files` replaces both older mechanisms, and packages are migrating to it now. 🔴 **A licence reader written against the legacy field answers `-` for them.** 🟢 **And `-` is the single most dangerous verdict in an audit, because it is the one a reviewer skips rather than escalates.**
+
+🟢 **`P846` adopted:** read `license_expression` **before** the legacy field and before classifiers; report which one answered. 🔴 **The error direction is reassurance**, exactly as in `P842`, where resolving by import name returned a clean stub instead of the AGPL core it stood for. 🔵 **Two passes, two fields, one shape: the audit does not fail loudly, it succeeds about the wrong thing.**
+
+### 🟢 Trend — **a shared "hardened" instrument is a single point of failure, and hardening against one trap does not generalise**
+
+🔴 **This shelf's `license_family.sh` has been described as hardened since pass 77, on the strength of `P171`: classify on the TITLE BLOCK, never the body, because a licence body names other licences.** 🟢 **It answers `0BSD` on Python's own `LICENSE`.**
+
+🟢 **Mechanism, measured on the real 13 936 B payload:** the title block is *"A. HISTORY OF THE SOFTWARE"* — it names **no licence at all** — so the title-block rule gives no answer, and the 4 000 B window reaches far enough to hold both *"Python Software Foundation License Version 2"* and *"and the Zero-Clause BSD license."*. 🔴 **With no PSF branch, the 0BSD branch matched first and returned.** 🟢 **The 0BSD text in that document is real but SUBORDINATE — its own heading scopes it to "CODE IN THE PYTHON DOCUMENTATION".**
+
+🔵 **The generalisation `P171` was missing:** 🟢 **some licence files are COMPOSITE documents containing several grants at different scopes.** 🔴 **For those, neither the title block nor the body identifies the family — the OPERATIVE grant does**, and a classifier must be anchored on it. 🟢 **`P845` adopted**, fix and regressions in `repos/foundations.md`.
+
+🟡 **And the honest bound, measured rather than hoped:** 🔴 169 lines on this shelf mention `0BSD`; 🟢 **0 of them in a Python or PyPI context**, so **no prior verdict is contaminated.** 🔵 **The defect was latent for many passes and surfaced within four commands of the first live PyPI read** — which is `P841` stated forward: an untested branch is not a working branch, it is an unmeasured one.
+
+### 🟢 Trend — the discovery channel is exhausted, and the exhaustion is now **four passes** deep
+
+🔴 Pass 74: 17 candidates, 17 shelved. Pass 75: 13/13. 🔴 **Pass 76: 18 candidates across the global AND all four regional limbs — 18 shelved, 0 new.**
+
+🔵 **The planning consequence is unchanged and worth restating in its strongest form:** 🟢 **this shelf's open-source map of education AI is more complete than the public listicle layer it was built from**, so further discovery must change **instrument**, not effort. 🔴 **None of the named instruments was bought this pass either** (GitHub `/trending` with a language filter, `OpenTutor` fork release feeds, conference artefact tracks).
+
+🟢 **But this pass demonstrates the cheaper alternative, and it is the finding:** 🔵 **the dependency closure of something already shelved is a discovery channel the battery cannot reach.** 🟢 **`jwcrypto` is the fourth pass's only unshelved licence-bearing component, and it came from a closure, not a search.** 🟢 **So does the whole PHP closure** — `guzzle`, `phpseclib`, `php-jwt`, all at 0 prior occurrences, all one hop from a library this shelf has held for 96 mentions.
+
+### 🔴 Trend — a zero from a broken probe looks exactly like a zero from an absent fact
+
+🟢 **This pass nearly wrote "the Inter-American Development Bank is a new LATAM channel" on the strength of a `0 files, 0 hits` grep.** 🔴 **The pattern was malformed** — a basic-`grep` alternation `\|` handed to `-E`, where it is a literal pipe. 🟢 **Re-run: `IDB` 22 hits, `iadb` 158. It is one of this shelf's most-cited LATAM sources.**
+
+🔵 **`P849` adopted:** a `P835`/`P840` shelf-grep must be **validated against a token known to be present** before its zero is believed. 🟢 **A control that only runs on the candidate cannot distinguish an absent fact from a broken instrument**, and the two have opposite consequences: one is a finding, the other is a fabrication.
+
 ## 🟢 Seventy-fifth pass, 2026-10-09 — a trend this shelf can state because it finally measured one: **the permissive dependency graph of education infrastructure is clean, and its weak point is NOTICE, not licence**
 
 ⏱️ **Seventh pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

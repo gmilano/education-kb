@@ -4,6 +4,90 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-sixth pass, 2026-10-09 — **`P15` stage 3 now reads PAYLOADS, not just names**, and the LTI adapter pattern gets a **licence-priced route choice** instead of a language preference
+
+⏱️ **Eighth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔵 What changed in the gate, restated against what pass 75 left
+
+🟢 Pass 75 closed `Gap 329`: `pkgrepo` maps a package name to a repository, so `P15` stage 3 could *reach* each dependency. 🔴 **But reaching is not reading.** On PyPI and Packagist the gate still stopped at the registry's licence **field**, which `P843` forbids treating as the payload — and which `jwcrypto` has now shown can be **empty while the real declaration lives in a different field entirely**.
+
+🟢 **`distpayload` closes that for PyPI.** The gate's stages, as they now actually execute:
+
+| stage | instrument | what it answers |
+|---|---|---|
+| 1 | `lib/measure --family` | the ROOT grant, from the payload |
+| 2 | `pkgrepo --deps` / `--closure` | the runtime dependency names, by DISTRIBUTION name (`P842`) |
+| 3 | 🆕 **`distpayload --closure-pypi`** | **each dependency's grant, read from the artefact that ships** |
+| 4 | `lib/probe_payload.sh` | the repository read, when a distribution ships no grant (`Gap 330` limb 1) |
+
+🔴 **Stage 3 is npm + PyPI only.** 🟡 Packagist resolves and declares but its published zip is `FETCH-REFUSED-403` here (`Gap 331`); use stage 4 at the **pinned commit** and say so.
+
+---
+
+### 🟢 `P850` — **the LTI 1.3 + AGS adapter, with the route chosen on licence rather than on language**
+
+🔵 **The problem this solves.** `Gap 316` is a two-sided seam: closed vendors hold LTI 1.3 + AGS grade return; the permissive components on this shelf (`moocupv/lti-ai-grader`, `OATutor`) stop at **LTI 1.1**. 🟢 Pass 73 established the cheap side is to put a 1.3 + AGS adapter in front of a permissive tutor. 🔴 **What nobody had measured is that the three ways to write that adapter carry three different licence obligations.**
+
+**Route A — PHP, and it is the recommended one for a closed deliverable**
+
+| component | version | licence | measured |
+|---|---|---|---|
+| [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) · composer `packbackbooks/lti-1p3-tool` | **v6.4.4** (2026-09-23) | 🟢 **Apache-2.0** | `master/LICENSE.md` **11 343 B** |
+| `firebase/php-jwt` → repo `googleapis/php-jwt` | v7.2.1 | 🟢 **BSD-3-Clause** | **1 529 B** |
+| `guzzlehttp/guzzle` | 8.2.0 | 🟢 **MIT** | **1 460 B** |
+| `phpseclib/phpseclib` | 4.0.2 | 🟢 **MIT** | **1 081 B** |
+
+🟢 **AGS surface, enumerated at `a20c71b7`:** `createLineitem`, `findOrCreateLineitem`, `updateLineitem`, `deleteLineitem`, `getLineItem(s)`, `findLineItem`, `getResourceLaunchLineItem`, `putGrade`, `getGrades`, `getScope` — with scopes `lineitem`, `lineitem.readonly`, `result.readonly`, `score`. 🟢 **Plus `LtiNamesRolesProvisioningService` (NRPS) and `LtiDeepLink` in the same tree.**
+
+**Wiring, concretely:**
+1. **Launch + grade return (PHP):** `packbackbooks/lti-1p3-tool` as the tool provider. `LtiServiceConnector` holds the client-credentials token; `LtiAssignmentsGradesService::putGrade` writes the score back.
+2. **The teacher-approval gate, which is not optional:** put `compose/code/mcp-allowlist-gateway/gateway.py` (**MIT-era shelf artefact, 128 lines, 34/34 green**) between the tutor and the AGS writer, with `putGrade` **floored** — the gate's own floor semantics mean a tool in the allowlist is still refused and never advertised. 🔵 **This is the `P85` pattern's third instance**, after `unitime-mcp-gate` and `sebserver-mcp-gate`.
+3. **The grading core (Python, kept on the other side of the wire):** any permissive tutor already on this shelf. 🔴 **Do NOT import `PyLTI1p3` into it** — that is where the LGPL enters (below).
+4. **Boundary:** HTTP/JSON between (3) and (1). 🟢 **The licence boundary and the process boundary are the same line**, which is what makes this route clean.
+5. **Notices file:** four rows — Apache-2.0, BSD-3-Clause, MIT, MIT.
+
+**Route B — npm.** [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) **7.0.7**, Apache-2.0 (11 361 B), closure **9/10 payload-MIT**. 🔴 **Two caveats carried from pass 75:** `engines.node >= 24`, and **`sprightly@2.0.1` ships no notice** — 🟢 remedy is a one-line upstream PR (`files: ["dist"]` excludes a `LICENSE` that **does** exist upstream at 1 070 B), plus a notices-file entry meanwhile. 🟡 **Clean, with homework.**
+
+**Route C — PyPI. 🔴 Use only when the deliverable can carry LGPL-3.0.**
+
+| member | licence |
+|---|---|
+| `PyLTI1p3` 2.0.0 | 🟢 MIT (1 070 B, wheel **and** sdist) |
+| **`jwcrypto` 1.6.1** | 🔴 **LGPL-3.0-or-later** (7 651 B) |
+| `pyjwt` 2.15.1 · `requests` 2.34.2 · `typing-extensions` 4.16.0 | 🟢 MIT · Apache-2.0 · **PSF-2.0** |
+
+🔴 **`jwcrypto` is LGPL-3.0, so a deliverable that links it owes the LGPL's relinking obligation.** 🟡 **It is LGPL, not GPL** — dynamic linking with a replaceable library is the intended accommodation — 🔴 **but that is a counsel question, not an engineering one, and `P12` says this shelf names it rather than resolves it.** 🟢 **`typing-extensions` adds one notices row MIT does not: PSF-2.0 §2 wants the copyright notice *and* a brief summary of changes.**
+
+🟢 **The decision rule, which is the pattern's actual content:** 🔵 **pick the adapter's language from the closure, then put the tutor behind a process boundary.** 🔴 **Not the reverse** — choosing Python because the tutor is Python drags `jwcrypto` into the deliverable for no engineering gain.
+
+**Estimate:** 🟢 **3–4 weeks** for Route A against one LMS (Moodle or Canvas), including the approval gate and an AGS line-item round trip. 🔵 Unchanged from `Gap 316(i)`'s standing figure — 🟢 **what this pass removed is the licence contingency behind it, not the engineering.**
+
+---
+
+### 🟢 `P851` — **the closure gate as a client-facing deliverable, runnable in one command**
+
+🔵 **Why it is a pattern and not a chore:** an engagement that adopts an open-source LMS is asked *"what does this oblige us to publish?"* 🔴 **The honest answer needs a payload read of the components the studio writes, and until this pass that read had no instrument for two of three ecosystems.**
+
+```bash
+# 1. the root grant, from the payload (not the badge)
+compose/code/lib/measure LICENSE --repo <owner>/<repo> --name LICENSE
+
+# 2+3. the runtime closure, each grant read from the shipped artefact
+compose/code/lib/distpayload --closure-pypi <distribution-name>
+compose/code/lib/distpayload --packagist <vendor>/<package>
+compose/code/lib/distpayload --pypi <name> --sdist   # the OTHER artefact
+
+# 4. when a distribution ships no grant, fall back to the repository
+. compose/code/lib/probe_payload.sh
+```
+
+🟢 **Read the rows as `P843` requires: declared FIRST, payload SECOND, and never let the first stand for the second.** The verdicts that must stop a build: 🔴 **`NO-NOTICE`** (the artefact cannot satisfy an MIT/BSD notice condition — `sprightly`), 🔴 **any copyleft family in `PAYLOAD-*`** (`jwcrypto`), 🔴 **`FETCH-REFUSED-<code>`** (unmeasured, not clean — and the code names which boundary answered, per `P844`).
+
+🟡 **Two traps this pass walked into, so an engagement does not:** 🔴 **a 404 body written to a file measures as a payload** — 14 B of `404: Not Found` classified `UNCLASSIFIED` rather than erroring, which is why `P847` requires the status, not just the bytes. 🔴 **And `-` for a declared licence may mean PEP 639**, not "unlicensed" (`P846`).
+
+**Estimate:** 🟢 **2–3 days** to produce a notices file and an obligations memo for a stack of ~40 runtime dependencies, 🔵 of which the measurement is hours and the reading is the rest.
+
 ## 🟢 Seventy-fifth pass, 2026-10-09 — **`P15` stage 3 is executable for the first time.** `Gap 329` closes with `lib/package_repo.sh` + `lib/pkgrepo` + `p840-package-repo` 🟢 **37/37**, and the fetch limb **ran live** against all three registries
 
 ⏱️ **Seventh pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

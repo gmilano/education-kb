@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-sixth pass, 2026-10-09 — the vertical battery returns **OpenEduCat and six general-purpose systems**, none of them an education ERP under a permissive licence; the usable addition is that the **integration layer** is now priced and the LMS is not where the exposure lives
+
+⏱️ **Eighth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 The prescribed vertical query is spent, and this pass can say what it returns INSTEAD
+
+🟢 `open source platform education ERP CRM MIT Apache` returned, for the first time, a usable negative with named alternatives rather than one vendor's glossary:
+
+| returned | licence | education-specific? | shelf |
+|---|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 **LGPL-3.0** (8 241 B, payload-read by a prior pass) | 🟢 yes | already a shelf row |
+| **ERPNext** (Frappe), incl. its education module | 🔴 **GPL-3.0** | 🟢 yes | **24** prior mentions |
+| Apache **OFBiz** | 🟢 Apache-2.0 | 🔴 **no** — general ERP | **12** |
+| **Huly** | 🟢 Apache-2.0 | 🔴 no | **11** |
+| **Krayin** | 🟢 MIT | 🔴 no — CRM | **9** |
+| **Aureus ERP** | 🟢 MIT | 🔴 no | **15** |
+| **BottleCRM** | 🟢 MIT | 🔴 no — CRM | **4** |
+| **Dolibarr** | GPL-family | 🔴 no | — |
+
+🔴 **So the answer to "is there a permissive education ERP?" is still no, now reached from a fifth channel.** 🟢 **And the shape of the negative is sharper than "nothing exists":** 🔵 **permissive ERP/CRM exists in quantity — it is the EDUCATION-SPECIFIC ones that are copyleft.** 🟡 OpenEduCat's own glossary states it uses LGPLv3 *so that closed applications may link to it*, which is a deliberate position, not an oversight.
+
+🟡 **The named verticals are unchanged:** Moodle (**GPL-3.0**), Open edX (**AGPL-3.0**), Canvas (**AGPL**), Sakai (**Apache-2.0**), Kolibri (**MIT**, offline-first), BigBlueButton, H5P, Koha, OpenEduCat (**LGPL-3.0**). 🔵 **Of the systems of record, 0 of 6 are permissive** — `Gap 316`'s licence half, re-confirmed a fifth time.
+
+### 🟢 What is actually new: the integration layer is priced, and it is where a studio's exposure really sits
+
+🔵 **Pass 75 established the counter-intuitive half of this: a GPL/AGPL platform's dependency closure is NOT the studio's exposure, because the platform's own copyleft already dominates it. The exposure is in the PERMISSIVE components built BESIDE the LMS** — the ones shipped as part of a client deliverable, whose notices a client must reproduce.
+
+🔴 **Until this pass, "built beside the LMS" was an unpriced phrase.** 🟢 **It has exactly one load-bearing component — the LTI 1.3 tool library — and all three of its implementations are now payload-measured** (full tables in `repos/foundations.md`):
+
+| route | root grant | closure | verdict for a closed deliverable |
+|---|---|---|---|
+| **PHP** — `packbackbooks/lti-1p3-tool` v6.4.4 | 🟢 Apache-2.0 (11 343 B) | 🟢 **3/3 permissive**, declared == payload | 🟢 **clean** |
+| **npm** — `Cvmcosta/ltijs` 7.0.7 | 🟢 Apache-2.0 (11 361 B) | 🟢 9/10 payload-MIT | 🟡 **clean, one packaging defect to fix upstream** |
+| **PyPI** — `PyLTI1p3` 2.0.0 | 🟢 MIT (1 070 B) | 🔴 **`jwcrypto` LGPL-3.0-or-later** | 🔴 **carries a copyleft obligation** |
+
+🔵 **For a platform-adoption engagement this changes the first question, not the last one.** 🔴 **The question is not "what licence is the LMS?" — that is answered and unchangeable.** 🟢 **It is "which language does the integration layer get written in?", and that is a licence decision a studio makes on day one, usually without knowing it is one.**
+
+🟢 **Operationally:** run the closure gate over the component stack the studio writes, not over Moodle — `pkgrepo --closure` for resolution, 🆕 **`distpayload --closure-pypi` / `--packagist` for the payload read that resolution cannot give.** 🔴 **And do not run it over a `requirements.txt` written from import names** (`P842`: PyPI `fitz` is a `0.0.0` stub; the real dependency is `pymupdf`, AGPL-or-commercial).
+
+🟡 **Honest limit on the PHP row, because it is the one a studio would act on:** 🟢 its three grants were read at the **pinned commit** via `raw.githubusercontent.com`, 🔴 **not from the published Packagist zip** — that fetch is `FETCH-REFUSED-403` in this session by repository scope (`Gap 331`). 🔵 **The grant provably exists at the ref the distribution pins; that the zip contains it is unmeasured here.**
+
 ## 🟢 Seventy-fifth pass, 2026-10-09 — the vertical-platform battery returns **OpenEduCat and nothing else**, which this shelf already holds; the usable addition is a **licence-closure gate the platform question can now be run through**
 
 ⏱️ **Seventh pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

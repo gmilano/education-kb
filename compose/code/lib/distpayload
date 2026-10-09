@@ -1,0 +1,248 @@
+#!/usr/bin/env bash
+# `lib/distpayload` — argument-invocable front end for the DISTRIBUTION-payload read.
+#
+# Pass 76 of 2026-10-09, closing `Gap 330` limb 2.  The NETWORK half; every measurement it
+# performs lives in `dist_payload.sh` and is tested offline in `p845-dist-payload/`.
+#
+#   distpayload --pypi <name> [--sdist|--wheel]   download the artefact, read the grant
+#   distpayload --packagist <vendor/name>         same, from the Packagist dist zip
+#   distpayload --closure-pypi <name>             the above for every RUNTIME dependency
+#   distpayload --dir <extracted-dir> [declared]  no network: measure an extracted tree
+#   distpayload --self-test                       run the offline suite
+#
+# Output is TSV, one row per artefact, `P843` order (declared BEFORE payload):
+#
+#   name  version  declared  verdict  grant-path  bytes  family  holder  notice-files
+#
+# `P827`: exits non-zero when any row is not a resolved payload verdict, so a caller that
+# forgets to check still fails loudly instead of reading a hopeful blank.
+#
+# WHY BOTH ARTEFACT KINDS.  npm publishes one tarball per release.  PyPI publishes a wheel
+# AND an sdist, built by different code paths, and `files:`-style exclusions apply to them
+# SEPARATELY.  So "does the grant ship?" is two questions on PyPI, and this front end can
+# ask either.  Default is `--wheel`, because the wheel is what `pip install` actually
+# resolves and therefore what a client deploys.
+set -u
+HERE="$(cd "$(dirname "$0")" && pwd)"
+. "$HERE/license_family.sh"
+. "$HERE/payload_measure.sh"
+. "$HERE/dist_payload.sh"
+. "$HERE/package_repo.sh"
+
+usage() { sed -n '2,28p' "$0" | sed 's/^# \{0,1\}//'; }
+
+_rc=0
+_TMPROOT=""
+_cleanup() { [ -n "$_TMPROOT" ] && rm -rf "$_TMPROOT"; }
+trap _cleanup EXIT
+
+_newtmp() { _TMPROOT="$(mktemp -d)"; }
+
+# _fetch_to <url> <dest> — piped straight to a file, never through $(…) (`P834`).
+_fetch_to() { curl -sSL --max-time 120 -o "$2" "$1" 2>/dev/null; }
+
+# _fetch_code <url> <dest> — same, but the HTTP STATUS is the return value on stdout.
+#
+# `P844` says: record WHICH of the three refusal mechanisms answered.  A verdict of
+# `UNEXTRACTABLE` cannot do that — it reads as "the archive is corrupt" when the truth may be
+# "the fetch was refused and the body is a JSON error".  Measured live by pass 76:
+# Packagist's `dist.url` for `packbackbooks/lti-1p3-tool` is an
+# `api.github.com/repos/.../zipball/<sha>` URL, which this session answers **403** by
+# REPOSITORY SCOPE — not a gateway denial and not a classifier refusal.  Without the status
+# the row would have blamed the artefact for an access boundary.
+_fetch_code() { curl -sSL --max-time 120 -o "$2" -w '%{http_code}' "$1" 2>/dev/null; }
+
+# _extract <archive> <destdir> -> 0 on success.  Untrusted payload: extracted into a fresh
+# empty directory and never executed.
+_extract() {
+  local a="$1" dest="$2"
+  mkdir -p "$dest"
+  case "$a" in
+    *.whl|*.zip) unzip -qq -o "$a" -d "$dest" 2>/dev/null ;;
+    *.tar.gz|*.tgz) tar -xzf "$a" -C "$dest" 2>/dev/null ;;
+    *.tar.bz2) tar -xjf "$a" -C "$dest" 2>/dev/null ;;
+    *) return 2 ;;
+  esac
+}
+
+# _row <name> <version> <declared> <dir>
+_row() {
+  local name="$1" ver="$2" decl="$3" dir="$4" rest
+  rest=$(measure_dist_dir "$dir" "$decl") || _rc=1
+  case "$rest" in
+    *"	NO-PAYLOAD	"*|*"	NO-NOTICE	"*) _rc=1 ;;
+  esac
+  printf '%s\t%s\t%s\n' "$name" "$ver" "$rest"
+}
+
+# ---------------------------------------------------------------------------- PyPI
+
+# _pypi_meta <name> <kind> -> version <TAB> declared <TAB> url  (kind: wheel|sdist)
+_pypi_meta() {
+  local name="$1" kind="$2" tmp
+  tmp="$_TMPROOT/meta.json"
+  _fetch_to "https://pypi.org/pypi/${name}/json" "$tmp"
+  KIND="$kind" python3 -I - "$tmp" <<'PY'
+import json, os, sys
+want = os.environ["KIND"]
+try:
+    d = json.load(open(sys.argv[1]))
+except Exception:
+    print("-\t-\t-"); sys.exit(0)
+info = d.get("info") or {}
+ver = info.get("version") or "-"
+pt = "bdist_wheel" if want == "wheel" else "sdist"
+url = "-"
+for u in d.get("urls") or []:
+    if u.get("packagetype") == pt:
+        url = u.get("url") or "-"; break
+if url == "-":                      # fall back to whatever the release does publish
+    for u in d.get("urls") or []:
+        url = u.get("url") or "-"
+        if url != "-":
+            break
+print(f"{ver}\t{url}")
+PY
+}
+
+_do_pypi() {
+  local name="$1" kind="${2:-wheel}" meta ver decl url dir
+  _newtmp
+  meta=$(_pypi_meta "$name" "$kind")
+  ver=$(printf '%s' "$meta" | cut -f1)
+  url=$(printf '%s' "$meta" | cut -f2)
+  # The declaration comes from the LIBRARY's offline-tested parse, not from a second inline
+  # copy of it (`P255`: one payload must not get three answers from three instruments).
+  decl=$(declared_from_pypi_json "$_TMPROOT/meta.json")
+  if [ "$url" = "-" ] || [ -z "$url" ]; then
+    printf '%s\t%s\t%s\tNO-ARTEFACT\t-\t-\t-\t-\t-\n' "$name" "$ver" "$decl"
+    _rc=1; return 1
+  fi
+  local arch="$_TMPROOT/$(basename "$url")" code
+  code=$(_fetch_code "$url" "$arch")
+  if [ "$code" != "200" ]; then
+    printf '%s\t%s\t%s\tFETCH-REFUSED-%s\t%s\t-\t-\t-\t-\n' "$name" "$ver" "$decl" "$code" "$url"
+    _rc=1; return 1
+  fi
+  dir="$_TMPROOT/x"
+  if ! _extract "$arch" "$dir"; then
+    printf '%s\t%s\t%s\tUNEXTRACTABLE\t-\t-\t-\t-\t-\n' "$name" "$ver" "$decl"
+    _rc=1; return 1
+  fi
+  _row "$name" "$ver" "$decl" "$dir"
+}
+
+# ------------------------------------------------------------------------ Packagist
+
+_do_packagist() {
+  local name="$1" tmp ver decl url dir
+  _newtmp
+  tmp="$_TMPROOT/meta.json"
+  _fetch_to "https://repo.packagist.org/p2/${name}.json" "$tmp"
+  local meta
+  meta=$(NAME="$name" python3 -I - "$tmp" <<'PY'
+import json, os, sys
+try:
+    d = json.load(open(sys.argv[1]))
+except Exception:
+    print("-\t-"); sys.exit(0)
+pkgs = (d.get("packages") or {}).get(os.environ["NAME"]) or []
+rel = None
+for p in pkgs:                      # first non-dev release is the newest stable
+    v = str(p.get("version", ""))
+    if "dev" not in v:
+        rel = p; break
+rel = rel or (pkgs[0] if pkgs else {})
+print("\t".join([
+    rel.get("version") or "-",
+    ((rel.get("dist") or {}).get("url")) or "-",
+]))
+PY
+)
+  ver=$(printf '%s' "$meta" | cut -f1)
+  url=$(printf '%s' "$meta" | cut -f2)
+  decl=$(declared_from_packagist_json "$tmp" "$name")
+  if [ "$url" = "-" ] || [ -z "$url" ]; then
+    printf '%s\t%s\t%s\tNO-ARTEFACT\t-\t-\t-\t-\t-\n' "$name" "$ver" "$decl"
+    _rc=1; return 1
+  fi
+  local arch="$_TMPROOT/dist.zip" code
+  code=$(_fetch_code "$url" "$arch")
+  if [ "$code" != "200" ]; then
+    # Name the mechanism, do not blame the artefact (`P844`).
+    printf '%s\t%s\t%s\tFETCH-REFUSED-%s\t%s\t-\t-\t-\t-\n' "$name" "$ver" "$decl" "$code" "$url"
+    _rc=1; return 1
+  fi
+  dir="$_TMPROOT/x"
+  if ! _extract "$arch" "$dir"; then
+    printf '%s\t%s\t%s\tUNEXTRACTABLE\t-\t-\t-\t-\t-\n' "$name" "$ver" "$decl"
+    _rc=1; return 1
+  fi
+  _row "$name" "$ver" "$decl" "$dir"
+}
+
+# -------------------------------------------------------------------------- closure
+
+# The runtime closure of a PyPI distribution, read from the registry's own
+# `requires_dist` — which is the INSTALLED set, not a hand-written requirements file.
+# `P842`: these are DISTRIBUTION names by construction, so the import-name trap
+# (PyPI `fitz` vs the real `pymupdf`) cannot be entered from here.
+_pypi_runtime_deps() {
+  local name="$1" tmp
+  tmp="$(mktemp)"
+  curl -sS --max-time 60 "https://pypi.org/pypi/${name}/json" > "$tmp" 2>/dev/null
+  python3 -I - "$tmp" <<'PY'
+import json, re, sys
+try:
+    d = json.load(open(sys.argv[1]))
+except Exception:
+    sys.exit(0)
+for req in (d.get("info") or {}).get("requires_dist") or []:
+    # Drop anything gated on an extra: those are NOT installed by default, so they are not
+    # part of the runtime closure a client deploys.
+    if ";" in req and "extra" in req.split(";", 1)[1]:
+        continue
+    m = re.match(r"^\s*([A-Za-z0-9][A-Za-z0-9._-]*)", req)
+    if m:
+        print(m.group(1))
+PY
+  rm -f "$tmp"
+}
+
+_do_closure_pypi() {
+  local root="$1" kind="${2:-wheel}" d
+  _do_pypi "$root" "$kind" || true
+  _pypi_runtime_deps "$root" | LC_ALL=C sort -u | while IFS= read -r d; do
+    [ -n "$d" ] || continue
+    _do_pypi "$d" "$kind" || true
+  done
+}
+
+# ----------------------------------------------------------------------- self-test
+
+[ "$#" -eq 0 ] && { usage; exit 2; }
+
+case "$1" in
+  --self-test)
+    exec "$HERE/../p845-dist-payload/test_dist_payload.sh" ;;
+  --dir)
+    [ "$#" -ge 2 ] || { usage; exit 2; }
+    measure_dist_dir "$2" "${3:--}" || exit 1 ;;
+  --pypi)
+    [ "$#" -ge 2 ] || { usage; exit 2; }
+    kind=wheel
+    case "${3:-}" in --sdist) kind=sdist ;; --wheel) kind=wheel ;; esac
+    _do_pypi "$2" "$kind" || true ;;
+  --packagist)
+    [ "$#" -ge 2 ] || { usage; exit 2; }
+    _do_packagist "$2" || true ;;
+  --closure-pypi)
+    [ "$#" -ge 2 ] || { usage; exit 2; }
+    kind=wheel
+    case "${3:-}" in --sdist) kind=sdist ;; --wheel) kind=wheel ;; esac
+    _do_closure_pypi "$2" "$kind" ;;
+  -h|--help) usage; exit 0 ;;
+  *) usage; exit 2 ;;
+esac
+
+exit "$_rc"

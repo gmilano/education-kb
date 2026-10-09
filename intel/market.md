@@ -4,6 +4,83 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-sixth pass, 2026-10-09 — the regional limbs are **saturated for a fourth pass (18/18 shelved)**, the EMEA channel is again **behind the shelf** on the same instrument, and `P849` stops this pass from inventing a LATAM channel it already holds
+
+⏱️ **Eighth pass of this date.** Pass 75 closed earlier today. **Append-only: this section is new; nothing below it was rewritten. The live `## Opportunities by region` block is the one in this section; pass 75's has been retitled *superseded* per this file's convention.**
+
+### 🟢 The channel audit, as a number, continuing pass 75's
+
+| Probe class | Candidates returned | 🔴 Already shelved | 🟢 Unshelved |
+|---|---|---|---|
+| Repositories / agents (4 global queries) | **12** | **12** | 🔴 **0** |
+| Regional players and institutions (4 regional queries) | **6** | **6** | 🔴 **0** |
+| Regulatory / market / adoption facts | ~**26** | ~**26** | 🔴 **0** |
+| 🆕 **Dependency closures of already-shelved components** | **8** | **4** | 🟢 **4** |
+
+🔵 **The last row is new and it is the pass's methodological finding:** 🟢 **the only unshelved licence-bearing components this pass found came from CLOSURES, not from searches** — `jwcrypto`, `guzzle`, `phpseclib`, `php-jwt`, all at **0** prior occurrences, all one hop from libraries this shelf has held for dozens of mentions.
+
+### 🔴 `P849` discharged, and it stopped a fabrication rather than a false gap
+
+🔵 Pass 75's `P839` stopped a pass from declaring an EMEA gap the shelf refuted. 🔴 **This pass's failure mode was the opposite and worse: it was about to declare a LATAM channel NEW.**
+
+🟢 This pass's LATAM limb returned the **IDB** technical note *An Enabling Regulatory Framework for Artificial Intelligence in Latin America and the Caribbean*, and the shelf-grep answered **`0 files, 0 hits`**. 🔴 **One keystroke from "the Inter-American Development Bank is a new channel for this shelf."**
+
+🟢 **The grep was broken, not the shelf.** The probe passed a basic-`grep` alternation (`IDB\|Inter-American`) to `grep -E`, where `\|` is a **literal pipe**. 🟢 **Correctly run: `IDB` **22** hits, `iadb` **158** hits** — one of this shelf's most-cited LATAM sources.
+
+🟢 **`P849`: validate a shelf-grep against a token known to be PRESENT before believing its zero.** 🔴 **A zero from a malformed pattern and a zero from an absent fact are indistinguishable, and they have opposite consequences** — the first manufactures a finding, the second records a gap.
+
+### 🔴 The EMEA channel is behind the shelf, on the same instrument, for the seventh time
+
+🟡 This pass's EMEA query returned: *"From 2 August 2026, the AI Office and national authorities started to enforce the AI Act"*, *"the Digital Omnibus on AI came into force in July 2026"*, and an older guide still treating **August 2026** as the high-risk deadline.
+
+🟢 **All three are stale or imprecise against what this shelf holds, verified by three channels in pass 58:** 🔵 the **Digital Omnibus** is **`Regulation (EU) 2026/1744` of 8 July 2026**; the **Annex III high-risk** clock (which is the one education sits on) is **deferred to 2027-12-02**; and **Article 50 was NOT touched** — its clock runs unchanged. 🔴 **"General application 2 August 2026" is the exact stale claim this KB corrected in its nineteenth pass** (`P505`).
+
+🟢 **Recorded as a re-confirmation of channel quality, not as a finding**, and 🔴 **`Gap 308` is not re-dated on it:** `eur-lex.europa.eu` refused a **ninth** time this pass (**000**, gateway 403 to CONNECT).
+
+### 🟢 What the pass adds regionally: the transitive-licence finding, placed
+
+🔵 **The substantive measurement is in `repos/foundations.md`** — the LTI 1.3 adapter's three implementation routes carry three different licence obligations, and the Python route is the only one with copyleft in its closure. 🟢 **It lands differently per region, and that is the part a regional engagement can use.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **Regulatory posture (all already shelved, re-confirmed this pass):** **35+ states** have AI guidance from their education departments; **134 bills** across **31 states** in 2026; **Ohio** required every district to adopt an AI policy by **2026-07-01**; **Maryland**'s 24 districts by **fall 2026**; **Oklahoma** `S.B. 1734` before **2027-28**; **Oklahoma and Maryland require human oversight and bar AI from high-stakes student decisions**; **Oregon** `S.B. 1546` adds minor-protection design duties; **NYC**'s red tier bars AI from grading, discipline and counselling.
+
+🟢 **Opportunity — the approval gate is the sellable artefact, not the tutor.** 🔵 Two states mandate human oversight and one large district bars AI grading outright. 🟢 **`P850`'s step 2 is exactly that control in code:** `mcp-allowlist-gateway/gateway.py` with `putGrade` **floored** — refused *and never advertised*, so the model cannot even see the capability. 🔴 **A "teacher reviews it" policy is a slide; a floored tool is a measurement**, and the suite that proves it is 34/34.
+
+🟡 **Opportunity — district-contract diligence.** State leaders recommend a data-usage-restriction clause in district contracts. 🟢 **`P851` produces the obligations memo and notices file that such a clause requires**, in 2–3 days for a ~40-dependency stack.
+
+### EMEA
+
+🟢 **Regulatory posture (shelved, re-confirmed):** education is **Annex III high-risk** under the EU AI Act when AI affects access, progression or assessment; the **Annex III clock is deferred to 2027-12-02** by `Regulation (EU) 2026/1744`; **Article 50** transparency is untouched. Proctoring with biometric identification carries bias-testing, human-oversight and notification duties.
+
+🟢 **Opportunity — the deferral is a build window, and it is the strongest regional argument on this shelf.** 🔵 A client has until **2027-12-02** on Annex III but Article 50 is already running. 🟢 **Route A of `P850` is the compliance-shaped build:** Apache-2.0/BSD/MIT end to end, a floored grade-write for the human-oversight duty, and a notices file of four rows.
+
+🔴 **And the licence route matters more here than anywhere.** 🟡 EMEA public-sector education procurement frequently requires source disclosure. 🟢 **Copyleft in the closure is less of a blocker for a public client — but `jwcrypto`'s LGPL-3.0 relinking duty still has to be ANSWERED, and Route A removes the question rather than arguing it.**
+
+### APAC
+
+🟢 **Regulatory posture (shelved, re-confirmed):** **Vietnam**'s AI law (passed 2025-12-10, effective **2026-03-01**) names education among six high-risk sectors, specifically **automated assessment and behavioural monitoring**; **South Korea**'s AI Framework Act took effect **2026-01-22** with 2026 as a pilot year and a one-year grace on penalties; **Taiwan**'s AI Basic Act passed December 2025; **China** enforces generative-AI measures plus synthetic-content labelling; **Singapore and Japan** remain voluntary-guideline.
+
+🟢 **Opportunity — one codebase, per-jurisdiction policy, and the gate is the seam.** 🔵 Vietnam names *automated assessment* high-risk; Singapore does not regulate it; Korea is in a grace period. 🔴 **A per-country fork is the expensive answer.** 🟢 **The cheap one is `P850` with the allowlist/floor as configuration:** the same adapter ships everywhere and the **floor set** is the jurisdiction variable — `putGrade` floored in Vietnam, advertised in Singapore.
+
+🟡 **Honest gap, declared rather than left silent:** 🔴 **no APAC-specific school or university ADOPTION rate was returned by this pass's channel**, and the market figures it offered (an "APAC AI market ≈ USD 102 bn" aggregate, and a vendor list naming Google, Microsoft, IBM, Pearson and Byju's) are 🔴 **commercial-report single-channel and are NOT adopted.**
+
+### LATAM
+
+🟢 **Regulatory and adoption posture (shelved, re-confirmed):** UNESCO **IESALC**'s September 2026 study of **200 institutions in 19 countries** — **87%** use AI in at least one area, **74%** in teaching, 🔴 **only 26% have any formal framework** (private non-profits **84%** vs public **68%**); secondary-teacher use **Brazil 56% · Chile 55% · Colombia 53% · Costa Rica 52%** against an **OECD average of 36%** (TALIS 2024); **Uruguay** reports **75%** of public-school teachers. 🟡 Legislation is unfinished: **Brazil** `PL 2.338/2023` through the Senate and in the Chamber; **Chile**'s bill in committee; **Colombia** policy-first via **CONPES 4144**. Named actors: UNESCO IESALC and its **Observatory on AI in Education** (launched 2026-04-14), the **IDB**, the Digital Education Council's LATAM survey, **Ceibal** (Uruguay), FLACSO Ecuador.
+
+🟢 **Opportunity — the 87%/26% gap is a governance engagement, and this pass gives it a deliverable.** 🔵 Adoption is near-universal and frameworks are not. 🟢 **`P851` is the artefact that closes it concretely:** a payload-read obligations memo plus notices file, which an institution with no framework can adopt as its first one. 🔵 **The IDB's own argument — enabling regulation as catalyst, and the warning that purely national approaches fragment a ~650 million-person market — is the pitch for doing it once regionally.**
+
+🟡 **And the licence route is a procurement argument here specifically:** 🟢 public universities buying under constrained budgets reuse deliverables across institutions, 🔴 **which is exactly when a copyleft relinking duty in the closure surfaces.** 🟢 Route A ships with four permissive rows and no question to answer.
+
+### Global
+
+🟢 **Market figures, carried unchanged and still disputed between sources:** AI-in-education **USD 10.6 bn (2026) → USD 42.48 bn (2030), CAGR 41.5%** (Research and Markets), against a vendor-sourced **USD 12.3 bn by 2026**; Europe **USD 2.64 bn (2026) → USD 8.0 bn (2030), CAGR 31.9%** 🟡 (single-channel, methodology unverified, **not adopted as this shelf's figure**). 🟢 **86%** of education organisations use generative AI while most lack a policy; **54%** of K-12 and **92%** of university students use AI; weekly-using teachers report **~5.9 h/week** saved.
+
+🟢 **Opportunity — the cross-region constant.** 🔵 Every region above regulates the same two acts: **automated assessment** and **human oversight of it**. 🟢 **So the one component worth building once and reselling everywhere is the gated AGS writer of `P850`** — the jurisdiction changes the floor set, not the architecture.
+
 ## 🟢 Seventy-fifth pass, 2026-10-09 — the battery is **saturated on the regional limbs too** (13/13 shelved); 🔴 **the regional figures' internal consistency does NOT survive a fourth channel**; `P839` stops this pass from declaring an EMEA gap the shelf itself refutes
 
 ⏱️ **Seventh pass of this date.** Pass 74 closed earlier today. **Append-only: this section is new; nothing below it was rewritten. The live `## Opportunities by region` block is the one in this section; pass 74's has been retitled *superseded* per this file's convention.**
@@ -49,7 +126,7 @@ updated: 2026-10-09
 
 🟢 **Carnegie Mellon University and the Gates Foundation have committed $55 million to AI courseware targeting gateway college courses** (the high-failure first-year courses that gate degree progression), and 🟡 **OpenAI is reported to have launched a country-level education programme with eight national partners in Q1 2026.** 🟡 **Both single-channel and secondary; neither is adopted as a market figure.** 🔵 **The first is directionally important because gateway courses are exactly where an auditable, human-in-the-loop assessment pipeline is both pedagogically justified and legally exposed** — the artefact this shelf has been describing for ten passes.
 
-## Opportunities by region
+## Opportunities by region — superseded (the live block is at the top of this file)
 
 ### North America
 

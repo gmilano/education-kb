@@ -377,6 +377,39 @@ osi_family_of() {
   printf '%s' "$t" | grep -qi 'Educational Community License' && { echo "ECL-2.0"; return; }
   printf '%s' "$t" | grep -qi 'Apache License' && { echo "Apache-2.0"; return; }
   printf '%s' "$t" | grep -qi 'MIT License' && { echo "MIT"; return; }
+  # -------------------------------------------------------------------------
+  # `P845` (pase 76 del 2026-10-09).  ESTA RAMA VA ANTES DE LA DE 0BSD, Y EL ORDEN ES EL
+  # HALLAZGO -- es `P171` otra vez, en una familia que el clasificador endurecido no cubria.
+  #
+  # Medido, no supuesto, sobre un payload REAL: `typing_extensions-4.16.0`, cuyo
+  # `dist-info/licenses/LICENSE` pesa 13.936 B y es el LICENSE de Python entero.  Ese
+  # documento es COMPUESTO: su grant operativo es la PSF License Version 2, y mas abajo
+  # incluye una seccion titulada literalmente «ZERO-CLAUSE BSD LICENSE FOR CODE IN THE
+  # PYTHON DOCUMENTATION» -- un grant SUBORDINADO cuyo alcance es la documentacion.
+  #
+  # Dentro de la ventana de 4.000 B conviven las dos cadenas: la linea 63 nombra «Python
+  # Software Foundation License Version 2.», la 67 dice «and the Zero-Clause BSD license.»
+  # y la 73 es el titulo «PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2».  Sin rama PSF, la
+  # de 0BSD era la primera que matcheaba y RETORNABA, asi que este clasificador contestaba
+  # `0BSD` --permisiva sin condiciones-- sobre la licencia de Python.
+  #
+  # Por que importa mas que un nombre mal puesto: `typing-extensions` esta en el cierre de
+  # ejecucion de una fraccion enorme de los paquetes Python, asi que el defecto se aplicaba
+  # a casi cualquier auditoria de closure que esta KB tomara.  Y la direccion del error es
+  # la unica que no se puede permitir: declaraba MENOS obligacion que la real (PSF-2.0 pide
+  # reproducir el aviso de copyright Y un resumen de los cambios; 0BSD no pide nada).
+  #
+  # El ancla es el TITULO de la version 2, no la palabra «Python»: un 0BSD legitimo no
+  # nombra la PSF License Version 2 en ninguna parte, asi que anteponer esta rama no puede
+  # robarle un payload 0BSD real.  La regresion que lo fija vive en `test_license_family.sh`
+  # (seccion `P845`) con la forma compuesta REAL, no con una fixture inventada.
+  #
+  # `P562`: la correccion viaja al consumidor.  `PSF-2.0` se agrega a `OSI_RECONOCIDAS` en
+  # `p411-cession-identity-gate/gate_cesion.py` en el mismo pase, o esa compuerta rechazaria
+  # por desconocido un string que su propia libreria emite.
+  printf '%s' "$t" \
+    | grep -qiE 'PYTHON SOFTWARE FOUNDATION LICEN[CS]E[[:space:],]*(VERSION[[:space:]]*)?2|PSF[[:space:]]*LICEN[CS]E[[:space:],]*(VERSION[[:space:]]*)?2|PSF-2\.0' \
+    && { echo "PSF-2.0"; return; }
   # Added in pass 82 (P250).  Three families reached this base's catalogue and all three came
   # back UNCLASSIFIED, so they are classified on the TITLE BLOCK like everything else (P171).
   printf '%s' "$t" | grep -qi 'BSD Zero Clause\|Zero-Clause BSD\|0BSD' && { echo "0BSD"; return; }
