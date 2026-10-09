@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-second pass, 2026-10-09 — four regulatory regimes converge on **one architectural requirement**; the EU's education high-risk date is **contested on secondary channels**; the credentials trend gets its first census and it is copyleft-only
+
+⏱️ **Fourth pass of this date.** Pass 71 closed earlier today (commit `1fe734a`). **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 T1 — Four regimes, four rationales, **one architecture**: the human-approval gate is now a compliance artefact, not a feature
+
+🟢 **This is the strongest cross-regional convergence this shelf has recorded.** Four independent legal bases now require a human in the loop before an AI-produced academic judgement takes effect:
+
+| Region | Instrument | What it requires |
+|---|---|---|
+| 🟢 **APAC** | Korea **AI Basic Act**, in force **2026-01-22**, extraterritorial, names **education** high-impact | 🟢 **Meaningful human monitoring and intervention at any time** — statutory |
+| 🟢 **LATAM** | **Chile** and **Mexico** data-protection law | 🟢 Limits on decisions made **solely** by automated processing where rights are significantly affected — 🔴 **a published grade qualifies** |
+| 🟡 **EMEA** | EU AI Act Annex III (admissions, grading, proctoring) | 🟡 Human oversight for high-risk — 🔴 **date contested, see T2** |
+| 🟢 **North America** | State mandates (Idaho, Oklahoma, Maryland, Virginia; Florida BOG + 28 FCS institutions) | 🟢 A **written, auditable** AI-use policy covering academic integrity and grading |
+
+🟢 **The architectural consequence is a single component**, and this shelf can already name a permissive implementation of it: 🟢 **`AI-Teaching-Agent`'s contract-declared gate** — `defaultGeneratedStatus = WAITING_REVIEW`, `publishBlockedUntilApproved = true`, `autoPublishAllowed = false`, ten `safety.*` flags false, **25 test references** (`Gap 323`). 🔴 **What makes this a trend rather than a coincidence is the arrival from four different legal theories** — AI statute, data protection, product safety, and administrative policy — 🟢 **which means the requirement will outlive any one of them.**
+
+### 🔴 T2 — The EU's education high-risk date is **contested**, and this shelf cannot resolve it
+
+🟢 **Not in dispute, and in force now:** **Article 4** AI literacy since **2025-02-02**, and **Article 5**'s ban on **inferring emotions in education institutions**. 🔴 **That makes affect-aware tutoring, attention tracking and engagement detection non-compliant in the EU today** — a present-tense constraint this shelf should state more loudly than a future date.
+
+🔴 **In dispute:** whether Annex III high-risk obligations for **admissions, grading and exam proctoring** apply from **2026-08-02** or whether the **Digital Omnibus** postponed them to **2027-12-02** (European Parliament vote reported **2026-06-16**, Council adoption unconfirmed). 🟢 **Both dates are carried, named, and attributed to secondary channels only**, because `Gap 308` records a **fifth** consecutive refusal of every EU institutional host reachable from this session. 🔴 **A sixteen-month swing is the difference between a scramble and a runway, and picking one silently would be the worst available option.** 🟢 **Transparency rules for AI-generated content are separately reported from 2026-08-02** and are the nearer obligation either way.
+
+### 🔴 T3 — Digital credentials: the trend is real, the permissive foundation is **absent** (`Gap 324` closed negatively)
+
+🟢 **First census on this shelf:** three Open Badges issuers, licences read from payload, 🔴 **zero clean permissive grants** — `certo` **AGPL-3.0** (33 820 B), `badgr-server` **AGPL-3.0** (34 519 B, default ref `develop`, **OB 2.0 only**), and `ec-issuer`, 🔴 **which has no licence file at all** despite a README asserting MIT. 🔴 **So a trend this shelf has carried on two independent channels has, on measurement, nothing permissive behind it.** 🟢 **`ec-issuer` is the one that matters** — the only OB 3.0 **+ European Learner Model + OID4VCI** implementation found — and it is **one upstream issue away** from being adoptable (`Gap 325`).
+
+### 🟢 T4 — Agentic workflows displace generative pilots, on vendor channels
+
+🟢 Technavio describes a shift **from experimental generative AI to strategic deployment of autonomous agentic workflows**, naming grading and scheduling automation specifically, and reports **institution-wide AI implementation in higher education at 66%**. 🔵 **Vendor-sourced and directionally useful only.** 🟢 **What corroborates it independently is procurement behaviour:** US K-12 districts are reported to require **student data minimisation protocols demonstrated before contract award**, and EU AI Act plus GDPR compliance is reshaping vendor certification pathways. 🔴 **Both procurement claims come from a lower-authority source and are flagged.** 🟢 **The pattern is consistent with T1 regardless of source quality: buyers are asking for evidence, not demos.**
+
+### 🔴 T5 — Teacher readiness is the binding constraint, and there is now a **reversal** to prove it
+
+🔴 **Korea's AI textbook programme is the cautionary case of the year.** Mandatory from 2025, **adoption below 30% by March**, and in **August the National Assembly stripped the textbooks of official status** after unions said the pace had outrun preparation. 🟢 **A national mandate was reversed by readiness, not by technology.** 🟢 **Against that, LATAM shows the opposite imbalance:** **TALIS** records **56% of Brazilian, 55% of Chilean, 53% of Colombian and 52% of Costa Rican** secondary teachers using AI versus an OECD average of **36%**, while 🔴 **UNESCO records institutions failing to keep pace and CENIA finds 13 of 19 LAC countries teach no early AI at all.** 🟢 **Teachers ahead of institutions in one region, institutions ahead of teachers in another — and the engagement is the enablement layer in both.** 🟢 Policy demand follows: the EC/OECD **AI Literacy Framework** (G7-endorsed) exists precisely to close this.
+
+### 🔴 T6 — The education agent layer is still thin, and the **instrument** is now fully understood
+
+🟢 **Twenty-second consecutive empty week on the control query** — and this pass can show the mechanism in the output rather than argue it. 🟢 The query returned **two MIT AI-literacy curricula** (`microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`) and 🔴 **no agent deployed in an education setting.** 🟢 **"Education" in a listicle query selects teaching material *about* AI, not AI *in* teaching** — `P826`'s category-vocabulary effect, observed. 🔴 **The thinness is real; the twenty-two weeks of zeroes were measuring the wrong thing.** 🟢 Both repos are filed as L&D curriculum in `repos/foundations.md`, where they are the best permissive upskilling material available.
+
+### 🟢 T7 — The LTI seam is unchanged after a **third** independent check
+
+🔴 **No permissive self-hosted grading agent speaks LTI 1.3 + AGS.** 🟢 A capability-shaped search this pass returned **only closed products** — Gradescope, Turnitin Feedback Studio, CodeGrade, all **1EdTech LTI Advantage certified** with AGS grade passback — plus generic agent frameworks with no LMS seam. 🟢 **Third independent channel, same answer; `Gap 316`'s capture thesis is as well evidenced as anything on this shelf.** 🟢 **The library that closes it remains `ltijs` (Apache-2.0, `0ec24fe`), re-verified this pass**, and the remaining unknown is only the **wiring cost**, best paid once inside `P12-R`.
+
 ## 🟢 Seventy-first pass, 2026-10-09 — the year's real movement is **governance becoming code**, and this pass can finally name the permissive components that implement it
 
 ⏱️ **Third pass of this date.** Pass 70 closed earlier today (commit `cf5c9bf`). **Append-only: this section is new; nothing below it was rewritten.**

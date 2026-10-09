@@ -4,6 +4,26 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 — pass 72: **no new agent signal; one existing agent moves from "catalogued" to "priced."** Twenty-second empty week on the control channel, with the mechanism now visible in the output
+
+⏱️ **Fourth pass of this date.** 🟢 **Append-only: this section is new; every dated section below it is preserved.**
+
+### 🟢 The week's real movement is a measurement, not a new repo
+
+| Agent | Licence · HEAD | Signal this pass |
+|---|---|---|
+| [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | 🟢 MIT 1 069 B · `main` `b90bd88` (2026-08-23) | 🟢 **`Gap 323` CLOSED.** Review gate declared in a 3 200 B contract (`WAITING_REVIEW`, `publishBlockedUntilApproved`, `autoPublishAllowed=false`, 10 `safety.*` flags false) and exercised by **25 test references** across 155 test files. 🔴 Provider path declared **`MOCK_ONLY`** — that is what "frozen" meant |
+
+🔴 **No commit since 2026-08-23** — seven weeks quiet. 🔵 Pass 71 asked whether it would un-freeze automatic grading; 🟢 **the answer so far is no, and the gate is useful anyway.**
+
+### 🔴 Twenty-second empty week — and this pass can show *why* rather than assert it
+
+🟢 The control query returned **two MIT repositories, both AI-literacy curricula**: [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) (MIT 1 141 B, `25b7985`) and [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) (MIT 1 091 B, `da3f9df`). 🔴 **Neither is an agent deployed in education.** 🟢 **This is `P826`'s category-vocabulary effect, observed in output rather than inferred** — and the correct place for both is `repos/foundations.md` as L&D material.
+
+### 🟢 What to watch next week, concretely
+
+🔵 (a) Whether `ec-issuer` (`main` `8bafc99`, 2026-08-28) **adds a `LICENSE` file** — it is the only Open Badges 3.0 + ELM + OID4VCI implementation found and it currently has **no grant** (`Gap 325`). 🔵 (b) Whether `zijinz456/OpenTutor` holds the ~weekly cadence it had through 2026-10-08. 🔵 (c) Whether **any** permissive component acquires an **LTI 1.3 + AGS** seam — 🔴 **a third independent channel this pass again returned only closed products** (Gradescope, Turnitin, CodeGrade, all 1EdTech LTI Advantage certified). 🟢 The library that would close it remains [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) (Apache-2.0, `master` `0ec24fe`).
+
 ## 🟢 2026-10-09 (pass 71) — licence-blind discovery breaks a **twenty-week** dry spell: **8 new education agents** in one window, 7 of them MIT
 
 ⏱️ **Third dated section for 2026-10-09.** **Append-only: this section is new; every section below it is preserved.**

@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-second pass, 2026-10-09 — `P14-R` and `P23` **get cheaper and more precisely scoped** now that the gate is measured; one pattern is **withdrawn** because its foundation has no licence
+
+⏱️ **Fourth pass of this date.** Pass 71 closed earlier today (commit `1fe734a`). **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 `P23` — Policy-evidence grading gate (**re-priced down**, and it now serves four regions for four different legal reasons)
+
+🔵 **What changed:** `Gap 323` closed. The gate is no longer "a component we think exists" — it is a contract-declared, test-exercised state machine.
+
+```
+AI-Teaching-Agent  (MIT, LICENSE 1 069 B, main b90bd88)
+  ├── ai-workflows/phase2-grading-generation.contract.json   ← 3 200 B, the compliance artefact
+  │     reviewGate.defaultGeneratedStatus      = WAITING_REVIEW
+  │     reviewGate.publishBlockedUntilApproved = true
+  │     reviewGate.autoPublishAllowed          = false
+  │     safety.{realPublish,reviewBypassed,…}  = false  ×10
+  ├── backend/grading_worker.py          ← produces      (3 test refs)
+  ├── cli/review_batch.py                ← gates         (3 test refs)
+  ├── cli/review_decision_note.py        ← gates         (6 test refs)
+  ├── cli/review_detail.py               ← gates        (16 test refs)
+  ├── cli/agent_entity_publish_review.py ← publish side  🔴 0 test refs — WRITE TESTS FIRST
+  └── cli/review_pre_approve.py          ← publish side  🔴 0 test refs — WRITE TESTS FIRST
+        │
+        ├── REPLACE: mode=MOCK_ONLY, safety.realLlmCalled=false
+        │     → your provider path (LiteLLM / Bedrock / Ollama per sovereignty need)
+        └── ADD: LMS seam — none ships. Cvmcosta/ltijs (Apache-2.0, master 0ec24fe)
+                 src/services/{grading,names-and-roles,deep-linking,dynamic-registration}
+```
+
+🟢 **Wire it:** take the gate and its contract as-is; **write tests against the two zero-reference publish-side modules before touching them**; replace the `MOCK_ONLY` provider with your own path; attach `ltijs` for grade return. 🟢 **Estimate moves to the cheaper pole** — the approval state machine, the artefact a registrar or auditor actually inspects, is already built and exercised. 🔴 **Two costs remain real:** the provider path, and the **LTI 1.3 + AGS wiring that no permissive component has ever carried** (`Gap 316(i)`).
+
+🟢 **Why this pattern now sells in four regions on four rationales:** Korea's **AI Basic Act** (in force 2026-01-22) requires meaningful human intervention in education as a **high-impact** sector; **Chile and Mexico** data-protection law limits decisions made **solely** by automated processing; **EU** Annex III puts grading in high-risk (🔴 date contested — 2026-08-02 or 2027-12-02, `Gap 308`); and **US states** (Idaho, Oklahoma, Maryland, Virginia, plus Florida's BOG and 28 FCS institutions) require a written, auditable AI-use policy covering **academic integrity and grading**. 🟢 **The contract JSON is the deliverable that answers all four** — a policy you can diff, test and show.
+
+### 🟢 `P14-R` — Mastery tutoring with an auditable grade path (**scope sharpened**)
+
+🟢 Unchanged in shape — [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) (MIT, `main` `939eb0e`) supplies BKT mastery estimation, the tutoring dialogue, a document→courseware semantic compiler and a Bedrock in-region inference path. 🟢 **Now compose it with `P23`'s gate** rather than building an approval flow: OATutor tutors and estimates, `AI-Teaching-Agent`'s gate governs what reaches the gradebook. 🔴 **Carried risks unchanged:** OATutor's hardcoded `gpt-4o` default and **no Ollama path** (sovereignty served by Bedrock in-region, not local inference), and 🔴 **`P12-R` still deletes the decade-dead `ims-lti` dependency** rather than inheriting it.
+
+### 🔴 `P-CRED` — Permissive credential issuance: **withdrawn before it was published**
+
+🔵 **This pass set out to write a credential-issuance recipe** — the natural companion to `P23`, since a gated grade should terminate in a verifiable credential, and `intel/trends.md` has carried digital credentials as a live trend on two channels.
+
+🔴 **It cannot be written permissively, and the census is why:**
+
+| Candidate | Licence (payload) | Blocker |
+|---|---|---|
+| [`educredentials/ec-issuer`](https://github.com/educredentials/ec-issuer) | 🔴 **No licence file** (141-file tree); README asserts MIT | 🔴 **No grant** — `Gap 325` |
+| [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | 🔴 **AGPL-3.0** 33 820 B | 🟡 §13 network copyleft |
+| [`mint-o-badges/badgr-server`](https://github.com/mint-o-badges/badgr-server) | 🔴 **AGPL-3.0** 34 519 B, ref `develop` | 🟡 Copyleft **and** OB 2.0 only |
+
+🟢 **What is offered instead, honestly scoped:** 🟡 **`P-CRED-AGPL`** — compose `certo` (OB 3.0 + W3C VC, Ed25519 with a public verification endpoint) behind `P23`'s gate, **self-hosted for the client**, which is the same AGPL posture this shelf already priced for Open edX. 🔴 **Not available** if the client wants a Globant-operated multi-tenant credential service — there the answer today is a commercial issuer or a build. 🟢 **The moment `Gap 325` resolves, `ec-issuer` becomes the base**: it is the only implementation carrying **Open Badges 3.0 + European Learner Model + OID4VCI**, with 53 of 141 files tests and committed Ed25519 keypairs — 🟢 **the right spine for an EMEA learner-mobility engagement.**
+
+🔵 **Recorded as a withdrawal rather than omitted,** because a pattern this shelf *would* recommend if the licence existed is useful intelligence, and because the blocker is a one-issue upstream ask rather than an engineering cost.
+
 ## 🟢 Seventy-first pass, 2026-10-09 — `P12` and `P14` are **revised from protocol builds into library swaps**, and three new patterns are added: MCP-side grading, a sovereign EMEA tutor, and an LLM-free adaptive substrate
 
 ⏱️ **Third pass of this date.** Pass 70 closed earlier today (commit `cf5c9bf`). **Append-only: this section is new; nothing below it was rewritten.**

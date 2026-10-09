@@ -4,6 +4,35 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 — pass 72: the **Open Badges / credential layer is censused for the first time** — three issuers, **zero clean permissive grants**; plus two MIT AI-literacy curricula correctly filed as curriculum, not as agents
+
+⏱️ **Fourth pass of this date.** 🟢 **Append-only: this section is new; every dated section below it is preserved.**
+
+### 🔴 New this pass — the credential issuers (`Gap 324`, discovered capability-blind per `P826`)
+
+| Repo | Licence (payload) | Default ref · HEAD | Signal |
+|---|---|---|---|
+| [`educredentials/ec-issuer`](https://github.com/educredentials/ec-issuer) | 🔴 **No licence file** in a 141-file enumerated tree; README §License says `MIT` | `main` `8bafc99` · 2026-08-28 | 🟢 **Technically the strongest**: Open Badges 3.0 **+** European Learner Model **+** OID4VCI, Ed25519 keypairs, **53 of 141 files are tests**. 🔴 **No grant** → `Gap 325` |
+| [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | 🔴 **AGPL-3.0** 33 820 B | `main` `6fd0a11` | OB 3.0 + W3C VC, Ed25519-signed, bulk CSV issuance. 🔴 Network copyleft |
+| [`mint-o-badges/badgr-server`](https://github.com/mint-o-badges/badgr-server) | 🔴 **AGPL-3.0** 34 519 B | 🟡 **`develop`** `4c7080e` | Django reference implementation, lineage to 2015. 🔴 **Open Badges 2.0**, not 3.0. 🟡 **Default ref is `develop`** — pin accordingly |
+
+🔴 **Zero of three is usable as a permissive component.** 🟢 **A Globant engagement needing credential issuance either accepts AGPL-3.0 and self-hosts for the client, or waits on `Gap 325`.**
+
+### 🟢 Filed as curriculum, not as agents — the control query's actual output
+
+| Repo | Licence (payload) | HEAD | Filed as |
+|---|---|---|---|
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 **MIT** 1 141 B | `25b7985` | 🟢 L&D curriculum (12 lessons) |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | 🟢 **MIT** 1 091 B | `da3f9df` | 🟢 L&D curriculum (local LLM, framework-free) |
+
+🔴 **Neither is an education-industry agent**, and this shelf records that explicitly so a later pass does not promote them.
+
+### 🟢 Re-verified unchanged this pass
+
+🟢 [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) Apache-2.0 · `master` `0ec24fe` — still the LTI 1.3 + AGS library of record. 🟢 [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) MIT · `main` `939eb0e`. 🟢 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) Apache-2.0 · `main` `6cf793b`. 🟢 [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) MIT · `master` `d8fa43e` (still 2022-stale). 🟢 [`moodle/moodle`](https://github.com/moodle/moodle) · `main` `f205347`. 🟢 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) AGPL-3.0 35 136 B · `master` `bf699a5`.
+
+🔵 **Instrument note (`P829`):** every file count in this section was taken with `ls-tree -r HEAD --name-only` on a blobless clone. 🔴 **`ls-files` returns `0` on a `--no-checkout` clone** and would have published `ec-issuer` as an empty tree.
+
 ## 🟢 2026-10-09 (pass 71) — the week's movement is in the **interoperability layer**, not the agent layer: `ltijs` v7 committed three days ago with AGS in the tree
 
 ⏱️ **Third dated section for 2026-10-09.** **Append-only: this section is new; every section below it is preserved.**

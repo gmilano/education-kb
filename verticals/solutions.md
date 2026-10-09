@@ -4,6 +4,32 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-second pass, 2026-10-09 — the **credential-issuance vertical is mapped and it is copyleft-only**; one vendor interop claim is recorded as *unresolved* rather than repeated
+
+⏱️ **Fourth pass of this date.** Pass 71 closed earlier today (commit `1fe734a`). **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 Credential issuance — a real vertical with no permissive platform (`Gap 324`)
+
+🔵 **The pattern this shelf recommends everywhere — take a functioning platform, add an agentic layer — has no permissive candidate in the credentials vertical.** 🟢 **Here is what exists, licences read from payload:**
+
+| Platform | Repo | Licence | Default ref · HEAD | Standards | Customisation posture |
+|---|---|---|---|---|---|
+| **Badgr Server** | [`mint-o-badges/badgr-server`](https://github.com/mint-o-badges/badgr-server) | 🔴 **AGPL-3.0** 34 519 B | 🟡 **`develop`** `4c7080e` | 🔴 Open Badges **2.0** | 🟡 Django + REST, learner backpack, profile embeds. **Most platform-shaped of the three.** 🔴 §13 network copyleft |
+| **Certo** | [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | 🔴 **AGPL-3.0** 33 820 B | `main` `6fd0a11` | 🟢 OB **3.0** + W3C VC | 🟡 Issue / manage / verify, bulk CSV, Ed25519 with a public verification endpoint |
+| **EC Issuer** | [`educredentials/ec-issuer`](https://github.com/educredentials/ec-issuer) | 🔴 **No licence file** (README asserts MIT) | `main` `8bafc99` | 🟢 OB **3.0** + **ELM** + **OID4VCI** | 🔴 **Not adoptable until `Gap 325` resolves** — strongest standards coverage, no grant |
+
+🟢 **Practical reading for an engagement:** 🟡 **AGPL-3.0 is workable when you self-host for the client and ship no modified service of your own** — this shelf has priced that posture for Open edX already and the same reasoning applies. 🔴 **It is not workable if the client wants a Globant-operated multi-tenant credential service.** 🟢 **In that case the honest answer today is a commercial issuer or a build, and `ec-issuer` becomes the obvious base the moment it carries a licence.**
+
+### 🟡 One vendor interop claim, recorded as unresolved rather than repeated
+
+🔵 **A vendor page states that OpenEduCat — an Odoo-based education ERP, LGPL-3.0 per its own site — ships LTI 1.3 plus OneRoster and Ed-Fi roster sync.** 🔴 **If accurate that would bear directly on `Gap 309`**, which records Ed-Fi DMS as the only permissive system of record with no OneRoster and no change feed.
+
+🔴 **This pass could not resolve OpenEduCat's repository path, and per `P827` records nothing about its tree.** 🟢 **What can be said without a probe:** LGPL-3.0 is **copyleft either way**, so even if the claim is true it does **not** change `Gap 309`'s count of *zero permissive* systems of record. 🟢 **It would change the integration story**, which is why it is worth resolving rather than dropping. 🔵 Carried on `Gap 309`.
+
+### 🟢 Platform substrate re-verified unchanged
+
+🟢 [`moodle/moodle`](https://github.com/moodle/moodle) · `main` `f205347` — GPL-3.0, still the broadest LMS substrate. 🟢 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) · `master` `bf699a5` — **AGPL-3.0, `LICENSE` 35 136 B, re-read from payload this pass.** 🔵 **Self-hosting for a client is fine; redistributing a modified platform, or running a modified one as your own service, is a licence event.** 🟢 The figure matches what this shelf already records in twelve places — 🔵 **noted because a probe is only a correction when it disagrees.**
+
 ## 🟢 Seventy-first pass, 2026-10-09 — `Gap 322` **CLOSED**: Open TutorAI's Enterprise Edition withholds **commercial** things, not pedagogical ones, and the CE rewrite has removed its OpenWebUI licence exposure entirely
 
 ⏱️ **Third pass of this date.** Pass 70 closed earlier today (commit `cf5c9bf`). **Append-only: this section is new; nothing below it was rewritten.**

@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-second pass, 2026-10-09 — the **grading gate is measured, not just catalogued**: `AI-Teaching-Agent`'s human-approval state machine is specified in a contract and exercised by **25 test references**, while the provider path behind it is declared `MOCK_ONLY`. Zero new agents added, **and the reason is a finding**
+
+⏱️ **Fourth pass of this date.** Pass 71 closed earlier today (commit `1fe734a`). **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 The permissive human-approval gate, now priced — `Gap 323` CLOSED
+
+🔵 **Pass 71 recorded that [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) (🟢 MIT, `LICENSE` 1 069 B, `main` `b90bd88`) ships the only permissive human-approval gate on this shelf — but flagged that its own README declares automatic-grading productization *"frozen."*** 🟢 **The distinction now has a measurement behind it.**
+
+🟢 **The gate is declared in a machine-readable contract**, `ai-workflows/phase2-grading-generation.contract.json` (**3 200 B**):
+
+| Field | Value | Reading |
+|---|---|---|
+| `reviewGate.defaultGeneratedStatus` | 🟢 `WAITING_REVIEW` | Nothing is born published |
+| `reviewGate.publishBlockedUntilApproved` | 🟢 `true` | The block is the default, not a setting |
+| `reviewGate.autoPublishAllowed` | 🟢 `false` | No bypass path is declared |
+| `safety.*` (10 flags: `realPublish`, `reviewBypassed`, `sandboxExecuted`, `contestantCodeExecuted`, …) | 🟢 **all `false`** | The safety posture is explicit and auditable |
+
+🟢 **And it is exercised.** **155 test files** under a `pytest.ini` that makes external dependencies opt-in via `integration` and `real_llm_online` markers. Coverage measured **by reference, not by filename** (`P830`):
+
+| Gate module | Referenced in |
+|---|---|
+| `cli/review_detail.py` | 🟢 **16** test files |
+| `cli/review_decision_note.py` | 🟢 **6** |
+| `cli/review_batch.py` | 🟢 **3** |
+| `backend/grading_worker.py` | 🟢 **3** |
+| `cli/agent_entity_publish_review.py` | 🔴 **0** |
+| `cli/review_pre_approve.py` | 🔴 **0** — 🆕 not previously recorded on this shelf |
+
+🔴 **What "frozen" means, precisely:** the same contract declares **`mode = MOCK_ONLY`** and **`safety.realLlmCalled = false`**. 🟢 **So the gate, its schema validation and its refusal to auto-publish are real and tested; the real-provider generation path behind it is not built.** 🟢 **For a Globant engagement that is the favourable half** — the part that is expensive to get right (an auditable approval state machine a registrar will accept) is the part that exists, and the part you were going to supply anyway (your own model path) is the part that is missing.
+
+🔴 **Carry, and it is where an integration attaches:** the two zero-reference modules are both on the **publish side**. 🟢 Treat `agent_entity_publish_review.py` and `review_pre_approve.py` as **unverified surface** and write tests against them as the first task of `P14-R` / `P23`.
+
+🟢 **Surface unchanged otherwise:** 642 files enumerated by `ls-tree` (`P829`), **MCP** (`cli/mcp_audit.py`, `mcp-server/high-risk-tool-safety.contract.json`) and 🔴 **still no LTI seam of any version.**
+
+### 🔴 Zero agents added this pass — **and the empty result is the finding**
+
+🟢 **The control query `top open source AI agents education 2026 github MIT` returned no education-industry agent for the twenty-second consecutive week.** 🟢 **What it returned instead makes `P826`'s mechanism visible:**
+
+| Repo | Licence (payload) | HEAD | Why it is **not** shelved here |
+|---|---|---|---|
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 **MIT** 1 141 B | `25b7985` | 🔴 A **12-lesson curriculum about building agents** — not an agent in an education setting |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | 🟢 **MIT** 1 091 B | `da3f9df` | 🔴 Teaching material: agents from first principles, local LLM, no framework |
+
+🔴 **Both are *about* AI; neither is AI *in teaching*.** 🟢 **That is the category-vocabulary effect `P826` named — caught in the act rather than argued.** 🟢 **Both are licence-verified and filed to `repos/foundations.md` as L&D curriculum**, where they are genuinely useful for upskilling engagements. 🔴 **Listing them as education agents is exactly how an empty layer is made to look populated, and this shelf will not do it.**
+
+🟢 **The agent table below is therefore unchanged this pass, deliberately.** 🔵 Pass 71's nine-agent cohort stands; no re-probe was due.
+
 ## 🟢 Seventy-first pass, 2026-10-09 — the twenty-week "empty agent layer" is **fully explained, and pass 70's explanation was the wrong one**. Licence-blind discovery returns an **overwhelmingly MIT** field: **9 new agents censused, every licence read from payload — 7 MIT, 1 AGPL-3.0, 1 unlicensed**
 
 ⏱️ **Third pass of this date.** Pass 70 closed earlier today (commit `cf5c9bf`). **Append-only: this section is new; nothing below it was rewritten.**

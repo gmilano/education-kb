@@ -4,6 +4,39 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-second pass, 2026-10-09 — the **credential layer gets a foundation row and it is a red one**: three Open Badges issuers, **zero clean permissive grants**. Two MIT L&D curricula added in their correct category
+
+⏱️ **Fourth pass of this date.** Pass 71 closed earlier today (commit `1fe734a`). **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 Digital credentials — censused, and there is no permissive foundation to build on (`Gap 324`)
+
+🔵 **Why this matters here:** `intel/trends.md` has carried digital credentials as a live trend on two independent channels, and this shelf has never been able to name a permissive issuer. 🟢 **It now can name three issuers and must report that none of them is cleanly permissive.**
+
+| Repo | Licence (read from payload) | Default ref · HEAD | Standards | ¿Base for AI? |
+|---|---|---|---|---|
+| [`educredentials/ec-issuer`](https://github.com/educredentials/ec-issuer) | 🔴 **No `LICENSE` in a 141-file enumerated tree** · README §License asserts `MIT` | `main` `8bafc99` · 2026-08-28 | 🟢 **OB 3.0 + European Learner Model + OID4VCI** | 🔴 **Blocked on `Gap 325`** — no grant to rely on |
+| [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | 🔴 **AGPL-3.0** 33 820 B | `main` `6fd0a11` | OB 3.0 + W3C VC, Ed25519 | 🟡 Self-host for a client only |
+| [`mint-o-badges/badgr-server`](https://github.com/mint-o-badges/badgr-server) | 🔴 **AGPL-3.0** 34 519 B | 🟡 **`develop`** `4c7080e` | 🔴 **OB 2.0** only | 🟡 Self-host for a client only |
+
+🟢 **`ec-issuer` is the one worth watching**, because it is the only implementation covering **Open Badges 3.0, the European Learner Model and OID4VCI together** — relevant to any EMEA engagement touching learner mobility. Its tree: `templates/openbadge_credential_template.json`, `src/credential_configurations/` (7 modules including an SSI-agent client adapter), `tests/e2e/test_oid4vci.py`, committed Ed25519 issuer and holder keypairs, `docs/src/oidc4vci_issuer_agent.md`, and **53 of 141 files are tests**. 🔴 **And it ships no licence file.** 🟡 **Second instance of the `Gap 312` pattern** — pair the counsel question with `frappe/education`'s.
+
+### 🟢 L&D curriculum — the right home for what the agent query keeps returning
+
+🔵 **Recorded here, not in `agents/top.md`, and the distinction is deliberate.** These teach people to build agents; they are not agents deployed in an education setting. 🟢 **For a Globant upskilling or academy engagement they are genuinely the best permissive starting points available.**
+
+| Repo | Licence (payload) | HEAD | Use |
+|---|---|---|---|
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 **MIT** 1 141 B | `25b7985` | 🟢 12-lesson agent curriculum — ready-made internal academy spine |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | 🟢 **MIT** 1 091 B | `da3f9df` | 🟢 Agents from first principles on a **local LLM, no framework** — the sovereignty-friendly teaching track |
+
+🔴 **Do not promote either into the agent layer.** 🟢 `P826` predicted this exact confusion and this pass observed it in output: the control query's "education" token selects *material about AI*, not *AI in teaching*.
+
+### 🟢 LTI remains the seam, and the library remains the same
+
+🟢 [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) — **Apache-2.0**, `master` `0ec24fe` — re-verified this pass and still the only maintained permissive library implementing the full **LTI 1.3 + AGS** surface. 🟡 [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) — MIT, `master` `d8fa43e`, **still four years stale**; adopt only by owning the fork.
+
+🔵 **Instrument note (`P829`):** file counts here were taken with `ls-tree -r HEAD --name-only` on blobless clones. 🔴 **`ls-files` reports `0` on a `--no-checkout` clone**, which would have published `ec-issuer` as an empty tree.
+
 ## 🟢 Seventy-first pass, 2026-10-09 — `Gap 316(i)` **ANSWERED**: the permissive tier's "LTI 1.3 ceiling" was never a protocol gap. **Two permissive LTI 1.3 + AGS libraries exist**, one Apache-2.0 and maintained three days ago, one MIT and complete but four years dead
 
 ⏱️ **Third pass of this date.** Pass 70 closed earlier today (commit `cf5c9bf`). **Append-only: this section is new; nothing below it was rewritten.**

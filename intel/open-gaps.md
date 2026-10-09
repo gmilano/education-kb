@@ -4,6 +4,111 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-second pass, 2026-10-09 — `Gap 323` and `Gap 324` **both CLOSE from primary payload**; `Gap 308` refused a **fifth** time; `Gap 316`'s capture thesis re-confirmed on a **third independent channel**; two instrument protocols adopted (`P829`, `P830`) and two gaps open (`325`–`326`)
+
+⏱️ **Fourth pass of this date.** Pass 71 closed earlier today (commit `1fe734a`). **Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Registry continuity:** pass 71 wrote to this file, so the section below this one is pass 71's and no fold-forward is needed.
+
+### 🟢 `Gap 323` — **CLOSED.** The review gate is **functional as a state machine**; what is frozen is the provider path behind it
+
+🔵 **The gap asked** whether `AI-Teaching-Agent`'s declared-frozen grading gate is *"a working gate to integrate"* or *"a shape to re-implement"* — and said the difference is most of the `P14-R` / `P23` estimate.
+
+🟢 **Answered by reading the contract and the tests from payload.** Measured on `main` `b90bd88` (HEAD **2026-08-23**), **642 files** enumerated by `ls-tree`.
+
+🟢 **The gate is specified.** `ai-workflows/phase2-grading-generation.contract.json` (**3 200 B**) declares it explicitly:
+
+| Contract field | Value |
+|---|---|
+| `reviewGate.defaultGeneratedStatus` | 🟢 `WAITING_REVIEW` |
+| `reviewGate.publishBlockedUntilApproved` | 🟢 `true` |
+| `reviewGate.autoPublishAllowed` | 🟢 `false` |
+| `qualitySignals.reviewRequired` | 🟢 `true` |
+| `safety.*` — 10 flags incl. `realPublish`, `reviewBypassed`, `autoPublishAllowed` | 🟢 **all `false`** |
+
+🟢 **And the gate is tested.** **155 test files** under a `pytest.ini` whose `integration` and `real_llm_online` markers make external dependencies **opt-in**. Coverage by reference, not by filename:
+
+| Gate module | Test files referencing it |
+|---|---|
+| `cli/review_detail.py` | 🟢 **16** |
+| `cli/review_decision_note.py` | 🟢 **6** |
+| `cli/review_batch.py` | 🟢 **3** |
+| `backend/grading_worker.py` | 🟢 **3** |
+| `cli/agent_entity_publish_review.py` | 🔴 **0** |
+| `cli/review_pre_approve.py` | 🔴 **0** (not previously recorded on this shelf) |
+
+🔴 **What "frozen" actually means, and it is the finding:** the contract declares **`mode = MOCK_ONLY`** and **`safety.realLlmCalled = false`**. 🟢 **The state machine, its schema validation and its refusal to auto-publish are real, specified and exercised. The real-provider generation path behind it is not.** 🟢 **So `P14-R` and `P23` integrate a tested review gate and supply the provider path themselves** — the cheaper of the two poles the gap posed, but not free, and 🔴 **the two zero-reference modules are the publish-side seam, which is precisely where an integration would attach.**
+
+### 🟢 `Gap 324` — **CLOSED, negatively.** Three Open Badges issuers censused, **zero clean permissive grants** — and the strongest one has an assertion without a grant
+
+🟢 **Discovered capability-blind per `P826`**, licence then read from payload:
+
+| Issuer | Licence (payload) | Default ref · HEAD | Verdict |
+|---|---|---|---|
+| [`educredentials/ec-issuer`](https://github.com/educredentials/ec-issuer) | 🔴 **No licence file in a 141-file enumerated tree**; `README.md` §License says `MIT` | `main` `8bafc99` · **2026-08-28** | 🔴 **Assertion without a grant** |
+| [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | 🔴 **AGPL-3.0** 33 820 B | `main` `6fd0a11` | 🔴 Network copyleft |
+| [`mint-o-badges/badgr-server`](https://github.com/mint-o-badges/badgr-server) | 🔴 **AGPL-3.0** 34 519 B | 🟡 **`develop`** `4c7080e` | 🔴 Network copyleft; **note the default ref is not `main`** |
+
+🔴 **So the trend `intel/trends.md` records on two channels still has no permissive implementation** — the answer is the same shape as `Gap 301`'s, but reached by enumeration rather than guessed 404s, so it is now a measurement.
+
+🔴 **The uncomfortable part is `ec-issuer`,** because it is the **technically strongest** of the three: `templates/openbadge_credential_template.json`, `src/credential_configurations/` (7 modules incl. an SSI-agent client adapter), `tests/e2e/test_oid4vci.py`, committed Ed25519 issuer/holder keypairs, **53 test files of 141**, and `docs/src/oidc4vci_issuer_agent.md`. 🟢 **It is the only one covering Open Badges 3.0 *and* the European Learner Model *and* OID4VCI.** 🔴 **And it ships no `LICENSE`.** 🟡 **This is the second instance of the `Gap 312` pattern on this shelf** (`frappe/education`'s 19 B assertion) — a README licence line is a statement of intent, not a grant, and 🔴 **a bare `## License / MIT` with no file is the weakest form of it.**
+
+🟢 **Recorded as `Gap 325` rather than left inside a closed gap**, because the remedy is cheap and external: ask upstream to add the file.
+
+### 🔴 `Gap 308` — OPEN. **Fifth consecutive refusal; diagnosis unchanged and now very well evidenced**
+
+🟢 Probed this pass with controls in the same command:
+
+| Host | Code |
+|---|---|
+| `eur-lex.europa.eu/eli/reg/2026/1744/oj/eng` | 🔴 `000` |
+| `digital-strategy.ec.europa.eu` | 🔴 `000` |
+| `artificialintelligenceact.eu` | 🔴 `000` |
+| `api.github.com` *(control)* | 🟢 `400` — reachable |
+| `raw.githubusercontent.com` *(control)* | 🟢 `301` — reachable |
+
+🔴 **Every EU AI Act date on this shelf still rests on secondary channels only** — and this pass adds a materially important one that makes the gap more expensive, not less (see `intel/trends.md`): the **Digital Omnibus** reportedly postpones Annex III high-risk obligations, **which is the education bucket**, from **2026-08-02** to **2027-12-02**. 🔴 **If true it moves the single most load-bearing compliance date on this shelf by sixteen months; it is sourced to a secondary summary of a 2026-06-16 European Parliament vote, with Council adoption unconfirmed.** 🟢 **Remedy unchanged and now the highest-value item in the registry:** one fetch of the primary text from a session with egress to `eur-lex.europa.eu`. 🟡 `Gap 310` rides unchanged.
+
+### 🟢 `Gap 316` — capture thesis **re-confirmed on a third independent channel**
+
+🟢 A capability-shaped search for a self-hosted permissive grading agent speaking **LTI 1.3 + AGS** returns, once again, **only closed products** — Gradescope, Turnitin Feedback Studio and CodeGrade, all **1EdTech LTI Advantage certified** with AGS grade passback — alongside generic agent frameworks with no LMS seam at all. 🔴 **No permissive component holds the protocol.** 🟢 **The seam this shelf has named for five passes is still one protocol hop wide, and `ltijs` (Apache-2.0, `0ec24fe`) is still the library that closes it.** 🔵 `Gap 316(i)`'s narrowed limb — the real wiring cost — remains unrecorded and is still best paid once inside `P12-R`.
+
+### 🆕 `Gap 325` — `ec-issuer`'s licence: assertion without a grant
+
+🔴 **The question for counsel:** a `README.md` section reading `## License` / `MIT`, with **no licence file anywhere in the enumerated tree**, against a repository under an institutional org (`educredentials`, Surf Development Platform deployment per its own README). 🟢 **Cheap external remedy:** open an issue upstream asking for `LICENSE`. 🔵 **Pair it with `Gap 312`** — same pattern, same counsel question, and answering one answers both.
+
+### 🆕 `Gap 326` — ibl.ai's "open source runtime" claim is **unmeasured, not absent**
+
+🔵 **Why this is a gap and not a finding:** a vendor page claims ibl.ai's runtime is open source and lists **LTI 1.3** among its integrations. 🔴 **If true it would weaken `Gap 316`'s capture thesis directly**, since ibl.ai is one of the six closed vendors the thesis rests on. 🔴 **This pass probed four *guessed* `ibleducation/*` paths and all four returned absent — and per `P827` that is not a measurement and is not recorded as one.** 🟢 **Remedy:** resolve the actual org and repository name from the vendor's own documentation, then enumerate the tree and read the licence from payload. 🟢 **Recorded explicitly so that this pass's guessed-path result cannot later be mistaken for evidence of absence.**
+
+### 🆕 `P829` — `git ls-files` reports **zero** on a `--no-checkout` clone; this pass nearly published a false empty tree
+
+🔴 **What happened:** `git clone --filter=blob:none --no-checkout` followed by `ls-files | wc -l` returned **0** for `ec-issuer`, and the pass was one step from recording *"the tree is empty."* 🟢 **`ls-tree -r HEAD --name-only` on the very same clone returns 141.** 🔵 **The cause:** `ls-files` reads the **index**, and `--no-checkout` leaves the index unpopulated; `ls-tree` reads the **commit object**, which is what a blobless clone does fetch.
+
+🟢 **`P829`: on a `--no-checkout` clone, enumerate with `ls-tree -r HEAD --name-only`. Never `ls-files`.** 🟢 **Control run in the same command and recorded above** (`ls-files` 0 vs `ls-tree` 141), so the protocol rests on a measurement rather than an explanation.
+
+🔴 **Retroactive, and narrower than `P827`'s sweep:** any file **count** on this shelf taken via `ls-files` against a no-checkout clone is suspect. 🟢 **`Gap 319`'s counts (upstream 30 / fork 43 / common 30) are *not* affected** — they are internally consistent and non-zero, so that clone was populated. 🟡 **The rule is adopted for all future passes and no past count is withdrawn on suspicion alone.**
+
+### 🆕 `P830` — coverage must be measured **by reference, not by filename**
+
+🔴 **What happened:** this pass first judged `Gap 323`'s review gate *"largely untested"* by reading the **names** of the 155 test files and finding no `test_review_batch.py`. 🟢 **Grepping the test tree for the module names instead shows `review_detail` in 16 files, `review_decision_note` in 6, `review_batch` in 3** — real coverage, reached from differently-named tests.
+
+🟢 **`P830`: never infer test coverage from test filenames. Grep the test tree for the symbol or module under test.** 🔴 **Had the filename reading been published, `Gap 323` would have closed with the wrong answer and `P14-R` would have been priced at the expensive pole.** 🟢 **Disclosed here rather than quietly corrected, because the first reading is the one a future pass is likeliest to repeat.**
+
+### 🟢 The control query, **twenty-second empty week** — and `P826`'s mechanism is now visible in the output
+
+🟢 `top open source AI agents education 2026 github MIT` returned **zero education-industry agents** for the twenty-second consecutive week. 🟢 **What it did return is the explanation:** **AI-literacy curricula** — [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) (🟢 MIT, 1 141 B, `25b7985`) and [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) (🟢 MIT, 1 091 B, `da3f9df`).
+
+🔴 **Both are *about* building agents; neither is an agent deployed in an education setting.** 🟢 **That is the category-vocabulary effect `P826` named, caught in the act:** the phrase "education" in a listicle query selects teaching *material about AI*, not AI *in teaching*. 🟢 **Recorded, licence-verified, and filed to `repos/foundations.md` as L&D curriculum rather than to `agents/top.md`** — 🔴 **shelving them as agents is exactly how an empty layer gets made to look populated.**
+
+### 🟡 Gaps carried forward unchanged this pass
+
+🟢 **`Gap 309`** — Ed-Fi DMS still the only permissive system of record; no OneRoster, no change feed; census six systems, zero permissive. 🔵 A vendor page claims **OpenEduCat** (LGPL-3.0 per its own site, so copyleft either way and no change to the permissive count) ships OneRoster and Ed-Fi roster sync; 🔴 **this pass could not resolve its repository path and records nothing about it per `P827`.** 🟢 **`Gap 312`** — `frappe/education`'s 19 B assertion; now paired with `Gap 325`. 🟢 **`Gap 311(b)`** — pin Ed-Fi DMS `v8.0.0` (`d911abb`). 🟢 **`Gap 318`** — carried, unmeasured this pass. 🟢 **`Gap 310`** — rides with `308`. 🟢 **`Gap 316(i)`** — narrowed limb carried.
+
+🔴 **One figure refused again this pass:** any single market size for AI-in-education. 🟢 Five published 2026 figures span **$1.94B to $10.6B — a 5.5× spread** (see `intel/market.md`), which makes the median as unusable as the extremes. 🟢 **Nothing on this shelf is sized by it.**
+
+🟢 **One near-correction *not* published, recorded because the discipline worked:** a probe read `openedx/edx-platform` as **AGPL-3.0, 35 136 B, `bf699a5`** and this pass started to file it as a correction. 🟢 **The shelf already records exactly that, byte-for-byte and sha-for-sha, in twelve places.** 🔵 The stale `Apache-2.0` claim lives in a **different, unsynced mirror** (`globant-kb/education/`, v6, dated 2026-07-14) and not here. 🟢 **`P828`'s sweep habit generalises:** check what the shelf says before writing a correction to it.
+
 ## 🟢 Seventy-first pass, 2026-10-09 — `Gap 319`, `321` and `322` **CLOSE from primary payload**; `Gap 320` **CLOSES and falsifies the premise it was opened on**; `Gap 316(i)` **ANSWERED**; `Gap 308` refused a fourth time; two new gaps open (`323`–`324`) and one instrument hazard is recorded against this shelf's own past method
 
 ⏱️ **Third pass of this date.** Pass 70 closed earlier today (commit `cf5c9bf`). **Append-only: this section is new; nothing below it was rewritten.**

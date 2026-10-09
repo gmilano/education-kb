@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-second pass, 2026-10-09 — regional regulation re-measured on four channels; **the single most load-bearing compliance date on this shelf may have moved sixteen months**, and the market-size figure is **refused on a 5.5× spread**
+
+⏱️ **Fourth pass of this date.** Pass 71 closed earlier today (commit `1fe734a`). **Append-only: this section is new; nothing below it was rewritten. The live `## Opportunities by region` block is the one in this section; pass 71's has been retitled *superseded* per this file's convention.**
+
+### 🔴 Market size — **refused**, and the spread is the reason
+
+🟢 Five published 2026 figures for AI-in-education, collected this pass:
+
+| Source | 2026 figure | Horizon |
+|---|---|---|
+| Research and Markets | $10.6B | $42.48B by 2030 @ 41.5% |
+| Precedence Research | $9.58B | ~$136.79B by 2035 |
+| Future Data Stats | $7.50B | $25.70B by 2033 @ 19.2% |
+| The Business Research Company *(higher-ed only)* | $4.09B | $13.46B by 2030 @ 34.7% |
+| MarketReportsWorld | $1.94B | — |
+
+🔴 **$1.94B to $10.6B is a 5.5× spread on the same year and the same nominal market.** 🟢 **A median of that is not a number, it is an average of incompatible definitions** — segment boundaries, whether hardware and services count, and whether "AI in education" includes AI-taught-as-a-subject all move it by multiples. 🔴 **Several are syndicated reports with undisclosed method.** 🟢 **Nothing on this shelf is sized, ranked or prioritised by any of them, and no single figure is adopted.** 🔵 Consistent with this shelf's refusal of third-party star counts for the same reason.
+
+🟢 **What *is* usable, because it is a measured behaviour rather than a modelled market:** 🟢 **OECD TALIS secondary-teacher AI use — Brazil 56%, Chile 55%, Colombia 53%, Costa Rica 52%, against an OECD average of 36%.** 🔵 Survey, dated 2024, method published. 🟢 **Technavio's institution-wide AI implementation in higher education at 66%** is directionally useful but vendor-sourced.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The measurable fact is legislative volume, and it is high.** 🔴 **Two trackers disagree on the count — 134 bills across 31 states versus 68 across 27 — because they use different inclusion methods**, so this shelf records the spread rather than picking one. 🟢 **35+ states carry official AI guidance as of June 2026**; 🟢 **the federal Department of Education finalised its AI grant-priority rule on 2026-04-13.**
+
+🟢 **The engagement-shaped signal is the mandate pattern, not the volume.** Four states require **both** state guidance **and** mandatory district-level policy adoption — **Idaho** (S.B. 1227: privacy, procurement, transparency, academic integrity, AI literacy), **Oklahoma** (S.B. 1734: every district, written policy before the 2027-28 school year), **Maryland** (AI Ready Schools Act: 24 districts, 120 days from state guidance), and **Virginia**. 🟢 **In higher education Florida is the clearest mover:** the Board of Governors has noticed intent to require universities to address faculty AI disclosure, student AI disclosure and permitted coursework use; separately all **28 Florida College System institutions** are to adopt AI-use policies covering **academic integrity and grading**.
+
+🟢 **Opportunity:** policy-to-implementation is the gap. Hundreds of districts and 28 state colleges must produce, evidence and audit an AI-use policy on a deadline. 🟢 **`AI-Teaching-Agent`'s contract-declared `WAITING_REVIEW` gate is the artefact that turns a written policy into something demonstrable** (see `compose/patterns.md`, `P23`). 🔴 **Curriculum mandates are a second, separate line** — Alabama H.B. 329 requires a CS course including AI instruction for graduation, with Georgia and Mississippi adding AI-inclusive CS credits later this decade — and that is a content and teacher-training engagement, not a platform one. 🔴 **Student-data-for-training is the live constraint**: California A.B. 1159 would bar using student data to train models absent direct school benefit. 🔵 **Thin channel declared:** this pass found **nothing substantive on Canada or Mexico** education AI policy; the regional read is effectively US-only and is labelled as such rather than generalised.
+
+### EMEA
+
+🔴 **The most important finding of this pass sits here, and it is unverified.** 🟢 **Already in force and not in dispute:** EU AI Act **Article 4** (AI literacy) since **2025-02-02**, and **Article 5**, which **bans AI inferring emotions in education institutions** outside narrow medical and safety exceptions. 🔴 **That second one is a present-tense prohibition** — any engagement touching engagement-detection, attention-tracking or affect-aware tutoring is non-compliant **today**, not in 2027.
+
+🔴 **The disputed date:** Annex III high-risk covers **admissions, grading and exam proctoring** — the education bucket. 🔴 **Secondary sources report the Digital Omnibus postpones these obligations from 2026-08-02 to 2027-12-02**, on a European Parliament vote of **2026-06-16**, with **Council adoption unconfirmed**. 🟢 **Other secondary sources still state August 2026.** 🔴 **This shelf cannot resolve it: `Gap 308` records a fifth consecutive refusal of every EU institutional host this session can reach.** 🟢 **Recorded as contested, with both dates named, because a sixteen-month swing in the high-risk date is the difference between a compliance scramble and a design runway — and a KB that silently picked one would be worse than useless.**
+
+🟢 **Opportunity:** the sovereignty-plus-compliance posture this shelf has built toward. 🟢 **`ec-issuer`'s Open Badges 3.0 + European Learner Model + OID4VCI coverage is the natural credential spine for learner mobility** — 🔴 **blocked on `Gap 325`, its missing licence file, which is a question for counsel and not an engineering cost.** 🟢 **Policy demand signal:** the European Commission with the OECD, G7-endorsed, has proposed a draft **AI Literacy Framework** for primary and secondary education to align national approaches; a classroom pilot that began in **Italy, Portugal and Spain** has expanded to **Albania, Bulgaria, Czechia, France, Greece, Romania and Ukraine**. 🔵 That expansion is sponsored content and is flagged as such.
+
+### APAC
+
+🟢 **The region has the clearest statutory hook for education AI anywhere on this shelf.** 🟢 **South Korea's AI Basic Act took effect 2026-01-22**, applies **extraterritorially** to systems affecting Korean users, and names **education** among its "high-impact" sectors — requiring **meaningful human monitoring and intervention at any time.** 🔴 **That is a human-in-the-loop requirement written into statute**, which makes a demonstrable approval gate a procurement precondition rather than a nice-to-have.
+
+🟢 **China holds the most binding rule set** — generative AI measures, algorithm registration, and **mandatory synthetic-content labelling since 2025-09** — and, with the UAE, is reported as one of only two countries running a **compulsory national AI curriculum**, from the 2025-26 school year. 🟢 **India moves fastest on curriculum:** AI and computational thinking become **mandatory from Class 3** across government and private schools in **2026-27**, backed by the IndiaAI Mission; IT Rules amendments covering AI-generated content took effect **2026-02-20**, and in **July 2026** the government signalled dedicated, risk-based AI legislation. 🟡 **Japan stays light-touch** — a 2025 framework law, an AI Strategic Headquarters chaired by the prime minister, voluntary and sectoral; 🔵 **no national school-level AI mandate was found, declared rather than assumed.**
+
+🔴 **The cautionary case is Korea's, and it is the most useful thing in this subsection.** Seoul planned mandatory AI textbooks from 2025; **adoption sat below 30% by March**, and that **August the National Assembly stripped them of official status** after unions said the pace had outrun preparation. 🟢 **The lesson prices an engagement correctly:** teacher readiness, not model quality, is the binding constraint, and a rollout that skips it gets reversed. 🟢 **Opportunity:** Korea-compliant human-oversight architecture (the AI Basic Act's intervention requirement, served by a `WAITING_REVIEW` gate) plus the teacher-enablement track the Korean reversal proves is mandatory.
+
+### LATAM
+
+🟢 **This is the region where measured behaviour is strongest and institutional readiness weakest — and the gap is the business.** 🟢 **OECD TALIS: 56% of secondary teachers in Brazil, 55% in Chile, 53% in Colombia and 52% in Costa Rica used AI in the prior year, against an OECD average of 36%.** 🔴 **Teachers are ahead of their institutions by roughly twenty points.** 🟢 **UNESCO records institutional frameworks not keeping pace with adoption**, and 🔴 **CENIA finds 13 of 19 LAC countries studied do not teach early AI in schools at all.**
+
+🟢 **Regulation, by country:** 🟡 **Brazil** — principles-based federal bill (operator duty to give clear, accessible information on exercising user rights; collective claims permitted), plus **ENIA** national strategy since 2022. 🟡 **Mexico** — a bill with a digital-rights chapter including a right to interact through AI systems; otherwise sectoral. 🟡 **Colombia** — **CONPES 4144** (adopted 2025-02), a government-wide programme with budget through 2030 and **no horizontal obligations**; 🟢 **sectoral regulators and public buyers read it as procurement template anyway**, which is what makes it commercially real. 🟢 **Chile** — risk-classified uses with supervision tied to a **data protection authority still being set up**; **ranked first in LATAM on the ILIA 2025 AI maturity index.** 🔴 **No dedicated 2026 education-specific AI regulation was found in any of the four** — declared as a gap, not read as permission.
+
+🔴 **The constraint that actually binds a grading agent here:** 🟢 **Chile and Mexico both recognise limits on decisions made solely by automated processing**, prohibiting it where it produces unwanted legal effects or significantly affects rights — and a published grade is exactly that. 🟢 **So the human-approval gate is a legal requirement in LATAM too, arrived at from data-protection law rather than AI law.** 🟢 **Opportunity:** this converges with North America's policy-evidence need, EMEA's Article-5-era caution and Korea's statutory intervention duty — 🟢 **one architecture, four regulatory rationales**, which is the strongest cross-regional case this shelf has assembled. 🔵 Data protection remains the region's most mature layer and the right place to anchor a compliance story.
+
 ## 🟢 Seventy-first pass, 2026-10-09 — the regulatory picture resolves into **one rule that binds today** (EU Article 4) and **one jurisdiction that names education as high-risk in a binding instrument** (Vietnam); `Gap 308` refused by a **fourth** probe
 
 ⏱️ **Third pass of this date.** Pass 70 closed earlier today (commit `cf5c9bf`). **Append-only: this section is new; nothing below it was rewritten.**
@@ -47,7 +101,7 @@ updated: 2026-10-09
 
 🔴 **Two independent 2026 estimates differ by 16% and neither publishes its methodology at the point of citation.** 🟢 **Quote the range, never a point estimate, and attribute it.**
 
-## Opportunities by region
+## Opportunities by region — superseded (the live block is at the top of this file)
 
 ### North America
 
