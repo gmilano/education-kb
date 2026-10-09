@@ -1,8 +1,176 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-08
+updated: 2026-10-09
 ---
+
+## 🟢 Sixty-ninth pass, 2026-10-09 — a **new instrument** (blobless clone) closes `Gap 303` and `Gap 311(a)` from primary payload on first use, `Gap 313` **CLOSES negatively at 0 of 3**, `Gap 312` narrows to a corroborated question, and the `api.github.com` **`403` is corrected** — it was never a blanket block
+
+⏱️ **First pass of this date (pass 68 closed 2026-10-08; the date rolled over during this pass's measurements, which are dated by their publication here). Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Registry continuity:** pass 68 wrote to this file, so the section below this one is pass 68's and no fold-forward is needed.
+
+### 🆕 Instrument correction, stated before any datum rests on it — `api.github.com` is **not** blanket-`403`
+
+🔵 **What passes ≤68 recorded:** *"`api.github.com` re-measured `403` — no star counts, nothing ranked by popularity."*
+
+🟢 **Measured this pass:**
+
+| Probe | Result |
+|---|---|
+| `api.github.com` DNS | 🟢 resolves — `140.82.114.6` |
+| `GET /rate_limit` | 🟢 **`200`**, and **authenticated**: core **15 000**/hr, graphql **10 000**, search **30** |
+| `GET /repos/Ed-Fi-Alliance-OSS/Data-Management-Service` | 🔴 **`403`** — *"GitHub access to this repository is not enabled for this session. Use add_repo…"* |
+| `GET /repos/gmilano/education-kb` (attached) | 🟢 **`200`**, full payload |
+
+🔴 **So the `403` is a per-repository authorisation boundary, not a host block.** 🟢 **The operational consequence is unchanged** — third-party star counts remain unavailable, nothing on this shelf may be ranked by popularity — 🔵 but the *cause* is now correct, and the distinction matters: an attached repository is fully API-readable, so any future probe of this KB's own repo may use the API freely.
+
+### 🆕 **New instrument: the blobless clone.** `git clone --depth 1 --filter=blob:none` — and it closed two gaps on first use
+
+🔵 **The constraint every prior pass worked under:** with `api.github.com` refusing third-party repos, tree contents were reachable only by *guessing* a path at `raw.githubusercontent.com` and recording the 404s. 🔴 `Gap 301` spent two passes probing *"four plausible CLR tree paths — all 404"*.
+
+🟢 **`git clone --depth 1 --filter=blob:none <repo>` needs no API and returns the complete tree.** On `Ed-Fi-Alliance-OSS/Data-Management-Service`: **5 846 files enumerated**, blobs fetched only on demand.
+
+🟢 **It is the cheapest high-value instrument added to this shelf since `git ls-remote --symref`**, and 🔵 **every gap in this registry whose remedy reads "read `docs/`…" or "check whether path X exists" is now cheap.** 🔴 **It does not defeat the licence law:** a blobless clone still fetches blobs on demand, so a content grep over a large tree costs real bytes — use `--depth 1` (full) for grep work and blobless for tree work.
+
+### 🟢 `Gap 303` — **CLOSED.** In-place takeover of an existing Ed-Fi ODS database is **not supported**, and the product says so normatively
+
+🔵 **The gap asked:** can an existing Ed-Fi ODS database be taken over **in place** by the Data-Management-Service, or does adoption require a data migration?
+
+🟢 **Measured from primary payload** (`main` · **`ab82466`**, blobless clone, 5 846 files):
+
+| Probe | Result |
+|---|---|
+| `docs/PRD-v8.0.md` line 19 | 🔴 *"a **ground-up rewrite** of functionality previously delivered via the Ed-Fi ODS/API"* |
+| `docs/PRD-v8.0.md` **NFR-OPS-2** | 🔴 *"the platform does not hot-reload extended schemas, **nor does it support in-place migration of an already-provisioned database to a new effective schema — provisioning is create-only**"* |
+| `docs/DATA-STRICTNESS.md` §*"Migrating from the Ed-Fi ODS/API"* | 🟡 **request-body casing guidance only** — not a data migration |
+| `docs/DATABASE-SEGMENTATION-STRATEGY.md` §*"Migration from ODS/API"* | 🟡 **a four-row configuration-equivalence table** (`OdsContextRouteTemplate` → Configuration Service API; `dbo.OdsInstances` → `POST /v3/dataStores`) — not a data migration |
+| `LICENCE` | 🟢 **Apache-2.0, 11 357 B** (canonical; re-confirmed) |
+
+🟢 **Closed, and closed the conservative way round:** pass 68 said *"price adoption as a data migration until proven otherwise, which is the conservative and probably correct default."* 🟢 **It was correct, and it is now established rather than assumed.** 🔵 The repository documents a migration path **at the configuration surface** and **nowhere at the data layer** — which, given NFR-OPS-2, is not an omission but the design.
+
+🟢 **What to quote to a client:** adoption of Ed-Fi DMS is a **re-platforming with a data migration**, not an upgrade. 🔴 **Never price it as an in-place cutover.**
+
+### 🟢 `Gap 311` — **(a) CLOSED** from payload; **(b) RE-CONFIRMED OPEN** and now moving
+
+🟡 **(a) The version jump `0.7.0 → 8.0.0` is explained, and pass 68's inference was right.** 🟢 `docs/PRD-v8.0.md`: *"**Ed-Fi API v8.0** is a ground-up rewrite of the platform's prior generation."* 🔵 **The version line is the Ed-Fi API *product* version, not the DMS *component*'s** — `v0.1.0`–`v0.7.0` were the component's pre-product tags, and `v8.0.0` is the first tag published under the product line it continues. 🟢 **Pass 68 recorded this as an inference under `P722` and declined to call it a fact; it is now a fact.**
+
+🟡 **(b) `main` is still not the tag, and it moved between passes:**
+
+| Probe | Pass 68 | Pass 69 |
+|---|---|---|
+| `main` HEAD | `9203e19` | 🆕 **`ab82466`** |
+| `v8.0.0` | `d911abb` | `d911abb` (unchanged) |
+| newest tags | `v8.0.0` | 🆕 **`dms-pre-8.0.1-alpha.0.94`–`0.99`** |
+| `docs/changelog/` | *unread* | 🆕 **`8.1.0.md` only** |
+
+🟢 **So `main` tracks 8.1.0 while the only release tag is `v8.0.0`, with an `8.0.1` alpha line in between.** 🔵 **The gap's practical remedy is unchanged and now better justified: pin `v8.0.0` explicitly.** 🔴 **Tracking `main` means tracking an unreleased 8.1.0 whose changelog opens with a section headed *"Breaking changes."***
+
+### 🟡 `Gap 312` — **NARROWED to a question for counsel only.** The upstream framework is **MIT** and does **not** govern the app's grant
+
+🔵 **The gap asked:** does a **19-byte** licence assertion (`License: GNU GPL V3`) convey GPL-3.0? Pass 68's remedy (i): *"check whether the upstream Frappe/ERPNext stack's licence terms govern the app — cheap, and likely decisive."*
+
+🟢 **Remedy (i) was run:**
+
+| Component | Layer | Licence evidence |
+|---|---|---|
+| `frappe/frappe` `[develop]` | **framework** | 🟢 **MIT**, `LICENSE` **1 118 B** — *"The MIT License, Copyright (c) 2016-2021 Frappe Technologies Pvt. Ltd."* 🆕 |
+| `frappe/erpnext` `[develop]` | **app** (sibling) | 🟢 **GPL-3.0, full grant, `license.txt` 35 149 B** 🆕 |
+| `frappe/education` `[develop]` | **app** | 🔴 **`license.txt` 19 B**, `LICENSE` **404** — re-confirmed byte-identical to pass 68 |
+
+🔴 **The framework's MIT terms do not rescue, override or impose anything on the app's grant** — so the 19-byte assertion stands alone as the app's only licence evidence. 🟢 **But the sibling app ships the real 35 149-byte GPL-3.0 grant**, which is strong corroboration that the org means GPL-3.0 when an app says so.
+
+🟢 **This is pass 68's licence law getting its sharpest instance yet:** *the grant follows the **author class**, not the layer* — 🔵 **here, within a single organisation, the framework tier is MIT and the app tier is GPL-3.0.** 🟢 **Treatment is unchanged: record GPL-3.0, assume every GPL-3.0 obligation.** 🔴 **Whether a bare licence *name* effects the grant remains a question for counsel** (`P805`) — but the commercial risk of the conservative reading is now known to be low, because the conservative reading is almost certainly the intended one.
+
+### 🔴 `Gap 309` — **RE-CONFIRMED OPEN, census widened to 6 of 6 non-permissive**, and remedy (ii) is now **weaker** than pass 68 could know
+
+🟢 **Remedy (i) was run** — census the SIS tier for a permissive outlier:
+
+| System | Licence | Evidence | Region |
+|---|---|---|---|
+| 🆕 **FenixEdu Academic** [`FenixEdu/fenixedu-academic`](https://github.com/FenixEdu/fenixedu-academic) | 🔴 **LGPL-3.0** | `master` **`675b540`**; `LICENSE` **7 652 B** — *"GNU LESSER GENERAL PUBLIC LICENSE Version 3"* | 🔵 **EMEA** (IST Lisbon, Portugal) |
+| OpenEduCat | 🔴 LGPL-3.0 | `LICENSE` **8 241 B** (re-read; 🟡 **≠ FenixEdu's 7 652 B** — OpenEduCat's carries a prepended copyright pointer, so the byte count alone does not identify the grant) | APAC (India) |
+| RosarioSIS · Gibbon · openSIS · `frappe/education` | 🔴 GPL-2.0 / GPL-3.0 / GPL-2.0 / GPL-3.0 | pass 68 + this pass | — |
+
+🔴 **Six read, zero permissive.** 🔵 The two LGPL-3.0 options (OpenEduCat, FenixEdu) share the **proprietary-addon** shape (`P750`) — an addon may stay closed, a fork of the platform may not.
+
+🔴 **And remedy (ii) — *"price Ed-Fi DMS + build the administrative surface"* — just got more expensive.** 🟢 `docs/PRD-v8.1.md` enumerates, as **gaps in v8.0 relative to the prior ODS/API generation**: **OneRoster rostering integration**, **event streaming (Kafka/CDC)**, read replicas and high-performance paging, ownership-based authorisation and custom access rules, unique-ID/Identities integration, and custom validation. 🔴 *"hosts and vendors who built downstream systems around a near-real-time change feed in the prior generation have **no equivalent way to consume data changes from v8.0 without polling the API**."*
+
+🟢 **So the shelf's only permissive system-of-record substrate has no rostering standard and no change feed.** 🟢 **Remedy (iii) is now the measured-best call, not merely the cheap one:** deploy a copyleft SIS unmodified and build beside it across **LTI 1.3** (`P736`, `P809`).
+
+### 🟢 `Gap 313` — **CLOSED negatively at 0 of 3**, and the shelf's own code names the missing piece
+
+🔵 **The gap asked:** does **any** third-party component on this shelf emit a machine-readable mark on generated content? 🔵 **Remedy (ii):** *"grep the shelf's permissive components for provenance/C2PA/watermark support — cheap, and should be done next pass regardless."*
+
+🟢 **Run against all three of `P11`'s permissive components** (`--depth 1` clones, full content grep):
+
+| Component | Licence | Files | `c2pa` | `content credential` | `watermark` | `provenance` |
+|---|---|---|---|---|---|---|
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) `cb794e4` | 🟢 Apache-2.0 (11 357 B) | 336 | 🔴 0 | 🔴 0 | 🔴 0 | 🔴 0 |
+| [`conform-ed/conform-ed`](https://github.com/conform-ed/conform-ed) `3596bb5` | 🟢 **MIT (1 080 B)** | 1 538 | 🔴 **0** | 🔴 **0** | 🟡 1 | 🟡 65 |
+| [`opensalt/opensalt`](https://github.com/opensalt/opensalt) `db41cc4` | 🟢 **MIT (1 080 B)** | 1 880 | 🔴 0 | 🔴 0 | 🔴 0 | 🔴 0 |
+
+🔴 **Both of conform-ed's apparent hits were read and both are false positives** — recorded in full because a hit count alone would have been a wrong datum:
+- 🟡 its **65 `provenance`** hits are a **spec-traceability tier** for pinned conformance artifacts — *"Lowest provenance tier; re-review on spec version bump"*, `PROVENANCE.md`;
+- 🟡 its **single `watermark`** is a **delta-sync high-watermark timestamp** — *"a `dateLastModified` — the watermark a delta exchange reconciles against"*, in the **OneRoster v1.2** coverage map.
+
+🟢 **So: 0 of 3. No third-party component on this shelf marks generated content.** 🔵 **The shelf's Article 50(2) marking capability is entirely its own code — which was the suspicion, and is now the measurement.**
+
+🟢 **And the shelf's own code states its own boundary.** Both marking suites were run and are green — 🟢 `aiact-50-2-marking` **23/23**, 🟢 `aiact-50-2-pack` **27/27** — and the marking suite's own closing output reads: 🔴 *"The signature seam (**MarkLLM / SynthID**, `P33`) is **declared and NOT filled**."*
+
+🟢 **Remedy is therefore concrete and permissive, and it is the one piece between this shelf and the obligation:** [`THU-BPM/MarkLLM`](https://github.com/THU-BPM/MarkLLM) — `main` **`0a4fe8c`**, 🟢 **Apache-2.0, `LICENSE` 11 357 B** (canonical, verified this pass). 🔵 **`P11` stays a readiness programme** (`P803`), 🟢 **but its one unfilled seam now has a named, licence-compatible component against it.**
+
+### 🔴 `Gap 308` — **STILL OPEN**, now with **two independent instruments** saying so
+
+🟢 **Re-measured both egress paths this pass:**
+
+| Path | Result |
+|---|---|
+| Bash / agent proxy → `eur-lex.europa.eu` | 🔴 **`CONNECT tunnel failed, response 403`** — and `getent hosts` **fails** |
+| `WebFetch` → same URL | 🔴 **`getaddrinfo ENOTFOUND eur-lex.europa.eu`** |
+| control: `api.github.com` from the same shell | 🟢 resolves and serves `200` |
+
+🔵 **Pass 68 recorded `DNS_BLOCKED` from one path; two now agree, and the proxy's answer identifies it as an allowlist denial rather than a DNS fault.** 🔴 **The AI Act dates therefore remain published with their channel count attached (four independent secondary channels; `2027-12-02` Annex III, `2028-08-02` Annex I), and must be quoted that way in any client file.** 🟢 **Remedy unchanged and still the cheapest high-value item in this registry: one fetch of `eur-lex.europa.eu/eli/reg/2026/1744/oj/eng` from any session with egress to that host.** 🟡 `Gap 310` rides with it.
+
+### 🆕 `Gap 314` — Ed-Fi DMS provisioning is **create-only**, and the cost of extending the model is unpriced
+
+🔴 **The gap.** `Gap 303`'s closing read turned up a second fact worth more than the answer: **NFR-OPS-2** — *"Data-model extensions SHALL require **both database re-provisioning** (to match the extension's effective schema hash) **and a service restart** to take effect… provisioning is create-only."*
+
+🔵 **Why it bites this shelf specifically:** an AI deliverable that writes anything back into the system of record — generated evidence, a predicted risk flag, an AI-assisted grade — **is a data-model extension**. 🔴 **On Ed-Fi DMS that means re-provisioning the database, not a migration**, every time the extension's schema hash changes.
+
+🟢 **Remedy, in cost order:** **(i)** read `docs/API-SCHEMA-DOCUMENTATION.md` and the `reference/design/` extension epics for whether a blue/green re-provision is supported (**cheap — the blobless clone makes this a single read**); **(ii)** 🟢 **in the meantime, design AI-generated evidence into the LRS (`P8`, `P10`) and not into an Ed-Fi extension** — which is what this shelf already recommends, now with a second, independent reason.
+
+### 🆕 `Gap 315` — the shelf can **test** OneRoster conformance but cannot **provide** OneRoster, permissively
+
+🔴 **The gap.** Two measurements from this pass meet: 🟢 `conform-ed` (**MIT**) carries a **OneRoster v1.2** coverage map, so the shelf has a permissive instrument to *verify* a rostering integration; 🔴 but `docs/PRD-v8.1.md` lists **OneRoster rostering integration** as absent from Ed-Fi DMS v8.0, and the six-system SIS census found **no permissive SIS at all**. 🔵 **So there is no permissive OneRoster *provider* on this shelf — only a permissive way to test one.**
+
+🟢 **Remedy, in cost order:** **(i)** census for a permissive standalone OneRoster provider/adapter (**cheap, and not yet attempted**); **(ii)** price a OneRoster adapter over a copyleft SIS's own API, kept at arm's length across the process boundary (`P736`); **(iii)** 🔴 **until (i) or (ii), never quote OneRoster rostering as something this shelf supplies** — quote it as something this shelf can **conformance-test**.
+
+### 🆕 `Gap 316` — the pass's one real agent find is **LTI 1.1**, and the port cost to 1.3 is unmeasured
+
+🔴 **The gap.** [`moocupv/lti-ai-grader`](https://github.com/moocupv/lti-ai-grader) (`main` **`5b96722`**, 🟢 **Apache-2.0, 11 357 B**) is a real, deployable, permissive AI grading tool — 🔴 **but its own README says LTI 1.1**, and its grade return is **LTI Basic Outcomes** (`lis_outcome_service_url`, `replaceResult`), **not** LTI 1.3 **AGS**. 🔵 **This shelf's integration architecture is LTI 1.3** (`P736`, `P809`).
+
+🟡 **Why it is not simply discardable:** it is the **only** permissive, education-specific, deployable AI grading component this shelf has found in **twenty weeks** of the control query, and its operational design is reusable independently of its LTI version (see `P81x`).
+
+🟢 **Remedy, in cost order:** **(i)** measure what the port costs — the LTI handshake is one file (`lti-receiver.py`), so the question is whether 1.3's OAuth 2.0 / JWKS flow and AGS replace it or require a rewrite (**cheap**); **(ii)** front it with an existing permissive LTI 1.3 library and keep its grading core (**the likely shape**); **(iii)** 🔴 **never quote it to a Canvas client as-is** — LTI 1.1 is deprecated on major LMSes, which is the commercial fact that decides this gap.
+
+### 🆕 `Gap 317` — the control query's twentieth empty week finally has a **named cause**, and the cause is unmeasured
+
+🔴 **The gap.** The twentieth consecutive empty control week is no longer only an absence. 🟢 **A targeted search (not the control query) returned a populated field — and it is almost entirely closed-source:** EduGears AI, LearnWise, ibl.ai, campusmind.ai, Asyntai, edusageai — all commercial LTI tools, several explicitly advertising LTI 1.3 + AGS grading, **the exact capability the permissive tier lacks**.
+
+🔵 **So the hypothesis is no longer "education agents do not exist" but "education agents exist and the capability has been captured by closed LTI vendors."** 🔴 **Unmeasured:** how many, how funded, and whether any publishes a permissive core.
+
+🟢 **Remedy, in cost order:** **(i)** census the closed LTI-tool vendors and record, per vendor, whether any component is open (**cheap, and it is market intelligence Globant can sell**); **(ii)** re-run the control query with `LTI` as a term rather than `github MIT` — 🔵 **the control query's category error may be the search terms' fault, which would be a finding about this shelf's own method**; **(iii)** 🟢 **meanwhile state the gap positively to clients: the open tier's weakness is exactly where a Globant build has least competition and most leverage.**
+
+### 🆕 `Gap 318` — the board census's **"41 unread"** was measured with the wrong invocation, and the real green count is unknown
+
+🔴 **The gap.** The README records **106 suites — 63 green, 41 unread, 1 environment-red, 1 truly red (`p351`)** — with the 41 attributed to `python3 -I` implying `-P` and breaking sibling imports.
+
+🟢 **Measured this pass:** the suites are **plain scripts**, run as `python3 test_x.py` from inside their own directory. 🔴 **`pytest` is not installed in this environment** (`No module named pytest`) and 🔴 **`python3 -m unittest` discovers them as `Ran 0 tests` / `FAILED (errors=1)`** — neither harness reads them. 🟢 **Invoked correctly, 2 of 2 ran green on first use** (`aiact-50-2-marking` **23/23**, `aiact-50-2-pack` **27/27**).
+
+🔵 **So "unread" was an artefact of the harness, twice over**, and 🔴 **the shelf does not currently know how many of its 106 suites are green.** 🟡 **Scope discipline:** this pass ran **two** suites and claims **two**; it does **not** claim the other 104 are green.
+
+🟢 **Remedy:** **(i)** re-run the full board as `python3 test_*.py` per directory and re-census (**cheap, mechanical, and it should be the next pass's first action**); **(ii)** record the corrected partition in the README and retire the `-I`-flag explanation, which is true about the flag but was never the whole cause.
 
 ## 🟢 Sixty-eighth pass, 2026-10-08 — `Gap 301` **CLOSED negatively** by the instrument it nominated, `Gap 303` **re-confirmed by direct payload read**, and six gaps opened (`Gap 308`–`Gap 313`), one of which has a **statutory deadline eight weeks out**
 

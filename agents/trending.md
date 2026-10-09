@@ -1,8 +1,52 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-08
+updated: 2026-10-09
 ---
+
+## 🟢 Sixty-ninth pass, 2026-10-09 — week of 2026-10-09: the control query is empty for the **twentieth** week but the week's real movement is a **cause**, not an absence — the education agent layer turns out to be **populated and closed**, while the permissive tier gains **one** real grader and **one** watermarking toolkit
+
+⏱️ **First pass of this date (pass 68 closed 2026-10-08; the date rolled over during this pass's measurements, which are dated by their publication here). Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 The control query's **twentieth** consecutive empty week
+
+🔵 `top open source AI agents education 2026 github MIT` → `microsoft/ai-agents-for-beginners` (MIT), `pguso/agents-from-scratch` (MIT), `avinash201199/free-ai-agents-resources` (licence unstated), then OpenHands, CrewAI, LangGraph, Aider, Cline, AutoGen, Hermes.
+
+🔴 **No education component, for the twentieth week.** 🟢 **And the category error is now named exactly: every "education" row is a repository that teaches AI to developers, not an agent that performs an educational function.**
+
+🔵 `github trending education AI 2026` → `rohitg00/ai-engineering-from-scratch`, AI Engineering Hub, Awesome LLM, AI Terminology Glossary, `microsoft/ai-agents-for-beginners`, Made With ML, Karpathy's *Zero to Hero*. 🔴 **The same error, from a different channel: seven rows, seven courses, zero agents.**
+
+### 🆕 The week's real finding: the layer is **not empty, it is closed**
+
+🟢 **A targeted query** — `open source AI tutoring grading agent repository 2026 LTI Moodle Canvas integration` — **returned a populated field for the first time**, and it is overwhelmingly commercial:
+
+| Vendor | Surface claimed | Open source? |
+|---|---|---|
+| **EduGears AI** | Moodle/Canvas/Blackboard/Brightspace over **LTI 1.3**, AI grading posted through **AGS** after teacher approval | 🔴 no |
+| **LearnWise** | Moodle via plugin/LTI/API; tutoring + feedback/grading | 🔴 no |
+| **ibl.ai** | *"Tutoring Agent"* and *"Faculty Agent"*; Canvas, Blackboard, Brightspace, Moodle, Sakai via LTI | 🔴 marketing silent on licensing |
+| **campusmind.ai**, **Asyntai**, **edusageai** | Canvas / Moodle AI assistants and grading | 🔴 no |
+
+🔴 **Several advertise exactly the capability the permissive tier lacks: LTI 1.3 launch plus AGS grade return, with a human-approval gate.** 🔵 **So the hypothesis changes this week.** 🟢 **It is no longer "education agents do not exist in open source" — it is "education agents exist, and the capability has been captured by closed LTI vendors."** 🔴 **How many, how funded, and whether any publishes a permissive core is unmeasured — `Gap 317`.**
+
+🟢 **The free/open exceptions the channel did surface are all Moodle-only plugins** — **MooChat Block** (uses Moodle's native AI subsystem), **MAICI** (graded chat assignment activity), **Teaching Assistant Block** (course-content-aware tutoring) — 🟡 **and the roundup notes several are OpenAI-only for model support.** 🔵 **Moodle-only is a real constraint, not a detail: it is one LMS, not the LTI-wide surface the closed vendors sell.**
+
+### 🆕 New this week on the permissive side — **two** components, both verified from payload
+
+🟢 **[`moocupv/lti-ai-grader`](https://github.com/moocupv/lti-ai-grader)** — `main` **`5b96722`**, 🟢 **Apache-2.0 (`LICENSE` 11 357 B, canonical)**, 27 files. LLM grading with LMS grade passback, pluggable models (Gemini or OpenAI-compatible), multi-language templates, nginx/Apache installers, systemd watchdog + health timers. 🔵 **EMEA — MOOCs UPV, Universitat Politècnica de València.**
+🔴 **But: LTI 1.1 and Basic Outcomes (`replaceResult`), not LTI 1.3 AGS.** 🟡 **The search result said "LTI 1.0"; its README says LTI 1.1 — the payload corrected the channel.** 🟢 **Port cost is `Gap 316`.**
+
+🟢 **[`THU-BPM/MarkLLM`](https://github.com/THU-BPM/MarkLLM)** — `main` **`0a4fe8c`**, 🟢 **Apache-2.0 (11 357 B)**. LLM watermarking toolkit. 🔵 **It is the named occupant of the `P33` signature seam** this shelf's Article 50(2) marking component declares and leaves empty (`Gap 313`). 🟢 **Permissive, so the seam is fillable without a licence problem — eight weeks before `2026-12-02`.**
+
+### 🔴 What did **not** move this week
+
+🔵 **[`arqueon/certo`](https://github.com/arqueon/certo) is still `39816e0`** — byte-for-byte the sha pass 67 recorded. 🔴 **A repository whose CLR 2.0 claim is absent from both `main` and its PR head ref, and which has not moved in two passes, is not a pipeline — it is a dead edge.** 🟢 `Gap 301` stays closed negatively, and this week strengthens it.
+
+🟢 **`HKUDS/DeepTutor` `6cf793b`, `CAHLR/OATutor` `939eb0e`** — both live, no licence change.
+
+### 🟡 Method note the week earned
+
+🔴 **The control query has now been empty for twenty weeks while a targeted query returned a full page on the first attempt.** 🔵 **At twenty weeks, the more likely explanation is the query, not the field.** 🟢 **`Gap 317(ii)` therefore proposes re-running the control with `LTI` as a term instead of `github MIT`** — 🔵 **which would make the twenty-week series a finding about this shelf's own instrument, and that is worth more than another empty week.**
 
 ## 🟢 Sixty-eighth pass, 2026-10-08 — week of 2026-10-08: `P795` returns its **first wholly non-permissive tier** (systems of record, 5 of 5), a **new instrument** reads a pull-request head ref and closes `Gap 301` negatively, and the week's largest movement is **not in a repository at all** — it is a statute that moved sixteen months
 

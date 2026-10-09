@@ -1,8 +1,62 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-08
+updated: 2026-10-09
 ---
+
+## 🟢 Sixty-ninth pass, 2026-10-09 — the system-of-record census widens to **six, and stays at zero permissive**; a **permissive analytics layer** is found where the SIS tier has none; and the one Apache-2.0 substrate is measured to be **missing OneRoster and any change feed**
+
+⏱️ **First pass of this date (pass 68 closed 2026-10-08; the date rolled over during this pass's measurements, which are dated by their publication here). Append-only: this section is new; nothing below it was rewritten.**
+
+🔵 Pass 68 added the **system of record** tier beside this file's long-standing **delivery** tier (Moodle, Open edX, Canvas, Sakai, BigBlueButton, H5P, Kolibri) and found **5 of 5 non-permissive**. 🟢 **Pass 68's remedy (i) — *"census the SIS tier further for a permissive outlier"* — was run this pass.**
+
+### 🔴 `Gap 309` remedy (i): the census widened, and the answer did not change
+
+| System | Licence | Evidence read this pass | Region | Shape |
+|---|---|---|---|---|
+| 🆕 [**FenixEdu Academic**](https://github.com/FenixEdu/fenixedu-academic) | 🔴 **LGPL-3.0** | `master` **`675b540`**; `LICENSE` **7 652 B**, first lines *"GNU LESSER GENERAL PUBLIC LICENSE Version 3"* | 🔵 **EMEA** — IST Lisbon, Portugal | Higher-ed SIS: enrolment, curricular plans, theses, degrees |
+| [**OpenEduCat**](https://github.com/OpenEduCat/openeducat_erp) | 🔴 **LGPL-3.0** | `LICENSE` **8 241 B** (re-read; 🟡 **differs from FenixEdu's 7 652 B** by a prepended copyright pointer) | APAC — India | Odoo-based SIS/ERP; multi-campus |
+| [**RosarioSIS**](https://github.com/francoisjacquet/rosariosis) | 🔴 GPL-2.0 | pass 68 | Global | K-12 SIS |
+| [**Gibbon**](https://github.com/GibbonEdu/core) | 🔴 GPL-3.0 | pass 68 | Global | K-12 school platform |
+| [**openSIS Classic**](https://github.com/OS4ED/openSIS-Classic) | 🔴 GPL-2.0 | `master` **`5d546f2`** re-resolved this pass | Global | K-12 / trade / higher-ed SIS |
+| [`frappe/education`](https://github.com/frappe/education) | 🔴 GPL-3.0 (asserted, **19 B**) | `develop` **`444cc8e`**; see `Gap 312` | APAC — India | Frappe-based education app |
+
+🔴 **Six systems of record read from payload. Zero MIT. Zero Apache-2.0. Zero BSD.** 🔵 **A client who needs a student system of record whose code they can keep closed still has nothing in this tier** — and the census is now wide enough that this reads as a property of the market, not of the sample.
+
+🟡 **One secondary-source conflict, recorded rather than resolved:** a vendor glossary lists **Gibbon** as *CC BY-SA-NC* and names **Centre** (GPL, Python) and **Fedena** (GPL, Ruby) as further options. 🔴 **Pass 68 read Gibbon's grant from payload as GPL-3.0, and a payload read beats a glossary.** 🟢 **Centre and Fedena are unprobed and both are claimed copyleft — recorded as census candidates, not as findings.**
+
+### 🔴 And the permissive escape route got narrower, not wider
+
+🔵 Pass 68 offered **Ed-Fi DMS (Apache-2.0)** as *"a permissive system of record… but a data-standard API substrate, not an administrative SIS."* 🟢 **That characterisation is now measured rather than asserted, and it is worse than it sounded.**
+
+🟢 `docs/PRD-v8.1.md` lists, as capabilities **absent from v8.0** relative to the ODS/API generation it replaces:
+
+- 🔴 **OneRoster rostering integration** — *"no migration path until these are restored"*
+- 🔴 **Event streaming (Kafka/CDC)** — *"no equivalent way to consume data changes from v8.0 **without polling the API**"*
+- 🔴 Unique-ID / Identities integration, read replicas, high-performance paging, cache-refresh signalling
+- 🔴 Ownership-based authorisation, custom access rules, custom validation
+
+🔴 **So the only permissive substrate has no rostering standard and no change feed** — on top of having no timetabling, gradebook, report cards or fees. 🟢 **`Gap 315`:** the shelf can **conformance-test** OneRoster (`conform-ed`, MIT, carries a OneRoster v1.2 coverage map) but **cannot provide it permissively**. 🔴 **Never quote OneRoster as something this shelf supplies.**
+
+🔴 **And adoption is a re-platforming.** `docs/PRD-v8.0.md` **NFR-OPS-2**: *"does not support in-place migration of an already-provisioned database… **provisioning is create-only**"* — `Gap 303`, **closed**. 🔴 **Never price it as an in-place cutover.**
+
+### 🟢 The pass's one permissive gain in this file — and it is in **analytics**, not the record
+
+| Platform | Repo | Licence | Role |
+|---|---|---|---|
+| 🆕 **Aspects (Open edX analytics)** | [`openedx/tutor-contrib-aspects`](https://github.com/openedx/tutor-contrib-aspects) | 🟢 **Apache-2.0**, `LICENSE` **11 357 B** (canonical) | Analytics and dashboards for Open edX, installed as a Tutor plugin. `main` **`e819dfc`** |
+
+🟢 **This matters because of where it sits.** 🔵 The delivery tier has long had a permissive option (Open edX itself, Apache-2.0; Richie, MIT). 🔴 **The record tier has none.** 🟢 **Aspects shows the *analytics* layer over a permissive delivery platform is also permissive** — so a Globant deliverable that reads learner activity, builds dashboards and adds AI on top can be **wholly permissive end-to-end, provided it never needs to own the student record.**
+
+### 🟢 The shelf's standing recommendation, now the *measured*-best option rather than the cheap one
+
+🔵 Pass 68 listed three shapes for a client needing a system of record. 🟢 **This pass's measurements reorder them:**
+
+1. 🔴 **~~Find a permissive SIS~~** — **six read, none exists.**
+2. 🔴 **~~Ed-Fi DMS + build the administrative surface~~** — still the only fully-permissive shape, 🔴 **but now known to lack OneRoster, CDC, fine-grained authz and custom validation, and to require a data migration to adopt.** 🔵 **The build is larger than pass 68 could price.**
+3. 🟢 **Deploy a copyleft SIS unmodified and build beside it across LTI 1.3** (`P736`, `P809`), writing learner evidence to a **permissive LRS** (`yetanalytics/lrsql`, Apache-2.0) and competencies to a **permissive CASE service** (`opensalt`, MIT). 🟢 **Lawful, cheap, already instrumented — and now the option the measurements actually favour.**
+
+🔵 **The boundary stated plainly for a client file:** 🟢 **everything Globant *builds* can be permissive; the student record it *reads from* will be copyleft, and that is acceptable because LTI 1.3 and xAPI keep it at arm's length across a process boundary.** 🔴 **What is not acceptable is forking a GPL SIS** — and with LGPL-3.0 options (OpenEduCat, FenixEdu) a **proprietary addon** is permitted while a closed fork of the platform is not (`P750`).
 
 ## 🟢 Sixty-eighth pass, 2026-10-08 — the **student information system** tier joins the shelf: five real, deployable, customisable systems of record, **none of them permissive**; and pass 67's "registry vs. system of record" law is **replaced** by a sharper one that survives its own counter-example
 

@@ -1,8 +1,89 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-08
+updated: 2026-10-09
 ---
+
+## 🟢 Sixty-ninth pass, 2026-10-09 — a **new instrument** reads whole trees without the API, and with it the permissive substrate's **capability gaps** are read for the first time: the shelf's only Apache-2.0 system of record has **no rostering standard and no change feed**
+
+⏱️ **First pass of this date (pass 68 closed 2026-10-08; the date rolled over during this pass's measurements, which are dated by their publication here). Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Instruments:** `git ls-remote --symref` **9 of 9**; `git ls-remote --tags` resolved **23 tags** on the Ed-Fi successor; `raw.githubusercontent.com` served every licence payload below.
+🆕 **New instrument: `git clone --depth 1 --filter=blob:none`** — **5 846 files enumerated** on the Ed-Fi successor with no API access. 🔵 **Every prior pass guessed paths and recorded 404s; this reads the tree.**
+🔴 **`api.github.com` CORRECTED:** resolves, **authenticated** (core **15 000**/hr), serves `200` — `403` **only** for repositories not attached to this session. 🟢 **No third-party star counts, so nothing here is ranked by popularity** — unchanged in effect, corrected in cause.
+
+### 🟢 The permissive system-of-record substrate, re-read — and its licence is the best news in it
+
+[`Ed-Fi-Alliance-OSS/Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service)
+
+| Probe | Result |
+|---|---|
+| `main` · HEAD | 🆕 **`ab82466`** — 🔵 **moved from pass 68's `9203e19`** |
+| `LICENSE` | 🟢 **Apache-2.0, 11 357 B** — canonical byte count, re-confirmed |
+| tree | 🆕 **5 846 files** (blobless clone) |
+| release tags | `v0.1.0`–`v0.7.0`, then **`v8.0.0`** (`d911abb`) |
+| newest tags | 🆕 **`dms-pre-8.0.1-alpha.0.94`–`0.99`** |
+| `docs/changelog/` | 🆕 **`8.1.0.md`, and nothing else** |
+
+🟢 **The version line is explained from payload and `Gap 311(a)` closes.** `docs/PRD-v8.0.md`: *"**Ed-Fi API v8.0** is a ground-up rewrite of the platform's prior generation."* 🔵 **The tags carry the Ed-Fi API *product* version, not the DMS *component* version** — `v0.x` was the component's pre-product line. 🟢 **Pass 68 held this as an inference under `P722`; it is now a fact.**
+
+🔴 **`main` is not the tag, and `main` is heading for 8.1.0 whose changelog opens under *"Breaking changes."*** 🟢 **In any deliverable, pin `v8.0.0` explicitly.**
+
+### 🔴 The finding that changes how this substrate may be quoted — **v8.0 is missing capabilities the prior generation had**
+
+🟢 `docs/PRD-v8.1.md` is a **gap-driven PRD**, and it enumerates what v8.0 **does not yet do** relative to the Ed-Fi ODS/API generation it replaces:
+
+| Absent from v8.0 | The PRD's own words |
+|---|---|
+| 🔴 **Event streaming (Kafka/CDC)** | *"no equivalent way to consume data changes from v8.0 **without polling the API**"* |
+| 🔴 **OneRoster rostering integration** | *"vendors and hosts who built workflows around them… have **no migration path** until these are restored"* |
+| 🔴 **Unique-ID / Identities integration** | same clause |
+| 🔴 Read replicas, high-performance paging, cache-refresh signalling | *"complete, operating capabilities in the prior generation — hosts running at scale were actively relying on them"* |
+| 🔴 Ownership-based authorisation, custom access rules, configurable token limits | *"Hosts who depended on these… cannot yet replicate that posture in v8.0"* |
+| 🔴 Custom validation | *"no supported way to enforce business rules beyond… built-in schema validation, without forking core code"* |
+
+🟡 **One of them is already closing on `main` and not in any release:** `docs/changelog/8.1.0.md` documents **`IdentitySettings:BearerTokenPerClientLimit`** (default 15 tokens/client, `HTTP 429 Too Many Tokens`). 🔵 **So the capability list is live, and the gap between `v8.0.0` and `main` is where it is being closed** — which is precisely why `main` must not be tracked and the tag must be pinned.
+
+🟢 **How to quote this substrate:** 🟢 **a genuinely permissive, actively developed Ed-Fi API implementation** — 🔴 **without a change feed, without OneRoster, and without the fine-grained authorisation the prior generation had.** 🔵 **`Gap 315`** records that the shelf can *conformance-test* OneRoster (`conform-ed`, MIT) but cannot *provide* it permissively.
+
+### 🔴 Adoption is a re-platforming, not an upgrade — `Gap 303` **CLOSED** from primary payload
+
+| Probe | Result |
+|---|---|
+| `docs/PRD-v8.0.md` **NFR-OPS-2** | 🔴 *"does not support **in-place migration of an already-provisioned database** to a new effective schema — **provisioning is create-only**"* |
+| `docs/PRD-v8.0.md` line 19 | 🔴 *"a **ground-up rewrite** of functionality previously delivered via the Ed-Fi ODS/API"* |
+| `docs/DATA-STRICTNESS.md` §*Migrating from the Ed-Fi ODS/API* | 🟡 **request-body casing guidance only** |
+| `docs/DATABASE-SEGMENTATION-STRATEGY.md` §*Migration from ODS/API* | 🟡 **a configuration-equivalence table** — `dbo.OdsInstances` → `POST /v3/dataStores` |
+
+🟢 **The repository documents a migration path at the configuration surface and nowhere at the data layer** — and NFR-OPS-2 says why: that is the design, not an omission. 🔴 **Never price Ed-Fi DMS adoption as an in-place cutover.**
+
+🆕 **And a second fact worth more than the answer — `Gap 314`:** NFR-OPS-2 also means **a data-model extension requires database re-provisioning plus a service restart**. 🔵 **An AI deliverable that writes generated evidence back into the system of record *is* an extension.** 🟢 **Design that evidence into the LRS (`P8`, `P10`), not into an Ed-Fi extension.**
+
+### 🟢 Permissive foundations, licences read from payload this pass — **5 of 5 verified**
+
+| Repo | Licence | `LICENSE` bytes | Role |
+|---|---|---|---|
+| [`Ed-Fi-Alliance-OSS/Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service) | 🟢 **Apache-2.0** | **11 357** (canonical) | Ed-Fi API implementation; data-standard substrate |
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** | **11 357** (canonical) | xAPI LRS — where learner evidence belongs (`P8`, `P10`) |
+| [`conform-ed/conform-ed`](https://github.com/conform-ed/conform-ed) | 🟢 **MIT** | **1 080** | Conformance coverage for xAPI 2.0, Caliper 1.2, **OneRoster 1.2**, Common Cartridge |
+| [`opensalt/opensalt`](https://github.com/opensalt/opensalt) | 🟢 **MIT** | **1 080** | CASE competency-framework authoring and hosting |
+| 🆕 [`THU-BPM/MarkLLM`](https://github.com/THU-BPM/MarkLLM) | 🟢 **Apache-2.0** | **11 357** (canonical) | LLM watermarking — 🔵 the named occupant of the `P33` signature seam |
+
+🟢 **Five rows, five real repos, five licences read as bytes.** 🔵 **`conform-ed` and `opensalt` are both MIT at 1 080 B — the same canonical MIT length, independently confirming each read.**
+
+### 🆕 The licence law gets its sharpest instance yet: **one organisation, two tiers, two grants**
+
+🟢 **Measured on the Frappe stack** (`Gap 312`'s remedy (i)):
+
+| Component | Layer | Licence | Evidence |
+|---|---|---|---|
+| [`frappe/frappe`](https://github.com/frappe/frappe) | **framework** | 🟢 **MIT** | `LICENSE` **1 118 B** — *"The MIT License, Copyright (c) 2016-2021 Frappe Technologies Pvt. Ltd."* 🆕 |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | **app** | 🔴 **GPL-3.0** | `license.txt` **35 149 B** — **full grant text** 🆕 |
+| [`frappe/education`](https://github.com/frappe/education) | **app** | 🔴 **GPL-3.0 (asserted)** | `license.txt` **19 B**: `License: GNU GPL V3`; `LICENSE` **404** |
+
+🔵 **The law, restated with this instance:** **the grant follows the author class, not the layer.** 🔴 **The framework's MIT terms do not rescue, override or impose anything on an app's grant** — so the 19-byte assertion stands alone. 🟢 **But the sibling app ships the real 35 149-byte GPL-3.0 grant, which is strong corroboration that GPL-3.0 is meant.** 🟢 **Record `frappe/education` as GPL-3.0 and assume every GPL-3.0 obligation; never as "unknown."**
+
+🟡 **A corollary worth keeping:** 🔴 **a byte count alone does not identify a grant.** OpenEduCat's `LICENSE` is **8 241 B** and FenixEdu's is **7 652 B**; both are LGPL-3.0, and the difference is a prepended copyright pointer. 🟢 **Read the first lines, not only the length** — the canonical lengths (MIT 1 080–1 118, Apache-2.0 11 357, GPL-3.0 ~35 100, LGPL-3.0 7 652) are a **check**, not an identification.
 
 ## 🟢 Sixty-eighth pass, 2026-10-08 — the **system-of-record tier** is read for the first time and it is the shelf's **first wholly non-permissive layer** (5 of 5); `Ed-Fi`'s successor is confirmed **Apache-2.0 at the canonical byte count**, and the licence law gets a sharper shape: the grant follows the **author class**, not the layer
 

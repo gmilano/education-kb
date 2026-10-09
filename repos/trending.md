@@ -1,8 +1,55 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-08
+updated: 2026-10-09
 ---
+
+## 🟢 Sixty-ninth pass, 2026-10-09 — the trending channel repeats its category error for the nth week, and the week's real repo movement is **instrumental**: a new clone mode reads whole trees without the API, and the `api.github.com` `403` this shelf has recorded for weeks turns out to be **the wrong diagnosis**
+
+⏱️ **First pass of this date (pass 68 closed 2026-10-08; the date rolled over during this pass's measurements, which are dated by their publication here). Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 The trending channel, and the error is the same error
+
+🔵 `github trending education AI 2026` returned, as its education rows: `rohitg00/ai-engineering-from-scratch` (reported #1 on GitHub Trending 2026-05-24), **AI Engineering Hub**, **Awesome LLM**, **AI Terminology Glossary**, `microsoft/ai-agents-for-beginners`, **Made With ML**, Karpathy's *Neural Networks: Zero to Hero*.
+
+🔴 **Seven rows, seven courses, zero education systems.** 🟢 **The channel reads "education" as "material that teaches a developer", never as "software that serves a learner or an institution."**
+
+🟡 **The star counts the channel offered are mutually contradictory and none is used here:** one source reports `microsoft/ai-agents-for-beginners` at **~67 000** (mid-June 2026), another at **47.3k** via a social post. 🔴 **Two channels, two numbers, neither verifiable** — 🟢 **and with `api.github.com` refusing third-party repos, this shelf cannot arbitrate, so it records none of them.** 🔵 **This is `p351`'s reason for existing.**
+
+🟡 **One secondary datum, single-channel, recorded as context only:** a Japanese trend report states **nine of the top ten** GitHub monthly trending projects for February 2026 were AI-related. 🔵 **Consistent with everything this channel returns, which is why it explains the category error rather than excusing it.**
+
+### 🆕 The week's real movement: **a new instrument**, and a corrected one
+
+🟢 **New: `git clone --depth 1 --filter=blob:none`.** 🔴 **The constraint every prior pass worked under** was that, with the API refusing third-party repositories, tree contents were reachable only by guessing a path at `raw.githubusercontent.com` and recording the 404s — `Gap 301` burned two passes on *"four plausible CLR tree paths — all 404."* 🟢 **A blobless clone needs no API and returns the whole tree: 5 846 files on the Ed-Fi successor.** 🟢 **First use closed `Gap 303` and `Gap 311(a)` from primary payload.**
+
+🔴 **Corrected: `api.github.com` was never blanket-`403`.**
+
+| Probe | Result |
+|---|---|
+| DNS | 🟢 `140.82.114.6` |
+| `GET /rate_limit` | 🟢 **`200`, authenticated** — core **15 000**/hr, graphql **10 000** |
+| `GET /repos/<third-party>` | 🔴 **`403`** — *"GitHub access to this repository is not enabled for this session"* |
+| `GET /repos/<attached>` | 🟢 **`200`**, full payload |
+
+🔵 **It is a per-repository authorisation boundary, not a host block.** 🟢 **Effect unchanged — still no third-party star counts, still nothing ranked by popularity on this shelf** — 🔴 **but passes ≤68 recorded the cause wrongly, and an instrument map with a wrong cause in it mis-prices every future remedy that depends on it.**
+
+### 🟢 Repo-level movement actually measured this week
+
+| Repo | Movement |
+|---|---|
+| [`Ed-Fi-Alliance-OSS/Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service) | 🆕 `main` **`9203e19` → `ab82466`**; 🆕 new tags **`dms-pre-8.0.1-alpha.0.94`–`0.99`**; 🆕 `docs/changelog/8.1.0.md` appears. 🔵 **Active, between releases, heading for a breaking 8.1.0** |
+| 🆕 [`moocupv/lti-ai-grader`](https://github.com/moocupv/lti-ai-grader) | **New to the shelf.** `main` **`5b96722`**, 🟢 **Apache-2.0 (11 357 B)**, 27 files. 🔴 LTI **1.1** / Basic Outcomes. 🔵 **EMEA — UPV Valencia** |
+| 🆕 [`THU-BPM/MarkLLM`](https://github.com/THU-BPM/MarkLLM) | **New to the shelf.** `main` **`0a4fe8c`**, 🟢 **Apache-2.0 (11 357 B)**. 🔵 Fills the `P33` seam (`Gap 313`) |
+| 🆕 [`FenixEdu/fenixedu-academic`](https://github.com/FenixEdu/fenixedu-academic) | **New to the shelf.** `master` **`675b540`**, 🔴 **LGPL-3.0 (7 652 B)**. 🔵 **EMEA — IST Lisbon.** Sixth SIS read, sixth non-permissive |
+| 🆕 [`openedx/tutor-contrib-aspects`](https://github.com/openedx/tutor-contrib-aspects) | **New to the shelf.** `main` **`e819dfc`**, 🟢 **Apache-2.0 (11 357 B)**. Open edX analytics — 🔵 **a permissive analytics layer where the SIS tier has none** |
+| [`arqueon/certo`](https://github.com/arqueon/certo) | 🔴 **`39816e0` — unchanged since pass 67.** 🔵 A dead edge, not a pipeline |
+| [`frappe/frappe`](https://github.com/frappe/frappe) | 🆕 **MIT, `LICENSE` 1 118 B** — read for the first time, and it reshapes `Gap 312` |
+
+### 🔴 What this week says about the trending channel itself
+
+🔵 **Five repositories entered this shelf this week. The trending channel supplied none of them.** 🟢 **They came from a vertical-platform query, a targeted agent query, a gap remedy, and this shelf's own code naming a component it needs.**
+
+🟢 **The operating conclusion, now at n weeks:** 🔴 **`github trending` is not an instrument for this industry.** 🟢 **The instruments that work are (a) gap remedies that name their own next probe, (b) targeted queries that use the industry's own vocabulary — `LTI`, `SIS`, `OneRoster`, `xAPI` — rather than `trending` or `github MIT`, and (c) reading this shelf's own test output, which this week named `MarkLLM` without any search at all.**
 
 ## 🟢 Sixty-eighth pass, 2026-10-08 — the GitHub-trending channel repeats its category error for the nth consecutive week, and the week's real repo movement is a **five-component system-of-record tier** (zero permissive) plus a **slug correction** on the Ed-Fi successor
 

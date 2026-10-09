@@ -1,8 +1,103 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-08
+updated: 2026-10-09
 ---
+
+## 🟢 Sixty-ninth pass, 2026-10-09 — the AI Act correction **holds at four channels and stays unverifiable**, now refused by **two independent egress paths**; and the pass's commercial finding is a **market structure**: the education agent layer is populated and **closed**, which is where a permissive build has least competition
+
+⏱️ **First pass of this date (pass 68 closed 2026-10-08; the date rolled over during this pass's measurements, which are dated by their publication here). Append-only: this section is new; nothing below it was rewritten. The live `## Opportunities by region` block is the one in this section; pass 68's has been retitled *superseded* per this file's convention.**
+
+### 🔴 The AI Act dates, re-stated with their channel count — because that is the only honest way to state them
+
+🟢 **Pass 68's correction stands unchanged:** Regulation (EU) **2026/1744** (Digital Omnibus on AI) deferred the **Annex III high-risk regime** from `2026-08-02` to **`2027-12-02`**, and Annex I to **`2028-08-02`**. 🟡 **It rests on four independent secondary channels in agreement**, including two law-firm client notes, a research note and a EUR-Lex record title returned by search.
+
+🔴 **It is still unverified against primary text, and this pass tried harder and failed more precisely:**
+
+| Egress path | Result |
+|---|---|
+| Bash via agent proxy → `eur-lex.europa.eu` | 🔴 **`CONNECT tunnel failed, response 403`**; `getent hosts` also fails |
+| `WebFetch` → the same URL | 🔴 **`getaddrinfo ENOTFOUND eur-lex.europa.eu`** |
+| control: `api.github.com` from the same shell | 🟢 resolves, serves `200` |
+
+🔵 **Two independent instruments now agree, and the proxy's own answer identifies an allowlist denial rather than a DNS fault** — pass 68 had one path and called it `DNS_BLOCKED`. 🔴 **`artificialintelligenceact.eu` also fails to resolve.** 🟢 **`Gap 308` stays open with the cheapest high-value remedy in the registry: one fetch of `eur-lex.europa.eu/eli/reg/2026/1744/oj/eng` from any session with egress to that host.**
+
+🔴 **What is live, and the date that actually matters commercially:** **Article 50** was left untouched by the Omnibus, and its marking grace expires **`2026-12-02`** — 🔴 **eight weeks out.** 🟢 **`P11` is the shelf's only dated recipe, and `Gap 313` closed this pass by measuring exactly how far the shelf is from that obligation** (0 of 3 third-party components mark content; the shelf's own marking is structurally green at 23/23 + 27/27 with its **signature seam declared and empty**).
+
+🟡 **Single-channel and still not built on:** public-authority high-risk deferral to `2030-08-02`; sandbox obligation to `2027-08-02`. 🔴 **Whether routine learner progress-tracking counts as *profiling* — and therefore always high-risk, with no Article 6(3) filter — remains unread (`Gap 310`) and rides with `Gap 308`.** 🟢 **Design as if it does.**
+
+### 🆕 The pass's commercial finding: the agent layer is **not empty, it is captured**
+
+🔴 **Twenty consecutive weeks of the control query (`top open source AI agents education {year} github MIT`) have returned zero education components** — every "education" row is a repository that teaches AI to developers.
+
+🟢 **A targeted query returned a populated field on the first attempt, and it is almost entirely commercial:** **EduGears AI** (Moodle/Canvas/Blackboard/Brightspace over **LTI 1.3**, AI grading posted via **AGS** behind a teacher-approval gate), **LearnWise**, **ibl.ai** (*"Tutoring Agent"*, *"Faculty Agent"*; Canvas, Blackboard, Brightspace, Moodle, Sakai), **campusmind.ai**, **Asyntai**, **edusageai**. 🔴 **Several sell precisely the capability the permissive tier lacks.**
+
+🟢 **The permissive exceptions are narrow:** Moodle-only plugins (**MooChat Block**, **MAICI**, **Teaching Assistant Block**), 🟡 several OpenAI-only for model support — and **one** real cross-LMS find, [`moocupv/lti-ai-grader`](https://github.com/moocupv/lti-ai-grader) (Apache-2.0, **EMEA/UPV Valencia**), 🔴 **on LTI 1.1 / Basic Outcomes rather than 1.3 / AGS**.
+
+🔵 **Read commercially, this is the most useful thing the pass found.** 🟢 **The open tier's weakness is a map of where a Globant build has least competition and most leverage: a permissive, LTI 1.3 + AGS, human-in-the-loop grading and tutoring surface does not exist in open source, and six vendors are monetising its absence.** 🔴 **Unmeasured: how many such vendors, how funded, whether any publishes a permissive core — `Gap 317`.**
+
+### 🟡 Market size — four channels, four incompatible numbers, recorded as a range and never as a figure
+
+| Channel | Claim |
+|---|---|
+| The Business Research Company | **$7.52B (2025) → $10.6B (2026)**, CAGR **40.9%** |
+| IMARC-derived | **$6.4B (2025) → $79.6B (2034)** |
+| a third analysis | **~28%/yr, 2026–2036**, arguing institutional purchasing lags consumer adoption |
+| AI-tutors sub-segment | **$1.63B (2024) → $7.99B (2030)** |
+
+🔴 **A 2026 figure of $10.6B and a 2025 figure of $6.4B cannot both sit on a path to $79.6B by 2034 under one definition** — 🟢 **so the definitions differ, and no single number may be quoted as *the* market size.** 🟢 **Quote the range, the channel and the date, or quote nothing.** 🔵 **Segment structure is more durable than the totals:** K-12 is the largest adopter segment at **45.62%**, language learning the fastest-growing, cloud delivery **71.22%** share (2024). 🟡 **One analysis rates sector maturity 35/100 against competition 85/100** — 🔵 **pilots everywhere, incumbents everywhere, which is consistent with everything above.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **Measured:** the region holds **~36%** of global share and one channel sizes it **$951M (2024) → $2 303.2M (2029)**, CAGR **15.9%** — 🟡 **notably slower than the global CAGRs above, which is itself a finding: North America is the largest and most mature, not the fastest.**
+
+🔴 **The governance vacuum is the opportunity.** Only **10%** of institutions have formal AI guidelines and **71%** of US teachers lack AI training. One channel describes education AI as operating in *"a relative regulatory vacuum"* with *"no equivalent to the FDA"*, where adoption is decided school-by-school or district-by-district. 🟡 **State-level fragmentation is asserted (Colorado, Texas named) and not verified here.**
+
+🟢 **Money is moving and is nameable:** a **$169M** government commitment to responsible AI in higher education (Q1 2026); **Carnegie Mellon + Gates Foundation, $55M** into AI courseware for gateway college courses; **OpenAI's country-level education programme with eight national partners** (Q1 2026). 🟡 **Each single-channel and unconfirmed against an official source.**
+
+🟢 **The engagement shape:** 🔵 institutions here can buy, have no policy, and face no binding sector regulation. 🟢 **Sell governance as the product, not as the compliance overhead** — an AI deliverable that ships with its own policy scaffold, audit trail and human-approval gate is differentiated in exactly the way the market is weak. 🟢 **`P11`'s marking machinery is reusable here as evidence-of-diligence even though Article 50 does not bind US deployments.**
+
+### EMEA
+
+🔴 **This is the region where the regulation is the engagement.** 🟢 The **EU AI Act** is the binding layer and reaches non-EU providers whose outputs affect EU-located students. 🔴 **Annex III high-risk is deferred to `2027-12-02` (four-channel, unverified — quote it with its channel count), while Article 50's marking grace expires `2026-12-02`.**
+
+🟢 **Adoption is high and institutionally unsupported, and this pass has a non-vendor instrument for it.** The CESGA-led **"AI Act(ing)"** study across six European countries found **>90%** of Spanish respondents using AI in their work and **all** Belgian participants doing so — while **nearly half of Spanish respondents did not know whether their institution had AI guidelines**, and Spain, Belgium and Greece showed *"an urgent need for clearer organizational rules."* 🔵 **Data protection, bias, over-reliance and academic integrity recurred across all six countries.**
+
+🟢 **Soft law to cite in a proposal:** **UNESCO**'s generative-AI guidance for education as the main international reference; **OECD AI Principles**, non-binding but referenced by most national education ministries; **Luxembourg/OPOCE (2026)** updated ethical-and-data-responsible-use guidelines, which themselves note the AI Act's implications for education. 🟡 **OECD's *"metacognitive laziness"* finding** — over-reliance diminishing deep learning — 🔵 **pushes assessment toward the learning *process* rather than the final product, which is an argument for xAPI/LRS evidence architecture and therefore for this shelf's own recipes.**
+
+🟢 **The region also supplied two of this pass's repositories:** [`moocupv/lti-ai-grader`](https://github.com/moocupv/lti-ai-grader) (Apache-2.0, UPV Valencia) and [`FenixEdu/fenixedu-academic`](https://github.com/FenixEdu/fenixedu-academic) (LGPL-3.0, IST Lisbon). 🔵 **EMEA higher education builds and publishes its own systems** — a partnership surface, not only a sales one.
+
+🟢 **The engagement shape:** 🟢 **lead with the `2026-12-02` Article 50 marking deadline, which is eight weeks out and binds generative deployments now**, and treat `2027-12-02` Annex III as the programme behind it. 🔴 **Present `P11` as a readiness programme, never as a compliance guarantee** (`Gap 313`, `P803`).
+
+### APAC
+
+🟡 **Sized at $591.6M (2024) → $1 848.1M (2029), CAGR 20.9%** by one channel, while another calls APAC **the fastest-growing region at 35.3% CAGR**. 🔴 **The two cannot both be right; both are recorded, neither is quoted alone.** 🟢 **Drivers named consistently: large student populations, rising disposable incomes, and acute teacher shortages addressed through automation** — 🔵 **the teacher-shortage driver is the one that favours agentic deliverables most directly.**
+
+🔴 **Regulation is fragmented by design, and that is the planning fact.** Forrester describes *"a fragmented landscape for AI legislation, unlike the EU's unified approach"*: **Singapore** relies on mature guidelines, **China** on laws against algorithmic misconduct, **India** on existing criminal law. 🟡 **The ASEAN Guide on AI Governance and Ethics is early-stage**, so compliance must be tailored country by country. 🔴 **Governance is lagging implementation** (Diligent Institute).
+
+🔴 **An informed gap, stated explicitly rather than left as silence: the channel named no education-sector players, vendors or ministries for this region.** 🔵 **Every APAC result returned was general enterprise AI or market sizing.** 🟢 **This is a real coverage hole in this KB, not evidence of an empty market** — remedy is a per-country query (China's and Singapore's education-ministry AI guidance; Southeast Asian tutoring vendors) rather than a regional one.
+
+🟢 **The engagement shape:** 🔵 **multi-jurisdiction by default.** 🟢 Build the policy layer as configuration, not as code — one deliverable, per-country policy nodes — because the regulatory divergence here is permanent rather than transitional. 🟡 **APAC also owns the shelf's two LGPL-3.0 SIS options' centre of gravity (OpenEduCat, India), which makes the `P750` proprietary-addon shape regionally relevant.**
+
+### LATAM
+
+🟢 **The best-instrumented region in this pass, and the only one with a non-vendor institutional census.** **UNESCO IESALC**, across **200 institutions in 19 countries**: **87%** use AI in at least one area, 🔴 **but only ~26% have any formal framework.** By area: **teaching and learning 73.5%**, research **57.0%**, administration **34.1%**, community engagement **20.0%**. By institution type: private non-profit **84%** > public **68%** > private for-profit **52%**.
+
+🟢 **Corroborated by a second, independent survey with a very large sample:** the **Digital Education Council** LATAM 2026 study (**>30 000 responses, >29 institutions**, incl. Tec de Monterrey, UNAM, UPC Peru, PUC Chile) — **92% of students** and **79% of faculty** actively engaging with AI. 🔴 **And the actionable asymmetry: 50% of students support AI-assisted feedback on assignments while only 19% of faculty currently use AI that way.**
+
+🔵 **That 50/19 gap is the most directly sellable number in this file.** 🟢 **Demand exists, faculty capability is the bottleneck, and the bottleneck is addressable with exactly the component this pass found (a permissive AI grader with a human-approval gate) plus training.**
+
+🔴 **Regulation: no regional framework.** **Chile** leads (National AI Policy since 2021, a law under discussion); **Brazil** and **Colombia** have advanced national strategies **without** education-specific regulation; **Mexico** has no binding rules — SEP, ANUIES and Observatorio IA recommendations *"lack binding force."* 🟡 **Only ~30% of LATAM universities have published AI-use policies.** 🟢 **The IDB's ILIA index tracks readiness, adoption and governance across 19 countries** and is the instrument to cite in a regional proposal.
+
+🟢 **The engagement shape:** 🟢 **institutional policy plus faculty enablement, delivered together with the tooling** — the surveys say adoption is already won and governance is not. 🔵 **Cost sensitivity favours this shelf's recommended architecture** (copyleft SIS unmodified + permissive build beside it over LTI 1.3, evidence to `lrsql`), 🔵 **and the absence of binding sector regulation means an EMEA-grade governance layer can be offered here as differentiation rather than obligation.**
+
+### 🟢 What is true in every region, and it is this pass's own measurement
+
+🔴 **No permissive student system of record exists** — **six read from payload, six copyleft** (`Gap 309`). 🔴 **The one Apache-2.0 substrate, Ed-Fi DMS, has no OneRoster rostering and no change feed** (`docs/PRD-v8.1.md`), and 🔴 **adopting it is a data migration, not an in-place cutover** (**NFR-OPS-2**, `Gap 303` closed).
+
+🟢 **So the same commercial boundary holds in North America, EMEA, APAC and LATAM:** 🟢 **everything Globant builds can be permissive; the student record it reads from will be copyleft, and LTI 1.3 plus xAPI keep that record at arm's length across a process boundary.** 🔴 **Never quote a closed fork of a GPL SIS, and never quote OneRoster as something this shelf supplies.**
 
 ## 🔴 Sixty-eighth pass, 2026-10-08 — **CORRECTION: the EU AI Act's education high-risk regime is NOT in enforcement.** Regulation (EU) 2026/1744 (the Digital Omnibus on AI) deferred it from `2026-08-02` to **`2027-12-02`** — a sixteen-month move that pass 67 reported the wrong side of. What *is* live is **Article 50**, whose marking grace expires **`2026-12-02`** — eight weeks from this pass
 
@@ -87,7 +182,7 @@ set of regional splits below does not sum to either. 🔵 **Treat all three as o
 🟢 The non-vendor numbers are the ones to quote: **86% of education organisations use generative AI
 and most lack a policy**, and **teachers who use AI weekly report ~5.9 hours/week saved**.
 
-## Opportunities by region
+## Opportunities by region — superseded (the live block is at the top of this file)
 
 🔵 **One `###` per region, closed vocabulary. Where a channel returned nothing for a region, that is
 written down as a gap rather than left silent** — an informed gap is information; silence looks like

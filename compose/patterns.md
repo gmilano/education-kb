@@ -1,8 +1,85 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-08
+updated: 2026-10-09
 ---
+
+## 🟢 Sixty-ninth pass, 2026-10-09 — `P12`: the shelf's **first recipe aimed at a measured market gap** rather than a standard — a wholly permissive **LTI 1.3 + AGS grading surface**, which six closed vendors sell and open source does not have; plus seven practices (`P812`–`P818`), three of them earned by instruments and two by corrections
+
+⏱️ **First pass of this date (pass 68 closed 2026-10-08; the date rolled over during this pass's measurements, which are dated by their publication here). Append-only: this section is new; nothing below it was rewritten.**
+
+### 🆕 `P12` — A permissive **LTI 1.3 + AGS human-in-the-loop grading surface**, zero copyleft
+
+🟢 **Why this recipe exists, and it is not a standards gap — it is a market gap this pass measured.** 🔴 **Six commercial vendors** (EduGears AI, LearnWise, ibl.ai, campusmind.ai, Asyntai, edusageai) **sell AI grading over LTI 1.3 with AGS grade return behind a teacher-approval gate.** 🔴 **Open source has no cross-LMS equivalent:** the permissive exceptions are Moodle-only plugins, and the one real cross-LMS permissive component is on **LTI 1.1 / Basic Outcomes** (`Gap 316`, `Gap 317`). 🔵 **This is the capability with the least open competition and the most demand evidence in this KB** — LATAM alone shows **50% of students wanting AI-assisted feedback against 19% of faculty delivering it.**
+
+🟢 **Every component below was licence-verified from payload this pass.**
+
+| Role | Component | Licence | Verified |
+|---|---|---|---|
+| Grading core + prompt/model plumbing | [`moocupv/lti-ai-grader`](https://github.com/moocupv/lti-ai-grader) | 🟢 **Apache-2.0** | `main` **`5b96722`**; `LICENSE` **11 357 B** |
+| LTI 1.3 launch + AGS grade return | [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) *(or a per-stack equivalent)* | 🟢 **Apache-2.0** | `master` **`3a192de`**; `LICENSE` **11 343 B** — 🟡 **off-canonical by 14 B**, resolved under `P804`: the appendix is **completed** (*"Copyright 2018 Turnitin, LLC"*) rather than left as the `[yyyy] [name of copyright owner]` placeholder. 🟢 Genuine Apache-2.0 |
+| Learner evidence stream | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** | `cb794e4`; **11 357 B** |
+| Competency anchoring | [`opensalt/opensalt`](https://github.com/opensalt/opensalt) | 🟢 **MIT** | `db41cc4`; **1 080 B** |
+| Conformance gate (xAPI 2.0, Caliper 1.2, OneRoster 1.2) | [`conform-ed/conform-ed`](https://github.com/conform-ed/conform-ed) | 🟢 **MIT** | `3596bb5`; **1 080 B** |
+| Article 50(2) structural marking | this KB's `compose/code/aiact-50-2-{marking,pack}` | 🟢 own code | 🟢 **23/23** and **27/27**, run this pass |
+| Signature seam (`P33`) | [`THU-BPM/MarkLLM`](https://github.com/THU-BPM/MarkLLM) | 🟢 **Apache-2.0** | `0a4fe8c`; **11 357 B** |
+
+🟢 **How it wires together:**
+
+1. 🟢 **Replace the launch layer, keep the grading core.** `lti-ai-grader`'s value is not its LTI handshake — it is `aigrader.py` plus the prompt/template/model configuration and its operational hardening. 🔴 **Its handshake is one file (`lti-receiver.py`) speaking LTI 1.1 and returning grades via `replaceResult`.** 🟢 **Swap that one file for an LTI 1.3 tool: OAuth 2.0 / JWKS launch validation, and AGS (`Assignment and Grade Services`) for the score post.** 🔵 **The port surface is deliberately small, which is why this recipe is cheap** — measure it under `Gap 316(i)` before quoting.
+2. 🟢 **Keep the two-pool FastCGI design, whatever the stack.** 🔴 *"AI evaluation requests can remain blocked waiting for an LLM response for several minutes. If `lti-receiver.py` shares the same small `fcgiwrap` pool, a burst of simultaneous evaluations can consume every worker and prevent the next LTI activity from loading."* 🟢 **Isolate the LLM-blocking path from the launch path** (`P812`).
+3. 🟢 **Gate every score on a human.** 🔵 The closed vendors advertise teacher approval before an AGS post, 🟢 **and it is also the single cheapest hedge against Annex III**: a score a teacher approves is decision support, not automated assessment. 🔴 **Never post an unreviewed AI score to a gradebook.**
+4. 🟢 **Write the *process*, not just the score.** Emit xAPI statements for the submission, the AI feedback and the teacher's decision into `lrsql`; anchor the criteria to CASE competencies in `opensalt`. 🔵 **This is what makes the deliverable serve process assessment** (the OECD *metacognitive laziness* trend) 🔴 **and it is also what puts `Gap 310` in play — treat the evidence stream as profiling and design for the conservative reading.**
+5. 🟢 **Mark the generated feedback.** Run the AI feedback text through this KB's `aiact-50-2-marking`, pack it with `aiact-50-2-pack`. 🔴 **This yields a *structural* mark, not a signed one.** 🟢 **Fill the `P33` seam with MarkLLM if a cryptographic mark is required** — 🔴 **and until it is filled, present marking as readiness, never as compliance** (`P803`).
+6. 🟢 **Gate the integration with `conform-ed` in CI**, so an LMS-side change surfaces as a conformance failure rather than a silent grade-passback regression.
+
+🔴 **Licence posture: zero copyleft.** 🟢 Apache-2.0 and MIT throughout; the student record is never forked or linked — the tool reaches the LMS **only** over LTI 1.3 across a process boundary (`P736`, `P809`). 🟢 **Deliverable code can be kept closed.**
+
+🔴 **What this recipe does not do:** 🔴 **it does not roster.** OneRoster is absent from the permissive substrate (`Gap 315`); this recipe consumes the roster the LTI launch hands it and nothing more. 🔴 **It does not own the student record**, and must not try to.
+
+### 🆕 `P812` — an LLM call in a request path is an **operational hazard with a known shape**: isolate its worker pool
+
+🟢 **Earned from payload, not from theory.** `lti-ai-grader`'s nginx design uses **two separate FastCGI pools** for exactly one reason: an LLM response can block a worker **for minutes**, so a burst of evaluations starves the pool and the *next launch* fails — 🔴 **the user-visible symptom is not "grading is slow", it is "the activity won't load."**
+
+🔵 **Generalised:** any synchronous AI deliverable that shares a worker pool between its **LLM path** and its **control path** will fail at the control path first, and will be misdiagnosed. 🟢 **Separate the pools, or make the LLM path asynchronous.** 🟢 **Applies to `P11` and `P12` alike.**
+
+### 🆕 `P813` — an unverified row in a verified table must be **marked or removed**, and the mark is a **work item**, not a disclaimer
+
+🔴 **Earned inside this pass, by catching itself.** `P12` was first drafted carrying its LTI 1.3 library row as *"verify before use — not re-read this pass"*, beside six rows each with a sha and a byte count. 🔵 **A reader takes a table's authority as uniform**, so one unmarked unverified row borrows the credibility of every verified one.
+
+🟢 **The mark did its job: the row was then probed before publication**, and the probe was not a formality — it returned **Apache-2.0 at 11 343 B**, **off-canonical by 14 B**, which needed `P804` to resolve (appendix completed with *"Copyright 2018 Turnitin, LLC"*, not a different licence). 🔵 **Had the row shipped unmarked, that 14-byte discrepancy would have shipped as a verified fact.**
+
+🟢 **The practice, in two parts:** 🟢 **(i)** never let an unverified row sit beside verified ones without a visible mark; 🟢 **(ii)** **treat the mark as a queue** — it is there to be cleared before publication, not to excuse the gap. 🔴 **A mark that survives publication unexamined is worse than an omitted row**, because it looks like diligence. 🔵 **`P811`'s sibling: that one says what to do when a path 404s; this one says what to do when a path was never probed.**
+
+### 🆕 `P814` — a blobless clone is the **default** instrument for tree questions; a full shallow clone is the default for **content** questions
+
+🟢 **Measured this pass.** `git clone --depth 1 --filter=blob:none` enumerated **5 846 files** on a repository `api.github.com` refuses, **with no API access** — 🟢 and it closed `Gap 303` and `Gap 311(a)` on first use, after two passes of path-guessing had produced only 404s.
+
+🔵 **But the two modes are not interchangeable:** 🔴 **a blobless clone fetches blobs on demand, so `grep -r` over one quietly downloads the tree** — the worst of both. 🟢 **Tree shape, path existence, tag and changelog layout → blobless. Content greps → `--depth 1` without the filter.** 🟢 **`Gap 313`'s three-component grep used the latter and cost three small clones.**
+
+### 🆕 `P815` — a `403` from an API is a claim about **a resource**, not about **a host**, until a second endpoint is tried
+
+🔴 **The correction this practice is named for.** Passes ≤68 recorded *"`api.github.com` re-measured `403`"* and drew the consequence *"no star counts, nothing ranked by popularity."* 🟢 **The consequence was right; the cause was wrong.** 🟢 **Measured this pass:** `/rate_limit` → **`200`, authenticated, 15 000/hr core**; an **attached** repo → **`200`** with full payload; a **third-party** repo → **`403`** with the message *"GitHub access to this repository is not enabled for this session."*
+
+🔵 **So it was a per-repository authorisation boundary all along.** 🟢 **The practice: before recording a host as blocked, probe an endpoint that takes no resource argument** (`/rate_limit`, `/meta`, a status path). 🔴 **An instrument map with a wrong cause in it mis-prices every remedy that depends on it** — here it had been hiding the fact that this KB's *own* repository is fully API-readable.
+
+### 🆕 `P816` — a **canonical byte count is a check, not an identification**
+
+🔴 **Earned from a near-miss this pass.** FenixEdu's `LICENSE` is **7 652 B** and OpenEduCat's is **8 241 B**; 🟢 **both are LGPL-3.0**, and the difference is a prepended copyright pointer. 🔵 **Reading only the length would have made them two different licences.**
+
+🟢 **The practice:** 🟢 **always read the first lines; use the length to confirm.** The canonical lengths this shelf relies on — **MIT 1 080–1 118**, **Apache-2.0 11 357**, **GPL-3.0 ~35 100**, **LGPL-3.0 7 652** — 🟢 **are strong corroboration when the header already matches** (this pass read Apache-2.0 at **11 357** on four independent repositories, and MIT at **1 080** on two), 🔴 **and prove nothing on their own.** 🔵 **`P805`'s converse: that one says a file too small to hold a grant is a name; this one says a file of the right size is still only a candidate.**
+
+### 🆕 `P817` — a test harness that reports **zero tests** is a finding about the **harness**
+
+🔴 **Measured twice this pass.** This KB's suites are **plain scripts** — `python3 test_x.py` from inside their directory. 🔴 **`pytest` is not installed here** (`No module named pytest`), and 🔴 **`python3 -m unittest` reported `Ran 0 tests … OK` for one suite and `FAILED (errors=1)` for the other.** 🟢 **Invoked correctly, both ran green: 23/23 and 27/27.**
+
+🔴 **`Ran 0 tests … OK` is the dangerous one** — it is a **pass-shaped** result that measured nothing. 🟢 **The practice: a green with a zero count is a red.** 🔵 **And the README's board census — *"41 unread"*, attributed to `python3 -I` implying `-P`** — 🔴 **was an artefact of the same class of error, so the shelf does not currently know how many of its 106 suites pass** (`Gap 318`). 🟡 **Scope discipline: this pass ran two suites and claims two.**
+
+### 🆕 `P818` — when a channel returns nothing for **twenty weeks**, suspect the **query**, and change one term to test it
+
+🔴 **The control query** (`top open source AI agents {industry} {year} github MIT`) **has been empty for twenty consecutive weeks.** 🟢 **A targeted query using the industry's own vocabulary — `LTI`, `tutoring`, `grading`, `Moodle`, `Canvas` — returned a populated field on the first attempt**, and with it this pass's only real agent find and its central market finding.
+
+🔵 **The diagnosis:** `github MIT` searches **how software is licensed**; the industry names itself by **what it integrates with**. 🔴 **A twenty-week null is more likely an instrument fault than an empty market**, and recording it twenty times does not test it. 🟢 **The practice: hold the industry term fixed and vary the *channel* term; if the field populates, the series was measuring the query.** 🟢 **Keep the null series — it is still the honest record of that channel — but stop reading it as a fact about the field.**
 
 ## 🟢 Sixty-eighth pass, 2026-10-08 — `P11`: the shelf's **first dated recipe**, because its deadline is **`2026-12-02`** and it is built from code this KB already wrote; plus seven practices (`P805`–`P811`) earned by this pass's measurements, two of them by errors caught before publication
 

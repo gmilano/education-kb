@@ -1,8 +1,63 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-08
+updated: 2026-10-09
 ---
+
+## 🟢 Sixty-ninth pass, 2026-10-09 — the control query's **twentieth** empty week, but a targeted query finds **one real permissive education agent** — and its licence, its sha and its *LTI version* are all read from payload before it is written down
+
+⏱️ **First pass of this date (pass 68 closed 2026-10-08; the date rolled over during this pass's measurements, which are dated by their publication here). Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Instrument map, re-measured before any datum:**
+`git ls-remote --symref` **resolved HEAD for 9 of 9** repositories probed.
+🆕 **A new instrument entered the shelf this pass:** `git clone --depth 1 --filter=blob:none` — **5 846 files enumerated** on the Ed-Fi successor with **no API access**, replacing the path-guess-and-404 method every prior pass worked under.
+🔴 **`api.github.com` is CORRECTED, not re-confirmed:** it resolves, it is **authenticated** (core **15 000**/hr) and it serves **`200`** — it returns **`403` only for repositories not attached to this session**. 🔵 **The consequence is unchanged — no star counts for third-party repos, nothing on this shelf ranked by popularity** — but the cause recorded by passes ≤68 ("`api.github.com` `403`") was wrong.
+
+### 🔴 The control query's **twentieth** consecutive empty week
+
+🔵 `top open source AI agents education 2026 github MIT` → returned, as its education rows: `microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`, `avinash201199/free-ai-agents-resources`, then the general tier (OpenHands, CrewAI, LangGraph, Aider, Cline, AutoGen, Hermes).
+
+🔴 **No education component — and the category error is now precisely nameable.** 🔵 Every "education" row the channel returns is a repository that **teaches AI to developers**. 🔴 **Not one is an agent that performs an educational function.** 🟢 **A course about agents is not an agent**, and twenty weeks of this channel have returned nothing else.
+
+🟡 **The channel's own caveat, worth keeping:** one 2026 guide warns that *"open source gets stretched"* this year, naming **Suna's Elastic License 2.0** as source-available rather than open — 🟢 which is exactly why this shelf reads `LICENSE` bytes and never a badge.
+
+### 🆕 The find: a **real, permissive, deployable** AI grader — and its one disqualifying detail
+
+🟢 **A targeted query** (`open source AI tutoring grading agent repository 2026 LTI Moodle Canvas integration`) returned what twenty weeks of the control query did not.
+
+| Agent | Repo | Licence | Description | Verification |
+|---|---|---|---|---|
+| 🆕 **LTI AI Grader** | [`moocupv/lti-ai-grader`](https://github.com/moocupv/lti-ai-grader) | 🟢 **Apache-2.0** | LLM grading tool that receives an LTI launch, grades free-text work against a configurable prompt, and **posts the score back to the LMS gradebook**. Pluggable models (Gemini API or any OpenAI-compatible endpoint), multi-language HTML templates, optional legal-terms URL, debug mode at every stage. Ships its own nginx/Apache setup scripts and **systemd watchdog, health-sample and daily-health timers**. 🔵 From **MOOCs UPV, Universitat Politècnica de València** — **EMEA**. | `main` **`5b96722`**; `LICENSE` **11 357 B** (canonical Apache-2.0); **27 files**; grade return read from source |
+
+🔴 **And the disqualifying detail, read from its own README rather than from the search result:** it is **LTI 1.1**, and its grade passback is **LTI Basic Outcomes** (`lis_outcome_service_url`, `replaceResult`) — 🔴 **not LTI 1.3 AGS**, which is this shelf's integration architecture (`P736`, `P809`). 🟡 **The secondary channel said "LTI 1.0"; the payload says LTI 1.1 — a correction, and a reminder that the version in a search result is not a measurement.**
+
+🟢 **How to quote it:** 🟢 **a sound, permissive grading core with a production-grade operational design**, 🔴 **on a deprecated launch surface**. 🔴 **Never quote it to a Canvas client as-is.** 🟢 Port cost is **`Gap 316`**, with its remedies in cost order.
+
+🟢 **Worth lifting out of it regardless of the LTI version** — its nginx design uses **two separate FastCGI pools**, because *"AI evaluation requests can remain blocked waiting for an LLM response for several minutes. If `lti-receiver.py` shares the same small `fcgiwrap` pool, a burst of simultaneous evaluations can consume every worker and prevent the next LTI activity from loading."* 🔵 **That is a real, measured, LLM-specific operational hazard with a concrete remedy, and it is reusable in any synchronous AI deliverable** (`P812`).
+
+### 🆕 The component that fills this shelf's one declared-and-empty seam
+
+🟢 **`Gap 313` closed this pass**, and its closure named a component rather than a question.
+
+| Component | Repo | Licence | Role | Verification |
+|---|---|---|---|---|
+| 🆕 **MarkLLM** | [`THU-BPM/MarkLLM`](https://github.com/THU-BPM/MarkLLM) | 🟢 **Apache-2.0** | Open-source LLM watermarking toolkit. 🔵 **The named occupant of the `P33` signature seam** that this shelf's own Article 50(2) marking component declares and leaves empty. | `main` **`0a4fe8c`**; `LICENSE` **11 357 B** (canonical) |
+
+🔵 **Why this belongs in the agents file and not only in `compose/`:** 🟢 this shelf's marking component is **green and self-sufficient for the *structural* mark** — `aiact-50-2-marking` **23/23**, `aiact-50-2-pack` **27/27**, both run this pass — 🔴 **but its own closing output says: *"The signature seam (MarkLLM / SynthID, `P33`) is declared and NOT filled."*** 🟢 **MarkLLM is permissive, so the seam is fillable without a licence problem.** 🔴 **Until it is filled, no deliverable may claim a *cryptographic* mark** (`P803`).
+
+### 🟢 Liveness re-measured on the shelf's named agents — **7 of 7 resolve**
+
+| Repo | `main`/`master` HEAD | Note |
+|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `6cf793b` | 🟢 live |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | `939eb0e` | 🟢 live |
+| [`conform-ed/conform-ed`](https://github.com/conform-ed/conform-ed) | `3596bb5` | 🟢 live; 🆕 **MIT, `LICENSE` 1 080 B** read from payload this pass |
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | `cb794e4` | 🟢 live; Apache-2.0 **11 357 B** |
+| [`opensalt/opensalt`](https://github.com/opensalt/opensalt) | `db41cc4` | 🟢 live; 🆕 **MIT, `LICENSE` 1 080 B** read from payload this pass |
+| [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) | `97d0373` | 🟢 live |
+| [`arqueon/certo`](https://github.com/arqueon/certo) | `39816e0` | 🔴 **unchanged since pass 67** — 🔵 reinforces `Gap 301`'s negative closure: the CLR claim is absent from a repository that is not moving |
+
+🔵 **Four rows in this pass, because four agents were verified.** 🟢 **No row in this section was written from a search result, a star count, or a licence badge.**
 
 ## 🟢 Sixty-eighth pass, 2026-10-08 — the agent-side result is a **refusal that finally measured itself**: `Gap 301`'s CLR claim is read at the **pull-request head ref** and is **absent there too**, which converts "a PR is a proposal" from a rule into a finding; the control query is empty for the **nineteenth** week
 

@@ -1,8 +1,65 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-08
+updated: 2026-10-09
 ---
+
+## 🟢 Sixty-ninth pass, 2026-10-09 — the pass finds a trend by **measuring a market structure rather than reading a forecast**: the education agent layer is populated and closed, which inverts twenty weeks of this shelf's reading; plus the **governance-lag** finding reaches four independent bodies and the **permissive-substrate ceiling** becomes a trend in its own right
+
+⏱️ **First pass of this date (pass 68 closed 2026-10-08; the date rolled over during this pass's measurements, which are dated by their publication here). Append-only: this section is new; nothing below it was rewritten.**
+
+### 🆕 Trend 1 — **the open tier's absence is a capture, not a vacuum**, and this changes what the shelf has been saying
+
+🔵 **What this shelf has recorded for twenty weeks:** the control query returns no education agents, so the open education-agent tier is empty.
+
+🟢 **What this pass measured:** a targeted query — using the industry's own vocabulary (`LTI`, `tutoring`, `grading`, `Moodle`, `Canvas`) instead of `github MIT` — **returned a full page on the first attempt**, and it is commercial: **EduGears AI**, **LearnWise**, **ibl.ai**, **campusmind.ai**, **Asyntai**, **edusageai**. 🔴 **Several advertise LTI 1.3 launch with AGS grade return behind a teacher-approval gate** — the exact capability the permissive tier lacks.
+
+🔴 **So the trend is not "open source has not reached education agents." It is "education agents reached the market closed."** 🟢 **The open exceptions are Moodle-only plugins** (MooChat Block, MAICI, Teaching Assistant Block), 🟡 several OpenAI-only; 🟢 **plus exactly one real cross-LMS permissive component, [`moocupv/lti-ai-grader`](https://github.com/moocupv/lti-ai-grader) (Apache-2.0), on LTI 1.1 rather than 1.3.**
+
+🔵 **Why this is the pass's most consequential trend:** 🟢 **it converts a twenty-week absence from a dead end into a market map.** 🔴 **It also indicts this shelf's own instrument** — at twenty weeks, the query is the likelier fault than the field (`Gap 317(ii)`).
+
+### 🟢 Trend 2 — **governance lags adoption**, now stated by four independent bodies across four regions
+
+🟢 **The convergence is no longer a reading; it is a count.**
+
+| Body | Region | The lag, in their own measurement |
+|---|---|---|
+| **UNESCO IESALC** (200 institutions, 19 countries) | LATAM | **87%** use AI in ≥1 area; 🔴 **only ~26% have any formal framework** |
+| **CESGA "AI Act(ing)"** (6 countries) | EMEA | **>90%** of Spanish respondents use AI; 🔴 **~half don't know whether their institution has guidelines** |
+| a statistics roundup | North America | 🔴 **10%** of institutions have formal AI guidelines; **71%** of US teachers lack AI training |
+| **Diligent Institute** | APAC | 🔴 governance frameworks *"struggling to keep pace with technological implementation"* |
+
+🟢 **Four regions, four instruments, one result** — and 🔵 **two of the four are non-vendor institutional studies**, which is what pass 68 said this trend still needed. 🔴 **The gap is between 10% and 26% formal frameworks against 87–92% usage.** 🟢 **Read as a product requirement: the governance layer is the deliverable, not the overhead.**
+
+### 🆕 Trend 3 — **the permissive ceiling in education sits exactly at the system of record**
+
+🟢 **Measured across six systems of record read from payload** (`Gap 309`): **RosarioSIS** GPL-2.0, **Gibbon** GPL-3.0, **openSIS** GPL-2.0, **`frappe/education`** GPL-3.0, **OpenEduCat** LGPL-3.0, 🆕 **FenixEdu Academic** LGPL-3.0. 🔴 **Zero MIT, zero Apache-2.0, zero BSD — six for six.**
+
+🟢 **Meanwhile every *other* layer has a permissive option:** delivery (**Open edX** Apache-2.0, **Richie** MIT), evidence (**`yetanalytics/lrsql`** Apache-2.0), competencies (**`opensalt`** MIT), conformance (**`conform-ed`** MIT), 🆕 analytics (**`openedx/tutor-contrib-aspects`** Apache-2.0), 🆕 watermarking (**`THU-BPM/MarkLLM`** Apache-2.0).
+
+🔵 **The pattern is sharp enough to be a law: in education, permissive licensing covers everything that *moves* data and nothing that *owns* it.** 🟢 **And the one Apache-2.0 exception proves it** — Ed-Fi DMS is permissive precisely because it is a data-standard API substrate, 🔴 **and this pass measured what that costs: no OneRoster rostering, no change feed (*"no equivalent way to consume data changes… without polling the API"*), no fine-grained authorisation, no custom validation, and adoption is a data migration because provisioning is create-only.**
+
+🟢 **The architectural consequence, which is this shelf's standing recommendation now backed by measurement rather than preference:** 🟢 **deploy the copyleft record unmodified, build permissively beside it across LTI 1.3, and write evidence to a permissive LRS.**
+
+### 🟢 Trend 4 — **assessment is shifting from the product to the process**, and the standards tier is where that lands
+
+🟡 **OECD's *"metacognitive laziness"* finding** — over-reliance on AI diminishing deep learning — 🔵 **pushes assessment toward the learning *process* rather than the final artefact.** 🟢 **Independently, the LATAM demand signal points the same way:** **50%** of students support AI-assisted feedback on assignments against **19%** of faculty using AI that way — 🔵 **feedback during the work, not a grade after it.**
+
+🟢 **Why this is a technical trend and not a pedagogical aside:** 🔵 **process assessment is an evidence-stream problem, which is precisely what xAPI and an LRS are for** (`P8`, `P10`). 🔴 **A gradebook score cannot carry process evidence; an xAPI statement stream can.** 🟢 **So the trend favours the architecture this shelf already recommends** — 🔴 **and it collides with `Gap 310`: if a learner evidence stream is *profiling*, the Article 6(3) filter is unavailable and the deliverable is Annex III from `2027-12-02`.** 🟢 **Design for the conservative reading.**
+
+### 🟢 Trend 5 — **marking obligations arrive before high-risk obligations**, and the sequencing is the planning fact
+
+🔴 **Article 50 marking binds `2026-12-02` — eight weeks out.** 🔴 **Annex III high-risk is deferred to `2027-12-02`** (four-channel, 🔴 **still unverifiable against primary text: `eur-lex.europa.eu` refused on both egress paths this pass**).
+
+🔵 **So the obligation that lands first is the cheap one, and the expensive one lands a year later.** 🟢 **That is a gift to anyone who sequences correctly:** 🟢 **ship marking now as a readiness programme (`P11`), and use the intervening year to build the high-risk documentation the deferral bought.** 🔴 **The failure mode is treating the deferral as relief** — it moved the expensive deadline, not the near one.
+
+🟢 **And this pass measured the shelf's real distance from the near one:** 🟢 structural marking is green (**23/23**, **27/27**, both suites run this pass), 🔴 **but 0 of 3 permissive components mark content and the cryptographic signature seam is *"declared and NOT filled"*** (`Gap 313`). 🟢 **Named, permissive remedy: `THU-BPM/MarkLLM` (Apache-2.0).**
+
+### 🟡 Trend 6 — the market's own numbers are **diverging, not converging**, and that is itself the signal
+
+🟡 **Four channels this pass:** TBRC **$7.52B (2025) → $10.6B (2026)** at **40.9%**; IMARC-derived **$6.4B (2025) → $79.6B (2034)**; a third at **~28%/yr to 2036**; AI tutors **$1.63B (2024) → $7.99B (2030)**. 🔴 **These are not reconcilable under one definition.**
+
+🔵 **Divergence this wide usually means the category is still being defined** — 🟢 **and one channel says so directly, rating sector maturity **35/100** against competition **85/100**: pilots everywhere, incumbents everywhere.** 🟢 **The durable structure, which this shelf will quote instead of totals:** K-12 **45.62%** of adoption (largest), language learning fastest-growing, cloud delivery **71.22%** (2024). 🔴 **No single market-size figure may be quoted as *the* number** (`P351`'s discipline, applied to money instead of stars).
 
 ## 🟢 Sixty-eighth pass, 2026-10-08 — the OECD independently states this shelf's measured conclusion (**purpose-built over general-purpose**), the governance-lag finding gets its **first non-vendor instrument** (UNESCO IESALC, 200 institutions), and the pass finds a **sequencing fact worth more than either**: the use case every high-risk regime targets is the one the market has least adopted
 
