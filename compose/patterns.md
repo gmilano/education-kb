@@ -4,6 +4,90 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-fourth pass, 2026-10-09 — **three new recipes**, and the first one is the tier this shelf did not have yesterday: academic integrity, 7-of-8 permissive, with the GPL flagship deliberately held OUTSIDE the product boundary
+
+⏱️ **Sixteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+🔵 **Every component named below was payload-read inline this pass or in a pass that recorded its ref · sha.** 🔴 **No recipe here has been executed end to end** — these are compositions of verified grants, not delivered systems, and the distinction is kept explicit in each one's closing note.
+
+### 🟢 `P911` — **The academic-integrity engagement, with an evasion threat model** (primary region: 🟢 **North America**; directly reusable in 🟢 **EMEA**)
+
+🔵 **Why now:** integrity is the question every institution is asking in the LLM era, 🟢 **the permissive supply is unusually good (7 of 8)**, and 🔴 **a 400★ evasion tool (`CloakBox`) is the second-most-starred row in the proctoring channel** — so a scope without an evasion model fails on contact.
+
+🟢 **Components, with the licence boundary stated:**
+
+| layer | component | grant | role |
+|---|---|---|---|
+| 🟢 code similarity | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 **MIT** (1 084 B, `main` · `44925b8`) | 🟢 **Embedded.** Primary detector for programming submissions. |
+| 🟢 Python-specific | [`fyrestone/pycode_similar`](https://github.com/fyrestone/pycode_similar) | 🟢 **MIT** (`master` · `34ecc94`) | 🟢 **Embedded.** Second opinion on intro-CS Python, where language-aware beats generic. |
+| 🟢 cohort batching | [`automoss/automoss`](https://github.com/automoss/automoss) | 🟢 **MIT** (`main` · `67cd400`) | 🟢 **Embedded.** Whole-assignment sweeps — the shape a registrar needs. |
+| 🟢 prose | [`NoplagLabs/noplag-engine`](https://github.com/NoplagLabs/noplag-engine) | 🟢 **Apache-2.0** (11 358 B, `main` · `aaf7839`) | 🟢 **Embedded.** Self-hosted verbatim + near-verbatim for essays. |
+| 🔴 **evasion detection** | [`josemmo/plagpatrol`](https://github.com/josemmo/plagpatrol) | 🟢 **MIT** (`master` · `039e3b6`) | 🔴 **The layer most scopes omit.** Detects documents tampered to bypass detectors. |
+| 🔴 **high-citation detector** | [`jplag/JPlag`](https://github.com/jplag/JPlag) | 🔴 **GPL-3.0** (35 141 B, `main` · `3ee7de9`), 2 000★ | 🔴 **DEPLOYED AS AN EXTERNAL SERVICE, called over HTTP — never linked.** |
+| 🟢 LMS seam | `LTI 1.3` + AGS adapter | 🟢 studio-written (pass 78 recipe) | 🟢 Grade/artefact exchange with Moodle or Canvas. |
+| 🟢 oversight record | `P891` evidence pack | 🟢 studio-written | 🟢 Satisfies Maryland/Oklahoma human-review and disclosure duties. |
+
+🔴 **The one decision that must be made before any integration work starts:** 🟢 **`JPlag` is GPL-3.0 and 10× more cited than every permissive alternative.** 🟢 **Running it as a separate process the product calls keeps the GPL boundary outside the deliverable and still gives the client the detector their faculty will ask for by name.** 🔴 **Linking it as a library licenses the product.** 🔵 **Same binary, same results, two commercial outcomes — decided by process topology, at zero cost, if decided early.**
+
+🟢 **Timeline: 8–10 weeks.** 🔵 Weeks 1–2 integrity policy + evasion threat model with the academic-conduct office (🔴 **not an engineering task, and it drives the rest**); 3–5 `dolos` + `pycode_similar` + `automoss` behind one submission API; 6–7 `noplag-engine` for prose and `plagpatrol` on every submission; 8 `JPlag` service deployment and the licence-boundary memo; 9–10 LTI 1.3 wiring and the `P891` oversight pack.
+
+🟡 **What this recipe does NOT do:** 🔴 **it does not adjudicate.** 🟢 Every detector output is evidence for a human conduct process — which is also what Oklahoma's "no high-stakes decisions without human review" requires, 🔵 **so the compliance constraint and the right design are the same thing here.**
+
+### 🟢 `P912` — **The permissive adaptive-testing spine** (primary region: 🟢 **APAC**, where curricula are now mandated at national scale; reusable 🟢 **Global**)
+
+🔵 **Why this recipe exists:** this shelf has carried knowledge tracing for forty passes with no *testing* tier underneath it. 🟢 **`topics/item-response-theory` supplied one this pass** — 🔴 **and `P907` means the obvious route is the wrong one: the R psychometric stack is 1-of-8 permissive, so this recipe is deliberately all-Python.**
+
+🟢 **Components:**
+
+| layer | component | grant | role |
+|---|---|---|---|
+| 🟢 adaptive engine | `douglasrizzo/catsim` | 🟢 **MIT** (shelved) | 🟢 Computerised adaptive testing — item selection, stopping rules, simulation before a real learner sees it. |
+| 🟢 IRT estimation | `eribean/girth` | 🟢 **MIT** (shelved) | 🟢 Item calibration from response data. |
+| 🟢 **uncertainty** | [`eribean/girth_mcmc`](https://github.com/eribean/girth_mcmc) | 🟢 **MIT** (1 061 B, `main` · `911376e`) | 🔴 **The layer that makes a score defensible.** Bayesian posterior → "0.7 ± 0.3", not "0.7". |
+| 🟢 latent structure | [`OpenMx/OpenMx`](https://github.com/OpenMx/OpenMx) | 🟢 **Apache-2.0** (🔵 `DESCRIPTION` rung) | 🟡 **Only where SEM is genuinely needed** — measurement invariance across cohorts. 🔴 R, so it sits in the analysis pipeline, not the product. |
+| 🟢 calibrated instrument | [`englishcentral/ovlt`](https://github.com/englishcentral/ovlt) | 🟢 **MIT** (`main` · `f4487e4`) | 🟢 A ready vocabulary-level test — a working item bank to validate the pipeline against. |
+| 🟢 constructed response | [`doheejin/ProTACT`](https://github.com/doheejin/ProTACT) | 🟢 **BSD-3-Clause** (1 496 B, `main` · `4038143`) | 🟢 Trait-aware essay scoring — per-rubric-dimension, which is what a rubric is. |
+| 🟢 CJK writing | [`shibing624/judger`](https://github.com/shibing624/judger) | 🟢 **Apache-2.0** (`master` · `7c0817c`) | 🟢 **The only CJK-language scorer on this shelf** — load-bearing for a China or Japan engagement. |
+| 🟢 item interchange | [`metyatech/markdown-to-qti`](https://github.com/metyatech/markdown-to-qti) + [`sonyccd/qti-playground`](https://github.com/sonyccd/qti-playground) | 🟢 **MIT** / **MIT** | 🟢 Authors write Markdown, ship QTI 3.0; inspect the XML when it breaks. |
+| 🟢 migration | [`rolfis/qti-convert`](https://github.com/rolfis/qti-convert) | 🟢 **Apache-2.0** (`main` · `9d4f95a`) | 🟢 Lifts existing Canvas quiz banks in, so the client is not starting from zero. |
+
+🔴 **Explicitly avoided, and this is the recipe's main design claim:** 🔴 `ShinyItemAnalysis` (GPL-3), `sirt`, `CDM`, `TAM`, `dina`, `ShadowCAT` (all GPL) — 🟢 **the R stack the client's institutional research office already uses.** 🟢 **Use it internally for analysis; keep it out of the deliverable.** 🔵 **`P907` priced this split before a line was written, which is the whole point of the pattern.**
+
+🟢 **Timeline: 10–12 weeks.** 🔵 Weeks 1–2 blueprint + item bank audit, `qti-convert` on legacy banks; 3–5 `girth` calibration and `catsim` simulation against synthetic populations (🟢 pair with `theaiagent/SynthEd`, MIT, from pass 83 — **test the test before a learner meets it**); 6–7 `girth_mcmc` for posterior uncertainty and the appeals story; 8–9 constructed response via `ProTACT` (+ `judger` for CJK); 10–12 `markdown-to-qti` authoring pipeline and delivery integration.
+
+🟡 **Honest limits:** 🔴 **`OpenMx`'s Apache-2.0 rests on a single `DESCRIPTION` field with no licence file** — confirm against CRAN metadata before it is load-bearing. 🔴 **`ovlt` is an instrument for ONE construct** (vocabulary); every other domain needs its own calibrated bank, and that is psychometric work, not engineering.
+
+### 🟢 `P913` — **The copyleft-boundary analytics layer** (primary region: 🟢 **LATAM**; the pattern is 🟢 **Global** and applies to any GPL LMS)
+
+🔵 **Why this is the LATAM recipe specifically:** 🟢 **`Gap 343`'s discharge measured Brazil's deployed school stack and it is AGPL-3.0 end to end** (`i-educar` 718★, `i-diario` 117★, `pre-matricula-digital` 21★) 🔴 **plus `ipti/br.tag` at GPL-2.0.** 🟢 **The client already runs these and should keep running them** — this recipe never touches them.
+
+🟢 **The architecture, and it is one sentence:** 🟢 **a permissively-licensed client that reads the copyleft platform over its network API carries no copyleft obligation into the client.**
+
+| layer | component | grant | role |
+|---|---|---|---|
+| 🔴 **client's platform — UNTOUCHED** | `portabilis/i-educar` + `i-diario`, or `ipti/br.tag` | 🔴 **AGPL-3.0 / GPL-2.0** | 🔴 **Stays the client's deployment. No fork, no plugin, no in-process extension.** |
+| 🟢 **the boundary** | REST / API reads only | — | 🟢 **Where the licence obligation stops.** |
+| 🟢 analytics client | [`yjx0003/UBUMonitor`](https://github.com/yjx0003/UBUMonitor) | 🟢 **MIT** (1 088 B, `master` · `7fde822`) | 🟢 **The reference implementation of this exact pattern** — a desktop learning-analytics client over a live Moodle. Spanish-language UI already. |
+| 🟢 feature extraction | [`pnb/dlwed17`](https://github.com/pnb/dlwed17) | 🟢 **MIT** (UIUC) | 🟢 Autoencoder features from raw educational event data. |
+| 🟢 prediction | [`gassantos/evolvedtree`](https://github.com/gassantos/evolvedtree) | 🟢 **MIT** (`master` · `9a9649a`) | 🟢 GA + decision tree — 🔵 **interpretable by construction**, which matters where the governance framework is still being written. |
+| 🟢 curriculum anchor | `bncc-dev/bncc-dados` + `bncc-pacotes` | 🟢 shelved (BNCC as open data, MCP server) | 🟢 Aligns findings to Brazil's **national curriculum**, not a generic taxonomy. |
+| 🟢 open-data layers | [`agn3si/ResultadosUNAM---data`](https://github.com/agn3si/ResultadosUNAM---data) · [`sumeedu/bancodeitinerarios`](https://github.com/sumeedu/bancodeitinerarios) | 🟢 **MIT** · **Apache-2.0** | 🟢 Mexico (UNAM admissions) and Brazil (*itinerários formativos*) reference data. |
+| 🟢 governance | `P893` institutional framework kit | 🟢 studio-written | 🟢 **The thing 87% of 200 LATAM institutions are missing.** |
+
+🟢 **Timeline: 6–8 weeks** — the shortest of the three, because 🔵 **nothing is being built into a platform and nothing has to be certified.** 🟢 Weeks 1–2 API inventory against the client's actual deployment and the licence-boundary memo; 3–4 `UBUMonitor`-pattern read client + `dlwed17` features; 5–6 `evolvedtree` interpretable prediction, BNCC alignment; 7–8 the `P893` framework kit and teacher-facing surface.
+
+🔵 **Why it leads with teachers rather than students:** 🔴 **only 19% of LATAM faculty use AI for assignment feedback while about half of students support it.** 🟢 **That gap is the whole opening, and it is a trust problem** — so human review stays in the loop by design, not by compliance.
+
+🟡 **Honest limits:** 🔴 **the boundary argument is an architectural one and this shelf is not a law firm.** 🟢 Network-separated client/server is well-trodden ground for GPL, 🔴 **but AGPL-3.0 §13 reaches further than GPL does, and `i-educar`/`i-diario` are AGPL.** 🔵 **The client's counsel signs off the boundary before the first read, and the licence-boundary memo in week 1–2 exists to make that a cheap conversation rather than a late one.**
+
+### 🔴 Recipes this pass did NOT write, and why
+
+🔴 **No proctoring recipe.** 🟢 **`Gap 344`: zero of the five probed proctoring rows is permissive** (`Aankh` GPL-3.0, `ITMOproctor` GPL-3.0, `moodle-quizaccess_proctoring` GPL-3.0, `devkit-lti1p3` GPL-2.0). 🔵 **Writing a recipe would mean composing a deliverable out of components that cannot be in a deliverable.** 🔴 **Against the EU AI Act's 2 Dec 2027 exam-monitoring date, this is the most commercially exposed hole on the shelf**, and it is recorded as a hole rather than papered over with a GPL recipe.
+
+🔴 **No platform-replacement recipe.** 🟢 **11 of 12 platform rows are copyleft and the one permissive row has 0★ and 9 commits** (`P906`, `Gap 346`). 🔵 **`P913` above is the answer to that, and it is deliberately a layer rather than a platform.**
+
+---
+
 ## 🟢 Eighty-third pass, 2026-10-09 — **three new recipes**, and the first one exists only because `Gap 334`'s discharge found the one established platform whose licence permits linking
 
 ⏱️ **Fifteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

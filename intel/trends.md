@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-fourth pass, 2026-10-09 — **academic integrity becomes the sector's front line and it already has an evasion arms race**; governance shifts from guidance to statute in three jurisdictions; and the licence chokepoint moves from the platform to the MEASUREMENT tier
+
+⏱️ **Sixteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 `T1` — **Agentic replaces generative piloting, and the vendors have shipped the toolkits**
+
+🟢 **Measured signal rather than commentary:** Technavio describes a sector-wide shift from experimental generative applications to **autonomous agentic workflows**, and 🟢 **Microsoft updated its Education AI Toolkit in April 2026 to include agentic features.** 🟢 **Institution-wide AI implementation reached 66% in higher education.**
+
+🔵 **What this changes for a studio:** the question stops being "which model" and becomes **"which workflow, with what oversight"** — 🟢 and oversight is exactly what three US states and the EU AI Act now require as an artefact. 🟢 **Singapore's IMDA published the first agentic-AI governance framework in January 2026**, which is the only governance text written for this architecture rather than retrofitted to it.
+
+### 🟢 `T2` — **Governance crosses from GUIDANCE to STATUTE**, and the shelf can now name the dates
+
+🔴 **The qualitative version of this trend has been on the shelf for six passes. This pass it has deadlines:**
+
+| jurisdiction and instrument | date |
+|---|---|
+| 🟢 **Ohio** — every district must adopt a formal AI use policy | 🔴 **1 July 2026** |
+| 🟢 **EU** — Art. 50 transparency + general applicability | 🔴 **2 Aug 2026** |
+| 🟢 **Oklahoma** — written district AI policy, educator supervision, no high-stakes decisions | 🔴 **before 2027–28** |
+| 🔴 **EU** — Annex III education obligations (admissions, grading, exam monitoring) | 🔴 **2 Dec 2027** (postponed) |
+| 🔴 **EU** — emotion recognition in education **PROHIBITED** | 🟢 **already in force since 2 Feb 2025** |
+
+🔵 **The structural insight: 34 US states issued *guidance*, and few district policies reference it.** 🟢 **Guidance produces no artefact and therefore no procurement; a mandate produces both.** 🔴 **So the commercially relevant count is not 34 — it is Ohio, Maryland, Oklahoma and Alabama.**
+
+### 🟢 `T3` — **Adoption outruns governance in every region measured, and the ratio is the product**
+
+| region | adoption | governance |
+|---|---|---|
+| 🟢 North America | 54% of K-12 students; teacher use ~doubled to ~60% | 🔴 **68% of teachers had NO AI training in 2024–25** |
+| 🟢 LATAM | 🟢 **87% of 200 institutions** use AI in ≥1 area; **92% of students, 79% of faculty** | 🔴 Clear institutional policy broadly **absent** (UNESCO IESALC) |
+| 🟢 APAC | Compulsory curricula in China and India; Singapore 60.9% adult diffusion | 🟡 Spectrum from binding to voluntary |
+| 🟢 EMEA | — | 🟢 The most specified regime, with its hardest dates deferred to 2027 |
+
+🔵 **This is the most consistent cross-regional finding this shelf holds**, and it has been stable across four passes of independent regional buys. 🟢 **The deliverable it implies is the same everywhere and localises cheaply: an institutional AI policy, an oversight record, and teacher capability.**
+
+### 🟢 `T4` — 🆕 **Academic integrity is the sector's front line, and it ALREADY has an evasion arms race**
+
+🟢 **New this pass, and the strongest commercial signal in it.** 🟢 **The permissive supply is unusually good:** `dolos` (MIT, 350★), `pycode_similar` (MIT, 191★), `automoss` (MIT, 157★), `noplag-engine` (Apache-2.0, 86★), `jieplag` (MIT, 54★), `copy-spotter` (MIT, 58★), `plagpatrol` (MIT, 42★) — 🟢 **7 of 8 permissive**, against a sector where every other tier this pass came back copyleft.
+
+🔴 **And the counter-market is already larger than parts of the market.** 🔴 **`Batlez/CloakBox` at 400★ — "make your virtual machine invisible to proctoring software" — is the second-most-starred row in the entire proctoring channel**, behind only `Proctoring-AI` (633★). 🟢 **`josemmo/plagpatrol` exists specifically to detect documents tampered to bypass detectors.**
+
+🔵 **The trend statement: detection and evasion are co-evolving in public, on the same platform, at comparable scale.** 🟢 **The practical consequence for a studio is a specification rule, not a sentiment:** 🔴 **an integrity product scoped without an evasion threat model is scoped wrong**, and will be defeated by a 400★ repository the client's students can find in one search.
+
+### 🔴 `T5` — 🆕 **The licence chokepoint has MOVED from the platform tier to the MEASUREMENT tier**
+
+🔵 **Pass 83's headline was that every established platform is copyleft. That remains true — 11 of 12 rows across passes 83–84.** 🟢 **But it is now a SETTLED fact rather than a live risk**, because the architecture that answers it is known: build above the platform, talk to it across a process boundary (`UBUMonitor`, MIT client against a GPL Moodle, no obligation carried).
+
+🔴 **The unsolved chokepoint is measurement.** 🟢 **Measured this pass:**
+- 🔴 **R/CRAN psychometrics: 1 of 8 permissive** (`sirt`, `CDM`, `TAM`, `dina`, `ShadowCAT`, `ShinyItemAnalysis`, `galamm` all GPL)
+- 🔴 **Academic knowledge-tracing code: ungranted at scale** (`Gap 342`, extended)
+- 🔴 **Education research corpora: CC BY-NC-SA** — 🔴 **non-compliable, not merely copyleft**
+
+🔵 **Why this is worse than the platform problem it replaces:** 🟢 a copyleft platform can be left in the client's hands, 🔴 **but the thing that says *what a learner knows* has to be INSIDE the product.** 🟢 **`P907` is the usable rule: the ecosystem predicts the grant, so price the Python route separately from the R route** — the same mathematics is permissive in Python and GPL in R.
+
+### 🔴 `T6` — 🆕 **NonCommercial is entering the sector through its DATA, and it is a different category of problem**
+
+🟢 **Two CC BY-NC-SA 4.0 rows payload-read this pass, both corpora, both from the same lab** (`cefr-asag-corpus`, `ai-teacher-test`). 🟢 **`P910`: the artefact type predicts the licence family** — research *code* is permissive-or-GPL, research *data* is CC-NC, student coursework is ungranted.
+
+🔴 **The trend worth watching: AI in education is a data-hungry vertical whose benchmark data is published by academics under Creative Commons, and `NC` is the default CC variant in that community.** 🔵 **GPL is an obligation you can discharge; NC is a prohibition with no compliance path.** 🟢 **A procurement screen that sorts into "permissive / copyleft" has no cell for this and will mis-file it as a cost.**
+
+### 🟢 `T7` — **Non-English supply is real, systematically under-counted, and the under-counting is instrumental**
+
+🟢 **Pass 83 found APAC's open-source education supply to be Chinese-language-primary and invisible to an English-only read. This pass found the same effect in licence TEXT.** 🔴 **Brazil's most-deployed school stack serves its AGPL-3.0 licence in Portuguese — `LICENÇA PÚBLICA GERAL AFFERO GNU`, not one English word** — 🔴 **and a title-line classifier reads that as ungranted** (`P905`).
+
+🔵 **The trend is not "there is more non-English software"; it is that the INSTRUMENTS this sector uses to survey open source are English-anchored at every layer** — search queries, topic descriptions, and now licence detection. 🟢 **`P908` adds the regional corollary: a language places a region only when one country dominates it** (Portuguese → Brazil, yes; Spanish → Spain *and* 19 LATAM countries, no).
+
+### 🟢 `T8` — **Teacher-facing is the underserved side, and it is underserved in every region**
+
+🔴 **The numbers line up across independently bought limbs:** 🔴 **68% of US teachers had no AI training**; 🔴 **only 19% of LATAM faculty use AI for assignment feedback though ~half of students support it**; 🟢 Singapore's answer is teacher training at every level by 2026; 🟢 Brazil's PBIA targets 5M+ workers.
+
+🔵 **Nearly all consumer-visible AI-in-education supply is student-facing** — this pass read a 2 587-repo spaced-repetition channel that is almost entirely consumer flashcard apps. 🟢 **The teacher-facing instruments are rarer and this pass added real ones:** `soumya997/Smart-Exam-Form` (MIT, the only row in the grading tier shipping a teacher surface), `UBUMonitor` (MIT, Moodle analytics client), `automoss` (MIT, cohort-level integrity). 🟢 **A trust-first teacher product with human review retained is the shape all three regions' numbers point at.**
+
+### 🟡 `T9` — **Market sizing stays unusable as a single figure, and the disagreement is definitional**
+
+🔴 **Five publishers put 2026 between ~$1.94B and $10.6B — a 5.5× spread.** 🟢 **Largest market: North America (Precedence). Fastest-growing: Asia-Pacific (TBRC)** — 🟢 **consistent, not contradictory.** 🔵 **A 5.5× range is a disagreement about what counts as "AI in education", so averaging produces a number no publisher would defend.** 🔴 **Named so they are not re-quoted from this shelf as verified: the "42% learning-outcome improvement" (Carnegie Learning MATHia, vendor-linked) and "83% of institutions plan to deploy AI teaching assistants" both failed verification against a primary source this pass.**
+
+---
+
 ## 🟢 Eighty-third pass, 2026-10-09 — **the copyleft wall is measured, not assumed**: every established education platform is copyleft, and the permissive supply is entirely in the intelligence layer
 
 ⏱️ **Fifteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

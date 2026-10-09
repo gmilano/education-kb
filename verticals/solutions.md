@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-fourth pass, 2026-10-09 — a **permissive Apache-2.0 school ERP exists**, and `P906` is the reason it does not change the recommendation: its README claims production and it has **0★, 0 forks and 9 commits**. Pass 83's copyleft finding extends from **8 of 8 to 11 of 12**
+
+⏱️ **Sixteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 The row pass 83's finding predicted could not exist — and it does
+
+🔴 **Pass 83 discharged `Gap 334` and concluded: "ZERO of the eight established platforms is permissive."** 🟢 **This pass went looking for a counter-example on a vendor-blog channel and payload-read one:**
+
+| platform | grant (payload-read inline) | bytes | ref · sha | ★ | modules |
+|---|---|---|---|---|---|
+| 🆕 [`vivek-maheshwari/open-school-erp`](https://github.com/vivek-maheshwari/open-school-erp) | 🟢 **Apache-2.0** | 11 357 | `main` · `d50a5a3` | 🔴 **0** | Students, attendance, fees, examinations, transport, accounting, communication. Multi-tenant with **database-per-school** isolation; offline-capable mobile apps. |
+
+🟢 **The grant is real and verified at the resolved ref — Apache-2.0 at the canonical 11 357 B.** 🟢 **It is the first permissive row this shelf has ever placed in the platform/SIS tier**, and `live=0, archive=0` — genuinely unshelved.
+
+### 🔴 `P906` — a README's **production claim is not a maturity signal**, because nothing third-party pays for it
+
+🔴 **The repository's About section says: *"In production with real schools."*** 🟢 **Bought the repository page with `WebFetch` — a channel this shelf had not used before — and measured:**
+
+| signal | reading |
+|---|---|
+| 🔴 **stars** | **0** |
+| 🔴 **forks** | **0** |
+| 🟡 watchers | 1 |
+| 🔴 **commits on `main`** | **9** |
+| 🔴 latest commit date | **not shown on the page** |
+| 🔴 primary language | **not stated** — no language breakdown rendered |
+| 🟢 licence | 🟢 **Apache-2.0** (payload-read, independently) |
+
+🔵 **Both readings are true at once, and that is the whole finding: the grant is verified and the maturity is absent.** 🔴 **A 9-commit repository with no forks and no stars cannot be in production with real schools in any sense a client would recognise** — and if it is, with one unverifiable author, that is a *higher* risk, not a lower one.
+
+🟢 **`P906` adopted: a self-description in a README costs its author nothing and is therefore not evidence.** 🔵 Stars, forks and commit counts are crude, but they are **third-party and costly** — someone else had to act. 🟢 **The rule: never let a prose claim ("production-ready", "battle-tested", "used by N schools") into a shelf row without an independent signal beside it**, and when the two disagree, 🔴 **record both and recommend on the independent one.**
+
+🔵 **This is the same shape as pass 83's `SynthEd` finding, stated for the platform tier:** 🟢 **the gap that closes is "nothing permissive exists"; the gap that does not close is "something permissive and PRODUCTION-GRADE exists."**
+
+🔴 **`Gap 346` opened and costed: there is no permissive, production-grade platform-tier row on this shelf.** 🟢 **The cheap probes, named so pass 85 does not re-derive them:** `GegoK12` (MIT claimed by its vendor for 26 of 38 modules — 🔴 **vendor claim, never payload-read, and the split core/commercial model is exactly the shape `P890`-class verification exists for**) and `Fedena` (Apache-2.0 claimed in one comparison table, 🔴 **also unverified**). 🟡 **Both are vendor-page claims and neither is on this shelf as a verified row.**
+
+### 🔴 Pass 83's copyleft finding **EXTENDS from 8 of 8 to 11 of 12** — three new platform rows, all copyleft, all LATAM-deployed
+
+🟢 **Every grant payload-read inline at the resolved ref:**
+
+| platform | grant (payload-read) | bytes | ref · sha | ★ | region | what it is |
+|---|---|---|---|---|---|---|
+| 🔴 [`portabilis/i-diario`](https://github.com/portabilis/i-diario) | 🔴 **AGPL-3.0** — 🔵 **served in PORTUGUESE** (`P905`) | 35 326 | 🔴 **`1.6`** · `ef909f2` | 117 | 🟢 **LATAM** (Brazil) | Teacher gradebook / daily register for the `i-educar` suite |
+| 🔴 [`portabilis/pre-matricula-digital`](https://github.com/portabilis/pre-matricula-digital) | 🔴 **AGPL-3.0** — 🔵 **in Portuguese** | 35 326 | 🔴 **`2.12`** · `b73af87` | 21 | 🟢 **LATAM** (Brazil) | Enrolment and waiting-list management, integrated with `i-educar` |
+| 🔴 [`ipti/br.tag`](https://github.com/ipti/br.tag) | 🔴 **GPL-2.0** | 18 027 | `main` · `d1cb33e` | 20 | 🟢 **LATAM** (Brazil) | IPTI school management, *Tecnologia Social* |
+| 🔴 [`loventures/loplatform`](https://github.com/loventures/loplatform) | 🔴 **AGPL-3.0** | 34 354 (`LICENSE.md`) | `main` · `e9dd896` | 12 | 🟡 unplaced | Authoring + teaching + learning LMS, QTI-capable |
+
+🔵 **The already-shelved `portabilis/i-educar` (718★) is the suite's core**, and these two are its satellites — 🟢 **so Brazil's most-deployed open school-management stack is AGPL-3.0 end to end.**
+
+🔴 **Running total for the platform/SIS/LMS tier across passes 83–84: 11 of 12 rows copyleft.** 🟢 **The single permissive row is the 0★ one above.** 🔵 **The commercial reading is unchanged and now much better evidenced: the platform is the client's and it is copyleft; the intelligence, analytics and assessment layers on top are what a studio sells.** 🟢 **And `OpenEduCat`'s LGPL-3.0 remains the one established platform that permits *linking* — see `P902` in `compose/patterns.md`.**
+
+### 🟢 The permissive READ-SIDE of a copyleft platform — the pattern that makes the tier workable
+
+🔴 **`Gap 334` established that you cannot embed Moodle (GPL-3.0) in a product you resell.** 🟢 **This pass shelves the instrument that sidesteps that entirely:**
+
+🟢 **[`yjx0003/UBUMonitor`](https://github.com/yjx0003/UBUMonitor) — MIT, 1 088 B, `master` · `7fde822`, 13★ — EMEA (Spain, Universidad de Burgos)** is a desktop learning-analytics client that **reads a live Moodle over its API** rather than extending it in-process.
+
+🔵 **Why this is the architecturally important row and not just another analytics tool:** 🟢 **an MIT client that talks to a GPL server across a network boundary carries no GPL obligation into the client.** 🔴 **A GPL Moodle plugin doing the same analysis does.** 🟢 **Same feature, same data, two licence outcomes decided entirely by where the process boundary sits** — and that is a decision the studio controls at design time, for free.
+
+### 🟡 What this pass does NOT settle in this tier
+
+🔴 **`open-school-erp` was not executed, built, or deployed** — the Apache-2.0 grant is payload-read and the maturity signals are page reads, nothing more. 🔴 **Its "production with real schools" claim is neither confirmed nor falsified**, only weighed against 0★/0 forks/9 commits and recorded as unsupported.
+
+🔴 **`GegoK12`'s and `Fedena`'s permissive claims remain VENDOR CLAIMS.** 🟢 Stated as such rather than shelved as rows — 🔵 **pass 83 falsified Open edX's Apache claim by payload-reading AGPL-3.0, which is the standing reason no vendor claim enters this shelf unread.**
+
+---
+
 ## 🟢 Eighty-third pass, 2026-10-09 — **`Gap 334` DISCHARGES, 8 of 8 payload-read**: one vendor claim confirmed, one claim falsified, one licence CORRECTED, one contradiction finally *explained* — and **not one of the eight is permissive**
 
 ⏱️ **Fifteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

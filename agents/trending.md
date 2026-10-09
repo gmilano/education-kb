@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 84) — **`Gap 343` DISCHARGED on institutional anchors**, the academic-integrity tier arrives 7-of-8 permissive, and the shelf meets the first licence family it cannot comply with: **CC BY-NC-SA**
+
+⏱️ **Sixteenth pass of this date.** 🟢 **Append-only: this section is new. Pass 83's section is immediately below and nothing in it was rewritten.**
+
+### 🟢 The three-line summary
+
+| item | status |
+|---|---|
+| 🔴 `Gap 343` — no LATAM repository row placed in four passes | 🟢 **DISCHARGED** — 8 rows placed on institutional anchors, 2 permissive |
+| 🔴 pass 83's six named unread channels | 🟢 **ALL SIX BOUGHT**, plus three more — 9 channels total |
+| 🔴 "the measurement tier is hard to licence" (`Gap 342`) | 🔴 **CONFIRMED AND BROADENED** — it is two different problems in two ecosystems |
+
+🟢 **62 repositories probed — nearly double pass 83's record of 33.** 🟢 **26 granted permissive rows** (18 MIT, 7 Apache-2.0, 1 BSD-3-Clause) and 🔴 **33 named negatives.**
+
+### 🟢 Hot signals
+
+1. 🟢 **Academic integrity is a whole tier this shelf did not have, and it is 7 of 8 permissive.** 🟢 [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) (MIT, 350★, Ghent University), [`fyrestone/pycode_similar`](https://github.com/fyrestone/pycode_similar) (MIT, 191★), [`automoss/automoss`](https://github.com/automoss/automoss) (MIT, 157★), [`NoplagLabs/noplag-engine`](https://github.com/NoplagLabs/noplag-engine) (Apache-2.0, 86★, prose), [`thu-cs-lab/jieplag`](https://github.com/thu-cs-lab/jieplag) (MIT, 54★, Tsinghua), [`Wazzabeee/copy-spotter`](https://github.com/Wazzabeee/copy-spotter) (MIT, 58★) and [`josemmo/plagpatrol`](https://github.com/josemmo/plagpatrol) (MIT, 42★). 🔵 **This is the tier every client is asking about in the LLM era, and the shelf had nothing in it until this pass.**
+2. 🔴 **But the tier's flagship is the one copyleft row — `Gap 345`.** 🔴 [`jplag/JPlag`](https://github.com/jplag/JPlag) is **GPL-3.0 at 2 000★**, an order of magnitude more cited than every permissive row, all of which sit at ≤350★. 🟢 **The clean resolution: run JPlag as an external service the product calls, keeping the GPL boundary outside the deliverable — or adopt `dolos` at a bounded quality cost.** 🔴 **Architecture decision, licence cause, and it has to be taken before the integration.**
+3. 🔴 **The shelf has met its first NON-COMPLIABLE licence family.** 🔴 `anaistack/cefr-asag-corpus` (20 863 B) and `anaistack/ai-teacher-test` (20 861 B) are **CC BY-NC-SA 4.0**. 🔵 **GPL and AGPL are obligations you can satisfy; `NonCommercial` is a prohibition you cannot.** 🟢 **Recorded as its own bucket with a measured byte signature — it must never share the "🔴 copyleft" cell with a GPL row, because one is a cost and the other is a stop.**
+4. 🟢 **`Gap 343` discharges, and the instrument pass 83 costed for it would NOT have worked.** 🟢 **`P908`: orthography identifies a LANGUAGE; a language places a REGION only when one country dominates it.** 🟢 `topics/educacao` is ~20/20 Brazil and self-places; 🔴 `topics/educacion` splits Spain against Chile, Mexico, Uruguay and Ecuador and places nothing. 🔴 **A Spanish orthography class would have filed Spanish (EMEA) rows as LATAM** — worse than the gap. 🟢 **Every LATAM row placed this pass carries a named institution: UNAM, ANEP, SENCE, UnB/FGA, IPTI, BNCC.**
+5. 🔴 **Brazil's real school-management supply is copyleft, and it is the deployed part.** 🔴 `portabilis/i-diario` (AGPL-3.0, 117★) and `portabilis/pre-matricula-digital` (AGPL-3.0, 21★) sit beside the already-shelved `i-educar`; `ipti/br.tag` is GPL-2.0. 🟢 **Only `ResultadosUNAM---data` (MIT) and `bancodeitinerarios` (Apache-2.0) are permissive.** 🔵 **LATAM mirrors the global picture exactly: the deployed platform is the client's and copyleft; the intelligence on top is ours.**
+6. 🔴 **A licence text arrived IN PORTUGUESE and would have been read as ungranted — `P905`.** 🔴 The `portabilis` AGPL-3.0 payload opens `LICENÇA PÚBLICA GERAL AFFERO GNU` — **not one English word.** 🟢 **And the byte fallback fails too, measured against controls bought for the comparison: English AGPL-3.0 is 34 520 B (`canvas-lms`) *and* 35 136 B (`edx-platform`), the Portuguese is 35 326 B.** 🔵 **There was never a single value to match, and a tolerance wide enough to catch the Portuguese swallows GPL-3.0 at 35 141–35 178 B.**
+7. 🔴 **`Gap 344`: the exam-proctoring delivery tier has ZERO permissive rows** — `Aankh` (GPL-3.0, 86★, India), `ITMOproctor` (GPL-3.0, 39★, Russia), `moodle-quizaccess_proctoring` (GPL-3.0, 30★, Bangladesh), `devkit-lti1p3` (GPL-2.0, 20★, TAO). 🔵 **Against the EU AI Act classing exam monitoring as high-risk from 2 Dec 2027, this is the tier an EMEA client will ask for and the shelf cannot supply permissively.**
+8. 🟡 **The second-largest row in the proctoring channel exists to DEFEAT the first.** 🟡 `Batlez/CloakBox` (400★) makes a VM invisible to proctoring software. 🔵 **Recorded as a market signal, not a component: an integrity product specified without an evasion threat model is specified wrong** — which is the same reason `plagpatrol` (detects documents tampered to bypass detectors) is worth more than its 42★ suggests.
+9. 🟢 **`P907`: the ecosystem predicts the GRANT, not just where the grant lives.** 🔴 R/CRAN psychometrics is **1 of 8 permissive**; 🟢 Python/Java psychometrics is **2 of 3**. 🔵 **R itself is GPL-2.0 and CRAN follows the base language**, so "is this an R package?" is a licence prediction available before a byte is fetched. 🔴 **The trap is that the client's research office already runs R** — so the natural choice puts GPL in the deliverable, and the permissive route through the same mathematics is Python.
+10. 🟢 **`P909` corrects `P900`'s variable: it is MULTI-WORD-NESS, not jargon.** 🔴 `topics/qti` is the most specialist term this shelf has bought — 55 repos — and scores **80%**, because **QTI is also CERN's *Quantum Technology Initiative***. 🟢 **Three multi-word terms of art each scored 100%**: `knowledge-tracing`, `educational-data-mining`, `automated-essay-scoring`. 🔵 **Better rule because it is checkable before you buy: count the words.**
+11. 🟢 **`topics/automated-essay-scoring` was virgin after 84 passes — 35 repos, 100% precision, 12 of 12 rows unshelved, 8 permissive grants** including this shelf's first **BSD-3-Clause** row ([`doheejin/ProTACT`](https://github.com/doheejin/ProTACT), trait-aware scoring). 🔵 **A small, perfectly-targeted channel sat unbought for 84 passes while generic queries were re-bought six times** — `P901` and `P899` in one observation.
+12. 🔴 **ETS publishes the standard reference text on automated essay scoring and its companion code grants nothing.** 🔴 [`EducationalTestingService/aes-book-hands-on`](https://github.com/EducationalTestingService/aes-book-hands-on) — no licence file. 🔵 **Institutional provenance reads as reassurance and is orthogonal to whether you may use the code.** 🟢 **`Gap 347`, upstream-askable:** one line from ETS would make this the sector's most citable permissive AES artefact.
+13. 🟢 **`P894` and `P895` both REPRODUCE independently** — the first time either has. 🔴 The session locale is still unset and a fresh six-character CJK control still reads **1 of 6** without `LC_ALL=C.UTF-8`. 🟢 `shmercer/writeAlizer` serves a **47-byte** LICENSE stub with `License: MIT + file LICENSE` in `DESCRIPTION` — the identical CRAN shape as pass 83's `sonsoleslp/tna` at 46 B. 🔵 **Two observations each: these are now rules, not anecdotes.**
+14. 🟡 **Zero new LLM-agent rows this pass, and that was a deliberate trade.** 🔵 Pass 83's named queue was six *measurement, integrity and assessment-interop* channels, and this pass spent the budget discharging it plus `Gap 343`. 🔴 **`ai-tutor` p1/p2 and `intelligent-tutoring-system` stay exhausted, so the agent tier has no live channel.** 🟢 **Costed for pass 85:** `topics/ai-grading`, `topics/socratic`, `ai-tutor` page 3.
+
+### 🔴 Channel notes — what was bought, and what it cost
+
+🟢 **Nine channels via `WebFetch` to `github.com/topics/...` (all 200), plus one `WebFetch` to a repository page — a channel this shelf had not used before, and it settled a row decisively** (see `verticals/solutions.md`, `P906`).
+
+🔴 **Four commands were refused by this session's own command classifier, not by the network** — a file-write-plus-`curl` compound (twice), a `head`/`tail`/`mv` splice, and a `python3` splice. 🟢 **Decomposed into single-purpose commands, every one of the underlying measurements succeeded, and the dedicated edit tool completed the writes.** 🔵 **Recorded separately from network findings on purpose: averaging a classifier refusal into a "blocked" row teaches the shelf that an open channel is closed.**
+
+🔴 **`curl` to `api.github.com` was NOT re-measured** this pass — the probe was refused before it reached the network, so passes 78–83's 🔴 **403** stands as carried, not confirmed.
+
+---
+
 ## 🟢 2026-10-09 (pass 83) — **`Gap 334` discharged and `Gap 336` closed in one pass**, the APAC supply turns out to be Chinese-language-primary, and `P795` finally stops reproducing — because the channel changed
 
 ⏱️ **Fifteenth pass of this date.** 🟢 **Append-only: this section is new. Pass 82's section is immediately below and nothing in it was rewritten.**

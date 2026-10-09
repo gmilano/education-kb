@@ -4,6 +4,171 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 84) — **nine channels bought, pass 83's entire named queue discharged**, 62 repositories probed, and `P909` corrects `P900`: the precision predictor is **multi-word-ness**, not jargon — because an ACRONYM is jargon that collides
+
+⏱️ **Sixteenth pass of this date.** 🟢 **Append-only: pass 83's section sits immediately below, unchanged.**
+
+🟢 **62 repositories probed — nearly double pass 83's 33**, the prior record. 🟢 **26 granted permissive rows**, 🔴 **33 named negatives**.
+
+### 🟢 Pass 83's carry-forward is **DISCHARGED IN FULL** — all six named channels bought
+
+🔴 **Pass 83 closed by naming six unread channels "so the next pass does not re-decide it."** 🟢 **All six were bought this pass, plus three more.** 🔵 **`P899` working as designed: the channel ledger told this pass exactly where to spend, and not one minute went into re-deciding.**
+
+| channel | topic size | rows read | 🟢 **on-topic** (precision) | 🆕 unshelved | 🟢 granted | 🔴 ungranted / blocked |
+|---|---|---|---|---|---|---|
+| 🟢 **`topics/automated-essay-scoring`** | **35** | 20 | 🟢 **20/20 (100%)** | 🟢 **12 of 12** | 🟢 **8** | 🔴 **4** |
+| `topics/item-response-theory` | 142 | 20 | 🟢 **19/20 (95%)** | 11 | 🔴 **3** | 🔴 **8** |
+| `topics/educational-data-mining` | 116 | 20 | 🟢 **20/20 (100%)** | 8 | 🟢 **3** | 🔴 **5** |
+| `topics/plagiarism-detection` | 380 | 20 | 🟡 ~13/20 (65%) | 8 | 🟢 **7** | 🔴 **1** |
+| `topics/proctoring` | 140 | 20 | 🟢 ~18/20 (90%) | 5 | 🔴 **0** | 🔴 **4** |
+| `topics/qti` | 55 | 20 | 🟡 **16/20 (80%)** | 7 | 🟢 **3** | 🔴 **4** |
+| 🆕 **`topics/educacao`** | 295 | 20 | 🟢 **20/20 (100%)** | high | 🟢 **1** | 🔴 **4** |
+| 🆕 **`topics/educacion`** | 345 | 20 | 🟢 ~19/20 (95%) | high | 🟢 **1** | 🔴 **1** |
+| `topics/spaced-repetition` | **2 587** | 20 | 🟢 20/20 (100%) | ~16 | 🟡 **not probed** | 🟡 **deliberately deferred** |
+
+🟡 **`topics/spaced-repetition` was read and DELIBERATELY NOT PROBED.** 🔵 **Reason recorded rather than left as a silent omission:** at 2 587 repos it is the largest channel this shelf has ever opened, and its page-1 rows are **consumer flashcard applications** — `Echo-Loop` (4.1k★), `fsrs4anki` (4.1k★, already shelved), `obsidian-spaced-repetition` (2.6k★), `LibreLingo` (2.6k★), `olmps/memo` (1.9k★), `orbit` (1.8k★). 🔴 **High precision on the *topic*, low relevance to an institutional engagement:** a studio builds *for* a university, and none of these is a component a university buys. 🟢 **The permissive scheduling ALGORITHM is the part worth having, and it is one repo — `open-spaced-repetition/free-spaced-repetition-scheduler` (723★) — costed for pass 85 rather than probed in a 20-row sweep.**
+
+### 🟢 `P909` — **`P900` was right about the direction and wrong about the variable**: it is MULTI-WORD-NESS, not jargon
+
+🔵 **Pass 83's `P900` said channel precision tracks how JARGON the noun is, inversely to its size.** 🟢 **This pass bought a counter-example on purpose and it fired:**
+
+| channel | size | form of the term | precision | the collision |
+|---|---|---|---|---|
+| 🟢 `knowledge-tracing` | 92 | multi-word term of art | 🟢 **100%** | none |
+| 🟢 `automated-essay-scoring` | **35** | multi-word term of art | 🟢 **100%** | none |
+| 🟢 `educational-data-mining` | 116 | multi-word term of art | 🟢 **100%** | none |
+| 🔴 **`qti`** | **55** | 🔴 **three-letter ACRONYM** | 🔴 **80%** | 🔴 **CERN's *Quantum Technology Initiative*** — `CERN-QTI/QuASK`, `CERN-QTI/latent-ad-qml`, `alice4space/qutree` |
+| 🔴 `adaptive-learning` | 570 | plain-language phrase | 🔴 **30%** | control theory, streaming ML |
+
+🔴 **`qti` is the most jargon term this shelf has ever bought — and it is only 55 repos — yet it scores 80%, not 100%.** 🔵 **Because an acronym is three or four characters, and that is a small enough space that unrelated fields land on the same string.** 🟢 **`QTI` means *Question and Test Interoperability* in assessment and *Quantum Technology Initiative* at CERN, and GitHub's topic system cannot tell them apart any more than it could separate the three senses of "adaptive."**
+
+🟢 **`P909` adopted, superseding `P900`'s variable:** 🟢 **prefer a MULTI-WORD term of art** — `knowledge-tracing`, `automated-essay-scoring`, `educational-data-mining` all scored 100%. 🔴 **Treat an acronym channel as polysemous until measured, however specialist it sounds**, and 🟡 **size remains a secondary effect, not the predictor.** 🔵 **Operationally this is a better rule because it is checkable before you buy: count the words.**
+
+### 🟢 New this pass — **26 granted rows**, every licence payload-read inline at the resolved ref
+
+🔵 **★ figures are `WebFetch` rendered-page reads, labelled as channel figures and not API counts** (`P886`).
+
+#### 🟢 Academic integrity — **a tier this shelf did not have, and 7 of 8 are permissive**
+
+| repo | grant (payload-read) | bytes | ref · sha | ★ | signal |
+|---|---|---|---|---|---|
+| 🟢 [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 **MIT** | 1 084 | `main` · `44925b8` | 350 | Source-code plagiarism detection. 🟢 **The permissive flagship of the tier.** 🟢 **Region-placed: EMEA** — `dodona-edu` is the Dodona project at **Ghent University**, Belgium. |
+| 🟢 [`fyrestone/pycode_similar`](https://github.com/fyrestone/pycode_similar) | 🟢 **MIT** | 1 066 | 🔴 `master` · `34ecc94` | 191 | Python-specific plagiarism detection. 🔵 Language-specific detectors beat generic text matching on code, and Python is what intro CS teaches. |
+| 🟢 [`automoss/automoss`](https://github.com/automoss/automoss) | 🟢 **MIT** | 1 065 | `main` · `67cd400` | 157 | Automates similarity detection across a **whole assignment cohort**. 🔵 The batch/cohort shape is the one a registrar actually needs. |
+| 🟢 [`NoplagLabs/noplag-engine`](https://github.com/NoplagLabs/noplag-engine) | 🟢 **Apache-2.0** | 11 358 | `main` · `aaf7839` | 86 | Self-hostable plagiarism engine for **prose**, verbatim and near-verbatim. 🟢 **Apache-2.0 at the canonical 11 358 B** — the one prose-side permissive row against seven code-side ones. |
+| 🟢 [`thu-cs-lab/jieplag`](https://github.com/thu-cs-lab/jieplag) | 🟢 **MIT** | 1 081 | 🔴 `master` · `69494d0` | 54 | Rust plagiarism detector inspired by Stanford MOSS. 🟢 **Region-placed: APAC** — `thu-cs-lab` is **Tsinghua University**'s CS lab. |
+| 🟢 [`Wazzabeee/copy-spotter`](https://github.com/Wazzabeee/copy-spotter) | 🟢 **MIT** | 1 072 | `main` · `e03f7f0` | 58 | Sentence-level similarity across submitted files. |
+| 🟢 [`josemmo/plagpatrol`](https://github.com/josemmo/plagpatrol) | 🟢 **MIT** | 1 084 | 🔴 `master` · `039e3b6` | 42 | 🔵 **The inverse instrument, and the only one of its kind here:** detects documents *tampered to BYPASS* plagiarism detectors. 🟢 Worth naming because an integrity product that cannot detect evasion is a compliance theatre. |
+
+🔴 **`Gap 345` — the tier's flagship is the only copyleft row in it.** 🔴 [`jplag/JPlag`](https://github.com/jplag/JPlag) is **GPL-3.0** (35 141 B, `main` · `3ee7de9`) at **2 000★** — 🔵 **an order of magnitude more cited than every permissive row above, all of which sit at ≤350★.** 🟢 **So the permissive supply exists and the best-evidenced implementation cannot be embedded in a closed product.** 🟢 **The resolution is unusually clean for once:** JPlag runs as an external *service* the deliverable calls, which keeps the GPL boundary outside the product, or `dolos` is adopted at a real but bounded quality cost. 🔴 **That is an architecture decision with a licence cause, and it has to be made before the integration, not after.**
+
+#### 🟢 Assessment interoperability — **QTI, 3 of 7 permissive**
+
+| repo | grant (payload-read) | bytes | ref · sha | ★ | signal |
+|---|---|---|---|---|---|
+| 🟢 [`rolfis/qti-convert`](https://github.com/rolfis/qti-convert) | 🟢 **Apache-2.0** | 11 357 | `main` · `9d4f95a` | 23 | Converts **Canvas** quiz exports to Word/JSON. 🟢 The permissive migration path off a proprietary-adjacent LMS. |
+| 🟢 [`sonyccd/qti-playground`](https://github.com/sonyccd/qti-playground) | 🟢 **MIT** | 1 070 | `main` · `de81214` | 5 | Web app to view, edit and understand **QTI XML**. 🔵 QTI is famously unreadable; an inspector is the difference between a two-day and a two-week integration. |
+| 🟢 [`metyatech/markdown-to-qti`](https://github.com/metyatech/markdown-to-qti) | 🟢 **MIT** | 1 066 | `main` · `b307f0c` | 2 | **Markdown → QTI 3.0 XML.** 🟢 Lets item authors write in Markdown and still ship standards-compliant assessment packages. |
+
+🔴 **Named negatives in QTI — 4 of 7, and one carries a new `T1` shape:**
+
+| repo | finding | ref · sha | ★ |
+|---|---|---|---|
+| 🔴 [`Learnosity/learnosity-qti`](https://github.com/Learnosity/learnosity-qti) | 🔴 **GPL-2.0** (18 264 B) | 🔴 **`develop`** · `8ebee88` | 26 |
+| 🔴 [`loventures/loplatform`](https://github.com/loventures/loplatform) | 🔴 **AGPL-3.0** (34 354 B, `LICENSE.md`) | `main` · `e9dd896` | 12 |
+| 🔴 [`nenad/CSV2QTI`](https://github.com/nenad/CSV2QTI) | 🔴 **no licence file** | 🔴 `master` · `b854208` | 12 |
+| 🔴 [`robbert-harms/ybe`](https://github.com/robbert-harms/ybe) | 🔴 **GPL-3.0** (35 149 B) — YAML exam authoring | 🔴 `master` · `d3f676a` | 7 |
+
+🔴 **`T1` has a FIFTH shape: `develop`.** 🟢 `Learnosity/learnosity-qti` resolves its default branch to **`develop`** — gitflow, not `main`, not `master`, not pass 83's version-numbered (`v31.0.00`, `19.0`) or feature-named (`mobile`) forms. 🔵 **Pass 83 noted a `main`-then-`master` fallback loses three of eight in the platform tier; adding `develop` and the version-numbered shapes, a fallback LIST is simply the wrong instrument.** 🟢 **`git ls-remote --symref HEAD` resolves all five shapes in one call and is what every row on this shelf now uses.**
+
+#### 🔴 Proctoring — **`Gap 344`: ZERO of five permissive**, in the tier EU regulation is about to make high-risk
+
+| repo | grant (payload-read) | bytes | ref · sha | ★ | region |
+|---|---|---|---|---|---|
+| 🔴 [`tusharnankani/Aankh`](https://github.com/tusharnankani/Aankh) | 🔴 **GPL-3.0** | 35 149 | `main` · `cfc15d3` | 86 | 🟢 **APAC** (India) |
+| 🔴 [`meefik/ITMOproctor`](https://github.com/meefik/ITMOproctor) | 🔴 **GPL-3.0** | 35 149 | 🔴 `master` · `f89d209` | 39 | 🟢 **EMEA** — **ITMO University**, Russia; bilingual RU/EN |
+| 🔴 [`eLearning-BS23/moodle-quizaccess_proctoring`](https://github.com/eLearning-BS23/moodle-quizaccess_proctoring) | 🔴 **GPL-3.0** (35 178 B, `LICENSE.md`) | 35 178 | 🔴 `master` · `81f10d4` | 30 | 🟢 **APAC** — Brain Station 23, Bangladesh |
+| 🔴 [`oat-sa/devkit-lti1p3`](https://github.com/oat-sa/devkit-lti1p3) | 🔴 **GPL-2.0** | 18 092 | 🔴 `master` · `16ac2a2` | 20 | 🟢 **EMEA** — Open Assessment Technologies (TAO) |
+| 🟡 [`Batlez/CloakBox`](https://github.com/Batlez/CloakBox) | 🟡 **read off the page, NOT probed** | — | — | **400** | — |
+
+🔴 **`Gap 344` opened: the exam-integrity DELIVERY tier has no permissive row at all.** 🔵 **Why this matters now rather than eventually:** the EU AI Act classes **exam monitoring** as high-risk (obligations from 2 Dec 2027 — see `intel/market.md`), so this is precisely the tier an EMEA client will ask a studio to build and govern. 🟢 **And a GPL-3.0 proctoring component cannot be embedded in a product the client resells.** 🟢 **Costed probe for pass 85:** `SafeExamBrowser/seb-win-refactoring` (354★, already shelved, licence not in the live tree) and `vardanagarwal/Proctoring-AI` (633★, shelved) — 🔵 **the two biggest rows in the tier are both already on the shelf with their grants unrecorded, which is `P899`'s defect in its other direction.**
+
+🟡 **`Batlez/CloakBox` (400★) is the tier's second-largest row and it is ANTI-proctoring** — "make your virtual machine invisible to proctoring software." 🔵 **Recorded, not probed, and named because it is a market signal rather than a component:** the second-most-starred thing in this channel exists to defeat the first. 🟢 **An integrity product specified without an evasion threat model is specified wrong**, which is also why `plagpatrol` above is on the shelf.
+
+#### 🟢 Educational data mining — **3 of 8 permissive**
+
+🟢 **Granted:** `pnb/dlwed17` (MIT, North America), `yjx0003/UBUMonitor` (MIT, EMEA/Spain), `gassantos/evolvedtree` (MIT, unplaced) — 🔵 **full rows and rationale in `repos/foundations.md`.**
+
+🔴 **Named negatives — 5 of 8, and three of them grant nothing at all:**
+
+| repo | finding | ref · sha | ★ |
+|---|---|---|---|
+| 🔴 [`anaistack/ai-teacher-test`](https://github.com/anaistack/ai-teacher-test) | 🔴 **CC BY-NC-SA 4.0** (20 861 B) — 🔴 **commercially PROHIBITED**, not merely copyleft | `main` · `6b97ec5` | 12 |
+| 🔴 [`Fordham-EDM-Lab/Grading-Analysis-Tool`](https://github.com/Fordham-EDM-Lab/Grading-Analysis-Tool) | 🔴 **GPL-3.0** (35 149 B) | `main` · `55c4c20` | 5 |
+| 🔴 [`jilljenn/fatedm`](https://github.com/jilljenn/fatedm) | 🔴 **no licence file** — fairness/accountability/transparency in EDM | 🔴 `master` · `f6d847a` | 3 |
+| 🔴 [`lamethods/lamethods.github.io`](https://github.com/lamethods/lamethods.github.io) | 🔴 **no licence file** — learning-analytics methods in R | 🔴 `master` · `d215960` | 4 |
+| 🔴 [`okanbulut/blog`](https://github.com/okanbulut/blog) | 🔴 **no licence file** — psychometrics with R and Python | 🔴 `master` · `ee98a27` | 2 |
+
+🔵 **`fatedm` is the pointed one:** a repository *about* accountability and transparency in educational data, with no licence — 🟢 **named without editorial comment beyond the observation that the omission is the subject.**
+
+### 🟢 `Gap 343` is **DISCHARGED** — 8 LATAM rows placed, and the instrument pass 83 costed would NOT have worked
+
+🔴 **`Gap 343` — "no LATAM repository row placed in four passes" — was pass 83's oldest open regional gap, and it costed the probe as "a Spanish/Portuguese orthography class over candidate READMEs."** 🔴 **That instrument cannot discharge this gap, and the reason is `P908`:**
+
+🟢 **`P908` — orthography identifies a LANGUAGE; a language identifies a REGION only when ONE country dominates it.** 🟢 **Measured on two channels bought side by side this pass:**
+
+| channel | size | regional composition measured | self-placing? |
+|---|---|---|---|
+| 🟢 **`topics/educacao`** | 295 | 🟢 **~20/20 Brazil** — `portabilis`, `ipti`, `bncc-dev`, `fga-eps-mds` (UnB), `sumeedu` | 🟢 **YES** |
+| 🔴 **`topics/educacion`** | 345 | 🔴 **SPLIT**: Spain (`franlu`, `jamj2000`, `GeiserX/comunitat-valenciana`) vs Chile (`moodle-sence`), Mexico (`ResultadosUNAM`), Uruguay (`datauy`), Ecuador (`UNEMI`) | 🔴 **NO** |
+
+🔵 **Portuguese-language edtech is overwhelmingly Brazilian, so the Portuguese topic places itself. Spanish splits across Spain and nineteen Latin American countries, so the Spanish topic places nothing** — 🔴 **and an orthography class over it would have returned Spain (EMEA) rows labelled LATAM, which is worse than the gap it was meant to close.** 🟢 **What DOES place a Spanish-language row is an INSTITUTIONAL ANCHOR** — a named national body, university or programme — and every LATAM placement below carries one.
+
+| repo | grant (payload-read) | bytes | ref · sha | ★ | 🟢 **LATAM anchor (the evidence)** |
+|---|---|---|---|---|---|
+| 🟢 [`agn3si/ResultadosUNAM---data`](https://github.com/agn3si/ResultadosUNAM---data) | 🟢 **MIT** | 1 063 | `main` · `c58b370` | 6 | 🟢 **Mexico — UNAM** admission-exam results, 2021–2026, as an open database |
+| 🟢 [`sumeedu/bancodeitinerarios`](https://github.com/sumeedu/bancodeitinerarios) | 🟢 **Apache-2.0** | 11 357 | `main` · `9e3edda` | 6 | 🟢 **Brazil** — *itinerários formativos*, a BNCC-specific curriculum structure |
+| 🔴 [`portabilis/i-diario`](https://github.com/portabilis/i-diario) | 🔴 **AGPL-3.0** (🔵 **in Portuguese** — `P905`) | 35 326 | 🔴 **`1.6`** · `ef909f2` | 117 | 🟢 **Brazil** — teacher gradebook for the `i-educar` suite |
+| 🔴 [`portabilis/pre-matricula-digital`](https://github.com/portabilis/pre-matricula-digital) | 🔴 **AGPL-3.0** (🔵 **in Portuguese**) | 35 326 | 🔴 **`2.12`** · `b73af87` | 21 | 🟢 **Brazil** — enrolment and waiting-list management, integrated with `i-educar` |
+| 🔴 [`ipti/br.tag`](https://github.com/ipti/br.tag) | 🔴 **GPL-2.0** | 18 027 | `main` · `d1cb33e` | 20 | 🟢 **Brazil** — IPTI, *Tecnologia Social* school management |
+| 🔴 [`datauy/ElijoEstudiar`](https://github.com/datauy/ElijoEstudiar) | 🔴 **GPL-3.0** | 35 149 | 🔴 `master` · `ed306fe` | 5 | 🟢 **Uruguay** — built on **ANEP** open data by DATA Uruguay |
+| 🔴 [`fga-eps-mds/2017.2-MerendaMais`](https://github.com/fga-eps-mds/2017.2-MerendaMais) | 🔴 **GPL-3.0** | 35 141 | 🔴 `master` · `3ecc476` | 8 | 🟢 **Brazil** — **UnB/FGA**, school-meal (*merenda escolar*) oversight |
+| 🔴 [`fauzcategui/moodle-sence`](https://github.com/fauzcategui/moodle-sence) | 🔴 **no licence file** | — | 🔴 `master` · `b69ee20` | 29 | 🟢 **Chile** — **SENCE**, the national training service |
+
+🟢 **`Gap 343` DISCHARGED: 8 rows placed in LATAM on institutional evidence, 2 of them permissive** (`ResultadosUNAM---data`, MIT; `bancodeitinerarios`, Apache-2.0). 🔴 **And the finding underneath it is the uncomfortable one: Brazil's real school-management supply — the `portabilis` suite and `ipti/br.tag`, the rows with actual deployment — is AGPL-3.0 and GPL-2.0.** 🔵 **So LATAM mirrors the global platform picture `Gap 334` established: the deployed platform is copyleft, and the commercial layer is what the studio writes on top of it.**
+
+### 🟢 `P905` — a **TRANSLATED licence text defeats BOTH title-line and byte-size classification**, measured against English controls
+
+🔴 **`portabilis/i-diario` and `portabilis/pre-matricula-digital` serve a 35 326-byte licence whose first line is:**
+
+```
+LICENÇA PÚBLICA GERAL AFFERO GNU
+```
+
+🔴 **There is not one English word in it.** 🟢 **A title-line matcher looking for `GNU AFFERO GENERAL PUBLIC LICENSE` returns NOTHING — and "no title match" is how this shelf records *ungranted*.** 🔵 **Two deployed, 117★-and-21★ Brazilian platforms would have been shelved as licence-unknown.**
+
+🟢 **And the byte-size fallback fails too, measured against two English AGPL-3.0 controls bought this pass for exactly this comparison:**
+
+| repo | AGPL-3.0 text | bytes |
+|---|---|---|
+| `instructure/canvas-lms` | 🟢 English | **34 520** |
+| `openedx/edx-platform` | 🟢 English | **35 136** |
+| `portabilis/i-diario` | 🔴 **Portuguese** | **35 326** |
+
+🔴 **The English AGPL-3.0 itself has TWO different sizes 616 B apart**, so there was never a single value to match; 🔴 **the Portuguese is a third, 190 B from the nearer English one.** 🔵 **A tolerance wide enough to catch the Portuguese would also swallow GPL-3.0 at 35 141–35 178 B** — the family it exists to distinguish. 🟢 **`P905` adopted, extending `P898`:** 🟢 **identify a licence by its structural invariants** — the version line, the clause headings, the `Affero`/`Lesser` discriminator — 🟢 **and keep a translated-title dictionary** (`LICENÇA PÚBLICA GERAL AFFERO GNU`, and the Spanish, French and German equivalents when they appear). 🔴 **Byte size is a corroborating signal and has never been a classifier.**
+
+### 🟡 Carry-forward — named so pass 85 does not re-decide it
+
+🟢 **Unread and named:** `topics/ai-grading`, `topics/socratic`, `topics/ai-tutor` **page 3**, `topics/learning-analytics` **page 2**, `topics/educacao` **page 2** (🟢 high-yield: 295 repos, 100% precision, self-placing to LATAM under `P908`), `topics/item-response-theory` **page 2** (🔴 but expect GPL under `P907` — buy for coverage, not for build material).
+
+🔴 **Do not re-buy:** `adaptive-learning` (homonym, `P878`), `ai-tutor` p1/p2 and `intelligent-tutoring-system` (exhausted, passes 79–83).
+
+🟡 **Buy with a star floor:** `automated-grading`, `teaching-assistant` (pass 83's note stands), `plagiarism-detection` **page 2** (🔴 65% precision — the tail is reverse-engineering and music-AI tooling, not education).
+
+🟢 **Costed single-row probes, cheaper than a channel:** `open-spaced-repetition/free-spaced-repetition-scheduler` (723★, the scheduling algorithm itself), `SafeExamBrowser/seb-win-refactoring` (354★) and `vardanagarwal/Proctoring-AI` (633★) — 🔵 **both shelved with grants unrecorded, and both load-bearing for `Gap 344`.**
+
+---
+
 ## 🟢 2026-10-09 (pass 83) — **four topic channels bought and priced against each other**, 19 granted rows, and the discovery that `topics/ai-tutor` page 1 was **already fully shelved without ever being recorded as a channel**
 
 ⏱️ **Fifteenth pass of this date.** 🟢 **Append-only: pass 82's section sits immediately below, unchanged.**

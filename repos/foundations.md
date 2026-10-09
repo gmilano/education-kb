@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-fourth pass, 2026-10-09 — the **psychometrics / IRT / adaptive-testing tier is bought for the first time in 84 passes**, and it is **GPL-by-default**: `P907` says the ECOSYSTEM predicts the GRANT, not merely where the grant is written
+
+⏱️ **Sixteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **`topics/item-response-theory` — 142 repos, 19 of 20 rows on-topic (95%), bought for the first time.** 🔵 **This is the measurement tier the shelf has been missing underneath forty passes of knowledge tracing:** IRT and CAT are what a *test* is made of, where knowledge tracing is what a *practice session* is made of. 🔴 **And it is the most copyleft-dense tier this shelf has ever measured — denser than the platform tier `Gap 334` discharged.**
+
+### 🟢 `P907` — the **ecosystem predicts the GRANT**, and this is a strictly stronger claim than `P895`
+
+🔵 **Pass 83's `P895` said the ecosystem predicts the trustworthy RUNG** — where to look for the grant (an R `DESCRIPTION` is authoritative because CRAN forces the author to choose; an `npm init` default is not). 🟢 **This pass measures something further: the ecosystem predicts WHAT the grant will be.**
+
+🟢 **Measured, same tier, same subject matter, split only by language ecosystem:**
+
+| ecosystem | permissive | copyleft / ungranted | rows measured this pass |
+|---|---|---|---|
+| 🔴 **R / CRAN psychometrics** | 🔴 **1 of 8** (`OpenMx`, Apache-2.0) | 🔴 **7 of 8** GPL | `sirt`, `CDM`, `TAM`, `dina`, `ShadowCAT`, `ShinyItemAnalysis`, `galamm` |
+| 🟢 **Python / Java psychometrics** | 🟢 **2 of 3** | 1 of 3 (`deepirtools`, GPL-3.0) | `girth_mcmc`, `ovlt` — plus already-shelved `catsim`, `girth`, `pypsy` |
+
+🔵 **The mechanism is not a mystery and that is the point: R itself is GPL-2.0, and the CRAN norm follows the base language.** 🟢 **So "is this an R package?" is a licence PREDICTION available before a single byte is fetched** — and a cheap one, because the language is on the topic page.
+
+🔴 **The commercial consequence is concrete.** 🔵 A client's institutional research office runs R, so the natural-looking choice — adopt the R psychometric stack the researchers already use — 🔴 **puts GPL into the deliverable.** 🟢 **The permissive path through the same mathematics is Python**: `catsim` for adaptive testing, `girth`/`girth_mcmc` for IRT estimation, `OpenMx` where SEM is genuinely needed. 🟢 **`P907` adopted: for any statistical tier, price the Python route and the R route separately — they are different licences for the same model.**
+
+### 🟢 Added this pass — **6 granted foundation rows**, every licence payload-read inline at the resolved ref
+
+| repo | grant (payload-read inline) | bytes | ref · sha | ★ | tier | why it is a foundation |
+|---|---|---|---|---|---|---|
+| 🆕 [`OpenMx/OpenMx`](https://github.com/OpenMx/OpenMx) | 🟢 **Apache-2.0** — 🔵 **`DESCRIPTION` rung only, NO licence file** (`P895`) | n/a | 🔴 `master` · `a24e868` | 102 | 🟢 **measurement** | **Extended structural equation modelling.** 🟢 **The single permissive row in the R psychometrics stratum**, and the most capable: SEM subsumes IRT, so one permissive dependency covers factor models, latent growth and measurement invariance. 🔴 **Declares `License: Apache License (== 2.0)` in `DESCRIPTION` and ships no LICENSE file at all** — a file-only classifier reads this 102★ package as ungranted. |
+| 🆕 [`eribean/girth_mcmc`](https://github.com/eribean/girth_mcmc) | 🟢 **MIT** | 1 061 | `main` · `911376e` | 19 | 🟢 **measurement** | **Bayesian IRT** submodule for GIRTH. 🟢 Pairs with the already-shelved `girth`; 🔵 the MCMC limb is what gives you *posterior uncertainty* on an ability estimate — the difference between "this learner scored 0.7" and "0.7 ± 0.3", and the second is the one you can defend in an appeal. |
+| 🆕 [`englishcentral/ovlt`](https://github.com/englishcentral/ovlt) | 🟢 **MIT** | 1 071 | `main` · `f4487e4` | 10 | 🟢 **measurement** | **Open vocabulary level test.** 🟢 A permissive, publishable *instrument* rather than a model — a calibrated test you can administer. 🔵 Rare shape on this shelf: holder `EnglishCentral`, a commercial vendor releasing the measurement itself. 🟢 **Region-placed: North America** (US vendor, holder payload-read). |
+| 🆕 [`pnb/dlwed17`](https://github.com/pnb/dlwed17) | 🟢 **MIT** | 1 099 | 🔴 `master` · `fc8361e` | 14 | 🟢 **analytics** | **Unsupervised deep autoencoders for feature extraction on educational data.** 🔵 The feature-engineering step every downstream model needs and almost nothing publishes permissively. 🟢 **Region-placed: North America** — holder payload-read as `University of Illinois at Urbana-Champaign`, institutional evidence rather than inference. |
+| 🆕 [`yjx0003/UBUMonitor`](https://github.com/yjx0003/UBUMonitor) | 🟢 **MIT** | 1 088 | 🔴 `master` · `7fde822` | 13 | 🟢 **analytics** | *Monitorización de alumnos en la plataforma Moodle* — a desktop **learning-analytics client that reads a live Moodle** rather than replacing it. 🟢 **Directly commercially useful: the permissive READ-SIDE for the GPL-3.0 platform `Gap 334` confirmed you cannot embed.** 🟢 **Region-placed: EMEA** (Spain — `UBU` = Universidad de Burgos; Spanish-language interface and documentation). |
+| 🆕 [`gassantos/evolvedtree`](https://github.com/gassantos/evolvedtree) | 🟢 **MIT** | 1 074 | 🔴 `master` · `9a9649a` | 6 | 🟡 **measurement** | Genetic algorithm + decision tree hybrid for educational prediction. 🟡 **Deliberately UNPLACED:** the holder name and owner handle suggest a Lusophone author, but 🔴 **the README is in English and no institution is named**, so nothing places it. 🔵 **Recorded as unplaced rather than guessed — see `P908`.** |
+
+🟢 **6 of 6 permissive — 5 MIT, 1 Apache-2.0.** 🔴 **Trap `T1` is 4 of 6** (`OpenMx`, `dlwed17`, `UBUMonitor`, `evolvedtree` all on `master`).
+
+### 🔴 Named negatives — **the R psychometrics stratum, 7 of 8 GPL**, and one of them is the tier's own front end
+
+| repo | grant (payload-read) | bytes / source | ref · sha | ★ |
+|---|---|---|---|---|
+| 🔴 [`patriciamar/ShinyItemAnalysis`](https://github.com/patriciamar/ShinyItemAnalysis) | 🔴 **GPL-3** | `DESCRIPTION` | 🔴 `master` · `3b0d723` | 47 |
+| 🔴 [`ropensci/galamm`](https://github.com/ropensci/galamm) | 🔴 **GPL-3.0** | 34 904 (`LICENSE.md`) | `main` · `a35e73c` | 37 |
+| 🔴 [`alexanderrobitzsch/sirt`](https://github.com/alexanderrobitzsch/sirt) | 🔴 **GPL (>= 2)** | `DESCRIPTION` | 🔴 `master` · `0a41c72` | 27 |
+| 🔴 [`cjurban/deepirtools`](https://github.com/cjurban/deepirtools) | 🔴 **GPL-3.0** | 35 149 | 🔴 `master` · `225f313` | 26 |
+| 🔴 [`alexanderrobitzsch/CDM`](https://github.com/alexanderrobitzsch/CDM) | 🔴 **GPL (>= 2)** | `DESCRIPTION` | 🔴 `master` · `9a731f2` | 23 |
+| 🔴 [`alexanderrobitzsch/TAM`](https://github.com/alexanderrobitzsch/TAM) | 🔴 **GPL (>= 2)** | `DESCRIPTION` | 🔴 `master` · `8fc1c21` | 19 |
+| 🔴 [`tmsalab/dina`](https://github.com/tmsalab/dina) | 🔴 **GPL (>= 2)** | `DESCRIPTION` | 🔴 `master` · `b9011d7` | 16 |
+| 🔴 [`Karel-Kroeze/ShadowCAT`](https://github.com/Karel-Kroeze/ShadowCAT) | 🔴 **GPL-3** | `DESCRIPTION` | 🔴 `master` · `d9d4e09` | 12 |
+
+🔴 **`ShinyItemAnalysis` is the one that costs most to lose.** 🔵 It is the tier's ready-made *interactive* item-analysis surface — exactly the artefact a client wants shown to a psychometrician — 🔴 **and GPL-3 means shipping it inside a product licenses the product.** 🟢 **Usable as an internal analysis tool, not as a delivered component**, and that distinction belongs in the engagement scope rather than in a build decision discovered late.
+
+🟡 **`UUPharmacometrics/piraid` (10★) was read off the page and DELIBERATELY NOT PROBED** — pharmacometric IRT, medical dose-response, not education. 🔵 The one off-topic row in 20, and the reason this channel scores 95% rather than 100%.
+
+🟡 **`Wenchao-Ma/GDINA` (33★) and `bigdata-ustc/EduCDM` (199★) were already shelved** and not re-probed; `bigdata-ustc/Agent4Edu` (97★) was payload-read in pass 83 as 🔴 **no grant, 4 layers**, and that reading stands.
+
+### 🔴 `Gap 342` is **BROADER than pass 83 recorded** — not a knowledge-tracing problem, a measurement-tier problem
+
+🔴 **Pass 83 opened `Gap 342` as "academic KT code is 71% ungranted."** 🟢 **This pass extends the measurement:** adding the IRT/CAT stratum, the measurement tier reads **9 permissive against 16 copyleft-or-ungranted across the rows probed in passes 83–84**, with the copyleft concentrated in R and the *ungranted* concentrated in PyTorch paper code.
+
+🔵 **So `Gap 342`'s real shape: the education measurement literature publishes its mathematics and withholds its licence, in two different ways for two different ecosystems.** 🟢 **Both are upstream-askable and the ask differs:** the PyTorch KT repos need a licence *added* — a one-line decision nobody has made; the R packages need nothing — 🔴 **they made the decision, and it was GPL.** 🟡 **Only the first group is worth an upstream issue**, which halves the cost of discharging `Gap 342` and is the reason to record the split.
+
+### 🟡 What this pass does NOT claim about this tier
+
+🔴 **No row above was executed.** 🟢 Every grant is payload-read and every ref · sha resolved, but 🔴 **`OpenMx`'s Apache-2.0 claim rests entirely on a `DESCRIPTION` field with no licence file to corroborate it** — the strongest rung available for R under `P895`, and still a single source. 🟡 **If `OpenMx` becomes load-bearing in a deliverable, confirm that grant against CRAN's published package metadata before contract.**
+
+---
+
 ## 🟢 Eighty-third pass, 2026-10-09 — **`Gap 336` CLOSES on a permissive learner simulator**, seven foundational rows, and two new licence-ladder rungs — one of which makes a **46-byte** LICENSE file the *correct* answer
 
 ⏱️ **Fifteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
