@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 79) — **four new agents in one pass**, and the four-pass drought's cause is named: the exhausted thing was the **TAG**, not the channel
+
+⏱️ **Eleventh pass of this date.** 🟢 **Append-only: this section is new. Pass 78's section is immediately below and nothing in it was rewritten.**
+
+### 🔵 🆕 `P865` — a channel is exhausted only at the SURFACE that was actually mined
+
+🔴 **What the registry held after four passes:** *"the discovery channel is measured exhausted."* 🟢 **What this pass measured: it was one tag that was exhausted, and the shelf's own record says which.**
+
+🟢 **Census of GitHub topic tags this shelf has already bought, counted from `repos/trending.md` + `agents/trending.md`:**
+
+| tag already mined | mentions on the shelf |
+|---|---|
+| `topics/ai-tutor` | 9 |
+| `topics/education-ai` | 8 |
+| `topics/ai-education` | 3 (bought by pass 78 — 492 repos) |
+| `topics/edtech`, `topics/mooc`, `topics/lti`, `topics/learning-management-system` | 3 each |
+| `topics/ferpa`, `topics/ferpa-compliance` | 3 each |
+| `topics/student-information-system`, `topics/moodle`, `topics/e-learning`, `topics/claude-skill`, `topics/agent-skills` | 2 each |
+| 🔴 **`topics/intelligent-tutoring-system`** | 🔴 **ZERO — never mined, in 79 passes** |
+
+🟢 **Then both were bought in the same hour, and the yields are not close:**
+
+| surface bought this pass | in-domain rows returned | already shelved | 🟢 **UNSHELVED** |
+|---|---|---|---|
+| `topics/ai-tutor` (already mined 9×) | 20 | **17** | 🔴 **1** |
+| 🟢 **`topics/intelligent-tutoring-system` (never mined)** | 20 | 2 | 🟢 **5** |
+| `search?q=AI+tutor+agent+education` sorted by stars | 10 | 8 | 🟡 2 (1 after licence probe) |
+
+🔵 **`P865` adopted:** 🔴 **"the discovery channel is dead" is not a measurement unless it names the surface.** A tag channel has as many surfaces as there are tags; four passes read *one mined tag returning nothing* as *the channel returning nothing*. 🟢 The fix cost **one `WebFetch`** and returned **5 of 7** unshelved candidates.
+
+### 🟢 New this week — the rows, grants payload-read inline (`P866`)
+
+| agent | grant | bytes | ref | region | one line |
+|---|---|---|---|---|---|
+| [`Vinger-lee/leap-framework`](https://github.com/Vinger-lee/leap-framework) | 🟢 **MIT** | 1 084 | `main` `2568667` | 🟡 Global | State-driven tutoring runtime over **MCP, 58 tools**; server-side **State Guard** gates every transition; FSRS retention inside. |
+| [`afri-bit/revibe`](https://github.com/afri-bit/revibe) | 🟢 **MIT** | 1 074 | `main` `46b5047` | 🔴 unplaced | A mentor that **refuses to write the code**; personalised curriculum, progress tracked in markdown. |
+| [`PrepLabsAI/InterviewMentor`](https://github.com/PrepLabsAI/InterviewMentor) | 🟢 **MIT** | 1 071 | `main` `609d311` | 🔴 unplaced | Interview-prep **agent skills** for Claude Code and other agentic hosts. |
+| [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 **Apache-2.0** | 10 785 | 🔴 **`dev`** `072e646` | 🟢 **EMEA** | AI-driven personalised student feedback as **deployed university infrastructure** (Helm chart, CI, codecov). THM Mittelhessen named in the payload's own copyright line. |
+
+### 🔴 Refused this week, with the reason, because a refusal is a finding
+
+- [`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) — 🔴 **GPL-3.0**, 35 148 B. 🟢 `P171` live-confirmed: its **§13 names Affero at line 552**, so a `grep Affero` misreads it as AGPL. It is GPL-3.0. Copyleft → flag, not a row.
+- [`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) — 🔴 **NO-PAYLOAD**. Nine-name ladder empty; **zero** `licen[sc]e` matches in an 8 167 B README. A bare absence, not an upstream ask.
+- [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) — 🔴 **NO-PAYLOAD**, in an org whose other four repos all grant (`P867`).
+
+### 🔴 The trending-proper channel returned NOTHING in-domain, and that is written down rather than left silent
+
+🟢 **`WebFetch` on `github.com/trending` (`P855`) succeeded on three language surfaces this pass — and in-domain yield was zero:**
+
+| surface | rows read | 🔴 education/tutoring rows |
+|---|---|---|
+| `trending/python?since=weekly` | 13 | 🔴 **0** |
+| `trending/typescript?since=weekly` | 18 | 🔴 **0** |
+| `trending/jupyter-notebook?since=weekly` | 14 | 🟡 **0 tutoring systems** — the notebook surface is *course material* (`ed-donner/agents`, `rasbt/machine-learning-book`, `wesm/pydata-book`, `xiaolai/the-craft-of-selfteaching`), not education **software** |
+
+🔵 **The notebook surface is a different asset class and should stop being read as agent discovery.** 🟢 What the weekly trending lists actually show is agent **infrastructure** (`Panniantong/Agent-Reach`, `mvschwarz/openrig`, `thedotmack/claude-mem`, `cloudflare/cloudflare-os`) — horizontal, not vertical. 🔴 **So: trending is confirmed as the WRONG channel for this vertical, measured on three surfaces in one hour, and the topic tags are the right one.**
+
 ## 🟢 2026-10-09 (pass 78) — **one new agent, after four passes of zero**, and it arrives in the region this shelf finds hardest to place. 🔴 The pass that found it ran **none** of this repository's instruments
 
 🔵 **Append-only: this dated section is new; every section below it is prior history and is unchanged.**

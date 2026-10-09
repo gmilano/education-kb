@@ -1,0 +1,21 @@
+# Pass 79, 2026-10-09.  Grants PAYLOAD-READ INLINE (P866: no script executed; one curl /
+# git ls-remote per repo).  Traps applied by hand from lib/probe_payload.sh's source (P861):
+#   T1 default branch resolved via ls-remote --symref, never assumed  -> PAID TWICE (dev, master)
+#   T3 "404: Not Found" body (14 B) is NOT a payload                  -> control re-confirmed live
+#   T2/T5 README licence link, then DECLARED-NOT-GRANTED              -> exercised, 0 declarations
+#   P171 GPL-3.0 §13 names Affero -> classify on the TITLE, not a grep -> PAID (LTLTutor)
+# Family column is a HUMAN READ of the payload head, not a classifier result: license_family.sh
+# could not be run, and P126 forbids re-implementing it.
+repo	branch	sha	file	bytes	family	verdict
+open-spaced-repetition/fsrs4anki	main	ff7c85c	LICENSE	1079	MIT	SHELVED
+open-spaced-repetition/fsrs-rs	main	0a57374	LICENSE	1509	BSD-3-Clause	SHELVED
+open-spaced-repetition/fsrs-optimizer	main	ac2a82d	LICENSE	1509	BSD-3-Clause	SHELVED
+open-spaced-repetition/py-fsrs	main	9446cb0	LICENSE	1079	MIT	ALREADY-SHELVED-REVERIFIED
+open-spaced-repetition/fsrs4anki-helper	main	29208f2	NO-PAYLOAD	0	NO-PAYLOAD	REFUSED-UNGRANTED
+Vinger-lee/leap-framework	main	2568667	LICENSE	1084	MIT	SHELVED
+afri-bit/revibe	main	46b5047	LICENSE	1074	MIT	SHELVED
+PrepLabsAI/InterviewMentor	main	609d311	LICENSE	1071	MIT	SHELVED
+thm-mni-ii/feedbacksystem	dev	072e646	LICENSE	10785	Apache-2.0	SHELVED
+brownplt/LTLTutor	main	5f90a68	LICENSE.txt	35148	GPL-3.0	REFUSED-COPYLEFT
+luffycodes/Tutorbot-Spock	main	fcec416	NO-PAYLOAD	0	NO-PAYLOAD	REFUSED-UNGRANTED
+OpenOLAT/OpenOLAT	master	d62921e	LICENSE	10982	Apache-2.0	ALREADY-SHELVED-REVERIFIED

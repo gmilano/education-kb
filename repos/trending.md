@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 79) — the **`intelligent-tutoring-system` tag is bought for the first time in 79 passes** and pays 5 of 7; `trending` proper is measured WRONG for this vertical on three surfaces
+
+⏱️ **Eleventh pass of this date.** 🟢 **Append-only: pass 78's section (the `ai-education` topic page, 492 repos) sits immediately below, unchanged.**
+
+### 🟢 The channel that paid: GitHub topic tags, read with `WebFetch` (`P855`)
+
+🔴 **Pass 78 bought `topics/ai-education`. This pass bought the tag the shelf had NEVER touched.** 🟢 Measured:
+
+| surface | rows | already shelved | 🟢 unshelved | notes |
+|---|---|---|---|---|
+| `topics/ai-tutor` | 20 of **660** tagged | 17 | 🔴 1 | 🔴 mined 9× already — confirms pass 78's sweep reached here |
+| 🟢 **`topics/intelligent-tutoring-system`** | 20 of **39** tagged | 2 | 🟢 **5** | 🟢 **zero prior mentions on this shelf** |
+| `search?q=AI+tutor+agent+education&s=stars` | 10 of **157** (page 1/16) | 8 | 🟡 2 | 15 further pages unread — see the carry-forward |
+
+🔵 **`P865`:** the exhausted thing was the **tag**, not the channel. 🟢 A small tag (39 repos) beat a large one (660) because the large one had been swept and the small one never had. 🔴 **Tag SIZE is not a proxy for tag YIELD; prior-sweep status is.**
+
+### 🟢 Rows taken from the new tag, grants payload-read inline
+
+| repo | stars | grant | bytes | ref |
+|---|---|---|---|---|
+| [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | 4.1k | 🟢 **MIT** | 1 079 | `main` `ff7c85c` |
+| [`Vinger-lee/leap-framework`](https://github.com/Vinger-lee/leap-framework) | 1 | 🟢 **MIT** | 1 084 | `main` `2568667` |
+| [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 24 | 🟢 **Apache-2.0** | 10 785 | 🔴 **`dev`** `072e646` |
+| [`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) | 12 | 🔴 **GPL-3.0** | 35 148 | `main` `5f90a68` |
+| [`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) | 56 | 🔴 **NO-PAYLOAD** | 0 | `main` `fcec416` |
+
+🔵 **Star count did not predict a single thing that mattered here.** 🟢 The 1★ repo (`leap-framework`) is a 58-tool MCP runtime with 260 passing tests and 8 localisations; the 56★ repo (`Tutorbot-Spock`) is **unusable** for want of any grant at all. 🔴 **`p351`'s star gate could not be run this pass (`P866`), and on this evidence it would not have ranked these five correctly anyway.**
+
+### 🔴 `github.com/trending` proper: three surfaces, **zero** in-domain rows — written down because silence looks like coverage
+
+| surface | rows | 🔴 in-domain |
+|---|---|---|
+| `trending/python?since=weekly` | 13 | 🔴 **0** |
+| `trending/typescript?since=weekly` | 18 | 🔴 **0** |
+| `trending/jupyter-notebook?since=weekly` | 14 | 🔴 **0** education *software* |
+
+🟢 **What the weekly lists DO contain is horizontal agent infrastructure**, and it is worth naming because it is what a composition sits on, not what it competes with: `Panniantong/Agent-Reach` (94.5k★, +6 987 this week — internet read/search for agents), `mvschwarz/openrig` (6.3k★, +2 693 — networks of agents with roles and shared context), `thedotmack/claude-mem` (98.8k★ — persistent cross-session context), `cloudflare/cloudflare-os` (11.3k★ — agent workspace on Workers), `AtomicBot-ai/atomic-agent` (3.1k★ — local-first agent on `llama.cpp`).
+
+🟡 **The `jupyter-notebook` surface is a DIFFERENT asset class and must stop being read as discovery:** its education rows are *course material* — `ed-donner/agents`, `ed-donner/llm_engineering`, `rasbt/machine-learning-book`, `wesm/pydata-book`, `xiaolai/the-craft-of-selfteaching`, `anthropics/claude-cookbooks`. 🔵 Useful as **curriculum** to wrap with a tutor; useless as **tutoring software**.
+
+### 🔵 Carry-forward, pre-registered rather than claimed
+
+🟢 **The `search?q=` surface returned page 1 of 16 (157 results).** 🔴 **15 pages unread, and that is a known, named, unbought quantity** — not an absence. 🟢 **`topics/intelligent-tutoring-system` also showed 20 of 39**; 19 unread. 🔵 Next pass should finish both before buying any new channel, because the measured yield on the fresh tag was **5 of 7**, which is the best rate this shelf has recorded in five passes.
+
 ## 🟢 2026-10-09 (pass 78) — GitHub's own **`ai-education` topic page** is bought (492 repos, 🟢 **200** where `api.github.com` is 403), and the shelf turns out to have already censused its whole front page. 🔴 The pass's finding is about **this repository's own corrections**: `P834`'s retroactive batch was **6 of 8**
 
 🔵 **Append-only: this dated section is new; every section below it is prior history and is unchanged.**

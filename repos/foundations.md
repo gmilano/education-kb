@@ -4,6 +4,39 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-ninth pass, 2026-10-09 — **three new foundational repos, and the shelf had the BINDING without the ENGINE for 79 passes**
+
+⏱️ **Eleventh pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 The finding first: this shelf shipped a pattern on `py-fsrs` and never recorded what `py-fsrs` is a binding TO
+
+🟢 **Measured, not inherited:** `compose/patterns.md` line ~14377 already builds on *"`py-fsrs` (MIT, el algoritmo moderno que reemplaza SM-2)"*. 🟢 That claim re-verified live this pass: **`py-fsrs` is MIT, 1 079 B**. 🔴 **But the engine Anki actually embeds is `fsrs-rs`, it is BSD-3-Clause, and it has never appeared on this shelf** — 0 occurrences across `agents/`, `repos/`, `verticals/`, `intel/`, `compose/`.
+
+| repo | grant (payload-read inline) | bytes | ref | role |
+|---|---|---|---|---|
+| 🟢 🆕 [`open-spaced-repetition/fsrs-rs`](https://github.com/open-spaced-repetition/fsrs-rs) | 🟢 **BSD-3-Clause** | 1 509 | `main` · `0a57374` | **The FSRS engine in Rust** — the implementation Anki ships natively. This is the thing to vendor. |
+| 🟢 🆕 [`open-spaced-repetition/fsrs-optimizer`](https://github.com/open-spaced-repetition/fsrs-optimizer) | 🟢 **BSD-3-Clause** | 1 509 | `main` · `ac2a82d` | **Parameter optimiser** — fits FSRS weights to a specific learner population's review log. The part that makes retention scheduling *yours* rather than generic. |
+| 🟢 🆕 [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | 🟢 **MIT** | 1 079 | `main` · `ff7c85c` | Reference scheduler + the algorithm's documentation home (**4.1k★**). |
+| 🟡 already shelved | 🟢 **MIT** | 1 079 | `main` · `9446cb0` | [`py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) — the Python binding the shelf already uses. |
+
+### 🔴 🆕 A licence-family split INSIDE one organisation — and it changes the obligation, not just the label
+
+🔵 **MIT** (`fsrs4anki`, `py-fsrs`) and 🔵 **BSD-3-Clause** (`fsrs-rs`, `fsrs-optimizer`) are both permissive and both in Globant's buildable set. 🔴 **They are not the same obligation:** BSD-3's third clause is the **no-endorsement** term — *the names of the copyright holder and contributors may not be used to promote derived products without written permission*. 🟢 **Operationally:** vendoring `fsrs-optimizer` into a client deliverable means the client's marketing may **not** say "powered by FSRS / open-spaced-repetition" without asking first. MIT carries no such restriction. 🔵 **This is exactly the distinction a single "permissive ✅" column erases**, which is why this shelf records the family and the bytes, not a tick.
+
+### 🟡 And a correctness note on `fsrs4anki`, because the topic blurb is now stale
+
+🔴 **GitHub's `ai-tutor` topic describes `fsrs4anki` as "a modern spaced-repetition scheduler for Anki" — as though you install it.** 🟢 **Read from the repo's own README this pass:** *"If you are using **Anki 23.10 or newer**, refer to this section of the Anki manual"*, and *"setting up FSRS is much easier in Anki 23.10 or newer"* — 🟢 **FSRS has been NATIVE in Anki since 23.10.** The standalone custom scheduler is the legacy path. 🔵 **So the foundational asset here is the ALGORITHM and its optimiser, not the Anki add-on** — which is precisely why `fsrs-rs` and `fsrs-optimizer` are the two rows that matter above.
+
+🟢 **Provenance, from artefacts (`P800`):** the README credits **[墨墨背单词 (MaiMemo)](https://www.maimemo.com/)** for supporting FSRS development by allowing its research engineer **Jarrett Ye** to work on it, and the algorithm's two papers are MaiMemo papers (ACM KDD 2022, `10.1145/3534678.3539081`). 🟡 **Research origin is APAC (China); project governance is Global** — 32 credited contributors under an all-contributors table, no single institution. 🔴 **Recorded as Global with the APAC research origin stated, rather than forced into one bucket.**
+
+### 🟢 One institutional platform repo added, and it is the shelf's first deployed-infrastructure row from EMEA
+
+| repo | grant | bytes | ref | region |
+|---|---|---|---|---|
+| 🟢 🆕 [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 **Apache-2.0** | 10 785 | 🔴 **`dev`** · `072e646` | 🟢 **EMEA** (Germany) |
+
+🔴 **T1 paid here:** its default branch is **`dev`**, not `main` — a hardcoded `main` records this repository as ungranted. 🟢 It ships a **Helm chart published on Artifact Hub**, a CI workflow and codecov gating: this is university-operated infrastructure, not a demo. 🟢 **Region from the payload itself:** *"Copyright 2021 Technische Hochschule Mittelhessen"*, the holder named inside the grant.
+
 ## 🟢 Seventy-eighth pass, 2026-10-09 — **one new foundational repo and a permissive voice substrate**, plus the pass's own subject: 🔴 **`P859`, where this repository's retroactive byte correction was applied as a rule and got 6 of 8**
 
 ⏱️ **Tenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

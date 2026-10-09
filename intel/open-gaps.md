@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-ninth pass, 2026-10-09 — the **four-pass "channel exhausted" verdict is OVERTURNED** and its cause named (`P865`); the capability boundary is re-measured NARROWER than pass 78 published (`P866`); `P867`–`P869` adopted; `Gap 334` opens
+
+⏱️ **Eleventh pass of this date.** 🟢 **Registry continuity:** pass 77 wrote the section below this one; pass 78 did **not** write to this file, so its standing items are folded forward here explicitly rather than left to look discharged.
+
+### 🟢 `Gap 333` (pass 78: "no code from the clone executes") — **RE-MEASURED, and the published seam was still too generous**
+
+🔴 **Pass 78 recorded the boundary as *parse vs execute*.** 🟢 **This pass measured it narrower, on four cases:**
+
+| case | verdict |
+|---|---|
+| `bash -n license_family.sh` (parse only) | 🟢 **rc=0, clean** |
+| `./measure --family <file>` (offline half of `lib/`) | 🔴 **DENIED `[Code from External]`** |
+| a probe **I wrote myself**, in my own scratchpad, run as `bash probe79.sh` | 🔴 **DENIED `[Auto-Mode Bypass]`** |
+| the **identical commands inline**, one per repo | 🟢 **ALLOWED** |
+
+🔵 **`P866` adopted, superseding this pass's inherited reading of `P860`:** 🔴 the boundary is **not** *clone code vs. my code* and **not** *network vs. offline* — it is **wrapper vs. inline**. 🟢 **The narrowest executable unit is the single inline command**, and that is where the boundary must be re-measured each pass. 🔴 **Both passes 78 and 79 instinctively reached for a script first**, which is why the seam kept being published one level too wide.
+🟡 **`Gap 333` therefore stays OPEN** and is re-stated: the 106-suite board, `shelf_gate.sh`, `measure`, `p351` and `license_family.sh` have now gone **two consecutive passes unrun**. 🔴 **Every figure in passes 78 and 79 is an inline measurement or a static read.** The drift risk is cumulative and is not shrinking.
+
+### 🟢 The pass-77 standing item, folded forward and **DISCHARGED a second time, differently**
+
+🟢 Pass 77 bought GitHub `/trending` with a language filter and got 12 unshelved. 🟢 **This pass bought the two instruments pass 77 left named-and-unbought** — and one of them, re-aimed, produced the result below.
+
+### 🟢 🆕 `P865` — **the "exhausted discovery channel" verdict was wrong for four passes, and the shelf's own files say why**
+
+🔴 **What the registry held:** *"the discovery channel is measured exhausted at four passes."* 🟢 **What was actually exhausted: `topics/ai-tutor`, one tag, swept 9×.**
+
+🟢 **Measured, from the shelf's own record:** 14 topic tags already mined — and **`topics/intelligent-tutoring-system` has ZERO mentions in 79 passes.** Both bought in the same hour:
+
+| surface | rows | shelved | 🟢 UNSHELVED |
+|---|---|---|---|
+| `topics/ai-tutor` (mined 9×) | 20 of 660 | 17 | 🔴 **1** |
+| 🟢 **`topics/intelligent-tutoring-system` (never mined)** | 20 of 39 | 2 | 🟢 **5** |
+| `search?q=AI+tutor+agent+education` | 10 of 157 | 8 | 🟡 2 |
+
+🔵 **`P865` adopted:** 🔴 **"the channel is dead" is not a measurement unless it names the SURFACE.** 🟢 **Tag size did not predict yield; prior-sweep status did** — a 39-repo tag beat a 660-repo tag 5 to 1. 🟢 Evidence: `compose/code/p865-tag-exhaustion/`.
+
+### 🔵 🆕 `P867` — organisation-level licence inference is not a verdict
+
+🟢 **Measured inside `open-spaced-repetition` this pass:** `fsrs4anki` **MIT** (1 079 B) · `py-fsrs` **MIT** (1 079 B) · `fsrs-rs` **BSD-3** (1 509 B) · `fsrs-optimizer` **BSD-3** (1 509 B) · `fsrs4anki-helper` 🔴 **NO-PAYLOAD, nothing anywhere**. 🔴 **Two licence families and one outright absence in one org.** 🔵 A 4-of-5 record is exactly the shape that makes the fifth look safe to assume. Probe every repository.
+
+### 🔵 🆕 `P868` — a localisation file is evidence of REACH, not of ORIGIN
+
+🔴 **This pass nearly placed `Vinger-lee/leap-framework` in APAC** on a `README_CN.md` returning 200, a `中文支持` badge and 17 CJK codepoints. 🟢 **The full set is EIGHT languages** (`zh`, `ja`, `ko`, `fr`, `es`, `ru`, `ar`, English). 🔵 **Count the whole localisation set before placing**; a one-file probe returns whichever language it fetched first. 🟢 Recorded **Global**.
+
+### 🔴 🆕 `P869` — a byte-locale character class over-counts multibyte text, silently
+
+🔴 `grep -coE '[一-龥]'` reported **49** CJK lines for `revibe` and **63** for `InterviewMentor`. 🟢 **Both are ZERO**, re-measured by counting codepoints in `U+4E00`–`U+9FFF`. 🔴 **Had it stood, two repositories with no Chinese content would have been placed in APAC** — `P868`'s failure arriving by a second independent route inside one pass. 🟢 Count codepoints, never byte-class matches.
+
+### 🔴 🆕 `Gap 334` — the platform tier's licences are asserted by comparison sites that CONTRADICT each other, and this pass did not probe them
+
+🔴 **Open edX** is listed as AGPL-3.0 by some sources and Apache-2.0 by others; **Sakai** as ECL-2.0 and as Apache-2.0. **OpenEduCat** (the one LMS **+ SIS** in a single database, and therefore the most commercially interesting) is claimed **LGPL-3.0** — unverified. **Moodle** GPL-3.0, **Canvas** AGPL-3.0, **Chamilo** GPL-3.0, **RosarioSIS**/**Gibbon** GPL — all unverified this pass.
+🟢 **Verified this pass instead:** `OpenOLAT` **Apache-2.0** (10 982 B, `master` `d62921e`) and `feedbacksystem` **Apache-2.0** (10 785 B, `dev` `072e646`).
+🔵 **`Gap 334` opens and is costed:** **7 repositories, 7 inline probes** — about what this pass spent on the agent tier. 🔴 A licence claim that two sources contradict is the highest-value probe target on the shelf, because the disagreement itself is the signal.
+
+### 🟢 Trap T1 is a live event, not history — it paid **twice** in a handful of probes
+
+🔴 `thm-mni-ii/feedbacksystem` → **`dev`**. 🔴 `OpenOLAT/OpenOLAT` → **`master`**. 🟢 **Two of twelve probed repositories do not resolve to `main`.** 🔵 Both are on the **platform** tier, where a hardcoded branch silently converts a granted, deployed system into an ungranted one.
+
+### 🔴 Declared gaps this pass, so silence is not read as coverage
+
+- 🔴 **`luffycodes/Tutorbot-Spock` (56★) is ungranted** — nine-name ladder empty, **zero** `licen[sc]e` matches in its 8 167 B README. A bare absence, not an upstream ask: there is nobody to ask, because nothing was declared.
+- 🔴 **No new repository placed in LATAM or APAC by artefact evidence.** The four new rows are **EMEA ×1**, **unplaced/Global ×3**. Pass 78's `Jeanikt/tutor-ai-agent` remains the only artefact-grounded LATAM agent on this shelf.
+- 🔴 **`github.com/trending` is the WRONG channel for this vertical**, measured on three surfaces (45 rows, `python`/`typescript`/`jupyter-notebook`): **zero** education software. 🟡 The `jupyter-notebook` surface returns *course material*, a different asset class, and should stop being read as agent discovery.
+- 🔴 **Canada and Mexico** returned almost nothing; the North America limb is **US-only** this pass. 🔴 **Africa and the Middle East** are absent from the EMEA sweep, which returned EU material only.
+- 🟡 **The EU AI Act high-risk education date (2 December 2027) is NOT settled** — one source has the July 2026 Omnibus still awaiting Official Journal publication. Recorded as the best available reading.
+- 🔴 **Unread and named rather than left implicit:** 15 of 16 pages of the `search?q=` surface, and 19 of 39 repos on `topics/intelligent-tutoring-system`. 🟢 **Next pass finishes both before buying any new channel** — the measured rate on the fresh tag was **5 of 7**, the best in five passes.
+
 ## 🟢 Seventy-seventh pass, 2026-10-09 — the **pass-77 standing item is DISCHARGED BY PURCHASE**: the named instrument was bought and returned **12 unshelved against the battery's 0**; 🔴 **a second defect is found in the shelf's own SHARED classifier**; 🆕 `Gap 332` opens; `Gap 308` refused a **tenth** time; `P852`–`P856` adopted
 
 ⏱️ **Ninth pass of this date.** Pass 76 wrote to this file; this section sits above it and supersedes only the claims it names. **Append-only.**

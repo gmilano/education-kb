@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-ninth pass, 2026-10-09 — **one platform added and one re-verified**, and the verticals limb gets its first *deployed university infrastructure* row
+
+⏱️ **Eleventh pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 Added: a platform that is already run as institutional infrastructure, not a demo
+
+| platform | grant (payload-read inline) | bytes | ref | region | why it is a VERTICAL, not an agent |
+|---|---|---|---|---|---|
+| 🆕 [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 **Apache-2.0** | 10 785 | 🔴 **`dev`** · `072e646` | 🟢 **EMEA** (Germany) | Automated, AI-driven **personalised student feedback** operated by a university. 🟢 Ships a **Helm chart published on Artifact Hub**, a CI workflow and codecov gating — it is deployed, versioned and release-tagged, which is the line between a platform and a tutor app. |
+
+🔴 **T1 paid on this very row:** its default branch is **`dev`**, not `main`. A hardcoded `main` writes this platform down as ungranted and it never reaches the shelf. 🟢 **Region from the payload itself:** the grant's own first line reads *"Copyright 2021 Technische Hochschule Mittelhessen"* — holder named inside the licence, which is the strongest provenance available (`P800`).
+
+🔵 **Where it fits the Odoo/OpenMRS/Moodle slot:** it is the **assessment-feedback** layer, not the LMS. 🟢 It is the natural AI surface *on top of* an existing LMS rather than a replacement for one — which is exactly the customise-with-AI shape this file exists to collect.
+
+### 🟢 Re-verified live: OpenOLAT, and the re-verification moved two facts
+
+| platform | grant | bytes | ref | note |
+|---|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** | 10 982 | 🔴 **`master`** · `d62921e` | 🟢 Confirmed by payload read, not by badge. |
+
+🔴 **T1 paid a SECOND time in one pass:** OpenOLAT's default branch is **`master`**. 🟢 Two of the handful of repositories probed this pass resolve to something other than `main` (`dev`, `master`) — 🔵 **trap T1 is not a historical curiosity, it is a live one-in-four event on this vertical's platform tier.**
+
+🟡 **And a closure signal that a licence column alone would hide:** OpenOLAT ships a **`NOTICE.TXT` of 14 712 B** — *larger than its 10 982 B licence*. 🔵 An Apache `NOTICE` that size is a **third-party attribution manifest**, i.e. the platform's dependency closure carries terms of its own. 🔴 **"OpenOLAT is Apache-2.0" is true and is not the whole obligation** — the same lesson pass 76 learned when `PyLTI1p3`'s MIT closure turned out to contain LGPL-3.0 `jwcrypto`.
+
+### 🔴 The platform tier's licence reality, and what this pass did NOT verify
+
+🟢 **Measured this pass (payload-read):** `feedbacksystem` **Apache-2.0**, `OpenOLAT` **Apache-2.0**.
+
+🔴 **Search-claimed and NOT payload-read this pass — recorded as unverified, deliberately, rather than copied in as data:**
+
+| platform | licence as CLAIMED by comparison sites | status here |
+|---|---|---|
+| OpenEduCat (LMS **+ SIS** in one database) | LGPL-3.0 | 🔴 **unverified this pass.** If true it is the notable one: LGPL permits proprietary extensions on top, which is the ERP-style customisation shape. |
+| Open edX | 🔴 **sources conflict** — AGPL-3.0 (platform) vs Apache-2.0 (components) | 🔴 **unverified.** A conflicting-source licence is a *probe target*, not a fact. |
+| Sakai | Educational Community License 2.0 (Apache-derived) vs "Apache-2.0" | 🔴 **unverified**, sources conflict |
+| Moodle | GPL-3.0 | 🔴 unverified this pass |
+| Canvas (open core) | AGPL-3.0 | 🔴 unverified this pass |
+| Chamilo | GPL-3.0 | 🔴 unverified this pass |
+| RosarioSIS / Gibbon | GPL | 🔴 unverified this pass |
+
+🔵 **Why this table is shaped as a gap rather than as rows:** the comparison sites that supply these labels **disagree with each other** on Open edX and Sakai, and this shelf has twice measured a vendor badge diverging from the payload. 🟢 **A conflicting licence claim is the single highest-value probe target on the platform tier**, and `P867` applies: probe each one, infer nothing from the family around it.
+
+🟢 **Carry-forward, pre-registered:** the whole table above is **7 repositories, 7 inline probes** — roughly the cost this pass spent on the agent tier. 🔴 It is named here as unbought rather than left to look like coverage.
+
 ## 🟢 Seventy-eighth pass, 2026-10-09 — **no platform is added**, and the verticals limb produces three licence corrections instead: 🔴 **ERPNext is GPL-3.0 and the versioned probe cannot see it**, 🔴 **Huly is EPL-2.0 for the second pass running**, and 🔴 **a slug in this tier is dead**
 
 ⏱️ **Tenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

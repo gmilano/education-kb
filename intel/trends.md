@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-ninth pass, 2026-10-09 — the 2026 trend, stated in one line: **the argument has moved from "may students use AI" to "may the INSTITUTION run it"** — and three jurisdictions now answer that in statute
+
+⏱️ **Eleventh pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 Trend 1 — **Statute arrived in 2026, and it arrived in APAC first**
+
+🔴 **The received framing — "the EU regulates, everyone else waits" — is now wrong, and the dates say so:**
+
+| instrument | in force | does it name education? |
+|---|---|---|
+| 🟢 **South Korea, AI Basic Act** | **January 2026** | 🟢 **yes** — education sits in "high-impact AI"; one-year grace on penalties |
+| 🟢 **Vietnam, standalone AI law** | **1 March 2026** | 🟢 **yes** — education among six high-risk sectors, **naming automated assessment and behavioural monitoring** |
+| 🟢 **Taiwan, AI Basic Act** | **December 2025** | 🟡 framework law |
+| 🟡 **EU AI Act**, high-risk education obligations | 🔴 **pushed to 2 December 2027** by the July 2026 Omnibus (enforcement handed to the AI Office **2 August 2026**) | 🟢 **yes** — exam scoring named explicitly |
+| 🟢 **Ohio**, mandatory district AI policy | **due 1 July 2026** | 🟢 yes — first US state to require one of every K-12 district |
+
+🔵 **The consequence for a 2026 engagement:** 🔴 **two Asian statutes bind BEFORE the EU's main education deadline does.** 🟢 A roadmap that sequences "EU first, APAC later" is backwards on the dates. 🟡 And the EU date itself is **not settled** — one source has the Omnibus still awaiting Official Journal publication, so **2 December 2027 is the best reading, not a fact**.
+
+### 🟢 Trend 2 — **Adoption is finished; procurement has not started.** This is the gap the year is actually about
+
+🟢 Student use went **66% (2024) → 92% (2025)**; ~**86%** of higher-ed students entered 2026 using AI as a research partner; **60%** of US K-12 teachers used AI in 2024-25, **32%** weekly. 🔴 **Meanwhile institutions remain in pilot mode, with procurement slower than consumer adoption.**
+
+🔵 **So the 2026 product is not capability, it is PERMISSION.** 🟢 Everything an institution needs in order to stop piloting is governance plumbing: oversight logs, an auditable decision point, data minimisation, a no-high-stakes-decision gate. 🔴 **A better tutor does not close this gap; a defensible one does.**
+
+### 🟢 Trend 3 — 🆕 **The pedagogical centre of gravity moved from GENERATION to RETENTION and REFUSAL**, and the repos measured this pass show it
+
+🔴 **This is a shift in what the software is for, and it is visible in artefacts rather than in commentary:**
+
+- 🟢 [`afri-bit/revibe`](https://github.com/afri-bit/revibe) (MIT) — *"Stop vibe-coding. Start understanding."* **An AI mentor that refuses to write your code — and that's the whole point.**
+- 🟢 [`Vinger-lee/leap-framework`](https://github.com/Vinger-lee/leap-framework) (MIT) — *"Give your AI agent a real tutoring engine — not just a prompt"*; **nothing advances without passing a server-side State Guard.**
+- 🟢 The topic tag's own population: **diagnosis-first** tutors, **misconception**-based tutors, **hint-dependency** metrics, **answer-leakage** audits (`bydeng01/conv-vs-ped-tutor` audits *"LLM tutor helpfulness, answer leakage, and student independence"*).
+- 🟢 **Retention is being treated as infrastructure:** FSRS now ships **natively inside Anki (23.10+)**, with `fsrs-rs` (BSD-3) as the engine and `fsrs-optimizer` (BSD-3) fitting weights per population.
+
+🔵 **Why it matters commercially:** 🟢 a product whose value is *withholding* the answer and *proving* retention is **assessable**, and an assessable product is procurable. 🔴 A product whose value is generating the answer is simultaneously the thing North America's student-authored **STUDENTS FIRST Act of 2026** framework would prohibit outright at every grade level. 🔵 **The regulatory wind and the pedagogical wind are blowing the same direction, and it is away from generation.**
+
+### 🟢 Trend 4 — **Sovereign and on-device is now a pedagogy requirement, not only a privacy one**
+
+🟢 **California AB 1159** would bar student data from training models unless it directly benefits the school; **NYC** bars student-facing AI through grade 8 for a year; **LATAM provision is uneven** — some schools run learning analytics, others lack stable connectivity. 🔵 **These three pressures have one architecture in common.** 🟢 **Retention scheduling is local arithmetic:** `fsrs-rs` computes on the device, needs no network, and emits no student data anywhere. 🔴 **This makes "data-minimal by construction" cheap in the one layer where it is usually expensive** — and it is the only trend in this file that *reduces* cost while *increasing* compliance.
+
+### 🟡 Trend 5 — **The horizontal agent stack is consolidating fast, and education is not where it is happening**
+
+🟢 Measured on three `github.com/trending` surfaces this pass (`python`, `typescript`, `jupyter-notebook`: 45 rows): 🔴 **zero** education software. 🟢 What *is* trending is substrate — internet access for agents (`Panniantong/Agent-Reach`, 94.5k★, **+6 987 this week**), agent teams with shared context (`mvschwarz/openrig`, +2 693), persistent cross-session memory (`thedotmack/claude-mem`, 98.8k★), local-first inference (`AtomicBot-ai/atomic-agent`).
+
+🔵 **Read correctly, this is good news and not a gap:** 🟢 the substrate layer is being built by others, permissively, at a pace no vertical can match — **so the vertical's job is the pedagogy, the state model and the compliance envelope**, and it should buy memory, orchestration and inference rather than build them. 🔴 **The corollary is the warning:** an education product whose differentiator is memory or orchestration is competing with 98.8k★ of free, and will lose.
+
 ## 🟢 Seventy-eighth pass, 2026-10-09 — the trend is **"adoption already happened, governance did not"**, and the pass's own subject is sharper: 🔴 **a correction applied as a rule is a new defect**, measured on this repository's own figures. `P859`–`P864` adopted
 
 ⏱️ **Tenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

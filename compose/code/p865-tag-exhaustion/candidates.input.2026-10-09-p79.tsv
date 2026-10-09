@@ -1,0 +1,19 @@
+# Candidate set as DISCOVERED (PRE-write census, P428), pass 79, 2026-10-09.
+# shelf_status measured against HEAD 4a2853f before this pass wrote anything.
+repo	surface	stars_as_listed	shelf_status_PRE
+open-spaced-repetition/fsrs4anki	topics/intelligent-tutoring-system	4100	UNSHELVED
+luffycodes/Tutorbot-Spock	topics/intelligent-tutoring-system	56	UNSHELVED
+thm-mni-ii/feedbacksystem	topics/intelligent-tutoring-system	24	UNSHELVED
+brownplt/LTLTutor	topics/intelligent-tutoring-system	12	UNSHELVED
+Vinger-lee/leap-framework	topics/intelligent-tutoring-system	1	UNSHELVED
+PrepLabsAI/InterviewMentor	topics/ai-tutor	112	UNSHELVED
+afri-bit/revibe	websearch/github-trending-education	0	UNSHELVED
+GarethManning/education-agent-skills	topics/intelligent-tutoring-system	837	SHELVED
+GeminiLight/gen-mentor	topics/intelligent-tutoring-system	133	SHELVED
+ArnaudGuiovanna/tutor-mcp	topics/intelligent-tutoring-system	44	SHELVED
+HKUDS/DeepTutor	topics/ai-tutor	41000	SHELVED
+zijinz456/OpenTutor	topics/ai-tutor	137	SHELVED
+Selleo/mentingo	topics/ai-tutor	91	SHELVED
+ahmedEid1/lumen	topics/ai-tutor	88	SHELVED
+zhangl1001/civil-ai	search?q=AI+tutor+agent+education	43	SHELVED
+towardsai/ai-tutor-app	search?q=AI+tutor+agent+education	31	SHELVED

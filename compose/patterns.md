@@ -4,6 +4,101 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-ninth pass, 2026-10-09 — **three new recipes**, each wired from grants this pass payload-read inline, with the BSD-3 obligation stated where it lands
+
+⏱️ **Eleventh pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+🔵 **Licence note that applies to all three recipes, because it is new to this shelf:** `fsrs-rs` and `fsrs-optimizer` are **BSD-3-Clause**, not MIT. 🔴 **BSD-3's third clause is the no-endorsement term:** the copyright holder's and contributors' names may **not** be used to promote a derived product without written permission. 🟢 **Operationally: the client's marketing may not say "powered by FSRS / open-spaced-repetition" without asking.** Code reuse is unrestricted; the *name* is the restricted part. 🔵 A single "permissive ✅" column erases exactly this.
+
+---
+
+### 🟢 `R79a` — **Retention-grade tutoring spine**, permissive end to end, no hosted dependency
+
+🟢 **The gap it closes:** this shelf's tutors generate and explain; none of them could *prove* a learner still knows something in six weeks. 🔵 Retention is the measurable outcome an institution will actually buy (see `intel/trends.md` Trend 3).
+
+**Wiring, concretely:**
+
+```
+  any MCP host (Claude Code / IDE / chat)
+        │  MCP, 58 tools
+        ▼
+  Vinger-lee/leap-framework        MIT  1 084 B  main 2568667
+    • learner state + mastery estimation
+    • prerequisite gating  ("may this topic be entered?")
+    • assessment sufficiency / evidence quality
+    • ► server-side STATE GUARD ◄  nothing advances without passing it
+        │  scheduling calls
+        ▼
+  open-spaced-repetition/fsrs-rs   BSD-3  1 509 B  main 0a57374   ← the engine Anki itself ships
+  open-spaced-repetition/py-fsrs   MIT    1 079 B  main 9446cb0   ← Python binding (already shelved)
+        │  fit weights on the client's OWN review log
+        ▼
+  open-spaced-repetition/fsrs-optimizer  BSD-3  1 509 B  main ac2a82d
+```
+
+🟢 **Why this order:** the agent keeps what it is good at (explaining, generating questions, judging open answers); **LEAP owns everything that must be consistent**; FSRS owns *when*. 🔴 **The State Guard is the compliance primitive, not a nicety** — it is a server-side gate, so every transition is auditable per tenant, which is what EU Annex III oversight and Oklahoma/Maryland human-oversight rules both demand evidence of.
+🟡 **Deliberate design constraint:** keep the system **formative**. The moment it emits a score of record it becomes **high-risk under EU Annex III** (exam scoring is named). Feedback and scheduling are not.
+🟢 **`P26` (access ≠ copyright):** this spine has **no hosted-service dependency** — `leap-framework` is `pip install -e .`, FSRS is local arithmetic. Inference is the only external call and is swappable (self-hosted Ollama/vLLM). 🔵 **Contrast pass 78's `Jeanikt/tutor-ai-agent`, which is MIT but unshippable without LiveKit Inference.**
+⏱️ **Estimate: 6–8 weeks** to a governed pilot. 🔴 Declared as an estimate, not a measurement.
+
+---
+
+### 🟢 `R79b` — **EMEA, AI-Act-ready assessment feedback**, built on the one deployed-infrastructure row this shelf has
+
+🟢 **The gap it closes:** the EU high-risk education deadline is **2 December 2027** (July 2026 Omnibus; 🟡 Official-Journal status flagged in `intel/market.md`). That is a programme-sized build and nobody has a permissive, already-deployed European base for it — 🟢 **except this one.**
+
+```
+  thm-mni-ii/feedbacksystem      Apache-2.0  10 785 B   dev  072e646   ← NOTE: branch is `dev`
+    • AI-driven personalised student feedback
+    • Helm chart on Artifact Hub · CI · codecov      → deploy, don't rebuild
+    • copyright: "Technische Hochschule Mittelhessen"  (EMEA, from the payload itself)
+        +
+  Vinger-lee/leap-framework      MIT  1 084 B  main 2568667
+    • State Guard  →  the documented human decision point
+        +
+  open-spaced-repetition/fsrs-rs BSD-3  1 509 B  main 0a57374
+    • retention, computed locally — no student data leaves the institution
+```
+
+🔴 **The single most important architectural decision in this recipe is a refusal:** 🟢 **do not let it score.** Keep it formative — feedback, misconception detection, retention — and the system **stays outside Annex III's exam-scoring trigger**, which converts a conformity-assessment programme into ordinary software delivery. 🟡 **The inverse is the trap to name to the client:** remote proctoring with facial recognition or behaviour analysis is squarely high-risk, and adding it late re-classifies the whole system.
+🟢 **Obligations that apply regardless:** **AI literacy** duties on staff (in force now) and **transparency/labelling** of AI-generated content. 🔵 Both are documentation deliverables and should be priced as such.
+🔴 **Deploy-time trap, measured:** `git clone` of `feedbacksystem` without `-b dev` gets the wrong ref. T1 paid on this repository this pass.
+⏱️ **Estimate: 10–14 weeks.** 🔴 An estimate.
+
+---
+
+### 🟢 `R79c` — **Socratic engineering academy**, for reskilling rather than schooling
+
+🟢 **The gap it closes:** Globant's own reskilling and bootcamp surface. 🔴 Every tutor on this shelf teaches *subjects*; this recipe teaches *engineering*, and its two components are built to **withhold** answers — which is what makes graduates' competence real and measurable.
+
+```
+  afri-bit/revibe                MIT  1 074 B  main 46b5047
+    • refuses to write the learner's code, by design
+    • generates a personalised curriculum; progress tracked in markdown
+    • hosts inside GitHub Copilot  → meets engineers in the IDE they already use
+        +
+  PrepLabsAI/InterviewMentor     MIT  1 071 B  main 609d311
+    • interview-prep agent skills: mock interviews, LeetCode/DSA progression
+        +
+  Vinger-lee/leap-framework      MIT  1 084 B  main 2568667
+    • mastery + hint-dependency as the promotion gate, not a quiz score
+        +
+  open-spaced-repetition/fsrs-optimizer  BSD-3  1 509 B  main ac2a82d
+    • fit the schedule to THIS cohort's review log, cohort over cohort
+```
+
+🟢 **Why `leap-framework` is the keystone and not decoration:** it exposes **hint dependency** as a first-class signal (`hint_dependency: 0.25` in its own quick-start output). 🔵 **A learner who answers correctly only after three hints has not learned it**, and a quiz score cannot see the difference — the runtime can, and promotion can be gated on it.
+🟢 **Fully permissive, fully self-hostable**; MIT ×3 + BSD-3 ×1. 🔴 **The BSD-3 no-endorsement term lands here too:** academy marketing may not claim FSRS endorsement.
+⏱️ **Estimate: 3–5 weeks** (the thinnest of the three — both agent components are skill packs, not platforms). 🔴 An estimate.
+
+---
+
+### 🔴 What these recipes deliberately do NOT claim
+
+- 🔴 **None of the three was BUILT or RUN this pass.** `P866`: no code from this clone, and no script of my own, executed — only inline measurement. 🟢 Every component's **grant, bytes, branch and SHA are first-hand**; every **wiring claim is read from the component's own README**; every **week estimate is declared an estimate**.
+- 🔴 **`leap-framework` is a 1★ repository.** 🟢 Its artefacts are strong (58 MCP tools, 260 passing tests, CI badge, 8 localisations) and its grant is clean — 🟡 but it carries **single-maintainer risk**, and a client engagement should either vendor it or budget to maintain it. 🔵 Stated because star count is exactly what this shelf has resolved to stop treating as a quality signal.
+- 🟡 **`revibe` and `InterviewMentor` are region-UNPLACED** (`P800`): zero localisation artefacts, zero locale markers. They are shelved on their grants and their substance, not on a placement.
+
 ## 🟢 Seventy-eighth pass, 2026-10-09 — three new recipes, and all three are buildable from components **payload-read this pass**: a voice tutor that keeps **no server-side student record**, the **LTI 1.3 + AGS adapter `Gap 316` has been waiting for** (its upstream froze the seam, so the studio writes it), and the **oversight-record** deliverable Oklahoma and Maryland now require
 
 ⏱️ **Tenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

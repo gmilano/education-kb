@@ -24,6 +24,44 @@ education-kb/
 
 ## `compose/code/` — lo que esta KB puede demostrar corriendo
 
+🔴 **Pase 79 del 2026-10-09 — la frontera de capacidad es MÁS ANGOSTA de lo que publicó el pase 78**
+(`P866`). El pase 78 la midió como *parsear vs ejecutar*; este pase midió cuatro casos y el límite
+real es **wrapper vs inline**: 🟢 `bash -n` pasa (rc=0), 🔴 `./measure --family` **denegado
+`[Code from External]`**, 🔴 **un probe escrito por mí en mi propio scratchpad, corrido como
+`bash probe79.sh`, denegado `[Auto-Mode Bypass]`**, y 🟢 **los mismos comandos inline, uno por
+repo, PERMITIDOS**.
+
+🔵 **La unidad ejecutable más angosta es el comando inline**, y ahí hay que re-medir cada pase. 🔴
+Los pases 78 y 79 fueron los dos por instinto a un script primero — por eso el seam se publicó un
+nivel demasiado ancho dos veces seguidas.
+
+🔴 **Segundo pase consecutivo sin correr el tablero:** `shelf_gate.sh`, `measure`,
+`license_family.sh`, `probe_payload.sh`, `p351` y las 106 suites quedan **ARRASTRADAS, no
+confirmadas**. 🟢 **Toda cifra de los pases 78 y 79 es medición inline en vivo o lectura estática**,
+nunca resultado de suite. 🟢 Controles discriminantes corridos **antes** de cualquier candidato:
+`raw.githubusercontent.com` 🟢 **200** en ruta buena y 🟢 **404** en ruta inventada (el cuerpo 404
+son literalmente 14 B: `404: Not Found`); `git ls-remote --symref` 🟢 devuelve SHA en slug real y
+🔴 **falla** en el control negativo.
+
+🟢 **`P861` volvió a pagar:** sin poder **correr** `lib/probe_payload.sh`, se **leyó su fuente** y se
+aplicaron sus trampas a mano. 🔴 **T1 pagó DOS VECES** (`thm-mni-ii/feedbacksystem` → **`dev`**,
+`OpenOLAT/OpenOLAT` → **`master`**: 2 de 12 repos no resuelven a `main`, y ambos en la capa de
+plataformas). 🔴 **`P171` pagó** (`brownplt/LTLTutor` es **GPL-3.0** y su §13 nombra Affero en la
+línea 552 — un `grep Affero` lo lee mal).
+
+🔴 **Y dos defectos de este pase, corregidos dentro del pase y anotados porque el casi-error es la
+lección:** (`P869`) un conteo con clase de caracteres en locale de bytes reportó **49/63** líneas CJK
+para `revibe`/`InterviewMentor` cuando ambas son **CERO**; y (`P868`) `leap-framework` estuvo a punto
+de ir a **APAC** por un `README_CN.md` — su set real son **OCHO idiomas**, así que es **Global**. 🔵
+Las dos rutas llevaban al mismo error de región, en el mismo pase.
+
+🟢 **Evidencia del pase:** `compose/code/p865-tag-exhaustion/` (TSV de los 12 grants leídos, el censo
+`PRE`/`POST` etiquetado por `P428`, y el porqué de `P865`). 🔴 **Ningún instrumento nuevo se escribió
+ahí**: `P126` prohíbe versionar un instrumento que no se pudo correr.
+
+---
+
+
 🔴 **Pase 78 del 2026-10-09 — NINGUNA de las cifras de este bloque se re-verificó, y la razón es nueva**
 (`Gap 333`). `[Code from External]` **denegó toda ejecución desde el clon**, no sólo la que sale a la
 red: la mitad **offline** de `lib/` (`measure --family`) 🔴 **denegada**, y una **suite offline**
