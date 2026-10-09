@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-third pass, 2026-10-09 — `P14-R` is **re-based onto a repo with its own multi-tenant access layer**, and one new pattern exists only because this pass measured that the seam it needs is **absent on both sides**
+
+⏱️ **Fifth pass of this date.** Pass 72 closed earlier today (commit `e99be83`). **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 `P14-R` — **Re-based.** The permissive graded tutor, now standing on `DeepTutor` instead of greenfield multi-tenancy
+
+🔵 **What changed:** every prior pricing of `P14-R` had to treat learner identity, guardian consent and per-learner authorisation as work to write. 🟢 **`HKUDS/DeepTutor` ships that layer, Apache-2.0.**
+
+**Wire it like this:**
+
+| Layer | Component | Licence | Why this one |
+|---|---|---|---|
+| Tutoring runtime | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) `main` `6cf793bd` | 🟢 **Apache-2.0** 11 407 B | 3 763 files, **1 220 test files**, `compose.yaml` + `Dockerfile` for self-hosting |
+| Multi-tenant access | `deeptutor/multi_user/` — `identity.py`, `grants.py`, `guardians.py`, `learner_profile.py`, `book_permission.py`, `knowledge_access.py`, `model_access.py`, `audit.py` | 🟢 Apache-2.0 (same repo) | 🟢 **Guardian consent + audit trail already exist**; this is the K-12 shape prior passes priced as greenfield |
+| LMS seam | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) `0ec24fe` | 🟢 **Apache-2.0** | 🟢 Ships **LTI 1.3 + AGS**; the only permissive component on this shelf that holds grade passback |
+| Human approval gate | [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) `main` `b90bd88` | 🟢 **MIT** 1 069 B | 🟢 `reviewGate.publishBlockedUntilApproved: true`, `autoPublishAllowed: false`, exercised by **25 test references** (pass 72, `Gap 323`) |
+| Provider path | 🔴 **Supply your own** | — | 🔴 `AI-Teaching-Agent`'s contract declares `mode = MOCK_ONLY`, `safety.realLlmCalled = false` |
+
+**The three joins, concretely:**
+
+1. 🟢 **`ltijs` → `DeepTutor`.** Mount `ltijs` as the LTI 1.3 tool provider; map its launch claim `sub` (and `https://purl.imsglobal.org/spec/lti/claim/context`) onto a `multi_user/identity.py` principal. 🟢 **The identity model already exists, so this is a mapping, not a schema design.**
+2. 🟢 **`DeepTutor` → `AI-Teaching-Agent` gate.** Route generated assessment artefacts through the contract's `WAITING_REVIEW` default; nothing reaches a learner unapproved. 🔴 **Attach at `cli/agent_entity_publish_review.py` and `cli/review_pre_approve.py` — and note both carry *zero* test references (`P830`, pass 72), which is exactly the publish-side seam an integration touches.**
+3. 🟢 **Gate → `ltijs` AGS.** Only an approved score calls AGS `Score` publish. 🟢 **This is the audit chain a regulator asks for, end to end, with no closed component in it.**
+
+🔴 **The one honest cost, now measured rather than assumed:** `DeepTutor` has **0 LTI, 0 xAPI, 0 Caliper, 0 SCORM, 0 OneRoster** paths in 3 763 files (word-bounded per `P831`). 🟢 **So join #1 is net-new code in every case.** 🔵 **`Gap 316(i)` — the real wiring cost of that hop — is still the highest-value unmeasured number on this shelf, and `P14-R` is where it should be paid once and recorded.**
+
+### 🆕 `P26-R` — Local-first tutor for a jurisdiction that **bans student-facing AI**, with a teacher-facing control plane
+
+🔵 **Why this pattern exists:** North America supplies two hard constraints this shelf had no recipe for — **NYC's one-year moratorium on student-facing AI through grade 8** and **Katy ISD's K-6 generative-chatbot ban with supervised access from grade 7**. 🟢 **Teacher-facing and administrative workflows sit outside both.**
+
+| Layer | Component | Licence | Role |
+|---|---|---|---|
+| Authoring + grading | [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | 🟢 MIT | 🟢 Teacher-facing only: labs, exams, grading workflows, human review. **No learner ever calls a model** |
+| Local adaptive workspace | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) `f0142f2` | 🟢 **MIT** 1 068 B | 🟢 Runs **locally**, 10+ providers; deployed to *teachers* for material prep, not to learners |
+| Delivery | 🟢 Existing LMS (Moodle / Open edX), **no AI in the learner path** | AGPL-3.0 | 🟢 Learners receive human-approved artefacts through the LMS they already use |
+
+🟢 **The compliance claim is structural, not promissory:** there is no learner-to-model call anywhere in the topology, so the moratorium is satisfied by architecture rather than by policy text. 🟡 **Use `zijinz456/OpenTutor`, not the fork** — `adity982/OpenTutor` carries the same MIT payload and holder (*Zijin Zhang*) but is 8 commits behind; canonicality was settled by copyright holder this pass. 🔴 **`OpenTutor`'s own docs put multi-user/classroom mode out of scope**, which is a *feature* for this pattern and a blocker for `P14-R` — hence `DeepTutor` there and `OpenTutor` here.
+
+### 🔴 `P27` — **Not published.** The ibl.ai shortcut, and why it is refused
+
+🔵 **The temptation this pass had to resist.** [`iblai/os`](https://github.com/iblai/os) is 🟢 **MIT** (1 069 B, 1 516 files, `cd556237`) and it **already carries an LTI 1.3 configuration surface** — launch, login, deep-linking, JWKS. 🟢 On the licence field alone it looks like the fastest route to everything `P14-R` builds by hand.
+
+🔴 **Refused on three measurements:**
+
+1. 🔴 **The LTI implementation is not in the MIT repository.** The seam is a **1 664 B** wrapper importing `AgentLtiTab` from `@iblai/iblai-js` — 🟢 **ISC**, 🔴 **no `repository` declared on the registry**. Unforkable, unauditable, unpatchable.
+2. 🔴 **There is no AGS.** Grade passback appears nowhere in the 1 516-file tree. 🟢 `P14-R`'s whole value is the auditable grade path; this supplies the launch and not the return leg.
+3. 🔴 **The backend is an enterprise product.** `README.md` line 237: *"requires the ibl.ai backend platform for authentication, AI agent APIs, and data services … not included in this repository."* 🔴 Line 61 of the same file asserts *"no vendor lock-in — full ownership of the stack."*
+
+🟢 **Recorded as a refused pattern rather than omitted, because the licence field alone would have sold it** — and `P832` (read the registry's `repository`, not just its `license`) exists because of this chain. 🟢 **ibl.ai remains a legitimate *integration* target where a client already owns the platform; it is not a component to build on.** 🔵 Full reasoning: `intel/open-gaps.md` `Gap 326` / `Gap 327`.
+
+### 🟢 `P23` — carried, and its regional case strengthens again
+
+🟢 **Unchanged in construction** (MCP-side grading with a human gate). 🟢 **The reason to run it now serves a fourth jurisdiction for a fourth legal reason:** 🟢 **Vietnam's 33/2026/QD-TTg names automated assessment as high-risk and has been in force since 2026-03-01** — the only in-force, education-specific high-risk designation this shelf has found anywhere. 🟡 **Korea's AI Basic Act (in force 2026-01-22) adds a one-year penalty grace period**, which makes 2026 the build year rather than the compliance year. 🟢 **North America's human-oversight mandates (Oklahoma, Maryland) and LATAM's 87 %-use / 26 %-framework gap are the other two.** 🟢 **One gate, four regions, four statutes — the strongest reuse argument on this shelf.**
+
 ## 🟢 Seventy-second pass, 2026-10-09 — `P14-R` and `P23` **get cheaper and more precisely scoped** now that the gate is measured; one pattern is **withdrawn** because its foundation has no licence
 
 ⏱️ **Fourth pass of this date.** Pass 71 closed earlier today (commit `1fe734a`). **Append-only: this section is new; nothing below it was rewritten.**

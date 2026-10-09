@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-third pass, 2026-10-09 — the "purpose-built over general-purpose" trend is **confirmed by a standards body**, and this pass finds the trend's own **blocker measured for the first time**
+
+⏱️ **Fifth pass of this date.** Pass 72 closed earlier today (commit `e99be83`). **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 Trend 1 — purpose-built educational AI displaces the general chatbot, and the OECD now says so
+
+🟢 **The strongest version of this trend is no longer a vendor claim:** the **OECD 2026 Digital Education Outlook** recommends moving beyond general-purpose AI tools toward **purpose-built educational AI designed to produce durable learning gains.** 🔵 Trade commentary gives the mechanism: general chatbots *created* teacher work — prompt-crafting and output-checking — whereas education-specific platforms embed learning objectives and assessment logic directly.
+
+🟢 **Why this matters to this shelf specifically:** it is the thesis under every `compose/patterns.md` recipe here, now stated by a standards body rather than inferred. 🟡 **And it raises the bar on this shelf's own rows** — `P826` exists because "education AI" queries return curricula about AI; the OECD's framing is the same distinction at policy level.
+
+### 🔴 Trend 2 — the governance turn: adoption is near-universal, frameworks are not
+
+🟢 **Measured on three independent institutional channels this pass, and they agree:**
+
+| Channel | Adoption | Governance |
+|---|---|---|
+| UNESCO IESALC — 200 HEIs, 19 LAC countries | 🟢 **87 %** use AI in ≥1 area | 🔴 **26 %** have any formal framework |
+| EMEA — 450+ institutions | — | 🔴 **~10 %** have formal AI-use guidelines |
+| Global (2026 state-of-AI report) | 🟢 **86 %** of education orgs use generative AI | 🔴 *"most lack a policy"* |
+
+🟢 **Three samples, three continents, same shape: a 60-plus-point gap between use and governance.** 🟢 **This is the most reproducible finding in this file.** 🔵 It is also why the regulatory items in `intel/market.md` are opportunities rather than threats — the remediation demand exists ahead of the statute in every region.
+
+🟡 **Teacher adoption is the driver, and it has a price:** US K-12 teacher use at **60 %** in 2024-25 (**32 %** weekly); LATAM secondary-teacher use above the OECD's **36 %** average in four countries, and **75 %** of Uruguayan public-school teachers (Ceibal, 2026). 🔵 Practitioner guidance puts the adoption threshold at **5–10 hours/week saved without hurting instructional quality** — 🟢 a usable acceptance criterion for a studio deliverable, and this shelf records it as one.
+
+### 🔴 Trend 3 — interoperability and credentials are named as requirements, and **the open-source layer does not supply them**
+
+🟢 **The demand side is on three channels now:** 1EdTech's 2026 watch-list names interoperability as a *requirement* rather than a preference, and digital credentials as a core mechanism for skills-based learning and hiring.
+
+🔴 **The supply side, measured this pass for the first time from the open-source side:**
+
+| Permissive component | Files | LTI | xAPI | Caliper | SCORM | OneRoster |
+|---|---|---|---|---|---|---|
+| `HKUDS/DeepTutor` (Apache-2.0) | 🟢 3 763 | 🔴 0 | 🔴 0 | 🔴 0 | 🔴 0 | 🔴 0 |
+| `zijinz456/OpenTutor` (MIT) | 890 | 🔴 0 | 🔴 0 | — | 🔴 0 | — |
+
+🔴 **Zero across the board.** 🟢 **For six passes this file has recorded that the *closed* products hold LTI 1.3 + AGS. The complement is now measured: the open implementations never reach for it.** 🟢 **The trend's blocker is therefore an adapter, not a market** — which makes it the cheapest high-value thing on this shelf to build.
+
+🟡 **And the credential limb is unchanged from pass 72:** three Open Badges issuers censused, **zero clean permissive grants** (`Gap 324`). 🔴 **So both halves of this trend — interop and credentials — are demand without permissive supply.**
+
+### 🟡 Trend 4 — the EU AI Act timeline is itself unstable, and that instability is now the trend
+
+🔴 **Three secondary channels, three incompatible answers** about when Annex III (**the education bucket**) obligations bite: deferred to **2027-12-02**; in force since **2026-07-27** with enforcement from **2026-08-02**; or still at provisional political agreement as of **2026-05-07**. 🟢 **Recorded as a trend rather than a fact, because the churn is real even though this shelf cannot date the outcome** — `Gap 308`, refused six times, EU policy hosts unreachable with controls green.
+
+🟢 **Practical reading for an engagement:** the *classification* is stable (education access, progression and assessment are high-risk, with extraterritorial reach over EU-located students) and the *date* is not. 🟢 **Design to the obligation; do not commit to a date, and say why.**
+
+### 🟢 Trend 5 — engagement, wellbeing and the limits on student-facing deployment
+
+🟡 As AI absorbs routine tasks, institutions are re-emphasising motivation, human connection and purpose; some governments are piloting **AI companions with strict boundaries**, and several European countries have adopted phone bans. 🔴 **The hard constraint for product scoping is in North America:** NYC's one-year moratorium on student-facing AI through grade 8, and Katy ISD's K-6 generative-chatbot ban with supervised access from grade 7. 🟢 **Teacher-facing and administrative workflows are outside both**, which is where this shelf's near-term patterns are aimed.
+
+🟢 **One counter-signal worth recording:** a student-authored *"STUDENTS FIRST Act of 2026"* framework, produced with students from all 50 states (July 2026, with Day of AI), **rejects both an outright ban and unrestricted adoption.** 🔵 The constituency usually treated as the object of these policies is now producing them.
+
 ## 🟢 Seventy-second pass, 2026-10-09 — four regulatory regimes converge on **one architectural requirement**; the EU's education high-risk date is **contested on secondary channels**; the credentials trend gets its first census and it is copyleft-only
 
 ⏱️ **Fourth pass of this date.** Pass 71 closed earlier today (commit `1fe734a`). **Append-only: this section is new; nothing below it was rewritten.**

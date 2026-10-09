@@ -4,6 +4,33 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 — pass 73: a trending-tracker channel pays out where the listicle channel does not, and a general-ERP sweep returns **one MIT** and **one mislabelled copyleft**
+
+🟢 **Append-only. This section is new; every section below it is prior history and was not rewritten.**
+
+### 🟢 Trending, licence read from payload
+
+| Repo | Licence (payload) | Default ref · HEAD · date | Note |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** 11 407 B | `main` `6cf793bd` · **2026-10-08** | 🟢 3 763 files; surfaced by a daily AI-OSS tracker, **not** by any listicle |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** 1 068 B | `main` `f0142f2` · **2026-10-08** | 890 files, 191 commits |
+| [`iblai/os`](https://github.com/iblai/os) | 🟢 **MIT** 1 069 B | `main` `cd556237` · **2026-10-08** | 🟢 1 516 files; 🔴 backend is an enterprise product (`Gap 326`) |
+
+### 🟡 Channel finding: the tracker beat the listicle
+
+🟢 **`DeepTutor` was returned by an auto-generated daily open-source tracker, dated 2026-10-09.** 🔴 **The same week's listicle channel returned LangChain, CrewAI and `generative-ai-for-beginners` — nothing education-specific, for the twenty-third week.** 🟢 **Recorded as a channel property worth reusing:** trackers rank by movement and so surface new education repos, whereas listicles rank by stars and so re-surface the same general frameworks. 🔵 **The tracker's own output warns it is auto-generated and may be inaccurate**, which is why every row above is payload-read rather than taken on the tracker's word.
+
+### 🟢 General-ERP sweep — relevant because education ERP keeps resolving to general ERP
+
+| Repo | Licence (payload) | Default ref | Reading |
+|---|---|---|---|
+| [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) | 🟢 **MIT** 1 077 B, holder *Webkul Software* | 🟡 **`master`** | 🟢 The sweep's only permissive ERP; Laravel + FilamentPHP, plugin architecture |
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0** 11 905 B | 🟡 **`trunk`** | 🟢 Permissive; heavy Java implementation cost |
+| [`hcengineering/platform`](https://github.com/hcengineering/platform) *(Huly)* | 🔴 **EPL-2.0** 14 196 B | 🟡 **`develop`** | 🔴 **Secondary source claimed Apache-2.0. It is not.** See `intel/open-gaps.md` |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 **LGPL-3.0** 8 240 B | 🟡 **`19.0`** | 🟢 Re-confirms this shelf's standing reading (pass 53); 🟢 **path now resolved for `Gap 309`** |
+
+🔴 **Four repositories, four non-`main` default refs** (`master`, `trunk`, `develop`, `19.0`). 🟢 **`probe_payload.sh`'s trap #1, paying out again at 4 of 4** — a hardcoded `main` would have written all four down as ungranted.
+
 ## 🟢 2026-10-09 — pass 72: the **Open Badges / credential layer is censused for the first time** — three issuers, **zero clean permissive grants**; plus two MIT AI-literacy curricula correctly filed as curriculum, not as agents
 
 ⏱️ **Fourth pass of this date.** 🟢 **Append-only: this section is new; every dated section below it is preserved.**

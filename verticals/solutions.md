@@ -4,6 +4,44 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-third pass, 2026-10-09 — the ERP shelf gains its **first permissive row**, a secondary source's Apache-2.0 claim is **corrected to EPL-2.0**, and `Gap 309`'s unresolved OpenEduCat path is **resolved**
+
+⏱️ **Fifth pass of this date.** Pass 72 closed earlier today (commit `e99be83`). **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 Platforms censused this pass — every licence read from primary payload, every default ref resolved
+
+| Platform | Licence (payload) | Default ref | Education fit | Verdict for this studio |
+|---|---|---|---|---|
+| [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) | 🟢 **MIT** 1 077 B, holder *Webkul Software* | 🟡 **`master`** | 🔴 General ERP, no education module | 🟢 **Build-on.** The shelf's first permissive ERP; Laravel + FilamentPHP with a plugin system, so an education module is additive rather than a fork. 🔴 Young ecosystem, few third-party extensions |
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0** 11 905 B | 🟡 **`trunk`** | 🔴 General ERP (accounting → CRM → MRP) | 🟡 **Build-on, expensively.** Permissive and mature; 🔴 Java implementation skills are the gate |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 **LGPL-3.0** 8 240 B | 🟡 **`19.0`** | 🟢 **Purpose-built education ERP** | 🟡 **Integrate, do not embed.** Richest education fit on the shelf; 🔴 LGPL-3.0 makes the linking question a counsel question |
+| [`hcengineering/platform`](https://github.com/hcengineering/platform) *(Huly)* | 🔴 **EPL-2.0** 14 196 B | 🟡 **`develop`** | 🔴 General data/relationship framework | 🔴 **Not on the permissive shortlist.** See the correction below |
+| `frappe/education` + ERPNext | 🟡 Unchanged from prior passes — `frappe/education` carries the **19 B assertion** of `Gap 312` | — | 🟢 Purpose-built education ERP | 🔴 **Blocked on `Gap 312`:** a 19-byte licence assertion is not a grant |
+
+### 🔴 Correction — Huly is **EPL-2.0**, not Apache-2.0
+
+🔴 **A secondary source states:** *"Huly Platform is fully open-source, licensed under Apache License 2.0."* 🟢 **Read from payload at `develop`: EPL-2.0, 14 196 B.** 🟢 **`P828` discharged before publishing** — this shelf held no prior reading of Huly, so this is a new row rather than a re-correction of its own data.
+
+🔵 **Why the mislabel would have cost something:** **EPL-2.0 is a weak file-level copyleft** with a patent grant and a litigation-termination clause. 🔴 It is not in the MIT / Apache-2.0 / BSD set this KB shortlists, and the Apache-2.0 claim would have put a copyleft platform onto a permissive shortlist — the same failure mode as `Gap 312`'s README assertions, arriving through a different channel.
+
+### 🟢 `Gap 309` — OpenEduCat's repository path, unresolved in pass 72, is **resolved**
+
+🟡 **Pass 72 recorded** that a vendor page claims OpenEduCat ships **OneRoster** and **Ed-Fi roster sync**, and that it could not resolve the repository path — recording nothing about it per `P827` rather than guessing.
+
+🟢 **Resolved this pass:** [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp), 🔴 **LGPL-3.0 8 240 B**, default ref 🟡 **`19.0`** (**not** `main` — `probe_payload.sh`'s trap #1 again). 🟢 **This re-confirms the LGPL-3.0 reading this shelf has held since pass 53, byte-for-byte**, so `Gap 309`'s permissive count is **unchanged at one** (Ed-Fi DMS) — copyleft either way. 🟢 **What changes is testability:** the OneRoster/Ed-Fi claim now has a path, a ref and a licence attached, so a future pass can enumerate the tree and settle it from payload instead of from the vendor's page.
+
+🔴 **Four platforms censused, four non-`main` default refs** — `master`, `trunk`, `develop`, `19.0`. 🟢 **That is `probe_payload.sh`'s documented trap paying out at 4 of 4 in a single pass**, and it is the strongest evidence this shelf has yet recorded for never hardcoding a branch.
+
+### 🟡 The "open source runtime" tier — real licences, unusable as platforms
+
+🟢 [`iblai/os`](https://github.com/iblai/os) (🟢 **MIT** 1 069 B, `cd556237`, **1 516 files**) and [`iblai/lms`](https://github.com/iblai/lms) (🟢 **MIT** 1 062 B) are genuinely permissive and genuinely substantial. 🔴 **Neither is a platform this studio can stand up**, because `iblai/os`'s own `README.md` line 237 states it *"requires the ibl.ai backend platform for authentication, AI agent APIs, and data services"* and that the backend is **not included**, obtainable only under an **enterprise licence** (lines 229–231). 🔴 **The same README asserts "no vendor lock-in — full ownership of the stack" at line 61.**
+
+🟢 **Filed here as a *vertical to integrate with*, not a platform to build on** — the distinction `P26` (the access-rights gate) exists to force, and the one a licence probe structurally cannot see. 🟢 Full reasoning: `intel/open-gaps.md` `Gap 326` / `Gap 327`.
+
+### 🟢 Standing permissive shelf — unchanged this pass
+
+🟢 **Moodle** (AGPL-3.0 — copyleft, integrate-don't-embed), 🟢 **Open edX / `openedx/edx-platform`** (AGPL-3.0, 35 136 B, `bf699a5` — confirmed in twelve places on this shelf), 🟢 **Ed-Fi DMS** (permissive; still the only permissive system of record, `Gap 309`, pin `v8.0.0` / `d911abb` per `Gap 311(b)`), 🟢 **`Cvmcosta/ltijs`** (Apache-2.0, `0ec24fe` — ships AGS; the one-hop closer for every pattern in `compose/patterns.md`).
+
 ## 🟢 Seventy-second pass, 2026-10-09 — the **credential-issuance vertical is mapped and it is copyleft-only**; one vendor interop claim is recorded as *unresolved* rather than repeated
 
 ⏱️ **Fourth pass of this date.** Pass 71 closed earlier today (commit `1fe734a`). **Append-only: this section is new; nothing below it was rewritten.**

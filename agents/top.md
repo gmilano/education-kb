@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-third pass, 2026-10-09 — `Gap 316`'s capture thesis **flips from a licence finding to a seam finding**: two fresh permissive tutors are censused at **3 763 and 890 files** and hold **zero** education protocols between them, while the one component that *does* hold LTI 1.3 is **permissive and sourceless**. Two real agents admitted
+
+⏱️ **Fifth pass of this date.** Pass 72 closed earlier today (commit `e99be83`). **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 Two new agent rows, both read from payload, both permissive
+
+| Agent | Licence (payload) | Default ref · HEAD · date | Scale | What it is |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** 11 407 B | `main` `6cf793bd` · **2026-10-08** | 🟢 **3 763 files**, **1 220 test files** | Agentic personalised-tutoring runtime; ships a real `deeptutor/multi_user/` subsystem (`learner_profile`, `guardians`, `grants`, `audit`, `book_permission`, `model_access`) |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** 1 068 B, holder **Zijin Zhang** | `main` `f0142f2` · **2026-10-08** | 890 files, 191 commits | Block-based local-first adaptive workspace: material → notes, quizzes, flashcards, adaptive tutor; 10+ LLM providers |
+
+🟢 **Both are agents deployed *in* an education setting, not curricula *about* AI** — the distinction `P826` exists to protect, and the reason these two are shelved here while pass 72's `ai-agents-for-beginners` went to `repos/foundations.md`.
+
+🟢 **`DeepTutor` is the first permissive education agent on this shelf with a multi-tenant access-control layer of its own.** 🔵 `guardians.py` and `learner_profile.py` in particular are the K-12 consent shape that `P14-R` has had to hand-roll in every prior estimate.
+
+### 🔴 And the finding that matters more than either row: **neither of them can talk to an LMS**
+
+🟢 **Enumerated from the commit object per `P829`, matched on word boundaries per the new `P831`:**
+
+| Protocol | `HKUDS/DeepTutor` (3 763 files) | `zijinz456/OpenTutor` (890 files) |
+|---|---|---|
+| LTI (any version) | 🔴 **0** | 🔴 **0** |
+| xAPI | 🔴 **0** | 🔴 **0** |
+| Caliper | 🔴 **0** | — |
+| SCORM | 🔴 **0** | 🔴 **0** |
+| OneRoster | 🔴 **0** | — |
+| any `lms` / `canvas` / `moodle` path | 🔴 **0** | 🔴 **0** |
+
+🔴 **Zero, on every protocol, on both repositories.** 🟢 **This re-characterises `Gap 316`, which this shelf has carried for six passes as a *licence* problem — "the closed vendors hold the protocol."** 🔴 **That reading was half the picture. The other half, measured here for the first time, is that the permissive implementations do not reach for the protocol at all.** 🟢 **The seam is two-sided**, and the cheap side to fix is this one: a permissive tutor with no LTI is one adapter away, whereas a certified closed product is a procurement.
+
+🔵 **`OpenTutor`'s own docs make the gap explicit rather than accidental:** it declares a local single-user beta and puts multi-user/classroom mode **out of scope**. 🟢 **`DeepTutor` has the multi-user layer `OpenTutor` declines to build, and still no protocol.** 🟢 **So the two together bracket the work: `DeepTutor` + `ltijs` (Apache-2.0, `0ec24fe`) is the shortest path on this shelf to a permissive, self-hostable, LTI-speaking tutor** — see `compose/patterns.md` `P14-R`.
+
+### 🟢 Canonicality settled by copyright holder — `OpenTutor` arrived as a **pair**
+
+🔴 **The discovery channel returned two repositories with byte-identical descriptions and listed `adity982/OpenTutor` first.** 🟢 **Settled by payload against the channel's own ordering, the rule this shelf adopted in pass 65:**
+
+| Repo | Licence holder | HEAD · date | Commits | Files |
+|---|---|---|---|---|
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **Zijin Zhang** — matches the org | `f0142f2` · **2026-10-08** | 🟢 **191** | 890 |
+| 🔴 [`adity982/OpenTutor`](https://github.com/adity982/OpenTutor) | 🔴 **Zijin Zhang** — does *not* match the org | `9b7a1da` · 2026-09-24 | 183 | 884 |
+
+🟢 **Four independent agreements:** holder matches the org, more commits, newer HEAD, and an identical first-commit date (**2026-02-26**) confirming shared ancestry rather than coincidence. 🟢 **`zijinz456/OpenTutor` is canonical; `adity982/OpenTutor` is a fork 8 commits behind.** 🔴 **The channel's ordering was wrong, which is the third recorded time on this shelf that listicle rank inverted canonicality.**
+
+### 🟢 The control query, **twenty-third empty week**
+
+🟢 `top open source AI agents education 2026 github MIT` returned **zero education-industry agents** for the twenty-third consecutive week. 🟢 It returned general agent frameworks (LangChain, CrewAI, LangGraph, OpenHands) and AI-literacy curricula. 🔴 **Neither category is an agent deployed in an education setting.** 🟢 **`P826` again, and note that both of this pass's real rows came from *capability-shaped* queries instead** — `self-hosted AI tutoring agent ... LTI grade passback` and a trending-tracker channel. 🟢 **The control is kept running precisely because its emptiness is now a measured property of the query, not of the field.**
+
 ## 🟢 Seventy-second pass, 2026-10-09 — the **grading gate is measured, not just catalogued**: `AI-Teaching-Agent`'s human-approval state machine is specified in a contract and exercised by **25 test references**, while the provider path behind it is declared `MOCK_ONLY`. Zero new agents added, **and the reason is a finding**
 
 ⏱️ **Fourth pass of this date.** Pass 71 closed earlier today (commit `1fe734a`). **Append-only: this section is new; nothing below it was rewritten.**

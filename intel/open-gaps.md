@@ -4,6 +4,162 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-third pass, 2026-10-09 — `Gap 326` **CLOSES on the org pass 72 could not resolve, and the vendor claim is TRUE**; `Gap 316` is **re-characterised, not merely re-confirmed**; `Gap 308` refused a **sixth** time *and gets materially worse*; one gap opens (`327`) and one instrument hazard is caught inside this pass's own grep
+
+⏱️ **Fifth pass of this date.** Pass 72 closed earlier today (commit `e99be83`). **Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Registry continuity:** pass 72 wrote to this file, so the section below this one is pass 72's and no fold-forward is needed.
+
+### 🟢 `Gap 326` — **CLOSED.** The org was `iblai`, the claim was true, and the capture is **not in the licence**
+
+🔵 **The gap recorded** that a vendor page claims ibl.ai's runtime is open source with LTI 1.3, that this would weaken `Gap 316` directly, and that pass 72's four *guessed* `ibleducation/*` paths all returned absent — explicitly **not** recorded as evidence of absence, per `P827`.
+
+🟢 **`P827` paid out this pass.** The org resolved from the vendor's own channel is **`iblai`**, not `ibleducation`; `ibleducation` is a **migrated-away org** whose own profile says *"we've moved over to github.com/iblai."* 🔴 **Pass 72's guesses were absent because the org was renamed, not because the code does not exist.** 🟢 **Had pass 72 recorded those 404s as absence, this pass would have inherited a false negative about a live, 1 516-file repository.**
+
+🟢 **Read from payload:**
+
+| Component | Licence (payload) | Default ref · HEAD · date | Scale |
+|---|---|---|---|
+| [`iblai/os`](https://github.com/iblai/os) | 🟢 **MIT** 1 069 B, holder **iBL Education** | `main` `cd556237` · **2026-10-08** | 🟢 **1 516 files** |
+| [`iblai/lms`](https://github.com/iblai/lms) | 🟢 **MIT** 1 062 B, holder **ibl.ai** | `main` | skills-intelligence platform |
+
+🟢 **So the vendor claim is literally true: the runtime is MIT and the repository is real.** 🔴 **And `Gap 316`'s capture thesis survives anyway, because the licence was never the mechanism.** Three measurements, all from primary payload:
+
+**1. The backend is not in the repository, and it is not open.** `README.md` of `iblai/os`, read at `main`:
+
+| Line | Text |
+|---|---|
+| 237 | 🔴 *"ibl.ai/os **requires the ibl.ai backend platform** for authentication, AI agent APIs, and data services. The backend is **not included in this repository**."* |
+| 229–231 | 🔴 *"If you need full backend infrastructure: **Get an enterprise license** … to get a license of the enterprise platform (full backend codebase)."* |
+| 61 | 🔴 *"MIT-licensed and self-hostable. **No vendor lock-in — full ownership of the stack** and everything that flows through it."* |
+
+🔴 **Line 61 and line 237 are in the same file and they contradict each other.** 🟢 **"Full ownership of the stack" is asserted 176 lines above the disclosure that the stack's authentication, agent APIs and data services are an enterprise product.** 🟢 **This is `P26` — the access-rights gate — and `probe_payload.sh`'s own header names exactly this trap: a payload answers the COPYRIGHT question only.**
+
+**2. The LTI implementation is not in the MIT repository either.** The seam is a **1 664 B** wrapper, `components/modals/edit-mentor-modal/tabs/lti-tab.tsx`, whose single meaningful import is 🔴 `import { AgentLtiTab } from '@iblai/iblai-js/web-containers/next'`. 🟢 Its own comment names the endpoints — *"launch / login / deep-linking / JWKS"* — 🟢 **which is LTI 1.3 vocabulary and not 1.1** (JWKS and OIDC login are 1.3-only; 1.1 signs with OAuth 1.0a). 🔴 **But the comment also says those endpoints are "served by the LMS itself," and the component is the SDK's.** 🔴 **No AGS. No grade passback. Not in the wrapper, not anywhere in the 1 516-file tree.** 🟢 **`Gap 316`'s ask was LTI 1.3 *plus AGS*, permissive and self-hostable. This meets the first clause and fails the second and third.**
+
+**3. The SDK that holds it is permissive and has no source.** Read from the npm registry, latest tags:
+
+| Package | Version | Licence | `repository` |
+|---|---|---|---|
+| `@iblai/iblai-js` *(holds `AgentLtiTab`)* | 2.33.2 · modified **2026-10-08** · 334 versions | 🟢 **ISC** | 🔴 **none declared** |
+| `@iblai/iblai-api` | 4.421.0-ai · 2 327 versions | 🟢 **ISC** | 🔴 **none declared** |
+| `@iblai/iblai-web-mentor` | 2.0.1 | 🟢 **MIT** | 🔴 `git@ibl_connection:iblai/iblai-web-mentor.git` — a **private SSH host alias**, not a resolvable repository |
+
+🟢 **Every licence in the chain is permissive. Not one of the three points at source anyone outside the vendor can fetch.**
+
+🟢 **The verdict, and it is a better finding than either pole the gap posed:** ibl.ai is **not** a closed vendor in the licence sense, so `Gap 316`'s six-vendor list is corrected — but it is **not a permissive component this studio can build on either**, because the protocol lives in a sourceless artifact over a proprietary backend. 🟢 **Recorded as `Gap 327`, because "permissive but sourceless" is a category this shelf has never had a name for and has now hit three times in one chain.**
+
+### 🔴 `Gap 316` — **re-characterised.** The thesis was half right and the missing half is the cheap half
+
+🟢 **For six passes this shelf has held that no permissive component holds LTI 1.3 + AGS *because the protocol holders are closed products* (Gradescope, Turnitin, CodeGrade, ibl.ai, …).** 🟢 **This pass measures the other side of the seam for the first time**, on the two strongest permissive tutors in existence as of today:
+
+| Repo | Licence | Files | LTI | xAPI | Caliper | SCORM | OneRoster | any LMS path |
+|---|---|---|---|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 | 🟢 **3 763** | 🔴 0 | 🔴 0 | 🔴 0 | 🔴 0 | 🔴 0 | 🔴 0 |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 MIT | 890 | 🔴 0 | 🔴 0 | — | 🔴 0 | — | 🔴 0 |
+
+🔴 **Zero on every protocol on both.** 🟢 **So the correct statement of `Gap 316` is: the closed products hold the protocol *and* the permissive implementations never reach for it.** 🟢 **That is a materially more optimistic gap than the one this shelf has been carrying**, because an absent adapter on an Apache-2.0 codebase with 1 220 test files is an integration, while a certified closed product is a procurement. 🔵 **`Gap 316(i)`'s narrowed limb — the real wiring cost of `ltijs` — is now the single highest-value unmeasured number on this shelf**, and it should be paid inside `P14-R`.
+
+### 🆕 `Gap 327` — "permissive but sourceless": a licence on a built artifact is not a component
+
+🔴 **The question for counsel and for architecture both.** Three npm packages in one dependency chain carry 🟢 ISC/ISC/MIT and 🔴 declare no fetchable source: `@iblai/iblai-js` (none), `@iblai/iblai-api` (none), `@iblai/iblai-web-mentor` (private SSH alias). 🟢 **The grant is real: ISC and MIT both permit use, modification and redistribution of what is shipped.** 🔴 **What cannot be done is fork it, audit it, patch a CVE in it, or carry it if the vendor stops publishing** — and for a protocol adapter inside a regulated workflow (EU AI Act Annex III; see `Gap 308`) auditability is not a nicety.
+
+🟢 **Why this is its own gap and not an instance of `Gap 312`/`325`:** those are **assertion without a grant** (a README says MIT, no file exists). 🔴 **This is the inverse — a grant without a subject.** 🟢 **Both defeat reuse; they need different remedies, and conflating them would lose that.**
+
+🟢 **`P832` adopted:** when a component's capability lives in a package rather than a repository, read the registry's `repository` field as well as its `license`. 🔴 **A licence field alone has now twice let a sourceless artifact onto a shortlist of things to "build on."**
+
+### 🆕 `P831` — `grep -i lti` matches **`tooLTIp`** and **`muLTI-tenancy`**; this pass's first count was **3× too high**
+
+🔴 **What happened, caught inside this pass's own instrument.** A seam census of `iblai/os` with `grep -ic lti` returned **15** paths, and the pass began writing *"15 LTI-matching paths."* 🟢 **Word-bounded, the real figure is 5.** Control run in the same command and recorded here, not explained:
+
+| Matcher | Count |
+|---|---|
+| `grep -ic 'lti'` (naive substring) | 🔴 **15** |
+| `grep -ic 'tooltip'` | 🟡 **9** |
+| `grep -icE '(^\|[^a-z0-9])lti([^a-z0-9]\|$)'` (bounded) | 🟢 **5** |
+
+🟢 **9 + 1 + 5 = 15 exactly** — the nine `tooltip` paths, one `multi-tenancy` spec, and the five real LTI paths. 🟢 **Two independent substring sources, both accounted for, so the arithmetic closes.**
+
+🟢 **`P831`: match protocol tokens on word boundaries, never as substrings.** 🔵 **This is `P299` again in a new field.** `P299` was registered when the declaration branch read `mit` inside *permit / submit / limit / commit / omit*; `license_family.sh::__decl` already carries the bounded matcher as a shared control. 🔴 **And this pass wrote a fresh hand-rolled `grep` anyway, which is the exact failure mode `probe_payload.sh`'s header was written to stop — "a control nobody has to assemble is the only kind that gets used."** 🟢 **Disclosed because the inflated figure was one command from publication, and because a 3× overcount would have made `iblai/os` look like it holds a protocol layer it does not.**
+
+🔴 **Retroactive:** any protocol-token count on this shelf taken with an unbounded `grep -i` is suspect. 🟢 **This pass's own DeepTutor/OpenTutor zeroes are *not* affected** — they were taken bounded, and a zero cannot be inflated by a false positive in any case.
+
+### 🟢 `P829` — **re-validated on two fresh clones**, and the margin is large
+
+🟢 Pass 72 adopted `P829` (never `ls-files` on a `--no-checkout` clone) from a single specimen. 🟢 **Independently reproduced this pass on two unrelated repositories, controls in the same command:**
+
+| Repo | `git ls-files` | `git ls-tree -r HEAD --name-only` |
+|---|---|---|
+| `iblai/os` | 🔴 **0** | 🟢 **1 516** |
+| `HKUDS/DeepTutor` | 🔴 **0** | 🟢 **3 763** |
+
+🟢 **2 of 2, and the protocol is no longer resting on one observation.**
+
+### 🔴 `Gap 308` — OPEN. **Sixth consecutive refusal, and this pass makes the gap more expensive, not less**
+
+🟢 Probed with controls in the same command:
+
+| Host | Code |
+|---|---|
+| `eur-lex.europa.eu/eli/reg/2024/1689/oj/eng` | 🔴 `000` |
+| `digital-strategy.ec.europa.eu` | 🔴 `000` |
+| `artificialintelligenceact.eu` | 🔴 `000` |
+| `api.github.com` *(control)* | 🟢 **`200`** |
+| `raw.githubusercontent.com` *(control)* | 🟢 `301` |
+
+🟢 **Controls green; the refusal is specific to EU policy hosts and is now evidenced six times.** 🟡 **Note the control drifted:** `api.github.com` returned `400` in pass 72 and **`200`** here. 🟢 **Same verdict — reachable — so no finding changes, but it is recorded so a future pass does not read `200` vs `400` as a state change.**
+
+🔴 **And the substance got worse. Three secondary channels now give three different answers about the single most load-bearing compliance date on this shelf:**
+
+| Channel | Claim about Annex III high-risk (**the education bucket**) |
+|---|---|
+| Pass 72's summary | 🔴 Digital Omnibus **postpones** obligations from **2026-08-02** to **2027-12-02** |
+| This pass, EMEA channel, quoting the Commission's own page | 🔴 AI-omnibus amendments *"adopted in June 2026 and entered into force 27 July 2026"*; and *"from **2 August 2026**, the AI Office and national authorities **started to enforce** the AI Act"* |
+| This pass, APAC channel | 🟡 *"On **7 May 2026**, the Council and Parliament reached a **provisional political agreement** on the Digital Omnibus on AI"* |
+
+🔴 **Channel 1 says the education bucket is deferred sixteen months. Channel 2 says enforcement began on the very date channel 1 says was vacated. Channel 3 dates the agreement a month before channel 2 dates its adoption.** 🔴 **These cannot all be true, and this shelf cannot adjudicate them, because `Gap 308` is exactly the inability to read the primary text.** 🟢 **The median is not a defensible answer here and is not taken.**
+
+🟢 **Remedy unchanged and now unambiguously the highest-value item in this registry:** one fetch of the primary consolidated text from a session with egress to `eur-lex.europa.eu`. 🟢 **Until then, every AI Act date on this shelf is marked as secondary-sourced and contested, and no client-facing estimate on this shelf is dated off it.** 🟡 `Gap 310` rides unchanged.
+
+### 🟢 Correction published: **Huly is EPL-2.0, not Apache-2.0**
+
+🔴 A secondary source states *"Huly Platform is fully open-source, licensed under Apache License 2.0."* 🟢 **Read from payload:** [`hcengineering/platform`](https://github.com/hcengineering/platform) is 🔴 **EPL-2.0, 14 196 B**, on default ref 🟡 **`develop`** (not `main`). 🟢 **`P828` discharged first — this shelf had no prior reading of Huly, so this is a new row and not a re-correction.** 🔵 **EPL-2.0 is a weak file-level copyleft with a patent grant and a litigation-termination clause; it is not in the MIT/Apache/BSD set this KB shortlists**, so the mislabel would have put a copyleft platform on a permissive shortlist.
+
+### 🆕 `P833` — `curl` against `github.com` returns **403 for repositories that exist**; a naive URL gate would have rejected **14 of 14** real rows
+
+🔴 **What happened.** This pass ran its URL-verification gate as `curl -o /dev/null -w '%{http_code}' https://github.com/<owner>/<repo>` over every repository it was about to publish. 🔴 **All fourteen returned `403`.** 🟢 **All fourteen exist.**
+
+| Channel | Result on the same 14 repos |
+|---|---|
+| `curl` → `github.com/<owner>/<repo>` (HTML) | 🔴 **403 × 14** — the egress proxy blocks github.com HTML |
+| `git ls-remote --symref` | 🟢 **14 / 14 resolve** with a real default ref and HEAD sha |
+| `raw.githubusercontent.com` (payload) | 🟢 reachable — every licence in this pass was read through it |
+| `api.github.com` | 🟢 `200` this pass |
+
+🟢 **`P833`: never verify a repository's existence with `curl` against `github.com` from this environment. Use `git ls-remote --symref`, which returns the default ref and the HEAD sha in one request** — strictly more information than an HTTP status, and it is the same request `probe_payload.sh` already makes to resolve a branch.
+
+🔴 **Why this is a near-miss and not a note.** A `403` is not a `404`, but a gate that tests `code == 200` cannot tell them apart. 🔴 **Had this pass treated its own verification gate as authoritative, it would have withdrawn every row in it — including four repositories it had just cloned and enumerated locally.** 🔵 **Same family as `P827` in reverse:** `P827` says a guessed 404 is not evidence of absence; `P833` says a proxied 403 is not either. 🟢 **The common rule is that an absence verdict needs a channel that can distinguish "not there" from "not allowed."**
+
+### 🟢 Provenance audit — the five carried-forward shas re-confirm, 5 of 5
+
+🟢 **`P793` demands that carried claims be re-read rather than inherited.** 🟢 Re-resolved via `ls-remote` this pass, independently of the sections that cite them:
+
+| Repo | Sha on this shelf | Sha re-read this pass | Default ref |
+|---|---|---|---|
+| `Cvmcosta/ltijs` | `0ec24fe` | 🟢 **`0ec24fe`** | 🟡 `master` |
+| `littlecookie0722/AI-Teaching-Agent` | `b90bd88` | 🟢 **`b90bd88`** | `main` |
+| `openedx/edx-platform` | `bf699a5` | 🟢 **`bf699a5`** | 🟡 `master` |
+| `microsoft/ai-agents-for-beginners` | `25b7985` | 🟢 **`25b7985`** | `main` |
+| `pguso/agents-from-scratch` | `da3f9df` | 🟢 **`da3f9df`** | `main` |
+
+🟢 **5 of 5 exact.** 🔵 Note two of the five default to `master`, which is consistent with this pass's 4-of-4 non-`main` finding on the platform shelf and reinforces `probe_payload.sh`'s trap #1.
+
+### 🟡 Gaps carried forward unchanged this pass
+
+🟢 **`Gap 309`** — Ed-Fi DMS still the only permissive system of record; no OneRoster, no change feed. 🟢 **OpenEduCat's repository path, unresolved in pass 72, is resolved this pass**: [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp), 🔴 **LGPL-3.0 8 240 B** on default ref 🟡 **`19.0`**. 🔵 **Copyleft either way, so the permissive count for `Gap 309` is unchanged at one** — but the path is now recorded, so the vendor's OneRoster/Ed-Fi sync claim is finally testable by a future pass. 🟢 **`Gap 312` / `Gap 325`** — assertion-without-a-grant pair, carried; now explicitly distinguished from `Gap 327`. 🟢 **`Gap 311(b)`** — pin Ed-Fi DMS `v8.0.0` (`d911abb`). 🟢 **`Gap 294b`**, **`Gap 284`**, **`Gap 267`**, **`Gap 303`**, **`Gap 318`** — carried, unmeasured this pass. 🟢 **`Gap 310`** — rides with `308`. 🟢 **`Gap 323`/`324`** — closed in pass 72, no new evidence.
+
+🔴 **One figure refused for the sixth pass running:** any single market size for AI-in-education. 🟢 The spread on this shelf is now **$1.94B – $10.6B** across published 2026 figures, and this pass adds two *regional* figures that are at least internally consistent with each other (NA **$3.68B** at a claimed 36 % share → implied global ≈ $10.2B; Europe **$2.64B**). 🟡 **Recorded in `intel/market.md` as regional, sourced and contested. Nothing on this shelf is sized by any of them.**
+
 ## 🟢 Seventy-second pass, 2026-10-09 — `Gap 323` and `Gap 324` **both CLOSE from primary payload**; `Gap 308` refused a **fifth** time; `Gap 316`'s capture thesis re-confirmed on a **third independent channel**; two instrument protocols adopted (`P829`, `P830`) and two gaps open (`325`–`326`)
 
 ⏱️ **Fourth pass of this date.** Pass 71 closed earlier today (commit `1fe734a`). **Append-only: this section is new; nothing below it was rewritten.**

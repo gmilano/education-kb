@@ -4,6 +4,39 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-third pass, 2026-10-09 — the foundation layer gains a **multi-tenant tutoring runtime**, and a new rule for reading a licence off a package instead of a repository
+
+⏱️ **Fifth pass of this date.** Pass 72 closed earlier today (commit `e99be83`). **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 Foundational repos added, every licence read from primary payload
+
+| Repo | Licence (payload) | Default ref · HEAD · date | Scale | Why it is foundational |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** 11 407 B | `main` `6cf793bd` · **2026-10-08** | 🟢 **3 763 files**, **1 220 test files** | 🟢 Tutoring runtime **plus** a real multi-tenant access layer: `multi_user/{identity,grants,guardians,learner_profile,book_permission,knowledge_access,model_access,audit,device_credentials}.py`. Ships `compose.yaml`, `Dockerfile`, `pyproject.toml`, `CITATION.cff`, `THIRD_PARTY_NOTICES.md`, `.importlinter` |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** 1 068 B, holder *Zijin Zhang* | `main` `f0142f2` · **2026-10-08** | 890 files, 191 commits | Local-first adaptive workspace; 10+ LLM providers behind one interface |
+| [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) | 🟢 **MIT** 1 077 B, holder *Webkul Software* | 🟡 **`master`** | — | 🟢 The only **permissive** ERP found in this pass's sweep; plugin architecture makes an education module additive rather than a fork |
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0** 11 905 B | 🟡 **`trunk`** | — | Permissive ERP framework (accounting → CRM → MRP); 🔴 heavy Java implementation cost |
+
+🟢 **`DeepTutor` is the most load-bearing addition this file has taken in several passes**, and the reason is `multi_user/`, not the tutoring. 🔵 **`guardians.py` + `learner_profile.py` + `audit.py` is the K-12 consent-and-oversight shape that every prior `P14-R` estimate on this shelf has had to price as greenfield work.** 🟢 **It is Apache-2.0, so it can be carried.**
+
+🔴 **What `DeepTutor` does *not* have, and it is a hard zero:** no LTI, no xAPI, no Caliper, no SCORM, no OneRoster, no LMS path of any kind in 3 763 files. 🟢 **Censused word-bounded per `P831`.** 🟢 **So it is a foundation, not a drop-in: the LMS seam is supplied by `ltijs` and is the integration `P14-R` budgets for.**
+
+### 🟡 Admitted to the census but **not** to the build-on shortlist — the "permissive but sourceless" tier
+
+| Component | Licence | Source available? |
+|---|---|---|
+| [`iblai/os`](https://github.com/iblai/os) | 🟢 **MIT** 1 069 B, holder *iBL Education* | 🟢 Yes — `main` `cd556237`, 1 516 files |
+| `@iblai/iblai-js` 2.33.2 *(holds the LTI component)* | 🟢 **ISC** | 🔴 **No `repository` declared** |
+| `@iblai/iblai-api` 4.421.0-ai | 🟢 **ISC** | 🔴 **No `repository` declared** |
+| `@iblai/iblai-web-mentor` 2.0.1 | 🟢 **MIT** | 🔴 Private SSH alias `git@ibl_connection:…` |
+| ibl.ai backend (auth, agent APIs, data services) | 🔴 **Enterprise licence** | 🔴 **Not published** |
+
+🟢 **`P832`, adopted this pass:** when a capability lives in a package rather than a repository, read the registry's **`repository`** field alongside its **`license`**. 🔴 **A permissive licence on an unfetchable artifact cannot be forked, audited or patched, and twice now it has nearly reached a build-on shortlist on the strength of the licence field alone.** 🟢 Full reasoning in `intel/open-gaps.md` `Gap 327`.
+
+### 🟢 L&D curriculum shelf — carried from pass 72, unchanged
+
+🟢 [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) (🟢 MIT, 1 141 B, `25b7985`) and [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) (🟢 MIT, 1 091 B, `da3f9df`) remain filed here as **L&D curriculum, not agents**. 🟢 This pass's control query returned the same category a third time (`microsoft/generative-ai-for-beginners`, `Bojieli/ai-agent-book`, `ai-engineering-from-scratch`). 🔴 **None is an agent deployed in an education setting; none is shelved as one.** 🟢 **`P826`, working as intended.**
+
 ## 🟢 Seventy-second pass, 2026-10-09 — the **credential layer gets a foundation row and it is a red one**: three Open Badges issuers, **zero clean permissive grants**. Two MIT L&D curricula added in their correct category
 
 ⏱️ **Fourth pass of this date.** Pass 71 closed earlier today (commit `1fe734a`). **Append-only: this section is new; nothing below it was rewritten.**

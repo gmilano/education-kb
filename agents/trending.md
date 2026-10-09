@@ -4,6 +4,36 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 — pass 73: the week's two real education agents both arrive from **capability-shaped** channels, and the licence-shaped control is empty for the **twenty-third** week
+
+🟢 **Append-only. This section is new; every section below it is prior history and was not rewritten.**
+
+### 🟢 New this week — admitted to `agents/top.md`
+
+| Agent | Licence (payload) | HEAD · date | Why it is new to this shelf |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** 11 407 B | `main` `6cf793bd` · **2026-10-08** | 🟢 **3 763 files / 1 220 test files.** First permissive education agent on this shelf with its own multi-tenant access layer (`guardians`, `grants`, `learner_profile`, `audit`, `model_access`) |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** 1 068 B, holder *Zijin Zhang* | `main` `f0142f2` · **2026-10-08** | Local-first block-based adaptive workspace; 191 commits since **2026-02-26** |
+
+🟡 **Fork note:** [`adity982/OpenTutor`](https://github.com/adity982/OpenTutor) carries the **same MIT payload and the same holder** (*Zijin Zhang*) but is **8 commits behind** (`9b7a1da`, 2026-09-24). 🔴 **The discovery channel listed the fork first.** 🟢 Canonicality settled by copyright holder per pass 65's rule — see `agents/top.md`.
+
+### 🔴 The week's real movement is a **negative** measurement, and it is the one to carry forward
+
+🟢 Both new agents were censused for every education protocol, word-bounded per the new `P831`:
+
+🔴 **`DeepTutor`: 0 LTI, 0 xAPI, 0 Caliper, 0 SCORM, 0 OneRoster, 0 LMS paths — in 3 763 files.**
+🔴 **`OpenTutor`: 0 LTI, 0 xAPI, 0 SCORM, 0 LMS paths — in 890 files.**
+
+🟢 **This is the trend to record, not the two rows:** the permissive education-agent tier is **growing in capability and flat at zero on interoperability.** 🔵 Six passes of this file have recorded that closed products hold LTI 1.3 + AGS. 🟢 **The complement — that the open implementations never reach for it — is measured here for the first time, and it means the gap is an adapter rather than a market.**
+
+### 🟡 ibl.ai enters the census and **leaves the closed-vendor list**
+
+🟢 [`iblai/os`](https://github.com/iblai/os) — 🟢 **MIT** 1 069 B, `main` `cd556237` (**2026-10-08**), **1 516 files**, and it **does** carry an LTI 1.3 surface (launch / login / deep-linking / JWKS). 🔴 **But the implementation is `AgentLtiTab` from `@iblai/iblai-js` (ISC, no declared repository), the backend is an enterprise product by the README's own line 237, and there is no AGS anywhere.** 🟢 **Shelved as a permissive-but-sourceless component, not as an agent to build on** — full reasoning in `intel/open-gaps.md` `Gap 326` / `Gap 327`.
+
+### 🔴 Control query — twenty-third consecutive empty week
+
+🟢 `top open source AI agents education 2026 github MIT` → **zero education-industry agents.** Returned general frameworks (LangChain, CrewAI, LangGraph, OpenHands — none education-specific) and AI-literacy curricula. 🟢 **`P826` holds: the licence-and-listicle query shape selects teaching material *about* AI, not AI *in* teaching.** 🔵 **Both real rows this week came from capability-shaped queries instead.**
+
 ## 🟢 2026-10-09 — pass 72: **no new agent signal; one existing agent moves from "catalogued" to "priced."** Twenty-second empty week on the control channel, with the mechanism now visible in the output
 
 ⏱️ **Fourth pass of this date.** 🟢 **Append-only: this section is new; every dated section below it is preserved.**
