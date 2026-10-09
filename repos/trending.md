@@ -4,6 +4,28 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 71) — the week's movement is in the **interoperability layer**, not the agent layer: `ltijs` v7 committed three days ago with AGS in the tree
+
+⏱️ **Third dated section for 2026-10-09.** **Append-only: this section is new; every section below it is preserved.**
+
+| Repo | Licence (payload) | Head | Movement observed |
+|---|---|---|---|
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 **Apache-2.0** 11 361 B | `master` **`0ec24fe`** · 🟢 **2026-10-06** (`Fixing tests`) | 🆕 **v7 full TypeScript rewrite, actively landing.** `src/services/grading`, `deep-linking`, `names-and-roles`, `dynamic-registration` all present. npm **7.0.7** vs newest git tag **v7.0.1** — 🟡 artefact ahead of tagged history |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 MIT 1 068 B | `main` **`f0142f2`** · 🟢 **2026-10-08** | **Most recently committed repo in this pass.** Ships its own growth automation — `marketing/health/2026-10-08-report.md`, `marketing/weekly/2026-10-04-week-40.md` |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 MIT 1 105 B | `main` `939eb0e` · 2026-09-30 | 🟢 **sha-identical to pass 70**, but the tree read deeper: the **`aws/aiAgentGeneration/` GenAI layer is in `main`** (`Gap 321` closed) |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 MIT 1 069 B | `main` `b391898` · 2026-09-17 | 🆕 Ships `.claude-plugin/marketplace.json` — **distribution via a plugin marketplace rather than an LMS catalogue** |
+| [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | 🟢 MIT 1 069 B | `main` `b90bd88` · 2026-08-23 | HEAD is `fix: make PPT title limits portable across CI fonts` — 🔵 slide generation is in scope alongside labs, exams and grading |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 BSD-3 1 531 B | `main` `196c547` · 🔴 **2026-06-26** | 🔴 **3½ months without a commit.** v1.0.0 (2026-06-08) was a full rewrite — see `verticals/solutions.md` |
+| [`CAHLR/ims-lti`](https://github.com/CAHLR/ims-lti) | 🟢 MIT 1 094 B | `master` `9b712f6` · 2026-07-03 | Divergence from upstream **sized this pass: 39 bytes + a committed build output** (`Gap 319` closed) |
+| [`omsmith/ims-lti`](https://github.com/omsmith/ims-lti) | 🟢 MIT 1 094 B | `master` `4df2936` · 🔴 **2016-09-05** | 🔴 **Ten years without a commit.** The real risk behind OATutor's LMS seam |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 MIT 1 070 B | `master` `d8fa43e` · 🔴 **2022-11-21** | Complete LTI 1.3 + AGS surface, **four years stale** — permissive but orphaned |
+
+🟢 **The week's real signal:** the two repositories that moved are an **interoperability library** (`ltijs`, 2026-10-06) and an **adaptive-scheduling agent** (`OpenTutor`, 2026-10-08). 🔴 **Nothing in the tutoring-dialogue tier moved at all.** 🟢 **Reading:** the permissive education stack is being built from the **ends inwards** — the LMS seam and the scheduler are live work; the tutor itself is comparatively settled.
+
+🔴 **Staleness is now the shelf's dominant repo risk, and it is concentrated in exactly the layer an engagement cannot avoid:** of the three LTI components named here, **one is ten years dead, one is four years dead, and only `ltijs` is maintained.** 🟢 **That single fact is the strongest argument for `P12-R`.**
+
+🔵 **No star counts recorded.** `api.github.com` answers `200` and is authenticated but `403`s every unattached repository, so popularity remains unmeasurable here; **all ordering above is by commit recency, which is measured.**
+
 ## 🟢 Seventieth pass, 2026-10-09 — the trending channel is **partly exonerated**: read past the roundups to the `ai-education` topic it cites and it does return education systems. The category error was half the channel's and half this shelf's query
 
 ⏱️ **Second pass of this date.** Pass 69 closed earlier today (commit `abf91da`, 00:07 UTC). **Append-only: this section is new; nothing below it was rewritten.**

@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-first pass, 2026-10-09 — `Gap 316(i)` **ANSWERED**: the permissive tier's "LTI 1.3 ceiling" was never a protocol gap. **Two permissive LTI 1.3 + AGS libraries exist**, one Apache-2.0 and maintained three days ago, one MIT and complete but four years dead
+
+⏱️ **Third pass of this date.** Pass 70 closed earlier today (commit `cf5c9bf`). **Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Every licence below read as bytes from `raw.githubusercontent.com`; every HEAD from `git ls-remote --symref`; every tree from a blobless clone.**
+
+### 🟢 The finding that changes the costing — **the 1.3 + AGS layer is solved, permissively, in both ecosystems**
+
+🔵 **What this shelf has said for several passes:** the one real cross-LMS permissive component speaks **LTI 1.1 / Basic Outcomes**, nothing permissive speaks **1.3 + AGS**, and `Gap 316(i)` called the size of that port *"the most commercially urgent unmeasured number on this shelf."*
+
+🔴 **The question was mis-framed.** 🟢 **It was never a protocol-implementation cost, because the protocol is already implemented under permissive licences:**
+
+| Library | Licence (payload) | Head | LTI Advantage surface, read from the tree | Verdict |
+|---|---|---|---|---|
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 **Apache-2.0** · `LICENSE` **11 361 B** (canonical text) · `package.json` `"license": "Apache-2.0"` | `master` **`0ec24fe`** · 🟢 **2026-10-06 — three days ago** | `src/services/`: 🟢 **`grading`** (AGS) · 🟢 **`deep-linking`** · 🟢 **`names-and-roles`** (NRPS) · 🟢 **`dynamic-registration`** · `launch` · `oidc` · `keyset` · `platform-manager` · `provider` · `request-handler` · `http-handler` · plus `shared/lti-scopes.constants.ts`. Infra: `cache-manager` (Redis + mock), `database-manager` (Mongo + mongo-legacy), `access-token-manager` | 🟢 **The recommended base.** Maintained, permissive, complete |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 **MIT** · `LICENSE` 1 070 B | `master` **`d8fa43e`** · 🔴 **2022-11-21** | `pylti1p3/`: 🟢 **`assignments_grades.py`** (AGS) · **`grade.py`** · **`lineitem.py`** · **`deep_link.py`**, `deep_link_resource.py` · **`names_roles.py`** · `service_connector.py` · `message_validators/deep_link.py`. Tests: `test_grades.py`, `test_deep_link.py`, `test_names_roles.py` | 🟡 **Complete and permissive, but unmaintained for ~4 years.** Adopt only by owning the fork |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🔴 **GPL-2.0** · `LICENSE` **18 025 B** | `develop` `d9d462a` | TAO's LTI 1.3 DevKit is **1EdTech-certified for AGS 2.0, dated 2026-01-15** | 🔴 **Copyleft — out for a closed deliverable.** Cited only as proof the certification path is live |
+
+🟢 **`ltijs` v7.0.7 states it itself**, in `README.md`: *"implements a full LTI® 1.3 tool provider, including launches, Deep Linking, **Assignment and Grade Services**, Names and Role Provisioning, and Dynamic Registration, as a pluggable, TypeScript-first library."* 🟢 **And the tree corroborates the README rather than merely repeating it** — which is the standard this shelf applies to every other claim.
+
+🟡 **Three operational cautions on `ltijs`, recorded now so nobody meets them in week two:** 🔴 **(a) `engines.node` is `">=24"`** — it will not run on a Node 20 LTS platform. 🔴 **(b) `"files": ["dist"]`** with `main: dist/index.js`, and `dist/` is **not committed** — so a git-dependency install has the same `prepublish` problem that produced the `ims-lti` fork (`Gap 319`); 🟢 **install from npm, not from GitHub.** 🟡 **(c) npm is at `7.0.7` but the newest git tag is `v7.0.1`** — the published artefact is ahead of the tagged history, so **pin the npm version, not a git ref.** 🔵 Branches `legacy-v5` and `legacy-v6` remain for the pre-rewrite line.
+
+🟢 **So `Gap 316(i)` is answered in the form that matters:** the port is **wiring an existing maintained Apache-2.0 library into an agent**, not implementing a 1EdTech specification. 🔵 `compose/patterns.md` `P12-R` carries the concrete swap.
+
+### 🟢 `Gap 319` — **CLOSED on all three limbs.** The fork is 39 bytes of divergence, and the real exposure is the *upstream*
+
+🔵 **The gap:** OATutor's `aws/lti-middleware/package.json` declares `"ims-lti": "github:CAHLR/ims-lti"` — an unpinned fork — with three unmeasured exposures: (a) the resolved commit can change; (b) divergence from upstream unknown; (c) the fork's maintenance status unknown.
+
+🟢 **(b) now measured exactly, by blobless-cloning both and comparing blob shas:**
+
+| Probe | Result |
+|---|---|
+| Upstream [`omsmith/ims-lti`](https://github.com/omsmith/ims-lti) files | **30** |
+| Fork [`CAHLR/ims-lti`](https://github.com/CAHLR/ims-lti) files | **43** |
+| Files common to both | **30** — 🟢 **upstream is a strict subset; zero files are unique to upstream** |
+| Files only in the fork | **13** — `lib/*.js` (**12 files**) + `package-lock.json` |
+| `lib/` vs `src/` basenames | 🟢 **1:1 mirror confirmed** — `lib/` is the compiled output of `src/*.coffee` |
+| Of the 30 common files, byte-identical | 🟢 **28** |
+| Differing | **2** — `.gitignore` and `src/extensions/outcomes.coffee` |
+| `LICENSE` | 🟢 **byte-identical, 1 094 B, MIT** — *"Copyright (c) 2014 Owen Smith / Original Copyright (c) 2013 OfficeHours"* |
+
+🟢 **The two differences, read in full:**
+
+- **`.gitignore`** — line 15 changes from `lib` to `# lib`. 🟢 **The build output is deliberately un-ignored.** Nothing else.
+- **`src/extensions/outcomes.coffee`** — **7 513 B → 7 552 B, a 39-byte diff that is exactly one added line**: `'User-Agent': 'ims-lti/3.0.2'`, inserted into the OAuth-signed **`POST` headers of the Basic Outcomes `replaceResult` call.** 🟢 **One header. No logic change, no signature change, no behavioural change to the grade payload.**
+
+🟢 **So the mechanism is fully explained, and the fork's own HEAD commit message says it verbatim** — `chore: commit compiled lib/ for git-dependency installs`, **2026-07-03**. Both `package.json` files declare `"version": "3.0.2"`, `"main": "./lib/ims-lti"`, `"scripts": {"prepublish": "make build"}`. 🔴 **`npm install github:…` does not run `prepublish`**, so without a committed `lib/`, `main` resolves to nothing and the install is simply broken. 🟢 **The fork exists to make a git dependency installable. That is all it is.**
+
+🔴 **And that inverts the risk the gap was opened on.** 🟢 **(c) answered, and it is the real finding:** the fork is **three months old and purposeful**; 🔴 **upstream `omsmith/ims-lti` has HEAD `4df2936` dated `2016-09-05` — ten years dead.** 🔴 **The hazard was never the unpinned fork. It is that OATutor's LMS seam rests on a decade-abandoned CoffeeScript library implementing a superseded protocol version.** 🟢 **Pin `9b712f6` as the short-term fix; the actual remedy is `P12-R` — replace the dependency with `ltijs` and delete the fork question entirely.**
+
+🔵 **One piece of good news for licence closure:** the fork's `LICENSE` is byte-identical to upstream's **MIT**, so OATutor's transitive LTI dependency is **cleanly MIT**, with no new obligation.
+
+### 🟢 Foundational repositories for an education engagement — **re-stated with this pass's additions**
+
+| Repo | Licence (payload) | Head | Layer it serves |
+|---|---|---|---|
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 **Apache-2.0** 11 361 B | `master` `0ec24fe` · 2026-10-06 | 🆕 **LMS interoperability** — LTI 1.3, AGS, Deep Linking, NRPS, Dynamic Registration (Node ≥24) |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 **MIT** 1 070 B | `master` `d8fa43e` · 🔴 2022-11-21 | 🆕 **LMS interoperability, Python side** — same surface, unmaintained |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 **MIT** 1 105 B | `main` `939eb0e` · 2026-09-30 | **Mastery model (BKT) + tutoring dialogue + doc→learning-object compiler** (`Gap 321`, closed this pass) |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** 1 068 B | `main` `f0142f2` · 2026-10-08 | 🆕 **Adaptive scheduling** — FSRS spaced repetition, knowledge graph, block-decision engine with cold start |
+| [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | 🟢 **MIT** 1 069 B | `main` `b90bd88` · 2026-08-23 | 🆕 **Grading pipeline + human-approval gate + MCP surface** |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** 11 408 B | `main` `6cf793b` | Agent-native tutoring, layered memory, multi-engine RAG |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **BSD-3-Clause** 1 531 B | `main` `196c547` · 🟡 2026-06-26 | Full tutoring platform with **Ollama** (sovereign inference), HITL governance, `ar`/`fr`/`en` |
+| [`CAHLR/ims-lti`](https://github.com/CAHLR/ims-lti) | 🟢 **MIT** 1 094 B | `master` `9b712f6` · 2026-07-03 | 🔴 **Legacy LTI 1.1 only.** Pin `9b712f6` if used at all; prefer `ltijs` |
+
+🟢 **Eight rows, all real, all licence-verified this pass or sha-identical to a pass that verified them.** 🔴 **Deliberately excluded:** `oat-sa/tao-core` (GPL-2.0), `artcc/freelingo` (AGPL-3.0), `NiyatiDesai0747/personalized-adaptive-learning-tutor` (no licence file) — 🟢 named in `agents/top.md` so the exclusions are visible rather than silent.
+
 ## 🟢 Seventieth pass, 2026-10-09 — the permissive substrate gains a **real tutoring foundation with mastery estimation in-tree**, and the shelf's licence-reading method gains a hazard guard. `CAHLR/OATutor` (MIT) is the first foundation here that models a learner rather than moving a record
 
 ⏱️ **Second pass of this date.** Pass 69 closed earlier today (commit `abf91da`, 00:07 UTC). **Append-only: this section is new; nothing below it was rewritten.**

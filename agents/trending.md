@@ -4,6 +4,27 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 71) — licence-blind discovery breaks a **twenty-week** dry spell: **8 new education agents** in one window, 7 of them MIT
+
+⏱️ **Third dated section for 2026-10-09.** **Append-only: this section is new; every section below it is preserved.**
+
+🟢 **What is new this week, and why it arrived all at once:** the control query was replaced (`P826` — capability + deployment words, no licence token). 🔴 **The previous query returned 0 real agents for twenty consecutive weeks.** 🟢 **The replacement returned eight in one pass.**
+
+| New this week | Licence (payload) | Head | Why it matters |
+|---|---|---|---|
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 MIT 1 068 B | `main` `f0142f2` · **2026-10-08** | Only permissive component with **FSRS + knowledge graph + a cold-start-aware block-decision engine** |
+| [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | 🟢 MIT 1 069 B | `main` `b90bd88` | 🆕 **First permissive human-approval gate** before grade publication; MCP surface, no LTI |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 MIT 1 069 B | `main` `b391898` | 🆕 **New distribution shape** — an education agent shipped as a **Claude Code plugin** |
+| [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | 🟢 MIT 1 072 B | `main` `09fdd67` | LangGraph tutoring loop: tutorial → Q&A → evaluation |
+| [`biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent`](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent) | 🟢 MIT 1 068 B | `master` `00459fa` | **Zero external AI APIs** — proctoring + grading that can run air-gapped |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 🔴 AGPL-3.0 34 514 B | `main` `ce978cf` | The week's only copyleft agent; CEFR language learning |
+| [`adity982/OpenTutor`](https://github.com/adity982/OpenTutor) | 🟢 MIT 1 068 B | `main` `9b7a1da` | 🟡 **Fork of the above, not a find** — logged so it is not double-counted later |
+| [`NiyatiDesai0747/personalized-adaptive-learning-tutor`](https://github.com/NiyatiDesai0747/personalized-adaptive-learning-tutor) | 🔴 **no licence file** | `main` `3bbbe59` | Logged as the census's **negative** result — unusable, and recorded so |
+
+🟢 **Trend reading, stated carefully:** this is **not** evidence that eight projects appeared this week. 🔴 **It is evidence that this shelf could not see them**, and the burst is an **instrument artefact of our own making**. 🟢 **The honest trend statement:** the permissive education-agent tier is **substantially larger than this shelf has been reporting**, and the GitHub `ai-tutor` topic's **595 public repositories** is the standing denominator against which future weeks should be read.
+
+🔵 **What to watch next week, concretely:** (a) whether `zijinz456/OpenTutor` keeps its ~weekly cadence (it committed **2026-10-08**, one day before this pass); (b) whether `AI-Teaching-Agent` un-freezes the automatic-grading productization its own README declares frozen; (c) whether any of the eight adds an **LTI 1.3** seam — 🟢 **none has one today**, and the library to do it (`ltijs`, Apache-2.0) is now named in `repos/foundations.md`.
+
 ## 🟢 Seventieth pass, 2026-10-09 — week of 2026-10-09, second reading: the week's movement is a **retraction**. The education agent layer was never empty and was never only captured — it has an **AGPL tier** that this shelf's own control query was structurally unable to return
 
 ⏱️ **Second pass of this date.** Pass 69 closed earlier today (commit `abf91da`, 00:07 UTC). **Append-only: this section is new; nothing below it was rewritten.**

@@ -4,6 +4,109 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-first pass, 2026-10-09 — the twenty-week "empty agent layer" is **fully explained, and pass 70's explanation was the wrong one**. Licence-blind discovery returns an **overwhelmingly MIT** field: **9 new agents censused, every licence read from payload — 7 MIT, 1 AGPL-3.0, 1 unlicensed**
+
+⏱️ **Third pass of this date.** Pass 70 closed earlier today (commit `cf5c9bf`). **Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Instrument map, re-measured before any datum:** `git ls-remote --symref` **resolved HEAD for 19 of 19** repositories probed. `raw.githubusercontent.com` served **every** licence payload below. Blobless clone (`--depth 1 --filter=blob:none`) run against **9** trees. 🆕 **One instrument hazard found in this pass's own method and recorded as `P827` before any absence claim rests on it** — see *The truncation hazard*.
+
+### 🔴 Correction to pass 70 — the selection effect was **real, but it was not about licences**
+
+🔵 **What pass 70 concluded:** the control query `top open source AI agents education 2026 github MIT` contains the token `MIT`; the two agents found that pass were `AGPL-3.0`; therefore *"a licence-named query cannot return the licence family it does not name"* and the field is AGPL-heavy with an uncensused AGPL tier (`Gap 320`).
+
+🟢 **Measured this pass by running discovery with no licence token at all:**
+
+| Licence, read from payload | Count |
+|---|---|
+| 🟢 **MIT** | **7** |
+| 🔴 AGPL-3.0 | 1 |
+| 🔴 **No licence file at all** | 1 |
+
+🔴 **So the hidden tier is not AGPL — it is MIT, and it was always MIT.** 🟢 **The twenty-week absence was a *category-vocabulary* effect, not a licence effect.** The dead query's fault is the phrase `top open source AI agents education` — a **listicle** phrasing that returns blog roundups. 🟢 **The queries that returned real repositories this pass used *capability and deployment* words:** `AI tutor`, `adaptive learning`, `self-hosted`, `grading agent`.
+
+🟢 **The denominator, measured:** GitHub's `ai-tutor` topic holds **595 public repositories**. 🔴 **Twenty weeks of the control query returned 0.** 🟢 **Remedy adopted as `P826`: discover by capability + deployment shape; never by category label, and never with a licence token in the query. Decide licence afterwards, from payload.**
+
+### 🟢 New agents this pass — **every licence byte-read from `raw.githubusercontent.com`, every HEAD from `ls-remote --symref`**
+
+| Agent | Licence (payload) | Head | What the tree actually shows | Region |
+|---|---|---|---|---|
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** · `LICENSE` 1 068 B | `main` `f0142f2` · **2026-10-08** | 890 files. `services/spaced_repetition/fsrs.py` + migration `20260302_0010_fsrs_fields_on_learning_progress.py`; `models/knowledge_graph.py`, `services/knowledge/graph.py`, `graph_ops.py`; **`services/block_decision/{engine,cold_start,preference,profile_mapper,rules}.py`**; providers `anthropic_client.py`, `openai_client.py`, `mock_client.py`. FastAPI + Next.js monorepo | APAC |
+| [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | 🟢 **MIT** · `LICENSE` 1 069 B | `main` `b90bd88` · 2026-08-23 | 642 files. **Grading pipeline**: `grading_job_service.py`, `grading_record_service.py`, `grading_repository.py`, `grading_worker.py`. **Human-review gate**: `cli/review_batch.py`, `review_decision_note.py`, `review_detail.py`, `agent_entity_publish_review.py`. **MCP**: `cli/mcp_audit.py`. DSL: `cli/dsl.py`, `real_dsl_revision.py`. Contracts: `phase2-exam-conversion.contract.json`, `phase2-grading-generation.contract.json` | APAC |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 **MIT** · `LICENSE` 1 069 B | `main` `b391898` · 2026-09-17 | 118 files. 🆕 **Shipped as a Claude Code plugin** — `.claude-plugin/plugin.json`, `.claude-plugin/marketplace.json` — **plus** a self-hostable FastAPI backend (`backend/Dockerfile`, `app/courses.py`). Bilingual `README.zh.md` / `GUIDE.zh.md` | APAC |
+| [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | 🟢 **MIT** · `LICENSE` 1 072 B | `main` `09fdd67` | LangGraph-orchestrated tutoring: structured tutorials, Q&A, knowledge evaluation | Global |
+| [`biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent`](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent) | 🟢 **MIT** · `LICENSE` 1 068 B | `master` `00459fa` | Fully local proctoring + grading (MCQ, numerical, short answer), explainable cheating-risk scoring, **no external AI APIs** — a data-residency fit | APAC |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 🔴 **AGPL-3.0** · `LICENSE` 34 514 B | `main` `ce978cf` | Self-hosted language learning: CEFR study plans, voice conversation, spaced repetition, local **or** cloud LLMs. 🔴 **The census's only AGPL** | EMEA |
+| [`adity982/OpenTutor`](https://github.com/adity982/OpenTutor) | 🟢 **MIT** · `LICENSE` 1 068 B | `main` `9b7a1da` · 2026-09-24 | 884 files. 🟡 **Downstream fork, not a second project** — see *Lineage* below. **Do not cite as an independent finding** | APAC |
+| [`NiyatiDesai0747/personalized-adaptive-learning-tutor`](https://github.com/NiyatiDesai0747/personalized-adaptive-learning-tutor) | 🔴 **NO LICENCE FILE** — `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING` all absent | `main` `3bbbe59` | Multi-agent tutor (assess → path → teach → evaluate → next step), SQLite memory. 🔴 **No grant = all rights reserved. Unusable in any deliverable.** Recorded as the census's negative result | Global |
+
+🟢 **Eight rows, eight real repositories, eight licences read from payload.** 🔵 Two of the eight are recorded *against* adoption (one fork, one unlicensed) — 🟢 **kept in the table because a census that drops its negatives is not a census.**
+
+### 🟢 `zijinz456` vs `adity982` — lineage **resolved from payload**, no gap needed
+
+| Probe | Result |
+|---|---|
+| File counts | `zijinz456` **890** · `adity982` **884** |
+| Files common to both | **884** |
+| Files **only** in `adity982` | 🟢 **zero** |
+| Files **only** in `zijinz456` | **6**, all under `marketing/` — `health/2026-10-01-report.md`, `health/2026-10-08-report.md`, `weekly/2026-09-27-week-39.md`, `weekly/2026-10-04-week-40.md`, `community/2026-09-29-posts.md`, `community/2026-10-06-posts.md` |
+| `LICENSE` blob sha | 🟢 **identical** — `2c7493a` in both |
+| HEAD date | `zijinz456` **2026-10-08** · `adity982` 2026-09-24 |
+
+🟢 **`adity982` is a strict subset of `zijinz456`, two weeks behind, with zero unique files. `zijinz456/OpenTutor` is canonical.** 🔵 And a detail worth naming: the 6 extra files are the project's **own committed growth automation** — weekly repo-health and community-post generation. The fork's HEAD commit message is literally `chore: weekly repo health report 2026-09-24`, i.e. 🟡 **the fork is running the upstream's automation on its own clone**, which is how it stays almost-current without contributing.
+
+### 🔴 Claim-versus-payload drift — `OpenTutor`'s provider count
+
+🔵 **Promoted as:** *"Open source, self-hosted, **10+ LLM providers**."* 🟢 **Read from the tree:** `services/llm/providers/` holds **`anthropic_client.py`, `openai_client.py`, `mock_client.py`** — 🔴 **two real providers and a mock, not ten.** 🟢 **Recorded, not fatal:** `mock_client.py` is independently valuable (see `P25` in `compose/patterns.md`), but 🔴 **the "10+" figure must not be repeated to a client.**
+
+### 🟢 The capture thesis **moves** — a permissive component now holds the human-approval gate
+
+🔵 **Pass 70 established:** the six closed vendors hold **LTI 1.3 + AGS with a human-approval gate**, and 🔴 *"no permissive component does."*
+
+🟢 **Half of that is now false.** [`AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) ships a **human-approval gate in code, under MIT**: `grading_worker.py` produces, and `review_batch.py` / `review_decision_note.py` / `review_detail.py` / `agent_entity_publish_review.py` gate publication. 🔴 **What it does not have is any LMS seam at all** — it speaks **MCP** (`cli/mcp_audit.py`), not LTI.
+
+🟢 **So the permissive tier's holdings, re-stated precisely:**
+
+| Capability | Permissive component that has it | Licence |
+|---|---|---|
+| Mastery estimation (BKT) | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 MIT |
+| Tutoring dialogue + LLM provider abstraction | 🆕 `OATutor` (see `Gap 321`, closed this pass) | 🟢 MIT |
+| Adaptive scheduling (FSRS + KG + cold start) | 🆕 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 MIT |
+| **Human-approval gate before grade publication** | 🆕 [`AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | 🟢 MIT |
+| **LTI 1.3 + AGS** | 🆕 [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) — *library, not an agent* | 🟢 Apache-2.0 |
+| All of the above **in one deployable** | 🔴 **nothing** | — |
+
+🟢 **The seam is no longer a protocol gap. It is an integration gap**, and every piece of it is now permissively licensed and named. 🔵 That is what `P12-R` and `P14-R` in `compose/patterns.md` assemble.
+
+### 🟢 `Gap 321` — **CLOSED: yes, OATutor's GenAI layer is in `main`**
+
+🟢 Measured on `main` `939eb0e` (HEAD **2026-09-30**) by blobless clone, **8 338 files**. 🔴 Pass 70 could not find this layer and said so; it is there, and it is substantial — **29 matching paths plus a third provider the pass-70 grep pattern could not have matched.**
+
+| Component | Path | Reading |
+|---|---|---|
+| Provider abstraction | `aws/aiAgentGeneration/scripts/providers/llm-provider.mjs` | `resolveProviderName()` → `openai` (default) **or `bedrock`**, switched by `SEMANTIC_COMPILER_PROVIDER` |
+| 🆕 **AWS Bedrock provider** | `.../providers/bedrock-provider.mjs` | 🟢 **Present.** An **in-region inference path** under MIT |
+| OpenAI provider | `.../providers/openai-provider.mjs` | — |
+| Semantic compiler | `agent-logic.mjs`, `document-context.mjs`, `index.mjs`, `schemas/learning-object.schema.json`, `documents/manifest.json` | 🟢 **document → learning-object compilation** — the course-generation seam |
+| Bedrock Data Automation fixtures | `documents/bda-raw/_fixtures/data100-disc02/`, `.../data8-disc04/` | Real committed fixtures, plus `documents/BENCHMARK.md` |
+| Subject prompts | `prompts/PROMPT-{chem-1a,data-100,math-1b,physics-7a,precalc,officehours}*.txt` + `PROMPTv1/v2/v2a/v2b` | **15 prompt files** across 6 real courses |
+| Learner-facing UI | `src/components/problem-layout/AgentChatbox.js`, `StandaloneChatView.js`, `src/assets/chat-bubble.svg` | Embedded **and** standalone chat surfaces |
+| Model resolution | `src/util/chatModel.js` | `DEFAULT_CHAT_MODEL = "gpt-4o"`; `resolveChatModel(lesson)` → **per-lesson override** via `lesson.chat_model` |
+| Admin tooling | `scripts/updateChatDisplayMode.js`, `updateChatModel.js`, `updateChatPrompt.js`, `validateChatModels.js` | Prompt/model governance without a redeploy |
+
+🟢 **So OATutor under MIT supplies mastery estimation *and* a tutoring dialogue *and* a document-to-courseware compiler *and* an in-region inference path.** 🟢 **`P14` gets materially cheaper, exactly as pass 70 predicted it would if the answer were yes.** 🔴 **One caveat to carry:** the default is a hardcoded `gpt-4o` and there is **no Ollama path** — for a sovereignty-constrained engagement the answer is the Bedrock provider in-region, not local inference. 🔵 Open TutorAI CE is the component that brings Ollama (`verticals/solutions.md`).
+
+### 🆕 The truncation hazard — `P827`, recorded because this pass nearly published a false absence
+
+🔴 **What happened, stated plainly:** this pass grepped a `head -45` slice of an **alphabetically sorted** `ls-files` for `grade|score|line` against `Cvmcosta/ltijs` and found nothing, and was one step from recording *"ltijs v7 dropped Assignment and Grade Services."* 🟢 **The full namespace listing shows `src/services/grading`, `src/services/deep-linking`, `src/services/names-and-roles`, `src/services/dynamic-registration`.** The alphabetical cut ended at `database-manager` — **before `deep-linking`, before `grading`.**
+
+🟢 **`P827`: never conclude absence from a truncated or paged listing.** Enumerate the namespace (`awk -F/ '{print $1"/"$2}' | sort -u`), then assert. 🔵 **This matters retroactively:** several gaps on this shelf recorded absence from `404`s on *guessed* paths (`Gap 301` spent two passes that way). 🟡 **Those are weaker evidence than they read** — a guessed-path 404 and an enumerated-tree absence are not the same measurement, and this registry should stop writing them in the same voice.
+
+### 🟢 Stability of the pass-70 cohort — measured, not assumed
+
+🟢 **Seven repositories re-probed; all seven sha-identical to pass 70**, so their licence payloads are unchanged by construction: `CAHLR/OATutor` `939eb0e` · `HKUDS/DeepTutor` `6cf793b` · `Open-TutorAi/open-tutor-ai-CE` `196c547` · `HugeCatLab/ChatTutor` `7d9e905` · `24kchengYe/human-skill-tree` `be589dd` (`master`) · `moocupv/lti-ai-grader` `5b96722` · `CAHLR/ims-lti` `9b712f6` (`master`).
+
+🔵 **No star counts anywhere in this section.** `api.github.com` returns `200` and is authenticated, but **`403`s every repository not attached to this session** — so third-party popularity remains unmeasurable from this shelf, and 🟢 **nothing here is ranked by it.** 🔴 One widely repeated figure seen this pass — *"DeepTutor ~40.4k stars"* — is **third-party and unverifiable here; do not quote it.**
+
 ## 🟢 Seventieth pass, 2026-10-09 — the control query's **twenty-first** empty week, and this pass finds the **cause in the query itself**: the string `MIT` was selecting against the tier that exists. **Five real education agents** read from payload — **three permissive, two AGPL** — and the shelf's twenty-week "empty layer" reading is retired
 
 ⏱️ **Second pass of this date.** Pass 69 closed earlier today (commit `abf91da`, 00:07 UTC). **Append-only: this section is new; nothing below it was rewritten.**

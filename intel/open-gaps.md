@@ -4,6 +4,107 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-first pass, 2026-10-09 — `Gap 319`, `321` and `322` **CLOSE from primary payload**; `Gap 320` **CLOSES and falsifies the premise it was opened on**; `Gap 316(i)` **ANSWERED**; `Gap 308` refused a fourth time; two new gaps open (`323`–`324`) and one instrument hazard is recorded against this shelf's own past method
+
+⏱️ **Third pass of this date.** Pass 70 closed earlier today (commit `cf5c9bf`). **Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Registry continuity:** pass 70 wrote to this file, so the section below this one is pass 70's and no fold-forward is needed.
+
+### 🔴 `Gap 320` — **CLOSED, and it falsifies pass 70's reasoning.** The hidden tier is MIT, not AGPL
+
+🔵 **The gap recorded:** two AGPL education agents appeared in one week after twenty weeks in which a licence-filtered query structurally could not return any; therefore the AGPL tier's size is unknown and might be large.
+
+🟢 **Remedy executed as specified (`P825`): licence-blind discovery, then licence read from payload. Result:**
+
+| Licence (read from `raw.githubusercontent.com`) | Count |
+|---|---|
+| 🟢 **MIT** | **7** |
+| 🔴 AGPL-3.0 | **1** |
+| 🔴 **No licence file** | **1** |
+
+🔴 **So the premise was wrong.** 🟢 **There is no large hidden AGPL tier; the hidden tier is overwhelmingly MIT.** 🔴 **And pass 70's *diagnosis* was wrong in the same move:** the twenty-week absence was **not** a licence-token effect. 🟢 **It was a category-vocabulary effect** — `top open source AI agents education` is a **listicle** phrasing that returns blog roundups, and it would have returned nothing even with the `MIT` token removed. 🟢 **The queries that worked named capability and deployment:** `AI tutor`, `adaptive learning`, `self-hosted`, `grading agent`.
+
+🟢 **Denominator now on the record:** GitHub's `ai-tutor` topic holds **595 public repositories**; twenty weeks of the control query returned **0**.
+
+🟢 **`P826` adopted:** discover by capability + deployment shape; never by category label; never with a licence token in the query; decide licence afterwards from payload. 🔵 **Pass 70's `P825` is superseded by `P826`** — it correctly said "discover licence-blind," but it attributed the fault to the wrong token and would not have fixed the query.
+
+### 🟢 `Gap 319` — **CLOSED on all three limbs.** The divergence is 39 bytes, and the risk was pointing the wrong way
+
+🟢 **(b) sized exactly** by blobless-cloning both repositories and comparing blob shas: upstream **30** files, fork **43**, common **30**, 🟢 **zero files unique to upstream** (strict subset). The fork's 13 extra files are `lib/*.js` (**12**, a confirmed 1:1 basename mirror of `src/*.coffee`) + `package-lock.json`. 🟢 **Of the 30 common files, 28 are byte-identical.**
+
+🟢 **The 2 that differ, read in full:**
+
+| File | Diff | Reading |
+|---|---|---|
+| `.gitignore` | line 15 `lib` → `# lib` | 🟢 The build output is deliberately un-ignored |
+| `src/extensions/outcomes.coffee` | **7 513 B → 7 552 B** — exactly one added line: `'User-Agent': 'ims-lti/3.0.2'` in the OAuth-signed `POST` headers of the Basic Outcomes `replaceResult` call | 🟢 **One header. No logic, signature or payload change** |
+
+🟢 **(a) CLOSED:** pin **`9b712f6`**. 🟢 **(c) ANSWERED, and it is the finding:** the fork is **purposeful and three months old** (HEAD **2026-07-03**, message `chore: commit compiled lib/ for git-dependency installs`); both `package.json`s declare `"main": "./lib/ims-lti"` with `"prepublish": "make build"`, and 🔴 **`npm install github:…` does not run `prepublish`** — so without the committed `lib/` the install is simply broken. 🟢 **The fork exists to make a git dependency installable, and nothing more.** 🟢 `LICENSE` is **byte-identical, 1 094 B, MIT** — the transitive dependency is cleanly licensed.
+
+🔴 **The risk inverts:** upstream `omsmith/ims-lti` HEAD `4df2936` is dated **`2016-09-05` — ten years dead.** 🔴 **The hazard was never the unpinned fork; it is that OATutor's grade return rests on a decade-abandoned library speaking a superseded protocol version.** 🟢 **Remedy is now `P12-R`, which deletes the dependency.** 🔵 Pass 70's zero-release-tags observation stands but reads differently: an untagged fork of a dead library is less alarming than an untagged fork of a live one.
+
+### 🟢 `Gap 321` — **CLOSED: yes.** OATutor's GenAI layer is in `main`, and it is larger than the gap supposed
+
+🟢 Measured on `main` `939eb0e` (HEAD **2026-09-30**), 8 338 files: **29 matching paths plus `bedrock-provider.mjs`**, which the pass-70 grep pattern could not have matched. 🟢 **Present:** a provider abstraction (`llm-provider.mjs` → `openai` default **or `bedrock`** via `SEMANTIC_COMPILER_PROVIDER`); a semantic compiler (`agent-logic.mjs`, `document-context.mjs`, `schemas/learning-object.schema.json`, `documents/manifest.json`, committed AWS BDA fixtures, `BENCHMARK.md`); **15** subject prompt files across 6 real courses; learner UI (`AgentChatbox.js`, `StandaloneChatView.js`); `chatModel.js` (`DEFAULT_CHAT_MODEL = "gpt-4o"`, per-lesson override); 4 admin scripts.
+
+🟢 **So OATutor under MIT supplies mastery estimation, a tutoring dialogue, a document→courseware compiler and an in-region inference path.** 🟢 **`P14` is materially cheaper, exactly as the gap predicted for a positive answer.** 🔴 **Carry:** hardcoded `gpt-4o` default, **no Ollama path** — sovereignty is served by Bedrock in-region, not local inference.
+
+### 🟢 `Gap 322` — **CLOSED.** The Enterprise delta is commercial, not pedagogical
+
+🟢 Read from `README.md` on `main` `196c547`: the CE *"is the foundation for a **proprietary Enterprise Edition (EE)**,"* whose named delta is **custom theming & branding, SLA support, LTS versions** — 🔴 **plus an unbounded *"and more!"***. 🟢 **Favourable answer:** the open edition is not functionally crippled, and the EE sells what a Globant engagement supplies anyway. 🔴 **The `"and more!"` clause is not measurable and must be re-read at contract time.**
+
+🟢 **Recency answered** (the gap asked): HEAD `196c547` is **2026-06-26 — 3½ months quiet**; the `LICENSE` copyright line reads **2023-2025** against 2026 commits. 🟢 **And a licence exposure resolved that this shelf had not named:** `v1.0.0` (2026-06-08) is a rewrite to **zero `open_webui` runtime dependency**, so the BSD-3 grant now governs the deployed artefact rather than sitting atop another project's terms. 🔵 Recorded as resolved-by-upstream.
+
+### 🟢 `Gap 316(i)` — **ANSWERED.** The port was never a protocol build
+
+🔵 **The gap called the LTI 1.1 → 1.3 + AGS port size *"the most commercially urgent unmeasured number on this shelf."*** 🔴 **It was mis-framed.** 🟢 **Two permissive libraries already implement the full surface:**
+
+| Library | Licence (payload) | Head | Verdict |
+|---|---|---|---|
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 **Apache-2.0** 11 361 B | `master` `0ec24fe` · 🟢 **2026-10-06** | 🟢 **Recommended.** `src/services/{grading,deep-linking,names-and-roles,dynamic-registration,launch,oidc,keyset}` |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 **MIT** 1 070 B | `master` `d8fa43e` · 🔴 **2022-11-21** | 🟡 Complete, permissive, **4 years stale** — adopt by owning the fork |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🔴 GPL-2.0 18 025 B | `develop` `d9d462a` | 🔴 Copyleft; cited only as evidence the AGS 2.0 certification path is live (TAO DevKit, **2026-01-15**) |
+
+🟢 **Restated gap, and it is a different and smaller question:** the cost is **wiring a maintained Apache-2.0 library into an agent**, not implementing a specification. 🔴 **`Gap 316(i)` therefore narrows rather than closes** — the *actual* wiring effort is still unrecorded, and 🟢 **the remedy is unchanged in form: do it once in `P12-R` and record the real number.** 🟢 **`Gap 316`'s main limb stays closed at n = 2 of 2** (both permissive components with an LMS seam speak 1.1).
+
+### 🔴 `Gap 308` — OPEN. **Fourth consecutive refusal; the diagnosis is now stable**
+
+🟢 `eur-lex.europa.eu`, `digital-strategy.ec.europa.eu` and `artificialintelligenceact.eu` all returned **HTTP `000`** this pass, against controls `api.github.com` **`200`** and `raw.githubusercontent.com` **`301`**. 🟢 **The allowlist excludes EU institutional hosts generally.** 🔴 **Every EU AI Act date on this shelf rests on secondary channels only.** 🟢 **Remedy unchanged and still the cheapest high-value item here:** one fetch of `eur-lex.europa.eu/eli/reg/2026/1744/oj/eng` from a session with egress to that host. 🟡 `Gap 310` rides unchanged.
+
+### 🆕 `Gap 323` — the `AI-Teaching-Agent` review gate is declared **frozen**; is it functional?
+
+🟢 **What is measured:** the gate exists in code under MIT — `grading_worker.py` producing, `review_batch.py` / `review_decision_note.py` / `review_detail.py` / `agent_entity_publish_review.py` gating, with declared contracts (`phase2-grading-generation.contract.json`). 🔴 **What is not:** the project's own README states automatic grading productization *"remain frozen,"* and this pass did **not** determine whether that means the gate is incomplete, unmaintained, or merely unsupported.
+
+🔴 **Why it matters:** `P14-R` and `P23` both rest on this component, and the difference between "a working gate to integrate" and "a shape to re-implement" is most of the estimate. 🟢 **Remedy:** read `ai-workflows/phase2-grading-generation.contract.json` and the `grading_*` modules from payload, and check whether the review CLIs have tests — 🔵 **one blobless clone, already demonstrated cheap this pass.**
+
+### 🆕 `Gap 324` — is there a permissive **Open Badges / CLR** issuer?
+
+🔴 **`intel/trends.md` records digital credentials as a live trend on two independent channels, and this shelf cannot source a single permissive issuer.** 🔵 `Gap 301` burned two passes probing guessed CLR paths and recorded 404s. 🟢 **Now cheap:** the blobless clone plus `P827`'s enumerate-then-assert rule means candidate trees can be read rather than guessed. 🟢 **Remedy:** capability-blind discovery per `P826` (`open badges issuer`, `comprehensive learner record`, `verifiable credential education`), then licence from payload.
+
+### 🆕 `P827` — **an instrument hazard in this shelf's own past method**, recorded because this pass nearly published a false absence
+
+🔴 **What happened:** this pass grepped a `head -45` slice of an **alphabetically sorted** `ls-files` for `grade|score|line` against `ltijs` and found nothing, and was one step from recording *"ltijs v7 dropped Assignment and Grade Services."* 🟢 **The full namespace listing shows `src/services/grading`, `deep-linking`, `names-and-roles`, `dynamic-registration`** — the alphabetical cut ended at `database-manager`, **before both**. 🟢 **Caught by reading the README against the tree, which is the cross-check that saved it.**
+
+🟢 **`P827`: never conclude absence from a truncated or paged listing.** Enumerate the namespace (`ls-files | awk -F/ '{print $1"/"$2}' | sort -u`), then assert.
+
+🔴 **And it applies retroactively, which is the uncomfortable part.** 🟡 **Several gaps on this shelf recorded absence from `404`s on *guessed* `raw.githubusercontent.com` paths** — `Gap 301` most explicitly. 🔴 **A guessed-path 404 and an enumerated-tree absence are not the same measurement, and this registry has written them in the same voice.** 🟢 **Remedy, cheap and worth one pass:** re-test every surviving absence claim that predates the blobless clone against an enumerated tree, and down-rate any that cannot be reproduced.
+
+### 🆕 `P828` — a prose line that **forged a sixth region bucket**, found and repaired this pass
+
+🔴 **Found by sweeping `^region:` across the shelf:** `intel/market.md` carried a hard-wrapped sentence whose continuation line began `region: it dictates the integration surface…`. 🔴 **A line-anchored field scan reads that as a region value**, which is exactly the failure this KB's own convention warns about — each variant becomes its own bucket and the region filter stops working.
+
+🟢 **Repaired by reflowing the line break only.** 🟢 **No claim, figure or citation was altered**, and the edit is disclosed here rather than made silently, because it touches a superseded block that the append-only rule otherwise protects. 🟢 **Region values across the shelf now resolve to the closed vocabulary alone:** `Global` ×150, `EMEA` ×4, `North America` ×2, `APAC` ×1.
+
+🟢 **`P828`: before committing, sweep `^(industry|region|updated):` across all Markdown and confirm every hit sits inside frontmatter.** 🔵 Swept this pass: `industry:` and `updated:` occur only at lines 2 and 4 of each file — 🟢 **no other prose collisions exist.**
+
+### 🟡 Gaps carried forward unchanged this pass
+
+🟢 **`Gap 309`** — Ed-Fi DMS is the only permissive system of record and has no OneRoster and no change feed; SIS census stands at six systems, zero permissive. 🟢 **`Gap 312`** — `frappe/education`'s **19 B** licence assertion; a question for counsel (upstream `frappe/frappe` is MIT, 1 118 B, and does not govern the app's grant). 🟢 **`Gap 311(b)`** — Ed-Fi DMS `main` (`ab82466`) tracks an unreleased 8.1.0 whose changelog opens under *"Breaking changes"*; **pin `v8.0.0` (`d911abb`)**. 🟢 **`Gap 318`** — carried, unmeasured this pass. 🟢 **`Gap 310`** — rides with `308`.
+
+🔵 **Two non-gaps recorded so they are not re-opened:** 🟢 **the `zijinz456` / `adity982` OpenTutor lineage is resolved** — `adity982` is a strict subset, 884 of 890 files, zero unique, identical `LICENSE` blob `2c7493a`, two weeks behind; `zijinz456` is canonical. 🟢 **The pass-70 cohort is sha-stable** — seven repositories re-probed, all seven identical to pass 70, so their licence payloads are unchanged by construction.
+
+🔴 **One figure explicitly refused this pass:** a widely repeated *"DeepTutor ~40.4k stars."* 🟢 `api.github.com` answers `200` and is authenticated but `403`s every unattached repository, so **third-party popularity remains unmeasurable here and nothing on this shelf is ranked by it.**
+
 ## 🟢 Seventieth pass, 2026-10-09 — `Gap 317` **CLOSES on both limbs**, and the cause is a selection effect in this shelf's own control query; `Gap 316` **hardens from n=1 to n=2 of 2**; `Gap 308` is refused by a **third** egress path; four new gaps open (`319`–`322`)
 
 ⏱️ **Second pass of this date.** Pass 69 closed earlier today (commit `abf91da`, 00:07 UTC). **Append-only: this section is new; nothing below it was rewritten.**

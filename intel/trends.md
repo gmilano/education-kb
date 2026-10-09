@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-first pass, 2026-10-09 — the year's real movement is **governance becoming code**, and this pass can finally name the permissive components that implement it
+
+⏱️ **Third pass of this date.** Pass 70 closed earlier today (commit `cf5c9bf`). **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 1. Pilots → governed workflows. **The buying unit is now the policy, not the tool**
+
+🟢 **Two independent channels converge:** 1EdTech reports institutions building AI strategies that define **oversight, compliance and evaluation** rather than selecting tools, moving *"from isolated use cases to coordinated, policy-guided ecosystems."* HolonIQ frames 2025 as the experimentation year and expects 2026 to favour AI applied to **specific tasks** — with the clearest wins in lesson design, teacher productivity and admin workflow. 🔵 **Consistent with pass 70's capture thesis:** what the closed vendors actually sell is the governed path, not the model.
+
+### 🟢 2. 🆕 Human-approval gates move from policy text into **running code** — and the permissive tier now has one
+
+🟢 **The regulatory requirement is explicit and plural:** NYC's red tier **bars AI from grading, discipline and placement**; **Oklahoma** and **Maryland** require human oversight and bar AI from high-stakes student decisions; Vietnam's high-risk decision names **automated assessment**.
+
+🟢 **And as of this pass the requirement is implementable permissively.** [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) (**MIT**) ships `grading_worker.py` producing and `review_batch.py` / `review_decision_note.py` / `review_detail.py` / `agent_entity_publish_review.py` gating publication; [`open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) (**BSD-3**) ships a **self-regulation domain** at `/api/v1/self_regulation/*` with HITL feedback and export.
+
+🔴 **This is the single most important trend change on this shelf this pass**, because pass 70 recorded that **no permissive component had a human-approval gate** and treated that as the closed vendors' moat. 🟢 **The moat is now one protocol hop wide, not two** — the permissive tier has the gate and lacks only the LTI 1.3 wiring, and `repos/foundations.md` names the Apache-2.0 library that supplies it.
+
+### 🟢 3. Purpose-built education AI displaces the general chatbot
+
+🟢 **The OECD's 2026 Digital Education Outlook** recommends moving beyond general-purpose AI tools toward **purpose-built educational AI** designed for durable learning gains. 🟡 A vendor-adjacent channel argues generic chatbots *created* teacher work — prompt-writing and fact-checking — and expects platforms organised around curriculum and learning objectives. 🟢 **The open-source evidence agrees and is harder than the commentary:** OATutor's `schemas/learning-object.schema.json` and `documents/manifest.json` compile **documents into learning objects**; OpenTutor's `block_decision/` engine schedules **blocks**, not turns. 🟢 **Both model the curriculum as data. That is what "purpose-built" means in practice.**
+
+### 🟢 4. 🆕 Spaced repetition and knowledge graphs return as the **adaptive substrate**
+
+🟢 **Measured, not asserted:** [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) carries `services/spaced_repetition/fsrs.py` with a dedicated migration (`20260302_0010_fsrs_fields_on_learning_progress.py`), `models/knowledge_graph.py` + `services/knowledge/graph_ops.py`, and a **cold-start** path (`block_decision/cold_start.py`). [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) carries **Bayesian Knowledge Tracing**. 🟢 **Reading:** the field is not replacing learner models with prompting — it is putting an LLM **in front of** a classical learner model. 🔵 **The pedagogy is in the scheduler; the LLM is the surface.**
+
+### 🟢 5. 🆕 Distribution shape is fragmenting away from the LMS catalogue
+
+🟢 **Three distinct shapes measured in one pass:** [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) ships as a **Claude Code plugin** (`.claude-plugin/plugin.json`, `.claude-plugin/marketplace.json`) *plus* a self-hostable backend; `AI-Teaching-Agent` exposes **MCP tools** (`cli/mcp_audit.py`) and a CLI, with **no LMS seam at all**; OATutor still ships the classical **LTI** tool shape. 🔴 **Two of the three bypass the LMS procurement cycle entirely.** 🟢 **Commercially this is the cheapest pilot route available** — see `P26` in `compose/patterns.md` — and 🟡 **it is also how AI enters an institution without passing its governance gate**, which is the same fact read from the compliance side.
+
+### 🟢 6. Free teacher tiers commoditise the model layer
+
+🟢 OpenAI's **ChatGPT for Teachers** (free to verified educators, Nov 2025); Anthropic's free teacher offering (Jul 2026); **60+ companies** under the White House AI education pledge; Google's ISTE+ASCD partnership targeting **~6M** US teachers and faculty. 🟢 **Consequence for Globant, stated plainly:** 🔴 **nobody will pay for access to a model.** 🟢 **Value sits in integration, the learner model, the governance gate and the LMS seam** — which is exactly the layer the permissive stack now covers.
+
+### 🟢 7. Adoption is near-universal and **shallow**, and the shallowness is the measurable opportunity
+
+| Measure | Value | Channel |
+|---|---|---|
+| LATAM students using AI | 🟢 **92%** | DEC LATAM Survey 2026 (30 000+ respondents, 29 institutions) |
+| LATAM faculty using AI | 🟢 **79%** | same |
+| 🔴 LATAM faculty at **minimal-to-moderate** engagement | 🔴 **88%** | same |
+| University students using AI | **92%** | K-12 Academics 2026 report |
+| K-12 students | **54%** | same |
+| Teachers using AI (2024-25) | **60%**, roughly double year-on-year | same |
+| 🔴 Institutions with formal AI guidelines (450+ surveyed) | 🔴 **~10%** | aggregator 🟡 |
+
+🔴 **Use is universal; capability and governance are not.** 🟢 **Every one of those gaps is a service line.**
+
+### 🟢 8. 🆕 Sovereign and local-first inference becomes a procurement answer, not an ideology
+
+🟢 **Three permissive paths measured this pass:** `open-tutor-ai-CE` → **Ollama**; `Autonomous-Exam-Proctoring-Grading-Agent` → **no external AI APIs at all**; OATutor → **AWS Bedrock** for in-region managed inference. 🟢 **These map directly onto live rules:** California AB 1159 (no student data for model training), Vietnam's behavioural-monitoring high-risk class, EU Annex III. 🔵 **Note the distinction that gets lost:** local execution reduces **data-transfer** exposure; it does **not** remove a high-risk **classification**. 🔴 **Do not sell "it runs locally" as a compliance answer.**
+
+### 🟢 9. Skills-based hiring pulls credentials into the stack
+
+🟢 HolonIQ and 1EdTech both report **digital credentials and competency frameworks** gaining traction as employers shift toward skills-based hiring. 🔴 **Unmeasured on this shelf:** no permissive Open Badges / CLR issuer has been verified here (`Gap 301`'s lineage). 🟢 **Honest position: named as a trend, not as a capability we can source.**
+
+### 🟡 10. Wellbeing, attention and restriction run counter to adoption
+
+🟡 Some systems pilot AI companions under strict limits; some countries restrict phones in schools; commentators expect AI aimed at **chronic absenteeism and disengagement**. 🔴 **And the counter-trend is real at the top end:** Berkeley Law bans AI for all exams and credited coursework; UChicago Law removes devices from core 1L classes from fall 2026. 🟢 **"Assessment integrity without AI" is a legitimate brief**, and the permissive proctoring agent serves it.
+
+### 🔴 11. What this pass looked for and did **not** find
+
+🔴 **No 1EdTech specification work on AI agents.** AGS is at **2.0** alongside NRPS 2.0 and Deep Linking 2.0; the only AI reference found is a blog line that LTI 1.3 *"supports smarter assignment workflows that support accessibility, academic integrity, and AI-enabled learning tools."* 🟢 **That is marketing, not a spec.** 🔴 **There is no agent-to-LMS standard**, and 🟢 **the practical consequence is that MCP is filling the vacuum** (trend 5) — 🟡 **an agent interoperability layer is forming outside the education standards bodies**, and this shelf should watch whether 1EdTech responds. 🔵 One datum that the certification path is alive: TAO's LTI 1.3 DevKit certified for **AGS 2.0 on 2026-01-15**.
+
 ## 🟢 Seventieth pass, 2026-10-09 — the pass's first trend is a **retraction of this shelf's own twenty-week reading**, and its cause is a selection effect in the shelf's own query; plus the **trust gap in general-purpose AI** is now measured at 20 000 teachers, and **education enters binding AI law** in APAC
 
 ⏱️ **Second pass of this date.** Pass 69 closed earlier today (commit `abf91da`, 00:07 UTC). **Append-only: this section is new; nothing below it was rewritten.**

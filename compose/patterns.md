@@ -4,6 +4,102 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-first pass, 2026-10-09 — `P12` and `P14` are **revised from protocol builds into library swaps**, and three new patterns are added: MCP-side grading, a sovereign EMEA tutor, and an LLM-free adaptive substrate
+
+⏱️ **Third pass of this date.** Pass 70 closed earlier today (commit `cf5c9bf`). **Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Every component named below was licence-verified from payload this pass** (`agents/top.md`, `repos/foundations.md`). 🔴 **No pattern here names a component whose grant was not read as bytes.**
+
+### 🟢 `P12-R` — **Revised.** Lift OATutor from LTI 1.1 to LTI 1.3 + AGS by **swapping the library, not writing the protocol**
+
+🔴 **What `P12` said for several passes:** implement the LTI 1.3 launch-plus-AGS seam against a permissive component and record the effort — treating it as an unknown-size protocol build (`Gap 316(i)`).
+
+🟢 **What this pass establishes:** the protocol is already implemented under Apache-2.0 and was committed to three days ago. **The pattern is now a replacement, and it is small.**
+
+**Components**
+
+| Role | Component | Licence | Pin |
+|---|---|---|---|
+| Tutor + mastery model + UI | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 MIT | `main` `939eb0e` |
+| 🆕 LTI 1.3 tool provider | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 **Apache-2.0** | 🔴 **npm `7.0.7`** — *not* a git ref |
+| 🔴 **Removed** | `CAHLR/ims-lti` → `omsmith/ims-lti` | MIT | — |
+
+**Wiring**
+
+1. 🔴 **Delete `aws/lti-middleware/index.js`** (25 422 B) — it is LTI 1.1: `oauth_consumer_key` ×3, `replaceResult` ×1, zero `id_token`/`jwks`/`lineitem`/`client_id`/`deep_link`. 🔴 **Delete `public/lti-consumer-config.xml`** (`imslticc_v1p0` cartridge) and the `"ims-lti": "github:CAHLR/ims-lti"` dependency.
+2. 🟢 Stand up `ltijs` `Provider`: `src/services/launch` + `services/oidc` + `services/keyset` for the 1.3 launch; `services/dynamic-registration` so platforms self-register instead of exchanging keys by email.
+3. 🟢 Map OATutor's BKT mastery output to **`services/grading`** (AGS): a line item per lesson, a score per mastery update. `shared/lti-scopes.constants.ts` carries the scope strings.
+4. 🟢 Use **`services/names-and-roles`** (NRPS) to populate the roster instead of OATutor's Firebase-side identity.
+5. 🟢 Back it with `services/cache-manager` (**Redis**) and `services/database-manager` (**Mongo**) — both already in `ltijs`, so no new infrastructure decision.
+
+🔴 **Three constraints that will bite in week one if unread:** 🔴 **`engines.node` is `">=24"`** — a Node 20 LTS platform will not run it. 🔴 **`"files": ["dist"]` with `dist/` uncommitted** — install from **npm**, never `github:`, or you reproduce the exact `prepublish` failure that created the `ims-lti` fork (`Gap 319`). 🟡 **npm `7.0.7` is ahead of the newest git tag `v7.0.1`** — pin the npm version.
+
+🟢 **Why this is now the recommended path rather than pinning the fork:** pinning `9b712f6` fixes reproducibility and leaves OATutor's grade return on a **ten-year-dead** CoffeeScript library (`omsmith/ims-lti`, HEAD `2016-09-05`) speaking a superseded protocol. 🟢 **`P12-R` deletes that dependency outright.**
+
+### 🟢 `P14-R` — **Revised.** The permissive graded-tutor stack, now with a human-approval gate in code
+
+🟢 **This is the pattern that answers a US district mandate, and every component is permissive.**
+
+| Layer | Component | Licence | What it contributes |
+|---|---|---|---|
+| Mastery model | `CAHLR/OATutor` | 🟢 MIT | Bayesian Knowledge Tracing |
+| Tutoring dialogue | 🆕 OATutor `aws/aiAgentGeneration/` + `src/components/problem-layout/AgentChatbox.js` | 🟢 MIT | LLM tutor; `chatModel.js` gives **per-lesson model override** via `lesson.chat_model` |
+| Courseware generation | 🆕 OATutor `schemas/learning-object.schema.json`, `documents/manifest.json`, `agent-logic.mjs` | 🟢 MIT | Document → learning-object compilation |
+| Inference | 🆕 OATutor `providers/bedrock-provider.mjs` (`SEMANTIC_COMPILER_PROVIDER=bedrock`) | 🟢 MIT | **In-region** managed inference |
+| 🆕 **Human-approval gate** | [`AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) — `grading_worker.py` → `review_batch.py` / `review_decision_note.py` / `agent_entity_publish_review.py` | 🟢 **MIT** | **No score reaches the LMS without a recorded human decision** |
+| LMS seam | `Cvmcosta/ltijs` `services/grading` | 🟢 Apache-2.0 | LTI 1.3 + AGS |
+
+🟢 **The ordering constraint is the whole point:** `grading_worker` produces a candidate score → the review CLI records an explicit human decision → **only then** does `ltijs` `services/grading` POST it. 🟢 **That sequence is what satisfies NYC's red tier (no AI grading), Oklahoma's and Maryland's human-oversight statutes, and Vietnam's automated-assessment high-risk class** — 🟢 **demonstrable in code, not asserted in a policy PDF.**
+
+🔴 **Honest scoping caveat:** `AI-Teaching-Agent`'s own README declares automatic-grading productization **frozen**, so treat its review gate as a **proven pattern to re-implement**, not a drop-in service. 🟢 **The valuable part is the shape** — job → record → batch review → decision note → publish — **and it is readable under MIT.**
+
+### 🆕 `P23` — MCP-side grading with a human gate, for a client who will not buy an LMS integration
+
+🟢 **Shape:** skip LTI entirely. `AI-Teaching-Agent` (MIT) exposes `cli/dsl.py`, `grading_job_service.py` and the `review_*` CLIs as **MCP tools**, with its own `cli/mcp_audit.py` as the surface audit, fronted by this KB's existing **`mcp-allowlist-gateway`** pattern so only the reviewed-publish tool is callable.
+
+🟢 **Why it exists:** two of the three distribution shapes measured this pass bypass the LMS (`intel/trends.md` trend 5). 🔴 **An LMS integration needs a procurement cycle; an MCP tool needs a laptop.** 🟢 **Use it as the four-week proof that produces the evidence for the `P14-R` business case.** 🔴 **Do not present it as a compliance deliverable** — without the LMS seam there is no gradebook of record, and 🟡 an agent that grades outside the institution's governance gate is the risk the trend section flags.
+
+### 🆕 `P24` — Sovereign EMEA tutor, Article 4 ready, no data egress
+
+| Layer | Component | Licence | Contribution |
+|---|---|---|---|
+| Tutoring platform | [`open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **BSD-3-Clause** | Adaptive tutoring, avatar/voice/video, **`ar`/`fr`/`en`** |
+| Inference | same — **Ollama** provider via `/api/v1/providers/*` | 🟢 BSD-3 | 🟢 **On-premise; no student data leaves the estate** |
+| Governance | same — `/api/v1/self_regulation/*` | 🟢 BSD-3 | HITL evaluation **with export** — the Article 4 evidence artefact |
+| Storage | same — PostgreSQL + **ChromaDB** | 🟢 BSD-3 | In-estate vectors |
+| LMS seam (Python) | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) — `assignments_grades.py`, `lineitem.py`, `names_roles.py` | 🟢 MIT | LTI 1.3 + AGS in the platform's own language |
+
+🟢 **Why this specific combination:** the platform is Python, so the Python LTI library avoids a second runtime; Arabic/French/English covers Gulf and Francophone engagements; Ollama answers data-residency without an AWS region decision. 🟢 **Article 4 (AI literacy) binds the institution today** — the self-regulation export is what evidences it.
+
+🔴 **Two risks to price explicitly, not bury:** 🔴 **`pylti1.3`'s HEAD is `2022-11-21` — four years stale.** Adopting it means **owning the fork**; budget maintenance, or run `ltijs` in a Node sidecar instead and accept the second runtime. 🔴 **`open-tutor-ai-CE`'s HEAD is `2026-06-26` — 3½ months quiet**, and the EE delta includes an unbounded *"and more!"* (`verticals/solutions.md`). 🟢 **Re-read both before contracting.**
+
+### 🆕 `P25` — Adaptive substrate that runs, and is testable, with **zero model spend**
+
+🟢 **Components, one repo:** [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) (**MIT**, `main` `f0142f2`) — `services/block_decision/{engine,rules,preference,profile_mapper,cold_start}.py` as the scheduler, `services/spaced_repetition/fsrs.py` for review timing, `models/knowledge_graph.py` + `services/knowledge/graph_ops.py` for prerequisites.
+
+🟢 **The trick that makes it a pattern:** `services/llm/providers/mock_client.py` ships alongside `anthropic_client.py` and `openai_client.py`. 🟢 **So the entire adaptive loop — cold start, block selection, FSRS scheduling, graph traversal — can be run, load-tested and demoed against the mock with no API key and no spend**, then switched to a real provider by configuration.
+
+🟢 **Use it for:** a client who wants to see adaptivity before approving model budget; a CI suite that exercises pedagogy deterministically; a pilot in a jurisdiction whose data rules are unresolved. 🔴 **Correction to carry:** the project is promoted as *"10+ LLM providers"* — 🔴 **the tree holds two real providers and a mock. Do not repeat the "10+" figure.** 🟢 **Use `zijinz456`, not `adity982`** (a strict-subset fork, two weeks behind — `agents/top.md`).
+
+### 🆕 `P26` — Plugin-shaped pilot: tutoring to a faculty cohort with no procurement cycle
+
+🟢 **Component:** [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) (**MIT**, `main` `b391898`) — ships `.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json` **plus** a self-hostable FastAPI backend (`backend/Dockerfile`, `backend/app/courses.py`), with `README.zh.md` / `GUIDE.zh.md` alongside English.
+
+🟢 **Shape:** distribute the tutor as a **Claude Code plugin** to a volunteer faculty cohort; collect usage and learning evidence from the self-hosted backend; use that evidence as the business case for `P14-R`. 🟢 **Bilingual docs make it the natural APAC pilot vehicle**, where three of this pass's eight new agents originate.
+
+🔴 **Boundaries, stated so nobody oversells it:** 🔴 **no LMS seam, no gradebook of record, no AGS** — this is a pilot instrument, not a graded deployment. 🟡 And it is the shape that enters an institution **outside** its governance gate, so pair it with a written scope that says grades do not leave the pilot.
+
+### 🟢 Pattern selection, in one table
+
+| Client situation | Pattern | Why |
+|---|---|---|
+| US district under an AI-policy mandate (OH, OK, MD, NYC) | **`P14-R`** | Human-approval gate in code + AGS write-back |
+| Existing OATutor / LTI 1.1 deployment to modernise | **`P12-R`** | Library swap; deletes a 10-year-dead dependency |
+| EMEA, data-residency constrained, Article 4 live | **`P24`** | Ollama + HITL export + `ar`/`fr`/`en` |
+| Will not fund an LMS integration yet | **`P23`** | MCP tools; four-week proof |
+| Wants adaptivity demonstrated before model budget | **`P25`** | Mock provider; zero spend |
+| APAC faculty pilot, no procurement appetite | **`P26`** | Plugin distribution, bilingual |
+
 ## 🟢 Seventieth pass, 2026-10-09 — `P14`: the first recipe on this shelf whose **pedagogical core is permissive and already written** — an MIT mastery-estimating tutor wired to a human-gated LTI 1.3 grade return; plus nine practices (`P819`–`P827`), three earned by instruments, three by licence anomalies and one by a retracted twenty-week reading
 
 ⏱️ **Second pass of this date.** Pass 69 closed earlier today (commit `abf91da`, 00:07 UTC). **Append-only: this section is new; nothing below it was rewritten.**

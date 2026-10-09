@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-first pass, 2026-10-09 — `Gap 322` **CLOSED**: Open TutorAI's Enterprise Edition withholds **commercial** things, not pedagogical ones, and the CE rewrite has removed its OpenWebUI licence exposure entirely
+
+⏱️ **Third pass of this date.** Pass 70 closed earlier today (commit `cf5c9bf`). **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 `Gap 322` — **CLOSED.** The `-CE` suffix is real, and the delta is the right kind
+
+🔵 **The gap asked:** the grant is genuine BSD-3-Clause, but the `-CE` suffix implies a non-community edition — **what does it hold back?** 🔴 **Why it mattered:** recommending a base whose open edition is deliberately short of the features a client asks for first is a predictable way to lose an engagement in month three.
+
+🟢 **Answered from the repository's own `README.md` on `main` `196c547`, which states the arrangement explicitly:** *"This public edition is the foundation for a **proprietary Enterprise Edition (EE)**."*
+
+| Named in the EE delta | Kind |
+|---|---|
+| Custom theming & branding | 🟢 Commercial / cosmetic |
+| **SLA support** | 🟢 Commercial / service |
+| **LTS versions** | 🟢 Commercial / release engineering |
+| *"and more!"* | 🔴 **Unbounded — the one part that is not measurable** |
+
+🟢 **So the delta, as published, is support-and-branding — not capability.** 🟢 **That is the favourable answer:** the open edition is not functionally crippled, and a Globant engagement supplies exactly what the EE sells (theming, SLA, long-term support) as its own service layer. 🔴 **The caveat is `"and more!"`** — an unbounded clause in a vendor's own feature comparison is not a measurement, and 🟢 **the EE feature list must be re-read at contract time rather than trusted from this section.**
+
+🟢 **What the Community Edition actually retains, read from `README.md` and the `v1.0.0` changelog:**
+
+| Capability | Evidence |
+|---|---|
+| Adaptive tutoring | `README.md` — *"tailor the experience to each learner's style and curriculum"* |
+| **Avatar / voice / video modes** | `README.md`; tree carries `ui/static/avatar/glb/{idle,dance,expression,locomotion}/` |
+| 🟢 **Human-in-the-loop governance** | `README.md` — *"LLM response evaluation and self-regulation framework"*; changelog: **`/api/v1/self_regulation/*`** with HITL feedback **and export** |
+| 🟢 **Sovereign inference path** | Providers **Ollama** / OpenAI / **Groq** via `/api/v1/providers/*` |
+| **Multilingual** | **Arabic, French, English** (`i18n`) — 🟢 a direct EMEA fit |
+| Admin control surface | **TutorAI Control Center** — system prompt, model config, banners |
+| Vector + relational storage | **PostgreSQL / SQLite + ChromaDB** |
+
+### 🟢 The `v1.0.0` rewrite removes a licence exposure this shelf had not named
+
+🟢 **Changelog `[1.0.0] — 2026-06-08`, read from payload:** *"complete Python application rewrite — **zero `open_webui` runtime dependency**."* Domains re-rooted (`accounts`, `learning`, `ai`, `content`, `governance`, `system`, `gateway`, `data`, `common`, `config`); JWT replaces OpenWebUI session tokens (`SECRET_KEY` for `WEBUI_SECRET_KEY`); SQLAlchemy direct, no OpenWebUI `Base`; Socket.IO remounted at `/realtime/socket.io`; all routes under `/api/v1/*` with the legacy `/openai/`, `/ollama/`, `/api/chat/` namespaces **removed**.
+
+🟢 **Why that is a licence finding and not just an architecture note:** Open TutorAI CE was previously built **on OpenWebUI**, whose licensing has carried branding-retention conditions that complicate a white-labelled commercial deliverable. 🟢 **A rewrite to zero runtime dependency removes that question from the engagement** — the BSD-3-Clause grant on `open-tutor-ai-CE` now governs the deployed artefact rather than sitting on top of another project's terms. 🔵 **Recorded as resolved-by-upstream rather than as a gap**, since there is nothing left to measure.
+
+🟡 **Two freshness flags to carry, both measured:** 🔴 **HEAD `196c547` is dated 2026-06-26 — three and a half months without a commit** (the most recent of the eight platforms tracked here moved three days ago). 🟡 The `LICENSE` copyright line reads **`2023-2025`** against 2026 commits — cosmetic, but it is the kind of staleness that invites a diligence question. 🟢 **Academic provenance is genuine:** *Open TutorAI: An Open-source Platform for Personalized and Immersive Learning with Generative AI*, `arXiv:2602.07176`.
+
+### 🟢 Customisable platform shelf — standing, with this pass's licence re-reads
+
+| Platform | Licence | Layer | Note |
+|---|---|---|---|
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **BSD-3-Clause** 1 531 B | AI tutoring platform | 🟢 **Ollama path + HITL + `ar`/`fr`/`en`.** 🔴 3½ months stale |
+| [Moodle](https://github.com/moodle/moodle) | 🔴 GPL-3.0 | LMS | Dominant installed base; 🔴 copyleft constrains a closed deliverable |
+| [Open edX](https://github.com/openedx/edx-platform) | 🔴 AGPL-3.0 | LMS / MOOC | AI course-authoring work upstream; 🔴 AGPL |
+| [`frappe/education`](https://github.com/frappe/education) | 🔴 **19 B licence assertion** — `Gap 312`, unresolved | Education ERP / SIS | 🔴 **Do not adopt until counsel rules.** Upstream `frappe/frappe` is MIT (1 118 B) and **does not govern this app's grant** |
+| [OpenEduCat](https://github.com/openeducat/openeducat_erp) | 🟡 LGPL-3.0 | Education ERP on Odoo | SIS + CRM + fees + timetabling |
+| [Kolibri](https://github.com/learningequality/kolibri) | 🟢 MIT | Offline-first learning | 🟢 Permissive; low-connectivity deployments |
+| [Ed-Fi DMS](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service) | 🟢 Apache-2.0 11 357 B | System of record | 🔴 **No OneRoster, no change feed** (`Gap 309`); **pin `v8.0.0` (`d911abb`)** (`Gap 311(b)`); 🔴 **no in-place ODS takeover** (`Gap 303`) |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🔴 **GPL-2.0** 18 025 B | Assessment | 🆕 LTI 1.3 DevKit **1EdTech-certified for AGS 2.0, 2026-01-15** — 🔴 copyleft, cited as evidence only |
+
+🟢 **Eight rows, eight real platforms.** 🔴 **Only three are permissive** — `open-tutor-ai-CE` (BSD-3), `Kolibri` (MIT), `Ed-Fi DMS` (Apache-2.0) — and 🔴 **none of the three is an LMS.** 🟢 **The LMS tier remains wholly copyleft, which is why the engagement pattern is "AI alongside the LMS over LTI," never "fork the LMS."** 🔵 `compose/patterns.md` builds on that constraint rather than wishing it away.
+
 ## 🟢 Seventieth pass, 2026-10-09 — the **delivery** tier gains its first permissive, learner-modelling option, while the **system-of-record** tier stays at **zero permissive across six systems**. The two tiers are now measurably different markets, not one market with gaps
 
 ⏱️ **Second pass of this date.** Pass 69 closed earlier today (commit `abf91da`, 00:07 UTC). **Append-only: this section is new; nothing below it was rewritten.**
