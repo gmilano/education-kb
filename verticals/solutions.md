@@ -4,6 +4,41 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-seventh pass, 2026-10-09 — **no platform is added**: the verticals limb returned four already-shelved names, and the pass's licence finding **changes how one of them must be read**
+
+⏱️ **Ninth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 The verticals limb, gated
+
+🟢 `open source platform education LMS SIS MIT Apache 2026` returned 🔴 **one vendor's comparison page repeated across nine language variants** — a single channel wearing nine URLs — plus no 2026-dated release information at all.
+
+| name returned | 🔴 live shelf files | verdict |
+|---|---|---|
+| OpenEduCat | **50** | SHELVED |
+| Sakai | **38** | SHELVED |
+| Chamilo | **37** | SHELVED |
+| ILIAS | **33** | SHELVED |
+| Moodle · Open edX · Canvas | control tokens, **125 · 14 · shelved** | SHELVED |
+
+🔴 **0 unshelved.** 🟡 **Nothing in the result was dated 2026**, and the one SIS-plus-LMS claim offered (OpenEduCat consolidating LMS, SIS, fees and parent app on one database) is 🔴 **the vendor's own page about its own product** — already on this shelf with its **LGPL-3.0** grant recorded, which the comparison page does not mention.
+
+🔵 **Declared gap:** 🔴 **no open-source education SIS other than OpenEduCat was returned by any channel this pass**, and the limb has produced nothing new for five passes. 🟢 Recorded so the absence is not read as a complete map.
+
+### 🟡 What DOES change: the copyleft side-car argument is unaffected, but the **content** layer is re-priced
+
+🟢 The platform picture is unchanged and is restated only to attach the new finding: 🔴 **Moodle (GPL-3.0), Open edX (AGPL-3.0), Chamilo (GPL), ILIAS (GPL), OpenEduCat (LGPL-3.0) all force a side-car** rather than in-process extension for a permissive deliverable. 🟢 Sakai (**Apache-2.0**) remains the one that does not.
+
+🆕 🔴 **But a platform's licence was never the whole question, and this pass proves it.** 🔵 A Moodle or Open edX engagement ships **courseware**, and courseware is licensed separately from the LMS. 🔴 **Until this pass, a `CC-BY-NC-SA` course pack declared as the abbreviation classified as `CC-UNSPECIFIED` and returned commercial use ALLOWED** (`P854`, `repos/foundations.md`).
+
+🟢 **So the vertical diligence has two axes, not one:**
+
+| axis | instrument | state |
+|---|---|---|
+| the **platform** grant (GPL/AGPL/LGPL → side-car) | `license_family.sh` + `P204` write-surface axis | 🟢 settled for five passes |
+| the **courseware** grant (CC attributes) | `license_family.sh` CC branch | 🔴 **was broken for the abbreviation until this pass** |
+
+🔵 **A studio that cleared the platform and never read the course pack cleared half the engagement.** 🟢 `P854` closes that half for the abbreviation and the canonical URL; 🔴 **`Gap 332` leaves it open for a grant declared only in a long README.**
+
 ## 🟢 Seventy-sixth pass, 2026-10-09 — the vertical battery returns **OpenEduCat and six general-purpose systems**, none of them an education ERP under a permissive licence; the usable addition is that the **integration layer** is now priced and the LMS is not where the exposure lives
 
 ⏱️ **Eighth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

@@ -1,0 +1,24 @@
+=== P853 corpus (self-excluded: compose/code/p852-battery-shelf-gate) ===
+live=343 archive=8
+
+=== P849 positive control (must all be non-zero) ===
+CONTROL-OK	Moodle	125
+CONTROL-OK	Open edX	14
+CONTROL-OK	IESALC	8
+CONTROL-OK	IDB	4
+
+limb	candidate	live_files	live_subs	archive_files	verdict
+trending/py	jamwithai/production-agentic-rag-course	21	41	3	SHELVED
+trending/py	Panniantong/Agent-Reach	0	1	0	UNSHELVED
+trending/py	Tracer-Cloud/opensre	0	0	0	UNSHELVED
+trending/jupyter	ed-donner/agents	0	0	0	UNSHELVED
+trending/jupyter	ed-donner/llm_engineering	0	0	0	UNSHELVED
+trending/jupyter	xiaolai/the-craft-of-selfteaching	1	2	0	SHELVED
+trending/jupyter	guipsamora/pandas_exercises	0	0	0	UNSHELVED
+trending/jupyter	ageron/handson-mlp	0	0	0	UNSHELVED
+trending/jupyter	rasbt/machine-learning-book	0	0	0	UNSHELVED
+trending/jupyter	wesm/pydata-book	0	0	0	UNSHELVED
+trending/jupyter	rahulnyk/knowledge_graph	3	3	0	SHELVED
+trending/jupyter	anthropics/claude-cookbooks	0	0	0	UNSHELVED
+trending/ts	nanobrowser/nanobrowser	0	0	0	UNSHELVED
+trending/ts	AtomicBot-ai/atomic-agent	0	0	0	UNSHELVED

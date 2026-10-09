@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-seventh pass, 2026-10-09 — the newly-bought `/trending` channel adds **8 permissive teaching repositories**, and the ninth one found **`P854`: the shelf's shared classifier invented commercial permission over a NonCommercial work**. 🆕 `Gap 332` opens on the limit that survives the fix
+
+⏱️ **Ninth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 Added to the foundations tier — the **teaching-materials** layer, which this shelf had thin
+
+🔵 These are not agents and are not frameworks. They are the **curriculum substrate** a studio builds a course engagement on, and all eight are permissive and payload-verified.
+
+| repo | family | why it is foundational here |
+|---|---|---|
+| [`ageron/handson-mlp`](https://github.com/ageron/handson-mlp) | 🟢 **Apache-2.0** | the fullest permissive ML/DL notebook sequence; patent grant makes it the safest of the eight for a client deliverable |
+| [`rasbt/machine-learning-book`](https://github.com/rasbt/machine-learning-book) | 🟢 **MIT** | textbook code, PyTorch + Scikit-Learn, holder-dated **2021-2026** (actively maintained) |
+| [`guipsamora/pandas_exercises`](https://github.com/guipsamora/pandas_exercises) | 🟢 **BSD** (3-Clause) | a ready **graded exercise bank** — the asset type `P533`'s QTI3 emitter consumes |
+| [`ed-donner/agents`](https://github.com/ed-donner/agents) | 🟢 **MIT** | a complete agentic-engineering curriculum; the teaching counterpart to the framework tier |
+| [`ed-donner/llm_engineering`](https://github.com/ed-donner/llm_engineering) | 🟢 **MIT** | same author, LLM-engineering track |
+| [`jamwithai/production-agentic-rag-course`](https://github.com/jamwithai/production-agentic-rag-course) | 🟢 **MIT** | production RAG curriculum; already shelved, **grant now payload-read** |
+| [`anthropics/claude-cookbooks`](https://github.com/anthropics/claude-cookbooks) | 🟢 **MIT** | recipe notebooks, usable as lab material |
+| [`wesm/pydata-book`](https://github.com/wesm/pydata-book) | 🟡 **MIT-SCOPED** | textbook code — **the grant covers the code examples only** (below) |
+
+🟡 **`wesm/pydata-book` is recorded `MIT-SCOPED`, never bare `MIT`.** 🟢 `COPYING` opens *"Code examples from "Python for Data Analysis", 3rd Edition"* and then gives MIT. 🔴 **The prose of the book is O'Reilly's and is not granted.** 🔵 `P784`/`P322` again: the grant's **subject line** is as operative as its family, and a studio reusing *"the book"* takes what the grant never gave.
+
+### 🔴 🆕 `P854` — **the hyphenated CC abbreviation lost its attributes, and then lost the commercial verdict**
+
+🟢 **The artefact that exposed it:** [`xiaolai/the-craft-of-selfteaching`](https://github.com/xiaolai/the-craft-of-selfteaching), returned by the `jupyter-notebook` slice. 🟢 Ten grant filenames swept across `main` and `master` → **all 404**. 🟢 The only grant is README **line 83**: *"本书的版权协议为 [CC-BY-NC-ND license](https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh)"*.
+
+🔴 **Two chained defects, measured:**
+
+**(1) The inner gate was stricter than the outer one.** 🟢 The CC branch is *entered* on `Creative Commons|creativecommons.org|CC BY|CC-BY` — the hyphen is accepted. 🔴 But the inner `if` that **emits** the attributes demanded `CC BY` with a **SPACE**, or the spelled-out `Attribution`. 🔴 **So the hyphenated sigla entered the branch, computed `nc`/`sa`/`nd` correctly, and then THREW THEM AWAY**, answering `CC-UNSPECIFIED`. 🔵 Three version channels (`P551`) sat just past that gate and were never reached — including canal 1, which reads `licenses/by-nc-nd/3.0` perfectly.
+
+**(2) `CC-UNSPECIFIED` is a hole in `commercial_use_ok`.** 🔴 It falls to `CC-*|UNCLASSIFIED) : ;;` and then to a token-match on the **words** `non-commercial`/`noncommercial` — 🔴 **which a sigla does not contain.** 🟢 Verdict: **ALLOWED**, over a work whose own name says NonCommercial.
+
+🔵 **This is the `P312` inversion surviving inside the branch `P312` and `P551` hardened**, and in the direction this base cannot afford: 🔴 `P308` over-restricts and costs an opportunity; **this invents permission and costs the deliverable.**
+
+**(3) And the fix for (1) exposed a third.** 🔴 `BY..SA` required **exactly two** characters between `BY` and `SA`, and `-SA `/`-ND ` required a **trailing space**. 🔴 So `CC-BY-NC-SA-4.0` answered `CC-BY-NC-4.0` — **ShareAlike lost** — and `CC-BY-NC-ND-4.0` lost **NoDerivatives**. 🔵 **Losing ND declares that derivatives are permitted**: the `P845` direction, inside the same pass.
+
+🟢 **Fixed, and the fix touches only the gate and the three attribute detectors** — no version channel and no attribute semantics changed, because those were already right and simply unreachable:
+
+| payload | before | after |
+|---|---|---|
+| `CC-BY-NC-SA-4.0` | 🔴 `CC-UNSPECIFIED` / **ALLOWED** | 🟢 `CC-BY-NC-SA-4.0` / **PROHIBITED** |
+| `CC-BY-NC-ND-4.0` | 🔴 `CC-UNSPECIFIED` / **ALLOWED** | 🟢 `CC-BY-NC-ND-4.0` / **PROHIBITED** |
+| `CC-BY-SA-4.0` | 🔴 `CC-UNSPECIFIED` | 🟢 `CC-BY-SA-4.0` / ALLOWED (correct) |
+| `CC-BY-ND-4.0` | 🔴 `CC-UNSPECIFIED` | 🟢 `CC-BY-ND-4.0` / ALLOWED (correct) |
+| `licenses/by-nc-sa/4.0` URL only | 🔴 `CC-UNSPECIFIED` / **ALLOWED** | 🟢 `CC-BY-NC-SA-4.0` / **PROHIBITED** |
+| `licenses/by-sa/3.0` URL only | 🔴 `CC-UNSPECIFIED` | 🟢 `CC-BY-SA-3.0` — 🔵 **version read, not stamped** (`P551` holds) |
+| `CC BY-NC-SA 4.0` (spaced) | 🟢 `CC-BY-NC-SA-4.0` | 🟢 **unchanged** |
+| MIT · Apache-2.0 · BSD · CC0 payloads | 🟢 correct | 🟢 **unchanged** |
+
+🟢 **Regressed on the real payload**, `lib/fixtures-p854/cc-by-nc-nd-the-craft-of-selfteaching.README.md` (**5 869 B**, committed), with assertions that the fixture keeps **both** the sigla and the versioned URL — so the case cannot pass for the wrong reason.
+
+🟢 **Every consumer re-run, not only the touched one:** `test_license_family.sh` **199/199** (was 178/178, **+21 cases**) · `p837` **27/27** · `p840` **37/37** · `p845` **55/55** · `p411` **11/11** · `mcp-allowlist-gateway` **34/34**.
+
+🟢 **Blast radius bounded by measurement:** 🔴 **`CC-UNSPECIFIED` appears 0 times on the live shelf as a VERDICT** — measured `PRE`-write against pass 76's tree (`P428`). 🟡 **It appears 19 times `POST`-write, in 6 files, and every one is this pass's own prose DESCRIBING the defect**, not a classification of an asset. 🔵 **The subject of the count is the distinction that matters:** a verdict is contamination, a description is the fix. 🟢 The 23 129 `CC-BY-4.0` rows are OpenStax content censuses (`p348`, `p326`) — **BY-only, no attribute to lose** — and the 52 `CC-BY-NC-SA-4.0` and 10 `CC-BY-NC-ND-4.0` rows were classified from **legal texts**, which spell the attributes out and always took the working path. 🔵 **Latent exactly like `P845`: no prior pass had ever fed this classifier an abbreviation.**
+
+### 🆕 🔴 `Gap 332` — **OPENED.** The fix is correct and the artefact is **still** mis-verdicted, by a different mechanism
+
+🔴 **Measured:** the **full** README still answers `UNCLASSIFIED`, and `commercial_use_ok` on it still answers **ALLOWED**.
+
+🟢 **Mechanism, and it is not a defect:** the classifier reads a window of `head -c 4000` (line 106 — a limit **measured** by `P308`, not chosen). 🟢 The grant sits at byte **5495** of a **5869 B** file — **1 495 B outside the window.**
+
+🔴 **Widening the window is forbidden, and the reason is on the shelf:** `P308`'s window exists because a payload that mentions CC far below was hijacking the verdict. 🟢 **So the missing instrument is a README-GRANT READER (`P742` class), not a bigger window.**
+
+🟢 **Asserted as a test rather than a note**, including the **offset itself**, so the day the fixture or the window changes the case fails instead of passing for the wrong reason:
+```
+P854 README completo contesta UNCLASSIFIED (ventana P308)           ok
+P854 la concesion del fixture cae FUERA de la ventana de 4000 B     ok
+P854 Gap 332 el README completo AUN vuelve ALLOWED (NC invisible)   ok
+```
+🔵 **A repo with no grant file and a late README grant is, to every instrument this shelf owns, indistinguishable from an unlicensed repo** — and `commercial_use_ok` resolves that ambiguity in the permissive direction. 🔴 **That is `Gap 332`.**
+
 ## 🟢 Seventy-sixth pass, 2026-10-09 — `Gap 330`'s **PyPI limb CLOSES**, and the first PyPI payload this shelf ever read found **a defect in the shelf's own shared classifier**. The LTI 1.3 seam is now priced in **all three ecosystems**
 
 ⏱️ **Eighth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

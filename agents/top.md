@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-seventh pass, 2026-10-09 — the battery is **saturated for a fifth consecutive pass (34/34 shelved)**, and the pass finally **BUYS the instrument passes 73–76 kept naming**. It returns **12 unshelved repos against the battery's 0** — and **not one of them is an agent**
+
+⏱️ **Ninth pass of this date.** Pass 76 closed earlier today. **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 No agent row is added, and for the FOURTH consecutive pass that is the measurement
+
+🟢 **The prescribed battery ran in full — four global queries and four regional ones.** 🔴 **Candidates returned: 34. Already shelved: 34. Unshelved: 0.**
+
+🟢 Gated by `compose/code/p852-battery-shelf-gate/` (`result.2026-10-09.tsv`), word-bounded with the substring control beside it (`P840`) and the positive control run first (`P849`).
+
+| Candidate the battery returned | limb | 🔴 live shelf files | substring control |
+|---|---|---|---|
+| `microsoft/ai-agents-for-beginners` | global / agents | **24** | 98 |
+| `pguso/agents-from-scratch` | global / agents | **9** | 79 |
+| Hermes Agent (Nous Research) · AutoGPT | global / agents | **5 · 2** | 73 · 8 |
+| `rohitg00/ai-engineering-from-scratch` · `rasbt/LLMs-from-scratch` | global / trending | **22 · 23** | 147 · 78 |
+| `MadsLorentzen/ai-job-search` · `speedyapply/2026-AI-College-Jobs` | global / trending | **2 · 5** | 5 · 42 |
+| Chamilo · ILIAS · Sakai · OpenEduCat | global / verticals | **37 · 33 · 38 · 50** | 183 · 219 · 320 · 618 |
+| Boston Public Schools · TRAIGA · RAISE Act | North America | **3 · 4 · 2** | 6 · 7 · 4 |
+| Maryland · Oklahoma · FERPA | North America | **8 · 7 · 11** | 128 · 110 · 57 |
+| Council of Europe · EU AI Act | EMEA | **3 · 15** | 59 · 366 |
+| Pearson/TCS · NIIT · LearnUpon · Alteryx · OpenAI ANZ | APAC | **28 · 5 · 6 · 3 · 2** | 93 · 14 · 30 · 12 · 2 |
+| UNESCO IESALC · UNU-IAS · Digital Education Council · IDB ILIA | LATAM | **8 · 6 · 6 · 2** | 139 · 30 · 63 · 639 |
+| Tec de Monterrey · UNAM · UPC · Chile · ANUIES | LATAM | **4 · 2 · 1 · 12 · 2** | 42 · 33 · 32 · 276 · 10 |
+
+### 🆕 🟢 The standing item for this pass is **DISCHARGED by purchase, not by excuse** — and the channel was never the exhausted thing
+
+🔴 **What the registry held:** *"the discovery channel is measured exhausted at four passes, and none of the named replacement instruments has been bought — GitHub `/trending` with a language filter, the `OpenTutor` fork release feeds, conference artefact tracks. Pass 77 should buy one or record why it is not worth buying."*
+
+🟢 **Bought: GitHub `/trending` with a language filter.** 🔵 And the reason four passes could not buy it is a **tool boundary, not a host boundary** — measured, not assumed:
+
+| channel to `github.com/trending/<lang>?since=weekly` | result |
+|---|---|
+| `curl` through the session proxy | 🔴 **403** (`/trending`, `/trending/python`, `/trending/jupyter-notebook`) |
+| `WebFetch` | 🟢 **200, full ranked list with descriptions** |
+
+🔴 **Passes 74–76 recorded `github.com` as 403 and generalised it to the host** (`P844` mechanism #2). 🟢 **The refusal is per-TOOL.** 🔵 **`P855` adopted:** a channel is dead only when **every tool** that can reach it has been tried; one tool's 403 is that tool's verdict.
+
+### 🔴 And the yield is real, which is the part that matters — **12 unshelved against the battery's 0** (`PRE`-write; **11** `POST`-write, delta **1**, per `P428`)
+
+🟢 Three language slices read live (`python`, `jupyter-notebook`, `typescript`), gated by the same `P852` instrument (`trending-result.2026-10-09.tsv`):
+
+| unshelved repo | grant, by **payload read** | what it is |
+|---|---|---|
+| [`ed-donner/agents`](https://github.com/ed-donner/agents) | 🟢 **MIT** (1 066 B, `main/LICENSE`) | course repo — *Complete Agentic AI Engineering Course* |
+| [`ed-donner/llm_engineering`](https://github.com/ed-donner/llm_engineering) | 🟢 **MIT** (1 066 B) | course repo — mastering LLM engineering |
+| [`ageron/handson-mlp`](https://github.com/ageron/handson-mlp) | 🟢 **Apache-2.0** (10 175 B) | teaching notebooks — ML/DL fundamentals |
+| [`rasbt/machine-learning-book`](https://github.com/rasbt/machine-learning-book) | 🟢 **MIT** (1 079 B, `LICENSE.txt`) | textbook code — *ML with PyTorch and Scikit-Learn* |
+| [`guipsamora/pandas_exercises`](https://github.com/guipsamora/pandas_exercises) | 🟢 **BSD-3-Clause** (1 515 B, `master/`) | graded exercise bank |
+| [`wesm/pydata-book`](https://github.com/wesm/pydata-book) | 🟡 **MIT, SCOPE-LIMITED** (1 138 B, `COPYING`) | textbook code — see the scope finding below |
+| [`anthropics/claude-cookbooks`](https://github.com/anthropics/claude-cookbooks) | 🟢 **MIT** (1 065 B) | recipe notebooks |
+| [`xiaolai/the-craft-of-selfteaching`](https://github.com/xiaolai/the-craft-of-selfteaching) | 🔴 **CC-BY-NC-ND-3.0** — README prose, **no grant file** | self-teaching book — **not usable**, see below |
+| `Panniantong/Agent-Reach` · `Tracer-Cloud/opensre` · `nanobrowser` · `atomic-agent` | 🟡 unshelved but **out of domain** | general agents, no education seam |
+
+🔴 **THE TIER IS THE FINDING, and it is why no agent row is added.** 🟢 Every in-domain hit is a **curriculum or textbook artefact** — a course *about* agents, not an agent *for* education. 🔴 **`Gap 316`'s main limb is untouched:** still no permissive AI-grading component carrying an LTI 1.3 + AGS seam. 🔵 **The new channel is rich in the teaching-materials tier and empty in the agent tier**, and that is a sharper statement than four passes of "saturated" ever made.
+
+### 🟡 `wesm/pydata-book` — the grant's **SUBJECT LINE** is the whole finding (`P784`/`P322`)
+
+🟢 `COPYING`, read in full, opens: *"Code examples from "Python for Data Analysis", 3rd Edition"* — **then** the MIT text.
+
+🔴 **MIT covers the code examples. It does not cover the book prose**, which is O'Reilly's. 🔵 A studio that reads the badge and reuses *"the book"* takes the one thing the grant never gave. 🟢 Recorded as **MIT-SCOPED**, never bare `MIT`.
+
 ## 🟢 Seventy-sixth pass, 2026-10-09 — the battery is **saturated for a fourth consecutive pass**, and the pass's own control grep caught the pass **about to declare a gap that does not exist**
 
 ⏱️ **Eighth pass of this date.** Pass 75 closed earlier today. **Append-only: this section is new; nothing below it was rewritten.**

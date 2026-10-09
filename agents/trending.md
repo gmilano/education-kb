@@ -4,6 +4,40 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 77) — **0 new agents for the fourth consecutive pass**, and this time the saturation is **qualified rather than repeated**: the newly-bought channel is full of teaching material and empty of agents
+
+🔵 **Append-only: this dated section is new; every section below it is prior history and is unchanged.**
+
+### 🔴 The battery, run in full and gated
+
+🟢 **4 global queries + 4 regional ones.** 🔴 **34 candidates, 34 already shelved, 0 unshelved** — fifth consecutive saturated pass. Per-candidate counts in `agents/top.md`; instrument in `compose/code/p852-battery-shelf-gate/`.
+
+🔴 **The battery returned the same five names it returned in pass 76** (`ai-agents-for-beginners`, `ai-engineering-from-scratch`, `LLMs-from-scratch`, Hermes, `500-AI-Agents-Projects`), 🟢 **plus four the prose channel had not surfaced before** (`pguso/agents-from-scratch`, `MadsLorentzen/ai-job-search`, `speedyapply/2026-AI-College-Jobs`, AutoGPT) — 🔴 **all four already on the shelf anyway.**
+
+### 🆕 🟢 What changed: the named instrument was **bought**, and the agent tier is now measured empty rather than assumed so
+
+🟢 **GitHub `/trending` with a language filter, live, three slices.** 🔵 The boundary that blocked four passes is **per-tool**: `curl` → 🔴 **403**; `WebFetch` → 🟢 **200** (`P855`).
+
+| slice | repos read | in-domain | **unshelved & in-domain** | of those, **agents** |
+|---|---|---|---|---|
+| `python` | 13 | 2 | 1 | 🔴 **0** |
+| `jupyter-notebook` | 14 | 9 | 7 | 🔴 **0** |
+| `typescript` | 18 | 0 | 0 | 🔴 **0** |
+
+🔴 **12 unshelved repositories (`PRE`-write), 8 of them in-domain, and ZERO agents.** 🟢 Every in-domain hit is a **course, textbook or exercise bank**. 🔵 **This is the distinction four passes of "saturated" could not draw:** the discovery channel was not exhausted — it was **unbought** — and now that it is bought, the emptiness is specific to the **agent tier**, not to the field.
+
+🟡 **Three unshelved repos are general agents with no education seam** (`Panniantong/Agent-Reach`, `Tracer-Cloud/opensre`, `nanobrowser/nanobrowser`, `AtomicBot-ai/atomic-agent`) and are **not promoted** into this shelf's agent table on trending alone — the framework tier is already shelved and these add no education capability.
+
+### 🔴 Star counts are **STILL not adopted**, and now the reason is cleaner
+
+🟢 The `/trending` page ranks but the fetch returned **descriptions, not counts**, and 🔴 `api.github.com` remains **403 (session scope)** (`P844` #2). 🔵 So `p351`'s rule stands: 🔴 **no star figure is written to this shelf this pass.** 🟡 Prior cycles' inflated counts stay withdrawn.
+
+### 🟢 Declared gaps, so silence is not read as coverage
+
+🔴 **No education-domain agent appeared in any channel this pass** — not the prose battery, not three `/trending` slices.
+🔴 **`Gap 316`'s main limb unmoved:** no permissive AI-grading component with an LTI 1.3 + AGS seam.
+🟡 **Two of the three named instruments remain unbought:** the `OpenTutor` eight-fork release feeds and conference artefact tracks. 🟢 **Both are now cheaper to buy than they looked**, because `P855` says the `api.github.com` 403 is one tool's verdict and `WebFetch` against `github.com/<owner>/<repo>/releases` has not been tried.
+
 ## 🟢 2026-10-09 (pass 76) — **no new agent for the third consecutive pass**; the week's finding is that the shelf's **own licence classifier** was wrong about Python, and an **LGPL dependency inside an MIT-declared LTI library**
 
 🔵 **Append-only: this dated section is new; every section below it is prior history and is unchanged.**

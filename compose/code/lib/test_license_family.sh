@@ -919,5 +919,94 @@ Permission is hereby granted, free of charge, to any person obtaining a copy
 of this Python software and associated documentation files (the "Software"),
 to deal in the Software without restriction.')"
 
+# ---------------------------------------------------------------------------------------
+# `P854` (pase 77 del 2026-10-09).  LA SIGLA CON GUION PERDIA LOS ATRIBUTOS CC.
+#
+# Dos defectos encadenados en la rama CC, los dos en la direccion de P312:
+#   1. la compuerta INTERNA pedia `CC BY` con ESPACIO o `Attribution` desplegado, aunque la
+#      externa ya aceptaba `CC-BY`.  La sigla con guion entraba, calculaba NC/SA/ND y los
+#      TIRABA, contestando `CC-UNSPECIFIED`;
+#   2. `CC-UNSPECIFIED` cae al `CC-*|UNCLASSIFIED) : ;;` de `commercial_use_ok`, cuyo
+#      token-match busca las PALABRAS 'non-commercial'/'noncommercial' -- que una sigla no
+#      contiene.  Un texto que prohibe el uso comercial EN SU NOMBRE volvia ALLOWED.
+# Y un tercero que el arreglo de (1) dejo a la vista: `BY..SA` exigia exactamente 2
+# caracteres entre BY y SA, y `-SA `/`-ND ` un espacio final, asi que `CC-BY-NC-SA-4.0`
+# contestaba `CC-BY-NC-4.0`: perdia el ShareAlike, y `CC-BY-NC-ND-4.0` perdia el
+# NoDerivatives.  Perder ND declara que SE PUEDE DERIVAR, que es la direccion de P845.
+#
+# El eje importa: el OER se publica CC-BY-NC-SA mas que bajo ninguna otra concesion, y este
+# es un estante de EDUCACION.
+check "P854 sigla con guion NC-SA conserva los dos atributos" CC-BY-NC-SA-4.0 \
+  "$(family_of 'CC-BY-NC-SA-4.0')"
+check "P854 sigla con guion NC-ND conserva los dos atributos" CC-BY-NC-ND-4.0 \
+  "$(family_of 'CC-BY-NC-ND-4.0')"
+check "P854 sigla con guion BY-SA conserva ShareAlike" CC-BY-SA-4.0 \
+  "$(family_of 'CC-BY-SA-4.0')"
+check "P854 sigla con guion BY-ND conserva NoDerivatives" CC-BY-ND-4.0 \
+  "$(family_of 'CC-BY-ND-4.0')"
+# La URL canonica es el otro canal con que un README declara, y tambien degradaba.
+check "P854 URL canonica by-nc-sa lee atributos y version" CC-BY-NC-SA-4.0 \
+  "$(family_of 'https://creativecommons.org/licenses/by-nc-sa/4.0/')"
+check "P854 URL canonica by-sa/3.0 no se estampa como 4.0" CC-BY-SA-3.0 \
+  "$(family_of 'https://creativecommons.org/licenses/by-sa/3.0/')"
+# EL EJE QUE IMPORTA: el veredicto comercial sobre la sigla.
+check_deny() {  # name, payload -> commercial use must be PROHIBITED
+  if commercial_use_ok "$2"; then check "commercial DENY: $1" forbidden allowed
+  else check "commercial DENY: $1" forbidden forbidden; fi
+}
+check_deny "P854 CC-BY-NC-SA-4.0 con guion"  'CC-BY-NC-SA-4.0'
+check_deny "P854 CC-BY-NC-ND-4.0 con guion"  'CC-BY-NC-ND-4.0'
+check_deny "P854 URL by-nc-nd/3.0"           'https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh'
+# NEGATIVOS, la mitad que importa: lo permisivo NO se vuelve prohibido.
+check_ok "P854 CC-BY-4.0 con guion sigue comercial" 'CC-BY-4.0'
+check_ok "P854 CC-BY-SA-4.0 con guion sigue comercial" 'CC-BY-SA-4.0'
+check "P854 NEG forma con espacio intacta NC-SA" CC-BY-NC-SA-4.0 "$(family_of 'CC BY-NC-SA 4.0')"
+check "P854 NEG forma con espacio intacta BY-SA" CC-BY-SA-4.0     "$(family_of 'CC BY-SA 4.0')"
+check "P854 NEG un MIT no entra a la rama CC"    MIT              "$(family_of "$MIT")"
+check "P854 NEG CC0 sigue CC0"                   CC0-1.0          "$(family_of "$CC0")"
+# Y REGRESION SOBRE EL PAYLOAD REAL que lo expuso: un repo SIN fichero de concesion que
+# declara la sigla en la prosa del README.  Es el caso `P742` (concesion en el cuerpo y no
+# en un fichero) cruzado con la sigla.
+_H852="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+FIXP854="$_H852/fixtures-p854"
+if [ -d "$FIXP854" ]; then
+  CRAFT="$FIXP854/cc-by-nc-nd-the-craft-of-selfteaching.README.md"
+  # LA LINEA DE CONCESION, extraida: es lo que el arreglo de P854 SI resuelve.
+  CRAFT_DECL="$(grep -m1 'CC-BY-NC-ND' "$CRAFT")"
+  check "P854 la declaracion del README contesta CC-BY-NC-ND-3.0" CC-BY-NC-ND-3.0 \
+    "$(family_of "$CRAFT_DECL")"
+  check_deny "P854 la declaracion del README prohibe uso comercial" "$CRAFT_DECL"
+  # ---- Y EL LIMITE REAL, afirmado para que no se pierda (`Gap 332`). ----
+  # El README COMPLETO contesta `UNCLASSIFIED`, y NO es un defecto de P854: la concesion
+  # esta declarada en el byte 5495 de un fichero de 5869 B, y el clasificador lee una
+  # VENTANA de `head -c 4000` (linea 106, limite MEDIDO por P308).  Ensanchar la ventana
+  # seria cometer el error que P308 existe para evitar -- un payload que menciona CC mucho
+  # mas abajo secuestraba el veredicto.  El instrumento que falta es un LECTOR DE
+  # CONCESION EN README (clase `P742`), no una ventana mas grande.
+  #
+  # Se afirma el OFFSET, no solo el veredicto, para que el dia que el fixture o la ventana
+  # cambien este caso falle en vez de pasar por la razon equivocada.
+  check "P854 README completo contesta UNCLASSIFIED (ventana P308)" UNCLASSIFIED \
+    "$(family_of "$(cat "$CRAFT")")"
+  _off=$(head -82 "$CRAFT" | wc -c | tr -d ' ')
+  if [ "$_off" -gt 4000 ]; then
+    check "P854 la concesion del fixture cae FUERA de la ventana de 4000 B" si si
+  else
+    check "P854 la concesion del fixture cae FUERA de la ventana de 4000 B" si no
+  fi
+  # 🔴 Y la consecuencia, afirmada porque es la que cuesta el entregable: sobre el README
+  # completo el veredicto comercial sigue siendo ALLOWED sobre una obra NC.  Es `Gap 332`.
+  check_ok "P854 Gap 332 el README completo AUN vuelve ALLOWED (NC invisible)" "$(cat "$CRAFT")"
+  # el fixture tiene que seguir conteniendo la sigla Y la URL con version, o el caso
+  # de arriba pasa por la razon equivocada.
+  if grep -q 'CC-BY-NC-ND' "$CRAFT" && grep -q 'licenses/by-nc-nd/3.0' "$CRAFT"; then
+    check "P854 fixture conserva sigla y URL con version" si si
+  else
+    check "P854 fixture conserva sigla y URL con version" si no
+  fi
+else
+  check "P854 fixtures-p854 presente" si no
+fi
+
 printf '\n%d/%d\n' "$((n-fail))" "$n"
 [ "$fail" = 0 ] || exit 1

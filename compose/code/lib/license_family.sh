@@ -462,9 +462,13 @@ osi_family_of() {
   if printf '%s' "$t" | grep -qi 'Creative Commons\|creativecommons.org\|CC BY\|CC-BY'; then
     printf '%s' "$t" | grep -qi 'CC0\|Public Domain Dedication' && { echo "CC0-1.0"; return; }
     local nc="" sa="" nd=""
-    printf '%s' "$t" | grep -qi 'NonCommercial\|Non-Commercial\|NoComercial\|BY-NC' && nc="-NC"
-    printf '%s' "$t" | grep -qi 'ShareAlike\|Share-Alike\|CompartirIgual\|BY..SA\|-SA ' && sa="-SA"
-    printf '%s' "$t" | grep -qi 'NoDerivatives\|NoDerivs\|SinDerivadas\|BY..ND\|-ND ' && nd="-ND"
+    # P854: la sigla con guion tambien se lee en los TRES atributos, no solo en NC.
+    printf '%s' "$t" | grep -qiE 'NonCommercial|Non-Commercial|NoComercial|BY[ -]?NC|[-/]NC([-/]|$)' && nc="-NC"
+    # P854: `BY..SA` exigia EXACTAMENTE 2 caracteres entre BY y SA, y `-SA ` un espacio
+    # final; `CC-BY-NC-SA-4.0` no cumple ninguno de los dos y perdia el ShareAlike.
+    printf '%s' "$t" | grep -qiE 'ShareAlike|Share-Alike|CompartirIgual|BY..SA|-SA |[-/]SA([-/]|$)' && sa="-SA"
+    # P854: mismo defecto que SA, y peor: perder ND declara que SE PUEDE DERIVAR.
+    printf '%s' "$t" | grep -qiE 'NoDerivatives|NoDerivs|SinDerivadas|BY..ND|-ND |[-/]ND([-/]|$)' && nd="-ND"
     # P551 (pase 45 del 2026-10-07).  LA VERSION ESTABA ESTAMPADA, NO LEIDA.  Esta rama
     # armaba los atributos (NC/SA/ND) LEYENDO el payload y despues concatenaba `-4.0`
     # literal, asi que TODO texto CC volvia 4.0 cualquiera fuera su version real.
@@ -484,7 +488,31 @@ osi_family_of() {
     # La version se lee del bloque de titulo, en dos canales, y si ninguno responde se
     # contesta `CC-BY...-UNVERSIONED` en vez de adivinar: «no declara version» y «declara
     # 4.0» son respuestas distintas y no deben compartir string (la leccion de P502).
-    if printf '%s' "$t" | grep -qi 'Attribution\|Atribuci\|CC BY'; then
+    # P854 (pase 77 del 2026-10-09).  LA COMPUERTA EXTERNA ACEPTABA `CC-BY` Y ESTA NO.
+    # La rama CC se entra por 'Creative Commons|creativecommons.org|CC BY|CC-BY' (arriba),
+    # pero este `if` -- el unico que EMITE los atributos NC/SA/ND ya calculados -- pedia
+    # `CC BY` con ESPACIO o el nombre desplegado 'Attribution'.  Resultado medido: la
+    # SIGLA CON GUION, que es exactamente como un README la escribe, entraba a la rama,
+    # calculaba `nc`/`sa`/`nd` correctamente y despues los TIRABA, contestando
+    # `CC-UNSPECIFIED`.
+    #
+    # Medido sobre un artefacto real que el canal /trending de este pase devolvio:
+    # `xiaolai/the-craft-of-selfteaching` no trae fichero de concesion y declara en el
+    # README `CC-BY-NC-ND` mas la URL canonica `licenses/by-nc-nd/3.0`.  Las dos formas
+    # degradaban a `CC-UNSPECIFIED`.
+    #
+    # POR QUE IMPORTA, y es la direccion de P312, no la de P308.  `CC-UNSPECIFIED` cae al
+    # `CC-*|UNCLASSIFIED) : ;;` de `commercial_use_ok`, y el token-match de abajo busca las
+    # PALABRAS 'non-commercial'/'noncommercial' -- que una sigla NO contiene.  Entonces un
+    # texto que prohibe el uso comercial EN SU PROPIO NOMBRE volvia ALLOWED.  Es la misma
+    # inversion que P312 arreglo, sobreviviendo DENTRO de la rama que P312/P551 endurecieron,
+    # y sobre el eje central de este estante: el OER se publica CC-BY-NC-SA mas que ninguna
+    # otra cosa.
+    #
+    # El arreglo acepta la sigla con guion y la forma URL canonica.  No toca el calculo de
+    # atributos ni la lectura de version: los tres canales de version ya estaban bien y
+    # nunca se alcanzaban.
+    if printf '%s' "$t" | grep -qiE 'Attribution|Atribuci|CC[ -]?BY|creativecommons\.org/licenses/by'; then
       local ccv=""
       # canal 1: la URL canonica `creativecommons.org/licenses/<codigos>/<version>`
       ccv=$(printf '%s' "$t" | grep -oiE 'creativecommons\.org/licenses/[a-z-]+/([0-9]+\.[0-9]+)' \

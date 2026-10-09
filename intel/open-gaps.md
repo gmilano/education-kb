@@ -4,6 +4,122 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-seventh pass, 2026-10-09 — the **pass-77 standing item is DISCHARGED BY PURCHASE**: the named instrument was bought and returned **12 unshelved against the battery's 0**; 🔴 **a second defect is found in the shelf's own SHARED classifier**; 🆕 `Gap 332` opens; `Gap 308` refused a **tenth** time; `P852`–`P856` adopted
+
+⏱️ **Ninth pass of this date.** Pass 76 wrote to this file; this section sits above it and supersedes only the claims it names. **Append-only.**
+
+🟢 **Registry continuity:** pass 76 wrote to this file, so the section below this one is pass 76's and no fold-forward is needed.
+
+### 🟢 The standing item — **DISCHARGED, and the registry's framing was the thing that was wrong**
+
+🔴 **What this registry held:** *"the discovery channel is measured exhausted at four passes, and none of the named replacement instruments has been bought — GitHub `/trending` with a language filter, the `OpenTutor` eight-fork release feeds, and conference artefact tracks. Pass 77 should buy one of the three named instruments or record why it is not worth buying."*
+
+🟢 **Bought: GitHub `/trending` with a language filter.** 🟢 **Yield: 12 unshelved repositories (`PRE`-write), 8 of them in-domain, against the prescribed battery's 0 in the same hour.**
+
+🔴 **And the reason four passes could not buy it is not cost — it is that the refusal was attributed to the wrong thing:**
+
+```
+curl      github.com/trending                      403
+curl      github.com/trending/python?since=weekly   403
+WebFetch  github.com/trending/python?since=weekly   200   (13 repos, ranked, descriptions)
+WebFetch  github.com/trending/jupyter-notebook      200   (14 repos)
+WebFetch  github.com/trending/typescript            200   (18 repos)
+```
+
+🟢 **`P855` adopted:** 🔴 **a channel is dead only when EVERY tool that can reach it has been tried; a 403 is that tool's verdict, not the host's.** 🔵 Passes 74–76 recorded `github.com` 403 as `P844` *mechanism #2, session scope*, which is a statement about the **session**; the fact was *"`curl` cannot"*.
+
+🔵 **The correction is worth money twice more, and it is pre-registered rather than claimed:** the two still-unbought instruments were both costed against `api.github.com`'s 403. 🟢 **`WebFetch` against `github.com/<owner>/<repo>/releases` has never been tried.**
+
+### 🔴 🆕 `P853` met `P428` inside this pass, and the pass's own fixture moved a verdict
+
+🔴 **Measured, and it is the pass correcting itself:** the trending gate was re-run after the pass wrote its artefacts, and `xiaolai/the-craft-of-selfteaching` had changed from **`UNSHELVED`** to **`SHELVED`**.
+
+🟢 **Cause, traced rather than guessed:** the only live file naming it is 🔴 **this pass's own `P854` fixture**, `lib/fixtures-p854/cc-by-nc-nd-the-craft-of-selfteaching.README.md`. 🟢 **Verified against HEAD:** nothing in the tree at pass 76 named it, nor any of the other eleven — all twelve were genuinely unshelved.
+
+| census moment | candidates | shelved | unshelved |
+|---|---|---|---|
+| **`PRE`-write** — the denominator the discovery decision was made on | 14 | 2 | 🟢 **12** |
+| **`POST`-write** — the state the tree is left in | 14 | 3 | **11** |
+| delta | — | **+1** | 🔴 **−1** |
+
+🔵 **`P428` is why both numbers are published with their moment:** the `PRE` figure is the correct one for *"what did the channel find"*, the `POST` figure is the correct one for *"what does the shelf now hold"*, and 🔴 **a single unlabelled "11" silently answers the first question with the second.**
+
+🔵 **And it is `P853` one level up:** 🔴 `P853` caught the probe contaminating its corpus with its **scratch files**; this is the same shelf being contaminated by the pass's **legitimate committed output**. 🟢 **The remedy is not to stop committing fixtures — it is to label the census moment**, which `P428` already requires and this pass nearly failed to do. 🔵 **A discovery pass changes the corpus its own discovery is measured against**, and that is structural, not a mistake.
+
+### 🔴 🆕 `P854` — **the SHARED classifier invented commercial permission over a NonCommercial work**, and the axis is this shelf's own subject
+
+🟢 **The artefact that exposed it**, returned by the newly-bought channel: `xiaolai/the-craft-of-selfteaching` — 🔴 **no grant file** (ten filenames × two branches, all **404**), grant declared in README **line 83** as `CC-BY-NC-ND` plus the canonical `licenses/by-nc-nd/3.0` URL.
+
+🔴 **Two chained defects, plus a third the fix exposed** (full mechanism in `repos/foundations.md`):
+
+1. 🔴 the CC branch is **entered** on `CC-BY` (hyphen accepted) but the inner gate that **emits** the attributes demanded `CC BY` with a **space** or the spelled-out `Attribution` → the hyphenated sigla computed `nc`/`sa`/`nd` and **threw them away**, answering `CC-UNSPECIFIED`;
+2. 🔴 `CC-UNSPECIFIED` falls through `commercial_use_ok`'s `CC-*|UNCLASSIFIED) : ;;` to a token-match on the **words** `non-commercial`/`noncommercial`, 🔴 **which a sigla does not contain** → **ALLOWED**;
+3. 🔴 and `BY..SA` required exactly two characters between `BY` and `SA` while `-SA `/`-ND ` required a **trailing space**, so `CC-BY-NC-SA-4.0` answered `CC-BY-NC-4.0` (**ShareAlike lost**) and `CC-BY-NC-ND-4.0` lost **NoDerivatives**.
+
+🔵 **This is the `P312` inversion surviving inside the branch `P312` and `P551` hardened**, in the direction this base cannot afford: 🔴 `P308` over-restricts and costs an opportunity; **this invents permission and costs the deliverable.** 🔴 **Losing ND declares that derivatives are permitted** — the `P845` direction, in the same pass.
+
+🟢 **Fixed**, touching only the gate and the three attribute detectors; the three version channels were already correct and merely unreachable. 🟢 **Regressed on the real payload** (`lib/fixtures-p854/`, **5 869 B**, committed) with assertions that the fixture keeps **both** the sigla and the versioned URL, so the case cannot pass for the wrong reason.
+
+🟢 **Every consumer re-run, not only the touched one:** `test_license_family.sh` **199/199** (was 178/178, **+21**) · `p837` **27/27** · `p840` **37/37** · `p845` **55/55** · `p411` **11/11** · `mcp-allowlist-gateway` **34/34**.
+
+🟢 **Blast radius bounded by measurement:** 🔴 **`CC-UNSPECIFIED` appears 0 times on the live shelf as a VERDICT** — measured `PRE`-write against pass 76's tree (`P428`). 🟡 **It appears 19 times `POST`-write, in 6 files, and every one is this pass's own prose DESCRIBING the defect**, not a classification of an asset. 🔵 **The subject of the count is the distinction that matters:** a verdict is contamination, a description is the fix. 🟢 The 23 129 `CC-BY-4.0` rows are OpenStax content censuses (BY-only — no attribute to lose); the 52 `CC-BY-NC-SA-4.0` and 10 `CC-BY-NC-ND-4.0` rows were classified from **legal texts**, which spell the attributes out and always took the working path. 🔵 **Latent exactly like `P845`: no prior pass had ever fed this classifier an abbreviation.**
+
+### 🔴 🆕 `Gap 332` — **OPENED.** The fix is correct and the artefact is **still** mis-verdicted, by a different mechanism
+
+🟢 **Measured:** the **full** README answers `UNCLASSIFIED` and `commercial_use_ok` answers **ALLOWED**.
+
+🟢 **Mechanism, and it is not a defect:** the classifier reads `head -c 4000` (a limit **measured** by `P308`, not chosen). The grant sits at byte **5495** of a **5869 B** file — **1 495 B outside the window**.
+
+🔴 **Widening the window is forbidden and the reason is on the shelf:** `P308`'s window exists because a payload mentioning CC far below was hijacking the verdict. 🟢 **The missing instrument is a README-GRANT READER (`P742` class), not a bigger window.**
+
+🟢 **Asserted as tests, including the OFFSET itself**, so the day the fixture or the window changes the case fails instead of passing for the wrong reason:
+```
+P854 README completo contesta UNCLASSIFIED (ventana P308)           ok
+P854 la concesion del fixture cae FUERA de la ventana de 4000 B     ok
+P854 Gap 332 el README completo AUN vuelve ALLOWED (NC invisible)   ok
+```
+🔵 **A repo with no grant file and a late README grant is, to every instrument this shelf owns, indistinguishable from an unlicensed repo** — and `commercial_use_ok` resolves that ambiguity **permissively**. 🔴 **That is `Gap 332`.**
+
+### 🔴 🆕 `P853` — the pass's own gate was **contaminating its own corpus**, and no verdict looked wrong
+
+🔴 The first run wrote the candidate names to `candidates.input.tsv`, greped the tree, and **found itself**; it also greped `.git/` packs and merged `archive/` into the live shelf. 🟢 `Moodle` **209 → 125**, `OpenEduCat` **79 → 50**, `UPC` **4 → 1**.
+
+🔵 **No verdict flipped, which is why it was dangerous:** 🔴 every *count* was inflated, and on thin candidates most "shelf files" were the probe's own scratch. 🔴 **Self-contamination biases every verdict toward `SHELVED` — the error that SUPPRESSES a finding, the exact mirror of `P849`**, whose broken zero fabricates one. 🟢 `compose/code/p852-battery-shelf-gate/`.
+
+### 🟢 Protocols adopted
+
+🟢 **`P852` — the battery's candidates are gated against the shelf by an ARTEFACT, not by recollection.** 🔵 Word-bounded (`P840`), substring control beside each count, `P849` positive control run **first with abort on any zero**, verdicts `SHELVED` / `ARCHIVE-ONLY` / `UNSHELVED`. 🔴 Four passes had declared saturation from inside the prose of the pass that declared it.
+
+🟢 **`P853` — a probe EXCLUDES ITS OWN ARTEFACTS from the corpus it measures**, and counts live shelf separately from `archive/`. (Above.)
+
+🟢 **`P854` — a CC grant is read from the ABBREVIATION and from the canonical URL, not only from the spelled-out name**, and all three attributes are emitted whatever the separator. (Above.)
+
+🟢 **`P855` — a channel is dead only when EVERY tool that can reach it has been tried.** (Above.)
+
+🟢 **`P856` — the permissive course pack** (`compose/patterns.md`): assemble from the trending curriculum tier, screen every asset through `P854`, emit assessments via `p533`, deliver through `P850` Route A with `putGrade` floored, and extend the `P851` notices file with a **CONTENT table**. 🔵 The first pattern on this shelf that prices the **content** a studio ships rather than only the code.
+
+### 🟡 A near-miss worth recording, because the next pass will meet it
+
+🔴 **This pass first numbered its four new protocols `P850`–`P853`, and `P850`/`P851` were already pass 76's two PATTERNS.** 🟢 Caught before any file was committed, by grepping `compose/patterns.md` rather than only the probe registry. 🔵 **The counter is ONE sequence shared by protocols, probes and patterns**, and the highest number lives in whichever file last used it. 🟢 **Next free number after this pass: `P857`.**
+
+### 🟢 Carried, re-confirmed, or unmeasured this pass
+
+🔴 **`Gap 316`'s main limb — OPEN, on a much stronger measurement.** 🟢 Three `/trending` language slices found **8 new in-domain repositories and 0 education-domain agents**. 🔵 **Four passes of "saturated" could not distinguish an empty field from an unbought channel; this pass can.** 🔴 Still no permissive AI-grading component with an LTI 1.3 + AGS seam.
+
+🟢 **`Gap 316(i)`** — the **wiring** limb remains the highest-value unmeasured number on this shelf, still best paid once inside `P14-R`; `P856`'s 4–6 week figure is explicitly the soft one because of it.
+
+🔴 **`Gap 308` — OPEN. Tenth consecutive refusal:** `eur-lex.europa.eu` → **403 to CONNECT**. 🟡 **And `P855` applies to it:** the refusal has only ever been measured through `curl`. 🟢 **Pass 78 should probe `eur-lex` through `WebFetch` before recording an eleventh refusal** — the cheapest open action on this shelf, and the same mistake `P855` just cost four passes elsewhere.
+
+🔴 **The EMEA channel is behind the shelf for an EIGHTH time** (`intel/market.md`): it returned a Council of Europe conference dated **October 2024** and a Workday study from **2023**, against this shelf's three-channel-verified `Regulation (EU) 2026/1744`. 🟡 `Gap 308` is **not** re-dated on it (`P505`). 🔴 **Declared gap: no EMEA adoption rate, no national ministry guidance, no EMEA edtech vendor returned.**
+
+🟡 **`P471`'s language-blind class grew by 2, and it is this pass's own prose.** 🟢 Measured against HEAD: gap sentences with a region **88 → 92**, language-blind **19 → 21**. 🔴 **Both new rows are this pass's EMEA declared gaps**, and both scope as `SIN-ALCANCE` as shipped but **`CANAL` with `MARKERS_EN`** — 🟢 so they are correctly-formed **channel**-scope gaps that `gap_gate.py` declines to judge because its markers are Spanish-only. 🔵 **`P471` named the fix — fold `MARKERS_EN` back into `gap_gate.py` — and it is STILL unbought.** 🟡 **Not bought here on purpose:** it changes a gate's verdicts tree-wide and that blast radius needs its own measurement, which this pass spent on `P854`. 🟢 Recorded with the number so the class does not grow unobserved. 🟢 `P370` and `P598` sweeps are **byte-identical to HEAD** (6 / `CONTRADICHO=1` / `NO-CLAIM=5`; 14 rows / `RANCIA=1`), and `P239` reports the **same 15** findings as HEAD — 🟢 **this pass introduced no new table or freshness finding.**
+
+🟡 **`Gap 331`** — carried; the Packagist published-zip read stays `FETCH-REFUSED-403`. 🔵 **`P855` offers a cheap retry here too** — the 403 was `curl`'s.
+🔴 **`Gap 325`** — carried, unmeasured: `educredentials/ec-issuer` still the only Open Badges 3.0 + ELM + OID4VCI implementation on this shelf, still without a licence.
+🟢 **`Gap 300`** — `p852-battery-shelf-gate` is a ninth single-file folder, green however invoked. 🟢 **`Gap 312`/`327`** — the four-shape family is unchanged. 🟢 **`Gap 309`**, **`Gap 310`**, **`Gap 311(b)`**, **`Gap 294b`**, **`Gap 284`**, **`Gap 267`**, **`Gap 303`**, **`Gap 318`**, **`Gap 330`** limb 3 — carried, unmeasured this pass.
+
+🔴 **Standing item for pass 78, stated so it is not quietly dropped:** 🟢 **`P855` has three unspent applications, all cheap, all pre-registered here:** (i) `eur-lex` through `WebFetch` (`Gap 308`, ten refusals); (ii) `github.com/<owner>/<repo>/releases` through `WebFetch` for the `OpenTutor` eight-fork feeds (the second named instrument, still unbought); (iii) Packagist's `dist.url` through a non-`curl` tool (`Gap 331`). 🔵 **Pass 77 proved the pattern pays; pass 78 should spend it rather than re-derive it.**
+
 ## 🟢 Seventy-sixth pass, 2026-10-09 — `Gap 330`'s **PyPI limb CLOSES** and its Packagist limb becomes `Gap 331` with a **named mechanism**; 🔴 **a defect is found in the shelf's own SHARED classifier and fixed**; the **`P85` standing item is DISCHARGED as stale**; `Gap 308` refused a **ninth** time; `P845`–`P849` adopted
 
 ⏱️ **Eighth pass of this date.** Pass 75 wrote to this file; this section sits above it and supersedes only the claims it names. **Append-only.**

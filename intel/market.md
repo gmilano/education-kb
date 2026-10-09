@@ -4,6 +4,97 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-seventh pass, 2026-10-09 — the regional limbs are **saturated for a fifth pass (16/16 shelved)**, the EMEA channel is behind the shelf for an **eighth** time, and the pass's new licence finding **re-prices one opportunity in every region**
+
+⏱️ **Ninth pass of this date.** Pass 76 wrote to this file; this section sits above it and supersedes only the claims it names. **Append-only.**
+
+### 🟢 The channel audit, as a number, continuing pass 76's
+
+| limb | candidates returned | already shelved | 🔴 unshelved |
+|---|---|---|---|
+| North America | 6 | 6 | **0** |
+| EMEA | 2 | 2 | **0** |
+| APAC | 5 | 5 | **0** |
+| LATAM | 9 | 9 | **0** |
+| **regional total** | **22** | **22** | 🔴 **0** |
+| global limbs | 12 | 12 | **0** |
+
+🟢 Gated by `compose/code/p852-battery-shelf-gate/result.2026-10-09.tsv`, word-bounded with the substring control beside each count (`P840`) and the positive control run **before** any zero was believed (`P849`: `Moodle` **125**, `Open edX` **14**, `IESALC` **8**, `IDB` **4**).
+
+### 🔴 🆕 `P853` — the gate was **contaminating its own corpus**, and every count it published was wrong
+
+🔴 **The first run of this pass's gate counted its OWN input and output files as shelf evidence.** 🟢 `candidates.input.tsv` and `result.2026-10-09.tsv` contain the candidate strings by construction, so the probe wrote a name, grepped, and found itself. 🔴 It also greped `.git/` pack files and merged `archive/` into the live shelf.
+
+🟢 **Measured, before and after self-exclusion:**
+
+| token | contaminated | 🟢 clean (live only) |
+|---|---|---|
+| `Moodle` (control) | 209 | **125** |
+| `OpenEduCat` | 79 | **50** |
+| `ai-agents-for-beginners` | 32 | **24** |
+| `RAISE Act` | 3 | **2** |
+| `UPC` | 4 | **1** |
+
+🔵 **No verdict flipped — and that is the trap.** 🔴 **Every published COUNT would have been inflated**, and on the thin candidates two of three or four "shelf files" were the probe's own. 🟢 **`P853` adopted:** a probe excludes its own artefacts from the corpus it measures, and counts live shelf separately from `archive/`. 🔴 **Self-contamination biases every verdict toward `SHELVED` — the error that SUPPRESSES a finding, and so the exact mirror of `P849`.**
+
+### 🔴 The EMEA channel is behind the shelf, on the same instrument, for the **eighth** time
+
+🔴 **What the channel returned this pass:** a Council of Europe working conference on regulating AI in education dated **October 2024**, a Workday adoption study from **2023**, and CompTIA/Bandwidth enterprise-IT outlooks that are **not education**.
+
+🟢 **What this shelf holds, verified by three channels in pass 58:** `Regulation (EU) 2026/1744` of **8 July 2026**, the Annex III clock deferred to **2027-12-02**, Article 50 untouched. 🔴 **The channel offered nothing within two years of that.** 🟡 `Gap 308` is **not** re-dated on a channel this far behind (`P505`); `eur-lex.europa.eu` remains refused (`Gap 308`, now a **tenth** consecutive refusal this date).
+
+🔴 **Declared gap, so silence is not read as coverage:** 🔴 **no EMEA school or university adoption RATE, no national ministry AI guidance, and no EMEA edtech vendor was returned by this pass's EMEA limb.** 🟢 The limb is the weakest of the four and has been for eight passes.
+
+### 🟢 What the pass adds regionally: the **CC-abbreviation finding, placed** — and it is an OER finding, so it lands everywhere
+
+🔵 `P854` (detail in `repos/foundations.md`) means that until this pass, a payload declaring `CC-BY-NC-SA` **as the abbreviation** — the form a README uses — classified as `CC-UNSPECIFIED` and returned **commercial use ALLOWED**.
+
+🔴 **OER is published `CC-BY-NC-SA` more than under any other grant**, and every region below runs on OER. 🟢 The correction is therefore not a code note; it is a **diligence correction in every regional engagement that reuses open courseware.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **Regulatory posture (all already shelved, re-confirmed this pass by a sixth-candidate limb):** **Maryland** and **Oklahoma** bar AI from high-stakes student decisions such as final grading or placement without documented human oversight; **Texas** `TRAIGA` adds consumer-facing transparency duties; **New York**'s `RAISE Act` does not bite until **2027**; **FERPA** remains the operative federal instrument; a December executive order directs challenges to conflicting state AI laws, so 🟡 **states stay the primary driver**. 🟡 **Boston Public Schools making AI fluency a graduation requirement from September 2026** was returned again by a newsletter-grade channel and is 🔴 **still not adopted as a shelf fact** — single-channel, unverified at source, for the third pass.
+
+🟢 **Opportunity — unchanged and now cheaper to evidence: the approval gate is the sellable artefact, not the tutor.** 🔵 Two states require human oversight of grading. 🟢 `mcp-allowlist-gateway/gateway.py` with `putGrade` **floored** is that control in code, **34/34** green this pass.
+
+🟡 **New this pass — OER diligence is a North America deliverable too.** 🔵 US K-12 open courseware leans heavily on `CC-BY-NC-SA` collections. 🟢 **`P854` means the obligations memo now answers NC and ND correctly instead of silently clearing them**, which is the difference between a reusable district deliverable and one that cannot be sold on.
+
+### EMEA
+
+🟢 **Regulatory posture (shelved, re-confirmed from this shelf and NOT from this pass's channel):** education is **Annex III high-risk** under the EU AI Act where AI affects access, progression or assessment; the Annex III clock is deferred to **2027-12-02**; **Article 50** transparency is already running.
+
+🟢 **Opportunity — the deferral is still the strongest regional argument on this shelf**, and the build window is now **26 months**. 🟢 Route A of `P850` remains the compliance-shaped build: permissive end to end, floored grade-write for the human-oversight duty.
+
+🔴 **Honest gap, stated plainly:** this pass's EMEA limb returned **nothing current** (above). 🟢 The regional claim above rests on pass 58's three-channel verification, **not** on anything measured this pass, and is labelled so.
+
+### APAC
+
+🟢 **Regulatory posture (shelved, re-confirmed):** **Vietnam** names education high-risk including **automated assessment**; **South Korea**'s AI Framework Act is in its pilot year with a penalty grace period; **Taiwan**'s AI Basic Act passed; **Singapore** and **Japan** remain voluntary-guideline. 🟡 This pass's limb added only **commercial-vendor motion** — a Pearson/TCS AI learning alliance, LearnUpon's Sydney HQ with AI course authoring, NIIT MTS, Alteryx Academy, and OpenAI appointing an ANZ policy lead — 🟢 **all already shelved, none a regulatory fact.**
+
+🟢 **Opportunity — one codebase, per-jurisdiction policy, the gate as the seam.** 🟢 The **floor set** is the jurisdiction variable: `putGrade` floored in Vietnam, advertised in Singapore.
+
+🟡 **Honest gap, carried for a second pass:** 🔴 **no APAC school or university adoption rate was returned**, and the vendor aggregates offered are single-channel and **not adopted**.
+
+### LATAM
+
+🟢 **Adoption posture — re-confirmed and now cross-checked on two channels in the same pass:** UNESCO **IESALC** across **200 institutions in 19 countries** — **87%** use AI in at least one area, **73.5%** in teaching, research **57.0%**, administration **34.1%**, 🔴 **only 26% hold any formal framework**; private non-profit **84%** vs public **68%** vs private for-profit **52%**. 🟢 The **Digital Education Council** LATAM survey (**30 000+** responses, **29** institutions, with Tec de Monterrey's Institute for the Future of Education) reports **92% of students and 79% of faculty** actively using AI.
+
+🟡 **And the two channels disagree in a way worth recording rather than averaging:** 🔴 IESALC measures **institutions** (87% using, 26% governed); DEC measures **people** (92% of students). 🔵 **They are not the same denominator**, and a deck that quotes "92%" beside "26%" as if both described institutions is comparing a headcount to an org chart. 🟡 The teaching-use figure also appears as **73.5%** and **74%** in two renderings of the same IESALC work — 🟢 the finer figure is used here and the variance is declared.
+
+🟢 **Regulation:** 🔴 **no unified regional framework.** Chile leads with a national AI policy since 2021 and a bill in discussion; Brazil and Colombia hold national strategies but **no education-specific rule**; in Mexico, **SEP**, **ANUIES** and the Observatorio IA issue recommendations that 🔴 **lack binding force**. 🟢 The **IDB** frames the choice as a trilemma of rights, innovation and sovereignty, and its **ILIA** index tracks readiness across 19 countries.
+
+🟢 **Opportunity — the 87%/26% gap is still the clearest governance engagement on this shelf**, and `P854` sharpens its deliverable: 🔵 an institution adopting its first AI framework usually reuses OER, and 🔴 **that OER is mostly `CC-BY-NC-SA`**. 🟢 The obligations memo now returns **PROHIBITED** on those correctly, so the framework it seeds is not built on an invented permission.
+
+### Global
+
+🟢 **Market figures, carried and still disputed across sources — none adopted as this shelf's figure:** The Business Research Company puts AI-in-education at **USD 10.6 bn (2026)** from **USD 7.52 bn (2025)**, CAGR **40.9%**; IMARC projects **USD 6.4 bn (2025) → USD 79.6 bn (2034)**; a third source models **~28% annual growth 2026-2036**. 🔴 **A 2034 spread this wide is not a forecast, it is three methodologies**, and the shelf records the spread rather than picking one. 🟡 AI-tutor segment **USD 1.63 bn (2024) → USD 7.99 bn (2030)** (single-channel). 🟢 Student adoption **66% (2024) → 92% (2025)**, with **~86%** of higher-ed students using AI as a primary research tool entering 2026; 🔴 only **10%** of institutions hold formal AI guidelines and **71%** of US teachers report no AI training.
+
+🟢 **Opportunity — the cross-region constant is unchanged:** every region regulates the same two acts, **automated assessment** and **human oversight of it**. 🟢 So the component worth building once is the **gated AGS writer**; the jurisdiction changes the floor set, not the architecture.
+
+🆕 🟢 **And a second global constant, new this pass:** 🔴 **every region's courseware reuse runs through CC attributes that this shelf's own classifier could not read until today.** 🔵 **A licence instrument is not regional infrastructure — it is the one asset that pays off in all five buckets at once.**
+
 ## 🟢 Seventy-sixth pass, 2026-10-09 — the regional limbs are **saturated for a fourth pass (18/18 shelved)**, the EMEA channel is again **behind the shelf** on the same instrument, and `P849` stops this pass from inventing a LATAM channel it already holds
 
 ⏱️ **Eighth pass of this date.** Pass 75 closed earlier today. **Append-only: this section is new; nothing below it was rewritten. The live `## Opportunities by region` block is the one in this section; pass 75's has been retitled *superseded* per this file's convention.**
@@ -41,7 +132,7 @@ updated: 2026-10-09
 
 🔵 **The substantive measurement is in `repos/foundations.md`** — the LTI 1.3 adapter's three implementation routes carry three different licence obligations, and the Python route is the only one with copyleft in its closure. 🟢 **It lands differently per region, and that is the part a regional engagement can use.**
 
-## Opportunities by region
+## Opportunities by region — superseded (the live block is at the top of this file)
 
 ### North America
 

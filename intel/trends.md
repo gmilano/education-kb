@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-seventh pass, 2026-10-09 — four passes of "the channel is exhausted" turn out to have been **"the channel is unbought"**; the tier of the yield is the real trend; `P852`–`P855` adopted
+
+⏱️ **Ninth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 The trend this pass actually establishes: **exhaustion and unavailability look identical from inside one tool**
+
+🟢 Passes 73–76 each recorded the discovery channel as **saturated**, and each named the same three unbought replacements. 🟢 This pass bought one — GitHub `/trending` with a language filter — and it returned 🔴 **12 unshelved repositories against the prose battery's 0.**
+
+🔵 **The field was never exhausted.** 🔴 What was exhausted was **one query shape on one tool**, and four consecutive passes generalised that into a statement about the world.
+
+🟢 **`P855` adopted:** 🔴 **a channel is dead only when every tool that can reach it has been tried.** 🟢 Measured this pass: `github.com/trending` is **403 to `curl`** and **200 to `WebFetch`**, same host, same path, same session. 🔵 **A 403 is a tool's verdict, not a host's** — and `P844`'s three-mechanism vocabulary needs this fourth distinction, because *mechanism #2, session scope* was being written where *"this tool cannot"* was the fact.
+
+🟡 **And the correction is immediately worth money twice more:** the two still-unbought instruments — `OpenTutor`'s fork release feeds and conference artefact tracks — were both costed against `api.github.com`'s **403**. 🟢 **That 403 is `curl`'s and the MCP layer's; `WebFetch` against `github.com/<owner>/<repo>/releases` has never been tried.**
+
+### 🔴 The second trend, and it is a planning fact: the new channel is **rich in curriculum, empty of agents**
+
+| tier | unshelved this pass |
+|---|---|
+| course / textbook / exercise-bank repos | 🟢 **8** |
+| general-purpose agents with no education seam | 🟡 **4** |
+| 🔴 **education-domain agents** | 🔴 **0** |
+
+🔴 **Four consecutive passes of zero agents is no longer plausibly a channel artefact** — a channel that found 8 new in-domain repositories the same hour found no agent. 🟢 **The agent tier is empty because it IS empty**, and `Gap 316`'s main limb (a permissive AI-grading component with an LTI 1.3 + AGS seam) stays open on a now much stronger measurement than "saturated".
+
+🔵 **The planning consequence for a studio:** 🔴 **there is nothing to adopt at the agent layer for education**, and there is a lot to adopt at the **curriculum-substrate** layer. 🟢 **So the agent layer is BUILD, and `P850`'s routes are what it is built on; the courseware layer is REUSE, and the licence instrument is what makes the reuse safe.**
+
+### 🟢 The third trend: this shelf's own instruments keep failing in the **permissive** direction, and that is now a pattern with four data points
+
+| pass | defect | direction |
+|---|---|---|
+| 76 | `P845` — Python's composite `LICENSE` read as `0BSD`, not `PSF-2.0` | 🔴 **declared LESS obligation than real** |
+| 76 | `P849` — a malformed grep's zero read as an absent fact | 🔴 would have **fabricated** a finding |
+| 77 | `P853` — the gate counted its own artefacts as shelf evidence | 🔴 biased toward `SHELVED`: **suppresses** a finding |
+| 77 | `P854` — hyphenated `CC-BY-NC-*` lost NC/SA/ND, then returned commercial **ALLOWED** | 🔴 **invented permission** over a NonCommercial work |
+
+🔵 **Three of four err toward "you may use this".** 🔴 **That is the direction that costs the deliverable rather than the opportunity**, and it is the direction a licence shelf must be biased against. 🟢 **Standing instruction, adopted: when an instrument's error direction is unknown, assume it over-permits and build the negative control FIRST** — every fix this pass and last shipped its negative half (`P854` keeps CC-BY and CC-BY-SA commercial, `P845` keeps a canonical 0BSD at 0BSD).
+
+### 🟢 Protocols adopted
+
+🟢 **`P852` — the battery's candidates are gated against the shelf by an ARTEFACT, not by recollection.** 🔵 Word-bounded, substring control beside each count, positive control first, verdicts `SHELVED` / `ARCHIVE-ONLY` / `UNSHELVED`. 🟢 `compose/code/p852-battery-shelf-gate/`.
+
+🟢 **`P853` — a probe EXCLUDES ITS OWN ARTEFACTS from the corpus it measures, and counts live shelf separately from `archive/`.** 🔴 This pass's first run wrote the candidate names to a TSV, greped the tree, and found itself: `Moodle` **209** against a true **125**. 🔵 **Self-contamination is the mirror of `P849`** — `P849`'s broken zero fabricates a finding, `P853`'s inflated count suppresses one — and both are invisible without a control.
+
+🟢 **`P854` — a CC grant is read from the ABBREVIATION and the canonical URL, not only from the spelled-out name**, and all three attributes (NC/SA/ND) are emitted whatever the separator. 🔴 Detail in `repos/foundations.md`. 🔵 **The axis is this shelf's subject: OER is published `CC-BY-NC-SA` more than under any other grant.**
+
+🟢 **`P855` — a channel is dead only when EVERY tool that can reach it has been tried; a 403 is that tool's verdict.** 🔴 Four passes of "the channel is exhausted" were one tool's refusal.
+
+### 🟡 Carried, and one re-characterised
+
+🟢 **`Gap 316` main limb** — open, on a stronger measurement (above). 🟢 **`Gap 316(i)`** — wiring limb still the highest-value unmeasured number on this shelf.
+🔴 **`Gap 308`** — a **tenth** consecutive refusal; `eur-lex.europa.eu` **403 to CONNECT**. 🟡 **And `P855` applies to it too**: the refusal has only ever been measured through `curl`. 🟢 **Pass 78 should probe `eur-lex` through `WebFetch` before recording an eleventh refusal** — the cheapest open action on this shelf.
+🆕 🔴 **`Gap 332`** — opened: a grant declared late in a README is outside the classifier's measured 4000 B window, and `commercial_use_ok` resolves the resulting `UNCLASSIFIED` **permissively**.
+🟢 **`Gap 325`** — carried, unmeasured this pass. 🟢 **`Gap 331`**, **`Gap 312`/`327`**, **`Gap 300`**, **`Gap 309`**, **`Gap 310`**, **`Gap 311(b)`**, **`Gap 294b`**, **`Gap 284`**, **`Gap 267`**, **`Gap 303`**, **`Gap 318`** — carried, unmeasured.
+
 ## 🟢 Seventy-sixth pass, 2026-10-09 — a trend this shelf can state because it measured its own instrument: **the licence risk in education infrastructure is a TRANSITIVE risk, and the tools everyone uses to look for it read only the root**
 
 ⏱️ **Eighth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

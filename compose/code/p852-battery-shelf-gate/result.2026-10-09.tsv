@@ -1,0 +1,44 @@
+=== P853 corpus (self-excluded: compose/code/p852-battery-shelf-gate) ===
+live=343 archive=8
+
+=== P849 positive control (must all be non-zero) ===
+CONTROL-OK	Moodle	125
+CONTROL-OK	Open edX	14
+CONTROL-OK	IESALC	8
+CONTROL-OK	IDB	4
+
+limb	candidate	live_files	live_subs	archive_files	verdict
+global/agents	microsoft/ai-agents-for-beginners	24	98	2	SHELVED
+global/agents	pguso/agents-from-scratch	9	79	4	SHELVED
+global/agents	Hermes Agent (Nous Research)	5	73	6	SHELVED
+global/agents	AutoGPT	2	8	3	SHELVED
+global/trending	rohitg00/ai-engineering-from-scratch	22	147	7	SHELVED
+global/trending	rasbt/LLMs-from-scratch	23	78	7	SHELVED
+global/trending	MadsLorentzen/ai-job-search	2	5	1	SHELVED
+global/trending	speedyapply/2026-AI-College-Jobs	5	42	4	SHELVED
+global/verticals	Chamilo	37	183	8	SHELVED
+global/verticals	ILIAS	33	219	8	SHELVED
+global/verticals	Sakai	38	320	8	SHELVED
+global/verticals	OpenEduCat	50	618	8	SHELVED
+na/policy	Boston Public Schools AI fluency	3	6	2	SHELVED
+na/policy	TRAIGA (Texas)	4	7	5	SHELVED
+na/policy	RAISE Act (New York)	2	4	0	SHELVED
+na/policy	Maryland grading oversight	8	128	8	SHELVED
+na/policy	Oklahoma grading oversight	7	110	8	SHELVED
+na/policy	FERPA	11	57	8	SHELVED
+emea/policy	Council of Europe working conference	3	59	2	SHELVED
+emea/policy	EU AI Act	15	366	8	SHELVED
+apac/players	Pearson TCS AI learning alliance	28	93	5	SHELVED
+apac/players	NIIT MTS	5	14	3	SHELVED
+apac/players	LearnUpon Sydney Create+	6	30	5	SHELVED
+apac/players	Alteryx Academy	3	12	2	SHELVED
+apac/policy	OpenAI ANZ policy lead	2	2	2	SHELVED
+latam/channels	UNESCO IESALC	8	139	5	SHELVED
+latam/channels	UNU-IAS working paper	6	30	2	SHELVED
+latam/channels	Digital Education Council LATAM survey	6	63	4	SHELVED
+latam/channels	IDB ILIA index	2	639	1	SHELVED
+latam/players	Tecnologico de Monterrey	4	42	4	SHELVED
+latam/players	UNAM	2	33	5	SHELVED
+latam/players	UPC Peru	1	32	1	SHELVED
+latam/policy	Chile national AI policy	12	276	8	SHELVED
+latam/policy	Mexico SEP ANUIES	2	10	1	SHELVED

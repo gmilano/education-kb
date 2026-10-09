@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-seventh pass, 2026-10-09 — the newly-bought `/trending` channel supplies a **permissive curriculum substrate**, and `P854` makes the courseware screen that assembling it requires actually work
+
+⏱️ **Ninth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔵 What changed, restated against what pass 76 left
+
+🟢 Pass 76 left two patterns — `P850` (the LTI 1.3 + AGS adapter, route-priced on licence) and `P851` (the closure gate as a client deliverable). 🔴 **Both price the CODE a studio ships. Neither prices the CONTENT it ships**, and an education engagement ships both.
+
+🔴 **And the content screen was broken until this pass.** 🟢 `P854` (`repos/foundations.md`): a `CC-BY-NC-SA` or `CC-BY-NC-ND` pack declared as the **abbreviation** — the form a README uses — classified as `CC-UNSPECIFIED` and returned commercial use **ALLOWED**. 🔵 **`P856` below is the pattern that screen exists for, and it could not have been written honestly before today.**
+
+---
+
+### 🟢 `P856` — **the permissive course pack: assemble from trending curriculum repos, screen every asset on CC attributes, deliver through the gated AGS writer**
+
+🔵 **The problem this solves.** A studio winning a "build us an AI/data curriculum" engagement has two bad defaults: 🔴 write every notebook from scratch (expensive), or 🔴 fork the best-looking repo on GitHub Trending (and inherit a grant nobody read). 🟢 This pass measured a third path: **eight permissive, payload-verified teaching repositories**, plus the instruments to screen and deliver them.
+
+**Step 1 — the substrate, every grant read from the payload (`P843`), never from a badge**
+
+| component | family, measured | role in the pack |
+|---|---|---|
+| [`ageron/handson-mlp`](https://github.com/ageron/handson-mlp) | 🟢 **Apache-2.0** (10 175 B) | the ML/DL notebook spine — 🔵 **pick this first: the patent grant is the only one in the table** |
+| [`rasbt/machine-learning-book`](https://github.com/rasbt/machine-learning-book) | 🟢 **MIT** (1 079 B, `LICENSE.txt`) | PyTorch + Scikit-Learn depth, holder-dated **2021-2026** |
+| [`guipsamora/pandas_exercises`](https://github.com/guipsamora/pandas_exercises) | 🟢 **BSD-3-Clause** (1 515 B) | 🟢 **the exercise bank** — the asset `p533` consumes |
+| [`ed-donner/agents`](https://github.com/ed-donner/agents) · [`llm_engineering`](https://github.com/ed-donner/llm_engineering) | 🟢 **MIT** (1 066 B each) | the agentic-engineering and LLM tracks |
+| [`jamwithai/production-agentic-rag-course`](https://github.com/jamwithai/production-agentic-rag-course) | 🟢 **MIT** (1 068 B) | the production-RAG module |
+| [`anthropics/claude-cookbooks`](https://github.com/anthropics/claude-cookbooks) | 🟢 **MIT** (1 065 B) | lab recipes |
+
+🔴 **Two rows that must NOT enter the pack, and both look fine from the trending list:**
+
+| 🔴 excluded | why |
+|---|---|
+| [`xiaolai/the-craft-of-selfteaching`](https://github.com/xiaolai/the-craft-of-selfteaching) | 🔴 **`CC-BY-NC-ND-3.0`** — NonCommercial **and** NoDerivatives. No grant file; declared in README line 83. 🔵 **No commercial use, no adaptation: there is no version of this engagement that may include it.** |
+| [`wesm/pydata-book`](https://github.com/wesm/pydata-book) | 🟡 **MIT-SCOPED** — `COPYING`'s subject line is *"Code examples from …, 3rd Edition"*. 🟢 **The code examples may ship; the book prose may not.** Take the notebooks, leave the text. |
+
+**Step 2 — screen EVERY asset, including the ones that arrive as content rather than code**
+
+```bash
+. compose/code/lib/license_family.sh
+
+# the grant as the payload gives it -- file, or the README line when there is no file
+osi_family_of  "$(cat LICENSE)"        # -> MIT | Apache-2.0 | BSD | CC-BY-NC-SA-4.0 | ...
+commercial_use_ok "$(cat LICENSE)"     # exit 0 = may ship commercially, 1 = may NOT
+```
+
+🔴 **This is the step `P854` repaired, and the one a pre-pass-77 run would have got wrong.** 🟢 Measured now: `CC-BY-NC-SA-4.0` and `CC-BY-NC-ND-4.0` as **abbreviations**, and `creativecommons.org/licenses/by-nc-*/<v>` as a **bare URL**, all return **PROHIBITED**; `CC-BY-4.0` and `CC-BY-SA-4.0` correctly stay **ALLOWED**.
+
+🔴 **And the limit you must work around, because it is still open (`Gap 332`):** the classifier reads a **4000 B window** (`P308`, measured). 🔴 A grant declared **late in a long README** falls outside it and returns `UNCLASSIFIED` → **ALLOWED**. 🟢 **So for any repo with no grant FILE, grep the README yourself and classify the LINE:**
+
+```bash
+grep -m1 -iE 'licen[cs]e|CC[ -]BY|版权协议' README.md | xargs -0 -I{} true   # find it
+osi_family_of "$(grep -m1 -iE 'CC[ -]?BY|licen[cs]e' README.md)"            # classify it
+```
+
+**Step 3 — the exercise bank becomes assessable**
+
+🟢 `guipsamora/pandas_exercises` (BSD-3) is a bank of graded tasks; 🟢 `compose/code/p533-qti3-template-emitter` turns items into **QTI 3** so they load into Moodle or Open edX as real assessments rather than static notebooks.
+
+**Step 4 — delivery and grade return, reusing `P850` unchanged**
+
+🟢 Front the pack with the **Route A** adapter of `P850` (Apache-2.0 + BSD-3 + MIT + MIT, four permissive rows) for LTI 1.3, and 🟢 route every grade write through `compose/code/mcp-allowlist-gateway/gateway.py` with **`putGrade` floored** — refused *and never advertised* (**34/34** green this pass). 🔵 That single switch is what satisfies Maryland's and Oklahoma's human-oversight rules, NYC's grading bar, and the EU Annex III oversight duty **with one codebase** (`intel/market.md`).
+
+**Step 5 — the notices file, reusing `P851` unchanged**
+
+🟢 Run the `P851` closure gate over the code the studio writes, 🆕 **and extend its output with a CONTENT table** — one row per source repo, carrying family, holder and the scope note where there is one (`pydata-book`). 🔴 **An MIT/BSD/Apache notice condition is per-asset**, and six of the eight rows above carry one.
+
+**Estimate**
+
+| | |
+|---|---|
+| licence screen of the eight repos (step 2) | 🟢 **under a day** — the instrument is written and green |
+| curriculum selection and de-duplication (steps 1, 3) | 🟡 **2–3 weeks** — judgement, not measurement |
+| LTI 1.3 + floored AGS delivery (step 4) | 🟡 **4–6 weeks**, and 🔴 **`Gap 316(i)`'s wiring number is still unmeasured**, so this is the soft figure in the table |
+| notices + obligations memo (step 5) | 🟢 **2–3 days** per `P851` |
+
+🔵 **What makes this a pattern rather than a reading list:** 🔴 **the agent tier for education is empty** — four passes and three `/trending` slices found no education-domain agent (`intel/trends.md`). 🟢 **So the curriculum layer is REUSE and the agent layer is BUILD**, and this pattern is how the reuse half is made safe enough to sell.
+
 ## 🟢 Seventy-sixth pass, 2026-10-09 — **`P15` stage 3 now reads PAYLOADS, not just names**, and the LTI adapter pattern gets a **licence-priced route choice** instead of a language preference
 
 ⏱️ **Eighth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

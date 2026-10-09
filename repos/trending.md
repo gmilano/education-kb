@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 77) — **12 new repositories, after four passes of zero**, because the instrument pass 76 named was finally bought. 🔴 The purchase immediately found **two chained defects in the shelf's own shared classifier**
+
+🔵 **Append-only: this dated section is new; every section below it is prior history and is unchanged.**
+
+### 🟢 The trending channel, **bought** rather than described
+
+🔴 **Pass 76 wrote:** *"The named next instrument is unchanged and was again not bought: GitHub `/trending` with a language filter."* 🟢 **Bought this pass.**
+
+🔵 **The reason it stayed unbought for four passes is a tool boundary mistaken for a host boundary** (`P855`):
+
+```
+curl  github.com/trending                        403
+curl  github.com/trending/python?since=weekly    403
+curl  github.com/trending/jupyter-notebook       403
+WebFetch  github.com/trending/python?since=weekly    200  (13 repos, ranked, with descriptions)
+WebFetch  github.com/trending/jupyter-notebook       200  (14 repos)
+WebFetch  github.com/trending/typescript             200  (18 repos)
+```
+
+🟢 **45 repositories read at source, ranked, this week.** 🔴 Not a third-party tracker, not a listicle — the first time this shelf has read GitHub's own ranking directly.
+
+### 🟢 The unshelved yield, every grant **read from the payload** (`P843`), never from a badge
+
+🟢 Gated by `compose/code/p852-battery-shelf-gate/trending-result.2026-10-09.tsv`; grants fetched at `raw.githubusercontent.com` (🟢 **200**, the channel `api.github.com` refuses) and classified by `lib/license_family.sh`.
+
+| repo | grant | family (classifier) | holder | bytes |
+|---|---|---|---|---|
+| [`ed-donner/agents`](https://github.com/ed-donner/agents) | `main/LICENSE` | 🟢 **MIT** | Ed Donner (2025) | 1 066 |
+| [`ed-donner/llm_engineering`](https://github.com/ed-donner/llm_engineering) | `main/LICENSE` | 🟢 **MIT** | Ed Donner (2024) | 1 066 |
+| [`ageron/handson-mlp`](https://github.com/ageron/handson-mlp) | `main/LICENSE` | 🟢 **Apache-2.0** | n/a by construction | 10 175 |
+| [`rasbt/machine-learning-book`](https://github.com/rasbt/machine-learning-book) | `main/LICENSE.txt` | 🟢 **MIT** | Sebastian Raschka (2021-2026) | 1 079 |
+| [`guipsamora/pandas_exercises`](https://github.com/guipsamora/pandas_exercises) | `master/LICENSE` | 🟢 **BSD** (3-Clause in text) | Guilherme Samora (2018) | 1 515 |
+| [`wesm/pydata-book`](https://github.com/wesm/pydata-book) | `master/COPYING` | 🟡 **MIT-SCOPED** | Wes McKinney (2022) | 1 138 |
+| [`anthropics/claude-cookbooks`](https://github.com/anthropics/claude-cookbooks) | `main/LICENSE` | 🟢 **MIT** | Anthropic (2023) | 1 065 |
+| [`jamwithai/production-agentic-rag-course`](https://github.com/jamwithai/production-agentic-rag-course) | `main/LICENSE` | 🟢 **MIT** | Jam With AI (2025) | 1 068 |
+| [`xiaolai/the-craft-of-selfteaching`](https://github.com/xiaolai/the-craft-of-selfteaching) | 🔴 **no grant file** | 🔴 **CC-BY-NC-ND-3.0** (README prose) | — | — |
+
+🟡 **`jamwithai/production-agentic-rag-course` was already shelved** (21 live files) — it is listed here because its grant had never been payload-read; it now has one.
+
+🔴 **`xiaolai/the-craft-of-selfteaching` is the one row a studio must not touch.** 🟢 Ten grant filenames swept across `main` and `master`: **all 404**. 🟢 The grant is declared in README **line 83**: *"本书的版权协议为 [CC-BY-NC-ND license]"* → **NonCommercial + NoDerivatives**. 🔴 **No commercial use, no adaptation** — the single most restrictive outcome in this table, on the repo whose trending rank looks most like an education asset.
+
+### 🔴 🆕 And reading that one repo found **`P854`** — two chained defects in `lib/license_family.sh`, both in `P312`'s direction
+
+🔴 **The hyphenated CC abbreviation — exactly how a README writes it — lost every attribute and then lost the commercial verdict.** Detail and fix in `repos/foundations.md`; the measurement:
+
+| payload | before | after |
+|---|---|---|
+| `CC-BY-NC-SA-4.0` | 🔴 `CC-UNSPECIFIED` → commercial **ALLOWED** | 🟢 `CC-BY-NC-SA-4.0` → **PROHIBITED** |
+| `CC-BY-NC-ND-4.0` | 🔴 `CC-UNSPECIFIED` → **ALLOWED** | 🟢 `CC-BY-NC-ND-4.0` → **PROHIBITED** |
+| `creativecommons.org/licenses/by-nc-sa/4.0` | 🔴 `CC-UNSPECIFIED` → **ALLOWED** | 🟢 `CC-BY-NC-SA-4.0` → **PROHIBITED** |
+| `CC BY-NC-SA 4.0` (spaced — the form that always worked) | 🟢 `CC-BY-NC-SA-4.0` | 🟢 unchanged |
+
+🔵 **The axis is this shelf's own subject:** 🔴 **OER is published `CC-BY-NC-SA` more than under any other grant.**
+
+🟢 **Blast radius measured, not asserted: ZERO contaminated published verdicts** — `CC-UNSPECIFIED` appears **0 times as a verdict** on the live shelf (`PRE`-write, per `P428`; its 19 `POST`-write occurrences are this pass's own write-up of the defect), and the 23 129 `CC-BY-4.0` rows are OpenStax content censuses (BY-only, no attribute to lose). 🔵 **Latent exactly like `P845`**, because no prior pass had fed the classifier an abbreviation.
+
+### 🟡 Declared gaps
+
+🔴 **`typescript` returned 18 repos and 0 in-domain** — the slice is not worth re-reading weekly; `jupyter-notebook` returned 9 in-domain of 14 and is the productive one.
+🔴 **No star counts adopted** (`p351`): the pages rank but do not expose counts to this fetch, and `api.github.com` stays **403 (scope)**.
+🔴 **No education-domain AGENT in any slice** — the yield is entirely the teaching-materials tier.
+
 ## 🟢 2026-10-09 (pass 76) — **0 new repositories for the fourth consecutive pass**; the week's repository work is an instrument, and it found a defect in an older one
 
 🔵 **Append-only: this dated section is new; every section below it is prior history and is unchanged.**
