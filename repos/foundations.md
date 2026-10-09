@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-09
 ---
 
+## Curated shelf, 2026-10-09 — pass 87: **every open-source SIS on the shelf is copyleft**, and three licences live outside the root
+
+**Method.** Existence via `git ls-remote`; licence classified from the title block of the payload at
+`raw.githubusercontent.com/<slug>/HEAD/<file>`. Star counts are **omitted where not verified this
+pass** rather than carried over unverified. 22 repos probed, 22 exist, 0 invented.
+
+### 🟢 Permissive foundations — Globant can build on these without copyleft reach
+
+| Repo | Licence | Layer | Why it matters |
+|---|---|---|---|
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | **MIT** (1 097 B) | LMS | 🟢 **Offline-first LMS.** The single most important row for low-connectivity LATAM/APAC work — see pattern P1 |
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** (10 982 B) | LMS | Mature European LMS (Swiss/German HE); permissive, unlike Moodle |
+| [oppia/oppia](https://github.com/oppia/oppia) | **Apache-2.0** (11 358 B) | Courseware | Interactive lesson authoring with built-in misconception handling |
+| [Coursemology/coursemology2](https://github.com/Coursemology/coursemology2) | **MIT** (1 119 B) | LMS + autograding | Gamified CS course platform (NUS lineage, APAC) |
+| [Selleo/mentingo](https://github.com/Selleo/mentingo) | **MIT** (1 062 B) | AI-native LMS | 🟢 Rare **MIT** LMS that ships an AI mentor rather than bolting one on |
+| [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | **Apache-2.0** (11 361 B) | Interop | **LTI 1.3 tool provider.** The standards-compliant door into Canvas/Moodle/Blackboard |
+| [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) | **MIT** (1 070 B) | Interop | LTI 1.3 in Python — pairs with a Python agent stack |
+| [jupyterhub/ltiauthenticator](https://github.com/jupyterhub/ltiauthenticator) | **BSD-3-Clause** (1 528 B) | Interop | LTI launch into JupyterHub; the lab-course path |
+| [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | **Apache-2.0** (11 357 B) | Learning records | **xAPI LRS on SQL.** Where tutor-interaction evidence lands |
+| [openfun/ralph](https://github.com/openfun/ralph) | **MIT** (1 094 B) | Learning records | xAPI/LRS toolbox from **France Université Numérique** — EMEA-institutional |
+| [opensalt/opensalt](https://github.com/opensalt/opensalt) | **MIT** (1 080 B) | Competency | **CASE** competency-framework registry — maps agent output to standards |
+| [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | **MIT** (1 091 B) | Autograding | Interactive learning + autograding, **TU München**; production at scale in EMEA |
+| [autolab/Tango](https://github.com/autolab/Tango) | **Apache-2.0** (11 324 B) | Autograding | CMU's sandboxed grading job runner |
+| [kit-sdq/autograder](https://github.com/kit-sdq/autograder) | **MIT** (1 068 B) | Autograding | Static-analysis grader from **KIT** |
+| [uhafner/autograding-github-action](https://github.com/uhafner/autograding-github-action) | **MIT** (1 095 B) | Autograding | Autograding as a **CI action** — lowest-friction entry point |
+| [openedx/XBlock](https://github.com/openedx/XBlock) | Apache-2.0 *(README-declared)* | Courseware | 🟡 Component API for Open edX. **Root `LICENSE.txt` is absent at `HEAD`** though the README points to it; grant taken from the README statement |
+
+**16 permissive rows.**
+
+### 🟡 Copyleft foundations — real, widely deployed, but plan the licence boundary
+
+| Repo | Licence | Layer | Note |
+|---|---|---|---|
+| [moodle/moodle](https://github.com/moodle/moodle) | **GPL-3.0** (35 147 B) | LMS | 🔵 Licence is at **`COPYING.txt`**, not `LICENSE` — a root-only probe reports "no licence" and is wrong |
+| [openedx/edx-platform](https://github.com/openedx/edx-platform) | **AGPL-3.0** (35 136 B) | LMS | MOOC-scale; AGPL reaches network use — the decisive constraint for hosted offerings |
+| [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | **GPL-3.0** (35 147 B) | LMS | Strong LATAM/Spanish-language install base |
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | **ECL-2.0** (11 120 B) | LMS | 🔵 **Educational Community License** — Apache-2.0 derivative with an education-specific patent clause. Permissive in practice; flagged separately because it is not Apache-2.0 |
+| [frappe/erpnext](https://github.com/frappe/erpnext) | **GPL-3.0** (35 149 B) | ERP | Base for `frappe/education` |
+
+### 🔴 Student Information Systems — the shelf's real licence gap
+
+| Repo | Licence | Finding |
+|---|---|---|
+| [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | **GPL-2.0** (15 214 B) | Full SIS; GPL-2.0 |
+| [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | GPL *(README-declared)* | 🟡 **No licence file at root.** README points to `docs/License.txt`. Repo exists (`5d546f20117e`) |
+| [frappe/education](https://github.com/frappe/education) | GPL-3.0 *(declared)* | 🔴 **`LICENSE` is a 19-byte pointer** reading `License: GNU GPL V3` — it *names* a licence and contains **no grant text** |
+| [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | **LGPL** (8 241 B) | 🟡 `LICENSE` opens *"For copyright information, please see the COPYRIGHT file"* — pointer-style; LGPL body follows |
+
+🔴 **Declared gap, with consequence.** **Not one permissively-licensed open-source SIS exists on this
+shelf.** All four student-information systems probed are GPL-2.0, GPL-3.0 or LGPL. Any Globant engagement
+needing to *embed and redistribute* SIS code hits copyleft; the clean pattern is to **integrate across a
+boundary** (OneRoster/LTI, per pattern P2) rather than fork an SIS.
+
+🔵 **Three licences out of four live outside `LICENSE`** (`moodle` → `COPYING.txt`, `openSIS` →
+`docs/License.txt`, `XBlock` → absent-but-declared). A pipeline probing only `LICENSE` would have
+reported all three as unlicensed and dropped the most-deployed LMS in the world.
+
 ## 🟢 Eighty-sixth pass, 2026-10-09 — the autograding channel's **tail is a COMPONENT tier**, and it completes the pass-85 platforms rather than competing with them. `P935` names the exhaustion boundary; the **NCSA** family gets its second and third rows; `P800`'s holder tier finally pays
 
 ⏱️ **Eighteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

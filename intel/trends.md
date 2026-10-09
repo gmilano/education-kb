@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-09
 ---
 
+## Trends, 2026-10-09 — pass 87
+
+### 1. 🟢 Governance has overtaken capability as the buying trigger
+Every region measured shows adoption ahead of policy: 18 % of US teachers have had any formal guidance,
+~20 % of universities have an AI policy, ~86 % of SEA teachers use AI untrained, UNESCO IESALC reports
+LAC governance lagging adoption. 1EdTech names 2026 the year of the shift *from experimentation to
+governance*. **The product being bought in 2026 is oversight, not intelligence.**
+
+### 2. 🟢 Regulators are legislating AI's *role*, which fixes system architecture
+This is new this year and it is binding, not advisory:
+- **Idaho SB 1227** (+ OK, MD): AI may not be the **primary basis** for grading, discipline or placement.
+- **EU AI Act**: admissions/assessment/scoring are **high-risk**; **emotion recognition in education is
+  prohibited outright** (since 2 Feb 2025).
+- **Vietnam Law 134/2025/QH15**: education high-risk, automated assessment and behavioural monitoring named.
+- **Mexico**: opt-out right for automated decision-making.
+**Consequence:** a decision-support architecture with a logged human decision point is now a legal
+requirement across three continents, not a design preference. Autonomous grading is a dead product line.
+
+### 3. 🔴 The classroom-surveillance category is being regulated out of existence
+The topic sweep surfaced live projects doing camera-based behaviour reasoning, pose estimation and gaze
+attention tracking (`ASEpochs/ai-digital-teacher`,
+`Gokul-ram-j/Online-Class-Environment-Monitoring-with-Pose-Estimation-and-Attention-Tracking`). These are
+**prohibited in EU education institutions** and named as high-risk behavioural monitoring in Vietnam.
+Developer activity and regulatory direction are pointing opposite ways.
+
+### 4. 🟢 Integration surface shifted to MCP; packaging shifted to "skills"
+The composable unit of education AI changed this window. Verified MIT MCP servers now front the systems of
+record (`anki-mcp-server` 510★, `canvas-mcp`, `moodle-mcp-server`), and the fastest-growing packaging is
+the *agent skill* (`lineage-skill` 453★ Apache-2.0, `universal-examprep-skill` 303★ MIT,
+`education-skills` 107★ MIT). **Build adapters to the institution's LMS/SIS, not another tutor app.**
+
+### 5. 🟡 Pedagogy is becoming an explicit code-level constraint
+Withholding the answer is now a named feature: progressive hints (`algo-sensei` 286★), Bloom 2-sigma
+framing (`Bloom` 285★), diagnosis-first tutoring (`universal-diagnostic-tutor-skill` 242★), "guides without
+giving answers" (`tomai-monorepo`). Aligns with the measured faculty backlash — the sellable tutor is one
+that demonstrably does not do the work for the student.
+
+### 6. 🔴 Faculty sentiment in North America has inverted
+US/Canada faculty intent to use AI fell **76 % → 67 %** year over year — the lowest of any region — and
+**43 % of US/Canada students would support an institution-wide ban**. 2026 is the first year the NA
+education buyer is *less* willing than the year before. Enthusiasm-led pitches will fail there while
+still working in SEA and LATAM.
+
+### 7. 🟢 Connectivity, not model quality, is the binding constraint in emerging markets
+OECD's Digital Education Outlook 2026 documents offline small language models on mobile devices tutoring
+in rural Brazil. Combined with Kolibri's MIT offline-first architecture, **on-device/offline inference is
+the differentiating competency for LATAM and much of APAC public-sector work** — and it is a capability
+most AI-education vendors do not have.
+
+### 8. 🟡 Credentials and competency mapping are the quiet infrastructure bet
+1EdTech flags digital credentials as a core mechanism for skills-based learning and hiring. The
+open-source plumbing exists and is permissive — `opensalt` (MIT, CASE frameworks), `lrsql` (Apache-2.0,
+xAPI), `ralph` (MIT, xAPI) — and is undervalued relative to tutor projects.
+
+### 🔵 Counter-signals and uncertainty, recorded
+- 🔴 **Market sizing for this industry is not usable for planning.** 2026 estimates for AI in education
+  span **USD 10.6 B to USD 23 B**. Growth direction is unambiguous; magnitude is not. Do not put a single
+  figure in a client deck without naming its source and definition.
+- 🔴 **Much of the adoption statistic base is vendor-published** and self-conflicting (teacher adoption
+  quoted anywhere from 53 % to 85 %). Primary sources (RAND, Gallup, Ipsos, IDB, OECD, EdTech Hub,
+  1EdTech, US DoE) are the only ones cited above with attribution.
+- 🔴 **Education AI does not appear on any platform-level GitHub trending list.** It trends only inside
+  its own topic channels — a sourcing fact, and a hint that the open-source supply side is still thin
+  relative to the regulatory demand side.
+
 ## 🟢 Eighty-sixth pass, 2026-10-09 — the licence chokepoint moves a **fourth** time, and this pass it is not a licence FAMILY but a **RIDER**; plus the US regime is revealed as **district delegation**, which changes the shape of the sellable artefact; and the shelf's own measuring instrument is found unreliable across passes
 
 ⏱️ **Eighteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

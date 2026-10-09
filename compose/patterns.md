@@ -4,6 +4,148 @@ region: Global
 updated: 2026-10-09
 ---
 
+## Recipes, 2026-10-09 — pass 87
+
+Every repo named below was existence-checked with `git ls-remote` and licence-read from its payload at
+`HEAD` this pass. **Licence class is stated for each component** because the copyleft boundary is the
+design decision in education: LMS/SIS are copyleft, the interop layer is permissive.
+
+🔴 **Blocked components — do not compose these** (verified this pass):
+`DMontgomery40/mcp-canvas-lms` (no grant), `nirholas/ai-tutor-mcp` (proprietary),
+`minouza/MathCrew` (PolyForm Strict), `vieanderes/understory` *content* (CC BY-NC-SA).
+
+---
+
+### P1 — Offline-first tutoring for low-connectivity public education → **LATAM, APAC**
+*Grounded in the OECD Digital Education Outlook 2026 rural-Brazil pilot (offline SLMs on mobile).*
+
+| Role | Component | Licence |
+|---|---|---|
+| Learning platform | [learningequality/kolibri](https://github.com/learningequality/kolibri) | **MIT** |
+| Local inference | [ollama/ollama](https://github.com/ollama/ollama) | **MIT** |
+| On-device speech | [k2-fsa/sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) | **Apache-2.0** |
+| Tutor loop | [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) or [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | **MIT** |
+| Retention | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | **MIT** |
+
+**Wiring.** Kolibri is the content/progress system of record and already syncs opportunistically; run a
+small quantised model under Ollama on the same device or a classroom hub, expose Anki-backed spaced
+repetition as an MCP tool, and have the Bloom/OpenTutor loop generate practice from Kolibri's local
+channel content. Sherpa-ONNX gives Spanish/Portuguese speech in/out with no network.
+🟢 **Every component is MIT/Apache** — embeddable and redistributable for a ministry client.
+**Why it wins:** connectivity is the binding constraint, and this stack never requires a round trip.
+
+---
+
+### P2 — AI tutor as a certified LTI tool beside an untouched LMS/SIS → **North America, EMEA**
+*The pattern that avoids the copyleft problem and the SIS gap entirely.*
+
+| Role | Component | Licence |
+|---|---|---|
+| LTI 1.3 tool provider | [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) *(Node)* / [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) *(Python)* | **Apache-2.0 / MIT** |
+| Tutoring engine | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | **MIT** |
+| Evidence store | [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | **Apache-2.0** |
+| Standards binding | [opensalt/opensalt](https://github.com/opensalt/opensalt) | **MIT** |
+| Agent orchestration | [pydantic/pydantic-ai](https://github.com/pydantic/pydantic-ai) | **MIT** |
+
+**Wiring.** The tutor runs as its own LTI 1.3 tool; Moodle/Canvas/Open edX launches it with roster and
+context, so **no GPL/AGPL code is modified or redistributed** and no SIS fork is needed. Every tutor
+interaction is written to `lrsql` as xAPI statements; `opensalt` maps each activity to the official
+competency framework. Grades return over LTI AGS.
+🟢 **Licence boundary is clean and the audit trail is a by-product** — which is what the Dec-2027 EU
+high-risk documentation duty and NA district policies actually ask for.
+
+---
+
+### P3 — Assessment with a provable human decision point → **North America (Idaho SB 1227), EMEA (high-risk)**
+*Built to satisfy "AI may not be the primary basis for grading" and EU high-risk oversight.*
+
+| Role | Component | Licence |
+|---|---|---|
+| Learning + assessment platform | [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | **MIT** |
+| Sandboxed grading runner | [autolab/Tango](https://github.com/autolab/Tango) | **Apache-2.0** |
+| Static-analysis grading | [kit-sdq/autograder](https://github.com/kit-sdq/autograder) | **MIT** |
+| CI-based pilot | [uhafner/autograding-github-action](https://github.com/uhafner/autograding-github-action) | **MIT** |
+| Decision log | [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | **Apache-2.0** |
+| Trace/eval | [langfuse/langfuse](https://github.com/langfuse/langfuse) | 🟡 **MIT Expat, except `ee/` dirs** |
+
+**Wiring.** Tango/KIT-autograder produce a **recommendation plus evidence**, never a grade. Artemis
+presents it to an instructor who confirms or overrides; the override is written to `lrsql` with actor,
+timestamp and rationale. The released grade carries a human actor by construction.
+🟢 **The compliance artefact is the decision log**, and it exists because of the architecture rather than
+a policy document. Start with the GitHub action for a two-week pilot, then move to Artemis.
+🔴 **Do not** ship autonomous release of grades, or any attention/emotion component (prohibited in the EU).
+
+---
+
+### P4 — Licensed agent desk over the institution's system of record → **all regions**
+
+| Role | Component | Licence |
+|---|---|---|
+| Canvas access | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | **MIT** |
+| Moodle access | [peancor/moodle-mcp-server](https://github.com/peancor/moodle-mcp-server) | **MIT** |
+| Agent runtime | [pydantic/pydantic-ai](https://github.com/pydantic/pydantic-ai) | **MIT** |
+| Teacher-facing skills | [flysheep-ai/education-skills](https://github.com/flysheep-ai/education-skills) · [SirhanMacx/Claw-ED](https://github.com/SirhanMacx/Claw-ED) | **MIT** |
+| Source-grounded materials | [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) | **Apache-2.0** |
+
+**Wiring.** MCP servers expose the LMS as tools; the agent drafts lesson materials, feedback and
+announcements, with `lineage-skill` keeping every generated artefact traceable to the source document the
+teacher supplied. Teacher approves before anything is published.
+🔴 **Use `vishalsachdev/canvas-mcp`, not `DMontgomery40/mcp-canvas-lms`** — the latter has **no licence
+grant** despite appearing 8× in this KB's earlier passes.
+**Why it wins:** addresses the largest measured gap anywhere (≈86 % of SEA teachers using AI untrained,
+18 % of US teachers given any guidance) without touching student-facing assessment risk.
+
+---
+
+### P5 — AI-literacy curriculum delivery against statutory mandates → **North America**
+*Alabama HB 329 (AI instruction to graduate), Utah HB 218 (grade 7/8 course), Ohio district policy deadline.*
+
+| Role | Component | Licence |
+|---|---|---|
+| Interactive courseware | [oppia/oppia](https://github.com/oppia/oppia) | **Apache-2.0** |
+| Component authoring | [openedx/XBlock](https://github.com/openedx/XBlock) | Apache-2.0 *(README-declared)* |
+| Standards alignment | [opensalt/opensalt](https://github.com/opensalt/opensalt) | **MIT** |
+| Material generation | [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) | **Apache-2.0** |
+| Quiz generation | 🔴 ~~`bobuel/bloom-taxonomy-quiz-builder-skill`~~ — **no licence grant**; use `lineage-skill` (Apache-2.0) for quiz generation instead | — |
+
+**Wiring.** Oppia's misconception-handling lesson model suits AI-literacy content, where the goal is
+correcting beliefs about AI rather than drilling procedure. `opensalt` binds each lesson to the state
+standard the statute references, so the district can evidence compliance per student.
+🟢 **Sells against a deadline with a named statute** — the easiest education procurement conversation in
+North America this year, and notably it does **not** require student-facing AI at all.
+
+---
+
+### P6 — EMEA sovereign self-hosted stack → **EMEA**
+*Uses the European permissive shelf end to end; no US SaaS dependency.*
+
+| Role | Component | Licence | Origin |
+|---|---|---|---|
+| LMS | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** | CH/DE |
+| Assessment | [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | **MIT** | TU München |
+| Grading analysis | [kit-sdq/autograder](https://github.com/kit-sdq/autograder) | **MIT** | KIT |
+| Learning records | [openfun/ralph](https://github.com/openfun/ralph) | **MIT** | France Université Numérique |
+| Local inference | [ollama/ollama](https://github.com/ollama/ollama) | **MIT** | — |
+| LTI boundary | [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | **Apache-2.0** | — |
+
+**Wiring.** Everything self-hosted, models local under Ollama, learning records in Ralph, assessment in
+Artemis behind the P3 human-decision gate.
+🟢 **The whole stack is MIT/Apache and European-governed** — a real data-sovereignty argument rather than
+a hosting-region claim, and it carries no AGPL network-use exposure.
+🔴 Must exclude any emotion/attention-recognition component: **prohibited in EU education institutions
+since 2 February 2025**.
+
+---
+
+🟡 **`langfuse` is a split grant — read before you vendor it.** Its `LICENSE` (1 612 B) puts everything
+under `ee/`, `web/src/ee/` and `worker/src/ee/` under a **separate enterprise licence**, with MIT Expat
+for the remainder. Self-hosting the open core is fine; do not assume the whole repo is MIT.
+🔵 **Its copyright holder is now `ClickHouse, Inc.` (2023-2026)** — ownership of this observability
+dependency has changed, which is worth knowing before standardising on it.
+
+🔵 **All component licences in the patterns above were payload-read at `HEAD` this pass**, including the
+infrastructure rows (`ollama` MIT 1 058 B, `sherpa-onnx` Apache-2.0 11 358 B, `pydantic-ai` MIT 1 100 B).
+
 ## 🟢 Eighty-sixth pass, 2026-10-09 — **three recipes, and the first one is the shelf's first END-TO-END permissive stack from a single institution**: platform + test sandbox + OS confinement, all MIT. Plus a LATAM public-sector recipe where AGPL is an asset, and a district-scale US recipe built to run with the AI switched OFF
 
 ⏱️ **Eighteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

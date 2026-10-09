@@ -4,6 +4,102 @@ region: Global
 updated: 2026-10-09
 ---
 
+## Curated shelf, 2026-10-09 — pass 87: the `ai-tutor` topic is **one-third unusable**, and a split-grant row was caught pretending to be MIT
+
+**Method this pass.** Existence resolved with `git ls-remote` (authoritative; negative control
+`invented-org-xyz/not-a-real-repo-999` correctly DENIED). Licence read from the **actual payload**
+at `raw.githubusercontent.com/<slug>/HEAD/<file>` and classified on the **title block**, not the body.
+
+🔴 **The brief's verification command does not work on this host.** `curl -sI https://github.com/<slug>`
+returns **403 for real and invented slugs alike** (proxy), so it cannot discriminate and must not be
+used as the existence test. `raw.githubusercontent.com` (200/404) and `git ls-remote` both discriminate.
+
+🔴 **Classifier trap, newly recorded.** GPL-3.0 **§13 is titled "Use with the GNU Affero General
+Public License"**, so a body-wide `grep -i affero` marks **every GPL-3.0 repo as AGPL-3.0**.
+Reproduced on `moodle/moodle` before the fix. Classify on the first 6 non-empty lines.
+
+### 🔴 Rows REFUSED this pass — public repo ≠ open source
+
+These four sit under `github.com/topics/ai-tutor` / `education-ai` and are **not buildable by Globant**.
+
+| Repo | What the payload actually says | Verdict |
+|---|---|---|
+| [nirholas/ai-tutor-mcp](https://github.com/nirholas/ai-tutor-mcp) | 860 B: *"This software is proprietary and may not be used, copied, modified, distributed"* — all rights reserved | 🔴 **PROPRIETARY — do not use** |
+| [minouza/MathCrew](https://github.com/minouza/MathCrew) | 3 905 B **PolyForm Strict License 1.0.0** — no commercial use, no derivatives | 🔴 **NON-OSI** |
+| [vieanderes/understory](https://github.com/vieanderes/understory) | 1 584 B **split grant**: code MIT, but everything under `content/` is **CC BY-NC-SA 4.0 (NonCommercial)** | 🟡 **code only — content unusable commercially** |
+| [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | repo exists (`c0646ba10ac2`), **no licence file at any probed path, no licence statement in its 17 KB README** | 🔴 **NO GRANT** |
+
+🔴 **`DMontgomery40/mcp-canvas-lms` appears 8× in this KB's prior passes.** It has no grant and must not
+be composed into client work. Use `vishalsachdev/canvas-mcp` (MIT, verified below) instead.
+
+🟡 **`understory` is the instructive one.** Its title line reads `MIT License` and a title-only classifier
+says MIT — but the file is **1 584 B against a canonical ~1 070 B**, and the surplus is a second grant that
+makes the *teaching material* non-commercial. The code/content split is the trap: for an education KB,
+the content is usually the thing the client wants.
+
+### 🔵 🆕 The split-grant pattern — found **twice** this pass, in unrelated tiers
+
+A single `LICENSE` file can carry **two grants**, with the permissive one named in the title and the
+restrictive one applying to the part you actually want. Both instances were caught by the **same cheap
+signal: the file is several hundred bytes over canonical for its declared licence.**
+
+| Repo | Title says | Reality | Surplus |
+|---|---|---|---|
+| [vieanderes/understory](https://github.com/vieanderes/understory) | `MIT License` | code MIT; **`content/` is CC BY-NC-SA 4.0** | +~510 B over MIT |
+| [langfuse/langfuse](https://github.com/langfuse/langfuse) | MIT Expat | **`ee/`, `web/src/ee/`, `worker/src/ee/` under a separate enterprise licence** | +~540 B over MIT |
+
+🔵 **Operational rule:** a declared-MIT file materially over ~1 100 B, or a declared-Apache file over
+~11 400 B, is **not** necessarily wrong — but it must be read, not classified. Byte count is a usable
+*trigger*; it is never the verdict. (`langfuse` also now shows `ClickHouse, Inc.` as copyright holder.)
+
+### 🟢 Agent tier — permissive, verified payload-by-payload
+
+| Agent | Repo | Licence | ★ | What it is |
+|---|---|---|---|---|
+| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 (11 408 B) | 41 000 | Lifelong **personalized tutoring system**; the only education agent at real scale this window |
+| Study-Mate | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | MIT (1 064 B) | 770 | Study partner that plans learning paths, explains concepts, guides projects |
+| anki-mcp-server | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | MIT (1 074 B) | 510 | **MCP server over Anki** — spaced repetition as a tool call; retention layer for any tutor |
+| lineage-skill | [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) | Apache-2.0 (11 358 B) | 453 | Turns videos, PDFs, transcripts, notes into **source-backed** teacher skills |
+| universal-examprep | [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | MIT (1 065 B) | 303 | Exam-prep coach with cross-session memory, slide-cited teaching, quizzes |
+| algo-sensei | [karanb192/algo-sensei](https://github.com/karanb192/algo-sensei) | MIT (1 081 B) | 286 | DSA/interview mentor with **progressive hints** (withholds answers) |
+| Bloom | [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | MIT (1 069 B) | 285 | Self-hostable tutor built on **Bloom's 2-sigma** premise |
+| OpenTutor | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | MIT (1 068 B) | 137 | **Local** block-based adaptive workspace: notes, quizzes, flashcards |
+| education-skills | [flysheep-ai/education-skills](https://github.com/flysheep-ai/education-skills) | MIT (1 068 B) | 107 | Collection of teaching/study-support agent skills |
+| mentingo | [Selleo/mentingo](https://github.com/Selleo/mentingo) | MIT (1 062 B) | 91 | **AI-native LMS** with AI mentor + role-play — rare MIT LMS (see `repos/foundations.md`) |
+| Claw-ED | [SirhanMacx/Claw-ED](https://github.com/SirhanMacx/Claw-ED) | MIT (1 078 B) | 60 | Local-first teaching assistant: editable lesson drafts, student materials, slides (beta) |
+| OATutor | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | MIT (1 105 B) | — | **Intelligent tutoring system from UC Berkeley** (CAHLR); institutional, not hobby |
+| open-tutor-ai-CE | [Open-TutorAi/open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | BSD-3-Clause (1 531 B) | — | Community edition tutor. 🟢 **Audited: exactly 3 clauses, no field-of-use restriction** |
+| canvas-mcp | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT (1 071 B) | — | **Canvas LMS over MCP** — the licensed way to reach Canvas |
+| moodle-mcp-server | [peancor/moodle-mcp-server](https://github.com/peancor/moodle-mcp-server) | MIT (1 064 B) | — | **Moodle over MCP** |
+| StudyAssistantAI | [heisallaki/StudyAssistantAI](https://github.com/heisallaki/StudyAssistantAI) | MIT (1 061 B) | 2 | Study platform over the student's **own** materials |
+| nexika | [nexika/nexika](https://github.com/nexika/nexika) | MIT (1 069 B) | 0 | Learning plugins, starting with a programming tutor |
+
+**17 permissive rows.** Every licence figure above was read inline from the payload at `HEAD`.
+
+### 🟡 Copyleft tier — real grants, but viral; flag before composing
+
+| Agent | Repo | Licence | ★ | Note |
+|---|---|---|---|---|
+| human-skill-tree | [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | AGPL-3.0 (1 134 B, **notice form**) | 567 | Skill tree, K-12 → career |
+| freelingo | [artcc/freelingo](https://github.com/artcc/freelingo) | AGPL-3.0 (34 514 B) | 163 | Self-hosted language learning: tutor, flashcards, SRS |
+| lumen | [ahmedEid1/lumen](https://github.com/ahmedEid1/lumen) | GPL-3.0 (35 149 B) | 88 | Learner-owned platform, **course-scoped RAG** |
+| braivo | [braivo/braivo](https://github.com/braivo/braivo) | AGPL-3.0 (34 561 B) | 0 | Turns existing content into personalized tutors |
+| learning-nc | [andremadstop/learning-nc](https://github.com/andremadstop/learning-nc) | AGPL-3.0 (**723 B notice stub**, not full text) | 4 | Nextcloud spaced-repetition app |
+
+🔵 **AGPL "notice form" is a valid grant, not a defect.** `learning-nc` (723 B) and `human-skill-tree`
+(1 134 B) carry the FSF-recommended *header notice* rather than the ~34 KB full text. The grant holds;
+only a byte-count heuristic would call these broken. Byte count flags, it does not decide.
+
+### 🔵 Declared gaps — searched, genuinely absent
+
+- 🔴 **No permissively-licensed education agent with APAC or LATAM institutional backing** was found this
+  window. The institutional MIT/Apache rows are EMEA (TUM, KIT, France's `openfun`) or North America
+  (UC Berkeley CAHLR). APAC/LATAM presence in this topic is individual-developer.
+- 🔴 **Recency is not a quality signal in `topics/ai-tutor`.** Sorting the 663-repo topic by *recently
+  updated* returned 20 repos all dated 2026-10-09, **14 of them with ≤2 stars**. Do not mine that sort.
+- 🔴 No dominant open-source **learner-model / knowledge-tracing** agent surfaced; prior passes' IRT
+  libraries (`py-irt`, `catsim`) remain the state of the shelf.
+
 ## 🟢 Eighty-sixth pass, 2026-10-09 — **the shelf's byte-count instrument is found to be PER-PASS, not per-shelf** (`P929`), which makes every cross-pass byte comparison invalid; and a row whose title line reads `BSD 3-Clause License` is found to carry **field-of-use restrictions** (`P930`). `Gap 350` and `Gap 351` DISCHARGE
 
 ⏱️ **Eighteenth pass of this date.** Pass 85 discharged `Gap 346`, falsified `Gap 344`, adopted `P905`–`P928`. **Append-only: this section is new; nothing below it was rewritten.**

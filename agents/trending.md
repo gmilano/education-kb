@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 2026-10-09 — pass 87 (APPEND-ONLY; nothing below this section was altered)
+
+**Window:** `github.com/topics/ai-tutor` (663 repos) and `topics/education-ai` (70 repos), read
+globally plus the *recently-updated* sort. 29 repos probed, licence read from payload at `HEAD`.
+
+### What is actually new this window
+
+- 🟢 **`HKUDS/DeepTutor` at ~41 000★ is now the category's only large-scale repo** (Apache-2.0). Nothing
+  else in education AI is within an order of magnitude; second place this window is 770★.
+- 🟢 **MCP has become the integration surface for education.** Three verified MIT rows this window are
+  MCP servers rather than apps: `ankimcp/anki-mcp-server` (510★, Anki/SRS),
+  `vishalsachdev/canvas-mcp` (Canvas), `peancor/moodle-mcp-server` (Moodle). The pattern has shifted
+  from *build a tutor* to *expose the institution's system of record to an agent*.
+- 🟢 **"Agent skills" are displacing standalone tutor apps.** `JuneYaooo/lineage-skill` (453★, Apache-2.0),
+  `ZeKaiNie/universal-examprep-skill` (303★, MIT), `flysheep-ai/education-skills` (107★, MIT) and
+  `bobuel/bloom-taxonomy-quiz-builder-skill` all ship as *skills* for an existing agent host.
+- 🟡 **Pedagogy-as-a-constraint is showing up in the code.** `karanb192/algo-sensei` (286★) gates on
+  *progressive hints*, `Li-Evan/Bloom` (285★) cites Bloom's 2-sigma, `SenmuuuuW/universal-diagnostic-tutor-skill`
+  (242★) is diagnosis-first, and a French row (`VictorNain26/tomai-monorepo`) advertises guiding
+  *without giving answers*. Withholding the answer is becoming a named feature.
+
+### 🔴 The finding that matters commercially
+
+**Of 9 repos sampled from the recently-updated `ai-tutor` sort, 4 carry no grant Globant can use:**
+
+| Repo | Reality |
+|---|---|
+| [nirholas/ai-tutor-mcp](https://github.com/nirholas/ai-tutor-mcp) | 🔴 **Proprietary**, "may not be used, copied, modified, distributed" (860 B) |
+| [minouza/MathCrew](https://github.com/minouza/MathCrew) | 🔴 **PolyForm Strict 1.0.0** — non-commercial, no derivatives |
+| [vieanderes/understory](https://github.com/vieanderes/understory) | 🟡 MIT code, **CC BY-NC-SA 4.0 lesson content** — the teaching material is the non-commercial part |
+| [invincible-summer/Next-Tutor-Agent](https://github.com/invincible-summer/Next-Tutor-Agent), [anup-a/roadmap-ai](https://github.com/anup-a/roadmap-ai) | 🔴 No licence file at any probed path |
+
+**Being listed under a GitHub open-source topic is not a licence.** Roughly **one in three** of the
+freshest `ai-tutor` repos cannot be composed into client work. Probe the payload every time.
+
+### 🔵 Negative results, recorded so the silence is not mistaken for coverage
+
+- 🔴 **The recently-updated sort is noise.** All 20 returned repos were stamped 2026-10-09 and **14 had
+  ≤2 stars**. This topic churns with single-session projects; recency carries no signal here.
+- 🔴 **No APAC or LATAM institutional open-source tutor appeared.** Regional presence in the topic is
+  individual developers (Chinese K-12 rows such as `SimonsTang/feifei-companion`, `KeWang0622/kaogong-skill`,
+  a Tamil/Kannada/Hindi speaking-practice app `jasonzacmusic/maatu`, India's `brahm-ai-official/brahm-ai`).
+  Institutional backing this window is EMEA (TUM, KIT) and North America (UC Berkeley) only.
+- 🔴 **No new knowledge-tracing / learner-model repo** surfaced in either topic.
+
 ## 🟢 2026-10-09 (pass 86) — **two gaps discharge by reading surfaces rather than searching**, a `BSD 3-Clause`-titled licence turns out to restrict fields of use, and the shelf's byte-count ruler is found broken in a way that is **not correctable**
 
 ⏱️ **Eighteenth pass of this date.** 🟢 **Append-only: pass 85's section sits immediately below and nothing in it was rewritten.**

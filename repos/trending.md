@@ -4,6 +4,35 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 2026-10-09 — pass 87 (APPEND-ONLY; nothing below this section was altered)
+
+**Window:** GitHub topic channels `ai-tutor` (663) and `education-ai` (70), plus general AI-trending
+aggregators. All slugs below resolved with `git ls-remote` and licence-read at `HEAD`.
+
+### Education-adjacent repos moving this window
+
+| Repo | Licence | Signal |
+|---|---|---|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | ~41 000★ — the category's only large-scale project |
+| [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | MIT | 770★, Chinese-language study planner; largest non-DeepTutor row |
+| [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | AGPL-3.0 | 567★, K-12→career skill graph |
+| [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | MIT | 510★ — spaced repetition as an MCP tool |
+| [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) | Apache-2.0 | 453★, top row of `topics/education-ai` |
+
+### 🔵 Honest state of the "trending" instrument
+
+- 🔴 **GitHub's own Trending page could not be read as a per-industry source this pass.** There is no
+  education filter on `github.com/trending`; the industry view has to be assembled from topic channels,
+  which is what was done. Third-party trending aggregators were consulted and **their star figures
+  conflict** (one blog reported a repo at 295 000★ that another reported as a monthly delta of 33 900) —
+  none of their numbers were carried into this KB.
+- 🟡 **The broad AI-trending snapshot for this window is not education.** It is agent infrastructure and
+  classical ML (`tesseract-ocr`, `OpenBB`, `scikit-learn`, `keras`, plus Karpathy's teaching-oriented
+  `nanochat`). `nanochat` is widely mis-filed as edtech: it teaches *how an LLM is built*, and its own
+  framing is explicitly **educational, not production**.
+- 🔴 **No education repo appeared on any general trending list this window.** Education AI trends inside
+  its own topic channels and is invisible at the platform level — relevant to how Globant sources it.
+
 ## 🟢 2026-10-09 (pass 86) — **`topics/autograding` is read 94 of 94 and EXHAUSTED**, and pass 85's verdict on it is **half right**: the budget was real in COUNT and nearly worthless in TYPE. `P935` names the boundary; `Gap 350` and `Gap 351` both DISCHARGE
 
 ⏱️ **Eighteenth pass of this date.** 🟢 **Append-only: pass 85's section sits immediately below, unchanged.**

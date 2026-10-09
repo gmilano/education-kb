@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-09
 ---
 
+## Platform shelf, 2026-10-09 — pass 87
+
+Real, deployed systems that can be customised with AI on top — the education analogue of Odoo for ERP.
+Licence read from payload at `HEAD`; existence via `git ls-remote`.
+
+### LMS / learning platforms
+
+| Platform | Repo | Licence | Customisation posture |
+|---|---|---|---|
+| **Moodle** | [moodle/moodle](https://github.com/moodle/moodle) | GPL-3.0 (`COPYING.txt`) | The default worldwide. Extend via plugins + **`peancor/moodle-mcp-server` (MIT)** to reach it from an agent without touching GPL code |
+| **Open edX** | [openedx/edx-platform](https://github.com/openedx/edx-platform) | AGPL-3.0 | MOOC scale; microservices, heavy below a few thousand learners. Extend via **XBlock** components |
+| **Kolibri** | [learningequality/kolibri](https://github.com/learningequality/kolibri) | **MIT** | 🟢 **Offline-first.** Permissive, so AI features can be embedded and redistributed freely. The pick for low-connectivity deployments |
+| **OpenOLAT** | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** | Mature European HE LMS; permissive alternative to Moodle for EMEA sovereignty asks |
+| **Sakai** | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | ECL-2.0 | HE collaboration/learning environment; Apache-derived licence with education patent clause |
+| **Chamilo** | [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | GPL-3.0 | Strong Spanish-language/LATAM install base |
+| **Coursemology** | [Coursemology/coursemology2](https://github.com/Coursemology/coursemology2) | **MIT** | Gamified CS courses with autograding built in (APAC lineage) |
+| **Mentingo** | [Selleo/mentingo](https://github.com/Selleo/mentingo) | **MIT** | 🟢 AI-native LMS — AI mentor and role-play are first-class, not plugins |
+| **Oppia** | [oppia/oppia](https://github.com/oppia/oppia) | **Apache-2.0** | Interactive lessons with explicit misconception handling; good fit for AI-literacy curricula |
+
+### Student information / school ERP
+
+| Platform | Repo | Licence | Note |
+|---|---|---|---|
+| **RosarioSIS** | [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | GPL-2.0 | Full SIS: scheduling, grades, attendance, billing |
+| **openSIS Classic** | [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | GPL *(README → `docs/License.txt`)* | 🟡 No root licence file; grant declared in README |
+| **OpenEduCat** | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | LGPL | Education ERP **on Odoo** — admissions, courses, faculty, library |
+| **Frappe Education** | [frappe/education](https://github.com/frappe/education) | GPL-3.0 *(declared)* | 🔴 `LICENSE` is a **19-byte pointer** with no grant text. Built on ERPNext (GPL-3.0) |
+
+🔴 **There is no permissively-licensed open-source SIS.** All four are copyleft. **Integrate across a
+standards boundary (OneRoster / LTI 1.3) instead of forking** — see pattern P2.
+
+### Interoperability, records and standards — the permissive layer
+
+| Component | Repo | Licence | Role |
+|---|---|---|---|
+| **LTI 1.3 (Node)** | [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | **Apache-2.0** | Launch an AI tool inside Canvas/Moodle/Blackboard as a certified LTI tool |
+| **LTI 1.3 (Python)** | [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) | **MIT** | Same, for Python agent stacks |
+| **LTI → JupyterHub** | [jupyterhub/ltiauthenticator](https://github.com/jupyterhub/ltiauthenticator) | **BSD-3-Clause** | Lab/notebook courses |
+| **xAPI LRS** | [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | **Apache-2.0** | Store every tutor interaction as learning records — the audit trail regulators now require |
+| **xAPI toolbox** | [openfun/ralph](https://github.com/openfun/ralph) | **MIT** | Learning-record processing from France Université Numérique |
+| **Competency frameworks** | [opensalt/opensalt](https://github.com/opensalt/opensalt) | **MIT** | CASE registry — bind AI output to official standards/outcomes |
+
+🟢 **This is the layer to build on.** The LMS and SIS tiers are copyleft; the **interop, records and
+competency tier is uniformly MIT/Apache/BSD.** Globant can own the integration and evidence layer
+permissively while leaving the systems of record untouched.
+
+### Autograding / assessment
+
+| Component | Repo | Licence | Role |
+|---|---|---|---|
+| **Artemis** | [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | **MIT** | Interactive learning + autograding at scale, TU München |
+| **Tango** | [autolab/Tango](https://github.com/autolab/Tango) | **Apache-2.0** | Sandboxed grading job runner (CMU) |
+| **KIT autograder** | [kit-sdq/autograder](https://github.com/kit-sdq/autograder) | **MIT** | Static-analysis grading |
+| **Autograding action** | [uhafner/autograding-github-action](https://github.com/uhafner/autograding-github-action) | **MIT** | Grading in CI — lowest-friction pilot |
+
 ## 🟢 Eighty-sixth pass, 2026-10-09 — **the shelf gets its first LATAM production platform**, and it is AGPL-3.0; the **fork network** turns out to be a better deployment signal than stars (`P933`); and a granted platform is found shipping an **ungranted installer** (`P934`)
 
 ⏱️ **Eighteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
