@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 83) — **`Gap 334` discharged and `Gap 336` closed in one pass**, the APAC supply turns out to be Chinese-language-primary, and `P795` finally stops reproducing — because the channel changed
+
+⏱️ **Fifteenth pass of this date.** 🟢 **Append-only: this section is new. Pass 82's section is immediately below and nothing in it was rewritten.**
+
+### 🟢 The three-line summary
+
+| item | status |
+|---|---|
+| 🔴 `Gap 334` — platform-tier licences unverified, oldest costed unspent item on the shelf | 🟢 **DISCHARGED**, 8 of 8 payload-read: 6 confirmed, 1 falsified, 1 corrected |
+| 🔴 `Gap 336` — no permissive learner simulator | 🟢 **CLOSED** by `theaiagent/SynthEd` (MIT) |
+| 🔴 `Gap 341` — "the APAC blocker is licensing, not placement" | 🔴 **FALSIFIED** — 5 APAC rows placed AND granted |
+
+🟢 **33 licence payloads read — the most of any pass on this shelf.** 🟢 **19 new granted rows** (17 MIT, 1 Apache-2.0, 1 AGPL-3.0) and **6 named negatives**.
+
+### 🟢 `P795` stops reproducing after five passes — and the fix was the channel, not the query
+
+🔴 **Passes 78–82 recorded `P795` every time: the brief's generic agent queries return courses *about* AI rather than instruments that *do* education.** 🟢 **It reproduced a sixth time this pass** — `top open source AI agents education 2026 github MIT` in `standard` mode returned `microsoft/ai-agents-for-beginners` (67k★, a 12-lesson course), `pguso/agents-from-scratch`, `avinash201199/free-ai-agents-resources`, plus third-party star aggregators that contradict each other and one guide asserting MIT for a project on a single secondary source.
+
+🔵 **But this pass the shelf stopped paying for it.** 🟢 **Four GitHub topic pages were bought instead and returned 25 unshelved candidates and 19 grants.** 🔴 **The generic queries returned zero instruments for the sixth consecutive time.**
+
+🟢 **`P901`: `P795` is not a defect in the query wording, it is a statement about what the generic-search channel INDEXES.** 🔵 Blog-shaped "best open source AI agents" content ranks; a 17★ tutoring skill does not. 🟢 **The topic channel inverts that** — it is ranked by topic membership, so a 0★ repo and a 41k★ repo appear on equal terms. 🔴 **Five passes treated this as something to re-measure; it is settled, and the budget belongs on topic pages.**
+
+### 🟢 Hot signals
+
+1. 🔴 **The entire established platform tier is copyleft — all eight of it.** 🟢 `Gap 334`'s discharge payload-read Moodle (GPL-3.0), Open edX (**AGPL-3.0**, Apache claim falsified), Sakai (**ECL-2.0**), Canvas (AGPL-3.0), Chamilo (GPL-3.0), RosarioSIS (**GPL-2.0**, corrected from "GPL"), Gibbon (GPL-3.0), OpenEduCat (**LGPL-3.0**, vendor claim verified). 🔴 **Not one MIT, Apache-2.0 or BSD row.** 🔵 **The commercial reading: the permissive supply in this sector is entirely in the agent, tutor, measurement and audit tiers — the platform is the client's, the intelligence on top is ours.** 🟢 **And `OpenEduCat`'s LGPL-3.0 is the one established platform that can be built *on* rather than *beside*, because LGPL permits linking.**
+2. 🟢 **APAC's open-source education supply is Chinese-language-primary, and the shelf could not see it.** Five rows placed in APAC on CJK-primary READMEs (`wenflow` 3 701 CJK chars, `VeryMath-textbook-copilot` 2 845, `sijiao-skill` 2 394, `study-assistant-skills` 1 778, `PrepDojo` 1 338) — 🔵 **every one with an English repo name and an English one-line topic description.** 🔴 **An English-only read of a topic page sees the shop window, not the shelf.**
+3. 🔴 **The shelf's own language instrument was broken, and it failed in the shape of a negative result.** 🟢 Under this session's unset `LANG`, `grep -oP '[\x{4e00}-\x{9fff}]'` read a six-character CJK control as **1**, and `grep -cP` errored outright. 🔵 **`0` is a perfectly plausible answer for an English repo, which is exactly why the defect survived until a control was run.** 🟢 **`P894`: every language-based placement now ships a known-CJK control in the same run** — the locale is session state, so a control cannot be inherited from an earlier pass.
+4. 🟢 **The learner-simulator layer is open, permissive and nearly empty.** [`theaiagent/SynthEd`](https://github.com/theaiagent/SynthEd) (MIT, 8★) closes `Gap 336`. 🔵 **The significance is the shape, not the stars:** pass 82's four RL tutors each *embedded* a simulator inside a training loop, so you had to adopt their whole policy architecture to use one. `SynthEd` ships the simulated population *as* the artefact.
+5. 🔴 **Two new licence-ladder rungs, and they point in opposite directions.** 🟢 `sonsoleslp/tna` serves a **46-byte** LICENSE carrying only a year and a holder — correct **by CRAN specification**, with the real grant in `DESCRIPTION` (`MIT + file LICENSE`). 🟢 `juno-hwang/juno-dkt` has no licence file at all and declares MIT via a **PyPI trove classifier** in `setup.py`. 🔵 **`P895`: the trustworthy rung is ECOSYSTEM-dependent** — the R manifest is authoritative because CRAN forces the author to choose, while pass 82's `EduAI` manifest was authoritative for an `npm init` default nobody chose. 🔴 **"Trust the file, fall back to the manifest" is the wrong shape.**
+6. 🔴 **Academic KT code is 71% ungranted, and it is not the obscure repos that are missing licences.** Five of seven newly-probed knowledge-tracing repos grant nothing: `deep-knowledge-tracing-plus` (**124★**), `SAINT-pytorch` (94★), `GIKT` (83★), `pytorch-SAKT` (38★), `ATKT` (34★) — 🔴 **the top-starred of the seven is ungranted and both granted rows sit below it.** 🟢 `Gap 342`, and upstream-askable: five papers' reference implementations, each one commit from usable.
+7. 🔴 **`T1` in the platform tier is 7 of 8, with two shapes no fallback would catch.** Only `moodle/moodle` is on `main`. `GibbonEdu/core` → **`v31.0.00`** and `OpenEduCat/openeducat_erp` → **`19.0`** are *version-numbered* default branches; `rosariosis` → **`mobile`** is a feature-named one. 🔵 **A `main`-then-`master` fallback — the obvious fix — still loses three of eight.**
+8. 🟢 **One contradiction the shelf carried for passes turns out to have been a near-duplicate text.** Sakai's ECL-2.0 payload is **11 120 B** against Apache-2.0's ~11 358 B, because **ECL-2.0 is the Apache-2.0 text with a narrowed patent clause** written for universities. 🔵 **`P898`: a comparison site reading the body and not the title line would honestly report "Apache-2.0".** 🟢 Treatable as Apache-equivalent for build purposes; 🔴 likely to trip a client's automated licence scanner, which is a tooling conversation and not a legal one.
+9. 🟡 **The cheapest instrument this pass has zero code.** [`wildcat430524/StepsToGreat`](https://github.com/wildcat430524/StepsToGreat) (MIT, 22★) is a **Markdown teaching protocol** that turns any AI tool into a one-on-one tutor — no dependencies, no runtime. 🔵 Worth naming because the shelf's recipes keep assuming a stack, and a prompt contract pilots in an afternoon.
+10. 🟢 **Offline-first is now a three-row pattern, and one row is finally permissive.** `hari7261/AI-Tutor` (MIT, Ollama) joins `mentar` (AGPL-3.0) and `study-buddy` (MIT, Electron + local models). 🔵 **No learner data leaving the device answers the K-12 privacy question before it is asked** — and against the regulatory picture below, it is the posture that survives the most jurisdictions unchanged.
+
+### 🔴 Channel notes — what was bought, and what it cost
+
+| channel | mode | bought | result |
+|---|---|---|---|
+| `topics/ai-tutor` p1 + p2 | `WebFetch` | 🟢 yes | 🔴 **p1 already 21/22 shelved**; 🟢 p2 yielded 12 new, 11 granted |
+| `topics/knowledge-tracing` | `WebFetch` | 🟢 yes | 🟢 100% precision, 7 new, 🔴 only 2 granted |
+| `topics/learning-analytics` | `WebFetch` | 🟢 yes | 🟢 5 new, **5 granted** — best grant rate of the pass |
+| `topics/adaptive-learning` | `WebFetch` | 🟢 yes | 🔴 **30% precision** — polysemy trap, 1 new |
+| `top open source AI agents education 2026 github MIT` | `standard` | 🟢 yes | 🔴 **0 instruments** (`P795`, sixth pass) |
+| `open source platform education ERP CRM MIT Apache` | `standard` | 🟢 yes | 🔴 **0 new platforms** — returned OpenEduCat's own glossary in five languages and a 2010 mailing-list post |
+| 4 × regional queries | 🟢 **`extended`** (`P887`) | 🟢 yes | 🟢 **all four regions returned dated, named instruments** — see `intel/market.md` |
+
+🟢 **`P887` held on all four regions.** 🔵 **Pass 82 established that regional work must be bought in `extended` mode; this pass is the first to run all four that way from the start, and none of the four returned the corporate-IT trade press that `P870` recorded for six passes in `standard` mode.**
+
+🔴 **`P899` — a process defect worth more than any single row:** `topics/ai-tutor` had supplied this shelf with `DeepTutor` (41k★) and a dozen others, and **nothing recorded that it was the channel they came from.** 🔴 **So five passes re-bought generic search while the channel's page 2 sat unread.** 🟢 **Record the channel, not just the row** — a shelf that lists what it holds but not where it looked cannot tell an exhausted channel from an unexamined one.
+
+### 🟡 Standing items for the next pass, named rather than left implicit
+
+1. 🔴 **`Gap 343` — no LATAM repository row placed in four passes.** 🟢 Costed: a Spanish/Portuguese orthography class over candidate READMEs, one fetch each, the same shape as this pass's Vietnamese test (which correctly refused two rows against a validated control).
+2. 🔴 **`Gap 342` — five named ungranted KT repositories**, all with identifiable authors and published papers. 🟢 Upstream-askable.
+3. 🟡 **`topics/ai-tutor` pages 3+ unread** — 663 repos in the topic, 40 read. 🟢 **The best-yielding channel on the shelf and it is nowhere near exhausted.**
+4. 🟡 **`topics/learning-analytics` and `topics/knowledge-tracing` pages 2+ unread** — 370 and 92 repos respectively, 20 each read.
+5. 🔴 **The board has not run for six passes.** `shelf_gate.sh`, `measure`, `license_family.sh`, `p351` and the 106 suites stay **CARRIED, NOT CONFIRMED**; script execution from this clone remains DENIED and was not re-attempted.
+
 ## 🟢 2026-10-09 (pass 82) — the **four-pass standing item is DISCHARGED** (39 of 39 read), and the regional channel's six-pass defect is finally explained: it is the **search MODE**
 
 ⏱️ **Fourteenth pass of this date.** 🟢 **Append-only: this section is new. Pass 81's section is immediately below and nothing in it was rewritten.**

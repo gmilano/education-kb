@@ -4,6 +4,97 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-third pass, 2026-10-09 — **twelve new agent rows**, and the APAC blocker turns out to have been a **broken instrument in this session**, not a licensing gap: `Gap 341` is falsified by five granted, placed rows
+
+⏱️ **Fifteenth pass of this date.** Pass 82 closed earlier today having exhausted `topics/intelligent-tutoring-system` at 39 of 39. **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 Capability boundary — re-measured, unchanged from pass 82
+
+| what was attempted | result |
+|---|---|
+| inline `curl` to `raw.githubusercontent.com` | 🟢 **ALLOWED** — every licence figure below is payload-read through it |
+| `git ls-remote --symref` per repo | 🟢 **ALLOWED** — every ref · sha below comes from these |
+| inline compound command with a shell function and a `for` loop | 🟢 **ALLOWED** |
+| `WebFetch` to `github.com/topics/...` | 🟢 **200**, with star counts |
+| inline `curl` to `github.com` HTML | 🔴 **403** |
+| inline `curl` to `api.github.com` | 🔴 **403** |
+| any script from this clone | 🔴 **not attempted** — passes 78–82 measured it DENIED |
+
+🔴 **Sixth consecutive pass without running the board:** `shelf_gate.sh`, `measure`, `license_family.sh`, `p351` and the 106 suites stay **CARRIED, NOT CONFIRMED**. 🔴 **No new instrument versioned** (`P126`).
+
+### 🔴 `P894` — the shelf's language-placement instrument was returning **near-zero on CJK-primary READMEs**, and the cause is the session locale
+
+🟢 **Found by running a control, before publishing a single placement.** The first measurement pass reported `CJK=0` for all seven candidates — while two of them simultaneously served a `README_en.md` at **200**. 🔵 **Those two readings cannot both be true**, and that contradiction is the only reason the defect was caught.
+
+🟢 **Measured against a known-CJK control file containing exactly six CJK characters:**
+
+| invocation | control reads | verdict |
+|---|---|---|
+| `grep -oP '[\x{4e00}-\x{9fff}]'`, locale unset | 🔴 **1** of 6 | 🔴 **silently wrong** |
+| `grep -cP '[\x{4e00}-\x{9fff}]'`, locale unset | 🔴 **error**: *"character code point value in `\x{}` is too large"* | 🔴 fails loudly |
+| `LC_ALL=C.UTF-8 grep -oP '[\x{4e00}-\x{9fff}]'` | 🟢 **6** of 6 | 🟢 **correct** |
+| `grep -oP '[^\x00-\x7F]'` | 🟡 **18** = 6 chars × 3 UTF-8 bytes | 🟡 counts bytes, not characters |
+
+🔴 **`LANG` and `LANGUAGE` are both EMPTY in this session.** Without a UTF-8 locale PCRE treats `\x{4e00}` as a byte value, so the character class matches almost nothing — 🔵 **and returns `0`, which is a perfectly plausible answer for a repo that is simply in English.**
+
+🔵 **`P894`: a language measurement with no control is indistinguishable from a broken one, because its failure mode is the same shape as its negative result.** 🟢 **Rule adopted: every language-based placement ships a known-CJK control in the same run**, exactly as `P873` requires a calibration pair for the `WebFetch` channel. 🔴 **The locale is not a constant across passes** — it is session state nobody was recording — so the control cannot be inherited from an earlier pass.
+
+### 🟢 Re-measured correctly, the placement picture **INVERTS** — five of seven candidates are CJK-primary
+
+| row | CJK chars | ASCII letters | CJK lines | `README_en` | placement |
+|---|---|---|---|---|---|
+| [`wenflow-org/wenflow`](https://github.com/wenflow-org/wenflow) | 🟢 **3 701** | 3 540 | **187 / 384** | 🟢 **200** → language set = 2 | 🟢 **APAC — strong** |
+| [`VeryMath/VeryMath-textbook-copilot`](https://github.com/VeryMath/VeryMath-textbook-copilot) | 🟢 **2 845** | 2 071 | **97 / 182** | 🔴 404 → single-language | 🟢 **APAC — strong** |
+| [`swaylq/sijiao-skill`](https://github.com/swaylq/sijiao-skill) | 🟢 **2 394** | 3 236 | **137 / 325** | 🟢 **200** → language set = 2 | 🟢 **APAC — strong** |
+| [`2362094903-ops/study-assistant-skills`](https://github.com/2362094903-ops/study-assistant-skills) | 🟢 **1 778** | 1 834 | **69 / 143** | 🔴 404 → single-language | 🟢 **APAC — strong** |
+| [`yudongfang-thu/PrepDojo`](https://github.com/yudongfang-thu/PrepDojo) | 🟢 **1 338** | 1 415 | **70 / 143** | 🔴 404 → single-language | 🟢 **APAC — strong** |
+| [`theaiagent/SynthEd`](https://github.com/theaiagent/SynthEd) | 🔴 0 | 8 392 | 0 / 182 | 🔴 404 | 🔴 **unplaced** |
+| [`InfinityZero3000/LexiLingo`](https://github.com/InfinityZero3000/LexiLingo) | 🔴 0 | 8 978 | 0 / 319 | 🔴 404 | 🔴 **unplaced** |
+
+🟡 **`LexiLingo` was probed a second way and still refused.** Its holder line reads `Nguyen Thang`, which `P800` forbids placing on. 🟢 **So the payload was tested for Vietnamese orthography instead** — a 76-character diacritic class, validated against a Vietnamese control that read **6 of 6**: 🔴 **the README returns 0**. 🔵 **The row stays unplaced**, which is the correct outcome and not a failed one.
+
+### 🔴 `Gap 341` is **FALSIFIED**, and in the commercially better direction
+
+🔴 **`Gap 341` (pass 82) read: "the APAC blocker on this shelf is licensing, not placement evidence."** 🟢 **Both halves are wrong this pass.** Five rows place in APAC on payload evidence **and all five are granted** — four **MIT** and one **Apache-2.0**.
+
+🔵 **The structural reading, and it is the most useful sentence in this section:** 🔴 **APAC's open-source education supply is Chinese-language-primary, and an English-only reading of a topic page cannot see it.** 🟢 Every one of these five has an English repo name, an English one-line description on the topic page, and a README that is more than half CJK. 🔵 **The shelf was not short of APAC supply; it was reading the shop window and not the shelf.**
+
+### 🟢 Added this pass — twelve rows, every licence payload-read inline at the resolved ref
+
+🔵 **★ figures are `WebFetch` rendered-page reads, recorded as channel figures and not as API counts** (`P886`).
+
+| agent | grant (payload-read inline) | bytes | ref · sha | ★ | region | what it is |
+|---|---|---|---|---|---|---|
+| 🆕 [`theaiagent/SynthEd`](https://github.com/theaiagent/SynthEd) | 🟢 **MIT** | 1 056 | `main` · `382945c` | 8 | 🔴 unplaced | **Agent-based simulation for open and distance learning research.** 🟢 **The row that closes `Gap 336`** — see `repos/foundations.md`. A simulated learner population you can run a tutoring policy against, permissively licensed. |
+| 🆕 [`wenflow-org/wenflow`](https://github.com/wenflow-org/wenflow) | 🟢 **MIT** | 1 067 | `main` · `dd7bf75` | 56 | 🟢 **APAC** | AI **learning-path** prototype: goal clarification up front, then spaced review. 🔵 Most agent rows on this shelf tutor a topic; this one negotiates the *objective* before teaching anything. |
+| 🆕 [`poobserver/Agent-World-Builder`](https://github.com/poobserver/Agent-World-Builder) | 🟢 **MIT** | 1 075 | `main` · `69e3bc7` | 52 | 🔴 unplaced (`P800`) | Turns real-world issues into **interactive multi-agent simulations**. 🟢 Scenario-based learning as a generated artefact rather than an authored one; pairs naturally with `SynthEd`. |
+| 🆕 [`InfinityZero3000/LexiLingo`](https://github.com/InfinityZero3000/LexiLingo) | 🟢 **MIT** | 1 069 | `main` · `97ceb78` | 49 | 🔴 unplaced — 🟡 probed twice | AI **language tutor** on a Trace-CAG feedback pipeline. 🔵 CAG rather than RAG is an unusual choice on this shelf and worth a look where latency matters. |
+| 🆕 [`yudongfang-thu/PrepDojo`](https://github.com/yudongfang-thu/PrepDojo) | 🟢 **MIT** | 1 098 | `main` · `d21d9dc` | 31 | 🟢 **APAC** | **Local-first** interview practice with **sandboxed code judging** and AI feedback. 🟢 The sandboxed judge is the reusable part: a real execution gate, not an LLM asserting the code runs. |
+| 🆕 [`2362094903-ops/study-assistant-skills`](https://github.com/2362094903-ops/study-assistant-skills) | 🟢 **MIT** | 1 062 | `main` · `3f555b8` | 24 | 🟢 **APAC** | Skill suite for **chapter-based** study from uploaded material. 🟡 Skill-pack shaped rather than service-shaped. |
+| 🆕 [`wildcat430524/StepsToGreat`](https://github.com/wildcat430524/StepsToGreat) | 🟢 **MIT** | 1 082 | `main` · `cc03f39` | 22 | 🔴 unplaced | A **Markdown teaching protocol** that turns any AI tool into a one-on-one tutor. 🔵 Zero code and zero dependencies — the whole instrument is a prompt contract, which makes it the cheapest thing on this shelf to pilot. |
+| 🆕 [`hari7261/AI-Tutor`](https://github.com/hari7261/AI-Tutor) | 🟢 **MIT** | 1 090 | `main` · `8d93823` | 21 | 🔴 unplaced (`P800`) | **Privacy-focused offline** tutor over **Ollama**, generating explanations and MCQs. 🟢 Third offline-first tutor on the shelf after `mentar` and `study-buddy` — and the only one of the three that is permissive. |
+| 🆕 [`michael-borck/study-buddy`](https://github.com/michael-borck/study-buddy) | 🟢 **MIT** | 1 080 | `main` · `221b065` | 20 | 🔴 unplaced | **Offline** AI tutoring desktop app (Electron + local models). 🟢 Holder is `Study Buddy Contributors`, so the appendix was authored rather than defaulted. |
+| 🆕 [`swaylq/sijiao-skill`](https://github.com/swaylq/sijiao-skill) | 🟢 **MIT** | 1 063 | `main` · `ef4508b` | 18 | 🟢 **APAC** | **Stateful** private-tutor skill that teaches a skill from zero. 🔵 Statefulness is the differentiator: it carries learner progress across sessions, which most skill-shaped rows do not. |
+| 🆕 [`VeryMath/VeryMath-textbook-copilot`](https://github.com/VeryMath/VeryMath-textbook-copilot) | 🟢 **Apache-2.0** | 11 338 | `main` · `d609822` | 18 | 🟢 **APAC** | **Self-hosted course workspace**: textbook reading, agent chat, generated materials. 🟢 **The only Apache-2.0 row this pass**, and the only one with a patent grant. |
+| 🆕 [`Nar101/learn-anything`](https://github.com/Nar101/learn-anything) | 🟢 **MIT** | 1 060 | `main` · `632817b` | 17 | 🔴 unplaced (`P800`) | Adaptive learning skill for agent environments, focused on **practice and retention** rather than explanation. |
+
+🟢 **Twelve granted rows. Eleven MIT, one Apache-2.0, zero copyleft.**
+
+### 🔴 Six named negatives, recorded rather than dropped
+
+🔵 **Published because an unrecorded negative is indistinguishable from an unexamined repo.**
+
+| candidate | ★ | ladder probed | grant |
+|---|---|---|---|
+| [`LAION-AI/Desktop_BUD-E`](https://github.com/LAION-AI/Desktop_BUD-E) — voice assistant framework for education and research | 43 | 🔴 8 licence filenames → 404; 🔴 `pyproject.toml`, `setup.py`, `package.json` → **all 404** | 🔴 **nothing to read** — no file rung AND no manifest rung |
+| [`ckyeungac/deep-knowledge-tracing-plus`](https://github.com/ckyeungac/deep-knowledge-tracing-plus) — DKT+ | 124 | 8 filenames → 404 | 🔴 **ungranted** |
+| [`arshadshk/SAINT-pytorch`](https://github.com/arshadshk/SAINT-pytorch) — SAINT | 94 | 8 filenames → 404 | 🔴 **ungranted** |
+| [`ApexEDM/GIKT`](https://github.com/ApexEDM/GIKT) — graph interaction KT | 83 | 8 filenames → 404 | 🔴 **ungranted** |
+| [`TianHongZXY/pytorch-SAKT`](https://github.com/TianHongZXY/pytorch-SAKT) — self-attentive KT | 38 | 8 filenames → 404 | 🔴 **ungranted** |
+| [`xiaopengguo/ATKT`](https://github.com/xiaopengguo/ATKT) — adversarial-training KT (ACM MM 2021) | 34 | 8 filenames → 404 | 🔴 **ungranted** |
+
+🔵 **`LAION-AI/Desktop_BUD-E` is the notable one:** 🔴 an **organisation-backed** repo at 43★ with **no licence declaration anywhere on the ladder**. 🟢 Every other negative this pass is individual research code, which is the stratum `Gap 336` already named. 🔴 **An org-backed repo with no grant is a different and more surprising failure**, and it is upstream-askable with a real maintainer group behind it.
+
 ## 🟢 Eighty-second pass, 2026-10-09 — **seven new agent rows WITH STAR COUNTS**, `Gap 338` closes on a second egress path, and `P800`'s holder tier turns out to be structurally unavailable on **three of five** licence families
 
 ⏱️ **Fourteenth pass of this date.** Pass 81 closed earlier today with seven rows and no star figures. **Append-only: this section is new; nothing below it was rewritten.**

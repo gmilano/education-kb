@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 83) — **four topic channels bought and priced against each other**, 19 granted rows, and the discovery that `topics/ai-tutor` page 1 was **already fully shelved without ever being recorded as a channel**
+
+⏱️ **Fifteenth pass of this date.** 🟢 **Append-only: pass 82's section sits immediately below, unchanged.**
+
+### 🟢 Channel precision and yield, measured side by side
+
+🔴 **Pass 82 exhausted `topics/intelligent-tutoring-system` at 39 of 39 and left the shelf with no channel.** 🟢 **Four new topic pages were bought this pass via `WebFetch` and priced on two separate axes.**
+
+| channel | topic size | rows read | 🟢 **on-topic** (precision) | 🆕 unshelved | 🟢 granted | 🔴 ungranted |
+|---|---|---|---|---|---|---|
+| `topics/ai-tutor` p1 | 663 | 20 | 🟢 **~19/20 (95%)** | 🔴 **0** | 0 | 0 |
+| `topics/ai-tutor` p2 | 663 | 20 | 🟢 **~19/20 (95%)** | **12** | 🟢 **11** | 1 |
+| `topics/knowledge-tracing` | 92 | 20 | 🟢 **20/20 (100%)** | **7** | 🔴 **2** | 🔴 **5** |
+| `topics/learning-analytics` | 370 | 20 | 🟢 ~18/20 (90%) | **5** | 🟢 **5** | 0 |
+| `topics/adaptive-learning` | 570 | 20 | 🔴 **~6/20 (30%)** | **1** | 1 | 0 |
+
+🟢 **Total: 25 new candidates probed, 19 granted, 6 named negatives.** 🔵 Plus the eight platform-tier repositories of the `Gap 334` discharge — **33 licence payloads read this pass**, the most of any pass on this shelf.
+
+### 🔴 `topics/ai-tutor` page 1 was **already 21 of 22 shelved** — the channel was bought long ago and never written down
+
+🟢 **Measured before probing anything:** every one of page 1's 20 rows except none — all 20 — plus two overlaps from `adaptive-learning`, were already present in this repo's non-archive Markdown. 🔴 **21 of 22 candidates returned `shelved`.**
+
+🔵 **This is a bookkeeping finding with a real cost.** 🟢 The shelf *has* `DeepTutor` (41k★), `Study-Mate` (763★), `human-skill-tree` (567★), `anki-mcp-server` (509★), `Bloom` (285★), `mentingo` (91★) and the rest — 🔴 **but nothing recorded that `topics/ai-tutor` was the channel they came from.** 🔴 **So passes 77–82 repeatedly bought generic search queries that returned courses *about* AI, while the channel that had actually supplied the shelf sat unnamed and its page 2 unread.**
+
+🟢 **`P899`: record the CHANNEL, not just the row.** 🔵 A shelf that lists what it holds but not where it looked cannot tell an exhausted channel from an unexamined one — and will re-buy the expensive surface while the cheap one still has pages.
+
+### 🔴 `topics/adaptive-learning` is a **polysemy trap** — 30% precision, and the word is the reason
+
+🟢 **14 of 20 rows on that page are not education at all:** `max-baz/wluma` (screen brightness from an ambient light sensor, 949★), `DavidTorresOcana/Adaptive_and_Fault_Tolerant_Flight_Control_Systems`, `Totoketchup/Adaptive-MultiSpeaker-Separation`, `Bin-Cao/Bgolearn` (materials science), `mingyuyng/Dynamic_JSCC` (joint source-channel coding), `mmalekzadeh/dana` (sensor activity recognition), `Blunde1/agtboost` (gradient boosting), `python-adaptive/adaptive` (1.2k★ — active learning for approximating *mathematical functions*).
+
+🔵 **"Adaptive" carries three unrelated senses — control theory, online/streaming ML, and pedagogy — and GitHub's topic system cannot separate them.** 🟢 **Contrast `topics/knowledge-tracing` at 100% precision:** a term of art with exactly one meaning, which no general-audience writer would ever use loosely.
+
+🟢 **`P900`: channel precision tracks how JARGON the noun is, inversely to its size.** 🔴 `adaptive-learning` is 570 repos at 30%; 🟢 `knowledge-tracing` is 92 repos at 100%. 🔵 **The useful corollary is counter-intuitive: for this shelf the SMALL topic is the better buy**, because the big one spends the read budget on flight control and screen dimming. 🟡 **And `ai-tutor` is the exception that shows precision is not purely about size** — 663 repos at 95%, because "AI tutor" is unambiguous even though it is plain language.
+
+### 🟢 New this pass — 19 granted rows
+
+🔵 **★ figures are `WebFetch` rendered-page reads, labelled as channel figures and not API counts** (`P886`).
+
+| repo | grant (payload-read) | bytes | ref · sha | ★ | channel | signal |
+|---|---|---|---|---|---|---|
+| 🆕 [`alipsgh/tornado`](https://github.com/alipsgh/tornado) | 🟢 **MIT** | 1 074 | `master` · `8937748` | **129** | adaptive-learning | 🟢 Concept-drift detection for data streams — **the substrate a drifting learner model needs.** Highest-★ new row this pass. |
+| 🆕 [`lccasagrande/Deep-Knowledge-Tracing`](https://github.com/lccasagrande/Deep-Knowledge-Tracing) | 🟢 **MIT** | 1 076 | `master` · `2b3df40` | **107** | knowledge-tracing | 🟢 DKT on **TensorFlow 2** — the shelf's only non-PyTorch KT reference. |
+| 🆕 [`wenflow-org/wenflow`](https://github.com/wenflow-org/wenflow) | 🟢 **MIT** | 1 067 | `main` · `dd7bf75` | **56** | ai-tutor p2 | 🟢 Learning-path agent with goal clarification; 🟢 **APAC-placed** (3 701 CJK chars). |
+| 🆕 [`poobserver/Agent-World-Builder`](https://github.com/poobserver/Agent-World-Builder) | 🟢 **MIT** | 1 075 | `main` · `69e3bc7` | **52** | ai-tutor p2 | 🟢 Real-world issues → interactive multi-agent simulations. |
+| 🆕 [`InfinityZero3000/LexiLingo`](https://github.com/InfinityZero3000/LexiLingo) | 🟢 **MIT** | 1 069 | `main` · `97ceb78` | **49** | ai-tutor p2 | 🟢 Language tutor on a **Trace-CAG** pipeline (CAG, not RAG). |
+| 🆕 [`THUwangcy/HawkesKT`](https://github.com/THUwangcy/HawkesKT) | 🟢 **MIT** | 1 070 | `main` · `7785917` | **31** | knowledge-tracing | 🟢 **Hawkes-process** KT, temporal cross-effects (WSDM 2021). |
+| 🆕 [`yudongfang-thu/PrepDojo`](https://github.com/yudongfang-thu/PrepDojo) | 🟢 **MIT** | 1 098 | `main` · `d21d9dc` | **31** | ai-tutor p2 | 🟢 Local-first interview practice with a **sandboxed code judge**; 🟢 **APAC-placed**. |
+| 🆕 [`vanderbilt-data-science/knowledge-spaces`](https://github.com/vanderbilt-data-science/knowledge-spaces) | 🟢 **MIT** | 1 090 | `main` · `08e7aef` | **29** | learning-analytics | 🟢 **Knowledge Space Theory** pipeline; 🟢 **North-America-placed** on an institutional holder (`P897`). |
+| 🆕 [`2362094903-ops/study-assistant-skills`](https://github.com/2362094903-ops/study-assistant-skills) | 🟢 **MIT** | 1 062 | `main` · `3f555b8` | **24** | ai-tutor p2 | 🟢 Chapter-based study skills; 🟢 **APAC-placed**. |
+| 🆕 [`wildcat430524/StepsToGreat`](https://github.com/wildcat430524/StepsToGreat) | 🟢 **MIT** | 1 082 | `main` · `cc03f39` | **22** | ai-tutor p2 | 🟢 **A Markdown teaching protocol — zero code.** Cheapest pilot on the shelf. |
+| 🆕 [`hari7261/AI-Tutor`](https://github.com/hari7261/AI-Tutor) | 🟢 **MIT** | 1 090 | `main` · `8d93823` | **21** | ai-tutor p2 | 🟢 Offline tutor over **Ollama** — the shelf's first *permissive* offline-first tutor. |
+| 🆕 [`michael-borck/study-buddy`](https://github.com/michael-borck/study-buddy) | 🟢 **MIT** | 1 080 | `main` · `221b065` | **20** | ai-tutor p2 | 🟢 Offline Electron tutoring app with local models. |
+| 🆕 [`swaylq/sijiao-skill`](https://github.com/swaylq/sijiao-skill) | 🟢 **MIT** | 1 063 | `main` · `ef4508b` | **18** | ai-tutor p2 | 🟢 **Stateful** private-tutor skill; 🟢 **APAC-placed**. |
+| 🆕 [`VeryMath/VeryMath-textbook-copilot`](https://github.com/VeryMath/VeryMath-textbook-copilot) | 🟢 **Apache-2.0** | 11 338 | `main` · `d609822` | **18** | ai-tutor p2 | 🟢 Self-hosted course workspace; 🟢 **APAC-placed**; **only patent grant this pass.** |
+| 🆕 [`Nar101/learn-anything`](https://github.com/Nar101/learn-anything) | 🟢 **MIT** | 1 060 | `main` · `632817b` | **17** | ai-tutor p2 | 🟢 Retention-and-practice skill for agent environments. |
+| 🆕 [`juno-hwang/juno-dkt`](https://github.com/juno-hwang/juno-dkt) | 🟢 **MIT** — 🔵 trove rung | n/a | `master` · `5036b3e` | **14** | learning-analytics | 🟢 **scikit-learn-style** DKT — droppable into an existing pipeline. |
+| 🆕 [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna) | 🟢 **MIT** — 🔵 R `DESCRIPTION` rung | 46 (stub) | `main` · `a7638bf` | **13** | learning-analytics | 🟢 Transition Network Analysis in **R**; 🟢 **EMEA-placed** on `uef.fi` (`P897`). |
+| 🆕 [`Schlaflied/Plot-Ark`](https://github.com/Schlaflied/Plot-Ark) | 🟡 **AGPL-3.0** | 34 523 | `master` · `4cbbe67` | **13** | learning-analytics | 🟡 Evidence-driven **curriculum operations** — the layer above the tutor. Copyleft, flagged. |
+| 🆕 [`theaiagent/SynthEd`](https://github.com/theaiagent/SynthEd) | 🟢 **MIT** | 1 056 | `main` · `382945c` | **8** | learning-analytics | 🟢 **Agent-based learner simulation — closes `Gap 336`.** Lowest ★ and the highest-value row this pass. |
+
+🟢 **18 of 19 permissive (17 MIT + 1 Apache-2.0); one AGPL-3.0, flagged.** 🔴 **Trap `T1`: five of nineteen resolve to `master`.**
+
+### 🟢 Region placement — five rows placed, and the method that placed them was **repaired mid-pass**
+
+🔴 **The language instrument was returning near-zero on CJK-primary READMEs because this session's `LANG` is unset** — full measurement and control in `agents/top.md` (`P894`). 🟢 **Re-run under `LC_ALL=C.UTF-8` against a six-character control, the placements below are sound.**
+
+| region | rows placed this pass | evidence |
+|---|---|---|
+| 🟢 **APAC** | **5** — `wenflow`, `VeryMath-textbook-copilot`, `sijiao-skill`, `study-assistant-skills`, `PrepDojo` | 🟢 CJK-primary READMEs (1 338 – 3 701 CJK chars; 69–187 CJK lines), two with `README_en.md` at 200 → language set = 2 |
+| 🟢 **EMEA** | **1** — `tna` | 🟢 `sonsoles.lopez@uef.fi` in `DESCRIPTION` (University of Eastern Finland) |
+| 🟢 **North America** | **1** — `knowledge-spaces` | 🟢 `Copyright (c) 2025 Vanderbilt Data Science Institute` in the licence payload |
+| 🔴 **LATAM** | 🔴 **0** | 🔴 **Declared, not implied: no row this pass carries any artefact evidence placing it in LATAM** — no Spanish- or Portuguese-primary README, no institutional holder in the region, among 25 candidates. 🔵 This is the fourth consecutive pass with no LATAM-placed repository row, and it is `Gap 343`. |
+| 🟡 unplaced | 12 | 🔴 personal-name holders (`P800`), English-only READMEs, or FSF/Apache boilerplate (`P888`) |
+
+🔵 **`Gap 341` is FALSIFIED** — pass 82 concluded the APAC blocker was licensing rather than placement. 🟢 **Five APAC rows this pass are placed *and* granted.**
+
+🔴 **`Gap 343` opened, and costed:** no LATAM repository row has been placed in four passes. 🟢 **The cheap probe is a Spanish/Portuguese orthography class over READMEs** — the same shape as this pass's Vietnamese test, which cost one fetch per repo and correctly refused two rows. 🔵 **The shelf's LATAM intelligence is strong in `intel/market.md` and empty in `repos/`**, and that asymmetry is now named rather than left to look like coverage.
+
 ## 🟢 2026-10-09 (pass 82) — **the whole topic, 39 of 39, with star counts restored**, and the trending channel's real shape is a zero-star long tail
 
 ⏱️ **Fourteenth pass of this date.** 🟢 **Append-only: pass 81's section sits immediately below, unchanged.**

@@ -4,6 +4,109 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-third pass, 2026-10-09 — **`Gap 334` DISCHARGES, 8 of 8 payload-read**: one vendor claim confirmed, one claim falsified, one licence CORRECTED, one contradiction finally *explained* — and **not one of the eight is permissive**
+
+⏱️ **Fifteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 `Gap 334` is **DISCHARGED** — the oldest costed unspent item on this shelf, spent
+
+🔴 **`Gap 334` has been carried and named as "the oldest costed, unspent item" for multiple passes.** Pass 82 restated it and then spent its probe budget elsewhere, which was the right call and was declared. 🟢 **This pass ran it: eight platform repositories, every licence payload-read inline at the resolved ref.**
+
+🔵 **Every row below replaces a comparison-site assertion with a byte count.**
+
+| platform | what sources CLAIMED | licence file · bytes | `affero` count | ref · sha | 🟢 **measured grant** | verdict |
+|---|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | GPL-3.0 | `COPYING.txt` · **35 147** | 3 | `main` · `f205347` | 🟡 **GPL-3.0** | 🟢 **CONFIRMED** |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0 *vs* Apache-2.0** — sources contradicted | `LICENSE` · **35 136** | **15** | `master` · `7e3ed68` | 🟡 **AGPL-3.0** | 🔴 **Apache-2.0 claim FALSIFIED** |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🔴 **ECL-2.0 *vs* Apache-2.0** — sources contradicted | `LICENSE` · **11 120** | 0 | `master` · `898bfbf` | 🟡 **ECL-2.0** | 🟢 **ECL-2.0 — and the contradiction is EXPLAINED, see `P898`** |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | AGPL-3.0 | `LICENSE` · **34 520** | **15** | `master` · `1c9f0bb` | 🟡 **AGPL-3.0** | 🟢 **CONFIRMED** |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | GPL-3.0 | `LICENSE` · **35 147** | 3 | `master` · `0b2bc44` | 🟡 **GPL-3.0** | 🟢 **CONFIRMED** |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🟡 "GPL", version unstated | `LICENSE` · **15 214** | 0 | **`mobile`** · `541c509` | 🟡 **GPL-2.0** | 🔴 **CORRECTED — v2, not v3** |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🟡 "GPL", version unstated | `LICENSE` · **35 121** | 3 | **`v31.0.00`** · `1d83c2b` | 🟡 **GPL-3.0** | 🟢 **SPECIFIED** |
+| [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | 🟡 LGPL-3.0, **vendor's own page**, unverified | `LICENSE` · **8 241** (`LESSER`×10) | 0 | **`19.0`** · `1c95cef` | 🟡 **LGPL-3.0** | 🟢 **VENDOR CLAIM TRUE** — 🔴 but see the dangling `COPYRIGHT` below |
+
+🟢 **Eight of eight read. Six claims confirmed, one falsified, one corrected.**
+
+### 🔴 The finding that matters commercially: **ZERO of the eight established platforms is permissive**
+
+🔵 **Stated plainly, because it reframes what this shelf is for.** 🔴 **Every established, deployable education platform — LMS, SIS and ERP alike — is copyleft:** three GPL-3.0, two AGPL-3.0, one GPL-2.0, one LGPL-3.0, one ECL-2.0. 🔴 **Not one MIT, Apache-2.0 or BSD row among them.**
+
+🟢 **The consequence for an engagement, in one line each:**
+
+- 🔴 **AGPL-3.0 (`Open edX`, `Canvas`)** — §13 means **network use triggers the source obligation**. A hosted multi-tenant deployment for a client must publish modifications. 🔵 **These are the two biggest names in the tier, and they carry the strictest term.**
+- 🟡 **GPL-3.0 (`Moodle`, `Chamilo`, `Gibbon`)** — linking proprietary code in is out; running alongside and integrating over HTTP is not.
+- 🟡 **GPL-2.0 (`RosarioSIS`)** — 🔴 **and the correction is not cosmetic:** GPL-2.0 has **no patent grant** and **no §7 compatibility clause**, so it is *less* permissive than GPL-3.0 in exactly the way a client's legal review asks about. 🔵 A shelf that said "GPL" was hiding that.
+- 🟢 **LGPL-3.0 (`OpenEduCat`)** — 🟢 **the most workable of the eight:** linking is permitted, so an AI layer can be built against it without the obligation reaching the proprietary side. 🔵 **This is the single most actionable line in the discharge** — the one established platform a Globant engagement can build *on* rather than *beside*.
+- 🟢 **ECL-2.0 (`Sakai`)** — 🟢 **effectively permissive**, see `P898`.
+
+🔵 **The structural reading: the permissive supply in education AI is entirely in the agent, tutor, measurement and audit tiers** — which is where this shelf's eighty-three passes of MIT and Apache-2.0 rows actually live. 🟢 **The platform is the client's; the intelligence on top is ours.** 🔴 **That is not a slogan — it is what eight byte counts say.**
+
+### 🟢 `P898` — the Sakai contradiction was never a contradiction: **ECL-2.0 *is* a derivative of Apache-2.0**
+
+🔴 **Sources have disagreed on Sakai's licence for as long as this shelf has carried it: ECL-2.0 in some, Apache-2.0 in others.** 🟢 **The payload settles which is right — and then explains why both were written.**
+
+🟢 **Measured:** `LICENSE`, **11 120 B**, title line `Educational Community License, Version 2.0 (ECL-2.0)`.
+
+🔵 **The Apache-2.0 payload is ~11 358 B — within ~2% of this.** 🟢 **ECL-2.0 is the Apache-2.0 text with a modified patent clause**, narrowing the patent grant to the contributing institution's own work rather than its whole portfolio — a term written for universities, which is exactly what Sakai's consortium is.
+
+🔵 **`P898`: a comparison site that read the body and not the title line would honestly report "Apache-2.0".** 🟢 **So the contradiction was a near-duplicate text, not a dispute** — and this shelf spent several passes recording it as a conflict to resolve when it was a provenance to explain. 🟢 **Practical consequence: `ECL-2.0` can be treated as Apache-2.0-equivalent for build purposes**, with the narrower patent grant noted. 🔴 **It is still not an OSI-listed permissive licence by that name**, so a client's automated licence scanner may well flag it; that is a tooling conversation, not a legal one.
+
+🔵 **And the byte-size lesson generalises:** 🔴 **payload size alone cannot separate ECL-2.0 from Apache-2.0** (11 120 vs ~11 358). 🟢 **The title line can, and costs nothing extra** — it is already in the first three lines this shelf reads.
+
+### 🟢 `P890` is **independently re-validated** on eight fresh samples, and extended to GPL-2.0
+
+🟢 **Pass 82 established the Affero *count* as the AGPL-vs-GPL discriminator (~15 vs 3) after finding a `grep` precedence bug.** 🟢 **Eight new payloads reproduce it exactly**, and add a case pass 82 never saw:
+
+| family | payload bytes | `affero` count | samples this pass |
+|---|---|---|---|
+| 🟡 **AGPL-3.0** | 34 520 – 35 136 | 🟢 **15** | `Open edX`, `Canvas` |
+| 🟡 **GPL-3.0** | 35 121 – 35 147 | 🟢 **3** | `Moodle`, `Chamilo`, `Gibbon` |
+| 🟡 **GPL-2.0** | 🟢 **15 214** | 🔴 **0** | `RosarioSIS` |
+| 🟡 **LGPL-3.0** | 🟢 **8 241** | 0 (`LESSER`×10) | `OpenEduCat` |
+| 🟢 **ECL-2.0** | 11 120 | 0 | `Sakai` |
+
+🔴 **The GPL-2.0 row is the new hazard, and it is the opposite of pass 82's:** 🔴 **a boolean `grep affero` classifies GPL-2.0 as "not GNU at all"** — zero Affero mentions, because §13 cross-referencing Affero is a **v3** innovation that does not exist in the 1991 text. 🟢 **Byte size separates it cleanly** (15 k vs the 35 k v3 family), which is the cheap check. 🔵 **Count plus size plus title line classifies all five families on one fetch**, and no holder read is needed for any of them.
+
+### 🔴 `OpenEduCat`'s LICENSE points at a `COPYRIGHT` file that **does not exist**
+
+🟢 **Measured:** the LGPL-3.0 payload's first line reads *"For copyright information, please see the COPYRIGHT file."* 🔴 **`COPYRIGHT` at the repo root returns 404.**
+
+🔵 **So the holder is unobtainable from the payload**, and the row is 🔴 **unplaced** under `P800`/`P897` — there is no institution and no name to read. 🟡 **The grant itself is unaffected:** LGPL-3.0 is declared twice, in prose at line 4 and in the title block at lines 14–15, and neither depends on the missing file.
+
+🔵 **Recorded because it is a reusable caveat, not a quirk:** 🔴 **a licence payload that defers an element to another file is only as complete as that file**, and the ladder must follow the pointer rather than stopping at a 200. 🟢 One fetch, and it changed the row's placement tier from "pending" to "impossible from this artefact."
+
+### 🔴 `P893` — trap `T1` in the platform tier is **7 of 8**, and the shape is *release-branch tracking*
+
+🟢 **Measured, one `git ls-remote --symref` per repo:**
+
+| default branch | platforms |
+|---|---|
+| 🟢 `main` | **1 of 8** — `moodle/moodle` |
+| 🟡 `master` | 4 — `edx-platform`, `sakai`, `canvas-lms`, `chamilo-lms` |
+| 🔴 **`mobile`** | 1 — `francoisjacquet/rosariosis` |
+| 🔴 **`v31.0.00`** | 1 — `GibbonEdu/core` |
+| 🔴 **`19.0`** | 1 — `OpenEduCat/openeducat_erp` |
+
+🔴 **87.5% off `main`.** 🔵 **Against pass 82's measurements — 33% in the research stratum and 2 of 12 in the platform tier — this is the sharpest `T1` reading this shelf has taken**, and it inverts the earlier conclusion that the platform tier was the *safe* one.
+
+🔵 **`P893`: two new shapes appear here that a `main`-or-`master` fallback still misses.** 🔴 **`GibbonEdu/core` → `v31.0.00` and `OpenEduCat/openeducat_erp` → `19.0` are VERSION-NUMBERED default branches** — these projects track a release branch as HEAD, which is normal for shipped enterprise software and absent from the research stratum entirely. 🔴 **`rosariosis` → `mobile` is a third shape: a feature-named default branch**, which no version-aware heuristic would guess either.
+
+🟢 **The operational rule is unchanged and now much better evidenced: resolve the symref, never assume the branch.** 🔴 **A hardcoded `main` would have returned 404 on seven of these eight and written the entire established platform tier down as non-existent.** 🔵 **And a `main`-then-`master` fallback — the obvious fix — would still have lost three of eight.**
+
+### 🟡 What `Gap 334`'s discharge does NOT settle
+
+🔴 **The eight rows above are the *canonical* repositories as this shelf identifies them.** 🟡 `OpenEduCat/openeducat_erp` and `openeducat/openeducat_erp` resolve to the **same sha** (`1c95cef`), so that pair is confirmed as one project under two owner spellings; 🔴 **`OpenEduCat/OpenEduCat` is NOT readable from this session** (git prompted for credentials — private or non-existent, and the two are indistinguishable from here).
+
+🔴 **Vendor figures stay vendor figures.** OpenEduCat's own page claims an Odoo-framework base covering students, courses, attendance, fees, timetables and exams plus an enrolment CRM, and **30 000+ institutions**. 🟢 **The LGPL-3.0 claim is now verified by payload.** 🔴 **The 30 000 number is still marketing** and nothing independent carries it. 🔵 **Confirming a vendor's licence does not promote the rest of its page.**
+
+### 🟡 One new platform row this pass, and it is copyleft
+
+| platform | grant (payload-read inline) | bytes | ref · sha | ★ | what it is, and what the licence costs |
+|---|---|---|---|---|---|
+| 🆕 [`Schlaflied/Plot-Ark`](https://github.com/Schlaflied/Plot-Ark) | 🟡 **AGPL-3.0** | 34 523 | `master` · `4cbbe67` | 13 | **Evidence-driven curriculum operations** — manages course changes against evidence rather than against opinion. 🟢 **The layer above a tutor:** every other row on this shelf acts on a learner, this one acts on the *curriculum*, which is where an institutional buyer's budget actually sits. 🔴 **AGPL-3.0**, affero count **15**, confirming `P890` on a ninth sample; §13 applies to a hosted deployment. 🔴 Resolves to **`master`** (`T1`). |
+
+🔵 **Why it is listed here and not in `agents/top.md`:** it is an operations system with a workflow, not an instrument you compose into one.
+
 ## 🟢 Eighty-second pass, 2026-10-09 — **three copyleft platforms added and flagged as copyleft**, and the AGPL/GPL discriminator is corrected with a measured threshold
 
 ⏱️ **Fourteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

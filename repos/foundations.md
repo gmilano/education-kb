@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-third pass, 2026-10-09 — **`Gap 336` CLOSES on a permissive learner simulator**, seven foundational rows, and two new licence-ladder rungs — one of which makes a **46-byte** LICENSE file the *correct* answer
+
+⏱️ **Fifteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 `Gap 336` **CLOSES** — and it took one row, not a research programme
+
+🔴 **`Gap 336` has run two passes.** Pass 81 opened it: *"there is no permissively licensed learner simulator on this shelf."* Pass 82 re-characterised it after finding four RL tutors that all train against a simulated learner and **all grant nothing** — concluding the gap was a **licensing** gap concentrated in the student/research stratum.
+
+🟢 **[`theaiagent/SynthEd`](https://github.com/theaiagent/SynthEd) — MIT, 1 056 B, `main` · `382945c`, 8★ — is an agent-based simulation for open and distance learning research.** 🔵 **A simulated learner population, permissively licensed, that a tutoring policy can be run against before it meets a real student.**
+
+🔵 **Why this closes the gap rather than merely populating it:** the four pass-82 candidates each *embedded* a simulator inside an RL training loop, so using one meant adopting its whole policy architecture. 🟢 **`SynthEd` is the simulator as the artefact** — the population is the product, and what you point at it is your business. 🔴 **8★ and recorded as such:** this is an unoccupied layer with one permissive entrant, not a mature one.
+
+🟡 **What stays open:** `SynthEd` is research-grade and its README is 182 lines with no CJK and no deployment story. 🔵 **The gap that closes is "nothing permissive exists"; the gap that does not close is "something production-grade exists."**
+
+### 🟢 Added this pass — seven rows, every licence payload-read inline at the resolved ref
+
+| repo | grant (payload-read inline) | bytes | ref · sha | ★ | tier | why it is a foundation |
+|---|---|---|---|---|---|---|
+| 🆕 [`theaiagent/SynthEd`](https://github.com/theaiagent/SynthEd) | 🟢 **MIT** | 1 056 | `main` · `382945c` | 8 | 🟢 **simulator** | Agent-based simulation for open and distance learning research. 🟢 **Closes `Gap 336`** — the first permissive learner simulator on this shelf. |
+| 🆕 [`alipsgh/tornado`](https://github.com/alipsgh/tornado) | 🟢 **MIT** | 1 074 | `master` · `8937748` | 129 | 🟢 **substrate** | Framework for **adaptive online learning and data-stream mining** with **concept-drift** detection. 🔵 **The most structurally important row this pass after `SynthEd`:** a learner's knowledge state IS a drifting stream, and this shelf has carried knowledge-tracing models for forty passes without a drift-detection substrate underneath them. Holder `Ali Pesaranghader`, 2017 — mature, not new. |
+| 🆕 [`lccasagrande/Deep-Knowledge-Tracing`](https://github.com/lccasagrande/Deep-Knowledge-Tracing) | 🟢 **MIT** | 1 076 | `master` · `2b3df40` | 107 | 🟢 **measurement** | DKT on **TensorFlow 2**. 🟢 Joins `pykt-toolkit` and `pyedmine` as a permissive KT reference; 🔵 notable as the **only TF-based** one — the rest of the shelf's KT tier is PyTorch, which matters when a client's existing stack is TF. |
+| 🆕 [`THUwangcy/HawkesKT`](https://github.com/THUwangcy/HawkesKT) | 🟢 **MIT** | 1 070 | `main` · `7785917` | 31 | 🟢 **measurement** | Knowledge tracing with **Hawkes processes** for temporal cross-effects (**WSDM 2021**). 🔵 Models how practising one skill decays or reinforces another *over time* — the mechanism `proofpilot`'s BKT and plain DKT both flatten. |
+| 🆕 [`vanderbilt-data-science/knowledge-spaces`](https://github.com/vanderbilt-data-science/knowledge-spaces) | 🟢 **MIT** | 1 090 | `main` · `08e7aef` | 29 | 🟢 **measurement** | **Knowledge Space Theory** pipeline. 🟢 KST is a *prerequisite-structure* theory — it answers "what can this learner attempt next?" rather than "what do they know?", which is the question a curriculum planner actually asks. 🟢 **Region-placed — see `P897`.** |
+| 🆕 [`juno-hwang/juno-dkt`](https://github.com/juno-hwang/juno-dkt) | 🟢 **MIT** — 🔵 **trove-classifier rung** (`P896`) | n/a | `master` · `5036b3e` | 14 | 🟡 **measurement** | **scikit-learn-style** Deep Knowledge Tracing in PyTorch. 🟢 The sklearn API shape is the reason it is here: `fit`/`predict` over a KT model is what makes it droppable into an existing pipeline. |
+| 🆕 [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna) | 🟢 **MIT** — 🔵 **R `DESCRIPTION` rung** (`P895`) | 46 (stub) | `main` · `a7638bf` | 13 | 🟢 **analytics** | **Transition Network Analysis** R package: models how learners *move between* states rather than what state they are in. 🟢 **The only R row in this shelf's analytics tier**, which matters because institutional research offices run R, not Python. 🟢 **Region-placed — see `P897`.** |
+
+🟢 **Seven rows, all MIT, zero copyleft.** 🔴 **Trap `T1` again: three of seven resolve to `master`** — `tornado`, `Deep-Knowledge-Tracing`, `juno-dkt`.
+
+### 🟢 `P895` — the **R/CRAN `DESCRIPTION` rung**, where a 46-byte LICENSE is correct *by specification*
+
+🔴 **`sonsoleslp/tna` serves a LICENSE file of 46 bytes.** Its entire content:
+
+```
+YEAR: 2025-2026
+COPYRIGHT HOLDER: tna authors
+```
+
+🔴 **No licence text at all.** 🔴 A byte-size or title-line classifier reads this as *"licence file present, unclassifiable"* — and a boolean "has LICENSE" check reads it as **granted with an unknown grant**, which is worse.
+
+🟢 **The grant is in `DESCRIPTION`:** `License: MIT + file LICENSE`.
+
+🔵 **`P895`: for an R package this is not a defect, it is the CRAN convention.** CRAN requires MIT to be declared as `MIT + file LICENSE` with the year and holder supplied in a separate stub, because the MIT text itself is templated. 🟢 **So the manifest rung is not a fallback here — it is the authoritative rung, and the file rung is a parameter sheet.**
+
+🔵 **And this is the exact INVERSE of the `EduAI` failure (pass 82).** 🔴 There, the manifest carried `"license": "ISC"` that was indistinguishable from an `npm init` default nobody authored, so the manifest was authoritative for a value never chosen. 🟢 **Here the manifest is authoritative for a value the ecosystem *requires* the author to choose.** 🔵 **The lesson is that "trust the file, fall back to the manifest" (`P871`) is the wrong shape: the trustworthy rung is ECOSYSTEM-DEPENDENT**, and the ladder needs a per-ecosystem rule rather than a universal precedence order.
+
+🟢 **Placement evidence came from the same `DESCRIPTION` read, at no extra cost** — see `P897`.
+
+### 🟢 `P896` — the **Python trove-classifier rung**
+
+🔴 **`juno-hwang/juno-dkt` returns 404 at all eight licence filenames** and would have been written down as a named negative.
+
+🟢 **`setup.py` returns 200 and carries** `"License :: OSI Approved :: MIT License"`.
+
+🔵 **`P896`: a PyPI trove classifier is a declaration, not an inference.** 🟢 It is a controlled vocabulary — `OSI Approved :: MIT License` is one of a fixed list, so unlike a free-text `license` field it cannot be a typo or a vendor coinage. 🟡 **Weaker than a payload read** because no licence text is served, so the row is published as MIT with the rung named and **no byte count asserted**.
+
+🔴 **Recorded as a process cost:** one granted row was nearly lost to a ladder that stopped at eight filenames. 🟢 **Both rungs added this pass were found by probing a manifest after the file rung went silent** — on three repos, that recovered two grants and confirmed one true negative (`Desktop_BUD-E`, which has no manifest either).
+
+### 🟢 `P897` — an **institutional** holder places a row where a personal name cannot
+
+🔴 **`P800` forbids placing a row on a holder's name**, and correctly: a name is evidence about a person, not about a market.
+
+🟢 **But two rows this pass carry an INSTITUTION in the payload, and an institution has a jurisdiction:**
+
+| row | evidence actually read | tier |
+|---|---|---|
+| `vanderbilt-data-science/knowledge-spaces` | 🟢 licence payload holder line: `Copyright (c) 2025 Vanderbilt Data Science Institute` | 🟢 **North America — strong** |
+| `sonsoleslp/tna` | 🟢 `DESCRIPTION` `Authors@R` maintainer email: **`sonsoles.lopez@uef.fi`** (University of Eastern Finland), with a co-author at the same institution | 🟢 **EMEA — strong** |
+
+🔵 **`P897`: a named organisation or an institutional email domain in the payload is a placement artefact; a personal name is not.** 🟢 `uef.fi` is a registered institution in a single jurisdiction and the `.fi` TLD is not a guess. 🔴 **`P800` is not weakened** — it still forbids `Nguyen Thang`, `Ali Pesaranghader` and `Chenyang Wang`, and those three rows stay unplaced this pass.
+
+🟢 **Operational consequence: the holder read is worth doing again.** 🔴 **`P888` (pass 82) concluded the holder read can be SKIPPED for Apache and GPL-family payloads** because those carry boilerplate "Licensor" definitions or FSF copyright. 🔵 **That conclusion is sound for those families and wrong as a general rule** — an **MIT** payload's holder line is author-supplied, and this pass it placed a row in North America for free.
+
+### 🔴 The knowledge-tracing research stratum is **5 of 7 ungranted** — `Gap 336`'s diagnosis reproduces on an independent topic
+
+🟢 **`topics/knowledge-tracing` (92 repos) was read fresh this pass.** Seven previously-unshelved KT repos were probed:
+
+| grant | repos |
+|---|---|
+| 🟢 **granted (2)** | `lccasagrande/Deep-Knowledge-Tracing` (MIT, 107★), `THUwangcy/HawkesKT` (MIT, 31★) |
+| 🔴 **ungranted (5)** | `deep-knowledge-tracing-plus` (124★), `SAINT-pytorch` (94★), `GIKT` (83★), `pytorch-SAKT` (38★), `ATKT` (34★) |
+
+🔵 **71% ungranted, and `Gap 336`'s pass-82 diagnosis was measured on a different topic page entirely.** 🟢 **Two independent topics now agree: the licensing gap in education AI is concentrated in academic research code**, not spread evenly. 🔴 **Note the star counts — the ungranted rows are not the obscure ones.** `deep-knowledge-tracing-plus` at 124★ outranks both granted rows.
+
+🔵 **This is `Gap 342`, and it is stated as upstream-askable rather than as an absence:** five named repositories, each with an identifiable author and a published paper, any of which could add a LICENSE file in one commit. 🟢 **Five papers' reference implementations are one email each from being usable.**
+
 ## 🟢 Eighty-second pass, 2026-10-09 — **FOUR foundational repos, not five**, and the fifth is named rather than padded: the learner-simulator layer exists and grants nothing
 
 ⏱️ **Fourteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

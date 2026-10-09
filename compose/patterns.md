@@ -4,6 +4,102 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-third pass, 2026-10-09 — **three new recipes**, and the first one exists only because `Gap 334`'s discharge found the one established platform whose licence permits linking
+
+⏱️ **Fifteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Every repo named below is on this shelf with a payload-read licence.** 🔴 **Rows verified in THIS pass carry their ref and SHA inline; rows verified in an earlier pass are marked `(pass NN)` and their SHA is NOT re-asserted** — a grant claim is only as good as the commit it was read at (`P880`), and this pass did not re-read them.
+
+---
+
+### 🟢 `P902` — **The LGPL platform-extension engagement** (primary region: 🟢 **Global**; strongest where an Odoo stack already exists — 🟢 **APAC** and 🟢 **LATAM** in practice)
+
+🔵 **The problem, and it is the one `Gap 334` was blocking:** a client runs an established education platform and wants a commercial AI layer on it. 🔴 **This pass measured all eight established platforms and seven of them make that impossible or expensive** — AGPL-3.0 (Open edX, Canvas) triggers the source obligation on network use, and GPL-2.0/3.0 (Moodle, Chamilo, Gibbon, RosarioSIS) bars linking proprietary code in.
+
+🟢 **`OpenEduCat` is LGPL-3.0, verified by payload this pass — and LGPL permits linking.** 🔵 **It is the only established education platform on this shelf that a proprietary AI layer can be built *on* rather than *beside*.**
+
+🟢 **The composition:**
+
+| layer | repo | grant | ref · sha |
+|---|---|---|---|
+| platform of record (SIS/ERP: students, courses, attendance, fees, timetables, exams, enrolment CRM) | [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | 🟡 **LGPL-3.0** — 🟢 linking permitted | **`19.0`** · `1c95cef` |
+| prerequisite structure — "what can this learner attempt next?" | [`vanderbilt-data-science/knowledge-spaces`](https://github.com/vanderbilt-data-science/knowledge-spaces) | 🟢 **MIT** | `main` · `08e7aef` |
+| mastery model, sklearn-shaped so it drops into a pipeline | [`juno-hwang/juno-dkt`](https://github.com/juno-hwang/juno-dkt) | 🟢 **MIT** (trove rung, `P896`) | `master` · `5036b3e` |
+| drift detection on the learner stream | [`alipsgh/tornado`](https://github.com/alipsgh/tornado) | 🟢 **MIT** | `master` · `8937748` |
+| tutoring surface | [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) or [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | *(earlier pass)* | *(pass ≤82)* |
+
+🟢 **Wiring, in order:**
+1. 🟢 **Read the SIS as the source of truth, don't replace it.** OpenEduCat's Odoo ORM already holds enrolment, course structure and assessment records. 🔵 **Pull the course/skill graph from it rather than asking the client to author one** — this is the step that normally kills adaptive-learning pilots.
+2. 🟢 **Build the prerequisite structure with `knowledge-spaces`.** Knowledge Space Theory answers *what is attemptable next*, which is the question a timetable and a curriculum planner both actually ask. 🔵 Feed it the course graph from step 1.
+3. 🟢 **Fit `juno-dkt` on the assessment history** already in OpenEduCat. 🟢 Its `fit`/`predict` surface means no bespoke training harness.
+4. 🟢 **Put `tornado` in front of the mastery model as a guard.** 🔴 **A learner's knowledge state drifts — term breaks, topic switches, a new teacher — and a DKT model fitted in September silently degrades by November.** 🟢 `tornado` detects the drift and signals a refit. 🔵 **This is the step every adaptive-learning deployment on this shelf has been missing.**
+5. 🟡 **Link the AI layer against OpenEduCat under LGPL §4** — dynamic linking, licence notice shipped, the platform's own modifications published if you change them. 🟢 **Your model code, prompts and tuning stay yours.**
+
+🟢 **Deliverable:** an adaptive layer over the client's existing SIS, with a drift guard, built on the one platform licence that permits it. 🟢 **Estimate: 8–10 weeks.** Four permissive repos plus one LGPL platform.
+🔴 **What it does NOT do:** it is not a Moodle or Canvas recipe — 🔴 **do not port it to those without a licence review**, because AGPL §13 and GPL linking are exactly what this recipe routes around. 🔴 **And OpenEduCat's "30 000+ institutions" is a vendor figure nothing independent carries**; the licence is verified, the market claim is not.
+🟡 **One caveat from the payload:** OpenEduCat's LICENSE defers copyright to a `COPYRIGHT` file that **404s**, so the holder is unobtainable from the artefact. 🔵 Immaterial to the grant; worth knowing before a client's counsel asks who holds it.
+
+---
+
+### 🟢 `P903` — **The pre-deployment simulation harness** (primary region: 🟢 **EMEA**; reusable in 🟢 **North America** and 🟢 **APAC**)
+
+🔵 **The problem, stated as the regulation states it:** 🟢 **the EU AI Act requires a conformity assessment BEFORE a high-risk education system is placed on the market.** 🔴 **Every audit instrument on this shelf needs learners to audit against — and before deployment there are none.** 🔵 **So "assess before market" has, until this pass, had no permissive answer at all.**
+
+🟢 **`Gap 336` closed this pass. The simulator exists.**
+
+🟢 **The composition:**
+
+| layer | repo | grant | ref · sha |
+|---|---|---|---|
+| 🟢 **simulated learner population** | [`theaiagent/SynthEd`](https://github.com/theaiagent/SynthEd) | 🟢 **MIT** | `main` · `382945c` |
+| scenario generation | [`poobserver/Agent-World-Builder`](https://github.com/poobserver/Agent-World-Builder) | 🟢 **MIT** | `main` · `69e3bc7` |
+| does adaptation work? (pre-registered) | [`bydeng01/ability-levels-audit`](https://github.com/bydeng01/ability-levels-audit) | 🟢 **MIT** | *(pass 82)* |
+| answer-leakage gate | [`bydeng01/conv-vs-ped-tutor`](https://github.com/bydeng01/conv-vs-ped-tutor) | 🟢 **MIT** | *(pass 82)* |
+| judge calibration | [`Fuann/open-apa`](https://github.com/Fuann/open-apa) | 🟢 **BSD-3-Clause** | *(pass 81)* |
+| drift sensitivity | [`alipsgh/tornado`](https://github.com/alipsgh/tornado) | 🟢 **MIT** | `master` · `8937748` |
+| tamper-evident record | [`ram-polisetti/ai-act-checker`](https://github.com/ram-polisetti/ai-act-checker) | 🟢 **Apache-2.0** | *(pass 81)* |
+| conformity documentation | [`AbdelStark/eu-ai-act-toolkit`](https://github.com/AbdelStark/eu-ai-act-toolkit) | *(earlier pass)* | *(pass ≤82)* |
+
+🟢 **Wiring, in order:**
+1. 🟢 **Build the synthetic cohort first, before the tutor exists.** `SynthEd`'s agent-based population gives you learners with varying ability, persistence and prior knowledge. 🔵 **Pre-register what you expect the tutor to do to them** — fix the hypothesis before any result exists, per `P891`.
+2. 🟢 **Generate the hard cases with `Agent-World-Builder`.** 🔵 Its real-world-issue-to-simulation path produces the awkward scenarios a happy-path test never reaches.
+3. 🟢 **Run `ability-levels-audit` against the synthetic cohort.** 🟢 **This is the move that makes the whole recipe work:** the audit was designed for real learners, and a simulated cohort lets it run pre-deployment.
+4. 🟢 **Gate on `conv-vs-ped-tutor`'s leakage measure in CI** — a prompt change that increases answer leakage fails the build, not the review.
+5. 🟡 **Calibrate with `open-apa` before trusting any LLM-judge number**, and 🟢 **probe drift sensitivity with `tornado`**: shift the synthetic cohort's distribution and confirm the system notices.
+6. 🟢 **Write every run into `ai-act-checker`'s hash-chained log**, and 🟢 **assemble the documentation file with `eu-ai-act-toolkit`.**
+
+🟢 **Deliverable:** a pre-market conformity assessment with a re-runnable synthetic cohort, a pre-registered hypothesis, a leakage gate in CI and a tamper-evident log. 🟢 **Estimate: 6–8 weeks**, eight permissive repos, no model training and **no real student data** — 🔵 **which also means no DPA and no ethics review to block the start.**
+🔴 **What it does NOT do:** 🔴 **a synthetic cohort is not evidence about real learners**, and must never be presented as such. 🟢 It is evidence that the system behaves as specified under stated conditions — which is what "conformity assessment before placing on the market" asks for, and 🔴 **it does not substitute for post-deployment monitoring.** 🔴 `SynthEd` is research-grade at 8★; 🟡 **budget engineering time to harden it**, and treat that as the recipe's main risk.
+
+---
+
+### 🟢 `P904` — **The zero-egress classroom** (primary region: 🟢 **EMEA**; directly reusable in 🟢 **North America**)
+
+🔵 **The problem, from two directions at once:** 🟢 **measured this pass — districts with strict data-residency requirements self-host open-weight models (Llama 3, Mistral) while the majority use hosted APIs.** 🔴 **And New York City has barred student-facing AI through eighth grade**, while **California AB 1159** would bar using student data to train models at all. 🔵 **A hosted-API tutor cannot satisfy any of these; an on-device one satisfies all three without an argument.**
+
+🟢 **The composition — nothing in this stack makes a network call with learner data:**
+
+| layer | repo | grant | ref · sha |
+|---|---|---|---|
+| offline tutor over local models | [`hari7261/AI-Tutor`](https://github.com/hari7261/AI-Tutor) (Ollama) | 🟢 **MIT** | `main` · `8d93823` |
+| desktop shell, local models | [`michael-borck/study-buddy`](https://github.com/michael-borck/study-buddy) (Electron) | 🟢 **MIT** | `main` · `221b065` |
+| 🟢 **local-first learner memory** | [`znecho9/knowledge-forest-mcp`](https://github.com/znecho9/knowledge-forest-mcp) | 🟢 **Apache-2.0** | *(pass 82)* |
+| the pedagogy, as a prompt contract | [`wildcat430524/StepsToGreat`](https://github.com/wildcat430524/StepsToGreat) | 🟢 **MIT** | `main` · `cc03f39` |
+| step-level mastery, inspectable | [`ujwal2311/proofpilot`](https://github.com/ujwal2311/proofpilot) (BKT) | 🟢 **MIT** | *(pass 82)* |
+| conformity documentation | [`AbdelStark/eu-ai-act-toolkit`](https://github.com/AbdelStark/eu-ai-act-toolkit) | *(earlier pass)* | *(pass ≤82)* |
+
+🟢 **Wiring, in order:**
+1. 🟢 **Start from `study-buddy`'s Electron shell** — it already packages local models for a desktop deployment, which is the delivery problem schools actually have (no admin rights, no reliable network).
+2. 🟢 **Use `hari7261/AI-Tutor`'s Ollama path for explanation and MCQ generation.** 🔵 **Both are MIT, so they can be merged into one product** rather than integrated as two.
+3. 🟢 **Put the learner model behind `knowledge-forest-mcp`.** 🔵 **This is the architecturally important step:** a local-first MCP memory means the learner model is *portable* — the same memory serves any MCP-speaking tutor, which is the only structural answer to per-vendor lock-in of student data. 🟢 And it never leaves the device.
+4. 🟢 **Carry the pedagogy in `StepsToGreat`'s Markdown protocol, not in code.** 🔵 **Zero dependencies and zero runtime**, so teachers can read and amend the teaching contract — which is the cheapest route to the "human oversight" the AI Act requires and the one teachers actually accept.
+5. 🟢 **Use `proofpilot`'s step-level BKT where the subject allows it**, so the mastery estimate is inspectable rather than an opaque score.
+6. 🟢 **Document it with `eu-ai-act-toolkit`.** 🔵 **The documentation is unusually easy here:** most of the AI Act's data-governance section is answered by "no learner data leaves the device."
+
+🟢 **Deliverable:** a self-hosted, on-device tutoring product with a portable learner model and a teacher-readable pedagogy contract. 🟢 **Estimate: 6–8 weeks**, six permissive repos (five MIT, one Apache-2.0), **no copyleft and no hosted API.**
+🔴 **What it does NOT do:** 🔴 **on-device means weaker models**, and the quality gap against a frontier API is real — 🟡 **pilot it on a subject where that gap is smallest** (procedural maths, language drill, flashcard scheduling) and 🔴 **not on open-ended essay feedback.** 🔴 It does not lift NYC's moratorium, which bars student-facing AI regardless of architecture; 🟢 **in that jurisdiction deploy it teacher-facing** and revisit when the year expires.
+🔵 **Why this recipe is durable:** 🟢 **privacy regulation, data-residency procurement and permissive licensing select for the same architecture from three unrelated directions.** 🔴 **Convergence from independent pressures is a position, not a trend.**
+
 ## 🟢 Eighty-second pass, 2026-10-09 — **three new recipes, and the first one is the artefact four regulators now demand and none of them specifies**
 
 ⏱️ **Fourteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

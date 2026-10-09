@@ -4,6 +4,127 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-third pass, 2026-10-09 — **the copyleft wall is measured, not assumed**: every established education platform is copyleft, and the permissive supply is entirely in the intelligence layer
+
+⏱️ **Fifteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 Trend — **there is a copyleft wall under this entire sector, and it is now measured at 8 of 8**
+
+🟢 **`Gap 334`'s discharge payload-read all eight established platforms this shelf carries.** 🔴 **Not one is permissive:**
+
+| grant | platforms |
+|---|---|
+| 🟡 **AGPL-3.0** | Open edX, Canvas |
+| 🟡 **GPL-3.0** | Moodle, Chamilo, Gibbon |
+| 🟡 **GPL-2.0** | RosarioSIS |
+| 🟡 **LGPL-3.0** | OpenEduCat |
+| 🟢 **ECL-2.0** (Apache-2.0 derivative) | Sakai |
+| 🔴 **MIT / Apache-2.0 / BSD** | 🔴 **ZERO** |
+
+🔵 **Why this is a trend and not a licensing footnote:** 🔴 **the two biggest names in the tier — Open edX and Canvas — carry the strictest term of the eight.** AGPL §13 means network use triggers the source obligation, so a hosted multi-tenant deployment must publish modifications. 🔴 **That is not an edge case; it is the default way an education platform is now delivered.**
+
+🟢 **The structural consequence, and it reframes what eighty-three passes of this shelf have been accumulating:** 🟢 **the permissive supply in education AI lives entirely in the agent, tutor, measurement, audit and simulator tiers.** 🔵 **The platform is the client's; the intelligence on top is ours.** 🟢 **That is not a positioning slogan — it is what eight byte counts say**, and it explains why this shelf's MIT/Apache rows cluster so tightly in those tiers and never in the platform tier.
+
+🟢 **One exception worth more than the rest: `OpenEduCat` is LGPL-3.0, which permits linking.** 🔵 **It is the single established platform a commercial AI layer can be built *on* rather than *beside*** — see `P902` in `compose/patterns.md`.
+
+🟡 **And one apparent exception that dissolves on reading:** Sakai's **ECL-2.0** is the Apache-2.0 text with a patent clause narrowed to the contributing institution's own work. 🟢 **Effectively permissive for build purposes**; 🔴 **but not OSI-listed under that name, so a client's automated licence scanner will likely flag it.** 🔵 **A new category of friction: licences that are commercially fine and tooling-hostile.**
+
+### 🔴 Trend — **regulation has stopped being a spectrum and started bifurcating: COMPEL or FORBID**
+
+🔴 **For several passes this shelf modelled education-AI regulation as a gradient from light-touch to strict.** 🟢 **Two instruments measured this pass sit at opposite poles in the same country, in the same year:**
+
+| instrument | direction |
+|---|---|
+| 🟢 **Ohio** — every district must adopt a formal AI use policy by **1 July 2026** | 🟢 **COMPELS an artefact** |
+| 🔴 **New York City** — one-year moratorium on student-facing AI **through eighth grade** | 🔴 **FORBIDS a deployment** |
+
+🔵 **Neither is guidance, and neither is a gradient position.** 🟢 Ohio is cited as the **first state to mandate** district policy — the first US instrument on this shelf that compels a deliverable rather than restricting a use. 🔴 **NYC bars the use outright for an age band.**
+
+🔵 **Why the bifurcation matters commercially:** 🟢 **a compel-jurisdiction is a buyer for an artefact** (policy, documentation, oversight evidence). 🟢 **A forbid-jurisdiction is still a buyer — for the thing not forbidden.** 🔴 **NYC's moratorium is on *student-facing* AI**, and the strongest permissive rows on this shelf are teacher-facing. 🔵 **A district under a student-facing moratorium is an unusually well-qualified buyer for teacher-productivity and back-office AI, and the sector is not selling to them that way at all.**
+
+🟢 **The EU is a compel-jurisdiction too, and the most specific one:** a maintained documentation file, a pre-market conformity assessment, and human oversight that can override or shut the system down. 🔴 **134 bills across 31 US states** and **>30 states with guidance** are the gradient; 🟢 **the compel/forbid instruments are the ones with dates.**
+
+### 🔴 Trend — **LATAM leads the OECD in teacher AI adoption, and the laggard narrative is simply false**
+
+🟢 **OECD TALIS 2024, secondary-school teachers using AI in the prior year, against a 36% OECD average:**
+
+| jurisdiction | teachers | delta |
+|---|---|---|
+| 🟢 **Uruguay** (Ceibal, 2026, public schools) | **75%** | 🟢 **+39 pts** |
+| 🟢 **Brazil** | **56%** | +20 pts |
+| 🟢 **Chile** | **55%** | +19 pts |
+| 🟢 **Colombia** | **53%** | +17 pts |
+| 🟢 **Costa Rica** | **52%** | +16 pts |
+
+🔴 **Every LATAM jurisdiction measured beats the OECD average by 16 points or more.** 🟢 **Uruguay's 75% is the highest single teacher-adoption figure this shelf has recorded for any jurisdiction in any region** — above North America's ~60% of US K-12 teachers.
+
+🔵 **This falsifies a framing the sector repeats constantly.** 🔴 **LATAM is pitched as catching up; in secondary-teacher use it is ahead.** 🟢 **And the governance gap is correspondingly the sector's widest: 87% institutional adoption against ~26% with any framework** (UNESCO IESALC, 200 institutions, 19 countries) — 🔵 **a 61-point gap on top of the highest adoption, with NO education-specific AI instrument in any LATAM jurisdiction.**
+
+🟢 **New this pass — the gap breaks down by sector, and inverts the obvious expectation:** 🟢 private **non-profit** 84%, 🟡 **public** 68%, 🔴 private **for-profit** 52%. 🔵 **Commercial pressure is the weakest adoption driver of the three**, not the strongest.
+
+### 🟢 Trend — **APAC's open-source education supply is Chinese-language-primary, and English-only evaluation cannot see it**
+
+🟢 **Measured, not inferred:** five permissively-licensed education repositories placed in APAC this pass, 🟢 **every one CJK-primary** (1 338 – 3 701 CJK characters; 69–187 CJK lines), 🔵 **and every one with an English repository name and an English one-line topic description.**
+
+🔴 **The shelf spent eighty-two passes reading the shop window.** 🟢 **`Gap 341` — "the APAC blocker is licensing, not placement evidence" — is falsified in both halves:** the rows are placeable *and* granted, four MIT and one Apache-2.0.
+
+🔵 **Why this is a trend rather than a one-pass artefact:** 🟢 the independently-sourced market claim that **China, India and Japan dominate APAC AI-in-education** points the same way, and 🟢 the repository evidence was measured without reference to it. 🔵 **Two independent channels agreeing is the condition for calling something a trend on this shelf.**
+
+🔴 **The operational consequence is a tooling one and it generalises beyond APAC:** 🔴 **a repo due-diligence process that reads READMEs in English will systematically under-count non-English supply.** 🟢 **And this pass proved the failure is silent** — see the instrument defect below.
+
+### 🔴 Trend (methodological) — **this shelf's instrument defects are now a pattern, and all four failed in the shape of a plausible answer**
+
+🟢 **`P894`, found this pass:** under an unset `LANG`, `grep -oP '[\x{4e00}-\x{9fff}]'` read a six-character CJK control as **1**, and the `-c` variant errored outright. 🔵 **It returned `0` for CJK-primary READMEs — which is exactly what an English repo legitimately returns.**
+
+| pass | defect | failure mode |
+|---|---|---|
+| — | `P845` | classifier error |
+| — | `P854` | classifier error |
+| 82 | `P890` — ordered `grep` tests where one pattern is a substring of another | 🔴 last test wins regardless of truth |
+| **83** | **`P894`** — PCRE unicode classes under an unset locale | 🔴 **returns a plausible negative** |
+
+🔵 **Four of the last forty-odd passes found the error in the instrument rather than in the data.** 🟢 **The common shape: each defect produced an answer that was indistinguishable from a true negative result**, which is why none was caught by inspection and all four were caught by a control.
+
+🟢 **`P894`'s rule — every language-based placement ships a known-CJK control in the same run — generalises to the real lesson:** 🔴 **the locale is session state nobody was recording**, so a control cannot be inherited from an earlier pass. 🔵 **An instrument validated in pass 82 is not validated in pass 83.**
+
+### 🔴 Trend — **academic reference code is ungranted at scale, and it is the high-star repos that are missing licences**
+
+🟢 **Measured on a fresh topic this pass** (`topics/knowledge-tracing`, 92 repos): 🔴 **five of seven newly-probed repos grant nothing** — `deep-knowledge-tracing-plus` (**124★**), `SAINT-pytorch` (94★), `GIKT` (83★), `pytorch-SAKT` (38★), `ATKT` (34★). 🟢 Two grant MIT.
+
+🔴 **71% ungranted — and the top-starred of the seven is ungranted while both granted rows sit below it.** 🔵 **So this is not a long-tail phenomenon**, which is how pass 82's version of the finding could still have been read.
+
+🟢 **Two independent topic pages now agree** — pass 82 measured the same concentration on `topics/intelligent-tutoring-system`. 🔵 **The licensing gap in education AI is concentrated in academic research code, and it is structural**: a paper's reference implementation is published to be *read*, and the author never thought about reuse.
+
+🟢 **Stated as actionable rather than as an absence (`Gap 342`):** five named repositories, five identifiable authors, five published papers — 🔵 **each one commit from being usable.** 🔴 **An unlicensed 124★ reference implementation is a sector-wide waste that one email could fix.**
+
+### 🟢 Trend — **the measurement stack is now complete end to end, and the last piece arrived this pass**
+
+🟢 **Traced across four passes, this shelf has assembled a full evaluation chain, all permissive:**
+
+| layer | arrived | rows |
+|---|---|---|
+| 🟢 score a learner | pass 80 | `pyedmine`, `EduStudio`, `GKT`, `ktm` |
+| 🟢 score the scorer | pass 81 | `open-apa` |
+| 🟢 audit the tutor, pre-registered | pass 82 | `ability-levels-audit`, `conv-vs-ped-tutor` (answer leakage) |
+| 🟢 **simulate the learner** | 🟢 **pass 83** | 🟢 **`SynthEd` (MIT) — `Gap 336` CLOSES** |
+| 🟢 **detect drift in the learner model** | 🟢 **pass 83** | 🟢 **`tornado` (MIT, 129★)** |
+
+🔵 **Why the simulator was the missing piece and not just another row:** 🔴 **every audit instrument on this shelf needs learners to audit against**, and until this pass that meant real students. 🟢 **`SynthEd` lets a tutoring policy be tested before it meets one** — which is the only way the EU's "conformity assessment *before* the system is placed on the market" is satisfiable in practice.
+
+🟢 **`tornado` closes a gap nobody had named:** 🔴 **a learner's knowledge state is a drifting stream, and this shelf carried knowledge-tracing models for forty passes with no drift-detection substrate underneath them.**
+
+🔵 **Commercially, this is the most defensible position on the shelf:** 🔴 every regulator named this pass requires human oversight or conformity assessment, and 🔴 **not one of them specifies an instrument.** 🟢 **A pre-registered, frozen-data, simulator-validated audit chain is the only artefact that answers "we verified it works" in a form a reviewer can re-run.** 🔴 **Supply remains thin — 8★ for the simulator** — which is the definition of an unoccupied layer.
+
+### 🟢 Trend — **data residency has become the procurement driver, and it selects for permissive by necessity**
+
+🟢 **Measured this pass:** 🟢 most school deployments use OpenAI or Anthropic APIs, while 🟢 **districts with strict data-residency requirements self-host an open-weight model — Llama 3 and Mistral are the named ones.**
+
+🔵 **This is the first time this shelf has had a named account of what residency-constrained buyers actually run**, and it matters because 🟢 **self-hosting is where a permissive stack stops being merely cheaper and becomes structurally required** — an API-shaped vendor cannot satisfy the constraint at all.
+
+🟢 **Offline-first is the extreme form, and it is now a three-row pattern with a permissive member:** 🟢 `hari7261/AI-Tutor` (**MIT**, Ollama), `study-buddy` (**MIT**, Electron + local models), `mentar` (AGPL-3.0). 🔵 **No learner data leaving the device answers the K-12 privacy question before it is asked** — and against this pass's regulatory map it is the posture that survives the most jurisdictions unchanged: it needs no DPA, no residency argument, and no cross-border transfer analysis in any of the five regions.
+
+🔵 **The convergence worth naming:** 🟢 **privacy regulation, data-residency procurement and permissive licensing now point at the same architecture**, from three unrelated directions. 🟢 **That is a durable position rather than a trend that reverses.**
+
 ## 🟢 Eighty-second pass, 2026-10-09 — **"adoption ahead of governance" stops being a slogan and becomes a measured 61-point gap**, and the shelf's region-strictness model is falsified
 
 ⏱️ **Fourteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
