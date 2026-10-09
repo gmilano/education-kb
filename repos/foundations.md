@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-fourth pass, 2026-10-09 — **no repository row is added**; the pass's foundation contribution is an **instrument**, and the LMS licence wall is re-confirmed from an independent channel: 🔴 **0 of 6 platforms permissive**
+
+⏱️ **Sixth pass of this date.** Pass 73 and its correction `73-C` closed earlier today (commit `7ce7b79`). **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 `P835` first, per `73-C`. Seventeen candidates, seventeen already here
+
+🔴 **Every repository the prescribed battery returned is already on this shelf** — `DeepTutor` (24 files), `Open-TutorAi` (18), `ChatTutor` (13), `tutor-gpt` (10), `Study-Mate` (10), `freelingo` (8), `500-AI-Agents-Projects` (7), `ai-agents-for-beginners` (9), `classroomio` (20), `Frappe LMS` (11), `Sakai` (22), and the rest. 🟢 **Nothing is added and nothing is padded in to reach a minimum count.** 🔵 **The minimum-five rule exists to stop thin passes, not to license duplicate rows — and `73-C` is this shelf's proof that a count met with duplicates costs more than an honest zero.**
+
+### 🆕 The one foundation this pass does add: `lib/payload_measure.sh`
+
+🟢 **A foundational repo for this shelf is not only something to build a product on — it is something every later pass depends on.** By that test this pass adds one, and it is internal:
+
+| Component | Licence | What it gives |
+|---|---|---|
+| `compose/code/lib/payload_measure.sh` | this repo | 🟢 `size_of_file` (byte-exact, `P834`-proof), `trailing_newlines`, `family_of_file` / `holder_of_file` (delegate to `license_family.sh`, so `P171` is inherited not re-implemented), `count_word_in_file` / `count_word_in_pathlist` (`P831`-proof), `measure_payload_file` → the same six-field TSV as `probe_repo` |
+| `compose/code/lib/measure` | this repo | 🟢 argument-invocable front end: `--size`, `--newlines`, `--family`, `--count`, `--self-test`. **Exits non-zero on a missing payload** rather than printing `0` |
+| `compose/code/p837-payload-measure/` | this repo | 🟢 **27/27 offline**. Runs in this environment, which `lib/test_probe_payload.sh` does not |
+
+🔴 **It exists because the shelf's own probe was wrong.** `lib/probe_payload.sh` did `body=$(_raw …)` then `printf '%s' "$body" | wc -c`, and `$(…)` strips the trailing newline run — so 🔴 **every byte count the shared probe ever emitted for a newline-terminated payload is low by that run.** 🟢 Fixed; `_row_from_fetch` sizes the payload where it landed on disk.
+
+⚠️ **Honest scope on the fix:** the fetch branch is 🔴 **unexecuted** — `curl` is refused in this environment. It is `bash -n` clean and its sizing, classifying and counting primitives are asserted 27/27, 🟢 **but no live repository passed through it this pass.** The first pass with network should run `test_probe_payload.sh` and **expect every byte count to return one byte higher** than the shelf's historical figure. 🔵 **That shift is the fix landing, not a new defect.**
+
+### 🔴 The LMS licence wall, re-confirmed on an independent channel — and it did not move
+
+🟢 **`Gap 316`'s licence half re-probed this pass through a different channel than the ones that established it.** 🔴 **Of every LMS/SIS platform the channel named, not one is MIT, Apache-2.0 or BSD:**
+
+| Platform | Licence reported | 🔴 Permissive? |
+|---|---|---|
+| Moodle | **GPL-3.0** | 🔴 no |
+| Canvas LMS (Instructure) | **AGPL** | 🔴 no |
+| Open edX | **AGPL-3.0** | 🔴 no |
+| Frappe LMS | **AGPL-3.0** | 🔴 no |
+| OpenEduCat | **LGPL-3.0** | 🟡 weak copyleft — proprietary extensions permitted |
+| Sakai | **ECL-2.0** | 🟡 Apache-derived, educational-community variant |
+
+🔴 **Six platforms, zero permissive.** 🟢 **This is now a four-channel finding and the most stable thing on this shelf.** 🔵 **Read together with last pass's measurement — `DeepTutor` (Apache-2.0) and `OpenTutor` (MIT) hold zero LTI/xAPI/Caliper/SCORM/OneRoster paths between them — the seam is confirmed two-sided: the platforms that speak the protocols are all copyleft, and the permissive tutors do not reach for the protocols at all.**
+
+🟡 **`classroomio` was named again by this channel with an AI-tutor claim and no licence.** 🔴 **Already shelved (20 files) and its licence is not re-asserted here from a secondary source** — the channel that named it also reported the EU Digital Omnibus as unpublished, which this shelf knows to be false. 🟢 **Recorded as a payload re-read for the first pass with network, not as a finding.**
+
 ## 🔴 Seventy-third pass, **correction (73-C)**, 2026-10-09 — the rows this file added were **already on this shelf**, and one build-on recommendation was published without its licence caveat
 
 🔴 **`HKUDS/DeepTutor` and `zijinz456/OpenTutor` were already shelved before pass 73.** 🟢 Read the section below as a re-measurement. 🟡 Every byte count in it is **one byte low** (`P834`): `OpenTutor` MIT is **1 069 B**, `aureuserp` **1 078 B**, `ofbiz` **11 906 B**, `DeepTutor` **11 408 B**.

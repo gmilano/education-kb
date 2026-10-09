@@ -1,10 +1,45 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-04
+updated: 2026-10-09
 ---
 
 # `lib/` — los controles compartidos, no una referencia para copiar
+
+## 🟢 Pase 74 del 2026-10-09 — `Gap 328` cierra, y el defecto estaba **en este directorio**
+
+🔴 **`probe_payload.sh` cometía `P834`**, en el código del pase 15 sobre el que `P834` se
+escribió después para advertir a otros pases: `body=$(_raw …)` saca la corrida de saltos de
+línea final, así que `printf '%s' "$body" | wc -c` quedaba corto por esa corrida **en toda
+medición de bytes que este probe haya emitido**. 🔵 **La regla apuntaba al instrumento
+compartido y el instrumento compartido tenía el mismo defecto.**
+
+🟢 **El seam real no es «librería sourceada vs script con argumentos» — es RED vs NO-RED.**
+Medido: `. license_family.sh` 🟢 corre; `. probe_payload.sh` 🔴 **DENEGADO `[Code from
+External]`** por el `curl` que contiene; `curl` directo 🔴 **DENEGADO `[Exfil Scouting]`**; y
+un instrumento Python offline del mismo clon 🟢 **corre**. Ver la tabla en
+`../p837-payload-measure/README.md`.
+
+| Archivo | Qué da |
+|---|---|
+| `payload_measure.sh` | 🆕 **la mitad SIN RED**: `size_of_file` (byte-exacto, `P834`), `trailing_newlines`, `family_of_file`/`holder_of_file` (delegan en `license_family.sh`), `count_word_in_file`/`count_word_in_pathlist` (`P831`), `measure_payload_file` → la misma fila TSV de 6 campos |
+| `measure` | 🆕 **front end invocable con argumentos**: `measure <file>`, `--size`, `--newlines`, `--family`, `--count <file> <word>`, `--self-test`. Sale **no-cero** si falta el payload — un pase no puede confundir un fallo con una medición de cero |
+| `../p837-payload-measure/test_measure.sh` | 🆕 **27/27, OFFLINE**. Los casos que la cargan son **negativos**: el payload SIN salto final, donde el primitivo correcto y el defecto deben **COINCIDIR**, y el conteo por subcadena que encuentra **4** donde el acotado por palabra encuentra **1** |
+
+🔴 **Regla para los pases que vienen, y es la que faltaba:** `size_of_capture_BROKEN` existe
+sólo como control. **Ninguna cifra de bytes se publica desde `$(…)`.** Se usa
+`. ../lib/payload_measure.sh` y `size_of_file`, o `lib/measure --size`. 🔵 Y `P834` queda
+corregido en su enunciado: `$(…)` saca **la corrida completa** de saltos finales, no un byte
+— medido 0/1/3 bytes sobre corridas de 0/1/3.
+
+⚠️ **Lo que este pase NO verificó:** la rama de fetch de `probe_payload.sh` quedó **sin
+ejecutar** (red denegada). Está `bash -n` limpia y sus primitivos están afirmados 27/27, pero
+ningún repositorio vivo pasó por ella en este pase. **El primer pase con red debe correr
+`test_probe_payload.sh` y esperar que cada cifra de bytes vuelva un byte más alta** que la
+histórica del estante, para todo payload que termina en salto de línea. 🔵 Eso es la
+corrección aterrizando, no un defecto nuevo.
+
+---
 
 **Pase 77 del 2026-10-03.**
 

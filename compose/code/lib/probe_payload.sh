@@ -42,7 +42,17 @@
 # unshippable for exactly that reason.
 
 _PROBE_LIB_DIR="${_PROBE_LIB_DIR:-$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)}"
-. "$_PROBE_LIB_DIR/license_family.sh"
+# Pass 74 of 2026-10-09: `payload_measure.sh` carries the sizing primitive, the word-bounded
+# counter and the delegated classifier (it sources `license_family.sh` itself, so `P171` is
+# still inherited and still not re-implemented).  THIS FILE KEEPS ONLY THE FETCH.
+#
+# 🔴 Why: this file committed `P834` in its own pass-15 code — `body=$(_raw …)` strips the
+# payload's trailing newline run, so `printf '%s' "$body" | wc -c` was low by that run on
+# EVERY repository this probe has ever measured.  `P834` was written about hand-rolled
+# probes; the shared instrument the rule points at had the same defect.  Sizing now goes
+# through `size_of_file`, which is byte-exact because it never round-trips through a
+# variable, and is asserted both ways in `p837-payload-measure/test_measure.sh` (**27/27**).
+. "$_PROBE_LIB_DIR/payload_measure.sh"
 
 # Ordered shortest-first: the names that actually paid out in this base's censuses.
 PROBE_NAMES="${PROBE_NAMES:-LICENSE LICENSE.md LICENSE.txt LICENCE COPYING}"
@@ -76,29 +86,35 @@ _readme_license_path() {
     | grep -viE '^https?://|^#|^mailto:' | head -1
 }
 
+# Fetch one candidate path to a FILE, never to a variable, and emit the row from the file.
+# 🔵 This is the whole `P834` fix: the payload's bytes are counted where they landed.  Prints
+# nothing and returns 1 when the candidate is absent, so the caller keeps walking the ladder.
+_row_from_fetch() { # _row_from_fetch <repo> <branch> <path> <filename-for-the-row>
+  local repo="$1" br="$2" path="$3" label="$4" tmp rc=1
+  tmp=$(mktemp) || return 1
+  _raw "$repo" "$br" "$path" > "$tmp"
+  if [ -s "$tmp" ] && ! head -1 "$tmp" | grep -q '^404: Not Found$'; then
+    printf '%s\t%s\t%s\t%s\t%s\t%s\n' "$repo" "$br" "$label" \
+      "$(size_of_file "$tmp")" "$(family_of_file "$tmp")" "$(holder_of_file "$tmp")"
+    rc=0
+  fi
+  rm -f "$tmp"
+  return "$rc"
+}
+
 probe_repo() {
-  local repo="$1" br="$2" body fn sz fam hold p
+  local repo="$1" br="$2" fn p
   [ -z "$br" ] && br=$(probe_default_branch "$repo")
   if [ -z "$br" ]; then
     printf '%s\t%s\t%s\t%s\t%s\t%s\n' "$repo" "-" "UNRESOLVED" "0" "UNRESOLVED" "-"; return
   fi
   for fn in $PROBE_NAMES; do
-    body=$(_raw "$repo" "$br" "$fn")
-    if [ -n "$body" ] && ! printf '%s' "$body" | head -1 | grep -q '^404: Not Found$'; then
-      sz=$(printf '%s' "$body" | wc -c | tr -d ' ')
-      fam=$(family_of "$body"); hold=$(holder_of "$body")
-      printf '%s\t%s\t%s\t%s\t%s\t%s\n' "$repo" "$br" "$fn" "$sz" "$fam" "$hold"; return
-    fi
+    _row_from_fetch "$repo" "$br" "$fn" "$fn" && return
   done
   # Trap 2: ask the README where it says the licence is, before giving up.
   p=$(_readme_license_path "$repo" "$br")
   if [ -n "$p" ]; then
-    body=$(_raw "$repo" "$br" "$p")
-    if [ -n "$body" ] && ! printf '%s' "$body" | head -1 | grep -q '^404: Not Found$'; then
-      sz=$(printf '%s' "$body" | wc -c | tr -d ' ')
-      fam=$(family_of "$body"); hold=$(holder_of "$body")
-      printf '%s\t%s\t%s\t%s\t%s\t%s\n' "$repo" "$br" "$p" "$sz" "$fam" "$hold"; return
-    fi
+    _row_from_fetch "$repo" "$br" "$p" "$p" && return
     # A README that POINTS at a licence file that is not there is its own verdict: the
     # maintainer believes they granted.  Measured: DMontgomery40/mcp-canvas-lms (103★) says
     # "MIT License - see [LICENSE] file" and ships no such file.  That is an upstream ASK,

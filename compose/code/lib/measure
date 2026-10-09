@@ -1,0 +1,73 @@
+#!/usr/bin/env bash
+# `lib/measure` — the argument-invocable front end to the network-free probe half.
+#
+# Pass 74 of 2026-10-09, closing `Gap 328`.  The gap asked for "a plain script with arguments
+# rather than a sourced library".  This is that script, for the half of the probe where it
+# helps: everything measurable WITHOUT the network.  The fetch half cannot be rescued by a
+# calling convention — see the boundary table in `payload_measure.sh`.
+#
+# Usage:
+#   measure <payload-file> [--repo owner/name] [--branch ref] [--name filename]
+#       -> TSV: repo <TAB> branch <TAB> filename <TAB> bytes <TAB> family <TAB> holder
+#
+#   measure --size <payload-file>        byte-exact size (`P834`-proof)
+#   measure --newlines <payload-file>    trailing-newline run = the exact `P834` error for it
+#   measure --family <payload-file>      licence family only (`P171`-hardened classifier)
+#   measure --count <payload-file> <word>  word-bounded count (`P831`-proof)
+#   measure --self-test                  run the offline suite
+#
+# Exits non-zero on a missing file or missing argument, so a pass cannot mistake a silent
+# failure for a measurement of zero.
+set -u
+HERE="$(cd "$(dirname "$0")" && pwd)"
+. "$HERE/payload_measure.sh"
+
+usage() { sed -n '2,25p' "$0" | sed 's/^# \{0,1\}//'; }
+
+[ "$#" -eq 0 ] && { usage; exit 2; }
+
+case "$1" in
+  --self-test)
+    exec bash "$HERE/../p837-payload-measure/test_measure.sh"
+    ;;
+  --size)
+    [ "$#" -ge 2 ] || { echo "measure --size needs a file" >&2; exit 2; }
+    [ -f "$2" ] || { echo "no such payload: $2" >&2; exit 1; }
+    size_of_file "$2"
+    ;;
+  --newlines)
+    [ "$#" -ge 2 ] || { echo "measure --newlines needs a file" >&2; exit 2; }
+    [ -f "$2" ] || { echo "no such payload: $2" >&2; exit 1; }
+    trailing_newlines "$2"
+    ;;
+  --family)
+    [ "$#" -ge 2 ] || { echo "measure --family needs a file" >&2; exit 2; }
+    [ -f "$2" ] || { echo "no such payload: $2" >&2; exit 1; }
+    family_of_file "$2"
+    ;;
+  --count)
+    [ "$#" -ge 3 ] || { echo "measure --count needs a file and a word" >&2; exit 2; }
+    [ -f "$2" ] || { echo "no such payload: $2" >&2; exit 1; }
+    count_word_in_file "$2" "$3"
+    ;;
+  -h|--help)
+    usage
+    ;;
+  -*)
+    echo "unknown flag: $1" >&2; usage >&2; exit 2
+    ;;
+  *)
+    payload="$1"; shift
+    repo="-"; branch="-"; name=""
+    while [ "$#" -gt 0 ]; do
+      case "$1" in
+        --repo)   repo="${2:?--repo needs a value}"; shift 2 ;;
+        --branch) branch="${2:?--branch needs a value}"; shift 2 ;;
+        --name)   name="${2:?--name needs a value}"; shift 2 ;;
+        *) echo "unknown argument: $1" >&2; exit 2 ;;
+      esac
+    done
+    [ -f "$payload" ] || { echo "no such payload: $payload" >&2; exit 1; }
+    measure_payload_file "$payload" "$repo" "$branch" "$name"
+    ;;
+esac

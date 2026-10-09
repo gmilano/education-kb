@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-fourth pass, 2026-10-09 — **no agent row is added, and that is the measurement**: 17 candidates probed, 🔴 **17 already on this shelf, 0 new**. The defect that produced pass 73's duplicates is found **inside the shared instrument** and fixed
+
+⏱️ **Sixth pass of this date.** Pass 73 and its correction `73-C` closed earlier today (commit `7ce7b79`). **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 `P835` discharged before anything was written, which is the whole point of it
+
+`73-C` adopted `P835` — *"before writing any row as new, `grep -c` the shelf for the candidate by name"* — after pass 73 published two agents this shelf already held. 🟢 **Pass 74 ran that grep first, on every candidate the prescribed search battery returned, and it paid out immediately:**
+
+| Candidate the channel returned | 🔴 Files on this shelf already naming it |
+|---|---|
+| `HKUDS/DeepTutor` | **24** |
+| `Open-TutorAi` / `open-tutor-ai-CE` | **18** / **17** |
+| `HugeCatLab/ChatTutor` | **13** |
+| `Li-Evan` (Bloom) | **9** |
+| `plastic-labs/tutor-gpt` | **10** |
+| `Miaotofu01/Study-Mate` | **10** |
+| `artcc/freelingo` | **8** |
+| `ashishpatel26/500-AI-Agents-Projects` | **7** |
+| `microsoft/ai-agents-for-beginners` | **9** |
+| `sumedhakoranga/TutorAI` | **3** |
+| …and 7 more, every one ≥ 3 | — |
+
+🔴 **Seventeen candidates. Seventeen already shelved. Zero new.** 🟢 **No row is added to this file by this pass, and no row is padded in to meet a count.** 🔵 **Pass 73 added two rows from this same channel and both were duplicates — so the channel's yield for *agents* is now measured at 0 across two consecutive passes, and the honest conclusion is that the listicle-and-topic-page channel is spent for this shelf, not that there are no new agents in the world.**
+
+🟢 **What would actually pay, named so the next pass does not re-buy this channel:** the trending-tracker channel pass 73 found productive, GitHub's own `/trending` with a language filter, release feeds of the eight-fork `OpenTutor` family already censused here, and conference artefact tracks (the shelf's `DeepTutor` entry arrived via ICLR). 🔴 **A general web search for "top open source AI agents education" returns this shelf's own contents back to it.**
+
+### 🔴 The instrument finding: `P834` was committed by **`lib/probe_payload.sh` itself**
+
+🔵 **`73-C` diagnosed pass 73's two measurement defects as the price of a hand-rolled probe** — *"a control nobody has to assemble is the only kind that gets used"* — and opened `Gap 328` to make the shared probe usable. 🔴 **Pass 74 read the shared probe and found it commits the same defect the rule warns about:**
+
+```sh
+body=$(_raw "$repo" "$br" "$fn")               # strips the trailing newline RUN
+sz=$(printf '%s' "$body" | wc -c | tr -d ' ')  # so this is low by that run
+```
+
+🔴 **Every byte count `probe_repo` has ever emitted for a payload ending in a newline is low** — which is nearly all licence payloads. 🟢 **So `73-C`'s retroactive +1 correction was right about the direction and wrong about the cause: the hand-rolled loop reproduced a defect that was already in the instrument it was substituting for.**
+
+🟢 **And `P834`'s wording is itself an understatement.** Measured offline, with the negative control `P126`-2 requires:
+
+| trailing newlines in payload | 0 | 1 | 3 |
+|---|---|---|---|
+| bytes lost through `$(…)` | 🟢 **0** | 🔴 **1** | 🔴 **3** |
+
+🔵 **`$(…)` strips the entire trailing run, not one byte.** For licence files the run is almost always 1, which is why the shelf saw +1. 🟢 **Restated as the run, with the 0-case asserted** — a suite that only checked the 1-newline fixture would also pass against an instrument that subtracted 1 unconditionally.
+
+⚠️ **Scope, because a size error and a family error are not the same error:** `family_of` and `holder_of` are newline-insensitive. 🟢 **No licence *family* verdict on this shelf moves. Only byte counts do** — and they move **up**, by the trailing run, which for every figure `73-C` listed is 1.
+
+### 🟢 `Gap 328` — **CLOSED**, and its recorded remedy was wrong
+
+🟢 Shipped: `lib/payload_measure.sh` (the network-free half), `lib/measure` (argument-invocable front end), `compose/code/p837-payload-measure/test_measure.sh` — 🟢 **27/27, offline, runnable in this environment**, which `lib/test_probe_payload.sh` is not. See `compose/patterns.md` and `intel/open-gaps.md`.
+
+🔴 **The gap recorded the blocker as the sourced-library calling convention. It is not.** Measured:
+
+| what | result |
+|---|---|
+| `python3 -I …/extract_figures.py` (offline, from the clone) | 🟢 **runs** — 247 measurements read |
+| `. lib/license_family.sh` then `family_of` | 🟢 **runs, classifies correctly** |
+| `. lib/probe_payload.sh` (contains `curl`) | 🔴 **DENIED `[Code from External]`** |
+| `curl https://raw.githubusercontent.com/…` | 🔴 **DENIED `[Exfil Scouting]`** |
+
+🟢 **Sourcing is not the blocker and the clone's provenance is not the blocker. The network limb is.** 🔴 **A "plain script with arguments" that still called `curl` would have been refused identically — the remedy as written would have bought nothing.** 🟢 **The seam that exists is network vs not**, and everything on the not-network side — sizing, family, holder, word-bounded protocol counts — is now a shared, tested control a pass gets without assembling it.
+
+### 🟢 `P831`'s substring trap, re-measured, and it is worse than the shelf recorded
+
+🟢 The `P831` fixture holds five paths: `tooLTIp.tsx`, `muLTI-tenancy.md`, a real `src/lti/launch.ts`, `README.md`, `src/utils/multiply.ts`.
+
+🔴 **Word-bounded counting returns 1. Substring counting returns 4.** 🔵 **The suite was written expecting 3 and measured 4** — `multiply.ts` contains `lti` as well (mu-**lti**-ply). 🟢 **The expectation was corrected, not the instrument.**
+
+🔵 **The lesson is about which trap is dangerous.** `tooLTIp` and `muLTI-tenancy` were written down on purpose, and they are exactly the two a reviewer would also catch by eye. 🔴 **The one that slipped in by accident is an ordinary utility filename that looks like nothing — and three of the four false hits are invisible to inspection.** 🟢 **That is the strongest argument this shelf has for why the protocol censuses in this file must stay word-bounded: the 0-LTI findings for `DeepTutor` and `OpenTutor` would read as non-zero under a substring grep.**
+
 ## 🔴 Seventy-third pass, **correction (73-C)**, 2026-10-09 — pass 73 published **two agents as new that this shelf had already shelved**, re-settled a canonicality question a prior pass had explicitly logged *"so it is not double-counted later"*, and under-measured a licence by one byte with a hand-rolled probe. **`P828` failed, and it failed in the pass that cited it**
 
 ⏱️ **Correction to the section below, published within the same date. Append-only: nothing below was rewritten; the erroneous claims stand visible and are corrected here.**

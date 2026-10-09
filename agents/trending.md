@@ -4,6 +4,31 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🔴 2026-10-09 — pass 74: **nothing was new this week, and this is the first section in this file to say so with a number**
+
+⏱️ **Sixth pass of this date.** Pass 73's section and `73-C`'s correction of it are below, unchanged. **Append-only.**
+
+🔴 **`73-C` corrected pass 73's section in this file because it was headed *"New this week"* and neither row was new.** 🟢 **Pass 74 ran `P835` before writing instead of after, and the result is a negative one worth recording as a trend signal in its own right:**
+
+| Probe class | Candidates | 🔴 Already shelved | 🟢 New |
+|---|---|---|---|
+| Agents / repositories | **17** | **17** | 🔴 **0** |
+| Regulatory / market / adoption facts | ~**28** | ~**26** | 🟢 **2** |
+
+🟢 **The two unshelved facts:** **Squirrel AI** (closed Chinese adaptive-learning vendor — a market-map player, not a build-on candidate) and **Connecticut** (reported human-oversight requirement for AI-assisted grading).
+
+🔴 **Zero new agents, two passes running, from the same channel.** 🔵 **An empty week is information only if it is measured; left unwritten it looks exactly like a week nobody checked** — which is this file's own stated reason for being append-only.
+
+### 🟢 The channel diagnosis, so the next pass spends its budget elsewhere
+
+🔴 **The prescribed battery now returns this shelf's own contents.** The query `AI education EMEA Europe 2026 adoption regulation players` — verbatim from the prompt that schedules these passes — is already recorded with its result at `repos/trending.md:6616`. 🔴 **And one channel reported the Digital Omnibus as "awaiting publication in the Official Journal" when this shelf has held it as `Regulation (EU) 2026/1744` of 8 July 2026 for several passes** — 🔵 **the channel is now behind the shelf, not ahead of it.**
+
+🟢 **Channels with unmeasured yield, named rather than assumed:** GitHub `/trending` with a language filter; release feeds for the eight-fork `OpenTutor` family already censused here; conference artefact tracks (this shelf's `DeepTutor` entry arrived through ICLR); and the trending-tracker channel pass 73 found productive where the listicle channel was not.
+
+### 🟢 What moved this week is the instrumentation, not the shelf's contents
+
+🟢 **`Gap 328` CLOSED.** `lib/payload_measure.sh` + `lib/measure` + `p837-payload-measure/test_measure.sh` (**27/27, offline**). 🔴 **The defect that produced `73-C`'s two corrections was found inside `lib/probe_payload.sh` itself** — `body=$(_raw …)` strips the trailing newline run, so every byte count the shared probe ever emitted for a newline-terminated payload is low. 🔵 **The hand-rolled loop `73-C` blamed was reproducing a defect already present in the instrument it replaced.** Detail in `agents/top.md` and `compose/code/p837-payload-measure/README.md`.
+
 ## 🔴 2026-10-09 — **correction (73-C)**: this file's pass-73 section is headed *"New this week"* and **neither row was new**
 
 🔴 **Both `HKUDS/DeepTutor` and `zijinz456/OpenTutor` were already shelved before pass 73** — with identical shas (`6cf793b`, `f0142f2`) and, for `OpenTutor`, an identical licence reading (MIT, `main`, 2026-10-08). 🔴 **`adity982/OpenTutor` had already been logged by a prior pass as *"Fork of the above, not a find — logged so it is not double-counted later."*** 🔴 **Pass 73 double-counted it.**

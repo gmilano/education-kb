@@ -4,6 +4,35 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🔴 2026-10-09 — pass 74: the listicle channel's yield is now **measured at zero**, and the channel reported a status this shelf had already superseded
+
+⏱️ **Sixth pass of this date.** Pass 73's section is below, unchanged. **Append-only.**
+
+🟢 **Pass 73 recorded that "a trending-tracker channel pays out where the listicle channel does not."** 🟢 **Pass 74 put a number on the second half of that sentence:**
+
+| Probe | Query class | Candidates | 🔴 Already shelved | 🟢 New |
+|---|---|---|---|---|
+| 1 | `top open source AI agents education 2026 github MIT` | 9 | 9 | 🔴 **0** |
+| 2 | `github trending education AI 2026 open source tutor` | 7 | 7 | 🔴 **0** |
+| 3 | `open source LMS SIS platform 2026 MIT Apache …` | 6 | 6 | 🔴 **0** |
+| 4 | `AI education industry trends 2026 market size adoption` | — | — | 🟡 1 new figure (Grand View **$11.40B**) |
+| 5–8 | the four per-region regulatory queries | ~28 facts | ~26 | 🟢 **2** |
+
+🔴 **Zero new repositories across three repository-shaped queries.** 🟢 **Every name returned — `DeepTutor`, `Open-TutorAi`, `ChatTutor`, `tutor-gpt`, `Study-Mate`, `Bloom`, `freelingo`, `TutorAI`, `500-AI-Agents-Projects`, `ai-agents-for-beginners`, `classroomio`, `Frappe LMS`, `Sakai`, `Moodle`, `Open edX`, `OpenEduCat`, `Canvas` — was already on this shelf**, each in 3 to 24 files.
+
+### 🔴 Two measurements that say the channel is behind the shelf, not ahead of it
+
+1. 🔴 **The prompt's own query is already in this file.** `AI education EMEA Europe 2026 adoption regulation players` is recorded with its result at **line 6616** of this file. 🔵 **The battery that schedules these passes has been run before and the shelf kept the receipt.**
+2. 🔴 **The channel reported superseded status as current.** Asked for the EMEA position, it said the Digital Omnibus *"still awaits publication in the Official Journal."* 🟢 **This shelf has held it as `Regulation (EU) 2026/1744` of 8 July 2026 for several passes.** 🔵 **A channel that reports a published regulation as unpublished cannot be used to re-date `Gap 308` — which is what six passes have tried to do with it.**
+
+🟢 **Conclusion, priced rather than asserted:** this battery is a **re-confirmation instrument**. 🟢 **It did useful re-confirmation work this pass** — the six-platform LMS licence wall, `0 of 6` permissive, now stands on a fourth independent channel. 🔴 **It is not a discovery instrument for this shelf any more and should not be budgeted as one.**
+
+🟢 **Unmeasured channels, named so the next pass has somewhere to go:** GitHub `/trending` with a language filter; release feeds for the eight-fork `OpenTutor` family already censused here; conference artefact tracks (`DeepTutor` arrived via ICLR); the trending-tracker channel pass 73 found productive.
+
+### 🟡 The one unshelved repository-adjacent name, and why it is not a row
+
+🟡 **`Squirrel AI`** — 0 occurrences on this shelf before this pass; a Chinese adaptive-learning system reported in classroom use. 🔴 **Closed. No repository, no payload, no licence.** 🟢 **It goes to `intel/market.md` as an APAC market-map player and not to any repository shelf**, which is the distinction `P826` exists to keep.
+
 ## 🟢 2026-10-09 — pass 73: a trending-tracker channel pays out where the listicle channel does not, and a general-ERP sweep returns **one MIT** and **one mislabelled copyleft**
 
 🟢 **Append-only. This section is new; every section below it is prior history and was not rewritten.**

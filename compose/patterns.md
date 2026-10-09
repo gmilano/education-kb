@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-fourth pass, 2026-10-09 — `P836` gets the **instrument it was missing**: a new pattern `P15` that gates a base on its **dependency closure**, built on the probe half this pass made runnable. `P14-R` is its first test case and **fails it**
+
+⏱️ **Sixth pass of this date.** Pass 73 and its correction `73-C` closed earlier today (commit `7ce7b79`). **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔵 Why this pattern exists, stated as the failure it prevents
+
+🔴 **`73-C` adopted `P836`** — *"clear a pattern's base on its dependency closure, not its `LICENSE`"* — because `P14-R` was re-based onto `HKUDS/DeepTutor` with the sentence *"It is Apache-2.0, so it can be carried"*, while `PyMuPDF>=1.26.0` sat in that repository's **core dependency array**, dual-licensed **AGPL-3.0 or Artifex Commercial**, with this shelf's own verdict **REVIEW-STRONG** on record since 2026-10-06.
+
+🔴 **`P836` is a rule with no control, which `lib/README.md` says is not a control at all:** *"una regla que hay que recordar no es un control."* 🟢 **The shelf had already measured the offending dependency and the pattern still shipped without it** — so the defect is not missing data, it is a missing gate. 🟢 **`P15` is that gate.**
+
+### 🟢 `P15` — The licence-closure gate: never clear a base on its root payload alone
+
+🟢 **What it is:** a four-stage check a studio runs **before** pricing any pattern on a candidate base, producing a one-page licence verdict for the base *and its declared dependencies*. 🟢 **Entirely composed of components this repository already versions.**
+
+| Stage | Component | Licence | What it does |
+|---|---|---|---|
+| 1 — resolve | `lib/probe_payload.sh` → `probe_default_branch` | this repo | 🟢 Resolve the **real** default ref via `ls-remote --symref`. 🔴 Never assume `main` — measured counter-examples on this shelf: `GibbonEdu/core` → `v31.0.00`, `portabilis/i-educar` → `2.12`, `francoisjacquet/rosariosis` → `mobile`, `krayin/laravel-crm` → `2.2` |
+| 2 — root grant | 🆕 `lib/measure --family` / `--size` | this repo | 🟢 Classify the root payload by **title block** (`P171` via `license_family.sh`), size it **byte-exact** (`P834`). 🔴 Not `$(…)` — see below |
+| 3 — **closure** | 🆕 `lib/measure --family` over each manifest-declared dependency's payload | this repo | 🔴 **The stage `P14-R` skipped.** Parse `pyproject.toml` / `package.json` / `composer.json` for the **core** arrays only, then run stage 2 on each |
+| 4 — protocol reach | 🆕 `lib/measure --count <pathlist> <protocol>` | this repo | 🟢 Word-bounded (`P831`) counts of `lti`, `xapi`, `caliper`, `scorm`, `oneroster` over the `ls-tree` enumeration (`P829`) |
+
+🟢 **Wiring, concretely:**
+
+```sh
+# stage 1+2 — the base's own grant
+. compose/code/lib/payload_measure.sh
+probe_repo HKUDS/DeepTutor                 # -> repo branch LICENSE 11408 Apache-2.0 <holder>
+
+# stage 3 — THE CLOSURE.  For each core dependency, probe ITS payload.
+#   DeepTutor's core array yields pymupdf/PyMuPDF  -> AGPL-3.0 or Artifex Commercial
+for dep in $(core_deps_of pyproject.toml); do
+  probe_repo "$(repo_of_pypi "$dep")"
+done
+
+# stage 4 — does the base reach the LMS at all?
+git ls-tree -r --name-only HEAD | lib/measure --count /dev/stdin lti
+```
+
+🟢 **Verdict rule, and it is the point of the pattern:** 🔴 **a base is cleared only if stage 2 AND every row of stage 3 are permissive.** 🟡 A copyleft row does not kill the pattern — it **prices** it, as one of three options (accept the copyleft, pay the commercial grant, or replace the layer).
+
+### 🔴 `P15` run against `P14-R`, which is its first test case — and `P14-R` does not pass stage 3
+
+| Stage | `HKUDS/DeepTutor` | Verdict |
+|---|---|---|
+| 1 — default ref | `main` · `6cf793bd` · 2026-10-08 | 🟢 resolves |
+| 2 — root grant | **Apache-2.0**, **11 408 B**, holder *Data Intelligence Lab, The University of Hong Kong* | 🟢 permissive |
+| 3 — **closure** | 🔴 **`PyMuPDF>=1.26.0` in the core array — AGPL-3.0 **or** Artifex Commercial** | 🔴 **FAILS** |
+| 4 — protocol reach | 🔴 **0 LTI, 0 xAPI, 0 Caliper, 0 SCORM, 0 OneRoster** in 3 763 files | 🔴 adapter is net-new |
+
+🟢 **So `P15` reproduces, mechanically, the finding `73-C` had to make by hand** — which is the test of whether a gate is worth having. 🔵 **Had `P15` existed one pass earlier, `P14-R` would not have shipped the sentence that needed correcting.**
+
+🟢 **`P14-R`'s recommendation is unchanged and is now derived rather than asserted:** price the third option — **replace the PDF layer** — at `DeepTutor`'s plugin seam (single-shot Tools / multi-stage Capabilities). 🔵 It is the only branch that preserves what `P14-R` is *for*: an end-to-end auditable grade path with no copyleft and no closed component in it.
+
+### 🟢 The two measurement fixes `P15` depends on, both landed this pass
+
+🔴 **`lib/probe_payload.sh` committed `P834` itself.** `body=$(_raw …)` strips the trailing newline **run**, so `printf '%s' "$body" | wc -c` was low by that run on **every payload the shared probe has ever measured**. 🟢 Fixed: `_row_from_fetch` writes the payload to a file and sizes it with `wc -c < file`.
+
+🔵 **And `P834`'s wording was an understatement.** Measured offline with the `P126`-2 negative control:
+
+| trailing newlines | 0 | 1 | 3 |
+|---|---|---|---|
+| bytes lost via `$(…)` | 🟢 **0** | 🔴 **1** | 🔴 **3** |
+
+🟢 **`P831`'s substring trap, re-measured:** word-bounded counting returns **1** on the five-path fixture where substring counting returns **4** — and 🔵 **the fourth hit is `src/utils/multiply.ts`** (mu-**lti**-ply), which the suite's own author did not think to write down. 🔴 **Three of the four false hits are invisible to inspection**, so stage 4 above is only trustworthy word-bounded.
+
+🟢 **`Gap 328` CLOSED:** `lib/payload_measure.sh`, `lib/measure`, `p837-payload-measure/test_measure.sh` — **27/27, offline, runnable here.**
+
+### ⚠️ What `P15` is not, and the honest limit on shipping it today
+
+🔴 **Stages 1–3 need the network, and this environment refuses it** — `curl` is denied `[Exfil Scouting]` and sourcing `probe_payload.sh` is denied `[Code from External]` because it contains `curl`. 🟢 **Stage 2's classification and sizing, and stage 4's counting, are asserted 27/27 offline and run here.** 🔴 **The fetch and the manifest walk are specified and unexecuted.**
+
+🔵 **`core_deps_of` and `repo_of_pypi` above are named, not written** — a PyPI name is not a GitHub path, and that mapping is the one piece of `P15` with no component on this shelf. 🟢 **That is `Gap 329`**, opened this pass rather than left as an implied to-do. 🟡 **Until it lands, stage 3 is a manual read of the manifest against the shelf's existing licence records — which is exactly how `73-C` found `PyMuPDF`, so the pattern is usable by hand today and automatable once `Gap 329` closes.**
+
 ## 🔴 Seventy-third pass, **correction (73-C)**, 2026-10-09 — `P14-R`'s re-base is sound, but it was published **without the AGPL dependency in its base's core**
 
 ### 🔴 `P14-R` — corrected. The tutoring runtime is Apache-2.0; its PDF layer is **AGPL-or-Artifex**

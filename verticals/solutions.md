@@ -4,6 +4,39 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-fourth pass, 2026-10-09 — the LMS licence wall re-measured on a **fourth independent channel**: 🔴 **0 of 6 platforms permissive**, and the one AI roadmap the channel names belongs to the **AGPL** incumbent
+
+⏱️ **Sixth pass of this date.** Pass 73 closed earlier today (commit `7ce7b79`). **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 Six platforms, zero permissive — and the channel volunteered this without being asked
+
+🟢 **Probe:** `open source LMS SIS platform 2026 MIT Apache Moodle Open edX alternative AI`. 🔵 **The query asks for MIT/Apache explicitly.** 🔴 **The channel's own summary answered: "no platform was described as MIT or Apache licensed."**
+
+| Platform | Licence reported | Permissive? | AI posture reported |
+|---|---|---|---|
+| **Moodle** | **GPL-3.0** | 🔴 no | AI-driven quiz and plagiarism tooling |
+| **Canvas LMS** (Instructure) | **AGPL** | 🔴 no | 🟡 **the most concrete roadmap named** — OpenAI partnership, an **LLM-Enabled Assignment type**, IgniteAI agent for multi-step workflows |
+| **Open edX** | **AGPL-3.0** | 🔴 no | 🔴 third-party plugins only; needs a full DevOps team |
+| **Frappe LMS** | **AGPL-3.0** | 🔴 no | — |
+| **OpenEduCat** | **LGPL-3.0** | 🟡 weak copyleft — proprietary extensions permitted | 🟡 the only one combining **LMS + SIS + fees + parent app on one database** (vendor's own claim) |
+| **Sakai** | **ECL-2.0** | 🟡 Apache-derived educational-community variant | — |
+
+🔴 **Four strong-copyleft, two weak-or-variant, zero permissive.** 🟢 **This is the fourth independent channel to return that result and the most stable finding on this shelf.**
+
+🔵 **The strategic reading, and it is sharper than "no permissive LMS exists".** 🔴 **The platform with the most advanced AI roadmap is the AGPL one**, and its roadmap is a **closed** partnership bolted onto a copyleft core. 🟢 **So the incumbent's AI layer is not something a studio can carry either** — the licence wall and the vendor wall are the same wall, approached from two sides.
+
+🟢 **Where that leaves the vertical strategy, unchanged but now better evidenced:** 🟢 **`OpenEduCat` (LGPL-3.0) remains the one platform on this shelf a studio can extend without opening its own extension** — weak copyleft permits a proprietary module, and it is the only row combining LMS with SIS, fees and a parent app. 🔵 **That is the Odoo-shaped play for education**, and `Gap 309`'s OpenEduCat path was resolved last pass. 🟡 **`Sakai`'s ECL-2.0** is the second-least-constrained row and is under-examined on this shelf.
+
+### 🟡 `classroomio` — named again, licence **not** asserted
+
+🟡 The channel named [`classroomio/classroomio`](https://github.com/classroomio/classroomio) again, as a *"simple and beautiful alternative to Moodle LMS, EdX, Thinkific and Teachable"* with an **AI lesson tutor**, aimed at company training rather than schools. 🔴 **No licence was reported.** 🟢 **Already on this shelf — 20 files** (`P835` discharged).
+
+🔴 **Its licence is deliberately not re-asserted here from this channel**, because the same channel reported the EU Digital Omnibus as *"awaiting publication in the Official Journal"* when this shelf holds it as **`Regulation (EU) 2026/1744` of 8 July 2026**. 🔵 **A channel measurably behind the shelf on a date it could have checked is not a licence source.** 🟢 **Queued as a payload re-read for the first pass with network**, via `lib/measure` stage 2 of `P15` (`compose/patterns.md`).
+
+### 🟢 Why this matters to every regional engagement, in one line
+
+🔴 **The permissive tutors on this shelf hold zero LTI/xAPI/Caliper/SCORM/OneRoster paths** (`DeepTutor` 3 763 files, `OpenTutor` 890 files, measured last pass, word-bounded per `P831`). 🔴 **The platforms that do speak those protocols are the six above, none permissive.** 🟢 **That is `Gap 316` stated completely for the first time: the seam is two-sided, and the cheap side is the tutor** — a permissive tutor with no LTI is one adapter away, whereas a certified copyleft-or-closed platform is a procurement. 🔵 `ltijs` (Apache-2.0, `0ec24fe`) is the one-hop closer.
+
 ## 🟢 Seventy-third pass, 2026-10-09 — the ERP shelf gains its **first permissive row**, a secondary source's Apache-2.0 claim is **corrected to EPL-2.0**, and `Gap 309`'s unresolved OpenEduCat path is **resolved**
 
 ⏱️ **Fifth pass of this date.** Pass 72 closed earlier today (commit `e99be83`). **Append-only: this section is new; nothing below it was rewritten.**

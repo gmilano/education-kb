@@ -4,6 +4,92 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-fourth pass, 2026-10-09 — `Gap 328` **CLOSES, and its recorded remedy was wrong**; 🔴 **pass 73's declared APAC gap is contradicted by this shelf itself**; `Gap 308` refused a **seventh** time on a wider spread; `Gap 329` opens; `P837`–`P839` adopted
+
+⏱️ **Sixth pass of this date.** Pass 73 and its correction `73-C` wrote to this file; this section sits above them and supersedes only the claims it names. **Append-only.**
+
+🟢 **Registry continuity:** `73-C` wrote to this file, so the section below this one is `73-C`'s and no fold-forward is needed.
+
+### 🟢 `Gap 328` — **CLOSED.** The blocker was not the calling convention
+
+🔵 **The gap recorded:** *"`probe_payload.sh` is unusable under this environment's execution policy… Remedy: make the shared probe invocable as a plain script with arguments rather than a sourced library."*
+
+🔴 **Both halves of that are false, and this pass measured the boundary instead of inferring it:**
+
+| what | result |
+|---|---|
+| `python3 -I compose/code/patterns-figure-audit/extract_figures.py` (offline, from the clone) | 🟢 **runs** — 247 measurements read |
+| `. lib/license_family.sh` then `family_of` (no network) | 🟢 **runs, classifies correctly** |
+| `. lib/probe_payload.sh` (contains `curl`) | 🔴 **DENIED `[Code from External]`** |
+| `curl https://raw.githubusercontent.com/…` | 🔴 **DENIED `[Exfil Scouting]`** |
+
+🟢 **Sourcing is not the blocker** — `license_family.sh` sources fine and the new library sources it. 🟢 **The clone's provenance is not the blocker** — an offline Python instrument from the same clone runs. 🔴 **The network limb is the blocker, so "a plain script with arguments" that still called `curl` would have been refused identically.**
+
+🟢 **Closed by splitting the probe on the seam that actually exists — network vs not:**
+
+| Shipped | What it gives |
+|---|---|
+| `compose/code/lib/payload_measure.sh` | the network-free half: `size_of_file` (`P834`-proof), `trailing_newlines`, `family_of_file`/`holder_of_file` (delegate to `license_family.sh`, so `P171` is inherited), `count_word_in_file`/`count_word_in_pathlist` (`P831`-proof), `measure_payload_file` → the same six-field TSV as `probe_repo` |
+| `compose/code/lib/measure` | argument-invocable front end — `--size`, `--newlines`, `--family`, `--count`, `--self-test`. **Exits non-zero on a missing payload** rather than printing `0` |
+| `compose/code/p837-payload-measure/` | 🟢 **27/27, offline, runs in this environment** — which `lib/test_probe_payload.sh` does not, since every one of its cases hits the network on purpose |
+
+🔴 **And the gap's premise was understated in the other direction: the shared instrument had the defect too.** `lib/probe_payload.sh` did `body=$(_raw …)` then `printf '%s' "$body" | wc -c`. 🔴 **So every byte count the shared probe ever emitted for a newline-terminated payload is low by the trailing run.** 🔵 **`73-C` blamed the hand-rolled loop; the loop was faithfully reproducing a defect already present in the instrument it substituted for.** 🟢 Fixed in `_row_from_fetch`.
+
+⚠️ **The honest limit on the closure:** the fetch branch is 🔴 **unexecuted** — `bash -n` clean, primitives asserted 27/27, but no live repository passed through it this pass. 🟢 **The first pass with network must run `test_probe_payload.sh` and expect every byte count to return one byte higher** than the shelf's historical figure for any newline-terminated payload. 🔵 **That shift is the fix landing, not a new defect.**
+
+### 🔴 Pass 73's APAC gap — **WITHDRAWN on two of its three limbs**, because this shelf already held the answer
+
+🔴 **Pass 73 wrote:** *"this pass found no APAC education-ministry policy, no national AI-in-schools curriculum, and no student-data rule specific to the region."*
+
+🔴 **Measured against the shelf:** `grep -rlF "Class 3" --include=*.md` → **6 files**, including `intel/market.md` at lines **110**, **4 579**, **4 713** and **5 170**. Line 110 is **pass 72's own `### APAC` block, seventy lines below the sentence that declares the gap**, and it reads:
+
+> **India**: AI and computational thinking become **mandatory from Class 3** across government and private schools in **2026-27**, backed by the IndiaAI Mission
+
+🟢 **Limb 2 (national AI-in-schools curriculum) is withdrawn** — India, recorded by at least four prior passes, plus China's reported compulsory-from-age-6 programme. 🟢 **Limb 1 (education-ministry policy) is withdrawn** — Vietnam's `33/2026/QD-TTg` and decree `142/2026/ND-CP` name education and automated assessment, and are on this shelf. 🔴 **Limb 3 stands and is the real gap: no APAC education-ministry instrument on student DATA specifically.**
+
+🔵 **Why this is worse than a duplicate row, which is the reason it gets its own protocol.** A false "new row" costs one duplicate. 🔴 **A false "informed gap" costs a research instruction: this shelf treats a declared gap as a direction for the next pass, and pass 73 pointed the next pass at ministry-direct research it did not need.** 🟢 **`P839` adopted.**
+
+### 🔴 `Gap 308` — **OPEN. Seventh consecutive refusal, and the spread widened**
+
+🟢 Re-probed. 🔴 **$1.94B – $11.40B for 2026 — a 5.9× spread**, against the 5.5× refused since the sixty-eighth pass. 🆕 **Grand View Research at $11.40B is the first figure to move the top of the range.** 🟡 One channel reports its own spread: four firms, **$6.4B–$11.4B**. 🟢 **No figure adopted. Nothing on this shelf is sized by one.**
+
+🔴 **And the re-dating attempt is now explicitly abandoned for this channel.** The same channel that offered a fourth variant of the EU transparency date (**2026-11-02**) simultaneously reported the Digital Omnibus as *"awaiting publication in the Official Journal"* — 🟢 **when this shelf holds it as `Regulation (EU) 2026/1744` of 8 July 2026.** 🔵 **A channel measurably behind the shelf cannot resolve a date the shelf cannot resolve.** 🟢 **Six passes have tried; this one records why it will not work and stops.**
+
+### 🆕 `Gap 329` — **OPENED.** There is no package-name → repository mapping on this shelf
+
+🔵 **`P15` (the licence-closure gate, `compose/patterns.md`) needs stage 3 — probe the payload of each *core dependency*.** 🔴 **A PyPI/npm/Packagist name is not a GitHub path, and nothing on this shelf maps one to the other.** `core_deps_of` and `repo_of_pypi` are named in `P15` and **not written**.
+
+🟢 **Why it matters beyond one pattern:** `73-C`'s `PyMuPDF` finding — a permissive root grant over an AGPL-or-commercial core dependency — was made **by hand**. 🔴 **Until this closes, `P836` has a gate that still needs a human for its most expensive stage**, which is the arrangement `Gap 328` existed to end. 🟡 **Usable by hand today** (manifest read against this shelf's existing licence records, which is exactly how `PyMuPDF` was caught).
+
+🟢 **Remedy:** a small, versioned resolver — registry metadata → repository URL — with an offline fixture suite, since the registries are reachable only from a pass with network.
+
+### 🆕 Protocols adopted this pass
+
+🟢 **`P837` — never publish a byte count taken through `$(…)`.** Use `size_of_file`, or `lib/measure --size`. 🔵 **`P834`'s wording is corrected: `$(…)` strips the entire trailing newline *run*, not one byte** — measured 0/1/3 bytes lost on runs of 0/1/3, with the 0-case asserted as the negative control `P126`-2 requires. 🟢 `size_of_capture_BROKEN` is kept in the library **only** as that control.
+
+🟢 **`P838` — split a shared instrument on the capability the environment denies, not on its calling convention.** 🔴 **A control that cannot run where it is needed is not a control**, and `Gap 328` spent a pass on the wrong axis because the blocker was named from one failed invocation instead of measured. 🔵 **The test: what is the narrowest thing that was actually refused?** Here it was `curl`, not sourcing, not the clone.
+
+🟢 **`P839` — grep the shelf before declaring something ABSENT, not only before claiming it new.** 🔴 **`P835` covers the false row; this covers the false gap, which is more expensive** because a declared gap is a research instruction for later passes. 🔵 **Mechanically identical and equally cheap: one `grep -rlF` per limb of the claim.** 🟢 **The limbs are greppable separately and must be — pass 73's APAC gap had three, and exactly one of them was real.**
+
+### 🟡 Declared on the way past: `patterns-figure-audit --check` reports **pre-existing** drift this pass did not introduce and did not fix
+
+🟢 **`P126`-1 says run the versioned instrument before hand-rolling one, so this pass ran it** — `python3 -I compose/code/patterns-figure-audit/extract_figures.py --check`, which 🟢 **executes fine in this environment** (247 measurements read; see the `Gap 328` boundary table above).
+
+🔴 **It reports drift in `compose/patterns.md` from earlier passes:**
+
+| Line(s) | State | What the audit says |
+|---|---|---|
+| `L521`, `L615`, `L5174` | 🔴 **GONE** | *"175 líneas de stdlib (P85)"* — no file in this repository implements it; `MCP_ALLOWLIST` appears only in `patterns.md`, while the two gates that exist use `SEB_ALLOW` / `UNITIME_ALLOW` |
+| `L616` | 🔴 **NEITHER** | *"~115 líneas de stdlib"* for the UniTime manifest generator; today the file measures **186 raw / 152 non-blank-non-comment** |
+
+🟡 **Not this pass's figures and not this pass's scope** — pass 74 touched none of those lines, and the local instruments it does cite all re-ran green (`sebserver-mcp-gate` 37/37, `proctoring-reach-audit` 19/19, `aiact-50-2-marking` 23/23, `aiact-50-2-pack` 27/27, plus this pass's `p837-payload-measure` **27/27**). 🟢 **Recorded rather than left silent, because this shelf's own rule is that a figure from a suite expires when the suite grows, and these three have expired.** 🔵 **One `P85` citation is worse than stale — the audit says no artefact implements it at all**, which is the `Gap 327` shape (a claim with nothing under it) pointed at this repository's own prose. 🟢 **Next pass with budget should either produce the gateway or withdraw the three citations.**
+
+### 🟢 What stands, unaffected by this pass
+
+🟢 **`Gap 326`'s closure**, 🟢 **`Gap 327`**, 🟢 **`Gap 316`'s two-sided characterisation** (and its licence half re-confirmed on a fourth channel this pass: **0 of 6** LMS/SIS platforms permissive), 🟢 **`Gap 309`'s OpenEduCat resolution**, 🟢 **`P831`/`P832`/`P833`/`P834`/`P835`/`P836`** (with `P834` restated as above), 🟢 **the Huly EPL-2.0 correction**, 🟢 **`73-C`'s four corrections in full**, and 🟢 **the regional intelligence**, now with all four regions carrying material for a second consecutive pass.
+
+🔴 **And one standing item is re-flagged rather than quietly dropped:** `Gap 316(i)` — the real wiring cost of the `DeepTutor` + `ltijs` hop — **remains the highest-value unmeasured number on this shelf**, and `P14-R` is still where it should be paid once and recorded.
+
 ## 🔴 Seventy-third pass, **correction (73-C)**, 2026-10-09 — pass 73 cited `P828` and then did not perform it: **two agents published as new were already shelved**, and one hand-rolled probe produced **two** independent measurement defects. `P834`–`P836` adopted
 
 ⏱️ **Correction published within the same date, append-only. The pass-73 section below is not rewritten; its erroneous claims stand visible and are corrected here.**

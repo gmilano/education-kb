@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-fourth pass, 2026-10-09 — the first **falling** adoption series on this shelf, and the trend that adoption was never the market: **88 % use against 57 % inadequate guidance**
+
+⏱️ **Sixth pass of this date.** Pass 73 closed earlier today (commit `7ce7b79`). **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 Trend 1 — **Adoption stops being the story, because one series went down**
+
+🔴 **Faculty intent to use AI in the US and Canada fell 9 points, from 76 % (2025) to 67 % (2026).** 🔴 **And only 22 % of higher-education faculty are regular AI users, against 83 % of K-12 teachers.** 🟡 **Both are single-channel, secondary-sourced; this shelf had recorded neither** (`P835` grep: 0 occurrences).
+
+🟢 **If it holds, it is the first *declining* adoption figure in this file's history**, and it inverts the sales motion this shelf has assumed for seventy-three passes. 🔵 **The schoolteacher is four times more likely to be a regular AI user than the professor.** 🟢 **Consequence for the studio: the warm buyer is the K-12 district with a statutory policy deadline, not the university** — and `intel/market.md`'s North America block now says so.
+
+🔴 **Why the decline is plausible rather than noise:** it arrives in the same pass as **95 % of college faculty believing generative AI increases student overreliance.** 🔵 **Falling intent alongside rising concern is a coherent pair, not a contradiction** — which is the weak test this shelf can apply without a second channel. 🟡 **Flagged for re-probe; not adopted as a series yet.**
+
+### 🟢 Trend 2 — **The governance deficit is the market, and it is now measured on four channels**
+
+🟢 **Adoption is saturated and governance is not, everywhere this shelf looks:**
+
+| Measure | Figure | Source channel |
+|---|---|---|
+| Student AI use, 35 countries | 🟢 **88 %** | Digital Education Council 2026 |
+| Students whose assessments carry **inadequate** AI guidance | 🔴 **57 %** | same |
+| Students reporting **no formal AI training** | 🔴 **77 %** | Microsoft, six countries |
+| US public schools with a written AI policy (Dec 2024) | 🔴 **31 %** | US Dept. of Education |
+| US teachers given any formal administrator guidance | 🔴 **18 %** | Gallup 2026 |
+| US universities with a formal AI policy | 🔴 **20 %** | channel-reported |
+| LATAM higher-ed institutions with any framework | 🔴 **26 %** (against **87 %** using AI) | UNESCO IESALC, 200 institutions |
+
+🔵 **Every row is the same shape: use is high, governance is absent.** 🟢 **This is the trend that places the whole shelf — the sellable artefact is the governance and oversight layer, not the tutor.** 🟢 **And it is why the human-approval gate (`littlecookie0722/AI-Teaching-Agent`, contract-specified, test-exercised) is the most load-bearing component this KB holds.**
+
+🔴 **The honest caveat:** these seven figures come from seven different instruments with different populations and dates. 🟢 **They are not averaged, and the 200-institution UNESCO sample is still not compared to the 29-institution DEC one.**
+
+### 🟢 Trend 3 — **Curriculum mandates, not tutors, are APAC's demand driver — and teacher capacity is the binding constraint**
+
+🟢 **India: AI and computational thinking become mandatory from Class 3** across government and private schools in **2026-27**, backed by the IndiaAI Mission (₹10 372 crore) and a ₹500 crore centre of excellence. 🔴 **Against ~10 M teachers needing training and 15 % AI-fluent in a 2025 survey.** 🟡 **China: AI reported compulsory from age 6, Beijing owing every student ≥8 hours a year** — single secondary channel, not adopted.
+
+🔵 **The shape of the opportunity is therefore inverted from the one this shelf usually prices.** 🔴 **A curriculum mandate with a fixed date and a 15 %-fluent teaching force is a teacher-enablement engagement — content, training, assessment scaffolding — before it is a software build.** 🟢 **It is also the largest-volume education AI commitment in the world by headcount, and it has a deadline.**
+
+🔴 **And this trend had to be *recovered* from the shelf rather than discovered.** Pass 73 declared *"no national AI-in-schools curriculum"* for APAC while pass 72's own block, seventy lines below it in `intel/market.md`, named this exact mandate. 🟢 **`P839`** — see `intel/open-gaps.md`.
+
+### 🟢 Trend 4 — **Capital cools while obligation tightens, which favours open source and services over venture product**
+
+🔴 **Edtech venture funding: $1B in H1 2026, down 26 % from $1.35B in H1 2025** (HolonIQ). 🔴 **And the market-size channel's disagreement *widened* this pass** — $1.94B–$11.40B for 2026, a **5.9×** spread against the 5.5× this shelf has refused for six passes (`Gap 308`, seventh refusal).
+
+🟢 **Meanwhile the obligations hardened:** five US states now require human oversight or bar high-stakes AI decisions (OH, OK, MD, VA, 🆕 CT); the EU classifies educational assessment high-risk under Annex III point 3; Vietnam's in-force AI law names automated assessment explicitly; Korea's grace period expires.
+
+🔵 **Falling capital plus rising compliance load is the condition under which institutions buy integration and governance rather than new platforms.** 🟢 **That is a services market and an open-source market, and it is the one Globant is positioned for.** 🔴 **It is a poor environment for a venture-funded point product**, which is a reason to compose from what exists rather than build a platform.
+
+### 🔴 Trend 5 — **A knowledge base can outrun its own discovery channel, and this one has**
+
+🔴 **Measured this pass:** the prescribed search battery returned **17 repository candidates and 17 were already shelved — 0 new.** ~28 regulatory and market facts returned **2** unshelved. 🔴 **And the channel reported the EU Digital Omnibus as "awaiting publication in the Official Journal" when this shelf has held it as `Regulation (EU) 2026/1744` of 8 July 2026 for several passes.**
+
+🔵 **The channel is now behind the shelf on a fact the channel itself supplied earlier.** 🟢 **The clinching evidence costs one grep: the query `AI education EMEA Europe 2026 adoption regulation players` — verbatim from the prompt that schedules these passes — is already recorded with its result at `repos/trending.md:6616`.**
+
+🟢 **Stated as a maintenance trend, because it generalises past this shelf:** 🔴 **a curation loop driven by a fixed query battery converges on its own contents, and the convergence is invisible unless each pass measures its yield.** 🟢 **Two consecutive passes drew agent rows from this channel: pass 73 published two duplicates, pass 74 measured zero and published none.** 🔵 **The difference between those two passes is not the channel — it is that one of them ran `P835` first.**
+
+🟢 **Remedy, named rather than implied:** price the battery as a **re-confirmation** instrument (it did real re-confirmation work this pass — the six-platform LMS licence wall now stands on a fourth channel) and move the discovery budget to channels with unmeasured yield: GitHub `/trending` with a language filter, release feeds for the eight-fork `OpenTutor` family, and conference artefact tracks.
+
 ## 🟢 Seventy-third pass, 2026-10-09 — the "purpose-built over general-purpose" trend is **confirmed by a standards body**, and this pass finds the trend's own **blocker measured for the first time**
 
 ⏱️ **Fifth pass of this date.** Pass 72 closed earlier today (commit `e99be83`). **Append-only: this section is new; nothing below it was rewritten.**
