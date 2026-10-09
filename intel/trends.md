@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-fifth pass, 2026-10-09 — the licence chokepoint **moves off the platform entirely**: the delivery tier is permissive by default and the constraint is now the **AI Act's prohibition line**, not copyleft. Plus: the measurement deficit is quantified at **9%**, and a national mandate is shown to reverse on **teacher readiness**
+
+⏱️ **Seventeenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 `T1` — **the licence chokepoint has moved three times in three passes, and this pass it leaves the licence domain**
+
+🔵 **Worth tracing because the movement is the trend:**
+
+| pass | where the chokepoint was | measured as |
+|---|---|---|
+| 83 | 🔴 the **platform** tier | 8 of 8 established platforms copyleft (`Gap 334`) |
+| 84 | 🔴 the **measurement** tier | psychometrics/IRT GPL-by-default, 6 of 7 R packages GPL (`P907`) |
+| 🆕 **85** | 🟢 **nowhere in the delivery tier** — 🔴 **it is the AI Act's prohibition line** | 🟢 **autograding tier 8 of 11 permissive**; 🔴 **Art. 5(1)(f) emotion-recognition ban rules out a product CATEGORY no licence would have blocked** |
+
+🟢 **The delivery layer — the part a studio actually ships — turns out to be the permissive one.** 🔵 **The copyleft concentration sits in the two layers a client already owns (the LMS) or a researcher already published (the statistics packages).** 🔴 **So the binding constraint on an education engagement in late 2026 is regulatory classification, not licence compatibility** — and that is a change in kind, because a licence problem can be routed around with an architecture decision while a prohibition cannot.
+
+### 🟢 `T2` — **the operator predicts the grant, and it predicts it better than the topic or the ecosystem**
+
+🟢 **Measured on this pass's platform rows:** 🟢 **university-chair or corporate-research operators arrive permissive 4 of 4** (`Artemis`/TU München MIT, `okpy/ok`/UC Berkeley Apache-2.0, `Tango`/CMU Apache-2.0, `prog-edu-assistant`/Google Apache-2.0); 🔴 **community-foundation operators arrive GPL-3.0 3 of 3** (`classroom50`, `infomark`, `gatorgrade`).
+
+🔵 **The mechanism is rational on both sides and that is why it is predictive:** 🟢 a university chair licenses permissively so other institutions adopt its *teaching method* — the licence is a distribution strategy for pedagogy; 🔴 a foundation licenses GPL to stop a commons being enclosed. 🔵 **Neither is an accident, so neither will drift.** 🟢 **Practical consequence: when sourcing a platform, read the OWNER before the licence badge.**
+
+### 🟢 `T3` — **the measurement deficit is the sector's real gap, and it is now a number**
+
+🟢 **UNESCO IESALC Working Paper 16 (`ED/HE/IESALC/WP/2026/103`), 200 institutions across 19 LATAM countries:** 🟢 **87% use AI in at least one area** · 🔴 **26% have a formal AI strategy** · 🔴 **18.5% have broad institutional policy** · 🔴 **9% have formal evaluation mechanisms** · 🔴 **8% have a dedicated AI budget.**
+
+🔵 **The 9% is the trend, not the 87%.** 🟢 **Near-universal adoption with one institution in eleven able to evaluate outcomes is an evidence crisis arriving on a schedule**, and it collides directly with 🟢 **the US Dear Colleague letter of 20 Aug 2026, which tells districts to remove tools that do not improve learning.** 🔴 **Two regions, same quarter, same unmet requirement: nobody can show the tool worked.**
+
+🔴 **Staleness caveat that belongs in every citation of this study:** 🔴 **its fieldwork ran August–October 2025.** 🔵 A study launched September 2026 describes late-2025 practice.
+
+### 🟢 `T4` — **a national AI-education mandate has now been shown to REVERSE, and the cause was teacher readiness**
+
+🟢 **Carried forward from `P879` and reinforced by this pass's LATAM and APAC readings:** 🔴 **Korea hardened and retreated in the same year** — AI Basic Act in force January 2026, and in **August 2026 the National Assembly stripped AI textbooks of official status** after adoption stayed **below 30%** in March, 🔴 **on teacher preparedness.**
+
+🟢 **This pass adds two independent instances of the same causal structure:**
+- 🟢 **Mexico's CPFI** took **25 000+ applicants** and enrolled **12 000+** in February 2026 with **17 corporate backers** — 🔵 **a state investing in human capacity ahead of tooling.**
+- 🟢 **Colombia's CONPES 4144** tasks the education ministry with **teacher and student training 2025–2030** and separately records that the country **has no diagnostic instrument for school-population digital skills.**
+
+🔵 **The pattern: every government that has moved past pilots has spent on PEOPLE, and the one that led with product reversed.** 🟢 **For a studio this reprices the engagement — enablement and change management are not the soft add-on to the build, they are the part with the demonstrated failure mode.**
+
+### 🟢 `T5` — **regulation is converging on three artefacts, and they are the same three everywhere**
+
+🔵 **Across all four regions this pass, the instruments differ and the required artefacts do not:**
+
+| artefact | EMEA | North America | APAC | LATAM |
+|---|---|---|---|---|
+| 🟢 **a written AI policy** | Art. 27 FRIA + Annex III dossier | 🟢 Ohio (by 1 Jul 2026), Oklahoma `SB 1734` (before 2027–28), Maryland `SB 720` | 🟢 **UGC devolves it to each institution explicitly** | 🔴 26% have one |
+| 🟢 **parent/student transparency and choice** | Art. 50 | 🟢 **Florida, 16 Sep 2026** — notification + opt-in/opt-out + a non-AI alternative | 🟡 proposed (India, unverified) | 🔴 **1 in 2 students unclear on acceptable use** |
+| 🟢 **evidence that it works** | Annex III risk management + logging | 🟢 **Dear Colleague, 20 Aug 2026** — remove tools that do not improve learning | 🟡 — | 🔴 **9% have evaluation mechanisms** |
+
+🟢 **Three artefacts, four regions, one template family.** 🔵 **This is the strongest case on the shelf for building the governance wrapper ONCE and localising it**, rather than treating each region's regulation as a separate practice.
+
+### 🆕 `T6` — **data residency arrives in education procurement**
+
+🟢 **Florida's 16 Sep 2026 rule directs districts to prioritise vendors that store and process student data in the United States.** 🔵 **First US education instrument on this shelf to constrain *where* processing happens** — 🟢 **which converts a deployment-architecture choice into a procurement criterion**, and makes the self-hostable permissive rows (`Artemis`, `Tango`, the GitLab-sibling CI grader) commercially advantaged rather than merely cheaper. 🔵 **EMEA has had this pressure via sovereignty for several passes; it is now bilateral.**
+
+### 🆕 `T7` — **item authoring becomes buildable, and the multilingual row is the one that matters**
+
+🟢 **The shelf had tutors, trackers, graders and psychometrics, and no way to AUTHOR an item.** 🟢 **Five MIT rows close that this pass** — and 🔵 **`asahi417/lm-question-generation` is the consequential one because it is multilingual.** 🔴 **Every other row in the tier assumes English.** 🟢 **For a LATAM or APAC engagement, item generation in the language of instruction is the difference between a demo and a deployment.**
+
+### 🔴 `T8` — **the prohibition, not the deadline, is the thing to audit first — and almost nothing is audited**
+
+🟢 **Art. 5(1)(f) bans AI inferring emotions in education institutions, in force since 2025-02-02, untouched by the Digital Omnibus.** 🔵 **It is a BAN, not a future obligation, and it eliminates an entire product category — engagement, attention and affect detection — that vendors still ship.**
+
+🟢 **This pass audited one row properly:** `vardanagarwal/Proctoring-AI` ships **seven** functions — gaze direction, mouth-opening, person counting, phone detection, head pose, face spoofing, audio speech — and 🟢 **zero infer affect.** 🟢 **It is therefore permitted-but-high-risk, not prohibited**, which makes exam integrity buildable on a permissive row.
+
+🔴 **`Gap 349`: every other tutor and proctoring row on this shelf is UNAUDITED against the prohibition.** 🔵 **Recorded as a gap because it is the one compliance question where "probably fine" is a liability**, and because the audit is cheap — it is a README-level reading of what each row detects.
+
+---
+
+
 ## 🟢 Eighty-fourth pass, 2026-10-09 — **academic integrity becomes the sector's front line and it already has an evasion arms race**; governance shifts from guidance to statute in three jurisdictions; and the licence chokepoint moves from the platform to the MEASUREMENT tier
 
 ⏱️ **Sixteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

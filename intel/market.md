@@ -4,6 +4,110 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-fifth pass, 2026-10-09 — **`Gap 348` CLOSES and its premise is REFRAMED: Mexico and Colombia have no *sectoral* AI-education instrument because their horizontal policy DELEGATES to the education ministry and the deadline slipped.** `P879` reproduces in LATAM. And the EMEA channel returned material **behind this shelf** for a second time — recorded as a channel measurement, not published as a finding
+
+⏱️ **Seventeenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **Four jurisdiction-shaped queries in `extended` mode (`P870`, `P887`), plus the brief's four plain-language queries run as a control.**
+
+### 🔴 `P925` — **the EMEA channel returned material BEHIND this shelf, a second time, and publishing it would have been a regression**
+
+🔴 **This pass's EMEA query returned:** *"the Digital Omnibus … has not yet been formally adopted, so the current law with its 2 August 2026 date remains legally leading until publication in the Official Journal."*
+
+🟢 **This shelf has held the resolution since pass 58 and reconfirmed it since:** **Regulation (EU) 2026/1744** (*Digital Omnibus on AI*), **CELEX 32026R1744** — Parliament **2026-06-16**, Council **2026-06-29**, signature **2026-07-08**, **published in the Official Journal 2026-07-24**, **in force 2026-07-27**, deferring **Annex III** stand-alone high-risk (where education sits) from `2026-08-02` to **`2027-12-02`**, and Annex I to `2028-08-02`.
+
+🔴 **Had this pass treated the channel as fresher than the shelf, it would have published "2 August 2026 is legally leading" and un-resolved a question seven passes of work had settled.** 🔵 **`P925`: on the EMEA regulatory limb this shelf is now AHEAD of its own secondary channels, so a channel result that contradicts the shelf is evidence about the CHANNEL until a primary source says otherwise.** 🟢 **Pass 80 recorded this once (line ~1092). It has now happened twice, which makes it a property of the channel rather than one stale source.** 🔴 **The inverse duty still holds and is not weakened: the shelf's own position remains secondary-sourced, and `eur-lex` is unreachable from here.**
+
+🟢 **Two EMEA details from this pass's channel that are NOT behind the shelf and are added:**
+- 🟢 **Commission guidelines dated 19 May 2026** are reported to separate **pedagogical support tools** (potentially filter-eligible) from **evaluative applications affecting a student's future** (always high-risk). 🟡 **Secondary, and the source's rendering was partly garbled — flagged, not relied on.**
+- 🟢 **Conformity route, which is commercially decisive and the shelf did not state:** the great majority of Annex III education systems qualify for **internal control**; third-party assessment is required only for **biometric** systems under **Annex III point 1**. 🔵 **So an education provider's conformity dossier is a documentation exercise, not a notified-body queue — which is exactly the shape a studio can sell.**
+
+### 🟢 `Gap 348` — **CLOSED**, and the answer is a MECHANISM rather than a document
+
+🔴 **Pass 84 declared the gap honestly: adoption data covered Mexico and Colombia, the regulatory channel covered neither.** 🟢 **Both were queried by name this pass, in Spanish, in `extended` mode. Neither has a binding sectoral AI-education instrument, and the reason is the same in both:**
+
+| jurisdiction | the horizontal instrument | what it DELEGATES to education | status of the sectoral deliverable |
+|---|---|---|---|
+| 🟢 **Colombia** | 🟢 **CONPES 4144**, National AI Policy, **14 Feb 2025** — axes on ethics/governance, data/infrastructure, R&D&i, capability and digital talent | 🟢 **Tasks the Ministry of Education (MEN)** with AI training in the education system **2025–2030** (materials, methodologies, teacher and student training), and 🟢 **orders MEN to produce an AI section of the *Uso Seguro de las Tecnologías de Información* document, beginning 2025 and closing 2026** | 🔴 **NOT FOUND PUBLISHED.** 🟢 Implementation is visible instead in the **Colombia Aprende** portal, which now ships an **intelligent content recommender** suggesting personalised pedagogical routes. 🔴 CONPES also found the country **has no diagnostic instrument for school-population digital skills** and asked MEN to build one |
+| 🟢 **Mexico** | 🟢 National AI strategy, with a training pillar — 🟢 the **Public Centre for AI Training (CPFI)** took **25 000+ applicants** to its first call and **12 000+ began classes in February 2026**, backed by **17 technology companies** | 🟡 **SEP's April 2026 higher-education survey** — **60%+ of university students and faculty use generative AI daily**, **8 in 10 students** use it to write texts — followed by **ten proposed actions** for ethical and critical use | 🔴 **PRINCIPLES, NOT RULES.** 🟡 In **August 2026** the Presidency and SEP opened a **national debate** on AI, social media and devices in schools, with forums toward a law covering **minors**. 🔴 **No definitive decisions announced; nothing binding** |
+
+🟢 **`P879` REPRODUCES IN LATAM, and this is the generalisable result.** 🔵 **Pass 80 recorded `P879` from Korea: the horizontal AI law and the sectoral education mandate are different instruments, and the one a school purchase follows is the SECTORAL one.** 🟢 **Mexico and Colombia both have the horizontal instrument and both are missing the sectoral one — Colombia's by a slipped deadline it set itself, Mexico's by never having been drafted.** 🔴 **So `Gap 348` was not a research failure: the document does not exist.** 🟢 **And this confirms, with two named jurisdictions and a named mechanism, the broader claim this shelf already carried — no education-specific instrument in any LATAM jurisdiction.**
+
+🔵 **Commercially, the delegation is the opening:** 🟢 **Colombia's MEN has an overdue, publicly-specified deliverable** (an AI section of a safe-technology-use document, plus a school digital-skills diagnostic it has been told it lacks). 🔴 **That is a named buyer with a named, late artefact** — a materially better entry point than a market-size figure.
+
+### 🟢 LATAM — the IESALC study gains a **citation anchor** and, more importantly, a **staleness caveat**
+
+🟢 **This shelf already holds the headline figures (87% adoption, ~26% with a formal strategy, 200 institutions across 19 countries, launched 9 September 2026 at UNESCO Digital Learning Week with UNU-IAS support).** 🟢 **Added this pass, because a figure without a citation cannot survive a client's legal review:**
+
+- 🟢 **Working Paper 16, reference `ED/HE/IESALC/WP/2026/103`**, lead author **Arianna Valentini**.
+- 🟢 **The governance breakdown, finer than the 26% headline:** 🔴 **18.5%** have broad institutional policies · 🔴 **9%** have formal evaluation mechanisms · 🔴 **8%** have a dedicated AI budget. 🔴 **1 in 2 students says it is unclear which uses are acceptable.** 🔴 **Private institutions lead public ones on planning, training and governance.**
+- 🔴 **CAVEAT THAT CHANGES HOW THIS IS QUOTED: the fieldwork ran August–October 2025.** 🔵 **A study *launched* in September 2026 describes practice from late 2025.** 🟡 **This shelf has been citing it as a 2026 reading. It is a 2025 reading published in 2026**, and in a sector moving this fast that distinction belongs in any deck that uses the number.
+- 🟡 **Source hygiene:** the author's own bibliographic records disagree on page ranges (372–397 vs 288–307) — 🟢 **cite the working-paper reference above, not the journal pagination.**
+
+🔵 **The 9% figure is the sharpest number in this file for a services pitch:** 🟢 **87% are using AI and 9% can evaluate whether it works.** 🔴 **That is not a tooling gap, it is a measurement gap** — and this pass put a permissive measurement and grading stack on the shelf that can close it.
+
+### 🟢 North America — the 2026 statute wave, with the additions this pass could verify
+
+🟢 **The shelf already holds the state-mandate wave, Ohio's first-mover rule and `SB 1734`.** 🟢 **Added this pass:**
+
+| instrument | what it does | date |
+|---|---|---|
+| 🆕 **Federal "Dear Colleague" letter**, signed by Secretary **McMahon** | Directs states, districts and technology providers on responsible classroom technology: instructional purpose, evidence base, **transparency to parents**, measurable learning outcomes — and to **drop tools that do not improve learning** | 🟢 **20 Aug 2026** |
+| 🆕 **Virginia `HB 1186`** | Establishes the **AI Innovation in Education Pilot Program** to fund, evaluate and scale AI uses, and requires the state department to publish safe/ethical/equitable AI guidance | 🟢 2026 session |
+| 🆕 **Florida Board of Education rule** | Districts and charters must add AI requirements to internet-safety policies: 🟢 **parental notification**, 🟢 **student opt-in/opt-out with a non-AI alternative**, and 🟢 **prioritise vendors that store and process student data in the United States** | 🟢 **16 Sep 2026** |
+| 🆕 **NYC Playbook** | Final AI guidance published after the 24 Mar 2026 preliminary traffic-light framework | 🟢 **2 Sep 2026** |
+| 🆕 Federal **grant priority**, final rule | Weights proposals that build AI understanding or integrate AI literacy into teaching practice | 🟢 effective **13 Apr 2026** |
+
+🟡 **Counts conflict and are NOT resolved by preference:** one tracker says **40 states plus Puerto Rico** have guidance or frameworks as of September 2026; another says **33–35 state departments plus Puerto Rico**; this shelf previously recorded **34 plus DC and Puerto Rico**. 🔴 **The spread is a function of what each tracker counts as "guidance", and no primary enumeration was reached.** 🟢 **The commercially safe statement is the one all sources agree on: a large majority of states have guidance, and only a handful MANDATE district policy.**
+
+🔵 **Florida's data-residency clause is the item to notice.** 🟢 **It is the first US education rule on this shelf that constrains *where* student data is processed**, which turns a deployment-architecture question into a procurement requirement.
+
+### 🟢 APAC — **India's curriculum mandate is a dated procurement trigger, and it is the largest on this shelf**
+
+🟢 **Added this pass:**
+
+- 🟢 **AI and Computational Thinking become mandatory from Class 3 onward**, announced by the **Department of School Education and Literacy on 29 October 2025**. 🟢 **Classes 3–8 implement in the 2026–27 academic session; Classes 9–10 follow in 2027–28.** 🟢 Rollout launched with an **IIT Madras** expert panel (reported 1 April 2026), under **NEP 2020**.
+- 🟡 **Conflict recorded, not smoothed:** sources disagree on Class 9 — one has CT & AI compulsory in 2027–28 under **Subject Code 417**, another has Code 417 remaining an elective with its standalone Class 9 track discontinued from 2026–27. 🔴 **Verify against CBSE circulars before any commitment.**
+- 🔴 **And the integrity gap is explicit: as of early 2026 India has no comprehensive UGC regulation on AI-assisted academic dishonesty.** 🟢 **The UGC has instead encouraged institutions to write their own AI usage policies.** 🔵 **That is tens of thousands of institutions each needing a policy artefact nobody has supplied a template for.**
+- 🟡 **One secondary claim NOT relied on:** a blog describes 2026 rules requiring AI-generated content to carry disclosure covering **10% of visual area** or the **first 10% of audio duration**, plus a human-final-authority rule for grading and DPDP duties for student data. 🔴 **No official source reached; flagged and excluded from any figure above.**
+- 🟢 **`UGC Equity Regulations, 2026` are NOT about AI** — they address caste-based discrimination in higher education. 🔵 **Named because the title collides and a search for Indian AI-education regulation surfaces them.**
+
+🔵 **Why the mandate matters more than any market-size figure in this file:** 🟢 **a compulsory subject from Class 3 across the CBSE system is a dated, funded, system-wide procurement of curriculum, teacher training and assessment** — and 🔴 **this shelf has `0` APAC rows in the autograding tier to serve it (`Gap 350`).**
+
+### 🔴 The brief's plain-language battery, run as a control — **ZERO education instruments**
+
+🟢 **Run verbatim and recorded because a negative control is information:**
+
+| query | returned |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 SEO listicles; `microsoft/ai-agents-for-beginners` (**a course ABOUT AI**, not an education instrument); general frameworks already shelved |
+| `github trending education AI 2026` | 🔴 Trending aggregators and learning-path blogs; **no education-sector repo** |
+| `open source platform education ERP CRM MIT Apache` | 🟡 `OpenEduCat` vendor glossary pages (already shelved, LGPL-3.0) and a 2010 mailing-list post |
+| `AI education industry trends 2026` | 🟡 Market-size blogs with a **5.5× spread** ($6.4B / $8.3B / $7.52B 2025 baselines) — 🔴 unchanged instruction: do not quote a single figure |
+
+🟢 **Zero new rows, for the fifth-plus consecutive pass.** 🔵 **Meanwhile the two topic pages bought this pass produced 19 granted rows.** 🟢 **The measurement is stable enough to act on: the plain-language battery is a control, and the topic pages are the buy (`P901`).**
+
+## Opportunities by region
+
+### 🟢 North America
+
+🟢 **Sell assurance, and the hook is now the vendor-cull duty.** 🔵 The 20 Aug 2026 Dear Colleague letter tells districts to **evaluate tools and remove those that do not improve learning** — 🟢 **that is an evaluation mandate with no supplied methodology**, and the permissive measurement stack this shelf now holds (`matplotcheck`, `ggcheck`, `okpy/ok`'s progress tracking, plus the psychometrics tier from pass 84) is what an evidence claim is built from. 🟢 **Florida's data-residency clause makes deployment architecture billable**; 🟢 **Maryland's AI-coordinator and Oklahoma's written-policy deadlines make the policy artefact billable.** 🔵 **The deliverable is the evidence file, not the tutor.**
+
+### 🟢 EMEA
+
+🟢 **The conformity route is the product, and it is cheaper than clients fear.** 🔵 **Internal control covers the great majority of Annex III education systems; only biometric systems need a notified body.** 🟢 **So the sellable artefact is a documentation package — Art. 27 FRIA, Annex III classification, technical documentation, logging and human-oversight design — not a certification queue.** 🟢 **Sequence unchanged and now sharper: audit the two LIVE items first** (Art. 5(1)(f) emotion-recognition prohibition, in force since 2025-02-02; Art. 4 AI literacy), **then build toward 2027-12-02.** 🟢 **`Artemis` (MIT, TU München) is the first row that lets an EMEA engagement start from a permissive production platform a European university already operates** — which is also the strongest possible reference for a European public buyer.
+
+### 🟢 APAC
+
+🟢 **India's Class-3 mandate is the largest dated procurement on this shelf** — curriculum, teacher training and assessment across the CBSE system, Classes 3–8 from 2026–27. 🟢 **And the UGC's explicit devolution of academic-integrity policy to each institution is a template-shaped gap at enormous scale.** 🔵 **The shelf can serve the item-authoring half already** (`Questgen.ai`, MIT, India; `lm-question-generation`, MIT, multilingual) 🔴 **and cannot serve the platform half: `Gap 350` records zero APAC rows in the autograding tier.** 🟢 **Korea remains the cautionary reference (`P879`): it hardened and RETREATED in the same year — AI Basic Act in force January 2026, and in August the National Assembly stripped AI textbooks of official status after sub-30% adoption, on teacher readiness.** 🔵 **Teacher readiness, not model quality, is what reversed a national mandate — price the enablement, not the engine.**
+
+### 🟢 LATAM
+
+🟢 **The governance deficit is the product and it is now quantified to three decimal places of uselessness: 87% using AI, 26% with a strategy, 18.5% with policy, 9% with evaluation, 8% with a budget.** 🔵 **Lead with the 9%:** an institution that cannot evaluate cannot defend a renewal, and 🟢 **the measurement and grading stack this pass put on the shelf is permissive end to end.** 🟢 **The named, late buyer is Colombia's MEN** — an overdue AI section of the safe-technology-use document and a school digital-skills diagnostic CONPES 4144 told it it lacks. 🟡 **Mexico is earlier: engage the SEP forums and the CPFI training pipeline (12 000+ enrolled, 17 corporate backers) rather than waiting for a rule.** 🔴 **Qualify on the 8% budget figure before scoping** — adoption is near-universal and funded capacity is not. 🔴 **And `Gap 350`: this shelf has zero LATAM rows in the autograding tier, so a LATAM delivery would be the first.**
+
+---
+
+
 ## 🟢 Eighty-fourth pass, 2026-10-09 — **the AI Act's education obligations are POSTPONED to 2 Dec 2027** while two bans already bite, LATAM's adoption gap is quantified on 200 institutions, and the Mexico/Colombia regulatory blank is recorded as a GAP rather than smoothed
 
 ⏱️ **Sixteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

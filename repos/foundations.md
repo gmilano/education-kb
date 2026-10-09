@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-fifth pass, 2026-10-09 — the **autograding / automated-feedback tier is bought for the first time in 85 passes**, and it inverts `P907`: this tier is **permissive by default (11 of 15)** because it is made of *platforms universities run*, not *code attached to papers*
+
+⏱️ **Seventeenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **`topics/autograding` — 94 repos, 20 read, never opened in 85 passes.** 🔵 **This is the first channel on this shelf whose rows are production systems with institutional owners rather than reference implementations**, and the licence distribution is the mirror image of every research tier bought so far.
+
+### 🟢 `P920` — the **ARTEFACT TYPE** prediction from `P910` holds, and the autograding tier is its clean positive case
+
+🟢 **Pass 84's `P910` said: ask what KIND of artefact it is before asking what it is about.** 🟢 **Measured again on this pass's 24 rows, and the tier split is sharp:**
+
+| artefact type | dominant grant | measured this pass |
+|---|---|---|
+| 🟢 **institutional PLATFORM, university-operated** | 🟢 **permissive** | `Artemis` (MIT, TUM), `okpy/ok` (Apache-2.0, UC Berkeley), `Tango` (Apache-2.0, CMU), `prog-edu-assistant` (Apache-2.0, Google) — 🟢 **4 of 4** |
+| 🟢 **developer TOOLING / CI integration** | 🟢 **permissive** | `autograding-github-action` (MIT), `kit-sdq/autograder` (MIT), `matplotcheck` (BSD-3), `ggcheck` (MIT) — 🟢 **4 of 4** |
+| 🟡 **community platform, foundation-run** | 🔴 **GPL-3.0** | `classroom50` (212★), `infomark` (35★), `gatorgrade` (18★) — 🔴 **3 of 3** |
+| 🟢 **research code, published method** | 🟢 **permissive** | `Questgen.ai`, `lm-question-generation`, `text2text`, `question_generator`, `MLH-Quizzet` — 🟢 **5 of 5 MIT** |
+
+🔵 **`P920`: within the platform layer, the OPERATOR predicts the grant better than the artefact type does.** 🟢 **A platform built and run by a university chair or a corporate research group arrives permissive (4 of 4); a platform built by a community foundation arrives GPL-3.0 (3 of 3).** 🔵 **Mechanism worth stating because it is actionable: a university chair licenses permissively so that other institutions adopt its teaching method; a foundation licenses GPL to keep a commons from being enclosed.** 🔴 **Both are rational, and they produce opposite answers to the only question a studio is asking.**
+
+🟢 **This is strictly narrower than `P907`** (which said the *ecosystem* predicts the grant, measured on R/CRAN → GPL). 🔵 **Both now hold, on different axes: language ecosystem for research packages, institutional operator for platforms.**
+
+### 🟢 Added this pass — **foundational rows, 11 granted**
+
+| repo | grant (payload-read inline) | bytes | ref · sha | ★ | region | why it is foundational |
+|---|---|---|---|---|---|---|
+| 🆕 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 **MIT** | 1 090 | 🔴 `develop` · `760e2e1` | **816** | 🟢 **EMEA** | 🟢 **The permissive production platform this shelf did not have.** 12 315 commits, 396 forks, **TU München Applied Education Technologies**, live at `artemis.tum.de`. Programming + modelling exercises with automated feedback, LTI-capable. 🟢 **Build ON this rather than replacing an LMS.** |
+| 🆕 [`okpy/ok`](https://github.com/okpy/ok) | 🟢 **Apache-2.0** 🔴 *(multi-grant file, `P916`)* | 🔴 13 979 | 🔴 `master` · `f5610a7` | 370 | 🟢 **North America** | **UC Berkeley's** autograder: runs tests, tracks student progress, aids debugging. 🔵 The best-documented *pedagogy* in the tier — it was built around office-hours workflow, not just scoring. |
+| 🆕 [`autolab/Tango`](https://github.com/autolab/Tango) | 🟢 **Apache-2.0** | 11 323 | 🔴 `master` · `24558e3` | 49 | 🟢 **North America** | **Standalone RESTful autograding service** behind **CMU's Autolab**. 🟢 **The single most reusable component in the tier**: a job-runner with an HTTP boundary, so it drops into any stack. |
+| 🆕 [`google/prog-edu-assistant`](https://github.com/google/prog-edu-assistant) | 🟢 **Apache-2.0** | 11 357 | `main` · `bc61a51` | 34 | 🟡 unplaced | Autograding tests authored **inside Jupyter notebooks**, deployed to cloud. 🔵 Notebook-native grading is how data-science and ML courses are actually taught — and it is the format every LATAM and APAC bootcamp uses. |
+| 🆕 [`kit-sdq/autograder`](https://github.com/kit-sdq/autograder) | 🟢 **MIT** | 1 067 (`LICENSE.md`) | `main` · `a439007` | 18 | 🟢 **EMEA** | Static-analysis grading of **student Java code**, from **KIT Karlsruhe**. 🔵 Grades *style and structure*, not just test outcomes — the part human TAs spend their time on. |
+| 🆕 [`uhafner/autograding-github-action`](https://github.com/uhafner/autograding-github-action) | 🟢 **MIT** | 1 094 | `main` · `4e65432` | 32 | 🟢 **EMEA** | Grades a project against configurable metrics **as a GitHub Action**. 🟢 **Cheapest integration point in the tier — no platform to operate.** 🟢 A **GitLab** sibling exists from the same author, which matters for EMEA public-sector self-hosting. |
+| 🆕 [`earthlab/matplotcheck`](https://github.com/earthlab/matplotcheck) | 🟢 **BSD-3-Clause** | **1 508** | `main` · `c1b6a3b` | 23 | 🟢 **North America** | Checks **matplotlib figures** for autograding — **CU Boulder Earth Lab**. 🟢 **Grading a plot is a capability nothing else on this shelf has**, and it is what a data course assesses. |
+| 🆕 [`rstudio/ggcheck`](https://github.com/rstudio/ggcheck) | 🟢 **MIT** 🔵 *(`DESCRIPTION` rung, `P895`/`P918`)* | 🔴 44 (stub) | `main` · `70543ad` | 23 | 🟢 **North America** | Inspects **ggplot2** plots for automated grading. 🟢 **Published by Posit.** 🔵 Pairs with `matplotcheck` to cover both statistical-teaching ecosystems. |
+| 🆕 [`open-spaced-repetition/free-spaced-repetition-scheduler`](https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler) | 🟢 **MIT** | 1 089 | `main` · `93ed713` | **723** | 🟡 unplaced | **The FSRS scheduling algorithm itself** — when to show an item again. 🟢 **Foundational in the strict sense: it is the retention primitive**, and the shelf had the tutors and the trackers but not the scheduler. |
+| 🆕 [`vardanagarwal/Proctoring-AI`](https://github.com/vardanagarwal/Proctoring-AI) | 🟢 **MIT** | 1 071 | 🔴 `master` · `4f284a3` | **633** | 🟢 **APAC** | Webcam + microphone exam monitoring: gaze direction, mouth-opening, person count, phone detection, head pose, face spoofing, audio speech. 🟢 **Audited: 0 of 7 functions infer affect** — permitted-but-high-risk, not prohibited. |
+| 🆕 [`SafeExamBrowser/seb-win-refactoring`](https://github.com/SafeExamBrowser/seb-win-refactoring) | 🟡 **MPL-2.0** | **16 726** | 🔴 `master` · `016d234` | 354 | 🟢 **EMEA** | **Safe Exam Browser** (ETH Zürich) — the lockdown client itself, the most widely deployed exam-integrity component in European higher education. 🟡 **File-level copyleft: modified MPL files stay open, the surrounding product need not.** |
+
+🟢 **11 of 11 usable in a commercial deliverable — 6 MIT, 3 Apache-2.0, 1 BSD-3-Clause, 1 MPL-2.0 (file-scoped).** 🔴 **Trap `T1` is 5 of 11.**
+
+### 🔴 Named negatives — the three foundation-run platforms
+
+| repo | grant | bytes | ref · sha | ★ | note |
+|---|---|---|---|---|---|
+| 🔴 [`foundation50/classroom50`](https://github.com/foundation50/classroom50) | 🔴 **GPL-3.0** | 35 148 | `main` · `9ce1a9d` | 212 | Free OSS alternative to **GitHub Classroom** — 🔴 **the one row in the tier a studio cannot embed**, and the one a client is most likely to name |
+| 🔴 [`infomark-org/infomark`](https://github.com/infomark-org/infomark) | 🔴 **GPL-3.0** | 35 148 | `main` · `9781fa7` | 35 | Course management with automated programming tests, Go |
+| 🔴 [`GatorEducator/gatorgrade`](https://github.com/GatorEducator/gatorgrade) | 🔴 **GPL-3.0** | 35 148 | `main` · `c574f93` | 18 | Runs GatorGrader check suites |
+
+🔴 **All three are 35 148 B with `Affero` first at line 552** — `P919`, and a `grep -i Affero` classifier misreads all three as AGPL.
+
+### 🟢 `P921` — **a costed probe list can be complete and still not contain the answer**
+
+🟢 **Pass 84 closed `Gap 346` with two named, costed probes: `GegoK12` and `Fedena`.** 🟢 **Both were resolved this pass. Neither was the answer:**
+
+| costed probe | resolved to | why it is not the answer |
+|---|---|---|
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | 🟢 **MIT**, 1 149 B, `main` · `99da145` — 🟢 **the vendor claim is CONFIRMED by payload** | 🔴 **54★ against 98 forks and 123 commits** — a fork-and-install template, not a developed platform (`Gap 351`) |
+| [`foradian/fedena`](https://github.com/foradian/fedena) | 🟢 **Apache-2.0**, via `NOTICE` (`P917`), `master` · `333477b` | 🔴 **Copyright 2011**, Rails, and the canonical upstream is equally static — permissive and fifteen years stale |
+
+🟢 **The answer — `Artemis` — came from a channel bought in the SAME pass, not from the probe list.** 🔵 **`P921`: discharge the costed probes AND buy one new channel in the same pass. A probe list inherits the previous pass's model of where the answer lives, and when that model is what was wrong, the list cannot contain the answer.** 🟢 **Both costed probes still paid — they closed the licence question on two rows and produced `P917` — but the gap was discharged by the channel.**
+
+---
+
+
 ## 🟢 Eighty-fourth pass, 2026-10-09 — the **psychometrics / IRT / adaptive-testing tier is bought for the first time in 84 passes**, and it is **GPL-by-default**: `P907` says the ECOSYSTEM predicts the GRANT, not merely where the grant is written
 
 ⏱️ **Sixteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

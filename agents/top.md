@@ -3,6 +3,168 @@ industry: education
 region: Global
 updated: 2026-10-09
 ---
+## 🟢 Eighty-fifth pass, 2026-10-09 — **`topics/autograding` is bought for the first time in 85 passes and it holds the permissive, production-grade platform `Gap 346` said did not exist**; `Gap 344` is **FALSIFIED** by reading the two rows pass 84 itself named; and the licence ladder gains **three new rungs**, one of which misreads *in the direction that costs the engagement*
+
+⏱️ **Seventeenth pass of this date.** Pass 84 discharged `Gap 343`, opened `Gaps 344–348` and adopted `P905`–`P913`. **Append-only: this section is new; nothing below it was rewritten.**
+
+🟢 **24 repositories probed, 19 granted rows recorded, 4 named negatives, across 2 new channels and 5 single-row costed probes.** 🔵 **Every licence figure below is payload-read inline at a resolved ref, and every ref was resolved per-repo rather than assumed.**
+
+### 🟢 Capability boundary — re-measured this pass, and `P880` reproduces in a **WORSE SHAPE**
+
+| what was attempted | result |
+|---|---|
+| inline `curl` to `raw.githubusercontent.com` | 🟢 **200** on a good path, 🟢 **404 / 14 B** on an invented one — **discriminating, negative control run first** |
+| `git ls-remote --symref` per repo | 🟢 **ALLOWED** and **discriminating** — SHA on a real slug, 🔴 `could not read Username` on the invented control |
+| inline `for` loop compounding `read` / `curl` / `git` / `grep` | 🟢 **ALLOWED** |
+| `WebFetch` to `github.com/topics/...` | 🟢 **200**, with per-repo star counts and a total repo count |
+| `WebFetch` to `github.com/<owner>/<repo>` | 🟢 **200** — ★, forks, commit count, sidebar licence, root file listing. 🟢 **Used decisively on three rows this pass** |
+| `curl -sI` to `github.com` (the brief's verification command) | 🔴 **403 for the real slug AND for the invented one** — `P880`, reproduced |
+| any script from this clone | 🔴 **not attempted** — passes 78–84 measured it DENIED |
+
+🔴 **`P914` — `P880`'s failure mode got more dangerous, and the change is in the FIRST LINE.** 🟢 This pass `curl -sI https://github.com/...` returned **two** status lines: the agent proxy's own `HTTP/1.1 200 Connection Established`, and only then GitHub's `HTTP/1.1 403 Forbidden`. 🔴 **A probe that reads `curl -sI | head -1` now reads `200` for every slug on earth, including one invented thirty seconds ago.** 🔵 **Passes 80–84 recorded this channel as "403 for everything", which is useless-but-honest. It is now *affirmatively misleading* to the most natural one-liner.** 🟢 **The two channels that do discriminate are unchanged and both were calibrated against a negative control before any candidate was probed.**
+
+🔴 **Eighth consecutive pass without running the board:** `shelf_gate.sh`, `measure`, `license_family.sh`, `p351` and the 106 suites stay **CARRIED, NOT CONFIRMED**. 🔴 **No new instrument versioned** (`P126`).
+
+### 🟢 `P894` reproduces a THIRD time — and `P915`: **the symptom is not stable, so the test must assert the COUNT**
+
+🔴 **`LANG`, `LANGUAGE` and `LC_ALL` are all empty in this session**, a third time. 🟢 **Measured against a freshly written six-character CJK control, this pass:**
+
+| invocation | control reads | verdict |
+|---|---|---|
+| `grep -oP '[\x{4e00}-\x{9fff}]'`, locale unset | 🔴 **hard error** — `character code point value in \x{} or \o{} is too large` — then **0** | 🔴 **wrong, and loudly** |
+| `LC_ALL=C.UTF-8 grep -oP '[\x{4e00}-\x{9fff}]'` | 🟢 **6** of 6 | 🟢 **correct** |
+
+🔵 **`P915`: passes 83 and 84 measured this defect as a SILENT undercount (1 of 6). This pass it is a hard error and a zero.** 🔴 **Same harness, same unset locale, two different symptoms.** 🟢 **So neither "did it error?" nor "did it return something?" is a valid check — passes 83–84 would have been caught by the first and missed by the second, this pass the reverse.** 🟢 **The only check that holds across both is asserting the count against a control of KNOWN length**, which is what was run.
+
+### 🟢 The channel: `topics/autograding`, **94 repos, never touched in 85 passes**
+
+🟢 **11 of 20 listed rows are education-delivery systems** — course management with automated feedback, not research code. 🔵 **This is the first channel this shelf has bought that is made of *platforms a university actually runs*, rather than model code attached to a paper.** 🟢 **13 of the 20 were unshelved: `live=0, archive=0`** (greped against `archive/` too, per `P878`).
+
+### 🟢 Added this pass — the **autograding / delivery tier**, 8 granted rows
+
+| repo | grant (payload-read inline) | bytes | ref · sha | ★ | region | what it does |
+|---|---|---|---|---|---|---|
+| 🆕 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 **MIT** | 1 090 | 🔴 `develop` · `760e2e1` | 816 | 🟢 **EMEA** | **Interactive learning platform with automated feedback** for programming and modelling exercises. 🟢 **816★, 396 forks, 12 315 commits**, maintained by the **Applied Education Technologies group at TU München**, in production at **artemis.tum.de**. 🟢 **This is the row `Gap 346` was opened for — see below.** |
+| 🆕 [`okpy/ok`](https://github.com/okpy/ok) | 🟢 **Apache-2.0** — 🔴 **in a MULTI-GRANT file (`P916`)** | 🔴 **13 979** | 🔴 `master` · `f5610a7` | 370 | 🟢 **North America** | Runs tests for programming projects, tracks student progress and aids debugging — the **UC Berkeley** autograder. 🔴 **Its LICENSE is a bundled notice file, not one grant: see `P916`.** |
+| 🆕 [`autolab/Tango`](https://github.com/autolab/Tango) | 🟢 **Apache-2.0** | 11 323 | 🔴 `master` · `24558e3` | 49 | 🟢 **North America** | Standalone **RESTful autograding service** — the job-runner behind **CMU's Autolab**. 🔵 **The only row in the tier that is a service boundary rather than an application**, which makes it the natural seam for a deliverable. |
+| 🆕 [`google/prog-edu-assistant`](https://github.com/google/prog-edu-assistant) | 🟢 **Apache-2.0** | 11 357 | `main` · `bc61a51` | 34 | 🟡 unplaced | Builds autograding tests **inside Jupyter notebooks** and deploys them to the cloud. 🔵 Named because notebook-native grading is how data-science courses are actually taught. |
+| 🆕 [`kit-sdq/autograder`](https://github.com/kit-sdq/autograder) | 🟢 **MIT** | 1 067 (`LICENSE.md`) | `main` · `a439007` | 18 | 🟢 **EMEA** | Automatic grading of **student Java code**, from **KIT** (Karlsruhe). 🟡 Serves `LICENSE.md`, not `LICENSE` — the path sweep found it on the second probe. |
+| 🆕 [`uhafner/autograding-github-action`](https://github.com/uhafner/autograding-github-action) | 🟢 **MIT** | 1 094 | `main` · `4e65432` | 32 | 🟢 **EMEA** | **GitHub Action** that grades a project against configurable metrics. 🔵 **The cheapest possible integration point in the whole tier** — CI you already have, no platform to run. 🟢 A **GitLab** sibling exists from the same author. |
+| 🆕 [`earthlab/matplotcheck`](https://github.com/earthlab/matplotcheck) | 🟢 **BSD-3-Clause** | **1 508** | `main` · `c1b6a3b` | 23 | 🟢 **North America** | Checks and tests **matplotlib plots** for autograding — **CU Boulder Earth Lab**. 🟢 **Second BSD-3-Clause row on this shelf, and a second byte value: 1 508 vs `ProTACT`'s 1 496.** 🔵 Grading a *figure* rather than a number is a capability nothing else here has. |
+| 🆕 [`rstudio/ggcheck`](https://github.com/rstudio/ggcheck) | 🟢 **MIT** — 🔵 **R `DESCRIPTION` rung (`P895`)** | 🔴 **44** (stub) | `main` · `70543ad` | 23 | 🟢 **North America** | Inspects **ggplot2** plots for automated grading in learning exercises. 🟢 **Published by Posit/RStudio** — see `P918`. |
+
+🟢 **8 of 8 permissive — 5 MIT, 3 Apache-2.0/BSD-3.** 🔴 **Trap `T1` is 3 of 8** (`develop`, `master`, `master`).
+
+### 🟢 Added this pass — the **item-generation tier**, 5 granted rows, from `topics/question-generation`
+
+🟡 **Channel precision is LOW and it is recorded as such:** 227 repos, but only ~6 of the first 20 are education instruments — the rest are general QA/IR research (`beir`, Chinese QA systems, video-QA papers). 🔵 **`P909` predicted this: `question-generation` is multi-word but *not* education-specific, so it collides with the whole NLP literature.** 🟢 **Bought anyway because item authoring is the one assessment capability the shelf had no row for at all.**
+
+| repo | grant (payload-read inline) | bytes | ref · sha | ★ | region | what it does |
+|---|---|---|---|---|---|---|
+| 🆕 [`ramsrigouthamg/Questgen.ai`](https://github.com/ramsrigouthamg/Questgen.ai) | 🟢 **MIT** | 1 076 | 🔴 `master` · `edf8f6a` | 951 | 🟢 **APAC** | Question generation with modern NLP — **MCQs, boolean and FAQ items from a passage**. 🟢 **Top-starred row in the tier.** |
+| 🆕 [`asahi417/lm-question-generation`](https://github.com/asahi417/lm-question-generation) | 🟢 **MIT** | 1 064 | 🔴 `master` · `dde629c` | 366 | 🟡 unplaced | **Multilingual, multidomain** question-generation datasets, models and library. 🟢 **The only multilingual row in the tier** — which is the one that matters for a LATAM or APAC deployment. |
+| 🆕 [`artitw/text2text`](https://github.com/artitw/text2text) | 🟢 **MIT** — 🟡 **with a component-licensing rider** | 🔴 **1 324** | 🔴 `master` · `37b1b37` | 304 | 🟡 unplaced | Text-to-text toolkit: question generation, answering, summarisation, translation in one API. 🔴 **Its MIT text is followed by a clause telling you the dependency closure is NOT cleared — see `P922`.** |
+| 🆕 [`AMontgomerie/question_generator`](https://github.com/AMontgomerie/question_generator) | 🟢 **MIT** | 1 072 | 🔴 `master` · `d950d6e` | 298 | 🟡 unplaced | Generates **reading-comprehension** questions from a text. |
+| 🆕 [`PragatiVerma18/MLH-Quizzet`](https://github.com/PragatiVerma18/MLH-Quizzet) | 🟢 **MIT** | 1 069 | 🔴 `master` · `2dca644` | 97 | 🟡 unplaced | Generates quizzes **from an uploaded text or PDF**. 🔵 The only row that takes a teacher's existing material as input rather than a clean passage. |
+
+🟢 **5 of 5 permissive, all MIT.** 🔴 **Trap `T1` is 5 of 5 — the entire tier defaults to `master`**, which is `P876` exactly: this is older research code, never migrated.
+
+### 🟢 `Gap 344` — **FALSIFIED**, by reading the two rows pass 84 named and did not read
+
+🔴 **Pass 84 recorded: "the exam-proctoring delivery tier has ZERO permissive rows", from five GPL rows.** 🔴 **In the same breath it noted the tier's two BIGGEST rows were already shelved with their grants unrecorded.** 🟢 **Both were read this pass, and both grant:**
+
+| repo | grant (payload-read inline) | bytes | ref · sha | ★ | region |
+|---|---|---|---|---|---|
+| 🟢 [`vardanagarwal/Proctoring-AI`](https://github.com/vardanagarwal/Proctoring-AI) | 🟢 **MIT** | 1 071 | 🔴 `master` · `4f284a3` | **633** | 🟢 **APAC** |
+| 🟡 [`SafeExamBrowser/seb-win-refactoring`](https://github.com/SafeExamBrowser/seb-win-refactoring) | 🟡 **MPL-2.0** | **16 726** | 🔴 `master` · `016d234` | **354** | 🟢 **EMEA** |
+
+🔴 **The tier's largest row is MIT and its second-largest is MPL-2.0. The "zero permissive" finding was an artefact of having read the five smallest rows.** 🟢 **`Gap 344` is therefore FALSIFIED rather than discharged** — the supply was always there.
+
+🔵 **And `MPL-2.0` is a third licence posture the shelf has not had a row in.** 🟢 **It is FILE-level copyleft:** modified MPL files must stay open; the rest of a larger work, including proprietary code, may be combined and distributed under other terms. 🔵 **So the correct ordering for a commercial engagement is three buckets, not two:** 🟢 **permissive** (MIT/Apache/BSD) → 🟡 **file-scoped copyleft** (MPL-2.0, and LGPL for linking) → 🔴 **work-scoped copyleft** (GPL/AGPL) → 🔴 **non-commercial prohibition** (CC-NC, `P905`). 🔴 **Pass 84's three-bucket correction was right and still one bucket short.**
+
+🟢 **`P917-adjacent capability audit, run because the EU prohibition makes it load-bearing:** `Proctoring-AI`'s README names **six** vision functions — eye-gaze direction, mouth-opening, person counting, mobile-phone detection, head-pose estimation and face-spoofing — plus audio speech detection. 🟢 **Zero of the seven infers EMOTION or AFFECT.** 🔵 **That places it on the permitted-but-high-risk side of the AI Act rather than the prohibited side** (Art. 5(1)(f), in force since 2025-02-02, already on this shelf). 🔴 **Recorded as a measurement of this row only; the rest of the tier is unaudited — `Gap 349`.**
+
+### 🔴 Named negatives this pass — **4 of 24, and all four are the SAME trap**
+
+| repo | grant | bytes | ref · sha | ★ | channel |
+|---|---|---|---|---|---|
+| 🔴 [`KristiyanVachev/Question-Generation`](https://github.com/KristiyanVachev/Question-Generation) | 🔴 **GPL-3.0** | 35 148 | 🔴 `master` · `1daee9c` | 494 | `question-generation` |
+| 🔴 [`foundation50/classroom50`](https://github.com/foundation50/classroom50) | 🔴 **GPL-3.0** | 35 148 | `main` · `9ce1a9d` | 212 | `autograding` |
+| 🔴 [`infomark-org/infomark`](https://github.com/infomark-org/infomark) | 🔴 **GPL-3.0** | 35 148 | `main` · `9781fa7` | 35 | `autograding` |
+| 🔴 [`GatorEducator/gatorgrade`](https://github.com/GatorEducator/gatorgrade) | 🔴 **GPL-3.0** | 35 148 | `main` · `c574f93` | 18 | `autograding` |
+
+🔴 **`P919` — `P171` paid FOUR TIMES in a single pass, its largest payment on this shelf.** 🟢 **All four files are byte-identical in size (35 148 B), all four read `Version 3, 29 June 2007`, and all four contain `Affero` at line 552 — the same `§13. Use with the GNU Affero General Public License` heading.** 🔴 **A `grep -i Affero` classifier calls 4 of 4 of these AGPL-3.0, and it is wrong 4 of 4 times.** 🟢 **The shelf now has an exact positive signature for canonical GPL-3.0: 35 148 B with `Affero` first appearing at line 552.** 🔵 **Note against pass 79, which measured `jplag/JPlag` at 35 141 B: the GPL-3.0 byte signature is a narrow RANGE, not a constant, so it corroborates and must not be used alone.**
+
+🔵 **`classroom50` is worth naming beyond its licence:** it is a free open-source alternative to GitHub Classroom at 212★ — 🔴 **and it is the one row in the autograding tier a studio cannot embed.**
+
+### 🔴 `P916` — **a LICENSE file may contain MORE THAN ONE grant, and "last match wins" misreads it toward the dangerous side**
+
+🔴 **Two rows this pass, measured:**
+
+| repo | file | first grant stated as the project's own | what ELSE is in the same file | what a naive reader concludes |
+|---|---|---|---|---|
+| 🔴 [`okpy/ok`](https://github.com/okpy/ok) | `LICENSE`, **13 979 B** | 🟢 **Apache-2.0** (title line) | 🔴 **two further BSD-style third-party licences** — one for *Kiran Gangadharan*, one headed **"Flask Foundation License"** (Jack Stouffer, 2013) | 🟡 title-line reader: **Apache-2.0 — right by accident**. 🔴 byte-size reader: **"unknown, not 11 357"**. 🔴 **`tail`/last-match reader: BSD-3-Clause** |
+| 🔴 [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | `LICENSE`, **8 240 B** | 🟢 **LGPL-3.0** (stated in the body) | 🔴 **the FULL GPL-3.0 text appended below it**, by design — the LGPL is a set of additional permissions on top of the GPL | 🔴 first-line reader: **a sentence about copyright, no licence at all**. 🔴 **`tail`/last-match reader: GPL-3.0** |
+
+🔴 **The OpenEduCat case is the expensive one, and it fails toward the dangerous side.** 🟢 **The real grant is LGPL-3.0, which PERMITS LINKING — the single property that makes this row usable at all (`P902`).** 🔴 **A last-match classifier reads GPL-3.0 and throws away the only permissive-enough platform row the shelf has.**
+
+🔴 **And `OpenEduCat`'s first non-empty line is a POINTER TO A FILE THAT DOES NOT EXIST:** *"For copyright information, please see the COPYRIGHT file."* 🔴 **`COPYRIGHT` returns 404.** 🔵 **So the dangling-pointer case is real: a classifier that follows the delegation gets nothing, a classifier that reads the title line gets prose, and only reading the BODY yields the grant.**
+
+🟢 **`P916`, stated as a rule: a LICENSE file is not a grant — it is a document that may contain zero, one or several grants plus pointers that dangle. The project's own grant is the FIRST one stated as its own, never the first line, never the last match, never the byte size.** 🔵 **This extends `P794`/`P871` from "the layers can disagree" to "a single layer can contain several answers."**
+
+### 🟢 `P917` — **Apache-2.0 has a canonical SECOND HOME, and it is `NOTICE`**
+
+🟢 **Measured on [`foradian/fedena`](https://github.com/foradian/fedena)** (`master` · `333477b`) and on its canonical upstream [`projectfedena/fedena`](https://github.com/projectfedena/fedena) (`master` · `68a84ac`):
+
+| path | fork | upstream |
+|---|---|---|
+| `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`, `MIT-LICENSE`, … (10 paths) | 🔴 **404** | 🔴 **404** |
+| `NOTICE` | 🟢 **200** | 🟢 **200** |
+| `README.markdown` | 🟢 **200** — *"Fedena is released under the Apache License 2.0."* | 🟢 **200** |
+
+🟢 **`NOTICE` carries the standard Apache boilerplate grant** — *"Licensed under the Apache License, Version 2.0 … You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0"* — with the holder named: **Foradian Technologies Private Limited, 2011**.
+
+🔵 **`P917`: a LICENSE/COPYING-only sweep reads "no grant" on an Apache project that has a perfectly idiomatic one, because Apache-2.0 §4(d) makes `NOTICE` a first-class location.** 🟢 **`NOTICE` joins `DESCRIPTION` (R/CRAN, `P895`) and the manifest rung as a place the grant legitimately lives.** 🟡 **Honest limit: NOTICE + README prose incorporates the licence text **by URL reference** rather than including it, which is weaker evidence than a LICENSE file and should be flagged to a client's legal review — but it is a documented grant from the named copyright holder, not an absence.**
+
+### 🔴 `P872` paid THREE TIMES this pass — twice it was about to be published as a finding
+
+🟢 **Recorded because the near-miss is the lesson, not the catch:**
+
+| the guessed sweep | what it returned | what was actually true |
+|---|---|---|
+| 🔴 `foradian/fedena`, 12 guessed licence paths **including `README.md`** | 🔴 **12 × 404** — reads exactly like an empty repository | 🟢 The repo is live (`Rakefile` **200**, `config/environment.rb` **200**). 🔴 **The README is `README.markdown`.** 🟢 The grant was in `NOTICE` all along |
+| 🔴 `Gego-Technologies/GegoK12` and `gegok12/gegok12`, both guessed from a vendor name | 🔴 **NO REF — neither slug resolves** | 🟢 The real slug is **`Gego-K12/gegok12`**, found in a **search result**, not derived. 🟢 It grants **MIT** |
+
+🔴 **`README.md` was in that sweep as the CONTROL — and it 404'd, which should have stopped the sweep immediately instead of being averaged into "no grant".** 🟢 **The rule that held: when a guessed-name sweep returns all-404 INCLUDING its control, the sweep is uninformative — it is not evidence of absence.** 🔵 **Pass 80 wrote `P872` from one observation of this. It has now paid on three rows in one pass, and on two of them a wrong row would have been published.**
+
+### 🟢 `P918` — `P895` reproduces a THIRD time, and this one is from an **INSTITUTIONAL** publisher
+
+| repo | LICENSE bytes | LICENSE content | manifest field |
+|---|---|---|---|
+| `sonsoleslp/tna` (pass 83) | 🔴 **46** | year + holder | 🟢 `License: MIT + file LICENSE` |
+| `shmercer/writeAlizer` (pass 84) | 🔴 **47** | year + holder | 🟢 `License: MIT + file LICENSE` |
+| 🆕 [`rstudio/ggcheck`](https://github.com/rstudio/ggcheck) | 🔴 **44** | `YEAR: 2021` / `COPYRIGHT HOLDER: ggcheck authors` | 🟢 `License: MIT + file LICENSE` |
+
+🟢 **Three R packages, three passes, three authors, stub sizes 44 / 46 / 47 B — and the variance is nothing but the LENGTH OF THE HOLDER STRING.** 🔵 **Passes 83–84 read this as an academic-author habit. `rstudio/ggcheck` is published by Posit, a company, which removes the last reading in which this is an individual quirk: it is CRAN's mandated shape, and it applies to institutional publishers too.** 🟢 **For any R/CRAN row, read `DESCRIPTION` first and treat `LICENSE` as a holder record.**
+
+### 🟡 `P922` — **byte-size licence classification is unsafe for the PERMISSIVE families, because riders get appended**
+
+🔴 **Measured ranges on this shelf after this pass:**
+
+| family | byte range measured | what widened it |
+|---|---|---|
+| MIT | 🔴 **1 064 – 1 324** | 🆕 `text2text` **1 324 B**: canonical MIT followed by *"This open source software utilizes other open source components with their own licensing agreements…"* |
+| Apache-2.0 | 🔴 **11 323 – 13 979** | 🆕 `okpy/ok` **13 979 B**: two third-party BSD licences appended (`P916`) |
+| BSD-3-Clause | 🟡 **1 496 – 1 508** | 🆕 `matplotcheck` **1 508 B** |
+| GPL-3.0 | 🟡 **35 141 – 35 148** | `JPlag` 35 141 vs this pass's four at 35 148 |
+| MPL-2.0 | 🆕 **16 726** | first row in the family |
+| LGPL-3.0 + GPL appendix | 🆕 **8 240** | delegating first line (`P916`) |
+| CC BY-NC-SA 4.0 | 20 861 – 20 863 | pass 84 |
+
+🔵 **`P922`: the byte size is a CORROBORATOR, never a classifier.** 🟢 **It is at its most useful on the copyleft families, whose texts are fixed and long; it is at its least useful on the permissive families, which are short enough that a one-paragraph rider moves them 20%.** 🔴 **`text2text`'s rider is also a substantive warning and not boilerplate: the grant is MIT and the dependency closure is explicitly NOT cleared** — which is what `compose/code/dependency-licence-closure/` exists to answer.
+
+---
+
 
 ## 🟢 Eighty-fourth pass, 2026-10-09 — **`topics/automated-essay-scoring` is a VIRGIN channel at 100% precision**, 8 permissive rows including this shelf's first **BSD-3-Clause** grader, and the **CC BY-NC-SA** family arrives with a measured byte signature — the one family that is *worse* than copyleft for a commercial engagement
 

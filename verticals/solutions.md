@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-fifth pass, 2026-10-09 — **`Gap 346` DISCHARGED: a permissive, production-grade, institutionally-operated platform exists and it is MIT.** `P906` does not apply to it, and the reason the shelf missed it for two passes is that it was looking in the wrong CHANNEL, not at a thin supply
+
+⏱️ **Seventeenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 `Gap 346` — **DISCHARGED**
+
+🔴 **Pass 84 recorded: "there is no permissive, production-grade platform-tier row on this shelf", with the platform tier measured at 11 of 12 copyleft and the one permissive row at 0★, 0 forks and 9 commits (`P906`).** 🟢 **The row that discharges it:**
+
+| platform | grant (payload-read inline) | bytes | ref · sha | ★ | forks | commits | operator | production instance |
+|---|---|---|---|---|---|---|---|---|
+| 🟢 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 **MIT** | 1 090 | 🔴 `develop` · `760e2e1` | **816** | **396** | **12 315** | 🟢 **Applied Education Technologies group, TU München** | 🟢 **`artemis.tum.de`**, with other universities and schools self-hosting |
+
+🟢 **Every `P906` test that failed pass 84's Apache row, Artemis passes:** 🟢 816★ not 0, 🟢 396 forks not 0, 🟢 12 315 commits not 9, 🟢 a named operator with a named production deployment, 🟢 a release line (`Artemis-10.3`). 🔵 **`P906` was never a claim that permissive platforms cannot be production-grade — it was a test. This row is the first to pass it.**
+
+### 🔵 What Artemis actually is, and why it is the layer rather than the platform
+
+🟢 **It is an *interactive learning platform with automated feedback* for programming and modelling exercises** — not an LMS, not an SIS. 🔵 **That distinction is the whole commercial point:** 🔴 **the LMS/SIS tier is where copyleft dominates** (Moodle, OpenOLAT, and the 11-of-12 finding) **and where no client wants to be replaced anyway.** 🟢 **The teaching-and-feedback layer sits ABOVE the LMS, integrates by LTI, and is where the differentiating work is.**
+
+🟢 **`P913` said: sell the layer above the platform, deliberately a layer rather than a platform.** 🔵 **Artemis is the first row that lets that recommendation be made with a permissive production artefact underneath it instead of a greenfield build.**
+
+### 🟢 The platform tier, re-measured after this pass — the copyleft finding **softens but does not reverse**
+
+| platform | grant | posture for a commercial deliverable |
+|---|---|---|
+| 🟢 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 **MIT** | 🟢 **Embed, extend, resell. No conditions.** |
+| 🟡 [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | 🟡 **LGPL-3.0** — 🟢 **re-confirmed by payload this pass** at `19.0` · `1c95cef`, 8 240 B | 🟡 **Linking permitted** (`P902`) — the Odoo-family ERP route stays open |
+| 🟢 [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | 🟢 **MIT** — 🟢 **vendor claim CONFIRMED by payload**, 1 149 B, `main` · `99da145` | 🔴 **Licence is clean, the codebase is not a platform:** 54★, **98 forks**, **123 commits**. Laravel, *"Mobile Apps Ready, API First Design"*. 🟡 **Treat as a starting template** (`Gap 351`) |
+| 🟡 [`foradian/fedena`](https://github.com/foradian/fedena) | 🟡 **Apache-2.0 via `NOTICE`** (`P917`), `master` · `333477b`; canonical upstream [`projectfedena/fedena`](https://github.com/projectfedena/fedena) `master` · `68a84ac` same shape | 🔴 **Copyright 2011, Rails, static.** 🟡 Permissive and fifteen years stale — a reference, not a base |
+| 🔴 [`foundation50/classroom50`](https://github.com/foundation50/classroom50) | 🔴 **GPL-3.0**, 35 148 B | 🔴 **Cannot be embedded.** 🔵 Named because it is the GitHub-Classroom alternative a client will ask for by name |
+| 🔴 the eight established LMS/SIS platforms (passes 83–84) | 🔴 **copyleft, 8 of 8** | 🔴 **Unchanged — `Gap 334` stays discharged** |
+
+🟢 **Honest restatement: the tier is now 3 permissive-or-linkable of 15, where pass 84 measured 1 of 12.** 🔴 **Copyleft still dominates the ESTABLISHED LMS tier and that finding is untouched.** 🟢 **What changed is that the teaching layer above it has a real permissive row.**
+
+### 🟢 `P924` — **the two Gap-346 probes failed in opposite directions, and together they define the test**
+
+🔵 **Pass 84 costed two probes and both resolved cleanly. Neither is usable, and the reasons are mirror images:**
+
+| row | licence | codebase | verdict |
+|---|---|---|---|
+| `Gego-K12/gegok12` | 🟢 **MIT — clean** | 🔴 **123 commits, forks > stars** | 🔴 **licence without a product** |
+| `foradian/fedena` | 🟡 **Apache-2.0, in `NOTICE` only** | 🔴 **2011, static** | 🔴 **product without maintenance** |
+| `ls1intum/Artemis` | 🟢 **MIT — clean** | 🟢 **12 315 commits, named operator, live instance** | 🟢 **both** |
+
+🔵 **`P924`: a platform-tier row needs THREE independent clearances — a payload-read permissive grant, a maintained codebase, and a named operator running it.** 🟢 **The shelf has been checking the first and assuming the other two follow from a star count.** 🔴 **`GegoK12`'s 98 forks against 54 stars is the specific signal that star counts miss: a fork-and-install distribution looks adopted and has no maintained line.** 🟢 **Forks-greater-than-stars is now a red flag on this shelf, not a strength.**
+
+### 🟢 The composable platform stack, as it stands after this pass
+
+🔵 **Named concretely so a pass-86 engagement does not re-derive it:**
+
+| layer | permissive row | grant | note |
+|---|---|---|---|
+| student record / ERP | 🟡 `OpenEduCat` | **LGPL-3.0** | link, do not fork (`P902`) |
+| teaching + automated feedback | 🟢 **`Artemis`** | **MIT** | 🟢 **the new keystone** |
+| grading job runner | 🟢 `autolab/Tango` | **Apache-2.0** | HTTP boundary — drops into any stack |
+| CI-native grading | 🟢 `uhafner/autograding-github-action` | **MIT** | 🟢 GitLab sibling for EMEA self-hosting |
+| notebook grading | 🟢 `google/prog-edu-assistant` | **Apache-2.0** | data-science and bootcamp courses |
+| figure grading | 🟢 `matplotcheck` / `ggcheck` | **BSD-3** / **MIT** | Python and R teaching ecosystems |
+| item authoring | 🟢 `Questgen.ai`, `lm-question-generation` | **MIT** | 🟢 multilingual via the latter |
+| retention scheduling | 🟢 `free-spaced-repetition-scheduler` | **MIT** | the FSRS primitive |
+| exam integrity | 🟢 `Proctoring-AI` / 🟡 `seb-win-refactoring` | **MIT** / **MPL-2.0** | 🟢 affect-free (audited); 🟡 file-scoped copyleft |
+| interoperability | 🟢 `ltijs`, `lti-1-3-php-library`, `lrsql` | Apache-2.0 / MIT | carried from passes 71–76 |
+
+🔴 **Not executed end to end.** 🟢 **Every grant above is payload-read at a recorded ref · sha, and the distinction between "verified grants composed on paper" and "delivered system" is kept explicit — `compose/patterns.md` holds the recipes.**
+
+---
+
+
 ## 🟢 Eighty-fourth pass, 2026-10-09 — a **permissive Apache-2.0 school ERP exists**, and `P906` is the reason it does not change the recommendation: its README claims production and it has **0★, 0 forks and 9 commits**. Pass 83's copyleft finding extends from **8 of 8 to 11 of 12**
 
 ⏱️ **Sixteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

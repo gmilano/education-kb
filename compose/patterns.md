@@ -4,6 +4,111 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Eighty-fifth pass, 2026-10-09 — **three new recipes, and the first one replaces a greenfield build with a permissive production platform a European university already operates.** The proctoring recipe pass 84 refused to write is now writable — and its constraint turns out to be the AI Act, not the licence
+
+⏱️ **Seventeenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+🔵 **Every component named below was payload-read inline this pass at a recorded ref · sha, or in a pass that recorded one.** 🔴 **No recipe here has been executed end to end** — these are compositions of verified grants, not delivered systems, and each one closes with what that leaves unproven.
+
+---
+
+### 🟢 `P926` — **The automated-feedback engagement, built ON Artemis rather than beside it** (primary region: 🟢 **EMEA**; directly reusable in 🟢 **North America**)
+
+🔵 **Why now:** 🟢 `Gap 346` discharged this pass. 🔴 **For 84 passes the platform tier had no permissive production row, so every recipe in this file composed primitives into a greenfield build.** 🟢 **That is no longer the honest recommendation.**
+
+**Components, all payload-read:**
+
+| role | component | grant | ref · sha |
+|---|---|---|---|
+| 🟢 **platform core** | [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 **MIT** (1 090 B) | 🔴 `develop` · `760e2e1` |
+| grading job runner, if Artemis's own is outgrown | [`autolab/Tango`](https://github.com/autolab/Tango) | 🟢 **Apache-2.0** (11 323 B) | 🔴 `master` · `24558e3` |
+| style/structure grading for Java cohorts | [`kit-sdq/autograder`](https://github.com/kit-sdq/autograder) | 🟢 **MIT** (1 067 B) | `main` · `a439007` |
+| notebook-native grading for data courses | [`google/prog-edu-assistant`](https://github.com/google/prog-edu-assistant) | 🟢 **Apache-2.0** (11 357 B) | `main` · `bc61a51` |
+| figure grading, Python / R | [`earthlab/matplotcheck`](https://github.com/earthlab/matplotcheck) · [`rstudio/ggcheck`](https://github.com/rstudio/ggcheck) | 🟢 **BSD-3** (1 508 B) · 🟢 **MIT** (`DESCRIPTION`) | `main` · `c1b6a3b` · `main` · `70543ad` |
+| LMS interoperability | `ltijs` (Apache-2.0), `1EdTech/lti-1-3-php-library` (Apache-2.0) | 🟢 permissive | carried, passes 71–76 |
+| learning-record store | `yetanalytics/lrsql` | 🟢 **Apache-2.0** | `main` · `cb794e4` |
+
+**Wiring:**
+1. 🟢 **Stand up Artemis and integrate it to the client's existing LMS over LTI 1.3** — 🔵 **do not replace the LMS.** `Artemis` is the teaching-and-feedback layer; the LMS keeps enrolment and gradebook. 🟢 **This is `P913` made concrete with a real artefact underneath it.**
+2. 🟢 Point Artemis at the client's own Git and CI. 🔵 Its exercise model already assumes per-student repositories, which is why it integrates rather than needing to be rebuilt.
+3. 🟢 **Add graders by course type, not by preference:** `kit-sdq/autograder` for Java cohorts, `prog-edu-assistant` for notebook courses, `matplotcheck`/`ggcheck` where the artefact assessed is a *figure*. 🔵 **Figure grading is the capability clients ask for and nothing else on this shelf has.**
+4. 🟢 Emit xAPI to `lrsql` from the start. 🔵 **This is the `9%` fix** — see `P928`.
+5. 🟡 **If grading throughput outgrows Artemis's built-in runner**, put `Tango` behind it: 🟢 it is a standalone RESTful service, so it is the one component with a clean process boundary.
+
+🟢 **Licence closure: MIT + Apache-2.0 + BSD-3 throughout. No copyleft, no NOTICE-only rows, no riders.** 🔴 **Deliberately excluded: [`foundation50/classroom50`](https://github.com/foundation50/classroom50) (GPL-3.0, 212★) and [`infomark-org/infomark`](https://github.com/infomark-org/infomark) (GPL-3.0)** — 🔵 **both are good systems and a client may name `classroom50` directly as "the GitHub Classroom alternative"; the answer is that it cannot be embedded in a resold product, and Artemis does the same job under MIT.**
+
+🟢 **Why the reference matters as much as the code:** 🔵 **a European public buyer's hardest question is "who else runs this?"** 🟢 **Artemis answers it with TU München operating `artemis.tum.de`** — an institutional reference a studio cannot manufacture.
+
+🔴 **What this recipe does NOT prove:** no component was cloned, built or run this pass (passes 78–85 measured script execution DENIED here). 🔴 **Artemis at 12 315 commits is a substantial operational commitment** — self-hosting cost, upgrade cadence and the `develop`-as-default-branch convention all need a real spike before a fixed-price quote. 🔴 **`Gap 350`: no evidence of APAC or LATAM deployment**, so an engagement in those regions would be the first and should be priced that way.
+
+---
+
+### 🟢 `P927` — **The exam-integrity engagement: the recipe pass 84 refused, now writable — and the binding constraint is the AI Act, not the licence** (primary region: 🟢 **EMEA**; reusable in 🟢 **APAC**)
+
+🔴 **Pass 84 refused to write this recipe, correctly, on the evidence it had:** *"zero of the five probed proctoring rows is permissive … writing a recipe would mean composing a deliverable out of components that cannot be in a deliverable."* 🔴 **`Gap 344` is FALSIFIED this pass** — the two biggest rows in the tier were never read.
+
+**Components, all payload-read this pass:**
+
+| role | component | grant | ref · sha | ★ |
+|---|---|---|---|---|
+| 🟢 **behavioural detection** | [`vardanagarwal/Proctoring-AI`](https://github.com/vardanagarwal/Proctoring-AI) | 🟢 **MIT** (1 071 B) | 🔴 `master` · `4f284a3` | 633 |
+| 🟡 **lockdown client** | [`SafeExamBrowser/seb-win-refactoring`](https://github.com/SafeExamBrowser/seb-win-refactoring) | 🟡 **MPL-2.0** (16 726 B) | 🔴 `master` · `016d234` | 354 |
+| item authoring (fresh items per sitting) | [`ramsrigouthamg/Questgen.ai`](https://github.com/ramsrigouthamg/Questgen.ai) · [`asahi417/lm-question-generation`](https://github.com/asahi417/lm-question-generation) | 🟢 **MIT** · 🟢 **MIT** | 🔴 `master` · `edf8f6a` · 🔴 `master` · `dde629c` | 951 · 366 |
+| similarity / integrity analysis | `dolos` (MIT), `automoss` (MIT) | 🟢 permissive | carried, pass 84 |
+| evidence log | `yetanalytics/lrsql` | 🟢 **Apache-2.0** | `main` · `cb794e4` | — |
+
+**Wiring:**
+1. 🔴 **Draw the prohibition boundary FIRST, before any component choice.** 🟢 **Art. 5(1)(f) bans AI inferring emotions in education institutions — in force since 2025-02-02, untouched by the Digital Omnibus.** 🟢 **`Proctoring-AI` was audited this pass: its seven functions are gaze direction, mouth-opening, person counting, phone detection, head pose, face spoofing and audio speech — 🟢 zero infer affect.** 🔴 **So the rule for this recipe is explicit: ship presence and behaviour signals, never affect, attention or engagement inference.** 🔵 **A vendor offering "engagement detection" is offering a prohibited product, and saying so is a differentiator.**
+2. 🟡 **Keep the MPL-2.0 boundary at the file level, which is where MPL puts it.** 🟢 `seb-win-refactoring` may ship inside a commercial product; 🔴 **modifications to its own files must be published.** 🟢 **So: configure and wrap it, do not patch it** — and if patching is unavoidable, the patch is published and the rest of the product is not. 🔵 **This is categorically easier than the `JPlag` GPL problem (`Gap 345`), which needs a process boundary.**
+3. 🟢 **Generate fresh items per sitting** rather than detecting reuse of a fixed bank. 🔵 **Item generation is the structural answer to leaked question banks**, and it is now permissive — use `lm-question-generation` where the language of instruction is not English.
+4. 🟢 Run `dolos` for similarity analysis, as an external service where the deliverable is resold.
+5. 🟢 **Log every signal to `lrsql` with the human decision attached.** 🔴 **Annex III makes this high-risk from 2027-12-02: risk management, logging and human oversight are legal requirements, not product polish.** 🟢 **And the conformity route is internal control, not a notified body — third-party assessment applies only to biometric systems under Annex III point 1.**
+
+🟢 **Licence closure: MIT throughout except one MPL-2.0 file-scoped component, deliberately placed where its obligation is cheapest.** 🔴 **Deliberately excluded: the four GPL rows pass 84 found** (`Aankh`, `ITMOproctor`, `moodle-quizaccess_proctoring`, `devkit-lti1p3`) — 🟢 **no longer a gap, just the more expensive option.**
+
+🔴 **What this recipe does NOT prove:** 🔴 **the affect audit covers ONE row.** `Gap 349` records that the rest of the tier is unaudited, and this recipe must not be extended with an unaudited detector. 🔴 **`Proctoring-AI` is research-grade** — its own README pins `sklearn==0.19.1` for the face-spoofing model and notes parts still use dlib; 🔴 **treat it as a validated approach with named components, not a deployable service.** 🔴 **Nothing was run.**
+
+---
+
+### 🟢 `P928` — **The evaluation-evidence engagement: selling the 9%** (primary region: 🟢 **LATAM**; directly reusable in 🟢 **North America**)
+
+🔵 **Why now, and this is the strongest commercial case on the shelf:** 🟢 **UNESCO IESALC Working Paper 16 measures 87% of 200 LATAM institutions using AI and 9% with formal evaluation mechanisms.** 🟢 **In the same quarter, the US Dear Colleague letter of 20 Aug 2026 tells districts to remove tools that do not improve learning.** 🔴 **Two regions, one unmet requirement: nobody can demonstrate the tool worked.** 🔵 **Every other recipe in this file builds a capability. This one builds the evidence that a capability paid off** — which is what gets a renewal signed.
+
+**Components:**
+
+| role | component | grant | ref · sha |
+|---|---|---|---|
+| learning-record store | `yetanalytics/lrsql` | 🟢 **Apache-2.0** | `main` · `cb794e4` |
+| knowledge tracing / cognitive diagnosis | `pyedmine` (MIT), `EduStudio` (MIT) | 🟢 permissive | carried, pass 80 |
+| psychometrics — IRT, item quality | pass 84's IRT tier | 🔴 **GPL-dominant (`P907`)** — 🟡 **see the boundary note below** |
+| grading signal | [`okpy/ok`](https://github.com/okpy/ok) (Apache-2.0, 🔴 multi-grant file `P916`) · [`matplotcheck`](https://github.com/earthlab/matplotcheck) (BSD-3) | 🟢 permissive | 🔴 `master` · `f5610a7` · `main` · `c1b6a3b` |
+| retention scheduling + its own measurable outcome | [`free-spaced-repetition-scheduler`](https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler) | 🟢 **MIT** (1 089 B) | `main` · `93ed713` |
+| cohort reporting | `metabase` / `superset` | 🟡 carried — verify grant before use |
+
+**Wiring:**
+1. 🟢 **Instrument first, model later.** Emit xAPI from whatever the institution already runs into `lrsql`. 🔵 **The 9% figure is not a modelling deficiency, it is an instrumentation deficiency** — most institutions cannot answer the question because the events were never recorded.
+2. 🟢 **Define the outcome before the dashboard**, and prefer one a registrar already tracks: gateway-course pass rates, time-to-competency, retention into the next term. 🔴 **A usage metric is not an outcome**, and a usage dashboard is what the 26%-with-a-strategy already have.
+3. 🟢 Fit knowledge-tracing models with `pyedmine` / `EduStudio` on the recorded data to separate *learning* from *activity*.
+4. 🟡 **Boundary note on psychometrics, stated because `P907` makes it unavoidable:** 🔴 **the IRT/CAT tier is GPL-dominant.** 🟢 **Run item-quality analysis as an INTERNAL analytical step producing reports, not as an embedded library in a resold product** — 🔵 the same external-service pattern `Gap 345` forces on `JPlag`, and it is unproblematic here because item calibration is a periodic analysis, not a runtime path.
+5. 🟢 **Deliver the evidence file, not the dashboard:** instrumented outcome definitions, a baseline, a dated measurement, and the human decisions logged against it. 🔵 **That artefact satisfies the Dear Colleague duty in North America, the Annex III risk-management file in EMEA, and the governance deficit IESALC measured in LATAM — one build, three buyers (`T5`).**
+
+🟢 **Licence closure for everything in the product boundary: Apache-2.0, MIT, BSD-3.** 🟡 **The GPL psychometrics tier is deliberately outside it.** 🔴 **`okpy/ok`'s LICENSE is a multi-grant bundle (`P916`) — its own grant is Apache-2.0, and a client's legal review should be handed that reading explicitly rather than the file.**
+
+🔴 **What this recipe does NOT prove:** 🔴 nothing was run; 🔴 **`metabase`/`superset` grants are CARRIED, not payload-read this pass**, and must be verified before they enter a deliverable; 🔴 **the IESALC figures describe fieldwork from August–October 2025**, so they size the opportunity rather than describe today.
+
+---
+
+### 🔴 Recipes still deliberately NOT written
+
+🔴 **No platform-REPLACEMENT recipe.** 🟢 **`P926` above is the answer and it is deliberately an integration, not a replacement:** the established LMS/SIS tier remains 8-of-8 copyleft (`Gap 334`), clients do not want it replaced, and `Artemis` sits above it by design.
+
+🔴 **No recipe built on `Gego-K12/gegok12` or `foradian/fedena`**, despite both being permissive. 🟢 **`P924`: a platform row needs a permissive grant AND a maintained codebase AND a named operator.** 🔴 `GegoK12` has 123 commits and more forks than stars; `fedena` is copyright 2011. 🔵 **Both are recorded as verified rows and neither is a base to build on.**
+
+🔴 **No affect- or engagement-detection recipe, and there never will be one.** 🟢 **Art. 5(1)(f) is a prohibition, not an obligation with a deadline.** 🔵 **Recorded here rather than left implicit, because it is the one place a client request should be refused on the spot.**
+
+---
+
+
 ## 🟢 Eighty-fourth pass, 2026-10-09 — **three new recipes**, and the first one is the tier this shelf did not have yesterday: academic integrity, 7-of-8 permissive, with the GPL flagship deliberately held OUTSIDE the product boundary
 
 ⏱️ **Sixteenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

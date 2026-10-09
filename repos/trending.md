@@ -4,6 +4,96 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 85) — **two channels bought, 94-repo `topics/autograding` opened for the first time**, and the channel ledger pays its largest dividend yet: the row two passes declared impossible was in an unopened channel all along
+
+⏱️ **Seventeenth pass of this date.** 🟢 **Append-only: pass 84's section sits immediately below, unchanged.**
+
+🟢 **24 repositories probed. 19 granted rows, 4 named negatives.** 🟢 **2 new channels + 5 costed single-row probes, all 5 resolved.**
+
+### 🟢 The channel ledger, this pass
+
+| channel | repos in channel | read | on-topic | granted | negatives | precision | verdict |
+|---|---|---|---|---|---|---|---|
+| 🆕 `topics/autograding` | **94** | 20 | 🟢 **11 of 20 are education-delivery systems** | 🟢 **8** | 🔴 3 | 🟢 **55% delivery-grade, 100% education** | 🟢 **BUY AGAIN — rows 21–94 unread, the highest-value unbought budget on the shelf** |
+| 🆕 `topics/question-generation` | **227** | 20 | 🟡 **~6 of 20** — the rest is general QA/IR research | 🟢 **5** | 🔴 1 | 🔴 **~30%** | 🟡 **DO NOT RE-BUY at this breadth** — see `P909` below |
+| 🟢 5 costed single-row probes (pass 84's list) | 5 | 5 | 5 | 🟢 **5** | 🔴 0 | 🟢 **100%** | 🟢 **The probe-list mechanism works; see `P921`** |
+
+### 🟢 `topics/autograding` — **why this channel is different from every channel bought so far**
+
+🔵 **Eighty-four passes of channel-buying have produced research code: a model, a paper, a reference implementation.** 🟢 **This channel produced four platforms a named institution operates in production:** `Artemis` (TU München, `artemis.tum.de`), `okpy/ok` (UC Berkeley), `Tango` (Carnegie Mellon's Autolab), `prog-edu-assistant` (Google). 🔵 **That is a categorically more useful artefact for a studio engagement — the reference customer is in the repo.**
+
+🟢 **And the licence distribution inverts every research tier bought so far:** 🟢 **8 of 11 permissive in the delivery layer**, against pass 84's measurement of the psychometrics tier at **GPL-by-default** and the platform/LMS tier at **11 of 12 copyleft**.
+
+### 🟡 `topics/question-generation` — **`P909` validated by a deliberate negative test**
+
+🔴 **Pass 84's `P909` said: the precision predictor is MULTI-WORD-NESS, not jargon.** 🟡 **`question-generation` is multi-word — and it returned ~30% precision, the worst of any multi-word channel bought.** 🔵 **So `P909` needs the refinement this pass measured:**
+
+🟢 **`P923`: multi-word-ness predicts precision only when EVERY word narrows. `question-generation` is two words that are both generic in NLP** — question answering, text generation, retrieval benchmarks all claim the tag — 🔴 **so the compound is multi-word and still collides, exactly the way an acronym does.** 🟢 **Compare the channels that worked: `automated-essay-scoring` (3 words, all three narrowing, 100%), `knowledge-tracing` (2 words, both education-specific, 100%), `item-response-theory` (3 words, psychometrics-only, 95%), `autograding` (1 word, but the word exists ONLY in education, 100% on-topic).**
+
+🔵 **`autograding` is the decisive case against the word-count reading: it is a SINGLE word at 100% on-topic.** 🟢 **The real predictor is whether the term has a use OUTSIDE education at all** — `autograding` does not; `question-generation` very much does. 🔴 **Word count was a proxy that happened to correlate, and this pass breaks the correlation in both directions.**
+
+### 🟢 New rows this pass — autograding tier
+
+| repo | grant | bytes | ref · sha | ★ | region |
+|---|---|---|---|---|---|
+| 🆕 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 **MIT** | 1 090 | 🔴 `develop` · `760e2e1` | **816** | 🟢 **EMEA** |
+| 🆕 [`okpy/ok`](https://github.com/okpy/ok) | 🟢 **Apache-2.0** 🔴 multi-grant | 🔴 13 979 | 🔴 `master` · `f5610a7` | 370 | 🟢 **North America** |
+| 🆕 [`autolab/Tango`](https://github.com/autolab/Tango) | 🟢 **Apache-2.0** | 11 323 | 🔴 `master` · `24558e3` | 49 | 🟢 **North America** |
+| 🆕 [`google/prog-edu-assistant`](https://github.com/google/prog-edu-assistant) | 🟢 **Apache-2.0** | 11 357 | `main` · `bc61a51` | 34 | 🟡 unplaced |
+| 🆕 [`uhafner/autograding-github-action`](https://github.com/uhafner/autograding-github-action) | 🟢 **MIT** | 1 094 | `main` · `4e65432` | 32 | 🟢 **EMEA** |
+| 🆕 [`earthlab/matplotcheck`](https://github.com/earthlab/matplotcheck) | 🟢 **BSD-3-Clause** | **1 508** | `main` · `c1b6a3b` | 23 | 🟢 **North America** |
+| 🆕 [`rstudio/ggcheck`](https://github.com/rstudio/ggcheck) | 🟢 **MIT** 🔵 stub+`DESCRIPTION` | 🔴 44 | `main` · `70543ad` | 23 | 🟢 **North America** |
+| 🆕 [`kit-sdq/autograder`](https://github.com/kit-sdq/autograder) | 🟢 **MIT** | 1 067 | `main` · `a439007` | 18 | 🟢 **EMEA** |
+| 🔴 [`foundation50/classroom50`](https://github.com/foundation50/classroom50) | 🔴 **GPL-3.0** | 35 148 | `main` · `9ce1a9d` | 212 | — |
+| 🔴 [`infomark-org/infomark`](https://github.com/infomark-org/infomark) | 🔴 **GPL-3.0** | 35 148 | `main` · `9781fa7` | 35 | — |
+| 🔴 [`GatorEducator/gatorgrade`](https://github.com/GatorEducator/gatorgrade) | 🔴 **GPL-3.0** | 35 148 | `main` · `c574f93` | 18 | — |
+
+### 🟢 New rows this pass — item-generation tier
+
+| repo | grant | bytes | ref · sha | ★ | region |
+|---|---|---|---|---|---|
+| 🆕 [`ramsrigouthamg/Questgen.ai`](https://github.com/ramsrigouthamg/Questgen.ai) | 🟢 **MIT** | 1 076 | 🔴 `master` · `edf8f6a` | **951** | 🟢 **APAC** |
+| 🆕 [`asahi417/lm-question-generation`](https://github.com/asahi417/lm-question-generation) | 🟢 **MIT** | 1 064 | 🔴 `master` · `dde629c` | 366 | 🟡 unplaced |
+| 🆕 [`artitw/text2text`](https://github.com/artitw/text2text) | 🟢 **MIT** 🟡 + rider | 🔴 **1 324** | 🔴 `master` · `37b1b37` | 304 | 🟡 unplaced |
+| 🆕 [`AMontgomerie/question_generator`](https://github.com/AMontgomerie/question_generator) | 🟢 **MIT** | 1 072 | 🔴 `master` · `d950d6e` | 298 | 🟡 unplaced |
+| 🆕 [`PragatiVerma18/MLH-Quizzet`](https://github.com/PragatiVerma18/MLH-Quizzet) | 🟢 **MIT** | 1 069 | 🔴 `master` · `2dca644` | 97 | 🟡 unplaced |
+| 🔴 [`KristiyanVachev/Question-Generation`](https://github.com/KristiyanVachev/Question-Generation) | 🔴 **GPL-3.0** | 35 148 | 🔴 `master` · `1daee9c` | 494 | — |
+
+### 🟢 Costed single-row probes from pass 84 — **5 of 5 resolved**
+
+| probe | pass 84's expectation | measured this pass |
+|---|---|---|
+| `vardanagarwal/Proctoring-AI` (633★) | grant unrecorded, loading `Gap 344` | 🟢 **MIT**, 1 071 B, `master` · `4f284a3` — 🔴 **`Gap 344` FALSIFIED** |
+| `SafeExamBrowser/seb-win-refactoring` (354★) | grant unrecorded, loading `Gap 344` | 🟡 **MPL-2.0**, 16 726 B, `master` · `016d234` — 🟡 **new family, file-scoped copyleft** |
+| `free-spaced-repetition-scheduler` (723★) | "the scheduling algorithm itself" | 🟢 **MIT**, 1 089 B, `main` · `93ed713` — 🟢 **`live=1 archive=0`: only the costed-probe note itself, so a genuine first** |
+| `GegoK12` (vendor MIT claim) | unverified vendor claim, `Gap 346` | 🟢 **MIT CONFIRMED by payload** at `Gego-K12/gegok12`, 1 149 B, `main` · `99da145` — 🔴 **but 123 commits (`Gap 351`)** |
+| `Fedena` (Apache-2.0 claimed in a table) | unverified, `Gap 346` | 🟢 **Apache-2.0 via `NOTICE`** (`P917`), `master` · `333477b` — 🔴 **Copyright 2011, stale** |
+
+🟢 **`P899` continues to work as designed: not one minute went into re-deciding where to spend.** 🔴 **But see `P921` in `repos/foundations.md` — the list resolved 5 of 5 and the gap it was built for was discharged by something not on it.**
+
+### 🔴 `T1` — the trap's **largest payment** and a FOURTH value class
+
+🔴 **10 of 19 refs resolved this pass do NOT point at `main` — 53%, above pass 79's rate and above pass 84's 5-of-8.**
+
+| ref value | rows | notable |
+|---|---|---|
+| `master` | 🔴 **8** | the entire item-generation tier (5 of 5) plus `okpy/ok`, `Tango`, `Proctoring-AI`, `seb-win-refactoring` |
+| 🆕 `develop` | 🔴 **1** | [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) — 🔴 **the headline row of the pass**, and a `main`-hardcoded probe would have silently dropped it |
+| 🆕 **`19.0`** | 🔴 **1** | [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) — 🔴 **a VERSION NUMBER as the default branch**, a shape no prior pass has recorded |
+| `main` | 🟢 9 | — |
+
+🔵 **`19.0` matters beyond the count: it is not a word, so a probe that tries `main`, falls back to `master`, and then gives up fails on it.** 🟢 **`git ls-remote --symref` resolves it correctly and is the only channel that does.** 🔴 **Odoo-family projects branch per release, so every OpenEduCat-shaped row on this shelf has this shape.**
+
+### 🔴 Declared gaps — carried to pass 86
+
+- 🔴 **`topics/autograding` rows 21–94 UNREAD.** 🟢 **Named as the first buy of pass 86**, because it is the only channel measured to contain production platforms.
+- 🔴 **`Gap 350`: the autograding tier placed 4 EMEA, 3 North America, 0 APAC, 0 LATAM.** 🔵 **An informed gap, not coverage:** the shelf now has a permissive production platform and no evidence of APAC or LATAM deployment. 🟢 **Costed: Artemis's adoption page, plus the unread 74 rows.**
+- 🔴 **`Gap 351`: `Gego-K12/gegok12` has 98 forks against 54★ and 123 commits.** 🟢 **Costed: `git ls-remote` across the fork network to find whether a fork is the maintained line.**
+- 🟡 **`topics/question-generation` rows 21–227 deliberately NOT costed.** 🔴 At ~30% precision the budget is better spent on `autograding`. 🔵 **Recorded as a decision rather than an omission.**
+
+---
+
+
 ## 🟢 2026-10-09 (pass 84) — **nine channels bought, pass 83's entire named queue discharged**, 62 repositories probed, and `P909` corrects `P900`: the precision predictor is **multi-word-ness**, not jargon — because an ACRONYM is jargon that collides
 
 ⏱️ **Sixteenth pass of this date.** 🟢 **Append-only: pass 83's section sits immediately below, unchanged.**

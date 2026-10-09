@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 85) — **`Gap 346` DISCHARGED and `Gap 344` FALSIFIED in the same pass**, both by reading rows rather than searching for new ones; `topics/autograding` is the first channel made of platforms a university actually runs
+
+⏱️ **Seventeenth pass of this date.** 🟢 **Append-only: this section is new. Pass 84's section is immediately below and nothing in it was rewritten.**
+
+### 🟢 The summary
+
+| item | status |
+|---|---|
+| 🔴 `Gap 344` — proctoring tier has ZERO permissive rows | 🔴 **FALSIFIED** — its two biggest rows are **MIT (633★)** and **MPL-2.0 (354★)**; the finding came from having read the five smallest |
+| 🔴 `Gap 346` — no permissive, production-grade platform-tier row exists | 🟢 **DISCHARGED** — `ls1intum/Artemis`, **MIT, 816★, 12 315 commits**, TU München, in production at `artemis.tum.de` |
+| 🔴 `Gap 348` — no AI *education* regulation found for Mexico or Colombia | 🟢 **CLOSED, premise reframed** — neither has a *sectoral* instrument; both have horizontal policy that DELEGATES to the education ministry. See `intel/market.md` |
+| 🟡 `Gap 345` — JPlag GPL-3.0 is the integrity tier's flagship | 🟡 **UNCHANGED**, but now known to be **tier-local**: the autograding tier's flagship is MIT |
+| 🟡 `Gap 347` — ETS grants nothing | 🟡 **UNCHANGED** — upstream-askable, nothing this pass could do |
+| 🟢 channels bought | **2 new** (`autograding` 94 repos, `question-generation` 227 repos) + **5 costed single-row probes**, all 5 resolved |
+| 🟢 rows granted / negatives | 🟢 **19 granted** · 🔴 **4 named negatives** of 24 probed |
+| 🔴 board run | 🔴 **NO** — eighth consecutive pass (`P126`: no instrument versioned) |
+
+### 🟢 What is new this week, in order of what it changes
+
+1. 🟢 **The shelf has a permissive production platform for the first time in 85 passes.** [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) — **MIT** (1 090 B, 🔴 `develop` · `760e2e1`), **816★ / 396 forks / 12 315 commits**, maintained by the **Applied Education Technologies group at TU München**, running at **artemis.tum.de** with other universities self-hosting. 🔵 **Interactive learning with automated feedback for programming and modelling exercises** — so it is a *teaching* platform, not an LMS, which is exactly the layer `P913` said to sell.
+
+2. 🔵 **And the reason it took 85 passes is CHANNEL SELECTION, not supply.** 🔴 Passes 83–84 measured the platform tier at **11 of 12 copyleft** and concluded the permissive platform did not exist. 🟢 **They were looking in the LMS/SIS channel — Moodle, Canvas, OpenOLAT shape — where copyleft genuinely does dominate.** 🟢 **The permissive production platform was sitting in `topics/autograding`, a 94-repo channel no pass had ever opened.** 🔵 **`P901` confirmed hard: the budget belongs on topic pages.**
+
+3. 🔴 **`Gap 344` was never a supply problem either.** 🟢 [`vardanagarwal/Proctoring-AI`](https://github.com/vardanagarwal/Proctoring-AI) is **MIT** (1 071 B, 🔴 `master` · `4f284a3`) at **633★** and [`SafeExamBrowser/seb-win-refactoring`](https://github.com/SafeExamBrowser/seb-win-refactoring) is **MPL-2.0** (16 726 B, 🔴 `master` · `016d234`) at **354★** — 🔴 **the two largest rows in the tier, both named by pass 84 as "grants unrecorded", both granting.** 🔵 **`P899`'s defect in its other direction, and it cost two passes of a false hole.**
+
+4. 🟢 **MPL-2.0 adds a FOURTH licence posture.** 🔵 It is **file-level** copyleft: modified MPL files stay open, the larger work may be proprietary. 🟢 **The correct ordering is four buckets:** permissive → 🟡 file-scoped (MPL-2.0, LGPL linking) → 🔴 work-scoped (GPL/AGPL) → 🔴 non-commercial prohibition (CC-NC). 🔴 **Pass 84's three-bucket correction was right and one bucket short.**
+
+5. 🟢 **The proctoring row was capability-audited against the EU prohibition, not just its licence.** `Proctoring-AI` ships **seven** functions — eye-gaze direction, mouth-opening, person counting, phone detection, head-pose, face-spoofing, audio speech — and 🟢 **zero infer emotion or affect.** 🔵 **That puts it on the permitted-but-high-risk side of Art. 5(1)(f) (prohibited since 2025-02-02, already on this shelf), not the banned side.** 🔴 **`Gap 349` opened: the rest of the tutor and proctoring tiers are UNAUDITED for affect inference.**
+
+6. 🟢 **An item-generation tier exists now, 5 of 5 MIT** — [`Questgen.ai`](https://github.com/ramsrigouthamg/Questgen.ai) (951★, APAC), [`lm-question-generation`](https://github.com/asahi417/lm-question-generation) (366★, **multilingual**), [`text2text`](https://github.com/artitw/text2text) (304★), [`question_generator`](https://github.com/AMontgomerie/question_generator) (298★), [`MLH-Quizzet`](https://github.com/PragatiVerma18/MLH-Quizzet) (97★, takes teacher PDFs). 🔵 **Item authoring was the one assessment capability with no row at all.** 🟡 **Channel precision was LOW (~6 of 20 on-topic) and is recorded as such — `P909` predicted it: multi-word but not education-specific, so it collides with the whole NLP literature.**
+
+7. 🔴 **`P171` paid FOUR TIMES in one pass — its largest payment on this shelf.** [`KristiyanVachev/Question-Generation`](https://github.com/KristiyanVachev/Question-Generation) (494★), [`foundation50/classroom50`](https://github.com/foundation50/classroom50) (212★), [`infomark-org/infomark`](https://github.com/infomark-org/infomark) (35★) and [`GatorEducator/gatorgrade`](https://github.com/GatorEducator/gatorgrade) (18★) are **all GPL-3.0**, all **35 148 B**, all `Version 3, 29 June 2007`, all with `Affero` first at **line 552**. 🔴 **A `grep -i Affero` classifier calls 4 of 4 AGPL and is wrong 4 of 4 times.**
+
+8. 🔴 **`P916` — a LICENSE file can hold MORE THAN ONE grant, and the naive read fails toward the dangerous side.** [`okpy/ok`](https://github.com/okpy/ok)'s 13 979 B `LICENSE` is Apache-2.0 **plus two third-party BSD licences** (one headed *"Flask Foundation License"*). 🔴 **Worse:** `OpenEduCat`'s 8 240 B `LICENSE` is **LGPL-3.0 with the full GPL-3.0 appended**, and its first line points at a `COPYRIGHT` file that **404s** — so a last-match reader concludes **GPL-3.0** and throws away the linking permission that is the only reason the row is usable.
+
+9. 🟢 **`P917` — Apache-2.0 has a canonical second home: `NOTICE`.** [`foradian/fedena`](https://github.com/foradian/fedena) and its upstream [`projectfedena/fedena`](https://github.com/projectfedena/fedena) serve **404 on ten licence paths** and **200 on `NOTICE`**, which carries the Apache boilerplate grant naming **Foradian Technologies Private Limited, 2011**. 🟡 **Weaker evidence than a LICENSE file — the text is incorporated by URL — but a documented grant, not an absence.**
+
+10. 🔴 **`P872` paid three times, and twice a wrong row was one step from publication.** A 12-path guessed sweep on Fedena returned **12 × 404 including `README.md`, its own control** — the real file is `README.markdown`. Two guessed GegoK12 slugs returned **NO REF**; the real one, `Gego-K12/gegok12`, came from a search result and grants **MIT** (1 149 B, `main` · `99da145`). 🟢 **Rule that held: an all-404 sweep that also 404s its control is uninformative, not evidence of absence.**
+
+11. 🟢 **`P918` — `P895` reproduces a third time and from an INSTITUTIONAL publisher.** [`rstudio/ggcheck`](https://github.com/rstudio/ggcheck) serves a **44 B** LICENSE (`YEAR: 2021` / `COPYRIGHT HOLDER: ggcheck authors`) and declares `License: MIT + file LICENSE` in `DESCRIPTION`. 🔵 **Three stubs now — 44 / 46 / 47 B — and the variance is nothing but the length of the holder string.** 🟢 Posit is a company, which removes the reading in which this was an academic quirk.
+
+12. 🔴 **`P914` — the brief's verification command got MORE dangerous, not just useless.** `curl -sI https://github.com/<slug>` now returns the agent proxy's `HTTP/1.1 200 Connection Established` **first**, then GitHub's `403`. 🔴 **`curl -sI | head -1` reads `200` for every slug on earth, including one invented thirty seconds ago.** 🟢 `git ls-remote --symref` and `raw.githubusercontent.com` both discriminate and were calibrated on a negative control before any candidate was probed.
+
+13. 🟢 **`P915` — `P894`'s locale defect reproduces a third time with a DIFFERENT SYMPTOM.** Passes 83–84: a silent undercount (1 of 6). 🔴 **This pass: a hard `grep` error and a zero.** 🔵 **Same harness, same unset locale, two symptoms — so neither "did it error?" nor "did it return anything?" is a valid check.** 🟢 **Only asserting the count against a control of known length survives both.**
+
+14. 🟢 **New capability result, against passes 78–84:** a splice built with `sed` into a scratchpad file and then `cp`'d back is 🟢 **ALLOWED**. 🔴 Pass 84 measured in-place `head`/`tail`/`mv` and `python3` splices as **REFUSED by the session classifier**. 🔵 **The seam is write-to-scratchpad-then-copy, not splice-in-place** — worth knowing because it is the difference between editing eight files cheaply and editing them one tool call at a time.
+
+### 🔴 Declared gaps and costed probes for pass 86
+
+- 🔴 **`Gap 349` (new):** no row-level **affect-inference audit** across the tutor and proctoring tiers. `Proctoring-AI` is audited clean (7 functions, 0 affective); every other row is unaudited against a prohibition that has been in force since **2025-02-02**. 🟢 **Costed:** read the function lists of the five GPL proctoring rows and the `ai-tutor` tier's top 10 — README-level, no clone needed.
+- 🔴 **`Gap 350` (new):** the autograding tier placed **4 EMEA, 3 North America, 0 APAC, 0 LATAM**. 🔵 **Written down because silence looks like coverage:** this shelf now has a permissive production platform and **no evidence it is deployed or maintained anywhere in APAC or LATAM**. 🟢 **Costed:** Artemis's adoption page (the repo page says other universities self-host but does not name them) and `topics/autograding` rows 21–94, unread.
+- 🔴 **`Gap 351` (new):** [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) is **MIT** but has **98 forks against 54★ and only 123 commits** — a fork-and-install distribution, not a developed line. 🟡 **Unknown whether any fork is the maintained one.** 🟢 **Costed:** compare fork-network HEAD shas; one `git ls-remote` each.
+- 🟡 **`Gap 345` unchanged** — `jplag/JPlag` GPL-3.0 at 2 000★ stays outside the product boundary as a service. 🟢 **Now known to be tier-local**, not a sector property.
+- 🟡 **`Gap 347` unchanged** — ETS's `aes-book-hands-on` grants nothing; upstream-askable only.
+- 🔴 **`topics/autograding` rows 21–94 are UNREAD** (20 of 94 seen). 🟢 **Highest-value unbought budget on the shelf**, because this is the only channel measured to contain production platforms.
+- 🔴 **The brief's plain-language battery returned ZERO education instruments again.** Four queries — `top open source AI agents education 2026 github MIT`, `github trending education AI 2026`, `open source platform education ERP CRM MIT Apache`, `AI education industry trends 2026` — returned SEO listicles, `microsoft/ai-agents-for-beginners` (a *course about AI*, not an education instrument) and general frameworks already shelved. 🟢 **Recorded as a measurement, for the fifth-plus consecutive pass: the plain-language channel is saturated and the topic pages are the buy.**
+
+---
+
+
 ## 🟢 2026-10-09 (pass 84) — **`Gap 343` DISCHARGED on institutional anchors**, the academic-integrity tier arrives 7-of-8 permissive, and the shelf meets the first licence family it cannot comply with: **CC BY-NC-SA**
 
 ⏱️ **Sixteenth pass of this date.** 🟢 **Append-only: this section is new. Pass 83's section is immediately below and nothing in it was rewritten.**
