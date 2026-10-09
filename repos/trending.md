@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 2026-10-09 — pass 90: `topics/lms` bought by stars, and education's own permissive licence family (ECL-2.0) is why the platform census kept failing
+
+**APPEND-ONLY — history is below. Twenty-first pass of this date.**
+
+### `topics/lms` read by stars — 2 432 repos, first 20
+
+The channel this KB had never sorted by stars, and it holds the platform tier the shelf said did not exist.
+
+| repo | grant (payload · bytes · ref · SHA) | ★ | posture |
+|---|---|---|---|
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | **MIT** · 1 091 B · `develop` · `760e2e1` | 816 | **permissive, production, AI-native** |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | **ECL-2.0** · 11 120 B · `master` · `10a1d90` | 1.2k | **permissive** (see below) |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | **ECL-2.0** · 11 340 B · `develop` · `52805eb` | — | **permissive** — lecture capture |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | **MIT** · 1 684 B · `master` · `001ec46` | 979 | permissive, APAC (IN) |
+| [`inducer/relate`](https://github.com/inducer/relate) | **MIT** · 1 145 B · `main` · `7d947c3` | 436 | permissive, NA (UIUC) |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | **MIT** · 1 094 B · `main` · `d0cd78c` | 404 | **closest thing to a permissive SIS** |
+| [`frappe/lms`](https://github.com/frappe/lms) | **AGPL-3.0** · `license.txt` 33 893 B · `develop` · `933fc60` | 3.3k | **mis-published as MIT elsewhere** |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | **AGPL-3.0** · 34 523 B · `dev` · `9a13191` | 2.3k | copyleft |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | **AGPL-3.0** · 34 523 B · `main` · `c225cc4` | 1.7k | copyleft |
+| [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | **AGPL-3.0** · `LICENSE.md` 34 143 B · `main` · `62b5abb` | 1.3k | copyleft |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | **AGPL-3.0** · `LICENSE.txt` 34 523 B · `release` · `2776223` | 1.1k | copyleft |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | **GPL-3.0** · 35 147 B · `master` · `f30df11` | 1.0k | copyleft, large LATAM base |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | **GPL-3.0** · 35 147 B · `release_11` · `c212185` | 505 | copyleft |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** · 10 982 B · `master` · `cccdcda` | 447 | permissive |
+
+### The mechanical finding: ECL-2.0, and why a classifier hides a tier
+
+`Sakai` and `Opencast` are **ECL-2.0 — the Educational Community License 2.0**, OSI-approved,
+Apache-2.0-derived, **permissive**, with a patent clause written for universities. This pass's classifier,
+keyed on the familiar licence families, returned **`OTHER/unclassified`** for both, and an unclassified row
+reads as risk and gets dropped.
+
+**Education has its own permissive licence family, and generic tooling will systematically undercount the
+tier as copyleft.** That is a material part of how `8 of 8 copyleft` survived six passes. Any licence
+classifier this KB runs must recognise ECL by name.
+
+### New foundational rows
+
+| repo | grant (payload · bytes · ref · SHA) | role |
+|---|---|---|
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **Apache-2.0** · 11 357 B · `main` · `cb794e4` | **A production SQL LRS.** The permissive replacement for GPL `LearningLocker`. |
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | **Apache-2.0** · 11 357 B · `master` · `efa045e` | Reference LRS — the conformance gate |
+| [`tunapanda/h5p-standalone`](https://github.com/tunapanda/h5p-standalone) | **MIT** · 1 077 B · `master` · `b5ac7dd` | **MIT escape hatch from H5P's GPL core** |
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | **BSD** · 1 542 B · `main` · `80d7d66` | Permissive production autograding platform (RPI) |
+| [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | **BSD** · 1 560 B · `master` · `190c1a4` | Notebook autograding (UC Berkeley) |
+| [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | **BSD** · 1 512 B · `main` · `f9915da` | Notebook assignment lifecycle |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** · 1 097 B · `develop` · `d4fea9c` | **Offline-first delivery** — the answer to UNESCO's connectivity finding |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | **Apache-2.0** · 11 358 B · `develop` · `ad22e91` | Structured lesson model |
+| [`webtech-network/autograder`](https://github.com/webtech-network/autograder) | **Apache-2.0** · 11 357 B · `main` · `04bee3e` | Rubric autograding, v0.4.0 |
+
+### Three slugs in circulation that do not exist
+
+Resolved **ABSENT** by `ls-remote` this pass; recorded so they are not re-tried.
+`apereo/opencast` → **`opencast/opencast`** · `tutor-dev/tutor` → **`overhangio/tutor`** ·
+`h5p/h5p-standalone` → **`tunapanda/h5p-standalone`**
+
+### A channel measured and found low-yield
+
+`topics/education` sorted by stars reports **36 587 repos**; the first 20 are **entirely curriculum lists,
+book lists and tutorials** — `freeCodeCamp` (457k★), `free-programming-books` (399k★), `TheAlgorithms/Python`
+(225k★). **Not one deployable platform or library in the top 20.** The productive channels for building blocks
+are `topics/lms` (2 432) and `topics/ai-tutor` (664). **Do not re-buy `topics/education` by stars.**
+
+### Flags
+
+`LearningLocker` **GPL-3.0** · `h5p/h5p-php-library` **GPL-3.0** · `lumieducation/H5P-Nodejs-library`
+**GPL-3.0** (there is no permissive H5P *authoring* server) · `PrairieLearn` **AGPL-3.0** · `INGInious`
+**AGPL-3.0** · `GatorEducator/gatorgrader` **GPL-3.0** · `ucfopen/UDOIT` **GPL-3.0** ·
+`oat-sa/tao-core` **LGPL-3.0** · `celtic-project/LTI-PHP` **LGPL-3.0** ·
+`1EdTech/openbadges-specification` **no payload** (the spec repo has no grant; the validator is Apache-2.0) ·
+`eecs-autograder/autograder.io` **no payload** (docs repo, consistent with its README) ·
+`OS4ED/openSIS-Classic` **no payload in 17 filenames** despite being listed as GPL in comparison articles.
+
 ## 🟢 2026-10-09 — pass 89: `topics/scorm` bought (220 repos), the "Load more" wall falls to `?page=2`, and a topic channel's TAIL degrades by publisher
 
 ⏱️ **Twentieth pass of this date. APPEND-ONLY — history is below.**

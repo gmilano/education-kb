@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 2026-10-09 — pass 90: the agent *skill* is a distinct category now, and the MIT AI-native platform was 816 stars away all along
+
+**APPEND-ONLY — history is below. Twenty-first pass of this date.**
+
+Licences below read from the payload at the pinned SHA (`git ls-remote --symref` for existence,
+`raw.githubusercontent.com/<slug>/<SHA>/<file>` for the grant). Two-sided control passed: invented slug ABSENT,
+`moodle/moodle` `COPYING.txt` **35 147 B**, byte-identical to six prior passes. ★ from GitHub topic/repo pages
+read this pass. **92 slugs resolved; 3 ABSENT; 6 with no licence payload.**
+
+### The row that reframes the shelf
+
+| row | grant (payload · bytes · ref · SHA) | ★ | region | why |
+|---|---|---|---|---|
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | **MIT** · 1 091 B · `develop` · `760e2e1` | 816 | **EMEA** (TU München AET) | **A production university platform, MIT, with three named LLM subsystems already in tree: Iris (tutor), Athena (feedback), Hyperion (AI exercise authoring, Spring AI).** Pass 89 led its "AI-native LMS that is MIT" finding with `mentingo` at 91★. The far larger, far more mature answer was one `topics/lms` read away. |
+
+### New agent rows, payload-read this pass
+
+| row | grant (payload · bytes · ref · SHA) | ★ | region | note |
+|---|---|---|---|---|
+| [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | **MIT** · 1 074 B · `main` · `ed6774d` | 510 | unplaced | **Spaced repetition as an MCP tool call.** Highest-leverage small row this pass. |
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | **MIT** · 1 064 B · `main` · `2cd8393` | 771 | unplaced | Self-study agent: paths, concepts, project guidance |
+| [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | **MIT** · 1 065 B · `main` · `b9e84f5` | 303 | unplaced | Cross-session memory |
+| [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | **MIT** · 1 081 B · `main` · `25ea970` | 286 | unplaced | Progressive hints, mock interviews |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | **MIT** · 1 069 B · `main` · `b391898` | 285 | unplaced | Adaptive next-lesson selection |
+| [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | **MIT** · 1 102 B · `main` · `075c189` | 242 | unplaced | **Diagnosis-first** — assesses before teaching |
+| [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) | **MIT** · 1 083 B · `main` · `c85ca76` | 166 | **APAC** (CN) | Civil-service exam coaching |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | **MIT** · 1 068 B · `main` · `f0142f2` | 137 | unplaced | Local-first |
+| [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | **MIT** · 1 068 B · `main` · `b4c9352` | 107 | unplaced | Skill *bundle* pattern |
+| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | **MIT** · 1 073 B · `main` · `3708287` | 44 | unplaced | Go MCP server: any LLM → ITS |
+| [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | **Apache-2.0** · 11 386 B · `main` · `1b7fbe0` | 31 | unplaced | Agentic RAG on LangGraph |
+| [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | **MIT** · 1 094 B · `main` · `f88f69f` | 17 | unplaced | **Bayesian skill tracking** — an actual learner model |
+| [`belentani7/aprende-brasil`](https://github.com/belentani7/aprende-brasil) | **MIT** · 1 085 B · `main` · `bbeea5a` | — | **LATAM** (BR) | pt-BR, 205 modules, tutor "Nilo", offline fallback |
+| [`programadores-obreros/Agente-editor-inet`](https://github.com/programadores-obreros/Agente-editor-inet) | **GPL-3.0** · 35 149 B · `main` · `0fa7298` | — | **LATAM** (AR) | INET technical schools, Arduino/ESP32, offline |
+
+### The new category: agent skills
+
+Of the 40 rows read across `topics/ai-tutor` pages 1–2 (664 repos total), roughly a quarter are **skills for
+agent harnesses** rather than applications — and every one verified read **MIT**. No UI, no hosting, no
+database. See `intel/trends.md` `T1` and `compose/patterns.md` `P90-C`.
+
+### Negatives worth more than the positives
+
+- **`plastic-labs/tutor-gpt` is GPL-3.0** (35 149 B, `5c2f924`), not the permissive tutor roundups call it.
+- **`frappe/lms` is AGPL-3.0**, not MIT. `LICENSE` is absent; `license.txt` (lowercase, 33 893 B) is the AGPL.
+  A top-ranked LMS comparison article states MIT. It is wrong.
+- **`microsoft/autogen` is a split grant**: `LICENSE` CC-BY-4.0 (18 650 B), `LICENSE-CODE` **MIT** (1 141 B).
+- **No licence payload** in 17 filenames: `A-R007/Multi-Agent-Study-Assistant` (62★),
+  `LAION-AI/Desktop_BUD-E` (43★).
+- **AGPL/GPL despite reading as hobby-permissive**: `24kchengYe/human-skill-tree` (567★, AGPL),
+  `artcc/freelingo` (164★, AGPL), `ahmedEid1/lumen` (88★, GPL), `yh2072/edgameclaw` (71★, AGPL).
+
+### Instrument correction carried from this pass
+
+`curl -sI https://github.com/<slug>` returns **403 for real and invented slugs alike** under this session's
+egress proxy, and with `-sI` prints only the proxy's own `200 Connection Established` line — which earlier
+passes mistook for a live page. `api.github.com` is 403 for both. **Neither discriminates.**
+`git ls-remote --symref` and `raw.githubusercontent.com` both do, and are what this KB should use.
+
+### Still missing
+
+**AI-driven instructional checkers** (alignment, accuracy, accessibility) under a permissive licence. A
+targeted search returned nothing usable; the only LMS accessibility checker found, `ucfopen/UDOIT`, is GPL-3.0
+and not AI-driven. **14 agent rows remain honestly unplaced by region** rather than guessed.
+
 ## 🟢 2026-10-09 — pass 89: the AI rows in the SCORM and credentialing channels, and an AI-native LMS that is MIT
 
 ⏱️ **Twentieth pass of this date. APPEND-ONLY — history is below.**
