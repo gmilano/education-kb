@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-08
+updated: 2026-10-09
 ---
 
 # 📚 Education KB
@@ -23,6 +23,37 @@ education-kb/
 ```
 
 ## `compose/code/` — lo que esta KB puede demostrar corriendo
+
+🔴 **Pase 78 del 2026-10-09 — NINGUNA de las cifras de este bloque se re-verificó, y la razón es nueva**
+(`Gap 333`). `[Code from External]` **denegó toda ejecución desde el clon**, no sólo la que sale a la
+red: la mitad **offline** de `lib/` (`measure --family`) 🔴 **denegada**, y una **suite offline**
+(`lib/test_license_family.sh`) 🔴 **denegada** también. 🟢 `bash -n` pasa limpio en los tres
+instrumentos probados.
+
+🔵 **`P860`: el límite medido este pase es *parsear vs ejecutar*, no *red vs sin red*.** `lib/README.md`
+publica el seam más angosto —y marca `. license_family.sh` 🟢 en el pase 74— porque ése fue el caso
+que se probó. **Un límite de capacidad se re-mide en su caso MÁS ANGOSTO cada pase.**
+
+🔴 **Así que el tablero de 106 suites, `p351` y los 235 instrumentos quedan ARRASTRADOS, no
+confirmados.** 🟢 Todo veredicto del pase 78 es una **medición directa en vivo** (`curl` a
+`raw.githubusercontent.com`, 🟢 200/404 discriminando; `git ls-remote --symref`, con control negativo
+que falla) o una **lectura estática** — nunca un resultado de suite. 🟢 Las cifras del pase llevan
+SHA y bytes exactos contados **sobre el archivo**.
+
+🔵 **`P861`, y es el costo medido de la denegación:** el probe escrito a mano para reemplazarlos
+reprodujo **dos defectos que `lib/probe_payload.sh` documenta en su propio fuente** — contó un cuerpo
+`404: Not Found` como **payload de 14 bytes**, y reportó un **link de licencia colgado en el README**
+como ausencia simple. 🟢 Los dos se corrigieron leyendo ese fuente. **Una denegación suspende la
+ejecución, no el conocimiento.**
+
+🔴 **Tres arreglos quedan NOMBRADOS Y SIN ESCRIBIR a propósito** (`P126`: se corre el instrumento
+versionado antes de escribir uno a mano, y no se pudo correr): los nombres **en minúscula** en
+`PROBE_NAMES` (`P862` — `frappe/erpnext` concede en `license.txt` y la escalera actual lo lee
+`NO-PAYLOAD`), las dos cifras de bytes corregidas como casos de regresión (`P859` — `OpenTutor`
+**1 068 B** con corrida 1, `aureuserp` **1 077 B** con corrida **0**), y el re-run de `shelf_gate.sh`
+sobre `candidates.input.2026-10-09-p78.tsv`.
+
+---
 
 🆕 **El pase 65 del 2026-10-08 CORRIÓ EL TABLERO COMPLETO por primera vez, y con eso
 `Gap 257`/`Gap 258` CIERRAN.** 🟢 **106 suites — no 112, que nunca se midió** — repartidas así:

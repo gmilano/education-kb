@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-eighth pass, 2026-10-09 — the trend is **"adoption already happened, governance did not"**, and the pass's own subject is sharper: 🔴 **a correction applied as a rule is a new defect**, measured on this repository's own figures. `P859`–`P864` adopted
+
+⏱️ **Tenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 The trend this pass establishes about method: **a RULE and the ROWS it applies to are two measurements**
+
+🟢 Pass 74 measured `P834` correctly — command substitution strips a payload's trailing newline run — and then **added one byte to a list of eight figures**. 🟢 All eight were re-read byte-exact this pass. 🔴 **Six right, two wrong**, and the two are wrong for two different reasons: `zijinz456/OpenTutor` had **already** been corrected byte-exact by pass 64, so the batch corrected it twice; `aureuserp/aureuserp`'s trailing-newline run is **zero**, so the correction's magnitude was zero.
+
+🔵 **`P859` adopted: `P834`'s magnitude is per-FILE and its applicability is per-ROW. Neither can be read off a list.** 🔵 **This is `P713` turned around.** `P713` says re-measure the data and reuse the instrument. 🔴 **Pass 74 re-measured the RULE and then INHERITED THE ROWS** — which is the same error wearing the clothes of a correction. 🟢 **A correction is a measurement, and a measurement is per-row.**
+
+### 🔴 🆕 And the second method trend of the pass: **a denial suspends execution, not knowledge** (`P860`, `P861`)
+
+🔴 **Nothing in `compose/code/` executed this pass — not the network half, not the offline half, not even an offline test suite.** 🟢 `bash -n` parses clean. 🔴 **That boundary is wider than the one `lib/README.md` publishes** ("RED vs NO-RED", with `. license_family.sh` marked 🟢 in pass 74). 🔵 **`P860`: a capability boundary is re-measured at its NARROWEST case each pass** — the published seam was measured on whichever case happened to be tried, and three passes then quoted it.
+
+🔴 **And the cost was immediate: the hand-rolled replacement committed two defects the versioned probe documents in its own source** — a `404: Not Found` body counted as a 14-byte payload, and a dangling README licence link reported as a bare absence. 🔵 **`P861`: when the instrument cannot be RUN, its FINDINGS are still binding** — the pass reads its source and applies the traps by hand. 🔴 **Two for two in one pass is the price of treating a denial as an exemption.**
+
+### 🔴 T-new-1 — **Adoption is done; governance is the product.** This is now the dominant industry trend, in all four regions
+
+🟢 **86%** of education organisations use generative AI and **most have no policy** (secondary). 🟢 **Only 10%** of 450+ institutions have formal guidelines. 🟢 **60%** of US K-12 teachers used AI in 2024-25, **32%** weekly. 🟢 Weekly users report **~5.9 h/week** saved, and that figure is reported as the retention predictor.
+
+🔵 **The consequence for a studio is a change of pitch, not of product:** 🔴 **nobody needs to be persuaded to adopt.** 🟢 **The deliverable is the apparatus that makes an existing deployment defensible** — data boundaries, human-review gates, evaluation processes, audit trails. 🟢 **Ohio's mandate makes that compulsory and dated** (every K-12 district, formal AI policy, by 2026-07-01).
+
+### 🟢 T-new-2 — **"Purpose-built, not general-purpose" stops being a vendor line and becomes an OECD recommendation**
+
+🟢 The **OECD *Digital Education Outlook 2026*** recommends moving beyond general-purpose AI tools toward **purpose-built educational AI** designed to produce durable learning gains. 🟢 Independently, a 2026 vendor roundup calls the year's defining trend the movement **away from generic AI tools toward platforms purpose-built for education**.
+
+🔵 **Two sources with opposite incentives agreeing is the signal.** 🟢 **And it is a direct endorsement of this shelf's composition thesis** — compose an education substrate with a domain tutor, rather than wiring a generic assistant into an LMS. 🔵 It is also the best available argument against the default client proposal, which is always "connect the LMS to a chat assistant".
+
+### 🟢 T-new-3 — **Data minimisation becomes an architecture, not a policy annex**
+
+🟢 `Jeanikt/tutor-ai-agent` (MIT) ships `record: false` and keeps the persistent student model in the **browser's `localStorage`**, returned as a participant attribute at the next lesson. 🟢 **Nothing about the student on a server.**
+
+🔵 **Why this is a trend and not a feature:** every regulatory limb this pass measured converges on **student data** — California **AB 1159** (no model training on student data unless the school benefits), Idaho **SB 1227**, FERPA, GDPR, Vietnam's **behavioural monitoring** clause, the EU's Annex III assessment duties. 🔴 **A tutor that keeps no server-side student record answers all of them at once, and it does so by construction rather than by promise.** 🟡 It is not compliance — the memory still lives on a device the institution does not control.
+
+### 🔴 T-new-4 — **Restriction on automated assessment now has THREE modes, not two** (extending `P764`)
+
+🟢 `P764` recorded two: **conditioned** (EU Annex III, Vietnam, Korea) and **prohibited** (NYC's red tranche). 🟢 This pass adds the third, and it is the one that changes a roadmap:
+
+| mode | example, measured this pass | what a studio ships |
+|---|---|---|
+| 🟡 **conditioned** | EU Annex III; **Vietnam Law 134/2025/QH15**, in force **2026-03-01**, high-risk principally where output drives decisions **without meaningful human review** | an engineering spec — `WAITING_REVIEW`-style architectural human gates |
+| 🔴 **prohibited** | NYC guidance: grading, promotion, discipline, counselling, crisis intervention, IEP/504, placement | 🔴 nothing. **No amount of human-in-the-loop makes a prohibited use permitted** |
+| 🆕 🟡 **oversight-mandated** | **Oklahoma and Maryland** require human oversight and **bar AI from high-stakes decisions about students** | the oversight record itself — who reviewed, when, what they changed |
+
+🔵 **The third mode is distinct because its deliverable is the AUDIT TRAIL, not the gate.** 🟢 A gate that stops for a human and keeps no record satisfies mode 1 and fails mode 3.
+
+### 🟢 T-new-5 — **The discovery channel's failure modes are now enumerated, and none of them is "exhausted"** (`P863`)
+
+🟢 All three instruments this shelf had named-and-unbought for four passes were **bought** this pass:
+
+| channel | result | failure mode |
+|---|---|---|
+| `OpenTutor` eight-fork **release feeds** | 🔴 both canonical repos: **NO RELEASES PUBLISHED** | 🔴 **structurally empty** — the family publishes no releases at all |
+| the same channel, pointed at `HKUDS/DeepTutor` | 🟢 **10 releases, latest `v1.6.14` 2026-10-08**, ~2–6 day cadence | 🟢 **productive — per-repo, not per-channel** |
+| **conference artefact tracks** | 🟡 AIED 2026 main track is **placeholder**; NeurIPS 2026 Education Track repo is a **submission template**; `CSTutorBench` (arXiv **2607.05571**) has no located repo | 🔵 **structurally EARLY** — gated by the conference calendar, not by the search |
+| GitHub `/trending`, `/topics/ai-education` | 🔴 `curl` **403** · 🟢 `WebFetch` **200** | 🔵 **per-TOOL refusal** (`P855`, now on three `github.com` surfaces) |
+
+🔵 **`P863`: the release-feed channel's yield is per-REPO, and the registry pointed it at the wrong repo for four passes.** 🔵 **And "exhausted" has now been wrong four distinct ways** — unbought (pass 77), per-tool-refused, structurally empty, structurally early. 🔴 **Declaring a channel exhausted remains the most expensive conclusion a pass can write** (`P785`), and it has never once been the right one here.
+
+### 🔴 T-new-6 — **The licence surface of education AI is drifting toward CONTENT licences, where ShareAlike and NonCommercial reach the prompts**
+
+🟢 Measured this pass: `GarethManning/education-agent-skills` (837★) is **CC-BY-SA-4.0** — a *skills pack*, so ShareAlike reaches the prompt text a studio ships, not only its code. 🟢 `Jeremy-xuan/SocraticNovel` is **CC-BY-NC-SA-4.0** — **NonCommercial, unusable in an engagement**, and the **second** NC education repo in two passes after pass 77's `the-craft-of-selfteaching`.
+
+🔵 **This is why `P854` (pass 77's fix to hyphenated CC abbreviations) matters more than a one-off bug fix: the axis recurs.** 🔴 **And the pedagogy layer is where it recurs** — OER and teaching material are published `CC-BY-NC-SA` more than under any other grant, and an agent's *skills* are pedagogy, not code.
+
+### 🔴 T-new-7 — **A permissive grant at the top says nothing about the closure, and the shelf now has one of each**
+
+🟢 Pass 76: `PyLTI1p3` is MIT and its runtime closure contains **`jwcrypto` LGPL-3.0-or-later**. 🟢 Pass 78: `Jeanikt/tutor-ai-agent` is MIT and its declared closure is **permissive end to end** (LiveKit ×3 Apache-2.0, KaTeX MIT). 🔵 **Two rows, opposite outcomes, same declared top-level grant — so the closure read is not optional and is not inferable.**
+
+🔴 **And byte size is not a family signal either:** `24kchengYe/human-skill-tree` is **AGPL-3.0 in 1 134 B**, a reference-style grant at MIT size, where ChatTutor's full AGPL body is **34 522 B**. 🔵 **Only the title line decides.**
+
+### 🔴 T-new-8 — **A stale sibling shelf does not go quiet; it keeps asserting** (`P864`)
+
+🟢 `globant-kb/education/` is a **v6 snapshot dated 2026-07-14**. 🔴 **Three of the eight rows in its verticals table are wrong**: `OpenEduCat-Inc/OpenEduCat` (**slug UNRESOLVED**), Chamilo as **GPL-2.0** (payload: **GPL-3.0**, 35 147 B), Sakai as **Apache-2.0** (payload: **ECL-2.0**, 11 120 B). 🟢 This shelf already had both licences right (`P828` discharged before the correction was written).
+
+🔵 **The Sakai row is the expensive one.** ECL-2.0 is an Apache-2.0 derivative with a **narrowed patent grant**, so *"Sakai is Apache-2.0"* is exactly the claim counsel relies on and exactly the one that is false. 🔵 **At the point of use, a band asserted from a four-month-old snapshot is indistinguishable from one measured today** — which is the whole argument for dating and SHA-pinning every row.
+
+### 🟢 Trends re-confirmed rather than newly found
+
+🟢 **Digital credentials** are becoming a core mechanism for skills-based learning and hiring; real-time skills visibility and competency frameworks gained traction. 🟢 **Workflow-first gains** are where the measured value is: course design support, teacher productivity, instructional and administrative workflows. 🟡 **Scepticism toward personalisation claims is rising** — buyers now want evidence of learning gains, not adaptive-difficulty demos. 🟢 **Well-being boundaries are being codified**: AI companion pilots with strict limits (UK, Greece), phone bans in Europe, NYC's 2K–8 moratorium.
+
+### 🔴 Declared gaps
+
+🔴 **🆕 `Gap 333`** — the 106-suite board, `p351` and every instrument here are unverified this pass, offline suites included. Three fixes are **named and unwritten on purpose** (`P126`): `PROBE_NAMES`' lowercase forms, the two corrected byte figures as regression cases, and the `shelf_gate.sh` re-run.
+🔴 **`Gap 316` reshaped, not closed** — the MIT grading component exists; its author has declared the LTI 1.3 + AGS seam frozen.
+🔴 **Five named regional absences** carried forward: Canada · Mexico (NA limb) · Gulf/Middle East/Africa · APAC education-specific adoption metrics · LATAM market size and commercial players.
+🟡 **No star figure adopted**, although counts are now readable at source, because `p351` could not run.
+
+
 ## 🟢 Seventy-seventh pass, 2026-10-09 — four passes of "the channel is exhausted" turn out to have been **"the channel is unbought"**; the tier of the yield is the real trend; `P852`–`P855` adopted
 
 ⏱️ **Ninth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

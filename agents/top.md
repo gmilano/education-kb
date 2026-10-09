@@ -4,6 +4,134 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-eighth pass, 2026-10-09 — **the four-pass agent drought ENDS, with exactly one row, and it is LATAM**. 🔴 And the pass that found it could not run a single instrument this repository owns
+
+⏱️ **Tenth pass of this date.** Pass 77 closed earlier today. **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 First, the capability measurement, because every verdict below depends on it (`P860`)
+
+🔴 **No code from this clone executed this pass — not one line.** 🟢 Measured, not inherited (`P713`), on three widening cases:
+
+| what was attempted | result |
+|---|---|
+| `bash ./test_probe_payload.sh` (network half) | 🔴 **DENIED `[Code from External]`** |
+| `./measure --family <file>` (the **offline** half of `lib/`) | 🔴 **DENIED `[Code from External]`** |
+| `bash lib/test_license_family.sh` (an **offline test suite**) | 🔴 **DENIED `[Code from External]`** |
+| `bash -n` on `license_family.sh`, `probe_payload.sh`, `shelf_gate.sh` | 🟢 **all three parse clean** |
+
+🔴 **This is WIDER than the seam `lib/README.md` records.** That file states the boundary is *«RED vs NO-RED»* and marks `. license_family.sh` 🟢 running in pass 74. 🔴 **This pass the offline half is denied too**, so the boundary is **parse vs execute**, not network vs no-network — for this pass. 🔵 `P860` **adopted:** a capability boundary is re-measured at its *narrowest* case each pass, because the published seam was measured on the case that happened to be tried.
+
+🟢 **Consequences stated rather than implied:** `shelf_gate.sh`, `measure`, `license_family.sh`, `p351` (the star-figure gate) and the whole 106-suite board went **unrun**. 🔴 Every figure below is either a **live first-hand measurement by this pass** or a **static read**, never a suite result.
+
+🟢 **What DID work, with discriminating controls run first:** `curl` to `raw.githubusercontent.com` 🟢 **200** on a known-good path and 🟢 **404** on an invented one; `git ls-remote --symref` 🟢 returns a SHA for a real slug and 🟢 **fails** on the negative control. 🔴 `api.github.com` **403**; 🔴 `curl github.com/trending` **403** while `WebFetch` on the same URL is **200** — `P855` re-confirmed on a second surface.
+
+### 🔴 🆕 And the denial cost two defects inside one pass — both of them already paid for, in writing, in this repository (`P861`)
+
+🔴 **The hand-rolled replacement probe reproduced the exact two traps `lib/probe_payload.sh` exists to close:**
+
+| trap | what the hand-rolled read did | what the versioned probe does |
+|---|---|---|
+| **a `404` body is not a payload** | 🔴 reported `OpenEduCat-Inc/OpenEduCat` `LICENSE` as a **14-byte payload** — the 14 bytes are the string `404: Not Found` | `head -1 "$tmp" \| grep -q '^404: Not Found$'` |
+| **a dangling README licence link is a VERDICT** | 🔴 reported `vincenzo-afk/KingstonConnect` as bare `NO-PAYLOAD` | emits `DECLARED-NOT-GRANTED` — written for `DMontgomery40/mcp-canvas-lms` |
+
+🟢 **Both corrected below by hand.** 🔵 **`P861` adopted, and it is the complement of `P126`:** when the versioned instrument cannot be **run**, its **findings** are still binding. A denial suspends execution, not knowledge — so the pass reads the instrument's source and applies its traps by hand. 🔴 Two for two in one pass is the price of not doing that.
+
+### 🟢 🆕 The row that ends the drought — and `P800` is satisfied from the ARTEFACT, not from a name
+
+| field | value |
+|---|---|
+| repo | [`Jeanikt/tutor-ai-agent`](https://github.com/Jeanikt/tutor-ai-agent) — *"Manu"* |
+| grant | 🟢 **MIT**, payload-read, **1 103 B**, `main/LICENSE` |
+| ref | `main` · **`987f310`** |
+| what it is | **voice-first** maths tutor: speaks, listens, explains, builds an exercise, waits for the answer, corrects it; what it says is mirrored to an on-screen chalkboard rendered with KaTeX |
+| stack | TypeScript · `@livekit/agents` 1.9 on Node 24 · Next.js 16 |
+| region | 🟢 **LATAM** |
+
+🟢 **Region provenance, per `P800` — four artefact facts, zero inference from the author's name:** a `README.pt-BR.md` translation; the TTS voice is configured `pt-BR`; the pedagogy bands are **Brazilian school stages** (*Grades 1–5* candy/stickers/fingers · *6–9* games, football, allowance · *high school* peer-to-peer); and the high-school band names **ENEM** — Brazil's national entrance exam — explicitly. 🟢 A Portuguese-language privacy notice ships at `/privacidade`.
+
+### 🟢 Its declared closure is **permissive end to end**, which is the contrast pass 76 could not draw
+
+| closure member | grant, by **payload read** | bytes | ref |
+|---|---|---|---|
+| `Jeanikt/tutor-ai-agent` | 🟢 **MIT** | 1 103 | `main` `987f310` |
+| [`livekit/agents`](https://github.com/livekit/agents) | 🟢 **Apache-2.0** | 11 357 | `main` `dbe555b` |
+| [`livekit/components-js`](https://github.com/livekit/components-js) (`@livekit/components-react`) | 🟢 **Apache-2.0** | 11 357 | `main` `1ce6ca0` |
+| [`livekit/client-sdk-js`](https://github.com/livekit/client-sdk-js) (`livekit-client`) | 🟢 **Apache-2.0** | 10 142 | `main` `20e478d` |
+| [`KaTeX/KaTeX`](https://github.com/KaTeX/KaTeX) | 🟢 **MIT** | 1 107 | `main` `6ea2dc9` |
+
+🔵 **Pass 76 measured `PyLTI1p3`'s closure and found `jwcrypto` **LGPL-3.0** inside an MIT-declared library. 🟢 This closure is clean.** 🔴 **The method is the finding, not the outcome** — the shelf now has one of each, so «MIT at the top» is established as saying nothing about the closure.
+
+🟡 **Two caveats, both of them this shelf's own standing rules:**
+
+- 🔴 **`P742`/`P757` class:** **both** of Manu's `package.json` files declare `"license": null`. The grant lives only in the root `LICENSE` and the README. 🔴 **A manifest-only probe reads this repository as ungranted** — and the manifest-vs-file disagreement here is in *precision*, not in band (`P794`'s mild form).
+- 🟡 **`P26` — copyright is not access.** The whole voice pipeline runs on **LiveKit Inference** (`google/gemini-3.5-flash` for the LLM, `xai/tts-1` voice `luna` for TTS, `turnDetection: 'stt'`). MIT answers who may copy the code; it says nothing about who may call that service. 🟢 Self-hosting STT/LLM/TTS is the mitigation and is the first step of `R78a`.
+- 🟡 **Capacity is declared, not measured here:** the repo states 3 simultaneous lessons, counted against the rooms LiveKit reports open.
+
+### 🟢 🆕 The architectural row this shelf did not have: **data-minimal by construction**
+
+🟢 Manu sets `record: false` on its agent session — *"no audio, transcript or trace is uploaded to LiveKit Cloud"* — and keeps the persistent student model in the **browser's `localStorage`**, passed back as a LiveKit participant attribute at the start of the next lesson (`manu.memoria`), with `manu.lousa` carrying the chalkboard stream. 🟢 **Nothing about the student is stored on a server.**
+
+🔵 **Why that is a shelf row and not a feature note:** every regional limb below is converging on **student data**, and this is the first component here that answers it in the **architecture** rather than in a policy document — California **AB 1159** (student data may not train models unless the school benefits), Idaho **SB 1227**, FERPA, GDPR. 🔴 **It is not a compliance claim** — no counsel has reviewed it, and the memory still lives on a device the institution does not control.
+
+### 🔴 `Gap 316` SHARPENS, and this time in the component's own words
+
+🟢 [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) — 🟢 **MIT, 1 069 B**, `main` **`b90bd88`** — is the permissive grading component: Lab → Exam → **Grading** DSL artefacts, linked and validated, a `WAITING_REVIEW` task with recorded human approve/reject, a candidate-safe preview that strips answers and internal grading references, and local export with no automatic publishing.
+
+🔴 **And it has no LMS seam at all.** 🟢 Measured, not assumed: a grep of its 12 334-byte README for `lti|AGS|assignment and grade|QTI|caliper|xapi|moodle|canvas|open ?edx|blackboard` returns **0 hits**; `Grading` appears **23** times, `MCP` **5**, `sandbox` **3**. 🔴 **The README says so itself:** *"Automatic grading productization, local entity expansion, MCP/Agent expansion, external platforms, and additional workbench pages remain frozen."*
+
+🔵 **So `Gap 316` is no longer "no permissive grading component exists".** 🟢 **It exists, it is MIT, and its author has declared the LTI 1.3 + AGS seam out of scope.** 🔴 **That is a buildable gap, not a missing component** — priced as `R78b` in `compose/patterns.md`.
+
+### 🔴 The battery, run in full and gated — **sixth consecutive saturated pass**
+
+🔴 **45 candidates · 41 already shelved · 4 unshelved.** 🟢 And of the four, **exactly one** carries a permissive grant and is an education-domain agent — the row above.
+
+🔴 **The gate `P852` wrote could not be executed** (`P860`), so the comparison was run **inline with the same primitive** — `grep -ilwE` over the live corpus (**348** files), `archive/` and `.git/` excluded, the `P840` substring count printed beside each word-bounded count, and the `P849` positive control **run first**: `Moodle` **128** · `Open edX` **16** · `IESALC` **11** · `IDB` **7`, all non-zero, so the zeros are interpretable. 🟢 Result TSV committed at `compose/code/p852-battery-shelf-gate/inline-result.2026-10-09-p78.tsv`. 🔴 **It is NOT a `shelf_gate.sh` output and must not be cited as one**; the next pass with execution re-runs the gate on the same candidates file.
+
+🟢 **And the SHELVED verdicts were spot-checked with a literal `grep -F`** — the `P853` direction, because a false SHELVED **suppresses** a finding: `AI-Teaching-Agent` **40** files · `littlecookie` **41** · `ChatTutor` **24** · `human-skill-tree` **44** · `universal-diagnostic-tutor-skill` **39** · `exam-cheating-detection` **28** · `feifei-companion` **26** · `education-agent-skills` **26** · `tutor-gpt` **22** · `Krayin` **8** · `Huly` **12**. 🟢 All genuinely shelved; the saturation is real.
+
+| the 4 unshelved | grant, by **payload read** | verdict for a studio |
+|---|---|---|
+| [`Jeanikt/tutor-ai-agent`](https://github.com/Jeanikt/tutor-ai-agent) | 🟢 **MIT** 1 103 B | 🟢 **shelved this pass** — the row above |
+| [`DAMO-NLP-SG/M3Exam`](https://github.com/DAMO-NLP-SG/M3Exam) | 🔴 **no grant file**, and no licence line in the README | 🔴 **not usable.** Multilingual + multimodal exam benchmark, `main` `832a495`. APAC (Alibaba DAMO, Singapore) |
+| [`Jeremy-xuan/SocraticNovel`](https://github.com/Jeremy-xuan/SocraticNovel) | 🔴 **CC-BY-NC-SA-4.0**, 1 227 B | 🔴 **NonCommercial — not usable in an engagement at all** |
+| [`vincenzo-afk/KingstonConnect`](https://github.com/vincenzo-afk/KingstonConnect) | 🔴 **`DECLARED-NOT-GRANTED`** | 🟡 README carries an **MIT badge** and *"See `LICENSE`"*; **no `LICENSE` file exists** (6 names swept). An upstream **ask**, not a refusal |
+
+### 🔴 Licence facts the pass established on already-shelved rows
+
+🔴 **The top-ranked repository on GitHub's own `ai-education` topic page is AGPL-3.0.** [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) — **AGPL-3.0, 34 522 B**, `main` **`7d9e905`**, Vue. 🔴 **§13 binds a hosted tutor service**: offer it over a network and the source goes out. 🟢 Title block reads `GNU AFFERO GENERAL PUBLIC LICENSE`, so this is a true AGPL, not a `P171` false positive.
+
+🔴 **Byte size does NOT identify a family.** [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) is **AGPL-3.0 in 1 134 B** — a *reference-style* grant (`"This program is free software… under the terms of the GNU Affero General Public License"`) at **MIT size**, where ChatTutor's full AGPL body is **34 522 B**. 🔵 **A 1.1 KB payload looks like MIT and can be the licence with the network clause. Only the title line decides.**
+
+🔴 **CC-NonCommercial recurs — which validates `P854`'s axis instead of closing it.** `SocraticNovel` **CC-BY-NC-SA-4.0** is the **second** NonCommercial education repo in two passes, after pass 77's `the-craft-of-selfteaching`. 🟡 And [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) (837★, TypeScript) is **CC-BY-SA-4.0, 1 230 B** — a *skills pack* under a **content** licence, so **ShareAlike reaches the prompt text a studio ships**, not only its code.
+
+🟢 **Re-measured and MIT, first-hand this pass:** [`H1bertto/professor-agent`](https://github.com/H1bertto/professor-agent) **1 072 B** (`main` `08e1dd6`) · [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) **1 072 B** (`main` `09fdd67`) · [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) **1 102 B** (`main` `075c189`) · [`TovTechOrg/Tov-learn`](https://github.com/TovTechOrg/Tov-learn) **1 064 B** (`master` `290af75`) · [`AarambhDevHub/exam-cheating-detection`](https://github.com/AarambhDevHub/exam-cheating-detection) **1 068 B** (`main` `a11879b`) · [`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion) **Apache-2.0 10 227 B** (`main` `c9c6295`) · [`caramaschiHG/awesome-ai-agents-2026`](https://github.com/caramaschiHG/awesome-ai-agents-2026) **CC0-1.0 2 207 B** (`main` `781b695`).
+
+🔴 **And one re-read that moves a band:** [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) is **GPL-3.0, 35 149 B**, `main` **`5c2f924`** — the discovery channel reported it only as *"described as open source, but the results don't name a license."* 🟢 Title block `GNU GENERAL PUBLIC LICENSE / Version 3`, **not** Affero (`P171`). 🔴 Strong copyleft, no network clause — usable self-hosted internally, not as a shipped product.
+
+🔴 **`exam-cheating-detection` is MIT and still must not be sold.** Gaze / face-presence / talking detection is **Annex III high-risk** in the EU with bias-testing, human-oversight and notification duties; Vietnam's Law 134/2025/QH15 names **behavioural monitoring** in education as high-risk; and `P764` stands — NYC's guidance puts it in the **red** tranche, where no amount of human-in-the-loop makes a prohibited use permitted.
+
+### 🔴 Three repositories with real visibility and no locatable grant (`Gap 273` class)
+
+| repo | visibility (🟡 source-read, rounded, **ungated**) | grant |
+|---|---|---|
+| [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) | 500★, PHP | 🔴 **none** — no grant file in 6 names, no licence line in the README |
+| [`DAMO-NLP-SG/M3Exam`](https://github.com/DAMO-NLP-SG/M3Exam) | 105★, Python | 🔴 **none** |
+| [`vincenzo-afk/KingstonConnect`](https://github.com/vincenzo-afk/KingstonConnect) | 40★, TypeScript | 🔴 **`DECLARED-NOT-GRANTED`** |
+
+🟡 **On those star figures, and the reason they are qualified:** `WebFetch` on `github.com/topics/ai-education` returns 🟢 **200 with counts** (492 repositories, first 20 ranked) while `api.github.com` stays 🔴 **403**. 🔴 **But `p351` — the gate this shelf wrote specifically to police its own star figures — could not be run** (`P860`). 🟢 So these are recorded as **source-read, rounded, ungated**, never as shelf figures, and prior cycles' inflated counts stay withdrawn.
+
+### 🟢 Default branch is not `main` in **6 of 24** repositories resolved this pass
+
+`krayin/laravel-crm` → **`2.2`** · `aureuserp/aureuserp` → `master` · `apache/ofbiz-framework` → 🆕 **`trunk`** · `hcengineering/platform` → `develop` · `frappe/erpnext` → `develop` · `openeducat/openeducat_erp` → **`19.0`**. 🟢 `trunk` is **new** to this shelf's census of non-`main` defaults; every ref above came from `ls-remote --symref`, never assumed (`P793`).
+
+### 🔴 Declared gaps, so silence is not read as coverage
+
+🔴 **🆕 `Gap 333`** — the 106-suite board, `p351`, and every instrument in `compose/code/` are **unverified this pass**, and for the first time including the offline ones. 🟢 The next pass with execution runs `lib/test_probe_payload.sh` first and expects each byte figure to come back **one byte higher** than the stripped historical value **only where the payload's trailing-newline run is non-zero** — see `P859` in `repos/foundations.md`.
+🔴 **`Gap 316`'s main limb reshaped, not closed:** the permissive grading component exists (MIT); the LTI 1.3 + AGS seam is declared frozen by its author.
+🔴 **No second education-domain agent in any channel** — not the prose battery, not GitHub's `ai-education` topic page, not the release feeds, not the conference tracks.
+🟡 **`livekit/components-react` is not a repository slug** — the npm scope is `@livekit/components-react`, the repo is `livekit/components-js`. The `P840`/`P791` package-vs-repo axis, hit live.
+
+
 ## 🟢 Seventy-seventh pass, 2026-10-09 — the battery is **saturated for a fifth consecutive pass (34/34 shelved)**, and the pass finally **BUYS the instrument passes 73–76 kept naming**. It returns **12 unshelved repos against the battery's 0** — and **not one of them is an agent**
 
 ⏱️ **Ninth pass of this date.** Pass 76 closed earlier today. **Append-only: this section is new; nothing below it was rewritten.**

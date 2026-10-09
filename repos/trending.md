@@ -4,6 +4,109 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 78) — GitHub's own **`ai-education` topic page** is bought (492 repos, 🟢 **200** where `api.github.com` is 403), and the shelf turns out to have already censused its whole front page. 🔴 The pass's finding is about **this repository's own corrections**: `P834`'s retroactive batch was **6 of 8**
+
+🔵 **Append-only: this dated section is new; every section below it is prior history and is unchanged.**
+
+### 🟢 The channel, bought rather than described — a **third** surface confirming `P855`
+
+```
+curl     api.github.com/repos/moodle/moodle            403
+curl     github.com/trending/python?since=weekly       403
+WebFetch github.com/trending/python?since=weekly       200   (re-confirmed, pass 77)
+WebFetch github.com/topics/ai-education                200   (492 repos, first 20 ranked, WITH counts)
+WebFetch github.com/<owner>/<repo>/releases            200   (see agents/trending.md, P863)
+```
+
+🟢 **`P855` is now measured on three distinct `github.com` surfaces**, which is what it needed: the refusal is per-**tool**, never per-**host**.
+
+🔴 **And the yield is zero new repositories**, which is the opposite of pass 77 and is the honest result: **every one of the topic page's top-20 in-domain entries is already on this shelf.** 🟢 Spot-checked with a literal `grep -F`, not from recollection — `ChatTutor` **24** files · `human-skill-tree` **44** · `universal-diagnostic-tutor-skill` **39** · `education-agent-skills` **26** · `feifei-companion` **26** · `exam-cheating-detection` **28** · `agents-from-scratch` **11** · `ai-ethos` **2** · `Tov-learn` **2** · `M3Exam` **0** (🟢 the one genuinely new name, and it has **no grant**).
+
+### 🔴 🆕 `P859` — `P834`'s retroactive correction was applied **as a rule instead of as a measurement**, and two of its eight rows are wrong
+
+🟢 Pass 74 adopted `P834` (command substitution strips the trailing newline run) and then **retroactively added one byte to a list of eight figures**. 🟢 **Every one of those eight was re-read first-hand this pass, byte-exact on the file, with the trailing-newline run measured separately:**
+
+| row | shelf figure (`P834` batch) | 🟢 byte-exact today | trailing-NL run | via `$(…)` | verdict |
+|---|---|---|---|---|---|
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 1 069 | 🟢 **1 068** | 1 | 1 067 | 🔴 **over by 1** |
+| [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) | 1 078 | 🟢 **1 077** | 🔴 **0** | 1 077 | 🔴 **over by 1** |
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 11 906 | 🟢 11 906 | 1 | 11 905 | 🟢 correct |
+| [`hcengineering/platform`](https://github.com/hcengineering/platform) | 14 197 | 🟢 14 197 | 1 | 14 196 | 🟢 correct |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 11 408 | 🟢 11 408 | 1 | 11 407 | 🟢 correct |
+| [`iblai/os`](https://github.com/iblai/os) | 1 070 | 🟢 1 070 | 1 | 1 069 | 🟢 correct |
+| [`iblai/lms`](https://github.com/iblai/lms) | 1 063 | 🟢 1 063 | 1 | 1 062 | 🟢 correct |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 8 241 | 🟢 8 241 | — | — | 🟢 correct |
+
+🔴 **The two wrong rows are wrong for two different reasons, and both are visible in the table:**
+
+1. **`OpenTutor` was corrected TWICE.** 🟢 Pass 64's `P724` had **already** re-read it byte-exact at **1 068 B** (SHA-pinned `5fea390a`) as a correction of a stripped figure. 🔴 The `P834` batch then added one more byte to a figure that was already right. 🟢 **The shelf has carried both numbers since** — `agents/top.md` and `repos/foundations.md` say **1 069**, four other rows say **1 068** — and the live read settles it at **1 068**.
+2. **`aureuserp`'s trailing-newline run is ZERO.** 🟢 Its payload does not end in a newline, so the stripped capture and the byte-exact size are **the same number**, and the correction's magnitude was **0**. 🔴 A flat `+1` invented a byte.
+
+🔵 **`P859` adopted, and it is a sharper statement of `P834` than `P834` made about itself:** 🔴 **the correction's MAGNITUDE is a per-file property** — the length of that file's trailing newline run, which `lib/README.md` itself records as measured at **0 / 1 / 3** bytes — 🔴 **and its APPLICABILITY is a per-row property**: whether that row's figure was already byte-exact. 🟢 **Neither can be read off a list.** 🔵 **The shape is `P713` in the correcting direction:** a pass re-measured the *rule* and then **inherited** the rows it applied to.
+
+🟢 **Corrections published, each from a live payload read with its ref pinned:**
+`zijinz456/OpenTutor` 🟢 **MIT, 1 068 B**, `main` **`f0142f2`**, holder *Zijin Zhang*.
+`aureuserp/aureuserp` 🟢 **MIT, 1 077 B**, `master` **`070cacc`**.
+🟢 **No licence family verdict changes** — only the two sizes.
+
+### 🔴 🆕 `P862` — the shared probe's filename ladder is **all-uppercase and case-sensitive**, and it loses **ERPNext**
+
+🟢 `lib/probe_payload.sh` line 58: `PROBE_NAMES="LICENSE LICENSE.md LICENSE.txt LICENCE COPYING"`. 🔴 **`raw.githubusercontent.com` is case-sensitive on the path**, and every name in that ladder is uppercase-first.
+
+🟢 **Measured on one repository and one ref, which is the discriminating control:**
+
+| path on `frappe/erpnext` @ `develop` | code |
+|---|---|
+| `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`, `License.txt`, `copying.txt`, `LICENSE.rst` | 🔴 **404** |
+| 🟢 **`license.txt`** | 🟢 **200** |
+
+🔴 **So the versioned ladder reports `NO-PAYLOAD` for the most-deployed open-source ERP in existence** — and the only hit of the mandated verticals query that ships an education edition. 🟢 **Payload, read first-hand:** [`frappe/erpnext`](https://github.com/frappe/erpnext) is **GPL-3.0, 35 149 B**, `develop` **`2e6b8ed`**, title block *"GNU GENERAL PUBLIC LICENSE / Version 3, 29 June 2007"*.
+
+🟢 **And it is a live `P171` case, which is why the title block matters:** the body contains the word **`affero` 3 times**. 🔴 A classifier that greps the body reads the world's most-deployed open-source ERP as AGPL-3.0 — the exact defect `license_family.sh` exists to prevent, met in the wild rather than in a fixture.
+
+🔵 **Fix named, not written:** `PROBE_NAMES` gains the lowercase forms (`license`, `license.txt`, `license.md`, `licence`, `copying`). 🔴 **Deliberately NOT written this pass** — `P126` says run the versioned instrument before hand-writing one, and 🔴 **no instrument in this repository could be executed at all** (`P860`). 🟢 The next pass with execution edits `PROBE_NAMES`, adds `frappe/erpnext` as the named regression case, and re-runs `test_probe_payload.sh`.
+
+### 🔴 🆕 `P864` — a dead slug, found because a `404` body was almost published as a payload
+
+🟢 `verticals/solutions.md` carries **three spellings** for the same education ERP. 🟢 Resolved with `ls-remote --symref`, all three:
+
+| slug | resolves to |
+|---|---|
+| `openeducat/openeducat_erp` | 🟢 **`19.0`** (`1c95cef`) — the maintained one |
+| `OpenEduCat/openeducat_erp` | 🟢 **`19.0`** — same repo; GitHub owners are case-insensitive |
+| 🔴 **`OpenEduCat-Inc/OpenEduCat`** | 🔴 **UNRESOLVED** |
+
+🔴 **And the dead one is live in the sibling shelf:** `globant-kb/education/verticals/solutions.md` line **13** links `OpenEduCat-Inc/OpenEduCat` as the OpenEduCat row. 🟢 That tree is a **v6 snapshot dated 2026-07-14** and has not tracked this shelf since.
+
+🔵 **The instructive part is how it surfaced:** `raw.githubusercontent.com` answered the dead slug with a **200-shaped body of 14 bytes reading `404: Not Found`**, and the hand-rolled read reported *"14-byte payload"* before the control caught it. 🟢 **`lib/probe_payload.sh` guards exactly this** (`head -1 | grep -q '^404: Not Found$'`). 🔴 **Second time in one pass that the unrunnable instrument's finding would have been enough** — see `P861`.
+
+🟢 **Re-confirmed byte-exact, so the row itself is solid:** `openeducat/openeducat_erp` **LGPL-3.0, 8 241 B**, `19.0` `1c95cef`; first non-blank line *"For copyright information, please see the COPYRIGHT file"*, body *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3"*.
+
+### 🟢 Repositories re-read first-hand this pass, with refs pinned
+
+| repo | grant, by **payload read** | bytes | ref |
+|---|---|---|---|
+| [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | 🟢 **MIT** | 1 078 | **`2.2`** `fa4eeca` |
+| [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) | 🟢 **MIT** | 🟢 **1 077** (corrected) | `master` `070cacc` |
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0** | 11 906 | 🆕 **`trunk`** `3b63151` |
+| [`hcengineering/platform`](https://github.com/hcengineering/platform) | 🔴 **EPL-2.0** | 14 197 | `develop` `5bb9b2f` |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔴 **GPL-3.0** | 35 149 | `develop` `2e6b8ed` (`license.txt`) |
+| [`livekit/agents`](https://github.com/livekit/agents) | 🟢 **Apache-2.0** | 11 357 | `main` `dbe555b` |
+| [`livekit/components-js`](https://github.com/livekit/components-js) | 🟢 **Apache-2.0** | 11 357 | `main` `1ce6ca0` |
+| [`livekit/client-sdk-js`](https://github.com/livekit/client-sdk-js) | 🟢 **Apache-2.0** | 10 142 | `main` `20e478d` |
+| [`KaTeX/KaTeX`](https://github.com/KaTeX/KaTeX) | 🟢 **MIT** | 1 107 | `main` `6ea2dc9` |
+
+🔴 **Huly is EPL-2.0, and the channel said Apache-2.0 again.** 🟢 This pass's verticals query returned *"Platform is fully open-source, licensed under Apache License 2.0"*; the payload's title block reads **`Eclipse Public License - v 2.0`**. 🟢 The shelf already had this right (`P828` discharged); the point is that the **secondary channel repeats the same error across passes**, so the payload read is not optional even on a row that looks settled.
+
+🔴 **Two "independent" MIT verticals are ONE vendor.** 🟢 Krayin CRM (1 078 B) and Aureus ERP (1 077 B) both carry `Copyright 2010-2025, Webkul Software`. 🔴 The mandated query presented them as two options; they are one supplier, and neither is an education system of record.
+
+### 🔴 Declared gaps
+
+🔴 **`Gap 333` (🆕)** — nothing in `compose/code/` was executed, offline suites included (`P860`). Three fixes are **named and unwritten on purpose**: `PROBE_NAMES`' lowercase forms (`P862`), the two corrected byte figures as regression cases (`P859`), and the `shelf_gate.sh` re-run on this pass's candidates file.
+🔴 **`Gap 273` grows by two:** `aaryansamanta/ai-ethos` (500★, PHP) and `DAMO-NLP-SG/M3Exam` (105★) have **no grant file and no README licence line**.
+🟡 **No star figure is adopted**, although counts are now readable at source — `p351` could not run.
+
+
 ## 🟢 2026-10-09 (pass 77) — **12 new repositories, after four passes of zero**, because the instrument pass 76 named was finally bought. 🔴 The purchase immediately found **two chained defects in the shelf's own shared classifier**
 
 🔵 **Append-only: this dated section is new; every section below it is prior history and is unchanged.**

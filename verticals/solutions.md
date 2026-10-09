@@ -4,6 +4,87 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-eighth pass, 2026-10-09 — **no platform is added**, and the verticals limb produces three licence corrections instead: 🔴 **ERPNext is GPL-3.0 and the versioned probe cannot see it**, 🔴 **Huly is EPL-2.0 for the second pass running**, and 🔴 **a slug in this tier is dead**
+
+⏱️ **Tenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔴 The limb, run in full and gated — sixth consecutive pass with zero permissive education platforms
+
+🟢 `open source platform education ERP CRM MIT Apache` ran as prescribed. 🔴 **It returned no education platform under MIT, Apache-2.0 or BSD.** 🟢 Its hits were general business software plus one education-marketed ERP, and all six names were **already shelved** (`ERPNext` 46 live files · `OFBiz` 29 · `Krayin` 16 · `Huly` 14 · `Aureus` 5 · `BottleCRM` 5).
+
+### 🔴 🆕 ERPNext: the channel's one education-marketed ERP, and it is **GPL-3.0**
+
+| field | value |
+|---|---|
+| repo | [`frappe/erpnext`](https://github.com/frappe/erpnext) |
+| grant | 🔴 **GPL-3.0**, payload-read, **35 149 B** |
+| ref | `develop` · **`2e6b8ed`** |
+| path | 🔴 **`license.txt`** — lowercase |
+| education edition | Frappe markets an ERPNext for Education: admissions, student records, fees, learning outcomes |
+
+🔴 **And the versioned probe cannot see that grant** (`P862`). 🟢 Control, same repo and same ref: `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`, `License.txt`, `copying.txt`, `LICENSE.rst` all **404**; 🟢 **`license.txt` 200**. `raw.githubusercontent.com` is case-sensitive, and every name in `PROBE_NAMES` is uppercase-first.
+
+🟢 **Why this matters to this tier specifically:** 🔴 **ERPNext is NOT a licence upgrade over OpenEduCat.** OpenEduCat is **LGPL-3.0** — weak copyleft, where an Odoo addon may stay proprietary (`P750`). ERPNext is **GPL-3.0** — strong copyleft, where a Frappe app that links it does not. 🔴 **Swapping one for the other on "both are open source" loses the only band in this tier a studio can build a proprietary module in.**
+
+🟢 **And it is a live `P171` case:** the payload body contains `affero` **3 times**, while its title block reads `GNU GENERAL PUBLIC LICENSE / Version 3`. 🔴 A body-grepping classifier reads the world's most-deployed open-source ERP as AGPL-3.0 — wrong band, and wrong by the exact mechanism `license_family.sh` was written to stop.
+
+### 🔴 Huly is **EPL-2.0**, and the channel said Apache-2.0 **again**
+
+🟢 Re-read first-hand: [`hcengineering/platform`](https://github.com/hcengineering/platform) **14 197 B**, `develop` **`5bb9b2f`**, title block **`Eclipse Public License - v 2.0`**. 🔴 This pass's search channel asserted *"Platform is fully open-source, licensed under Apache License 2.0."*
+
+🔵 **The shelf already had this right** — `P828` was discharged on exactly this row in pass 73. 🟢 **The finding is the repetition:** the secondary channel reproduces the same error across passes, so a payload read stays mandatory on a row that looks settled. 🔴 **EPL-2.0 is not Apache-2.0 for a studio**: it carries a per-file source-availability obligation on modified files and a secondary-licence (GPL-2.0) compatibility clause. 🟡 Weak copyleft, not permissive.
+
+### 🔴 🆕 `P864` — this tier carries three slugs for OpenEduCat and one of them does not resolve
+
+| slug | `ls-remote --symref` |
+|---|---|
+| `openeducat/openeducat_erp` (line 52, 89, 380, 773) | 🟢 **`19.0`** · `1c95cef` |
+| `OpenEduCat/openeducat_erp` (line 322) | 🟢 **`19.0`** — same repository, owners are case-insensitive |
+| 🔴 **`OpenEduCat-Inc/OpenEduCat`** | 🔴 **UNRESOLVED** |
+
+🔴 **The dead slug is the one the sibling shelf publishes**: `globant-kb/education/verticals/solutions.md` line **13** links it as the OpenEduCat row, in a tree whose frontmatter is still dated **2026-07-14** (v6). 🟢 This shelf does **not** carry it.
+
+🔵 **It surfaced through the trap `P861` describes:** `raw` answered the dead slug with a **14-byte body reading `404: Not Found`**, briefly recorded as a 14-byte payload. 🟢 `lib/probe_payload.sh` rejects that body explicitly — and could not be executed (`P860`).
+
+### 🔴 🆕 And checking that sibling table found **two wrong licence BANDS** in it, not just a dead link
+
+🟢 `P828` discharged first — **this shelf is already right on both** (*"Chamilo (GPL-3.0), Sakai (ECL-2.0)"*, and **0** occurrences of a Chamilo GPL-2.0 claim anywhere live here). 🟢 Then both were payload-read first-hand:
+
+| row in the v6 sibling table | what it publishes | 🟢 payload, read this pass |
+|---|---|---|
+| `OpenEduCat-Inc/OpenEduCat` (line 13) | LGPL-3.0 | 🔴 **slug UNRESOLVED** |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) (line 15) | 🔴 GPL-2.0 | 🟢 **GPL-3.0**, 35 147 B, `master` **`671a800`** |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) (line 17) | 🔴 Apache-2.0 | 🟢 **ECL-2.0** — *Educational Community License, Version 2.0* — 11 120 B, `master` **`fadec10`** |
+
+🔴 **Three of that table's eight rows are wrong, and the Sakai one is the expensive kind.** 🔵 **ECL-2.0 is an Apache-2.0 derivative with a NARROWED patent grant** — the patent licence reaches the contributor's own contributions, not the combination — so *"Sakai is Apache-2.0"* is precisely the claim a studio's counsel would rely on and precisely the one that is false. 🟡 Still OSI-approved and still permissive; **not** interchangeable with Apache-2.0 in a patent review.
+
+🔵 **`P864` therefore reads wider than a dead link: a STALE sibling shelf does not merely go quiet, it keeps ASSERTING** — and a licence band asserted from a four-month-old snapshot is indistinguishable, at the point of use, from one measured today.
+
+🟢 **The row itself is re-confirmed byte-exact and unchanged:** **LGPL-3.0, 8 241 B**, `19.0` `1c95cef`; first non-blank line *"For copyright information, please see the COPYRIGHT file"* (and `COPYRIGHT` still 404s), body *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3"*.
+
+### 🔴 Two "independent" MIT options in this tier are one vendor
+
+| platform | grant | bytes | ref | holder |
+|---|---|---|---|---|
+| [Krayin CRM](https://github.com/krayin/laravel-crm) | 🟢 **MIT** | 1 078 | **`2.2`** `fa4eeca` | 🔴 `Webkul Software` |
+| [Aureus ERP](https://github.com/aureuserp/aureuserp) | 🟢 **MIT** | 🟢 **1 077** (corrected, `P859`) | `master` `070cacc` | 🔴 `Webkul Software` |
+| [Apache OFBiz](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0** | 11 906 | 🆕 **`trunk`** `3b63151` | ASF |
+| [Huly Platform](https://github.com/hcengineering/platform) | 🔴 **EPL-2.0** | 14 197 | `develop` `5bb9b2f` | Hardcore Engineering |
+| [ERPNext](https://github.com/frappe/erpnext) | 🔴 **GPL-3.0** | 35 149 | `develop` `2e6b8ed` | FSF text |
+
+🔴 **The mandated query presented Krayin and Aureus as two MIT options; they are one supplier.** 🟡 **And neither is an education system of record** — a CRM and a general ERP. 🔵 **Supplier concentration is a procurement fact, and a licence table that lists holders shows it while a licence table that lists only SPDX ids does not.**
+
+### 🟢 The tier's standing shape, unchanged by this pass
+
+🔴 **Zero MIT, zero Apache-2.0, zero BSD education system of record**, sixth consecutive pass. 🟢 **`openeducat/openeducat_erp` (LGPL-3.0) remains the one usable band** — the only weak-copyleft substrate here, and the only place a client-specific proprietary AI addon is lawful. 🟢 **Ed-Fi DMS (Apache-2.0)** remains the only permissive system-of-record substrate and is a data-standard API with no OneRoster and no change feed (`Gap 309`). 🔴 Moodle **GPL-3.0**, Canvas and Open edX **AGPL-3.0**, Chamilo **GPL-3.0** (re-read, 35 147 B), ILIAS **GPL-3.0**, Sakai **ECL-2.0** (re-read, 11 120 B — permissive, Apache-derived, **narrowed patent grant**).
+
+### 🟢 Declared gaps
+
+🔴 **`Gap 333` (🆕):** `P862`'s one-line fix to `PROBE_NAMES` is **named and unwritten** because nothing in `compose/code/` could be executed this pass (`P860`), and `P126` forbids hand-writing an instrument before running the versioned one.
+🔴 **`Gap 309`** unmoved: no permissive system of record with OneRoster + a change feed.
+🟡 **Unmeasured here:** whether ERPNext's education edition ships as a separate Frappe app with its own grant, or inherits `erpnext`'s GPL-3.0. 🔴 Not probed this pass — stated as a question, not as a finding.
+
+
 ## 🟢 Seventy-seventh pass, 2026-10-09 — **no platform is added**: the verticals limb returned four already-shelved names, and the pass's licence finding **changes how one of them must be read**
 
 ⏱️ **Ninth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

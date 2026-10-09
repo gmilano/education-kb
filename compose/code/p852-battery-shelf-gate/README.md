@@ -71,3 +71,37 @@ pre-reset archive has been *dropped*, not *adopted*, and the two license opposit
 
 🔵 **The two runs together are the pass's headline:** the prose battery is saturated for a fifth
 pass, and the channel it could not see returned **12 unshelved repositories in the same hour**.
+
+---
+
+## 🔴 Pass 78 of 2026-10-09 — this gate **could not be executed**, and the artefacts beside it are not its output
+
+🔴 **`[Code from External]` denied every execution path from the clone this pass** — not only the network ones. Measured on three widening cases, newest first:
+
+| attempted | result |
+|---|---|
+| `bash lib/test_probe_payload.sh` (network half) | 🔴 **DENIED** |
+| `lib/measure --family <file>` (the **offline** half) | 🔴 **DENIED** |
+| `bash lib/test_license_family.sh` (an **offline test suite**) | 🔴 **DENIED** |
+| `bash -n` on `shelf_gate.sh`, `probe_payload.sh`, `license_family.sh` | 🟢 **all parse clean** |
+
+🔵 **`P860`: the boundary this pass measured is *parse vs execute*, not *network vs no-network*.** `../lib/README.md` publishes the narrower seam (and marks `. license_family.sh` 🟢 in pass 74) because that is the case it happened to try. **A capability boundary is re-measured at its narrowest case each pass.**
+
+### What these two files ARE
+
+* `candidates.input.2026-10-09-p78.tsv` — the 45 battery candidates, in this gate's input shape (`limb <TAB> label <TAB> word-bounded-ERE`).
+* `inline-result.2026-10-09-p78.tsv` — verdicts produced by running **this gate's primitives inline**, by hand, with its rules honoured:
+  * `P853` — corpus is tracked `.md`/`.tsv`, **348 live files**, with `.git/` and `archive/` excluded;
+  * `P849` — the positive control ran **first**: `Moodle` 128 · `Open edX` 16 · `IESALC` 11 · `IDB` 7, all non-zero, so the zeros are interpretable;
+  * `P840` — the substring count is printed beside every word-bounded count.
+* Result: **45 candidates · 41 SHELVED · 4 UNSHELVED.**
+
+🔴 **They are NOT `shelf_gate.sh` output and must not be cited as one.** 🟢 Each `SHELVED` verdict was additionally spot-checked with a literal `grep -F` — the `P853` direction, because a false `SHELVED` **suppresses** a finding.
+
+### 🔴 What the next pass with execution owes this directory
+
+1. Run `./shelf_gate.sh <kb-root> candidates.input.2026-10-09-p78.tsv` and **diff it against `inline-result.2026-10-09-p78.tsv`**. Any divergence is a defect in the hand-run, in the gate, or in the corpus — and all three are worth knowing.
+2. `P862` — add the **lowercase** filenames to `../lib/probe_payload.sh`'s `PROBE_NAMES` (`license`, `license.txt`, `license.md`, `licence`, `copying`). `raw.githubusercontent.com` is case-sensitive and every name in the current ladder is uppercase-first, so **`frappe/erpnext` reads as `NO-PAYLOAD`** while `develop/license.txt` returns `200` (**GPL-3.0, 35 149 B**). Pin it as the named regression case.
+3. `P859` — add `zijinz456/OpenTutor` (**1 068 B**, trailing-newline run **1**) and `aureuserp/aureuserp` (**1 077 B**, trailing-newline run **0**) as regression cases for `../p837-payload-measure/`. The second is the load-bearing one: **a payload whose trailing-newline run is zero must not be "corrected" upward.**
+
+🔵 **`P861`, which is why points 2 and 3 are written here and not fixed here:** a denial suspends **execution**, not **knowledge**. The hand-rolled replacement this pass used reproduced two defects `probe_payload.sh` documents in its own source — it counted a **`404: Not Found` body as a 14-byte payload**, and reported a **dangling README licence link as a bare absence**. Both were caught by reading that source. **And `P126` is why no new instrument was written: the versioned one must be run before a hand-written one is committed, and it could not be run.**

@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 2026-10-09 (pass 78) — **one new agent, after four passes of zero**, and it arrives in the region this shelf finds hardest to place. 🔴 The pass that found it ran **none** of this repository's instruments
+
+🔵 **Append-only: this dated section is new; every section below it is prior history and is unchanged.**
+
+### 🟢 The drought ends — [`Jeanikt/tutor-ai-agent`](https://github.com/Jeanikt/tutor-ai-agent) (*"Manu"*), 🟢 **MIT** 1 103 B, `main` `987f310`
+
+🟢 **Voice-first maths tutor in Brazilian Portuguese**, TypeScript on `@livekit/agents` 1.9 + Next.js 16 + KaTeX. 🟢 **LATAM, established from the artefact and not from the author's name** (`P800`): a `README.pt-BR.md`, TTS configured `pt-BR`, pedagogy bands matching Brazilian school stages, **ENEM** named in the high-school band, and a Portuguese privacy notice at `/privacidade`.
+
+🟢 **Its declared closure is permissive end to end** — `livekit/agents` **Apache-2.0** (11 357 B), `livekit/components-js` **Apache-2.0** (11 357 B), `livekit/client-sdk-js` **Apache-2.0** (10 142 B), `KaTeX/KaTeX` **MIT** (1 107 B). 🔵 **Pass 76 measured `PyLTI1p3` and found LGPL `jwcrypto` inside an MIT-declared library; this one is clean — so the shelf now has one of each, and "MIT at the top" is established as saying nothing about the closure.**
+
+🔴 **Two caveats, both of them this shelf's standing rules:** both `package.json` files declare `"license": null`, so a manifest-only probe reads it **ungranted** (`P742`/`P757`); and the whole voice pipeline runs on **LiveKit Inference**, so MIT answers copyright and **not** access (`P26`).
+
+🟢 **And the architectural row is the part that generalises:** `record: false`, plus a student model kept in the browser's `localStorage` and handed back as a participant attribute. 🟢 **Nothing about the student on a server** — the first component here that answers California **AB 1159**, Idaho **SB 1227**, FERPA and GDPR in the **architecture** rather than in a policy document. 🔴 Not a compliance claim; the memory still sits on a device the institution does not control.
+
+### 🔴 The battery: **45 candidates, 41 shelved, 4 unshelved** — sixth consecutive saturated pass
+
+🟢 4 global queries + 4 regional, run in full. 🔴 Of the four unshelved, **one** is a permissive education agent (above); the other three are 🔴 `DAMO-NLP-SG/M3Exam` (**no grant**), 🔴 `Jeremy-xuan/SocraticNovel` (**CC-BY-NC-SA-4.0**, NonCommercial) and 🟡 `vincenzo-afk/KingstonConnect` (**`DECLARED-NOT-GRANTED`** — MIT badge, no `LICENSE` file).
+
+🔴 **The gate itself could not run** (`P860`, below), so the comparison was done **inline with the same primitive**: `grep -ilwE` over **348** live files with `.git/` and `archive/` excluded, the substring count beside each word-bounded one (`P840`), and the `P849` positive control first — `Moodle` **128**, `Open edX` **16**, `IESALC` **11**, `IDB` **7**. 🟢 TSV at `compose/code/p852-battery-shelf-gate/inline-result.2026-10-09-p78.tsv`. 🔴 **Not a `shelf_gate.sh` output; do not cite it as one.**
+
+### 🔴 🆕 `P860` — the capability boundary is **parse vs execute** this pass, not network vs no-network
+
+| attempted | result |
+|---|---|
+| the network half (`test_probe_payload.sh`) | 🔴 **DENIED `[Code from External]`** |
+| the **offline** half (`lib/measure --family`) | 🔴 **DENIED** |
+| an **offline test suite** (`lib/test_license_family.sh`) | 🔴 **DENIED** |
+| `bash -n` on three instruments | 🟢 **parses clean** |
+
+🔴 **Wider than the seam `lib/README.md` records**, which marks `. license_family.sh` 🟢 running in pass 74. 🔵 **A capability boundary is re-measured at its narrowest case each pass** — the published seam was measured on whichever case happened to be tried.
+
+### 🔴 🆕 `P861` — and the denial cost **two** defects in one pass, both already paid for in this repository
+
+🔴 The hand-rolled replacement counted a **`404: Not Found` body as a 14-byte payload**, and reported a **dangling README licence link as a bare absence**. 🟢 `lib/probe_payload.sh` closes both, explicitly, in its own source. 🔵 **A denial suspends execution, not knowledge:** when the versioned instrument cannot be run, its **findings** are still binding and the pass reads its source and applies the traps by hand.
+
+### 🟢 🆕 All three named-unbought instruments are now **BOUGHT**, and each returns a different kind of emptiness (`P863`)
+
+| instrument | bought with | result |
+|---|---|---|
+| `OpenTutor` eight-fork **release feeds** | `WebFetch` | 🔴 `zijinz456/OpenTutor` **NO RELEASES PUBLISHED**; `Open-TutorAi/open-tutor-ai-CE` **NO RELEASES PUBLISHED** |
+| the same channel, pointed elsewhere | `WebFetch` | 🟢 `HKUDS/DeepTutor` — **10 releases**, latest **`v1.6.14`, 2026-10-08**, cadence ~2–6 days |
+| **conference artefact tracks** | `WebFetch` + search | 🟡 AIED 2026 main-track program is **placeholder content**; NeurIPS 2026's Education Track repo (`lilyzhng/2026_NeurIPS_Education`) is a **submission template**; `CSTutorBench` (arXiv **2607.05571**) has **no located repo** |
+| GitHub `/trending`, re-bought | `curl` vs `WebFetch` | 🔴 **403** vs 🟢 **200** — `P855` re-confirmed |
+
+🔵 **`P863` adopted: the release-feed channel's yield is per-REPO, and the registry pointed it at the wrong repo.** 🔴 The eight-fork family it named for four passes publishes **no releases at all** — structurally empty — while the shelf's most prominent tutor ships one every few days. 🔵 **And the conference channel is not empty, it is EARLY:** it is gated by the conference calendar, so in October a 2026 program page can still be a placeholder. 🟢 **Three channels, three distinct failure modes, none of them "exhausted".**
+
+### 🔴 Licence facts on already-shelved rows, each payload-read this pass
+
+🔴 **The top repo on GitHub's own `ai-education` topic page is AGPL-3.0:** `HugeCatLab/ChatTutor` **34 522 B**, `main` `7d9e905` — 🔴 §13 binds a hosted tutor service.
+🔴 **Byte size does not identify a family:** `24kchengYe/human-skill-tree` is **AGPL-3.0 in 1 134 B** — a reference-style grant at MIT size.
+🔴 **NonCommercial recurs:** `SocraticNovel` **CC-BY-NC-SA-4.0** is the second NC education repo in two passes; and `GarethManning/education-agent-skills` (837★) is **CC-BY-SA-4.0** — a *skills pack* under a content licence, so **ShareAlike reaches the prompts**, not only the code.
+🔴 **A band moved:** `plastic-labs/tutor-gpt` is **GPL-3.0, 35 149 B** (`main` `5c2f924`) where the channel reported no licence at all. Title block GPL, **not** Affero (`P171`).
+🔴 **MIT and still unsellable:** `AarambhDevHub/exam-cheating-detection` (MIT, 1 068 B) is gaze/face/talking proctoring — EU **Annex III** high-risk, **behavioural monitoring** under Vietnam's Law 134/2025/QH15, and `P764`'s NYC **red** tranche.
+
+### 🟢 Declared gaps
+
+🔴 **🆕 `Gap 333`** — the 106-suite board, `p351` and every `compose/code/` instrument are unverified this pass, offline ones included.
+🔴 **`Gap 316` reshaped, not closed** — the MIT grading component exists (`littlecookie0722/AI-Teaching-Agent`, 1 069 B, `main` `b90bd88`); its README reports **0 hits** for `lti|AGS|QTI|caliper|xapi|moodle|canvas|open edx|blackboard` in 12 334 B and says *"external platforms… remain frozen"*. 🟢 **A buildable gap, not a missing component.**
+🔴 **No second education-domain agent in any channel this pass.**
+🟡 **Star counts readable at source for the first time** (`WebFetch` on the topic page, 200, rounded) and 🔴 **still not adopted**, because `p351` could not run.
+
+
 ## 🟢 2026-10-09 (pass 77) — **0 new agents for the fourth consecutive pass**, and this time the saturation is **qualified rather than repeated**: the newly-bought channel is full of teaching material and empty of agents
 
 🔵 **Append-only: this dated section is new; every section below it is prior history and is unchanged.**

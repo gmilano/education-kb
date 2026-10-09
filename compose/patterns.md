@@ -4,6 +4,147 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-eighth pass, 2026-10-09 — three new recipes, and all three are buildable from components **payload-read this pass**: a voice tutor that keeps **no server-side student record**, the **LTI 1.3 + AGS adapter `Gap 316` has been waiting for** (its upstream froze the seam, so the studio writes it), and the **oversight-record** deliverable Oklahoma and Maryland now require
+
+⏱️ **Tenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🔵 What changed against what pass 77 left
+
+🟢 Pass 77 left `P850` (the LTI 1.3 + AGS adapter, route-priced on licence), `P851` (the closure gate as a client deliverable) and the courseware screen `P854` made work. 🔴 **All three priced what a studio ships. None priced where the student's DATA rests** — and every regulatory limb measured this pass converges on exactly that.
+
+🔴 **And one blocker on `P850` is now removed in a way worth stating precisely:** the permissive grading component `Gap 316` called missing **exists** — it is MIT — and its author has declared the LMS seam out of scope **in the README**. 🟢 **That turns a sourcing problem into a build.**
+
+---
+
+## R78a — Voice tutor with **no server-side student record** (the AB 1159 / SB 1227 / GDPR answer)
+
+**Time**: 6–8 wk to a localised pilot | **Licences**: 🟢 MIT + Apache-2.0 throughout, every grant payload-read this pass
+
+### The stack, with every grant measured and every ref pinned
+
+| layer | component | grant | bytes | ref |
+|---|---|---|---|---|
+| tutor reference | [`Jeanikt/tutor-ai-agent`](https://github.com/Jeanikt/tutor-ai-agent) | 🟢 **MIT** | 1 103 | `main` `987f310` |
+| agent runtime | [`livekit/agents`](https://github.com/livekit/agents) | 🟢 **Apache-2.0** | 11 357 | `main` `dbe555b` |
+| React layer | [`livekit/components-js`](https://github.com/livekit/components-js) | 🟢 **Apache-2.0** | 11 357 | `main` `1ce6ca0` |
+| browser client | [`livekit/client-sdk-js`](https://github.com/livekit/client-sdk-js) | 🟢 **Apache-2.0** | 10 142 | `main` `20e478d` |
+| maths rendering | [`KaTeX/KaTeX`](https://github.com/KaTeX/KaTeX) | 🟢 **MIT** | 1 107 | `main` `6ea2dc9` |
+| mastery model (optional) | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) — FSRS 4.5 + BKT | 🟢 **MIT** | **1 068** (`P859`) | `main` `f0142f2` |
+
+### The three things to copy, not re-invent
+
+```
+1. record: false on the agent session
+   -> no audio, no transcript, no trace uploaded to the inference vendor
+
+2. the student model lives in the BROWSER
+   -> localStorage, returned as a LiveKit participant attribute at next
+      session start (`manu.memoria`); the chalkboard rides its own text
+      stream (`manu.lousa`), rendered client-side with KaTeX
+
+3. pedagogy BANDS, not a single persona
+   -> grades 1-5 / 6-9 / exam-prep, each with its own turn length,
+      vocabulary and examples; variables spelled phonetically so every
+      TTS voice pronounces them ("xis", "ipsilon")
+```
+
+🔵 **Point 2 is the deliverable.** 🔴 Every regime measured this pass asks the same question — *where does the student's data rest, and does it train a model?* 🟢 **This architecture answers "on the student's device, and no" without a data-processing annex**: California **AB 1159**, Idaho **SB 1227**, FERPA, GDPR, Vietnam's behavioural-monitoring clause.
+
+### 🔴 The two steps that are actually work
+
+1. 🔴 **Close `P26`: replace LiveKit Inference.** The reference calls a **hosted** pipeline (`google/gemini-3.5-flash`, `xai/tts-1` voice `luna`, `turnDetection: 'stt'`). 🔴 **MIT settles copyright and says nothing about access**, and a hosted inference vendor re-opens the data question point 2 just closed. 🟢 Substitute self-hosted STT → local LLM → local TTS behind the same `@livekit/agents` interfaces. 🔴 **Unmeasured on this shelf: the latency cost of that swap.** Budget a spike; do not quote a figure.
+2. 🟢 **Localise, don't rewrite.** The structure is locale-shaped: TTS locale, pedagogy bands, exam anchor. 🟢 **es-MX**: swap `pt-BR` → `es-MX`, ENEM → the national exam, bands → the local stage names. 🟢 **en-US**: same move, and the data story is the selling point rather than a footnote.
+
+🟡 **Declared limits:** the repo states **3 simultaneous lessons**, counted against open LiveKit rooms — a pilot number, not a platform number. 🔴 And both `package.json` files declare `"license": null`, so **run a closure read before legal review**, not after (`P742`/`P757`).
+
+---
+
+## R78b — The **LTI 1.3 + AGS grading adapter**, built rather than waited for (`Gap 316`)
+
+**Time**: 8–10 wk | **Licences**: 🟢 MIT core, 🟡 one Apache-2.0 / LGPL route decision
+
+### Why this is now a build and not a search
+
+🟢 [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) — 🟢 **MIT, 1 069 B**, `main` `b90bd88` — supplies the whole generation-and-review core: Lab DSL → linked **Exam** and **Grading** DSLs, validation before anything continues, a `WAITING_REVIEW` task with recorded human approve/reject, a candidate-safe preview that strips answers and internal grading references, local export with **no automatic publishing**.
+
+🔴 **And it has no LMS seam.** 🟢 Measured: **0 hits** for `lti|AGS|assignment and grade|QTI|caliper|xapi|moodle|canvas|open ?edx|blackboard` across its **12 334-byte** README, where `Grading` appears **23** times. 🔴 Its own words: *"Automatic grading productization, local entity expansion, MCP/Agent expansion, external platforms… remain frozen."*
+
+🔵 **So the missing piece is one adapter, and the upstream has told you it will not build it.**
+
+```
+LMS (Moodle GPL-3.0 | Canvas AGPL-3.0 | Open edX AGPL-3.0)
+   |  LTI 1.3 launch + AGS line items
+   v
+[ADAPTER - the studio writes this]            <- the only new code
+   |  Deep Linking -> create assignment from an approved Exam DSL
+   |  AGS Score    -> post the Grading DSL result back as a line item
+   |  NRPS         -> roster for candidate-safe preview distribution
+   v
+littlecookie0722/AI-Teaching-Agent  (MIT)
+   Lab DSL -> Exam DSL + Grading DSL -> validate -> WAITING_REVIEW
+   -> human approve/reject (RECORDED) -> local export
+```
+
+### 🟡 The route decision, priced on licence and on closure
+
+| route | grant | the catch |
+|---|---|---|
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 **Apache-2.0** | 🟢 Node; the shelf's existing frontier row for launch/auth |
+| `PyLTI1p3` | 🟢 **MIT** | 🔴 **closure is not permissive** — `jwcrypto` **LGPL-3.0-or-later** (pass 76). Fine when the adapter is a separate process; a problem when it is statically bundled |
+
+🔵 **Keep the adapter a separate process either way** — it isolates the LGPL question, and it keeps the MIT core replaceable.
+
+### 🔴 The regulatory gate is NOT optional, and it decides what you may ship
+
+🔴 **US public K-12 (NYC and any district following it): do not ship the grading path at all.** `P764`'s red tranche — grading, promotion, discipline, counselling, crisis intervention, IEP/504, placement — is **prohibition**. 🔴 **No human-in-the-loop converts a prohibited use into a permitted one.** 🟢 **Ship the teacher-facing green lane**: generate, validate, human-review, export for the teacher to enter. 🟢 That is exactly what the MIT component already does, and its frozen scope is a feature here.
+
+🟡 **EU (Annex III) and Vietnam (Law 134/2025/QH15, in force 2026-03-01): conditioned**, and the condition is an engineering spec. 🟢 Vietnam's test — high-risk principally where output drives decisions **without meaningful human review** — is answered by the `WAITING_REVIEW` gate **because the gate is architectural**: nothing exports until a recorded human decision exists.
+
+🆕 🟡 **Oklahoma and Maryland: oversight-mandated** — see `R78c`, because the deliverable there is different.
+
+---
+
+## R78c — The **oversight record** as the deliverable (Oklahoma · Maryland, and the third mode of `P764`)
+
+**Time**: 3–4 wk as an add-on to `R78b` | **Licences**: 🟢 MIT
+
+🔴 **This is a separate recipe because the artefact is different.** 🟢 Oklahoma and Maryland require **human oversight** and **bar AI from high-stakes decisions about students**. 🔵 **A gate that stops for a human and keeps no record satisfies the EU's condition and FAILS this one.** 🟢 What is being bought is not the pause — it is the **provable, reconstructible account** of who reviewed what, when, and what they changed.
+
+```
+AI-Teaching-Agent's WAITING_REVIEW task  (MIT, already there)
+        + reviewer identity from the LMS (LTI 1.3 NRPS)
+        + the artefact DIFF: generated vs approved
+        + an append-only decision log, exported per term
+        = the oversight record
+```
+
+🟢 **Two properties to design in from the start, because retrofitting either is expensive:** the log is **append-only** (a reversible approval record is not a record), and it stores the **diff**, not just the verdict — *"approved"* on an artefact nobody can reproduce proves nothing.
+
+🔵 **And it composes with `R78a`'s data story rather than fighting it:** the oversight record is about the **teacher's** decisions and belongs to the institution; the **student's** model stays on the student's device. 🟢 **Two different subjects, two different homes** — and conflating them is how a privacy-clean design acquires a server-side student record by accident.
+
+---
+
+## 🔴 Corrections to recipes already published in this file
+
+🔴 **Do not substitute ERPNext for OpenEduCat on "both are open source".** 🟢 [`frappe/erpnext`](https://github.com/frappe/erpnext) is **GPL-3.0** (35 149 B, `develop` `2e6b8ed`, at lowercase **`license.txt`**) — strong copyleft. 🟢 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) is **LGPL-3.0** (8 241 B, `19.0` `1c95cef`) — 🟢 **the only weak-copyleft band in this tier, and therefore the only place a client-specific proprietary AI addon is lawful** (`P750`). 🔴 The swap loses that band.
+
+🔴 **Do not ship `HugeCatLab/ChatTutor` as a hosted service.** **AGPL-3.0, 34 522 B**, `main` `7d9e905` — 🔴 §13 means offering it over a network releases the source. 🟢 Use it as a reference UI; the permissive tutor rows are `Jeanikt/tutor-ai-agent` and `zijinz456/OpenTutor`.
+
+🔴 **Do not ship `plastic-labs/tutor-gpt` in a product.** **GPL-3.0, 35 149 B**, `main` `5c2f924` — the discovery channel reported no licence at all. 🟡 Strong copyleft, no network clause: usable self-hosted internally, not as a deliverable.
+
+🔴 **Screen "skills packs" as CONTENT, not code.** `GarethManning/education-agent-skills` is **CC-BY-SA-4.0** (1 230 B) — 🔴 **ShareAlike reaches the prompt text a studio ships.** `Jeremy-xuan/SocraticNovel` is **CC-BY-NC-SA-4.0** (1 227 B) — 🔴 **NonCommercial; it cannot enter an engagement at all.** 🟢 Run `P854`'s fixed courseware screen over every pedagogy asset, not only over code.
+
+🔴 **`AarambhDevHub/exam-cheating-detection` is MIT and must not be sold.** Gaze / face-presence / talking detection is EU **Annex III** high-risk with bias-testing, human-oversight and notification duties; **behavioural monitoring** under Vietnam's law; and NYC's **red** tranche. 🟢 MIT answers copyright; it does not make a prohibited use permitted.
+
+🔴 **Sakai is ECL-2.0, not Apache-2.0** (11 120 B, `master` `fadec10`) — an Apache derivative with a **narrowed patent grant**. 🔴 **Chamilo is GPL-3.0, not GPL-2.0** (35 147 B, `master` `671a800`). 🟢 Both already correct on this shelf; both **wrong in the v6 `globant-kb/education/` snapshot**, which also links the dead slug `OpenEduCat-Inc/OpenEduCat` (`P864`). 🔴 Do not build a licence argument from that tree.
+
+🔴 **Two "independent" MIT verticals are one vendor.** Krayin CRM (**MIT**, 1 078 B, `2.2` `fa4eeca`) and Aureus ERP (**MIT**, 1 077 B, `master` `070cacc`) both carry `Copyright 2010-2025, Webkul Software`. 🟡 Neither is an education system of record.
+
+### 🔴 Figures in this file that are NOT re-verifiable this pass
+
+🔴 **No figure in this section comes from a suite, because no suite ran** (`P860`, `Gap 333`). 🟢 Every byte count, ref and SHA above is a **first-hand live read by this pass**; every licence family is a **direct read of the payload's title block** by this pass, **not** a `license_family.sh` output. 🔴 **`patterns-figure-audit/extract_figures.py --check` could not be executed**, so the suite-derived figures in the sections *below* this one are **carried, not re-verified** — the next pass with execution must re-run it before citing them.
+
+
 ## 🟢 Seventy-seventh pass, 2026-10-09 — the newly-bought `/trending` channel supplies a **permissive curriculum substrate**, and `P854` makes the courseware screen that assembling it requires actually work
 
 ⏱️ **Ninth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

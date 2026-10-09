@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-09
 ---
 
+## 🟢 Seventy-eighth pass, 2026-10-09 — **one new foundational repo and a permissive voice substrate**, plus the pass's own subject: 🔴 **`P859`, where this repository's retroactive byte correction was applied as a rule and got 6 of 8**
+
+⏱️ **Tenth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**
+
+### 🟢 Added to the foundations tier — the **real-time voice** layer, which this shelf had empty
+
+🔵 This shelf has carried tutoring logic, knowledge tracing, LMS substrates and LTI libraries. 🔴 **It had no voice substrate**, although every tutoring row on it describes a spoken interaction. 🟢 The pass's new agent row arrives on one, and the substrate is permissive.
+
+| repo | grant, by **payload read** | bytes | ref | why it is foundational |
+|---|---|---|---|---|
+| [`livekit/agents`](https://github.com/livekit/agents) | 🟢 **Apache-2.0** | 11 357 | `main` `dbe555b` | Agent runtime for real-time voice: WebRTC rooms, server-side turn detection, STT → LLM(+tools) → TTS pipeline, VAD interruptions. Node and Python |
+| [`livekit/components-js`](https://github.com/livekit/components-js) | 🟢 **Apache-2.0** | 11 357 | `main` `1ce6ca0` | The React component layer (`@livekit/components-react`). 🟡 **The npm scope is not the repo slug** — `P840`/`P791` |
+| [`livekit/client-sdk-js`](https://github.com/livekit/client-sdk-js) | 🟢 **Apache-2.0** | 10 142 | `main` `20e478d` | Browser client (`livekit-client`) |
+| [`KaTeX/KaTeX`](https://github.com/KaTeX/KaTeX) | 🟢 **MIT** | 1 107 | `main` `6ea2dc9` | Maths rendering — the on-screen chalkboard half of a spoken maths tutor |
+| [`Jeanikt/tutor-ai-agent`](https://github.com/Jeanikt/tutor-ai-agent) | 🟢 **MIT** | 1 103 | `main` `987f310` | 🟢 The worked reference: a pt-BR maths tutor assembled from the four rows above. LATAM |
+
+🔴 **What the tier still lacks:** the pipeline above is permissive **code** calling a **hosted inference service** (LiveKit Inference: `google/gemini-3.5-flash`, `xai/tts-1`). 🔵 **`P26` — copyright is not access.** 🟢 A self-hosted substitution (local STT, a local LLM, a local TTS) is the first step of `R78a` in `compose/patterns.md`, and 🔴 **it has not been measured here** — nobody on this shelf has run that swap.
+
+### 🔴 🆕 `P859` — the retroactive byte correction, re-measured row by row
+
+🟢 Pass 74 adopted `P834` and then added **one byte to a list of eight figures at once**. 🟢 All eight were re-read first-hand this pass, byte-exact on the file, with each payload's trailing-newline run measured separately. 🔴 **Six correct, two wrong:**
+
+🔴 `zijinz456/OpenTutor` → 🟢 **1 068 B** (shelf: 1 069). **Corrected twice** — pass 64's `P724` had already re-read it byte-exact at 1 068 B, and the batch added a byte to a figure that was already right. 🔴 This file carried **1 069** at line ~304 and **1 068** at line ~1 799, both about the same payload.
+🔴 `aureuserp/aureuserp` → 🟢 **1 077 B** (shelf: 1 078). Its **trailing-newline run is 0**, so the stripped capture and the exact size are the same number and the correction's magnitude was **zero**.
+🟢 Correct: `ofbiz` 11 906 · Huly 14 197 · `DeepTutor` 11 408 · `iblai/os` 1 070 · `iblai/lms` 1 063 · `openeducat` 8 241.
+
+🔵 **The rule, stated so a list cannot be corrected again:** 🔴 **`P834`'s magnitude is per-FILE** (the length of that payload's trailing newline run — `lib/README.md` records it measured at 0/1/3 bytes), 🔴 **and its applicability is per-ROW** (whether that figure was already byte-exact). 🟢 **Neither is readable off a list.** 🔵 Shape: `P713` in the **correcting** direction — the rule was re-measured and the rows it applied to were **inherited**.
+
+### 🔴 🆕 `P862` — the shared probe's filename ladder is all-uppercase, and `raw` is case-sensitive
+
+🟢 Control, one repo and one ref: on `frappe/erpnext` @ `develop`, every name in `PROBE_NAMES` plus three more returns 🔴 **404**, and 🟢 **`license.txt` returns 200**. 🔴 **So the versioned ladder would report the most-deployed open-source ERP as `NO-PAYLOAD`.**
+
+🟢 **Payload:** **GPL-3.0, 35 149 B**, `develop` `2e6b8ed`. 🟢 **And a live `P171` case** — the body says `affero` **3 times**; the title block says `GNU GENERAL PUBLIC LICENSE`. 🔵 The defect `license_family.sh` was written for, met in the wild on a repository this shelf has reason to cite.
+
+🔴 **Fix named and deliberately not written** (`P126`, and `P860`: nothing here could be executed): add the lowercase forms to `PROBE_NAMES` and pin `frappe/erpnext` as the regression case.
+
+### 🔴 Nothing new from the mandated foundations channel, and that is now a six-pass number
+
+🟢 `open source platform education ERP CRM MIT Apache` ran in full. 🔴 **It returned no education-specific repository under MIT, Apache-2.0 or BSD — for the sixth consecutive pass.** 🟢 Its MIT hits were **general** business software, and 🔴 **two of the three are one vendor**: Krayin CRM (**MIT**, 1 078 B, `2.2` `fa4eeca`) and Aureus ERP (**MIT**, 1 077 B, `master` `070cacc`) both carry `Copyright 2010-2025, Webkul Software`. 🔴 Apache OFBiz (**Apache-2.0**, 11 906 B, `trunk` `3b63151`) is a general ERP framework with no education module; Huly is 🔴 **EPL-2.0** (14 197 B), not the Apache-2.0 the channel asserted again.
+
+🟢 **The band that holds** is unchanged and is restated because this pass re-confirmed it byte-exact: [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) **LGPL-3.0, 8 241 B**, `19.0` `1c95cef` — 🟢 **the only weak-copyleft education substrate on this shelf**, and therefore the only one where a Globant addon may stay proprietary (`P750`).
+
+### 🔴 🆕 `P864` — three slugs for one ERP, and one of them is dead
+
+🟢 `openeducat/openeducat_erp` → **`19.0`**; `OpenEduCat/openeducat_erp` → **`19.0`** (owners are case-insensitive); 🔴 **`OpenEduCat-Inc/OpenEduCat` → UNRESOLVED.** 🔴 The dead one is the slug carried by the sibling shelf at `globant-kb/education/verticals/solutions.md:13`, a **v6 snapshot dated 2026-07-14**.
+
+🔵 **And it surfaced the way `P861` predicts:** `raw` served the dead slug a **14-byte body reading `404: Not Found`**, which the hand-rolled read reported as a *payload* until the control caught it. 🟢 `lib/probe_payload.sh` guards that case in its own source — and could not be run.
+
+### 🟢 Declared gaps
+
+🔴 **`Gap 333` (🆕):** no instrument in `compose/code/` executed this pass, offline suites included.
+🔴 **Still zero MIT / Apache-2.0 / BSD education system-of-record.** `Ed-Fi DMS` (Apache-2.0) remains the only permissive substrate and is a data-standard API (`Gap 309`).
+🔴 **The self-hosted voice swap is unmeasured** — nobody here has replaced LiveKit Inference with local STT/LLM/TTS and reported latency.
+
+
 ## 🟢 Seventy-seventh pass, 2026-10-09 — the newly-bought `/trending` channel adds **8 permissive teaching repositories**, and the ninth one found **`P854`: the shelf's shared classifier invented commercial permission over a NonCommercial work**. 🆕 `Gap 332` opens on the limit that survives the fix
 
 ⏱️ **Ninth pass of this date.** **Append-only: this section is new; nothing below it was rewritten.**

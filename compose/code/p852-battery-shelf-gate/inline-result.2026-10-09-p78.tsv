@@ -1,0 +1,46 @@
+limb	candidate	live_files	live_subs	archive_files	verdict
+global/agents	littlecookie0722/AI-Teaching-Agent	32	96	8	SHELVED
+global/agents	Jeanikt/tutor-ai-agent	0	0	0	UNSHELVED
+global/agents	H1bertto/professor-agent	3	4	3	SHELVED
+global/agents	Ebimsv/AITutorAgent	9	34	4	SHELVED
+global/agents	plastic-labs/tutor-gpt	17	48	6	SHELVED
+global/agents	GarethManning/education-agent-skills	21	58	6	SHELVED
+global/agents	caramaschiHG/awesome-ai-agents-2026	6	57	3	SHELVED
+global/agents	Agent Zero	3	5	2	SHELVED
+global/trending	HugeCatLab/ChatTutor	19	53	5	SHELVED
+global/trending	24kchengYe/human-skill-tree	36	73	5	SHELVED
+global/trending	pguso/agents-from-scratch	11	84	4	SHELVED
+global/trending	aaryansamanta/ai-ethos	2	2	3	SHELVED
+global/trending	SenmuuuuW/universal-diagnostic-tutor-skill	31	49	5	SHELVED
+global/trending	SimonsTang/feifei-companion	21	39	7	SHELVED
+global/trending	DAMO-NLP-SG/M3Exam	0	0	0	UNSHELVED
+global/trending	TovTechOrg/Tov-learn	2	3	1	SHELVED
+global/trending	AarambhDevHub/exam-cheating-detection	22	28	0	SHELVED
+global/trending	Jeremy-xuan/SocraticNovel	0	0	0	UNSHELVED
+global/trending	vincenzo-afk/KingstonConnect	0	0	0	UNSHELVED
+global/verticals	Krayin CRM	16	112	0	SHELVED
+global/verticals	Aureus ERP	5	110	4	SHELVED
+global/verticals	BottleCRM	5	26	0	SHELVED
+global/verticals	Apache OFBiz	29	99	4	SHELVED
+global/verticals	Huly Platform	14	84	2	SHELVED
+global/verticals	ERPNext	46	174	7	SHELVED
+NA	Ohio AI policy mandate	7	93	7	SHELVED
+NA	California AB 1159	8	126	7	SHELVED
+NA	Idaho SB 1227	6	61	5	SHELVED
+NA	STUDENTS FIRST Act 2026	3	9	5	SHELVED
+NA	K-12 AI Literacy and Readiness Act HR 8747	4	33	4	SHELVED
+NA	Gemini for Education	2	3	3	SHELVED
+EMEA	Digital Omnibus	10	76	6	SHELVED
+EMEA	OECD Digital Education Outlook	4	29	2	SHELVED
+EMEA	Estonia	3	23	1	SHELVED
+APAC	Vietnam Law 134/2025/QH15	10	252	7	SHELVED
+APAC	Taiwan AI Basic Act	6	56	3	SHELVED
+APAC	Australia AI Safety Institute	3	15	2	SHELVED
+APAC	Byjus	2	2	1	SHELVED
+LATAM	UNESCO LAC AI-in-education Observatory	8	92	2	SHELVED
+LATAM	CONALEP	4	13	0	SHELVED
+LATAM	DGETI	4	13	0	SHELVED
+LATAM	ANPD regulatory sandbox	2	7	4	SHELVED
+LATAM	Brazil PL 2.338/2023	6	42	4	SHELVED
+LATAM	Peru risk-based AI framework	19	134	3	SHELVED
+LATAM	Uruguay Council of Europe convention	5	63	6	SHELVED
