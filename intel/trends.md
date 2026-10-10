@@ -6,7 +6,10 @@ updated: 2026-10-10
 
 # Education — current trends
 
-**Pass 92, 2026-10-10.** ⏱️ **Second pass of this date.** Seven trends, each tied to something measured or dated this pass.
+**Pass 93, 2026-10-10.** ⏱️ **Third pass of this date.** **Eleven trends.** `T1`–`T9` are carried from
+pass 92 with this pass's amendments marked **🆕 p93** inside them; `T10` and `T11` are new.
+🔵 **Each trend is tied to something measured or dated. Where pass 93 added no evidence to a carried
+trend, it says so rather than restating it as fresh.**
 
 ## T1 — The unit of delivery is the *agent skill*, not the application
 
@@ -70,6 +73,14 @@ bigger one.
 approval 29 Jun 2026); embedded high-risk systems to 2 Aug 2028. Enforcement *powers* still begin 2 Aug 2026.
 🔴 **A large share of vendor and consultancy guidance still states August 2026 for high-risk duties, and this
 pass found that exact error again in a current source.**
+🔴 🆕 **p93 found it a fifth time, and in a source that is otherwise *correct and current*** — a commentary
+on the European Commission's **March 2026** ethical-guidelines update (see `T9`) which states that
+*"obligations for Annex III high-risk AI systems apply from 2 August 2026, and education is expressly a
+high-risk area."* 🔵 **The second half is right and the date is wrong by sixteen months.**
+🟢 **Five independent instances across five passes is no longer an anecdote about sloppy blogs: the wrong
+date is the majority reading of this regulation in the market.** That is a commercial fact, not a
+correction — it means **a client's incumbent adviser is more likely than not to have given them the wrong
+deadline**, and arriving with the dated Council decision is a differentiator rather than a pedantry.
 
 🟢 🆕 **The addition that changes the pitch: Article 4's staff AI-literacy duty is already in force and was
 not deferred.** So the EMEA conversation is not "prepare for a 2027 deadline" — which invites delay — but
@@ -134,7 +145,8 @@ was benign. This is a 4-way split and it is binding.
 
 ## T7 — 🆕 The regulatory frontier has moved from *regulating AI systems* to *mandating AI instruction* — and that is a services market, not a compliance cost
 
-🟢 **Four jurisdictions now compel AI *teaching*, three of them in APAC, all dated:**
+🟢 🆕 **p93: FIVE jurisdictions now compel AI *teaching* — and the fifth one resolves a misattribution this
+KB recorded rather than used.**
 
 | jurisdiction | instrument | from | reach |
 |---|---|---|---|
@@ -142,6 +154,7 @@ was benign. This is a 4-way split and it is binding.
 | 🇸🇬 Singapore | Ministry of Education — AI literacy across curriculum, co-curriculum and self-directed learning, with developmental milestones | announced **Mar 2026** | **all schools by 2027**, via Student Learning Space + IMDA modules |
 | 🇮🇳 India | CBSE — *Computational Thinking and AI*, **Classes 3–8**, notification **9 Apr 2026** | session **2026-27** | CBSE-affiliated schools; aligned to NEP 2020 / NCFSE 2023 |
 | 🇪🇺 EU | **AI Act Article 4** — staff AI-literacy duty | 🟢 **in force now** | every institution deploying an AI system |
+| 🆕 p93 🇦🇪 UAE | **Cabinet-approved AI curriculum**, compulsory **kindergarten → Grade 12** in government schools; seven strands (foundational concepts · data and algorithms · software use · ethical awareness · real-world applications · innovation and project design · policies and community engagement) | announced **May 2025** (Sheikh Mohammed bin Rashid Al Maktoum); taught inside *Computing, Creative Design and Innovation* in **2025-26** | 🟢 **All government schools.** 🟡 Standalone-subject timing (*"Artificial Intelligence and Technology"*, 2026-27) and **private-school scope are contradicted between sources** and are **not** recorded as settled; one report of a **Sep 2026** cabinet approval extending it to private schools with **22 000 teachers trained** is **single-source and not used.** |
 
 🔵 **Why this is a different business from everything else in this file.** A risk-classification regime
 creates work that is defensive, legal-led and priced as compliance. A **curriculum mandate creates work that
@@ -168,6 +181,15 @@ period**), **Vietnam's standalone AI statute** — the first in Southeast Asia �
 alongside finance and healthcare as high-risk**, with **pre-deployment registration in a National AI
 Database**, conformity assessment, mandatory human oversight and **72-hour incident reporting**, compliance
 due **Sep 2027**; and **Taiwan's AI Basic Act** (Dec 2025).
+
+🟢 🆕 **p93 — the non-convergence claim is now corroborated by an independent analyst, in stronger words
+than this KB used.** Pass 92 wrote that *"APAC compliance" is not a product* because the region does not
+converge. Forrester's 2026 outlook states that a common APAC-wide AI legislative framework **"will remain a
+distant dream"**, noting Singapore promoting responsible AI through mature *guidelines* while China
+legislates against algorithmic misconduct, and that regional instruments such as the **ASEAN Guide on AI
+Governance and Ethics** are still early-stage. 🔵 **A finding this KB derived from counting statutes is
+the same finding a research house derived from watching legislatures. The sell is per-jurisdiction, and it
+will stay per-jurisdiction.**
 
 🔵 **Why this is a separate trend from `T7` and not an extension of it.** `T7` is about jurisdictions
 *mandating that AI be taught* — a **content and curriculum** market. This is about jurisdictions *regulating
@@ -208,6 +230,110 @@ category**, and the shelf should be read accordingly:
   marking, and high-stakes assessment still needs teacher review. 🔵 **So "AI marks it" is not the product.
   "AI drafts it, a teacher signs it, and the trail proves it" is.**
 
+### 🆕 p93 amendment to T9 — the EMEA instrument that landed is **guidance for teachers**, and it is dated March 2026, not June
+
+🟢 🆕 **p93 adds the instrument, and corrects a date before it entered this file.** A newsletter summary
+reported that the European Commission updated its *ethical guidelines on AI in education* **"on 9 June"**.
+🔴 **It did not.** The update was published **5 March 2026**, as one of **four** Digital Education Action
+Plan guideline sets released together (the others covering digital literacy and disinformation, selecting
+digital content, and teaching informatics).
+
+| property | the 2026 update |
+|---|---|
+| date | 🟢 **5 March 2026** |
+| supersedes | the **2022** version, written by the Expert Group on AI and Data in Education and Training |
+| author | the **Working Group on the Ethical Use of AI and Data in Education**, convened through the **European Digital Education Hub** |
+| structure | three parts — founding principles and legal framing · guiding questions with scenarios · support resources — plus an **updated AI and data glossary** |
+| audience | 🟢 **teachers and school leadership**, not ministries |
+| stated driver | the growth of AI use in schools after generative AI, **and the AI Act entering into force** |
+| languages | English first, with translation into all official EU languages during spring 2026 |
+
+🔵 **Why the audience is the finding.** The Commission's answer to Article 4 is **a document for
+teachers**, which is a statement about where the obligation lands: **on the institution's staff, as
+capability.** 🟢 **That is purchasable** — the duty is on the deployer, the deadline is now, and the
+official material is guidance rather than a product. 🔴 **And the same commentary stream that reported
+this update is where `T4`'s wrong date showed up for the fifth time**, which is the practical shape of this
+market: correct subject, wrong deadline, confident tone.
+
+## T10 — 🆕 In the learner-model tier, the **permissive** option and the **explainable** option turn out to be the same one
+
+🟢 **Pass 92 opened this tier with one library** (`pykt-team/pykt-toolkit`, deep knowledge tracing) and
+wrote that the learner model had arrived. 🟢 **Pass 93 found the rest of the stack by naming three more
+techniques, and the structure inside it is the trend:**
+
+| technique | repo | grant | ★ | what it emits |
+|---|---|---|---|---|
+| Bayesian Knowledge Tracing | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | **MIT** | 282 | 🟢 four interpretable parameters per skill — prior, learn, slip, guess |
+| Item Response Theory | [`nd-ball/py-irt`](https://github.com/nd-ball/py-irt) · [`eribean/girth`](https://github.com/eribean/girth) | **MIT** · **MIT** | 173 · 126 | 🟢 item difficulty and discrimination, learner ability, on one scale |
+| Computerized Adaptive Testing | [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | **BSD-3-Clause** | 153 | 🟢 the next item, and a defensible stopping rule |
+| review scheduling | [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | **MIT** | 506 | 🟢 when the learner will forget |
+| deep knowledge tracing | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **MIT** | ~430 | 🟡 a predicted probability from a trained network |
+
+🔵 **The trend is the coincidence of three properties that usually trade off against each other.** The
+classical psychometric layer is simultaneously (a) **permissive** — MIT and BSD throughout, (b) **more
+production-worn** — `catsim` carries 877 commits against `pykt-toolkit`'s research-benchmark posture, and
+(c) **the only part of the tier that produces an artefact you can put in front of a regulator.**
+
+🔴 **And (c) is the one that decides an engagement.** Under the EU AI Act's Annex III, assessing learning
+outcomes is high-risk and owes an explanation to the person assessed. **A 2-parameter logistic item curve
+is an explanation. A per-skill slip-and-guess probability is an explanation. An LSTM activation is not.**
+🟢 **So the advice inverts the usual instinct to reach for the newest model: in this tier, the older
+mathematics is the compliant choice, and it is also the cheaper and better-licensed one.**
+
+🟢 **The seams are named by the tools, not by this KB** — `catsim`'s README states outright that
+*"catsim does not implement item parameter estimation"* and points at `py-irt` and `girth`. 🔵 **A stack
+whose boundaries its own authors document is a different risk than one an integrator invents.** Costed as
+`P93-A`.
+
+🔴 **What is still missing, and it is not a library.** Nothing found this pass wires any of this into an
+agent's turn (`Gap 369`), and there is **no permissive production-grade automated essay scorer at all**
+(`Gap 372`) — so the tier covers **structured** assessment well and **open-response** assessment not at
+all. 🔵 **Which is to say it covers the part the EU names high-risk least well.**
+
+## T11 — 🆕 Grounding a curriculum-aligned tutor in verified standards data is now **measured**, and the number is 31.9 % → 0.2 %
+
+🟢 **This KB has argued for ninety passes that the interoperability and standards tier is where the value
+is. It has never had a number for it. It does now, and the number is somebody else's, published,
+reproducible and adversarial to its own publisher's interest.**
+
+[`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) measures LLM hallucination against
+Brazil's national curriculum base. Its grounding study — **8 models, 300 items**:
+
+| condition | hallucination rate |
+|---|---|
+| 🔴 no source in context | **31.9 %** |
+| 🟢 **dataset in the prompt** | **0.2 %** |
+| 🟡 **querying the MCP server** | **2.3 %** |
+
+🔵 **Three readings, in descending order of how much they should change what a studio builds.**
+
+1. 🟢 **Grounding is worth ~160× on this task.** Not "improves accuracy" — **31.9 % → 0.2 %**. For any
+   deliverable that cites curriculum codes to a teacher, the standards dataset is not an enhancement, it
+   is the product's correctness boundary.
+2. 🔴 **The MCP route is ten times worse than embedding the data** (2.3 % vs 0.2 %), while still ~14×
+   better than nothing. 🔵 **That is an architecture decision with evidence behind it: for curriculum
+   alignment, ship the dataset in the context, and keep the tool call for what the dataset cannot
+   answer.** It also explains why `bncc-dev/bncc-pacotes` embeds the data inside its MCP server rather
+   than calling home.
+3. 🔴 **Ungrounded faithfulness varies from 88 % to 3 % across models**, so "which model" is a much weaker
+   lever than "is the source in the context". 🔵 **Model selection is the cheap question; grounding is
+   the expensive one, and only one of them is usually on the agenda.**
+
+🟡 **Two reasons to cite this carefully, both from the repository itself.** 🟢 **Its README declares a
+conflict of interest in its own words** — *"Vale declarar o conflito de interesse: a Profy opera produtos
+que usam LLMs sobre a BNCC"* — and publishes methodology, items, raw responses and judgments so the
+numbers can be recalculated. 🔵 **A disclosed conflict with reproducible workings is a better evidentiary
+position than most vendor benchmarks on this shelf.** 🔴 **But its own two surfaces disagree on the
+corpus size:** the repository description says **15 300 responses from 17 models**, while the README
+describes the official round as **19 models × 900 = 17 100 published raw responses**.
+🔵 **Cite the grounding percentages, which are the study's own headline, and do not cite a corpus size
+from the description** — this is `compose/code/description-drift-audit/`'s shape appearing inside a source
+this pass otherwise rates highly.
+
+🔴 **Generalisation limit, stated.** One benchmark, one curriculum, one language, 300 items. **The
+direction is almost certainly general and the magnitude is not.** Use it to justify the architecture, not
+to promise a client 0.2 %.
+
 ## Instrument note carried forward
 
 🟢 **`git ls-remote --symref` and `raw.githubusercontent.com` discriminate; `curl` on `github.com` and
@@ -215,9 +341,26 @@ category**, and the shelf should be read accordingly:
 🆕 **Newly recorded: `WebFetch` on `https://github.com/topics/<t>` renders the page, its star counts and the
 topic total, while `curl` on the identical URL is 403.** That is where star counts and topic denominators come
 from.
+🔴 🆕 **p93: the sandbox adds a second limit on top of the egress one — repository code cannot be
+executed.** `compose/code/grant-ladder-v4/ladder.sh` could not be run, so this pass ran its *oracle map* by
+hand and **printed each payload's title block rather than classifying it** (`P970`). 🔵 **Declining to
+classify is the correct failure mode here; forking the shared classifier is the one `P237` forbids and the
+one that cost pass 91 two platform licences.** Every row added this pass carries bytes, filename, ref and
+SHA so v4 can re-derive it and contradict this pass on the record.
+🟢 🆕 **p93 oracle addition: `WebFetch` on `https://github.com/<owner>/<repo>` renders star counts, fork
+counts and the sidebar licence**, which is where this pass's ★ figures come from. 🔴 **And it exposed a
+blind spot shared with the ladder** — the sidebar reports the **root** licence only, so
+`bncc-dev/bncc-dados` reads *"MIT license"* while the data it exists to publish is CC BY 4.0 one directory
+down (`P969`).
+
 🔴 **Re-confirmed (`P944`/`P950`): the policy-source block is an EGRESS ALLOWLIST, not DNS.** Four primary
 hosts needed this pass — `cbse.gov.in`, `digitaleducationcouncil.com`, `hepi.ac.uk`, `unu.edu` — returned
-`000`/0 B under `curl` and `ENOTFOUND` under `WebFetch`. Not retried per host. Figures from them are labelled
+`000`/0 B under `curl` and `ENOTFOUND` under `WebFetch`. Not retried per host.
+🆕 **p93 adds three to the blocked list:** `www.marketsandmarkets.com`, `bncc.dev` and `profy.com.br`, all
+`ENOTFOUND` under `WebFetch`. 🟢 **The `bncc.dev` block cost nothing, because its repositories are on
+GitHub and the payloads were read there directly** — but the `marketsandmarkets.com` block is why the
+regional-versus-global arithmetic in `intel/market.md` cannot be closed against that firm's own global
+figure. Figures from them are labelled
 *search-summary* in `intel/market.md`.
 
 *Prior pass content is preserved in git history at commit `306eb06` and earlier.*

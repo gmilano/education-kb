@@ -4,6 +4,108 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 93: nine new foundational rows, a licence-reach blind spot proved on two oracles, and the regulatory sweep discharges three gaps
+
+**APPEND-ONLY — history is below. Third pass of this date.**
+
+🔴 **Instrument.** `compose/code/grant-ladder-v4/ladder.sh` **could not be executed** (this session's sandbox
+declines to run repository code). 🟢 **Pass 93 wrote no replacement classifier** — `P237` forbids forking the
+shared one, and pass 91 proved the cost. It ran v4's oracle map by hand and **printed each payload's title
+block rather than matching on it** (`P970`). **Control:** 🟡 `moodle/moodle` → `COPYING.txt` **35 147 B** at
+`main` · `f205347`, byte-identical to pass 92 **at the same SHA** — a re-read, not an independent eleventh
+measurement; 🟢 invented slug `ABSENT`; 🟢 `OS4ED/openSIS-Classic` 404 on three licence names, reproducing a
+known negative. **13 slugs resolved this pass — 11 payload reads at pinned SHAs, 1 negative, 1 invented
+control — against pass 92's 133. A deep pass on few rows, not a census**; pass 92's census file is not
+superseded. All other rows carried at pass-92 SHAs. `P966`.
+
+### 🟢 Nine new foundational rows — `repos/foundations.md` goes from 22 to 31 above the flag line
+
+| repo | grant (payload · bytes · file · ref · SHA) | ★ | tier |
+|---|---|---|---|
+| 🆕 [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | **MIT** · 1 132 B · `LICENSE` · `master` · `cc1682e` | 282 | 🟢 **Tier 2c (new) — psychometrics.** Bayesian Knowledge Tracing; four interpretable parameters per skill |
+| 🆕 [`nd-ball/py-irt`](https://github.com/nd-ball/py-irt) | **MIT** · 1 121 B · `LICENSE` · `master` · `6514928` | 173 | 🟢 Tier 2c — Bayesian IRT on Pyro/PyTorch; item calibration |
+| 🆕 [`eribean/girth`](https://github.com/eribean/girth) | **MIT** · 1 064 B · 🟡 **`LICENSE.txt`** · `master` · `daf2277` | 126 | 🟢 Tier 2c — IRT estimation. 🟡 **`LICENSE` is a 404 here; only the 24-name reach makes this row readable** |
+| 🆕 [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | **BSD-3-Clause** · 1 514 B · `LICENSE` · 🟡 **`dev`** · `7e6caae` | 153 | 🟢 Tier 2c — **the only computerized-adaptive-testing engine on this shelf.** 🔴 **Default branch is `dev`: pin it** |
+| 🆕 [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | **MIT** · 1 079 B · `LICENSE` · `main` · `9446cb0` | 506 | 🟢 Tier 2c — FSRS review scheduling |
+| 🆕 [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | 🟡 **MIT at root / CC BY 4.0 for the data** · 1 073 B · `LICENSE` · `main` · `daabd7d` | 20 | 🟢 **Tier 1b (new) — a national curriculum as audited open data.** 🔴 **See `P969`** |
+| 🆕 [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🟢 **split grant at the root** · 1 299 B index · `main` · `ac9feb8` | 9 | 🟢 Tier 1b — npm/PyPI packages + **MCP server, 7 tools, data embedded** |
+| 🆕 [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | 🟢 **split grant at the root** · 911 B index · `main` · `4713901` | 9 | 🟢 Tier 1b — open hallucination benchmark; **MIT `harness/` is reusable as your own CI gate** |
+| 🆕 [`dfdb76/bncc-mcp`](https://github.com/dfdb76/bncc-mcp) | **MIT** · 1 218 B · `LICENSE` · `main` · `f94ca6a` | — | 🟢 Tier 1b — independent second MCP over the same curriculum (**n=2**) |
+
+🟡 **And the count carries a qualifier the previous ones did not need: 30 of the 31 are permissive for the
+CODE, 1 is LGPL — and 3 carry a CC BY 4.0 obligation on their DATA.** 🔵 **CC BY 4.0 is an attribution duty,
+not copyleft, so those rows stay above the flag line — but calling them plainly "permissive" without naming
+the data grant is the elision `P969` exists to punish.**
+
+🔴 **One honest subtraction: this is a 9-row measurement on top of a 22-row inheritance, not a 31-row
+measurement.** The next pass that can run v4 should re-derive all 31 and contradict the page on the record if
+it finds cause.
+
+### 🔴 `P969` — root-only licence detection, proved on a real row, confirmed by a second oracle
+
+| oracle | verdict on `bncc-dev/bncc-dados` |
+|---|---|
+| the 24-filename ladder, at the repo root | 🔴 **MIT** |
+| GitHub's own licence sidebar | 🔴 **"MIT license"**, nothing else |
+| the README and `dados/LICENSE.md` | 🟢 **data is CC BY 4.0**; MIT covers `pipeline/` |
+
+🔴 **`LICENSE-DADOS.md` at the root is a 404 — the grant is one directory down.** 🔵 **Two independent
+oracles, one blind spot, one cause.** 🟢 **The fix is visible in the same publisher's other two repos:** a
+split-grant index at the root, naming each licence and scoping it to explicit paths — which the ladder reads
+correctly. **Convention, not tooling.** 🔴 **`Gap 370`: `compose/code/p199-perfile-license/` already does
+per-path probing and is not wired in.**
+
+### 🟢 `P971` — an Apache *header notice* masquerading as an Apache *licence*
+
+[`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE) · `LICENSE` **1 865 B** · `main` · `41ae3bd` · 2★.
+🔴 **Canonical Apache-2.0 is 11 357 B.** This is the title block plus the *"Licensed under… obtain a copy at
+<URL>"* notice — **29 non-empty lines, and a grep for "Grant of Patent License", "Grant of Copyright
+License", "Redistribution", "trademark" and "APPENDIX" returns nothing.** 🔵 **The grant is real by
+reference; the terms are not in the repo — so the patent grant that is the whole reason to prefer Apache
+over MIT ships as a URL.** 🔴 **Invisible to every instrument here, because a title-block classifier returns
+`Apache-2.0` and is not wrong.**
+
+### 🟢 The regulatory sweep: three gaps discharged, one narrowed, two standing
+
+| pass-92 lead | pass 93 |
+|---|---|
+| **H.R. 8747**, *"unresolved for a third consecutive pass"* | 🟢 **DISCHARGED** — reported out of House Education and Workforce **21 Jul 2026, amended, 18–15**; **no floor vote, not enacted.** 🔴 **And it is a funding-eligibility bill, not a mandate**: it amends ESEA 1965 so AI curriculum and teacher training become permissible uses of existing federal K-12 funds |
+| **Canada**, *"name the instrument, not the region"* | 🟢 **DISCHARGED on the first attempt.** BC: ministry guidance (2023) + new K-12 resources by May 2026 + planned advisory committee + a post-secondary model-principles document and a Jan 2026 provincial resource. Alberta: a **three-year partnership with Amii** to build a framework, plus ASBA policy guidance (Sep 2024). 🔴 **Ontario: no ministry directive — only OASBO/ECNO board guidance (2025), and the TDSB has publicly asked the ministry for a provincial strategy** |
+| **the UAE**, *"the one lead worth chasing next pass"* | 🟢 **DISCHARGED — and it was a real instrument behind a wrong label.** Cabinet-approved AI curriculum, **compulsory kindergarten → Grade 12** in government schools, seven strands, announced **May 2025**. 🟢 **A fifth jurisdiction mandating AI instruction**, and it resolves pass 92's recorded misattribution. 🟡 Standalone-subject timing and private-school scope are contradicted across sources and are **not** recorded as settled |
+| **India, higher education (AICTE/UGC)** | 🟡 **NARROWED, still open.** AICTE activity is documented but entirely secondary and undated (2025 *"Year of AI"*, 14 000+ institutions asked for AI implementation plans, model-curriculum revision committee); **UGC confirmed to have issued nothing dedicated** |
+| **Africa and the Middle East as separable markets** | 🟡 **Half FALSE now:** the UAE mandate **is** a dated national instrument in the region. 🔴 **What remains is purely this KB's five-value region vocabulary** — a Gulf and a Nordic engagement are both "EMEA". A schema limit, not an absence in the world |
+| **GitHub Trending** | 🔴 **STANDS — fifth consecutive zero.** The query is retired to a record-keeping role |
+
+🟢 **EMEA instrument, with a date corrected before it entered the KB:** the European Commission's updated
+**ethical guidelines on AI and data in teaching and learning**, published **5 March 2026** (one of four
+Digital Education Action Plan guideline sets), superseding the 2022 version, written by the Working Group
+convened through the **European Digital Education Hub**. 🔴 **A newsletter reported it as "9 June"; it is 5
+March.** 🔵 **Its audience is teachers and school leadership, not ministries — the Commission answering
+Article 4 with capability, which is purchasable.**
+
+🔴 **And `T4`'s wrong date fired a FIFTH time, in an otherwise-correct current source** commenting on that
+very update: *"obligations for Annex III high-risk AI systems apply from 2 August 2026."* 🔵 **Right that
+education is high-risk, wrong by sixteen months on the deadline. Five instances across five passes means the
+wrong date is the market's majority reading** — so a client's incumbent adviser has probably given them the
+wrong deadline, and arriving with the dated Council decision is a differentiator.
+
+🟢 **LATAM gained the best regional evidence base in this KB:** UNESCO IESALC with UNU-IAS, *AI
+Implementation in Higher Education in Latin America and the Caribbean*, launched **9 September 2026** —
+**200 institutions, 19 countries.** **87 %** use AI somewhere, **74 %** in teaching and learning, **57 %** in
+research, **26 %** have a formal strategy, and 🔴 **only 9 % evaluate how their AI implementation performs.**
+🔵 **Ten times as many universities using AI as measuring what it delivers — an unserved service line with a
+named buyer who has already spent the money.** 🔴 **Provenance trap recorded: the 19 % / 42 % / 45 % figures
+circulating alongside belong to a *different* 2025 UNESCO Chairs survey and are not comparable. Not used.**
+
+🔴 **Market sizing: the disagreement is now inside a single firm's own numbers.** MarketsandMarkets' regional
+series — NA **USD 951 M**, Europe **USD 512.6 M**, APAC **USD 591.6 M**, Rest-of-LATAM **USD 18.2 M** (all
+2024) — **sums to ≈ USD 2.07 B**, against a 2026 band of **USD 7–11.4 B** from the firms in this KB's table.
+🔵 **Two years of 40 % growth does not bridge that; the gap is scope, not timing.** 🔴 **It cannot be closed:
+`marketsandmarkets.com` is egress-blocked, and no high-series firm publishes a geography breakdown.**
+🟢 **New rule: never state a market size in an education deck without naming the scope beside it.**
+
+---
+
 ## 2026-10-10 — pass 92: the learner-model tier opens (Gap 335, eight passes), two platform licences are corrected to GPL-2.0, and GitHub Trending returns zero industry repos for a fourth pass
 
 **APPEND-ONLY — history is below. Second pass of this date.**

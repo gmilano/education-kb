@@ -1,0 +1,20 @@
+# pass 93, 2026-10-10.  Hand-run oracle map (grant-ladder-v4's oracles, no classifier).
+# Columns: slug  status  ref  sha7  file  bytes  http  title_block_family  note
+# FAMILY IS READ, NOT CLASSIFIED: this pass could not execute compose/code/lib/license_family.sh
+# (sandbox declines repository code) and P237 forbids forking it, so the family column records what
+# the payload's TITLE BLOCK says, read by the pass.  P970.  Re-derive with v4 next pass.
+CAHLR/pyBKT	PRESENT	master	cc1682e	LICENSE	1132	200	MIT	holder="Computational Approaches to Human Learning (CAHL) Research, zp@berkeley.edu" -> North America (P800)
+nd-ball/py-irt	PRESENT	master	6514928	LICENSE	1121	200	MIT	holder="John Lalor <john.lalor@nd.edu> and Pedro Rodriguez" -> North America (P800)
+eribean/girth	PRESENT	master	daf2277	LICENSE.txt	1064	200	MIT	LICENSE=404 LICENSE.md=404; only the 24-name reach finds this grant; holder="eribean" (pseudonym, unplaced)
+douglasrizzo/catsim	PRESENT	dev	7e6caae	LICENSE	1514	200	BSD-3-Clause	DEFAULT BRANCH IS dev; holder="Douglas De Rizzo Meneghetti"; LATAM claim rests on docs host douglasrizzo.com.br (README), NOT the payload -> weaker than P800
+open-spaced-repetition/py-fsrs	PRESENT	main	9446cb0	LICENSE	1079	200	MIT	holder="Open Spaced Repetition" (org, no geography -> unplaced)
+wwrwbs/AI_AWE	PRESENT	main	41ae3bd	LICENSE	1865	200	APACHE-2.0-BY-REFERENCE	P971: title block + "obtain a copy at <URL>" notice ONLY. 29 non-empty lines. grep finds NO "Grant of Patent License", "Grant of Copyright License", "Redistribution", "trademark", "APPENDIX". Canonical Apache-2.0 = 11357 B.
+bncc-dev/bncc-dados	PRESENT	main	daabd7d	LICENSE	1073	200	MIT	P969: ROOT SAYS MIT. Data under dados/ is CC BY 4.0 per README + dados/LICENSE.md. Root LICENSE-DADOS.md = 404. GitHub sidebar also reports MIT only.
+bncc-dev/bncc-pacotes	PRESENT	main	ac9feb8	LICENSE	1299	200	SPLIT-INDEX(MIT+CC-BY-4.0)	root index names 2 families and scopes each to explicit paths -> a real grant under P965's measured threshold (0-2 families). GitHub sidebar: "License and 2 other licenses found".
+bncc-dev/bncc-benchmark	PRESENT	main	4713901	LICENSE	911	200	SPLIT-INDEX(MIT+CC-BY-4.0)	root index; MIT scoped to harness/ and test/, CC BY 4.0 to itens/ resultados/ METODOLOGIA.md
+bncc-dev/bncc-benchmark	PRESENT	main	4713901	LICENSE-CODIGO.md	1286	200	MIT	referenced full text VERIFIED PRESENT
+bncc-dev/bncc-benchmark	PRESENT	main	4713901	LICENSE-DADOS.md	577	200	CC-BY-4.0-BY-REFERENCE	points at creativecommons.org/licenses/by/4.0/; attribution clause names MEC/CNE -> LATAM/Brazil from the payload
+dfdb76/bncc-mcp	PRESENT	main	f94ca6a	LICENSE	1218	200	MIT	independent 2nd MCP over the BNCC; holder="dfdb76" (username -> region NOT P800-grade)
+moodle/moodle	PRESENT	main	f205347	COPYING.txt	35147	200	GPL-3.0	CONTROL. Byte-identical to pass 92 AND at the same SHA -> a re-read of the same object, NOT an independent 11th measurement.
+OS4ED/openSIS-Classic	NO-PAYLOAD/3-of-24-PROBED	master	5d546f2	-	-	404	-	PARTIAL REACH, STATED: only LICENSE, LICENSE.txt, LICENSE.md were probed, not all 24 names. Reproduces the shelf's existing no-grant verdict; it does NOT independently establish a 24-name negative.
+CAHLR/pyBKT-invented-control-p93	ABSENT	-	-	-	-	-	-	NEGATIVE CONTROL. git ls-remote exit 128, "could not read Username" with prompts disabled.

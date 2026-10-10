@@ -6,23 +6,36 @@ updated: 2026-10-10
 
 # Education — foundational repos
 
-**Pass 92, 2026-10-10.** ⏱️ **Second pass of this date.** Resolved with
-`compose/code/grant-ladder-v4/ladder.sh`: existence by `git ls-remote --symref`, **licence read from
-the payload** pinned to the resolved SHA, **24 candidate filenames at a 1-byte floor** — and, the
-change that matters this pass, **classified by the shared `compose/code/lib/license_family.sh`
-instead of a classifier of the instrument's own** (`P237`). Two-sided control passed:
-`moodle/moodle` → `COPYING.txt` **35 147 B** (tenth reproduction), two invented slugs `ABSENT`.
-`—` in ★ means not read this pass.
+**Pass 93, 2026-10-10.** ⏱️ **Third pass of this date** (91 ran 23:0x–00:00 UTC, 92 ran 00:4x–01:3x,
+this one later the same day).
 
-🔴 **One row on this page was WRONG for a pass, and it was the licence row of a platform.**
-[`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) was published here as *"**LGPL-3.0** ·
-18 025 B — **LGPL: linkable**"*. **Its payload's title block reads `GNU GENERAL PUBLIC LICENSE,
-Version 2, June 1991`. It is GPL-2.0, and GPL-2.0 is not linkable that way.** 🔵 **And this KB
-already knew**: `repos/trending.md` recorded *"the row that decides a project: `oat-sa/tao-core` is
-GPL-2.0"* in an earlier pass, derived by reusing the shared classifier. Pass 91 re-derived it with a
-forked classifier and regressed it. 🟢 Corrected below, mechanism in
-`compose/code/grant-ladder-v4/README.md` (`P960`), and the check that catches the class in
-`compose/code/p963-shelf-licence-agreement/`.
+🔴 **The instrument changed again, and this time because the pass could not run the shelf's own.**
+`compose/code/grant-ladder-v4/ladder.sh` is committed and correct, but **this session's sandbox declines
+to execute repository code**, so pass 93 could not call it. 🔴 **The tempting move — write a fresh
+classifier — is exactly what `P237` forbids and exactly what cost pass 91 two platform licences.**
+🟢 **So pass 93 wrote no classifier at all.** It ran v4's *oracle map* by hand and **printed the
+payload's title block instead of matching on it**:
+
+| step | oracle | pass 93 |
+|---|---|---|
+| existence · default ref · SHA | `git ls-remote --symref` | ✅ ran |
+| licence payload | `raw.githubusercontent.com/<slug>/<SHA>/<name>`, HTTP 200 + ≥ 1 B | ✅ ran |
+| licence **family** | `lib/license_family.sh` | 🔴 could not execute → 🟢 **title block printed and read, not classified** |
+
+🆕 🔵 **`P970` — when the shared classifier cannot be run, the honest fallback is to decline to classify,
+not to fork.** Every new row below carries the bytes, the filename, the ref and the SHA, so v4 can
+re-derive it mechanically next pass and disagree with this pass on the record.
+
+**Two-sided control.** 🟡 `moodle/moodle` → `COPYING.txt` **35 147 B** at `main` · `f205347` —
+byte-identical to pass 92 **and at the same SHA**, so this is a re-read of the same object rather than an
+independent eleventh measurement. **Stated as such instead of counted as a reproduction.** 🟢 Invented
+slug `CAHLR/pyBKT-invented-control-p93` → `ABSENT` (git exit 128, auth prompt refused). 🟢 And a
+*third-party* control that cost nothing: [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic)
+returned **404 on `LICENSE`, `LICENSE.txt` and `LICENSE.md`** at `master` · `5d546f2` — independently
+reproducing the no-grant negative `verticals/solutions.md` already carries, with a different instrument.
+
+🔵 **Rows not marked 🆕 are carried at their pass-92 SHAs and were NOT re-read this pass.** `—` in ★ means
+not read this pass.
 
 A *foundation* here is a repo a studio can standardise on **across clients**, independent of which LMS any one
 client runs. The useful property of this tier is that it sits on spec boundaries (SCORM, xAPI, cmi5, QTI,
@@ -43,6 +56,60 @@ already runs and get learner data *out* of it.
 | [`celtic-project/LTI-PHP`](https://github.com/celtic-project/LTI-PHP) | 🟡 **LGPL-3.0** · 7 651 B · `master` · `1f47c93` | — | **EMEA** (UK) | LTI 1.3 tool provider. 🟡 LGPL — link, do not fork into a closed binary. |
 | [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | **Apache-2.0** · 13 185 B · `develop` · `0a66b52` | — | **North America** (1EdTech) | Open Badges validation. The credentialing tier's conformance gate. |
 | 🆕 [`edly-io/pxc`](https://github.com/edly-io/pxc) | **Apache-2.0** · 11 358 B · `main` · `01114d3` | 9 | 🔵 unplaced (publisher is the Open edX commercial vendor **edly.io**) | 🟢 **Watch this one.** A **proposed standard for learning activities explicitly intended to replace SCORM, H5P *and* LTI** — the three specs this entire tier is built on — published permissively by the vendor that packages Open edX. 🔵 **Nine stars and strategically larger than anything else on this page.** Not a dependency yet; a reason to keep the interop layer behind an interface you own. |
+
+## 🆕 Tier 1b — a national curriculum as verified open data, and the counter-example to `Gap 367`
+
+🔴 **The shelf has said for two passes that the reference frameworks of the curriculum mandates cannot be
+shipped:** `touretzkyds/ai4k12` (AAAI/CSTA) carries **no licence payload in 24 filenames**, and
+`learning-commons-org/knowledge-graph`'s `LICENSE.md` grants nothing at all (`P965`). 🟢 **For Brazil that
+is now false, and the counter-example is better engineered than anything else in this category.**
+
+**`bncc.dev`, run by Profy, publishes Brazil's *Base Nacional Comum Curricular* as verified open data** —
+and the licences were read from the payload at pinned SHAs:
+
+| repo | grant (payload · bytes · ref · SHA) | ★ | what it is |
+|---|---|---|---|
+| 🆕 [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | 🟡 **`LICENSE` = MIT** · 1 073 B · `main` · `daabd7d` — **but the data is CC BY 4.0, and that grant is NOT at the root** (see `P969` below) | 20 | **1 721 learning objectives** (1 580 from the three stages of basic education + 141 from the Computing supplement) in **JSON, SQLite and CSV**, with **per-record provenance** (`fonte` → spreadsheet row + PDF page) and a reproducible extraction pipeline that CI re-runs and rejects on divergence. 🟢 **1 576 of 1 580 BNCC-2018 texts match the official MEC/CNE PDF character for character; the 4 mismatches are documented in `DECISOES.md`. 141 of 141 for Computing.** 🔵 **That is a provenance claim with a denominator — rare anywhere on this shelf.** |
+| 🆕 [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🟢 **split grant, declared at the root** · `LICENSE` 1 299 B (index) · `main` · `ac9feb8` → **MIT** for `packages/*/src/`, `python/bncc/*.py`, `mcp-worker/src/`, `scripts/`, tests and config; **CC BY 4.0** for the data | 9 | npm `@bncc/dados` 0.3.1, npm `@bncc/mcp` 0.2.0, PyPI `bncc` 0.2.0, plus a hosted MCP worker. 🟢 **The MCP server exposes 7 tools** (`bncc_lookup`, `bncc_buscar`, `bncc_listar`, `bncc_decodificar`, `bncc_estatisticas`, `bncc_estrutura`, `bncc_progressao_ei`) **with the dataset embedded, so queries run locally.** 🟡 All three packages are pre-1.0. |
+| 🆕 [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | 🟢 **split grant, declared at the root** · `LICENSE` 911 B (index) · `main` · `4713901` → **MIT** for `harness/` and `test/`; **CC BY 4.0** for `itens/`, `resultados/`, `METODOLOGIA.md` | 9 | An **open hallucination benchmark over the BNCC**. See `intel/trends.md` `T11` — it carries the most useful number this pass produced. 🟢 **Its README declares a conflict of interest in its own words**: *"Vale declarar o conflito de interesse: a Profy opera produtos que usam LLMs sobre a BNCC."* |
+| 🆕 [`dfdb76/bncc-mcp`](https://github.com/dfdb76/bncc-mcp) | **MIT** · `LICENSE` 1 218 B · `main` · `f94ca6a` | — | An **independent** MCP server over the BNCC skills, from a different author. 🔵 **n=2 for MCP × national curriculum**, which is the same "new shape, not n=1" test the shelf applied to MCP × SCORM in pass 92. |
+
+🔵 **Region, and the evidence class.** **LATAM (Brazil)** — and not by inference from the subject matter:
+the `bncc-pacotes` and `bncc-benchmark` licence payloads are **written in Portuguese**, and the data's
+attribution clause names **MEC/CNE**, Brazil's education ministry and national council. The payload itself
+carries the region.
+
+### 🔴 🆕 `P969` — the grant ladder reads repo-root filenames only, so a per-directory data licence is invisible to it
+
+🔴 **`bncc-dados` is the row that proves it, and the cost is an attribution obligation, not a nuance.**
+
+| oracle | what it reports for `bncc-dev/bncc-dados` |
+|---|---|
+| the 24-filename ladder at the repo root | 🔴 **MIT** (`LICENSE`, 1 073 B) |
+| GitHub's own licence sidebar | 🔴 **"MIT license"**, nothing else |
+| the repo's README and `dados/LICENSE.md` | 🟢 **data under `dados/` is CC BY 4.0**; MIT covers `pipeline/` |
+
+🔴 **A repository whose entire purpose is the dataset presents MIT at the root, and both automated oracles
+agree on the wrong answer for the artefact a studio would actually ship.** `LICENSE-DADOS.md` at the root
+is a **404** — the grant is one directory down, where 24 root filenames cannot reach.
+🔵 **Two independent oracles, one blind spot, one cause: root-only detection.** That is the strongest form
+this finding can take, because it cannot be dismissed as a defect in this KB's instrument.
+
+🟢 **And the same publisher shows the fix in its own other two repos**: `bncc-pacotes` and `bncc-benchmark`
+put a **split-grant index at the root** that names each licence and scopes it to explicit paths. The ladder
+reads those correctly. **Convention, not tooling, is what makes a split grant legible.**
+
+🟢 **`P965`'s measured threshold survives a payload it was not built on.** Pass 92 set it at *a real grant
+names 0–2 families; a framework document names 3, from three lineages*. These index files name **2** (MIT +
+CC BY 4.0), from two lineages, and they **are** real grants — each points at the full text
+(`LICENSE-CODIGO.md` 1 286 B, `LICENSE-DADOS.md` 577 B, both HTTP 200, both verified present this pass).
+🔵 **Same document *shape* as `learning-commons-org/knowledge-graph`, opposite usability — and the
+threshold separates them correctly.**
+
+🔴 **The fix this pass does not pretend to have made.** `compose/code/p199-perfile-license/` already does
+per-path licence probing — it exists, and it was run on `INGInious`. **It is not wired into the ladder**,
+and this pass could not execute either. **Recorded as `Gap 370`**, with the payload that proves it needed,
+so the next pass that can run code has a failing case ready.
 
 ## Tier 2 — assessment and automated feedback
 
@@ -77,6 +144,45 @@ them; only reading the README does. This is the same shape as `Gap 368`'s acrony
 `topics/lms` (**LMS = Least Mean Squares**, **LMS = Library Management System**) — 🔵 **in this
 industry, name collision is a recurring property of the search space, so the canonical slug belongs
 in the shelf row and not just the project name.**
+
+## 🆕 Tier 2c — the **psychometric** layer, and why it outranks the deep-learning one for a deliverable
+
+🟢 **Pass 92 discharged `Gap 335` with one library** — `pykt-team/pykt-toolkit`, deep knowledge tracing —
+and wrote that the learner model had arrived. 🔴 **That was half the answer.** Naming three more
+techniques (`P955` for a third pass running) returns a **complete, composable, permissive stack**, and the
+important finding is the ordering inside it:
+
+🔵 **The classical psychometrics layer is more production-ready than the deep-learning layer, and more
+defensible.** `catsim` has 877 commits and a BSD grant; `pykt-toolkit` is a research benchmark. More to the
+point, **IRT and BKT produce a parameter you can show a regulator** — an item difficulty, a per-skill
+mastery probability — whereas a DKT network produces an activation. Under the EU AI Act's Annex III,
+assessing learning outcomes is high-risk and owes an explanation (`intel/trends.md` `T9`). **A 2-parameter
+logistic item curve is an explanation. A trained LSTM is not.**
+
+| repo | grant (payload · bytes · ref · SHA) | ★ | region | role in a build |
+|---|---|---|---|---|
+| 🆕 [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | **MIT** · `LICENSE` 1 132 B · `master` · `cc1682e` | 282 | 🟢 **North America** (UC Berkeley — the payload's copyright line reads *"Computational Approaches to Human Learning (CAHL) Research, zp@berkeley.edu"*, `P800`) | **Bayesian Knowledge Tracing** and its variants, scikit-learn-shaped (`Model.fit`/`predict`), EM-fitted. 🟢 **The cheapest real mastery estimate on this shelf**: four interpretable parameters per skill (prior, learn, slip, guess), each of which a teacher can be shown. |
+| 🆕 [`nd-ball/py-irt`](https://github.com/nd-ball/py-irt) | **MIT** · `LICENSE` 1 121 B · `master` · `6514928` | 173 | 🟢 **North America** (Notre Dame — payload copyright line *"John Lalor <john.lalor@nd.edu> and Pedro Rodriguez"*, `P800`) | **Bayesian Item Response Theory** on Pyro/PyTorch, GPU-scalable. Calibrates *item* difficulty and discrimination and *learner* ability on the same scale. 🔵 **This is the calibration step; it does not select items.** |
+| 🆕 [`eribean/girth`](https://github.com/eribean/girth) | **MIT** · `LICENSE.txt` 1 064 B · `master` · `daf2277` | 126 | 🔵 unplaced (payload copyright line is a pseudonym — *"eribean"* — no geography to take, so none is asserted) | The second IRT estimator, and the one **`catsim`'s own README points at**. 🟡 Note the filename: `LICENSE` is a **404** here and the grant lives in `LICENSE.txt` — the ladder's 24-name reach is what makes this row readable at all. |
+| 🆕 [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | **BSD-3-Clause** · `LICENSE` 1 514 B · `dev` · `7e6caae` | 153 | 🟡 **LATAM** (Brazil) — ⚠️ **evidence class is weaker than `P800`**: the payload's copyright line is a personal name only, and the Brazil placement comes from the project's own documentation host, `douglasrizzo.com.br`, linked throughout the README. Labelled, not upgraded. | **Computerized Adaptive Testing engine** — item selection, ability estimation, stopping rules, plus a simulator. 🟢 **The only CAT engine on this shelf, and the only psychometrics row with a LATAM claim.** 🟡 Default branch is `dev`, not `main` — pin it. |
+| 🆕 [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | **MIT** · `LICENSE` 1 079 B · `main` · `9446cb0` | 506 | 🔵 unplaced (payload copyright line is the org, *"Open Spaced Repetition"*) | **FSRS scheduling** — when to show an item again, as a library. 🔵 **The complement to mastery, not a duplicate of it:** BKT/IRT say *whether* a learner knows a skill; FSRS says *when they will forget it*. Highest star count in this tier. |
+| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **MIT** · 1 066 B · `main` · `77c3e90` | ~430 | 🔵 unplaced | 🟢 Deep knowledge tracing: DKT, DKVMN, SAKT, SAINT, AKT, GKT, LPKT over 7 datasets (NeurIPS 2022). **Carried from pass 92 at its pass-92 SHA; not re-read this pass.** 🔵 Read it as the research ceiling, and `pyBKT` as the deliverable floor. |
+
+### 🟢 The seam is named by the tools themselves, not inferred by this KB
+
+🔵 **This is why the tier composes instead of overlapping, and the evidence is in `catsim`'s README
+verbatim:** *"**catsim does not implement item parameter estimation.** I have had great joy outsourcing
+that functionality to the [mirt] R package."* It then points Python users at exactly
+[`eribean/girth`](https://github.com/eribean/girth), [`eribean/girth_mcmc`](https://github.com/eribean/girth_mcmc)
+and [`nd-ball/py-irt`](https://github.com/nd-ball/py-irt).
+
+🟢 **So the wiring is documented by the dependency, not designed by us:** `py-irt` (or `girth`) calibrates
+the item bank → `catsim` runs the adaptive session against it → `pyBKT` tracks per-skill mastery across
+sessions → `py-fsrs` schedules the review. **Four permissive libraries, one seam each, no overlap.**
+Costed as `P93-A` in `compose/patterns.md`.
+
+🔴 **And one honest subtraction.** `girth_mcmc` is named by `catsim` but **was not resolved this pass** —
+it is a lead, not a row. It does not appear in the table above.
 
 ## Tier 3 — delivery, runtime and agent substrate
 
@@ -142,14 +248,43 @@ test suite cannot be redistributed in a client deliverable.** Conformance must b
 
 ## Count, stated plainly
 
-**22 foundational rows above the flag line; 21 of them permissive (MIT / Apache-2.0 / BSD), 1 LGPL.**
-The interoperability, assessment and learner-model tiers really are the permissive heart of this
-industry — that finding survives a fourth measurement, on a larger sample and a **repaired** instrument.
+**31 foundational rows above the flag line, 9 of them added this pass.** 🟢 **30 are permissive for the
+CODE** (MIT / Apache-2.0 / BSD); **1 is LGPL** (`celtic-project/LTI-PHP`).
 
-🔴 **One honest subtraction from last pass's count.** Pass 91 reported *"19 of 20 permissive, 1 LGPL"*.
-That line was true of the page as it stood **only because `oat-sa/tao-core` was misfiled as LGPL-3.0**;
-it sits below the flag line either way, so the headline count is unchanged by the correction — but the
-LGPL row it referred to is `celtic-project/LTI-PHP`, and **`tao-core` was never one of the 20.** Stated
-rather than silently re-tallied.
+🟡 **And one qualifier the previous counts did not need.** **3 of the 31 carry a CC BY 4.0 obligation on
+their DATA** — the three `bncc-dev` rows. CC BY 4.0 is an **attribution duty, not a copyleft one**, so it
+does not move those rows below the flag line; but **counting them as plainly "permissive" without naming
+the data grant is precisely the elision `P969` exists to punish.** Named here instead.
+
+🔵 **What the headline number does and does not mean.** 9 rows were resolved from the payload this pass;
+**the other 22 are carried at their pass-92 SHAs and were not re-read.** So this is not a 31-row
+measurement — it is a 9-row measurement on top of a 22-row inheritance, and the next pass that can run
+`grant-ladder-v4/ladder.sh` should re-derive all 31 and disagree with this page on the record if it finds
+cause.
+
+🟢 **The standing finding survives a fifth measurement, and widens:** the interoperability, assessment,
+learner-model and now **psychometric** tiers are the permissive heart of this industry. 🔵 **Pass 93's
+addition to that claim is a ranking, not just a row count:** within the learner-model tier, the
+*permissive* and the *explainable* options turn out to be the same ones — BKT, IRT and CAT are all
+MIT/BSD **and** all produce a parameter you can defend in an Annex III audit, while the copyleft and the
+black-box options sit together at the other end.
+
+🔴 **One honest subtraction from pass 91's count, carried forward.** Pass 91 reported *"19 of 20
+permissive, 1 LGPL"*. That line was true of the page as it stood **only because `oat-sa/tao-core` was
+misfiled as LGPL-3.0**; it sits below the flag line either way, so that headline was unchanged by the
+correction — but the LGPL row it referred to is `celtic-project/LTI-PHP`, and **`tao-core` was never one
+of the 20.** Stated rather than silently re-tallied.
+
+## Open gaps on this page
+
+- 🔴 🆕 **`Gap 370` — the ladder cannot see a per-directory licence.** `compose/code/p199-perfile-license/`
+  already does per-path probing and is not wired into `grant-ladder-v4`. Failing case ready:
+  `bncc-dev/bncc-dados` → root `LICENSE` MIT, data `dados/LICENSE.md` CC BY 4.0, root `LICENSE-DADOS.md`
+  404. See `P969`.
+- 🔴 🆕 **`eribean/girth_mcmc` not resolved.** Named by `catsim`'s README, not probed this pass. A lead.
+- 🔴 **`Gap 369` carried.** Nothing on this shelf wires a knowledge-tracing model into an agent turn, so
+  `pyBKT`/`pykt-toolkit` → agent is a build, not an integration. 🟡 **Pass 93 narrows it rather than
+  closing it:** `P93-A` in `compose/patterns.md` now specifies that wiring concretely, but **no repository
+  found this pass ships it**.
 
 *Prior pass content is preserved in git history at commit `306eb06` and earlier.*

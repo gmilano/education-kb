@@ -6,10 +6,28 @@ updated: 2026-10-10
 
 # Education — vertical platforms you can customise with AI
 
-**Pass 92, 2026-10-10.** ⏱️ **Second pass of this date.** Licences read from the payload at a pinned
-SHA with `compose/code/grant-ladder-v4/ladder.sh` — **24 filenames at a 1-byte floor**, and classified
-by the **shared** `compose/code/lib/license_family.sh` rather than by a classifier of the instrument's
-own (`P237`). `—` in ★ means not read this pass.
+**Pass 93, 2026-10-10.** ⏱️ **Third pass of this date.** 🔴 **No platform row on this page was
+re-resolved this pass** — every licence here is carried at its **pass-92** SHA, read from the payload then
+by `compose/code/grant-ladder-v4/ladder.sh`. 🔵 **Pass 93 could not execute that instrument** (this
+session's sandbox declines to run repository code) and **declined to write a replacement classifier**,
+which is what `P237` requires and what pass 91 violated at the cost of two of the rows on this very page
+(`P970`, `repos/foundations.md`). `—` in ★ means not read this pass.
+
+🟢 **One third-party control was run, and it reproduced this page's own negative with a different
+instrument.** [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) → `master` · `5d546f2`,
+and **404 on `LICENSE`, `LICENSE.txt` and `LICENSE.md`** — independently confirming the *"no grant at
+all"* verdict recorded below. 🔵 **A negative that two unrelated instruments reach the same way is the
+strongest kind on this page**, and it cost three HTTP requests.
+
+🟡 **And one row on this page is now flagged for re-derivation rather than corrected.**
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) is carried here as LGPL-3.0,
+and a current vendor-adjacent source this pass restates *"LGPL v3"*. 🔴 **That is a badge-and-blog
+agreement, not a payload read, and it is exactly the evidence class that was wrong for `tao-core` and
+`i-educar` one pass ago** — both of which were published as LGPL-3.0 and are GPL-2.0.
+🔵 **No correction is asserted: the payload was not read this pass.** 🔴 **But `openeducat_erp` is the
+highest-traffic LGPL claim left on this page, and the LGPL→GPL-2.0 error has already fired twice in this
+exact family — so it is named as `Gap 373`: re-derive it from the payload before any engagement relies on
+"link, don't absorb".**
 
 ## 🔴 This file carried the most expensive error in this KB, and it is corrected here
 
@@ -176,8 +194,29 @@ any count drawn from an acronym topic.**
 | **offline / low-connectivity** delivery | 🟢 **`Kolibri` (MIT)** | built for it; see `repos/foundations.md` |
 | a **Brazilian public-sector SIS** | 🔴 **`i-educar` (GPL-2.0)** | 🔴 **CORRECTED — was published here as LGPL-3.0 / "link, don't absorb".** Real municipal deployments, still the right regional anchor; **integrate across a service boundary, or budget for reciprocity.** No permissive SIS exists. |
 | a **high-stakes QTI assessment** platform | 🔴 **`tao-core` (GPL-2.0)**, or 🟢 **`Numbas` (Apache-2.0)** for browser-native maths assessment | 🔴 **CORRECTED — `tao-core` was published here as LGPL.** For a closable deliverable prefer `Numbas` + `Submitty` (BSD); reach for TAO when full QTI conformance is the requirement and accept the boundary. |
-| 🆕 **mastery-gated progression** / adaptive sequencing | 🟢 **`pykt-toolkit` (MIT)** | the learner-model layer this shelf lacked for eight passes; see `repos/foundations.md` Tier 2b |
+| 🆕 **mastery-gated progression** / adaptive sequencing | 🟡 **`pykt-toolkit` (MIT)** for predictive accuracy, 🟢 **`pyBKT` (MIT)** for a deliverable | 🔴 🆕 **p93 reverses the default here.** Both are MIT, but under Annex III assessing learning outcomes owes an explanation: `pyBKT`'s prior/learn/slip/guess are explainable, a trained network's activation is not. See `repos/foundations.md` Tier 2c and `P93-A`. |
+| 🆕 p93 **adaptive testing** — shorter tests, same confidence, defensible | 🟢 **`catsim` (BSD-3-Clause)** + **`py-irt` (MIT)** | the only CAT engine on this shelf; `catsim` cannot calibrate items and says so, `py-irt` does it. 🔴 **Pin `catsim`'s ref: its default branch is `dev`.** `P93-A` |
+| 🆕 p93 **BNCC-aligned content or tutoring (Brazil)** | 🟢 **`bncc-dados` (MIT code / CC BY 4.0 data)** + its MCP server | 🟢 **The national curriculum as audited open data** — 1 721 objectives, per-record provenance, 1 576/1 580 character-exact against the official MEC/CNE PDF. 🟢 **Embed the dataset, don't call it: measured 0.2 % vs 2.3 % hallucination** (`T11`). 🔴 **The CC BY 4.0 data grant is not at the repo root** (`P969`). `P93-B` |
+| 🆕 p93 **open-response / essay scoring** | 🔴 **nothing permissive and production-grade exists** | 🔴 `Gap 372`. The whole permissive supply is one 2★ Apache-by-reference research repo. **Scope essays out, or price a human grader into the loop** — this is the activity the EU AI Act names most explicitly and the one with the least open supply. |
 | 🆕 **LATAM programming education** with autograding | 🟡 **`mumuki-laboratory` (AGPL-3.0)** | Argentine, in real classroom use; integrate by LTI, don't absorb |
 | the client's **existing Moodle / Canvas / Open edX** kept | 🔴 build **beside** it, integrate via LTI 1.3 / SCORM / xAPI | GPL/AGPL reciprocity follows the modified work |
+
+🔵 🆕 **p93 — one addition to how this page should be read, because a new row broke its category.** Every
+row above answers *"which platform do we build on or beside?"*. 🟢 **`bncc-dados` is not a platform and
+does not belong in that question** — it is a **standards-data layer** that attaches to whichever platform
+the client already runs, which is why it appears in the rule table with no platform attached. 🔵 **The
+general form is worth stating: the most valuable permissive artefacts in this industry are increasingly
+not platforms at all** — they are spec implementations, verified datasets and psychometric libraries, all
+of which sit *beside* the client's LMS rather than replacing it. **That is the same conclusion
+`P91-RETIRED` reached from the platform side, arrived at from the data side.**
+
+## Open gaps on this page
+
+- 🔴 🆕 **`Gap 373` — re-derive `openeducat/openeducat_erp` from the payload.** Carried here as LGPL-3.0 on
+  badge-and-blog evidence; the LGPL→GPL-2.0 error has fired twice in this family already (`tao-core`,
+  `i-educar`). **Not corrected, because the payload was not read this pass — flagged so it is read next.**
+- 🔴 **No permissive SIS exists**, for any region. Unchanged, and re-stated because it is the most common
+  ask this page cannot answer well.
+- 🔴 **No permissive H5P *authoring* server** (the Node port is GPL too). Unchanged.
 
 *Prior pass content is preserved in git history at commit `306eb06` and earlier.*

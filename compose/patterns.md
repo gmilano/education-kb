@@ -6,11 +6,17 @@ updated: 2026-10-10
 
 # Education — compose patterns
 
-**Pass 92, 2026-10-10.** ⏱️ **Second pass of this date.** Every repo named below was resolved this pass by
-`git ls-remote --symref` with its **licence read from the payload** at the pinned SHA, using
-`compose/code/grant-ladder-v4/ladder.sh` over **24** candidate filenames at a **1-byte floor**, classified by
-the shared `compose/code/lib/license_family.sh` (`P237`). Each pattern names the specific repos, the licence
+**Pass 93, 2026-10-10.** ⏱️ **Third pass of this date.** Each pattern names the specific repos, the licence
 posture of the whole stack, and how the pieces wire together.
+
+🔴 **Provenance of the licences below, stated precisely because it differs by row.** The repos in `P93-A`
+and `P93-B` were resolved **this pass**: existence, default ref and SHA from `git ls-remote --symref`, the
+licence **read from the payload** at `raw.githubusercontent.com/<slug>/<SHA>/<file>`, and the family
+determined **by reading the payload's title block** — because this session's sandbox cannot execute
+`compose/code/grant-ladder-v4/ladder.sh`, and `P237` forbids forking its shared classifier to replace it
+(`P970`). 🟡 **Every repo in `P91-*` and `P92-A` is carried at its pass-92 SHA and was NOT re-resolved this
+pass.** 🔵 **So treat a pass-92 row as a pass-92 measurement, and re-run v4 before quoting a licence into a
+contract.**
 
 🔴 **`P91-E` was re-costed this pass because the licence it was built on was wrong.** It stated that
 `portabilis/i-educar` is LGPL-3.0 and that *"LGPL-3.0 permits exactly that, and this distinction makes the
@@ -18,7 +24,11 @@ engagement possible"*. **i-educar is GPL-2.0, which has no linking exception.** 
 integration boundary — and therefore the cost — changed. See `P91-E` below and
 `compose/code/grant-ladder-v4/README.md`.
 
-🟢 **One new pattern this pass (`P92-A`)**, enabled by `Gap 335`'s discharge.
+🟢 **Two new patterns this pass.** **`P93-A`** supersedes `P92-A`'s modelling layer with the psychometric
+stack (`repos/foundations.md` Tier 2c) — and `P92-A` stays on the page, because the two differ in a way that
+decides engagements rather than in detail. **`P93-B`** is the first pattern in this KB anchored on a
+**national curriculum published as audited open data**, and the first with a **measured** justification for
+its own central design choice.
 
 ## `P91-A` — The closable AI university platform (EMEA)
 
@@ -330,6 +340,174 @@ performance. **Pin `pykt-team/pykt-toolkit` by slug in the dependency manifest**
 pattern *expensive* is also what makes it *procurable*: an institution facing Annex III or an Ohio district
 policy needs a defensible decision trail, and **a mastery model with a teacher override and an LRS behind it
 is that trail.** 🔵 The same build satisfies Vietnam's 72-hour incident reporting with a log subscriber.
+
+## `P93-A` — 🆕 The adaptive assessment you can defend in an audit (supersedes `P92-A`'s modelling layer)
+
+**The ask it answers.** *"We want adaptive testing — shorter tests, same confidence — and when a parent or a
+regulator asks why a student got the item they got, or why the system says they haven't mastered a skill, we
+need an answer that isn't 'the model decided'."* 🔵 **`P92-A` answers the first half. It does not answer the
+second half, and under Annex III the second half is the one that blocks go-live.**
+
+🔴 **Why this is a separate pattern rather than an edit to `P92-A`.** `P92-A` estimates mastery with a
+**deep** tracing model (`pykt-toolkit`: DKT, AKT, SAINT). That is the right choice when the goal is
+predictive accuracy over a large interaction corpus. 🔴 **It is the wrong choice when the deliverable has to
+explain itself**, and *"assessing learning outcomes"* is named high-risk in the EU AI Act's Annex III, which
+owes the person assessed an explanation. 🟢 **The classical psychometric stack gives the same loop with
+parameters a human can read — and, measured this pass, it is also the better-licensed and more
+production-worn option.** `intel/trends.md` `T10`.
+
+**Stack — permissive end to end. All five modelling rows were resolved from the payload this pass.**
+
+| layer | component | grant (payload · bytes · ref · SHA) | posture |
+|---|---|---|---|
+| item calibration | [`nd-ball/py-irt`](https://github.com/nd-ball/py-irt) | **MIT** · `LICENSE` 1 121 B · `master` · `6514928` | 🟢 in the deliverable |
+| item calibration (alternative) | [`eribean/girth`](https://github.com/eribean/girth) | **MIT** · `LICENSE.txt` 1 064 B · `master` · `daf2277` | 🟢 — the one `catsim`'s own README points at |
+| adaptive session | [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | **BSD-3-Clause** · `LICENSE` 1 514 B · **`dev`** · `7e6caae` | 🟢 — 🔴 **pin the ref: the default branch is `dev`, not `main`** |
+| per-skill mastery | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | **MIT** · `LICENSE` 1 132 B · `master` · `cc1682e` | 🟢 in the deliverable |
+| review scheduling | [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | **MIT** · `LICENSE` 1 079 B · `main` · `9446cb0` | 🟢 optional, and cheap |
+| deep model, for comparison only | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **MIT** · 1 066 B · `main` · `77c3e90` (pass-92 SHA) | 🟡 **offline benchmark, not in the serving path** |
+| item bank | [`numbas/Numbas`](https://github.com/numbas/Numbas) | **Apache-2.0** · 11 357 B · `master` · `39b03e5` (pass-92 SHA) | 🟢 SCORM-packageable |
+| evidence trail | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **Apache-2.0** · 11 357 B · `main` · `cb794e4` (pass-92 SHA) | 🟢 |
+| orchestration | [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | **MIT** · 1 072 B · `main` · `12aeb0f` (pass-92 SHA) | 🟢 |
+| delivery | the client's LMS, via LTI 1.3 / SCORM | 🔴 theirs | 🔴 integrate, never fork |
+
+**Wiring — and the seams are the libraries' own, not ours.**
+
+1. **Author or import the item bank into `Numbas`**, tagged to skills. 🔵 Unchanged from `P92-A`, still the
+   manual step where the domain value sits, still budgeted as content work.
+2. **Calibrate the bank with `py-irt`.** Fit 2PL or 3PL over historical responses → **difficulty and
+   discrimination per item, ability per learner, on one scale.** 🔴 **Do this before any adaptive session
+   runs**: `catsim` selects items *using* these parameters and cannot produce them —
+   **its README says so in its own words**: *"catsim does not implement item parameter estimation."*
+   🟢 **That sentence is why this stack composes instead of overlapping**, and it is also the honest answer
+   to "why two IRT libraries?" — `girth` is the drop-in alternative the same README names.
+3. **Run the adaptive session with `catsim`**: initialiser → **item selector** → ability **estimator** →
+   **stopping rule**. 🟢 **The stopping rule is the commercial payload** — it is what turns "shorter tests"
+   from a claim into a parameter, and it is auditable: *stop when the standard error of the ability estimate
+   falls below X*.
+4. **Track mastery across sessions with `pyBKT`**, not within them. 🔵 **IRT answers "how able is this
+   learner right now, on this scale"; BKT answers "has this learner learned this skill yet".** Different
+   questions, and the institution asks both. `pyBKT`'s four parameters per skill — **prior, learn, slip,
+   guess** — are the ones you put on a teacher's screen.
+5. **Every response becomes an xAPI statement into `lrsql`** — the calibration corpus and the audit trail in
+   one store, as in `P92-A`.
+6. **Schedule retention with `py-fsrs`** where the subject rewards it (languages, vocabulary, clinical
+   facts). 🟡 Optional. 🔵 **It answers a question neither IRT nor BKT does — *when will they forget* — so
+   it is additive, not a third opinion on the same question.**
+7. **Benchmark the deep model offline against the psychometric one, and keep it offline.** 🟢 Run
+   `pykt-toolkit` on the same `lrsql` corpus and report the accuracy difference honestly. 🔵 **If DKT is
+   materially better on the client's data, that is a finding worth presenting — and still not a reason to
+   put it in the serving path of a high-risk decision without an explanation layer in front of it.**
+8. **Teacher override on every gate, logged.** 🔴 Non-negotiable, same as `P92-A`: the override log is the
+   Article 27 / human-oversight evidence.
+
+**Timeline.** 🟢 **5–7 weeks to a calibrated adaptive pilot on one course with ≥ ~300 historical responses
+per item-ish bank**; **+3–4 weeks** without historical response data, because calibration then needs a
+seeding round. 🔵 **Faster than `P92-A`'s 6–8 weeks for a reason worth saying out loud: IRT needs far less
+data than a deep tracing model, and classical psychometrics was designed for exactly the sample sizes a
+single institution actually has.**
+
+🔴 **What this pattern does *not* cover, stated before a client discovers it.** It is **structured
+assessment only** — items with scorable responses. 🔴 **Open-response and essay scoring is not in this stack
+and cannot be bolted on from this shelf**: the whole permissive supply is one 2★ research repository
+(`Gap 372`, `agents/top.md`). 🔵 **Which means the activity the EU AI Act names most explicitly is the one
+with the least open supply. Scope essays out, or price them as bespoke with a human grader in the loop.**
+
+🟡 **Two integration cautions, both measured.** `catsim`'s default branch is **`dev`** — pin it in the
+manifest or a `main`-assuming CI will fail. And `girth`'s grant lives in **`LICENSE.txt`**, not `LICENSE`;
+a shallow licence scanner will report it as ungranted (`P969`'s neighbourhood).
+
+🟢 **Where to sell it first.** 🟢 **EMEA** — Annex III makes the explainability the procurement criterion,
+and Jisc's 38-institution marking pilots show the sector is already buying in this area. 🟢 **North
+America** second, where Oklahoma's and Maryland's human-oversight rules and Ohio's district-policy deadline
+create the same need without the same deadline pressure. 🔵 **And `catsim` being Brazilian is a real asset
+in a LATAM pitch** — 🟡 though its placement rests on the project's documentation host rather than a payload
+copyright line, so say "Brazilian-authored", not "a Brazilian product".
+
+## `P93-B` — 🆕 Curriculum-aligned tutoring for Brazil, with the grounding decision made by measurement
+
+**The ask it answers.** A Brazilian state secretariat, municipal network or private group wants a tutor or a
+lesson-planning assistant that is **aligned to the BNCC** — and wants the alignment to be *true*, with the
+official code cited, not a plausible-looking label. 🔴 **This is the ask that fails most often in this
+industry, because an ungrounded model will produce a BNCC code that looks exactly right and is invented.**
+
+🟢 **And for once the size of that failure is measured, by a third party, reproducibly.**
+[`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) — 8 models, 300 items:
+
+| condition | hallucination rate | what it means for the build |
+|---|---|---|
+| 🔴 no source in context | **31.9 %** | 🔴 roughly **one citation in three is wrong**. Unshippable. |
+| 🟢 **dataset embedded in the prompt** | **0.2 %** | 🟢 **the design choice** |
+| 🟡 MCP tool call to the dataset | **2.3 %** | 🟡 **ten times worse than embedding, fourteen times better than nothing** |
+
+🔵 **So the architecture is decided by evidence rather than taste: embed the curriculum data in the context
+for alignment, and keep the tool call for what the data cannot answer.** `intel/trends.md` `T11`.
+
+**Stack.**
+
+| layer | component | grant (payload · bytes · ref · SHA) | posture |
+|---|---|---|---|
+| curriculum data | [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | 🟡 **`LICENSE` = MIT** 1 073 B · `main` · `daabd7d` — 🔴 **but the data under `dados/` is CC BY 4.0** (`P969`) | 🟢 in the deliverable, **with attribution** |
+| packages + MCP | [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🟢 **split grant at the root** · `LICENSE` 1 299 B · `main` · `ac9feb8` → MIT code + CC BY 4.0 data | 🟢 — `@bncc/dados` 0.3.1, `@bncc/mcp` 0.2.0, PyPI `bncc` 0.2.0. 🟡 **all pre-1.0: vendor the version** |
+| alignment regression | [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | 🟢 split · `LICENSE` 911 B · `main` · `4713901` → MIT harness + CC BY 4.0 items | 🟢 **run it as your CI gate, not as a citation** |
+| second MCP opinion | [`dfdb76/bncc-mcp`](https://github.com/dfdb76/bncc-mcp) | **MIT** · 1 218 B · `main` · `f94ca6a` | 🟡 independent implementation — useful as a cross-check |
+| tutor turn | [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) | **MIT** · 1 069 B · `main` · `032b5aa` (pass-92 SHA) | 🟢 — Colombian, **already Open edX-integrated** |
+| pt-BR content | [`belentani7/aprende-brasil`](https://github.com/belentani7/aprende-brasil) | **MIT** · 1 085 B · `main` · `bbeea5a` (pass-92 SHA) | 🟢 205 modules, **offline local fallback** |
+| autograding (optional) | [`mumuki/mumuki-laboratory`](https://github.com/mumuki/mumuki-laboratory) | 🔴 **AGPL-3.0** · 34 523 B · `master` · `fce1ede` (pass-92 SHA) | 🔴 **integrate across a network boundary; never absorb** |
+| offline delivery | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** · 1 097 B · `develop` · `d4fea9c` (pass-92 SHA) | 🟢 where connectivity binds |
+| SIS, if records are in scope | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🔴 **GPL-2.0** (**not** LGPL — see `P91-E`) | 🔴 service boundary only |
+
+**Wiring.**
+
+1. **Vendor `bncc-dados` into the deliverable** — JSON or SQLite, pinned to a commit, **not** fetched at
+   runtime. 🟢 **Its provenance is the selling point and it is checkable**: every record carries a `fonte`
+   (spreadsheet row + official PDF page), **1 576 of 1 580 BNCC-2018 texts match the MEC/CNE PDF character
+   for character**, the 4 mismatches are documented in `DECISOES.md`, and **CI re-runs the extraction
+   pipeline and rejects divergence.** 🔵 **A state secretariat can audit the dataset against its own
+   ministry's PDF. Almost nothing else in this KB can say that.**
+2. **🔴 Honour the data licence, and know that your tooling will not tell you to.** The code is MIT; **the
+   data is CC BY 4.0**, which is an **attribution obligation** — and the grant is in `dados/LICENSE.md`,
+   **not at the repo root**, where neither the 24-name ladder nor GitHub's own sidebar can see it
+   (`P969`). 🟢 **Put the attribution in the product's about screen and in the proposal's IP annex at the
+   start**, where it costs nothing; retrofitting it after a procurement review does not.
+3. **Embed, don't call — because 0.2 % beats 2.3 %.** Load the objectives for the relevant stage and
+   component into the context. 🟢 Use the MCP server (`@bncc/mcp`, **7 tools**, dataset embedded so queries
+   stay local) for **search and decoding across the whole base** — the long-tail lookups that will not fit
+   in context — and keep citation-critical paths on embedded data.
+4. **Gate every release on the benchmark harness.** 🟢 `bncc-benchmark`'s `harness/` is **MIT**, so run it
+   as your own regression suite against *your* prompt and *your* model: **a measured faithfulness number per
+   release, on the client's own configuration.** 🔵 **That converts "aligned to the BNCC" from a marketing
+   claim into a CI check with a number** — and it is the single most differentiating artefact in this
+   pattern.
+5. **Teacher validates before the student sees it.** Take the primitive from `fborrasumh/tutoria`: lesson →
+   **teacher validation** → student. 🔴 Not optional where assessment or progression is touched.
+6. **Deliver through what the network already runs** — Open edX (🔴 **AGPL-3.0**, integrate) or Moodle
+   (🔴 **GPL-3.0**, integrate), or `Kolibri` (MIT) where connectivity is the binding constraint.
+
+**Timeline.** 🟢 **4–6 weeks** to a BNCC-grounded lesson-planning assistant with a measured faithfulness
+number — **the fastest credible pattern on this page**, because the hard part (a verified, machine-readable,
+provenance-carrying curriculum base) is already built and granted. **+3–4 weeks** to attach a tutor turn and
+teacher validation; **+4 weeks** for offline delivery via `Kolibri`.
+
+🔴 **Three risks, named.** **(a) Pre-1.0 dependencies** — all three packages are below 1.0, so vendor the
+version and expect breaking changes. **(b) The benchmark's publisher has a declared conflict of interest** —
+*"a Profy opera produtos que usam LLMs sobre a BNCC"*, disclosed in its own README, with methodology, items
+and raw responses published so the numbers can be recalculated. 🔵 **A disclosed conflict with reproducible
+workings is a better position than an undisclosed one, and the right response is to re-run the harness
+yourself — which step 4 already does.** **(c) Its own two surfaces disagree on corpus size** (description:
+15 300 responses / 17 models; README: 19 models × 900, 17 100 published). 🟢 **Cite the grounding
+percentages, which are the study's headline; do not cite a corpus size from the description.**
+
+🟡 **Generalisation limit, so this pattern is not oversold.** The 0.2 % figure is **one benchmark, one
+curriculum, one language, 300 items.** 🔵 **The direction is almost certainly general; the magnitude is
+not.** Use it to justify the architecture — embed the standards data — **never to promise a client 0.2 %.**
+
+🟢 **And the portable half of this pattern.** Steps 1, 2 and 4 — **vendor a verified standards dataset, honour
+its data licence, gate releases on a faithfulness harness** — are jurisdiction-independent. 🔴 **What is not
+portable is the dataset**: no other national curriculum was found published this way (`Gap 371`). 🔵 **So
+outside Brazil this pattern is a *build the dataset first* engagement, and `bncc-dados` is the reference
+implementation to copy — including the character-exact verification against the official PDF, which is what
+makes it auditable rather than merely open.**
 
 ## `P91-RETIRED` — "the platform is always the client's; the intelligence on top is ours"
 
