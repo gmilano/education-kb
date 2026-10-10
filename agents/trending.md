@@ -4,6 +4,86 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 101: the instrument ran, and `Gap 385` fell to a repository that has been Apache-2.0 since 2012
+
+⏱️ **Eleventh pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93: 01:4x–02:24;
+94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; 98: 06:4x–07:xx; 99: 07:4x–08:xx; 100:
+08:4x–09:xx; this one 09:4x–10:xx). **Append-only.**
+
+🟢 **`test_ladder.sh` EXECUTED — 16 passed, 0 failed — the first execution of this KB's instrument
+since pass 92.** `--reach` confirmed `names=24 byte-floor=1B classifier=lib/license_family.sh`.
+🔴 **The network path was refused, so no census.** 🔵 **Nine passes wrote "the instrument is
+unrunnable"; the measurement is narrower — the OFFLINE half runs and PASSES, and only the network path
+is denied.** 🟢 **`P1005` applied from the outset. Every ★ here is unread — `api.github.com` returned
+`http=403` for every unattached repository, measured this pass.**
+
+### 🟢 1. `Jasig/SSP` — `Gap 385` DISCHARGED, and the gap was in the SEARCH, not the supply
+
+**Repo**: [`Jasig/SSP`](https://github.com/Jasig/SSP) — 🟢 **Apache-2.0**, `LICENSE` 11 359 B,
+`master` · `711244dc0d6d5c65fd261c9bec77dd48b4dbaaf6`, 🟢 **57 tags** (`ssp-2.9.0`).
+**Why it matters**: the Apereo **Student Success Plan** — early alert, caseload management, intervention
+tracking. 🔴 **This shelf said for five passes that the early-warning layer had no permissive row.**
+🔵 **`P1012`: an incumbent consortium's code may still live under its PREDECESSOR org name.**
+`apereo/SSP`, `apereo/OpenLRW`, `apereo/openlrs`, `apereo/opencast` → **ABSENT**; `Jasig/SSP` → exists.
+Apereo came from the **JA-SIG + Sakai** merger and the repo never moved. 🔴 **Searching the industry,
+the technique, and the current org name all missed it — the predecessor name is a fourth search axis.**
+🟢 **Region: North America, `P800`-grade** — `NOTICE` names *JA-SIG, Inc.* and the original grant from
+**Sinclair Community College** (Ohio).
+
+### 🔴 2. `P1013` — the Apache-2.0 root grant does not describe what SSP ships
+
+🔴 SSP's `NOTICE` declares **Ext JS under GPL-3.0** (Sencha FLOSS exception) and **JasperReports,
+JFreeChart, Hibernate Commons Annotations and c3p0 under LGPL**, plus **iText under MPL**.
+🟢 **Apache-2.0 buys the DOMAIN MODEL; the copyleft is in the UI and the reporting layer.**
+🔵 **And the `NOTICE` file is a readable instrument — unlike `Gap 370`'s per-directory case, this
+per-dependency case can be measured** (`P1016`). 🔴 **Maturity, stated honestly**: `portlet-api` 2.0,
+Ext JS, `spring-security-oauth` 2.5.0, `2.9-SNAPSHOT` — a uPortal-era JVM stack. **Deliver the schema,
+not the front end** (`P101-A`).
+
+### 🔴 3. The modern ML early-warning tier — 6 probed, 6 unusable as a dependency
+
+🔴 **4 of 6 carry NO licence payload at 24 filenames**
+(`Gnanakamalesh-M/student-dropout-early-warning` · `6685be37a1686fdde63b55d561537417de6565db`,
+`himasriniva/student-dropout-early-warning` · `f48e88b43bc5751569c696e5c6d4277fd56fdacc`,
+`miansaimnadeem/Student-dropout-prediction` · `ec805a6ecb52662c7a7f81cec09c575985b208b2`,
+`ShahCoding1/student-dropout-risk-system` · `7c5f75229ed1cb55a860fe1e18312a53c44642d2`).
+🔴 **1 of 6 is non-commercial by its own text** — `dssg/student-early-warning` (U Chicago DSSG,
+`LICENSE` 2 069 B, `b68f23c76d5277d96ec70768c728234660428e92`): permission covers not-for-profit
+scholarly use and **"excludes any service or part of selling a service that uses the Program"**.
+🔵 **A services company is the excluded case, verbatim.** 🟡 **1 of 6 is MIT and a portfolio project**
+(`alessandroryo/student-dropout-prediction`, 1 073 B, 0 tags).
+🔵 **Tracked as `Gap 392`: a permissive, modern, release-engineered ML early-warning implementation
+does not exist.** 🟢 **The best ENGINEERING in the tier is also ungranted** — calibrated XGBoost +
+**SHAP** on OULAD is an Annex III-shaped explanation, so **read the method, take nothing.**
+
+### 🔴 4. `Gap 391` — the pedagogical judge arrives, ungranted
+
+**Repo**: [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) (MBZUAI, EACL
+2026 system demo, arXiv:2512.03688), `main` · `a71078456a90a7bb616f7c7e1de83f0bfbc44ab1`, 0 tags.
+Scores tutor replies on the four **BEA-2025** dimensions — Mistake Identification, Mistake Location,
+Providing Guidance, Actionability — with a lightweight multi-task model benchmarked against Prometheus
+and a commercial judge. 🔵 **This is the closest thing yet to the instructional-alignment checker this
+shelf has wanted since pass 96.** 🔴 **The paper says MIT; 24 filenames return nothing, with a passing
+`P872` 200-control** (`README.md`=`200` at that SHA). 🔵 **`P1014`: a paper's licence claim is not a
+grant.**
+
+### 🟢 5. Carried rows that MOVED (`P1010`)
+
+🔴 `pykt-team/pykt-toolkit` drifted off the pinned `77c3e90` →
+`4751688e3a10156248d82c4ef80714c5b210dd68`, 🟢 **grant kept** (MIT, 1 066 B), **5 tags** first counted.
+🔴 `douglasrizzo/catsim`'s default ref is **`dev`** — BSD-3, 1 514 B, **38 tags**,
+`7e6caae84a8e7779422ba9338cfe2e2335185b28`. 🔵 **`P1015`: probe the default ref. A `main`-assuming
+probe would publish `NO-LICENCE-PAYLOAD` for a cleanly BSD-3 repo.**
+
+### 🔵 Negative sweeps worth recording
+
+🔴 **The mandated `AI tutor education open source release October 2026` sweep returned NOTHING dated
+October 2026.** Everything it surfaced predates this month (DeepTutor v1.0 Apr 2026, Open TutorAI CE
+Feb 2026, OATutor 2023, TutorGPT GPL-3.0 last touched 2026-02-20). 🔵 **An informed zero: the tutor
+tier did not move this week, and saying so is not the same as not looking.**
+
+---
+
 ## 2026-10-10 — pass 100: `Gap 372` is DISCHARGED by rows this shelf has carried since pass 93, and the gap was in the INSTRUMENT'S BACK CATALOGUE
 
 ⏱️ **Tenth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93: 01:4x–02:24;

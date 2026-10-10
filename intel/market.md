@@ -5,9 +5,18 @@ updated: 2026-10-10
 ---
 
 # Education — market, players and opportunities
-**Pass 100, 2026-10-10.** ⏱️ **Tenth pass of this date.** 🟢 **This pass cleared all five
-pre-registered leads for a SECOND consecutive time, and the EMEA lead that failed twice paid on the
-first query once it named the PUBLISHER instead of the region.**
+**Pass 101, 2026-10-10.** ⏱️ **Eleventh pass of this date** (100 ran 08:4x–09:xx UTC; this one
+09:4x–10:xx). 🟢 **All four mandated regional sweeps ran, and one of them returned an informed
+ZERO that is recorded as such rather than left blank.**
+
+🟢 **The headline is a REGION placed by a licence file.** `Jasig/SSP` — the permissive student
+early-warning system that discharges `Gap 385` — is placed **North America at `P800` grade** because its
+`NOTICE` names the holder (*JA-SIG, Inc.*) and the originating institution (**Sinclair Community
+College**, Ohio). 🔵 **That is the whole mechanism of `P800`: the repository, not the blog, states the
+country.** 🔴 **20 rows on the agents shelf remain honestly unplaced, and this pass did not reduce
+that count — it added one placed row rather than guessing at twenty.**
+
+🔴 **`api.github.com` = `http=403` for unattached repositories, measured this pass.** No ★ moved.
 
 🔴 **The headline is a correction, and it is this file's own.** Pass 99 opened `Gap 389` as *"a corpus
 licence stated differently by its distributor and its originator"*. 🟢 **Read from the author's own
@@ -269,6 +278,30 @@ KB: write down what you refused to use, and why.**
 ## Opportunities by region
 
 ### North America
+
+#### 🟢 🆕 p101 — the early-alert domain model is Apache-2.0, and it was born in a US community college
+
+🟢 **The opportunity is a retention engagement with the schema already written.** `Jasig/SSP`
+(Apache-2.0, 57 tags, `711244dc0d6d5c65fd261c9bec77dd48b4dbaaf6`) is the Apereo **Student Success
+Plan** — early alert, caseload, intervention tracking — **originally granted to JA-SIG by Sinclair
+Community College**. 🔵 **US community colleges and regional publics are where retention money sits,
+and this is their own domain model, permissively licensed.** 🔴 **The stack is uPortal-era (portlet
+API 2.0, Ext JS), so the sale is "your schema, modern runtime", not "install this"** (`P101-A`).
+
+🔴 **The governance vacuum is the commercial opening, and it is measured.** Only **~10% of
+institutions have formal AI guidelines** and **~71% of US teachers lack AI training**, while
+there is **no FDA-equivalent for educational technology** — adoption decisions sit with individual
+districts and universities, against a **state-by-state patchwork** (Colorado, Texas naming
+requirements). 🔵 **Contrast with EMEA: in the EU the duty is statutory and dated; in the US it is
+contractual and local, so the deliverable is a DISTRICT-level policy and evidence pack, not a
+CE-marking file.**
+
+🟢 **Market frame (treat as a band, not a number).** North America is cited at **~$951M (2024) →
+~$2.30B by 2029, ~15.9% CAGR**, and at **~36% of regional share** — the largest single region.
+🔴 **Named public money and partnerships, from this pass's sweep, reported as claims:** Carnegie
+Mellon + the Gates Foundation at **$55M into AI courseware**, and OpenAI's country-level education
+programme with **8 national partners** in Q1 2026. 🔵 **A further "$169M for responsible AI in higher
+education" claim does not name the government that made it and is NOT carried here.**
 
 #### 🟡 🆕 p100 — the regional sweep returned CORROBORATION, not news, and that is recorded as such
 
@@ -540,6 +573,26 @@ adoption.** 🔴 **So a North America pitch that leads with adoption is pushing 
 regulatory grain; one that leads with governance, auditability and teacher-augmentation is with it.**
 
 ### EMEA
+
+#### 🟢 🆕 p101 — the Act is the deadline, but the measured blocker is TRAINING, not tooling
+
+🔴 **The nearest hard date is unchanged: AI Act high-risk obligations — which cover admissions and
+assessment decisions — bite in August 2026.** 🔵 **Two sources in this pass disagree on whether that
+is "the high-risk rules" or "most obligations"; the Commission's own AI Act pages are the only citable
+authority and this file does not resolve it from secondary reporting.**
+
+🟢 **What the sweep DID settle is the demand shape, from a primary study.** An Erasmus+ / CESGA
+study of adult education across **six countries (Austria, Belgium, France, Greece, Ireland, Spain)**
+finds educators adopting AI **largely on their own, without a clear regulatory framework**; in **Spain
+over 90% report using AI in their work**; **many respondents did not know whether their institution had
+AI guidelines at all**; and the **single shared priority across Europe is applied professional
+development and structured training**. 🔵 **So the EMEA offer leads with teacher-facing enablement and
+an institutional policy baseline — the training is the product, the tool is the attachment.**
+
+🟢 **National-scale deployments are already running and are a reference, not a forecast.** OpenAI's
+*Education for Countries* reportedly has **20,000 students and 4,600 teachers in Estonia** on ChatGPT
+Edu, and **Greece selected 21 startups from 240 applicants** for an AI accelerator.
+🔵 **Reported figures from one German-language outlet — carried as a claim, not a measurement.**
 
 #### 🟢 🆕 p100 — the L&D half of this region is PLACED for the first time, and the AI Act duty gained a safe harbour
 
@@ -998,6 +1051,38 @@ duty is the sellable deliverable that is already overdue.**
 
 ### APAC
 
+#### 🟡 🆕 p101 — the regional sweep returned nothing education-specific, so the gap is named and then filled by a SECOND query
+
+🔴 **An informed ZERO, recorded because silence looks like coverage.** The mandated
+`AI education APAC 2026 adoption regulation players` sweep returned **market sizing and generic
+enterprise-AI governance commentary, and named NO education vendor, ministry programme or
+education-specific rule.** 🔵 **That is a defect of the query, not of the region — so this pass ran a
+second one naming the COUNTRIES, and it paid immediately.** 🟢 **`P1017`: for APAC, name the
+jurisdictions; "APAC" is not a regulator and returns market reports.**
+
+🟢 **What the country-named query returned:**
+- 🟢 **China** — Ministry of Education guidance (Nov 2024), then a **General AI Education Guide for
+  primary and secondary schools** plus a **guide on students' generative-AI use** (May 2025). **Beijing
+  mandates ≥8 hours of AI instruction per year** from 2025, standalone or folded into IT/science.
+- 🟢 **South Korea** — **AI digital textbooks** for maths, English and computing rolled out **March
+  2025**, with **~$70M for digital infrastructure and ~$760M for teacher training**.
+  🔵 **The teacher-training line is an order of magnitude larger than the infrastructure line.**
+- 🟢 **Singapore** — by **2026, AI-in-education training offered to teachers at ALL levels**,
+  including pre-service; anchored in the **Digital Education Blueprint** and **National AI Strategy**.
+- 🔴 **India — NO national school AI policy surfaced in either sweep.** Only private edtech product
+  examples. 🔵 **Recorded as an open question, not as absence.**
+
+🔴 **Regulation is fragmented by design, and that is the engagement risk.** Singapore runs mature
+responsible-AI guidelines; China legislates against algorithmic misconduct; the **ASEAN Guide on AI
+Governance and Ethics is early-stage**. 🔵 **So a multi-country APAC rollout cannot carry one
+compliance story — it needs per-jurisdiction policy nodes** (the shape `P91-D` and the existing
+multi-jurisdiction pattern already assume).
+
+🟢 **Market frame:** **~$591.6M (2024) → ~$1.85B by 2029, ~20.9% CAGR** — cited as the
+**fastest-growing** region, with **acute teacher shortages** named as a demand driver rather than cost
+savings. 🔵 **Teacher shortage, not budget, is the buying reason — which favours automation of
+preparation and marking over learner-facing chat.**
+
 #### 🟢 🆕 p100 — Korea's education obligations are ENUMERATED, and Vietnam's query returned less than this file already held
 
 🟢 **Korea — lead 5 paid in full.** This file has carried *"the AI Basic Act names education
@@ -1429,6 +1514,26 @@ the permission argument first — except in ANZ, where it does.** 🔴 **That is
 North America posture recorded above, and the two pitches should not share a slide.**
 
 ### LATAM
+
+#### 🟢 🆕 p101 — the adoption numbers are now the highest of any region, and they come from primary sources
+
+🟢 **Two primary instruments, not vendor blogs.** UNESCO **IESALC** with **UNU-IAS** published a
+working paper mapping AI across **200 higher-education institutions in 19 countries** (surveyed
+**Aug–Oct 2025**) on five dimensions — teaching and learning, research, community engagement,
+administration, governance. 🟢 **Tecnológico de Monterrey's observatory measures student adoption
+rising 86% → 92% and teacher adoption 61% → 79%**, with 🔴 **65% of students fearing AI leads to
+superficial learning**.
+
+🔵 **The regional contradiction worth quoting in a pitch: LATAM has region-leading ADOPTION and
+near-absent GOVERNANCE.** 🔴 Brookings finds regulation *"inspired by global benchmarks but slow"*;
+the **ILIA 2025 index (CEPAL)** carries a governance dimension with a regulation sub-dimension.
+🟢 **So the LATAM deliverable is the governance layer that EMEA buys to satisfy a statute and LATAM
+buys to earn trust** — same artefact, different motive.
+
+🔴 **And the market figure is the smallest on this page by an order of magnitude** — *"Rest of Latin
+America"* at **~$18.2M (2024) → ~$36M by 2029, ~12.1% CAGR**. 🔵 **Note the scope word: "Rest of"
+excludes the largest economies, so this number is NOT the region and must not be quoted as it.**
+🟢 **The 65%-fear figure is the more useful sales fact than any of the sizing.**
 
 #### 🟡 🆕 p100 — the regional sweep CORROBORATED this file's headline number and added the institution-type split
 

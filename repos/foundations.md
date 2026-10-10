@@ -6,15 +6,63 @@ updated: 2026-10-10
 
 # Education — foundational repos
 
-**Pass 100, 2026-10-10.** ⏱️ **Tenth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:
+**Pass 101, 2026-10-10.** ⏱️ **Eleventh pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:
 00:4x–01:3x; 93: 01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; 98:
-06:4x–07:xx; 99: 07:4x–08:xx; this one 08:4x–09:xx). 🔴 **Repository code was refused for an EIGHTH
-consecutive pass** — `grant-ladder-v4/ladder.sh` was not invoked. 🟢 **No classifier was written**
-(`P237`). 🟢 **`P1005` applied from the outset, plus ONE operation pass 99's inline ladder omitted:
-`git ls-remote --tags`.** 🔵 **That single addition discharged `Gap 372`, and the row that did it has
-been on this page since pass 94.**
+06:4x–07:xx; 99: 07:4x–08:xx; 100: 08:4x–09:xx; this one 09:4x–10:xx).
 
-🔴 **`api.github.com` not consulted.** A `—` is unread, never zero.
+🟢 **The instrument ran offline for the first time since pass 92: `test_ladder.sh` — 16 passed, 0
+failed; `--reach` — `names=24 byte-floor=1B classifier=lib/license_family.sh`.** 🔴 **Its network path
+was refused, so the 133-row census was NOT re-derived.** 🔵 **`Gap 376` therefore SPLITS: the
+classifier and the reach are verified by execution; only the network path is denied.** 🟢 **No
+classifier was written** (`P237`).
+
+🔴 **`api.github.com` = `http=403` for every repository not attached to this session — measured, with
+the proxy's message, not assumed.** A `—` is unread, never zero.
+
+### 🟢 🆕 p101 Tier 2c re-measured — two carried rows moved, and one of them has a default branch this page never recorded
+
+🔵 **`P1010` says re-measure a tier's existing rows before describing the tier. Applied to Tier 2c:**
+
+| repo | grant (payload · bytes · ref · SHA-40) | tags | what moved |
+|---|---|---|---|
+| 🆕 p101 [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** · 1 066 B · `main` · `4751688e3a10156248d82c4ef80714c5b210dd68` | 🟢 **5** (first count) | 🔴 **DRIFTED** off this page's pinned `77c3e90`. 🟢 **Grant KEPT, byte-identical.** |
+| 🆕 p101 [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 **BSD-3-Clause** · 1 514 B · **`dev`** · `7e6caae84a8e7779422ba9338cfe2e2335185b28` | 🟢 **38** (first count) | 🔴 **Its default ref is `dev`** — not `master`, not `main`. |
+
+🔴 **`P1015`: probe the default ref, never a guessed one.** 🔵 **A `main`-assuming probe of `catsim`
+404s all 24 filenames and publishes `NO-LICENCE-PAYLOAD` for a cleanly BSD-3 repository** — the same
+false-negative mechanism as `Gap 380`, from a different cause. 🟢 **`ladder.sh` already does this
+correctly** (`git ls-remote --symref` first), which is one more reason the census owes its re-derivation.
+
+### 🟢 🆕 p101 Tier 2h — the student-success DOMAIN MODEL, and the `NOTICE` oracle
+
+🟢 **[`Jasig/SSP`](https://github.com/Jasig/SSP) — Apache-2.0, `LICENSE` 11 359 B, `master` ·
+`711244dc0d6d5c65fd261c9bec77dd48b4dbaaf6`, 57 tags (`ssp-2.9.0`), `pom.xml`
+`org.jasig.ssp:ssp:2.9-SNAPSHOT`.** The Apereo **Student Success Plan**: early alert, caseload, and
+intervention tracking. 🔴 **It discharges `Gap 385`, and it was invisible because it lives under
+Apereo's PREDECESSOR org name** (`P1012` — `apereo/SSP`, `apereo/OpenLRW`, `apereo/openlrs` and
+`apereo/opencast` all return **ABSENT**).
+
+🔴 **`P1013` — and this is a new ORACLE for this page, not only a warning.** The root grant is
+Apache-2.0; the shipped artifact is not all permissive, and **the repository says so itself** in
+`NOTICE`: **Ext JS GPL-3.0** (Sencha FLOSS exception), **JasperReports / JFreeChart / Hibernate Commons
+Annotations / c3p0 LGPL**, **iText MPL**, alongside a long permissive majority (Spring, Lucene, Jackson,
+Guava, Liquibase, Quartz — Apache-2.0; jQuery, Knockout, Underscore, Mockito, SLF4J — MIT; ASM, dom4j,
+PostgreSQL JDBC — BSD).
+
+🔵 **Where this sits against `Gap 370`.** `Gap 370` is a per-DIRECTORY licence the root cannot see and
+for which this page has **no instrument**. 🟢 **This is the per-DEPENDENCY case, and it DOES have one —
+`NOTICE`, in the 24-name reach already** (it is the 24th name). 🔴 **The ladder reads `NOTICE` only as a
+licence candidate, first-match, so a repo with a real `LICENSE` never gets its `NOTICE` read.**
+🔵 **`P1016`: on a JVM or bundled-asset repository, read `NOTICE` IN ADDITION to the grant — it is a
+bundled-licence manifest, not a second licence.** 🟢 **`ladder.sh --all` already fetches every name;
+what it lacks is the distinction between *a grant* and *a manifest*. That is a one-line reporting change
+to the instrument, not a classifier change** — so it does not touch `P237`.
+
+### 🟢 🆕 p101 Tier 3b — the AI-literacy curriculum tier gains a release-engineered row
+
+| repo | grant (payload · bytes · ref · SHA-40) | tags | ★ | note |
+|---|---|---|---|---|
+| 🆕 p101 [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | 🟢 **MIT** · 1 070 B · `main` · `a5b10f4ce4ded798e3e1b42d0d74dcd73904ef67` (© 2026) | 🟢 **6** | — | Reached **#1 on GitHub Trending** (first on 2026-05-24, per Trendshift). 🟢 **The only row in this tier with release tags** — `microsoft/ai-agents-for-beginners` has **0**, re-measured this pass at `ff2ba665e088bf51d9959126c5893e089b50da30` (MIT, 1 141 B). 🔵 For a client curriculum, a tagged repo is a citable version. |
 
 ### 🔴 `P1010` — the structural finding of this pass is about this page's OWN back catalogue
 

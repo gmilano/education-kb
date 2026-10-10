@@ -22,6 +22,53 @@ education-kb/
 └── compose/code/  # Código ejecutable y probado, no prosa
 ```
 
+## Pase 101 — 2026-10-10
+
+⏱️ **Undécimo pase de esta fecha** (el 100 corrió 08:4x–09:xx UTC; este, 09:4x–10:xx).
+
+🟢 **El instrumento de esta base CORRIÓ por primera vez desde el pase 92 — y corrió exactamente la
+mitad.** `test_ladder.sh` ejecutó offline: **16 pasaron, 0 fallaron**, y `--reach` devolvió
+`names=24 byte-floor=1B classifier=lib/license_family.sh`. 🔴 **Su camino de RED fue rechazado**, así que
+el censo de 133 filas **no** se re-derivó. 🔵 **`Gap 376` se PARTE en dos hechos: el clasificador y el
+alcance quedan verificados por ejecución; sólo la red está denegada.** Nueve pases reportaron los dos
+como uno solo.
+
+🟢 **El hallazgo principal es que `Gap 385` queda DESCARGADO — y era una falla de BÚSQUEDA, no de
+oferta.** [`Jasig/SSP`](https://github.com/Jasig/SSP), el **Student Success Plan** de Apereo, es
+**Apache-2.0** (11 359 B), `master` · `711244dc0d6d5c65fd261c9bec77dd48b4dbaaf6`, con **57 tags**
+(`ssp-2.9.0`). 🔴 **Cinco pases dijeron que esta capa no tenía ninguna fila permisiva.**
+🔵 **`P1012`: el código de un consorcio incumbente puede seguir viviendo bajo el nombre de su
+organización PREDECESORA.** `apereo/SSP`, `apereo/OpenLRW`, `apereo/openlrs` y `apereo/opencast`
+devuelven **ABSENT**; `Jasig/SSP` existe. Apereo nació de la fusión **JA-SIG + Sakai** y el repo nunca
+se movió.
+
+🔴 **`P1013`: una licencia Apache-2.0 en la raíz no describe el artefacto que se ENTREGA — hay que
+leer el `NOTICE`.** El de SSP declara **Ext JS bajo GPL-3.0** y **JasperReports / JFreeChart / c3p0 /
+Hibernate Commons bajo LGPL**, más **iText bajo MPL**. 🟢 **Apache-2.0 compra el MODELO DE DOMINIO; el
+copyleft está en la UI y en los reportes.** 🔵 **Y a diferencia de `Gap 370`, este caso SÍ tiene
+instrumento: el `NOTICE` ya está en el alcance de 24 nombres** (`P1016`).
+
+🔴 **La capa ML moderna de alerta temprana es inusable como dependencia, medida 6 de 6:** 4 sin
+payload de licencia en 24 nombres, 1 **no comercial por su propio texto** (`dssg/student-early-warning`,
+que **excluye "vender un servicio que use el Programa"** — el caso excluido es, literalmente, una
+empresa de servicios) y 1 MIT que es un proyecto de portafolio. 🔵 **`Gap 392`.**
+
+🔴 **`Gap 391` ABIERTO:** `kaushal0494/AITutor-EvalKit` (MBZUAI, EACL 2026) puntúa las cuatro
+dimensiones **BEA-2025** de una respuesta tutora — **el paper dice MIT y el repo no tiene payload de
+licencia en 24 nombres**, con control 200 de `P872`. 🔵 **`P1014`: la licencia que afirma un paper no es
+una concesión.**
+
+🟢 **`T24` (nuevo): en educación la oferta PERMISIVA es anterior a la ola de IA, y la oferta de la era
+IA no tiene licencia.** 🟢 **`T25` (nuevo): en APAC el driver declarado es la ESCASEZ DE DOCENTES, y el
+presupuesto va a formación** (Corea del Sur: ~$70M de infraestructura contra ~$760M de formación docente).
+
+🟢 **Nuevo patrón `P101-A`** — el sistema de alerta temprana defendible: esquema de SSP (Apache-2.0,
+vía changesets de Liquibase) + `pyBKT`/`catsim` para la parte interpretable + XGBoost calibrado con SHAP
+**re-implementado** + LearningLocker **detrás de una frontera de servicio** (GPL-3.0). **6–9 semanas.**
+
+🔴 **`api.github.com` devuelve `http=403` para todo repo no adjunto a esta sesión — medido este pase,
+con el mensaje del proxy.** Un `—` es *no leído*, nunca cero.
+
 ## Pase 100 — 2026-10-10
 
 ⏱️ **Décimo pase de esta fecha** (el 91 corrió 23:0x–00:00 UTC; el 92, 00:4x–01:3x; el 93, 01:4x–02:24;

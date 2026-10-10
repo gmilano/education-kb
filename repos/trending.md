@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 101: the instrument's offline half RAN, and the early-warning stack splits permissive-model / copyleft-pipe
+
+⏱️ **Eleventh pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93: 01:4x–02:24;
+94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; 98: 06:4x–07:xx; 99: 07:4x–08:xx; 100:
+08:4x–09:xx; this one 09:4x–10:xx). **Append-only.**
+
+🟢 **`test_ladder.sh`: 16 passed, 0 failed** — first execution since pass 92; `--reach` =
+`names=24 byte-floor=1B classifier=lib/license_family.sh`. 🔴 **Network path denied → no census.**
+🟢 **No classifier written** (`P237`). 🔴 **Every ★ unread: `api.github.com` = `http=403` for
+unattached repos, measured this pass.**
+
+### 🟢 `Gap 376` SPLITS into two facts, and only one of them is a blocker
+
+🔵 **Passes 93–100 each wrote one sentence: "repository code was refused."** 🟢 **Measured
+separately this pass: the OFFLINE instrument runs and passes 16/16, so the ten registered corrections
+in `lib/license_family.sh` are known-good BY EXECUTION** — including the canonical-GPL-2.0 preamble
+trap (`P171` on `oat-sa/tao-core` and `portabilis/i-educar`) that `v3`'s fork got wrong.
+🔴 **What is denied is `ladder.sh`'s NETWORK path, and only that.** 🔵 **The corrective duty on the
+133-row census stands undiminished — but its blocker is now named precisely instead of generally.**
+
+### 🔴 `P1015` — a default branch that is neither `master` nor `main`, found on a row this page carries
+
+| repo | grant (payload · bytes · ref · SHA-40) | tags |
+|---|---|---|
+| 🆕 p101 [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 **BSD-3-Clause** · 1 514 B · **`dev`** · `7e6caae84a8e7779422ba9338cfe2e2335185b28` | 🟢 **38** |
+| 🆕 p101 [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** · 1 066 B · `main` · `4751688e3a10156248d82c4ef80714c5b210dd68` (🔴 drifted from `77c3e90`) | 🟢 **5** |
+
+🔵 **A `main`-assuming probe 404s all 24 filenames on `catsim` and publishes a false
+`NO-LICENCE-PAYLOAD` for a cleanly BSD-3 repository** — `Gap 380`'s failure mode from a different
+cause. 🟢 **`ladder.sh` resolves the ref first and is already correct here.**
+
+### 🔴 The event pipe under student analytics is copyleft or consortium-licensed
+
+| repo | grant (payload · bytes · ref · SHA-40) | tags | what it is |
+|---|---|---|---|
+| 🆕 p101 [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) | 🔴 **GPL-3.0** · 35 141 B · `master` · `5fec948a823e372e740df521aa3684c8df1dcba7` | **221** | the de-facto open **xAPI Learning Record Store** |
+| 🆕 p101 [`IMSGlobal/caliper-spec`](https://github.com/IMSGlobal/caliper-spec) | 🔴 **IMS Global *Specification Document License*** · `LICENSE.md` 12 402 B · `master` · `1849e118b47acb24a6d97f976fe72fc2f5182570` | 4 | the learning-analytics event spec — 🔵 **a consortium grant, NOT OSI** |
+| 🆕 p101 [`Jasig/SSP`](https://github.com/Jasig/SSP) | 🟢 **Apache-2.0** · 11 359 B · `master` · `711244dc0d6d5c65fd261c9bec77dd48b4dbaaf6` | **57** | Apereo **Student Success Plan** — early alert + caseload + intervention |
+
+🔵 **So the student-analytics stack is permissive where it MODELS and copyleft/consortium where it
+RECORDS** — `T17` holding on a layer it was not derived from. 🟢 **Consequence for a quote: the risk
+model and the SSP schema are takeable; the LRS is a service boundary, not a dependency.**
+
+### 🔴 `P1016` — `NOTICE` is a bundled-licence MANIFEST, and the ladder reads it as a grant
+
+🔴 `Jasig/SSP` is Apache-2.0 at the root and ships **Ext JS GPL-3.0** + **JasperReports / JFreeChart /
+c3p0 / Hibernate Commons LGPL** + **iText MPL**, as its own `NOTICE` states.
+🔵 **`NOTICE` is already the 24th name in the reach — but first-match means a repo with a real
+`LICENSE` never gets its `NOTICE` read.** 🟢 **`--all` fetches it; what is missing is the distinction
+between a GRANT and a MANIFEST. A reporting change, not a classifier change — so `P237` is untouched.**
+
+### 🔴 🆕 p101 `P1019` — `curl -sI https://github.com/<slug>` cannot verify a repository in this environment
+
+🔴 **Measured on 15 slugs this pass, every one returned `http=403` — including repositories whose
+licence payloads were read successfully seconds earlier.** 🔵 **The proxy answers github.com HTML with
+403 uniformly, so a `curl -sI` existence check is indistinguishable between a live repo, a 404 and a
+block. It verifies NOTHING here, and a pass that used it would publish a wall of false negatives.**
+
+🟢 **The oracles that DO work, and that every address on these pages came from:**
+`git ls-remote --symref` (which correctly separated **ABSENT** — `apereo/SSP`, `apereo/OpenLRW`,
+`apereo/openlrs`, `apereo/opencast` — from **EXISTS** with a ref and a 40-character SHA),
+`git ls-remote --tags` for the tag column, and `raw.githubusercontent.com` for the licence payload.
+🔵 **This is why `ladder.sh` resolves the ref before fetching anything, and one more reason the
+133-row census owes its re-derivation to the first pass whose network path is allowed.**
+
+### 🔵 Trending sweep — one new row, and an informed zero
+
+🟢 **[`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch)**
+— **MIT**, 1 070 B, `main` · `a5b10f4ce4ded798e3e1b42d0d74dcd73904ef67`, 🟢 **6 tags**, © 2026.
+Reached **#1 on GitHub Trending** (first 2026-05-24, per Trendshift). 🔵 **The only tagged row in the
+AI-literacy tier** — `microsoft/ai-agents-for-beginners` re-measured at
+`ff2ba665e088bf51d9959126c5893e089b50da30` (MIT, 1 141 B) has **0 tags**.
+🔴 **And the zero: the `github trending education AI 2026` sweep surfaced only third-party trackers
+(Trendshift, GitTrend) and no live GitHub Trending page this pass.** 🔵 **Rankings cited here are
+snapshots of a list, not the list.**
+
+---
+
 ## 2026-10-10 — pass 100: the most release-engineered repo in this industry was already on this page, and this page had never counted its tags
 
 ⏱️ **Tenth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93: 01:4x–02:24;

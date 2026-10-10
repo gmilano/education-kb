@@ -5,10 +5,14 @@ updated: 2026-10-10
 ---
 
 # Education — compose patterns
-**Pass 100, 2026-10-10.** ⏱️ **Tenth pass of this date.** 🆕 **Three patterns added** (`P100-A` the
-retrainable open-response scorer, `P100-B` the Article 50(2) scoping gate, `P100-C` intelligence on
-top of the LMS the client already regrets), 🔴 **and `P99-A` and `P100-B` are the only patterns on
-this page tied to an EXPIRY DATE.**
+**Pass 101, 2026-10-10.** ⏱️ **Eleventh pass of this date.** 🆕 **One pattern added — `P101-A`,
+the student early-warning system, which this page could not write for four passes because `Gap 385`
+said the permissive row did not exist.** 🟢 **It did exist, under an org name nobody searched**
+(`P1012`), **so `P101-A` starts from an Apache-2.0 domain model with 57 releases.**
+
+🔴 **And `P101-A` is the first pattern on this page whose main risk is a BUNDLED licence rather than a
+corpus or a deadline** (`P1013`): the root grant is Apache-2.0 and the shipped UI is GPL-3.0 Ext JS.
+🔵 **The pattern's first task is therefore an extraction, not an installation.**
 
 🟢 **The pattern this page could not write for five passes is now `P100-A`.** `Gap 372` is
 **DISCHARGED**: `wwrwbs/AI_AWE` is Apache-2.0 **with a release** (`v0.1.0`, adapter artifact
@@ -136,6 +140,89 @@ stack (`repos/foundations.md` Tier 2c) — and `P92-A` stays on the page, becaus
 decides engagements rather than in detail. **`P93-B`** is the first pattern in this KB anchored on a
 **national curriculum published as audited open data**, and the first with a **measured** justification for
 its own central design choice.
+
+## `P101-A` — 🆕 The defensible student early-warning system (North America first, EMEA second)
+
+🔵 **The pattern exists because the capability is in demand, the permissive supply is a legacy
+platform, and the modern supply is ungranted.** 🟢 **So: take the MODEL from the old platform, the
+MATHS from the permissive psychometrics, and the METHOD — not the code — from the ungranted ML repos.**
+
+### What you are building
+
+An early-warning service that flags students at risk, **explains each flag in terms an academic appeals
+committee can audit**, and writes interventions back against a schema the institution already
+recognises.
+
+### The parts, and why each one
+
+| layer | what you use | grant | why this one |
+|---|---|---|---|
+| Domain model + schema | [`Jasig/SSP`](https://github.com/Jasig/SSP) · `master` · `711244dc0d6d5c65fd261c9bec77dd48b4dbaaf6` | 🟢 **Apache-2.0** (11 359 B) | **57 releases** of a real early-alert / caseload / intervention model, **originally granted by Sinclair Community College**. 🟢 **Its migrations are Liquibase changesets** (`NOTICE`: *Liquibase Core, Apache-2.0*), so **the schema is extractable as DDL without running the portlet app.** |
+| Per-skill mastery | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🟢 MIT | Bayesian Knowledge Tracing — **a per-skill mastery PROBABILITY is an explanation**; a network activation is not. |
+| Item difficulty / adaptive testing | [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) · **`dev`** · `7e6caae84a8e7779422ba9338cfe2e2335185b28` | 🟢 BSD-3-Clause (1 514 B, **38 tags**) | The only adaptive-testing engine on this shelf. 🔴 **Pin `dev`, not `main`** (`P1015`). |
+| Risk classifier + explanation | `scikit-learn` (BSD-3), `xgboost` (Apache-2.0), `shap` (MIT) | 🟢 permissive | 🔵 **The DESIGN is read from [`Gnanakamalesh-M/student-dropout-early-warning`](https://github.com/Gnanakamalesh-M/student-dropout-early-warning) — calibrated XGBoost + SHAP, 30-day withdrawal horizon at fixed course checkpoints — which is 🔴 UNGRANTED (0 of 24 filenames) and must be RE-IMPLEMENTED, not vendored.** |
+| Event pipe | [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) · `5fec948a823e372e740df521aa3684c8df1dcba7` | 🔴 **GPL-3.0** (221 tags) | xAPI Learning Record Store. 🔴 **Deploy as a SERVICE over HTTP; never link it into client code.** 🔵 Or emit xAPI to the institution's existing LRS and ship no store at all. |
+| Agent surface | the agent-skill unit (`T1`), per `P91-C` | — | The advisor-facing "who should I call today, and why" skill is the deliverable the client sees. |
+
+### 🔴 What you must NOT take, and why — read this before any estimate
+
+- 🔴 **[`dssg/student-early-warning`](https://github.com/dssg/student-early-warning)** (U Chicago DSSG,
+  `LICENSE` 2 069 B, `b68f23c76d5277d96ec70768c728234660428e92`) is the repository a client's own
+  research team will send you. 🔴 **It is not OSI-licensed.** Its grant covers *"academic research or
+  other not-for-profit scholarly purposes"* and **"excludes any service or part of selling a service
+  that uses the Program."** 🔵 **A services engagement is the excluded case, verbatim.** Commercial
+  terms exist via the Polsky Center — **a procurement conversation, not a download.**
+- 🔴 **The four ungranted ML repos** (`Gnanakamalesh-M`, `himasriniva`, `miansaimnadeem`,
+  `ShahCoding1`) carry **no licence payload at 24 filenames**. 🔵 **Read, cite, re-implement.**
+- 🔴 **SSP's own front end.** `NOTICE` declares **Ext JS GPL-3.0** (Sencha FLOSS exception) and
+  **JasperReports / JFreeChart / c3p0 / Hibernate Commons LGPL**, **iText MPL**.
+  🟢 **Extract schema and domain logic; build the UI fresh.** 🔴 **Shipping SSP's WAR ships GPL-3.0.**
+
+### Wiring, in order
+
+1. **Extract the schema (3–5 days).** Pull SSP's Liquibase changesets at the pinned SHA, generate DDL,
+   keep the early-alert / caseload / intervention / success-plan entities, drop the portlet tables.
+   🟢 **Deliverable: an Apache-2.0-derived data model the registrar recognises.**
+2. **Land the event pipe (1 week).** Either point at the institution's LRS or stand LearningLocker up
+   **behind an HTTP boundary**. 🔵 **Record the boundary in the architecture note — it is the GPL-3.0
+   containment and a reviewer will ask.**
+3. **Fit the risk model (2–3 weeks).** Re-implement calibrated gradient boosting over course-checkpoint
+   features; **calibrate** (so a 0.7 means 0.7) and attach **SHAP** per-student attributions.
+   🟢 **Add `pyBKT` per-skill mastery as a SECOND, independently interpretable signal.**
+4. **Build the explanation record (1–2 weeks).** For every flag persist: features, calibrated
+   probability, SHAP contributions, model version, and the SSP intervention taken.
+   🔵 **This is the artefact that makes the system defensible, and it is cheap to build and impossible
+   to retrofit.**
+5. **Ship the advisor skill (1–2 weeks).** Ranked caseload, the reason per student, the intervention
+   written back to the SSP schema.
+
+🟢 **Total: 6–9 weeks** to a defensible pilot on one faculty or district.
+
+### Where it sells, by region
+
+- 🟢 **North America first.** Retention money sits with US community colleges and regional publics —
+  **and SSP is their own artifact** (Sinclair Community College). 🔵 **There is no statutory AI duty to
+  satisfy, so the evidence pack is sold on appeals defensibility and board reporting, per `P91-B`.**
+- 🟢 **EMEA second, and the SAME artefact becomes compliance.** Under the AI Act, **assessment and
+  admissions decisions are high-risk, with obligations from August 2026** — so step 4's explanation
+  record stops being good practice and becomes evidence. 🔵 **Pair with `P94-A`'s Annex III pack.**
+- 🟡 **LATAM third, on trust rather than statute.** Adoption leads the world (students 92%, teachers
+  79%) while **65% of students fear superficial learning** — 🔵 **the explanation record is the answer
+  to that fear, and it is the same build.**
+- 🔴 **APAC: re-scope before quoting.** `T25` — the driver is **teacher shortage**, so an advisor
+  caseload tool competes with simply giving teachers hours back. 🔵 **Lead with preparation and marking
+  automation; bring early warning second.**
+
+### Honest risks
+
+- 🔴 **SSP is a dormant-looking stack.** `2.9-SNAPSHOT`, portlet API 2.0, Spring Security OAuth 2.5.
+  🔴 **Recency was NOT established this pass** — `api.github.com` returns `http=403` here, so no commit
+  date or star count was read. 🔵 **Treat it as a schema and a specification, and the dormancy stops
+  mattering.**
+- 🔴 **No permissive, modern, release-engineered ML early-warning implementation exists** (`Gap 392`).
+  🔵 **Step 3 is a BUILD. Price it as one.**
+- 🔴 **The tutor-reply judge is ungranted** (`Gap 391`, `AITutor-EvalKit`). 🔵 **If the engagement also
+  scores tutor replies, the four BEA-2025 dimensions must be re-implemented from the paper.**
 
 ## `P91-A` — The closable AI university platform (EMEA)
 

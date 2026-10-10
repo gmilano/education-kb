@@ -6,17 +6,34 @@ updated: 2026-10-10
 
 # Education — vertical platforms you can customise with AI
 
-**Pass 100, 2026-10-10.** ⏱️ **Tenth pass of this date.** 🔴 **The sandbox refused repository code
-for an EIGHTH consecutive pass**, so no replacement classifier was written (`P237`). 🟢 **`P1005` was
-applied from the outset**, so every address this pass touched carries a **full 40-character SHA**.
+**Pass 101, 2026-10-10.** ⏱️ **Eleventh pass of this date** (100 ran 08:4x–09:xx UTC; this one
+09:4x–10:xx). 🟢 **`P1005` applied from the outset — every address below carries a full 40-character
+SHA.** 🔴 **`api.github.com` = `http=403` for unattached repos, measured this pass; no ★ moved.**
 
-🔴 **ZERO new platforms this pass, and that is the eighth enumerated zero on this page.** The mandated
-`open source platform education LMS SIS MIT Apache` query returned **Open edX** (🔴 the licence
-conflict this page already documents: AGPL-3.0 platform, Apache-2.0 components, secondary sources that
-get it wrong), **Sakai** (ECL-2.0), **Moodle** and **Chamilo** (GPL), **OLAT / OpenOlat** — 🟢 **all
-already published here** — and, for student-information systems, 🔴 **`openSIS` with NO stated licence
-and `RosarioSIS` as GPL.** 🔵 **Neither permissive, neither tabled. A sweep that returns nothing new
-is information; a sweep that invents a row is not.**
+### 🟢 🆕 p101 — the nine-pass run of zeroes ENDS, and not because the platform sweep improved
+
+🔴 **The mandated platform sweep returned another zero, for the ninth time.**
+`open source platform education LMS SIS MIT Apache 2026` returned **Moodle** and **Chamilo** (GPL),
+**Open edX** (AGPL-3.0 platform / Apache-2.0 components — the conflict this page documents), **Sakai**
+(ECL-2.0), **ILIAS**, **Opigno**, **Odoo eLearning**, **Forma LMS**, **OpenOLAT** — 🟢 **all already
+published here** — and for student-information systems only **openSIS** and **RosarioSIS**, neither
+permissive. 🔵 **A sweep that returns nothing new is information; a sweep that invents a row is not.**
+
+🟢 **But TWO platform-grade rows ARE new this pass — and they arrived from the student-early-warning
+CAPABILITY query, not from the platform query.** 🔵 **`P1018`: this page's platform sweep is saturated.
+New platforms now arrive from queries that name a CAPABILITY the client asked for, not the word
+"platform".**
+
+| platform | grant (payload · bytes · ref · SHA-40) | tags | region | what it is, and how you'd use it |
+|---|---|---|---|---|
+| 🆕 p101 [`Jasig/SSP`](https://github.com/Jasig/SSP) | 🟢 **Apache-2.0** · `LICENSE` 11 359 B · `master` · `711244dc0d6d5c65fd261c9bec77dd48b4dbaaf6` | 🟢 **57** (`ssp-2.9.0`) | 🟢 **North America** (`P800` — `NOTICE` names JA-SIG, Inc. and **Sinclair Community College**) | **Apereo Student Success Plan** — the only **permissive** student early-warning / case-management platform found in 101 passes. 🔴 **Legacy JVM stack** (portlet-api 2.0, Ext JS, `2.9-SNAPSHOT`) and 🔴 **`NOTICE` bundles Ext JS GPL-3.0 + JasperReports/JFreeChart/c3p0/Hibernate-Commons LGPL + iText MPL** (`P1013`). 🟢 **Customise by taking the SCHEMA and the 57-release domain model onto a modern runtime; do not ship the portlet UI.** |
+| 🆕 p101 [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) | 🔴 **GPL-3.0** · `LICENSE` 35 141 B · `master` · `5fec948a823e372e740df521aa3684c8df1dcba7` | 🟢 **221** | — (publisher country not established from the repo — not `P800`-grade) | The de-facto open **xAPI Learning Record Store** — the event spine a learning-analytics or early-warning product reads from. 🔴 **GPL-3.0: deploy it as a SERVICE BOUNDARY, never link it into client code.** 🔵 **221 tags makes it the most release-engineered data-layer platform on this page.** |
+
+🔵 **Read with `IMSGlobal/caliper-spec`** (`LICENSE.md` 12 402 B, `master` ·
+`1849e118b47acb24a6d97f976fe72fc2f5182570`, 4 tags): 🔴 **an IMS Global *Specification Document
+License* — a consortium grant, NOT an OSI licence.** 🟢 **So the analytics interop layer is
+spec-licensed, the record store is GPL, and the domain model is Apache-2.0** — three different legal
+regimes in one stack, which is precisely the due-diligence `P94-B` exists to run.
 
 ### 🟢 🆕 p100 — the one thing the sweep DID add is a tag count, and it is the third instance of `P1010`
 

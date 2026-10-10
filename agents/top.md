@@ -6,23 +6,76 @@ updated: 2026-10-10
 
 # Education — AI agents shelf
 
-**Pass 100, 2026-10-10.** ⏱️ **Tenth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:
+**Pass 101, 2026-10-10.** ⏱️ **Eleventh pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:
 00:4x–01:3x; 93: 01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; 98:
-06:4x–07:xx; 99: 07:4x–08:xx; this one 08:4x–09:xx).
+06:4x–07:xx; 99: 07:4x–08:xx; 100: 08:4x–09:xx; this one 09:4x–10:xx).
 
-🔴 **The sandbox refused repository code for an EIGHTH consecutive pass** — `grant-ladder-v4/ladder.sh`
-was not invoked. 🟢 **So pass 100 wrote no classifier either** (`P237`).
+🟢 **The instrument RAN for the first time since pass 92 — and exactly half of it did.**
+`test_ladder.sh` executed offline: **16 passed, 0 failed**. `./ladder.sh --reach` returned
+`names=24 byte-floor=1B classifier=lib/license_family.sh`. 🔴 **Its NETWORK path was refused** —
+`./ladder.sh <slug>` was denied backgrounded *and* in the foreground.
+🔵 **So `Gap 376` was never "the instrument is unrunnable". It is "the instrument's network path is
+denied; its classifier and its reach are VERIFIED."** Those are two facts and nine passes reported them
+as one. 🟢 **The ten registered corrections in `lib/license_family.sh` are now known-good by
+execution rather than by assertion** — including the `GPL-2.0` title-block pair (`oat-sa/tao-core`,
+`portabilis/i-educar`) that `v3`'s fork got wrong and that reached a published client recommendation.
 
-🟢 **`P1005` was applied from the outset rather than discovered at the end**: every address on the
-rows this pass touched came from `git ls-remote --symref` run inline, and every licence from a
-`raw.githubusercontent.com` payload. 🟢 **This pass also added the operation pass 99's inline ladder
-did not run — `git ls-remote --tags` — and that single addition discharged `Gap 372`** (see below).
+🟢 **`P1005` applied from the outset**: every address below came from `git ls-remote --symref` run
+inline, every licence from a `raw.githubusercontent.com` payload, every tag count from
+`git ls-remote --tags`. 🔴 **`api.github.com` returns `http=403` for every repository not attached to
+this session — measured this pass, with the proxy's own message.** 🔵 **That is WHY the ★ column is
+unread, and this is the first pass to establish the CAUSE instead of restating the effect.**
 
-🔵 **Marker convention, because ten passes ran on one date.** A bare 🆕 is inherited from the pass
-that added the row and was **not** re-flagged; **rows added or re-measured by this pass are marked
-🆕 p100.**
-🔴 **A `—` in the ★ column means not read this pass. It never means zero** — `api.github.com` was
-not consulted, so no star count on this page moved or could.
+🔵 **Marker convention.** A bare 🆕 is inherited from the pass that added the row; **rows added or
+re-measured by this pass are marked 🆕 p101.** 🔴 **A `—` in the ★ column means not read this pass.
+It never means zero.**
+
+### 🟢 🆕 p101 What pass 101 adds, and the headline is a gap discharged by a repository that has existed since 2012
+
+- 🟢 **`Gap 385` is DISCHARGED. A permissive open-source student early-warning system exists:
+  [`Jasig/SSP`](https://github.com/Jasig/SSP)** — the Apereo **Student Success Plan** —
+  **Apache-2.0**, `LICENSE` 11 359 B, `master` · `711244dc0d6d5c65fd261c9bec77dd48b4dbaaf6`,
+  **57 tags** (top `ssp-2.9.0`), `pom.xml` `org.jasig.ssp:ssp:2.9-SNAPSHOT`.
+  🔴 **Five passes of this shelf said this layer had no permissive row. It had one with 57 releases.**
+- 🔵 **`P1012`: an incumbent consortium's code may still be addressed under its PREDECESSOR
+  organisation's name.** Measured, not inferred: `apereo/SSP`, `apereo/OpenLRW`, `apereo/openlrs` and
+  `apereo/opencast` **all return ABSENT**; `Jasig/SSP` exists. Apereo was formed from the **JA-SIG +
+  Sakai Foundation** merger and *the repository never moved*. 🔴 **Searching the industry, the
+  technique and the CURRENT org name all failed. The predecessor name is a fourth axis.**
+- 🔴 **`P1013`: a root Apache-2.0 grant does not describe the SHIPPED artifact — read the `NOTICE`.**
+  SSP's `NOTICE` declares its bundled grants, and they are not all permissive: **Ext JS under GPL-3.0**
+  (with Sencha's FLOSS exception), **JasperReports, JFreeChart, Hibernate Commons Annotations and c3p0
+  under LGPL**, **iText under MPL**. 🟢 **Apache-2.0 to take the DOMAIN MODEL; copyleft sits in the
+  shipped UI and the reporting layer.** 🔵 **This is `Gap 370`'s shape one level out: `Gap 370` is about
+  a per-DIRECTORY licence the root cannot see; this is a per-DEPENDENCY one — and unlike `Gap 370`, the
+  `NOTICE` file makes it READABLE. That is a partial instrument, not just a gap.**
+- 🔴 **And the honest maturity read, because the licence is the easy half.** `portlet-api` 2.0, Ext JS,
+  `spring-security-oauth` 2.5.0 and a `2.9-SNAPSHOT` version put this on a **uPortal-era JVM stack**.
+  🟢 **What is deliverable here is the early-alert / caseload / intervention DOMAIN MODEL and its
+  57-release schema history — not the front end.** Costed as `P101-A` in `compose/patterns.md`.
+- 🔴 **The MODERN ML early-warning tier is ungranted or non-commercial, and that is now MEASURED at
+  6 of 6 — see the new tier below.** 🔵 **Same shape as `Gap 372`'s history: the permissive layer is the
+  MODEL and the VALIDATION; the production implementation is not permissive.**
+- 🔴 **The most-cited repository in this tier excludes Globant's own business model by name.**
+  `dssg/student-early-warning` (University of Chicago DSSG) is **not OSI-licensed**: a bespoke
+  terms-of-use grant whose permission covers *"academic research or other not-for-profit scholarly
+  purposes"* and **"excludes any service or part of selling a service that uses the Program"**.
+  🔵 **A services company is the excluded case, verbatim.** Commercial terms via the Polsky Center.
+- 🔴 **`Gap 391` OPENED — the pedagogical-alignment judge exists as a TECHNIQUE and is UNGRANTED.**
+  [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) (MBZUAI, EACL 2026
+  system demo, arXiv:2512.03688) scores tutor replies on the four **BEA-2025** dimensions — Mistake
+  Identification, Mistake Location, Providing Guidance, Actionability. 🔴 **The paper states MIT; the
+  repository carries NO licence payload at 24 filenames**, `main` ·
+  `a71078456a90a7bb616f7c7e1de83f0bfbc44ab1`, **with a `P872` 200-control** (`README.md` = `200` at that
+  same SHA, so the probe reached the tree). 🔵 **`P1014`: a paper's licence claim is not a grant. Cite
+  the payload or shelve the row as read-only.**
+- 🟢 **`P1010` applied to carried rows, and it moved two addresses.**
+  `pykt-team/pykt-toolkit` **DRIFTED** off this shelf's pinned `77c3e90` to
+  `4751688e3a10156248d82c4ef80714c5b210dd68` and **kept its grant** (MIT, 1 066 B — byte-identical to the
+  earlier reading), **5 tags, counted for the first time**. `douglasrizzo/catsim` is **BSD-3-Clause**,
+  1 514 B, **38 tags**, and 🔴 **its default ref is `dev`, not `master` or `main`** —
+  `7e6caae84a8e7779422ba9338cfe2e2335185b28`. 🔵 **This shelf had never recorded a non-standard default
+  branch; a `main`-assuming probe would have 404'd every filename and published a false negative.**
 
 ### 🔴 What pass 100 adds, and the first line is a correction of this shelf by this shelf
 
@@ -962,7 +1015,47 @@ for is the inverse**: a teacher-facing view that makes *predictability* visible 
 discuss it — which is an AI-literacy deliverable, and AI literacy is a statutory duty in EMEA
 already (2 Feb 2025) and a graduation requirement in parts of North America.
 
-### 🔴 🆕 p97 `Gap 385` — there is no permissive open-source student early-warning system
+### 🟢 🆕 p101 The student early-warning tier — `Gap 385` discharged on the licence, REFRAMED as a legacy-stack and corpus problem
+
+🔵 **Read the two halves of this tier separately, because they fail for opposite reasons.** The
+**institutional** half is permissive and old; the **machine-learning** half is modern and unusable.
+
+**The institutional half — permissive, release-engineered, legacy stack.**
+
+| repo | grant (payload · bytes · ref · SHA-40) | tags | ★ | region | note |
+|---|---|---|---|---|---|
+| 🆕 p101 [`Jasig/SSP`](https://github.com/Jasig/SSP) | 🟢 **Apache-2.0** · `LICENSE` 11 359 B · `master` · `711244dc0d6d5c65fd261c9bec77dd48b4dbaaf6` | 🟢 **57** (`ssp-2.9.0`) | — | 🟢 **North America** (`P800`-grade — `NOTICE`: *"Copyright 2012, JA-SIG, Inc."* and *"originally granted to JA-SIG by **Sinclair Community College**"*, Ohio, USA) | **Apereo Student Success Plan.** Early-alert, caseload management, intervention tracking and student-success plans for higher ed. 🔴 **`NOTICE` declares bundled Ext JS under GPL-3.0 and JasperReports / JFreeChart / c3p0 / Hibernate Commons under LGPL** (`P1013`). 🟢 **Take the domain model and the schema; leave the portlet UI.** |
+
+**The machine-learning half — 6 of 6 probed, 6 of 6 unusable as a dependency.**
+
+| repo | grant (payload · bytes · ref · SHA-40) | tags | what it is | verdict |
+|---|---|---|---|---|
+| 🆕 p101 [`dssg/student-early-warning`](https://github.com/dssg/student-early-warning) | 🔴 **Bespoke academic terms-of-use, NOT OSI** · `LICENSE` 2 069 B · `master` · `b68f23c76d5277d96ec70768c728234660428e92` | 0 | U Chicago DSSG; high-school on-time graduation, survival analysis, ranks by urgency | 🔴 **EXCLUDED for a services business** — grant covers not-for-profit scholarly use and *"excludes any service or part of selling a service"*. Commercial terms via Polsky Center. |
+| 🆕 p101 [`Gnanakamalesh-M/student-dropout-early-warning`](https://github.com/Gnanakamalesh-M/student-dropout-early-warning) | 🔴 **NO LICENCE PAYLOAD** / 24 names @ 1 B · `main` · `6685be37a1686fdde63b55d561537417de6565db` | 0 | 🟢 the best-engineered of the six — OULAD, 30-day withdrawal at fixed checkpoints, **calibrated XGBoost + SHAP**, FastAPI + React | 🔴 **Ungranted.** 🔵 Read the **method** (calibration + SHAP is an Annex III-shaped explanation); do not take the code. |
+| 🆕 p101 [`alessandroryo/student-dropout-prediction`](https://github.com/alessandroryo/student-dropout-prediction) | 🟢 **MIT** · `LICENSE` 1 073 B · `main` · `78d256a2f1543064ede59729501724443c338c2b` | 0 | demographic / academic / socio-economic features, preprocessing + training + deploy scripts | 🟡 **The only permissive row — and a single-author portfolio project with 0 tags.** Permissive is necessary, not sufficient. |
+| 🆕 p101 [`himasriniva/student-dropout-early-warning`](https://github.com/himasriniva/student-dropout-early-warning) | 🔴 **NO LICENCE PAYLOAD** / 24 · `main` · `f48e88b43bc5751569c696e5c6d4277fd56fdacc` | 0 | scikit-learn on the UCI 4 424-student set, three timeline checkpoints | 🔴 Ungranted. |
+| 🆕 p101 [`miansaimnadeem/Student-dropout-prediction`](https://github.com/miansaimnadeem/Student-dropout-prediction) | 🔴 **NO LICENCE PAYLOAD** / 24 · `main` · `ec805a6ecb52662c7a7f81cec09c575985b208b2` | 0 | LightGBM, FastAPI + Streamlit, Dropout/Enrolled/Graduate + risk bands | 🔴 Ungranted. |
+| 🆕 p101 [`ShahCoding1/student-dropout-risk-system`](https://github.com/ShahCoding1/student-dropout-risk-system) | 🔴 **NO LICENCE PAYLOAD** / 24 · `main` · `7c5f75229ed1cb55a860fe1e18312a53c44642d2` | 0 | scikit-learn, FastAPI + React dashboard, risk banding | 🔴 Ungranted. |
+
+🔴 **The standing statement for this tier, now evidence-backed rather than asserted:** *the permissive
+supply for student early warning is the **institutional domain model** (`Jasig/SSP`, Apache-2.0, 57
+releases, legacy stack) and the **psychometrics** (`CAHLR/pyBKT`, `douglasrizzo/catsim`); the modern ML
+implementations are **ungranted (4 of 6)**, **non-commercial (1 of 6)** or a **portfolio project
+(1 of 6)**.* 🔵 **Model the risk with the permissive psychometrics, carry the SSP schema, and treat every
+ML repo in this tier as a paper you may read.**
+
+🔴 **And the event pipe underneath it is copyleft or consortium-licensed — new this pass.**
+[`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker), the de-facto xAPI
+Learning Record Store, is **GPL-3.0** (`LICENSE` 35 141 B, `master` ·
+`5fec948a823e372e740df521aa3684c8df1dcba7`, **221 tags**), and
+[`IMSGlobal/caliper-spec`](https://github.com/IMSGlobal/caliper-spec) carries an **IMS Global
+*Specification Document License*** (`LICENSE.md` 12 402 B, `master` ·
+`1849e118b47acb24a6d97f976fe72fc2f5182570`, 4 tags) — 🔵 **a consortium spec licence, not an OSI
+grant.** 🟢 **So the stack is permissive at the MODEL and the MATHS, and copyleft/consortium at the
+EVENT PIPE** — which is exactly `T17`: the permissive grant sits on the side that MEASURES, and
+copyleft sits on the side that becomes the RECORD.
+
+### 🔴 🆕 p97 `Gap 385` — there is no permissive open-source student early-warning system 🟢 **— SUPERSEDED by `🆕 p101` above; kept as the record of a gap that was a search failure, not a supply failure**
 
 🔵 **The institutional use case with the clearest ROI in this industry — dropout and retention risk
 — has nothing on this shelf to start from, and that is now measured rather than assumed.**
@@ -1035,6 +1128,10 @@ because this shelf pins SHAs.
 | [`A-R007/Multi-Agent-Study-Assistant`](https://github.com/A-R007/Multi-Agent-Study-Assistant) | 62★, six specialised agents | 🔴 **No licence payload in 24 filenames** (was 12 — the negative is now twice as strong) |
 | [`LAION-AI/Desktop_BUD-E`](https://github.com/LAION-AI/Desktop_BUD-E) | LAION educational voice assistant, 43★ | 🔴 **No licence payload in 24 filenames** |
 | 🆕 [`mahseema/aibooks`](https://github.com/mahseema/aibooks) | 91★ curated AI/ML book list on `topics/ai-tutor` | 🔴 **No licence payload in 24 filenames** · `master` · `0d71402` |
+| 🆕 p101 [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | the paper (arXiv:2512.03688) states the toolkit is **MIT**-licensed | 🔴 **No licence payload in 24 filenames** · `main` · `a71078456a90a7bb616f7c7e1de83f0bfbc44ab1` · **`P872` 200-control passed** (`README.md`=`200` at the same SHA). `P1014`: a paper's claim is not a grant. |
+| 🆕 p101 [`dssg/student-early-warning`](https://github.com/dssg/student-early-warning) | cited in roundups as the serious open-source early-warning system | 🔴 **Not OSI at all** — bespoke U Chicago terms of use, 2 069 B, which **excludes selling a service** that uses it. 🔵 The excluded case is a services company. |
+| 🆕 p101 [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) | the standard open xAPI Learning Record Store | 🔴 **GPL-3.0**, 35 141 B, `master` · `5fec948a823e372e740df521aa3684c8df1dcba7`, 221 tags. The learner-event record is copyleft. |
+| 🆕 p101 [`IMSGlobal/caliper-spec`](https://github.com/IMSGlobal/caliper-spec) | "open standard" for learning analytics events | 🔴 **IMS Global *Specification Document License***, 12 402 B — a consortium spec grant, **not** an OSI licence. |
 
 🟢 **The standing rate, re-measured with the corrected instrument: 5 of the 92 established slugs carry no
 licence payload — ~1 in 18, not pass 90's ~1 in 15.** 🔵 **The change is an instrument correction, not a
@@ -1043,6 +1140,17 @@ much worse 1-in-3 figure was measured on *fresh* `ai-tutor` rows rather than est
 withdrawn — the sampling difference remains the explanation.
 
 ## What this shelf still does not have
+
+- 🟢 🆕 **p101: `Gap 385` is DISCHARGED — and it was a SEARCH failure, not a supply failure.**
+  `Jasig/SSP` (Apache-2.0, 57 tags) has existed since 2012 under Apereo's **predecessor** org name, so
+  every `apereo/*` probe this KB could have run would have returned ABSENT (`P1012`). 🔴 **What is
+  genuinely missing is narrower and now stated precisely: a permissive, MODERN, release-engineered ML
+  early-warning implementation.** 4 of 6 candidates are ungranted, 1 is non-commercial by its own terms,
+  1 is a portfolio project — all six measured this pass. 🔵 **Tracked as `Gap 392`.**
+- 🔴 🆕 **p101: `Gap 391` — the pedagogical-alignment judge is UNGRANTED.** `AITutor-EvalKit` scores
+  the four BEA-2025 tutor dimensions and is the closest thing found to the instructional-alignment
+  checker the first bullet on this list has asked for since pass 96 — 🔴 **and it carries no licence
+  payload at 24 names with a passing 200-control.** 🔵 **The technique is published; the grant is not.**
 
 - 🔴 **An instructional-alignment checker.** Narrowed, not closed — see the checker tier above. The
   accessibility half is done; outcome alignment has no permissive row with usable evidence.

@@ -5,8 +5,20 @@ updated: 2026-10-10
 ---
 
 # Education — current trends
-**Pass 100, 2026-10-10.** ⏱️ **Tenth pass of this date.** 🆕 **Twenty-three trends.** 🟢 **`T21`,
-`T22` and `T23` are new, and `T20` is RETRACTED in its conclusion one pass after it was written.**
+**Pass 101, 2026-10-10.** ⏱️ **Eleventh pass of this date.** 🆕 **Twenty-five trends.**
+🟢 **`T24` and `T25` are new; no trend is retracted this pass.**
+
+- 🟢 **`T24`** — **in education the PERMISSIVE open-source supply predates the AI wave, and the
+  AI-era supply is ungranted.** The permissive student-success platform on this KB's shelf is a **2012
+  consortium artifact** (`Jasig/SSP`, Apache-2.0, 57 releases); the **2024–2026 ML implementations of the
+  same capability are 4-of-6 ungranted, 1-of-6 non-commercial, 1-of-6 a portfolio project.**
+  🔵 **Consortium-era code was licensed deliberately; AI-era repos are published without a licence at
+  all.** 🔴 **So "newer" is systematically less takeable than "older" in this industry.**
+- 🟢 **`T25`** — **in APAC the stated demand driver is TEACHER SHORTAGE, not cost reduction**, and the
+  public money follows training rather than infrastructure: South Korea's AI-textbook programme pairs
+  **~$70M of infrastructure with ~$760M of teacher training**, and Singapore's 2026 commitment is
+  **training teachers at all levels**. 🔵 **Which re-ranks the offer: automate PREPARATION and MARKING
+  before learner-facing chat.**
 
 - 🔴 **`T20` is RETRACTED.** It claimed *"`Gap 372` is a RELEASE gap — none of the three permissive
   open-response scorers has a single release tag."* 🟢 **Two scorers on this KB's own shelf DO have
@@ -44,6 +56,58 @@ updated: 2026-10-10
 `the-learning-agency-lab.com`, `www.fosway.com`, `www.cipd.org` — and, carried from pass 99,
 `www.iesalc.unesco.org`, `digital-strategy.ec.europa.eu`, `eur-lex.europa.eu`, `www.kaggle.com`.
 🔵 **Every regulatory and market row added this pass is search-summary grade and says so.**
+
+## T24 — 🆕 p101 The permissive supply predates the AI wave; the AI-era supply is ungranted
+
+🔵 **This is the most commercially consequential pattern measured in 101 passes, because it inverts
+the usual assumption that newer code is easier to adopt.**
+
+🟢 **The evidence is one capability measured end to end — student early warning.**
+- 🟢 **The 2012 consortium artifact is permissive and release-engineered**: `Jasig/SSP`, **Apache-2.0**,
+  **57 tags**, `711244dc0d6d5c65fd261c9bec77dd48b4dbaaf6`, with a `NOTICE` that enumerates every bundled
+  grant. 🔵 **Someone was paid to get the licensing right.**
+- 🔴 **The 2024–2026 ML implementations of the SAME capability are not takeable**: 4 of 6 carry **no
+  licence payload at 24 filenames**, 1 is **non-commercial by its own text** (`dssg/student-early-warning`
+  — *"excludes any service or part of selling a service"*), and 1 is **MIT with 0 tags and one author**.
+- 🔴 **The pedagogical judge repeats it**: `kaushal0494/AITutor-EvalKit` is an EACL 2026 system demo
+  whose **paper claims MIT** and whose **repository carries no licence payload** (`Gap 391`, `P1014`).
+
+🔵 **Why it happens, stated as a mechanism rather than a mood:** consortium software (JA-SIG/Apereo,
+Sakai, 1EdTech) was published by institutions with counsel and procurement obligations, so a grant was a
+deliverable. 🔴 **AI-era education repos are overwhelmingly research artefacts and portfolio projects,
+where the paper is the deliverable and the licence is an afterthought.**
+
+🟢 **What a studio does with it:**
+1. 🟢 **Search the consortium era FIRST for any administrative or records capability** — and search it
+   under its **predecessor org names** (`P1012`: `apereo/*` is ABSENT where `Jasig/*` exists).
+2. 🔴 **Treat AI-era repos in this industry as papers until a payload says otherwise.** Read the
+   method, re-implement, cite the paper. 🔵 **`Gnanakamalesh-M`'s calibrated-XGBoost-plus-SHAP design is
+   worth more as a READ than as a dependency.**
+3. 🔴 **And check what the old code BUNDLES** (`P1013`): Apache-2.0 at the root, GPL-3.0 Ext JS and LGPL
+   reporting inside. 🟢 **The schema is the asset; the UI is the liability.**
+
+## T25 — 🆕 p101 In APAC the driver is teacher shortage, and the budget goes to training
+
+🟢 **Measured, not inferred, from this pass's country-named sweep** (the regional sweep alone returned
+nothing education-specific — `P1017`).
+
+- 🟢 **South Korea**: AI digital textbooks for maths, English and computing (March 2025) with
+  **~$70M for digital infrastructure against ~$760M for teacher training** — 🔵 **an order of magnitude
+  more on people than on platform.**
+- 🟢 **Singapore**: by **2026**, AI-in-education training offered to **teachers at all levels**,
+  including pre-service, under the Digital Education Blueprint and National AI Strategy.
+- 🟢 **China**: a **General AI Education Guide** for primary and secondary schools plus a guide on
+  students' generative-AI use (May 2025), and **Beijing mandating ≥8 hours of AI instruction per year**.
+- 🟢 **Regional market framing names teacher shortages explicitly** as a demand driver, alongside large
+  student populations — **~$591.6M (2024) → ~$1.85B (2029), ~20.9% CAGR**, the fastest-growing region.
+- 🔴 **India: no national school AI policy surfaced in either sweep** — an open question, recorded
+  rather than filled.
+
+🔵 **Consequence for the offer: where the buyer's problem is a shortage of teachers, the product that
+sells is the one that gives hours back** — preparation, marking, reporting, scheduling — **not the one
+that puts a chat window in front of a student.** 🔴 **And a multi-country APAC rollout cannot carry one
+compliance story**: Singapore runs mature responsible-AI guidelines, China legislates against algorithmic
+misconduct, and the **ASEAN Guide on AI Governance and Ethics is still early-stage.**
 
 ## T21 — 🆕 p100 The binding constraint on regulated open-response scoring is the CORPUS, not the code
 
