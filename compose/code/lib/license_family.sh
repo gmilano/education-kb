@@ -459,6 +459,66 @@ osi_family_of() {
   printf '%s' "$n" | grep -qi 'Permission is hereby granted, free of charge' && { echo "MIT"; return; }
   printf '%s' "$n" | grep -qiE 'redistribution and use[^.]{0,40}in source and binary forms' \
       && { echo "BSD"; return; }
+  # P965 (pase 92 del 2026-10-10).  UN ARCHIVO EN UN NOMBRE DE LICENCIA PUEDE NO SER UNA
+  # CONCESION, SINO UN MARCO.  `learning-commons-org/knowledge-graph` publica `LICENSE.md`
+  # (5.789 B, `65701e9`) y ese archivo no concede nada: EXPLICA un marco de licenciamiento
+  # por dataset.  Dice «Code ... MIT», «Open ... CC BY 4.0 ... CC0», y despues la clausula
+  # que de verdad manda: «**Gated** -- Not covered by an open license. Access requires Data
+  # Provider approval», y «Gated content isn't yours to redistribute by default».
+  #
+  # 🔴 Clasificarlo devuelve la familia MAS PERMISIVA que el documento MENCIONA (aca CC0-1.0,
+  # por la rama anidada de sigla suelta) sobre un payload cuyo termino operativo es el
+  # OPUESTO.  Es la direccion de P299/P954 -- se inventa un permiso -- y es la peor de las
+  # tres formas de riesgo de licencia que esta base lleva registradas:
+  #   P627/P957  split multi-ARCHIVO   -> `--all` lo ve
+  #   P957       split EN-ARCHIVO      -> el sondeo por nombre no lo ve, pero HAY concesiones
+  #   🆕 P965    MARCO, no concesion   -> no hay ninguna concesion que leer en el archivo
+  #
+  # EL UMBRAL ESTA MEDIDO, NO ELEGIDO.  Sobre los 14 payloads REALES de
+  # `../grant-ladder-v4/fixtures/` (y los de esta suite), contando familias NOMBRADAS en la
+  # ventana de 4.000 B normalizada:
+  #   toda concesion real .......... 0, 1 o 2 familias, y los 2 son SIEMPRE un mismo linaje
+  #                                  (GPL+LGPL en tao/LTI-PHP/openeducat, GPL+AGPL en edx)
+  #   el marco de knowledge-graph .. 3 familias de TRES linajes distintos (MIT + CC-BY + CC0)
+  #
+  # Y LA POSICION TAMBIEN ESTA MEDIDA: esta compuerta va TARDE, despues de las anclas de
+  # titulo y de concesion.  MPL-2.0 nombra las TRES marcas GNU en su seccion 1.12 (es P454),
+  # asi que un umbral de 3 aplicado TEMPRANO se comeria todo payload MPL-2.0.  Puesta aca,
+  # solo la alcanzan los payloads que no matchearon ninguna ancla de concesion -- que es
+  # exactamente la poblacion donde vive un marco.
+  __p965_fams() {
+    local t n=0
+    t=$(printf '%s' "$1")
+    printf '%s' "$t" | grep -qiE '\bMIT\b'                                   && n=$((n+1))
+    printf '%s' "$t" | grep -qiE 'apache licen[cs]e'                          && n=$((n+1))
+    printf '%s' "$t" | grep -qiE '\bBSD\b'                                   && n=$((n+1))
+    printf '%s' "$t" | grep -qiE 'general public licen[cs]e|affero'            && n=$((n+1))
+    printf '%s' "$t" | grep -qiE 'mozilla public|eclipse public'               && n=$((n+1))
+    printf '%s' "$t" | grep -qiE 'cc[ -]by\b|creativecommons\.org/licenses/by' && n=$((n+1))
+    printf '%s' "$t" | grep -qiE '\bcc0\b|public-domain/cc0'                  && n=$((n+1))
+    echo "$n"
+  }
+  if [ "$(__p965_fams "$t")" -ge 3 ]; then echo "MULTI-GRANT-FRAMEWORK"; return; fi
+  # P962 (pase 92 del 2026-10-10).  LA RAMA CC0 ERA INALCANZABLE PARA SU PROPIO TEXTO CANONICO.
+  # El test de CC0 vivia ANIDADO dentro de la compuerta CC de abajo, que exige «Creative
+  # Commons» / «CC BY» DENTRO de la ventana de 4.000 B del bloque de titulo.  Medido sobre el
+  # payload REAL de `lukeslp/awesome-accessibility` (LICENSE, 6.464 B, `d146ae6`):
+  #   - «CC0» ................................. offset 0      (DENTRO de la ventana)
+  #   - «creative commons» .................... offset 6.227  (FUERA, por 1,6x)
+  #   - «creativecommons.org», «CC BY», «CC-BY»  AUSENTES del payload entero
+  # O sea que la compuerta leia FALSO y el veredicto caia a UNCLASSIFIED sobre el texto mas
+  # permisivo que existe -- la direccion de P304 (se pierde estante): una fila de dominio
+  # publico se descarta por no poder nombrarla.
+  #
+  # Y el detalle que lo vuelve estructural y no un ajuste de ventana: la UNICA aparicion de
+  # «Creative Commons» en el legalcode de CC0 es la clausula que DESLIGA a Creative Commons
+  # («Creative Commons is not a party to this document and has no duty or obligation with
+  # respect to this CC0»).  La compuerta estaba condicionada a un DESCARGO DE RESPONSABILIDAD,
+  # no a una concesion.  La identidad vive en el bloque de titulo; ahi se la mide.
+  #
+  # El ancla se ata a la VERSION (`CC0 1.0`), no a la sigla suelta, para que no robe un payload
+  # CC-BY que mencione CC0 de paso: es el mismo criterio de P312 sobre la sigla CC.
+  printf '%s' "$t" | grep -qiE 'CC0 1\.0|CC0-1\.0|Creative Commons Zero' && { echo "CC0-1.0"; return; }
   if printf '%s' "$t" | grep -qi 'Creative Commons\|creativecommons.org\|CC BY\|CC-BY'; then
     printf '%s' "$t" | grep -qi 'CC0\|Public Domain Dedication' && { echo "CC0-1.0"; return; }
     local nc="" sa="" nd=""
@@ -542,6 +602,25 @@ osi_family_of() {
   printf '%s' "$t" | grep -qi 'Business Source License' && { echo "BUSL"; return; }
   printf '%s' "$t" | grep -qi 'Elastic License'         && { echo "Elastic"; return; }
   printf '%s' "$t" | grep -qi 'PolyForm'                && { echo "PolyForm"; return; }
+  # P964 (pase 92 del 2026-10-10).  FAIR CODE y SUSTAINABLE USE LICENSE entran por la MISMA
+  # razon pre-registrada que BUSL/Elastic/PolyForm en P312, y el pase 92 la midio en la
+  # direccion contraria: el pase 91 BIFURCO el clasificador (`grant-ladder-v3`) en vez de
+  # rewirearlo a esta libreria, y al re-medir con esta libreria se PERDIO una familia que la
+  # copia bifurcada SI conocia -- `leemonade/leemons` (292 estrellas, listado en `topics/lms`)
+  # pasaba de FAIRCODE-NOT-OSI a UNCLASSIFIED.
+  #
+  # O sea que ninguno de los dos clasificadores DOMINABA al otro: la libreria compartida leia
+  # mejor la familia GNU y CC0, la copia bifurcada conocia dos familias NO-OSI que la libreria
+  # ignoraba.  P312 ya habia escrito el procedimiento correcto para exactamente esto --«entran
+  # aca para que el rewiring sea una mejora y no una perdida»-- y es el procedimiento que el
+  # pase 91 no siguio.  La leccion no es «reusar siempre gana»: es que reusar OBLIGA a reparar.
+  #
+  # Direccion del error que esto cierra: UNCLASSIFIED sobre una licencia source-available cae
+  # al token-match de `commercial_use_ok`, y el cuerpo de la Sustainable Use License CONCEDE
+  # uso «for commercial purposes» antes de restringir la reventa -- asi que la familia perdida
+  # no solo se perdia, podia volver ALLOWED.  Se niegan explicitamente abajo, con BUSL.
+  printf '%s' "$t" | grep -qiE 'fair[ -]?code'          && { echo "FAIRCODE"; return; }
+  printf '%s' "$t" | grep -qi 'Sustainable Use License' && { echo "SUL"; return; }
   # P308: `$n`, no `$1`.  El ancla mide 43 columnas, asi que necesita un envoltorio mas
   # angosto que eso para partirse -- mas raro que el del Unlicense, y ademas esta SOMBREADA
   # por el ancla de titulo «MIT License» de arriba, que ya es normalizada.  Se arregla igual:
@@ -730,6 +809,11 @@ commercial_use_ok() {
   case "$__f" in
     *-NC-*|*-NC|CC-BY-NC*) return 1 ;;
     BUSL|Elastic|PolyForm) return 1 ;;
+    # P964: source-available, NO-OSI, y restringen reventa/hosting.  Se niegan como BUSL.
+    FAIRCODE|SUL)          return 1 ;;
+    # P965: un marco por-dataset no concede uso comercial del conjunto.  «Gated content
+    # isn't yours to redistribute by default» -> se niega y se lee el catalogo a mano.
+    MULTI-GRANT-FRAMEWORK) return 1 ;;
     CC-*|UNCLASSIFIED)     : ;;
     *)                     return 0 ;;
   esac

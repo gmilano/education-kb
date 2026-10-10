@@ -6,7 +6,7 @@ updated: 2026-10-10
 
 # Education — current trends
 
-**Pass 91, 2026-10-10.** Seven trends, each tied to something measured or dated this pass.
+**Pass 92, 2026-10-10.** ⏱️ **Second pass of this date.** Seven trends, each tied to something measured or dated this pass.
 
 ## T1 — The unit of delivery is the *agent skill*, not the application
 
@@ -31,7 +31,7 @@ automated assessment is regulated (Korea, Vietnam) or student-data training rest
 🟢 **Pass 90's finding, now fixed in code rather than only described.** `Sakai` and `Opencast` are
 **ECL-2.0** — the Educational Community License, OSI-approved, Apache-2.0-derived, **permissive**. v2's
 classifier returned `OTHER/unclassified`; unclassified reads as risk and gets dropped, which is part of how
-*"8 of 8 copyleft"* survived six passes. 🟢 **`grant-ladder-v3` tests ECL *before* Apache** (ECL is
+*"8 of 8 copyleft"* survived six passes. 🟢 **The shared classifier `lib/license_family.sh` tests ECL *before* Apache** (ECL is
 Apache-derived, so an Apache test swallows it) and both rows now classify. `OTHER/unclassified` across the
 92-slug shelf went **2 → 0**.
 
@@ -159,6 +159,54 @@ mandate that China has already implemented and India starts this session.**
 stay deliberately voluntary"*. 🟢 **True of Singapore's position on regulating AI systems; false of its
 position on AI in schools.** Voluntary regulation and mandated curriculum are different axes, and conflating
 them understated the region's most purchasable commitment.
+
+## T8 — 🆕 APAC's AI statutes name education **high-risk by sector**, and that is a different market from the curriculum mandates
+
+🟢 **Three binding instruments arrived or took effect in APAC and two name education explicitly:**
+**South Korea's AI Basic Act** (in force **22 Jan 2026**, with a signalled **one-year penalty grace
+period**), **Vietnam's standalone AI statute** — the first in Southeast Asia — which puts **education
+alongside finance and healthcare as high-risk**, with **pre-deployment registration in a National AI
+Database**, conformity assessment, mandatory human oversight and **72-hour incident reporting**, compliance
+due **Sep 2027**; and **Taiwan's AI Basic Act** (Dec 2025).
+
+🔵 **Why this is a separate trend from `T7` and not an extension of it.** `T7` is about jurisdictions
+*mandating that AI be taught* — a **content and curriculum** market. This is about jurisdictions *regulating
+the AI an institution runs* — a **governance, logging and audit** market. 🔴 **Same region, different buyer,
+different deliverable, different skill set.** A studio that reads them as one offer will mis-staff both.
+
+🔴 **And the region does not converge, so it cannot be priced as one.** Korea and Vietnam are
+comprehensive-and-binding; **Japan is deliberately voluntary and innovation-first**; Singapore's frameworks
+are largely voluntary; India and Australia still lean on sectoral and privacy law. 🔵 **"APAC AI
+compliance" is not a product.** Per-jurisdiction scoping is the product.
+
+🟢 **The one transferable design constraint, and it is an architecture decision rather than a policy one:**
+**72-hour incident reporting** means logging, alerting and a named owner have to be in the system from the
+first sprint. 🔵 **It converges with the EU's Article 27 FRIA and with Oklahoma's and Maryland's
+human-oversight floors** — three regions, three instruments, **one engineering requirement: a human-decision
+gate with an audit trail.** 🟢 **Build that once and it sells in all three.** That is the single most
+reusable finding in this file.
+
+## T9 — 🆕 The regulated activity is **assessment**, and it is being adopted at sector scale right now
+
+🟢 **Jisc reported early findings in May 2026 from year-long AI marking-and-feedback pilots across 38 UK
+colleges and universities** *(search-summary)*, and analysts name assessment and grading the
+fastest-growing AI-in-education category — driven, circularly, by student AI use.
+
+🔴 **The EU AI Act's Annex III catches exactly this**: evaluating learning outcomes, screening applicants,
+and monitoring candidates during examinations. 🔴 **So the fastest-growing category is the regulated
+category**, and the shelf should be read accordingly:
+
+- 🟢 The permissive assessment tier is unusually strong — **`Numbas` (Apache-2.0)**, **`Submitty` (BSD)**,
+  **`otter-grader` / `nbgrader` (BSD)**, **`webtech-network/autograder` (Apache-2.0)**.
+- 🔴 **The best full QTI platform is copyleft, and this pass corrected its family**: `oat-sa/tao-core` is
+  **GPL-2.0**, not the LGPL this KB published last pass. The licence question on an assessment engagement is
+  therefore sharper than it looked a day ago.
+- 🟢 **`fborrasumh/tutoria` (MIT, Spain)** makes the teacher validate the lesson before the student sees it.
+  🔵 **Human oversight expressed as a product step rather than a policy document is the most saleable
+  compliance primitive in this industry** — and `AyudantIA` at UC Chile is the same idea bought at scale.
+- 🔴 **Trust, not capability, is the stated barrier**: learners and parents remain sceptical of automated
+  marking, and high-stakes assessment still needs teacher review. 🔵 **So "AI marks it" is not the product.
+  "AI drafts it, a teacher signs it, and the trail proves it" is.**
 
 ## Instrument note carried forward
 

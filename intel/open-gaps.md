@@ -4,6 +4,137 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 🔴 Ninety-second pass, 2026-10-10 — **the shelf's own instrument regressed a licence this KB had already corrected, and the wrong value reached a client recommendation**; `Gap 335` DISCHARGED after eight passes, `Gap 356` DISCHARGED with a gate that fails on first run, `Gap 367` targeted and HARDENED, and `P960`–`P968` are adopted
+
+⏱️ **Second pass of this date.** Pass 91 ran 2026-10-09 23:0x → 00:00 UTC; this pass ran 2026-10-10
+00:4x → 01:3x UTC. Append-only.
+
+### 🔴 🆕 The defect this pass exists to fix — `P960`
+
+🔴 **Pass 91's `grant-ladder-v3` wrote its own 30-line classifier instead of sourcing the hardened shared
+`compose/code/lib/license_family.sh`. `P237` exists to forbid exactly that, and `lib`'s own header records
+that pass 77 had already done it once.** Two platform rows came out with the wrong licence family:
+
+| row | pass 91 published | payload title block (pinned SHA) |
+|---|---|---|
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🔴 `LGPL-3.0` · 18 025 B · *"LGPL: linkable"* | 🔴 **GNU GENERAL PUBLIC LICENSE, Version 2, June 1991** → **GPL-2.0** |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🔴 `LGPL-3.0` · 18 092 B · *"link, don't absorb"* | 🔴 **Version 2, June 1991** → **GPL-2.0** |
+
+🔴 **Mechanism — `P171` on a pair `P171` never covered.** The canonical GPL-2.0 **preamble** reads
+*"(Some other Free Software Foundation software is covered by the **GNU Lesser General Public License**
+instead.)"* at **byte 847** (`tao-core`) and **byte 849** (`i-educar`), inside the 4 000 B window, and the
+fork tested `"gnu lesser"` **before** `"gnu general public"`. **Every canonical GPL-2.0 payload carries
+that sentence, so the defect was universal rather than incidental.**
+
+🟢 **Control, in the same verdict class and the same run:** `francoisjacquet/rosariosis` is also GPL-2.0 but
+its 15 214 B variant has **no `"gnu lesser"` at all** (offset `-1`), so the same classifier returned bare
+`GPL`. 🔵 **One instrument, one pass, one family, two verdicts — decided by whether a cross-reference
+sentence happened to be present.**
+
+🔴 **THE COST WAS NOT INTERNAL, AND THAT IS WHY THIS IS THE PASS'S HEADLINE.** `verticals/solutions.md`
+recommended by name *"a **Brazilian public-sector SIS** → `i-educar` (**LGPL-3.0**) — **link, don't
+absorb**"*, and `compose/patterns.md` built `P91-E` on *"LGPL-3.0 permits exactly that, and **this
+distinction makes the engagement possible**"*. **"Link, don't absorb" is advice that exists only for LGPL.**
+🟢 All three files corrected; `P91-E` re-costed around a service boundary with the cost increase stated.
+
+🔵 **And this KB already knew both answers.** `repos/trending.md` published *"the row that decides a
+project: `oat-sa/tao-core` is GPL-2.0"* — derived, in its own words, *"by reusing the shared classifier
+`lib/license_family.sh` (`P237`) instead of rewriting it"*. `agents/trending.md` carried
+`| portabilis/i-educar | LGPL | 🔴 GPL-2.0 | LATAM |`. 🔴 **The corrections existed and a new instrument
+overwrote them.**
+
+🟢 **`P960` adopted: a licence body names other families in order to relate itself to them — GPL-3.0 §13 →
+Affero, GPL-2.0 preamble → Lesser, MPL-2.0 §1.12 → three GNU marks, EUPL's Appendix → five families. The
+identity lives in the TITLE BLOCK and nowhere else.** Generalises `P171` and `P453`/`P454`.
+🟢 **`P963` adopted: a shelf row's licence may only be re-derived by an instrument at least as hardened as
+the one that last published it. An instrument-quality regression silently overwrites verified values.**
+
+### 🟢 Discharged, hardened, carried
+
+| gap | status | evidence |
+|---|---|---|
+| 🆕 **`Gap 335`** — knowledge tracing / learner model | 🟢 **DISCHARGED after EIGHT passes untouched — the oldest item on this shelf** | 🟢 [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) **MIT**, 1 066 B, `main` · `77c3e90`, ~430★ — reference deep-knowledge-tracing library (NeurIPS 2022), DKT/DKVMN/SAKT/SAINT/AKT/GKT/LPKT over 7 datasets. Shelved as `repos/foundations.md` **Tier 2b**; composed in `compose/patterns.md` **`P92-A`**. 🟢 **Found on the first query naming the TECHNIQUE instead of the industry — `P955` for a second consecutive pass, against a gap that survived eight.** 🔴 **`Gap 369` opened for what remains: nothing wires a tracing model to an agent's turn.** |
+| 🆕 **`Gap 356`** — no register→shelf reconciliation as a runnable check | 🟢 **DISCHARGED, and it fails on first run** | 🟢 `compose/code/p963-shelf-licence-agreement/`. **4 MISMATCH before this pass's corrections, 0 after.** 🔵 Carried four passes with the note *"it would have caught `P953` and `P957`"* — **this pass it would have caught `P960`, whose cost was a wrong client recommendation.** 🔴 **It found a defect in ITSELF on that run:** a first-bolded-family harvest read `frappe/lms` as **MIT**, the *refuted* claim in a *"what is claimed \| what the payload says"* table — **punishing exactly the rows that had done the work.** 🟢 Fixed by the shelf's own convention (a verdict cell carries bytes, a quoted claim does not): 122 claims → **113 verdicts** over 87 slugs. 🆕 **`P967`.** |
+| 🆕 **`Gap 367`** — no permissive AI curriculum for primary | 🔴 **CARRIED and HARDENED — targeted directly, and it got worse** | 🔴 A K-5 query returned **no GitHub repository at all**; every permissive curriculum row is written for adult developers. 🟢 Named alternative found, which beats the previous bare negative: **MIT Day of AI** (`dayofai.org`, **CC-licensed**) + Code.org, both on the **AI4K12 Five Big Ideas**. 🔴 **And the framework repo itself is ungranted:** [`touretzkyds/ai4k12`](https://github.com/touretzkyds/ai4k12) (AAAI/CSTA) → **no payload / 24** · `727b8bb`. 🔵 **`Gap 354`'s shape again: four jurisdictions mandate AI instruction, and the reference framework cannot be redistributed in a deliverable.** |
+| **`Gap 354`** — upstream-askable negatives | 🔴 **CARRIED, and the category widened beyond ADL** | 🔴 Three new ungranted rows this pass and **all three are curriculum or framework artefacts**: `touretzkyds/ai4k12`, `Intro-Course-AI-ML/LessonMaterials` (`8992f5f`), `weiwei1392/knowledge-tracing` (`136efef`). 🔵 **Pass 91 read this as an ADL policy; it is a property of the ARTEFACT CLASS — specs and teaching material get granted less often than code**, across unrelated publishers. **18 of 133 slugs carry no payload in 24 names.** |
+| **`Gap 362`** — `Selleo/mentingo` open-core | 🔴 **CARRIED, untouched, third pass.** Stays out of every costed pattern, as declared. |
+| **`Gap 349`** — proctoring capability audit | 🔴 **CARRIED, untouched** — 🆕 **and now with a reason to prioritise it:** EU AI Act Annex III names **monitoring candidates during examinations** as high-risk, and **emotion recognition in education is already banned** (in force 2 Feb 2025). 🔵 The audit is no longer a completeness item; it decides whether a whole feature class is sellable in EMEA. |
+| **`Gap 368`** — `topics/lms` acronym contamination | 🔴 **CARRIED — and the shape recurred on a different axis.** 🆕 `pykt-team/pykt-toolkit` vs `JonathanSilver/pyKT`: **both MIT**, both answering the same query, one canonical and one self-declaring non-parity. 🔴 **A licence probe cannot separate them; only the README can.** 🆕 **`P968`: name collision is a property of this industry's search space — the canonical SLUG belongs in the shelf row.** |
+| **`Gap 355`** — byte-figure reproducibility | 🟢 **FOURTH positive datum** | 🟢 `moodle/moodle` → `COPYING.txt` **35 147 B** at `f205347`, **byte-identical across ten passes**. Two invented slugs `ABSENT`. 🟢 Two rows advanced HEAD and kept their grant: `celtic-project/LTI-PHP` `1f47c93`→`0ef9cc9` (LGPL-3.0, 7 651 B), `learning-commons-org/evaluators` `59d2396`→`b1795b8` (CC-BY-NC-SA-4.0, 1 615 B). |
+| **`Gap 359`** / `P944` / `P950` — egress oracle | 🟢 **RE-CONFIRMED, fifth measurement.** Primary hosts for this pass's figures (CBSE, HEPI, Jisc, CONACYT-adjacent) remain unreachable; every figure drawn from them is labelled *search-summary*. Not retried per host (`P950`). |
+
+### 🟢 🆕 And the new gate failed on THIS pass's own new content
+
+🔵 **A gate that only finds legacy defects is a one-off audit.** `P963` failed on prose written minutes
+earlier: `P92-A`'s stack table had **one cell naming two repos with two licences**
+(`DeepTutor` **or** `tutoria` / `Apache-2.0` / `MIT`), and the harvest reported `HKUDS/DeepTutor` as
+**MIT** when it is **Apache-2.0**. 🟢 **The gate was right** — a cell pairing two repos with two grants is
+ambiguous to a checker and to anyone costing the stack. Split into *option A* / *option B*; final state
+**0 failures**. 🔵 **The four legacy mismatches had survived a pass; this one survived ten minutes — which
+is the argument for running the gate inside the writing pass rather than as a later audit.**
+
+### 🟢 🆕 Three repairs carried back into the SHARED classifier — because reuse obliges repair
+
+🔵 **`P237` cuts both ways, and pass 100 had already written the procedure down.** `P312`'s comment in
+`lib/license_family.sh` says BUSL/Elastic/PolyForm *"go in here so the rewiring is an improvement and not a
+loss"*. 🔴 **It is the procedure pass 91 did not follow.** Each repair ships with the real payload committed
+as a fixture in `compose/code/grant-ladder-v4/fixtures/`. **lib 199/199, v4 16/16.**
+
+| # | repair | the measurement |
+|---|---|---|
+| 🆕 **`P962`** | 🔴 **lib's CC0 branch was UNREACHABLE for canonical CC0 text.** The CC0 test was nested inside a gate requiring `Creative Commons`/`CC BY` in the 4 000 B window. On the real payload: **`CC0` at offset 0**, **`creative commons` at 6 227** (outside, by 1.6×), **`CC-BY` absent from the whole file.** 🔵 **And the single mention is the clause that DISCLAIMS Creative Commons** — *"Creative Commons is not a party to this document"*. **The gate was conditioned on a disclaimer, not a grant.** 🔴 **And lib's suite passed 199/199 anyway, because its CC0 fixture is a hand-written one-liner OPENING with the gate's token** (`'Creative Commons CC0 1.0 Universal …'`) — **three passing assertions built on a fixture that encoded the guard instead of testing it.** 🟢 **A licence fixture is a real payload at a pinned SHA, or it is a restatement of the code** — `p613`'s lesson, third occurrence in this base. | `lukeslp/awesome-accessibility` `LICENSE` 6 464 B `d146ae6` |
+| 🆕 **`P964`** | 🔴 **Reuse ALONE would have lost a family the fork knew.** lib carried BUSL/Elastic/PolyForm but **not Fair Code and not Sustainable Use**, so `leemonade/leemons` (292★) fell from `FAIRCODE-NOT-OSI` to **`UNCLASSIFIED`**. 🔴 **Direction is not neutral:** `UNCLASSIFIED` falls through to `commercial_use_ok`'s token match, and the SUL body *grants* use *"for commercial purposes"* before restricting resale — **a lost non-OSI family could return `ALLOWED`.** 🔵 **So neither classifier dominated: lib read GNU and CC0 better, the fork knew two families lib ignored. The lesson is not "reuse always wins" — it is that reuse OBLIGES REPAIR.** | `leemonade/leemons` `LICENSE.md` 10 830 B `b1ca5d8` |
+| 🆕 **`P965`** | 🔴 **A file at a licence filename may be a FRAMEWORK, not a grant** — and this is the worst of the three licence-risk shapes this base carries, because **there is no grant in the file at all.** `LICENSE.md` explains per-dataset licensing, names *"Code … MIT"* and *"Open … CC BY 4.0 … CC0"*, then **"Gated — Not covered by an open license"** and **"Gated content isn't yours to redistribute by default."** 🔴 **Classifying it returned `CC0-1.0` — the most permissive family it merely MENTIONS — for a payload whose operative term is the opposite.** New verdict `MULTI-GRANT-FRAMEWORK`, denied commercially. 🟢 **Threshold MEASURED, not chosen:** across all 14 real fixtures, **every real grant names 0–2 families** (the 2s always one lineage: GPL+LGPL, GPL+AGPL) while **the framework names 3 across three lineages.** 🟢 **Position measured too:** the guard runs **late**, because **MPL-2.0 names all three GNU marks in §1.12** (`P454`) and an early threshold of 3 would swallow every MPL-2.0 payload. | `learning-commons-org/knowledge-graph` `LICENSE.md` 5 789 B `65701e9` |
+
+### 🟡 `P961` — a reach defect that is reported as costing nothing
+
+🔴 v3 accepted a payload only at **`bytes > 200`** while publishing its reach as *"24 filenames"*, so every
+v3 negative was really *"24 names **and** nothing over 200 B"* — **`P953`'s defect in a second place.** The
+floor was not hypothetical: this base owns a **real 68-byte GPL title stub** (found by `p613`).
+🟢 **v4 prints both terms** (`--reach` → `names=24 byte-floor=1B classifier=lib/license_family.sh`).
+🔵 **Measured effect on this corpus: ZERO.** Re-running all 15 of v3's `NO-LICENCE-PAYLOAD` rows at a
+1-byte floor produced **no new positives** — no payload on this shelf sits between 1 and 200 bytes.
+🟢 **Stated as a latent defect that cost nothing rather than inflated into a correction.**
+
+### 🔴 `P966` — pass 91's census file was a log, not a census
+
+🔴 `grant-ladder-v3/pass91-results.tsv` has **123 rows and 122 unique slugs** while `agents/top.md` and the
+v3 README both claim **"120 slugs resolved"**. 🔴 **`leemonade/leemons` appears TWICE at the same SHA with
+two different verdicts** (`FAIRCODE-NOT-OSI` and `OTHER/unclassified`), so **its own verdict histogram was
+not a census** — `P255` ("one payload, two verdicts") *inside a single file*. 🔴 **And the README published
+*"`OTHER/unclassified` 2 → 0"* while that file contains **four** such rows.** 🔴 **The `cccareers` row still
+reads `Unlicense/PD`** — the uncorrected value from the defect pass 91 declared it had fixed mid-pass; the
+fix reached the prose and never the artefact.
+🟢 **`P966` adopted: a census file must assert its own row count and uniqueness, or it is a log.**
+`pass92-results.tsv`: **133 rows, 133 unique slugs**, both stated in the README and in `agents/top.md`.
+
+### 🔴 Declared silences — written down, because silence reads like coverage
+
+- 🔴 **GitHub Trending: ZERO education-industry repos, FOURTH consecutive pass.** 🔵 **Four identical
+  negatives is a property of the CHANNEL, not the industry** — trending ranks popularity velocity, and this
+  industry's repos are small, institutional and slow (`pykt-toolkit` is canonical for its subfield at
+  ~430★ and will never trend). 🟢 **Recommendation recorded: stop spending a pass's budget on the trending
+  query; spend it on a `topics/<spec>` page or a non-English query**, both of which produced rows this pass.
+- 🔴 **A generalist *"top open source AI agents education 2026"* query returned eight roundups and not one
+  education-specific agent.** Re-confirms `T1`.
+- 🔴 **Canada: nothing, second pass.** 🔵 Next attempt should name the instrument, not the region
+  (provincial ministries, PIPEDA) — `P870`.
+- 🔴 **H.R. 8747 status beyond the July 2026 markup: unresolved, THIRD pass.**
+- 🔴 **Africa and the Middle East: not separable** under the five-value region vocabulary, third pass.
+  🔵 Recorded as a **vocabulary limit of this KB**, not an absence in the world — the two read identically
+  in a blank cell, which is the whole reason to write it down.
+- 🟢 **`P870` held a FIFTH time, with the cleanest demonstration yet:** *"AI education Mexico regulation"*
+  in English returned nothing across five passes and Mexico was recorded as an empty region.
+  **The Spanish query returned a dated, article-level state reform on the first attempt** (Estado de México,
+  Article 61 of its Education Law, April 2026). **The gap was in the query language, not the world.**
+
+### 🆕 `Gap 369` opened
+
+🔴 **Nothing on this shelf wires a knowledge-tracing model to an agent's turn.** `pykt-toolkit` is a
+benchmark library; `P92-A` specifies the glue (xAPI → corpus → fitted model → mastery service → tool call →
+gate) but **nothing implements it**. 🔵 **Named as a build with a declared boundary rather than carried as
+an unqualified capability**, so a pitch does not promise an integration that is a project.
+
 ## 🟢 Ninety-first pass, 2026-10-10 — **the shelf's own instrument is found to have a reach it never had**, `Gap 363` / `Gap 364` / `Gap 365` DISCHARGE, a five-pass "nothing exists" claim is FALSIFIED by changing one word in the query, `Gap 354` hardens from one row to three, and `P953`–`P959` are adopted
 
 ⏱️ **First pass of this date.** Measurement window 2026-10-09 23:0x → 2026-10-10 00:00 UTC. Append-only.

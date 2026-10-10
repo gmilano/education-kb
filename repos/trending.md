@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 92: the learner-model tier opens (Gap 335, eight passes), two platform licences are corrected to GPL-2.0, and GitHub Trending returns zero industry repos for a fourth pass
+
+**APPEND-ONLY — history is below. Second pass of this date.**
+
+Instrument: **`compose/code/grant-ladder-v4/ladder.sh`** — **24 filenames at a printable 1-byte floor**, and
+**no classifier of its own**: it sources the shared `compose/code/lib/license_family.sh` (`P237`). Control
+passed every run: `moodle/moodle` → `COPYING.txt` **35 147 B** (tenth reproduction), two invented slugs
+`ABSENT`. Census `compose/code/grant-ladder-v4/pass92-results.tsv` — **133 rows, 133 unique slugs.**
+
+### 🟢 New foundational rows: the learner model, after eight passes of declaring it missing
+
+| repo | grant (payload · bytes · ref · SHA) | ★ | tier |
+|---|---|---|---|
+| 🆕 [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **MIT** · 1 066 B · `main` · `77c3e90` | ~430 | 🟢 **Tier 2b (new) — the learner model.** Reference **deep knowledge tracing** benchmark library: DKT, DKVMN, SAKT, SAINT, AKT, GKT, LPKT over 7 datasets, NeurIPS 2022 datasets-and-benchmarks, `pykt.org`. **The layer that converts conversation memory into a per-skill mastery estimate.** |
+| 🆕 [`JonathanSilver/pyKT`](https://github.com/JonathanSilver/pyKT) | **MIT** · 1 065 B · `main` · `2bef7e9` | — | 🔴 **Name collision, weaker row** — its own README warns the models do not reach the originals' performance. Reference only (`P968`). |
+| 🆕 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0** · 35 136 B · `master` · `2e46ebd` | — | 🔴 **Licence claim REFUTED from the payload.** A 2026 LMS roundup states Open edX *"uses the Apache License 2.0"*. **It is AGPL-3.0.** Its installer [`overhangio/tutor`](https://github.com/overhangio/tutor) is **AGPL-3.0** too (`LICENSE.txt` 34 523 B · `release` · `2776223`). 🔵 **Some of its *libraries* are Apache-2.0, which is how the claim survives** — and why the platform/library distinction has to be read per artefact. |
+| 🆕 [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 **GPL-3.0** · 35 147 B · `master` · `e5cf557` | — | Re-resolved; unchanged family. |
+
+🔴 **Ungranted this pass:** [`touretzkyds/ai4k12`](https://github.com/touretzkyds/ai4k12) (AAAI/CSTA
+framework repo — **no payload / 24** · `727b8bb`), [`weiwei1392/knowledge-tracing`](https://github.com/weiwei1392/knowledge-tracing)
+(`136efef`), [`Intro-Course-AI-ML/LessonMaterials`](https://github.com/Intro-Course-AI-ML/LessonMaterials)
+(`8992f5f`). 🔵 **18 of 133 slugs carry no licence payload in 24 names** — 15 of them already known;
+**the three new ones are all curriculum or framework artefacts**, which is `Gap 354`'s category again:
+specs and teaching material get granted less often than code.
+
+### 🔴 Two corrections on this page's own platform rows — both to GPL-2.0
+
+| repo | published last pass | payload title block | corrected to |
+|---|---|---|---|
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🔴 `LGPL-3.0` · 18 025 B | **GNU GENERAL PUBLIC LICENSE, Version 2, June 1991** | 🔴 **GPL-2.0** (GPL-2.0-**only** — one-way incompatible with GPL-3.0) |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🔴 `LGPL-3.0` · 18 092 B | **GNU GENERAL PUBLIC LICENSE, Version 2, June 1991** | 🔴 **GPL-2.0** (18 092 B is the canonical GPL-2.0 byte count) |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🟡 bare `GPL` · 15 214 B | **Version 2, June 1991** | 🟢 **GPL-2.0** — version recovered |
+
+🔵 **This page already held the right answer for `tao-core`** — *"17 rows gained family precision **by
+reusing the shared classifier `lib/license_family.sh` (`P237`) instead of rewriting it**"*, headline row
+`oat-sa/tao-core`: `GPL` → **`GPL-2.0`**. 🔴 **Pass 91 re-derived it with a forked classifier and regressed
+it.** Mechanism (`P171`-class, registered as `P960`): GPL-2.0's **preamble** cross-references the LGPL at
+**byte 847**, and the fork tested `"gnu lesser"` first. Full account in
+`compose/code/grant-ladder-v4/README.md`; the gate that catches the class in
+`compose/code/p963-shelf-licence-agreement/` (`Gap 356` discharged — **4 failures before this pass's
+corrections, 0 after**).
+
+🟢 **Byte counts as the tell, which is the reusable technique here:** `celtic-project/LTI-PHP` is genuinely
+LGPL-3.0 and its payload is **7 651 B** — the canonical LGPL-3.0 size. **`tao-core` at 18 025 B and
+`i-educar` at 18 092 B were never within 2.4× of it.** 🔵 **Two rows claiming one licence with a 2.4× byte
+spread is a readable contradiction, and this shelf prints bytes precisely so that it is.**
+
+### 🔴 GitHub Trending — zero industry repos, fourth consecutive pass
+
+🔴 `github trending education AI 2026` (year **computed**, never hardcoded) returned, again, **no
+education-industry repository**. The yield was: generalist agent infrastructure, and AI-engineering curricula
+written for adults — `ai-engineering-from-scratch`, `LLMs-from-scratch`, `Generative AI for Beginners`
+(~108k★), `nanochat`, `100 Days of ML Code`, `obra/superpowers`.
+
+🔵 **Four identical negatives is now a finding about the channel, not about the industry.** Trending ranks by
+velocity of popularity; education-industry repos are **small, institutional and slow** — `pykt-toolkit` at
+~430★ is the canonical library for its entire subfield and will never trend. 🟢 **The channels that produce
+rows in this industry, measured across passes:** `github.com/topics/<spec>` read via `WebFetch` (SCORM, xAPI,
+QTI, `ai-tutor`, `lms`), and **Spanish/Portuguese-language queries** — which this pass again used to find the
+only new LATAM row. 🔴 **Recommendation recorded: stop spending a pass's budget on the trending query and
+spend it on a topic page or a non-English query.**
+
+### 🟢 Re-resolved without drift
+
+🟢 Every Tier 1–3 row re-resolved to the **same SHA and byte count** as pass 91, which is the point of
+pinning. Two rows advanced HEAD and **kept their grant**:
+[`celtic-project/LTI-PHP`](https://github.com/celtic-project/LTI-PHP) `1f47c93` → `0ef9cc9` (LGPL-3.0,
+7 651 B) and [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators)
+`59d2396` → `b1795b8` (CC-BY-NC-SA-4.0, 1 615 B).
+
 ## 2026-10-10 — pass 91: `topics/scorm` page 2 bought (Gap 365), `topics/lms` found to be acronym-contaminated, and a proposed successor to SCORM + H5P + LTI appears under Apache-2.0
 
 **APPEND-ONLY — history is below. First pass of this date.**

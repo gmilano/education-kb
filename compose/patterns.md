@@ -6,11 +6,19 @@ updated: 2026-10-10
 
 # Education — compose patterns
 
-**Pass 91, 2026-10-10.** Every repo named below was resolved this pass by `git ls-remote --symref` with its
-**licence read from the payload** at the pinned SHA, using `compose/code/grant-ladder-v3/ladder.sh` over **24**
-candidate filenames. Each pattern names the specific repos, the licence posture of the whole stack, and how the
-pieces wire together. **Two new patterns this pass (`P91-F`, `P91-G`), both enabled by findings in
-`intel/trends.md` `T5` and `T7`.**
+**Pass 92, 2026-10-10.** ⏱️ **Second pass of this date.** Every repo named below was resolved this pass by
+`git ls-remote --symref` with its **licence read from the payload** at the pinned SHA, using
+`compose/code/grant-ladder-v4/ladder.sh` over **24** candidate filenames at a **1-byte floor**, classified by
+the shared `compose/code/lib/license_family.sh` (`P237`). Each pattern names the specific repos, the licence
+posture of the whole stack, and how the pieces wire together.
+
+🔴 **`P91-E` was re-costed this pass because the licence it was built on was wrong.** It stated that
+`portabilis/i-educar` is LGPL-3.0 and that *"LGPL-3.0 permits exactly that, and this distinction makes the
+engagement possible"*. **i-educar is GPL-2.0, which has no linking exception.** The pattern survives but the
+integration boundary — and therefore the cost — changed. See `P91-E` below and
+`compose/code/grant-ladder-v4/README.md`.
+
+🟢 **One new pattern this pass (`P92-A`)**, enabled by `Gap 335`'s discharge.
 
 ## `P91-A` — The closable AI university platform (EMEA)
 
@@ -149,16 +157,30 @@ still awaiting a Chamber vote**, so the institution is the decision-maker and th
 
 | layer | component | grant | posture |
 |---|---|---|---|
-| SIS of record | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) · `2.12` · `cd1da68` | 🟡 **LGPL-3.0** (18 092 B) | 🟡 **Link, do not absorb** |
-| AI layer | your service, over i-educar's interfaces | 🟢 closed | 🟢 LGPL permits linking |
+| SIS of record | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) · `2.12` · `cd1da68` | 🔴 **GPL-2.0** (18 092 B) | 🔴 **Separate service — do NOT link, do NOT absorb** |
+| AI layer | your service, **across a process/network boundary** from i-educar | 🟢 closed | 🔴 **GPL-2.0 has no linking exception** — the boundary is what keeps the deliverable closed |
 | record trail | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) · `cb794e4` | **Apache-2.0** | 🟢 |
 | 🆕 programming-practice + autograding | [`mumuki/mumuki-laboratory`](https://github.com/mumuki/mumuki-laboratory) · `fce1ede` | 🔴 **AGPL-3.0** (34 523 B) | 🔴 **LTI 1.3 only — never in the deliverable** |
 | incumbent LMS bridge | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) · `f30df11` | 🔴 GPL-3.0 | 🔴 integrate only |
 
-**Wiring.** i-educar stays the system of record and is **linked, never forked into the deliverable** —
-LGPL-3.0 permits exactly that, and this distinction makes the engagement possible. The AI layer sits beside it
-as a separate service reading through i-educar's interfaces and writing xAPI into `lrsql`. Where the network
-also runs Chamilo (common across LATAM), bridge by LTI 1.3 rather than modifying it.
+🔴 **This pattern was re-costed this pass, and the licence it was built on was wrong.** Pass 91 wrote
+*"i-educar is **linked, never forked** — **LGPL-3.0 permits exactly that**, and this distinction makes
+the engagement possible."* 🔴 **i-educar is GPL-2.0** (title block: *"Version 2, June 1991"*), which has
+**no linking exception at all**, so the sentence that made the engagement possible was the sentence that
+was wrong. See `verticals/solutions.md` and `compose/code/grant-ladder-v4/README.md` (`P960`).
+
+**Wiring, corrected.** i-educar stays the system of record and runs **as its own deployed service** —
+unmodified, unlinked, and outside the deliverable's build. The AI layer sits beside it **across a process
+or network boundary**, reading through i-educar's HTTP interfaces and its database only via exported
+views, and writing xAPI into `lrsql` (Apache-2.0). Where the network also runs Chamilo (common across
+LATAM), bridge by LTI 1.3 rather than modifying it.
+
+🔵 **Cost effect, stated plainly rather than buried.** The pattern survives — 🔴 **but it is no longer
+the cheap one.** Linking would have allowed in-process extension; a service boundary means the
+integration surface must be specified, versioned and tested, and **anything the client wants changed
+*inside* i-educar is a GPL-2.0 contribution, not a deliverable feature.** Scope that explicitly in the
+statement of work. 🔵 **If the ask can tolerate a different system of record, `OpenEduCat` (LGPL-3.0,
+genuinely verified) is the only platform on this shelf where the original linking strategy is legal.**
 🆕 **Where the ask includes programming education — and in Argentina and Brazil it often does —
 `mumuki-laboratory` is the regional incumbent with real classroom use and automated feedback. It is AGPL, so
 it attaches over LTI 1.3 alongside the deliverable and never inside it.**
@@ -247,6 +269,67 @@ cluster.** [`cccareers/open-source-curriculum`](https://github.com/cccareers/ope
 **CC-BY-NC-SA-4.0** — reference only, never in a paid deliverable. Check the grant on every piece of
 curriculum before it enters the pipeline, and read the payload rather than the badge: this pass's own
 instrument briefly mis-read that very row as public domain.
+
+## `P92-A` — 🆕 Mastery-gated progression: the learner model the shelf lacked for eight passes
+
+**The ask it answers.** An institution already has content and a tutor, and the complaint is that the tutor
+is *"confidently helpful and never actually knows whether the student learned anything."* They want
+progression gated on **evidence of mastery per skill**, not on completion or on a model's impression of the
+conversation. 🔵 **This is the most common follow-on ask after a tutor pilot succeeds**, and until this pass
+this shelf had no permissive answer to it — `Gap 335`, named openly for eight passes.
+
+**Stack — permissive end to end, so the whole thing is closable.**
+
+| layer | component | grant (payload · bytes · ref · SHA) | posture |
+|---|---|---|---|
+| mastery estimation | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **MIT** · 1 066 B · `main` · `77c3e90` | 🟢 in the deliverable |
+| skill graph / prerequisites | [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | **MIT** · 1 094 B · `main` · `f88f69f` | 🟢 in the deliverable |
+| tutor turn (option A) | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **Apache-2.0** · 11 408 B · `main` · `6cf793b` | 🟢 in the deliverable |
+| tutor turn (option B) | [`fborrasumh/tutoria`](https://github.com/fborrasumh/tutoria) | **MIT** · 1 120 B · `main` · `65b2903` | 🟢 in the deliverable — pick this one where the **teacher must validate the lesson first** |
+| orchestration | [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | **MIT** · 1 072 B · `main` · `12aeb0f` | 🟢 |
+| item bank / assessment | [`numbas/Numbas`](https://github.com/numbas/Numbas) | **Apache-2.0** · 11 357 B · `master` · `39b03e5` | 🟢 SCORM-packageable |
+| evidence trail | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **Apache-2.0** · 11 357 B · `main` · `cb794e4` | 🟢 |
+| delivery | the client's LMS, via LTI 1.3 / SCORM | 🔴 theirs | 🔴 integrate, never fork |
+
+**Wiring — the loop, concretely.**
+
+1. **Tag the item bank to skills.** `Numbas` questions carry skill tags; the skill graph in
+   `adaptive-knowledge-graph` holds prerequisites. 🔵 **This is the only genuinely manual step and it is
+   where the engagement's domain value sits** — budget it as content work, not engineering.
+2. **Every graded interaction becomes an xAPI statement** into `lrsql`. The LRS is the training corpus *and*
+   the audit trail — **one store, two purposes**, which is why this stack is cheap to run.
+3. **Fit a tracing model offline on that corpus.** `pykt-toolkit` gives DKT/AKT/SAINT/LPKT behind one
+   interface, so the model is a swappable component rather than an architectural commitment. 🟢 **Start with
+   **BKT or DKT** — interpretable, and an institution will ask *"why did it say my student hasn't mastered
+   this?"* on day one.
+4. **Serve a per-skill mastery probability** as a service the agent calls as a tool. 🔵 **The agent asks the
+   model what the student knows; it does not infer it from the transcript.** That inversion is the whole
+   pattern.
+5. **Gate progression on a threshold**, and route the tutor's next turn from the weakest prerequisite — not
+   from the syllabus order.
+6. **A teacher sees and can override every gate.** 🔴 **Non-negotiable, and not for pedagogical reasons:**
+   mastery gating decides what a student is allowed to attempt, which is *evaluating learning outcomes* —
+   **EU AI Act Annex III high-risk**, and squarely inside Oklahoma's and Maryland's human-oversight floors.
+   The override log is the Article 27 evidence.
+
+**Timeline.** 6–8 weeks to a gated pilot on one course with an existing item bank; **+4–6 weeks** if the
+item bank has to be skill-tagged from scratch. 🔴 **The binding constraint is interaction data, not
+modelling**: a tracing model needs history, so a cold-start course gates on BKT priors and a rubric for the
+first term. **Say this in the proposal** — a client who expects adaptive behaviour in week one will read a
+correct implementation as a failure.
+
+🔴 **Stated honestly: this is a build, not an integration.** Nothing on this shelf wires a tracing model to
+an agent's turn today — `pykt-toolkit` is a benchmark library, not a service. **The glue (steps 2, 4 and 5)
+is bespoke, and it is also the defensible part.** Tracked as `Gap 369`.
+
+🔴 **And mind the name collision:** [`JonathanSilver/pyKT`](https://github.com/JonathanSilver/pyKT) is also
+MIT and answers the same search string, but its README states its models do not match the originals'
+performance. **Pin `pykt-team/pykt-toolkit` by slug in the dependency manifest** (`P968`).
+
+🟢 **Where to sell it first.** EMEA and North America, because the oversight requirement that makes this
+pattern *expensive* is also what makes it *procurable*: an institution facing Annex III or an Ohio district
+policy needs a defensible decision trail, and **a mastery model with a teacher override and an LRS behind it
+is that trail.** 🔵 The same build satisfies Vietnam's 72-hour incident reporting with a log subscriber.
 
 ## `P91-RETIRED` — "the platform is always the client's; the intelligence on top is ours"
 

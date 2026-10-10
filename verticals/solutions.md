@@ -6,9 +6,36 @@ updated: 2026-10-10
 
 # Education — vertical platforms you can customise with AI
 
-**Pass 91, 2026-10-10.** Licences read from the payload at a pinned SHA with
-`compose/code/grant-ladder-v3/ladder.sh` (**24** candidate filenames; v2 probed 12). `—` in ★ means not read
-this pass.
+**Pass 92, 2026-10-10.** ⏱️ **Second pass of this date.** Licences read from the payload at a pinned
+SHA with `compose/code/grant-ladder-v4/ladder.sh` — **24 filenames at a 1-byte floor**, and classified
+by the **shared** `compose/code/lib/license_family.sh` rather than by a classifier of the instrument's
+own (`P237`). `—` in ★ means not read this pass.
+
+## 🔴 This file carried the most expensive error in this KB, and it is corrected here
+
+🔴 **Pass 91 recommended, by name, for a named engagement:**
+*"a **Brazilian public-sector SIS** → `i-educar` (**LGPL-3.0**) — real municipal deployments;
+**link, don't absorb**."*
+
+🔴 **[`portabilis/i-educar`](https://github.com/portabilis/i-educar) is GPL-2.0.** Its payload's title
+block reads `GNU GENERAL PUBLIC LICENSE, Version 2, June 1991` (18 092 B — the canonical GPL-2.0 byte
+count). 🔴 **"Link, don't absorb" is advice that only exists for LGPL. Against GPL-2.0 it is wrong, and
+it is wrong in the direction that puts a studio's deliverable under reciprocity.**
+
+🔵 **And this KB already knew.** `agents/trending.md` carries the row
+`| portabilis/i-educar | LGPL | 🔴 GPL-2.0 | LATAM — Brazilian municipal school system |` from an
+earlier pass. 🔴 **Pass 91 re-derived the licence with a forked classifier, regressed it, and the
+regression propagated from the platform table into the engagement-recommendation table at the bottom
+of this file.** The mechanism (`P960`: GPL-2.0's preamble cross-references the LGPL at byte 849, and
+the fork tested `"gnu lesser"` first) is in `compose/code/grant-ladder-v4/README.md`.
+🟢 **The check that catches the class now exists and is committed:**
+`compose/code/p963-shelf-licence-agreement/` — `Gap 356`, discharged after four passes.
+
+🔵 **What did NOT change, stated so the correction is not read as bigger than it is.** `i-educar` is
+still real, still large, still in Brazilian municipal use, and still the best regional anchor for that
+engagement. 🔴 **What changed is the integration boundary and therefore the cost**: not "link against
+it", but "run it as a separate service and integrate across a process/network boundary, or budget for
+reciprocity on the modified work".
 
 ## Where the platform census now stands
 
@@ -77,11 +104,20 @@ two.** For `learnpress` the next step is a header read, not a conclusion.
 
 ## Linkable tier — LGPL, so link but do not absorb
 
+🔴 **This tier had three rows last pass and has one.** Two were misclassified GPL-2.0 (above), and the
+tier they were in is precisely the tier whose name states the integration strategy — 🔵 **which is why
+a one-word licence error here costs more than it would anywhere else on the shelf.**
+
 | platform | grant (payload · bytes · ref · SHA) | region | what it is |
 |---|---|---|---|
-| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🟡 **LGPL-3.0** · 18 092 B · `2.12` · `cd1da68` | 🟢 **LATAM** (Brazil) | 🟢 **A real, large student information system** — self-described as Brazil's biggest free education software, in municipal use. 🔵 **Qualifies pass 87's *"no permissive open-source SIS exists"*: none is permissive, but a substantial **linkable** one exists, and it is LATAM-origin.** The best anchor for a Brazilian public-sector engagement. |
-| [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | 🟡 **LGPL-3.0** · 8 241 B · `19.0` · `1c95cef` | 🔵 unplaced | LMS + SIS on one Odoo database — the ERP-shaped option. |
-| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🟡 **LGPL-3.0** · 18 025 B · `develop` · `d9d462a` | **EMEA** (Luxembourg) | The serious QTI assessment platform. |
+| [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | 🟡 **LGPL-3.0** · 8 241 B · `19.0` · `1c95cef` | 🔵 unplaced | LMS + SIS on one Odoo database — the ERP-shaped option. 🟢 **Verified genuinely LGPL-3.0 this pass**, from a payload that says so in words: *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3)"*. **The only remaining linkable platform on this shelf.** |
+
+### 🔴 Moved OUT of this tier this pass — both are full copyleft
+
+| platform | was published as | is | what changes for a deliverable |
+|---|---|---|---|
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🔴 LGPL-3.0 · 18 092 B | 🔴 **GPL-2.0** · 18 092 B · `2.12` · `cd1da68` · 🟢 **LATAM** (Brazil) | 🔴 No linking exception. Brazil's largest free education software and a real municipal SIS — **integrate across a service boundary, do not link or absorb.** 🔵 Pass 87's *"no permissive open-source SIS exists"* is **no longer qualified by this row**: it stands unqualified. |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🔴 LGPL-3.0 · 18 025 B | 🔴 **GPL-2.0** · 18 025 B · `develop` · `d9d462a` · **EMEA** (Luxembourg) | 🔴 The serious QTI assessment platform, and **GPL-2.0-only** — one-way incompatible with GPL-3.0 code, which constrains what can be combined with it as well as what can be shipped. |
 
 ## Copyleft tier — build **beside**, integrate by LTI / SCORM / xAPI
 
@@ -103,7 +139,7 @@ Not inferior software. Several are the best in the industry. The constraint is o
 | [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 🔴 **AGPL-3.0** · 34 523 B · `main` · `c225cc4` | 1.7k | 🔵 unplaced |
 | [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | 🔴 **AGPL-3.0** · `LICENSE.md` 34 143 B · `main` · `62b5abb` | 1.3k | 🔵 unplaced |
 | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔴 **GPL-3.0** · 35 121 B · `v31.0.00` · `1d83c2b` | — | 🟡 **APAC** (Hong Kong lineage) — K-12 school platform |
-| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL** · 15 214 B · `mobile` · `541c509` | — | 🟡 **LATAM** lineage (named for Rosario, Argentina) — SIS |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** · 15 214 B · `mobile` · `541c509` | — | 🟡 **LATAM** lineage (named for Rosario, Argentina) — SIS. 🆕 **Version recovered this pass**: the payload says *"Version 2, June 1991"* and pass 91 published the bare family `GPL`. 🔵 **Its 15 214 B variant text drops the LGPL cross-reference entirely, which is why the same forked classifier that misread `tao-core` and `i-educar` left this row merely imprecise rather than wrong** — the natural control for `P960`. |
 
 🔴 **No grant at all:** [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) · `master` ·
 `5d546f2` — **no licence payload in 24 candidate filenames** (was 12; the negative is now twice as strong).
@@ -138,7 +174,9 @@ any count drawn from an acronym topic.**
 | 🆕 the **public-facing portal / catalogue** redesigned | 🟢 **`richie` (MIT)** | the only permissive row at that layer; French public-HE provenance |
 | **lecture video** + transcription/captioning AI | 🟢 **`Opencast` (ECL-2.0)** | permissive at exactly the layer AI attaches to |
 | **offline / low-connectivity** delivery | 🟢 **`Kolibri` (MIT)** | built for it; see `repos/foundations.md` |
-| a **Brazilian public-sector SIS** | 🟡 **`i-educar` (LGPL-3.0)** | real municipal deployments; link, don't absorb |
+| a **Brazilian public-sector SIS** | 🔴 **`i-educar` (GPL-2.0)** | 🔴 **CORRECTED — was published here as LGPL-3.0 / "link, don't absorb".** Real municipal deployments, still the right regional anchor; **integrate across a service boundary, or budget for reciprocity.** No permissive SIS exists. |
+| a **high-stakes QTI assessment** platform | 🔴 **`tao-core` (GPL-2.0)**, or 🟢 **`Numbas` (Apache-2.0)** for browser-native maths assessment | 🔴 **CORRECTED — `tao-core` was published here as LGPL.** For a closable deliverable prefer `Numbas` + `Submitty` (BSD); reach for TAO when full QTI conformance is the requirement and accept the boundary. |
+| 🆕 **mastery-gated progression** / adaptive sequencing | 🟢 **`pykt-toolkit` (MIT)** | the learner-model layer this shelf lacked for eight passes; see `repos/foundations.md` Tier 2b |
 | 🆕 **LATAM programming education** with autograding | 🟡 **`mumuki-laboratory` (AGPL-3.0)** | Argentine, in real classroom use; integrate by LTI, don't absorb |
 | the client's **existing Moodle / Canvas / Open edX** kept | 🔴 build **beside** it, integrate via LTI 1.3 / SCORM / xAPI | GPL/AGPL reciprocity follows the modified work |
 

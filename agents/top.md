@@ -6,18 +6,33 @@ updated: 2026-10-10
 
 # Education — AI agents shelf
 
-**Pass 91, 2026-10-10.** Every row was resolved this pass with **`compose/code/grant-ladder-v3/ladder.sh`**:
-existence and default branch from `git ls-remote --symref`, then the **licence read from the payload** at
-`raw.githubusercontent.com/<slug>/<SHA>/<file>`, pinned to the resolved commit SHA — never from a badge, never
-from a blog. **120 slugs resolved** (`compose/code/grant-ladder-v3/pass91-results.tsv`).
-Two-sided control: four invented slugs returned `ABSENT`, and `moodle/moodle` returned `COPYING.txt` at
-**35 147 B** on nine runs — byte-identical to the seven prior passes that measured it.
+**Pass 92, 2026-10-10.** ⏱️ **Second pass of this date** (pass 91 ran 23:0x–00:00 UTC; this one
+00:4x–01:1x UTC). Every row re-resolved with **`compose/code/grant-ladder-v4/ladder.sh`**: existence
+and default branch from `git ls-remote --symref`, then the **licence read from the payload** at
+`raw.githubusercontent.com/<slug>/<SHA>/<file>`, pinned to the resolved commit — never from a badge,
+never from a blog. **133 slugs resolved** (`compose/code/grant-ladder-v4/pass92-results.tsv`, which
+has 133 rows and 133 unique slugs — both stated, see `P966`).
+Two-sided control: two invented slugs returned `ABSENT`, and `moodle/moodle` returned `COPYING.txt`
+at **35 147 B** — byte-identical to the eight prior passes that measured it, the tenth reproduction.
+**A `—` in the ★ column means not read this pass. It never means zero.**
 
-**🆕 The instrument changed this pass, and that changed two published numbers.** v2 probed **12** filenames
-while six shelf rows claimed "17" and five more claimed "16". v3 probes **24** and prints the count on demand.
-Re-measured over the same 92 slugs at the same SHAs: `NO-LICENCE-PAYLOAD` falls **6 → 5**, `AGPL-3.0` rises
-**11 → 12**, and `OTHER/unclassified` falls **2 → 0** as ECL-2.0 becomes classifiable.
-See `compose/code/grant-ladder-v3/README.md`. **A `—` in the ★ column means not read this pass. It never means zero.**
+🔴 **The instrument changed again, and this time the change was a REPAIR of the last one.** Pass 91's
+`grant-ladder-v3` wrote its own classifier instead of sourcing the hardened shared
+`compose/code/lib/license_family.sh`, which `P237` exists to forbid. **Two platform rows were
+published with the wrong licence family as a result, and one of them reached an engagement
+recommendation.** v4 has no classifier of its own.
+
+| row | pass 91 published | the payload's title block says |
+|---|---|---|
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🔴 `LGPL-3.0` — *"LGPL: linkable"* | 🔴 **GPL-2.0** |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🔴 `LGPL-3.0` — *"link, don't absorb"* | 🔴 **GPL-2.0** |
+
+🔵 **Both are corrected in `repos/foundations.md`, `verticals/solutions.md` and `compose/patterns.md`,
+and this KB had already measured both answers in earlier passes before overwriting them.** Mechanism
+and the three repairs carried back into the shared classifier (`P962` CC0, `P964` Fair Code,
+`P965` framework-not-a-grant) are in `compose/code/grant-ladder-v4/README.md`. 🟢 **The check that
+catches the class is now committed:** `compose/code/p963-shelf-licence-agreement/` — `Gap 356`
+discharged after four passes, **0 failures after this pass's corrections, 4 before them.**
 
 ## The shelf
 
@@ -62,7 +77,7 @@ exist, were found on the first targeted query, and verified from the payload:
 | 🆕 [`9mtm/WCAG-Checker`](https://github.com/9mtm/WCAG-Checker) | **MIT** · 4 219 B · `main` · `d34decd` | 🟡 **EMEA** (publisher is an Austrian/German GmbH per the payload's copyright line) | Websites **and PDF files** — PDF matters, because course handouts are where institutional accessibility exposure actually lives. |
 | 🆕 [`nsip/curriculum-mapper`](https://github.com/nsip/curriculum-mapper) | **Apache-2.0** · 11 357 B · `master` · `2b405d5` | 🟢 **APAC** (NSIP — National Schools Interoperability Program, Australia) | ML mapping **between curricula**. 🔴 **Archived and read-only**, and keyword-based rather than semantic. Read it as a spec for the problem, not a dependency. |
 | 🆕 [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 🟡 **four-way split grant** · `LICENSE.md` 1 615 B · `main` · `59d2396` | 🔵 unplaced | LLM-as-a-judge scoring of generated text **against research-backed educational rubrics**, with expert-annotated corpora. 🔴 **Read the licence note below before costing it.** |
-| 🆕 [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) | 🟡 code **MIT**, data **per-dataset** · `main` · `65701e9` | 🔵 unplaced | A data layer for educational AI, tagged to academic standards. 🔴 Licensing is **per dataset and per download** (`Open` / `Open + Gated` / `Gated`) through a platform catalogue. |
+| [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) | 🔴 **`MULTI-GRANT-FRAMEWORK`** · `LICENSE.md` 5 789 B · `main` · `65701e9` | 🔵 unplaced | A data layer for educational AI, tagged to academic standards. 🆕 🔴 **Its `LICENSE.md` grants NOTHING — it is a licensing *framework* document** (`P965`). It names *"Code … MIT"* and *"Open … CC BY 4.0 … CC0"*, and then the clause that governs: **"Gated — Not covered by an open license. Access requires Data Provider approval"**, and **"Gated content isn't yours to redistribute by default."** 🔴 **A classifier reading it returned `CC0-1.0` — the most permissive family the document merely mentions — for a payload whose operative term is the opposite.** Resolve the grant **per dataset and per download** in the catalogue before costing anything. |
 
 🔴 **The licence structure in this tier is the finding, not the repo list.** `learning-commons-org/evaluators`
 ships **one** `LICENSE.md` granting **four different things**: code **MIT**, prompts and settings
@@ -101,13 +116,37 @@ curriculum. These are the permissive starting points, all verified from the payl
 | 🆕 [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | **MIT** · 1 141 B · `main` · `ff2ba66` | ~67k (search-reported) | Twelve lessons on building AI agents. The largest permissive AI curriculum found; vendor-backed and translated. |
 | 🆕 [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | **MIT** · 1 070 B · `main` · `b6a7a17` | — | 🟢 **Reached #1 on GitHub Trending on 24 May 2026** (Trendshift). Build-it-yourself AI engineering. |
 | 🆕 [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | **MIT** · 1 091 B · `main` · `da3f9df` | ~796 (search-reported) | Agents from first principles **against a local LLM** — the right shape where student data cannot leave the building. |
-| 🆕 [`cccareers/open-source-curriculum`](https://github.com/cccareers/open-source-curriculum) | 🔴 **CC-BY-NC-SA-4.0** · `LICENSE.md` 1 891 B · `main` · `dd01b98` | — | 🔴 **Non-commercial.** Usable as reference, **not** in a paid deliverable. 🔵 This row is also where this pass's own instrument misfired — see `compose/code/grant-ladder-v3/README.md`. |
-| 🆕 [`lukeslp/awesome-accessibility`](https://github.com/lukeslp/awesome-accessibility) | **CC0-1.0** · 6 464 B · `main` · `d146ae6` | — | A list, not software, and public-domain dedicated — so quotable without attribution obligations. |
+| 🆕 [`cccareers/open-source-curriculum`](https://github.com/cccareers/open-source-curriculum) | 🔴 **CC-BY-NC-SA-4.0** · `LICENSE.md` 1 891 B · `main` · `dd01b98` | — | 🔴 **Non-commercial.** Usable as reference, **not** in a paid deliverable. 🔵 Pass 91’s instrument misfired on this row (it recorded `Unlicense/PD`, and its committed TSV still does); re-derived correctly this pass — see `compose/code/grant-ladder-v4/README.md` (`P954`, `P966`). |
+| [`lukeslp/awesome-accessibility`](https://github.com/lukeslp/awesome-accessibility) | **CC0-1.0** · 6 464 B · `main` · `d146ae6` | — | A list, not software, and public-domain dedicated — so quotable without attribution obligations. 🆕 🔵 **This row is also the payload that proved the shared classifier's CC0 branch was unreachable for canonical CC0 text** (`P962`) — pass 91's own results file recorded it as `OTHER/unclassified` while the shelf published `CC0-1.0`, found by hand. |
+| 🆕 [`ai-builders-foundation/ai-builders-curriculum`](https://github.com/ai-builders-foundation/ai-builders-curriculum) | **MIT** · 1 079 B · `main` · `fe2da3d` | — | 🟢 **Vendor-neutral, 501(c)(3)-backed**, full-stack AI application curriculum with hackathon starter kits. The cleanest governance story in this tier — a foundation rather than a vendor, which matters for a public-sector procurement. 🔴 Adult/developer audience, like every other row here. |
+| 🆕 [`fborrasumh/tutoria`](https://github.com/fborrasumh/tutoria) | **MIT** · 1 120 B · `main` · `65b2903` | — | 🟢 **EMEA** (Universidad Miguel Hernández de Elche, Spain — from the payload's copyright line). **Evidence-based tutor where the teacher VALIDATES the lesson before the student sees it**, then hints → diagnosis → check → review. 🔵 **The teacher-in-the-loop gate is the compliance-relevant primitive**: under the EU AI Act's Annex III, assessing learning outcomes is high-risk and needs human oversight, and this is that oversight expressed as a product step rather than a policy document. |
 
 🔵 **Why this tier belongs on an *agents* shelf.** A mandated curriculum is the one education deliverable with
 a legal deadline attached and no incumbent product, and the content layer is where a studio adds most value per
 hour. 🔴 **The licence split matters sharply here**: curriculum is content, and content is where NC clauses
-cluster. Two of the five rows above are CC, and one of those forbids commercial use.
+cluster. Three of the eight rows above are CC, and one of those forbids commercial use.
+
+### 🔴 🆕 The framework every mandate points at is **ungranted** — and primary school is still empty
+
+🔴 **`Gap 367` (no permissive AI curriculum for primary) was targeted directly this pass and it STANDS.**
+A K-5-specific query returned **no GitHub repository at all**; every permissive curriculum repo found is
+written for adult developers. 🟢 **What it did return is a named, usable non-GitHub alternative, which is
+better than the "nothing found" this gap carried before:** **MIT Day of AI** (`dayofai.org`, **CC-licensed**
+— K-2 *"AI Foundations for Early Childhood"*, grades 3-5 *"How We Teach Machines"*) plus Code.org's AI
+modules, both organised around the **AI4K12 Five Big Ideas** (Perception · Representation and Reasoning ·
+Learning · Natural Interaction · Societal Impact).
+
+🔴 **And then the finding that matters for a deliverable.** AI4K12 is the framework the K-12 guidance and
+India's CBSE curriculum align to, jointly sponsored by **AAAI and CSTA** — and its repository,
+[`touretzkyds/ai4k12`](https://github.com/touretzkyds/ai4k12), carries **no licence payload in 24
+filenames** (`master` · `727b8bb`).
+
+🔵 **So the shape of this gap is now precise, and it is the `Gap 354` shape again** (ADL authored SCORM and
+leaves 3 of 5 repos ungranted): **four jurisdictions now mandate AI instruction, the reference framework
+they align to is an AAAI/CSTA artefact, and that artefact cannot be redistributed in a client
+deliverable.** 🟢 The usable route is the **CC-licensed lesson material** (Day of AI, Code.org), with the
+framework cited as a structure rather than shipped as a dependency — and the licence confirmed per unit,
+since *"CC-licensed"* spans CC-BY through CC-BY-NC-SA.
 
 ### The agent *skill* as the unit of delivery
 
@@ -139,6 +178,7 @@ pass as the single highest-yield move for this region.
 | [`belentani7/aprende-brasil`](https://github.com/belentani7/aprende-brasil) | **MIT** · 1 085 B · `main` · `bbeea5a` | — | **LATAM** (Brazil, pt-BR) | Interactive pt-BR platform, **205 modules**, AI tutor "Nilo" with optional OpenAI-compatible LLM and an **offline local fallback**; React + FastAPI + SQLite. MIT end to end. |
 | 🆕 [`mumuki/mumuki-laboratory`](https://github.com/mumuki/mumuki-laboratory) | 🔴 **AGPL-3.0** · 34 523 B · `master` · `fce1ede` | 199 | **LATAM** (Argentina) | 🟢 **Student programming practice with automated feedback** — a real, long-running Argentine autograding platform used in schools and universities. 🔴 AGPL: network copyleft, so integrate, do not absorb. **The strongest LATAM row in the assessment tier.** |
 | [`programadores-obreros/Agente-editor-inet`](https://github.com/programadores-obreros/Agente-editor-inet) | 🔴 **GPL-3.0** · 35 149 B · `main` · `0fa7298` | — | **LATAM** (Argentina, INET) | Teaching agent for Arduino/ESP32 in Argentine technical schools; runs **offline, double-click**. Pedagogically excellent, 🔴 copyleft. |
+| 🆕 [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) | **MIT** · 1 069 B · `main` · `032b5aa` | — | **LATAM** (Colombia) | 🟢 **The strongest new LATAM row this pass, and the only one that is permissive end to end.** Autonomous virtual tutor agent for **rural higher education in Risaralda**, from Universidad Tecnológica de Pereira. 🟢 **It integrates with Open edX** — so it attaches to the platform tier this shelf already carries instead of replacing it. 🔵 **Region evidence is the payload's own copyright line** (`Grupo Sirius`), not an inference from the README (`P800`). 🟡 Depends on a hosted model API, which is the constraint to raise first with a public institution. |
 
 ## Negatives and licence flags — read before you quote a blog
 
@@ -172,8 +212,16 @@ withdrawn — the sampling difference remains the explanation.
   accessibility half is done; outcome alignment has no permissive row with usable evidence.
 - 🔵 **Region placement.** 20 rows above are honestly **unplaced** — the publisher's country could not be
   established from the repo this pass. Recorded rather than guessed.
-- 🔵 **Learner models.** Only `adaptive-knowledge-graph` (Bayesian) and `Bloom` (2-sigma) carry an explicit
-  learner model. Everything else relies on the context window, which is not a mastery estimate.
-  🔴 **`Gap 335` (knowledge tracing) is untouched for an eighth pass** and is named here rather than carried quietly.
+- 🟢 **Learner models — `Gap 335` DISCHARGED after eight passes untouched.** The complaint stands for
+  the *agents* on this shelf: only `adaptive-knowledge-graph` (Bayesian) and `Bloom` (2-sigma) carry an
+  explicit learner model, and everything else relies on the context window, which is not a mastery
+  estimate. 🟢 **But the missing layer exists and is MIT:**
+  [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) (**MIT**, 1 066 B, `77c3e90`,
+  ~430★) — the reference deep-knowledge-tracing benchmark library, 7 datasets and a model zoo (DKT,
+  DKVMN, SAKT, SAINT, AKT, GKT, LPKT). Shelved in `repos/foundations.md` **Tier 2b**.
+  🔵 **It was found on the first query that named the TECHNIQUE instead of the industry** — `P955`
+  holding for a second consecutive pass, now on a gap that had survived eight.
+  🔴 **What remains open is composition, not availability:** nothing on this shelf wires a tracing
+  model to an agent's turn, so `pykt-toolkit` → agent is a build, not an integration. See `Gap 369`.
 
 *Prior pass content is preserved in git history at commit `306eb06` and earlier; it is not duplicated here.*

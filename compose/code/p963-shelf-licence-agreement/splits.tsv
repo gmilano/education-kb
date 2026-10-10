@@ -1,0 +1,6 @@
+# Verified MULTI-FILE split grants. A shelf row that cites the family of ONE file in such a repo is
+# not disagreeing with a first-match census -- it is being more precise than one. Each line is an
+# EXPLICIT, auditable exemption with the reason, never a silent pass.
+#
+# slug <TAB> family the shelf may legitimately cite <TAB> evidence
+microsoft/autogen	MIT	LICENSE=CC-BY-4.0:18650B + LICENSE-CODE=MIT:1141B @027ecf0; shipping the CODE means MIT (P627)

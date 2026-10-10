@@ -4,6 +4,147 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 92: the shelf's own instrument regressed a licence it had already corrected, and the wrong value reached a client recommendation
+
+**APPEND-ONLY — history is below. Second pass of this date** (pass 91: 2026-10-09 23:0x–00:00 UTC;
+this pass: 2026-10-10 00:4x–01:2x UTC).
+
+Instrument: **`compose/code/grant-ladder-v4/ladder.sh`** — **24 filenames at a printable 1-byte floor**, and
+**no classifier of its own**: it sources the shared `compose/code/lib/license_family.sh` (`P237`).
+Two-sided control: two invented slugs `ABSENT`, `moodle/moodle` → `COPYING.txt` **35 147 B** (tenth
+reproduction, byte-identical). Census: `compose/code/grant-ladder-v4/pass92-results.tsv`, **133 rows,
+133 unique slugs** — both asserted.
+
+### 🔴 The finding: a *forked* classifier overwrote a verdict this KB had already measured and published
+
+🔴 **Pass 91 wrote `grant-ladder-v3` with a fresh 30-line inline classifier rather than sourcing the
+hardened shared one. Two platform rows came out with the wrong licence family.**
+
+| row | pass 91 published | payload title block | already recorded in this KB as |
+|---|---|---|---|
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🔴 `LGPL-3.0` · *"LGPL: linkable"* | **GNU GENERAL PUBLIC LICENSE, Version 2** | 🟢 **GPL-2.0** — `repos/trending.md`, *"the row that decides a project"* |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🔴 `LGPL-3.0` · *"link, don't absorb"* | **GNU GENERAL PUBLIC LICENSE, Version 2** | 🟢 **GPL-2.0** — `agents/trending.md`, `\| LGPL \| GPL-2.0 \| LATAM \|` |
+
+🔴 **The mechanism is `P171` on a pair `P171` never covered.** The canonical GPL-2.0 **preamble** says
+*"(Some other Free Software Foundation software is covered by the **GNU Lesser General Public License**
+instead.)"* — **byte 847** in `tao-core`, **byte 849** in `i-educar`, both inside the 4 000 B window — and
+the fork tested `"gnu lesser"` **before** `"gnu general public"`. **Every canonical GPL-2.0 text carries
+that sentence, so the defect was universal.**
+
+🟢 **The control is in the same verdict class, from the same run.** `francoisjacquet/rosariosis` is also
+GPL-2.0, but its 15 214 B variant contains **no `"gnu lesser"` at all** (offset `-1`), so the same
+classifier returned bare `GPL`. 🔵 **One instrument, one pass, one family, two verdicts — decided by
+whether a cross-reference sentence happened to be present.** `P960`.
+
+🔴 **And the cost was not internal.** `verticals/solutions.md` recommended, by name:
+*"a **Brazilian public-sector SIS** → `i-educar` (**LGPL-3.0**) — **link, don't absorb**"*, and
+`compose/patterns.md` built `P91-E` on *"LGPL-3.0 permits exactly that, and **this distinction makes the
+engagement possible**"*. 🔴 **"Link, don't absorb" is advice that only exists for LGPL. GPL-2.0 has no
+linking exception.** The sentence that made the engagement possible was the sentence that was wrong.
+🟢 All three files corrected this pass; `P91-E` re-costed around a service boundary.
+
+### 🟢 `Gap 356` discharged — the check that catches the class, and it fails on first run
+
+🟢 **`compose/code/p963-shelf-licence-agreement/`.** Current shelf files vs each other and vs the census;
+`*/trending.md` reported **informational only**, because append-only history is correct by construction and
+a naive sweep over it drowns and gets switched off. **First run: 4 MISMATCH. After this pass's
+corrections: 0.** 🔵 **The gate's value is the four it caught, not the zero it reports now.**
+
+🔴 **It found a defect in itself on that first run, and the defect is instructive.** A first-bolded-family
+harvest read `frappe/lms` as **MIT** — the **refuted claim** in a *"what is claimed | what the payload
+says"* table — and reported the shelf as contradicting itself. 🔵 **The refutation table is the shelf being
+careful, and the naive gate punished exactly the rows that had done the work.** 🟢 Fixed by the shelf's own
+convention: **a verdict cell carries a byte count, a quoted claim never does.** Cell-aware harvest, 122
+claims → **113 real verdicts** over 87 slugs. 🆕 `P967`.
+
+### 🟢 Three repairs carried back INTO the shared classifier, because reuse obliges repair
+
+🔵 **`P237` cuts both ways, and pass 100 had already written the procedure down** — `P312`'s comment says
+BUSL/Elastic/PolyForm *"go in here so the rewiring is an improvement and not a loss"*. 🔴 **It is the
+procedure pass 91 did not follow.** Each repair ships with the real payload committed as a fixture:
+
+| # | repair | measured on |
+|---|---|---|
+| 🆕 `P962` | 🔴 **lib's CC0 branch was UNREACHABLE for canonical CC0 text.** Nested inside a gate needing `Creative Commons`/`CC BY` in the 4 000 B window. In the real payload: **`CC0` at offset 0**, **`creative commons` at 6 227** (outside, by 1.6×), `CC-BY` **absent entirely**. 🔵 **And the one mention is the clause that *disclaims* Creative Commons** — *"Creative Commons is not a party to this document"*. **The gate was conditioned on a disclaimer, not a grant.** | [`lukeslp/awesome-accessibility`](https://github.com/lukeslp/awesome-accessibility) `LICENSE` 6 464 B `d146ae6` |
+| 🆕 `P964` | 🔴 **Reuse alone would have LOST a family.** lib knew BUSL/Elastic/PolyForm but **not Fair Code, not Sustainable Use** — so `FAIRCODE-NOT-OSI` → `UNCLASSIFIED`. 🔴 **Not neutral:** `UNCLASSIFIED` falls to `commercial_use_ok`'s token match, and the SUL body *grants* use *"for commercial purposes"* before restricting resale, **so a lost non-OSI family could come back `ALLOWED`.** Both now in lib and both denied with BUSL. | [`leemonade/leemons`](https://github.com/leemonade/leemons) `LICENSE.md` 10 830 B `b1ca5d8` |
+| 🆕 `P965` | 🔴 **A file at a licence filename can be a FRAMEWORK, not a grant.** `LICENSE.md` grants nothing — it explains per-dataset licensing, names *"Code … MIT"* and *"CC BY 4.0 … CC0"*, then **"Gated — Not covered by an open license"** and **"Gated content isn't yours to redistribute by default."** 🔴 **Classifying it returned `CC0-1.0`, the most permissive family it merely MENTIONS, for a payload whose operative term is the opposite.** New verdict `MULTI-GRANT-FRAMEWORK`, denied commercially. | [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) `LICENSE.md` 5 789 B `65701e9` |
+
+🟢 **`P965`'s threshold is measured, not chosen.** Families *named* in the normalised 4 000 B window across
+all 14 real fixtures: **every real grant names 0, 1 or 2** (and the 2s are one lineage — GPL+LGPL, GPL+AGPL);
+**the framework names 3 across three lineages** (MIT + CC-BY + CC0). 🟢 **The position is measured too:** the
+guard runs **late**, because **MPL-2.0 names all three GNU marks in its §1.12** (`P454`) and a threshold of 3
+applied early would swallow every MPL-2.0 payload.
+
+🔴 **And `lib`'s own suite passed 199/199 with the CC0 branch unreachable**, because its fixture is a
+hand-written one-liner that **opens with the gate's own token**: `'Creative Commons CC0 1.0 Universal …'`.
+🔵 **Three passing CC0 assertions built on a fixture that encoded the guard instead of testing it.**
+🟢 **A licence fixture is a real payload at a pinned SHA, or it is a restatement of the code** — `p613`'s
+lesson for the third time in this base's history. All repairs: **lib 199/199, v4 16/16.**
+
+### 🟢 `Gap 335` DISCHARGED after eight passes untouched — the learner model exists and is MIT
+
+🟢 [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) — **MIT**, 1 066 B, `main` ·
+`77c3e90`, ~430★. The reference **deep knowledge tracing** benchmark library (NeurIPS 2022
+datasets-and-benchmarks, `pykt.org`): standardised preprocessing plus a model zoo — **DKT, DKVMN, SAKT,
+SAINT, AKT, GKT, LPKT** — over 7 datasets. 🔵 **This is the layer that turns "the agent remembers the
+conversation" into a per-skill mastery estimate you can threshold on.** Shelved in `repos/foundations.md`
+**Tier 2b**.
+
+🟢 **Found on the first query that named the TECHNIQUE instead of the industry** — `P955` holding a second
+consecutive pass, now against a gap that had survived eight.
+🔴 🆕 **`P968` — name collision is a licence-and-quality trap here.**
+[`JonathanSilver/pyKT`](https://github.com/JonathanSilver/pyKT) is **also MIT** (1 065 B, `2bef7e9`) and
+**reachable by the same search string**, but its own README warns *"not all the implemented models have
+achieved comparable performance to that of the original implementations"*. 🔴 **A licence probe cannot
+separate them; only reading the README can.** Same shape as `Gap 368` (`LMS` = *Least Mean Squares* /
+*Library Management System*). 🔵 **In this industry name collision is a property of the search space, so
+the canonical slug belongs in the shelf row — not just the project name.**
+🔴 Third candidate ungranted: [`weiwei1392/knowledge-tracing`](https://github.com/weiwei1392/knowledge-tracing)
+→ **no payload / 24** · `136efef`.
+
+### 🟢 New rows, payload-verified, region from the copyright line
+
+| row | grant (payload · bytes · ref · SHA) | region | why it earns a place |
+|---|---|---|---|
+| 🆕 [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) | **MIT** · 1 069 B · `main` · `032b5aa` | 🟢 **LATAM** (Colombia) | 🟢 **The strongest new LATAM row, permissive end to end.** Autonomous tutor agent for **rural higher education in Risaralda**, Universidad Tecnológica de Pereira. 🟢 **Integrates with Open edX**, so it attaches to the platform tier instead of replacing it. Region from the payload's `Grupo Sirius` copyright line (`P800`). |
+| 🆕 [`fborrasumh/tutoria`](https://github.com/fborrasumh/tutoria) | **MIT** · 1 120 B · `main` · `65b2903` | 🟢 **EMEA** (Spain) | **Teacher VALIDATES the lesson before the student sees it**, then hints → diagnosis → check → review. 🔵 Holder line names *Universidad Miguel Hernández de Elche*. **Human oversight as a product step, which is the Annex III primitive.** |
+| 🆕 [`ai-builders-foundation/ai-builders-curriculum`](https://github.com/ai-builders-foundation/ai-builders-curriculum) | **MIT** · 1 079 B · `main` · `fe2da3d` | 🔵 unplaced | Vendor-neutral, **501(c)(3)-backed** full-stack AI curriculum. Best governance story in the literacy tier. 🔴 Adult audience, like all of them. |
+| 🆕 [`maxew6/ai-tutor-project`](https://github.com/maxew6/ai-tutor-project) | **MIT** · 1 073 B · `main` · `2af1c6b` | 🔵 unplaced | 🟡 An independent redeployment of an upstream AI tutor with attribution retained — **a lineage row, not a product.** Recorded so it is not re-found as new. |
+
+### 🔴 `Gap 367` targeted and STANDS — and the framework the mandates point at is ungranted
+
+🔴 **A K-5-specific query returned NO GitHub repository.** Every permissive AI curriculum found is written
+for adult developers. 🟢 **What it did return is a named alternative, which beats the bare "nothing found"
+this gap carried before:** **MIT Day of AI** (`dayofai.org`, **CC-licensed** — K-2 *"AI Foundations for
+Early Childhood"*, grades 3-5 *"How We Teach Machines"*) and Code.org's AI modules, both organised on the
+**AI4K12 Five Big Ideas** (Perception · Representation and Reasoning · Learning · Natural Interaction ·
+Societal Impact).
+
+🔴 **And [`touretzkyds/ai4k12`](https://github.com/touretzkyds/ai4k12) — the AAAI/CSTA-sponsored framework
+repo that India's CBSE curriculum and the K-12 guidance align to — carries NO licence payload in 24
+filenames** (`master` · `727b8bb`). 🔵 **This is `Gap 354`'s shape again** (ADL authored SCORM and leaves 3
+of 5 repos ungranted): **four jurisdictions mandate AI instruction, the reference framework is an AAAI/CSTA
+artefact, and that artefact cannot be redistributed in a deliverable.** 🟢 Route: ship the **CC-licensed
+lesson material**, cite the framework as structure, and confirm the licence **per unit** — *"CC-licensed"*
+spans CC-BY through CC-BY-NC-SA.
+
+### 🟡 Negatives and declared silences
+
+- 🔴 **GitHub Trending: ZERO education-industry repos, fourth consecutive pass.** Returns generalist agent
+  infra and adult AI-engineering curricula. 🔵 **Four passes of the same negative is a property of the
+  channel** — trending is a popularity surface; this industry's repos are small, institutional, slow.
+  🟢 The channels that *do* work: `github.com/topics/<spec>` via `WebFetch`, and Spanish/Portuguese queries.
+- 🔴 **A generalist *"top open source AI agents education 2026"* query returned eight roundups and not one
+  education-specific agent** — `OpenClaw`, `OpenHands`, `SWE-agent`, `CrewAI`, `browser-use`. 🔵 Re-confirms
+  `T1`'s premise: this industry's agents do not appear on generalist lists at all.
+- 🟡 [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) advanced its
+  HEAD `59d2396` → **`b1795b8`** and **kept CC-BY-NC-SA-4.0** (1 615 B). Activity without licence drift.
+- 🟡 [`celtic-project/LTI-PHP`](https://github.com/celtic-project/LTI-PHP) advanced `1f47c93` → **`0ef9cc9`**,
+  **LGPL-3.0 at 7 651 B unchanged** — the canonical LGPL-3.0 byte count, which is the control that shows
+  `tao-core`'s 18 025 B was never LGPL at all.
+- 🔴 **`Gap 362`** (`Selleo/mentingo` open-core boundary) **CARRIED, untouched** — stays out of every costed
+  pattern, as declared.
+
 ## 2026-10-10 — pass 91: the checker gap was a *query* defect, the 24-name correction moved the published no-grant rate, and the curriculum mandate arrives as a category
 
 **APPEND-ONLY — history is below. First pass of this date.**

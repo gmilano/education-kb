@@ -6,11 +6,23 @@ updated: 2026-10-10
 
 # Education — foundational repos
 
-**Pass 91, 2026-10-10.** Resolved with `compose/code/grant-ladder-v3/ladder.sh`: existence by
-`git ls-remote --symref`, **licence read from the payload** pinned to the resolved SHA, **24 candidate
-filenames** (v2 probed 12 — see `compose/code/grant-ladder-v3/README.md`). Two-sided control passed on every
-run. Every Tier 1–3 row below re-resolved to the **same SHA and the same byte count** as pass 90, which is the
-point of pinning. `—` in ★ means not read this pass.
+**Pass 92, 2026-10-10.** ⏱️ **Second pass of this date.** Resolved with
+`compose/code/grant-ladder-v4/ladder.sh`: existence by `git ls-remote --symref`, **licence read from
+the payload** pinned to the resolved SHA, **24 candidate filenames at a 1-byte floor** — and, the
+change that matters this pass, **classified by the shared `compose/code/lib/license_family.sh`
+instead of a classifier of the instrument's own** (`P237`). Two-sided control passed:
+`moodle/moodle` → `COPYING.txt` **35 147 B** (tenth reproduction), two invented slugs `ABSENT`.
+`—` in ★ means not read this pass.
+
+🔴 **One row on this page was WRONG for a pass, and it was the licence row of a platform.**
+[`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) was published here as *"**LGPL-3.0** ·
+18 025 B — **LGPL: linkable**"*. **Its payload's title block reads `GNU GENERAL PUBLIC LICENSE,
+Version 2, June 1991`. It is GPL-2.0, and GPL-2.0 is not linkable that way.** 🔵 **And this KB
+already knew**: `repos/trending.md` recorded *"the row that decides a project: `oat-sa/tao-core` is
+GPL-2.0"* in an earlier pass, derived by reusing the shared classifier. Pass 91 re-derived it with a
+forked classifier and regressed it. 🟢 Corrected below, mechanism in
+`compose/code/grant-ladder-v4/README.md` (`P960`), and the check that catches the class in
+`compose/code/p963-shelf-licence-agreement/`.
 
 A *foundation* here is a repo a studio can standardise on **across clients**, independent of which LMS any one
 client runs. The useful property of this tier is that it sits on spec boundaries (SCORM, xAPI, cmi5, QTI,
@@ -42,6 +54,30 @@ already runs and get learner data *out* of it.
 | [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | **BSD** · 1 512 B · `main` · `f9915da` | — | **North America** (Project Jupyter) | Assignment release/collect/grade for notebooks. |
 | [`webtech-network/autograder`](https://github.com/webtech-network/autograder) | **Apache-2.0** · 11 357 B · `main` · `04bee3e` | — | 🔵 unplaced | Rubric-driven autograding with report generation; release 0.4.0 (May 2026). |
 
+## 🆕 Tier 2b — the learner model — **`Gap 335` discharged after eight passes untouched**
+
+🔴 **`Gap 335` (knowledge tracing) was the oldest untouched item on this shelf**, named openly in
+`agents/top.md` for eight passes: *"only `adaptive-knowledge-graph` (Bayesian) and `Bloom` (2-sigma)
+carry an explicit learner model. Everything else relies on the context window, which is not a mastery
+estimate."* 🟢 **The canonical library exists, it is MIT, and it was found on the first query that
+named the technique instead of the industry** — `P955` holding for a second pass running.
+
+| repo | grant (payload · bytes · ref · SHA) | ★ | region | role in a build |
+|---|---|---|---|---|
+| 🆕 [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **MIT** · 1 066 B · `main` · `77c3e90` | ~430 | 🔵 unplaced | 🟢 **The reference deep-knowledge-tracing benchmark library** (NeurIPS 2022 datasets-and-benchmarks track, `pykt.org`). Standardised preprocessing plus a model zoo — **DKT, DKVMN, SAKT, SAINT, AKT, GKT, LPKT** — over 7 datasets. 🔵 **This is the missing layer, not another tutor:** it turns "the agent remembers the conversation" into **a per-skill mastery estimate you can threshold on**, which is what adaptive sequencing and mastery-gated progression actually need. MIT, so it can sit inside a paid deliverable. |
+| 🆕 [`JonathanSilver/pyKT`](https://github.com/JonathanSilver/pyKT) | **MIT** · 1 065 B · `main` · `2bef7e9` | — | 🔵 unplaced | 🔴 **Name collision, and the weaker of the two.** A separate PyTorch reference implementation whose own README warns *"not all the implemented models have achieved comparable performance to that of the original implementations"*. 🔵 **Read it as a reference, never as the benchmark** — and note it is reachable by the same search string as the row above. |
+
+🔴 **And the third candidate carries no grant:**
+[`weiwei1392/knowledge-tracing`](https://github.com/weiwei1392/knowledge-tracing) → **no licence
+payload in 24 filenames** · `main` · `136efef`.
+
+🆕 🔵 **`P968` — two repos sharing a project name is a licence-and-quality trap, not a trivia item.**
+`pykt-team/pykt-toolkit` and `JonathanSilver/pyKT` are both MIT, so a licence probe cannot separate
+them; only reading the README does. This is the same shape as `Gap 368`'s acronym collision on
+`topics/lms` (**LMS = Least Mean Squares**, **LMS = Library Management System**) — 🔵 **in this
+industry, name collision is a recurring property of the search space, so the canonical slug belongs
+in the shelf row and not just the project name.**
+
 ## Tier 3 — delivery, runtime and agent substrate
 
 | repo | grant (payload · bytes · ref · SHA) | ★ | region | role in a build |
@@ -65,7 +101,7 @@ already runs and get learner data *out* of it.
 | [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | 🔴 **AGPL-3.0** · 34 764 B · `main` · `8f90cc8` | 🔴 UCLouvain autograder, AGPL. |
 | [`GatorEducator/gatorgrader`](https://github.com/GatorEducator/gatorgrader) | 🔴 **GPL-3.0** · `LICENSE.md` 35 191 B · `master` · `3be3278` | 🔴 |
 | [`ucfopen/UDOIT`](https://github.com/ucfopen/UDOIT) | 🔴 **GPL-3.0** · 35 147 B · `main` · `61b5d8f` | 🔴 The LMS-integrated accessibility checker. GPL, and not AI-driven. 🆕 **But it is no longer the only option** — three permissive AI WCAG checkers are now shelved in `agents/top.md`. |
-| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🟡 **LGPL-3.0** · 18 025 B · `develop` · `d9d462a` | 🟡 TAO (Open Assessment Technologies, Luxembourg) — the serious QTI platform. LGPL: linkable. |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🔴 **GPL-2.0** · 18 025 B · `develop` · `d9d462a` | 🔴 **CORRECTED this pass — it was published here as "LGPL-3.0 · linkable" and it is not.** TAO (Open Assessment Technologies, Luxembourg) is the serious QTI assessment platform and **the most mature one in this inventory**, so this is the row most likely to be costed. **GPL-2.0 is full copyleft: a fork shipped to a client carries reciprocity, and there is no LGPL linking exception to rely on.** Integrate across a process or network boundary, or budget for the obligation. 🔵 Also **GPL-2.0-only** — one-way incompatible with GPL-3.0 code. |
 
 ## 🆕 ADL leaves its own specs ungranted — now measured at three of five
 
@@ -106,8 +142,14 @@ test suite cannot be redistributed in a client deliverable.** Conformance must b
 
 ## Count, stated plainly
 
-**20 foundational rows above the flag line; 19 of them permissive (MIT / Apache-2.0 / BSD), 1 LGPL.**
-The interoperability and assessment tiers really are the permissive heart of this industry — that finding
-survives a third measurement, now on a larger sample and a corrected instrument.
+**22 foundational rows above the flag line; 21 of them permissive (MIT / Apache-2.0 / BSD), 1 LGPL.**
+The interoperability, assessment and learner-model tiers really are the permissive heart of this
+industry — that finding survives a fourth measurement, on a larger sample and a **repaired** instrument.
+
+🔴 **One honest subtraction from last pass's count.** Pass 91 reported *"19 of 20 permissive, 1 LGPL"*.
+That line was true of the page as it stood **only because `oat-sa/tao-core` was misfiled as LGPL-3.0**;
+it sits below the flag line either way, so the headline count is unchanged by the correction — but the
+LGPL row it referred to is `celtic-project/LTI-PHP`, and **`tao-core` was never one of the 20.** Stated
+rather than silently re-tallied.
 
 *Prior pass content is preserved in git history at commit `306eb06` and earlier.*
