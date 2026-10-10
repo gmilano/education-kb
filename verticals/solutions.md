@@ -6,10 +6,53 @@ updated: 2026-10-10
 
 # Education — vertical platforms you can customise with AI
 
-**Pass 99, 2026-10-10.** ⏱️ **Ninth pass of this date.** 🔴 **The sandbox refused
-`grant-ladder-v4/ladder.sh` **and** its offline self-test for a SEVENTH consecutive pass**, so no
-replacement classifier was written (`P237`). 🟢 **But the ladder's OPERATIONS were permitted and ran
-inline** (`P1005`), so every address added by this pass is a **full 40-character SHA**.
+**Pass 100, 2026-10-10.** ⏱️ **Tenth pass of this date.** 🔴 **The sandbox refused repository code
+for an EIGHTH consecutive pass**, so no replacement classifier was written (`P237`). 🟢 **`P1005` was
+applied from the outset**, so every address this pass touched carries a **full 40-character SHA**.
+
+🔴 **ZERO new platforms this pass, and that is the eighth enumerated zero on this page.** The mandated
+`open source platform education LMS SIS MIT Apache` query returned **Open edX** (🔴 the licence
+conflict this page already documents: AGPL-3.0 platform, Apache-2.0 components, secondary sources that
+get it wrong), **Sakai** (ECL-2.0), **Moodle** and **Chamilo** (GPL), **OLAT / OpenOlat** — 🟢 **all
+already published here** — and, for student-information systems, 🔴 **`openSIS` with NO stated licence
+and `RosarioSIS` as GPL.** 🔵 **Neither permissive, neither tabled. A sweep that returns nothing new
+is information; a sweep that invents a row is not.**
+
+### 🟢 🆕 p100 — the one thing the sweep DID add is a tag count, and it is the third instance of `P1010`
+
+🔵 **This pass's structural finding is that this KB declares gaps on columns it never populated for
+carried rows** (`P1010`, from `agents/top.md`: `Gap 372` was discharged by two rows carried since
+passes 93 and 94 whose tags had never been counted). 🔴 **`OpenOLAT` is the third instance, and it is
+on this page.**
+
+🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) re-measured at `master` ·
+**`cccdcda6861d48817fa2eef1bb4d2f9f189ab774`**:
+
+| property | this page's state before | 🟢 measured this pass |
+|---|---|---|
+| **release tags** | 🔴 **never recorded** (the row carries ★ 447, not a tag count) | 🟢 **542 tags**, latest **`OpenOLAT_21.0.3`** |
+| licence | 🟢 Apache-2.0, 10 982 B — carried since pass 35 | 🟢 **re-confirmed**, and 🟢 **clause-probed for the first time: 3 of 4** — *Grant of Copyright License*, *Grant of Patent License*, *Redistribution* present, **only *APPENDIX* absent**, which carries no terms |
+| `NOTICE.TXT` | not read | 🔴 **14 712 B, and it points at `LICENSE.TXT` — which returns `404`.** The file is `LICENSE` |
+
+🟢 **542 tags makes `OpenOLAT` the most release-engineered platform on this page** — more than
+`seb-server`'s 194 — 🔵 **and it is an Apache-2.0 LMS, so the fact matters: it is evidence of
+sustained maintenance on the one established platform here a client can fork and close.**
+
+🟢 **`P974` is vindicated by the case that nearly failed it.** 🔴 **10 982 B is NOT canonical
+Apache-2.0** (11 357/11 358 B measured a dozen times on this shelf), so a **byte-equality** check
+rejects this grant. 🟢 **The clause probe accepts it correctly.** 🔵 **Contrast `wwrwbs/AI_AWE`:
+1 865 B and **0 of 4** — the header notice with no terms at all (`P971`).** 🟢 **A byte check calls
+both "not Apache"; a title-block check calls both "Apache"; only the clause probe separates them.**
+
+🔴 **And a repository's pointer to its own licence file can be stale** — `NOTICE.TXT` naming a
+`LICENSE.TXT` that 404s is `P1009`'s shape in a third form. 🟢 **Three oracles agreed on Apache-2.0
+here** (`LICENSE` clauses, `pom.xml` `<url>`, `NOTICE.TXT` prose) 🔵 **and two of the three described
+it with a defect — a stripped appendix, a dead filename, and `P988`'s long-recorded
+`L6icense` typo in the `<name>`. None of the defects touched the grant.** 🔵 **That is the practical
+case for reading payloads rather than trusting any single field.**
+
+🟡 **`P978` holds and is already on this page:** `master` declares **`21.2-SNAPSHOT`**, so the
+shippable address is the tag. 🔵 With **542** tags the branch/tag gap is permanent, not incidental.
 🟢 **What pass 99 adds to THIS page is the layer that sits BETWEEN an agent and these platforms —
 and it does not have one licence, it has three.**
 🔴 **Carried rows are still at their pass-92/93/96/98 SHAs and were not re-read.**
@@ -435,7 +478,7 @@ knows ECL by name** and both rows classify correctly for the first time.
 | [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 **MIT** · 1 091 B · `develop` · `760e2e1` | 816 | **EMEA** (TU München) | 🟢 **The best starting point in this industry right now.** Production university platform, MIT, already AI-native: **Iris** (LLM tutor), **Athena** (feedback suggestion), **Hyperion** (AI exercise authoring, Spring AI). Java/Spring. |
 | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** · 11 120 B · `master` · `10a1d90` | 1.2k | **North America** (Apereo Foundation) | 🟢 Mature HE teaching/learning/collaboration suite. **Permissive.** Java. |
 | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 **ECL-2.0** · 11 340 B · `develop` · `52805eb` | — | 🟡 **EMEA / North America** (ETH + US university lineage) | 🟢 Lecture capture, transcoding and distribution. The permissive place to attach transcription, captioning and video search. |
-| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** · 10 982 B · `master` · `cccdcda` | 447 | **EMEA** (frentix GmbH, Switzerland) | 🟢 Production HE LMS; central LMS of Koblenz University. The EMEA-sovereignty answer. Java. |
+| 🟢 **re-measured p100** [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** · 10 982 B · `master` · **`cccdcda6861d48817fa2eef1bb4d2f9f189ab774`** · 🟢 **542 tags, `OpenOLAT_21.0.3`** · 🟢 **clause probe 3 of 4** (`P974`) | 447 | **EMEA** (frentix GmbH, Switzerland) | 🟢 Production HE LMS; central LMS of Koblenz University. The EMEA-sovereignty answer. Java. |
 | [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 🟢 **MIT** · 1 684 B · `master` · `001ec46` | 979 | **APAC** (India) | 🟢 LMS for asynchronous online schools, Ruby/Rails. |
 | [`inducer/relate`](https://github.com/inducer/relate) | 🟢 **MIT** · 1 145 B · `main` · `7d947c3` | 436 | **North America** (UIUC) | 🟢 Teaching environment with strong assessment primitives; Python/Django. |
 | [`academico-sis/academico`](https://github.com/academico-sis/academico) | 🟢 **MIT** · 1 094 B · `main` · `d0cd78c` | 404 | 🔵 unplaced | 🟢 **School management** (Laravel + Filament) — the closest thing to a **permissive SIS** this KB has found. |

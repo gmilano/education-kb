@@ -5,32 +5,142 @@ updated: 2026-10-10
 ---
 
 # Education — current trends
-**Pass 99, 2026-10-10.** ⏱️ **Ninth pass of this date.** 🆕 **Twenty trends.** 🟢 **`T19` and `T20`
-are new, and both say the same uncomfortable thing from different ends: the blocker in this industry
-has stopped being the licence.**
+**Pass 100, 2026-10-10.** ⏱️ **Tenth pass of this date.** 🆕 **Twenty-three trends.** 🟢 **`T21`,
+`T22` and `T23` are new, and `T20` is RETRACTED in its conclusion one pass after it was written.**
 
-- 🟢 **`T19`** — **the connector, not the platform, decides which LMS a studio can serve
-  permissively.** Canvas has an agent connector that is **MIT and released** (`v1.14.0`, 26 tags);
-  Moodle has an **AGPL-3.0** one at `v0.1.7` and an **MIT** one with **zero tags**. 🔴 **And it is
-  region-bearing: Moodle is what LATAM ministries and public universities run.**
-- 🟢 **`T20`** — **`Gap 372` was never a licence gap. It is a RELEASE gap.** Three permissive
-  open-response scorers exist (**MIT**, **Apache-2.0**, **BSD-3-Clause**) and 🔴 **none has a single
-  release tag**, in a pass that read education repos carrying **26, 135 and 194** tags.
-  🔵 **That changes the sell from "find a scorer" to "harden one".**
-- 🔴 **The duty that binds FIRST is not the one the market is discussing.** The Digital Omnibus is law
-  (**Regulation (EU) 2026/1744**, Council adopted **29 June 2026**, in force **27 July 2026**) and it
-  postponed **Annex III to 2 Dec 2027** — 🔴 **while leaving Article 50 transparency untouched, so
-  Article 50(2) machine-readable marking binds on 2 December 2026.** 🔵 **See the `T4` amendment
-  below: this is `T4`'s thesis confirmed a fourth time, now with eight weeks on the clock.**
+- 🔴 **`T20` is RETRACTED.** It claimed *"`Gap 372` is a RELEASE gap — none of the three permissive
+  open-response scorers has a single release tag."* 🟢 **Two scorers on this KB's own shelf DO have
+  releases** — `wwrwbs/AI_AWE` (`v0.1.0`, adapter artifact `http=200`) and
+  `EducationalTestingService/rsmtool` (**33 tags, `v12.0.0`**) — and neither had ever had its tags
+  counted, because `tags` became a measured column only at pass 98. 🔵 **`T20` measured the three
+  rows pass 99 had just added and generalised to a tier containing two it did not re-measure.**
+  🟢 **The replacement statement is `T21`.**
+- 🟢 **`T21`** — **the binding constraint on regulated open-response scoring is the CORPUS, not the
+  code and not the release.** The code is Apache-2.0 and runs; the **training corpus** (PERSUADE 2.0)
+  is **`CC-BY-NC-SA-4.0`** by its own author's payload, so **the distributed weights, not the
+  software, are what a commercial engagement cannot take.**
+- 🟢 **`T22`** — **in corporate L&D the blocker is the PLATFORM, and it is measured in EMEA for the
+  first time.** 🟡 Fosway (12th year, search-summary grade): **AI is the top strategic priority**,
+  budgets under the **most pressure since COVID**, and **almost two in three** L&D professionals say
+  their **LMS/LXP is not delivering adequately on AI**. 🔵 **That is a replacement market with a
+  stated reason, not a greenfield one.**
+- 🟢 **`T23`** — **in a regulated education activity the best permissive tooling comes from the
+  TESTING INCUMBENT, not the AI community.** The most release-engineered permissive assessment
+  repository in this industry is **ETS's**, and nine passes of this KB searched AI-community
+  repositories to find it.
+- 🔴 **The duty that binds FIRST is unchanged and now has a NARROWING and a safe harbour.** Article
+  50(2) machine-readable marking binds GenAI already on the market on **2 December 2026** (**53
+  days** at pass 99, 🔴 **now 53 → 8 weeks → `2026-12-02`, i.e. 53 days from 10 October**).
+  🟢 **New this pass:** the Commission **confirmed the Transparency Code of Practice as adequate** and
+  published the **final** Article 50 guidelines (July 2026), and 🟢 **AI-generated TRANSLATIONS are
+  now exempt** as *"standard editing"* — 🔴 **while summaries and substantive rewrites are not.**
+  🔵 **See the `T4` amendment below: for an LMS that is the whole scoping question.**
 - 🔴 **And one duty needs no planning at all:** emotion recognition in education, **prohibited since
-  2 Feb 2025**, unpostponed. 🟢 The platform layer for auditing it is on the shelf (`seb-server`,
-  **MPL-2.0**, re-read this pass at its full 40-char SHA).
+  2 Feb 2025**, unpostponed.
 
-🔴 **Zero primary-source reads, NINTH consecutive pass** — and this pass states the boundary as a
-**set**: 🟢 reachable are the WebSearch backend, `github.com` git smart-HTTP and
-`raw.githubusercontent.com`; 🔴 refused are `arxiv.org`, `www.iesalc.unesco.org`,
-`digital-strategy.ec.europa.eu`, `eur-lex.europa.eu`, `www.kaggle.com` and
-`the-learning-agency.com`. Regulatory rows added this pass carry **search-summary grade** and say so.
+🔴 **Zero primary-source reads, TENTH consecutive pass.** 🟢 Reachable: the WebSearch backend,
+`github.com` git smart-HTTP, `raw.githubusercontent.com` and `release-assets.githubusercontent.com`.
+🔴 Refused, each probed individually this pass (error 56 / `403 CONNECT tunnel failed`): `arxiv.org`,
+`the-learning-agency-lab.com`, `www.fosway.com`, `www.cipd.org` — and, carried from pass 99,
+`www.iesalc.unesco.org`, `digital-strategy.ec.europa.eu`, `eur-lex.europa.eu`, `www.kaggle.com`.
+🔵 **Every regulatory and market row added this pass is search-summary grade and says so.**
+
+## T21 — 🆕 p100 The binding constraint on regulated open-response scoring is the CORPUS, not the code
+
+🔵 **Three passes have each named a different blocker for the same activity, and each was the previous
+one's correction:**
+
+| pass | the blocker it named | why it was wrong or incomplete |
+|---|---|---|
+| 93 | *"there is no production-grade permissive AES library in this industry"* | 🔴 One existed on the shelf the same pass (`AI_AWE`), classified as *"a reference for the architecture, never a dependency"* |
+| 95 | *"the permissive supply is the VALIDATION layer; the scorer is copyleft or ungranted"* | 🟢 True of `openedx/ease` and `edx-ora2` (AGPL-3.0), 🔴 but the permissive scorer was already tabled |
+| 99 | *"not a licence gap — a RELEASE gap, 0 of 3 tagged"* | 🔴 `tags` was never counted for the two rows that had them (`P1010`) |
+| **100** | 🟢 **the CORPUS** | — |
+
+🟢 **Why the corpus is the real one, and why it is more durable than the other three.** The code can
+be forked, the release can be cut, the validation layer is Apache-2.0 and has **33 tags** — but a
+scoring model is only as transferable as the licence of the essays it was trained on, and the largest
+open student-essay corpus in existence carries **NonCommercial**:
+
+| corpus | licence, and where it was read | usable commercially? |
+|---|---|---|
+| **PERSUADE 2.0** (>25 000 essays, grades 6–12) | 🔴 **`CC-BY-NC-SA-4.0`** — the **author's own** repo README, payload-read (`persuade_corpus_2.0`, **2 159 B**, line 29) | 🔴 **no** |
+| **PERSUADE 1.0** | 🔴 **`CC-BY-NC-SA-4.0`** — same author, superseded repo (**3 557 B**, line 51) | 🔴 **no** |
+| the same corpus per its **funder's** page | 🟡 *`CC BY 4.0`* — and that page describes **14 000** essays, a **different, smaller release** | 🟡 **unresolved, and not the operative term** |
+| the same corpus per **`AI_AWE`'s own asset table** | 🔴 *"academic-use, attribution"* — **drops ShareAlike** (`Gap 390`) | 🔴 **no** |
+| **ASAP 2.0** (≈24 000 essays) | 🟡 reported **`CC BY`**, snippet-only, **not payload-confirmed** | 🟡 **the lead worth running** |
+| [`anaistack/cefr-asag-corpus`](https://github.com/anaistack/cefr-asag-corpus) | 🔴 **`CC-BY-NC-SA-4.0`**, payload-read (p99, `LICENSE.txt` **20 863 B**) | 🔴 **no** |
+
+🔵 **So the industry's permissive supply for this activity is: code yes, validation yes, release yes,
+corpus NO.** 🟢 **And that is a *procurement* problem rather than an engineering one, which makes it
+cheaper to solve than any of the three blockers it replaces** — the client's own graded essays are
+the asset, and `AI_AWE` ships the retraining seam
+(`prepare_persuade.py --in /path/to/licensed/persuade_export.json`).
+
+🔴 **What would refute `T21`:** a payload-confirmed `CC BY` or Apache/MIT graded essay corpus at
+scale. 🟢 **ASAP 2.0 is the one candidate and it is pre-registered.** 🔵 **Note the asymmetry that
+makes this trend sharp: `NC` on code would be unusual and loud; `NC` on data is the DEFAULT in
+education research, and it is quiet.**
+
+## T22 — 🆕 p100 In corporate L&D the blocker is the PLATFORM, and EMEA is finally placed
+
+🔵 **`Gap 386` was discharged at pass 98 for SIZE and left open for PLACEMENT**: every L&D figure
+this KB held was global or US. 🔴 **Pass 98 and pass 99 both failed to place EMEA, because they
+queried the region.** 🟢 **Pass 99's own remedy was the fix — query the PUBLISHER, not the region —
+and it paid immediately.**
+
+🟡 **All figures in this trend are search-summary grade; `www.fosway.com` and `www.cipd.org` were
+both probed this pass and both refused.**
+
+| finding | source, and its grade | why it matters to an engagement |
+|---|---|---|
+| **AI is the top strategic priority** for learning teams | 🟡 Fosway *Digital Learning Realities 2026*, 12th year, European analyst — snippet | the budget conversation is already won; the delivery one is not |
+| L&D budgets under **the most pressure since COVID**; stagnation with an underlying **decrease** | 🟡 Fosway — snippet | 🔴 **price for replacement of an existing line, not for net-new spend** |
+| **almost 2 in 3** say their **LMS/LXP is not delivering adequately on AI** | 🟡 Fosway — snippet | 🟢 **the single most useful sentence in this file for an L&D pitch** |
+| L&D teams believe they are **not adequately upskilling** for the next 2–3 years | 🟡 Fosway — snippet | the buyer needs capability transfer in the statement of work, not just software |
+| 🔴 **MENA: L&D spend per FTE DOWN 28 %** in 2026, training hours flat | 🟡 SHRM, carried from p99 — 🔴 **recorded as MENA, not EMEA** | same direction as Fosway's budget finding, different sub-region |
+
+🔴 **And the honest gap, with a date on it.** The CIPD's instrument was **renamed** for 2026 — it is
+the **Skills and Learning at Work Survey**, fielded by **Censuswide**, and it **closed on 20 May
+2026**. 🔴 **No 2026 findings were published as of this pass.** 🟢 **Baseline for when they land**
+(2023 edition, YouGov, **1 108** respondents): only **59 %** of L&D staff felt able to respond to
+changing skills needs, **down from 69 % in 2021**. 🔵 **Pre-registered: re-query after publication —
+a third consecutive fall would make "L&D cannot keep up" a measured trend rather than a vendor
+talking point.**
+
+🟢 **Why this is a trend and not a market row.** The complaint is **not** *"we have no AI"* and
+**not** *"AI is too expensive"*; it is *"the platform we already bought does not deliver it"*.
+🔵 **That names the engagement precisely: AI on top of an incumbent LMS/LXP, replacing a line item
+rather than opening one** — which is exactly the shape of `P91-RETIRED`'s surviving principle, *the
+platform is the client's and the intelligence on top is ours*, now with a measured buyer behind it.
+
+## T23 — 🆕 p100 In a regulated education activity, the permissive supply comes from the TESTING INCUMBENT
+
+🔵 **The observation.** The most release-engineered permissive repository in educational assessment is
+[`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool) —
+**Apache-2.0**, **33 tags**, **`v12.0.0`**, conda channel, two CI systems — published by **ETS**, the
+organisation that scores **TOEFL** and the **GRE**. 🔴 **This KB spent nine passes searching
+AI-community repositories and found it only when it stopped looking for *"AI"* and started looking
+for *"scoring"*.**
+
+🟢 **Why this is structural rather than a coincidence.** A regulated activity's obligations —
+validity evidence, fairness analysis, an explanation owed to the person assessed — are **operational
+necessities for an incumbent long before they are regulation for anyone else.** 🔵 **An organisation
+that has been audited on score validity for decades has already built, and has reason to open-source,
+exactly the artefact Annex III demands.** 🟢 **The AI community builds the scorer; the incumbent
+builds the defensibility.** 🔵 **And the defensibility is the half a regulator asks for** — `T13`,
+re-confirmed from a direction `T13` did not anticipate.
+
+🔴 **The constraint on generalising it, and it is firm.** `P975`: **licence is a property of the
+repository, never of the publisher.** The same ETS organisation ships
+`EducationalTestingService/factor_analyzer` under **GPL-2.0** — a dependency-shaped library a scoring
+pipeline would import without reading. 🟢 **So `T23` is a rule about where to LOOK, never about what
+you will find when you get there.**
+
+🟡 **What would refute `T23`:** an AI-community repository in a regulated education activity with
+comparable release engineering, or a testing incumbent whose open-source output is uniformly
+copyleft. 🔵 **Adjacent incumbents worth probing next, and pre-registered:** Cambridge Assessment,
+Pearson's research arm, ACT, and the IMS/1EdTech reference implementations.
 
 ## T19 — 🆕 p99 The CONNECTOR decides which platform a studio can serve permissively, and it splits by platform
 
@@ -63,6 +173,13 @@ read the AGPL one as a **specification** rather than linking it (`sebserver-mcp-
 both. 🟢 **Any of the three retires this trend, and that is the point of stating it this way.**
 
 ## T20 — 🆕 p99 The permissive supply is RELEASE-blocked, not LICENCE-blocked — and that is a different purchase
+
+> 🔴 🆕 **p100 — RETRACTED IN ITS CONCLUSION. Read `T21` instead.** The measurement below is correct
+> for the three rows it covers; the generalisation to the tier is not. 🟢 **Two permissive scorers on
+> this KB's own shelf were already released** — `wwrwbs/AI_AWE` (`v0.1.0`, adapter artifact
+> `http=200`) and `EducationalTestingService/rsmtool` (**33 tags, `v12.0.0`**) — and neither had had
+> its tags counted, because `tags` became a measured column only at pass 98 (`P1010`).
+> 🔵 **`Gap 372` is DISCHARGED; the real blocker is the CORPUS (`T21`, `Gap 390`).**
 
 🔵 **Four passes carried `Gap 372` as "no permissive production-grade corrector for open response".**
 🔴 **The premise was wrong in a way that cost four passes of searching for the wrong thing.**
@@ -308,6 +425,32 @@ possible opening deliverable in EMEA: a one-week inventory against a prohibition
   conversation was *"literacy now, high-risk conformity by Dec 2027"*. 🟢 **It is still that — but the
   high-risk conformity work has a buyer with a live deadline, and that buyer is in APAC.** See `T15`.
 
+
+### 🟢 🆕 p100 amendment to T4 — the duty got a SAFE HARBOUR and its first NARROWING, and one of them scopes LMS work exactly
+
+🟡 **All four rows below are search-summary grade; `digital-strategy.ec.europa.eu` and `eur-lex.europa.eu`
+remain refused and were not re-probed this pass.**
+
+| what landed | date | why it changes the offer |
+|---|---|---|
+| 🟢 Commission **confirmed the Transparency Code of Practice as adequate** | July 2026 | 🟢 **There is now a named route to demonstrate Article 50 compliance** — voluntary, but it converts *"prove you marked it"* into *"adhere to this and show you did"* |
+| 🟢 **Final** Commission guidelines on Article 50 transparency published | July 2026 | the guidance is no longer draft, so scoping decisions taken against it are defensible |
+| 🟢 **AI-generated TRANSLATIONS exempt** as *"standard editing"* | July 2026 guidelines | 🔵 **This is the LMS scoping question answered**: translating course material does **not** trigger marking |
+| 🔴 **Summaries and substantive rewrites are NOT exempt** | same | 🔴 **And this is the other half**: an LMS feature that *summarises* a reading, or rewrites it for a reading level, **does** trigger it |
+| 🔴 Enforcement sits with **national market surveillance authorities** | Art. 50 applicable **2 Aug 2026** | 🔴 **No specific national body was named by any source this pass** — recorded as a measured zero, re-registered as a lead |
+
+🔵 **Why the translation/summary split is the most commercially useful line in this file right now.**
+Every LMS AI feature set this KB has catalogued contains both operations, usually in one menu.
+🟢 **Translate-a-course is out of scope; summarise-a-chapter and simplify-for-reading-level are in
+it** — and the second pair is precisely the accessibility and differentiation feature an education
+client asks for first. 🔴 **So the marking obligation lands on the feature a school most wants, and
+the exemption lands on the one it mentions least.** 🟢 **Costed as `P100-B`.**
+
+🔴 **The clock, restated because it is the only item in this file that expires:** GenAI **already on
+the market** before 2 Aug 2026 must satisfy Article 50(2) machine-readable marking by
+🔴 **2 December 2026 — 53 days from this pass.** 🔴 **Systems placed on the market on or after
+2 Aug 2026 have NO grace period at all**, which is the half that four passes of this file never
+stated.
 
 ## T5 — Generators are saturated; the checker gap is now **half closed**, and the remaining half is sharper
 

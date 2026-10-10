@@ -6,15 +6,60 @@ updated: 2026-10-10
 
 # Education — foundational repos
 
-**Pass 99, 2026-10-10.** ⏱️ **Ninth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:
+**Pass 100, 2026-10-10.** ⏱️ **Tenth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:
 00:4x–01:3x; 93: 01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; 98:
-06:4x–07:xx; this one 07:4x–08:xx). 🔴 **Repository code was refused for a SEVENTH consecutive
-pass** — `grant-ladder-v4/ladder.sh` **and** its offline `test_ladder.sh`, denied before starting
-(`[Code from External]`). 🟢 **No classifier was written** (`P237`). **14 slugs resolved: 13 licence
-payload reads, 1 clean 24-name negative.**
+06:4x–07:xx; 99: 07:4x–08:xx; this one 08:4x–09:xx). 🔴 **Repository code was refused for an EIGHTH
+consecutive pass** — `grant-ladder-v4/ladder.sh` was not invoked. 🟢 **No classifier was written**
+(`P237`). 🟢 **`P1005` applied from the outset, plus ONE operation pass 99's inline ladder omitted:
+`git ls-remote --tags`.** 🔵 **That single addition discharged `Gap 372`, and the row that did it has
+been on this page since pass 94.**
 
-🔴 **`api.github.com` 403 for an EIGHTH consecutive pass, and `github.com` HTML is 403 too.** A `—` is
-unread, never zero.
+🔴 **`api.github.com` not consulted.** A `—` is unread, never zero.
+
+### 🔴 `P1010` — the structural finding of this pass is about this page's OWN back catalogue
+
+🔵 **Pass 99 declared the open-response scoring tier *"release-blocked"*.** 🔴 **Tier 2d below has
+carried, since pass 94, the most release-engineered repository in educational assessment — and had
+recorded its commit count, never its tags.**
+
+| Tier 2d row | recorded at pass 94 | 🟢 measured at pass 100 |
+|---|---|---|
+| [`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool) | Apache-2.0 · 11 358 B · `main` · `a844f71` · *2 916 commits* | 🟢 **33 tags · `v12.0.0`** · full SHA **`a844f71614712f81177b5731dbb17b3e018dcc85`** · conda channel `anaconda.org/ets` · **GitLab pipelines AND Azure Pipelines** · codecov · `requires-python >= 3.10` |
+
+🟢 **33 tags, a published conda package and two independent CI systems is not a research artefact.**
+🟢 **`P1010`: when a pass declares a tier blocked on a property, re-measure the tier's EXISTING rows
+on that property before declaring the gap** — `tags` became a measured column only at pass 98, so
+every row tabled before then carries an unpopulated one.
+
+🟢 **`P1011` — in a regulated activity, search the INCUMBENT's open-source output BEFORE the AI
+community's.** 🔵 `rsmtool` is **ETS**, the house that scores TOEFL and the GRE; its repository looks
+like an organisation that has shipped under audit (versioned releases, a distribution channel,
+`fairness` in its own topic list). 🔴 **`P975` still binds and is why this is a rule about
+repositories, not publishers** — the same ETS organisation ships `factor_analyzer` under **GPL-2.0**.
+
+### 🟡 `P1008` — `rsmtool`'s `pyproject.toml` is a POINTER, not a second licence oracle
+
+🟢 Payload-read, **1 934 B**: `name = "rsmtool"`, `description = "Rater Scoring Modeling Tool"`,
+`requires-python = ">= 3.10"`, `version = { attr = "rsmtool.version.__version__" }`, and
+🔴 **`license = { file = "LICENSE" }`.**
+🔵 **`P979` made a Maven `pom.xml` a second oracle because it NAMES a licence; a `file = `
+declaration names nothing.** 🟡 **Record it as a pointer — treating it as agreement counts one
+reading twice.** 🟢 **Tier 2d's Apache-2.0 therefore rests on the `LICENSE` payload alone, 11 358 B,
+full canonical length** — the clean contrast with `wwrwbs/AI_AWE`'s **1 865 B** header-notice grant
+(`P971`).
+
+### 🟢 `P1009` — a README that says "this *was* the repository" is a redirect
+
+🔴 [`scrosseye/PERSUADE_corpus`](https://github.com/scrosseye/PERSUADE_corpus) — `main` ·
+`de78d7a5d22c333d24d489b95dd744a5aa490e5f`, `README.md` **3 557 B** — opens *"This **was** the
+repository"* and names its successor in line 5.
+🟢 **Resolved:** [`scrosseye/persuade_corpus_2.0`](https://github.com/scrosseye/persuade_corpus_2.0) —
+`main` · `67d182ac88ea4a4dda736de859cfdb0bc360ee9b`, `README.md` **2 159 B**.
+🔴 **Both state `CC-BY-NC-SA-4.0` in README prose; NEITHER has a licence file at the root** (`LICENSE`,
+`.md`, `.txt` → three `404`s). 🔵 **`P969`'s shape again, with `P1009` as the new half: the superseded
+repo gives the right licence for the wrong release.** 🟢 **Pin the successor.** `Gap 389` settled,
+`Gap 390` opened — both in `agents/top.md`.
+
 
 ### 🟢 The structural finding of this pass is about the INSTRUMENT, so it goes at the top — `P1005`
 
@@ -273,7 +318,7 @@ so the next pass that can run code has a failing case ready.
 
 | repo | grant (payload · bytes · file · ref · SHA) | ★ | region | role in a build |
 |---|---|---|---|---|
-| 🆕 p94 [`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool) | 🟢 **Apache-2.0** · **11 358 B** · `LICENSE` · `main` · `a844f71` | 71 | 🟢 **North America** (ETS) | **2 916 commits.** Builds **and evaluates** automated scoring models from a configuration file; customisable HTML statistical report; scikit-learn + SHAP; `fairness` among its own topics. 🔴 **Not a scoring engine** — it is how you demonstrate one is valid. |
+| 🆕 p94 · 🟢 **re-measured p100** [`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool) | 🟢 **Apache-2.0** · **11 358 B** · `LICENSE` · `main` · **`a844f71614712f81177b5731dbb17b3e018dcc85`** | 71 | 🟢 **North America** (ETS) | 🟢 **33 tags · `v12.0.0`** — conda `anaconda.org/ets`, GitLab + Azure CI, codecov, `requires-python >= 3.10`. **2 916 commits.** Builds **and evaluates** automated scoring models from a configuration file; customisable HTML statistical report; scikit-learn + SHAP; `fairness` among its own topics. 🔴 **Not a scoring engine** — it is how you demonstrate one is valid. 🔵 **`P1008`: its `pyproject.toml` points at `LICENSE` and is not a second oracle.** |
 | 🆕 p94 [`EducationalTestingService/skll`](https://github.com/EducationalTestingService/skll) | 🟢 **BSD-3-Clause** · 1 555 B · `LICENSE.txt` · `main` · `b350eb0` | — | 🟢 **North America** — `P800`: *"Copyright (c) 2012–2022 Educational Testing Service"* | scikit-learn experiments driven by configuration. Pinned by `rsmtool` at `skll==5.0.1`, so the pair is a single dependency decision. |
 | 🆕 p94 [`HASKI-RAK/NodeGrade`](https://github.com/HASKI-RAK/NodeGrade) | 🟢 **MIT** · 1 062 B · `LICENSE` · `main` · `8e144ac` | 3 | 🟡 **EMEA** (Germany, by the ECSEE '25 citation; the payload holder reads only *"HASKI"* — weaker than `P800`) | **421 commits.** Short-answer grading as a node graph with **LTI 1.1/1.3**; NestJS + Prisma + Postgres, React/Vite PWA, Python sentence-embedding worker, **local-model provider included**. |
 

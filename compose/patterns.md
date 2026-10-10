@@ -5,9 +5,23 @@ updated: 2026-10-10
 ---
 
 # Education — compose patterns
-**Pass 99, 2026-10-10.** ⏱️ **Ninth pass of this date.** 🆕 **Three patterns added** (`P99-A` the
-Article 50(2) marking sprint, `P99-B` the permissive Canvas gradebook agent, `P99-C` the Moodle
-fork-and-pin connector), 🔴 **and `P99-A` is the only pattern on this page with an EXPIRY DATE.**
+**Pass 100, 2026-10-10.** ⏱️ **Tenth pass of this date.** 🆕 **Three patterns added** (`P100-A` the
+retrainable open-response scorer, `P100-B` the Article 50(2) scoping gate, `P100-C` intelligence on
+top of the LMS the client already regrets), 🔴 **and `P99-A` and `P100-B` are the only patterns on
+this page tied to an EXPIRY DATE.**
+
+🟢 **The pattern this page could not write for five passes is now `P100-A`.** `Gap 372` is
+**DISCHARGED**: `wwrwbs/AI_AWE` is Apache-2.0 **with a release** (`v0.1.0`, adapter artifact
+`http=200`) and `EducationalTestingService/rsmtool` has **33 tags at `v12.0.0`** — 🔵 **both were on
+this KB's own shelf with their tags never counted** (`P1010`). 🔴 **What remains is a CORPUS
+constraint, not a code one** (`T21`, `Gap 390`): the code ships, the **weights do not**, and the
+retraining seam is in the repository. 🟢 **So `P100-A` starts from a system that already runs — the
+first pattern on this page that does.**
+
+🟢 **And `P100-B` exists because a duty got NARROWER.** The Commission's final Article 50 guidelines
+exempt **AI-generated translations** as *"standard editing"* while keeping **summaries and
+substantive rewrites** in scope. 🔵 **For an LMS that is the entire scoping question**, and getting it
+backwards is the default mistake.
 
 🔴 **The constraint that reorders this whole page: the EU limb that binds first is
 `2026-12-02`, fifty-three days from this pass.** The Digital Omnibus (**Regulation (EU) 2026/1744**,
@@ -928,6 +942,128 @@ from the payload at a full 40-character SHA, and this KB has run its MCP gate fo
 has **no named client deployment recorded here.** 🟢 **And it is the one JVM row on this shelf whose
 default branch names a shippable version** (`pom.xml` `4.9` against tag `v4.9.152`), which inverts `P978`
 and means you can quote a version without a caveat — the only row here you can say that about.
+
+## `P100-A` — 🆕 The retrainable open-response scorer (global; the pattern `Gap 372`'s discharge makes possible, and the first one here that starts from a running system)
+
+🟢 **Buyer:** any institution or EdTech vendor that grades **constructed-response** work — essays,
+short answers, written argument — and needs a defensible score rather than a chatbot's opinion.
+🔵 **This is the pattern five passes of this KB said could not be built.** 🟢 **It can: the code is
+Apache-2.0, it has a release, and the only thing you must replace is the training corpus.**
+
+🔴 **Read this before anything else: the code ships and the WEIGHTS do not.** `AI_AWE` distributes a
+fine-tuned adapter trained on **PERSUADE 2.0**, which its author licenses **`CC-BY-NC-SA-4.0`**
+(`Gap 389`, settled from the author's own payload). 🔴 **Do not ship the released adapter to a
+commercial client** (`Gap 390`). 🟢 **Retrain it — the repository was designed for exactly that.**
+
+### The wiring, named repo by repo, with the licence on every row
+
+| step | repo, at a pinned address | grant | what it does here |
+|---|---|---|---|
+| 1. the system | [`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE) — `main` · `41ae3bd4dd9e891bf46dd4834644ca143dbd36df`, tag **`v0.1.0`** · `bfb34af069e31adabfcd2e7a51acb1605cb4d2a7` | 🟡 **Apache-2.0 *by reference*** (`LICENSE` **1 865 B**, `P971` — **add the licence text to your bundle by hand**) | discourse-move classifier (*claim / data / counterclaim / rebuttal*) + **LightGBM** scorer over **31 linguistic features** + feedback generator; **Gradio UI**, single and batch; **vLLM** or **4-bit HF** backend |
+| 2. the base model | Qwen2.5-7B-Instruct (from HF, **not** vendored) | 🟢 **Apache-2.0** | the classifier's backbone — 🟢 **permissive, and the repo deliberately does not redistribute it** |
+| 3. the feature toolkit | TextComplexityToolkit (TAALED / QuanSyn), **vendored in the repo** | 🟢 **MIT** | the 31 features the scorer consumes — 🔴 **keep its LICENSE file in your fork** |
+| 4. 🔴 **the corpus you must replace** | **the client's own graded essays**, or a corpus you have confirmed permissive | 🔴 **PERSUADE 2.0 is `NC-SA` — unusable commercially** | 🟢 **the seam the repo ships:** `qwen_move_classifier/data/prepare_persuade.py --in /path/to/licensed/persuade_export.json --out train.jsonl` |
+| 5. the validity evidence | [`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool) — `main` · `a844f71614712f81177b5731dbb17b3e018dcc85`, **33 tags, `v12.0.0`** | 🟢 **Apache-2.0** (`LICENSE` **11 358 B**) | 🟢 **the half a regulator asks for**: config-driven build **and evaluation**, HTML statistical report, SHAP, `fairness` in its own topics. 🔵 **This is the deliverable, not the scorer** |
+| 6. the model-fitting layer | [`EducationalTestingService/skll`](https://github.com/EducationalTestingService/skll) | 🟢 **BSD-3-Clause** | pinned by `rsmtool` at `skll==5.0.1`, so steps 5–6 are **one** dependency decision |
+| 7. the human gate | the client's existing LMS, via the connector `T19` says their platform allows | varies — 🔴 **read `P1006` before quoting** | 🔴 **non-optional**: `AI_AWE`'s own README says *research and assistive use, not high-stakes automated decisions without human oversight* |
+
+### 🟢 Why the licence mix is the selling point rather than the caveat
+
+🟢 **Every line of code in steps 1–6 is Apache-2.0, MIT or BSD-3.** 🔴 **The only encumbered asset is
+the training data, and it is the one asset the client already owns.** 🔵 **So the engagement has an
+unusually clean shape: we bring permissive software and the method; they bring the graded essays that
+make it theirs.** 🟢 **And the retrained adapter is a client-owned asset no competitor can copy** —
+which is a better commercial story than shipping someone else's weights would have been.
+
+🟡 **State the accuracy honestly in the estimate.** ArguLens reports **82.6 %** classifier accuracy /
+**0.727** macro-F1 and **0.813** mean QWK under 5-fold CV — 🔴 **figures its own authors call a
+component-level diagnostic, not end-to-end**, and its human-rater study is **future work.**
+🔵 **Quote `rsmtool`'s report on the CLIENT's corpus as the number that matters**, never the paper's.
+🔴 **And carry the population warning into the scope**: PERSUADE is US middle-school argumentative
+writing, so transfer to another population or genre is an **assumption to test, not a given.**
+
+### Cost and sequencing
+
+| phase | duration | output |
+|---|---|---|
+| corpus and licence gate | **0.5 week** | 🔴 **run first and be willing to stop here.** Does the client hold graded essays they may lawfully train on? `P94-B`'s due-diligence gate, applied to data instead of platforms |
+| stand up the system as shipped | **1 week** | `AI_AWE` running on the released adapter, Gradio UI, **offline** — the test suite skips service tests when no backend is reachable, so this phase needs no GPU procurement |
+| retrain on the client corpus | **2–3 weeks** | 🟢 **a client-owned adapter with no `NC` lineage** (`Gap 390` discharged for this engagement) |
+| validity and fairness pack | **2 weeks** | 🟢 `rsmtool` HTML report — **the Annex III / Korea AI Basic Act artefact**, and the same pack satisfies both |
+| human-in-the-loop wiring | **1–2 weeks** | review queue in the client's LMS; `T19`'s connector constraint decides the cost |
+| **total** | 🟢 **6.5–8.5 weeks** | 🔵 **and 5 of those weeks produce artefacts that outlive the model** |
+
+🔵 **Where it sells first.** 🟢 **Korea, today** — the AI Basic Act is **in force** (22 Jan 2026) and
+demands *"ability to explain results"* plus retained documentation, which is steps 5–6 exactly.
+🟢 **EMEA second**, against Annex III's **2 Dec 2027**. 🟢 **North America third** — Oklahoma and
+Maryland bar AI from high-stakes student decisions, which makes step 7 the statutory requirement
+rather than good practice.
+
+## `P100-B` — 🆕 The Article 50(2) scoping gate: translate is exempt, summarise is not (EMEA; half a day, run before `P99-A` is quoted)
+
+🔴 **The finding that creates this pattern.** The Commission's **final** Article 50 guidelines (July
+2026) treat **AI-generated translations** as falling within the *"standard editing"* exemption —
+🟢 **so translating course material does NOT trigger machine-readable marking** — 🔴 **while
+summaries and substantive rewrites DO.**
+
+🔵 **Why this is worth a named gate rather than a footnote.** Every LMS AI feature set this KB has
+catalogued contains **both** operations, usually in the same menu: *translate this page* sits next to
+*summarise this chapter* and *simplify for reading level*. 🔴 **The second pair is in scope and is
+precisely the accessibility and differentiation feature an education client asks for first.**
+🟢 **So the marking obligation lands on the feature a school most wants and the exemption on the one
+it mentions least** — and a vendor who scopes by *"we use AI for language stuff"* will get it exactly
+backwards.
+
+### The gate, as an actual half-day procedure
+
+| step | what you do | artefact already in this repository |
+|---|---|---|
+| 1 | enumerate every generative feature in the client's product, **by operation, not by feature name** | — |
+| 2 | classify each as **standard editing** (translation, spell/grammar correction, formatting) or **content generation** (summarise, rewrite, simplify, generate, draft) | 🔵 the split above is the whole rule |
+| 3 | for each in-scope operation, check whether its output carries machine-readable provenance | 🟢 `compose/code/aiact-50-2-marking/` · `aiact-50-2-pack/` (XSD) · `aiact-50-2-spans/` |
+| 4 | measure the exposure across the product | 🟢 `compose/code/aiact-50-2-exposure/` — **already has a dated result TSV** |
+| 5 | 🔴 **check the placed-on-market date**, because it decides whether there is a deadline or none | 🔴 **before 2 Aug 2026 → 2 Dec 2026. On or after → NO grace period, compliance was due at launch** |
+| 6 | adhere to the **Transparency Code of Practice** | 🟢 **confirmed ADEQUATE by the Commission (July 2026)** — a named route to demonstrate compliance rather than an argument you have to invent |
+
+🟢 **Deliverable:** a one-page scope table saying which features are exempt, which are in scope,
+which already mark, and what the 2 December exposure is. 🔵 **Cost: half a day. It is the cheapest
+correct thing in this file**, it reuses four tested artefacts, and 🔴 **it reliably shrinks the
+`P99-A` sprint, because translation features drop out of scope entirely.**
+
+🟡 **Grade, stated in the deliverable itself:** all of this is **secondary-source**. The Commission's
+own pages (`digital-strategy.ec.europa.eu`, `eur-lex.europa.eu`) are unreachable from this session and
+🔴 **no source names the member-state authority that enforces it.** 🔵 **Say so on the page — a
+compliance deliverable that hides its own sourcing grade is the one that gets the client in trouble.**
+
+## `P100-C` — 🆕 Intelligence on top of the LMS the client already regrets (EMEA corporate L&D first; `T22`'s buyer, with the complaint quoted back to them)
+
+🟢 **Buyer, now measured rather than assumed:** 🟡 **almost two in three** L&D professionals say their
+**existing LMS or LXP is not delivering adequately on AI**, while **AI is their top strategic
+priority** and budgets are under **the most pressure since COVID** (🟡 Fosway *Digital Learning
+Realities 2026*, search-summary grade — `www.fosway.com` is refused from this session).
+
+🔵 **Why this is the easiest pitch in this file.** 🔴 **The buyer is not asking "should we do AI" and
+not asking "can we afford it".** 🟢 **They have already bought a platform and already concluded it
+underdelivers** — so the sale is *augment what you own*, which is `P91-RETIRED`'s surviving principle
+(*the platform is the client's; the intelligence on top is ours*) with a measured buyer behind it at
+last. 🔴 **And because budgets are shrinking, price it as a REPLACEMENT of an existing line item,
+never as net-new spend.**
+
+### The wiring
+
+| layer | what to use | why |
+|---|---|---|
+| the platform | 🔴 **whatever they already run** — do not propose migrating it | the complaint is about delivery, not about the platform choice |
+| the connector | 🔴 **`T19` / `P1006` decide the cost before you quote** | Canvas has an **MIT, released** connector (`v1.14.0`, 26 tags); **Moodle does not have one that is both** — 🔴 **this single fact can double the integration estimate** |
+| the skills spine | 🟢 the skills-taxonomy tier (`repos/foundations.md` **Tier 4**, p98) | 🔴 **read its non-commercial trap before costing** — it is documented there |
+| credentialing | 🟢 Tier 5 (p98) — **permissive to VALIDATE and PUBLISH, copyleft to MINT** | 🔵 mint behind a service boundary, validate in the deliverable |
+| capability transfer | 🟢 **a named workstream, not a closing paragraph** | 🟡 Fosway: L&D teams say they are **not adequately upskilling** for the next 2–3 years — so the client cannot operate what you build unless you train them |
+
+🟡 **Two honest caveats.** 🔴 **There is no EMEA L&D spend FIGURE in this file** — Fosway gives
+direction (decline), not magnitude, and the only numeric row is **SHRM's MENA** 28 % fall in spend
+per FTE, 🔴 **which is MENA and is recorded as MENA.** 🟢 **The CIPD's 2026 instrument closed 20 May
+2026 and has not published**, so the sizing arrives later: 🔵 **quote the platform-dissatisfaction
+ratio, which is measured, and not a market size, which is not.**
 
 ## `P99-A` — 🆕 The Article 50(2) marking sprint (EMEA; the only pattern on this page with an expiry date)
 

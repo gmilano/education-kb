@@ -4,6 +4,111 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 100: the most release-engineered repo in this industry was already on this page, and this page had never counted its tags
+
+⏱️ **Tenth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93: 01:4x–02:24;
+94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; 98: 06:4x–07:xx; 99: 07:4x–08:xx; this one
+08:4x–09:xx). **Append-only.**
+
+🔴 **Repository code refused for an EIGHTH consecutive pass** — `ladder.sh` not invoked, 🟢 **no
+classifier written** (`P237`). 🟢 **`P1005` applied from the outset.** 🔴 **Every ★ on this page
+remains unread, never zero** — `api.github.com` was not consulted.
+
+### 🔴 `P1010` — this page's Tier 2d row was the counter-example to pass 99's conclusion, and it was sitting there
+
+🔵 **Pass 99 concluded of the open-response scoring tier: *"what is missing is not a licence, it is a
+release."*** 🔴 **This page's Tier 2d has carried, since pass 94, the single most release-engineered
+repository in educational assessment — and had recorded its commit count, never its tags.**
+
+| row (pass that added it) | recorded then | 🟢 measured this pass |
+|---|---|---|
+| [`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool) (p94) | Apache-2.0 · 11 358 B · `main` · `a844f71` · *2 916 commits* | 🟢 **33 tags · `v12.0.0`** · full SHA **`a844f71614712f81177b5731dbb17b3e018dcc85`** · conda channel `anaconda.org/ets` · **GitLab pipelines AND Azure Pipelines** · codecov · `requires-python >= 3.10` |
+
+🟢 **33 tags, a published conda package and two independent CI systems is not a research artefact.**
+🔵 **It is the first row on this page a client's platform team would recognise as maintained software
+rather than a paper's appendix** — and this KB spent five passes (95 → 99) describing the tier that
+contains it as supply-starved.
+
+🟢 **`P1010`: when a pass declares a tier blocked on a property, re-measure the tier's EXISTING rows
+on that property before declaring the gap.** 🔴 **`tags` became a measured column at pass 98; every
+row tabled before then carries an unpopulated one, and pass 99 generalised from the subset it had
+just measured.** 🔵 **The cost of the discharge was one `git ls-remote --tags` per slug.**
+
+### 🟢 And the provenance is itself the finding
+
+🔵 **`rsmtool` is ETS — the house that scores TOEFL and the GRE.** 🟢 **The most release-engineered
+permissive tool in educational assessment was published by the INCUMBENT testing industry, not by the
+open-source AI community** — and nine passes of this KB searched the latter.
+🟢 **`P1011`: in a regulated activity, search the incumbent's open-source output BEFORE the AI
+community's.** 🔵 The incumbent has shipped under audit, and its repositories look like it: versioned
+releases, a distribution channel, fairness in its own topic list. 🔴 **`P975` still binds and is the
+reason this is a rule about repositories and not about publishers** — the same ETS organisation ships
+`factor_analyzer` under **GPL-2.0**.
+
+### 🟡 `P1008` — `rsmtool`'s `pyproject.toml` is a POINTER, not a second licence oracle
+
+🟢 Payload-read, **1 934 B**: `name = "rsmtool"`, `description = "Rater Scoring Modeling Tool"`,
+`requires-python = ">= 3.10"`, `version = { attr = "rsmtool.version.__version__" }` — and
+🔴 **`license = { file = "LICENSE" }`.**
+
+🔵 **`P979` made a Maven `pom.xml` a second oracle because it NAMES a licence. A `file = `
+declaration names nothing.** 🟡 **`P1008`: treat it as a pointer; recording it as corroboration is
+counting one reading twice.** 🟢 **So Tier 2d's Apache-2.0 rests on the `LICENSE` payload alone —
+11 358 B, the full canonical length**, which is the clean contrast with `wwrwbs/AI_AWE`'s **1 865 B**
+header-notice-only grant (`P971`, pass 93, and it still stands).
+
+### 🟢 `P1009` — "this *was* the repository" is a redirect, and this page nearly pinned the wrong corpus
+
+🔴 [`scrosseye/PERSUADE_corpus`](https://github.com/scrosseye/PERSUADE_corpus) — `main` ·
+`de78d7a5d22c333d24d489b95dd744a5aa490e5f`, `README.md` **3 557 B** — opens *"This **was** the
+repository"* and names its successor in line 5.
+🟢 **Resolved:** [`scrosseye/persuade_corpus_2.0`](https://github.com/scrosseye/persuade_corpus_2.0) —
+`main` · `67d182ac88ea4a4dda736de859cfdb0bc360ee9b`, `README.md` **2 159 B**.
+
+🔴 **Both state `CC-BY-NC-SA-4.0` in README prose; NEITHER has a licence file at the root**
+(`LICENSE`, `LICENSE.md`, `LICENSE.txt` → `404`, `404`, `404`). 🔵 **`P969`'s shape again — a data
+licence a root-filename classifier cannot see — with `P1009` as the new half: the superseded repo
+gives the right licence for the wrong release.** 🟢 **Pin the successor.** See `Gap 389`, settled in
+`agents/trending.md`, and `Gap 390`, opened there.
+
+### 🟢 `P1010` has a THIRD instance, and it is a platform this KB has carried since pass 35
+
+🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) — `master` ·
+**`cccdcda6861d48817fa2eef1bb4d2f9f189ab774`**, **Apache-2.0**, `LICENSE` **10 982 B**.
+🔵 **Carried since pass 35; its licence, its `L6icense` pom typo (`P988`) and its
+`21.2-SNAPSHOT`-vs-`OpenOLAT_21.0.3` gap (`P978`) are all long recorded.** 🔴 **Its tag count never
+was.**
+
+🟢 **Measured this pass: 542 tags** — 🔵 **more than `seb-server`'s 194, making it the most
+release-engineered repository anywhere in this KB.** 🔴 **Three carried rows, three uncounted tag
+columns, one of which produced a false gap** (`Gap 372`). 🟢 **`P1010` is therefore not an anecdote
+about one tier: it is a property of every row tabled before pass 98**, which is why the next pass's
+cheapest high-value sweep is one `git ls-remote --tags` across the published census.
+
+🟢 **Two small reads that are new, both from the payload:** 🟢 **the clause probe on its non-canonical
+`LICENSE` returns 3 of 4** (*Grant of Copyright License*, *Grant of Patent License*, *Redistribution*
+present; only *APPENDIX*, which carries no terms, absent) — 🔵 **`P974` vindicated by the case that
+nearly failed it, since 10 982 B ≠ the canonical 11 357 B and a byte check would reject the grant** —
+and 🔴 **`NOTICE.TXT` (14 712 B) points at a `LICENSE.TXT` that returns `404`** (the file is
+`LICENSE`), which is `P1009`'s shape in a third form. 🔵 **Full write-up in `verticals/solutions.md`.**
+
+### 🔴 One repo with no grant at all
+
+- 🔴 [`Chunngai/aes-papers`](https://github.com/Chunngai/aes-papers) — `master` ·
+  `87c9a818784314c7181b62a5fe359bfd7eb70116`. **Five root licence filenames probed, five `404`.**
+  🔵 **No grant → reading list, never a dependency.**
+
+### 🔴 The instrument boundary, re-measured rather than assumed
+
+🟢 **Reachable:** WebSearch backend · `github.com` smart-HTTP · `raw.githubusercontent.com` ·
+`release-assets.githubusercontent.com` (the `AI_AWE` `v0.1.0` adapter download answered `http=200`,
+which is how a release artifact was confirmed to exist at all).
+🔴 **Refused this pass, probed individually, all error 56 / `403 CONNECT tunnel failed`:**
+`arxiv.org` · `the-learning-agency-lab.com` · `www.fosway.com` · `www.cipd.org`.
+🔵 **Tenth consecutive pass with zero primary-source reads outside GitHub — and the second
+consecutive pass in which the GitHub channel alone settled a licence question owned entirely by hosts
+this session cannot reach.**
+
 ## 2026-10-10 — pass 99: seven passes of "ladder.sh denied" were ONE fact too few, and separating them made every SHA here 40 characters
 
 ⏱️ **Ninth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93: 01:4x–02:24;

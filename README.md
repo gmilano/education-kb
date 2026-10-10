@@ -22,6 +22,58 @@ education-kb/
 └── compose/code/  # Código ejecutable y probado, no prosa
 ```
 
+## Pase 100 — 2026-10-10
+
+⏱️ **Décimo pase de esta fecha** (el 91 corrió 23:0x–00:00 UTC; el 92, 00:4x–01:3x; el 93, 01:4x–02:24;
+el 94, 02:5x; el 95, 03:4x; el 96, 04:4x–05:xx; el 97, 05:4x–06:xx; el 98, 06:4x–07:xx; el 99,
+07:4x–08:xx; este, 08:4x–09:xx).
+
+**El hallazgo principal es una corrección de esta base por esta base.** 🔴 El pase 99 declaró que el
+nivel de corrección de respuesta abierta estaba **«bloqueado por release, 0 de 3 con tags»** y
+escribió: *«lo que falta no es una licencia, es un release»*. 🟢 **`Gap 372` queda DESCARGADO: dos
+filas que esta base ya tenía SÍ tienen release** — `wwrwbs/AI_AWE` (Apache-2.0 *por referencia*,
+tag **`v0.1.0`**, adaptador descargable `http=200`, en el estante desde el pase 93) y
+`EducationalTestingService/rsmtool` (**Apache-2.0, 33 tags, `v12.0.0`**, desde el pase 94).
+🔵 **A ninguna se le había contado nunca los tags, porque `tags` recién fue columna medida en el
+pase 98.**
+
+🟢 **`P1010`: antes de declarar un nivel bloqueado por una propiedad, re-medí las filas EXISTENTES de
+ese nivel.** 🔴 **Y no es anécdota de un nivel: una TERCERA fila arrastrada apareció con la columna
+vacía en el mismo pase** — `OpenOLAT/OpenOLAT`, en la página de plataformas **desde el pase 35**,
+mide **542 tags**, más que cualquier otro repositorio de esta base.
+
+🔴 **Lo que queda no es un hueco de oferta sino de CORPUS (`T21`, `Gap 390`):** el código es
+permisivo y corre, pero los **pesos distribuidos** se entrenaron sobre **PERSUADE 2.0**, que su
+**propio autor** licencia **`CC-BY-NC-SA-4.0`** (leído del payload). 🟢 **`Gap 389` queda RESUELTO y
+la dirección del pase 99 estaba invertida**: el reclamo permisivo (`CC BY 4.0`) es de la página del
+**financiador**, que además describe **14 000** ensayos donde el autor describe **más de 25 000**.
+🔵 **`P1007`: la licencia de un corpus la fija el repositorio de su AUTOR, nunca la página de su
+financiador o distribuidor.** 🟢 **El código se entrega; los pesos se re-entrenan** — y el repo trae
+la costura para hacerlo (`P100-A`).
+
+🟢 **EMEA L&D queda UBICADO por primera vez** (lead 2 del pase 99, que había fallado dos veces):
+nombrar al **editor** en lugar de a la región pagó en la primera consulta. 🟡 Fosway *Digital
+Learning Realities 2026*: **la IA es la prioridad estratégica #1**, presupuestos bajo **la mayor
+presión desde el COVID**, y **casi 2 de cada 3** dicen que **el LMS/LXP que ya tienen no entrega en
+IA** — 🔵 **un mercado de reemplazo con motivo declarado (`T22`, `P100-C`).** 🔴 El instrumento del
+CIPD fue **renombrado** y **cerró el 20 may 2026 sin publicar**: un hueco informado con fecha.
+
+🟢 **Y el deber que vence primero ganó un puerto seguro y su primer RECORTE:** el Código de Práctica
+de Transparencia fue **confirmado como adecuado** y las guías del art. 50 son **finales** (jul 2026);
+🟢 **las traducciones generadas por IA quedan EXENTAS** como *«edición estándar»* 🔴 **mientras los
+resúmenes y las reescrituras sustanciales NO.** 🔵 **Para un LMS eso es toda la pregunta de alcance
+(`P100-B`)** — y el reloj sigue en 🔴 **`2026-12-02`, a 53 días.**
+
+**Los cinco leads del pase 99 se corrieron: 4 pagados, 1 a medias** — y la mitad que falló falló
+porque **este archivo iba por delante de la consulta** (`P1012`: cuando un lead devuelve menos de lo
+que el archivo tiene, el hallazgo es que el archivo va adelante; registralo y retirá la consulta).
+
+🔴 **Cero lecturas de fuente primaria fuera de GitHub, DÉCIMO pase consecutivo** — frontera
+re-sondeada: 🟢 alcanzables `raw.githubusercontent.com`, `github.com` smart-HTTP,
+`release-assets.githubusercontent.com`; 🔴 rechazados `arxiv.org`, `the-learning-agency-lab.com`,
+`www.fosway.com`, `www.cipd.org`. 🔵 **Segundo pase consecutivo en que el canal de GitHub, solo,
+resolvió una pregunta de licencia que pertenece enteramente a hosts inalcanzables.**
+
 ## Pase 99 — 2026-10-10
 
 ⏱️ **Noveno pase de esta fecha** (el 91 corrió 23:0x–00:00 UTC; el 92, 00:4x–01:3x; el 93, 01:4x–02:24;

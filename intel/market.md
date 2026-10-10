@@ -5,21 +5,40 @@ updated: 2026-10-10
 ---
 
 # Education — market, players and opportunities
-**Pass 99, 2026-10-10.** ⏱️ **Ninth pass of this date.** 🟢 **This pass cleared all five of the leads
-pass 98 pre-registered — a first for this file — and one of them closed the EU question that four
-passes had left open.**
+**Pass 100, 2026-10-10.** ⏱️ **Tenth pass of this date.** 🟢 **This pass cleared all five
+pre-registered leads for a SECOND consecutive time, and the EMEA lead that failed twice paid on the
+first query once it named the PUBLISHER instead of the region.**
 
-🟢 **The headline is a DATE, and it is the nearest one in the whole regulatory ladder:** the Digital
-Omnibus is law (**Regulation (EU) 2026/1744**, Council adopted **29 June 2026**, in force **27 July
-2026**), and it postponed **Annex III high-risk to 2 December 2027** while 🔴 **leaving Article 50
-transparency untouched.** 🔵 **So the limb that binds an EMEA education engagement first is
-**Article 50(2) machine-readable marking on 2 December 2026** — fifty-three days from this pass — and
-this base already holds four tested artefacts for it.**
+🔴 **The headline is a correction, and it is this file's own.** Pass 99 opened `Gap 389` as *"a corpus
+licence stated differently by its distributor and its originator"*. 🟢 **Read from the author's own
+payload, the direction was inverted**: both of Scott Crossley's repositories state
+**`CC-BY-NC-SA-4.0`**, and the permissive **`CC BY 4.0`** claim is the **funder's** page — describing
+**14 000** essays where the author's describe **over 25 000**, i.e. a different and smaller release.
+🔵 **`P1007`: a corpus's licence is stated by its AUTHOR's repository, never by its funder's or
+distributor's page.**
+
+🟢 **And the nearest date in the regulatory ladder is unchanged but now has a SAFE HARBOUR and a
+NARROWING:** Article 50(2) machine-readable marking binds GenAI already on the market on
+🔴 **2 December 2026 — 53 days from this pass**; 🟢 the Commission has **confirmed the Transparency
+Code of Practice as adequate** and published the **final** Article 50 guidelines (July 2026); and
+🟢 **AI-generated translations are now exempt as *"standard editing"* while summaries and substantive
+rewrites are not.** 🔵 **For an LMS that split is the whole scoping question** — see the `T4`
+amendment in `intel/trends.md` and `P100-B`.
 
 🟢 **Opportunities below are under ONE `## Opportunities by region` heading with one `###` per region,
 and the region vocabulary is closed: North America · EMEA · APAC · LATAM · Global.** 🔴 **A figure
 without a region is worth less than one that is placed, so every new figure in this pass carries its
 region or is recorded in the zeros section as unplaced.**
+
+### 🟢 🆕 p100 — scored against the five leads pass 99 named for itself
+
+| # | pass 99's lead | outcome |
+|---|---|---|
+| 1 | `Article 50(2) machine-readable marking enforcement` + **the national authority that enforces it**, by name | 🟢 **PAID on the duty, 🔴 ZERO on the authority.** Enforcement sits with **national market surveillance authorities** (secondary) and 🔴 **no source named a specific member-state body** — re-registered. 🟢 **Three new facts instead**: Code of Practice **confirmed adequate**, **final** guidelines published, and **translations exempted** as standard editing while **summaries are not.** 🟢 **Also closed the half four passes never stated: systems placed on the market ON OR AFTER 2 Aug 2026 get NO grace period at all.** |
+| 2 | **EMEA L&D with the INSTRUMENTS named, not the region**: `CIPD learning at work survey`, `Fosway L&D realities`, one per query | 🟢 **PAID — the lead that failed for passes 98 and 99 paid on the first query.** Fosway *Digital Learning Realities 2026* (12th year): **AI is the top strategic priority**, budgets under **the most pressure since COVID**, **~2 in 3** say their **LMS/LXP is not delivering on AI**. 🔴 **CIPD: the 2026 instrument was RENAMED** (*Skills and Learning at Work Survey*, Censuswide), **closed 20 May 2026**, **findings not yet published** — an informed gap with a date. 🟢 **`T22` opened.** |
+| 3 | `Gap 389` settled at the originator; **a GitHub mirror is the cheap route** | 🟢 **PAID AND SETTLED — and the lead's own method is what carried.** Both author repos payload-read at full SHAs; both say **`CC-BY-NC-SA-4.0`**. 🔴 **Pass 99's direction was backwards.** 🔴 **Both the Lab's and Kaggle's pages remain refused and were never needed.** 🟢 **`P1007` + `P1009` registered.** |
+| 4 | **`ProTACT` hardening** — `cross-prompt essay trait scoring`, `automated essay scoring production deployment`, **technique not category** (`P955`) | 🟢 **PAID, and it DISCHARGED `Gap 372`** — though not the way the lead expected. 🔴 **No hardened `ProTACT` fork exists.** 🟢 **But the second query surfaced that this KB's own `wwrwbs/AI_AWE` (p93) has a RELEASE** (`v0.1.0`, adapter artifact `http=200`), and `rsmtool` (p94) has **33** — neither ever tag-counted. 🟢 **`P1010`, `T21`, `T23`.** 🟢 Succession answered: **GAPS (Do et al., 2025) is newer SOTA and has NO repository**, its own authors recording the GEC code as absent. |
+| 5 | **Korea and Vietnam by INSTRUMENT name**: `AI Basic Act high-impact education`, `Law 134/2025/QH15 education decree` | 🟡 **HALF PAID, and the half that failed failed because this file was AHEAD of the query.** 🟢 **Korea PAID in full** — the obligations this file held only as *"education is high-impact"* are now enumerated (below). 🔴 **Vietnam returned LESS than pass 96 already recorded**: the search gave Decree `142/2026/NĐ-CP` and a 1 Sep 2027 deadline, 🟢 **both already in this file, which additionally holds `Decision 33/2026/QĐ-TTg` and the three education limbs.** 🔵 **`P1012`: when a lead returns less than the file holds, the finding is that the file is ahead — record it and retire the query.** |
 
 ## Market size — the figures disagree, and the disagreement is the finding
 
@@ -250,6 +269,29 @@ KB: write down what you refused to use, and why.**
 ## Opportunities by region
 
 ### North America
+
+#### 🟡 🆕 p100 — the regional sweep returned CORROBORATION, not news, and that is recorded as such
+
+🔵 **The mandated `AI education North America {year} adoption regulation players` query was re-run.
+🟡 Every substantive row it returned is already in this file** — the **36 %** regional share, **60 %**
+of US K-12 teachers (**32 % at least weekly**, 🟢 a new decomposition), **134 bills across 31
+states**, **30+** states with guidance, **Ohio's 1 Jul 2026** district-policy deadline, **AB 1159**,
+**Oklahoma/Maryland** oversight, **H.R. 8747** at its 21 Jul 2026 markup, the **NYC** grade-8
+moratorium, and **Gemini for Education** across 1 000+ US institutions.
+
+🟢 **Recording a re-confirmation is worth more than recording nothing**: these rows are now
+**independently corroborated by a second sweep on a later date**, which is what this file's method
+asks for and what six passes of unscored regional queries never produced. 🟢 **One genuinely new
+row:** the **STUDENTS FIRST Act of 2026** — a national framework for responsible K-12 AI
+**written by students from all 50 states**, published **3 Aug 2026** via AASA, which 🔵 **explicitly
+rejects both an outright ban and unrestricted adoption.** 🟡 Advocacy-grade, not statutory —
+🔵 **but it is the first artefact in this file that gives a district a *student-authored* legitimacy
+anchor for an AI policy, and Ohio's 600-odd districts all owe a policy they must now defend.**
+
+🔵 **`P1012` applies here too, in its weaker form: a region-named query against a well-covered region
+returns corroboration, and its value is confirmatory.** 🟢 **Keep running it; stop expecting news
+from it.**
+
 
 #### 🟢 🆕 p99 — the statutory deadline here has PASSED, which converts a policy market into an evidence market
 
@@ -498,6 +540,47 @@ adoption.** 🔴 **So a North America pitch that leads with adoption is pushing 
 regulatory grain; one that leads with governance, auditability and teacher-augmentation is with it.**
 
 ### EMEA
+
+#### 🟢 🆕 p100 — the L&D half of this region is PLACED for the first time, and the AI Act duty gained a safe harbour
+
+🟢 **`Gap 386`'s placement remainder is DISCHARGED for EMEA.** Passes 98 and 99 both queried *"EMEA
+L&D"* and got global or US-only figures; 🟢 **pass 99's own remedy — name the PUBLISHER, not the
+region — paid on the first query.**
+
+🟡 **Grade warning for this whole block: `www.fosway.com` and `www.cipd.org` were probed this pass and
+both REFUSED (error 56 / 403). Every figure is a WebSearch snippet.**
+
+| finding | instrument | engagement consequence |
+|---|---|---|
+| **AI is the top strategic priority** for learning teams | 🟡 Fosway *Digital Learning Realities 2026*, 12th year (European analyst) | the budget argument is already won |
+| budgets under **the most pressure since COVID**; stagnation with an underlying **decrease** | 🟡 Fosway | 🔴 **price as replacement of an existing line, never as net-new spend** |
+| **~2 in 3** say their **LMS/LXP is not delivering adequately on AI** | 🟡 Fosway | 🟢 **the most useful single sentence in this file for an L&D pitch** — AI *on top of* the incumbent platform |
+| L&D teams **not adequately upskilling** for the next 2–3 years | 🟡 Fosway | capability transfer belongs in the SOW, not just software |
+| 🔴 **CIPD's 2026 instrument was RENAMED** — *Skills and Learning at Work Survey*, fielded by **Censuswide**, **closed 20 May 2026** | 🟡 CIPD / Training Journal | 🔴 **findings NOT published as of this pass.** 🟢 Baseline for when they land (2023, YouGov, **1 108** respondents): **59 %** of L&D staff felt able to respond to changing skills needs, **down from 69 % in 2021** |
+| 🔴 **MENA: L&D spend per FTE DOWN 28 %** in 2026, hours flat | 🟡 SHRM, carried from p99 | 🔴 **recorded as MENA, NOT as EMEA** — same direction, different sub-region |
+
+🟢 **New regional sizing, and one number needs a disambiguation note.** 🟡 The European AI-in-education
+market is reported at **USD 2.64 B in 2026**, growing at **31.9 % CAGR to USD 8.0 B by 2030**
+(secondary, single source). 🔴 **Do not confuse that 31.9 % with `T11`'s 31.9 %** — `T11`'s figure is
+a **hallucination rate falling to 0.2 %** under verified-standards grounding. 🔵 **Two unrelated
+quantities sharing two digits, now flagged so a later pass cannot merge them.**
+
+🟢 **Adoption and governance, newly placed in this region:** 🟡 **Finland, Estonia and the
+Netherlands lead K-12 AI integration**, and 🔴 **only ~10 % of 450+ surveyed European institutions
+have established formal AI-use guidelines** — 🔵 **the EMEA counterpart of LATAM's 87 %-vs-26 % gap,
+and a worse ratio.** 🟢 **The OECD's 2026 *Digital Education Outlook* recommends moving beyond
+general-purpose AI tools toward purpose-built educational AI** — 🔵 **an institutional endorsement of
+exactly the vertical-build thesis this KB's whole shelf implements.** 🟢 The **UK** has committed
+**£4 M** to AI tools for lesson planning and homework marking.
+
+🟢 **And the regulatory duty gained a safe harbour and a narrowing** (July 2026, 🟡 secondary; the
+Commission's own pages remain refused): the **Transparency Code of Practice is confirmed adequate**,
+the Article 50 guidelines are **final**, 🟢 **AI-generated translations are exempt as *"standard
+editing"*** and 🔴 **summaries and substantive rewrites are NOT.** 🔴 **Enforcement sits with
+national market surveillance authorities, and no member-state body was named by any source** —
+re-registered as a lead. 🔴 **The clock: 2 December 2026 for GenAI already on the market, 53 days;
+NO grace period for anything placed on the market on or after 2 Aug 2026.**
+
 
 #### 🔴 🆕 p99 — `Gap 386`'s EU question is CLOSED, and it uncovered the nearest deadline in the whole ladder: **2 December 2026**
 
@@ -915,6 +998,48 @@ duty is the sellable deliverable that is already overdue.**
 
 ### APAC
 
+#### 🟢 🆕 p100 — Korea's education obligations are ENUMERATED, and Vietnam's query returned less than this file already held
+
+🟢 **Korea — lead 5 paid in full.** This file has carried *"the AI Basic Act names education
+high-impact"* since pass 95 without the duties that follow from it. 🟡 All rows secondary; the
+enforcement decree's primary text was not reached.
+
+| | |
+|---|---|
+| **In force** | 🟢 **22 January 2026**; enforcement decree finalised **21 Jan 2026**; a further limb took effect **21 Jul 2026** |
+| **The education limb, exactly** | 🟢 **"evaluation of students"** — systems that **evaluate, grade, or determine student access to educational opportunities** |
+| 🔴 **The nuance that changes the sales motion** | 🔴 **Being in a listed domain does NOT automatically make a system high-impact.** The **provider must assess IN ADVANCE** whether it qualifies. 🟢 **That pre-assessment is itself a deliverable** — and it is the cheapest entry point into a Korean engagement |
+| **Duties once covered** | 🟢 risk-management plan · **ability to explain results** · user-protection measures · **human oversight** · **retained documentation**. 🟡 One source adds a fundamental-rights impact assessment before deployment, uncorroborated |
+| **Enforcement posture** | 🟡 fines up to **KRW 30 million** on the books; a guidance period of **at least one year**; **MSIT signals 2026 as effectively a pilot with limited enforcement** |
+
+🔵 **Why this is a better market than its fine schedule suggests.** 🔴 KRW 30 M is not a deterrent.
+🟢 **But "ability to explain results" plus "retained documentation" is the Annex III artefact under a
+different statute** — so the **same** validity-and-fairness deliverable sells into Korea and the EU,
+and Korea's version is **already in force** while the EU's slipped to 2 Dec 2027. 🟢 **`T15` holds:
+the binding high-risk regime for automated assessment is APAC's.** 🔵 **And `T23`'s supply answer
+points at the same tier** — `rsmtool` (Apache-2.0, 33 tags) is how you evidence it.
+
+🔴 **Vietnam — the lead returned LESS than this file holds, and that is the finding.** The query
+`Law 134/2025/QH15 education decree` returned: the statute (in force **1 Mar 2026**, 8 chapters, 35
+articles, 3-tier risk), **Decree 142/2026/NĐ-CP** (issued 30 Apr 2026, in force 1 May 2026), the
+education/health/finance window of **18 months → 1 Sep 2027**, and *"education provisions are mainly
+workforce-training encouragement"*. 🟢 **All of that is already here, and this file additionally holds
+`Decision 33/2026/QĐ-TTg` (published 30 Jun 2026, in force 15 Aug 2026) enumerating 46 high-risk
+systems of which THREE are education** — self-study content from uncontrolled sources, automated
+examination/assessment/ranking, and biometric behaviour monitoring.
+🔵 **`P1012`: when a lead returns less than the file holds, the finding is that the file is ahead.
+Record it, retire the query, and do NOT let the thinner secondary source overwrite the richer one.**
+🔴 **The one thing still unfound: whether Decree 142 contains education-specific provisions.**
+🟢 **Narrower query pre-registered.**
+
+🟡 **Regional sweep, corroboration only:** Taiwan's AI Basic Act (Dec 2025), Australia's National AI
+Plan (Dec 2025) and its AI safety body, Singapore leading APAC on diffusion (**60.9 %** of
+working-age adults), China/India/Japan as the dominant adoption markets, and Google / Microsoft /
+IBM / Pearson / Byjus as named commercial players. 🔵 **No education-specific APAC adoption rate was
+returned by the region-named query, for the fourth consecutive pass** — `P955` again: the
+instrument-named queries paid, the region-named one did not.
+
+
 #### 🟢 🆕 p99 — three statutes now name education as high-risk, and one of them names the SHAPE this KB supplies
 
 🟢 **The region stopped being a spectrum of guidance and became a set of statutes**, and education is
@@ -1304,6 +1429,46 @@ the permission argument first — except in ANZ, where it does.** 🔴 **That is
 North America posture recorded above, and the two pitches should not share a slide.**
 
 ### LATAM
+
+#### 🟡 🆕 p100 — the regional sweep CORROBORATED this file's headline number and added the institution-type split
+
+🟢 **Independently re-confirmed on a later date:** UNESCO **IESALC**'s study — **200 institutions
+across 19 countries**, **87 %** using AI in at least one area against **26 %** holding any formal
+framework — plus **TALIS 2024** teacher use (**Brazil 56 %**, **Chile 55 %**, **Colombia 53 %**,
+**Costa Rica 52 %**, against an **OECD average of 36 %**), **Ceibal**'s **75 %** of Uruguayan
+public-school teachers, and the **UNESCO Observatory on AI in Education for LAC** (launched **April
+2026**, Santiago). 🔵 **The study was launched at Digital Learning Week 2026 in Paris, 8–11 September
+2026** — a date this file did not carry.
+
+🟢 **One genuinely new decomposition, and it reorders the target list.** The 87 % splits sharply by
+institution type:
+
+| institution type | share implementing AI |
+|---|---|
+| private **non-profit** universities | 🟢 **84 %** |
+| **public** institutions | 🟡 **68 %** |
+| private **for-profit** institutions | 🔴 **52 %** |
+
+🔵 **The counter-intuitive row is the last one.** 🔴 **For-profit institutions are the LEAST likely to
+have adopted AI** — the opposite of the commercial-urgency assumption — 🟢 **while private non-profits
+lead.** 🔵 **For targeting, that inverts the obvious list: the private non-profit sector is furthest
+along and therefore the one whose 26 %-governance gap is most acute**, i.e. it has the deployments
+without the frameworks. 🟢 **That is `P91-B`'s and `P98-C`'s buyer, in the region where the adoption
+gap is widest.**
+
+🟡 **Regulatory picture, corroborated and unchanged in substance:** 🔴 **no 2026
+education-specific AI regulation anywhere in the region.** Brazil's **PL 2.338/2023** sits in the
+**Chamber of Deputies** (🔴 **text can still change** — do not price against it), Chile's government
+bill borrows the risk-based grammar while adapting it to local institutions, and 🟢 **Colombia took
+the policy route rather than horizontal obligations: a government-wide programme with actions and a
+budget through 2030.** 🔵 **Colombia's shape matters more than its content** — a funded programme
+through 2030 is a procurement calendar, where a bill is a watch item. 🟢 **And it is consistent with
+`Ley 2626`'s February 2027 lineamientos deadline already in this file.**
+
+🟡 Also corroborated: the **Digital Education Council**'s LATAM higher-ed survey (**30 000+**
+responses across **29** institutions), and UNESCO's call to pair Mexico's school screen regulation
+with digital literacy and continuous monitoring.
+
 
 #### 🟢 🆕 p99 — `Gap 386` is PLACED here, and the governance gap is the largest single services number in this file
 
@@ -1747,6 +1912,93 @@ and the government primary-source channel is closed.** 🔴 **A later pass must 
 regulatory rows as primary-verified. They are not, and the reason is recorded.**
 
 ## Regions and lines of enquiry that returned nothing — stated, not hidden
+
+### 🔴 🆕 p100 — lines of enquiry that returned a measured zero
+
+- 🔴 **The national authority enforcing Article 50(2) — ZERO, and it is the one half of lead 1 that
+  failed.** Every source says *"national market surveillance authorities"*; 🔴 **not one names a
+  member-state body, a penalty specific to 50(2), or how authorities coordinate.** 🔵 **With 53 days
+  on the clock this is the single most commercially valuable unknown in this file.**
+  🟢 **Re-registered with the instrument named rather than the concept** — the member state's
+  designated-authority list, not the Act.
+- 🔴 **CIPD's 2026 findings — ZERO, and the zero has a date on it.** The instrument was renamed
+  (*Skills and Learning at Work Survey*), fielded by **Censuswide**, and **closed 20 May 2026**.
+  🟢 **So this is not a query defect: the publication has not happened.** 🔵 **An informed gap with a
+  known close date is an intel asset, not a hole** — re-query after publication.
+- 🔴 **A hardened `ProTACT` fork — ZERO.** No one has released one. 🟢 **And the succession question
+  resolved in the KB's favour instead**: **GAPS** (Do et al., 2025), named newer SOTA by a 2026 ACL
+  paper, **has no repository**, its own authors recording the GEC component's official code as
+  **absent** and substituting a third-party `GEC-T5`. 🔵 **The newest published trait scorer is less
+  deliverable than the 2023 one.**
+- 🔴 **Education-specific provisions inside Vietnam's Decree 142/2026/NĐ-CP — ZERO.** 🟢 The decree's
+  existence, dates and general scope are confirmed; 🔴 **no source states whether it addresses
+  education specifically.** 🔵 **Narrower query pre-registered** — the decree by number plus
+  *"giáo dục"*, or a MOET circular.
+- 🔴 **An education-specific APAC adoption RATE from a region-named query — ZERO for a FOURTH
+  consecutive pass.** 🟢 **`P955` confirmed again from both directions in one pass:** the two
+  instrument-named APAC queries paid (Korea in full), the region-named one returned commercial
+  market-report boilerplate.
+- 🔴 **`github trending education AI {year}` — STAYS RETIRED and was NOT re-run** (withdrawn at pass
+  98 after seven zeros). 🟢 **Independently corroborated again**: the generic
+  `top open source AI agents education {year} github MIT` query returned **general-purpose agent
+  frameworks and course material** — CrewAI, LangGraph, OpenHands, opencode, a *500-AI-Agents* list —
+  🔴 **and not one education-specific agent.** 🔵 **Same failure mode, third different query.**
+- 🔴 **Zero primary-source reads outside GitHub, TENTH consecutive pass.** 🟢 **Reachable:** WebSearch
+  backend · `github.com` git smart-HTTP · `raw.githubusercontent.com` ·
+  `release-assets.githubusercontent.com`. 🔴 **Refused, each probed individually this pass (error 56
+  / `403 CONNECT tunnel failed`):** `arxiv.org` · `the-learning-agency-lab.com` · `www.fosway.com` ·
+  `www.cipd.org`. 🟡 Carried from p99 and not re-probed: `www.iesalc.unesco.org`,
+  `digital-strategy.ec.europa.eu`, `eur-lex.europa.eu`, `www.kaggle.com`.
+  🔵 **Second consecutive pass in which the GitHub channel alone settled a licence question owned
+  entirely by hosts this session cannot reach** (`Gap 389`).
+
+### 🔴 🆕 p100 `Gap 390` OPENED — the distributed WEIGHTS, not the code, are what a commercial engagement cannot take
+
+🟢 **`Gap 389` is settled: PERSUADE 2.0 is `CC-BY-NC-SA-4.0` by its author's own payload.**
+🔴 **`Gap 390` is what that implies one layer up.** `wwrwbs/AI_AWE` is **Apache-2.0** and
+**distributes its fine-tuned adapter** as a release artifact (`v0.1.0`, `http=200`), and that adapter
+was trained on the `NC-SA` corpus, which the repository does **not** redistribute.
+
+🔵 **The question, narrow enough to be answerable by counsel rather than by search: is a published
+adapter a derivative work of the NonCommercial corpus it was fine-tuned on?** 🔴 **Until that is
+answered, the released weights cannot ship to a commercial client.** 🟢 **The remedy is in the
+repository and costs engineering, not litigation:**
+`qwen_move_classifier/data/prepare_persuade.py --in /path/to/licensed/persuade_export.json` —
+retrain the adapter on the client's own graded essays or on a confirmed `CC BY` corpus.
+🟢 **`Gap 390` is therefore a PRICED gap, not a blocker**, and it is costed as `P100-A`.
+
+🔴 **And a third characterisation of the same corpus is now on the record**: `AI_AWE`'s own asset
+table states it as *"academic-use, attribution"* — keeping NonCommercial in substance while
+**silently dropping ShareAlike**. 🔵 **Three statements, three different terms, one corpus.
+`P1007` decides between them: the author's repository wins.**
+
+### 🟢 🆕 p100 — leads this pass pre-registers for the next one
+
+1. 🔴 **The expiring one, and it is now inside eight weeks.** `2026-12-02`. 🔵 **Query the
+   MEMBER STATE, not the Act**: a named national market surveillance authority for AI, and the
+   penalty schedule attached to Article 50(2). 🟢 **Germany, Ireland and Spain are the three worth
+   trying** — Spain has a standing AI supervisory agency, which makes it the likeliest to have
+   published something nameable. 🔴 **This is a sales motion with a deadline, not an intel row.**
+2. 🟡 **`ASAP 2.0`'s licence, payload-confirmed, because it is the only thing that would refute
+   `T21`.** 🔵 It is reported **`CC BY`** from a snippet only. 🟢 **Route: a GitHub mirror read
+   through `raw.githubusercontent.com`, exactly as `Gap 389` was settled** — query
+   `ASAP 2.0 essay corpus github` and `asap-aes dataset license`. 🔴 **A confirmed `CC BY` graded
+   corpus at scale would convert `Gap 390` from priced to closed.**
+3. 🟢 **`P1010`'s remaining debt: tag-count the whole shelf.** 🔴 **`tags` became a measured column at
+   pass 98, so every row tabled by passes 1–97 carries an unpopulated one, and this pass proved that
+   a gap was declared on exactly that emptiness.** 🔴 **Three carried rows were tag-counted this pass
+   and all three had been empty**: `wwrwbs/AI_AWE` (**1**, and it was enough to discharge `Gap 372`),
+   `rsmtool` (**33**), `OpenOLAT` (**542** — the most of any repository in this KB, carried since
+   pass 35). 🔵 **One `git ls-remote --tags` per slug across the published census — the cheapest
+   high-value sweep available to the next pass**, and the only one that can find another `Gap 372`.
+4. 🟢 **`T23`'s other incumbents, by name.** 🔵 **Cambridge Assessment, ACT, Pearson's research arm
+   and the 1EdTech reference implementations** — one query each, never *"assessment vendors"*.
+   🟢 **`T23` predicts permissive, release-engineered tooling there; `P975` predicts the licences will
+   be mixed within each organisation.** 🔴 **Both halves are falsifiable in one pass.**
+5. 🔴 **Vietnam's Decree 142, narrowed.** 🔵 **Query the decree by number with the Vietnamese term —
+   `Decree 142/2026 giáo dục` — and a MOET circular**, rather than the English phrase that returned
+   less than this file already holds (`P1012`).
+
 
 ### 🟢 🆕 p99 — scored against the five leads pass 98 named for itself
 

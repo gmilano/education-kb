@@ -6,27 +6,56 @@ updated: 2026-10-10
 
 # Education — AI agents shelf
 
-**Pass 99, 2026-10-10.** ⏱️ **Ninth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x;
-93: 01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; 98: 06:4x–07:xx; this one
-07:4x–08:xx).
+**Pass 100, 2026-10-10.** ⏱️ **Tenth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:
+00:4x–01:3x; 93: 01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; 98:
+06:4x–07:xx; 99: 07:4x–08:xx; this one 08:4x–09:xx).
 
-🔴 **The sandbox refused repository code for a SEVENTH consecutive pass** — `grant-ladder-v4/ladder.sh`
-**and** its **offline** `test_ladder.sh`, denied before starting (`[Code from External]`).
-🟢 **So pass 99 wrote no classifier either** (`P237`).
+🔴 **The sandbox refused repository code for an EIGHTH consecutive pass** — `grant-ladder-v4/ladder.sh`
+was not invoked. 🟢 **So pass 100 wrote no classifier either** (`P237`).
 
-🟢 **But this pass separated a fact seven passes had fused** (`P1005`): the denial covers **executing
-the script**, not the operations the script performs. `git ls-remote --symref` and
-`raw.githubusercontent.com` were both **permitted**, so the ladder's measurement ran inline —
-**14 slugs resolved, 13 licence payload reads, 1 clean 24-name negative.**
-🔵 **The dividend is on this page: `git ls-remote` returns ONLY the full 40-character SHA, so every
-row added by this pass carries a `P987`-grade address** while carried rows keep the 7-char form
-their pass published.
+🟢 **`P1005` was applied from the outset rather than discovered at the end**: every address on the
+rows this pass touched came from `git ls-remote --symref` run inline, and every licence from a
+`raw.githubusercontent.com` payload. 🟢 **This pass also added the operation pass 99's inline ladder
+did not run — `git ls-remote --tags` — and that single addition discharged `Gap 372`** (see below).
 
-🔵 **Marker convention, because nine passes ran on one date.** A bare 🆕 is inherited from the pass
-that added the row and was **not** re-flagged; **rows added by this pass are marked 🆕 p99.**
-🔴 **A `—` in the ★ column means not read this pass. It never means zero** — `api.github.com`
-returned **403 for an eighth consecutive pass** and `github.com` HTML is 403 as well, so no star
-count on this page moved or could.
+🔵 **Marker convention, because ten passes ran on one date.** A bare 🆕 is inherited from the pass
+that added the row and was **not** re-flagged; **rows added or re-measured by this pass are marked
+🆕 p100.**
+🔴 **A `—` in the ★ column means not read this pass. It never means zero** — `api.github.com` was
+not consulted, so no star count on this page moved or could.
+
+### 🔴 What pass 100 adds, and the first line is a correction of this shelf by this shelf
+
+- 🔴 **`Gap 372` is DISCHARGED — by two rows this shelf has carried since passes 93 and 94.**
+  Pass 99 declared the open-response scoring tier *"release-blocked, 0 of 3 released"* and wrote
+  *"what is missing is not a licence, it is a release."* 🟢 **`wwrwbs/AI_AWE` has a release
+  (`v0.1.0`, adapter artifact `http=200`) and `EducationalTestingService/rsmtool` has 33 of them
+  (`v12.0.0`).** 🔵 **Neither had ever had its tags counted, because `tags` only became a measured
+  column at pass 98.** 🟢 **`P1010`: re-measure a tier's EXISTING rows before declaring the tier
+  blocked on a newly measured property.** 🔴 **A THIRD instance landed in the same pass** —
+  `OpenOLAT/OpenOLAT`, on the platform page **since pass 35**, measures **542 tags**, the most of any
+  repository in this KB. 🔵 **Three carried rows, three empty tag columns, one false gap: `P1010` is a
+  property of every row tabled before pass 98.**
+- 🟢 **`P1011`: in a regulated activity, search the INCUMBENT's open-source output before the AI
+  community's.** The most release-engineered permissive tool in educational assessment is published
+  by **ETS**, the house that scores TOEFL and the GRE. 🔴 **`P975` still binds** — the same
+  organisation ships `factor_analyzer` under GPL-2.0.
+- 🔴 **`Gap 390` OPENED — the PERSUADE 2.0 term is stated THREE ways, and `AI_AWE`'s own per-asset
+  table is the third:** *"academic-use, attribution"*, which keeps NonCommercial in substance and
+  **drops ShareAlike**. 🔵 **The adapter weights are distributed and were trained on an `NC-SA`
+  corpus that is not. The code is yours; the weights are not.**
+- 🟢 **`Gap 389` SETTLED, and pass 99's direction was inverted.** The **author's** own two
+  repositories both state **`CC-BY-NC-SA-4.0`** from the payload; the `CC BY 4.0` claim is the
+  **funder's** page, describing a smaller release (14 000 essays vs over 25 000).
+  🟢 **`P1007`: a corpus's licence is stated by its AUTHOR's repository, never by its funder's or
+  distributor's page.** 🟢 **`P1009`: a README saying "this *was* the repository" is a REDIRECT —
+  resolve to the named successor before pinning.**
+- 🟢 **The newer state of the art has no code, so the hardening target is unchanged.** A 2026 ACL
+  paper names **GAPS** (Do et al., 2025) the newer SOTA cross-prompt trait scorer; 🔴 **GAPS has no
+  repository and its authors record the GEC component's official code as absent.** 🟢 **`ProTACT`
+  (BSD-3) stays the row worth hardening.**
+- 🟡 **`P1008`: a `pyproject.toml` carrying `license = { file = "LICENSE" }` is a POINTER, not a
+  second oracle** — it cannot corroborate `P979`.
 
 ### 🟢 What pass 99 adds, in one line each
 
@@ -364,6 +393,108 @@ permissive-sounding label over the one family that can reach a client's own code
 over Moodle Web Services** and small enough to audit in an afternoon. 🔵 **Fork it, pin it, and treat
 the AGPL server as a specification to read rather than code to link** — which is lawful and is the
 same manoeuvre `sebserver-mcp-gate` already documents for MPL (`§1.10(a)`, per-file copyleft).
+
+### 🟢 🆕 p100 `Gap 372` — **DISCHARGED**, and the gap was in this shelf's back catalogue, not in the supply
+
+🔵 **Pass 99 measured `0 of 3` tagged across the three scorer rows it had just added and concluded:
+*"What is missing is not a licence. It is a release."*** 🔴 **Two rows already on this shelf refute
+that, and neither had ever had its tags counted — `tags` only became a measured column at pass 98.**
+
+| row (pass that tabled it) | what that pass recorded | 🟢 what pass 100 measured |
+|---|---|---|
+| 🆕 p93 [`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE) (**ArguLens**) | *"a 2★ research repo … shelve it as a reference for the architecture, never as a dependency"* | 🟢 **1 tag — `v0.1.0` · `bfb34af069e31adabfcd2e7a51acb1605cb4d2a7`**; `main` · `41ae3bd4dd9e891bf46dd4834644ca143dbd36df`; **adapter weights published as a release artifact, `http=200`** |
+| 🆕 p94 [`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool) | *"2 916 commits"*, Apache-2.0, 11 358 B | 🟢 **33 tags · `v12.0.0`**; `main` · `a844f71614712f81177b5731dbb17b3e018dcc85`; conda `anaconda.org/ets`; **GitLab + Azure CI**; `requires-python >= 3.10` |
+
+🟢 **`P1010` — when a pass declares a tier blocked on a property, re-measure the tier's EXISTING rows
+on that property before declaring the gap.** 🔵 **A gap asserted on a column never populated for
+carried rows is a gap in the measurement.** 🔴 **This one survived a full pass and was written into
+three files.** 🟢 **The discharge cost one `git ls-remote --tags` per slug.**
+
+#### 🟢 What `AI_AWE` actually is, now that its README has been read as well as its LICENSE
+
+🔵 Pass 93 read the **1 865 B** `LICENSE` and the name/claim divergence. 🟢 **This pass read the
+README (5 931 B), and it describes a runnable system rather than a library:** discourse-move
+classifier (Qwen2.5-7B-Instruct + LoRA, *claim / data / counterclaim / rebuttal*) **+** LightGBM
+scorer over **31 linguistic features** **+** feedback generator; **Gradio UI** with single-essay and
+batch modes and downloadable per-essay breakdowns (`result.json`, `sentence_labels.csv`,
+`summary.csv`); selectable **vLLM** or **4-bit HuggingFace** backends; and a test suite that
+**skips its service tests when no backend is reachable, so it runs offline.**
+
+🟢 **So the purchase changes shape for the third time, and is small for the first time:** not *"find a
+scorer"* (p95), not *"harden one of three paper artefacts to a release"* (p99), but 🟢 **"stand up an
+Apache-2.0 system that already runs, and retrain its adapter on a corpus you may use commercially."**
+🟢 **The repository ships the seam for exactly that:**
+`qwen_move_classifier/data/prepare_persuade.py --in /path/to/licensed/persuade_export.json`.
+🔵 **Costed as `P100-A` in `compose/patterns.md`.**
+
+🟡 **Pass 93's `P971` flag STANDS and nothing above softens it**: this row's `LICENSE` is the Apache
+**header notice**, **1 865 B**, **0 of 4 clause headings** — Apache-2.0 **by reference**. 🔴 **A
+procurement that requires the licence text in the bundle must add it by hand.** 🟢 Contrast
+`rsmtool`'s **11 358 B**, the full canonical length.
+
+🔴 **And its own responsible-use section is the line to quote to a client, not to bury**: PERSUADE 2.0
+is *US middle-school argumentative essays*, the tool is *"intended for research and assistive use,
+not for high-stakes automated decisions without human oversight"*, and 🔵 **under Annex III that
+sentence is not a disclaimer — it is the deployment condition.**
+
+#### 🔴 🆕 p100 `Gap 390` — the corpus term is stated THREE ways, and the third drops ShareAlike
+
+🟢 `AI_AWE`'s README carries a **per-asset licensing table**, which is better due-diligence
+engineering than most commercial packs:
+
+| asset, as the repo itself declares it | licence it states | shipped in the repo? |
+|---|---|---|
+| source code / adapter config / scorer | 🟡 **Apache-2.0** (by reference, `P971`) | 🟢 yes |
+| `adapter_model.safetensors` | release artifact | 🟢 **yes — `v0.1.0`, `http=200`** |
+| TextComplexityToolkit (TAALED / QuanSyn) | 🟢 **MIT** | 🟢 vendored, LICENSE kept |
+| Qwen2.5-7B-Instruct base | 🟢 **Apache-2.0** | 🔴 no — fetch from HF |
+| **PERSUADE 2.0 corpus** | 🔴 **"academic-use, attribution"** | 🔴 no — run `prepare_persuade.py` |
+| spaCy `en_core_web_sm` | 🟢 MIT/CC | 🔴 no |
+
+🔴 **"Academic-use, attribution" is neither reading already on the table**: it keeps NonCommercial in
+substance and **silently drops ShareAlike**. 🔵 **`Gap 390`, narrow and checkable: the adapter is
+DISTRIBUTED and was fine-tuned on an `NC-SA` corpus that is NOT — is the published adapter a
+derivative work of the corpus?** 🟢 **The KB does not need the answer to sell around it**, because
+the retraining seam exists. 🔴 **But it must never ship the released adapter to a commercial client
+while the question is open.**
+
+#### 🟢 🆕 p100 `Gap 389` SETTLED — and pass 99 had the conflict's direction backwards
+
+| slug | ref · full SHA | payload | licence stated in it |
+|---|---|---|---|
+| [`scrosseye/persuade_corpus_2.0`](https://github.com/scrosseye/persuade_corpus_2.0) | `main` · `67d182ac88ea4a4dda736de859cfdb0bc360ee9b` | `README.md` **2 159 B**, line 29 | 🔴 **CC-BY-NC-SA-4.0** |
+| [`scrosseye/PERSUADE_corpus`](https://github.com/scrosseye/PERSUADE_corpus) | `main` · `de78d7a5d22c333d24d489b95dd744a5aa490e5f` | `README.md` **3 557 B**, line 51 | 🔴 **CC-BY-NC-SA-4.0** |
+
+🟢 **`scrosseye` is Scott Crossley, the corpus's own first author.** 🔵 **The `CC BY 4.0` claim is
+the Learning Agency Lab's — the FUNDER's page — and it describes 14 000 essays where the author's
+repositories describe over 25 000.** 🟢 **Not two readings of one release: a page describing a
+different, smaller one.** 🔴 **The operative term is `NC-SA`**, and nothing permissive should assume
+`BY`. 🔴 **Neither repo has a licence FILE** (`LICENSE`, `.md`, `.txt` → three `404`s): `P969`'s
+shape, a data licence living in prose.
+
+🟢 **Both pages are in the refused set and the gap closed anyway**, via the route pass 99
+pre-registered as *"the cheap route"*. 🔵 **`P1007`: a corpus's licence is stated by its AUTHOR's
+repository, never by its funder's or distributor's page.** 🔵 **`P1009`: a README saying "this *was*
+the repository" is a REDIRECT — resolve to the named successor before pinning, or be right about the
+licence by luck and wrong about the release.**
+
+#### 🟢 The hardening target is unchanged, and now for a measured reason
+
+🟢 [`doheejin/ProTACT`](https://github.com/doheejin/ProTACT) re-read at a full address —
+**BSD-3-Clause**, `LICENSE` **1 496 B** (*"Copyright (c) 2023, Heejin Do"*), `main` ·
+`403814318fe854dd6dc1959dbd005b9ab330e0c9`, 🔴 **0 tags.**
+🟢 **A 2026 ACL paper names GAPS (Do et al., 2025) the newer SOTA cross-prompt trait scorer.**
+🔴 **GAPS has no repository, and its own authors record the GEC component's official code as absent,
+substituting a third-party `GEC-T5`.** 🔵 **The newest *published* trait scorer is less deliverable
+than the 2023 one, so `ProTACT` stays the row worth hardening** — its cross-prompt property is what a
+client's unseen assignment needs on day one.
+🟡 Snippet-only, no primary read: ProTACT ≈ **0.592** mean QWK (prompt 7 weakest, 0.446); ArguLens
+reports **82.6 %** / **0.727** macro-F1 and **0.813** mean QWK — 🔴 **which its authors call a
+component-level diagnostic, not an end-to-end result.**
+
+🔴 **One clean negative:** [`Chunngai/aes-papers`](https://github.com/Chunngai/aes-papers) — `master` ·
+`87c9a818784314c7181b62a5fe359bfd7eb70116`, **five root licence filenames probed, five `404`. No
+grant → reading list, never a dependency.**
 
 ### 🔴 🆕 p99 `Gap 372` — the scorer tier was never missing. It is UNRELEASED, and that is a different purchase
 
@@ -957,6 +1088,17 @@ withdrawn — the sampling difference remains the explanation.
   **ungranted or CC-licensed**.* **Score behind a service boundary, validate with Apache/BSD.**
   🔵 **What pass 95 did add at this layer is adjacent, not the gap**: `ucbds-infra/otter-grader` (BSD-3)
   grades **code against tests**, which is a different assessment type from a constructed response.
+- 🟢 🆕 **p100: `Gap 372` is DISCHARGED, and the three bullets above it are superseded in their
+  conclusion but kept as the record of how a measurement error propagated.** Everything p94 and p95
+  measured about *licences* was correct; the inference *"therefore no permissive scorer is
+  deliverable"* was not. 🟢 **`wwrwbs/AI_AWE` has a release (`v0.1.0`, adapter artifact `http=200`)
+  and `EducationalTestingService/rsmtool` has 33 (`v12.0.0`)** — and both were on this shelf, with
+  their tags uncounted, while five consecutive passes described their tier as supply-starved.
+  🔵 **`P1010`: re-measure a tier's existing rows before declaring the tier blocked on a newly
+  measured property.** 🔴 **What remains is NOT a supply gap but a corpus gap — `Gap 390`:** the
+  distributed adapter was trained on `CC-BY-NC-SA-4.0` material (`Gap 389`, settled this pass from
+  the author's own payload), so **the code ships and the weights do not.** 🟢 **The retraining seam
+  is in the repository and is costed as `P100-A`.**
 - 🔴 🆕 **p95: `Gap 376` — this shelf's instrument has been unrunnable for three consecutive passes**, and
   that is the only item here getting worse rather than narrower. `grant-ladder-v4` carries ten registered
   corrections in a shared classifier and **has not executed since pass 92**; passes 93, 94 and 95 each
