@@ -6,6 +6,235 @@ updated: 2026-10-10
 
 # Education — AI agents shelf
 
+**Pass 110, 2026-10-10.** ⏱️ **Twentieth pass of this date** (108: 17:4x–18:xx UTC;
+109: 18:4x–19:xx; this one 19:4x–20:xx).
+
+🟢 **Instrument this pass: `compose/code/p110-bus-factor/` — `test_p110.sh` **46 passed /
+0 failed** (fully offline: real git repositories served over `file://`, no mocks);
+`busfactor.sh` read **296 of 296** shelf addresses in 3 m 48 s, `rc=0` on every one,
+**zero unread**.**
+
+🔵 **It adds the fourth axis in four passes, and the first one that is about PEOPLE
+rather than about commits.** 🔴 **The result reverses a recommendation p109 made one
+hour ago, and it does so on nine of the thirteen rows p109 put in its own headline
+table.**
+
+### 🔴 🆕 p110 — why liveness could not see this
+
+| pass | axis | answers | cannot say |
+|---|---|---|---|
+| p107 | tag **count** | how much ref traffic | it inverts at the top of the shelf |
+| p108 | release **identity** | *can I pin it* | whether the pin is from 2019 |
+| p109 | commit **recency** | *is it alive* | 🔴 **who is keeping it alive** |
+| 🟢 **p110** | author **concentration** | 🟢 **what happens if they stop** | how good the code is |
+
+🔴 **A repo can be flawless semver, Apache-2.0, pinnable, and committed to this morning
+— and be one unpaid human.** 🔵 **p109 graded exactly such rows 🟢 `fresh` and reported
+nothing wrong, because liveness is a property of the *history* and this is a property of
+the *bench*.**
+
+### 🔴 🆕 `P110-G` — the shelf's headline figure, and it is the worst of the four axes
+
+| band | `bus_factor` | rows | share of shelf |
+|---|---|---|---|
+| 🔴 `solo` | 1 | **200** | **67.6 %** |
+| 🟡 `pair` | 2 | 50 | 16.9 % |
+| 🟢 `small` | 3–5 | 31 | 10.5 % |
+| 🟢 `broad` | ≥ 6 | **15** | **5.1 %** |
+
+🔴 **Two thirds of this shelf is a repo where one person's commits are more than half the
+recent window.** 🔴 **49 rows (16.6 %) have a top author at **100 %** — exactly one human
+in the window.** 🔵 **Median authors per row: 5. Median is not the story; the
+distribution is.**
+
+🔴 **Cross-cut with p109, only **11 of 296 rows (3.7 %)** are BOTH `broad` and `fresh` —
+institution-backed *and* alive.** 🔵 **That is the real size of this shelf's
+dependable base, after four passes of measurement, and it is smaller than any single
+pass suggested.**
+
+### 🔴 🆕 `P110-H` — p109's own headline table, re-read on this axis
+
+🔵 **These are the thirteen rows p109 published one hour ago as the shelf's agent layer,
+in p109's own order, with the column it could not compute:**
+
+| row | licence | p109 liveness | top author | `bus_factor` | 🆕 band |
+|---|---|---|---|---|---|
+| [`jeanlucio/moodle-local_aihub`](https://github.com/jeanlucio/moodle-local_aihub) | 🟡 GPL-3 (in-LMS) | 🟢 fresh 0 d | 🔴 **99 %** | 1 | 🔴 `solo` |
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) | 🟢 Apache-2.0 | 🟢 fresh 1 d | 🔴 **99 %** | 1 | 🔴 `solo` |
+| [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🟢 MIT | 🟢 fresh 1 d | 🟡 61 % | 1 | 🔴 `solo` |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 | 🟢 fresh 2 d | 🟢 46 % | 2 | 🟡 `pair` |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 MIT | 🟢 fresh 10 d | 🟢 28 % | 2 | 🟡 `pair` |
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🟢 MIT + CC BY 4.0 | 🟢 fresh 14 d | 🔴 **100 %** | 1 | 🔴 `solo` |
+| [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | 🟢 MIT + CC BY 4.0 | 🟢 active 60 d | 🔴 **100 %** | 1 | 🔴 `solo` |
+| [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | 🟢 MIT + CC BY 4.0 | 🟢 fresh 21 d | 🔴 **100 %** | 1 | 🔴 `solo` |
+| [`wanghaoyu0408/OpenRubrics`](https://github.com/wanghaoyu0408/OpenRubrics) | 🟢 MIT | 🟡 slowing 109 d | 🟢 33 % | 2 | 🟡 `pair` |
+| [`Qwen-Applications/OpenRS`](https://github.com/Qwen-Applications/OpenRS) | 🟢 Apache-2.0 | 🔴 slowing 219 d | 🟡 71 % | 1 | 🔴 `solo` |
+| [`planepig/rubricbench`](https://github.com/planepig/rubricbench) | 🟢 MIT | 🔴 slowing 221 d | 🟡 75 % | 1 | 🔴 `solo` |
+| [`a2br/moodle-mcp`](https://github.com/a2br/moodle-mcp) | 🟢 MIT | 🟢 fresh 16 d | 🔴 **100 %** | 1 | 🔴 `solo` |
+| [`fwu-de/mem-mcp`](https://github.com/fwu-de/mem-mcp) | 🟢 Unlicense | 🟡 slowing 123 d | 🔴 93 % | 1 | 🔴 `solo` |
+
+🔴 **Nine of thirteen are `solo`. Five are at 100 % — one human in the window.**
+🟢 **No row changes licence and none changes liveness: p107–p109 are not wrong, they
+are incomplete, and this is the column that was missing.**
+
+### 🔴 🆕 `P110-I` — `Gap 379`'s diagnosis changes shape for the FOURTH time, and this one reverses p109's advice
+
+🔵 **p109 split the rubric↔curriculum bind on liveness and concluded: "the BNCC side can
+be consumed as a live dependency, and the rubric side has to be vendored at a SHA and
+owned."** 🔴 **On the concentration axis that recommendation does not hold, because the
+half p109 called safe is the MORE concentrated of the two:**
+
+```
+the RUBRIC half  (China + US academic)        the CURRICULUM half  (Brazil, bncc-dev)
+  OpenRS        219 d  solo   71 %              bncc-pacotes    14 d  solo  100 %
+  rubricbench   221 d  solo   75 %              bncc-dados      60 d  solo  100 %
+  OpenRubrics   109 d  pair   33 %              bncc-benchmark  21 d  solo  100 %
+```
+
+🔴 **All three `bncc-dev` repositories are **100 % one author**. The rubric half has one
+`pair` in it and no row above 75 %.** 🔵 **So the bind is not "a live half and a cold
+half". It is a cold half with a slightly wider bench and a live half with none.**
+
+🟢 **The corrected reading: liveness and concentration disagree here, and when they
+disagree the concentration answer governs a DEPENDENCY decision while the liveness
+answer governs a FORK decision.** 🔴 **"Consume BNCC as a live dependency" was advice
+about the wrong risk — a 100 %-solo upstream is precisely the one you must be able to
+survive, however fresh it is.** 🔵 **`compose/patterns.md` reprices the bind on both
+axes this pass. `Gap 379` stays open and is now two-dimensional.**
+
+🟢 **This does not retract p109's licence or liveness findings, which stand unchanged.
+It retracts one sentence of engagement advice derived from them.**
+
+### 🟢 🆕 `P110-J` — the 15 `broad` rows, which are the whole institution-backed layer
+
+| row | `bus_factor` | top author | authors | p109 |
+|---|---|---|---|---|
+| [`kaldi-asr/kaldi`](https://github.com/kaldi-asr/kaldi) | 🟢 21 | 🟢 7 % | 232 | 🔴 dormant 383 d |
+| [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 16 | 🟢 11 % | 373 | 🟢 fresh 0 d |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🟢 12 | 🟢 15 % | 66 | 🟡 slowing 163 d |
+| [`huggingface/transformers`](https://github.com/huggingface/transformers) | 🟢 11 | 🟢 12 % | 70 | 🟢 fresh 1 d |
+| [`temporalio/temporal`](https://github.com/temporalio/temporal) | 🟢 11 | 🟢 10 % | 51 | 🟢 fresh 0 d |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 9 | 🟢 13 % | 319 | 🟢 fresh 7 d |
+| [`project-sunbird/sunbird-devops`](https://github.com/project-sunbird/sunbird-devops) | 🟢 8 | 🟢 24 % | 97 | 🔴 abandoned 1 263 d |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 7 | 🟢 17 % | 249 | 🟢 fresh 1 d |
+| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🟢 7 | 🟢 13 % | 62 | 🟢 fresh 10 d |
+| [`project-sunbird/sunbird-lms-service`](https://github.com/project-sunbird/sunbird-lms-service) | 🟢 7 | 🟢 16 % | 57 | 🟡 slowing 291 d |
+| [`lukeslp/awesome-accessibility`](https://github.com/lukeslp/awesome-accessibility) | 🟢 6 | 🟢 29 % | 46 | 🟢 fresh 6 d |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🟢 6 | 🟢 14 % | 47 | 🟢 fresh 3 d |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 6 | 🟢 21 % | 198 | 🟢 fresh 1 d |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 6 | 🟢 14 % | 37 | 🟢 fresh 0 d |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🟢 6 | 🟢 15 % | 58 | 🟢 fresh 2 d |
+
+🔴 **Four of the fifteen are not alive: `kaldi` (383 d), `sunbird-devops` (1 263 d),
+`sunbird-lms-service` (291 d), `canvas-lms` (163 d).** 🟢 **Which is how 15 `broad` rows
+become the 11 that are `broad` AND `fresh`.**
+
+### 🔴 🆕 `P110-B` — the discipline that mattered most, and it INVERTS p109's
+
+🔵 **p109 reads the COMMITTER date, correctly: it asks when this history was written.**
+🔴 **p110 must read the AUTHOR email, because it asks who wrote the code — and under
+"Squash and merge" or "Rebase and merge" GitHub rewrites the committer to whoever
+clicked the button.** 🟢 **Both figures are emitted, so the divergence is visible rather
+than assumed. It is not small:**
+
+| row | author `bus_factor` | committer `bus_factor` | committer axis would report |
+|---|---|---|---|
+| [`kaldi-asr/kaldi`](https://github.com/kaldi-asr/kaldi) | 🟢 **21** | 1 | 🔴 `solo` |
+| [`huggingface/transformers`](https://github.com/huggingface/transformers) | 🟢 **11** | 1 | 🔴 `solo` |
+| [`temporalio/temporal`](https://github.com/temporalio/temporal) | 🟢 **11** | 1 | 🔴 `solo` |
+| [`project-sunbird/sunbird-devops`](https://github.com/project-sunbird/sunbird-devops) | 🟢 8 | 1 | 🔴 `solo` |
+| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🟢 7 | 1 | 🔴 `solo` |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 6 | 1 | 🔴 `solo` |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🟢 6 | 1 | 🔴 `solo` |
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 5 | 1 | 🔴 `solo` |
+
+🔴 **59 of 296 rows disagree between the two axes; 17 would be misreported as
+`solo`/`pair` on the committer axis — including `huggingface/transformers` at
+author-`bus_factor` 11 and `kaldi` at 21.** 🟢 **Recorded because the obvious
+implementation — reuse p109's `%cE` for consistency — would have produced a shelf-wide
+figure that was wrong on the largest repositories, in the direction of alarm.**
+
+### 🟡 🆕 `P110-A` / `P110-C` — the two filters are correctness, NOT bias correction, and this pass proves it by failing its own hypothesis
+
+🔵 **The script was written on the hypothesis that counting merge commits always reads
+MORE concentrated (the maintainer authors every merge).** 🔴 **A draft of the test suite
+asserted that direction and this shelf FALSIFIED it, in both directions:**
+
+| | clean | distorted | direction |
+|---|---|---|---|
+| `moodle/moodle`, merges kept | 🟢 `broad`/9 | 🔴 `small`/5 | understates the bench by **4** |
+| `pr-merge` fixture, merges kept | `pair`/2 | `small`/3 | overstates it by 1 |
+| `langchain-ai/langgraph`, bots kept | 🟢 `small`/3 | 🔴 `solo`/1 | concentrates |
+| `jupyterhub/jupyterhub`, bots kept | 🔴 `solo`/1 | 🟡 `pair`/2 | **hides a solo human** |
+
+🟢 **Both filters inflate the top contributor's SHARE (which concentrates) *and* add a
+pseudo-author (which disperses); which effect wins depends on the shape of the
+history.** 🔴 **So `--no-merges` and bot-stripping are not corrections in a known
+direction — without them the figure is wrong in a direction you cannot predict, which is
+worse than a known bias because you cannot adjust for it.**
+
+🔴 **Measured: **8 432** bot commits across **98** rows; **29** of those rows change band
+or `bus_factor` when bots are kept (20 disperse, 9 concentrate).** 🔵 **`opencast`
+alone carries 2 354 bot commits, `dspace` 1 124, `kolibri` 808.**
+
+### 🔴 🆕 `P110-F` — a bot pattern that deletes real humans
+
+🔴 **A draft stripped `/noreply@github\.com$/` as a bot address. That is GitHub's
+DEFAULT PRIVACY EMAIL — `<id>+<user>@users.noreply.github.com` — so the regex silently
+removed real contributors, and hardest from the most privacy-conscious projects.**
+🟢 **Only the exact machine forms `noreply@github.com` and
+`web-flow@users.noreply.github.com` are stripped. Fixture F4 in `test_p110.sh` holds
+the line: three humans on `users.noreply` addresses, `bots_stripped` must be 0.**
+
+🔵 **Recorded as a standing warning because the bad pattern is the one every bot-filter
+snippet on the internet uses.**
+
+### 🟡 🆕 `P110-D` — `--depth` is a GENERATION limit, not a commit count
+
+🔴 **`--depth=200` returned 200 commits on `UniTime/unitime` and **8 374** on
+`moodle/moodle`**, because each generation of a merge-heavy history can branch.
+🟢 **So the windows are NOT comparable in size, `commits_read` is load-bearing output
+rather than diagnostics, and no cross-row claim in this file rests on commit COUNTS.**
+🔵 **Every figure above is a share or a bus factor — both ratios within a row.**
+
+### 🟢 🆕 `P110-K` — liveness is a weak predictor of breadth, so the two axes must both be read
+
+| p109 band | rows | `solo` | share |
+|---|---|---|---|
+| 🟢 fresh | 144 | 84 | 🟡 **58 %** |
+| 🟢 active | 34 | 27 | 🔴 79 % |
+| 🟡 slowing | 52 | 39 | 🔴 75 % |
+| 🔴 dormant | 18 | 14 | 🔴 78 % |
+| 🔴 abandoned | 48 | 36 | 🔴 75 % |
+
+🟢 **`fresh` rows are the least concentrated band — but 58 % of them are still `solo`.**
+🔴 **So freshness buys about 17–21 points of breadth and nothing more. It does not
+substitute for this axis, which is the whole case for having measured it.**
+
+### 🔴 `P110-L` — the mandated query set is EXHAUSTED in BOTH search modes
+
+🟢 **All eight mandated searches ran: four global, one each for North America, EMEA,
+APAC and LATAM.** 🔵 **p109 ran the same eight in **extended** mode and got zero new
+items; p110 ran them in **standard** mode and got zero new items.** 🔴 **21 candidate
+tokens were extracted and checked against this KB one by one — `IESALC`,
+`Digital Education Council`, Tec de Monterrey, `73.5 %`, `92 %`, `79 %`, `ILIA`,
+`ANUIES`, Gates Foundation, Carnegie Mellon, the `$169 M`, `LearnUpon`, `Pearson`,
+`Brent Thomas`, Colorado, `ai-engineering-from-scratch`, `Hermes`,
+`ai-agents-for-beginners`, `agents-from-scratch`, `26 %`, high-risk — and **21 of 21 are
+already held**.**
+
+🔵 **This closes the question `P109-A` left open from the other side. p109 showed the
+expensive channel returns the same zero as the cheap one; p110 shows the cheap one
+returns the same zero as the expensive one. The query SET is exhausted and the result is
+now mode-independent.** 🟢 **The standing instruction from `P109-A` is CONFIRMED, not
+merely repeated: do not spend a pass's budget re-running these eight queries. The
+unexhausted channel is measurement of the shelf this KB already holds — which is what
+p106–p110 each did to produce a finding.**
+
+---
+
+# Education — AI agents shelf
+
 **Pass 109, 2026-10-10.** ⏱️ **Nineteenth pass of this date** (107: 16:4x–17:xx UTC;
 108: 17:4x–18:xx; this one 18:4x–19:xx).
 

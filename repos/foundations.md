@@ -6,6 +6,63 @@ updated: 2026-10-10
 
 # Education — foundational repos
 
+**Pass 110, 2026-10-10.** ⏱️ **Twentieth pass of this date.**
+
+🟢 **`busfactor.sh` read **296 of 296** addresses, zero unread
+(`compose/code/p110-bus-factor/`, `test_p110.sh` 46 passed / 0 failed, fully offline).**
+
+🔴 **"Foundational" has been a licence-and-liveness claim on this page for 110 passes.
+This pass gives it a bench test, and the foundation layer shrinks to **11 rows** —
+3.7 % of the shelf.**
+
+### 🟢 🆕 `P110-J` — the only rows that are both institution-backed and alive
+
+🔵 **`broad` = `bus_factor` ≥ 6: no five people can walk away and stall it. Paired with
+p109's `fresh` band (commit within 30 d), these eleven are the shelf's actual
+foundation:**
+
+| repo | licence | `bus_factor` | top author | authors | p109 |
+|---|---|---|---|---|---|
+| [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 BSD-3 | 🟢 16 | 🟢 11 % | 373 | 🟢 fresh 0 d |
+| [`huggingface/transformers`](https://github.com/huggingface/transformers) | 🟢 Apache-2.0 | 🟢 11 | 🟢 12 % | 70 | 🟢 fresh 1 d |
+| [`temporalio/temporal`](https://github.com/temporalio/temporal) | 🟢 MIT | 🟢 11 | 🟢 10 % | 51 | 🟢 fresh 0 d |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3 | 🟢 9 | 🟢 13 % | 319 | 🟢 fresh 7 d |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT | 🟢 7 | 🟢 17 % | 249 | 🟢 fresh 1 d |
+| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🟡 AGPL-3 | 🟢 7 | 🟢 13 % | 62 | 🟢 fresh 10 d |
+| [`lukeslp/awesome-accessibility`](https://github.com/lukeslp/awesome-accessibility) | 🟢 MIT | 🟢 6 | 🟢 29 % | 46 | 🟢 fresh 6 d |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🟡 GPL-2 | 🟢 6 | 🟢 14 % | 47 | 🟢 fresh 3 d |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 Apache-2.0 (ECL-2.0) | 🟢 6 | 🟢 21 % | 198 | 🟢 fresh 1 d |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | 🟢 6 | 🟢 14 % | 37 | 🟢 fresh 0 d |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🟡 AGPL-3 | 🟢 6 | 🟢 15 % | 58 | 🟢 fresh 2 d |
+
+🔵 **Licences are carried from this page's prior passes; this pass changed no licence
+reading and discovered no new repository. It added one column.**
+
+### 🔴 🆕 `P110-M` — four repos this page has called foundational have a wide bench that stopped showing up
+
+| repo | `bus_factor` | authors | p109 liveness |
+|---|---|---|---|
+| [`kaldi-asr/kaldi`](https://github.com/kaldi-asr/kaldi) | 🟢 21 | 232 | 🔴 **dormant 383 d** |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🟢 12 | 66 | 🟡 **slowing 163 d** |
+| [`project-sunbird/sunbird-devops`](https://github.com/project-sunbird/sunbird-devops) | 🟢 8 | 97 | 🔴 **abandoned 1 263 d** |
+| [`project-sunbird/sunbird-lms-service`](https://github.com/project-sunbird/sunbird-lms-service) | 🟢 7 | 57 | 🟡 **slowing 291 d** |
+
+🔵 **These are the inverse of the shelf's usual failure. Breadth is not the problem —
+`kaldi` has 232 authors and the widest bus factor on the shelf — the problem is that
+the bench has left.** 🟢 **A wide, cold repo is the best FORK candidate on this shelf:
+the code was reviewed by many and nobody will contest the fork. A narrow, warm repo is
+the opposite.**
+
+### 🟡 🆕 `P110-D` — a figure on this page that must NOT be compared across rows
+
+🔴 **`commits_read` ranges from 200 to 16 946 at the same `--depth=200`, because git's
+`--depth` is a GENERATION limit and each generation of a merge-heavy history branches.**
+🟢 **So no claim on this page rests on commit counts. `bus_factor` and `top author %`
+are both ratios WITHIN a row and are the only cross-row-comparable figures the
+instrument emits.**
+
+# Education — foundational repos
+
 **Pass 109, 2026-10-10.** ⏱️ **Nineteenth pass of this date.**
 
 🟢 **`freshness.sh` read **296 of 296** addresses, zero unread

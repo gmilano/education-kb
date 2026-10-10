@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 110: two thirds of this shelf is one person, and four of the fifteen broadest repos are already dead
+
+🟢 **Measured over **296 of 296** addresses, zero unread
+(`compose/code/p110-bus-factor/`, `test_p110.sh` 46 passed / 0 failed, fully offline).**
+
+### The distribution
+
+| band | `bus_factor` | rows | share |
+|---|---|---|---|
+| 🔴 `solo` | 1 | **200** | **67.6 %** |
+| 🟡 `pair` | 2 | 50 | 16.9 % |
+| 🟢 `small` | 3–5 | 31 | 10.5 % |
+| 🟢 `broad` | ≥ 6 | 15 | 5.1 % |
+
+🔴 **49 rows (16.6 %) have exactly ONE author in the window.**
+
+### The 15 `broad` repos — and the four of them that are not alive
+
+🟢 **`dspace/dspace` (bf 16, 373 authors, fresh 0 d) · `huggingface/transformers` (11,
+fresh 1 d) · `temporalio/temporal` (11, fresh 0 d) · `moodle/moodle` (9, 319 authors,
+fresh 7 d) · `learningequality/kolibri` (7, fresh 1 d) · `openedx/edx-ora2` (7, fresh
+10 d) · `lukeslp/awesome-accessibility` (6, fresh 6 d) · `oat-sa/tao-core` (6, fresh
+3 d) · `opencast/opencast` (6, 198 authors, fresh 1 d) · `oppia/oppia` (6, fresh 0 d) ·
+`overhangio/tutor` (6, fresh 2 d).**
+
+🔴 **Broad but NOT alive — a wide bench that has stopped showing up:
+`kaldi-asr/kaldi` (bf 21, 232 authors, **dormant 383 d**) ·
+`project-sunbird/sunbird-devops` (8, **abandoned 1 263 d**) ·
+`project-sunbird/sunbird-lms-service` (7, **slowing 291 d**) ·
+`instructure/canvas-lms` (12, **slowing 163 d**).**
+
+🔵 **So 15 `broad` rows become **11 that are `broad` AND `fresh` — 3.7 % of the
+shelf**. That figure, not the 296, is the size of this KB's dependable foundation layer.**
+
+### 🔴 A platform on the recommendation page is 100 % one author
+
+🔴 **[`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) —
+RosarioSIS, carried on `verticals/solutions.md` as a real student-information system —
+is `fresh` (1 d) and **100 % a single author**.** 🟢 **It is not abandoned; it is one
+maintainer who has not missed a day. Those are different risks and only this axis
+separates them.**
+
+### Liveness does not substitute for breadth
+
+| p109 band | rows | `solo` | share |
+|---|---|---|---|
+| fresh | 144 | 84 | 🟡 58 % |
+| active | 34 | 27 | 🔴 79 % |
+| slowing | 52 | 39 | 🔴 75 % |
+| dormant | 18 | 14 | 🔴 78 % |
+| abandoned | 48 | 36 | 🔴 75 % |
+
+🟢 **Being fresh buys ~17–21 points of breadth and nothing more.**
+
+### Bot traffic on this shelf, measured
+
+🔵 **8 432 bot commits across 98 rows. `opencast` 2 354 · `dspace` 1 124 ·
+`kolibri` 808 · `microsoft/ai-agents-for-beginners` 593 · `bigbluebutton` 463.**
+🔴 **29 of those 98 rows change band or bus factor if bots are counted — including
+`langchain-ai/langgraph` `small`/3 → `solo`/1, and `jupyterhub/jupyterhub` `solo`/1 →
+`pair`/2, where the robot HIDES a solo human.**
+
 ## 2026-10-10 — pass 109: an entire learning-analytics org on this shelf is a graveyard, and two repos p108 recommended have been dead for 9 and 5 years
 
 🟢 **Measured over **296 of 296** addresses, zero unread

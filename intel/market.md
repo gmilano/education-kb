@@ -6,6 +6,61 @@ updated: 2026-10-10
 
 # Education — market, players and opportunities
 
+**Pass 110, 2026-10-10.** ⏱️ **Twentieth pass of this date.**
+
+🔴 **ZERO new market items this pass, from eight searches — and the zero is now
+MODE-INDEPENDENT, which retires the last competing explanation for it (`P110-L`).**
+
+🔵 **p109 ran the eight mandated queries in **extended** mode and got zero. p110 ran the
+same eight in **standard** mode and got zero. 21 candidate tokens were extracted and
+checked one at a time; 21 of 21 are already held on a live page of this KB — `IESALC`,
+`Digital Education Council`, Tec de Monterrey, the `73.5 %` / `92 %` / `79 %` / `26 %`
+figures, `ILIA`, `ANUIES`, Chile's National AI Policy, the Gates Foundation + Carnegie
+Mellon `$55 M`, the `$169 M` responsible-AI commitment, Colorado and Texas,
+`LearnUpon`, `Pearson`/TCS, `Brent Thomas`, and the EU AI Act high-risk classification.**
+
+🟢 **So the exhaustion is a property of the QUERY SET, not of search depth or of this
+pass's budget. The standing instruction is confirmed: the unexhausted channel in this
+environment is measurement of the shelf this KB already holds.**
+
+### 🔴 🆕 `P110-R` — the supply-side figure the market reports cannot see
+
+🔵 **This file carries demand-side numbers from eleven passes: AI-in-education at roughly
+$9.6–10.6 B in 2026 on a ~40 % CAGR, with the scope spread documented at `P98`.**
+🔴 **This pass measures the SUPPLY side for the first time, and the two do not match.**
+
+| measure | value |
+|---|---|
+| shelf addresses measured | 296 (zero unread) |
+| 🔴 `solo` — one author > 50 % of the window | **200 (67.6 %)** |
+| 🔴 exactly ONE human in the window | **49 (16.6 %)** |
+| 🟢 `broad` (≥ 6 authors) **and** `fresh` | 🔴 **11 (3.7 %)** |
+
+🔴 **Capital in this category is compounding at ~40 % a year on a buildable open-source
+base of **eleven repositories** with a real bench.** 🔵 **That asymmetry is a sourcing
+risk for every vendor in the segment and it does not appear in any market report,
+because market reports size demand and this sizes supply.**
+
+🟢 **For Globant specifically it is a positioning argument rather than a warning: the
+scarce asset in education AI is not a model and not a dataset, it is the ability to
+TAKE OVER a single-maintainer upstream and carry it. That is a services capability, and
+`verticals/solutions.md` now states the posture per platform.**
+
+### 🟡 🆕 `P110-S` — method note on the regional cut below
+
+🔵 **The regional figures added under `## Opportunities by region` this pass are derived
+from `compose/code/p110-bus-factor/result.2026-10-10.tsv` by assigning each repository
+to a region BY ITS PUBLISHING ORGANISATION — a hand-made, auditable mapping, not a
+measurement.** 🔴 **It places **76 of 296** rows and deliberately leaves **220
+unplaced** rather than guessing.** 🔴 **Sample sizes are small (LATAM n=9, APAC n=11), so
+every regional figure below is a SIGNAL, not an estimate, and is labelled as such.**
+🟢 **The underlying per-repo figures are measured and reproducible; only the regional
+grouping is a judgement.**
+
+---
+
+# Education — market, players and opportunities
+
 **Pass 109, 2026-10-10.** ⏱️ **Nineteenth pass of this date.**
 
 🔴 **ZERO new market items this pass, from eight searches — and for the first time that
@@ -492,6 +547,28 @@ KB: write down what you refused to use, and why.**
 ## Opportunities by region
 
 ### North America
+
+#### 🟢 🆕 p110 North America — the only region on this shelf with an institution-backed bench
+
+🟢 **Of the 30 NA-published rows the `P110-S` mapping places, **9 are `solo` (30 %)** —
+the lowest share of any region — and **11 are `broad`**, which is every single `broad`
+row on the shelf but four. **No NA row is at 100 % one author.** Median `bus_factor`: 4.**
+
+🔵 **The NA-published layer is where this shelf's dependable foundation actually lives:
+`dspace` (bf 16, 373 authors), `instructure/canvas-lms` (12), `huggingface/transformers`
+(11), `temporalio/temporal` (11), `moodle` (9, via a global foundation),
+`learningequality/kolibri` (7), `openedx/edx-ora2` (7), `oppia` (6),
+`opencast` (6), `lukeslp/awesome-accessibility` (6).**
+
+🟢 **Opportunity: an NA engagement can be specified against live upstream dependencies
+with pinned minors, because the bench exists to ship the next minor. That is the only
+region on this shelf where that sentence is true, and it should be priced as a
+differentiator rather than assumed as a baseline.**
+
+🔴 **The NA-specific risk is the inverse one and p110 names it: `kaldi-asr/kaldi`
+(bf 21, 232 authors, **dormant 383 d**) and `instructure/canvas-lms` (bf 12, **slowing
+163 d**) are wide benches that have stopped showing up. Wide-and-cold is the best FORK
+target on this shelf — reviewed code, uncontested fork — and NA holds most of them.**
 
 #### 🔴 🆕 p109 North America — the region's open education stack is the OLDEST on the shelf, and most of it has finished its lifecycle
 
@@ -1012,6 +1089,32 @@ adoption.** 🔴 **So a North America pitch that leads with adoption is pushing 
 regulatory grain; one that leads with governance, auditability and teacher-augmentation is with it.**
 
 ### EMEA
+
+#### 🟡 🆕 p110 EMEA — a real public-sector bench, and an AI layer that is entirely single-author
+
+🟡 **Of the 26 EMEA-published rows the `P110-S` mapping places, **16 are `solo` (62 %)**
+and only **2 are `broad`**. Median `bus_factor`: 1. Three are at 100 % one author:
+[`a2br/moodle-mcp`](https://github.com/a2br/moodle-mcp),
+[`alvarogregori/moodle-ai-graded-assignment`](https://github.com/alvarogregori/moodle-ai-graded-assignment),
+[`scollovati/awesome-lti`](https://github.com/scollovati/awesome-lti).**
+
+🟢 **The split inside EMEA is sharp and it falls on the public/private boundary. The
+institutional layer has a bench — `oat-sa/tao-core` (bf 6, 47 authors, fresh 3 d),
+`overhangio/tutor` (bf 6, 58 authors), and the Finnish `opetushallitus/*` estate
+(`koski` `pair`, `oppijanumerorekisteri` `small`/3) which is a national education
+agency committing in the open.** 🔴 **The AI/agent layer above it has none: every
+EMEA-published AI-on-Moodle component measured this pass is one person.**
+
+🟢 **Opportunity: EMEA is where the "take over a solo upstream" capability has the
+clearest buyer, because the platform beneath it is publicly maintained and will not
+move. A ministry or university that has standardised on Moodle or TAO can adopt an
+AI layer only if someone will own it — the licences (MIT, Unlicense, GPL-3 in-LMS) all
+permit that, and `compose/patterns.md` prices it.**
+
+🔵 **Regulatory frame unchanged from p109: EU AI Act Annex III keeps admission,
+evaluation and exam-scoring in the high-risk tier, with the Digital Omnibus deferrals
+to 2 December 2027 and 2 August 2028. A high-risk classification raises the cost of a
+single-maintainer dependency, because conformity evidence has to come from somewhere.**
 
 #### 🟢 🆕 p109 EMEA — the healthiest open education stack measured, and one loud casualty at the European Commission
 
@@ -1770,6 +1873,29 @@ duty is the sellable deliverable that is already overdue.**
 
 ### APAC
 
+#### 🟡 🆕 p110 APAC — the region whose wide bench already left
+
+🟡 **Of the 11 APAC-published rows the `P110-S` mapping places, **5 are `solo` (45 %)**
+and **2 are `broad`**. Median `bus_factor`: 2. One is at 100 % one author:
+[`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud)
+(MIT, fresh 1 d — a complete course platform held up by a single maintainer).**
+
+🔴 **APAC owns this shelf's starkest wide-and-cold pair, and it is a national platform:
+[`project-sunbird/sunbird-devops`](https://github.com/project-sunbird/sunbird-devops)
+(bf 8, 97 authors, **abandoned 1 263 d**) and
+[`project-sunbird/sunbird-lms-service`](https://github.com/project-sunbird/sunbird-lms-service)
+(bf 7, 57 authors, **slowing 291 d**). India's DIKSHA stack was built by a broad bench
+that has dispersed.**
+
+🟢 **Opportunity: Sunbird is the best-evidenced fork target in this KB. MIT licence,
+57–97 reviewers' worth of history, national-scale deployment, and no active upstream to
+contest a fork or to break it underneath you. An APAC public-education engagement can
+quote a fork-and-own of a proven national platform rather than a greenfield build.**
+
+🔵 **The rubric layer remains APAC-published and cooling, unchanged from p109:
+`Qwen-Applications/OpenRS` (219 d, `solo` 71 %) and `planepig/rubricbench` (221 d,
+`solo` 75 %) — now with the bench figure that explains why they stalled.**
+
 #### 🟡 🆕 p109 APAC — a national platform with a dead ops layer, and the region's rubric layer is cooling
 
 🔴 **The APAC query returned zero new tokens in extended mode (`P109-A`): Korea's AI Basic
@@ -2467,6 +2593,46 @@ the permission argument first — except in ANZ, where it does.** 🔴 **That is
 North America posture recorded above, and the two pitches should not share a slide.**
 
 ### LATAM
+
+#### 🔴 🆕 p110 LATAM — **every** region-placeable LATAM row is single-author, and that is the sharpest regional result of the four
+
+🔴 **Of the 9 LATAM-published rows the `P110-S` mapping places, **9 are `solo` (100 %)**
+and **8 of 9 are at 100 % one author**. **Zero are `broad`.** Median `bus_factor`: 1.**
+
+| row | licence | p109 | top author |
+|---|---|---|---|
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🟢 MIT + CC BY 4.0 | 🟢 fresh 14 d | 🔴 100 % |
+| [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | 🟢 MIT + CC BY 4.0 | 🟢 active 60 d | 🔴 100 % |
+| [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | 🟢 MIT + CC BY 4.0 | 🟢 fresh 21 d | 🔴 100 % |
+| [`sidneybissoli/educabr`](https://github.com/sidneybissoli/educabr) | 🟢 MIT | 🟢 fresh 7 d | 🔴 100 % |
+| [`xgabrielcv/auto-matricula-sigaa-unb`](https://github.com/xgabrielcv/auto-matricula-sigaa-unb) | 🟢 MIT | 🟢 fresh 16 d | 🔴 100 % |
+| [`fborrasumh/tutoria`](https://github.com/fborrasumh/tutoria) | 🟢 MIT | 🟢 fresh 10 d | 🔴 100 % |
+| [`Zion-support/curriculum-alignment-checker`](https://github.com/Zion-support/curriculum-alignment-checker) | 🟢 MIT | 🟢 fresh 6 d | 🔴 100 % |
+| [`devissaputra/classroom_discourse_intelligence`](https://github.com/devissaputra/classroom_discourse_intelligence) | 🟢 MIT | 🟢 fresh 14 d | 🔴 100 % |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | 🟢 MIT | 🟢 fresh 3 d | 🔴 98 % |
+
+🔵 **With n=9 this is a SIGNAL, not an estimate (`P110-S`) — but it is unanimous, and the
+gradient across the four regions is monotonic: NA 30 % solo → APAC 45 % → EMEA 62 % →
+LATAM 100 %.**
+
+🔴 **This directly reverses an engagement recommendation p109 made for this region. p109
+found the `bncc-dev` curriculum estate `fresh`/`active` and concluded the BNCC side
+"can be consumed as a live dependency". It is three repositories, each 100 % one author
+(`P110-I`). A LATAM curriculum engagement that takes a live dependency on BNCC is taking
+a dependency on one person.**
+
+🟢 **Opportunity, restated correctly and it is larger than p109's: the LATAM
+education-AI layer is almost entirely permissively licensed (MIT, several MIT + CC BY
+4.0) and almost entirely unowned. That combination is the cheapest acquisition cost in
+this KB — the licences permit a fork with no negotiation, and there is no incumbent
+bench to displace. The BNCC estate in particular is the machine-readable form of
+Brazil's national curriculum standard, under MIT + CC BY 4.0, maintained by one person:
+Globant can become its institutional maintainer for the cost of one engineer.**
+
+🔵 **That is a sponsorship/stewardship play, not a consumption play, and it is the one
+posture this region's numbers support. Demand-side LATAM figures are unchanged
+(UNESCO IESALC 200 institutions / 19 countries, Digital Education Council LATAM 2026) —
+all already held, all re-confirmed as held this pass.**
 
 #### 🟢 🆕 p109 LATAM — the standing negative is INVERTED on the one axis this pass could measure
 

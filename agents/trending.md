@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 110: nine of the thirteen agent rows p109 published an hour ago are one person, and the fix p109 recommended was aimed at the wrong risk
+
+🔵 **No new education-specific agent reached this shelf this pass, and for the first time
+that zero is MODE-INDEPENDENT:** 🔴 **p109 ran the eight mandated queries in `extended`
+mode and got zero; p110 ran them in `standard` mode and got zero. 21 candidate tokens
+extracted, 21 of 21 already held (`P110-L`).**
+
+🟢 **Instrument: `compose/code/p110-bus-factor/`, `test_p110.sh` **46 passed / 0 failed**
+(fully offline — real git repositories served over `file://`, no mocks);
+`busfactor.sh` read **296 of 296** addresses in 3 m 48 s, zero unread.**
+
+### What is new this week: the shelf has a bench problem, not a maintenance problem
+
+🔴 **200 of 296 rows (67.6 %) are `solo` — one author holds more than half the recent
+window. 49 rows (16.6 %) are at 100 %: exactly one human.** 🟢 **Only **11 of 296
+(3.7 %)** are both `broad` (≥ 6 authors) and `fresh` — the dependable base is smaller
+than four passes of measurement suggested.**
+
+🔴 **Of the thirteen agent-layer rows p109 published one hour ago, **nine are `solo`** and
+five are at 100 %: `moodle-local_aihub` (99 %), `UniTime` (99 %), `pyBKT` (61 %),
+`bncc-pacotes` (100 %), `bncc-dados` (100 %), `bncc-benchmark` (100 %), `OpenRS` (71 %),
+`rubricbench` (75 %), `a2br/moodle-mcp` (100 %).**
+
+### The reversal — `P110-I`
+
+🔵 **p109 concluded that in the `Gap 379` rubric↔curriculum bind "the BNCC side can be
+consumed as a live dependency, and the rubric side has to be vendored at a SHA and
+owned".** 🔴 **All three `bncc-dev` repositories are **100 % one author**, while the
+rubric half contains a `pair` and tops out at 75 %. The half p109 called safe is the
+MORE concentrated one.** 🟢 **Corrected rule: liveness governs a FORK decision,
+concentration governs a DEPENDENCY decision. A 100 %-solo upstream is exactly the one
+you must be able to survive, however fresh its commits are.**
+
+### Two traps worth carrying to any other industry KB
+
+🔴 **`P110-B` — reading the COMMITTER instead of the author would have reported
+`huggingface/transformers` (author bus factor 11) and `kaldi-asr/kaldi` (21) as `solo`,
+because squash- and rebase-merge rewrite the committer to whoever clicked merge. 17 of
+296 rows would be misreported.** 🔵 **Note this INVERTS p109's discipline, which reads
+committer date correctly for recency.**
+
+🔴 **`P110-F` — the bot filter `/noreply@github\.com$/`, which is what every snippet on
+the internet uses, deletes real contributors: `<id>+<user>@users.noreply.github.com` is
+GitHub's DEFAULT PRIVACY EMAIL.** 🟢 **Only `noreply@github.com` and
+`web-flow@users.noreply.github.com` are machine addresses.**
+
+🟡 **`P110-A`/`P110-C` — this pass FALSIFIED its own hypothesis. Counting merges does not
+always overstate concentration: on `moodle/moodle` it understated the bench by four
+(`broad`/9 → `small`/5). Keeping bots turned `jupyterhub` from `solo`/1 into `pair`/2 —
+hiding a solo human behind a robot. Both filters are correctness requirements, not
+directional bias corrections.**
+
 ## 2026-10-10 — pass 109: eight searches in EXTENDED mode returned zero new items, which finally tells us something; and the shelf's liveness axis is measured for the first time
 
 🔵 **No new education-specific agent reached this shelf this pass.** 🟢 **What is new is

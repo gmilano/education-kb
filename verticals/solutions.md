@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-10
 ---
 
+# Education — vertical platforms and solutions
+
+**Pass 110, 2026-10-10.** ⏱️ **Twentieth pass of this date.**
+
+🟢 **`busfactor.sh` read **296 of 296** addresses, zero unread
+(`compose/code/p110-bus-factor/`, `test_p110.sh` 46 passed / 0 failed, fully offline).**
+
+🔴 **A customisable platform is a multi-year commitment, so the bench behind it matters
+more here than anywhere else in this KB. This pass measures it, and the recommendation
+page is not uniform.**
+
+### 🟢 🆕 `P110-N` — the platforms on this page, by bench
+
+| platform | licence | `bus_factor` | top author | authors | p109 | verdict |
+|---|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3 | 🟢 9 | 🟢 13 % | 319 | 🟢 fresh 7 d | 🟢 **safe to build on** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT | 🟢 7 | 🟢 17 % | 249 | 🟢 fresh 1 d | 🟢 **safe to build on** |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🟡 GPL-2 | 🟢 6 | 🟢 14 % | 47 | 🟢 fresh 3 d | 🟢 **safe to build on** |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 ECL-2.0 | 🟢 6 | 🟢 21 % | 198 | 🟢 fresh 1 d | 🟢 **safe to build on** |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | 🟢 6 | 🟢 14 % | 37 | 🟢 fresh 0 d | 🟢 **safe to build on** |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🟡 AGPL-3 | 🟢 6 | 🟢 15 % | 58 | 🟢 fresh 2 d | 🟢 **safe to build on** |
+| [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 BSD-3 | 🟢 16 | 🟢 11 % | 373 | 🟢 fresh 0 d | 🟢 **safe to build on** |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🟡 AGPL-3 | 🟢 12 | 🟢 15 % | 66 | 🟡 slowing 163 d | 🟡 **wide bench, cooling** |
+| [`project-sunbird/sunbird-lms-service`](https://github.com/project-sunbird/sunbird-lms-service) | 🟢 MIT | 🟢 7 | 🟢 16 % | 57 | 🟡 slowing 291 d | 🟡 **fork candidate** |
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 BSD-3 | 🟢 5 | — | — | 🟢 fresh | 🟢 **small but real bench** |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🟡 GPL-2 | 🔴 **1** | 🔴 **100 %** | 1 | 🟢 fresh 1 d | 🔴 **one person** |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | 🟢 MIT | 🔴 **1** | 🔴 98 % | 5 | 🟢 fresh 3 d | 🔴 **one person** |
+| [`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud) | 🟢 MIT | 🔴 **1** | 🔴 **100 %** | 1 | 🟢 fresh 1 d | 🔴 **one person** |
+
+### 🔴 🆕 `P110-O` — the SIS tier is where this page is most exposed
+
+🔴 **Every student-information system on this page that is NOT backed by an institution
+is a single human: `rosariosis` 100 %, `academico` 98 %, `course-tencent-cloud` 100 %.
+All three are `fresh` — committed to within three days.** 🔵 **p109 ranked all three 🟢
+and said nothing was wrong, correctly: they are not abandoned. They are one maintainer
+who has not missed a day.**
+
+🟢 **Those are different risks, and only this axis separates them. An abandoned platform
+is a known cost you price at the start. A fresh, solo platform is an UNPRICED cost that
+arrives on the day the maintainer stops — and because it is fresh, nothing in a
+liveness-only review will flag it.**
+
+🔵 **This does not disqualify them. `rosariosis` is a working, deployed SIS under GPL-2
+and the licence survives the maintainer. It changes the engagement SHAPE: a solo
+upstream must be forked-and-owned from day one, or carried with a budget line for
+taking it over — not consumed as a live dependency on the assumption that upstream will
+keep shipping.**
+
+### 🟢 The standing rule this page now applies
+
+| upstream shape | p109 | p110 | engagement posture |
+|---|---|---|---|
+| wide bench, warm | 🟢 fresh | 🟢 `broad` | 🟢 **consume as a live dependency** |
+| wide bench, cold | 🔴 dormant | 🟢 `broad` | 🟢 **fork — reviewed code, uncontested fork** |
+| narrow bench, warm | 🟢 fresh | 🔴 `solo` | 🔴 **fork AND budget to own it** |
+| narrow bench, cold | 🔴 dormant | 🔴 `solo` | 🔴 **vendor at a SHA, assume no upstream** |
+
+🔵 **Both axes are needed to pick a row in that table, which is the case for having
+measured the second one.**
+
 # Education — vertical platforms you can customise with AI
 
 **Pass 109, 2026-10-10.** ⏱️ **Nineteenth pass of this date.** 🔴 **This page carries the

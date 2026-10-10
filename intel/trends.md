@@ -6,6 +6,79 @@ updated: 2026-10-10
 
 # Education — current trends
 
+**Pass 110, 2026-10-10.** ⏱️ **Twentieth pass of this date.**
+
+🔴 **The eight mandated searches produced ZERO new trend items for the sixth consecutive
+pass — and this pass closes the question of why from the remaining side (`P110-L`).**
+
+### 🔴 🆕 `P110-L` — the query set is exhausted in BOTH search modes, so the zero is now mode-independent
+
+🟢 **All eight mandated searches ran: four global, one each for North America, EMEA,
+APAC, LATAM.** 🔵 **p109 ran the same eight in **extended** mode — a deeper, fresher,
+several-times costlier channel — and got zero new items. p110 ran them in **standard**
+mode and got zero new items.**
+
+🔴 **21 candidate tokens were extracted and checked one at a time against every page of
+this KB. **21 of 21 are already held**:**
+
+| token | where it came from | status |
+|---|---|---|
+| `IESALC`, `Digital Education Council`, Tec de Monterrey | LATAM query | 🔴 held |
+| `73.5 %` (teaching), `92 %` (students), `79 %` (faculty), `26 %` (formal frameworks) | LATAM query | 🔴 held |
+| `ILIA` index, `ANUIES`, Chile National AI Policy | LATAM query | 🔴 held |
+| Gates Foundation + Carnegie Mellon `$55 M`, the `$169 M` commitment, Colorado/Texas | North America query | 🔴 held |
+| `LearnUpon`, `Pearson`/TCS, `Brent Thomas` (OpenAI ANZ) | APAC query | 🔴 held |
+| EU AI Act education = high-risk | EMEA query | 🔴 held |
+| `ai-engineering-from-scratch`, `ai-agents-for-beginners`, `agents-from-scratch`, `Hermes` | global queries | 🔴 held |
+
+🔵 **`P109-A` showed the expensive channel returns the same zero as the cheap one. This
+pass shows the cheap channel returns the same zero as the expensive one. The two
+together retire the competing explanation entirely: the result is a property of the
+QUERY SET, not of search depth, and not of this pass's budget.**
+
+🟢 **Standing instruction, CONFIRMED rather than merely repeated: a future pass should
+not spend its budget re-running these eight queries expecting novelty. Every pass since
+p106 that produced a finding produced it by MEASURING the shelf this KB already holds.**
+
+### 🔴 🆕 `P110-P` — the trend this pass found is in the shelf, not in the news
+
+🔵 **The open-source education stack is consolidating onto a very narrow institutional
+base, and the measurement is new this pass:**
+
+🔴 **Of 296 addresses this KB tracks, **200 (67.6 %) are `solo`** — one author holds more
+than half the recent commit window — and **49 (16.6 %) have exactly one human in the
+window**. Only **11 (3.7 %)** are both `broad` (≥ 6 authors) and `fresh`.**
+
+🟢 **Read against the market numbers this file already carries — AI-in-education at
+roughly $9.6–10.6 B in 2026 on a ~40 % CAGR — the gap is the finding: capital is
+compounding at 40 % a year on a buildable open-source base of eleven repositories with
+a real bench. That asymmetry is a sourcing risk for every vendor in the category, and it
+is not visible from any market report.**
+
+### 🟡 🆕 `P110-K` — "actively maintained" has been doing work it cannot do
+
+| p109 band | rows | `solo` | share |
+|---|---|---|---|
+| 🟢 fresh | 144 | 84 | 🟡 **58 %** |
+| 🟢 active | 34 | 27 | 🔴 79 % |
+| 🟡 slowing | 52 | 39 | 🔴 75 % |
+| 🔴 dormant | 18 | 14 | 🔴 78 % |
+| 🔴 abandoned | 48 | 36 | 🔴 75 % |
+
+🔴 **Freshness buys ~17–21 points of breadth and nothing more. 58 % of the repos that
+committed this month are still one person.** 🔵 **So "actively maintained", the phrase
+every due-diligence checklist in this category ends on, is close to uninformative about
+the risk it is used to rule out.**
+
+### 🟢 Trends carried forward unchanged from p109 and earlier
+
+🔵 **This pass revised no prior trend. The eight trends this file carries — agent-native
+tutoring, curriculum-standard machine-readability, the MCP gate into the LMS, rubric
+automation, proctoring reach, the L&D/corporate buyer, sovereign-AI procurement in
+education, and offline-first delivery — are unchanged, with their prior evidence.**
+
+# Education — current trends
+
 **Pass 109, 2026-10-10.** ⏱️ **Nineteenth pass of this date.** 🟢 **Two trends added, both
 from the supply side and both measured first-hand over 296 of 296 shelf addresses
 (`compose/code/p109-freshness/`, `test_p109.sh` 32 passed / 0 failed).** 🔴 **The eight

@@ -6,6 +6,103 @@ updated: 2026-10-10
 
 # Education — compose patterns
 
+**Pass 110, 2026-10-10.** ⏱️ **Twentieth pass of this date.**
+
+🔴 **Every pattern on this page is a recipe built on specific upstream repositories, so
+a solo upstream is a pattern-level risk, not a footnote. This pass reprices the patterns
+on the bench axis and one of them changes shape.**
+
+### 🔴 🆕 `P110-I` — `Gap 379` repriced: the rubric↔curriculum bind is now TWO-dimensional, and p109's advice is reversed
+
+🔵 **p109 priced this bind on liveness and concluded: "the BNCC side can be consumed as a
+live dependency, and the rubric side has to be vendored at a SHA and owned."**
+
+**The curriculum half** (Brazil, `bncc-dev`):
+
+| component | licence | p109 liveness | top author | `bus_factor` | 🆕 band |
+|---|---|---|---|---|---|
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🟢 MIT + CC BY 4.0 | 🟢 fresh 14 d | 🔴 **100 %** | 1 | 🔴 `solo` |
+| [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | 🟢 MIT + CC BY 4.0 | 🟢 active 60 d | 🔴 **100 %** | 1 | 🔴 `solo` |
+| [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | 🟢 MIT + CC BY 4.0 | 🟢 fresh 21 d | 🔴 **100 %** | 1 | 🔴 `solo` |
+
+**The rubric half** (China + US academic):
+
+| component | licence | p109 liveness | top author | `bus_factor` | 🆕 band |
+|---|---|---|---|---|---|
+| [`wanghaoyu0408/OpenRubrics`](https://github.com/wanghaoyu0408/OpenRubrics) | 🟢 MIT | 🟡 slowing 109 d | 🟢 33 % | 2 | 🟡 `pair` |
+| [`Qwen-Applications/OpenRS`](https://github.com/Qwen-Applications/OpenRS) | 🟢 Apache-2.0 | 🔴 slowing 219 d | 🟡 71 % | 1 | 🔴 `solo` |
+| [`planepig/rubricbench`](https://github.com/planepig/rubricbench) | 🟢 MIT | 🔴 slowing 221 d | 🟡 75 % | 1 | 🔴 `solo` |
+
+🔴 **All three `bncc-dev` repositories are 100 % one author. The rubric half contains a
+`pair` and tops out at 75 %. The half p109 called safe is the MORE concentrated one.**
+
+🟢 **The corrected rule, which is the reusable part:**
+
+> **Liveness governs a FORK decision. Concentration governs a DEPENDENCY decision.**
+> A cold repo is expensive to fork because nobody will fix your merge conflicts.
+> A solo repo is dangerous to DEPEND on however warm it is, because the upstream can
+> stop between two sprints with no notice and no successor.
+
+🔴 **"Consume BNCC as a live dependency" was advice aimed at the wrong risk.**
+🟢 **`Gap 379` stays open and is now two-dimensional.**
+
+### 🟢 🆕 Recipe — `BNCC-alignment service`, repriced
+
+🔵 **Unchanged in its parts, changed in its contract:**
+
+```
+  curriculum standard   bncc-dev/bncc-dados      MIT + CC BY 4.0   solo 100%
+         |              VENDOR at a pinned tag (dados-2026.07.1), NOT a live dep.
+         |              Budget: one engineer able to regenerate the dataset from
+         |              the MEC source if upstream stops. The CC BY 4.0 grant on
+         |              the data survives the maintainer; the pipeline does not.
+         v
+  alignment checker     your code
+         |
+         +-- rubric judge   wanghaoyu0408/OpenRubrics   MIT   pair 33%
+         |                  the widest bench in the bind -> the best fork target
+         |                  of the four rubric repos. Vendor at a SHA (no releases).
+         |
+         +-- scoring eval   planepig/rubricbench        MIT   solo 75%, 221 d
+                            treat as a FIXTURE, not a dependency: pin and freeze.
+  serving / LMS reach
+         v
+  moodle/moodle           GPL-3   broad, bus_factor 9, 319 authors, fresh 7 d
+                          the ONLY layer in this recipe safe as a live dependency.
+```
+
+🔵 **The shape of that recipe is the finding: in a four-layer education pattern, exactly
+one layer — the LMS — has a bench you can rely on. The other three are vendored, and
+that is a budget line, not a technical note.**
+
+### 🟡 🆕 `P110-Q` — `P106-A`'s MCP sidecar, repriced on the bench axis
+
+| `P106-A` component | licence | p109 | top author | `bus_factor` |
+|---|---|---|---|---|
+| [`a2br/moodle-mcp`](https://github.com/a2br/moodle-mcp) | 🟢 MIT | 🟢 fresh 16 d | 🔴 **100 %** | 🔴 1 |
+| [`fwu-de/mem-mcp`](https://github.com/fwu-de/mem-mcp) | 🟢 Unlicense | 🟡 slowing 123 d | 🔴 93 % | 🔴 1 |
+
+🔴 **Both components of the tested MCP gate are single-author. p106 called both TAKEABLE
+and that verdict stands — a permissive licence does not expire and does not depend on a
+bench.** 🟢 **But the pattern has NO layer with a bench, so it cannot be consumed; it can
+only be taken.** 🔵 **Which, for MIT and Unlicense code of this size, is the cheap
+option: vendor both, own both, and the licences make that legal without negotiation.
+The risk is not legal, it is that nobody upstream will fix the Moodle 5.x break for you.**
+
+### 🟢 The bench rule, applied to every pattern on this page
+
+| upstream shape | p109 | p110 | posture in a recipe |
+|---|---|---|---|
+| wide bench, warm | 🟢 fresh | 🟢 `broad` | 🟢 **live dependency — pin a minor, upgrade on their cadence** |
+| wide bench, cold | 🔴 dormant | 🟢 `broad` | 🟢 **fork — reviewed code, nobody contests the fork** |
+| narrow bench, warm | 🟢 fresh | 🔴 `solo` | 🔴 **vendor + budget to own; do NOT track upstream HEAD** |
+| narrow bench, cold | 🔴 dormant | 🔴 `solo` | 🔴 **freeze as a fixture; assume no upstream exists** |
+
+🔵 **Only eleven rows on this shelf (3.7 %) qualify for the first line. Every recipe on
+this page should name which of its layers is one of them — and most name exactly one.**
+
+# Education — compose patterns
+
 **Pass 109, 2026-10-10.** ⏱️ **Nineteenth pass of this date.** 🟢 **One new pattern, one
 new gate that every pattern on this page must now pass, and `P108-A` re-scored on the new
 axis — it survives, with one layer re-flagged.**
