@@ -1,0 +1,13 @@
+compared=99 agree=92 recovered_by_ecl=2 disagree=5
+old_only=[] new_only=[]
+
+RECOVERED -- permissive rows p1029 could not see:
+  apereo-learning-analytics-initiative/lap-sakai-extractor	UNRECOGNISED -> ECL-2.0	11087 B
+  apereo-learning-analytics-initiative/opendashboard-legacy	UNRECOGNISED -> ECL-2.0	9919 B
+
+DISAGREE -- the HEAD-ref path changed an ANSWER (investigate before publishing):
+  1edtech/caliper-php	lic - -> ABSENT	bytes - -> -	sha - -> -
+  concentricsky/badgr-server	lic - -> ABSENT	bytes - -> -	sha - -> -
+  imazhar101/mcp-canvas-server	lic - -> ABSENT	bytes - -> -	sha - -> -
+  imsglobal/caliper-python	lic - -> ABSENT	bytes - -> -	sha - -> -
+  owentaylor/canvas-mcp	lic - -> ABSENT	bytes - -> -	sha - -> -

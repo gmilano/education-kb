@@ -6,6 +6,108 @@ updated: 2026-10-10
 
 # Education — vertical platforms you can customise with AI
 
+**Pass 106, 2026-10-10.** ⏱️ **Sixteenth pass of this date** (104: 13:4x–14:xx UTC; 105:
+14:4x–15:xx; this one 15:4x–16:xx). 🟢 **`P1005` applied throughout: every row below is a payload
+read this pass.** 🔴 **`api.github.com` = `http=403`; no ★ moved.**
+
+### 🔴 🆕 p106 — the Moodle plugin frontier, on a denominator of **143 rows instead of 7**
+
+🔵 **`T30`/`P1033` has said since pass 104 that "the copyleft frontier is the plugin tree": code that
+loads INSIDE the LMS inherits its licence, code that talks to it over an API does not. It rested on
+seven rows, because `moodle.org` is `http=000` from this environment (`Gap 399`).**
+
+🟢 **A channel that reaches the plugin layer was found this pass: `packagist.org` = 200**, where
+Moodle plugins publish as composer packages.
+
+```
+types_probed=46  types_nonempty=21  types_zero=25  packages=159
+```
+
+🔴 ****all 143** packages that declare a licence at all declare the GPL-3 family. NOT ONE is
+permissive.** 🟢 **`P1033` holds without exception on a real denominator** — and the declaration is
+free text in **three spellings of one grant** (`GPL-3.0-or-later` 136, `GPL-3.0+` 5, `GPLv3` 2),
+🔵 **which is `P1046`: a census keyed on an exact string would split the dominant family into three
+buckets and report none of them as dominant.**
+
+| plugin type | packages | | plugin type | packages |
+|---|---|---|---|---|
+| `moodle-local` | 33 | | `moodle-format` | 4 |
+| `moodle-tool` | 27 | | `moodle-auth` | 4 |
+| `moodle-block` | 24 | | `moodle-atto` | 4 |
+| `moodle-mod` | 22 | | `moodle-report` | 3 |
+| `moodle-qtype` | 9 | | `moodle-dataformat` | 3 |
+| `moodle-availability` | 8 | | 11 further types | 1–2 each |
+| `moodle-filter` | 7 | | 🔴 **`moodle-aiprovider`** | 🔴 **0** |
+| | | | 🔴 **`moodle-aiplacement`** | 🔴 **0** |
+
+🔴 **The sharpest row is a zero.** 🔵 **`moodle-aiprovider` and `moodle-aiplacement` are the two
+plugin types Moodle's OWN AI subsystem defines, and they have no packagist presence whatever —
+against 159 packages across 21 older types.** 🟢 **`T34`: the AI seam of the most-installed LMS on
+earth does not publish through the PHP package channel at all.**
+
+#### 🟡 What to do with this in front of a client
+
+🟢 **Two things, and they are the same two the layer split implies:**
+
+1. 🟢 **An AI capability delivered as a `moodle-aiprovider` or `moodle-aiplacement` plugin is
+   GREENFIELD** — there is nothing to fork and nothing to be out-competed by. 🔴 **And it will be
+   GPL-3, because it loads inside the LMS** (`P1033`, now 143 of 143 that declare one).
+2. 🟢 **An AI capability delivered BESIDE Moodle — an MCP server, a service against its web-service
+   API — keeps whatever licence Globant chooses.** 🔵 **Measured precedent, both ways:
+   `a2br/moodle-mcp` is MIT with no root `version.php`; `jeanlucio/moodle-local_aihub` has one and
+   is GPL-3.** 🟡 **The deliverable's licence is decided by WHERE the code is mounted, not by
+   negotiation.**
+
+🟡 **`Gap 399` is re-scoped, not closed:** 159 packages is plainly a thin slice of the directory, so
+the licence composition is now answered on a real denominator while the POPULATION question is not.
+
+### 🟢 🆕 p106 — a NATIONAL vertical stack, publicly licensed: Finland (`T33`)
+
+🔵 **Eight repositories from `opetushallitus`, the Finnish National Agency for Education, every one
+EUPL-licensed and every one `UNRECOGNISED` to this KB until this pass.** 🟢 **This is a vertical
+platform family in the sense this page means: something already running in production that an
+agentic layer can be built on.**
+
+| platform | EUPL | the vertical it IS |
+|---|---|---|
+| [`koski`](https://github.com/opetushallitus/koski) | 1.1 | 🔵 **national study-rights + completed-studies registry** — the SIS tier, at national scale |
+| [`eperusteet`](https://github.com/opetushallitus/eperusteet) | 1.1 | 🔵 **national core-curriculum service** — the curriculum-vocabulary tier |
+| [`ataru`](https://github.com/opetushallitus/ataru) | 1.2 | admissions and application |
+| [`ehoks`](https://github.com/opetushallitus/ehoks) | 1.1 | personal competence-development plans |
+| [`oppijanumerorekisteri`](https://github.com/opetushallitus/oppijanumerorekisteri) | 1.1 | learner identity |
+| [`organisaatio`](https://github.com/opetushallitus/organisaatio) | 1.1 | provider registry |
+| [`suorituspalvelu`](https://github.com/opetushallitus/suorituspalvelu) | 1.2 | attainment service |
+| [`valtionavustus`](https://github.com/opetushallitus/valtionavustus) | 1.1 | state-aid administration |
+
+🟡 **The EUPL is COPYLEFT, with a reciprocity obligation and an explicit compatibility list, so this
+is an **adopt-and-contribute** tier, not an embed-and-keep one.** 🔵 **That is exactly the
+`T29`/`T30` reading applied to a new family: the infrastructure end of education grants its code,
+and the grant it uses carries obligations.**
+
+🟢 **And it answers `Gap 395` from an angle the gap never considered.** 🔴 **Pass 104 read EMEA as
+"ships releases and does not grant". It grants — under the EU's own licence — and a
+permissive-first scan cannot see it.**
+
+### 🟢 🆕 p106 — a Brazilian municipal SIS this KB held but could not read
+
+| platform | licence | bytes | `sha256` (16) | region |
+|---|---|---|---|---|
+| 🆕 [`portabilis/i-diario`](https://github.com/portabilis/i-diario) | **AGPL-3.0** | 35 326 | `fe85f94658bf66de` | 🟢 **LATAM** — ccTLD `com.br` |
+| 🆕 [`portabilis/pre-matricula-digital`](https://github.com/portabilis/pre-matricula-digital) | **AGPL-3.0** | 35 326 | `fe85f94658bf66de` | 🟢 **LATAM** |
+
+🔴 **Both were `UNRECOGNISED` for one reason: the licence text is in PORTUGUESE** — *"LICENÇA PÚBLICA
+GERAL AFFERO GNU"* — and this KB's classifier was English-only. 🟢 **One text, two repositories,
+byte- and `sha256`-identical (`P1025`).**
+
+🔵 **`i-diario` is a school-diary and academic-management system for Brazilian municipal education
+networks, and `pre-matricula-digital` is its enrolment front door.** 🟡 **AGPL-3.0 means network
+copyleft: a hosted service built on it owes source to its users, which is a structural constraint on
+a managed-service engagement and has to be priced, not discovered late.**
+
+🔵 **Placing note (`P1045`): `i-diario`'s first copyright line reads `Copyright © 2007 Free Software
+Foundation` — that is the LICENCE's copyright, not the project's. It placed LATAM on its README's
+`.com.br`, not on that line.**
+
 **Pass 104, 2026-10-10.** ⏱️ **Fourteenth pass of this date** (101 ran 09:4x–10:xx UTC; 102,
 10:4x–11:xx; this one 12:4x–13:xx). 🟢 **`P1005` applied from the outset — every address below
 carries a full 40-character SHA.** 🔴 **`api.github.com` = `http=403` for unattached repos, measured

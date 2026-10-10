@@ -5,6 +5,14 @@ updated: 2026-10-10
 ---
 
 # Education — market, players and opportunities
+**Pass 106, 2026-10-10.** ⏱️ **Sixteenth pass of this date.** 🟢 **Every regional subsection below
+gains a payload-measured row this pass, and the APAC subsection gains an explicit NEGATIVE rather
+than silence.** 🔵 **Source of the rows: a whole-corpus licence census of all 1 381 addresses this
+repository holds (`compose/code/p1040-ecl-corpus-census/`), not a search.**
+
+🔴 **Figure discipline unchanged (`Gap 386`): every market figure in this file is institutional or
+vendor-sourced, and the regional notes below mark secondary items as secondary.**
+
 **Pass 105, 2026-10-10.** ⏱️ **Fifteenth pass of this date.** 🆕 **All four regions updated: North America gains the corrected permissive tier (38 → 40), EMEA a third-pass channel divergence AND a refutation of the reasoning that placed three of its own rows, APAC a measured fifth saturation, LATAM the resolved holder split (3 placed, 2 unplaceable).** 🔴 **Pass 104's line follows.**
 **Pass 104, 2026-10-10.** ⏱️ **Fourteenth pass of this date** (101 ran 09:4x–10:xx UTC; 102,
 10:4x–11:xx; this one 12:4x–13:xx). 🔴 **All four mandated regional sweeps ran again and all four
@@ -361,6 +369,45 @@ KB: write down what you refused to use, and why.**
 ## Opportunities by region
 
 ### North America
+
+#### 🟢 🆕 p106 — the US higher-education consortium tier is PERMISSIVE, and this KB could not see it until now
+
+🟢 **Measured: 10 corpus rows carry ECL-2.0 — the Educational Community License — across six
+distinct texts, and all 10 are PERMISSIVE.** 🔴 **Every one read `UNRECOGNISED` before this pass,
+because the ECL text names the *"Apache 2.0 license"* in lower case and contains zero occurrences of
+the string `Apache License` that a classifier keyed on the Apache title looks for** (`Gap 398`).
+
+🔵 **What that tier IS, commercially:**
+[`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) (LMS) ·
+[`opencast/opencast`](https://github.com/opencast/opencast) (lecture capture) ·
+[`kuali/rice`](https://github.com/kuali/rice) + [`kualico/rice`](https://github.com/kualico/rice)
+(the Kuali middleware, one byte-identical text at two org names — `P1012`) · and 🟢 **a complete
+permissively-granted learning-analytics pipeline**:
+[`OpenLRS`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS) (learning-record store),
+[`OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) (warehouse),
+[`LearningAnalyticsProcessor`](https://github.com/Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor),
+[`OpenDashboard-api`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-api) and
+`OpenDashboard-legacy`.
+
+🟢 **Opportunity, stated as a build: a US higher-ed analytics engagement has a permissive, five-repo
+starting point that generic licence tooling reports as unclassified — so it is both available and
+under-contested.** 🟡 **Release engineering on these rows is NOT measured (`T29`/`T30` applies), so
+treat them as integrable now and forkable only after a tag sweep.**
+
+🔴 **And the North American restricted tier is the sharper half of the finding** (`T35`):
+`canyongbs/advisingapp` (student advising) is **Elastic-2.0**; `sdv-dev/sdv` is **BUSL-1.1**;
+`dssg/student-early-warning` (University of Chicago) and `workforce-data-initiative/skills-ml` are
+**click-through terms of use**, not licences; `khan/tutoring-accuracy-dataset` carries a bespoke
+evaluation-dataset licence. 🟢 **All five are on the layers a studio reaches for first, and none can
+be embedded in a client deliverable.**
+
+🟡 **Secondary, from this pass's NA sweep and NOT on a shelf page** — one tracker counts **134
+AI-in-education bills introduced across 31 states** in 2026; **Ohio** is reported as the first state
+requiring every K-12 district to adopt a formal AI-use policy, by **2026-07-01**; the **K-12 AI
+Literacy and Readiness Act (H.R. 8747)** advanced in committee on **2026-07-21**; California
+**AB 1159** would bar using student data to train models and Idaho **SB 1227** would mandate privacy
+protections; **NYC** runs a one-year moratorium on student-facing AI through eighth grade. 🔴 **These
+are tracker and aggregator figures, unverified against primary sources.**
 
 #### 🟢 🆕 p105 — the permissive HE platform tier is **larger than this file reported**, and the two rows recovered are governed by a North American foundation
 
@@ -768,6 +815,57 @@ adoption.** 🔴 **So a North America pitch that leads with adoption is pushing 
 regulatory grain; one that leads with governance, auditability and teacher-augmentation is with it.**
 
 ### EMEA
+
+#### 🟢 🆕 p106 — EMEA's public-sector grant tier is FINLAND, and the licence is the EU's own (`T33`)
+
+🟢 **Measured: eight repositories from `opetushallitus` — the Finnish National Agency for Education —
+every one EUPL (six at 1.1, two at 1.2).** 🔴 **All eight read `UNRECOGNISED` to this KB until this
+pass: the EUPL had no branch in the classifier, and it is named by REFERENCE in a 296–654 B payload
+rather than carried as a licence body** (`P742`).
+
+| repository | EUPL | the vertical it is |
+|---|---|---|
+| [`koski`](https://github.com/opetushallitus/koski) | 1.1 | 🔵 **national study-rights + completed-studies registry** |
+| [`eperusteet`](https://github.com/opetushallitus/eperusteet) | 1.1 | 🔵 **national core-curriculum service** |
+| [`ataru`](https://github.com/opetushallitus/ataru) | 1.2 | national admissions |
+| [`ehoks`](https://github.com/opetushallitus/ehoks) | 1.1 | personal competence plans |
+| [`oppijanumerorekisteri`](https://github.com/opetushallitus/oppijanumerorekisteri) | 1.1 | learner-number registry |
+| [`organisaatio`](https://github.com/opetushallitus/organisaatio) | 1.1 | provider registry |
+| [`suorituspalvelu`](https://github.com/opetushallitus/suorituspalvelu) | 1.2 | attainment service |
+| [`valtionavustus`](https://github.com/opetushallitus/valtionavustus) | 1.1 | state-aid administration |
+
+🟢 **Placed EMEA by `P1035`'s rule with the placing string published** — ccTLD `eduuni.fi` on
+`koski`; holder line *"Copyright (c) 2025 Finnish National Agency for Education"* and the nationally
+unique system name `Opetushallitus` on `ataru` — 🔵 **not by the organisation name, which `P1035`
+forbids.**
+
+🟢 **Opportunity: `P106-B` in `compose/patterns.md` costs this as an adopt-and-contribute
+integration.** 🟡 **The EUPL is copyleft with reciprocity and an explicit compatibility list, so
+reading these services over their APIs is free of obligation while forking them is not — a priceable
+quantity, and the reason to measure the grant before an engagement rather than during it.**
+
+🟢 **Germany, corrected in both directions** (`Gap 395`, now corrected a second time):
+
+- 🟢 **the vocabulary tier is NOT uniformly ungranted — [`dini-ag-kim/schulfaecher`](https://github.com/dini-ag-kim/schulfaecher)
+  serves a **CC-family payload of 7 048 B** (placed EMEA by ccTLD `dnb.de`)**;
+- 🔴 **four ontology rows remain grant-less**: `fwu-de/lehrplan-ontologie`,
+  `fwu-de/schulart-ontologie`, `fwu-de/schulfach-ontologie`, `dini-ag-kim/school-curriculum-pg`;
+- 🟢 **and the code tier gains two rows: 🆕 [`fwu-de/mem-mcp`](https://github.com/fwu-de/mem-mcp) is
+  **Unlicense** (1 211 B — public domain, the most permissive row in this KB's EMEA tier) and
+  🆕 [`fwu-de/ais-chat`](https://github.com/fwu-de/ais-chat) is **AGPL-3.0** (34 523 B).**
+
+🟢 **The written grant request stays the cheapest dateable action on this registry, and it is
+STRONGER now: the precedent is two grants from the same two organisations, one of them a
+vocabulary** (`fwu-kc-extensions` Apache-2.0 and `schulfaecher` CC).
+
+🟡 **Secondary, from this pass's EMEA sweep:** the channel reports AI Act enforcement by the AI
+Office and national authorities **from 2026-08-02**, an *"AI omnibus"* package in force
+**2026-07-27**, and the stand-alone high-risk deadline moved to **2027-12-02** — with education uses
+(admissions, assessment, steering learning paths) in **Annex III**. 🔴 **`Gap 241`: this is the
+FOURTH provenance variant across four passes. This KB's verified anchor is `Regulation (EU)
+2026/1744` of 8 July 2026 (three channels, pass 58), and `P505` says a channel reporting a corrected
+claim as current does not re-date the gap.** 🟢 **Design to Annex III obligations regardless of which
+date survives.**
 
 #### 🔴 🆕 p105 — `P1035` invalidates the reasoning that placed EMEA's own supply rows here, and this file says so before a client does
 
@@ -1375,6 +1473,39 @@ duty is the sellable deliverable that is already overdue.**
 
 ### APAC
 
+#### 🔴 🆕 p106 — APAC's visible supply in this corpus is a NON-GRANT tier, and that is stated as a gap
+
+🔴 **An informed negative, measured rather than left silent.** 🟢 **The whole-corpus census
+(1 381 addresses, every payload read) returned **no new permissive APAC education platform** this
+pass. What it did return, under APAC-origin addresses, is restriction:**
+
+| row | measured | note |
+|---|---|---|
+| [`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce) | 🔴 **all-rights-reserved**, 4 117 B | 🔵 served from a file NAMED `LICENSE`, in Chinese (*「保留所有权利」*). `P1029`'s original row, now **named** rather than merely unrecognised |
+| 🆕 [`Earth-OL-Player/Ai_learn_project`](https://github.com/Earth-OL-Player/Ai_learn_project) | 🔴 **PolyForm Noncommercial**, 181 B | 🔵 **declared in Chinese** (*「仅允许非商业用途」*). From pass 105's battery, shelved unprobed; probed now |
+
+🔵 **Both would have read `UNRECOGNISED` and sat beside real grants before this pass. Both are now in
+a `NON-GRANT` bucket that cannot be promoted** (`P1041`, `T35`).
+
+🔴 **So the gap is explicit: this KB holds no measured, permissively-granted APAC-origin education
+PLATFORM.** 🟡 **It is a measurement of this corpus, not a claim about the region — and the corpus is
+assembled from English-language channels, which `P1042`'s language finding shows is itself a source
+of blindness: a Brazilian AGPL row was invisible for exactly that reason until the classifier
+stopped being English-only.** 🟢 **Pre-registered consequence: an APAC sweep that reads
+non-English licence payloads is worth more than another English-language search.**
+
+🟡 **Secondary, from this pass's APAC sweep — the regulatory layer is moving faster than the supply
+this KB can see:** South Korea's **AI Basic Act took effect 2026-01-22**, naming education among
+"high-impact" sectors; **Vietnam's AI law was enacted 2026-03-01**, with education on its high-risk
+list including automated assessment and behavioural monitoring; **Taiwan** passed an AI Basic Act in
+December 2025; **Singapore and Japan** rely on voluntary guidance backed by existing law, and
+Singapore leads the ASEAN Working Group on AI Governance. 🔴 **Sources are law-firm and consultancy
+trackers that disagree on dates; unverified against primary instruments.**
+
+🟢 **Commercial reading: in APAC the binding constraint on an education engagement is more likely to
+be a named national statute than a licence** — the inverse of EMEA, where this pass found the
+licence to be the thing nobody could read.
+
 #### 🔴 🆕 p105 — the APAC sweep returned **nothing this file does not hold**, and that is the fifth consecutive pass
 
 🟢 **The regional query ran and every hit was `grep`-checked against the live corpus rather than
@@ -1955,6 +2086,49 @@ the permission argument first — except in ANZ, where it does.** 🔴 **That is
 North America posture recorded above, and the two pitches should not share a slide.**
 
 ### LATAM
+
+#### 🟢 🆕 p106 — a Brazilian municipal SIS this KB already held and could not read, because the licence is in Portuguese
+
+🟢 **Measured: two `portabilis` repositories, both AGPL-3.0, both carrying ONE byte-identical text —
+35 326 B, `sha256` `fe85f94658bf66de`** (`P1025` satisfied):
+
+| repository | licence | what it is |
+|---|---|---|
+| 🆕 [`portabilis/i-diario`](https://github.com/portabilis/i-diario) | **AGPL-3.0** | 🔵 school-diary and academic-management system for **Brazilian municipal education networks** |
+| 🆕 [`portabilis/pre-matricula-digital`](https://github.com/portabilis/pre-matricula-digital) | **AGPL-3.0** | its enrolment front door |
+
+🔴 **Both read `UNRECOGNISED` until this pass for one reason: the licence text is in Portuguese —
+*"LICENÇA PÚBLICA GERAL AFFERO GNU"* — and this KB's classifier was English-only.** 🟢 **That is a
+measured blindness with a regional bias built into it: the families this KB could see were the ones
+written in English.**
+
+🟢 **Placed LATAM by `P1035`'s rule: ccTLD `com.br` in the project's own README.** 🔴 **NOT by its
+first copyright line, which reads `Copyright © 2007 Free Software Foundation` — the LICENCE text's
+own copyright, not the project's** (`P1045`). 🔵 **A holder reader that trusted that line would place
+every AGPL row in this corpus in Boston.**
+
+🟡 **Opportunity, with the constraint priced in: `i-diario` is a real, deployed municipal SIS and a
+credible starting point for a Brazilian public-sector engagement.** 🔴 **AGPL-3.0 is NETWORK
+copyleft: a hosted service built on it owes source to its users.** 🟢 **For a municipal client that
+is frequently acceptable or even desirable; for a managed-service model it is a structural
+commitment that must be priced at proposal time, not discovered at delivery.**
+
+🟢 **And one LATAM row joins the permissive tier from the manifest limb:
+🆕 [`sidneybissoli/educabr`](https://github.com/sidneybissoli/educabr) declares **`MIT + file
+LICENSE`** in its R `DESCRIPTION`** — its 61 B `LICENSE` holds only `YEAR:` and `COPYRIGHT HOLDER:`,
+so a root-`LICENSE`-only census read it as unrecognised.
+
+🟡 **Secondary, from this pass's LATAM sweep:** UNESCO IESALC's study of **200 higher-education
+institutions across 19 countries** reports **87 % using AI in at least one area** against only
+**26 % with a formal AI strategy**; the Digital Education Council's LATAM survey reports **92 % of
+students and 79 % of faculty** engaging with AI, with **88 % of faculty at "minimal" to "moderate"**
+depth; **Uruguay** was the first in the region to sign the Council of Europe's Framework Convention
+(2025) and **Colombia** adopted national AI policy via **CONPES 4144**; UNESCO launched its LAC
+**Observatory on AI in Education on 2026-04-14** with CAF, CENIA (Chile), CETIC.br (Brazil), ECLAC,
+Tecnológico de Monterrey, ProFuturo and Fundación Ceibal (Uruguay).
+
+🟢 **The commercial reading is the 87 %/26 % gap: adoption is ahead of governance across the region,
+and governance is a deliverable Globant can sell against a measured baseline.**
 
 #### 🟢 🆕 p105 — the holder split is RESOLVED: LATAM's ungranted supply is **3 measured rows**, not the 5 pass 104 would not claim
 

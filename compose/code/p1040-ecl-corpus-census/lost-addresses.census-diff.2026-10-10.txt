@@ -1,0 +1,66 @@
+pass1 rows=1381  pass2 rows=1381
+
+rows whose family changed: 43
+  UNRECOGNISED -> AGPL-3.0: 6
+      ankitects/anki
+      kuali/kfs
+      loventures/loplatform
+      portabilis/i-diario
+      ... +2
+  UNRECOGNISED -> EUPL-1.1: 6
+      opetushallitus/ehoks
+      opetushallitus/eperusteet
+      opetushallitus/koski
+      opetushallitus/oppijanumerorekisteri
+      ... +2
+  UNRECOGNISED -> BESPOKE-TOU: 4
+      asthetech/mewcp-google-classroom
+      dssg/student-early-warning
+      khan/tutoring-accuracy-dataset
+      workforce-data-initiative/skills-ml
+  UNRECOGNISED -> ALL-RIGHTS-RESERVED: 4
+      brahm-ai-official/brahm-ai
+      marsley01/edyfra
+      nirholas/ai-tutor-mcp
+      yuanjiusheng/cloud-learning-ce
+  UNRECOGNISED -> GPL-3.0: 3
+      dequelabs/axe-core
+      pawtograder/assignment-action
+      pawtograder/platform
+  Apache-2.0 -> ALL-RIGHTS-RESERVED: 3
+      huggingface/transformers
+      masakhane-io/masakhane-ner
+      mlflow/mlflow
+  UNRECOGNISED -> Elastic-2.0: 2
+      canyongbs/advisingapp
+      sodadata/soda-core
+  UNRECOGNISED -> LGPL-3.0: 2
+      espoon-voltti/evaka
+      untisapi/untis4j
+  UNRECOGNISED -> GPL-2.0: 2
+      idempiere/idempiere
+      torvalds/linux
+  UNRECOGNISED -> EUPL-1.2: 2
+      opetushallitus/ataru
+      opetushallitus/suorituspalvelu
+  UNRECOGNISED -> ISC: 1
+      aryankeluskar/canvas-mcp
+  UNRECOGNISED -> CC0-1.0: 1
+      caramaschihg/awesome-ai-agents-2026
+  MIT -> BESPOKE-TOU: 1
+      caviraoss/pagelm
+  UNRECOGNISED -> PolyForm-NC: 1
+      digillab-lmu/smart-rag
+  ABSENT -> MIT: 1
+      expressjs/express
+  UNRECOGNISED -> PolyForm-Strict: 1
+      minouza/mathcrew
+  UNRECOGNISED -> OSL-3.0: 1
+      openmage/magento-lts
+  UNRECOGNISED -> BUSL: 1
+      sdv-dev/sdv
+  UNRECOGNISED -> 0BSD: 1
+      trilogy-group/oneroster-ts
+
+status drift between the two runs (network variance, NOT a finding): 1
+  LIVE-NOCONTROL -> LIVE: 1

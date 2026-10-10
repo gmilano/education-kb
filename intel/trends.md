@@ -5,6 +5,76 @@ updated: 2026-10-10
 ---
 
 # Education — current trends
+**Pass 106, 2026-10-10.** ⏱️ **Sixteenth pass of this date.** 🟢 **Three trends added, each from a
+measurement made this pass rather than from a channel.**
+
+## 🔴 `T33` — the licence of EMEA's public education infrastructure is the EU's own, and permissive-first tooling is blind to it
+
+🟢 **Measured: eight repositories from `opetushallitus` — the Finnish National Agency for Education —
+and all eight are EUPL (six at 1.1, two at 1.2).** 🔴 **Every one of them read `UNRECOGNISED` to this
+KB until this pass, because the EUPL had no branch in the classifier and is named by REFERENCE in a
+296–654 B payload rather than carried as a licence body** (`P742`).
+
+🔵 **What is behind those eight addresses is not a side project: `koski` is the national
+study-rights and completed-studies registry, `eperusteet` the national core-curriculum service,
+`ataru` national admissions, `oppijanumerorekisteri` the national learner-number registry.** 🟢 **A
+complete national education data stack, publicly licensed.**
+
+🔴 **The trend is not "Finland publishes code". It is that the grant tier of EMEA public education
+is a family that MIT/Apache/BSD tooling cannot see** — so a scan built on a permissive allow-list
+reports EMEA as grant-less and is wrong in the most expensive direction. 🟡 **The EUPL is copyleft,
+with reciprocity and an explicit compatibility list, so the tier is adopt-and-contribute rather than
+embed-and-keep. That is a pricing input, not a disqualification.**
+
+**Signal**: 🟢 **`Gap 395` answered from an angle it never considered.** Pass 104 read EMEA public
+supply as *"ships releases and does not grant"*; it grants, under the EU's own licence.
+
+## 🔴 `T34` — Moodle's AI subsystem has **zero** package-channel presence
+
+🟢 **Measured on `packagist.org`, a channel opened this pass (`moodle.org` remains `http=000`):**
+🔴 **`moodle-aiprovider` = 0 packages and `moodle-aiplacement` = 0 packages** — the two plugin types
+Moodle's **own** AI subsystem defines — against **159 packages across 21 older types**
+(`moodle-local` 33, `moodle-tool` 27, `moodle-block` 24, `moodle-mod` 22).
+
+🔵 **And the licence composition of those 159 is uniform: all 143 that declare a licence at
+all declare the GPL-3 family. Not one is permissive.** 🟢 **`P1033`/`T30` — the copyleft frontier is
+the plugin tree — was carried on seven rows and now rests on 143 without exception.**
+
+🟢 **The commercial reading, and it is the firmest in this file: the LMS→agent seam is a Globant
+DELIVERABLE, not a dependency.** 🔵 **`T28` said so from the MCP layer's licence scarcity; `T34` says
+it from the opposite direction — the platform vendor defined the extension point and nobody has
+shipped into it through the package channel.** 🔴 **An AI capability mounted INSIDE Moodle is
+greenfield and will be GPL-3; one mounted beside it keeps whatever licence is chosen. Where the code
+is mounted decides the licence, and that is not negotiable** (`verticals/solutions.md`).
+
+## 🔴 `T35` — the restricted tier of education software is real, named, and clusters on exactly the high-value layers
+
+🟢 **The whole-corpus census gave the classifier a bucket it never had — `NON-GRANT`, for a payload
+that resolves 200 and grants nothing — and found 13 rows.** 🔵 **They are not a long tail of hobby
+projects. They sit on the layers a studio reaches for first:**
+
+| layer | row | terms |
+|---|---|---|
+| student advising | [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 **Elastic-2.0** |
+| synthetic data | [`sdv-dev/sdv`](https://github.com/sdv-dev/sdv) | 🔴 **BUSL-1.1** |
+| data quality | [`sodadata/soda-core`](https://github.com/sodadata/soda-core) | 🔴 **Elastic-2.0** |
+| early warning | [`dssg/student-early-warning`](https://github.com/dssg/student-early-warning) | 🔴 **click-through terms of use** |
+| skills extraction | [`workforce-data-initiative/skills-ml`](https://github.com/workforce-data-initiative/skills-ml) | 🔴 **click-through terms of use** |
+| tutoring evaluation | [`khan/tutoring-accuracy-dataset`](https://github.com/khan/tutoring-accuracy-dataset) | 🔴 **bespoke dataset licence** |
+| RAG for teaching | [`digillab-lmu/smart-rag`](https://github.com/digillab-lmu/smart-rag) | 🔴 **PolyForm Noncommercial** |
+
+🔵 **Two properties make this a trend rather than a list.** 🟢 **First, all 13 were sitting in
+`UNRECOGNISED` BESIDE real grants, so a census that reports an unreadable payload as merely unknown
+puts a commercial bar and a permissive grant in the same bucket.** 🔴 **Second, the restriction is
+increasingly NOT a licence a tool recognises: Elastic 2.0, BUSL and PolyForm are source-available
+rather than open source, and two of the 13 are bare click-through terms with no licence identity at
+all.**
+
+🟢 **Mitigation, and it is cheap: the restriction check must run BEFORE any grant branch and must be
+challenged by a declared-grant test** (`P1041`). 🔵 **Measured consequence of getting that order
+wrong, in this very pass: a generic "All rights reserved" branch demoted `huggingface/transformers`,
+`mlflow/mlflow` and `masakhane-ner` — three real Apache-2.0 rows — to non-grant.**
+
 **Pass 105, 2026-10-10.** ⏱️ **Fifteenth pass of this date.** 🆕 **31 trend sections — `T1`–`T32`, with `T26` refuted in pass 103, `T28`–`T30` added in pass 104 and `T31`–`T32` added here.** 🔴 **`T29` is flagged for re-measurement by `T31`: it was derived with a classifier that cannot see this industry's own licence.**
 🟢 **`T27` is new.** 🔴 **`T26` is AMENDED — half of it is refuted, and the refutation is regional.**
 

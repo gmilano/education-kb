@@ -22,6 +22,166 @@ education-kb/
 └── compose/code/  # Código ejecutable y probado, no prosa
 ```
 
+## Pase 106 — 2026-10-10
+
+⏱️ **Decimosexto pase de esta fecha** (el 105 corrió 14:4x–15:xx UTC; este, 15:4x–16:xx).
+
+🟢 **`Gap 398` queda CERRADO, y cerrarlo multiplicó por cinco su propio hallazgo.** El pase 105 lo
+abrió, escribió el remedio (`classify_ecl`) y lo dejó **al lado** del instrumento en vez de dentro.
+🔵 **Su propia pista #1 lo decía: «el remedio existe y todavía no está en el instrumento; la sonda de
+99 direcciones encontró 2 filas permisivas sin contar y el corpus tiene 1 400+».** 🟢 **Cableado y
+auditado: el corpus tiene **10**, no 2** — 🔵 **`P1047`: una ceguera medida sobre una muestra da un
+PISO, nunca una estimación, porque ECL se agrupa en los repositorios de un solo consorcio.**
+
+🟢 **Instrumento nuevo, ESCRITO Y EJECUTADO en este pase:**
+`compose/code/p1040-ecl-corpus-census/` — `test_p1040.sh` **82 pasaron, 0 fallaron**;
+`census.sh corpus-addresses.2026-10-10.txt 8` → **1 381 filas en 2 m 22 s, stderr vacío**.
+🔵 **`P1028` se sostiene un CUARTO pase.**
+
+| medida | valor |
+|---|---|
+| direcciones del corpus medidas | 🟢 **1 381** |
+| con payload de licencia | 🟢 **1 084** |
+| permisivas | 🟢 **804** |
+| copyleft | 199 |
+| familia CC | 51 |
+| 🔴 payload que **no es una concesión** — nombrado, nunca promocionable | 🔴 **13** |
+| 🟡 sin leer (`Gap 401`) | 🟡 **17** |
+| resuelven y **no sirven payload** (control 200 limpio) | 🔴 **233** |
+| `ABSENT` / sin control / 🔴 **throttled `429`** | 38 / 25 / 🔴 **1** |
+
+🟢 **804 + 199 + 51 + 13 + 17 = 1 084. Reconcilia hasta la última fila.**
+
+### 🔴 `T33` — la licencia de la infraestructura educativa pública de EMEA es la de la propia UE, y el tooling permissive-first es ciego a ella
+
+🟢 **Medido: ocho repositorios de `opetushallitus` — la Agencia Nacional de Educación de Finlandia —
+y los ocho son EUPL** (seis 1.1, dos 1.2). 🔴 **Los ocho leían `UNRECOGNISED` en esta base hasta este
+pase**, porque la EUPL no tenía rama en el clasificador y se nombra **por referencia** en un payload
+de 296–654 B en vez de llevar el cuerpo de la licencia (`P742`).
+
+🔵 **Lo que hay detrás de esas ocho direcciones no es un proyecto lateral: `koski` es el registro
+nacional de derechos de estudio y estudios completados, `eperusteet` el servicio nacional de
+currículo básico, `ataru` las admisiones nacionales, `oppijanumerorekisteri` el registro nacional de
+número de aprendiz.** 🟢 **Un stack nacional completo de datos educativos, con concesión pública.**
+
+🟢 **Y responde a `Gap 395` desde un ángulo que el gap nunca consideró.** 🔴 **El pase 104 leyó la
+oferta pública de EMEA como «publica releases y no concede». Concede — bajo la licencia de la propia
+UE — y un barrido construido sobre una allow-list permisiva no puede verlo.** 🟡 **La EUPL es
+copyleft con reciprocidad, así que la capa es *adoptar y contribuir*, no *embeber y guardar*: eso es
+un dato de pricing, no una descalificación.**
+
+### 🔴 `T34` — el subsistema de IA de Moodle tiene CERO presencia en el canal de paquetes
+
+🟢 **`packagist.org` = 200: canal NUEVO, abierto en este pase, y es la respuesta a la pista #6 del
+105** (`moodle.org` sigue en `http=000`, `Gap 399`).
+
+🔴 **`moodle-aiprovider` = 0 paquetes. `moodle-aiplacement` = 0 paquetes** — los dos tipos de plugin
+que define el **propio** subsistema de IA de Moodle — 🔵 **contra 159 paquetes en 21 tipos más
+antiguos.** 🔴 **Y los 143 que declaran licencia declaran TODOS la familia GPL-3. Ni uno es
+permisivo.** 🟢 **`T30`/`P1033` — «la frontera del copyleft es el árbol de plugins» — venía sobre
+SIETE filas; ahora descansa sobre 143 y se sostiene sin excepción.**
+
+🟢 **Lectura comercial, la más firme de esta base: la costura LMS→agente es un ENTREGABLE de
+Globant.** 🔵 **`T28` lo decía desde la escasez de licencias en la capa MCP; `T34` lo dice desde el
+lado opuesto — el proveedor definió el punto de extensión y nadie ha publicado en él por el canal de
+paquetes.** 🔴 **Código montado DENTRO de Moodle es greenfield y será GPL-3; montado al lado,
+conserva la licencia que se elija. Dónde se monta decide la licencia, y eso no se negocia.**
+
+### 🔴 `T35` — la capa restringida es real, está nombrada, y se agrupa en las capas de más valor
+
+🟢 **El clasificador ganó un bucket que no existía: `NON-GRANT`, para un payload que resuelve 200 y
+no concede nada. 13 filas.** 🔵 **Antes de este pase las 13 estaban en `UNRECOGNISED`, el mismo
+bucket que una concesión permisiva que el clasificador simplemente no supo nombrar.**
+
+🔴 **No son cola larga: `canyongbs/advisingapp` (asesoría estudiantil) es Elastic-2.0;
+`sdv-dev/sdv` es BUSL-1.1; `sodadata/soda-core` es Elastic-2.0; `dssg/student-early-warning` y
+`workforce-data-initiative/skills-ml` son términos de uso de click-through, no licencias;
+`digillab-lmu/smart-rag` es PolyForm Noncommercial.**
+
+🟢 **Y la verificación vale más que la lista: las 13 ya estaban caracterizadas como inutilizables en
+la prosa de esta base.** 🔵 **13 advertencias escritas a mano a lo largo de muchos pases, 13 filas
+derivadas por código, las mismas 13** — `p963` satisfecho para la capa restringida.
+
+### 🔴 Tres regresiones en el código del PROPIO instrumento, halladas DIFEANDO DOS CORRIDAS DEL CENSO
+
+1. 🔴 **`"Educational Community License"` CONTIENE `"Community License"`**, así que la rama de
+   no-concesión se tragó las 10 filas ECL: **el arreglo de `Gap 398` se invirtió en un error peor
+   que el que reparaba.**
+2. 🔴 **Una fórmula de copyright degradó tres filas Apache-2.0 reales** —
+   `huggingface/transformers`, `mlflow/mlflow`, `masakhane-io/masakhane-ner` llevan un
+   `All rights reserved` convencional encima del texto Apache completo. 🟢 **Esa rama genérica ya no
+   existe: es una fórmula de copyright, no una restricción, y aparece dentro de avisos BSD, que SÍ
+   son concesiones.**
+3. 🔴 **MPL-2.0 leída como GPL-3.0**: la sección 3.3 de la MPL **nombra** la GPL/LGPL/AGPL como
+   *Secondary Licenses*, así que 15 921 B de MPL pura (`dequelabs/axe-core`) activaron la rama GNU.
+
+🟢 **Las tres tienen ahora un test contra el payload real que las produjo** (`fixtures/`).
+🔵 **Y el arreglo necesitó un TERCER intento, que es `P1042`: el título ECL aparece cinco veces en el
+payload de Sakai y la quinta se PARTE en dos líneas, así que un strip sobre la forma sin partir dejó
+un `Community License` suelto — ECL volvió a salir CONFLICT por UN SALTO DE LÍNEA.**
+
+### 🔴 Y dos en su propia fontanería — un silencio contado como dato, dos veces
+
+🔴 **`probe_one` corre dentro de un subshell de `xargs`, así que toda función que llama debe estar en
+`export -f`. Dos veces en este pase una no estaba.** 🔴 **La primera, 1 077 filas publicaron una
+licencia VACÍA que tabuló como `UNREAD`** — 🔵 **el modo de fallo de `Gap 398` en estado puro, un
+silencio contado como dato, producido por la fontanería y no por ningún texto de licencia.**
+🔴 **La segunda, la guarda escrita para cazar exactamente eso **también lo pasó por alto**, porque
+guardaba su propia copia de la misma lista.**
+
+🟢 **Arreglado en la raíz (`P1044`): la lista de exports se DERIVA de `classify.sh` y la guarda
+RECHAZA emitir filas si alguna función no es visible a un shell hijo.** 🔵 **Verificado quitando un
+export: `REFUSING TO RUN: classify_payload is defined but not exported…`, exit 2.**
+
+### 🟢 La ruta de sondeo es más barata Y está calibrada
+
+🟢 **`raw.githubusercontent.com` sirve el ref literal `HEAD`**, así que el `git ls-remote --symref`
+por dirección que gastaba `p1029` sólo para aprender el nombre de la rama por defecto es innecesario
+— 🔵 **y el caso que rompería un nombre adivinado es real: `sakaiproject/sakai` responde **200 en
+`HEAD`** y **404 en `main`**, porque su default es `master`.** 🟢 **99 direcciones en 13 s; el corpus
+completo en 2 m 22 s.** 🔵 **`ls-remote` se conserva como DESEMPATE del veredicto `ABSENT`.**
+
+```
+compared=99 agree=92 recovered_by_ecl=2 disagree=5
+```
+
+🟢 **Las 92 coinciden byte a byte y hash a hash. Las 2 recuperadas son EXACTAMENTE las dos filas que
+el pase 105 predijo** — 🔵 **un segundo instrumento confirmando la corrección 38 → 40 del 105.**
+🟡 **Las 5 «discrepancias» son las 5 filas `ABSENT` y son una diferencia de ORTOGRAFÍA, no de
+respuesta** (`p1029` escribe `-` donde este limbo escribe `ABSENT`); registrado para que el próximo
+pase no lo re-investigue.
+
+### 🔵 Principios nuevos: `P1040`–`P1047`
+
+- **`P1040`** — 🔴 **un remedio que vive AL LADO del instrumento no es un remedio.** `classify_ecl`
+  corrió sobre 4 direcciones en el pase 105; cableado al censo recuperó **10**.
+- **`P1041`** — 🔴 **una rama de restricción nunca debe disparar sin desafío sobre un payload que
+  DECLARA una familia de concesión conocida.** Donde ambas están, la respuesta es
+  `GRANT+RESTRICTION-CONFLICT` para lectura a mano, no una elección silenciosa.
+- **`P1042`** — 🔴 **hay que emparejar texto de licencia sobre espacios APLANADOS.** Los archivos de
+  licencia vienen partidos a ~72 columnas, así que cualquier patrón de varias palabras puede cruzar
+  un salto de línea.
+- **`P1043`** — 🔴 **una licencia que REFERENCIA otra familia debe resolverse ANTES que la familia
+  que referencia.** El mismo peligro que `classify_payload` ya documenta para AFFERO-antes-de-GPL,
+  un nivel más arriba — y alcanzó una fila real.
+- **`P1044`** — 🔴 **una guarda sobre una lista mantenida a mano falla exactamente en el caso para el
+  que existe.** Derivar la lista del archivo fuente.
+- **`P1045`** — 🔴 **la línea de copyright DENTRO de un payload copyleft es el copyright de la
+  LICENCIA, no del PROYECTO.** Leerla como titular pone a la Free Software Foundation, de Boston,
+  detrás de las 199 filas copyleft del corpus.
+- **`P1046`** — 🔴 **un campo de licencia declarada es texto libre.** `GPL-3.0-or-later` (136),
+  `GPL-3.0+` (5) y `GPLv3` (2) son tres ortografías de una concesión.
+- **`P1047`** — 🟢 **una muestra subestima una ceguera en proporción a cuán AGRUPADA está la familia
+  ciega.** ECL: 2 de 99 muestreadas, 10 de 1 381 sostenidas.
+
+### 🟢 Pistas pre-registradas para el pase siguiente
+
+🔵 **Las siete están en `intel/open-gaps.md` con su justificación.** 🔴 **La primera es la que más
+pesa: medir `Gap 400` — re-correr el censo con `classify_payload` emparejando sobre texto APLANADO y
+difear contra `result.corpus.2026-10-10.tsv`.** 🟢 **El instrumento, el corpus y el comparador ya
+existen; es una bandera y un diff.** 🔴 **`P1042` se midió sobre UN payload; el conteo a escala de
+corpus es desconocido, y once pases de composición publicada dependen de él.**
+
 ## Pase 104 — 2026-10-10
 
 ⏱️ **Decimocuarto pase de esta fecha** (el 103 corrió 12:4x–13:xx UTC; este, 13:4x–14:xx).

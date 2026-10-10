@@ -6,6 +6,67 @@ updated: 2026-10-10
 
 # Education — AI agents shelf
 
+**Pass 106, 2026-10-10.** ⏱️ **Sixteenth pass of this date** (103: 12:4x–13:xx UTC; 104:
+13:4x–14:xx; 105: 14:4x–15:xx; this one 15:4x–16:xx).
+
+🟢 **Instrument written and executed this pass: `compose/code/p1040-ecl-corpus-census/` —
+`test_p1040.sh` 82 passed / 0 failed; `census.sh` read 1 381 addresses in 2 m 22 s with empty
+stderr.** 🔵 **`P1028` holds a fourth pass.** 🔴 **`api.github.com` = `http=403` for a fourteenth
+consecutive pass, which is why every ★ below is `—`: unread, never zero.**
+
+### 🟢 🆕 p106 — this page's own warnings, re-derived MECHANICALLY, and they agree **13 of 13**
+
+🔵 **The whole-corpus census (`Gap 398`) gave the classifier a bucket it never had: `NON-GRANT`, for
+a payload that resolves 200 and grants nothing.** 🟢 **It found 13 such rows. Every one of the 13 is
+ALREADY characterised as unusable in this KB's prose** — `dssg/student-early-warning` as *"not
+OSI-licensed"*, `skills-ml` as *"do NOT start from"*, `cloud-learning-ce` as all-rights-reserved
+(`P1029`), the Elastic and PolyForm rows as commercial bars in `agents/trending.md`.
+
+🟢 **So this is an AGREEMENT, not a correction, and it is the first time the restriction tier has
+been derived by code rather than by hand:** 13 hand-written warnings accumulated over many passes,
+13 rows found mechanically, the same 13. 🔵 **`p963`'s shelf-licence-agreement gate, satisfied for
+the restricted tier.**
+
+🔴 **The commercially load-bearing half:** `canyongbs/advisingapp` — a **student-advising platform** —
+is Elastic-2.0; `sdv-dev/sdv` (synthetic data) is BUSL-1.1; `sodadata/soda-core` (data quality) is
+Elastic-2.0. 🟡 **All three are infrastructure a studio reaches for by reflex, and none can be
+embedded in a client deliverable.**
+
+### 🟢 🆕 p106 — three agent-layer rows measured, and only one is takeable
+
+| row | licence | bytes | verdict |
+|---|---|---|---|
+| 🆕 [`fwu-de/mem-mcp`](https://github.com/fwu-de/mem-mcp) | 🟢 **Unlicense** | 1 211 | 🟢 **TAKEABLE — public domain.** An MCP server from the German federal education-media institute; 🔵 **the single most permissive row in this KB's EMEA tier** |
+| 🆕 [`frdel/agent-zero`](https://github.com/frdel/agent-zero) | 🟢 MIT | 1 150 | 🟡 **permissive but OFF-INDUSTRY** — a general Dockerised agent framework, no education surface. 🔵 **`P1023` predicted it; the probe settles it** |
+| 🆕 [`Earth-OL-Player/Ai_learn_project`](https://github.com/Earth-OL-Player/Ai_learn_project) | 🔴 **PolyForm Noncommercial** | 181 | 🔴 **NOT takeable.** 🔵 **Declared in Chinese** (*「仅允许非商业用途」*) in a 181 B `LICENSE.md` — a row that three passes ago read `UNRECOGNISED` and sat beside real grants |
+
+🔵 **All three came from pass 105's battery, which shelved them as "secondary-only, none probed".
+They are probed now, and the pattern is `P1023`'s: a search surfaces permissive rows that are not
+education, and education rows that are not permissive.**
+
+### 🔴 🆕 p106 — the agent/MCP layer's licence composition, measured across the whole corpus
+
+🔵 **1 381 addresses, every payload read (`P1005`), buckets named by PROPERTY (`P1037`):**
+
+| bucket | rows |
+|---|---|
+| permissive | 🟢 **804** |
+| copyleft | 199 |
+| CC family | 51 |
+| 🔴 **not a grant** | 🔴 **13** |
+| 🟡 unread (`Gap 401`) | 🟡 **17** |
+| **total with a payload** | **1 084** |
+
+🟢 **804 + 199 + 51 + 13 + 17 = 1 084 — it reconciles.** 🔴 **Beside it: 233 rows resolve and serve
+NO licence payload at eleven filenames with a clean 200 control**, 38 `ABSENT`, 25 without a
+control, and 🔴 **1 `THROTTLED`** (`appliedrelevance/frappe_mcp_server`, `429` — reported as
+**unmeasured**, never as absent; `Gap 388`).
+
+🔵 **`T28` is unmoved and now has a second channel behind it (`T34`, `intel/trends.md`): Moodle's own
+AI-subsystem plugin types — `moodle-aiprovider` and `moodle-aiplacement` — return **ZERO** packages
+on `packagist.org` against 159 across 21 older types.** 🟢 **The LMS→agent seam is a Globant
+deliverable, measured twice by two instruments on two channels.**
+
 **Pass 104, 2026-10-10.** ⏱️ **Fourteenth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:
 00:4x–01:3x; 93: 01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; 98:
 06:4x–07:xx; 99: 07:4x–08:xx; 100: 08:4x–09:xx; 101: 09:4x–10:xx; 102: 10:4x–11:xx; this one

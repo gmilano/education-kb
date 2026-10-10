@@ -1,0 +1,11 @@
+dini-ag-kim/school-curriculum-pg
+dini-ag-kim/schulfaecher
+fwu-de/ais-chat
+fwu-de/fwu-kc-extensions
+fwu-de/lehrplan-ontologie
+fwu-de/mem-mcp
+fwu-de/schulart-ontologie
+fwu-de/schulfach-ontologie
+opetushallitus/koski
+opetushallitus/ataru
+portabilis/i-diario

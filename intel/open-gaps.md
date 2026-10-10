@@ -4,6 +4,354 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 🟢 Hundred-and-sixth pass, 2026-10-10 — **pass 105's lead #1 discharged, and wiring the remedy in multiplied its own finding five-fold**: `Gap 398` CLOSED (ECL wired into the census; **10** recovered rows, not the 2 the sample showed) and ECL turns out to be **one blind spot of six**; `Gap 399` PARTLY DISCHARGED — `packagist.org` reaches the Moodle plugin layer and `P1033` now rests on **143 rows, not 7**; `Gap 400`/`Gap 401` opened; `T33`–`T35` and `P1040`–`P1047` adopted; **three regressions found in this instrument's own code and two in its own plumbing**
+
+⏱️ **Sixteenth pass of this date.** 91: 2026-10-09 23:0x–00:00 UTC · 92: 00:4x–01:3x · 93:
+01:4x–02:24 · 94: 02:5x · 95: 03:4x · 96: 04:4x–05:xx · 97: 05:4x–06:xx · 98: 06:4x–07:xx ·
+99: 07:4x–08:xx · 100: 08:4x–09:xx · 101: 09:4x–10:xx · 102: 10:4x–11:xx · 103: 12:4x–13:xx ·
+104: 13:4x–14:xx · 105: 14:4x–15:xx · this pass 15:4x–16:xx. **Append-only.**
+
+🟢 **Instrument written and executed: `compose/code/p1040-ecl-corpus-census/`.**
+`test_p1040.sh` **82 passed, 0 failed**; `census.sh corpus-addresses.2026-10-10.txt 8` →
+**1 381 rows in 2 m 22 s, stderr empty**. 🔵 **`P1028` holds a FOURTH pass: a freshly authored
+instrument runs; the back catalogue is still refused.**
+
+### 🔴 The channel ledger — probed per host, and a NEW channel opens
+
+| channel | state this pass | evidence |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 **OPEN**, `http=200` | ~7 000 requests carried the census; 🔴 **exactly 1 of 1 381 rows came back `429`** |
+| `git ls-remote --symref` | 🟢 **OPEN** | kept only as the ABSENT tie-breaker (`P1040`) |
+| 🆕 **`packagist.org`** | 🟢 **OPEN**, `http=200` | 🟢 **answers pass 105's lead #6.** 46 types enumerated, 159 packages read |
+| 🆕 **`repo.packagist.org`** | 🟢 **OPEN**, `http=200` | every declared licence read through it |
+| `pypi.org` | 🟢 **OPEN**, `http=200` | unchanged since pass 93 |
+| `api.github.com` | 🔴 **`http=403`** | 🔵 fourteenth consecutive pass; the cause of every `—` in a ★ column |
+| `moodle.org` | 🔴 **`http=000`** | 🔵 `Gap 399` unchanged on its own host; re-probed, same quoted cause |
+| WebSearch (secondary) | 🟢 **OPEN** | 8 queries ran — 4 global, 1 per region |
+| repository code execution | 🔴 **REFUSED** | 🟢 in-pass code execution **OPEN** (`P1028`) |
+
+### 🟢 `Gap 398` CLOSED — and the sample understated the blindness FIVE-FOLD
+
+🔵 **Pass 105's lead #1, verbatim: "`Gap 398` is open precisely because the remedy exists and is not
+yet in the instrument. The 99-address probe found 2 uncounted permissive rows; the corpus is 1 400+
+addresses and has never been audited for this."**
+
+🟢 **Wired and audited. The corpus holds 10 ECL rows, carrying SIX distinct texts** — pass 105 had
+pinned four across six repositories:
+
+| text (`sha256`-16) | bytes | repositories |
+|---|---|---|
+| `0688f62d04f14e4b` | 11 120 | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) |
+| `76a975068930323e` | 11 340 | [`opencast/opencast`](https://github.com/opencast/opencast) |
+| `a9ea5cca8da2c8d5` | 11 087 | `lap-sakai-extractor`, 🆕 **`openlrs`** |
+| `fb10d1260ddc8dff` | 9 919 | `LearningAnalyticsProcessor`, `OpenDashboard-api`, `OpenDashboard-legacy` |
+| 🆕 **`f339063d2f604ce9`** | 9 878 | 🆕 **`openlrw`** |
+| 🆕 **`d4db8f22f8d564eb`** | 11 182 | 🆕 **[`kuali/rice`](https://github.com/kuali/rice), [`kualico/rice`](https://github.com/kualico/rice)** — ONE text at two org names (`P1012`) |
+
+🔴 **And the blind spot was never only ECL.** `unread.sh` read all 54 `UNRECOGNISED` payloads, as
+`P1036` requires. 🟢 **Five further mechanisms, each of which had put a real grant in NO bucket:**
+
+| mechanism | rows | what defeated the classifier |
+|---|---|---|
+| 🔴 **EUPL** — the EU's own licence, in no branch at all | 🔴 **8** | named by **reference** in 296–654 B, never as a body (`P742`) |
+| **case** | 4 | `GNU Affero General Public License` in title case; branches key on the ALL-CAPS title |
+| **punctuation** | 1 | `Mozilla Public License, version 2.0` — one comma, one lowercase `v` |
+| 🔴 **language** | 2 | `LICENÇA PÚBLICA GERAL AFFERO GNU` — the classifier is English-only |
+| **manifest** | 5 | `LICENSE` holds 45–108 B of `YEAR:` / `COPYRIGHT HOLDER:`; the grant is in `DESCRIPTION` |
+| 🔴 **non-grant** | 🔴 **13** | Elastic 2.0, BUSL, PolyForm, bespoke click-through terms — **sitting in `UNRECOGNISED` beside real grants** |
+
+🟢 **The corrected census, buckets named by PROPERTY (`P1037`):**
+
+| bucket | rows |
+|---|---|
+| permissive | 🟢 **804** |
+| copyleft | 199 |
+| CC family | 51 |
+| 🔴 **not a grant** — named, never promotable | 🔴 **13** |
+| 🟡 still unread | 🟡 **17** |
+| **total with a payload** | **1 084** |
+
+🟢 **804 + 199 + 51 + 13 + 17 = 1 084. It reconciles.** Beside it: 233 `LIVE-NOGRANT`, 38 `ABSENT`,
+25 `LIVE-NOCONTROL`, 🔴 **1 `THROTTLED`** (`appliedrelevance/frappe_mcp_server`, `429` on its control
+— 🔵 `Gap 388`'s hazard caught live and reported as **unmeasured** rather than as absent).
+
+### 🔴 The `NON-GRANT` bucket is the half of this limb with legal consequences
+
+🔵 **Recovering a permissive row is an opportunity; promoting one of THESE by mistake is a problem.**
+🔴 **All 13, named:**
+
+| row | family |
+|---|---|
+| [`dssg/student-early-warning`](https://github.com/dssg/student-early-warning) | 🔴 **click-through terms of use** — 🟢 **this is `Gap 392`'s own subject, and it is now settled: not open source, for a NAMED reason** |
+| [`workforce-data-initiative/skills-ml`](https://github.com/workforce-data-initiative/skills-ml) | click-through terms of use |
+| [`sdv-dev/sdv`](https://github.com/sdv-dev/sdv) | BUSL-1.1 — 🔵 the synthetic-data tier |
+| [`sodadata/soda-core`](https://github.com/sodadata/soda-core) | Elastic-2.0 — the data-quality tier |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | Elastic-2.0 — 🔴 **a student-advising platform** |
+| [`khan/tutoring-accuracy-dataset`](https://github.com/khan/tutoring-accuracy-dataset) | bespoke evaluation-dataset licence |
+| [`digillab-lmu/smart-rag`](https://github.com/digillab-lmu/smart-rag) | PolyForm Noncommercial |
+| [`minouza/mathcrew`](https://github.com/minouza/mathcrew) | PolyForm Strict |
+| [`asthetech/mewcp-google-classroom`](https://github.com/asthetech/mewcp-google-classroom) | bespoke community licence |
+| `brahm-ai-official/brahm-ai`, `marsley01/edyfra`, `nirholas/ai-tutor-mcp` | proprietary, stated |
+| [`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce) | all-rights-reserved (`P1029`'s row, now **named** rather than merely unrecognised) |
+
+### 🔴 Three regressions in this instrument's OWN code, found by DIFFING TWO CENSUS RUNS
+
+🔵 **Not by inspection. The first run used the ECL wiring alone; the second added the five
+mechanisms above; `census-diff.2026-10-10.txt` compares them row by row. 43 rows changed family and
+three of those changes were WRONG.**
+
+1. 🔴 **`Community License` swallowed ECL.** `"Educational Community License"` **contains** the
+   substring the bespoke-terms branch matches, so the non-grant branch took the exact permissive
+   family this instrument exists to recover: **10 rows moved to `NON-GRANT`.** 🔴 **The `Gap 398`
+   fix inverted into a worse error than the one it repaired**, and only the diff showed it.
+2. 🔴 **A copyright formula demoted three Apache-2.0 rows.** `huggingface/transformers`,
+   `mlflow/mlflow`, `masakhane-io/masakhane-ner` carry a conventional `All rights reserved` line
+   above a full Apache-2.0 text. 🟢 **That branch is GONE: it is a copyright formula, not a
+   restriction, and it appears inside BSD notices, which ARE grants.**
+3. 🔴 **MPL-2.0 read as GPL-3.0.** MPL section 3.3 **names** the GNU GPL, LGPL and AGPL as
+   *"Secondary Licenses"*, so 15 921 B of plain MPL ([`dequelabs/axe-core`](https://github.com/dequelabs/axe-core))
+   matched the case-folded GNU branch.
+
+🟢 **Each is now a test against the payload that produced it** — `fixtures/` carries the three real
+texts, not synthetic approximations. 🔵 **And the fix for (1) and (2) needed a THIRD attempt, which
+is `P1042`: the ECL title appears five times in the Sakai payload and the fifth WRAPS as
+`Licensed under the Educational\nCommunity License`. A strip keyed on the unwrapped title removed
+four of five and left a bare `Community License` at the start of line 196 — ECL came back a conflict
+again, from ONE LINE BREAK.**
+
+### 🔴 And two in its own PLUMBING — a silence counted as data, twice
+
+🔴 **`probe_one` runs inside an `xargs bash -c` subshell, so every function it calls must be named
+in `export -f`. Twice this pass one was not.**
+
+- 🔴 **First: `classify_restricted` was unexported. Its "command not found" went to stderr while the
+  census wrote a row for every address anyway** — empty output fell through `classify_grant`'s final
+  case and **1 077 rows published a BLANK licence that tallied as `UNREAD`.** 🔵 **The `Gap 398`
+  failure mode in its purest form — a silence counted as data — produced by plumbing, not by any
+  licence text.**
+- 🔴 **Second: the guard added to catch exactly that MISSED IT**, because the guard kept its own copy
+  of the same list and `declares_known_grant` was in neither. 🔴 **2 162 stderr lines, 1 381 rows
+  emitted.**
+
+🟢 **Fixed at the root (`P1044`): the export list is DERIVED from `classify.sh` — every top-level
+`name()` definition — and the guard iterates the derived list and REFUSES to emit rows when any
+function is invisible to a child shell.** 🔵 **Verified by removing an export:
+`REFUSING TO RUN: classify_payload is defined but not exported to the worker subshell`, exit 2.**
+
+### 🟢 The probe path is cheaper AND calibrated
+
+🟢 **`raw.githubusercontent.com` serves the literal ref `HEAD`**, so `p1029`'s per-address
+`git ls-remote --symref` — spent purely to learn a default branch name — is unnecessary.
+🔵 **And the case that would break a guessed branch name is real: `sakaiproject/sakai` answers
+**200 at `HEAD`** and **404 at `main`**, because its default is `master`.** 🟢 **99 addresses in 13 s;
+the whole corpus in 2 m 22 s.** 🔵 **`ls-remote` is kept as the ABSENT tie-breaker, because without
+it "the repository is gone" and "the repository has no `LICENSE` and no `README`" are the same pair
+of 404s.**
+
+```
+compared=99 agree=92 recovered_by_ecl=2 disagree=5
+```
+
+🟢 **The 92 agree byte for byte and hash for hash. The 2 recovered are EXACTLY the two rows pass 105
+predicted** (`lap-sakai-extractor`, `opendashboard-legacy`) — 🔵 **a second instrument confirming
+pass 105's 38 → 40 correction, written without reference to its result.** 🟡 **The 5 "disagreements"
+are the 5 `ABSENT` rows and are a SPELLING difference, not an answer: `p1029` writes `-` in the
+licence column of an absent row where this limb writes `ABSENT`.** 🔵 **Recorded so the next pass
+does not re-investigate it — a comparator keyed on a field's spelling reports a formatting choice as
+a contradiction.**
+
+### 🟢 `Gap 399` PARTLY DISCHARGED — and `P1033` now rests on 143 rows instead of 7
+
+🔵 **Pass 105's lead #6 named `packagist.org` as the obvious unprobed candidate. Probed: 200.**
+
+```
+types_probed=46  types_nonempty=21  types_zero=25  packages=159
+```
+
+🔴 ****all 143** packages that declare a licence at all declare the GPL-3 family. NOT ONE is
+permissive.** 🟢 **`T30`/`P1033` — "the copyleft frontier is the plugin tree" — was carried on seven
+rows; it now rests on 143 and holds without exception.**
+
+🔴 **But packagist is NOT the plugin directory, and that is the other half of the finding.** 🔵 **159
+packages against the thousands the Moodle directory lists: the channel reaches the plugin LAYER, not
+its denominator.** 🟡 **So `Gap 399` is re-scoped rather than closed — the licence question is
+answered on a real denominator; the POPULATION question is not.**
+
+🔴 **And the sharpest row is a zero: `moodle-aiprovider` = 0 and `moodle-aiplacement` = 0.** 🔵 **The
+two plugin types Moodle's own AI subsystem defines have NO packagist presence whatever, against 159
+packages across 21 older types.** 🟢 **`T34`: the AI seam of the most-installed LMS on earth does not
+publish through the PHP package channel — `T28`'s commercial reading arriving through a second
+channel, and the strongest evidence yet that the LMS→agent seam is a Globant DELIVERABLE.**
+
+### 🟢 Lead #2 DISCHARGED — `P1035` applied to EMEA, and it catches a trap in the copyleft tier
+
+🔵 **Pass 105: "If a university name cannot place a row in LATAM, it cannot place one in EMEA
+either — `fwu-de` / `dini-ag-kim` were placed on org-name reasoning this pass has just invalidated."**
+
+| row | region | placed by |
+|---|---|---|
+| `fwu-de/fwu-kc-extensions` | 🟢 **EMEA** | ccTLD `fwu.de` |
+| `dini-ag-kim/schulfaecher` | 🟢 **EMEA** | ccTLD `dnb.de` |
+| `fwu-de/lehrplan-ontologie`, `fwu-de/schulfach-ontologie` | 🟢 **EMEA** | country word `Germany` |
+| 🆕 `opetushallitus/ataru` | 🟢 **EMEA** | system `Opetushallitus`; holder *Finnish National Agency for Education* |
+| 🆕 `opetushallitus/koski` | 🟢 **EMEA** | ccTLD `eduuni.fi` |
+| 🆕 `portabilis/i-diario` | 🟢 **LATAM** | ccTLD `com.br` |
+| `fwu-de/ais-chat`, `fwu-de/mem-mcp`, `fwu-de/schulart-ontologie`, `dini-ag-kim/school-curriculum-pg` | 🔴 **UNPLACED** | no placing string in the tree |
+
+🔴 **And the limb caught a trap that would have misplaced the ENTIRE copyleft tier.** 🔵 **The holder
+line of `fwu-de/ais-chat` reads `Copyright (C) 2007 Free Software Foundation`, and
+`portabilis/i-diario` reads `Copyright © 2007 Free Software Foundation` — because that is the
+LICENCE TEXT'S OWN copyright, not the project's.** 🔴 **A holder reader that takes the first
+copyright line out of a GPL or AGPL payload reads the FSF as the holder of every copyleft project
+in this corpus, and the FSF is in Boston — a systematic misplacement of 199 rows into North
+America.** 🟡 **Here it returned `UNPLACED` rather than a wrong region, but by LUCK: the FSF line
+happens to carry no placing string.** 🟢 **`P1045` makes it design.**
+
+### 🟢 `Gap 395` CORRECTED a second time — and the EMEA finding this pass is FINLAND
+
+🔴 **Pass 104 read EMEA as "grants CODE, not VOCABULARY, 3 of 3 German rows ungranted". Pass 105
+corrected it once. Measured across the whole corpus it needs correcting again, in both directions:**
+
+- 🟢 **the German VOCABULARY is not uniformly ungranted: `dini-ag-kim/schulfaecher` serves a
+  **CC-family payload of 7 048 B**.** 🔴 **Four ontology rows remain ungranted**
+  (`fwu-de/lehrplan-ontologie`, `fwu-de/schulart-ontologie`, `fwu-de/schulfach-ontologie`,
+  `dini-ag-kim/school-curriculum-pg`);
+- 🟢 **and the German CODE tier gains two rows this KB did not hold: 🆕 `fwu-de/mem-mcp` is
+  **Unlicense** (1 211 B — public domain, the most permissive row in the EMEA tier) and
+  🆕 `fwu-de/ais-chat` is **AGPL-3.0** (34 523 B).**
+
+🟢 **`T33`, and it is the largest single regional finding of the pass: Finland's
+`opetushallitus` — the Finnish National Agency for Education — publishes EIGHT repositories of
+national education infrastructure, and ALL EIGHT are EUPL.**
+
+| repository | EUPL | what it is |
+|---|---|---|
+| [`opetushallitus/koski`](https://github.com/opetushallitus/koski) | 1.1 | 🔵 the **national study-rights and completed-studies registry** |
+| [`opetushallitus/ataru`](https://github.com/opetushallitus/ataru) | 1.2 | the national application/admissions system |
+| [`opetushallitus/eperusteet`](https://github.com/opetushallitus/eperusteet) | 1.1 | 🔵 the **national core-curriculum service** |
+| [`opetushallitus/ehoks`](https://github.com/opetushallitus/ehoks) | 1.1 | personal competence-development plans |
+| [`opetushallitus/oppijanumerorekisteri`](https://github.com/opetushallitus/oppijanumerorekisteri) | 1.1 | the national learner-number registry |
+| [`opetushallitus/organisaatio`](https://github.com/opetushallitus/organisaatio) | 1.1 | the education-provider organisation registry |
+| [`opetushallitus/suorituspalvelu`](https://github.com/opetushallitus/suorituspalvelu) | 1.2 | the attainment service |
+| [`opetushallitus/valtionavustus`](https://github.com/opetushallitus/valtionavustus) | 1.1 | state-aid administration |
+
+🔴 **Every one of them was `UNRECOGNISED` to this KB until this pass.** 🔵 **A complete national
+education data stack, publicly licensed, and invisible to a permissive-first scan — which is
+`Gap 395`'s question answered from an angle it never considered: EMEA's public sector DOES grant its
+code, under the EU's own licence, and a tool that only knows MIT/Apache/BSD cannot see it.**
+
+### 🔵 Principles adopted: `P1040`–`P1047`
+
+- **`P1040`** — 🔴 **a remedy that lives BESIDE the instrument is not a remedy.** `classify_ecl` was
+  written in pass 105 and ran on four addresses; wired into the census it recovered **10**.
+  🟢 **The gap closes when the remedy is in the code path the next count will take, not when it is
+  written.**
+- **`P1041`** — 🔴 **a restriction branch must never fire unchallenged on a payload that DECLARES a
+  known grant family.** Where both are genuinely present the answer is not a silent pick either way
+  but `GRANT+RESTRICTION-CONFLICT`, bucketed for a hand-read (`caviraoss/pagelm`: an MIT grant plus
+  7.5 KB of further terms). 🔵 **Silent promotion is a legal problem; silent demotion cost three
+  Apache-2.0 rows.**
+- **`P1042`** — 🔴 **match licence text on FLATTENED whitespace.** Licence files are hard-wrapped at
+  ~72 columns, so any multi-word pattern can straddle a newline. 🟢 **The ECL title wraps at line
+  195 of the Sakai payload and defeated a strip keyed on the unwrapped form.**
+- **`P1043`** — 🔴 **a licence that REFERENCES another family must be settled BEFORE the family it
+  references.** MPL-2.0 names the GPL/LGPL/AGPL as Secondary Licenses. 🔵 **The same hazard
+  `classify_payload` already documents for AFFERO-before-GPL, one level up — and it reached a real
+  row.**
+- **`P1044`** — 🔴 **a guard keyed on a hand-maintained list fails in exactly the case it exists
+  for.** The export guard and the export line kept separate copies of one list, and the function
+  added to neither went undetected. 🟢 **Derive the list from the source file.**
+- **`P1045`** — 🔴 **the copyright line INSIDE a copyleft payload is the LICENCE's copyright, not
+  the PROJECT's.** Reading it as the holder puts the Free Software Foundation, of Boston, behind
+  every GPL and AGPL row in the corpus. 🟢 **Read the holder from `NOTICE`, the README or the
+  manifest; `P1035`'s placing discipline is worthless on a field that names the wrong party.**
+- **`P1046`** — 🔴 **a declared-licence field is free text.** `GPL-3.0-or-later` (136), `GPL-3.0+`
+  (5) and `GPLv3` (2) are three spellings of one grant; a census keyed on an exact string splits the
+  dominant family into three buckets and reports none of them as dominant. 🔵 **`P1037` reaching the
+  DECLARED field.**
+- **`P1047`** — 🟢 **a sample understates a blind spot in proportion to how CLUSTERED the blind
+  family is.** ECL was 2 of 99 sampled and 10 of 1 381 held, because it clusters in one consortium's
+  repositories rather than spreading evenly. 🔵 **So a blindness measured on a sample gives a floor,
+  never an estimate.**
+
+### 🔴 The mandated battery: 4 global query families + 4 regional sweeps, **saturated 8 of 8**
+
+🔵 **Every query ran; every candidate was `grep`-checked against the live corpus, and the few not
+held were PROBED rather than shelved on a search's word.** 🔴 **Not one returned a repository this
+KB did not already hold, which is `P1023` holding a FOURTH consecutive pass.**
+
+🟢 **Two corrections the battery earned by being probed:**
+
+- 🔴 **`frappe/education` and `frappe/lms` are `LIVE-NOGRANT`** — no licence payload at eleven
+  filenames with a clean 200 control. 🔵 **A secondary source presented the Frappe education stack as
+  an open-source option; measured, it ships no grant at its root.**
+- 🟢 **[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) is Apache-2.0, confirmed by
+  payload (10 982 B)** — 🟡 **not the pristine 11 358 B, so the text is trimmed or augmented;
+  `P1030` says that difference is worth reading before the row is leaned on.**
+
+🟡 **Secondary-only, named in `intel/market.md` under their region and NOT on a shelf page:** the
+134 AI-in-education bills across 31 US states; Ohio's 2026-07-01 district-policy mandate;
+H.R. 8747 advanced in committee 2026-07-21; South Korea's AI Basic Act in force 2026-01-22 and
+Vietnam's law from 2026-03-01, both naming education a high-impact/high-risk sector; UNESCO IESALC's
+200-institution, 19-country survey (87 % using AI in at least one area, 26 % with a formal
+strategy); and the UNESCO LAC Observatory launched 2026-04-14.
+
+🔴 **The EMEA channel diverged on `Gap 241` for a FOURTH time:** it reported the *"AI omnibus"*
+package in force **2026-07-27** and the stand-alone high-risk deadline at **2027-12-02**. 🔵 **Pass
+58 pinned `Regulation (EU) 2026/1744` of 8 July 2026 by three channels; pass 103's APAC channel said
+7 May; the Commission's own page says neither.** 🟢 **`P505`: a channel reporting a corrected claim
+as current does not re-date the gap.**
+
+### 🟢 Lead #3 DISCHARGED — all three addresses probed, and `P1023` holds
+
+| address | measured | education? |
+|---|---|---|
+| [`frdel/agent-zero`](https://github.com/frdel/agent-zero) | 🟢 **MIT**, 1 150 B | 🔴 **no** — a general Dockerised agent framework |
+| [`DataTalksClub/llm-zoomcamp`](https://github.com/DataTalksClub/llm-zoomcamp) | 🔴 **`LIVE-NOGRANT`** | 🟡 a free course, and **ungranted** |
+| [`Earth-OL-Player/Ai_learn_project`](https://github.com/Earth-OL-Player/Ai_learn_project) | 🔴 **PolyForm Noncommercial**, 181 B | 🟡 a learning platform — 🔴 **not usable commercially** |
+
+🔵 **The third is the interesting one: its 181 B `LICENSE.md` declares PolyForm Noncommercial IN
+CHINESE** (*「仅允许非商业用途」*). 🟢 **The classifier names it because `P1042`'s flattening and the
+restriction branches now run before any grant branch — a row that three passes ago would have read
+`UNRECOGNISED` and sat beside real grants.**
+
+### 🔴 Lead #4 deliberately NOT run
+
+🔵 **`P1038`: "the re-probe cadence for a grant is days, not intra-day passes — a licence is a human
+act, and fifteen passes of one date cannot observe one."** 🟢 **The 26 `NOGRANT`/`NOCONTROL` rows
+were not re-probed as a limb.** 🟡 **They were nonetheless re-measured incidentally, because the
+whole-corpus census covers them: 233 `LIVE-NOGRANT` against pass 104's 23-of-99 — consistent, and
+not presented as evidence of anything (`P1038`).**
+
+### 🔴 Gap ledger after this pass
+
+| gap | state |
+|---|---|
+| 🟢 `Gap 398` | **CLOSED.** The remedy is wired into the instrument the census runs, the whole corpus is audited, 10 rows recovered, and the buckets reconcile to the last row |
+| 🟡 `Gap 399` | **RE-SCOPED, half discharged** — `packagist.org` reaches the plugin LAYER (143 of 143 declarations GPL-3) but holds 159 packages, so the directory POPULATION is still unmeasurable from here |
+| 🆕 🔴 `Gap 400` | **OPEN (new)** — `classify_payload`, carried unchanged since `p1029` and used by every prior census, matches multi-word phrases against **hard-wrapped** text (`P1042`). 🟢 `p1040`'s own functions flatten; `p1029`'s were deliberately NOT changed, to keep calibration with eleven passes of results. 🔴 **Unmeasured: how many of the 1 084 granted rows would change family under flattened matching** |
+| 🆕 🟡 `Gap 401` | **OPEN (new)** — **17 rows remain `UNREAD`** after a full hand-read. Named in `p1040/unread.2026-10-10.tsv`; they include both 1EdTech `caliper-spec` addresses, `espoon-voltti/evaka`, `idempiere/idempiere`, `kuali/kfs`, `leemonade/leemons` and `caviraoss/pagelm`'s grant/restriction conflict |
+| 🟢 `Gap 392` | **ADVANCED to settled on its central row** — `dssg/student-early-warning` is a click-through terms-of-use, measured. 🔴 The gap itself stands: no permissive modern-ML early-warning system exists |
+| 🟡 `Gap 395` | **CORRECTED a second time** — German vocabulary is 4 ungranted + 1 CC-granted, German code gains an **Unlicense** row, and 🟢 **the EMEA public-sector grant tier is FINLAND's eight EUPL repositories** |
+| 🔴 `Gap 397` / `Gap 396` | OPEN, unchanged — Caliper and Open Badges implementation layers ABSENT; validators survive |
+| 🔴 `Gap 393` / `Gap 391` | OPEN, unchanged — harness bought and released; rubric and label comparability unbought |
+| 🔴 `Gap 390` / `T21` | OPEN — PERSUADE 2.0 is `CC-BY-NC-SA-4.0` |
+| 🔴 `Gap 383` | OPEN — the back catalogue stays refused; 🟢 `P1028` confirmed a **fourth** pass |
+| 🔴 `Gap 241` | OPEN — 🔴 **a FOURTH provenance variant this pass** (omnibus in force 2026-07-27, high-risk 2027-12-02) |
+| 🟢 `Gap 394` | CLOSED on measurement; leads #1–#3 all discharged across passes 105–106 |
+
+### 🟢 Leads this pass pre-registers for the next one
+
+| # | lead | why it is worth a query |
+|---|---|---|
+| 1 | 🔴 **Measure `Gap 400`: re-run the census with `classify_payload` matching on FLATTENED text and diff against `result.corpus.2026-10-10.tsv`** | 🟢 **The instrument, the corpus and the comparator all exist; this is one flag and one diff. `P1042` was measured on ONE payload — the corpus-wide count is unknown, and eleven passes of published composition depend on it** |
+| 2 | 🟡 **Hand-read the 17 `Gap 401` rows** | 🔵 **`P1036`: a bucket count published over unread rows is provisional. 54 reads this pass moved 38 rows; 17 is a short list and two of them (`kuali/kfs`, `idempiere`) are large platform rows** |
+| 3 | 🟢 **Probe the eight `opetushallitus` repositories for their RELEASE engineering** (`git ls-remote --tags`) and their API surface | 🟢 **`T33` is the largest regional finding this pass but it is a LICENCE reading only. Whether a national registry is forkable depends on whether it cuts releases — the `T29`/`T30` test, never applied to EUPL** |
+| 4 | 🔴 **Read the HOLDER of the 199 copyleft rows from `NOTICE`/README/manifest, not from the payload** | 🔵 **`P1045`. The FSF line is in every GPL payload; until the holder is read from somewhere else, the copyleft tier has NO region data at all, and this KB has been placing rows by org name** |
+| 5 | 🟡 **Find the Moodle plugin-directory POPULATION through a third channel** — the `moodle-plugin-ci` metadata, a GitHub topic sweep, or a mirror | 🔴 **`Gap 399`'s surviving half. `packagist` gave the licence composition on 143 rows; it did not give the denominator, and 159 is plainly a thin slice** |
+| 6 | 🟢 **A written grant request to the four ungranted German ontology addressees, citing `fwu-kc-extensions` AND `schulfaecher` as the publisher's own precedents** | 🟢 **Unchanged as the cheapest dateable action, and STRONGER this pass: the precedent is now two grants from the same two organisations, one of them a vocabulary** |
+| 7 | 🔴 **Re-probe the 26 `NOGRANT`/`NOCONTROL` rows on a date at least 7 days out** | 🔵 **`P1038`, carried unspent from pass 105. Still not next pass** |
+
 ## 🟢 Hundred-and-fifth pass, 2026-10-10 — **three pre-registered leads discharged, and the instrument found two bugs in its own code before it found anything about education**: `Gap 398` OPENED (ECL-2.0 is INVISIBLE to this KB's licence classifier, and the permissive count was **38, not 40**); `Gap 394`'s lead #2 answered **NO** with 26 of 26 unchanged; the LATAM/EMEA holder split resolved **3 LATAM, 0 EMEA, 2 unplaceable**; `T31`–`T32` and `P1035`–`P1039` adopted
 
 ⏱️ **Fifteenth pass of this date.** 91: 2026-10-09 23:0x–00:00 UTC · 92: 00:4x–01:3x · 93:

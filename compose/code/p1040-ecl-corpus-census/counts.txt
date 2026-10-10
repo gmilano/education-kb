@@ -1,0 +1,3 @@
+addresses=1381 live=1084 nogrant=233 absent=38 nocontrol=25 throttled=1
+permissive=804 copyleft=199 cc=51 non_grant=13 unread=17
+ecl=10 eupl=8 recovered_by_ecl=10 recovered_by_extra=22

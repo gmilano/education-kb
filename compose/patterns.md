@@ -5,6 +5,107 @@ updated: 2026-10-10
 ---
 
 # Education — compose patterns
+**Pass 106, 2026-10-10.** ⏱️ **Sixteenth pass of this date.** 🟢 **Two patterns added, both from
+rows measured this pass; one existing constraint strengthened from 7 rows to 143.**
+
+## 🟢 `P106-A` — the Moodle AI seam, delivered as a plugin pair (greenfield, GPL-3) plus an MCP sidecar (licence your own)
+
+🔵 **Why this pattern exists now: `T34` measured `moodle-aiprovider` = 0 and `moodle-aiplacement` = 0
+packages on `packagist.org`, against 159 across 21 older plugin types.** 🟢 **The platform vendor
+defined the extension point and nobody has shipped into it through the package channel — so there is
+nothing to fork, nothing to be out-competed by, and no incumbent to displace.**
+
+**Wire it like this:**
+
+```
+[Moodle 4.5+/5.0 core]  ── GPL-3, 143 of 143 declaring packages agree (P1033)
+   │
+   ├── moodle-aiprovider plugin  ──> speaks to the model gateway
+   │      • loads INSIDE the LMS, so GPL-3 is NOT a choice (P1033)
+   │      • thin: credential handling, request shaping, rate limits
+   │
+   ├── moodle-aiplacement plugin ──> the teacher/learner-facing surface
+   │      • also GPL-3, also thin: UI + capability checks
+   │
+   └── web-service API ──> [MCP sidecar, OUTSIDE the LMS]
+          • a2br/moodle-mcp (MIT, 1 073 B) is the measured precedent
+          • fwu-de/mem-mcp (Unlicense, 1 211 B) is the memory tier
+          • every orchestration, eval and memory component lives HERE
+```
+
+🔴 **The load-bearing rule, measured three ways and not negotiable: the licence follows WHERE the
+code is mounted.** 🟢 **Evidence, all payload-read: `jeanlucio/moodle-local_aihub` has a root
+`version.php` and is GPL-3; `a2br/moodle-mcp` has none and is MIT;
+`sngdtechnologies/ai-moodle-security` has none and is BSD-2-Clause** (`P1033`, pass 104).
+
+🟡 **So put in the plugin pair ONLY what must run inside Moodle** — capability checks, the settings
+form, the placement UI — **and everything with commercial value in the sidecar.** 🔵 **A client who
+wants the agent logic proprietary can have it; a client who wants the plugin upstreamed can have
+that too. The split is architectural, decided once, at the start.**
+
+**Shelf rows this uses, all verified this pass or last:**
+[`moodle/moodle`](https://github.com/moodle/moodle) (GPL-3.0-or-later, declared on packagist) ·
+[`a2br/moodle-mcp`](https://github.com/a2br/moodle-mcp) (MIT, 1 073 B, `5b4bad3aa359c096`) ·
+[`fwu-de/mem-mcp`](https://github.com/fwu-de/mem-mcp) (Unlicense, 1 211 B) ·
+[`ahnopologetic/canvas-lms-mcp`](https://github.com/ahnopologetic/canvas-lms-mcp) (3 tags — `T28`'s
+only fork-worthy MCP row).
+
+🔴 **Do NOT start the data-quality or synthetic-data layer from
+[`sodadata/soda-core`](https://github.com/sodadata/soda-core) or
+[`sdv-dev/sdv`](https://github.com/sdv-dev/sdv)** — 🔴 **Elastic-2.0 and BUSL-1.1 respectively,
+measured this pass (`T35`). Both bar the studio case.**
+
+## 🟢 `P106-B` — the EUPL national-registry integration (Finland), and why it is adopt-and-contribute
+
+🔵 **`T33` measured eight `opetushallitus` repositories, all EUPL: a complete national education data
+stack, publicly licensed.** 🟢 **For an EMEA public-sector engagement this replaces the usual
+"integrate with an opaque national system" problem with a readable one.**
+
+```
+[opetushallitus/oppijanumerorekisteri]  learner identity      EUPL-1.1
+[opetushallitus/organisaatio]           provider registry     EUPL-1.1
+            │
+            ├── [opetushallitus/koski]        study rights + attainment   EUPL-1.1
+            ├── [opetushallitus/eperusteet]   national core curriculum    EUPL-1.1
+            └── [opetushallitus/ataru]        admissions                  EUPL-1.2
+                        │
+                        ▼
+        [your agentic layer — OUTSIDE the EUPL boundary]
+           • curriculum-aware planning reads eperusteet
+           • attainment-aware tutoring reads koski
+           • LangGraph / pydantic-ai orchestration, your licence
+           • Ollama / vLLM for data residency (EU AI Act, see below)
+```
+
+🟡 **The licence shape, stated precisely because it drives the commercial model.** 🔴 **The EUPL is
+COPYLEFT with a reciprocity obligation — a modification distributed onward carries the EUPL — and it
+has an explicit compatibility list rather than a general permission.** 🟢 **So:**
+
+- 🟢 **reading these services over their APIs puts no obligation on your code at all**;
+- 🔴 **forking `koski` to add a feature does**;
+- 🟢 **and the obligation is a known, priceable quantity, not a surprise** — which is the entire
+  reason to measure the grant before the engagement rather than during it.
+
+🟡 **Pre-registered as unmeasured (next pass's lead #3): whether these repositories cut RELEASES.**
+🔵 **`T29`/`T30` made the adopt-or-build line turn on release engineering, and that test has never
+been applied to a EUPL row. Until it is, treat `koski` as readable-and-integrable, not as
+forkable-with-confidence.**
+
+🔵 **Regulatory fit, from this pass's EMEA sweep and flagged as secondary:** education uses like
+admissions, assessment and steering learning paths sit in the AI Act's Annex III, and the channel
+reports the stand-alone high-risk deadline moved to **2027-12-02** with an *"AI omnibus"* in force
+**2026-07-27**. 🔴 **`Gap 241`: this is a FOURTH provenance variant and cannot be cited primarily —
+this KB's verified anchor remains `Regulation (EU) 2026/1744` of 8 July 2026.** 🟡 **Design to Annex
+III obligations regardless of which date survives; the deferral is schedule relief, not an exemption.**
+
+## 🔴 Constraint strengthened — the plugin-tier licence rule now rests on 143 rows, not 7
+
+🔵 **Every pattern on this page that mounts code inside Moodle inherits GPL-3.** 🟢 **That was
+carried on seven payload-read rows; `packagist.org` (opened this pass) puts it on 143 of the 143
+packages that declare a licence at all, with ZERO permissive exceptions.** 🔵 **And the declaration
+is free text in three spellings — `GPL-3.0-or-later` (136), `GPL-3.0+` (5), `GPLv3` (2) — so any
+intake gate that matches an exact string will under-report it** (`P1046`).
+
 **Pass 105, 2026-10-10.** ⏱️ **Fifteenth pass of this date.** 🆕 **One pattern added (`P105-A`), and it is the gate every other pattern on this page depends on: the licence-and-region due-diligence check, written because this pass's own instrument produced a wrong region and an invisible licence before it produced a finding.**
 🟢 **`P103-A`** — the pedagogical-evaluation gate, which this page priced as UNBUYABLE one pass ago:
 🔴 **the benchmark's labels are still ungranted (`Gap 393`), but the HARNESS is Apache-2.0 with 26

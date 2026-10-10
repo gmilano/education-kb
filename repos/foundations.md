@@ -6,6 +6,110 @@ updated: 2026-10-10
 
 # Education — foundational repos
 
+**Pass 106, 2026-10-10.** ⏱️ **Sixteenth pass of this date** (104: 13:4x–14:xx UTC; 105:
+14:4x–15:xx; this one 15:4x–16:xx).
+
+🟢 **Forty rows gain a NAMED GRANT this pass, every one payload-read, and NOT ONE came from a
+search** — 🔵 **35 named from their licence payload by the wired-in classifier and 5 from a package
+manifest.** 🟡 **Precisely stated, because it is the stronger claim: these addresses were ALREADY
+held by this KB. What was missing was a readable grant for them.** They came from auditing this
+repository's own 1 381 addresses with the ECL remedy wired into the classifier — pass 105's lead #1.
+🔴 **Thirteen further rows were named as NON-GRANTS, and one as a grant/restriction conflict.** 🔵 **Instrument: `compose/code/p1040-ecl-corpus-census/`,
+`test_p1040.sh` 82 passed / 0 failed.** 🔴 **`api.github.com` = `http=403`, fourteenth consecutive
+pass: a `—` in a ★ column is unread, never zero.**
+
+### 🟢 🆕 p106 — the ECL tier is **10 repositories and SIX texts**, not six and four
+
+🔵 **Pass 105 pinned four texts across six repositories and said the family was settled. It was
+settled; the EXTENT was not.** 🟢 **The 99-address sample held 2 uncounted ECL rows; the corpus holds
+10** — 🔵 **`P1047`: a blindness measured on a sample gives a FLOOR, never an estimate, because ECL
+clusters in one consortium rather than spreading evenly.**
+
+| repo | bytes | `sha256` (16) | text | new this pass |
+|---|---|---|---|---|
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 11 120 | `0688f62d04f14e4b` | A | |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 11 340 | `76a975068930323e` | B | |
+| [`Apereo-LAI/lap-sakai-extractor`](https://github.com/Apereo-Learning-Analytics-Initiative/lap-sakai-extractor) | 11 087 | `a9ea5cca8da2c8d5` | C | |
+| 🆕 [`Apereo-LAI/OpenLRS`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS) | 11 087 | `a9ea5cca8da2c8d5` | **C — identical** | 🟢 **yes** |
+| [`Apereo-LAI/LearningAnalyticsProcessor`](https://github.com/Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor) | 9 919 | `fb10d1260ddc8dff` | D | |
+| [`Apereo-LAI/OpenDashboard-api`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-api) | 9 919 | `fb10d1260ddc8dff` | D — identical | |
+| [`Apereo-LAI/OpenDashboard-legacy`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy) | 9 919 | `fb10d1260ddc8dff` | D | |
+| 🆕 [`Apereo-LAI/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 9 878 | 🆕 `f339063d2f604ce9` | 🆕 **E** | 🟢 **yes** |
+| 🆕 [`kuali/rice`](https://github.com/kuali/rice) | 11 182 | 🆕 `d4db8f22f8d564eb` | 🆕 **F** | 🟢 **yes** |
+| 🆕 [`kualico/rice`](https://github.com/kualico/rice) | 11 182 | 🆕 `d4db8f22f8d564eb` | 🆕 **F — identical** | 🟢 **yes** |
+
+🟢 **All ten are PERMISSIVE and buildable-on.** 🔵 **Two structural readings, both by `sha256` rather
+than by impression (`P1025`):**
+
+- 🟢 **The Apereo learning-analytics stack shares its grant across five repositories and three
+  texts** — an LRS (`OpenLRS`), a learning-record warehouse (`OpenLRW`), a processor and two
+  dashboards. 🔵 **A complete, permissively-granted analytics pipeline for higher education, and
+  until this pass every row of it was `UNRECOGNISED`.**
+- 🟢 **`kuali/rice` and `kualico/rice` carry ONE byte-identical text at two organisation names** —
+  🔵 **`P1012` again: an incumbent's code lives under its predecessor organisation's name, and
+  probing one name only would have published a dead row or missed a live one.**
+
+### 🟢 🆕 p106 — **Finland's national education stack: eight repositories, all EUPL** (`T33`)
+
+🔴 **The licence family that had NO branch in this KB's classifier at all.** 🔵 **It is named by
+REFERENCE in 296–654 B, never as a licence body (`P742`), which is why eight substantial
+repositories presented as grant-less:**
+
+| repo | EUPL | what it is | ★ |
+|---|---|---|---|
+| [`opetushallitus/koski`](https://github.com/opetushallitus/koski) | **1.1** | 🔵 the **national study-rights and completed-studies registry** | — |
+| [`opetushallitus/eperusteet`](https://github.com/opetushallitus/eperusteet) | 1.1 | 🔵 the **national core-curriculum service** | — |
+| [`opetushallitus/ataru`](https://github.com/opetushallitus/ataru) | **1.2** | national application and admissions | — |
+| [`opetushallitus/ehoks`](https://github.com/opetushallitus/ehoks) | 1.1 | personal competence-development plans | — |
+| [`opetushallitus/oppijanumerorekisteri`](https://github.com/opetushallitus/oppijanumerorekisteri) | 1.1 | the national learner-number registry | — |
+| [`opetushallitus/organisaatio`](https://github.com/opetushallitus/organisaatio) | 1.1 | education-provider organisation registry | — |
+| [`opetushallitus/suorituspalvelu`](https://github.com/opetushallitus/suorituspalvelu) | **1.2** | the attainment service | — |
+| [`opetushallitus/valtionavustus`](https://github.com/opetushallitus/valtionavustus) | 1.1 | state-aid administration | — |
+
+🟢 **Placed EMEA by `P1035`'s rule, with the placing string published:** ccTLD `eduuni.fi` on
+`koski`, and the holder line *"Copyright (c) 2025 Finnish National Agency for Education"* plus the
+nationally unique system name `Opetushallitus` on `ataru`. 🔵 **Not by the organisation name, which
+`P1035` forbids.**
+
+🟡 **What is NOT yet measured, and is pre-registered as next pass's lead #3: whether these cut
+RELEASES.** 🔵 **`T29`/`T30` made the adopt-or-build line turn on release engineering, and that test
+has never been applied to a EUPL row.**
+
+### 🟢 🆕 p106 — five rows whose grant is **not in the `LICENSE` file**
+
+🔴 **Their `LICENSE` is 45–108 B holding only `YEAR:` and `COPYRIGHT HOLDER:`.** 🔵 **That is not a
+truncated licence — it is the R convention: `DESCRIPTION` declares the grant and `LICENSE` supplies
+the two fields the template needs filled in.** 🟢 **A root-`LICENSE`-only census misreads every R
+package in the corpus, and misreads them as UNRECOGNISED rather than as missing** (`p283`/`p289`'s
+manifest-named licence, measured for R):
+
+| repo | `LICENSE` bytes | `DESCRIPTION` declares |
+|---|---|---|
+| 🆕 [`rstudio/ggcheck`](https://github.com/rstudio/ggcheck) | 45 | 🟢 **`MIT + file LICENSE`** |
+| 🆕 [`rstudio/tblcheck`](https://github.com/rstudio/tblcheck) | 46 | 🟢 **`MIT + file LICENSE`** |
+| 🆕 [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna) | 46 | 🟢 **`MIT + file LICENSE`** |
+| 🆕 [`sidneybissoli/educabr`](https://github.com/sidneybissoli/educabr) | 61 | 🟢 **`MIT + file LICENSE`** |
+| 🆕 [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) | 108 | 🟢 **`BSD_3_clause + file LICENSE`** |
+
+🔵 **`ottr` is why the manifest is READ and not assumed: four of five are MIT and a guess would have
+made it five.** 🟡 **A declared string is the publisher's CLAIM, not a payload this KB has read; the
+two are kept in separate columns and `p963`'s gate is what would reconcile them.**
+
+### 🟢 🆕 p106 — one row RE-VERIFIED across passes, one widely-cited row REFUTED
+
+- 🟢 **[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) — Apache-2.0, payload read at
+  **10 982 B**.** 🔵 **NOT a new row: this KB already records it at that exact byte count
+  (`repos/trending.md`). 🟢 **The value is the agreement — an independent instrument, a different
+  probe path (`HEAD` ref, no `ls-remote`), the same 10 982 B.** 🟡 **And the open question the
+  earlier record left stands: 10 982 B is NOT the pristine 11 358 B, so the text is trimmed or
+  augmented, and `P1030` says read that difference before leaning on the row.**
+- 🔴 🆕 **[`frappe/education`](https://github.com/frappe/education) and
+  [`frappe/lms`](https://github.com/frappe/lms) are `LIVE-NOGRANT`** — no licence payload at eleven
+  filenames, with a clean 200 control on each. 🔵 **A secondary source this pass presented the Frappe
+  education stack as an open-source option; measured, it ships no grant at its root.** 🟡 **`frappe/lms`
+  has been named on this KB's pages as shelved; this is the first pass to read its root for a grant
+  and the answer is that there is not one.**
+
 **Pass 104, 2026-10-10.** ⏱️ **Fourteenth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:
 00:4x–01:3x; 93: 01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; 98:
 06:4x–07:xx; 99: 07:4x–08:xx; 100: 08:4x–09:xx; 101: 09:4x–10:xx; 102: 10:4x–11:xx; this one

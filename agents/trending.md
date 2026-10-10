@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 106: the restricted tier of the agent shelf is **named mechanically for the first time**, and it agrees with this KB's hand-written warnings 13 of 13
+
+🔵 **No new agent reached this shelf this pass. One row joined the MCP tier, two were probed and
+rejected, and 13 rows gained a bucket that did not exist before.**
+
+🟢 **Pass 105's lead #1 was to wire `classify_ecl` into the next census instrument and run it over
+the whole corpus. Done: `compose/code/p1040-ecl-corpus-census/`, `test_p1040.sh` 82 passed / 0
+failed, 1 381 addresses in 2 m 22 s.** 🔵 **`P1028` holds a fourth pass.**
+
+### 🔴 The new bucket, and why it matters more than the recoveries
+
+🟢 **The classifier gained `NON-GRANT`: a payload that resolves 200 and grants nothing.** 🔴 **13
+rows.** 🔵 **Before this pass all 13 sat in `UNRECOGNISED` — the same bucket as a permissive grant
+the classifier merely failed to name.** 🟡 **A census that reports an unreadable payload as "unknown"
+puts a commercial bar and a buildable grant in one pile.**
+
+| layer | row | terms |
+|---|---|---|
+| student advising | [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 **Elastic-2.0** |
+| synthetic data | [`sdv-dev/sdv`](https://github.com/sdv-dev/sdv) | 🔴 **BUSL-1.1** |
+| data quality | [`sodadata/soda-core`](https://github.com/sodadata/soda-core) | 🔴 **Elastic-2.0** |
+| early warning | [`dssg/student-early-warning`](https://github.com/dssg/student-early-warning) | 🔴 **click-through terms of use** |
+| skills extraction | [`workforce-data-initiative/skills-ml`](https://github.com/workforce-data-initiative/skills-ml) | 🔴 **click-through terms of use** |
+| tutoring eval | [`khan/tutoring-accuracy-dataset`](https://github.com/khan/tutoring-accuracy-dataset) | 🔴 **bespoke dataset licence** |
+| teaching RAG | [`digillab-lmu/smart-rag`](https://github.com/digillab-lmu/smart-rag) | 🔴 **PolyForm Noncommercial** |
+| maths tutoring | [`minouza/mathcrew`](https://github.com/minouza/mathcrew) | 🔴 **PolyForm Strict** |
+| Classroom MCP | [`asthetech/mewcp-google-classroom`](https://github.com/asthetech/mewcp-google-classroom) | 🔴 **bespoke community licence** |
+| tutoring MCP | [`nirholas/ai-tutor-mcp`](https://github.com/nirholas/ai-tutor-mcp) | 🔴 **proprietary, stated** |
+| — | `brahm-ai-official/brahm-ai`, `marsley01/edyfra` | 🔴 **proprietary, stated** |
+| LMS | [`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce) | 🔴 **all-rights-reserved** (`P1029`) |
+
+🟢 **And the check worth more than the list: every one of the 13 is ALREADY characterised as
+unusable in this KB's prose** — *"not OSI-licensed"*, *"do NOT start from"*, *"not takeable"*,
+*"commercial bars carrying no NC token"*. 🔵 **13 hand-written warnings accumulated over many passes;
+13 rows derived by code; the same 13.** 🟢 **`p963`'s shelf-licence-agreement gate satisfied for the
+restricted tier — the first time this tier has been reproduced mechanically.**
+
+### 🟢 One row joins the MCP tier, two are probed and rejected
+
+| row | licence | bytes | verdict |
+|---|---|---|---|
+| 🆕 [`fwu-de/mem-mcp`](https://github.com/fwu-de/mem-mcp) | 🟢 **Unlicense** | 1 211 | 🟢 **TAKEABLE** — public domain; an MCP memory server from the German federal education-media institute, and **the most permissive row in this KB's EMEA tier** |
+| 🆕 [`frdel/agent-zero`](https://github.com/frdel/agent-zero) | 🟢 MIT | 1 150 | 🟡 permissive, **off-industry** — a general Dockerised agent framework (`P1023`) |
+| 🆕 [`Earth-OL-Player/Ai_learn_project`](https://github.com/Earth-OL-Player/Ai_learn_project) | 🔴 **PolyForm NC** | 181 | 🔴 **rejected** — declared in Chinese (*「仅允许非商业用途」*) |
+
+🔵 **All three came from pass 105's mandated battery, which shelved them as "secondary-only, none
+probed". Probed now, and the shape is `P1023`'s: searches surface permissive rows that are not
+education, and education rows that are not permissive.**
+
+### 🔴 The signal for anyone building ON Moodle: the AI extension point is empty
+
+🟢 **`packagist.org` opened as a channel this pass (`moodle.org` is still `http=000`).** 🔴
+**`moodle-aiprovider` = 0 packages. `moodle-aiplacement` = 0 packages.** 🔵 **Against 159 packages
+across 21 older plugin types, of which 143 of 143 that declare a licence at all declare GPL-3 and none
+is permissive.** 🟢 **`T34`: Moodle defined its own AI extension point and nobody has shipped into
+it through the package channel. The LMS→agent seam is a deliverable.**
+
 ## 2026-10-10 — pass 105: the permissive agent shelf was **undercounted by two**, and the cause is a string the ECL licence does not contain
 
 🔵 **No new agent reached this shelf this pass. Two agents already on it changed BUCKET.**

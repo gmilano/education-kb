@@ -1,0 +1,3 @@
+Earth-OL-Player/Ai_learn_project
+frdel/agent-zero
+DataTalksClub/llm-zoomcamp

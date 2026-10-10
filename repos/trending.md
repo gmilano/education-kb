@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 106: the ECL tier is **ten repositories and six texts**, and ECL was one blind spot of six
+
+🔵 **Pass 105 pinned four ECL texts across six repositories from a 99-address sample and recorded
+that the remedy was not yet wired into the instrument the next census would run. Wired, and run over
+all 1 381 addresses this KB holds.**
+
+🟢 **The sample understated the blindness five-fold: 2 uncounted rows in the sample, 10 in the
+corpus** — 🔵 **`P1047`: ECL clusters in one consortium's repositories rather than spreading evenly,
+so a blindness measured on a sample is a FLOOR, never an estimate.**
+
+| payload | bytes | `sha256` (16) | repositories carrying **this exact text** | new |
+|---|---|---|---|---|
+| A | 11 120 | `0688f62d04f14e4b` | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | |
+| B | 11 340 | `76a975068930323e` | [`opencast/opencast`](https://github.com/opencast/opencast) | |
+| C | 11 087 | `a9ea5cca8da2c8d5` | [`lap-sakai-extractor`](https://github.com/Apereo-Learning-Analytics-Initiative/lap-sakai-extractor), 🆕 [`OpenLRS`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS) | 🟢 **+1** |
+| D | 9 919 | `fb10d1260ddc8dff` | [`LearningAnalyticsProcessor`](https://github.com/Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor), [`OpenDashboard-api`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-api), `OpenDashboard-legacy` | |
+| 🆕 **E** | 9 878 | 🆕 `f339063d2f604ce9` | 🆕 [`OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 🟢 **new text** |
+| 🆕 **F** | 11 182 | 🆕 `d4db8f22f8d564eb` | 🆕 [`kuali/rice`](https://github.com/kuali/rice), 🆕 [`kualico/rice`](https://github.com/kualico/rice) | 🟢 **new text, two org names** |
+
+🟢 **Reading, structural rather than impressionistic (`P1025`): the Apereo learning-analytics stack
+is a COMPLETE permissively-granted pipeline** — record store (`OpenLRS`), warehouse (`OpenLRW`),
+processor, two dashboards — 🔴 **and every row of it was `UNRECOGNISED` before this pass.**
+🔵 **`kuali/rice` and `kualico/rice` carry one byte-identical text at two organisation names, which
+is `P1012` again.**
+
+### 🔴 Five further mechanisms, each of which put a real grant in NO bucket
+
+🟢 **All 54 `UNRECOGNISED` payloads from the first run were read by hand, as `P1036` requires:**
+
+| mechanism | rows | what defeated the classifier |
+|---|---|---|
+| 🔴 **EUPL** | 🔴 **8** | the EU's own licence, in **no branch at all**; named by reference in 296–654 B |
+| **case** | 4 | `GNU Affero General Public License` in title case |
+| **punctuation** | 1 | `Mozilla Public License, version 2.0` — one comma, one lowercase `v` |
+| 🔴 **language** | 2 | `LICENÇA PÚBLICA GERAL AFFERO GNU` — the classifier was English-only |
+| **manifest** | 5 | `LICENSE` is 45–108 B of `YEAR:`; the grant is in `DESCRIPTION` |
+| 🔴 **non-grant** | 🔴 **13** | Elastic 2.0, BUSL, PolyForm, bespoke terms — **beside real grants** |
+
+🟢 **Corrected corpus, buckets named by property (`P1037`): permissive 804 · copyleft 199 · CC 51 ·
+not-a-grant 13 · unread 17 = 1 084. It reconciles.**
+
+### 🟢 Forty rows gain a NAMED GRANT, none from a search
+
+🟡 **Stated precisely: these addresses were ALREADY held by this KB — the corpus is built from its
+own pages. What was missing was a readable grant.** 🔵 **35 named from their licence payload by the
+wired-in classifier, 5 from a package manifest; 13 further rows named as NON-GRANTS and one as a
+grant/restriction conflict.**
+
+🔵 **Four new ECL repositories (above — `OpenLRS`, `OpenLRW`, `kuali/rice`, `kualico/rice`), eight EUPL rows** — 🟢 **Finland's `opetushallitus`: `koski` (national
+study-rights registry), `eperusteet` (national core curriculum), `ataru`, `ehoks`,
+`oppijanumerorekisteri`, `organisaatio`, `suorituspalvelu`, `valtionavustus`** — 🟢 **five R-manifest
+rows** (`rstudio/ggcheck`, `rstudio/tblcheck`, `sonsoleslp/tna`, `sidneybissoli/educabr` all
+`MIT + file LICENSE`; 🔵 **`ucbds-infra/ottr` is `BSD_3_clause`, which is why the manifest is read
+and not assumed**), 🟢 **two Brazilian AGPL rows** (`portabilis/i-diario`,
+`portabilis/pre-matricula-digital`, one text at 35 326 B). 🔵 **And one cross-pass agreement rather
+than a new row: `OpenOLAT/OpenOLAT` re-reads Apache-2.0 at **10 982 B**, the exact byte count this
+file already recorded, measured through a different probe path.**
+
+🔴 **One widely-cited row REFUTED: [`frappe/education`](https://github.com/frappe/education) and
+[`frappe/lms`](https://github.com/frappe/lms) are `LIVE-NOGRANT`** — no payload at eleven filenames
+with a clean 200 control on each. 🔵 **A secondary source this pass presented the Frappe education
+stack as open source; measured, it ships no grant at its root.**
+
+### 🔴 And three regressions this instrument found in its OWN code, by diffing two census runs
+
+🔵 **Recorded here because the trend this file exists to record includes the instrument's
+reliability.** 🔴 **(1) `"Educational Community License"` CONTAINS `"Community License"`, so a
+non-grant branch swallowed all 10 ECL rows — the `Gap 398` fix inverted into a worse error.
+(2) A conventional `All rights reserved` line above an Apache-2.0 text demoted
+`huggingface/transformers`, `mlflow/mlflow` and `masakhane-ner`. (3) MPL-2.0 §3.3 NAMES the GPL, so
+15 921 B of plain MPL (`dequelabs/axe-core`) read as GPL-3.0.** 🟢 **All three now have tests against
+the real payloads that produced them; `fixtures/` carries the texts.**
+
 ## 2026-10-10 — pass 105: **six repositories, four licence texts, one family** — the Apereo ECL payloads are pinned by `sha256` at last
 
 🔵 **Pass 104 reported four Apereo-lineage byte counts for one declared licence and left WHICH text
