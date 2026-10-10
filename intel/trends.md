@@ -6,6 +6,14 @@ updated: 2026-10-10
 
 # Education — current trends
 
+**Pass 94, 2026-10-10.** ⏱️ **Fourth pass of this date.** 🆕 **Thirteen trends.** `T12` (the instrument in
+a federal system is subnational — now a *predictive* rule, having located Mexico's) and `T13` (the
+permissive supply for regulated assessment is the **evidence** layer, not the scorer) are new this pass, and
+🟢 **`T4` gains the mechanism behind a wrong date this file has recorded six times: it is a conflation of a
+deferred Annex III deadline with a live Article 50 one.** Everything else is carried.
+
+#### Pass 93 — carried below, unchanged
+
 **Pass 93, 2026-10-10.** ⏱️ **Third pass of this date.** **Eleven trends.** `T1`–`T9` are carried from
 pass 92 with this pass's amendments marked **🆕 p93** inside them; `T10` and `T11` are new.
 🔵 **Each trend is tied to something measured or dated. Where pass 93 added no evidence to a carried
@@ -86,6 +94,33 @@ deadline**, and arriving with the dated Council decision is a differentiator rat
 not deferred.** So the EMEA conversation is not "prepare for a 2027 deadline" — which invites delay — but
 "there is a duty you are already subject to, and a 14-month window on the larger one". 🔵 **Two deadlines, two
 sales: literacy now, high-risk conformity by Dec 2027.** The first funds the second.
+
+
+### 🟢 🆕 p94 amendment to T4 — the wrong date is a **conflation**, and that changes the sales motion
+
+🔴 **Sixth instance, and pass 94 stopped counting and found the mechanism.** 2 August 2026 **was** the
+Annex III date. The **Digital Omnibus on AI — `Regulation (EU) 2026/1744`** (European Parliament 16 Jun
+2026, Council 29 Jun 2026, signed 8 Jul 2026; 🔴 **sources conflict on OJ publication, 24 Jul vs entry into
+force 27 Jul 2026, and neither was read primary**) moved it to **2 December 2027**, with Annex I to
+2 Aug 2028. 🟢 **But 2 August 2026 did not become an empty date — it became an Article 50 date.**
+
+| limb | date | so what |
+|---|---|---|
+| Annex III high-risk, education included (point 3(b)) | **2 Dec 2027** | the big build, 14 months out |
+| **Article 50** transparency | 🔴 **conflicting**: from **2 Aug 2026**; Art. 50(2) synthetic-content marking **2 Dec 2026**; **2 Feb 2027** for systems already on the market | **live or nearly live** |
+| **Article 4** staff AI-literacy duty | **already in force** | 🟢 sells now |
+| **Article 5** — **emotion recognition in education** | 🟢 **prohibited since 2 Feb 2025** | 🔴 **enforceable today** |
+
+🔵 **So the market's "August 2026" is a stale date that collides with a live one, which is why correcting it
+flatly has never worked.** 🟢 **The move is a question, not a correction:** *which article do you mean?*
+Annex III → they are 16 months early and will under-build; Article 50 → they are right, and probably
+unprepared.
+
+🔴 **And the obligation none of the six sources mentioned is the only one already enforceable: emotion
+recognition in education is prohibited outright.** 🔵 **That is not a 2027 planning item — it is a feature
+audit of whatever the client already runs**, because engagement detection, attention tracking and affect
+inference ship switched on in proctoring and "engagement analytics" products. **It is also the cheapest
+possible opening deliverable in EMEA: a one-week inventory against a prohibition that is already law.**
 
 ## T5 — Generators are saturated; the checker gap is now **half closed**, and the remaining half is sharper
 
@@ -333,6 +368,62 @@ this pass otherwise rates highly.
 🔴 **Generalisation limit, stated.** One benchmark, one curriculum, one language, 300 items. **The
 direction is almost certainly general and the magnitude is not.** Use it to justify the architecture, not
 to promise a client 0.2 %.
+
+## T12 — 🆕 p94 In a federal system the instrument is **subnational**, and this is now a predictive rule rather than an observation
+
+🟢 **Pass 93 observed it in Canada. Pass 94 used it to find Mexico's instrument on the first attempt. That
+is the difference between a note and a method.**
+
+| federation | national instrument | where the instrument actually is |
+|---|---|---|
+| **Canada** | 🔴 none | BC (ministerial guidance, K-12 resources to May 2026, Jan 2026 post-secondary principles) · Alberta (three-year agreement with **Amii**) · 🔴 **Ontario: none, and its largest board publicly asked the ministry for one** |
+| **Mexico** | 🔴 none; a **PT bill of 29 Apr 2026** sits in the Education Committee | 🟢 **Estado de México: reform to Art. 61 of the state `Ley de Educación`** — upper-secondary and higher education must promote *responsible, ethical and gradual* use of AI. 🔴 Promulgation date unresolved (Apr 2026 per one source; a 31 Jan–15 Jul 2026 window per another) |
+| **United States** | 🟡 **two bills of the same shape** — `H.R. 8747` (reported, not enacted) and `S. 5225` — both make AI instruction an **eligible use of existing federal K-12 funds** | 🟢 **State law**: Idaho SB 1227, Oklahoma, Maryland SB 720; plus NYC's district-level Traffic Light Framework |
+
+🔵 **Three consequences, all operational.**
+
+1. 🔴 **A national query reports an empty world.** Five passes of this KB recorded "Mexico: no AI law" and
+   every one of them was accurate and useless. 🟢 **The fix is `P955` applied to jurisdictions: name the
+   instrument and the level, not the country.**
+2. 🟢 **A federal market is a repeatable one.** A deliverable built for one state or province fits the next,
+   because the instruments converge in content — *responsible use*, *teacher review*, *local policy*, *a
+   designated coordinator* — even when they differ in form.
+3. 🔵 **And the US federal shape tells you who signs.** When the federal lever is **fund eligibility**
+   rather than mandate, 🟢 **the buyer is the district administrator with a Title IV-A line, not a federal
+   programme office** — and Maryland has already named that person: **an AI coordinator per local school
+   system**.
+
+🟡 **The limit, stated:** three federations, one of them (the US) known since pass 90. 🔴 **Quebec, Brazil's
+states and India's states are untested**, and Brazil is the interesting one — it has a national curriculum
+base as audited open data (`T11`) **and** 26 states, so the rule predicts state-level AI instruments there
+that this KB has never looked for.
+
+## T13 — 🆕 p94 The permissive supply for regulated assessment is the **evidence layer**, not the scorer
+
+🟢 **This trend exists because `Gap 372` was stated too broadly for one pass and is now stated correctly.**
+
+Pass 93: *"there is no production-grade permissive AES library in this industry"* — one 2★
+Apache-by-reference research repo was the whole supply, for the activity the AI Act names high-risk most
+explicitly. 🟢 **Pass 94 read the payloads and the picture inverted along a seam nobody had drawn:**
+
+| layer | what a regulated deliverable needs it for | permissive supply |
+|---|---|---|
+| **the scorer** | producing a grade | 🔴 **absent.** The production code is AGPL-3.0 — `openedx/ease`, `openedx/edx-ora2` |
+| **the validation and fairness harness** | 🟢 **the artefact the regulator and the appeal process actually consume** | 🟢 **present and mature** — `EducationalTestingService/rsmtool` (Apache-2.0, 2 916 commits), `skll` (BSD-3) |
+| **open-response grading with LMS reach** | getting a grade back into the platform the client runs | 🟢 **`HASKI-RAK/NodeGrade`** (MIT, LTI 1.1/1.3, 421 commits) |
+| **the explanation** | 🟢 Annex III owes the assessed person a reason | 🟢 the psychometric tier — BKT / IRT / CAT, all MIT or BSD (`T10`) |
+
+🔵 **The commercial reading is the opposite of the obvious one.** The scorer is the part a client can buy
+from a vendor, and the part that is cheapest to replace. 🟢 **The validity argument, the fairness analysis
+and the explanation are the parts nobody sells as a product, that every regulated deployment needs, and
+that are available under Apache and BSD from the house that runs TOEFL and the GRE.** 🔴 **Which is why
+"we cannot do automated scoring, there is no open scorer" was the wrong conclusion**: the open supply
+covers the defensible half, and the half it does not cover is the half with a market price.
+
+🔴 **And a caution that belongs in this trend rather than a footnote.** The same publisher ships
+**GPL-2.0** in `factor_analyzer` — a factor-analysis library of exactly the kind a scoring pipeline imports
+without reading (`P975`). 🔵 **In this tier the licence audit is a per-dependency job, not a per-vendor
+one.**
 
 ## Instrument note carried forward
 

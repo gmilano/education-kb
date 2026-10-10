@@ -6,6 +6,62 @@ updated: 2026-10-10
 
 # Education — vertical platforms you can customise with AI
 
+**Pass 94, 2026-10-10.** ⏱️ **Fourth pass of this date.** 🔴 **No licence on this page was re-resolved
+this pass either** — they remain carried at their pass-92/93 SHAs, and the sandbox still refuses to execute
+`grant-ladder-v4/ladder.sh`, so no replacement classifier was written (`P237`, `P970`). 🟢 **What pass 94
+adds to this page is a field it never had: the version, read from the payload.** `P972`, evidence in
+`compose/code/p972-platform-version-ladder/`.
+
+## 🟢 🆕 p94 Versions, read from the payload — and the market leader is two releases past every blog
+
+🔴 **Until this pass, every version string on this page came from prose.** Two oracles already in this KB's
+map fix it for free: `git ls-remote --heads|--tags <slug>` for the release ladder, and the project's own
+version file at a pinned SHA for the release string.
+
+| platform | ladder (as the remote reports it) | release string, from the payload | note |
+|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `MOODLE_500/501/502/**503**_STABLE` in **heads**; `main` is development | 🟢 **`5.3 (Build: 20261005)`**, `$branch='503'`, **`MATURITY_STABLE`** · `main` → **`6.0dev (Build: 20261005)`**, `MATURITY_ALPHA` | 🔴 **Every secondary source read this pass said "5.2 is current."** Both payloads are stamped **2026-10-05**, five days before this pass. |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **19 `open-release/*` heads, newest `sumac.master`** — but `refs/tags/release/teak.1–3` and `release/ulmo.1–4` exist | 🔴 **none** — `openedx/__init__.py` is a docstring and declares no version | 🟡 **`P977`:** the ladder moved heads → tags **and** changed prefix (`open-release/` → `release/`) between Sumac and Teak. A heads probe is two named releases stale; a `grep open-release` over tags misses both. |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | newest tag **`v22.0.2`** | — | 🟢 **The cross-check that catches `P977`:** the distribution operators actually install is three named releases past the newest `open-release` head. |
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | `develop` · `760e2e1` | 🟢 **`version = "10.3"`** in `build.gradle` (line 116) | 🟢 Its build file also pins round a named CVE (`CVE-2026-55760`, FileTemplateLoader path traversal) with the reasoning written in comments — **supply-chain hygiene you can read before you commit to a platform.** |
+
+### 🔴 🆕 `P973` — and `version.php` is **not** at the root
+
+**`moodle/moodle`'s root `version.php` → HTTP 404.** The file is **`public/version.php`**: Moodle **moved
+its web root into `public/` at 5.0**.
+
+🔵 **This is `P969` one level up — a reach defect, not a licence defect.** A root-only probe reports
+*absent* for a file that exists.
+
+🔴 **And on this page it is money rather than taxonomy.** Every Dockerfile, reverse-proxy rule, `config.php`
+path, CI job and theme customisation written against pre-5.0 Moodle points one directory too high. **Read
+`public/version.php` in week 0 or discover the restructure in week 3.** 🟢 Control held across three passes:
+`COPYING.txt` **35 147 B** at `main` · `f205347`, byte-identical.
+
+### 🟢 `Gap 373` — independently re-derived, and it holds
+
+[`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) → `19.0` · `1c95cef`,
+`LICENSE` **8 241 B**, HTTP 200, and the payload says it **in words**: *"OpenEduCat is published under the
+GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3), as included below."* 🟢 **So the LGPL-3.0 reading on
+this page is correct, now confirmed by a second hand-run read at the same SHA** — *"link, don't absorb"*
+stands for this row.
+
+🟢 **And the payload yields the counter-measurement `P960` was missing (`P976`).** Raw case-insensitive
+counts, two payloads, this pass:
+
+| payload | *"gnu general public"* | *"gnu lesser"* | family |
+|---|---|---|---|
+| `EducationalTestingService/factor_analyzer` · 18 092 B | **6** | 2 | 🔴 GPL-2.0 |
+| `OpenEduCat/openeducat_erp` · 8 241 B | 1 | **10** | 🟢 LGPL-3.0 |
+
+🔵 **A GPL-2.0 preamble mentions the LGPL — which is why pass 91's ordered first-match test inverted two
+platform licences — but it does not mention it *more often than its own name*.** 🔴 **Recorded as a
+measurement on n=2, explicitly NOT as a classifier branch**: `P237` exists because pass 91 shipped exactly
+that kind of edit on exactly this family, and it cost two licences and a client recommendation. The next
+pass that can execute code has the fixtures in `compose/code/p972-platform-version-ladder/pass94-grant-ratios.tsv`.
+
+#### Pass 93 — carried below, unchanged
+
 **Pass 93, 2026-10-10.** ⏱️ **Third pass of this date.** 🔴 **No platform row on this page was
 re-resolved this pass** — every licence here is carried at its **pass-92** SHA, read from the payload then
 by `compose/code/grant-ladder-v4/ladder.sh`. 🔵 **Pass 93 could not execute that instrument** (this
@@ -212,9 +268,20 @@ of which sit *beside* the client's LMS rather than replacing it. **That is the s
 
 ## Open gaps on this page
 
-- 🔴 🆕 **`Gap 373` — re-derive `openeducat/openeducat_erp` from the payload.** Carried here as LGPL-3.0 on
-  badge-and-blog evidence; the LGPL→GPL-2.0 error has fired twice in this family already (`tao-core`,
-  `i-educar`). **Not corrected, because the payload was not read this pass — flagged so it is read next.**
+- 🟢 🆕 **p94: `Gap 373` DISCHARGED.** `OpenEduCat/openeducat_erp` → `19.0` · `1c95cef`, `LICENSE`
+  **8 241 B**, and the payload states it in words: *"OpenEduCat is published under the GNU LESSER GENERAL
+  PUBLIC LICENSE, Version 3 (LGPLv3)"*. The LGPL-3.0 reading on this page was right; *"link, don't absorb"*
+  stands. 🔵 **Pass 93 was right to flag rather than correct it** — the flag cost one pass and the answer
+  cost three HTTP requests.
+  🔴 **Pass 93's text is left in place above** rather than rewritten, so the record shows a flag raised on
+  badge-and-blog evidence and then settled from the payload.
+- 🔴 🆕 **p94: `Gap 375` — the version field is payload-derived for 3 platforms and prose for the rest.**
+  Moodle, Artemis and Open edX/Tutor were read this pass (section at the top of this page). Every other row
+  here still carries a version nobody verified, and `P972` makes verifying it mechanical.
+- 🔴 🆕 **p94: `Gap 376` — the `public/` restructure is unmeasured beyond Moodle.** `P973` found one
+  platform that moved its web root and broke every root-relative assumption written before 5.0. **No other
+  platform on this page has been probed for the same class of change**, and the probe is one HTTP request
+  per candidate path.
 - 🔴 **No permissive SIS exists**, for any region. Unchanged, and re-stated because it is the most common
   ask this page cannot answer well.
 - 🔴 **No permissive H5P *authoring* server** (the Node port is GPL too). Unchanged.

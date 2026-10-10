@@ -22,6 +22,117 @@ education-kb/
 └── compose/code/  # Código ejecutable y probado, no prosa
 ```
 
+## Pase 94 — 2026-10-10
+
+⏱️ **Cuarto pase de esta fecha** (el 91 corrió 23:0x–00:00 UTC; el 92, 00:4x–01:3x; el 93, 01:4x–02:24;
+este, 02:5x).
+
+**El hallazgo principal: el pase anterior cerró `Gap 372` con una frase demasiado amplia —"no existe
+librería permisiva de grado productivo para corrección automática"— y leer los payloads la invierte por una
+costura que nadie había trazado. El SCORER no existe en abierto permisivo. La CAPA DE EVIDENCIA —la que el
+regulador y una apelación consumen de verdad— sí existe, es Apache/BSD, tiene 2 916 commits y la publica la
+casa que opera TOEFL y el GRE.**
+
+🔴 **El sandbox sigue sin ejecutar código del repositorio** (segundo pase consecutivo): `ladder.sh` se
+rechaza antes de arrancar. 🟢 **Y otra vez no se escribió ningún clasificador** (`P237`): se corrió el mapa
+de oráculos a mano y se imprimió el bloque de título de cada payload en vez de clasificarlo (`P970`).
+**12 slugs resueltos: 9 lecturas de licencia con SHA fijado, 1 negativo de control, 2 lecturas de archivo de
+versión.** El censo de 133 filas del pase 92 **no queda superado** (`P966`).
+
+### 🟢 `Gap 372` ACOTADO — y el reencuadre vale más que las tres filas nuevas
+
+[`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool) (**Apache-2.0**,
+11 358 B, `main`·`a844f71`, 71★, **2 916 commits**, 🟢 4 de 4 encabezados de cláusula presentes) ·
+[`EducationalTestingService/skll`](https://github.com/EducationalTestingService/skll) (**BSD-3-Clause**,
+1 555 B, `main`·`b350eb0`, 🟢 **North America por la línea de copyright del payload**: *"Educational Testing
+Service"*) · [`HASKI-RAK/NodeGrade`](https://github.com/HASKI-RAK/NodeGrade) (**MIT**, 1 062 B,
+`main`·`8e144ac`, 421 commits, 🟢 **LTI 1.1/1.3** y proveedor de modelo **local**).
+
+🔴 **Y donde vive el código de scoring en producción es copyleft, medido este pase:** `openedx/ease`
+(**AGPL-3.0**, 35 136 B) y `openedx/edx-ora2` (**AGPL-3.0**, 35 135 B). 🔵 **Entonces la forma del
+engagement es una frontera, no un fork: puntuar detrás del límite AGPL o comprar la nota, validar con
+Apache/BSD, y que el paquete de evidencia quede del cliente.** Costeado en `P94-A`.
+
+### 🔴 Un publicador, tres licencias (`P975`)
+
+**ETS publica Apache-2.0 (`rsmtool`), BSD-3 (`skll`) y GPL-2.0 (`factor_analyzer`, 18 092 B,
+`main`·`de933d2`) desde una sola organización.** 🔵 **La licencia es una propiedad del repositorio, nunca
+del publicador** — y un publicador sofisticado es justamente el caso donde la inferencia se siente segura.
+🟢 Control negativo: `EducationalTestingService/rsmexplain`, nombrado por un resumen de búsqueda, **no
+resuelve** (`ls-remote` exit 128).
+
+### 🟢 La versión de una plataforma también se lee del payload (`P972`) — y Moodle va dos releases por delante de todo blog
+
+`moodle/moodle` · `main` · `f205347` → `$release = '6.0dev (Build: 20261005)'`, `MATURITY_ALPHA`;
+`MOODLE_503_STABLE` → 🟢 **`5.3 (Build: 20261005)`, `MATURITY_STABLE`**. 🔴 **Todas las fuentes secundarias
+leídas este pase decían "5.2 es el estable actual".** Ambos payloads llevan sello **2026-10-05**, cinco días
+antes de este pase.
+
+🔴 **Y `version.php` NO está en la raíz (`P973`): está en `public/version.php`**, porque Moodle **movió su
+web root a `public/` en la 5.0**. 🔵 **`P969` generaliza: el defecto de alcance en la raíz no es sobre
+licencias, es sobre rutas** — y esta KB sondea 24 nombres de licencia en la raíz desde el pase 1.
+🔴 **En un engagement eso es dinero:** cada Dockerfile, regla de proxy, ruta de `config.php` y
+personalización escrita contra Moodle pre-5.0 apunta un directorio más arriba. Semana 0 si se lee
+`public/version.php`; semana 3 si no.
+
+🟡 **El límite del propio instrumento, encontrado en la segunda plataforma (`P977`):** los heads
+`open-release/*` de `openedx/edx-platform` **se detienen en Sumac**, mientras `release/teak.*` y
+`release/ulmo.*` existen solo como **tags** y **con el prefijo cambiado**. 🟢 El cruce que lo detecta es la
+distribución que se despliega: `overhangio/tutor` en **`v22.0.2`**. 🔵 **Un oráculo es una lectura; dos que
+discrepan son un hallazgo.** Gate completo en `P94-B`.
+
+### 🟢 La fecha equivocada del `T4` apareció por SEXTA vez — y este pase encontró el MECANISMO
+
+**No es ignorancia: es una CONFUSIÓN.** El 2-ago-2026 **era** la fecha del Anexo III; el **Digital Omnibus
+sobre IA — `Reglamento (UE) 2026/1744`** (PE 16-jun-2026, Consejo 29-jun-2026, firmado 8-jul-2026;
+🔴 **las fuentes discrepan entre publicación en el DO el 24-jul y entrada en vigor el 27-jul, y ninguna se
+leyó en primario**) la movió a **2-dic-2027** (Anexo I a 2-ago-2028). 🟢 **Pero el 2-ago-2026 no quedó
+vacío: pasó a ser una fecha del Artículo 50.**
+
+🔵 **Por eso corregirla de plano nunca funcionó, y la jugada es una pregunta: ¿de qué artículo hablamos?**
+Anexo III → llegan 16 meses antes y van a sub-construir. Artículo 50 → tienen razón y probablemente no
+están listos.
+
+🔴 **Y la obligación que ninguna de las seis fuentes mencionó es la única ya exigible: el reconocimiento de
+emociones en educación está PROHIBIDO desde el 2-feb-2025** (Artículo 5). 🔵 **No es un punto de
+planificación para 2027: es una auditoría de features sobre lo que el cliente ya opera**, porque la
+detección de engagement y la inferencia de afecto vienen encendidas por defecto en proctoring y
+"engagement analytics". **Es también el entregable de apertura más barato en EMEA.**
+
+### 🟢 Por primera vez, el método de una región encontró el instrumento de otra
+
+El pase 93 sacó de Canadá una regla: **en un sistema federal el instrumento casi nunca es nacional, y una
+consulta nacional reporta un mundo vacío.** El pase 93 además descargó a México como vacío tras cinco pases.
+🟢 **El pase 94 apuntó la regla de Canadá a México y encontró el instrumento al primer intento:** reforma al
+**Art. 61 de la `Ley de Educación` del Estado de México** (medio superior y superior: uso **responsable,
+ético y gradual** de IA; Dip. Lili Urbina, PRI; avalada por unanimidad en comisiones unidas).
+🔴 **La fecha de promulgación NO queda establecida** (abr-2026 según un análisis; ventana 31-ene a
+15-jul-2026 según otro; la Gaceta no era alcanzable). 🔴 **A nivel federal no hay ley**: la iniciativa del
+PT del 29-abr-2026 está en comisión. `T12`.
+
+### 🟢 `Gap 371` DESCARGADO A MEDIAS, y el contraste es el hallazgo
+
+**Existe otra publicación con la forma de la BNCC: el *Machine Readable Australian Curriculum* (MRAC) v9 de
+ACARA** — RDF/XML, JSON-LD y endpoint SPARQL (`rdf.australiancurriculum.edu.au/api/sparql`).
+🔴 **Su licencia no se pudo verificar: el host está bloqueado por el allowlist de egreso y no existe
+repositorio ni cliente en GitHub del cual leer el payload** → **`Gap 374`**.
+🔵 **Y el contraste vale más que la fila: Brasil publica un REPOSITORIO** (código MIT, datos CC BY 4.0,
+proveniencia por registro, CI que rechaza divergencias, servidor MCP) **y Australia publica un SERVICIO.**
+Un repositorio se forkea, se audita, se fija y corre sin red en una escuela; un endpoint SPARQL no.
+**Para un despliegue escolar esa diferencia pesa más que la calidad del dato.**
+
+### 🔴 Lo que este pase declara vacío
+
+🔴 **Japón: nada, por segundo pase** (cuatro consultas regionales, ningún instrumento). 🟡 Método
+especificado para el próximo: MEXT (文部科学省) y *guidelines*, **en japonés**.
+🔴 **GitHub Trending: cero repos de la industria por SEXTO pase** — 🟢 aunque corroboró desde fuera el
+*empaquetado* de esta industria: **4 de 11 filas eran skills para harnesses de agentes**, que es el hallazgo
+del pase 90. 🔴 **`govinfo.gov` se suma a los hosts bloqueados; ya son ocho.**
+🔴 **`Gap 370` sigue abierto como cableado** (el sondeo por ruta se corrió a mano: `dados/LICENSE.md`,
+676 B, HTTP 200 — con una cláusula de soberanía que ninguna licencia en la raíz podía tener:
+**los textos normativos de la BNCC son actos oficiales del Estado brasileño y no son objeto de protección
+autoral** (art. 8º, IV, Lei nº 9.610/1998); la licencia cubre solo la compilación y la curaduría).
+
 ## Pase 93 — 2026-10-10
 
 ⏱️ **Tercer pase de esta fecha** (el 91 corrió 23:0x–00:00 UTC; el 92, 00:4x–01:3x; este, después).
@@ -205,6 +316,16 @@ código HTTP se verifica siempre, no solo los bytes**). 🆕 **Positivo nuevo de
 salen los ★ de este pase, 🔴 **y ahí se detectó que la barra lateral comparte el punto ciego de raíz del
 escalador** (`P969`). Sigue vigente que `WebFetch` renderiza `github.com/topics/<t>`.
 🔴 **Límite nuevo del sandbox: no se puede ejecutar código del repositorio**, de donde `P970`.
+
+🆕 **Canal nuevo del pase 94 — la VERSIÓN de una plataforma (`P972`).** `git ls-remote --heads <slug>` y
+`--tags <slug>` devuelven la escalera de releases que el proyecto mantiene de verdad, y el archivo de
+versión del propio proyecto a un SHA fijado devuelve la cadena de release. 🔴 **Dos trampas medidas:**
+`moodle/moodle` no tiene `version.php` en la raíz (está en `public/version.php` desde la 5.0 — `P973`), y
+la escalera de `openedx/edx-platform` **se mudó de heads a tags y cambió de prefijo** entre Sumac y Teak
+(`P977`), así que un sondeo de heads reporta una versión dos releases vieja **sin fallar**.
+🔴 **El sandbox sigue sin ejecutar código del repositorio** (segundo pase), y
+🔴 **`govinfo.gov`, `unesco.org` y `rdf.australiancurriculum.edu.au` se suman a los hosts bloqueados por el
+allowlist de egreso: ya son ocho.** Per `P950`, no se reintentaron host por host.
 
 ## Uso
 

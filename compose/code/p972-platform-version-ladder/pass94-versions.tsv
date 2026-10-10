@@ -1,0 +1,12 @@
+# pass 94 — 2026-10-10 02:5x UTC — platform version read from the payload, not from prose.
+# Oracles: `git ls-remote --heads|--tags <https slug>` (release ladder) and
+#          `raw.githubusercontent.com/<slug>/<SHA>/<version file>` (release string).
+# No classifier, no repository code executed (P970). http is always checked, not just bytes.
+slug	ref	sha	version_file	http	release_string	branch_field	maturity	note
+moodle/moodle	main	f20534726a59a4b64d168bc4a70fc9518251613e	version.php	404	-	-	-	root path does NOT exist (P973)
+moodle/moodle	main	f20534726a59a4b64d168bc4a70fc9518251613e	public/version.php	200	6.0dev (Build: 20261005)	600	MATURITY_ALPHA	web root moved to public/ in Moodle 5.0
+moodle/moodle	MOODLE_503_STABLE	42622298fe06f9626d988d60b2bf589bd8f850e8	public/version.php	200	5.3 (Build: 20261005)	503	MATURITY_STABLE	newest STABLE branch; every blog read this pass said 5.2
+moodle/moodle	main	f20534726a59a4b64d168bc4a70fc9518251613e	COPYING.txt	200	-	-	-	35147 B — control, byte-identical to passes 92 and 93 at the same SHA
+ls1intum/Artemis	develop	760e2e1d79cb47bc334418de282cf9a762777a99	build.gradle	200	10.3	-	-	`version = "10.3"` at line 116
+openedx/edx-platform	master	2e46ebd	openedx/__init__.py	200	-	-	-	docstring only; carries NO version string
+overhangio/tutor	tags	-	refs/tags/v22.0.2	-	v22.0.2	-	-	deployment distribution, newest tag

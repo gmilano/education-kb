@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 94: the version column was the last field taken on trust, and the market leader is two releases ahead of every blog
+
+**APPEND-ONLY — history is below. Fourth pass of this date** (91: 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93:
+01:4x–02:24; this one 02:5x).
+
+🔴 **Same sandbox limit as pass 93: repository code will not execute.** `grant-ladder-v4/ladder.sh` was
+refused before it started. 🟢 **No classifier was written** (`P237`), the oracle map was run by hand and
+payloads were printed rather than matched (`P970`). Evidence committed in
+`compose/code/p972-platform-version-ladder/` — four TSVs, no executable, deliberately.
+
+### 🟢 `P972` — a platform's version is readable at payload grade, and nobody here was reading it
+
+This KB reads licences from the payload and has done for ninety passes. 🔴 **Every version string in its
+platform tier arrived as prose from a vendor blog.** Two oracles already in the pass-92 map fix that for
+free:
+
+| oracle | returns |
+|---|---|
+| `git ls-remote --heads <slug>` / `--tags <slug>` | the release ladder the project maintains |
+| `raw.githubusercontent.com/<slug>/<SHA>/<version file>` | the release string the code declares about itself |
+
+**Measured on the market leader.** `moodle/moodle` · `main` · `f205347` →
+`$release = '6.0dev (Build: 20261005)'`, `$branch = '600'`, **`MATURITY_ALPHA`**, stamp `2026100500.00`.
+`MOODLE_503_STABLE` · `4262229` → `$release = '5.3 (Build: 20261005)'`, **`MATURITY_STABLE`**.
+
+🔴 **Every secondary source read this pass said "Moodle 5.2 is the current stable release."** The payload
+says **5.3 stable, 6.0 in alpha**, both stamped **2026-10-05** — five days before this pass. 🔵 **A blog is
+at least one release stale by construction. The ladder is current to the day.**
+
+### 🔴 `P973` — and the root-only reach defect is not about licences
+
+🔴 **`moodle/moodle`'s root `version.php` is HTTP 404.** The file is at **`public/version.php`**: Moodle
+**moved its web root into `public/` at 5.0**. 🔵 **`P969` generalises** — a root-only probe reports *absent*
+for a file that exists, whatever kind of file it is, and this KB has probed 24 licence filenames at the root
+since pass 1. 🔴 **For an engagement this is money, not taxonomy:** every Dockerfile, proxy rule, `config.php`
+path and customisation written against pre-5.0 Moodle points one directory too high. Week-0 discovery if you
+read `public/version.php`; week-3 otherwise. Control held: `COPYING.txt` **35 147 B** at the same SHA, for
+the third pass running.
+
+### 🟡 `P977` — the new oracle's limit, found on the second platform it was pointed at
+
+`openedx/edx-platform` publishes **19 `open-release/*` heads whose newest is `sumac.master`**. Open edX did
+not stop releasing: `refs/tags/release/teak.1`–`teak.3` and `refs/tags/release/ulmo.1`–`ulmo.4` exist.
+🔴 **Two conventions changed at once between Sumac and Teak — heads → tags, and the prefix `open-release/`
+→ `release/`** — so a heads probe is silently two named releases stale and a `grep open-release` over the
+tags misses both. 🟢 **The cross-check that catches it is the deployment distribution:**
+`overhangio/tutor` is at **`v22.0.2`**. 🔵 **One oracle is a reading; two that disagree are a finding.**
+🔴 Also measured, so the next pass does not misread a 200: `openedx/edx-platform`'s `openedx/__init__.py`
+is a docstring and carries **no version string at all** (417 B).
+
+### 🟢 New foundational rows — the scoring-validation layer
+
+| repo | grant (payload · bytes · file · ref · SHA) | ★ | region | why it is foundational |
+|---|---|---|---|---|
+| 🆕 p94 [`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool) | 🟢 **Apache-2.0** · **11 358 B** · `LICENSE` · `main` · `a844f71` | 71 | 🟢 **North America** (ETS) | **2 916 commits** of automated-scoring-model building and evaluation, config-driven, HTML statistical report, scikit-learn + SHAP, `fairness` in its own topics. 🔴 Explicitly **not a scoring engine** — it is how you show a scorer is valid. |
+| 🆕 p94 [`EducationalTestingService/skll`](https://github.com/EducationalTestingService/skll) | 🟢 **BSD-3-Clause** · 1 555 B · `LICENSE.txt` · `main` · `b350eb0` | — | 🟢 **North America** — payload line *"Copyright (c) 2012–2022 Educational Testing Service"* (`P800`) | scikit-learn experiments from configuration; the layer `rsmtool` pins at `skll==5.0.1`. |
+| 🆕 p94 [`HASKI-RAK/NodeGrade`](https://github.com/HASKI-RAK/NodeGrade) | 🟢 **MIT** · 1 062 B · `LICENSE` · `main` · `8e144ac` | 3 | 🟡 **EMEA** (Germany, by ECSEE '25 citation — the payload holder reads only *"HASKI"*, so weaker than `P800`) | 421 commits. Short-answer grading as a node graph, **LTI 1.1/1.3**, local-model provider included. |
+
+🔴 **And the negative, from the same publisher in the same sitting:**
+`EducationalTestingService/factor_analyzer` is **GPL-2.0** (18 092 B · `main` · `de933d2`) — a
+dependency-shaped factor-analysis library that a scoring pipeline would import without thinking. 🔵 **`P975`:
+licence is a property of the repository, never of the publisher.** `rsmexplain`, named by a search summary,
+**does not resolve** (`ls-remote` exit 128) — negative control.
+
+### 🔴 GitHub Trending: zero education repos — sixth consecutive pass
+
+🔵 **The query stays retired to a registry role** (pass 93's call, which pass 94 keeps). What it did return
+is a corroboration from outside this industry: **4 of 11 trending rows are skills for agent harnesses**,
+which is the packaging this shelf measured in pass 90 as *"the agent skill is the unit of delivery."*
+🟢 **Where the budget went instead, and what it bought:** the technique query (`P955`) produced the ETS
+pair; the German-language citation trail produced `NodeGrade`; the ladder oracle produced the Moodle finding.
+
+### 🟢 `Gap 370` — the per-path probe was run by hand, and the path is now known
+
+`bncc-dev/bncc-dados` · `main` · `daabd7d`:
+
+| path | HTTP | bytes | what it is |
+|---|---|---|---|
+| `LICENSE` | 200 | 1 073 | MIT, holder *"Copyright (c) 2026 Profy (bncc.dev)"* |
+| `LICENSE-DADOS.md` | 🔴 **404** | 14 | the name pass 93 expected — does not exist |
+| `dados/LICENSE.md` | 🟢 **200** | **676** | 🟢 **the real data grant, one directory down** |
+
+🟢 **The data payload resolves and it is better drafted than the root one.** It grants CC BY 4.0 over the
+directory, names the attribution string (*"bncc.dev (mantido pela Profy)"*), permits commercial use — and
+then adds the clause that actually governs a LATAM engagement: 🔵 **the BNCC's normative texts are official
+acts of the Brazilian state and are not subject to copyright (art. 8º, IV, Lei nº 9.610/1998); the licence
+covers only the compilation, structuring, identifiers, relations and curation this project produced.**
+🔵 **Which means the curriculum text is public domain by statute and the engineering around it is
+attribution-licensed — two different grants in one repository, neither of them visible at the root.**
+🔴 **`Gap 370` stays open as wiring**: `compose/code/p199-perfile-license/` still is not connected to the
+ladder. What changed is that the failing case now has a resolved path, bytes and an HTTP code.
+
 ## 2026-10-10 — pass 93: nine new foundational rows, a licence-reach blind spot proved on two oracles, and the regulatory sweep discharges three gaps
 
 **APPEND-ONLY — history is below. Third pass of this date.**

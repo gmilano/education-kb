@@ -1,0 +1,6 @@
+# Release ladders as the remote itself reports them. `git ls-remote` only — no API, no auth.
+slug	namespace	newest_entry	count	note
+moodle/moodle	refs/heads	MOODLE_503_STABLE	4 stable branches seen (500,501,502,503)	ladder lives in HEADS; convention stable across releases
+openedx/edx-platform	refs/heads	open-release/sumac.master	19 open-release heads	ladder STOPS at Sumac — a heads-only probe is two named releases stale
+openedx/edx-platform	refs/tags	release/ulmo.4	teak.1-3, ulmo.1-4 present	releases after Sumac exist only as TAGS, and the prefix changed from `open-release/` to `release/` (P977)
+overhangio/tutor	refs/tags	v22.0.2	-	cross-check: the distribution that actually gets deployed is three named releases past the newest open-release head

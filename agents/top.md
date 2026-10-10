@@ -6,6 +6,36 @@ updated: 2026-10-10
 
 # Education — AI agents shelf
 
+**Pass 94, 2026-10-10.** ⏱️ **Fourth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x;
+93: 01:4x–02:24; this one 02:5x).
+
+🔴 **The sandbox still will not execute repository code** — `grant-ladder-v4/ladder.sh` is refused before it
+starts, for the second pass running. 🟢 **So pass 94 wrote no classifier either** (`P237`), ran the oracle
+map by hand and **printed payload title blocks instead of matching on them** (`P970`). **12 slugs resolved:
+9 licence payload reads at pinned SHAs, 1 negative control, 2 version-file reads.** Pass 92's 133-row census
+is **not** superseded (`P966`); every row not marked 🆕 p94 is carried at an earlier SHA and was **not**
+re-read this pass. **A `—` in the ★ column means not read this pass. It never means zero.**
+
+### 🟢 What pass 94 adds, in one line each
+
+- 🟢 **The scoring-*validation* layer, and it is permissive** — `rsmtool` (Apache-2.0, 2 916 commits) and
+  `skll` (BSD-3) from **Educational Testing Service**, plus `NodeGrade` (MIT, LTI 1.1/1.3) for short
+  answers. 🔵 **`Gap 372` is narrowed to the scorer**: the *evidence* a regulator asks for is open; the
+  model is not. New tier below, costed as `P94-A`.
+- 🔴 **One publisher, three grants** — ETS ships Apache-2.0, BSD-3 **and GPL-2.0** (`factor_analyzer`).
+  `P975`: licence is a property of the repository, never of the publisher.
+- 🟢 **`P974`: the clause probe, not the byte count, is the test for pass 93's `P971`.** `rsmtool` returns
+  4 of 4 Apache clause headings; `AI_AWE` returns 0 of 4 — and an honest abridged copy (10 227 B) sits
+  between them on size alone.
+- 🟢 **`P972`/`P973`: platform versions are readable from the payload**, and the market leader is **5.3
+  stable / 6.0dev alpha** while every blog read this pass said 5.2 — with `version.php` **not at the
+  root**. `repos/foundations.md`, `verticals/solutions.md`, evidence in
+  `compose/code/p972-platform-version-ladder/`.
+- 🟢 **`Gap 370`'s failing path is resolved by hand**: `dados/LICENSE.md`, 676 B, HTTP 200 — and it carries
+  a sovereignty clause no root licence could ([`repos/trending.md`](../repos/trending.md)).
+
+#### Pass 93 — carried below, unchanged
+
 **Pass 93, 2026-10-10.** ⏱️ **Third pass of this date** (91: 23:0x–00:00 UTC; 92: 00:4x–01:3x; this one
 later the same day).
 
@@ -221,10 +251,75 @@ and therefore not tabled.** 🔵 **There is no production-grade permissive AES l
 `Gap 372`. For the activity the EU AI Act names high-risk by name, that is the most consequential supply
 gap on this shelf.
 
+### 🟢 🆕 p94 The scoring-**validation** tier — `Gap 372` narrowed to the scorer, and the half that a regulator asks for is permissive
+
+🔴 **What this shelf concluded one pass ago:** *"there is no production-grade permissive AES library in this
+industry."* 🟢 **True of the scorer. False of the deliverable.** Under Annex III the obligation attached to
+assessing learning outcomes is **evidence of validity and fairness, with an explanation owed to the person
+assessed** — and that layer is Apache/BSD, has 2 916 commits, and is published by the house that runs TOEFL
+and the GRE.
+
+| repo | grant (payload · bytes · file · ref · SHA) | ★ | region | what it is |
+|---|---|---|---|---|
+| 🆕 p94 [`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool) | 🟢 **Apache-2.0** · **11 358 B** · `LICENSE` · `main` · `a844f71` | 71 | 🟢 **North America** (Educational Testing Service) | 🟢 **2 916 commits.** Config-driven pipeline that builds and **evaluates** automated scoring models and emits a customisable HTML statistical report; scikit-learn + SHAP in the stack, `fairness` among its own topics, Python ≥ 3.8. 🔴 **Its README states it is *"not a scoring engine itself"*** — which is exactly why it is the row that matters. |
+| 🆕 p94 [`EducationalTestingService/skll`](https://github.com/EducationalTestingService/skll) | 🟢 **BSD-3-Clause** · 1 555 B · `LICENSE.txt` · `main` · `b350eb0` | — | 🟢 **North America** — `P800`-grade: *"Copyright (c) 2012–2022 Educational Testing Service"* | Runs scikit-learn experiments from configuration instead of code. `rsmtool` pins it at `skll==5.0.1`, so the pair is one dependency decision, not two. |
+| 🆕 p94 [`HASKI-RAK/NodeGrade`](https://github.com/HASKI-RAK/NodeGrade) | 🟢 **MIT** · 1 062 B · `LICENSE` · `main` · `8e144ac` | 3 | 🟡 **EMEA** (Germany — by the ECSEE '25 citation and its authors; the payload's holder line reads only *"HASKI"*, so this is **not** `P800`-grade) | 🟢 **Short-answer grading built as a node graph, with LTI 1.1/1.3 and 421 commits.** NestJS + Prisma + Postgres, React/Vite PWA on litegraph.js, Python sentence-embedding worker, providers pluggable (**local**, OpenAI, OpenRouter, OpenAI-compatible), facilitator-run workshop mode. 🔵 **The only open-response grader on this shelf that already speaks the protocol an LMS speaks** — and 3★, which is why it is tabled with its commit count rather than its popularity. |
+
+🔴 **Where the production AES code actually lives, measured this pass:**
+
+| repo | payload | read |
+|---|---|---|
+| 🆕 p94 [`openedx/ease`](https://github.com/openedx/ease) | 🔴 **AGPL-3.0** · 35 136 B · `LICENSE.txt` · `master` · `056da0a` | edX's *Enhanced AI Scoring Engine* — the first place anyone looks, and network copyleft. |
+| 🆕 p94 [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🔴 **AGPL-3.0** · 35 135 B · `LICENSE` · `master` · `1b7ae59` | Open Response Assessment: peer, self and staff assessment inside Open edX. Same grant. |
+
+🔵 **So the engagement shape is a boundary, not a fork.** Score behind the AGPL service boundary (or buy the
+score), **validate with Apache/BSD**, and keep the evidence pack as the client's own artefact. 🔴 **What is
+still genuinely missing is one thing, precisely stated:** a permissive, production-grade **scorer** for
+open-response work. That is the whole of `Gap 372` now.
+
+#### 🔴 `P975` — one publisher, three grants, measured in a single sitting
+
+| slug | payload | family |
+|---|---|---|
+| `EducationalTestingService/rsmtool` | 11 358 B · Apache title block · **4 of 4** clause headings | 🟢 Apache-2.0 |
+| `EducationalTestingService/skll` | 1 555 B · *"New BSD License"* | 🟢 BSD-3-Clause |
+| 🆕 p94 `EducationalTestingService/factor_analyzer` | 18 092 B · *"GNU GENERAL PUBLIC LICENSE / Version 2, June 1991"* · `main` · `de933d2` | 🔴 **GPL-2.0** |
+
+🔴 **`factor_analyzer` is dependency-shaped** — exploratory and confirmatory factor analysis, the kind of
+library a scoring pipeline imports without reading — **and it is GPL-2.0-only from the organisation whose
+other two repositories are permissive.** 🔵 **A sophisticated publisher is not a licence guarantee.**
+🟢 Negative control: `EducationalTestingService/rsmexplain`, named by a search summary, **does not resolve**
+(`git ls-remote` exit 128).
+
+#### 🟢 `P974` — the clause probe is the test; the byte count is only a smell
+
+Pass 93's `P971` caught an Apache **header notice** masquerading as the Apache **licence** by its size
+(1 865 B against 11 357 B). 🔴 **Size alone misjudges an honest abridged copy** — this shelf carries
+`SimonsTang/feifei-companion` at 10 227 B, which is real. 🟢 **Probing for the four clause headings settles
+it**: *Grant of Patent License* · *Grant of Copyright License* · *Redistribution* · *APPENDIX*.
+
+| payload | bytes | clause headings present | reading |
+|---|---|---|---|
+| `rsmtool` `LICENSE` | 11 358 | 🟢 **4 of 4** | the licence |
+| `wwrwbs/AI_AWE` `LICENSE` | 1 865 | 🔴 **0 of 4** | the notice, grant by reference only (`P971`) |
+
+🔵 **And the clause that decides it is one of the four:** §3's express patent grant is the single strongest
+reason to prefer Apache-2.0 over MIT, so a payload missing the heading is missing the reason.
+
+#### 🟢 Two rows upgraded from the payload
+
+- [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) — **MIT** · 1 105 B · `main` · `939eb0e`; holder line
+  *"Zachary A. Pardos (@zpardos) - CAHL research lab"* → 🟢 **region placed: North America** (`P800`),
+  previously unplaced on this shelf. 🔵 **A `Gap 369` candidate in its own right**: Bayesian Knowledge
+  Tracing **and** LTI in one MIT repository — a mastery estimate that can already reach an LMS.
+- 🆕 p94 [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) — **MIT** · 1 072 B · `main` ·
+  `09fdd67`; holder *"Ebrahim Mousavi"* → 🔵 unplaced. LangGraph tutoring loop (structured tutorials, Q&A,
+  knowledge checks). 🟡 **Reference, not dependency**: no learner model, no LTI.
+
 ### The agent *skill* as the unit of delivery
 
-Carried from pass 90 and re-verified at the same SHAs. ~1 in 4 rows on `topics/ai-tutor` (**664 repos**, total
-unchanged from pass 90) is a **skill for an agent harness** rather than an application — markdown-plus-scripts
+Carried from pass 90 and re-verified at the same SHAs. ~1 in 4 rows on `topics/ai-tutor` (🆕 p94 **665 repos** — 664 at pass 90, 664 at pass 93, so
+flat for three passes; the churn is inside the existing population, not new entrants) is a **skill for an agent harness** rather than an application — markdown-plus-scripts
 with no UI, no hosting and no database, and overwhelmingly MIT.
 
 | skill | grant (payload · bytes · ref · SHA) | ★ | region | scope |
@@ -311,9 +406,13 @@ withdrawn — the sampling difference remains the explanation.
   🟢 **`Gap 369` is narrowed by `P93-A` in `compose/patterns.md`, which specifies the wiring — but no
   repository found this pass ships it, so it stays open.**
 
-- 🔴 🆕 **p93: no production-grade permissive automated essay scorer** (`Gap 372`), the single activity the
-  EU AI Act names high-risk by name. One Apache-by-reference research repo, 2★, is the whole of the
-  permissive supply — see the AES tier above.
+- 🟡 🆕 **p94: `Gap 372` is narrowed, not closed.** The missing thing is a permissive production-grade
+  **scorer** for open-response work. 🟢 **The validation layer that a regulator actually asks for exists and
+  is permissive** — `EducationalTestingService/rsmtool` (Apache-2.0, 2 916 commits) with
+  `EducationalTestingService/skll` (BSD-3), plus `HASKI-RAK/NodeGrade` (MIT, LTI 1.1/1.3) for short answers.
+  🔴 **And the production scoring code is copyleft**: `openedx/ease` and `openedx/edx-ora2` are both
+  AGPL-3.0, read from the payload this pass. **Score behind a service boundary, validate with Apache/BSD.**
+  See the scoring-validation tier above and `P94-A`.
 - 🔴 🆕 **p93: this shelf cannot see a per-directory licence** (`P969` / `Gap 370`). A dataset repository
   can present MIT at the root while the data it exists to publish is CC BY 4.0 one directory down, and
   **both the 24-name ladder and GitHub's own sidebar return the root answer.** Proved on

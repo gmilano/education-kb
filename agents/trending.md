@@ -4,6 +4,99 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 94: the automated-scoring tier is permissive after all, just not the part everyone looks for
+
+**APPEND-ONLY — history is below. Fourth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:
+00:4x–01:3x; 93: 01:4x–02:24; this one 02:5x).
+
+🔴 **Instrument, stated first and unchanged from pass 93: the sandbox still refuses to execute repository
+code.** `bash compose/code/grant-ladder-v4/ladder.sh --help` is denied before it runs. 🟢 **So pass 94
+wrote no classifier either** — `P237`, and `P970` for the method: run the oracle map by hand
+(`git ls-remote --symref` → existence/ref/SHA; `raw.githubusercontent.com/<slug>/<SHA>/<file>` → payload)
+and **print the title block instead of matching on it**. Every payload below was read at a pinned SHA with
+the HTTP code checked, never the byte count alone.
+
+**Scope.** 🔵 **12 slugs resolved, 9 payload reads, 1 negative control, 2 version-file reads.** Pass 92's
+133-row census (`grant-ladder-v4/pass92-results.tsv`) is **not** superseded (`P966`); every row not named
+here is carried at its earlier SHA and was **not** re-read. A `—` in a ★ column means not read this pass.
+
+### 🟢 `Gap 372` is NARROWED, and the reframe is worth more than a row
+
+🔴 **What this shelf said after pass 93:** *"there is no production-grade permissive AES library in this
+industry"* — the whole permissive supply being one 2★ Apache-by-reference research repo. 🟢 **The claim
+survives for the SCORER and is false for the part that a regulated deliverable actually needs.**
+
+| repo | grant (payload · bytes · file · ref · SHA) | ★ | region | what it is |
+|---|---|---|---|---|
+| 🆕 p94 [`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool) | 🟢 **Apache-2.0** · **11 358 B** · `LICENSE` · `main` · `a844f71` | 71 | 🟢 **North America** (Educational Testing Service — the holder line on its sibling, below) | 🟢 **A scoring-model *evaluation* pipeline with 2 916 commits.** Config-driven, emits a customisable HTML statistical report, scikit-learn + SHAP in the stack, `fairness` among its own topics. 🔴 **Its README says plainly it is *"not a scoring engine itself"*** — it is the harness you build and *validate* one with. |
+| 🆕 p94 [`EducationalTestingService/skll`](https://github.com/EducationalTestingService/skll) | 🟢 **BSD-3-Clause** · 1 555 B · `LICENSE.txt` · `main` · `b350eb0` | — | 🟢 **North America** — `P800`-grade: the payload's own line reads *"Copyright (c) 2012–2022 Educational Testing Service"* | The ML layer `rsmtool` pins (`skll==5.0.1`): running scikit-learn experiments from configuration rather than code. Permissive, and from the house that runs TOEFL and the GRE. |
+| 🆕 p94 [`HASKI-RAK/NodeGrade`](https://github.com/HASKI-RAK/NodeGrade) | 🟢 **MIT** · 1 062 B · `LICENSE` · `main` · `8e144ac` | 3 | 🟡 **EMEA** (Germany, by the ECSEE '25 citation and its authors; the payload holder line reads only *"HASKI"*, so this is **not** `P800`-grade and is labelled as such) | 🟢 **Short-answer grading as a node graph, with LTI 1.1/1.3.** 421 commits. NestJS + Prisma + Postgres, React/Vite PWA on litegraph.js, Python sentence-embedding worker, pluggable providers (**local**, OpenAI, OpenRouter, OpenAI-compatible). 🔵 **The only open-response grader on this shelf that already speaks the protocol an LMS speaks.** |
+
+🔵 **The reframe, and it is the finding.** Under Annex III, assessing learning outcomes is high-risk; what a
+client owes a regulator is **evidence that the scoring is valid and fair**, not a model. 🟢 **That evidence
+layer is permissive, mature and published by a psychometrics house** — `rsmtool` + `skll`. 🔴 **The scorer
+is where the permissive supply really is missing**, and that is now the whole of `Gap 372` instead of a
+vague complaint about a tier.
+
+🔴 **And where the production AES code actually lives is copyleft, measured this pass:**
+
+| repo | payload | read |
+|---|---|---|
+| [`openedx/ease`](https://github.com/openedx/ease) | 🔴 **AGPL-3.0** · 35 136 B · `LICENSE.txt` · `master` · `056da0a` | edX's *Enhanced AI Scoring Engine* — the obvious candidate, and network copyleft. |
+| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🔴 **AGPL-3.0** · 35 135 B · `LICENSE` · `master` · `1b7ae59` | Open Response Assessment — peer and staff assessment, same grant. |
+
+🔵 **So the shape of the answer for an engagement is a boundary, not a fork:** score behind AGPL if you
+score at all, or buy the score; validate with Apache/BSD; keep the evidence pack yours. Costed as `P94-A`
+in `compose/patterns.md`.
+
+### 🔴 The negative that matters more than the three positives (`P975`)
+
+**One publisher, three grants, measured in one sitting:**
+
+| slug | payload | family |
+|---|---|---|
+| `EducationalTestingService/rsmtool` | 11 358 B, Apache title block, **4 of 4 clause headings present** | 🟢 Apache-2.0 |
+| `EducationalTestingService/skll` | 1 555 B, *"New BSD License"* | 🟢 BSD-3-Clause |
+| `EducationalTestingService/factor_analyzer` | 18 092 B, *"GNU GENERAL PUBLIC LICENSE / Version 2, June 1991"* · `main` · `de933d2` | 🔴 **GPL-2.0** |
+
+🔴 **`factor_analyzer` is a dependency-shaped library** — exploratory and confirmatory factor analysis, the
+sort of thing a scoring pipeline imports without thinking — **and it is GPL-2.0-only from the same
+organisation whose other two repositories are permissive.** 🔵 **Licence is a property of the repository,
+never of the publisher**, and a sophisticated publisher is no exception. 🟢 A negative control went with
+it: `EducationalTestingService/rsmexplain`, named by a search summary, **does not resolve** (`ls-remote`
+exit 128).
+
+### 🟢 `P974` — the test for `P971` is the clause probe, not the byte count
+
+Pass 93 found a `LICENSE` that was the Apache **header notice** rather than the Apache **licence**
+(`wwrwbs/AI_AWE`, 1 865 B) and caught it by size. 🔴 **Size alone also mislabels an honest abridged copy** —
+this shelf carries `SimonsTang/feifei-companion` at 10 227 B. 🟢 **A four-term clause probe separates them
+cleanly:** *Grant of Patent License* / *Grant of Copyright License* / *Redistribution* / *APPENDIX*.
+`rsmtool` returns **4 of 4**; `AI_AWE` returns **0 of 4**. 🔵 **Byte count is a smell; clause presence is
+the test** — and the clause that matters, §3's patent grant, is precisely one of the four.
+
+### 🟢 Two rows upgraded from the payload, nothing invented
+
+- [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) — **MIT** · 1 105 B · `main` · `939eb0e`, holder line
+  *"Zachary A. Pardos (@zpardos) - CAHL research lab"* → 🟢 **region placed: North America** (`P800`),
+  where this shelf's older copy carried it unplaced. BKT **plus LTI**, so it is also a `Gap 369` candidate:
+  a tutor that already carries a mastery estimate *and* speaks to an LMS.
+- 🆕 p94 [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) — **MIT** · 1 072 B · `main` ·
+  `09fdd67`, holder *"Ebrahim Mousavi"* → 🔵 unplaced. LangGraph tutoring loop with structured tutorials,
+  Q&A and knowledge checks. 🟡 **Tabled as a reference, not a dependency**: no learner model, no LTI.
+
+### 🔴 `topics/ai-tutor`: 665 repos — flat for three passes
+
+664 at pass 90, 664 at pass 93, **665 now**. 🔵 **The topic has stopped growing while this shelf's rows keep
+advancing their HEADs**, which says the churn is inside the existing population rather than new entrants.
+The top of the page is unchanged in composition: `DeepTutor` 41k, then a long tail of **agent skills**.
+
+🟢 **And GitHub Trending corroborated that tier from outside.** Zero education repos today — **sixth
+consecutive pass** — but **4 of the 11 trending rows are skills-for-agent-harness repos**
+(`mattpocock/skills`, `addyosmani/agent-skills`, `twostraws/SwiftUI-Agent-Skill`,
+`anthropics/knowledge-work-plugins`). 🔵 **Trending cannot see this industry, but it independently confirms
+the industry's packaging**: the unit of delivery is a skill, which is what pass 90 measured here first.
+
 ## 2026-10-10 — pass 93: the psychometric layer arrives, a national curriculum turns out to be granted, and grounding finally has a number
 
 **APPEND-ONLY — history is below. Third pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x

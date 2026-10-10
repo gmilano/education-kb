@@ -6,6 +6,13 @@ updated: 2026-10-10
 
 # Education — compose patterns
 
+**Pass 94, 2026-10-10.** ⏱️ **Fourth pass of this date.** 🆕 **Two patterns added:** `P94-A`, the Annex III
+evidence pack for automated scoring — built on pass 94's finding that the *validation* layer is permissive
+and the scorer is not — and `P94-B`, a half-day platform due-diligence gate to run before a quote. 🔴 **No
+pattern below was re-costed this pass**; component SHAs are as each pattern records them.
+
+#### Pass 93 — carried below, unchanged
+
 **Pass 93, 2026-10-10.** ⏱️ **Third pass of this date.** Each pattern names the specific repos, the licence
 posture of the whole stack, and how the pieces wire together.
 
@@ -508,6 +515,100 @@ portable is the dataset**: no other national curriculum was found published this
 outside Brazil this pattern is a *build the dataset first* engagement, and `bncc-dados` is the reference
 implementation to copy — including the character-exact verification against the official PDF, which is what
 makes it auditable rather than merely open.**
+
+## `P94-A` — 🆕 The Annex III evidence pack for automated scoring (EMEA first, North America second)
+
+**The ask it answers.** *"We already grade written work with a model — or a vendor does it for us. The AI Act
+says that is high-risk. What do we have to be able to show, and can we build the showing instead of the
+scorer?"* 🟢 **Yes, and that is the cheaper and more defensible half of the job.**
+
+🔴 **Why this is a pattern and not a line in `P93-A`.** `P93-A` covers **structured** assessment — items,
+calibration, adaptive sessions, mastery. 🔴 **It does not cover open-response work**, and open response is
+where the regulatory exposure concentrates: Annex III point 3(b) names evaluating learning outcomes, and the
+assessed person is owed an explanation. 🟢 **Pass 94's finding is that the permissive supply covers the
+explanation and the validity argument, and not the scorer** — so the pattern is built on that seam instead
+of against it (`intel/trends.md` `T13`).
+
+**Stack — the licence boundary is the architecture.**
+
+| layer | component | grant (payload · bytes · file · ref · SHA) | posture |
+|---|---|---|---|
+| scoring-model evaluation, fairness, report | [`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool) | 🟢 **Apache-2.0** · 11 358 B · `LICENSE` · `main` · `a844f71` | 🟢 **in the deliverable — this is the deliverable** |
+| ML experiment layer it pins (`skll==5.0.1`) | [`EducationalTestingService/skll`](https://github.com/EducationalTestingService/skll) | 🟢 **BSD-3-Clause** · 1 555 B · `LICENSE.txt` · `main` · `b350eb0` | 🟢 in the deliverable |
+| short-answer grading with LMS reach | [`HASKI-RAK/NodeGrade`](https://github.com/HASKI-RAK/NodeGrade) | 🟢 **MIT** · 1 062 B · `LICENSE` · `main` · `8e144ac` | 🟢 fork and audit — 421 commits, 3★, so **read it before you trust it** |
+| the explanation the regulator is owed | `py-irt` + `pyBKT` + `catsim` (see `P93-A` for SHAs) | 🟢 MIT / BSD-3 | 🟢 in the deliverable |
+| long-form scoring, if it must be built | [`openedx/ease`](https://github.com/openedx/ease) · [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🔴 **AGPL-3.0** · 35 136 B / 35 135 B · `master` · `056da0a` / `1b7ae59` | 🔴 **behind a network boundary, never absorbed** |
+| architecture reference only | [`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE) | 🟡 **Apache-2.0 *by reference*** · 1 865 B · `main` · `41ae3bd` | 🟡 **read, do not depend** — `P971`: the terms are not in the repo |
+| evidence trail | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | Apache-2.0 (pass-92 SHA `cb794e4`) | 🟢 |
+| delivery | the client's LMS over **LTI 1.3** | 🔴 theirs | 🔴 integrate, never fork |
+
+**Wiring.**
+
+1. **Inventory what already scores.** 🔴 **Start with the Article 5 prohibition, not the Annex III
+   deadline**: emotion recognition in education has been **banned since 2 Feb 2025**, and affect inference
+   ships switched on in proctoring and engagement-analytics products. 🟢 **One week, and it is the only
+   limb that is already enforceable.**
+2. **Reproduce the existing scores offline.** Human ratings in, model scores in, `rsmtool` config out. 🟢 Its
+   output is **a customisable HTML statistical report** — agreement, bias by subgroup, feature behaviour via
+   SHAP — which is the artefact an appeal or an audit consumes. 🔵 **Nothing is retrained at this step; you
+   are measuring the thing the client already runs.**
+3. **Decide the scorer by boundary, not by preference.** Vendor score → keep it and wrap it. Must be built →
+   stand `ease`/`edx-ora2` behind a service boundary and **do not link it into client code**. 🔵 **Either
+   way `rsmtool`'s report is the same, which is exactly why this pattern survives the scorer decision.**
+4. **Add short-answer grading where the volume is.** `NodeGrade` already speaks **LTI 1.1/1.3** and can run a
+   **local** embedding model, so student text need not leave the institution — the EMEA sovereignty
+   constraint, satisfied by configuration rather than architecture.
+5. **Attach the explanation.** For anything that drives progression, carry a per-skill mastery probability or
+   an item-difficulty parameter from `P93-A` alongside the grade. 🔵 **A number a teacher can read is the
+   difference between a defensible decision and an appeal you lose.**
+6. **Keep the human gate explicit in the product.** Oklahoma's statute requires a teacher to review AI output
+   before classroom use, and [`fborrasumh/tutoria`](https://github.com/fborrasumh/tutoria) (MIT) is a
+   permissive reference implementation of that gate. 🟢 **One primitive, two jurisdictions' requirements.**
+
+**Cost and shape.** 🟢 **Weeks 1–2: the Article 5 inventory and the first `rsmtool` report on existing
+scores** — a deliverable before any build. **Weeks 3–6: scorer boundary, `NodeGrade` pilot on one
+assessment, LTI wiring.** **Weeks 7–10: the evidence pack** — validity argument, subgroup fairness,
+explanation path, human-review gate, documented against Annex III point 3(b). 🔵 **Sell it against
+2 December 2027 and start it against 2 February 2025.**
+
+🔴 **Scope out explicitly, as `P93-A` does.** 🔴 **This pattern does not deliver a state-of-the-art essay
+scorer.** `Gap 372` stands for the scorer: the permissive supply is one 2★ research repo whose licence is
+Apache **by reference only**, and the production code is AGPL. 🔵 **Price the human grade, or price the
+vendor's, and sell the evidence.**
+
+## `P94-B` — 🆕 The platform due-diligence gate (global, half a day, run before any quote)
+
+**The ask it answers.** *"We are quoting a Moodle / Open edX / Artemis customisation. What do we need to know
+before the number goes in the proposal?"* 🔵 **Three HTTP requests' worth of things that otherwise surface in
+week three.**
+
+🟢 **This pattern exists because pass 94 discovered that this KB itself was taking platform versions on
+trust** (`P972`, `compose/code/p972-platform-version-ladder/`).
+
+**The gate — four checks, no credentials, no API quota.**
+
+1. **Read the release ladder from the remote.** `git ls-remote --heads <slug>` **and** `--tags <slug>`.
+   🔴 **Both, because the ladder moves**: Moodle keeps it in heads (`MOODLE_503_STABLE`), while
+   **Open edX's `open-release/*` heads stop at Sumac** and Teak and Ulmo exist only as tags **under a changed
+   prefix** (`release/teak.1`, `release/ulmo.4`) — `P977`.
+2. **Read the release string from the project's own version file at a pinned SHA.** Moodle:
+   `public/version.php` → `$release`, `$branch`, `$maturity`. 🟢 **Measured 2026-10-10: `5.3` is
+   `MATURITY_STABLE`, `main` is `6.0dev` / `MATURITY_ALPHA`** — while every secondary source said 5.2.
+   🔴 **And `version.php` is NOT at the root** (`P973`): the web root moved into `public/` at Moodle 5.0,
+   which invalidates every pre-5.0 path in a Dockerfile, a proxy rule or a theme.
+3. **Cross-check against what actually gets deployed.** `overhangio/tutor` is at **`v22.0.2`** —
+   three named releases past Open edX's newest `open-release` head. 🔵 **One oracle is a reading; two that
+   disagree are a finding.**
+4. **Re-read the licence from the payload, per repository.** 🔴 Not from a badge, a blog or a sidebar —
+   `P969` showed the sidebar shares the root-only blind spot, and `P975` showed one publisher ships
+   Apache-2.0, BSD-3 **and GPL-2.0**. For a platform, also check the **assessment subsystem separately**:
+   Open edX's own scoring code (`ease`, `edx-ora2`) is **AGPL-3.0**.
+
+**What it buys.** 🟢 A version the client can check, a path layout that matches reality, a licence per
+component rather than per vendor, and — in the Artemis case — 🟢 **a readable supply-chain posture**: its
+`build.gradle` pins around a named CVE (`CVE-2026-55760`) with the reasoning in comments. 🔵 **Half a day,
+and it moves the two discoveries that most often blow a fixed-price education engagement out of week three
+and into week zero.**
 
 ## `P91-RETIRED` — "the platform is always the client's; the intelligence on top is ours"
 

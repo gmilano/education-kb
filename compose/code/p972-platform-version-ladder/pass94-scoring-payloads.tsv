@@ -1,0 +1,14 @@
+# Automated-scoring tier, licence payloads read at pinned SHAs. Title block printed, never matched (P970).
+# clauses = count of the four Apache clause headings present: Grant of Patent License / Grant of Copyright
+# License / Redistribution / APPENDIX. It is the discriminator P971 needed; byte count alone is not (P974).
+slug	ref	sha	file	http	bytes	title_block_first_line	clauses_4	copyright_line
+EducationalTestingService/rsmtool	main	a844f71	LICENSE	200	11358	Apache License	4	(canonical Apache — no holder line)
+EducationalTestingService/skll	main	b350eb0	LICENSE.txt	200	1555	New BSD License	0	Copyright (c) 2012-2022 Educational Testing Service
+EducationalTestingService/factor_analyzer	main	de933d2	LICENSE	200	18092	GNU GENERAL PUBLIC LICENSE Version 2, June 1991	0	Copyright (C) 1989, 1991 Free Software Foundation
+HASKI-RAK/NodeGrade	main	8e144ac	LICENSE	200	1062	MIT License	0	Copyright (c) 2023 HASKI
+openedx/ease	master	056da0a	LICENSE.txt	200	35136	GNU AFFERO GENERAL PUBLIC LICENSE Version 3	0	Copyright (C) 2007 Free Software Foundation
+openedx/edx-ora2	master	1b7ae59	LICENSE	200	35135	GNU AFFERO GENERAL PUBLIC LICENSE Version 3	0	Copyright (C) 2007 Free Software Foundation
+CAHLR/OATutor	main	939eb0e	LICENSE	200	1105	MIT License	0	Copyright (c) 2023 Zachary A. Pardos (@zpardos) - CAHL research lab
+Ebimsv/AITutorAgent	main	09fdd67	LICENSE	200	1072	MIT License	0	Copyright (c) 2025 Ebrahim Mousavi
+OpenEduCat/openeducat_erp	19.0	1c95cef	LICENSE	200	8241	For copyright information, please see the COPYRIGHT file. / OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3	0	see COPYRIGHT file
+EducationalTestingService/rsmexplain	-	-	-	-	-	ABSENT — git ls-remote exit 128 (negative control, named by a search summary)	-	-

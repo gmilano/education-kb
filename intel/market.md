@@ -6,6 +6,18 @@ updated: 2026-10-10
 
 # Education — market, players and opportunities
 
+**Pass 94, 2026-10-10.** ⏱️ **Fourth pass of this date.** Regional sweep run once globally and once per
+region (North America, EMEA, APAC, LATAM), plus gap-targeted queries on the leads pass 93 named for itself.
+🟢 **What pass 94 contributes to this file, in four lines:** the **mechanism** behind the wrong EU date that
+has recurred for six passes (it is a *conflation*, not an error — `### EMEA` below); **Mexico found at state
+level by applying pass 93's Canada rule**, the first time one region's method has located another's
+instrument; **`Gap 371` partially discharged** by Australia's machine-readable curriculum, with its grant
+unverified and recorded as `Gap 374`; and the US federal pattern **confirmed by a second bill of the same
+funding-eligibility shape**. 🔴 **Japan returned nothing for a second pass and GitHub Trending for a sixth** —
+both written down below.
+
+#### Pass 93 — carried below, unchanged
+
 **Pass 93, 2026-10-10.** ⏱️ **Third pass of this date.** Regional sweep run once globally and once per
 region (North America, EMEA, APAC, LATAM), plus **six gap-targeted queries aimed at the leads pass 92 named
 as its own next steps** — Canada by province, the UAE, H.R. 8747, India's higher-education limb, the LATAM
@@ -250,6 +262,46 @@ education-AI instrument is almost never national, and a national-level query wil
 institute already contracted by a ministry of education to build the framework** — a named, dated,
 institutional entry point rather than a procurement portal.
 
+#### 🟢 🆕 p94 — North America: the federal shape repeats, and three states have turned product requirements into statute
+
+🟢 **The federal pattern pass 93 established now has a second instance, which is what makes it a pattern.**
+Pass 93 discharged `H.R. 8747` and found it was *"fund eligibility, not a mandate"* — it amended ESEA 1965 so
+AI curriculum and teacher training became permitted uses of existing K-12 federal money. 🟢 **The
+`K–12 AI Literacy and Readiness Act of 2026` (S. 5225, 119th Congress) is the same shape in the Senate**:
+it would let states and districts spend **existing Student Support and Academic Enrichment (Title IV-A)
+grants** on AI instruction and teacher training. 🔴 **Introduced; no evidence of passage.**
+🔵 **Two bills, two chambers, one mechanism: the US federal lever on AI in education is the budget line, not
+the curriculum.** 🟡 *Status read from a search summary — `govinfo.gov` is egress-blocked (`ENOTFOUND`), so
+the bill text was not read primary.*
+
+🟢 **And the enacted law is at state level, where it is specific enough to be a product requirement:**
+
+| jurisdiction | instrument | what it obliges |
+|---|---|---|
+| **Idaho** | **SB 1227** (law) | Districts and charters must adopt local AI policies, and 🔴 **AI may not replace a human teacher.** |
+| **Oklahoma** | law | 🟢 **Teachers must review AI output before classroom use**, and parents may opt their children out. |
+| **Maryland** | **SB 720**, signed **May 2026** | 🟢 **Every local school system must designate an AI coordinator.** |
+| **California** | **AB 1159** (first chamber) | Would bar using student data to train AI models. |
+| **New York City** | NYC Public Schools guidance, **March 2026** | A **Traffic Light Framework** — permitted / caution / prohibited. |
+
+🔵 **Two of these name primitives this KB already shelves.** Oklahoma's *teacher reviews the output before
+the student sees it* is exactly the gate in [`fborrasumh/tutoria`](https://github.com/fborrasumh/tutoria)
+(MIT, `agents/top.md`) — 🟢 **a statutory requirement with a permissive reference implementation already on
+the shelf.** And Maryland's **AI coordinator** is a named role with a budget, i.e. an identified buyer for
+exactly the governance, training and evaluation work this KB keeps finding unmet.
+
+🔴 **The bill counts disagree and the disagreement is methodological**: one tracker says **134 bills across
+31 states** in 2026, another **~100** (PIE Network), a third **27 states active and 5 enacted**. 🔵 **Use
+the enacted list, not the count** — the enacted list is short, checkable and the only part that binds.
+
+🔴 **The regional risk signal, and it is the sharpest in this file:** faculty intent to use AI in the
+US and Canada **fell from 76 % to 67 % between 2025 and 2026 — the lowest of any region.** 🟡 Search-summary
+figure. 🔵 **North America is the one region where the practitioner trend is running *against* the
+procurement trend**, which changes what a studio should sell here: not capability, but teacher-facing
+control, review gates and evidence. 🔴 **Alongside it: ~20 % of universities have a formal AI policy**
+(Coursera, Feb 2026, search-summary) — the governance deficit this file has tracked since pass 1, now with a
+North-America-weighted number.
+
 ### EMEA
 
 🆕 🟢 **Assessment is where the EU AI Act and the market meet, and there is now a dated sector-scale pilot.**
@@ -351,6 +403,38 @@ running since 2019, an expert group meeting in Strasbourg, and working conferenc
 dimensions of AI in education. 🔵 **Relevant because it covers 46 states including non-EU ones, so it is the
 venue where a non-EU European engagement's governance language comes from.**
 
+#### 🟢 🆕 p94 — EMEA: the wrong date that has haunted this file for six passes is a **conflation**, and now it has a mechanism
+
+🔴 **The recurring error, as this file has logged it five times:** sources state *"Annex III obligations
+apply from 2 August 2026."* 🟢 **Pass 94 found why it keeps happening, and it is not simple ignorance.**
+
+| instrument / limb | date | status |
+|---|---|---|
+| **Digital Omnibus on AI** — 🟢 **Regulation (EU) 2026/1744** | European Parliament **16 Jun 2026**, Council **29 Jun 2026**, signed **8 Jul 2026** · 🔴 **OJ publication 24 Jul 2026 per one source, entry into force 27 Jul 2026 per another — the two conflict and neither was read primary** | in force |
+| **Annex III high-risk** (incl. **access to education and vocational training**, grading, placement, proctoring — point 3(b)) | 🟢 **2 Aug 2026 → 2 December 2027** | deferred |
+| **Annex I** product-embedded systems | 2 Aug 2028 | deferred |
+| **Article 50** transparency | 🔴 **sources conflict**: applies from **2 Aug 2026** per one; Art. 50(2) marking of synthetic content moved to **2 Dec 2026** per another; **2 Feb 2027** for systems already on the market per a third | **partly live** |
+| **Article 4** staff AI-literacy duty | already in force | 🟢 **live, and never deferred** |
+| **Article 5** prohibition — **emotion recognition in education** | 🟢 **in force since 2 Feb 2025** | 🔴 **live and enforceable now** |
+
+🔵 **So "August 2026" is a stale date that happens to coincide with a live one.** The market is not merely
+citing an old deadline: it is citing a date on which *something in education really does bite*, under a
+different article. 🟢 **The practical instruction that follows is a question, not a correction:** when a
+client or their installed adviser says *"August 2026"*, ask **which article** — if they mean Annex III they
+are 16 months early and will under-build; if they mean Article 50 they are right and are probably
+unprepared. 🔴 **And the one obligation nobody in six passes of sources has mentioned is the one already
+enforceable: emotion recognition in education is prohibited, full stop, since February 2025** — which
+directly implicates the engagement-detection and attention-tracking features that proctoring and
+"engagement analytics" vendors ship by default.
+
+🟢 **Two demand signals, both search-summary.** The **European University Association** (report, **Jan
+2026**) urges mindful adoption and 🟢 **prioritising European LLMs to counter US-centric bias** — the
+sovereignty thesis this file has carried, now in the sector's own representative body's words, which is what
+makes it procurable. And a research paper finds that universities **document aspirational commitments far
+more readily than technical safeguards**, with weak validity testing and fairness monitoring. 🔵 **That is
+the `rsmtool` deliverable described from the buyer's side** (`repos/foundations.md` Tier 2d, `P94-A`): the
+policy exists, the evidence does not, and the evidence is the part that is permissively available.
+
 ### APAC
 
 🆕 🟢 **Three binding instruments landed or took effect since this file last listed them, and two name
@@ -446,6 +530,48 @@ content market; **AICTE's 14 000-institution plan submission, if real, is a gove
 market** — and those are different products. 🟢 **Per `P870`/`P955` the next query should name the
 instrument type, not the body**: *gazette notification*, *model curriculum revision*, *approval process
 handbook 2026-27*, rather than "AICTE AI mandatory".
+
+#### 🟢 🆕 p94 — APAC: China moves the mandate into **teacher certification**, Australia has the artefact `Gap 371` asked for, and Japan returns nothing for a second pass
+
+- 🟢 **China — `AI+Education` national action plan, Ministry of Education, April 2026, running to 2030.**
+  AI education from primary school through university, described as the move from pilots to nationwide.
+  🟢 **The limb that matters commercially: AI knowledge becomes a mandatory component of teacher
+  qualification exams and certification.** 🔵 **That converts a curriculum mandate into a recurring
+  assessment market with a fixed cohort** — every new teacher, every year — and assessment is the activity
+  with the clearest open supply (`repos/foundations.md` Tier 2/2c/2d). 🟡 The ≥8 h/year compulsory figure
+  this file already carries is **Beijing municipal** and dates to 2025; the April 2026 plan is the national
+  layer above it. Both stated, neither merged.
+- 🟢 **India — the second phase is now dated.** CBSE: AI and computational thinking **mandatory from Class
+  3**, with **Classes 3–8 in 2026-27** (already on this shelf) and 🆕 **Classes 9–10 following in 2027-28**.
+  The expert committee is chaired by an **IIT Madras** professor and **NCERT is reviewing the draft**.
+  🔵 **A two-phase rollout with a named academic owner is a procurement calendar**, not an announcement.
+- 🟡 **Singapore — a second, higher-education instrument.** May 2026: Education Minister Desmond Lee
+  announced that **all students in universities, polytechnics and the ITE will complete baseline AI
+  competency modules by 2027**, with the stated aim of avoiding *"cognitive offloading."* 🔴 **Secondary
+  blog source citing other outlets; MOE's own release was not read.** 🔵 This is distinct from the
+  **March 2026** schools mandate this file already carries — **two instruments, two sectors**, and the
+  higher-education one has the tighter deadline.
+- 🟢 🆕 **Australia — `Gap 371` is PARTIALLY DISCHARGED, and the answer is not on GitHub.** `Gap 371` asked
+  whether a **BNCC-shaped open-data publication** exists for any other national curriculum. 🟢 **It does:
+  ACARA publishes the *Machine Readable Australian Curriculum* (MRAC) for Version 9** as **RDF/XML,
+  JSON-LD and a SPARQL endpoint** at `rdf.australiancurriculum.edu.au/api/sparql` (query in the `q`
+  parameter), with per-learning-area downloads and identifiers of the form `MRAC/2024/04/LA/TEC`; the JSON
+  manifests preserve curriculum-statement ordering where the RDF does not.
+  🔴 **The licence could not be verified: `rdf.australiancurriculum.edu.au` and
+  `v8.australiancurriculum.edu.au` are egress-blocked in this session (`ENOTFOUND`), and no GitHub
+  repository or client library for MRAC was found.** 🟡 **So the SHAPE is confirmed at n=2 (Brazil,
+  Australia) and the GRANT is confirmed at n=1 (Brazil).** Recorded as 🔴 **`Gap 374`: read the MRAC terms
+  of use from a reachable primary source before any Australian engagement quotes it.**
+  🔵 **And the contrast is itself the finding**: Brazil's publication is a **repository** — MIT code, CC BY
+  4.0 data, per-record provenance, CI that rejects divergence, an MCP server — while Australia's is a
+  **service**. A repository can be forked, audited, pinned and run offline in a school; a SPARQL endpoint
+  cannot. **For a school deployment that difference outranks data quality.**
+- 🔴 **Japan — a second consecutive pass with nothing.** Four region-level queries returned **no Japanese
+  education-AI instrument of any kind**: no curriculum mandate, no ministerial guidance, no dated national
+  framework. 🔵 **Written down rather than left blank**, per this file's rule. 🟡 **And the method is now
+  specified for the next pass**: `P955` and the Canada/Mexico result both say the query must name the
+  instrument and the language — 文部科学省 (MEXT) plus *guidelines*, in Japanese, rather than "Japan AI
+  education".
 
 ### LATAM
 
@@ -588,7 +714,81 @@ fifth pass: the English sweep returned nothing for this; the Portuguese query re
 project's documentation host (`douglasrizzo.com.br`), not by a payload copyright line**, so it is a weaker
 placement than `P800` grade and is labelled as such rather than promoted.
 
+#### 🟢 🆕 p94 — LATAM: Canada's shape **predicted** Mexico's, and Mexico now has an instrument
+
+🟢 **This is the first time this file has used one region's finding to find another's, and it worked.**
+Pass 93's Canada result produced a rule: *in a federal system the instrument is almost never national, and a
+national query reports an empty world.* Pass 93 then discharged Mexico as empty after five passes. 🟢 **Pass
+94 pointed the Canada rule at Mexico and found the instrument at state level on the first attempt.**
+
+| limb | what exists |
+|---|---|
+| 🟢 **Estado de México (Edomex)** | A reform to **Article 61 of the state `Ley de Educación`**, proposed by **Dip. Lili Urbina (PRI)** and 🟢 **approved unanimously in joint committee**: *media superior* and *superior* levels must promote the **responsible, ethical and gradual use of AI for educational purposes**, together with progressive access to technology and free internet in educational spaces for academic or cultural purposes. 🔴 **The promulgation date is NOT established**: one analysis says **April 2026** and *"first state to legislate on AI in the classroom"*; another account places the PRI bloc's approvals anywhere between **31 Jan and 15 Jul 2026**. 🔴 **The `Gaceta Legislativa` was not reachable, so neither date is adopted.** |
+| 🔴 **Federal** | **No general AI law.** A **PT initiative of 29 Apr 2026** would add AI to the `Ley General de Educación` — 🔴 **referred to the Education Committee, not law**, and schools are obliged to change nothing by it. Reforms that *did* pass touch the `Ley Federal del Trabajo` and author's-rights over voice and likeness, not education. |
+
+🔵 **So the correct statement about Mexico is now three-layered, where this file previously had one:** no
+federal education-AI law · a federal bill in committee · **a state-level reform already adopted in the
+country's most populous state, covering upper-secondary and higher education.** 🟢 **And it is an
+engagement-grade distinction**: Edomex's text names *responsible, ethical and gradual use* — an obligation
+a studio can be paid to operationalise — while the federal picture names nothing.
+
+🟢 **Region-wide, the institutional layer gained a permanent body.** **UNESCO launched an Observatory of
+Artificial Intelligence in Education for Latin America and the Caribbean**, at the **2026 ALC Forum on
+Sustainable Development**. 🔴 **`unesco.org` is egress-blocked in this session (`ENOTFOUND`), so this is a
+search-summary read and the launch date is not pinned.** 🔵 **Why it matters anyway: an observatory is a
+standing demand for measurement**, and pass 93's UNESCO IESALC survey already found the measurement gap
+(**87 % of 200 institutions across 19 countries use AI in at least one area; 9 % evaluate how it performs**).
+**The body that publishes the gap is now institutional, which makes closing it a budget line rather than a
+one-off report.**
+
+🔴 **The learning-crisis denominator, which is what regional AI spend is actually arguing against:**
+**six in ten sixth-grade students in Latin America do not reach minimum proficiency in reading and
+mathematics** (LLECE, via the Observatory coverage). 🔵 **State it in any LATAM deck before any adoption
+percentage** — the regional thesis is remediation at scale, not productivity.
+
+🟡 **Legal state of play, carried and extended (search-summary):** **Peru and El Salvador have AI laws in
+force**; **Colombia, Brazil and Chile are moving faster** than the rest; the consensus expectation is
+**sectoral instruments rather than one AI act per country.** 🟡 **Argentina usage signal:** **79 % of
+surveyed students** report using an AI tool for study work, ChatGPT dominant, 🔴 **with rules and assessment
+practice lagging behind the usage** — the same shape as the regional governance gap, one level down.
+
 ## Regions and lines of enquiry that returned nothing — stated, not hidden
+
+### 🆕 p94 — scored against the leads pass 93 named for itself
+
+| lead, as pass 93 wrote it | pass 94 |
+|---|---|
+| `Gap 371`, *"does a BNCC-shaped open-data publication exist for any other national curriculum?"* | 🟢 **PARTIALLY DISCHARGED** — **ACARA's Machine Readable Australian Curriculum v9** (RDF/XML, JSON-LD, SPARQL). 🔴 **Licence unverified: host egress-blocked** → **`Gap 374`** |
+| Mexico, discharged as empty after five passes | 🟢 **RE-OPENED AND ANSWERED** — a state-level reform exists (Edomex, Art. 61). 🔵 **Found by applying pass 93's Canada rule, not by re-running the old query** |
+| *"Quebec is the single cheapest lead for the next pass"* | 🔴 **NOT RUN** — the Mexico application of the same rule was taken first and paid; Quebec carried unchanged |
+| India higher education (AICTE / UGC) | 🔴 **NOT RE-QUERIED.** Carried as narrowed-and-open rather than re-asserted |
+| GitHub Trending | 🔴 **STANDS — sixth consecutive zero**, and see the corroboration note below |
+| `Gap 367`, no permissive K-5 AI curriculum | 🔴 **NOT RE-QUERIED**, carried verbatim for a second pass |
+
+- 🔴 🆕 **`Gap 374` — the MRAC licence.** Australia's machine-readable curriculum answers `Gap 371`'s shape
+  question, and **its terms of use could not be read**: `rdf.australiancurriculum.edu.au` and
+  `v8.australiancurriculum.edu.au` both return `ENOTFOUND` under this session's egress allowlist, and **no
+  GitHub repository or client library for MRAC exists** to read the grant from a payload instead.
+  🔵 **Until it is read, the honest statement is "the artefact exists and we do not know what it permits"** —
+  which is not the same as permissive, and is exactly the elision `P969` and `P965` exist to prevent.
+- 🔴 🆕 **The Edomex promulgation date.** One source says April 2026, another implies any date between 31 Jan
+  and 15 Jul 2026, and the state `Gaceta Legislativa` was not reachable. 🟢 **The instrument's existence and
+  content are not in doubt; its date is.** Recorded that way rather than averaged.
+- 🔴 🆕 **GitHub Trending: ZERO education repositories for a SIXTH consecutive pass** — and this time the
+  channel said something useful in passing. 🟢 **4 of the 11 trending rows were skills for agent harnesses**
+  (`mattpocock/skills`, `addyosmani/agent-skills`, `twostraws/SwiftUI-Agent-Skill`,
+  `anthropics/knowledge-work-plugins`). 🔵 **Trending cannot see this industry, but it independently
+  corroborated this industry's *packaging*** — pass 90's finding that the agent skill is the unit of
+  delivery. 🔵 **The query stays retired to a registry role**, and the six-pass negative remains a finding
+  to carry upward to the rotation rather than a local accident.
+- 🔴 🆕 **Japan: nothing, for a second consecutive pass.** No curriculum mandate, no ministerial guidance,
+  no dated framework, across four region-level queries. 🟡 **Next method is specified, not vague**: query
+  MEXT (文部科学省) and *guidelines* in Japanese — the Portuguese and Spanish queries have paid five times
+  in this file and the English ones have not.
+- 🔴 🆕 **`govinfo.gov` is now also egress-blocked**, which is why S. 5225's status is search-summary rather
+  than a primary read. 🔵 **The blocked-host list for this KB is now eight** and has become a standing
+  property of these sessions; per `P950` the hosts were not retried one by one.
+
 
 🟢 **Pass 93 spent its gap budget on the leads pass 92 named for itself. Three discharged, one narrowed,
 two stand.** 🔵 **Scored openly, because a gap list that only grows is a list nobody is working.**

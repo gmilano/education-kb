@@ -6,6 +6,14 @@ updated: 2026-10-10
 
 # Education — foundational repos
 
+**Pass 94, 2026-10-10.** ⏱️ **Fourth pass of this date** (91: 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93:
+01:4x–02:24; this one 02:5x). 🔴 **Repository code still will not execute in this sandbox**, so no
+classifier was written for the second pass running (`P237`); the oracle map was run by hand and payloads
+printed rather than matched (`P970`). 🟢 **Pass 94 adds Tier 2d (scoring validation), `P972`–`P977`, and
+resolves `Gap 370`'s failing path by hand.** Everything not marked 🆕 p94 is carried and was not re-read.
+
+#### Pass 93 — carried below, unchanged
+
 **Pass 93, 2026-10-10.** ⏱️ **Third pass of this date** (91 ran 23:0x–00:00 UTC, 92 ran 00:4x–01:3x,
 this one later the same day).
 
@@ -120,6 +128,62 @@ so the next pass that can run code has a failing case ready.
 | [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | **BSD** · 1 560 B · `master` · `190c1a4` | — | **North America** (UC Berkeley, US) | Notebook autograding; the standard in data-science teaching. |
 | [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | **BSD** · 1 512 B · `main` · `f9915da` | — | **North America** (Project Jupyter) | Assignment release/collect/grade for notebooks. |
 | [`webtech-network/autograder`](https://github.com/webtech-network/autograder) | **Apache-2.0** · 11 357 B · `main` · `04bee3e` | — | 🔵 unplaced | Rubric-driven autograding with report generation; release 0.4.0 (May 2026). |
+
+## 🆕 p94 Tier 2d — the scoring-**validation** layer, and why it is the half worth having
+
+🟢 **Three rows, all read from the payload this pass, and one of them changes what `Gap 372` says.**
+
+| repo | grant (payload · bytes · file · ref · SHA) | ★ | region | role in a build |
+|---|---|---|---|---|
+| 🆕 p94 [`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool) | 🟢 **Apache-2.0** · **11 358 B** · `LICENSE` · `main` · `a844f71` | 71 | 🟢 **North America** (ETS) | **2 916 commits.** Builds **and evaluates** automated scoring models from a configuration file; customisable HTML statistical report; scikit-learn + SHAP; `fairness` among its own topics. 🔴 **Not a scoring engine** — it is how you demonstrate one is valid. |
+| 🆕 p94 [`EducationalTestingService/skll`](https://github.com/EducationalTestingService/skll) | 🟢 **BSD-3-Clause** · 1 555 B · `LICENSE.txt` · `main` · `b350eb0` | — | 🟢 **North America** — `P800`: *"Copyright (c) 2012–2022 Educational Testing Service"* | scikit-learn experiments driven by configuration. Pinned by `rsmtool` at `skll==5.0.1`, so the pair is a single dependency decision. |
+| 🆕 p94 [`HASKI-RAK/NodeGrade`](https://github.com/HASKI-RAK/NodeGrade) | 🟢 **MIT** · 1 062 B · `LICENSE` · `main` · `8e144ac` | 3 | 🟡 **EMEA** (Germany, by the ECSEE '25 citation; the payload holder reads only *"HASKI"* — weaker than `P800`) | **421 commits.** Short-answer grading as a node graph with **LTI 1.1/1.3**; NestJS + Prisma + Postgres, React/Vite PWA, Python sentence-embedding worker, **local-model provider included**. |
+
+🔵 **Why this tier is not a duplicate of Tier 2.** Tier 2 grades **structured** work — maths, notebooks,
+code — and does it well and permissively. This tier is about **open-response** work and about the artefact
+that regulated assessment actually owes: **a validity and fairness argument, in a report, with the model's
+behaviour attributable.** 🟢 **That artefact is Apache/BSD.** 🔴 **The scorer is not** — see the flags
+below.
+
+🔴 **Flags that belong with this tier, all payload-read this pass:**
+
+| repo | payload | why it is flagged |
+|---|---|---|
+| 🆕 p94 [`openedx/ease`](https://github.com/openedx/ease) | 🔴 **AGPL-3.0** · 35 136 B · `LICENSE.txt` · `master` · `056da0a` | edX's *Enhanced AI Scoring Engine*. The obvious candidate for an AES build, and network copyleft. |
+| 🆕 p94 [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🔴 **AGPL-3.0** · 35 135 B · `LICENSE` · `master` · `1b7ae59` | Open Response Assessment inside Open edX — peer, self and staff assessment. Same grant. |
+| 🆕 p94 [`EducationalTestingService/factor_analyzer`](https://github.com/EducationalTestingService/factor_analyzer) | 🔴 **GPL-2.0** · 18 092 B · `LICENSE` · `main` · `de933d2` | 🔴 **From the same publisher as the two permissive rows above.** Dependency-shaped (EFA/CFA) — the kind of library a scoring pipeline imports without reading. `P975`. |
+
+### 🔴 🆕 `P975` — licence is a property of the repository, never of the publisher
+
+**Educational Testing Service ships Apache-2.0, BSD-3-Clause and GPL-2.0 from one GitHub organisation**,
+measured in a single sitting above. 🔵 **A licensing-sophisticated publisher is the case where the
+inference feels safest, which is what makes it the right counter-example.** 🟢 Negative control recorded
+with it: `EducationalTestingService/rsmexplain`, named by a search summary, **does not resolve**
+(`git ls-remote` exit 128).
+
+### 🟢 🆕 `P974` — probe for clauses, not for bytes
+
+Pass 93's `P971` (a `LICENSE` that is Apache's **header notice**, not its **licence**) was caught by size.
+🔴 **Size alone also condemns honest abridged copies** — `SimonsTang/feifei-companion` is 10 227 B and
+real. 🟢 **Four clause headings settle it**: *Grant of Patent License* · *Grant of Copyright License* ·
+*Redistribution* · *APPENDIX*. `rsmtool` → **4 of 4**; `AI_AWE` → **0 of 4**. 🔵 **And the discriminating
+clause is the one that justifies choosing Apache at all:** §3, the express patent grant.
+
+### 🟢 🆕 `P972` / `P973` — platform versions are payload-readable, and `version.php` is not at the root
+
+Full statement and evidence in **`compose/code/p972-platform-version-ladder/`**; the consequences for the
+platform tier are in `verticals/solutions.md`. In one line each:
+
+- 🟢 **`P972`** — `git ls-remote --heads|--tags <slug>` returns the release ladder and
+  `raw.githubusercontent.com/<slug>/<SHA>/<version file>` returns the release string. **Moodle: `main` is
+  `6.0dev (Build: 20261005)`, `MATURITY_ALPHA`; `MOODLE_503_STABLE` is `5.3`, `MATURITY_STABLE`.** 🔴 Every
+  secondary source read this pass said 5.2.
+- 🔴 **`P973`** — `moodle/moodle`'s root `version.php` is **404**; the file is `public/version.php`, because
+  the web root moved into `public/` at 5.0. **`P969` is a path defect, not a licence defect**, and this KB
+  has probed 24 licence filenames at the root for ninety passes.
+- 🟡 **`P977`** — the ladder oracle's own limit: `openedx/edx-platform`'s `open-release/*` **heads stop at
+  Sumac** while `release/teak.*` and `release/ulmo.*` exist only as **tags** under a **changed prefix**.
+  Cross-check the deployment distribution (`overhangio/tutor` → `v22.0.2`).
 
 ## 🆕 Tier 2b — the learner model — **`Gap 335` discharged after eight passes untouched**
 
@@ -248,6 +312,10 @@ test suite cannot be redistributed in a client deliverable.** Conformance must b
 
 ## Count, stated plainly
 
+🆕 **p94: 34 foundational rows above the flag line, 3 of them added this pass** (`rsmtool`, `skll`,
+`NodeGrade`). 🟢 **33 are permissive for the CODE** (MIT / Apache-2.0 / BSD); **1 is LGPL**
+(`celtic-project/LTI-PHP`). 🔵 **Pass 93's own sentence, kept because it still governs the reading:**
+
 **31 foundational rows above the flag line, 9 of them added this pass.** 🟢 **30 are permissive for the
 CODE** (MIT / Apache-2.0 / BSD); **1 is LGPL** (`celtic-project/LTI-PHP`).
 
@@ -281,6 +349,13 @@ of the 20.** Stated rather than silently re-tallied.
   already does per-path probing and is not wired into `grant-ladder-v4`. Failing case ready:
   `bncc-dev/bncc-dados` → root `LICENSE` MIT, data `dados/LICENSE.md` CC BY 4.0, root `LICENSE-DADOS.md`
   404. See `P969`.
+- 🟡 🆕 **p94: `Gap 372` narrowed to the scorer.** The validation half exists and is permissive (Tier 2d);
+  the production scoring code is AGPL-3.0 (`openedx/ease`, `openedx/edx-ora2`). **What is missing is a
+  permissive production-grade scorer for open-response work** — and nothing else.
+- 🔴 🆕 **p94: `Gap 375` — this shelf has 3 payload-derived platform versions and the rest are prose.**
+  Moodle (`5.3` stable / `6.0dev`), Artemis (`10.3`) and Open edX (`release/ulmo.4`, Tutor `v22.0.2`) were
+  read this pass; every other version string in the platform tier still comes from a README or a blog.
+  `P972` makes the fix mechanical, so this gap is work, not uncertainty.
 - 🔴 🆕 **`eribean/girth_mcmc` not resolved.** Named by `catsim`'s README, not probed this pass. A lead.
 - 🔴 **`Gap 369` carried.** Nothing on this shelf wires a knowledge-tracing model into an agent turn, so
   `pyBKT`/`pykt-toolkit` → agent is a build, not an integration. 🟡 **Pass 93 narrows it rather than

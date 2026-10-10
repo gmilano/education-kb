@@ -1,0 +1,8 @@
+# P976 — the GNU family counter-measurement. P960's mechanism was an ORDERED first-match test:
+# a GPL-2.0 preamble references the LGPL inside the read window, so testing "gnu lesser" before
+# "gnu general public" returns LGPL for a GPL payload. These are raw case-insensitive COUNTS from
+# payloads read this pass. A ratio separates the two families where an ordered match does not.
+# Recorded as a MEASUREMENT. No classifier was written or changed (P237, P970).
+slug	sha	bytes	n_gnu_general_public	n_gnu_lesser	payload_says_in_words	family
+EducationalTestingService/factor_analyzer	de933d2	18092	6	2	-	GPL-2.0
+OpenEduCat/openeducat_erp	1c95cef	8241	1	10	"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3)"	LGPL-3.0
