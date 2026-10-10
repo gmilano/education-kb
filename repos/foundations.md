@@ -6,6 +6,89 @@ updated: 2026-10-10
 
 # Education — foundational repos
 
+**Pass 107, 2026-10-10.** ⏱️ **Seventeenth pass of this date.**
+
+🟢 **`Gap 376`'s corrective duty — owed since pass 92 and deferred for fourteen passes because the
+instrument needed an API that returns 403 — is DISCHARGED IN PART this pass, by dropping the API
+requirement entirely.** 🔵 **Instrument: `compose/code/p107-git-lane-census/`, `test_p107.sh`
+**20 passed / 0 failed**, `census.sh` **299 of 299** addresses in 2 m 17 s with **zero unread**.**
+
+### 🟢 🆕 p107 — the first COMPLETE denominator this shelf has had
+
+🔴 **Every census in this KB since pass 92 has carried unread rows, and `P1040` rightly insists an
+unread row is unread and never zero.** 🟢 **This one carries none: `rc=0` on all 299 addresses.**
+🔵 **The reason is channel choice, not effort** — `git ls-remote` needs no credential, no API and no
+clone, and the anonymous git lane serves every public repository.
+
+🟢 **It validated before it was trusted. Three figures this KB had published from unrelated channels
+were reproduced exactly:** `academico-sis/academico` **0** tags (p96 derived this from an npm
+`"private": true` manifest), `pupilfirst/pupilfirst` **57**, `UniTime/unitime` **101**.
+🔵 **A channel that reproduces known values can be believed on unknown ones.**
+
+🟢 **Every row now carries a full 40-character HEAD sha, which closes `Gap 380` structurally** —
+that gap exists because this shelf addresses payloads by abbreviated SHA and the abbreviation
+sometimes 404s, reading exactly like *no licence payload*. 🔵 **Nothing need be abbreviated again.**
+
+### 🔴 🆕 p107 — `pupilfirst`: pass 96's finding REFINED, and the sharper version is worse
+
+🔵 **Pass 96 read `pupilfirst` as `COMPONENT-VERSIONED`: "57 tags **all scoped npm sub-packages**, so
+the platform has never shipped as a unit".** 🟢 **The ref census confirms 57 and corrects the
+"all".**
+
+```
+57 unique tags:  43 scoped @pupilfirst/* sub-packages
+                 14 date-stamped platform releases  —  6 from 2023, 8 from 2024, NONE after
+```
+
+🟢 **So the platform *has* shipped as a unit, fourteen times. The ladder did not fail to exist — it
+STOPPED, and the newest platform tag is `v2024.2.1efffc4`.** 🔴 **That is the more expensive fact:
+"never released" invites you to build the release process; "released and then stopped two years ago"
+tells you the maintainers left, and you inherit the whole thing.** 🔵 **`P985`'s three-way split
+needs a fourth bucket: `ABANDONED-LADDER`.**
+
+### 🔴 🆕 p107 — `P107-E`: this repository's address corpus holds **72 phantom rows**
+
+🟢 **GitHub owner/repo is case-insensitive; this KB's address strings are not.** Across every `.md`,
+`.tsv` and `.txt` here: **1 703 address strings resolving to 1 631 distinct repositories — 69
+collisions, 72 phantom rows (~4 %).**
+
+🟢 **Proved same-repo rather than same-name: all three collisions on the shelf return an IDENTICAL
+HEAD sha** — `Apereo-…/OpenDashboard-legacy`, `Apereo-…/lap-sakai-extractor` (held under **three**
+spellings) and `OpenEduCat/openeducat_erp`, each against its lowercased twin.
+
+🟡 **It overturns no pass-106 finding** — the ECL tier is still ten repositories, because those ten
+were named one at a time rather than counted. 🔴 **But pass 106's "1 381 addresses" and every corpus
+denominator in this KB is inflated by roughly 4 %, so any *rate* computed against one is slightly
+optimistic.** 🟢 **`Gap 401`; the remedy is one `tr A-Z a-z` before the `sort -u` that builds an
+address list.**
+
+### 🔴 🆕 p107 — tag counts cannot be taken at face value (`P107-C`)
+
+🟢 **`git ls-remote --tags` emits an annotated tag TWICE — `refs/tags/X` and `refs/tags/X^{}`.**
+🔴 **Shelf-wide: raw 112 457 vs unique 71 079, a +58 % overstatement across 120 of 299 rows.**
+🔵 **And the ratio is not constant** — `instructure/canvas-lms` 68 051 → **34 029** and
+`moodle/moodle` 1 181 → **591** are near-exactly 2×, but `openedx/edx-platform` 6 347 → **5 896** is
+only 1.08×, because projects annotate different proportions of their tags. 🔴 **So no divisor
+corrects it; the `^{}` lines must be filtered.** 🟢 **`P1046`'s family, found this time in the ref key.**
+
+### 🟢 🆕 p107 — `T33` corroborated from a second direction: EMEA's public stack is **industrially** released
+
+🔵 **Pass 106 found eight EUPL repositories from `opetushallitus` — the Finnish National Agency for
+Education — and argued they were "not a side project". The ref census settles it.**
+
+| repo | what it is | unique tags |
+|---|---|---|
+| [`opetushallitus/valtionavustus`](https://github.com/opetushallitus/valtionavustus) | state-aid administration | 🟢 **4 468** |
+| [`opetushallitus/oppijanumerorekisteri`](https://github.com/opetushallitus/oppijanumerorekisteri) | national learner-number registry | 🟢 **4 225** |
+| [`opetushallitus/organisaatio`](https://github.com/opetushallitus/organisaatio) | national organisation registry | 🟢 **1 134** |
+| [`opetushallitus/ataru`](https://github.com/opetushallitus/ataru) | national admissions | 🟢 **726** |
+| [`opetushallitus/koski`](https://github.com/opetushallitus/koski) | national study-rights registry | 🟢 **397** |
+| [`opetushallitus/eperusteet`](https://github.com/opetushallitus/eperusteet) | national core curriculum | 🟢 **209** |
+
+🟢 **Four of these outrank every North American asset on this shelf except `canvas-lms` and
+`edx-platform`.** 🟡 **The tier remains adopt-and-contribute, because EUPL is copyleft with
+reciprocity (`T33`)** — 🔵 **but this is a partner to integrate with, not a prototype to evaluate.**
+
 **Pass 106, 2026-10-10.** ⏱️ **Sixteenth pass of this date** (104: 13:4x–14:xx UTC; 105:
 14:4x–15:xx; this one 15:4x–16:xx).
 

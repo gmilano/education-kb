@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 107: the agent shelf's two flagship patterns both rest on code that **has never shipped a release**, and the channel that proves it was available all along
+
+🔵 **No new agent reached this shelf this pass, and the eight mandated searches returned no new item
+at all — see the explicit negative at the end of this section.** 🟢 **What changed is that a second
+axis was measured for the first time in 107 passes.**
+
+### 🔴 `P107-D` — "takeable" and "pinnable" are different questions, and this shelf has only ever asked the first
+
+🟢 **A licence probe answers *may I use it*. A ref probe answers *can I pin it*.** 🔴 **This KB has
+run the first for 107 passes and the second never.** 🔵 **Both flagship agent-layer patterns fail the
+second.**
+
+| `P106-A` component (specified **last pass**) | licence (p106, payload-read) | unique tags | verdict |
+|---|---|---|---|
+| [`a2br/moodle-mcp`](https://github.com/a2br/moodle-mcp) | 🟢 MIT, 1 073 B | 🔴 **0** | 🔴 **takeable, NOT pinnable** — p106 called this *"the measured precedent"* |
+| [`fwu-de/mem-mcp`](https://github.com/fwu-de/mem-mcp) | 🟢 Unlicense, 1 211 B | 🔴 **0** | 🔴 **takeable, NOT pinnable** — p106 called this *"the memory tier"* |
+| [`sngdtechnologies/ai-moodle-security`](https://github.com/sngdtechnologies/ai-moodle-security) | 🟢 BSD-2-Clause | 🔴 **0** | 🔴 **takeable, NOT pinnable** |
+| [`jeanlucio/moodle-local_aihub`](https://github.com/jeanlucio/moodle-local_aihub) | 🟡 GPL-3 (loads in-LMS) | 🟢 **9** → `v1.3.4` | 🟢 **pinnable** |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3 | 🟢 **591** → `v5.3.0-rc2` | 🟢 **pinnable** |
+
+🟡 **So `P106-A`'s GPL-3 half is the half that ships, and the permissive sidecar half — the half the
+pattern exists to make licensable — is entirely unreleased.** 🔵 **That is a pricing input, not a
+retraction: the pattern still holds, but every sidecar component is vendored-at-a-SHA work, not a
+dependency you add to a manifest.**
+
+| `P96-A` component (`Gap 379`, open since p96) | licence | unique tags | verdict |
+|---|---|---|---|
+| [`Qwen-Applications/OpenRS`](https://github.com/Qwen-Applications/OpenRS) | 🟢 Apache-2.0 | 🔴 **0** | 🔴 **unreleased** |
+| [`wanghaoyu0408/OpenRubrics`](https://github.com/wanghaoyu0408/OpenRubrics) | 🟢 MIT | 🔴 **0** | 🔴 **unreleased** |
+| [`planepig/rubricbench`](https://github.com/planepig/rubricbench) | 🟢 MIT | 🔴 **0** | 🔴 **unreleased** |
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🟢 MIT + CC BY 4.0 data | 🔴 **0** | 🔴 **unreleased** |
+| [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | 🟢 MIT root / CC BY 4.0 data | 🟡 **3** → `dados-2026.07.1` | 🟡 **nascent, and the only one with a ladder** |
+
+🔴 **`Gap 379` has been stated for eleven passes as *"four permissive layers, three publishers, no
+integration"*. That diagnosis is incomplete.** 🟢 **The licences are permissive and that holds. But
+four of the five layers have never cut a release, so the missing piece is not only integration — it
+is that there is no version of any layer to integrate *against*.** 🔵 **Re-specified in
+`compose/patterns.md` as `P107-A`; `Gap 379` stays open with its cost revised upward.**
+
+### 🟢 The instrument, and the channel nobody had tried
+
+🔵 **`compose/code/p107-git-lane-census/` — `test_p107.sh` 20 passed / 0 failed (offline, real
+captured fixtures); `census.sh` read 299 shelf addresses in 2 m 17 s.**
+
+🔴 **`api.github.com` has been recorded as `http=403` for fourteen consecutive passes, and every ★
+column on this shelf reads `—` because of it.** 🟢 **Triaged this pass, and it is not one fact but
+three** (`P107-A`, full table in `repos/trending.md`): the 403 is an **authorization boundary**, not
+an outage and not a rate limit — `/rate_limit` itself returns **200 with 15 000 remaining and 0
+used**, and attached repositories return 200 with complete JSON. 🔴 **So no amount of waiting clears
+it, and fourteen passes of "consecutive" framing implied a transience that was never there.**
+
+🟢 **But the metadata was reachable the whole time through the anonymous git lane.**
+`git ls-remote --tags --heads` needs no API and no clone, and it returned refs for **299 of 299
+shelf addresses — zero unread.** 🔵 **It also reproduced three figures this KB had published from
+other channels, exactly: `academico` 0 tags, `pupilfirst` 57, `UniTime/unitime` 101.**
+
+### 🔴 The mandated searches: **eight queries, zero new items** — stated, not left silent
+
+🟢 **All eight ran** (global: agents / GitHub-trending / vertical-platform / industry-trends; regional:
+North America, EMEA, APAC, LATAM). 🔴 **Sixteen candidate tokens were extracted and every one is
+ALREADY held on a live page of this KB** — `H.R. 8747`, `AB 1159`, the Digital Omnibus and its
+`2 December 2027` deferral, Vietnam's `134/2025/QH15`, Korea's AI Basic Act and domestic-representative
+duty, UNESCO `IESALC` 87 %/26 %, the LATAM Observatory, `CONPES 4144`, Uruguay's Framework Convention
+signature, Annex III, the Multistate 134-bills count, the NYC moratorium.
+
+🔵 **`P1023` confirmed for a THIRD consecutive pass: the search channel is saturated for this
+industry, and a regional non-result is now evidence about the CHANNEL rather than about the region.**
+🟢 **This is why the pass's value came from measurement. It is recorded here because an unstated gap
+looks exactly like coverage.**
 ## 2026-10-10 — pass 106: the restricted tier of the agent shelf is **named mechanically for the first time**, and it agrees with this KB's hand-written warnings 13 of 13
 
 🔵 **No new agent reached this shelf this pass. One row joined the MCP tier, two were probed and

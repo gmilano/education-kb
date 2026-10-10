@@ -6,6 +6,88 @@ updated: 2026-10-10
 
 # Education — vertical platforms you can customise with AI
 
+**Pass 107, 2026-10-10.** ⏱️ **Seventeenth pass of this date.** 🟢 **Every platform row below gains a
+RELEASE LADDER this pass — the first maintenance figure this page has ever carried that is not `—`.**
+🔴 **`api.github.com` repo endpoints remain 403 and that is now known to be permanent (`P107-A`), so
+the ladder replaces ★ rather than standing in for it.**
+
+### 🟢 🆕 p107 — the customisable-platform tier, ranked by what you can actually pin
+
+🔵 **Source: `compose/code/p107-git-lane-census/`, `git ls-remote` only, 299 of 299 addresses read.**
+🔴 **Tag counts are `^{}`-filtered; unfiltered they overstate by up to 2× (`P107-C`).**
+
+| platform | licence | unique tags | pinnable | tier |
+|---|---|---|---|---|
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🟡 AGPL-3 | 🟢 **34 029** | 🟢 yes | 🟢 **industrial** — the largest ladder on this shelf by 6× |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🟡 AGPL-3 | 🟢 **5 896** | 🟢 yes | 🟢 **industrial** |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🟡 GPL-2 | 🟢 **1 179** | 🟢 yes | 🟢 **industrial** — assessment (QTI) |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3 | 🟢 **591** | 🟢 `v5.3.0-rc2` | 🟢 **industrial** |
+| [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | 🔴 **composite + EE bar** | 🟢 **551** | 🟡 yes | 🔴 **industrial, but see `P107-F` below — NOT shippable as a whole** |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 🔴 **ECL-2.0** | 🟢 **298** | 🟢 `20.4` | 🟡 **mature, ECL tier (p105/p106)** |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🟡 GPL-3-or-later (`P984`) | 🟢 **133** | 🟢 yes | 🟡 **mature** — 🔵 **LATAM-anchored: `BeezNest Latino SAC, Peru` is the FIRST of 12 copyright holders (`P800`)** |
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) | 🟢 **Apache-2.0** | 🟢 **101** | 🟢 `v4.9.152` | 🟢 **the best-engineered PERMISSIVE platform here** |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🔴 **ECL-2.0** | 🟢 **73** | 🟢 `25.2` | 🟡 **mature, ECL tier** |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | 🟢 MIT | 🔴 **0** | 🔴 **no** | 🔴 **UNRELEASED** |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 🟢 MIT | 🟡 **57** (43 scoped) | 🔴 **stale** | 🔴 **ABANDONED LADDER — newest platform tag `v2024.2.1efffc4`** |
+
+### 🔴 🆕 p107 — the finding this table forces: **permissive and industrial barely overlap**
+
+🟢 **Of the five industrial-tier platforms (100+ releases), four are AGPL/GPL and one is ECL. The only
+permissive platform with a real ladder is `UniTime/unitime` — and it is timetabling, not an LMS or
+an SIS.**
+
+🔴 **And the KB's most-repeated recommendation fails on this axis.** `academico-sis/academico` has
+been described here across many passes as *"the closest thing to a permissive SIS"*. 🟢 **It is
+genuinely MIT, declared in both `composer.json` and the payload. It has **0 tags** — confirmed this
+pass from the git lane, independently of pass 96's npm-manifest route.** 🔵 **A fork inherits release
+engineering, a version scheme and an upgrade path that do not exist.**
+
+🟡 **So the honest shape of the customisation decision is a two-way trade, not a shelf pick:**
+- 🟢 **pin an industrial platform and accept copyleft** (Moodle / Open edX / Canvas / TAO), putting the
+  AI outside the licence boundary via API or MCP — which is exactly `P1033`/`T30`'s frontier and
+  `P106-A`'s architecture; **or**
+- 🟡 **take a permissive base and fund release engineering as a line item** (`academico`, or `UniTime`
+  if the domain fits).
+
+🔴 **There is no third option on this shelf, and no amount of further searching has produced one in
+eleven passes.** 🟢 **Stated as a standing constraint rather than re-tested each pass.**
+
+### 🔴 🆕 p107 — `P107-F` / `Gap 370` proved a SECOND way, and this one **bars production use**
+
+🔵 **`Gap 370`/`P969` has said since pass 93 that this shelf cannot see a per-directory licence, and
+it rested on `bncc-dev/bncc-dados` — MIT at the root, CC BY 4.0 one directory down.** 🟡 **That case
+is a attribution obligation. This pass found the same mechanism carrying a COMMERCIAL BAR.**
+
+🟢 **`PrairieLearn/PrairieLearn` — 551 releases, an industrial-tier assessment platform on this very
+page — serves a root `LICENSE` of **36 983 B** (`sha256 f3fba75145cfb48a`) that is not one grant but
+a composite**, and it names a directory:
+
+> *"All content that resides under the `apps/prairielearn/src/ee/` directory of this repository, if
+> that directory exists, is part of the PrairieLearn **Enterprise Edition (EE)** and is licensed as
+> described in `apps/prairielearn/src/ee/LICENSE`."*
+
+🔴 **That file resolves — 2 538 B, `sha256 cfd0235081fac7b6` — and it is a subscription licence:**
+
+> *"This software … **may only be used in production, if** you … have agreed to, and are in
+> compliance with, the terms of a contract, subscription, or other agreement … and otherwise have a
+> valid PrairieLearn Enterprise Edition subscription."*
+> *"… it is **forbidden to copy, merge, publish, distribute, sublicense, and/or sell** the Software."*
+
+🟢 **The directory is not hypothetical: `apps/prairielearn/src/ee/lib/billing/plans.ts` resolves at
+**8 666 B**.** 🔴 **And the root `LICENSE` is the ONLY licence file at the repository root — `LICENSE.md`,
+`COPYING`, `LICENCE` and `NOTICE` are all 404.**
+
+🔴 **So a first-match 24-name ladder reads the root file, classifies the repository from it, and
+NEVER REACHES the bar.** 🟡 **The rest of the repository is genuinely open (AGPL-3 for client-side
+JavaScript, MIT for the University of Illinois and outside-contributor portions), which is what makes
+this expensive: the repository is honestly open-source AND contains a directory a studio has no
+production right to.**
+
+🟢 **The operational rule, and it is cheap:** 🔵 **before a clone of any platform enters a client
+deliverable, grep the root licence payload for a directory path and follow it.** 🔴 **`P984` already
+says the SMALL licence file has the facts; `P107-F` adds that a LARGE one can carry a pointer, and a
+ladder that stops at the first match reads neither.**
+
 **Pass 106, 2026-10-10.** ⏱️ **Sixteenth pass of this date** (104: 13:4x–14:xx UTC; 105:
 14:4x–15:xx; this one 15:4x–16:xx). 🟢 **`P1005` applied throughout: every row below is a payload
 read this pass.** 🔴 **`api.github.com` = `http=403`; no ★ moved.**

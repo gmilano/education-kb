@@ -5,6 +5,25 @@ updated: 2026-10-10
 ---
 
 # Education — market, players and opportunities
+
+**Pass 107, 2026-10-10.** ⏱️ **Seventeenth pass of this date.** 🟢 **All four regional subsections
+gain a payload-measured row this pass, and LATAM gains an explicit NEGATIVE rather than an
+opportunity.** 🔵 **Source: a release-ladder census of **299 of 299** shelf addresses via the
+anonymous git lane (`compose/code/p107-git-lane-census/`), not a search.**
+
+🔴 **The eight mandated searches returned ZERO new items.** 🟢 **All eight ran (four global, four
+regional). Sixteen candidate tokens were extracted and every one is already held on a live page of
+this KB** — `H.R. 8747`, `AB 1159`, the Digital Omnibus and its `2 December 2027` high-risk
+deferral, Vietnam `134/2025/QH15`, Korea's AI Basic Act and domestic-representative duty, UNESCO
+IESALC's 87 %/26 %, the LATAM Observatory, `CONPES 4144`, Uruguay's Framework Convention signature,
+Annex III, the Multistate 134-bills count and the NYC moratorium. 🔵 **`P1023` confirmed for a THIRD
+consecutive pass; a regional non-result is evidence about the CHANNEL, not about the region.**
+
+🔴 **Figure discipline unchanged (`Gap 386`): every market figure in this file is institutional or
+vendor-sourced, and secondary items are marked secondary.** 🟢 **The rows added this pass are
+neither — they are measurements of code, which is the one thing this environment can still read
+first-hand.**
+
 **Pass 106, 2026-10-10.** ⏱️ **Sixteenth pass of this date.** 🟢 **Every regional subsection below
 gains a payload-measured row this pass, and the APAC subsection gains an explicit NEGATIVE rather
 than silence.** 🔵 **Source of the rows: a whole-corpus licence census of all 1 381 addresses this
@@ -369,6 +388,31 @@ KB: write down what you refused to use, and why.**
 ## Opportunities by region
 
 ### North America
+
+#### 🟢 🆕 p107 — the regional supply, measured: North America holds the **two largest release ladders in open-source education**
+
+🔵 **Release-ladder census, `^{}`-filtered (`P107-C`), no API:**
+
+| asset | licence | unique tags |
+|---|---|---|
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🟡 AGPL-3 | 🟢 **34 029** |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🟡 AGPL-3 | 🟢 **5 896** |
+| [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | 🔴 composite + **EE production bar** | 🟢 **551** |
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) | 🟢 **Apache-2.0** | 🟢 **101** → `v4.9.152` |
+| [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) · [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 MIT | 🟡 **4** each |
+| [`1EdTech/openbadges-specification`](https://github.com/1EdTech/openbadges-specification) | 🟢 spec | 🟡 **2** |
+| [`CredentialEngine/Open-Badge-Publisher`](https://github.com/CredentialEngine/Open-Badge-Publisher) · [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | 🟢 permissive | 🔴 **0** |
+
+🟢 **Opportunity, and it is the inverse of the usual one:** 🔵 **North America's *platform* layer is
+the most release-engineered in the world and its *standards-tooling* layer is not.** 🔴 **The badge
+and SCORM/xAPI bridges — exactly the components a credentialing engagement needs — are at 0–2 tags
+while the platforms beneath them are at four and five figures.** 🟡 **So a North American engagement
+pins the platform and owns the bridge: the opposite of the build/buy split a studio would assume.**
+
+🔴 **And one procurement warning that is specific to this region's supply:** `PrairieLearn` is
+honestly open-source and carries a directory (`apps/prairielearn/src/ee/`) whose licence bars
+production use without a subscription (`P107-F`, mechanism in `verticals/solutions.md`). 🟢 **It is
+discoverable only by following a pointer inside a 36 983 B root licence.**
 
 #### 🟢 🆕 p106 — the US higher-education consortium tier is PERMISSIVE, and this KB could not see it until now
 
@@ -815,6 +859,36 @@ adoption.** 🔴 **So a North America pitch that leads with adoption is pushing 
 regulatory grain; one that leads with governance, auditability and teacher-augmentation is with it.**
 
 ### EMEA
+
+#### 🟢 🆕 p107 — EMEA's public stack has **four-figure release ladders**, and that settles `T33` from a second direction
+
+🔵 **Pass 106's `T33` found eight EUPL repositories from `opetushallitus` — the Finnish National
+Agency for Education — and argued they were "not a side project". Measured this pass:**
+
+| asset | what it is | unique tags |
+|---|---|---|
+| [`opetushallitus/valtionavustus`](https://github.com/opetushallitus/valtionavustus) | state-aid administration | 🟢 **4 468** |
+| [`opetushallitus/oppijanumerorekisteri`](https://github.com/opetushallitus/oppijanumerorekisteri) | national learner-number registry | 🟢 **4 225** |
+| [`opetushallitus/organisaatio`](https://github.com/opetushallitus/organisaatio) | national organisation registry | 🟢 **1 134** |
+| [`opetushallitus/ataru`](https://github.com/opetushallitus/ataru) | national admissions | 🟢 **726** |
+| [`opetushallitus/koski`](https://github.com/opetushallitus/koski) | national study-rights registry | 🟢 **397** |
+| [`opetushallitus/eperusteet`](https://github.com/opetushallitus/eperusteet) | national core curriculum | 🟢 **209** |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | QTI assessment platform | 🟢 **1 179** |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | lecture capture | 🟢 **298** (🔴 ECL-2.0) |
+| [`fwu-de/mem-mcp`](https://github.com/fwu-de/mem-mcp) | MCP memory, 🟢 **Unlicense** | 🔴 **0** |
+
+🟢 **Four of these outrank every North American asset except Canvas and Open edX.** 🔵 **A national
+education data stack with four-figure ladders is a partner to integrate with, not a prototype to
+evaluate — and it is the same pattern as North America: the platform layer ships, the agent layer
+(`mem-mcp`, 0 tags) does not.**
+
+🟡 **Opportunity: EMEA is the one region where the public-sector supply is both substantial and
+licensed for reuse — under the EU's own licence.** 🔴 **EUPL is copyleft with reciprocity and an
+explicit compatibility list, so the engagement shape is adopt-and-contribute, not embed-and-keep
+(`T33`).** 🟢 **That is a pricing input and a credible public-sector reference story, not a
+disqualification.** 🔵 **Regulatory clock unchanged and already held: Annex III high-risk obligations
+deferred to **2 December 2027** by the Digital Omnibus, Article 4 AI-literacy duty live since
+2 February 2025.**
 
 #### 🟢 🆕 p106 — EMEA's public-sector grant tier is FINLAND, and the licence is the EU's own (`T33`)
 
@@ -1473,6 +1547,31 @@ duty is the sellable deliverable that is already overdue.**
 
 ### APAC
 
+#### 🔴 🆕 p107 — APAC publishes the **agent layer** and does not release it: 3 of 5 measured rows at zero
+
+🔵 **Release-ladder census, this pass:**
+
+| asset | licence | unique tags |
+|---|---|---|
+| [`project-sunbird/sunbird-devops`](https://github.com/project-sunbird/sunbird-devops) | 🟢 MIT (India, national DPI) | 🟢 **702** |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 (Hong Kong) | 🟢 **86** → `v1.6.14` |
+| [`Qwen-Applications/OpenRS`](https://github.com/Qwen-Applications/OpenRS) | 🟢 Apache-2.0 | 🔴 **0** |
+| [`wanghaoyu0408/OpenRubrics`](https://github.com/wanghaoyu0408/OpenRubrics) | 🟢 MIT | 🔴 **0** |
+| [`planepig/rubricbench`](https://github.com/planepig/rubricbench) | 🟢 MIT | 🔴 **0** |
+
+🟢 **The regional division of labour is now measurable, and it is sharp: APAC is where the permissive
+AGENTIC education research ships as code — the entire rubric-judging stack behind `P107-A` is
+APAC-published and permissive — and it is also where that code has no release engineering.**
+🔴 **Three of the five rows cannot be pinned at all.**
+
+🟡 **Opportunity: APAC supply is the cheapest place to acquire a *technique* and the most expensive
+place to acquire a *dependency*.** 🟢 **`project-sunbird` (702 tags, MIT) is the counter-example and
+the better integration target — a national digital-public-infrastructure education stack that is both
+permissive AND industrially released, which is a combination that exists in no other region on this
+shelf.** 🔵 **Regulatory position already held and unchanged: Korea's AI Basic Act (in force
+22 January 2026) and Vietnam's Law `134/2025/QH15` (1 March 2026, extraterritorial) both name
+education a high-impact/high-risk sector.**
+
 #### 🔴 🆕 p106 — APAC's visible supply in this corpus is a NON-GRANT tier, and that is stated as a gap
 
 🔴 **An informed negative, measured rather than left silent.** 🟢 **The whole-corpus census
@@ -2086,6 +2185,44 @@ the permission argument first — except in ANZ, where it does.** 🔴 **That is
 North America posture recorded above, and the two pitches should not share a slide.**
 
 ### LATAM
+
+#### 🔴 🆕 p107 — LATAM: an explicit NEGATIVE. **Every measured LATAM asset on this shelf is at 0–3 tags**
+
+🔵 **Release-ladder census, this pass. This is the region's complete measured representation, not a
+sample:**
+
+| asset | licence | unique tags | |
+|---|---|---|---|
+| [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | 🟢 MIT root / CC BY 4.0 data | 🟡 **3** | `dados-2026.07.1` — the region's only ladder |
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🟢 MIT + CC BY 4.0 | 🔴 **0** | 1 721 BNCC objectives, 7 MCP tools |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | 🟢 MIT | 🔴 **0** | this KB's "closest thing to a permissive SIS" |
+
+🔴 **Stated plainly because an unstated gap looks exactly like coverage: LATAM's open-source education
+supply on this shelf is permissively licensed and has essentially no release engineering.** 🟢 **The
+one partial exception is not Brazilian-published code but a platform with a Brazilian/Peruvian
+copyright anchor** — [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms), **133 unique
+tags**, GPL-3-or-later, with `BeezNest Latino SAC, Peru` **first** among 12 copyright holders in 5
+countries (`P800`/`P984`).
+
+🟡 **So the opportunity is real but its shape is different from the other three regions, and it should
+be quoted differently:**
+- 🔴 **Not "adopt and extend".** There is nothing in the region's own supply with a version to pin,
+  so an engagement starting from `academico` or `bncc-pacotes` is **build-and-own, with release
+  engineering as an explicit line item** — a version scheme, a tag ladder and an upgrade path that
+  upstream does not have. 🟢 **`P107-B`'s gate exists to surface this before it is quoted.**
+- 🟢 **The curriculum asset is genuinely distinctive and is the thing to lead with.**
+  `bncc-pacotes` holds **1 721 verified BNCC objectives behind 7 MCP tools** — a *national curriculum
+  standard, machine-readable, permissively licensed*. 🔵 **No other region on this shelf has a
+  published national curriculum in that form.** 🔴 **And nothing binds it to the rubric layer, which
+  is `Gap 379`, now eleven passes open and re-priced as `P107-A`.**
+- 🟢 **`chamilo-lms` is the region's credible platform reference** — mature ladder, LATAM copyright
+  anchor, and GPL-3-or-later, so AI goes outside the licence boundary exactly as `P1033`/`T30`
+  requires.
+
+🔵 **Demand-side figures already held and unchanged (secondary, labelled): UNESCO IESALC — 87 % of
+200 institutions across 19 countries use AI in at least one area, **26 %** have a formal AI strategy.**
+🟡 **That 61-point gap is the consulting opportunity, and this pass adds the supply-side reason it is
+hard to serve cheaply: the regional open-source base cannot be pinned.**
 
 #### 🟢 🆕 p106 — a Brazilian municipal SIS this KB already held and could not read, because the licence is in Portuguese
 

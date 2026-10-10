@@ -4,6 +4,116 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 107: the `api.github.com` 403 is **three different failures**, one has no remedy, and the metadata was reachable the whole time
+
+🔵 **Pass 93 recorded `api.github.com = http=403`. Passes 94–106 re-recorded it, each time as "the
+Nth consecutive pass", and every ★ column in this KB has read `—` since.** 🟢 **Probed properly this
+pass, and the single fact is three.**
+
+### 🔴 `P107-A` — the three response classes, told apart by **payload size**
+
+| probe | http | bytes | class |
+|---|---|---|---|
+| `/rate_limit` | 🟢 **200** | 1 922 | 🟢 **served** — and it reports **limit 15 000, used 0, remaining 15 000** |
+| `/repos/gmilano/education-kb` | 🟢 **200** | 6 054 | 🟢 **served** — attached repo, complete JSON. **The positive control** |
+| `/repos/gmilano/globant-kb` | 🟢 **200** | 5 970 | 🟢 **served** — attached repo |
+| `/repos/moodle/moodle` | 🔴 403 | **378** | 🔴 **repo not attached to the session** |
+| `/repos/openedx/edx-platform` | 🔴 403 | **378** | 🔴 same |
+| `/repos/sakaiproject/sakai` | 🔴 403 | **378** | 🔴 same |
+| `/repos/moodle/moodle/license` | 🔴 403 | **378** | 🔴 same — the per-repo bar covers sub-paths |
+| `/search/repositories?q=…` | 🔴 403 | **249** | 🔴 **path class unavailable** — a *different* denial |
+| `/users/moodle` | 🔴 403 | **249** | 🔴 path class unavailable |
+| `/licenses/mit` | 🔴 403 | **249** | 🔴 path class unavailable |
+
+🟢 **The 378 B body says *"GitHub access to this repository is not enabled for this session"*; the
+249 B body says *"This GitHub API path is not available"*.** 🔵 **Two sizes, two causes, two
+different remedies — and the KB had collapsed them into one.**
+
+🔴 **The consequences, and the first is the one that matters:**
+1. 🔴 **This is an AUTHORIZATION boundary, not an outage and not a rate limit.** The host is up, the
+   credential is live, and the quota is untouched (**0 of 15 000 used**). 🔴 **Waiting will never
+   clear it, and "fourteenth consecutive pass" implied a transience that does not exist.**
+2. 🟡 **The 378 B class has a remedy that does not generalise:** attaching a repository makes its
+   endpoint 200. 🔴 **Tested on a third-party public repo and refused** — read access *"serves
+   anonymous git reads … nothing was attached"* and explicitly *"GitHub API tools do not cover
+   unattached repositories"*. 🔵 **So ★ is readable only for repositories this KB owns.**
+3. 🔴 **The 249 B class has NO remedy at all.** `/search/*` is gone, so **no API-side repository
+   discovery is possible from this environment, at any time, by any means.** 🟢 **That retires a
+   standing hope rather than deferring it.**
+
+### 🟢 `P107-B` — the anonymous git lane carries what the API withheld
+
+🔵 **`git ls-remote --tags --heads` needs no API, no credential and no clone.** 🟢 **It read **299 of
+299** shelf addresses in **2 m 17 s**, `rc=0` on every one — **zero unread**, the first complete
+denominator on this shelf.** 🔵 **Instrument: `compose/code/p107-git-lane-census/`,
+`test_p107.sh` **20 passed / 0 failed** (offline, against real captured ref payloads),
+`result.2026-10-10.tsv`.**
+
+🟢 **It validated against three figures this KB had published from unrelated channels and matched all
+three exactly** — `academico-sis/academico` **0** tags, `pupilfirst/pupilfirst` **57**,
+`UniTime/unitime` **101**. 🔵 **A new channel that reproduces known values is a channel you can then
+trust on unknown ones.**
+
+🟢 **It also hands every shelf row a full 40-character HEAD sha, which closes `Gap 380` structurally**
+— that gap exists because this KB addresses payloads by abbreviated SHA and the abbreviation
+sometimes 404s. 🔵 **Nothing need be abbreviated again.**
+
+### 🔴 `P107-C` — an annotated tag is counted **twice**, and the shelf's tag total was **58 % too high**
+
+🟢 **`git ls-remote --tags` emits an annotated tag as both `refs/tags/X` and `refs/tags/X^{}`.**
+🔴 **A census that counts `refs/tags/` lines double-counts every annotated tag.**
+
+```
+shelf-wide, 299 addresses:   raw=112 457   unique=71 079   overstatement=+41 378  (+58%)
+```
+
+| repo | raw | unique |
+|---|---|---|
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 68 051 | 🟢 **34 029** |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 6 347 | 🟢 **5 896** |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 1 986 | 🟢 **1 179** |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 1 181 | 🟢 **591** |
+| [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | 1 091 | 🟢 **551** |
+
+🔵 **120 of 299 rows are affected, and the ratio is not constant** — `canvas-lms` and `moodle` are
+almost exactly 2×, `edx-platform` only 1.08×, because projects differ in how many tags they annotate.
+🔴 **So the inflation cannot be corrected with a divisor; the `^{}` lines must be filtered.** 🟢 **This
+is `P1046`'s family — a census keyed on the wrong string — found this time in the *ref* key.**
+
+### 🔴 `P107-E` — the corpus denominator is inflated by **72 phantom rows**
+
+🟢 **GitHub owner/repo is case-insensitive; this KB's address strings are not.** 🔴 **Across every
+`.md`, `.tsv` and `.txt` in this repository: **1 703 address strings for 1 631 distinct
+repositories** — **69 collisions, 72 phantom rows**.**
+
+🟢 **Proved same-repo, not merely same-name: all three collisions that appear on the shelf return an
+IDENTICAL HEAD sha** — `Apereo-…/OpenDashboard-legacy`, `Apereo-…/lap-sakai-extractor` and
+`OpenEduCat/openeducat_erp` each against their lowercased twin. 🔵 **One of them,
+`lap-sakai-extractor`, is held under **three** spellings.**
+
+🔴 **This touches published numbers: pass 106's whole-corpus census reports "1 381 addresses", and
+every corpus denominator in this KB is case-inflated by roughly 4 %.** 🟡 **It does not overturn a
+single pass-106 finding — the ECL tier is still ten repositories, because those ten were named
+individually — but any *rate* computed against a corpus denominator is slightly optimistic.**
+🟢 **Tracked as `Gap 401`; the remedy is one `tr A-Z a-z` before the `sort -u` that builds any
+address list.**
+
+### 🟢 Corroboration: EMEA's public stack has **industrial** release engineering
+
+🔵 **Pass 106's `T33` found eight EUPL repositories from `opetushallitus`, the Finnish National Agency
+for Education, and argued they were *"not a side project"*.** 🟢 **The ref census settles it from a
+different direction: `opetushallitus` holds **four of this shelf's top seven release ladders**.**
+
+| repo | unique tags |
+|---|---|
+| [`opetushallitus/valtionavustus`](https://github.com/opetushallitus/valtionavustus) | 🟢 **4 468** |
+| [`opetushallitus/oppijanumerorekisteri`](https://github.com/opetushallitus/oppijanumerorekisteri) | 🟢 **4 225** |
+| [`opetushallitus/organisaatio`](https://github.com/opetushallitus/organisaatio) | 🟢 **1 134** |
+| [`opetushallitus/ataru`](https://github.com/opetushallitus/ataru) | 🟢 **726** |
+
+🟡 **Only `openedx/edx-platform` (5 896) and `instructure/canvas-lms` (34 029) outrank them.**
+🟢 **A national education data stack with four-figure release ladders is a partner to integrate with,
+not a prototype to evaluate** — and it is EUPL, so the tier remains adopt-and-contribute (`T33`).
 ## 2026-10-10 — pass 106: the ECL tier is **ten repositories and six texts**, and ECL was one blind spot of six
 
 🔵 **Pass 105 pinned four ECL texts across six repositories from a 99-address sample and recorded

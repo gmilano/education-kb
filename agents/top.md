@@ -6,6 +6,73 @@ updated: 2026-10-10
 
 # Education — AI agents shelf
 
+**Pass 107, 2026-10-10.** ⏱️ **Seventeenth pass of this date** (105: 14:4x–15:xx UTC; 106:
+15:4x–16:xx; this one 16:4x–17:xx).
+
+🟢 **Instrument written and executed this pass: `compose/code/p107-git-lane-census/` —
+`test_p107.sh` 20 passed / 0 failed (offline, real captured fixtures); `census.sh` read **299 of 299**
+shelf addresses in 2 m 17 s, `rc=0` on every one.** 🔴 **`api.github.com` repo endpoints are STILL
+403 — but the 403 was triaged this pass and is an authorization boundary, not an outage
+(`P107-A`), so a `—` in a ★ column is permanently unread rather than temporarily unread.**
+🟢 **A second axis replaces it below: the release ladder, read from the anonymous git lane.**
+
+### 🔴 🆕 p107 — the shelf's second axis, measured for the first time in 107 passes: **38 % of it has never shipped a release**
+
+🟢 **`P107-D`: a licence probe answers *may I use it*; a ref probe answers *can I pin it*.** 🔴 **This
+KB has run the first for 107 passes and the second never**, and the two are independent — a row can
+be flawlessly permissive and still have no version to depend on.
+
+```
+299 shelf addresses, every one read:
+  0 tags      — UNRELEASED    114   38.1%
+  1–4         — nascent        37   12.4%
+  5–24        — shipping       45   15.1%
+  25–99       — mature         40   13.4%
+  100+        — industrial     63   21.1%
+```
+
+🔴 **114 rows of this shelf cannot be pinned to anything.** 🟡 **That is not a disqualification — it
+is a cost that was previously invisible: vendoring at a SHA, carrying your own patches, and owning
+the upgrade path.**
+
+### 🔴 🆕 p107 — the two flagship patterns, scored on the new axis, and **both fail it**
+
+| `P96-A` component (`Gap 379`, open 11 passes) | licence | tags | |
+|---|---|---|---|
+| [`Qwen-Applications/OpenRS`](https://github.com/Qwen-Applications/OpenRS) | 🟢 Apache-2.0 | 🔴 **0** | the rubric judge |
+| [`wanghaoyu0408/OpenRubrics`](https://github.com/wanghaoyu0408/OpenRubrics) | 🟢 MIT | 🔴 **0** | the generator |
+| [`planepig/rubricbench`](https://github.com/planepig/rubricbench) | 🟢 MIT | 🔴 **0** | the calibrator, 1 147 expert annotations |
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🟢 MIT + CC BY 4.0 | 🔴 **0** | 1 721 BNCC objectives, 7 MCP tools |
+| [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | 🟢 MIT / CC BY 4.0 | 🟡 **3** | `dados-2026.07.1` — the only ladder |
+
+🔴 **`Gap 379` has been stated for eleven passes as "four permissive layers, three publishers, no
+integration". The diagnosis was incomplete: four of the five layers have never cut a release.**
+🟢 **So the missing piece is not only the wiring — there is no version of any layer to wire
+*against*.** 🔵 **Re-specified as `P107-A` in `compose/patterns.md`; `Gap 379` stays open, cost
+revised upward.**
+
+🔴 **`P106-A`, specified LAST pass, scores 3 of 5 unreleased** — including both rows the pattern
+leans on: `a2br/moodle-mcp` (MIT, *"the measured precedent"*) and `fwu-de/mem-mcp` (Unlicense,
+*"the memory tier"*), both **0 tags**. 🟡 **Its GPL-3 half ships (`moodle-local_aihub` `v1.3.4`,
+`moodle` `v5.3.0-rc2`); the permissive sidecar half — the half that exists to be licensable — does
+not.** 🟢 **p106's verdict that those rows are TAKEABLE stands and is unchanged. Takeable and
+pinnable are simply different claims.**
+
+### 🟢 🆕 p107 — the rows that DO ship, with the version to pin
+
+| row | licence | tags | pin |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 | 🟢 **86** | `v1.6.14` |
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) | 🟢 Apache-2.0 | 🟢 **101** | `v4.9.152` |
+| [`jeanlucio/moodle-local_aihub`](https://github.com/jeanlucio/moodle-local_aihub) | 🟡 GPL-3 (in-LMS) | 🟢 **9** | `v1.3.4` |
+| [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🟢 MIT | 🟡 **4** | `1.4.3` |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 MIT | 🟡 **4** | `v1.7` |
+
+🔵 **`UniTime/unitime` also discharges `Gap 381` on the new axis** — the tested MCP gate this KB has
+carried in `compose/code/` since pass 42 points at a repository with **101 releases and a pinnable
+`v4.9.152`**. 🟢 **It is the best-engineered permissive asset on this shelf and it reached no shelf
+page until pass 106.**
+
 **Pass 106, 2026-10-10.** ⏱️ **Sixteenth pass of this date** (103: 12:4x–13:xx UTC; 104:
 13:4x–14:xx; 105: 14:4x–15:xx; this one 15:4x–16:xx).
 

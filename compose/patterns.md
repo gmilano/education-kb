@@ -5,6 +5,93 @@ updated: 2026-10-10
 ---
 
 # Education — compose patterns
+
+**Pass 107, 2026-10-10.** ⏱️ **Seventeenth pass of this date.** 🟢 **One pattern re-specified because
+its cost was understated, and one new pattern that is a gate rather than a build.**
+
+## 🔴 `P107-A` — the rubric↔curriculum bind (`Gap 379`), **re-priced**: four of five layers have never cut a release
+
+🔵 **Supersedes `P96-A`, which specified this bind across passes 96–106 as "four permissive layers,
+three publishers, no integration".** 🟢 **The licences are permissive and that part stands. What was
+never measured is that the layers are unreleased** (`P107-D`, this pass, from the git lane):
+
+```
+  [bncc-dev/bncc-pacotes]   MIT code + CC BY 4.0 data   0 tags  ← 1 721 BNCC objectives, 7 MCP tools
+        │                                                         the CURRICULUM end of the bind
+        │  MCP
+        ▼
+  [wanghaoyu0408/OpenRubrics]  MIT              0 tags  ← generates the rubric from an objective
+        │
+        ▼
+  [Qwen-Applications/OpenRS]   Apache-2.0       0 tags  ← judges a submission against weighted
+        │                                                 tiered rubrics
+        ▼
+  [planepig/rubricbench]       MIT              0 tags  ← calibrates the judge, 1 147 expert
+                                                          human comparisons
+  [bncc-dev/bncc-dados]        MIT / CC BY 4.0   3 tags  ← dados-2026.07.1 — the ONLY pinnable row
+```
+
+🔴 **So the integration work was never the whole cost.** 🟢 **Wire it like this, and budget the second
+line as real engineering rather than overhead:**
+
+1. 🟢 **Vendor all four 0-tag layers at an explicit 40-character SHA** (never an abbreviation —
+   `Gap 380`/`P987`: a 7-character form 404s inconsistently). 🔵 **Pin them in a lockfile your own
+   repository owns, because none of the four publishes a version you can reference.**
+2. 🔴 **Budget an upgrade path that upstream does not provide.** With no tags there are no release
+   notes and no compatibility statements, so every upstream bump is a diff review. 🟡 **Price this as
+   a standing maintenance line, not a one-off integration.**
+3. 🟢 **Put `bncc-dados` `dados-2026.07.1` at the base** — it is the one component with a ladder, and
+   it is the data rather than the code, so it is also the component most likely to change on a
+   schedule you can plan around.
+4. 🔴 **Keep the CC BY 4.0 attribution boundary explicit.** `bncc-dados` is MIT at the root and
+   CC BY 4.0 for the data one directory down (`Gap 370`), so the data's attribution obligation
+   follows the data into the deliverable even though the root licence does not say so.
+5. 🟢 **The bind itself is still the opportunity, and it is still unbuilt:** nothing in open source
+   binds a generated rubric to a *published curriculum standard*. 🔵 **This KB holds both ends —
+   1 721 verified BNCC objectives behind MCP, and a calibrated permissive judge — and eleven passes
+   have not found anyone wiring them.**
+
+🟡 **Revised shape: 6–8 weeks for a working bind on one BNCC segment, plus a continuing
+dependency-maintenance line that `P96-A` did not carry.** 🟢 **`Gap 379` stays open.**
+
+## 🟢 `P107-B` — the pre-flight gate: **licence tier × release tier**, run before a repo is quoted
+
+🔵 **Why this exists: this pass found that 114 of 299 shelf rows cannot be pinned, that `P106-A`'s
+two permissive sidecars are both unreleased, and that an industrially released platform
+(`PrairieLearn`, 551 tags) carries a production-barred proprietary directory (`P107-F`).** 🔴 **Every
+one of those is cheap to discover and expensive to discover late.**
+
+🟢 **Two commands, no API, no credential. Wire it as a CI gate on the repository that holds the
+engagement's dependency list:**
+
+```
+# 1. RELEASE TIER — can it be pinned?   (compose/code/p107-git-lane-census/)
+git ls-remote --tags --heads https://github.com/OWNER/REPO \
+  | grep $'\trefs/tags/' | grep -v '\^{}$' | wc -l
+      # 0        -> UNRELEASED: vendor at a 40-char SHA, budget the upgrade path
+      # newest tag dated >18mo -> ABANDONED LADDER (pupilfirst): you inherit maintenance
+      # MUST filter ^{} — unfiltered overstates by up to 2x, +58% shelf-wide (P107-C)
+
+# 2. GRANT TIER — may it ship, and does the root licence POINT somewhere?  (P107-F)
+curl -s https://raw.githubusercontent.com/OWNER/REPO/BRANCH/LICENSE -o root.lic
+grep -oE '[a-z0-9_./-]+/' root.lic | sort -u      # a named sub-directory = follow it
+curl -s https://raw.githubusercontent.com/OWNER/REPO/BRANCH/THAT/DIR/LICENSE
+```
+
+🔴 **The gate fails a dependency on any one of four conditions**, and each has a measured precedent
+on this shelf:
+
+| condition | precedent measured in this KB |
+|---|---|
+| 🔴 0 tags **and** it must ship in a deliverable | `academico-sis/academico` (MIT, "closest thing to a permissive SIS", **0 tags**) |
+| 🔴 newest release > 18 months old | `pupilfirst/pupilfirst` — 14 platform tags, **newest `v2024.2.1efffc4`** |
+| 🔴 root licence names a sub-directory | `PrairieLearn/PrairieLearn` → `ee/LICENSE`, **production barred** (`P107-F`) |
+| 🔴 grant is ECL / EUPL / Elastic / BUSL / PolyForm | `sakai`, `opencast`, `kuali/rice` (ECL); `opetushallitus` ×8 (EUPL); `canyongbs/advisingapp` (Elastic-2.0); `sdv-dev/sdv` (BUSL-1.1) |
+
+🟢 **Cost: the census ran 299 addresses in 2 m 17 s.** 🔵 **This is the cheapest pattern in this file
+and the only one that prevents rather than builds.** 🟡 **It replaces no existing pattern; it runs
+in front of all of them.**
+
 **Pass 106, 2026-10-10.** ⏱️ **Sixteenth pass of this date.** 🟢 **Two patterns added, both from
 rows measured this pass; one existing constraint strengthened from 7 rows to 143.**
 

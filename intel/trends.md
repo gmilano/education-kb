@@ -5,6 +5,60 @@ updated: 2026-10-10
 ---
 
 # Education — current trends
+
+**Pass 107, 2026-10-10.** ⏱️ **Seventeenth pass of this date.** 🟢 **Two trends added, both from
+measurement; the eight mandated searches produced no new item and that negative is stated in
+`agents/trending.md` rather than left as silence.**
+
+## 🔴 `T35` — the open-source education shelf is **permissive at the licence layer and unreleased at the supply layer**, and only one of those has ever been measured
+
+🟢 **Measured this pass over **299 of 299** shelf addresses, every one read, zero unread
+(`compose/code/p107-git-lane-census/`):**
+
+```
+0 tags — UNRELEASED   114   38.1%        25–99  — mature       40   13.4%
+1–4    — nascent       37   12.4%        100+   — industrial   63   21.1%
+5–24   — shipping      45   15.1%
+```
+
+🔴 **38 % of what this KB offers a client cannot be pinned to a version.** 🔵 **This is not a licence
+problem and the licence work was not wrong — `P107-D`: a licence probe answers *may I use it*, a ref
+probe answers *can I pin it*, and 107 passes asked only the first.**
+
+🔴 **The trend bites hardest exactly where the industry is newest.** The agentic education layer —
+rubric judges, MCP sidecars, tutor orchestration — is the youngest code on the shelf and therefore
+the least released: **`Qwen-Applications/OpenRS`, `wanghaoyu0408/OpenRubrics`, `planepig/rubricbench`,
+`bncc-dev/bncc-pacotes`, `a2br/moodle-mcp`, `fwu-de/mem-mcp` are all at 0 tags.** 🟡 **Meanwhile the
+platforms underneath them are industrially released (Canvas 34 029, Open edX 5 896, Moodle 591).**
+
+**Signal**: 🟢 **The 2026 integration risk in education AI is not model quality or licence
+compatibility. It is that the agent layer is pre-release code sitting on top of
+release-engineered platforms** — so the seam carries all of the version risk. 🔵 **That is what
+`P107-A` in `compose/patterns.md` prices.**
+
+## 🟢 `T36` — the metadata an API withholds is mostly available from the git protocol, and that is a durable procurement fact
+
+🔴 **`api.github.com` repo endpoints have returned 403 for fourteen consecutive passes.** 🟢 **Triaged
+this pass into three classes (`P107-A`), and the important one is that this is an **authorization
+boundary**, not an outage: `/rate_limit` returns 200 reporting **15 000 remaining, 0 used**, and
+attached repositories return complete JSON.** 🔴 **Waiting never clears it. `/search/*` has no remedy
+at all, so API-side repository discovery is permanently unavailable here.**
+
+🟢 **But `git ls-remote` — no API, no credential, no clone — read 299 of 299 addresses in 2 m 17 s and
+yields the release ladder, the branch count and a full 40-character HEAD sha.** 🔵 **It reproduced
+three previously published figures exactly (`academico` 0, `pupilfirst` 57, `UniTime` 101), so it
+was validated before it was trusted.**
+
+🟡 **Generalised, because the trend is not about this environment:** ★ is a popularity signal that a
+vendor API can withhold; **release cadence is a maintenance signal carried by the protocol itself**
+and no intermediary can withhold it. 🟢 **For due diligence on an open-source dependency, the second
+is both more informative and more robustly available than the first.** 🔵 **This KB spent fourteen
+passes recording the absence of the weaker signal while the stronger one was one command away.**
+
+**Signal**: 🟢 **`Gap 376`'s corrective duty is discharged in part, not by regaining the API but by
+no longer needing it.** 🔴 **`T36` also carries a caution: `P107-C` — annotated tags appear twice in
+ref output, and an unfiltered count overstates by up to 2× (shelf-wide +58 %).**
+
 **Pass 106, 2026-10-10.** ⏱️ **Sixteenth pass of this date.** 🟢 **Three trends added, each from a
 measurement made this pass rather than from a channel.**
 
