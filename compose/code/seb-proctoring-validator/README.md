@@ -11,7 +11,12 @@ Gap 90 was recorded as *"scope you have to warn the client about"*. This turns i
 deliverable.
 
 Upstream: [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server),
-**Apache-2.0**, `master` @ `7f45689`.
+🔴 **MPL-2.0**, `master` @ `7f45689`. — *corregido en el pase 98* (`P997`). Este README decía
+**Apache-2.0** desde el pase 43; el pase 44 corrigió el valor en `sebserver-mcp-gate/README.md` y la
+corrección **no llegó hasta aquí**. 🟢 Payload releído en el pase 98: `LICENSE` **16 725 B**,
+*«Mozilla Public License Version 2.0»*, `master` · `7f45689f797337`. 🔵 MPL-2.0 es copyleft **por
+archivo** (§1.10(a)): una capa propietaria alrededor es lícita y sólo los archivos MPL modificados
+reciprocan.
 
 ## The defect, in one line of upstream code
 

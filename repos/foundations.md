@@ -441,6 +441,106 @@ this canonical compare) — **so never "fix" `p386-pristine-dedup-gate` by diffi
 | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | **Apache-2.0** · 11 357 B · `main` · `96f33fa` | — | **EMEA** (Hugging Face, FR lineage) | Minimal agent loop; the low-ceremony option when LangGraph is too much machinery. |
 | [`huggingface/agents-course`](https://github.com/huggingface/agents-course) | **Apache-2.0** · 11 357 B · `main` · `3c469e7` | — | **EMEA** | 🟢 The permissive **teaching** counterpart to `smolagents` — see the AI-literacy tier in `agents/top.md`. |
 
+## 🔴 🆕 p98 `SafeExamBrowser/seb-server` — the row below `UniTime`'s was DROPPED by this KB's own reset, and `compose/code/` still points at it
+
+🔵 **Read the `UniTime` section that follows first: this is the same defect one pass later, and worse,
+because this row was not merely unshelved — it was shelved, verified, and then LOST.**
+
+🟢 **`compose/code/sebserver-mcp-gate/README.md` (pass 44) states that the MPL-2.0 verdict is
+*"what `repos/foundations.md` and the pase-41/42 trends say"*.** 🔴 **This page said nothing about it
+until now.** 🟢 **`archive/2026-10-06-pre-reset/repos-foundations.md:3774` proves the claim was true
+when written:** *"🟢 `SafeExamBrowser/seb-server` (⚠️ MPL-2.0, `HEAD` de `master` = `7f45689`,
+2026-04-01)"*. 🔴 **The 2026-10-06 reset dropped it** (`Gap 387`).
+
+| repo | grant (payload · bytes · ref · SHA-14) | release ladder | ★ | region | role in a build |
+|---|---|---|---|---|---|
+| 🆕 p98 [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | 🟡 **MPL-2.0** · `LICENSE` **16 725 B** · `master` · `7f45689f797337` | 🟢 **194 tags**, `v3.0-latest` | — | 🟡 **EMEA** (ETH Zürich lineage — the Java package tree is `ch/ethz/seb/`) | 🟢 **Institutional exam supervision and lockdown.** The supervision half of the exam layer whose scheduling half is `UniTime`. |
+
+🔵 **Why MPL-2.0 is the useful verdict and not just a licence string:** MPL is **per-file** copyleft
+(§1.10(a)). A proprietary integration layer around it is lawful; only **modified MPL files**
+reciprocate. 🟢 **In practice a third-party proctoring provider obliges you to publish one enum
+value.** 🔴 **That argument is void if the licence is read as Apache-2.0** — and two of the three
+`compose/code/` READMEs said exactly that until this commit (`P997`). 🟢 **This is the FIRST MPL-2.0
+row on any live page of this KB.**
+
+🟢 **What already exists here, tested, and now has a page to be sold from:**
+`sebserver-mcp-gate` (MCP allowlist, `P85`'s second instance) · `seb-proctoring-validator` (closes
+upstream gap 90 in `ProctoringSettingsValidator.java`, which checks credentials for `JITSI_MEET` and
+`ZOOM` only and then returns `true`) · `proctoring-reach-audit` (which provider methods reach the
+network: Jitsi 1, 🔴 **Zoom 5, not 2** — a correction this base already made to its own figure).
+
+🔴 **And the regulatory hook is already on `intel/trends.md`:** emotion recognition in education has
+been **prohibited since 2 Feb 2025** under Article 5, and affect inference ships switched on by
+default in proctoring products. 🔵 **So the only permissive-adjacent platform in the exposed category
+was absent from every shelf page while the exposure was published on one.** 🔵 **That is `Gap 381`
+costed as a missing sale, not a missing row.**
+
+| repo | grant (payload · bytes · ref · SHA-14) | release ladder | role in a build |
+|---|---|---|---|
+| 🆕 p98 [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp) | 🟢 **MIT** · `LICENSE` **1 120 B** · `main` · `5695878b4735ed` | 🔴 **0 tags** → `UNRELEASED` (`P985`) | 🟢 **`Gap 372`'s seam in one repository**: writes the grade at `workflowstate=readyforreview` and never releases it. `grading-draft-gate` proves the three properties offline, **37/37**, with negative controls. |
+| 🆕 p98 [`juneyaooo/lineage-skill`](https://github.com/juneyaooo/lineage-skill) | 🟢 **Apache-2.0** · `LICENSE` **11 358 B** · `main` · `7e2cbc5dc31713` | 🔴 **0 tags** | Carried by `aiact-50-2-marking`. 🔵 **11 358 B in a repository refines `P992`:** the count is not an `apache.org`-only artefact, so byte-equality against upstream remains the wrong modification test for a second reason. |
+
+## 🟢 🆕 p98 Tier 4 — the skills-taxonomy layer, because `Gap 386` proved this KB could not price an L&D engagement
+
+🔵 **`Gap 386` measured that every market figure on `intel/market.md` was institutional.** 🟢 **A buyer
+with no supply tier is a gap in this file, not only in that one** — so the tier exists now.
+
+| repo | grant (payload · bytes · ref · SHA-14) | release ladder | region | role in a build |
+|---|---|---|---|---|
+| 🆕 p98 [`nestauk/ojd_daps_skills`](https://github.com/nestauk/ojd_daps_skills) | 🟢 **MIT** · `LICENSE` **1 095 B** · `dev` · `e73c2b5045793d` | 🟢 **8 tags**, `v3.0.0` | 🟢 **EMEA** — *"Copyright (c) 2024, Nesta"* (UK), off the grant (`P800`) | 🟢 **The one to standardise on.** Skill phrases out of free text, mapped onto **ESCO**, **Lightcast Open Skills** or a custom taxonomy — 🔵 **the taxonomy is a parameter**, which is what survives a change of client and jurisdiction. |
+| 🆕 p98 [`KonstantinosPetrakis/esco-skill-extractor`](https://github.com/KonstantinosPetrakis/esco-skill-extractor) | 🟢 **MIT, read from the BODY** · **1 068 B** · `master` · `cf2877d462f99a` | 🔴 **0 tags** | 🔵 unplaced (holder is a person) | ESCO skills **and** ISCO occupations by embedding similarity. PyPI + Docker. 🟡 **Titleless MIT payload** — second instance here after `Montreal-Forced-Aligner` (p97) — and 🔴 **curly quotes in the grant text** (`P998`). |
+| 🆕 p98 [`dkavargy/ESCOPlus2.0`](https://github.com/dkavargy/ESCOPlus2.0) | 🟢 **MIT** · **1 086 B** · `main` · `88338a7cc196c8` | 🔴 **0 tags** | 🟡 **EMEA, weakly** (Aristotle University of Thessaloniki lineage) | Extends and validates **the taxonomy itself** from live job-ad data. 🔵 **The maintenance end — ESCO ages, and nothing else here addresses that.** |
+
+🔴 **The trap, and it is `Gap 385`'s trap again.**
+[`workforce-data-initiative/skills-ml`](https://github.com/workforce-data-initiative/skills-ml), the
+Open Skills Project's flagship and the first result anyone reaches, is **`NONCOMMERCIAL-NOT-OSI`**:
+`LICENSE.md` **1 976 B**, `master` · `feffead90815ccd`, *"Copyright ©2018. The University of
+Chicago"*, use granted *"for educational and not-for-profit research purposes"*, which **"excludes
+any service or part of selling a service that uses the Program"**. 🔵 **`P999`: the same university
+template as `dssg/student-early-warning`. The two highest-ROI institutional use cases in this
+industry share one licensing office.** 🔴 **A search key, never a verdict — `P975` governs.**
+
+🟡 **Costing term: two of the three permissive rows have ZERO tags.** This tier is a build
+commitment, not a product integration (`P985`).
+
+## 🟢 🆕 p98 Tier 5 — credentialing, and the seam that repeats `Gap 372`'s exactly
+
+🔵 **Tier 1 already carried `1EdTech/openbadges-validator-core` (Apache-2.0) and the ungranted
+specification. This is the product end.**
+
+| repo | grant (payload · bytes · ref · SHA-14) | release ladder | role in a build |
+|---|---|---|---|
+| 🆕 p98 [`CredentialEngine/Open-Badge-Publisher`](https://github.com/CredentialEngine/Open-Badge-Publisher) | 🟢 **Apache-2.0** · **11 357 B pristine**, 🟢 4 of 4 clause headings (`P974`) · `main` · `278b9d7dc084a6` | 🔴 **0 tags** | 🟢 **The only permissive row in the layer.** Publishes badge descriptions to the Credential Registry. 🔴 **No `NOTICE` → no holder → no region from the payload.** |
+| 🆕 p98 [`nfh-trust-labs/opencred`](https://github.com/nfh-trust-labs/opencred) | 🟢 **MIT** · **1 071 B**, *"Copyright (c) 2026 NFH Trust Labs"* · `main` · `0fd0a9c65356db` | 🟢 **30 tags**, `v1.9.1` | Local-first **W3C VC** issuer/verifier; issuer keys never leave the host. 🔵 **The permissive issuing option is the generic VC one, not the Open Badges one.** |
+| 🔴 p98 `19otherrsh-dot/Opencred` | 🔴 **AGPL-3.0** · 34 523 B · `main` · `d14619e186ed08` | — | OB3 + `did:web` + status-list revocation. 🔴 **Same NAME as the MIT row above, different repository, opposite licence** (`P1000`). |
+| 🔴 p98 `Schroedinger-Hat/certo` | 🔴 **AGPL-3.0** · 33 820 B · `main` · `6fd0a11fe2ff61` | — | OB3 on Strapi/Nuxt, bulk CSV issuance. |
+| 🔴 p98 `LongsightGroup/credtrail-app` | 🔴 **AGPL-3.0** · 34 523 B · `main` · `948a8ca43f3f33` | — | OB3, Ed25519, `did:web`. |
+| 🔴 p98 `CoopCodeCommun/pyopenbadges` | 🔴 **LGPL-3.0** · 26 526 B · `main` · `e38e1894fd9bce` | — | Python OB3 create/validate library. |
+
+🔵 **`P1001`.** Scoring: validation Apache/BSD, scorer AGPL (`Gap 372`, p94). Credentialing: validate
+and publish permissive, **mint copyleft, 4 of 5** (p98). 🔵 **Two independent layers, same seam, same
+side — stated as a falsifiable rule: the permissive grant sits on the side that MEASURES, copyleft on
+the side that becomes the RECORD.** 🔴 **Engagement shape, not trivia: build the measuring side, draw
+the boundary at the record, and let the client own the record.**
+
+### 🔴 🆕 `P1002` — a secondary source's licence claim inherits the FRAMEWORK's grant, and it is a 50 % oracle
+
+🔴 **A 2026 listicle names `frappe/lms` as the one MIT-licensed open-source LMS.** The payload says
+**AGPL-3.0**: `license.txt` (lowercase), **33 893 B**, `develop` · `933fc6078cfa31`. 🟢 **And the
+mechanism is readable:** `frappe/frappe`, the framework underneath, **is** MIT (`LICENSE` 1 118 B,
+*"Copyright (c) 2016-2021 Frappe Technologies Pvt. Ltd."*).
+
+🟡 **Measured in both directions, 2 of 2, and it is right once:** `openeducat/openeducat_erp` is
+**LGPL-3.0** (`LICENSE` **8 241 B**) on an LGPL Odoo base, so there the inheritance holds.
+🔵 **A 50 % oracle is not an oracle** — and 🔴 **the failure direction is the expensive one, because
+the framework is the more permissive of the pair.**
+
+🔴 **Two further facts from the same read, both carried as named unknowns rather than verdicts:**
+`openeducat`'s `LICENSE` **delegates copyright to a `COPYRIGHT` file** (`P984`'s shape in a second
+repository) and 🔴 **that file was not read — `raw.githubusercontent.com` returned HTTP 429 exactly
+there** (`Gap 388`). 🔴 **And `openeducat`'s default branch is `19.0`** — a release number, not
+`main`.
+
 ## 🟢 🆕 p96 `UniTime` — a verified permissive platform that lived in `compose/code/` and on no shelf page
 
 | repo | grant (payload · bytes · ref · SHA-40 prefix) | version | layer |

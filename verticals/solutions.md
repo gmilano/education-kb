@@ -6,11 +6,55 @@ updated: 2026-10-10
 
 # Education — vertical platforms you can customise with AI
 
-**Pass 97, 2026-10-10.** ⏱️ **Seventh pass of this date.** 🔴 **No platform licence on this page was
-re-resolved this pass** — they are carried at their pass-92/93/96 SHAs, and the sandbox refused
-`grant-ladder-v4/ladder.sh` **and** its offline self-test for a **FIFTH consecutive pass**, so no
-replacement classifier was written (`P237`, `P970`). 🟢 **What pass 97 adds to THIS page is one
-re-ranking, and it is a re-ranking rather than a row, which is the honest description.**
+**Pass 98, 2026-10-10.** ⏱️ **Eighth pass of this date.** 🔴 **The sandbox refused
+`grant-ladder-v4/ladder.sh` **and** its offline self-test for a SIXTH consecutive pass**, so no
+replacement classifier was written (`P237`) and the oracle map was run by hand (`P970`).
+🟢 **What pass 98 adds to THIS page is a platform the page itself LOST** — `SafeExamBrowser/seb-server`,
+verified here before the 2026-10-06 reset, re-read today at the same ref and the same verdict, plus
+the first **MPL-2.0** row this KB has carried and the third branch it forces on the decision rule.
+🔴 **Carried rows are still at their pass-92/93/96 SHAs and were not re-read.**
+
+## 🔴 🆕 p98 The twelfth permissive-adjacent platform, and this page is where it was LOST
+
+🔵 **Pass 96 added `UniTime` with the note that it had been in `compose/code/` since pass 42 and on no
+shelf page. Pass 98 found the sequel and it is worse:** `SafeExamBrowser/seb-server` was on this
+KB's platform page, verified, and **the 2026-10-06 reset dropped it** (`Gap 387`).
+
+| platform | grant (payload · bytes · ref · SHA-14) | release ladder | layer | region |
+|---|---|---|---|---|
+| 🆕 p98 [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | 🟡 **MPL-2.0** · `LICENSE` **16 725 B** · `master` · `7f45689f797337` | 🟢 **194 tags**, `v3.0-latest` | **Exam supervision and lockdown** — the layer this page had nothing for | 🟡 **EMEA** (ETH Zürich lineage: upstream's Java package tree is `ch/ethz/seb/`; 🔵 **package-path evidence, not a holder line** — `P800` cannot be applied, because MPL-2.0's text carries no holder) |
+
+🟢 **The archive proves the row existed:** `archive/2026-10-06-pre-reset/repos-foundations.md:3774`
+carries *"🟢 `SafeExamBrowser/seb-server` (⚠️ MPL-2.0, `HEAD` de `master` = `7f45689`,
+2026-04-01)"* — 🟢 **and today's independent read reproduces it exactly, with the byte term the
+archive never had.**
+
+🔵 **Why it belongs in a tier of its own and not in the permissive tier:** **MPL-2.0 is per-file
+copyleft** (§1.10(a)). It is weaker than LGPL in practice — you may ship a proprietary layer around
+it, and only **modified MPL files** reciprocate. 🟢 **For a studio this is the most favourable
+copyleft on this page**, and it is the first MPL row this KB has ever carried.
+
+🔴 **The decision-rule consequence, and it is the reason this row matters more than its licence:**
+this page's **Copyleft tier** instruction is *"build beside, integrate by LTI / SCORM / xAPI"*.
+🔴 **That instruction is WRONG for MPL-2.0** — building beside is an unnecessary cost when the
+boundary can run through the file. 🟢 **`## The decision rule` at the foot of this page now has a
+third branch.**
+
+### 🔴 Two platform licence facts from this pass, and a 429 that stopped the third
+
+- 🔴 **`frappe/lms` is AGPL-3.0, not MIT.** `license.txt` (lowercase), **33 893 B**, `develop` ·
+  `933fc6078cfa31`. 🔴 **A 2026 listicle names it as the one MIT-licensed open-source LMS**, and the
+  mechanism for the error is readable: 🟢 **`frappe/frappe`, the framework underneath, IS MIT**
+  (`LICENSE` 1 118 B). 🔵 **`P1002` — a secondary source's licence claim about an app tends to
+  inherit the FRAMEWORK's grant**, and 🟡 **it is a 50 % oracle**: `openeducat/openeducat_erp` is
+  **LGPL-3.0** on an LGPL Odoo base, where the inheritance holds. 🔴 **The failure direction is the
+  expensive one**, because the framework is always the more permissive of the pair.
+- 🔴 **`openeducat/openeducat_erp`'s default branch is `19.0`** — a release number, not `main`,
+  `master` or `develop`. 🔵 **First instance on this page of a version-numbered default branch**, and
+  one more reason `Gap 380`'s assumed-ref defect is not hypothetical.
+- 🟡 **`openeducat`'s `LICENSE` (8 241 B) declares LGPL-3.0 and DELEGATES copyright to a `COPYRIGHT`
+  file** — `P984`'s shape in a second repository. 🔴 **That file was not read: `raw.githubusercontent.com`
+  returned HTTP 429 exactly there** (`Gap 388`). 🟢 **Carried as a named unknown, not as a verdict.**
 
 ## 🟢 🆕 p97 `T16` re-ranks this page for one market: **Kolibri is the lead platform in Africa, not a footnote**
 
@@ -469,6 +513,10 @@ any count drawn from an acronym topic.**
 | 🆕 p93 **open-response / essay scoring** | 🔴 **nothing permissive and production-grade exists** | 🔴 `Gap 372`. The whole permissive supply is one 2★ Apache-by-reference research repo. **Scope essays out, or price a human grader into the loop** — this is the activity the EU AI Act names most explicitly and the one with the least open supply. |
 | 🆕 **LATAM programming education** with autograding | 🟡 **`mumuki-laboratory` (AGPL-3.0)** | Argentine, in real classroom use; integrate by LTI, don't absorb |
 | the client's **existing Moodle / Canvas / Open edX** kept | 🔴 build **beside** it, integrate via LTI 1.3 / SCORM / xAPI | GPL/AGPL reciprocity follows the modified work |
+| 🆕 p98 **invigilated / locked-down online exams** | 🟡 **`seb-server` (MPL-2.0)** — integrate directly, do **not** build beside | 🟢 **Per-file copyleft (§1.10(a))**: a proprietary layer around it is lawful and only modified MPL files reciprocate. 🟢 Three tested artefacts already in `compose/code/`. 🔴 Audit affect/engagement inference first — prohibited in education since **2 Feb 2025**. |
+| 🆕 p98 **the whole exam lifecycle** — schedule, supervise, grade | 🟢 **`UniTime` (Apache-2.0)** + 🟡 **`seb-server` (MPL-2.0)** + 🟢 **`moodle-grading-mcp` (MIT)** | 🟢 **Every piece has a tested gate committed here**, and the grading end never releases a grade (`workflowstate=readyforreview`). See `compose/patterns.md` `P98-A`. |
+| 🆕 p98 **corporate L&D / skills inference** | 🟢 **`ojd_daps_skills` (MIT)** — taxonomy as a parameter | 🔴 **Do NOT reach for `skills-ml`**: University of Chicago **non-commercial** terms, commercial use prohibited (`P999`). |
+| 🆕 p98 **a self-hosted LMS a blog called MIT** | 🔴 **`frappe/lms` is AGPL-3.0** | 🔴 The **framework** (`frappe/frappe`) is MIT; the app is not (`P1002`). Read the app's own payload. |
 
 🔵 🆕 **p93 — one addition to how this page should be read, because a new row broke its category.** Every
 row above answers *"which platform do we build on or beside?"*. 🟢 **`bncc-dados` is not a platform and

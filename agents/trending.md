@@ -4,6 +4,143 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 98: the shelf names a regulatory exposure it has no platform for, while this repository has carried three tested artefacts for that platform since pass 43
+
+⏱️ **Eighth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93: 01:4x–02:24;
+94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; this one 06:4x–07:xx). **Append-only.**
+
+🔴 **Repository code was refused for a SIXTH consecutive pass** (`[Code from External]`) — `ladder.sh`
+**and** the offline `test_ladder.sh`, denied before starting. 🟢 **No classifier was written**
+(`P237`); the oracle map was run by hand (`P970`). **23 slugs resolved: 17 licence payload reads,
+1 non-resolving negative, 1 fork-identity read, 4 `NOTICE` probes.** Evidence:
+`compose/code/p996-promotion-ledger/`.
+
+🔴 **`api.github.com` 403 for a SEVENTH consecutive pass and `github.com` HTML 403 as well** — no ★
+on this page moved or could. A `—` means not read.
+
+### 🔴 The headline — `Gap 381` DISCHARGED, and what it found is worse than `UniTime`
+
+🔵 **`Gap 381` asked for one `grep`: reconcile the slugs in `compose/code/` against the shelf pages.**
+Run this pass (`reconcile_code_shelf.py`): **1 056 slugs in `compose/code/`, 159 on the shelf, 956 in
+code and on no shelf page** — of which 🟢 **only 4 are carried by a purpose-built directory rather
+than a sweep results table**, and one of those is a parse artefact (`o/r.git`, from a
+`git@github.com:o/r.git` usage example — the regex limit, stated).
+
+🔴 **The remaining three are the `UniTime` shape, and the first of them is the sharpest instance this
+KB has produced:**
+
+| slug | purpose-built directories carrying it | on the shelf? |
+|---|---|---|
+| 🔴 [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | **three** — `seb-proctoring-validator` (pass 43), `sebserver-mcp-gate` (pass 43/44), `proctoring-reach-audit` (pass 46) | 🔴 **no page** |
+| 🔴 [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp) | `grading-draft-gate` (**37/37** offline, pass 56) | 🔴 **no page** |
+| 🔴 [`juneyaooo/lineage-skill`](https://github.com/juneyaooo/lineage-skill) | `aiact-50-2-marking` | 🔴 **no page** |
+
+🔴 **And `intel/trends.md` mentions proctoring exactly once — as the place the EU AI Act's
+emotion-recognition prohibition bites.** 🔵 **So this KB names a dated regulatory exposure and
+offers nothing to build the remedy with, while holding a tested MCP gate, a settings validator and a
+network-reach audit for the dominant open-source exam-supervision platform.** 🔵 **That is `Gap 381`
+costed: not a missing row, a missing SALE.**
+
+### 🟢 The three promoted rows, measured this pass
+
+| slug | grant (payload · bytes · ref · SHA-14) | release ladder | why it matters |
+|---|---|---|---|
+| 🆕 p98 [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | 🟡 **MPL-2.0** · `LICENSE` **16 725 B** · `master` · `7f45689f797337` | 🟢 **194 tags**, newest `v3.0-latest` | 🟢 **The FIRST MPL-2.0 row on any page of this KB** — a licence family this base had never carried. MPL is **per-file** copyleft (§1.10(a)): a proprietary layer around it is lawful as long as modified MPL files stay MPL. 🔵 **Materially different from every AGPL verdict here**, and the exam-supervision half of the layer whose other half (`UniTime`, timetabling) pass 96 promoted. |
+| 🆕 p98 [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp) | 🟢 **MIT** · `LICENSE` **1 120 B** · `main` · `5695878b4735ed` | 🔴 **0 tags** → `UNRELEASED` (`P985`) | 🟢 **The only MCP surface onto Moodle grading this KB has measured**, and `grading-draft-gate` already proves its three properties offline (**37/37**, with negative controls). 🔵 **`Gap 372`'s seam in one repo: it drafts a grade at `workflowstate=readyforreview` and never releases it** — the human stays the author of record. |
+| 🆕 p98 [`juneyaooo/lineage-skill`](https://github.com/juneyaooo/lineage-skill) | 🟢 **Apache-2.0** · `LICENSE` **11 358 B** · `main` · `7e2cbc5dc31713` | 🔴 **0 tags** | Carried by `aiact-50-2-marking`. 🔵 **And its byte count refines `P992`: 11 358 B appears in a REPOSITORY**, not only at `apache.org`. |
+
+🔴 **Two of the three `seb-server` READMEs still say Apache-2.0** — and `proctoring-reach-audit` was
+written at **pass 46**, *two passes after* pass 44 recorded the correction to MPL-2.0 in
+`sebserver-mcp-gate/README.md`. 🔵 **`P997`: a correction written as prose in one file does not
+propagate**; and this one ran in the expensive direction, because Apache-2.0 is **more** permissive
+than MPL — the error would have had a studio promise a client freedoms the grant does not give.
+🟢 **Both READMEs are corrected in this commit.**
+
+### 🟢 A new tier: skills taxonomy — the layer the corporate-L&D engagement needs, and the trap sitting in the middle of it
+
+🔵 **Found with `P955`'s method** (name the TECHNIQUE, never the industry): `open source skills
+taxonomy extraction ESCO O*NET`.
+
+| slug | grant (payload · bytes · ref · SHA-14) | ladder | region evidence | note |
+|---|---|---|---|---|
+| 🆕 p98 [`nestauk/ojd_daps_skills`](https://github.com/nestauk/ojd_daps_skills) | 🟢 **MIT** · `LICENSE` **1 095 B** · `dev` · `e73c2b5045793d` | 🟢 **8 tags**, `v3.0.0` | 🟢 **EMEA** — payload holder *"Copyright (c) 2024, Nesta"* (UK), read off the grant (`P800`) | 🟢 **The mature row.** Maps free text onto **ESCO**, **Lightcast Open Skills** or a custom taxonomy — the taxonomy is a parameter, which is what a multi-client studio needs. |
+| 🆕 p98 [`KonstantinosPetrakis/esco-skill-extractor`](https://github.com/KonstantinosPetrakis/esco-skill-extractor) | 🟢 **MIT by BODY** · `LICENSE` **1 068 B** · `master` · `cf2877d462f99a` | 🔴 **0 tags** | 🔵 unplaced — holder is a person, not an institution | 🟡 **A titleless MIT payload** opening at *"Copyright 2024 Konstantinos Petrakis"* — the **second** instance on this shelf after `Montreal-Forced-Aligner` (p97). 🔴 **And it uses curly quotes** — `“Software”`, not `"Software"` (`P998`). |
+| 🆕 p98 [`dkavargy/ESCOPlus2.0`](https://github.com/dkavargy/ESCOPlus2.0) | 🟢 **MIT** · `LICENSE` **1 086 B** · `main` · `88338a7cc196c8` | 🔴 **0 tags** | 🟡 **EMEA, weakly** — holder *"Copyright (c) 2026 Dimitrios Christos Kavargyris"*; the sibling slug the search named sits under `Datalab-AUTH` (Aristotle University of Thessaloniki, Greece) | Extends and validates the ESCO taxonomy from live job-ad data — the **maintenance** end, not the extraction end. |
+| 🔴 p98 `Datalab-AUTH/esco-skill-extractor` | 🔴 **DOES NOT RESOLVE** — `git ls-remote` returns nothing | — | — | 🟢 **Negative control.** A search summary named it as a distinct project; it is not reachable at that slug. |
+
+### 🔴 The trap, and it is the SAME trap `Gap 385` hit one pass ago
+
+🔴 **[`workforce-data-initiative/skills-ml`](https://github.com/workforce-data-initiative/skills-ml)
+— the Open Skills Project's flagship library, the first result anyone reaches — is
+`NONCOMMERCIAL-NOT-OSI`.** `LICENSE.md`, **1 976 B**, `master` · `feffead90815ccd`:
+
+> *"BY DOWNLOADING skills-ml PROGRAM YOU AGREE TO THE FOLLOWING TERMS OF USE: Copyright ©2018. The
+> University of Chicago … for educational and not-for-profit research purposes … **For the avoidance
+> of doubt, educational and not-for-profit research purposes excludes any service or part of selling
+> a service that uses the Program.** To obtain a commercial license … Polsky Center …"*
+
+🔴 **That is the same University of Chicago template, phrase for phrase, that pass 97 measured on
+`dssg/student-early-warning`** (`Gap 385`, `P990`). 🔵 **`P999`: the two highest-ROI institutional use
+cases in this industry — student risk and skills inference — both have their canonical open-source
+implementation under one university's non-commercial template.** 🔴 **It is not two coincidences; it
+is one licensing office.** 🟢 **And the phrase `"BY DOWNLOADING"` + `"excludes any service or part of
+selling a service"` is now a reusable fingerprint — it has caught 2 of 2.** 🔴 **It is a SEARCH KEY,
+never a verdict: `P975` still governs, and licence remains a property of the repository, never of the
+publisher.**
+
+### 🟢 The credentialing layer completed — and it lands on the same seam as the scoring layer
+
+`repos/foundations.md` already carries the spec end (`1EdTech/openbadges-validator-core`,
+Apache-2.0; the specification itself ungranted). **This pass measured the product end:**
+
+| slug | grant (payload · bytes · ref) | what it does |
+|---|---|---|
+| 🆕 p98 [`CredentialEngine/Open-Badge-Publisher`](https://github.com/CredentialEngine/Open-Badge-Publisher) | 🟢 **Apache-2.0** · **11 357 B pristine**, 🟢 4 of 4 clause headings (`P974`) · `main` · `278b9d7dc084a6` · 🔴 0 tags | 🟢 **The only permissive row in the layer.** It **publishes** badge descriptions to the Credential Registry. |
+| 🆕 p98 [`nfh-trust-labs/opencred`](https://github.com/nfh-trust-labs/opencred) | 🟢 **MIT** · **1 071 B**, holder *"Copyright (c) 2026 NFH Trust Labs"* · `main` · `0fd0a9c65356db` · 🟢 **30 tags, `v1.9.1`** | Local-first **W3C Verifiable Credentials** issuing/verifying; issuer keys never leave the machine. 🔵 **Not Open Badges-specific** — the permissive option is the generic VC one. |
+| 🔴 p98 `19otherrsh-dot/Opencred` | 🔴 **AGPL-3.0** · 34 523 B · `main` · `d14619e186ed08` | 🔴 **Same project NAME as the row above, different repository, different licence** (`P1000`). Open Badges 3.0, `did:web`, status-list revocation. |
+| 🔴 p98 `Schroedinger-Hat/certo` | 🔴 **AGPL-3.0** · 33 820 B · `main` · `6fd0a11fe2ff61` | Open Badges 3.0 on Strapi/Nuxt, bulk CSV issuance. |
+| 🔴 p98 `LongsightGroup/credtrail-app` | 🔴 **AGPL-3.0** · 34 523 B · `main` · `948a8ca43f3f33` | Open Badges 3.0, Ed25519 + `did:web`. |
+| 🔴 p98 `CoopCodeCommun/pyopenbadges` | 🔴 **LGPL-3.0** · 26 526 B · `main` · `e38e1894fd9bce` | Python OB3 create/validate library. |
+
+🔵 **`P1001` — the seam, and it is the SECOND independent layer to show it.** `Gap 372` found that
+open-response **scoring** is AGPL while its **validation** layer is Apache/BSD. Credentialing is the
+same shape: **validating and publishing a credential is permissive; MINTING one is copyleft, 4 of 5.**
+🔵 **Stated as a falsifiable generalisation for a later pass to break: in education open source the
+permissive grant sits on the side that MEASURES, and copyleft sits on the side that becomes the
+RECORD.** 🔴 **If it holds, it is an engagement-shape rule, not a trivia item: the studio builds the
+measuring side and draws the boundary at the record.**
+
+### 🔴 One licence claim corrected against a secondary source, with the MECHANISM
+
+🔴 **A 2026 listicle names `frappe/lms` as the one MIT-licensed open-source LMS. The payload says
+otherwise:** `license.txt` (lowercase), **33 893 B**, `develop` · `933fc6078cfa31` →
+🔴 **AGPL-3.0**.
+
+🟢 **And the mechanism is readable, which is what makes it useful:** `frappe/frappe`, the framework
+underneath, **is** MIT (`LICENSE`, 1 118 B, *"Copyright (c) 2016-2021 Frappe Technologies Pvt. Ltd."*).
+🔵 **`P1002`: a secondary source's licence claim about an app built on a permissive framework tends to
+inherit the FRAMEWORK's grant.** 🟡 **And it is a weak oracle in both directions — 2 of 2 measured,
+1 right and 1 wrong:** `openeducat/openeducat_erp` is **LGPL-3.0** on an LGPL Odoo base, so there
+inheritance holds. 🔵 **A 50 % oracle is not an oracle.**
+
+### 🔴 Research gaps, stated rather than hidden
+
+- 🔴 **ZERO primary-source reads, again.** The egress proxy refused `CONNECT` to
+  `portal.atdt.gob.mx` (Mexico's **Plan Nacional de IA**, April 2026 — a PDF, and the best primary
+  candidate this KB has had in ten passes), `www.unesco.org` and `eur-lex.europa.eu`. **HTTP `000`,
+  `connect_rejected`, organization policy.** 🟢 Every regulatory row added this pass carries
+  search-summary grade.
+- 🔴 **`github trending education AI 2026`: SEVENTH consecutive zero**, run once to close the record.
+  Returns `rohitg00/ai-engineering-from-scratch`, `AI Agents for Beginners`, `developer-roadmap` —
+  materials *about* AI, never AI *for* education. 🟢 **RETIRED. It is not run again.**
+- 🔴 **`raw.githubusercontent.com` returned HTTP 429** mid-sweep, with a **1 523 B HTML** body
+  (`Gap 388`). 🟢 **`ladder.sh` gates on `code = 200`, so the KB cannot store a rate-limit page as a
+  payload** — but a 429 across all 24 names prints as `NO-LICENCE-PAYLOAD/24@1B`, which is
+  indistinguishable from a true negative.
+- 🟡 **`OpenEduCat`'s `COPYRIGHT` file was not read** — the 429 landed exactly there. Its `LICENSE`
+  (**8 241 B**) declares **LGPL-3.0** and delegates copyright to `COPYRIGHT`, which is `P984`'s shape
+  in a second repository. **Carried as a named unknown, not as a verdict.**
+
 ## 2026-10-10 — pass 97: the shelf has been losing verified layers for 83 passes, and the loss is now measured
 
 ⏱️ **Seventh pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93: 01:4x–02:24;

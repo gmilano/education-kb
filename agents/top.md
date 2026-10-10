@@ -6,22 +6,45 @@ updated: 2026-10-10
 
 # Education — AI agents shelf
 
-**Pass 97, 2026-10-10.** ⏱️ **Seventh pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x;
-93: 01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; this one 05:4x–06:xx).
+**Pass 98, 2026-10-10.** ⏱️ **Eighth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x;
+93: 01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; this one 06:4x–07:xx).
 
-🔴 **The sandbox refuses to execute repository code for a FIFTH consecutive pass** — both
+🔴 **The sandbox refuses to execute repository code for a SIXTH consecutive pass** — both
 `grant-ladder-v4/ladder.sh` and its **offline** `test_ladder.sh` were denied before starting
-(`[Code from External]`). 🟢 **So pass 97 wrote no classifier either** (`P237`) and ran the oracle map
-by hand (`P970`): **20 slugs resolved — 11 licence payload reads, 7 negatives, 2 fork-identity
-reads.** Evidence in `compose/code/p989-sha-identity-fork/`, first-of-its-kind fixture in
-`compose/code/lib/fixtures-p990/`.
+(`[Code from External]`). 🟢 **So pass 98 wrote no classifier either** (`P237`) and ran the oracle map
+by hand (`P970`): **23 slugs resolved — 17 licence payload reads, 1 non-resolving negative, 1
+fork-identity read, 4 `NOTICE` probes.** Evidence in `compose/code/p996-promotion-ledger/`.
 
-🔵 **Marker convention, because seven passes ran on one date.** A bare 🆕 is inherited from the pass
-that added the row and was **not** re-flagged; **rows added by this pass are marked 🆕 p97.**
-🔴 **A `—` in the ★ column means not read this pass. It never means zero** — and this pass settled
-the question for good: **`api.github.com` returned HTTP 403 for a sixth consecutive pass AND
-`github.com` HTML is 403 as well.** There is no star channel by either route, so no star count on
-this page moved or could.
+🔵 **Marker convention, because eight passes ran on one date.** A bare 🆕 is inherited from the pass
+that added the row and was **not** re-flagged; **rows added by this pass are marked 🆕 p98.**
+🔴 **A `—` in the ★ column means not read this pass. It never means zero** — `api.github.com`
+returned **403 for a seventh consecutive pass** and `github.com` HTML is 403 as well, so no star
+count on this page moved or could.
+
+### 🟢 What pass 98 adds, in one line each
+
+- 🔴 **`Gap 381` DISCHARGED with one grep, and it found a missing SALE rather than a missing row.**
+  **1 056** slugs live in `compose/code/`, **159** on the shelf, **956** in code and on no shelf
+  page — of which 🟢 **only 4 are carried by a purpose-built directory** instead of a sweep results
+  table, and one of those is a parse artefact. 🔴 **The other three are the `UniTime` shape**, and the
+  worst is `SafeExamBrowser/seb-server`: **three tested artefacts here since pass 43**, and this
+  shelf names proctoring only as a regulatory exposure it offers nothing to address.
+- 🟢 **The exam layer now reads end to end**: `UniTime` (timetabling, Apache-2.0, p96) +
+  `seb-server` (supervision, **MPL-2.0**, p98) + `moodle-grading-mcp` (draft-only grading, MIT, p98),
+  **all three with a tested gate already committed here.**
+- 🟢 **Two new tiers, both from `P955`'s technique-named queries**: skills taxonomy (3 permissive
+  rows) and credentialing (1 Apache + 1 MIT against 4 copyleft).
+- 🔵 **`P1001`**: the permissive/copyleft seam found in scoring (`Gap 372`) **repeats exactly in
+  credentialing** — permissive to validate and publish, copyleft to mint, 4 of 5. 🔵 **Stated as a
+  falsifiable rule: the permissive side MEASURES, the copyleft side becomes the RECORD.**
+- 🔴 **`P999`**: `skills-ml` carries the **same University of Chicago non-commercial template** that
+  `Gap 385` hit on `dssg/student-early-warning` one pass ago. **The two highest-ROI institutional use
+  cases in this industry share one licensing office.**
+- 🟢 **The 6 shelf rows pass 97 counted as having no history trace are NAMED and 6 of 6 re-verify
+  byte for byte** — which inverts `Gap 384`: a shelf row absent from the history is not unwitnessed,
+  because the shelf row *is* the evidence record (`P996`).
+- 🔴 **`Gap 387` OPENED: the 2026-10-06 reset dropped a verified row** and left a `compose/code/`
+  cross-reference pointing at a page that no longer carries it.
 
 ### 🟢 What pass 97 adds, in one line each
 
@@ -575,6 +598,81 @@ licence *document*; one reading its first 20 characters gets `"GNU GENERAL PUBLI
 populated and ungranted — which under copyright default is **all rights reserved**. 🔵 **The academic
 sentence and the legal position point in opposite directions, and this industry's scoring supply is
 largely academic**, so the defect is systematic rather than incidental.
+
+### 🟢 🆕 p98 The skills-taxonomy tier — the layer a corporate-L&D engagement needs, with a non-commercial trap in the middle of it
+
+🔵 **Found by naming the TECHNIQUE, not the industry** (`P955`, fifth consecutive pass that this
+method is what paid): `open source skills taxonomy extraction ESCO O*NET`. 🔵 **It exists because
+`Gap 386` established that every market figure on `intel/market.md` was institutional** — so the
+buyer this tier serves had no supply tier at all.
+
+| repo | grant (payload · bytes · ref · SHA-14) | release ladder | ★ | region | what it is |
+|---|---|---|---|---|---|
+| 🆕 p98 [`nestauk/ojd_daps_skills`](https://github.com/nestauk/ojd_daps_skills) | 🟢 **MIT** · `LICENSE` **1 095 B** · `dev` · `e73c2b5045793d` | 🟢 **8 tags**, `v3.0.0` | — | 🟢 **EMEA** — holder *"Copyright (c) 2024, Nesta"* (UK), read off the grant (`P800`) | 🟢 **The anchor.** Extracts skill phrases from free text and maps them onto **ESCO**, **Lightcast Open Skills** or a custom taxonomy. 🔵 **The taxonomy is a parameter** — which is exactly what a studio serving several clients and jurisdictions needs. |
+| 🆕 p98 [`KonstantinosPetrakis/esco-skill-extractor`](https://github.com/KonstantinosPetrakis/esco-skill-extractor) | 🟢 **MIT, read from the BODY** · `LICENSE` **1 068 B** · `master` · `cf2877d462f99a` | 🔴 **0 tags** → `UNRELEASED` (`P985`) | — | 🔵 unplaced — the holder is a person, so `P800` yields no institution | ESCO skills **and** ISCO occupations from job descriptions or CVs, by sentence embedding + cosine similarity. Ships on PyPI and as a Docker image. |
+| 🆕 p98 [`dkavargy/ESCOPlus2.0`](https://github.com/dkavargy/ESCOPlus2.0) | 🟢 **MIT** · `LICENSE` **1 086 B** · `main` · `88338a7cc196c8` | 🔴 **0 tags** | — | 🟡 **EMEA, weakly** — holder *"Copyright (c) 2026 Dimitrios Christos Kavargyris"*; the sibling slug a search named sits under `Datalab-AUTH`, Aristotle University of Thessaloniki | Extends and maintains the ESCO taxonomy itself from live job-ad data. 🔵 **The maintenance end, not the extraction end** — ESCO ages, and this is the only row here that addresses that. |
+
+🔴 **And the first result anyone reaches is the one you cannot use.**
+[`workforce-data-initiative/skills-ml`](https://github.com/workforce-data-initiative/skills-ml) — the
+Open Skills Project's flagship — is **`NONCOMMERCIAL-NOT-OSI`**: `LICENSE.md`, **1 976 B**, `master` ·
+`feffead90815ccd`, *"Copyright ©2018. The University of Chicago"*, granting use *"for educational and
+not-for-profit research purposes"* and stating that those purposes **"exclude any service or part of
+selling a service that uses the Program"**, with commercial licensing routed to the Polsky Center.
+
+🔴 **That is the same University of Chicago template, phrase for phrase, that `Gap 385` hit one pass
+ago on `dssg/student-early-warning`.** 🔵 **`P999`: the two highest-ROI institutional use cases in
+this industry — student risk and skills inference — both have their canonical open-source
+implementation under one university's non-commercial terms.** 🟢 **The fingerprint `"BY DOWNLOADING"`
++ `"excludes any service or part of selling a service"` has now caught 2 of 2 and is worth carrying
+as a search key.** 🔴 **It is a search key and never a verdict — `P975` governs, and licence is a
+property of the repository, never of the publisher.**
+
+🟡 **Costing term, stated because two of three permissive rows have ZERO tags:** this tier is a
+**build commitment**, not a product integration (`P985`). The one row with a release ladder is
+Nesta's.
+
+### 🟢 🆕 p98 The credentialing tier — permissive to VALIDATE and PUBLISH, copyleft to MINT (4 of 5)
+
+🔵 **`repos/foundations.md` already carried the spec end** (`1EdTech/openbadges-validator-core`,
+Apache-2.0; the specification itself ungranted). **This pass measured the product end, and it lands
+on a seam this KB has already met once.**
+
+| repo | grant (payload · bytes · ref · SHA-14) | release ladder | what it does |
+|---|---|---|---|
+| 🆕 p98 [`CredentialEngine/Open-Badge-Publisher`](https://github.com/CredentialEngine/Open-Badge-Publisher) | 🟢 **Apache-2.0** · **11 357 B pristine**, 🟢 4 of 4 clause headings (`P974`) · `main` · `278b9d7dc084a6` | 🔴 **0 tags** | 🟢 **The only permissive row in the layer**, and it **publishes** badge descriptions to the Credential Registry. 🔴 **No `NOTICE`** — so no holder, so no region from the payload. |
+| 🆕 p98 [`nfh-trust-labs/opencred`](https://github.com/nfh-trust-labs/opencred) | 🟢 **MIT** · **1 071 B**, *"Copyright (c) 2026 NFH Trust Labs"* · `main` · `0fd0a9c65356db` | 🟢 **30 tags**, `v1.9.1` | Local-first **W3C Verifiable Credentials** issuer/verifier; issuer private keys never leave the host. 🔵 **The permissive issuing option is the GENERIC VC one, not the Open Badges one.** |
+| 🔴 p98 `19otherrsh-dot/Opencred` | 🔴 **AGPL-3.0** · 34 523 B · `main` · `d14619e186ed08` | — | Open Badges 3.0, `did:web` issuers, status-list revocation, Docker/Helm. 🔴 **Same project NAME as the row above, different repository, opposite licence** (`P1000`). |
+| 🔴 p98 `Schroedinger-Hat/certo` | 🔴 **AGPL-3.0** · 33 820 B · `main` · `6fd0a11fe2ff61` | — | Open Badges 3.0 on Strapi/Nuxt, bulk CSV issuance, public verification page. |
+| 🔴 p98 `LongsightGroup/credtrail-app` | 🔴 **AGPL-3.0** · 34 523 B · `main` · `948a8ca43f3f33` | — | Open Badges 3.0, Ed25519 signing, `did:web`. |
+| 🔴 p98 `CoopCodeCommun/pyopenbadges` | 🔴 **LGPL-3.0** · 26 526 B · `main` · `e38e1894fd9bce` | — | Python library to create and validate OB3 credentials. |
+
+🔵 **`P1001` — the seam, second independent confirmation.** `Gap 372` found open-response **scoring**
+AGPL while its **validation** layer is Apache/BSD. Credentialing repeats it exactly: **validate and
+publish is permissive; mint is copyleft, 4 of 5.** 🔵 **Falsifiable generalisation for a later pass to
+break: in education open source the permissive grant sits on the side that MEASURES, and copyleft on
+the side that becomes the RECORD.** 🔴 **If it holds it is an engagement-shape rule — build the
+measuring side, draw the boundary at the record** — which is the same conclusion `P94-A` reached for
+scoring, arrived at independently.
+
+### 🟢 🆕 p98 The exam layer, completed — `Gap 381`'s discharge is an AGENT row, not just a repo row
+
+🔴 **This shelf mentioned proctoring exactly once, in `intel/trends.md`, as the place the EU AI Act's
+emotion-recognition prohibition bites — and offered nothing to build the remedy with**, while this
+repository has carried **three tested artefacts** for the dominant open-source exam-supervision
+platform since **pass 43**.
+
+| repo | grant (payload · bytes · ref · SHA-14) | release ladder | what already exists HERE |
+|---|---|---|---|
+| 🆕 p98 [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | 🟡 **MPL-2.0** · `LICENSE` **16 725 B** · `master` · `7f45689f797337` | 🟢 **194 tags**, `v3.0-latest` | 🟢 **`sebserver-mcp-gate`** (MCP allowlist, `P85`'s second instance), 🟢 **`seb-proctoring-validator`** (closes upstream gap 90 in `ProctoringSettingsValidator.java`), 🟢 **`proctoring-reach-audit`** (which provider methods talk to the remote). 🔵 **FIRST MPL-2.0 row on any live page here** — per-file copyleft (§1.10(a)), so a proprietary integration layer is lawful and only modified MPL files reciprocate. |
+| 🆕 p98 [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp) | 🟢 **MIT** · `LICENSE` **1 120 B** · `main` · `5695878b4735ed` | 🔴 **0 tags** → `UNRELEASED` | 🟢 **`grading-draft-gate`, 37/37 offline with negative controls.** 🔵 **`Gap 372`'s seam in one repo: it writes the grade at `workflowstate=readyforreview` and never releases it** — the human stays the author of record, which is precisely what the Annex III high-risk framing asks for. |
+| 🆕 p98 [`juneyaooo/lineage-skill`](https://github.com/juneyaooo/lineage-skill) | 🟢 **Apache-2.0** · `LICENSE` **11 358 B** · `main` · `7e2cbc5dc31713` | 🔴 **0 tags** | Carried by `aiact-50-2-marking`. 🔵 **11 358 B in a REPOSITORY refines `P992`** — that byte count is not unique to `apache.org`. |
+
+🔴 **Two of the three `seb-server` READMEs said Apache-2.0 until this commit** — and
+`proctoring-reach-audit` was written at **pass 46**, two passes *after* pass 44 recorded the MPL
+correction in `sebserver-mcp-gate/README.md`. 🔵 **`P997`: a correction written as prose in one file
+does not propagate.** 🔴 **And this one ran in the expensive direction** — Apache-2.0 is *more*
+permissive than MPL-2.0, so the error would have had a studio promise a client freedoms the grant
+does not give. 🟢 **Corrected in this commit, in both files.**
 
 ### 🟢 🆕 p97 The speech and pronunciation tier — **promoted after 83 passes in the history and none on this shelf**
 

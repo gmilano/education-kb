@@ -13,7 +13,14 @@ se escribió en el pase 43, cuando los controles no existían. Esta carpeta la a
 **el control (e) corrige una fila de P94 que se venía cotizando.**
 
 Upstream: [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server),
-**Apache-2.0**, `HEAD` `7f45689` (2026-04-01, Andreas Hefti) — el mismo commit que ya
+🔴 **MPL-2.0** — *corregido en el pase 98* (`P997`). Este README decía **Apache-2.0**, igual que
+`seb-proctoring-validator`, **aunque el pase 44 ya había corregido el valor en `sebserver-mcp-gate`
+dos pases antes de que se escribiera este archivo**: una corrección en prosa en un archivo no se
+propaga. 🟢 Payload releído en el pase 98: `LICENSE` **16 725 B**, *«Mozilla Public License Version
+2.0»*, `master` · `7f45689f797337`, 194 tags. 🔴 **El argumento comercial de esta base (copyleft por
+ARCHIVO, §1.10(a)) depende de que sea MPL y no Apache** — y el error iba en la dirección cara, porque
+Apache-2.0 es MÁS permisiva.
+`HEAD` `7f45689` (2026-04-01, Andreas Hefti) — el mismo commit que ya
 citaba el validador, reverificado con `git clone --depth 1 --filter=blob:none --sparse`.
 
 ## 🔴 La corrección: Zoom habla con el remoto desde 5 de 14 métodos, no desde 2

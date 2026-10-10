@@ -6,55 +6,80 @@ updated: 2026-10-10
 
 # Education — current trends
 
-**Pass 97, 2026-10-10.** ⏱️ **Seventh pass of this date.** 🆕 **Sixteen trends.** 🟢 **`T16` is new —
-each region leads with a different INSTRUMENT, and Africa's is capacity-building rather than
-regulation or mandate**, located by the four separate country queries pass 96 pre-registered
-(4 of 4 returned material, against 0 of 9 from the paired query it replaced).
+**Pass 98, 2026-10-10.** ⏱️ **Eighth pass of this date.** 🆕 **Eighteen trends.** 🟢 **`T17` and `T18`
+are new, and they are the two halves of one engagement.**
 
-🟢 **`T15` gains a second independent confirmation** — South Korea's **AI Basic Act took effect
-22 Jan 2026**, the first comprehensive AI statute in APAC, which reinforces rather than complicates
-the claim that the binding high-risk regime for automated assessment is APAC's while the EU's
-Annex III waits for **2 Dec 2027**. 🟢 **`T4`'s date holds on a third consecutive reading.**
+- 🟢 **`T17`** generalises a seam this KB found twice, seven passes apart: **the permissive grant sits
+  on the side that MEASURES and copyleft on the side that becomes the RECORD.** Scoring showed it at
+  pass 94; credentialing shows it at pass 98 — 🔵 **stated as falsifiable, with the three queries
+  that would break it.**
+- 🟢 **`T18`** is the limb that moves the buyer: under the EU AI Act a **school** using an AI tool to
+  assess progress or flag at-risk learners is a **deployer with its own duties.** 🔵 **Institutions
+  have no compliance function** — and `T13`'s permissive evidence layer is exactly what a deployer
+  must produce and cannot buy from its vendor.
+- 🔴 **One duty already binds and needs no 2027 planning:** emotion recognition in education,
+  **prohibited since 2 Feb 2025.** 🟢 **As of this pass the platform layer for auditing it is finally
+  on the shelf** (`seb-server`, MPL-2.0) — 🔴 **after this KB held three tested artefacts for it
+  since pass 43 while publishing the exposure with no remedy** (`Gap 381`).
 
-🔴 **One cross-region constraint hardened into a design rule this pass, and it is recorded here
-because it belongs to no single trend:** **a deliverable that REPLACES rather than augments a
-teacher fails in all four regions, by three different legal mechanisms** — Idaho SB 1227 bars it by
-**statute**, Argentina's `PaideIA` states *"la IA no reemplaza al docente"* as a **programme
-principle**, and the EU reaches the same place through **human-oversight duties**. 🔵 **It is not a
-regional footnote; it is a constraint on the product.**
+🔴 **Zero primary-source reads, eighth consecutive pass** (`eur-lex.europa.eu`, `www.unesco.org`,
+`portal.atdt.gob.mx` all refused at `CONNECT`). Regulatory rows added this pass carry
+search-summary grade.
 
-🔴 **And a guardrail that outranks a tier this pass shelved:** AI-text detection is now represented
-on `agents/top.md` (GLTR, Apache-2.0; `Open-Detector`, MIT) 🔴 **for analysis and teaching only.**
-The field's own 2026 literature is titled *"LLM-Generated Text Detection Remains an Unsolved
-Problem"*, and a system bearing on a student's academic standing is Annex III high-risk from
-2 Dec 2027. 🔴 **No pattern may wire these into a sanctioning path.**
+## T17 — 🆕 p98 The permissive grant sits on the side that MEASURES; copyleft sits on the side that becomes the RECORD
 
-#### Pass 95 — carried below, unchanged
+🔵 **Two independent layers of this industry have now been measured end to end, and they have the same
+seam in the same place.**
 
-**Pass 95, 2026-10-10.** ⏱️ **Fifth pass of this date.** 🆕 **Fourteen trends.** `T14` is new — **the
-curriculum mandates split by education level, and the higher-education limb is a different market** —
-located by Pakistan's HEC notification, the first mandate in this KB that binds universities rather than
-schools. 🟢 **`T13` gains three measured negatives** (the open-response scorers that turn out to be
-CC BY-SA or ungranted) **and one permissive row at an adjacent layer** (`otter-grader`, BSD-3).
-🟢 **`T9` gains a demand signal from the buyer side**: Brazil's MEC has put *correção automatizada* on its
-own list of endorsed teacher uses. 🔴 **And `T3`'s governance-gap claim is reinforced by a method defect
-rather than a new survey** — see `P982` in `intel/market.md`: two passes of "Japan has no instrument" were
-an artefact of querying in English. Everything else is carried.
+| layer | the MEASURING side | the RECORD side |
+|---|---|---|
+| **Open-response scoring** (`Gap 372`, p94) | 🟢 **Apache-2.0 / BSD-3** — `EducationalTestingService/rsmtool` (Apache-2.0, 2 916 commits), `skll` (BSD-3) | 🔴 **AGPL-3.0** — `openedx/ease`, `openedx/edx-ora2` |
+| **Credentialing** (p98) | 🟢 **Apache-2.0** — `1EdTech/openbadges-validator-core` (validate), `CredentialEngine/Open-Badge-Publisher` (publish) | 🔴 **AGPL-3.0 / LGPL-3.0, 4 of 5** — `19otherrsh-dot/Opencred`, `Schroedinger-Hat/certo`, `LongsightGroup/credtrail-app`, `CoopCodeCommun/pyopenbadges` (mint) |
 
-#### Pass 94 — carried below, unchanged
+🔵 **The rule, stated so a later pass can break it: in education open source, the permissive grant
+sits on the side that MEASURES and copyleft sits on the side that becomes the AUTHORITATIVE RECORD.**
+🟢 **Two layers, four publishers, independently sampled seven passes apart.**
 
-**Pass 94, 2026-10-10.** ⏱️ **Fourth pass of this date.** 🆕 **Thirteen trends.** `T12` (the instrument in
-a federal system is subnational — now a *predictive* rule, having located Mexico's) and `T13` (the
-permissive supply for regulated assessment is the **evidence** layer, not the scorer) are new this pass, and
-🟢 **`T4` gains the mechanism behind a wrong date this file has recorded six times: it is a conflation of a
-deferred Annex III deadline with a live Article 50 one.** Everything else is carried.
+🔴 **Why it is an engagement-shape rule and not trivia.** It predicts the boundary before the
+diligence is done: **build the measuring side, draw the licence boundary at the record, and let the
+client own the record.** 🔵 **`P94-A` reached exactly that conclusion for scoring from first
+principles** — T17 says it generalises, and says where to look for the next instance.
 
-#### Pass 93 — carried below, unchanged
+🟢 **The one permissive exception proves the shape rather than breaking it.**
+`nfh-trust-labs/opencred` (MIT, **30 tags**, `v1.9.1`) **does** mint credentials — and it is a
+**generic W3C Verifiable Credentials** toolkit, not an Open Badges product. 🔵 **The permissive
+minting option is the one that is not education-specific**, which is the same observation
+`repos/foundations.md` makes about spec-boundary code at a different altitude.
 
-**Pass 93, 2026-10-10.** ⏱️ **Third pass of this date.** **Eleven trends.** `T1`–`T9` are carried from
-pass 92 with this pass's amendments marked **🆕 p93** inside them; `T10` and `T11` are new.
-🔵 **Each trend is tied to something measured or dated. Where pass 93 added no evidence to a carried
-trend, it says so rather than restating it as fresh.**
+🟡 **Falsification tests a later pass should run**, each a `P955`-style technique query:
+**rostering/SIS write-back**, **transcript and record-of-study**, **attendance of record**. 🔵 **If
+the writing side of any of those is permissive, T17 is wrong and should be retired loudly.**
+
+## T18 — 🆕 p98 The EU AI Act's education duties fall on the SCHOOL as deployer, which moves the buyer
+
+🟢 **New limb this pass, and it is the one with a sales consequence** *(search-summary)*: a school
+using a commercial AI tool to assess progress or flag at-risk learners is a **deployer** under the
+Act and carries **its own** obligations, separate from the provider's.
+
+🔵 **Every regulatory row in this file until now implicitly addressed the ed-tech VENDOR.** 🟢 **T18
+says the institution is a compliance buyer in its own right** — and institutions have no compliance
+function, no model documentation and no evidence pipeline. 🔵 **That is a services engagement, and
+`T13`'s finding is what fills it**: the permissive supply for regulated assessment is the **evidence
+layer** (`rsmtool` Apache-2.0, `skll` BSD-3), which is precisely what a deployer must produce and
+cannot buy from the vendor.
+
+🔴 **And one duty already binds, with nothing to wait for:** emotion recognition in education has
+been **prohibited since 2 Feb 2025** (Art. 5). 🔵 **Affect and engagement inference ship switched on
+by default in proctoring and engagement-analytics products**, so for an existing deployer this is a
+**feature audit of live systems**, not a 2027 planning item. 🟢 **And as of this pass the platform
+layer for it finally exists on the shelf:** `SafeExamBrowser/seb-server` (**MPL-2.0**, 194 tags) with
+three tested artefacts already in `compose/code/` — 🔴 **which this KB had held since pass 43 while
+publishing the exposure and offering nothing to address it** (`Gap 381`).
+
+🟡 **The date is unchanged and now carries a FOURTH independent confirmation** — Annex III high-risk
+obligations postponed to **2 Dec 2027** — 🔴 **but this pass's sources conflict with pass 94's record
+on whether the Council has formally adopted the postponement**, and `EUR-Lex` refused `CONNECT` for
+an eighth consecutive pass. 🔵 **Quote the date; do not quote the procedure.**
 
 ## T1 — The unit of delivery is the *agent skill*, not the application
 

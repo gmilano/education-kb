@@ -4,6 +4,134 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 98: `Gap 381` discharged with one grep, and the row it recovers was DROPPED by this KB's own reset
+
+⏱️ **Eighth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93: 01:4x–02:24;
+94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; this one 06:4x–07:xx). **Append-only.**
+
+🔴 **Repository code refused for a SIXTH consecutive pass** (`[Code from External]`), the offline
+self-test included. 🟢 **No classifier written** (`P237`); oracle map run by hand (`P970`).
+🔴 **`api.github.com` 403 for a SEVENTH pass and `github.com` HTML 403** — every ★ on this page is
+unread, never zero. Evidence: `compose/code/p996-promotion-ledger/`.
+
+### 🔴 The finding that is about this KB and not about a repo — `Gap 387`, OPENED
+
+🟢 **`sebserver-mcp-gate/README.md` (pass 44) asserts that the MPL-2.0 verdict for
+`SafeExamBrowser/seb-server` is *"what `repos/foundations.md` and the pase-41/42 trends say"*.**
+🔴 **Today `repos/foundations.md` says nothing about it. The row is gone.**
+
+🟢 **And the archive proves the assertion was true when it was written:**
+`archive/2026-10-06-pre-reset/repos-foundations.md:3774` carries
+*"🟢 `SafeExamBrowser/seb-server` (⚠️ MPL-2.0, `HEAD` de `master` = `7f45689`, 2026-04-01)"*.
+
+🔴 **So the 2026-10-06 reset dropped a verified platform row and left a cross-reference in
+`compose/code/` pointing at a page that no longer carries it.** 🟢 **Today's independent payload read
+reproduces the archived verdict exactly** — `LICENSE`, **16 725 B**, *"Mozilla Public License Version
+2.0"*, `master` · `7f45689f797337`, **194 tags**, `v3.0-latest` — 🔵 **so this is not a rediscovery,
+it is a restoration with the byte term the archive never had.**
+
+🔵 **`Gap 387` is therefore narrow and checkable: no process compares the live shelf against
+`archive/2026-10-06-pre-reset/`.** 🟢 **The reconciler written this pass
+(`reconcile_code_shelf.py`) catches the `compose/code/` direction; the archive direction is still
+unswept, and it is the same grep against a different corpus.** 🔴 **Pre-registered as the next
+pass's first duty that does not need code execution.**
+
+### 🟢 Restored and newly measured platform rows
+
+| repo | grant (payload · bytes · ref · SHA-14) | release ladder | why it matters |
+|---|---|---|---|
+| 🆕 p98 [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | 🟡 **MPL-2.0** · `LICENSE` **16 725 B** · `master` · `7f45689f797337` | 🟢 **194 tags**, `v3.0-latest` | 🟢 **FIRST MPL-2.0 row on any live page of this KB.** Exam supervision/lockdown at institutional scale. 🔵 **Per-file copyleft (§1.10(a))** — a proprietary integration layer is lawful; only modified MPL files reciprocate. 🟢 **Three tested artefacts already exist here**: `seb-proctoring-validator`, `sebserver-mcp-gate`, `proctoring-reach-audit`. |
+| 🆕 p98 [`CredentialEngine/Open-Badge-Publisher`](https://github.com/CredentialEngine/Open-Badge-Publisher) | 🟢 **Apache-2.0** · **11 357 B pristine**, 4 of 4 clause headings (`P974`) · `main` · `278b9d7dc084a6` | 🔴 **0 tags** | 🟢 **The only permissive row in the Open Badges product layer** — and it is the *publishing* end. |
+| 🆕 p98 [`nestauk/ojd_daps_skills`](https://github.com/nestauk/ojd_daps_skills) | 🟢 **MIT** · **1 095 B** · `dev` · `e73c2b5045793d` | 🟢 **8 tags**, `v3.0.0` | Skills extraction with the **taxonomy as a parameter** (ESCO, Lightcast, custom). 🟢 **EMEA** off the holder line, *"Copyright (c) 2024, Nesta"*. |
+| 🆕 p98 [`nfh-trust-labs/opencred`](https://github.com/nfh-trust-labs/opencred) | 🟢 **MIT** · **1 071 B** · `main` · `0fd0a9c65356db` | 🟢 **30 tags**, `v1.9.1` | Local-first W3C VC issuer/verifier, issuer keys never leave the host. |
+
+### 🟢 `P989`'s fork-identity test, second instance — and it caught a search summary mid-error
+
+🔴 **A search summary this pass named `mfadaee/ojd_daps_skills` as "Nesta's Skills Extractor
+Library".** 🟢 **`git ls-remote` settles it in one call:**
+
+| slug | `HEAD` SHA-14 |
+|---|---|
+| `nestauk/ojd_daps_skills` | `e73c2b5045793d` |
+| `mfadaee/ojd_daps_skills` | `e73c2b5045793d` |
+
+🟢 **Identical HEAD → one repository and one fork at parity** (`P989`). 🔵 **The canonical slug is
+`nestauk`**, and the payload agrees: the holder line reads *"Copyright (c) 2024, Nesta"*, not the
+fork owner's name. 🔵 **Second confirmation that the fork-identity test needs no token, through the
+one channel seven passes of 403 have left open.**
+
+### 🔴 The default branch is `main` in a minority, and that is an ADDRESSING defect (`Gap 380`, now priced)
+
+🔵 **`Gap 380` said `grant-ladder-v4` takes a ref straight into the URL. This pass measured what that
+costs if the ref were assumed rather than read:**
+
+| default branch | slugs resolved this pass |
+|---|---|
+| `main` | **11** |
+| `master` | 7 |
+| `dev` / `develop` | 4 |
+| 🔴 `19.0` (a VERSION NUMBER) | 1 — `openeducat/openeducat_erp` |
+| **total** | **23** |
+
+🔴 **`main` is 11 of 23 — a minority**, and one default branch is a release number. 🟢 **And the live demonstration is free: this pass's own channel
+probe asked for `UniTime/unitime` at `main` and got a clean 404 on a repository whose payload is
+11 357 B of Apache-2.0 at `master`.** 🔵 **An assumed ref 404s all 24 names and publishes as *no
+licence payload*.** 🟢 **`ladder.sh` reads the symref and is NOT exposed; the exposure is in any hand
+run that skips it** — which is every pass since 92, including this one.
+
+### 🔴 `Gap 388` — OPENED: the only open channel throttles, and a throttle is published as a negative
+
+🔴 **`raw.githubusercontent.com` returned HTTP 429 with a 1 523 B HTML body** during this pass's
+sweep, on `openeducat/openeducat_erp`'s `COPYRIGHT`.
+
+🟢 **The KB is not exposed to the worst version of this:** `ladder.sh` requires `code = 200` before
+accepting bytes, so a rate-limit page can never be classified as a grant. 🔴 **But a 429 across all
+24 names prints `NO-LICENCE-PAYLOAD/24@1B` — identical to a true negative**, and nothing in the
+output distinguishes them.
+
+🟢 **The remedy needs no new code and no witness file: the HTTP code already discriminates.** 404 =
+absent, 429 = throttled. 🔵 **One condition, not a classifier** (`P237`).
+
+🔴 **And the witness-file remedy this KB has used instead (`P872`, fetch `README.md` as a control)
+was measured this pass and it FALSE-DISCARDS:** of the 6 rows audited below, **3 returned 404 on
+`README.md` while their licence payload returned 200** — `factor_analyzer`, `H5P-Nodejs-library`,
+`oppia-android`. 🔵 **A witness-gated sweep would have thrown away 3 of 6 GOOD sweeps.** 🟢 **`P872`
+is not wrong about needing a control; it is wrong about the control being a second file.**
+
+### 🟢 The 6 shelf rows with no trace in the append-only history — NAMED, and 6 of 6 re-verify at byte equality
+
+🔵 **Pass 97 counted "6 on the shelf, never in the history" and did not name them. The ledger built
+this pass names them** — and 🟢 **reproduces pass 97's figure of 6 with an independently written
+regex** (159 shelf slugs / 1 246 history slugs here against 146 / 1 259 there; the denominators differ
+by regex breadth, the orphan count does not).
+
+| shelf row | shelf claim | re-read this pass | verdict |
+|---|---|---|---|
+| `EducationalTestingService/factor_analyzer` | GPL-2.0 · 18 092 B · `main` · `de933d2` | GPL · **18 092 B** · `main` · `de933d2` | 🟢 **identical** |
+| `GatorEducator/gatorgrader` | GPL-3.0 · `LICENSE.md` 35 191 B · `master` · `3be3278` | GPL · **35 191 B** · `master` · `3be3278` | 🟢 **identical** |
+| `LAION-AI/Desktop_BUD-E` | 🔴 no payload / 24 names · `13ba697` | 🔴 **no payload / 24**, witness 200 | 🟢 **identical, and not an instrument artefact** |
+| `lumieducation/H5P-Nodejs-library` | GPL-3.0 · 35 146 B · `master` · `ac2d6aa` | GPL · **35 146 B** · `master` · `ac2d6aa` | 🟢 **identical** |
+| `oppia/oppia-android` | Apache-2.0 · 11 357 B · `develop` · `25e3860` | Apache · **11 357 B** · `develop` · `25e3860` | 🟢 **identical** |
+| `PrairieLearn/PrairieLearn` | AGPL-3.0 · 36 983 B · `master` · `d1e44b4` | **36 983 B** · `master` · `d1e44b4` | 🟢 **identical** |
+
+🔵 **`P996` — and it inverts how `Gap 384` should be read.** A shelf row absent from the trending
+history is **not** an unwitnessed row: the shelf row *is* an evidence record, because this KB
+publishes `bytes · ref · sha7` inline. 🟢 **6 of 6, byte for byte, at the same refs.** 🔴 **What
+`Gap 384` is actually missing is narrower and still real: no page records WHICH PASS promoted a row,
+so `UniTime`'s kind (pass 42 → pass 96) cannot be told from a deliberate decline.** 🟢 **The ledger
+supplies that column as a bound for 153 of 159 rows** — `promotion-ledger-pass98.tsv`, newest-first
+history order handled (oldest mention = highest line number).
+
+### 🔴 `github trending education AI 2026` — SEVENTH consecutive zero, and the query is RETIRED
+
+🔴 Returned `rohitg00/ai-engineering-from-scratch`, Microsoft's `AI Agents for Beginners`,
+`developer-roadmap`, `100-Days-Of-ML-Code` — **materials *about* AI, not AI *for* education**, for the
+seventh pass running. 🟢 **The record is now long enough to close: the ambiguity is in the phrase, not
+the index.** 🔵 **This pass ran it once to make the seventh datum explicit rather than to hope for a
+different answer. It is not run again.** 🟢 **The queries that did pay this pass both named a
+TECHNIQUE** (`P955`): *skills taxonomy extraction ESCO* and *Open Badges verifiable credentials
+issuer*.
+
 ## 2026-10-10 — pass 97: a 116-release aligner the shelf never had, and the ledger that would have found it
 
 ⏱️ **Seventh pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93: 01:4x–02:24;

@@ -22,6 +22,107 @@ education-kb/
 └── compose/code/  # Código ejecutable y probado, no prosa
 ```
 
+## Pase 98 — 2026-10-10
+
+⏱️ **Octavo pase de esta fecha** (el 91 corrió 23:0x–00:00 UTC; el 92, 00:4x–01:3x; el 93, 01:4x–02:24;
+el 94, 02:5x; el 95, 03:4x; el 96, 04:4x–05:xx; el 97, 05:4x–06:xx; este, 06:4x–07:xx).
+
+**El hallazgo principal: `Gap 381` pedía UN `grep` desde el pase 96 y nadie lo había corrido. Corrido,
+dice que esta base publicó una exposición regulatoria —el reconocimiento de emociones en educación,
+PROHIBIDO desde el 2 feb 2025— y no ofrecía nada con qué atenderla, mientras guardaba TRES artefactos
+probados, desde el pase 43, para la plataforma open source dominante de supervisión de exámenes.**
+🔵 **`Gap 381` costeado: no es una fila que falta, es una VENTA que falta.**
+
+🔴 **El sandbox sigue sin ejecutar código del repositorio (SEXTO pase consecutivo)**: `ladder.sh` **y**
+su suite offline `test_ladder.sh`, denegadas antes de arrancar. 🟢 **Y otra vez no se escribió ningún
+clasificador** (`P237`). 🟢 **Pero esta vez la negativa no costó el pase**: las dos auditorías que
+rindieron —`Gap 381` y la mitad de `Gap 384`— **tienen como corpus el propio repositorio**, y se
+corrieron sin red y sin ejecutar código del repo. 🔵 **`P1004`: cuando el instrumento está denegado,
+preferí la pregunta cuyo corpus es el repositorio.**
+
+### 🔴 `Gap 387` — la fila no se perdió midiendo: la perdió el reset de esta base
+
+| población | n |
+|---|---|
+| slugs en `compose/code/` | **1 056** |
+| slugs en las páginas del estante | **159** |
+| en código y en **ninguna** página | **956** |
+| 🟢 …sostenidos por un directorio **hecho a propósito** y no por una tabla de barrido | **4** (uno es artefacto de parseo) |
+
+🟢 **956 no es el defecto** — los barridos registran candidatos por diseño. 🔴 **Los 3 reales son la
+forma `UniTime`**, y el peor es [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server):
+🟡 **MPL-2.0**, payload **16 725 B**, `master` · `7f45689f797337`, **194 tags**, `v3.0-latest`.
+
+🔴 **Y el `README` del pase 44 afirma que el veredicto MPL es «lo que dicen `repos/foundations.md` y
+las tendencias del pase 41/42».** 🟢 **El archivo prueba que era cierto cuando se escribió**
+(`archive/2026-10-06-pre-reset/repos-foundations.md:3774`) 🔴 **y el reset del 2026-10-06 la tiró.**
+🟢 **La lectura de hoy reproduce el veredicto archivado exactamente, con el término de bytes que el
+archivo no tenía** — así que es una RESTAURACIÓN, no un descubrimiento, y eso es la prueba más fuerte
+de que la pérdida fue del reset y no de una medición.
+
+🟢 **Altas de este pase, las tres verificadas por payload:** `seb-server` (**MPL-2.0 — la PRIMERA fila
+MPL de cualquier página viva de esta base**; copyleft por ARCHIVO, §1.10(a), así que una capa
+propietaria alrededor es lícita) · `toshieji/moodle-grading-mcp` (**MIT**, 1 120 B — la costura de
+`Gap 372`: escribe la nota en `workflowstate=readyforreview` y **nunca la libera**) ·
+`juneyaooo/lineage-skill` (**Apache-2.0**, 11 358 B).
+
+### 🔴 `P997` — una corrección en prosa, en un archivo, NO se propaga
+
+🔴 **Dos de los tres `README` de `seb-server` decían Apache-2.0** — y `proctoring-reach-audit` se
+escribió en el **pase 46**, *dos pases después* de que el pase 44 corrigiera el valor a MPL-2.0 en
+`sebserver-mcp-gate`. 🔴 **Y el error iba en la dirección CARA: Apache-2.0 es MÁS permisiva que MPL**,
+de modo que habría hecho prometer a un cliente libertades que la licencia no da.
+🟢 **Los dos archivos quedan corregidos en este commit.**
+
+### 🟢 Dos capas nuevas, las dos de consultas que nombran la TÉCNICA (`P955`)
+
+- 🟢 **Taxonomía de skills** — `nestauk/ojd_daps_skills` (**MIT**, `v3.0.0`, 8 tags, 🟢 **EMEA** por la
+  línea de titular *«Copyright (c) 2024, Nesta»*) · `KonstantinosPetrakis/esco-skill-extractor`
+  (**MIT** leído del CUERPO, sin título, y 🔴 **con comillas tipográficas** — `P998`) ·
+  `dkavargy/ESCOPlus2.0` (**MIT**, mantiene la taxonomía misma).
+  🔴 **Y la trampa: `workforce-data-initiative/skills-ml`, la biblioteca bandera del Open Skills
+  Project y el primer resultado de cualquier búsqueda, es `NONCOMMERCIAL-NOT-OSI`** — **mismo
+  template de la Universidad de Chicago**, frase por frase, que el que `Gap 385` encontró un pase
+  antes en `dssg/student-early-warning`. 🔵 **`P999`: los dos casos de uso institucionales de mayor
+  ROI de esta industria comparten UNA oficina de licenciamiento.** 🟢 El sello `"BY DOWNLOADING"` ya
+  atrapó 2 de 2. 🔴 **Es clave de búsqueda, nunca veredicto — `P975` manda.**
+- 🟢 **Credencialización** — `CredentialEngine/Open-Badge-Publisher` (**Apache-2.0**, 11 357 B
+  prístino, 4 de 4 encabezados) y `nfh-trust-labs/opencred` (**MIT**, `v1.9.1`, 30 tags) contra
+  🔴 **cuatro emisores AGPL/LGPL**. 🔵 **`P1001`/`T17`: la licencia permisiva está del lado que MIDE y
+  el copyleft del lado que se vuelve el REGISTRO** — segunda confirmación independiente, siete pases
+  después de la del scoring (`Gap 372`). 🔵 **Publicado como falsable, con las tres consultas que lo
+  romperían.**
+
+### 🟢 `Gap 386` descargado como DIMENSIONADO (y re-registrado como SIN MAPA)
+
+🟢 **Las dos consultas pre-registradas se corrieron por separado y las dos pagaron:** IA en formación
+corporativa **USD 7 490 M (2026) → USD 18 190 M (2031)**, CAGR **19,43 %** (Mordor), contra una base
+total de formación corporativa de **~USD 400 000 M** (Bersin). 🔴 **Las dos cifras de «plataformas de
+upskilling» difieren 7,5× y la diferencia es ALCANCE, no desacuerdo.** 🟢 **Y una fuente es
+internamente inconsistente por un factor de ~257 en una sola página** (Verified Market Research:
+USD 100 000 M en 2024 y ~USD 388,9 M en 2025) — queda registrada para que nadie la cite.
+🟡 **Sólo 1 de 5 cifras trae región**, así que el comprador de L&D es un número sin mapa: gap más
+angosto que el que reemplaza, re-registrado.
+
+### 🔴 Lo que NO se consiguió, dicho en vez de ocultado
+
+- 🔴 **CERO lecturas de fuente primaria, octavo pase.** Y este pase perdió la mejor candidata en diez:
+  el **Plan Nacional de IA de México (abril 2026)**, PDF de primera parte en `portal.atdt.gob.mx`.
+  El proxy de egreso rechazó el `CONNECT` (`000`, `connect_rejected`), igual que `www.unesco.org` y
+  `eur-lex.europa.eu`. 🔵 **«Rechazado» no es «no encontrado», y se registra como lo primero.**
+- 🔴 **`github trending education AI {año}`: SÉPTIMO cero consecutivo. QUEDA RETIRADA.** Devuelve
+  materiales *sobre* IA, nunca IA *para* educación.
+- 🔴 **`api.github.com` 403 por séptimo pase y `github.com` HTML 403** — ninguna ★ se movió. `—`
+  significa *no leído*, nunca cero.
+- 🔴 **`Gap 388` abierto: `raw.githubusercontent.com` devolvió 429** con cuerpo HTML de 1 523 B.
+  🟢 `ladder.sh` exige `code = 200`, así que no puede clasificar una página de rate-limit como
+  licencia; 🔴 **pero un 429 en los 24 nombres se imprime igual que un negativo real.** 🟢 **El remedio
+  es una condición, no un clasificador: 404 = ausente, 429 = estrangulado.**
+- 🔴 **Y el testigo `README.md` de `P872` FALSO-DESCARTA: 3 de 6 filas auditadas devuelven 404 en el
+  testigo con payload 200.** 🟢 Un barrido con ese control habría tirado 3 de 6 barridos buenos.
+- 🔴 **`Gap 376` no queda descargado** (requiere `grant-ladder-v4`), y **`Gap 372` sigue sin corrector
+  permisivo de grado productivo para respuesta abierta.**
+
 ## Pase 96 — 2026-10-10
 
 ⏱️ **Sexto pase de esta fecha** (el 91 corrió 23:0x–00:00 UTC; el 92, 00:4x–01:3x; el 93, 01:4x–02:24;

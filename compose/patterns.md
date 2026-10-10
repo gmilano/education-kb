@@ -6,9 +6,17 @@ updated: 2026-10-10
 
 # Education — compose patterns
 
-**Pass 97, 2026-10-10.** ⏱️ **Seventh pass of this date.** 🆕 **Three patterns added** (`P97-A` spoken-language assessment, `P97-B` the integrity workbench that is deliberately not a detector, `P97-C` the African teacher-capacity engagement), 🟢 **two of the three built on tiers this pass promoted or shelved for the first time.**
+**Pass 98, 2026-10-10.** ⏱️ **Eighth pass of this date.** 🆕 **Three patterns added** (`P98-A` the exam lifecycle end to end, `P98-B` the corporate L&D skills engine, `P98-C` the deployer's compliance file), 🟢 **and `P98-A` is the first pattern on this page where EVERY step already has a tested gate committed in this repository.**
+
+🔵 **The three are not independent.** `P98-A` is the build, `P98-C` is the same evidence layer sold to the **institution** rather than the vendor (`T18`), and `P98-B` is the one pattern here whose buyer is an **employer** — a buyer this KB could not price until `Gap 386` was discharged this pass.
 
 🔴 **One constraint now binds EVERY pattern on this page and is stated once, here: a deliverable that REPLACES rather than augments a teacher fails in all four regions**, by three different legal mechanisms — Idaho SB 1227 bars it by statute, Argentina’s `PaideIA` states *"la IA no reemplaza al docente"* as a programme principle, and the EU reaches the same place through human-oversight duties.
+
+🔴 **Second constraint, new this pass and cheap to honour: never start a pattern from the most-cited repo without reading its payload.** `workforce-data-initiative/skills-ml` (skills) and `dssg/student-early-warning` (risk) are both the first result in their category and both carry **University of Chicago non-commercial terms** that exclude exactly the studio case (`P999`). 🟢 **The tell is a `LICENSE` opening with *"BY DOWNLOADING"*.**
+
+#### Pass 97 — carried below, unchanged
+
+**Pass 97, 2026-10-10.** 🆕 Three patterns (`P97-A` spoken-language assessment, `P97-B` the integrity workbench that is deliberately not a detector, `P97-C` the African teacher-capacity engagement), two of three built on tiers that pass promoted or shelved for the first time.
 
 #### Pass 96 — carried below, unchanged
 
@@ -887,6 +895,131 @@ from the payload at a full 40-character SHA, and this KB has run its MCP gate fo
 has **no named client deployment recorded here.** 🟢 **And it is the one JVM row on this shelf whose
 default branch names a shippable version** (`pom.xml` `4.9` against tag `v4.9.152`), which inverts `P978`
 and means you can quote a version without a caveat — the only row here you can say that about.
+
+## `P98-A` — 🆕 The exam lifecycle end to end: schedule → supervise → grade (EMEA and APAC first; every piece already has a tested gate in this repository)
+
+🟢 **Why this pattern could not be written before this pass, and why it is cheap now:** all three
+layers were verified, all three have tested artefacts committed in `compose/code/`, and **two of the
+three were on no shelf page** — `UniTime` until pass 96, `seb-server` until pass 98 (`Gap 381`).
+🔵 **Nothing here is a research bet. It is a wiring job over code this repository already owns.**
+
+### The wiring, named repo by repo, with the gate that already exists
+
+| step | repo | grant · ref · release ladder | gate already committed here | what it does |
+|---|---|---|---|---|
+| 1. **schedule** | [`UniTime/unitime`](https://github.com/UniTime/unitime) | 🟢 **Apache-2.0** · `master` · **101 tags**, `v4.9.152` *(counted p96; not re-read this pass)* | 🟢 `compose/code/unitime-mcp-gate/` (`P85`) | Timetabling, course and exam-period scheduling. 🔴 **Apache §4(d): its `NOTICE` is 22 526 B and must be propagated.** |
+| 2. **supervise** | [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | 🟡 **MPL-2.0** · `master` · `7f45689f797337` · 🟢 **194 tags**, `v3.0-latest` | 🟢 `compose/code/sebserver-mcp-gate/` + `seb-proctoring-validator/` + `proctoring-reach-audit/` | Exam lockdown, session supervision, proctoring-provider configuration. 🟢 **Per-file copyleft — integrate directly; do NOT build beside it.** |
+| 3. **grade** | [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp) | 🟢 **MIT** · `main` · `5695878b4735ed` · 🔴 **0 tags** | 🟢 `compose/code/grading-draft-gate/` — **37/37 offline, with negative controls** | Writes the grade at `workflowstate=readyforreview` and **never releases it.** |
+| 4. **validate the grade** | [`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool) + [`skll`](https://github.com/EducationalTestingService/skll) | 🟢 **Apache-2.0** / **BSD-3** | — | The evidence package (`T13`, `T17`). 🔵 **This is the half a regulator and an appeal actually consume.** |
+| 5. **record** | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** | — | Every exam event as xAPI. 🟢 **The deployer's own audit trail, which `T18` says the institution must produce itself.** |
+
+### 🟢 Why the licence mix is the selling point and not the caveat
+
+🔵 **Three different grants, three different boundary rules, and all three favourable:**
+**Apache-2.0** (UniTime, rsmtool, lrsql) — closed derivative lawful, propagate `NOTICE`;
+**MPL-2.0** (seb-server) — 🟢 **per-file copyleft (§1.10(a)): a proprietary integration layer is
+lawful and only modified MPL files reciprocate**, which in practice is one enum value for a new
+proctoring provider; **MIT** (moodle-grading-mcp) — unrestricted.
+🔴 **There is no AGPL anywhere in this pattern**, which is what distinguishes it from every other
+assessment pattern in this file.
+
+🔴 **The feature audit comes FIRST, before any integration work.** Emotion recognition in education
+has been **prohibited since 2 Feb 2025** (EU AI Act Art. 5), and affect/engagement inference ships
+**switched on by default** in commercial proctoring. 🟢 **`proctoring-reach-audit` already measures
+which provider methods reach the network** (Jitsi 1, 🔴 **Zoom 5** — a figure this KB corrected
+against its own earlier 2). 🔵 **Sell the audit as week 1, not as a disclaimer.**
+
+### Cost and sequencing
+
+🟡 **6–8 weeks**, and it is short *because* the gates exist. Week 1: feature audit of the client's
+live proctoring configuration against Art. 5 — 🔴 **if affect inference is on, that is the finding,
+and it is billable on its own.** Weeks 2–3: stand up `seb-server` and `UniTime`, wire both MCP gates
+(already tested). Weeks 4–5: `moodle-grading-mcp` behind `grading-draft-gate`'s three properties —
+🟢 **no grade is ever auto-released.** Weeks 6–7: `rsmtool`/`skll` evidence package + xAPI into
+`lrsql`. Week 8: acceptance.
+
+🔵 **Region order, and the reason:** 🟢 **APAC first** — Vietnam's `Decision 33/2026/QD-TTg` binds
+**now** (in force 15 Aug 2026; education is 3 of its 46 high-risk systems) and South Korea's AI Basic
+Act is in force. 🟢 **EMEA second, as preparation** — Annex III lands **2 Dec 2027**, and `T18`'s
+deployer limb means the **institution** is the buyer, not the vendor. 🟡 **North America third**,
+where the hook is Idaho's **SB 1227** human-teacher floor and California's **A.B. 1159** student-data
+limb rather than an assessment regime.
+
+## `P98-B` — 🆕 The corporate L&D skills engine (North America and APAC first; the buyer `Gap 386` could not price until this pass)
+
+🔵 **Why this pattern is new:** every market figure in this KB was institutional until pass 98
+(`Gap 386`). 🟢 **The buyer is now sized** — AI-in-corporate-training **USD 7.49 B in 2026 → USD
+18.19 B by 2031** (CAGR 19.43 %), against a **~USD 400 B** total corporate-training base.
+🔵 **And the demand asymmetry is the pitch: 87 % of L&D teams already use AI, 55 % of workers use AI
+regularly, and only 1 in 3 workers got employer-provided AI training in the last six months.**
+
+### The wiring, named repo by repo
+
+| step | repo | grant · ref · release ladder | what it does here |
+|---|---|---|---|
+| 1. **extract skills** | [`nestauk/ojd_daps_skills`](https://github.com/nestauk/ojd_daps_skills) | 🟢 **MIT** · `dev` · `e73c2b5045793d` · 🟢 **8 tags**, `v3.0.0` | Skill phrases out of CVs, job descriptions and internal role docs, mapped onto **ESCO**, **Lightcast Open Skills** or a custom taxonomy. 🟢 **Pin this one — it is the only row in the tier with a release ladder.** |
+| 1b. **occupations too** | [`KonstantinosPetrakis/esco-skill-extractor`](https://github.com/KonstantinosPetrakis/esco-skill-extractor) | 🟢 **MIT** (titleless payload) · `master` · 🔴 0 tags | ESCO skills **and** ISCO occupations by embedding similarity; PyPI + Docker. 🔵 Use where the client needs role-level inference, not only skill-level. |
+| 2. **keep the taxonomy alive** | [`dkavargy/ESCOPlus2.0`](https://github.com/dkavargy/ESCOPlus2.0) | 🟢 **MIT** · `main` · 🔴 0 tags | Extends and validates ESCO from live job-ad data. 🔵 **The only answer here to "the taxonomy is three years stale".** |
+| 3. **measure mastery, not opinion** | `pyBKT` (MIT) · `py-irt` (MIT) · `eribean/girth` · `douglasrizzo/catsim` (BSD-3) | 🟢 permissive | The psychometric tier. 🔴 **Mastery is an INPUT to readiness, never a substitute for it** (`Gap 385`'s wording). |
+| 4. **shorten the assessment** | [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) + `py-irt` | 🟢 **BSD-3 / MIT** | Adaptive testing: fewer items, same confidence — 🔵 **the difference between a 90-minute skills audit and a 15-minute one, which is what decides adoption inside a company.** |
+| 5. **credential the outcome** | [`CredentialEngine/Open-Badge-Publisher`](https://github.com/CredentialEngine/Open-Badge-Publisher) (Apache-2.0) to publish; [`nfh-trust-labs/opencred`](https://github.com/nfh-trust-labs/opencred) (MIT, **30 tags**, `v1.9.1`) to issue | 🟢 permissive | 🟢 **The only all-permissive path through the credentialing layer** (`T17`): the four Open Badges *issuers* are AGPL/LGPL. |
+| 6. **deliver and record** | `OpenOLAT` (Apache-2.0) for the corporate-facing LMS · `yetanalytics/lrsql` for xAPI | 🟢 **Apache-2.0** | 🔴 **NOT `frappe/lms`** — a 2026 listicle calls it MIT and the payload says **AGPL-3.0** (`P1002`). |
+
+### 🔴 The one thing that will go wrong if nobody reads this line
+
+🔴 **Do NOT start from [`workforce-data-initiative/skills-ml`](https://github.com/workforce-data-initiative/skills-ml).**
+It is the Open Skills Project's flagship, it is the first result on every search, and it is
+**`NONCOMMERCIAL-NOT-OSI`**: University of Chicago terms granting use *"for educational and
+not-for-profit research purposes"* which **"exclude any service or part of selling a service that
+uses the Program"**. 🔴 **A studio engagement is exactly the excluded case.**
+🔵 **And it is the same template as `dssg/student-early-warning`** (`Gap 385`, `P999`) — so if a
+candidate repo's `LICENSE` opens with *"BY DOWNLOADING"*, read it before costing it.
+
+🔴 **Second honest line: two of three skills rows have ZERO tags** (`P985`). This tier is a **build
+commitment**, not a product integration, and the estimate below reflects that.
+
+### Cost and sequencing
+
+🟡 **8–10 weeks.** Weeks 1–2: taxonomy decision (ESCO vs Lightcast vs client-internal) — 🔵 **this is
+a business decision, not a technical one, and `ojd_daps_skills` makes it reversible because the
+taxonomy is a parameter.** Weeks 3–5: extraction over the client's real role and CV corpus, with a
+labelled holdout — 🔴 **no demo on public job ads; the client's own vocabulary is the whole
+difficulty.** Weeks 6–7: adaptive assessment with `catsim`/`py-irt`. Weeks 8–9: badge publish/issue
+path. Week 10: acceptance.
+
+🔵 **Region order:** 🟢 **North America first** (largest AI-in-corporate-training market, per Mordor),
+🟢 **APAC second** (fastest-growing), 🔴 **LATAM and EMEA unplaced — no L&D figure in this KB breaks
+out either**, which is `Gap 386`'s remainder and a pre-registered lead, not a silence.
+
+## `P98-C` — 🆕 The deployer's compliance file (EMEA; the buyer `T18` just created, and the institution has no compliance function)
+
+🔵 **The shift in one line:** every regulatory offer in this KB addressed the ed-tech **vendor**.
+🟢 **`T18` establishes that a school using AI to assess progress or flag at-risk learners is a
+DEPLOYER with its own duties** — and a school has no model documentation, no evidence pipeline and
+nobody whose job this is.
+
+### What the deliverable actually is
+
+| component | built from | grant | why it satisfies a deployer duty |
+|---|---|---|---|
+| **feature audit of live systems** | `compose/code/proctoring-reach-audit/` + `seb-proctoring-validator/` | — (this repo) | 🔴 **Emotion recognition in education is prohibited since 2 Feb 2025.** Affect inference is **on by default** in commercial proctoring, so this is the only item on the list that is already overdue rather than due in 2027. |
+| **the evidence layer** | `rsmtool` (Apache-2.0) · `skll` (BSD-3) | 🟢 permissive | 🟢 **`T13`/`T17`: the measuring side is permissive.** This is what an appeal and an inspection consume. |
+| **human-in-the-loop proof** | `toshieji/moodle-grading-mcp` behind `grading-draft-gate` (**37/37**) | 🟢 **MIT** | 🟢 **The grade is written `readyforreview` and never released** — demonstrable, test-backed evidence that a human is the author of record. |
+| **the audit trail** | `yetanalytics/lrsql` xAPI | 🟢 **Apache-2.0** | The deployer's own record, independent of the vendor's. |
+| **curriculum grounding, where the tutor is in scope** | `bncc-dev/bncc-pacotes` (**1 721 verified objectives** over MCP) | 🟢 **MIT code / CC BY 4.0 data** | 🔵 **`T11`: grounding takes hallucination 31.9 % → 0.2 %**, and under Vietnam's regime a self-study tutor is in scope **by the ORIGIN of its material** — so grounding is a regulatory control, not a quality argument. |
+
+### Cost, sequencing and the honest caveat
+
+🟡 **5–7 weeks**, and it is the cheapest pattern in this file because **nothing is built** — it
+assembles permissive evidence tooling around systems the client already runs. Week 1: Art. 5 feature
+audit. Weeks 2–3: evidence layer against the client's live assessment data. Weeks 4–5: human-in-loop
+gate + xAPI trail. Weeks 6–7: the file itself, written to be handed to an inspector.
+
+🟡 **Sell it in EMEA as preparation for 2 Dec 2027 and in APAC as compliance NOW** (`T15`).
+🔴 **The caveat to state up front: four independent sources agree on 2 Dec 2027 and they disagree on
+whether the Council has formally adopted the postponement**, and this KB has not read the instrument
+in primary — `EUR-Lex` has refused `CONNECT` for eight consecutive passes. 🔵 **Quote the date, never
+the procedure.**
 
 ## `P97-A` — 🆕 Spoken-language assessment for a mandated curriculum (LATAM and APAC first; the tier promoted this pass)
 

@@ -4,6 +4,204 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 🟢 Ninety-eighth pass, 2026-10-10 — **`Gap 381` DISCHARGED with one grep and it found a missing SALE**; `Gap 384` INVERTED (the 6 orphans named, 6 of 6 re-verify byte for byte); `Gap 386` DISCHARGED as sized; `Gap 387`/`Gap 388` opened; `P996`–`P1003` adopted; **SIXTH consecutive refusal of repository code (`Gap 383`)**
+
+⏱️ **Eighth pass of this date.** 91: 2026-10-09 23:0x–00:00 UTC · 92: 00:4x–01:3x · 93: 01:4x–02:24 ·
+94: 02:5x · 95: 03:4x · 96: 04:4x–05:xx · 97: 05:4x–06:xx · this pass 06:4x–07:xx. **Append-only.**
+
+### 🔴 The instrument, stated first — sixth consecutive refusal
+
+🔴 **`compose/code/grant-ladder-v4/ladder.sh` AND its offline `test_ladder.sh` were both denied before
+starting** (`[Code from External]`). 🟢 **So pass 98 wrote no classifier** (`P237`), ran the oracle map
+by hand (`P970`), and executed no repository code. 🔴 **`Gap 376` is not discharged and `Gap 383`
+records six consecutive refusals.**
+
+| pass | repository code execution |
+|---|---|
+| 93 | 🔴 refused |
+| 94 | 🔴 refused |
+| 95 | 🔴 refused |
+| 96 | 🔴 refused |
+| 97 | 🔴 refused |
+| **98** | 🔴 **refused** |
+
+🟢 **What the open channel did instead: 23 slugs resolved — 17 licence payload reads, 1 non-resolving
+negative, 1 fork-identity read, 4 `NOTICE` probes**, plus two `grep`-scale audits over the committed
+pages that needed no network at all. Evidence: `compose/code/p996-promotion-ledger/`.
+
+🔵 **And the two audits are the answer to `Gap 383`'s standing problem.** `Gap 381` and half of
+`Gap 384` were discharged this pass **without executing any repository code and without a
+classifier**, because both questions were about **this KB's own committed text**, not about the world.
+🟢 **`P1004`: when the instrument is refused, prefer the question whose corpus is the repository.**
+
+### 🔴 The channel ledger
+
+| channel | state this pass |
+|---|---|
+| `raw.githubusercontent.com` (licence payloads) | 🟡 **OPEN, and it THROTTLES** — HTTP **429** with a 1 523 B HTML body (`Gap 388`) |
+| `git ls-remote` (existence, ref, SHA, tags) | 🟢 **OPEN** — and it carried every structural finding this pass |
+| `api.github.com` | 🔴 **403, seventh consecutive pass** |
+| `github.com` HTML | 🔴 **403** |
+| government / institutional primary sources (`portal.atdt.gob.mx`, `www.unesco.org`, `eur-lex.europa.eu`) | 🔴 **CLOSED** — `connect_rejected` at `CONNECT`, HTTP `000`, organization policy |
+| repository code execution | 🔴 **REFUSED, sixth consecutive pass** |
+
+🔴 **Zero primary-source reads, eighth consecutive pass** — and this pass lost the best candidate the
+KB has had in ten: **Mexico's `Plan Nacional de IA`, April 2026, a first-party government PDF at a
+`gob.mx` host.** 🔵 **"Refused" is a different fact from "not found" and is recorded as such
+(`p798-proxy-refusal-ledger`).**
+
+### 🟢 `Gap 381` — DISCHARGED, and the discharge is worth more than the gap
+
+🔵 **`Gap 381` asked for one `grep`: reconcile `compose/code/` slugs against the shelf pages.**
+`reconcile_code_shelf.py`, this pass:
+
+| population | n |
+|---|---|
+| distinct slugs in `compose/code/` | **1 056** |
+| distinct slugs on the shelf pages | **159** |
+| in `compose/code/`, on **no** shelf page | **956** |
+| 🟢 …carried by a **purpose-built** directory rather than a sweep results table | **4** |
+| 🔵 …of which a parse artefact (`o/r.git`, from a `git@github.com:o/r.git` usage example) | 1 |
+
+🟢 **956 is NOT the defect** — the sweep tables record candidates by design, exactly as `Gap 384`'s
+1 119 does. 🟢 **The filter that matters is "a directory built FOR this repo", and it narrows 956 to
+3.** 🔴 **All three are the `UniTime` shape:**
+
+| slug | purpose-built directories | verdict measured this pass | now shelved |
+|---|---|---|---|
+| 🔴 `SafeExamBrowser/seb-server` | **three** — `seb-proctoring-validator` (p43), `sebserver-mcp-gate` (p43/44), `proctoring-reach-audit` (p46) | 🟡 **MPL-2.0** · `LICENSE` **16 725 B** · `master` · `7f45689f797337` · 🟢 **194 tags**, `v3.0-latest` | 🟢 `repos/foundations.md`, `verticals/solutions.md`, `agents/top.md`, `compose/patterns.md` (`P98-A`) |
+| 🔴 `toshieji/moodle-grading-mcp` | `grading-draft-gate` (p56, **37/37** offline) | 🟢 **MIT** · **1 120 B** · `main` · `5695878b4735ed` · 🔴 0 tags | 🟢 same |
+| 🔴 `juneyaooo/lineage-skill` | `aiact-50-2-marking` | 🟢 **Apache-2.0** · **11 358 B** · `main` · `7e2cbc5dc31713` · 🔴 0 tags | 🟢 `agents/top.md`, `repos/foundations.md` |
+
+🔴 **And the cost is not a missing row.** `intel/trends.md` mentioned proctoring **exactly once** — as
+the place the EU AI Act's **emotion-recognition prohibition (in force 2 Feb 2025)** bites — and no
+shelf page offered anything to build the remedy with, **while this repository held a tested MCP gate,
+a settings validator and a network-reach audit for the dominant open-source exam-supervision
+platform.** 🔵 **`Gap 381` costed: a published exposure with no offer against it is a missing SALE.**
+
+### 🔴 `Gap 387` — OPENED: the 2026-10-06 reset dropped a verified row, and a `compose/code/` README still points at it
+
+🟢 **`sebserver-mcp-gate/README.md` (pass 44) asserts the MPL-2.0 verdict is *"what
+`repos/foundations.md` and the pase-41/42 trends say"*.** 🔴 **Until this commit, this live shelf said
+nothing about `seb-server` at all.** 🟢 **The archive proves the assertion was true when written:**
+`archive/2026-10-06-pre-reset/repos-foundations.md:3774` carries
+*"🟢 `SafeExamBrowser/seb-server` (⚠️ MPL-2.0, `HEAD` de `master` = `7f45689`, 2026-04-01)"*.
+
+🟢 **Today's independent read reproduces the archived verdict exactly, with the byte term the archive
+never carried.** 🔵 **So this is a restoration, not a discovery — which is the strongest possible
+evidence that the loss was the reset's and not a measurement's.**
+
+🟢 **`Gap 387` is narrow and checkable: nothing compares the live shelf against
+`archive/2026-10-06-pre-reset/`.** 🔵 **It is the same grep as `Gap 381`'s against a different
+corpus, it needs no network and no code execution, and it is therefore the next pass's first duty
+under `P1004`.**
+
+### 🟢 `Gap 384` — half DISCHARGED, and the half that discharges INVERTS its reading
+
+🔵 **Pass 97 measured "6 on the shelf, never in the history" and did not name the 6. This pass names
+them and re-read all six.**
+
+| shelf row | shelf claim | re-read at the published ref | verdict |
+|---|---|---|---|
+| `EducationalTestingService/factor_analyzer` | GPL-2.0 · 18 092 B · `main` · `de933d2` | GPL · **18 092 B** · `main` · `de933d2` | 🟢 identical |
+| `GatorEducator/gatorgrader` | GPL-3.0 · `LICENSE.md` 35 191 B · `master` · `3be3278` | GPL · **35 191 B** · `master` · `3be3278` | 🟢 identical |
+| `LAION-AI/Desktop_BUD-E` | 🔴 no payload / 24 · `13ba697` | 🔴 **no payload / 24**, witness `README.md` **200** | 🟢 identical, and not an instrument artefact |
+| `lumieducation/H5P-Nodejs-library` | GPL-3.0 · 35 146 B · `master` · `ac2d6aa` | GPL · **35 146 B** · `master` · `ac2d6aa` | 🟢 identical |
+| `oppia/oppia-android` | Apache-2.0 · 11 357 B · `develop` · `25e3860` | Apache · **11 357 B** · `develop` · `25e3860` | 🟢 identical |
+| `PrairieLearn/PrairieLearn` | AGPL-3.0 · 36 983 B · `master` · `d1e44b4` | **36 983 B** · `master` · `d1e44b4` | 🟢 identical |
+
+🟢 **6 of 6, byte for byte, at the same refs** — and 🟢 **the orphan COUNT reproduces pass 97's figure
+of 6 under an independently written regex** (159 shelf / 1 246 history slugs here against 146 / 1 259
+there; the denominators differ with regex breadth, the orphan count does not).
+
+🔵 **`P996` — and it changes what `Gap 384` means.** A shelf row absent from the append-only history
+is **not** an unwitnessed row: **this KB publishes `bytes · ref · sha7` inline, so the shelf row IS
+an evidence record.** 🔴 **What `Gap 384` is actually missing is narrower and still real: no page
+records WHICH PASS promoted a row**, so `UniTime`'s kind (verified p42, shelved p96) cannot be told
+from a deliberate decline. 🟢 **`promotion-ledger-pass98.tsv` supplies that column as a bound for 153
+of 159 rows** (oldest history mention; newest-first file order handled).
+
+### 🟢 `Gap 386` — DISCHARGED as **sized**, re-registered as **unplaced**
+
+🟢 **Both pre-registered queries were run as their own queries and both returned figures:**
+AI-in-corporate-training **USD 7.49 B (2026) → USD 18.19 B (2031)**, CAGR **19.43 %** (Mordor);
+upskilling platforms **USD 8.31 B → USD 13.35 B (2030)** narrow (Research and Markets) against
+**USD 61.98 B → USD 100.91 B (2031)** broad (Mordor); total corporate-training base **~USD 400 B**
+(Bersin); US training spend **USD 102.8 B** in 2025, **+4.9 %** (Training Magazine, via secondary).
+
+🔴 **The two upskilling figures differ by 7.5× and the difference is entirely SCOPE.** 🟢 **And one
+source is internally inconsistent by a factor of ~257 within a single page** — Verified Market
+Research gives **USD 100 B (2024) → USD 500 B (2032)** *and* **~USD 388.9 M (2025)**.
+🔵 **`market-triple-check`'s discipline vindicated on one page rather than across firms, and the row
+is recorded here so a later pass does not quote it.**
+
+🟡 **Not discharged as placed: 1 of 5 figures carries any region** (Mordor's "North America largest,
+APAC fastest"), **none breaks out EMEA or LATAM.** 🔵 **A number without a map, which is a narrower
+gap than the one it replaces.** Re-registered as lead 2 on `intel/market.md`.
+
+### 🔴 `Gap 388` — OPENED: the only open payload channel throttles, and a throttle publishes as a negative
+
+🔴 **`raw.githubusercontent.com` returned HTTP 429 with a 1 523 B HTML body** mid-sweep, on
+`openeducat/openeducat_erp`'s `COPYRIGHT`.
+
+🟢 **The KB is NOT exposed to the worst form of this.** `ladder.sh` requires `code = 200` before it
+accepts bytes (line read this pass), so a rate-limit page can never be classified as a grant —
+🔵 **`FLOOR=1` would otherwise have handed 1 523 B of HTML to the classifier.**
+🔴 **But a 429 across all 24 names prints `NO-LICENCE-PAYLOAD/24@1B`, which is indistinguishable from
+a true negative**, and nothing in the output separates them.
+
+🟢 **The remedy needs no new code, no classifier and no witness file: the HTTP code already
+discriminates.** **404 = absent. 429 = throttled.** One condition (`P237`).
+
+🔴 **And the witness-file remedy this KB has been using instead (`P872`: fetch `README.md` as a
+control) was MEASURED this pass and it false-discards.** Of the 6 rows audited above, **3 returned
+404 on `README.md` while their licence payload returned 200** — `factor_analyzer`,
+`H5P-Nodejs-library`, `oppia-android`. 🔵 **A witness-gated sweep would have discarded 3 of 6 GOOD
+sweeps. `P872` is right that a control is needed and wrong that the control is a second file.**
+
+### 🟢 Propositions adopted this pass
+
+| id | proposition |
+|---|---|
+| **`P996`** | 🟢 **A shelf row absent from the append-only history is not unwitnessed — the shelf row IS the evidence record**, because this KB publishes `bytes · ref · sha7` inline. **6 of 6 orphans re-verified byte for byte.** 🔴 **`Gap 384`'s real remainder is the missing *promotion pass* column, not missing evidence.** |
+| **`P997`** | 🔴 **A correction written as prose in one file does not propagate.** Pass 44 corrected `seb-server` Apache-2.0 → **MPL-2.0** in `sebserver-mcp-gate/README.md`; `proctoring-reach-audit/README.md`, written at **pass 46 — two passes LATER** — reintroduced Apache-2.0. 🔴 **And the error ran in the expensive direction: Apache is MORE permissive than MPL, so it would have promised a client freedoms the grant does not give.** 🟢 **Both corrected in this commit.** |
+| **`P998`** | 🟡 **A grant can be unmatchable by a naive string test for TYPOGRAPHIC reasons.** `esco-skill-extractor`'s MIT body uses curly quotes — `“Software”`, not `"Software"` — on top of being **titleless** (second instance after `Montreal-Forced-Aligner`, p97). 🔵 **Classify on the permission sentence, never on the quoted term or the title line.** |
+| **`P999`** | 🔴 **The two highest-ROI institutional use cases in this industry share one licensing office.** `workforce-data-initiative/skills-ml` (skills, **1 976 B**) and `dssg/student-early-warning` (risk, `Gap 385`) carry the **same University of Chicago non-commercial template**, phrase for phrase, including *"excludes any service or part of selling a service"*. 🟢 **The opening `"BY DOWNLOADING"` is a reusable fingerprint, 2 of 2.** 🔴 **A SEARCH KEY, never a verdict — `P975` governs.** |
+| **`P1000`** | 🔴 **The project NAME is not an identity.** Two repositories named *OpenCred*: `nfh-trust-labs/opencred` is **MIT** (1 071 B, 30 tags) and `19otherrsh-dot/Opencred` is **AGPL-3.0** (34 523 B). 🔵 **They differ by the one property that decides the engagement.** Resolve to `slug` + `SHA`, as `P253`/`P989` already require for forks. |
+| **`P1001`** | 🟢 **The permissive grant sits on the side that MEASURES; copyleft sits on the side that becomes the RECORD.** Scoring (p94): validation Apache/BSD, scorers AGPL. Credentialing (p98): validate/publish Apache, **mint copyleft 4 of 5**. 🔵 **Two layers, four publishers, seven passes apart. Published as `T17` with the three queries that would falsify it.** |
+| **`P1002`** | 🟡 **A secondary source's licence claim about an app inherits the FRAMEWORK's grant.** `frappe/lms` is **AGPL-3.0** (33 893 B) while `frappe/frappe` **is** MIT (1 118 B) — and a 2026 listicle called the app MIT. 🟡 **2 of 2 measured, right once:** `openeducat/openeducat_erp` is LGPL-3.0 on an LGPL Odoo base. 🔵 **A 50 % oracle is not an oracle, and the failure direction is the over-permissive one.** |
+| **`P1003`** | 🔴 **`P800` cannot place an Apache-2.0 row: a pristine Apache payload carries no copyright holder.** 🟢 **`NOTICE` is the route and it is 2 of 4** — `UniTime` → *"The Apereo Foundation"*, `oppia-android` → *"The Oppia Authors"*; `Open-Badge-Publisher` and `lineage-skill` serve **no `NOTICE`**, which §4(d) permits. 🔵 **So `region: unplaced` on an Apache row with no `NOTICE` is UNMEASURABLE from the licence channel, not unexamined** — and it explains why `unplaced` clusters on Apache rows. |
+| **`P1004`** | 🟢 **When the instrument is refused, prefer the question whose corpus is the repository.** `Gap 381` and half of `Gap 384` were discharged this pass with two `grep`-scale audits, **no network, no code execution, no classifier** — against six passes in which the refusal was treated as a blocker on the census. 🔵 **Six refusals is long enough to stop planning around the channel reopening.** |
+
+### 🔴 One correction this pass makes to the KB's own record
+
+🔴 **`compose/code/proctoring-reach-audit/README.md` and
+`compose/code/seb-proctoring-validator/README.md` both described
+`SafeExamBrowser/seb-server` as Apache-2.0.** 🟢 **The payload read this pass — `LICENSE`,
+**16 725 B**, *"Mozilla Public License Version 2.0"*, `master` · `7f45689f797337` — confirms pass 44's
+MPL-2.0 verdict.** 🟢 **Both files are corrected in this commit**, and the whole commercial argument
+this KB builds on `seb-server` (per-file copyleft, §1.10(a)) depends on the corrected value.
+
+### 🔵 Pre-registered actions for pass 99
+
+1. 🟢 **`Gap 387`'s grep: diff the live shelf against `archive/2026-10-06-pre-reset/`.** No network,
+   no code execution, no classifier (`P1004`). 🔵 **`seb-server` was found by accident; this is the
+   sweep that would have found it.**
+2. 🟢 **Add the `promoted` column to the shelf rows.** The ledger already computes the bound for 153
+   of 159 (`promotion-ledger-pass98.tsv`); this pass established the convention on its own new rows
+   only. 🔵 **Two columns over committed pages, not a classifier.**
+3. 🔴 **Gate 404 against 429 in any hand-run sweep** (`Gap 388`). One condition. 🔴 **And stop using
+   `README.md` as a witness — it false-discarded 3 of 6 this pass.**
+4. 🟡 **Read `openeducat/openeducat_erp`'s `COPYRIGHT`** — the 429 landed exactly there, and `P984`
+   says the delegated file is the one with the facts.
+5. 🔴 **`Gap 372` unchanged**: no permissive production-grade open-response scorer. 🟢 **But
+   `moodle-grading-mcp` (MIT) is now shelved as the draft-only seam**, which is the first permissive
+   thing this KB has at that layer.
+6. 🟢 **Run `T17`'s falsification queries** — rostering/SIS write-back, transcript of record,
+   attendance of record. 🔵 **If the WRITING side of any is permissive, retire `T17` loudly.**
+7. 🔴 **India by ministry name** (`NCERT`, `IndiaAI Mission`), and 🔴 **Africa as Rwanda / Ghana /
+   Morocco / Ethiopia, one query each** — never paired (`T16`, proved twice).
+
 ## 🔴 Ninety-seventh pass, 2026-10-10 — **FIFTH consecutive refusal of repository code (`Gap 383`)**; `Gap 384` opened and MEASURED (1 119 history slugs on no shelf page, 528 of them permissive); `Gap 385` opened (no permissive early-warning system exists); `Gap 386` opened (every market figure here is institutional); `P989`–`P995` adopted; **three pre-registered leads DISCHARGED, 3 of 3**
 
 ⏱️ **Seventh pass of this date.** 91: 2026-10-09 23:0x–00:00 UTC · 92: 00:4x–01:3x · 93: 01:4x–02:24 ·
