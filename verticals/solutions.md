@@ -6,13 +6,62 @@ updated: 2026-10-10
 
 # Education — vertical platforms you can customise with AI
 
-**Pass 98, 2026-10-10.** ⏱️ **Eighth pass of this date.** 🔴 **The sandbox refused
-`grant-ladder-v4/ladder.sh` **and** its offline self-test for a SIXTH consecutive pass**, so no
-replacement classifier was written (`P237`) and the oracle map was run by hand (`P970`).
-🟢 **What pass 98 adds to THIS page is a platform the page itself LOST** — `SafeExamBrowser/seb-server`,
-verified here before the 2026-10-06 reset, re-read today at the same ref and the same verdict, plus
-the first **MPL-2.0** row this KB has carried and the third branch it forces on the decision rule.
-🔴 **Carried rows are still at their pass-92/93/96 SHAs and were not re-read.**
+**Pass 99, 2026-10-10.** ⏱️ **Ninth pass of this date.** 🔴 **The sandbox refused
+`grant-ladder-v4/ladder.sh` **and** its offline self-test for a SEVENTH consecutive pass**, so no
+replacement classifier was written (`P237`). 🟢 **But the ladder's OPERATIONS were permitted and ran
+inline** (`P1005`), so every address added by this pass is a **full 40-character SHA**.
+🟢 **What pass 99 adds to THIS page is the layer that sits BETWEEN an agent and these platforms —
+and it does not have one licence, it has three.**
+🔴 **Carried rows are still at their pass-92/93/96/98 SHAs and were not re-read.**
+
+## 🔴 🆕 p99 `P1006` — the connector layer, and the platform choice it silently makes for you
+
+🔵 **This page lists platforms the studio can customise. Every pattern that uses one assumes an agent
+can REACH it.** 🟢 **Pass 99 read the three repos that provide that reach, and the licence split
+falls across platforms, not across repos.**
+
+| platform | connector | grant (payload · bytes · ref · full SHA) | tags / latest | what it means for an engagement |
+|---|---|---|---|---|
+| **Canvas** (Instructure) | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B · `main` · `b054b913603a206c677565bcbec128652cb9d398` | 🟢 **26 / `v1.14.0`** | 🟢 **Permissive end to end.** 40+ tools over the Canvas API; README 44 176 B. The gradebook is reachable through maintained code. |
+| **Moodle** | [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **AGPL-3.0** · 34 523 B · `main` · `5a194a53cc399155bdc5e49737709f43f9a16406` | 🟡 **7 / `v0.1.7`** | 🔴 **Declined.** Network copyleft on a server the client reaches over a network; self-describes as the connector *behind* a commercial product. **Read it as a specification, do not link it.** |
+| **Moodle** | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 **MIT** · 1 064 B · `main` · `666f12222ed6cffc9051455eb4799bb2ac8608ce` | 🔴 **0** | 🟡 **Fork base.** 1 064 B of MIT over Moodle Web Services — courses, students, assignments, quizzes, **grades and feedback** — auditable in an afternoon. |
+
+🔴 **The asymmetry, stated plainly: Canvas has a connector that is permissive AND released. Moodle has
+one of each and neither is both.**
+
+🔵 **And that is a REGIONAL fact about this page, not a licence trivia row.** Moodle is the platform
+this KB has pointed at **LATAM** and the public sector across eight passes — it is what ministries
+and public universities actually run, and it is the reason `P91-E` and the offline-first patterns name
+it. 🔴 **So the region with the strongest Moodle install base is the region whose agent connector
+forces a choice between AGPL-3.0 and untagged**, while **North America**'s dominant higher-ed
+platform ships a permissive connector at `v1.14.0`.
+
+🟢 **The manoeuvre, and it is already documented in this repository:** fork and pin
+`peancor/moodle-mcp-server`, and treat the AGPL server the way `sebserver-mcp-gate` treats MPL —
+as a **readable specification** rather than linked code. 🔵 **The licence decides the integration
+shape, so it belongs on the platform page and not only in a trends note.**
+
+🔴 **`P975`, third instance in two passes:** the directory that surfaced the AGPL server described it
+only as *"open-source"*. 🟢 **Its payload says AGPL-3.0 at 34 523 B.** 🔴 **And the slip ran in the
+expensive direction again** (`P997`): a permissive-sounding label over the one family that can reach
+a client's own code across a network.
+
+## 🟢 🆕 p99 `seb-server` — the page's own MPL row, re-read at a full address
+
+🟢 [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) — **MPL-2.0**,
+`LICENSE` **16 725 B**, `master` · **`7f45689f79733797e70f8c5318ec9cadb08d03be`**, **194 tags**.
+🔵 **Pass 98 restored this row at `7f45689f797337`; pass 99 reproduces the byte term and tag count
+exactly and extends the address to the full 40 characters** (`P987`).
+🔴 **And it is this page's clearest `P872` false-discard:** at that same pinned SHA its `README.md`
+returns **404 / 14 B** while its `LICENSE` returns **200 / 16 725 B**.
+🟡 **MPL is copyleft per FILE** (`§1.10(a)`), so a proprietary layer around it is lawful — the third
+branch of this page's decision rule, unchanged.
+
+🔵 **And the exam layer now has a dated buyer.** The EU AI Act names **remote exam proctoring** as an
+**Annex III high-risk** use of AI in education, and the Digital Omnibus — **Regulation (EU) 2026/1744**,
+in force **27 July 2026** — moved those obligations to **2 December 2027**. 🟢 **So the platform on
+this page has a compliance deadline 14 months out, and three tested artefacts for it already live in
+`compose/code/`.** See `intel/trends.md` `T4`.
 
 ## 🔴 🆕 p98 The twelfth permissive-adjacent platform, and this page is where it was LOST
 

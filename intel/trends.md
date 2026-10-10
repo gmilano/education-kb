@@ -5,26 +5,88 @@ updated: 2026-10-10
 ---
 
 # Education — current trends
+**Pass 99, 2026-10-10.** ⏱️ **Ninth pass of this date.** 🆕 **Twenty trends.** 🟢 **`T19` and `T20`
+are new, and both say the same uncomfortable thing from different ends: the blocker in this industry
+has stopped being the licence.**
 
-**Pass 98, 2026-10-10.** ⏱️ **Eighth pass of this date.** 🆕 **Eighteen trends.** 🟢 **`T17` and `T18`
-are new, and they are the two halves of one engagement.**
+- 🟢 **`T19`** — **the connector, not the platform, decides which LMS a studio can serve
+  permissively.** Canvas has an agent connector that is **MIT and released** (`v1.14.0`, 26 tags);
+  Moodle has an **AGPL-3.0** one at `v0.1.7` and an **MIT** one with **zero tags**. 🔴 **And it is
+  region-bearing: Moodle is what LATAM ministries and public universities run.**
+- 🟢 **`T20`** — **`Gap 372` was never a licence gap. It is a RELEASE gap.** Three permissive
+  open-response scorers exist (**MIT**, **Apache-2.0**, **BSD-3-Clause**) and 🔴 **none has a single
+  release tag**, in a pass that read education repos carrying **26, 135 and 194** tags.
+  🔵 **That changes the sell from "find a scorer" to "harden one".**
+- 🔴 **The duty that binds FIRST is not the one the market is discussing.** The Digital Omnibus is law
+  (**Regulation (EU) 2026/1744**, Council adopted **29 June 2026**, in force **27 July 2026**) and it
+  postponed **Annex III to 2 Dec 2027** — 🔴 **while leaving Article 50 transparency untouched, so
+  Article 50(2) machine-readable marking binds on 2 December 2026.** 🔵 **See the `T4` amendment
+  below: this is `T4`'s thesis confirmed a fourth time, now with eight weeks on the clock.**
+- 🔴 **And one duty needs no planning at all:** emotion recognition in education, **prohibited since
+  2 Feb 2025**, unpostponed. 🟢 The platform layer for auditing it is on the shelf (`seb-server`,
+  **MPL-2.0**, re-read this pass at its full 40-char SHA).
 
-- 🟢 **`T17`** generalises a seam this KB found twice, seven passes apart: **the permissive grant sits
-  on the side that MEASURES and copyleft on the side that becomes the RECORD.** Scoring showed it at
-  pass 94; credentialing shows it at pass 98 — 🔵 **stated as falsifiable, with the three queries
-  that would break it.**
-- 🟢 **`T18`** is the limb that moves the buyer: under the EU AI Act a **school** using an AI tool to
-  assess progress or flag at-risk learners is a **deployer with its own duties.** 🔵 **Institutions
-  have no compliance function** — and `T13`'s permissive evidence layer is exactly what a deployer
-  must produce and cannot buy from its vendor.
-- 🔴 **One duty already binds and needs no 2027 planning:** emotion recognition in education,
-  **prohibited since 2 Feb 2025.** 🟢 **As of this pass the platform layer for auditing it is finally
-  on the shelf** (`seb-server`, MPL-2.0) — 🔴 **after this KB held three tested artefacts for it
-  since pass 43 while publishing the exposure with no remedy** (`Gap 381`).
+🔴 **Zero primary-source reads, NINTH consecutive pass** — and this pass states the boundary as a
+**set**: 🟢 reachable are the WebSearch backend, `github.com` git smart-HTTP and
+`raw.githubusercontent.com`; 🔴 refused are `arxiv.org`, `www.iesalc.unesco.org`,
+`digital-strategy.ec.europa.eu`, `eur-lex.europa.eu`, `www.kaggle.com` and
+`the-learning-agency.com`. Regulatory rows added this pass carry **search-summary grade** and say so.
 
-🔴 **Zero primary-source reads, eighth consecutive pass** (`eur-lex.europa.eu`, `www.unesco.org`,
-`portal.atdt.gob.mx` all refused at `CONNECT`). Regulatory rows added this pass carry
-search-summary grade.
+## T19 — 🆕 p99 The CONNECTOR decides which platform a studio can serve permissively, and it splits by platform
+
+🔵 **Every pattern in this KB assumes an agent can reach the LMS the client already runs.** 🟢 **Pass
+99 read the three repos that provide that reach and found they do not share a licence — and the split
+falls across PLATFORMS, not across repos.**
+
+| platform | connector | grant | tags / latest |
+|---|---|---|---|
+| **Canvas** | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B | 🟢 **26 / `v1.14.0`** |
+| **Moodle** | [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **AGPL-3.0** · 34 523 B | 🟡 **7 / `v0.1.7`** |
+| **Moodle** | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 **MIT** · 1 064 B | 🔴 **0** |
+
+🔴 **Canvas has a connector that is permissive AND released. Moodle has one of each and neither is
+both.** 🔵 **So the licence of a 1 KB glue repo — not the licence of the platform — decides whether an
+engagement is permissive end to end.**
+
+🔴 **And the consequence is regional, which is why this is a trend and not a row.** Moodle is what
+ministries and public universities run, and it is the platform this KB has aimed at **LATAM** and the
+public sector for eight passes. **North America**'s dominant higher-ed platform ships the permissive,
+released connector. 🔵 **The region with the greater public-sector need inherits the worse integration
+licence.**
+
+🟢 **The manoeuvre, already documented here for MPL:** fork and pin the **1 064-byte MIT** server and
+read the AGPL one as a **specification** rather than linking it (`sebserver-mcp-gate`'s move,
+`§1.10(a)`). 🟡 **It is lawful and it is still a fork — an estimate must say so.**
+
+🔵 **Falsifiable.** Three queries would break `T19`: a released permissive Moodle connector appearing
+(`moodle mcp server MIT release`), the AGPL one relicensing, or a platform-neutral connector covering
+both. 🟢 **Any of the three retires this trend, and that is the point of stating it this way.**
+
+## T20 — 🆕 p99 The permissive supply is RELEASE-blocked, not LICENCE-blocked — and that is a different purchase
+
+🔵 **Four passes carried `Gap 372` as "no permissive production-grade corrector for open response".**
+🔴 **The premise was wrong in a way that cost four passes of searching for the wrong thing.**
+
+| scorer | grant | tags |
+|---|---|---|
+| `KamalEzzo/automated-essay-grading-system` | 🟢 **MIT** | 🔴 **0** |
+| `shibing624/judger` | 🟢 **Apache-2.0** | 🔴 **0** |
+| `doheejin/ProTACT` | 🟢 **BSD-3-Clause** | 🔴 **0** |
+
+🟢 **The control is from the same pass, same industry, same instrument:** `canvas-mcp` **26 tags**,
+`HKUDS/DeepTutor` **135 tags**, `SafeExamBrowser/seb-server` **194 tags**. 🔵 **So "0 tags" is a real
+signal here and not an artefact of how this industry publishes.**
+
+🔵 **`T20`, stated generally: in education the permissive grant is abundant and the RELEASE is scarce**
+— and the two are easy to confuse because both show up as "nothing usable found". 🟢 **The studio
+offer that follows is harden-and-release, not search-and-adopt**, and `ProTACT`'s **cross-prompt**
+property is the one worth hardening because transfer to an unseen prompt is what a client's next
+assignment needs on day one.
+
+🔴 **What moved instead of the code: the corpus.** The graded corpora do **not** share a licence — one
+**CC-BY-NC-SA-4.0** read from payload, one reported **CC BY**, and one 🔴 **stated differently by its
+distributor and its originator** (`Gap 389`). 🔵 **So the open term in an open-response engagement is
+now a DATA licence, and it is a procurement term.**
 
 ## T17 — 🆕 p98 The permissive grant sits on the side that MEASURES; copyleft sits on the side that becomes the RECORD
 
@@ -157,6 +219,48 @@ not deferred.** So the EMEA conversation is not "prepare for a 2027 deadline" �
 "there is a duty you are already subject to, and a 14-month window on the larger one". 🔵 **Two deadlines, two
 sales: literacy now, high-risk conformity by Dec 2027.** The first funds the second.
 
+
+
+### 🔴 🆕 p99 amendment to T4 — the procedure is CLOSED, the regulation has a number, and the near deadline is **53 days** out
+
+🟢 **Pass 98 left exactly one thing open here: whether the Council had formally adopted the
+postponement. It had.** The full chain, from a query aimed at the **procedure** rather than the date:
+
+| step | date |
+|---|---|
+| trilogue fails | 28 April 2026 |
+| provisional political agreement | **6 May 2026** (one source: 7 May) |
+| Member State representatives confirm in Council | 13 May 2026 |
+| European Parliament formally endorses | 🟢 **16 June 2026** |
+| 🟢 **Council formally adopts** | 🟢 **29 June 2026** |
+| published as 🟢 **Regulation (EU) 2026/1744**, Official Journal | 24 July 2026 |
+| 🟢 **in force** | 🟢 **27 July 2026** |
+
+🔴 **And this is where `T4`'s thesis earns its fourth confirmation.** The Omnibus moved the **far**
+deadline and **left the near one standing:**
+
+| limb | applies from | postponed? |
+|---|---|---|
+| prohibitions (🔴 **emotion recognition in education**) + AI literacy | **2 Feb 2025** | 🟢 **no** |
+| **Article 50 transparency** | **2 Aug 2026** | 🟢 **no** |
+| 🔴 **Article 50(2) machine-readable marking** — GenAI already on the market before 2 Aug 2026 | 🔴 **2 December 2026** | 🟢 **grace period only** |
+| **Annex III high-risk** — admissions screening, **remote exam proctoring**, assessment | **2 Dec 2027** | 🔴 **yes** |
+| Annex I embedded | 2 Aug 2028 | 🔴 yes |
+
+🔵 **So the limb that binds an EMEA education engagement FIRST is `2026-12-02`, fifty-three days from
+this pass — and it is not the date the market is discussing.** 🟢 **This base holds four tested
+artefacts for exactly that limb**: `compose/code/aiact-50-2-marking/`, `aiact-50-2-pack/`,
+`aiact-50-2-spans/`, `aiact-50-2-exposure/`.
+
+🔴 **The conflation `T4` has tracked since pass 94 is now worse, not better:** every source discussing
+"the delay" points at **Dec 2027**, which is correct and irrelevant to a vendor whose generative
+feature shipped before August 2026. 🔵 **The sales sentence is: the delay you read about does not
+cover the clause that binds you in eight weeks.**
+
+🟡 **Grade: search-summary, four or more independent sources agreeing on the dates and the regulation
+number.** 🔴 **`eur-lex.europa.eu` remains refused from this sandbox, so the Official Journal text was
+NOT read** — recorded as a refusal, per pass 98's own instruction not to re-confirm the date a fifth
+time in place of reading the instrument.
 
 ### 🟢 🆕 p94 amendment to T4 — the wrong date is a **conflation**, and that changes the sales motion
 

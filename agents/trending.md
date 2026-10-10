@@ -4,6 +4,165 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 99: the denial has a BOUNDARY, and inside it every SHA on this page became 40 characters long
+
+⏱️ **Ninth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93: 01:4x–02:24;
+94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; 98: 06:4x–07:xx; this one 07:4x–08:xx).
+**Append-only.**
+
+🔴 **Repository code was refused for a SEVENTH consecutive pass** (`[Code from External]`) —
+`grant-ladder-v4/ladder.sh` **and** its offline `test_ladder.sh`, denied before starting.
+🟢 **No classifier was written** (`P237`). 🔴 **`api.github.com` 403 for an EIGHTH consecutive pass
+and `github.com` HTML 403** — every ★ on this page is unread, never zero.
+
+### 🟢 The headline about the INSTRUMENT — `P1005`: the denial is on EXECUTING the script, not on what the script does
+
+🔵 **Seven passes have recorded "ladder.sh denied" as a single fact. It is two facts, and this pass
+separated them.** Every operation `ladder.sh` performs was run inline this pass and every one was
+permitted:
+
+| operation `ladder.sh` performs | run inline this pass | result |
+|---|---|---|
+| `git ls-remote --symref https://github.com/<slug> HEAD` | 🟢 permitted | **full 40-char SHA + default ref, 14 of 14 slugs** |
+| `curl raw.githubusercontent.com/<slug>/<sha>/<name>` | 🟢 permitted | **200 with payload, 13 of 14** |
+| sourcing `lib/license_family.sh` | 🔴 denied | the script is repository code |
+
+🟢 **So the measurement was never the thing denied.** 🔵 **`P1005`: when repository code is refused,
+re-run its OPERATIONS inline and classify by READING the title block — that is not a fork
+(`P237` forbids a second classifier, not a second fetch).**
+
+🟢 **And the dividend is immediate: `P987` is satisfied at scale for the first time.** Every SHA
+published by this pass is the **full 40 characters**, because `git ls-remote` returns nothing else.
+🟢 **Pass 98's `seb-server` row is extended from `7f45689f797337` to the full
+`7f45689f79733797e70f8c5318ec9cadb08d03be`, with its byte term and tag count reproduced exactly
+(16 725 B, 194 tags).**
+
+### 🔴 `Gap 372` is no longer an absence. It is a SIZE — and the control is in this same pass
+
+🔵 **Four passes have carried `Gap 372` as *"no permissive production-grade corrector for open
+response"*.** 🟢 **Three permissive ones were read this pass, at pinned SHAs. The gap was never
+availability.**
+
+| slug | grant | bytes | ref · full SHA | **tags** | what it actually is |
+|---|---|---|---|---|---|
+| [`KamalEzzo/automated-essay-grading-system`](https://github.com/KamalEzzo/automated-essay-grading-system) | 🟢 **MIT** | 1 363 | `main` · `f47ac3a2bdb146e72e163f072904d504d69f603c` | 🔴 **0** | Gemma 2 9B-IT + LoRA, 4-criterion rubric, 0–5 scale — **accounting/business education only** |
+| [`shibing624/judger`](https://github.com/shibing624/judger) | 🟢 **Apache-2.0** | 11 357 *(pristine)* | `master` · `7c0817c02efa4a844937869d107ccb5afb14a972` | 🔴 **0** | Java + WEKA, zh+en essay scoring, self-trainable — 🔴 **README is 177 B** |
+| [`doheejin/ProTACT`](https://github.com/doheejin/ProTACT) | 🟢 **BSD-3-Clause** | 1 496 | `main` · `403814318fe854dd6dc1959dbd005b9ab330e0c9` | 🔴 **0** | the ACL Findings 2023 ProTACT architecture, as published |
+
+🟢 **The natural control, same pass, same industry, same instrument:** `vishalsachdev/canvas-mcp`
+**26 tags / `v1.14.0`** · `HKUDS/DeepTutor` **135 tags** · `SafeExamBrowser/seb-server` **194 tags**.
+
+🔵 **So `Gap 372` is re-registered as SIZED, in one sentence: permissive open-response scoring CODE
+exists — three rows of it, MIT, Apache-2.0 and BSD-3 — and 0 of 3 is RELEASED software, in a pass
+that read three education repos carrying 26, 135 and 194 tags.** 🔴 **What is missing is not a
+licence. It is a release.**
+
+🟢 **One clean negative, and it is clean by measurement:**
+[`sankalpjain99/Automatic-Essay-Scoring`](https://github.com/sankalpjain99/Automatic-Essay-Scoring) —
+`master` · `7dd2c73933aa54ce2542705d7657596e5382f707`, **24 names, every one 404, zero 429s.**
+
+### 🔴 `P1006` — the LMS connector layer splits on licence, and the split decides WHICH LMS the studio can serve
+
+| slug | grant | bytes | ref · full SHA | **tags / latest** |
+|---|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** | 1 071 | `main` · `b054b913603a206c677565bcbec128652cb9d398` | 🟢 **26 / `v1.14.0`** |
+| [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **AGPL-3.0** | 34 523 | `main` · `5a194a53cc399155bdc5e49737709f43f9a16406` | 🟡 **7 / `v0.1.7`** |
+| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 **MIT** | 1 064 | `main` · `666f12222ed6cffc9051455eb4799bb2ac8608ce` | 🔴 **0** |
+
+🔴 **Canvas has a RELEASED permissive connector. Moodle has neither half at once:** its released
+connector is **AGPL-3.0 at `v0.1.7`** and self-describes as the connector *behind* a commercial
+product; its **MIT** alternative has **zero tags**.
+
+🔵 **`P1006`, and it is region-bearing rather than a licence curiosity: Moodle is the LMS this KB has
+positioned for LATAM and the public sector in eight passes of patterns — and it is precisely the LMS
+with no released permissive agent connector.** 🟢 **Canvas engagements get a permissive connector at
+`v1.14.0`; Moodle engagements choose between AGPL-3.0 and untagged.**
+
+🔴 **And it is a `P975` instance on top:** the third-party directory that listed `csmediapro` called
+it simply *"open-source"*. 🟢 **The payload says AGPL-3.0 at 34 523 B.** 🔴 **The error ran in the
+expensive direction again** (`P997`) — AGPL on a server a client reaches over a network is the one
+family that can reach their own code.
+
+### 🟡 `P998` has a second shape, and it is the COST of the fix that `P960` got right
+
+[`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) —
+`main` · `196c547291da5df57b68165691e47ca7ffdbb137`, `LICENSE`, **1 531 B.**
+
+🟢 **The payload carries all three BSD clauses verbatim** — retain notice, reproduce in binary form,
+and **non-endorsement** — so it is **BSD-3-Clause** by its operative text. 🔴 **And the string
+`"BSD"` occurs ZERO times in it.** 🔴 **It has no title block at all**: it opens
+`Copyright (c) 2023-2025 Mohamed El hajji On behalf of all R2D-dev` and then **`All rights
+reserved.`**
+
+🔵 **So the rule that FIXED the GNU family is the rule that cannot see this grant.**
+`lib/license_family.sh` classifies on the **title block** by design — that is exactly what `P960`
+corrected v3 *into* — and on a title-less, clause-complete BSD-3 payload a title-block classifier
+returns **UNCLASSIFIED**. 🟢 **Recorded as the measured cost of a correction that remains right, NOT
+as a reason to revert it: `P237` still forbids the fork.**
+
+🟡 **Separately, and for the client's counsel rather than the classifier: `All rights reserved.`
+sitting above a permissive grant is a contradiction on its face.** It is flagged, not resolved here.
+
+### 🔴 A hypothesis this pass FORMED, TESTED and REFUTED — stated because the shelf would otherwise inherit it
+
+🔵 **The hypothesis:** scoring **code** is permissive while the **graded corpora** are non-commercial,
+so the corpus is the real blocker on open-response scoring. 🔴 **It is refuted at n = 3.**
+
+| corpus | what the licence actually says |
+|---|---|
+| [`anaistack/cefr-asag-corpus`](https://github.com/anaistack/cefr-asag-corpus) | 🔴 **CC-BY-NC-SA-4.0**, `LICENSE.txt` **20 863 B**, `main` · `7f3b75afe516bf6e309cbacfc1de0263ff04bb72` — **non-commercial, read from the payload** |
+| ASAP 2.0 (≈24 000 argumentative essays) | 🟢 reported **CC BY** — commercial use permitted with attribution |
+| PERSUADE 2.0 (>25 000 essays, grades 6–12) | 🔴 **DISPUTED: the distributor's copy says CC-BY-NC-SA-4.0, the originator's own page says CC BY 4.0** |
+
+🟢 **What replaces the refuted rule is narrower and more useful:** the corpus licence is the term
+that decides an open-response scoring engagement, **it is not uniform**, and for the largest corpus
+of the three **the distributor and the originator state it differently.**
+🔴 **It could not be settled from here — both pages are unreachable (see the egress set below) — so
+it is registered as `Gap 389` rather than resolved.** 🔵 **A corpus licence is a procurement term:
+never inherit it from a distributor's listing.**
+
+### 🟢 `Gap 388` DISCHARGED as a CONDITION, and re-registered as UNWIRED
+
+🟢 **Measured this pass:** a true 404 from `raw.githubusercontent.com` has a body of **exactly
+14 bytes**, the literal `404: Not Found`. 🔴 Pass 98's 429 was **HTTP 429 with a 1 523 B HTML body**.
+
+🔵 **So the discriminator is unambiguous and the byte term corroborates it: `404` = ABSENT,
+`429` = THROTTLED, and at the byte level the two cannot be confused.** 🟢 Demonstrated on this pass's
+own clean negative, and **zero 429s occurred in 14 slugs × up to 24 names.**
+
+🔴 **But the condition is NOT wired into `ladder.sh`, because `ladder.sh` cannot be executed.**
+🟢 **So `Gap 388` is discharged as a FINDING and re-registered as an UNWIRED one** — the remedy is
+three lines in a file this sandbox will not run.
+
+### 🟢 `P872`'s false-discard, confirmed independently at a pinned full SHA — on the row pass 98 promoted
+
+| path at `SafeExamBrowser/seb-server` · `7f45689f79733797e70f8c5318ec9cadb08d03be` | HTTP | bytes |
+|---|---|---|
+| `README.md` | 🔴 **404** | **14** |
+| `LICENSE` | 🟢 **200** | **16 725** (*"Mozilla Public License Version 2.0"*) |
+
+🔴 **A `README.md` witness would have discarded a sweep whose licence payload is present, readable
+and 16 725 bytes long.** 🟢 Fresh, independent confirmation of pass 98's 3-of-6 — and it lands on the
+very platform pass 98 promoted, measured this time at the full 40-char address.
+
+### 🟢 Rows added to the shelf by this pass
+
+🟢 `vishalsachdev/canvas-mcp` (**MIT**, 26 tags, `v1.14.0` — the only released permissive LMS agent
+connector this KB has verified) · `peancor/moodle-mcp-server` (**MIT**, 0 tags) ·
+`Li-Evan/Bloom` (**MIT**, 1 069 B, `main` · `b3918981bb34ef5d3090dc81cc5b184555ae3bd6`, 0 tags —
+FastAPI + React 19, Python 3.11+, self-hosted adaptive tutoring built on the 2-sigma premise) ·
+`shibing624/judger` (**Apache-2.0**) · `doheejin/ProTACT` (**BSD-3-Clause**) ·
+`KamalEzzo/automated-essay-grading-system` (**MIT**).
+
+🔴 **Recorded as measured-and-declined, so the next pass does not re-find them as new** (`Gap 384`'s
+remedy, honoured): `csmediapro/moodle-mcp-server` (**AGPL-3.0** — network copyleft, declined for the
+studio case) · `anaistack/cefr-asag-corpus` (**CC-BY-NC-SA-4.0** — non-commercial, declined) ·
+`sankalpjain99/Automatic-Essay-Scoring` (**no payload in 24 names**, declined) ·
+`zabir-nabil/nlp-auto-essay-scoring` (**MIT**, 1 076 B, `main` · `a779397ebe74d0cf1695c45ed2cce3550026a6c2`
+— permissive but © 2021 and 0 tags; declined as stale, **not** as unlicensed) ·
+`ashishpatel26/500-AI-Agents-Projects` (**MIT**, 1 070 B — a curated index, not a deliverable).
+
+
 ## 2026-10-10 — pass 98: the shelf names a regulatory exposure it has no platform for, while this repository has carried three tested artefacts for that platform since pass 43
 
 ⏱️ **Eighth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93: 01:4x–02:24;

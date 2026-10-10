@@ -6,20 +6,55 @@ updated: 2026-10-10
 
 # Education — AI agents shelf
 
-**Pass 98, 2026-10-10.** ⏱️ **Eighth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x;
-93: 01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; this one 06:4x–07:xx).
+**Pass 99, 2026-10-10.** ⏱️ **Ninth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x;
+93: 01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; 98: 06:4x–07:xx; this one
+07:4x–08:xx).
 
-🔴 **The sandbox refuses to execute repository code for a SIXTH consecutive pass** — both
-`grant-ladder-v4/ladder.sh` and its **offline** `test_ladder.sh` were denied before starting
-(`[Code from External]`). 🟢 **So pass 98 wrote no classifier either** (`P237`) and ran the oracle map
-by hand (`P970`): **23 slugs resolved — 17 licence payload reads, 1 non-resolving negative, 1
-fork-identity read, 4 `NOTICE` probes.** Evidence in `compose/code/p996-promotion-ledger/`.
+🔴 **The sandbox refused repository code for a SEVENTH consecutive pass** — `grant-ladder-v4/ladder.sh`
+**and** its **offline** `test_ladder.sh`, denied before starting (`[Code from External]`).
+🟢 **So pass 99 wrote no classifier either** (`P237`).
 
-🔵 **Marker convention, because eight passes ran on one date.** A bare 🆕 is inherited from the pass
-that added the row and was **not** re-flagged; **rows added by this pass are marked 🆕 p98.**
+🟢 **But this pass separated a fact seven passes had fused** (`P1005`): the denial covers **executing
+the script**, not the operations the script performs. `git ls-remote --symref` and
+`raw.githubusercontent.com` were both **permitted**, so the ladder's measurement ran inline —
+**14 slugs resolved, 13 licence payload reads, 1 clean 24-name negative.**
+🔵 **The dividend is on this page: `git ls-remote` returns ONLY the full 40-character SHA, so every
+row added by this pass carries a `P987`-grade address** while carried rows keep the 7-char form
+their pass published.
+
+🔵 **Marker convention, because nine passes ran on one date.** A bare 🆕 is inherited from the pass
+that added the row and was **not** re-flagged; **rows added by this pass are marked 🆕 p99.**
 🔴 **A `—` in the ★ column means not read this pass. It never means zero** — `api.github.com`
-returned **403 for a seventh consecutive pass** and `github.com` HTML is 403 as well, so no star
+returned **403 for an eighth consecutive pass** and `github.com` HTML is 403 as well, so no star
 count on this page moved or could.
+
+### 🟢 What pass 99 adds, in one line each
+
+- 🔴 **`P1006`: the LMS connector layer splits on licence, and the split decides which LMS the studio
+  can serve permissively.** **Canvas** has a released permissive connector
+  (`vishalsachdev/canvas-mcp`, **MIT**, **26 tags, `v1.14.0`**). **Moodle has no repo that is both**:
+  its released connector is **AGPL-3.0 at `v0.1.7`** and self-describes as the connector *behind* a
+  commercial product; its **MIT** alternative has **0 tags**. 🔵 **And the sting is regional — Moodle
+  is the platform this KB has aimed at LATAM and the public sector for eight passes of patterns.**
+- 🔴 **`Gap 372` stops being an absence and becomes a SIZE.** Three permissive open-response scorers
+  were read at pinned SHAs — **MIT**, **Apache-2.0**, **BSD-3-Clause** — and 🔴 **0 of 3 has a single
+  release tag**, in a pass that read three education repos carrying **26, 135 and 194** tags.
+  🔵 **What is missing is not a licence. It is a release.**
+- 🟡 **`P998` has a second shape, and it is the COST of the fix `P960` got right.**
+  `Open-TutorAi/open-tutor-ai-CE` carries **all three BSD clauses verbatim**, 🔴 **zero occurrences of
+  `"BSD"`**, and **no title block** — it opens `All rights reserved.` 🔵 **A title-block classifier,
+  which is exactly what `P960` corrected this instrument into, returns UNCLASSIFIED on it.**
+- 🟢 **`Gap 388` discharged as a CONDITION**: a true 404 body is **exactly 14 B** (`404: Not Found`)
+  against pass 98's **1 523 B** HTML throttle. 🔴 **Unwired**, because the file that needs the three
+  lines cannot be executed.
+- 🟢 **`P872` false-discards again**, on the row pass 98 promoted: `seb-server`'s `README.md` witness
+  is **404 / 14 B** while its `LICENSE` is **200 / 16 725 B** at the same pinned SHA.
+- 🔴 **A hypothesis was formed, tested and REFUTED in-pass** — "scoring code is permissive, graded
+  corpora are not" — and what replaced it is narrower: the corpus licence is **not uniform**, and for
+  the largest corpus **the distributor and the originator state it differently** (`Gap 389`).
+- 🟢 **All five of pass 98's pre-registered leads were run**, India and the EU procedure among them;
+  the EU answer moved a **dated deadline inside 8 weeks** onto this KB's own tooling. See
+  `intel/trends.md` `T4` and `intel/market.md`.
 
 ### 🟢 What pass 98 adds, in one line each
 
@@ -285,12 +320,79 @@ reproducing a no-grant negative this KB already carried, with a different instru
 | 🆕 p93 [`dfdb76/bncc-mcp`](https://github.com/dfdb76/bncc-mcp) | **MIT** · `LICENSE` 1 218 B · `main` · `f94ca6a` | — | 🟡 **LATAM** (Brazil by subject matter — the payload's copyright line is a username, so the region is **not** `P800`-grade here and is labelled accordingly) | A **second, independent** MCP server over the BNCC skills, by a different author. 🔵 **n=2, so this is a shape rather than one project** — the same test pass 92 applied to MCP × SCORM. |
 | [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | **Apache-2.0** · 11 386 B · `main` · `1b7fbe0` | 31 | 🔵 unplaced | Agentic RAG tutor built on LangGraph — a readable reference for the orchestration layer rather than a product. |
 | [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | **MIT** · 1 094 B · `main` · `f88f69f` | 17 | 🔵 unplaced | Knowledge graph + local LLM + **Bayesian skill tracking**. One of very few rows carrying an explicit learner model rather than relying on prompt context. |
+| 🆕 p99 [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · `LICENSE` 1 071 B · `main` · `b054b913603a206c677565bcbec128652cb9d398` | — | 🟢 **North America** (© 2025 **Vishal Sachdev**, University of Illinois — and Canvas's install base is overwhelmingly US higher ed) | 🟢 **The only RELEASED permissive LMS agent connector this KB has verified: 26 tags, `v1.14.0`, README 44 176 B.** MCP server over the Canvas LMS API — courses, assignments, submissions, feedback — so an agent reaches the gradebook through a maintained tool surface instead of bespoke REST glue. 🔵 **This is the row that makes a Canvas engagement permissive end to end.** |
+| 🆕 p99 [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 **MIT** · `LICENSE` 1 064 B · `main` · `666f12222ed6cffc9051455eb4799bb2ac8608ce` | — | 🔵 unplaced (the payload's copyright line is a username — **not** `P800`-grade, labelled accordingly) | MCP server exposing Moodle courses, students, assignments and quizzes to an LLM, **including grades and feedback**, over Moodle Web Services. 🔴 **0 tags** — the permissive half of `P1006`'s split, and the unreleased half. 🟡 Use it as a fork base, not as a dependency. |
+| 🆕 p99 [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 **MIT** · `LICENSE` 1 069 B · `main` · `b3918981bb34ef5d3090dc81cc5b184555ae3bd6` | — | 🔵 unplaced (© 2026 **Li Zhengping**; no institutional holder in the payload) | Self-hosted adaptive tutor — **FastAPI + React 19, Python 3.11+** — that reads how a learner actually learns and targets the next lesson from it, built explicitly on the **2-sigma** premise that 1-on-1 tutoring moves a median learner to the top few per cent. 🟡 **0 tags**, so treat it as a current reference implementation of the learner-model loop rather than a dependency. |
+| 🆕 p99 [`shibing624/judger`](https://github.com/shibing624/judger) | 🟢 **Apache-2.0** · `LICENSE` 11 357 B *(pristine)* · `master` · `7c0817c02efa4a844937869d107ccb5afb14a972` | — | 🟡 **APAC** (by subject matter — it scores **Chinese** and English essays; the payload carries no holder line, so this is not `P800`-grade) | Java essay scorer with **self-trainable** scoring models and WEKA feature handling, zh + en. 🔴 **0 tags and a 177-byte README** — the most permissive grant in the scorer tier attached to the least documented repo in it. |
+| 🆕 p99 [`doheejin/ProTACT`](https://github.com/doheejin/ProTACT) | 🟢 **BSD-3-Clause** · `LICENSE` 1 496 B · `main` · `403814318fe854dd6dc1959dbd005b9ab330e0c9` | — | 🟡 **APAC** (© 2023 **Heejin Do**, POSTECH) | Reference implementation of **ProTACT** — prompt- and trait-relation-aware **cross-prompt** essay *trait* scoring (ACL Findings 2023). 🔵 **Cross-prompt is the property a studio actually needs**: a scorer that transfers to a prompt it was not trained on. 🔴 **0 tags — research artefact, not a release.** |
+| 🆕 p99 [`KamalEzzo/automated-essay-grading-system`](https://github.com/KamalEzzo/automated-essay-grading-system) | 🟢 **MIT** · `LICENSE` 1 363 B · `main` · `f47ac3a2bdb146e72e163f072904d504d69f603c` | — | 🔵 unplaced (© 2026 **Kamal Muhammad Kamal Abdul-Fattah**) | Fine-tuned **Gemma 2 9B-IT + LoRA** short-answer grader with a **4-criterion rubric** (clarity, terminology, coverage, accuracy) on a **0–5** scale, plus an ablation study and commercial-model benchmarks. 🔴 **Scoped to accounting / business education only, 0 tags** — valuable as a rubric-conditioning recipe, not as a general scorer. |
 
 🆕 🟢 **New shape, n=2 not n=1: MCP × SCORM.** Two independent MIT servers now put *content packaging* behind
 the Model Context Protocol — one authoring packages, one validating them. 🔵 **This matters more than either
 repo's star count.** Every education engagement eventually has to get content into a platform the client
 already runs; until this pass that was always build-it-yourself glue. Both are tiny and both are MIT, so they
 are cheap to fork and audit. See `P91-C`.
+
+### 🔴 🆕 p99 `P1006` — the LMS connector tier, and the licence split that decides which LMS the studio can serve
+
+🔵 **Six passes of patterns on this shelf assume an agent can reach the platform the client already
+runs.** 🟢 **This pass measured the three repos that actually do that, and they do not agree on
+licence.**
+
+| slug | grant (payload · bytes · ref · full SHA) | tags / latest | verdict for the studio |
+|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B · `main` · `b054b913603a206c677565bcbec128652cb9d398` | 🟢 **26 / `v1.14.0`** | 🟢 **Use it.** Permissive *and* released. |
+| [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **AGPL-3.0** · 34 523 B · `main` · `5a194a53cc399155bdc5e49737709f43f9a16406` | 🟡 **7 / `v0.1.7`** | 🔴 **Declined.** Network copyleft on a server the client reaches over a network. |
+| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 **MIT** · 1 064 B · `main` · `666f12222ed6cffc9051455eb4799bb2ac8608ce` | 🔴 **0** | 🟡 **Fork base only.** Permissive, unreleased. |
+
+🔴 **So the asymmetry is the finding, not any single row: Canvas has a connector that is permissive
+AND released; Moodle has one of each and neither is both.**
+
+🔵 **And this is region-bearing rather than a licence curiosity.** Moodle is the platform this KB has
+pointed at **LATAM** and the public sector across eight passes of patterns — because it is what
+ministries and public universities actually run — and it is precisely the platform whose agent
+connector forces a choice between **AGPL-3.0** and **untagged**. 🟢 **A Canvas engagement
+(overwhelmingly North America higher ed) inherits a permissive, released connector at `v1.14.0`;**
+🔴 **a Moodle engagement inherits a fork.**
+
+🔴 **`P975` on top of it:** the third-party directory that surfaced the AGPL server first described it
+only as *"open-source"*. 🟢 **The payload says AGPL-3.0 at 34 523 B.** 🔴 **And the error ran in the
+expensive direction** — the same direction as `P997`'s Apache-for-MPL slip two passes ago: a
+permissive-sounding label over the one family that can reach a client's own code.
+
+🟢 **What to do with the Moodle half, concretely:** `peancor/moodle-mcp-server` is **1 064 B of MIT
+over Moodle Web Services** and small enough to audit in an afternoon. 🔵 **Fork it, pin it, and treat
+the AGPL server as a specification to read rather than code to link** — which is lawful and is the
+same manoeuvre `sebserver-mcp-gate` already documents for MPL (`§1.10(a)`, per-file copyleft).
+
+### 🔴 🆕 p99 `Gap 372` — the scorer tier was never missing. It is UNRELEASED, and that is a different purchase
+
+🔵 **Four passes carried `Gap 372` as "no permissive production-grade corrector for open response".**
+🟢 **Three permissive ones were read this pass, at pinned full SHAs, and the tier rows are above.**
+
+| slug | grant | tags | what it is, and what it is not |
+|---|---|---|---|
+| `KamalEzzo/automated-essay-grading-system` | 🟢 **MIT** | 🔴 **0** | Gemma 2 9B-IT + LoRA, 4-criterion rubric, 0–5 — 🔴 **accounting only** |
+| `shibing624/judger` | 🟢 **Apache-2.0** | 🔴 **0** | Java/WEKA, zh + en, self-trainable — 🔴 **177-byte README** |
+| `doheejin/ProTACT` | 🟢 **BSD-3-Clause** | 🔴 **0** | **cross-prompt** trait scoring, ACL Findings 2023 — 🔴 **paper artefact** |
+
+🟢 **The control is in this same pass, same industry, same instrument:** `canvas-mcp` **26 tags /
+`v1.14.0`**, `HKUDS/DeepTutor` **135 tags**, `SafeExamBrowser/seb-server` **194 tags**.
+🔵 **So the tier is not licence-blocked. It is release-blocked** — and that changes what the studio
+sells: 🟢 **not "find a scorer" but "harden one of three permissive scorers to a release", with
+`ProTACT`'s cross-prompt property as the one worth hardening** because transfer to an unseen prompt
+is the property a client's new assignment needs on day one.
+
+🔴 **And the half a regulator asks for is still the half that exists** (`P94`'s scoring-validation
+tier): the permissive supply is strongest at **validating** a score and weakest at **producing** one.
+
+🔴 **The corpus, not the code, is now the open term.** The graded corpora this pass located do **not**
+share a licence — one **CC-BY-NC-SA-4.0** read from its payload
+([`anaistack/cefr-asag-corpus`](https://github.com/anaistack/cefr-asag-corpus), `LICENSE.txt`
+**20 863 B**, `main` · `7f3b75afe516bf6e309cbacfc1de0263ff04bb72`), one reported **CC BY**
+(ASAP 2.0), and one 🔴 **stated differently by its distributor and its originator** (PERSUADE 2.0 —
+`Gap 389`). 🔵 **Price the corpus licence as a procurement term, and never inherit it from a
+distributor's listing.**
 
 ### 🆕 The checker tier — and the gap this shelf declared for five passes is now **half closed**
 

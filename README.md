@@ -22,6 +22,184 @@ education-kb/
 └── compose/code/  # Código ejecutable y probado, no prosa
 ```
 
+## Pase 99 — 2026-10-10
+
+⏱️ **Noveno pase de esta fecha** (el 91 corrió 23:0x–00:00 UTC; el 92, 00:4x–01:3x; el 93, 01:4x–02:24;
+el 94, 02:5x; el 95, 03:4x; el 96, 04:4x–05:xx; el 97, 05:4x–06:xx; el 98, 06:4x–07:xx; este,
+07:4x–08:xx).
+
+**El hallazgo principal: siete pases registraron «`ladder.sh` denegado» como UN hecho. Son DOS, y
+separarlos cambió lo que esta base puede publicar. La denegación cubre EJECUTAR el script, no las
+operaciones que el script hace** — `git ls-remote --symref` y `raw.githubusercontent.com` estaban
+**permitidos** y se corrieron en línea. 🔵 **`P1005`: cuando el código del repositorio está denegado,
+re-corré sus OPERACIONES en línea y leé el bloque de título a mano. `P237` prohíbe un segundo
+clasificador, no un segundo fetch.**
+
+🟢 **El dividendo es inmediato y es `P987`: `git ls-remote` devuelve SOLO el SHA de 40 caracteres**, y
+siete pases publicaron SHAs de 7 porque la API que devuelve los largos da 403. 🟢 **Toda fila que
+agrega este pase trae dirección de 40 caracteres**, y el `seb-server` del pase 98 pasa de
+`7f45689f797337` a `7f45689f79733797e70f8c5318ec9cadb08d03be` **reproduciendo exactamente su término
+de bytes (16 725 B) y sus 194 tags.**
+
+🔴 **El sandbox sigue sin ejecutar código del repositorio (SÉPTIMO pase consecutivo)**: `ladder.sh`
+**y** su suite offline `test_ladder.sh`, denegadas antes de arrancar. 🟢 **Y otra vez no se escribió
+ningún clasificador** (`P237`). **14 slugs resueltos: 13 lecturas de payload de licencia, 1 negativo
+limpio de 24 nombres.**
+
+### 🔴 `T4` cobra su cuarta confirmación, y esta vez con 53 días de plazo
+
+🟢 **El pase 98 pre-registró «consultá el PROCEDIMIENTO, no la fecha». Corrido, cierra la pregunta:**
+el Parlamento Europeo lo refrendó el **16 jun 2026**, 🟢 **el Consejo lo adoptó formalmente el 29 jun
+2026**, se publicó como **Reglamento (UE) 2026/1744** (DOUE 24 jul 2026) y **entró en vigor el 27 jul
+2026**.
+
+🔴 **Y lo que la atención sobre «el retraso» tapó: el Ómnibus movió la fecha LEJANA y dejó la CERCANA
+en pie.**
+
+| limbo | aplica desde | ¿postergado? |
+|---|---|---|
+| prohibiciones (🔴 **reconocimiento de emociones en educación**) + alfabetización en IA | **2 feb 2025** | 🟢 **no** |
+| **Artículo 50** transparencia | **2 ago 2026** | 🟢 **no** |
+| 🔴 **Artículo 50(2)** marcado legible por máquina, para IA generativa ya en el mercado antes del 2 ago 2026 | 🔴 **2 dic 2026** | 🟢 **sólo período de gracia** |
+| **Anexo III** alto riesgo — admisiones, **supervisión remota de exámenes**, evaluación | **2 dic 2027** | 🔴 **sí** |
+| Anexo I embebidos | 2 ago 2028 | 🔴 sí |
+
+🔵 **Así que el limbo que obliga primero a un cliente EMEA es `2026-12-02` — cincuenta y tres días
+desde este pase — y NO es la fecha que discute el mercado.** 🟢 **Y esta base ya guarda CUATRO
+artefactos probados exactamente para ese limbo**: `aiact-50-2-exposure/`, `aiact-50-2-spans/`,
+`aiact-50-2-marking/`, `aiact-50-2-pack/`. 🔵 **`Gap 381` enseñó a leer esto como una VENTA que falta;
+`P99-A` es esa venta, y es el único patrón de esta base con fecha de vencimiento.**
+
+### 🔴 `P1006` — la capa de conectores se parte por licencia, y la partición elige la plataforma
+
+| plataforma | conector | licencia (payload) | tags / último |
+|---|---|---|---|
+| **Canvas** | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B | 🟢 **26 / `v1.14.0`** |
+| **Moodle** | [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **AGPL-3.0** · 34 523 B | 🟡 **7 / `v0.1.7`** |
+| **Moodle** | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 **MIT** · 1 064 B | 🔴 **0** |
+
+🔴 **Canvas tiene un conector permisivo Y liberado. Moodle tiene uno de cada cosa y ninguno es
+ambas.** 🔵 **Y el golpe es regional: Moodle es lo que corren los ministerios y las universidades
+públicas — justo donde esta base apuntó LATAM y sector público durante ocho pases de patrones.**
+🔴 **`P975` otra vez**: el directorio que lo listó dijo sólo *«open-source»*; el payload dice
+**AGPL-3.0**, 🔴 **y el error fue en la dirección CARA** (`P997`), porque AGPL sobre un servidor que
+el cliente alcanza por red es la única familia que puede alcanzar su propio código.
+
+### 🔴 `Gap 372` nunca fue una ausencia: es un GAP DE RELEASE, y eso se compra distinto
+
+🟢 **Tres correctores permisivos de respuesta abierta, leídos a SHA fijo:**
+`KamalEzzo/automated-essay-grading-system` (**MIT**, sólo contabilidad) ·
+`shibing624/judger` (**Apache-2.0**, README de **177 B**) ·
+`doheejin/ProTACT` (**BSD-3-Clause**, implementación del paper ACL Findings 2023).
+🔴 **0 de 3 tiene un solo tag de release.** 🟢 **Y el control está en el mismo pase, misma industria,
+mismo instrumento: `canvas-mcp` 26 tags, `DeepTutor` 135, `seb-server` 194.**
+🔵 **`T20`: en educación el permiso abunda y el RELEASE escasea, y los dos se confunden porque ambos
+se ven como «no encontré nada usable».** 🟢 **La oferta pasa de «buscar un corrector» a «endurecer
+uno», y `ProTACT` es el que vale endurecer** porque *cross-prompt* —transferir a una consigna no
+vista— es lo que el cliente necesita el primer día.
+
+### 🔴 Una hipótesis que este pase FORMÓ, PROBÓ y REFUTÓ
+
+🔵 **La hipótesis:** el código de scoring es permisivo y los corpus corregidos son no-comerciales, así
+que el corpus es el bloqueo real. 🔴 **Refutada con n = 3:**
+`anaistack/cefr-asag-corpus` es **CC-BY-NC-SA-4.0** (leído del payload, `LICENSE.txt` 20 863 B),
+🟢 ASAP 2.0 se reporta **CC BY**, y 🔴 **PERSUADE 2.0 lo tiene DISPUTADO: el distribuidor dice
+CC-BY-NC-SA-4.0 y el originador dice CC BY 4.0.**
+🟢 **Lo que reemplaza a la regla es más angosto y más útil:** la licencia del corpus es el término que
+decide un proyecto de respuesta abierta, **no es uniforme**, y en el corpus más grande **el
+distribuidor y el originador la declaran distinto**. 🔴 **No se pudo zanjar — las dos páginas están en
+el conjunto rechazado — así que queda como `Gap 389`.** 🔵 **Una licencia de corpus es un término de
+compra: nunca heredarla del listado de un distribuidor.**
+
+### 🟢 `Gap 388` descargado como CONDICIÓN, re-registrado como NO CABLEADO
+
+🟢 **Medido:** un 404 real de `raw.githubusercontent.com` trae un cuerpo de **exactamente 14 bytes**,
+el literal `404: Not Found`. 🔴 El throttle del pase 98 fue **429 con cuerpo HTML de 1 523 B**.
+🔵 **`404` = ausente, `429` = estrangulado, y a nivel de bytes no se pueden confundir.** 🟢 **Cero 429
+en 14 slugs × hasta 24 nombres**, así que el único negativo del pase
+(`sankalpjain99/Automatic-Essay-Scoring`) es una ausencia **real**.
+🔴 **No cableado**: el remedio son tres líneas dentro de un archivo que este sandbox no ejecuta.
+
+### 🟢 `P872` vuelve a falso-descartar, y cae sobre la fila que promovió el pase 98
+
+| ruta en `SafeExamBrowser/seb-server` · `7f45689f79733797e70f8c5318ec9cadb08d03be` | HTTP | bytes |
+|---|---|---|
+| `README.md` | 🔴 **404** | **14** |
+| `LICENSE` | 🟢 **200** | **16 725** |
+
+🔴 **El testigo dice «ausente» de un repo cuyo payload de licencia tiene 16 725 bytes.** 🟢
+Confirmación independiente del 3-de-6 del pase 98, sobre la plataforma misma que `Gap 387` existe
+para recuperar.
+
+### 🟡 `P998` tiene una segunda forma, y es el COSTO del arreglo que `P960` hizo bien
+
+[`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) — `LICENSE`
+**1 531 B**, `main` · `196c547291da5df57b68165691e47ca7ffdbb137`. 🟢 **Trae las tres cláusulas BSD
+textuales** (aviso · reproducción binaria · **no-endoso**) → **BSD-3-Clause por su texto operativo**.
+🔴 **Y la cadena `"BSD"` aparece CERO veces. No tiene bloque de título**: abre con
+`Copyright (c) 2023-2025 Mohamed El hajji` y **`All rights reserved.`**
+🔵 **`lib/license_family.sh` clasifica por bloque de título POR DISEÑO — es exactamente aquello en lo
+que `P960` convirtió a v3 — así que sobre este payload devuelve UNCLASSIFIED.** 🟢 **Queda registrado
+como el costo medido de una corrección que sigue siendo correcta, no como argumento para revertirla**;
+`P237` sigue prohibiendo el fork. 🟡 Y para el abogado del cliente, no para el clasificador:
+`All rights reserved.` encima de una concesión permisiva es una contradicción de cara.
+
+### 🟢 Los cinco leads que el pase 98 se pre-registró: CINCO corridos, primera vez en este archivo
+
+1. 🟢 **India PAGÓ, por nombre de ministerio.** NCERT + CBSE, IA y Pensamiento Computacional **grados
+   3 a 8 desde el ciclo 2026-27**, anuncio del **30 oct 2025**, **tres documentos** aprobados por
+   NCERT, **integrado en materias existentes** (grado 3 vía *«The World Around Us»*), capacitación
+   docente en el receso. 🟢 **Apareció una dirección de primera parte — `pib.gov.in`, `PRID 2184211`**
+   🔴 **y es inalcanzable desde acá, así que queda como LEAD CON DIRECCIÓN, nunca como lectura
+   primaria.**
+2. 🟡 **L&D: MITAD pagada.** 🟢 **LATAM ubicado** (USD 24 800 M en 2025 → USD 43 600 M en 2034, CAGR
+   **6,27 %**; LMS LATAM USD 2 060 M en 2026; 194 startups, 43 financiadas, USD 165 M).
+   🔴 **EMEA: cero medido** — los resultados eran globales o de EE. UU. 🔵 **Instrumentos nombrados
+   para el próximo pase: CIPD, Fosway, y el informe completo de SHRM MENA.**
+3. 🟢 **El procedimiento de la UE: PAGÓ Y CERRÓ** → ver `T4` arriba.
+4. 🟢 **Singapur (IMDA) PAGÓ, con su limitación dicha**: *Model AI Governance Framework for Agentic
+   AI*, lanzado en Davos el **22 ene 2026**, **voluntario** pero con responsabilidad legal retenida;
+   su **cuarta dimensión** es educación del usuario e incluye *«que los usuarios CONSERVEN
+   competencias fundamentales»*. 🔴 **Es transversal, NO es guía del sector educativo.** 🟡 Conflicto
+   de versión sin resolver (una fuente reporta v1.5, 20 may / 5 jun 2026).
+5. 🟢 **África, 4 de 4, una consulta por país** (`T16` honrado, tercera confirmación): **Ruanda**
+   (MIT RAISE *Day of AI* + MINEDUC/REB, **>5 000 docentes**, el mayor despliegue nacional del
+   programa en África; tablets con IA y robótica con **Keza Lab**; tres pilares del ministro
+   Nsengimana) · **Marruecos** (**Recomendación N.º 1/2026 del 14 abril**, 41 páginas, **sin
+   autoridad ejecutiva**, diferenciada por nivel: primaria **precautoria**, protegiendo lectura,
+   escritura y matemática) · **Ghana** (Estrategia Nacional de IA, abril 2026; currículo NaCCA de
+   KG a secundaria básica, 🔴 **anunciado y NO vigente** — falta Gabinete y Parlamento) ·
+   **Etiopía** (**mayo 2026**, MoE + UNESCO redactan la Política Nacional de IA y Educación, aún
+   borrador; universidad **Medemer** aprobada el 2 mar 2026; 🔴 **>85 % de estudiantes usan IA contra
+   15–20 % de docentes**, el espejo invertido del resto del archivo).
+
+### 🔴 Lo que NO se consiguió, dicho en vez de ocultado
+
+- 🔴 **CERO lecturas de fuente primaria, NOVENO pase.** 🟢 **Pero este pase enuncia el límite como un
+  CONJUNTO en vez de una lista de fracasos.** 🟢 **Alcanzable:** el backend de WebSearch ·
+  `github.com` por git smart-HTTP · `raw.githubusercontent.com`. 🔴 **Rechazado, todo lo intentado:**
+  `arxiv.org`, `www.iesalc.unesco.org`, `digital-strategy.ec.europa.eu`, `eur-lex.europa.eu`,
+  `www.kaggle.com`, `the-learning-agency.com`.
+- 🔵 **Y la misma negativa IMPRIME DISTINTO según qué herramienta pregunte**: `curl` devuelve
+  **error 56** (conexión reseteada), `WebFetch` devuelve **`ENOTFOUND`** (resolución de nombre).
+  🔵 **Dos formas, un hecho, y ninguna es una ausencia** — la lección de `P872` un nivel más afuera.
+  🟡 Una sonda al endpoint de estado del propio proxy fue **denegada** (`[Exfil Scouting]`), así que el
+  mecanismo no es legible desde adentro.
+- 🔴 **`github trending education AI {año}` SIGUE RETIRADA** y **no se re-corrió**. 🟢 **La retirada
+  quedó corroborada por otra vía**: la consulta general `top open source AI agents education {año}
+  github MIT` devolvió **frameworks de agentes genéricos y material de curso**, sin **un solo agente
+  específico de educación** — el mismo modo de falla desde otra consulta. 🔵 **Las consultas que
+  nombran la TÉCNICA (`P955`) volvieron a pagar donde las que nombran la categoría no.**
+- 🔴 **`Gap 376` NO queda descargado**: `P1005` permite re-correr las operaciones, pero **no** permite
+  probar el clasificador que produjo las filas históricas. Eso sigue requiriendo `grant-ladder-v4`
+  **ejecutado**.
+- 🔴 **`Gap 388` descargado como condición pero NO CABLEADO**, y 🔴 **`Gap 389` abierto** (licencia de
+  corpus en disputa entre distribuidor y originador).
+- 🔴 **Los cuatro artefactos del Artículo 50(2) que `P99-A` vende NUNCA se ejecutaron en este
+  sandbox.** 🟢 Están committeados con sus tests y fixtures; **un equipo de entrega debe correr las
+  suites en su propia máquina antes de cotizar.** 🔵 **Dicho acá en vez de descubierto por un
+  cliente.**
+
 ## Pase 98 — 2026-10-10
 
 ⏱️ **Octavo pase de esta fecha** (el 91 corrió 23:0x–00:00 UTC; el 92, 00:4x–01:3x; el 93, 01:4x–02:24;

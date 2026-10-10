@@ -5,6 +5,39 @@ updated: 2026-10-10
 ---
 
 # Education — compose patterns
+**Pass 99, 2026-10-10.** ⏱️ **Ninth pass of this date.** 🆕 **Three patterns added** (`P99-A` the
+Article 50(2) marking sprint, `P99-B` the permissive Canvas gradebook agent, `P99-C` the Moodle
+fork-and-pin connector), 🔴 **and `P99-A` is the only pattern on this page with an EXPIRY DATE.**
+
+🔴 **The constraint that reorders this whole page: the EU limb that binds first is
+`2026-12-02`, fifty-three days from this pass.** The Digital Omnibus (**Regulation (EU) 2026/1744**,
+Council adopted 29 June 2026, in force 27 July 2026) moved **Annex III to 2 Dec 2027** and 🔴 **left
+Article 50 transparency untouched**, so **Article 50(2) machine-readable marking** binds any
+generative feature that shipped before 2 Aug 2026. 🟢 **This base already holds four tested artefacts
+for it** (`compose/code/aiact-50-2-marking/`, `aiact-50-2-pack/`, `aiact-50-2-spans/`,
+`aiact-50-2-exposure/`). 🔵 **Every other pattern here can start next quarter. `P99-A` cannot.**
+
+🔴 **Second constraint, new this pass and it changes an integration estimate: the connector decides
+the platform** (`T19`/`P1006`). **Canvas** has an agent connector that is **MIT and released**
+(`vishalsachdev/canvas-mcp`, **26 tags**, `v1.14.0`); **Moodle** has an **AGPL-3.0** one at `v0.1.7`
+and an **MIT** one with **zero tags**. 🔵 **So a Moodle engagement carries a fork in its estimate and
+a Canvas engagement does not** — and that falls hardest on **LATAM** and public-sector work, which is
+exactly where this page has aimed Moodle for eight passes.
+
+🔴 **Third constraint, and it retires four passes of searching: `Gap 372` is a RELEASE gap, not a
+licence gap** (`T20`). Three permissive open-response scorers exist — **MIT**, **Apache-2.0**,
+**BSD-3-Clause** — and **none has a release tag**. 🟢 **So any pattern needing open-response scoring
+budgets HARDENING, not procurement**, and 🔴 **prices the graded corpus as a separate procurement
+term** because the corpora do not share a licence (`Gap 389`).
+
+🔴 **The standing constraint, unchanged and still binding in all four regions: a deliverable that
+REPLACES rather than augments a teacher fails** — Idaho SB 1227 by statute, Argentina's `PaideIA` by
+programme principle (*"la IA no reemplaza al docente"*), the EU by human-oversight duty, 🆕 **and now
+Morocco's Recommendation No. 1/2026, which asks primary education to protect reading, writing and
+mathematics explicitly.**
+
+#### Pass 98 — carried below, unchanged
+
 
 **Pass 98, 2026-10-10.** ⏱️ **Eighth pass of this date.** 🆕 **Three patterns added** (`P98-A` the exam lifecycle end to end, `P98-B` the corporate L&D skills engine, `P98-C` the deployer's compliance file), 🟢 **and `P98-A` is the first pattern on this page where EVERY step already has a tested gate committed in this repository.**
 
@@ -895,6 +928,113 @@ from the payload at a full 40-character SHA, and this KB has run its MCP gate fo
 has **no named client deployment recorded here.** 🟢 **And it is the one JVM row on this shelf whose
 default branch names a shippable version** (`pom.xml` `4.9` against tag `v4.9.152`), which inverts `P978`
 and means you can quote a version without a caveat — the only row here you can say that about.
+
+## `P99-A` — 🆕 The Article 50(2) marking sprint (EMEA; the only pattern on this page with an expiry date)
+
+🔴 **Buyer:** any EdTech vendor or university that shipped a generative feature **before 2 August
+2026** and sells into the EU. 🔴 **Deadline: 2 December 2026.** 🔵 **The pitch is one sentence: the
+delay you read about is Annex III and it does not cover the clause that binds you in eight weeks.**
+
+**What the obligation actually is.** Article 50 transparency was **not** postponed by the Omnibus; it
+has applied since **2 Aug 2026**. Article **50(2)** requires machine-readable marking of
+synthetic content, and systems already on the market got a grace period that ends **2 Dec 2026**.
+🟡 Grade: search-summary, four or more independent sources agreeing; 🔴 `eur-lex.europa.eu` is refused
+from this sandbox, so **the client's counsel reads the Official Journal text, not this page.**
+
+**Wiring, and every piece is already committed and tested here:**
+
+1. 🟢 **`compose/code/aiact-50-2-exposure/`** — run it first. It answers *which of the client's
+   surfaces emit synthetic content at all*, which is the question that sizes the engagement.
+2. 🟢 **`compose/code/aiact-50-2-spans/`** — locates the spans that need marking inside the emitted
+   artefacts.
+3. 🟢 **`compose/code/aiact-50-2-marking/`** — applies the marking; its fixtures already encode a
+   provenance policy (`fixtures-provenance-policy.md`).
+4. 🟢 **`compose/code/aiact-50-2-pack/`** — packs the result against `aiact-50-2.xsd`, so what leaves
+   the engagement is a **schema-validated** artefact rather than a report.
+5. 🟢 **Reach into the platform**: `vishalsachdev/canvas-mcp` (**MIT**, `v1.14.0`) for Canvas;
+   forked `peancor/moodle-mcp-server` (**MIT**) for Moodle — the agent needs to enumerate the
+   content surfaces, and these are the permissive ways to do it (`T19`).
+6. 🟢 **Evidence layer**: `T13`'s permissive evidence stack, because the deployer — the
+   **institution** — must produce its own file (`T18`, and `P98-C` is that pattern).
+
+**Shape:** 🟢 **4–6 weeks**, because steps 1–4 are already written and tested; the work is the
+client's content inventory, not the instrument. 🔵 **This is the cheapest credible first engagement in
+this entire KB, and it is the only one that gets cheaper by starting sooner.**
+
+🔴 **The honest caveat:** the four artefacts have **never been executed in this sandbox** — repository
+code has been refused for seven consecutive passes. 🟢 **They are committed with their own tests and
+fixtures; a delivery team must run the suites on its own machine before quoting.** 🔵 **Stated here
+rather than discovered by a client.**
+
+## `P99-B` — 🆕 The permissive Canvas gradebook agent (North America; permissive end to end, which no Moodle equivalent can claim)
+
+🔵 **Buyer:** US higher ed — Canvas's install base — where **Oklahoma** and **Maryland** now require
+**human oversight** and bar AI from **high-stakes decisions** about students, and **Ohio**'s
+district-policy mandate passed its **1 July 2026** deadline so every district holds a policy it must
+now evidence.
+
+**Why this one is clean.** 🟢 **`vishalsachdev/canvas-mcp` is the only LMS agent connector this KB has
+verified as both permissive and released** — **MIT**, `LICENSE` 1 071 B, `main` ·
+`b054b913603a206c677565bcbec128652cb9d398`, **26 tags**, `v1.14.0`, 40+ tools over the Canvas API.
+🔵 **So the gradebook is reachable through maintained permissive code and nothing in the stack needs a
+fork.**
+
+**Wiring:**
+
+1. 🟢 **Reach** — `vishalsachdev/canvas-mcp` (**MIT**): courses, assignments, submissions, feedback as
+   tool calls.
+2. 🟢 **Tutor loop** — `HKUDS/DeepTutor` (**Apache-2.0**, `LICENSE` 11 408 B, `main` ·
+   `6cf793bd868ba5ecbe64722936d4be8fab5a01df`, **135 tags** — a genuine release line), or
+   `Li-Evan/Bloom` (**MIT**, `main` · `b3918981bb34ef5d3090dc81cc5b184555ae3bd6`) as a smaller
+   reference implementation of the learner-model loop. 🟡 Bloom has **0 tags**: read it, do not
+   depend on it.
+3. 🟢 **Never let the agent decide** — the scoring-**validation** tier (`P94`), not a scorer. 🔵 **This
+   is the half the statutes ask for and the half where permissive supply is strongest**: the agent
+   proposes, a validator records, a human decides, and the record is the deliverable.
+4. 🟢 **Durable retention mechanics** — `ankimcp/anki-mcp-server` (**MIT**) rather than reimplementing
+   spaced repetition.
+5. 🟢 **Evidence** — the district/institution policy-compliance recorder (`P91-B`), which is what the
+   Ohio mandate converted from a drafting job into an evidence job.
+
+**Shape:** 🟢 **6–8 weeks** to a production pilot in one department. 🔴 **Do not scale it to a K-8
+audience**: New York City's moratorium on student-facing AI **through eighth grade** is the live
+counter-example and districts are being urged to copy it.
+
+## `P99-C` — 🆕 The Moodle fork-and-pin connector (LATAM and public sector; the pattern that must say "fork" out loud)
+
+🔴 **Buyer:** LATAM ministries and public universities — the **87 % adopting / 26 % governed** gap
+UNESCO IESALC measured across **200 institutions in 19 countries** — plus Brazilian and Colombian
+public-sector work where **Moodle is what is actually installed.**
+
+🔴 **The problem this pattern exists to state honestly.** Moodle has **no** agent connector that is
+both permissive and released:
+
+| option | grant | tags | usable? |
+|---|---|---|---|
+| `csmediapro/moodle-mcp-server` | 🔴 **AGPL-3.0** (34 523 B) | 7 / `v0.1.7` | 🔴 **no** — network copyleft on a networked server |
+| `peancor/moodle-mcp-server` | 🟢 **MIT** (1 064 B) | 🔴 **0** | 🟡 **as a fork** |
+
+**Wiring:**
+
+1. 🟢 **Fork and pin** `peancor/moodle-mcp-server` at `main` ·
+   `666f12222ed6cffc9051455eb4799bb2ac8608ce`. 🔵 **It is 1 064 bytes of MIT over Moodle Web
+   Services** — courses, students, assignments, quizzes, grades and feedback — **small enough to audit
+   in an afternoon**, which is the entire reason this is viable.
+2. 🟡 **Read `csmediapro/moodle-mcp-server` as a SPECIFICATION, do not link it.** 🟢 Lawful, and the
+   same manoeuvre `sebserver-mcp-gate` documents for MPL (`§1.10(a)`). 🔴 **Write the boundary into
+   the SOW** so nobody later "just imports" the AGPL server.
+3. 🟢 **Offline-first delivery** — `P91-D`, unchanged: LATAM and APAC connectivity makes local
+   inference a requirement, not a preference.
+4. 🟢 **Governance, because that is what the 87/26 gap actually buys** — the deployer's compliance
+   file (`P98-C`), in Spanish and Portuguese. 🔵 **UNESCO names the adoption drivers as staff training
+   and internal advocates: both are engagements.**
+5. 🟡 **Regulatory timing is a selling point here, not a blocker**: Brazil's **PL 2.338/2023** is
+   still in the Chamber of Deputies and **its text can change**, Chile's bill is in its first
+   constitutional stage, and Colombia's **CONPES 4144** already has budget **through 2030**.
+   🔵 **Colombia is the one with money attached — start there.**
+
+**Shape:** 🟢 **8–10 weeks**, and 🔴 **the estimate must name the fork as a maintained artefact with an
+owner.** 🔵 **A fork nobody owns is how an AGPL server quietly gets imported eighteen months later.**
 
 ## `P98-A` — 🆕 The exam lifecycle end to end: schedule → supervise → grade (EMEA and APAC first; every piece already has a tested gate in this repository)
 

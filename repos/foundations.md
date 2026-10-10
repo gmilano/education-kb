@@ -6,6 +6,90 @@ updated: 2026-10-10
 
 # Education — foundational repos
 
+**Pass 99, 2026-10-10.** ⏱️ **Ninth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:
+00:4x–01:3x; 93: 01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; 98:
+06:4x–07:xx; this one 07:4x–08:xx). 🔴 **Repository code was refused for a SEVENTH consecutive
+pass** — `grant-ladder-v4/ladder.sh` **and** its offline `test_ladder.sh`, denied before starting
+(`[Code from External]`). 🟢 **No classifier was written** (`P237`). **14 slugs resolved: 13 licence
+payload reads, 1 clean 24-name negative.**
+
+🔴 **`api.github.com` 403 for an EIGHTH consecutive pass, and `github.com` HTML is 403 too.** A `—` is
+unread, never zero.
+
+### 🟢 The structural finding of this pass is about the INSTRUMENT, so it goes at the top — `P1005`
+
+🔵 **Seven passes recorded "`ladder.sh` denied" as one fact. It is two, and separating them changed
+what this page can publish.** Every operation the ladder performs was run inline and permitted:
+
+| operation | permitted? | yield |
+|---|---|---|
+| `git ls-remote --symref https://github.com/<slug> HEAD` | 🟢 **yes** | default ref + **full 40-char SHA**, 14 of 14 |
+| `curl raw.githubusercontent.com/<slug>/<sha>/<name>` | 🟢 **yes** | 200 + payload, 13 of 14 |
+| sourcing `lib/license_family.sh` | 🔴 **no** | it is repository code |
+
+🟢 **So the measurement was never what was denied, and the consequence lands on this page's
+addresses.** Seven passes published 7-character SHAs because the API that returns long ones is 403;
+`git ls-remote` returns **only** the full 40 and was never blocked.
+🔵 **`P1005`: when repository code is refused, re-run its OPERATIONS inline and read the title block
+yourself — `P237` forbids a second classifier, not a second fetch.**
+🔴 **What `P1005` does NOT buy: `Gap 376` still needs `grant-ladder-v4` executed**, because an
+inline re-run cannot test the classifier that produced the historical rows.
+
+### 🟢 `Gap 388` — discharged as a CONDITION, re-registered as UNWIRED
+
+🟢 **Measured:** a true 404 from `raw.githubusercontent.com` carries a body of **exactly 14 bytes**,
+the literal `404: Not Found`. 🔴 Pass 98's throttle was **429 with a 1 523 B HTML body**.
+🔵 **`404` = ABSENT, `429` = THROTTLED, and at the byte level the two cannot be confused.**
+🟢 **Zero 429s this pass across 14 slugs × up to 24 names**, and the pass's one negative
+([`sankalpjain99/Automatic-Essay-Scoring`](https://github.com/sankalpjain99/Automatic-Essay-Scoring),
+`master` · `7dd2c73933aa54ce2542705d7657596e5382f707`) is therefore a **real** absence.
+🔴 **Unwired**: the remedy is three lines inside a file this sandbox will not execute.
+
+### 🟢 The row this page LOST, now at a full address — `Gap 387`'s repair holds
+
+🟢 [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) — **MPL-2.0**,
+`LICENSE` **16 725 B**, `master` · **`7f45689f79733797e70f8c5318ec9cadb08d03be`**, **194 tags**.
+🔵 **Byte term and tag count reproduce pass 98 exactly; only the address got longer.** 🟢 Third
+independent agreement on MPL (passes 44, 98, 99) after two of its own `README`s said Apache-2.0
+(`P997`). 🟡 **MPL is copyleft per FILE** (`§1.10(a)`), so a proprietary layer around it is lawful —
+the branch `sebserver-mcp-gate` already documents.
+
+🔴 **And `P872` false-discards on this very row**, measured at that pinned SHA: `README.md` →
+**404 / 14 B**, while `LICENSE` → **200 / 16 725 B**. 🟢 A sweep gated on a `README.md` witness would
+have thrown away the platform `Gap 387` exists to recover.
+
+### 🔴 🆕 p99 Tier 2g — the LMS connector layer, and the licence split that decides which LMS is serviceable
+
+🔵 **Every pattern on the compose page assumes an agent can reach the platform the client already
+runs.** 🟢 **The three repos that do that were read this pass, and they disagree on licence.**
+
+| slug | grant (payload · bytes · ref · full SHA) | tags / latest | verdict |
+|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B · `main` · `b054b913603a206c677565bcbec128652cb9d398` | 🟢 **26 / `v1.14.0`** | 🟢 **Foundational.** Permissive **and** released; 40+ tools over the Canvas API. |
+| [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **AGPL-3.0** · 34 523 B · `main` · `5a194a53cc399155bdc5e49737709f43f9a16406` | 🟡 **7 / `v0.1.7`** | 🔴 **Declined** — network copyleft on a networked server. Read as a spec, do not link. |
+| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 **MIT** · 1 064 B · `main` · `666f12222ed6cffc9051455eb4799bb2ac8608ce` | 🔴 **0** | 🟡 **Fork base** — 1 064 B of MIT over Moodle Web Services, auditable in an afternoon. |
+
+🔴 **The asymmetry is the finding: Canvas has a connector that is permissive AND released; Moodle has
+one of each and neither is both.** 🔵 **And it is region-bearing — Moodle is what ministries and
+public universities run, which is exactly where this KB has aimed LATAM and public-sector work.**
+🔴 **`P975` again**: a third-party directory called the AGPL server simply *"open-source"*; the
+payload says **AGPL-3.0**, and the slip ran in the expensive direction (`P997`).
+
+### 🟡 🆕 p99 `P998`'s second shape — a clause-complete BSD-3 that a title-block classifier cannot see
+
+[`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) — `main` ·
+`196c547291da5df57b68165691e47ca7ffdbb137`, `LICENSE` **1 531 B**. 🟢 All three BSD clauses verbatim
+(notice · binary reproduction · **non-endorsement**) → **BSD-3-Clause by its operative text**.
+🔴 **Zero occurrences of `"BSD"`. No title block at all** — it opens
+`Copyright (c) 2023-2025 Mohamed El hajji On behalf of all R2D-dev` then **`All rights reserved.`**
+🔵 **`lib/license_family.sh` classifies on the title block BY DESIGN — that is precisely what `P960`
+corrected v3 into — so on this payload it returns UNCLASSIFIED.** 🟢 **Recorded as the measured cost
+of a correction that remains right, not as an argument to revert it;** `P237` still forbids the fork.
+🟡 And for a client's counsel rather than the classifier: `All rights reserved.` above a permissive
+grant is a contradiction on its face. Flagged, not resolved.
+
+#### Pass 97 — carried below, unchanged
+
 **Pass 97, 2026-10-10.** ⏱️ **Seventh pass of this date** (91: 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93:
 01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; this one 05:4x–06:xx). 🔴 **Repository code was
 refused for a FIFTH consecutive pass** — `grant-ladder-v4/ladder.sh` **and** its offline
