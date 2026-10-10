@@ -6,6 +6,169 @@ updated: 2026-10-10
 
 # Education — compose patterns
 
+**Pass 113, 2026-10-10.** ⏱️ **Twenty-third pass of this date.**
+
+🟢 **Every repository named below was read live this pass by `bind.sh` (`rc=0`, 296 of 296
+addresses, zero unread, zero stray lines, zero capped rows) and now carries THREE verdicts:
+its p111 verification verdict, its p112 closure verdict and its p113 binding verdict.
+`compose/code/p113-provider-binding/`, `test_p113.sh` 121 passed / 0 failed, fully
+offline.**
+
+🔴 **What changed for these patterns: a pattern built on a row that is `pinned` and
+`checked` but `hosted-only` ships a client a reproducible, tested dependency on one
+vendor's endpoint. Three of the patterns on this page did exactly that before this pass.
+The binding column below is the fix.**
+
+## 🟢 The parts list — the 17 rows that pass all three axes
+
+🔵 **`pinned` (p112) AND `checked` (p111) AND pointable at a model the client controls
+(p113). This is the only list on this page where every row is simultaneously reproducible,
+testable and portable, and every figure in it was derived this pass.**
+
+| row | binding | declares | licence |
+|---|---|---|---|
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🟢 `local` | `transformers` | 🟡 AGPL-3 |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🟢 `local` | `transformers` | 🟡 GPL-3 |
+| [`ollama/ollama`](https://github.com/ollama/ollama) | 🟢 `local` | `ollama` | 🟢 **MIT** |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | 🟢 `local` | `ollama` + `pydantic-ai` | 🟢 **Apache-2.0** |
+| [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | 🟢 `local` | `ollama`, `sentence-transformers` | 🟢 **Apache-2.0** |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 🟢 `local` | `ollama`, `whisper` | 🟢 **MIT** |
+| [`OtterDen-Lab/Autograder`](https://github.com/OtterDen-Lab/Autograder) | 🟢 `local` | `ollama` | 🟢 **MIT** |
+| [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 🟢 `local` | `sentence-transformers` + `OPENAI_API_BASE` | 🟢 **MIT** |
+| [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | 🟢 `broker` | `langchain` | 🟢 **MIT** |
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🟢 `broker` | `langchain` | 🟢 **BSD-3** |
+| [`fwu-de/ais-chat`](https://github.com/fwu-de/ais-chat) | 🟢 `broker` | `langchain` + `base_url` | 🟢 **MIT** |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 `broker` | `langchain` + `base_url` | 🟢 **Apache-2.0** |
+| [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 🟢 `broker` | `langchain` | 🟢 **MIT** |
+| [`nextcloud/llm2`](https://github.com/nextcloud/llm2) | 🟢 `broker` | `langchain` | 🟡 AGPL-3 |
+| [`aiverify-foundation/moonshot-cicd`](https://github.com/aiverify-foundation/moonshot-cicd) | 🟢 `broker` | `langchain` | 🟢 **Apache-2.0** |
+| [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | 🟡 `broker` ※ | `langchain`, `openrouter` | 🟢 **Apache-2.0** |
+| [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | 🟡 `broker` ※ | `openrouter` | 🟢 **MIT** |
+
+🔵 **※ `P113-H` — substitutability from an AGGREGATOR. OpenRouter makes the model swappable
+by configuration and is still somebody else's endpoint: use these two where swappability is
+the requirement and NOT where egress is.**
+
+## 🟢 `PB1` — the sovereign tutor: LMS + local model + a portable evaluator (EMEA, 8–10 wk)
+
+🔵 **The pattern `T44` makes sellable: an education stack that runs entirely inside the
+client's estate, with every component derived as `local` or `broker` this pass.**
+
+```
+            ┌──────────────── client estate, no egress ─────────────────┐
+            │                                                           │
+  learners ─┤  openedx/edx-platform  (AGPL-3, local, pinned, checked)    │
+            │          │ LTI 1.3 / xAPI                                  │
+            │          ▼                                                 │
+            │  fwu-de/ais-chat  (MIT, broker: langchain + base_url)       │
+            │          │ OpenAI-compatible HTTP                          │
+            │          ▼                                                 │
+            │  ollama/ollama  (MIT, local, pinned)  ── GGUF weights       │
+            │          ▲                                                 │
+            │  MysterionRise/adaptive-knowledge-graph                     │
+            │     (Apache-2.0, local: ollama + sentence-transformers)      │
+            │          │ learner model: IRT + BKT                        │
+            │          ▼                                                 │
+            │  learning-commons-org/evaluators  (MIT, broker: langchain)  │
+            └───────────────────────────────────────────────────────────┘
+```
+
+**Wiring, concretely.** `ais-chat` is `broker` because it declares `langchain` AND a
+`base_url`, so its model endpoint is configuration: point it at `http://ollama:11434/v1`
+and no code changes. `adaptive-knowledge-graph` declares `sentence-transformers`, so its
+embeddings are computed locally — no embedding API call leaves the estate, which is the
+leak most "self-hosted" education stacks still have. `evaluators` is `langchain`, so the
+grading model is swapped by config too. **Every provider in this pattern is replaceable at
+deploy time; none is a code dependency.**
+
+🔴 **The one thing to do at fork time: `openedx/edx-platform` is `pinned` and `ILIAS` is
+`pinned`, but check `ollama/ollama`'s own closure before vendoring — p112 reads it
+`pinned`, which is why it is in this pattern rather than `huggingface/smolagents`
+(`floating`).** 🟡 **AGPL-3 on edx-platform: the platform itself is a deployment, not a
+derivative, but anything linked INTO it inherits — `T34`'s mount rule applies here too.**
+
+## 🟢 `PB2` — model-portability retrofit for a locked row (any region, 2–3 wk)
+
+🔴 **The pattern that exists because of `P113-C`: nine shelf rows are reproducible, tested
+AND locked to one vendor. The client already wants the repository; the binding is the
+blocker.**
+
+```
+  BEFORE                                 AFTER
+  oppia/oppia (hosted-only: google)      oppia/oppia
+     └─ google SDK call sites      ──▶      └─ litellm (MIT) shim
+                                               ├─ ollama      (local path)
+                                               ├─ gateway     (OpenAI-compatible)
+                                               └─ google      (unchanged fallback)
+```
+
+**Why litellm and not langchain here:** the task is substitution at the call site, not an
+agent framework. `litellm` is the abstraction that `huggingface/smolagents` itself declares
+(p113 reads smolagents `local` with `litellm` in its broker column), which makes it the
+choice with a precedent on this very shelf rather than a preference.
+
+**The nine candidates, with the retrofit's size set by the hosted column:**
+`oppia/oppia` (`google`), `PrairieLearn/PrairieLearn` (`anthropic` + `openai` — two call
+paths, so the largest of the nine), `canyongbs/advisingapp` (`openai`),
+`ankimcp/anki-mcp-server` (`anthropic`), `Miaotofu01/Study-Mate` (`deepseek` + `openai`),
+`tomaszboloz/WCAG-Accessibility-Skills` (`gemini`), `opetushallitus/ehoks` (`bedrock`),
+`OpenOLAT/OpenOLAT` (`anthropic`), `nextcloud/integration_openai` (`openai`).
+
+🟢 **`ehoks` is the one to lead with. It is EUPL — reciprocal — so the shim MUST flow back
+upstream, which turns a retrofit into a public contribution to Finnish national
+infrastructure. That is a reference, not just a ticket (`T44`).**
+
+🔴 **`aiverify-foundation/moonshot` and `moonshot-ui` are NOT on this list although the
+instrument flagged them `hosted-only`: the token is their own name, and `.env.local` points
+at `http://0.0.0.0:5000`, their own backend. Adjudicated by hand under `P113-R` — building
+`PB2` for them would be building against a measurement artefact.**
+
+## 🟢 `PB3` — the LMS→model seam, mounted BESIDE the platform (any region, 6–8 wk)
+
+🔵 **`T46` + `T34` + `T30` make this the firmest commercial pattern in this base, and p113
+supplies the last missing fact.**
+
+```
+  moodle/moodle (GPL-3, no-model, 64 declarations read, NONE naming a model)
+      │  web services / OAuth2
+      ▼
+  ── boundary: everything below keeps YOUR licence ──
+  csmediapro/moodle-mcp-server   (local: ollama, pinned, checked)
+      │  MCP
+      ▼
+  your agent  ──▶  ollama/ollama (MIT, local)   or   litellm ──▶ gateway
+```
+
+**The decision this pattern exists to force.** Code mounted INSIDE Moodle is GPL-3 and
+greenfield; mounted BESIDE it over web services + MCP, it keeps the licence you choose.
+`T34` found **zero** packages published against Moodle's own `moodle-aiprovider` /
+`moodle-aiplacement` extension points, and `T46` now adds that the platform declares no
+model binding to inherit either — so there is nothing upstream pulling the decision either
+way. **It is a pure commercial choice made once, at the start, and not revisitable.**
+
+🟢 **`csmediapro/moodle-mcp-server` is the proof the beside-mount works and is portable:
+`local` (`ollama`), `pinned`, `checked` — reproducible, tested and egress-free, sitting
+outside a GPL-3 platform.**
+
+## 🔴 What this pass retired from the patterns on this page
+
+🔴 **Any pattern on this page whose leading component reads `hosted-only` on p113 is now
+marked, because a pattern that is reproducible and locked sells the client a tested
+dependency on one vendor.** 🟢 **The three leading components to stop using as the model
+tier in a sovereignty pitch: `oppia/oppia` (`google`), `PrairieLearn/PrairieLearn`
+(`anthropic` + `openai`), `canyongbs/advisingapp` (`openai`). All three remain excellent on
+every earlier axis and all three need `PB2` first.**
+
+🟡 **And the direction of the error, so none of this is read too strongly: p113 reads
+DECLARATIONS, not program text, so `local` and `broker` are LOWER bounds and `hosted-only`
+is an UPPER bound (`P113-I`). A row in `PB2`'s list may already have a portability path in
+code that it does not declare — the retrofit estimate should begin by checking, and that
+check is a day.**
+
+---
+
+# Education — compose patterns
+
 **Pass 112, 2026-10-10.** ⏱️ **Twenty-second pass of this date.**
 
 🟢 **Every repository named below was read live this pass by `depclosure.sh` (`rc=0`, 296

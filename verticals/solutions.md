@@ -6,6 +6,94 @@ updated: 2026-10-10
 
 # Education — vertical platforms and solutions
 
+**Pass 113, 2026-10-10.** ⏱️ **Twenty-third pass of this date.**
+
+🟢 **`bind.sh` read **296 of 296** addresses, zero unread, zero stray lines, zero capped
+rows (`compose/code/p113-provider-binding/`, `test_p113.sh` 121 passed / 0 failed, fully
+offline), with a no-body control run over the same 296.**
+
+### 🔴 🆕 `T46` — every large platform on this page declares NO model, and that is the whole opportunity
+
+🟢 **The five biggest were read in FULL this pass, uncapped, after the instrument's own cap
+was caught truncating them twice (`P113-D`):**
+
+| platform | declarations read | verdict |
+|---|---|---|
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🟢 **551** | 🔴 `no-model` |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **498** | 🔴 `no-model` |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 **64** | 🔴 `no-model` |
+| [`kuali/rice`](https://github.com/kuali/rice) | 🟢 full | 🔴 `no-model` |
+| [`leemonade/leemons`](https://github.com/leemonade/leemons) | 🟢 full | 🔴 `no-model` |
+
+🔴 **Not one names a model in a manifest, an environment template, a compose file or a
+Modelfile.** 🟢 **Of the 94 platform addresses on this page, **79 are `no-model`** and only
+15 bind a model at all.**
+
+🔵 **`T46` is `T34` from a third direction, and the three together are the firmest
+commercial reading in this base:**
+
+| finding | pass | what it says |
+|---|---|---|
+| `T30` / `P1033` | p1040 | the copyleft frontier IS the plugin tree — 143 of 143 Moodle packages declare GPL-3 |
+| `T34` | p1040 | Moodle DEFINED `moodle-aiprovider` and `moodle-aiplacement` and 🔴 **zero packages are published against either** |
+| 🟢 **`T46`** | 🟢 **p113** | 🔴 **and the platforms themselves carry no model binding to inherit** |
+
+🟢 **So the model layer of an LMS engagement is greenfield in all three senses at once —
+nothing published against the extension point, nothing declared in the platform, nothing
+to inherit — and `T34`'s rule decides the licence: built INSIDE Moodle it is GPL-3; built
+BESIDE it, it keeps the licence you choose. Where it is mounted is the commercial decision
+and it is not negotiable afterwards.**
+
+### 🟢 The 15 platform rows that DO bind a model, and what each one binds
+
+| platform | binding | declares |
+|---|---|---|
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🟢 `local` | `transformers` |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🟢 `local` | `transformers` |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🟢 `local` | `transformers` |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 `local` | `ollama`, `sentence-transformers`, `transformers`, `whisper` + `OPENAI_API_BASE` |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | 🟢 `local` | `ollama` (+ `pydantic-ai` broker) |
+| [`nextcloud/context_chat_backend`](https://github.com/nextcloud/context_chat_backend) | 🟢 `local` | `ctransformers`, `llama.cpp`, `sentence-transformers`, `transformers` |
+| [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🟢 `local` | `ollama` |
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 `local` | `whisper` + `openai-compatible` endpoint |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 `broker` | `langchain` + `base_url` |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 🟡 `override` | `base_url` over `anthropic`/`gemini`/`openai` |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🔴 `hosted-only` | `anthropic` |
+| [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | 🔴 `hosted-only` | `anthropic`, `openai` |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🔴 `hosted-only` | `google` |
+| [`nextcloud/integration_openai`](https://github.com/nextcloud/integration_openai) | 🔴 `hosted-only` | `openai` — 🟢 **and here the name IS the binding (`P113-R`)** |
+| [`opetushallitus/ehoks`](https://github.com/opetushallitus/ehoks) | 🔴 `hosted-only` | 🔴 **`bedrock` — a national public service on a US endpoint (`T44`)** |
+
+🟢 **The platform tier a data-residency engagement should start from is the top eight: all
+`local` or `broker`, all able to run against a model inside the client's estate.**
+🔴 **`ls1intum/Artemis` is the sharpest of them — a university LMS that declares a local
+Whisper AND an `openai-compatible` endpoint, which is the exact shape a sovereign
+deployment wants: local for the cheap high-volume path, a gateway for the rest.**
+
+### 🟡 Where this page's own prose was ahead of its evidence, and where it was behind
+
+🟢 **Ahead: `learningequality/kolibri` has been carried on this page as the offline-first
+base for intermittent-connectivity markets (`T16`). p113 reads it `no-model` on a 59-file
+read — correctly, because Kolibri ships content and a learning platform, not inference.**
+🔵 **The offline claim in `T16` was never a claim about a model, and the new axis does not
+weaken it: the model goes BESIDE Kolibri, and the `local` tier above is where it comes
+from.**
+
+🔴 **Behind: every "self-hostable" written on this page before this pass was prose. Now 94
+platform addresses carry a derived verdict, and the eight that genuinely need no egress are
+named. That list is shorter than this page's prose implied.**
+
+### 🔵 The error direction
+
+🔴 **Declarations only, never program text, so `local`/`broker` are LOWER bounds and
+`hosted-only` is an UPPER bound (`P113-I`).** 🟢 **For a platform the bound is tighter than
+elsewhere: platforms ship compose files and environment templates, which is exactly what
+this instrument reads.**
+
+---
+
+# Education — vertical platforms and solutions
+
 **Pass 112, 2026-10-10.** ⏱️ **Twenty-second pass of this date.**
 
 🟢 **`depclosure.sh` read **296 of 296** addresses, zero unread

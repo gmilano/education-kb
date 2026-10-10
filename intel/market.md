@@ -6,6 +6,98 @@ updated: 2026-10-10
 
 # Education — market intelligence
 
+**Pass 113, 2026-10-10.** ⏱️ **Twenty-third pass of this date.**
+
+🔴 **ZERO new market items this pass, from the eight mandated searches in extended mode —
+the NINTH consecutive zero. 33 candidate tokens were extracted and checked one at a time;
+**32 of 33 are already held** on a live page of this base.**
+
+### 🔴 🆕 `P113-T` — the one new token was a two-year-old procurement with its date stripped off
+
+🔴 **A 2026 statistics roundup reported, present tense and undated, that "the UK government
+invested £4 million in AI tools for lesson planning and homework marking". A verification
+search dates it to **late August 2024**.** 🟢 **Recorded here with its real date and its
+real structure, because the structure is useful even when the date is not new:**
+
+| the £4 m package (UK DfE, announced 29 Aug 2024) | |
+|---|---|
+| 🟢 £3 m | a **content store** holding the national curriculum, lesson plans and anonymised pupil assessments, for AI firms to train against — awarded to **Faculty AI** |
+| 🟢 £1 m | split across **16 companies** to build working prototypes against that store |
+| 🟡 also committed | a safety framework for AI tools in education |
+| 🔴 provenance | secondary sources only; the primary DfE announcement was not reachable from this environment |
+
+🔵 **`P113-T`: a statistics roundup republishes an undated procurement and the
+republication is indistinguishable from news. The date was the only thing worth searching
+for, and searching for it is what kept a 2024 item out of a 2026 trend list.** 🟢 **The
+structure is the reusable part for a bid: a government bought a CORPUS first and
+applications second, which is the opposite of the order most edtech pitches assume.**
+
+### 🔵 Market figures — re-confirmed as HELD, not republished as new
+
+| figure | status this pass |
+|---|---|
+| AI-in-education $10.6 B (2026) → $42.48 B (2030), 41.5 % CAGR | 🔵 held, unchanged, search-summary provenance |
+| North America 36 % share, $3.68 B (2026) → $32 B (2030) | 🔵 held, unchanged |
+| Europe $2.64 B (2026) → $8.0 B (2030), 31.9 % CAGR; FI/EE/NL leading K-12 | 🔵 held, unchanged |
+| UNESCO IESALC / UNU-IAS: 87 % of 200 LATAM institutions use AI, 26 % have a strategy | 🔵 held, unchanged |
+| EU AI Act enforcement from 2 Aug 2026; AI omnibus in force 27 Jul 2026 | 🔵 held, unchanged |
+| Korea AI Basic Act in force 22 Jan 2026 (1-year penalty grace); Vietnam 1 Mar 2026 | 🔵 held, unchanged |
+| US: 134 AI-in-education bills across 31 states; H.R. 8747 through committee 21 Jul 2026 | 🔵 held, unchanged |
+
+🟡 **Nothing in that table moved this pass. It is reprinted so a reader can see that it was
+CHECKED rather than skipped — nine passes of zero is a statement about the channel, not
+about the market.**
+
+### 🟢 🆕 The supply side, which is the part of this market map that DID move
+
+🔵 **A market map needs both sides, and until this pass this file had demand figures and no
+derived supply. p113 measured 296 shelf addresses for what they bind their model to —
+`compose/code/p113-provider-binding/`, 121 tests passing offline, zero unread, zero capped:**
+
+| | rows | share |
+|---|---|---|
+| bind no model at all | 209 | 70.6 % |
+| 🟢 can be pointed at a model the client controls (`local`/`broker`/`override`) | 🟢 **67** | 🟢 **22.6 % of the shelf, 77.0 % of the 87 that bind anything** |
+| 🔴 locked to one vendor's endpoint | 🔴 **20** | 🔴 **6.8 %** |
+| 🔴 locked AND reproducible AND tested — the expensive case | 🔴 **9** | 🔴 **3.0 %** |
+
+🔴 **The pricing consequence, stated plainly: a client who asks for a reproducible,
+tested, self-hosted education stack can be served from **17 of 296 rows (5.7 %)**. Every
+other row needs either a model-portability layer built for it or a hosted endpoint
+accepted into the architecture. That layer is a line item, and this is the figure that
+sizes it.**
+
+### 🟡 The regional supply split, and the gap that bounds it
+
+| region | model-bearing rows | controllable | locked | note |
+|---|---|---|---|---|
+| 🟢 EMEA | 10 | 🟢 **7 (70 %)** | 3 | 5 declare a LOCAL runtime — the best match between regulation and supply on this shelf |
+| North America | 7 | 4 (57 %) | 🔴 3 | largest shelf presence (43 rows), weakest controllability of the placed regions |
+| APAC | 4 | 2 | 2 | 13 rows placed |
+| 🟡 LATAM | 2 | 2 | 0 | 🔴 **n = 2. Not a ratio** — `bncc-dev/bncc-benchmark` (MIT) and `mietiainvestigacion-creator/api-eduadapt` |
+| 🔴 UNPLACED | 62 | 50 | 12 | 🔴 **`Gap 403`** |
+
+🔴 **🆕 `Gap 403` — the committed org→region placement (`orgs.region.tsv`, 52 orgs) reaches
+103 of 296 addresses. The 193 unplaced rows hold 50 of the 67 controllable ones, so every
+row of the table above is a read of roughly a third of the shelf.** 🟢 **The remedy is
+offline, zero-egress and bounded — extend the placement file — which makes it the cheapest
+high-value task available to the next pass, and strictly cheaper than probing another
+closed channel.**
+
+### 🔵 Channel ledger, re-probed live this pass
+
+| channel | state | evidence |
+|---|---|---|
+| `git ls-remote` / `git fetch` (anonymous) | 🟢 **OPEN** | carried the whole census: `rc=0` on 296 of 296 addresses, 7 m 10 s |
+| `raw.githubusercontent.com` | 🟢 OPEN | unchanged |
+| `api.github.com` | 🔴 **`http=403`** | 🔵 **nineteenth consecutive pass** — the cause of every `—` in a ★ column |
+| WebSearch (extended) | 🟢 OPEN | 8 mandated queries ran; 🔴 **32 of 33 tokens already held** |
+| UK DfE primary announcement | 🔴 unreachable | `P113-T` rests on secondary sources, and says so |
+
+---
+
+# Education — market intelligence
+
 **Pass 112, 2026-10-10.** ⏱️ **Twenty-second pass of this date.**
 
 🔴 **ZERO new market items this pass, from eight searches in extended mode — the EIGHTH

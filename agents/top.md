@@ -6,6 +6,144 @@ updated: 2026-10-10
 
 # Education — AI agents shelf
 
+**Pass 113, 2026-10-10.** ⏱️ **Twenty-third pass of this date** (111: 20:4x–21:xx UTC;
+112: 21:4x–22:xx; this one 22:4x–23:xx).
+
+🟢 **Instrument this pass: `compose/code/p113-provider-binding/` — `test_p113.sh`
+**121 passed / 0 failed** (fully offline: real git repositories committed on disk and
+served to the real `bind.sh` over `file://`, no mocks); `bind.sh` read **296 of 296**
+shelf addresses in 7 m 10 s, `rc=0` on every one, **zero unread, zero stray lines, zero
+capped rows**, with a no-body control run over the same 296 addresses measuring this
+pass's own contribution.**
+
+🔴 **The axis exists because this KB has been ASSERTING its answer for a hundred passes.
+The EMEA pages sell sovereignty, the LATAM pages sell cost, and both rest on the claim
+that this shelf can be pointed at a model the client controls. Before this pass
+`OPENAI_API_KEY` appeared in ZERO markdown files of this base.** 🟢 **It is now derived
+from trees instead: `P113-A`.**
+
+### 🔵 🆕 p113 — the question the six previous axes cannot reach
+
+| pass | axis | reads | answers | cannot say |
+|---|---|---|---|---|
+| p107 | tag **count** | history | how much ref traffic | it inverts at the top of the shelf |
+| p108 | release **identity** | history | *can I pin it* | whether the pin is from 2019 |
+| p109 | commit **recency** | history | *is it alive* | who is keeping it alive |
+| p110 | author **concentration** | history | *what happens if they stop* | whether I can take it over |
+| p111 | verification **surface** | tree | *can I tell when I broke it* | whether that check survives leaving GitHub |
+| p112 | dependency **closure** | tree | *does it resolve to the same bytes twice* | 🔴 **whose model it resolves AGAINST** |
+| 🟢 **p113** | **provider binding** | 🟢 **tree** | 🟢 **whose model can it be made to talk to** | what a running deployment is configured to do |
+
+### 🟢 🆕 `P113-A` — the agent shelf's binding, measured over 176 addresses of this page
+
+| verdict | meaning | rows on this page | share of 176 |
+|---|---|---|---|
+| 🔵 `no-model` | no declaration names a model — not applicable | **108** | **61.4 %** |
+| 🟢 `local` | a local inference runtime is declared — runs with no egress | 🟢 **30** | 🟢 **17.0 %** |
+| 🟢 `broker` | a provider-abstraction layer — substitutable by configuration | **16** | 9.1 % |
+| 🔴 `hosted-only` | one vendor's endpoint, no abstraction, no override | 🔴 **14** | 🔴 **8.0 %** |
+| 🟡 `override` | a configurable endpoint — can be aimed at your own gateway | 8 | 4.5 % |
+| 🟢 `UNREAD` | fetch failed — no claim made (`P1040`) | 🟢 **0** | 🟢 **0 %** |
+
+🟢 **68 of the 176 addresses on this page bind to a model at all, and 54 of those 68
+(79.4 %) can be pointed at one the client controls.** 🔴 **14 cannot without editing
+code.** 🔵 **Across the full 296-row shelf the same split is 87 model-bearing, 67
+controllable (77.0 %), 20 `hosted-only`.**
+
+### 🔴 🆕 `P113-B` — the engageable set shrinks from 33 rows to 14 when the model is counted
+
+🔵 **p112 published a composable set — `checked` on p111 AND `pinned` on p112 — of 33 of
+this page's addresses. p113 reads those 33 on the new axis and the result is not a
+rounding:**
+
+| of p112's composable set | rows |
+|---|---|
+| bind no model at all (specs, platforms, classical ML, graders) | 12 |
+| 🟢 **reproducible, tested, AND pointable at your own model** | 🟢 **14** |
+| 🔴 **reproducible, tested, AND locked to one vendor's endpoint** | 🔴 **7** |
+
+🟢 **The fourteen. Licences carried from this page's prior passes; p113 changed none of
+them and added the binding column.**
+
+| agent / repo | licence | binding | what it declares | region |
+|---|---|---|---|---|
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🟡 AGPL-3 | 🟢 `local` | `transformers` | North America |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🟡 GPL-3 | 🟢 `local` | `transformers` | EMEA (DE) |
+| [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | 🟢 **MIT** | 🟢 `broker` | `langchain` | North America |
+| [`fwu-de/ais-chat`](https://github.com/fwu-de/ais-chat) | 🟢 **MIT** | 🟢 `broker` | `langchain` + `base_url` | EMEA (DE) |
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🟢 **BSD-3** | 🟢 `broker` | `langchain` | North America |
+| [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | 🟢 **Apache-2.0** | 🟢 `local` | `ollama`, `sentence-transformers`, `transformers` | EMEA |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 🟢 **MIT** | 🟢 `local` | `ollama`, `whisper` | EMEA (ES) |
+| [`OtterDen-Lab/Autograder`](https://github.com/OtterDen-Lab/Autograder) | 🟢 **MIT** | 🟢 `local` | `ollama` | North America |
+| [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 🟢 **MIT** | 🟢 `local` | `sentence-transformers` + `OPENAI_API_BASE` | EMEA |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **Apache-2.0** | 🟢 `broker` | `langchain` + `base_url` | EMEA (PL) |
+| [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 🟢 **MIT** | 🟢 `broker` | `langchain` | North America |
+| [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | 🟢 **Apache-2.0** | 🟡 `broker` | `langchain`, `openrouter` ※ | North America |
+| [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | 🟢 **MIT** | 🟡 `broker` | `openrouter` ※ | LATAM (BR) |
+| [`aiverify-foundation/moonshot-cicd`](https://github.com/aiverify-foundation/moonshot-cicd) | 🟢 **Apache-2.0** | 🟢 `broker` | `langchain` | APAC (SG) |
+
+🟢 **Eleven of the fourteen are permissive (MIT / Apache-2.0 / BSD-3) — a client can ship
+a closed derivative — and all four regions are present: North America 6, EMEA 5, APAC 1,
+LATAM 1.** 🔵 **`P113-H`: ※ marks a row whose substitutability comes from an AGGREGATOR.
+OpenRouter makes the model swappable by configuration and is still somebody else's
+endpoint, so these two rows satisfy *substitutable* and NOT *egress-free*. The verdict
+says the first; the family column is there so a data-residency reader can discount it.**
+
+### 🔴 🆕 `P113-C` — seven rows on this page are reproducible, tested, and unmovable
+
+🔴 **Each has a lockfile, a live suite, a `pull_request` trigger — and exactly one
+vendor's endpoint with no abstraction and no override anywhere in the tree. Changing the
+model is a code change in someone else's repository.**
+
+| repo | hosted family | note |
+|---|---|---|
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🔴 `google` | 🔴 **Apache-2.0, `broad` bench, 2 959 test files — the strongest row on this shelf by every earlier axis, and single-vendor on this one** |
+| [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | 🔴 `anthropic`, `openai` | two vendors is not an abstraction: both are wired, neither is swappable |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 `openai` | 🔴 AGPL-3 **and** Elastic-2.0 in its tree (`p1040`'s `NON-GRANT` bucket) |
+| [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟡 `anthropic` | an MCP server — see the adjudication below |
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 🔴 `deepseek`, `openai` | solo-maintained (p110) |
+| [`tomaszboloz/WCAG-Accessibility-Skills`](https://github.com/tomaszboloz/WCAG-Accessibility-Skills) | 🟡 `gemini` | a skill pack — see the adjudication below |
+| [`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) + [`-ui`](https://github.com/aiverify-foundation/moonshot-ui) | 🟡 **`moonshot` — SELF-NAME** | 🟢 **ADJUDICATED BY HAND: not a binding. See below** |
+
+### 🟢 🆕 `P113-R` adjudicated — two rows discounted, one row that proves the rule had to stay manual
+
+🟢 **The instrument flagged four self-name collisions and suppressed none of them, because
+no rule can separate these two cases:**
+
+- 🟢 **`aiverify-foundation/moonshot` and `moonshot-ui` — DISCOUNTED.** The payload is
+  `"name": "moonshot-ui"` in their own `package.json`, and `.env.local` carries
+  `MOONSHOT_API_URL=http://0.0.0.0:5000` — **the UI pointing at its own backend on
+  localhost.** Singapore's AI Verify red-teaming toolkit is named Moonshot; the Chinese
+  model vendor is also named Moonshot. These two rows bind to neither. 🔵 **Effective
+  `hosted-only` on this page is therefore **12**, not 14.**
+- 🔴 **`nextcloud/integration_openai` — STANDS.** Its own name carries `openai` too, and
+  it IS the OpenAI integration for Nextcloud. **The name is the binding.** 🔴 **The first
+  cut of this code suppressed self-name collisions and silently deleted this row's only
+  binding** — which is why the instrument now flags and a human decides (`p93`: declining
+  to classify is the correct failure mode).
+- 🟡 **`aiverify-foundation/moonshot-cicd` — unaffected**: its `broker` verdict comes from
+  `langchain`, not from the collision.
+
+### 🔵 🆕 `P113-I` / `P113-L` — the direction of the error, and the size of the contribution
+
+🔴 **Stated before the figures, in the code: this axis reads DECLARATIONS — manifests,
+environment templates, compose files, Modelfiles — and never program text. A repository
+that drives Ollama over plain HTTP and declares nothing reads `no-model`. So `local` and
+`broker` are LOWER BOUNDS and `hosted-only` is an UPPER BOUND.** 🔵 **That is the opposite
+direction from p111 and p112, whose textual reads could only ever flatter a row, and it is
+the alarmist direction `P111-F` warns about — so it is written in the instrument rather
+than discovered by a reader.**
+
+🟢 **The contribution is MEASURED, not asserted (`P113-L`). A control run over the same 296
+addresses with every body read disabled reports **295 `no-model` and 1 `local`** — and 86
+of 296 rows change verdict when the bodies are read. Filenames alone can see exactly ONE
+binding on this entire shelf: `sngdtechnologies/ai-moodle-security`, the only repository
+here that ships a `Modelfile`.**
+
+---
+
+# Education — AI agents shelf
+
 **Pass 112, 2026-10-10.** ⏱️ **Twenty-second pass of this date** (110: 19:4x–20:xx UTC;
 111: 20:4x–21:xx; this one 21:4x–22:xx).
 

@@ -6,6 +6,125 @@ updated: 2026-10-10
 
 # Education — current trends
 
+**Pass 113, 2026-10-10.** ⏱️ **Twenty-third pass of this date.**
+
+🔴 **The eight mandated searches produced ZERO new trend items for the NINTH consecutive
+pass. 33 tokens extracted, **32 of 33 already held**, and the single exception turned out
+to be a UK procurement from August 2024 with its date stripped off (`P113-T`,
+`intel/market.md`).** 🟢 **So the trends this pass adds are DERIVED from a 296-address
+census, not read off a roundup — which is the only kind of trend this base can still
+produce until `Gap 402`'s query set is replaced.**
+
+## 🟢 `T44` — the sovereignty pitch finally has a number, and the number favours EMEA
+
+🟢 **Measured: of the 87 shelf rows that bind a model at all, **67 (77.0 %) can be pointed
+at a model the client controls** and 20 cannot. By placed region, EMEA leads at 7 of 10
+model-bearing rows, with **five declaring a LOCAL inference runtime** — more local rows in
+absolute terms than North America, on a smaller slice of the shelf.**
+
+🔵 **Why this is a trend and not a statistic: it inverts which region gets the
+sovereignty conversation.** 🔴 **The EU AI Act puts education systems in the high-risk
+tier, and the standard reading is that EMEA buyers face a compliance BURDEN. The supply
+says the opposite — the EMEA slice of this shelf is the slice that can be stood up without
+egress at all, so for EMEA the pitch is *"here is the stack that already runs inside your
+estate"*, not *"here is how we will make a hosted stack compliant"*.**
+
+🔴 **And the one exception is the sharpest row in this base: `opetushallitus/ehoks` — the
+Finnish National Agency for Education's personal-competence-plan service, EUPL-licensed
+public infrastructure — declares `bedrockruntime`, `bedrock` and `bedrockagentruntime` in
+its `pom.xml`. VERIFIED against the payload.** 🟢 **A national public education service
+with a US hosted model layer, under a licence (EUPL) whose reciprocity makes a contributed
+provider abstraction flow back automatically. That is a named, scoped, fundable
+deliverable, not a defect to point at.**
+
+🟡 **What would refute `T44`:** a count of the 193 rows `Gap 403` leaves unplaced that
+moved EMEA's share below North America's — the unplaced remainder holds 50 of the 67
+controllable rows, so the regional ordering is the least robust part of this trend and the
+next pass can overturn it cheaply by extending `orgs.region.tsv`.
+
+## 🔴 `T45` — "reproducible" and "usable" have come apart, and the gap is the whole engagement
+
+🔵 **Four passes of axes, read as a ladder:**
+
+| the shelf can… | rows of 296 | share |
+|---|---|---|
+| tell you when you broke it (p111 `checked`) | 115 | 38.9 % |
+| …and resolve to the same bytes twice (p112 `pinned`) | 63 | 21.3 % |
+| 🟢 **…and talk to a model you own (p113 controllable)** | 🟢 **17** | 🟢 **5.7 %** |
+| 🔴 …and talk only to one vendor's endpoint | 🔴 **9** | 🔴 **3.0 %** |
+
+🔴 **Each axis roughly halves the shelf, and the third one halves it again. `oppia/oppia`
+is the case to carry into a conversation: Apache-2.0, `broad` bench, 2 959 test files,
+`pinned`, `checked` — best-in-class on every axis measured before this pass, and
+single-vendor on this one.** 🟢 **The trend for a studio is that "pick good open source"
+has stopped being a sufficient technical answer: the model-portability layer is now the
+differentiating line item, and 9 rows show it is needed exactly where the repository
+quality is highest.**
+
+🟡 **What would refute `T45`:** reading program text instead of declarations. `local` and
+`broker` are LOWER bounds here (`P113-I`), so a code-level read could only move rows
+UPWARD — if it moved enough of the 209 `no-model` rows into `local`, the 5.7 % would rise.
+🟢 **That is a bounded, offline, named follow-up and the honest statement of this trend's
+weakness.**
+
+## 🔴 `T46` — the LMS tier declares no model at all, and that is the opportunity rather than the problem
+
+🟢 **Read in FULL this pass, uncapped: `instructure/canvas-lms` (551 declarations),
+`sakaiproject/sakai` (498), `moodle/moodle` (64), `kuali/rice`, `leemonade/leemons` — every
+one `no-model`. 79 of 94 platform addresses on `verticals/solutions.md` likewise.**
+
+🔵 **Three findings now meet at the same seam, from three different instruments:**
+
+- `T30` / `P1033` — the copyleft frontier IS the plugin tree (143 of 143 Moodle packages GPL-3)
+- `T34` — Moodle DEFINED `moodle-aiprovider` / `moodle-aiplacement` and **zero packages exist for either**
+- 🟢 **`T46` — and the platforms themselves carry no model binding to inherit**
+
+🟢 **So the model layer of an LMS engagement is greenfield in all three senses at once:
+nothing published against the extension point, nothing declared in the platform, nothing
+to inherit.** 🔴 **And `T34`'s rule still decides the licence — INSIDE Moodle it is GPL-3,
+BESIDE it it keeps the licence you choose — which makes *where it mounts* the first
+commercial decision of the engagement and the one that cannot be revisited later.**
+
+🟡 **What would refute `T46`:** a model declaration inside any of the five platforms'
+trees. 🟢 **The claim is now falsifiable cheaply and precisely, because the read was
+uncapped and the per-row declaration counts are published; the instrument's own cap was
+caught truncating these exact five rows TWICE before the figure was published (`P113-D`).**
+
+## 🟡 `P113-U` — on an MCP-and-skills shelf, "no model declared" is usually correct architecture
+
+🔵 **35 of the 209 `no-model` rows have a README that names a model. That looked like a
+prose-versus-tree gap; 23 of the 35 are not one:**
+
+| | rows | reading |
+|---|---|---|
+| 🟢 host-delegated by design — MCP servers, skill packs, lists, courses | 20 | 🟢 an MCP server does not choose the model; its host does |
+| 🟡 Moodle plugins — binding lives in the LMS's AI subsystem config | 3 | 🟡 correct for the same reason, one layer up (`T34`) |
+| 🔴 a genuine gap — README sells a model, no declaration names one | 🔴 **12** | 🔴 the README is the sales document and the tree does not support it |
+
+🟢 **The trend worth naming: the MCP and skill-pack layer has made "which model" a
+DEPLOYMENT-time choice rather than a repository-time one for 20 rows of this shelf.**
+🔵 **That is a genuine architectural shift and it is good news for portability — but it
+also means a buyer evaluating these repositories on "which model does it use" is asking a
+question the repository is deliberately refusing to answer.**
+
+## Instrument note carried forward
+
+🟢 **Anonymous `git fetch` / `git ls-remote` and `raw.githubusercontent.com` discriminate;
+`curl` on `github.com` and `api.github.com` return 403 for real and invented slugs alike
+and must not be used.** 🔵 **`api.github.com` = 403 for the nineteenth consecutive pass.**
+
+🟢 🆕 **p113 adds a channel detail worth keeping: a depth-1 blob-filtered fetch plus ONE
+batched lazy blob fetch per repository reads 296 trees and their declaration bodies in
+7 m 10 s with zero failures. The batch stream must be parsed BY BYTE COUNT, not by the
+40-hex header pattern p111/p112 used — a payload whose own content holds a header-shaped
+line desynchronises the pattern-based reader, and a payload with no trailing newline
+desynchronises it too (`P113-E`, `P113-M`; `learningequality/kolibri` reported 474 stray
+lines until that was fixed).**
+
+---
+
+# Education — current trends
+
 **Pass 112, 2026-10-10.** ⏱️ **Twenty-second pass of this date.**
 
 🔴 **The eight mandated searches produced effectively ZERO new trend items for the EIGHTH

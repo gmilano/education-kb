@@ -6,6 +6,96 @@ updated: 2026-10-10
 
 # Education — foundational repos
 
+**Pass 113, 2026-10-10.** ⏱️ **Twenty-third pass of this date.**
+
+🟢 **`bind.sh` read **296 of 296** addresses in 7 m 10 s, zero unread, zero stray lines,
+zero capped rows (`compose/code/p113-provider-binding/`, `test_p113.sh` 121 passed / 0
+failed, fully offline), plus a no-body control run over the same 296 for this pass's own
+contribution.**
+
+### 🟢 🆕 `P113-D` — the foundation tier's binding, over 166 addresses of this page
+
+| verdict | rows on this page |
+|---|---|
+| 🔵 `no-model` — no declaration names a model | **130** |
+| 🟢 `local` — a local inference runtime is declared | 🟢 **22** |
+| 🔴 `hosted-only` — one vendor's endpoint, no abstraction, no override | 🔴 **7** |
+| 🟢 `broker` — a provider-abstraction layer | 5 |
+| 🟡 `override` — a configurable endpoint | 2 |
+
+🟢 **36 of this page's 166 addresses bind a model, and 29 of those 36 (80.6 %) can be
+pointed at one the client controls — a better ratio than the agent shelf's 79.4 %.**
+🔵 **That direction is expected and worth stating anyway: a foundation is a library, and a
+library that hard-wires a vendor would not be a foundation.**
+
+### 🟢 The self-hostable foundation tier — the rows that need no egress at all
+
+🔵 **Every row below declares a LOCAL inference runtime in a manifest, an environment
+template, a compose file or a Modelfile. These are the bases an EMEA data-residency
+engagement or an air-gapped deployment can be built on without a gateway in front.**
+
+| repo | declares | p112 closure |
+|---|---|---|
+| [`ollama/ollama`](https://github.com/ollama/ollama) | 🟢 `ollama` | 🟢 `pinned` |
+| [`huggingface/transformers`](https://github.com/huggingface/transformers) | 🟢 `transformers`, HF local | 🔴 `floating` |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 🟢 `mlx`, `transformers`, `vllm` (+ `litellm` broker) | 🔴 `floating` |
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | 🟢 `llama.cpp`, `ollama`, `whisper` | 🟡 `partial-pin` |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🟢 `transformers` | 🟢 `pinned` |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🟢 `transformers` | 🟢 `pinned` |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🟢 `transformers` | 🟡 `partial-pin` |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 `ollama`, `sentence-transformers`, `transformers`, `whisper`, HF local | 🟡 `partial-pin` |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `ollama`, `sentence-transformers`, `vllm` | 🟡 `partial-pin` |
+| [`nextcloud/context_chat_backend`](https://github.com/nextcloud/context_chat_backend) | 🟢 `ctransformers`, `llama.cpp`, `sentence-transformers`, `transformers` | 🔴 `floating` |
+| [`nextcloud/translate2`](https://github.com/nextcloud/translate2) | 🟢 HF local | 🔴 `floating` |
+| [`nextcloud/text2image_stablediffusion2`](https://github.com/nextcloud/text2image_stablediffusion2) | 🟢 `transformers` | 🔴 `floating` |
+| [`wanghaoyu0408/OpenRubrics`](https://github.com/wanghaoyu0408/OpenRubrics) | 🟢 `sglang`, `transformers`, `vllm`, HF local | 🟢 `vendored` |
+| [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | 🟢 `sentence-transformers`, `transformers`, `vllm`, HF local | 🟡 `partial-pin` |
+| [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | 🟢 `ollama`, `sentence-transformers`, `transformers` | 🟢 `pinned` |
+| [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🟢 `ollama` | 🟢 `pinned` |
+| [`OtterDen-Lab/Autograder`](https://github.com/OtterDen-Lab/Autograder) | 🟢 `ollama` | 🟢 `pinned` |
+| [`nestauk/ojd_daps_skills`](https://github.com/nestauk/ojd_daps_skills) | 🟢 `sentence-transformers`, `transformers` | 🔴 `floating` |
+| [`KonstantinosPetrakis/esco-skill-extractor`](https://github.com/KonstantinosPetrakis/esco-skill-extractor) | 🟢 `sentence-transformers` | 🔴 `floating` |
+| [`project-sunbird/knowledge-platform`](https://github.com/project-sunbird/knowledge-platform) | 🟢 `transformers` | 🟡 `self-pinned` |
+| [`CyanXLab/Phonos`](https://github.com/CyanXLab/Phonos) | 🟢 `llama.cpp`, `transformers`, `whisper`, HF local | 🔴 `floating` |
+| [`HASKI-RAK/NodeGrade`](https://github.com/HASKI-RAK/NodeGrade) | 🟢 `sentence-transformers`, `transformers`, HF local | 🟡 `partial-pin` |
+
+🔴 **The pattern across the column on the right is the warning: `ollama/ollama`,
+`openedx/edx-platform`, `ILIAS`, `adaptive-knowledge-graph`, `moodle-mcp-server` and
+`OtterDen-Lab/Autograder` are `local` AND `pinned`. Nine of the twenty-two are
+`floating` — self-hostable and not reproducible, which is the p112 failure in a new place
+and needs the same `uv lock` / `pip-compile` step at fork time.**
+
+### 🔴 🆕 `P113-E` — seven foundations bind one vendor, and one of them is a national stack
+
+| repo | hosted family | why it matters here |
+|---|---|---|
+| [`opetushallitus/ehoks`](https://github.com/opetushallitus/ehoks) | 🔴 **`bedrock`** | 🔴 **VERIFIED in its `pom.xml`: `bedrockruntime`, `bedrock`, `bedrockagentruntime`. The Finnish National Agency for Education's personal-competence-plan service — EUPL-licensed public infrastructure (`T33`) — binds its model layer to a US hosted provider** |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🔴 `google` | Apache-2.0, `broad` bench, 2 959 tests, `pinned`, `checked` — and one vendor |
+| [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | 🔴 `anthropic`, `openai` | two wired vendors is not an abstraction |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🔴 `anthropic` | Apache-2.0 Swiss LMS; `tests-only` on p111 |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 `openai` | AGPL-3 plus Elastic-2.0 in tree (`p1040` `NON-GRANT`) |
+| [`Qwen-Applications/OpenRS`](https://github.com/Qwen-Applications/OpenRS) | 🔴 `openai` | `floating` and `bare` — weakest row on three axes at once |
+| [`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) | 🟡 `moonshot` | 🟢 **DISCOUNTED — self-name collision, adjudicated by hand on `agents/top.md` (`P113-R`)** |
+
+🔴 **`T44` — the EMEA sovereignty story on this shelf is strong in its LIBRARIES and
+broken in its ONE piece of national infrastructure.** 🟢 **EMEA leads every region on
+controllability (7 of 10 model-bearing rows, 5 of them `local`), and the single public
+national service in the set is the one row wired to a US endpoint.** 🔵 **That is a
+procurement fact, not a code defect: `ehoks` is EUPL — adopt-and-contribute, per `T33` —
+so the model layer is replaceable by a contributor, and the replacement is a deliverable
+rather than a blocker.**
+
+### 🔵 The error direction, stated before the figures are read
+
+🔴 **This axis reads DECLARATIONS and never program text, so `local` and `broker` are
+LOWER bounds and `hosted-only` is an UPPER bound (`P113-I`).** 🟢 **Compose files are read
+and `Modelfile` is selected on its name, which are the two mitigations that matter; a repo
+driving Ollama over plain `requests` with nothing declared still reads `no-model`.**
+
+---
+
+# Education — foundational repos
+
 **Pass 112, 2026-10-10.** ⏱️ **Twenty-second pass of this date.**
 
 🟢 **`depclosure.sh` read **296 of 296** addresses in 4 m 41 s, zero unread

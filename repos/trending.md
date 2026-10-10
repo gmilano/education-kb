@@ -4,6 +4,107 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 113: the region that sells sovereignty best is the one that measures it best — EMEA is 7 of 10, and its one piece of national infrastructure is wired to AWS Bedrock
+
+🟢 **Measured over **296 of 296** addresses in 7 m 10 s, zero unread, zero stray lines,
+zero capped rows (`compose/code/p113-provider-binding/`, `test_p113.sh` 121 passed / 0
+failed, fully offline — real git repositories served over `file://`, no mocks), plus a
+no-body control run over the same 296 addresses.**
+
+🔵 **Seventh axis in seven passes, third read from the TREE, and the first that asks about
+EGRESS rather than about a repository's own hygiene: whose model can this be made to talk
+to?**
+
+### 🟢 The supply side, by verdict
+
+| verdict | rows | share of 296 |
+|---|---|---|
+| 🔵 `no-model` — no declaration names a model | **209** | 70.6 % |
+| 🟢 `local` — a local inference runtime is declared | 🟢 **39** | 🟢 **13.2 %** |
+| 🔴 `hosted-only` — one vendor, no abstraction, no override | 🔴 **20** | 🔴 **6.8 %** |
+| 🟢 `broker` — a provider-abstraction layer | **17** | 5.7 % |
+| 🟡 `override` — a configurable endpoint | 11 | 3.7 % |
+| 🟢 `UNREAD` | 🟢 **0** | 🟢 **0 %** |
+
+🟢 **87 rows bind a model at all. 67 of those (77.0 %) can be pointed at one the client
+controls; 20 (23.0 %) cannot without a code change.**
+
+### 🔴 🆕 `T45` — the regional read, and it inverts the usual pitch order
+
+| region | `local` | `broker` | `override` | `hosted-only` | `no-model` | rows | controllable / model-bearing |
+|---|---|---|---|---|---|---|---|
+| 🟢 **EMEA** | 🟢 **5** | 2 | 0 | 3 | 20 | 30 | 🟢 **7 / 10 (70 %)** |
+| North America | 2 | 1 | 1 | 🔴 **3** | 36 | 43 | 🔴 **4 / 7 (57 %)** |
+| APAC | 1 | 1 | 0 | 2 | 9 | 13 | 2 / 4 |
+| LATAM | 0 | 1 | 1 | 🟢 **0** | 5 | 7 | 🟢 **2 / 2** |
+| 🟡 UNPLACED (`Gap 403`) | 29 | 12 | 9 | 12 | 131 | 193 | 50 / 62 |
+
+🟢 **EMEA leads on controllability and leads on the strongest rung: five of its ten
+model-bearing rows declare a LOCAL runtime, more than any other placed region in absolute
+terms despite being smaller than North America.** 🔵 **The supply matches the regulatory
+pitch for once — the EU AI Act puts education systems in the high-risk tier, and the EMEA
+slice of this shelf is the slice that can be stood up without egress.**
+
+🔴 **LATAM is 2 of 2 and that is NOT a strength claim: n = 2. `bncc-dev/bncc-benchmark`
+(MIT, `openrouter`) and `mietiainvestigacion-creator/api-eduadapt`
+(`openai-compatible`).** 🟡 **A region whose entire model-bearing supply is two
+repositories is a region whose figure the next finding can overturn. Stated so it is not
+read as a ratio.**
+
+🔴 **And `Gap 403` bounds every row of this table: the committed placement file covers 52
+orgs and reaches 103 of 296 addresses. The 193 unplaced rows hold 50 of the 67
+controllable ones. The regional read is a read of a third of the shelf.**
+
+### 🔴 🆕 `T44` — Finland publishes a national education stack, and binds its model layer to AWS
+
+🟢 **Verified against the payload, not inferred: `opetushallitus/ehoks` declares
+`bedrockruntime`, `bedrock` and `bedrockagentruntime` in its `pom.xml`.** 🔵 **`T33`
+established what `opetushallitus` is — the Finnish National Agency for Education, whose
+eight repositories are the national study-rights register (`koski`), the national
+curriculum service (`eperusteet`), national admissions (`ataru`) and the learner-number
+register, all EUPL.** 🔴 **`ehoks` is the personal-competence-plan service, and its model
+layer is a US hosted endpoint.**
+
+🟢 **The commercial reading, and it is the sharpest on this page: EUPL is copyleft with
+reciprocity, so the layer is *adopt and contribute* (`T33`). A contributed model-provider
+abstraction in `ehoks` is therefore (a) technically a small change — one provider
+interface — (b) legally required to flow back, and (c) exactly the deliverable an EMEA
+public-sector engagement is bought for.** 🔵 **`T28` and `T34` said the LMS→agent seam is
+a Globant deliverable from the licence side; `T44` says the MODEL seam is one from the
+sovereignty side.**
+
+### 🔴 🆕 `T46` — the LMS tier declares no model at all, on full uncapped reads
+
+🟢 **`moodle/moodle` (64 selectable declarations), `instructure/canvas-lms` (551),
+`sakaiproject/sakai` (498), `kuali/rice` and `leemonade/leemons` — every one read in full
+this pass, every one `no-model`.** 🔴 **Not one of the five largest platforms on this
+shelf names a model anywhere in a manifest, an environment template or a compose file.**
+
+🔵 **This is `T34` arriving from a third direction. `T34` found zero packages published
+against Moodle's own `moodle-aiprovider` / `moodle-aiplacement` extension points; `T30`
+found the copyleft frontier is the plugin tree; `T46` finds the platforms themselves carry
+no model binding to inherit.** 🟢 **So the model layer in an LMS engagement is GREENFIELD
+in all three senses: nothing published, nothing declared, nothing to inherit — and
+whichever side of the boundary it is built on decides its licence.**
+
+### 🟡 `P113-U` — "the README sells a model the tree never names" splits in two, and most of it is correct architecture
+
+🔵 **35 of the 209 `no-model` rows have a README that names a model. That looked like a
+prose-versus-tree gap and mostly is not:**
+
+| | rows | reading |
+|---|---|---|
+| 🟢 host-delegated BY DESIGN — MCP servers, skill packs, awesome-lists, courses | **20** | 🟢 **correct: an MCP server does not choose the model, its host does** |
+| 🟡 Moodle plugins — binding lives in the LMS's own AI subsystem config | 3 | 🟡 **correct for the same reason, one layer up (`T34`)** |
+| 🔴 a genuine gap — the README sells a model and no declaration names one | 🔴 **12** | 🔴 `LabSirius/TutorIA`, `codeXsidd/Studivexa`, `datalab912/RATASv1`, `fborrasumh/tutoria`, `belentani7/aprende-brasil`, `karanb192/algo-sensei`, `chamilo/chamilo-lms`, `emorynlp/llm-grading`, `Imalwayshere/Open-Detector`, `PrepLabsAI/InterviewMentor`, `lingjzhu/charsiu`, `programadores-obreros/Agente-editor-inet` |
+
+🟢 **`P113-U`: on an MCP-and-skills shelf, `no-model` is usually the architecture and not
+an omission — 23 of the 35 are repositories that correctly delegate the choice upward.**
+🔴 **For the remaining 12 the README is a sales document and the tree is the product, and
+the tree does not support it. Those are the rows to read a README of last.**
+
+---
+
 ## 2026-10-10 — pass 112: Finland pins all eight of its repositories and wires none of them; the United States wires its CI and pins nothing — and only Singapore does both
 
 🟢 **Measured over **296 of 296** addresses in 4 m 41 s, zero unread
