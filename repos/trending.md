@@ -4,6 +4,133 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 111: the largest test suite on this shelf cannot be run by a contributor, and the region that leads this axis is LATAM
+
+🟢 **Measured over **296 of 296** addresses in 9 m 41 s, zero unread
+(`compose/code/p111-verification-surface/`, `test_p111.sh` 66 passed / 0 failed, fully
+offline — real git repositories served over `file://`, no mocks).**
+
+🔵 **Fifth axis in five passes, and the first read from the TREE rather than the history:
+does HEAD ship a test suite, does it ship a live CI configuration, and does that
+configuration run the suite on a change arriving as a pull request.**
+
+### The distribution
+
+| verdict | rows | share of 296 |
+|---|---|---|
+| 🟢 `checked` — suite + live CI, runner named, fires on `pull_request` | **115** | **38.9 %** |
+| 🟡 `tests-only` — suite, no CI at all | 45 | 15.2 % |
+| 🟡 `partial` — suite + live CI, but no runner named or no PR trigger | 42 | 14.2 % |
+| 🔴 `bare` — source, no suite, no CI | 42 | 14.2 % |
+| 🔵 `no-code` — no source files; not applicable | 31 | 10.5 % |
+| 🔴 `ci-only` — CI, no suite | 14 | 4.7 % |
+| 🔴 `fossil-ci` — suite, only CI is a dead service | 7 | 2.4 % |
+| 🟢 `UNREAD` — fetch failed, no claim made | 🟢 **0** | 🟢 **0 %** |
+
+🟢 **On the 265 code-bearing rows: `checked` 43.4 %, `bare` 15.8 %. Every figure is an
+UPPER bound — the CI read is textual, so a runner named in a job that is gated off still
+counts, and the error can only make a row look more checked than it is.**
+
+### `P111-M` — the biggest suites, and what runs them
+
+| repo | test files | CI | verdict |
+|---|---|---|---|
+| [`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool) | 🔴 **8 347** | 2 · gitlab+azure | 🟡 **`partial` — ZERO `pull_request` references** |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 7 664 | 5 · gha+jenkins | 🟢 `checked` |
+| [`openmage/magento-lts`](https://github.com/openmage/magento-lts) | 6 691 | 19 · gha | 🟢 `checked` |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 5 014 | 6 · gha | 🟢 `checked` |
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 3 960 | 39 · gha+jenkins | 🟢 `checked` |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 2 399 | 26 · gha | 🟢 `checked` |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 2 276 | 5 · gha | 🟢 `checked` |
+| [`elmsln/elmsln`](https://github.com/elmsln/elmsln) | 🔴 **1 996** | 34 · 🔴 **travis** | 🔴 **`fossil-ci` — 34 configs, none can run** |
+| [`kuali/rice`](https://github.com/kuali/rice) | 🔴 **1 791** | 🔴 **0** | 🟡 **`tests-only`** |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🔴 **1 634** | 🔴 **0** | 🟡 **`tests-only`** |
+
+🔴 **The single largest suite on this shelf belongs to a `bus_factor` 1 repository whose
+CI a contributor cannot trigger. Verified by reading the files, not inferred:
+`rsmtool`'s `.gitlab-ci.yml` and `azure-pipelines.yml` contain zero `pull_request` or
+`merge_request` references. The whole `EducationalTestingService` org is the same shape —
+`factor_analyzer` (702 tests) and `skll` (130) likewise `partial`, likewise solo,
+likewise GitLab/Azure.**
+
+🟡 **And 5 421 test files sit across three institutional platforms with no live pipeline
+at all (`kuali/rice`, `OpenOLAT`, `elmsln`). That is the clearest contribution
+opportunity this shelf has produced in several passes — see `P111-AF` on
+`compose/patterns.md`.**
+
+### `P111-Q` — placed by region, and the ranking inverts every demand-side figure this KB holds
+
+| region | rows attributed | with code | 🟢 `checked` | share |
+|---|---|---|---|---|
+| 🟢 **LATAM** | 10 | 8 | 5 | 🟢 **62 %** |
+| North America | 33 | 30 | 17 | 🟢 57 % |
+| APAC | 17 | 14 | 6 | 🟡 43 % |
+| 🔴 **EMEA** | 33 | 29 | 7 | 🔴 **24 %** |
+
+🔵 **Method, because it bounds the claim: attribution is by the maintaining institution's
+home, using only org prefixes this KB already records — 93 of 296 rows. A placement of
+named rows, NOT a shelf-wide regional census. The 203 unattributed rows are counted in
+every global figure and in none of the regional ones.**
+
+🟢 **LATAM leads on one org doing it properly: `portabilis` (Brazil) is 3 for 3 `checked`
+— [`i-diario`](https://github.com/portabilis/i-diario) 616 tests,
+[`i-educar`](https://github.com/portabilis/i-educar) 469,
+[`pre-matricula-digital`](https://github.com/portabilis/pre-matricula-digital) 166.
+Verified: `i-educar`'s `.github/workflows/tests.yml` triggers on `push` AND
+`pull_request`. This is Brazil's municipal school-management stack, and on this axis it
+is the most fork-ready public-education platform family on the shelf in any region.**
+
+🔴 **EMEA trails NOT for want of tests — it holds `moodle` (5 014), `Artemis` (3 960),
+`ILIAS` (2 276), `OpenOLAT` (1 634), `tao-core` (577). It trails on REACHABILITY, and one
+public body dominates: Finland's **`opetushallitus` ships eight repos, all with real
+suites (70–1 428 tests), and seven of the eight are `partial`.** Only
+[`koski`](https://github.com/opetushallitus/koski) is `checked`. Verified:
+[`ehoks`](https://github.com/opetushallitus/ehoks) triggers on `workflow_dispatch` and
+`push` only — zero `pull_request` references.**
+
+🟢 **APAC's institutional end is the bright spot: Singapore's `aiverify-foundation` is 3
+for 3 `checked` ([`moonshot`](https://github.com/aiverify-foundation/moonshot) 150,
+[`moonshot-cicd`](https://github.com/aiverify-foundation/moonshot-cicd) 190,
+[`moonshot-ui`](https://github.com/aiverify-foundation/moonshot-ui) 35), and
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) is `checked` at 1 221 test files —
+the best-verified agent-native tutor here.** 🟡 **Its counter-example:
+[`project-sunbird/sunbird-devops`](https://github.com/project-sunbird/sunbird-devops)
+holds **144 CI configs**, the most on this shelf, across Circle + GHA + Travis + Jenkins,
+and is still `partial` — p109 had already measured it `abandoned` at 1 263 days. A large
+CI surface is not a working one.**
+
+### `P111-D` — Travis as a date stamp
+
+🔴 **Seven `fossil-ci` rows: a committed suite whose only CI is a service that stopped
+running free open-source builds in 2021.
+[`elmsln/elmsln`](https://github.com/elmsln/elmsln) (1 996 tests, 34 configs),
+[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) (306),
+[`workforce-data-initiative/skills-ml`](https://github.com/workforce-data-initiative/skills-ml)
+(64), three Apereo Learning Analytics Initiative repos
+([`OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) 46,
+[`LearningAnalyticsProcessor`](https://github.com/Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor) 14,
+[`OpenLRS`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS) 3), and
+[`moodlehq/moodle-tool_dataprivacy`](https://github.com/moodlehq/moodle-tool_dataprivacy)
+(13).**
+
+🟢 **p109 called the Apereo LAI org a graveyard from commit dates. p111 reaches the same
+verdict from CI vendor choice — an independent channel, readable in one file. Two channels
+agreeing is worth more than either alone.**
+
+### `P111-S` — and the measurement trap behind all of these numbers
+
+🔴 **`grep -i test` over a tree is wrong in BOTH directions and the undercount is the
+larger error. `canvas-lms`: naive 3 851 vs **7 664** by the component rule — it misses
+**3 446 paths under `spec/`**, none of which contain the string "test", because Rails,
+RSpec and Jest name suites by other conventions. `oppia` 1 793 vs 2 959. In the other
+direction `kolibri` gains 821 false hits from `integration_testing/` documentation,
+`ILIAS` 691, `moodle` 532 (`public/admin/testoutgoingmailconf.php` is a mail feature).**
+
+🟢 **The bias flips with the project's language and is largest on the best-tested
+repositories — so a substring grep does not merely add noise here, it reorders the
+shelf. `P111-A` matches path components and separator-anchored filenames, with `spec/`,
+`specs/` and `__tests__/` first-class.**
+
 ## 2026-10-10 — pass 110: two thirds of this shelf is one person, and four of the fifteen broadest repos are already dead
 
 🟢 **Measured over **296 of 296** addresses, zero unread

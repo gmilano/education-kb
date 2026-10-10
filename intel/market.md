@@ -6,6 +6,97 @@ updated: 2026-10-10
 
 # Education — market, players and opportunities
 
+**Pass 111, 2026-10-10.** ⏱️ **Twenty-first pass of this date.**
+
+🔴 **The eight mandated searches produced effectively ZERO new market items for the
+seventh consecutive pass. 24 candidate tokens extracted, **23 of 24 already held**, and
+the one exception is a corroborating DETAIL on a player this KB already holds, not a new
+item (`P111-R`).**
+
+🟢 **What this pass produced instead is a supply-side measurement, and unlike p110's it
+is placed by region: `compose/code/p111-verification-surface/`, `test_p111.sh` 66 passed
+/ 0 failed, `vsurface.sh` read **296 of 296** addresses with **zero unread**.**
+
+### 🔴 🆕 `P111-R` — the query set, pass 7: standard mode again, and the one new token is a detail
+
+🔵 **p109 ran the eight in **extended** mode → zero. p110 ran them in **standard** mode →
+zero. p111 ran them in **standard** mode → effectively zero. 24 tokens were extracted and
+checked ONE AT A TIME against every live page (`archive/` excluded).**
+
+| token | query | status |
+|---|---|---|
+| `microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`, `Hermes`, `rohitg00/ai-engineering-from-scratch`, `aneelv75/github-trending`, `free-ai-agents-resources` | global 1–2 | 🔴 held |
+| IMARC `$6.4 B → $79.6 B (2034)`; NA `$951 M → $2.3 B @ 15.9 % CAGR` | global 4, NA | 🔴 held |
+| OpenEduCat `LGPLv3`, Chamilo, ILIAS, Sakai, Open edX | global 3 | 🔴 held |
+| OpenAI's eight national education partners; `10 %` with formal guidelines; `71 %` of US teachers untrained; `86 %` of students / 16 countries | NA | 🔴 held |
+| QS `Europe EdTech 200`; UK `£200 m+` AI Adoption Summit; `Skills England`; Workday `38 %` not yet piloting; Bandwidth–Cavell Feb-2026 | EMEA | 🔴 held |
+| LearnUpon Sydney; TCS–Pearson; Alteryx Academy; Singapore FI consultation; Forrester APAC sovereignty; `49 %` real-time-data barrier | APAC | 🔴 held |
+| UNESCO IESALC `87 %` / `73.5 %` / `57.0 %` / `34.1 %` / `20.0 %` / `26 %`; Digital Education Council `92 %` / `79 %`; UNU-IAS; IADB; ANUIES; Observatorio IA; Tec de Monterrey `30 %`; Chile National AI Policy; Pontificia Universidad Católica de Chile | LATAM | 🔴 held |
+| 🟡 **Pearson's study of "nearly 80 million student interactions"** | NA | 🟡 **NEW — and it is a detail** |
+
+🟡 **The Pearson *player* and the TCS–Pearson alliance have been held since earlier
+passes; this specific study figure had not. Zero hits for `80 million`, `80 M` or
+`80 millones` across the live pages.** 🔴 **It is recorded as **search-result-only and
+uncorroborated**: `WebFetch` could not resolve either citing domain this pass
+(`azumo.com`, `www.digitaleducationcouncil.com` — `getaddrinfo ENOTFOUND`), so it was
+not read at source. The git lane was unaffected — 296/296 addresses fetched `rc=0` — so
+the gap is specific to the HTTP-page channel, not to the network.**
+
+🟢 **Seven passes, three of them in two different search modes, all returning the same
+zero. The standing instruction holds and is now dated: a future pass should not spend
+budget re-running these eight queries expecting novelty. The unexhausted channel in this
+environment remains measurement of the shelf this KB already holds.**
+
+### 🔴 🆕 `P111-Z` — the supply side, measured a second way, and it is worse than p110 suggested
+
+🔵 **`P110-R` set demand (~$9.6–10.6 B in 2026, ~40 % CAGR) against a buildable base of
+**eleven repositories** with a real bench. p111 re-measures that base on an independent
+axis.**
+
+| measure | value |
+|---|---|
+| shelf addresses read | 296 (zero unread) |
+| 🟢 `checked` — suite + live CI firing on `pull_request` | **115 (38.9 %)** |
+| 🔵 of the 265 code-bearing rows | 43.4 % `checked` |
+| 🔴 `bare` — source, no suite, no CI | **42 (14.2 %)** |
+| 🔴 `solo` (p110) **and** `bare` (p111) | 🔴 **39** |
+| 🟢 `broad` bench **and** `checked` | 🔴 **12** |
+| 🔴 p110's "actual foundation" that survives the tree test | 🔴 **9 of 11** (`P111-L`) |
+
+🔴 **Two independent axes now converge on the same order of magnitude: the dependable
+open-source base under this category is **9 to 12 repositories**, against capital
+compounding at ~40 % a year. p110 reached 11 from the bench; p111 reaches 9 from the
+tree, and removes one of p110's eleven for containing no code at all.**
+
+🟢 **The commercial reading is unchanged in direction and firmer in evidence: in this
+category the scarce asset is not models and not capital — it is **maintained,
+verifiable, permissively-licensed vertical code**. A studio that can take a
+`tests-only` or `fossil-ci` platform to `checked` is supplying exactly what the
+category is short of (`P111-Y`).**
+
+### 🟢 🆕 `P111-Q` — the verification surface placed by region, and the ranking is NOT the usual one
+
+🔵 **Method, stated because it bounds the claim: rows are attributed by the **maintaining
+institution's home**, using only org prefixes whose home this KB already records. 93 of
+296 rows are attributable that way. This is a placement of named rows, **not** a
+shelf-wide regional census — the instrument does not produce one, and the 203 unattributed
+rows are not silently assigned to anybody.**
+
+| region | rows attributed | with code | 🟢 `checked` | share |
+|---|---|---|---|---|
+| 🟢 **LATAM** | 10 | 8 | 5 | 🟢 **62 %** |
+| North America | 33 | 30 | 17 | 🟢 57 % |
+| APAC | 17 | 14 | 6 | 🟡 43 % |
+| 🔴 **EMEA** | 33 | 29 | 7 | 🔴 **24 %** |
+
+🔴 **LATAM leads this axis and EMEA trails it, which inverts the ordering every
+demand-side figure on this page produces. The cause is specific and nameable in both
+directions — it is not a sampling artefact.**
+
+---
+
+**Prior passes on this page follow, newest first.**
+
 **Pass 110, 2026-10-10.** ⏱️ **Twentieth pass of this date.**
 
 🔴 **ZERO new market items this pass, from eight searches — and the zero is now
@@ -548,6 +639,30 @@ KB: write down what you refused to use, and why.**
 
 ### North America
 
+#### 🟢 🆕 p111 North America — the verification surface, and what it changes here
+
+🟢 **Deepest `checked` tier on the shelf: 17 of 30 attributed code rows, including the
+largest verified suite anywhere here —
+[`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) at 7 664 test files
+with PR-gated GHA + Jenkins, plus
+[`openedx/edx-platform`](https://github.com/openedx/edx-platform) (2 399),
+[`oppia/oppia`](https://github.com/oppia/oppia) (2 959),
+[`dspace/dspace`](https://github.com/dspace/dspace) (1 025) and
+[`ed-fi-alliance-oss/Ed-Fi-ODS`](https://github.com/ed-fi-alliance-oss/Ed-Fi-ODS) (423,
+26 configs).**
+
+🔴 **The gap is concentrated and it is a research-lab gap. The whole
+`EducationalTestingService` org — [`rsmtool`](https://github.com/EducationalTestingService/rsmtool)
+(8 347 tests), [`factor_analyzer`](https://github.com/EducationalTestingService/factor_analyzer)
+(702), [`skll`](https://github.com/EducationalTestingService/skll) (130) — is `partial`:
+every one is `bus_factor` 1, every one runs CI on GitLab or Azure, and **not one has a
+`pull_request` trigger** (`P111-M`). Verified by reading the configs: `rsmtool`'s
+`.gitlab-ci.yml` and `azure-pipelines.yml` contain zero `pull_request` / `merge_request`
+references.** 🟢 **So the single biggest test suite on this shelf cannot be run by a
+contributor — an assessment-analytics engagement must budget to stand up its own CI
+before it can touch ETS code, and that is a day-one line item, not a discovery in week
+six.**
+
 #### 🟢 🆕 p110 North America — the only region on this shelf with an institution-backed bench
 
 🟢 **Of the 30 NA-published rows the `P110-S` mapping places, **9 are `solo` (30 %)** —
@@ -1089,6 +1204,43 @@ adoption.** 🔴 **So a North America pitch that leads with adoption is pushing 
 regulatory grain; one that leads with governance, auditability and teacher-augmentation is with it.**
 
 ### EMEA
+
+#### 🟢 🆕 p111 EMEA — the verification surface, and what it changes here
+
+🔴 **Worst region on this axis — 7 of 29 attributed code rows `checked` (24 %) — and
+**not because EMEA lacks tests**. It has some of the largest suites here:
+[`moodle/moodle`](https://github.com/moodle/moodle) 5 014,
+[`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) 3 960 (TU Munich),
+[`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) 2 276,
+[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) 1 634,
+[`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) 577.**
+
+🔴 **The cause is reachability, and one public body dominates it. Finland's national
+education agency **`opetushallitus` ships eight repositories on this shelf, all with real
+suites (70 – 1 428 test files), and seven of the eight are `partial`.** Only
+[`koski`](https://github.com/opetushallitus/koski) (1 428 tests, 19 configs, 7
+`pull_request` references) is `checked`. Verified by reading the configs:
+[`ehoks`](https://github.com/opetushallitus/ehoks) triggers on `workflow_dispatch` and
+`push` only — zero `pull_request` references across its workflows.**
+
+🔴 **Second cause: EMEA holds **all four `fossil-ci` rows that belong to a named
+institution** — three Apereo Learning Analytics Initiative repos
+([`OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) 46 tests,
+[`LearningAnalyticsProcessor`](https://github.com/Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor) 14,
+[`OpenLRS`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS) 3) plus
+[`moodlehq/moodle-tool_dataprivacy`](https://github.com/moodlehq/moodle-tool_dataprivacy)
+(13) — every one Travis-only. p109 called the Apereo LAI org a graveyard from commit
+dates; p111 reaches the same verdict from a different channel, which is the useful part.**
+
+🟢 **Opportunity, and it is unusually well-defined: EMEA's deficit is CI wiring, not test
+authorship. Adding `pull_request` triggers and porting Travis configs to GHA across
+`opetushallitus` and Apereo LAI is bounded work against existing suites, it lands inside
+public bodies that procure openly, and — with the EU AI Act classing education AI as
+high-risk — a reproducible, PR-gated pipeline is evidence those bodies will need for
+conformity work regardless.** 🔵 **Note also
+[`fwu-de/ais-chat`](https://github.com/fwu-de/ais-chat) (Germany, 201 tests, `checked`) as
+the regional reference for a *new-build* AI education service that was wired correctly
+from the start.**
 
 #### 🟡 🆕 p110 EMEA — a real public-sector bench, and an AI layer that is entirely single-author
 
@@ -1873,6 +2025,35 @@ duty is the sellable deliverable that is already overdue.**
 
 ### APAC
 
+#### 🟢 🆕 p111 APAC — the verification surface, and what it changes here
+
+🟡 **Middle of the ranking — 6 of 14 attributed code rows `checked` (43 %) — and sharply
+bimodal.**
+
+🟢 **The institutional end is strong and government-backed. Singapore's
+`aiverify-foundation` is **3 for 3 `checked`**:
+[`moonshot`](https://github.com/aiverify-foundation/moonshot) (150 tests, 13 configs),
+[`moonshot-cicd`](https://github.com/aiverify-foundation/moonshot-cicd) (190, 13),
+[`moonshot-ui`](https://github.com/aiverify-foundation/moonshot-ui) (35, 6) — an
+LLM-evaluation stack from a national AI-testing body, which is the natural pairing for
+any APAC education-AI assurance engagement. India's `project-sunbird` is `checked` on
+[`knowledge-platform`](https://github.com/project-sunbird/knowledge-platform) (250) and
+[`sunbird-lms-service`](https://github.com/project-sunbird/sunbird-lms-service) (228),
+both on Circle + GHA + Jenkins; [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor)
+(Hong Kong) is `checked` at 1 221 test files — the best-verified *agent-native* tutor on
+this shelf.**
+
+🔴 **The research end is `bare`: [`Qwen-Applications/OpenRS`](https://github.com/Qwen-Applications/OpenRS),
+[`doheejin/HiPAMA`](https://github.com/doheejin/HiPAMA),
+[`doheejin/ProTACT`](https://github.com/doheejin/ProTACT),
+[`nsip/curriculum-mapper`](https://github.com/nsip/curriculum-mapper) and
+[`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce)
+(671 source files) carry zero tests and zero CI.** 🟡 **And
+[`project-sunbird/sunbird-devops`](https://github.com/project-sunbird/sunbird-devops)
+holds **144 CI configs** — the most on this shelf — across Circle, GHA, Travis and
+Jenkins, and is still `partial`: p109 had already measured it `abandoned` at 1 263 days.
+A large CI surface is not a working one.**
+
 #### 🟡 🆕 p110 APAC — the region whose wide bench already left
 
 🟡 **Of the 11 APAC-published rows the `P110-S` mapping places, **5 are `solo` (45 %)**
@@ -2593,6 +2774,38 @@ the permission argument first — except in ANZ, where it does.** 🔴 **That is
 North America posture recorded above, and the two pitches should not share a slide.**
 
 ### LATAM
+
+#### 🟢 🆕 p111 LATAM — the verification surface, and what it changes here
+
+🟢 **Best region on this axis — 5 of 8 attributed code rows `checked` (62 %) — which is
+the opposite of this page's long-running LATAM framing, and it rests on one org doing
+things properly.**
+
+🟢 **`portabilis` (Brazil) is **3 for 3 `checked`**:
+[`i-educar`](https://github.com/portabilis/i-educar) (469 tests),
+[`i-diario`](https://github.com/portabilis/i-diario) (616) and
+[`pre-matricula-digital`](https://github.com/portabilis/pre-matricula-digital) (166).
+Verified by reading the config: `i-educar`'s `.github/workflows/tests.yml` triggers on
+both `push` and `pull_request`. This is Brazil's municipal school-management stack —
+enrolment, grading, attendance — and on the evidence of this axis it is **the most
+fork-ready public-education platform family on the shelf in any region**.**
+
+🟢 **The `bncc-dev` curriculum family is also `checked` on both package repos
+([`bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes),
+[`bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark)), with
+[`bncc-dados`](https://github.com/bncc-dev/bncc-dados) at `ci-only` — see `P111-K` on
+`compose/patterns.md`, where this reverses a `Gap 379` ruling made one hour ago.**
+
+🔴 **The region's weak rows are the independent tutors:
+[`dreathward/sistema-de-aprendizaje-en-linea`](https://github.com/dreathward/sistema-de-aprendizaje-en-linea)
+and [`kaiman-p/tutor-adaptativo-ia`](https://github.com/kaiman-p/tutor-adaptativo-ia)
+are both `solo` + `bare`, and [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA)
+and [`fborrasumh/tutoria`](https://github.com/fborrasumh/tutoria) are `no-code`.**
+
+🟢 **Opportunity: a LATAM engagement can start from `portabilis` as a *verifiable* base
+rather than from a proof-of-concept tutor — which is a materially different starting
+position from the one this page has described for ten passes, and it is the first time an
+axis has put LATAM at the top of a ranking in this KB.**
 
 #### 🔴 🆕 p110 LATAM — **every** region-placeable LATAM row is single-author, and that is the sharpest regional result of the four
 
@@ -3435,6 +3648,22 @@ Consejo Federal mandate). 🔵 **`p798-proxy-refusal-ledger` exists for exactly 
 entry: the licence channel (`raw.githubusercontent.com`) is open, the GitHub API and HTML are 403,
 and the government primary-source channel is closed.** 🔴 **A later pass must not read this file's
 regulatory rows as primary-verified. They are not, and the reason is recorded.**
+
+### Global
+
+#### 🔴 🆕 `P111-AA` p111 Global — what this pass could NOT place, stated rather than hidden
+
+🔴 **Stated rather than hidden: 203 of 296 shelf rows have no region attributable from an
+org prefix this KB records, so they are counted in every global figure above and in none
+of the regional ones. The regional shares are therefore comparisons of named subsets,
+and a region's absence from a finding here means this instrument could not place it —
+never that it was checked and found empty.**
+
+🔴 **No Africa-specific or Middle-East-specific education row was identified on this
+shelf this pass, as in every prior pass. The closed vocabulary folds both into EMEA,
+so a 24 % EMEA figure is carrying Finland, Germany, Switzerland, France and the UK and
+says nothing about either. That is a known limitation of the vocabulary, not a finding
+about those markets.**
 
 ## Regions and lines of enquiry that returned nothing — stated, not hidden
 

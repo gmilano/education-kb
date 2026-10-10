@@ -4,6 +4,118 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 111: two of the three repos in p110's own headline reversal turn out to be the only ones you can actually own, and a row in the "actual foundation" table has no code in it
+
+🔵 **No new education-specific agent reached this shelf this pass, for the seventh
+consecutive pass. 24 candidate tokens extracted from the eight mandated queries, **23 of
+24 already held**; the one exception is a corroborating detail on a player this KB
+already holds (Pearson's "nearly 80 million student interactions"), not a new item, and
+it could not be read at source because `WebFetch` failed DNS on both citing domains.**
+
+🟢 **Instrument: `compose/code/p111-verification-surface/`, `test_p111.sh` **66 passed /
+0 failed** (fully offline — real git repositories committed on disk and served to the
+real `vsurface.sh` over `file://`, no mocks); `vsurface.sh` read **296 of 296** addresses
+in 9 m 41 s, zero unread.**
+
+### What is new this week: the shelf is maintained, and most of it cannot tell you when you broke it
+
+🔵 **p111 is the fifth axis in five passes and the first read from the TREE rather than
+the history. The question is the one p110 forces: p110 found 67.6 % of this shelf is one
+person, so two thirds of it must be forked and owned rather than depended on — and
+owning a tree is only tractable if the tree tells you when you have broken it.**
+
+🟢 **`checked` = a test suite, plus a live CI system that names a test runner AND fires
+on `pull_request`. 115 of 296 rows (38.9 %); 43.4 % of the 265 code-bearing rows.**
+🔴 **42 rows (14.2 %) are `bare`: source code, no suite, no CI of any kind.**
+
+### The reversal — `P111-K`, and it goes the OTHER way from p110's
+
+🔴 **One hour ago p110 reversed p109 on `Gap 379`, concluding that the Brazilian `bncc-dev`
+curriculum half was the riskier half because all three of its repos are 100 % one author,
+while the rubric half tops out at 75 %.**
+
+🟢 **On the tree axis the rubric half has NO tests and NO CI anywhere in it —
+`Qwen-Applications/OpenRS` and `planepig/rubricbench` are both `bare`, `OpenRubrics` is
+`tests-only` — while two of the three `bncc-dev` repos are fully `checked`, PR trigger
+included, despite being 100 % one author.**
+
+🟢 **Corrected three-axis rule, which is the transferable part: liveness says whether
+upstream will MEET you (p109); concentration says what happens if they STOP (p110);
+verification says whether you can CHANGE it at all (p111). They can point in opposite
+directions on the same repository, and a fork decision needs verification FIRST — a
+maximally concentrated repo that is `checked` is a cheap thing to own, and a two-author
+repo with no CI is not.**
+
+### The correction — `P111-L`: a curated list was sitting in the "actual foundation" table
+
+🔴 **`P110-J` published eleven rows as "the shelf's actual foundation" on `bus_factor` ≥ 6
+plus a commit within 30 days. One of them,
+[`lukeslp/awesome-accessibility`](https://github.com/lukeslp/awesome-accessibility), is a
+Markdown link list: 46 authors, `bus_factor` 6, committed six days ago, **zero source
+files**.**
+
+🟢 **It was there because tag counts, release identities, commit dates and author emails
+are all properties a Markdown list has exactly as much of as a compiler does. The four
+history axes cannot tell code from prose; a "foundation" claim needs the tree. Corrected
+foundation layer: **nine `checked` code repositories**, plus `oat-sa/tao-core` at
+`partial`.**
+
+### The agent-layer rows p110 headlined, on the new axis
+
+| row | p110 | 🆕 p111 |
+|---|---|---|
+| [`jeanlucio/moodle-local_aihub`](https://github.com/jeanlucio/moodle-local_aihub) | 🔴 solo 99 % | 🟢 **`checked`** |
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) | 🔴 solo 99 % | 🟢 **`checked`** |
+| [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | 🔴 solo 100 % | 🟢 **`checked`** |
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🔴 solo 100 % | 🟢 **`checked`** |
+| [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | 🔴 solo 100 % | 🔴 **`ci-only`** (0 tests) |
+| [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🔴 solo 61 % | 🟡 `partial` (279 tests) |
+| [`wanghaoyu0408/OpenRubrics`](https://github.com/wanghaoyu0408/OpenRubrics) | 🟡 pair 33 % | 🟡 `tests-only` |
+| [`Qwen-Applications/OpenRS`](https://github.com/Qwen-Applications/OpenRS) | 🔴 solo 71 % | 🔴 **`bare`** |
+| [`planepig/rubricbench`](https://github.com/planepig/rubricbench) | 🔴 solo 75 % | 🔴 **`bare`** |
+| [`a2br/moodle-mcp`](https://github.com/a2br/moodle-mcp) | 🔴 solo 100 % | 🔴 **`bare`** |
+
+🔴 **The two axes are close to independent on the agent layer. Neither substitutes for
+the other, and p110's recommendation to prefer the wider bench does not survive contact
+with this one.**
+
+### The worst corner, and the row in it that matters most
+
+🔴 **39 rows are `solo` (p110) AND `bare` (p111): you must own them, and they cannot tell
+you what you broke. The highest-consequence one is
+[`celtic-project/LTI-PHP`](https://github.com/celtic-project/LTI-PHP) — an LTI 1.3
+library, the interoperability layer other things are built ON, at 115 source files, 98 %
+one author, zero tests, zero CI. Also in the corner:
+[`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) (603 source
+files, 100 % one author, committed yesterday, nothing verifies any of it) and
+[`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce)
+(671 source files, same).**
+
+### Three traps worth carrying to any other industry KB
+
+🔴 **1. `set -o pipefail` + `grep -q` INVERTS AN EARLY MATCH (`P111-I`).** The first draft
+of this instrument piped the CI body into `grep -q`; `grep` exits at the first hit, the
+writer takes `SIGPIPE`, `pipefail` makes that the pipeline's status, **so a signal
+matching EARLY reads as ABSENT**. Measured: `oppia/oppia` holds `pull_request` 39 times,
+first in the opening workflow — the piped form said no, while the runner probe, whose
+term appears late in the same bytes, said yes. It graded one of the best-tested repos on
+this shelf `partial`. **A measurement bug that is silent, directionally biased, and worst
+where the signal is strongest will survive review, because it corrupts exactly the rows a
+reviewer is least suspicious of.**
+
+🔴 **2. `grep -i test` over a tree is wrong in BOTH directions, and the undercount is
+larger (`P111-S`).** `instructure/canvas-lms`: naive 3 851 vs 7 664 by the component rule
+— it misses **3 446 paths under `spec/`**, because Rails, RSpec and Jest name suites
+without the string "test". Meanwhile `moodle` gains 532 false hits from
+`testoutgoingmailconf.php`, `kolibri` 821 from `integration_testing/` documentation, and
+`tutor` carries `docs/testimonials.rst`. **The bias flips with the project's language and
+is largest on the best-tested repositories.**
+
+🔴 **3. "No tests" is not a defect in a repo with no code (`P111-F`).** 31 rows here are
+specs, awesome-lists, curriculum datasets and corpora. Without a source-file gate this
+pass would have published "73 bare rows" instead of 42 — 74 % too high, and alarmist
+about repositories behaving correctly.
+
 ## 2026-10-10 — pass 110: nine of the thirteen agent rows p109 published an hour ago are one person, and the fix p109 recommended was aimed at the wrong risk
 
 🔵 **No new education-specific agent reached this shelf this pass, and for the first time

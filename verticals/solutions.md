@@ -6,6 +6,94 @@ updated: 2026-10-10
 
 # Education — vertical platforms and solutions
 
+**Pass 111, 2026-10-10.** ⏱️ **Twenty-first pass of this date.**
+
+🟢 **`vsurface.sh` read **296 of 296** addresses, zero unread
+(`compose/code/p111-verification-surface/`, `test_p111.sh` 66 passed / 0 failed, fully
+offline).**
+
+🔴 **A customisable platform is a multi-year commitment, so p110 measured the bench
+behind each one. This pass asks the question that decides whether the commitment is
+survivable: when your team changes this platform, does the platform tell you what you
+broke?**
+
+### 🟢 🆕 `P111-W` — the platforms on this page, by verification surface
+
+| platform | licence | `bus_factor` | p109 | 🆕 test files | 🆕 CI | 🆕 verdict | build-on verdict |
+|---|---|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3 | 🟢 9 | 🟢 fresh 7 d | 🟢 **5 014** | 6 · gha | 🟢 `checked` | 🟢 **safe — bench and suite** |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🟡 AGPL-3 | 🟢 12 | 🟡 slowing 163 d | 🟢 **7 664** | 5 · gha+jenkins | 🟢 `checked` | 🟢 **upgraded — see `P111-U`** |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🟡 GPL-3 | 🟢 4 | — | 🟢 **2 276** | 5 · gha | 🟢 `checked` | 🟢 **safe** |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | 🟢 6 | 🟢 fresh 0 d | 🟢 2 959 | 16 · gha | 🟢 `checked` | 🟢 **safe** |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 ECL-2.0 | 🟢 6 | 🟢 fresh 1 d | 🟢 1 033 | 21 · gha | 🟢 `checked` | 🟢 **safe** |
+| [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 BSD-3 | 🟢 16 | 🟢 fresh 0 d | 🟢 1 025 | 9 · gha | 🟢 `checked` | 🟢 **safe** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT | 🟢 7 | 🟢 fresh 1 d | 🟢 777 | 43 · gha | 🟢 `checked` | 🟢 **safe** |
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 BSD-3 | 🟢 5 | 🟢 fresh | 🟢 757 | 13 · gha | 🟢 `checked` | 🟢 **safe** |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🟡 AGPL-3 | 🟢 6 | 🟢 fresh 2 d | 38 | 9 · gha+gitlab | 🟢 `checked` | 🟢 **safe (thin suite)** |
+| [`project-sunbird/sunbird-lms-service`](https://github.com/project-sunbird/sunbird-lms-service) | 🟢 MIT | 🟢 7 | 🟡 slowing 291 d | 🟢 228 | 6 · circle+gha+jenkins | 🟢 `checked` | 🟢 **upgraded from "fork candidate"** |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🟡 GPL-2 | 🟢 6 | 🟢 fresh 3 d | 🟢 577 | 4 · gha | 🟡 **`partial`** | 🟡 **suite exists, CI will not run it for you** |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 Apache-2.0 | 🔴 **1** | — | 🟢 **1 634** | 🔴 **0** | 🟡 **`tests-only`** | 🟡 **big suite, no pipeline** |
+| [`kuali/rice`](https://github.com/kuali/rice) | 🟢 ECL-2.0 | 🟢 5 | — | 🟢 **1 791** | 🔴 **0** | 🟡 **`tests-only`** | 🟡 **big suite, no pipeline** |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🟡 GPL-2 | — | — | 🟢 306 | 1 · 🔴 **travis** | 🔴 **`fossil-ci`** | 🔴 **suite, dead runner** |
+| [`elmsln/elmsln`](https://github.com/elmsln/elmsln) | 🟢 Apache-2.0 | 🔴 **1** | — | 🟢 **1 996** | 34 · 🔴 **travis** | 🔴 **`fossil-ci`** | 🔴 **34 configs, none of them run** |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🟡 GPL-2 | 🔴 **1** | 🟢 fresh 1 d | 🔴 **0** | 🔴 **0** | 🔴 **`bare`** | 🔴 **603 source files, nothing verifies them** |
+| [`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud) | 🟡 **contested** ※ | 🔴 **1** | 🟢 fresh 1 d | 5 | 🔴 **0** | 🟡 `tests-only` | 🔴 **one person, 5 test files** |
+| [`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce) | 🟢 MIT | 🔴 **1** | — | 🔴 **0** | 🔴 **0** | 🔴 **`bare`** | 🔴 **671 source files, nothing verifies them** |
+
+🔵 **Licences and bench figures are carried from this page's prior passes; this pass
+changed neither and added three columns.**
+
+🔴 **※ `xiaochong0302/course-tencent-cloud` carries CONTRADICTORY licence readings on the
+live pages of this KB — `MIT` on two and `GPL-2.0` on two — and this pass declines to
+pick a side. For an LMS this is not a footnote: MIT and GPL-2.0 give opposite answers to
+"can a client ship a closed derivative". It joins the three contested rows recorded at
+`P111-V` on `repos/foundations.md`; none is p111's axis, and `P963` / `P637` / `P342`
+are the instruments that exist to settle them.**
+
+### 🔴 🆕 `P111-X` — the SIS tier is the most exposed tier on BOTH axes, and it is the same tier
+
+🔵 **`P110-O` found that every student-information system on this page not backed by an
+institution is a single human. p111 asks what those single humans left behind.**
+
+| SIS | `bus_factor` | top author | source files | test files | CI | verdict |
+|---|---|---|---|---|---|---|
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 1 | 🔴 **100 %** | 🔴 **603** | 🔴 **0** | 🔴 **0** | 🔴 `bare` |
+| [`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce) | 🔴 1 | 93 % | 🔴 **671** | 🔴 **0** | 🔴 **0** | 🔴 `bare` |
+| [`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud) | 🔴 1 | 🔴 **100 %** | — | 5 | 🔴 **0** | 🟡 `tests-only` |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | — | — | — | 🟢 306 | 1 · 🔴 travis | 🔴 `fossil-ci` |
+| [`ed-fi-alliance-oss/Ed-Fi-ODS`](https://github.com/ed-fi-alliance-oss/Ed-Fi-ODS) | 🟢 3 | — | — | 🟢 423 | 26 · gha | 🟢 **`checked`** |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🟢 3 | — | — | 🟢 469 | 2 · gha | 🟢 **`checked`** |
+
+🔴 **1 274 source files sit across `rosariosis` and `cloud-learning-ce` with zero tests
+and zero CI between them — and both were committed to within three days. These are the
+rows where "it is actively maintained" is most misleading: the activity is real, and
+there is no mechanism by which a change you make can be shown not to have broken
+enrolment, grading or attendance.**
+
+🟢 **The two institution-backed alternatives are the recommendation, and they are placed:
+[`ed-fi-alliance-oss/Ed-Fi-ODS`](https://github.com/ed-fi-alliance-oss/Ed-Fi-ODS)
+(Apache-2.0, 423 tests, 26 GHA configs, North America — the Ed-Fi data standard) and
+[`portabilis/i-educar`](https://github.com/portabilis/i-educar) (469 tests, PR-gated,
+LATAM — Brazil's municipal school-management stack, verified below at `P111-Q`). For a
+greenfield SIS engagement, neither of the solo rows should be the starting point on this
+evidence, whatever their star count.**
+
+### 🟢 🆕 `P111-Y` — the platform work this shelf is actually short of
+
+🔵 **Three platforms on this page hold a combined **5 421 test files** and have no live
+pipeline configured to run them: `kuali/rice` (1 791, no CI), `OpenOLAT/OpenOLAT`
+(1 634, no CI), `elmsln/elmsln` (1 996, 34 Travis configs).**
+
+🟢 **That is a bounded, high-leverage contribution: porting an existing suite onto GitHub
+Actions touches no product code, is the kind of PR an institutional upstream merges, and
+converts the platform from "we hope" to "CI says so" for every later engagement on it.
+It is also the cheapest way to earn standing with an upstream you intend to depend on
+for years.**
+
+---
+
+**Prior passes on this page follow, newest first.**
+
 **Pass 110, 2026-10-10.** ⏱️ **Twentieth pass of this date.**
 
 🟢 **`busfactor.sh` read **296 of 296** addresses, zero unread
@@ -31,7 +119,7 @@ page is not uniform.**
 | [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 BSD-3 | 🟢 5 | — | — | 🟢 fresh | 🟢 **small but real bench** |
 | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🟡 GPL-2 | 🔴 **1** | 🔴 **100 %** | 1 | 🟢 fresh 1 d | 🔴 **one person** |
 | [`academico-sis/academico`](https://github.com/academico-sis/academico) | 🟢 MIT | 🔴 **1** | 🔴 98 % | 5 | 🟢 fresh 3 d | 🔴 **one person** |
-| [`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud) | 🟢 MIT | 🔴 **1** | 🔴 **100 %** | 1 | 🟢 fresh 1 d | 🔴 **one person** |
+| [`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud) | 🟡 **contested** ※ | 🔴 **1** | 🔴 **100 %** | 1 | 🟢 fresh 1 d | 🔴 **one person** |
 
 ### 🔴 🆕 `P110-O` — the SIS tier is where this page is most exposed
 

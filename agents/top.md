@@ -6,6 +6,192 @@ updated: 2026-10-10
 
 # Education — AI agents shelf
 
+**Pass 111, 2026-10-10.** ⏱️ **Twenty-first pass of this date** (109: 18:4x–19:xx UTC;
+110: 19:4x–20:xx; this one 20:4x–21:xx).
+
+🟢 **Instrument this pass: `compose/code/p111-verification-surface/` — `test_p111.sh`
+**66 passed / 0 failed** (fully offline: real git repositories committed on disk and
+served to the real `vsurface.sh` over `file://`, no mocks); `vsurface.sh` read **296 of
+296** shelf addresses in 9 m 41 s, `rc=0` on every one, **zero unread**.**
+
+🔵 **It adds the fifth axis in five passes, and the first one read from the TREE rather
+than from the history.** 🔴 **The result removes a row from p110's "actual foundation"
+table that has no source code in it at all, and it reverses the `Gap 379` ruling p110
+made one hour ago — in the opposite direction from the reversal p110 itself performed.**
+
+### 🔵 🆕 p111 — the question the four history axes cannot reach
+
+| pass | axis | reads | answers | cannot say |
+|---|---|---|---|---|
+| p107 | tag **count** | history | how much ref traffic | it inverts at the top of the shelf |
+| p108 | release **identity** | history | *can I pin it* | whether the pin is from 2019 |
+| p109 | commit **recency** | history | *is it alive* | who is keeping it alive |
+| p110 | author **concentration** | history | *what happens if they stop* | 🔴 **whether I can take it over** |
+| 🟢 **p111** | **verification surface** | 🟢 **the tree** | 🟢 **can I tell when I broke it** | whether the suite is any good |
+
+🔴 **p110's own result is what makes this the next question rather than one of many. 200
+of 296 rows (67.6 %) are `solo`, so for two thirds of this shelf the engagement decision
+is not "depend on it" — it is "vendor it at a SHA and own it". Owning a tree is only
+tractable if the tree can tell you when you have broken it.**
+
+### 🔴 🆕 `P111-J` — the shelf's verification surface, and the denominator that matters
+
+| verdict | meaning | rows | share of 296 |
+|---|---|---|---|
+| 🟢 `checked` | suite + live CI naming a runner **and** firing on `pull_request` | **115** | **38.9 %** |
+| 🟡 `partial` | suite + live CI, but no runner named **or** no PR trigger | 42 | 14.2 % |
+| 🟡 `tests-only` | suite present, **no CI** → runnable, nobody runs it | 45 | 15.2 % |
+| 🔴 `bare` | has source, **no suite, no CI** | 42 | 14.2 % |
+| 🔴 `ci-only` | CI present, **no suite** → the pipeline builds; nothing verifies | 14 | 4.7 % |
+| 🔴 `fossil-ci` | suite present, only CI is a **dead service** (`P111-D`) | 7 | 2.4 % |
+| 🔵 `no-code` | **no source files at HEAD** → not applicable (`P111-F`) | 31 | 10.5 % |
+| 🟢 `UNREAD` | fetch failed — no claim made (`P1040`) | 🟢 **0** | 🟢 **0 %** |
+
+🔵 **`no-code` is load-bearing, not bookkeeping. 31 rows on this shelf are
+specifications, awesome-lists, curriculum datasets and corpora. Calling them `bare`
+would have published "73 bare rows" instead of 42 — a figure 74 % too high, and alarmist
+about repositories that are behaving correctly.** 🟢 **On the 265 code-bearing rows:
+`checked` 43.4 %, `bare` 15.8 %.**
+
+🔴 **Every figure here is an UPPER BOUND, and the direction is stated rather than
+discovered later: the CI read is textual (`P111-H`), so a runner named inside a job that
+is gated off still counts. The error can only make a row look MORE checked than it is.**
+
+### 🔴 🆕 `P111-L` — p110's "actual foundation" contains a repository with no code in it
+
+🔵 **One hour ago `P110-J` published eleven rows as "the shelf's actual foundation", on
+the strength of `bus_factor` ≥ 6 and a commit within 30 days.**
+
+| row | p110 verdict | 🆕 p111 | test files | CI |
+|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 foundation | 🟢 `checked` | 5 014 | 6 · gha |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 foundation | 🟢 `checked` | 2 959 | 16 · gha |
+| [`huggingface/transformers`](https://github.com/huggingface/transformers) | 🟢 foundation | 🟢 `checked` | 1 797 | 59 · circle+gha |
+| [`temporalio/temporal`](https://github.com/temporalio/temporal) | 🟢 foundation | 🟢 `checked` | 1 208 | 22 · gha |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 foundation | 🟢 `checked` | 1 033 | 21 · gha |
+| [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 foundation | 🟢 `checked` | 1 025 | 9 · gha |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 foundation | 🟢 `checked` | 777 | 43 · gha |
+| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🟢 foundation | 🟢 `checked` | 235 | 7 · gha |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🟢 foundation | 🟢 `checked` | 38 | 9 · gha+gitlab |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🟢 foundation | 🟡 **`partial`** | 577 | 4 · gha |
+| [`lukeslp/awesome-accessibility`](https://github.com/lukeslp/awesome-accessibility) | 🟢 foundation | 🔴 **`no-code`** | 🔴 **0** | 🔴 **0** |
+
+🔴 **`lukeslp/awesome-accessibility` is a curated list. It has 46 authors and a
+`bus_factor` of 6, it was committed to six days ago, and it contains no source files
+whatsoever. It sat in a table headed "institution-backed and alive" because tag counts,
+release identities, commit dates and author emails are all properties that a Markdown
+list has exactly as much of as a compiler does.**
+
+🟢 **The transferable rule: the four history axes cannot distinguish code from prose. A
+"foundation" claim needs the tree. Corrected, the foundation layer is **nine `checked`
+code repositories**, one `partial`, and one list that was never a code foundation —
+not eleven.**
+
+### 🔴 🆕 `P111-N` — 39 rows must be forked and have nothing to fork with
+
+🔵 **The cross product of p110 and p111 is the decision table this KB did not have.**
+
+| p110 band | `bare` | `tests-only` | `ci-only` | `fossil-ci` | `partial` | `checked` | `no-code` | total |
+|---|---|---|---|---|---|---|---|---|
+| 🔴 `solo` | 🔴 **39** | 35 | 10 | 3 | 22 | 64 | 27 | **200** |
+| 🟡 `pair` | 2 | 7 | 2 | 4 | 13 | 21 | 1 | 50 |
+| 🟢 `small` | 1 | 3 | 2 | 0 | 5 | 18 | 2 | 31 |
+| 🟢 `broad` | 🟢 **0** | 🟢 0 | 0 | 0 | 2 | 🟢 **12** | 1 | 15 |
+
+🔴 **Of the 173 `solo` rows that carry code, 109 (63.0 %) are not `checked`: p110 says
+you must own them, and p111 says 39 of them cannot tell you when you broke them.** 🟢
+**The `broad` tier is the mirror image: zero `bare`, zero `tests-only`, 12 of 15
+`checked`. The two axes agree at the top of the shelf and diverge hardest in the middle.**
+
+**The worst corner — `solo` + `bare`, by source-file count (the cost of owning it):**
+
+| repo | source files | top author | what it is |
+|---|---|---|---|
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **603** | 🔴 100 % | SIS (`P111-Q`) |
+| [`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce) | 🔴 **671** | 93 % | LMS (China) |
+| [`Earth-OL-Player/Ai_learn_project`](https://github.com/Earth-OL-Player/Ai_learn_project) | 325 | 95 % | AI learning app |
+| [`celtic-project/LTI-PHP`](https://github.com/celtic-project/LTI-PHP) | 🔴 **115** | 98 % | 🔴 **LTI library — infrastructure** |
+| [`codeXsidd/Studivexa`](https://github.com/codeXsidd/Studivexa) | 67 | 100 % | student platform |
+| [`alvarogregori/moodle-ai-graded-assignment`](https://github.com/alvarogregori/moodle-ai-graded-assignment) | 32 | 100 % | Moodle AI grading |
+| [`JazminVidal/gop-pykaldi`](https://github.com/JazminVidal/gop-pykaldi) | 31 | 100 % | pronunciation scoring |
+| [`a2br/moodle-mcp`](https://github.com/a2br/moodle-mcp) | 6 | 100 % | 🔴 **MCP gate p110 headlined** |
+| [`Qwen-Applications/OpenRS`](https://github.com/Qwen-Applications/OpenRS) | 12 | 71 % | 🔴 **rubric half of `Gap 379`** |
+| [`planepig/rubricbench`](https://github.com/planepig/rubricbench) | 1 | 75 % | 🔴 **rubric half of `Gap 379`** |
+
+🔴 **`celtic-project/LTI-PHP` is the row to read twice. It is an LTI 1.3 library — the
+interoperability layer other things are built ON — at 115 source files, 98 % one author,
+zero tests and zero CI.**
+
+### 🔴 🆕 `P111-K` — the agent rows p110 named, on the tree axis
+
+🔵 **p110 reported that nine of the thirteen rows in its headline agent table are `solo`,
+and it named those nine. p111 asks the next question of all nine, plus three more rows
+from the same layer — and the answer does not track the bench.**
+
+| row | p110 `bus_factor` | 🆕 p111 | tests | CI |
+|---|---|---|---|---|
+| [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🔴 1 (61 %) | 🟡 `partial` | 🟢 279 | 2 · gha |
+| [`jeanlucio/moodle-local_aihub`](https://github.com/jeanlucio/moodle-local_aihub) | 🔴 1 (99 %) | 🟢 **`checked`** | 22 | 4 · gha |
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) | 🔴 1 (99 %) | 🟢 **`checked`** | 28 | 1 · gha |
+| [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | 🔴 1 (100 %) | 🟢 **`checked`** | 17 | 1 · gha |
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🔴 1 (100 %) | 🟢 **`checked`** | 8 | 1 · gha |
+| [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | 🔴 1 (100 %) | 🔴 **`ci-only`** | 🔴 **0** | 1 · gha |
+| [`wanghaoyu0408/OpenRubrics`](https://github.com/wanghaoyu0408/OpenRubrics) | 🟡 2 (33 %) | 🟡 `tests-only` | 32 | 🔴 **0** |
+| [`Qwen-Applications/OpenRS`](https://github.com/Qwen-Applications/OpenRS) | 🔴 1 (71 %) | 🔴 **`bare`** | 🔴 **0** | 🔴 **0** |
+| [`planepig/rubricbench`](https://github.com/planepig/rubricbench) | 🔴 1 (75 %) | 🔴 **`bare`** | 🔴 **0** | 🔴 **0** |
+| [`a2br/moodle-mcp`](https://github.com/a2br/moodle-mcp) | 🔴 1 (100 %) | 🔴 **`bare`** | 🔴 **0** | 🔴 **0** |
+| [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🔴 1 | 🟡 `partial` | 13 | 1 · gha |
+| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🔴 1 (67 %) | 🔴 **`bare`** | 🔴 **0** | 🔴 **0** |
+
+🔴 **A 100 %-one-author repository can be fully `checked` (`moodle-local_aihub`,
+`UniTime`, both `bncc` package repos) and a two-author repository can have no CI at all
+(`OpenRubrics`). The bench axis and the tree axis are close to independent on the agent
+layer, so neither substitutes for the other.**
+
+🟢 **The usable rule for this shelf: `bus_factor` prices the RISK of owning a row;
+the verification verdict prices the COST. A `solo` + `checked` row is a cheap thing to
+own. A `pair` + `bare` row is not, however many people are behind it.**
+
+### 🔴 🆕 `P111-S` — `grep -i test` is wrong in BOTH directions, and the undercount is the larger error
+
+🔵 **Measured on nine of the largest rows on this shelf, naive substring matching against
+the component rule `P111-A` uses:**
+
+| repo | naive `grep -i test` | component rule | error |
+|---|---|---|---|
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 3 851 | 🟢 **7 664** | 🔴 **−3 813 (missed half the suite)** |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 1 793 | 🟢 **2 959** | 🔴 **−1 166** |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 2 224 | 🟢 2 399 | 🔴 −175 |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 1 598 | 777 | 🟡 **+821 (counted QA prose)** |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 2 967 | 2 276 | 🟡 +691 |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 5 546 | 5 014 | 🟡 +532 |
+
+🔴 **The undercount's cause is nameable: `canvas-lms` is Rails, so its suite is **3 446
+paths under `spec/`** named `*_spec.rb` — not one of which contains the string "test".
+Ruby, Jest and RSpec conventions are invisible to a "test" grep.** 🟡 **The overcount's
+cause is the reverse: `moodle` has `public/admin/testoutgoingmailconf.php` (a mail
+feature), `kolibri` has `integration_testing/` documentation, `tutor` has
+`docs/testimonials.rst`.**
+
+🟢 **So the discipline is not "a grep is noisy" — it is that a substring grep on this
+shelf is biased in opposite directions depending on the project's language, and the
+bias is **largest on the best-tested repositories**. That is why `P111-A` matches path
+components and separator-anchored filenames, and why `spec/`, `specs/` and `__tests__/`
+are first-class in it.**
+
+### 🔵 What this pass did NOT establish
+
+🔵 **This instrument reads the tree and the CI text. It does not run the suite, measure
+coverage, or judge whether a test asserts anything.** 🔴 **`openedx/ease` is `checked`
+with 2 005 test files and a `bus_factor` of 1; nothing here says those tests pass, and
+`P238` on this very shelf found a test suite that CONTRADICTED its own source. A
+`checked` verdict means "a change arriving as a PR would be run against a suite", and
+that is all it means.**
+
+---
+
+**Prior passes on this page follow, newest first.**
+
 **Pass 110, 2026-10-10.** ⏱️ **Twentieth pass of this date** (108: 17:4x–18:xx UTC;
 109: 18:4x–19:xx; this one 19:4x–20:xx).
 

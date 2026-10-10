@@ -6,6 +6,136 @@ updated: 2026-10-10
 
 # Education — foundational repos
 
+**Pass 111, 2026-10-10.** ⏱️ **Twenty-first pass of this date.**
+
+🟢 **`vsurface.sh` read **296 of 296** addresses in 9 m 41 s, zero unread
+(`compose/code/p111-verification-surface/`, `test_p111.sh` 66 passed / 0 failed, fully
+offline).**
+
+🔴 **p110 gave "foundational" a bench test and shrank this page to 11 rows. p111 gives
+it a TREE test, and one of those 11 rows turns out to contain no source code at all.**
+
+### 🔴 🆕 `P111-L` — the correction to `P110-J`
+
+🔵 **`P110-J` published eleven rows as "the shelf's actual foundation" on the strength of
+`bus_factor` ≥ 6 plus a commit within 30 days. Both are properties of the HISTORY, and a
+Markdown list has a history exactly like a compiler does.**
+
+| repo | licence | `bus_factor` | p109 | 🆕 p111 verdict | test files | CI |
+|---|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3 | 🟢 9 | 🟢 fresh 7 d | 🟢 **`checked`** | 🟢 5 014 | 6 · gha |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | 🟢 6 | 🟢 fresh 0 d | 🟢 **`checked`** | 🟢 2 959 | 16 · gha |
+| [`huggingface/transformers`](https://github.com/huggingface/transformers) | 🟢 Apache-2.0 | 🟢 11 | 🟢 fresh 1 d | 🟢 **`checked`** | 🟢 1 797 | 59 · circle+gha |
+| [`temporalio/temporal`](https://github.com/temporalio/temporal) | 🟢 MIT | 🟢 11 | 🟢 fresh 0 d | 🟢 **`checked`** | 🟢 1 208 | 22 · gha |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 ECL-2.0 | 🟢 6 | 🟢 fresh 1 d | 🟢 **`checked`** | 🟢 1 033 | 21 · gha |
+| [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 BSD-3 | 🟢 16 | 🟢 fresh 0 d | 🟢 **`checked`** | 🟢 1 025 | 9 · gha |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT | 🟢 7 | 🟢 fresh 1 d | 🟢 **`checked`** | 🟢 777 | 43 · gha |
+| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🟡 AGPL-3 | 🟢 7 | 🟢 fresh 10 d | 🟢 **`checked`** | 🟢 235 | 7 · gha |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🟡 AGPL-3 | 🟢 6 | 🟢 fresh 2 d | 🟢 **`checked`** | 38 | 9 · gha+gitlab |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🟡 GPL-2 | 🟢 6 | 🟢 fresh 3 d | 🟡 **`partial`** | 🟢 577 | 4 · gha |
+| [`lukeslp/awesome-accessibility`](https://github.com/lukeslp/awesome-accessibility) | 🟢 MIT | 🟢 6 | 🟢 fresh 6 d | 🔴 **`no-code`** | 🔴 **0** | 🔴 **0** |
+
+🔴 **`lukeslp/awesome-accessibility` is a curated link list: 46 authors, `bus_factor` 6,
+committed six days ago, **zero source files**. It is a perfectly good list and it was
+never a code foundation — it was in the table because no axis before this one could tell
+code from prose.**
+
+🟢 **So the corrected foundation layer of this KB is **nine `checked` code
+repositories**, with `tao-core` at `partial` beside them. Nine of 296 addresses is
+3.0 % of the shelf — slightly smaller than p110's 3.7 %, and now resting on three
+independent axes (bench, liveness, verification) rather than two.**
+
+### 🟢 🆕 `P111-T` — the wider dependable set: `broad` or `small` bench, `checked`, suite ≥ 200
+
+🔵 **Nine rows is too narrow to source an engagement from, and `P110-J`'s `broad`
+threshold (≥ 6 authors) was deliberately severe. Relaxing the bench to `small` (3–5
+authors) while REQUIRING a `checked` tree and a suite of at least 200 test files gives a
+set that is both staffed and verifiable:**
+
+| repo | licence | `bus_factor` | test files | CI | region |
+|---|---|---|---|---|---|
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🟡 AGPL-3 | 🟢 12 | 🟢 **7 664** | 5 · gha+jenkins | North America |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3 | 🟢 9 | 🟢 5 014 | 6 · gha | EMEA |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | 🟢 6 | 🟢 2 959 | 16 · gha | North America |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🟡 GPL-3 | 🟢 4 | 🟢 2 276 | 5 · gha | EMEA |
+| [`huggingface/transformers`](https://github.com/huggingface/transformers) | 🟢 Apache-2.0 | 🟢 11 | 🟢 1 797 | 59 · circle+gha | North America |
+| [`temporalio/temporal`](https://github.com/temporalio/temporal) | 🟢 MIT | 🟢 11 | 🟢 1 208 | 22 · gha | North America |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 ECL-2.0 | 🟢 6 | 🟢 1 033 | 21 · gha | EMEA |
+| [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 BSD-3 | 🟢 16 | 🟢 1 025 | 9 · gha | North America |
+| [`oppia/oppia-android`](https://github.com/oppia/oppia-android) | 🟢 Apache-2.0 | 🟢 4 | 🟢 888 | 22 · gha | North America |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT | 🟢 7 | 🟢 777 | 43 · gha | North America |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🟡 AGPL-3 | 🟢 3 | 🟢 770 | 10 · gha | North America |
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 BSD-3 | 🟢 5 | 🟢 757 | 13 · gha | North America |
+| [`portabilis/i-diario`](https://github.com/portabilis/i-diario) | 🟡 **contested** ※ | 🟢 5 | 🟢 616 | 2 · gha | 🟢 **LATAM** |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar)  | 🟡 LGPL-3 | 🟢 3 | 🟢 469 | 2 · gha | 🟢 **LATAM** |
+| [`ed-fi-alliance-oss/Ed-Fi-ODS`](https://github.com/ed-fi-alliance-oss/Ed-Fi-ODS) | 🟢 Apache-2.0 | 🟢 3 | 🟢 423 | 26 · gha | North America |
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | 🟢 MIT | 🟢 4 | 🟢 306 | 12 · gha | North America |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 🟡 **contested** ※ | 🟢 4 | 🟢 304 | 3 · gha | APAC |
+| [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | 🟢 MIT | 🟢 3 | 🟢 251 | 17 · gha | North America |
+| [`project-sunbird/knowledge-platform`](https://github.com/project-sunbird/knowledge-platform) | 🟢 MIT | 🟢 5 | 🟢 250 | 15 · circle+gha+jenkins | 🟢 **APAC** |
+| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🟡 AGPL-3 | 🟢 7 | 🟢 235 | 7 · gha | North America |
+| [`project-sunbird/sunbird-lms-service`](https://github.com/project-sunbird/sunbird-lms-service) | 🟢 MIT | 🟢 7 | 🟢 228 | 6 · circle+gha+jenkins | 🟢 **APAC** |
+| [`fwu-de/ais-chat`](https://github.com/fwu-de/ais-chat) | 🟡 **contested** ※ | 🟢 3 | 🟢 201 | 3 · gha | 🟢 **EMEA** |
+
+🔵 **22 rows. Licences are carried from this page's prior passes: this pass changed no
+licence reading and discovered no new repository — it added three columns.**
+
+🔴 **※ `P111-V` — three of these rows carry CONTRADICTORY licence readings across the
+live pages of this KB, and this pass declines to pick a side rather than publish one:**
+
+| repo | reading A | reading B |
+|---|---|---|
+| [`portabilis/i-diario`](https://github.com/portabilis/i-diario) | `AGPL-3.0` | 🟡 `LGPL-3` |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 🟢 `MIT` | 🟡 `MIT/AGPL split` (and a `CC-BY-SA-4.0` reading on a third page) |
+| [`fwu-de/ais-chat`](https://github.com/fwu-de/ais-chat) | 🔴 `AGPL-3.0` (as `FWU-DE/ais-chat`) | 🟢 `EUPL-1.2` (as `fwu-de/ais-chat`) |
+
+🔵 **Two of the three have a plausible mechanism already named on this shelf: a split
+licence read once per component, and a case-variant slug read as two repositories
+(`P439`, `P288`). The third may be a relicensing this KB straddled.** 🟢 **None is
+p111's axis, so none is resolved here. They are flagged because a foundation table is
+exactly the wrong place to launder a contradiction into a single confident cell, and
+because the licence tier is where this KB has the most instruments — `P963`, `P637` and
+`P342` all exist to settle precisely this.**
+
+### 🔴 🆕 `P111-U` — two rows p109 and p110 downgraded that this axis argues back up
+
+🔴 **`instructure/canvas-lms` and `project-sunbird/sunbird-lms-service` were both
+excluded from `P110-J` for cooling: p109 graded them 🟡 `slowing` at 163 d and 291 d.
+On the tree axis they are `checked`, with 7 664 and 228 test files and PR-gated CI.**
+
+🟢 **For a FORK-AND-OWN engagement — which p110 says is the common case on 67.6 % of this
+shelf — a cooling repository with a large PR-gated suite is a better target than a
+freshly-committed solo repository with none. `canvas-lms` has the largest verified suite
+on this shelf; `rosariosis` was committed to yesterday and has zero tests across 603
+source files.**
+
+🔵 **Stated as a rule, because it is the reusable part: liveness tells you whether
+upstream will MEET you; verification tells you whether you can proceed without them.
+When the plan is to proceed without them, the second one dominates.**
+
+### 🔴 🆕 `P111-P` — the biggest suites on this shelf that nothing runs
+
+| repo | test files | CI | verdict | why |
+|---|---|---|---|---|
+| [`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool) | 🔴 **8 347** | 2 · gitlab+azure | 🟡 `partial` | 🔴 **no PR trigger at all** (`P111-M`) |
+| [`kuali/rice`](https://github.com/kuali/rice) | 🔴 **1 791** | 🔴 **0** | 🟡 `tests-only` | no CI configuration at HEAD |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🔴 **1 634** | 🔴 **0** | 🟡 `tests-only` | no CI configuration at HEAD |
+| [`elmsln/elmsln`](https://github.com/elmsln/elmsln) | 🔴 **1 996** | 34 · 🔴 **travis** | 🔴 `fossil-ci` | 34 configs for a dead service (`P111-D`) |
+| [`EducationalTestingService/factor_analyzer`](https://github.com/EducationalTestingService/factor_analyzer) | 702 | 1 · gitlab | 🟡 `partial` | no PR trigger |
+
+🔴 **45 rows (15.2 % of the shelf) are `tests-only`: a suite committed, and no CI
+configuration of any kind at HEAD. `kuali/rice` and `OpenOLAT/OpenOLAT` are both major
+institutional platforms, and between them they carry 3 425 test files that no pipeline
+on this shelf is configured to run.**
+
+🟢 **That is an OPPORTUNITY line, not just a defect: wiring an existing 1 600-file suite
+into GitHub Actions is days of work, it is the kind of contribution upstreams accept,
+and it converts a `tests-only` platform into a `checked` one for whoever does it.**
+
+---
+
+**Prior passes on this page follow, newest first.**
+
 **Pass 110, 2026-10-10.** ⏱️ **Twentieth pass of this date.**
 
 🟢 **`busfactor.sh` read **296 of 296** addresses, zero unread

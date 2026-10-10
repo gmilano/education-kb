@@ -6,6 +6,140 @@ updated: 2026-10-10
 
 # Education — compose patterns
 
+**Pass 111, 2026-10-10.** ⏱️ **Twenty-first pass of this date.**
+
+🟢 **`vsurface.sh` read **296 of 296** addresses, zero unread
+(`compose/code/p111-verification-surface/`, `test_p111.sh` 66 passed / 0 failed, fully
+offline).**
+
+🔴 **Every pattern on this page is a recipe over specific upstream repositories. p110
+repriced them on the bench axis and reversed p109's `Gap 379` ruling. p111 reprices them
+on the tree axis and reverses p110's — in the opposite direction.**
+
+### 🔴 🆕 `P111-K` — `Gap 379` repriced a THIRD time, and the half p110 called riskier is the only ownable one
+
+🔵 **The history of this one bind is the most useful thing on this page, so it is set out
+in full:**
+
+| pass | axis | ruling on `Gap 379` |
+|---|---|---|
+| p109 | commit recency | "consume the BNCC side live; vendor the rubric side at a SHA" |
+| p110 | author concentration | 🔴 **reversed** — "the BNCC side is 100 % one author, the rubric side tops out at 75 %; the half p109 called safe is the MORE concentrated one" |
+| 🟢 **p111** | **verification surface** | 🟢 **reversed again — the BNCC side is the only half you can own at all** |
+
+**The curriculum half** (Brazil, `bncc-dev` — LATAM):
+
+| component | licence | p110 `bus_factor` | 🆕 test files | 🆕 CI | 🆕 verdict |
+|---|---|---|---|---|---|
+| [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | 🟢 MIT + CC BY 4.0 | 🔴 1 (100 %) | 17 | 1 · gha | 🟢 **`checked`** |
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🟢 MIT + CC BY 4.0 | 🔴 1 (100 %) | 8 | 1 · gha | 🟢 **`checked`** |
+| [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | 🟢 MIT + CC BY 4.0 | 🔴 1 (100 %) | 🔴 **0** | 1 · gha | 🔴 **`ci-only`** |
+
+**The rubric half** (China + US academic):
+
+| component | licence | p110 `bus_factor` | 🆕 test files | 🆕 CI | 🆕 verdict |
+|---|---|---|---|---|---|
+| [`wanghaoyu0408/OpenRubrics`](https://github.com/wanghaoyu0408/OpenRubrics) | 🟢 MIT | 🟡 2 (33 %) | 32 | 🔴 **0** | 🟡 **`tests-only`** |
+| [`Qwen-Applications/OpenRS`](https://github.com/Qwen-Applications/OpenRS) | 🟢 Apache-2.0 | 🔴 1 (71 %) | 🔴 **0** | 🔴 **0** | 🔴 **`bare`** |
+| [`planepig/rubricbench`](https://github.com/planepig/rubricbench) | 🟢 MIT | 🔴 1 (75 %) | 🔴 **0** | 🔴 **0** | 🔴 **`bare`** |
+
+🔴 **p110's reasoning was: the rubric half has a wider bench, so it is the safer half to
+own. p111's measurement is that the rubric half has **no tests and no CI anywhere in
+it** — two of three rows are `bare` — while two of the three BNCC rows are fully
+`checked`, PR trigger included, despite being 100 % one author.**
+
+🟢 **The corrected, three-axis rule — and this is the reusable part of the whole page:**
+
+| question you are asking | the axis that answers it |
+|---|---|
+| will upstream meet me on the next minor? | 🔵 **liveness** (p109) |
+| what happens to me if the maintainer stops? | 🔵 **concentration** (p110) |
+| 🟢 **can I change this at all without breaking it silently?** | 🟢 **verification (p111)** |
+
+🔴 **The three do not reduce to one another and they can point in OPPOSITE directions on
+the same repository — `bncc-pacotes` is the proof: maximally concentrated (100 % one
+author), fully verifiable (`checked`). A fork decision needs all three, in this order:
+verification first (can I own it), then concentration (will I have to), then liveness
+(for how long).**
+
+🟢 **Concrete wiring for `Gap 379`, revised:**
+
+1. 🟢 **Vendor `bncc-pacotes` + `bncc-benchmark` at a SHA and run their existing GHA
+   workflows in your fork** — they are `checked`, so your fork's PRs are gated from day
+   one and you inherit a working pipeline rather than building one.
+2. 🔴 **`bncc-dados` is `ci-only`: it has a GHA workflow and zero test files.** Treat it
+   as DATA, pin it by `sha256` (this KB's `P1035`/`P845` payload discipline), and write
+   your own schema assertions — there is no upstream suite to inherit.
+3. 🔴 **For the rubric half, budget to WRITE the suite, not to inherit one.** Start from
+   `OpenRubrics` (`tests-only`, 32 test files, the only half with any tests and the only
+   `pair` bench), port its tests into your fork's CI, and treat `OpenRS` and
+   `rubricbench` as reference corpora rather than as dependencies.
+4. 🟡 **Do not wire `OpenRS` or `rubricbench` into a delivery path.** Both are `bare`
+   AND `solo` AND — per p109 — `slowing` at 219 d and 221 d. All three axes agree on
+   these two rows, which is the one case where a single verdict is safe.
+
+### 🟢 🆕 `P111-AF` — a new pattern the measurement makes available: `tests-only` → `checked` as a deliverable
+
+🔵 **p111 found 45 `tests-only` rows (15.2 % of the shelf): a committed suite and no CI
+configuration at HEAD. Three of them are institutional platforms carrying 5 421 test
+files between them.**
+
+**Recipe — "adopt by wiring", 1–2 weeks per platform:**
+
+| step | what | on which repos |
+|---|---|---|
+| 1 | Fork and pin at a SHA | [`kuali/rice`](https://github.com/kuali/rice) (1 791 tests, ECL-2.0) · [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) (1 634, Apache-2.0) |
+| 2 | Run the existing suite locally; record what already fails | — a suite nobody has run in years is never green on the first attempt, and the failure list IS the adoption risk assessment |
+| 3 | Add a minimal GHA workflow: `on: [push, pull_request]`, the repo's own runner invocation, no new tooling | both |
+| 4 | Upstream the workflow as a PR | 🟢 touches no product code — the PR shape institutional upstreams merge most readily |
+| 5 | For [`elmsln/elmsln`](https://github.com/elmsln/elmsln) and [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic), PORT the Travis config rather than writing fresh | `fossil-ci` rows — the job graph already exists and is merely addressed to a dead service (`P111-D`) |
+
+🟢 **Why this is a pattern and not a chore: it converts an unadoptable platform into an
+adoptable one for every later engagement, it is bounded and estimable (the suite exists;
+only the trigger is missing), it produces a merged upstream contribution that earns
+standing with a body you intend to depend on for years, and step 2 yields a risk
+assessment the client cannot get any other way.**
+
+🔴 **Precondition, stated so the pattern is not mis-sold: `P111-H` means a `checked`
+verdict says "a PR would be run against a suite", NOT "the suite passes". Step 2 exists
+precisely because this KB has already found a suite on this shelf that CONTRADICTED its
+own source (`P238`). Never quote step 3 without step 2.**
+
+### 🔴 🆕 `P111-AG` — the pattern-level risk register, recomputed on both axes
+
+🔵 **Every upstream named in a pattern on this page, scored on p110 × p111. A row that is
+`solo` AND not `checked` is a pattern that cannot be delivered without first building
+the thing that verifies it.**
+
+| upstream | p110 band | 🆕 p111 | pattern exposure |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟡 pair | 🟢 **`checked`** (1 221 tests) | 🟢 **safe to build on** |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 broad | 🟢 `checked` (5 014) | 🟢 **safe** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 broad | 🟢 `checked` (777) | 🟢 **safe** |
+| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🟢 broad | 🟢 `checked` (235) | 🟢 **safe** |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 🟡 pair | 🟢 `checked` (28) | 🟢 **safe** |
+| [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🔴 solo | 🟡 `partial` (279) | 🟡 **suite exists; stand up your own CI** |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟡 pair | 🟡 `partial` (10) | 🟡 **thin suite — assert your own invariants** |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🟢 broad | 🟡 `partial` (577) | 🟡 **good suite, CI will not run it for you** |
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | — | 🟡 `partial` (71, no PR trigger) | 🟡 **xAPI store — verify your own fork** |
+| [`a2br/moodle-mcp`](https://github.com/a2br/moodle-mcp) | 🔴 solo (100 %) | 🔴 **`bare`** | 🔴 **do not put in a delivery path** |
+| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🔴 solo (67 %) | 🔴 **`bare`** | 🔴 **do not put in a delivery path** |
+| [`celtic-project/LTI-PHP`](https://github.com/celtic-project/LTI-PHP) | 🔴 solo (98 %) | 🔴 **`bare`** (115 src) | 🔴 **LTI layer — highest-consequence `bare` row here** |
+| [`Qwen-Applications/OpenRS`](https://github.com/Qwen-Applications/OpenRS) | 🔴 solo | 🔴 **`bare`** | 🔴 **reference only** |
+| [`planepig/rubricbench`](https://github.com/planepig/rubricbench) | 🔴 solo | 🔴 **`bare`** | 🔴 **reference only** |
+
+🔴 **[`celtic-project/LTI-PHP`](https://github.com/celtic-project/LTI-PHP) deserves the
+last word on this page. It is an LTI 1.3 library — the interoperability layer other
+things are built ON — at 115 source files, 98 % one author, **zero tests and zero CI**.
+Any pattern here that speaks LTI inherits that. The mitigation is not a different
+library (this KB has found no permissive alternative with a bench across 111 passes); it
+is to write contract tests against the LTI spec on your own side of the boundary and
+never assume a silent upgrade is safe.**
+
+---
+
+**Prior passes on this page follow, newest first.**
+
 **Pass 110, 2026-10-10.** ⏱️ **Twentieth pass of this date.**
 
 🔴 **Every pattern on this page is a recipe built on specific upstream repositories, so

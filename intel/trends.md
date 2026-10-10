@@ -6,6 +6,120 @@ updated: 2026-10-10
 
 # Education — current trends
 
+**Pass 111, 2026-10-10.** ⏱️ **Twenty-first pass of this date.**
+
+🔴 **The eight mandated searches produced effectively ZERO new trend items for the
+seventh consecutive pass. 24 tokens extracted, 23 of 24 held, and the exception is a
+corroborating detail on a held player (`P111-R`, `intel/market.md`).**
+
+🟢 **The pass's contribution is a trend this KB can state because it MEASURED it rather
+than read it: the open-source education supply has a verification problem, and its shape
+is regional.**
+
+### 🟢 🆕 `P111-AB` — trend: the category's open-source supply is maintained but not verifiable
+
+🔵 **Five passes have now measured this shelf on five independent axes. Read together
+they describe a supply side that looks much healthier from the outside than it is from
+the inside:**
+
+| axis | pass | what the shelf looks like |
+|---|---|---|
+| releases | p108 | pinnable — most rows cut tags |
+| liveness | p109 | alive — most rows committed recently |
+| bench | p110 | 🔴 **67.6 % is one person** |
+| 🆕 verification | p111 | 🔴 **only 38.9 % can tell you when you broke it** |
+
+🔴 **The trend worth carrying into a client conversation: in open-source education the
+commit graph and the release ladder are both LAGGING indicators of whether a project can
+be adopted. Activity is abundant and cheap; a bench and a PR-gated suite are neither.
+38.9 % `checked` across 296 addresses, and 9 to 12 repositories with both a real bench
+and a real suite, is the honest size of the buildable base behind a category growing at
+~40 % a year.**
+
+### 🔴 🆕 `P111-AC` — trend: public-sector education code is well tested and badly wired
+
+🔵 **This is the most actionable pattern p111 found, and it is a public-sector pattern
+specifically.**
+
+| body | region | repos on shelf | suites | verdict |
+|---|---|---|---|---|
+| `opetushallitus` (Finnish National Agency for Education) | EMEA | 8 | 🟢 70 – 1 428 tests each | 🔴 **7 of 8 `partial`** |
+| Apereo Learning Analytics Initiative | EMEA | 6 | 🟢 3 – 46 tests | 🔴 **3 `fossil-ci` (Travis), 2 `tests-only`, 1 `bare`** |
+| `EducationalTestingService` | North America | 3 | 🟢 130 – **8 347** tests | 🔴 **3 of 3 `partial`, none PR-triggered** |
+| `aiverify-foundation` (Singapore) | APAC | 3 | 🟢 35 – 190 tests | 🟢 **3 of 3 `checked`** |
+| `portabilis` (Brazil) | LATAM | 3 | 🟢 166 – 616 tests | 🟢 **3 of 3 `checked`** |
+| `project-sunbird` (India) | APAC | 3 | 🟢 73 – 250 tests | 🟡 **2 `checked`, 1 `partial` (144 CI configs)** |
+
+🔴 **The public bodies that WRITE tests and the public bodies that WIRE them are
+different sets, and the split is not along a development-maturity line: Finland's agency
+ships eight repositories with real suites and leaves seven of them unreachable from a
+pull request, while Brazil's `portabilis` and Singapore's `aiverify-foundation` are
+perfect on this axis.**
+
+🟢 **The consultable trend: "we have tests" and "a contributor's change is tested" have
+decoupled in public-sector education software. For a studio this is the difference
+between a fixed-price engagement and a discovery phase, and it is measurable from outside
+the client's walls before a contract is signed — which is the part worth selling.**
+
+### 🔵 🆕 `P111-AD` — trend: Travis is a dating mechanism for abandoned education code
+
+🔵 **Seven rows on this shelf are `fossil-ci`: a committed test suite whose only CI is a
+service that no longer runs free open-source builds.**
+
+🔴 **[`elmsln/elmsln`](https://github.com/elmsln/elmsln) is the extreme case — **1 996
+test files and 34 Travis configuration files**, a pipeline investment larger than most
+`checked` rows on this shelf, and not one of those configs can execute. Three Apereo LAI
+repos and [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) (306 tests)
+are the same shape.**
+
+🟢 **Because the free tier ended in 2021, `.travis.yml` as the ONLY CI is a reliable date
+stamp: it says the project's last serious infrastructure work predates that. p109 reached
+"graveyard" for the Apereo LAI org from commit dates; p111 reaches it from CI vendor
+choice. Two independent channels agreeing is worth more than either, and the second one
+is readable in a single file.**
+
+### 🔴 🆕 `P111-AE` — the methodological trend: this pass's own biggest error pointed the WRONG WAY
+
+🔵 **`P111-I`: the first draft of this instrument piped the CI body into `grep -q` under
+`set -o pipefail`. `grep` exits at the first match, the writer takes `SIGPIPE`, and
+`pipefail` makes that the pipeline's status — **so a signal that matches EARLY reads as
+ABSENT**.**
+
+🔴 **Measured, not reasoned about: [`oppia/oppia`](https://github.com/oppia/oppia)
+contains `pull_request` 39 times, first in the opening workflow. The piped form reported
+`ci_on_pr=0`, and the runner probe — whose term appears LATE in the same bytes —
+reported `1`. The draft graded one of the best-tested repositories on this shelf
+`partial`.**
+
+🟢 **The transferable half: a measurement bug that is silent AND directionally biased AND
+worst where the signal is strongest will survive casual review, because the rows it
+corrupts are the rows a reviewer is least suspicious of. That is the third time in five
+passes that this KB's own instrument carried a bias pointing at its best rows —
+`P110-A` (merge commits made healthy repos read concentrated) and `P111-S` (substring
+`test` matching misses `spec/`, so Rails suites read half-size) are the other two.**
+
+🔵 **And once this pass, one of this KB's own documented traps caught its author: an
+edit to `intel/market.md` matched the string `## Opportunities by region` inside a PROSE
+sentence elsewhere on the page and cut live p110 content. **The pass-104 banner on that
+same file records the identical trap** — "line 102 was a broken prose line whose stray
+backtick made it match `^## Opportunities by region`, so a compiler reading headings saw
+TWO region blocks". The edit was reverted from git and redone with line-exact anchors
+(`^## Opportunities by region$`), which is the fix in both directions: the trap is that
+the heading text is also ordinary prose, so neither a reader nor a writer may match it
+loosely.**
+
+🟢 **One standing gate finding was resolved as a side effect, and the cause is worth
+recording: pass 104 asserted the block should have "exactly four `###` region children",
+while `p383-region-heading-gate` validates against the CLOSED FIVE-VALUE vocabulary and
+so reported `P383-MISSING-REGION: Global` from then until now. p111 has genuine
+Global-scope content — the 203 shelf rows it could not place — so `### Global` now
+exists and carries it. The gate reports **total 0** across all eight pages, which it did
+not at the start of this pass.**
+
+---
+
+**Prior passes on this page follow, newest first.**
+
 **Pass 110, 2026-10-10.** ⏱️ **Twentieth pass of this date.**
 
 🔴 **The eight mandated searches produced ZERO new trend items for the sixth consecutive
