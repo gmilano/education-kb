@@ -4,6 +4,124 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 🟢 Ninety-sixth pass, 2026-10-10 — **`Gap 376` BOUNDED after four passes without the instrument (122 of 127 rows provably un-drifted)**; `Gap 377` and `Gap 375` DISCHARGED with corrections to their own wording; `P987`–`P988` and `P984`–`P986` adopted; four new gaps opened
+
+⏱️ **Sixth pass of this date.** 91: 2026-10-09 23:0x–00:00 UTC · 92: 00:4x–01:3x · 93: 01:4x–02:24 ·
+94: 02:5x · 95: 03:4x · this pass 04:4x–05:xx. **Append-only.**
+
+### 🔴 The instrument, stated first — fourth consecutive refusal
+
+🔴 **`compose/code/grant-ladder-v4/ladder.sh` AND its offline `test_ladder.sh` were both denied before
+starting** (`[Code from External]`). 🟢 **So pass 96 wrote no classifier** (`P237`), ran the oracle map by
+hand (`P970`), and **executed no repository code.** `Gap 376` is **not** discharged.
+
+🟢 **But it is bounded, and that is new.** `Gap 376` said the census decays by ~12 hand-read rows per pass
+against a 133-row claim and could not say by how much. Pass 96 asked the one question the open channel
+answers cheaply — *is each published row still at the SHA it was measured at?* — over **127
+`(slug, ref, sha7)` triples harvested from all six shelf pages**:
+
+| verdict | n |
+|---|---|
+| 🟢 `CURRENT` | **122** |
+| 🔴 `MOVED` | **5** — all re-read this pass, **all five kept their grant** |
+| `NO-REACH` | **0** |
+| `REF-GONE` | **0** |
+
+🔵 **"Decaying" became "5 rows of 127, and they were read."** 🔴 **It is NOT a re-verification** — a current
+SHA says nothing about whether the 24-name filename reach or the classifier behind that row was sound, and
+**only `grant-ladder-v4` settles that.** 🟢 **The corrective duty keeps its priority and loses its
+vagueness.** Evidence: `compose/code/p987-census-sha-currency/`.
+
+### 🔴 `P987` — the defect that made the audit worth running
+
+| URL | HTTP |
+|---|---|
+| `raw.githubusercontent.com/Submitty/Submitty/ff82521694719bc1e282d046631bf0232c9d673e/README.md` | 🟢 **200** |
+| `raw.githubusercontent.com/Submitty/Submitty/ff82521/README.md` | 🔴 **404** |
+| `raw.githubusercontent.com/Submitty/Submitty/80d7d66/README.md` *(previous 7-char SHA, same repo)* | 🟢 **200** |
+
+🔴 **`raw.githubusercontent.com` resolves the full 40 characters always and the abbreviation only
+sometimes**, inconsistently per commit. 🔴 **An unresolved abbreviation 404s all 24 filenames — which this
+shelf publishes as `no licence payload`.** 🟢 **`P872` caught the one occurrence** (the control 404'd too,
+so the sweep was discarded rather than published) 🟢 **and the blast radius was measured, not assumed: all
+10 published no-payload rows return a 200 control at their published 7-char SHA. 0 of 10 are artefacts.**
+🔵 **`P987`: a 7-character SHA is a display format, not an address.**
+
+### 🟢 Gaps DISCHARGED this pass — both with corrections to their own wording
+
+| gap | discharge |
+|---|---|
+| **`Gap 377`** — *"`pom.xml`/`build.gradle` are not in the grant ladder's path list … cheap to add, and it pays on every JVM platform here"* | 🟢 **Cheap, yes — but nothing needs writing.** `p289-maven-manifest/maven_license.py` (11/11, with its negative control) was wired into `p283::PARSERS` and `sweep_named.sh` by **`P294`**; `build.gradle` is in `p172`'s list. **`grant-ladder-v4` needs a one-line import** (`P237`). 🔴 **And `build.gradle` is NOT a licence oracle** — Artemis declares none in 52 855 B; the asymmetry is **Maven Central's publishing requirement**, not the language. 🟢 **The oracle pays on 4 of 4 Maven platforms.** |
+| **`Gap 375`** — the unprobed permissive-tier versions | 🟢 **DISCHARGED as *unmeasurable*, with the mechanism.** `pupilfirst`, `academico` and `open-tutor-ai-CE` all serve their manifest at **200 with no `version` field**; two declare `"private": true` — the npm convention for a workspace root never published to a registry. 🟢 **`P985`** splits the result three ways. 🔴 **`academico`, this KB's nearest permissive SIS, has ZERO tags.** |
+
+### 🆕 New gaps opened
+
+- 🟡 **`Gap 379` — the rubric layer is permissive and nothing binds it to a curriculum standard.** The
+  judge (`OpenRS`, Apache-2.0), the generator (`OpenRubrics`, MIT) and the calibrator (`rubricbench`, MIT,
+  **1 147 expert-annotated comparisons**) all exist; `bncc-dev/bncc-pacotes` supplies **1 721 verified
+  objectives** behind MCP. 🔵 **Four permissive layers, three publishers, no integration — `Gap 369`'s
+  exact shape.** 🟢 **This reframes the five-pass alignment gap from a supply gap to a wiring gap, which
+  is a scoped engagement rather than a research bet.** Specified as `P96-A`.
+- 🔴 **`Gap 380` — this KB addresses payloads by abbreviated SHA** (`P987`). `grant-ladder-v4` takes a ref
+  or short SHA straight into the URL and carries the defect today. **Fix: one extra `git ls-remote` field.**
+- 🔴 **`Gap 381` — nothing reconciles `compose/code/` against the shelf.** `UniTime/unitime` is
+  **Apache-2.0**, pristine 11 357 B payload, **101 release tags**, and this repository has carried a
+  **tested** MCP gate for it since **pass 42** — while it reached no shelf page until pass 96. 🔵 **A
+  verified asset can sit in the evidence directory indefinitely without ever being offered to a client.**
+  **Fix: grep `compose/code/*/README.md` for `github.com/` slugs and diff against the shelf pages.**
+- 🔴 **`Gap 382` — the pom oracle reads `<name>` where `<url>` is the identifier** (`P988`). **4 of 4
+  Maven platforms carry a canonical licence URL; 3 of 4 spell the name correctly** — `OpenOLAT` ships
+  **"Apache 2.0 Open Source L6icense"**. 🟡 `p289` survives it only because
+  `lib/license_family.sh`'s declaration branch keys on bare `apache` — 🔵 **right by luck, which is
+  `P637`'s `CONTRATO` class in the wild.** **Fix: one XPath sibling.**
+
+### 🟢 Principles adopted
+
+| id | statement |
+|---|---|
+| **`P984`** | **When a repository serves two licence files of very different sizes, the SMALL one has the facts.** Chamilo's unread 1 614 B `license.txt` yields **GPL-3.0-*or-later*** (the shelf published bare `GPL-3.0`; `P561`), **12 holders in 5 countries with `BeezNest Latino SAC, Peru` FIRST** (`P800`), and a **third** licence location (`documentation/license.html` — `Gap 378`'s shape in a licence file). 🔴 **A first-match ladder ordered `LICENSE` first reads the uninformative file and stops.** |
+| **`P985`** | **"No version" is three different facts and they price differently:** `UNVERSIONED-BUT-RELEASED` (manifest silent, tags present), `COMPONENT-VERSIONED` (tags version the parts, never the whole), `UNRELEASED` (no manifest version **and** no tags). 🔴 **The third is a build commitment, not a metadata gap.** |
+| **`P986`** | **`P978` is a strong tendency, not a law.** `UniTime` declares `4.9` against tag `v4.9.152` — the default branch names a **shippable** line. Sakai, Opencast and OpenOLAT all do the opposite. |
+| **`P987`** | **A 7-character SHA is a display format, not an address.** Publish the abbreviation for a human; address the payload with the full 40. |
+| **`P988`** | **In a Maven `pom.xml` the `<url>` is an identifier and the `<name>` is prose — only one is typo-proof.** Read both; prefer the URL. 🔵 **Worth most on ECL-2.0, the family generic tooling calls unclassified.** |
+
+### 🔴 Research gaps, stated rather than hidden
+
+- 🔴 **ZERO primary-source reads this pass.** `WebFetch` returned `getaddrinfo ENOTFOUND` for
+  `digital-strategy.ec.europa.eu`, `www.gibsondunn.com` and `en.wikipedia.org`; raw `curl` returned
+  **`000`** on three legal-publisher URLs. 🟢 **Every regulatory claim added this pass carries
+  search-summary grade and was corroborated by two independent search rounds over different source sets.**
+- 🔴 **Africa, sixth pass — and the mechanism is now known.** A paired *"Gulf AND Africa"* query returned
+  **nine sources, all Gulf, zero African.** 🔵 **Pair-querying guarantees the louder sub-region and hides
+  the quieter one's silence as coverage.** 🟢 **Remedy pre-registered: Kenya, Nigeria, South Africa and
+  Egypt as four separate queries.** Existing African rows are carried, not advanced.
+- 🔴 **`github trending education AI {year}`: SIXTH consecutive zero. RETIRE the query.** It returns
+  materials *about* AI (`generative-ai-for-beginners`, `developer-roadmap`, `100-Days-Of-ML-Code`), not AI
+  *for* education. 🔵 **The ambiguity is in the phrase, not the index.**
+- 🔴 **`Gap 372` unchanged** — no permissive production-grade open-response scorer found. Validation layer
+  Apache/BSD, production scorers AGPL-3.0, research scorers ungranted or CC.
+- 🔴 **`api.github.com` 403 for a fifth consecutive pass**, so no ★ on any shelf page moved. **`—` means
+  *not read*, never zero.**
+- 🔴 **`Gap 266` NARROWED, not discharged** — both first-party hosts still unreachable. 🟢 Saudi's
+  instrument is nonetheless named (Vision 2030 HCDP; **MoE + MCIT + SDAIA**; **>6 M students**) and the
+  UAE private-school limb gains a **second independent source** for the direction pass 93 refused on `n=1`.
+- 🔴 **The Article 50(2) date conflict got WORSE**: this pass's sources assign **2 Dec 2026 to systems
+  already on the market**, the opposite of this KB's table. 🔵 **Unresolved and sharper, on the limb that
+  actually binds in EMEA today.**
+
+### 🔵 Pre-registered actions for pass 97
+
+1. 🟢 **Wire `p289`'s Maven reader into `grant-ladder-v4`** — one import, no new code (`P237`) — then
+   **re-run `--all` on `chamilo/chamilo-lms`** and confirm it reports both licence files (`P984`).
+2. 🟢 **Address payloads with 40-character SHAs** (`P987`).
+3. 🔴 **Read `<url>` as well as `<name>` in the pom oracle** (`P988`) and re-measure `OpenOLAT` — the row
+   currently right by luck.
+4. 🔴 **If repository code becomes executable: re-derive the 127-row census and contradict these pages on
+   the record.** `Gap 376` is still corrective and still owed.
+5. 🟢 **Grep `compose/code/*/README.md` for `github.com/` slugs and diff against the shelf** (`Gap 381`).
+6. 🟢 **Probe `documentation/license.html` on Chamilo** (`Gap 378`, third form).
+7. 🟢 **Run Kenya, Nigeria, South Africa and Egypt as four separate queries** — never paired.
+
 ## 🔴 Ninety-second pass, 2026-10-10 — **the shelf's own instrument regressed a licence this KB had already corrected, and the wrong value reached a client recommendation**; `Gap 335` DISCHARGED after eight passes, `Gap 356` DISCHARGED with a gate that fails on first run, `Gap 367` targeted and HARDENED, and `P960`–`P968` are adopted
 
 ⏱️ **Second pass of this date.** Pass 91 ran 2026-10-09 23:0x → 00:00 UTC; this pass ran 2026-10-10

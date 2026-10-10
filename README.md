@@ -22,6 +22,107 @@ education-kb/
 └── compose/code/  # Código ejecutable y probado, no prosa
 ```
 
+## Pase 96 — 2026-10-10
+
+⏱️ **Sexto pase de esta fecha** (el 91 corrió 23:0x–00:00 UTC; el 92, 00:4x–01:3x; el 93, 01:4x–02:24;
+el 94, 02:5x; el 95, 03:4x; este, 04:4x–05:xx).
+
+**El hallazgo principal: `Gap 376` llevaba cuatro pases diciendo que el censo se degradaba sin poder decir
+cuánto. Ahora se sabe: de las 127 filas publicadas con `(slug, ref, sha7)`, 122 siguen EXACTAMENTE en el
+SHA en que se midieron, 0 son inalcanzables, 0 refs desaparecieron — y las 5 que se movieron se releyeron
+este pase y las 5 conservaron su licencia.** 🔵 **«Se está degradando» pasó a ser «5 filas de 127, y se
+leyeron».**
+
+🔴 **El sandbox sigue sin ejecutar código del repositorio (CUARTO pase consecutivo)**: `ladder.sh` **y** su
+suite offline `test_ladder.sh` fueron denegadas antes de arrancar. 🟢 **Y otra vez no se escribió ningún
+clasificador** (`P237`). 🔴 **`Gap 376` NO queda descargado** — un SHA vigente no dice nada sobre si el
+alcance de 24 nombres ni el clasificador que produjeron esa fila eran correctos, y eso **sólo** lo resuelve
+`grant-ladder-v4`. 🟢 **Lo que cambió es que la deuda ya tiene tamaño.**
+
+### 🔴 `P987` — un SHA de 7 caracteres es un formato de presentación, no una dirección
+
+| URL | HTTP |
+|---|---|
+| `…/Submitty/Submitty/ff82521694719bc1e282d046631bf0232c9d673e/README.md` | 🟢 **200** |
+| `…/Submitty/Submitty/ff82521/README.md` | 🔴 **404** |
+| `…/Submitty/Submitty/80d7d66/README.md` *(el SHA corto ANTERIOR, mismo repo)* | 🟢 **200** |
+
+🔴 **Mismo objeto: la abreviatura da 404 y los 40 caracteres completos no** — y de forma **inconsistente
+por commit**, lo que falla en silencio. 🔴 **Una abreviatura que no resuelve da 404 en los 24 nombres, que
+es exactamente lo que este estante publica como `sin payload de licencia`.** 🟢 **`P872` lo atrapó** (el
+testigo `README.md` también dio 404, así que el barrido se descartó en vez de publicarse) 🟢 **y el radio
+se MIDIÓ en vez de suponerse: las 10 filas publicadas como «sin licencia» devuelven testigo 200 en su SHA
+publicado. 0 de 10 son artefactos del instrumento.**
+
+### 🟢 Dos gaps DESCARGADOS, y los dos con una corrección a su propia redacción
+
+- 🟢 **`Gap 377`** pedía *«agregar `pom.xml`/`build.gradle` a la lista de rutas del ladder; es barato»*.
+  **Barato sí, pero no hay que escribir nada:** `p289-maven-manifest/maven_license.py` (**11/11**, con su
+  control negativo) ya estaba cableado a `p283::PARSERS` y a `sweep_named.sh` por **`P294`**, y
+  `build.gradle` ya está en la lista de `p172`. 🔵 **`grant-ladder-v4` necesita UN import, no un lector
+  nuevo** (`P237`). 🔴 **Y la otra mitad del gap es FALSA: `build.gradle` no es oráculo de licencia** —
+  Artemis no declara ninguna en **52 855 B**. 🔵 **La asimetría es la política de distribución de Maven
+  Central, no el lenguaje.** 🟢 **El oráculo sí paga: 4 de 4 plataformas Maven declaran.**
+- 🟢 **`Gap 375`** queda descargado **como INMEDIBLE, con el mecanismo nombrado.** `pupilfirst`,
+  `academico` y `open-tutor-ai-CE` sirven su manifiesto con **200 y sin campo `version`**; dos declaran
+  `"private": true`, la convención npm para una raíz de workspace que nunca se publica a un registro.
+  🟢 **`P985` separa «sin versión» en tres hechos que se cotizan distinto** — y 🔴 **`academico`, la
+  candidata a SIS permisivo de esta base, tiene CERO tags.**
+
+### 🟢 Altas: una plataforma y una capa entera
+
+- 🟢 **[`UniTime/unitime`](https://github.com/UniTime/unitime)** — **Apache-2.0**, payload **11 357 B
+  prístino**, **101 tags**, `v4.9.152`, y su `pom.xml` lo confirma de forma independiente. **Horarios,
+  cursos y matriculación universitaria**: la única capa para la que el tier permisivo no tenía nada.
+  🔴 **Y el hallazgo es sobre esta base, no sobre UniTime:** `compose/code/unitime-mcp-gate/` lleva una
+  puerta MCP **probada** desde el **pase 42** y la plataforma no estaba en ninguna página del estante
+  (`Gap 381`). 🔴 **Término de costeo obligatorio: su `NOTICE` son 22 526 B y da 200** — el §4(d) de
+  Apache-2.0 obliga a propagarlo.
+- 🟢 **La capa de RÚBRICAS, cuatro filas permisivas, hallada con la primera consulta que nombró la TÉCNICA
+  y no la industria** (`P955`, cuarto pase consecutivo): `OpenRS` (**Apache-2.0**) juzga con criterios
+  ponderados y veredicto interpretable, `OpenRubrics` (**MIT**) genera rúbricas, `rubricbench` (**MIT**)
+  calibra al juez contra **1 147 comparaciones anotadas por expertos**, `awesome-rubric-rewards` (**CC0**)
+  indexa. 🔵 **Esto reescribe el gap de alineación curricular que esta base declaró cinco veces: no es un
+  gap de OFERTA, es un gap de CABLEADO** — y un cableado es un encargo acotado, no una apuesta de
+  investigación. `Gap 379`, costeado como **`P96-A`**.
+
+### 🔴 El cambio regional que invierte la prioridad de esta base — `T15`
+
+🔴 **La UE aplazó las obligaciones de alto riesgo del Anexo III —evaluar resultados de aprendizaje entre
+ellas— del 2 ago 2026 al 2 dic 2027.** 🟢 **Vietnam puso en vigor deberes equivalentes el 15 ago 2026,
+trece días después de la fecha que la UE dejó vacante**, con `Decision 33/2026/QD-TTg` (firmada por el
+vice-primer ministro Hồ Quốc Dũng, publicada el 30 jun 2026; deberes de implementación en el
+`Decree 142/2026/NĐ-CP`): **46 sistemas de alto riesgo en 6 sectores, y educación son 3 de ellos.**
+
+🟢 **Y el primero de esos tres limbos no habla de evaluación:** *«contenido de autoestudio generado a
+partir de fuentes de datos no controladas»*. 🔵 **Un tutor RAG que nunca califica queda dentro del alcance
+en Vietnam por el ORIGEN de su material.** 🟢 **Esta base ya tenía la respuesta medida** — `T11`:
+fundamentar un tutor alineado al currículo en datos de estándares verificados lleva la alucinación de
+**31,9 % → 0,2 %**, y `bncc-dev/bncc-pacotes` expone **1 721 objetivos verificados** por MCP con el dataset
+embebido. 🔵 **Así que el *grounding* deja de ser un argumento de calidad y pasa a ser un CONTROL
+REGULATORIO** — mucho más fácil de vender. Costeado como **`P96-B`**.
+
+🟡 **`P94-A` no se retira: se RE-SECUENCIA.** El entregable y su capa de evidencia permisiva (`rsmtool`
+Apache-2.0, `skll` BSD-3) no cambian. 🔴 **Cambió el comprador.** **Véndase en APAC con plazo vivo y en
+EMEA como preparación para 2027.**
+
+### 🔴 Lo que NO se consiguió, dicho en vez de ocultado
+
+- 🔴 **CERO lecturas de fuente primaria.** `WebFetch` devolvió `getaddrinfo ENOTFOUND` en
+  `digital-strategy.ec.europa.eu`, `www.gibsondunn.com` y `en.wikipedia.org`; `curl` crudo devolvió
+  **`000`** en tres URLs de editoriales jurídicas. 🟢 **Toda afirmación regulatoria de este pase lleva
+  grado «resumen de búsqueda» y fue corroborada por dos rondas independientes sobre conjuntos de fuentes
+  distintos.**
+- 🔴 **África, sexto pase sin nada — y este pase se halló el MECANISMO.** Una consulta que empareja
+  *«Golfo Y África»* devolvió **nueve fuentes, todas del Golfo, cero africanas.** 🔵 **Emparejar
+  sub-regiones garantiza la respuesta de la más ruidosa y disfraza el silencio de la otra como cobertura.**
+  🟢 **Remedio pre-registrado: Kenia, Nigeria, Sudáfrica y Egipto como cuatro consultas separadas.**
+- 🔴 **`github trending education AI {año}`: SEXTO cero consecutivo. RETIRAR la consulta** — devuelve
+  materiales *sobre* IA, no IA *para* educación. 🔵 **La ambigüedad está en la frase, no en el índice.**
+- 🔴 **`Gap 372` sin cambios**: no hay corrector permisivo de grado productivo para respuesta abierta.
+- 🔴 **`api.github.com` 403 por quinto pase consecutivo**, así que ninguna ★ se movió. **`—` significa *no
+  leído*, nunca cero.**
+
 ## Pase 94 — 2026-10-10
 
 ⏱️ **Cuarto pase de esta fecha** (el 91 corrió 23:0x–00:00 UTC; el 92, 00:4x–01:3x; el 93, 01:4x–02:24;

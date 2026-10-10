@@ -6,6 +6,21 @@ updated: 2026-10-10
 
 # Education — foundational repos
 
+**Pass 96, 2026-10-10.** ⏱️ **Sixth pass of this date** (91: 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93:
+01:4x–02:24; 94: 02:5x; 95: 03:4x; this one 04:4x–05:xx). 🔴 **Repository code was refused for a FOURTH
+consecutive pass** — `grant-ladder-v4/ladder.sh` **and** its offline `test_ladder.sh` were both denied
+before starting (`[Code from External]`). 🟢 **So no classifier was written** (`P237`) and the oracle map
+was run by hand (`P970`).
+
+🟢 **What pass 96 adds to this page: Tier 2f (rubric-based evaluation, 4 permissive rows), one new Tier 3
+platform row (`UniTime`), `P987`–`P986`, `Gap 377` answered with a correction to its own wording, and
+`Gap 375`'s remainder discharged as *unmeasurable* with the mechanism named.** 🟢 **And the corrective
+duty `Gap 376` declared was executed in the one axis the open channel allows: 127 published
+`(slug, ref, sha7)` triples probed, 122 provably un-drifted, 5 moved and all 5 re-read.** Evidence in
+`compose/code/p987-census-sha-currency/`. Everything not marked 🆕 p96 is carried and was not re-read.
+
+#### Pass 94 — carried below, unchanged
+
 **Pass 94, 2026-10-10.** ⏱️ **Fourth pass of this date** (91: 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93:
 01:4x–02:24; this one 02:5x). 🔴 **Repository code still will not execute in this sandbox**, so no
 classifier was written for the second pass running (`P237`); the oracle map was run by hand and payloads
@@ -185,6 +200,41 @@ platform tier are in `verticals/solutions.md`. In one line each:
   Sumac** while `release/teak.*` and `release/ulmo.*` exist only as **tags** under a **changed prefix**.
   Cross-check the deployment distribution (`overhangio/tutor` → `v22.0.2`).
 
+## 🟢 🆕 p96 Tier 2f — the **rubric** layer, and why it reframes the alignment gap rather than closing it
+
+🔴 **This page has carried a five-pass negative:** *nothing permissive audits whether content meets a
+learning outcome with usable evidence.* 🟢 **The technique half of that is now false.** Found on the first
+query naming **rubrics** rather than education — `P955` for a fourth consecutive pass:
+
+| repo | grant (payload · bytes · ref · SHA-40 prefix) | ★ | layer it supplies |
+|---|---|---|---|
+| 🆕 p96 [`Qwen-Applications/OpenRS`](https://github.com/Qwen-Applications/OpenRS) | 🟢 **Apache-2.0** · 10 770 B · `master` · `4c7f22b5707536` | — | 🟢 **the judge** — 50+ query-type rubric sets, criteria **weighted critical / core / important / highlight**, bi-directional A/B debiasing, **interpretable verdicts** |
+| 🆕 p96 [`wanghaoyu0408/OpenRubrics`](https://github.com/wanghaoyu0408/OpenRubrics) | 🟢 **MIT** · 1 067 B · `main` · `1a40c14cb7827ae` | — | 🟢 **the generator** — synthetic rubric generation at scale (ACL 2026 long) |
+| 🆕 p96 [`planepig/rubricbench`](https://github.com/planepig/rubricbench) | 🟢 **MIT** · 1 067 B · `main` · `07daecc72ac159` | — | 🟢 **the calibrator** — **1 147 pairwise comparisons**, expert-annotated atomic rubrics, scores reasoning **and** verdict |
+| 🆕 p96 [`chrisliu298/awesome-rubric-rewards`](https://github.com/chrisliu298/awesome-rubric-rewards) | 🟡 **CC0-1.0** · 7 048 B · `main` · `4897f496d7868e` | — | the index — **a list, not a dependency** |
+
+🟢 **`P974` positive class, second instance, with the missing section identified.** `OpenRS`'s payload is
+**10 770 B** against pristine Apache-2.0's **11 357 B**; the clause probe returns **4 of 4** headings and
+**`APPENDIX` ABSENT**. 🔵 **An honest abridgement that dropped only the "how to apply" boilerplate** — the
+byte gap had a cause and the cause was benign.
+
+### 🔵 Why this is a reframe and not a discharge — `Gap 379`
+
+🔴 **None of these four knows what a learning outcome is.** They bind a rubric to an **instruction**.
+🟢 **And this page already carries the other end of the bind, permissively:**
+[`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) (**Tier 1b** — MIT code + CC BY 4.0
+data, **1 721 verified BNCC objectives** behind **7 MCP tools**, dataset embedded so lookups are local) and
+[`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) (**MIT** judging
+code against research-backed educational rubrics — 🔴 corpora **CC-BY-NC-SA-4.0**).
+
+🔵 **Four permissive layers, three unrelated publishers, zero integrations.** 🟢 **That is `Gap 369`'s exact
+shape, and it is tracked as `Gap 379`** with a concrete specification in `P96-A`.
+
+🟢 **One subsidiary finding worth carrying: `rubricbench`'s 1 147 expert-annotated comparisons are MIT** —
+**the first permissive annotated comparison set this shelf has found**, even though its domains (Chat, IF,
+STEM, Coding, Safety) are not education. 🔵 **It is the thing `evaluators`' NC corpora are not**, and for
+*calibrating a judge* rather than *scoring a student* the domain mismatch matters less than the grant.
+
 ## 🆕 Tier 2b — the learner model — **`Gap 335` discharged after eight passes untouched**
 
 🔴 **`Gap 335` (knowledge tracing) was the oldest untouched item on this shelf**, named openly in
@@ -299,6 +349,29 @@ identifier:** `Otter-Autograder` pastes the **entire 35 kB GPL-3.0 text** into t
 | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | **Apache-2.0** · 11 357 B · `main` · `96f33fa` | — | **EMEA** (Hugging Face, FR lineage) | Minimal agent loop; the low-ceremony option when LangGraph is too much machinery. |
 | [`huggingface/agents-course`](https://github.com/huggingface/agents-course) | **Apache-2.0** · 11 357 B · `main` · `3c469e7` | — | **EMEA** | 🟢 The permissive **teaching** counterpart to `smolagents` — see the AI-literacy tier in `agents/top.md`. |
 
+## 🟢 🆕 p96 `UniTime` — a verified permissive platform that lived in `compose/code/` and on no shelf page
+
+| repo | grant (payload · bytes · ref · SHA-40 prefix) | version | layer |
+|---|---|---|---|
+| 🆕 p96 [`UniTime/unitime`](https://github.com/UniTime/unitime) | 🟢 **Apache-2.0** · `LICENSE` **11 357 B** *(pristine upstream text)* · `master` · `15668a5e54d155` | 🟢 `pom.xml` **`4.9`** · **101 tags**, newest **`v4.9.152`** | 🟢 **University timetabling, course and student scheduling** — Apereo Foundation. **A layer the permissive tier had nothing for.** |
+
+🔴 **It appears on no shelf page, while `compose/code/unitime-mcp-gate/` has carried a tested MCP gate for
+it since pass 42** — re-audited in pass 45 against the four controls written for SEB Server, passing 15/15
+on the literal-path control. 🔵 **The KB held the integration and never listed the platform. Nothing
+reconciles the `compose/code/` inventory against the shelf**, which is `Gap 381`.
+
+🔴 **The costing term that must travel with the row: `NOTICE` is 22 526 B and HTTP 200.** Apache-2.0 §4(d)
+makes propagating NOTICE a condition of redistribution, so **a deliverable built on UniTime ships a 22 KB
+attribution file.** 🔵 **Cheap to satisfy, expensive to discover in procurement review** — and this is the
+same oracle class as `P917` (Fedena's grant living only in `NOTICE`), used here for an obligation rather
+than for a grant.
+
+🟢 **`P986` — `UniTime` is the first JVM row on this shelf to INVERT `P978`.** Its `pom.xml` declares
+**`4.9`** and its newest tag is **`v4.9.152`**: the default branch names a **shippable line**, not a
+`-SNAPSHOT`. Sakai (`27-SNAPSHOT` vs `25.2`), Opencast (`21-SNAPSHOT` vs `20.4`) and OpenOLAT
+(`21.2-SNAPSHOT` vs `OpenOLAT_21.0.3`) all do the opposite. 🔵 **`P978` is a strong tendency, not a law,
+and UniTime is the one JVM platform on this shelf you can quote a version for without a caveat.**
+
 ## Licence flags in this tier — the traps
 
 | repo | grant | why it matters |
@@ -350,6 +423,31 @@ test suite cannot be redistributed in a client deliverable.** Conformance must b
 - `h5p/h5p-standalone` → 🟢 the real slug is [`tunapanda/h5p-standalone`](https://github.com/tunapanda/h5p-standalone)
 
 ## Count, stated plainly
+
+🆕 **p96: 41 foundational rows above the flag line, 5 of them added this pass** (`OpenRS`, `OpenRubrics`,
+`rubricbench`, `awesome-rubric-rewards`, `UniTime`). 🟢 **40 are permissive for the CODE**
+(MIT / Apache-2.0 / BSD / CC0); **1 is LGPL** (`celtic-project/LTI-PHP`). 🔵 **Same qualifier as every
+count on this page: a 5-row measurement on top of a 36-row inheritance, not a 41-row measurement.** The
+five new rows were read from the payload at the **full 40-character SHAs** named; the other 36 are carried.
+
+🟢 **But for the first time the inheritance is not simply trusted — it is bounded.** `Gap 376` said the
+denominator was decaying and could not say by how much. Measured this pass over **127 published
+`(slug, ref, sha7)` triples** harvested from all six shelf pages:
+
+| verdict | n | what it licenses you to say |
+|---|---|---|
+| 🟢 `CURRENT` — pinned SHA still the tip of the pinned ref | **122** | 🟢 **the row cannot have drifted** |
+| 🔴 `MOVED` | **5** | re-read this pass; **all 5 kept their grant** |
+| `NO-REACH` | **0** | every slug resolves |
+| `REF-GONE` | **0** | every published ref still exists |
+
+🔵 **So the honest claim about this page's inheritance is: 96.1 % of it is provably at the SHA it was
+measured at, and the 3.9 % that moved was re-read.** 🔴 **It is still NOT a re-verification.** A current
+SHA says nothing about whether the 24-name filename reach or the classifier behind that row was sound —
+**and that is exactly and only what `grant-ladder-v4` can settle.** 🟢 **`Gap 376` keeps its priority and
+loses its vagueness.**
+
+🔵 **Pass 95's own sentence, kept because it still governs the reading:**
 
 🆕 **p95: 36 foundational rows above the flag line, 2 of them added this pass** (`girth_mcmc`,
 `otter-grader`). 🟢 **35 are permissive for the CODE** (MIT / Apache-2.0 / BSD); **1 is LGPL**
@@ -435,5 +533,73 @@ of the 20.** Stated rather than silently re-tallied.
   `pyBKT`/`pykt-toolkit` → agent is a build, not an integration. 🟡 **Pass 93 narrows it rather than
   closing it:** `P93-A` in `compose/patterns.md` now specifies that wiring concretely, but **no repository
   found this pass ships it**.
+
+- 🟢 🆕 **p96: `Gap 377` ANSWERED — and the answer corrects the gap's own wording.** 🔴 Pass 95 wrote
+  *"`pom.xml`/`build.gradle` are not in the grant ladder's path list … cheap to add, and it pays on every
+  JVM platform here."* **Both halves needed amending.**
+  🟢 **(a) Nothing needs writing.** `p289-maven-manifest/maven_license.py` (**11/11**, with its negative
+  control for the `P171`-in-XML case) was wired into `p283/manifest_license.py::PARSERS` and into
+  `sweep_named.sh`'s `MANIFESTS` by **`P294`**, and `build.gradle` already sits in
+  `p172-payload-license-sweep`'s manifest list. 🔵 **`grant-ladder-v4` needs a one-line import — the only
+  repair `P237` permits — not a new reader.**
+  🔴 **(b) `build.gradle` is not a licence oracle.** `ls1intum/Artemis`, the best row on this shelf,
+  declares **no licence in 52 855 bytes** of Gradle build script. 🔵 **The asymmetry is distribution
+  policy, not language:** a `<licenses>` block is part of what Maven Central requires of a published POM;
+  Gradle has no equivalent convention. **Add `pom.xml`; spend nothing on `build.gradle`.**
+  🟢 **(c) And the oracle pays, measured at full SHAs on 4 of 4 Maven platforms** — `opencast` and `sakai`
+  both declare *"Educational Community License, Version 2.0"* with the OSI URL, `UniTime` declares
+  *"Apache Software License (ASL), Version 2.0"*, `OpenOLAT` declares the Apache URL. **ECL is the family
+  generic tooling returns as *unclassified*, so a URL-grade identifier is worth more here than anywhere
+  else on this page.**
+- 🔴 🆕 **p96: `Gap 382` — the pom oracle reads `<name>` and the stronger field is `<url>`** (`P988`).
+  **4 of 4 Maven platforms carry a canonical licence URL; 3 of 4 spell the name correctly** —
+  `OpenOLAT`'s pom declares **"Apache 2.0 Open Source L6icense"**. 🟡 `p289` survives it anyway, because
+  `lib/license_family.sh`'s *declaration* branch keys on bare `apache` where its *title-block* branch
+  requires `Apache License` — 🔵 **the coarse branch being the correct one, which is `P637`'s `CONTRATO`
+  class observed in the wild rather than constructed.** 🟢 **Reading `<url>` makes it right for the right
+  reason.** Cost: one XPath sibling.
+- 🔴 🆕 **p96: `Gap 380` / `P987` — this KB addresses payloads by abbreviated SHA and the abbreviation does
+  not always resolve.** `raw.githubusercontent.com/Submitty/Submitty/` + the **full 40 characters** →
+  **200**; + **`ff82521`** → **404**; *same object*, same pass — while the previous 7-char SHA on the same
+  repo resolved fine, so it is **inconsistent per commit**, which fails silently. 🔴 **An unresolved
+  abbreviation 404s all 24 filenames and reads exactly like `no licence payload`.** 🟢 **`P872` caught the
+  one occurrence** (the `README.md` control 404'd too, so the sweep was discarded) 🟢 **and the blast radius
+  was measured rather than assumed: all 10 published no-payload rows return a 200 control at their
+  published SHA — 0 of 10 are artefacts.** 🔵 **Publish the abbreviation for a human; address the payload
+  with the full 40.** `grant-ladder-v4` carries the defect today.
+- 🟢 🆕 **p96: `Gap 375` FULLY DISCHARGED — the remainder is *unmeasurable*, and the mechanism is named.**
+  Pass 95 left `pupilfirst`, `academico` and `open-tutor-ai-CE` unprobed. **All three serve their manifest
+  at HTTP 200 with no version field**, and the reason is structural: two declare `"private": true`, the npm
+  convention for a workspace root that is never published to a registry, and a package never published has
+  no registry version. 🟢 **`P985` splits "no version" into three facts that price differently** —
+  `UNVERSIONED-BUT-RELEASED` (`open-tutor-ai-CE`, 1 tag, ship `v1.0.0`), `COMPONENT-VERSIONED`
+  (`pupilfirst`, 57 tags **all scoped npm sub-packages**, so the platform has never shipped as a unit) and
+  `UNRELEASED` (`academico`, **0 tags**). 🔴 **And the third lands on this KB's most-repeated
+  recommendation:** `academico-sis/academico` is *"the closest thing to a permissive SIS"* — 404 ★, MIT
+  declared in both `composer.json` and the payload, **and no release ladder at all.** 🔵 **A fork inherits
+  release engineering, a version scheme and an upgrade path that do not exist.**
+- 🟡 🆕 **p96: `Gap 379` — the rubric layer is permissive and nothing binds it to a curriculum standard.**
+  Tier 2f above has the judge (`OpenRS`, Apache-2.0), the generator (`OpenRubrics`, MIT) and the calibrator
+  (`rubricbench`, MIT); Tier 1b has **1 721 verified BNCC objectives** behind MCP (MIT code + CC BY 4.0
+  data). 🔵 **Four permissive layers, three publishers, no integration — `Gap 369`'s exact shape.**
+  Specified as `P96-A`.
+- 🔴 🆕 **p96: `Gap 381` — nothing reconciles `compose/code/` against the shelf.** `UniTime/unitime` is
+  **Apache-2.0** with a pristine 11 357 B payload and 101 release tags, this KB has carried a tested MCP
+  gate for it since **pass 42**, and it reached no shelf page until this one. 🔵 **A verified asset can sit
+  in the evidence directory indefinitely without ever being offered to a client.**
+- 🟡 🆕 **p96: `Gap 378` has a THIRD form, and it is in a licence file** (`P984`).
+  `chamilo/chamilo-lms` serves `license.txt` **1 614 B** beside the 35 147 B `LICENSE` this KB read, and the
+  small file says *"The full license can be read in `documentation/license.html`"* — **a third location.**
+  🟢 **It also yields two facts the big file does not:** the grant is **GPL-3.0-or-later**
+  (*"or (at your option) any later version"* — this shelf publishes bare `GPL-3.0`, and `P561` makes a
+  dropped qualifier a defect), and **12 copyright holders in 5 countries with `BeezNest Latino SAC, Peru`
+  FIRST** (`P800`). 🔵 **`P984`: when a repo serves two licence files of very different sizes, the SMALL one
+  has the facts; the large one is the canonical upstream text and says nothing project-specific.**
+  🔴 **A first-match ladder ordered `LICENSE` before `license.txt` reads the uninformative file and stops.**
+- 🟡 🆕 **p96: `Gap 376` BOUNDED, priority UNCHANGED.** Four consecutive passes without the instrument;
+  **122 of 127 rows provably un-drifted and the 5 that moved re-read and unchanged.** 🔴 **Still not a
+  re-verification** — filename reach and classifier soundness are untested by a SHA probe, and only
+  `grant-ladder-v4` settles them. **The first duty of the next pass that can execute code is still
+  corrective.**
 
 *Prior pass content is preserved in git history at commit `306eb06` and earlier.*

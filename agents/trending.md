@@ -4,6 +4,150 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 96: the technique the alignment gap needs is permissive and has been all along; what is missing is the wiring
+
+⏱️ **Sixth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93: 01:4x–02:24;
+94: 02:5x; 95: 03:4x; this one 04:4x–05:xx). **Append-only.**
+
+🔴 **`grant-ladder-v4` was refused for a FOURTH consecutive pass** (`[Code from External]`), so
+`Gap 376` stands. 🟢 **No classifier was written** (`P237`) and no repository code was executed.
+🟢 **But the corrective duty `Gap 376` names was discharged in the one axis the open channel allows, and it
+produced the number four passes have been missing:** `compose/code/p987-census-sha-currency/`.
+
+### 🟢 The headline: 122 of 127 published rows are provably un-drifted
+
+| verdict | n | meaning |
+|---|---|---|
+| 🟢 `CURRENT` | **122** | the pinned 7-char SHA is still the tip of the pinned ref |
+| 🔴 `MOVED` | **5** | HEAD advanced — **all five re-read this pass, all five kept their grant** |
+| `NO-REACH` / `REF-GONE` | **0 / 0** | every slug and every published ref still resolves |
+
+🔵 **`Gap 376` said the census was decaying and could not say by how much. It is 5 rows of 127.** 🔴 **This
+is not 127 rows re-verified** — a current SHA says nothing about whether the filename reach or the
+classifier behind that row was sound — **but "the coverage is decaying" is now a worklist of five names
+instead of a mood.**
+
+### 🔴 `P987` — a 7-character SHA is a display format, not an address
+
+Measured on one commit, both ways, same pass:
+
+| URL | HTTP |
+|---|---|
+| `…/Submitty/Submitty/ff82521694719bc1e282d046631bf0232c9d673e/README.md` | 🟢 **200** |
+| `…/Submitty/Submitty/ff82521/README.md` | 🔴 **404** |
+| `…/Submitty/Submitty/80d7d66/README.md` *(the previous 7-char SHA, same repo)* | 🟢 **200** |
+
+🔴 **`raw.githubusercontent.com` resolves the full 40 characters always and the abbreviation only
+sometimes**, inconsistently per commit — which fails *silently*, as 404 on all 24 filenames, i.e. exactly
+the shape this shelf publishes as **`no licence payload`**. 🔴 **A grant can be erased by an addressing
+artefact.**
+
+🟢 **`P872` caught it on a case it was not written for.** Submitty's `README.md` control 404'd alongside its
+licence files, so the sweep was discarded instead of published.
+
+🟢 **And the blast radius is measured, not assumed: all 10 rows this shelf publishes as having no licence
+payload return a 200 control at their published 7-char SHA.** 0 of 10 are artefacts. **Every recorded
+negative survives.** `negatives.control.2026-10-10.tsv`.
+
+### 🟢 The new tier: rubric-based evaluation is permissive, and it is the half of `Gap 372`/alignment nobody checked
+
+🔴 **This shelf has said for six passes that no permissive row audits whether content meets a learning
+outcome.** 🟢 **That is still true of *education* repositories — and false of the technique.** Found on the
+first query that named **rubrics** instead of education (`P955` holding for a fourth consecutive pass):
+
+| repo | grant (payload · bytes · ref · SHA-40 prefix) | what it is |
+|---|---|---|
+| 🆕 [`Qwen-Applications/OpenRS`](https://github.com/Qwen-Applications/OpenRS) | 🟢 **Apache-2.0** · 10 770 B · `master` · `4c7f22b5707536` | **Open Rubric System** — an LLM-as-a-Judge framework that replaces a reward model with **adaptive, query-type-specific rubrics**: 50+ rubric sets with **weighted criteria tiered critical / core / important / highlight**, bi-directional debiasing (A/B order swap), and **interpretable verdicts**. 🔵 **Weighted, tiered criteria with a written verdict is structurally what an Annex III explanation needs.** |
+| 🆕 [`wanghaoyu0408/OpenRubrics`](https://github.com/wanghaoyu0408/OpenRubrics) | 🟢 **MIT** · 1 067 B · `main` · `1a40c14cb7827ae` | Reference implementation of the **OpenRubrics** family — **synthetic rubric *generation*** at scale for reward modelling and alignment (ACL 2026 long paper). 🔵 **The generator half: given an instruction, produce the rubric.** |
+| 🆕 [`planepig/rubricbench`](https://github.com/planepig/rubricbench) | 🟢 **MIT** · 1 067 B · `main` · `07daecc72ac159` | **RubricBench** — **1 147 pairwise comparisons** with **expert-annotated atomic rubrics derived strictly from the instruction**, across Chat, Instruction-Following, STEM, Coding and Safety. Scores **both the final verdict and the intermediate reasoning**. 🔵 **The missing evaluation harness: how do you know your rubric judge agrees with a human marker?** |
+| 🆕 [`chrisliu298/awesome-rubric-rewards`](https://github.com/chrisliu298/awesome-rubric-rewards) | 🟢 **CC0-1.0** · 7 048 B · `main` · `4897f496d7868e` | The curated index of rubrics, checklists, criteria sets and scoring guides used to score, rank, verify, filter or train generative models. 🟡 **A list, not code** — entry point, not dependency. |
+
+🟢 **`P974`'s positive class gets a second instance, with the missing section named.** `OpenRS`'s LICENSE is
+**10 770 B** against the pristine Apache-2.0 **11 357 B** — and the clause probe returns **4 of 4**
+(`Grant of Copyright License`, `Grant of Patent License`, `Redistribution`, `Disclaimer of Warranty`) with
+**`APPENDIX` ABSENT**. 🔵 **An honest abridgement that dropped only the "how to apply this licence"
+boilerplate.** Byte count was a smell; the clause probe is the test.
+
+🔵 **So the gap is restated, and it is now the same shape as `Gap 369`.** The alignment gap is **not** a
+technique gap: rubric generation (`OpenRubrics`, MIT), rubric-based judging with weighted criteria
+(`OpenRS`, Apache-2.0) and judge-vs-human validation (`rubricbench`, MIT) are all permissive and all
+published in 2026. 🔴 **What no repository found in four passes does is bind a rubric to a *learning
+outcome from a curriculum standard*.** 🟢 **And this shelf already holds both ends of that bind:**
+`bncc-dev/bncc-pacotes` (MIT code + CC BY 4.0 data) exposes **1 721 verified BNCC objectives** over MCP,
+and `learning-commons-org/evaluators` ships **MIT** judging code against research-backed educational
+rubrics — **with its annotated corpora, and only its corpora, NC-licensed.** 🔵 **Three permissive halves
+of one system, from three unrelated publishers, never wired.** Costed as **`P96-A`** in
+`compose/patterns.md`.
+
+### 🟢 `UniTime/unitime` — a verified permissive platform this KB's own `compose/code/` has used since pass 42 and never shelved
+
+[`UniTime/unitime`](https://github.com/UniTime/unitime) · 🟢 **Apache-2.0** · `LICENSE` **11 357 B**
+(pristine) · `master` · `15668a5e54d155` · **101 tags**, newest **`v4.9.152`** · `pom.xml` declares
+*"Apache Software License (ASL), Version 2.0"* with the canonical URL.
+
+🔴 **It is absent from `verticals/solutions.md`, `repos/foundations.md` and this page** — while
+`compose/code/unitime-mcp-gate/` has carried a tested MCP gate for it **since pass 42**. 🔵 **The KB held
+the integration and never listed the platform.** 🟢 **And it is a layer the permissive tier had nothing
+for: university timetabling, course and student scheduling** — the Apereo Foundation's scheduling system.
+🔴 **Costing note that must travel with it: its `NOTICE` is 22 526 B and HTTP 200.** Apache-2.0 §4(d) makes
+NOTICE propagation an obligation, so a deliverable built on UniTime ships a 22 KB attribution file. **A real
+term, cheap to satisfy, expensive to discover during procurement.**
+
+### 🟢 Two other oracle findings, both on rows this shelf thought were finished
+
+- 🆕 **`P984` — when a repo serves two licence files of very different sizes, the SMALL one has the facts.**
+  `chamilo/chamilo-lms` serves `license.txt` **1 614 B** beside the 35 147 B `LICENSE` this KB read. The
+  small file says **"either version 3 of the License, or (at your option) any later version"** — so the
+  grant is **GPL-3.0-or-later** and this shelf publishes bare `GPL-3.0` (`P561`: a dropped version
+  qualifier is a defect). It names **12 copyright holders in 5 countries**, and the **first line is
+  `BeezNest Latino SAC, Peru`** — 🟢 **so Chamilo's LATAM attachment is in the grant, not only in the
+  install base** (`P800`). And it points at **`documentation/license.html`**, a third location — 🔵
+  **`Gap 378`'s indirection shape, found in a version file last pass and in a licence file this one.**
+- 🟢 **`P988` — in a Maven `pom.xml` the `<url>` is the identifier and the `<name>` is prose.** 4 of 4 JVM
+  platforms carry a canonical licence URL; **3 of 4 spell the name correctly.** `OpenOLAT`'s pom declares
+  **"Apache 2.0 Open Source L6icense"**. 🟡 `p289`'s reader takes `<name>` only and survives it anyway,
+  because `lib/license_family.sh`'s *declaration* branch keys on bare `apache` where its *title-block*
+  branch needs `Apache License` — 🔵 **the coarse branch being the correct one, which is `P637`'s
+  `CONTRATO` class in the wild.**
+
+### 🔴 What pass 96 refutes in its own predecessor
+
+🔴 **`Gap 377` is half wrong as written.** Pass 95 wrote *"add `pom.xml`/`build.gradle` to the ladder's path
+list … cheap to add, and it pays on every JVM platform here."*
+
+1. 🟢 **The Maven reader already exists and is already in a production path** —
+   `p289-maven-manifest/maven_license.py` (11/11 with a negative control), wired into
+   `p283/manifest_license.py::PARSERS` and `sweep_named.sh` by **`P294`**. **Nothing needs writing; one
+   instrument needs a one-line import**, which is the only repair `P237` permits.
+2. 🔴 **`build.gradle` is not a licence oracle at all.** `ls1intum/Artemis` — the best row on this shelf —
+   declares **no licence in 52 855 bytes** of Gradle build script. 🔵 **The asymmetry is distribution
+   policy, not language:** a `<licenses>` block is part of what Maven Central requires of a published POM,
+   and Gradle has no equivalent convention. **Add `pom.xml`; spend nothing on `build.gradle`.**
+
+### 🔴 The negative results, stated rather than hidden
+
+| line of enquiry | outcome |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **zero education rows.** Returned general-purpose and coding agents only (OpenClaw, opencode, CrewAI, LangGraph, OpenHands, goose, Cline). 🔵 **Fourth consecutive pass in which the industry-named agent query returns the horizontal agent market** — the channel is answering a different question than it is asked. |
+| `github trending education AI 2026` | 🔴 **SIXTH consecutive zero.** Returned `microsoft/generative-ai-for-beginners`, `developer-roadmap`, `100-Days-Of-ML-Code` — **learning *materials about* AI, not AI *for* education.** 🔵 **The ambiguity is in the phrase, not the index**, and six passes is enough: **retire this query.** |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **saturated, verified by grep, not assumed.** Five returned (OpenEduCat LGPL-3.0, Fedena, openSIS, Frappe Education, OpenOLAT) — **all five already inventoried**, and `Fedena` (Apache via `NOTICE`, `P917`) and `frappe/education` (GPL-3 asserted in a 19-byte file) were already measured in earlier passes. 🟢 **The one new row came from the JVM *oracle* work, not from the platform query.** |
+| learning-outcome alignment checker, permissive | 🔴 **open for a fifth pass** — and now **open for a stated reason**: the rubric technique is permissive (above) and no project binds it to a curriculum standard. 🟢 **A wiring gap, not an availability gap.** |
+| open-response **scorer**, permissive and production-grade (`Gap 372`) | 🔴 **unchanged.** Nothing new found. The validation layer stays Apache/BSD (`rsmtool`, `skll`), the production scorers stay AGPL-3.0 (`openedx/ease`, `openedx/edx-ora2`), the research scorers stay ungranted or CC. |
+| `api.github.com` for ★ | 🔴 **403, fifth consecutive pass.** 🟢 **So no ★ on this shelf moved this pass, and `—` still means *not read*, never zero.** |
+
+### 🔵 Pre-registered actions for pass 97, so they cannot be quietly dropped
+
+1. 🟢 **Wire `p289`'s Maven reader into `grant-ladder-v4`** — one import, no new code (`P237`). **Then
+   re-run `--all` on `chamilo/chamilo-lms` and confirm it reports both licence files**, which is the
+   `P984` case.
+2. 🟢 **Address payloads with 40-char SHAs** (`P987`). The ladder takes a short SHA today.
+3. 🔴 **Read `<url>` as well as `<name>` in the pom oracle** (`P988`), and re-measure OpenOLAT — the row
+   that is currently right by luck.
+4. 🔴 **If and only if repository code becomes executable: re-derive the 127-row census with
+   `grant-ladder-v4` and contradict these pages on the record.** `Gap 376` is corrective and still owed;
+   this pass bounded it, it did not discharge it.
+5. 🟢 **Probe `documentation/license.html` on Chamilo** — the third indirection (`Gap 378`).
+
 ## 2026-10-10 — pass 95: the tool you cite by name is not the tool you get
 
 **APPEND-ONLY — history is below. Fifth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:

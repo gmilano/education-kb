@@ -6,6 +6,35 @@ updated: 2026-10-10
 
 # Education — compose patterns
 
+**Pass 96, 2026-10-10.** ⏱️ **Sixth pass of this date.** 🆕 **Three patterns added, and one standing pattern
+re-sequenced rather than re-costed.**
+
+- 🟢 **`P96-A` — the curriculum-aligned outcome evaluator.** The deliverable that `Gap 379` names: four
+  permissive layers from three unrelated publishers, never wired. **The alignment gap this KB has declared
+  for five passes turns out to be a wiring gap, not a supply gap** — `OpenRubrics` (MIT) generates,
+  `OpenRS` (Apache-2.0) judges with weighted tiered criteria, `rubricbench` (MIT) calibrates the judge
+  against **1 147 expert-annotated human comparisons**, and `bncc-dev/bncc-pacotes` supplies the standard.
+- 🟢 **`P96-B` — the content-provenance gate for self-study material.** 🔴 **Vietnam's
+  `Decision 33/2026/QD-TTg` limb 1 makes *"self-study content generated from uncontrolled data sources"* a
+  high-risk education AI system, in force 15 Aug 2026** — and it never mentions assessment. 🔵 **So
+  grounding is promoted from a quality argument to a regulatory control**, and `T11`'s measured
+  31.9 % → 0.2 % becomes control-effectiveness evidence.
+- 🟢 **`P96-C` — the permissive timetable.** Built on `UniTime/unitime` (**Apache-2.0**, `v4.9.152`) and the
+  **MCP gate this repository has carried since pass 42 without the platform ever reaching a shelf page**
+  (`Gap 381`). 🔵 **The smallest genuinely closable deliverable added here in six passes**, because the
+  output is a timetable a registrar either accepts or does not.
+- 🟡 **`P94-A` is RE-SEQUENCED, not withdrawn.** Its deliverable and its permissive evidence layer
+  (`rsmtool` Apache-2.0, `skll` BSD-3) are unchanged. 🔴 **What changed is the buyer: the EU deferred
+  Annex III to 2 Dec 2027 while Vietnam's equivalent duties took effect 15 Aug 2026.** **Sell it into APAC
+  on a live deadline and into EMEA as 2027 preparation.** See `T15` in `intel/trends.md`.
+
+🔴 **No pattern below was re-costed this pass**; component SHAs are as each pattern records them.
+🟢 **The three new patterns cite components read from the payload at full 40-character SHAs** (`P987`), and
+🔴 **their regulatory premises are search-summary grade, not primary** — every legal-publisher host was
+unreachable.
+
+#### Pass 95 — carried below, unchanged
+
 **Pass 95, 2026-10-10.** ⏱️ **Fifth pass of this date.** 🆕 **Two patterns added:** `P95-A`, the **university
 AI-mandate compliance stack** — the first pattern here aimed at a *higher-education* instrument rather than
 a ministry programme, built on Pakistan's HEC notification and `T14` — and `P95-B`, an
@@ -719,6 +748,139 @@ no grant at all**, which under copyright default is all rights reserved.
 **What it buys.** 🟢 **Two hours, and it removes the two failure modes that are invisible in review:** a
 dependency that is the wrong project under the right name, and a version number that cannot be installed.
 🔵 **Both would have reached a client proposal this pass without it.**
+
+## `P96-A` — 🆕 The curriculum-aligned outcome evaluator (global; the wiring `Gap 379` names)
+
+**The ask it answers.** *"We generate thousands of lesson items with AI. How do we show — to an inspector,
+a parent or an awarding body — that a given item actually teaches the objective it claims to teach, and
+that our judgement of that is calibrated against human markers?"*
+
+🔴 **Until pass 96 this KB answered *"nothing permissive does that; it is a build."*** 🟢 **Every component
+now exists under a grant a studio can bill against. What does not exist is the wiring, and that is this
+pattern.**
+
+**The four layers, with grants, because the grants are why this is a pattern and not a wish.**
+
+| # | layer | component | grant |
+|---|---|---|---|
+| 1 | **the standard**, with per-record provenance | [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) — `@bncc/mcp` 0.2.0, **7 tools** (`bncc_lookup`, `bncc_buscar`, `bncc_listar`, `bncc_decodificar`, `bncc_estatisticas`, `bncc_estrutura`, `bncc_progressao_ei`) over **1 721 verified objectives**, dataset **embedded** so lookups are local | 🟢 **MIT** code · 🟡 **CC BY 4.0** data (attribution names MEC/CNE) |
+| 2 | **rubric generation** from the objective text | [`wanghaoyu0408/OpenRubrics`](https://github.com/wanghaoyu0408/OpenRubrics) | 🟢 **MIT** |
+| 3 | **judging** content against the rubric | [`Qwen-Applications/OpenRS`](https://github.com/Qwen-Applications/OpenRS) — criteria weighted **critical / core / important / highlight**, bi-directional A/B debiasing, **interpretable verdicts** | 🟢 **Apache-2.0** *(10 770 B — clause-probed 4/4, `APPENDIX` stripped; `P974`)* |
+| 4 | **calibration against humans** | [`planepig/rubricbench`](https://github.com/planepig/rubricbench) — **1 147 pairwise comparisons**, expert-annotated atomic rubrics, scores reasoning **and** verdict | 🟢 **MIT** |
+| — | *optional, education-domain rubrics* | [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 🟢 MIT code · 🟢 CC-BY-4.0 prompts · 🔴 **corpora CC-BY-NC-SA-4.0 — excluded from a paid deliverable** |
+
+**How they wire, concretely.**
+
+1. **Resolve the objective.** Call `bncc_lookup` (or `bncc_decodificar` on a BNCC code) for the target
+   objective. 🟢 **Keep the returned record verbatim as the evidence anchor** — it carries the code, the
+   text and its MEC/CNE provenance, and a lookup that runs locally means **no network call per item**,
+   which is the property that makes this run inside a school.
+2. **Generate the rubric once per objective, not per item.** Feed the objective text to `OpenRubrics`;
+   store the rubric as a versioned artefact keyed on the objective code. 🔵 **Rubric-per-objective is the
+   cache boundary**: thousands of items share a handful of rubrics, so generation cost is bounded by the
+   curriculum, not by the content volume.
+3. **Judge each item with `OpenRS`** against that stored rubric, keeping its **weighted criterion
+   breakdown and written verdict**, not just the score. 🟢 **Use the A/B swap** — it exists because
+   position bias is real and an inspector will ask whether the order mattered.
+4. **Calibrate before you publish a single number.** Run `rubricbench`'s harness against your judge
+   configuration to get an agreement figure, then **re-run it on a sample of your own human-marked items.**
+   🔴 **Publish the agreement figure beside every score.** 🔵 **A score without an agreement figure is an
+   opinion with a decimal point.**
+5. **Store the triple**, per item: `{objective record, rubric version, criterion breakdown + verdict}`.
+   🟢 **That triple is the audit artefact**, and it is the same artefact `P94-A`'s evidence pack consumes.
+
+**What it costs and what it buys.** 🔵 **4–6 weeks for a single curriculum and a single content type**
+(steps 1–3 are a fortnight; step 4 is where the time actually goes, because sampling human-marked items is
+an institutional process, not an engineering one). 🟢 **It buys the one thing the generator market cannot
+sell**: a defensible statement that generated content meets a named standard, with the judgement itself
+measured against humans.
+
+🔴 **Three limits, stated before anyone quotes it.**
+- 🔴 **The standards layer is Brazil-only today.** BNCC is the only national curriculum this KB has found
+  as **verified open data with a grant** (`Gap 367` otherwise stands: the frameworks every mandate points
+  at are ungranted). 🔵 **So the first delivery is LATAM by availability, not by choice** — and porting
+  means acquiring or digitising the target curriculum, which is a data-rights negotiation, not a sprint.
+- 🔴 **`rubricbench`'s domains are Chat, IF, STEM, Coding and Safety — not education.** 🟡 It calibrates
+  *your judge's behaviour*, not its pedagogical validity. **Say so in the deliverable.**
+- 🔴 **`evaluators`' annotated corpora are non-commercial.** Use its code and prompts; **bring your own
+  annotated corpus** (`T6`).
+
+🟢 **And the regulatory tailwind is `T15`, not `T4`.** Under Vietnam's `Decision 33/2026/QD-TTg` limb 2,
+*assessing learning outcomes* is high-risk **and binding since 15 Aug 2026**; under the EU AI Act the same
+activity is Annex III but **deferred to 2 Dec 2027.** 🔵 **Sell this into APAC on a live deadline and into
+EMEA as 2027 preparation.**
+
+## `P96-B` — 🆕 The content-provenance gate for self-study material (APAC first; Vietnam has made it a duty)
+
+**The ask it answers.** *"Our tutor answers pupils from retrieved material. We were told that is a quality
+question. Our Vietnamese counsel says it is a high-risk classification. Which is it?"* 🟢 **Both, and the
+second one has a date.**
+
+🔴 **`Decision 33/2026/QD-TTg` limb 1 names *"self-study content generated from uncontrolled data
+sources"*** as a high-risk education AI system — **in force 15 Aug 2026**, existing systems to comply
+**before 1 Sep 2027**. 🔵 **Read it carefully: it does not mention assessment.** A tutoring agent that never
+grades anything is in scope **because of where its material comes from.**
+
+**The gate, four steps, and this KB already has every piece.**
+
+1. **Enumerate the corpus and refuse anything unenumerable.** 🟢 Ground on a **closed, versioned
+   standards-and-materials set** — `bncc-dev/bncc-pacotes` (**MIT** code, **CC BY 4.0** data, 1 721
+   objectives, **embedded dataset**) is the worked example. 🔴 **Open web retrieval is the thing the limb
+   describes.** 🔵 **"Uncontrolled" is a property of the *source list*, not of the model** — so the
+   deliverable is a source allowlist with an owner, which is exactly what
+   `compose/code/mcp-allowlist-gateway/` already implements.
+2. **Tag every retrieved span with its record provenance** and carry it into the answer. 🟢 The MCP
+   standards tools return per-record provenance; **keep it, do not summarise it away.**
+3. **Measure the grounding effect and publish the number.** 🟢 **`T11` has it: 31.9 % → 0.2 %.** 🔵 **The
+   same measurement that was a quality claim last pass is a control effectiveness claim this pass** — and
+   control effectiveness is what a conformity assessment asks for.
+4. **Wire the 72-hour incident clock, because Vietnam requires it.** Pre-deployment registration in the
+   **National AI Database**, conformity assessment, **mandatory human oversight** and **incident reporting
+   within 72 hours**. 🔴 **A 72-hour clock is an architecture requirement, not a policy one: it means
+   logging, alerting and a named owner, designed in from the start.**
+
+**What it costs and what it buys.** 🔵 **3–4 weeks**, and most of it is steps 1 and 4 — the retrieval
+rewrite and the incident pipeline. 🟢 **It buys a reclassification argument**: a tutor grounded on an
+enumerated, provenance-tagged, locally-embedded corpus has a documented answer to limb 1 instead of a
+promise. 🔴 **It does not buy an exemption** — high-risk status is not automatic from sector alone, but it
+is not negotiable by architecture either; the gate makes the conformity dossier cheap, not unnecessary.
+
+🟡 **Evidence grade.** 🔴 **The Vietnamese instrument was not read primary** — every legal-publisher host
+was unreachable this pass. Two independent search rounds over different source sets agree on the decision
+number, the 30 Jun 2026 publication, the 15 Aug 2026 effect and the three education limbs. 🔴 **One date is
+unreconciled and unused**: a general **1 Mar 2027** limb appears in one summary. 🔵 **Confirm with local
+counsel before contracting. This pattern is a design, not an opinion on Vietnamese law.**
+
+## `P96-C` — 🆕 The permissive timetable, and the obligation that comes with it (global, small, unusually closable)
+
+**The ask it answers.** *"Scheduling is our worst annual process. Can AI help, and can we own the result?"*
+🟢 **This is the smallest genuinely closable deliverable added to this KB in six passes**, because the
+platform underneath it is permissive and the problem is bounded.
+
+**The stack.**
+
+| layer | component | grant |
+|---|---|---|
+| the scheduling engine and data model | 🆕 [`UniTime/unitime`](https://github.com/UniTime/unitime) — university **timetabling, course and student scheduling**, Apereo Foundation, **`v4.9.152`** | 🟢 **Apache-2.0** · payload **11 357 B** pristine · `pom.xml` **independently agrees** |
+| the agent surface | 🟢 **already in this repository**: `compose/code/unitime-mcp-gate/` — a tested MCP gate over UniTime, written pass 42, re-audited pass 45, **15/15** on the literal-path control | — |
+| the constraint explanation | 🔵 **nothing to add** — UniTime's scheduling constraints are **already declarative**, so *"which constraints did you relax"* is answerable from the engine's own model | 🟢 **inherited** — Apache-2.0, same repo |
+
+**Why it closes.** 🟢 **The engine is Apache-2.0 and production**, the MCP gate exists and is tested, and
+**the output is a timetable — a discrete artefact a registrar either accepts or does not.** 🔵 **Contrast
+every tutoring deliverable on this shelf, where "better" is contested for a term.** The agent's job is
+narrow and checkable: *propose a schedule revision, explain which constraints it relaxed, and let a human
+accept it.*
+
+🔴 **The one real term, and it must be in the quote: `NOTICE` is 22 526 B and HTTP 200.** Apache-2.0 §4(d)
+makes propagating NOTICE a condition of redistribution, so **the deliverable ships a 22 KB attribution
+file.** 🔵 **Cheap to satisfy, expensive to discover in a procurement review** — and it is the same oracle
+class as `P917`, used here for an *obligation* rather than for a grant.
+
+🟡 **Two honest caveats.** 🔴 **UniTime is new to this shelf as a platform** — it was verified this pass
+from the payload at a full 40-character SHA, and this KB has run its MCP gate for fifty-odd passes, but it
+has **no named client deployment recorded here.** 🟢 **And it is the one JVM row on this shelf whose
+default branch names a shippable version** (`pom.xml` `4.9` against tag `v4.9.152`), which inverts `P978`
+and means you can quote a version without a caveat — the only row here you can say that about.
 
 ## `P91-RETIRED` — "the platform is always the client's; the intelligence on top is ours"
 

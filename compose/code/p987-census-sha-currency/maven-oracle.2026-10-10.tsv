@@ -1,0 +1,6 @@
+slug	manifest	manifest_bytes	declared_name	declared_url	pom_version	payload_family	payload_bytes	agreement
+opencast/opencast	pom.xml	63148	Educational Community License, Version 2.0	https://opensource.org/licenses/ECL-2.0	21-SNAPSHOT	ECL-2.0	11340	AGREE-NAME-AND-URL
+OpenOLAT/OpenOLAT	pom.xml	84963	Apache 2.0 Open Source L6icense	http://www.apache.org/licenses/LICENSE-2.0	21.2-SNAPSHOT	Apache-2.0	10982	AGREE-URL-ONLY-NAME-MISSPELT
+sakaiproject/sakai	pom.xml	14872	Educational Community License, Version 2.0	http://www.opensource.org/licenses/ecl2.txt	27-SNAPSHOT	ECL-2.0	11120	AGREE-NAME-AND-URL
+UniTime/unitime	pom.xml	26622	Apache Software License (ASL), Version 2.0	http://www.apache.org/licenses/LICENSE-2.0	4.9	Apache-2.0	11357	AGREE-NAME-AND-URL
+ls1intum/Artemis	build.gradle	52855	NO-LICENCE-DECLARATION-IN-PAYLOAD	-	-	MIT	1091	NO-ORACLE

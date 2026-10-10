@@ -4,6 +4,167 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 96: the Maven POM is the licence oracle this tier needed, and the KB already owned the reader
+
+⏱️ **Sixth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93: 01:4x–02:24;
+94: 02:5x; 95: 03:4x; this one 04:4x–05:xx). **Append-only.**
+
+🔴 **Repository code was refused for a FOURTH consecutive pass** (`[Code from External]`). 🟢 **No
+classifier was written** (`P237`). Evidence: `compose/code/p987-census-sha-currency/`.
+
+### 🟢 One genuinely new repo row, and it came from the oracle work rather than the discovery channel
+
+| repo | grant (payload · bytes · ref · SHA-40 prefix) | version | why it matters |
+|---|---|---|---|
+| 🆕 [`UniTime/unitime`](https://github.com/UniTime/unitime) | 🟢 **Apache-2.0** · `LICENSE` **11 357 B** *(pristine upstream text)* · `master` · `15668a5e54d155` | 🟢 `pom.xml` **`4.9`**; **101 tags**, newest **`v4.9.152`** | 🟢 **University timetabling, course and student scheduling** (Apereo Foundation) — **a layer the permissive platform tier had nothing for.** 🔴 **Absent from every shelf page while `compose/code/unitime-mcp-gate/` has carried a tested MCP gate for it since pass 42.** 🔴 **`NOTICE` is 22 526 B and HTTP 200** — Apache-2.0 §4(d) makes propagating it an obligation, so the deliverable ships a 22 KB attribution file. |
+
+🔵 **The finding under the row: this KB's `compose/code/` directory held a verified platform its platform
+page never listed.** A tested integration is evidence the thing exists; it is not a shelf entry, and
+nothing was checking the two against each other.
+
+### 🟢 Four new permissive repos in a layer this shelf had no tier for — rubric-based evaluation
+
+| repo | grant (payload · bytes · ref · SHA-40 prefix) | role in the stack |
+|---|---|---|
+| 🆕 [`Qwen-Applications/OpenRS`](https://github.com/Qwen-Applications/OpenRS) | 🟢 **Apache-2.0** · 10 770 B · `master` · `4c7f22b5707536` | the **judge** — 50+ query-type rubrics, criteria weighted critical/core/important/highlight, A/B-swap debiasing, interpretable verdicts |
+| 🆕 [`wanghaoyu0408/OpenRubrics`](https://github.com/wanghaoyu0408/OpenRubrics) | 🟢 **MIT** · 1 067 B · `main` · `1a40c14cb7827ae` | the **generator** — synthetic rubric generation at scale (ACL 2026 long) |
+| 🆕 [`planepig/rubricbench`](https://github.com/planepig/rubricbench) | 🟢 **MIT** · 1 067 B · `main` · `07daecc72ac159` | the **validator** — 1 147 pairwise comparisons, expert-annotated atomic rubrics, scores verdict *and* reasoning |
+| 🆕 [`chrisliu298/awesome-rubric-rewards`](https://github.com/chrisliu298/awesome-rubric-rewards) | 🟡 **CC0-1.0** · 7 048 B · `main` · `4897f496d7868e` | the **index** — a list, not a dependency |
+
+🟢 **`P974` positive class, second instance, with the missing section named.** `OpenRS` is **10 770 B**
+against pristine Apache-2.0's **11 357 B**, and the clause probe returns **4 of 4** headings with
+**`APPENDIX` ABSENT** — an honest abridgement that dropped the "how to apply" boilerplate. 🔵 **Byte count
+was the smell; the clause probe was the test.**
+
+### 🟢 `Gap 377` answered — and the answer corrects the gap's own wording
+
+| what pass 95 wrote | what pass 96 measured |
+|---|---|
+| *"`pom.xml`/`build.gradle` are not in the grant ladder's path list … **cheap to add**"* | 🟢 **Cheap, yes — but nothing needs writing.** `p289-maven-manifest/maven_license.py` (**11/11**, with its negative control) was wired into `p283/manifest_license.py::PARSERS` and `sweep_named.sh`'s `MANIFESTS` by **`P294`**, and `build.gradle` is already in `p172-payload-license-sweep`'s list. 🔵 **`grant-ladder-v4` needs a one-line import — the only repair `P237` permits.** |
+| *"it pays on **every** JVM platform here"* | 🔴 **Half false.** It pays on **4 of 4 Maven** platforms and **0 of 1 Gradle**: `ls1intum/Artemis` declares **no licence in 52 855 B** of `build.gradle`. 🔵 **The asymmetry is distribution policy, not language** — a `<licenses>` block is part of what Maven Central requires of a published POM; Gradle has no equivalent. **Add `pom.xml`; spend nothing on `build.gradle`.** |
+
+**Measured, at full 40-char SHAs** (`maven-oracle.2026-10-10.tsv`):
+
+| platform | manifest | declared `<name>` | `<url>` | payload family | agreement |
+|---|---|---|---|---|---|
+| [`opencast/opencast`](https://github.com/opencast/opencast) | `pom.xml` 63 148 B | Educational Community License, Version 2.0 | 🟢 `opensource.org/licenses/ECL-2.0` | ECL-2.0 (11 340 B) | 🟢 **name + URL** |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `pom.xml` 14 872 B | Educational Community License, Version 2.0 | 🟢 `opensource.org/licenses/ecl2.txt` | ECL-2.0 (11 120 B) | 🟢 **name + URL** |
+| 🆕 [`UniTime/unitime`](https://github.com/UniTime/unitime) | `pom.xml` 26 622 B | Apache Software License (ASL), Version 2.0 | 🟢 `apache.org/licenses/LICENSE-2.0` | Apache-2.0 (11 357 B) | 🟢 **name + URL** |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `pom.xml` 84 963 B | 🔴 **"Apache 2.0 Open Source L6icense"** | 🟢 `apache.org/licenses/LICENSE-2.0` | Apache-2.0 (10 982 B) | 🟡 **URL only** |
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | `build.gradle` 52 855 B | 🔴 **absent** | — | MIT (1 091 B) | 🔴 **no oracle** |
+
+🟢 **`P988` — the `<url>` is an identifier and the `<name>` is prose, and only one of them is typo-proof.**
+**4 of 4 carry a canonical URL; 3 of 4 spell the name right.** 🟡 `p289` parses `<name>` only and
+**survives OpenOLAT anyway**, because `lib/license_family.sh`'s *declaration* branch keys on bare `apache`
+where its *title-block* branch requires `Apache License`. 🔵 **The coarse branch being the correct one is
+`P637`'s `CONTRATO` class, observed in the wild rather than constructed.** 🟢 **Reading `<url>` would make
+it right for the right reason.**
+
+🟢 **`P979` independently re-confirmed at a full SHA**, and now with a second ECL-2.0 instance
+(`opencast`) and the canonical **OSI URL** — which is the field that makes ECL machine-resolvable. 🔵 **ECL
+is the family generic tooling returns as *unclassified*, so a URL-grade identifier matters more here than
+anywhere else on this shelf.**
+
+### 🔴 `P987` — the addressing defect, and why every published negative was re-checked because of it
+
+| URL | HTTP |
+|---|---|
+| `…/Submitty/Submitty/ff82521694719bc1e282d046631bf0232c9d673e/README.md` | 🟢 **200** |
+| `…/Submitty/Submitty/ff82521/README.md` | 🔴 **404** |
+| `…/Submitty/Submitty/80d7d66/README.md` *(previous 7-char SHA, same repo)* | 🟢 **200** |
+
+🔴 **Same object. The abbreviation 404s; the full 40 characters do not; and the previous abbreviation on the
+same repo resolved fine** — so it is inconsistent per commit, not a rule. 🔴 **An unresolved short SHA
+returns 404 on all 24 filenames, which this shelf publishes as `no licence payload`.**
+
+🟢 **Blast radius, measured on all 10 published negatives at their published 7-char SHAs:**
+**10 of 10 `REACH-OK`, 0 artefacts** (`negatives.control.2026-10-10.tsv`). 🟢 **Every recorded negative on
+this shelf stands** — `LearnPress/learnpress`, `atutor/ATutor`, `OS4ED/openSIS-Classic`,
+`qed42/ai-accessibility-checker`, `albertomf1979/wcag-accessibility-agent`,
+`Zion-support/curriculum-alignment-checker`, `lovejzzz/CourseMapper`, `mahseema/aibooks`,
+`A-R007/Multi-Agent-Study-Assistant`, `LAION-AI/Desktop_BUD-E`.
+
+### 🟢 Census currency — the number `Gap 376` has been missing for four passes
+
+`result.2026-10-10.tsv`, **127 published (slug, ref, sha7) triples harvested from the shelf pages:**
+
+| verdict | n |
+|---|---|
+| 🟢 `CURRENT` — pinned SHA still the tip of the pinned ref | **122** |
+| 🔴 `MOVED` | **5** |
+| `NO-REACH` | **0** |
+| `REF-GONE` | **0** |
+
+**All five drifted rows re-read at the new SHA, and all five kept their grant:**
+
+| slug | pinned → now | re-read |
+|---|---|---|
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | `80d7d66` → `ff82521` | 🟢 **BSD-3-Clause**, `LICENSE.md` **1 542 B** — *"Copyright (c) 2014-2026, Submitty team"* |
+| [`celtic-project/LTI-PHP`](https://github.com/celtic-project/LTI-PHP) | `1f47c93` → `0ef9cc9` | 🟢 **LGPL-3.0**, **7 651 B**, title block *"GNU LESSER GENERAL PUBLIC LICENSE, Version 3, 29 June 2007"* — byte-identical |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `f30df11` → `e5cf557` | 🟢 `LICENSE` **35 147 B** unchanged — 🆕 **plus a second licence file, below** |
+| [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | `12aeb0f` → `6aa0afb` | 🟢 **MIT**, **1 072 B** |
+| [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | `59d2396` → `b1795b8` | 🟢 **four-way split grant, byte-identical at 1 615 B** — code **MIT**, prompts/settings **CC-BY-4.0**, Annotated CLEAR + Annotated PERSUADE 2.0 corpora **CC-BY-NC-SA-4.0** |
+
+🔵 **The `evaluators` re-read is the one worth noting:** it is the row whose licence structure this shelf
+warns about most loudly, and its grant is now confirmed **twice, at two SHAs, by two passes**. 🔴 **The NC
+clause still sits on the corpora — the part that makes it evidence-backed rather than a prompt.**
+
+### 🆕 `P984` — two licence files, and the SMALL one has the facts
+
+🟢 **`chamilo/chamilo-lms` serves `license.txt` at 1 614 B beside the 35 147 B `LICENSE` this KB had read.**
+The large file is the canonical upstream GPL text and says nothing project-specific. The small one:
+
+- 🟢 *"either version 3 of the License, or **(at your option) any later version**"* → the grant is
+  **GPL-3.0-or-later**. 🔴 **This shelf publishes bare `GPL-3.0`** — and `P561` is the registered rule that
+  a dropped version qualifier is a defect. **`or-later` is a different compatibility position from
+  `only`.**
+- 🟢 **Twelve copyright holders across five countries**, and the **first line is `BeezNest Latino SAC,
+  Peru`** — ahead of BeezNest Belgium, NoSoloRed (Spain), Université de Grenoble, Université de Genève,
+  CBlue, VUB, HoGent, UGent, UCL. 🔵 **Chamilo's LATAM attachment is in the grant itself** (`P800`), not
+  only in the install base this page has been citing.
+- 🔴 *"The full license can be read in `documentation/license.html`"* — a **third** location. 🔵
+  **`Gap 378`'s indirection, found in a `version.php` shim last pass and in a licence file this one. The
+  shape generalises: this KB's probes read paths; real projects point at other paths.**
+
+🔵 **`P984` for adoption:** *when a repository serves two licence files of very different sizes, read the
+small one — it carries the holders, the version qualifier and the scope.* 🔴 **A first-match ladder ordered
+`LICENSE` before `license.txt` reads the uninformative file and stops.**
+
+### 🟢 `Gap 375`'s remainder discharged — as **unmeasurable**, with the mechanism
+
+Pass 95 left three permissive rows unprobed. **All three return HTTP 200 with no version field**
+(`version-remainder.2026-10-10.tsv`):
+
+| platform | manifest | version | tags | class |
+|---|---|---|---|---|
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `pyproject.toml` 200 | 🔴 none — `license = { file = "LICENSE" }` | **1** | 🟢 **`UNVERSIONED-BUT-RELEASED`** → quote **`v1.0.0`** |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | `package.json` 200 | 🔴 none — `"private": true` | **57** | 🔴 **`COMPONENT-VERSIONED`** — all 57 tags are scoped npm sub-packages (`@pupilfirst/pf-icon@2.0.0`, `@pupilfirst/search@0.1.1-alpha.0`). **The platform has never shipped as a unit.** |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | `composer.json` 200 · `package.json` 200 | 🔴 none — 🟢 but `"license": "MIT"` **declared**, agreeing with the 1 094 B payload | 🔴 **0** | 🔴 **`UNRELEASED`** |
+
+🟢 **`P985` — "no version" is three different facts and they price differently.** 🔴 **And the worst of the
+three lands on this shelf's most-repeated recommendation:** `academico` is the row
+`verticals/solutions.md` calls *"the closest thing to a permissive SIS this KB has found"* — **404 ★, MIT
+declared in two places, and zero tags.** 🔵 **A studio forking it inherits release engineering, a version
+scheme and an upgrade path that do not exist.** That now sits beside the recommendation.
+
+🟢 **`P986` — `UniTime` INVERTS `P978`, the first JVM row on this shelf to do so.** Its pom says **`4.9`**
+and its newest tag is **`v4.9.152`**: the default branch names a **shippable line**. Sakai
+(`27-SNAPSHOT` vs `25.2`), Opencast (`21-SNAPSHOT` vs `20.4`) and OpenOLAT (`21.2-SNAPSHOT` vs `21.0.3`)
+all do the opposite. 🔵 **`P978` is a strong tendency, not a law.** 🟢 **And `open-tutor-ai-CE`'s
+`license = { file = "LICENSE" }` is a new manifest class: a declaration *by reference*** — the manifest
+points at the payload instead of naming a family, which is `P742` (grant body vs reference) appearing in a
+manifest for the first time.
+
+### 🔴 Negative results
+
+| line of enquiry | outcome |
+|---|---|
+| `github trending education AI 2026` | 🔴 **SIXTH consecutive zero.** Returns `microsoft/generative-ai-for-beginners`, `developer-roadmap`, `100-Days-Of-ML-Code` — **materials *about* AI, not AI *for* education.** 🟢 **Six passes is enough: retire the query.** The ambiguity is in the phrase, not the index. |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **saturated, verified by grep.** OpenEduCat, Fedena, openSIS, Frappe Education, OpenOLAT — all five already inventoried in earlier passes, including `Fedena`'s `NOTICE`-only Apache grant (`P917`) and `frappe/education`'s 19-byte GPL-3 assertion. |
+| permissive **SIS** | 🔴 **still none**, and now with a sharper qualifier: the nearest row has never cut a release. |
+| permissive **H5P authoring server** | 🔴 **still none.** Unchanged. |
+| `api.github.com` ★ | 🔴 **403, fifth consecutive pass.** `—` means *not read*, never zero. |
+
 ## 2026-10-10 — pass 95: the version file on the default branch is the version you cannot ship
 
 **APPEND-ONLY — history is below. Fifth pass of this date** (91: 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93:

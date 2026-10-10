@@ -6,6 +6,61 @@ updated: 2026-10-10
 
 # Education — AI agents shelf
 
+**Pass 96, 2026-10-10.** ⏱️ **Sixth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x;
+93: 01:4x–02:24; 94: 02:5x; 95: 03:4x; this one 04:4x–05:xx).
+
+🔴 **The sandbox refuses to execute repository code for a FOURTH consecutive pass** — `grant-ladder-v4`'s
+`ladder.sh` and its offline `test_ladder.sh` were both denied before starting (`[Code from External]`).
+🟢 **So pass 96 wrote no classifier either** (`P237`). 🟢 **But the corrective duty `Gap 376` declared was
+discharged in the one axis the open channel permits, and it produced the number four passes have been
+missing: 122 of 127 published rows are provably un-drifted, 5 moved, and all 5 were re-read and kept their
+grant.** `compose/code/p987-census-sha-currency/`.
+
+🔵 **Marker convention, because six passes ran on one date.** A bare 🆕 is inherited from the pass that
+added the row and was **not** re-flagged; **rows added by this pass are marked 🆕 p96.** **A `—` in the ★
+column means not read this pass. It never means zero** — `api.github.com` returned **HTTP 403 for a fifth
+consecutive pass**, so no star count on this page moved.
+
+### 🟢 What pass 96 adds, in one line each
+
+- 🟢 **`Gap 376` BOUNDED, not discharged.** 127 published `(slug, ref, sha7)` triples were asked one cheap
+  question — *is the pinned SHA still the tip of the pinned ref?* — and **122 answered yes, 0 were
+  unreachable, 0 refs had vanished.** 🔵 **A row still at its pinned SHA cannot have drifted, whatever else
+  about it is unverified.** 🔴 **This is not 127 rows re-verified**, and must never be cited as if it were.
+- 🔴 **`P987` — a 7-character SHA is a display format, not an address.**
+  `raw.githubusercontent.com/.../ff82521694719bc1e282d046631bf0232c9d673e/README.md` → **200**;
+  `.../ff82521/README.md` → **404**; *same object*. 🔴 **An unresolved abbreviation 404s all 24 filenames,
+  which this shelf publishes as `no licence payload`.** 🟢 **`P872` caught it** — the control 404'd too, so
+  the sweep was discarded. 🟢 **And the blast radius is measured: all 10 published negatives return a 200
+  control at their published SHA. 0 of 10 are artefacts.**
+- 🟢 **A new permissive tier, found by naming the TECHNIQUE (`P955`, fourth consecutive pass): rubric-based
+  evaluation.** `OpenRS` (Apache-2.0), `OpenRubrics` (MIT), `rubricbench` (MIT), `awesome-rubric-rewards`
+  (CC0). 🔵 **The instructional-alignment gap is restated as a WIRING gap, not an availability gap** — the
+  same shape as `Gap 369`. Costed as `P96-A`.
+- 🟢 **`UniTime/unitime` (Apache-2.0, pristine 11 357 B, `v4.9.152`) is a verified permissive platform this
+  KB's own `compose/code/unitime-mcp-gate/` has used since pass 42 and no shelf page ever listed.**
+  🔴 **Its `NOTICE` is 22 526 B** — Apache §4(d) makes that a shipping obligation.
+- 🔴 **`Gap 377` is half wrong as written, and pass 96 refutes its own predecessor.** The Maven reader
+  **already exists and is already wired** (`p289` → `p283::PARSERS`, by `P294`) — one import, not new code
+  (`P237`). And **`build.gradle` is not a licence oracle**: Artemis declares none in 52 855 B.
+- 🟢 **`P988` — in a `pom.xml` the `<url>` is the identifier and the `<name>` is prose.** 4 of 4 JVM
+  platforms carry a canonical URL; **3 of 4 spell the name right** — `OpenOLAT` ships
+  *"Apache 2.0 Open Source **L6icense**"*.
+- 🆕 **`P984` — when a repo serves two licence files of very different sizes, the SMALL one has the facts.**
+  Chamilo's unread 1 614 B `license.txt` yields **GPL-3.0-or-later** (this shelf publishes bare `GPL-3.0`),
+  **12 holders in 5 countries with `BeezNest Latino SAC, Peru` FIRST** (`P800`), and a **third** licence
+  location.
+- 🟢 **`Gap 375`'s remainder discharged as UNMEASURABLE, with the mechanism** — and `P985` splits
+  "no version" into three facts that price differently. 🔴 **The permissive-SIS candidate
+  `academico-sis/academico` has 404 ★ and ZERO tags.**
+- 🔴 **The binding high-risk regime for automated assessment is now APAC's, not EMEA's** — the EU deferred
+  Annex III to **2 Dec 2027** while **Vietnam's Decision 33/2026/QD-TTg took effect 15 Aug 2026** and names
+  automated assessment outright. New `T15` in `intel/trends.md`.
+- 🔴 **`github trending education AI {year}` returned its SIXTH consecutive zero. Retire the query** — the
+  ambiguity is in the phrase, not the index.
+
+#### Pass 95 — carried below, unchanged
+
 **Pass 95, 2026-10-10.** ⏱️ **Fifth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x;
 93: 01:4x–02:24; 94: 02:5x; this one 03:4x).
 
@@ -193,6 +248,55 @@ Nothing found audits whether content actually meets a learning outcome under a p
 evidence: `nsip/curriculum-mapper` is archived and keyword-based, `evaluators`' corpora are NC, and the two
 alignment-named repos carry no grant. **That is the build, and it is now a sharper specification than
 "checkers barely exist".**
+
+### 🟢 🆕 p96 The rubric tier — the instructional-alignment gap is a **wiring** gap, not an availability gap
+
+🔴 **What this shelf has said for five passes:** *"Nothing found audits whether content actually meets a
+learning outcome under a permissive grant with usable evidence. That is the build."* 🟢 **That sentence is
+still true of education repositories and FALSE of the technique**, and the correction arrived on the first
+query that named **rubrics** instead of education — `P955` holding for a **fourth consecutive pass**, now
+on a gap that has survived five.
+
+| repo | grant (payload · bytes · ref · SHA-40 prefix) | role | region |
+|---|---|---|---|
+| 🆕 p96 [`Qwen-Applications/OpenRS`](https://github.com/Qwen-Applications/OpenRS) | 🟢 **Apache-2.0** · 10 770 B · `master` · `4c7f22b5707536` | 🟢 **The judge.** *Open Rubric System* — LLM-as-a-Judge that replaces a reward model with **adaptive, query-type-specific rubrics**: 50+ rubric sets, criteria **weighted critical / core / important / highlight**, bi-directional A/B-swap debiasing, and **interpretable verdicts**. 🔵 **Weighted tiered criteria plus a written verdict is structurally what an Annex III explanation is.** | 🟡 **APAC** (Qwen application org — publisher country not established from the repo, so not `P800`-grade) |
+| 🆕 p96 [`wanghaoyu0408/OpenRubrics`](https://github.com/wanghaoyu0408/OpenRubrics) | 🟢 **MIT** · 1 067 B · `main` · `1a40c14cb7827ae` | 🟢 **The generator.** Reference implementation of the OpenRubric family — **synthetic rubric generation at scale** for reward modelling and alignment (**ACL 2026 long paper**). 🔵 *Given an instruction, produce the rubric.* | 🔵 unplaced |
+| 🆕 p96 [`planepig/rubricbench`](https://github.com/planepig/rubricbench) | 🟢 **MIT** · 1 067 B · `main` · `07daecc72ac159` | 🟢 **The validator, and the piece this KB has needed most.** **1 147 pairwise comparisons** with **expert-annotated atomic rubrics derived strictly from the instruction**, spanning Chat, Instruction-Following, STEM, Coding and Safety — and it scores **the intermediate reasoning as well as the final verdict**. 🔵 **This is how you answer "does our rubric judge agree with a human marker", which is the question an appeal turns on.** | 🔵 unplaced |
+| 🆕 p96 [`chrisliu298/awesome-rubric-rewards`](https://github.com/chrisliu298/awesome-rubric-rewards) | 🟡 **CC0-1.0** · 7 048 B · `main` · `4897f496d7868e` | The curated index of rubrics, checklists, criteria sets and scoring guides used to score, rank, verify, filter or train generative models. 🟡 **A list, not a dependency** — entry point only. | 🔵 unplaced |
+
+🟢 **`P974`'s positive class gets a second instance, and this time the missing section is named.**
+`OpenRS`'s `LICENSE` is **10 770 B** against pristine Apache-2.0's **11 357 B** — a 587-byte shortfall that
+on size alone looks like a modified grant. **The clause probe returns 4 of 4** —
+`Grant of Copyright License`, `Grant of Patent License`, `Redistribution`, `Disclaimer of Warranty` — with
+**`APPENDIX` ABSENT**. 🔵 **An honest abridgement that dropped only the "how to apply this licence"
+boilerplate.** 🟢 **Byte count is the smell; the clause probe is the test.**
+
+#### 🔵 Why this reframes the gap instead of closing it
+
+🔴 **Not one of these four repos knows what a learning outcome is.** They bind a rubric to an *instruction*.
+**The education-specific step — binding a rubric to a published curriculum standard, with per-record
+provenance — is what nothing found in five passes does.**
+
+🟢 **And this shelf already holds every other piece, permissively, from three unrelated publishers:**
+
+| piece | row already on this shelf | grant |
+|---|---|---|
+| the **standards data**, with provenance | [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) — **1 721 verified BNCC objectives** behind **7 MCP tools**, dataset embedded so lookups run locally | 🟢 **MIT** code + **CC BY 4.0** data |
+| the **education rubrics + judge code** | [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) — LLM-as-a-judge against research-backed educational rubrics | 🟢 **MIT** code · 🟢 CC-BY-4.0 prompts · 🔴 **corpora CC-BY-NC-SA-4.0** |
+| the **rubric judge and its validator** | 🆕 `OpenRS` + `rubricbench` | 🟢 Apache-2.0 / MIT |
+| the **psychometric defence** | `catsim` (BSD-3), `pyBKT` / `py-irt` / `girth` / `girth_mcmc` (MIT) | 🟢 permissive |
+
+🔵 **Four permissive layers of one system, never wired together.** 🟢 **`Gap 379` is that wiring, stated
+narrowly enough to be built:** *take a curriculum objective from an MCP standards server, generate a rubric
+for it with `OpenRubrics`, judge candidate content against it with `OpenRS`, and calibrate the judge against
+human markers with `rubricbench`.* **Costed as `P96-A` in `compose/patterns.md`.**
+
+🔴 **And the honest caveat on `evaluators`, unchanged and re-confirmed at a new SHA this pass:** its
+annotated CLEAR and PERSUADE 2.0 corpora are **non-commercial**, and they are the part that makes it
+evidence-backed rather than a prompt. **A paid deliverable can use the code and the prompts; it must bring
+or buy its own annotated corpus.** 🟢 **`rubricbench`'s 1 147 expert-annotated comparisons are MIT** — 🔵
+**which is the first permissive annotated comparison set this shelf has found, even though it is not
+education-domain.**
 
 ### 🆕 The AI-literacy tier — because literacy is now a statutory duty, not a nice-to-have
 
@@ -529,5 +633,35 @@ withdrawn — the sampling difference remains the explanation.
   can present MIT at the root while the data it exists to publish is CC BY 4.0 one directory down, and
   **both the 24-name ladder and GitHub's own sidebar return the root answer.** Proved on
   `bncc-dev/bncc-dados`; mechanism in `repos/foundations.md`.
+
+- 🟡 🆕 **p96: the instructional-alignment checker is RESTATED, not closed — and the restatement is the
+  progress.** 🟢 The *technique* is permissive and published in 2026: `Qwen-Applications/OpenRS`
+  (Apache-2.0) judges against weighted tiered rubrics, `wanghaoyu0408/OpenRubrics` (MIT) generates them,
+  `planepig/rubricbench` (MIT) calibrates the judge against **1 147 expert-annotated** human comparisons.
+  🔴 **What no repository does is bind a rubric to a published curriculum standard.** 🟢 **This shelf holds
+  the other end of that bind** — `bncc-dev/bncc-pacotes`, MIT code + CC BY 4.0 data, **1 721 verified BNCC
+  objectives behind 7 MCP tools** — **and nothing wires them.** 🔵 **So this is now the same shape as
+  `Gap 369`: four permissive layers, three publishers, no integration.** Tracked as **`Gap 379`**; specified
+  and costed as `P96-A` in `compose/patterns.md`.
+- 🟡 🆕 **p96: `Gap 376` is BOUNDED and still owed.** 🔴 **The instrument has now been unrunnable for four
+  consecutive passes** — `grant-ladder-v4/ladder.sh` *and* its offline `test_ladder.sh` were both denied
+  before starting. 🟢 **But the decay is no longer a mood: 127 published `(slug, ref, sha7)` triples were
+  probed and 122 are still at the tip of their pinned ref — 0 unreachable, 0 vanished refs — and all 5
+  drifted rows were re-read and kept their grant.** 🔵 **"The coverage is decaying" is now "5 rows of 127
+  needed re-reading, and they were read."** 🔴 **This is NOT 127 rows re-verified**: a current SHA says
+  nothing about whether the 24-name reach or the classifier behind that row was sound, and that is precisely
+  what only `grant-ladder-v4` can settle. **The corrective duty stands; its size is now known.**
+  Evidence: `compose/code/p987-census-sha-currency/`.
+- 🔴 🆕 **p96: `Gap 380` — this shelf addresses payloads by abbreviated SHA, and the abbreviation does not
+  always resolve** (`P987`). Measured on one commit both ways: the **full 40 characters return 200 and the
+  7-character form returns 404**, inconsistently per commit. 🔴 **An unresolved abbreviation 404s all 24
+  filenames and reads exactly like `no licence payload`.** 🟢 **`P872` caught the one case that occurred,
+  and all 10 published negatives were re-probed at their published SHAs: 10 of 10 return a 200 control, so
+  none is an artefact.** 🔵 **Publish the abbreviation for a human; address the payload with the full 40.**
+- 🔴 🆕 **p96: `Gap 381` — a tested integration in `compose/code/` is not checked against the shelf.**
+  `UniTime/unitime` is **Apache-2.0** with a pristine 11 357 B payload and 101 release tags, this KB has
+  carried a tested MCP gate for it since **pass 42**, and it appears on **no shelf page**. 🔵 **Nothing
+  reconciles the two inventories**, so a verified asset can sit in the evidence directory for fifty passes
+  without ever being offered to a client.
 
 *Prior pass content is preserved in git history at commit `306eb06` and earlier; it is not duplicated here.*

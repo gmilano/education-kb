@@ -6,6 +6,37 @@ updated: 2026-10-10
 
 # Education — market, players and opportunities
 
+**Pass 96, 2026-10-10.** ⏱️ **Sixth pass of this date.** Regional sweep run once globally and once per
+region (North America, EMEA, APAC, LATAM), plus two gap-targeted queries on leads pass 95 named for itself
+(the Gulf/Africa limb, and the EU omnibus entry-into-force conflict).
+
+🟢 **What pass 96 contributes, in four lines.** **Vietnam's instrument is finally NAMED, DATED and
+ENUMERATED** — `Decision 33/2026/QD-TTg`, in force **15 Aug 2026**, and education is **3 of its 46**
+high-risk systems — which means **the binding high-risk regime for automated assessment is now APAC's, not
+EMEA's**, since the EU deferred Annex III to 2 Dec 2027. **Saudi Arabia's instrument is named for the first
+time** — Vision 2030's Human Capability Development Program, delivered jointly by MoE + MCIT + **SDAIA**,
+**>6 million students** — which is the primary-read remedy `Gap 266` specified, now answered at
+search-summary grade. **`Gap 266`'s UAE limb gains a second independent source** for the private-school
+extension pass 93 refused on `n=1`. **And the EU omnibus entry-into-force conflict resolves 4-to-0 toward
+27 Jul 2026** across two independent search rounds over different source sets.
+
+🔴 **The honest subtractions, three of them.**
+**(1)** 🔴 **`WebFetch` is DEAD this pass for every host attempted** — `getaddrinfo ENOTFOUND` on
+`digital-strategy.ec.europa.eu`, `www.gibsondunn.com` and `en.wikipedia.org` — and raw `curl` returned
+**`000`** on three legal-publisher URLs. 🔴 **So not one regulatory claim added this pass was read from a
+primary text.** Two independent `WebSearch` rounds over different source sets is the strongest
+corroboration this channel can produce, and that is the grade every row below carries.
+**(2)** 🔴 **Africa returned nothing for the sixth time, and this pass found out why its query keeps
+failing:** a paired *"Gulf AND Africa"* query returns **Gulf only**, every time. 🔵 **The defect is
+pair-querying, not the region** — the sub-regions must be named alone. Africa's existing rows (Kenya,
+Nigeria, South Africa) are carried, not advanced.
+**(3)** 🔴 **The Article 50(2) date conflict this file has flagged for two passes got WORSE, not better.**
+Pass 94 recorded *"Art. 50(2) synthetic-content marking 2 Dec 2026; 2 Feb 2027 for systems already on the
+market"*. This pass's sources say **2 Dec 2026 IS the date for systems already on the market.** 🔵 **Two
+readings, opposite assignments, neither primary. Recorded as unresolved and sharper, not resolved.**
+
+#### Pass 95 — carried below, unchanged
+
 **Pass 95, 2026-10-10.** ⏱️ **Fifth pass of this date.** Regional sweep run once globally and once per
 region (North America, EMEA, APAC, LATAM), plus gap-targeted queries on the leads pass 94 named for itself.
 
@@ -171,7 +202,7 @@ are different products — see `intel/trends.md` `T7`.
 | 🇪🇺 EU | **AI Act** — education explicitly **high-risk** (exam scoring named by the Commission) | enforcement powers from **2 Aug 2026** | 🟡 **High-risk compliance deadline moved to 2 Dec 2027** by the Digital/AI Omnibus (Council approval **29 Jun 2026**); embedded high-risk systems **2 Aug 2028**. 🔴 **Blogs still citing Aug 2026 for high-risk duties are outdated — and this pass found that exact error again in a current source.** |
 | 🇪🇺 EU | 🆕 **AI Act Article 4 — staff AI-literacy duty** | 🟢 **already in force; NOT deferred** | 🟢 **The sharpest EMEA point on this page.** The one AI Act duty that already binds an educational institution is the obligation to ensure AI literacy among staff operating AI systems. It did **not** move to 2027 with the high-risk obligations. |
 | 🇰🇷 South Korea | **AI Basic Act** — education is a **"high-impact AI"** area | in force **22 Jan 2026** | 🟢 The region's most comprehensive law |
-| 🇻🇳 Vietnam | **AI law**; high-risk list names education (automated assessment, behavioural monitoring) | enacted **1 Mar 2026** | 🟢 In force |
+| 🇻🇳 Vietnam | 🆕 **p96 NAMED AND ENUMERATED**: statute **Law 134/2025/QH15** (in force 1 Mar 2026); the high-risk LIST is **`Decision 33/2026/QD-TTg`**, signed by Deputy PM Hồ Quốc Dũng, **published 30 Jun 2026**; implementing duties in **Decree 142/2026/NĐ-CP**. **46 high-risk systems across 6 sectors — education is 3 of them**: (1) **self-study content generated from uncontrolled data sources**, (2) systems that **automatically conduct examinations, assess learning outcomes or rank learners**, (3) **monitoring of learner behaviour using biometric data** | 🟢 **Decision 33 in force 15 Aug 2026**; existing education / health / finance systems must comply **before 1 Sep 2027** 🟡 *(one source gives a general 1 Mar 2027 limb that could not be reconciled with the decision text — recorded, not used)* | 🟢 **In force, and the most operationally demanding education-AI regime on this page.** 🔵 **Limb (1) is new to this KB and is the one that catches a RAG tutor**: it is not about assessment at all — it is about **content provenance in self-study material**, so a tutor grounded on un-curated web retrieval is in scope even if it never grades anything. |
 | 🇹🇼 Taiwan | **AI Basic Act** | passed **Dec 2025** | 🟢 |
 | 🇺🇸 Ohio | first state to **require every K-12 district to adopt a formal AI policy** | deadline **1 Jul 2026** | 🟢 Binding |
 | 🇺🇸 federal | **K-12 AI Literacy and Readiness Act of 2026** (H.R. 8747, Rep. Randy Fine) | 🟢 **ordered reported (amended) by the House Education and Workforce Committee, 21 Jul 2026, on a recorded 18–15 vote** | 🟢 🆕 **p93 — RESOLVED after three passes.** Congress.gov records that markup as the **latest action**: **no House floor vote, no Senate action, not enacted.** 🔴 **And the substance is not what its name suggests** — it amends **ESEA 1965** so that AI curriculum and teacher training become **permissible uses of existing federal K-12 funds**. 🔵 **A funding-eligibility bill, not a mandate.** |
@@ -354,6 +385,28 @@ strategy, and pass 95 did not re-test it.** Not recorded. 🔵 **But the Quebec 
 which pass 93 also left untested, is now confirmed** — which is a reason to **re-test the Ontario limb**,
 not to trust the source wholesale.
 
+#### 🟡 🆕 p96 — North America: three bill numbers this file was missing, one federal instrument, and a tracker spread worth quoting as a spread
+
+🔵 **This limb was already the best-evidenced on the page, so pass 96's contribution is precision rather
+than discovery** — and two of the three items are the kind a client's counsel will ask for by number.
+
+| item | what pass 96 adds | grade |
+|---|---|---|
+| 🇺🇸 **Oklahoma** | 🆕 **the bill number: `SB 1734`.** This file has carried Oklahoma for three passes on substance only. The instrument requires **every district to adopt a written AI policy before the 2027–28 school year** and **prohibits AI from being the primary basis for grading, discipline, placement or other high-stakes decisions.** | 🟡 search-summary |
+| 🇺🇸 **Utah** | 🆕 a **required grade 7-or-8 digital-skills course including AI literacy** — 🔴 **and the bill number is contested across sources (`H.B. 218` vs `H.B. 273`)**, so it is recorded as a contested pair and **not used as a citation.** | 🔴 conflicting |
+| 🇺🇸 **Maryland `SB 720`** | 🟢 **re-confirmed independently**, with the dates this file already carries: signed **26 May 2026**, effective **1 Jun 2026**, every local school system must designate an **AI coordinator**. | 🟡 second independent return |
+| 🇺🇸 **federal** | 🆕 the **Department of Education finalised its AI grant-priority rule on 13 Apr 2026.** 🔵 **This is a funding lever, not a mandate** — the same shape as `H.R. 8747` (which makes AI curriculum a *permissible use* of existing ESEA funds). 🟢 **Two federal instruments, both money, neither a duty: `T12` holds — in a federal system the binding instrument is subnational.** | 🟡 search-summary |
+
+🔴 **And the tracker counts still disagree, which this file should quote as a spread rather than pick a
+winner.** Measured this pass across four trackers: **134 bills in 31 states** (MultiState, Mar 2026) ·
+**68 bills across 27 states, 10 enacted** (FutureEd) · **27 states with active bills, 5 already law** ·
+**3 states with enacted K-12 AI statutes — Maryland, Idaho, Oklahoma.** 🟢 **The spread is explained, not
+mysterious: each tracker defines "AI in education" and "enacted" differently.** 🔵 **So the defensible
+sentence for a deck is the floor and the ceiling together — *"between 3 and 10 US states have enacted K-12
+AI statutes depending on definition, against 27–31 states with active bills"* — and the uncontested number
+underneath them: 🟢 **33–35 state departments of education plus Puerto Rico now publish official AI
+guidance.** 🔴 **Guidance is not statute**, and that distinction is the entire North American sales motion.
+
 ### EMEA
 
 🆕 🟢 **Assessment is where the EU AI Act and the market meet, and there is now a dated sector-scale pilot.**
@@ -517,6 +570,62 @@ Southern-European one are all one bucket here.
 given as **$512.6 M (2024) → $1 328.8 M (2029), 17.2 % CAGR** by one firm, while an AI-for-kids segment
 report gives **$289 M (2024) → $649 M (2034)**. 🔵 **Not reconcilable from public summaries** — the growth
 rate is the figure to argue from, never the level. `marketsandmarkets.com` remains egress-blocked.
+
+#### 🟢 🆕 p96 — EMEA: Saudi Arabia's instrument is named at last, the UAE's private-school limb gets a second source, and Africa fails for a reason
+
+🟢 **`Gap 266` asked for two first-party reads — the UAE Ministry of Education's own publications and the
+Saudi equivalent. Both hosts remain unreachable. 🟢 But one half of what it wanted arrived anyway.**
+
+**Saudi Arabia — named, attributed and sized for the first time on this page:**
+
+| field | value | grade |
+|---|---|---|
+| programme | **Vision 2030 — Human Capability Development Program** | 🟡 search-summary |
+| delivered by | 🟢 **Ministry of Education + Ministry of Communications and Information Technology + SDAIA** (Saudi Data and Artificial Intelligence Authority) | 🟡 search-summary |
+| scale | 🟢 **more than 6 million students** | 🟡 search-summary |
+| scope | **public schools**; described as the country's **first nationwide integration of AI in general education** | 🟡 search-summary |
+
+🔵 **Why the delivery triple matters more than the student count.** A curriculum mandate run by a Ministry
+of Education alone is a **pedagogy** procurement. 🟢 **One co-signed by a national data-and-AI authority is
+a platform, data-governance and teacher-training procurement as well** — and **SDAIA is the body that also
+owns Saudi AI policy**, so the curriculum and the compliance regime have the same owner. 🔵 **That is a
+single buyer for two of the three offers this KB sells into the Gulf.**
+
+🟡 **UAE — `Gap 266` narrows again, in the direction pass 93 declined to take on `n=1`.** Pass 93 recorded
+a **Sep 2026** cabinet approval extending the mandate to **private** schools with **22 000 teachers
+trained**, and refused it as single-source. 🟢 **This pass returns a second, independent source for the same
+direction** — *"the Cabinet has approved rollout across all public and private schools"* — and a separate
+source describing **a standalone subject, *Artificial Intelligence and Technology*, across every grade
+KG→12 for 2026-27**, where pass 93 had it taught **inside** *Computing, Creative Design and Innovation*
+from 2025-26. 🔴 **Sources still conflict on private-school scope** — one says private schools are *"not
+required to follow suit, not yet at least"*. 🟡 **So the row stays flagged, not settled: n=2 in one
+direction is corroboration, not a primary read.** 🔵 **But the practical consequence for a pitch has
+already flipped** — the question to ask a UAE client is no longer *"will this reach private schools"* but
+*"has your authority issued its implementation circular yet"*.
+
+🔴 **Africa: nothing, for a sixth pass — and this pass established the mechanism instead of restating the
+absence.** The query run was `Saudi Arabia UAE Africa AI education policy 2026 ministry curriculum mandate
+regulation`. **It returned nine sources, all Gulf, zero African.** 🔵 **A paired sub-region query is
+answered by whichever sub-region has more published material, every time — so pairing the Gulf with Africa
+guarantees the Gulf answer and hides the African silence as if it were coverage.** 🟢 **The defect is in
+the query, not the region, and this KB's own record proves it**: Africa *"BROKE after four passes"* when
+the sub-regions were queried **alone** — Kenya (national AI plan in schools, **>62 000 teachers
+ICT-trained by Jul 2026**, AI literacy routed through the Competency-Based Curriculum), Nigeria (a
+**May 2025** announcement its own source calls *"aspirational rather than systemic"*), South Africa (a
+**2021**-sourced curriculum proposal). 🔴 **Those rows are carried, not advanced.** 🔵 **Pre-registered
+remedy: never pair sub-regions in one query. Run Kenya, Nigeria, South Africa and Egypt as four separate
+queries next pass.**
+
+🟡 **And the EU omnibus conflict this file flagged in pass 94 narrows, without becoming primary.** Pass 94
+wrote *"sources conflict on OJ publication, 24 Jul vs entry into force 27 Jul 2026, and neither was read
+primary"*. 🟢 **Two independent search rounds this pass, over different source sets, returned
+`in force 27 July 2026` four times and `24 Jul` zero times.** 🟡 **Still not primary** — `EUR-Lex` and
+`digital-strategy.ec.europa.eu` are both unreachable from this environment — 🟢 **but the conflict now
+resolves 4-to-0 in one direction, which is the strongest grade this channel produces.**
+🔴 **A SEVENTH independent instance of the wrong Annex III date was also returned** (a current EU AI Act
+education guide stating *"requirements for high-risk AI systems apply from August 2026"*). 🟢 **Seven
+instances across seven passes: this KB's claim that the wrong date is the market's majority reading
+survives another independent sample.**
 
 ### APAC
 
@@ -725,6 +834,53 @@ higher-education curricula.** What exists:
 🔵 **So the honest status is not "open" but "in drafting, with a known reviewer set and a stated horizon"** —
 which is **actionable in a way a bare gap is not**: the curriculum is being written now, and the bodies
 writing it are named.
+
+#### 🟢 🆕 p96 — APAC: Vietnam's instrument is named, dated and enumerated, and it makes APAC the binding region for automated assessment
+
+🔴 **This file has carried Vietnam for three passes as *"the AI law; high-risk list names education"* —
+a statute without an instrument and a scope without limbs.** 🟢 **Both are now resolved.**
+
+| field | value | grade |
+|---|---|---|
+| statute | **Law 134/2025/QH15** — the first standalone AI statute in Southeast Asia | in force **1 Mar 2026** |
+| the high-risk **list** | 🆕 **`Decision 33/2026/QD-TTg`**, signed by **Deputy PM Hồ Quốc Dũng**, published **30 Jun 2026** | 🟡 search-summary, two independent source sets |
+| implementing duties | 🆕 **`Decree 142/2026/NĐ-CP`** | 🟡 search-summary |
+| scope | **46 high-risk AI systems across 6 sectors**; 🟢 **education accounts for 3** | 🟡 search-summary |
+| in force | 🟢 **15 Aug 2026** | 🟡 search-summary |
+| compliance for **existing** education, health and finance systems | 🟢 **before 1 Sep 2027** | 🟡 search-summary; 🟡 a general **1 Mar 2027** limb appears in one source and **could not be reconciled with the decision text — recorded, not used** |
+
+🟢 **Education's three limbs, enumerated — and the first one is not what this KB expected:**
+
+1. 🔴 **Self-study content generated from *uncontrolled data sources*.**
+2. Systems that **automatically conduct examinations, assess learning outcomes, or rank learners**.
+3. **Monitoring of learner behaviour using biometric data.**
+
+🔵 **Limb 2 is what this KB has been pricing all along, and limb 3 is the proctoring line it already
+tracks. Limb 1 is new, and it is the consequential one.** 🔴 **It does not mention assessment.** A tutoring
+agent that answers a pupil from un-curated web retrieval is **in scope in Vietnam even if it never grades
+anything** — because the regulated object is the **provenance of the material the learner studies**.
+
+🟢 **And this KB already holds the answer to limb 1, measured, from a different direction entirely.**
+`T11` in `intel/trends.md` records grounding a curriculum-aligned tutor in **verified standards data**
+taking hallucination from **31.9 % → 0.2 %**, and `repos/foundations.md` Tier 1b carries
+`bncc-dev/bncc-pacotes` — **1 721 verified objectives behind 7 MCP tools, dataset embedded so lookups are
+local.** 🔵 **So grounding stops being a quality argument and becomes a REGULATORY CONTROL in at least one
+jurisdiction.** 🟢 **That is a much easier sale than a quality improvement**, and the architecture is
+already on this shelf. Costed as `P96-B` in `compose/patterns.md`.
+
+🔴 **The regional consequence, and it inverts this KB's standing priority.** The EU moved Annex III
+high-risk obligations — *evaluating learning outcomes* among them — **from 2 Aug 2026 to 2 Dec 2027**.
+Vietnam brought equivalent duties into force **15 Aug 2026**, thirteen days after the date the EU vacated,
+and **named automated assessment explicitly**. 🟢 **So as of this pass the binding high-risk regime for
+automated assessment is APAC's, not EMEA's** — with South Korea's AI Basic Act (in force **22 Jan 2026**,
+penalty grace through 2026) beside it. 🔵 **EMEA remains the larger market and the better-understood
+regulation; it is no longer the one with a live deadline.** New `T15` in `intel/trends.md`.
+
+🟡 **One more APAC datum, carried because it sharpens an existing row rather than adding one.** The
+**Ipsos Education Monitor 2026** finding this file already cites — lower support for banning AI in schools
+across the Asian markets surveyed, **higher** in Australia and New Zealand — was independently re-returned
+this pass. 🔵 **A second independent return of the same split is worth recording**, because it is the one
+public-opinion input on this page and a single source would not carry a pitch.
 
 ### LATAM
 
@@ -957,7 +1113,62 @@ and on AI and education, and is a named institutional actor for a public-sector 
 published AI policies, against UNESCO IESALC's **26 %**. 🔵 **Close but not the same measurement, and
 neither is averaged here.**
 
+#### 🔴 🆕 p96 — LATAM: a measured ZERO, and the zero is enumerated rather than reported as silence
+
+🔴 **The LATAM sweep ran in Spanish and returned nothing this file does not already carry.** 🟢 **Stated as
+an enumerated saturation, not as a quiet pass**, because an unexplained zero is indistinguishable from a
+query that was never run:
+
+| what the sweep returned | status in this file |
+|---|---|
+| UNESCO **IESALC** regional higher-education study, launched **9 Sep 2026** | 🟢 **already here** — 200 institutions, 19 countries, 87 % use AI, fieldwork Aug–Oct 2025 |
+| **92 %** of regional university students using AI (Digital Education Council) | 🟢 **already here, twice**, and already cross-checked against a second instrument landing on the same figure |
+| UNESCO **Observatory of AI in Education for LAC**, launched **14 Apr 2026**, Santiago de Chile | 🟢 **already here** |
+| *"no unified regulatory framework for AI in higher education"* across Mexico, Paraguay, Chile, Colombia | 🟢 **already here** — and this file's version is stronger, because it names Mexico's sub-national instrument |
+| Chile's **National AI Policy** (2021) + a bill in discussion; Brazil and Colombia with national strategies but no education-sector regulation | 🟢 **already here** |
+| **22 %** of regional countries with a public-sector national AI strategy (UNDP) | 🟡 **new figure, weak provenance** — cited via a political-analysis blog, no primary. **Recorded here and used nowhere.** |
+| PUC Chile × Microsoft **ConectIA**; Tec de Monterrey redesigning **44+ programmes** for 2026 | 🟢 **already here** 🔴 **and the source is a 2024 article**, which is why this file grades it as a plan rather than a deployment |
+
+🔵 **Six of seven returns already published, one new figure too weakly sourced to use. That is saturation
+at the regional-intel layer, measured.** 🟢 **It is also the expected result**: LATAM is the best-evidenced
+region in this file precisely because passes 93–95 worked it hard. 🔴 **The productive LATAM line of
+enquiry is no longer regional surveys — it is the per-country instrument**, which is what found Mexico's
+Edomex decree and Brazil's MEC statement. **Pre-registered: query Colombia's MinEducación and Argentina's
+Ministerio de Capital Humano by name next pass, not "LATAM".**
+
+🟢 **And pass 96's LATAM finding came from the licence channel instead, which is worth noting as a method
+result.** `chamilo/chamilo-lms` — the practical LATAM LMS incumbent — serves a 1 614 B `license.txt` whose
+**first copyright line is `BeezNest Latino SAC, Peru`**, ahead of its Belgian holder. 🔵 **The region
+attribution for the most widely deployed LMS in LATAM is in its grant, not in its install base** (`P800`,
+`P984`). **A regional sweep would never have found that. The payload did.**
+
 ## Regions and lines of enquiry that returned nothing — stated, not hidden
+
+### 🆕 p96 — scored against the leads pass 95 named for itself
+
+🟢 **Pass 95 named seven leads. Pass 96 discharged three, narrowed two, and two stand — one of them
+worse.** 🔵 **Scored openly, because a gap list that only grows is a list nobody is working.**
+
+| lead, as pass 95 wrote it | pass 96 |
+|---|---|
+| *"`Gap 377` — `pom.xml`/`build.gradle` are not in the grant ladder's path list. Cheap to add, and it pays on every JVM platform here"* | 🟢 **DISCHARGED, and the lead's own wording corrected.** The Maven reader **already exists and is already wired** (`p289` → `p283::PARSERS`, by `P294`) — one import, not new code (`P237`). 🔴 **And `build.gradle` is NOT a licence oracle**: Artemis declares none in 52 855 B. **4 of 4 Maven platforms do declare**, so the oracle pays — on Maven only. |
+| *"`Gap 375` — what remains open is the permissive tier's smaller rows (`pupilfirst`, `academico`, `open-tutor-ai-CE`), which were not probed"* | 🟢 **DISCHARGED as *unmeasurable*, with the mechanism.** All three serve their manifest at **200 with no `version` field**; two declare `"private": true`. 🟢 **`P985`** splits the result into `UNVERSIONED-BUT-RELEASED`, `COMPONENT-VERSIONED` and `UNRELEASED` — 🔴 **and `academico`, this KB's nearest permissive SIS, has ZERO tags.** |
+| *"`Gap 376` — the first duty of the next pass that can execute code is corrective, not additive"* | 🔴 **NOT DISCHARGED — repository code refused for a FOURTH consecutive pass.** 🟢 **But bounded for the first time**: 127 published `(slug, ref, sha7)` triples probed, **122 still at the tip of their pinned ref, 0 unreachable, 0 vanished refs**, and **all 5 drifted rows re-read and unchanged.** 🔵 **"Decaying" became "5 rows of 127".** |
+| *"`Gap 266` — read the UAE Ministry of Education's own publications and the Saudi Press Agency equivalent. Cost: two first-party reads"* | 🟡 **NARROWED, not discharged — both hosts still unreachable.** 🟢 **Saudi's instrument is nonetheless named for the first time** (Vision 2030 HCDP; **MoE + MCIT + SDAIA**; **>6 M students**). 🟡 **UAE's private-school limb gains a SECOND independent source** for the direction pass 93 refused on `n=1`; 🔴 sources still conflict, so the row stays flagged. |
+| *"Africa and the Middle East remain absent from the EMEA sweep"* | 🔴 **STANDS, and this pass found the mechanism rather than restating the absence.** A paired *"Gulf AND Africa"* query returned **nine sources, all Gulf, zero African.** 🔵 **Pair-querying guarantees the louder sub-region and hides the quieter one's silence as coverage.** 🟢 **Remedy pre-registered: Kenya, Nigeria, South Africa and Egypt as four separate queries.** |
+| *"sources conflict on OJ publication, 24 Jul vs entry into force 27 Jul 2026, and neither was read primary"* | 🟡 **NARROWED 4-to-0 toward 27 Jul 2026** across two independent search rounds over different source sets. 🔴 **Still not primary** — `digital-strategy.ec.europa.eu` and `EUR-Lex` are both unreachable here. |
+| *"Art. 50(2) synthetic-content marking 2 Dec 2026; 2 Feb 2027 for systems already on the market"* | 🔴 **GOT WORSE.** This pass's sources assign **2 Dec 2026 to systems already on the market** — the opposite allocation. 🔵 **Two readings, opposite assignments, neither primary. Recorded as unresolved and sharper.** |
+
+### 🔴 🆕 p96 — lines of enquiry that returned a measured zero
+
+| line | outcome |
+|---|---|
+| `github trending education AI 2026` | 🔴 **SIXTH consecutive zero.** Returns `microsoft/generative-ai-for-beginners`, `developer-roadmap`, `100-Days-Of-ML-Code` — **materials *about* AI, not AI *for* education.** 🟢 **Six passes is sufficient evidence: RETIRE the query.** The ambiguity is in the phrase, not the index. |
+| `top open source AI agents education {year} github MIT` | 🔴 **zero education rows, fourth consecutive pass** — returns the horizontal agent market (OpenClaw, opencode, CrewAI, LangGraph, OpenHands, goose, Cline). 🔵 **The channel answers a different question than it is asked.** |
+| LATAM regional sweep (Spanish) | 🔴 **enumerated zero — 6 of 7 returns already published, the 7th too weakly sourced to use.** Detail in the LATAM section above. |
+| permissive open-response **scorer** (`Gap 372`) | 🔴 **unchanged.** Validation layer stays Apache/BSD, production scorers stay AGPL-3.0, research scorers stay ungranted or CC. |
+| primary-source reads of any kind | 🔴 **ZERO. `WebFetch` returned `getaddrinfo ENOTFOUND` for every host attempted** and raw `curl` returned **`000`** on three legal-publisher URLs. 🔴 **Every regulatory claim added this pass is search-summary grade**, and the blocked-host list grows by three. |
+
 
 ### 🆕 p95 — scored against the leads pass 94 named for itself
 

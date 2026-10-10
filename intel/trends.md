@@ -134,6 +134,27 @@ audit of whatever the client already runs**, because engagement detection, atten
 inference ship switched on in proctoring and "engagement analytics" products. **It is also the cheapest
 possible opening deliverable in EMEA: a one-week inventory against a prohibition that is already law.**
 
+### 🟡 🆕 p96 amendment to T4 — a seventh instance, one conflict narrowed 4-to-0, and one conflict that got worse
+
+- 🔴 **Seventh independent instance of the wrong date.** A current EU-AI-Act-for-education guide returned
+  this pass states *"requirements for high-risk AI systems apply from August 2026."* 🟢 **Seven instances
+  across seven passes. The claim that the wrong date is the market's majority reading survives another
+  independent sample** — and it is now the longest-running empirical claim in this file.
+- 🟡 **The OJ-vs-entry-into-force conflict narrows 4-to-0.** Pass 94 flagged *"24 Jul vs entry into force
+  27 Jul 2026, and neither was read primary"*. 🟢 **Two independent search rounds over different source
+  sets returned `in force 27 July 2026` four times and `24 Jul` zero times.** 🔴 **Still not primary** —
+  `digital-strategy.ec.europa.eu` and `EUR-Lex` are unreachable from this environment.
+- 🔴 **The Article 50(2) conflict got WORSE, and that is worth saying rather than smoothing.** This file's
+  table reads *"Art. 50(2) synthetic-content marking **2 Dec 2026**; **2 Feb 2027** for systems already on
+  the market"*. 🔴 **This pass's sources assign 2 Dec 2026 TO systems already on the market** — the
+  opposite allocation of the same date. 🔵 **Two readings, opposite assignments, neither primary. Recorded
+  as unresolved and sharper, not resolved** — and 🔴 **Article 50 is the limb that actually binds in EMEA
+  today, so the ambiguity sits on the live obligation rather than the deferred one.**
+- 🟢 **And the sales consequence of T4 is now a different sentence, because of `T15`.** The EMEA
+  conversation was *"literacy now, high-risk conformity by Dec 2027"*. 🟢 **It is still that — but the
+  high-risk conformity work has a buyer with a live deadline, and that buyer is in APAC.** See `T15`.
+
+
 ## T5 — Generators are saturated; the checker gap is now **half closed**, and the remaining half is sharper
 
 🔴 **What this KB published for five passes:** *"a targeted search for AI accessibility/alignment checkers in
@@ -162,6 +183,37 @@ evidence.** The narrowed specification, which is more useful than the old blanke
 🔵 **A checker remains the easier enterprise sale** — it does not displace the educator, it evidences
 compliance. With North America at ~10 % guideline coverage and WCAG/508 exposure, **the accessibility half can
 now be composed rather than built, and the alignment half is a clean, specified build.**
+
+### 🟢 🆕 p96 amendment to T5 — the remaining half is not a supply gap, it is a **wiring** gap, and that is a cheaper problem
+
+🔴 **T5's remaining half has been stated five times as a supply absence:** *"nothing permissive audits
+whether content meets a learning outcome with usable evidence."* 🟢 **Pass 96 found the technique, fully
+permissive, published in 2026 — on the first query that named *rubrics* instead of education** (`P955`, a
+fourth consecutive pass):
+
+| layer | repo | grant |
+|---|---|---|
+| **generate** a rubric from an instruction | [`wanghaoyu0408/OpenRubrics`](https://github.com/wanghaoyu0408/OpenRubrics) *(ACL 2026 long)* | 🟢 **MIT** |
+| **judge** against weighted, tiered criteria with an interpretable verdict | [`Qwen-Applications/OpenRS`](https://github.com/Qwen-Applications/OpenRS) — 50+ rubric sets, criteria **critical / core / important / highlight**, A/B-swap debiasing | 🟢 **Apache-2.0** |
+| **calibrate the judge against human markers** | [`planepig/rubricbench`](https://github.com/planepig/rubricbench) — **1 147 pairwise comparisons**, expert-annotated atomic rubrics, scores reasoning as well as verdict | 🟢 **MIT** |
+
+🔴 **What none of them does is bind a rubric to a published curriculum standard.** 🟢 **And this KB holds
+that end already:** `bncc-dev/bncc-pacotes` (MIT code + CC BY 4.0 data) exposes **1 721 verified BNCC
+objectives** through **7 MCP tools** with per-record provenance, and `learning-commons-org/evaluators`
+ships **MIT** judging code against research-backed educational rubrics.
+
+🔵 **So T5's remaining half is restated, and the restatement halves the cost.** A supply gap means *find or
+build the capability*. 🟢 **A wiring gap means the capability exists under grants a studio can bill
+against, and the deliverable is an integration** — which is a scoped engagement, not a research bet.
+**`Gap 379`; specified and costed as `P96-A` in `compose/patterns.md`.**
+
+🟢 **One subsidiary result worth carrying into T6.** `rubricbench`'s **1 147 expert-annotated comparisons
+are MIT** — **the first permissive annotated comparison corpus this KB has found.** 🔴 **T6's finding
+stands for education corpora** (`evaluators`' annotated CLEAR and PERSUADE 2.0 are **CC-BY-NC-SA-4.0**, and
+they are the valuable part). 🔵 **But for *calibrating a judge* rather than *scoring a student*, the domain
+mismatch costs less than the NC clause does** — so `rubricbench` is the row that lets a paid deliverable
+show its marker agrees with humans without licensing someone else's student essays.
+
 
 ## T6 — 🆕 In the checker and dataset tier, the grant splits along code / prompt / corpus lines — and the permissive part is not the valuable part
 
@@ -527,6 +579,62 @@ assessment-integrity workflow the draft policy names.** 🟢 Costed as `P95-A` i
 notification itself was not read**, and the August draft is explicitly a **draft**. 🟡 **And a vocabulary
 note: Pakistan is bucketed APAC here under this task's five-value region field**, which hides that it is a
 South Asian market adjacent to India's, not an East Asian one.
+
+## T15 — 🆕 p96 The binding high-risk regime for automated assessment is now **APAC's, not EMEA's** — and the date the EU vacated, Vietnam occupied thirteen days later
+
+🔴 **This KB has priced EMEA as the compliance region for three passes.** `P94-A` — *"The Annex III
+evidence pack for automated scoring (EMEA first, North America second)"* — rests on Annex III high-risk
+obligations binding an education deployment. 🟢 **They no longer bind in 2026, and equivalent obligations
+now do bind elsewhere.**
+
+| jurisdiction | instrument | names automated assessment? | binds from |
+|---|---|---|---|
+| 🇪🇺 **EU** | AI Act **Annex III / Art. 6(2)**, as amended by the **Digital Omnibus on AI** (`Regulation (EU) 2026/1744`) | 🟢 yes — *evaluating learning outcomes*, Annex III point 3(b) | 🔴 **2 Dec 2027** *(deferred from 2 Aug 2026)* |
+| 🇻🇳 **Vietnam** | **`Decision 33/2026/QD-TTg`** under **Law 134/2025/QH15**; duties in **Decree 142/2026/NĐ-CP** | 🟢 **yes, explicitly** — *"automatically conduct examinations, assess learning outcomes or rank learners"* | 🟢 **15 Aug 2026** — existing systems **before 1 Sep 2027** |
+| 🇰🇷 **South Korea** | **AI Basic Act** — education is a *"high-impact AI"* area | 🟢 yes | 🟢 **22 Jan 2026**, penalty grace through 2026 |
+
+🔵 **The timing is the finding, and it is almost comic.** The EU vacated **2 August 2026**. Vietnam's list
+took effect **15 August 2026**. 🟢 **Thirteen days.** 🔴 **A studio that read the deferral as "the
+assessment-compliance market slipped to 2027" misread it: the market moved regions.**
+
+### 🟢 What actually changes in the offer
+
+| limb | EMEA | APAC |
+|---|---|---|
+| **urgency** | 🔴 **gone until late 2027** for Annex III. 🟢 **What binds *now*: Art. 4 staff AI-literacy (in force, not deferred), Art. 50 transparency (2 Aug 2026), and the Art. 5 emotion-recognition prohibition in education (enforceable since 2 Feb 2025)** | 🟢 **live.** Vietnam requires **pre-deployment registration in a National AI Database**, conformity assessment, **mandatory human oversight** and **72-hour incident reporting** |
+| **what the buyer is buying** | literacy, transparency copy, and a feature audit against a prohibition | 🟢 **an architecture**: a registration dossier, an oversight boundary and an incident pipeline |
+| **who owns the budget** | the institution's compliance function | the system owner — because a **72-hour clock is an engineering requirement, not a policy one** |
+
+🟢 **`P94-A` is not withdrawn — it is re-sequenced.** The Annex III evidence pack is the *same deliverable*,
+and `rsmtool` (Apache-2.0) + `skll` (BSD-3) are still the permissive evidence layer that produces it
+(`T13`). 🔵 **The change is which jurisdiction will pay for it this year.** **Sell the pack into Vietnam and
+Korea on a live deadline; sell literacy and the emotion-recognition audit into EMEA; sell the pack into
+EMEA from mid-2027.**
+
+### 🔴 The limb nobody was looking at — and this KB already has the answer
+
+🔴 **Vietnam's education list has THREE limbs and the first one is not about assessment at all:**
+*self-study content generated from **uncontrolled data sources***.
+
+🔵 **That catches a tutoring agent that never grades anything.** A RAG tutor answering a pupil from
+un-curated web retrieval is a high-risk system in Vietnam **because of where its material comes from**, not
+because of any judgement it makes. 🟢 **And `T11` already measured the control**: grounding a
+curriculum-aligned tutor in **verified standards data** moved hallucination **31.9 % → 0.2 %**, and
+`repos/foundations.md` Tier 1b carries `bncc-dev/bncc-pacotes` — MIT code, CC BY 4.0 data, **1 721 verified
+objectives behind 7 MCP tools, embedded so lookups run locally.**
+
+🟢 **So grounding is promoted from a quality argument to a regulatory control.** 🔵 **This matters
+commercially out of proportion to its size:** *"it hallucinates less"* is a feature claim a buyer
+discounts; *"the corpus is controlled, enumerated and provenance-tagged, which is the condition limb 1
+imposes"* is a compliance artefact a buyer must have. 🟢 **Same architecture, different budget line.**
+Costed as `P96-B` in `compose/patterns.md`.
+
+🟡 **Evidence grade, stated because this trend is consequential.** 🔴 **Nothing here was read from a primary
+text** — `WebFetch` returned `getaddrinfo ENOTFOUND` for every host attempted and `curl` returned `000` on
+three legal-publisher URLs. 🟢 **The EU dates and the Vietnam instrument were each returned by two
+independent search rounds over different source sets**, which is the strongest grade this channel produces.
+🔴 **One date is unreconciled and is not used**: a general **1 Mar 2027** compliance limb appears in one
+Vietnamese-law summary and could not be matched to the decision text.
 
 ## Instrument note carried forward
 

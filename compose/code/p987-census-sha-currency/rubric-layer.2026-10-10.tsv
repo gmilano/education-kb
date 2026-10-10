@@ -1,0 +1,6 @@
+slug	ref	sha40	licence_file	bytes	family	note
+Qwen-Applications/OpenRS	master	4c7f22b570753630e91d8450205d33f1580a00df	LICENSE	10770	Apache-2.0	4/4 Apache clause headings PRESENT; APPENDIX ABSENT -> honest abridgement (P974)
+planepig/rubricbench	main	07daecc72ac159b63b0e15b209bdc5055c7c186e	LICENSE	1067	MIT	Copyright (c) 2026 Junyi Zhou
+wanghaoyu0408/OpenRubrics	main	1a40c14cb7827ae10bfdf0f6d61ca35a36770b5b	LICENSE	1067	MIT	Copyright (c) 2026 Tianci Liu
+chrisliu298/awesome-rubric-rewards	main	4897f496d7868e237f8a91c454cb37f36acc8210	LICENSE	7048	CC0-1.0	index/list, not code
+UniTime/unitime	master	15668a5e54d15549fc8a752b1f66f266b639dc27	LICENSE	11357	Apache-2.0	pristine Apache text; NOTICE also 200 at 22526 B

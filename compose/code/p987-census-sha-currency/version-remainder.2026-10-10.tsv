@@ -1,0 +1,6 @@
+slug	manifest	manifest_http	version_field	tag_count	newest_tag	class
+pupilfirst/pupilfirst	package.json	200	NO-VERSION-IN-PAYLOAD (private:true)	57	@pupilfirst/pf-icon@2.0.0	COMPONENT-VERSIONED
+academico-sis/academico	composer.json	200	NO-VERSION-IN-PAYLOAD (license:MIT declared)	0	-	UNRELEASED
+academico-sis/academico	package.json	200	NO-VERSION-IN-PAYLOAD (private:true)	0	-	UNRELEASED
+Open-TutorAi/open-tutor-ai-CE	pyproject.toml	200	NO-VERSION-IN-PAYLOAD (license={file="LICENSE"})	1	v1.0.0	UNVERSIONED-BUT-RELEASED
+UniTime/unitime	pom.xml	200	4.9	101	v4.9.152	MANIFEST-AND-TAG-AGREE
