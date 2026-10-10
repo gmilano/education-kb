@@ -6,6 +6,78 @@ updated: 2026-10-10
 
 # Education — vertical platforms you can customise with AI
 
+**Pass 108, 2026-10-10.** ⏱️ **Eighteenth pass of this date.** 🟢 **Every platform row
+gains the ref you would actually pin, and one platform moves from "unreleased" to
+"pin 21.0.3" — the correction with the largest commercial consequence on this page.**
+
+### 🟢 🆕 p108 — the customisable-platform tier, by what you can pin
+
+🔵 **Source: `compose/code/p108-release-identity/`, anonymous git lane only, 296 of 296
+addresses read, zero unread. Column chosen by `class` (`latest_prefix` is noise on a
+`semver` row).**
+
+| platform | licence | `class` | pin | AI-on-top surface |
+|---|---|---|---|---|
+| [`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** | `prefixed` | 🟢 **`OpenOLAT_21.0.3`** | 🟢 **most permissive full LMS here**; course elements + REST API |
+| [`Moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3 | `semver` | 🟢 **`v5.3.0`** | plugin API; in-LMS AI subsystem |
+| [`Open edX`](https://github.com/openedx/edx-platform) | 🟡 AGPL-3 | `semver` | 🟢 **`v2.1.0`** | XBlocks; 🔴 `release-2021-…` tags are not releases |
+| [`Canvas LMS`](https://github.com/instructure/canvas-lms) | 🟡 AGPL-3 | `semver` | 🟢 **`v5.14.2`** | LTI 1.3 + Live Events |
+| [`Chamilo`](https://github.com/chamilo/chamilo-lms) | 🟡 GPL-3 | `semver` | 🟢 **`v3.0.1`** | LATAM/francophone base; plugin layer |
+| [`Sakai`](https://github.com/sakaiproject/sakai) | 🟢 ECL-2.0 | `semver` | 🟢 **`25.2`** | 🟢 permissive; tool/entity API |
+| [`Kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** | `semver` | 🟢 **`v0.19.5`** | 🟢 **MIT + offline-first** — low-connectivity deployments |
+| [`Oppia`](https://github.com/oppia/oppia) | 🟢 **Apache-2.0** | `semver` | 🟢 **`v3.5.3`** | interactive-lesson state graph |
+| [`BigBlueButton`](https://github.com/bigbluebutton/bigbluebutton) | 🟡 LGPL-3 | `semver` | 🟢 **`v3.0.39`** | synchronous classroom; recording hooks |
+| [`H5P`](https://github.com/h5p/h5p-php-library) | 🔴 **GPL-3.0** | `semver` | 🟢 **`1.28.0`** | 🔴 **copyleft core**; content types embed in every LMS above |
+| [`h5p-standalone`](https://github.com/tunapanda/h5p-standalone) | 🟢 **MIT** | `semver` | 🟢 **`v3.8.2`** | 🟢 **the MIT way to play H5P** — no LMS, no GPL server library |
+| [`DSpace`](https://github.com/dspace/dspace) | 🟢 BSD-3 | `prefixed` | 🟢 **`dspace-10.1`** | institutional repository; REST + OAI-PMH |
+| [`OpenEduCat`](https://github.com/OpenEduCat/openeducat_erp) | 🟡 LGPL-3 | 🔴 **`stamp`** | 🔴 **SHA only** | **LMS+SIS+fees on one DB** (Odoo-based) |
+| [`Kuali Rice`](https://github.com/kuali/rice) | 🟢 ECL-2.0 | `prefixed` | 🟢 **`rice-2.6.0`** | HiEd admin middleware; workflow engine |
+| [`ATutor`](https://github.com/atutor/ATutor) | 🟡 GPL-3 | `prefixed` | 🟢 **`Atutor_1.4.1`** | accessibility-first LMS |
+| [`Apereo SSP`](https://github.com/Jasig/SSP) | 🟢 **Apache-2.0** | `prefixed` | 🟢 **`ssp-2.9.0`** | student-success/advising case management |
+| [`Apache OFBiz`](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0** | 🔴 **`stamp`** | 🔴 **SHA only** | the ERP spine when OpenEduCat is too narrow |
+
+### 🟢 The permissive tier — what Globant can build on and ship
+
+🔵 **Filtered to OSI-permissive only (Apache-2.0 / MIT / BSD / ECL-2.0), which is the
+licence class the brief prioritises:**
+
+```
+OpenOLAT        Apache-2.0   OpenOLAT_21.0.3   full LMS         <- the headline
+Sakai           ECL-2.0      25.2              full LMS
+Oppia           Apache-2.0   v3.5.3            lesson engine
+Kolibri         MIT          v0.19.5           offline LMS
+h5p-standalone  MIT          v3.8.2            content PLAYBACK (H5P core itself is GPL-3)
+DSpace          BSD-3        dspace-10.1       repository
+Kuali Rice      ECL-2.0      rice-2.6.0        admin middleware
+Apereo SSP      Apache-2.0   ssp-2.9.0         advising
+Apache OFBiz    Apache-2.0   — (stamp)         ERP spine
+```
+
+🟢 **Nine permissive components, eight of them version-pinnable** (OFBiz is `stamp`).
+🔴 **Licences re-read from each repo's `LICENSE` over `raw.githubusercontent.com` this pass
+rather than carried forward, and two rows on this page were wrong:** 🔴 **`h5p-php-library`
+is **GPL-3.0**, not MIT; `Jasig/SSP` is **Apache-2.0**, not ECL-2.0.**
+🟢 **The GPL finding is why `tunapanda/h5p-standalone` (MIT, `v3.8.2`) takes H5P's place in
+this tier — it plays H5P content with no LMS and no GPL server-side library.** 🔴 **Everything strong on
+the *incumbency* axis (Moodle, Canvas, Open edX) is GPL or AGPL; everything strong on the
+*licence* axis is less widely installed.** 🔵 **That tension is the real platform decision
+in an education engagement and it has not moved in 108 passes.**
+
+### 🔴 🆕 p108 — the correction, stated plainly
+
+🔵 **OpenOLAT has been on this page for many passes with no release recorded, because its
+tags are spelled `OpenOLAT_21.0.3` and every reading this KB made looked for `v21.0.3`
+(`P108-D`).** 🔴 **The effect was to rank the single most permissive full LMS available —
+Apache-2.0, 542 tags, actively released — below GPL incumbents on a maintenance axis it
+actually wins.** 🟢 **Corrected here.** 🔵 **`dspace` carried the same fault with an extra
+twist: ranked lexically its newest release reads `dspace-7.6`, three majors stale
+(`P108-C`).**
+
+---
+
+
+# Education — vertical platforms you can customise with AI
+
 **Pass 107, 2026-10-10.** ⏱️ **Seventeenth pass of this date.** 🟢 **Every platform row below gains a
 RELEASE LADDER this pass — the first maintenance figure this page has ever carried that is not `—`.**
 🔴 **`api.github.com` repo endpoints remain 403 and that is now known to be permanent (`P107-A`), so

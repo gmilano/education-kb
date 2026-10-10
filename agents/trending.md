@@ -4,6 +4,120 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 108: a tag count is not a release ladder, and 24 addresses on this shelf were misread because of it
+
+🔵 **No new education-specific agent reached this shelf this pass. Eight searches ran
+(four global, four regional) and the agent axis returned nothing new — the explicit
+negative is at the end of this section.** 🟢 **What changed is that `p107`'s release
+ladder was re-measured as a release *identity*, and the count-based reading turns out to
+have been wrong about 24 of the 185 addresses it called "has tags".**
+
+### 🔴 `P108-D` — "has tags" conflates three different situations
+
+🟢 **Instrument: `compose/code/p108-release-identity/`, `test_p108.sh` **38 passed / 0
+failed** (offline, five trap fixtures + two real captures); `census.sh` read **296 of
+296** addresses in 1 m 49 s, `rc=0` on every one, **zero unread**.**
+
+🟢 **Calibration first: p107 hand-read a `pin` for six rows of `agents/top.md`, and this
+instrument reproduces all six exactly** — `DeepTutor v1.6.14`, `unitime v4.9.152`,
+`moodle-local_aihub v1.3.4`, `pyBKT 1.4.3`, `OATutor v1.7`, `bncc-dados dados-2026.07.1`.
+🔵 **Two independent readings of the same refs agreeing is the only cross-check either
+pass has had, so it is recorded before the disagreements are.** 🔴 **What six spot-checks
+cannot surface is the systematic fault, and there were four.**
+
+| `class` | n | share | what it means for an engagement |
+|---|---|---|---|
+| `semver` | 159 | 53.7 % | 🟢 pin `latest_stable` — a bare `vN.N.N` exists |
+| `prefixed` | 9 | 3.0 % | 🟢 pin `latest_prefix` — **releases exist under a project prefix** |
+| `stamp` | 15 | 5.1 % | 🔴 **tags exist but carry no version at all** — pin a SHA |
+| `none` | 113 | 38.2 % | 🔴 no tags — pin a SHA |
+| **total** | **296** | | 🟢 **pinnable by version: 168 (56.8 %)** |
+
+🔴 **The 15 `stamp` rows are the finding.** Their tags are CI deploy stamps, not releases:
+
+```
+opetushallitus/valtionavustus          4 468 tags   va-green-dev-2026-08-08T22_31_36+00_00
+opetushallitus/oppijanumerorekisteri   4 225 tags   green-dev-1791293242
+opetushallitus/organisaatio            1 134 tags
+opetushallitus/ataru                     726 tags   production_16.01.2017   ← a DATE, not a version
+opetushallitus/eperusteet                209 tags
+```
+
+🔴 **`p107` ranked repositories into tiers by tag count and called `100+` "industrial".
+These five — the Finnish National Agency for Education's stack — sat at the very top of
+that tier, and not one of them has ever cut a versioned release.** 🟢 **They are still
+perfectly usable; they are just **SHA-pinned, not version-pinned**, and an engagement
+plan that promises "pin the latest release" cannot be honoured against them.**
+
+### 🟢 `P108-D` (second half) — 9 addresses that read as *unreleased* and are not
+
+🔴 **A semver-only reader calls these unreleased. They release perfectly well, under a
+project-prefixed tag:**
+
+| address | latest release | note |
+|---|---|---|
+| `OpenOLAT/OpenOLAT` | **`OpenOLAT_21.0.3`** | 🟢 **Apache-2.0 LMS — the costliest of these to misread** |
+| `dspace/dspace` | **`dspace-10.1`** | 🔴 see `P108-C` below |
+| `kuali/rice` | `rice-2.6.0` | |
+| `Jasig/SSP` | `ssp-2.9.0` | |
+| `atutor/ATutor` | `Atutor_1.4.1` | |
+| `project-sunbird/sunbird-devops` | `release-6.0.0` | |
+| `project-sunbird/knowledge-platform` | `release-3.5.0` | |
+| `bncc-dev/bncc-dados` | `dados-2026.07.1` | 🟢 CalVer, year first — a real scheme |
+| `CyanXLab/Phonos` | `models-v3.2` | |
+
+### 🔴 `P108-C` — `dspace` is the lexical-sort trap, live on this shelf
+
+🔵 **`sort` ranks `dspace-7.6` above `dspace-10.1`. `sort -V` ranks them correctly.** 🔴 **A
+reader that sorts tags lexically pins DSpace three majors stale and produces output that
+looks entirely reasonable.** 🟢 **The instrument's `trap_v10` fixture pins this, and the
+`dspace` row is the same bug found in the wild rather than in a fixture.**
+
+### 🔴 `P108-G` — a trailing year is a date, and it crowned a non-release
+
+🔵 **First cut of this instrument reported `opetushallitus/ataru` as `prefixed`, latest
+release `production_16.01.2017`.** 🔴 **That is 16 January 2017 parsed as version
+`16.1.2017`, and `sort -V` duly crowned it the latest release of a repo that has never
+cut one — the only prefix-shaped tag in 726.** 🟢 **Rule added and tested: reject when the
+final numeric component is ≥ 1900. CalVer is untouched, because CalVer puts the year
+FIRST (`dados-2026.07.1`) and a date puts it LAST.** 🔵 **`ataru` moved to `stamp`, where
+it belongs.**
+
+### 🔵 `P108-F` — the denominator was 299 and should have been 296
+
+🔴 **p107's `addresses.txt` carried three case-duplicate pairs** —
+`OpenEduCat/openeducat_erp` + `openeducat/openeducat_erp`,
+`Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy` + its lowercase twin, and
+`…/lap-sakai-extractor` likewise. 🔵 **GitHub `owner/repo` is case-insensitive, so each
+pair is one repository counted twice, and every percentage p107 published used an
+inflated denominator.** 🟢 **Deduped in `p108-release-identity/addresses.txt`; the honest
+denominator is 296.** 🔵 **The effect on p107's headline is small — 38.1 % → 38.2 % — so
+p107's conclusion stands; the defect is recorded because it would not stay small if the
+shelf kept growing through the same uncased path.**
+
+### 🔵 Explicit negative — the agent axis returned nothing this pass
+
+🟢 **All eight mandated searches ran.** 🔴 **Zero new education-specific open-source agents.**
+
+- **Global, agents / trending / verticals / trends:** the agent queries surface
+  general-purpose coding agents (OpenClaw, opencode, CrewAI, LangGraph, OpenHands) and
+  curated "awesome" lists, not education verticals. The one education-adjacent hit —
+  `ashishpatel26/500-AI-Agents-Projects` (MIT) — is a *catalogue of use cases*, not a
+  runnable agent, and is already reachable from this shelf's existing rows.
+- **North America, APAC, LATAM:** zero new tokens. 13 of the 14 candidate tokens
+  extracted this pass are already held on live pages of this KB — `H.R. 8747`, `AB 1159`,
+  Oregon `S.B. 1546`, the Multistate 134-bill count, Taiwan's AI Basic Act, Vietnam's
+  high-risk deadline, the ASEAN working group, `AI Verify`, the Ipsos Education Monitor,
+  UNESCO IESALC's 87 %/26 %, the Digital Education Council LATAM survey (7 319 faculty),
+  `CENIA`, `Fundación Ceibal`.
+- **EMEA:** 🟢 **one genuinely new item — the Sanoma Learning 2026 European Teacher
+  Survey.** Recorded in `intel/market.md` and `intel/trends.md`.
+
+🔵 **`P1023` confirmed for a FOURTH consecutive pass: a regional non-result is evidence
+about the CHANNEL, not about the region.** 🔵 **Thirteen-of-fourteen already-held is a
+statement about search reach, not about education in those regions.**
+
+
 ## 2026-10-10 — pass 107: the agent shelf's two flagship patterns both rest on code that **has never shipped a release**, and the channel that proves it was available all along
 
 🔵 **No new agent reached this shelf this pass, and the eight mandated searches returned no new item

@@ -6,6 +6,67 @@ updated: 2026-10-10
 
 # Education — foundational repos
 
+**Pass 108, 2026-10-10.** ⏱️ **Eighteenth pass of this date.**
+
+🟢 **`census.sh` read **296 of 296** addresses, zero unread
+(`compose/code/p108-release-identity/`, `test_p108.sh` 38 passed / 0 failed).** 🔵 **Every
+foundation row below now carries a `class` and a pin, so "mature" is stated in refs
+rather than in adjectives.**
+
+### 🟢 🆕 p108 — foundations, with the ref you would actually pin
+
+| repo | licence | `class` | pin | note |
+|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3 | `semver` | 🟢 **`v5.3.0`** | the LMS incumbent; 590 tags, disciplined semver |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🟡 AGPL-3 | `semver` | 🟢 **`v5.14.2`** | AGPL — hosting implications, see `verticals/solutions.md` |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🟡 AGPL-3 | `semver` | 🟢 **`v2.1.0`** | 451 tags; 🔴 **its `release-2021-…` tags are NOT releases** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT | `semver` | 🟢 **`v0.19.5`** | 🟢 **MIT + offline-first — the permissive foundation of this shelf** |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | `semver` | 🟢 **`v3.5.3`** | 🟢 Apache-2.0, interactive-lesson engine |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🟡 LGPL-3 | `semver` | 🟢 **`v3.0.39`** | synchronous classroom |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🟡 GPL-3 | `semver` | 🟢 **`v3.0.1`** | strong LATAM + francophone install base |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 ECL-2.0 (Apache-derived) | `semver` | 🟢 **`25.2`** | 🟢 permissive; CalVer-style major |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | 🔴 **GPL-3.0** | `semver` | 🟢 **`1.28.0`** | 🔴 **copyleft core** — interactive content, but see the MIT escape hatch below |
+| [`tunapanda/h5p-standalone`](https://github.com/tunapanda/h5p-standalone) | 🟢 **MIT** | `semver` | 🟢 **`v3.8.2`** | 🟢 **plays H5P content with no LMS and no GPL server library** |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 Apache-2.0 | `prefixed` | 🟢 **`OpenOLAT_21.0.3`** | 🟢 **the most permissive full LMS on this shelf** |
+| [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 BSD-3 | `prefixed` | 🟢 **`dspace-10.1`** | repository/IR layer; 🔴 lexical sort reads this `7.6` |
+| [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | 🟡 LGPL-3 | 🔴 `stamp` | 🔴 **SHA only** | LMS+SIS+fees on one DB; **1 tag, a pre-release** |
+
+🟢 **Eleven of the thirteen are version-pinnable.** 🔴 **Licence re-read this pass from each
+repo's own `LICENSE` over `raw.githubusercontent.com` rather than carried forward — and one
+row moved: `h5p-php-library` is **GPL-3.0**, not MIT.**
+🔴 **The AGPL pair (`canvas-lms`, `edx-platform`), the GPL trio (`moodle`, `chamilo`,
+`h5p-php-library`) and LGPL `openeducat_erp` are usable but constrain what Globant can ship
+on top.** 🟢 **The build-on-freely tier is `kolibri` (MIT), `h5p-standalone` (MIT), `oppia`
+(Apache-2.0), `OpenOLAT` (Apache-2.0), `sakai` (ECL-2.0) and `dspace` (BSD-3).**
+🔵 **This KB had already established H5P's core as GPL-3.0 further down this page; the
+MIT-tier claim above it was a regression introduced earlier in this very pass and is
+recorded rather than quietly amended.**
+
+### 🔴 🆕 p108 — a correction to how this page has ranked maintenance
+
+🔵 **`Gap 376` asked for a maintenance signal. p107 supplied tag count. This pass shows
+tag count can inverse the answer.**
+
+| repo | tags | tag count says | release identity says |
+|---|---|---|---|
+| `opetushallitus/valtionavustus` | **4 468** | 🟢 most industrial on the shelf | 🔴 **`stamp` — never cut a release** |
+| `opetushallitus/oppijanumerorekisteri` | **4 225** | 🟢 industrial | 🔴 **`stamp` — never cut a release** |
+| `opetushallitus/organisaatio` | 1 134 | 🟢 industrial | 🔴 **`stamp`** |
+| `opetushallitus/ataru` | 726 | 🟢 industrial | 🔴 **`stamp`** |
+| `learningequality/kolibri` | 16 | 🔴 nascent | 🟢 **`semver`, `v0.19.5`** |
+
+🟢 **The Finnish National Agency for Education (`opetushallitus`) stack is real,
+production, nationally deployed software and belongs on this shelf.** 🔴 **Its tags are
+deploy stamps — `va-green-dev-2026-08-08T22_31_36+00_00`, `green-dev-1791293242` — so
+there is no version to pin and `Gap 376` is NOT dischargeable by tag count.** 🔵 **The
+maintenance question stays open; what closes this pass is the knowledge that the previous
+answer was measuring the wrong thing.**
+
+---
+
+
+# Education — foundational repos
+
 **Pass 107, 2026-10-10.** ⏱️ **Seventeenth pass of this date.**
 
 🟢 **`Gap 376`'s corrective duty — owed since pass 92 and deferred for fourteen passes because the

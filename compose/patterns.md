@@ -6,6 +6,128 @@ updated: 2026-10-10
 
 # Education — compose patterns
 
+**Pass 108, 2026-10-10.** ⏱️ **Eighteenth pass of this date.** 🟢 **One new pattern that
+answers a demand-side finding with a fully permissive stack, and one gate that every
+other pattern in this file now has to pass.**
+
+## 🟢 `P108-A` — the EMEA purpose-built teacher assistant, **zero copyleft, every layer version-pinned**
+
+🔵 **Why now:** the Sanoma *European Teacher Survey 2026* (>20 000 teachers, 14 countries)
+reports **63 %** teacher AI use, **16 %** believing general-purpose AI improves outcomes,
+and **75–93 %** saying education AI should be purpose-built rather than adapted
+(`intel/market.md`). 🔴 **A general-purpose chat assistant is the thing those teachers
+have already tried and judged.** 🟢 **This pattern is the purpose-built alternative, and
+every component is OSI-permissive, so Globant can ship a modified, closed derivative.**
+
+```
+                        OpenOLAT 21.0.3  (Apache-2.0)        <- the LMS host
+                                 │  course element + REST API
+                 ┌───────────────┼────────────────────┐
+                 │               │                    │
+      DeepTutor v1.6.14    pyBKT 1.4.3        h5p-standalone v3.8.2
+        (Apache-2.0)          (MIT)                 (MIT)
+      dialogue + RAG     mastery estimate      content PLAYBACK
+      tutoring agent     per objective         (NOT the GPL H5P core)
+                 │               │
+                 └──────┬────────┘
+                        │
+                 mem-mcp @ 68e6379  (Unlicense)              <- per-learner memory
+                   MCP server, German federal                    over MCP
+                   education-media institute
+```
+
+| layer | repo | licence | pin |
+|---|---|---|---|
+| LMS host | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 Apache-2.0 | 🟢 **`OpenOLAT_21.0.3`** |
+| tutoring agent | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 | 🟢 **`v1.6.14`** |
+| mastery model | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🟢 MIT | 🟢 **`1.4.3`** |
+| content playback | [`tunapanda/h5p-standalone`](https://github.com/tunapanda/h5p-standalone) | 🟢 MIT | 🟢 **`v3.8.2`** |
+| learner memory | [`fwu-de/mem-mcp`](https://github.com/fwu-de/mem-mcp) | 🟢 **Unlicense** | 🔴 **SHA `68e6379`** |
+| timetabling (opt.) | [`UniTime/unitime`](https://github.com/UniTime/unitime) | 🟢 Apache-2.0 | 🟢 **`v4.9.152`** |
+
+🟢 **Every licence in this table was read this pass from the repo's own `LICENSE` over
+`raw.githubusercontent.com`, not inferred from prose.** 🔴 **That check is what moved H5P
+out: `h5p/h5p-php-library` is **GPL-3.0**, so the playback-only MIT wrapper
+`h5p-standalone` is used instead and the GPL library is never linked.**
+
+**Wiring.** OpenOLAT exposes course elements over its REST API; DeepTutor runs beside it
+as the dialogue service and reads course content through that API rather than the
+database. pyBKT consumes OpenOLAT assessment events and returns a per-objective mastery
+probability, which is what turns a chat box into something that adapts — the single
+feature the survey's 16 % are implicitly asking for. mem-mcp carries learner state
+between sessions over MCP, so the assistant is continuous rather than per-conversation.
+h5p-standalone renders existing H5P interactions client-side.
+
+🔴 **Cost of the one SHA-pinned layer:** mem-mcp is `class=none` — 0 tags, so there is no
+version to pin and no change log to diff. 🟢 **Its HEAD was `68e6379` at both pass 107 and
+pass 108, so it is stable in practice**, but `P108-B` below is mandatory for it.
+🔵 **Estimate: 8–10 weeks.** 🔵 **Data residency: every component self-hosts, which is what
+makes this viable under the EU AI Act's Annex III treatment of systems that assess
+learning outcomes.**
+
+## 🔴 `P108-B` — the pin gate: a build step, not a document
+
+🔵 **43.2 % of this shelf (128 of 296 addresses) has no version to pin** — 113 with no
+tags at all and 15 whose tags are CI deploy stamps (`P108-D`). 🔴 **An engagement that
+writes "pin the latest release" into a SOW cannot honour it against those, and the
+regulatory direction makes that a contract problem rather than a tidiness problem:**
+Oklahoma and Maryland require human oversight and bar AI from high-stakes student
+decisions; EU Annex III treats "assesses learning outcomes" as high-risk; both oblige you
+to say which version decided. 🟢 **So the gate is executable:**
+
+```sh
+# 1. classify every dependency. census.sh is ~110 lines, no API, no credential.
+compose/code/p108-release-identity/census.sh deps.txt > pins.tsv
+
+# 2. fail the build on an unpinnable dependency that is not SHA-pinned in the lockfile
+awk -F'\t' 'NR>1 && ($11=="stamp" || $11=="none" || $11=="UNREAD") {print $1}' pins.tsv \
+  | while read slug; do
+      grep -q "$slug@[0-9a-f]\{40\}" lockfile || { echo "UNPINNED: $slug"; exit 1; }
+    done
+
+# 3. re-run per release; a changed head_sha40 on a class=none dep IS the change log
+```
+
+🔵 **Step 3 is the part that replaces the missing release notes.** 🟢 **For a `class=none`
+dependency the 40-char HEAD is the only version identity that exists, so diffing it
+between passes is the whole upgrade-detection story** — this is why
+`p107-git-lane-census` records `head_sha40` and why both passes' TSVs are committed
+rather than regenerated and discarded.
+
+🔴 **`UNREAD` fails the gate too, and deliberately.** 🔵 **`P1040`: a dependency whose refs
+could not be read is not a dependency with no releases, and silently treating it as
+either is how a supply chain gets a hole in it.**
+
+## 🔴 `P107-A` / `P96-A` — the rubric↔curriculum bind, **re-priced again, and the price went up**
+
+🔵 **p107 priced this bind as "four permissive layers, three publishers, no integration,
+and four of five layers unreleased".** 🟢 **p108 confirms the release half exactly and
+adds the licence half, read from source:**
+
+| layer | licence (read this pass) | `class` | pin |
+|---|---|---|---|
+| [`Qwen-Applications/OpenRS`](https://github.com/Qwen-Applications/OpenRS) | 🟢 Apache-2.0 | 🔴 `none` | SHA `4c7f22b` |
+| [`wanghaoyu0408/OpenRubrics`](https://github.com/wanghaoyu0408/OpenRubrics) | 🟢 MIT | 🔴 `none` | SHA `1a40c14` |
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🟡 **CC BY 4.0 at root** | 🔴 `none` | SHA `ac9feb8` |
+| [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | 🟢 MIT + CC BY 4.0 | 🟢 `prefixed` | 🟢 **`dados-2026.07.1`** |
+
+🔴 **Four of the four integration-critical layers are `class=none`.** 🟢 **The *data* end of
+the bind is pinnable (`dados-2026.07.1`); the *tooling* end — the 1 721 BNCC objectives
+and 7 MCP tools in `bncc-pacotes` — is not.** 🔵 **Any Brazilian curriculum engagement must
+therefore SHA-pin the tooling and run `P108-B` against it, and the SOW should price
+change-detection as ongoing work rather than assuming upstream release notes exist.**
+
+🟡 **Open item carried to p109:** 🔵 **`bncc-pacotes`' root `LICENSE` is Creative Commons,
+while this KB has recorded it as "MIT code + CC BY 4.0 data".** 🔵 **Both can be true (a
+code subdirectory may carry its own grant) but the root grant is CC, and for a repo whose
+*code* is the deliverable that distinction decides whether it is takeable.** 🔴 **Not
+resolved this pass; stated rather than smoothed over.**
+
+---
+
+
+# Education — compose patterns
+
 **Pass 107, 2026-10-10.** ⏱️ **Seventeenth pass of this date.** 🟢 **One pattern re-specified because
 its cost was understated, and one new pattern that is a gate rather than a build.**
 

@@ -6,6 +6,72 @@ updated: 2026-10-10
 
 # Education — current trends
 
+**Pass 108, 2026-10-10.** ⏱️ **Eighteenth pass of this date.** 🟢 **Two trends added: one
+from the demand side (a survey, EMEA) and one from the supply side (a census, global).**
+
+## 🟢 `T36` — teachers have adopted AI and rejected the general-purpose kind, and they say so in the same survey
+
+🔵 **Source: Sanoma Learning *European Teacher Survey 2026*, >20 000 teachers, 14
+countries, fieldwork by GfK/NIQ, published 24 September 2026. Full figures in
+`intel/market.md`.**
+
+```
+teachers using AI                                63%   (was 49% in the 2023-25 waves)
+believe GENERAL-PURPOSE AI improves outcomes     16%
+want tools PURPOSE-BUILT for education        75-93%
+```
+
+🔴 **These three numbers in one sample are the trend.** 🟢 **Adoption is no longer the
+question in EMEA; fitness is.** 🔵 **A 47-point gap between "I use it" and "it helps my
+students learn" is a market telling a vendor exactly what to build, and the thing it
+names — education-specific rather than adapted-general — is the definition of a vertical
+engagement.**
+
+🔵 **Corroboration across regions, from items this KB already holds:** LATAM's Digital
+Education Council survey finds **79 %** faculty use but **88 %** describing their own
+engagement as minimal-to-moderate, with the **lowest** uptake in assessment; UNESCO
+IESALC finds **87 %** of institutions using AI but only **26 %** holding a formal
+strategy. 🟢 **Three independent channels, three regions, one shape: wide shallow
+adoption, thin institutional depth.** 🔴 **The pattern is now cross-regional enough that
+it should be treated as the baseline assumption of an education engagement rather than a
+finding about any one market.**
+
+## 🔴 `T37` — the open-source education shelf cannot be version-pinned as often as it appears, and tag counts hide which way
+
+🟢 **Measured over 296 of 296 distinct shelf addresses, zero unread
+(`compose/code/p108-release-identity/`):**
+
+```
+semver     159  53.7%   pin a version
+prefixed     9   3.0%   pin a version (under a project prefix)
+stamp       15   5.1%   NO version exists  <- 4 of the 5 most-tagged repos on the shelf
+none       113  38.2%   NO version exists
+                        ------------------------------------------------
+                        version-pinnable 168 (56.8%) / SHA-only 128 (43.2%)
+```
+
+🔴 **`T35` (pass 107) read this axis as a release *ladder* and binned repos by tag count.
+`T37` supersedes that reading.** 🔵 **Tag count and release discipline are not merely
+imperfectly correlated — on this shelf they invert at the top.** 🟢 **The four
+`opetushallitus` repositories hold **4 468**, **4 225**, **1 134** and **726** tags, more
+than any other addresses measured, and not one has ever cut a versioned release: those
+refs are CI deploy stamps.** 🔵 **Meanwhile `kolibri`, with 16 tags, is clean semver at
+`v0.19.5`.**
+
+🟢 **Why it is a trend and not a measurement artefact:** 🔵 **the stamp pattern clusters in
+**government-operated** education infrastructure (Finland's national agency), where the
+deployment pipeline *is* the release process and a public version number serves no
+internal purpose. 🔴 **As more state education stacks open their source — a direction
+every regional section of `intel/market.md` documents — the share of the shelf that is
+real, production, nationally-deployed AND unversionable will grow.** 🟢 **A 2026-era
+education integrator needs a SHA-pinning and change-detection practice, not just a
+dependency file.**
+
+---
+
+
+# Education — current trends
+
 **Pass 107, 2026-10-10.** ⏱️ **Seventeenth pass of this date.** 🟢 **Two trends added, both from
 measurement; the eight mandated searches produced no new item and that negative is stated in
 `agents/trending.md` rather than left as silence.**

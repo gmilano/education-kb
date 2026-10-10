@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 108: five of the most-tagged repos on this shelf have never cut a release, and the lexical-sort bug is live on DSpace
+
+🟢 **Measured over **296 of 296** addresses, zero unread
+(`compose/code/p108-release-identity/`, `test_p108.sh` 38 passed / 0 failed).** 🔵 **This
+section records the *repo-side* consequences; the method and its seven rules are in
+`agents/trending.md` and the instrument README.**
+
+### 🔴 The tag-count tier table from p107 needs re-reading
+
+🔵 **p107 binned the shelf by tag count — `0` unreleased, `1–4` nascent, `25–99` mature,
+`100+` industrial.** 🔴 **The `100+` bin is not a maturity signal. It contains both the
+most disciplined release engineering on the shelf and the least.**
+
+| address | tags | p107 tier | p108 `class` | verdict |
+|---|---|---|---|---|
+| `opetushallitus/valtionavustus` | 4 468 | industrial | 🔴 `stamp` | **never cut a release** |
+| `opetushallitus/oppijanumerorekisteri` | 4 225 | industrial | 🔴 `stamp` | **never cut a release** |
+| `opetushallitus/organisaatio` | 1 134 | industrial | 🔴 `stamp` | **never cut a release** |
+| `opetushallitus/ataru` | 726 | industrial | 🔴 `stamp` | **never cut a release** |
+| `OpenOLAT/OpenOLAT` | 542 | industrial | 🟢 `prefixed` | 🟢 **`OpenOLAT_21.0.3`** |
+| `moodle/moodle` | 590 | industrial | 🟢 `semver` | 🟢 **`v5.3.0`** |
+| `dspace/dspace` | 136 | industrial | 🟢 `prefixed` | 🟢 **`dspace-10.1`** |
+
+🟢 **A tag count measures how often a repo writes a ref. Only a tag *shape* tells you
+whether that ref is a release.**
+
+### 🔴 `P108-C` found in the wild: DSpace
+
+```
+$ printf 'dspace-7.6\ndspace-10.1\n' | sort      →  dspace-10.1 ... dspace-7.6   (7.6 LAST = "highest")
+$ printf 'dspace-7.6\ndspace-10.1\n' | sort -V   →  dspace-7.6  ... dspace-10.1  (correct)
+```
+
+🔴 **Any census that ranks tags lexically reports DSpace's latest release as `dspace-7.6`
+— three majors stale — and nothing in the output looks wrong.** 🟢 **This KB's own
+`p107` census never ranked tags at all, so it never published this error; the bug is
+recorded here as a trap for the next instrument that is tempted to.**
+
+### 🟢 Pins recorded this pass for the platforms this KB's patterns name
+
+🔵 **Column chosen by `class`, per the instrument README — `latest_prefix` is noise on a
+`semver` row (14 of 159 carry a junk prefix tag such as `test-build-v23.0.01` or
+`Drupal-7.x-1.55`).**
+
+| address | `class` | pin | tag SHA (12) |
+|---|---|---|---|
+| `moodle/moodle` | `semver` | **`v5.3.0`** | `d3ae3f3a367b` |
+| `instructure/canvas-lms` | `semver` | **`v5.14.2`** | `44f558d12592` |
+| `bigbluebutton/bigbluebutton` | `semver` | **`v3.0.39`** | `cc48c7c23761` |
+| `oppia/oppia` | `semver` | **`v3.5.3`** | `1c72fb9613b3` |
+| `chamilo/chamilo-lms` | `semver` | **`v3.0.1`** | `904f1a6dcced` |
+| `sakaiproject/sakai` | `semver` | **`25.2`** | `29c17b41a192` |
+| `learningequality/kolibri` | `semver` | **`v0.19.5`** | `f7cafd40f5c3` |
+| `openedx/edx-platform` | `semver` | **`v2.1.0`** | `d05300792601` |
+| `h5p/h5p-php-library` | `semver` | **`1.28.0`** | `e733dc949638` |
+| `OpenOLAT/OpenOLAT` | `prefixed` | **`OpenOLAT_21.0.3`** | `342651b96a37` |
+| `dspace/dspace` | `prefixed` | **`dspace-10.1`** | `49e4c66773e7` |
+| `OpenEduCat/openeducat_erp` | 🔴 `stamp` | **no version tag — SHA-pin only** | — |
+
+🔴 **`OpenEduCat` is the one to note:** it is the only platform on this shelf that
+integrates LMS + SIS + fees on one database (LGPLv3), the EMEA/global vertical searches
+keep surfacing it, and it carries **one** tag, which is a pre-release. 🔵 **Any pattern
+that names OpenEduCat must pin a commit, not a version.**
+
+### 🔵 Trending, repo axis — explicit negative
+
+🔴 **`github trending education AI 2026` returned no education-specific repository that
+is new to this shelf.** 🔵 **The hits are general AI-education *learning material*
+(`microsoft/generative-ai-for-beginners`, `LLMs-from-scratch`, `developer-roadmap`,
+`ai-engineering-from-scratch`) — teaching-about-AI, not AI-for-teaching, which is a
+different shelf and already noted as out of scope in earlier passes.** 🟢 **GitHub's
+trending page has no industry filter, so this query's reach is structurally limited;
+that is a channel fact and is why the negative is written down rather than left as
+silence.**
+
+
 ## 2026-10-10 — pass 107: the `api.github.com` 403 is **three different failures**, one has no remedy, and the metadata was reachable the whole time
 
 🔵 **Pass 93 recorded `api.github.com = http=403`. Passes 94–106 re-recorded it, each time as "the

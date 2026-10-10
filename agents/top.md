@@ -6,6 +6,68 @@ updated: 2026-10-10
 
 # Education — AI agents shelf
 
+**Pass 108, 2026-10-10.** ⏱️ **Eighteenth pass of this date** (106: 15:4x–16:xx UTC;
+107: 16:4x–17:xx; this one 17:4x–18:xx).
+
+🟢 **Instrument this pass: `compose/code/p108-release-identity/` — `test_p108.sh`
+**38 passed / 0 failed** (offline; five trap fixtures + two real captures); `census.sh`
+read **296 of 296** shelf addresses in 1 m 49 s, `rc=0` on every one, **zero unread**.**
+🔵 **It reproduces all six of p107's hand-read pins exactly, then finds four systematic
+faults that six spot-checks could not have surfaced.** 🔴 **`api.github.com` repo
+endpoints remain 403 by session scoping, so ★ stays unread — and this pass declines to
+"fix" that by attaching third-party repos with `add_repo` purely to harvest their
+metadata (`P108-H`, below).**
+
+### 🟢 🆕 p108 — the shelf's third axis: not *does it release*, but **what do I pin**
+
+| `class` | n | share | what to pin |
+|---|---|---|---|
+| `semver` | 159 | 53.7 % | 🟢 `latest_stable` — a bare `vN.N.N` exists |
+| `prefixed` | 9 | 3.0 % | 🟢 `latest_prefix` — a release under a project prefix |
+| `stamp` | 15 | 5.1 % | 🔴 **no version anywhere** — a commit SHA, nothing else |
+| `none` | 113 | 38.2 % | 🔴 no tags — a commit SHA, nothing else |
+| **total** | **296** | | 🟢 **version-pinnable: 168 (56.8 %)** |
+
+🔵 **Denominator is 296, not p107's 299: three addresses were case-duplicates of three
+others (`P108-F`).**
+
+### 🟢 Agent-layer rows, now with a release identity rather than a tag count
+
+| row | licence | tags | `class` | pin |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 | 🟢 **86** | `semver` | 🟢 **`v1.6.14`** |
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) | 🟢 Apache-2.0 | 🟢 **101** | `semver` | 🟢 **`v4.9.152`** |
+| [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🟢 MIT | 🟡 **4** | `semver` | 🟢 **`1.4.3`** |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 MIT | 🟡 **4** | `semver` | 🟢 **`v1.7`** |
+| [`jeanlucio/moodle-local_aihub`](https://github.com/jeanlucio/moodle-local_aihub) | 🟡 GPL-3 (in-LMS) | 🟢 **9** | `semver` | 🟢 **`v1.3.4`** |
+| [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | 🟢 MIT + CC BY 4.0 | 🟡 **3** | `prefixed` | 🟢 **`dados-2026.07.1`** |
+| [`Qwen-Applications/OpenRS`](https://github.com/Qwen-Applications/OpenRS) | 🟢 Apache-2.0 | 🔴 **0** | `none` | 🔴 **SHA only** |
+| [`wanghaoyu0408/OpenRubrics`](https://github.com/wanghaoyu0408/OpenRubrics) | 🟢 MIT | 🔴 **0** | `none` | 🔴 **SHA only** |
+| [`planepig/rubricbench`](https://github.com/planepig/rubricbench) | 🟢 MIT | 🔴 **0** | `none` | 🔴 **SHA only** |
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🟢 MIT + CC BY 4.0 | 🔴 **0** | `none` | 🔴 **SHA only** |
+
+🔴 **Four of the five components of the `P96-A` / `P107-A` rubric↔curriculum bind are
+`class=none`.** 🟢 **That is unchanged from p107's finding and is restated here because
+p108 now expresses it in the units an engagement plan uses: the bind cannot be
+version-pinned, only SHA-pinned, and `compose/patterns.md` prices it accordingly.**
+
+### 🔵 🆕 `P108-H` — a boundary this pass declined to cross
+
+🔴 **The ★ column has read `—` since pass 93 because `api.github.com` 403s for any repo
+not attached to this session.** 🔵 **`add_repo` would lift that, repo by repo, and this
+session demonstrably has the tool: it used it once this pass, for `gmilano/education-kb`,
+which is this KB's own publishing target.** 🔴 **It was NOT used to attach
+`moodle/moodle`, `openedx/edx-platform` or any other third-party repository, because
+attaching somebody else's repository to harvest star counts is not what the mechanism is
+for.** 🟢 **The ★ column therefore stays honestly unread rather than dishonestly filled,
+and the release ladder and release identity carry the maintenance signal instead.**
+🔵 **Recorded as a standing rule so later passes stop re-litigating it.**
+
+---
+
+
+# Education — AI agents shelf
+
 **Pass 107, 2026-10-10.** ⏱️ **Seventeenth pass of this date** (105: 14:4x–15:xx UTC; 106:
 15:4x–16:xx; this one 16:4x–17:xx).
 

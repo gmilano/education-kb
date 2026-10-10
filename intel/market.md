@@ -6,6 +6,47 @@ updated: 2026-10-10
 
 # Education — market, players and opportunities
 
+**Pass 108, 2026-10-10.** ⏱️ **Eighteenth pass of this date.**
+
+🟢 **One genuinely new intel item this pass, and it is EMEA: the Sanoma Learning 2026
+European Teacher Survey.** 🔴 **The other three regions returned zero new tokens — 13 of
+the 14 candidates extracted are already held on live pages of this KB.** 🔵 **`P1023`
+confirmed for a FOURTH consecutive pass: a regional non-result is evidence about the
+CHANNEL, not about the region.**
+
+## 🟢 🆕 p108 — the Sanoma survey, and why it is the most commercially useful EMEA datapoint this KB holds
+
+🔵 **Source: Sanoma Learning, *European Teacher Survey 2026*, published 24 September 2026;
+fieldwork by GfK (a NIQ company). Sample >20 000 teachers across 14 countries, weighted
+by each country's primary and secondary/vocational teacher population. Core countries:
+Finland, Sweden, Netherlands, Belgium (Flanders and Wallonia), Poland, Spain, Italy.**
+
+| finding | figure |
+|---|---|
+| teachers using AI | 🟢 **63 %** — up from **49 %** in the 2023–2025 waves |
+| believe **general-purpose** AI improves learning outcomes | 🔴 **16 %** |
+| say education AI should be **purpose-built**, not adapted general-purpose | 🟢 **75–93 %** (varies by country) |
+| 2025 wave, for comparison | ~7 000 teachers; **14 %** believed AI would improve outcomes, down from 17 % in 2023 |
+
+🔴 **The gap between 63 % adoption and 16 % belief is the entire commercial argument for a
+vertical build, stated by the buyers themselves.** 🟢 **Teachers are already using AI and
+have concluded that the general-purpose kind does not help them.** 🔵 **This is the
+demand-side mirror of what this KB has measured from the supply side for 108 passes: the
+education-specific open-source layer is thin, permissive, and mostly unreleased — which
+is precisely the gap a studio engagement fills.**
+
+🔵 **Market-structure note, same publisher:** Sanoma Learning launched **Sanna**, a
+proprietary AI teacher assistant, on **1 October 2026** — one week after publishing the
+survey. 🔴 **A European incumbent with a 14-country teacher relationship is moving into
+the purpose-built assistant slot commercially.** 🟢 **That is the competitor to name in an
+EMEA education pitch, and the open-source stack on this shelf is what a challenger
+builds on.**
+
+---
+
+
+# Education — market, players and opportunities
+
 **Pass 107, 2026-10-10.** ⏱️ **Seventeenth pass of this date.** 🟢 **All four regional subsections
 gain a payload-measured row this pass, and LATAM gains an explicit NEGATIVE rather than an
 opportunity.** 🔵 **Source: a release-ladder census of **299 of 299** shelf addresses via the
@@ -388,6 +429,19 @@ KB: write down what you refused to use, and why.**
 ## Opportunities by region
 
 ### North America
+
+
+#### 🔵 🆕 p108 — nothing new from the channel; one supply-side consequence
+
+🔴 **The NA query returned zero new tokens: `H.R. 8747`, `AB 1159`, Oregon `S.B. 1546`,
+the Multistate 134-bills/31-states count and the NYC K-8 moratorium are all already held
+above.** 🟢 **What p108 adds is a procurement-grade fact.** 🔵 **Oklahoma and Maryland
+require **human oversight** and bar AI from high-stakes student decisions; Annex-III-style
+"determines access or assesses outcomes" rules are the same shape.** 🔴 **A system that
+cannot name the exact version it is running cannot evidence that duty.** 🟢 **168 of 296
+shelf addresses (56.8 %) are version-pinnable (`P108`); for a US district contract, that
+column is the shortlist filter, and `class=stamp`/`none` rows need a SHA-pinning and
+change-log story written into the SOW.**
 
 #### 🟢 🆕 p107 — the regional supply, measured: North America holds the **two largest release ladders in open-source education**
 
@@ -859,6 +913,32 @@ adoption.** 🔴 **So a North America pitch that leads with adoption is pushing 
 regulatory grain; one that leads with governance, auditability and teacher-augmentation is with it.**
 
 ### EMEA
+
+
+#### 🟢 🆕 p108 — the Sanoma survey lands here, and it reprices the EMEA opportunity
+
+🔵 **See the top of this file for the full figures.** 🟢 **63 % of European teachers use
+AI; 16 % think general-purpose AI improves outcomes; 75–93 % want tools built for
+education.** 🔴 **The EMEA opportunity is therefore NOT "introduce AI to teachers" — that
+race is over and general-purpose AI won it and lost their confidence.** 🟢 **It is
+"replace the general-purpose tool with a purpose-built one", which is a displacement sale
+into an installed habit, not an evangelism sale.**
+
+🟢 **Supply side, same pass:** [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT)
+is 🟢 **Apache-2.0**, pins at 🟢 **`OpenOLAT_21.0.3`**, and is **the most permissive full
+LMS on this shelf** — a Swiss/German-rooted platform for a market that has just said it
+wants education-specific tooling. 🔵 **p107 and every pass before it read OpenOLAT as
+having no release, because its tags are project-prefixed (`P108-D`); that misreading was
+pushing the strongest permissive EMEA platform off the shortlist.**
+🟢 **[`fwu-de/mem-mcp`](https://github.com/fwu-de/mem-mcp) (Unlicense, German federal
+education-media institute) remains the most permissive EMEA row in this KB.**
+
+🔴 **Regulatory dates remain contradictory across sources (Digital Omnibus revised
+application: 2 December 2027 stand-alone high-risk, 2 August 2028 embedded; AI Act
+enforcement from 2 August 2026 vs an entry-into-force of 31 July 2026). `P102` already
+records this channel as CONTRADICTORY; verify against the Official Journal before any
+client-facing date.** 🟢 **Article 4 AI-literacy duty, applicable since 2 February 2025,
+is the one date the sources agree on.**
 
 #### 🟢 🆕 p107 — EMEA's public stack has **four-figure release ladders**, and that settles `T33` from a second direction
 
@@ -1547,6 +1627,27 @@ duty is the sellable deliverable that is already overdue.**
 
 ### APAC
 
+
+#### 🔵 🆕 p108 — zero new tokens; the compliance-deadline map is the asset
+
+🔴 **Nothing new: Korea's AI Basic Act (in force 22 January 2026, education a
+"high-impact" category), Vietnam's standalone AI law (education named high-risk,
+compliance due **September 2027**), Taiwan's AI Basic Act (December 2025), Singapore's
+`AI Verify`, the ASEAN Working Group on AI Governance and the Philippines' 2026
+chairmanship are all already held above.** 🟢 **The Ipsos Education Monitor 2026 split —
+lower support for banning AI in schools across most Asian markets, **higher** in
+Australia and New Zealand — is also already held.**
+
+🟢 **What p108 adds: `project-sunbird` is version-pinnable after all.**
+[`project-sunbird/sunbird-devops`](https://github.com/project-sunbird/sunbird-devops)
+pins at 🟢 **`release-6.0.0`** and
+[`project-sunbird/knowledge-platform`](https://github.com/project-sunbird/knowledge-platform)
+at 🟢 **`release-3.5.0`** (`class=prefixed`). 🔴 **Both read as unreleased under a
+semver-only reading.** 🔵 **Sunbird is India's national digital-education infrastructure
+(MIT), so for an APAC engagement this is the difference between "national-scale platform
+with no releases" and "national-scale platform, pin 6.0.0" — and only the second one
+survives a procurement review.**
+
 #### 🔴 🆕 p107 — APAC publishes the **agent layer** and does not release it: 3 of 5 measured rows at zero
 
 🔵 **Release-ladder census, this pass:**
@@ -2185,6 +2286,27 @@ the permission argument first — except in ANZ, where it does.** 🔴 **That is
 North America posture recorded above, and the two pitches should not share a slide.**
 
 ### LATAM
+
+
+#### 🟡 🆕 p108 — an explicit NEGATIVE, plus one pin that matters for Brazil
+
+🔴 **The LATAM query returned zero new tokens. UNESCO IESALC's 87 %/26 % (200 institutions,
+19 countries), the Digital Education Council LATAM survey (7 319 faculty, 29 institutions,
+79 % faculty use, 88 % minimal-to-moderate engagement), Uruguay's Framework Convention
+signature, Colombia's `CONPES 4144`, Mexico's pending federal bill, and the UNESCO
+regional Observatory launched 14 April 2026 with CAF / CENIA / CETIC.br / ECLAC /
+Tec de Monterrey / Fundación Ceibal are ALL already held above.** 🔵 **This is a stated
+non-result, not a gap in coverage: the channel produced nothing new, which is a fact about
+the channel (`P1023`).**
+
+🟢 **One supply-side change.** [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados)
+pins at 🟢 **`dados-2026.07.1`** — 🔵 **CalVer, year first, so a real release scheme
+(`P108-G` distinguishes it from a date).** 🔴 **But its sibling
+[`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) — the one carrying the
+**1 721 BNCC objectives and 7 MCP tools**, i.e. the part an engagement actually
+integrates — is `class=none`: zero tags, SHA-pin only.** 🟢 **For a Brazilian curriculum
+engagement that is the single most important line on this page: the *data* is pinnable,
+the *tooling* is not, and the SOW must say so.**
 
 #### 🔴 🆕 p107 — LATAM: an explicit NEGATIVE. **Every measured LATAM asset on this shelf is at 0–3 tags**
 
