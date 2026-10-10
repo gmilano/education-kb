@@ -1,8 +1,104 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-09
+updated: 2026-10-10
 ---
+
+## 2026-10-10 — pass 91: the checker gap was a *query* defect, the 24-name correction moved the published no-grant rate, and the curriculum mandate arrives as a category
+
+**APPEND-ONLY — history is below. First pass of this date.**
+
+Licences read from the payload at the pinned SHA with the new **`compose/code/grant-ladder-v3/ladder.sh`**
+(**24** candidate filenames; v2 probed **12**). Two-sided control: four invented slugs `ABSENT`,
+`moodle/moodle` `COPYING.txt` **35 147 B** on nine runs, byte-identical to seven prior passes.
+★ from GitHub topic/repo pages read via `WebFetch` this pass. **120 slugs resolved.**
+⏱️ Measurement window 2026-10-09 23:0x → 2026-10-10 00:00 UTC.
+
+### The finding that reframes a five-pass claim
+
+🔴 This shelf said in three files that *"a targeted search for AI accessibility/alignment checkers in education
+returned nothing usable"*. 🟢 **False — and the cause is transferable: the query named the industry instead of
+the standard.** *"accessibility checker **education**"* returns LMS plugins, and the LMS plugin here is GPL.
+Searching **WCAG** returns permissive, AI-driven tools on the first attempt.
+
+| row | grant (payload · bytes · ref · SHA) | region | why |
+|---|---|---|---|
+| [`tomaszboloz/WCAG-Accessibility-Skills`](https://github.com/tomaszboloz/WCAG-Accessibility-Skills) | **MIT** · 1 070 B · `main` · `1b095c2` | unplaced | 🟢 **The row of the pass.** WCAG 2.1/2.2 audit CLI **and** agent skill, CI regression gates, and an **explicit refusal to declare legal conformance from an automated pass**. The refusal is the sellable feature. |
+| [`Community-Access/accessibility-agents`](https://github.com/Community-Access/accessibility-agents) | **MIT** · 1 069 B · `main` · `decf6ba` | unplaced | Eleven WCAG 2.2 AA review agents for Claude Code / Copilot — prevention at authoring time, not audit after. |
+| [`9mtm/WCAG-Checker`](https://github.com/9mtm/WCAG-Checker) | **MIT** · 4 219 B · `main` · `d34decd` | 🟡 **EMEA** (Austrian/German GmbH per the copyright line) | Web **and PDF**. PDF is where institutional exposure actually lives. |
+
+🔴 **And the most capable-looking tool in the space is unusable.**
+[`qed42/ai-accessibility-checker`](https://github.com/qed42/ai-accessibility-checker) — Python CLI **plus**
+GitHub Action, WCAG 2.0–2.2 A/AA/AAA — is **described in a search summary as "MIT-licensed" and carries no
+licence payload in 24 filenames** (`main` · `5716afc`). Same for
+[`albertomf1979/wcag-accessibility-agent`](https://github.com/albertomf1979/wcag-accessibility-agent)
+(`main` · `472c6bb`). 🔵 **Third independent instance this KB has caught of a blog or summary publishing a
+licence the payload does not carry.**
+
+### 🆕 The split grant gets worse than pass 90's, and in the direction that costs money
+
+| row | grant structure | effect |
+|---|---|---|
+| [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) · `main` · `59d2396` | 🟡 **four grants in ONE `LICENSE.md` (1 615 B)**: code **MIT** · prompts **CC-BY-4.0** · Annotated CLEAR Corpus **CC-BY-NC-SA-4.0** · Annotated PERSUADE 2.0 Corpus **CC-BY-NC-SA-4.0** | 🔴 **The NC clause sits on the corpora — the part that makes it an evidence-backed rubric evaluator rather than a prompt.** The permissive part is not the valuable part. |
+| [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) · `main` · `65701e9` | 🟡 code **MIT**; data licensed **per dataset and per download** (`Open` / `Open + Gated` / `Gated`) via a platform catalogue | 🔴 **A repo-root licence read cannot resolve a data-layer grant.** Stated as an instrument limit, not glossed. |
+
+### 🆕 MCP × SCORM — a new shape, and n=2 not n=1
+
+| row | grant (payload · bytes · ref · SHA) | ★ | note |
+|---|---|---|---|
+| [`kemalyy/edumints-scorm-mcp`](https://github.com/kemalyy/edumints-scorm-mcp) | **MIT** · 1 069 B · `main` · `bd14b95` | 8 | 🟢 Self-hostable MCP server that **assembles** SCORM-compliant courses |
+| [`giacomomaria81/scorm-mcp-server`](https://github.com/giacomomaria81/scorm-mcp-server) | **MIT** · 1 070 B · `main` · `fd5f110` | 6 | 🟢 HTML → SCORM packaging **and zip validation** |
+
+🔵 **Two independent MIT servers put content packaging behind MCP.** Tiny star counts, outsized effect: the
+"get it into the client's LMS" glue that every engagement hand-wrote is now a tool call. Wired into `P91-C`.
+
+### 🆕 The AI-literacy curriculum tier — because literacy became a statutory duty
+
+China's MoE mandates **≥8 h/year from age six (since Sep 2025)**; Singapore's MoE committed in **Mar 2026**
+(all schools by 2027); India's **CBSE** notified *Computational Thinking and AI* for **Classes 3–8** on
+**9 Apr 2026** for session 2026-27; and the **EU AI Act Art. 4 staff-literacy duty is in force now and was not
+deferred to 2027**.
+
+| row | grant (payload · bytes · ref · SHA) | ★ | note |
+|---|---|---|---|
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | **MIT** · 1 141 B · `main` · `ff2ba66` | ~67k (search-reported) | Twelve lessons; largest permissive AI curriculum found |
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | **MIT** · 1 070 B · `main` · `b6a7a17` | — | 🟢 **#1 on GitHub Trending, 24 May 2026** |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | **MIT** · 1 091 B · `main` · `da3f9df` | ~796 (search-reported) | Against a **local LLM** — right where student data cannot leave |
+| [`huggingface/agents-course`](https://github.com/huggingface/agents-course) | **Apache-2.0** · 11 357 B · `main` · `3c469e7` | — | The permissive teaching counterpart to `smolagents` |
+| [`cccareers/open-source-curriculum`](https://github.com/cccareers/open-source-curriculum) | 🔴 **CC-BY-NC-SA-4.0** · `LICENSE.md` 1 891 B · `main` · `dd01b98` | — | 🔴 **Non-commercial — reference only** |
+
+🔴 **The gap that is the opportunity: every permissive AI curriculum found is written for adult developers.
+Nothing addresses primary-school AI literacy — the exact scope China has implemented and India starts this
+session.** See `P91-G`.
+
+### New rows on `topics/ai-tutor` (664 repos — denominator unchanged from pass 90)
+
+| row | grant (payload · bytes · ref · SHA) | ★ | region | note |
+|---|---|---|---|---|
+| [`PrepLabsAI/InterviewMentor`](https://github.com/PrepLabsAI/InterviewMentor) | **MIT** · 1 071 B · `main` · `609d311` | 112 | unplaced | AI mock interviews — the corporate-reskilling adjacency |
+| [`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion) | 🟡 **Apache-2.0 variant** · 10 227 B · `main` · `c9c6295` | 106 | **APAC** (CN) | K-12 companion. 🟡 **10 227 B ≠ canonical Apache 11 357 B** — abridged copy; read before relying on the patent clause |
+| [`codeXsidd/Studivexa`](https://github.com/codeXsidd/Studivexa) | **MIT** · 1 068 B · `main` · `6ac2799` | 72 | unplaced | Student productivity workspace |
+| [`mahseema/aibooks`](https://github.com/mahseema/aibooks) | 🔴 **no payload / 24** · `master` · `0d71402` | 91 | unplaced | Curated book list, ungranted |
+| [`mumuki/mumuki-laboratory`](https://github.com/mumuki/mumuki-laboratory) | 🔴 **AGPL-3.0** · 34 523 B · `master` · `fce1ede` | 199 | 🟢 **LATAM** (AR) | 🟢 **Programming practice with automated feedback, in real classroom use.** Strongest LATAM assessment row found. AGPL — integrate by LTI, never absorb. |
+
+### What the instrument correction did to a published number
+
+Same 92 slugs, same day, same SHAs — **only the filename list changed**:
+
+| verdict | v2 (12 names) | v3 (24 names) |
+|---|---|---|
+| `NO-LICENCE-PAYLOAD` | 🔴 **6** | 🟢 **5** |
+| `AGPL-3.0` | 11 | **12** |
+| `OTHER/unclassified` | 🔴 **2** | 🟢 **0** (ECL-2.0 now named) |
+
+🟢 **Pass 90's *"6 of 92 carry no grant, ~1 in 15"* corrects to 5 of 92, ~1 in 18** — because `frappe/lms`
+keeps its grant at **`license.txt`** (lowercase), a name v2 never probed. 🔵 **`frappe/lms` was never
+ungranted; it was unreachable by a 12-name probe, and pass 90's own `verticals/solutions.md` published the
+correct AGPL answer found by hand.** Four rows advanced their HEAD since pass 90 and kept their grant
+(`Desktop_BUD-E`, `lumen`, `freelingo`, `edgameclaw`).
+
+---
+
 
 ## 2026-10-09 — pass 90: the agent *skill* is a distinct category now, and the MIT AI-native platform was 816 stars away all along
 

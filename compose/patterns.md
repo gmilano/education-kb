@@ -1,19 +1,21 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-09
+updated: 2026-10-10
 ---
 
 # Education — compose patterns
 
-**Pass 90, 2026-10-09.** Every repo named below was resolved this pass by `git ls-remote --symref` with its
-**licence read from the payload** at the pinned SHA. Each pattern names the specific repos, the licence posture
-of the whole stack, and how the pieces wire together.
+**Pass 91, 2026-10-10.** Every repo named below was resolved this pass by `git ls-remote --symref` with its
+**licence read from the payload** at the pinned SHA, using `compose/code/grant-ladder-v3/ladder.sh` over **24**
+candidate filenames. Each pattern names the specific repos, the licence posture of the whole stack, and how the
+pieces wire together. **Two new patterns this pass (`P91-F`, `P91-G`), both enabled by findings in
+`intel/trends.md` `T5` and `T7`.**
 
-## `P90-A` — The closable AI university platform (EMEA, and the pattern that replaces "no permissive platform exists")
+## `P91-A` — The closable AI university platform (EMEA)
 
-**The ask it answers.** A European institution wants a self-hosted learning platform, extended with AI, received
-as a **closed, owned deliverable**. Six passes of this KB answered that with *"impossible — the platform tier is
+**The ask it answers.** A European institution wants a self-hosted learning platform, extended with AI,
+received as a **closed, owned deliverable**. Six passes of this KB answered *"impossible — the platform tier is
 copyleft"*. It is not.
 
 **Stack — permissive end to end, no copyleft anywhere.**
@@ -24,49 +26,65 @@ copyleft"*. It is not.
 | tutor | **Iris**, in-tree | MIT with the platform |
 | feedback | **Athena**, in-tree | MIT with the platform |
 | exercise authoring | **Hyperion** (Spring AI), in-tree | MIT with the platform |
+| 🆕 public portal / catalogue | [`openfun/richie`](https://github.com/openfun/richie) · `master` · `8b14aec` | **MIT** (1 079 B) |
 | assessment engine | [`numbas/Numbas`](https://github.com/numbas/Numbas) · `master` · `39b03e5` | **Apache-2.0** (11 357 B) |
 | learner-data trail | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) · `main` · `cb794e4` | **Apache-2.0** (11 357 B) |
 | statement mapping | [`adlnet/xAPI-SCORM-Profile`](https://github.com/adlnet/xAPI-SCORM-Profile) · `master` · `ea17c40` | **Apache-2.0** (11 324 B) |
 | content shim | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) · `master` · `882f3b8` | **MIT** (1 072 B) |
+| 🆕 accessibility gate | see **`P91-F`** | **MIT** |
 
 **Wiring.** Fork Artemis. Iris/Athena/Hyperion are config-gated — point them at the client's model endpoint
-(sovereign or on-prem) rather than a vendor API. Package Numbas assessments as SCORM and serve them through
+(sovereign or on-prem) rather than a vendor API. 🆕 **Put `richie` in front as the catalogue and enrolment
+funnel**: it is the only permissive row at the portal layer, it comes from a French public-HE consortium
+(which reads well in a European tender), and it keeps the public-facing redesign — the thing institutions
+actually ask for — outside the platform fork. Package Numbas assessments as SCORM and serve them through
 `scorm-again`, so assessment content stays portable if the platform later changes. Every Iris interaction and
-Athena feedback event emits an xAPI statement shaped by `xAPI-SCORM-Profile` into `lrsql`; that store is the
-**human-oversight evidence** the AI Act asks for, and it exists before the 2 Dec 2027 deadline rather than after.
+Athena feedback event emits an xAPI statement shaped by `xAPI-SCORM-Profile` into `lrsql`.
 
-**Why this beats the alternative.** The honest previous answer was "build beside the client's Moodle". This
-delivers the same capability with the platform inside the deliverable, and the AI subsystems are already written.
+**Why the trail is the deliverable, not a feature.** 🟡 That store is the **human-oversight evidence** the AI
+Act asks for, and it exists before the **2 Dec 2027** high-risk deadline rather than after. 🟢 **And it is
+sold against a duty that already binds: Article 4's staff AI-literacy obligation is in force now and was not
+deferred** — so phase one is literacy and evidence, phase two is high-risk conformity. See `intel/trends.md` `T4`.
 
-## `P90-B` — The district AI-compliance recorder (North America)
+## `P91-B` — The district AI-compliance recorder (North America)
 
 **The ask it answers.** Ohio requires every K-12 district to adopt a formal AI policy by **1 Jul 2026**; 30+
-states have guidance; 134 bills are live across 31 states. Districts have a legal deadline and no instrument.
-California's AB 1159 would additionally bar training on student data absent direct school benefit.
+states have guidance; 134 bills are live across 31 states. 🆕 **Only ~10 % of institutions have formal
+guidelines and 71 % of US teachers report no AI training** — so the buyer has a legal deadline, no instrument
+and no trained staff. California's AB 1159 would additionally bar training on student data absent direct
+school benefit.
 
 **Stack.**
 
 | layer | component | grant |
 |---|---|---|
-| record store | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **Apache-2.0** |
-| statement vocabulary | [`adlnet/xAPI-SCORM-Profile`](https://github.com/adlnet/xAPI-SCORM-Profile) | **Apache-2.0** |
-| conformance gate | [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | **Apache-2.0** |
-| orchestration | [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | **MIT** |
-| HE platform (if in scope) | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | **ECL-2.0** |
+| record store | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) · `cb794e4` | **Apache-2.0** |
+| statement vocabulary | [`adlnet/xAPI-SCORM-Profile`](https://github.com/adlnet/xAPI-SCORM-Profile) · `ea17c40` | **Apache-2.0** |
+| conformance gate | [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) · `efa045e` | **Apache-2.0** |
+| orchestration | [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) · `12aeb0f` | **MIT** |
+| HE platform (if in scope) | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) · `10a1d90` | **ECL-2.0** |
+| 🆕 staff-capability curriculum | see **`P91-G`** | **MIT / Apache-2.0** |
 
 **Wiring.** Put every AI interaction behind a LangGraph node that emits one xAPI statement per event:
 *which learner, which model, which prompt class, which human reviewed it, which policy clause authorises it*.
 Store in `lrsql`; validate the statement shapes against `ADL_LRS` so conformance is demonstrable rather than
-asserted. The deliverable is a policy document **plus a running record that evidences the policy** — the second
-half is what no incumbent is selling.
+asserted. The deliverable is a policy document **plus a running record that evidences the policy** **plus**
+🆕 **the staff training that the 71 % figure says is the real bottleneck** — and the third part is what turns a
+one-off compliance project into a programme.
+
+🔴 🆕 **Conformance note that changes the build.** The official **SCORM 2004 4th Edition Test Suite**
+(`adlnet/SCORM-2004-4ed-Test-Suite`) carries **no licence payload in 24 filenames**, and so do
+`adlnet/SCORM-to-xAPI-Wrapper` and `adlnet/SCORM-to-TLA-Roadmap` — **three of ADL's five repos.** It cannot be
+redistributed in a client deliverable. 🟢 **Conform against `ADL_LRS` (Apache-2.0) instead**, which is why it
+is in this stack as a gate rather than as a reference.
 
 **Deliberate exclusion.** No GPL component. `LearningLocker` is the better-known LRS and is **GPL-3.0**;
 `lrsql` is Apache-2.0 and better maintained. Using the famous one here would convert the deliverable.
 
-## `P90-C` — The pedagogy skill pack (global, lowest cost to ship)
+## `P91-C` — The pedagogy skill pack, now with content packaging (global, lowest cost to ship)
 
 **The ask it answers.** A client wants AI tutoring that works inside the agent harness they already license,
-with no new platform to host, procure or migrate.
+with no new platform to host, procure or migrate — **and the output has to land in the LMS they already run.**
 
 **Stack — all MIT, all verified this pass.**
 
@@ -77,22 +95,29 @@ with no new platform to host, procure or migrate.
 | retention mechanics as a tool call | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) · `ed6774d` | **MIT** |
 | model-agnostic ITS surface | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) · `3708287` | **MIT** |
 | explicit mastery model | [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) · `f88f69f` | **MIT** |
+| 🆕 **package the output as SCORM** | [`kemalyy/edumints-scorm-mcp`](https://github.com/kemalyy/edumints-scorm-mcp) · `bd14b95` | **MIT** (1 069 B) |
+| 🆕 **validate the package** | [`giacomomaria81/scorm-mcp-server`](https://github.com/giacomomaria81/scorm-mcp-server) · `fd5f110` | **MIT** (1 070 B) |
 | bundle reference | [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) · `b4c9352` | **MIT** |
 
-**Wiring.** The diagnostic skill runs first and writes a mastery estimate into
-`adaptive-knowledge-graph`'s Bayesian tracker — this is the piece most skills lack, and without it "adaptive"
-means "whatever is in the context window". `anki-mcp-server` and `tutor-mcp` attach over MCP, so spacing and
-tutoring are tool calls rather than prompt instructions. Ship as one versioned skill pack.
+**Wiring.** The diagnostic skill runs first and writes a mastery estimate into `adaptive-knowledge-graph`'s
+Bayesian tracker — this is the piece most skills lack, and without it "adaptive" means "whatever is in the
+context window". `anki-mcp-server` and `tutor-mcp` attach over MCP, so spacing and tutoring are tool calls
+rather than prompt instructions.
+🆕 **The new closing move: `edumints-scorm-mcp` assembles whatever the pack produces into a SCORM package and
+`scorm-mcp-server` validates the zip — both over MCP, both MIT.** Until this pass that glue was always
+hand-written per engagement. 🔵 **This is what makes the pack deliverable rather than a demo: output that
+imports into the client's existing Moodle, Canvas or Open edX with no integration project.** Two independent
+servers of this shape exist, so the pattern is not resting on one maintainer.
 
-🔴 **Stated limit.** A skill inherits the host's model, rate limits and data policy. Where automated assessment
-is regulated (Korea's AI Basic Act, Vietnam's high-risk list) or student-data training is restricted
-(California AB 1159), this pattern needs `P90-B`'s recorder underneath it or it is not a compliance position.
+🔴 **Stated limit.** A skill inherits the host's model, rate limits and data policy. Where automated
+assessment is regulated (Korea's AI Basic Act, Vietnam's high-risk list) or student-data training restricted
+(California AB 1159), this pattern needs `P91-B`'s recorder underneath it or it is not a compliance position.
 
-## `P90-D` — Offline-first delivery for constrained connectivity (APAC and LATAM)
+## `P91-D` — Offline-first delivery for constrained connectivity (APAC and LATAM)
 
 **The ask it answers.** UNESCO's finding on APAC is explicit: adoption is gated on IT infrastructure,
 connectivity and teacher training — not on model quality. A cloud tutor is the wrong artefact for most of the
-region's actual deployment conditions, and the same holds across much of LATAM.
+region's deployment conditions, and the same holds across much of LATAM.
 
 **Stack.**
 
@@ -101,20 +126,24 @@ region's actual deployment conditions, and the same holds across much of LATAM.
 | delivery | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) · `d4fea9c` | **MIT** (1 097 B) |
 | lesson model | [`oppia/oppia`](https://github.com/oppia/oppia) · `ad22e91` + [`oppia/oppia-android`](https://github.com/oppia/oppia-android) · `25e3860` | **Apache-2.0** |
 | interactive content playback | [`tunapanda/h5p-standalone`](https://github.com/tunapanda/h5p-standalone) · `b5ac7dd` | **MIT** (1 077 B) |
-| local tutor | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) · `f0142f2` (local-first) | **MIT** |
-| pt-BR reference implementation | [`belentani7/aprende-brasil`](https://github.com/belentani7/aprende-brasil) · `bbeea5a` | **MIT** |
+| local tutor | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) · `f0142f2` | **MIT** |
+| 🆕 local-model curriculum reference | [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) · `da3f9df` | **MIT** (1 091 B) |
+| pt-BR reference implementation | [`belentani7/aprende-brasil`](https://github.com/belentani7/aprende-brasil) · `bbeea5a` | **MIT** (1 085 B) |
 
 **Wiring.** Kolibri handles sync-when-connected delivery; Oppia supplies the structured lesson model;
 `h5p-standalone` plays H5P interactive content **without pulling in the GPL H5P core** — that substitution is
 the whole point of including it. The tutor runs against a local model (Ollama-class), degrading to retrieval
-over cached material when no model is available. `aprende-brasil` already implements exactly this shape in
-pt-BR with an offline fallback and 205 modules — read it before building.
+over cached material when no model is available. 🆕 `agents-from-scratch` is included because it is the one
+permissive curriculum written **against a local LLM** — the right teaching material when student data cannot
+leave the building, which is the same constraint that drives the rest of this stack.
+`aprende-brasil` already implements exactly this shape in pt-BR with an offline fallback and 205 modules —
+**read it before building.**
 
-## `P90-E` — Brazilian public-sector student records with AI on top (LATAM)
+## `P91-E` — Brazilian public-sector student records with AI on top (LATAM)
 
 **The ask it answers.** A Brazilian municipality or state network wants AI assistance over student records it
-already keeps. Mexico's ATDT plan names *software público* and sovereignty; Brazil has national AI strategy but
-**no sectoral education regulation**, so the institution is the decision-maker and the cycle is short.
+already keeps. Brazil has a national AI strategy but **no sectoral education regulation** and **PL 2338 is
+still awaiting a Chamber vote**, so the institution is the decision-maker and the cycle is short.
 
 **Stack.**
 
@@ -122,24 +151,109 @@ already keeps. Mexico's ATDT plan names *software público* and sovereignty; Bra
 |---|---|---|---|
 | SIS of record | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) · `2.12` · `cd1da68` | 🟡 **LGPL-3.0** (18 092 B) | 🟡 **Link, do not absorb** |
 | AI layer | your service, over i-educar's interfaces | 🟢 closed | 🟢 LGPL permits linking |
-| record trail | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **Apache-2.0** | 🟢 |
-| incumbent LMS bridge | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) via LTI 1.3 / SCORM | 🔴 GPL-3.0 | 🔴 integrate only |
+| record trail | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) · `cb794e4` | **Apache-2.0** | 🟢 |
+| 🆕 programming-practice + autograding | [`mumuki/mumuki-laboratory`](https://github.com/mumuki/mumuki-laboratory) · `fce1ede` | 🔴 **AGPL-3.0** (34 523 B) | 🔴 **LTI 1.3 only — never in the deliverable** |
+| incumbent LMS bridge | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) · `f30df11` | 🔴 GPL-3.0 | 🔴 integrate only |
 
-**Wiring.** i-educar stays the system of record and is **linked, never forked into the deliverable** — LGPL-3.0
-permits exactly that, and this is the distinction that makes the engagement possible. The AI layer sits beside
-it as a separate service reading through i-educar's interfaces and writing xAPI into `lrsql`. Where the network
+**Wiring.** i-educar stays the system of record and is **linked, never forked into the deliverable** —
+LGPL-3.0 permits exactly that, and this distinction makes the engagement possible. The AI layer sits beside it
+as a separate service reading through i-educar's interfaces and writing xAPI into `lrsql`. Where the network
 also runs Chamilo (common across LATAM), bridge by LTI 1.3 rather than modifying it.
+🆕 **Where the ask includes programming education — and in Argentina and Brazil it often does —
+`mumuki-laboratory` is the regional incumbent with real classroom use and automated feedback. It is AGPL, so
+it attaches over LTI 1.3 alongside the deliverable and never inside it.**
 
-🔵 **This pattern exists because of a correction.** Pass 87 recorded *"no permissive open-source SIS exists"* and
-stopped. True but incomplete: no SIS is permissive, and a **large linkable one** is, and it is LATAM-origin with
-municipal deployments. The missing move was distinguishing *permissive* from *usable*.
+🟢 **Credibility anchor for the pitch:** cite the **IADB/BID ILIA index** (AI readiness, adoption and
+governance across 19 countries) rather than a market-research CAGR. A development-bank index is something a
+rector's office or a ministry already recognises.
 
-## `P90-RETIRED` — "the platform is always the client's; the intelligence on top is ours"
+🔵 **This pattern exists because of a correction.** Pass 87 recorded *"no permissive open-source SIS exists"*
+and stopped. True but incomplete: no SIS is permissive, and a **large linkable one** is, and it is
+LATAM-origin with municipal deployments. The missing move was distinguishing *permissive* from *usable*.
 
-🔴 **Retired as a universal rule.** It was derived from the false `8 of 8 copyleft` census and survived six
-passes. It remains correct for one case only — when the client's existing Moodle, Canvas or Open edX must be
-kept — and in that case LTI 1.3 / SCORM / xAPI integration is still the right boundary. 🟢 **Otherwise the
-platform can be inside the deliverable:** `Artemis` (MIT), `Sakai` or `Opencast` (ECL-2.0), `OpenOLAT`
-(Apache-2.0), `pupilfirst` / `relate` / `academico` (MIT).
+## `P91-F` — 🆕 The accessibility conformance gate (North America first, EMEA second)
 
-*Prior pass content is preserved in git history at commit `457eaba` and earlier.*
+**The ask it answers.** Section 508 / WCAG exposure on course content, and an institution that needs
+**evidence** rather than an assurance. 🔴 **This KB declared for five passes that no permissive AI
+accessibility checker existed. That was false**, and the cause was the query naming the industry instead of
+the standard (see `intel/trends.md` `T5`).
+
+**Stack — all MIT, all verified from the payload this pass.**
+
+| role | component | grant |
+|---|---|---|
+| audit + CI regression gate | [`tomaszboloz/WCAG-Accessibility-Skills`](https://github.com/tomaszboloz/WCAG-Accessibility-Skills) · `main` · `1b095c2` | **MIT** (1 070 B) |
+| prevention at authoring time | [`Community-Access/accessibility-agents`](https://github.com/Community-Access/accessibility-agents) · `main` · `decf6ba` | **MIT** (1 069 B) |
+| web **and PDF** scanning | [`9mtm/WCAG-Checker`](https://github.com/9mtm/WCAG-Checker) · `main` · `d34decd` | **MIT** (4 219 B) |
+| evidence store | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) · `cb794e4` | **Apache-2.0** |
+| content playback under audit | [`tunapanda/h5p-standalone`](https://github.com/tunapanda/h5p-standalone) · `b5ac7dd` | **MIT** |
+
+**Wiring.** `WCAG-Accessibility-Skills` runs as the audit CLI in the content pipeline's CI, producing a dated
+WCAG 2.1/2.2 finding set per course artefact; its findings are written as xAPI statements into `lrsql`, so the
+institution holds a **time-series of conformance** rather than a one-off report.
+`accessibility-agents` runs one tier earlier — inside the authoring host — so AI-generated course material is
+checked **before** it is committed, which is cheaper than auditing it afterwards. `9mtm/WCAG-Checker` covers
+the **PDF** surface, which is where institutional exposure actually lives: handouts, readings and scanned
+packs, not the LMS chrome.
+
+🟢 **The feature to sell is the refusal.** `WCAG-Accessibility-Skills` states explicitly that it **cannot
+declare legal conformance from an automated pass** and keeps a human-review boundary. 🔵 **A checker that
+overclaims is a liability in a dispute**; one that documents the boundary between automated evidence and
+human judgement is exactly what counsel wants. Price the human-review step as part of the engagement rather
+than pretending the tool removes it.
+
+🔴 **Deliberate exclusions, and why.** [`qed42/ai-accessibility-checker`](https://github.com/qed42/ai-accessibility-checker)
+is the most capable-looking tool in this space — Python CLI plus GitHub Action, WCAG 2.0–2.2 A/AA/AAA — and is
+**described in search summaries as MIT while carrying no licence payload in 24 filenames.** Excluded.
+`albertomf1979/wcag-accessibility-agent`: same, no payload. `ucfopen/UDOIT` is **GPL-3.0** and not AI-driven —
+it stays an integration, never a component.
+🔴 **Stated gap this pattern does not close: instructional alignment.** It proves content is *accessible*, not
+that it *teaches the stated outcome*. There is still no permissive checker for that.
+
+## `P91-G` — 🆕 The AI-literacy curriculum factory (APAC first, EMEA second)
+
+**The ask it answers.** 🟢 **Four jurisdictions now mandate AI instruction rather than merely regulate AI
+systems** (`intel/trends.md` `T7`): **China** (MoE, ≥8 h/year from age six, since Sep 2025), **Singapore**
+(MoE, Mar 2026, all schools by 2027), **India** (CBSE, Classes 3–8, session 2026-27, notification 9 Apr 2026)
+and the **EU** (AI Act Art. 4 staff literacy, in force now). Someone has to write the material, localise it,
+train the teachers and assess it. 🔴 **No incumbent product covers this, and the deadlines are real.**
+
+**Stack.**
+
+| role | component | grant |
+|---|---|---|
+| adult/teacher-training spine | [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) · `main` · `ff2ba66` | **MIT** (1 141 B) |
+| engineering depth track | [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) · `main` · `b6a7a17` | **MIT** (1 070 B) |
+| local-model track (data cannot leave) | [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) · `main` · `da3f9df` | **MIT** (1 091 B) |
+| agent-course reference | [`huggingface/agents-course`](https://github.com/huggingface/agents-course) · `main` · `3c469e7` | **Apache-2.0** (11 357 B) |
+| lesson structure + explanations | [`oppia/oppia`](https://github.com/oppia/oppia) · `ad22e91` | **Apache-2.0** |
+| assessment of the curriculum | [`numbas/Numbas`](https://github.com/numbas/Numbas) · `39b03e5` | **Apache-2.0** |
+| packaging into the client LMS | [`kemalyy/edumints-scorm-mcp`](https://github.com/kemalyy/edumints-scorm-mcp) · `bd14b95` | **MIT** |
+| completion + literacy evidence | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) · `cb794e4` | **Apache-2.0** |
+
+**Wiring.** The four permissive curricula are the **source material for the teacher-training tier, not the
+pupil tier** — be explicit about that with the client. Re-express the concepts through Oppia's structured
+lesson model to get age-appropriate sequencing and explanation-driven interactions; author assessment in
+Numbas; package with `edumints-scorm-mcp` so it drops into the ministry's or district's existing platform; and
+record completion into `lrsql` — which, for the EU, **is the Article 4 literacy evidence**, and for a district
+is the Ohio-style policy evidence. One pipeline, two compliance outputs.
+
+🔴 **The honest gap, and it is the opportunity.** Every permissive AI curriculum found is written for **adult
+developers**. 🔴 **Nothing on this shelf addresses primary-school AI literacy — the exact scope China has
+already implemented and India begins this session.** The pupil-facing material has to be authored, and that
+authoring is the billable core of this pattern rather than an input to it.
+🔴 **Licence trap specific to this pattern: curriculum is content, and content is where non-commercial clauses
+cluster.** [`cccareers/open-source-curriculum`](https://github.com/cccareers/open-source-curriculum) is
+**CC-BY-NC-SA-4.0** — reference only, never in a paid deliverable. Check the grant on every piece of
+curriculum before it enters the pipeline, and read the payload rather than the badge: this pass's own
+instrument briefly mis-read that very row as public domain.
+
+## `P91-RETIRED` — "the platform is always the client's; the intelligence on top is ours"
+
+🔴 **Retired as a universal rule, and it stays retired.** It was derived from the false `8 of 8 copyleft`
+census and survived six passes. It remains correct for one case only — when the client's existing Moodle,
+Canvas or Open edX must be kept — and in that case LTI 1.3 / SCORM / xAPI integration is still the right
+boundary. 🟢 **Otherwise the platform can be inside the deliverable:** `Artemis` (MIT), `Sakai` or `Opencast`
+(ECL-2.0), `OpenOLAT` (Apache-2.0), 🆕 `richie` (MIT, portal layer), `pupilfirst` / `relate` / `academico` (MIT).
+
+*Prior pass content is preserved in git history at commit `306eb06` and earlier.*

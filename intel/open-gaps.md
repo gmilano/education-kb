@@ -1,8 +1,171 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-09
+updated: 2026-10-10
 ---
+
+## 🟢 Ninety-first pass, 2026-10-10 — **the shelf's own instrument is found to have a reach it never had**, `Gap 363` / `Gap 364` / `Gap 365` DISCHARGE, a five-pass "nothing exists" claim is FALSIFIED by changing one word in the query, `Gap 354` hardens from one row to three, and `P953`–`P959` are adopted
+
+⏱️ **First pass of this date.** Measurement window 2026-10-09 23:0x → 2026-10-10 00:00 UTC. Append-only.
+
+### 🔴 🆕 The defect this pass exists to fix — `P953`
+
+🔴 **`compose/code/grant-ladder-v2/ladder.sh` probes 12 filenames. Six shelf rows assert *"no licence
+payload in 17 candidate filenames"*; five more assert *"16 names"*. Its own README asserts 17.**
+**Three numbers for one instrument, and none of them was the instrument's.** Measured, not inferred:
+`grep '^NAMES=' ladder.sh | tr ' ' '\n' | grep -c .` → **12**.
+
+🔴 **It was not cosmetic — it produced a FALSE NEGATIVE on a live row, and the shelf already knew the
+right answer in a different file:**
+
+| artefact | what it says about `frappe/lms` |
+|---|---|
+| `grant-ladder-v2/pass90-results.tsv` | 🔴 `NO-LICENCE-PAYLOAD` |
+| pass 90 `verticals/solutions.md` | 🟢 **AGPL-3.0, `license.txt` (lowercase), 33 893 B** — correct, found **by hand** |
+
+🔵 **`license.txt` is not in v2's 12 names.** The automated negative and the hand-verified positive sat in
+the same commit, and the negative is what fed the published rate.
+
+🟢 **`P953` adopted: an instrument's reach must be machine-readable.** `grant-ladder-v3` answers
+`--count` (**24**) and `--names`. **A negative whose denominator cannot be printed is not a measurement.**
+
+🟢 **What it did to a published number.** Same 92 slugs, same day, same SHAs, only the name list changed:
+
+| verdict | v2 (12) | v3 (24) |
+|---|---|---|
+| `NO-LICENCE-PAYLOAD` | 🔴 **6** | 🟢 **5** |
+| `AGPL-3.0` | 11 | **12** |
+| `OTHER/unclassified` | 🔴 **2** | 🟢 **0** |
+| `ECL-2.0` | — (invisible) | 🟢 **2** |
+
+🟢 **Pass 90's *"6 of 92, ~1 in 15"* → *5 of 92, ~1 in 18*, and the five survivors are negatives against
+24 names rather than 12.** 🔵 **The world did not change; the instrument's reach did.** Corrected in
+`agents/top.md`, not merely reported here.
+
+### 🔴 🆕 A defect v3 found IN ITSELF, mid-pass — `P954`
+
+🔴 **v3's first draft classified [`cccareers/open-source-curriculum`](https://github.com/cccareers/open-source-curriculum)
+as `Unlicense/PD`. It is CC-BY-NC-SA-4.0.** Cause: a Creative Commons human-readable summary contains the words
+*"public domain"*, and the draft tested for PD **before** CC.
+
+🔵 **This error and pass 90's ECL error run in opposite directions, and that asymmetry is the rule.**
+`unclassified` → a row is dropped → a studio loses an option. `NC-copyleft` → `public domain` → **a studio
+ships non-commercial content in a paid deliverable.**
+🟢 **`P954` adopted: order licence tests most-constrained first, never alphabetically or by convenience.**
+Caught by this pass's own run, before publication.
+
+### 🟢 Discharged, falsified, corrected, carried
+
+| gap | status | evidence |
+|---|---|---|
+| 🆕 **`Gap 364`** — the checker tier has exactly one row | 🟢 **DISCHARGED on the accessibility limb; the ALIGNMENT limb is RE-POSED, not carried** | 🔴 **The shelf's claim in three files — *"a targeted search returned nothing usable"* — is FALSE.** 🟢 **Three permissive AI WCAG checkers, payload-verified:** `tomaszboloz/WCAG-Accessibility-Skills` (**MIT**, 1 070 B, `1b095c2`), `Community-Access/accessibility-agents` (**MIT**, 1 069 B, `decf6ba`), `9mtm/WCAG-Checker` (**MIT**, 4 219 B, `d34decd`). 🔴 **And the most capable row is ungranted:** `qed42/ai-accessibility-checker` is **published as MIT and has no payload in 24 names**. 🆕 **`P955`.** |
+| 🆕 **`Gap 363`** — India returned nothing substantive | 🟢 **DISCHARGED on the school limb; HE limb NARROWED and left open** | 🟢 **CBSE: *Computational Thinking and Artificial Intelligence*, Classes 3–8, session 2026-27, notification dated 9 Apr 2026**, aligned to NEP 2020 / NCFSE 2023. 🟢 **`P870` confirmed a fourth time — "CBSE" worked where "NEP" failed.** 🔴 **AICTE and UGC returned nothing primary**; a PIB-summary claim that *"AI components are now mandatory in all IT-related courses"* is **unverified and not used**. 🔴 `cbse.gov.in` is egress-blocked, so this is a search-summary, not a primary read. |
+| 🆕 **`Gap 365`** — `topics/scorm` bought at 20 of 220 | 🟢 **DISCHARGED (page 2); `P952` CONFIRMED on volume, REFUTED on value** | 🟡 Page 2 tops out at **20★**, median ~8 — the tail is thin, as predicted. 🟢 **But three rows matter:** `edly-io/pxc` (**Apache-2.0**, a proposed standard **to replace SCORM + H5P + LTI**, from the Open edX commercial vendor), `kemalyy/edumints-scorm-mcp` (**MIT**) and `giacomomaria81/scorm-mcp-server` (**MIT**). 🔵 **"Low stars" and "low value" are different axes.** 🆕 **`P956`.** |
+| **`Gap 354`** — upstream-askable negatives | 🔴 **CARRIED — and pass 89's READING is retired** | 🔴 **ADL is now 3 of 5 ungranted**, all at 24 names: 🆕 `SCORM-2004-4ed-Test-Suite` (`050f1b4`), 🆕 `SCORM-to-TLA-Roadmap` (`da1b9a2`), plus `SCORM-to-xAPI-Wrapper` (`3e532b8`). 🔴 **Pass 89 called the single negative *"one missing file, not a policy"*. Three of five says the omission tracks a CATEGORY** — profile and server granted, wrapper/test-suite/roadmap not. 🔴 **Effect: the official SCORM 2004 conformance suite cannot ship in a deliverable.** 🟢 `P91-B` now conforms against `ADL_LRS` instead. |
+| **`Gap 362`** — `Selleo/mentingo` may be open-core | 🔴 **CARRIED, untouched.** Payload re-confirmed **MIT at `2bca285`, 1 062 B**; the vendor's AI-Mentor feature list was not compared against the tree. 🟢 Stays out of every costed pattern, as declared. |
+| **`Gap 335`** — knowledge tracing | 🔴 **CARRIED, untouched — EIGHTH pass. The oldest untouched item on this shelf**, named in `agents/top.md` rather than carried quietly. |
+| **`Gap 349`** — proctoring capability audit | 🔴 **CARRIED, untouched** |
+| **`Gap 356`** — no register→shelf reconciliation as a runnable check | 🔴 **CARRIED — and it would have caught `P953` and `P957`.** Both are register/shelf/code disagreements that a grep could have found. 🔵 **Third pass this gap's absence has a measurable cost.** |
+| **`Gap 359`** / **`P944`** / **`P950`** — egress oracle | 🟢 **RE-CONFIRMED, fourth measurement, and now written into the instrument README** | 🟢 **Four primary hosts needed this pass — `cbse.gov.in`, `digitaleducationcouncil.com`, `hepi.ac.uk`, `unu.edu` — all `000`/0 B under `curl`, `ENOTFOUND` under `WebFetch`.** 🟢 **Not retried per host, per `P950`.** 🆕 🟢 **And a POSITIVE addition to the oracle map: `WebFetch` renders `github.com/topics/<t>` with stars and the topic total, while `curl` on the identical URL is 403.** 🆕 **`P958`.** |
+| **`Gap 355`** — byte-figure reproducibility | 🟢 **THIRD positive datum** | 🟢 `moodle/moodle` **35 147 B** reproduced at the same SHA across **nine runs** this pass; four invented slugs `ABSENT`. 🟢 **And four rows advanced their HEAD and kept their grant** (`Desktop_BUD-E`, `lumen`, `freelingo`, `edgameclaw`) — activity without licence drift, measured rather than assumed. |
+
+### 🔴 🆕 A shelf claim FALSIFIED by changing one word — `P955`
+
+🔴 **This KB published for five passes that no permissive AI accessibility checker in education existed.**
+🟢 **Three exist, all MIT, all found on the first targeted query.**
+
+🔵 **The cause is the transferable finding, and it is not carelessness.** The query named **the industry**:
+*"accessibility checker **education**"* returns LMS plugins, and the LMS plugin in this space (`ucfopen/UDOIT`)
+is GPL and not AI-driven — so the search truthfully returned "nothing usable" every time it was run.
+Searching **the standard** — **WCAG** — returns permissive AI tools immediately.
+🟢 **`P955` adopted: a compliance tool is named after the STANDARD it enforces, not the SECTOR that buys
+it. Search the standard.** 🔵 **This is `P870` (re-point the vocabulary) in a second guise, and it fired
+TWICE in one pass** — the other being **CBSE** discharging India where **NEP** had failed for a pass.
+
+### 🔴 🆕 Licence risk has migrated from the repository to the CORPUS — `P957`
+
+🟢 **The most commercially consequential finding of this pass.**
+[`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) ships **one**
+`LICENSE.md` (1 615 B) granting **four different things**: code **MIT** · prompts **CC-BY-4.0** ·
+**Annotated CLEAR Corpus CC-BY-NC-SA-4.0** · **Annotated PERSUADE 2.0 Corpus CC-BY-NC-SA-4.0**.
+
+🔴 **The non-commercial clause sits precisely on the corpora — the part that makes it an evidence-backed
+rubric evaluator rather than a prompt template.**
+🔵 **So the question in this tier is not "is it permissive" but "is the permissive part the valuable
+part". Here it is not.**
+🟢 **Second shape, same lesson:** `learning-commons-org/knowledge-graph` licenses **per dataset and per
+download** (`Open` / `Open + Gated` / `Gated`) through a platform catalogue and states that gated content is
+**not** covered by the CC licences the same file references. 🔴 **A repo-root read cannot resolve a
+data-layer grant.**
+🟢 **`P957` adopted: as AI work moves from code to code-plus-evaluation-data, licence risk migrates to the
+corpus, and corpora are where NC clauses live. Read the payload prose for every checker/dataset row.**
+🔵 **Pass 90's split grant (`autogen`: docs CC-BY, code MIT) was 2-way and benign. This is 4-way and binding.**
+
+### 🔴 🆕 `--all`, and the two split-grant shapes — `P959`
+
+🔴 **A first-match ladder returns *a* grant, never *the* grant.** On `microsoft/autogen` it returns
+**CC-BY**, because `LICENSE` sorts before `LICENSE-CODE` — **the wrong answer for anyone shipping the code.**
+🟢 `ladder.sh --all` now reports every licence file and labels the row
+`SPLIT-GRANT[CC-BY,MIT]` — **pass 90 found that split by hand; it is now mechanical.**
+🔴 **Stated limit: `--all` sees the multi-FILE split and not the in-FILE split.** `evaluators` reports
+`SINGLE[CC-BY-NC-SA]` while granting four things in one file. 🟢 **`P959`: two shapes exist, this
+instrument sees one, and the other needs a prose read.**
+
+### 🔴 🆕 "No payload" ≠ "ungranted" — and a third instrument blind spot
+
+🔴 `LearnPress/learnpress` (275★) returns `NO-LICENCE-PAYLOAD/24`. 🔵 **WordPress plugins declare the
+grant in a PHP header comment, not a file** — and `gocodebox/lifterlms`, same ecosystem, **ships a GPL-3.0
+`LICENSE`**. 🟢 **So grant LOCATION varies by project convention inside one ecosystem, and "no payload"
+means *unverifiable from the repo root*, which is weaker than *ungranted*. This shelf must not collapse the
+two.** Recorded in `verticals/solutions.md` with `atutor/ATutor` (180★, also no payload).
+
+### 🔴 🆕 Two of THIS pass's own counts were wrong before publication — `P953` applied to itself
+
+🟢 **Caught by a programmatic recount of the written files, not by reading them.** Before commit, this
+pass had drafted *"21 foundational rows; 18 permissive"* (actual: **20 rows; 19 permissive, 1 LGPL**) and
+*"17 rows unplaced"* in `agents/top.md` (actual: **20**).
+
+🔵 **Same failure shape as `P953` itself: a count asserted in prose that the artefact does not have.**
+🟢 **Both corrected in the files. Recorded because the register's value depends on its own defects being
+logged at the same standard as the shelf's** — and because it is the third distinct instance this pass of a
+published number diverging from the thing it counts (the other two: v2's 12-vs-17 filenames, and the three
+rival referents for LATAM's 30 %).
+🟢 **Costed remedy, and it is `Gap 356`'s:** the recount was a ten-line script over the committed
+markdown. **`Gap 356` (register→shelf reconciliation as a runnable check) would have caught all three.**
+Fourth pass its absence has a measurable cost.
+
+### 🆕 Corrections to published figures, made in the files and not only here
+
+| file | what it said | what this pass measured |
+|---|---|---|
+| `intel/market.md` | *"UNESCO IESALC … **September 2026**"* | 🟡 **Fieldwork ran Aug–Oct 2025**; 2026 is the publication. 🟢 **And the governance figure is 26 %** — institutions with any formal framework. |
+| `intel/market.md` | *"only 30 % of **students and faculty** think their university integrates AI effectively"* | 🔴 **Students only, and differently worded: *30 % of students say their institution's current use of AI meets their expectations*.** |
+| — | a panel report: *"only 30 % of universities have published AI policies"* | 🔴 **REJECTED. Three distinct claims circulate attached to 30 %.** 🟢 Only the students-expectations one is supported; for policy coverage use UNESCO's **26 %**. 🔵 **A figure attached to three referents is a figure to stop quoting.** |
+| `intel/market.md` / `trends.md` | *"Singapore and Japan stay deliberately voluntary"* | 🔴 **True of regulating AI SYSTEMS, false of AI in SCHOOLS.** 🟢 Singapore's MoE committed in **Mar 2026** to AI literacy across curriculum, co-curriculum and self-directed learning, **all schools by 2027**. **Voluntary regulation and mandated curriculum are different axes.** |
+| `intel/market.md` | *"Khanmigo absent from every player list"* — unresolved discrepancy | 🟢 **CLOSED AS MIS-POSED.** Khan Academy's own 2026–27 district materials show a platform rebuilt around Khanmigo. 🔴 No share figure exists **because it is a nonprofit that does not report revenue share**, and player lists rank by share. **The absence was an artefact of the ranking instrument.** |
+
+### 🆕 Opened this pass
+
+- 🆕 🔴 **`Gap 366` — the instructional-alignment checker, RE-POSED with a specification.** 🟢 Not "checkers barely exist" but: the only permissive candidate (`nsip/curriculum-mapper`, Apache-2.0, Australia) is **archived and keyword-based**; the evidence-backed one (`learning-commons-org/evaluators`) has **NC corpora**; both alignment-named repos are **ungranted**. 🟢 **Costed: probe `topics/` for `learning-objectives`, `constructive-alignment`, `bloom-taxonomy` and `qti` — unambiguous phrases, per the acronym finding below.**
+- 🆕 🔴 **`Gap 367` — primary-school AI literacy has no permissive curriculum.** 🟢 Four jurisdictions now MANDATE AI instruction (China ≥ 8 h/year from age six since Sep 2025; Singapore MoE Mar 2026; India CBSE Classes 3–8 session 2026-27; EU AI Act Art. 4 staff literacy, **in force and NOT deferred**). 🔴 **Every permissive AI curriculum on this shelf is written for adult developers.** 🔵 **The largest named, dated, deadline-bearing demand on this shelf with no supply.** 🟢 Costed: `P91-G` states the build; next pass should probe CBSE/MoE-aligned repos in Hindi and Chinese per `P870`.
+- 🆕 🟡 **`Gap 368` — `topics/lms` is acronym-contaminated and every count drawn from it is suspect.** 🔴 **Measured: 4 of 20 rows on page 2 are not learning platforms** — `AmpliPi` (audio), `Colourful` (.NET colour), `AdaptiveFilter…` (**LMS = Least Mean Squares**), `lightlib-lms` (**LMS = Library Management System**). 🔴 **80 % precision on page 2 vs ~100 % on page 1, rising with depth.** 🟢 `topics/ai-tutor` (664) and `topics/scorm` (220) are clean. 🟢 **Costed: re-derive the platform census denominator from an unambiguous channel before any count from `topics/lms` is published again.**
+- 🆕 🟡 **`Gap 369` — `edly-io/pxc` is a declared successor to SCORM + H5P + LTI and this KB's whole Tier 1 rests on those three.** 🟢 Apache-2.0, 9★, from **the Open edX commercial vendor** — which is why 9★ is not dismissible. 🟢 **Costed: one tree read to establish whether it has an implementation or only a specification, and whether 1EdTech or ADL have responded.**
+- 🆕 🔴 **`Gap 370` — an EMEA-wide ADOPTION percentage still does not exist.** 🟢 **Partial discharge recorded:** UK *provision* numbers now exist (HEPI, Savanta fieldwork Dec 2025, n=1 054: **36 %** encouraged, **38 %** provided tools). 🔴 EUA and EDUCAUSE returned nothing. 🔴 **An aggregator's *"~70 % of institutions in Europe and North America have or are developing AI guidance"* is REJECTED** — untraceable and inconsistent with North America's measured ~10 %. 🔴 **Trap recorded: CompTIA's 94 % AI-training figure is US-respondents-only and is widely mis-cited as EMEA.**
+- 🆕 🟡 **`Gap 371` — the Council of Europe is a second European regulatory track this KB had never named.** 🟢 Its Education Department runs a working-conference series on regulating AI systems in education and has floated a **European evaluation framework for educational technologies** — **46 member states, wider than the EU**. 🔴 The edition surfaced was **Oct 2024** and is dated; the current edition was not confirmed. 🟢 Costed: one query naming the Council of Europe Education Department and the framework.
+
+### Standing items re-stated rather than quietly carried
+
+- 🔴 **`Gap 335`** (knowledge tracing) — **eighth pass untouched.**
+- 🔴 **`Gap 349`** (proctoring capability audit) — untouched.
+- 🔴 **`Gap 362`** (`mentingo` open-core) — untouched; the row stays out of costed patterns.
+- 🔴 **H.R. 8747** current status — unresolved for a **second** consecutive pass.
+- 🔴 **AICTE / UGC** (India HE) — the open limb of `Gap 363`.
+- 🔴 **Africa and the Middle East** as distinct markets — not separable under the five-value region
+  vocabulary. 🔵 The UAE surfaced only as a **probable misattribution** in a China story; that is the one
+  lead worth chasing.
+
+---
+
 
 ## 🟢 Eighty-ninth pass, 2026-10-09 — **three gaps DISCHARGE, a census claim is FALSIFIED by its own shelf, `P944` is corrected to an egress allowlist, and the eleven-pass instrument block is partly UNBLOCKED**
 

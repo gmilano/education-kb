@@ -1,8 +1,108 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-09
+updated: 2026-10-10
 ---
+
+## 2026-10-10 — pass 91: `topics/scorm` page 2 bought (Gap 365), `topics/lms` found to be acronym-contaminated, and a proposed successor to SCORM + H5P + LTI appears under Apache-2.0
+
+**APPEND-ONLY — history is below. First pass of this date.**
+
+Instrument: `compose/code/grant-ladder-v3/ladder.sh`, **24** candidate filenames (v2 probed 12), licence read
+from the payload at the pinned SHA. Control passed on every run. ★ via `WebFetch` on topic pages — 🆕 **recorded
+this pass: `WebFetch` renders `github.com/topics/<t>` including stars and the topic total, while `curl` on the
+identical URL is 403.**
+
+### `Gap 365` DISCHARGED — `topics/scorm` page 2 of 220, and the tail is thin but not empty
+
+🟡 Pass 89's `P952` predicted the tail would be bulk-tagger noise. 🟢 **Confirmed on the volume — page 2 tops
+out at 20★ with a median near 8 — and refuted on the value: three rows matter.**
+
+| row | grant (payload · bytes · ref · SHA) | ★ | why it matters |
+|---|---|---|---|
+| [`edly-io/pxc`](https://github.com/edly-io/pxc) | 🟢 **Apache-2.0** · 11 358 B · `main` · `01114d3` | 9 | 🟢 **The strategic row of the pass.** A **proposed standard for learning activities explicitly intended to replace SCORM, H5P *and* LTI** — the three specs this KB's whole Tier 1 rests on — published permissively by **edly.io, the Open edX commercial vendor**. Nine stars and larger in consequence than anything else on the page. Keep the interop layer behind an interface you own. |
+| [`kemalyy/edumints-scorm-mcp`](https://github.com/kemalyy/edumints-scorm-mcp) | 🟢 **MIT** · 1 069 B · `main` · `bd14b95` | 8 | MCP server that **assembles** SCORM courses — see `agents/trending.md` |
+| [`giacomomaria81/scorm-mcp-server`](https://github.com/giacomomaria81/scorm-mcp-server) | 🟢 **MIT** · 1 070 B · `main` · `fd5f110` | 6 | HTML → SCORM **and** zip validation |
+
+### 🔴 ADL leaves its own specs ungranted — now three of five
+
+| ADL repo | grant | ★ |
+|---|---|---|
+| [`adlnet/xAPI-SCORM-Profile`](https://github.com/adlnet/xAPI-SCORM-Profile) | 🟢 **Apache-2.0** · 11 324 B · `master` · `ea17c40` | 42 |
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | 🟢 **Apache-2.0** · 11 357 B · `master` · `efa045e` | — |
+| [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | 🔴 **no payload / 24** · `master` · `3e532b8` | 99 |
+| 🆕 [`adlnet/SCORM-2004-4ed-Test-Suite`](https://github.com/adlnet/SCORM-2004-4ed-Test-Suite) | 🔴 **no payload / 24** · `master` · `050f1b4` | 18 |
+| 🆕 [`adlnet/SCORM-to-TLA-Roadmap`](https://github.com/adlnet/SCORM-to-TLA-Roadmap) | 🔴 **no payload / 24** · `master` · `da1b9a2` | 7 |
+
+🔵 **This retires pass 89's reading of the single negative as *"one missing file, not a policy"*.** Three of
+five says the omission **tracks a category**: the *profile* and the *server* carry Apache-2.0; the *wrapper*,
+the *conformance test suite* and the *roadmap* carry nothing. 🔴 **Practical effect: the official SCORM 2004
+conformance test suite cannot ship in a client deliverable.** Conform against `ADL_LRS` instead (`P91-B`).
+
+### 🆕 `topics/lms` is contaminated by an acronym collision — measured, 2 432 repos
+
+🔴 **On page 2, 4 of 20 rows are not learning platforms at all:**
+
+| row | ★ | what it actually is |
+|---|---|---|
+| `micro-nova/AmpliPi` | 340 | whole-house audio |
+| `tompazourek/Colourful` | 299 | .NET colour-space conversion |
+| `LiXirong/AdaptiveFilterandActiveNoiseCancellation` | 180 | 🔵 LMS = **Least Mean Squares** adaptive filter |
+| `wesdoyle/lightlib-lms` | 152 | 🔵 LMS = **Library** Management System |
+
+🔴 **80 % precision on page 2 against ~100 % on page 1**, and the collision rate rises down the star ranking.
+🟢 **`topics/ai-tutor` (664) and `topics/scorm` (220) do not have this problem** — both phrases are
+unambiguous. 🔵 **Prefer unambiguous topic phrases; discount any count drawn from an acronym topic.**
+
+### Real platform rows from `topics/lms` page 2
+
+| repo | grant (payload · bytes · ref · SHA) | ★ | region | posture |
+|---|---|---|---|---|
+| 🆕 [`openfun/richie`](https://github.com/openfun/richie) | 🟢 **MIT** · 1 079 B · `master` · `8b14aec` | 316 | 🟢 **EMEA** (France Université Numérique) | 🟢 **CMS for education portals — the catalogue/enrolment layer this tier had nothing permissive for.** Native Open edX frontend without inheriting AGPL into the portal. Now in `P91-A`. |
+| 🆕 [`claroline/Claroline`](https://github.com/claroline/Claroline) | 🔴 **AGPL-3.0** · 34 616 B · `15.0` · `396eeba` | 350 | **EMEA** (BE) | copyleft; note the default branch is a **version number** |
+| 🆕 [`mumuki/mumuki-laboratory`](https://github.com/mumuki/mumuki-laboratory) | 🔴 **AGPL-3.0** · 34 523 B · `master` · `fce1ede` | 199 | 🟢 **LATAM** (AR) | 🟢 Programming practice + automated feedback, real classroom use |
+| 🆕 [`elmsln/elmsln`](https://github.com/elmsln/elmsln) | 🔴 **GPL-3.0** · `LICENSE.md` 35 193 B · `master` · `41f22f9` | 253 | **North America** (Penn State) | copyleft |
+| 🆕 [`gocodebox/lifterlms`](https://github.com/gocodebox/lifterlms) | 🔴 **GPL-3.0** · 35 141 B · `trunk` · `6ff84cf` | 211 | unplaced | WordPress LMS, **ships a LICENSE file** |
+| 🆕 [`leemonade/leemons`](https://github.com/leemonade/leemons) | 🔴 **"Fair Code License" v1.0** · `LICENSE.md` 10 830 B · `main` · `b1ca5d8` | 292 | unplaced | 🔴 **NOT OSI, not open source** — listed on `topics/lms` among genuinely open projects. v2 showed it as `OTHER/unclassified`; **v3 names it `FAIRCODE-NOT-OSI` so it can never be reported as open.** |
+| 🆕 [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | 🔴 **no payload / 24** · `develop` · `061a3ac` | 275 | unplaced | 🔵 Almost certainly GPL — **WordPress plugins declare the grant in a PHP header comment**, invisible to filename probing |
+| 🆕 [`atutor/ATutor`](https://github.com/atutor/ATutor) | 🔴 **no payload / 24** · `master` · `333030f` | 180 | **North America** (Toronto) | 🔴 The accessibility-pioneer LMS, **no grant file at the resolved SHA**; no longer user-level supported |
+
+🔵 **Two structural lessons from that table.** (1) **Within one ecosystem, grant *location* varies by project
+convention** — `lifterlms` ships a `LICENSE`, `learnpress` does not, same licence family. So **"no payload"
+means *unverifiable from the repo root*, which is weaker than "ungranted", and this shelf must not collapse the
+two.** (2) **Source-available licences with friendly names need naming, not dropping** — silence and a refusal
+both read as "unclassified", and only one of them is a warning.
+
+### 🆕 The checker tier, resolved (see `agents/trending.md` for the full table)
+
+| repo | grant | note |
+|---|---|---|
+| [`nsip/curriculum-mapper`](https://github.com/nsip/curriculum-mapper) | 🟢 **Apache-2.0** · 11 357 B · `master` · `2b405d5` | 🟢 **APAC** — Australia's National Schools Interoperability Program. ML mapping **between curricula**. 🔴 **Archived, read-only, keyword-based** — a spec for the problem, not a dependency. |
+| [`lukeslp/awesome-accessibility`](https://github.com/lukeslp/awesome-accessibility) | 🟢 **CC0-1.0** · 6 464 B · `main` · `d146ae6` | A list, public-domain dedicated — quotable without attribution duties |
+| [`Zion-support/curriculum-alignment-checker`](https://github.com/Zion-support/curriculum-alignment-checker) | 🔴 **no payload / 24** · `main` · `c148b67` | Self-describes as batch-generated app-network content |
+| [`lovejzzz/CourseMapper`](https://github.com/lovejzzz/CourseMapper) | 🔴 **no payload / 24** · `main` · `63d8172` | Own README logs source-attribution failures |
+
+🔴 **So the instructional-alignment checker gap STANDS, now with a sharp specification rather than a blanket
+claim:** the only permissive candidate is archived and keyword-based, the evidence-backed one has **NC
+corpora**, and both alignment-named repos are ungranted.
+
+### Instrument changes landed this pass
+
+🟢 **`compose/code/grant-ladder-v3/`** — 24 printable filenames (`--count` / `--names`), **ECL-2.0 recognised
+by name** (tested *before* Apache, which is Apache-derived and would swallow it), **EUPL-1.2** added for EMEA
+public-sector tenders, non-OSI families named (**BSL-1.1**, **Fair Code**, **Sustainable Use License**), and
+**`--all`** to report every licence file rather than the first.
+🔴 **A defect v3 found in itself mid-pass:** its first draft classified a **CC-BY-NC-SA** curriculum repo as
+`Unlicense/PD`, because a Creative Commons summary contains the words *"public domain"* and the draft tested
+for PD before CC. 🔵 **The ECL error dropped a usable row (conservative); this one would have put
+non-commercial content into a paid deliverable (dangerous).** 🟢 **Rule adopted: order licence tests
+most-constrained first.**
+🔴 **`--all`'s stated limit:** it detects the multi-**file** split (`microsoft/autogen` → `SPLIT-GRANT[CC-BY,MIT]`,
+found mechanically for the first time) but **not** the in-**file** split — `learning-commons-org/evaluators`
+ships one file granting four things and reports `SINGLE`. **Two shapes exist; the instrument sees one.**
+
+---
+
 
 ## 2026-10-09 — pass 90: `topics/lms` bought by stars, and education's own permissive licence family (ECL-2.0) is why the platform census kept failing
 
