@@ -6,6 +6,114 @@ updated: 2026-10-10
 
 # Education — AI agents shelf
 
+**Pass 109, 2026-10-10.** ⏱️ **Nineteenth pass of this date** (107: 16:4x–17:xx UTC;
+108: 17:4x–18:xx; this one 18:4x–19:xx).
+
+🟢 **Instrument this pass: `compose/code/p109-freshness/` — `test_p109.sh` **32 passed /
+0 failed** (fully offline: real git repositories served over `file://`, no mocks);
+`freshness.sh` read **296 of 296** shelf addresses, `rc=0` on every one, **zero
+unread**.** 🔵 **It adds the third axis in three passes, and the one `Gap 376` actually
+asked for at pass 92: not *does it release* (p107), not *what do I pin* (p108), but
+**is it alive**.** 🔴 **It also found that a figure p107 published — `head_sha40` — is
+the wrong commit for 20 addresses, and `—` for 13 more (`P109-E`).**
+
+### 🔴 🆕 p109 — why the two previous answers could not see this
+
+| pass | axis | answers | cannot say |
+|---|---|---|---|
+| p107 | tag **count** | how much ref traffic | nothing reliable — it inverts at the top |
+| p108 | release **identity** | *can I pin it* | whether the pin is from 2019 |
+| 🟢 **p109** | commit **recency** | 🟢 **is it alive** | how good it is |
+
+🔴 **A row can be flawless semver, Apache-2.0, pinnable — and five years dead. p108
+would rank it clean and say nothing was wrong.** 🟢 **24 of the 168 rows p108 called
+version-pinnable (14.3 %) have not been touched in over a year.**
+
+### 🟢 🆕 p109 — agent-layer rows, now with a liveness column
+
+| row | licence | `class` | pin | last commit | age | band |
+|---|---|---|---|---|---|---|
+| [`jeanlucio/moodle-local_aihub`](https://github.com/jeanlucio/moodle-local_aihub) | 🟡 GPL-3 (in-LMS) | `semver` | `v1.3.4` | 2026-10-10 | **0 d** | 🟢 fresh |
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) | 🟢 Apache-2.0 | `semver` | `v4.9.152` | 2026-10-09 | **1 d** | 🟢 fresh |
+| [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🟢 MIT | `semver` | `1.4.3` | 2026-10-08 | **1 d** | 🟢 fresh |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 | `semver` | `v1.6.14` | 2026-10-08 | **2 d** | 🟢 fresh |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 MIT | `semver` | `v1.7` | 2026-09-30 | **10 d** | 🟢 fresh |
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🟢 MIT + CC BY 4.0 | 🔴 `none` | 🔴 SHA only | 2026-09-26 | **14 d** | 🟢 fresh |
+| [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | 🟢 MIT + CC BY 4.0 | `prefixed` | `dados-2026.07.1` | 2026-08-11 | **60 d** | 🟢 active |
+| [`wanghaoyu0408/OpenRubrics`](https://github.com/wanghaoyu0408/OpenRubrics) | 🟢 MIT | 🔴 `none` | 🔴 SHA only | 2026-06-23 | 🟡 **109 d** | 🟡 slowing |
+| [`Qwen-Applications/OpenRS`](https://github.com/Qwen-Applications/OpenRS) | 🟢 Apache-2.0 | 🔴 `none` | 🔴 SHA only | 2026-03-05 | 🔴 **219 d** | 🟡 slowing |
+| [`planepig/rubricbench`](https://github.com/planepig/rubricbench) | 🟢 MIT | 🔴 `none` | 🔴 SHA only | 2026-03-03 | 🔴 **221 d** | 🟡 slowing |
+
+### 🔴 🆕 p109 — `Gap 379`'s diagnosis changes shape for the third time, and this reading is the sharpest
+
+🔵 **The `P96-A` / `P107-A` rubric↔curriculum bind has been described for twelve passes
+as "four permissive layers, three publishers, no integration", and p107 added "and four
+of the five have never cut a release".** 🟢 **Liveness splits the bind cleanly in two,
+and the split falls on the publisher boundary:**
+
+```
+the RUBRIC half  (China + US academic)        the CURRICULUM half  (Brazil, bncc-dev)
+  OpenRS        219 d   slowing                 bncc-pacotes    14 d   fresh
+  rubricbench   221 d   slowing                 bncc-dados      60 d   active
+  OpenRubrics   109 d   slowing                 bncc-benchmark  21 d   fresh
+```
+
+🔴 **Every rubric layer is 3.5–7 months cold. Every curriculum layer is current.**
+🟢 **So the bind is not symmetrically stalled — the half that would supply judgement is
+cooling while the half that would supply the standard is actively maintained.** 🔵 **For
+an engagement that changes the plan: the BNCC side can be consumed as a live dependency,
+and the rubric side has to be vendored at a SHA and owned. `Gap 379` stays open, and
+`compose/patterns.md` prices it on liveness this pass rather than on releases.**
+
+🟢 **A fourth `bncc-dev` repository, [`bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark)
+(21 d, fresh), is recorded here because the bind has been described with five components
+for twelve passes and there are six.**
+
+### 🟡 🆕 p109 — `P106-A`'s memory tier is the cooling half of that pattern too
+
+| `P106-A` component | licence | last commit | age | band |
+|---|---|---|---|---|
+| [`a2br/moodle-mcp`](https://github.com/a2br/moodle-mcp) | 🟢 MIT | 2026-09-25 | 16 d | 🟢 fresh |
+| [`fwu-de/mem-mcp`](https://github.com/fwu-de/mem-mcp) | 🟢 Unlicense | 2026-06-09 | 🟡 **123 d** | 🟡 slowing |
+
+🔵 **p106 called both TAKEABLE and that verdict is unchanged — a permissive licence does
+not expire.** 🟡 **But the sidecar's memory tier is the staler of the two, so the pattern's
+risk sits there rather than being spread evenly.**
+
+### 🔴 🆕 `P109-A` — the mandated query set is EXHAUSTED, and this pass proves it is not a depth artefact
+
+🟢 **All eight mandated searches ran: four global, one each for North America, EMEA, APAC
+and LATAM.** 🔴 **Every one ran in **extended** mode — a deeper, fresher, several-times
+costlier channel than the standard mode p104–p108 used.** 🔴 **About **45** candidate
+tokens were extracted and **every single one is already held on a live page of this
+KB**.**
+
+🔵 **That is a materially stronger negative than any prior pass's, because it retires a
+hypothesis rather than repeating an observation.** 🔴 **p104–p108 each recorded "zero new
+items" and `P1023` read it as *the channel is saturated*. A reasonable competing
+explanation was that standard-mode search was simply too shallow.** 🟢 **It is not: the
+expensive channel returns the same zero. The query SET is exhausted, not the channel.**
+
+🟢 **The axis-change remedy (`P933`: search by licence + stack, never by category — the
+method that found `GegoK12` at pass 3) was also tested this pass, against three axes, and
+all three came back already-held:**
+
+| axis probed | representative candidates | verdict |
+|---|---|---|
+| agents / frameworks | `LLMs-from-scratch`, `generative-ai-for-beginners`, `nanochat`, `agents-radar`, `500-AI-Agents-Projects`, `awesome-ai-agents-2026` | 🔴 **6 / 6 held** |
+| SIS / ERP by licence+stack | `GegoK12`, `frappe/education`, `ERPNext`, `RosarioSIS`, `Fedena` | 🔴 **5 / 5 held** |
+| standards / integration | `LTI 1.3`, `ltijs`, `pylti`, `1EdTech/caliper-*`, `xAPI`, `pykt`, `EduKTM` | 🔴 **all held** |
+
+🔵 **Recorded as a standing instruction, because five passes have now spent their search
+budget re-confirming it: a future pass should NOT re-run the eight mandated queries
+expecting novelty. The cheap, unexhausted channel in this environment is MEASUREMENT of
+the shelf this KB already holds — which is what every pass since p106 that produced a new
+finding actually did.**
+
+---
+
+# Education — AI agents shelf
+
 **Pass 108, 2026-10-10.** ⏱️ **Eighteenth pass of this date** (106: 15:4x–16:xx UTC;
 107: 16:4x–17:xx; this one 17:4x–18:xx).
 

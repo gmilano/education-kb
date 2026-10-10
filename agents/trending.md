@@ -4,6 +4,144 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 109: eight searches in EXTENDED mode returned zero new items, which finally tells us something; and the shelf's liveness axis is measured for the first time
+
+🔵 **No new education-specific agent reached this shelf this pass.** 🟢 **What is new is
+that the zero is now INFORMATIVE rather than merely repeated — see `P109-A` — and that
+`Gap 376` is discharged by a third axis.**
+
+🟢 **Instrument: `compose/code/p109-freshness/`, `test_p109.sh` **32 passed / 0 failed**
+(fully offline — real git repositories served over `file://`, no mocks); `freshness.sh`
+read **296 of 296** addresses with **zero unread**; `defbranch.sh` read 296 of 296
+default branches; `validate.sh` reconciled every row against p107.**
+
+### 🔴 `P109-A` — the mandated query set is exhausted, and it is NOT a search-depth artefact
+
+🔵 **p104–p108 each ran the eight mandated queries in standard mode and each recorded
+zero new items. `P1023` read that as "the channel is saturated". A competing explanation
+was alive the whole time: that standard-mode search is simply too shallow.**
+
+🟢 **This pass ran all eight in **extended** mode — a deeper, fresher, several-times
+costlier channel. ~45 candidate tokens extracted. **Zero new.** 100 % already held.**
+
+🔴 **So the competing explanation is dead. The expensive channel returns the same zero as
+the cheap one, which means the QUERY SET is exhausted, not the channel.** 🟢 **The
+`P933` remedy (search by licence + stack, never by category) was also tested on three
+axes — agents/frameworks, SIS-ERP by licence, standards/integration — and all came back
+already-held.** 🔵 **Standing instruction recorded on `agents/top.md`: a future pass
+should not spend its budget re-running these eight queries. Measurement of the held shelf
+is the channel that still pays.**
+
+### 🟢 The axis: p107 asked *does it release*, p108 asked *what do I pin*, p109 asks **is it alive**
+
+🔴 **`Gap 376` has asked for a maintenance signal since pass 92. p107 answered with tag
+count; p108 showed that inverts at the top of the shelf (4 468 tags, never a release).
+p108 answered with release identity — which says whether a version EXISTS, not whether it
+is from 2019.** 🟢 **Liveness is the figure that was actually requested, and it is
+discharged this pass.**
+
+```
+296 addresses, every one read, zero unread:
+  fresh      (<= 30 d)   144   48.6%
+  active     (31- 90 d)   34   11.5%
+  slowing    (91-365 d)   52   17.6%
+  dormant    (1-2 y)      18    6.1%
+  abandoned  (> 2 y)      48   16.2%
+                          ----------------------------------
+  untouched for over a year:  66  (22.3%)
+```
+
+### 🔴 `P109-E` — a figure this KB published is wrong for 33 addresses, and the cause is a two-branch fallback
+
+🔵 **p107's `parse_refs.sh` derives `head_sha40` by taking the bare `HEAD` row from
+`git ls-remote`, and — because `ls-remote --heads` does not emit one — falling back to
+`refs/heads/main`, then `refs/heads/master`.** 🔴 **For a repository whose default branch
+is NEITHER, that fallback returns the tip of a legacy branch nobody develops on.**
+
+🟢 **Measured, not assumed. `defbranch.sh` read every default branch from the remote HEAD
+symref:**
+
+```
+296 read, 0 unread
+  default IS main or master        263   (88.9%)  p107 was right
+  default is NEITHER                33   (11.1%)
+     ...and main/master EXISTS      20   <- p107 published the WRONG commit
+     ...and neither exists          13   <- p107 published "-"
+```
+
+🔴 **The worst two cases are not marginal:**
+
+| repo | real default | p107 read | its date | p109 reads |
+|---|---|---|---|---|
+| `moodlehq/moodle-tool_dataprivacy` | `MOODLE_34_STABLE` | `master` | — | **2 307 d** |
+| `kualico/rice` | `java11` | `master` | — | **2 292 d** |
+| `1EdTech/openbadges-validator-core` | `develop` | `master` | — | **340 d** |
+| `douglasrizzo/catsim` | `dev` | `main` | — | **172 d** |
+
+🔵 **Thirteen distinct non-standard default branches appeared: `develop` (11),
+`dev` (4), `trunk` (2), `2.12` (2), and one each of `java11`, `MOODLE_34_STABLE`,
+`release`, `release_11`, `mobile`, `19.0`, `7.x`, `2024.9.x`, `v2`, `v3.0.x-develop`,
+`v6.2.0`, `v31.0.00`.** 🟢 **`P109-F`: a version-shaped default branch is normal in this
+sector — Odoo-based and PHP-framework projects name the default after the release line.
+Any future instrument that hardcodes `main`/`master` will silently misread about one row
+in nine of this shelf.**
+
+### 🟢 Why this census is believed: it was reconciled row by row, and every disagreement is explained
+
+🔵 **`validate.sh` compares all 296 HEAD shas against p107's independent ref read. A new
+channel that reproduces a known one can be trusted on unknown values.**
+
+```
+agree (identical sha)                 260
+differ, age=0  (a push since p107)      6
+differ, age>0                          17   <- ALL 17 are the P109-E default-branch fault
+p107 had no baseline ("-")             13   <- EXACTLY the 13 with no main/master at all
+                                      ----
+                                       296   zero UNEXPLAINED disagreements
+```
+
+🟢 **The 20 wrong-commit rows reconcile exactly: 17 landed in `differ, age>0`, 2
+(`learnhouse`, `Artemis`) in `differ, age=0` because they also got a push today, and 1
+(`oat-sa/tao-core`) in `agree` because its `master` happens to point at the same commit as
+its `develop` default.** 🔵 **Nothing is left over in either direction.**
+
+### 🟢 Seven method rules this instrument established
+
+| | rule |
+|---|---|
+| `P109-B` | 🔴 **`github.com/…/commits/X.atom` and `/releases.atom` are `403` too.** Those feeds are the standard unauthenticated fallback when the API is closed, and they carry commit dates. With the API at 403 for fourteen passes, **no *description* of a repo is readable in this environment — only the objects.** |
+| `P109-C` | 🟢 **Read committer date (`%cI`), never author date (`%aI`).** Author date survives rebase and cherry-pick, so a commit pushed today can be authored in 2019. The test suite pins a fixture where the two differ by seven years. |
+| `P109-D` | 🟢 **Age is in UTC calendar days.** An earlier draft differenced raw timestamps and made the answer depend on the reference time of day and the commit's own timezone — a commit nine calendar days back read as eight. |
+| `P109-F` | 🔴 **Never hardcode `main`/`master`.** Read the HEAD symref. 11.1 % of this shelf defaults to neither. |
+| `P109-G` | 🟢 **A future-dated commit is a clock fault, not freshness.** Clamped to 0; no negative age is ever emitted. |
+| `P109-H` | 🟢 **`P1040` extends to this axis: `rc!=0` is `UNREAD`, never "abandoned".** Failing to reach a repository says nothing about whether it is maintained. |
+| `P109-I` | 🟢 **Liveness is not quality, and a commit is not a release.** A dependency-bot commit reads `fresh`. The axis is only meaningful crossed with p108's `class`. |
+
+### 🟢 The pairing that makes both axes useful
+
+| | 🟢 pinnable | 🔴 SHA-only |
+|---|---|---|
+| 🟢 fresh | 🟢 **99** | 45 |
+| 🟢 active | 🟢 **20** | 14 |
+| 🟡 slowing | 25 | 27 |
+| 🔴 dormant | 🔴 7 | 11 |
+| 🔴 abandoned | 🔴 17 | 31 |
+| | **168** | **128** |
+
+🟢 **The usable shelf is 119 of 296 (40.2 %) — pinnable AND still worked on.**
+🔴 **24 of p108's 168 pinnable rows (14.3 %) are over a year dead; 17 are over two.**
+🟡 **45 rows are fresh with nothing to pin — motion without shipping.**
+
+### 🔴 The agent-axis negative, stated
+
+🔵 **Six candidates were extracted from the two agent queries and all six were already
+held: `rasbt/LLMs-from-scratch`, `microsoft/generative-ai-for-beginners`,
+`rohitg00/ai-engineering-from-scratch`, `karpathy/nanochat`, `kouweizhu/agents-radar`,
+`ashishpatel26/500-AI-Agents-Projects`.** 🔴 **All six are about teaching AI, not AI for
+education — a distinction this KB has recorded before and which the mandated agent queries
+reliably collapse.** 🟢 **No new agent row is added this pass, and none is invented.**
+
+
 ## 2026-10-10 — pass 108: a tag count is not a release ladder, and 24 addresses on this shelf were misread because of it
 
 🔵 **No new education-specific agent reached this shelf this pass. Eight searches ran

@@ -4,6 +4,126 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 109: an entire learning-analytics org on this shelf is a graveyard, and two repos p108 recommended have been dead for 9 and 5 years
+
+🟢 **Measured over **296 of 296** addresses, zero unread
+(`compose/code/p109-freshness/`, `test_p109.sh` 32 passed / 0 failed, fully offline).**
+🔵 **This section records the *repo-side* consequences; the method, its seven rules
+(`P109-B`…`P109-I`) and the row-by-row reconciliation against p107 are in
+`agents/trending.md` and the instrument README.**
+
+### 🔴 The single worst cluster on this shelf: `Apereo-Learning-Analytics-Initiative`
+
+🔵 **Six addresses from one organisation. Not one has been touched this decade.**
+
+| repo | last commit | age |
+|---|---|---|
+| `Apereo-Learning-Analytics-Initiative/lap-sakai-extractor` | 2014-12-02 | 🔴 **4 330 d** |
+| `Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor` | 2016-05-04 | 🔴 **3 811 d** |
+| `Apereo-Learning-Analytics-Initiative/OpenLRS` | 2019-01-31 | 🔴 **2 809 d** |
+| `Apereo-Learning-Analytics-Initiative/OpenLRW` | 2020-02-06 | 🔴 **2 438 d** |
+| `Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy` | 2020-02-17 | 🔴 **2 427 d** |
+| `Apereo-Learning-Analytics-Initiative/OpenDashboard-api` | 2020-03-09 | 🔴 **2 406 d** |
+
+🔴 **6 of 6 abandoned, the youngest 6.6 years, the oldest 11.9.** 🟢 **Read as market
+intelligence rather than as a repo list: the open-source learning-analytics stack of the
+mid-2010s has no maintained implementation on this shelf.** 🔵 **Pair that with
+`LearningLocker/learninglocker` (**1 789 d**, the best-known open LRS) and
+`adlnet/ADL_LRS` (**484 d**, dormant) and the pattern is a segment, not a project.**
+
+### 🔴 The xAPI / SCORM tooling from its own originator is dead
+
+🔵 **`adlnet` is the US Department of Defense's Advanced Distributed Learning Initiative —
+the body that WROTE SCORM and xAPI:**
+
+| repo | last commit | age |
+|---|---|---|
+| `adlnet/SCORM-2004-4ed-Test-Suite` | 2015-03-09 | 🔴 **4 233 d** |
+| `adlnet/SCORM-to-TLA-Roadmap` | 2017-01-24 | 🔴 **3 546 d** |
+| `adlnet/SCORM-to-xAPI-Wrapper` | 2017-03-29 | 🔴 **3 482 d** |
+| `adlnet/xAPI-SCORM-Profile` | 2017-10-24 | 🔴 **3 273 d** |
+| `adlnet/ADL_LRS` | 2025-06-13 | 🔴 **484 d** (dormant) |
+
+🔴 **And `IMSGlobal/caliper-spec`, the competing analytics specification, is **2 714 d**.**
+🟡 **The rename hypothesis was tested and refuted: `1EdTech/caliper-spec` is the SAME
+repository by GitHub redirect and carries the identical 2019-05-06 date.** 🟢 **The
+organisation is alive — `1EdTech/openbadges-specification` is **2 d, fresh** — this one
+specification is not.**
+
+🟢 **Consequence for a build: the learning-analytics interchange layer is a place to
+implement a spec, not to adopt an implementation. Budget accordingly.**
+
+### 🔴 Two rows p108 published as "build on freely" are abandoned
+
+| repo | licence | pin | last commit | age |
+|---|---|---|---|---|
+| `kuali/rice` | 🟢 ECL-2.0 | `rice-2.6.0` | **2017-05-17** | 🔴 **3 433 d** (9 y 5 m) |
+| `Jasig/SSP` | 🟢 Apache-2.0 | `ssp-2.9.0` | **2021-07-26** | 🔴 **1 902 d** (5 y 2 m) |
+
+🔵 **Both are genuinely permissive and both genuinely have a version to pin — which is
+precisely why p107's and p108's axes scored them clean.** 🔴 **Nor does the successor
+organisation help: `kualico/rice` is itself **2 292 d** abandoned, default branch
+`java11`.** 🟢 **Retired from the permissive tier on `verticals/solutions.md`, which now
+publishes seven components rather than nine.**
+
+### 🟡 The MIT escape hatch is the staler half of the pair it was chosen over
+
+| repo | licence | last commit | age | band |
+|---|---|---|---|---|
+| `tunapanda/h5p-standalone` | 🟢 **MIT** | 2026-03-24 | 🟡 **200 d** | 🟡 slowing |
+| `h5p/h5p-php-library` | 🔴 **GPL-3.0** | 2026-08-11 | 🟢 **60 d** | 🟢 active |
+
+🔵 **p108 promoted `h5p-standalone` over the H5P core on the licence axis, and that
+argument is unchanged and still correct.** 🟡 **On liveness it runs the other way: the MIT
+substitute is three times staler than the GPL original it replaces.** 🟢 **Both default to
+`master`, re-confirmed against a live symref, so neither figure is a branch artefact.**
+
+### 🟢 The healthiest segment: SIS / ERP, with no casualties at all
+
+```
+francoisjacquet/rosariosis     1 d  fresh     (default branch: mobile)
+portabilis/i-diario            1 d  fresh     Brazil, municipal SIS
+academico-sis/academico        3 d  fresh
+portabilis/i-educar            8 d  fresh     Brazil, municipal SIS
+frappe/education              10 d  fresh     ERPNext school module
+OpenEduCat/openeducat_erp     33 d  active    (default branch: 19.0)
+```
+
+🟢 **Six of six fresh or active.** 🔵 **The segment that two passes ago had the weakest
+release story (`openeducat_erp` is `stamp`, SHA-only) has the strongest liveness story.
+Those are different questions and this is the clearest example on the shelf of why both
+are needed.**
+
+### 🟢 The Finnish national stack: the exact inverse of the pinnable-but-dead trap
+
+| repo | last commit | age |
+|---|---|---|
+| `opetushallitus/valtionavustus` | 2026-10-10 | 🟢 **0 d** |
+| `opetushallitus/ataru` | 2026-10-09 | 🟢 **1 d** |
+| `opetushallitus/eperusteet` | 2026-10-09 | 🟢 **1 d** |
+| `opetushallitus/koski` | 2026-10-09 | 🟢 **1 d** |
+| `opetushallitus/suorituspalvelu` | 2026-10-08 | 🟢 **2 d** |
+| `opetushallitus/organisaatio` | 2026-10-07 | 🟢 **3 d** |
+| `opetushallitus/ehoks` | 2026-10-06 | 🟢 **4 d** |
+| `opetushallitus/oppijanumerorekisteri` | 2026-10-06 | 🟢 **4 d** |
+
+🔴 **p108 established that these eight have thousands of tags and have NEVER cut a
+release — their refs are CI deploy stamps (`va-green-dev-2026-08-08T22_31_36+00_00`).**
+🟢 **p109 shows that 8 of 8 are **fresh**, the whole stack committed within four days.**
+🔵 **So `opetushallitus` is unpinnable and intensely alive, the mirror image of
+`kuali/rice`, which is pinnable and nine years dead.** 🟢 **Those two rows together are the
+argument for carrying both axes: either one alone gets one of them exactly backwards.**
+
+### 🔴 Fresh but unpinnable — 45 rows of motion without shipping
+
+🔵 **45 addresses are `fresh` with `class` of `none` or `stamp`: someone commits, nothing
+ships.** 🟡 **Not a disqualification, but a specific and costable risk — you vendor at a
+SHA, you carry your own patches, and you own the upgrade path against a moving target.**
+🟢 **The `opetushallitus` eight are the benign form (a national agency deploying from
+trunk). A single-author research repo in the same quadrant is not the same bet, and the
+distinction is publisher, not metric.**
+
+
 ## 2026-10-10 — pass 108: five of the most-tagged repos on this shelf have never cut a release, and the lexical-sort bug is live on DSpace
 
 🟢 **Measured over **296 of 296** addresses, zero unread

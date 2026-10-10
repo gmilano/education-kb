@@ -6,6 +6,100 @@ updated: 2026-10-10
 
 # Education — vertical platforms you can customise with AI
 
+**Pass 109, 2026-10-10.** ⏱️ **Nineteenth pass of this date.** 🔴 **This page carries the
+most commercially consequential correction of the pass: two of the nine components p108
+published as "the permissive tier Globant can build on and ship" have been abandoned for
+years.**
+
+### 🔴 🆕 p109 — the permissive tier is SEVEN components, not nine
+
+🔵 **p108 filtered the platform table to OSI-permissive licences and published nine rows,
+eight of them version-pinnable, as the build-on-freely tier. Liveness removes two of
+them:**
+
+| platform | licence | pin | last commit | age | band |
+|---|---|---|---|---|---|
+| [`Oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | `v3.5.3` | 2026-10-10 | **0 d** | 🟢 fresh |
+| [`DSpace`](https://github.com/dspace/dspace) | 🟢 BSD-3 | `dspace-10.1` | 2026-10-10 | **0 d** | 🟢 fresh |
+| [`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 Apache-2.0 | `OpenOLAT_21.0.3` | 2026-10-09 | **1 d** | 🟢 fresh |
+| [`Sakai`](https://github.com/sakaiproject/sakai) | 🟢 ECL-2.0 | `25.2` | 2026-10-09 | **1 d** | 🟢 fresh |
+| [`Kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT | `v0.19.5` | 2026-10-09 | **1 d** | 🟢 fresh |
+| [`Apache OFBiz`](https://github.com/apache/ofbiz-framework) | 🟢 Apache-2.0 | 🔴 SHA only | 2026-10-09 | **1 d** | 🟢 fresh |
+| [`h5p-standalone`](https://github.com/tunapanda/h5p-standalone) | 🟢 MIT | `v3.8.2` | 2026-03-24 | 🟡 **200 d** | 🟡 slowing |
+| 🔴 ~~[`Apereo SSP`](https://github.com/Jasig/SSP)~~ | 🟢 Apache-2.0 | `ssp-2.9.0` | **2021-07-26** | 🔴 **1 902 d** | 🔴 **abandoned** |
+| 🔴 ~~[`Kuali Rice`](https://github.com/kuali/rice)~~ | 🟢 ECL-2.0 | `rice-2.6.0` | **2017-05-17** | 🔴 **3 433 d** | 🔴 **abandoned** |
+
+🔴 **`Kuali Rice` — nine years five months. `Apereo SSP` — five years two months.**
+🟢 **Both are genuinely permissive and both genuinely have a version to pin, which is
+exactly why p107 and p108 could not catch them: every axis this KB had before today scored
+them clean.** 🔴 **Recommending ECL-2.0 `rice-2.6.0` as "HiEd admin middleware" to a
+client in 2026 means recommending a 2017 codebase with no upstream.**
+
+🔵 **The fork does not rescue it either: `kualico/rice`, the successor organisation's copy,
+is itself **2 292 d** abandoned (2020-07-01), and its default branch is `java11` — a
+migration branch that was the last thing anyone worked on.**
+
+🟢 **Corrected tier, in the order an engagement should consider it:**
+
+```
+OpenOLAT        Apache-2.0   OpenOLAT_21.0.3    1 d   full LMS        <- the headline, and it is alive
+Sakai           ECL-2.0      25.2               1 d   full LMS
+Oppia           Apache-2.0   v3.5.3             0 d   lesson engine
+Kolibri         MIT          v0.19.5            1 d   offline LMS
+DSpace          BSD-3        dspace-10.1        0 d   repository
+Apache OFBiz    Apache-2.0   — (stamp)          1 d   ERP spine
+h5p-standalone  MIT          v3.8.2           200 d   content playback  <- slowing; GPL core is fresher
+---------------------------------------------------------------------------------------
+Apereo SSP      Apache-2.0   ssp-2.9.0      1 902 d   RETIRE from the tier
+Kuali Rice      ECL-2.0      rice-2.6.0     3 433 d   RETIRE from the tier
+```
+
+🟢 **Six of the seven survivors are fresh, and the strongest of them is also the most
+permissive — `OpenOLAT`, Apache-2.0, 542 tags, a commit yesterday.** 🔵 **That is the
+cleanest statement this page has ever been able to make: p108 had to choose between the
+licence axis and the incumbency axis; on liveness the permissive tier does not lose.**
+
+### 🟢 🆕 p109 — the copyleft incumbents, measured on the same axis
+
+| platform | licence | pin | last commit | age | band |
+|---|---|---|---|---|---|
+| [`Chamilo`](https://github.com/chamilo/chamilo-lms) | 🟡 GPL-3 | `v3.0.1` | 2026-10-09 | **0 d** | 🟢 fresh |
+| [`Open edX`](https://github.com/openedx/edx-platform) | 🟡 AGPL-3 | `v2.1.0` | 2026-10-09 | **1 d** | 🟢 fresh |
+| [`BigBlueButton`](https://github.com/bigbluebutton/bigbluebutton) | 🟡 LGPL-3 | `v3.0.39` | 2026-10-08 | **2 d** | 🟢 fresh |
+| [`Moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3 | `v5.3.0` | 2026-10-03 | **7 d** | 🟢 fresh |
+| [`H5P` core](https://github.com/h5p/h5p-php-library) | 🔴 GPL-3.0 | `1.28.0` | 2026-08-11 | **60 d** | 🟢 active |
+| [`OpenEduCat`](https://github.com/OpenEduCat/openeducat_erp) | 🟡 LGPL-3 | 🔴 SHA only | 2026-09-07 | **33 d** | 🟢 active |
+| [`Canvas LMS`](https://github.com/instructure/canvas-lms) | 🟡 AGPL-3 | `v5.14.2` | 2026-04-30 | 🟡 **163 d** | 🟡 slowing |
+| [`ATutor`](https://github.com/atutor/ATutor) | 🟡 GPL-3 | `Atutor_1.4.1` | **2023-02-12** | 🔴 **1 336 d** | 🔴 **abandoned** |
+
+🔴 **`ATutor` — the accessibility-first LMS this page has carried for many passes — is
+3 years 8 months dead, and accessibility is exactly the requirement a client cannot
+compromise on.** 🟡 **If accessibility drives the selection, the live options are
+`OpenOLAT` and `Moodle`, not `ATutor`.**
+🟡 **`Canvas LMS` at 163 days is the surprise among the incumbents. Its default branch was
+re-confirmed as `master` against a live `ls-remote --symref` this pass, so the figure is
+not a branch artefact — but Instructure develops commercially and a quiet public mirror is
+a plausible reading. Stated as measured, not interpreted.**
+
+### 🟢 🆕 p109 — the SIS / ERP layer, which is the healthiest segment on this page
+
+| platform | licence | last commit | age | band | note |
+|---|---|---|---|---|---|
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🟡 GPL-2 | 2026-10-09 | **1 d** | 🟢 fresh | 🔴 default branch is `mobile`, not `master` |
+| [`portabilis/i-diario`](https://github.com/portabilis/i-diario) | — | 2026-10-09 | **1 d** | 🟢 fresh | Brazilian municipal SIS |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | — | 2026-10-07 | **3 d** | 🟢 fresh | |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | — | 2026-10-02 | **8 d** | 🟢 fresh | Brazilian municipal SIS |
+| [`frappe/education`](https://github.com/frappe/education) | — | 2026-09-30 | **10 d** | 🟢 fresh | ERPNext school module |
+| [`OpenEduCat`](https://github.com/OpenEduCat/openeducat_erp) | 🟡 LGPL-3 | 2026-09-07 | **33 d** | 🟢 active | 🔴 default branch is `19.0` |
+
+🟢 **Every SIS/ERP row on this page is fresh or active — the only segment with no
+casualties.** 🔵 **Three of the six are LATAM-published, which is placed and costed in
+`intel/market.md`.**
+
+---
+
+# Education — vertical platforms you can customise with AI
+
 **Pass 108, 2026-10-10.** ⏱️ **Eighteenth pass of this date.** 🟢 **Every platform row
 gains the ref you would actually pin, and one platform moves from "unreleased" to
 "pin 21.0.3" — the correction with the largest commercial consequence on this page.**

@@ -6,6 +6,120 @@ updated: 2026-10-10
 
 # Education — foundational repos
 
+**Pass 109, 2026-10-10.** ⏱️ **Nineteenth pass of this date.**
+
+🟢 **`freshness.sh` read **296 of 296** addresses, zero unread
+(`compose/code/p109-freshness/`, `test_p109.sh` 32 passed / 0 failed, fully offline).**
+🔵 **Every foundation row below gains the figure that says whether anyone still works on
+it.** 🔴 **`Gap 376` — a maintenance signal, owed since pass 92 — is **DISCHARGED** here,
+on the axis it actually named, after two passes answered adjacent questions.**
+
+### 🟢 🆕 p109 — foundations, with liveness beside the pin
+
+| repo | licence | `class` | pin | last commit | age | band |
+|---|---|---|---|---|---|---|
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | `semver` | `v3.5.3` | 2026-10-10 | **0 d** | 🟢 fresh |
+| [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 BSD-3 | `prefixed` | `dspace-10.1` | 2026-10-10 | **0 d** | 🟢 fresh |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🟡 GPL-3 | `semver` | `v3.0.1` | 2026-10-09 | **0 d** | 🟢 fresh |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 Apache-2.0 | `prefixed` | `OpenOLAT_21.0.3` | 2026-10-09 | **1 d** | 🟢 fresh |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 ECL-2.0 | `semver` | `25.2` | 2026-10-09 | **1 d** | 🟢 fresh |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT | `semver` | `v0.19.5` | 2026-10-09 | **1 d** | 🟢 fresh |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🟡 AGPL-3 | `semver` | `v2.1.0` | 2026-10-09 | **1 d** | 🟢 fresh |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🟡 LGPL-3 | `semver` | `v3.0.39` | 2026-10-08 | **2 d** | 🟢 fresh |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3 | `semver` | `v5.3.0` | 2026-10-03 | **7 d** | 🟢 fresh |
+| [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | 🟡 LGPL-3 | 🔴 `stamp` | 🔴 SHA only | 2026-09-07 | **33 d** | 🟢 active |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | 🔴 GPL-3.0 | `semver` | `1.28.0` | 2026-08-11 | **60 d** | 🟢 active |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🟡 AGPL-3 | `semver` | `v5.14.2` | 2026-04-30 | 🟡 **163 d** | 🟡 slowing |
+| [`tunapanda/h5p-standalone`](https://github.com/tunapanda/h5p-standalone) | 🟢 MIT | `semver` | `v3.8.2` | 2026-03-24 | 🟡 **200 d** | 🟡 slowing |
+| [`kuali/rice`](https://github.com/kuali/rice) | 🟢 ECL-2.0 | `semver` | `rice-2.6.0` | **2017-05-17** | 🔴 **3 433 d** | 🔴 **abandoned** |
+
+🔴 **Twelve of the fourteen are fresh or active. Two are not, and both were being
+recommended.** 🔴 **`kuali/rice` has not been touched in **nine years and five months**.
+`instructure/canvas-lms` and `tunapanda/h5p-standalone` are both `slowing` — and both
+default-branch readings were re-confirmed against a live `ls-remote --symref` this pass
+(each defaults to `master`), so neither figure is a branch artefact.**
+
+🟡 **The `h5p-standalone` reading is the uncomfortable one. p108 promoted it over the
+GPL-3 H5P core precisely because it is MIT — and on liveness the MIT substitute (200 d)
+is the WEAKER of the two: the GPL core it replaces is 60 d, `active`.** 🟢 **The licence
+argument for `h5p-standalone` is unchanged and still correct; the maintenance argument now
+runs the other way, and an engagement should be told both.**
+
+### 🔴 🆕 p109 — 24 rows p108 called pinnable have been dead for over a year
+
+🔵 **p108's axis (`class`) and p109's axis (liveness) are independent, and crossing them
+is where the shelf's real size appears:**
+
+| | 🟢 pinnable (`semver`/`prefixed`) | 🔴 SHA-only (`none`/`stamp`) |
+|---|---|---|
+| 🟢 fresh (≤30 d) | 🟢 **99** | 45 |
+| 🟢 active (31–90 d) | 🟢 **20** | 14 |
+| 🟡 slowing (91–365 d) | 25 | 27 |
+| 🔴 dormant (1–2 y) | 🔴 **7** | 11 |
+| 🔴 abandoned (>2 y) | 🔴 **17** | 31 |
+| **total** | **168** | **128** |
+
+🟢 **The tier Globant can actually build on is the top-left pair: pinnable AND still
+worked on — **119 of 296, 40.2 %**.** 🔴 **Not 296, and not p108's 168.**
+🔴 **24 of those 168 (14.3 %) are dormant or abandoned: p108 ranked them pinnable and had
+no way to see they were dead.** 🟡 **45 rows are the mirror image — fresh but with no
+version to pin: motion without shipping.**
+
+### 🔴 🆕 p109 — the 17 abandoned-but-pinnable rows, named
+
+🔵 **Stated in full because a pinnable row reads SAFE on every axis this KB had before
+today, and these are the rows an engagement would have reached for:**
+
+| repo | pin | last commit | age |
+|---|---|---|---|
+| [`adlnet/SCORM-to-TLA-Roadmap`](https://github.com/adlnet/SCORM-to-TLA-Roadmap) | `v1.0` | 2017-01-24 | 🔴 3 546 d |
+| [`kuali/rice`](https://github.com/kuali/rice) | `rice-2.6.0` | 2017-05-17 | 🔴 3 433 d |
+| [`IMSGlobal/caliper-spec`](https://github.com/IMSGlobal/caliper-spec) | `1.1.0` | 2019-05-06 | 🔴 2 714 d |
+| [`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | `1.2.3` | 2020-02-06 | 🔴 2 438 d |
+| [`moodlehq/moodle-tool_dataprivacy`](https://github.com/moodlehq/moodle-tool_dataprivacy) | `34.9.0` | 2020-06-16 | 🔴 2 307 d |
+| [`kualico/rice`](https://github.com/kualico/rice) | `2.7.2` | 2020-07-01 | 🔴 2 292 d |
+| [`openfun/xblock-proctor-exam`](https://github.com/openfun/xblock-proctor-exam) | `v1.0.0` | 2021-02-11 | 🔴 2 067 d |
+| [`Jasig/SSP`](https://github.com/Jasig/SSP) | `ssp-2.9.0` | 2021-07-26 | 🔴 1 902 d |
+| [`eribean/girth_mcmc`](https://github.com/eribean/girth_mcmc) | `v0.6.0` | 2021-11-10 | 🔴 1 794 d |
+| [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) | `v7.1.1` | 2021-11-16 | 🔴 1 789 d |
+| [`anaistack/cefr-asag-corpus`](https://github.com/anaistack/cefr-asag-corpus) | `v1.0.1` | 2021-12-17 | 🔴 1 758 d |
+| [`eribean/girth`](https://github.com/eribean/girth) | `v0.8.0` | 2022-01-30 | 🔴 1 713 d |
+| [`mumuki/mumuki-laboratory`](https://github.com/mumuki/mumuki-laboratory) | `v9.23.0` | 2022-12-30 | 🔴 1 380 d |
+| [`atutor/ATutor`](https://github.com/atutor/ATutor) | `Atutor_1.4.1` | 2023-02-12 | 🔴 1 336 d |
+| [`project-sunbird/sunbird-devops`](https://github.com/project-sunbird/sunbird-devops) | `release-6.0.0` | 2023-04-26 | 🔴 1 263 d |
+| [`workforce-data-initiative/skills-ml`](https://github.com/workforce-data-initiative/skills-ml) | `v2.1.0` | 2023-05-05 | 🔴 1 254 d |
+| [`european-commission-empl/european-digital-credentials`](https://github.com/european-commission-empl/european-digital-credentials) | `2.0.6` | 2024-02-02 | 🔴 981 d |
+
+🔵 **Seven more are `dormant` (1–2 years): `EducationalTestingService/skll` and
+`/rsmtool` (both 652 d), `/factor_analyzer` (627 d), `leemonade/leemons` (611 d),
+`sukhrobyangibaev/mcp_hemis_student` (572 d), `nestauk/ojd_daps_skills` (488 d),
+`adlnet/ADL_LRS` (484 d).**
+
+### 🟡 🆕 p109 — Caliper: the rename hypothesis, tested and REFUTED
+
+🔵 **`IMSGlobal/caliper-spec` reads 2 714 days abandoned, and the obvious innocent
+explanation is that IMS Global renamed itself 1EdTech and the old address is a stale
+mirror.** 🔴 **Probed: `1EdTech/caliper-spec` resolves to the SAME repository — GitHub
+redirects the old owner — and carries the identical date, `2019-05-06`.** 🔴 **So Caliper's
+specification repository really has been untouched for seven years and five months, under
+either name.** 🟡 **The five other `caliper-*` addresses this KB's trending history cites
+(`caliper-java`, `-js`, `-php`, `-python`) came back **UNREAD** over this channel, so
+nothing is claimed about them either way — an unread row is unread (`P1040`).**
+🟢 **By contrast `1EdTech/openbadges-specification` is **2 d, fresh**: the organisation is
+alive, this one specification is not.**
+
+### 🟢 🆕 p109 — the address list is CLOSED over this KB's live pages
+
+🔵 **Before trusting a 296 denominator, it is worth asking whether 296 is the whole
+shelf.** 🟢 **Every `github.com/owner/repo` reference on the six live non-trending pages
+was extracted and diffed against `addresses.txt`: **297 cited, 296 censused**, and the
+single residual is the literal string `owner/repo` from a prose example.** 🟢 **So the
+denominator is right and no live page points at a repository this census never read.**
+
+---
+
+# Education — foundational repos
+
 **Pass 108, 2026-10-10.** ⏱️ **Eighteenth pass of this date.**
 
 🟢 **`census.sh` read **296 of 296** addresses, zero unread

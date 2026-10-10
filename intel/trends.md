@@ -6,6 +6,106 @@ updated: 2026-10-10
 
 # Education — current trends
 
+**Pass 109, 2026-10-10.** ⏱️ **Nineteenth pass of this date.** 🟢 **Two trends added, both
+from the supply side and both measured first-hand over 296 of 296 shelf addresses
+(`compose/code/p109-freshness/`, `test_p109.sh` 32 passed / 0 failed).** 🔴 **The eight
+mandated searches added nothing — see `P109-A`, and note that this pass ran them in
+extended mode, so that zero now carries information it did not before.**
+
+## 🔴 `T38` — the open-source education shelf is smaller than any previous axis showed: **40 %**, not 57 %, and not 100 %
+
+🟢 **Three axes now exist, and only the intersection is usable:**
+
+```
+                     pinnable (p108)    SHA-only (p108)
+  fresh    <= 30 d         99                 45
+  active   31- 90 d        20                 14
+  slowing  91-365 d        25                 27
+  dormant   1-  2 y         7                 11
+  abandoned  > 2 y         17                 31
+                          ---                ---
+                          168                128     = 296
+```
+
+🔴 **p107 implied the shelf was 296 rows. p108 narrowed it to the 168 that can be
+version-pinned. p109 narrows it again: **119 of 296 (40.2 %)** are both pinnable AND still
+worked on.**
+
+🔴 **The decisive number is that **24 of p108's 168 pinnable rows (14.3 %) have not been
+touched in over a year**, and 17 of those in over two.** 🟢 **Those rows score clean on
+every axis this KB had before today — permissive, released, pinnable — and two of them
+were on the live recommendation page.** 🔵 **So this is not a refinement of p108; it is the
+discovery that p108's axis is insufficient on its own in a specific, nameable way.**
+
+🟡 **The mirror quadrant matters as much: **45 rows are fresh with no version to pin**.
+Motion without shipping. Vendoring at a SHA and owning the upgrade path.**
+
+🟢 **The two rows that prove why both axes are required, side by side:**
+
+| repo | tags | pinnable? | alive? |
+|---|---|---|---|
+| `kuali/rice` | ECL-2.0, `rice-2.6.0` | 🟢 **yes** | 🔴 **3 433 d dead** |
+| `opetushallitus/valtionavustus` | 4 468 tags, never a release | 🔴 **no** | 🟢 **0 d — committed today** |
+
+🔵 **Either axis alone gets one of these exactly backwards. An engagement plan needs both
+columns or it will reach for the wrong one.**
+
+## 🟡 `T39` — the health of the open education stack is REGIONAL, and the standing assumption about which region is strong is inverted
+
+🔵 **This KB has carried, since roughly pass 93, a working assumption that LATAM is the
+thin region and North America the deep one, and `intel/market.md` has repeatedly recorded
+LATAM as returning negatives.** 🔴 **On the liveness axis the ordering reverses, and it is
+not marginal.**
+
+```
+EMEA    strongest.  opetushallitus 8/8 fresh (0-4 d); OpenOLAT 1 d; Artemis 0 d.
+                    One casualty, and it is a loud one: the European Commission's own
+                    european-digital-credentials, 981 d abandoned.
+LATAM   second.     portabilis i-educar/i-diario 1-8 d; bncc-dev 14-60 d; academico 3 d;
+                    chamilo 0 d. One casualty: mumuki (Argentina), 1 380 d.
+APAC    mixed.      project-sunbird knowledge-platform 10 d but sunbird-devops 1 263 d
+                    abandoned; Qwen OpenRS 219 d slowing.
+N.AM    weakest.    Apereo LAI 6/6 abandoned (2 406-4 330 d); adlnet 4/5 abandoned
+                    (3 273-4 233 d); ETS 3/3 dormant (627-652 d); kuali/rice,
+                    Jasig/SSP, LearningLocker, IMSGlobal/caliper-spec all abandoned.
+                    Live: CAHLR 1-10 d, ed-fi-alliance-oss 32-43 d, 1EdTech 2 d.
+```
+
+🔵 **The reading is not "North America does less education software" — it plainly does
+more. It is that **North America's open education stack is OLDER**, so more of it has
+already completed its lifecycle: SCORM, xAPI, Caliper, OpenLRS, Kuali and Apereo are
+2000s–2010s institutional consortium projects whose funding ended.** 🟢 **The newer
+national stacks — Finland, Brazil, India — are live because they are current government
+programmes with current budgets.**
+
+🔴 **Commercially this inverts a default instinct. In a North America engagement the
+mature-looking standards-and-analytics layer is largely unmaintained, and the work is
+implementing specifications rather than adopting implementations. In EMEA and LATAM there
+are live national codebases to integrate with.** 🔵 **Stated as a measurement of 296
+repositories, not as a claim about regional capability, and it is a supply-side figure
+only — it says nothing about budget, which `intel/market.md` sizes separately.**
+
+## 🟡 `T40` — `Gap 379`'s stall is asymmetric, and the asymmetry is geographic
+
+🔵 **The rubric↔curriculum bind has been this KB's flagship open pattern for twelve
+passes. Liveness splits it along its publisher boundary:**
+
+```
+RUBRIC half   (China + US academic)      CURRICULUM half  (Brazil, bncc-dev)
+  OpenRS        219 d  slowing             bncc-pacotes    14 d  fresh
+  rubricbench   221 d  slowing             bncc-dados      60 d  active
+  OpenRubrics   109 d  slowing             bncc-benchmark  21 d  fresh
+```
+
+🔴 **Every rubric layer is 3.5–7 months cold; every curriculum layer is current.**
+🟢 **That changes the engagement plan rather than just the risk note: the BNCC side can be
+consumed as a live dependency, the rubric side must be vendored and owned.** 🔵 **It is
+also a second instance of `T39` — the live half is LATAM-published.**
+
+---
+
+# Education — current trends
+
 **Pass 108, 2026-10-10.** ⏱️ **Eighteenth pass of this date.** 🟢 **Two trends added: one
 from the demand side (a survey, EMEA) and one from the supply side (a census, global).**
 

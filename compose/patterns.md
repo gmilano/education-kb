@@ -6,6 +6,138 @@ updated: 2026-10-10
 
 # Education — compose patterns
 
+**Pass 109, 2026-10-10.** ⏱️ **Nineteenth pass of this date.** 🟢 **One new pattern, one
+new gate that every pattern on this page must now pass, and `P108-A` re-scored on the new
+axis — it survives, with one layer re-flagged.**
+
+## 🔴 `P109-GATE` — the liveness gate, which two rows this page relied on would have failed
+
+🔵 **p108 added the pin gate: no pattern may name a component without stating the ref you
+pin. That gate is necessary and insufficient.** 🔴 **`compose/code/p109-freshness/`
+measured 296 of 296 shelf addresses and found **24 of the 168 pinnable rows (14.3 %) dead
+for over a year** — permissive, released, pinnable, and unmaintained.**
+
+🟢 **The gate, stated as a rule for every future pattern on this page:**
+
+```
+A component may be named in a pattern only if ALL FOUR hold:
+  1. licence is OSI-permissive, read from the repo's own LICENSE   (p96+)
+  2. a ref exists that you can pin, or the SHA cost is stated      (p108)
+  3. last commit is within 365 days                                (p109)  <- NEW
+  4. where 3 fails, the pattern states who owns the fork           (p109)  <- NEW
+```
+
+🔴 **Two components this KB published as build-on-freely would have failed rule 3 outright:
+`kuali/rice` (ECL-2.0, `rice-2.6.0`, **3 433 d**) and `Jasig/SSP` (Apache-2.0,
+`ssp-2.9.0`, **1 902 d**).** 🟢 **Both are retired from the permissive tier on
+`verticals/solutions.md`. Neither was ever wired into a pattern on this page, which is
+luck rather than discipline — hence the gate.**
+
+## 🟢 `P108-A` re-scored on liveness — it PASSES, with one layer re-flagged
+
+| layer | repo | licence | pin | last commit | age | gate |
+|---|---|---|---|---|---|---|
+| LMS host | `OpenOLAT/OpenOLAT` | 🟢 Apache-2.0 | `OpenOLAT_21.0.3` | 2026-10-09 | **1 d** | 🟢 pass |
+| tutoring agent | `HKUDS/DeepTutor` | 🟢 Apache-2.0 | `v1.6.14` | 2026-10-08 | **2 d** | 🟢 pass |
+| mastery model | `CAHLR/pyBKT` | 🟢 MIT | `1.4.3` | 2026-10-08 | **1 d** | 🟢 pass |
+| content playback | `tunapanda/h5p-standalone` | 🟢 MIT | `v3.8.2` | 2026-03-24 | 🟡 **200 d** | 🟡 pass, flagged |
+| learner memory | `fwu-de/mem-mcp` | 🟢 Unlicense | 🔴 SHA `68e6379` | 2026-06-09 | 🟡 **123 d** | 🟡 pass, flagged |
+
+🟢 **Three of five layers were committed within two days — this is a live stack, not a
+museum.** 🟡 **The two flagged layers are the two that were already the weakest on p108's
+axis, so the axes agree rather than compete, and the pattern's risk is concentrated rather
+than spread.**
+
+🔴 **The `h5p-standalone` flag deserves stating because it reverses an argument this KB
+made last pass.** 🔵 **p108 chose the MIT player over the GPL-3 H5P core specifically to
+keep the stack copyleft-free.** 🔴 **On liveness the MIT substitute (200 d, slowing) is
+three times staler than the GPL core it replaces (`h5p/h5p-php-library`, 60 d, active).**
+🟢 **The licence decision stands — a copyleft core in a shippable derivative is a harder
+problem than a slow dependency — but the trade is now explicit: `P108-A` buys licence
+freedom at the price of the least-maintained layer in the stack, and the mitigation is to
+budget ownership of `h5p-standalone` rather than to assume upstream.**
+
+## 🟢 🆕 `P109-A-PAT` — the Brazil BNCC curriculum-alignment service, built on the LIVE half of `Gap 379`
+
+🔵 **Why now:** `T40` measured the rubric↔curriculum bind and found it stalled
+asymmetrically — the three rubric layers are 109–221 days cold while all three BNCC
+curriculum layers are 14–60 days. 🟢 **Twelve passes have specified this pattern waiting
+for the whole bind to be wireable. It never will be as one piece. This pattern takes the
+live half and owns the cold half explicitly, which is what the gate above demands.**
+
+```
+            portabilis/i-educar  @ SHA        <- the live host: Brazilian municipal SIS
+                   (8 d fresh)                   the only maintained municipal-scale
+                        │                        student system measured on this shelf
+                        │  LTI 1.3 / REST
+                        ▼
+         ┌──────────── alignment service ──────────────┐
+         │                                             │
+   bncc-pacotes @ SHA                        OpenRubrics @ SHA
+     (MIT + CC BY 4.0, 14 d fresh)             (MIT, 109 d — VENDORED, Globant-owned)
+     1 721 BNCC objectives, 7 MCP tools        rubric generation
+         │                                             │
+   bncc-dados dados-2026.07.1                  OpenRS @ SHA
+     (MIT/CC BY, 60 d active)                    (Apache-2.0, 219 d — VENDORED)
+     the ONE pinnable ref in the bind            rubric judging
+         │                                             │
+   bncc-benchmark @ SHA                        rubricbench @ SHA
+     (21 d fresh)                                (MIT, 221 d — VENDORED)
+     alignment eval set                          1 147 expert annotations, calibration
+         └──────────────────┬──────────────────────────┘
+                            ▼
+              CAHLR/pyBKT 1.4.3  (MIT, 1 d fresh)
+              mastery per BNCC objective
+```
+
+| layer | repo | licence | pin | age | ownership |
+|---|---|---|---|---|---|
+| host SIS | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | — (read before shipping) | 🔴 SHA | 🟢 8 d | 🟢 **live dependency** |
+| curriculum standard | [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🟢 MIT + CC BY 4.0 | 🔴 SHA | 🟢 14 d | 🟢 **live dependency** |
+| curriculum data | [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | 🟢 MIT / CC BY 4.0 | 🟢 **`dados-2026.07.1`** | 🟢 60 d | 🟢 **live dependency** |
+| alignment eval | [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | 🟢 (verify) | 🔴 SHA | 🟢 21 d | 🟢 **live dependency** |
+| rubric generation | [`wanghaoyu0408/OpenRubrics`](https://github.com/wanghaoyu0408/OpenRubrics) | 🟢 MIT | 🔴 SHA | 🟡 109 d | 🔴 **VENDOR + OWN** |
+| rubric judging | [`Qwen-Applications/OpenRS`](https://github.com/Qwen-Applications/OpenRS) | 🟢 Apache-2.0 | 🔴 SHA | 🔴 219 d | 🔴 **VENDOR + OWN** |
+| calibration | [`planepig/rubricbench`](https://github.com/planepig/rubricbench) | 🟢 MIT | 🔴 SHA | 🔴 221 d | 🔴 **VENDOR + OWN** |
+| mastery model | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🟢 MIT | 🟢 **`1.4.3`** | 🟢 1 d | 🟢 **live dependency** |
+
+🟢 **How to wire it, concretely:**
+1. 🟢 **Ingest the standard once.** `bncc-pacotes` ships **7 MCP tools** over 1 721 BNCC
+   objectives — mount it as an MCP server and the alignment service queries objectives by
+   code rather than embedding a copy of the curriculum. Pin `bncc-dados` at
+   `dados-2026.07.1` as the data of record; it is the only version-pinnable ref in the
+   whole bind, so it is the one thing in this pattern you can depend on by number.
+2. 🔴 **Vendor the three rubric repos into one Globant-owned monorepo at explicit SHAs,
+   on day one, not when upstream breaks.** All three are permissive (MIT / MIT /
+   Apache-2.0) so this is licensed and shippable; all three are 3.5–7 months cold, so
+   upstream is not a maintenance channel. Budget this as owned code.
+3. 🟢 **Calibrate before trusting.** `rubricbench` carries **1 147 expert annotations** —
+   run the vendored `OpenRS` judge against them and record the agreement figure as the
+   service's accuracy baseline. A rubric judge with no calibration number is not a
+   deliverable.
+4. 🟢 **Bind to the host over LTI 1.3 / REST, never by patching `i-educar`.** The SIS is a
+   live dependency at 8 days; a fork of it is a fork of something that moves weekly.
+5. 🟢 **Close the loop with `pyBKT 1.4.3`** keyed on BNCC objective codes, so mastery is
+   reported in the units the curriculum — and the municipal buyer — already uses.
+6. 🟡 **Evaluate with `bncc-benchmark` (21 d)**, not with the rubric repos' own fixtures.
+
+🔴 **What this pattern honestly costs, stated because `Gap 379` has understated it for
+twelve passes:** three of eight layers are Globant-owned from day one, seven of eight are
+SHA-pinned with only `bncc-dados` and `pyBKT` carrying a real version, and the judgement
+quality of the whole service rests on vendored code whose authors have not committed since
+March and June. 🟢 **What makes it worth building anyway: the curriculum standard, the
+host SIS and the mastery model are all live, all permissive, and all Brazilian-municipal
+or MIT-academic — and no competitor is going to assemble this by accident.**
+
+🔵 **`Gap 379` stays OPEN — nobody has integrated these layers upstream and this pattern
+does not claim to have done so either. What changes this pass is that it is no longer
+blocked on integration: the cold half is reclassified from "waiting for upstream" to
+"owned", which is a decision rather than a wait.**
+
+---
+
+# Education — compose patterns
+
 **Pass 108, 2026-10-10.** ⏱️ **Eighteenth pass of this date.** 🟢 **One new pattern that
 answers a demand-side finding with a fully permissive stack, and one gate that every
 other pattern in this file now has to pass.**

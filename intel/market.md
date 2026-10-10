@@ -6,6 +6,69 @@ updated: 2026-10-10
 
 # Education — market, players and opportunities
 
+**Pass 109, 2026-10-10.** ⏱️ **Nineteenth pass of this date.**
+
+🔴 **ZERO new market items this pass, from eight searches — and for the first time that
+zero is worth something, because the searches were run in a different and more expensive
+channel than the five passes before them.**
+
+## 🔴 🆕 `P109-A` — the mandated query set is EXHAUSTED, and the five previous zeros were not a depth artefact
+
+🔵 **p104–p108 each ran the eight mandated queries (four global, one per region) in
+**standard** mode and each recorded zero new items. `P1023` read that as evidence about
+the CHANNEL rather than about the regions. A competing explanation survived all five
+passes: that standard-mode search is simply too shallow to surface anything fresh.**
+
+🟢 **This pass ran all eight in **extended** mode — a thorough, fresher, several-times
+costlier channel. Roughly **45** candidate tokens were extracted across the four global
+and four regional queries. **Every single one is already held on a live page of this
+KB.**
+
+| query | candidates extracted | new |
+|---|---|---|
+| open source AI agents, education, MIT | 6 | 🔴 **0** |
+| github trending education AI | (same 6, overlapping) | 🔴 **0** |
+| open source education ERP / CRM / SIS | 5 — `GegoK12`, `frappe/education`, `ERPNext`, `RosarioSIS`, `Fedena` | 🔴 **0** |
+| AI education industry trends | 6 — HolonIQ, 1EdTech credentials, Research&Markets `USD 10.6 B → 42.48 B`, 86 % org adoption | 🔴 **0** |
+| **North America** | 8 — `H.R. 8747`, `AB 1159`, Idaho `SB 1227`, Oklahoma/Maryland oversight, Multistate 134 bills / 31 states, PIE Network ~100 bills, AASA *STUDENTS FIRST*, MS Education AI Toolkit | 🔴 **0** |
+| **EMEA** | 7 — EU AI Act high-risk Annex III, Digital Omnibus `2 Dec 2027` / `2 Aug 2028`, EUR 2.64 B European market, Finland/Estonia/Netherlands leaders, 10 % of 450+ institutions with guidelines, UAE *National AI Strategy 2031*, Saudi SDAIA | 🔴 **0** |
+| **APAC** | 7 — Korea AI Basic Act `22 Jan 2026` + MSIT grace period, Vietnam `134/2025/QH15`, Taiwan AI Basic Act, China algorithm rules, Singapore/Japan voluntary, Byju's/Pearson players | 🔴 **0** |
+| **LATAM** | 8 — UNESCO IESALC 87 %/26 % over 200 HEIs in 19 countries, DEC LATAM 79 %/88 % (7 319 faculty, 29 institutions), Uruguay Framework Convention, Mexico Senate bill, `CONPES 4144`, the Observatory and its partners (CAF, CENIA, CETIC.br, ECLAC, Tec de Monterrey, ProFuturo, Ceibal) | 🔴 **0** |
+
+🟢 **So the expensive channel returns the same zero as the cheap one. `P1023` is upgraded:
+it is not that the channel is shallow — the QUERY SET is exhausted.** 🔵 **Recorded as a
+standing instruction so that later passes stop spending their budget here: re-running
+these eight queries is now a known no-op, and the channel that still pays in this
+environment is first-hand MEASUREMENT of the shelf this KB already holds.**
+
+🔴 **`Gap 402` OPENED: this page needs a NEW query set, not deeper runs of the old one.**
+🟢 **Three concrete candidates, pre-registered for p110, chosen because each names a BUYER
+or an INSTRUMENT this KB has never queried rather than a category it has:**
+1. 🟢 **National procurement, not policy** — e.g. *Finland Opetushallitus AI tender 2026*,
+   *Brazil FNDE edtech licitação 2026*. This KB holds the CODE of both national stacks
+   (`opetushallitus`, `portabilis`) and nothing about how either buys.
+2. 🟢 **The ministry-of-education guidance layer in APAC**, which every APAC query this KB
+   has run has returned as an explicit gap: Singapore MOE, Japan MEXT, Korea MOE.
+3. 🟢 **The corporate/L&D buyer by NAMED employer**, not by market size — `Gap 386`'s
+   remainder, where the sevenfold scope spread was never resolved.
+
+## 🟢 🆕 p109 — what the pass produced instead, and it is placed by region
+
+🔵 **The eight searches produced nothing, so this page's new content this pass is
+supply-side and measured: `freshness.sh` read **296 of 296** shelf addresses with zero
+unread (`compose/code/p109-freshness/`, `test_p109.sh` 32 passed / 0 failed, fully
+offline).** 🔴 **It inverts a standing assumption of this page — see `T39` in
+`intel/trends.md` — and every regional subsection below carries its own row.**
+
+🟡 **Figure discipline unchanged (`Gap 386`): every market figure on this page is
+institutional or vendor-sourced and secondary items are marked secondary. The rows added
+this pass are neither — they are measurements of code, which remains the one thing this
+environment can read first-hand.**
+
+---
+
+# Education — market, players and opportunities
+
 **Pass 108, 2026-10-10.** ⏱️ **Eighteenth pass of this date.**
 
 🟢 **One genuinely new intel item this pass, and it is EMEA: the Sanoma Learning 2026
@@ -429,6 +492,42 @@ KB: write down what you refused to use, and why.**
 ## Opportunities by region
 
 ### North America
+
+#### 🔴 🆕 p109 North America — the region's open education stack is the OLDEST on the shelf, and most of it has finished its lifecycle
+
+🔴 **The NA query returned zero new tokens in extended mode (`P109-A`): `H.R. 8747`,
+`AB 1159`, Idaho `SB 1227`, the Oklahoma and Maryland human-oversight duties, the
+Multistate 134-bills/31-states count, PIE Network's ~100 bills, the AASA student
+*STUDENTS FIRST* framework and Microsoft's Education AI Toolkit are all already held
+here.** 🟢 **The new NA content is therefore measured, not searched — and it is the
+strongest negative on this page.**
+
+| NA publisher | repos on shelf | state |
+|---|---|---|
+| `Apereo-Learning-Analytics-Initiative` | 6 | 🔴 **6/6 abandoned**, 2 406–4 330 d (6.6–11.9 y) |
+| `adlnet` (US DoD ADL — wrote SCORM and xAPI) | 5 | 🔴 **4/5 abandoned** 3 273–4 233 d; `ADL_LRS` 484 d dormant |
+| `EducationalTestingService` | 3 | 🔴 **3/3 dormant**, 627–652 d |
+| `IMSGlobal/caliper-spec` | 1 | 🔴 **2 714 d abandoned** (rename to 1EdTech tested — same repo, same date) |
+| `kuali` + `kualico` (`rice`) | 2 | 🔴 **both abandoned**, 3 433 d and 2 292 d |
+| `Jasig/SSP` | 1 | 🔴 **1 902 d abandoned** |
+| `LearningLocker` | 1 | 🔴 **1 789 d abandoned** |
+| 🟢 `CAHLR` (UC Berkeley) | 2 | 🟢 **fresh**, 1–10 d |
+| 🟢 `ed-fi-alliance-oss` | 2 | 🟢 **active**, 32–43 d |
+| 🟢 `1EdTech/openbadges-specification` | 1 | 🟢 **fresh**, 2 d |
+
+🔵 **Read as opportunity rather than as decline: the standards-and-analytics layer a North
+America engagement would reach for — SCORM, xAPI, Caliper, OpenLRS/OpenLRW, Kuali, Apereo
+SSP — has no maintained open implementation on this shelf.** 🟢 **So in NA the work is
+implementing a specification against a live LMS, not adopting an existing implementation,
+and the budget shape is different: build, not integrate.** 🔴 **It also means a
+competitor's "built on open standards" claim in this region deserves a question about
+which maintained codebase it rests on.**
+
+🟢 **What IS live in NA and worth building on: `Ed-Fi` (the K-12 data standard, 32–43 d
+active) as the data layer, `CAHLR/pyBKT` and `CAHLR/OATutor` (both MIT, 1–10 d) as the
+adaptive/tutoring layer, and `1EdTech/openbadges-specification` (2 d) for credentials —
+note that Open Badges is alive while Caliper, from the same organisation, is not.**
+
 
 
 #### 🔵 🆕 p108 — nothing new from the channel; one supply-side consequence
@@ -913,6 +1012,50 @@ adoption.** 🔴 **So a North America pitch that leads with adoption is pushing 
 regulatory grain; one that leads with governance, auditability and teacher-augmentation is with it.**
 
 ### EMEA
+
+#### 🟢 🆕 p109 EMEA — the healthiest open education stack measured, and one loud casualty at the European Commission
+
+🔴 **The EMEA query returned zero new tokens in extended mode (`P109-A`): EU AI Act
+Annex III high-risk classification for admission/evaluation/exam-scoring, the Digital
+Omnibus deferrals to `2 December 2027` and `2 August 2028`, the EUR 2.64 B European
+market figure, Finland/Estonia/Netherlands as K-12 leaders, the "10 % of 450+
+institutions have formal guidelines" datapoint, the UAE *National AI Strategy 2031* and
+Saudi **SDAIA** are all already held.** 🟡 **The query again returned no named EMEA vendor
+landscape and no UK DfE / France / Germany ministry adoption data — the same explicit gap
+p97–p108 recorded, now confirmed to survive a deeper channel.**
+
+🟢 **Measured instead, and it is the best regional result on the shelf:**
+
+| EMEA publisher | state |
+|---|---|
+| `opetushallitus` (Finnish National Agency for Education) — 8 repos | 🟢 **8/8 fresh**, 0–4 d |
+| `OpenOLAT` (Switzerland) | 🟢 **1 d fresh** — Apache-2.0, the most permissive full LMS on the shelf |
+| `ls1intum/Artemis` (TU München) | 🟢 **0 d fresh** |
+| `fwu-de` (German state media institute) — 4 repos | 🟡 **mixed**: `ais-chat` 0 d, `fwu-kc-extensions` 2 d; `mem-mcp` **123 d**, `schulart-ontologie` **257 d**, `schulfach-ontologie` **305 d** |
+| 🔴 `european-commission-empl/european-digital-credentials` | 🔴 **981 d abandoned** (2024-02-02) |
+
+🔴 **The Commission casualty is the commercially useful one. European digital credentials
+are live POLICY — 1EdTech names credentials a core 2026 mechanism, and the EU has an
+explicit framework — while the Commission's own reference implementation has been
+untouched for two years eight months.** 🟢 **A credentials engagement in EMEA cannot
+adopt that stack; it can implement the spec, and `1EdTech/openbadges-specification` (2 d,
+fresh) is the live anchor to implement against.**
+
+🟢 **The strongest EMEA story is Finland: a nationally deployed, actively committed
+eight-repository stack covering admissions (`ataru`), the student register
+(`oppijanumerorekisteri`), curricula (`eperusteet`), records (`koski`) and grant
+administration (`valtionavustus`).** 🔴 **It cannot be version-pinned — p108 established
+the tags are CI deploy stamps and p109 confirms 8/8 are fresh — so integration is at a SHA
+against a moving target, which is a real cost and the opposite of the `kuali/rice`
+failure mode.** 🔵 **`Gap 402` lead #1 pre-registers the question this stack actually
+raises and that no pass has asked: how Opetushallitus PROCURES.**
+
+🟢 **The demand-side EMEA anchor is unchanged and remains the most commercially useful
+datapoint this KB holds: the Sanoma Learning *European Teacher Survey 2026* — 63 %
+of teachers using AI, 16 % believing general-purpose AI improves outcomes, 75–93 % wanting
+purpose-built education tools — with Sanoma's own proprietary assistant **Sanna** shipped
+1 October 2026 as the competitor to name.**
+
 
 
 #### 🟢 🆕 p108 — the Sanoma survey lands here, and it reprices the EMEA opportunity
@@ -1627,6 +1770,44 @@ duty is the sellable deliverable that is already overdue.**
 
 ### APAC
 
+#### 🟡 🆕 p109 APAC — a national platform with a dead ops layer, and the region's rubric layer is cooling
+
+🔴 **The APAC query returned zero new tokens in extended mode (`P109-A`): Korea's AI Basic
+Act in force `22 January 2026` with the MSIT pilot-period grace on penalties, Vietnam
+`134/2025/QH15`, Taiwan's AI Basic Act, China's binding algorithm/deep-synthesis/generative
+rules, Singapore and Japan on voluntary guidelines, and the Google/Microsoft/IBM/Pearson/
+Byju's player list are all already held.** 🔴 **The query ALSO returned an explicit gap for
+the fourth consecutive pass: no reliable 2026 adoption statistics for APAC schools or
+universities, and no ministry-of-education guidance for Singapore, Japan or China.**
+🟢 **That gap is now pre-registered as `Gap 402` lead #2 rather than re-queried: the same
+question has failed in two different search channels, so the next attempt must name the
+ministries directly.**
+
+🟢 **Measured instead:**
+
+| APAC row | state |
+|---|---|
+| `project-sunbird/knowledge-platform` (India, national platform) | 🟢 **10 d fresh** |
+| `project-sunbird/sunbird-lms-service` | 🟡 **291 d slowing** |
+| 🔴 `project-sunbird/sunbird-devops` | 🔴 **1 263 d abandoned** (2023-04-26) |
+| `xiaochong0302/course-tencent-cloud` (China) | 🟢 **1 d fresh** (default branch `v2`) |
+| `KeWang0622/kaogong-skill` (China) | 🟢 **32 d active** |
+| 🟡 `Qwen-Applications/OpenRS` (China) | 🟡 **219 d slowing** — the rubric judge of `Gap 379` |
+| 🟡 `24kchengYe/human-skill-tree` | 🟡 **199 d slowing** |
+| 🔴 `sukhrobyangibaev/mcp_hemis_student` (Uzbekistan HEMIS) | 🔴 **572 d dormant** |
+| `Gego-K12/gegok12` (India, MIT SIS) | 🟢 deployment-fork network, `P933` — not in the 296 census list |
+
+🔴 **Sunbird is the finding. India's national learning platform has a fresh core and a
+**deployment/ops layer abandoned for 3.5 years** — which is exactly the layer a systems
+integrator is engaged to operate.** 🟢 **For an APAC engagement that is a concrete,
+scoped opportunity rather than a risk: the platform is live and its deployment tooling is
+not, and that gap is Globant-shaped.**
+
+🟡 **The region's contribution to this KB's flagship pattern is cooling: `OpenRS`
+(Apache-2.0, the rubric judge) is 219 days stale, and `planepig/rubricbench` — the
+calibrator carrying 1 147 expert annotations — is 221 days. See `T40`.**
+
+
 
 #### 🔵 🆕 p108 — zero new tokens; the compliance-deadline map is the asset
 
@@ -2286,6 +2467,58 @@ the permission argument first — except in ANZ, where it does.** 🔴 **That is
 North America posture recorded above, and the two pitches should not share a slide.**
 
 ### LATAM
+
+#### 🟢 🆕 p109 LATAM — the standing negative is INVERTED on the one axis this pass could measure
+
+🔴 **The LATAM query returned zero new tokens in extended mode (`P109-A`): UNESCO IESALC's
+87 % use / 26 % formal-strategy figure across 200 institutions in 19 countries, the Digital
+Education Council's LATAM faculty survey (79 % use, 88 % minimal-to-moderate engagement,
+7 319 respondents, 29 institutions), Uruguay as the first LATAM signatory of the Council of
+Europe Framework Convention, Mexico's pending Senate bill, Colombia's `CONPES 4144`, and
+the UNESCO Observatory launched 14 April 2026 with CAF, CENIA, CETIC.br, ECLAC, Tec de
+Monterrey, ProFuturo and Fundación Ceibal are all already held.**
+
+🟢 **But this pass does NOT record a LATAM negative, because the measurement contradicts
+it.** 🔵 **p107 recorded "LATAM gains an explicit NEGATIVE rather than an opportunity" and
+this page has carried that shape for many passes. On liveness, LATAM is the **second
+healthiest region of the four**:**
+
+| LATAM row | state |
+|---|---|
+| `chamilo/chamilo-lms` (LATAM + francophone install base) | 🟢 **0 d fresh** |
+| `portabilis/i-diario` (Brazil, municipal SIS) | 🟢 **1 d fresh** |
+| `academico-sis/academico` | 🟢 **3 d fresh** |
+| `portabilis/i-educar` (Brazil, municipal SIS) | 🟢 **8 d fresh** |
+| `bncc-dev/bncc-pacotes` (1 721 BNCC objectives, 7 MCP tools) | 🟢 **14 d fresh** |
+| `bncc-dev/bncc-benchmark` | 🟢 **21 d fresh** |
+| `bncc-dev/bncc-dados` | 🟢 **60 d active** |
+| `portabilis/pre-matricula-digital` | 🟡 **117 d slowing** |
+| 🔴 `mumuki/mumuki-laboratory` (Argentina) | 🔴 **1 380 d abandoned** |
+
+🟢 **Seven of nine fresh or active, one casualty.** 🔵 **Compare North America: six
+publishers with 17 abandoned or dormant repositories between them.**
+
+🟢 **The reason is structural and worth stating plainly, because it generalises: Brazil's
+municipal SIS stack (`portabilis`) and the BNCC curriculum packaging (`bncc-dev`) are
+CURRENT government-adjacent programmes with current budgets, whereas North America's
+institutional consortium projects of the 2000s–2010s have completed their funding
+lifecycle.** 🔴 **Liveness tracks live public money, not regional capability.**
+
+🟢 **Two concrete LATAM opportunities follow from the measurement:**
+1. 🟢 **The BNCC layer is consumable as a LIVE dependency** — three fresh/active
+   repositories, MIT + CC BY 4.0, 1 721 curriculum objectives and 7 MCP tools. It is the
+   maintained half of this KB's flagship open pattern (`T40`), and the rubric half it
+   would bind to is 3.5–7 months cold. A Brazil engagement therefore gets a live standard
+   and must own the judgement layer.
+2. 🟢 **The Brazilian municipal SIS layer (`i-educar` + `i-diario`, 1–8 d) is the only
+   actively maintained municipal-scale student information stack measured on this shelf**
+   — an AI layer on top of it has a real, live host system, which is exactly what the NA
+   equivalent lacks.
+
+🔵 **`Gap 402` lead #1 pre-registers the matching demand-side question that no pass has
+asked: how Brazil actually procures this (FNDE licitação), given that this KB holds the
+code and nothing about the buyer.**
+
 
 
 #### 🟡 🆕 p108 — an explicit NEGATIVE, plus one pin that matters for Brazil

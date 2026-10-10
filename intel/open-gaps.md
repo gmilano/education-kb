@@ -4,6 +4,155 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 🟢 Hundred-and-ninth pass, 2026-10-10 — **`Gap 376` DISCHARGED on the axis it actually named**, after two passes answered adjacent questions; **`P109-E`: a figure p107 published is the wrong commit for 20 addresses and `—` for 13 more**; `Gap 402` OPENED (the mandated query set is exhausted and needs replacing, not deepening); `T38`–`T40` and `P109-A`–`P109-I` adopted; the instrument found two faults in its own code before it found any in the shelf
+
+⏱️ **Nineteenth pass of this date.** 106: 15:4x–16:xx UTC · 107: 16:4x–17:xx · 108:
+17:4x–18:xx · this pass 18:4x–19:xx. **Append-only.**
+
+🟢 **Instrument written and executed: `compose/code/p109-freshness/`.** `test_p109.sh`
+**32 passed, 0 failed**, **fully offline** — no network and no mocks: it builds real git
+repositories with `GIT_COMMITTER_DATE` pinned and serves them over `file://`, so the real
+fetch/log path runs. `freshness.sh` read **296 of 296** addresses with **zero unread**;
+`defbranch.sh` read **296 of 296** default branches; `validate.sh` reconciled every row
+against p107 with **zero unexplained disagreements**.
+
+### 🔴 The channel ledger — two NEW channels probed, both CLOSED
+
+| channel | state this pass | evidence |
+|---|---|---|
+| `git ls-remote` / `git fetch` | 🟢 **OPEN** | carried all three censuses; `rc=0` on 296+296 reads |
+| `raw.githubusercontent.com` | 🟢 **OPEN**, `http=200` | re-probed, unchanged |
+| `api.github.com` | 🔴 **`http=403`** | 🔵 **fifteenth consecutive pass**; the cause of every `—` in a ★ column |
+| 🆕 `github.com/…/commits/X.atom` | 🔴 **`http=403`** | 🔴 **`P109-B`** — probed for the first time in 109 passes |
+| 🆕 `github.com/…/releases.atom` | 🔴 **`http=403`** | 🔴 **`P109-B`** |
+| WebSearch (**extended** mode) | 🟢 **OPEN** | 8 queries ran; 🔴 **zero new tokens — see `Gap 402`** |
+
+🔵 **`P109-B` matters more than another 403. The Atom feeds are the standard
+unauthenticated fallback when a GitHub API is closed, and they carry commit dates. With
+them shut too, **no *description* of a repository is readable in this environment — only
+the objects themselves**. That is why this pass reads dates by fetching HEAD at depth 1
+rather than by asking anything about the repo.**
+
+### 🟢 `Gap 376` — DISCHARGED, 17 passes after it was opened
+
+| | |
+|---|---|
+| opened | pass 92 — "this shelf has no maintenance signal" |
+| p107 | answered with tag **count** → 🔴 **wrong thing**: it inverts at the top (4 468 tags, never a release) |
+| p108 | answered with release **identity** → 🟡 **right question, different one**: *can I pin it* |
+| 🟢 **p109** | answers commit **recency** → 🟢 **is it alive.** The figure the gap asked for. **DISCHARGED** |
+
+```
+296 addresses, zero unread:
+  fresh      <= 30 d   144   48.6%
+  active     31- 90 d   34   11.5%
+  slowing    91-365 d   52   17.6%
+  dormant     1-  2 y   18    6.1%
+  abandoned    > 2 y    48   16.2%
+                        --------------------------------
+  untouched over a year: 66  (22.3%)
+```
+
+🔴 **The consequential crossing with p108: **24 of 168 pinnable rows (14.3 %) are over a
+year dead**, 17 of them over two.** 🟢 **Usable shelf = pinnable AND worked-on =
+**119 of 296 (40.2 %)**.** 🔵 **`T38`.**
+
+### 🔴 `P109-E` — a figure this KB PUBLISHED is wrong, and the cause is two hardcoded branch names
+
+🔵 **p107's `parse_refs.sh` takes the bare `HEAD` row from `ls-remote` and — because
+`--heads` does not emit one — falls back to `refs/heads/main`, then `refs/heads/master`.**
+🔴 **For a repo whose default branch is neither, that is the tip of a branch nobody
+develops on.**
+
+```
+296 default branches read from the HEAD symref, 0 unread:
+  default IS main/master     263  (88.9%)   p107 right
+  default is NEITHER          33  (11.1%)
+    ...main/master EXISTS     20   <- p107 published the WRONG commit
+    ...neither exists         13   <- p107 published "-"
+```
+
+🔴 **Worst cases: `kualico/rice` (default `java11`; `master` is 2 292 d stale),
+`moodlehq/moodle-tool_dataprivacy` (default `MOODLE_34_STABLE`; `master` 2 307 d),
+`1EdTech/openbadges-validator-core` (`develop`), `douglasrizzo/catsim` (`dev`).**
+🟢 **`P109-F`: version-shaped default branches are NORMAL in this sector — `19.0`, `7.x`,
+`2024.9.x`, `v2`, `v3.0.x-develop`, `v6.2.0`, `v31.0.00`, `2.12`, `release_11`, `mobile`.
+Any future instrument hardcoding `main`/`master` misreads about one row in nine.**
+
+🟢 **Reconciliation, complete in both directions: 260 shas agree with p107; 17 differ with
+age>0 and **all 17 are this fault**; 6 differ with age=0 of which 4 are genuine pushes
+today and 2 (`learnhouse`, `Artemis`) are also this fault; 13 had no p107 baseline and are
+**exactly** the 13 with no main/master; 1 (`oat-sa/tao-core`) hid inside "agree" because
+its `master` coincidentally points at its `develop` tip. 20 + zero left over.**
+
+### 🔴 `Gap 402` OPENED — the mandated query set is exhausted, and deeper runs will not fix it
+
+🔵 **p104–p108 each ran the eight mandated queries in standard mode and each got zero new
+items. A competing explanation survived all five: the channel was too shallow.**
+🟢 **This pass ran all eight in **extended** mode — ~45 candidate tokens, **100 % already
+held**.** 🔴 **The competing explanation is dead. `P1023` is upgraded from *the channel is
+saturated* to **the QUERY SET is exhausted**.** 🟢 **The `P933` remedy (search by licence +
+stack, not by category) was also tested on three axes — agents/frameworks, SIS-ERP by
+licence, standards/integration — all already held.**
+
+🟢 **`Gap 402` asks for a NEW query set. Three leads pre-registered for p110, each naming a
+BUYER or an INSTRUMENT this KB has never queried rather than a category it has:**
+1. 🟢 **National procurement, not policy** — *Finland Opetushallitus AI tender 2026*,
+   *Brazil FNDE edtech licitação 2026*. This KB holds both national codebases and nothing
+   about how either buys.
+2. 🟢 **APAC ministry guidance by name** — Singapore MOE, Japan MEXT, Korea MOE. Four
+   consecutive passes have returned this as an explicit gap; the fifth attempt must name
+   the ministries instead of the region.
+3. 🟢 **The corporate / L&D buyer by NAMED employer** — `Gap 386`'s unresolved remainder,
+   where the scope spread was sevenfold.
+
+### 🟡 Gaps that MOVED without closing
+
+| gap | movement this pass |
+|---|---|
+| **`Gap 379`** (rubric↔curriculum bind) | 🟡 **Re-diagnosed a third time and reframed from blocked to decided.** `T40`: the stall is ASYMMETRIC — all three rubric layers are 109–221 d cold, all three BNCC layers 14–60 d. Pattern `P109-A-PAT` takes the live half as a dependency and reclassifies the cold half as Globant-owned. 🔴 **Still open: nobody has integrated these upstream.** 🟢 **A sixth component was found: `bncc-dev/bncc-benchmark` (21 d) — the bind has been described with five for twelve passes.** |
+| **`Gap 386`** (buyer sizing) | 🔴 **Unmoved.** Its remainder is now `Gap 402` lead #3. |
+| **`Gap 390`** (distributed weights, not code) | 🔴 **Unmoved** — not probed this pass. |
+
+### 🟢 Hypotheses TESTED and REFUTED this pass — recorded because a refuted hypothesis is cheaper than a repeated one
+
+| hypothesis | verdict |
+|---|---|
+| p104–p108's search zeros were a depth artefact of standard mode | 🔴 **REFUTED** — extended mode returns the same zero (`Gap 402`) |
+| `IMSGlobal/caliper-spec`'s 2 714 d is a stale mirror of a live `1EdTech` repo | 🔴 **REFUTED** — `1EdTech/caliper-spec` is the SAME repo by redirect, identical 2019-05-06 date. Caliper's spec really is 7 y 5 m cold, while `1EdTech/openbadges-specification` is 2 d fresh |
+| the 296-address list might not cover the repos this KB's own pages cite | 🔴 **REFUTED** — 297 cited across the six live pages, 296 censused; the one residual is the literal `owner/repo` from a prose example. 🟢 **The denominator is right** |
+| `instructure/canvas-lms` at 163 d and `h5p-standalone` at 200 d might be branch artefacts | 🔴 **REFUTED** — both default to `master`, re-confirmed against a live symref |
+
+### 🔴 Two faults this instrument found in its OWN code before it found any in the shelf
+
+🔵 **Recorded in the `P1028` tradition — an instrument that has not been caught being wrong
+has not been tested hard enough.**
+
+| | fault | how it surfaced |
+|---|---|---|
+| 1 | 🔴 **The URL builder hardcoded `https://github.com/$slug`**, so the offline tests could not run at all — every `file://` fixture became a github address. | 🟢 Fixed by resolving a bare `owner/repo` against github.com and using anything with a scheme verbatim. **That fix is what made a 32-test offline suite possible**, so the bug paid for itself. |
+| 2 | 🔴 **`P109-D`: age differenced raw timestamps**, making the answer depend on the reference time of day and the commit's own timezone — a commit nine calendar days back reported as **eight**. | 🟢 Caught by a boundary test, not by inspection. Both sides are now floored to a UTC date first. |
+
+🔵 **A third, in the test harness rather than the instrument: `local n=$1 … r="$T/$n"`
+expands every word before assigning any, so `$n` was unset under `set -u`. Recorded because
+it silently turned 18 real assertions into false failures.**
+
+### 🟢 Rules adopted this pass
+
+| | rule |
+|---|---|
+| `P109-A` | 🔴 **The eight mandated queries are a known no-op. Do not re-run them for novelty.** Measurement of the held shelf is the channel that still pays. |
+| `P109-B` | 🔴 **`commits/X.atom` and `releases.atom` are 403.** No *description* of a repo is readable here — only objects. |
+| `P109-C` | 🟢 **Committer date (`%cI`), never author date (`%aI`).** Author date survives rebase; a commit pushed today can be authored in 2019. |
+| `P109-D` | 🟢 **Ages in UTC calendar days**, both sides floored before differencing. |
+| `P109-E` | 🔴 p107's `head_sha40` is unreliable for 33 addresses. Prefer p109's. |
+| `P109-F` | 🔴 **Never hardcode `main`/`master`. Read the HEAD symref.** 11.1 % of this shelf defaults to neither. |
+| `P109-G` | 🟢 **A future-dated commit is a clock fault, not freshness.** Clamp to 0; never emit a negative age. |
+| `P109-H` | 🟢 **`P1040` extends to this axis: `rc!=0` is UNREAD, never "abandoned".** |
+| `P109-I` | 🟢 **Liveness is not quality and a commit is not a release.** Only meaningful crossed with p108's `class`. |
+| `P109-GATE` | 🔴 **Four-part gate for every pattern on `compose/patterns.md`**: permissive licence, a stated pin or SHA cost, last commit within 365 d, and named ownership where that fails. |
+
+
 ## 🟢 Hundred-and-sixth pass, 2026-10-10 — **pass 105's lead #1 discharged, and wiring the remedy in multiplied its own finding five-fold**: `Gap 398` CLOSED (ECL wired into the census; **10** recovered rows, not the 2 the sample showed) and ECL turns out to be **one blind spot of six**; `Gap 399` PARTLY DISCHARGED — `packagist.org` reaches the Moodle plugin layer and `P1033` now rests on **143 rows, not 7**; `Gap 400`/`Gap 401` opened; `T33`–`T35` and `P1040`–`P1047` adopted; **three regressions found in this instrument's own code and two in its own plumbing**
 
 ⏱️ **Sixteenth pass of this date.** 91: 2026-10-09 23:0x–00:00 UTC · 92: 00:4x–01:3x · 93:
