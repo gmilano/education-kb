@@ -1,0 +1,7 @@
+slug	default_branch_version	newest_release_tag	tag_source	delta	note
+moodle/moodle	6.0dev (MATURITY_ALPHA)	5.3 (MATURITY_STABLE)	heads: MOODLE_503_STABLE	1 major	carried from pass 94; ladder lives in heads not tags
+sakaiproject/sakai	27-SNAPSHOT	25.2	tags	2 majors	tags observed: 23.4 23.5 25.0 25.0-rc01 25.1 25.2
+opencast/opencast	21-SNAPSHOT	20.4	tags	1 major	tags observed: 19.9 20.0 20.1 20.2 20.3 20.4
+OpenOLAT/OpenOLAT	21.2-SNAPSHOT	OpenOLAT_21.0.3	tags	1 minor line	CASE COLLISION: project ships both OpenOLAT_ and OpenOlat_ tag prefixes; case-sensitive sort -V ranks OpenOlat_20.0.pre2 above OpenOLAT_21.0.3
+ucbds-infra/otter-grader	7.0.0	v7.0.0	tags	0	tags observed: v6.1.4 v6.1.5 v6.1.6 v7.0.0 -- the only agreeing row
+openedx/edx-platform	none in payload	release/ulmo.4	tags (prefix changed)	n/a	carried from pass 94; P977 -- heads stop at open-release/sumac.master

@@ -1,0 +1,10 @@
+pypi_name	pypi_version	pypi_license_field	pypi_license_expression	pypi_classifier	repository	ref	sha	licence_file	bytes	family
+otter-grader	7.0.0	BSD-3-Clause	None	License :: OSI Approved :: BSD License	ucbds-infra/otter-grader	master	190c1a4	LICENSE	1560	BSD-3-CLAUSE
+Otter-Autograder	0.15.9	<entire 35 kB GPL-3.0 text pasted into the field>	None	(not read as authoritative)	OtterDen-Lab/Autograder	main	2d9555f	LICENSE	35149	GPL-3.0
+# P980: two unrelated projects, both autograders for programming coursework, incompatible grants, 7 majors apart.
+# Only disambiguator is project_urls -> Repository. otter-grader -> github.com/ucbds-infra/otter-grader
+# Otter-Autograder -> github.com/OtterDen-Lab/Autograder  (different org, different codebase)
+# A search summary reporting "Otter-Autograder is GPL-3.0-or-later" was reading the OTHER project.
+# Secondary defect: reading info.license for an SPDX id returns a licence DOCUMENT, not an identifier.
+# Reading its first 20 chars returns "GNU GENERAL PUBLIC LI". Prefer the classifiers array -- correct for both.
+# Three-layer agreement recorded for otter-grader: payload LICENSE + pyproject.toml license= + PyPI classifier.

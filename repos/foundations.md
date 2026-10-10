@@ -228,6 +228,7 @@ logistic item curve is an explanation. A trained LSTM is not.**
 | 🆕 [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | **MIT** · `LICENSE` 1 132 B · `master` · `cc1682e` | 282 | 🟢 **North America** (UC Berkeley — the payload's copyright line reads *"Computational Approaches to Human Learning (CAHL) Research, zp@berkeley.edu"*, `P800`) | **Bayesian Knowledge Tracing** and its variants, scikit-learn-shaped (`Model.fit`/`predict`), EM-fitted. 🟢 **The cheapest real mastery estimate on this shelf**: four interpretable parameters per skill (prior, learn, slip, guess), each of which a teacher can be shown. |
 | 🆕 [`nd-ball/py-irt`](https://github.com/nd-ball/py-irt) | **MIT** · `LICENSE` 1 121 B · `master` · `6514928` | 173 | 🟢 **North America** (Notre Dame — payload copyright line *"John Lalor <john.lalor@nd.edu> and Pedro Rodriguez"*, `P800`) | **Bayesian Item Response Theory** on Pyro/PyTorch, GPU-scalable. Calibrates *item* difficulty and discrimination and *learner* ability on the same scale. 🔵 **This is the calibration step; it does not select items.** |
 | 🆕 [`eribean/girth`](https://github.com/eribean/girth) | **MIT** · `LICENSE.txt` 1 064 B · `master` · `daf2277` | 126 | 🔵 unplaced (payload copyright line is a pseudonym — *"eribean"* — no geography to take, so none is asserted) | The second IRT estimator, and the one **`catsim`'s own README points at**. 🟡 Note the filename: `LICENSE` is a **404** here and the grant lives in `LICENSE.txt` — the ladder's 24-name reach is what makes this row readable at all. |
+| 🆕 p95 [`eribean/girth_mcmc`](https://github.com/eribean/girth_mcmc) | **MIT** · `LICENSE.txt` 1 061 B · `main` · version **0.6.0** | — | 🔵 unplaced (same pseudonymous holder as `girth`; no geography to take, so none is asserted) | **Bayesian / MCMC item-response-theory estimation** — the sampling companion to `girth`, and the third of the three estimators `catsim`'s README points Python users at. 🟢 **Triple-confirmed grant**: the `LICENSE.txt` payload is canonical MIT, `setup.py` declares `license="MIT"`, and the classifier says `License :: OSI Approved :: MIT License`. 🟡 **Same filename trap as `girth`**: `LICENSE` is a **404**, the grant is in `LICENSE.txt`. |
 | 🆕 [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | **BSD-3-Clause** · `LICENSE` 1 514 B · `dev` · `7e6caae` | 153 | 🟡 **LATAM** (Brazil) — ⚠️ **evidence class is weaker than `P800`**: the payload's copyright line is a personal name only, and the Brazil placement comes from the project's own documentation host, `douglasrizzo.com.br`, linked throughout the README. Labelled, not upgraded. | **Computerized Adaptive Testing engine** — item selection, ability estimation, stopping rules, plus a simulator. 🟢 **The only CAT engine on this shelf, and the only psychometrics row with a LATAM claim.** 🟡 Default branch is `dev`, not `main` — pin it. |
 | 🆕 [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | **MIT** · `LICENSE` 1 079 B · `main` · `9446cb0` | 506 | 🔵 unplaced (payload copyright line is the org, *"Open Spaced Repetition"*) | **FSRS scheduling** — when to show an item again, as a library. 🔵 **The complement to mastery, not a duplicate of it:** BKT/IRT say *whether* a learner knows a skill; FSRS says *when they will forget it*. Highest star count in this tier. |
 | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **MIT** · 1 066 B · `main` · `77c3e90` | ~430 | 🔵 unplaced | 🟢 Deep knowledge tracing: DKT, DKVMN, SAKT, SAINT, AKT, GKT, LPKT over 7 datasets (NeurIPS 2022). **Carried from pass 92 at its pass-92 SHA; not re-read this pass.** 🔵 Read it as the research ceiling, and `pyBKT` as the deliverable floor. |
@@ -245,8 +246,46 @@ the item bank → `catsim` runs the adaptive session against it → `pyBKT` trac
 sessions → `py-fsrs` schedules the review. **Four permissive libraries, one seam each, no overlap.**
 Costed as `P93-A` in `compose/patterns.md`.
 
-🔴 **And one honest subtraction.** `girth_mcmc` is named by `catsim` but **was not resolved this pass** —
-it is a lead, not a row. It does not appear in the table above.
+🟢 **🆕 p95: the subtraction pass 93 and 94 both carried is now paid.** Those passes recorded that
+`girth_mcmc` was *named by `catsim` but not resolved* — a lead, not a row. **Pass 95 resolved it: MIT,
+`0.6.0`, at `LICENSE.txt`.** It is in the table above, and **all three estimators `catsim` names are now
+permissive rows on this shelf** (`girth`, `girth_mcmc`, `py-irt`). 🔵 **The seam is therefore not just
+documented by the dependency — it is fully supplied.**
+
+## 🆕 p95 Tier 2e — the **autograding** layer, and the AGPL monopoly that just ended
+
+🔴 **Until this pass, every automated-feedback row on this shelf with real classroom use was copyleft.**
+`mumuki/mumuki-laboratory` (AGPL-3.0, Argentina) was the strongest, and `openedx/ease` and
+`openedx/edx-ora2` are both AGPL-3.0. 🟢 **There is now a BSD-3 row at that layer.**
+
+| repo | grant (payload · bytes · file · ref · SHA) | version | ★ | region | role in a build |
+|---|---|---|---|---|---|
+| 🆕 [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | 🟢 **BSD-3-Clause** · 1 560 B · `LICENSE` · `master` · `190c1a4` | **7.0.0** | — | 🟢 **North America** (UC Berkeley Data Science Education Program) | 🟢 **Production autograder for Python scripts and Jupyter notebooks at course scale.** Parallel Docker grading, an Otter-managed grading VM, a student-side client for public checks, **native Canvas and Gradescope support**. Zenodo DOI, live CI and coverage. |
+
+🟢 **Three-layer licence agreement** — `LICENSE` payload, `pyproject.toml` (`license = "BSD-3-Clause"`) and
+the PyPI classifier all concur. 🟢 **And it is the one row on this shelf where the default branch and the
+tag ladder agree** (`7.0.0` = `v7.0.0`), which under `P978` makes its published version also its shippable
+one.
+
+🔴 **What this tier is NOT.** Otter grades **code against tests**. It is not an open-response scorer, so
+**`Gap 372` is untouched by it** — see `agents/top.md` for that gap's three new measured negatives. 🔵 **The
+honest framing: this closes the *programming-assessment* hole, which nobody had named, and leaves the
+*constructed-response* hole, which five passes have.**
+
+### 🔴 🆕 `P980` — resolve a tool to its repository, never to its distribution name
+
+Finding this row surfaced a collision worth carrying into every future probe:
+
+| what you cite | PyPI | repository | grant |
+|---|---|---|---|
+| `otter-grader` | `otter-grader` **7.0.0** | [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | 🟢 **BSD-3-Clause** · 1 560 B · `190c1a4` |
+| `Otter-Autograder` | `Otter-Autograder` **0.15.9** | [`OtterDen-Lab/Autograder`](https://github.com/OtterDen-Lab/Autograder) | 🔴 **GPL-3.0** · 35 149 B · `2d9555f` |
+
+🔴 **Two unrelated projects, both autograders, incompatible grants, seven majors apart.** A search summary
+reporting *"Otter-Autograder is GPL-3.0-or-later"* was reading the **other** project. 🟢 **Only the
+`project_urls` → repository link disambiguates them.** 🟡 **And do not read `info.license` from PyPI for an
+identifier:** `Otter-Autograder` pastes the **entire 35 kB GPL-3.0 text** into that field with
+`license_expression` set to `None`. **The `classifiers` array was correct for both.**
 
 ## Tier 3 — delivery, runtime and agent substrate
 
@@ -312,7 +351,17 @@ test suite cannot be redistributed in a client deliverable.** Conformance must b
 
 ## Count, stated plainly
 
-🆕 **p94: 34 foundational rows above the flag line, 3 of them added this pass** (`rsmtool`, `skll`,
+🆕 **p95: 36 foundational rows above the flag line, 2 of them added this pass** (`girth_mcmc`,
+`otter-grader`). 🟢 **35 are permissive for the CODE** (MIT / Apache-2.0 / BSD); **1 is LGPL**
+(`celtic-project/LTI-PHP`). 🔵 **And the same qualifier the p94 count needed: this is a 2-row measurement on
+top of a 34-row inheritance, not a 36-row measurement.** Both new rows were read from the payload at the
+SHAs named; the other 34 are carried and were **not** re-read. 🔴 **See `Gap 376` — three consecutive
+passes of ~12 hand-read rows against a 133-row census is a decaying denominator, and it is now the most
+important thing on this page to fix.**
+
+🔵 **Pass 94's own sentence, kept because it still governs the reading:**
+
+**34 foundational rows above the flag line, 3 of them added this pass** (`rsmtool`, `skll`,
 `NodeGrade`). 🟢 **33 are permissive for the CODE** (MIT / Apache-2.0 / BSD); **1 is LGPL**
 (`celtic-project/LTI-PHP`). 🔵 **Pass 93's own sentence, kept because it still governs the reading:**
 
@@ -356,7 +405,32 @@ of the 20.** Stated rather than silently re-tallied.
   Moodle (`5.3` stable / `6.0dev`), Artemis (`10.3`) and Open edX (`release/ulmo.4`, Tutor `v22.0.2`) were
   read this pass; every other version string in the platform tier still comes from a README or a blog.
   `P972` makes the fix mechanical, so this gap is work, not uncertainty.
-- 🔴 🆕 **`eribean/girth_mcmc` not resolved.** Named by `catsim`'s README, not probed this pass. A lead.
+- 🟢 🆕 **p95: `eribean/girth_mcmc` RESOLVED, after two passes as a named-and-unrun lead.** **MIT**,
+  `0.6.0`, `LICENSE.txt` 1 061 B — triple-confirmed against `setup.py` and its OSI classifier. In **Tier
+  2c**. 🟢 **All three estimators `catsim`'s README names are now permissive rows.**
+- 🟢 🆕 **p95: `Gap 375` substantially discharged — 12 payload-derived platform versions, up from 3.**
+  Nine were read this pass (`ILIAS` **`11.5 2026-10-06`**, Chamilo **`3.0.1`**, `frappe/lms` **`2.45.2`**,
+  Gibbon **`31.0.00`**, OpenEduCat **`19.0.1.0`**, Mumuki **`9.23.0`**, `relate` **`2024.1`**,
+  `classroomio` **`0.1.13`**, `otter-grader` **`7.0.0`**) plus four release ladders. 🟡 **What remains open
+  is the permissive tier's smaller rows** (`pupilfirst`, `academico`, `open-tutor-ai-CE`), which were not
+  probed.
+- 🟢 🆕 **p95: `P978` — the default branch reports the DEVELOPMENT version.** Measured on four platforms:
+  Sakai's root pom says `27-SNAPSHOT` against a newest tag of `25.2`; Opencast `21-SNAPSHOT` against
+  `20.4`; OpenOLAT `21.2-SNAPSHOT` against `OpenOLAT_21.0.3`; Moodle `6.0dev` against `5.3` stable.
+  🔴 **Publishing a default-branch version means publishing a release nobody can install.** Read both.
+- 🔴 🆕 **p95: `Gap 377` — `pom.xml` / `build.gradle` are not in the grant ladder's path list.** Sakai's
+  `pom.xml` names *"Educational Community License, Version 2.0"* and so independently confirms an ECL-2.0
+  row that generic tooling returns as *unclassified* (`P979`). **A second concurring oracle for the licence
+  family this tier most often loses. Cheap to add, and it pays on every JVM platform here.**
+- 🔴 🆕 **p95: `Gap 378` — a probe that reads paths cannot follow an indirection.**
+  `chamilo/chamilo-lms`'s `public/main/install/version.php` is HTTP 200 and its entire body is
+  `return require dirname(__DIR__, 3).'/version.php';` — **a shim pointing back to the repository root**,
+  where the real `3.0.1` lives. 🔵 **Moodle made the same `public/` migration and left a 404 instead.** Same
+  shape as `Gap 370`: **this KB's probes read paths, and real projects indirect.**
+- 🔴 🆕 **p95: `Gap 376` — the instrument has been unrunnable for three consecutive passes.**
+  `grant-ladder-v4/ladder.sh` was denied before it started in passes 93, 94 and 95. 🟢 **The method is
+  sound; the coverage is decaying.** **The next pass that can execute code must re-derive the full census
+  before adding anything, and disagree with these pages on the record if it finds cause.**
 - 🔴 **`Gap 369` carried.** Nothing on this shelf wires a knowledge-tracing model into an agent turn, so
   `pyBKT`/`pykt-toolkit` → agent is a build, not an integration. 🟡 **Pass 93 narrows it rather than
   closing it:** `P93-A` in `compose/patterns.md` now specifies that wiring concretely, but **no repository

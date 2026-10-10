@@ -6,6 +6,18 @@ updated: 2026-10-10
 
 # Education — current trends
 
+**Pass 95, 2026-10-10.** ⏱️ **Fifth pass of this date.** 🆕 **Fourteen trends.** `T14` is new — **the
+curriculum mandates split by education level, and the higher-education limb is a different market** —
+located by Pakistan's HEC notification, the first mandate in this KB that binds universities rather than
+schools. 🟢 **`T13` gains three measured negatives** (the open-response scorers that turn out to be
+CC BY-SA or ungranted) **and one permissive row at an adjacent layer** (`otter-grader`, BSD-3).
+🟢 **`T9` gains a demand signal from the buyer side**: Brazil's MEC has put *correção automatizada* on its
+own list of endorsed teacher uses. 🔴 **And `T3`'s governance-gap claim is reinforced by a method defect
+rather than a new survey** — see `P982` in `intel/market.md`: two passes of "Japan has no instrument" were
+an artefact of querying in English. Everything else is carried.
+
+#### Pass 94 — carried below, unchanged
+
 **Pass 94, 2026-10-10.** ⏱️ **Fourth pass of this date.** 🆕 **Thirteen trends.** `T12` (the instrument in
 a federal system is subnational — now a *predictive* rule, having located Mexico's) and `T13` (the
 permissive supply for regulated assessment is the **evidence** layer, not the scorer) are new this pass, and
@@ -290,6 +302,24 @@ official material is guidance rather than a product. 🔴 **And the same comment
 this update is where `T4`'s wrong date showed up for the fifth time**, which is the practical shape of this
 market: correct subject, wrong deadline, confident tone.
 
+### 🟢 🆕 p95 amendment to T9 — the buyer has now said it out loud
+
+🟢 **`T9` has argued for five passes that assessment is the regulated activity, from the regulator's side.
+Pass 95 found the same claim from the buyer's side.** Brazil's **MEC** published **「Inteligência Artificial
+na Educação Básica」** on **2026-04-08** (with UNESCO cooperation, project **914BRZ1157**), and among the
+teacher-support uses it names explicitly is **`correção automatizada e detecção de plágio`** — automated
+correction and plagiarism detection.
+
+🔵 **A national education ministry putting automated correction on its own list of endorsed teacher uses is
+a procurement signal, not a policy observation.** 🟢 **It converts the scoring stack from a technical thesis
+into a line item**, and it lands in the region where this KB already holds the deepest curriculum open-data
+rows (`bncc-dev`) and a classroom-proven automated-feedback platform (`mumuki`, AGPL-3.0, Argentina).
+🔴 **And it sharpens `Gap 372` rather than easing it**: the demand is now explicit while the permissive
+production scorer still does not exist.
+
+🟡 **Evidence grade: search-summary** — `www.gov.br` is egress-blocked, so the two official PDFs are
+identified and unread. **The document is orientative, not binding.**
+
 ## T10 — 🆕 In the learner-model tier, the **permissive** option and the **explainable** option turn out to be the same one
 
 🟢 **Pass 92 opened this tier with one library** (`pykt-team/pykt-toolkit`, deep knowledge tracing) and
@@ -424,6 +454,79 @@ covers the defensible half, and the half it does not cover is the half with a ma
 **GPL-2.0** in `factor_analyzer` — a factor-analysis library of exactly the kind a scoring pipeline imports
 without reading (`P975`). 🔵 **In this tier the licence audit is a per-dependency job, not a per-vendor
 one.**
+
+### 🟢 🆕 p95 amendment to T13 — the claim is unchanged in direction and three measurements stronger
+
+🔴 **Pass 94 asserted that the research scoring supply was thin. Pass 95 probed it and it is worse than
+thin — it is ungranted.** The three open-response candidates the literature names:
+
+| candidate | claim | payload |
+|---|---|---|
+| [`edgresearch/code-automaticgrading-2022`](https://github.com/edgresearch/code-automaticgrading-2022) (**GradeAid**) | published ASAG framework, code released | 🔴 **CC BY-SA 4.0**, 20 130 B — **a content licence with a ShareAlike obligation, applied to software.** No patent or linking language; CC advises against CC for code |
+| [`datalab912/RATASv1`](https://github.com/datalab912/RATASv1) | *"the authors publicly release all code"* | 🔴 **no licence payload in 8 filenames** |
+| [`emorynlp/llm-grading`](https://github.com/emorynlp/llm-grading) | *"an open-source auto-grading toolkit"* | 🔴 **no licence payload in 8 filenames** |
+
+🔴 **`P981`: "we publicly release our code" in a paper is not a grant** — and an ungranted repository is, by
+copyright default, **all rights reserved**. 🔵 **Because this industry's scoring supply is overwhelmingly
+academic, the defect is systematic**: the sentence that signals openness in a paper and the legal position
+of the artefact point in opposite directions.
+
+🟢 **So `T13` holds in its strong form.** The permissive supply for regulated open-response scoring is the
+**validation** layer (`rsmtool` Apache-2.0, `skll` BSD-3); the **production** scoring code is copyleft
+(`openedx/ease`, `openedx/edx-ora2`, AGPL-3.0); the **research** code is ungranted or CC-licensed.
+**Score behind a service boundary; validate with Apache/BSD.**
+
+🟢 **And one genuine addition at an adjacent layer, which `T13` must not be read as covering.**
+[`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) is **BSD-3-Clause**, `v7.0.0`, UC
+Berkeley, Canvas- and Gradescope-native. 🔴 **It grades code against tests, not constructed responses**, so
+it leaves `Gap 372` exactly where it was. 🟢 **What it changes is that the automated-feedback layer's only
+classroom-proven row is no longer AGPL-only** — which moves a programming-assessment deliverable from
+*integrate across a service boundary* to *fork and own*.
+
+## T14 — 🆕 p95 The curriculum mandates split by education LEVEL, and the higher-education limb is a different market
+
+🟢 **Every curriculum mandate this KB has recorded until now binds schools.** China, Singapore, the UAE's
+K→G12 programme, Mexico's Edomex reform, the EU's Article 4 literacy duty — **the buyer is a ministry of
+education, the unit is a school system, and the procurement cycle is a national programme.**
+
+🟢 **Pakistan's HEC notification (February 2026, effective academic session 2026) binds universities**: a
+**3-credit AI course in every undergraduate and postgraduate degree**, public and private, deliverable as
+an elective, interdisciplinary or supporting subject. 🔵 **That is the same regulatory instrument type
+pointed at an entirely different market.**
+
+| | the K-12 limb | 🆕 **the higher-education limb** |
+|---|---|---|
+| buyer | ministry / national programme office | 🟢 **the institution itself** — provost, registrar, faculty development |
+| unit of sale | one programme, many schools | 🟢 **one institution, repeated** — and there are hundreds |
+| procurement | public tender, multi-year | 🟢 **institutional budget, annual** |
+| the artefact | curriculum, teacher training, content packaging | 🟢 **syllabus + LMS delivery + disclosure workflow + faculty training** |
+| the platform | whatever the ministry runs | 🟢 **the university's own LMS — Moodle, Canvas, Sakai, OpenOLAT, Artemis** |
+| examples here | China, Singapore, UAE, Edomex, EU Art. 4 | 🟢 **Pakistan (binding)**; India (in drafting); Quebec & Brazil (higher-ed frameworks) |
+
+🟢 **Why this is a trend and not a single data point.** Three other jurisdictions in this KB already carry a
+higher-education-specific instrument: **Quebec's `Cadre de référence` on deploying AI in higher education
+(Aug 2025)**, **Brazil's CNE draft guidelines, which include a higher-education chapter (March 2026)**, and
+**India's AICTE/UGC undergraduate AI curriculum, in drafting with Nasscom and a stated ~6-month horizon**.
+🔵 **Pakistan is the first to make it binding, not the first to aim at the level.**
+
+🟢 **And the recurring-revenue shape is in Pakistan's draft policy rather than its mandate.** The **August
+2026 draft** asks universities to **write their own institutional rules**, **requires disclosure of AI
+use**, **requires annual AI training for faculty, students and staff**, and **directs AI literacy into
+curricula within two years**. 🔵 **A 3-credit course is one syllabus delivered once. "Annual training for
+all staff" and "write your own policy" are deliverables that recur per institution per year** — which is
+the difference between a content engagement and a retained one.
+
+🔵 **What this changes in the shelf.** The K-12 limb pulled this KB toward curriculum data and content
+packaging (`P91-G`, the `bncc-dev` rows, `Gap 367`'s missing K-5 curriculum). 🟢 **The higher-education limb
+pulls toward the university platform tier this KB is already strongest in** — `Artemis` (MIT, with Iris,
+Athena and Hyperion already built), `Sakai` (ECL-2.0), `OpenOLAT` (Apache-2.0) — **plus the disclosure and
+assessment-integrity workflow the draft policy names.** 🟢 Costed as `P95-A` in `compose/patterns.md`.
+
+🔴 **The honest limit.** Pakistan's mandate is **read at search-summary grade** from Pakistani press
+(APP, The News, ProPakistani, Digital Pakistan) with consistent dates and content across outlets; **the HEC
+notification itself was not read**, and the August draft is explicitly a **draft**. 🟡 **And a vocabulary
+note: Pakistan is bucketed APAC here under this task's five-value region field**, which hides that it is a
+South Asian market adjacent to India's, not an East Asian one.
 
 ## Instrument note carried forward
 

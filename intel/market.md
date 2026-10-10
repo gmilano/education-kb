@@ -6,6 +6,25 @@ updated: 2026-10-10
 
 # Education — market, players and opportunities
 
+**Pass 95, 2026-10-10.** ⏱️ **Fifth pass of this date.** Regional sweep run once globally and once per
+region (North America, EMEA, APAC, LATAM), plus gap-targeted queries on the leads pass 94 named for itself.
+
+🟢 **What pass 95 contributes, in four lines.** **Japan is discharged after two passes of returning
+nothing** — and not by a new kind of query, but by the one pass 94 had already written down (query MEXT in
+Japanese), which makes the two-pass absence a **language artefact, not a finding about Japan**. **Quebec is
+discharged**, the fourth Canadian province, and it had been named "the single cheapest lead" for three
+passes. **Pakistan is a new jurisdiction and the first *higher-education* mandate in this KB** — which
+splits `T7` by education level and names a different buyer. **Brazil's MEC named automated correction as
+sanctioned practice**, converting this KB's scoring-stack thesis from a technical claim into a demand
+signal.
+
+🔴 **And the honest subtraction: four more primary-source hosts are egress-blocked** —
+`www.mext.go.jp`, `www.gov.br`, `www.australiancurriculum.edu.au` and `www.acara.edu.au`. **The
+blocked-host list for this KB is now twelve.** Per `P950` they were not retried one by one, and **every
+claim below carries its evidence grade** — primary read, or search-summary.
+
+#### Pass 94 — carried below, unchanged
+
 **Pass 94, 2026-10-10.** ⏱️ **Fourth pass of this date.** Regional sweep run once globally and once per
 region (North America, EMEA, APAC, LATAM), plus gap-targeted queries on the leads pass 93 named for itself.
 🟢 **What pass 94 contributes to this file, in four lines:** the **mechanism** behind the wrong EU date that
@@ -302,6 +321,39 @@ control, review gates and evidence. 🔴 **Alongside it: ~20 % of universities h
 (Coursera, Feb 2026, search-summary) — the governance deficit this file has tracked since pass 1, now with a
 North-America-weighted number.
 
+#### 🟢 🆕 p95 — North America: Quebec discharged, and the federal rule (`T12`) survives its fourth province
+
+🟢 **Quebec was named "the single cheapest lead for the next pass" by pass 93, carried unrun by pass 94, and
+is discharged here.** It is the **fourth** Canadian province with an AI-in-education instrument, after BC,
+Alberta, and Ontario's measured absence. **Evidence grade: search-summary** — `quebec.ca` and
+`cdn-contenu.quebec.ca` were not read directly this pass.
+
+| instrument | issuer | date | binding? |
+|---|---|---|---|
+| **Recommandations éthiques sur l'IA en éducation** | **Centre d'expertise de l'IA en éducation (CEIAE)**, Ministère de l'Éducation — with **Obvia**, **GRICS** and **Mila** | **2026** | 🟡 **Recommendations** |
+| Guide for teaching staff on pedagogical and ethical use of generative AI | Ministère de l'Éducation | **late 2024** | 🟡 Guidance |
+| **Cadre de référence** on deploying AI in higher education, + *Intégration responsable…* practical guide | Ministre de l'Enseignement supérieur (**Pascale Déry**) | **Aug 2025** | 🟡 Framework |
+| Two AI governance documents for the public administration | Ministère de la Cybersécurité et du Numérique | **Dec 2025** | 🟡 Administrative |
+| Avis of the Comité consultatif du travail et de la main-d'œuvre on workplace AI | Ministre du Travail | **29 Apr 2026** | 🔵 Adopted unanimously by employer and union representatives |
+
+🟢 **The named institutional stack is the sales map.** **Obvia** (Observatoire international sur les impacts
+sociétaux de l'IA et du numérique), **GRICS** (the school boards' shared IT consortium) and **Mila** sit on
+the ministry's own ethics committee. 🔵 **For a Quebec engagement those three are the reference-check path**,
+and **GRICS is the integration surface for school-board systems** — the practical equivalent of a national
+SIS vendor.
+
+🔴 **But the limb that matters for `T12` is the binding one, and it is absent.** No binding
+primary/secondary ministerial rule surfaced: the 2026 CEIAE output is **recommendations** and the
+higher-education instrument is a **cadre de référence**. 🟢 **So Quebec confirms `T12` rather than
+complicating it:** in a federal system the instrument is subnational, **and at the subnational level it is
+soft law**. **Four provinces, four non-binding instruments, no federal mandate.**
+
+🟡 **One claim this pass still declines.** An academic comparison asserts formal provincial AI guidelines in
+**Ontario**. 🔴 **Pass 93 could not confirm it, it contradicts the TDSB's public request for a provincial
+strategy, and pass 95 did not re-test it.** Not recorded. 🔵 **But the Quebec limb of that same comparison,
+which pass 93 also left untested, is now confirmed** — which is a reason to **re-test the Ontario limb**,
+not to trust the source wholesale.
+
 ### EMEA
 
 🆕 🟢 **Assessment is where the EU AI Act and the market meet, and there is now a dated sector-scale pilot.**
@@ -434,6 +486,37 @@ makes it procurable. And a research paper finds that universities **document asp
 more readily than technical safeguards**, with weak validity testing and fairness monitoring. 🔵 **That is
 the `rsmtool` deliverable described from the buyer's side** (`repos/foundations.md` Tier 2d, `P94-A`): the
 policy exists, the evidence does not, and the evidence is the part that is permissively available.
+
+#### 🟢 🆕 p95 — EMEA: the demand side is now quantified, and the delivery model is explicit
+
+🟢 **Two figures worth arguing from, both EMEA-specific.** **64 % of Europeans agree that by 2030 everyone
+will need to be AI-literate** (Eurobarometer) — which is the demand-side mirror of the EU AI Act Article 4
+literacy duty this file has tracked since pass 90. 🔵 **It converts `T7` from a compliance argument into a
+public-opinion one**, and public opinion is what funds ministry programmes.
+
+🟢 **And the delivery model is named rather than inferred.** In the UK, **government funds and Big Tech
+delivers**: a **£200 m+** AI-adoption commitment announced at a June summit, with **Cisco, IBM, BT and
+Rolls-Royce** named as delivery partners. 🔵 **That is the exact shape of a systems-integrator
+opportunity** — the funder is public, the delivery is subcontracted, and the named partners are
+infrastructure firms rather than pedagogy firms. **The pedagogy and assessment layers are the gap in that
+consortium**, and they are where this KB's permissive shelf sits.
+
+🟢 **Institutional policy movement, dated.** The **European Commission updated its ethical guidelines on AI
+in education in June 2026**. The **Council of Europe** has run a second working conference on the
+regulatory dimensions of AI in education, covering **AI governance in education and a possible European
+evaluation framework for edtech tools**. 🔵 **A European evaluation framework for edtech is the single most
+consequential thing on this list for a vendor** — it would make conformance a product feature rather than a
+procurement argument, which is what `P91-F` and `P94-A` already build toward.
+
+🟡 **Adoption is uneven and the leaders are named**: the **UK, Germany, France and Scandinavia** lead; other
+markets are described as still treating generative AI in formal education as taboo. 🔴 **"EMEA" continues to
+hide this**, and the vocabulary limit recorded since pass 92 stands — a Gulf engagement, a Nordic one and a
+Southern-European one are all one bucket here.
+
+🔴 **Market sizing disagrees with itself again, as it has every pass.** Europe's AI-in-education market is
+given as **$512.6 M (2024) → $1 328.8 M (2029), 17.2 % CAGR** by one firm, while an AI-for-kids segment
+report gives **$289 M (2024) → $649 M (2034)**. 🔵 **Not reconcilable from public summaries** — the growth
+rate is the figure to argue from, never the level. `marketsandmarkets.com` remains egress-blocked.
 
 ### APAC
 
@@ -572,6 +655,76 @@ handbook 2026-27*, rather than "AICTE AI mandatory".
   specified for the next pass**: `P955` and the Canada/Mexico result both say the query must name the
   instrument and the language — 文部科学省 (MEXT) plus *guidelines*, in Japanese, rather than "Japan AI
   education".
+
+#### 🟢 🆕 p95 — APAC: Japan discharged by the method pass 94 specified, and Pakistan is the first higher-education mandate in this KB
+
+🟢 **`Gap`: "Japan — nothing, for a second consecutive pass." DISCHARGED, and the way it was discharged is
+the finding.** Pass 94 wrote: *"Next method is specified, not vague: query MEXT (文部科学省) and guidelines in
+Japanese."* 🟢 **One Japanese-language query returned a dated, versioned ministerial instrument.**
+
+| instrument | date | status |
+|---|---|---|
+| 「初等中等教育段階における生成AIの利用に関する暫定的なガイドライン」 (provisional guideline, generative AI in primary & secondary education) | **July 2023** (令和5年7月) | Superseded |
+| 🟢 **「初等中等教育段階における生成AIの利活用に関するガイドライン」Ver. 2.0** | 🟢 **2024-12-26** (令和6年12月26日) | 🟢 **Current.** Issued after deliberation by the 検討会議 (review conference) |
+| 中央教育審議会 subcommittee materials on AI use in school education — past measures and future direction | **2026-06-30** | 🔵 Live policy process, direction not yet readable from the excerpt |
+
+🔴 **So Japan was never empty. Four English-language region queries across two passes returned nothing, and
+one query in Japanese returned a Ver. 2.0 instrument that had existed for 21 months.** 🟢 **`P982`: for a
+jurisdiction whose administrative language is not English, an English-language regional query is not
+evidence of absence** — and this file already had five proofs in Portuguese and Spanish before it had this
+one in Japanese. 🔵 **The two-pass Japanese "nothing" is hereby reclassified from a finding about Japan to a
+defect in this file's method**, which is the honest reading and the more useful one.
+
+🔴 **Evidence grade: search-summary.** `www.mext.go.jp` is **egress-blocked** (`ENOTFOUND`), so the Ver. 2.0
+title and date are read from search results, not from the ministry. 🟡 **Also noted: one indexed article
+carried a 2026 page date while describing the 2023 provisional guideline** — a date-drift trap of exactly
+the kind `P387` exists for. **The 2024-12-26 date is the one to cite.**
+
+##### 🟢 🆕 Pakistan — a new jurisdiction, and the first mandate here that binds HIGHER education
+
+| element | what it says |
+|---|---|
+| instrument | **HEC notification** requiring a **3-credit AI course in every undergraduate and postgraduate degree** |
+| issuer | **Higher Education Commission** of Pakistan; reaffirmed by Chairman Prof. Dr. Niaz Ahmad Akhtar |
+| dated | **February 2026**, effective **academic session 2026** |
+| scope | 🟢 **All institutions, public and private.** Deliverable as an elective, interdisciplinary or supporting subject |
+| context | Announced days after a **$1 bn by 2030** national AI investment commitment |
+| second instrument | 🟡 **Draft** AI-use policy circulated **Aug 2026**: no blanket ban, universities write their own rules; bars submitting AI-generated work as one's own, **requires disclosure**, **annual AI training** for faculty/students/staff, and **AI literacy built into curricula within two years** |
+
+🟢 **Why this is more than a sixth flag on the map.** Every curriculum mandate this KB has recorded — China,
+Singapore, UAE, Edomex, the EU Article 4 duty — **binds schools**. 🟢 **Pakistan's binds universities**, and
+a university is a **different buyer with a different procurement cycle, its own LMS, and its own faculty
+development budget.** 🔵 **It also fills precisely the limb India's AICTE/UGC process leaves open** — and
+the two are adjacent markets. See `intel/trends.md` `T14`.
+
+🟡 **And the draft policy is the services opportunity, not the course mandate.** "Universities write their
+own institutional rules", "annual training for all staff" and "AI literacy in curricula within two years"
+are **three recurring deliverables per institution**, where the 3-credit course is one syllabus.
+
+##### 🟡 Bangladesh — a lead, recorded as a recommendation not a mandate
+
+🟡 **Bangladesh's UGC "recommends including AI in curriculums."** 🔴 **A recommendation, undated in the
+material read, and not a mandate.** 🔵 **Recorded because it surfaced from the India query and would
+otherwise be lost** — and flagged because **"UGC" names a different body in India and in Bangladesh**, a
+collision that already produced one confused search result this pass.
+
+##### 🔴 India — still no circular, but the absence now has a mechanism and a timeline
+
+🟡 **Narrowed again rather than re-asserted.** There is **no AICTE or UGC circular mandating AI in
+higher-education curricula.** What exists:
+
+- 🟢 **A drafting process with named parties**: government **with Nasscom** developing an undergraduate AI
+  curriculum; **AICTE and UGC must review it**; **~6 months to finalise** as stated mid-2026
+- 🟢 **A dated taskforce review, 28 May 2026**, finding gaps in generative AI, MLOps, foundational-model
+  work and practical exposure; discussion of **credit-linked rollout**, faculty development and shared AI
+  infrastructure (PIB release not readable directly — secondhand)
+- 🟡 **AICTE's 2025 stated intention** to include AI in model curricula for all technical disciplines
+- 🟢 **Institution-level anticipation**: an April 2026 Kolkata university body minutes "mandatory AICTE
+  curriculum guidelines for the 2026 admission batch"
+
+🔵 **So the honest status is not "open" but "in drafting, with a known reviewer set and a stated horizon"** —
+which is **actionable in a way a bare gap is not**: the curriculum is being written now, and the bodies
+writing it are named.
 
 ### LATAM
 
@@ -752,7 +905,122 @@ force**; **Colombia, Brazil and Chile are moving faster** than the rest; the con
 surveyed students** report using an AI tool for study work, ChatGPT dominant, 🔴 **with rules and assessment
 practice lagging behind the usage** — the same shape as the regional governance gap, one level down.
 
+#### 🟢 🆕 p95 — LATAM: Brazil's education ministry has named automated correction as sanctioned practice
+
+🟢 **The strongest single sentence this pass produced for a studio, and it is a demand signal rather than a
+regulation.** Brazil's **MEC** published **「Inteligência Artificial na Educação Básica」** on **8 April
+2026** — curricular orientations and ethical principles for students, teachers and managers, with
+stage-by-stage advice. 🟢 **Among the teacher-support uses it names explicitly: `correção automatizada e
+detecção de plágio` — automated correction and plagiarism detection — alongside generation and co-production
+of teaching materials and lesson plans.**
+
+🔵 **Why that matters more than another policy row.** This KB has spent five passes arguing that
+**assessment is the regulated activity** (`T9`) and that the permissive supply for it is the validation
+layer (`T13`, `Gap 372`). 🟢 **A national education ministry has now put automated correction on its own
+list of endorsed teacher uses.** **That is the buyer stating the requirement**, and it lands in the one
+region where this KB already holds the deepest open-data stack (the `bncc-dev` BNCC rows) and a
+classroom-proven automated-feedback platform (`mumuki`, Argentina).
+
+| instrument | issuer | date | status |
+|---|---|---|---|
+| 🟢 **Inteligência Artificial na Educação Básica** | **MEC**, Secretaria de Educação Básica — with **UNESCO** cooperation (project **914BRZ1157**) | 🟢 **2026-04-08** | 🟡 **Orientative, not prohibitive** |
+| **Referencial para Desenvolvimento e Uso Responsáveis de Inteligência Artificial na Educação** | MEC | — | 🔵 The umbrella guideline the April document is said to complement and align schools to |
+| Draft national guidelines on AI in education (~240 pp: school management, teaching materials, teacher training, higher education) | **CNE** (Conselho Nacional de Educação) | presented **2nd half of March 2026** | 🟡 **Public consultation** — status not final |
+| **PL 2338/2023** — Marco Legal de Inteligência Artificial | National Congress | in passage | 🔵 The horizontal AI law, not education-specific |
+
+🟢 **And the delivery programme is named with a number**: the **Estratégia Nacional de Escolas Conectadas**
+targets **4 000 municipalities**. 🔵 **That is the deployment surface** — and at 4 000 municipalities the
+constraint is offline-tolerant, low-bandwidth delivery, which is what `P91-D` already costs.
+
+🔴 **One claim this pass declines.** Several outlets report that **MEC recommends against AI use in
+*educação infantil*** (early childhood). 🟡 **The same reporting states the document "does not establish a
+national prohibition, but rather orientations for responsible use."** 🔴 **So the strong form is not
+recorded.** **Evidence grade: search-summary — `www.gov.br` is egress-blocked**, so the two official PDFs
+(`ia-educacao-basica.pdf`, `ia-basica.pdf`) are identified but unread. 🔵 **They are the single cheapest
+primary read for the next pass that has egress.**
+
+🟢 **A second, independent demand measurement for the region.** The **Digital Education Council** LATAM
+survey 2026 — run with **Tecnológico de Monterrey** and its Institute for the Future of Education, **>30 000
+responses across 29 institutions** — reports **92 % of students and 79 % of faculty actively engaging with
+AI**. 🔵 **Read it beside, not instead of, pass 93's UNESCO IESALC figures** (200 institutions, 19 countries:
+**87 %** institutional use, **26 %** with any formal framework). 🟢 **The two agree on the shape — near
+universal use, governance far behind — and they measure different units**, individuals versus institutions,
+which is why the percentages differ without contradicting.
+
+🟡 **Regulatory state, unchanged in substance and now better sourced.** **Chile** is most advanced (National
+AI Policy since 2021, a bill under discussion); **Brazil and Colombia** have national strategies but no
+sector-specific education rules; in **Mexico**, **SEP, ANUIES and the Observatorio IA** have issued
+recommendations that **lack binding force**. 🔵 **The IDB** publishes on regional AI regulatory frameworks
+and on AI and education, and is a named institutional actor for a public-sector engagement.
+
+🔴 **And one contested figure, still not used.** One source says **only 30 %** of LATAM universities have
+published AI policies, against UNESCO IESALC's **26 %**. 🔵 **Close but not the same measurement, and
+neither is averaged here.**
+
 ## Regions and lines of enquiry that returned nothing — stated, not hidden
+
+### 🆕 p95 — scored against the leads pass 94 named for itself
+
+🟢 **Pass 94 named six leads. Pass 95 discharged three, narrowed one, and two stand.** 🔵 **Scored openly,
+because a gap list that only grows is a list nobody is working.**
+
+| lead, as pass 94 wrote it | pass 95 |
+|---|---|
+| *"Japan: nothing, for a second consecutive pass. Next method is specified: query MEXT (文部科学省) and guidelines in Japanese"* | 🟢 **DISCHARGED on the first query of the specified kind** — Ver. 2.0 guideline, **2024-12-26**. **The absence was a language artefact** (`P982`) |
+| *"Quebec is the single cheapest lead for the next pass"* — carried unrun by pass 94 | 🟢 **DISCHARGED** — five instruments, 2024→2026, **all non-binding.** Fourth province; `T12` confirmed |
+| `eribean/girth_mcmc`, *"named by `catsim`'s README, not probed this pass. A lead."* | 🟢 **DISCHARGED** — **MIT**, `0.6.0`, `LICENSE.txt`. Sixth psychometric row |
+| `Gap 375`, *"3 payload-derived platform versions and the rest are prose"* | 🟢 **SUBSTANTIALLY DISCHARGED** — **12 versions**, 4 release ladders, 3 negative controls, and `P978` |
+| India higher education (AICTE / UGC) | 🟡 **NARROWED with a mechanism and a timeline** — drafting with Nasscom, AICTE+UGC as reviewers, ~6 months from mid-2026, taskforce review 28 May 2026. **Still no circular** |
+| `Gap 374`, the MRAC licence | 🟡 **NARROWED to a contradiction, not read** — see below. Hosts still blocked |
+| `Gap 367`, no permissive K-5 AI curriculum | 🔴 **NOT RE-QUERIED** — carried verbatim for a third pass rather than re-asserted on no new evidence |
+| GitHub Trending | 🔴 **STANDS — SEVENTH consecutive zero** |
+
+- 🟡 🆕 **`Gap 374` — the MRAC licence is now a measured CONTRADICTION rather than an unknown, and that is
+  worse than it sounds.** ACARA's published terms **state a Creative Commons Attribution 4.0 International
+  (CC BY) licence** and, in the current-looking versions, **also state that "you cannot edit, modify or
+  adapt any of these materials, and you cannot sub-license any of these materials to others."**
+  🔴 **Those two clauses cannot both hold: CC BY 4.0 grants the right to adapt and to sublicense
+  downstream, and a term withdrawing adaptation is not a CC BY licence at all.** A 2020-dated version of the
+  same page carries the bare CC BY grant; a separate ACARA property grants only *personal, private,
+  non-commercial educational* reproduction.
+  🟢 **`P983` — a new trap class, distinct from the two this KB already names.** Trap 1 is a non-OSI licence
+  with a friendly name (`Fair Code`); Trap 2 is a grant that is not in a file. 🔴 **Trap 3 is a PERMISSIVE
+  LICENCE NAMED AND THEN CONTRADICTED IN ADJACENT PROSE** — and it is the most dangerous of the three,
+  because a reviewer who greps for "CC BY 4.0" finds it and stops. 🔵 **For a curriculum-alignment
+  deliverable, adaptation is the whole point**, so the carve-out removes exactly the right the engagement
+  needs.
+  🔴 **Evidence grade: search-summary only.** `www.australiancurriculum.edu.au`, `www.acara.edu.au`,
+  `rdf.australiancurriculum.edu.au` and `v8.australiancurriculum.edu.au` are **all egress-blocked**, and no
+  GitHub repository or client library for MRAC exists to read terms from a payload. 🟢 **The honest
+  statement: the artefact exists, its terms are internally inconsistent as published, and it must not be
+  treated as permissive.** **Written confirmation from ACARA is the only safe route** — recorded as the
+  action, not as a gap to re-query.
+- 🔴 🆕 **GitHub Trending: ZERO education repositories for a SEVENTH consecutive pass.** The query returned
+  adult AI-engineering curricula and generalist agent material — `rohitg00/ai-engineering-from-scratch`
+  (#1 trending, first reached #1 on 24 May 2026), `microsoft/ai-agents-for-beginners` (**MIT**, ~67k★),
+  `pguso/agents-from-scratch` (**MIT**, ~800★, topics include `ai-education`), AI Engineering Hub, D2L,
+  Karpathy's *Zero to Hero*. 🔵 **These are repositories for *learning AI*, not repositories *for the
+  education industry***, and the distinction is the reason this channel keeps returning zero.
+  🟢 **The seven-pass negative now has a demonstrated cause, not just a hypothesis:** trending ranks
+  popularity velocity, and this pass's own best finds were `otter-grader` (BSD-3, UC Berkeley, a Zenodo DOI
+  and no star count readable at all) and `girth_mcmc` (MIT, an IRT sampler) — **institutional, small, slow,
+  and invisible to a velocity ranking by construction.** 🔵 **The query stays retired to a registry role**,
+  and **the task brief's mandated trending search has now failed seven consecutive times for this
+  industry** — carried upward to the rotation as a property of the channel, not a local accident.
+- 🔴 🆕 **The GitHub REST API returned HTTP 403 for every slug tried**, so **no star count on these pages was
+  refreshed this pass.** 🔵 Consistent with pass 94's `github-api-proxy-blocked`. **A `—` in a ★ column means
+  not read. It never means zero**, and two new rows (`otter-grader`, `girth_mcmc`) carry `—` for this reason
+  rather than from neglect.
+- 🔴 🆕 **Four more hosts are egress-blocked**: `www.mext.go.jp`, `www.gov.br`,
+  `www.australiancurriculum.edu.au`, `www.acara.edu.au`. **The list is now twelve.** 🔵 **Per `P950` they
+  were not retried one by one** — and the cost is specific: Japan's instrument, Brazil's two official PDFs
+  and Australia's licence are all **search-summary grade** when all three could have been primary reads.
+- 🟡 🆕 **The `Gap 372` scorer hunt returned three repositories and no grant worth having**, which belongs
+  here as much as in `agents/top.md`: `GradeAid` is **CC BY-SA 4.0**, `RATASv1` and `emorynlp/llm-grading`
+  carry **no licence payload**. 🔴 **`P981`: "we publicly release our code" is not a grant.**
+- 🔴 🆕 **`Gap 376` — this KB's own instrument has not executed for three consecutive passes**, and the
+  census denominator is decaying against a 133-row claim. 🔵 **Recorded in this file because it is the one
+  gap that is not about the world** — it is about whether these pages can still be trusted at the row level.
 
 ### 🆕 p94 — scored against the leads pass 93 named for itself
 

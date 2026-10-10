@@ -6,6 +6,92 @@ updated: 2026-10-10
 
 # Education — vertical platforms you can customise with AI
 
+**Pass 95, 2026-10-10.** ⏱️ **Fifth pass of this date.** 🔴 **No licence on this page was re-resolved this
+pass either** — they are carried at their pass-92/93 SHAs, and the sandbox refused
+`grant-ladder-v4/ladder.sh` for a **third consecutive pass**, so no replacement classifier was written
+(`P237`, `P970`). 🟢 **What pass 95 adds is the version field pass 94 opened, taken from 3 platforms to
+12 — plus the rule that makes the number meaningful.**
+
+## 🟢 🆕 p95 `P978` — the version on the default branch is the one you cannot ship
+
+🔴 **Pass 94 read Moodle's `main` as `6.0dev (MATURITY_ALPHA)` and its stable branch as `5.3`, and wrote
+that up as a Moodle quirk.** 🟢 **Pass 95 measured three more platforms and it is the normal case.**
+
+| platform | version file on the default branch | newest release tag | delta |
+|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `6.0dev` · `MATURITY_ALPHA` *(p94)* | **`5.3`** stable | **1 major** |
+| 🆕 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `pom.xml` → **`27-SNAPSHOT`** | **`25.2`** | **2 majors** |
+| 🆕 [`opencast/opencast`](https://github.com/opencast/opencast) | `pom.xml` → **`21-SNAPSHOT`** | **`20.4`** | **1 major** |
+| 🆕 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `pom.xml` → **`21.2-SNAPSHOT`** | **`OpenOLAT_21.0.3`** | 1 minor line |
+
+🔴 **In every case measured, the default branch names a release that does not exist yet.** Sakai's is two
+majors ahead of anything an institution can install. 🔵 **For a page that exists to answer "what will we be
+deploying", `27-SNAPSHOT` is worse than no answer — it is a number that will never appear in a procurement
+document.** 🟢 **`P978`: read the version file for the development line and the tag ladder for the
+shippable one, and publish both.**
+
+🟡 **One instrument caveat, measured rather than assumed.** A case-sensitive `sort -V` over OpenOLAT's tags
+ranks `OpenOlat_20.0.pre2` **above** `OpenOLAT_21.0.3`, because the project has shipped tags under **two
+capitalisations of its own name**. 🔵 **Fold case before sorting a tag ladder** — the defect class of
+`p288-agpl-casefold` and `p439-case-collision-gate`, found this time in a tag namespace.
+
+## 🟢 🆕 p95 `P979` — the Maven `pom.xml` is a SECOND licence oracle, and it agreed
+
+Reading Sakai's `pom.xml` for a version returned something that was not asked for:
+
+```xml
+<name>Educational Community License, Version 2.0</name>
+```
+
+🟢 **An independent, payload-grade confirmation of the ECL-2.0 grant** this page carries from `LICENSE`
+(11 120 B). 🔵 **Two files in one repository, read for two different reasons, naming the same licence.**
+**ECL is precisely the family generic tooling returns as *unclassified*** — the reason Sakai and Opencast
+were nearly dropped from the permissive tier in pass 89 — **so a second concurring oracle is worth more
+here than anywhere else on this page.** Recorded as `Gap 377` in `repos/foundations.md`: add
+`pom.xml`/`build.gradle` to the ladder's path list for JVM projects.
+
+## 🟢 🆕 p95 Nine more versions, read from the payload
+
+| platform | version file | what the payload says |
+|---|---|---|
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | **`ilias_version.php`** *(root — **not** `include/inc.ilias_version.php`, which is 404)* | 🟢 **`ILIAS_VERSION = "11.5 2026-10-06"`** — **a version string carrying its own release date, four days before this pass.** The most precise version field found on this page. |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | root **`version.php`** | 🟢 **`3.0.1`**, `new_version_status => 'stable'`, `new_version_major => true` |
+| [`frappe/lms`](https://github.com/frappe/lms) | `lms/__init__.py` | 🟢 **`2.45.2`** |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | `version.php` | 🟢 **`31.0.00`** — agrees with its ref `v31.0.00` |
+| [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | `openeducat_core/__manifest__.py` | 🟢 **`19.0.1.0`** — the Odoo convention (upstream major `19.0` + module version), agreeing with its `19.0` branch |
+| [`mumuki/mumuki-laboratory`](https://github.com/mumuki/mumuki-laboratory) | `lib/mumuki/laboratory/version.rb` | 🟢 **`9.23.0`** |
+| [`inducer/relate`](https://github.com/inducer/relate) | `pyproject.toml` | 🟢 **`2024.1`** 🟡 — a **calendar** version, and the newest is 2024. **A maintenance signal the 436★ count does not carry.** |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | `package.json` | 🟢 **`0.1.13`** 🟡 — **a sub-1.0 version on a 1.7k★ platform.** Read it before promising production. |
+| 🆕 [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | `pyproject.toml` | 🟢 **`7.0.0`**, newest tag `v7.0.0` — **the only row here where the default branch and the tag ladder agree** |
+
+🔴 **And three negative controls, because an HTTP 200 is not a version.**
+
+| platform | file | HTTP | what it actually carries |
+|---|---|---|---|
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `package.json` | **200** | 🔴 **`"version": "0.0.0"`** — a placeholder. **The market's largest AGPL LMS does not version its root manifest.** |
+| [`openfun/richie`](https://github.com/openfun/richie) | `src/richie/__init__.py` | **200** | 🔴 `from importlib_metadata import version` — **resolved from installed package metadata, so the version is not in the source at all** |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `apps/web/package.json` | **200** | 🔴 **no `version` field in the payload** |
+
+🔵 **With pass 94's negative (`openedx/edx-platform`'s `openedx/__init__.py`, a docstring), that is four
+distinct ways a 200 carries no version.** 🟢 **The instrument rule: a version channel must report
+`NO-VERSION-IN-PAYLOAD` as a value and never fall through to the HTTP code.**
+
+### 🔴 🆕 p95 `P973` has a second form — the `public/` migration leaves a 404 **or** a shim
+
+Pass 94 found Moodle's `version.php` had moved to `public/version.php`, leaving the root 404.
+🟢 **Chamilo made the same migration and handled it the opposite way:**
+
+- `main/install/version.php` → **404**
+- `public/main/install/version.php` → **200**, and its whole body is
+  `return require dirname(__DIR__, 3).'/version.php';` — **a shim pointing back to the repository root**
+- root `version.php` → **200**, carrying the real `3.0.1`
+
+🔴 **So on one platform the `public/` move breaks a root probe; on another it breaks a `public/` probe and
+redirects you home.** 🔵 **A path list alone cannot resolve this — the probe has to be willing to follow a
+one-line `require`.** Recorded as `Gap 378`.
+
+#### Pass 94 — carried below, unchanged
+
 **Pass 94, 2026-10-10.** ⏱️ **Fourth pass of this date.** 🔴 **No licence on this page was re-resolved
 this pass either** — they remain carried at their pass-92/93 SHAs, and the sandbox still refuses to execute
 `grant-ladder-v4/ladder.sh`, so no replacement classifier was written (`P237`, `P970`). 🟢 **What pass 94

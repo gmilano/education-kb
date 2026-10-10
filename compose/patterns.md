@@ -6,6 +6,16 @@ updated: 2026-10-10
 
 # Education — compose patterns
 
+**Pass 95, 2026-10-10.** ⏱️ **Fifth pass of this date.** 🆕 **Two patterns added:** `P95-A`, the **university
+AI-mandate compliance stack** — the first pattern here aimed at a *higher-education* instrument rather than
+a ministry programme, built on Pakistan's HEC notification and `T14` — and `P95-B`, an
+**identity-and-version gate** that extends `P94-B` from the platform to every named dependency, after
+`P980` caught two unrelated projects sharing one name with incompatible grants. 🟢 **`P95-A` is also the
+first pattern to use `ucbds-infra/otter-grader` (BSD-3)**, which replaces an AGPL-only layer.
+🔴 **No pattern below was re-costed this pass**; component SHAs are as each pattern records them.
+
+#### Pass 94 — carried below, unchanged
+
 **Pass 94, 2026-10-10.** ⏱️ **Fourth pass of this date.** 🆕 **Two patterns added:** `P94-A`, the Annex III
 evidence pack for automated scoring — built on pass 94's finding that the *validation* layer is permissive
 and the scorer is not — and `P94-B`, a half-day platform due-diligence gate to run before a quote. 🔴 **No
@@ -609,6 +619,106 @@ component rather than per vendor, and — in the Artemis case — 🟢 **a reada
 `build.gradle` pins around a named CVE (`CVE-2026-55760`) with the reasoning in comments. 🔵 **Half a day,
 and it moves the two discoveries that most often blow a fixed-price education engagement out of week three
 and into week zero.**
+
+## `P95-A` — 🆕 The university AI-mandate compliance stack (APAC first, LATAM and EMEA second)
+
+**The ask it answers.** *"Our regulator just made an AI course compulsory in every degree we offer, told us
+to write our own AI-use policy, and told us to train all staff annually. We have eighteen months and one
+LMS."* 🟢 **This is Pakistan's HEC notification almost verbatim** (3-credit AI course in every UG and PG
+degree from session 2026, plus the August 2026 draft policy: institutional rules, disclosure of AI use,
+annual training, AI literacy in curricula within two years). 🔵 **It also fits India once the
+AICTE/UGC/Nasscom curriculum lands, Quebec's `Cadre de référence`, and Brazil's CNE higher-education
+chapter** — see `intel/trends.md` `T14`.
+
+🟢 **Why it is a new pattern rather than `P91-G` re-aimed.** `P91-G` is a *curriculum factory* for a
+ministry: produce content once, deliver to many schools. 🔴 **This buyer is a single institution that must
+produce evidence about itself, every year, forever.** The deliverable is a **running system**, not a
+syllabus.
+
+**The stack — every row permissive, every row already on this shelf.**
+
+| layer | component | grant | why this one |
+|---|---|---|---|
+| platform | [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) **`10.3`** | 🟢 **MIT** | 🟢 **The only production university platform that is permissive AND already AI-native** — Iris (LLM tutor), Athena (feedback), Hyperion (exercise authoring). Fork it and the deliverable is closable. |
+| platform (alt, if the LMS must stay) | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) **`25.2`** or [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) **`21.0.3`** | 🟢 **ECL-2.0** / **Apache-2.0** | Integrate by LTI 1.3 instead of forking. 🔴 **Pin the TAG, not the default branch** — `P978`: Sakai's root pom says `27-SNAPSHOT`, which nobody can install. |
+| the compulsory course | [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) **`7.0.0`** | 🟢 **BSD-3-Clause** | 🟢 **An AI course is a programming course, so it needs an autograder at cohort scale.** Parallel Docker grading, student-side public checks, and **native Canvas + Gradescope** so it works whether or not the LMS is replaced. 🟢 Payload, manifest and registry all say BSD-3. |
+| mastery evidence | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) + [`nd-ball/py-irt`](https://github.com/nd-ball/py-irt) or [`eribean/girth_mcmc`](https://github.com/eribean/girth_mcmc) **`0.6.0`** | 🟢 **MIT** | Per-skill mastery probability and calibrated item difficulty — **the parameters an accreditation reviewer can be shown.** `girth_mcmc` is new this pass and gives the Bayesian/MCMC estimator. |
+| adaptive delivery | [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 **BSD-3-Clause** | Item selection and stopping rules for a placement test — **AI literacy has to be measured before it can be taught at the right level.** Pin the `dev` branch. |
+| scoring evidence | [`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool) + [`skll`](https://github.com/EducationalTestingService/skll) | 🟢 **Apache-2.0** / **BSD-3** | 🔴 **Only if the institution scores open responses.** `T13`: validate with Apache/BSD, score behind a service boundary. **Do not build the scorer** — `Gap 372`, and the three research candidates are CC BY-SA or ungranted (`P981`). |
+| content packaging | [`tunapanda/h5p-standalone`](https://github.com/tunapanda/h5p-standalone) | 🟢 permissive | Ships the course into whatever LMS survives the engagement. |
+| disclosure workflow | [`celtic-project/LTI-PHP`](https://github.com/celtic-project/LTI-PHP) | 🟡 **LGPL-3.0** | 🔴 **Link, do not absorb.** The draft policy's *"disclosure of AI use"* requirement is an LTI-delivered attestation attached to each submission. |
+
+**Wiring, in the order it gets built.**
+
+1. **Placement first, because the mandate is per-degree and the cohort is not uniform.** `py-irt` or
+   `girth_mcmc` calibrates an AI-literacy item bank → `catsim` runs it adaptively at enrolment. **Output: a
+   per-student entry level and a defensible item bank.**
+2. **Deliver the 3-credit course on Artemis** (or beside the incumbent LMS by LTI 1.3), with **`otter-grader`
+   behind the programming assignments** — Docker-parallel so one cohort does not need one TA per twenty
+   students. 🟢 **This is the row that did not exist before pass 95**; the alternative at this layer was
+   AGPL-3.0 and could not be folded into a closable deliverable.
+3. **Track mastery across the two-year literacy horizon with `pyBKT`**, one model per declared literacy
+   skill. **Output: the annual evidence the regulator's "AI literacy in curricula within two years" clause
+   will be audited against.**
+4. **Attach the disclosure attestation at submission** over LTI, and log it immutably. 🔵 **The policy
+   requires disclosure; an institution that cannot produce the log has not complied even if every student
+   disclosed.**
+5. **Generate the institution's own AI-use policy from its configuration, not from a template.** 🟢 **The
+   draft policy's "universities write their own rules" clause is the recurring-revenue clause** — it must
+   be regenerated as the system changes, which is a retainer rather than a document.
+
+**What it buys, and the cost shape.** 🟢 **8–12 weeks to a first cohort** if Artemis is forked and the
+placement bank is seeded from an existing question set; **add 4 weeks** if the incumbent LMS must stay and
+everything is delivered over LTI. 🔵 **Then it recurs**: the annual staff training, the annual policy
+regeneration and the annual literacy evidence pack are three deliverables per institution per year.
+🟢 **And it replicates** — there are hundreds of institutions under a single HEC-style notification, and
+the second one is a configuration rather than a build.
+
+🔴 **What this pattern does not do.** It does not score essays (`Gap 372`), and it does not claim the
+Pakistani instrument has been read at primary grade — **the notification is search-summary from consistent
+Pakistani press, and the August policy is explicitly a draft** (`intel/market.md`). 🔵 **Quote the course
+mandate as firm and the policy obligations as a drafting-stage likelihood**, not the reverse.
+
+## `P95-B` — 🆕 The identity-and-version gate (global, two hours, run before any dependency is named)
+
+**The ask it answers.** *"Your proposal names eleven open-source components. Are those the components we
+will actually be installing, and do we have the rights to them?"* 🔵 **Pass 95 got both answers wrong on
+the first attempt, twice, and this gate is what caught it.** It **extends `P94-B`** rather than replacing
+it: `P94-B` gates a platform, this gates every named dependency.
+
+**Four checks, no credentials, no API quota.**
+
+1. **Resolve the tool to a REPOSITORY, never to a distribution name** (`P980`). 🔴 **Measured this pass:**
+   `otter-grader` 7.0.0 is [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader),
+   **BSD-3-Clause**; `Otter-Autograder` 0.15.9 is
+   [`OtterDen-Lab/Autograder`](https://github.com/OtterDen-Lab/Autograder), **GPL-3.0**. **Two unrelated
+   projects, both autograders, incompatible grants.** The only disambiguator is the registry's
+   `project_urls` → repository link. 🔵 **A proposal that names "Otter" names neither.**
+2. **Read the grant from the payload at a pinned SHA, across filename variants.** 🔴 **`LICENSE` being 404
+   does not mean ungranted**: `eribean/girth_mcmc` and `eribean/girth` are both **MIT** in `LICENSE.txt`,
+   and `frappe/lms` hid **AGPL-3.0** in lowercase `license.txt` for ninety passes. 🟡 **And do not read
+   PyPI's `info.license` for an identifier** — `Otter-Autograder` pastes the whole 35 kB GPL-3.0 text into
+   that field with `license_expression: None`. **Use the `classifiers` array.**
+3. **Read the version twice: the development line and the shippable one** (`P978`). 🔴 **In every case
+   measured, the default branch names a release that does not exist yet** — Sakai `27-SNAPSHOT` vs tag
+   `25.2`, Opencast `21-SNAPSHOT` vs `20.4`, Moodle `6.0dev` vs `5.3` stable. 🟡 **Fold case before sorting
+   a tag ladder**: OpenOLAT ships tags as both `OpenOLAT_` and `OpenOlat_`, and a case-sensitive sort
+   returns a 20.x pre-release as newest.
+4. **Treat an HTTP 200 as a file, not as an answer.** 🔴 **Four measured ways a 200 carries no version:**
+   `canvas-lms`'s `package.json` says `"0.0.0"`; `richie`'s `__init__.py` resolves from installed metadata;
+   `mentingo`'s `package.json` has no `version` field; `edx-platform`'s `openedx/__init__.py` is a
+   docstring. 🔵 **And a 200 can be an indirection**: Chamilo's `public/main/install/version.php` is a
+   one-line `require` pointing back to the repository root, where the real `3.0.1` lives (`Gap 378`).
+
+**Two cross-checks worth the extra request.** 🟢 **A JVM project's `pom.xml` is a second licence oracle**
+(`P979`) — Sakai's names *"Educational Community License, Version 2.0"*, independently confirming an
+ECL-2.0 row that generic tooling returns as *unclassified*. 🟢 **And a paper is not a licence** (`P981`):
+`RATASv1` and `emorynlp/llm-grading` both describe themselves as publicly released open source and **carry
+no grant at all**, which under copyright default is all rights reserved.
+
+**What it buys.** 🟢 **Two hours, and it removes the two failure modes that are invisible in review:** a
+dependency that is the wrong project under the right name, and a version number that cannot be installed.
+🔵 **Both would have reached a client proposal this pass without it.**
 
 ## `P91-RETIRED` — "the platform is always the client's; the intelligence on top is ours"
 

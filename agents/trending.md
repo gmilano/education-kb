@@ -4,6 +4,119 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 95: the tool you cite by name is not the tool you get
+
+**APPEND-ONLY — history is below. Fifth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:
+00:4x–01:3x; 93: 01:4x–02:24; 94: 02:5x; this one 03:4x).
+
+🔴 **Instrument, stated first — the sandbox refuses to execute repository code for a THIRD consecutive
+pass.** `bash compose/code/grant-ladder-v4/ladder.sh --reach` was denied before it started, as it was in
+passes 93 and 94. 🟢 **So pass 95 wrote no classifier either** (`P237`) and ran the oracle map by hand
+(`P970`): `git ls-remote --symref` → existence/ref/SHA, `raw.githubusercontent.com/<slug>/<SHA>/<file>` →
+payload, HTTP code checked every time, never the byte count alone. 🔵 **Three passes is no longer an
+accident — it is a property of these sessions**, and the honest consequence is recorded in `Gap 376` below:
+this KB's own instrument has now been unrunnable for longer than it was runnable.
+
+**Scope.** 🔵 **14 slugs resolved this pass: 6 licence payload reads, 2 negative controls, 12 version-file
+reads, 4 release ladders, 2 registry-metadata reads.** Pass 92's 133-row census is **not** superseded
+(`P966`); every row not marked 🆕 p95 is carried at an earlier SHA and was **not** re-read. **A `—` in the
+★ column means not read this pass. It never means zero** — and this pass it means the GitHub API returned
+**HTTP 403** for every slug tried, exactly as pass 94 recorded.
+
+### 🔴 🆕 `P980` — two unrelated projects, one name, incompatible grants
+
+This is the finding of the pass, and it was found by *disbelieving a search summary*.
+
+Hunting for `Gap 372`, a search result stated that **"Otter-Autograder is licensed under the GPL-3.0-or-later
+license."** 🟢 **The repository payload said BSD-3-Clause.** Both are true, because **they are not the same
+project**:
+
+| what you cite | PyPI | repository | grant (payload · bytes · ref · SHA) |
+|---|---|---|---|
+| `otter-grader` | `otter-grader` **7.0.0** | [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | 🟢 **BSD-3-Clause** · 1 560 B · `LICENSE` · `master` · `190c1a4` |
+| `Otter-Autograder` | `Otter-Autograder` **0.15.9** | [`OtterDen-Lab/Autograder`](https://github.com/OtterDen-Lab/Autograder) | 🔴 **GPL-3.0** · 35 149 B · `LICENSE` · `main` · `2d9555f` |
+
+🔴 **Different organisations, different repositories, different licences, seven major versions apart — and
+both are autograders for programming coursework.** Resolving "the Otter autograder" by *name* picks between
+them at random; resolving it by *repository* cannot.
+
+🔵 **Why this is `P980` and not just a note.** This KB already holds `p253-registry-first-identity` and
+`p791-registry-id-provenance`, both of which say *resolve identity at the registry*. 🔴 **This pass measures
+the case where the registry itself is the ambiguity**: two distributions, confusable names, same problem
+domain, and the only disambiguator is the `project_urls` → repository link. 🟢 **The rule, stated so it is
+testable: a tool is identified by its REPOSITORY, and a distribution name is a hint, never an identity.**
+
+🟡 **And a second defect in the same reads.** `Otter-Autograder`'s PyPI `license` field does not contain a
+licence *identifier* — it contains **the entire 35 kB GPL-3.0 text pasted into the metadata field**, while
+`license_expression` is `None`. 🔵 A consumer reading `info.license` for an SPDX id gets a licence *document*
+instead; one reading the first 20 characters gets `"GNU GENERAL PUBLIC LI"`. **Prefer the `classifiers`
+array, which was correct for both packages.**
+
+### 🟢 🆕 A permissive production autograder — and it is not the one `Gap 372` asked for
+
+| repo | grant (payload · bytes · file · ref · SHA) | ★ | region | what it is |
+|---|---|---|---|---|
+| 🆕 [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | 🟢 **BSD-3-Clause** · 1 560 B · `LICENSE` · `master` · `190c1a4` | — | 🟢 **North America** (UC Berkeley Data Science Education Program) | 🟢 **Production autograder for Python scripts and Jupyter notebooks at course scale.** Parallel Docker grading, an Otter-managed grading VM, a student-side client for public checks, and **native compatibility with Canvas and Gradescope**. `v7.0.0`, Zenodo DOI, CI and coverage badges live. |
+
+🟢 **Three-layer licence agreement, which this KB rarely gets to record:** the `LICENSE` payload says
+BSD-3-Clause, `pyproject.toml` says `license = "BSD-3-Clause"`, and the PyPI classifier says
+`License :: OSI Approved :: BSD License`. 🔵 **Payload, manifest and registry concur** — contrast
+`P975`/`P342`, where they do not.
+
+🔴 **It does not close `Gap 372`, and saying so matters.** `Gap 372` is about **open-response** scoring —
+essays and constructed responses, the Annex III high-risk activity. **Otter grades code against tests.**
+🟢 **What it does close is a different hole nobody had named:** the assessment tier's only
+automated-feedback platform with real classroom use was `mumuki/mumuki-laboratory` (**AGPL-3.0**, LATAM).
+**There is now a BSD-3 option at that layer**, which changes the deliverable from *integrate across a
+service boundary* to *fork and own*.
+
+### 🔴 `Gap 372` stays open — and now it has three MEASURED negatives instead of a shrug
+
+Pass 94 narrowed `Gap 372` to the scorer. Pass 95 probed the three open-response candidates the literature
+actually names, and **all three fail, in three different ways**:
+
+| candidate | what the paper or index claims | what the payload says |
+|---|---|---|
+| [`edgresearch/code-automaticgrading-2022`](https://github.com/edgresearch/code-automaticgrading-2022) (**GradeAid**, ASAG framework) | published ASAG framework with released code | 🔴 **CC BY-SA 4.0** · 20 130 B · `LICENSE` · `master` · `309bb7e`. **A content licence with a ShareAlike term, applied to software.** Creative Commons itself advises against CC for code; the SA term is a copyleft obligation with no software-specific patent or linking language. **Unusable for a studio deliverable.** |
+| [`datalab912/RATASv1`](https://github.com/datalab912/RATASv1) (rubric-based grading) | *"the authors publicly release all code on GitHub"* | 🔴 **No licence payload in 8 candidate filenames** · `main` · `04dd983` |
+| [`emorynlp/llm-grading`](https://github.com/emorynlp/llm-grading) | *"an open-source auto-grading toolkit"* | 🔴 **No licence payload in 8 candidate filenames** · `master` · `b37150e` |
+
+🔴 **`P981`: "we publicly release our code" in a paper is not a grant.** Two of three repositories here are
+reachable, populated and ungranted — which under copyright default means **all rights reserved**. 🔵 **The
+academic sentence and the legal position point in opposite directions**, and this industry's scoring supply
+is largely academic, so the defect is systematic rather than incidental.
+
+🟢 **So the standing statement of `Gap 372`, now evidence-backed rather than asserted:** *the permissive
+supply for regulated open-response scoring is the **validation** layer (`rsmtool` Apache-2.0, `skll` BSD-3),
+the production scoring code is **copyleft** (`openedx/ease`, `openedx/edx-ora2`, both AGPL-3.0), and the
+research scoring code is **ungranted or CC-licensed**.* **Score behind a service boundary; validate with
+Apache/BSD.** Unchanged in direction, three measurements stronger.
+
+### 🟢 🆕 `eribean/girth_mcmc` — the lead pass 94 named and did not run, discharged
+
+| repo | grant (payload · bytes · file · ref · SHA) | version | what it is |
+|---|---|---|---|
+| 🆕 [`eribean/girth_mcmc`](https://github.com/eribean/girth_mcmc) | 🟢 **MIT** · 1 061 B · **`LICENSE.txt`** · `main` | **0.6.0** | 🟢 Bayesian / MCMC item-response-theory estimation — the sampling companion to `eribean/girth`. **Sixth row in the psychometric tier.** |
+
+🟢 **Triple-confirmed, and worth naming as a method:** the `LICENSE.txt` payload is canonical MIT, `setup.py`
+declares `license="MIT"`, and its classifier says `License :: OSI Approved :: MIT License`. 🔴 **And the row
+is a live argument for the 24-name ladder: `LICENSE` is HTTP 404 here and `LICENSE.txt` is 200.** A probe
+that tries one filename reports this MIT repository as ungranted — which is precisely the defect that made
+`frappe/lms` read as no-grant for ninety passes.
+
+### 🔴 🆕 `Gap 376` — the instrument has been unrunnable for three passes, and that is now the risk
+
+🟡 **Stated plainly because it is the one thing on this shelf getting worse.** `grant-ladder-v4` is this
+KB's hardened, `P237`-compliant instrument with a shared classifier carrying ten registered corrections.
+**It has not been executed since pass 92.** Passes 93, 94 and 95 each re-derived a dozen rows by hand
+instead. 🔴 **The cost is not the hand-work, it is the DENOMINATOR**: the page claims a 133-row census and
+every pass since has measured ~12 rows on top of a 121-row inheritance. 🟢 **The method is sound and the
+coverage is decaying.** 🔵 **What a pass that can execute code must do first — before any new research —
+is re-derive the full census and disagree with these pages on the record.** Everything else on this shelf
+is additive; this is the only thing that is corrective.
+
+---
+
 ## 2026-10-10 — pass 94: the automated-scoring tier is permissive after all, just not the part everyone looks for
 
 **APPEND-ONLY — history is below. Fourth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:

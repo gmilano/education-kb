@@ -1,0 +1,13 @@
+slug	ref	sha	licence_file	http	bytes	family	claim_made_about_it	verdict
+edgresearch/code-automaticgrading-2022	master	309bb7e	LICENSE	200	20130	CC-BY-SA-4.0	published ASAG framework (GradeAid), code released	UNUSABLE -- content licence with ShareAlike obligation applied to software; no patent or linking language
+datalab912/RATASv1	main	04dd983	-	404 x8	-	NO-LICENCE-PAYLOAD/8	"the authors publicly release all code on GitHub"	UNGRANTED -- all rights reserved by copyright default
+emorynlp/llm-grading	master	b37150e	-	404 x8	-	NO-LICENCE-PAYLOAD/8	"an open-source auto-grading toolkit"	UNGRANTED -- all rights reserved by copyright default
+ucbds-infra/otter-grader	master	190c1a4	LICENSE	200	1560	BSD-3-CLAUSE	production autograder, UC Berkeley DSEP	PERMISSIVE -- but grades CODE against TESTS, not open responses; does NOT close Gap 372
+eribean/girth_mcmc	main	-	LICENSE.txt	200	1061	MIT	named by catsim README, unprobed for 2 passes	PERMISSIVE -- Bayesian/MCMC IRT estimation; LICENSE is 404, LICENSE.txt is 200
+eribean/girth_mcmc	main	-	LICENSE	404	14	-	-	negative control: single-filename probe would report this MIT repo as ungranted
+# 8-name reach used this pass: LICENSE LICENSE.md LICENSE.txt LICENCE COPYING license LICENSE-MIT LICENSE-APACHE
+# (narrower than grant-ladder-v4's 24 names -- ladder.sh could not be executed, 3rd consecutive pass. See Gap 376.)
+# P981: "we publicly release our code" in a paper is not a grant.
+# Gap 372 restated with evidence: validation layer is permissive (rsmtool Apache-2.0, skll BSD-3);
+# production scoring code is copyleft (openedx/ease, openedx/edx-ora2, AGPL-3.0);
+# research scoring code is ungranted or CC-licensed. Score behind a service boundary, validate with Apache/BSD.
