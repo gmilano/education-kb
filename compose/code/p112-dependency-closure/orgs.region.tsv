@@ -1,0 +1,73 @@
+# org<TAB>region<TAB>home
+#
+# P112-L. THE REGIONAL PLACEMENT IS A COMMITTED FILE, NOT A DERIVATION.
+# p111 placed 93 of 296 rows by "the maintaining institution's home, using
+# only org prefixes whose home this KB already records", and that map was not
+# written down -- so it cannot be re-run, compared, or corrected. This one is
+# a file. It holds ONLY orgs whose home is unambiguous and recorded on a live
+# page of this KB; personal accounts are never placed, and a row whose org is
+# absent here is left UNPLACED rather than assigned to anybody.
+#
+# This map is p112's own. The placed set is NOT claimed to equal p111's 93,
+# and the two should not be differenced as if they were the same instrument.
+#
+# Contested entries carry a `?` in the home column and are reported
+# separately, never folded into a regional total.
+#
+# ---- EMEA ----------------------------------------------------------------
+opetushallitus	EMEA	Finnish National Agency for Education (FI)
+fwu-de	EMEA	FWU Institut fuer Film und Bild (DE)
+dini-ag-kim	EMEA	DINI/KIM competence centre (DE)
+nextcloud	EMEA	Nextcloud GmbH (DE)
+openfun	EMEA	France Universite Numerique (FR)
+overhangio	EMEA	Tutor / Overhang.IO (FR)
+francoisjacquet	EMEA	RosarioSIS maintainer (FR)
+oat-sa	EMEA	Open Assessment Technologies (LU)
+OpenOLAT	EMEA	frentix GmbH (CH)
+ILIAS-eLearning	EMEA	ILIAS open source e-Learning e.V. (DE)
+INGInious	EMEA	UCLouvain (BE)
+SafeExamBrowser	EMEA	ETH Zuerich (CH)
+digillab-lmu	EMEA	LMU Muenchen DigiLLab (DE)
+# ---- North America -------------------------------------------------------
+adlnet	North America	US DoD Advanced Distributed Learning Initiative
+openedx	North America	Axim Collaborative (US)
+EducationalTestingService	North America	ETS (US)
+libretexts	North America	LibreTexts / UC Davis (US)
+CAHLR	North America	UC Berkeley Computational Approaches to Human Learning
+ucbds-infra	North America	UC Berkeley Data Science (US)
+ed-fi-alliance-oss	North America	Ed-Fi Alliance (US)
+1EdTech	North America	1EdTech Consortium (US)
+oppia	North America	Oppia Foundation (US)
+microsoft	North America	Microsoft (US)
+rstudio	North America	Posit PBC (US)
+instructure	North America	Instructure (US)
+kuali	North America	Kuali Foundation (US)
+OS4ED	North America	Open Solutions for Education (US)
+Submitty	North America	Rensselaer Polytechnic Institute (US)
+learningequality	North America	Learning Equality (US)
+dspace	North America	Lyrasis / DSpace (US)
+temporalio	North America	Temporal Technologies (US)
+elmsln	North America	ELMS:LN / Penn State (US)
+canyongbs	North America	Canyon GBS / Advising App (US) -- region recorded on this KB
+ucfopen	North America	University of Central Florida (US)
+langchain-ai	North America	LangChain (US)
+yetanalytics	North America	Yet Analytics (US)
+sdv-dev	North America	DataCebo / MIT DAI Lab (US)
+MontrealCorpusTools	North America	McGill / Montreal Corpus Tools (CA)
+workforce-data-initiative	North America	Workforce Data Initiative (US)
+# ---- APAC ----------------------------------------------------------------
+aiverify-foundation	APAC	AI Verify Foundation / IMDA (SG)
+project-sunbird	APAC	Sunbird / EkStep Foundation (IN)
+frappe	APAC	Frappe Technologies (IN)
+moodle	APAC	Moodle Pty Ltd (AU)
+xiaochong0302	APAC	course-tencent-cloud maintainer (CN)
+yuanjiusheng	APAC	cloud-learning-ce maintainer (CN)
+pupilfirst	APAC	Pupilfirst (IN) -- region recorded on this KB
+# ---- LATAM ---------------------------------------------------------------
+portabilis	LATAM	Portabilis / i-Educar (BR)
+bncc-dev	LATAM	BNCC curriculum tooling (BR)
+webtech-network	LATAM	Webtech Network autograder (BR)
+# ---- contested: reported, never folded into a total ----------------------
+Apereo-Learning-Analytics-Initiative	EMEA?	p111 placed it EMEA; the Apereo Foundation is US-registered (P112-M)
+opencast	EMEA?	multi-country university consortium, no single home (P112-M)
+huggingface	North America?	US company, large FR engineering base (P112-M)

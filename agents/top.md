@@ -6,6 +6,130 @@ updated: 2026-10-10
 
 # Education — AI agents shelf
 
+**Pass 112, 2026-10-10.** ⏱️ **Twenty-second pass of this date** (110: 19:4x–20:xx UTC;
+111: 20:4x–21:xx; this one 21:4x–22:xx).
+
+🟢 **Instrument this pass: `compose/code/p112-dependency-closure/` — `test_p112.sh`
+**109 passed / 0 failed** (fully offline: real git repositories committed on disk and
+served to the real `depclosure.sh` over `file://`, no mocks); `depclosure.sh` read **296
+of 296** shelf addresses in 4 m 41 s, `rc=0` on every one, **zero unread**, and a
+no-stage-B control run over the same 296 addresses measured this pass's own
+contribution.**
+
+🔵 **It is the sixth axis in six passes and the second read from the TREE. It asks the
+question p111 forces rather than answers: p111 certified 115 rows as `checked` — suite,
+live CI, `pull_request` trigger — but that is a claim about a pipeline on GITHUB'S
+infrastructure, and p110 says two thirds of this shelf has to be vendored and owned
+inside a client estate instead.** 🔴 **Taken off GitHub, 52 of those 115 rows cannot
+reproduce the environment their suite was green against.**
+
+### 🔵 🆕 p112 — the question the five previous axes cannot reach
+
+| pass | axis | reads | answers | cannot say |
+|---|---|---|---|---|
+| p107 | tag **count** | history | how much ref traffic | it inverts at the top of the shelf |
+| p108 | release **identity** | history | *can I pin it* | whether the pin is from 2019 |
+| p109 | commit **recency** | history | *is it alive* | who is keeping it alive |
+| p110 | author **concentration** | history | *what happens if they stop* | whether I can take it over |
+| p111 | verification **surface** | tree | *can I tell when I broke it* | 🔴 **whether that check survives leaving GitHub** |
+| 🟢 **p112** | **dependency closure** | 🟢 **tree** | 🟢 **does it resolve to the same bytes twice** | whether the pinned versions are any good |
+
+### 🔴 🆕 `P112-R` — the agent shelf's closure, and the composable set it leaves
+
+| verdict | meaning | rows on this page | share of 170 |
+|---|---|---|---|
+| 🟢 `pinned` | every lockable ecosystem present is locked | **55** | **32.4 %** |
+| 🔴 `floating` | manifests, no lock anywhere, nothing vendored | **44** | **25.9 %** |
+| 🔵 `no-manifest` | nothing declares dependencies — not applicable | 34 | 20.0 % |
+| 🟡 `partial-pin` | some ecosystems locked, others not | 25 | 14.7 % |
+| 🟡 `self-pinned` | maven only — direct versions literal, transitives resolved | 7 | 4.1 % |
+| 🔵 `foreign-build` | declared in bazel / odoo / moodle-plugin — no claim made | 3 | 1.8 % |
+| 🟢 `vendored` | no lock, but the dependency tree is COMMITTED | 2 | 1.2 % |
+| 🟢 `UNREAD` | fetch failed — no claim made (`P1040`) | 🟢 **0** | 🟢 **0 %** |
+
+🟢 **170 distinct addresses are named on this page. The COMPOSABLE SET — `checked` on
+p111 **and** `pinned` on p112 — is **33 of them (19.4 %)**. Those are the only rows on
+this page a studio can clone today, run, and expect the same result from next quarter.
+Every one carries `rc=0` from a live anonymous `git fetch` executed in THIS pass, which
+is a stronger liveness claim than a `curl -sI` on the HTML page.**
+
+### 🟢 🆕 `P112-S` — the composable set, with the licences that let Globant build on it
+
+🔵 **Licences are carried from this page's prior passes; p112 changed none of them and
+added the closure column. Ordered by suite size.**
+
+| agent / repo | licence | bench | test files | ecosystems | region |
+|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3 | 🟢 broad | 🟢 5 014 | npm,php | APAC (AU) |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | 🟢 broad | 🟢 2 959 | npm,py | North America |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🟡 GPL-3 | 🟡 small | 🟢 2 276 | npm,php,maven | EMEA (DE) |
+| [`temporalio/temporal`](https://github.com/temporalio/temporal) | 🟢 **MIT** | 🟢 broad | 🟢 1 208 | go | North America |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🟡 AGPL-3 | 🟡 small | 🟢 770 | npm,php | North America |
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 **BSD-3** | 🟡 small | 🟢 757 | npm,py,php | North America |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🟡 GPL-2 | 🟡 small | 🟢 469 | npm,php | LATAM (BR) |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 🟡 contested ※ | 🟡 small | 🟢 304 | npm,ruby | APAC (IN) |
+| [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | 🟢 **MIT** | 🟡 small | 251 | npm,py | North America |
+| [`fwu-de/ais-chat`](https://github.com/fwu-de/ais-chat) | 🟢 **MIT** | 🟡 small | 201 | npm | EMEA (DE) |
+| [`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) | 🟢 **Apache-2.0** | 🟡 small | 150 | py | APAC (SG) |
+| [`ucfopen/UDOIT`](https://github.com/ucfopen/UDOIT) | 🟡 GPL-3 | 🟡 small | 18 | npm,php | North America |
+
+🟢 **Twelve rows, and all four regions are in it: North America 5, APAC 3, EMEA 2,
+LATAM 1 — plus `moodle` which is governed globally from an Australian company. This is
+the first list on this page that a North America, EMEA, APAC or LATAM engagement can each
+be started from without borrowing another region's stack.** 🟢 **Four are permissive
+(MIT / Apache-2.0 / BSD-3) and are the ones a client can ship a closed derivative of:
+`temporal`, `langgraph`, `fwu-de/ais-chat`, `moonshot`, with `Submitty` BSD-3 beside
+them.**
+
+🔵 **The further 21 rows of the 33-row composable set are smaller agents and MCP servers
+— `ArnaudGuiovanna/tutor-mcp` (go), `vishalsachdev/canvas-mcp`, `ankimcp/anki-mcp-server`,
+`giacomomaria81/scorm-mcp-server`, `jorickpepin/campus-mcp`, `ait0u5hi/canvas-scholar-mcp`,
+`mitodl/open-learning-ai-tutor`, `ucbds-infra/otter-grader`, `openedx/edx-platform`,
+`learning-commons-org/evaluators`, `bncc-dev/bncc-benchmark`, `bncc-dev/bncc-pacotes`,
+`aiverify-foundation/moonshot-ui`, `aiverify-foundation/moonshot-cicd`,
+`Selleo/mentingo`, `artcc/freelingo`, `lovejzzz/CourseMapper`,
+`MysterionRise/adaptive-knowledge-graph`, `douglasrizzo/catsim`,
+`OtterDen-Lab/Autograder`, `towardsai/ai-tutor-app` — each `checked` and `pinned`, each
+read live this pass.**
+
+🔵 **※ `pupilfirst/pupilfirst` carries a contested licence reading on this KB's live
+pages; `P963` / `P637` / `P342` are the instruments that exist to settle it, and p112 is
+not one of them.**
+
+### 🔴 🆕 `P112-T` — 17 rows on this shelf hold a green check over an unrecorded environment
+
+🔴 **Suite present, live CI, fires on `pull_request` — and not one lockable ecosystem
+locked. The full table is on `agents/trending.md`; the three that matter most here:**
+
+| repo | why it is the sharp case |
+|---|---|
+| [`huggingface/transformers`](https://github.com/huggingface/transformers) | 🔴 **on this KB's own foundation table**: bench 11, 1 797 test files, PR-gated CI, **20 deployment artefacts**, no lockfile |
+| [`openedx/ease`](https://github.com/openedx/ease) | 🔴 **2 005 test files**, `solo` bench, nothing pinned — the second-largest suite in this group |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🔴 the Open edX deployment tool itself: 8 deployment artefacts, `py` only, no lock |
+
+🟢 **16 of the 17 are Python-only or Python-first, so the remedy is one `uv lock` /
+`pip-compile` step per repo at fork time — a day-one line item with a known price, not a
+week-six discovery.**
+
+### 🟢 🆕 `P112-F` measured, not asserted — and it moved this page's own rows
+
+🔵 **Stage B reads the BODIES of `requirements*.txt` files, because a requirements file
+pinned with `==` throughout IS a lock and no filename can tell you which kind you have.
+Ruling every one of them `floating` would have been p111's `P111-F` error in a new
+costume — alarmist about repositories already doing the right thing.**
+
+🟢 **Measured against a control run with stage B disabled: **14 of 296 rows change
+verdict** (9 `floating → pinned`, 4 `partial-pin → pinned`, 1 `vendored → pinned`).
+Without it this KB publishes 93 `pinned` instead of 107, understating its own shelf by
+15 %. `oppia/oppia` and `Submitty/Submitty` — two rows of the composable set above — are
+two of the fourteen.**
+
+---
+
+**Prior passes on this page follow, newest first.**
+
+# Education — AI agents shelf
+
 **Pass 111, 2026-10-10.** ⏱️ **Twenty-first pass of this date** (109: 18:4x–19:xx UTC;
 110: 19:4x–20:xx; this one 20:4x–21:xx).
 
@@ -190,7 +314,6 @@ that is all it means.**
 
 ---
 
-**Prior passes on this page follow, newest first.**
 
 **Pass 110, 2026-10-10.** ⏱️ **Twentieth pass of this date** (108: 17:4x–18:xx UTC;
 109: 18:4x–19:xx; this one 19:4x–20:xx).

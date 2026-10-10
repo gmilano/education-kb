@@ -6,6 +6,95 @@ updated: 2026-10-10
 
 # Education — vertical platforms and solutions
 
+**Pass 112, 2026-10-10.** ⏱️ **Twenty-second pass of this date.**
+
+🟢 **`depclosure.sh` read **296 of 296** addresses, zero unread
+(`compose/code/p112-dependency-closure/`, `test_p112.sh` 109 passed / 0 failed, fully
+offline), with a no-stage-B control run over the same 296.**
+
+🔴 **p111 asked whether a platform tells you what you broke. p112 asks the question that
+decides whether that answer is worth anything in a client's own estate: when your team
+stands this platform up next quarter, does it install the same software it installed
+today?**
+
+### 🟢 🆕 `P112-Z` — the platforms on this page, by dependency closure
+
+| platform | licence | p111 | ecosystems | locked | 🆕 p112 | stand-up verdict |
+|---|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3 | 🟢 `checked` | npm,php | 2 / 2 | 🟢 **`pinned`** | 🟢 **safe — verified and reproducible** |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | 🟢 `checked` | npm,py | 2 / 2 | 🟢 **`pinned`** | 🟢 **safe** |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🟡 GPL-3 | 🟢 `checked` | npm,php,maven | 2 / 2 | 🟢 **`pinned`** | 🟢 **safe** |
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 BSD-3 | 🟢 `checked` | npm,py,php | 🟢 **3 / 3** | 🟢 **`pinned`** | 🟢 **safe — the only 3-ecosystem row on this page that locks all three** |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 Apache-2.0 | 🟡 `tests-only` | npm,maven | 1 / 1 | 🟢 **`pinned`** | 🟢 **upgraded — 1 634 tests on a reproducible tree; supply a pipeline** |
+| [`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud) | 🟡 contested ※ | 🟡 `tests-only` | php | 1 / 1 | 🟢 `pinned` | 🟡 **tree reproducible, bench still 1, licence still contested** |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🟡 AGPL-3 | 🟢 `checked` | npm,ruby,gradle | 🟡 2 / 3 | 🟡 **`partial-pin`** | 🟡 **gradle half unlocked, 38 deployment artefacts** |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 ECL-2.0 | 🟢 `checked` | npm,py,maven | 🟡 1 / 2 | 🟡 `partial-pin` | 🟡 **py half unlocked** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT | 🟢 `checked` | npm,py,gradle | 🟡 2 / 3 | 🟡 `partial-pin` | 🟡 **gradle half unlocked** |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🟡 GPL-2 | 🟡 `partial` | npm,php | 🟡 1 / 2 | 🟡 `partial-pin` | 🔴 **unverified AND half-unpinned** |
+| [`elmsln/elmsln`](https://github.com/elmsln/elmsln) | 🟢 Apache-2.0 | 🔴 `fossil-ci` | npm,php,dotnet | 🔴 1 / 3 | 🟡 `partial-pin` | 🔴 **34 dead CI configs, 2 of 3 ecosystems unlocked** |
+| [`frappe/education`](https://github.com/frappe/education) | 🟢 MIT | — | npm,py | 🟡 1 / 2 | 🟡 `partial-pin` | 🟡 **py half unlocked** |
+| [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 BSD-3 | 🟢 `checked` | maven | — | 🟡 `self-pinned` | 🟡 **direct versions literal, transitives resolved** |
+| [`kuali/rice`](https://github.com/kuali/rice) | 🟢 ECL-2.0 | 🟡 `tests-only` | maven | — | 🟡 `self-pinned` | 🟡 **1 791 tests; supply a pipeline** |
+| [`project-sunbird/sunbird-lms-service`](https://github.com/project-sunbird/sunbird-lms-service) | 🟢 MIT | 🟢 `checked` | maven | — | 🟡 `self-pinned` | 🟡 **19 deployment artefacts on resolved transitives** |
+| [`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce) | 🟢 MIT | 🔴 `bare` | maven | — | 🟡 `self-pinned` | 🔴 **671 source files, nothing verifies them** |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🟡 GPL-2 | 🔴 `fossil-ci` | php | 🔴 0 / 1 | 🟢 **`vendored`** | 🟢 **upgraded — deps COMMITTED, suite runnable offline** |
+| [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | 🟡 GPL-3 | 🟡 `partial` | npm,php | 🔴 0 / 2 | 🟢 **`vendored`** | 🟡 **no lock, but the tree is complete** |
+| [`atutor/ATutor`](https://github.com/atutor/ATutor) | 🟡 GPL-3 ‡ | 🟡 `tests-only` | php | 🔴 0 / 1 | 🟢 **`vendored`** | 🟡 **no lock, but the tree is complete** |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🟡 AGPL-3 | 🟢 `checked` | py | 🔴 **0 / 1** | 🔴 **`floating`** | 🔴 **the Open edX DEPLOYMENT tool does not pin its own deps** |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🟡 GPL-2 | 🔴 `bare` | npm,php | 🔴 **0 / 2** | 🔴 **`floating`** | 🔴 **no suite, no CI, no lock — the worst row on this page** |
+| [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | 🟡 LGPL-3 | 🟡 `tests-only` | — | — | 🔵 **`foreign-build`** | 🔵 **Odoo `__manifest__.py`; no claim made (`P112-N`)** |
+
+🔵 **Licences, bench figures and p111 verdicts are carried from this page's prior passes;
+p112 changed none of them and added three columns.**
+
+🟡 **‡ `atutor/ATutor` is carried as GPL-3 from this page's prior passes, and a prior
+pass of this KB separately found **no licence payload in 24 candidate filenames** in its
+tree. The grant is therefore asserted by this KB's history rather than by the
+repository, and p112 — which measures dependency closure, not licences — does not change
+that. Treat the row as licence-unresolved for any derivative-shipping decision.**
+
+🔴 **※ `xiaochong0302/course-tencent-cloud` still carries CONTRADICTORY licence readings
+on this KB's live pages (`MIT` on two, `GPL-2.0` on two) and p112 declines to pick a side
+— for an LMS the two give opposite answers to "can a client ship a closed derivative".
+`P963` / `P637` / `P342` are the instruments that exist to settle it.**
+
+### 🔴 🆕 `P112-AA` — the deployment tool is the floating row, and that is the finding
+
+🔴 **[`overhangio/tutor`](https://github.com/overhangio/tutor) is how essentially every
+Open edX installation in the field gets stood up. It is `checked` on p111, it ships **8
+deployment artefacts**, it has a `broad` bench — and its single Python ecosystem is
+unlocked. The tool whose entire job is reproducing an installation does not pin the
+environment it runs in.**
+
+🟢 **For an Open edX engagement this is a concrete, week-one line item: pin `tutor` in
+your own fork (`uv pip compile` against the vendored SHA, lock committed beside it)
+BEFORE building any plugin against it, because every environment drift after that point
+is debugged through your plugin instead of through `tutor`.**
+
+### 🟡 🆕 `P112-AB` — the SIS tier, third reading, and its exposure has changed shape
+
+🔵 **p110 found every SIS on this page without an institutional bench exposed; p111 found
+the same tier the worst-verified. p112 splits the tier in a way neither could:**
+
+| SIS | bench | p111 | p112 | the engagement shape it implies |
+|---|---|---|---|---|
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) (BR) | 🟡 small | 🟢 `checked` | 🟢 `pinned` | 🟢 **build on it** |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) (US) | 🟡 pair | 🔴 `fossil-ci` | 🟢 `vendored` | 🟡 **fork it, add a pipeline** |
+| [`ed-fi-alliance-oss/Ed-Fi-ODS`](https://github.com/ed-fi-alliance-oss/Ed-Fi-ODS) (US) | 🟡 small | 🟢 `checked` | 🔴 **`floating`** | 🟡 **fork it, pin it first** |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) (FR) | 🔴 1 | 🔴 `bare` | 🔴 **`floating`** | 🔴 **rewrite, or do not start here** |
+| [`Jasig/SSP`](https://github.com/Jasig/SSP) (US) | — | 🟡 `tests-only` | 🟡 `self-pinned` | 🟡 **maven: resolvable, not locked** |
+
+🟢 **`portabilis/i-educar` is the only student-information system on this shelf that
+passes all three axes, and it is LATAM. For a Brazilian or Spanish-speaking LATAM
+engagement that is a genuine, nameable head start; for North America the honest statement
+is that `Ed-Fi-ODS` must be pinned by the fork before anything is built on it.**
+
+---
+
+**Prior passes on this page follow, newest first.**
+
+# Education — vertical platforms and solutions
+
 **Pass 111, 2026-10-10.** ⏱️ **Twenty-first pass of this date.**
 
 🟢 **`vsurface.sh` read **296 of 296** addresses, zero unread
@@ -92,7 +181,6 @@ for years.**
 
 ---
 
-**Prior passes on this page follow, newest first.**
 
 **Pass 110, 2026-10-10.** ⏱️ **Twentieth pass of this date.**
 

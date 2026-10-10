@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-10
 ---
 
+# Education — market intelligence
+
+**Pass 112, 2026-10-10.** ⏱️ **Twenty-second pass of this date.**
+
+🔴 **ZERO new market items this pass, from eight searches in extended mode — the EIGHTH
+consecutive zero. 26 candidate tokens extracted and checked one at a time; **25 of 26 are
+already held** on a live page of this KB.**
+
+🔴 **The one exception did not survive its own verification (`P112-P`): a market report's
+claim that **Baidu's ERNIE has entered the Indonesian and Thai education markets through
+partnerships** was given a dedicated confirming search and NO corroborating report
+exists. The search returned an Indonesia–Thailand education MoU with no Baidu
+involvement, a Baidu Education company profile covering China only, and the 2023 ERNIE
+Bot launch release. It is recorded as a failed verification and is published nowhere on
+this KB as a finding.**
+
+🟢 **`depclosure.sh` read **296 of 296** addresses, zero unread
+(`compose/code/p112-dependency-closure/`, `test_p112.sh` 109 passed / 0 failed, fully
+offline), plus a no-stage-B control over the same 296.**
+
+### 🔴 🆕 `P112-AC` — the supply side, measured a third way, and the number drops again
+
+| axis | pass | the buildable share of 296 addresses |
+|---|---|---|
+| bench (not `solo`, i.e. ≥ 2 authors) | p110 | 🔴 32.4 % |
+| verification (`checked`) | p111 | 🔴 38.9 % |
+| 🆕 closure (`pinned`) | 🟢 **p112** | 🔴 **36.1 %** |
+| 🆕 **verification ∧ closure** | 🟢 **p111 ∧ p112** | 🔴 **21.3 % (63 of 296)** |
+| 🆕 **bench (`small`/`broad`, ≥ 3 authors) ∧ verification ∧ closure** | 🟢 **p110 ∧ p111 ∧ p112** | 🔴 **4.1 % (12 of 296)** |
+
+🔴 **No market report on this page can see this figure, and it is the one that decides
+whether a studio engagement can start from open source. The category's reported growth
+rate is a DEMAND statement; 12 repositories is the SUPPLY statement, and the two are
+routinely quoted as if the second followed from the first.**
+
+### 🟢 🆕 `P112-AD` — closure placed by region, and it INVERTS p111's ranking
+
+🔵 **Method, stated because it bounds the claim: rows are attributed by the maintaining
+institution's home, from a **committed map** (`compose/code/p112-dependency-closure/orgs.region.tsv`,
+`P112-L`) holding only orgs whose home is unambiguous and recorded on a live page of this
+KB. Personal accounts are never placed; three orgs are recorded as CONTESTED (`P112-M`)
+and excluded from every total rather than assigned. **93 of 296 rows** are placed — the
+same count p111 reached, which is a coincidence: p111's map was not written down, so the
+two sets are NOT asserted to be the same rows and must not be differenced as if they
+were.**
+
+| region | rows placed | 🟢 `pinned` | 🔴 `floating` | p111 `checked` | the inversion |
+|---|---|---|---|---|---|
+| 🟢 **EMEA** | 30 | 🟢 **15 (50 %)** | 8 (27 %) | 🔴 24 % | 🟢 **worst on p111, best here** |
+| APAC | 13 | 🟢 6 (46 %) | 🟢 **0 (0 %)** | 🟡 43 % | 🟢 **no floating row at all** |
+| LATAM | 7 | 🟡 3 (43 %) | 1 (14 %) | 🟢 62 % | 🟡 led p111, mid here |
+| 🔴 **North America** | 43 | 🔴 **14 (33 %)** | 🔴 **15 (35 %)** | 🟢 57 % | 🔴 **best on p111, worst here** |
+
+🔴 **North America is the only region on this shelf where `floating` rows OUTNUMBER
+`pinned` ones. EMEA, which p111 ranked last on verification by a wide margin, leads
+closure. These are not the same quality and a buyer who hears "the US open-source
+education stack is the best-tested" is hearing something true that does not transfer.**
+
+🟢 **APAC's zero is the single cleanest regional result either pass has produced: all 13
+placed APAC rows either lock every ecosystem (6), self-pin through maven (3) or lock part
+of a polyglot tree (3), and exactly one declares no dependencies. Not one APAC-placed row
+ships manifests with nothing resolving them.**
+
+---
+
+**Prior passes on this page follow, newest first.**
+
 # Education — market, players and opportunities
 
 **Pass 111, 2026-10-10.** ⏱️ **Twenty-first pass of this date.**
@@ -95,7 +162,6 @@ directions — it is not a sampling artefact.**
 
 ---
 
-**Prior passes on this page follow, newest first.**
 
 **Pass 110, 2026-10-10.** ⏱️ **Twentieth pass of this date.**
 
@@ -638,6 +704,51 @@ KB: write down what you refused to use, and why.**
 ## Opportunities by region
 
 ### North America
+
+#### 🔴 🆕 p112 North America — the best-tested regional stack on this shelf is also the least reproducible
+
+🔴 **Measured, 43 placed rows: `floating` 15 (35 %) OUTNUMBERS `pinned` 14 (33 %), plus
+`partial-pin` 6, `self-pinned` 2, `foreign-build` 2, `vendored` 1, `no-manifest` 3. NA is
+the only region on this shelf where that inequality holds, and it sits directly against
+p111's finding that NA has the deepest `checked` tier (17 of 30 attributed code rows).**
+
+🔴 **The floating set is specific and it is concentrated in research-lab and
+standards-body code:
+[`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool)
+(8 347 test files), `factor_analyzer`, `skll` — all three —
+[`ed-fi-alliance-oss/Ed-Fi-ODS`](https://github.com/ed-fi-alliance-oss/Ed-Fi-ODS) (423
+tests, `checked` on p111), [`openedx/ease`](https://github.com/openedx/ease) (2 005
+tests), [`1EdTech/openbadges-specification`](https://github.com/1EdTech/openbadges-specification)
+and `openbadges-validator-core`, [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT),
+[`MontrealCorpusTools/Montreal-Forced-Aligner`](https://github.com/MontrealCorpusTools/Montreal-Forced-Aligner),
+[`sdv-dev/sdv`](https://github.com/sdv-dev/sdv), `rstudio/ggcheck`, `rstudio/tblcheck`,
+`ucbds-infra/ottr`, `adlnet/SCORM-to-TLA-Roadmap` and
+[`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners).**
+
+🟢 **Opportunity, and it is a sellable one rather than a caveat: in a US engagement the
+pinning work is the differentiator. The region's code is well tested, so a studio that
+arrives with a fork-and-pin step (`P112-PAT-1` on `compose/patterns.md`) converts an
+existing, credible test suite into a reproducible one in days — and the client's own
+supply-chain and FedRAMP-adjacent review will ask for exactly that artefact. Quote it as
+a deliverable, not as remediation.**
+
+🟢 **The reference row to quote back: [`Submitty/Submitty`](https://github.com/Submitty/Submitty)
+(RPI, BSD-3) locks all THREE of its ecosystems — npm, py and php — and is the only
+three-ecosystem repository on this shelf that does. It is the US answer to "show me what
+good looks like".**
+
+🔴 **The day-one budget line: an assessment-analytics engagement touching ETS code pays
+for an environment AND a pipeline before it writes a feature — 0 of 3 repos pinned, 0 of
+3 PR-gated (`P111-M`). That is two unbudgeted halves, and this is the page they should be
+budgeted from.**
+
+🔵 **Regulatory context is unchanged and already held here: 134 AI-in-education bills
+across 31 states, California `AB 1159` on student data for model training, Idaho
+`SB 1227`, the Oklahoma and Maryland human-oversight duties, Ohio's requirement that
+every district adopt an AI policy by 1 July 2026, and `H.R. 8747` at federal level. The
+p112 contribution to that picture: a pinned, reproducible build is the cheapest evidence
+a district-level AI policy review can actually be shown.**
+
 
 #### 🟢 🆕 p111 North America — the verification surface, and what it changes here
 
@@ -1204,6 +1315,49 @@ adoption.** 🔴 **So a North America pitch that leads with adoption is pushing 
 regulatory grain; one that leads with governance, auditability and teacher-augmentation is with it.**
 
 ### EMEA
+
+#### 🟢 🆕 p112 EMEA — the region p111 ranked last leads this axis, and Finland is the reason
+
+🟢 **Measured, 30 placed rows: `pinned` 15 (50 %) — the best share on the shelf —
+`floating` 8 (27 %), `no-manifest` 4, `partial-pin` 2, `self-pinned` 1. p111 put EMEA
+LAST on verification at 24 % `checked`. The ordering reverses.**
+
+🟢 **`opetushallitus` (Finnish National Agency for Education) is the single largest cause:
+**8 of 8 repositories `pinned`** — `koski`, `ataru`, `ehoks`, `eperusteet`,
+`oppijanumerorekisteri`, `organisaatio`, `suorituspalvelu`, `valtionavustus`. On p111
+seven of those eight were `partial`: real suites that no pull request runs.**
+
+🟢 **Opportunity, and it is the cheapest regional entry on this page: the Finnish stack
+stands up deterministically TODAY. What it lacks is a pipeline a contributor can trigger.
+Supplying CI is a days-to-weeks engagement with a visible artefact; supplying a
+reproducible environment — what a North American engagement on the same page has to buy
+— is months. A Nordic public-sector engagement should be scoped as "wire the suites that
+already exist", and that sentence is defensible repo by repo from this KB.**
+
+🔴 **The EMEA floating set, named: [`overhangio/tutor`](https://github.com/overhangio/tutor)
+(the Open edX deployment tool itself, 8 deployment artefacts),
+[`INGInious/INGInious`](https://github.com/INGInious/INGInious) (UCLouvain),
+[`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) (ETH
+Zürich), [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis),
+`openfun/xblock-proctor-exam` (France Université Numérique) and three `nextcloud` AI
+backends (`context_chat_backend`, `translate2`, `text2image_stablediffusion2`). The
+proctoring and exam-security rows floating is the one to raise first — those are the
+components an institution is least able to reason about after an unreproducible build.**
+
+🟡 **`Apereo-Learning-Analytics-Initiative` is 5 of 6 `self-pinned` (maven) and 1
+`floating`, which is better than p111's reading of it (3 `fossil-ci` on Travis, 2
+`tests-only`, 1 `bare`) implied — the trees resolve even where nothing runs them. Its
+regional placement is CONTESTED (`P112-M`) and it is excluded from the totals above.**
+
+🔵 **Regulatory context, already held: education uses sit in EU AI Act Annex III, the
+omnibus moved standalone high-risk systems to 2 December 2027 and embedded ones to
+2 August 2028, the Article 4 AI-literacy duty has applied since 2 February 2025, and the
+Act reaches non-EU providers whose output is used in the EU. The p112 point a compliance
+conversation can use: Annex III conformity assessment asks what the system IS, and a
+`floating` build cannot answer that question twice the same way. Pinning is not a
+nice-to-have in this region — it is the precondition for the technical documentation the
+Act asks for.**
+
 
 #### 🟢 🆕 p111 EMEA — the verification surface, and what it changes here
 
@@ -2025,6 +2179,45 @@ duty is the sellable deliverable that is already overdue.**
 
 ### APAC
 
+#### 🟢 🆕 p112 APAC — not one placed APAC row floats, and Singapore is the only body on this shelf that does all three things
+
+🟢 **Measured, 13 placed rows: `pinned` 6 (46 %), `self-pinned` 3, `partial-pin` 3,
+`no-manifest` 1, and 🟢 **`floating` 0 (0 %)** — the only region on the shelf with none.
+Every APAC-placed row that declares dependencies resolves at least part of them.**
+
+🟢 **`aiverify-foundation` (AI Verify Foundation / IMDA Singapore) is the only public body
+on this shelf that writes test suites, wires them to a PR-gated pipeline AND pins its
+dependencies: [`moonshot`](https://github.com/aiverify-foundation/moonshot),
+[`moonshot-cicd`](https://github.com/aiverify-foundation/moonshot-cicd) and
+[`moonshot-ui`](https://github.com/aiverify-foundation/moonshot-ui) are all `checked` and
+all `pinned`, all Apache-2.0 (`llm-evals-catalogue` is a catalogue and correctly
+`no-manifest`).**
+
+🟢 **Opportunity: for an AI-assurance, assessment-integrity or model-evaluation engagement
+anywhere in APAC, the Moonshot trio is the lowest-friction open-source starting point this
+KB holds, and `P112-PAT-3` on `compose/patterns.md` wires it to a `pinned` Moodle as a
+complete, reproducible harness. The permissive licence means a client can ship a closed
+derivative of the harness while still producing the scored run their regulator asks for.**
+
+🔵 **Jurisdictional fit for that pattern, all already held here: Korea's Framework Act
+took effect 22 January 2026 and treats AI in education as high-impact with human-oversight
+and disclosure duties (penalties in a one-year grace period), Vietnam enacted Law
+`134/2025/QH15` on 1 March 2026, Japan remains light-touch and voluntary, Singapore leads
+the ASEAN Working Group on AI Governance with `AI Verify`, and Indonesia plans
+education-specific rules under its PDP law. A reproducible, scored evaluation run is the
+evidence the Korean and Singaporean regimes actually ask for — and this is the region
+whose code can already produce one.**
+
+🟡 **The gap in the region, stated: `project-sunbird` (India) is 2 `self-pinned` + 1
+`partial-pin` — maven transitives resolve rather than lock — and `frappe/education` and
+`frappe/lms` are both `partial-pin` with their Python half unlocked. For an Indian
+engagement the pinning work is real but bounded, and it is the Python half specifically.**
+
+🟢 **[`moodle/moodle`](https://github.com/moodle/moodle) — governed from Australia — is
+`checked` and `pinned` on both ecosystems, and is the one platform on this shelf that
+passes every axis p107–p112 have applied.**
+
+
 #### 🟢 🆕 p111 APAC — the verification surface, and what it changes here
 
 🟡 **Middle of the ranking — 6 of 14 attributed code rows `checked` (43 %) — and sharply
@@ -2774,6 +2967,50 @@ the permission argument first — except in ANZ, where it does.** 🔴 **That is
 North America posture recorded above, and the two pitches should not share a slide.**
 
 ### LATAM
+
+#### 🟡 🆕 p112 LATAM — the region that led verification holds the only fully-closed SIS line on the shelf, and it is three repositories wide
+
+🟢 **Measured, 7 placed rows: `pinned` 3 (43 %), `partial-pin` 2, `no-manifest` 1,
+`floating` 1. p111 ranked LATAM FIRST on verification (62 % `checked`); on closure it is
+mid-table, and the reason is narrowness rather than weakness — seven placed rows is the
+smallest placed set of any region here, and that is itself the finding.**
+
+🟢 **The fully-closed line: [`portabilis/i-educar`](https://github.com/portabilis/i-educar)
+(`checked` + `pinned`) is the ONLY student-information system on this entire shelf that
+passes bench, verification and closure together. Beside it
+[`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) and
+[`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) are both `checked`
++ `pinned`, which makes `P112-PAT-2` on `compose/patterns.md` the only full-stack pattern
+in this KB whose every component is verified and reproducible.**
+
+🟢 **Opportunity: a Brazilian K-12 engagement can start from a SIS of record, a BNCC
+competency vocabulary and a BNCC regression suite that all stand up deterministically,
+and add MIT-licensed orchestration (`langgraph`, `temporal`) on top without touching the
+GPL-2 boundary. No other region on this page offers that whole line.**
+
+🟡 **The named gaps, so the pattern is priced honestly: `portabilis/i-diario` and
+`portabilis/pre-matricula-digital` are `partial-pin`, `bncc-dev/bncc-dados` is a dataset
+and correctly `no-manifest`, and
+[`webtech-network/autograder`](https://github.com/webtech-network/autograder) is the
+region's single `floating` row — `checked` on p111, 110 test files, 8 deployment
+artefacts, nothing pinned. Pin those three at fork time (`P112-PAT-1`) and the LATAM line
+is closed end to end.**
+
+🔵 **Demand-side context, already held: the UNESCO IESALC / UNU-IAS study of 200
+institutions across 19 countries (87 % use AI in at least one area, 26 % have a formal AI
+strategy), the Digital Education Council's survey of 7,319 faculty across 29 institutions
+(79 % use AI in teaching, 88 % at minimal-to-moderate depth, assessment uses lowest), the
+UNESCO LAC Observatory launched 14 April 2026 at ECLAC Santiago with CAF, CENIA, CETIC.br,
+Fundación Santillana, Tec de Monterrey, ProFuturo and Fundación Ceibal, Colombia's CONPES
+4144, Peru's risk-based framework and Uruguay's signature of the Council of Europe
+Framework Convention.**
+
+🔴 **The p112 reading of that demand picture: 87 % institutional adoption against 26 %
+with a strategy is a governance gap, and a governance gap is exactly what a reproducible
+build serves — an institution cannot write a defensible AI policy about a system that
+installs differently every quarter. The LATAM supply side can support that conversation
+today for K-12 Brazil specifically, and for almost nothing else on this shelf.**
+
 
 #### 🟢 🆕 p111 LATAM — the verification surface, and what it changes here
 

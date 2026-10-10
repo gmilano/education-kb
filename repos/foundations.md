@@ -6,6 +6,137 @@ updated: 2026-10-10
 
 # Education — foundational repos
 
+**Pass 112, 2026-10-10.** ⏱️ **Twenty-second pass of this date.**
+
+🟢 **`depclosure.sh` read **296 of 296** addresses in 4 m 41 s, zero unread
+(`compose/code/p112-dependency-closure/`, `test_p112.sh` 109 passed / 0 failed, fully
+offline), plus a no-stage-B control run over the same 296 for this pass's own
+contribution.**
+
+🔴 **p111 gave "foundational" a TREE test and shrank this page to nine `checked` code
+repositories. p112 gives the same nine a REPRODUCIBILITY test, and three of them pass
+it.**
+
+### 🔴 🆕 `P112-U` — the nine, re-read on dependency closure
+
+🔵 **`pinned` = every lockable ecosystem in the tree has a lockfile (or, per `P112-F`, a
+`requirements.txt` pinned with `==` throughout). Licences and bench figures are carried
+from this page's prior passes; this pass changed neither and added four columns.**
+
+| repo | licence | bench | p111 | ecosystems | locked | 🆕 p112 verdict |
+|---|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3 | 🟢 9 | 🟢 `checked` | npm,php | 2 / 2 | 🟢 **`pinned`** |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | 🟢 6 | 🟢 `checked` | npm,py | 2 / 2 | 🟢 **`pinned`** |
+| [`temporalio/temporal`](https://github.com/temporalio/temporal) | 🟢 MIT | 🟢 11 | 🟢 `checked` | go | 1 / 1 | 🟢 **`pinned`** |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 ECL-2.0 | 🟢 6 | 🟢 `checked` | npm,py,maven | 🟡 1 / 2 | 🟡 **`partial-pin`** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT | 🟢 7 | 🟢 `checked` | npm,py,gradle | 🟡 2 / 3 | 🟡 **`partial-pin`** |
+| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🟡 AGPL-3 | 🟢 7 | 🟢 `checked` | npm,py | 🟡 1 / 2 | 🟡 **`partial-pin`** |
+| [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 BSD-3 | 🟢 16 | 🟢 `checked` | maven | — | 🟡 **`self-pinned`** |
+| [`huggingface/transformers`](https://github.com/huggingface/transformers) | 🟢 Apache-2.0 | 🟢 11 | 🟢 `checked` | py | 🔴 **0 / 1** | 🔴 **`floating`** |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🟡 AGPL-3 | 🟢 6 | 🟢 `checked` | py | 🔴 **0 / 1** | 🔴 **`floating`** |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🟡 GPL-2 | 🟢 6 | 🟡 `partial` | npm,php | 🟡 1 / 2 | 🟡 **`partial-pin`** |
+| [`lukeslp/awesome-accessibility`](https://github.com/lukeslp/awesome-accessibility) | 🟢 MIT | 🟢 6 | 🔵 `no-code` | — | — | 🔵 **`no-manifest`** |
+
+🟢 **So the foundation layer of this KB, after three independent tests (bench, tree
+verification, tree closure), is **three repositories**: `moodle/moodle`,
+`oppia/oppia` and `temporalio/temporal`. Three of 296 addresses is 1.0 % of the
+shelf — down from p111's nine (3.0 %) and p110's eleven (3.7 %), and now resting on a
+test each previous axis could not apply.**
+
+### 🔴 🆕 `P112-V` — `huggingface/transformers` is the most consequential single row on this page
+
+🔴 **It has the second-widest bench on the shelf (11 authors), 1 797 test files, CI that
+names a runner and fires on `pull_request`, **20 deployment artefacts in the tree** — and
+not one lockfile. Its `py` ecosystem declares ranges and nothing resolves them.**
+
+🔵 **Why that is a foundation-level finding rather than a nit: every pattern on
+`compose/patterns.md` that touches inference, tokenisation or fine-tuning goes through
+this repository, and p110 established that two thirds of this shelf must be vendored at a
+SHA rather than depended on. Vendoring `transformers` at a SHA vendors the CODE and
+leaves the ENVIRONMENT floating — and it is the one repository on this page where the
+environment is the hard part.**
+
+🟢 **The remedy is cheap, nameable and belongs in an engagement's week one: resolve and
+commit the environment yourself (`uv pip compile` / `pip-compile` against the vendored
+SHA, committed beside it), and treat the resulting lock as a deliverable of the fork
+rather than an artefact of CI. The same step covers `overhangio/tutor`, and the two
+together cover both floating rows on this page.**
+
+### 🟢 🆕 `P112-W` — the wider dependable set: `checked` + `pinned`, bench `small` or better
+
+🔵 **Three rows is too narrow to source an engagement from. Relaxing the bench to `small`
+(3–5 authors) while REQUIRING both a `checked` tree and a `pinned` one gives the set that
+is staffed, verifiable and reproducible at once:**
+
+| repo | licence | bench | test files | ecosystems | region |
+|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3 | 🟢 broad | 🟢 5 014 | npm,php | APAC (AU) |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | 🟢 broad | 🟢 2 959 | npm,py | North America |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🟡 GPL-3 | 🟡 small | 🟢 2 276 | npm,php,maven | EMEA (DE) |
+| [`temporalio/temporal`](https://github.com/temporalio/temporal) | 🟢 **MIT** | 🟢 broad | 🟢 1 208 | go | North America |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🟡 AGPL-3 | 🟡 small | 🟢 770 | npm,php | North America |
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 **BSD-3** | 🟡 small | 🟢 757 | npm,py,php | North America |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🟡 GPL-2 | 🟡 small | 🟢 469 | npm,php | LATAM (BR) |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 🟡 contested | 🟡 small | 🟢 304 | npm,ruby | APAC (IN) |
+| [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | 🟢 **MIT** | 🟡 small | 251 | npm,py | North America |
+| [`fwu-de/ais-chat`](https://github.com/fwu-de/ais-chat) | 🟢 **MIT** | 🟡 small | 201 | npm | EMEA (DE) |
+| [`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) | 🟢 **Apache-2.0** | 🟡 small | 150 | py | APAC (SG) |
+| [`ucfopen/UDOIT`](https://github.com/ucfopen/UDOIT) | 🟡 GPL-3 | 🟡 small | 18 | npm,php | North America |
+
+🟢 **Twelve rows, every region represented, five of them permissive. This is the honest
+answer to "what can Globant build on in open-source education" — 12 of 296 addresses,
+4.1 %, each one read live this pass with `rc=0`.**
+
+### 🟢 🆕 `P112-X` — three `tests-only` rows whose trees ARE reproducible, which changes their price
+
+🔵 **p111 ruled these "big suite, no pipeline" or worse. p112 finds the expensive half
+already done: the dependency set resolves, so a fork can run that suite on day one and
+only needs a pipeline pointed at it.**
+
+| repo | licence | p111 | 🆕 p112 | what the fork actually has to supply |
+|---|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 Apache-2.0 | 🟡 `tests-only`, 1 634 tests | 🟢 **`pinned`** | 🟢 a CI pipeline only |
+| [`kuali/rice`](https://github.com/kuali/rice) | 🟢 ECL-2.0 | 🟡 `tests-only`, 1 791 tests | 🟡 `self-pinned` (maven) | a pipeline; transitives resolve, not locked |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🟡 GPL-2 | 🔴 `fossil-ci` (Travis) | 🟢 **`vendored`** | 🟢 a pipeline; **deps are committed in-tree** |
+
+🔴 **`OS4ED/openSIS-Classic` is the correction worth carrying: `fossil-ci` reads as the
+worst verdict on p111's ladder, and its dependency tree is committed, so its suite is
+runnable offline today. The p111 verdict priced it as a rewrite; p112 prices it as a
+pipeline.**
+
+### 🔵 🆕 `P112-Y` — 20 code-bearing rows declare no dependencies, and 7 declare them somewhere this instrument cannot read
+
+🟢 **All 31 rows p111 called `no-code` come back `no-manifest` here — 31 of 31, from a
+different file set entirely. Two independent tree axes agree exactly on which rows of
+this shelf are not software.**
+
+🔴 **The remainder is where the first draft of this pass was WRONG, and the correction is
+recorded rather than quietly applied (`P112-N`). Seven rows declare dependencies in a
+build system `depclosure.sh` does not resolve, and the draft reported all seven as
+declaring NOTHING:**
+
+| repo | source files | declares its dependencies in |
+|---|---|---|
+| [`oppia/oppia-android`](https://github.com/oppia/oppia-android) | 🟢 1 213 | Bazel `WORKSPACE` + `BUILD.bazel` |
+| [`microsoft/o365-moodle`](https://github.com/microsoft/o365-moodle) | 🟢 352 | Moodle plugin `version.php` (`$plugin->dependencies`) |
+| [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | 163 | Odoo `__manifest__.py` |
+| [`sngdtechnologies/ai-moodle-security`](https://github.com/sngdtechnologies/ai-moodle-security) | 35 | Moodle plugin `version.php` |
+| [`alvarogregori/moodle-ai-graded-assignment`](https://github.com/alvarogregori/moodle-ai-graded-assignment) | 32 | Moodle plugin `version.php` |
+| [`jeanlucio/moodle-local_aihub`](https://github.com/jeanlucio/moodle-local_aihub) | 25 | Moodle plugin `version.php` |
+| [`limekiller/moodle-block_openai_chat`](https://github.com/limekiller/moodle-block_openai_chat) | 16 | Moodle plugin `version.php` |
+
+🟢 **They are now `foreign-build`, which makes NO reproducibility claim in either
+direction. The pattern inside it is useful on its own: five of the seven are Moodle
+plugins, so the Moodle plugin layer of this shelf is invisible to every manifest-based
+supply-chain tool a client is likely to already own — and that is worth saying in a
+Moodle engagement before the client's scanner says it instead.**
+
+---
+
+**Prior passes on this page follow, newest first.**
+
+# Education — foundational repos
+
 **Pass 111, 2026-10-10.** ⏱️ **Twenty-first pass of this date.**
 
 🟢 **`vsurface.sh` read **296 of 296** addresses in 9 m 41 s, zero unread
@@ -134,7 +265,6 @@ and it converts a `tests-only` platform into a `checked` one for whoever does it
 
 ---
 
-**Prior passes on this page follow, newest first.**
 
 **Pass 110, 2026-10-10.** ⏱️ **Twentieth pass of this date.**
 

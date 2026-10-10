@@ -4,6 +4,96 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 112: the green badge is not a reproducible tree — 17 `checked` rows resolve their dependencies differently every morning, `huggingface/transformers` among them
+
+🔵 **No new education-specific agent reached this shelf this pass, for the EIGHTH
+consecutive pass. 26 candidate tokens extracted from the eight mandated queries (four
+global, four regional, extended mode), **25 of 26 already held**. The single exception —
+a market report's claim that Baidu's ERNIE has entered the Indonesian and Thai education
+markets through partnerships — was given its own verification search and **no
+corroborating report exists**, so it is recorded as a failed verification rather than
+published as a finding (`P112-P`).**
+
+🟢 **Instrument: `compose/code/p112-dependency-closure/`, `test_p112.sh` **109 passed /
+0 failed** (fully offline — real git repositories committed on disk and served to the
+real `depclosure.sh` over `file://`, no mocks); `depclosure.sh` read **296 of 296**
+addresses in 4 m 41 s, **zero unread**, with a no-stage-B control run over the same 296
+for the same figure.**
+
+### What is new this week: the agent shelf's suites run on an environment nobody wrote down
+
+🔵 **p112 is the sixth axis in six passes and the second read from the TREE. The question
+is the one p111 forces: p111 put 115 of 296 rows at `checked` — a suite, a live CI
+system, a `pull_request` trigger — but `checked` is a claim about a pipeline on GITHUB'S
+infrastructure, and p110 says 200 of 296 rows are one person and must therefore be
+vendored and owned inside a client estate. The moment the suite moves off GitHub Actions,
+"CI runs the suite" becomes "a suite ran once, against whatever the registries served
+that morning".**
+
+| axis | pass | the shelf |
+|---|---|---|
+| releases | p108 | pinnable |
+| liveness | p109 | alive |
+| bench | p110 | 🔴 67.6 % one person |
+| verification | p111 | 🔴 38.9 % can tell you when you broke it |
+| 🟢 **closure** | 🟢 **p112** | 🔴 **21.3 % can tell you when you broke it AND resolve twice** |
+
+🟢 **Over the 170 distinct addresses named on `agents/top.md`: `pinned` 55 (32.4 %),
+`floating` 44 (25.9 %), `partial-pin` 25 (14.7 %), `no-manifest` 34 (20.0 %),
+`self-pinned` 7, `foreign-build` 3, `vendored` 2.**
+
+🟢 **The composable set — `checked` on p111 AND `pinned` on p112 — is **33 of those 170
+addresses (19.4 %)**. Those are the agents a studio can clone, run, and get the same
+answer from next quarter.**
+
+### 🔴 The 17 rows where a green check sits on an unpinned tree
+
+🔴 **Every one of these has a test suite, a live CI system and a `pull_request` trigger —
+and not one lockable ecosystem in it is locked. The suite is green today and the
+environment it was green against was never recorded.**
+
+| repo | bench | ecosystems | test files | ships a deployment |
+|---|---|---|---|---|
+| [`huggingface/transformers`](https://github.com/huggingface/transformers) | 🟢 broad | py | 🟢 1 797 | 🔴 **20 artefacts** |
+| [`openedx/ease`](https://github.com/openedx/ease) | 🔴 solo | py | 🟢 2 005 | — |
+| [`MontrealCorpusTools/Montreal-Forced-Aligner`](https://github.com/MontrealCorpusTools/Montreal-Forced-Aligner) | 🔴 solo | py | 228 | 1 |
+| [`ed-fi-alliance-oss/Ed-Fi-ODS`](https://github.com/ed-fi-alliance-oss/Ed-Fi-ODS) | 🟡 small | npm,dotnet | 423 | — |
+| [`sdv-dev/sdv`](https://github.com/sdv-dev/sdv) | 🟡 small | py | 121 | — |
+| [`webtech-network/autograder`](https://github.com/webtech-network/autograder) | 🔴 solo | npm,py | 110 | 🔴 8 |
+| [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | 🔴 solo | py,maven | 94 | 1 |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🟢 broad | py | 38 | 🔴 8 |
+| [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | 🔴 solo | npm,py | 32 | 🔴 7 |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 🟡 pair | py | 28 | — |
+| [`eribean/girth`](https://github.com/eribean/girth) | 🔴 solo | py | 27 | — |
+| [`marc-shade/docsingest`](https://github.com/marc-shade/docsingest) | 🔴 solo | py | 8 | — |
+| [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) | 🔴 solo | py | 6 | 2 |
+| [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | 🔴 solo | py | 3 | — |
+| [`nextcloud/context_chat_backend`](https://github.com/nextcloud/context_chat_backend) | 🔴 solo | py | 1 | 1 |
+| [`dfdb76/bncc-mcp`](https://github.com/dfdb76/bncc-mcp) | 🔴 solo | py | 1 | — |
+| [`devissaputra/classroom_discourse_intelligence`](https://github.com/devissaputra/classroom_discourse_intelligence) | 🔴 solo | py | 1 | 1 |
+
+🔴 **`huggingface/transformers` is the sharpest case on the shelf and it is on this KB's
+own foundation table: the widest bench here (11), 1 797 test files, PR-gated CI, **20
+deployment artefacts**, and **no lockfile in the tree**. An engagement that vendors it at
+a SHA has vendored the code and not the environment.**
+
+🟢 **16 of the 17 are Python-only or Python-first, which places the remedy precisely: a
+`pip-compile`/`uv lock` step added at fork time, once, per repo.**
+
+### 🟢 What the pass adds that search could not
+
+🔵 **Stage B (`P112-F`) reads the BODIES of `requirements*.txt` files, because a
+requirements file pinned with `==` throughout IS a lock and no filename can tell you
+which kind you have. The contribution was MEASURED against a control run with stage B
+disabled, not asserted: **14 of 296 rows change verdict**, nine `floating → pinned`, four
+`partial-pin → pinned`, one `vendored → pinned`. Without it this KB would have published
+93 `pinned` instead of 107 — understating the reproducible share of its own shelf by
+15 %. `oppia/oppia` and `Submitty/Submitty`, both on the engageable list below, are two of
+the fourteen.**
+
+---
+
+
 ## 2026-10-10 — pass 111: two of the three repos in p110's own headline reversal turn out to be the only ones you can actually own, and a row in the "actual foundation" table has no code in it
 
 🔵 **No new education-specific agent reached this shelf this pass, for the seventh

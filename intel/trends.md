@@ -6,6 +6,111 @@ updated: 2026-10-10
 
 # Education — current trends
 
+**Pass 112, 2026-10-10.** ⏱️ **Twenty-second pass of this date.**
+
+🔴 **The eight mandated searches produced effectively ZERO new trend items for the EIGHTH
+consecutive pass. 26 tokens extracted, **25 of 26 already held**, and the single exception
+FAILED its own verification search (`P112-P`).**
+
+🟢 **The pass's contribution is again a trend this KB can state because it MEASURED it:
+the open-source education supply is not merely unverifiable — the verified part of it is
+not reproducible, and the two defects do not overlap the way a buyer would assume.**
+
+### 🟢 🆕 `T41` — trend: "has CI" has become a lagging indicator of buildability
+
+🔵 **Six passes have now measured this shelf on six independent axes. Read as a sequence
+they are a story of each generation of signal being retired by the next:**
+
+| axis | pass | what the shelf looks like | what the figure hides |
+|---|---|---|---|
+| releases | p108 | pinnable | the pin may be from 2019 |
+| liveness | p109 | alive | one person is keeping it alive |
+| bench | p110 | 🔴 67.6 % one person | nobody can tell if a fork broke it |
+| verification | p111 | 🔴 38.9 % `checked` | 🔴 **the check runs on GitHub's machines** |
+| 🆕 closure | 🟢 **p112** | 🔴 **36.1 % `pinned`** | whether the pinned versions are any good |
+| 🆕 **both** | 🟢 **p111 ∧ p112** | 🔴 **21.3 % verifiable AND reproducible** | — |
+
+🔴 **The trend to carry into a client conversation: in open-source education, a green CI
+badge now certifies LESS than a buyer assumes. 115 of 296 addresses have a suite, a live
+runner and a `pull_request` trigger; **52 of those 115 cannot reproduce the environment
+the suite was green against**. The badge is a statement about a hosted pipeline, and the
+engagement happens somewhere else.**
+
+🟢 **The honest size of the buildable base behind a category growing at ~40 % a year is
+**63 of 296 addresses (21.3 %)**, and the staffed-and-verifiable-and-reproducible core is
+**12 repositories**.**
+
+### 🟢 🆕 `T42` — trend: the defect is polyglot count, and it is a sector characteristic rather than a discipline problem
+
+🔵 **Pinning falls monotonically with the number of lockable ecosystems in a tree — 54.5 %
+at one ecosystem (n=134), 42.3 % at two (n=78), 12.5 % at three (n=8), zero at five and
+nine. Mean ecosystems rise with bench size (`broad` 1.64 → `solo` 1.30), which is why
+p110's bands appear to invert on this axis.**
+
+🔴 **This matters as a TREND because education software is structurally polyglot: an LMS
+is a PHP or Ruby monolith with a JavaScript front end; a learning-analytics stack is
+Python plus JVM; a mobile learning app adds Gradle. The sector's architecture produces
+two- and three-ecosystem trees as a matter of course, and each added ecosystem is another
+lockfile someone has to own. The unreproducibility on this shelf is therefore not mostly
+carelessness — it is the predictable arithmetic of the sector's own shape.**
+
+🟢 **The commercial consequence is a pricing rule rather than a warning: count the
+lockable ecosystems in a candidate repository before quoting. One is routine, two is
+where pinning work actually lands, three or more should be priced explicitly.**
+
+### 🔴 🆕 `T43` — trend: public-sector education code is now measured on three axes, and the three sets are disjoint
+
+| body | region | writes suites | wires CI | pins deps |
+|---|---|---|---|---|
+| `opetushallitus` (FI) | EMEA | 🟢 yes (70–1 428 each) | 🔴 **1 of 8** | 🟢 **8 of 8** |
+| `EducationalTestingService` (US) | North America | 🟢 yes (130–8 347) | 🔴 **0 of 3 PR-gated** | 🔴 **0 of 3** |
+| `aiverify-foundation` (SG) | APAC | 🟢 yes | 🟢 **yes** | 🟢 **yes** |
+| `portabilis` (BR) | LATAM | 🟢 yes | 🟢 yes | 🟡 1 of 3 |
+| `project-sunbird` (IN) | APAC | 🟢 yes | 🟡 2 of 3 | 🟡 maven, resolved not locked |
+| `Apereo-Learning-Analytics-Initiative` ※ | EMEA? | 🟢 yes (3–46) | 🔴 3 dead (Travis) | 🟡 maven, resolved not locked |
+
+🟢 **One body on this shelf is in all three sets: Singapore's `aiverify-foundation`,
+Apache-2.0. For an AI-assurance or assessment engagement in APAC that is the single
+lowest-friction public-sector starting point this KB holds, and it is a statement about
+engineering practice rather than about market size.**
+
+🔴 **The trend worth stating to a public-sector buyer: national education agencies produce
+code whose WEAKNESSES ARE INSTITUTION-SPECIFIC AND PREDICTABLE, not sector-wide. Finland
+pins everything and wires nothing. ETS wires nothing and pins nothing while shipping the
+largest suite on the shelf. Those are different procurement risks with different prices,
+and a single "is this open-source project any good" question cannot distinguish them.**
+
+### 🔴 🆕 `P112-P` — the eighth zero, and the one token that failed verification
+
+🔵 **Eight queries were run in extended mode (four global, four regional). 26 candidate
+tokens were extracted and checked one at a time against the live pages of this KB. 25 are
+already held: the `134`-bills/`31`-states count, California `AB 1159`, Idaho `SB 1227`,
+the Oklahoma and Maryland human-oversight duties, `H.R. 8747`, Ohio's July-2026 district
+policy mandate, the NYC moratorium, Katy ISD, Microsoft's Education AI Toolkit, the AASA
+*STUDENTS FIRST* framework, the `36 %`/`$3.68 B` NA share, the EU AI Act omnibus and its
+`2 December 2027` date, Annex III, the Apply AI Alliance, Korea's Framework Act,
+Vietnam's Law `134/2025/QH15`, `AI Verify`, the Ipsos Education Monitor, the UNESCO
+IESALC `87 %`/`26 %` figures, the Digital Education Council's `7,319`-faculty survey, the
+UNESCO LAC Observatory, `CENIA`, `Ceibal`, Colombia's `CONPES 4144` and the Council of
+Europe Framework Convention.**
+
+🔴 **The single exception was a market report's claim that **Baidu's ERNIE has entered the
+Indonesian and Thai education markets through partnerships**. It was given its own
+dedicated verification search. **No corroborating report exists** — the search surfaced an
+Indonesia–Thailand education MoU with no Baidu involvement, a Baidu Education company
+profile covering China only, and the 2023 ERNIE Bot launch release. It is therefore
+recorded here as a FAILED VERIFICATION and is NOT published as a finding anywhere on this
+KB.**
+
+🟢 **The standing instruction is confirmed for an eighth pass: the unexhausted channel in
+this environment is measurement of the shelf this KB already holds, not search.**
+
+---
+
+**Prior passes on this page follow, newest first.**
+
+# Education — current trends
+
 **Pass 111, 2026-10-10.** ⏱️ **Twenty-first pass of this date.**
 
 🔴 **The eight mandated searches produced effectively ZERO new trend items for the
@@ -118,7 +223,6 @@ not at the start of this pass.**
 
 ---
 
-**Prior passes on this page follow, newest first.**
 
 **Pass 110, 2026-10-10.** ⏱️ **Twentieth pass of this date.**
 

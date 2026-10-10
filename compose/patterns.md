@@ -6,6 +6,177 @@ updated: 2026-10-10
 
 # Education — compose patterns
 
+**Pass 112, 2026-10-10.** ⏱️ **Twenty-second pass of this date.**
+
+🟢 **Every repository named below was read live this pass by `depclosure.sh` (`rc=0`, 296
+of 296 addresses, zero unread) and carries both its p111 verification verdict and its
+p112 closure verdict. `compose/code/p112-dependency-closure/`, `test_p112.sh` 109 passed
+/ 0 failed, fully offline.**
+
+🔴 **p112 adds a GATE to this page before it adds a pattern, because the gate invalidates
+part of what the page already recommends.**
+
+## 🔴 `P112-GATE` — the closure gate, and the two patterns on this page that fail it
+
+🔵 **Prior passes gated this page on liveness (`P109-GATE`) and on verification (p111). The
+closure gate is the next one and it is the cheapest to check: a pattern that vendors a
+repository at a SHA has vendored its CODE; if that repository's dependency set is
+`floating`, the pattern has NOT vendored the thing that makes it run.**
+
+| component this page relies on | p111 | 🆕 p112 | gate |
+|---|---|---|---|
+| [`huggingface/transformers`](https://github.com/huggingface/transformers) | 🟢 `checked` | 🔴 **`floating`** | 🔴 **FAILS — pin at fork time** |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🟢 `checked` | 🔴 **`floating`** | 🔴 **FAILS — pin at fork time** |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 `checked` | 🟢 `pinned` | 🟢 passes |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 `checked` | 🟢 `pinned` | 🟢 passes |
+| [`temporalio/temporal`](https://github.com/temporalio/temporal) | 🟢 `checked` | 🟢 `pinned` | 🟢 passes |
+| [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | 🟢 `checked` | 🟢 `pinned` | 🟢 passes |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `checked` | 🟡 `partial-pin` | 🟡 passes with a named gap (gradle) |
+
+🟢 **The gate does not retire either failing component — both are the right choice for
+what they do. It turns an invisible risk into a one-line task, below.**
+
+## 🟢 🆕 `P112-PAT-1` — the pin-at-fork step, which belongs in every pattern on this page
+
+🔵 **Concrete, repository-specific, and it runs once per fork rather than once per
+sprint. For the two `floating` components above:**
+
+```sh
+# transformers: vendor the code AND resolve the environment beside it
+git clone --depth 1 https://github.com/huggingface/transformers vendor/transformers
+git -C vendor/transformers rev-parse HEAD > vendor/transformers.SHA
+uv pip compile vendor/transformers/setup.py -o vendor/transformers.lock.txt
+git add vendor/transformers.SHA vendor/transformers.lock.txt
+
+# tutor: same step, and do it BEFORE building any Open edX plugin against it
+git clone --depth 1 https://github.com/overhangio/tutor vendor/tutor
+git -C vendor/tutor rev-parse HEAD > vendor/tutor.SHA
+uv pip compile vendor/tutor/setup.py -o vendor/tutor.lock.txt
+```
+
+🔴 **Why `tutor` specifically, and why before the plugin: `tutor` is how an Open edX
+installation gets stood up at all, it ships 8 deployment artefacts, and its single Python
+ecosystem is unlocked. Every environment drift after the first plugin lands gets debugged
+through the plugin instead of through `tutor`.**
+
+🟢 **Acceptance test for the step, so it is verifiable rather than aspirational: a second
+clone on a different machine, installed from the committed lock, produces byte-identical
+`pip freeze` output. If it does not, the lock is incomplete and the fork knows on day one
+rather than in week six.**
+
+## 🟢 🆕 `P112-PAT-2` LATAM — a Brazilian SIS line with closure end to end
+
+🔵 **Every component is `checked` on p111 AND `pinned` on p112 — the only full-stack
+pattern on this page where that is true, and it is LATAM.**
+
+| role | component | licence | p111 | p112 |
+|---|---|---|---|---|
+| student information system | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🟡 GPL-2 | 🟢 `checked` | 🟢 `pinned` |
+| curriculum alignment (BNCC) | [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | carried | 🟢 `checked` | 🟢 `pinned` |
+| curriculum benchmark | [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | carried | 🟢 `checked` | 🟢 `pinned` |
+| agent graph | [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | 🟢 **MIT** | 🟢 `checked` | 🟢 `pinned` |
+| durable orchestration | [`temporalio/temporal`](https://github.com/temporalio/temporal) | 🟢 **MIT** | 🟢 `checked` | 🟢 `pinned` |
+
+🟢 **Wiring: `i-educar` is the system of record; a LangGraph graph reads enrolment and
+assessment rows from it and writes BNCC alignment suggestions back as proposals, never
+as grades; `bncc-pacotes` supplies the competency vocabulary and `bncc-benchmark` is the
+regression suite the graph is scored against on every change; Temporal owns every
+multi-step write so a half-applied alignment pass is recoverable rather than manual.**
+
+🔴 **The licence constraint is real and nameable: `i-educar` is GPL-2, so the client ships
+the SIS and its modifications under GPL-2. The LangGraph and Temporal halves are MIT and
+stay separable — keep the graph in its own process and talk to `i-educar` over its HTTP
+surface, not by linking into it.**
+
+🔴 **`P112-PAT-2`'s one gap, stated: 2 of the 3 `portabilis` repositories are
+`partial-pin`, not `pinned`. `i-educar` itself is the pinned one. Pin the other two at
+fork time with `P112-PAT-1`.**
+
+## 🟢 🆕 `P112-PAT-3` APAC — an AI-assurance harness for an LMS, Apache-2.0 end to end
+
+🔵 **Singapore's `aiverify-foundation` is the only public body on this shelf that writes
+suites, wires CI and pins dependencies. All three of its code repositories are `checked`
+and `pinned`.**
+
+| role | component | licence | p111 | p112 |
+|---|---|---|---|---|
+| model/agent evaluation engine | [`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) | 🟢 **Apache-2.0** | 🟢 `checked` | 🟢 `pinned` |
+| evaluation in CI | [`aiverify-foundation/moonshot-cicd`](https://github.com/aiverify-foundation/moonshot-cicd) | 🟢 **Apache-2.0** | 🟢 `checked` | 🟢 `pinned` |
+| reviewer-facing UI | [`aiverify-foundation/moonshot-ui`](https://github.com/aiverify-foundation/moonshot-ui) | 🟢 **Apache-2.0** | 🟢 `checked` | 🟢 `pinned` |
+| the LMS under test | [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3 | 🟢 `checked` | 🟢 `pinned` |
+
+🟢 **Wiring: the Moodle AI subsystem's provider is pointed at the engagement's own model
+endpoint; `moonshot` runs the red-team and capability suites against that same endpoint;
+`moonshot-cicd` runs them as a gate in the delivery pipeline so a prompt or model change
+cannot ship without a scored run; `moonshot-ui` is what the institution's academic-
+integrity committee actually looks at. Because `moodle` is `pinned` and all three
+Moonshot repos are `pinned`, the whole harness reproduces — which is the property an
+assurance artefact needs most.**
+
+🔵 **Jurisdictional fit: Korea's Framework Act treats AI in education as high-impact with
+human-oversight and disclosure duties, and Singapore leads the ASEAN Working Group on AI
+Governance. A scored, reproducible evaluation run is the evidence those duties ask for,
+and this stack produces one by construction rather than by report-writing.**
+
+## 🟢 🆕 `P112-PAT-4` EMEA — a sovereign, reproducible teacher-facing assistant
+
+| role | component | licence | p111 | p112 |
+|---|---|---|---|---|
+| chat assistant for schools | [`fwu-de/ais-chat`](https://github.com/fwu-de/ais-chat) | 🟢 **MIT** | 🟢 `checked` | 🟢 `pinned` |
+| LMS of record | [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🟡 GPL-3 | 🟢 `checked` | 🟢 `pinned` |
+| national-agency services | the 8 [`opetushallitus`](https://github.com/opetushallitus) repos | carried | 🔴 **1 of 8 PR-gated** | 🟢 **8 of 8 `pinned`** |
+| agent graph | [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | 🟢 **MIT** | 🟢 `checked` | 🟢 `pinned` |
+
+🟢 **Wiring: `ais-chat` is the teacher-facing surface (German public-sector origin, MIT, so
+a closed derivative is permitted); ILIAS holds courses and assessment; a LangGraph graph
+mediates every call and is the single place where retention, logging and
+purpose-limitation live. For a Finnish deployment, the `opetushallitus` services
+(`koski`, `ataru`, `ehoks`, `eperusteet`, `oppijanumerorekisteri`, `organisaatio`,
+`suorituspalvelu`, `valtionavustus`) are the integration targets.**
+
+🟢 **The p112-specific finding that changes this pattern's price: all eight
+`opetushallitus` repositories are `pinned`, so they stand up deterministically today.
+What they lack is a pipeline a contributor can trigger — 7 of 8 have a suite that no
+pull request runs. The engagement supplies CI, not an environment, and those are very
+differently priced halves.**
+
+🔴 **The EU AI Act constraint belongs in the pattern, not in a footnote: anything in this
+stack that determines access, scores an assessment or steers a learning path is Annex III
+high-risk, with the omnibus timeline putting standalone high-risk systems at 2 December
+2027. Keep the graph's grading paths advisory-with-human-sign-off, and keep that boundary
+expressed in code — a LangGraph node that cannot write a final grade — rather than in
+policy prose.**
+
+## 🟡 🆕 `P112-PAT-5` North America — the pattern that must be pinned before it is built
+
+🔴 **North America is the region with the deepest `checked` tier on this shelf (p111) and
+the WORST closure (p112: 33 % `pinned`, 35 % `floating`). The pattern therefore starts
+with a gate rather than a component.**
+
+| role | component | licence | p111 | p112 | action |
+|---|---|---|---|---|---|
+| SIS / data standard | [`ed-fi-alliance-oss/Ed-Fi-ODS`](https://github.com/ed-fi-alliance-oss/Ed-Fi-ODS) | carried | 🟢 `checked` | 🔴 **`floating`** | 🔴 **pin first (`P112-PAT-1`)** |
+| autograding reference | [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 **BSD-3** | 🟢 `checked` | 🟢 **`pinned` (3/3)** | 🟢 build on it |
+| advising workflow | [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🟡 AGPL-3 | 🟢 `checked` | 🟢 `pinned` | 🟢 build on it, AGPL duties apply |
+| accessibility scan | [`ucfopen/UDOIT`](https://github.com/ucfopen/UDOIT) | 🟡 GPL-3 | 🟢 `checked` | 🟢 `pinned` | 🟢 build on it |
+| assessment analytics | the 3 [`EducationalTestingService`](https://github.com/EducationalTestingService) repos | carried | 🔴 **0 of 3 PR-gated** | 🔴 **0 of 3 pinned** | 🔴 **pin AND wire — budget both** |
+
+🟢 **`Submitty` is the reference row of this whole KB on the closure axis: three
+ecosystems (npm, py, php) and all three locked — the only three-ecosystem repository on
+the shelf that does it. If a client asks what "good" looks like for a polyglot education
+codebase, this is the answer with a URL attached.**
+
+🔴 **ETS is the opposite and it is a day-one budget line, not a discovery: the largest
+suite on this shelf (`rsmtool`, 8 347 test files) sits on three `floating` trees with no
+`pull_request` trigger anywhere. An assessment-analytics engagement that plans to touch
+ETS code pays for an environment AND a pipeline before it writes a feature.**
+
+---
+
+**Prior passes on this page follow, newest first.**
+
+# Education — compose patterns
+
 **Pass 111, 2026-10-10.** ⏱️ **Twenty-first pass of this date.**
 
 🟢 **`vsurface.sh` read **296 of 296** addresses, zero unread
@@ -138,7 +309,6 @@ never assume a silent upgrade is safe.**
 
 ---
 
-**Prior passes on this page follow, newest first.**
 
 **Pass 110, 2026-10-10.** ⏱️ **Twentieth pass of this date.**
 

@@ -4,6 +4,139 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 112: Finland pins all eight of its repositories and wires none of them; the United States wires its CI and pins nothing — and only Singapore does both
+
+🟢 **Measured over **296 of 296** addresses in 4 m 41 s, zero unread
+(`compose/code/p112-dependency-closure/`, `test_p112.sh` 109 passed / 0 failed, fully
+offline — real git repositories served over `file://`, no mocks), plus a no-stage-B
+control run over the same 296 addresses.**
+
+🔵 **Sixth axis in six passes, second read from the TREE: can the dependency set be
+resolved to the same bytes twice? A `checked` verdict from p111 is a claim about a
+pipeline on GitHub's infrastructure. p112 asks whether it survives being taken off it.**
+
+### The distribution
+
+| verdict | rows | share of 296 |
+|---|---|---|
+| 🟢 `pinned` — every lockable ecosystem present is locked | **107** | **36.1 %** |
+| 🔴 `floating` — manifests, no lock anywhere, nothing vendored | **68** | **23.0 %** |
+| 🔵 `no-manifest` — nothing declares dependencies; not applicable | 51 | 17.2 % |
+| 🟡 `partial-pin` — some ecosystems locked, others not | 42 | 14.2 % |
+| 🟡 `self-pinned` — maven only: direct versions literal, transitives resolved | 16 | 5.4 % |
+| 🔵 `foreign-build` — declared in bazel/odoo/moodle-plugin; no claim made | 7 | 2.4 % |
+| 🟢 `vendored` — no lock, but the dependency tree is COMMITTED | 5 | 1.7 % |
+| 🟢 `UNREAD` — fetch failed, no claim made | 🟢 **0** | 🟢 **0 %** |
+
+🟢 **238 rows declare resolvable dependencies. On those: `pinned` 45.0 %, `floating`
+28.6 %, `partial-pin` 17.6 %. Every figure is an UPPER BOUND on pinning by construction
+(`P112-E`): one lockfile anywhere in a tree counts its ecosystem as locked, so the error
+can only make a row look MORE reproducible than it is.**
+
+### 🔴 The headline — p111's verdict does not survive the move off GitHub
+
+| | rows | share of 296 |
+|---|---|---|
+| p111 `checked` — a suite, live CI, fires on `pull_request` | 115 | 38.9 % |
+| 🟢 **of those, `pinned` — and the suite resolves twice** | 🟢 **63** | 🟢 **21.3 %** |
+| 🟡 of those, `partial-pin` | 25 | 8.4 % |
+| 🔴 **of those, `floating` — green CI on an unrecorded environment** | 🔴 **17** | 🔴 **5.7 %** |
+
+🔴 **So the buildable base of this category is not 38.9 % and never was. It is 21.3 %:
+63 of 296 addresses can both tell you when you broke them and give you the same
+dependency set twice.**
+
+### 🟢 `P112-O` — the mechanism, and it is polyglot count, not team size
+
+🔵 **p110's bands invert on this axis — `broad` is the WORST pinned band (20 %) and
+`pair` the best (46 %) — which looks like big teams being sloppier. It is not. Pinning
+falls monotonically with the number of lockable ecosystems in the tree, and bench size
+predicts ecosystem count:**
+
+| lockable ecosystems in tree | rows | `pinned` | share |
+|---|---|---|---|
+| 1 | 134 | 73 | 🟢 **54.5 %** |
+| 2 | 78 | 33 | 🟡 42.3 % |
+| 3 | 8 | 1 | 🔴 **12.5 %** |
+| 5 | 1 | 0 | 🔴 0 % |
+| 9 | 1 | 0 | 🔴 0 % |
+
+🔵 **Mean lockable ecosystems by bench band: `broad` 1.64, `small` 1.59, `pair` 1.41,
+`solo` 1.30. The polyglot repositories are the ones with the staff to be polyglot, and
+each added ecosystem is another lockfile somebody has to own.** 🟢 **Operationally: a
+two-ecosystem fork is where pinning work actually lands, and a three-ecosystem fork
+should be priced as such on day one.**
+
+### 🟢 `P112-Q` — the public bodies, read a third time, and the three sets are different
+
+🔴 **p111 found that the public bodies which WRITE test suites and the ones which WIRE
+them are different sets. p112 adds a third set and it is different again.**
+
+| body | region | repos | p111 — verification | 🆕 p112 — closure |
+|---|---|---|---|---|
+| `opetushallitus` (Finnish National Agency for Education) | EMEA | 8 | 🔴 7 of 8 `partial` | 🟢 **8 of 8 `pinned`** |
+| `EducationalTestingService` (ETS) | North America | 3 | 🔴 3 of 3 `partial`, suites to 8 347 | 🔴 **3 of 3 `floating`** |
+| `aiverify-foundation` (IMDA Singapore) | APAC | 4 | 🟢 3 of 3 `checked` | 🟢 **3 `pinned`, 1 `no-manifest`** |
+| `portabilis` (Brazil) | LATAM | 3 | 🟢 3 of 3 `checked` | 🟡 1 `pinned`, 2 `partial-pin` |
+| `project-sunbird` (India) | APAC | 3 | 🟡 2 `checked`, 1 `partial` | 🟡 2 `self-pinned`, 1 `partial-pin` |
+| `Apereo-Learning-Analytics-Initiative` ※ | EMEA? | 6 | 🔴 3 `fossil-ci`, 2 `tests-only`, 1 `bare` | 🟡 5 `self-pinned`, 1 `floating` |
+
+🟢 **Finland is the reversal. On p111 it was the worst-wired body on the shelf — eight
+repositories with real suites, seven of them unreachable from a pull request. On p112 it
+is the ONLY body that pins every single repository it ships. Its trees stand up
+deterministically today; what it is missing is a pipeline, which is the cheaper half to
+supply.**
+
+🔴 **ETS is the inverse and the more expensive one. The largest suite on this shelf
+(8 347 test files) sits on three `floating` trees: you cannot reproduce the environment
+those tests passed in, so standing up ETS code means pinning it first and discovering
+what it actually needed.**
+
+🟢 **`aiverify-foundation` is the only body in all three sets — writes suites, wires
+them, pins them. For an APAC assessment or AI-assurance engagement that makes Singapore's
+code the lowest-friction public-sector starting point on this shelf, and it is
+Apache-2.0.**
+
+🔵 **※ `Apereo-Learning-Analytics-Initiative` is placed EMEA by p111 while the Apereo
+Foundation is US-registered. p112 does not resolve it: it is recorded as contested
+(`P112-M`) and excluded from every regional total on this page rather than silently
+assigned.**
+
+### The five `vendored` rows — reproducible with no registry at all
+
+🔵 **A committed dependency tree is the strongest form of this property, not an absence
+of it (`P112-D`). These five stand up with the network unplugged:**
+
+| repo | p111 | ecosystems | why it matters |
+|---|---|---|---|
+| [`kaldi-asr/kaldi`](https://github.com/kaldi-asr/kaldi) | 🟢 `checked` | py | broad bench, dormant 383 d — the fork target whose tree is already complete |
+| [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | 🟡 `partial` | npm,php | WordPress LMS; vendored PHP deps |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 `fossil-ci` | php | 🟢 **dead CI, but the tree is standable** |
+| [`atutor/ATutor`](https://github.com/atutor/ATutor) | 🟡 `tests-only` | php | accessibility-first LMS, deps committed |
+| [`wanghaoyu0408/OpenRubrics`](https://github.com/wanghaoyu0408/OpenRubrics) | 🟡 `tests-only` | py | rubric half of `Gap 379` |
+
+🟢 **`OS4ED/openSIS-Classic` is the useful correction: p111 ruled it `fossil-ci` — a suite
+whose only CI is Travis — which reads as the worst kind of row. Its dependencies are
+committed, so a fork can run that suite on day one without resolving anything.**
+
+### 🔵 Two instruments, one agreement worth stating
+
+🟢 **All 31 rows p111 called `no-code` are `no-manifest` here — 31 of 31, from a
+completely different file set (p111 read source extensions and CI configs; p112 reads
+manifests and lockfiles). Two independent tree axes agree exactly on which rows of this
+shelf are not software. That is the strongest cross-check either pass has produced.**
+
+🔴 **The disagreement is informative too: 20 code-bearing rows declare no dependencies at
+all, and 7 more declare them in a build system this instrument does not resolve —
+`oppia/oppia-android` (1 213 source files, Bazel), `OpenEduCat/openeducat_erp` (an Odoo
+addon declaring deps in `__manifest__.py`), `microsoft/o365-moodle` (352 source files, a
+Moodle plugin declaring `$plugin->dependencies` in `version.php`) and four further Moodle
+plugins. The first draft of this pass reported all seven as declaring NOTHING; they are
+now `foreign-build`, which claims nothing in either direction (`P112-N`).**
+
+---
+
+
 ## 2026-10-10 — pass 111: the largest test suite on this shelf cannot be run by a contributor, and the region that leads this axis is LATAM
 
 🟢 **Measured over **296 of 296** addresses in 9 m 41 s, zero unread
