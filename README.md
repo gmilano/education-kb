@@ -22,6 +22,121 @@ education-kb/
 └── compose/code/  # Código ejecutable y probado, no prosa
 ```
 
+## Pase 103 — 2026-10-10
+
+⏱️ **Decimotercer pase de esta fecha** (el 102 corrió 10:4x–11:xx UTC; este, 12:4x–13:xx).
+
+🟢 **El hallazgo principal es que esta base ya tenía lo que durante doce pases declaró ausente.**
+Un censo de `archive/2026-10-06-pre-reset/` contra **todos** los archivos vivos encuentra
+🔴 **82 de 681 direcciones (12,0 %) que no existen en ningún otro lugar del repositorio**, y
+🔴 **103 (15,1 %) que no aparecen en NINGUNA página.** 🔵 **`P1026`: el corpus vivo más que se
+DUPLICÓ (1 419 direcciones) y aun así perdió un sexto del archivo — por eso ningún pase lo vio: todos
+midieron crecimiento, y crecimiento no es cobertura.** 🟢 **`Gap 394` abierto; 14 direcciones
+sondeadas, 68 pendientes.**
+
+🟢 **Instrumento nuevo, ESCRITO Y EJECUTADO en este pase:**
+`compose/code/p1026-archive-regression-census/` — `test_census.sh` **9 pasaron, 0 fallaron**;
+`census.sh . ./archive` → `archive_addresses=681 live_addresses=1419 lost_total=88`
+(**82 `LOST`** + 6 `CONTROL` declarados), estable al re-correr **después** de commitear sus propios
+resultados.
+
+🔵 **Y esa ejecución corrige la lectura del pase 102 sobre `Gap 383`.** 🔴 **El pase 102 dijo que el
+estado del instrumento ALTERNA entre pases.** 🟢 **Este pase mide las dos cosas DENTRO de un mismo
+pase:** código **preexistente** del repositorio (`p383-region-heading-gate/check_headings.py`)
+🔴 **RECHAZADO** (`[Code from External]`), e instrumento **escrito en este pase** 🟢 **EJECUTADO, las
+dos mitades.** 🔵 **`P1028`: el bloqueo discrimina por AUTORÍA, no por pase — `Gap 383` sigue abierto
+sobre el catálogo de 150+ instrumentos, pero la medición que haga falta se puede empaquetar de nuevo.**
+
+### 🔴 `T26`, la tendencia que esta base escribió el pase pasado, queda REFUTADA para una capa
+
+🔵 **El pase 102 cerró con: «ninguna fila es específica de educación **y** permisiva **y** con
+ingeniería de releases».** 🔴 **Hay cuatro, y todas estaban en este repositorio.**
+
+| repo | licencia (payload) | tags | región |
+|---|---|---|---|
+| [`ed-fi-alliance-oss/Ed-Fi-ODS`](https://github.com/ed-fi-alliance-oss/Ed-Fi-ODS) | 🟢 **Apache-2.0** · `LICENSE.txt` **10 172 B** | 🟢 **42** / `v7.3.2-pre` | 🟢 **North America** |
+| [`ed-fi-alliance-oss/Ed-Fi-Data-Standard`](https://github.com/ed-fi-alliance-oss/Ed-Fi-Data-Standard) | 🟢 **Apache-2.0** · 10 173 B | 🟢 **21** | 🟢 **North America** |
+| [`project-sunbird/sunbird-lms-service`](https://github.com/project-sunbird/sunbird-lms-service) | 🟢 **MIT** · 1 072 B | 🟢 **450** | 🟢 **APAC** (India) |
+| [`project-sunbird/knowledge-platform`](https://github.com/project-sunbird/knowledge-platform) | 🟢 **MIT** · 1 072 B | 🟢 **336** | 🟢 **APAC** (India) |
+
+🔵 **`T27` (nuevo) conserva la mitad que sí se sostiene, y la hace REGIONAL: la plataforma permisiva
+y específica de educación existe donde un PROGRAMA NACIONAL construyó una, y en ningún otro lado.**
+🔴 **EMEA publica RELEASES SIN CONCESIÓN** — la implementación de credenciales digitales de la propia
+Comisión Europea está en **`2.0.6`** sin payload en siete nombres de licencia, con control 200 limpio
+(`Gap 395`) — 🔴 **y de LATAM no se midió ninguna fila de esta forma.** 🟢 **Consecuencia comercial:
+North America y APAC pueden **ADOPTAR**; EMEA y LATAM siguen **CONSTRUYENDO** (`P102-A`), y en EMEA el
+primer ítem de acción es un pedido ESCRITO de concesión al organismo que publica.**
+
+### 🟢 `Gap 393` REENCUADRADO — el banco pedagógico sigue sin concesión, pero el ARNÉS sí tiene
+
+🔴 **`AITutor-EvalKit` y `UnifyingAITutorEvaluation` (MRBench) siguen sin payload de licencia.**
+🟢 **Lo que cambia es que nunca fueron el único camino:**
+[`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) es
+**Apache-2.0 (11 347 B) con 26 tags**, y sus puntos de extensión declarados son **recipes** (dataset
+propio de pares entrada-objetivo + plantilla de prompt + métrica + **escala de calificación**),
+**cookbooks**, **connector endpoints**, **attack modules** y **context strategies**.
+🔵 **Una rúbrica de cuatro dimensiones en escala de tres valores ES una recipe con escala.**
+🟢 **Entonces: la rúbrica se re-implementa, el arnés se compra, y `moonshot-cicd` (Apache-2.0, 6 tags)
+es lo que hace el gate AUDITABLE.** 🔴 **Lo que sigue sin comprarse es la COMPARABILIDAD: las
+etiquetas son el activo.** 🟢 **Costeado como `P103-A`.**
+
+🟡 **Y la procedencia es parte del hallazgo: el arnés viene del organismo que convocó el regulador de
+Singapur (AI Verify Foundation / IMDA), no de un proveedor de educación.** 🔵 **Es un argumento de
+compra que ninguna otra región puede hacer hoy.**
+
+### 🔴 `Gap 396` — la capa de EMISIÓN de Open Badges está muerta en 5 de 5 nombres de organización
+
+🔵 **`P1012` dice que el código de un incumbente puede vivir bajo el nombre de su organización
+predecesora, así que el eje se corrió completo en vez de declarar la fila muerta con un solo 404.**
+🔴 **ABSENT las cinco:** `concentricsky/badgr-server`, `1EdTech/badgr-server`,
+`IMSGlobal/badgr-server`, `instructure/badgr-server`, `concentricsky/badgr-ui`.
+🟢 **Sobrevive el VALIDADOR:** `1EdTech/openbadges-validator-core`, **Apache-2.0, 28 tags**.
+🔵 **`T17` un nivel peor: la concesión permisiva está del lado que MIDE, y el lado que se vuelve
+REGISTRO ya no es copyleft — no está.**
+
+### 🔵 Principios nuevos: `P1024`–`P1028`
+
+- **`P1024`** — 🔴 **la declaración de dependencias empaquetadas puede vivir DENTRO del `LICENSE`, no
+  sólo en `NOTICE`, y el byte count POR ENCIMA del tamaño prístino de la familia es la pista.**
+  `openbadges-validator-core` tiene **13 185 B**, **+1 828 B** sobre Apache-2.0 prístino, y el
+  excedente es un bloque de subcomponentes (OAuth © AOL/Google/Netflix; Base64 © la ASF, 🟢 ambos
+  Apache-2.0). 🟢 **Comparar contra prístino en LAS DOS direcciones: por debajo se quitó texto (los
+  10 172 B de Ed-Fi son el apéndice omitido), por encima se agregó la concesión de alguien más.**
+- **`P1025`** — 🔴 **byte count igual no es identidad: fijá la concesión por `sha256`.** Tres payloads
+  de Sunbird miden **1 072 B** y no son todos el mismo archivo (© 2018 contra © 2019).
+  🔵 **Contracaso de `P386`, que deduplica por TAMAÑO.**
+- **`P1026`** — 🔴 **`archive/` es un CORPUS, y un reset seguido de crecimiento esconde sus propias
+  pérdidas.** 🔵 **Segunda rama: una worklist no es un estante** — 21 direcciones viven en un único
+  archivo de entrada de instrumento y en ninguna página, entre ellas `ollama/ollama`.
+- **`P1027`** — 🟢 **la consulta regional retirada sirve de ÍNDICE de lo que tiró el reset.**
+  `Tennessee` volvió del barrido de North America, no está en ninguna página viva, y está en el
+  archivo con su instrumento (`SB 1580`: ninguna herramienta de IA puede evaluar o tamizar salud
+  mental de un alumno).
+- **`P1028`** — 🔴 **el rechazo de ejecución discrimina por AUTORÍA, no por pase.**
+
+### 🔵 La batería obligatoria: ocho consultas, y `P1023` se sostiene un SEGUNDO pase
+
+🔴 **Las cuatro regionales devolvieron MENOS de lo que este repositorio ya tiene** (UNESCO IESALC
+87 %/26 %, TALIS, Ceibal 75 %, PL 2.338/2023, CONPES 4144; 134 proyectos / 31 estados, AB 1159,
+H.R. 8747; AI Act con fechas otra vez inconsistentes; Corea 2026-01-22 y Vietnam, que esta base tiene
+más finos). 🔵 **Dos consultas globales quedan RETIRADAS por propiedad del canal:** `top open source
+AI agents education {year}` devuelve sólo frameworks generales, y 🔴 **`github trending education AI
+{year}` devuelve MATERIAL DE ESTUDIO, no software educativo** (`LLMs-from-scratch`,
+`generative-ai-for-beginners`, `nanochat`) — 🔵 **en un feed de tendencias «education» significa
+*enseñar IA a gente*, no *IA para enseñar*.**
+
+🔴 **Cero lecturas de fuente primaria fuera de GitHub, DUODÉCIMO pase consecutivo — y este pase cita
+la causa en vez de inferirla:** `unesdoc.unesco.org`, `eur-lex.europa.eu`, `www.oecd.org` y
+`arxiv.org` dan `http=000` con `curl: (56) CONNECT tunnel failed, response 403`. 🟢 **Controles del
+mismo barrido: `raw.githubusercontent.com` 200, `pypi.org` 200, `registry.npmjs.org` 200;
+`api.github.com` **403** por alcance de sesión, que es la CAUSA de cada `—` en la columna ★.**
+
+🟢 **Un defecto de datos reparado:** `intel/market.md` tenía **dos** líneas que coincidían con
+`^## Opportunities by region` — el encabezado real y una línea de prosa partida por un backtick
+suelto. 🔵 **Un compilador de encabezados habría visto dos bloques de regiones, uno vacío.**
+🟢 **Reparado; el bloque real tiene exactamente cuatro hijos `###` y cero hermanos fuera del
+vocabulario cerrado.**
+
 ## Pase 102 — 2026-10-10
 
 ⏱️ **Duodécimo pase de esta fecha** (el 101 corrió 09:4x–10:xx UTC; este, 10:4x–11:xx).

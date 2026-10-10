@@ -6,9 +6,11 @@ updated: 2026-10-10
 
 # Education — vertical platforms you can customise with AI
 
-**Pass 101, 2026-10-10.** ⏱️ **Eleventh pass of this date** (100 ran 08:4x–09:xx UTC; this one
-09:4x–10:xx). 🟢 **`P1005` applied from the outset — every address below carries a full 40-character
-SHA.** 🔴 **`api.github.com` = `http=403` for unattached repos, measured this pass; no ★ moved.**
+**Pass 103, 2026-10-10.** ⏱️ **Thirteenth pass of this date** (101 ran 09:4x–10:xx UTC; 102,
+10:4x–11:xx; this one 12:4x–13:xx). 🟢 **`P1005` applied from the outset — every address below
+carries a full 40-character SHA.** 🔴 **`api.github.com` = `http=403` for unattached repos, measured
+again this pass; no ★ moved.** 🔴 **`T26`, this page's own trend from pass 102, is REFUTED for the
+student-data layer by rows this repository already held — see immediately below.**
 
 ### 🟢 🆕 p102 — the mandated platform query returned FOUR permissive-ERP claims, and this KB had already refuted TWO of them
 
@@ -28,6 +30,50 @@ because it had read the payloads in earlier passes.** 🔵 **`P975` again, and t
 measured REPEAT rather than an anecdote: the secondary channel does not drift toward the truth
 with time.**
 
+### 🔴 🆕 p103 `T26` is REFUTED for one layer — and the refuting row was in this repository the whole time
+
+🔵 **Pass 102 closed the table below with: *"There is no row that is both education-specific AND
+permissive AND release-engineered."*** 🔴 **There is. Two, and they are the same programme.**
+
+| layer | education-specific? | grant | releases |
+|---|---|---|---|
+| 🆕 p103 **`ed-fi-alliance-oss/Ed-Fi-ODS`** | 🟢 **yes — the US K-12 student-data spine: enrolment, rostering, assessment, discipline** | 🟢 **Apache-2.0** (`LICENSE.txt` 10 172 B) | 🟢 **42 tags**, top `v7.3.2-pre` |
+| 🆕 p103 **`ed-fi-alliance-oss/Ed-Fi-Data-Standard`** | 🟢 **yes — the domain model alone** | 🟢 **Apache-2.0** (10 173 B) | 🟢 **21 tags** |
+| 🆕 p103 **`project-sunbird/sunbird-lms-service`** | 🟢 **yes — national-scale LMS services** | 🟢 **MIT** (1 072 B) | 🟢 **450 tags** |
+| 🆕 p103 **`project-sunbird/knowledge-platform`** | 🟢 **yes — content, taxonomy, curriculum frameworks** | 🟢 **MIT** (1 072 B) | 🟢 **336 tags** |
+
+🔴 **So `T26` was not a property of the industry. It was a property of this page's coverage.**
+🟢 **The census that found them is `Gap 394` / `P1026`**: `archive/2026-10-06-pre-reset/` holds
+**82 of 681** addresses that exist nowhere else in this repository, and **103** that appear on no
+page — among them `project-sunbird/sunbird-devops` (MIT, **702 tags**), which sat in an instrument's
+input worklist and on no shelf.
+
+🔵 **`T26`'s SURVIVING half is still load-bearing, and it is now sharper: the refutation is
+REGIONAL.** 🔴 **Both permissive, education-specific, release-engineered platforms belong to NATIONAL
+programmes — Ed-Fi to a US alliance, Sunbird to India's public digital infrastructure.** 🟢 **Neither
+is a vendor product, and no EMEA or LATAM row of this shape has been measured.** 🔵 **So the honest
+statement is: the permissive education-specific platform exists where a national programme built one,
+and a studio in a region without one is still doing `P102-A`'s construction.** 🟢 **`T27`.**
+
+🔴 **And the counter-evidence from the same sweep keeps it honest.** The EMEA institutional output of
+the same period ships **releases with no grant at all**:
+[`european-commission-empl/european-digital-credentials`](https://github.com/european-commission-empl/european-digital-credentials)
+is at **`2.0.6`** (4 tags, `master` · `ec562a46f54253bf7ad63af78516b17349502c5c`) with
+🔴 **no payload at seven licence names** and a clean 200-control, and
+[`fwu-de/schulfach-ontologie`](https://github.com/fwu-de/schulfach-ontologie) (Germany, FWU) ships
+**`1.0.0`** with 🔴 **no payload** and a clean control (`README.md` 3 216 B). 🔵 **`Gap 395`.**
+
+### 🔴 🆕 p103 Two platform rows re-measured, and both carry a default-ref hazard
+
+| platform | grant (payload · bytes) | ref · SHA | tags / top | note |
+|---|---|---|---|---|
+| 🆕 p103 [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🔴 **LGPL-3.0** · **7 652 B** | 🔴 **`v3.0.x-develop`** · `1524a63f2bc53f6145ae94e3327b2b479fce0fcc` | 🟢 **319 / `v4.0.x-beta.3`** | 🔵 **The web-conferencing layer every LMS row on this page integrates with, and it was on no live page after the reset.** 🔴 **`P1020`'s fourth non-standard default branch in three passes** (`dev`, `trunk`, `2024.9.x`, now a release-line develop branch) — 🔴 **a `LICENSE@master` citation for this repo is a 404 on a repository that plainly has a grant**, the exact published-false-negative shape pass 102 caught on OFBiz. 🟡 Top tag is a **beta**, so the shippable line is `v3.0.x`. |
+| 🆕 p103 [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 **BSD-3-Clause** · **1 504 B** · © 2002–2021 **LYRASIS** | `main` · `a5b0f0fc17ad5c7f8917eb89b9222f2c2d441aed` | 🟢 **136** | The institutional-repository layer — where a university's own outputs become a corpus an agent can be grounded in. 🔴 **Tag ordering is unsafe: a naive `sort` ranks `language-pack-1_4_1` last**, the same two-spelling hazard `P978` recorded for OpenOLAT. |
+
+🔵 **`P1021` extends on a third row.** `ed-fi-alliance-oss/Ed-Fi-Data-Standard`'s default ref is
+**`v6.2.0`** — 🔴 **a TAG-SHAPED branch name.** 🔵 **So a `ref` that looks like a version is not
+evidence that a tag was pinned, and `--symref` is the only thing that tells you which you got.**
+
 ### 🟢 🆕 p102 `T26` — a permissive SIS is a BUILD on a generic core, never an ADOPT
 
 🔵 **Line the two tiers up and the industry's shape is explicit:**
@@ -42,6 +88,8 @@ with time.**
 | `academico-sis/academico` | 🟢 yes — school management | 🟢 **MIT**, 🔴 **0 tags, no version scheme** (`P985`) |
 
 🔴 **There is no row that is both education-specific AND permissive AND release-engineered.**
+🟢 **— SUPERSEDED by `🆕 p103` above: Ed-Fi and Sunbird are both, and both were already in this
+repository. Kept as the record of a coverage gap that read as an industry property.**
 🟢 **So the permissive path is: take a generic Apache-2.0 core with real release engineering (OFBiz:
 26 tags; Corteza: 298) and add the education domain model** — and pass 101 found exactly that domain
 model, Apache-2.0, with **57 releases** of schema history (`Jasig/SSP`). 🔵 **Costed as `P102-A`.**

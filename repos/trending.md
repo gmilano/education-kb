@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 103: a national-programme supply this file already held, found by censusing its own archive
+
+⏱️ **Thirteenth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93:
+01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; 98: 06:4x–07:xx; 99:
+07:4x–08:xx; 100: 08:4x–09:xx; 101: 09:4x–10:xx; 102: 10:4x–11:xx; this one 12:4x–13:xx).
+**Append-only.**
+
+🟢 **The per-host channel probe RAN** (pass 102 had it denied as a batch): `raw.githubusercontent.com`
+**200**, `git ls-remote` **works**, `pypi.org` / `registry.npmjs.org` **200**, `api.github.com`
+**403** (scope), `github.com` HTML **403**. 🔴 **`unesdoc.unesco.org`, `eur-lex.europa.eu`,
+`www.oecd.org` and `arxiv.org` are `http=000` with the cause now quoted: `curl: (56) CONNECT tunnel
+failed, response 403`** — the gateway refuses the tunnel per host. 🔵 **Twelfth consecutive pass with
+zero non-GitHub primary-source reads.** 🟢 **No classifier written** (`P237`); every grant below is a
+`raw.githubusercontent.com` payload (`P1005`).
+
+### 🔴 `Gap 394` — this file's own archive holds **82** addresses that exist nowhere else in the repo
+
+🟢 **Instrument written and EXECUTED this pass: `compose/code/p1026-archive-regression-census/`.**
+`test_census.sh` → **9 passed, 0 failed**. `census.sh . ./archive` →
+`archive_addresses=681 live_addresses=1419 lost_total=88` (**82 `LOST`** + 6 declared `CONTROL`).
+
+| measure | value |
+|---|---|
+| addresses in `archive/2026-10-06-pre-reset/` | **681** |
+| addresses live | **1 419** |
+| 🔴 held **nowhere** outside the archive | 🔴 **82 (12.0 %)** |
+| 🔴 on **no page** (pages + instrument READMEs only) | 🔴 **103 (15.1 %)** |
+
+🔴 **The live corpus more than DOUBLED and still lost a sixth of the archive.** 🔵 **Growth is not
+coverage — `P1026`.** 🟢 **The 21-address gap between the two figures is held in exactly one file,
+`compose/code/p725-readme-payload-sweep/shelf-repos.2026-10-08.txt`, an instrument's input
+worklist.** 🔴 **A worklist is not a shelf.**
+
+### 🟢 The promotion: three national / institutional programmes, permissive, heavily released
+
+🔵 **Fourteen of the 82 probed; 68 remain and `Gap 394` carries them.**
+
+| repo | grant (payload · bytes · `sha256`) | ref · SHA | tags | region | what it is |
+|---|---|---|---|---|---|
+| [`project-sunbird/sunbird-lms-service`](https://github.com/project-sunbird/sunbird-lms-service) | 🟢 **MIT** · 1 072 B · `7dde0671…` · © 2018 **Project Sunbird** | `master` · `48c79a8` | 🟢 **450** | 🟢 **APAC** (India) | The learning-management service of **Sunbird**, the stack behind India's national digital-education infrastructure. 🔵 **450 releases is the most release-engineered permissive education backend this KB has measured.** |
+| [`project-sunbird/knowledge-platform`](https://github.com/project-sunbird/knowledge-platform) | 🟢 **MIT** · 1 072 B · `fd3adcd5…` · © 2019 | `master` · `adca974` | 🟢 **336** | 🟢 **APAC** (India) | Content, taxonomy and framework services — the layer that makes a curriculum queryable. 🔵 **The complement to `bncc-pacotes` (p93) at platform scale instead of MCP scale.** |
+| [`project-sunbird/sunbird-devops`](https://github.com/project-sunbird/sunbird-devops) | 🟢 **MIT** · 1 072 B · `7dde0671…` *(byte-identical to `sunbird-lms-service`)* | `master` · `b5797a4039a45c8f2c813ef343529b8a4212a009` | 🟢 **702** | 🟢 **APAC** (India) | 🟡 The deployment limb — the reason the other two are adoptable rather than readable. |
+| [`ed-fi-alliance-oss/Ed-Fi-ODS`](https://github.com/ed-fi-alliance-oss/Ed-Fi-ODS) | 🟢 **Apache-2.0** · `LICENSE.txt` 10 172 B · `59899c60…` | `main` · `e453cd2cad8a0653c65453948d3d235aec7c517c` | 🟢 **42 / `v7.3.2-pre`** | 🟢 **North America** | 🟢 **The Ed-Fi Operational Data Store — the US K-12 student-data spine, permissive and released.** 🔴 **This REFUTES `T26` for the rostering layer** (see `intel/trends.md`). |
+| [`ed-fi-alliance-oss/Ed-Fi-Data-Standard`](https://github.com/ed-fi-alliance-oss/Ed-Fi-Data-Standard) | 🟢 **Apache-2.0** · 10 173 B · `a6cba85b…` 🔴 *(one byte and a different hash from the ODS payload)* | 🔴 **`v6.2.0`** · `3d24df6` | 🟢 **21** | 🟢 **North America** | The data standard the ODS implements — the model, separable from the server. |
+| [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 **BSD-3-Clause** · 1 504 B · © 2002–2021 **LYRASIS** | `main` · `a5b0f0fc17ad5c7f8917eb89b9222f2c2d441aed` | 🟢 **136** | 🟢 **North America** (LYRASIS) | Institutional repository — the archive layer of a university. 🟡 **Tag ordering is unsafe here: a naive `sort` puts `language-pack-1_4_1` last.** |
+| [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | 🟢 **Apache-2.0 + a bundled-grant block inside the LICENSE** · 13 185 B | 🔴 **`develop`** · `0a66b52` | 🟢 **28** | 🟢 **North America** | Open Badges validation. 🔵 **`P1024` was found here.** |
+| [`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) | 🟢 **Apache-2.0** · `LICENSE.md` 11 347 B | `main` · `03e9344dc9fc949ae05b1f38580611fce36528ab` | 🟢 **26 / `0.7.6`** | 🟢 **APAC** (Singapore) | LLM benchmarking + red-teaming harness from the **AI Verify Foundation**. 🟢 **Recipes take a custom dataset, a prompt template, an evaluation metric and a GRADING SCALE** — the shape of a pedagogical rubric. 🟡 Self-declared **beta**. |
+| [`aiverify-foundation/moonshot-cicd`](https://github.com/aiverify-foundation/moonshot-cicd) | 🟢 **Apache-2.0** · 11 357 B *(pristine)* | `main` · `996365ba61586c52040f632f8a9d7ff5c5573129` | 🟢 **6 / `uat0.2`** | 🟢 **APAC** | The pipeline limb — evaluation as a CI gate rather than a notebook. 🟡 `uat`-prefixed tags: pre-GA. |
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🟢 **MIT** · 1 069 B · © 2024 **Romain Puech** | `main` · `d0ee63babac945ab533df1c1caa9c4f45605f0eb` | 🟢 **15 / `v0.0.24`** | 🟡 **North America** by org; 🔴 holder is an individual, **not `P800`-grade** | 🟢 **An MIT-Open-Learning tutor library with 15 releases** — and it was in a worklist, on no page, for the whole post-reset history. 🔴 **README is 214 B: releases without documentation.** |
+
+### 🔴 The ungranted half, and it is EMEA's institutional output
+
+| repo | state | ref · SHA | tags | region |
+|---|---|---|---|---|
+| [`european-commission-empl/european-digital-credentials`](https://github.com/european-commission-empl/european-digital-credentials) | 🔴 **no payload at `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `NOTICE`, `LICENCE`, `license`** — clean 200-control (`README.md` 129 B) | `master` · `ec562a46f54253bf7ad63af78516b17349502c5c` | 🟢 **4 / `2.0.6`** | 🟢 **EMEA** (European Commission, DG EMPL) |
+| [`fwu-de/schulfach-ontologie`](https://github.com/fwu-de/schulfach-ontologie) | 🔴 **no payload** — clean 200-control (`README.md` 3 216 B) | `main` · `4246083f62d27a9345e57f2c8258c9214ddd9d90` | 🟡 **1 / `1.0.0`** | 🟢 **EMEA** (Germany, FWU) |
+
+🔴 **`Gap 395` OPENED.** 🔵 **Both SHIP RELEASES and neither SHIPS A GRANT** — the European
+Commission's own digital-credentials implementation is at `2.0.6` with nothing to take it under.
+🟢 **This is `T20`'s mirror image**: `T20` found permissive supply that was release-blocked; here is
+released supply that is licence-blocked. 🔴 **For an EMEA credentialing engagement that is the worse
+of the two**, because a release implies an intent to be used and the grant is still missing.
+
+### 🔴 Copyleft and default-ref flags from the same sweep
+
+| repo | flag |
+|---|---|
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🔴 **LGPL-3.0** (7 652 B), **319 tags**, top `v4.0.x-beta.3`. 🔴 **Default ref is `v3.0.x-develop`** — `P1020`'s **fourth** non-standard default branch in three passes (`dev`, `trunk`, `2024.9.x`, now a release-line develop branch). 🔵 **A `LICENSE@master` URL for this repo is a 404 on an LGPL project, exactly the published-false-negative shape pass 102 caught on OFBiz.** |
+| [`ed-fi-alliance-oss/Ed-Fi-Data-Standard`](https://github.com/ed-fi-alliance-oss/Ed-Fi-Data-Standard) | 🔴 **Default ref is `v6.2.0` — a TAG-SHAPED branch name.** 🔵 **`P1021` extended: the default ref may not merely lag the newest release line, it may BE a release line, so a `ref` that looks like a version is not evidence that you pinned a tag.** |
+| [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | 🔴 Default ref **`develop`** — fifth non-standard default. |
+| [`concentricsky/badgr-server`](https://github.com/concentricsky/badgr-server) | 🔴 **ABSENT**, and so are `1EdTech/badgr-server`, `IMSGlobal/badgr-server`, `instructure/badgr-server`, `concentricsky/badgr-ui`. 🔵 **`P1012`'s successor-org axis run properly and returning 5 of 5 ABSENT — `Gap 396`.** |
+
+### 🔵 What this pass measured about the CHANNELS, not the repos
+
+🔴 **`github trending education AI {year}` does not return education software.** It returned
+`rasbt/LLMs-from-scratch` (~106k ★ per a third-party snapshot), `microsoft/generative-ai-for-beginners`
+(~121k ★), `rohitg00/ai-engineering-from-scratch`, `karpathy/nanochat`, `developer-roadmap`.
+🔵 **In a trending feed "education" means *teaching people about AI*, not *AI for teaching* — a
+channel property, and it explains why this query has been thin for six passes.** 🟢 **Retire it in
+favour of the technique-named queries that `P955` already prescribes.** 🔴 **★ figures here are
+third-party and unverifiable while `api.github.com` is 403 — recorded as provenance, not as data.**
+
 
 ## 2026-10-10 — pass 102: two Apache-2.0 ERP cores promoted off this file's own back catalogue, and a default-ref assumption caught publishing a false negative
 

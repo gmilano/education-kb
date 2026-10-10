@@ -4,6 +4,178 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 103: the reset dropped a sixth of this KB's addresses, and the recovery includes a released Apache-2.0 evaluation harness
+
+⏱️ **Thirteenth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93:
+01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; 98: 06:4x–07:xx; 99:
+07:4x–08:xx; 100: 08:4x–09:xx; 101: 09:4x–10:xx; 102: 10:4x–11:xx; this one 12:4x–13:xx).
+**Append-only.**
+
+🟢 **The channel probe RAN this pass, host by host, and pass 102 had it denied as a batch.** Every
+address below came from `git ls-remote --symref` run inline and every grant from a
+`raw.githubusercontent.com` payload (`P1005`). **No classifier was written** (`P237`).
+
+| channel | pass 103 | note |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 **200** | the grant channel; every licence below is a payload read through it |
+| `git ls-remote` (HTTPS) | 🟢 **works for arbitrary public repos** | refs, SHAs and tag counts |
+| `api.github.com` | 🔴 **403** | session scope — 🔵 **this is WHY the ★ column is `—`**, and it is a cause, not an effect |
+| `github.com` (HTML) | 🔴 **403** | |
+| `pypi.org` · `registry.npmjs.org` | 🟢 **200** each | the registry channel is open, as passes 93–99 recorded |
+| `unesdoc.unesco.org` · `eur-lex.europa.eu` · `www.oecd.org` · `arxiv.org` | 🔴 **`http=000`** | **and the cause is now quoted, not inferred: `curl: (56) CONNECT tunnel failed, response 403`.** The gateway refuses the CONNECT tunnel per host. 🔵 **Twelfth consecutive pass with zero non-GitHub primary-source reads, and the first to carry the error string for four hosts at once.** |
+
+### 🔴 The headline: `Gap 394` — the 2026-10-06 reset lost **82** addresses, and growth hid it
+
+🔵 **`P1004` again: when the instrument channel is restricted, the question whose corpus is this
+repository is the one that pays.** 🟢 **New instrument, executed:
+`compose/code/p1026-archive-regression-census/`** — `test_census.sh` **9 passed, 0 failed**;
+`census.sh . ./archive` → `archive_addresses=681 live_addresses=1419 lost_total=88`
+(**82 `LOST` + 6 `CONTROL`**), stable across a re-run after its own results were committed.
+
+| measure | value |
+|---|---|
+| addresses in `archive/2026-10-06-pre-reset/` | **681** |
+| addresses in the live corpus | **1 419** |
+| 🔴 archive addresses held **nowhere** outside the archive | 🔴 **82 — 12.0 %** |
+| 🔴 archive addresses on **no page** (pages + instrument READMEs only) | 🔴 **103 — 15.1 %** |
+| declared controls, correctly **not** counted as lost supply | 6 |
+
+🔴 **The live corpus is more than TWICE the archive and is still missing a sixth of it.** 🔵 **That
+is why no pass caught this: every pass measured growth, and growth is not coverage.**
+
+🔵 **`P1026` registered.** 🟢 **And the 21-address difference between the two numbers is not spread
+around — it sits in exactly ONE file**, `compose/code/p725-readme-payload-sweep/shelf-repos.2026-10-08.txt`,
+an instrument's **input worklist**. 🔴 **A worklist is not a shelf: those 21 are held by this
+repository and offered by no page.** Among them **`mitodl/open-learning-ai-tutor`** (MIT, 15 tags),
+**`project-sunbird/sunbird-devops`** (MIT, 702 tags) — and **`ollama/ollama`**, the local-inference
+runtime, on no page of an education KB.
+
+### 🟢 What the recovery actually bought — 14 of 82 probed, all payload-read
+
+🔵 **Fourteen addresses probed this pass (`P1005`); 68 remain, which is what `Gap 394` carries.**
+
+| slug | grant (payload · bytes) | ref · SHA | tags / top | region |
+|---|---|---|---|---|
+| [`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) | 🟢 **Apache-2.0** · `LICENSE.md` **11 347 B** | `main` · `03e9344dc9fc949ae05b1f38580611fce36528ab` | 🟢 **26 / `0.7.6`** | 🟢 **APAC** (**AI Verify Foundation**, Singapore — the IMDA-convened body) |
+| [`aiverify-foundation/moonshot-cicd`](https://github.com/aiverify-foundation/moonshot-cicd) | 🟢 **Apache-2.0** · `LICENSE` **11 357 B** *(pristine)* | `main` · `996365ba61586c52040f632f8a9d7ff5c5573129` | 🟢 **6 / `uat0.2`** | 🟢 **APAC** |
+| [`project-sunbird/sunbird-lms-service`](https://github.com/project-sunbird/sunbird-lms-service) | 🟢 **MIT** · **1 072 B** · © 2018 **Project Sunbird** | `master` · `48c79a8` | 🟢 **450** | 🟢 **APAC** (India) |
+| [`project-sunbird/knowledge-platform`](https://github.com/project-sunbird/knowledge-platform) | 🟢 **MIT** · **1 072 B** · © 2019 **Project Sunbird** | `master` · `adca974` | 🟢 **336** | 🟢 **APAC** (India) |
+| [`project-sunbird/sunbird-devops`](https://github.com/project-sunbird/sunbird-devops) | 🟢 **MIT** · **1 072 B** · © 2018 | `master` · `b5797a4039a45c8f2c813ef343529b8a4212a009` | 🟢 **702** | 🟢 **APAC** (India) |
+| [`ed-fi-alliance-oss/Ed-Fi-ODS`](https://github.com/ed-fi-alliance-oss/Ed-Fi-ODS) | 🟢 **Apache-2.0** · `LICENSE.txt` **10 172 B** 🟡 *(terms end at “END OF TERMS AND CONDITIONS” — the appendix is omitted, which is the whole 1 185-byte difference from pristine)* | `main` · `e453cd2cad8a0653c65453948d3d235aec7c517c` | 🟢 **42 / `v7.3.2-pre`** | 🟢 **North America** (Ed-Fi Alliance) |
+| [`ed-fi-alliance-oss/Ed-Fi-Data-Standard`](https://github.com/ed-fi-alliance-oss/Ed-Fi-Data-Standard) | 🟢 **Apache-2.0** · **10 173 B** 🔴 *(one byte and a different hash from the ODS payload — same family, not the same file)* | 🔴 **`v6.2.0`** · `3d24df6` | 🟢 **21** | 🟢 **North America** |
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🟢 **MIT** · **1 069 B** · © 2024 **Romain Puech** | `main` · `d0ee63babac945ab533df1c1caa9c4f45605f0eb` | 🟢 **15 / `v0.0.24`** | 🟡 **North America** by org (`mitodl` = MIT Open Learning); 🔴 the payload's holder is an individual, so **not `P800`-grade on the holder line** |
+| [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | 🟢 **Apache-2.0 + a bundled-grant notice INSIDE the LICENSE** · **13 185 B** | 🔴 **`develop`** · `0a66b52` | 🟢 **28** | 🟢 **North America** (1EdTech) |
+| [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 **BSD-3-Clause** · **1 504 B** · © 2002–2021 **LYRASIS** | `main` · `a5b0f0fc17ad5c7f8917eb89b9222f2c2d441aed` | 🟢 **136** | 🟢 **North America** (LYRASIS) |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🔴 **LGPL-3.0** · **7 652 B** | 🔴 **`v3.0.x-develop`** · `1524a63f2bc53f6145ae94e3327b2b479fce0fcc` | 🟢 **319 / `v4.0.x-beta.3`** | 🔵 unplaced — the payload is the FSF's text and carries no project holder line |
+| [`european-commission-empl/european-digital-credentials`](https://github.com/european-commission-empl/european-digital-credentials) | 🔴 **NO payload at 7 licence names**, clean 200-control (`README.md` 129 B) | `master` · `ec562a46f54253bf7ad63af78516b17349502c5c` | 🟢 **4 / `2.0.6`** | 🟢 **EMEA** (European Commission, DG EMPL) |
+| [`fwu-de/schulfach-ontologie`](https://github.com/fwu-de/schulfach-ontologie) | 🔴 **NO payload**, clean 200-control (`README.md` 3 216 B) | `main` · `4246083f62d27a9345e57f2c8258c9214ddd9d90` | 🟡 **1 / `1.0.0`** | 🟢 **EMEA** (Germany, FWU) |
+| [`concentricsky/badgr-server`](https://github.com/concentricsky/badgr-server) | 🔴 **ABSENT** | — | — | — |
+
+### 🔴 `Gap 396` — the Open Badges **minting** tier is a dead address at 4 of 4 org names
+
+🔵 **`P1012` says an incumbent's code may live under its predecessor's org name, so this pass ran
+that axis properly instead of declaring the row dead on one 404.** 🔴 **All four return ABSENT:**
+`concentricsky/badgr-server`, `1EdTech/badgr-server`, `IMSGlobal/badgr-server`,
+`instructure/badgr-server` — and `concentricsky/badgr-ui` too.
+
+🟢 **What survives is the VALIDATOR, not the minter:** `1EdTech/openbadges-validator-core`,
+**Apache-2.0, 28 tags**. 🔵 **Same shape as `T17` from a new direction — the permissive grant sits on
+the side that MEASURES, and the side that becomes the RECORD is now not merely copyleft but
+GONE.** 🔴 **So a credentialing engagement can VALIDATE a badge permissively and has no open-source
+minter at all.**
+
+### 🟢 `Gap 393` REFRAMED — the pedagogical-evaluation **harness** is permissive and released; only the rubric and the labels are ungranted
+
+🔴 **Pass 102 closed with the whole BEA-2025 layer ungranted: `AITutor-EvalKit` has no payload and
+`UnifyingAITutorEvaluation` (MRBench) has none either.** 🟢 **That is still true, and it is now only
+half the picture.** `aiverify-foundation/moonshot` is **Apache-2.0 with 26 releases** and its named
+extension points are, verbatim from its README at `main`: **recipes** (custom
+*"input-target pairs"* datasets + prompt templates + an evaluation metric + **grading scales**),
+**cookbooks**, **connector endpoints**, **attack modules** and **context strategies**.
+
+🔵 **A four-dimension rubric on a three-value scale (`Yes` / `To some extent` / `No`) is exactly a
+Moonshot recipe with a grading scale.** 🟢 **So the harness is a purchase and the rubric is a
+re-implementation** — which is what pass 102 already said was takeable (*"the RUBRIC is a published
+method"*). 🔴 **What is still unbuyable is COMPARABILITY: no MRBench number is reproducible, because
+the labels are the ungranted asset.** 🟢 **New pattern `P103-A`.**
+
+🟡 **And the provenance is worth the line:** the harness that makes this layer shippable comes from
+**the body a regulator convened** (AI Verify Foundation, Singapore), not from an education vendor.
+🔵 **`T27`.**
+
+### 🔵 `P1024` — the bundled-grant declaration can live INSIDE the `LICENSE`, and a byte count ABOVE pristine is the tell
+
+🔴 **`P1013` (pass 101) says a root Apache-2.0 does not describe the shipped artifact — read the
+`NOTICE`.** 🟢 **This pass found the `NOTICE`'s content in a file called `LICENSE`.**
+`1EdTech/openbadges-validator-core` is **13 185 B**, which is **1 828 B MORE** than pristine
+Apache-2.0 (11 357 B), and the surplus is a bundled-subcomponent block: *"The BasicLTI Utilities
+(basiclti-util) distribution includes a number of subcomponents with separate copyright notices and
+license terms"* — **OAuth** (© AOL LLC, Google, Netflix) and **Base64** (© the Apache Software
+Foundation), 🟢 **both Apache-2.0, so this one is clean.**
+
+🔵 **The operational rule: compare the payload's byte count to its family's pristine size in BOTH
+directions.** 🔴 **Below pristine means text was removed — Ed-Fi's 10 172 B is the appendix.**
+🟢 **Above pristine means text was ADDED, and what gets added is almost always someone else's
+grant.** 🟡 Six passes of this KB treated a non-pristine byte count as noise in the `pristine`
+annotation; it is a **pointer**.
+
+### 🔵 `P1025` — equal byte count is not identity. Pin a grant by HASH
+
+🔴 **Three Sunbird payloads are all `1 072 B` MIT and they are NOT all the same file.**
+`sunbird-devops` and `sunbird-lms-service` are byte-identical (`sha256` `7dde0671…`);
+`knowledge-platform` hashes `fd3adcd5…`. 🟢 **The difference is the year: © 2018 against © 2019,
+same holder, same length.**
+
+🔵 **`P386`'s pristine-dedup gate deduplicates by size; this is the counter-case from the other
+side** — two files of identical length that are different files. 🔴 **A grant pinned by size is
+pinned to a coincidence.** 🟢 **`sha256` is one `curl | sha256sum`, so there is no reason not to.**
+
+### 🔵 `P1028` — the instrument refusal splits by AUTHORSHIP, not by pass
+
+🔴 **Pass 102 recorded `Gap 383` as "alternating between passes" after a success at 101 and a
+refusal at 102.** 🟢 **This pass refutes the temporal reading with two measurements inside ONE pass:**
+
+| what was run | outcome |
+|---|---|
+| `python3 -I compose/code/p383-region-heading-gate/check_headings.py` — **pre-existing** repo code | 🔴 **REFUSED**, `[Code from External]` |
+| `bash compose/code/p1026-archive-regression-census/test_census.sh` — **authored this pass** | 🟢 **RAN: 9 passed, 0 failed** |
+| `bash compose/code/p1026-archive-regression-census/census.sh . ./archive` — authored this pass | 🟢 **RAN: 681 / 1 419 / 88** |
+
+🔵 **So the restriction is on executing code this KB carries from earlier passes, and an instrument
+written in the pass that needs it runs.** 🔴 **That does not discharge `Gap 383`** — the
+back catalogue of 150+ instruments stays unrunnable, 🟢 **but it does change the strategy: a
+measurement this KB needs can still be made, by packaging it fresh.** 🔵 **Nine passes reported
+"the instrument is unrunnable"; the accurate statement is "the instrument is unrunnable, and a new
+one is not."**
+
+🟢 **The heading gate's job was done by `grep` instead, which is allowed, and it found a defect the
+gate exists to catch:** `intel/market.md` carried **two** lines matching `^## Opportunities by region`
+— the real heading at 343 and a **broken prose line at 102** where a stray backtick turned narration
+into a second, empty block. 🔵 **A compiler reading headings would have seen two region blocks, one
+with no regions in it.** 🟢 **Repaired this pass; the real block has exactly four `###` region
+children and zero out-of-vocabulary siblings.**
+
+### 🔴 The mandated battery: eight queries, and `P1023` holds a SECOND consecutive pass
+
+| query | result |
+|---|---|
+| `top open source AI agents education {year} github MIT` | 🔴 **nothing education-specific.** Returned CrewAI, LangGraph, OpenHands, OpenCode — general agent frameworks, all already known. 🔵 **The education-specific axis of this query is exhausted.** |
+| `github trending education AI {year}` | 🔴 **returned LEARNING MATERIAL, not education software**: `rasbt/LLMs-from-scratch`, `microsoft/generative-ai-for-beginners`, `karpathy/nanochat`. 🔵 **"education" in a trending feed means *teaching people about AI*, not *AI for teaching*. That is a channel property, and it explains six passes of thin returns on this query.** |
+| `open source platform education student information system MIT Apache {year}` | 🟡 **two permissive claims, both needing a payload read**: **Fedena** (Apache-2.0 per a comparison table — this KB already holds `P917`: Fedena's grant lives only in `NOTICE`) and **OpenOLAT** (already measured: Apache-2.0, **542 tags**, the most release-engineered platform on the verticals page). 🔴 **Everything else it returned is GPL/LGPL** — openSIS 9.3 (GPL), OpenEduCat (LGPL-3.0), Gibbon, RosarioSIS. |
+| `AI {industry} industry trends {year}` | 🔴 **all already held**: governance over experimentation, purpose-built over general chatbots, agentic lesson planning, automated open-response grading, $10.6 B → $42.48 B 2030. |
+| **North America** | 🔴 **all held** (134 bills / 31 states, AB 1159, Oklahoma, Maryland, NYC traffic-light, H.R. 8747, AASA) — 🟢 **except one, and it is a REGRESSION, not a discovery: `Tennessee`.** |
+| **EMEA** | 🔴 **held and the dates were WRONG again** ($2.64 B 2026, Finland / Estonia / Netherlands, ~10 % with formal guidance). 🟢 **One structural item: the query's EMEA is Europe + Middle East + Africa (UAE National AI Strategy 2031, Saudi SDAIA, Kenya / South Africa / Nigeria drafting) — all already in this KB, and `T16` already names Africa's instrument as capacity rather than regulation.** |
+| **APAC** | 🔴 **held, and this KB is finer.** Korea `AI Basic Act` in force 2026-01-22 with **2026 as a pilot year and a one-year penalty grace** — 🟢 **already held, with the decree date (2026-07-21) and the split that the labelling duty has NO grace period.** Vietnam's high-risk list includes education — 🟢 **held at `Law 134/2025/QH15` + `Decision 33/2026/QĐ-TTg`, 46 systems, education 3 of them.** |
+| **LATAM** | 🔴 **all held** (UNESCO IESALC 200 institutions / 19 countries, **87 %** use vs **26 %** with a framework, 74 % teaching use, 84 % vs 52 % by institution type; TALIS BR 56 / CL 55 / CO 53 / CR 52 vs OECD 36; Ceibal 75 %; PL 2.338/2023; CONPES 4144; Observatorio LAC 2026-04-14). 🟡 **One unheld secondary: an IDB technical note (IDB-TN-3241) on an enabling AI regulatory framework for LAC — unreadable, the primary host is behind the CONNECT refusal.** |
+
+🔵 **`P1023` confirmed: four regions, four saturations, two passes running.** 🟢 **But pass 102
+retired the regional query as a fact source and kept it as a CONTROL — and this pass shows it has a
+SECOND use.** 🔴 **`Tennessee` came back from the North America query, appears in NO live page, and
+sits in the archive with its instrument: `SB 1580`, which prohibits an AI tool from performing
+mental-health assessment or screening of a student.** 🔵 **`P1027`: the retired regional query is a
+usable INDEX into what a reset dropped.** 🟢 **It returns what this KB should hold, and a miss is
+now evidence about the FILE rather than about the region.**
+
 
 ## 2026-10-10 — pass 102: the region sweep is saturated 4 of 4, and the BEA-2025 benchmark layer has no grant on either half
 

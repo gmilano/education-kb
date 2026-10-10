@@ -5,9 +5,25 @@ updated: 2026-10-10
 ---
 
 # Education — market, players and opportunities
-**Pass 102, 2026-10-10.** ⏱️ **Twelfth pass of this date** (101 ran 09:4x–10:xx UTC; this one
-10:4x–11:xx). 🔴 **All four mandated regional sweeps ran and all four returned LESS than this file
-already holds — the first complete-sweep saturation this KB has measured (`P1023`).**
+**Pass 103, 2026-10-10.** ⏱️ **Thirteenth pass of this date** (101 ran 09:4x–10:xx UTC; 102,
+10:4x–11:xx; this one 12:4x–13:xx). 🔴 **All four mandated regional sweeps ran again and all four
+returned LESS than this file already holds — `P1023` confirmed for a SECOND consecutive pass, which
+is what turns one observation into a channel property.**
+
+🟢 **And the retired query turns out to have a second use (`P1027`): it is an INDEX into what the
+2026-10-06 reset dropped.** 🔴 **`Tennessee` came back from the North America sweep, appears on NO
+live page of this KB, and sits in `archive/2026-10-06-pre-reset/intel-market.md` with its
+instrument — **`SB 1580`**, which bars an AI tool from performing mental-health assessment or
+screening of a student.** 🔵 **A regional miss is now evidence about the FILE, not about the region.**
+🟢 **Quantified as `Gap 394`: 82 of 681 archived addresses are held nowhere outside the archive, 103
+appear on no page.**
+
+🔴 **One DATA DEFECT in this file, repaired this pass.** 🔵 **Line 102 was a broken prose line whose
+stray backtick made it match `^## Opportunities by region` — so a compiler reading headings saw TWO
+region blocks, the real one and an empty one.** 🟢 **Repaired; the real block has exactly four `###`
+region children (`North America`, `EMEA`, `APAC`, `LATAM`) and zero out-of-vocabulary siblings.**
+🔴 **The gate that exists to catch this (`p383-region-heading-gate`) was REFUSED this pass
+(`[Code from External]`), so the measurement was made with `grep` — see `P1028`.**
 
 🔵 **That is a finding about the CHANNEL, not about the regions, and it is recorded here rather than
 left as four quiet non-results.** 🟢 **One genuinely new item survived eight queries, and it is an
@@ -99,8 +115,9 @@ K-12 students report using AI; 86 % of education organisations use generative AI
 policy; Singapore **60.9 %** AI diffusion among working-age adults; **1 in 10** APAC enterprises
 self-describe as "very mature" in AI adoption.
 
-## Opportunities by region` heading with one `###` per region,
-and the region vocabulary is closed: North America · EMEA · APAC · LATAM · Global.** 🔴 **A figure
+🔵 **The brief is explicit: opportunities live under a single `## Opportunities by region` heading
+with one `###` per region, and the region vocabulary is closed: North America · EMEA · APAC · LATAM ·
+Global.** 🔴 **A figure
 without a region is worth less than one that is placed, so every new figure in this pass carries its
 region or is recorded in the zeros section as unplaced.**
 
@@ -343,6 +360,34 @@ KB: write down what you refused to use, and why.**
 ## Opportunities by region
 
 ### North America
+
+#### 🟢 🆕 p103 — the permissive student-data SPINE is the North America opportunity, and it is education-specific
+
+🔴 **The sweep itself returned nothing new** (134 bills / 31 states, AB 1159, Oklahoma **S.B. 1734**
+requiring every district to adopt a written AI policy before 2027–28, Maryland's 120-day clock, the
+NYC traffic-light guidance whose red tier bars AI from grading / discipline / placement, **H.R. 8747**
+advanced in July, the Department's AI grant priority finalised 2026-04-13, the AASA student framework,
+Alabama's CS-with-AI graduation requirement). 🔵 **All held, and `P1023` holds.**
+
+🔴 **One REGRESSION recovered, which is the only new row:** **Tennessee `SB 1580`** — AI may not
+perform mental-health assessment or screening of a student. 🟢 **It is in the archive and on no live
+page** (`P1027`). 🔵 **Pair it with `T12`: in a federal system the binding instrument is subnational,
+so a per-state product control is the sellable unit, not a better model.**
+
+🟢 **The opportunity this pass actually adds is a SUPPLY fact, not a policy one.**
+**`ed-fi-alliance-oss/Ed-Fi-ODS`** is **Apache-2.0** (`LICENSE.txt` 10 172 B), `main` ·
+`e453cd2cad8a0653c65453948d3d235aec7c517c`, **42 tags** (`v7.3.2-pre`), and
+**`Ed-Fi-Data-Standard`** is **Apache-2.0** (10 173 B) with **21 tags**. 🔴 **This refutes `T26` for
+the rostering layer**: an education-specific, permissive, release-engineered student-data platform
+exists in this region. 🔵 **So a North America K-12 engagement can be permissive end to end —
+Ed-Fi for the data spine, `canvas-mcp` (MIT, 26 tags) at the LMS edge — and `P103-B` costs it.**
+🟡 **Also recovered here:** `mitodl/open-learning-ai-tutor` (MIT, 15 releases),
+`dspace/dspace` (BSD-3, 136 tags), `1EdTech/openbadges-validator-core` (Apache-2.0, 28 tags).
+
+🔴 **And a negative that removes a line item from every credentialing quote in this region:** the
+Open Badges **minter** is gone — `concentricsky/badgr-server`, `1EdTech/badgr-server`,
+`IMSGlobal/badgr-server`, `instructure/badgr-server` and `concentricsky/badgr-ui` all **ABSENT**
+(`Gap 396`). 🟢 **Validation stays permissive; minting is a build or a vendor.**
 
 #### 🔴 🆕 p102 — the regional query added nothing, and the permissive ADMINISTRATIVE core is the opportunity instead
 
@@ -654,6 +699,40 @@ adoption.** 🔴 **So a North America pitch that leads with adoption is pushing 
 regulatory grain; one that leads with governance, auditability and teacher-augmentation is with it.**
 
 ### EMEA
+
+#### 🔴 🆕 p103 — the EMEA institutional supply ships RELEASES WITHOUT A GRANT, and that is the region's distinguishing fact
+
+🔴 **The sweep was saturated and wrong-dated again** ($2.64 B 2026; Finland / Estonia / Netherlands
+as K-12 leaders; ~10 % of institutions with formal guidance; three mutually inconsistent AI Act
+timelines). 🟢 **This file's procedural resolution stands, unchanged since pass 99:** Regulation (EU)
+**2026/1744**, in force **2026-07-27**; Article 50 from **2026-08-02**; 🔴 **Article 50(2) from
+`2026-12-02`** — **fifty-three days out at pass 102, and fifty-three days is now the number to quote,
+not the one the market discusses**; Annex III from **2027-12-02**.
+
+🟡 **The MEA half of EMEA returned only what `T16` already holds** — UAE National AI Strategy 2031,
+Saudi **SDAIA** governance framework, Kenya / South Africa / Nigeria drafting. 🔵 **`T16` already
+names Africa's leading instrument as CAPACITY rather than regulation; nothing this pass moves it.**
+
+🔴 **The new EMEA fact is about SUPPLY and it is negative. `Gap 395` OPENED.** Two institutional
+repositories ship releases and no licence payload:
+
+| repo | releases | grant | control |
+|---|---|---|---|
+| [`european-commission-empl/european-digital-credentials`](https://github.com/european-commission-empl/european-digital-credentials) | 🟢 **4 tags, top `2.0.6`** | 🔴 **NO payload at `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `NOTICE`, `LICENCE`, `license`** | 🟢 clean 200 (`README.md` 129 B), `master` · `ec562a46f54253bf7ad63af78516b17349502c5c` |
+| [`fwu-de/schulfach-ontologie`](https://github.com/fwu-de/schulfach-ontologie) | 🟡 **1 tag, `1.0.0`** | 🔴 **NO payload** | 🟢 clean 200 (`README.md` 3 216 B), `main` · `4246083f62d27a9345e57f2c8258c9214ddd9d90` |
+
+🔵 **This is `T20`'s mirror image.** `T20` found permissive supply that was RELEASE-blocked; here is
+released supply that is LICENCE-blocked. 🔴 **For a European credentialing engagement that is the
+worse of the two, because a version number implies an intent to be used and the grant is still
+missing.** 🟢 **The sellable move: a written grant request to the publishing body is a cheap,
+dateable action item** — and until it lands, the EU's own EDC implementation cannot be taken into a
+client deliverable, which is a procurement fact worth stating in a proposal rather than discovering
+in delivery.
+
+🔵 **Placed against the other regions this is the sharper claim (`T27`): the permissive,
+education-specific, release-engineered platform exists where a NATIONAL PROGRAMME built one — US
+(Ed-Fi) and India (Sunbird) — and EMEA's institutional output of the same period is released and
+ungranted.** 🔴 **No EMEA row of that shape has been measured by this KB.**
 
 #### 🔴 🆕 p102 — saturated AND contradicted, and the 2026-12-02 clock is at fifty-three days
 
@@ -1150,6 +1229,39 @@ duty is the sellable deliverable that is already overdue.**
 
 ### APAC
 
+#### 🟢 🆕 p103 — the regulator-convened body is the SUPPLIER, which is new and is APAC-specific
+
+🔴 **The sweep returned this file's own content at lower resolution again.** Korea's **AI Basic Act**
+in force **2026-01-22**, 2026 described as a pilot year with a one-year penalty grace — 🟢 **already
+held, and finer: the enforcement decree bites 2026-07-21, fines are deferred ~2027-07-21, and the
+generated-content labelling duty has NO grace period at all.** Vietnam's high-risk list naming
+education — 🟢 **held at `Law 134/2025/QH15` + `Decision 33/2026/QĐ-TTg`, 46 systems, education 3 of
+them.** Taiwan's AI Basic Act (Dec 2025) and Singapore's voluntary route — held. 🟡 One commercial
+report naming Google, Microsoft, IBM, Pearson and Byju's as regional players: **secondary, unused for
+costing.**
+
+🟢 **The new APAC fact is a SUPPLY fact and it inverts the usual direction.** The body Singapore's
+IMDA convened — the **AI Verify Foundation** — ships the evaluation harness this KB has been missing:
+**`aiverify-foundation/moonshot`**, **Apache-2.0** (`LICENSE.md` 11 347 B), `main` ·
+`03e9344dc9fc949ae05b1f38580611fce36528ab`, **26 tags** (`0.7.6`), plus
+**`moonshot-cicd`** (Apache-2.0, pristine 11 357 B, 6 tags) for the pipeline limb.
+🔵 **Recipes take a custom dataset, a prompt template, an evaluation metric and a GRADING SCALE —
+which is the exact shape of a pedagogical rubric.** 🟢 **`Gap 393` reframed; `P103-A` costs it.**
+
+🔵 **Why that is a regional finding and not just a repo:** 🔴 **in every other region the regulator
+publishes a duty and the market builds the instrument.** 🟢 **In APAC the regulator-adjacent body
+published the INSTRUMENT, permissively, with releases.** 🔵 **So an APAC engagement can cite the
+harness its own regulator's foundation maintains — a procurement argument no EMEA or LATAM
+engagement can currently make.** 🟢 **`T27`.**
+
+🟢 **And the national-programme supply is here too:** **`project-sunbird/sunbird-lms-service`**
+(MIT, **450 tags**), **`knowledge-platform`** (MIT, **336 tags**) and **`sunbird-devops`**
+(MIT, **702 tags**) — the stack behind India's public digital-education infrastructure, all
+payload-read this pass. 🔴 **All three were absent from every page of this KB after the reset**
+(`Gap 394`). 🔵 **Pair with `T25`: APAC's declared driver is teacher shortage and the budget goes to
+training, so a platform with 450 releases and a training-heavy buyer is a better fit here than a
+research artefact with none.**
+
 #### 🔴 🆕 p102 — the sweep returned this file's own APAC content at LOWER resolution, and the one new item binds the supplier
 
 🔴 **The APAC query returned Korea's AI Basic Act (22 Jan 2026), Vietnam's law (1 Mar 2026) with
@@ -1634,6 +1746,41 @@ the permission argument first — except in ANZ, where it does.** 🔴 **That is
 North America posture recorded above, and the two pitches should not share a slide.**
 
 ### LATAM
+
+#### 🔴 🆕 p103 — re-confirmed a second time by an independent query, and the one unheld item is UNREADABLE
+
+🟢 **Every LATAM figure in this file was returned again by an independent query, which is the
+strongest form of confirmation available while the primary hosts are refused:** UNESCO IESALC — **200
+institutions / 19 countries**, **87 %** using AI in at least one area against **26 %** with a formal
+framework, **74 %** using it for teaching, **84 %** of private non-profit universities against **52 %**
+of private for-profit; TALIS 2024 — Brazil **56 %**, Chile **55 %**, Colombia **53 %**, Costa Rica
+**52 %** against an OECD average of **36 %**; Ceibal — **75 %** of Uruguayan public-school teachers;
+PL **2.338/2023** passed the Senate Dec 2024 and still in the Chamber of Deputies, so its text can
+change; Chile's bill in its first constitutional stage; Colombia's **CONPES 4144** (Feb 2025, running
+to 2030); the UNESCO **Observatory on AI in Education for LAC** launched **2026-04-14** at ECLAC,
+Santiago. 🔵 **`P1023`: nothing new, and the re-confirmation is itself the result.**
+
+🟡 **The one unheld item is a lead this KB cannot read:** an **IDB technical note (IDB-TN-3241)** on
+an enabling AI regulatory framework for Latin America and the Caribbean. 🔴 **Recorded as a lead with
+its provenance and NOT as a fact** — the publication host is behind the same CONNECT refusal as every
+other non-GitHub primary source (`curl: (56) CONNECT tunnel failed, response 403`). 🔵 **Twelfth
+consecutive pass with zero non-GitHub primary-source reads; a `—` is unread, never zero.**
+
+🔴 **And the supply finding for this region is a measured ABSENCE, which is worth more than another
+adoption statistic.** 🟢 **`T27` says the permissive, education-specific, release-engineered platform
+exists where a national programme built one — the US has Ed-Fi, India has Sunbird.** 🔴 **This pass
+measured no LATAM row of that shape.** 🔵 **What LATAM has instead is the CURRICULUM layer, and this
+KB already holds it at `P800`-grade: `bncc-dev/bncc-pacotes` (MIT code + CC BY 4.0 data, 1 721
+verified BNCC objectives behind 7 MCP tools, dataset embedded so lookups are local) and a second,
+independent `dfdb76/bncc-mcp` (MIT).** 🟢 **So the regional offer is: the curriculum spine is
+adoptable here and the platform spine is a construction** — which is `P102-A` with a Brazilian
+curriculum tool at the alignment edge, 🔴 **and it is a genuinely different engagement shape from the
+North America one (`P103-B`), not a discount on it.**
+
+🟢 **With 87 % adoption against 26 % governance, the sellable unit in this region remains the
+GOVERNANCE artefact** — and pass 103 adds the harness that makes it auditable rather than asserted:
+`moonshot` + `moonshot-cicd` (Apache-2.0, 26 + 6 releases) run a rubric as a CI gate. 🔵 **The
+rubric is a re-implementation; the harness is a purchase (`P103-A`).**
 
 #### 🔴 🆕 p102 — the strongest regional numbers in this KB re-confirmed by an independent query, and nothing new
 

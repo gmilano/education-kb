@@ -5,12 +5,18 @@ updated: 2026-10-10
 ---
 
 # Education — compose patterns
-**Pass 102, 2026-10-10.** ⏱️ **Twelfth pass of this date.** 🆕 **One pattern added — `P102-A`, the
-permissive student-information path, which `T26` makes buildable: a generic Apache-2.0 core plus the
-Apache-2.0 education domain model, avoiding OpenEduCat's LGPL-3.0 and ERPNext's GPL entirely.**
-🔴 **And one layer is now priced as UNBUYABLE: `Gap 393` — the BEA-2025 pedagogical-evaluation
-benchmark has no grant on either half, so a published benchmark number cannot be bought at any
-price; only re-annotation can.**
+**Pass 103, 2026-10-10.** ⏱️ **Thirteenth pass of this date.** 🆕 **Two patterns added.**
+🟢 **`P103-A`** — the pedagogical-evaluation gate, which this page priced as UNBUYABLE one pass ago:
+🔴 **the benchmark's labels are still ungranted (`Gap 393`), but the HARNESS is Apache-2.0 with 26
+releases** (`aiverify-foundation/moonshot`), so the gate is buildable and only the comparability is
+not. 🟢 **`P103-B`** — the permissive North America student-data spine, 🔴 **and it is the first
+pattern on this page that ADOPTS an education-specific permissive platform instead of constructing
+one**: `ed-fi-alliance-oss/Ed-Fi-ODS`, Apache-2.0, **42 releases**.
+
+🔵 **Both came from censusing this repository's own pre-reset archive, not from a search** — 🔴 **82
+of 681 archived addresses are held nowhere outside the archive and 103 appear on no page**
+(`Gap 394` / `P1026`). 🔵 **`P102-A` is NOT retired: `T27` scopes it — North America and APAC can
+adopt, EMEA and LATAM still construct.**
 
 🟢 **Pass 101 added `P101-A`,
 the student early-warning system, which this page could not write for four passes because `Gap 385`
@@ -147,6 +153,72 @@ stack (`repos/foundations.md` Tier 2c) — and `P92-A` stays on the page, becaus
 decides engagements rather than in detail. **`P93-B`** is the first pattern in this KB anchored on a
 **national curriculum published as audited open data**, and the first with a **measured** justification for
 its own central design choice.
+
+## 🟢 🆕 p103 `P103-A` — the pedagogical-evaluation gate, built on a harness you can actually license (APAC first, global second)
+
+🔵 **The ask this answers is the one `P102-A` had to decline.** 🔴 **Every tutoring and feedback
+engagement eventually gets asked "is this pedagogically sound, and who says so?", and the recognised
+answer — a BEA-2025 / MRBench score — is ungranted on both halves (`Gap 393`).** 🟢 **Pass 103
+separates the two things that question bundles: the HARNESS and the LABELS. The harness is a
+purchase.**
+
+| layer | component | grant (payload-read this pass) | why this one |
+|---|---|---|---|
+| evaluation harness | [`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) | 🟢 **Apache-2.0** · `LICENSE.md` **11 347 B** · `main` · `03e9344dc9fc949ae05b1f38580611fce36528ab` · **26 tags / `0.7.6`** | 🟢 **Recipes take a custom dataset of *"input-target pairs"*, a prompt template, an evaluation metric and a GRADING SCALE** — so a four-dimension rubric on a three-value scale is a recipe, not a rewrite. 🔵 **And the publisher is the AI Verify Foundation, convened by Singapore's IMDA**, which is a procurement argument and not just a licence. 🟡 Self-declared **beta**: pin the tag. |
+| evaluation in CI | [`aiverify-foundation/moonshot-cicd`](https://github.com/aiverify-foundation/moonshot-cicd) | 🟢 **Apache-2.0** · 11 357 B *(pristine)* · `main` · `996365ba61586c52040f632f8a9d7ff5c5573129` · **6 tags / `uat0.2`** | 🟢 **Turns the gate from a notebook into a pipeline step** — which is what makes it auditable: a regulator asks *when* the check ran. 🔴 **`uat`-prefixed tags means pre-GA; pin the SHA, not the tag.** |
+| the rubric | **re-implement** — four dimensions (Mistake Identification, Mistake Location, Providing Guidance, Actionability) on `Yes` / `To some extent` / `No` | 🔴 **not takeable as code** · 🟢 **takeable as a published METHOD** | 🔴 `kaushal0494/AITutor-EvalKit` has **no licence payload** at a stable SHA across two passes (`Gap 391`), so the scorer cannot be a dependency. 🟢 **The rubric is a paper, and papers are re-implementable.** |
+| the labels | 🔴 **re-annotate on the client's own dialogues** | 🔴 **MRBench is ungranted** (`Gap 393`) | 🔴 `kaushal0494/UnifyingAITutorEvaluation` — the official shared-task data (dev **300 dialogues / 2 476 responses**, test **191 / 1 547**) — has **no payload at 5 licence names** with a clean 200-control. 🔵 **The labels are the asset, so this is the irreducible cost.** |
+| the tutor under test | [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) *(optional baseline)* | 🟢 **MIT** · 1 069 B · `main` · `d0ee63babac945ab533df1c1caa9c4f45605f0eb` · **15 tags / `v0.0.24`** | 🟡 Useful as a **released** reference implementation to score against. 🔴 **README is 214 B**, so budget reading the source. |
+
+**Estimated 4–6 weeks** for the harness, the re-implemented rubric as a Moonshot recipe and the CI
+gate; 🔴 **plus annotation, which is the real cost and scales with the dialogue set** — budget two
+annotators and an adjudication pass, because a single-annotator rubric is not defensible.
+
+🔴 **What this pattern explicitly does NOT sell: comparability.** 🔵 **No MRBench number is
+reproducible by a studio, because the labels are ungranted.** 🟢 **What it sells is a dated,
+re-runnable, licensed pedagogical gate over the client's own data** — which is what an audit asks
+for anyway, and which `P94-A`'s Annex III evidence pack can then cite.
+
+🔵 **Why this supersedes the "unbuyable" verdict pass 102 published.** 🔴 **Pass 102 priced the whole
+layer at *"cannot be bought at any price; only re-annotation can"*.** 🟢 **That was half right: the
+re-annotation stands, and the harness around it turned out to be Apache-2.0 with 26 releases** — it
+was simply not on this KB's shelf, because it was lost in the 2026-10-06 reset (`Gap 394`).
+🔵 **The correction is `P1026`'s: a layer declared unbuyable should be re-checked against this
+repository's own archive before it is quoted as unbuyable.**
+
+## 🟢 🆕 p103 `P103-B` — the permissive North America student-data spine (and the first pattern here that ADOPTS instead of CONSTRUCTS)
+
+🔵 **`P102-A` exists because no education-specific permissive platform was known to this KB.**
+🔴 **One was, and it has 42 releases.** 🟢 **For a North America K-12 engagement this pattern replaces
+`P102-A` outright; `P102-A` remains correct for EMEA and LATAM (`T27`).**
+
+| layer | component | grant (payload-read this pass) | why this one |
+|---|---|---|---|
+| student-data spine | [`ed-fi-alliance-oss/Ed-Fi-ODS`](https://github.com/ed-fi-alliance-oss/Ed-Fi-ODS) | 🟢 **Apache-2.0** · `LICENSE.txt` **10 172 B** · `main` · `e453cd2cad8a0653c65453948d3d235aec7c517c` · **42 tags / `v7.3.2-pre`** | 🟢 **The operational data store and API that US districts already run** — enrolment, rostering, assessment, discipline. 🔵 **Education-specific AND permissive AND released: the combination `T26` said did not exist.** 🟡 **10 172 B is Apache-2.0 with the appendix omitted, not a modified grant** (`P1024`). 🔴 Top tag is `-pre`; ship from the newest stable `v7.3.x`. |
+| the model, without the server | [`ed-fi-alliance-oss/Ed-Fi-Data-Standard`](https://github.com/ed-fi-alliance-oss/Ed-Fi-Data-Standard) | 🟢 **Apache-2.0** · 10 173 B · 🔴 **`v6.2.0`** · `3d24df6` · **21 tags** | 🟢 **The cheap half when the client already has a warehouse and needs the SCHEMA.** 🔴 **Its default ref is a TAG-SHAPED BRANCH (`P1021`)** — `--symref` first, or you will believe you pinned a release. |
+| LMS edge | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B · `main` · `b054b913603a206c677565bcbec128652cb9d398` · **26 tags / `v1.14.0`** *(p99)* | 🟢 The only permissive **and released** LMS connector this KB has verified. 🔴 **Moodle has no row that is both** (`P1006`): **+3–4 weeks** for a Moodle variant. |
+| interpretable risk layer | `pyBKT` + [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 **BSD-3-Clause** · 1 514 B · 🔴 `dev` · `7e6caae84a8e7779422ba9338cfe2e2335185b28` · **38 tags** *(p101)* | 🟢 Explainable to a registrar. 🔴 Non-standard default ref (`P1020`). |
+| ML risk layer | **re-implement** (XGBoost + SHAP) | 🔴 **not takeable** | 🔴 **`Gap 392`: 6 of 6 unusable** — including one that excludes selling a service built on it. |
+| institutional corpus | [`dspace/dspace`](https://github.com/dspace/dspace) *(optional)* | 🟢 **BSD-3-Clause** · 1 504 B · `main` · `a5b0f0fc17ad5c7f8917eb89b9222f2c2d441aed` · **136 tags** | 🟡 Where a university's own outputs become a corpus to ground a tutor in. 🔴 **Do not sort its tags naively** — `language-pack-1_4_1` ranks last (`P978`). |
+| badges | 🟢 **validate** with [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) · 🔴 **minting is a BUILD** | 🟢 Apache-2.0 · **13 185 B** · `develop` · `0a66b52` · **28 tags** | 🔴 **`Gap 396`: the minter is ABSENT at 5 of 5 org names** (`concentricsky`, `1EdTech`, `IMSGlobal`, `instructure`, plus `badgr-ui`). 🟡 **`P1024`: the 13 185 B payload embeds its bundled-grant notice — OAuth and Base64, both Apache-2.0, so the closure is clean.** |
+
+**Estimated 6–8 weeks** for the spine + Canvas edge + interpretable layer; **+2 weeks** for the ML
+re-implementation; **+3–4 weeks** for a Moodle edge instead of Canvas; **+1–2 weeks** if badge
+minting is in scope, because it has to be written.
+
+🔵 **The policy layer this pattern must respect, and it is subnational** (`T12`): Oklahoma **S.B.
+1734** requires every district to have a written AI policy before 2027–28; Maryland gives districts
+**120 days** after state guidance; NYC's red tier **bars AI from grading, discipline and placement**;
+🔴 **Tennessee `SB 1580` bars an AI tool from mental-health assessment or screening of a student** —
+🟢 **recovered this pass from this KB's own archive, where it had been dropped from every live page
+(`P1027`).** 🔵 **So the gate is a product control, not a model property: the spine must be able to
+prove which decisions a human made.** 🟢 **`P91-B` is the recorder that does it; wire it here.**
+
+🔴 **When NOT to use `P103-B`.** 🔵 **Outside North America.** Ed-Fi's data standard encodes US K-12
+concepts, and `T27` places the equivalent for APAC in Sunbird (MIT, 450 / 336 tags) — 🔴 **while EMEA
+and LATAM have no row of this shape at all**, which is why `P102-A`'s construction remains the honest
+answer there, and why in EMEA the first action item is a **written grant request** to the publisher of
+`european-digital-credentials` (`Gap 395`).
 
 ## 🟢 🆕 p102 `P102-A` — the permissive student-information / early-alert build
 

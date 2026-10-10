@@ -1,0 +1,6 @@
+elgg/nosuchrepohere12345
+thisorgdoesnotexist999/nope-nope-nope
+topics/agent-skills
+topics/claude-skill
+appliedrelevance/frappe_mcp_server.git
+ed-fi-alliance-oss/ed-fi-sdk-mcp.git

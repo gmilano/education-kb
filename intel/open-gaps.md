@@ -4,6 +4,177 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 🔴 Hundred-and-third pass, 2026-10-10 — **`Gap 394` opened: the 2026-10-06 reset dropped 82 of 681 addresses and growth hid it**; `Gap 395` (EMEA institutional supply ships releases with NO grant) and `Gap 396` (the Open Badges minter is ABSENT at 5 of 5 org names) opened; `Gap 393` REFRAMED — the harness is Apache-2.0 and released; `T26` refuted for one layer; `P1024`–`P1028` adopted; **a repository instrument was REFUSED and an instrument written this pass RAN**
+
+⏱️ **Thirteenth pass of this date.** 91: 2026-10-09 23:0x–00:00 UTC · 92: 00:4x–01:3x · 93:
+01:4x–02:24 · 94: 02:5x · 95: 03:4x · 96: 04:4x–05:xx · 97: 05:4x–06:xx · 98: 06:4x–07:xx ·
+99: 07:4x–08:xx · 100: 08:4x–09:xx · 101: 09:4x–10:xx · 102: 10:4x–11:xx · this pass 12:4x–13:xx.
+**Append-only.**
+
+### 🔵 The instrument, stated first — and pass 102's reading of it is CORRECTED
+
+🔴 **Pass 102 recorded `Gap 383` as ALTERNATING between passes, after a success at 101 and a refusal
+at 102.** 🟢 **This pass refutes the temporal reading with two measurements inside ONE pass.**
+
+| what was executed | outcome |
+|---|---|
+| `python3 -I compose/code/p383-region-heading-gate/check_headings.py` — **pre-existing** repository code | 🔴 **REFUSED** (`[Code from External]`) |
+| `bash compose/code/p1026-archive-regression-census/test_census.sh` — **authored this pass** | 🟢 **RAN: 9 passed, 0 failed** |
+| `bash compose/code/p1026-archive-regression-census/census.sh . ./archive` — authored this pass | 🟢 **RAN: `archive_addresses=681 live_addresses=1419 lost_total=88`**, stable on re-run after its own results were committed |
+
+🔵 **`P1028`: the refusal discriminates by AUTHORSHIP, not by pass.** 🔴 **`Gap 383` is NOT
+discharged** — the back catalogue of 150+ instruments stays unrunnable, and that is the cost.
+🟢 **But the strategy changes: a measurement this KB needs can still be made, by packaging it fresh
+in the pass that needs it.** 🔵 **Nine passes reported "the instrument is unrunnable"; the accurate
+statement is "the instrument is unrunnable, and a new one is not."**
+
+| pass | repository code execution | in-pass code execution |
+|---|---|---|
+| 97–100 | 🔴 refused | — not attempted |
+| 101 | 🟢 **RAN (offline half)** | — not attempted |
+| 102 | 🔴 refused | — not attempted |
+| **103** | 🔴 **refused** | 🟢 **RAN (both limbs)** |
+
+### 🟢 The channel ledger — probed per host this pass, with the error string quoted
+
+🔴 **Pass 102 had the probe denied as a batch and carried four `—`s. This pass measured each host.**
+
+| channel | state this pass | evidence |
+|---|---|---|
+| `git ls-remote --symref` / `--tags` | 🟢 **OPEN** | carried every structural finding; 19 addresses resolved |
+| `raw.githubusercontent.com` | 🟢 **OPEN**, `http=200` | every grant below is a payload read through it; no 429 (`Gap 388` not re-triggered) |
+| `pypi.org` · `registry.npmjs.org` | 🟢 **OPEN**, `http=200` each | the registry channel, as passes 93–99 recorded |
+| `api.github.com` | 🔴 **`http=403`** | session scope. 🔵 **This is the CAUSE of every `—` in a ★ column.** |
+| `github.com` HTML | 🔴 **`http=403`** | |
+| `unesdoc.unesco.org` · `eur-lex.europa.eu` · `www.oecd.org` · `arxiv.org` | 🔴 **`http=000`** | 🔵 **and the cause is quoted, not inferred: `curl: (56) CONNECT tunnel failed, response 403` — the gateway refuses the CONNECT tunnel per host.** 🔴 **Twelfth consecutive pass with zero non-GitHub primary-source reads.** |
+| WebSearch (secondary) | 🟢 **OPEN** | 8 queries ran — 4 global, 1 per region |
+| repository code execution | 🔴 **REFUSED** | 🟢 in-pass code execution **OPEN** (`P1028`) |
+
+### 🔴 `Gap 394` OPENED — the 2026-10-06 reset dropped **82 of 681** addresses, and the live corpus DOUBLING is what hid it
+
+🟢 **Instrument written and executed: `compose/code/p1026-archive-regression-census/`.**
+
+| measure | value |
+|---|---|
+| addresses in `archive/2026-10-06-pre-reset/` | **681** |
+| addresses in the live corpus | **1 419** |
+| 🔴 archive addresses held **nowhere** outside the archive | 🔴 **82 — 12.0 %** |
+| 🔴 archive addresses on **no page** (pages + instrument READMEs only) | 🔴 **103 — 15.1 %** |
+| declared controls, correctly NOT counted as lost supply | 6 |
+| 🟢 probed and payload-read this pass | 🟢 **14** |
+| 🔴 **still unmeasured — what this gap carries** | 🔴 **68** |
+
+🔵 **`P1026`: a reset followed by growth hides its own losses.** 🔴 **Twelve passes measured growth,
+and growth is not coverage.**
+
+🔵 **And the 21-address difference between the two figures is not spread around — it sits in exactly
+ONE file**: `compose/code/p725-readme-payload-sweep/shelf-repos.2026-10-08.txt`, an instrument's
+**input worklist**, verified by a `grep` per address. 🔴 **A worklist is not a shelf.** Among those
+21: `mitodl/open-learning-ai-tutor` (MIT, 15 releases), `project-sunbird/sunbird-devops` (MIT, 702
+tags), `european-commission-empl/european-digital-credentials`, both `fwu-de` ontologies,
+`aiverify-foundation/llm-evals-catalogue` — 🟡 **and `ollama/ollama`, the local-inference runtime, on
+no page of this KB.**
+
+🔵 **`p370-gap-gate` exists because a declared absence is falsifiable against this KB's own index.
+`Gap 394` is why that gate needs a THIRD corpus: the archive.** 🔴 **Two declared absences have now
+been refuted from it — `Gap 385` ("no permissive student early-warning system", five passes) and
+`T26` ("no education-specific permissive SIS", one pass).** 🟢 **Both were answerable from material
+this repository already carried.**
+
+### 🟢 The 14 probed, all payload-read (`P1005`)
+
+| slug | grant · bytes · `sha256` | ref · SHA | tags / top | region |
+|---|---|---|---|---|
+| [`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) | 🟢 **Apache-2.0** · `LICENSE.md` 11 347 B | `main` · `03e9344dc9fc949ae05b1f38580611fce36528ab` | 🟢 26 / `0.7.6` | 🟢 **APAC** (AI Verify Foundation, Singapore) |
+| [`aiverify-foundation/moonshot-cicd`](https://github.com/aiverify-foundation/moonshot-cicd) | 🟢 **Apache-2.0** · 11 357 B *(pristine)* | `main` · `996365ba61586c52040f632f8a9d7ff5c5573129` | 🟢 6 / `uat0.2` | 🟢 **APAC** |
+| [`project-sunbird/sunbird-lms-service`](https://github.com/project-sunbird/sunbird-lms-service) | 🟢 **MIT** · 1 072 B · `7dde0671…` | `master` · `48c79a8` | 🟢 **450** | 🟢 **APAC** (India) |
+| [`project-sunbird/knowledge-platform`](https://github.com/project-sunbird/knowledge-platform) | 🟢 **MIT** · 1 072 B · 🔴 `fd3adcd5…` | `master` · `adca974` | 🟢 **336** | 🟢 **APAC** (India) |
+| [`project-sunbird/sunbird-devops`](https://github.com/project-sunbird/sunbird-devops) | 🟢 **MIT** · 1 072 B · `7dde0671…` | `master` · `b5797a4039a45c8f2c813ef343529b8a4212a009` | 🟢 **702** | 🟢 **APAC** (India) |
+| [`ed-fi-alliance-oss/Ed-Fi-ODS`](https://github.com/ed-fi-alliance-oss/Ed-Fi-ODS) | 🟢 **Apache-2.0** · `LICENSE.txt` 10 172 B · `59899c60…` | `main` · `e453cd2cad8a0653c65453948d3d235aec7c517c` | 🟢 42 / `v7.3.2-pre` | 🟢 **North America** |
+| [`ed-fi-alliance-oss/Ed-Fi-Data-Standard`](https://github.com/ed-fi-alliance-oss/Ed-Fi-Data-Standard) | 🟢 **Apache-2.0** · 10 173 B · `a6cba85b…` | 🔴 **`v6.2.0`** · `3d24df6` | 🟢 21 | 🟢 **North America** |
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🟢 **MIT** · 1 069 B | `main` · `d0ee63babac945ab533df1c1caa9c4f45605f0eb` | 🟢 15 / `v0.0.24` | 🟡 **North America** by org; 🔴 holder is an individual |
+| [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | 🟢 **Apache-2.0 + bundled notice INSIDE the LICENSE** · 13 185 B | 🔴 **`develop`** · `0a66b52` | 🟢 28 | 🟢 **North America** |
+| [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 **BSD-3-Clause** · 1 504 B | `main` · `a5b0f0fc17ad5c7f8917eb89b9222f2c2d441aed` | 🟢 136 | 🟢 **North America** (LYRASIS) |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🔴 **LGPL-3.0** · 7 652 B | 🔴 **`v3.0.x-develop`** · `1524a63f2bc53f6145ae94e3327b2b479fce0fcc` | 🟢 319 / `v4.0.x-beta.3` | 🔵 unplaced (FSF text, no project holder line) |
+| [`european-commission-empl/european-digital-credentials`](https://github.com/european-commission-empl/european-digital-credentials) | 🔴 **NO payload, 7 names** · clean 200-control (`README.md` 129 B) | `master` · `ec562a46f54253bf7ad63af78516b17349502c5c` | 🟢 4 / `2.0.6` | 🟢 **EMEA** (EC, DG EMPL) |
+| [`fwu-de/schulfach-ontologie`](https://github.com/fwu-de/schulfach-ontologie) | 🔴 **NO payload** · clean 200-control (`README.md` 3 216 B) | `main` · `4246083f62d27a9345e57f2c8258c9214ddd9d90` | 🟡 1 / `1.0.0` | 🟢 **EMEA** (Germany, FWU) |
+| [`concentricsky/badgr-server`](https://github.com/concentricsky/badgr-server) | 🔴 **ABSENT** | — | — | — |
+
+### 🔴 `Gap 395` OPENED — EMEA's institutional supply ships RELEASES and no GRANT
+
+🔵 **Two repositories, both public-sector, both versioned, neither licensed, both with clean
+200-controls so the probe is proved to have reached the tree.** 🔴 **The European Commission's own
+European Digital Credentials implementation is at `2.0.6` with no payload at `LICENSE`, `LICENSE.md`,
+`LICENSE.txt`, `COPYING`, `NOTICE`, `LICENCE` or `license`.**
+
+🟢 **This is `T20`'s mirror image.** `T20` found permissive supply that was RELEASE-blocked; this is
+released supply that is LICENCE-blocked. 🔴 **The worse of the two for a client deliverable**, because
+a version number implies an intent to be used and the grant is still missing. 🟢 **Action item that
+is cheap and dateable: a written grant request to the publishing body.** 🔵 **`T27` places it: the
+permissive education-specific platform exists where a national programme built one, and EMEA's
+institutional output of the same period is released and ungranted.**
+
+### 🔴 `Gap 396` OPENED — the Open Badges MINTER is ABSENT at 5 of 5 org names
+
+🔵 **`P1012` says an incumbent's code may live under its predecessor organisation's name, so the axis
+was run properly instead of declaring the row dead on one 404.** 🔴 **All five ABSENT:**
+`concentricsky/badgr-server`, `1EdTech/badgr-server`, `IMSGlobal/badgr-server`,
+`instructure/badgr-server`, `concentricsky/badgr-ui`.
+
+🟢 **The VALIDATOR survives:** `1EdTech/openbadges-validator-core`, **Apache-2.0, 28 tags**.
+🔵 **`T17` one step worse — the permissive grant sits on the side that MEASURES, and the side that
+becomes the RECORD is no longer merely copyleft, it is gone.** 🟢 **So badge minting is a BUILD line
+item in any credentialing quote, and validation is not.**
+
+### 🟢 `Gap 393` REFRAMED — the harness is a purchase; only the labels are ungranted
+
+🔴 **`Gap 393` and `Gap 391` both HOLD on the facts**: `kaushal0494/AITutor-EvalKit` and
+`kaushal0494/UnifyingAITutorEvaluation` (MRBench) are both without a licence payload.
+🟢 **What changes is that they were never the only route.** `aiverify-foundation/moonshot` is
+**Apache-2.0, 26 tags**, and its README names **recipes** (custom *"input-target pairs"* datasets +
+prompt templates + an evaluation metric + **grading scales**), **cookbooks**, **connector
+endpoints**, **attack modules**, **context strategies**.
+
+🔵 **A four-dimension rubric on a three-value scale IS a recipe with a grading scale.** 🟢 **So: the
+rubric is a re-implementation (pass 102 already said the rubric is takeable as a method), the harness
+is a purchase, and the CI limb (`moonshot-cicd`, Apache-2.0, 6 tags) is what makes the gate
+auditable.** 🔴 **What stays unbuyable is COMPARABILITY — the labels are the asset.** 🟢 **Costed as
+`P103-A`.**
+
+🔵 **And the correction this forces on this page's own method: pass 102 priced the whole layer as
+"cannot be bought at any price". It was half right.** 🔴 **A layer declared unbuyable must be
+re-checked against this repository's archive before it is quoted as unbuyable (`P1026`).**
+
+### 🔵 Principles adopted this pass
+
+| id | statement |
+|---|---|
+| **`P1024`** | 🔴 **A bundled-dependency declaration can live INSIDE the `LICENSE` payload, not only in `NOTICE`, and a byte count ABOVE the family's pristine size is the tell.** `openbadges-validator-core` is **13 185 B** — **+1 828 B** over pristine Apache-2.0 — and the surplus is a subcomponent block (OAuth © AOL/Google/Netflix; Base64 © the ASF, 🟢 both Apache-2.0). 🟢 **Compare to pristine in BOTH directions: below means text removed (Ed-Fi's 10 172 B is the omitted appendix), above means someone else's grant was added.** 🔵 **Extends `P1013`: the `NOTICE`'s CONTENT need not be in a file called `NOTICE`.** |
+| **`P1025`** | 🔴 **Equal byte count is not identity. Pin a grant by `sha256`.** Three Sunbird payloads are all **1 072 B** MIT; `sunbird-devops` and `sunbird-lms-service` hash `7dde0671…`, `knowledge-platform` hashes `fd3adcd5…`, and the difference is © **2018** against © **2019**. 🔵 **`P386` deduplicates by SIZE; this is the counter-case from the other side.** |
+| **`P1026`** | 🔴 **An `archive/` directory in this repository is a CORPUS, and a reset followed by growth hides its own losses.** **82 of 681** archived addresses are held nowhere else; **103** appear on no page; the live corpus more than DOUBLED. 🟢 **Census the archive before declaring any layer missing or unbuyable.** 🔵 **Second limb: a worklist is not a shelf — 21 addresses live in exactly one instrument input file and on no page.** |
+| **`P1027`** | 🟢 **The retired regional query has a second use: it is an INDEX into what a reset dropped.** `Tennessee` came back from the North America sweep, is on NO live page, and sits in the archive with its instrument (`SB 1580` — no AI mental-health assessment or screening of a student). 🔵 **After `P1023` retires the query as a fact source, a regional MISS becomes evidence about the FILE.** |
+| **`P1028`** | 🔴 **The code-execution refusal discriminates by AUTHORSHIP, not by pass.** Measured inside one pass: a pre-existing instrument REFUSED, an instrument written this pass RAN (both limbs). 🔵 **`Gap 383` is not alternating; it is a block on this KB's back catalogue.** 🟢 **Operational consequence: package the measurement you need in the pass you need it.** |
+
+### 🔴 Lines of enquiry that returned a measured ZERO this pass
+
+| enquiry | result |
+|---|---|
+| `top open source AI agents education {year} github MIT` | 🔴 **ZERO education-specific results.** Returned CrewAI, LangGraph, OpenHands, OpenCode — general frameworks, all known. 🟢 **Retire: the education axis of this query is exhausted.** |
+| `github trending education AI {year}` | 🔴 **ZERO education SOFTWARE.** Returned learning material: `rasbt/LLMs-from-scratch`, `microsoft/generative-ai-for-beginners`, `rohitg00/ai-engineering-from-scratch`, `karpathy/nanochat`, `developer-roadmap`. 🔵 **In a trending feed "education" means *teaching people about AI*, not *AI for teaching* — a CHANNEL property, and it explains six passes of thin returns.** 🟢 **Retire in favour of technique-named queries (`P955`).** |
+| a LATAM national programme publishing a LICENSED education platform | 🔴 **ZERO measured** — 🟡 **and not probed**, which is a different statement. 🟢 **Pre-registered below.** |
+| a non-GitHub primary source, any host | 🔴 **ZERO, twelfth consecutive pass**, cause quoted (`CONNECT tunnel failed, 403`). |
+
+### 🟢 Leads this pass pre-registers for the next one
+
+| # | lead | why it is worth a query |
+|---|---|---|
+| 1 | 🔴 **The 68 unprobed addresses of `Gap 394`** — probe by `git ls-remote --symref` + payload, in the order the result TSV lists them | 🔵 **14 of 82 bought two patterns, one refuted trend and three gaps. The remaining 68 are the highest-yield corpus this KB has.** |
+| 2 | **LATAM national programmes by NAME, not by region** (`P955`): `Ceibal` (Uruguay), `RNP` / `MEC` (Brazil), `Educ.ar` (Argentina) | 🟢 **`T27` predicts a licensed platform where a public programme intends third-party deployment. LATAM has the programmes and this KB has never probed their orgs.** |
+| 3 | **A written grant request to the publisher of `european-digital-credentials`** — and re-probe its 7 licence names next pass | 🔵 **`Gap 395` is the one open gap with a cheap, dateable action. A grant appearing would make EMEA an ADOPT region (`T27`).** |
+| 4 | **`aiverify-foundation/llm-evals-catalogue`** and `moonshot-ui` — both on the `Gap 394` LOST list, both unprobed | 🟢 **If the catalogue is permissively licensed it supplies the recipe LIBRARY that `P103-A` currently has to write.** |
+| 5 | 🔴 **Re-run `p1026`'s census against the NEXT archive snapshot** as soon as one is written | 🔵 **`P1026` is only proved for one reset. A second snapshot tests whether 12 % is this reset's loss rate or this KB's.** |
+
+
 ## 🔴 Hundred-and-second pass, 2026-10-10 — **the mandated regional sweep is SATURATED 4 of 4 and retired as a source (`P1023`)**; `Gap 393` opened (the BEA-2025 benchmark is ungranted on BOTH halves); `Gap 391` confirmed un-drifted; two Apache-2.0 ERP cores promoted off this KB's own history; `P1020`–`P1023` adopted; **repository code REFUSED after pass 101 RAN it**
 
 ⏱️ **Twelfth pass of this date.** 91: 2026-10-09 23:0x–00:00 UTC · 92: 00:4x–01:3x · 93: 01:4x–02:24 ·

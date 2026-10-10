@@ -5,8 +5,24 @@ updated: 2026-10-10
 ---
 
 # Education — current trends
-**Pass 102, 2026-10-10.** ⏱️ **Twelfth pass of this date.** 🆕 **Twenty-six trends.**
-🟢 **`T26` is new; no trend is retracted this pass.**
+**Pass 103, 2026-10-10.** ⏱️ **Thirteenth pass of this date.** 🆕 **Twenty-seven trends.**
+🟢 **`T27` is new.** 🔴 **`T26` is AMENDED — half of it is refuted, and the refutation is regional.**
+
+- 🟢 **`T27`** — **the permissive, education-specific, release-engineered platform exists exactly
+  where a NATIONAL PROGRAMME built one, and nowhere else.** Measured this pass: **North America** has
+  `Ed-Fi-ODS` (**Apache-2.0**, `LICENSE.txt` 10 172 B, **42 tags**) and `Ed-Fi-Data-Standard`
+  (Apache-2.0, **21 tags**); **APAC** has Sunbird — `sunbird-lms-service` (**MIT, 450 tags**),
+  `knowledge-platform` (**MIT, 336 tags**), `sunbird-devops` (**MIT, 702 tags**) — plus the evaluation
+  harness its own regulator's foundation publishes, `aiverify-foundation/moonshot` (**Apache-2.0, 26
+  tags**, AI Verify Foundation / IMDA Singapore). 🔴 **EMEA's institutional output of the same period
+  ships RELEASES WITH NO GRANT**: the European Commission's `european-digital-credentials` is at
+  **`2.0.6`** with no payload at seven licence names and a clean control, and `fwu-de/schulfach-ontologie`
+  ships `1.0.0` the same way (`Gap 395`). 🔴 **LATAM has no row of this shape at all** — what it has
+  is the CURRICULUM layer (`bncc-pacotes`, MIT + CC BY 4.0, 1 721 verified objectives).
+  🔵 **So "can we adopt an open platform?" has a different answer per region, and the answer is set by
+  whether a public programme chose to license its own code.** 🟢 **Operationally: North America and
+  APAC engagements can ADOPT; EMEA and LATAM engagements CONSTRUCT (`P102-A`) — and in EMEA the
+  cheapest first action item is a written grant request to the publishing body.**
 
 - 🟢 **`T26`** — **in education the PERMISSIVE administrative supply is GENERIC and the
   EDUCATION-SPECIFIC administrative supply is COPYLEFT, so a permissive SIS is a BUILD, never an
@@ -14,8 +30,15 @@ updated: 2026-10-10
   (LGPL-3.0)**, **ERPNext / `frappe-education` (GPL)**; permissive and generic — 🆕 **Apache OFBiz
   (Apache-2.0, 26 tags)**, 🆕 **Corteza (Apache-2.0, 298 tags)**; education-specific and permissive but
   🔴 **unreleased** — `academico-sis/academico` (MIT, **0 tags, no version scheme**, `P985`).
-  🔵 **No row is all three.** 🟢 **So the defensible offer is a generic Apache-2.0 core plus the
-  education domain model** — and `Jasig/SSP` (Apache-2.0, **57 releases** of schema history) is that
+  🔴 **— AMENDED p103: "no row is all three" is REFUTED for the student-data layer.** `Ed-Fi-ODS`
+  (Apache-2.0, **42 tags**) and `Ed-Fi-Data-Standard` (Apache-2.0, **21 tags**) are
+  education-specific, permissive AND released, as are Sunbird's `sunbird-lms-service` (MIT, **450
+  tags**) and `knowledge-platform` (MIT, **336 tags**). 🔵 **`T26` was measuring this KB's coverage
+  and reporting it as an industry property — all four rows were already in this repository, in the
+  pre-reset archive or an instrument worklist (`Gap 394`).** 🟢 **What SURVIVES of `T26` is the
+  regional half, now stated as `T27`: those rows belong to national programmes, so the generic-core
+  construction is still the path in a region without one.** 🟢 **The defensible offer, where no
+  national platform exists, is a generic Apache-2.0 core plus the education domain model** — and `Jasig/SSP` (Apache-2.0, **57 releases** of schema history) is that
   model. 🔴 **The failure mode this names: "adopt an open-source SIS" is a copyleft decision disguised
   as a procurement one**, and the two permissive cores that avoid it were in this KB's history for
   passes without ever being shelved (`Gap 384`).
@@ -67,6 +90,52 @@ updated: 2026-10-10
 `the-learning-agency-lab.com`, `www.fosway.com`, `www.cipd.org` — and, carried from pass 99,
 `www.iesalc.unesco.org`, `digital-strategy.ec.europa.eu`, `eur-lex.europa.eu`, `www.kaggle.com`.
 🔵 **Every regulatory and market row added this pass is search-summary grade and says so.**
+
+## T27 — 🆕 p103 The permissive education-specific platform exists where a NATIONAL PROGRAMME built one, and the answer changes by region
+
+🔵 **This is the trend that makes the region field load-bearing rather than decorative.** 🔴 **Four
+passes of this KB have asked "is there a permissive platform for this layer?" as if it had one
+answer. It has four.**
+
+### 🟢 The measurement, all payload-read this pass (`P1005`)
+
+| region | permissive · education-specific · released? | evidence |
+|---|---|---|
+| **North America** | 🟢 **YES** | `ed-fi-alliance-oss/Ed-Fi-ODS` — **Apache-2.0** (`LICENSE.txt` **10 172 B**), `main` · `e453cd2cad8a0653c65453948d3d235aec7c517c`, **42 tags** (`v7.3.2-pre`); `ed-fi-alliance-oss/Ed-Fi-Data-Standard` — Apache-2.0 (10 173 B), **21 tags**. 🔵 A US K-12 alliance, not a vendor. |
+| **APAC** | 🟢 **YES, and twice over** | Sunbird: `sunbird-lms-service` **MIT, 450 tags**; `knowledge-platform` **MIT, 336 tags**; `sunbird-devops` **MIT, 702 tags** — India's public digital-education stack. 🟢 **Plus the EVALUATION harness: `aiverify-foundation/moonshot` Apache-2.0, 26 tags, from the body Singapore's IMDA convened.** |
+| **EMEA** | 🔴 **NO — and the failure mode is a missing GRANT, not missing code** | `european-commission-empl/european-digital-credentials`: **4 tags, top `2.0.6`**, 🔴 **no payload at `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `NOTICE`, `LICENCE`, `license`**, clean 200-control. `fwu-de/schulfach-ontologie`: **`1.0.0`**, 🔴 no payload, clean control. 🔵 **`Gap 395`.** |
+| **LATAM** | 🔴 **NO row of this shape measured** | 🟢 **But the CURRICULUM layer is `P800`-grade and adoptable**: `bncc-dev/bncc-pacotes` (MIT code + CC BY 4.0 data, **1 721 verified BNCC objectives**, 7 MCP tools, dataset embedded so lookups are local) and an independent second implementation, `dfdb76/bncc-mcp` (MIT). |
+
+### 🔵 Why this is a trend and not a regional note
+
+🟢 **The common cause is visible in all four rows: a public programme that intends its code to be
+re-used licenses it, and one that publishes code as a deliverable does not.** 🔴 **Ed-Fi and Sunbird
+exist to be deployed by third parties — districts, states, other countries — so the grant is part of
+the product.** 🔴 **The EDC implementation and the FWU ontologies exist as the output of a
+programme, so the release is a milestone and the licence was nobody's deliverable.** 🔵 **That
+predicts where to look: ask whether the publisher's mandate includes OTHERS running the software,
+not whether the publisher is public.**
+
+### 🟢 What it changes in the offer
+
+| region | the sentence that goes in the proposal |
+|---|---|
+| **North America** | 🟢 **"We adopt Ed-Fi for the student-data spine."** Permissive end to end with `canvas-mcp` (MIT, 26 tags) at the LMS edge — costed as **`P103-B`**. |
+| **APAC** | 🟢 **"We adopt Sunbird and evaluate on the harness your own regulator's foundation maintains."** 🔵 A procurement argument no other region can make — `moonshot` + `moonshot-cicd`, **`P103-A`**. |
+| **EMEA** | 🔴 **"We construct on a generic Apache-2.0 core"** (`P102-A`), 🟢 **and the first action item is a written grant request to the publishing body** — cheap, dateable, and it either unblocks the EDC route or documents that it is closed. |
+| **LATAM** | 🟢 **"We adopt the curriculum spine and construct the platform."** `P102-A` with a BNCC tool at the alignment edge. 🔵 **A different engagement SHAPE, not a discounted version of the North America one.** |
+
+### 🔴 What would refute `T27`
+
+🟢 **Any one of these, and each is a concrete next-pass query:** a permissive, education-specific,
+released platform from a **vendor** rather than a programme; a **grant appearing** on
+`european-digital-credentials` (which would make EMEA an adopt region overnight); or a **LATAM
+national programme** publishing a licensed platform — Uruguay's **Ceibal** and Brazil's **RNP /
+MEC** are the obvious places to look, and neither has been probed by this KB.
+
+🟡 **And the honest limit: `n = 2` on the YES side.** 🔵 **Two programmes in two regions is a shape,
+not a law** — the same `n=2` test this KB applied to MCP × SCORM at pass 92 and to the BNCC servers
+at pass 93.
 
 ## T24 — 🆕 p101 The permissive supply predates the AI wave; the AI-era supply is ungranted
 

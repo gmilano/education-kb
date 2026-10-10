@@ -6,9 +6,16 @@ updated: 2026-10-10
 
 # Education — foundational repos
 
-**Pass 102, 2026-10-10.** ⏱️ **Twelfth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:
+**Pass 103, 2026-10-10.** ⏱️ **Thirteenth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:
 00:4x–01:3x; 93: 01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; 98:
-06:4x–07:xx; 99: 07:4x–08:xx; 100: 08:4x–09:xx; this one 09:4x–10:xx).
+06:4x–07:xx; 99: 07:4x–08:xx; 100: 08:4x–09:xx; 101: 09:4x–10:xx; 102: 10:4x–11:xx; this one
+12:4x–13:xx).
+
+🟢 **Seven rows added this pass, all payload-read, and NONE from a search** — they came from a census
+of this repository's own `archive/2026-10-06-pre-reset/` snapshot against every live file
+(`Gap 394`). 🔴 **82 of 681 archived addresses are held nowhere outside the archive; 103 are on no
+page.** 🔵 **Instrument written AND executed this pass: `compose/code/p1026-archive-regression-census/`
+— `test_census.sh` 9 passed / 0 failed, `census.sh . ./archive` → `681 / 1 419 / 88`.**
 
 🟢 **The instrument ran offline for the first time since pass 92: `test_ladder.sh` — 16 passed, 0
 failed; `--reach` — `names=24 byte-floor=1B classifier=lib/license_family.sh`.** 🔴 **Its network path
@@ -18,6 +25,60 @@ classifier was written** (`P237`).
 
 🔴 **`api.github.com` = `http=403` for every repository not attached to this session — measured, with
 the proxy's message, not assumed.** A `—` is unread, never zero.
+
+### 🟢 🆕 p103 Tier 1c — the **student-data spine**, permissive and release-engineered, and it refutes `T26` for one layer
+
+🔵 **`T26` (pass 102) concluded that the permissive supply in the administrative layer is GENERIC and
+the education-specific supply is COPYLEFT, so a permissive SIS is a CONSTRUCTION rather than an
+ADOPTION.** 🔴 **That is now refuted for the rostering / student-data layer, by a repository this KB
+has held in an instrument worklist since the reset.**
+
+| repo | grant (payload · bytes · `sha256`) | ref · SHA | tags / top | region | what it buys |
+|---|---|---|---|---|---|
+| 🆕 p103 [`ed-fi-alliance-oss/Ed-Fi-ODS`](https://github.com/ed-fi-alliance-oss/Ed-Fi-ODS) | 🟢 **Apache-2.0** · `LICENSE.txt` **10 172 B** · `59899c60…` | `main` · `e453cd2cad8a0653c65453948d3d235aec7c517c` | 🟢 **42 / `v7.3.2-pre`** | 🟢 **North America** (Ed-Fi Alliance) | 🟢 **The Operational Data Store + API — the student-data spine US K-12 districts actually run**, education-specific, permissive, and released on a maintained line. 🔵 **This is the row `T26` said did not exist.** |
+| 🆕 p103 [`ed-fi-alliance-oss/Ed-Fi-Data-Standard`](https://github.com/ed-fi-alliance-oss/Ed-Fi-Data-Standard) | 🟢 **Apache-2.0** · **10 173 B** · `a6cba85b…` | 🔴 **`v6.2.0`** · `3d24df6` | 🟢 **21** | 🟢 **North America** | The domain model on its own, separable from the server — 🔵 **the cheap half when a client already has a warehouse and needs the SCHEMA, not another database.** |
+| 🆕 p103 [`project-sunbird/sunbird-lms-service`](https://github.com/project-sunbird/sunbird-lms-service) | 🟢 **MIT** · 1 072 B · `7dde0671…` · © 2018 **Project Sunbird** | `master` · `48c79a8` | 🟢 **450** | 🟢 **APAC** (India) | 🟢 **The learning-management service of the stack behind India's national digital-education infrastructure — 450 releases.** 🔵 **The most release-engineered permissive education backend on this page.** |
+| 🆕 p103 [`project-sunbird/knowledge-platform`](https://github.com/project-sunbird/knowledge-platform) | 🟢 **MIT** · 1 072 B · `fd3adcd5…` · © 2019 | `master` · `adca974` | 🟢 **336** | 🟢 **APAC** (India) | Content, taxonomy and framework services — 🔵 **curriculum as queryable platform data, the same purchase as `bncc-pacotes` (p93) two orders of magnitude larger.** |
+| 🆕 p103 [`project-sunbird/sunbird-devops`](https://github.com/project-sunbird/sunbird-devops) | 🟢 **MIT** · 1 072 B · `7dde0671…` | `master` · `b5797a4039a45c8f2c813ef343529b8a4212a009` | 🟢 **702** | 🟢 **APAC** (India) | 🟡 Deployment — the limb that makes the other two adoptable rather than readable. |
+| 🆕 p103 [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 **BSD-3-Clause** · 1 504 B · © 2002–2021 **LYRASIS** | `main` · `a5b0f0fc17ad5c7f8917eb89b9222f2c2d441aed` | 🟢 **136** | 🟢 **North America** (LYRASIS) | Institutional repository — the layer a university's outputs land in. 🔴 **Tag ordering is unsafe: a naive `sort` ranks `language-pack-1_4_1` last**, the same hazard `P978` recorded for OpenOLAT's two tag spellings. |
+| 🆕 p103 [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | 🟢 **Apache-2.0 + a bundled-grant block INSIDE the `LICENSE`** · **13 185 B** | 🔴 **`develop`** · `0a66b52` | 🟢 **28** | 🟢 **North America** (1EdTech) | Open Badges validation. 🔵 **`P1024` was found in this payload.** 🔴 **And it is now the ONLY surviving limb of the credentialing stack — see `Gap 396`.** |
+
+🔵 **How these rows reached this page matters as much as the rows.** 🔴 **None of them came from a
+search.** 🟢 **All seven came from censusing `archive/2026-10-06-pre-reset/` against every live file
+(`Gap 394`, `P1026`), which found **82 of 681** archived addresses held nowhere else in the
+repository and **103** on no page.** 🔵 **`P1004` for the fourth pass running: when the instrument
+channel is restricted, the question whose corpus is this repository is the one that pays.**
+
+### 🔵 🆕 p103 `P1024` — read the payload's SIZE against its family's pristine size, in both directions
+
+🔴 **`P1013` (p101) says a root Apache-2.0 does not describe the shipped artifact, so read the
+`NOTICE`.** 🟢 **This pass found a `NOTICE`'s content inside a file called `LICENSE`.**
+
+| payload | bytes | vs pristine Apache-2.0 (11 357 B) | what the difference IS |
+|---|---|---|---|
+| `1EdTech/openbadges-validator-core` `LICENSE` | **13 185 B** | 🔴 **+1 828 B** | 🔴 **a bundled-subcomponent block**: *"The BasicLTI Utilities (basiclti-util) distribution includes a number of subcomponents with separate copyright notices and license terms"* — **OAuth** (© 1998–2009 AOL LLC; © 2007, 2008 Google, Inc.; © 2007, 2008 Netflix, Inc.) and **Base64** (© 1999–2008 The Apache Software Foundation). 🟢 **Both Apache-2.0, so the closure is clean.** |
+| `ed-fi-alliance-oss/Ed-Fi-ODS` `LICENSE.txt` | **10 172 B** | 🟡 **−1 185 B** | 🟢 **the appendix is omitted** — the terms end at *"END OF TERMS AND CONDITIONS"*, with no *"APPENDIX: How to apply the Apache License to your work"*. **A complete grant; a shortened file.** |
+| `aiverify-foundation/moonshot` `LICENSE.md` | **11 347 B** | 🟡 **−10 B** | 🟡 Markdown-ised whitespace. 🔵 **Ten bytes is not a finding; 1 828 is.** |
+
+🔵 **The rule: a byte count below pristine means text was REMOVED — usually boilerplate, usually
+harmless. A byte count ABOVE pristine means text was ADDED, and what gets added to a licence file is
+almost always somebody else's grant.** 🔴 **Six passes of this page treated a non-pristine size as
+noise in the `pristine` annotation. It is a POINTER.**
+
+### 🔵 🆕 p103 `P1025` — equal byte count is not identity; pin a grant by `sha256`
+
+🔴 **Three Sunbird payloads are all `1 072 B` MIT and are not all the same file.**
+
+| repo | bytes | `sha256` (first 16) | copyright line |
+|---|---|---|---|
+| `project-sunbird/sunbird-devops` | 1 072 | `7dde06716f259584` | © **2018** Project Sunbird |
+| `project-sunbird/sunbird-lms-service` | 1 072 | `7dde06716f259584` | © **2018** Project Sunbird |
+| `project-sunbird/knowledge-platform` | 1 072 | 🔴 **`fd3adcd576767d65`** | © **2019** Project Sunbird |
+
+🟢 **Same holder, same length, different file.** 🔴 **`P386`'s pristine-dedup gate deduplicates by
+SIZE, and this is the counter-case from the other side: two files of identical length that are not
+the same payload.** 🔵 **The year is harmless here — but a size-based dedup cannot know that, and the
+next collision may not be a year.** 🟢 **`curl … | sha256sum` is one command; use it.**
 
 ### 🟢 🆕 p102 Tier 4 — the PERMISSIVE administrative core, promoted after living only in this KB's append-only history
 

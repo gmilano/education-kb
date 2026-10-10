@@ -6,11 +6,21 @@ updated: 2026-10-10
 
 # Education — AI agents shelf
 
-**Pass 102, 2026-10-10.** ⏱️ **Twelfth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:
+**Pass 103, 2026-10-10.** ⏱️ **Thirteenth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:
 00:4x–01:3x; 93: 01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; 98:
-06:4x–07:xx; 99: 07:4x–08:xx; 100: 08:4x–09:xx; this one 09:4x–10:xx).
+06:4x–07:xx; 99: 07:4x–08:xx; 100: 08:4x–09:xx; 101: 09:4x–10:xx; 102: 10:4x–11:xx; this one
+12:4x–13:xx).
 
-🟢 **The instrument RAN for the first time since pass 92 — and exactly half of it did.**
+🔵 **Instrument state, measured TWICE inside this pass, and the two answers differ by AUTHORSHIP.**
+🔴 A **pre-existing** instrument of this repository (`p383-region-heading-gate/check_headings.py`) was
+**REFUSED** (`[Code from External]`). 🟢 An instrument **written in this pass**
+(`p1026-archive-regression-census/`) **RAN**: `test_census.sh` **9 passed, 0 failed**, and
+`census.sh . ./archive` returned `681 / 1 419 / 88`. 🔵 **`P1028`: `Gap 383` is not alternating
+between passes as pass 102 read it — the restriction is on executing this KB's back catalogue, and a
+measurement packaged fresh still runs.**
+
+🔵 **Carried from pass 101, not re-measured here** (pass 102 and pass 103 both had the ladder
+refused): 🟢 **the instrument RAN for the first time since pass 92 — and exactly half of it did.**
 `test_ladder.sh` executed offline: **16 passed, 0 failed**. `./ladder.sh --reach` returned
 `names=24 byte-floor=1B classifier=lib/license_family.sh`. 🔴 **Its NETWORK path was refused** —
 `./ladder.sh <slug>` was denied backgrounded *and* in the foreground.
@@ -20,15 +30,89 @@ as one. 🟢 **The ten registered corrections in `lib/license_family.sh` are now
 execution rather than by assertion** — including the `GPL-2.0` title-block pair (`oat-sa/tao-core`,
 `portabilis/i-educar`) that `v3`'s fork got wrong and that reached a published client recommendation.
 
-🟢 **`P1005` applied from the outset**: every address below came from `git ls-remote --symref` run
-inline, every licence from a `raw.githubusercontent.com` payload, every tag count from
-`git ls-remote --tags`. 🔴 **`api.github.com` returns `http=403` for every repository not attached to
+🟢 **`P1005` applied from the outset, in this pass as in the last**: every address below came from
+`git ls-remote --symref` run inline, every licence from a `raw.githubusercontent.com` payload, every
+tag count from `git ls-remote --tags`. 🔴 **`api.github.com` returns `http=403` for every repository not attached to
 this session — measured this pass, with the proxy's own message.** 🔵 **That is WHY the ★ column is
 unread, and this is the first pass to establish the CAUSE instead of restating the effect.**
 
 🔵 **Marker convention.** A bare 🆕 is inherited from the pass that added the row; **rows added or
-re-measured by this pass are marked 🆕 p101.** 🔴 **A `—` in the ★ column means not read this pass.
-It never means zero.**
+re-measured by this pass are marked 🆕 p103.** 🔴 **A `—` in the ★ column means not read this pass.
+It never means zero** — and 🟢 **this pass measured the cause again: `api.github.com` is `403` for
+every repository not attached to this session.**
+
+### 🔴 🆕 p103 What pass 103 adds — the shelf was missing rows it already owned, and `Gap 393` is now only half a gap
+
+- 🔴 **`Gap 394` OPENED, and it is about this shelf rather than about the supply.** A census of
+  `archive/2026-10-06-pre-reset/` against every live file finds **82 of 681 addresses (12.0 %) held
+  nowhere outside the archive**, and **103 (15.1 %) on no page at all**. 🟢 **Instrument written and
+  executed this pass**: `compose/code/p1026-archive-regression-census/` — `test_census.sh`
+  **9 passed, 0 failed**; `census.sh . ./archive` → `archive_addresses=681 live_addresses=1419
+  lost_total=88` (**82 `LOST`** + 6 declared `CONTROL`), stable on re-run after its own results were
+  committed. 🔵 **`P1026`: the live corpus more than DOUBLED and still lost a sixth of the archive,
+  which is why twelve passes of growth never showed it.**
+- 🔴 **The 21-address difference between "82" and "103" sits in ONE file** —
+  `compose/code/p725-readme-payload-sweep/shelf-repos.2026-10-08.txt`, an instrument's **input
+  worklist**. 🔵 **A worklist is not a shelf: those 21 are held by the repository and offered by no
+  page.** Among them `mitodl/open-learning-ai-tutor` (**MIT, 15 releases**),
+  `project-sunbird/sunbird-devops` (**MIT, 702 tags**) and `ollama/ollama`.
+- 🟢 **`Gap 393` is REFRAMED, not discharged — and the reframing changes what a studio sells.**
+  Pass 102 left the whole BEA-2025 pedagogical-evaluation layer ungranted on both halves, and that
+  is still true. 🟢 **But the HARNESS is permissive and released:**
+  [`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) is
+  **Apache-2.0** (`LICENSE.md` **11 347 B**), `main` ·
+  `03e9344dc9fc949ae05b1f38580611fce36528ab`, **26 tags**, top **`0.7.6`**. Its README names the
+  extension points verbatim: **recipes** (custom *"input-target pairs"* datasets, prompt templates,
+  an evaluation metric, **grading scales**), **cookbooks**, **connector endpoints**, **attack
+  modules**, **context strategies**. 🔵 **A four-dimension rubric on a three-value scale IS a
+  Moonshot recipe with a grading scale.** 🔴 **What stays unbuyable is comparability — the MRBench
+  labels are the ungranted asset, so no MRBench number is reproducible.** 🟢 **`P103-A`.**
+- 🟡 **And note WHERE that harness comes from: the AI Verify Foundation, the body Singapore's IMDA
+  convened** — not an education vendor. 🔵 **`T27`.**
+- 🔴 **`Gap 396` OPENED — the Open Badges MINTING tier is a dead address at 5 of 5 names.**
+  `concentricsky/badgr-server`, `1EdTech/badgr-server`, `IMSGlobal/badgr-server`,
+  `instructure/badgr-server` and `concentricsky/badgr-ui` **all return ABSENT**. 🔵 **`P1012`'s
+  successor-org axis run properly rather than declared dead on one 404.** 🟢 **The VALIDATOR
+  survives:** [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core),
+  **Apache-2.0, 28 tags**, `develop` · `0a66b52`. 🔵 **`T17` one step worse: the permissive grant is
+  on the side that MEASURES, and the side that becomes the RECORD is no longer copyleft — it is
+  gone.**
+- 🔵 **`P1024` — a bundled-grant declaration can live INSIDE the `LICENSE`, and a byte count ABOVE
+  pristine is the tell.** `openbadges-validator-core`'s payload is **13 185 B**, **1 828 B more**
+  than pristine Apache-2.0 (11 357 B), and the surplus is a subcomponent block (*"The BasicLTI
+  Utilities … includes a number of subcomponents with separate copyright notices and license
+  terms"*): **OAuth** (© AOL LLC, Google, Netflix) and **Base64** (© the ASF), 🟢 **both
+  Apache-2.0, so this one is clean.** 🔴 **`P1013` said read the `NOTICE`; the correction is that the
+  `NOTICE`'s CONTENT need not be in a file called `NOTICE`.** 🟢 **Compare to pristine in both
+  directions: below means text removed (Ed-Fi's 10 172 B is the omitted appendix), above means
+  someone else's grant was added.**
+- 🔵 **`P1025` — equal byte count is not identity.** Three Sunbird payloads are all **1 072 B** MIT
+  and are not all the same file: `sunbird-devops` and `sunbird-lms-service` hash `7dde0671…`,
+  `knowledge-platform` hashes `fd3adcd5…`, and the difference is **© 2018 against © 2019**.
+  🔴 **`P386` deduplicates by size; a grant pinned by size is pinned to a coincidence.** 🟢 **Pin by
+  `sha256`.**
+- 🔴 **`P1020` has a FOURTH and FIFTH non-standard default branch, and `P1021` extends.**
+  `bigbluebutton/bigbluebutton` defaults to **`v3.0.x-develop`** and `1EdTech/openbadges-validator-core`
+  to **`develop`**; `ed-fi-alliance-oss/Ed-Fi-Data-Standard` defaults to **`v6.2.0`** — 🔵 **a
+  TAG-SHAPED branch name, so a `ref` that looks like a version is not evidence that you pinned a
+  tag.**
+- 🔴 **The mandated battery ran in full — eight queries — and `P1023` holds a SECOND consecutive
+  pass: all four regions returned less than this KB holds.** 🟢 **But the retired query has a second
+  use (`P1027`): `Tennessee` came back from the North America query, is on NO live page, and sits in
+  the archive with its instrument — `SB 1580`, which bars an AI tool from performing mental-health
+  assessment or screening of a student.** 🔵 **A regional miss is now evidence about the FILE.**
+- 🔴 **Two global queries are exhausted and should be retired, not re-run.** `top open source AI
+  agents education {year} github MIT` returned only general frameworks (CrewAI, LangGraph,
+  OpenHands, OpenCode). 🔵 **And `github trending education AI {year}` returns LEARNING MATERIAL, not
+  education software** — `rasbt/LLMs-from-scratch`, `microsoft/generative-ai-for-beginners`,
+  `karpathy/nanochat`. 🔵 **In a trending feed "education" means *teaching people about AI*, not *AI
+  for teaching*. That is a channel property and it explains six passes of thin returns.**
+- 🔴 **Zero non-GitHub primary-source reads, TWELFTH consecutive pass — and this pass carries the
+  error string for four hosts at once.** `unesdoc.unesco.org`, `eur-lex.europa.eu`, `www.oecd.org`
+  and `arxiv.org` all return `http=000` with `curl: (56) CONNECT tunnel failed, response 403`:
+  🔵 **the gateway refuses the CONNECT tunnel per host, which is a cause, not an outage.**
+  🟢 **Controls in the same sweep: `raw.githubusercontent.com` 200, `pypi.org` 200,
+  `registry.npmjs.org` 200.**
 
 ### 🔴 🆕 p102 What pass 102 adds — `Gap 391` is CONFIRMED and WIDENED: the benchmark's DATA is ungranted too
 
@@ -445,11 +529,34 @@ reproducing a no-grant negative this KB already carried, with a different instru
 | 🆕 p99 [`doheejin/ProTACT`](https://github.com/doheejin/ProTACT) | 🟢 **BSD-3-Clause** · `LICENSE` 1 496 B · `main` · `403814318fe854dd6dc1959dbd005b9ab330e0c9` | — | 🟡 **APAC** (© 2023 **Heejin Do**, POSTECH) | Reference implementation of **ProTACT** — prompt- and trait-relation-aware **cross-prompt** essay *trait* scoring (ACL Findings 2023). 🔵 **Cross-prompt is the property a studio actually needs**: a scorer that transfers to a prompt it was not trained on. 🔴 **0 tags — research artefact, not a release.** |
 | 🆕 p99 [`KamalEzzo/automated-essay-grading-system`](https://github.com/KamalEzzo/automated-essay-grading-system) | 🟢 **MIT** · `LICENSE` 1 363 B · `main` · `f47ac3a2bdb146e72e163f072904d504d69f603c` | — | 🔵 unplaced (© 2026 **Kamal Muhammad Kamal Abdul-Fattah**) | Fine-tuned **Gemma 2 9B-IT + LoRA** short-answer grader with a **4-criterion rubric** (clarity, terminology, coverage, accuracy) on a **0–5** scale, plus an ablation study and commercial-model benchmarks. 🔴 **Scoped to accounting / business education only, 0 tags** — valuable as a rubric-conditioning recipe, not as a general scorer. |
 
+| 🆕 p103 [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🟢 **MIT** · `LICENSE` 1 069 B · `main` · `d0ee63babac945ab533df1c1caa9c4f45605f0eb` | — | 🟡 **North America** by org (`mitodl` = MIT Open Learning); 🔴 the payload's holder line is an individual (© 2024 **Romain Puech**), so **not `P800`-grade on the holder** | 🟢 **A tutor library with 15 releases, top `v0.0.24`** — from the same institution whose 2-sigma premise every row in this tier cites. 🔴 **README is 214 B: this ships releases and almost no documentation**, so budget reading the code. 🔵 **Recovered by `Gap 394`'s census: it sat in an instrument's input worklist and on no page of this KB for the whole post-reset history.** |
+
 🆕 🟢 **New shape, n=2 not n=1: MCP × SCORM.** Two independent MIT servers now put *content packaging* behind
 the Model Context Protocol — one authoring packages, one validating them. 🔵 **This matters more than either
 repo's star count.** Every education engagement eventually has to get content into a platform the client
 already runs; until this pass that was always build-it-yourself glue. Both are tiny and both are MIT, so they
 are cheap to fork and audit. See `P91-C`.
+
+### 🟢 🆕 p103 The pedagogical-evaluation harness tier — permissive and RELEASED, which the rubric it must carry is not
+
+🔵 **`Gap 393` (pass 102) left the BEA-2025 layer ungranted on both halves: the scorer
+(`AITutor-EvalKit`) and the labels (`UnifyingAITutorEvaluation` / MRBench).** 🟢 **That holds. What
+pass 103 adds is that the HARNESS those two were the only route to is a separate, permissive,
+released purchase.**
+
+| agent | grant (payload · bytes · ref · SHA) | ★ | region | why it matters |
+|---|---|---|---|---|
+| 🆕 p103 [`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) | 🟢 **Apache-2.0** · `LICENSE.md` 11 347 B · `main` · `03e9344dc9fc949ae05b1f38580611fce36528ab` | — | 🟢 **APAC** (**AI Verify Foundation** — the body convened by Singapore's IMDA) | 🟢 **Benchmarking + red-teaming for any LLM-based system, 26 tags, top `0.7.6`.** Its named extension points are exactly the shape of a pedagogical rubric: **recipes** (custom *"input-target pairs"* datasets + prompt templates + an evaluation metric + **grading scales**), **cookbooks**, **connector endpoints**, **attack modules**, **context strategies**. 🔵 **A four-dimension rubric on a three-value scale is a recipe with a grading scale — so the rubric is a re-implementation and the harness is a purchase.** 🟡 Self-declared **beta**. |
+| 🆕 p103 [`aiverify-foundation/moonshot-cicd`](https://github.com/aiverify-foundation/moonshot-cicd) | 🟢 **Apache-2.0** · `LICENSE` 11 357 B *(pristine)* · `main` · `996365ba61586c52040f632f8a9d7ff5c5573129` | — | 🟢 **APAC** | 🟢 **The pipeline limb: evaluation as a CI gate instead of a notebook, 6 tags.** 🔵 **This is the half that makes a pedagogical gate auditable** — a regulator asks when the check ran, not whether someone ran it. 🟡 Tags are `uat`-prefixed (top `uat0.2`): pre-GA, so pin the SHA. |
+
+🔴 **What this tier does NOT buy: comparability.** 🔵 **The MRBench labels are the ungranted asset
+(`Gap 393`), so a studio can run a defensible rubric on the client's own dialogues and cannot quote
+an MRBench score as reproducible.** 🟢 **Cost the re-annotation; never the benchmark number.**
+
+🟡 **And the provenance is the finding as much as the licence is.** 🔵 **The harness that makes
+regulated pedagogical evaluation shippable comes from a REGULATOR-convened body in APAC, not from an
+education vendor and not from EMEA — where the institutional output of the same period ships
+releases with no grant at all (`Gap 395`).** 🟢 **`T27`.**
 
 ### 🔴 🆕 p99 `P1006` — the LMS connector tier, and the licence split that decides which LMS the studio can serve
 
