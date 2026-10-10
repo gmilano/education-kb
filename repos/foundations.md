@@ -6,6 +6,45 @@ updated: 2026-10-10
 
 # Education — foundational repos
 
+**Pass 97, 2026-10-10.** ⏱️ **Seventh pass of this date** (91: 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93:
+01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; this one 05:4x–06:xx). 🔴 **Repository code was
+refused for a FIFTH consecutive pass** — `grant-ladder-v4/ladder.sh` **and** its offline
+`test_ladder.sh` denied before starting (`[Code from External]`). 🟢 **No classifier was written**
+(`P237`); the oracle map ran by hand (`P970`). **20 slugs resolved.** Evidence:
+`compose/code/p989-sha-identity-fork/`.
+
+🔴 **`api.github.com` 403 for a sixth consecutive pass, and `github.com` HTML is 403 too.** The star
+channel is closed by both routes — a `—` is unread, never zero.
+
+🔴 **The structural finding of this pass is about THIS PAGE, so it goes at the top of it: `Gap 384`.**
+Pass 96 found an Apache-2.0 platform (`UniTime/unitime`) that `compose/code/` had used since pass 42
+and no shelf page listed. 🟢 **Pass 97 measured whether that was a one-off. It is not.**
+
+| population | n |
+|---|---|
+| distinct slugs in the append-only history (`agents/trending.md`, `repos/trending.md`) | **1 259** |
+| distinct slugs on the shelf pages (this file, `agents/top.md`, `verticals/solutions.md`, `compose/patterns.md`, `intel/*.md`) | **146** |
+| 🔴 in the history, on **no** shelf page | **1 119** |
+| 🔴 …carrying a **permissive** grant and **no** rejection marker | **528** |
+| on the shelf, never in the history | 6 |
+
+🔵 **1 119 is not the defect and must never be cited as one** — the history records **rejected**
+candidates by design (homonyms, ungranted repos, NC licences), and those are correctly absent from a
+curated shelf. 🔴 **The defect is that no instrument separates "measured, and judged not worth
+shelving" from "measured, and forgotten"** — and both known instances are the forgotten kind, each
+found by accident: `UniTime` (pass 42 → shelved at pass 96) and **this page's entirely missing
+speech-and-pronunciation tier** (verified at **pass 14**, shelved below at pass 97).
+🔵 **528 is a heuristic UPPER BOUND on the forgotten set, not a worklist of 528 omissions.**
+
+🟢 **Remedy pre-registered, and it is a ledger rather than a sweep:** a shelf row should record the
+pass that promoted it; a declined candidate should record the decline. Neither fact is on any page
+today, which is exactly why this can only be answered by `grep` and only as a bound. **The next pass
+that can execute code should write `promotion_ledger.sh` over the committed pages — two columns, and
+no new classifier (`P237`).** Lists committed at
+`compose/code/p989-sha-identity-fork/promotion-gap-*.txt` so a later pass can contradict this one.
+
+#### Pass 96 — carried below, unchanged
+
 **Pass 96, 2026-10-10.** ⏱️ **Sixth pass of this date** (91: 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93:
 01:4x–02:24; 94: 02:5x; 95: 03:4x; this one 04:4x–05:xx). 🔴 **Repository code was refused for a FOURTH
 consecutive pass** — `grant-ladder-v4/ladder.sh` **and** its offline `test_ladder.sh` were both denied
@@ -337,6 +376,59 @@ reporting *"Otter-Autograder is GPL-3.0-or-later"* was reading the **other** pro
 identifier:** `Otter-Autograder` pastes the **entire 35 kB GPL-3.0 text** into that field with
 `license_expression` set to `None`. **The `classifiers` array was correct for both.**
 
+## 🟢 🆕 p97 Tier 2g — the **speech and pronunciation** layer, promoted after 83 passes off the shelf
+
+🔴 **This layer was verified in the append-only history at pass 14 and has never appeared on this
+page.** It is `Gap 384`'s headline instance. 🟢 **Two rows are genuinely new; the rest are
+promotions; three are corrections.** 🔵 **The seam is named by the tools themselves** — alignment,
+scoring and benchmarking are three separate repos with three separate interfaces, which is what
+makes this layer composable rather than monolithic.
+
+| repo | grant (payload · bytes · ref · SHA-14) | release ladder | layer |
+|---|---|---|---|
+| 🆕 p97 [`MontrealCorpusTools/Montreal-Forced-Aligner`](https://github.com/MontrealCorpusTools/Montreal-Forced-Aligner) | 🟢 **MIT** · `LICENSE` **1 066 B** · `main` · `93411fc0df3bc7` | 🟢 **116 tags · `v3.4.3`** | **alignment** — the step under every score. 🟢 **The only member with a real release ladder.** 🔵 Titleless MIT (opens at `Copyright (c) 2016`). |
+| 🆕 p97 [`lingjzhu/charsiu`](https://github.com/lingjzhu/charsiu) | 🟢 **MIT** · `LICENSE` **1 061 B** · `main` · `13a69f2a22ca0c` | 🔴 0 tags | **alignment, text-independent** — no reference transcript needed. Complements MFA. |
+| 🔵 promoted [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) | 🟢 **MIT** · 1 113 B · `main` · `74bc17ea406e6f` | 🟡 2 tags · `v0.3.0` | **scoring** — phoneme/word error rate, DTW distance, prosody. Local, no API key. |
+| 🔵 promoted [`YuanGongND/gopt`](https://github.com/YuanGongND/gopt) | 🟢 **BSD-3-Clause** · 1 517 B · `master` · `bed909daf8eca0` | 🔴 0 tags | **scoring, published baseline** (ICASSP 2022). |
+| 🆕 p97 [`doheejin/HiPAMA`](https://github.com/doheejin/HiPAMA) | 🟢 **BSD-3-Clause** · 1 526 B · `main` · `89e3f650e224e2` | 🔴 0 tags | **scoring, hierarchical multi-aspect.** 🟢 `P995` — grant carries `Copyright (c) 2022, Yuan Gong` first: **gopt lineage, proved from the payload.** |
+| 🔵 promoted [`Fuann/open-apa`](https://github.com/Fuann/open-apa) | 🟢 **BSD-3-Clause** · 1 528 B · `master` · `2c92c0de1eca58` | 🔴 0 tags | **benchmark** — scores the scorer. This is the acceptance-test layer. |
+| 🔵 promoted [`kaldi-asr/kaldi`](https://github.com/kaldi-asr/kaldi) | 🟡 **Apache-2.0** · `COPYING` **17 264 B** · `master` · `e02e35f0254bb0` | 🔴 0 tags | **ASR substrate.** 🔴 `P991` — title displaced to byte 2 531; 4/4 clause headings. |
+| 🔴 **CORRECTION** [`CyanXLab/Phonos`](https://github.com/CyanXLab/Phonos) | 🔴 **NO LICENCE PAYLOAD** / 24 names @ 1 B · `8a13a3b7611a3d` | 1 tag | 🔴 **This KB counted it in a permissive layer of three. It has no grant.** |
+| 🔴 negative [`jimbozhang/speechocean762`](https://github.com/jimbozhang/speechocean762) | 🔴 **NO LICENCE PAYLOAD** · `613968e3b0b789` | 🔴 0 tags | 🔴 **`P994` — the reference CORPUS is ungranted while all seven tools are permissive.** |
+| 🔴 negative [`tzyll/goparrot`](https://github.com/tzyll/goparrot) · [`JazminVidal/gop-pykaldi`](https://github.com/JazminVidal/gop-pykaldi) | 🔴 **NO LICENCE PAYLOAD** (both) | 🔴 0 tags | Two more GOP implementations, neither granted (`P981`). |
+
+### 🔴 🆕 `P994` — a permissive toolchain around an ungranted corpus is a scope item, not a blocker
+
+🟢 **Seven of nine members carry a permissive grant**, and the two that do not are the **data**:
+the reference corpus (`speechocean762`) and one engine with no licence file at all (`Phonos`).
+🔴 **So the honest statement to a client is that the pipeline ships and the calibration data does
+not** — the deliverable either licenses a corpus or collects and labels its own.
+
+🔵 **And for two of this KB's four regions that is less bad than it reads.** Pronunciation scoring is
+**L1-specific**: a Spanish-L1 or Mandarin-L1 learner needs data from that population, which an
+engagement was going to collect locally regardless of what `speechocean762` permits. 🟢 **For LATAM
+and APAC the corpus gap is pre-existing scope, not licence-induced risk.** 🔴 **For a North America
+or EMEA engagement expecting to drop in an off-the-shelf English benchmark, it is a real cost.**
+
+### 🟡 🆕 `P991` / `P992` — two byte-level facts this tier produced, both about Apache-2.0
+
+🟡 **`P991` — the title block can be DISPLACED rather than absent.** `kaldi-asr/kaldi` serves
+`COPYING` at **17 264 B**; `Apache License` first occurs at **byte offset 2 531**, behind a
+2 531-byte joint-ownership clarification notice ("*Update to legal notice, made Feb 2012, modified
+Sep 2013*"), and `TERMS AND CONDITIONS` at 6 068. 🟢 **All 4 Apache clause headings are present
+(`P974`), so the grant is the full unabridged body, and `lib/license_family.sh` resolves it** — its
+title window is `head -c 4000` (line 106). 🔵 **What is new is the price of that bound: the worst
+displacement this KB has measured consumes 63 % of the window, leaving 1 469 B.** The comment at
+line 95 calls the limit *"MEDIDO, NO ELEGIDO"* — **this is the specimen that measures it.**
+
+🟡 **`P992` — the authority and the pristine copy differ by one byte.**
+`apache.org/licenses/LICENSE-2.0.txt` is **11 358 B** and opens with a blank line; the repo-side
+pristine copy is **11 357 B**, opening at `                                 Apache License`. `diff`
+reduces to `0a1 > $`. 🔴 **A byte-equality check against the authoritative text would mark every
+pristine repository copy "modified".** 🟢 **11 357 B is the correct repo-side constant**, now on a
+third independent instance (`UniTime/unitime` p96, `HendrikStrobelt/detecting-fake-text` p97, and
+this canonical compare) — **so never "fix" `p386-pristine-dedup-gate` by diffing upstream.**
+
 ## Tier 3 — delivery, runtime and agent substrate
 
 | repo | grant (payload · bytes · ref · SHA) | ★ | region | role in a build |
@@ -423,6 +515,29 @@ test suite cannot be redistributed in a client deliverable.** Conformance must b
 - `h5p/h5p-standalone` → 🟢 the real slug is [`tunapanda/h5p-standalone`](https://github.com/tunapanda/h5p-standalone)
 
 ## Count, stated plainly
+
+🆕 **p97: 48 foundational rows above the flag line, 7 of them added or promoted this pass** —
+`Montreal-Forced-Aligner` and `charsiu` (🟢 **genuinely new**), plus `HiPAMA` (new) and
+`OpenPronounce`, `gopt`, `open-apa`, `kaldi` (🔵 **promoted from the history, not discovered**).
+🟢 **47 are permissive for the CODE** (MIT / Apache-2.0 / BSD / CC0); **1 is LGPL**
+(`celtic-project/LTI-PHP`).
+
+🔴 **The qualifier on this count is sharper than on any previous one, and it has to be read:**
+only **3 of the 7** are new measurements of new repositories. **4 are rows this KB measured at pass 14
+and never put on a shelf page** — `Gap 384`. 🔵 **So the row count went up by 7 while the amount of
+new knowledge went up by 3**, and a reader comparing pass 96's 41 to pass 97's 48 would otherwise
+over-read the difference by more than double.
+
+🟢 **All 7 were read from the payload this pass** at the 40-character SHAs named in Tier 2g — the
+promotions were **re-measured, not copied forward from the history**, which is what makes them
+publishable here. 🔴 **The other 41 rows are carried**, under exactly the bound pass 96 established
+below.
+
+🔵 **And three of the 7 are negatives rather than rows**, kept inside the tier so the denominator is
+visible: `speechocean762` and `Phonos` carry **no licence payload** (`P994`), and `Phonos` is a
+🔴 **correction** — this KB had counted it inside a permissive layer.
+
+🔵 **Pass 96's count, kept because its bound still governs the 41 carried rows:**
 
 🆕 **p96: 41 foundational rows above the flag line, 5 of them added this pass** (`OpenRS`, `OpenRubrics`,
 `rubricbench`, `awesome-rubric-rewards`, `UniTime`). 🟢 **40 are permissive for the CODE**

@@ -6,6 +6,31 @@ updated: 2026-10-10
 
 # Education — current trends
 
+**Pass 97, 2026-10-10.** ⏱️ **Seventh pass of this date.** 🆕 **Sixteen trends.** 🟢 **`T16` is new —
+each region leads with a different INSTRUMENT, and Africa's is capacity-building rather than
+regulation or mandate**, located by the four separate country queries pass 96 pre-registered
+(4 of 4 returned material, against 0 of 9 from the paired query it replaced).
+
+🟢 **`T15` gains a second independent confirmation** — South Korea's **AI Basic Act took effect
+22 Jan 2026**, the first comprehensive AI statute in APAC, which reinforces rather than complicates
+the claim that the binding high-risk regime for automated assessment is APAC's while the EU's
+Annex III waits for **2 Dec 2027**. 🟢 **`T4`'s date holds on a third consecutive reading.**
+
+🔴 **One cross-region constraint hardened into a design rule this pass, and it is recorded here
+because it belongs to no single trend:** **a deliverable that REPLACES rather than augments a
+teacher fails in all four regions, by three different legal mechanisms** — Idaho SB 1227 bars it by
+**statute**, Argentina's `PaideIA` states *"la IA no reemplaza al docente"* as a **programme
+principle**, and the EU reaches the same place through **human-oversight duties**. 🔵 **It is not a
+regional footnote; it is a constraint on the product.**
+
+🔴 **And a guardrail that outranks a tier this pass shelved:** AI-text detection is now represented
+on `agents/top.md` (GLTR, Apache-2.0; `Open-Detector`, MIT) 🔴 **for analysis and teaching only.**
+The field's own 2026 literature is titled *"LLM-Generated Text Detection Remains an Unsolved
+Problem"*, and a system bearing on a student's academic standing is Annex III high-risk from
+2 Dec 2027. 🔴 **No pattern may wire these into a sanctioning path.**
+
+#### Pass 95 — carried below, unchanged
+
 **Pass 95, 2026-10-10.** ⏱️ **Fifth pass of this date.** 🆕 **Fourteen trends.** `T14` is new — **the
 curriculum mandates split by education level, and the higher-education limb is a different market** —
 located by Pakistan's HEC notification, the first mandate in this KB that binds universities rather than
@@ -635,6 +660,60 @@ three legal-publisher URLs. 🟢 **The EU dates and the Vietnam instrument were 
 independent search rounds over different source sets**, which is the strongest grade this channel produces.
 🔴 **One date is unreconciled and is not used**: a general **1 Mar 2027** compliance limb appears in one
 Vietnamese-law summary and could not be matched to the decision text.
+
+## T16 — 🆕 p97 Each region leads with a different INSTRUMENT, and Africa's is **capacity**, not regulation or mandate
+
+🔵 **This file has carried regional detail for many passes without naming the pattern that organises
+it.** 🟢 **Pass 97's Africa sweep — four countries, four separate queries, four returns — made it
+visible, because all four came back with the SAME SHAPE and it is not the shape of any other
+region.**
+
+| region | the instrument that comes FIRST | what a buyer there is actually procuring |
+|---|---|---|
+| **EMEA** (Europe) | 🔴 **Regulation.** EU AI Act: AI-literacy duty live since **2 Feb 2025**, Annex III high-risk from **2 Dec 2027**, emotion inference **banned**, deployer duties reaching schools directly | **Governance and evidence.** Conformity, audit trails, human-oversight proof. |
+| **APAC** | 🔴 **Mandate.** South Korea's AI Basic Act **in force 22 Jan 2026**; Vietnam's Decision 33/2026/QD-TTg **15 Aug 2026**; China AI compulsory from age six, ~8 h/yr in Beijing; India mandatory from **Class 3 in 2026–27** | **Curriculum and scale.** Content, teacher certification, delivery to very large cohorts. |
+| **North America** | 🟡 **State product requirements.** Idaho SB 1227 **bars AI replacing teachers**; California AB 1159 would bar student data for model training; Purdue's AI competency a **graduation requirement from Fall 2026** | **Compliant product plus assessment instrumentation.** |
+| **LATAM** | 🟡 **Statute, newly.** Colombia's **`Ley 2626 de 2026`** with lineamientos due **Feb 2027**; Mexico's Edomex reform; Brazil's MEC statement; Argentina's `PaideIA` programme | **Curriculum lineamientos and teacher capability.** |
+| 🆕 **EMEA (Africa)** | 🟢 **CAPACITY.** 🔴 **4 of 4 countries have teacher-capacity programmes. 0 of 4 have a binding national AI-in-education instrument.** | 🟢 **Teacher training at scale, and offline-capable delivery.** |
+
+### 🟢 The African evidence, because 4-of-4 is the whole claim
+
+| country | capacity programme (present) | binding instrument (absent) |
+|---|---|---|
+| **Egypt** | 🟢 UNESCO × MoETE **national AI competency framework for teachers, launched 3 Jun 2026**; AI+programming into technical schools **2026/27**; >236 000 enrolled in general secondary | 🟡 **Closest to an exception** — a national *framework*, but for teacher competency, not a curriculum rule |
+| **Kenya** | 🟢 **CEMASTEA training 5 400 teachers** before the **Jan 2026** CBE senior-school rollout; >20 700 devices via the World-Bank-backed Kenya Digital Economy Acceleration Project | 🔴 **CBE not tailored for AI; a national AI-literacy framework is still being *called for*** |
+| **Nigeria** | 🟢 **Experience AI** 2026 rollout (Raspberry Pi Foundation × Google DeepMind curriculum, 1 142 educators, 5 states); **Naija Teacher AI** (TRCN × GMind AI), 🟢 **offline by design** | 🔴 **NERDC curriculum still under revision**; 2025 reform introduced AI but no AI framework published |
+| **South Africa** | 🟡 Thinner — the commentary is about absence | 🟡 **Draft National AI Policy Cabinet-approved 25 Mar 2026**; 🔴 **DBE's education framework not published**; AI literacy has no fixed CAPS place |
+
+### 🔵 Why this is a trend and not a regional note
+
+🔴 **Because it inverts the sales motion, and getting it backwards wastes the engagement.** 🔴 **A
+governance-and-conformity pitch — the correct EMEA-Europe pitch — has nothing to attach to in
+Nairobi or Abuja, because there is no instrument to be compliant with.** 🟢 **What those buyers are
+funding, with World Bank and UNESCO money and on dated timelines, is teacher capability and device
+reach.** 🔵 **And the binding technical constraint is named explicitly by the delivery programmes
+themselves: `Naija Teacher AI` is built to work OFFLINE.**
+
+🟢 **That maps onto this KB's shelf precisely, and it is the one place where an old row becomes the
+lead row:** `learningequality/kolibri` (**MIT**) is an offline-first learning platform, and this
+file has carried it for many passes as a footnote to the LMS tier. 🟢 **For the African capacity
+market it is not a footnote — it is the correct base**, because it is the only permissive platform
+on the shelf designed for intermittent connectivity. 🔵 **Teacher-facing content generation on top
+of it is the deliverable**, not a student-facing tutor.
+
+🔴 **The failure mode this trend exists to prevent:** reading "no AI regulation yet" as "market not
+ready". 🟢 **4 of 4 countries are spending now, on timelines with dates (Kenya Jan 2026, Egypt
+2026/27, Nigeria 2026) — they are simply buying a different thing.**
+
+### 🟡 What would refute T16
+
+🟢 **Stated so the next pass can kill it cheaply:** a **published, binding** national AI-in-education
+curriculum instrument from Kenya, Nigeria or South Africa would move that country into the LATAM
+column and weaken the 0-of-4. 🔵 **South Africa is the likeliest to flip** — its draft policy was
+Cabinet-approved in March 2026 with school implementation reported for 2027–2028. 🔴 **Egypt is
+already the partial exception and should be re-read first**, since a teacher-competency framework is
+one step from a curriculum rule. 🟡 **And all four rows rest on secondary sources: the
+primary-source channel was closed this pass** (see `intel/market.md`).
 
 ## Instrument note carried forward
 

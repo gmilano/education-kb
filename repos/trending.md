@@ -4,6 +4,107 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 97: a 116-release aligner the shelf never had, and the ledger that would have found it
+
+⏱️ **Seventh pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93: 01:4x–02:24;
+94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; this one 05:4x–06:xx). **Append-only.**
+
+🔴 **Repository code was refused for a FIFTH consecutive pass** (`[Code from External]`), the offline
+self-test included. 🟢 **No classifier was written** (`P237`); the v4 oracle map was run by hand
+(`P970`). Evidence: `compose/code/p989-sha-identity-fork/`.
+
+🔴 **`api.github.com` 403 for a sixth pass, and `github.com` HTML is 403 too** — the star channel is
+closed by both routes, so every ★ on this page is unread, not zero.
+
+### 🟢 Two genuinely new repo rows, both in a layer this KB verified 83 passes ago and never shelved
+
+| repo | grant (payload · bytes · ref · SHA-14) | version / ladder | why it matters |
+|---|---|---|---|
+| 🆕 [`MontrealCorpusTools/Montreal-Forced-Aligner`](https://github.com/MontrealCorpusTools/Montreal-Forced-Aligner) | 🟢 **MIT** · `LICENSE` **1 066 B** · `main` · `93411fc0df3bc7` | 🟢 **116 tags, newest `v3.4.3`** | 🟢 **The most mature permissive tool in the speech-assessment layer, and it was on no shelf page.** Kaldi-backed phoneme-level forced alignment — the step under every pronunciation score, speaking-rate and pause measurement. 🔵 **116 releases** against `OpenPronounce`'s 2 and `charsiu`/`gopt`/`HiPAMA`/`open-apa`'s **zero**: in a layer that is otherwise research code, this is the one row with a release ladder. 🔵 **A titleless MIT payload**, opening at `Copyright (c) 2016`. |
+| 🆕 [`lingjzhu/charsiu`](https://github.com/lingjzhu/charsiu) | 🟢 **MIT** · `LICENSE` **1 061 B** · `main` · `13a69f2a22ca0c` | 🔴 **0 tags** | **Text-independent** alignment on Wav2Vec2 — it aligns without a reference transcript, which is what free-form learner speech actually is. 🔵 Complements MFA rather than replacing it: MFA needs the transcript, charsiu does not. |
+
+🔵 **The finding under both rows is `Gap 384`, and it is this KB's own bookkeeping, not a
+discovery:** the pronunciation/CAPT layer has been verified in `repos/trending.md` and
+`agents/trending.md` **since pass 14** — `OpenPronounce`, `kaldi`, `speechocean762`, later `gopt`,
+`Phonos`, `open-apa`, `HiPAMA` — and carried **zero rows** on `repos/foundations.md`,
+`agents/top.md` or `verticals/solutions.md`. 🟢 **Promoted this pass.**
+
+### 🔴 `Gap 384` — the promotion step from history to shelf is unrecorded, and the loss is now bounded
+
+| population | n |
+|---|---|
+| distinct slugs in the append-only history | **1 259** |
+| distinct slugs on the shelf pages | **146** |
+| 🔴 in the history, on **no** shelf page | **1 119** |
+| 🔴 …with a **permissive** grant and **no** rejection marker | **528** |
+| on the shelf, never in the history | 6 |
+
+🔵 **1 119 is not the defect.** This history records rejected candidates by design, and they belong
+nowhere else. 🔴 **The defect is that no instrument separates "measured and declined" from "measured
+and forgotten"** — and the two known instances, `UniTime/unitime` (pass 96, Apache-2.0, in
+`compose/code/` since **pass 42**) and the entire CAPT layer (this pass, since **pass 14**), are both
+the forgotten kind and **both were found by accident.**
+
+🟢 **Pre-registered remedy, and deliberately a LEDGER rather than a sweep:** a shelf row should
+record the pass that promoted it, and a declined candidate should record the decline. Neither fact
+exists on any page today, which is why this question can only be answered with `grep` and only as a
+bound. **`promotion_ledger.sh` over the committed pages — two columns, no new classifier (`P237`).**
+Lists committed at `compose/code/p989-sha-identity-fork/promotion-gap-*.txt` so a later pass can
+contradict this one on the record.
+
+### 🟡 `P991` — `kaldi`'s Apache title sits 2 531 bytes deep, and the window holds with 1 469 B to spare
+
+| measurement | value |
+|---|---|
+| `kaldi-asr/kaldi` → `COPYING` | **17 264 B**, `master` · `e02e35f0254bb0` |
+| first `Apache License` | 🔴 **byte offset 2 531** |
+| first `TERMS AND CONDITIONS` | 6 068 |
+| Apache clause headings (`P974` probe) | 🟢 **4 of 4** — the full unabridged body |
+| `lib/license_family.sh` title window | `head -c 4000` (line 106) |
+
+🟢 **So the family resolves and the shared classifier needs no change.** 🔵 **What is new is the
+price of the bound:** the worst displacement this KB has measured eats **63 %** of the window. The
+comment at line 95 calls the 4 000 B limit *"MEDIDO, NO ELEGIDO"* — **this is the specimen that
+measures it**, and a payload with a longer prepended notice would break it.
+
+### 🟡 `P992` — a byte-equality check against apache.org would call every pristine copy "modified"
+
+| source | bytes | opens with |
+|---|---|---|
+| `apache.org/licenses/LICENSE-2.0.txt` | **11 358** | 🔴 a blank line |
+| pristine copy in a repository | **11 357** | `                                 Apache License` |
+
+`diff` reduces to `0a1 > $` — one leading newline. 🟢 **11 357 B is the right repo-side constant**,
+now on a third independent instance (`UniTime/unitime` p96, `HendrikStrobelt/detecting-fake-text`
+p97, and this canonical compare). 🔴 **Never "fix" the dedup gate by diffing against the
+authority.**
+
+### 🔴 Negatives and one correction, measured rather than skipped
+
+| slug | verdict |
+|---|---|
+| 🔴 **CORRECTION** [`CyanXLab/Phonos`](https://github.com/CyanXLab/Phonos) | 🔴 **NO LICENCE PAYLOAD** / 24 names @ 1 B · `main` · `8a13a3b7611a3d`. **This file counted it inside a permissive layer of three. It has no grant.** |
+| [`jimbozhang/speechocean762`](https://github.com/jimbozhang/speechocean762) | 🔴 **NO LICENCE PAYLOAD** · `main` · `613968e3b0b789` — 🔴 **`P994`: the reference corpus of the task is ungranted while all seven tools around it are permissive.** |
+| [`tzyll/goparrot`](https://github.com/tzyll/goparrot) | 🔴 **NO LICENCE PAYLOAD** · `master` · `0c1825fb641873` |
+| [`JazminVidal/gop-pykaldi`](https://github.com/JazminVidal/gop-pykaldi) | 🔴 **NO LICENCE PAYLOAD** · `master` · `c34952ebbfc492` |
+| [`dssg/student-early-warning`](https://github.com/dssg/student-early-warning) | 🔴 **`NONCOMMERCIAL-NOT-OSI`** · `LICENSE` 2 069 B · `master` · `b68f23c76d5277` — University of Chicago terms-of-use, commercial use **PROHIBITED** (`P990`). **First software fixture for that branch:** `lib/fixtures-p990/`. |
+| four `*dropout*` candidates | 🔴 **NO LICENCE PAYLOAD**, all four — `Gap 385` |
+
+🟢 **`P995` — and one positive that reads a fact off a grant instead of a paper:**
+[`doheejin/HiPAMA`](https://github.com/doheejin/HiPAMA) (BSD-3-Clause, 1 526 B) carries
+**`Copyright (c) 2022, Yuan Gong` as its FIRST copyright line** — the author of `gopt` — then its
+own. **The derivation the paper asserts is provable from the payload**, by the mechanism `P800`
+used for region provenance: holder order is evidence.
+
+### 🟢 `P989` — the fork test that works while the API does not
+
+`git ls-remote --symref` resolved three slugs that a technique search returned as three projects:
+`Halleck45/OpenPronounce` and `CHINOBv/OpenPronounce` are at the **same HEAD SHA**
+(`74bc17ea406e6f`) and `Ronald-TR/OpenPronounce` is at `f43079b80fcbef`, all three serving a
+byte-identical 1 113 B MIT payload held by the upstream author. 🟢 **One project, two forks — proved
+with no token, no API and no star count**, which is the only kind of proof available after six
+passes of 403.
+
 ## 2026-10-10 — pass 96: the Maven POM is the licence oracle this tier needed, and the KB already owned the reader
 
 ⏱️ **Sixth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93: 01:4x–02:24;

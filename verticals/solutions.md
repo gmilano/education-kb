@@ -6,6 +6,47 @@ updated: 2026-10-10
 
 # Education — vertical platforms you can customise with AI
 
+**Pass 97, 2026-10-10.** ⏱️ **Seventh pass of this date.** 🔴 **No platform licence on this page was
+re-resolved this pass** — they are carried at their pass-92/93/96 SHAs, and the sandbox refused
+`grant-ladder-v4/ladder.sh` **and** its offline self-test for a **FIFTH consecutive pass**, so no
+replacement classifier was written (`P237`, `P970`). 🟢 **What pass 97 adds to THIS page is one
+re-ranking, and it is a re-ranking rather than a row, which is the honest description.**
+
+## 🟢 🆕 p97 `T16` re-ranks this page for one market: **Kolibri is the lead platform in Africa, not a footnote**
+
+🔴 **This page ranks its permissive tier by capability and licence, and for three of this KB's
+regions that is the right axis.** 🟢 **Pass 97's Africa sweep found a fourth market where it is the
+wrong axis**, and the finding is in `intel/trends.md` as `T16`: **4 of 4 African countries queried
+have teacher-capacity programmes and 0 of 4 have a binding national AI-in-education instrument** —
+so what is being procured is **teacher capability and device reach**, on dated timelines, with World
+Bank and UNESCO money.
+
+🟢 **The binding technical constraint is named by the delivery programmes themselves, not inferred
+here:** Nigeria's **`Naija Teacher AI`** (TRCN × GMind AI) is **built to work offline**, and Kenya's
+rollout is a **hardware** programme — **>20 700 smartboards and teacher laptops to junior secondary
+schools** via the **Kenya Digital Economy Acceleration Project**, which is a statement about
+connectivity, not about pedagogy.
+
+| platform | grant | why the ranking changes |
+|---|---|---|
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** | 🟢 **The only permissive platform on this page designed for intermittent or absent connectivity.** For an African capacity engagement it is **the base**, not an also-ran — every other row in the permissive tier assumes a server a browser can reach. 🔵 **Its MIT grant also makes it the cheapest to fork for a ministry deliverable.** |
+| `moodle/moodle` · `openedx/edx-platform` | 🔴 GPL-3.0 / AGPL-3.0 | Still the capability leaders, still the wrong fit here: 🔴 **copyleft plus a connectivity assumption.** |
+
+🔴 **What this does NOT claim.** 🔵 **No new platform was found, no licence was re-read, and Kolibri
+has been on this page for many passes** — its grant, its tier and its SHA are unchanged and carried.
+🟢 **The change is which market it leads in, and that is a `T16` consequence rather than a platform
+finding.** 🔴 **It is recorded on this page because a reader picking a base for a Nairobi or Abuja
+engagement from the capability ranking above would pick wrong, and nothing on this page told them
+so until now.**
+
+🟢 **The deliverable shape that follows is also inverted, and worth stating because it is
+counter-intuitive:** the African capacity market wants **teacher-facing** content generation and
+lesson preparation on an offline-capable base — **not** a student-facing tutor. 🔵 **Every mandate
+and every programme in the four-country sweep funds the teacher**, and `intel/trends.md` `T16`
+carries the evidence.
+
+#### Pass 95 — carried below, unchanged
+
 **Pass 95, 2026-10-10.** ⏱️ **Fifth pass of this date.** 🔴 **No licence on this page was re-resolved this
 pass either** — they are carried at their pass-92/93 SHAs, and the sandbox refused
 `grant-ladder-v4/ladder.sh` for a **third consecutive pass**, so no replacement classifier was written

@@ -6,6 +6,12 @@ updated: 2026-10-10
 
 # Education — compose patterns
 
+**Pass 97, 2026-10-10.** ⏱️ **Seventh pass of this date.** 🆕 **Three patterns added** (`P97-A` spoken-language assessment, `P97-B` the integrity workbench that is deliberately not a detector, `P97-C` the African teacher-capacity engagement), 🟢 **two of the three built on tiers this pass promoted or shelved for the first time.**
+
+🔴 **One constraint now binds EVERY pattern on this page and is stated once, here: a deliverable that REPLACES rather than augments a teacher fails in all four regions**, by three different legal mechanisms — Idaho SB 1227 bars it by statute, Argentina’s `PaideIA` states *"la IA no reemplaza al docente"* as a programme principle, and the EU reaches the same place through human-oversight duties.
+
+#### Pass 96 — carried below, unchanged
+
 **Pass 96, 2026-10-10.** ⏱️ **Sixth pass of this date.** 🆕 **Three patterns added, and one standing pattern
 re-sequenced rather than re-costed.**
 
@@ -881,6 +887,107 @@ from the payload at a full 40-character SHA, and this KB has run its MCP gate fo
 has **no named client deployment recorded here.** 🟢 **And it is the one JVM row on this shelf whose
 default branch names a shippable version** (`pom.xml` `4.9` against tag `v4.9.152`), which inverts `P978`
 and means you can quote a version without a caveat — the only row here you can say that about.
+
+## `P97-A` — 🆕 Spoken-language assessment for a mandated curriculum (LATAM and APAC first; the tier promoted this pass)
+
+🟢 **Why this pattern exists now and could not have been written last pass:** the speech-assessment
+layer was verified in this KB's history at **pass 14** and sat on no shelf page until pass 97
+promoted it (`Gap 384`). 🟢 **It is a seven-repo permissive toolchain, and the seams are the repos'
+own interfaces** — alignment, scoring and benchmarking are three separate projects.
+
+### The wiring, named repo by repo
+
+| step | repo | grant · version | what it does here |
+|---|---|---|---|
+| 1. **align** | [`MontrealCorpusTools/Montreal-Forced-Aligner`](https://github.com/MontrealCorpusTools/Montreal-Forced-Aligner) | 🟢 **MIT** · `v3.4.3`, **116 tags** | Phoneme-level forced alignment of the learner's audio against the expected text. 🟢 **The only member with a real release ladder — pin it, and let it carry the production risk.** |
+| 1b. **align without a script** | [`lingjzhu/charsiu`](https://github.com/lingjzhu/charsiu) | 🟢 **MIT** · 🔴 0 tags | For free-speaking tasks where there is no reference transcript. 🔴 **Research code — use it for the open-response task only, never as the default path.** |
+| 2. **score** | [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) | 🟢 **MIT** · `v0.3.0` | 0–100 score, phoneme and word error rate, per-word confidence, DTW acoustic distance, prosody (F0, energy). 🟢 **Runs local, no API key — which is what makes it shippable into a ministry.** |
+| 3. **fix the baseline** | [`YuanGongND/gopt`](https://github.com/YuanGongND/gopt) + [`doheejin/HiPAMA`](https://github.com/doheejin/HiPAMA) | 🟢 **BSD-3-Clause** (both) | The published ICASSP-2022 number and its hierarchical successor. 🔵 **These are the figures a bid is scored against, not components you ship.** 🟢 `P995`: HiPAMA's grant names gopt's author first, so the lineage is provable. |
+| 4. **score the scorer** | [`Fuann/open-apa`](https://github.com/Fuann/open-apa) | 🟢 **BSD-3-Clause** | Benchmark and evaluation toolkit. 🟢 **This is the step that turns a demo into an acceptance test**, and it is why this pattern can be contracted. |
+| 5. **substrate** | [`kaldi-asr/kaldi`](https://github.com/kaldi-asr/kaldi) | 🟡 **Apache-2.0** (17 264 B, displaced title — `P991`) | Under MFA. 🔴 **Apache §4(d): propagate `NOTICE` if one ships.** |
+| 6. **deliver** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (**MIT**) or `moodle/moodle` | — | Kolibri where connectivity is intermittent (`T16`); Moodle where it is not. |
+| 7. **record** | `yetanalytics/lrsql` (xAPI LRS) | — | Spoken-task attempts as xAPI statements — 🟢 **the evidence layer `T13` says is the defensible half.** |
+
+### 🔴 The licence line item, stated in the estimate rather than the appendix
+
+🟢 **Seven of nine layer members are permissive — so the pipeline ships.** 🔴 **The DATA is not:**
+`jimbozhang/speechocean762`, the reference corpus of pronunciation scoring, serves **no licence
+payload across 24 filenames**, and `CyanXLab/Phonos` — which this KB had counted *inside* a
+permissive layer — has **no grant either** (`P994`, and a correction).
+
+🔵 **For LATAM and APAC this is cheaper than it reads, and that is the reason those regions lead
+this pattern.** Pronunciation scoring is **L1-specific**: a Spanish-L1 or Mandarin-L1 cohort needs
+data from that population, which the engagement was always going to collect. 🟢 **So corpus
+collection is pre-existing scope, not licence-induced risk** — and it is billable.
+🔴 **For a North America or EMEA engagement expecting to drop in an off-the-shelf English benchmark,
+it is a real and unbudgeted cost. Say so before the quote.**
+
+### Cost and sequencing
+
+🟡 **8–10 weeks.** Weeks 1–2: pin MFA, stand up `OpenPronounce` locally, reproduce `gopt`'s published
+number with `open-apa` — 🔴 **if that reproduction fails, stop; the baseline is the contract.**
+Weeks 3–5: collect and label L1-specific audio (the corpus line item). Weeks 6–8: wire scoring into
+Kolibri or Moodle and emit xAPI. Weeks 9–10: acceptance against `open-apa`.
+
+🔴 **Where this pattern must NOT go:** a pronunciation score that gates progression or certification
+is an assessment decision. 🔵 **Under APAC's binding regime (`T15` — Vietnam's Decision
+33/2026/QD-TTg names automated assessment; South Korea's AI Basic Act in force 22 Jan 2026) and the
+EU's Annex III from 2 Dec 2027, that is high-risk.** 🟢 **Ship it as formative feedback to the
+learner and the teacher, and `P94-A` is the pattern to run if the client wants it summative.**
+
+## `P97-B` — 🆕 The academic-integrity **conversation** workbench (global; deliberately NOT a detector)
+
+🔴 **Read the guardrail first, because it is the pattern.** The 2026 literature on AI-text detection
+is titled *"LLM-Generated Text Detection Remains an Unsolved Problem"* (arXiv **2608.11256**), and a
+system bearing on a student's academic standing is **Annex III high-risk from 2 Dec 2027**.
+🔴 **So this pattern does not build a detector, does not produce a verdict, and must never be wired
+into a sanctioning path.** 🟢 **What it builds is the thing institutions actually need and nobody
+sells them: a way to hold the conversation with evidence on the table.**
+
+| step | repo | grant | role |
+|---|---|---|---|
+| 1 | [`HendrikStrobelt/detecting-fake-text`](https://github.com/HendrikStrobelt/detecting-fake-text) (**GLTR**, MIT-IBM Watson AI Lab) | 🟢 **Apache-2.0** (11 357 B pristine) | 🟢 **Per-token predictability, VISUALISED.** It shows *why* a passage looks machine-like instead of asserting that it is. **This is the whole pattern's primitive.** |
+| 2 | [`Imalwayshere/Open-Detector`](https://github.com/Imalwayshere/Open-Detector) | 🟢 **MIT** | A second, stylometric signal — 🔴 **displayed as a signal with its confidence, never as a verdict**, and its 99.57 % claim is the author's own and unreplicated. |
+| 3 | `ucfopen/UDOIT` + the AI-literacy tier (`touretzkyds/ai4k12`, `microsoft/ai-agents-for-beginners`) | — | Turns the output into **teaching material**: the artefact of this pattern is a lesson, not an accusation. |
+| 4 | `moodle/moodle` or `ls1intum/Artemis` (**MIT**) | — | Surface it in the tool the instructor already uses. 🟢 **Artemis is MIT, so a closed client deliverable is clean.** |
+
+🟢 **Why a client buys this:** EMEA institutions have had an **AI-literacy obligation since
+2 Feb 2025** and must show that **staff can evaluate AI output and exercise human oversight** —
+🔵 **and this pattern is literally a human-oversight instrument with an audit trail.** 🟢 **North
+America is the second market**: Purdue's AI competency becomes a **graduation requirement in Fall
+2026**, and a competency has to be assessed.
+
+🟡 **4–6 weeks**, and 🔴 **the acceptance criterion is a refusal**: the deliverable must be unable to
+emit a binary "AI-written" judgement. 🔵 **If a stakeholder asks for that button, the honest answer
+is that the research does not support it and the regulation will not permit it — and `P94-A` is
+where a defensible summative assessment actually gets built.**
+
+## `P97-C` — 🆕 The African teacher-capacity engagement (EMEA–Africa; `T16`, and the cheapest correct read in this file)
+
+🔴 **This pattern exists to stop a specific mistake:** pitching governance and conformity — the
+correct EMEA-Europe motion — into a market with **no instrument to be compliant with.**
+🟢 **`T16`, measured on four separate country queries: 4 of 4 African countries have teacher-capacity
+programmes, 0 of 4 have a binding national AI-in-education instrument.** 🔵 **They are spending now,
+on dated timelines, with World Bank and UNESCO money — on a different thing.**
+
+| step | component | grant | why |
+|---|---|---|---|
+| 1. **base** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** | 🟢 **The only permissive platform on `verticals/solutions.md` built for intermittent or absent connectivity**, and the constraint is explicit: Nigeria's `Naija Teacher AI` is **designed to work offline**, Kenya's rollout is **>20 700 devices** rather than a cloud migration. |
+| 2. **teacher-facing generation** | [`satvik314/educhain`](https://github.com/satvik314/educhain) (**MIT**) | 🟢 MIT | Lesson and assessment generation **for the teacher**, not a student-facing tutor. 🔵 **Every programme in the four-country sweep funds the teacher.** |
+| 3. **align to the national curriculum** | `Zion-support/curriculum-alignment-checker` + `nsip/curriculum-mapper` | 🟢 permissive | Each country has its own frame (Kenya's **CBC/CBE**, South Africa's **CAPS**, Egypt's technical-school curriculum). 🔴 **The frameworks themselves are largely ungranted — `Gap 367`, unchanged — so map, do not redistribute.** |
+| 4. **competency frame** | 🟢 **UNESCO's AI competency framework for teachers** | — | 🟢 **Egypt has already adopted a national adaptation of it, launched 3 Jun 2026.** 🔵 **Using the same frame makes the deliverable portable across all four countries** — the single highest-leverage choice in this pattern. |
+| 5. **record** | `yetanalytics/lrsql` | — | Offline-tolerant xAPI capture; sync when connectivity returns. |
+
+🟡 **6–8 weeks per country, and the frame is what makes it repeatable.** 🟢 **Build once against the
+UNESCO teacher-competency frame, localise the curriculum mapping per country.** 🔴 **Do not build
+per-country from scratch and do not lead with compliance** — there is nothing to comply with yet,
+and South Africa's draft policy (Cabinet-approved **25 Mar 2026**, schools **2027–2028**) is the
+first that will change that. 🔵 **When it does, `P94-A` and `P91-B` become the follow-on sale, and
+this pattern is what earns the right to make it.**
+
+🔴 **Evidence grade, stated because it affects how hard to push:** all four country rows rest on
+**secondary sources** — the primary-source channel was closed this pass (`intel/market.md`).
+🟢 **Egypt's instrument is the best-attested** (UNESCO plus the ministry, with a date).
 
 ## `P91-RETIRED` — "the platform is always the client's; the intelligence on top is ours"
 

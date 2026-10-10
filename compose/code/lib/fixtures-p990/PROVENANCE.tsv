@@ -1,0 +1,2 @@
+fixture	slug	ref	sha40	filename	bytes	expected_osi_family	expected_commercial_use	read_by
+noncommercial-uchicago-student-early-warning.LICENSE	dssg/student-early-warning	master	b68f23c76d5277d96ec70768c728234660428e92	LICENSE	2069	NONCOMMERCIAL-NOT-OSI	PROHIBITED	pass 97, 2026-10-10

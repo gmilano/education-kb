@@ -6,6 +6,66 @@ updated: 2026-10-10
 
 # Education — AI agents shelf
 
+**Pass 97, 2026-10-10.** ⏱️ **Seventh pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x;
+93: 01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; this one 05:4x–06:xx).
+
+🔴 **The sandbox refuses to execute repository code for a FIFTH consecutive pass** — both
+`grant-ladder-v4/ladder.sh` and its **offline** `test_ladder.sh` were denied before starting
+(`[Code from External]`). 🟢 **So pass 97 wrote no classifier either** (`P237`) and ran the oracle map
+by hand (`P970`): **20 slugs resolved — 11 licence payload reads, 7 negatives, 2 fork-identity
+reads.** Evidence in `compose/code/p989-sha-identity-fork/`, first-of-its-kind fixture in
+`compose/code/lib/fixtures-p990/`.
+
+🔵 **Marker convention, because seven passes ran on one date.** A bare 🆕 is inherited from the pass
+that added the row and was **not** re-flagged; **rows added by this pass are marked 🆕 p97.**
+🔴 **A `—` in the ★ column means not read this pass. It never means zero** — and this pass settled
+the question for good: **`api.github.com` returned HTTP 403 for a sixth consecutive pass AND
+`github.com` HTML is 403 as well.** There is no star channel by either route, so no star count on
+this page moved or could.
+
+### 🟢 What pass 97 adds, in one line each
+
+- 🔴 **`Gap 384` — this shelf has been losing verified layers, and the loss is finally measured.**
+  **1 259** slugs sit in the append-only history, **146** on the shelf pages, **1 119** in the
+  history and on **no** shelf page — of which **528** carry a permissive grant and no rejection
+  marker. 🔵 **1 119 is NOT the defect** (the history records rejected candidates by design)
+  🔴 **but nothing distinguishes "measured and declined" from "measured and forgotten"**, and both
+  known instances — `UniTime/unitime` (p96, in `compose/code/` since pass 42) and the **entire
+  pronunciation layer** (this pass, verified since **pass 14**) — are the forgotten kind, **found by
+  accident rather than by a sweep.**
+- 🟢 **So the speech-and-pronunciation tier is PROMOTED, not discovered**, with two genuinely new
+  rows and three corrections. 🟢 **`compose/code/p311-duplicate-alta-gate/` is what stopped this
+  pass from republishing eight-pass-old rows as finds — the gate did its job.**
+- 🟢 **`MontrealCorpusTools/Montreal-Forced-Aligner` (MIT, `v3.4.3`, 116 tags) is the mature anchor
+  the layer never had** — **116 releases** where every other member has 2 or 0.
+- 🔴 **`P994` — the corpus is ungranted while all seven tools around it are permissive.**
+  `speechocean762`, the reference corpus of pronunciation scoring, serves **no licence payload**;
+  so does `Phonos`, which this KB had counted *inside* a permissive layer. 🔵 **Priced as a line
+  item: the pipeline ships, the calibration data does not.**
+- 🔴 **`Gap 385` — there is no permissive open-source student early-warning system.** Six
+  candidates, **five with no licence payload at all**, and the sixth non-OSI.
+- 🔴 **`P990` — a file named `LICENSE` is not necessarily a grant.** The University of Chicago
+  payload opens *"BY DOWNLOADING … YOU AGREE TO THE FOLLOWING TERMS OF USE"* with a **BSD-shaped
+  permission sentence**, and excludes *"any service or part of selling a service"*. 🟢 **`lib` gets
+  it right — and had no software fixture for that branch until this pass committed one.**
+- 🟢 **`P989` — two slugs at the same HEAD SHA are one repository.** `CHINOBv/OpenPronounce` ≡
+  `Halleck45/OpenPronounce` at **`74bc17ea406e6f`**. 🔵 **A fork test that needs no token and works
+  through the only channel six passes of 403 left open.**
+- 🟡 **`P991` — the title block can be DISPLACED.** `kaldi`'s Apache title hides at byte **2 531**
+  behind an ownership notice, 4 of 4 clause headings present. 🟢 **`lib`'s 4 000 B window holds,
+  with 1 469 B of margin — the bound is now measured, not assumed.**
+- 🟡 **`P992` — `apache.org` serves 11 358 B, a repo serves 11 357 B**, and the byte is a leading
+  newline. 🔴 **Diffing against the authority would call every pristine copy modified.**
+- 🟢 **A second new tier, shelved with a hard guardrail: AI-text detection** — GLTR (Apache-2.0) and
+  `Open-Detector` (MIT). 🔴 **For analysis and teaching only, never for a verdict that sanctions a
+  student** — the field's own 2026 literature calls the task unsolved, and Annex III binds such a
+  system from 2 Dec 2027.
+- 🔴 **`github trending education AI {year}` returned its SEVENTH consecutive zero.** 🟢 **The
+  retirement pass 96 called for stands**, and `P955` — name the TECHNIQUE — produced rows from three
+  of four technique queries.
+
+#### Pass 96 — carried below, unchanged
+
 **Pass 96, 2026-10-10.** ⏱️ **Sixth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x;
 93: 01:4x–02:24; 94: 02:5x; 95: 03:4x; this one 04:4x–05:xx).
 
@@ -515,6 +575,81 @@ licence *document*; one reading its first 20 characters gets `"GNU GENERAL PUBLI
 populated and ungranted — which under copyright default is **all rights reserved**. 🔵 **The academic
 sentence and the legal position point in opposite directions, and this industry's scoring supply is
 largely academic**, so the defect is systematic rather than incidental.
+
+### 🟢 🆕 p97 The speech and pronunciation tier — **promoted after 83 passes in the history and none on this shelf**
+
+🔴 **This layer was verified in `agents/trending.md` and `repos/trending.md` at pass 14 and never
+reached a shelf page.** That is `Gap 384`, and it is bookkeeping rather than discovery — stated
+plainly so nobody reads this tier as new intelligence. 🟢 **Two rows ARE new (🆕 p97); the rest are
+promotions, and three are corrections.**
+
+| agent | grant (payload · bytes · ref · SHA-14) | release ladder | ★ | region | why it matters |
+|---|---|---|---|---|---|
+| 🆕 p97 [`MontrealCorpusTools/Montreal-Forced-Aligner`](https://github.com/MontrealCorpusTools/Montreal-Forced-Aligner) | 🟢 **MIT** · `LICENSE` **1 066 B** · `main` · `93411fc0df3bc7` | 🟢 **116 tags · `v3.4.3`** | — | 🔵 unplaced (McGill, Montreal) | 🟢 **The production-grade anchor of this tier.** Kaldi-backed phoneme-level forced alignment — the step underneath every pronunciation score, speaking rate and pause measurement. 🔵 **116 releases where every other member of this tier has 2 or 0.** 🔵 A **titleless MIT** payload, opening directly at `Copyright (c) 2016`. |
+| 🆕 p97 [`lingjzhu/charsiu`](https://github.com/lingjzhu/charsiu) | 🟢 **MIT** · `LICENSE` **1 061 B** · `main` · `13a69f2a22ca0c` | 🔴 **0 tags** | — | 🔵 unplaced | **Text-INDEPENDENT** alignment on Wav2Vec2 — it does not need a reference transcript, which is what free-form learner speech actually is. 🔵 **Complements MFA rather than replacing it.** |
+| 🔵 promoted [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) | 🟢 **MIT** · 1 113 B · `main` · `74bc17ea406e6f` | 🟡 2 tags · `v0.3.0` | — | **EMEA** (holder `Jean-François Lépine`) | Phoneme-level scoring against expected text; returns 0–100, phoneme/word error rate, DTW acoustic distance and prosody. **Runs local, no API key.** The sellable piece of the tier. |
+| 🔵 promoted [`YuanGongND/gopt`](https://github.com/YuanGongND/gopt) | 🟢 **BSD-3-Clause** · 1 517 B · `master` · `bed909daf8eca0` | 🔴 0 tags | — | 🔵 unplaced (MIT CSAIL) | The ICASSP-2022 transformer baseline — **the published number a bid gets scored against.** |
+| 🆕 p97 [`doheejin/HiPAMA`](https://github.com/doheejin/HiPAMA) | 🟢 **BSD-3-Clause** · 1 526 B · `main` · `89e3f650e224e2` | 🔴 0 tags | — | **APAC** (Korea) | Hierarchical multi-aspect assessment. 🟢 **`P995`: its grant's FIRST copyright line is `Copyright (c) 2022, Yuan Gong`** — gopt's author — **so the derivation is provable from the payload, not just asserted in the paper.** |
+| 🔵 promoted [`Fuann/open-apa`](https://github.com/Fuann/open-apa) | 🟢 **BSD-3-Clause** · 1 528 B · `master` · `2c92c0de1eca58` | 🔴 0 tags | — | **APAC** (Taiwan) | Benchmark and evaluation toolkit — **it scores the scorer.** This is what converts a pronunciation demo into an acceptance test. |
+| 🔵 promoted [`kaldi-asr/kaldi`](https://github.com/kaldi-asr/kaldi) | 🟡 **Apache-2.0** · `COPYING` **17 264 B** · `master` · `e02e35f0254bb0` | 🔴 0 tags | — | 🔵 unplaced | The ASR substrate under MFA and the GOP tools. 🔴 **`P991`: not a pristine payload — the Apache title sits at byte 2 531 behind a joint-ownership notice**, 4 of 4 clause headings present. |
+
+#### 🔴 The three negatives in this tier, measured — and one of them is a correction to this KB
+
+| slug | verdict |
+|---|---|
+| 🔴 **CORRECTION** [`CyanXLab/Phonos`](https://github.com/CyanXLab/Phonos) | 🔴 **NO LICENCE PAYLOAD** / 24 names @ 1 B · `main` · `8a13a3b7611a3d`. **This KB counted Phonos inside a permissive layer of three.** It has no grant, and a layer count including it overstates what is buildable. |
+| 🔴 [`jimbozhang/speechocean762`](https://github.com/jimbozhang/speechocean762) | 🔴 **NO LICENCE PAYLOAD** · `main` · `613968e3b0b789`. **`P994`: the reference corpus of this task is ungranted while all seven tools above are permissive.** |
+| 🔴 [`tzyll/goparrot`](https://github.com/tzyll/goparrot) · [`JazminVidal/gop-pykaldi`](https://github.com/JazminVidal/gop-pykaldi) | 🔴 **NO LICENCE PAYLOAD** (both) · `0c1825fb641873` / `c34952ebbfc492`. `P981` again — a paper's *"we release our code"* is not a grant. |
+
+🔵 **`P994`, priced the way a bid has to price it:** the engine is MIT, the aligner is MIT, the
+benchmark is BSD-3 — **so the pipeline ships.** 🔴 **The data that calibrates it is not licensed**,
+so a deliverable either licenses a corpus or collects and labels its own. **That is a line item in
+the estimate, not a footnote in an appendix.** 🟢 **It is also the one place in this tier where
+LATAM and APAC engagements are structurally better off than the shelf suggests** — L1-specific
+pronunciation data has to be collected locally anyway, so the corpus gap is a scope item that was
+always going to exist, not a blocker introduced by the licence.
+
+### 🟢 🆕 p97 The AI-text-detection tier — shelved **for analysis only**, and the guardrail outranks the rows
+
+| agent | grant (payload · bytes · ref · SHA-14) | ★ | region | why it matters |
+|---|---|---|---|---|
+| 🆕 p97 [`HendrikStrobelt/detecting-fake-text`](https://github.com/HendrikStrobelt/detecting-fake-text) | 🟢 **Apache-2.0** · `LICENSE` **11 357 B** *(pristine, `P992`)* · `master` · `fdf7de9396d121` | — | **North America** (MIT-IBM Watson AI Lab) | **GLTR.** Shows per-token predictability **instead of returning a verdict** — 🟢 **the pedagogically and legally correct primitive**, and the only institution-grade row here. 🔴 0 tags. |
+| 🆕 p97 [`Imalwayshere/Open-Detector`](https://github.com/Imalwayshere/Open-Detector) | 🟢 **MIT** · `LICENSE` **1 066 B** · `main` · `62cc0b4655b5f3` | — | 🔵 unplaced | BERT stylometric detection trained on academic text. 🔴 **Its 99.57 % accuracy is the author's own unreplicated claim**, and the README concedes stylometry only. 🔴 0 tags. |
+
+🔴 **Read the guardrail before either row.** The 2026 literature on this task is titled
+*"LLM-Generated Text Detection Remains an Unsolved Problem"* (arXiv **2608.11256**), and a second
+paper this pass read asks outright *"Why AI Detection Fails for Academic Integrity"* (arXiv
+**2608.11256** / **2605.27921**). 🔴 **So this tier is shelved for ANALYSIS AND TEACHING ONLY and
+never as the basis of a verdict that sanctions a student.**
+
+🔵 **That is the regulatory position, not an abundance of caution.** An automated system bearing on
+a student's academic standing is an Annex III high-risk system under the EU AI Act, whose
+obligations bind from **2 Dec 2027** — and a tool whose own research field calls the task unsolved
+cannot carry a high-risk conformity assessment. 🔴 **Any compose pattern that wires these rows into
+a sanctioning path is out of scope and stays out of `compose/patterns.md`.** 🟢 **What they are good
+for is the inverse**: a teacher-facing view that makes *predictability* visible so a class can
+discuss it — which is an AI-literacy deliverable, and AI literacy is a statutory duty in EMEA
+already (2 Feb 2025) and a graduation requirement in parts of North America.
+
+### 🔴 🆕 p97 `Gap 385` — there is no permissive open-source student early-warning system
+
+🔵 **The institutional use case with the clearest ROI in this industry — dropout and retention risk
+— has nothing on this shelf to start from, and that is now measured rather than assumed.**
+
+| candidate | verdict |
+|---|---|
+| [`dssg/student-early-warning`](https://github.com/dssg/student-early-warning) — Data Science for Social Good, **University of Chicago** | 🔴 **`NONCOMMERCIAL-NOT-OSI`** · `LICENSE` **2 069 B** · `master` · `b68f23c76d5277`. Commercial use **PROHIBITED** (`P990`). The most credible candidate, and it is the one Globant cannot build a deliverable on. |
+| `miansaimnadeem/Student-dropout-prediction` | 🔴 **NO LICENCE PAYLOAD** / 24 names · `ec805a6` |
+| `maherdhami/student-dropout-risk-prediction` | 🔴 **NO LICENCE PAYLOAD** · `b107c1f` |
+| `mrbansal0001/Early_dropout_risk_prediction` | 🔴 **NO LICENCE PAYLOAD** · `d9d64b9` |
+| `omerErkam/student-dropout-prediction-ml` | 🔴 **NO LICENCE PAYLOAD** · `914d4c4` |
+| `Syrah111/...`, `manahil2731/...`, `EmaanRana012/...` | 🟡 **same shape, not resolved** — coursework repos over one UCI dataset, named here so the denominator is honest |
+
+🟢 **Five of six resolved; five negatives; the sixth non-OSI.** 🔵 **So the correct engagement shape
+is "build the risk model, adopt the mathematics"** — the permissive psychometric tier (`pyBKT`,
+`py-irt`, `eribean/girth`, `douglasrizzo/catsim`, `pykt-team/pykt-toolkit`) measures **mastery**,
+which is an input to risk and not a substitute for it. 🔴 **Do not quote an open-source
+early-warning system to a client. There isn't one.**
 
 ### The agent *skill* as the unit of delivery
 

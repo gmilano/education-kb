@@ -4,6 +4,149 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 🔴 Ninety-seventh pass, 2026-10-10 — **FIFTH consecutive refusal of repository code (`Gap 383`)**; `Gap 384` opened and MEASURED (1 119 history slugs on no shelf page, 528 of them permissive); `Gap 385` opened (no permissive early-warning system exists); `Gap 386` opened (every market figure here is institutional); `P989`–`P995` adopted; **three pre-registered leads DISCHARGED, 3 of 3**
+
+⏱️ **Seventh pass of this date.** 91: 2026-10-09 23:0x–00:00 UTC · 92: 00:4x–01:3x · 93: 01:4x–02:24 ·
+94: 02:5x · 95: 03:4x · 96: 04:4x–05:xx · this pass 05:4x–06:xx. **Append-only.**
+
+### 🔴 The instrument, stated first — fifth consecutive refusal
+
+🔴 **`compose/code/grant-ladder-v4/ladder.sh` AND its offline `test_ladder.sh` were both denied before
+starting** (`[Code from External]`). 🟢 **So pass 97 wrote no classifier** (`P237`), ran the oracle map by
+hand (`P970`), and **executed no repository code.** 🔴 **`Gap 376` is not discharged and `Gap 383` now
+records that the instrument has been unrunnable for five consecutive passes** — longer than it was ever
+runnable. 🟢 **Pass 96's bound (122 of 127 `CURRENT`) still governs every carried row and was not
+re-measured this pass**, so the decay since pass 96 is one pass deep, not reset.
+
+🔵 **What the open channel measured instead:** `git ls-remote --symref` for existence/ref/SHA and
+`raw.githubusercontent.com/<slug>/<FULL-SHA>/<name>` for payloads. **20 slugs resolved — 11 licence
+payload reads, 7 negatives, 2 fork-identity reads.**
+Evidence: `compose/code/p989-sha-identity-fork/`. First-of-its-kind fixture:
+`compose/code/lib/fixtures-p990/`.
+
+### 🔴 `Gap 383` — OPENED: the instrument has now been unrunnable longer than it was ever runnable
+
+🔵 **Stated as its own gap because `Gap 376` is about the CENSUS and this is about the CHANNEL, and
+conflating them has already cost two passes of confused priority.**
+
+| pass | repository code execution |
+|---|---|
+| 93 | 🔴 refused |
+| 94 | 🔴 refused |
+| 95 | 🔴 refused |
+| 96 | 🔴 refused |
+| 97 | 🔴 refused |
+
+🔴 **Five consecutive refusals**, and the refusal now covers the **offline** self-test
+(`test_ladder.sh`) as well as the network path — so it is not a network policy, it is a code-execution
+policy. 🟢 **The correct response has been the same every pass and remains `P237`: do NOT write a
+replacement classifier.** Pass 91 proved the cost of the alternative — a fresh classifier lost two
+platform licences and one client recommendation.
+
+🔵 **What `Gap 383` licenses a later pass to conclude:** the hand-run oracle map (`P970`) is not a
+workaround to be retired when execution returns — **it is the only instrument this KB has had for five
+passes, and every row published in that window carries its reach, not v4's.** 🔴 **v4's `--all`
+split-grant detection, its byte floor and its 24-name sweep have not run on any row added since pass 92.**
+
+### 🔴 The channel ledger, because three of four channels are now closed
+
+| channel | state this pass |
+|---|---|
+| `raw.githubusercontent.com` (licence payloads) | 🟢 **OPEN** — the only reason this pass produced rows |
+| `git ls-remote` (existence, ref, SHA, tags) | 🟢 **OPEN** |
+| `api.github.com` | 🔴 **403, sixth consecutive pass** |
+| `github.com` HTML | 🔴 **403** — 🟢 **newly measured, and it closes the star question for good: there is NO star channel by either route** |
+| government primary sources (`argentina.gob.ar`, `boletinoficial.gob.ar`, `alcaldiabogota.gov.co`, `EUR-Lex`) | 🔴 **CLOSED** — refused by the egress proxy before returning content |
+| repository code execution | 🔴 **REFUSED, fifth consecutive pass** |
+
+🔴 **So every regulatory row this pass added rests on secondary sources, graded individually**, and no ★
+on any shelf page moved or could. 🔵 **`p798-proxy-refusal-ledger` is where this belongs and this is the
+entry.**
+
+### 🔴 `Gap 384` — OPENED AND MEASURED: the promotion step from history to shelf is unrecorded
+
+🔵 **Pass 96 found `UniTime/unitime`, an Apache-2.0 platform that `compose/code/unitime-mcp-gate/` had
+used since pass 42 and no shelf page listed. Pass 97 asked whether that was a one-off.** 🔴 **It is not.**
+
+| population | n |
+|---|---|
+| distinct slugs in the append-only history | **1 259** |
+| distinct slugs on the shelf pages | **146** |
+| 🔴 in the history, on **no** shelf page | **1 119** |
+| 🔴 …with a **permissive** grant and **no** rejection marker | **528** |
+| on the shelf, never in the history | 6 |
+
+🔵 **1 119 is NOT the gap and must never be quoted as one** — the history records rejected candidates by
+design, and a shelf is curated rather than exhaustive. 🔴 **The gap is that nothing distinguishes
+"measured, and judged not worth shelving" from "measured, and forgotten."** 🔴 **Both known instances are
+the forgotten kind and both were found by accident:** `UniTime` (pass 42 → pass 96) and **the entire
+speech-and-pronunciation layer** (verified **pass 14** → shelved **pass 97**, as `agents/top.md`'s new
+tier and `repos/foundations.md` Tier 2g).
+
+🔵 **528 is a heuristic UPPER BOUND on the forgotten set, not a worklist of 528 omissions** — it keys on a
+permissive family named on a line mentioning the slug with no rejection marker nearby. Lists committed at
+`compose/code/p989-sha-identity-fork/promotion-gap-*.txt`.
+
+🟢 **Remedy pre-registered, and deliberately a LEDGER rather than a sweep:** a shelf row should record the
+pass that promoted it; a declined candidate should record the decline. **Neither fact exists on any page
+today**, which is precisely why this question can only be answered by `grep` and only as a bound.
+🔴 **The first duty of the next pass that can execute code is still `Gap 376`'s census; `promotion_ledger.sh`
+is the second, and it is two columns over the committed pages — not a new classifier (`P237`).**
+
+### 🔴 `Gap 385` — OPENED: there is no permissive open-source student early-warning system
+
+🔵 **The institutional use case with the clearest ROI in this industry has nothing to start from**, and
+that is now measured. Six candidates: 🔴 **five serve no licence payload across 24 filenames**, and the
+sixth — `dssg/student-early-warning`, the only credible one, from **Data Science for Social Good at the
+University of Chicago** — is 🔴 **`NONCOMMERCIAL-NOT-OSI`**, commercial use **PROHIBITED**.
+
+🟢 **The correct engagement shape follows and is recorded on `agents/top.md`: build the risk model, adopt
+the mathematics.** The permissive psychometric tier (`pyBKT`, `py-irt`, `eribean/girth`,
+`douglasrizzo/catsim`, `pykt-team/pykt-toolkit`) measures **mastery**, which is an input to risk and not a
+substitute for it. 🔴 **Do not quote an open-source early-warning system to a client. There isn't one.**
+
+### 🟢 Pre-registered leads DISCHARGED, 3 of 3 — and the method result outranks the content
+
+| lead pass 96 pre-registered for pass 97 | verdict |
+|---|---|
+| *"query Colombia's MinEducación and Argentina's Ministerio de Capital Humano **by name**, not 'LATAM'"* | 🟢 **DISCHARGED, both.** **`Ley 2626 de 2026`** (Colombia, **24 Aug 2026**, a national **statute**, lineamientos due **Feb 2027**) and **`PaideIA`** (Argentina, Capital Humano / Secretaría de Educación, May 2025) — 🟢 **the first Argentine row in this KB.** |
+| *"never pair sub-regions in one query. Run Kenya, Nigeria, South Africa and Egypt as **four separate** queries"* | 🟢 **DISCHARGED, 4 of 4 returned material**, against 🔴 **0 of 9 African sources from pass 96's paired query.** 🟢 **Egypt yields a named, dated national instrument** (UNESCO × MoETE teacher competency framework, **3 Jun 2026**). |
+| *"the EU omnibus / Annex III date — still not primary"* | 🟡 **STANDS as yellow, re-registered.** **Third** independent confirmation of **2 Dec 2027**; 🔴 `EUR-Lex` unreachable. |
+
+🟢 **The method finding is the durable one: a paired sub-region query is answered by whichever
+sub-region publishes more, every time, and the quieter one's silence is indistinguishable from
+coverage.** 🔵 **Proven twice now (Africa at pass 96 and pass 97) and promoted from an Africa note to a
+standing rule.** 🟢 **`T16` is what the four returns added up to: each region leads with a different
+instrument, and Africa's is capacity-building — 4 of 4 with teacher-capacity programmes, 0 of 4 with a
+binding national AI-in-education instrument.**
+
+### 🟢 Propositions adopted this pass
+
+| id | proposition |
+|---|---|
+| **`P989`** | 🟢 **Two slugs at the same HEAD SHA are one repository.** `CHINOBv/OpenPronounce` ≡ `Halleck45/OpenPronounce` at **`74bc17ea406e6f`**; `Ronald-TR/OpenPronounce` is a fork that moved. A search returned three "projects"; there is one and two forks. 🔵 **A fork-identity test needing no token, through the only channel six passes of 403 left open.** Published at 14 chars because 7 cannot carry it (`P987`). |
+| **`P990`** | 🔴 **A file named `LICENSE` is not necessarily a grant.** The U Chicago payload opens *"BY DOWNLOADING … YOU AGREE TO THE FOLLOWING TERMS OF USE"* with a **BSD-shaped** permission sentence and excludes *"any service or part of selling a service"*. 🟢 **`lib` answers correctly** (→ `NONCOMMERCIAL-NOT-OSI`) **and had no software fixture for that branch** — all four fixture sets were CC *content* licences. 🟢 **`lib/fixtures-p990/` is the first.** |
+| **`P991`** | 🟡 **The title block can be DISPLACED rather than absent.** `kaldi-asr/kaldi` `COPYING` 17 264 B; `Apache License` at **byte offset 2 531**; 4 of 4 clause headings (`P974`). 🟢 **`lib`'s `head -c 4000` window holds with 1 469 B of margin** — the limit its comment calls *"MEDIDO, NO ELEGIDO"* is now priced against a real worst case. |
+| **`P992`** | 🟡 **The authority and the pristine copy differ by one byte.** `apache.org` serves **11 358 B** opening with a blank line; a repo serves **11 357 B**. 🔴 **Byte-equality against upstream marks every pristine copy "modified"** — never "fix" `p386-pristine-dedup-gate` that way. Third instance of 11 357 B. |
+| **`P993`** | 🔴 **Querying a ministry by name returns its gazette regardless of subject.** Argentina's Boletín Oficial top hit, `Resolución 479/2026`, is about **degree validity, not AI**. 🟢 **A ministry-named query needs a SUBJECT GATE** — a gazette citation is evidence of publication, not of relevance. |
+| **`P994`** | 🔴 **The benchmark corpus can be ungranted while every tool around it is permissive.** Seven of nine speech-layer members permissive; `speechocean762` (the reference corpus) and `Phonos` carry **no payload**. 🔵 **Priced as a line item: the pipeline ships, the calibration data does not.** |
+| **`P995`** | 🟢 **Derivation is readable from the grant.** `doheejin/HiPAMA`'s BSD-3 payload carries **`Copyright (c) 2022, Yuan Gong` FIRST** — `gopt`'s author. The lineage the paper asserts is provable from the payload (`P800`'s mechanism: holder order is evidence). |
+
+### 🔴 One correction this pass makes to the KB's own record
+
+🔴 **`CyanXLab/Phonos` has NO licence payload** across 24 filenames at `main` · `8a13a3b7611a3d`.
+🔴 **This KB counted it inside a *"pronunciation assessment + benchmark"* layer of three.** 🟢 **A layer
+count that includes it overstates what is buildable, and the tier tables now carry it as a negative.**
+
+### 🟡 `Gap 386` — OPENED: every market figure in this KB is an INSTITUTIONAL figure
+
+🔴 **Measured as a zero this pass:** six market sources were read and **none** sized the corporate or
+enterprise-training buyer; a single trend report mentioned workforce upskilling with no figure.
+🔵 **So this KB cannot price an L&D engagement**, which is a large part of what an AI studio actually
+sells. 🟢 **Pre-registered: `corporate L&D AI market 2026` and `workforce upskilling platform spend` as
+their OWN queries — never folded into "education", which answers with K-12 and higher ed every time.**
+🔵 **That is the same pairing defect the Africa result just proved, in a different axis.**
+
 ## 🟢 Ninety-sixth pass, 2026-10-10 — **`Gap 376` BOUNDED after four passes without the instrument (122 of 127 rows provably un-drifted)**; `Gap 377` and `Gap 375` DISCHARGED with corrections to their own wording; `P987`–`P988` and `P984`–`P986` adopted; four new gaps opened
 
 ⏱️ **Sixth pass of this date.** 91: 2026-10-09 23:0x–00:00 UTC · 92: 00:4x–01:3x · 93: 01:4x–02:24 ·

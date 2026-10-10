@@ -1,0 +1,21 @@
+slug	ref	sha14	filename	bytes	family	tags	newest_tag	note
+Halleck45/OpenPronounce	main	74bc17ea406e6f	LICENSE	1113	MIT	2	v0.3.0	upstream; holder Jean-Francois Lepine
+CHINOBv/OpenPronounce	main	74bc17ea406e6f	LICENSE	1113	MIT	-	-	SAME HEAD SHA as upstream -> non-diverged fork, not a project
+Ronald-TR/OpenPronounce	main	f43079b80fcbef	LICENSE	1113	MIT	-	-	diverged fork; identical payload bytes and holder
+MontrealCorpusTools/Montreal-Forced-Aligner	main	93411fc0df3bc7	LICENSE	1066	MIT	116	v3.4.3	titleless MIT: opens at "Copyright (c) 2016"
+lingjzhu/charsiu	main	13a69f2a22ca0c	LICENSE	1061	MIT	0	ZERO-TAGS	text-independent forced alignment
+YuanGongND/gopt	master	bed909daf8eca0	LICENSE	1517	BSD-3-Clause	0	ZERO-TAGS	ICASSP 2022 baseline
+doheejin/HiPAMA	main	89e3f650e224e2	LICENSE	1526	BSD-3-Clause	0	ZERO-TAGS	carries "Copyright (c) 2022, Yuan Gong" FIRST -> gopt lineage in the grant
+Fuann/open-apa	master	2c92c0de1eca58	LICENSE	1528	BSD-3-Clause	0	ZERO-TAGS	benchmark/eval toolkit
+kaldi-asr/kaldi	master	e02e35f0254bb0	COPYING	17264	Apache-2.0	0	ZERO-TAGS	title DISPLACED to byte offset 2531 behind an ownership notice; 4/4 clause headings
+CyanXLab/Phonos	main	8a13a3b7611a3d	-	-	NO-LICENCE-PAYLOAD/24@1B	1	-	CORRECTION: prior passes counted it in the permissive layer
+jimbozhang/speechocean762	main	613968e3b0b789	-	-	NO-LICENCE-PAYLOAD/24@1B	0	ZERO-TAGS	the reference corpus of the task is ungranted
+tzyll/goparrot	master	0c1825fb641873	-	-	NO-LICENCE-PAYLOAD/24@1B	0	ZERO-TAGS	GOP implementation, no grant
+JazminVidal/gop-pykaldi	master	c34952ebbfc492	-	-	NO-LICENCE-PAYLOAD/24@1B	0	ZERO-TAGS	GOP implementation, no grant
+Imalwayshere/Open-Detector	main	62cc0b4655b5f3	LICENSE	1066	MIT	0	ZERO-TAGS	BERT stylometric academic AI-text detection
+HendrikStrobelt/detecting-fake-text	master	fdf7de9396d121	LICENSE	11357	Apache-2.0	0	ZERO-TAGS	GLTR, MIT-IBM Watson AI Lab; pristine Apache bytes
+dssg/student-early-warning	master	b68f23c76d5277	LICENSE	2069	NONCOMMERCIAL-NOT-OSI	0	ZERO-TAGS	U Chicago terms-of-use; commercial use PROHIBITED
+miansaimnadeem/Student-dropout-prediction	main	ec805a6	-	-	NO-LICENCE-PAYLOAD/24@1B	-	-	dropout layer negative
+maherdhami/student-dropout-risk-prediction	main	b107c1f	-	-	NO-LICENCE-PAYLOAD/24@1B	-	-	dropout layer negative
+mrbansal0001/Early_dropout_risk_prediction	main	d9d64b9	-	-	NO-LICENCE-PAYLOAD/24@1B	-	-	dropout layer negative
+omerErkam/student-dropout-prediction-ml	main	914d4c4	-	-	NO-LICENCE-PAYLOAD/24@1B	-	-	dropout layer negative
