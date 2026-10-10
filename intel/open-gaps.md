@@ -4,6 +4,136 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 🔴 Hundred-and-second pass, 2026-10-10 — **the mandated regional sweep is SATURATED 4 of 4 and retired as a source (`P1023`)**; `Gap 393` opened (the BEA-2025 benchmark is ungranted on BOTH halves); `Gap 391` confirmed un-drifted; two Apache-2.0 ERP cores promoted off this KB's own history; `P1020`–`P1023` adopted; **repository code REFUSED after pass 101 RAN it**
+
+⏱️ **Twelfth pass of this date.** 91: 2026-10-09 23:0x–00:00 UTC · 92: 00:4x–01:3x · 93: 01:4x–02:24 ·
+94: 02:5x · 95: 03:4x · 96: 04:4x–05:xx · 97: 05:4x–06:xx · 98: 06:4x–07:xx · 99: 07:4x–08:xx ·
+100: 08:4x–09:xx · 101: 09:4x–10:xx · this pass 10:4x–11:xx. **Append-only.**
+
+### 🔴 The instrument, stated first — the refusal came AFTER a success
+
+🔴 **`bash ./test_ladder.sh` was denied before starting (`[Code from External]`).** 🟢 **Pass 101 ran
+it: 16 passed, 0 failed.** 🔵 **So `Gap 383` does not trend — it ALTERNATES, and this is the first
+pass to record a refusal following an execution.** Nine passes read the block as a monotone condition;
+it is not one. 🟢 **No classifier was written** (`P237`).
+
+| pass | repository code execution |
+|---|---|
+| 97 | 🔴 refused |
+| 98 | 🔴 refused |
+| 99 | 🔴 refused |
+| 100 | 🔴 refused |
+| 101 | 🟢 **RAN (offline half): 16 passed, 0 failed** |
+| **102** | 🔴 **REFUSED** |
+
+### 🔴 The channel ledger — and the PROBE itself was gated this pass
+
+| channel | state this pass |
+|---|---|
+| `git ls-remote --symref` / `--tags` | 🟢 **OPEN** — carried every structural finding, as in passes 99–101 |
+| `raw.githubusercontent.com` (licence payloads) | 🟢 **OPEN**, no 429 observed this pass (`Gap 388` not re-triggered) |
+| `api.github.com` | 🟡 **UNREAD** — not measured this pass |
+| `github.com` HTML | 🟡 **UNREAD** — not measured this pass |
+| non-GitHub primary sources (`arxiv.org`, `eur-lex.europa.eu`) | 🟡 **UNREAD** — not measured this pass |
+| WebSearch (secondary channel) | 🟢 **OPEN** — 8 queries ran |
+| repository code execution | 🔴 **REFUSED** |
+
+🔴 **The three `UNREAD` rows are unread for a NEW reason: the multi-host probe that opens every pass
+was denied as a BATCH**, before any host was contacted. 🔵 **So the channel-probe RITUAL is now gated
+independently of the channels it probes, and the honest entry is `—`, not `403`.** 🔴 **Restating pass
+101's `403` here would have been an inference dressed as a measurement** — which is the exact defect
+`P987` and `P1014` exist to prevent.
+
+🔴 **Zero primary-source reads outside GitHub, ELEVENTH consecutive pass.**
+
+### 🔴 `P1023` — four regions, one measurement
+
+🔵 **The mandated battery ran in full: 8 queries, 4 global + 1 per region.** 🔴 **All four regional
+queries returned material already held on `intel/market.md`**, and in APAC's case at strictly lower
+resolution than this KB holds it (the channel gave "a decree names education high-risk"; this KB holds
+`Decision 33/2026/QD-TTg`, 46 systems, education 3 of them, in force 15 Aug 2026).
+
+| region | new facts | verdict |
+|---|---|---|
+| LATAM | **0** | 🔴 saturated |
+| APAC | **1** (🟡 Korea's domestic-representative duty, one secondary source) | 🔴 saturated |
+| North America | **0** | 🔴 saturated |
+| EMEA | **0**, and 🔴 **three mutually inconsistent AI Act timelines** | 🔴 **worse than saturated — contradictory** |
+
+🔵 **`P1023`: a mandated sweep that returns less than the file holds in 4 of 4 regions is ONE
+measurement, and its subject is the CHANNEL.** 🟢 **`P1012` recorded this for a single lead; `P1018`
+for the platform sweep. This closes the region axis.** 🔴 **The query is retired as a source of new
+facts and KEPT as a control** — it is how this pass caught the EMEA date contradiction and the Huly
+licence claim. 🔵 **The corollary, and it is the lesson of the whole pass: when the intel channel is
+saturated, the pass's value has to come from SUPPLY — and it did.**
+
+### 🟢 `Gap 384`'s shape, discharged for the ERP tier — by `grep`, not by search
+
+🔵 **`OFBiz`, `Huly`, `Corteza`, `Krayin` and `Dolibarr` appear in `repos/trending.md`,
+`agents/trending.md` and this file — and on NO shelf page.** 🟢 **`P1004` again: when the instrument
+is refused, prefer the question whose corpus is the repository.**
+
+| slug | grant (payload) | ref · **full SHA** | tags / latest | now shelved |
+|---|---|---|---|---|
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0** · **11 906 B** | 🔴 **`trunk`** · `45506b377c855e455942b238dbd55e33fce79d4f` | 🟢 **26 / `release24.09.07`** | 🟢 `repos/foundations.md` Tier 4; `verticals/solutions.md` permissive tier |
+| [`cortezaproject/corteza`](https://github.com/cortezaproject/corteza) | 🟢 **Apache-2.0** · **11 358 B** *(pristine)* | 🔴 **`2024.9.x`** · `3835dfc4ac8bd89381753f09042ad147a4502576` | 🟢 **298 / `2026.9.0-rc.2`** | 🟢 same two pages |
+
+🟢 **OFBiz's `P1013` bundled-grant check is the first on this shelf to come back CLEAN**: `NOTICE`
+166 B, and the appended `LICENSE` section declares only **Noto Sans (Apache-2.0)** and **timezone files
+(Public Domain)**. 🔵 **Against pass 101's `Jasig/SSP`, whose root Apache-2.0 sits over Ext JS
+(GPL-3.0), JasperReports / JFreeChart / c3p0 (LGPL) and iText (MPL), this is the control case `P1013`
+needed to be a test rather than a warning.**
+
+### 🔴 `P1020` — this KB published a licence address that does not resolve, and the cause was an assumption
+
+🔴 **`git ls-remote --heads apache/ofbiz-framework master` returns EMPTY; HEAD symrefs to `trunk`.**
+🔴 **This KB's archived row cited `Apache-2.0 (LICENSE@master)` — a 404 on a repository that is cleanly
+Apache-2.0 with 26 releases.**
+
+🔵 **`P1020`: read the default ref BEFORE reading the licence. A `main`/`master`-assuming probe does not
+return "no licence" — it returns a FALSE NEGATIVE.** 🔴 **And this is not hypothetical any more: this
+KB published one.**
+
+| pass | repo | default ref | consequence |
+|---|---|---|---|
+| 101 | `douglasrizzo/catsim` | 🔴 `dev` | would have 404'd all 24 names |
+| **102** | `apache/ofbiz-framework` | 🔴 **`trunk`** | 🔴 **DID — archived `@master` citation unreachable** |
+| **102** | `cortezaproject/corteza` | 🔴 **`2024.9.x`** | would have 404'd all 24 names |
+
+🔵 **`P1021`: a default ref is not the newest release line.** Corteza's HEAD is on `2024.9.x` while its
+tags reach `2026.9.0-rc.2` — 🟢 **date a repository from its TAGS and pin the ref separately**, or a
+live project reads as stale. 🟡 Its tip is `-rc.2` / `-dev.2`, so the newest line is not GA either.
+
+### 🔴 `Gap 393` OPENED — a benchmark with no grant on either half
+
+| slug | role | grant (24-name probe) | ref · SHA | `P872` control |
+|---|---|---|---|---|
+| [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | scorer — 4 BEA-2025 dimensions | 🔴 **none** (paper claims MIT; `P1014`) | `main` · `a71078456a90a7bb616f7c7e1de83f0bfbc44ab1` 🟢 **un-drifted from p101** | 🟢 `README.md` **14 451 B** |
+| [`kaushal0494/UnifyingAITutorEvaluation`](https://github.com/kaushal0494/UnifyingAITutorEvaluation) | **MRBench** benchmark — dev 300 / **2 476**, test 191 / **1 547** | 🔴 **none** at 5 names | `main` · `bbef521ddb875f2cc8a5ee798f4066965a7cfd8a` | 🟢 `README.md` **9 525 B** |
+| [`NaumanNaeem/BEA_2025`](https://github.com/NaumanNaeem/BEA_2025) | participant system (Track 1) | 🟡 **UNRESOLVED** | `main` · `bcaa52dae63d4112edea4b0186c386f0fafd5b97` | 🔴 **none — 6 paths 404** |
+
+🔵 **`P1022`: probe a benchmark's DATASET repository separately from its toolkit. Two grants, failing
+independently.** 🔴 **Here both failed.** 🟢 **The rubric is a published method and is
+re-implementable** (Mistake Identification, Mistake Location, Providing Guidance, Actionability, on a
+three-way scale). 🔴 **The comparability is not: an MRBench score is the only number this field
+recognises, and MRBench is the ungranted half.** 🔵 **Priced in `P102-A` as re-annotation against the
+client's own dialogues — the first line item in this KB justified by a gap rather than by a feature.**
+
+🟡 **`Gap 391` is NOT closed and NOT widened away** — it remains the scorer-specific limb and is now
+confirmed stable across two passes at one SHA. **`Gap 393` is its superset.**
+
+### 🔵 Standing items carried into pass 103
+
+| item | state |
+|---|---|
+| 🟡 Korea's **domestic-representative** thresholds | **PRE-REGISTERED**: query the **enforcement decree**, not the Act. One secondary source so far. |
+| 🔴 `Gap 393` / `Gap 391` | OPEN. 🔵 **Next probe: the `datasets/` subtree of `UnifyingAITutorEvaluation` for a per-directory licence — `Gap 370`'s shape, which a root-only read cannot see.** |
+| 🔴 `Gap 392` | OPEN — modern ML early-warning 6 of 6 unusable. 🟢 Re-implementation costed in `P102-A`. |
+| 🔴 `Gap 390` / `T21` | OPEN — PERSUADE 2.0 is `CC-BY-NC-SA-4.0` by its author's own repo (`P1007`). |
+| 🔴 `Gap 376` / `Gap 383` | 🔵 **Re-characterised this pass: the state ALTERNATES. Attempt the instrument every pass; record the flip, not a trend.** |
+| 🟢 `P1023` | **Regional intel query retired as a source; kept as a control.** 🔵 **Pass 103 should spend the saved queries on supply, which is what paid this pass.** |
+| 🔴 `2026-12-02` (AI Act art. 50(2)) | **53 days.** Four tested artefacts ready; `P99-A` is the sale. |
+
 ## 🟢 Ninety-eighth pass, 2026-10-10 — **`Gap 381` DISCHARGED with one grep and it found a missing SALE**; `Gap 384` INVERTED (the 6 orphans named, 6 of 6 re-verify byte for byte); `Gap 386` DISCHARGED as sized; `Gap 387`/`Gap 388` opened; `P996`–`P1003` adopted; **SIXTH consecutive refusal of repository code (`Gap 383`)**
 
 ⏱️ **Eighth pass of this date.** 91: 2026-10-09 23:0x–00:00 UTC · 92: 00:4x–01:3x · 93: 01:4x–02:24 ·

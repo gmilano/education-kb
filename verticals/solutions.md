@@ -10,6 +10,42 @@ updated: 2026-10-10
 09:4x–10:xx). 🟢 **`P1005` applied from the outset — every address below carries a full 40-character
 SHA.** 🔴 **`api.github.com` = `http=403` for unattached repos, measured this pass; no ★ moved.**
 
+### 🟢 🆕 p102 — the mandated platform query returned FOUR permissive-ERP claims, and this KB had already refuted TWO of them
+
+🔵 **This pass ran the mandated `open source platform education ERP CRM MIT Apache` query. It named
+Apache OFBiz, Huly, Corteza and Krayin as permissive options.** 🟢 **Two survive a payload read, two
+were already refuted on this page's own history — by the same error, in the same direction.**
+
+| claim from the channel | payload read | verdict |
+|---|---|---|
+| **Apache OFBiz** "Apache 2.0 ERP/CRM" | 🟢 **Apache-2.0**, `LICENSE` **11 906 B**, `trunk` · `45506b377c855e455942b238dbd55e33fce79d4f`, **26 tags** | 🟢 **TRUE — and now shelved** |
+| **Corteza** "Apache 2.0 licensed" | 🟢 **Apache-2.0**, `LICENSE` **11 358 B** *(pristine)*, `2024.9.x` · `3835dfc4ac8bd89381753f09042ad147a4502576`, **298 tags** | 🟢 **TRUE — and now shelved** |
+| **Huly** "fully open-source, licensed under Apache License 2.0" | 🔴 **EPL-2.0**, **14 196 B** | 🔴 **FALSE — and this is the THIRD pass in which the channel has said Apache-2.0 about this repository** |
+| **Krayin** "licensed under MIT" | 🟡 **MIT, 1 078 B — and `cmp`-identical to `aureuserp/aureuserp`'s 1 077 B payload**, both `Copyright 2010-2025, Webkul Software` | 🟡 **TRUE but MISLEADING — "two independent MIT options" are ONE vendor** (`P564`), and neither is an education system of record |
+
+🔴 **Half of a mandated query's permissive claims were wrong or misleading, and this KB only knew
+because it had read the payloads in earlier passes.** 🔵 **`P975` again, and the Huly case is now a
+measured REPEAT rather than an anecdote: the secondary channel does not drift toward the truth
+with time.**
+
+### 🟢 🆕 p102 `T26` — a permissive SIS is a BUILD on a generic core, never an ADOPT
+
+🔵 **Line the two tiers up and the industry's shape is explicit:**
+
+| layer | education-specific? | grant |
+|---|---|---|
+| OpenEduCat | 🟢 yes — admissions, academics, exams, fees, library | 🔴 **LGPL-3.0** |
+| ERPNext / `frappe-education` | 🟢 yes | 🔴 **GPL** |
+| Dolibarr | 🔴 no | 🔴 **GPL-3.0** |
+| 🆕 **Apache OFBiz** | 🔴 **no** | 🟢 **Apache-2.0** |
+| 🆕 **Corteza** | 🔴 **no** | 🟢 **Apache-2.0** |
+| `academico-sis/academico` | 🟢 yes — school management | 🟢 **MIT**, 🔴 **0 tags, no version scheme** (`P985`) |
+
+🔴 **There is no row that is both education-specific AND permissive AND release-engineered.**
+🟢 **So the permissive path is: take a generic Apache-2.0 core with real release engineering (OFBiz:
+26 tags; Corteza: 298) and add the education domain model** — and pass 101 found exactly that domain
+model, Apache-2.0, with **57 releases** of schema history (`Jasig/SSP`). 🔵 **Costed as `P102-A`.**
+
 ### 🟢 🆕 p101 — the nine-pass run of zeroes ENDS, and not because the platform sweep improved
 
 🔴 **The mandated platform sweep returned another zero, for the ninth time.**
@@ -503,8 +539,14 @@ knows ECL by name** and both rows classify correctly for the first time.
 | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** · 1 062 B · `main` · `2bca285` | 91 | **EMEA** (Poland) | 🟡 AI-native LMS, TypeScript. Open-core boundary unverified (`Gap 362`). |
 | [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **BSD** · 1 531 B · `main` · `196c547` | ~107 | 🔵 unplaced | 🟢 Peer-reviewed AI learning platform (arXiv 2602.07176), local RAG, Ollama-compatible. |
 | 🆕 p96 [`UniTime/unitime`](https://github.com/UniTime/unitime) | 🟢 **Apache-2.0** · 11 357 B *(pristine)* · `master` · `15668a5e54d155` · 🟢 `pom.xml` **agrees** | — | **North America** (Apereo Foundation) | 🟢 **University timetabling, course and student scheduling.** Java/Maven, **`v4.9.152`**. 🔵 **The one layer this tier had nothing for.** 🔴 **`NOTICE` 22 526 B — Apache §4(d) makes shipping it a condition.** |
+| 🆕 p102 [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0** · 11 906 B · 🔴 **`trunk`** · `45506b377c855e455942b238dbd55e33fce79d4f` · 🟢 **26 tags, `release24.09.07`** | — | 🔵 unplaced (Apache Software Foundation) | 🟢 **The permissive ADMINISTRATIVE core.** Java ERP/CRM — accounting, HR, inventory, catalogue, CRM, e-commerce. 🔴 **Not education-specific**: no student, enrolment or gradebook model, so this is a core to BUILD the SIS on, not a platform to deploy (`T26`). 🟢 **`P1013` check CLEAN** — `NOTICE` 166 B; bundles only Noto Sans (Apache-2.0) and Public Domain timezones. 🔴 **Default ref is `trunk` and `master` does not exist** (`P1020`). |
+| 🆕 p102 [`cortezaproject/corteza`](https://github.com/cortezaproject/corteza) | 🟢 **Apache-2.0** · 11 358 B *(pristine)* · 🔴 **`2024.9.x`** · `3835dfc4ac8bd89381753f09042ad147a4502576` · 🟢 **298 tags, `2026.9.0-rc.2`** | — | 🔵 unplaced | 🟢 **Low-code CRM / workflow platform, Apache-2.0, with the heaviest release history in this tier (298 tags).** 🟢 Useful where the deliverable is case management — advising caseloads, intervention tracking, student services — rather than an LMS. 🔴 **Not education-specific.** 🔴 **HEAD sits on `2024.9.x` while tags run to 2026** (`P1021`); 🟡 tip is `-rc`, not GA. |
 
-🟢 🆕 **p96: 11 permissive platforms. 6 of them production-grade with named institutional deployments.**
+🟢 🆕 **p102: 13 permissive platforms** (11 at p96 + **OFBiz** and **Corteza**, promoted from this
+KB's own append-only history rather than found by a search — `Gap 384`'s shape again).
+**6 of them production-grade with named institutional deployments.**
+🔴 **And the two new rows are the only ones in this tier that are NOT education-specific**, which is
+the whole content of `T26`: this tier's permissive half and its education-specific half barely overlap.
 🔵 **The eleventh was not found by a search — it was found by reading this repository's own
 `compose/code/` directory against this page** (`Gap 381`).
 

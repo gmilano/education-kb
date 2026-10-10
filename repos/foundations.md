@@ -6,7 +6,7 @@ updated: 2026-10-10
 
 # Education — foundational repos
 
-**Pass 101, 2026-10-10.** ⏱️ **Eleventh pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:
+**Pass 102, 2026-10-10.** ⏱️ **Twelfth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:
 00:4x–01:3x; 93: 01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; 98:
 06:4x–07:xx; 99: 07:4x–08:xx; 100: 08:4x–09:xx; this one 09:4x–10:xx).
 
@@ -18,6 +18,52 @@ classifier was written** (`P237`).
 
 🔴 **`api.github.com` = `http=403` for every repository not attached to this session — measured, with
 the proxy's message, not assumed.** A `—` is unread, never zero.
+
+### 🟢 🆕 p102 Tier 4 — the PERMISSIVE administrative core, promoted after living only in this KB's append-only history
+
+🔵 **This page has said for several passes that the education ERP / SIS layer is copyleft: OpenEduCat
+is LGPL-3.0, ERPNext is GPL, Dolibarr is GPL-3.0.** 🔴 **That is true of the EDUCATION-SPECIFIC
+layer and this page generalised it one step too far.** 🟢 **Two Apache-2.0 general ERP cores have sat
+in `repos/trending.md` and `intel/open-gaps.md` for passes and were never shelved, never addressed and
+never costed** — exactly `Gap 384`'s shape, discharged here for one tier.
+
+| slug | grant (payload · bytes) | ref · **full SHA** | tags / latest | bundled-grant read (`P1013`) |
+|---|---|---|---|---|
+| 🆕 p102 [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0** · `LICENSE` **11 906 B** | 🔴 **`trunk`** · `45506b377c855e455942b238dbd55e33fce79d4f` | 🟢 **26 / `release24.09.07`** | 🟢 **CLEAN** — `NOTICE` **166 B**; the appended section declares only **Noto Sans (Apache-2.0)** and **timezone files (Public Domain)** |
+| 🆕 p102 [`cortezaproject/corteza`](https://github.com/cortezaproject/corteza) | 🟢 **Apache-2.0** · `LICENSE` **11 358 B** *(pristine)* | 🔴 **`2024.9.x`** · `3835dfc4ac8bd89381753f09042ad147a4502576` | 🟢 **298 / `2026.9.0-rc.2`** | 🟡 **nothing to read** — `NOTICE` **404** |
+
+🟢 **`apache/ofbiz-framework` is the first row on this shelf whose `P1013` bundled-grant check comes
+back fully CLEAN.** 🔵 **That matters because pass 101 established the opposite case in the same
+industry**: `Jasig/SSP`'s root Apache-2.0 sits over **Ext JS (GPL-3.0)**, **JasperReports / JFreeChart
+/ c3p0 (LGPL)** and **iText (MPL)**. 🟢 **OFBiz bundles a font and a timezone table. Permissive all
+the way down, `Copyright 2001-2026 The Apache Software Foundation`** — so the ASF is still shipping it.
+
+### 🔴 🆕 p102 `P1020` — the default ref is a MEASUREMENT, and this pass found the archived citation was unreachable
+
+🔴 **`refs/heads/master` does NOT EXIST in `apache/ofbiz-framework`.** Measured:
+`git ls-remote --heads <repo> master` returns **empty**; HEAD symrefs to **`refs/heads/trunk`**.
+🔴 **And this KB's own history row cited the grant as `LICENSE@master`** — an address that 404s on a
+repository that is, in fact, cleanly Apache-2.0 with 26 releases.
+
+🔵 **`P1020`: read the default ref before reading the licence. A `main`/`master`-assuming probe does
+not return "no licence" — it returns a FALSE NEGATIVE, and this KB has now published one.**
+
+| pass | repository | default ref found | what an assuming probe would have done |
+|---|---|---|---|
+| 101 | `douglasrizzo/catsim` | 🔴 **`dev`** | 404 every one of 24 names |
+| **102** | `apache/ofbiz-framework` | 🔴 **`trunk`** | 🔴 **it DID — the archived row's `@master` citation is unreachable** |
+| **102** | `cortezaproject/corteza` | 🔴 **`2024.9.x`** | 404 every one of 24 names |
+
+🟢 **Three non-standard defaults in two passes, across a research tool, an ASF project and a vendor
+platform.** 🔵 **This is not a long tail; it is a third of the rows this KB touched in two passes.**
+
+### 🔴 🆕 p102 `P1021` — a default ref is not the newest release line
+
+🔴 **`cortezaproject/corteza` symrefs HEAD to `2024.9.x` while its tags run to `2026.9.0-rc.2`.**
+🔵 **So the branch a clone lands on is two release years behind the project's own tip**, and a
+currency judgement taken from HEAD alone would have called a live project stale.
+🟢 **`P1021`: date a repository from its TAGS, and pin the ref separately.** 🟡 **Its tip is a
+release candidate (`-rc.2`, `-dev.2`), so the newest line is not GA either — recorded, not used.**
 
 ### 🟢 🆕 p101 Tier 2c re-measured — two carried rows moved, and one of them has a default branch this page never recorded
 

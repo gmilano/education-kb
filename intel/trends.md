@@ -5,9 +5,20 @@ updated: 2026-10-10
 ---
 
 # Education — current trends
-**Pass 101, 2026-10-10.** ⏱️ **Eleventh pass of this date.** 🆕 **Twenty-five trends.**
-🟢 **`T24` and `T25` are new; no trend is retracted this pass.**
+**Pass 102, 2026-10-10.** ⏱️ **Twelfth pass of this date.** 🆕 **Twenty-six trends.**
+🟢 **`T26` is new; no trend is retracted this pass.**
 
+- 🟢 **`T26`** — **in education the PERMISSIVE administrative supply is GENERIC and the
+  EDUCATION-SPECIFIC administrative supply is COPYLEFT, so a permissive SIS is a BUILD, never an
+  ADOPT.** Measured across the whole tier this pass: education-specific and copyleft — **OpenEduCat
+  (LGPL-3.0)**, **ERPNext / `frappe-education` (GPL)**; permissive and generic — 🆕 **Apache OFBiz
+  (Apache-2.0, 26 tags)**, 🆕 **Corteza (Apache-2.0, 298 tags)**; education-specific and permissive but
+  🔴 **unreleased** — `academico-sis/academico` (MIT, **0 tags, no version scheme**, `P985`).
+  🔵 **No row is all three.** 🟢 **So the defensible offer is a generic Apache-2.0 core plus the
+  education domain model** — and `Jasig/SSP` (Apache-2.0, **57 releases** of schema history) is that
+  model. 🔴 **The failure mode this names: "adopt an open-source SIS" is a copyleft decision disguised
+  as a procurement one**, and the two permissive cores that avoid it were in this KB's history for
+  passes without ever being shelved (`Gap 384`).
 - 🟢 **`T24`** — **in education the PERMISSIVE open-source supply predates the AI wave, and the
   AI-era supply is ungranted.** The permissive student-success platform on this KB's shelf is a **2012
   consortium artifact** (`Jasig/SSP`, Apache-2.0, 57 releases); the **2024–2026 ML implementations of the

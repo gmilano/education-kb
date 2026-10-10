@@ -5,7 +5,14 @@ updated: 2026-10-10
 ---
 
 # Education — compose patterns
-**Pass 101, 2026-10-10.** ⏱️ **Eleventh pass of this date.** 🆕 **One pattern added — `P101-A`,
+**Pass 102, 2026-10-10.** ⏱️ **Twelfth pass of this date.** 🆕 **One pattern added — `P102-A`, the
+permissive student-information path, which `T26` makes buildable: a generic Apache-2.0 core plus the
+Apache-2.0 education domain model, avoiding OpenEduCat's LGPL-3.0 and ERPNext's GPL entirely.**
+🔴 **And one layer is now priced as UNBUYABLE: `Gap 393` — the BEA-2025 pedagogical-evaluation
+benchmark has no grant on either half, so a published benchmark number cannot be bought at any
+price; only re-annotation can.**
+
+🟢 **Pass 101 added `P101-A`,
 the student early-warning system, which this page could not write for four passes because `Gap 385`
 said the permissive row did not exist.** 🟢 **It did exist, under an org name nobody searched**
 (`P1012`), **so `P101-A` starts from an Apache-2.0 domain model with 57 releases.**
@@ -140,6 +147,42 @@ stack (`repos/foundations.md` Tier 2c) — and `P92-A` stays on the page, becaus
 decides engagements rather than in detail. **`P93-B`** is the first pattern in this KB anchored on a
 **national curriculum published as audited open data**, and the first with a **measured** justification for
 its own central design choice.
+
+## 🟢 🆕 p102 `P102-A` — the permissive student-information / early-alert build
+
+🔵 **The ask this answers is the most common one on this page and the one it has never been able to
+answer permissively:** *"we want an open-source student system we can extend with AI, and we cannot
+take copyleft."* 🔴 **Every education-specific option is copyleft** (OpenEduCat LGPL-3.0, ERPNext GPL)
+🔴 **and the one permissive one has no releases** (`academico-sis/academico`, MIT, 0 tags). 🟢 **`T26`
+names the way through: build on a generic permissive core.**
+
+| layer | component | grant (verified this pass unless noted) | why this one |
+|---|---|---|---|
+| administrative core | [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0** · 11 906 B · `trunk` · `45506b377c855e455942b238dbd55e33fce79d4f` · **26 tags** | 🟢 ASF governance, **`P1013` bundle check CLEAN** (NOTICE 166 B; only Noto Sans Apache-2.0 + Public Domain timezones). Accounting, HR, catalogue, CRM already built. |
+| case management (alternative core) | [`cortezaproject/corteza`](https://github.com/cortezaproject/corteza) | 🟢 **Apache-2.0** · 11 358 B · `2024.9.x` · `3835dfc4ac8bd89381753f09042ad147a4502576` · **298 tags** | 🟢 Pick this instead of OFBiz when the deliverable is **advising caseloads and intervention tracking** rather than finance/inventory. 🔴 Pin a tag, not HEAD (`P1021`). |
+| education domain model | [`Jasig/SSP`](https://github.com/Jasig/SSP) | 🟢 **Apache-2.0** · 11 359 B · `master` · `711244dc0d6d5c65fd261c9bec77dd48b4dbaaf6` · **57 tags** *(p101)* | 🟢 **Take the SCHEMA and the early-alert / caseload / intervention model via its Liquibase changesets.** 🔴 **Do NOT take the front end** — `NOTICE` declares Ext JS **GPL-3.0**, JasperReports / JFreeChart / c3p0 **LGPL**, iText **MPL** (`P1013`). |
+| interpretable risk layer | `pyBKT` + [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 **BSD-3-Clause** · 1 514 B · 🔴 `dev` · `7e6caae84a8e7779422ba9338cfe2e2335185b28` · **38 tags** *(p101)* | 🟢 The part a registrar will accept because it can be explained. 🔴 Note the non-standard default ref (`P1020`). |
+| ML risk layer | **re-implement** (XGBoost + SHAP calibration) | 🔴 **not takeable** | 🔴 **`Gap 392`: the modern ML early-warning tier is 6 of 6 unusable** — 4 ungranted, 1 non-commercial by its own text (`dssg/student-early-warning` **excludes selling a service that uses the Program**, which is Globant's model verbatim), 1 a portfolio project. 🟢 **Re-implementation is the cheap half; the model is 30 lines.** |
+| LMS edge | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B · `main` · `b054b913603a206c677565bcbec128652cb9d398` · **26 tags / `v1.14.0`** *(p99)* | 🟢 The only **permissive AND released** LMS connector this KB has verified. 🔴 For Moodle there is no row that is both (`P1006`), so a Moodle variant of this pattern costs a connector. |
+| learning-record store | 🔴 **behind a service boundary** | 🔴 LearningLocker **GPL-3.0** | 🔵 Reachable only across a process boundary; never linked into the deliverable. |
+
+**Estimated 7–10 weeks** for the core + domain model + interpretable layer + Canvas edge; **+2 weeks**
+for the ML layer re-implementation; **+3–4 weeks** if the LMS is Moodle rather than Canvas.
+
+🔴 **What this pattern does NOT include, and the reason is `Gap 393`.** A client will ask whether the
+AI tutoring or feedback component is *pedagogically* sound, and the recognised answer is a BEA-2025
+score. 🔴 **Both halves of that benchmark are ungranted** — the scorer (`AITutor-EvalKit`) and the
+benchmark data (`UnifyingAITutorEvaluation`, MRBench). 🟢 **The rubric itself is a published method
+and can be re-implemented**: four dimensions (Mistake Identification, Mistake Location, Providing
+Guidance, Actionability) on a three-way scale. 🔴 **The comparability cannot.** 🔵 **So quote
+re-annotation against the client's own dialogues as a line item, and never quote a published MRBench
+number as something the studio can reproduce.**
+
+🔵 **Why this is `P102-A` and not a variant of `P101-A`.** `P101-A` costed the early-warning SYSTEM
+and ended at SSP's legacy JVM front end. `P102-A` replaces the front end and the application shell
+with a **maintained Apache-2.0 core that has real release engineering** (26 and 298 tags), and keeps
+only SSP's schema. 🟢 **That is the difference between forking a 2012 uPortal-era application and
+building a 2026 one on a domain model with 57 releases of migration history.**
 
 ## `P101-A` — 🆕 The defensible student early-warning system (North America first, EMEA second)
 

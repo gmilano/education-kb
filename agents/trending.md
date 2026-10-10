@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-10
 ---
 
+
+## 2026-10-10 — pass 102: the region sweep is saturated 4 of 4, and the BEA-2025 benchmark layer has no grant on either half
+
+⏱️ **Twelfth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93:
+01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; 98: 06:4x–07:xx; 99:
+07:4x–08:xx; 100: 08:4x–09:xx; 101: 09:4x–10:xx; this one 10:4x–11:xx). **Append-only.**
+
+🔴 **The instrument was REFUSED this pass — and pass 101 RAN it.** `bash ./test_ladder.sh`: denied
+before starting (`[Code from External]`). 🔵 **`Gap 383`'s state FLIPS between passes rather than
+trending; this is the first pass to record a refusal AFTER a success, so pass 101 was not the start of
+a recovery.** 🟢 **No classifier was written** (`P237`). Every address below is `git ls-remote
+--symref` run inline; every grant is a `raw.githubusercontent.com` payload (`P1005`).
+
+🔴 **The multi-host channel probe that opens every pass was itself DENIED as a batch**, so
+`api.github.com`, `github.com` HTML and the non-GitHub primary sources are **unread this pass**, not
+measured as closed. 🔵 **A `—` is unread, never zero — and the new fact is that the probe RITUAL is
+now gated independently of the channels it probes.**
+
+### 🔴 The headline: `P1023` — four regions, four saturations, measured as a complete sweep
+
+🔵 **The mandated battery ran in full: eight queries — four global, one per region.** 🔴 **All four
+regional queries returned LESS than this KB already holds, and that is now a measurement of the
+CHANNEL rather than of the regions.**
+
+| region | what the query returned | already in this KB? |
+|---|---|---|
+| **LATAM** | UNESCO IESALC (200 institutions / 19 countries, **87 %** using AI vs **26 %** with a formal framework), Brazil **PL 2.338/2023**, Chile's risk-based bill, Colombia **CONPES 4144**, the **UNESCO LAC Observatory** (14 Apr 2026, ECLAC Santiago), Uruguay **Ceibal 75 %**, TALIS teacher figures (BR 56 %, CL 55 %, CO 53 %, CR 52 % vs OECD 36 %) | 🔴 **ALL of it** |
+| **APAC** | Korea **AI Basic Act** in force 22 Jan 2026, Vietnam's AI law effective 1 Mar 2026 with education named high-risk (automated assessment, behavioural monitoring), **Taiwan AI Basic Act** Dec 2025, Singapore light-touch | 🔴 **ALL of it — and this KB holds it at higher resolution** (`Law 134/2025/QH15`, `Decision 33/2026/QD-TTg` in force 15 Aug 2026, `Decree 142/2026/NĐ-CP`, **46 high-risk systems, education 3 of them**) |
+| **North America** | **134 bills / 31 states**, **Ohio**'s July 1 2026 district-policy mandate, **H.R. 8747**, California **AB 1159**, Oklahoma + Maryland human-oversight rules, NYC moratorium, **Katy ISD**, **STUDENTS FIRST Act** / AASA | 🔴 **ALL of it** |
+| **EMEA** | EU AI Act high-risk framing for admissions / evaluation / exam scoring, €/$ **2.64 B** 2026 Europe figure, Finland + Estonia + Netherlands as K-12 leaders, UK **AI Opportunities Action Plan**, **10 %** of 450+ institutions with formal guidelines | 🔴 **ALL of it** |
+
+🔵 **`P1023`: a mandated regional sweep that returns less than the file holds in 4 of 4 regions is not
+four failed queries — it is one measurement, and the measurement is of the channel.** 🟢 **`P1012` was
+filed when ONE lead came back behind the file; `P1018` found the platform sweep saturated. This
+promotes both to the region axis and closes it.** 🔴 **The operational consequence: stop spending
+passes on the regional intel query and spend them on SUPPLY, which is where this pass's findings
+actually came from.**
+
+### 🔴 And EMEA is worse than saturated — the channel is WRONG where this file is right
+
+🔴 **The EMEA query returned three mutually inconsistent AI Act timelines**: "high-risk provisions
+enter into force Aug 2026", "amendments adopted June 2026, in force 27 July 2026", and "2 December
+2027 for stand-alone high-risk, 2 August 2028 for embedded". 🟢 **This file already resolved this from
+the PROCEDURE, in pass 99**: Parliament 16 Jun 2026, Council 29 Jun 2026, published as **Reglamento
+(UE) 2026/1744** (OJ 24 Jul 2026), in force **27 Jul 2026**; **Art. 50 transparency 2 Aug 2026**;
+🔴 **Art. 50(2) machine-readable marking 2 Dec 2026**; Annex III high-risk **2 Dec 2027**.
+
+🔵 **So the secondary channel is not merely behind on EMEA — it is contradictory, and this file is the
+correction.** 🔴 **The deadline that binds an EMEA client FIRST is still `2026-12-02`, now
+**fifty-three days** out, and it is still not the date the market discusses.**
+
+### 🟡 The one genuinely new intel item in eight queries, and it is an obligation on Globant itself
+
+🟡 **Korea's AI Framework Act requires a foreign provider offering AI services directly to Korean
+users to designate a DOMESTIC REPRESENTATIVE** once it crosses revenue or user thresholds.
+🟢 **`domestic representative` appears nowhere in this KB** — checked by grep across every live page.
+🔵 **And it is the first APAC obligation on this page that binds the SUPPLIER rather than the
+institution**: every other row here is a duty the client carries. 🟡 **One secondary source only, and
+the thresholds were not given — recorded as a lead with its provenance, not as a fact.**
+
+🟡 Also new, also secondary and also unused for costing: **92 % of university students and 54 % of
+K-12 students** reported using AI; **86 % of education organisations** use generative AI while most
+have no policy; **Singapore 60.9 %** AI diffusion among working-age adults; **1 in 10** APAC
+enterprises self-describe as "very mature".
+
+### 🟢 Where the pass actually paid: `Gap 393`, and the ERP core tier
+
+- 🔴 **`Gap 393` OPENED.** The BEA-2025 pedagogical-evaluation layer has **no grant on either half**:
+  the scorer [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit)
+  (`main` · `a71078456a90a7bb616f7c7e1de83f0bfbc44ab1`, **un-drifted from pass 101**, 200-control
+  `README.md` 14 451 B) **and** its benchmark
+  [`kaushal0494/UnifyingAITutorEvaluation`](https://github.com/kaushal0494/UnifyingAITutorEvaluation)
+  (**MRBench** — dev 300 dialogues / **2 476** responses, test 191 / **1 547**;
+  `main` · `bbef521ddb875f2cc8a5ee798f4066965a7cfd8a`, 200-control `README.md` 9 525 B).
+  🔵 **`P1022`: a benchmark's toolkit and its dataset are two grants and they fail independently.**
+- 🟡 **`NaumanNaeem/BEA_2025`: UNRESOLVED, not negative** — no payload and **no 200-control** at
+  `bcaa52dae63d4112edea4b0186c386f0fafd5b97` (6 paths 404).
+- 🟢 **Two Apache-2.0 ERP cores PROMOTED from this KB's own history to the shelf**:
+  `apache/ofbiz-framework` (**11 906 B**, `trunk` · `45506b37…`, **26 tags**, 🟢 `P1013` **CLEAN** —
+  `NOTICE` 166 B, bundles only Noto Sans and Public Domain timezones) and `cortezaproject/corteza`
+  (**11 358 B** pristine, `2024.9.x` · `3835dfc4…`, **298 tags**).
+- 🔴 **`P1020`: `refs/heads/master` does NOT EXIST in `apache/ofbiz-framework`** — and this KB's
+  archived row cited the grant as `LICENSE@master`. 🔵 **A published false negative, caused by
+  assuming a default ref.** Three non-standard defaults in two passes: `dev`, `trunk`, `2024.9.x`.
+- 🔴 **`P1021`: Corteza's HEAD is on `2024.9.x` while its tags run to `2026.9.0-rc.2`** — date a repo
+  from its tags, pin its ref separately.
+- 🔴 **The mandated verticals query made four permissive claims and this KB had already refuted two**:
+  **Huly is EPL-2.0, not Apache-2.0 — third pass the channel has said otherwise**; Krayin and Aureus
+  ERP are **one vendor** (Webkul, `cmp`-identical payloads).
+- 🟢 **`T26` adopted**: a permissive SIS is a **BUILD on a generic core**, never an ADOPT — no row in
+  this industry is education-specific **and** permissive **and** release-engineered.
+
 ## 2026-10-10 — pass 101: the instrument ran, and `Gap 385` fell to a repository that has been Apache-2.0 since 2012
 
 ⏱️ **Eleventh pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93: 01:4x–02:24;

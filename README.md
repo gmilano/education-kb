@@ -22,6 +22,119 @@ education-kb/
 └── compose/code/  # Código ejecutable y probado, no prosa
 ```
 
+## Pase 102 — 2026-10-10
+
+⏱️ **Duodécimo pase de esta fecha** (el 101 corrió 09:4x–10:xx UTC; este, 10:4x–11:xx).
+
+🔴 **El instrumento fue RECHAZADO este pase — y el 101 lo había CORRIDO.** `bash ./test_ladder.sh`
+quedó denegado antes de arrancar (`[Code from External]`). 🔵 **Así que el estado de `Gap 383` no
+mejora ni empeora: ALTERNA entre pases.** Este es el primer pase que registra un rechazo *después* de
+un éxito, de modo que el pase 101 no fue el comienzo de una recuperación. 🟢 **No se escribió ningún
+clasificador** (`P237`): toda dirección salió de `git ls-remote --symref` en línea y toda licencia de
+un payload de `raw.githubusercontent.com` (`P1005`).
+
+🔴 **Y el sondeo multi-host que abre cada pase fue denegado COMO LOTE**, así que `api.github.com`, el
+HTML de `github.com` y las fuentes primarias fuera de GitHub quedan **no leídas**, no medidas como
+cerradas. 🔵 **Un `—` es *no leído*, nunca cero — y el hecho nuevo del entorno es que el RITUAL de
+sondeo está ahora restringido con independencia de los canales que sondea.**
+
+### 🔴 El hallazgo principal: la batería regional está SATURADA, 4 de 4, y eso se mide una sola vez
+
+🟢 **La batería obligatoria corrió completa: ocho consultas, cuatro globales y una por región.**
+🔴 **Las cuatro regionales devolvieron MENOS de lo que este archivo ya tiene**, y en APAC lo
+devolvieron con *menos* resolución que la que este archivo guarda.
+
+| región | lo que devolvió | ¿ya estaba? |
+|---|---|---|
+| **LATAM** | UNESCO IESALC (200 instituciones / 19 países, **87 %** usa IA contra **26 %** con marco formal), **PL 2.338/2023**, **CONPES 4144**, Observatorio LAC (14 abr 2026), **Ceibal 75 %**, TALIS (BR 56 %, CL 55 %, CO 53 %, CR 52 % vs OCDE 36 %) | 🔴 **todo** |
+| **APAC** | Corea **AI Basic Act** (22 ene 2026), Vietnam (1 mar 2026, educación de alto riesgo), Taiwán (dic 2025), Singapur | 🔴 **todo, y este archivo lo tiene MÁS fino** (`Law 134/2025/QH15`, `Decision 33/2026/QD-TTg`, **46 sistemas, educación 3 de ellos**) |
+| **North America** | **134 proyectos / 31 estados**, **Ohio** (1 jul 2026), **H.R. 8747**, **AB 1159**, Oklahoma, Maryland, moratoria NYC, Katy ISD, AASA | 🔴 **todo** |
+| **EMEA** | marco de alto riesgo del AI Act, **$2.64 B** 2026, Finlandia / Estonia / Países Bajos, UK Action Plan, **10 %** con guías formales | 🔴 **todo — y las FECHAS que dio estaban mal** |
+
+🔵 **`P1023`: cuatro regiones que devuelven menos que el archivo no son cuatro consultas fallidas, son
+UNA medición, y lo medido es el CANAL.** 🟢 **`P1012` lo registró para un lead y `P1018` para el barrido
+de plataformas; esto cierra el eje regional.** 🔴 **Consecuencia operativa: la consulta regional de
+inteligencia se retira como fuente de hechos nuevos y se conserva como CONTROL** — es exactamente así
+como este pase cazó la contradicción de fechas en EMEA y la licencia de Huly.
+
+🔴 **EMEA no está sólo atrasada: es CONTRADICTORIA.** La consulta devolvió tres cronogramas
+incompatibles del AI Act. 🟢 **Este archivo ya lo había resuelto por el PROCEDIMIENTO en el pase 99**:
+Reglamento (UE) **2026/1744**, en vigor 27 jul 2026; art. 50 desde 2 ago 2026; 🔴 **art. 50(2) desde
+`2026-12-02`**; Anexo III desde 2 dic 2027. 🔵 **El plazo que obliga primero sigue a 53 días y sigue
+sin ser el que discute el mercado.**
+
+🟡 **El único ítem realmente nuevo en ocho consultas obliga a Globant, no al cliente:** la ley coreana
+exige a un proveedor extranjero que sirve a usuarios coreanos designar un **REPRESENTANTE DOMÉSTICO**
+al pasar umbrales de facturación o usuarios. 🟢 **`domestic representative` no aparecía en ninguna
+página viva de esta base.** 🔵 **Es la primera fila regulatoria que cae sobre el PROVEEDOR de
+servicios y no sobre la institución** — es una línea de costo, no una función que se vende. 🟡 Una sola
+fuente secundaria y sin umbrales: queda como lead con su procedencia.
+
+### 🟢 Donde el pase SÍ pagó: dos núcleos ERP Apache-2.0 que esta base ya tenía y nunca estanteó
+
+🔵 **`OFBiz`, `Huly`, `Corteza`, `Krayin` y `Dolibarr` vivían en `repos/trending.md` y en
+`intel/open-gaps.md` desde varios pases, y en NINGUNA página de estante.** 🟢 **La forma de `Gap 384`,
+descargada para una capa** — y otra vez `P1004`: cuando el instrumento está denegado, la pregunta cuyo
+corpus es el repositorio es la que paga.
+
+| repo | licencia (payload) | ref · SHA | tags | `P1013` |
+|---|---|---|---|---|
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0** · **11 906 B** | 🔴 **`trunk`** · `45506b377c855e455942b238dbd55e33fce79d4f` | 🟢 **26 / `release24.09.07`** | 🟢 **LIMPIO** — `NOTICE` 166 B; sólo Noto Sans (Apache-2.0) y husos horarios (dominio público) |
+| [`cortezaproject/corteza`](https://github.com/cortezaproject/corteza) | 🟢 **Apache-2.0** · **11 358 B** *(prístino)* | 🔴 **`2024.9.x`** · `3835dfc4ac8bd89381753f09042ad147a4502576` | 🟢 **298 / `2026.9.0-rc.2`** | 🟡 nada que leer — `NOTICE` 404 |
+
+🟢 **OFBiz es la primera fila de este estante cuyo control de licencias EMPAQUETADAS (`P1013`) vuelve
+completamente limpio**, contra el `Jasig/SSP` del pase 101, donde el Apache-2.0 de la raíz se apoya en
+Ext JS (GPL-3.0), JasperReports / JFreeChart / c3p0 (LGPL) e iText (MPL).
+
+🔴 **`P1020`: `refs/heads/master` NO EXISTE en `apache/ofbiz-framework`** — HEAD apunta a `trunk` —
+🔴 **y esta base había publicado la licencia como `LICENSE@master`, una dirección que da 404 sobre un
+repositorio que es limpiamente Apache-2.0 con 26 releases.** 🔵 **El error fue SUPONER la rama por
+defecto, y produjo un falso negativo publicado.** 🟢 **Tres ramas por defecto no estándar en dos
+pases: `dev` (p101), `trunk` y `2024.9.x`.**
+
+🔴 **`P1021`: la rama por defecto no es la línea de release más nueva** — Corteza apunta a `2024.9.x`
+mientras sus tags llegan a `2026.9.0-rc.2`. **Fechá un repo por sus tags y fijá el ref aparte.**
+
+🔴 **La consulta obligatoria de verticales hizo cuatro afirmaciones permisivas y esta base ya había
+refutado dos**: 🔴 **Huly es EPL-2.0 (14 196 B), no Apache-2.0 — tercer pase que el canal lo repite**,
+y Krayin + Aureus ERP son **un solo proveedor** (Webkul, payloads idénticos por `cmp`).
+
+🟢 **`T26` (nuevo): la oferta permisiva de la capa administrativa es GENÉRICA y la específica de
+educación es COPYLEFT**, así que un SIS permisivo es una CONSTRUCCIÓN, nunca una ADOPCIÓN. Ninguna fila
+es específica de educación **y** permisiva **y** con ingeniería de releases.
+
+🟢 **Nuevo patrón `P102-A`** — la vía permisiva de información estudiantil: núcleo Apache-2.0 (OFBiz
+26 tags, o Corteza 298 para gestión de casos) + el modelo de dominio de `Jasig/SSP` (Apache-2.0, 57
+releases, vía changesets de Liquibase, **sin** su front end) + `pyBKT`/`catsim` interpretables + capa ML
+**re-implementada** (`Gap 392`: 6 de 6 inusables) + `canvas-mcp` (MIT, 26 tags) en el borde LMS.
+**7–10 semanas**, +2 por la capa ML, **+3–4 si el LMS es Moodle** y no Canvas (`P1006`).
+
+### 🔴 `Gap 393` ABIERTO — el banco de pruebas pedagógico no tiene concesión en NINGUNA de sus dos mitades
+
+🔴 **`Gap 391` se confirma en una dirección SIN DERIVA, segundo pase consecutivo:**
+[`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) sigue en `main` ·
+`a71078456a90a7bb616f7c7e1de83f0bfbc44ab1` y no tiene payload de licencia, con control 200 limpio
+(`README.md` **14 451 B**). 🔵 **La ausencia es ESTABLE, no un artefacto de tiempo.**
+
+🔴 **Y la mitad grande es nueva: los DATOS del banco tampoco tienen licencia.**
+[`kaushal0494/UnifyingAITutorEvaluation`](https://github.com/kaushal0494/UnifyingAITutorEvaluation) es
+el repositorio oficial del shared task (**MRBench**; dev **300 diálogos / 2 476 respuestas**, test
+**191 / 1 547**), `main` · `bbef521ddb875f2cc8a5ee798f4066965a7cfd8a`, **sin payload en 5 nombres**,
+control 200 limpio (`README.md` 9 525 B).
+
+🔵 **`P1022`: cuando el TOOLKIT de un banco no tiene concesión, sondeá su DATASET por separado — son
+dos concesiones y fallan de forma independiente.** 🔴 **Acá fallaron las dos**, así que el shared task
+que juntó más de 50 equipos y que la industria cita como el estándar de «¿este tutor es
+pedagógicamente sólido?» se apoya en dos repositorios sin concesión entre ambos. 🟢 **Lo que SÍ se
+puede tomar es la RÚBRICA** (cuatro dimensiones, escala de tres valores): es un método publicado y se
+re-implementa. 🔴 **Lo que no se puede tomar es la COMPARABILIDAD.** 🔵 **Entonces se cotiza la
+re-anotación sobre los diálogos del cliente, y nunca un número MRBench como reproducible.**
+
+🟡 **`NaumanNaeem/BEA_2025` queda IRRESUELTO, no negativo:** sin payload y **sin control 200** en
+`bcaa52dae63d4112edea4b0186c386f0fafd5b97` (6 rutas 404). 🔵 **No leído, nunca cero.**
+
+🔴 **Cero lecturas de fuente primaria fuera de GitHub, UNDÉCIMO pase consecutivo.**
+
 ## Pase 101 — 2026-10-10
 
 ⏱️ **Undécimo pase de esta fecha** (el 100 corrió 08:4x–09:xx UTC; este, 09:4x–10:xx).

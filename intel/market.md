@@ -5,9 +5,23 @@ updated: 2026-10-10
 ---
 
 # Education — market, players and opportunities
-**Pass 101, 2026-10-10.** ⏱️ **Eleventh pass of this date** (100 ran 08:4x–09:xx UTC; this one
-09:4x–10:xx). 🟢 **All four mandated regional sweeps ran, and one of them returned an informed
-ZERO that is recorded as such rather than left blank.**
+**Pass 102, 2026-10-10.** ⏱️ **Twelfth pass of this date** (101 ran 09:4x–10:xx UTC; this one
+10:4x–11:xx). 🔴 **All four mandated regional sweeps ran and all four returned LESS than this file
+already holds — the first complete-sweep saturation this KB has measured (`P1023`).**
+
+🔵 **That is a finding about the CHANNEL, not about the regions, and it is recorded here rather than
+left as four quiet non-results.** 🟢 **One genuinely new item survived eight queries, and it is an
+obligation on the SUPPLIER rather than the institution** — Korea's domestic-representative duty,
+below, 🟡 on one secondary source and labelled accordingly. 🔴 **And EMEA was worse than saturated:
+the channel returned three mutually inconsistent AI Act timelines, all of which this file already
+resolved from the adoption PROCEDURE in pass 99.**
+
+🔴 **`api.github.com`, `github.com` HTML and the non-GitHub primary-source hosts were NOT measured
+this pass**: the multi-host probe that opens every pass was **denied as a batch**, so those rows are
+**unread**, not closed. 🔵 **A `—` is unread, never zero** — and the new environmental fact is that
+the channel-probe ritual is now gated independently of the channels it probes.
+
+🔴 **Zero primary-source reads outside GitHub, ELEVENTH consecutive pass.**
 
 🟢 **The headline is a REGION placed by a licence file.** `Jasig/SSP` — the permissive student
 early-warning system that discharges `Gap 385` — is placed **North America at `P800` grade** because its
@@ -34,7 +48,58 @@ Code of Practice as adequate** and published the **final** Article 50 guidelines
 rewrites are not.** 🔵 **For an LMS that split is the whole scoping question** — see the `T4`
 amendment in `intel/trends.md` and `P100-B`.
 
-🟢 **Opportunities below are under ONE `## Opportunities by region` heading with one `###` per region,
+🟢 **Opportunities below are under ONE `## 🔴 🆕 p102 `P1023` — the regional sweep is saturated 4 of 4, measured as one sweep
+
+🔵 **The mandated battery ran in full this pass: eight queries, four global and one per region.**
+🔴 **Every regional query returned material this file already holds, usually at lower resolution than
+this file holds it.**
+
+| region | returned | this file's state |
+|---|---|---|
+| **LATAM** | UNESCO IESALC (200 institutions / 19 countries; **87 %** using AI against **26 %** with a formal framework), Brazil **PL 2.338/2023**, Chile's risk-based bill, Colombia **CONPES 4144**, UNESCO **LAC Observatory** (14 Apr 2026, ECLAC Santiago), Uruguay **Ceibal 75 %**, TALIS teacher use (BR **56 %**, CL **55 %**, CO **53 %**, CR **52 %** vs OECD **36 %**) | 🔴 **all held** |
+| **APAC** | Korea **AI Basic Act** in force 22 Jan 2026; Vietnam's AI law effective 1 Mar 2026 with education named high-risk; **Taiwan AI Basic Act** Dec 2025; Singapore light-touch; Australia's proposed guardrails | 🔴 **all held, at HIGHER resolution** — this file carries `Law 134/2025/QH15`, `Decision 33/2026/QD-TTg` (in force 15 Aug 2026), `Decree 142/2026/NĐ-CP`, **46 high-risk systems with education 3 of them**, and the pre-1 Sep 2027 compliance limb |
+| **North America** | **134 bills across 31 states**, **Ohio**'s 1 Jul 2026 district-policy mandate, **H.R. 8747**, California **AB 1159**, Oklahoma + Maryland human-oversight rules, NYC moratorium, **Katy ISD**, **STUDENTS FIRST Act** / AASA | 🔴 **all held** |
+| **EMEA** | EU AI Act high-risk framing for admissions / evaluation / exam scoring; a **$2.64 B** 2026 Europe figure; Finland, Estonia, Netherlands as K-12 leaders; UK **AI Opportunities Action Plan**; **10 %** of 450+ institutions with formal guidelines | 🔴 **all held — and the channel's DATES were wrong** (below) |
+
+🔵 **`P1023`: four regions returning less than the file holds is ONE measurement of the channel, not
+four failed queries.** 🟢 **`P1012` recorded this for a single lead and `P1018` for the platform
+sweep; this closes the region axis.** 🔴 **Operationally: the mandated regional intel query is
+retired as a source of new facts. It is kept as a CONTROL — it is how this pass caught the EMEA date
+contradiction and the Huly licence claim.**
+
+### 🔴 🆕 p102 EMEA — the channel is not behind, it is CONTRADICTORY, and this file is the correction
+
+🔴 **Three incompatible timelines came back in one query:** *"high-risk provisions enter into force
+Aug 2026"*; *"amendments adopted June 2026, entered into force 27 July 2026"*; *"2 December 2027 for
+stand-alone high-risk and 2 August 2028 for embedded"*.
+
+🟢 **This file resolved this in pass 99 from the adoption PROCEDURE rather than from commentary:**
+Parliament endorsed **16 Jun 2026**, Council adopted **29 Jun 2026**, published as **Reglamento (UE)
+2026/1744** (OJ **24 Jul 2026**), in force **27 Jul 2026**. **Art. 50** transparency applies
+**2 Aug 2026**; 🔴 **Art. 50(2)** machine-readable marking **2 Dec 2026**; **Annex III** high-risk
+(admissions, remote proctoring, assessment) **2 Dec 2027**; Annex I embedded **2 Aug 2028**.
+
+🔵 **So the first binding date for an EMEA education client is still `2026-12-02` — fifty-three days
+from this pass — and the channel named it only as one option among three.** 🟢 **This KB holds four
+tested artefacts for exactly that limb** (`aiact-50-2-exposure/`, `aiact-50-2-spans/`,
+`aiact-50-2-marking/`, `aiact-50-2-pack/`), and `P99-A` is the sale attached to it.
+
+### 🟡 🆕 p102 The one new item in eight queries binds GLOBANT, not the client
+
+🟡 **Korea's AI Framework Act obliges a foreign provider that offers AI services directly to Korean
+users to designate a DOMESTIC REPRESENTATIVE** once it crosses revenue or user thresholds.
+🟢 **`domestic representative` appears nowhere else in this KB** — verified by grep over every live
+page. 🔵 **Every other regulatory row on this page is a duty the INSTITUTION carries; this is the
+first that lands on the services supplier.** 🟡 **One secondary source, thresholds not stated: this is
+a lead with its provenance recorded, not a costable fact.** 🔵 **Pre-registered for the next pass:
+query the ENFORCEMENT DECREE for the threshold figures, not the Act.**
+
+🟡 **Secondary, unused for costing, recorded for provenance:** 92 % of university students and 54 % of
+K-12 students report using AI; 86 % of education organisations use generative AI while most have no
+policy; Singapore **60.9 %** AI diffusion among working-age adults; **1 in 10** APAC enterprises
+self-describe as "very mature" in AI adoption.
+
+## Opportunities by region` heading with one `###` per region,
 and the region vocabulary is closed: North America · EMEA · APAC · LATAM · Global.** 🔴 **A figure
 without a region is worth less than one that is placed, so every new figure in this pass carries its
 region or is recorded in the zeros section as unplaced.**
@@ -278,6 +343,22 @@ KB: write down what you refused to use, and why.**
 ## Opportunities by region
 
 ### North America
+
+#### 🔴 🆕 p102 — the regional query added nothing, and the permissive ADMINISTRATIVE core is the opportunity instead
+
+🔴 **The North America sweep returned Ohio, H.R. 8747, AB 1159, the 134-bill / 31-state count,
+Oklahoma, Maryland, the NYC moratorium, Katy ISD and the AASA student framework — every one already on
+this page** (`P1023`). 🟢 **The movement in this region this pass came from SUPPLY, not intel.**
+
+🟢 **The opportunity: Oklahoma and Maryland require human oversight and bar AI from high-stakes
+decisions about students, and Ohio required every district to adopt an AI policy by 1 Jul 2026.**
+🔵 **That is a market for an EXPLAINABLE student-risk system, and pass 101 found its domain model is
+Apache-2.0 and was born in a US community college** (`Jasig/SSP`, Sinclair). 🔴 **The modern ML tier
+is 6 of 6 unusable** (`Gap 392`) — 🔵 **which is a FIT, not a loss, because an interpretable BKT/IRT
+layer is what a statute requiring human oversight will actually accept.** 🟢 **Now costed end to end
+as `P102-A`** on an Apache-2.0 core with 26 releases, plus the only permissive-and-released LMS
+connector this KB has verified (`canvas-mcp`, MIT, 26 tags) — 🔵 **and Canvas's install base is
+overwhelmingly US higher ed, so the connector and the region line up.**
 
 #### 🟢 🆕 p101 — the early-alert domain model is Apache-2.0, and it was born in a US community college
 
@@ -573,6 +654,24 @@ adoption.** 🔴 **So a North America pitch that leads with adoption is pushing 
 regulatory grain; one that leads with governance, auditability and teacher-augmentation is with it.**
 
 ### EMEA
+
+#### 🔴 🆕 p102 — saturated AND contradicted, and the 2026-12-02 clock is at fifty-three days
+
+🔴 **The EMEA sweep returned no new fact and three mutually inconsistent AI Act timelines** — see
+`P1023` above. 🟢 **This file's procedure-derived dates stand**: Reglamento (UE) **2026/1744**, in
+force 27 Jul 2026; Art. 50 from **2 Aug 2026**; 🔴 **Art. 50(2) machine-readable marking from
+`2026-12-02`**; Annex III from 2 Dec 2027.
+
+🔵 **The opportunity is unchanged and now closer: the deadline that binds first is the one the market
+is not discussing**, this KB holds four tested artefacts for it, and `P99-A` is the only pattern here
+with an expiry date. 🟡 **The channel's own EMEA figures — a $2.64 B 2026 European market, Finland /
+Estonia / Netherlands leading K-12, and only 10 % of 450+ institutions with formal AI guidelines —
+were all already held; the 10 % figure is the one worth re-quoting, because it is the same
+adoption-outruns-governance gap that LATAM shows at 87 % / 26 %.**
+
+🟢 **And the sovereignty angle gains a row this pass**: `cortezaproject/corteza` is **Apache-2.0 with
+298 tags**, so an EMEA client that needs case management on self-hosted, permissively licensed
+infrastructure now has a second option beside OpenOLAT (`T26`, `P102-A`).
 
 #### 🟢 🆕 p101 — the Act is the deadline, but the measured blocker is TRAINING, not tooling
 
@@ -1051,6 +1150,27 @@ duty is the sellable deliverable that is already overdue.**
 
 ### APAC
 
+#### 🔴 🆕 p102 — the sweep returned this file's own APAC content at LOWER resolution, and the one new item binds the supplier
+
+🔴 **The APAC query returned Korea's AI Basic Act (22 Jan 2026), Vietnam's law (1 Mar 2026) with
+education named high-risk, Taiwan (Dec 2025) and Singapore's light-touch posture.** 🟢 **This file
+holds all of it more precisely** — `Law 134/2025/QH15`, the high-risk list `Decision 33/2026/QD-TTg`
+(in force **15 Aug 2026**, **46 systems across 6 sectors, education 3 of them**), `Decree
+142/2026/NĐ-CP`, and the pre-**1 Sep 2027** compliance limb for existing systems. 🔵 **`P1023`.**
+
+🟡 **The one new item: Korea requires a foreign provider serving Korean users directly to appoint a
+DOMESTIC REPRESENTATIVE above revenue / user thresholds.** 🔵 **This is the first regulatory row on
+this page that binds the SERVICES SUPPLIER rather than the institution** — it is a cost line in a
+Korean engagement, not a compliance feature to sell. 🟡 One secondary source; thresholds unknown.
+🔵 **Pre-registered: read the enforcement decree for the figures.**
+
+🟢 **The standing APAC opportunity is unchanged and now better supplied.** `T25` holds — the declared
+driver is TEACHER SHORTAGE and the money goes to training (Korea: ~$70M infrastructure against ~$760M
+teacher training). 🔴 **And Vietnam's limb (1) — self-study content generated from uncontrolled data
+sources — still catches a RAG tutor that never grades anything**, which remains the sharpest
+supply-to-regulation match on this page. 🟡 Singapore **60.9 %** diffusion and *"1 in 10 enterprises
+very mature"* recorded as secondary colour, not used for costing.
+
 #### 🟡 🆕 p101 — the regional sweep returned nothing education-specific, so the gap is named and then filled by a SECOND query
 
 🔴 **An informed ZERO, recorded because silence looks like coverage.** The mandated
@@ -1514,6 +1634,30 @@ the permission argument first — except in ANZ, where it does.** 🔴 **That is
 North America posture recorded above, and the two pitches should not share a slide.**
 
 ### LATAM
+
+#### 🔴 🆕 p102 — the strongest regional numbers in this KB re-confirmed by an independent query, and nothing new
+
+🔴 **The LATAM sweep returned UNESCO IESALC (200 institutions / 19 countries, **87 %** using AI against
+**26 %** with any formal framework), Brazil's **PL 2.338/2023**, Chile's risk-based bill, Colombia's
+**CONPES 4144** (adopted Feb 2025, budgeted through 2030), the **UNESCO LAC Observatory** (14 Apr 2026,
+ECLAC Santiago), Uruguay's **Ceibal at 75 %**, and the TALIS teacher figures (Brazil **56 %**, Chile
+**55 %**, Colombia **53 %**, Costa Rica **52 %**, against an OECD average of **36 %**).**
+🔴 **Every one of those was already on this page** (`P1023`).
+
+🟢 **Re-confirmation is not nothing: these figures now have two independent arrivals, and the
+governance gap is the most quotable number in this KB** — **87 % adoption against 26 % governance** is
+a 61-point spread, from an institutional primary source, in the region where this KB's pattern work has
+concentrated. 🔵 **It is the same shape EMEA shows at 10 % and the US shows through Ohio's mandate:
+adoption has outrun governance everywhere, and LATAM has measured it best.**
+
+🔴 **The supply-side caveat that belongs beside it, and it is regional.** `P1006` holds: **Moodle is
+what the ministries and public universities run**, and its connector tier is split — one **AGPL-3.0**
+(`csmediapro`, 34 523 B) and one **MIT but unreleased** (`peancor`, 0 tags). 🔴 **Neither is
+permissive AND released**, while Canvas has exactly that (`canvas-mcp`, MIT, 26 tags).
+🔵 **So `P102-A` costs 3–4 weeks MORE in LATAM than in North America, and the reason is a connector,
+not a platform.** 🟢 **The permissive-core finding helps here too**: OFBiz and Corteza are
+Apache-2.0, so the administrative layer of a ministry engagement no longer has to start from
+OpenEduCat's LGPL-3.0 (`T26`).
 
 #### 🟢 🆕 p101 — the adoption numbers are now the highest of any region, and they come from primary sources
 

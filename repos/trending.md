@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-10
 ---
 
+
+## 2026-10-10 — pass 102: two Apache-2.0 ERP cores promoted off this file's own back catalogue, and a default-ref assumption caught publishing a false negative
+
+⏱️ **Twelfth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93:
+01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; 98: 06:4x–07:xx; 99:
+07:4x–08:xx; 100: 08:4x–09:xx; 101: 09:4x–10:xx; this one 10:4x–11:xx). **Append-only.**
+
+🔴 **Instrument REFUSED (`[Code from External]`) — and pass 101 ran it**, so `Gap 383` flips rather
+than trends. 🟢 **No classifier written** (`P237`). 🔴 **The multi-host channel probe was denied as a
+batch**, so `api.github.com` and the non-GitHub hosts are **unread**, not closed.
+
+### 🟢 The promotion — and it came from `grep`, not from a search
+
+🔵 **`OFBiz`, `Huly`, `Corteza`, `Krayin` and `Dolibarr` have lived in THIS file and in
+`intel/open-gaps.md` for passes, and appeared on NO shelf page.** 🟢 **`Gap 384`'s shape, discharged
+for one tier**, and `P1004` again: the question whose corpus is this repository is the one that pays
+when the instrument is denied.
+
+| slug | grant (payload · bytes) | ref · **full SHA** | tags / latest | shelved now? |
+|---|---|---|---|---|
+| 🆕 [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0** · **11 906 B** | 🔴 **`trunk`** · `45506b377c855e455942b238dbd55e33fce79d4f` | 🟢 **26 / `release24.09.07`** | 🟢 **yes** — `repos/foundations.md` Tier 4 + permissive platform tier |
+| 🆕 [`cortezaproject/corteza`](https://github.com/cortezaproject/corteza) | 🟢 **Apache-2.0** · **11 358 B** *(pristine)* | 🔴 **`2024.9.x`** · `3835dfc4ac8bd89381753f09042ad147a4502576` | 🟢 **298 / `2026.9.0-rc.2`** | 🟢 **yes** |
+
+🟢 **OFBiz's `NOTICE` is 166 B and its appended `LICENSE` section declares only Noto Sans
+(Apache-2.0) and timezone files (Public Domain)** — 🟢 **the first `P1013` bundled-grant check on this
+shelf to come back fully CLEAN**, against pass 101's `Jasig/SSP` where the root Apache-2.0 sat over
+Ext JS (GPL-3.0), JasperReports / JFreeChart / c3p0 (LGPL) and iText (MPL).
+🟢 `Copyright 2001-2026 The Apache Software Foundation` — still shipping.
+
+### 🔴 `P1020` — this file had published a licence address that does not resolve
+
+🔴 **`git ls-remote --heads apache/ofbiz-framework master` returns EMPTY. HEAD symrefs to `trunk`.**
+🔴 **This file's archived row cited `Apache-2.0 (LICENSE@master)`.** 🔵 **That address 404s — on a
+repository that is cleanly Apache-2.0 with 26 releases. The error was a default-ref ASSUMPTION, and it
+produced a false negative, not a missing value.**
+
+| pass | repo | default ref | consequence |
+|---|---|---|---|
+| 101 | `douglasrizzo/catsim` | 🔴 `dev` | would have 404'd 24 names |
+| **102** | `apache/ofbiz-framework` | 🔴 **`trunk`** | 🔴 **DID — archived `@master` citation unreachable** |
+| **102** | `cortezaproject/corteza` | 🔴 **`2024.9.x`** | would have 404'd 24 names |
+
+🔵 **`P1021`** — and Corteza is the demonstration: **HEAD on `2024.9.x`, tags to `2026.9.0-rc.2`**.
+Date a repository from its tags; pin the ref separately. 🟡 Tip is `-rc`/`-dev`, so not GA.
+
+### 🔴 The channel's permissive claims, scored
+
+| claim | payload | verdict |
+|---|---|---|
+| Apache OFBiz = Apache-2.0 | 🟢 11 906 B Apache | 🟢 **true** |
+| Corteza = Apache-2.0 | 🟢 11 358 B Apache | 🟢 **true** |
+| Huly = "Apache License 2.0" | 🔴 **EPL-2.0, 14 196 B** | 🔴 **false, THIRD pass running** |
+| Krayin = MIT | 🟡 MIT 1 078 B, `cmp`-identical to `aureuserp` 1 077 B, both `Webkul Software` | 🟡 **true, misleading — one vendor** (`P564`) |
+
+### 🔴 `Gap 393` — the benchmark layer, both halves ungranted
+
+| slug | role | grant | ref · SHA | 200-control |
+|---|---|---|---|---|
+| [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | scorer (4 BEA-2025 dimensions) | 🔴 **none** | `main` · `a71078456a90a7bb616f7c7e1de83f0bfbc44ab1` 🟢 **un-drifted from p101** | 🟢 `README.md` 14 451 B |
+| [`kaushal0494/UnifyingAITutorEvaluation`](https://github.com/kaushal0494/UnifyingAITutorEvaluation) | **MRBench** benchmark — dev 300 / **2 476**, test 191 / **1 547** | 🔴 **none** at 5 names | `main` · `bbef521ddb875f2cc8a5ee798f4066965a7cfd8a` | 🟢 `README.md` 9 525 B |
+| [`NaumanNaeem/BEA_2025`](https://github.com/NaumanNaeem/BEA_2025) | participant system | 🟡 **unresolved** | `main` · `bcaa52dae63d4112edea4b0186c386f0fafd5b97` | 🔴 **none — 6 paths 404** |
+
+🔵 **`P1022`: probe the DATASET repo separately from the toolkit.** 🔴 **Here both fail, so the
+comparability — a score against MRBench — is the ungranted asset, and re-annotation is the only
+permissive route.**
+
 ## 2026-10-10 — pass 101: the instrument's offline half RAN, and the early-warning stack splits permissive-model / copyleft-pipe
 
 ⏱️ **Eleventh pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93: 01:4x–02:24;

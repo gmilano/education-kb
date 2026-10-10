@@ -6,7 +6,7 @@ updated: 2026-10-10
 
 # Education — AI agents shelf
 
-**Pass 101, 2026-10-10.** ⏱️ **Eleventh pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:
+**Pass 102, 2026-10-10.** ⏱️ **Twelfth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:
 00:4x–01:3x; 93: 01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; 98:
 06:4x–07:xx; 99: 07:4x–08:xx; 100: 08:4x–09:xx; this one 09:4x–10:xx).
 
@@ -29,6 +29,42 @@ unread, and this is the first pass to establish the CAUSE instead of restating t
 🔵 **Marker convention.** A bare 🆕 is inherited from the pass that added the row; **rows added or
 re-measured by this pass are marked 🆕 p101.** 🔴 **A `—` in the ★ column means not read this pass.
 It never means zero.**
+
+### 🔴 🆕 p102 What pass 102 adds — `Gap 391` is CONFIRMED and WIDENED: the benchmark's DATA is ungranted too
+
+- 🔴 **`Gap 391` holds at an un-drifted address, second consecutive pass.**
+  [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) is still at
+  `main` · `a71078456a90a7bb616f7c7e1de83f0bfbc44ab1` — **byte-identical pin to pass 101** — and
+  `LICENSE`, `LICENSE.md` and `LICENSE.txt` all return **404**, with a clean `P872` 200-control
+  (`README.md` = **14 451 B** at that same SHA). 🔵 **The absence is STABLE, not a timing artifact:
+  two passes, one SHA, same answer.**
+- 🔴 **`Gap 393` OPENED — and it is the bigger half. The BEA-2025 benchmark DATASET is ungranted.**
+  [`kaushal0494/UnifyingAITutorEvaluation`](https://github.com/kaushal0494/UnifyingAITutorEvaluation)
+  is the official shared-task data repository (**MRBench**, built from MathDial + Bridge; the dev set
+  is **300 dialogues / 2 476 annotated tutor responses**, the test set **191 / 1 547**, labels
+  `Yes` / `To some extent` / `No`). `main` · `bbef521ddb875f2cc8a5ee798f4066965a7cfd8a`,
+  🔴 **no licence payload at `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` or `NOTICE`**, clean
+  `P872` 200-control (`README.md` = **9 525 B**).
+- 🔵 **`P1022`: when a benchmark's TOOLKIT is ungranted, probe its DATASET repository separately.
+  They are two grants and they fail independently.** 🔴 **Here they failed the same way, so the whole
+  BEA-2025 pedagogical-evaluation layer — the scorer and the thing it scores against — is unlicensed.**
+  🟢 **That changes the purchase**: a studio cannot adopt this evaluation layer, and it cannot
+  re-derive it either, because the labels are the asset. 🔵 **Same shape as `Gap 390`/`T21` one level
+  worse: there the code was permissive and the corpus was not; here neither is granted.**
+- 🟡 **`NaumanNaeem/BEA_2025` is UNRESOLVED, not a negative.** `main` ·
+  `bcaa52dae63d4112edea4b0186c386f0fafd5b97`: no payload at 4 licence names **and no 200-control** —
+  `README.md`, `readme.md`, `README`, `README.MD`, `requirements.txt` and `.gitignore` are all 404,
+  so the probe never proved it reached the tree. 🔵 **Recorded as unread, never as zero.**
+- 🔴 **The instrument was REFUSED this pass, and pass 101 RAN it.** `bash ./test_ladder.sh` was denied
+  before starting (`[Code from External]`). 🔵 **So `Gap 383`'s state FLIPS between passes rather than
+  trending** — pass 101's execution was not the start of a recovery, and this is the first pass to
+  record the refusal *after* a success. 🟢 **No classifier was written** (`P237`); every address below
+  came from `git ls-remote --symref` run inline and every grant from a `raw.githubusercontent.com`
+  payload (`P1005`).
+- 🔴 **`api.github.com` and the non-GitHub primary-source hosts were NOT measured this pass.** The
+  multi-host probe that opens every pass was itself **denied as a batch**, so the ★ column and the
+  primary-source ledger carry `—`, which is unread. 🔵 **A new fact about this environment: the
+  channel-probe RITUAL is now gated, independently of the channels it probes.**
 
 ### 🟢 🆕 p101 What pass 101 adds, and the headline is a gap discharged by a repository that has existed since 2012
 
@@ -1108,6 +1144,27 @@ pass as the single highest-yield move for this region.
 | 🆕 [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) | **MIT** · 1 069 B · `main` · `032b5aa` | — | **LATAM** (Colombia) | 🟢 **The strongest new LATAM row this pass, and the only one that is permissive end to end.** Autonomous virtual tutor agent for **rural higher education in Risaralda**, from Universidad Tecnológica de Pereira. 🟢 **It integrates with Open edX** — so it attaches to the platform tier this shelf already carries instead of replacing it. 🔵 **Region evidence is the payload's own copyright line** (`Grupo Sirius`), not an inference from the README (`P800`). 🟡 Depends on a hosted model API, which is the constraint to raise first with a public institution. |
 | 🆕 p93 [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | **BSD-3-Clause** · `LICENSE` 1 514 B · `dev` · `7e6caae` | 153 | 🟡 **LATAM** (Brazil) | 🟢 **The only computerized-adaptive-testing engine on this shelf, and the strongest LATAM row in the *psychometrics* tier** — item selection, ability estimation, stopping rules and a simulator, BSD-licensed, 877 commits. 🟡 **Region evidence is weaker than `P800`**: the payload's copyright line is a personal name, and Brazil comes from the project's own documentation host (`douglasrizzo.com.br`) linked throughout the README — labelled, not upgraded. 🟡 Default branch is `dev`. Tabled in `repos/foundations.md` **Tier 2c**. |
 | 🆕 p93 [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | 🟡 **MIT at root / CC BY 4.0 for the data** · `LICENSE` 1 073 B · `main` · `daabd7d` | 20 | 🟢 **LATAM** (Brazil) | 🟢 **Brazil's national curriculum base as audited open data — 1 721 learning objectives, per-record provenance, 1 576/1 580 character-exact against the official MEC/CNE PDF.** 🔵 **The counter-example to this shelf's "frameworks are ungranted" rule**, and the anchor of `P93-B`. 🔴 **Read `P969` before costing it: the CC BY 4.0 data grant is NOT at the repo root.** |
+
+### 🔴 🆕 p102 `Gap 393` — the pedagogical-evaluation layer, measured as a pair
+
+🔵 **`Gap 391` was filed against a scorer. `Gap 393` is filed against the scorer AND its benchmark**,
+because a judge you cannot license is useless and a judge whose *labels* you cannot license is useless
+in the same way. Both read this pass, at full addresses, with 200-controls.
+
+| slug | role in the layer | grant (24-name probe) | ref · SHA | `P872` 200-control |
+|---|---|---|---|---|
+| [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | the **scorer** — four BEA-2025 dimensions (Mistake Identification, Mistake Location, Providing Guidance, Actionability) | 🔴 **NONE** (paper states MIT; `P1014`) | `main` · `a71078456a90a7bb616f7c7e1de83f0bfbc44ab1` | 🟢 `README.md` **14 451 B** |
+| [`kaushal0494/UnifyingAITutorEvaluation`](https://github.com/kaushal0494/UnifyingAITutorEvaluation) | the **benchmark** — MRBench; dev **300 dialogues / 2 476 responses**, test **191 / 1 547** | 🔴 **NONE** | `main` · `bbef521ddb875f2cc8a5ee798f4066965a7cfd8a` | 🟢 `README.md` **9 525 B** |
+| [`NaumanNaeem/BEA_2025`](https://github.com/NaumanNaeem/BEA_2025) | a participant system (Track 1) | 🟡 **UNRESOLVED** | `main` · `bcaa52dae63d4112edea4b0186c386f0fafd5b97` | 🔴 **none obtained — 6 paths 404** |
+
+🔴 **So the shared task that drew over 50 teams, and that this industry now quotes as the standard for
+"is this tutor pedagogically sound", rests on two repositories with no grant between them.**
+🟢 **What is takeable is the RUBRIC, which is published in the paper and is not copyrightable as a
+method**: the four dimensions and the three-way label scale can be re-implemented against a studio's
+own annotated set. 🔴 **What is not takeable is the comparability** — scores against MRBench are the
+only numbers anyone recognises, and MRBench is the ungranted half. 🔵 **Cost the re-annotation, or
+cost the engagement without a published benchmark number. There is no third option, and pretending
+otherwise is how `P1014` reaches a client deck.**
 
 ## Negatives and licence flags — read before you quote a blog
 
