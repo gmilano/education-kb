@@ -5,6 +5,7 @@ updated: 2026-10-10
 ---
 
 # Education — market, players and opportunities
+**Pass 105, 2026-10-10.** ⏱️ **Fifteenth pass of this date.** 🆕 **All four regions updated: North America gains the corrected permissive tier (38 → 40), EMEA a third-pass channel divergence AND a refutation of the reasoning that placed three of its own rows, APAC a measured fifth saturation, LATAM the resolved holder split (3 placed, 2 unplaceable).** 🔴 **Pass 104's line follows.**
 **Pass 104, 2026-10-10.** ⏱️ **Fourteenth pass of this date** (101 ran 09:4x–10:xx UTC; 102,
 10:4x–11:xx; this one 12:4x–13:xx). 🔴 **All four mandated regional sweeps ran again and all four
 returned LESS than this file already holds — `P1023` confirmed for a SECOND consecutive pass, which
@@ -360,6 +361,49 @@ KB: write down what you refused to use, and why.**
 ## Opportunities by region
 
 ### North America
+
+#### 🟢 🆕 p105 — the permissive HE platform tier is **larger than this file reported**, and the two rows recovered are governed by a North American foundation
+
+🔵 **The correction is regional even though the cause is a string.** 🔴 **ECL-2.0 — the Educational
+Community License, written for this industry and OSI-approved — contains ZERO occurrences of the
+string `Apache License`, so every generic licence scanner returns `UNRECOGNISED` for it.** 🟢 **The
+code it covers is the Apereo Foundation stack: `Sakai`, `Opencast`, and the learning-analytics
+repositories — mature, North-American-governed, and permissive.**
+
+| | pass 104 | 🟢 **corrected** |
+|---|---|---|
+| permissive rows, 99-address census | 38 | 🟢 **40** |
+| recovered | — | 🟢 **`lap-sakai-extractor` (11 087 B, `a9ea5cca…`), `OpenDashboard-legacy` (9 919 B, `fb10d126…`)** |
+
+🟡 **The commercial consequence sits with the client's incumbent adviser, not with the code.**
+🔴 **A due-diligence report produced with a generic scanner shows `Sakai` and `Opencast` with no
+recognised licence, and a risk-averse university counsel reads that as "do not touch".** 🟢 **So the
+two most mature permissively licensed platforms in North American higher education drop off the
+shortlist for a string-matching reason.** 🔵 **`P105-A` is the one-day gate that prevents it, and
+the answer to give in the room is checkable: *ECL-2.0 is Apache-2.0 with the patent grant narrowed
+to education communities, OSI-approved, and here is the `sha256` of the text this repo ships.***
+
+🟢 **Governance is the second half of the opportunity and the half procurement cares about:**
+permissive licence **plus** a foundation with named committee process is the combination a
+university's counsel clears fastest. 🔵 **Apereo's process is an asset to cite, not an obstacle.**
+
+#### 🟡 🆕 p105 — two secondary-only items the battery added, held as secondary and not promoted
+
+🔴 **Both are new to this corpus and NEITHER is primary-sourced from this environment** (`arxiv.org`,
+`oecd.org` and every non-GitHub host return `curl: (56) CONNECT tunnel failed, response 403`).
+
+- 🟡 **Ohio State's "AI Fluency" initiative** — reported as covering all undergraduates from the
+  class of 2029. 🔵 **Joins Purdue's board-approved AI competency requirement, which this file
+  already holds.** 🟢 **Two named US institutions with an institution-wide undergraduate AI
+  requirement is a procurement signal: the buyer is the provost, not the CIO.**
+- 🟡 **A White House *National AI Policy Framework*** reported to include K-12 AI education
+  priorities. 🔴 **Status, binding force and date all unverified here.** 🔵 **The federal picture
+  this file holds is unchanged: no binding federal curriculum standard, and the K-12 AI Literacy
+  and Readiness Act of 2026 not passed.**
+
+🟢 **Both are shelved as *secondary, unverified* and must not be cited as settled in a client
+deliverable.** 🔵 **`P505`: a secondary channel reporting something this shelf cannot verify does
+not promote it.**
 
 #### 🟢 🆕 p104 — the rostering bridge is permissive, and the analytics emitter is now a confirmed BUILD
 
@@ -724,6 +768,51 @@ adoption.** 🔴 **So a North America pitch that leads with adoption is pushing 
 regulatory grain; one that leads with governance, auditability and teacher-augmentation is with it.**
 
 ### EMEA
+
+#### 🔴 🆕 p105 — `P1035` invalidates the reasoning that placed EMEA's own supply rows here, and this file says so before a client does
+
+🔵 **This pass set out to resolve five Spanish/Portuguese-named rows that pass 104 refused to call
+LATAM supply. It resolved them — and in doing so refuted the method that placed THREE rows in this
+section.**
+
+🔴 **The rule that failed: any `universidad de …` string placed a row in EMEA.**
+`mietiainvestigacion-creator/api-eduadapt` names **Universidad de Córdoba** — Córdoba, **Spain**
+*and* Córdoba, **Colombia**. 🟢 **The row is LATAM, established by the word `Colombia` elsewhere in
+its own README.** 🔴 **The rule did not read a region; it invented one.**
+
+🟡 **Consequence for this section, stated rather than buried:** the three German rows pass 104 called
+*"demonstrably EMEA"* — `fwu-de/schulart-ontologie`, `fwu-de/schulfach-ontologie`,
+`dini-ag-kim/school-curriculum-pg` — 🔴 **were placed on ORG-NAME reasoning, which is the same class
+of inference `P1035` has just invalidated.** 🟢 **Their holder lines are the second lead
+pre-registered for the next pass.** 🔵 **The `Gap 395` finding itself (EMEA grants CODE and not
+VOCABULARY, with `fwu-de/fwu-kc-extensions` Apache-2.0 at 11 357 B against three ungranted
+vocabularies) is unaffected — it rests on payloads, not on names.**
+
+#### 🔴 🆕 p105 — the EMEA channel came back BEHIND this shelf for a THIRD pass, and now the provenance diverges too
+
+🔴 **This pass's EMEA sweep quoted the Commission's own page for *"from 2 August 2026, the AI Office
+and national authorities started to enforce the AI Act"*, while a second source in the same sweep
+reported a **7 May 2026 provisional agreement** moving the Annex III high-risk date — **which is the
+education bucket** — to **2 December 2027**.**
+
+🟢 **This shelf holds `Regulation (EU) 2026/1744` of **8 July 2026**, the Annex III clock deferred to
+`2027-12-02`, and Article 50 untouched — verified by three channels in pass 58.**
+
+| channel | the date it gives for the amending instrument |
+|---|---|
+| pass 58, three channels | 🟢 **8 July 2026** — `Regulation (EU) 2026/1744` |
+| pass 103, APAC channel | 🟡 7 May 2026 — *provisional political agreement* |
+| 🆕 **this pass, EMEA channel** | 🟡 **7 May 2026 provisional deal** · 🔴 **and the Commission's page implying no deferral at all** |
+
+🔴 **So `Gap 241` is now a divergence in PROVENANCE as well as in date: three readings, and the
+Commission's own page agrees with none of them.** 🔵 **`P505`: a channel reporting a corrected claim
+as current does not re-date the gap.** 🟢 **Remedy unchanged and still the highest-value item in the
+registry — one fetch of the primary text from a session with egress to `eur-lex.europa.eu`, which
+returns `000` here.**
+
+🔴 **Client-facing rule, unchanged and reinforced:** the Annex III deferral **must not** appear in a
+deliverable as settled law. 🟡 **If a client or their adviser says "August 2026", ask which
+article** — Article 50 transparency and Article 4 AI-literacy are a different clock from Annex III.
 
 #### 🟢 🆕 p104 — `Gap 395` CORRECTED: EMEA's public-sector supply is LAYER-SPLIT, and the grant request has a precise addressee now
 
@@ -1286,6 +1375,37 @@ duty is the sellable deliverable that is already overdue.**
 
 ### APAC
 
+#### 🔴 🆕 p105 — the APAC sweep returned **nothing this file does not hold**, and that is the fifth consecutive pass
+
+🟢 **The regional query ran and every hit was `grep`-checked against the live corpus rather than
+judged by impression.** 🔴 **Not one item was new.** Re-confirmed and already shelved:
+
+| item re-confirmed | already held as |
+|---|---|
+| China: AI compulsory from **age six**, ≥ 8 hours a year, since the 2025-26 school year | held — with the UAE as the only other national compulsory curriculum |
+| China: the **"AI Plus"** State Council guideline, targets through 2030 | held |
+| India: AI and computational thinking mandatory **from Class 3, 2026-27** | held |
+| Singapore: teacher AI training at all levels by 2026; National AI Strategy 2.0; **60.9 %** adult AI diffusion | held |
+| Japan: the **2025 AI Promotion Act**, light-touch | held |
+| South Korea: first comprehensive AI regulation in APAC | held |
+
+🟡 **One item was new in FORM but not in substance** — a 2026 Ipsos regional survey putting support
+for banning AI in schools between 23 % (Indonesia) and 31 % (South Korea), with Japan's own figure
+rising 21 % → 29 %. 🔵 **This file already holds the Japanese shift; the regional spread adds
+precision to a pattern already recorded and is logged as secondary-only.** 🔴 **Not primary-sourced
+from here: `oecd.org` and `unesdoc.unesco.org` both return `curl: (56) CONNECT tunnel failed,
+response 403`.**
+
+🟢 **The APAC opportunity on this shelf is unchanged and still the strongest of the four regions,
+because it is the one backed by a complete, granted toolchain:** `aiverify-foundation/moonshot`,
+`moonshot-cicd` and `moonshot-ui` are **all Apache-2.0 and all released** (26 / 6 / 23 tags), so the
+pedagogical-evaluation gate `P103-A` is buildable today. 🔴 **What stays unbought is the
+comparability of the LABELS (`Gap 393`), not the harness.**
+
+🔵 **`P1023` — the public web is saturated for this industry — now holds for five consecutive
+passes and should be read as a standing property rather than a per-pass observation.** 🟢 **The
+yield of the last five passes has come from probing this repository's own archive, not from search.**
+
 #### 🟢 🆕 p104 — the evaluation harness is COMPLETE and all three parts are Apache-2.0
 
 🟢 **`aiverify-foundation/moonshot-ui` — Apache-2.0, `LICENSE.md` 11 347 B, 23 tags.** 🔵 **With
@@ -1835,6 +1955,56 @@ the permission argument first — except in ANZ, where it does.** 🔴 **That is
 North America posture recorded above, and the two pitches should not share a slide.**
 
 ### LATAM
+
+#### 🟢 🆕 p105 — the holder split is RESOLVED: LATAM's ungranted supply is **3 measured rows**, not the 5 pass 104 would not claim
+
+🔵 **Pass 104 found eight Spanish/Portuguese-named rows, refused to place them, and asked whether
+LATAM's supply gap is 5 rows or 2.** 🟢 **Measured from the trees, with the placing string published
+beside every verdict:**
+
+| row | placed by | region | grant |
+|---|---|---|---|
+| [`xgabrielcv/auto-matricula-sigaa-unb`](https://github.com/xgabrielcv/auto-matricula-sigaa-unb) | 🟢 `SIGAA` — the Brazilian federal university academic system | 🟢 **LATAM** (Brazil) | 🔴 **none** · clean 200-control |
+| [`dreathward/sistema-de-aprendizaje-en-linea`](https://github.com/dreathward/sistema-de-aprendizaje-en-linea) | 🟢 `uan.edu.co` | 🟢 **LATAM** (Colombia) | 🔴 **none** · clean 200-control |
+| [`mietiainvestigacion-creator/api-eduadapt`](https://github.com/mietiainvestigacion-creator/api-eduadapt) | 🟡 **the country word `Colombia` in its own README** | 🟢 **LATAM** (Colombia) | 🔴 **none** · clean 200-control |
+| [`kaiman-p/tutor-adaptativo-ia`](https://github.com/kaiman-p/tutor-adaptativo-ia) | 🔴 no marker anywhere in the tree | 🔴 **UNPLACED** | 🔴 none |
+| [`alvarogregori/moodle-ai-graded-assignment`](https://github.com/alvarogregori/moodle-ai-graded-assignment) | 🔴 no marker anywhere in the tree | 🔴 **UNPLACED** | 🔴 none |
+
+🟢 **Answer: 3 LATAM, 0 EMEA, 2 unplaceable.** 🔵 **Two rows staying `UNPLACED` is the honest output,
+and it is the point — a guess here becomes typed regional data downstream.**
+
+#### 🔴 The instrument got the third row WRONG first, and the error would have cost LATAM a row
+
+🔴 **`place_string`'s first version placed any `universidad de …` string in EMEA.**
+`api-eduadapt` names **Universidad de Córdoba** — which exists in Córdoba, **Spain** *and* Córdoba,
+**Colombia**. 🟢 **Corrected before any result reached a page: an institution name alone returns
+`UNPLACED`; only a ccTLD, a country word, or a nationally unique system name places a row.**
+🔵 **`P1035`, and it is `P1005` — read the payload, never the label — applied to REGION.**
+
+🟡 **Why this matters more in LATAM than anywhere else on this page:** 🔴 **education supply here is
+published in national languages, because the buyer is a ministry or a public university — so
+language is the most AVAILABLE regional signal and one of the least reliable.** Spanish and
+Portuguese each span two regions, and university names collide across them routinely. 🟢 **`T32`
+records the general form.**
+
+#### 🟢 What the three placed rows are worth as an opportunity
+
+🔵 **All three are university-affiliated, all three serve a live education function — enrolment
+automation at a Brazilian federal university, an online-learning system and an adaptive-tutoring
+API in Colombia — and 🔴 all three carry NO licence payload at all, each with a clean 200-control,
+so the absence is measured and not a fetch failure.**
+
+🟢 **So the LATAM action is the same cheap, dateable one `Gap 395` names for EMEA, and it now has
+three more addressees: a written grant request.** 🔵 **The precedent to cite is
+`fwu-de/fwu-kc-extensions` — a public-sector publisher that DOES grant Apache-2.0 once the artefact
+is code.** 🔴 **Until a grant exists, none of the three can be adopted into a client engagement, and
+the pattern to sell is `P102-A` (construct on a generic permissive core), not an adopt.**
+
+🟡 **And the regional reading to carry into a LATAM engagement:** 🔴 **three ungranted
+university-built rows is not a supply base — it is evidence that the region's education AI work is
+happening inside institutions and never reaching a licence.** 🟢 **That is a services opportunity
+rather than a code one: the capability exists locally and the grant, the packaging and the
+governance do not.**
 
 #### 🔴 🆕 p104 — the recovered LATAM-adjacent supply is UNGRANTED, and this pass refuses to over-place it
 

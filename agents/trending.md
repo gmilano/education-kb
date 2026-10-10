@@ -4,6 +4,46 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 105: the permissive agent shelf was **undercounted by two**, and the cause is a string the ECL licence does not contain
+
+🔵 **No new agent reached this shelf this pass. Two agents already on it changed BUCKET.**
+
+🟢 **Measured, with `sha256` for every payload:** `classify_payload` — the licence classifier this
+KB's last census ran over 99 addresses — returns **`UNRECOGNISED`** for every Educational Community
+License payload in the Apereo lineage. 🔴 **Cause, read from the text rather than guessed: the real
+ECL-2.0 licence contains ZERO occurrences of the string `Apache License`.** It names the
+*"Apache 2.0 license"* in lower case, so a classifier keyed on the Apache title never fires.
+
+🔴 **ECL-2.0 is permissive** — it is the Apache-2.0 text with section 3's patent grant narrowed to
+education. 🟢 **So two rows that Globant can build on were sitting outside the permissive count:**
+
+| row | bytes | `sha256` (16) | was | 🟢 **is** |
+|---|---|---|---|---|
+| [`Apereo-LAI/lap-sakai-extractor`](https://github.com/Apereo-Learning-Analytics-Initiative/lap-sakai-extractor) | 11 087 | `a9ea5cca8da2c8d5` | 🔴 `UNRECOGNISED` | 🟢 **ECL-2.0 · permissive** |
+| [`Apereo-LAI/OpenDashboard-legacy`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy) | 9 919 | `fb10d1260ddc8dff` | 🔴 `UNRECOGNISED` | 🟢 **ECL-2.0 · permissive** |
+
+🟢 **Permissive supply in the last census: 38 → 40.** 🔵 **And the 68 granted rows now reconcile
+exactly — 40 permissive + 22 copyleft + 5 CC + 1 payload that is not a grant.**
+
+🟡 **The signal for anyone reading this shelf to pick an agent:** 🔴 **an `UNRECOGNISED` licence is
+not a licence you should skip.** It is three different situations wearing one label — a permissive
+grant the tooling cannot see, a copyleft grant it names elsewhere, and a genuine all-rights-reserved
+file called `LICENSE`. 🟢 **Only reading the payload separates them, and two of the three are
+buildable.**
+
+### 🔴 The agent-shelf battery saturated again — fifth consecutive pass
+
+🟢 **Four global queries ran.** 🔴 **Not one returned an education agent this shelf does not hold.**
+Re-confirmed and already shelved: DeepTutor · ChatTutor · Instructional Agents · OATutor · pyKT ·
+Artemis (with Iris / Athena / Hyperion) · `frappe/lms`. 🔵 **The general-purpose agent lists the
+query actually returns — OpenClaw, OpenHands, CrewAI, LangGraph, goose, aider — are vendor-neutral
+blog rankings with no education layer, and `P1023` has now predicted this five passes running.**
+
+🟡 **Three addresses were new to the corpus and are NOT shelved here**, because none was probed:
+`Earth-OL-Player/Ai_learn_project`, `frdel/agent-zero`, `DataTalksClub/llm-zoomcamp`.
+🟢 **All three are pre-registered for probing next pass.** 🔴 **An unprobed address does not go on a
+shelf page** (`P1026`: a worklist is not a shelf).
+
 ## 2026-10-10 — pass 104: `Gap 394` probed to the last address, and the education MCP layer is 53 % unusable
 
 ⏱️ **Fourteenth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93:

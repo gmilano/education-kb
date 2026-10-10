@@ -5,7 +5,7 @@ updated: 2026-10-10
 ---
 
 # Education — compose patterns
-**Pass 104, 2026-10-10.** ⏱️ **Fourteenth pass of this date.** 🆕 **Two patterns added (`P104-A`, `P104-B`).**
+**Pass 105, 2026-10-10.** ⏱️ **Fifteenth pass of this date.** 🆕 **One pattern added (`P105-A`), and it is the gate every other pattern on this page depends on: the licence-and-region due-diligence check, written because this pass's own instrument produced a wrong region and an invisible licence before it produced a finding.**
 🟢 **`P103-A`** — the pedagogical-evaluation gate, which this page priced as UNBUYABLE one pass ago:
 🔴 **the benchmark's labels are still ungranted (`Gap 393`), but the HARNESS is Apache-2.0 with 26
 releases** (`aiverify-foundation/moonshot`), so the gate is buildable and only the comparability is
@@ -153,6 +153,74 @@ stack (`repos/foundations.md` Tier 2c) — and `P92-A` stays on the page, becaus
 decides engagements rather than in detail. **`P93-B`** is the first pattern in this KB anchored on a
 **national curriculum published as audited open data**, and the first with a **measured** justification for
 its own central design choice.
+
+## 🟢 🆕 p105 `P105-A` — the licence-and-region due-diligence gate, run BEFORE a platform shortlist is shown to a client (global; one day)
+
+🔵 **The pattern this pass's own two bugs argue for.** 🔴 **Both failures — an ECL row dropped from
+the permissive tier, and a Colombian row placed in EMEA — were produced by plausible rules applied
+to labels instead of payloads, and either one reaches a client deliverable silently.** 🟢 **This
+gate is the cheapest artefact on this page and the only one that protects every other pattern here.**
+
+### What it is
+
+A one-day script run over any candidate shortlist before it is shown to anyone, answering two
+questions per row with evidence rather than inference: **what is the grant**, and **where is this
+from**.
+
+### Wire it from what is already here
+
+```
+compose/code/p1035-regrant-holder-ecl/
+  ├── regrant.sh   ── 11 licence filenames + a 200-CONTROL per row  → grant or "we were refused"
+  ├── ecl.sh       ── classify_ecl()  → the ECL-aware permissive reading
+  └── holder.sh    ── place_string() + a country-word pass          → region, with provenance
+```
+
+**Step 1 — resolve, do not trust.** `git ls-remote --symref` for the default ref, `--tags` for the
+release count. 🔴 **Never assume `main`** (`P1020`): three of this KB's Apereo rows are on `master`
+and Opencast is on `develop`, and a raw fetch against the wrong ref 404s and reads as "no licence".
+
+**Step 2 — read the payload, and carry a control.** Fetch all 11 licence filenames *and*
+`README.md` at the same ref. 🔵 **Without the control, "this repo has no licence" and "the host
+refused us" are the same observation** (`P1005`). A row whose control also fails is reported
+`NOCONTROL` — **never** as ungranted.
+
+**Step 3 — classify with `classify_ecl` ahead of the generic classifier.** 🔴 **In education this
+step is not optional.** ECL-2.0 carries no `Apache License` string, so a generic scanner returns
+`UNRECOGNISED` and silently drops `Sakai`, `Opencast` and the whole Apereo learning-analytics stack
+out of the permissive tier. 🟢 **Every `UNRECOGNISED` row gets read by hand before any count is
+published** (`P1036`) — in this KB's own 99-address census that rule recovered 2 permissive rows,
+reclassified 1 as copyleft (`OSL-3.0`) and confirmed 1 as genuinely not a grant.
+
+**Step 4 — pin it by `sha256`, not by byte count.** 🔵 Three Apereo repositories share one ECL text
+at 9 919 B; equal size is not identity and unequal size is not difference (`P1025`, `P1030`).
+
+**Step 5 — place the row, or say you cannot.** 🟢 **Accept only a ccTLD, an explicit country word,
+or a nationally unique system name (`SIGAA`, `UNAM`).** 🔴 **Reject institution names outright** —
+`Universidad de Córdoba` is Spain *and* Colombia (`P1035`). 🟢 **Emit a `placed_by` column naming
+the string that placed each row, and emit `UNPLACED` rather than a guess.**
+
+**Step 6 — name buckets by property, never by membership.** 🔴 *"permissive (MIT / Apache-2.0 /
+BSD)"* cannot count ECL even with a perfect classifier upstream (`P1037`). 🟢 Use
+**permissive / copyleft / not-a-grant**, and publish the arithmetic so it reconciles to the row.
+
+### What it costs and what it buys
+
+| | |
+|---|---|
+| cost | 🟢 **one day**, and the three scripts already exist in this repository |
+| buys | 🔴 **the two platforms a client most wants — `Sakai` and `Opencast` — stay on the shortlist** instead of being dropped as "no recognised licence" by a generic scanner |
+| buys | 🟢 **a region column a regional P&L can be run against**, with the placing string printed beside every value |
+| buys | 🟡 **a defensible answer to the incumbent adviser's "the education stack is mostly copyleft, so you must build"** — ask which tool produced their licence column (`T31`) |
+
+### The failure it is designed around
+
+🔴 **Neither of this pass's bugs would have announced itself.** A wrong region reads as coverage; an
+invisible licence keeps the census footing correct while the composition drifts. 🟢 **So the gate's
+real output is not the table — it is the `placed_by` column, the 200-control, and the reconciling
+arithmetic**, each of which makes a silent error loud. 🔵 **`P1039`: keep the test that could refute
+the finding. This KB asserted ECL would mislabel as Apache, measured that it does not, and kept both
+branches — so the day an ECL payload does carry the Apache title, the gate says so.**
 
 ## 🟢 🆕 p104 `P104-A` — the sovereign, no-egress AI tutor on the client's existing LMS (EMEA first, LATAM second)
 

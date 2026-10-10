@@ -1,0 +1,10 @@
+# INSTRUMENT-INPUT-LIST: not a shelf page. P1026/P1034.
+# p1035 limb C — the four Apereo-lineage ECL-2.0 payloads at four byte counts.
+# P1025: size is not identity. Pre-registered as pass 104 lead #3.
+sakaiproject/sakai	LICENSE
+opencast/opencast	LICENSE
+Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor	LICENSE
+Apereo-Learning-Analytics-Initiative/OpenDashboard-api	LICENSE
+Apereo-Learning-Analytics-Initiative/lap-sakai-extractor	LICENSE
+Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy	LICENSE
+sakaiproject/sakai	LICENSE_HEADER

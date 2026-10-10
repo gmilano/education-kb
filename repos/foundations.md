@@ -26,6 +26,56 @@ classifier was written** (`P237`).
 🔴 **`api.github.com` = `http=403` for every repository not attached to this session — measured, with
 the proxy's message, not assumed.** A `—` is unread, never zero.
 
+### 🟢 🆕 p105 ECL-2.0 pinned by `sha256` — **six repositories, four texts** — and the classifier's limit turns out to be a COST
+
+🔵 **Pass 104 left this page with an explicit open question: "it's ECL" is not yet a measurement of
+WHICH ECL text.** 🟢 **Answered. Every payload read, every one pinned:**
+
+| repo | bytes | `sha256` (16) | text |
+|---|---|---|---|
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 11 120 | `0688f62d04f14e4b` | **A** — titles itself *"Educational Community License, Version 2.0 (ECL-2.0)"*, cites `opensource.org` |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 11 340 | `76a975068930323e` | **B** |
+| [`Apereo-LAI/lap-sakai-extractor`](https://github.com/Apereo-Learning-Analytics-Initiative/lap-sakai-extractor) | 11 087 | `a9ea5cca8da2c8d5` | **C** |
+| [`Apereo-LAI/LearningAnalyticsProcessor`](https://github.com/Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor) | 9 919 | `fb10d1260ddc8dff` | 🟢 **D** |
+| [`Apereo-LAI/OpenDashboard-api`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-api) | 9 919 | `fb10d1260ddc8dff` | 🟢 **D — identical** |
+| [`Apereo-LAI/OpenDashboard-legacy`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy) | 9 919 | `fb10d1260ddc8dff` | 🟢 **D — identical** |
+
+🟢 **Six repositories, FOUR distinct texts, and all six declare *Version 2.0, April 2007*.**
+🔵 **Payload D is one text shared by three repositories — which is precisely the fact a byte count
+alone could not establish, and `P1025` exists to force.** 🟡 **Pass 104 read the 9 919 B row as
+"1 168 B shorter than its sibling"; it is better described as the lineage's OWN canonical text,
+carried unchanged by three repositories, while Sakai and Opencast each carry a longer variant.**
+
+#### 🔴 And the correction this page owes: the classifier's limit is **not** harmless
+
+🔵 **Pass 104 called `UNRECOGNISED` "the instrument's declared limit, not a defect — the honest
+output is never a guess."** 🟢 **The honesty holds. The harmlessness does not.**
+
+🔴 **Measured cause, from the text rather than the pattern: the ECL-2.0 payload contains ZERO
+occurrences of the string `Apache License`.** It names the *"Apache 2.0 license"* in lower case.
+🔵 **So the classifier never mislabels ECL as Apache — it fails to see it, and a row that is
+PERMISSIVE then lands in neither the permissive nor the copyleft bucket.**
+
+| | pass 104 | 🟢 **corrected p105** |
+|---|---|---|
+| permissive | 38 | 🟢 **40** |
+| copyleft | 22 | 22 |
+| CC family | 5 | 5 |
+| 🔴 payload that is not a grant | 1 | 1 |
+| total granted | 68 | 🟢 **68 — it reconciles** |
+
+🟢 **`lap-sakai-extractor` and `OpenDashboard-legacy` are permissive supply that two passes of
+census did not count.** 🔵 **`P1036`: an invisible family is worse than a mislabelled one, because
+the footing stays right while the composition drifts.** 🔵 **`P1037`: the bucket NAME —
+*"permissive (MIT / Apache-2.0 / BSD)"* — could not have counted ECL even with a perfect classifier,
+so buckets are now named by the PROPERTY, not by an enumeration of members.**
+
+🟢 **Remedy written this pass as `classify_ecl` in
+`compose/code/p1035-regrant-holder-ecl/ecl.sh`** — ECL-2.0 is the Apache-2.0 text with section 3's
+patent grant narrowed to education: **permissive, and buildable on.** 🔴 **It is NOT yet wired into
+the census instrument, and the corpus is 1 400+ addresses of which only 99 have been audited for
+this. That is `Gap 398`, and it is the first lead pre-registered for the next pass.**
+
 ### 🟢 🆕 p104 Tier 1d — the **runtime and interop spine** this KB owned and never shelved
 
 🔵 **`p1026`'s census found that `ollama/ollama` — the local-inference runtime — was on no page of

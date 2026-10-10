@@ -4,6 +4,197 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 🟢 Hundred-and-fifth pass, 2026-10-10 — **three pre-registered leads discharged, and the instrument found two bugs in its own code before it found anything about education**: `Gap 398` OPENED (ECL-2.0 is INVISIBLE to this KB's licence classifier, and the permissive count was **38, not 40**); `Gap 394`'s lead #2 answered **NO** with 26 of 26 unchanged; the LATAM/EMEA holder split resolved **3 LATAM, 0 EMEA, 2 unplaceable**; `T31`–`T32` and `P1035`–`P1039` adopted
+
+⏱️ **Fifteenth pass of this date.** 91: 2026-10-09 23:0x–00:00 UTC · 92: 00:4x–01:3x · 93:
+01:4x–02:24 · 94: 02:5x · 95: 03:4x · 96: 04:4x–05:xx · 97: 05:4x–06:xx · 98: 06:4x–07:xx ·
+99: 07:4x–08:xx · 100: 08:4x–09:xx · 101: 09:4x–10:xx · 102: 10:4x–11:xx · 103: 12:4x–13:xx ·
+104: 13:4x–14:xx · this pass 14:4x–15:xx. **Append-only.**
+
+🟢 **Instrument written and executed: `compose/code/p1035-regrant-holder-ecl/`.**
+`test_p1035.sh` **33 passed, 0 failed** — and **9 of those 33 are regressions for bugs this pass
+found in its own code**, not in the world. 🔵 **`P1028` holds a THIRD pass: a freshly authored
+instrument runs; the back catalogue is still refused.**
+
+### 🔴 The channel ledger — probed per host, and one host answers a standing lead
+
+| channel | state this pass | evidence |
+|---|---|---|
+| `git ls-remote --symref` / `--tags` | 🟢 **OPEN** | carried every structural finding below |
+| `raw.githubusercontent.com` | 🟢 **OPEN**, `http=200` | every payload read through it; no 429 |
+| `pypi.org` · `registry.npmjs.org` | 🟢 **OPEN**, `http=200` each | unchanged since pass 93 |
+| `api.github.com` · `github.com` HTML | 🔴 **`http=403`** | 🔵 the cause of every `—` in a ★ column, thirteenth consecutive pass |
+| `arxiv.org` · `eur-lex.europa.eu` · `www.oecd.org` | 🔴 **`http=000`** | `curl: (56) CONNECT tunnel failed, response 403` |
+| 🆕 **`moodle.org`** | 🔴 **`http=000`** | 🔵 **same quoted cause.** 🟢 **This answers pass 104's lead #6: the Moodle plugin directory CANNOT be measured as a channel from this environment.** The denominator `T30`/`P1033` wants stays unmeasured, and now for a *named* reason rather than an unattempted one |
+| WebSearch (secondary) | 🟢 **OPEN** | 8 queries ran — 4 global, 1 per region |
+| repository code execution | 🔴 **REFUSED** | 🟢 in-pass code execution **OPEN** (`P1028`) |
+
+### 🔴 `Gap 398` OPENED — ECL-2.0 is **invisible** to this KB's licence classifier, and the permissive count was wrong
+
+🔵 **Pass 90 said "ECL-2.0 is why six passes undercounted the permissive platform tier."**
+🔴 **That was a diagnosis. This pass measured the mechanism, and the mechanism is worse than the
+diagnosis, because it is still running.**
+
+🟢 **`classify_payload` — the classifier `p1029` ran over all 99 addresses in pass 104 — returns
+`UNRECOGNISED` for all six live Apereo-lineage ECL payloads.** 🔵 **Measured cause, not inferred:
+the real ECL-2.0 text contains ZERO occurrences of the string `Apache License`.** It names the
+*"Apache 2.0 license"* in lower case, so a classifier keyed on the Apache title never fires.
+
+🟡 **This pass predicted the opposite.** `test_p1035.sh` was written asserting that ECL would
+**mislabel as Apache-2.0**; the live payloads refuted the assertion, and the test now encodes the
+measured behaviour with both branches kept:
+
+| failure mode | what it does to a census |
+|---|---|
+| `MISLABEL-AS-APACHE` | 🟡 a wrong grant, but a *permissive* one — the row still counts |
+| 🔴 **`INVISIBLE-TO-CENSUS`** — what actually happens | 🔴 **a permissive row lands in NEITHER the permissive nor the copyleft bucket** |
+
+🔴 **And the bucket DEFINITION compounds the classifier.** Pass 104 published
+*"permissive (MIT / Apache-2.0 / BSD)"* — a name with no room for ECL in it. 🟢 **Both corrected,
+and the 68 granted rows now reconcile to the last row:**
+
+| bucket | pass 104 | 🟢 **corrected** | the difference |
+|---|---|---|---|
+| permissive | 38 | 🟢 **40** | 🔴 **`lap-sakai-extractor` + `opendashboard-legacy`, both ECL-2.0, both permissive, both uncounted** |
+| copyleft | 22 | 22 | `openmage/magento-lts` (10 293 B) read as **OSL-3.0** — pass 104 had this one right |
+| CC family | 5 | 5 | — |
+| 🔴 payload that is **not a grant** | 1 | 1 | `yuanjiusheng/cloud-learning-ce`, 4 117 B of all-rights-reserved (`P1029`) |
+| **total granted** | 68 | **68** | 🟢 **40 + 22 + 5 + 1 = 68. It reconciles.** |
+
+🔵 **So `UNRECOGNISED` was never one thing.** It held a permissive grant the classifier cannot see,
+a copyleft grant it happens to have named elsewhere, and a genuine non-grant — 🟢 **three different
+facts behind one label, separable only by reading the payload.**
+
+### 🟢 And `Gap 394`'s lead #3 is DISCHARGED — four texts, six repositories, all of them ECL 2.0
+
+| payload | bytes | `sha256` (16) | repositories carrying it |
+|---|---|---|---|
+| A | 11 120 | `0688f62d04f14e4b` | `sakaiproject/sakai` |
+| B | 11 340 | `76a975068930323e` | `opencast/opencast` |
+| C | 11 087 | `a9ea5cca8da2c8d5` | `lap-sakai-extractor` |
+| 🟢 **D** | 9 919 | `fb10d1260ddc8dff` | 🟢 **`LearningAnalyticsProcessor`, `OpenDashboard-api`, `OpenDashboard-legacy` — byte- AND `sha256`-identical** |
+
+🔴 **Pass 104 reported "four lineage rows at four byte counts" and left WHICH text unpinned.**
+🟢 **Pinned: six repositories, four texts, and payload D is ONE text shared by three repositories
+rather than three coincidences.** 🔵 **All six declare *Educational Community License, Version 2.0,
+April 2007* — so the family was never in doubt; only its identity was, and `P1025` is now satisfied
+for it the way it is satisfied for MIT and Apache.**
+
+🟡 **`sakaiproject/sakai` `LICENSE_HEADER` is `404`** — the filename belongs to
+`LearningAnalyticsProcessor` in `p444`'s table, not to Sakai's root. Recorded as a probed negative
+so the next pass does not re-probe it.
+
+### 🟢 Lead #1 DISCHARGED — the holder split is **3 LATAM, 0 EMEA, 2 unplaceable**
+
+🔵 **Pass 104 found eight Spanish/Portuguese-NAMED rows, refused to call them a LATAM finding
+because three of the eight are demonstrably EMEA, and asked whether LATAM's ungranted supply is 5
+rows or 2.** 🟢 **Neither:**
+
+| row | placed by | region |
+|---|---|---|
+| [`xgabrielcv/auto-matricula-sigaa-unb`](https://github.com/xgabrielcv/auto-matricula-sigaa-unb) | `SIGAA` — the Brazilian federal university academic system | 🟢 **LATAM** |
+| [`dreathward/sistema-de-aprendizaje-en-linea`](https://github.com/dreathward/sistema-de-aprendizaje-en-linea) | `uan.edu.co` | 🟢 **LATAM** |
+| [`mietiainvestigacion-creator/api-eduadapt`](https://github.com/mietiainvestigacion-creator/api-eduadapt) | 🟡 **the country word `Colombia` in its own README** | 🟢 **LATAM** |
+| [`kaiman-p/tutor-adaptativo-ia`](https://github.com/kaiman-p/tutor-adaptativo-ia) | 🔴 no marker in the tree | 🔴 **UNPLACED** |
+| [`alvarogregori/moodle-ai-graded-assignment`](https://github.com/alvarogregori/moodle-ai-graded-assignment) | 🔴 no marker in the tree | 🔴 **UNPLACED** |
+
+🔴 **And the third row is the one worth the whole limb, because the instrument got it WRONG first.**
+🟢 **`place_string`'s first version placed any `universidad de …` string in EMEA.
+`api-eduadapt` names **Universidad de Córdoba** — which exists in Córdoba, SPAIN *and* Córdoba,
+COLOMBIA.** 🔴 **The rule did not read a region; it invented one, and it would have published a
+LATAM row as EMEA supply.**
+
+🟢 **Corrected before any result was written to a page:** an institution name alone returns
+`UNPLACED`; only a ccTLD, a country word, or a nationally unique system name (`SIGAA`, `UNAM`)
+places a row; and 🔵 **every row now carries a `placed_by` column naming the string that placed it.**
+
+### 🔴 Lead #2 answered, and the answer is **NO** — 26 of 26 unchanged
+
+🟢 **`regrant.sh` re-probed all 23 `LIVE-NOGRANT` and all 3 `LIVE-NOCONTROL` rows with `p1029`'s
+identical filename list and control discipline:**
+
+```
+probed=26 absent=0 grant_appeared=0 still_nogrant=23 still_nocontrol=3
+```
+
+🔴 **Pass 104 called this "the cheapest possible upgrade to this KB". It yielded exactly nothing.**
+🟢 **But it is not a wasted limb: 26 of 26 agreeing across two instruments and two passes is a
+second blind calibration of `Gap 394`, and `absent=0` says no row vanished.** 🔵 **`P1038`: the
+re-probe cadence for a grant is **days, not intra-day passes** — a licence is a human act, and
+fifteen passes of one date cannot observe one.
+
+### 🔵 Principles adopted: `P1035`–`P1039`
+
+- **`P1035`** — 🔴 **a university NAME does not carry a region.** `Universidad de Córdoba` is
+  Spain and Colombia; `Universidad de Granada` is Spain and Nicaragua. 🟢 **Only a ccTLD, a country
+  word, or a nationally unique system name places a row — and the placing string gets published
+  beside the region.** 🔵 **`P1005` (read the payload) applied to REGION rather than to licence.**
+- **`P1036`** — 🔴 **a licence family can be invisible rather than mislabelled, and invisible is
+  worse.** A mislabel keeps the row in a bucket; `UNRECOGNISED` removes it from every bucket, so the
+  census footing stays correct while the composition silently shifts. 🟢 **Every `UNRECOGNISED` row
+  must be read by hand before any bucket count is published.**
+- **`P1037`** — 🔴 **a bucket's NAME is part of its classifier.** *"permissive (MIT / Apache-2.0 /
+  BSD)"* cannot count ECL-2.0 even with a perfect classifier upstream. 🟢 **Name buckets by the
+  property (permissive / copyleft / non-grant), not by an enumeration of members.**
+- **`P1038`** — 🟢 **match the re-probe cadence to the thing being observed.** A grant changes on
+  human timescales; probing it twice within one hour measures only the instrument.
+  🔵 **26 of 26 unchanged is a calibration, and it is the ONLY thing it is.**
+- **`P1039`** — 🟢 **write the test that could refute the finding, and keep the refuted branch.**
+  This pass asserted ECL would mislabel as Apache, measured that it does not, and kept **both**
+  branches in `test_p1035.sh`. 🔵 **The surviving branch is a live detector: the day an ECL payload
+  does carry the Apache title, the audit will say so instead of staying silent.**
+
+### 🔴 The mandated battery: 4 global query families + 4 regional sweeps, **saturated 8 of 8**
+
+🔵 **Every query ran and each result was `grep`-checked against the live corpus rather than judged
+by impression.** 🔴 **Not one returned a repository, platform or figure this KB did not already
+hold.** Re-confirmed and already shelved: DeepTutor · ChatTutor · RosarioSIS · openSIS · Chamilo ·
+ILIAS · Sakai · `frappe/lms` · OpenEduCat (LGPL-3.0) · Artemis · Brazil PL 2.338/2023 · LGPD
+Art. 20 · Colombia CONPES 4144 · China's compulsory curriculum from age six · India Class 3 from
+2026-27 · Singapore 60.9 % diffusion · Japan's 2025 AI Promotion Act · the EU Annex III deferral to
+2027-12-02.
+
+🟡 **Three secondary items were NEW to the corpus and are shelved as secondary-only, named in
+`intel/market.md` under their region**: Ohio State's AI Fluency initiative, the White House
+*National AI Policy Framework*, and three unheld GitHub addresses
+(`Earth-OL-Player/Ai_learn_project`, `frdel/agent-zero`, `DataTalksClub/llm-zoomcamp`) —
+🔴 **none probed this pass, so none is on a shelf page.**
+
+🔴 **And the EMEA channel came back BEHIND this shelf for the third pass running:** it quoted the
+Commission's own page for *"from 2 August 2026 the AI Office started to enforce"* while also
+reporting a **7 May 2026 provisional agreement** moving Annex III to 2027-12-02. 🟢 **This shelf
+holds `Regulation (EU) 2026/1744` of 8 July 2026, verified by three channels in pass 58.**
+🔵 **`Gap 241` is unchanged and still blocked on one `eur-lex` fetch — but note the divergence is
+now in the PROVENANCE as well as the date: pass 103's APAC channel said 7 May, pass 58 pinned 8
+July, and the Commission's page says neither.** 🔴 **`P505`: a channel reporting a corrected claim
+as current does not re-date the gap.**
+
+### 🔴 Gap ledger after this pass
+
+| gap | state |
+|---|---|
+| 🔴 `Gap 398` | **OPEN (new)** — ECL-2.0 invisible to `classify_payload`; permissive corrected **38 → 40**. 🟢 Remedy is written (`classify_ecl`) but **not yet wired into the instrument the next census will run** |
+| 🟢 `Gap 394` | **CLOSED on measurement, and leads #2 and #3 now discharged.** 🟡 The 5 `ABSENT` rows stay unreachable anonymously while `api.github.com` is 403 |
+| 🟡 `Gap 395` | OPEN, unchanged — EMEA grants CODE and not VOCABULARY. 🔵 The written grant request is still the one cheap, dateable action on this registry |
+| 🔴 `Gap 397` / `Gap 396` | OPEN — Caliper and Open Badges implementation layers ABSENT; validators survive. Emitter is a build (`P104-B`) |
+| 🔴 `Gap 393` / `Gap 391` | OPEN — harness bought and released; rubric and label comparability still unbought |
+| 🔴 `Gap 392` | OPEN — modern ML early-warning 6 of 6 unusable |
+| 🔴 `Gap 390` / `T21` | OPEN — PERSUADE 2.0 is `CC-BY-NC-SA-4.0` |
+| 🔴 `Gap 383` | OPEN — the back catalogue stays refused; 🟢 `P1028` confirmed a **third** pass |
+| 🔴 `Gap 241` | OPEN — the Annex III deferral still cannot be cited primarily. 🆕 **Provenance now diverges across three channels as well as the date** |
+| 🆕 🔴 `Gap 399` | **OPEN (new)** — `moodle.org` is `000` from this environment, so the plugin-directory denominator `T30`/`P1033` needs **cannot be measured here at all**. 🔵 A named blocker, not an unattempted lead |
+
+### 🟢 Leads this pass pre-registers for the next one
+
+| # | lead | why it is worth a query |
+|---|---|---|
+| 1 | 🟢 **Wire `classify_ecl` into the NEXT census instrument and re-run the bucket counts over the whole corpus, not just the 99** | 🔴 **`Gap 398` is open precisely because the remedy exists and is not yet in the instrument. The 99-address probe found 2 uncounted permissive rows; the corpus is 1 400+ addresses and has never been audited for this** |
+| 2 | 🔴 **Read the HOLDER line of the three German rows pass 104 called "demonstrably EMEA"** | 🔵 **`P1035` cuts both ways. If a university name cannot place a row in LATAM, it cannot place one in EMEA either — and `fwu-de` / `dini-ag-kim` were placed on org-name reasoning this pass has just invalidated** |
+| 3 | 🟡 **Probe the three NEW addresses this pass shelved as secondary-only** (`Earth-OL-Player/Ai_learn_project`, `frdel/agent-zero`, `DataTalksClub/llm-zoomcamp`) | 🟢 **Cheap, and the first addresses the mandated battery has produced in four passes that this KB did not already hold. `P1023` predicts all three are off-industry; a probe is what settles it** |
+| 4 | 🔴 **Re-probe the 26 `NOGRANT`/`NOCONTROL` rows on a date at least 7 days out, not next pass** | 🔵 **`P1038`. Running it next pass would burn the limb and measure nothing again** |
+| 5 | 🟢 **A written grant request to both addressees of `Gap 395`** | 🟢 **Unchanged, still the cheapest dateable action, and `fwu-kc-extensions` is the precedent to cite** |
+| 6 | 🟡 **Find a channel that reaches `moodle.org`** — a registry mirror, a package index, or the `moodle-plugin-ci` metadata on `packagist` | 🔴 **`Gap 399`. `packagist.org` has never been probed from this session and is the obvious candidate, since Moodle plugins publish there** |
+
 ## 🟢 Hundred-and-fourth pass, 2026-10-10 — **`Gap 394` CLOSED on its measurement limb: all 99 addresses probed, 4 of 4 blind-calibrated against pass 103**; `Gap 397` opened (the Caliper reference implementations are ABSENT at BOTH org names); `Gap 395` CORRECTED — EMEA public-sector supply is LAYER-SPLIT, not grant-less; pass 103's own next-action answered NO; `T28`–`T30` and `P1029`–`P1034` adopted; **`P1023` saturated a THIRD pass**
 
 ⏱️ **Fourteenth pass of this date.** 91: 2026-10-09 23:0x–00:00 UTC · 92: 00:4x–01:3x · 93:

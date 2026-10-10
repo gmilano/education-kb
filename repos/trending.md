@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 105: **six repositories, four licence texts, one family** — the Apereo ECL payloads are pinned by `sha256` at last
+
+🔵 **Pass 104 reported four Apereo-lineage byte counts for one declared licence and left WHICH text
+unpinned. `P1025` says size is not identity. It is pinned now.**
+
+| payload | bytes | `sha256` (16) | repositories carrying **this exact text** |
+|---|---|---|---|
+| A | 11 120 | `0688f62d04f14e4b` | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) |
+| B | 11 340 | `76a975068930323e` | [`opencast/opencast`](https://github.com/opencast/opencast) |
+| C | 11 087 | `a9ea5cca8da2c8d5` | [`Apereo-LAI/lap-sakai-extractor`](https://github.com/Apereo-Learning-Analytics-Initiative/lap-sakai-extractor) |
+| 🟢 **D** | 9 919 | `fb10d1260ddc8dff` | 🟢 **[`LearningAnalyticsProcessor`](https://github.com/Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor) · [`OpenDashboard-api`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-api) · [`OpenDashboard-legacy`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy) — byte- AND `sha256`-identical** |
+
+🟢 **Six repositories, four distinct texts, and all six declare *Educational Community License,
+Version 2.0, April 2007*.** 🔵 **Payload D is ONE text shared by three repositories, not three
+coincidences at the same size — which is exactly the distinction `P1025` exists to force.**
+
+🔴 **And all six are `UNRECOGNISED` to the classifier this KB's census runs**, because the ECL text
+never contains the string `Apache License`. 🟢 **Permissive supply in the last census corrected
+38 → 40.** 🔵 **Full method and both corrected bugs: `compose/code/p1035-regrant-holder-ecl/`.**
+
+### 🔴 The re-grant recheck: **26 probed, 26 unchanged, 0 grants appeared**
+
+🟢 **Every repository the last census found serving no licence payload was re-probed with the
+identical 11-filename list and the same 200-control discipline:**
+
+```
+probed=26 absent=0 grant_appeared=0 still_nogrant=23 still_nocontrol=3
+```
+
+🔴 **Zero upgrades.** 🟢 **But `absent=0` means no repository vanished, and 26 of 26 agreeing across
+two instruments is a second blind calibration.** 🔵 **`P1038`: a grant is a human act on a human
+timescale — re-probing it twice inside one hour measures the instrument, not the supply. The next
+recheck is pre-registered for **at least seven days out**, not next pass.
+
+### 🟡 `sakaiproject/sakai` `LICENSE_HEADER` — `404`, recorded so nobody re-probes it
+
+🔵 **That filename belongs to `LearningAnalyticsProcessor` in `p444`'s table, not to Sakai's root.**
+🟢 **A probed negative is cheaper to publish than to rediscover.**
+
+### 🔴 The trending battery saturated — and `moodle.org` is now a NAMED blocker
+
+🟢 **Four global queries ran; every hit was `grep`-checked against the live corpus.** 🔴 **No repo
+returned that this KB does not hold** — RosarioSIS (GPL-2.0), openSIS, Chamilo, ILIAS, Sakai,
+`frappe/lms`, OpenEduCat (LGPL-3.0), DeepTutor, ChatTutor all already shelved.
+
+🔴 **`moodle.org` returns `http=000` from this environment — `curl: (56) CONNECT tunnel failed,
+response 403`, the same quoted cause as `arxiv.org` and `eur-lex`.** 🟡 **So the plugin-directory
+denominator (`T30`: the Moodle plugin tier is GPL-3.0 or nothing, 7 of 7) **cannot be measured
+here**, and GitHub stays a biased sample of it. 🟢 **Opened as `Gap 399` — a named blocker beats an
+unattempted lead. `packagist.org`, where Moodle plugins also publish, has never been probed and is
+next.**
+
 ## 2026-10-10 — pass 104: the reset's 82 lost addresses are all probed, and the release engineering is on the COPYLEFT side
 
 ⏱️ **Fourteenth pass of this date.** **Append-only.**

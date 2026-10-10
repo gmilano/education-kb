@@ -1,0 +1,1 @@
+probed=26 absent=0 grant_appeared=0 still_nogrant=23 still_nocontrol=3

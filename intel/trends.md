@@ -5,7 +5,7 @@ updated: 2026-10-10
 ---
 
 # Education — current trends
-**Pass 104, 2026-10-10.** ⏱️ **Fourteenth pass of this date.** 🆕 **29 trend sections — `T1`–`T30`, with `T26` refuted in pass 103 and `T28`–`T30` added here.**
+**Pass 105, 2026-10-10.** ⏱️ **Fifteenth pass of this date.** 🆕 **31 trend sections — `T1`–`T32`, with `T26` refuted in pass 103, `T28`–`T30` added in pass 104 and `T31`–`T32` added here.** 🔴 **`T29` is flagged for re-measurement by `T31`: it was derived with a classifier that cannot see this industry's own licence.**
 🟢 **`T27` is new.** 🔴 **`T26` is AMENDED — half of it is refuted, and the refutation is regional.**
 
 - 🟢 **`T27`** — **the permissive, education-specific, release-engineered platform exists exactly
@@ -90,6 +90,67 @@ updated: 2026-10-10
 `the-learning-agency-lab.com`, `www.fosway.com`, `www.cipd.org` — and, carried from pass 99,
 `www.iesalc.unesco.org`, `digital-strategy.ec.europa.eu`, `eur-lex.europa.eu`, `www.kaggle.com`.
 🔵 **Every regulatory and market row added this pass is search-summary grade and says so.**
+
+## T31 — 🆕 p105 The permissive supply in this industry is **systematically undercounted**, and the cause is that education's own licence is unreadable to generic tooling
+
+🔵 **ECL-2.0 — the Educational Community License — is the only OSI-approved licence written FOR
+education. It is the Apache-2.0 text with section 3's patent grant narrowed to education
+communities, and it is permissive.**
+
+🔴 **Measured this pass: the ECL-2.0 payload contains ZERO occurrences of the string
+`Apache License`.** It names the *"Apache 2.0 license"* in lower case. 🟢 **So every licence
+classifier keyed on the Apache title — including the one this KB's own census runs — returns
+`UNRECOGNISED` for it.**
+
+**Why this is a trend and not a bug report:** 🔵 **the undercount is directional.** Generic
+open-source tooling is tuned to the nine common families, and the one family that is
+education-specific is the one it cannot see. 🔴 **So any market scan of education open source
+performed with generic tooling will systematically understate permissive supply, and it will
+understate it exactly at the institutional-platform layer — Sakai, Opencast, the Apereo learning-
+analytics stack — where the mature, procurement-friendly, North-American-HE-governed code lives.**
+
+| measure, this KB's 99-address census | pass 104 | 🟢 **corrected** |
+|---|---|---|
+| permissive | 38 | 🟢 **40** |
+| 🔴 the error | — | 🔴 **5.3 % of permissive supply, from 6 repositories in ONE lineage** |
+
+🟡 **Commercial reading.** When a client's incumbent adviser reports *"the open-source education
+stack is mostly copyleft, so you will have to build"*, 🔵 **ask which tool produced the licence
+column.** 🟢 **If the answer is a scanner rather than a reader, the permissive tier is larger than
+the report says, and `Sakai` and `Opencast` are the two rows most likely to be missing from it.**
+🔴 **`T29` (released supply is copyleft, permissive supply is runtime) is now partly an ARTEFACT of
+this blindness and must be re-measured with an ECL-aware classifier before it is cited again.**
+
+## T32 — 🆕 p105 A repository's LANGUAGE is not its region, and neither is its university's name
+
+🔵 **Pass 104 found eight Spanish/Portuguese-named repositories and refused to call them LATAM
+supply, because three were demonstrably EMEA. This pass resolved the remaining five by reading
+their trees, and the result is a method, not just five rows.**
+
+| placed | by what string | count |
+|---|---|---|
+| 🟢 **LATAM** | `SIGAA` (Brazilian federal university system) · `uan.edu.co` · the country word `Colombia` | 🟢 **3** |
+| EMEA | — | **0** |
+| 🔴 **UNPLACED** | 🔴 no marker anywhere in the tree | 🔴 **2** |
+
+🔴 **And the instrument got one of them WRONG first.** `mietiainvestigacion-creator/api-eduadapt`
+names **Universidad de Córdoba** — which exists in Córdoba, **Spain** and Córdoba, **Colombia**.
+🟢 **A rule placing `universidad de …` in EMEA does not read a region; it invents one.** The row is
+LATAM, and the string that establishes it is the word **Colombia** elsewhere in the same README.
+
+**Why this is a trend:** 🔵 **education supply is published in national languages far more than
+most industries' is, because the buyer is a national ministry or a public university.** 🔴 **That
+makes language the most AVAILABLE regional signal and one of the least reliable — Spanish and
+Portuguese each span two regions, and university names collide across them routinely (`Universidad
+de Córdoba`, `Universidad de Granada`, `Universidad de Santiago`).** 🟢 **The reliable signals are
+narrow: an academic ccTLD, an explicit country word, or a nationally unique system name.**
+
+🟡 **Consequence for this KB, and it cuts against its own history:** 🔴 **`P1035` invalidates
+org-name regional reasoning in BOTH directions.** The three German rows pass 104 called
+"demonstrably EMEA" (`fwu-de`, `dini-ag-kim`) were placed on exactly the reasoning this pass has
+just refuted, and re-reading them is the second lead pre-registered for the next pass.
+🔵 **Two of five rows staying `UNPLACED` is the honest output, and it is the point: an informed gap
+beats a plausible guess, because the guess becomes typed regional data downstream.**
 
 ## T28 — 🆕 p104 The education MCP layer is the LEAST licensed layer this KB has measured
 

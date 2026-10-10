@@ -41,6 +41,63 @@ re-measured by this pass are marked 🆕 p103.** 🔴 **A `—` in the ★ colum
 It never means zero** — and 🟢 **this pass measured the cause again: `api.github.com` is `403` for
 every repository not attached to this session.**
 
+### 🟢 🆕 p105 What pass 105 adds — the shelf's permissive count was **38, not 40**, and this pass's own instrument was wrong twice before it was right
+
+🔵 **No agent joined this shelf. The headline is that two agents already on it were in the wrong
+bucket, and the mechanism that put them there is still running.**
+
+🔴 **`classify_payload` — the licence classifier that `p1029` ran over all 99 addresses in pass 104
+— returns `UNRECOGNISED` for every Educational Community License payload in the Apereo lineage.**
+🟢 **Cause, read from the text rather than inferred: the ECL-2.0 licence contains ZERO occurrences
+of the string `Apache License`.** It names the *"Apache 2.0 license"* in lower case, so a pattern
+keyed on the Apache title never fires.
+
+🔵 **ECL-2.0 is the Apache-2.0 text with section 3's patent grant narrowed to education — it is
+PERMISSIVE, and it is the only OSI-approved licence written for this industry.** 🔴 **So two rows
+Globant can build on were outside the permissive count for two passes:**
+
+| row | bytes | `sha256` (16) | was | 🟢 **is** |
+|---|---|---|---|---|
+| [`Apereo-LAI/lap-sakai-extractor`](https://github.com/Apereo-Learning-Analytics-Initiative/lap-sakai-extractor) | 11 087 | `a9ea5cca8da2c8d5` | 🔴 `UNRECOGNISED` | 🟢 **ECL-2.0 · permissive** |
+| [`Apereo-LAI/OpenDashboard-legacy`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy) | 9 919 | `fb10d1260ddc8dff` | 🔴 `UNRECOGNISED` | 🟢 **ECL-2.0 · permissive** |
+
+🟢 **Permissive 38 → 40; copyleft 22; CC 5; one payload that is not a grant. 40 + 22 + 5 + 1 = 68,
+and the granted total reconciles to the row.**
+
+🟡 **Reading guidance for anyone picking an agent off this shelf:** 🔴 **an `UNRECOGNISED` licence
+column is not a reason to skip a row.** It is three unlike situations under one label — a permissive
+grant the tooling cannot see, a copyleft grant named elsewhere, and a genuine all-rights-reserved
+file called `LICENSE` (`P1029`). 🟢 **Two of the three are buildable, and only reading the payload
+tells you which you have.**
+
+#### 🔴 Two bugs this pass found in its own code, before it found anything about education
+
+🟢 **`test_p1035.sh`: 33 passed, 0 failed — and 9 of the 33 are regressions for this pass's own
+errors.** 🔵 **Both are recorded because both were the kind that publishes wrong data quietly.**
+
+| # | the bug | what it would have published |
+|---|---|---|
+| 1 | 🔴 **`place_string` placed any `universidad de …` string in EMEA.** `mietiainvestigacion-creator/api-eduadapt` names **Universidad de Córdoba** — Córdoba, **Spain** *and* Córdoba, **Colombia** | 🔴 **a LATAM row published as EMEA supply.** 🟢 Corrected: an institution name alone is `UNPLACED`; only a ccTLD, a country word or a nationally unique system name (`SIGAA`, `UNAM`) places a row, and every row carries the string that placed it (`P1035`) |
+| 2 | 🟡 **`declared_name` split ECL into "titled" and "unversioned" families** because the 9 919 B payload carries *"Version 2.0, April 2007"* on a line BELOW its title | 🟡 **one grant reported as two licence families, on line-wrapping alone.** 🟢 Corrected: title and version are sought independently |
+
+🔵 **`P1039`: write the test that could refute the finding and keep the refuted branch.** This pass
+asserted ECL would **mislabel as Apache**, measured that it does not, and kept both branches — so
+the day an ECL payload does carry the Apache title, the audit says so instead of staying silent.
+
+#### 🔴 The agent battery saturated a fifth consecutive pass
+
+🟢 **Four global queries ran, every hit `grep`-checked against the live corpus.** 🔴 **Not one
+returned an education agent this shelf does not hold** — DeepTutor, ChatTutor, Instructional Agents,
+OATutor, pyKT, Artemis (Iris / Athena / Hyperion), `frappe/lms` all already shelved. 🔵 **What the
+query actually returns is general-purpose agent rankings from vendor-neutral blogs — OpenClaw,
+OpenHands, CrewAI, LangGraph, goose, aider — with no education layer, and `P1023` has predicted this
+five passes running.**
+
+🟡 **Three addresses were new to the corpus and are deliberately NOT shelved here, because none was
+probed:** `Earth-OL-Player/Ai_learn_project`, `frdel/agent-zero`, `DataTalksClub/llm-zoomcamp`.
+🔴 **An unprobed address does not go on a shelf page** (`P1026`: a worklist is not a shelf).
+🟢 **All three are pre-registered for probing next pass.**
+
 ### 🟢 🆕 p104 What pass 104 adds — `Gap 394` is probed to the last address, and the MCP layer it recovered is **53 % unusable**
 
 🟢 **Instrument written and executed: `compose/code/p1029-lost-address-recovery/`.**

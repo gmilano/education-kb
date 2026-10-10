@@ -12,6 +12,46 @@ carries a full 40-character SHA.** 🔴 **`api.github.com` = `http=403` for unat
 again this pass; no ★ moved.** 🔴 **`T26`, this page's own trend from pass 102, is REFUTED for the
 student-data layer by rows this repository already held — see immediately below.**
 
+### 🟢 🆕 p105 — the two ECL platform rows are **pinned by `sha256`**, and the reason generic tooling drops them is now measured
+
+🔵 **This page has said for several passes that "ECL is precisely the family generic tooling returns
+as unclassified." It was right, and the CAUSE is now a measurement rather than an observation.**
+
+🔴 **The ECL-2.0 payload contains ZERO occurrences of the string `Apache License`** — it names the
+*"Apache 2.0 license"* in lower case. 🟢 **Any classifier keyed on the Apache title therefore
+returns `UNRECOGNISED`, and `Sakai` and `Opencast` fall out of the permissive tier of every scan
+that uses one.**
+
+| platform | ECL payload | bytes | `sha256` (16) | permissive? |
+|---|---|---|---|---|
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `LICENSE` | 11 120 | `0688f62d04f14e4b` | 🟢 **yes — ECL-2.0** |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | `LICENSE` | 11 340 | `76a975068930323e` | 🟢 **yes — ECL-2.0** |
+| [`Apereo-LAI/lap-sakai-extractor`](https://github.com/Apereo-Learning-Analytics-Initiative/lap-sakai-extractor) | `LICENSE` | 11 087 | `a9ea5cca8da2c8d5` | 🟢 **yes — ECL-2.0** |
+| [`Apereo-LAI/LearningAnalyticsProcessor`](https://github.com/Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor) | `LICENSE` | 9 919 | `fb10d1260ddc8dff` | 🟢 **yes — ECL-2.0** |
+| [`Apereo-LAI/OpenDashboard-api`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-api) | `LICENSE` | 9 919 | `fb10d1260ddc8dff` | 🟢 **yes — identical text** |
+| [`Apereo-LAI/OpenDashboard-legacy`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy) | `LICENSE` | 9 919 | `fb10d1260ddc8dff` | 🟢 **yes — identical text** |
+
+🟢 **Six platform and analytics rows, four distinct texts, all declaring *Educational Community
+License, Version 2.0, April 2007*.** 🔵 **Payload D is ONE text carried unchanged by three
+repositories — the Apereo learning-analytics stack shares its grant, which `P1025` lets this page
+state as a fact rather than an impression.**
+
+#### 🟡 What to do with this in front of a client
+
+🔴 **The failure mode is not academic.** A due-diligence report produced with a generic scanner will
+show `Sakai` and `Opencast` with no recognised licence, and a risk-averse client reads "no
+recognised licence" as "do not touch". 🟢 **The two most mature, best-governed, permissively licensed
+platforms in higher education then drop out of the shortlist for a string-matching reason.**
+
+🟢 **The one-line answer to give:** *ECL-2.0 is Apache-2.0 with the patent grant narrowed to
+education communities; it is OSI-approved, it is permissive, and here is the `sha256` of the exact
+text this repository ships.* 🔵 **That is a checkable claim, which is why the hashes are on this
+page and not just in the instrument.**
+
+🟡 **And the governance point is worth more than the licence point for North American HE:** the
+Apereo Foundation's committee process is a procurement asset. 🟢 **A permissive licence plus a
+foundation with named governance is the combination a university counsel approves fastest.**
+
 ### 🟢 🆕 p104 — sixteen platform rows recovered from the reset, and the COPYLEFT half is where the release engineering lives
 
 🔵 **`p1029-lost-address-recovery` probed all 99 addresses `Gap 394` carried.** 🔴 **The result

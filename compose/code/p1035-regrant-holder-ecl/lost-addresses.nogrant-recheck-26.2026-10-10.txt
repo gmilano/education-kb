@@ -1,0 +1,30 @@
+# INSTRUMENT-INPUT-LIST: not a shelf page. P1026/P1034.
+# p1035 limb A — the 23 LIVE-NOGRANT and 3 LIVE-NOCONTROL rows of
+# p1029/result.2026-10-10.tsv, re-probed for an ADDED grant / a reachable control.
+# Pre-registered as pass 104 lead #2.
+apereo-learning-analytics-initiative/opendashboard-ux
+classifiedstudentkabir/sign-language-interpreter
+collinstatang/admissionsystem
+dddanielliu/nccu-moodle-mcp
+dreathward/sistema-de-aprendizaje-en-linea
+git-pratap-shrey/uniai_mcp
+hkuds/ai-researcher
+hocphi-info/hocphi-info-mcp
+morganrcu/awesome-eu-ai-act
+plyght/studentvue
+poorvika12-hub/student_mcp
+sadaf987/github_sdk
+vedantgohel/student-eye
+vedshh/tutor-ai
+xgabrielcv/auto-matricula-sigaa-unb
+aiverify-foundation/llm-evals-catalogue
+alvarogregori/moodle-ai-graded-assignment
+dini-ag-kim/school-curriculum-pg
+fwu-de/schulart-ontologie
+ink-waffle/moodle-mcp
+ink-waffle/sisu-mcp
+kaiman-p/tutor-adaptativo-ia
+mietiainvestigacion-creator/api-eduadapt
+apereo-learning-analytics-initiative/sakaixapi-provider
+gego-k12/plugin-hello-teacher
+marcusgreen/moodle-tool_aiconnect
