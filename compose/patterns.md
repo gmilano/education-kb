@@ -5,7 +5,7 @@ updated: 2026-10-10
 ---
 
 # Education — compose patterns
-**Pass 103, 2026-10-10.** ⏱️ **Thirteenth pass of this date.** 🆕 **Two patterns added.**
+**Pass 104, 2026-10-10.** ⏱️ **Fourteenth pass of this date.** 🆕 **Two patterns added (`P104-A`, `P104-B`).**
 🟢 **`P103-A`** — the pedagogical-evaluation gate, which this page priced as UNBUYABLE one pass ago:
 🔴 **the benchmark's labels are still ungranted (`Gap 393`), but the HARNESS is Apache-2.0 with 26
 releases** (`aiverify-foundation/moonshot`), so the gate is buildable and only the comparability is
@@ -153,6 +153,122 @@ stack (`repos/foundations.md` Tier 2c) — and `P92-A` stays on the page, becaus
 decides engagements rather than in detail. **`P93-B`** is the first pattern in this KB anchored on a
 **national curriculum published as audited open data**, and the first with a **measured** justification for
 its own central design choice.
+
+## 🟢 🆕 p104 `P104-A` — the sovereign, no-egress AI tutor on the client's existing LMS (EMEA first, LATAM second)
+
+🔵 **Every component below was probed in pass 104: grant read as a payload at a measured ref, bytes
+and `sha256` recorded, tags counted** (`compose/code/p1029-lost-address-recovery/result.2026-10-10.tsv`).
+
+### What you are building
+
+A tutoring agent that runs **entirely inside the institution's network**, bolted onto the LMS it
+already has, with a **licence boundary you can defend to a procurement lawyer** and an **evaluation
+gate that produces an artefact an auditor can read**.
+
+🔴 **This is the pattern for every buyer who cannot send student text to a third-party API** — which,
+after the EU AI Act's high-risk classification of education uses, is most EMEA public institutions.
+
+### The parts, and why each one
+
+| part | repo | grant · bytes | tags | role |
+|---|---|---|---|---|
+| **deployment topology** | [`sngdtechnologies/ai-moodle-security`](https://github.com/sngdtechnologies/ai-moodle-security) | 🟢 **BSD-2-Clause** · 1 299 B | 0 | 🔵 **The reference architecture: 7 containers, 5 Docker networks, Moodle and Ollama on INTERNAL networks with no egress, Caddy + Coraza WAF (OWASP CRS) the only exposed surface, and a four-stage prompt-injection guard.** A Master's-thesis prototype — 🔴 **treat it as a DESIGN to re-implement, not a dependency: zero releases** |
+| **inference runtime** | [`ollama/ollama`](https://github.com/ollama/ollama) | 🟢 **MIT** · 1 058 B | 🟢 **689** | Local model serving. 🔵 **This KB carried it on no page until pass 104** |
+| **model backends** | [`nextcloud/llm2`](https://github.com/nextcloud/llm2) · [`translate2`](https://github.com/nextcloud/translate2) | 🟢 **MIT** · 1 069 B each | 32 / 12 | On-prem text and translation services. 🟢 **MIT because the holder is `cloud-py-api`** (`P1031`) |
+| **LMS bridge** | [`a2br/moodle-mcp`](https://github.com/a2br/moodle-mcp) | 🟢 **MIT** · 1 073 B | 🔴 **0** | Moodle web-services as MCP tools. 🟢 **MIT is available here precisely because it is OUTSIDE the plugin tree** (`P1033`) |
+| **evaluation gate** | [`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) + [`moonshot-cicd`](https://github.com/aiverify-foundation/moonshot-cicd) + [`moonshot-ui`](https://github.com/aiverify-foundation/moonshot-ui) | 🟢 **Apache-2.0** · 11 347 / 11 357 / 11 347 B | 🟢 **26 / 6 / 23** | 🔵 **All three parts granted and released.** `moonshot` runs the recipes, `moonshot-cicd` makes the gate a pipeline step, `moonshot-ui` is the screen you show the client |
+| **orchestration** | [`temporalio/temporal`](https://github.com/temporalio/temporal) | 🟢 **MIT** · 1 152 B | 🟢 **573** | Durable retries and compensation across grading passes |
+| **access audit** | [`mizcausevic-dev/student-data-access-audit-stream`](https://github.com/mizcausevic-dev/student-data-access-audit-stream) | 🟢 **MIT** · 1 069 B | 🔴 **0** | Student-record access trail. 🔴 **Read it as a pattern, write your own** |
+
+### 🔴 What you must NOT take, and why — read this before any estimate
+
+- 🔴 **Anything inside the Moodle plugin tree is GPL-3.0.** `P1033`: 7 of 7 measured plugin rows,
+  including Microsoft's own `o365-moodle` at 695 tags. 🟢 **Keep your proprietary logic in the MCP
+  service and the container topology; put only thin glue in `aiprovider_*`.**
+- 🔴 **`nextcloud/integration_openai` and `context_chat_backend` are AGPL-3.0.** Same org as the MIT
+  backends. 🔵 **Reading the org name gets this wrong in both directions** (`P1031`).
+- 🔴 **`aiverify-foundation/llm-evals-catalogue` has NO grant and zero tags.** 🔵 **So the harness is
+  a purchase and the RUBRIC is not** — the four-dimension, three-value rubric is re-implemented as a
+  moonshot *recipe* (own dataset of input-target pairs + prompt template + metric + grading scale).
+  🔴 **`P103-A`'s rubric cost stands in full; only its UI cost is discharged.**
+- 🔴 **`yuanjiusheng/cloud-learning-ce` serves a `LICENSE` and is all-rights-reserved** (`P1029`).
+- 🔴 **Attention/engagement monitoring** (`yptheangel/attention-monitor`, Apache-2.0) is technically
+  available and 🔴 **legally hazardous**: Tennessee `SB 1580` bars AI tools from assessing or
+  screening a pupil's mental health, and California `AB 1159` is in the same family. 🟢 **Leave it
+  out of the EMEA build and do not offer it in North America without counsel.**
+
+### Wiring, in order
+
+1. **Stand up the topology first, not the model.** Two internal Docker networks; LMS and Ollama get
+   **no egress route**; Caddy + Coraza terminates 443 and is the only exposed container. 🔵 **The
+   no-egress property is the entire commercial proposition — prove it with a network test in week 1,
+   because it is also the thing a client can verify themselves.**
+2. **`ollama` + `llm2`/`translate2` behind the internal network.** Pin model weights by digest.
+   🔴 **Check each model's OWN licence — `Gap 390`/`P1007`: the weights, not the code, are what a
+   commercial engagement cannot always take.**
+3. **`moodle-mcp` as the only path from agent to LMS**, over Moodle web services with a scoped
+   token. 🟢 **One permissive seam, auditable, and your IP lives on this side of it.**
+4. **Four-stage input guard before any prompt reaches the model**, per the topology's design.
+5. **`moonshot` recipes as a merge gate via `moonshot-cicd`.** Encode the pedagogical rubric as a
+   recipe with an explicit grading scale; `moonshot-ui` is the client-facing evidence screen.
+6. **`temporal` around multi-pass grading**; **access-audit stream** on every student-record read.
+7. **Then** the tutor prompt-engineering. 🔴 **In this order. A tutor demo with an egress route is
+   not a smaller version of this pattern — it is a different, unsellable product.**
+
+### Where it sells, by region
+
+- 🟢 **EMEA — first, and the licence story is the differentiator.** The EU AI Act classes education
+  uses as high-risk; sovereignty is procurement language, not marketing.
+  🔵 **`fwu-de/fwu-kc-extensions` (Apache-2.0, 118 tags) joins the school identity layer to this
+  stack.** 🔴 **What is NOT available is the curriculum/subject VOCABULARY: `fwu-de/schulfach-`
+  and `schulart-ontologie` and `dini-ag-kim/school-curriculum-pg` are all three ungranted** — so
+  the personalisation keys are a build, or a written grant request (`Gap 395`).
+- 🟢 **LATAM — second, and for a different reason: cost and connectivity, not regulation.** A
+  no-egress stack on commodity hardware removes per-token cost and tolerates poor links.
+  🔴 **Five of the Spanish/Portuguese-named rows in this corpus are ungranted**, so expect to supply
+  the components rather than adopt them.
+- 🟡 **APAC — the evaluation half travels better than the tutor half.** The harness comes from the
+  foundation Singapore's regulator convened; 🔵 **`sukhrobyangibaev/mcp_hemis_student` (MIT) shows
+  the same MCP seam already drawn against a NATIONAL student information system.**
+- 🟡 **North America — the weakest fit for the sovereign framing** (cloud procurement is normal) and
+  🟢 **the strongest for the audit limb**: ship the `moonshot` gate and the access-audit stream alone,
+  against `SB 1580`/`AB 1159` exposure.
+
+### Honest risks
+
+- 🔴 **Two of the seven parts have zero releases** (`ai-moodle-security`, the audit stream) and one
+  more has zero (`moodle-mcp`). 🔵 **Budget them as designs to re-implement. The pattern is sound;
+  three of its parts are not products.**
+- 🔴 **The topology is one author's Master's thesis.** Its architecture is checkable and its
+  operational maturity is not. 🟢 **Re-implement the topology in the client's own IaC.**
+- 🔴 **Prompt-injection mitigation is a four-stage guard, not a solution.** Say so in the SOW.
+- 🟡 **`moonshot` recipes make the gate auditable, not COMPARABLE.** 🔵 **The labels remain the
+  ungranted asset** (`Gap 393`) — comparability across institutions is still unbought.
+
+## 🟢 🆕 p104 `P104-B` — the US rostering bridge, and it is an ADOPT
+
+🔵 **Short pattern, because the parts are few and all permissive.**
+
+🔴 **US K-12 has two rostering standards and clients run both.** 🟢 **Pass 104 recovered the bridge:**
+
+| part | repo | grant · bytes | tags |
+|---|---|---|---|
+| rostering bridge | [`csr2017/edfi-oneroster`](https://github.com/csr2017/edfi-oneroster) | 🟢 **Apache-2.0** · 10 173 B | 🟢 **8** |
+| data standard | [`ed-fi-alliance-oss/Ed-Fi-Data-Standard`](https://github.com/ed-fi-alliance-oss/Ed-Fi-Data-Standard) | 🟢 **Apache-2.0** · 10 173 B | 🟢 21 |
+| operational datastore | [`ed-fi-alliance-oss/Ed-Fi-ODS`](https://github.com/ed-fi-alliance-oss/Ed-Fi-ODS) | 🟢 **Apache-2.0** · 10 172 B | 🟢 42 |
+| district MCP surface | [`jibberswrld/fcps-school-mcp`](https://github.com/jibberswrld/fcps-school-mcp) | 🟢 **MIT** · 1 073 B | 🟢 4 |
+| analytics emitter | 🔴 **BUILD — see below** | — | — |
+
+🔵 **All three Ed-Fi-family payloads are 10 172–10 173 B: `P1024`'s omitted-appendix Apache variant,
+now confirmed a third time and across two organisations.**
+
+🔴 **The one part you must write: the learning-analytics EMITTER.** `Gap 397`:
+`1edtech/caliper-php` and `imsglobal/caliper-python` are **ABSENT at both the current and the
+predecessor org name**. 🟢 **What survives is the validator —
+[`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core),
+Apache-2.0, 28 tags.** 🔵 **So: conform to the published specification, validate against the
+surviving validator, and own the emitter.** 🟡 **`T17`: 1EdTech grants the measuring side
+permissively and no longer ships the implementing side at all.**
 
 ## 🟢 🆕 p103 `P103-A` — the pedagogical-evaluation gate, built on a harness you can actually license (APAC first, global second)
 

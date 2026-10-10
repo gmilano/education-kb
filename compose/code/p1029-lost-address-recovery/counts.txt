@@ -1,0 +1,1 @@
+live=94 absent=5 with_grant=68 no_grant=23 no_control=3

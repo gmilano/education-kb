@@ -4,6 +4,145 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 104: the reset's 82 lost addresses are all probed, and the release engineering is on the COPYLEFT side
+
+⏱️ **Fourteenth pass of this date.** **Append-only.**
+
+🟢 **`compose/code/p1029-lost-address-recovery/` — written and executed this pass.** 18 tests passed,
+0 failed; `live=94 absent=5 with_grant=68 no_grant=23 no_control=3` over the 99 addresses `Gap 394`
+carried. 🔵 **Blind calibration against pass 103: 4 of 4 to the byte and the tag.**
+
+### 🟢 Repos recovered with a grant AND release history
+
+| repo | grant · bytes | ref · tags | region |
+|---|---|---|---|
+| [`microsoft/o365-moodle`](https://github.com/microsoft/o365-moodle) | 🔴 GPL-3.0 · 35 147 B | `master` · 🟢 **695** | 🟢 **North America** |
+| [`ollama/ollama`](https://github.com/ollama/ollama) | 🟢 **MIT** · 1 058 B | `main` · 🟢 **689** | 🟢 **North America** |
+| [`temporalio/temporal`](https://github.com/temporalio/temporal) | 🟢 **MIT** · 1 152 B | `main` · 🟢 **573** | 🟢 **North America** |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🔴 LGPL-3.0 · 7 652 B | 🔴 `v3.0.x-develop` · 🟢 **319** | 🔵 unplaced |
+| [`elgg/elgg`](https://github.com/elgg/elgg) | 🔴 GPL-2.0 · 17 173 B | 🔴 `7.x` · 🟢 **309** | 🔵 unplaced |
+| [`pressbooks/pressbooks`](https://github.com/pressbooks/pressbooks) | 🔴 GPL-3.0 · 35 147 B | 🔴 `dev` · 🟢 **302** | 🟢 **North America** |
+| [`saylordotorg/moodle-local_ai_course_assistant`](https://github.com/saylordotorg/moodle-local_ai_course_assistant) | 🔴 GPL-3.0 · 35 149 B | `main` · 🟢 **295** | 🟢 **North America** |
+| [`huggingface/transformers`](https://github.com/huggingface/transformers) | 🟢 **Apache-2.0** · 11 418 B | `main` · 🟢 **291** | 🟡 **EMEA / North America** |
+| [`yukazakiri/koakademy`](https://github.com/yukazakiri/koakademy) | 🔴 AGPL-3.0 · 34 523 B | `master` · 🟢 **232** | 🔵 unplaced |
+| [`openmage/magento-lts`](https://github.com/openmage/magento-lts) | 🔴 **OSL-3.0** · 10 293 B | `main` · 🟢 **163** | 🔵 unplaced |
+| [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 **BSD-3-Clause** · 1 504 B | `main` · 🟢 **136** | 🟢 **North America** |
+| [`manifoldscholar/manifold`](https://github.com/manifoldscholar/manifold) | 🔴 GPL-3.0 · 35 141 B | `main` · 🟢 **121** | 🟢 **North America** |
+| [`fwu-de/fwu-kc-extensions`](https://github.com/fwu-de/fwu-kc-extensions) | 🟢 **Apache-2.0** · 11 357 B | `main` · 🟢 **118** | 🟢 **EMEA** (Germany) |
+| [`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud) | 🔴 GPL-2.0 · 18 092 B | 🔴 `v2` · 🟢 **67** | 🟢 **APAC** (China) |
+| [`nextcloud/integration_openai`](https://github.com/nextcloud/integration_openai) | 🔴 AGPL-3.0 · 34 519 B | `main` · 🟢 **58** | 🟢 **EMEA** |
+| [`nextcloud/context_chat_backend`](https://github.com/nextcloud/context_chat_backend) | 🔴 AGPL-3.0 · 34 520 B | `master` · 🟢 **53** | 🟢 **EMEA** |
+| [`libretexts/shapeshift`](https://github.com/libretexts/shapeshift) | 🟢 **MIT** · 1 067 B | `main` · 🟢 **45** | 🟢 **North America** |
+| [`libretexts/davis`](https://github.com/libretexts/davis) | 🟢 **MIT** · 1 073 B | `main` · 🟢 **32** | 🟢 **North America** |
+| [`nextcloud/llm2`](https://github.com/nextcloud/llm2) | 🟢 **MIT** · 1 069 B | `main` · 🟢 **32** | 🟢 **EMEA** |
+| [`aiverify-foundation/moonshot-ui`](https://github.com/aiverify-foundation/moonshot-ui) | 🟢 **Apache-2.0** · 11 347 B | `main` · 🟢 **23** | 🟢 **APAC** (Singapore) |
+| [`moodlehq/moodle-tool_dataprivacy`](https://github.com/moodlehq/moodle-tool_dataprivacy) | 🔴 GPL-3.0 · 35 147 B | 🔴 `MOODLE_34_STABLE` · 🟢 **20** | 🔵 unplaced |
+| [`openstax/osbooks-college-physics-bundle`](https://github.com/openstax/osbooks-college-physics-bundle) | 🟡 CC family · 21 442 B | `main` · 🟢 **16** | 🟢 **North America** |
+| [`nextcloud/translate2`](https://github.com/nextcloud/translate2) | 🟢 **MIT** · 1 069 B | `main` · 🟢 **12** | 🟢 **EMEA** |
+| [`nextcloud/text2image_stablediffusion2`](https://github.com/nextcloud/text2image_stablediffusion2) | 🟢 **MIT** · 1 098 B | `main` · 🟢 **12** | 🟢 **EMEA** |
+| [`limekiller/moodle-block_openai_chat`](https://github.com/limekiller/moodle-block_openai_chat) | 🔴 GPL-3.0 · 35 149 B | `main` · 🟢 10 | 🔵 unplaced |
+| [`jeanlucio/moodle-local_aihub`](https://github.com/jeanlucio/moodle-local_aihub) | 🔴 GPL-3.0 · 35 149 B | `main` · 🟢 9 | 🔵 unplaced |
+| [`csr2017/edfi-oneroster`](https://github.com/csr2017/edfi-oneroster) | 🟢 **Apache-2.0** · 10 173 B | `main` · 🟢 8 | 🟢 **North America** |
+| [`eai6/ai-tutor`](https://github.com/eai6/ai-tutor) | 🟢 **MIT** · 1 090 B | `main` · 🟢 8 | 🔵 unplaced |
+| [`tadreeb-lms/tadreeblms`](https://github.com/tadreeb-lms/tadreeblms) | 🔴 AGPL-3.0 · 34 523 B | `main` · 🟢 6 | 🟡 **EMEA** (Arabic) |
+| [`aiverify-foundation/moonshot-cicd`](https://github.com/aiverify-foundation/moonshot-cicd) | 🟢 **Apache-2.0** · 11 357 B | `main` · 🟢 6 | 🟢 **APAC** |
+| [`openfun/xblock-proctor-exam`](https://github.com/openfun/xblock-proctor-exam) | 🔴 AGPL-3.0 · 29 077 B | `master` · 🟢 4 | 🟢 **EMEA** (France) |
+| [`jibberswrld/fcps-school-mcp`](https://github.com/jibberswrld/fcps-school-mcp) | 🟢 **MIT** · 1 073 B | `main` · 🟢 4 | 🟢 **North America** (district) |
+| [`apereo-learning-analytics-initiative/opendashboard-legacy`](https://github.com/apereo-learning-analytics-initiative/opendashboard-legacy) | 🟡 **ECL-2.0** · 9 919 B | `master` · 🟢 3 | 🟢 **North America** (Apereo) |
+| [`ahnopologetic/canvas-lms-mcp`](https://github.com/ahnopologetic/canvas-lms-mcp) | 🟢 **MIT** · 1 091 B | `main` · 🟢 3 | 🔵 unplaced |
+| [`marc-shade/docsingest`](https://github.com/marc-shade/docsingest) | 🟢 **MIT** · 1 079 B | `main` · 2 | 🔵 unplaced |
+| [`ait0u5hi/canvas-scholar-mcp`](https://github.com/ait0u5hi/canvas-scholar-mcp) | 🟢 **MIT** · 1 065 B | `main` · 1 | 🔵 unplaced |
+| [`sukhrobyangibaev/mcp_hemis_student`](https://github.com/sukhrobyangibaev/mcp_hemis_student) | 🟢 **MIT** · 1 074 B | `main` · 1 | 🟢 **APAC** (Uzbekistan) |
+| [`arashactive/laramint`](https://github.com/arashactive/laramint) | 🔴 GPL-3.0 · 35 149 B | `main` · 1 | 🔵 unplaced |
+| [`autism-technology-research-syndicate/sealapplication`](https://github.com/autism-technology-research-syndicate/sealapplication) | 🔴 GPL-3.0 · 35 149 B | `main` · 1 | 🔵 unplaced — accessibility/SEN |
+
+🔵 **The permissive rows with ZERO releases are listed on `agents/top.md` and in the result TSV, not
+here: 19 of 38 permissive rows have never cut a tag, and a trending page that mixed them with the
+above would misreport the supply.**
+
+### 🔴 `Gap 397` — the Caliper reference implementations are gone at BOTH org names
+
+🔴 `1edtech/caliper-php` **ABSENT** · `imsglobal/caliper-python` **ABSENT**. 🔵 **Same shape as
+`Gap 396`'s badgr sweep: 1EdTech ships specs and validators; the implementation layer of both its
+Open Badges and Caliper standards does not resolve.**
+
+### 🔴 The five addresses that no longer resolve
+
+`1edtech/caliper-php` · `imsglobal/caliper-python` · `concentricsky/badgr-server` ·
+`owentaylor/canvas-mcp` · `imazhar101/mcp-canvas-server`
+
+🔵 **Anonymous resolution only — a private repo fails identically to a deleted one, so the class is
+`ABSENT`, never "deleted".** 🔴 **Three of the five are the standards-implementation layer and two
+are Canvas MCP servers.**
+
+### 🔴 The 23 addresses that resolve with NO grant
+
+🔵 **Each has a clean 200-control, so "no licence" is measured, not inferred from a broken channel.**
+🟢 **Three further rows (`gego-k12/plugin-hello-teacher`,
+`apereo-learning-analytics-initiative/sakaixapi-provider`, `marcusgreen/moodle-tool_aiconnect`) are
+`LIVE-NOCONTROL`: the control 404s too, so they are UNMEASURABLE and are not counted as ungranted.**
+
+🔴 **The ones that cost this KB something:**
+[`aiverify-foundation/llm-evals-catalogue`](https://github.com/aiverify-foundation/llm-evals-catalogue)
+(26 342 B README, 0 tags — pass 103's listed next-action, answered NO) ·
+[`fwu-de/schulart-ontologie`](https://github.com/fwu-de/schulart-ontologie) ·
+[`dini-ag-kim/school-curriculum-pg`](https://github.com/dini-ag-kim/school-curriculum-pg) ·
+[`hkuds/ai-researcher`](https://github.com/hkuds/ai-researcher) 🔵 *(and note `hkuds/paper2slides`
+and `hkuds/videoagent` from the SAME lab ARE MIT — the grant is per-repo, not per-lab)* ·
+`ink-waffle/moodle-mcp` · `ink-waffle/sisu-mcp` · `dddanielliu/nccu-moodle-mcp` ·
+`git-pratap-shrey/uniai_mcp` · `poorvika12-hub/student_mcp` · `hocphi-info/hocphi-info-mcp` ·
+`alvarogregori/moodle-ai-graded-assignment` · `kaiman-p/tutor-adaptativo-ia` ·
+`mietiainvestigacion-creator/api-eduadapt` · `morganrcu/awesome-eu-ai-act` ·
+`apereo-learning-analytics-initiative/opendashboard-ux` · `plyght/studentvue` ·
+`xgabrielcv/auto-matricula-sigaa-unb` 🔵 *(LATAM — UnB enrolment automation)* ·
+`dreathward/sistema-de-aprendizaje-en-linea` 🔵 *(LATAM)* · `collinstatang/admissionsystem` ·
+`classifiedstudentkabir/sign-language-interpreter` · `vedantgohel/student-eye` ·
+`vedshh/tutor-ai` · `sadaf987/github_sdk`
+
+#### 🟡 A lead this pass DECLARES rather than places — the Spanish- and Portuguese-named rows
+
+🔵 **Eight recovered rows carry Spanish- or Portuguese-language names. Their grant distribution is
+lopsided, and this KB must say what it can and cannot conclude from that.**
+
+| row | status · grant |
+|---|---|
+| `xgabrielcv/auto-matricula-sigaa-unb` 🔵 *(SIGAA/UnB — Brazil)* | 🔴 **no payload** |
+| `dreathward/sistema-de-aprendizaje-en-linea` | 🔴 **no payload** |
+| `kaiman-p/tutor-adaptativo-ia` | 🔴 **no payload** |
+| `mietiainvestigacion-creator/api-eduadapt` | 🔴 **no payload** |
+| `alvarogregori/moodle-ai-graded-assignment` | 🔴 **no payload** |
+| `hefi002/tfg-mcp-moodle-server` 🔵 *(TFG — a Spanish undergraduate thesis)* | 🟡 GPL-3.0 |
+| `surlabs/aichatformoodle` | 🟡 GPL-3.0 |
+| `universita-di-ferrara/moodle-aiprovider_gemini` 🔵 *(Italian, not Spanish)* | 🟡 GPL-3.0 |
+
+🔴 **5 of 8 carry no grant, and not one of the 8 is permissive.** 🔴 **What this pass must NOT do is
+call that a LATAM finding: `TFG` and `surlabs` are Spanish and `universita-di-ferrara` is Italian —
+all EMEA — and a repository's language does not place its holder** (`P1012`, `P184`). 🟢 **So it is
+recorded as a LEAD with a named next measurement: read the holder line of each of the five ungranted
+rows, and only then split this table by region.** 🔵 **The one thing already safe to say is layer-shaped rather than regional, and it was CHECKED
+rather than assumed.**
+
+#### 🟢 `P1033` — the GPL boundary is the PLUGIN TREE, and permissive Moodle work lives just outside it
+
+🔴 **Every Moodle-plugin row in this corpus that carries a grant carries GPL-3.0. Seven of seven.**
+`moodle-local_aihub` · `moodle-block_openai_chat` · `moodle-tool_dataprivacy` ·
+`moodle-local_ai_course_assistant` · `moodle-aiprovider_gemini` · `aichatformoodle` · `o365-moodle`.
+*(Plus `alvarogregori/moodle-ai-graded-assignment` ungranted and `marcusgreen/moodle-tool_aiconnect`
+unmeasurable.)*
+
+🟢 **And the two permissive Moodle-adjacent rows are permissive because they sit OUTSIDE that tree —
+verified by probing for the root `version.php` that makes a directory a Moodle plugin:**
+
+| row | root `version.php` | grant | what it actually is |
+|---|---|---|---|
+| [`jeanlucio/moodle-local_aihub`](https://github.com/jeanlucio/moodle-local_aihub) | 🔴 **200 — it IS a plugin tree** | 🔴 GPL-3.0 | installed inside Moodle |
+| [`a2br/moodle-mcp`](https://github.com/a2br/moodle-mcp) | 🟢 **404** | 🟢 **MIT** | an external MCP client speaking to Moodle's web-service API |
+| [`sngdtechnologies/ai-moodle-security`](https://github.com/sngdtechnologies/ai-moodle-security) | 🟢 **404** | 🟢 **BSD-2-Clause** | 🔵 **a containerised DEPLOYMENT topology around Moodle** — it ships a plugin (`aiprovider_ollamasecure`) but is not one |
+
+🔵 **So the rule an engagement can act on: code that loads inside Moodle inherits GPL-3.0; code that
+talks to Moodle across its API, or that wraps it in infrastructure, does not.** 🟢 **That is the
+single most commercially load-bearing line this pass produced, and it is three HTTP probes wide.**
+
 ## 2026-10-10 — pass 103: a national-programme supply this file already held, found by censusing its own archive
 
 ⏱️ **Thirteenth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93:

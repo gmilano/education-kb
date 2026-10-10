@@ -6,11 +6,81 @@ updated: 2026-10-10
 
 # Education — vertical platforms you can customise with AI
 
-**Pass 103, 2026-10-10.** ⏱️ **Thirteenth pass of this date** (101 ran 09:4x–10:xx UTC; 102,
+**Pass 104, 2026-10-10.** ⏱️ **Fourteenth pass of this date** (101 ran 09:4x–10:xx UTC; 102,
 10:4x–11:xx; this one 12:4x–13:xx). 🟢 **`P1005` applied from the outset — every address below
 carries a full 40-character SHA.** 🔴 **`api.github.com` = `http=403` for unattached repos, measured
 again this pass; no ★ moved.** 🔴 **`T26`, this page's own trend from pass 102, is REFUTED for the
 student-data layer by rows this repository already held — see immediately below.**
+
+### 🟢 🆕 p104 — sixteen platform rows recovered from the reset, and the COPYLEFT half is where the release engineering lives
+
+🔵 **`p1029-lost-address-recovery` probed all 99 addresses `Gap 394` carried.** 🔴 **The result
+inverts the shape this page has reported for passes: among the recovered rows, the heavily-released
+platforms are almost all copyleft, and the permissive rows are almost all unreleased.**
+
+| platform | grant · bytes | ref · tags | region | what it is |
+|---|---|---|---|---|
+| [`microsoft/o365-moodle`](https://github.com/microsoft/o365-moodle) | 🔴 **GPL-3.0** · 35 147 B | `master` · 🟢 **695** | 🟢 **North America** (Microsoft) | 🔵 **The most released row in the entire corpus.** Microsoft's own Moodle ↔ Microsoft 365 integration, under Moodle's licence, not Microsoft's |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🔴 **LGPL-3.0** · 7 652 B | 🔴 `v3.0.x-develop` · 🟢 **319** | 🔵 unplaced | Virtual classroom. Re-confirmed byte-exact this pass |
+| [`elgg/elgg`](https://github.com/elgg/elgg) | 🔴 **GPL-2.0** · `LICENSE.txt` 17 173 B | 🔴 `7.x` · 🟢 **309** | 🔵 unplaced | Social-learning network engine |
+| [`pressbooks/pressbooks`](https://github.com/pressbooks/pressbooks) | 🔴 **GPL-3.0** · `LICENSE.md` 35 147 B | 🔴 `dev` · 🟢 **302** | 🟢 **North America** | Open-textbook authoring and publishing |
+| [`saylordotorg/moodle-local_ai_course_assistant`](https://github.com/saylordotorg/moodle-local_ai_course_assistant) | 🔴 **GPL-3.0** · 35 149 B | `main` · 🟢 **295** | 🟢 **North America** (Saylor Academy) | 🔵 **An AI course assistant INSIDE Moodle, from a degree-granting nonprofit** — 295 tags |
+| [`yukazakiri/koakademy`](https://github.com/yukazakiri/koakademy) | 🔴 **AGPL-3.0** · `LICENSE.md` 34 523 B | `master` · 🟢 **232** | 🔵 unplaced | Full academy platform. 🔴 **Network copyleft** |
+| [`openmage/magento-lts`](https://github.com/openmage/magento-lts) | 🔴 **OSL-3.0** · `LICENSE.txt` 10 293 B | `main` · 🟢 **163** | 🔵 unplaced | 🔴 **Commerce, not education** — carried only because the reset dropped it. OSL-3.0 is a reciprocal licence, not permissive |
+| [`manifoldscholar/manifold`](https://github.com/manifoldscholar/manifold) | 🔴 **GPL-3.0** · `LICENSE.md` 35 141 B | `main` · 🟢 **121** | 🟢 **North America** | Scholarly-monograph reading platform |
+| [`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud) | 🔴 **GPL-2.0** · 18 092 B | 🔴 `v2` · 🟢 **67** | 🟢 **APAC** (China) | 🔵 **A Chinese-market online-course platform with real release history** |
+| [`nextcloud/integration_openai`](https://github.com/nextcloud/integration_openai) | 🔴 **AGPL-3.0** · `COPYING` 34 519 B | `main` · 🟢 **58** | 🟢 **EMEA** (Germany) | LLM integration for the Nextcloud suite |
+| [`nextcloud/context_chat_backend`](https://github.com/nextcloud/context_chat_backend) | 🔴 **AGPL-3.0** · 34 520 B | `master` · 🟢 **53** | 🟢 **EMEA** (Germany) | RAG backend over institutional documents |
+| [`moodlehq/moodle-tool_dataprivacy`](https://github.com/moodlehq/moodle-tool_dataprivacy) | 🔴 **GPL-3.0** · 35 147 B | 🔴 `MOODLE_34_STABLE` · 🟢 **20** | 🔵 unplaced (Moodle HQ) | 🔴 **GDPR tooling pinned to a 2017 branch** — `P1021`: the default ref is not the newest release line |
+| [`limekiller/moodle-block_openai_chat`](https://github.com/limekiller/moodle-block_openai_chat) | 🔴 **GPL-3.0** · 35 149 B | `main` · 🟢 **10** | 🔵 unplaced | The widely-installed Moodle chat block |
+| [`jeanlucio/moodle-local_aihub`](https://github.com/jeanlucio/moodle-local_aihub) | 🔴 **GPL-3.0** · `COPYING.txt` 35 149 B | `main` · 🟢 **9** | 🔵 unplaced | Moodle AI provider hub |
+| [`tadreeb-lms/tadreeblms`](https://github.com/tadreeb-lms/tadreeblms) | 🔴 **AGPL-3.0** · 34 523 B | `main` · 🟢 **6** | 🟡 **EMEA** (Arabic-language LMS) | 🔵 **The only Arabic-first LMS row this KB has measured** |
+| [`openfun/xblock-proctor-exam`](https://github.com/openfun/xblock-proctor-exam) | 🔴 **AGPL-3.0** · 29 077 B | `master` · 🟢 **4** | 🟢 **EMEA** (France, OpenFUN) | Proctoring XBlock for Open edX |
+
+#### 🔴 The asymmetry, stated as a number because it decides engagement shape
+
+🔵 **Of the 99 probed addresses, 38 are permissive and 21 are copyleft.** 🔴 **But sort by release
+engineering and the picture reverses:**
+
+| | permissive (MIT/Apache/BSD) | copyleft (GPL/AGPL/LGPL/OSL) |
+|---|---|---|
+| rows | 🟢 **38** | 22 |
+| 🔴 **rows with ≥ 50 tags** | 5 — `ollama` (689), `temporal` (573), `transformers` (291), `dspace` (136), `fwu-kc-extensions` (118) | 🔴 **11** — `o365-moodle` (695), `bigbluebutton` (319), `elgg` (309), `pressbooks` (302), `moodle-local_ai_course_assistant` (295), `koakademy` (232), `magento-lts` (163), `manifold` (121), `course-tencent-cloud` (67), `integration_openai` (58), `context_chat_backend` (53) |
+| 🔴 rows with **zero** tags | 🔴 **19 of 38** | 4 of 22 |
+
+🔵 **`T29`: in education, the PLATFORM is copyleft and released; the permissive supply is mostly
+runtime and glue.** 🔴 **Half the permissive rows — 19 of 38 — have never cut a release, against 4
+of 22 on the copyleft side.** 🟡 **The claim must be stated precisely, because two rows contradict
+the lazy version of it: of the five permissive rows above 50 tags, three are general-purpose runtime
+(`ollama`, `temporal`, `transformers`) and 🟢 **two ARE education-specific and released** —
+[`dspace/dspace`](https://github.com/dspace/dspace) (BSD-3-Clause, 136 tags, institutional
+repository) and [`fwu-de/fwu-kc-extensions`](https://github.com/fwu-de/fwu-kc-extensions)
+(Apache-2.0, 118 tags, school identity).** 🔵 **So the honest form is: the permissive education
+supply that is RELEASED exists and is two rows wide, and both sit at the INFRASTRUCTURE end —
+repository and identity — never at the teaching-and-learning end.** 🔴 **The ADOPT/BUILD line
+therefore runs between LAYERS, not between regions: adopt the copyleft platform and accept its
+licence, or build the teaching layer yourself on permissive runtime.**
+
+🟡 **And the one case that straddles it is the sharpest commercial fact on this page:
+`microsoft/o365-moodle` — 695 tags, authored by Microsoft, published under GPL-3.0.** 🔵 **A vendor
+with every incentive to keep its integration proprietary shipped it under the platform's licence,
+because the platform's licence is what reaches the installed base.**
+
+#### 🔵 Content rows, which are NOT code and must not be shelved as if they were
+
+| row | grant · bytes | tags | note |
+|---|---|---|---|
+| [`openstax/osbooks-college-physics-bundle`](https://github.com/openstax/osbooks-college-physics-bundle) | 🟡 **CC family** · 21 442 B | 🟢 **16** | 🟢 **North America** (OpenStax / Rice). Released OER courseware |
+| [`scollovati/awesome-lti`](https://github.com/scollovati/awesome-lti) | 🟡 **CC family** · 20 131 B | 0 | LTI ecosystem index |
+| [`garethmanning/claude-education-skills`](https://github.com/garethmanning/claude-education-skills) | 🔴 **CC-BY-SA-4.0** · 1 230 B | 0 | 🔴 **Agent SKILLS for education under SHARE-ALIKE.** Derivative skill sets inherit the obligation |
+| [`genai-gurus/awesome-eu-ai-act`](https://github.com/genai-gurus/awesome-eu-ai-act) | 🟢 **CC0 1.0** · 7 049 B · `7179683e8000e6bd` | 0 | EU AI Act index — public-domain dedication |
+| [`mlx-cassio/awesome-eu-ai-act`](https://github.com/mlx-cassio/awesome-eu-ai-act) | 🟢 **CC0 1.0** · 7 049 B · `7179683e8000e6bd` | 0 | 🔵 **Same bytes AND same `sha256` — a confirmed fork pair** (`P1025` satisfied, not merely suggested) |
+| [`morganrcu/awesome-eu-ai-act`](https://github.com/morganrcu/awesome-eu-ai-act) | 🔴 **no payload** · clean 200-control 33 251 B | 0 | 🔴 **Third sibling of the same list, and the grant did not travel with the fork** |
+
+🔵 **`P1032`: a fork inherits the CONTENT and does not necessarily inherit the GRANT.** 🔴 **Three
+forks of one index: two carry a byte-and-hash-identical CC0 dedication, the third carries none.**
+🟢 **The `sha256` match is what makes the first two safe to use and the third unusable — and byte
+count alone could not have told them apart from a coincidence.**
 
 ### 🟢 🆕 p102 — the mandated platform query returned FOUR permissive-ERP claims, and this KB had already refuted TWO of them
 

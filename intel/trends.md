@@ -5,7 +5,7 @@ updated: 2026-10-10
 ---
 
 # Education — current trends
-**Pass 103, 2026-10-10.** ⏱️ **Thirteenth pass of this date.** 🆕 **Twenty-seven trends.**
+**Pass 104, 2026-10-10.** ⏱️ **Fourteenth pass of this date.** 🆕 **29 trend sections — `T1`–`T30`, with `T26` refuted in pass 103 and `T28`–`T30` added here.**
 🟢 **`T27` is new.** 🔴 **`T26` is AMENDED — half of it is refuted, and the refutation is regional.**
 
 - 🟢 **`T27`** — **the permissive, education-specific, release-engineered platform exists exactly
@@ -90,6 +90,79 @@ updated: 2026-10-10
 `the-learning-agency-lab.com`, `www.fosway.com`, `www.cipd.org` — and, carried from pass 99,
 `www.iesalc.unesco.org`, `digital-strategy.ec.europa.eu`, `eur-lex.europa.eu`, `www.kaggle.com`.
 🔵 **Every regulatory and market row added this pass is search-summary grade and says so.**
+
+## T28 — 🆕 p104 The education MCP layer is the LEAST licensed layer this KB has measured
+
+🔵 **Measured, not sampled: 15 of the 99 addresses probed in pass 104 are MCP servers for an
+education system** — Moodle, Canvas, a US school district, a national SIS.
+
+| | n | |
+|---|---|---|
+| 🟢 **MIT** | 6 | `ahnopologetic/canvas-lms-mcp` (3 tags) · `jibberswrld/fcps-school-mcp` (4) · `sukhrobyangibaev/mcp_hemis_student` (1) · `ait0u5hi/canvas-scholar-mcp` (1) · `a2br/moodle-mcp` (0) · `jorickpepin/campus-mcp` (0) |
+| 🔴 **no payload, clean 200-control** | 🔴 **6** | `ink-waffle/moodle-mcp` · `ink-waffle/sisu-mcp` · `dddanielliu/nccu-moodle-mcp` · `git-pratap-shrey/uniai_mcp` · `poorvika12-hub/student_mcp` · `hocphi-info/hocphi-info-mcp` |
+| 🔴 **ABSENT** | 🔴 **2** | `owentaylor/canvas-mcp` · `imazhar101/mcp-canvas-server` |
+| 🟡 copyleft | 1 | `hefi002/tfg-mcp-moodle-server` (GPL-3.0) |
+
+🔴 **Eight of fifteen — 53 % — cannot be used commercially.** 🔴 **Canvas is the sharpest case: four
+Canvas MCP servers, two MIT and two that no longer resolve.**
+
+🔵 **Why this matters more than the raw ratio: the MCP server is the LMS-to-agent seam, and it is the
+one part of every education agent architecture that is currently written by individuals.** 🟢 **The
+trend to plan around is that this layer is a Globant DELIVERABLE, not a dependency — and the two rows
+with release engineering (`canvas-lms-mcp`, `fcps-school-mcp`) are the only sensible forks.**
+
+## T29 — 🆕 p104 In education the RELEASED supply is copyleft, and the permissive supply is runtime
+
+🔵 **Across the 99 probed addresses, sorted by release engineering rather than by licence:**
+
+| | permissive (MIT/Apache/BSD) | copyleft (GPL/AGPL/LGPL/OSL) |
+|---|---|---|
+| rows | 🟢 **38** | 22 |
+| rows with **≥ 50 tags** | 5 | 🔴 **11** |
+| rows with **zero** tags | 🔴 **19 of 38** | 4 of 22 |
+
+🔴 **Half the permissive rows have never cut a release. The copyleft side ships.** 🟡 **And the claim
+has to be stated precisely, because two rows contradict the lazy version: of the five permissive rows
+above 50 tags, three are general-purpose runtime (`ollama` 689, `temporal` 573, `transformers` 291)
+and 🟢 **two ARE education-specific and released** — `dspace/dspace` (BSD-3-Clause, 136) and
+`fwu-de/fwu-kc-extensions` (Apache-2.0, 118).**
+
+🔵 **Both of those sit at the INFRASTRUCTURE end — institutional repository and school identity —
+never at the teaching-and-learning end.** 🟢 **So `T29` reads: the ADOPT/BUILD line in education runs
+between LAYERS, not between regions.** 🔴 **It is the correction `T27` needed: `T27` placed ADOPT in
+North America and APAC and BUILD in EMEA and LATAM; `T29` says the layer decides first and the region
+second.**
+
+## T30 — 🆕 p104 The GPL boundary is the plugin tree, and it is checkable with one HTTP request
+
+🔴 **Every Moodle-plugin row in the corpus that carries a grant carries GPL-3.0 — 7 of 7**, including
+Microsoft's own `o365-moodle` at **695 tags**, the most-released row this KB has measured.
+🟢 **And both permissive Moodle-adjacent rows are permissive because they sit OUTSIDE that tree —
+verified by probing for the root `version.php` that makes a directory a Moodle plugin:**
+
+| row | root `version.php` | grant |
+|---|---|---|
+| `jeanlucio/moodle-local_aihub` | 🔴 **200 — a plugin tree** | 🔴 GPL-3.0 |
+| `a2br/moodle-mcp` | 🟢 404 | 🟢 **MIT** |
+| `sngdtechnologies/ai-moodle-security` | 🟢 404 | 🟢 **BSD-2-Clause** |
+
+🔵 **`P1033`: code that loads INSIDE the LMS inherits its licence; code that speaks to it across its
+API, or wraps it in infrastructure, does not.** 🟢 **A vendor with every incentive to stay proprietary
+— Microsoft — shipped under GPL-3.0 anyway, because the platform's licence is what reaches the
+installed base. Plan the IP boundary at the API seam, and the question stops being a negotiation.**
+
+## 🔴 🆕 p104 `P1023` holds a THIRD pass — the public web is saturated for this industry
+
+🔵 **All six mandated query families plus all four regional sweeps ran this pass. Not one returned an
+item this repository did not already hold**, each checked by `grep` against the live corpus rather
+than by impression: the market bands ($6.4–10.6 B), the 92 % student-use figure, UNESCO IESALC's
+87 %/26 %, the Digital Education Council's 92 %/79 %, OpenEduCat's LGPL-3.0, the TCS–Pearson
+alliance, the Council of Europe's 2024 conference.
+
+🟢 **Every finding in pass 104 came from probing this repository's own archive. None came from
+searching.** 🔵 **Read `P1023` as a standing property of this industry's public web and not a bad
+week: the marginal value is now in MEASURING what the KB already names, and `Gap 394` returned three
+trends, one corrected gap, one new gap and five principles from 99 addresses this KB already had.**
 
 ## T27 — 🆕 p103 The permissive education-specific platform exists where a NATIONAL PROGRAMME built one, and the answer changes by region
 

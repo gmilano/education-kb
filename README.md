@@ -22,6 +22,158 @@ education-kb/
 └── compose/code/  # Código ejecutable y probado, no prosa
 ```
 
+## Pase 104 — 2026-10-10
+
+⏱️ **Decimocuarto pase de esta fecha** (el 103 corrió 12:4x–13:xx UTC; este, 13:4x–14:xx).
+
+🟢 **`Gap 394` queda CERRADO en su rama de medición: las 99 direcciones probadas, una por una.**
+El pase 103 lo abrió con 82 direcciones perdidas, probó 14 y arrastró 68. 🔵 **Este pase probó la
+lista `LOST` completa (82) más las 17 direcciones de worklist que el 103 no alcanzó.**
+🔴 **Nada de `Gap 394` queda sin probar.**
+
+🟢 **Instrumento nuevo, ESCRITO Y EJECUTADO en este pase:**
+`compose/code/p1029-lost-address-recovery/` — `test_probe.sh` **18 pasaron, 0 fallaron**;
+`probe.sh addresses.txt` → `live=94 absent=5 with_grant=68 no_grant=23 no_control=3`.
+🔵 **`P1028` se sostiene un segundo pase: un instrumento escrito en el pase CORRE; el catálogo
+preexistente sigue rechazado.**
+
+🟢 **Y la razón por la que las otras 95 filas se pueden leer: calibración a ciegas.** Las cuatro
+direcciones que el pase 103 ya había medido se dejaron en la entrada y se volvieron a medir.
+🟢 **4 de 4 coinciden al byte y al tag** (`moonshot-cicd` Apache-2.0 11 357 B / 6;
+`bigbluebutton` LGPL-3.0 7 652 B / 319; `dspace` BSD-3-Clause 1 504 B / 136; `badgr-server` ABSENT).
+🔵 **Dos instrumentos, dos pases, un solo conjunto de números.**
+
+| medida | valor |
+|---|---|
+| direcciones probadas | 🟢 **99** |
+| resuelven anónimamente | 🟢 **94** / 🔴 **5 ABSENT** |
+| con payload de licencia | 🟢 **68** |
+| 🔴 resuelven **sin payload** en 11 nombres, con control 200 limpio | 🔴 **23** |
+| 🟡 **no medibles** — el control también 404 (NO se cuentan como sin concesión) | 🟡 **3** |
+| permisivas (MIT / Apache-2.0 / BSD) | 🟢 **38**, 19 con ≥ 1 tag |
+| copyleft (GPL / AGPL / LGPL / OSL) | 22, 🔴 **11 con ≥ 50 tags** |
+
+### 🔴 `T28` — la capa MCP de educación es la MENOS licenciada que esta base ha medido
+
+🔵 **15 de las 99 direcciones son servidores MCP para un sistema educativo** (Moodle, Canvas, un
+distrito de EE. UU., un SIS nacional). 🔴 **Ocho de quince no se pueden usar comercialmente:** 6 sin
+payload con control limpio y 2 ABSENT, contra 6 MIT y 1 GPL-3.0. 🔴 **Canvas es el caso más agudo:
+cuatro servidores MCP de Canvas, dos MIT y dos que ya no resuelven.**
+
+🟢 **Consecuencia comercial: la costura LMS→agente es un ENTREGABLE de Globant, no una dependencia** —
+y los dos únicos con ingeniería de releases (`ahnopologetic/canvas-lms-mcp` 3 tags,
+`jibberswrld/fcps-school-mcp` 4 tags, 🔵 **el MCP propio de un distrito K-12**) son los únicos que
+vale forkear en vez de reescribir.
+
+### 🔴 `T29` / `T30` — lo que está RELEASED es copyleft, y la frontera es el árbol de plugins
+
+🔴 **La mitad de las filas permisivas — 19 de 38 — nunca cortó un release, contra 4 de 22 del lado
+copyleft.** 🟡 **Y hay que decirlo con precisión, porque dos filas contradicen la versión perezosa:
+de las cinco permisivas con más de 50 tags, tres son runtime genérico (`ollama` 689, `temporal` 573,
+`transformers` 291) y 🟢 **dos SÍ son específicas de educación y están released** — `dspace`
+(BSD-3-Clause, 136) y `fwu-de/fwu-kc-extensions` (Apache-2.0, 118). 🔵 **Las dos están en el extremo
+de INFRAESTRUCTURA — repositorio institucional e identidad escolar — nunca en el de enseñanza y
+aprendizaje.** 🟢 **Entonces la línea ADOPTAR/CONSTRUIR corre entre CAPAS, no entre regiones, y eso
+corrige a `T27`.**
+
+🟢 **`T30`/`P1033`, y es la línea más cargada de consecuencias comerciales del pase, medida con tres
+peticiones HTTP:** la frontera del copyleft es el árbol de plugins. Sondeando el `version.php` de
+raíz que hace que un directorio SEA un plugin de Moodle: `jeanlucio/moodle-local_aihub` **200** →
+GPL-3.0; `a2br/moodle-mcp` **404** → **MIT**; `sngdtechnologies/ai-moodle-security` **404** →
+**BSD-2-Clause**. 🔵 **El código que carga DENTRO del LMS hereda su licencia; el que le habla por su
+API, o lo envuelve en infraestructura, no.** 🔴 **7 de 7 filas de plugin con concesión son GPL-3.0,
+incluido el propio `microsoft/o365-moodle` con 695 tags — el proveedor con todos los incentivos para
+quedarse propietario publicó bajo la licencia de la plataforma, porque es la que llega a la base
+instalada.**
+
+### 🔴 `Gap 397` ABIERTO — las implementaciones de referencia de Caliper están ABSENT en los DOS nombres de organización
+
+🔴 **`1edtech/caliper-php` y `imsglobal/caliper-python`: ABSENT las dos.** 🔵 **`P1012` dice que el
+código de un incumbente puede vivir bajo el nombre de su organización predecesora, así que se corrió
+el eje completo en vez de declarar la fila muerta con un solo 404 — igual que `Gap 396` corrió cinco
+nombres de badgr.** 🟢 **Sobrevive el que MIDE:** `1EdTech/openbadges-validator-core`, Apache-2.0,
+28 tags. 🔵 **`T17` un nivel peor y ahora sobre DOS estándares: 1EdTech publica especificaciones y
+validadores; la capa de IMPLEMENTACIÓN de Open Badges y de Caliper no está.** 🟢 **Costeado en
+`P104-B`: conformar al spec, validar con el validador que sobrevive, y ser dueño del emisor.**
+
+### 🟢 `Gap 395` CORREGIDO — la oferta pública de EMEA está PARTIDA POR CAPA, no sin concesión
+
+🔴 **El pase 103 lo leyó como «EMEA publica releases y no concede», con dos filas.** 🟢 **Probar el
+TERCER repositorio del mismo organismo alemán refuta la forma general:
+`fwu-de/fwu-kc-extensions` es **Apache-2.0 con 118 tags**.** 🔵 **Entonces: el CÓDIGO público de EMEA
+está concedido y muy released; el VOCABULARIO público de EMEA está sin conceder, 3 de 3 filas
+alemanas** (`schulfach-ontologie`, `schulart-ontologie`, `dini-ag-kim/school-curriculum-pg`).
+🟢 **El gap se vuelve más útil de lo que era: el pedido escrito de concesión va a quien publica las
+ONTOLOGÍAS DE CURRÍCULO Y MATERIA — los datos sobre los que un motor de personalización indexa — y la
+capa de identidad se puede construir hoy.**
+
+### 🔴 La acción siguiente que el propio pase 103 anotó, respondida — y es un NO
+
+🔵 **La pista decía: «si `llm-evals-catalogue` es permisivo, aporta la BIBLIOTECA de recipes que
+`P103-A` tiene que escribir».** 🔴 **Medido: `LIVE-NOGRANT` — sin payload en 11 nombres, control 200
+limpio de 26 342 B, CERO tags.** 🟢 **`P103-A` conserva el costo completo de la rúbrica.**
+🟢 **La otra mitad de la pista sí paga: `aiverify-foundation/moonshot-ui` es Apache-2.0 (11 347 B)
+con 23 tags**, así que el arnés está COMPLETO y sus tres partes están concedidas y released.
+🔵 **Se descarga el costo de la UI; la COMPARABILIDAD de las etiquetas sigue sin comprarse
+(`Gap 393`).**
+
+### 🔵 Principios nuevos: `P1029`–`P1034`
+
+- **`P1029`** — 🔴 **un `LICENSE` que devuelve 200 no es una concesión.**
+  `yuanjiusheng/cloud-learning-ce` sirve 4 117 B de reserva total de derechos en chino
+  (*「保留所有权利」*) desde un archivo llamado `LICENSE`. 🟢 **Clasifica `UNRECOGNISED` porque no
+  coincide con ninguna concesión; un mapeo nombre-de-archivo → licencia habría puesto en el estante
+  un LMS propietario.**
+- **`P1030`** — 🔴 **un payload POR ENCIMA del tamaño prístino puede ser una SEGUNDA licencia, no un
+  aviso empaquetado.** `magnusvron/llm-benchmark-quality-index` mide **2 488 B** contra ~1 070 B de
+  MIT prístino y es doble-licencia (MIT para código, términos aparte para datos).
+  🔵 **Contracaso de `P1024`, y sólo leer el payload los separa.** 🟢 **Encontrado por barrido de
+  dispersión: 28 de 29 filas MIT caen en 1 058–1 152 B.**
+- **`P1031`** — 🔴 **dentro de un mismo nombre de organización, la concesión sigue al TITULAR.**
+  `nextcloud/llm2`, `translate2` y `text2image_stablediffusion2` son **MIT a nombre de
+  `cloud-py-api`**; `integration_openai` y `context_chat_backend` son **AGPL-3.0**.
+  🟢 **Los runners de modelo se pueden embeber, la capa de integración impone copyleft de red, y el
+  nombre de la organización no dice ninguna de las dos cosas.**
+- **`P1032`** — 🔴 **un fork hereda el CONTENIDO y no necesariamente la CONCESIÓN.** Tres forks de
+  `awesome-eu-ai-act`: dos con CC0 a **7 049 B y el mismo `sha256` `7179683e8000e6bd`** 🟢 *(`P1025`
+  satisfecho, no sólo sugerido)*; el tercero sin payload alguno.
+- **`P1033`** — 🟢 **la frontera del copyleft es el árbol de plugins** (arriba, `T30`).
+- **`P1034`** — 🔴 **los archivos de ENTRADA de un instrumento nuevo entran al corpus que mide un
+  instrumento existente, y pueden desactivarlo en silencio.** La lista de 99 direcciones de `p1029`,
+  commiteada viva, habría hecho que el censo de `p1026` reportara una pérdida de **cero** —
+  🔵 **la trampa de `p1026`, re-entrada desde afuera por otro instrumento.** 🟢 **Resuelto sin editar
+  `p1026`: su guarda excluye por NOMBRE DE ARCHIVO, así que las listas de este pase se NOMBRARON
+  dentro de los patrones que ya atrapa.**
+
+### 🟢 Y `P1024` recibe la referencia que nunca tuvo — el Apache-2.0 prístino son **11 358 B**
+
+🔴 **Esta base viene comparando contra 11 357 B como «prístino».** 🟢 **Traído del publicador y
+fijado en `compose/code/p1029-lost-address-recovery/apache-2.0-pristine.sha256.txt`:**
+`cfc7749b…c523d30`, **11 358 B**. 🟢 **`apereo-learning-analytics-initiative/larissa` es idéntico
+byte a byte y por `sha256`.** 🔵 **Así que las filas de 11 357 B son prístino MENOS UN SALTO DE
+LÍNEA FINAL — otro hecho, y ahora verificable.** 🟡 **También medido: los payloads ECL-2.0 NO son
+estables entre los repositorios de Apereo — cuatro filas de la misma estirpe en cuatro tamaños
+(Sakai 11 120, Opencast 11 340, `lap-sakai-extractor` 11 087, `opendashboard-legacy` 9 919).**
+
+### 🔴 La batería obligatoria: 6 familias de consulta + 4 barridos regionales, **saturada 10 de 10**
+
+🔵 **Todas corrieron, y cada resultado se verificó con `grep` contra el corpus vivo, no por
+impresión.** 🔴 **Ninguna devolvió algo que este repositorio no tuviera ya:** bandas de mercado
+$6,4–10,6 B · 92 % de uso estudiantil · UNESCO IESALC 87 %/26 % · Digital Education Council
+92 %/79 % · OpenEduCat LGPL-3.0 · openSIS · Kuali · TCS–Pearson · LearnUpon Sídney · Consejo de
+Europa 2024 · Norteamérica $951 M→$2,3 B.
+
+🟢 **Todo el rendimiento del pase 104 salió de sondear el archivo propio de este repositorio: tres
+tendencias, un gap corregido, un gap nuevo, cinco principios y una referencia prístina, a partir de
+99 direcciones que esta base ya tenía.** 🔵 **`P1023` tiene tres pases y conviene leerlo como una
+propiedad estable de la web pública de esta industria, no como una mala semana.**
+
+🟡 **Gap declarado y NO sobre-interpretado:** ocho filas recuperadas tienen nombre en español o
+portugués y cinco no tienen concesión, 🔴 **pero este pase se NIEGA a llamarlo un hallazgo de
+LATAM**: tres de las ocho son demostrablemente EMEA (dos españolas, una italiana) y el idioma de un
+repositorio no ubica a su titular (`P1012`, `P184`). 🟢 **Queda como pista 1 del próximo pase, con la
+medición que la resolvería nombrada: leer la línea de titular de las cinco.**
+
 ## Pase 103 — 2026-10-10
 
 ⏱️ **Decimotercer pase de esta fecha** (el 102 corrió 10:4x–11:xx UTC; este, 12:4x–13:xx).

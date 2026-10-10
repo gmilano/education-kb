@@ -4,6 +4,182 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 🟢 Hundred-and-fourth pass, 2026-10-10 — **`Gap 394` CLOSED on its measurement limb: all 99 addresses probed, 4 of 4 blind-calibrated against pass 103**; `Gap 397` opened (the Caliper reference implementations are ABSENT at BOTH org names); `Gap 395` CORRECTED — EMEA public-sector supply is LAYER-SPLIT, not grant-less; pass 103's own next-action answered NO; `T28`–`T30` and `P1029`–`P1034` adopted; **`P1023` saturated a THIRD pass**
+
+⏱️ **Fourteenth pass of this date.** 91: 2026-10-09 23:0x–00:00 UTC · 92: 00:4x–01:3x · 93:
+01:4x–02:24 · 94: 02:5x · 95: 03:4x · 96: 04:4x–05:xx · 97: 05:4x–06:xx · 98: 06:4x–07:xx ·
+99: 07:4x–08:xx · 100: 08:4x–09:xx · 101: 09:4x–10:xx · 102: 10:4x–11:xx · 103: 12:4x–13:xx ·
+this pass 13:4x–14:xx. **Append-only.**
+
+🟢 **Instrument written and executed: `compose/code/p1029-lost-address-recovery/`.**
+`test_probe.sh` **18 passed, 0 failed**; `probe.sh addresses.txt` →
+`live=94 absent=5 with_grant=68 no_grant=23 no_control=3`.
+🔵 **`P1028` holds a second pass:** an instrument authored this pass RAN; the back catalogue is still
+refused.
+
+### 🟢 `Gap 394` — the measurement limb is CLOSED
+
+🔵 **Pass 103 opened it with 82 lost addresses, probed 14, and carried 68.** 🟢 **This pass probed
+99: the entire `LOST` list of 82, plus the 17 of the 21 worklist-only addresses pass 103 had not
+reached.** 🔴 **Nothing in `Gap 394` is unprobed.**
+
+| measure | value |
+|---|---|
+| addresses probed | 🟢 **99** |
+| resolve anonymously | 🟢 **94** |
+| 🔴 **ABSENT** | 🔴 **5** |
+| carry a licence payload | 🟢 **68** |
+| 🔴 resolve with **no payload at 11 filenames**, clean 200-control | 🔴 **23** |
+| 🟡 **unmeasurable** — control 404s too, so NOT counted as ungranted | 🟡 **3** |
+| permissive (MIT / Apache-2.0 / BSD) | 🟢 **38** · 19 with ≥ 1 tag |
+| copyleft (GPL / AGPL / LGPL / OSL) | 22 · 🔴 **11 with ≥ 50 tags** |
+
+🟢 **Blind calibration is why the other 95 rows are readable: the four addresses pass 103 had
+measured were left in the input and re-measured. 4 of 4 agree to the byte and to the tag.**
+🔵 **Two instruments, two passes, one set of numbers.**
+
+🟡 **What the gap still carries, and it is a different limb:** the 5 `ABSENT` rows are unreachable
+*anonymously* — 🔴 **a private repo fails identically to a deleted one**, so "ABSENT" is never
+"deleted", and `api.github.com` stays **403** under this session's scope.
+
+### 🔴 `Gap 397` OPENED — the Caliper reference implementations are ABSENT at BOTH org names
+
+| address | status |
+|---|---|
+| [`1edtech/caliper-php`](https://github.com/1edtech/caliper-php) | 🔴 **ABSENT** |
+| [`imsglobal/caliper-python`](https://github.com/imsglobal/caliper-python) | 🔴 **ABSENT** |
+
+🔵 **`P1012` says an incumbent's code can live under its predecessor's org name, so the axis was run
+rather than the row declared dead on one 404 — exactly as `Gap 396` ran five badgr names.**
+🔴 **Caliper Analytics is the learning-analytics event standard. Both reference implementations are
+gone, at both the current and the predecessor organisation.**
+
+🟢 **The surviving row is the one that MEASURES:**
+[`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core),
+Apache-2.0, 28 tags. 🔵 **`T17` one level worse again, and now across TWO standards: 1EdTech ships
+specifications and validators; the implementation layer of both Open Badges and Caliper is absent.**
+🟢 **Engagement consequence costed in `P104-B`: conform to the spec, validate against the surviving
+validator, own the emitter.**
+
+### 🟢 `Gap 395` CORRECTED — EMEA public-sector supply is LAYER-SPLIT, not grant-less
+
+🔴 **Pass 103 read it as "EMEA institutional supply ships releases and no grant", from two rows.**
+🟢 **Probing the same German publisher's THIRD repository refutes the general form:**
+
+| row | grant | tags | layer |
+|---|---|---|---|
+| [`fwu-de/fwu-kc-extensions`](https://github.com/fwu-de/fwu-kc-extensions) | 🟢 **Apache-2.0** · 11 357 B | 🟢 **118** | 🟢 **identity / SSO — CODE** |
+| `fwu-de/schulfach-ontologie` | 🔴 none (p103) | 1 | 🔴 vocabulary — DATA |
+| [`fwu-de/schulart-ontologie`](https://github.com/fwu-de/schulart-ontologie) | 🔴 none · clean control 1 117 B | 2 | 🔴 vocabulary — DATA |
+| [`dini-ag-kim/school-curriculum-pg`](https://github.com/dini-ag-kim/school-curriculum-pg) | 🔴 none · clean control 136 B | 0 | 🔴 curriculum vocabulary — DATA |
+
+🟢 **EMEA public-sector CODE is granted and heavily released. EMEA public-sector VOCABULARY is
+ungranted, 3 of 3 German rows.** 🔵 **The gap narrows to something more useful than it was: the
+written grant request goes to the publishers of the CURRICULUM AND SUBJECT ONTOLOGIES — the data a
+personalisation engine keys on — and the identity layer is buildable today.** 🟡 **The European
+Commission row (`european-digital-credentials`, `2.0.6`, 7 licence names, no payload) is unchanged
+and remains the other addressee.**
+
+### 🔴 Pass 103's listed next-action #4, answered — and the answer is NO
+
+🔵 **The lead read: "if `llm-evals-catalogue` is permissively licensed it supplies the recipe LIBRARY
+that `P103-A` currently has to write."**
+🔴 **Measured: `LIVE-NOGRANT` — no payload at 11 filenames, clean 200-control at 26 342 B, ZERO
+tags.** 🟢 **So `P103-A` keeps the whole rubric cost.**
+
+🟢 **The other half of the same lead pays off: `aiverify-foundation/moonshot-ui` is Apache-2.0
+(`LICENSE.md`, 11 347 B) with 23 tags** — so the harness is complete and all three parts
+(`moonshot` 26 tags, `moonshot-cicd` 6, `moonshot-ui` 23) are granted and released. 🔵 **The UI cost
+is discharged; the comparability of the LABELS is still unbought (`Gap 393`).**
+
+### 🔵 Principles adopted: `P1029`–`P1034`
+
+- **`P1029`** — 🔴 **a `LICENSE` that returns 200 is not a grant.**
+  [`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce) serves
+  4 117 B of all-rights-reserved Chinese copyright assertion from a file named `LICENSE`
+  (*「保留所有权利」*). 🟢 **It classifies `UNRECOGNISED` because it matches no grant; a
+  filename→licence mapping would have shelved a proprietary LMS as open source.**
+- **`P1030`** — 🔴 **a payload ABOVE its family's pristine size can be a SECOND LICENCE, not a
+  bundled notice.** `magnusvron/llm-benchmark-quality-index` is **2 488 B** against MIT's ~1 070 B
+  and is dual-licensed (MIT for code, separate terms for data). 🔵 **`P1024` read an above-pristine
+  excess as someone else's bundled grant; this is the other cause, and only reading the payload
+  separates them.** 🟢 **Found by a spread check: 28 of 29 MIT rows fall in 1 058–1 152 B.**
+- **`P1031`** — 🔴 **inside one org name, the grant tracks the HOLDER, not the org.**
+  `nextcloud/llm2`, `translate2`, `text2image_stablediffusion2` are **MIT held by `cloud-py-api`**;
+  `integration_openai` and `context_chat_backend` are **AGPL-3.0**. 🟢 **Model runners embeddable,
+  integration layer network-copyleft; the org name says neither.** 🔵 **`P1012` in the permissive
+  direction.**
+- **`P1032`** — 🔴 **a fork inherits the CONTENT and not necessarily the GRANT.** Three forks of
+  `awesome-eu-ai-act`: `genai-gurus` and `mlx-cassio` carry CC0 at **7 049 B with the identical
+  `sha256` `7179683e8000e6bd`** 🟢 *(`P1025` satisfied, not merely suggested)*; `morganrcu` carries
+  **no payload at all**.
+- **`P1034`** — 🔴 **a new instrument's INPUT files enter the corpus an existing instrument
+  measures, and can silently disable it.** `p1029`'s 99-address input list, committed live, would
+  have made `p1026`'s census report a loss of **zero** — 🔵 **`p1026`'s own trap, re-entered from
+  outside through a different instrument.** 🟢 **Fixed with no edit to `p1026`: its guard excludes
+  by FILENAME, so this pass's address lists were NAMED into the patterns it already catches
+  (`lost-addresses.*.txt`, `held-only-in-a-worklist.*.txt`, `result.*.tsv`).** 🔵 **`P1026`'s "a
+  worklist is not a shelf" gains a second edge: a worklist must not be able to PASS for one.**
+- **`P1033`** — 🟢 **the copyleft boundary is the PLUGIN TREE, and it is one HTTP request wide.**
+  Probing for a root `version.php`: `jeanlucio/moodle-local_aihub` **200** → GPL-3.0;
+  `a2br/moodle-mcp` **404** → MIT; `sngdtechnologies/ai-moodle-security` **404** → BSD-2-Clause.
+  🔵 **Code loaded inside the LMS inherits its licence; code speaking across its API, or wrapping it
+  in infrastructure, does not.** 🔴 **7 of 7 granted Moodle-plugin rows are GPL-3.0, Microsoft's own
+  `o365-moodle` (695 tags) included.**
+
+### 🟢 And `P1024` gets the reference it never had — pristine Apache-2.0 is **11 358 B**
+
+🔴 **This KB has compared against 11 357 B as "pristine" for several passes.** 🟢 **Fetched from the
+publisher and pinned in `compose/code/p1029-lost-address-recovery/apache-2.0-pristine.sha256.txt`:**
+
+```
+cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30   11 358 B
+```
+
+🟢 **`apereo-learning-analytics-initiative/larissa` is byte- AND `sha256`-identical to it.**
+🔵 **So the 11 357 B rows (`moonshot-cicd`, `fwu-kc-extensions`, `attention-monitor`) are pristine
+MINUS A TRAILING NEWLINE — a different fact from "pristine", and now a checkable one.**
+🟡 **Also measured: ECL-2.0 payloads are NOT stable across Apereo's own repositories — four
+lineage rows at four byte counts (Sakai 11 120, Opencast 11 340, `lap-sakai-extractor` 11 087,
+`opendashboard-legacy` 9 919), so "it's ECL" is not yet a measurement of WHICH ECL text.**
+
+### 🔴 The mandated battery: 6 query families + 4 regional sweeps, **saturated 10 of 10**
+
+🔵 **Every mandated query ran and each result was `grep`-checked against the live corpus rather than
+judged by impression.** 🔴 **Not one returned an item this repository did not already hold:** market
+bands $6.4–10.6 B · 92 % student use · UNESCO IESALC 87 %/26 % · Digital Education Council 92 %/79 %
+· OpenEduCat LGPL-3.0 · openSIS · Kuali · TCS–Pearson · LearnUpon Sydney · Council of Europe 2024 ·
+North America $951 M→$2.3 B and ~10 % with AI guidelines.
+
+🟢 **The entire yield of pass 104 came from probing this repository's own archive: three trends, one
+corrected gap, one new gap, five principles and a pristine reference, from 99 addresses this KB
+already had.** 🔵 **`P1023` is three passes old and should be read as a standing property of this
+industry's public web.**
+
+### 🔴 Gap ledger after this pass
+
+| gap | state |
+|---|---|
+| 🟢 `Gap 394` | **CLOSED on its measurement limb** — 99 of 99 probed. 🟡 The 5 `ABSENT` rows stay "unreachable anonymously", which `api.github.com` at 403 cannot improve |
+| 🔴 `Gap 397` | **OPEN (new)** — Caliper reference implementations ABSENT at both org names. Emitter is a build (`P104-B`) |
+| 🟡 `Gap 395` | **OPEN, CORRECTED** — not "EMEA grants nothing" but "EMEA grants CODE and not VOCABULARY", 3 of 3 German data rows |
+| 🔴 `Gap 396` | OPEN — Open Badges minter ABSENT at 5 of 5 org names; validator survives. 🔵 **Now the second instance of a two-standard pattern, with `Gap 397`** |
+| 🔴 `Gap 393` / `Gap 391` | OPEN — harness bought (`moonshot` trio, all Apache-2.0, all released); 🔴 **rubric and label comparability still unbought**; `llm-evals-catalogue` measured ungranted this pass |
+| 🔴 `Gap 392` | OPEN — modern ML early-warning 6 of 6 unusable. 🟢 Two more permissive early-warning rows recovered (`aliipou/student-retention-prediction`), so `Gap 385` stays refuted |
+| 🔴 `Gap 390` / `T21` | OPEN — PERSUADE 2.0 is `CC-BY-NC-SA-4.0` (`P1007`). 🔵 **`P104-A` step 2 carries the same warning to model WEIGHTS** |
+| 🔴 `Gap 383` | OPEN — the instrument catalogue stays refused; 🟢 **`P1028` confirmed a second pass: freshly authored instruments run** |
+
+### 🟢 Leads this pass pre-registers for the next one
+
+| # | lead | why it is worth a query |
+|---|---|---|
+| 1 | 🔴 **Read the HOLDER line of the five ungranted Spanish/Portuguese-named rows** (`xgabrielcv/auto-matricula-sigaa-unb`, `dreathward/sistema-de-aprendizaje-en-linea`, `kaiman-p/tutor-adaptativo-ia`, `mietiainvestigacion-creator/api-eduadapt`, `alvarogregori/moodle-ai-graded-assignment`) | 🔵 **This pass REFUSED to call them a LATAM finding, because three of the eight language-named rows are demonstrably EMEA. The holder line is what splits the table, and the split decides whether LATAM's supply gap is 5 rows or 2.** |
+| 2 | 🟢 **Re-probe the 23 `LIVE-NOGRANT` rows for an added licence, and the 3 `LIVE-NOCONTROL` rows for a reachable control** | 🔵 **A grant appearing is the cheapest possible upgrade to this KB, and `result.2026-10-10.tsv` makes the diff mechanical.** |
+| 3 | 🔴 **`sha256` the four ECL-2.0 payloads and name WHICH ECL text each carries** | 🟡 **Four Apereo-lineage byte counts for one licence family. `P1025` says size is not identity, and this KB currently asserts "ECL-2.0" without pinning the text.** |
+| 4 | **A written grant request to BOTH addressees of `Gap 395`** — DG EMPL for `european-digital-credentials`, and the German vocabulary publishers | 🟢 **Still the one open gap with a cheap, dateable action — and `fwu-kc-extensions` is now the precedent to cite: this publisher DOES grant Apache-2.0 when the artefact is code.** |
+| 5 | 🔴 **Re-run `p1026`'s census against the NEXT archive snapshot** | 🔵 **`P1026` is proved for one reset only. A second snapshot tests whether 12 % is this reset's loss rate or this KB's.** |
+| 6 | 🟡 **Probe the Moodle plugin directory as a CHANNEL, not GitHub** | 🟢 **`T30`/`P1033` says the plugin tier is GPL-3.0 or nothing. If that tier is the education supply, then `moodle.org/plugins` is the denominator this KB has never measured, and GitHub is a biased sample of it.** |
+
 ## 🔴 Hundred-and-third pass, 2026-10-10 — **`Gap 394` opened: the 2026-10-06 reset dropped 82 of 681 addresses and growth hid it**; `Gap 395` (EMEA institutional supply ships releases with NO grant) and `Gap 396` (the Open Badges minter is ABSENT at 5 of 5 org names) opened; `Gap 393` REFRAMED — the harness is Apache-2.0 and released; `T26` refuted for one layer; `P1024`–`P1028` adopted; **a repository instrument was REFUSED and an instrument written this pass RAN**
 
 ⏱️ **Thirteenth pass of this date.** 91: 2026-10-09 23:0x–00:00 UTC · 92: 00:4x–01:3x · 93:

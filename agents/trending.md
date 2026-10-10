@@ -4,6 +4,123 @@ region: Global
 updated: 2026-10-10
 ---
 
+## 2026-10-10 — pass 104: `Gap 394` probed to the last address, and the education MCP layer is 53 % unusable
+
+⏱️ **Fourteenth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93:
+01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; 98: 06:4x–07:xx; 99:
+07:4x–08:xx; 100: 08:4x–09:xx; 101: 09:4x–10:xx; 102: 10:4x–11:xx; 103: 12:4x–13:xx; this one
+13:4x–14:xx). **Append-only.**
+
+🟢 **Instrument written and executed this pass: `compose/code/p1029-lost-address-recovery/`.**
+`test_probe.sh` **18 passed, 0 failed**. `probe.sh addresses.txt` →
+`live=94 absent=5 with_grant=68 no_grant=23 no_control=3`.
+🔵 **`P1028` holds a second pass**: an instrument authored this pass RAN; the back catalogue stays
+refused.
+
+| channel | pass 104 | note |
+|---|---|---|
+| `git ls-remote --symref` (HTTPS) | 🟢 **200 for arbitrary public repos** | refs, HEAD SHAs, tag counts for all 99 addresses |
+| `raw.githubusercontent.com` | 🟢 **200** | every grant below is a payload read through it (`P1005`) |
+| `apache.org/licenses/LICENSE-2.0.txt` | 🟢 **200** | 🔵 **new channel this pass** — the pristine reference, fetched not inferred |
+| `api.github.com` | 🔴 **403** | session scope. 🔵 **This is why the ★ column is `—`** |
+
+### 🟢 What the sweep closes
+
+🔵 **`Gap 394` carried 68 unprobed addresses. This pass probed 99** — the entire `LOST` list of 82
+plus the 17 worklist-only addresses pass 103 had not reached. 🟢 **The measurement limb is closed.**
+
+🟢 **Blind calibration: the four addresses pass 103 had already probed were left in the input and
+re-measured. 4 of 4 agree to the byte and to the tag** (`moonshot-cicd` Apache-2.0 11 357 B / 6;
+`bigbluebutton` LGPL-3.0 7 652 B / 319; `dspace` BSD-3-Clause 1 504 B / 136; `badgr-server` ABSENT).
+
+### 🔴 `T28` — the education MCP layer is the least-licensed layer this KB has measured
+
+🔴 **15 MCP servers for education systems. 6 MIT · 6 with no payload at 11 filenames · 2 ABSENT ·
+1 GPL-3.0.** 🔵 **Eight of fifteen are commercially unusable.** 🔴 **Of four Canvas MCP servers, two
+are MIT and two are gone** (`owentaylor/canvas-mcp`, `imazhar101/mcp-canvas-server`).
+
+🟢 **The two with release engineering are the only fork candidates:**
+[`ahnopologetic/canvas-lms-mcp`](https://github.com/ahnopologetic/canvas-lms-mcp) (MIT, 3 tags) and
+[`jibberswrld/fcps-school-mcp`](https://github.com/jibberswrld/fcps-school-mcp) (MIT, 4 tags —
+🔵 **a K-12 district's own MCP surface**).
+
+### 🟢 The eval harness is complete and all three parts are Apache-2.0
+
+| row | grant · bytes | tags |
+|---|---|---|
+| [`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) | 🟢 Apache-2.0 · 11 347 B | 26 |
+| [`aiverify-foundation/moonshot-cicd`](https://github.com/aiverify-foundation/moonshot-cicd) | 🟢 Apache-2.0 · 11 357 B | 6 |
+| [`aiverify-foundation/moonshot-ui`](https://github.com/aiverify-foundation/moonshot-ui) | 🟢 **Apache-2.0** · `LICENSE.md` 11 347 B | 🟢 **23** |
+
+🔴 **And pass 103's listed next-action is answered with a no:
+[`aiverify-foundation/llm-evals-catalogue`](https://github.com/aiverify-foundation/llm-evals-catalogue)
+is `LIVE-NOGRANT` — no payload at 11 filenames, clean 200-control at 26 342 B, ZERO tags.**
+🟢 **`P103-A` keeps the full rubric-writing cost. It does not keep the UI cost.**
+
+### 🔴 `Gap 397` OPENED — the Caliper reference implementations are ABSENT at BOTH org names
+
+🔵 **`Gap 396` found the Open Badges MINTER dead at 5 of 5 org names while the VALIDATOR survived
+(Apache-2.0, 28 tags). The same shape repeats on 1EdTech's OTHER standard.**
+
+| address | status |
+|---|---|
+| [`1edtech/caliper-php`](https://github.com/1edtech/caliper-php) | 🔴 **ABSENT** |
+| [`imsglobal/caliper-python`](https://github.com/imsglobal/caliper-python) | 🔴 **ABSENT** (predecessor org name — `P1012` axis run, not assumed) |
+
+🔴 **Caliper Analytics is the learning-analytics event standard. Its PHP and Python reference
+implementations do not resolve at either the current or the predecessor organisation name.**
+🔵 **`T17`, one level worse again: 1EdTech ships SPECIFICATIONS and VALIDATORS; the
+IMPLEMENTATION layer of both its Open Badges and its Caliper standards is gone.** 🟢 **Engagement
+consequence: an xAPI/Caliper analytics build writes its own emitter, and the spec plus the surviving
+validator is what it conforms to.**
+
+### 🔴 `P1029` — a `LICENSE` that returns 200 is not a grant
+
+🔴 [`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce) serves
+4 117 B from `LICENSE`, and the text is an all-rights-reserved Chinese copyright assertion —
+*「版权所有 (c) 2021，猿究生 / 保留所有权利。」* 🟢 **It classifies `UNRECOGNISED` because it matches
+no grant.** 🔵 **A filename→licence mapping would have shelved a proprietary LMS as open source.**
+
+### 🔵 `P1030` — a payload ABOVE its family's pristine size can be a SECOND licence, not a bundled notice
+
+🔴 [`magnusvron/llm-benchmark-quality-index`](https://github.com/magnusvron/llm-benchmark-quality-index)
+is **2 488 B** where MIT's pristine text is ~1 070 B, and it is **dual-licensed: MIT for the code,
+separate terms for the data.** 🔵 **`P1024` read an above-pristine excess as someone else's bundled
+grant (`openbadges-validator-core`); this is the other cause, and they are distinguished only by
+READING the payload.** 🟢 **The spread check that found it: 28 of the 29 MIT rows fall in
+1 058–1 152 B, and the single outlier is the dual.**
+
+### 🔵 `P1031` / `P1032`, in one line each
+
+- **`P1031`** — 🔴 **inside one org name, the grant tracks the HOLDER.** `nextcloud/llm2`,
+  `translate2` and `text2image_stablediffusion2` are **MIT held by `cloud-py-api`**;
+  `integration_openai` and `context_chat_backend` are **AGPL-3.0**. 🟢 **Model runners embeddable,
+  integration layer network-copyleft — and the org name says neither.**
+- **`P1032`** — 🔴 **a fork inherits the content and not necessarily the grant.** Three forks of
+  `awesome-eu-ai-act`: `genai-gurus` and `mlx-cassio` are **CC0 at 7 049 B with the identical
+  `sha256` `7179683e8000e6bd`** 🟢 *(so: a confirmed fork pair, not a byte coincidence — `P1025`
+  satisfied)*; `morganrcu` carries **no payload at all**.
+
+### 🔴 The mandated battery, 6 of 6 SATURATED — `P1023` holds a THIRD pass
+
+🔵 **Every mandated query ran. Not one returned an item this repository did not already hold**, and
+each was checked by `grep` against the live corpus, not by impression.
+
+| query | returned | already held? |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | general-purpose agent round-ups, no education licences | 🔴 **yes — and no education-specific row at all** |
+| `github trending education AI 2026` | learning-resource and job-list repos | 🔴 **yes / out of scope** |
+| `open source platform education ERP CRM MIT Apache` | OpenEduCat (LGPL-3.0), openSIS, Kuali | 🔴 **yes** — `verticals/solutions.md` |
+| `AI education industry trends 2026` | market bands $6.4–10.6 B, 92 % student use | 🔴 **yes** — `intel/market.md` |
+| North America regional | $951 M→$2.3 B, 36 % share, ~10 % with AI guidelines | 🔴 **yes** |
+| EMEA regional | Council of Europe conference (2024), 38 % not yet piloting | 🔴 **yes** |
+| APAC regional | TCS–Pearson alliance, LearnUpon Sydney, sovereignty framing | 🔴 **yes** |
+| LATAM regional | UNESCO IESALC 87 %/26 %, Digital Education Council 92 %/79 % | 🔴 **yes** |
+
+🟢 **So the entire yield of this pass came from PROBING this repository's own archive, and none of it
+from searching.** 🔵 **`P1023` is now three passes old and should be read as a standing property of
+this industry's public web, not a bad week.**
+
 ## 2026-10-10 — pass 103: the reset dropped a sixth of this KB's addresses, and the recovery includes a released Apache-2.0 evaluation harness
 
 ⏱️ **Thirteenth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92: 00:4x–01:3x; 93:

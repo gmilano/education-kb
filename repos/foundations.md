@@ -6,7 +6,7 @@ updated: 2026-10-10
 
 # Education — foundational repos
 
-**Pass 103, 2026-10-10.** ⏱️ **Thirteenth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:
+**Pass 104, 2026-10-10.** ⏱️ **Fourteenth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:
 00:4x–01:3x; 93: 01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; 98:
 06:4x–07:xx; 99: 07:4x–08:xx; 100: 08:4x–09:xx; 101: 09:4x–10:xx; 102: 10:4x–11:xx; this one
 12:4x–13:xx).
@@ -25,6 +25,106 @@ classifier was written** (`P237`).
 
 🔴 **`api.github.com` = `http=403` for every repository not attached to this session — measured, with
 the proxy's message, not assumed.** A `—` is unread, never zero.
+
+### 🟢 🆕 p104 Tier 1d — the **runtime and interop spine** this KB owned and never shelved
+
+🔵 **`p1026`'s census found that `ollama/ollama` — the local-inference runtime — was on no page of
+this knowledge base, held only inside an instrument's input worklist.** 🟢 **Probed and shelved
+here, with eleven others, every grant a payload read at the measured ref (`P1005`).**
+
+| repo | grant · bytes | ref · tags | region | why it is foundational |
+|---|---|---|---|---|
+| [`ollama/ollama`](https://github.com/ollama/ollama) | 🟢 **MIT** · 1 058 B | `main` · 🟢 **689** | 🟢 **North America** | 🔵 **The local-inference runtime.** The whole EMEA/LATAM sovereign story depends on a permissive one, and this KB had it on no page |
+| [`temporalio/temporal`](https://github.com/temporalio/temporal) | 🟢 **MIT** · 1 152 B | `main` · 🟢 **573** | 🟢 **North America** | Durable orchestration — the retry/compensation layer every multi-pass grading workflow needs |
+| [`huggingface/transformers`](https://github.com/huggingface/transformers) | 🟢 **Apache-2.0** · 11 418 B 🟡 *(+60 B over pristine)* | `main` · 🟢 **291** | 🟡 **EMEA / North America** | Model loading and fine-tuning substrate |
+| [`fwu-de/fwu-kc-extensions`](https://github.com/fwu-de/fwu-kc-extensions) | 🟢 **Apache-2.0** · 11 357 B | `main` · 🟢 **118** | 🟢 **EMEA** (Germany, FWU) | 🔵 **Keycloak extensions for school identity** — see the `Gap 395` correction below |
+| [`libretexts/shapeshift`](https://github.com/libretexts/shapeshift) | 🟢 **MIT** · `LICENSE.md` 1 067 B | `main` · 🟢 **45** | 🟢 **North America** (LibreTexts, UC Davis) | OER content transformation at the largest US open-textbook programme |
+| [`libretexts/davis`](https://github.com/libretexts/davis) | 🟢 **MIT** · 1 073 B | `main` · 🟢 **32** | 🟢 **North America** (LibreTexts) | Second released LibreTexts component |
+| [`nextcloud/llm2`](https://github.com/nextcloud/llm2) | 🟢 **MIT** · 1 069 B | `main` · 🟢 **32** | 🟢 **EMEA** (Germany) | 🔵 **Local LLM backend — and the holder is `cloud-py-api`, not Nextcloud.** See `P1031` |
+| [`nextcloud/translate2`](https://github.com/nextcloud/translate2) | 🟢 **MIT** · 1 069 B | `main` · 🟢 **12** | 🟢 **EMEA** (Germany) | On-premises translation — the multilingual-classroom primitive |
+| [`nextcloud/text2image_stablediffusion2`](https://github.com/nextcloud/text2image_stablediffusion2) | 🟢 **MIT** · 1 098 B | `main` · 🟢 **12** | 🟢 **EMEA** (Germany) | On-premises image generation for courseware |
+| [`csr2017/edfi-oneroster`](https://github.com/csr2017/edfi-oneroster) | 🟢 **Apache-2.0** · 10 173 B | `main` · 🟢 **8** | 🟢 **North America** | 🔵 **An Ed-Fi ↔ OneRoster bridge.** The two US rostering standards, joined, permissively |
+| [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 **BSD-3-Clause** · 1 504 B | `main` · 🟢 **136** | 🟢 **North America** (LYRASIS) | Institutional repository — re-confirmed byte-exact this pass |
+| [`apereo-learning-analytics-initiative/larissa`](https://github.com/apereo-learning-analytics-initiative/larissa) | 🟢 **Apache-2.0** · 🟢 **11 358 B — byte-exact pristine** | `master` · 0 | 🟢 **North America** (Apereo) | Learning-analytics service. 🔴 **No releases** |
+
+### 🔵 🆕 p104 `P1024` gets the reference it was missing — pristine Apache-2.0 is **11 358 B**, not 11 357
+
+🔴 **This KB has compared Apache-2.0 payloads against 11 357 B as "pristine" for several passes. The
+canonical text published by the ASF is 11 358 B.** 🟢 **Fetched from the publisher and pinned:**
+
+```
+cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30   11 358 B
+apache.org/licenses/LICENSE-2.0.txt, fetched 2026-10-10
+```
+
+🟢 **`apereo-learning-analytics-initiative/larissa` is byte-identical AND `sha256`-identical to it.**
+🔵 **So `P1024` now compares against a `sha256`, which is what `P1025` demanded and a byte count
+cannot give.** 🟡 **Consequence for rows this KB already carries: `moonshot-cicd`,
+`fwu-kc-extensions` and `attention-monitor` at 11 357 B are pristine **minus a trailing newline** —
+a different fact from "pristine", and the difference is now checkable.** 🔴 **`moonshot-ui` at
+11 347 B and `csr2017/edfi-oneroster` at 10 173 B are genuinely short: the Ed-Fi family's 10 173 B
+is `P1024`'s omitted appendix, confirmed a third time.**
+
+### 🟢 🆕 p104 `Gap 395` CORRECTED — EMEA's institutional supply is LAYER-SPLIT, not grant-less
+
+🔴 **Pass 103 opened `Gap 395` on the reading that EMEA public-sector publishers ship releases and no
+grant**, from two rows: the European Commission's `european-digital-credentials` (no payload,
+7 names, `2.0.6`) and `fwu-de/schulfach-ontologie` (no payload, `1.0.0`).
+
+🔴 **This pass probed the same publisher's third repository. `fwu-de/fwu-kc-extensions` is
+Apache-2.0 with 118 tags.** 🟢 **The same German public-sector body that ships ungranted ontologies
+ships a granted, heavily-released identity component.**
+
+| `fwu-de` (Germany, public-sector) | grant | tags | layer |
+|---|---|---|---|
+| [`fwu-de/fwu-kc-extensions`](https://github.com/fwu-de/fwu-kc-extensions) | 🟢 **Apache-2.0** · 11 357 B | 🟢 **118** | 🟢 **identity / SSO — CODE** |
+| [`fwu-de/schulfach-ontologie`](https://github.com/fwu-de/schulfach-ontologie) | 🔴 **none** (p103) | 1 | 🔴 **vocabulary / DATA** |
+| [`fwu-de/schulart-ontologie`](https://github.com/fwu-de/schulart-ontologie) | 🔴 **none** · clean 200-control 1 117 B | 2 | 🔴 **vocabulary / DATA** |
+| [`dini-ag-kim/school-curriculum-pg`](https://github.com/dini-ag-kim/school-curriculum-pg) | 🔴 **none** · clean 200-control 136 B | 0 | 🔴 **curriculum vocabulary / DATA** |
+
+🔵 **`Gap 395` is therefore not "EMEA does not grant". It is: 🟢 **EMEA public-sector CODE is
+granted and released** · 🔴 **EMEA public-sector VOCABULARY is ungranted, 3 of 3 German rows.**
+🔵 **Commercial consequence, and it is sharper than the original gap: an EMEA engagement can BUILD
+on the identity layer today, and the written grant request goes to the bodies publishing the
+CURRICULUM AND SUBJECT ONTOLOGIES — the data a personalisation engine has to key on.**
+
+### 🔵 🆕 p104 `P1031` — inside one org name, the grant tracks the HOLDER, not the org
+
+🔴 **The `nextcloud` org carries both licences, and the split is not arbitrary.**
+
+| `nextcloud/*` row | grant · bytes | holder line | tags |
+|---|---|---|---|
+| `llm2` | 🟢 **MIT** · 1 069 B | 🔴 **`cloud-py-api`** | 32 |
+| `translate2` | 🟢 **MIT** · 1 069 B | 🔴 **`cloud-py-api`** | 12 |
+| `text2image_stablediffusion2` | 🟢 **MIT** · 1 098 B | 🔴 **`cloud-py-api`** | 12 |
+| `integration_openai` | 🔴 **AGPL-3.0** · `COPYING` 34 519 B | FSF text only, no project holder | 58 |
+| `context_chat_backend` | 🔴 **AGPL-3.0** · 34 520 B | FSF text only, no project holder | 53 |
+
+🟢 **The MIT rows are the MODEL-SERVING backends and are held by an upstream project adopted into
+the org. The AGPL rows are the INTEGRATION layer and are the org's own.** 🔵 **`P1012` said an
+incumbent's code can live under a predecessor's org name; `P1031` is the same mechanism measured in
+the permissive direction.** 🔴 **Commercial consequence for an EMEA sovereign build: the model
+runners can be embedded, the integration layer imposes network copyleft, and reading the ORG name
+gets this backwards in both directions.**
+
+### 🔵 🆕 p104 ECL-2.0's payload is NOT stable across Apereo's own repositories
+
+🔵 **This page already carries ECL-2.0 — the Educational Community License, Apache-2.0 with the
+patent grant narrowed to education communities, and the only OSI-approved licence written FOR this
+industry.** 🔴 **Four Apereo-lineage payloads, four distinct byte counts:**
+
+| repo | ECL-2.0 payload | note |
+|---|---|---|
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 11 340 B | carried |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 11 120 B | carried |
+| [`apereo-learning-analytics-initiative/lap-sakai-extractor`](https://github.com/apereo-learning-analytics-initiative/lap-sakai-extractor) | 🆕 **11 087 B** · `master` · 0 tags | 🟢 declares *"[OSI Approved License]"* in line 2 |
+| [`apereo-learning-analytics-initiative/opendashboard-legacy`](https://github.com/apereo-learning-analytics-initiative/opendashboard-legacy) | 🆕 🔴 **9 919 B** · `master` · 3 tags | 🔴 **1 168 B shorter than its sibling** — cites `osedu.org/licenses/` |
+
+🔴 **Both classified `UNRECOGNISED` by pattern and were resolved by READING them.** 🔵 **That is the
+instrument's declared limit, not a defect: a pattern set tuned to the nine common families will not
+recognise an education-specific licence, and the honest output is "unrecognised", never a guess.**
+🟡 **For `P1025`: four sizes means ECL payloads must be pinned by `sha256` like every other family,
+and "it's ECL" is not yet a measurement of WHICH ECL text.**
 
 ### 🟢 🆕 p103 Tier 1c — the **student-data spine**, permissive and release-engineered, and it refutes `T26` for one layer
 

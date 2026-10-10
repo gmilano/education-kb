@@ -5,7 +5,7 @@ updated: 2026-10-10
 ---
 
 # Education — market, players and opportunities
-**Pass 103, 2026-10-10.** ⏱️ **Thirteenth pass of this date** (101 ran 09:4x–10:xx UTC; 102,
+**Pass 104, 2026-10-10.** ⏱️ **Fourteenth pass of this date** (101 ran 09:4x–10:xx UTC; 102,
 10:4x–11:xx; this one 12:4x–13:xx). 🔴 **All four mandated regional sweeps ran again and all four
 returned LESS than this file already holds — `P1023` confirmed for a SECOND consecutive pass, which
 is what turns one observation into a channel property.**
@@ -361,6 +361,31 @@ KB: write down what you refused to use, and why.**
 
 ### North America
 
+#### 🟢 🆕 p104 — the rostering bridge is permissive, and the analytics emitter is now a confirmed BUILD
+
+🟢 **`csr2017/edfi-oneroster` — Apache-2.0, 10 173 B, 8 tags.** 🔵 **A bridge between the two US
+rostering standards, permissively licensed.** With `Ed-Fi-ODS` (42 tags) and `Ed-Fi-Data-Standard`
+(21 tags) this is an **ADOPT**, not a build — see `P104-B`.
+
+🔴 **And the gap next to it is now measured, not suspected: `Gap 397` — `1edtech/caliper-php` and
+`imsglobal/caliper-python` are ABSENT at both the current and the predecessor organisation name.**
+🔵 **Caliper is the learning-analytics event standard. Its reference implementations are gone; the
+Open Badges validator (Apache-2.0, 28 tags) survives.** 🟢 **Opportunity: the conformant
+emitter is unowned, specified, and validatable — the clearest "build it once, sell it repeatedly"
+item on this page.**
+
+🟢 **Two further North America rows recovered with real release engineering:**
+`libretexts/shapeshift` (MIT, 45 tags) and `libretexts/davis` (MIT, 32 tags) — the largest US
+open-textbook programme, permissively licensed. 🔵 **And `jibberswrld/fcps-school-mcp` (MIT, 4 tags)
+is a K-12 DISTRICT publishing its own MCP surface — the first district-scoped one this KB has
+measured, and a reference an RFP response can point at.**
+
+🔴 **Carry the legal constraint into every proposal here:** Tennessee `SB 1580` bars AI tools from
+evaluating or screening a pupil's mental health and California `AB 1159` is in the same family, so
+🔴 **attention/engagement monitoring stays out of scope** even though `yptheangel/attention-monitor`
+is Apache-2.0 and available.
+
+
 #### 🟢 🆕 p103 — the permissive student-data SPINE is the North America opportunity, and it is education-specific
 
 🔴 **The sweep itself returned nothing new** (134 bills / 31 states, AB 1159, Oklahoma **S.B. 1734**
@@ -699,6 +724,38 @@ adoption.** 🔴 **So a North America pitch that leads with adoption is pushing 
 regulatory grain; one that leads with governance, auditability and teacher-augmentation is with it.**
 
 ### EMEA
+
+#### 🟢 🆕 p104 — `Gap 395` CORRECTED: EMEA's public-sector supply is LAYER-SPLIT, and the grant request has a precise addressee now
+
+🔴 **Pass 103 read EMEA institutional supply as "ships releases, grants nothing", from two rows.**
+🟢 **Pass 104 probed the same German publisher's third repository and the reading does not hold:**
+
+| `fwu-de` + German vocabulary bodies | grant | tags | layer |
+|---|---|---|---|
+| [`fwu-de/fwu-kc-extensions`](https://github.com/fwu-de/fwu-kc-extensions) | 🟢 **Apache-2.0** · 11 357 B | 🟢 **118** | 🟢 **identity / SSO — CODE** |
+| [`fwu-de/schulfach-ontologie`](https://github.com/fwu-de/schulfach-ontologie) | 🔴 **none** | 1 | 🔴 **subject vocabulary — DATA** |
+| [`fwu-de/schulart-ontologie`](https://github.com/fwu-de/schulart-ontologie) | 🔴 **none** · clean control 1 117 B | 2 | 🔴 **school-type vocabulary — DATA** |
+| [`dini-ag-kim/school-curriculum-pg`](https://github.com/dini-ag-kim/school-curriculum-pg) | 🔴 **none** · clean control 136 B | 0 | 🔴 **curriculum vocabulary — DATA** |
+
+🟢 **So EMEA public-sector CODE is granted and heavily released; EMEA public-sector VOCABULARY is
+ungranted, 3 of 3.** 🔵 **This is a better opportunity statement than the original gap: an EMEA
+engagement can BUILD on the school identity layer in week one, and what has to be negotiated or
+rebuilt is the curriculum and subject taxonomy — the exact data a personalisation engine keys on.**
+
+🟢 **The written grant request now has two addressees, not one:** the European Commission's
+DG EMPL for `european-digital-credentials` (`2.0.6`, no payload in 7 licence names, clean control)
+and the German vocabulary publishers above. 🔵 **Both are dateable, cheap actions.**
+
+🟢 **The sovereign stack is also EMEA-complete this pass**: `ollama` (MIT, 689 tags),
+`nextcloud/llm2` and `translate2` (MIT — 🔴 **held by `cloud-py-api`, while the same org's
+`integration_openai` and `context_chat_backend` are AGPL-3.0**, `P1031`), and a verified no-egress
+reference architecture in `sngdtechnologies/ai-moodle-security` (BSD-2-Clause). 🔵 **See `P104-A` —
+this is the region where the licence boundary IS the proposition.**
+
+🟡 **`openfun/xblock-proctor-exam`** (AGPL-3.0, 4 tags, France) and 🟡 **`tadreeb-lms/tadreeblms`**
+(AGPL-3.0, 6 tags, Arabic-first — the only Arabic-first LMS this KB has measured) are real EMEA
+rows and 🔴 **both impose network copyleft**.
+
 
 #### 🔴 🆕 p103 — the EMEA institutional supply ships RELEASES WITHOUT A GRANT, and that is the region's distinguishing fact
 
@@ -1229,6 +1286,38 @@ duty is the sellable deliverable that is already overdue.**
 
 ### APAC
 
+#### 🟢 🆕 p104 — the evaluation harness is COMPLETE and all three parts are Apache-2.0
+
+🟢 **`aiverify-foundation/moonshot-ui` — Apache-2.0, `LICENSE.md` 11 347 B, 23 tags.** 🔵 **With
+`moonshot` (26 tags) and `moonshot-cicd` (6 tags), all three parts of the harness are granted and
+released.** 🟡 **The provenance is the commercial argument no other region can make today: it comes
+from the foundation Singapore's regulator convened (AI Verify Foundation / IMDA), not from an
+education vendor.**
+
+🔴 **And the catalogue beside it is NOT a purchase.**
+[`aiverify-foundation/llm-evals-catalogue`](https://github.com/aiverify-foundation/llm-evals-catalogue)
+is `LIVE-NOGRANT` — no payload at 11 filenames, clean 200-control at 26 342 B, **zero tags**.
+🟢 **So an APAC engagement buys the harness and the pipeline gate, and writes the rubric
+(`P103-A`/`P104-A`).** 🔴 **Comparability across institutions stays unbought — the labels are the
+asset** (`Gap 393`).
+
+🟢 **A second APAC opportunity, and it is a replicable seam:
+[`sukhrobyangibaev/mcp_hemis_student`](https://github.com/sukhrobyangibaev/mcp_hemis_student) (MIT,
+1 tag) exposes HEMIS — Uzbekistan's NATIONAL higher-education information system — as MCP tools.**
+🔵 **A ministry-scale engagement that starts from a national SIS has a worked precedent here, and the
+MIT grant means the pattern is portable.**
+
+🟡 **Research supply is strong and unreleased:** `hkuds/paper2slides` (MIT),
+`gemlab-hku/unlearn_and_relearn` (MIT), `thu-maic/dsh-openmaic` (MIT, Tsinghua) — all **zero tags**.
+🔴 **And `hkuds/ai-researcher` from the same lab carries NO grant** — 🔵 **the grant is per-repo, not
+per-lab, which is the thing to check before citing a university's output as available.**
+
+🟡 **`xiaochong0302/course-tencent-cloud`** (GPL-2.0, 67 tags, China) is a genuinely released
+course platform. 🔴 **And `yuanjiusheng/cloud-learning-ce` serves a file named `LICENSE` that is an
+all-rights-reserved Chinese copyright assertion** (`P1029`) — 🔵 **in this region especially, the
+payload decides, never the filename.**
+
+
 #### 🟢 🆕 p103 — the regulator-convened body is the SUPPLIER, which is new and is APAC-specific
 
 🔴 **The sweep returned this file's own content at lower resolution again.** Korea's **AI Basic Act**
@@ -1746,6 +1835,44 @@ the permission argument first — except in ANZ, where it does.** 🔴 **That is
 North America posture recorded above, and the two pitches should not share a slide.**
 
 ### LATAM
+
+#### 🔴 🆕 p104 — the recovered LATAM-adjacent supply is UNGRANTED, and this pass refuses to over-place it
+
+🔵 **Eight recovered rows carry Spanish- or Portuguese-language names. Five have no licence payload
+at eleven filenames, and not one of the eight is permissive.**
+
+| row | grant |
+|---|---|
+| `xgabrielcv/auto-matricula-sigaa-unb` 🔵 *(SIGAA/UnB — Brazil)* | 🔴 **none** |
+| `dreathward/sistema-de-aprendizaje-en-linea` | 🔴 **none** |
+| `kaiman-p/tutor-adaptativo-ia` | 🔴 **none** |
+| `mietiainvestigacion-creator/api-eduadapt` | 🔴 **none** |
+| `alvarogregori/moodle-ai-graded-assignment` | 🔴 **none** |
+| `hefi002/tfg-mcp-moodle-server` 🔵 *(Spain — EMEA)* | 🟡 GPL-3.0 |
+| `surlabs/aichatformoodle` 🔵 *(Spain — EMEA)* | 🟡 GPL-3.0 |
+| `universita-di-ferrara/moodle-aiprovider_gemini` 🔵 *(Italy — EMEA)* | 🟡 GPL-3.0 |
+
+🔴 **What this pass will NOT do is call that a LATAM finding.** 🔵 **Three of the eight are
+demonstrably EMEA — two Spanish, one Italian — and a repository's LANGUAGE does not place its
+HOLDER** (`P1012`, `P184`). 🟢 **It is recorded as a LEAD with a named next measurement: read the
+holder line of the five ungranted rows, then split this table by region.**
+
+🟢 **The commercial consequence for LATAM does not wait on that measurement, because it points the
+same way either road:** 🔴 **there is no permissive, released, LATAM-authored education component in
+this corpus**, so a LATAM engagement **CONSTRUCTS** (`P102-A` unchanged). 🔵 **What pass 104 adds is
+that the parts to construct FROM are now permissive and placed: `ollama` (MIT, 689 tags) for
+no-egress inference on commodity hardware, `nextcloud/translate2` (MIT) for multilingual delivery,
+`temporal` (MIT, 573 tags) for workflow durability, and the no-egress topology of
+`sngdtechnologies/ai-moodle-security` (BSD-2-Clause).** 🟢 **For LATAM the sovereign stack sells on
+per-token COST and tolerance of poor connectivity rather than on regulation — a different pitch for
+the same architecture as `P104-A`.**
+
+🟡 **Carried, not re-measured this pass:** the regional demand figures (UNESCO IESALC 87 % adoption
+against 26 % with any framework; Digital Education Council 92 % of students / 79 % of faculty) were
+returned AGAIN by the mandated sweep and this KB already held both. 🔵 **The constraint in LATAM has
+never been demand evidence; it is granted, released supply — and this pass measured five more rows
+that do not provide it.**
+
 
 #### 🔴 🆕 p103 — re-confirmed a second time by an independent query, and the one unheld item is UNREADABLE
 

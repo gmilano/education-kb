@@ -6,7 +6,7 @@ updated: 2026-10-10
 
 # Education — AI agents shelf
 
-**Pass 103, 2026-10-10.** ⏱️ **Thirteenth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:
+**Pass 104, 2026-10-10.** ⏱️ **Fourteenth pass of this date** (91: 2026-10-09 23:0x–00:00 UTC; 92:
 00:4x–01:3x; 93: 01:4x–02:24; 94: 02:5x; 95: 03:4x; 96: 04:4x–05:xx; 97: 05:4x–06:xx; 98:
 06:4x–07:xx; 99: 07:4x–08:xx; 100: 08:4x–09:xx; 101: 09:4x–10:xx; 102: 10:4x–11:xx; this one
 12:4x–13:xx).
@@ -40,6 +40,82 @@ unread, and this is the first pass to establish the CAUSE instead of restating t
 re-measured by this pass are marked 🆕 p103.** 🔴 **A `—` in the ★ column means not read this pass.
 It never means zero** — and 🟢 **this pass measured the cause again: `api.github.com` is `403` for
 every repository not attached to this session.**
+
+### 🟢 🆕 p104 What pass 104 adds — `Gap 394` is probed to the last address, and the MCP layer it recovered is **53 % unusable**
+
+🟢 **Instrument written and executed: `compose/code/p1029-lost-address-recovery/`.**
+`test_probe.sh` **18 passed, 0 failed**; `probe.sh addresses.txt` →
+`live=94 absent=5 with_grant=68 no_grant=23 no_control=3`.
+
+🔵 **`Gap 394` carried 68 unprobed addresses. This pass probed 99** — the whole `LOST` list of 82
+plus the 17 worklist-only addresses pass 103 never reached. 🟢 **Nothing in `Gap 394` is unprobed.**
+
+🟢 **The four rows pass 103 had already measured were left in the input as blind calibration, and
+4 of 4 agree to the byte and to the tag.** 🔵 **That is the only reason the other 95 rows are worth
+reading.**
+
+#### 🔴 `T28` — the education MCP layer is the LEAST licensed layer this KB has measured
+
+🔵 **15 of the 99 addresses are MCP servers for an education system** (Moodle, Canvas, a district, a
+national SIS). 🔴 **Eight of the fifteen cannot be used commercially at all.**
+
+| MCP layer, 15 rows | n | |
+|---|---|---|
+| 🟢 **MIT** | **6** | `ahnopologetic/canvas-lms-mcp` (3 tags) · `jibberswrld/fcps-school-mcp` (4) · `sukhrobyangibaev/mcp_hemis_student` (1) · `ait0u5hi/canvas-scholar-mcp` (1) · `a2br/moodle-mcp` (0) · `jorickpepin/campus-mcp` (0) |
+| 🔴 **no payload at 11 filenames, clean 200-control** | 🔴 **6** | `ink-waffle/moodle-mcp` · `ink-waffle/sisu-mcp` · `dddanielliu/nccu-moodle-mcp` · `git-pratap-shrey/uniai_mcp` · `poorvika12-hub/student_mcp` · `hocphi-info/hocphi-info-mcp` |
+| 🔴 **ABSENT** | 🔴 **2** | `owentaylor/canvas-mcp` · `imazhar101/mcp-canvas-server` |
+| 🟡 copyleft | 1 | `hefi002/tfg-mcp-moodle-server` (GPL-3.0) |
+
+🔴 **Canvas is the sharpest case: four Canvas MCP servers, two MIT and two ABSENT.** 🔵 **Commercial
+consequence: the LMS-to-agent bridge is the layer a Globant engagement must expect to OWN. It is
+written by individuals, it is rarely licensed, and it disappears — 🟢 the two with release
+engineering (`canvas-lms-mcp`, `fcps-school-mcp`) are the only ones worth forking rather than
+rewriting.**
+
+#### 🟢 The permissive rows this shelf gets back
+
+🔵 **Every grant below is a `raw.githubusercontent.com` payload read at the measured ref, with bytes
+and `sha256` (`P1005`). No row is here on the strength of a licence *name*.**
+
+| agent / tool | grant · bytes | ref · tags | region | what it is |
+|---|---|---|---|---|
+| [`aiverify-foundation/moonshot-ui`](https://github.com/aiverify-foundation/moonshot-ui) | 🟢 **Apache-2.0** · `LICENSE.md` 11 347 B | `main` · 🟢 **23** | 🟢 **APAC** (AI Verify Foundation, Singapore) | 🟢 **Completes the eval harness.** `moonshot` + `moonshot-cicd` + `moonshot-ui` are **all three Apache-2.0 and all three released** |
+| [`ahnopologetic/canvas-lms-mcp`](https://github.com/ahnopologetic/canvas-lms-mcp) | 🟢 **MIT** · 1 091 B | `main` · 🟢 3 | 🔵 unplaced (individual holder) | Canvas LMS as MCP tools — courses, assignments, submissions |
+| [`jibberswrld/fcps-school-mcp`](https://github.com/jibberswrld/fcps-school-mcp) | 🟢 **MIT** · 1 073 B | `main` · 🟢 4 | 🟢 **North America** (Fairfax County Public Schools) | 🔵 **A K-12 DISTRICT's own MCP surface** — the only district-scoped one in the corpus |
+| [`eai6/ai-tutor`](https://github.com/eai6/ai-tutor) | 🟢 **MIT** · 1 090 B | `main` · 🟢 8 | 🔵 unplaced | Tutoring agent with the most release history of the recovered tutors |
+| [`sukhrobyangibaev/mcp_hemis_student`](https://github.com/sukhrobyangibaev/mcp_hemis_student) | 🟢 **MIT** · 1 074 B | `main` · 1 | 🟢 **APAC** (Uzbekistan — HEMIS, the national HE information system) | 🔵 **A national SIS exposed as MCP.** The pattern a ministry engagement starts from |
+| [`marc-shade/docsingest`](https://github.com/marc-shade/docsingest) | 🟢 **MIT** · 1 079 B | `main` · 2 | 🔵 unplaced | Document-to-context ingestion for courseware corpora |
+| [`ait0u5hi/canvas-scholar-mcp`](https://github.com/ait0u5hi/canvas-scholar-mcp) | 🟢 **MIT** · 1 065 B | `main` · 1 | 🔵 unplaced | Second surviving Canvas MCP |
+| [`a2br/moodle-mcp`](https://github.com/a2br/moodle-mcp) | 🟢 **MIT** · 1 073 B | `main` · 0 | 🔵 unplaced | Moodle as MCP tools — 🔴 **no releases** |
+| [`jorickpepin/campus-mcp`](https://github.com/jorickpepin/campus-mcp) | 🟢 **MIT** · 1 069 B | `main` · 0 | 🔵 unplaced | Campus-services MCP |
+| [`sngdtechnologies/ai-moodle-security`](https://github.com/sngdtechnologies/ai-moodle-security) | 🟢 **BSD-2-Clause** · 1 299 B | `main` · 0 | 🔵 unplaced | 🔵 **The only BSD-2 row in the corpus** — AI-assisted Moodle hardening |
+| [`hkuds/paper2slides`](https://github.com/hkuds/paper2slides) | 🟢 **MIT** · 1 062 B | `main` · 0 | 🟢 **APAC** (HKU Data Science Lab) | Paper → lecture slides |
+| [`thu-maic/dsh-openmaic`](https://github.com/thu-maic/dsh-openmaic) | 🟢 **MIT** · 1 078 B | `main` · 0 | 🟢 **APAC** (Tsinghua) | Multi-agent instructional content |
+| [`gemlab-hku/unlearn_and_relearn`](https://github.com/gemlab-hku/unlearn_and_relearn) | 🟢 **MIT** · 1 074 B | `main` · 0 | 🟢 **APAC** (HKU) | Knowledge-editing research code |
+| [`aliipou/student-retention-prediction`](https://github.com/aliipou/student-retention-prediction) | 🟢 **MIT** · 1 098 B | `main` · 0 | 🔵 unplaced | 🔵 **A second permissive early-warning row** — `Gap 385` stays refuted |
+| [`mizcausevic-dev/student-data-access-audit-stream`](https://github.com/mizcausevic-dev/student-data-access-audit-stream) | 🟢 **MIT** · 1 069 B | `main` · 0 | 🔵 unplaced | Student-record access audit trail — the FERPA/GDPR evidence layer |
+| [`devissaputra/classroom_discourse_intelligence`](https://github.com/devissaputra/classroom_discourse_intelligence) | 🟢 **MIT** · 1 073 B | `main` · 0 | 🔵 unplaced | Classroom talk analytics |
+| [`yptheangel/attention-monitor`](https://github.com/yptheangel/attention-monitor) | 🟡 **Apache-2.0** · 11 357 B | `master` · 0 | 🔵 unplaced | 🔴 **Attention monitoring — read `SB 1580` and `AB 1159` before proposing it** |
+| [`magnusvron/llm-benchmark-quality-index`](https://github.com/magnusvron/llm-benchmark-quality-index) | 🟡 **MIT for CODE, separate terms for DATA** · 2 488 B | `main` · 0 | 🔵 unplaced | 🔴 **DUAL-licensed — see `P1030`** |
+
+#### 🔴 The answer to pass 103's own next-action, and it is a no
+
+🔵 **`intel/open-gaps.md` listed `aiverify-foundation/llm-evals-catalogue` as action item 4: "if the
+catalogue is permissively licensed it supplies the recipe LIBRARY that `P103-A` currently has to
+write."** 🔴 **Measured: `LIVE-NOGRANT` — no payload at 11 filenames, clean 200-control at 26 342 B,
+and ZERO tags.** 🟢 **So `P103-A` keeps the whole rubric-writing cost; what it does NOT keep is the
+UI, because `moonshot-ui` is Apache-2.0 with 23 tags.**
+
+🟡 **And the provenance argument survives intact**: all three granted harness components come from
+the foundation the Singapore regulator convened (AI Verify Foundation / IMDA), not from an education
+vendor.
+
+#### 🔴 `P1029` — a `LICENSE` that returns 200 is not a grant
+
+🔴 **`yuanjiusheng/cloud-learning-ce` serves 4 117 B from a file named `LICENSE`, and the text is
+all-rights-reserved Chinese copyright assertion** — *「版权所有 (c) 2021，猿究生 / 保留所有权利。」*
+🔵 **It classifies `UNRECOGNISED` precisely because it matches no grant. Presence is not permission,
+and a classifier that mapped filename → licence would have shelved a proprietary LMS.**
 
 ### 🔴 🆕 p103 What pass 103 adds — the shelf was missing rows it already owned, and `Gap 393` is now only half a gap
 
