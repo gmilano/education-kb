@@ -1,8 +1,131 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-10
+updated: 2026-10-11
 ---
+
+# Education — compose patterns
+
+**Pass 114, 2026-10-11.** ⏱️ **First pass of this date** (census window
+**2026-10-10 23:54 → 2026-10-11 00:25 UTC**).
+
+🟢 **Every repository named below was read live this pass by `reach.sh` (`rc=0`, 296 of
+296 addresses, zero unread) and carries its p111 verification verdict, its p112 closure
+verdict and its 🆕 p114 reach verdict. `compose/code/p114-lock-reach/`, `test_p114.sh`
+**98 passed / 0 failed**, fully offline.**
+
+🔴 **p114 TIGHTENS p112's gate before it adds a pattern, because the tightening changes
+what two patterns on this page must do at fork time.**
+
+## 🔴 `P114-GATE` — the reach gate, and why `P112-GATE` was not enough
+
+🔵 **`P112-GATE` asked: is this component's dependency set locked? A pattern that vendors
+a repository at a SHA has vendored its CODE; if the dependency set is `floating`, the
+pattern has not vendored the thing that makes it run. p114 adds the question that gate
+cannot ask: locked WHERE? A lock in `examples/demo/` satisfies p112 and resolves nothing
+you will install.**
+
+| component this page relies on | p111 | p112 | 🆕 p114 | orphaned / lockable | gate |
+|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 `checked` | 🟢 `pinned` | 🟢 **`full-reach`** | 🟢 **0 / 63** | 🟢 **passes outright** |
+| [`temporalio/temporal`](https://github.com/temporalio/temporal) | 🟢 `checked` | 🟢 `pinned` | 🟢 **`full-reach`** | 🟢 **0 / 2** | 🟢 **passes outright** |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 `checked` | 🟢 `pinned` | 🟢 **`full-reach`** | 🟢 **0 / 6** | 🟡 **passes — but on a hand-maintained `requirements.txt`; own that file (`P114-V`)** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `checked` | 🟡 `partial-pin` | 🟡 `partial-reach` | 🟡 2 / 57 | 🟡 **passes with a note — 55 of 57 reached, neither orphan at the root** |
+| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🟢 `checked` | 🟡 `partial-pin` | 🟡 `partial-reach` | 🔴 **2 / 3, root** | 🔴 **FAILS — generate the root lock at fork time** |
+| [`huggingface/transformers`](https://github.com/huggingface/transformers) | 🟢 `checked` | 🔴 `floating` | 🔴 `partial-reach` | 🔴 **21 / 22, root** | 🔴 **FAILS — pin at fork time (unchanged verdict, sharper reason)** |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🟢 `checked` | 🔴 `floating` | 🔴 **`no-reach`** | 🔴 **1 / 1, root** | 🔴 **FAILS — nothing to inherit; own the dependency set** |
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 `checked` | 🟢 `pinned` | 🟡 **`partial-reach`** | 🔴 **1 / 5, root** | 🔴 **NEWLY FAILS — p112 passed this component; its root `pyproject.toml` is orphaned** |
+
+🔴 **One component newly fails the gate and it is one this page was relying on.** Every
+pattern below that touches Submitty now carries an explicit fork-time step.
+
+### 🟢 The gate as three commands, so it is checkable rather than quotable
+
+```sh
+# 1. does a lock reach the manifest you will install from?
+cd compose/code/p114-lock-reach
+printf 'ORG/REPO\n' > /tmp/one.txt && ./reach.sh /tmp/one.txt
+#    -> verdict column 18; root_orphan column 10; orphan_paths column 19
+
+# 2. if root_orphan=1, the remedy is local and one commit:
+#    python:  cd <root> && uv lock        (or poetry lock / pip-compile)
+#    node:    cd <root> && npm install --package-lock-only
+#    go:      cd <root> && go mod tidy    # writes go.sum
+
+# 3. re-run step 1 and require verdict=full-reach before the fork is adopted.
+```
+
+## 🟢 🆕 `C114-1` — the fork-time pinning step, as a concrete recipe
+
+🔵 **Wire this ahead of every pattern on this page that adopts a `partial-reach` or
+`no-reach` component. It is the cheapest finding this KB has produced: 88 rows need it,
+and for most of them it is one generated file.**
+
+**Components:** the target repo + `compose/code/p114-lock-reach/reach.sh` (the gate) +
+the ecosystem's own resolver (`uv` / `poetry` / `npm` / `go mod`).
+
+```
+fork ORG/REPO at SHA
+  └─ reach.sh ORG/REPO                      # measure BEFORE changing anything
+       ├─ verdict=full-reach ───────────────► adopt as-is
+       ├─ verdict=vendored ────────────────► adopt as-is; no registry needed (P114-D)
+       ├─ verdict=self-pinned|foreign-build► assess in its own idiom (P114-E)
+       └─ root_orphan=1 ──────────────────► for each path in orphan_paths:
+                                               cd $(dirname path)
+                                               <resolver> lock        # generate
+                                               git add <lockfile>     # COMMIT it
+                                             re-run reach.sh; require full-reach
+```
+
+🔵 **Why the commit matters more than the lock:** `P114-B` credits a lock sitting at the
+manifest's directory or an ancestor. A lock generated in CI and thrown away satisfies
+nothing — the next engineer resolves afresh. The deliverable is a committed file at the
+right path.
+
+## 🟡 🆕 `C114-2` — Open edX course generation, re-wired for the gate
+
+🔵 **Supersedes the wiring in `compose/code/openedx-course-generator/` on one point only:
+the fork-time step. The pattern is unchanged; its preconditions are not.**
+
+| component | role | 🆕 p114 | fork-time requirement |
+|---|---|---|---|
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | Open edX deployment | 🔴 **`no-reach`** | 🔴 **own the dependency set — the root `pyproject.toml` has no lock anywhere in the tree** |
+| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | open-response assessment | 🔴 `partial-reach`, root | 🔴 **generate + commit the root lock** |
+| [`edly-io/pxc`](https://github.com/edly-io/pxc) | Open edX extensions | 🔴 `partial-reach`, root (6 / 17) | 🔴 **generate + commit the root lock** |
+| [`huggingface/transformers`](https://github.com/huggingface/transformers) | model runtime | 🔴 `partial-reach`, root (21 / 22) | 🔴 **pin at the fork SHA; do not track upstream** |
+| [`temporalio/temporal`](https://github.com/temporalio/temporal) | generation orchestration | 🟢 **`full-reach`** | 🟢 **none — adopt as-is** |
+
+🔴 **Four of the five components in this KB's most-cited pattern require a fork-time
+pinning step.** That is not a reason to change the pattern — these are the right
+components and `P111`/`P112` already established they are verified and alive — it is a
+reason to put the step in the estimate.
+
+## 🟢 🆕 `C114-3` — the all-green composition, for an engagement that cannot absorb remediation
+
+🔵 **Every component below is `full-reach`, `checked` at p111 and reached on every
+manifest it declares. This is the composition to propose when the client's first sprint
+has no room for supply-chain work.**
+
+| component | role | licence | p114 |
+|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | LMS of record | 🟡 GPL-3 | 🟢 **0 / 63 orphaned** |
+| [`temporalio/temporal`](https://github.com/temporalio/temporal) | durable orchestration for agent workflows | 🟢 MIT | 🟢 **0 / 2** |
+| [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | assessment engine | 🟡 AGPL-3 | 🟢 **0 / 58** |
+| [`leemonade/leemons`](https://github.com/leemonade/leemons) | modular platform shell | 🟢 Apache-2.0 | 🟢 **0 / 114** |
+| [`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) | LLM evaluation harness | 🟢 Apache-2.0 | 🟢 **0 / 2** |
+
+🔵 **Wiring:** Moodle as the system of record; Temporal workflows drive each
+agent-authored artefact (lesson draft → review → publish) so a failed generation is
+retried rather than lost; PrairieLearn owns assessment and returns graded outcomes over
+LTI; `moonshot` runs as the pre-deployment evaluation gate on any model swap. 🟡 **Licence
+note, unchanged by this pass:** Moodle GPL-3 and PrairieLearn AGPL-3 are copyleft — the
+composition is safe for a hosted institutional deployment and is **not** a basis for a
+redistributed proprietary product. The MIT/Apache-2.0 members (`temporal`, `leemons`,
+`moonshot`) are the ones Globant can build on without that constraint.
+
+🔵 **What this composition does NOT yet have:** no component in it has had its lockfile
+BODIES read — reach says a lock is in the right place, not that the versions inside it
+are current. That is the question p114 hands to p114.
 
 # Education — compose patterns
 

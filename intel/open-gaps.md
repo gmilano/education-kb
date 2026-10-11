@@ -1,8 +1,73 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-10
+updated: 2026-10-11
 ---
+
+## 🟢 Hundred-and-fourteenth pass, 2026-10-11 — **`Gap 404` OPENED** (`*_requirements.txt` is invisible to the classifier p112 and p114 share, and it costs exactly one verdict); **`Gap 403` CORROBORATED from an independent axis**; `T47`–`T49`, `P114-A`–`P114-K` adopted; the instrument's own suite caught the rule error before the shelf did
+
+⏱️ **First pass of 2026-10-11.** Census window **2026-10-10 23:54 UTC → 2026-10-11
+00:25 UTC** — the run crossed midnight. 🔵 **p113 (provider binding) measured a different
+axis at 22:4x–23:xx on the 10th and landed while this census was running, so the two are
+independent reads of the same 296 addresses and this pass cross-tabulates against
+p112.** **Append-only.**
+
+🟢 **Instrument written and executed: `compose/code/p114-lock-reach/`.** `test_p114.sh`
+**98 passed / 0 failed**, **fully offline** — no network and no mocks: it builds real git
+repositories, commits real manifests and lockfiles into them and serves them to the real
+`reach.sh` over `file://`, so the actual fetch/classify/cover path runs. `reach.sh` read
+**296 of 296** addresses in **4 m 09 s**, **zero unread**, with **three** control runs
+over the same 296 addresses.
+
+### 🔴 🆕 `Gap 404` — OPENED: the shared requirement-file classifier misses half its own convention
+
+| | |
+|---|---|
+| what it is | `P112-A` matches a python requirement file on an anchored basename — `^requirements([-_.]<suffix>)?\.txt$` — which is correct against `docs/requirements.rst` (prose about a curriculum, and on this shelf) but does not match `dev_requirements.txt`, `system_requirements.txt`, `latest_requirements.txt` |
+| how it was found | 🔵 **by hand, verifying the `Submitty/Submitty` row through a code path independent of the instrument — not by the instrument itself** |
+| sized, not asserted | `result-P114K-reqname-gap.2026-10-11.tsv`, all 296 addresses: **198 files seen, 8 missed, 5 rows affected** |
+| 🔴 what it costs | 🔴 **exactly ONE verdict.** [`sdv-dev/sdv`](https://github.com/sdv-dev/sdv) carries a **root** `latest_requirements.txt` pinned on all 11 of its lines (`cloudpickle==3.1.2`, `numpy==2.5.3`, …), so under a corrected rule it is a root lock and the row moves `no-reach` → `full-reach` |
+| what it does NOT cost | 🔵 the other four cannot move a verdict: Submitty's three sit in `.setup/pip/`, which declares no manifest, so **its root `pyproject.toml` stays orphaned either way**; `elgg/elgg`'s is unpinned (`docutils<0.18`); transformers' and ai-engineering-from-scratch's sit in directories whose only in-rule manifest would be the missed file itself |
+| error direction | 🔵 **opposite to `P114-B`'s.** An unseen requirement file can only cost a row coverage it earned, never grant coverage it has not — so on this axis every reach figure is a **lower** bound, while `P114-B`'s ancestor credit makes it an upper bound. Both are stated and **neither is netted against the other** |
+| 🔵 why it is not fixed in this pass | 🔵 **`P237` forbids forking the shared classifier**, and the correction belongs with the rule p112 and p114 both depend on. What is committed instead is the measurement, the bound and the one row — so the next pass decides against a number rather than a guess, with the failing case already on disk |
+| how it ends | the anchored rule is widened in the SHARED classifier, both passes' figures are restated, and `sdv-dev/sdv` is re-read |
+
+### 🟢 `Gap 403` — CORROBORATED from an independent axis, one hour after it was opened
+
+🔵 **p113 opened `Gap 403` on the regional placement. p114 did not set out to test it and
+tested it anyway, because the reach census is placed by the same committed
+`orgs.region.tsv`:**
+
+| | |
+|---|---|
+| 🔴 **what the unplaced rows hide** | 🔴 **58 of this pass's 88 root-orphan rows are UNPLACED** — so the placement gap does not merely leave regional figures thin, it hides where **most of the shelf's reproducibility failures actually are** |
+| this pass's count of the shared file | **93 strictly placed + 11 provisional (`EMEA?` / `North America?`) + 192 unplaced** |
+| 🟡 `Gap 403`'s count | 103 placed / 193 unplaced |
+| 🟡 the disagreement | 🟡 **the two readings of the same committed file differ by ONE row.** Recorded rather than reconciled silently; the likely cause is the treatment of the 11 provisional placements. Whichever reading is right, the gap both describe is the same one |
+| 🔵 consequence for this pass's figures | every regional figure p114 publishes describes the **104 placed rows only**, stated on each one rather than left implicit; provisional placements are reported separately and **never folded into a region** |
+
+### 🔵 What this pass did NOT do, stated
+
+🔵 **No licence verdict was changed. No address was added to or removed from the
+shelf** — `addresses.txt` is p112's, carried verbatim so the cross-tab is row-for-row.
+🔵 **No lockfile BODY was read**: reach says a lock sits where the resolver will look for
+it, not that the versions inside it are current. That is the question p114 hands on, and
+eight axes have now characterised this shelf's supply chain from the outside without once
+opening a lock and reading what it pins.
+
+### 🟡 The rule error the suite caught before the shelf did
+
+🔵 **Recorded because the KB's standard is that an instrument should find its own faults
+first.** The first draft of `P114-C` gave a pinned `requirements.txt` the same ancestor
+reach as a `package-lock.json`. A root `requirements.txt` pinned with `==` then certified
+every unpinned requirements file beneath it — including a `dev/requirements-dev.txt`
+reading `black`. The `reqmixed` fixture failed, and the fix (`P114-G`) is the difference
+between the two artefacts: **a lockfile is OUTPUT** — a resolver produced it from a
+manifest at that directory and, in the workspace ecosystems, enumerates the members it
+resolved; **a pinned requirements.txt is INPUT** — a list that pins itself and resolves
+nothing below it. Python is the dominant ecosystem on this shelf, so this is the rule
+that moved the most rows, and like every other rule in `cover.awk` it can only move them
+DOWN.
 
 ## 🟢 Hundred-and-thirteenth pass, 2026-10-10 — **`Gap 403` OPENED** (the regional placement reaches a third of the shelf and holds back every regional figure); `Gap 402` strengthened for a NINTH pass; `T44`–`T46`, `P113-A`–`P113-U` adopted; the instrument found **six** faults in its own code and **two** in its own cap before it found anything on the shelf
 

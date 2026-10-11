@@ -1,8 +1,111 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-10
+updated: 2026-10-11
 ---
+
+# Education — market intelligence
+
+**Pass 114, 2026-10-11.** ⏱️ **First pass of this date** (census window
+**2026-10-10 23:54 → 2026-10-11 00:25 UTC**).
+
+🔴 **ZERO new market items this pass, from eight searches in extended mode — the TENTH
+consecutive zero, and the first pass in which not even a FAILED verification was
+produced. 49 candidate tokens were extracted and checked one at a time; **49 of 49 are
+already held** on a live page of this KB.**
+
+🟢 **`reach.sh` read **296 of 296** addresses in 4 m 09 s, zero unread
+(`compose/code/p114-lock-reach/`, `test_p114.sh` **98 passed / 0 failed**, fully
+offline), plus three control runs over the same 296.**
+
+### 🔴 🆕 `P114-M` — the token ledger, so the ninth zero is auditable rather than asserted
+
+🔵 **Eight queries, extended mode, computed year 2026 (never hardcoded): four global
+(`top open source AI agents education 2026 github MIT`, `github trending education AI
+2026`, `open source platform education ERP CRM MIT Apache`, `AI education industry trends
+2026`) and one per region (`AI education {North America|EMEA|APAC|LATAM} 2026 adoption
+regulation players`).**
+
+| token class | checked | already held | new |
+|---|---|---|---|
+| US federal / state regulation (`H.R. 8747`, `AB 1159`, `SB 1227`, STUDENTS FIRST Act, Katy ISD, 134 bills / 31 states) | 7 | 🔵 **7** | 0 |
+| EU / EMEA regulation (AI Act enforcement 2 Aug 2026, AI omnibus, Digital Omnibus, €/£ investment figures) | 6 | 🔵 **6** | 0 |
+| APAC regulation (Korea AI Basic Act 22 Jan 2026, Vietnam AI law 1 Mar 2026 + education high-risk + Sept 2027, Taiwan, Australia guardrails) | 7 | 🔵 **7** | 0 |
+| LATAM (UNESCO IESALC 200 HEIs / 19 countries / 87 % / 74 % / 26 %, LAC Observatory 14 Apr 2026, Brazil PL 2.338, Colombia CONPES 4144, Ceibal 75 %, TALIS 56 %) | 11 | 🔵 **11** | 0 |
+| market sizing (Research&Markets 10.6 → 42.48 B, Technavio NA 36 % / 3.68 B, Europe 2.64 → 8.0 B @ 31.9 %, HolonIQ) | 8 | 🔵 **8** | 0 |
+| vendors / platforms (OpenEduCat, ERPNext education, OFBiz, Corteza, Huly, Krayin, Dolibarr, MS Education AI Toolkit, ERNIE) | 9 | 🔵 **9** | 0 |
+| repos / courses (LLMs-from-scratch, generative-ai-for-beginners, ai-agents-for-beginners, developer-roadmap, agents-radar, Hermes Agent) | 6 | 🔵 **6** | 0 |
+| standards bodies (1EdTech three trends, OECD Digital Education Outlook 2026) | 2 | 🔵 **2** | 0 |
+| **total** | **49** | 🔵 **49** | 🔴 **0** |
+
+🔵 **The tenth zero is now a finding about the query set, not about the market.** `P109-A`
+declared the mandated queries exhausted five passes ago; p114 confirms it at a larger
+token count than any prior pass. The searches are still run in full each pass — the ledger
+above is the evidence — but this KB's market pages now grow only by MEASURING the
+addresses it holds, and the brief's own standard applies: *an informed gap is information,
+while silence looks exactly like coverage.*
+
+### 🔴 🆕 `P114-R` — the supply side, measured a fourth way, and the regional ranking inverts
+
+🔵 **p114 measures whether the lockfile p112 counted actually REACHES the manifest it is
+supposed to resolve (`P112-E`, which p112 declared an unmeasured upper bound). Placed by
+region — and reported on BOTH weightings, because they disagree:**
+
+| region | rows w/ lockable manifest | `full-reach` | **row-level** | **manifest-weighted** | root orphans | concentration caveat |
+|---|---|---|---|---|---|---|
+| **APAC** | 9 | 6 | 🟢 **66.7 %** | 🟢 **92.3 %** | 2 | 🟡 **`moodle/moodle` alone is 63 of 91 manifests** |
+| **EMEA** | 25 | 15 | 🟢 **60.0 %** | 🟡 **74.2 %** | 8 | 🟢 the most evenly distributed placed region |
+| **LATAM** | 6 | 3 | 🟡 **50.0 %** | 🔴 **58.8 %** | 3 | 🔴 **6 rows / 17 manifests — too small to rank** |
+| **North America** | 36 | 13 | 🔴 **36.1 %** | 🟢 **81.2 %** | 🔴 **14** | 🔴 **`canvas-lms` alone is 596 of 1 002; without it the region falls to 53.9 %** |
+| *unplaced* | 141 | 64 | 45.4 % | 71.2 % | 🔴 **58** | 🔴 **192 of 296 addresses still carry no region** |
+
+🔴 **North America is second-best on manifests and last on repositories, from the same
+census.** An engagement adopts repositories, not manifests, so the row-level column is the
+one that should inform a staffing or risk conversation; the manifest-weighted column
+answers *"how much of the declared dependency surface is pinned"* and must never be quoted
+regionally without the concentration caveat beside it.
+
+### 🟢 🆕 the commercial read — what this axis is worth in an engagement
+
+🔵 **The 88 root orphans are a priced, bounded unit of remediation**, which is what makes
+this axis commercially useful rather than merely critical:
+
+| finding | the engagement consequence |
+|---|---|
+| 🔴 **88 of 296** rows: no lock reaches the ROOT manifest | the first `install` of the engagement is not reproducible — **generate and commit the lock in that directory at fork time**; local, cheap, one commit |
+| 🔴 **65 of those 88**: no lock reaches ANY manifest | the dependency set must be **owned outright**, not inherited — size this into the estimate, not into the first sprint |
+| 🟢 **102 rows `full-reach`** | adopt as-is; the lock is where the resolver will look for it |
+| 🔵 **5 rows `vendored`** | strongest shape available: stands up with **no registry at all** (`P114-D`) |
+| 🔵 **23 rows `self-pinned` / `foreign-build`** | maven, bazel, odoo, moodle-plugin — **no claim made in either direction**; assess in their own idiom (`P114-E`) |
+| 🔴 **`Submitty/Submitty`** | 🔴 **a recommendation this KB published last pass, corrected this pass** — see `verticals/solutions.md` |
+
+🔵 **The three widest rows that pass cleanly are the reference shapes to show a client:**
+[`leemonade/leemons`](https://github.com/leemonade/leemons) 114 / 114,
+[`moodle/moodle`](https://github.com/moodle/moodle) 63 / 63,
+[`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) 58 / 58. The
+counter-example at the same scale is
+[`microsoft/autogen`](https://github.com/microsoft/autogen): **87 lockable manifests, 23
+reached, 64 orphans** — the largest orphan count on the shelf.
+
+### 🟡 Regions and lines of enquiry that returned nothing THIS pass — stated, not hidden
+
+🔵 **Per the brief, a region that returns nothing is written down rather than left
+silent:**
+
+| region | this pass's regional query | result |
+|---|---|---|
+| **North America** | ran, extended | 🔴 **no new item** — all 7 regulation tokens and both market tokens already held |
+| **EMEA** | ran, extended | 🔴 **no new item** — AI Act timing, omnibus dates and the European market figures already held |
+| **APAC** | ran, extended | 🔴 **no new item** — Korea, Vietnam, Taiwan, Australia all already held |
+| **LATAM** | ran, extended | 🔴 **no new item** — UNESCO IESALC, the LAC Observatory, Brazil, Colombia, Ceibal and TALIS all already held |
+
+🔴 **The standing regional gap is provenance, not search — and it is already registered as
+`Gap 403`, opened by p113 an hour before this census:** **192 of 296 addresses carry
+no region at all**, and the unplaced set holds **58 of the 88 root orphans**. Every
+regional figure on this page therefore describes the 104 placed rows only. Eight further
+rows carry a provisional `EMEA?` and three a provisional `North America?`; both are
+reported separately and never folded into a region, because a provisional placement
+counted as settled is how a filter silently stops working.
 
 # Education — market intelligence
 
@@ -797,6 +900,19 @@ KB: write down what you refused to use, and why.**
 
 ### North America
 
+🔴 **p114 (2026-10-11) — lock reach, placed.** 36 North American rows carry a lockable
+manifest; **13 are `full-reach` (36.1 %)** and **14 have an orphaned ROOT manifest** —
+the worst row-level reach of any placed region. The manifest-weighted figure reads
+81.2 %, but [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) alone
+contributes **596 of the region's 1 002** manifests (reaching 595); **without it the
+region falls to 53.9 %**. 🟢 **Opportunity:** the remediation is local and priced — a
+generated lock committed in the root directory at fork time. The reference shapes to
+show a client are [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn)
+(58 / 58) and [`leemonade/leemons`](https://github.com/leemonade/leemons) (114 / 114);
+the counter-example is [`microsoft/autogen`](https://github.com/microsoft/autogen)
+(23 of 87 reached, **64 orphans**, the shelf's largest). Instrument:
+`compose/code/p114-lock-reach/`.
+
 #### 🔴 🆕 p112 North America — the best-tested regional stack on this shelf is also the least reproducible
 
 🔴 **Measured, 43 placed rows: `floating` 15 (35 %) OUTNUMBERS `pinned` 14 (33 %), plus
@@ -1407,6 +1523,21 @@ adoption.** 🔴 **So a North America pitch that leads with adoption is pushing 
 regulatory grain; one that leads with governance, auditability and teacher-augmentation is with it.**
 
 ### EMEA
+
+🔴 **p114 (2026-10-11) — lock reach, placed.** 25 EMEA rows carry a lockable manifest;
+**15 are `full-reach` (60.0 %)**, manifest-weighted **74.2 %**, with **8 root orphans** —
+the most evenly distributed placed region, with no single row dominating the denominator.
+🔴 **The commercially sharpest row is
+[`european-commission-empl/european-digital-credentials`](https://github.com/european-commission-empl/european-digital-credentials)**:
+p112 read it `pinned`, p114 finds **3 of 6 lockable manifests orphaned**, deepest at
+depth 5. It is the reference implementation behind the EU digital-credentials stack, and
+digital credentials appear in every 2026 trend list the mandated searches returned — so a
+studio adopting it inherits three unpinned front-end trees. 🟢 **Opportunity:** EU
+high-risk conformity work under the AI Act already demands documented provenance; lock
+reach is evidence that costs one commit per directory to produce. Six of the nine EMEA
+root-orphan rows are `no-reach` outright, including
+[`overhangio/tutor`](https://github.com/overhangio/tutor) — vendor those at a SHA and own
+the dependency set.
 
 #### 🟢 🆕 p112 EMEA — the region p111 ranked last leads this axis, and Finland is the reason
 
@@ -2271,6 +2402,18 @@ duty is the sellable deliverable that is already overdue.**
 
 ### APAC
 
+🟢 **p114 (2026-10-11) — lock reach, placed.** 9 APAC rows carry a lockable manifest;
+**6 are `full-reach` (66.7 %)** and manifest-weighted **92.3 %** — the strongest placed
+region on both weightings, with only **2 root orphans**. 🟡 **Stated with the
+concentration:** [`moodle/moodle`](https://github.com/moodle/moodle) contributes **63 of
+the region's 91** manifests and reaches all 63, so the regional lead is one project's
+engineering discipline rather than a regional property. 🟢 **Opportunity:** the
+`aiverify-foundation` rows (Singapore) are `full-reach` across `moonshot`,
+`moonshot-cicd` and `moonshot-ui`, and remain the cleanest AI-evaluation starting point
+on this shelf for an APAC engagement. The `project-sunbird` rows are maven
+`self-pinned`, so **no reach claim is made about them** (`P114-E`) and they need
+assessment in their own idiom.
+
 #### 🟢 🆕 p112 APAC — not one placed APAC row floats, and Singapore is the only body on this shelf that does all three things
 
 🟢 **Measured, 13 placed rows: `pinned` 6 (46 %), `self-pinned` 3, `partial-pin` 3,
@@ -3059,6 +3202,20 @@ the permission argument first — except in ANZ, where it does.** 🔴 **That is
 North America posture recorded above, and the two pitches should not share a slide.**
 
 ### LATAM
+
+🟡 **p114 (2026-10-11) — lock reach, placed, and the denominator is stated first.** Only
+**6 LATAM rows carry a lockable manifest** (17 manifests in total), so a percentage here
+describes two or three projects: **3 are `full-reach` (50.0 %)**, manifest-weighted
+**58.8 %** — the lowest of any placed region — and **3 of the 6 have an orphaned ROOT
+manifest**, the highest root-orphan rate on the shelf. Every row is named individually in
+`repos/trending.md` rather than reduced to the percentage. 🟢 **Opportunity:**
+[`portabilis/i-educar`](https://github.com/portabilis/i-educar) is `full-reach` (0 / 2)
+and remains the strongest LATAM foundation across all eight axes measured so far, and the
+[`bncc-dev`](https://github.com/bncc-dev) packages (`bncc-pacotes` 0 / 5,
+`bncc-benchmark` 0 / 1) pin cleanly — a BNCC-aligned engagement can build on reachable
+locks today. 🔴 The two `portabilis` sibling rows (`i-diario`,
+`pre-matricula-digital`) and [`webtech-network/autograder`](https://github.com/webtech-network/autograder)
+(5 / 5 orphaned, nothing reached) are the remediation targets.
 
 #### 🟡 🆕 p112 LATAM — the region that led verification holds the only fully-closed SIS line on the shelf, and it is three repositories wide
 

@@ -1,8 +1,97 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-10
+updated: 2026-10-11
 ---
+
+# Education — current trends
+
+**Pass 114, 2026-10-11.** ⏱️ **First pass of this date** (census window
+**2026-10-10 23:54 → 2026-10-11 00:25 UTC**).
+
+🔴 **The eight mandated searches produced ZERO new trend items for the TENTH consecutive
+pass. 49 candidate tokens extracted, **49 of 49 already held** — this pass did not even
+produce a claim that FAILED verification, which p112 did. The query set and the token
+ledger are in `intel/market.md` under `P114-M`.**
+
+🟢 **The pass's contribution is again a trend this KB can state because it MEASURED it:
+the open-source education supply is not merely unpinned — the pinning it does have is
+positioned where it does not help, and the published figure for it was an upper bound
+that nobody had tested.**
+
+### 🟢 🆕 `T47` — trend: every generation of supply-chain signal on this shelf has been retired by the next, and "has a lockfile" is the latest to go
+
+🔵 **Eight passes have now measured this shelf on eight independent axes. Read as a
+sequence they are one story: each signal a buyer would reasonably ask for turns out to
+be satisfiable without the property it is supposed to evidence.**
+
+| axis | pass | what the shelf looks like | what the figure hides |
+|---|---|---|---|
+| releases | p108 | pinnable | the pin may be from 2019 |
+| liveness | p109 | alive | one person is keeping it alive |
+| bench | p110 | 🔴 67.6 % one person | nobody can tell if a fork broke it |
+| verification | p111 | 🔴 38.9 % `checked` | the check runs on GitHub's machines |
+| closure | p112 | 🔴 36.1 % `pinned` | 🔴 **the lock may not reach the manifest** |
+| provider binding | p113 | measured in parallel, different axis | — (independent of this read) |
+| 🆕 **reach** | 🟢 **p114** | 🔴 **34.5 % `full-reach`; 76.1 % of manifests reached** | whether the pinned versions are any good |
+
+🔵 **The sequence has a property worth naming: no axis has yet reversed the direction of
+the one before it.** Each has been a tightening. That is weak evidence that the shelf is
+genuinely in the state these figures describe rather than being measured badly — and
+`P114-H` is the first time one pass has re-run its predecessor's exact rule to prove the
+movement is the rule and not the week.
+
+### 🔴 🆕 `T48` — trend: the repository root is where open-source education projects stop pinning
+
+🔵 **This is the finding that generalises beyond this shelf, and it is the one to take
+into a client conversation.** Across 296 addresses:
+
+| | |
+|---|---|
+| lockable manifests | **2 135** |
+| reached by a lock | 🟢 **1 625 (76.1 %)** |
+| 🔴 orphaned | 🔴 **510 (23.9 %)** |
+| rows whose **ROOT** manifest is orphaned | 🔴 **88 of 296** |
+| of those, rows where **nothing** is reached | 🔴 **65** |
+
+🔴 **Three quarters of the declared dependency surface on this shelf is reachable by a
+lock, but on 88 repositories the single manifest a team installs from first is not.** The
+shape recurs: a project pins the subtree it iterates on — the service, the front end, the
+package it publishes — and leaves the top-level `pyproject.toml` or `setup.py` that
+defines the project itself unpinned, because that file is the *library's* declaration and
+the maintainers are not installing from it. That is defensible behaviour for a library
+(`P112-G` carved the distinction out, and p114 keeps it). It is a problem the moment a
+studio forks the repository and becomes the installer.
+
+🔵 **python is where it concentrates: 86 of the orphan rows are python**, against 21 npm,
+11 php, 6 gradle, 5 R, 5 dotnet, 4 ruby, 4 go, 1 swift. On an education-and-AI shelf
+python is the dominant ecosystem, and it is also the ecosystem whose idiom —
+`requirements.txt` maintained by hand — produces a pin that is positional rather than
+generated.
+
+### 🟡 🆕 `T49` — trend: the regional ranking on a supply-chain axis depends on the weighting, and nobody states the weighting
+
+🔴 **North America reads 81.2 % on manifests and 36.1 % on repositories: second-best and
+last on the same census.** One repository — `instructure/canvas-lms`, 596 manifests —
+carries 59 % of the region's denominator. APAC's 92.3 % similarly rests on
+`moodle/moodle` (63 of 91).
+
+🔵 **The trend worth recording is not the ranking but the fragility of regional
+supply-chain claims at these denominators.** Six LATAM rows and nine APAC rows carry a
+lockable manifest. Any vendor report quoting a regional open-source "maturity" percentage
+on a base like that is reporting one or two projects' engineering habits. This KB states
+both figures, the concentration behind each, and the 192 rows it still cannot place —
+see `repos/trending.md` and `intel/market.md` `P114-R`.
+
+### 🔵 What p114 hands to p114
+
+🔵 **A `full-reach` lock is still only as good as the versions inside it.** Seven axes
+have now characterised the shelf's supply chain from the outside — refs, releases,
+recency, authorship, CI, closure, reach — and **not one has opened a lockfile and read
+what it pins.** `p437` / `p438` / `p442` (pre-reset) dated *resolved specifiers* against
+the registries, which is the adjacent question, not this one. The open question is
+narrower and now well-posed: of the 1 625 reached manifests, how old are the versions
+their locks actually hold?
 
 # Education — current trends
 

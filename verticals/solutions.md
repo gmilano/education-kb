@@ -1,8 +1,83 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-10
+updated: 2026-10-11
 ---
+
+# Education — vertical platforms and solutions
+
+**Pass 114, 2026-10-11.** ⏱️ **First pass of this date** (census window
+**2026-10-10 23:54 → 2026-10-11 00:25 UTC**).
+
+🟢 **`reach.sh` read **296 of 296** addresses in 4 m 09 s, zero unread
+(`compose/code/p114-lock-reach/`, `test_p114.sh` **98 passed / 0 failed**, fully
+offline), with three control runs over the same 296.**
+
+🔴 **This pass CORRECTS a verdict this page published last pass.** p112 asked whether a
+platform's dependency set resolves to the same bytes twice. p114 asks the question that
+decides whether the answer applies to the directory your team will actually run
+`install` in — and `Submitty/Submitty`, which this page called *"the only 3-ecosystem row
+that locks all three"* and marked 🟢 **safe**, has an **orphaned root manifest**.
+
+### 🔴 🆕 `P114-Z` — the platforms on this page, re-read on lock reach
+
+| platform | licence | p112 | 🆕 p114 | orphaned / lockable | 🆕 stand-up verdict |
+|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3 | 🟢 `pinned` | 🟢 **`full-reach`** | 🟢 **0 / 63** | 🟢 **safe — 63 manifests, every one reached; the strongest row on this page** |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | 🟢 `pinned` | 🟢 **`full-reach`** | 🟢 **0 / 6** | 🟢 **safe — but its python half rests on a pinned `requirements.txt`, not a lockfile (`P114-V`)** |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🟡 GPL-3 | 🟢 `pinned` | 🟢 **`full-reach`** | 🟢 **0 / 4** | 🟢 **safe** |
+| [`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud) | 🟡 contested ※ | 🟢 `pinned` | 🟢 **`full-reach`** | 🟢 **0 / 1** | 🟡 **tree reproducible and reached; bench still 1, licence still contested** |
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 BSD-3 | 🟢 `pinned` | 🟡 **`partial-reach`** | 🔴 **1 / 5 — the ROOT** | 🔴 **CORRECTED from 🟢 safe: zero python lockfiles in the tree; the root `pyproject.toml` has no lock above it** |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 Apache-2.0 | 🟢 `pinned` | 🟡 **`partial-reach`** | 🟡 1 / 2 (depth 6) | 🟡 **downgraded — the orphan is a vendored-style JS subtree, not the entry point** |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🟡 AGPL-3 | 🟡 `partial-pin` | 🟡 `partial-reach` | 🟢 **595 / 596 reached** | 🟢 **upgraded in substance — 596 manifests and exactly one orphan; p112's `partial-pin` hid how close this is** |
+| [`elgg/elgg`](https://github.com/elgg/elgg) | 🟡 GPL-2 | 🟡 `partial-pin` | 🟡 `partial-reach` | 🟢 40 / 41 reached | 🟢 **one orphan in 41** |
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 MIT | 🟡 `partial-pin` | 🟡 `partial-reach` | 🔴 **18 / 50, root** | 🔴 **ten ecosystems, 18 orphans, root among them — the most polyglot row on this page and the least reachable** |
+| [`gocodebox/lifterlms`](https://github.com/gocodebox/lifterlms) | 🟡 GPL-3 | 🟡 `partial-pin` | 🟡 `partial-reach` | 🔴 6 / 18, root | 🔴 **root orphaned** |
+| [`edly-io/pxc`](https://github.com/edly-io/pxc) | 🟢 Apache-2.0 | 🟡 `partial-pin` | 🟡 `partial-reach` | 🔴 6 / 17, root | 🔴 **root orphaned** |
+| [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | 🟢 BSD-3 | 🟡 `partial-pin` | 🟡 `partial-reach` | 🔴 7 / 9, root | 🔴 **root orphaned** |
+| [`tadreeb-lms/tadreeblms`](https://github.com/tadreeb-lms/tadreeblms) | 🟡 GPL-3 | 🟡 `partial-pin` | 🟡 `partial-reach` | 🟡 1 / 28, root | 🟡 **27 of 28 reached, but the one orphan is the root** |
+| [`numbas/Numbas`](https://github.com/numbas/Numbas) | 🟢 Apache-2.0 | 🟡 `partial-pin` | 🟡 `partial-reach` | 🔴 1 / 2, root | 🔴 **root orphaned** |
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🟢 Apache-2.0 | 🟡 `partial-pin` | 🟡 `partial-reach` | 🔴 5 / 7, root | 🔴 **root orphaned (gradle + npm)** |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🟡 GPL-2 | 🔴 `floating` | 🔴 **`no-reach`** | 🔴 **5 / 5, root** | 🔴 **nothing reached; vendor at a SHA and own the dependency set** |
+| [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | 🟡 GPL-3 | 🔵 `vendored` | 🔵 **`vendored`** | — | 🔵 **no reach claim: the dependency tree is COMMITTED, so it stands up with no registry (`P114-D`)** |
+| [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | 🟡 LGPL-3 | 🔵 `foreign-build` | 🔵 **`foreign-build`** | — | 🔵 **odoo `__manifest__.py`; no claim made in either direction (`P114-E`)** |
+| [`frappe/education`](https://github.com/frappe/education) | 🟡 AGPL-3 | 🟡 `partial-pin` | 🟡 `partial-reach` | 🟡 1 / 3 | 🟡 **two of three reached** |
+| [`frappe/lms`](https://github.com/frappe/lms) | 🟡 AGPL-3 | 🟡 `partial-pin` | 🟡 `partial-reach` | 🟡 1 / 3 | 🟡 **two of three reached** |
+
+※ licence contested — carried unchanged from the pass that opened it; p114 changed no
+licence verdict.
+
+### 🔴 The Submitty correction, with the bytes
+
+🔵 **Verified by hand against the live tree this pass, through a code path independent of
+the instrument (a plain `git ls-tree` over a fresh depth-1 fetch), because it reverses a
+published recommendation:**
+
+| what | finding |
+|---|---|
+| python lockfiles in the tree (`poetry.lock`, `uv.lock`, `Pipfile.lock`, `pdm.lock`, `conda-lock.yml`) | 🔴 **zero** |
+| python manifests | `pyproject.toml` (**root**), `python_submitty_utils/setup.py`, `python_submitty_utils/requirements.txt` |
+| the one in-rule requirements file | `python_submitty_utils/requirements.txt` — pinned, so it covers `python_submitty_utils/` (`P114-C`) |
+| the root `pyproject.toml` | 🔴 **orphaned — nothing above it** |
+| 🔵 also in the tree, invisible to the classifier (`P114-K`) | `.setup/pip/dev_requirements.txt` (pinned: `ruff==0.16.8`, `sqlalchemy==2.0.52`), `system_requirements.txt`, `vagrant_requirements.txt` |
+
+🔵 **The three invisible files do not rescue the verdict**: they sit in `.setup/pip/`,
+which declares no manifest, so under a corrected naming rule they would cover that
+directory and **the root `pyproject.toml` would still be orphaned.** The npm and php
+halves of Submitty remain fully reached — this is a python-side finding, and the
+3-ecosystem claim p112 made is wrong only on the one ecosystem that matters most on this
+shelf.
+
+### 🟢 What this axis does NOT say about these platforms
+
+🔵 **`partial-reach` is not a reason to reject a platform**, and the page would be
+useless if it were read that way. `canvas-lms` reaches 595 of 596 manifests and `elgg`
+40 of 41 — those are well-run trees with one loose end each. The verdict that should
+change a decision is a **root orphan**, because that is the directory a team installs
+from on day one, and the remedy is cheap and local: generate the missing lock in that
+directory at fork time and commit it. The rows to treat differently are the four
+`no-reach` platform rows, where there is nothing to inherit and the dependency set has to
+be owned outright.
 
 # Education — vertical platforms and solutions
 

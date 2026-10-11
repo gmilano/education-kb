@@ -1,8 +1,110 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-10
+updated: 2026-10-11
 ---
+
+## 2026-10-11 — pass 113: the lockfile p112 counted does not reach the manifest on 510 of 2 135 addresses, and on 88 rows the orphan is the file you build first
+
+🔵 **No new education-specific agent reached this shelf this pass, for the TENTH
+consecutive pass. The eight mandated queries were run in extended mode (four global,
+four regional) and **49 candidate tokens** were extracted and checked one at a time
+against the live pages of this KB: **49 of 49 already held**. Not a single token survived
+to verification this time — p112 at least had one claim to fail. The queries, the tokens
+and the held/new split are recorded in `intel/market.md` under `P114-M`.**
+
+🟢 **Instrument: `compose/code/p114-lock-reach/`, `test_p114.sh` **98 passed / 0 failed**
+(fully offline — real git repositories committed on disk and served to the real
+`reach.sh` over `file://`, no mocks); `reach.sh` read **296 of 296** addresses in
+4 m 09 s, **zero unread**, with **three** control runs over the same 296.**
+
+🔵 **On the pass number, stated because it affects how every cross-tab below reads:**
+p113 (`compose/code/p113-provider-binding/`) measured a DIFFERENT axis — provider
+binding — in the window 22:4x–23:xx on 2026-10-10, and landed while this pass's census
+was still running. This pass therefore cross-tabulates against **p112**, which is the
+closure axis its question comes from, and **does not incorporate p113's findings**: it
+could not have, because p113 did not exist on the shelf when `reach.sh` started at 23:54.
+The two are independent reads of the same 296 addresses, not a sequence.
+
+### What is new this week: "it has a lockfile" and "it is pinned" are not the same claim
+
+🔵 **p114 is the eighth axis in eight passes, and the only one so far that asks no new
+question. p112 ended by writing its own error down:**
+
+> **P112-E** — "An ecosystem counts as locked if ONE lockfile for it exists anywhere in
+> the tree. In a monorepo with forty `package.json` files and one root
+> `package-lock.json` that is generous. [...] every figure this script produces is an
+> **UPPER BOUND** on pinning, said here rather than discovered later."
+
+🔴 **Stating an error is not measuring it, and the gap turns out to be the difference
+between a figure a studio can quote and one it cannot.** A resolver does not ask whether
+a lock exists somewhere in the repository; it is invoked in a directory and resolves the
+manifest it finds there. Measured on that unit:
+
+| | |
+|---|---|
+| lockable manifests across the shelf | **2 135** |
+| reached by a lock at their own directory or an ancestor | 🟢 **1 625 (76.1 %)** |
+| 🔴 **orphaned** | 🔴 **510 (23.9 %)** |
+| rows whose **ROOT** manifest is orphaned | 🔴 **88 of 296** |
+| rows at the top verdict | 🔴 **102** (p112: 107 `pinned`) |
+
+🔴 **The 88 is the number worth carrying into a client conversation.** The root manifest
+is the entry point: it is what `pip install -r .` or `npm ci` resolves on the first day
+of an engagement. On 88 of 296 addresses, no lock reaches it — and 65 of those rows have
+no lock reaching **any** manifest they declare.
+
+### The seven rows that position alone demotes
+
+🔵 **Isolated by re-running the same code with p112's rule restored
+(`P114_FLAT=1`), over the same 296 trees in the same window — so this is a measured
+delta, not an argument (`P114-H`).**
+
+| row | p112 | 🆕 p114 | orphaned / lockable | the orphan |
+|---|---|---|---|---|
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 `pinned` | 🟡 `partial-reach` | 1 / 5 🔴 **root** | `pyproject.toml` |
+| [`huggingface/transformers`](https://github.com/huggingface/transformers) | 🔴 `floating` → 🟢 `pinned`¹ | 🟡 `partial-reach` | 🔴 **21 / 22** 🔴 **root** | `pyproject.toml` + 20 × `requirements.txt` |
+| [`european-commission-empl/european-digital-credentials`](https://github.com/european-commission-empl/european-digital-credentials) | 🟢 `pinned` | 🟡 `partial-reach` | 3 / 6 | `edci-viewer/package.json` + 2 |
+| [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 🟢 `pinned` | 🟡 `partial-reach` | 3 / 8 | `demos/python/requirements*.txt` |
+| [`cortezaproject/corteza`](https://github.com/cortezaproject/corteza) | 🟢 `pinned` | 🟡 `partial-reach` | 1 / 14 | `def/protobuf/package.json` |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 `pinned` | 🟡 `partial-reach` | 1 / 2 (depth 6) | `src/main/webapp/static/js/milkdown/package.json` |
+| [`saylordotorg/moodle-local_ai_course_assistant`](https://github.com/saylordotorg/moodle-local_ai_course_assistant) | 🟢 `pinned` | 🟡 `partial-reach` | 1 / 2 | `tests/a11y/package.json` |
+
+¹ under p112's existence rule with p114's per-file stage B — see the two-leg
+decomposition in `agents/top.md`.
+
+🔴 **`Submitty/Submitty` is a reversal of this KB's own published recommendation.** Last
+pass, `verticals/solutions.md` called it *"the only 3-ecosystem row on this page that
+locks all three"* and marked it 🟢 **safe**. Verified by hand against the live tree this
+pass: Submitty carries **zero** python lockfiles. Its one in-rule `requirements.txt`
+sits in `python_submitty_utils/` and is pinned, which covers that subdirectory — and
+leaves the **root `pyproject.toml` with nothing above it**. The page is corrected this
+pass.
+
+### The axis is not an argument for distrusting locks — three rows prove the opposite
+
+🟢 **[`moodle/moodle`](https://github.com/moodle/moodle) carries 63 lockable manifests and
+a lock reaches every one of them.** So do
+[`leemonade/leemons`](https://github.com/leemonade/leemons) (114 of 114) and
+[`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) (58 of 58).
+A large polyglot tree that is genuinely pinned throughout is a real and achievable shape
+on this shelf, and the rows that reach it are the rows to build on.
+
+### What this pass could not say
+
+🟡 **`P114-B` is still generous.** A root lock credited to a deep workspace member may
+not actually enumerate that member's dependencies; reading the lock bodies to check is
+the next axis, not this one. Every figure above is therefore an upper bound — a
+**tighter** one than p112's, and tightened in the only direction the arithmetic allows.
+
+🟡 **`P114-K`, in the other direction:** 8 requirement files on this shelf are invisible
+to the classifier both passes share (`*_requirements.txt`), affecting 5 rows, of which
+exactly **1** would change verdict — `sdv-dev/sdv`, `no-reach` → `full-reach`. Sized and
+committed, not fixed in-pass.
+
+🔵 **And the question p114 hands to p114: a `full-reach` lock is still only as good as
+the versions inside it.** Nothing measured in seven passes has yet opened a lockfile and
+read what it pins.
 
 ## 2026-10-10 — pass 113: this base has sold sovereignty for a hundred passes and never read it off a tree — 20 of the 87 rows that bind a model are locked to one vendor, and 9 of those are pinned and tested
 

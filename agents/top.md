@@ -1,8 +1,120 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-10
+updated: 2026-10-11
 ---
+
+# Education — AI agents shelf
+
+**Pass 114, 2026-10-11.** ⏱️ **First pass of this date** (the census crossed midnight:
+window **2026-10-10 23:54 UTC → 2026-10-11 00:25 UTC**; p112 ran 21:4x–22:xx on the 10th).
+
+🟢 **Instrument this pass: `compose/code/p114-lock-reach/` — `test_p114.sh` **98 passed /
+0 failed** (fully offline: real git repositories committed on disk and served to the real
+`reach.sh` over `file://`, no mocks); `reach.sh` read **296 of 296** shelf addresses in
+4 m 09 s, `rc=0` on every one, **zero unread**, plus **three** control runs over the same
+296 addresses.**
+
+🔵 **On the pass number, stated because it affects how every cross-tab below reads:**
+p113 (`compose/code/p113-provider-binding/`) measured a DIFFERENT axis — provider
+binding — in the window 22:4x–23:xx on 2026-10-10, and landed while this pass's census
+was still running. This pass therefore cross-tabulates against **p112**, which is the
+closure axis its question comes from, and **does not incorporate p113's findings**: it
+could not have, because p113 did not exist on the shelf when `reach.sh` started at 23:54.
+The two are independent reads of the same 296 addresses, not a sequence.
+
+🔵 **It is the eighth axis in eight passes and the fourth read from the TREE. It does not
+pick a new question — it answers the one p112 wrote down and left open.** p112 published
+107 rows at `pinned` and declared, in the same file, that the figure was an **UPPER
+BOUND** (`P112-E`): one lockfile anywhere in the tree credited every manifest of that
+ecosystem. 🔴 **Measured, the gap is 510 of 2 135 manifests — and on 88 of 296 rows the
+orphaned manifest is the one at the ROOT.**
+
+### 🔴 🆕 `P114-A` — the shelf on the unit a resolver actually uses
+
+p112's unit was the repository × ecosystem. A resolver is invoked **in a directory** and
+resolves the manifest it finds there, so p114's denominator is the manifest.
+
+| figure | p112 | 🆕 p114 |
+|---|---|---|
+| rows at the top verdict | 107 `pinned` (36.1 %) | 🔴 **102 `full-reach`** (34.5 %) |
+| lockable **manifests** | not reportable | **2 135** |
+| manifests a lock reaches | not reportable | 🟢 **1 625 (76.1 %)** |
+| manifests **orphaned** | not reportable | 🔴 **510 (23.9 %)** |
+| rows with an orphaned **ROOT** manifest | not reportable | 🔴 **88 of 296** |
+
+🔵 **Of the 296 rows, 222 carry a lockable manifest at all; 102 of those 222 (45.9 %) are
+`full-reach`.** The other 74 are the specifications, corpora and awesome-lists `P111-F`
+and `P112-N` already carved out — they are not failures and are not counted as such.
+
+### 🔴 🆕 the agent rows whose ROOT manifest no lock reaches
+
+🔵 **These are agent-shelf rows, not platforms: the manifest at the repository root is
+the one a studio engineer runs `pip install` or `npm ci` against on day one. Full list of
+all 88 in `compose/code/p114-lock-reach/result.2026-10-11.tsv`; the agent-side ones:**
+
+| row | p112 | 🆕 p114 | orphaned / lockable |
+|---|---|---|---|
+| [`huggingface/transformers`](https://github.com/huggingface/transformers) | 🔴 `floating` | 🔴 `partial-reach` | 🔴 **21 / 22** |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 🔴 `floating` | 🔴 **`no-reach`** | 3 / 3 |
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | 🔴 `floating` | 🔴 **`no-reach`** | 2 / 2 |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🔴 `floating` | 🔴 **`no-reach`** | 1 / 1 |
+| [`frdel/agent-zero`](https://github.com/frdel/agent-zero) | 🟡 `partial-pin` | 🟡 `partial-reach` | 3 / 4 |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | 🟡 `partial-pin` | 🟡 `partial-reach` | 🔴 **10 / 11** |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟡 `partial-pin` | 🟡 `partial-reach` | 4 / 5 |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟡 `partial-pin` | 🟡 `partial-reach` | 3 / 5 |
+| [`eai6/ai-tutor`](https://github.com/eai6/ai-tutor) | 🔴 `floating` | 🟡 `partial-reach` | 3 / 4 |
+| [`A-R007/Multi-Agent-Study-Assistant`](https://github.com/A-R007/Multi-Agent-Study-Assistant) | 🔴 `floating` | 🔴 **`no-reach`** | 2 / 2 |
+| [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | 🔴 `floating` | 🔴 **`no-reach`** | 1 / 1 |
+| [`marc-shade/docsingest`](https://github.com/marc-shade/docsingest) | 🔴 `floating` | 🔴 **`no-reach`** | 4 / 4 |
+| [`LAION-AI/Desktop_BUD-E`](https://github.com/LAION-AI/Desktop_BUD-E) | 🔴 `floating` | 🔴 **`no-reach`** | 1 / 1 |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | 🔴 `floating` | 🔴 **`no-reach`** | 1 / 1 |
+
+🔴 **`huggingface/transformers` is the row to read twice.** p112 called it `floating` and
+`compose/patterns.md` already gates against it. p114 finds the gate was right for an
+almost-wrong reason: the tree **does** contain a pinned requirement file, so a per-file
+read of stage B promotes it to `pinned` under p112's own existence rule (leg 1 below) —
+and then position demotes it again, because **21 of its 22 lockable manifests, the root
+`pyproject.toml` among them, have no lock above them.** Verified by hand against the
+live tree: **zero** `poetry.lock` / `uv.lock` / `Pipfile.lock` anywhere in the
+repository, against 20 `requirements*.txt` files.
+
+### 🔵 🆕 the delta from p112 is TWO legs, and this pass reports them separately
+
+`P446` set the rule: *when a measurement walks a chain, every leg's version is a
+parameter.* p114 changed two things, so it names both rather than crediting its own axis
+with the whole movement.
+
+| leg | what changed | top verdict | rows moved |
+|---|---|---|---|
+| p112, as published | — | 107 | — |
+| **leg 1** — per-file stage B, p112's existence rule kept | `result-flat.P112RULE-CONTROL` | **109** | 🔵 3 **up** |
+| **leg 2** — positional reach (`P114-B`) | `result.2026-10-11` | 🔴 **102** | 🔴 7 **down** |
+
+🔵 **Leg 1 is a divergence found in p112's own stage B, not in this axis.** p112
+accumulated pinned-vs-real across the *entire* `cat-file --batch` stream, so a repository
+earned the python credit only if **every** line of **every** requirements file was
+pinned. p114 must read each file separately because `P114-C` needs its directory. Three
+rows move up on that alone: `huggingface/transformers`, `nextcloud/translate2`
+(`floating` → `pinned`) and `rohitg00/ai-engineering-from-scratch` (`floating` →
+`partial-pin`).
+
+### 🟡 🆕 `P114-K` — the gap this pass opened in its own classifier, sized and bounded
+
+🔵 **Found by hand-verifying a row, not by the instrument.** `P112-A` matches a python
+requirement file on an anchored basename — right against `docs/requirements.rst`, which
+is prose about a curriculum and is on this shelf — but it does not match
+`dev_requirements.txt`, `system_requirements.txt`, `latest_requirements.txt`.
+
+Sized over all 296 addresses (`result-P114K-reqname-gap.2026-10-11.tsv`): **198 seen,
+8 missed, 5 rows affected, and exactly 1 verdict would change** —
+[`sdv-dev/sdv`](https://github.com/sdv-dev/sdv), whose **root** `latest_requirements.txt`
+is pinned on all 11 lines, moves `no-reach` → `full-reach`. The error direction is the
+**opposite** of `P114-B`'s: an unseen requirement file can only cost a row coverage it
+earned, so on this axis the figures above are a **lower** bound. Both bounds are stated
+and neither is netted against the other. 🔵 **The shared classifier is not forked to fix
+it in-pass (`P237`); the measurement and the one row are committed so the next pass
+decides against a number.**
 
 # Education — AI agents shelf
 

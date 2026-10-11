@@ -1,8 +1,116 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-10
+updated: 2026-10-11
 ---
+
+## 2026-10-11 — pass 113: North America looks like the second-best region on this axis and is the worst, and the weighting is the whole difference
+
+🟢 **Measured over **296 of 296** addresses in 4 m 09 s, zero unread
+(`compose/code/p114-lock-reach/`, `test_p114.sh` **98 passed / 0 failed**, fully offline
+— real git repositories served over `file://`, no mocks), plus three control runs over
+the same 296 addresses.**
+
+🔵 **Eighth axis in eight passes, fourth read from the TREE: does the lock p112 counted
+actually REACH the manifest? p112 declared its own figure an upper bound (`P112-E`).
+p114 measures the gap: **510 of 2 135 lockable manifests (23.9 %) are orphaned**, and
+**88 of 296 rows** have no lock reaching the manifest at their ROOT.**
+
+### The regional read, and the inversion in it
+
+🔴 **The region that leads this axis depends entirely on whether you count manifests or
+repositories — and the two orderings are nearly reversed.**
+
+| region | rows w/ a lockable manifest | `full-reach` rows | 🆕 **row-level** | 🆕 **manifest-weighted** | root orphans |
+|---|---|---|---|---|---|
+| **APAC** | 9 | 6 | 🟢 **66.7 %** | 🟢 **92.3 %** | 2 |
+| **EMEA** | 25 | 15 | 🟢 **60.0 %** | 🟡 74.2 % | 8 |
+| **LATAM** | 6 | 3 | 🟡 50.0 % | 🔴 **58.8 %** | 3 |
+| **North America** | 36 | 13 | 🔴 **36.1 %** | 🟢 81.2 % | 🔴 **14** |
+| *unplaced* | 141 | 64 | 45.4 % | 71.2 % | 58 |
+
+🔴 **North America is 81.2 % on manifests and 36.1 % on repositories — second-best and
+dead last on the same data.** The cause is concentration, and it is one repository:
+[`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) carries **596** of
+North America's **1 002** lockable manifests — 59 % of the region's denominator — and
+reaches **595** of them. **Remove that single row and North America falls to 219 / 406 =
+53.9 %.**
+
+🔵 **The same concentration test on APAC:** its 92.3 % rests on
+[`moodle/moodle`](https://github.com/moodle/moodle), which contributes **63** of APAC's
+**91** manifests and reaches all 63. APAC's lead is real but it is one project's
+engineering discipline, not a regional property.
+
+🔵 **Which figure to use, stated rather than left to the reader:** for *"can my team
+stand this up"* the row-level figure is the right one, because an engagement adopts
+repositories, not manifests. The manifest-weighted figure answers a different question —
+*"how much of the declared dependency surface on this shelf is pinned"* — and on a shelf
+where one row holds 596 manifests it should never be quoted regionally without the
+concentration note above.
+
+### LATAM, named in full, because the denominator is six
+
+🔵 **Six LATAM rows carry a lockable manifest. At that size a percentage is nearly
+meaningless, so here is every row:**
+
+| row | 🆕 p114 | orphaned / lockable |
+|---|---|---|
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🟢 `full-reach` | 🟢 0 / 2 |
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🟢 `full-reach` | 🟢 0 / 5 |
+| [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | 🟢 `full-reach` | 🟢 0 / 1 |
+| [`portabilis/i-diario`](https://github.com/portabilis/i-diario) | 🟡 `partial-reach` | 🔴 1 / 2, **root** |
+| [`portabilis/pre-matricula-digital`](https://github.com/portabilis/pre-matricula-digital) | 🟡 `partial-reach` | 🔴 1 / 2, **root** |
+| [`webtech-network/autograder`](https://github.com/webtech-network/autograder) | 🔴 **`no-reach`** | 🔴 **5 / 5, root** |
+| [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | 🔵 `no-manifest` | — a dataset; not applicable |
+
+🔴 **Three of the six have an orphaned root manifest — the highest root-orphan rate of
+any placed region (50 % of rows against North America's 39 %, EMEA's 32 %, APAC's 22 %).**
+🟢 **But all three `portabilis` and `bncc-dev` platform rows that do pin, pin cleanly**,
+and `i-educar` remains the strongest LATAM foundation on this shelf across all seven
+axes measured so far.
+
+### EMEA: the root-orphan rows, named
+
+🔵 **Nine EMEA rows have an orphaned root manifest. Six of the nine are
+`no-reach` — no lock reaches anything they declare:**
+[`overhangio/tutor`](https://github.com/overhangio/tutor) (1/1),
+[`INGInious/INGInious`](https://github.com/INGInious/INGInious) (3/3),
+[`nextcloud/context_chat_backend`](https://github.com/nextcloud/context_chat_backend) (3/3),
+[`nextcloud/text2image_stablediffusion2`](https://github.com/nextcloud/text2image_stablediffusion2) (2/2),
+[`openfun/xblock-proctor-exam`](https://github.com/openfun/xblock-proctor-exam) (3/3),
+[`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) (5/5),
+plus [`Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy) (1/1),
+and two partials: [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) (1/3) and
+[`openfun/richie`](https://github.com/openfun/richie) (3/7).
+
+🔴 **The EMEA row with the most direct commercial relevance is
+[`european-commission-empl/european-digital-credentials`](https://github.com/european-commission-empl/european-digital-credentials)**
+— p112 read it `pinned`; p114 finds **3 of its 6 lockable manifests orphaned**, the
+deepest at depth 5 (`edci-wallet/edci-wallet-web/src/main/...`). It is the reference
+implementation behind the EU digital-credentials stack this KB has tracked since p108,
+and the digital-credential trend is in every 2026 trend list the mandated searches
+returned. A studio adopting it inherits three unpinned front-end trees.
+
+### Regions that returned nothing, stated rather than left silent
+
+🔵 **The four regional queries were run in extended mode. None returned a new repository
+or agent for this shelf — the tenth consecutive pass at zero. The regional content above
+is derived from MEASURING addresses this KB already holds, not from this pass's
+searches.** 192 of 296 addresses remain **unplaced** by region (`orgs.region.tsv` covers
+the orgs this KB has resolved), and the unplaced set holds **58 of the 88 root
+orphans** — so the regional figures above describe the 104 placed rows only, and the
+majority of the shelf's reach failures sit in rows whose region this KB still cannot
+state. 🔵 **That is `Gap 403`, which p113 OPENED an hour before this census ran, and this pass
+corroborates it from an independent axis: the unplaced rows hold **58 of the 88 root
+orphans**, so the placement gap is not merely untidy — it hides where most of this
+shelf's reproducibility failures actually are. This pass's own count of the shared
+`orgs.region.tsv` is **93 strictly placed + 11 provisional (`EMEA?` / `North America?`) +
+192 unplaced**; `Gap 403` states 103 placed / 193 unplaced, so the two readings of the
+same committed file differ by ONE row. 🔵 Recorded rather than reconciled silently: the
+likely cause is the treatment of the 11 provisional placements, and whichever reading is
+right, the gap it describes is the same one.** Eight rows carry a provisional
+`EMEA?` placement and three a provisional `North America?`; both are excluded from the
+table above rather than silently folded into their region.
 
 ## 2026-10-10 — pass 113: the region that sells sovereignty best is the one that measures it best — EMEA is 7 of 10, and its one piece of national infrastructure is wired to AWS Bedrock
 
