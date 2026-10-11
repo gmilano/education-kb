@@ -1,0 +1,36 @@
+# Pass 133 — 2026-10-11. Instrument column records HOW each row was measured.
+# INSTRUMENTS THIS PASS:
+#   search  = GitHub repo search via the session's GitHub tool. Authoritative for license.spdx_id,
+#             stargazers_count, pushed_at, created_at, archived, fork, topics. Blind to payload.
+#   payload = raw.githubusercontent.com/<owner>/<repo>/<branch>/LICENSE fetched over the web.
+#   BROKEN  = the GitHub contents API (get_file_contents) is SCOPE-BLOCKED in this session: it
+#             returns "repository is not configured for this session" for every repo except
+#             gmilano/globant-kb. It is NOT a 404 and NOT evidence about the repo. See P133-F.
+#   BROKEN  = curl -sI https://github.com/<repo> returns HTTP 403 for every URL, real or fake (p132).
+# licence NONE = no licence field returned by search AND, where stated, no payload at the branch probed.
+repo	licence	instrument	stars	pushed_at	region	region_evidence	tier	note
+joojdev/academic-tracker-mcp	MIT	search	0	2026-05-13	LATAM	pt-BR description, "Sistema Unificado de Administracao Publica (SUAP)" = Brazilian federal institute network	sis-agent	FIRST LATAM row in the SIS tier. MCP server over the author's own SUAP academic data
+frjunioalves/suap-mcp	NONE	search	0	2026-05-22	LATAM	repo name = SUAP, Brazilian federal institutes	sis-agent	Python MCP server for SUAP; no licence field
+fabrica-de-inovacao/expeditto	AGPL-3.0	search	1	2026-10-08	LATAM	"RIT do SUAP (IFMA)" = Instituto Federal do Maranhao, Brazil	staff-automation	ORG-OWNED (Fabrica de Inovacao) + TEACHER-FACING + product homepage expeditto.fabitz.com.br. Prepares a teacher's RIT workload report as a DRAFT. CLI + MCP. Refutes P132's "students and parents, no procurement story"
+filipecalegario/auto-sigaa	MIT	search	9	2025-08-16	LATAM	pt-BR description, SIGAA = Brazilian federal university SIS	staff-automation	Teacher-facing: automates grade entry into SIGAA from a spreadsheet
+Agso-o/sigaa-calendar	GPL-3.0	search	20	2026-10-09	LATAM	pt-BR description, SIGAA	student-portal	Extracts SIGAA deadlines into Google Tasks/Calendar. Go. Active
+trindadetiago/sigaa-caiu	MIT	search	19	2026-09-03	LATAM	repo name = SIGAA	student-portal	TypeScript
+RubsNeto/SigaaUI	MIT	search	16	2026-04-17	LATAM	pt-BR description, SIGAA Portal do Discente	student-portal	Open-source extension modernising the SIGAA interface
+MatheusMach/QuantoFalta	NONE	search	9	2026-10-08	LATAM	pt-BR description, SIGAA faltas (absences)	student-portal	Chrome extension showing per-subject absence count. Created AND pushed 2026-10-08
+juliancasaburi/siu-guarani-promedio-extension	MIT	search	17	2025-07-08	LATAM	es-AR description, SIU-Guarani = Argentine university consortium SIS	student-portal	Grade-average visualiser over SIU-Guarani academic history
+despedite/siu-guarani	GPL-3.0	search	8	2021-03-12	LATAM	es-AR description, SIU-Guarani	student-portal	Scraper checking course-seat availability
+eugeborzone/Auto_Grade_Guarani	NONE	search	0	2025-07-05	LATAM	es-AR description, SIU-Guarani	staff-automation	Teacher-facing: automated grade upload into SIU-Guarani
+SIU-Toba/docker-guarani	NONE	search	4	2017-08-01	LATAM	SIU-Toba = the SIU consortium's own GitHub org, Argentina	vendor-org	The SIS VENDOR's own org is on GitHub. Docker containers for Guarani. Dormant since 2017 but it is the sanctioned-integration counterparty P8/P9 need
+BetterSEQTA/BetterSEQTA-Plus	MIT	search	40	2026-10-06	APAC	topics seqta/seqta-learn; SEQTA = Australian school platform; Chrome Web Store listing	student-portal	LARGEST ANZ EDUCATION ROW. ORG-OWNED, MIT, actively pushed. Chrome/Firefox extension over SEQTA Learn. Discharges ACTION BF supply side
+BetterSEQTA/DesQTA	MIT	search	16	2026-07-05	APAC	homepage betterseqta.org/desqta; SEQTA, Australia	student-portal	Native desktop port of SEQTA + BetterSEQTA+ interface. Svelte
+st22209/Parent-Portal	MIT	search	2	2023-02-20	APAC	KAMAR = New Zealand school SIS; PyPI kmrpp	student-portal	ARCHIVED. README: "[DEPRECATED AFTER KAMAR API CHANGE]". The only NZ row, and the vendor API change is its stated cause of death
+edwyj/ddl-killer	AGPL-3.0	payload	3	2026-10-11	APAC	Chinese-language student planner	student-portal	UNREAD DISCHARGED (p132 carried it unmeasured). Payload = full AGPL-3.0 text. Holder line is "Copyright (C) 2007 Free Software Foundation, Inc." = DOCUMENT-TEXT class, no program-specific licensor. Most restrictive licence in the tier
+karissafuller/project-nomad-macos	MIT	payload	20	2026-10-07	Global	none stated	offline-stack	UNREAD DISCHARGED. Payload holder line: "Copyright (c) 2026 Karissa Fuller" = NAMED individual licensor
+Tushar-cy/Offline-AI	NONE	payload	2	2026-09-09	APAC	Class 10 Maths/Science = Indian CBSE/state curriculum	offline-stack	UNREAD DISCHARGED AS ABSENT: no LICENSE payload at /main/ or /master/, and no licence field from search. Now MEASURED-absent, not unread
+instructure/canvas-lms	AGPL-3.0	search	6863	2026-04-30	North America	Instructure, US	platform	TOPICS INCLUDE "gerrit-mirror". pushed_at 2026-04-30T14:52:10Z. See P133-A: this is a stopped MIRROR job, not developer inactivity
+instructure/analytics	AGPL-3.0	search	40	2026-04-30	North America	Instructure, US	platform	pushed_at 2026-04-30T14:52:11Z = ONE SECOND after canvas-lms. Two repos cannot be hand-pushed a second apart. This is the control that proves P133-A
+eth-lre/mathtutorbench	NONE	search	43	2026-08-27	EMEA	ETH Zurich (eth-lre org)	benchmark	RE-MEASURED, UNCHANGED: the licence key is ABSENT from the search payload. Still the highest-leverage upstream fix available to this KB
+blend-ed/openedx-mcp	AGPL-3.0	search	2	2026-08-28	Global	none stated	moodle-openedx-connector	RE-MEASURED, UNCHANGED at 2 stars. Open edX MCP has not moved past experimental
+chamilo/chamilo-lms	GPL-3.0	search	1009	2026-10-10	Global	Chamilo Association; strong LATAM/Spain/France footprint	platform	ALREADY HELD by this KB (996 mentions). Re-measured only to confirm it is active. NOT a new finding
+dummerchen/Ucampus	GPL-2.0	search	34	2021-05-22	APAC	zh-CN description "u校园"	HOMOGRAPH-CONTROL	NEGATIVE CONTROL for P133-E. The probe "ucampus" intended for Chile's U-Campus returns this Chinese courseware-homework tool instead. NOT an education-agent finding
+novoalab/SeqTagger	NOASSERTION	search	20	2026-08-21	EMEA	Novoa lab	HOMOGRAPH-CONTROL	NEGATIVE CONTROL for P133-E. The probe "seqta" returns this nanopore RNA-seq demultiplexer. NOT an education finding

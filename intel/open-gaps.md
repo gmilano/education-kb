@@ -52,7 +52,7 @@ attached as evidence.
 |---|---|---|
 | **`ACTION BD` — Africa and the Middle East inside "EMEA"** | *"third consecutive pass with no regional evidence"* | 🟢 **One address found:** [`h9-tec/graduation-project-advisor`](https://github.com/h9-tec/graduation-project-advisor), **63★**, Arabic-first, **Egyptian CS students** — 🔴 **unlicensed BY DECLARATION** (*"Private / TBD. Licensing terms will be finalized before any public release"*). Also `mbzuai-oryx/ClimateGPT` (80★, **MBZUAI, Abu Dhabi**), not an education tool. 🔴 **Still absent: any African or Gulf market sizing, any national instrument, any Sub-Saharan row** |
 | **Supply carries no region evidence** *("11 of 17 agent rows unplaced")* | a property of the sector | 🔴 **a property of the tier that was measured.** The 21 new rows are **~90% placed on hard evidence** — EMEA 9, APAC 7, NA 4, unplaced 2. 🟢 Famous repos are unplaced because they are international; institution-bound repos arrive pre-placed |
-| **The permissive/popular inversion** *("across every tier measured")* | a law about the sector | 🟡 **scope overstated.** The new tier is **~80% MIT** — the inversion does not hold across it. 🔵 **It still holds at the TOP of it:** the two most-starred rows are the weak ones (`librus-mcp` 10★ mixed-licence, `DAU-buddy` 7★ unlicensed). **Accurate form: popularity does not predict licence quality, most strongly among the largest repos in a tier** |
+| **The permissive/popular inversion** *("across every tier measured")* | a law about the sector | 🟡 **scope overstated.** The new tier is **~80% MIT** — the inversion does not hold across it. 🔴 **p133: that figure was itself scope-limited** — measured on 21 EMEA/APAC/NA rows; the 12 LATAM rows are **42% MIT**, and the one row p132 left `UNREAD` reads **AGPL-3.0**, the tier's most restrictive licence. 🟢 **But the inversion is now REFUTED at the top of the tier too:** its new most-starred row, `BetterSEQTA-Plus` (40★), is **MIT and org-owned**. 🔵 **It still holds at the TOP of it:** the two most-starred rows are the weak ones (`librus-mcp` 10★ mixed-licence, `DAU-buddy` 7★ unlicensed). **Accurate form: popularity does not predict licence quality, most strongly among the largest repos in a tier** |
 | **The demand channel is saturated** *(4 consecutive passes)* | *"0 new tokens in 4 of 4 regions"* | 🟢 **Streak BROKEN in 4 of 4** — but no new *facts*. Every new token is a **date, a denominator or a delivery structure**: IESALC fieldwork **Aug–Oct 2025** (which re-ages the held 87%/26%), the UK's **£200m+** summit delivered by **Big Tech not EdTech**, **ANZ** entering the KB, CMU+Gates **$55M** on gateway courses. 🔴 **Saturated for facts, productive for provenance** |
 
 ## 🔴 Gaps OPEN, with this pass's reason
@@ -65,14 +65,14 @@ attached as evidence.
 | 🆕 **Nothing in the new tier exceeds 10 stars** | No production-grade row anywhere in it. The tier is *forming* — three rows were created within ten days of this pass — so maturity, not existence, is now the constraint |
 | **No OUTCOME benchmark** | 🟡 Unchanged. Both benchmarks measure tutor *behaviour*, not durable learning gains. 🟢 **p132 adds a target worth building against:** CMU + Gates are funding **$55M** into *gateway courses*, where an outcome gain is directly measurable in retention — the natural home for `P6` |
 | **The benchmark layer carries no usable grant** | 🔴 **RE-CHECKED, UNCHANGED.** `eth-lre/mathtutorbench`: **no `LICENSE` file**, sidebar shows none, README badge **CC-BY-4.0** vs body **CC-BY-SA-4.0**. `Khan/tutoring-accuracy-dataset`: bespoke **2 690 B**, dormant since 2024-08-29. 🔵 Still the single highest-leverage upstream commit available to this KB |
-| **No LATAM-origin supply** | 🔴 **WORSE in relative terms, and now the KB's most consistent finding.** p132 added 21 rows: **EMEA 9, APAC 7, NA 4, unplaced 2, LATAM 0.** `campus-cli` (ISC, 11★, Peru) is still the only LATAM row in the KB. 🔴 **And nothing offline targets LATAM** either, in the region this KB argues needs offline most. 🟡 **But see `ACTION BE` — a LATAM zero is not credible until re-probed with platform proper nouns** |
-| **Canvas is the quietest major platform** | 🔴 **RE-CHECKED, UNCHANGED.** `pushed_at` **2026-04-30** — byte-identical to p131, now ~5.4 months, third consecutive pass |
+| ~~**No LATAM-origin supply**~~ | 🟢 **CLOSED BY p133 — REFUTED, and it was a claim about a query exactly as `ACTION BE` warned.** Probing `sigaa`, `suap` and `siu-guarani` returns **12 LATAM addresses** (Brazil 8, Argentina 4), of which **3 are teacher-facing** and one (`expeditto`, AGPL-3.0) is **org-owned with a product homepage**. 🔵 **This KB repeated "no LATAM supply" four times; the supply was there under three platform nouns.** 🔴 **What remains open is narrower and real: nothing offline targets LATAM, and SIAGIE (Peru) and Q-Acadêmico (Brazil) have real installed bases with no agent layer at all** — see the new rows below |
+| ~~**Canvas is the quietest major platform**~~ | 🔴 **RETIRED BY p133 AS A MIS-MEASUREMENT — this gap was an artifact of the instrument.** `pushed_at` is still **2026-04-30**, but `canvas-lms` declares the topic **`gerrit-mirror`** and `instructure/analytics` shares that timestamp **one second later** (14:52:10 / 14:52:11). **Two repos cannot be hand-pushed a second apart: this is a stopped batch export, not developer silence.** 🟡 **The real finding, narrower and more useful: the public GitHub mirror has been frozen for five months, so GitHub is not an activity signal for Canvas and anyone diffing the mirror is reading a stale tree.** `gerrit` appeared **zero** times across this KB's 1 733 addresses before this pass |
 | **Open edX MCP is experimental** | 🔴 **RE-CHECKED: still 2★.** |
 | **No permissive proctoring project with an institutional owner** | Untouched this pass. Four MIT rows, largest 18★, all individual, three affect-adjacent (**prohibited** in EU education under Art. 5) |
 | **The AI Act date a client can be quoted** | 🟡 Unchanged, and 🔴 **the stale *"full effect August 2026"* reading is still circulating in NA-facing sources** — a client may arrive holding it. `eur-lex`-class hosts remain refused in both lanes, so **Reg. (EU) 2026/1744** is still not payload-read here |
 | **The 46 Apache-2.0 / ECL rows with no licensor** | 🟡 One instance discharged (above); the body of `ACTION AY` is otherwise untouched, carried from p129 |
-| 🆕 **Three rows left licence-UNREAD** | `edwyj/ddl-killer`, `karissafuller/project-nomad-macos`, `Tushar-cy/Offline-AI`. Marked `UNREAD` in the evidence file rather than guessed |
-| 🆕 **ANZ is a blank in this KB** | Australia and New Zealand appeared for the first time this pass, as a *regulatory signal only*. **Zero** ANZ-origin open-source education AI found — and no dedicated probe has ever been run, so this is a KB gap, not a market finding. `ACTION BF` |
+| ~~🆕 **Three rows left licence-UNREAD**~~ | 🟢 **CLOSED BY p133, all three measured on the payload lane:** `edwyj/ddl-killer` = 🔴 **AGPL-3.0** (holder is the FSF alone — a `DOCUMENT-TEXT` case, no program licensor); `karissafuller/project-nomad-macos` = 🟢 **MIT**, *"Copyright (c) 2026 Karissa Fuller"*; `Tushar-cy/Offline-AI` = 🔴 **no payload at `/main/` or `/master/`** → measured-absent, not unread. 🔵 **Lesson recorded: the unread row held the most restrictive licence in its tier — unread rows are not a random sample** |
+| ~~🆕 **ANZ is a blank in this KB**~~ | 🟢 **CLOSED BY p133 (`ACTION BF`), and ANZ is the best-licensed corner of the portal tier.** `BetterSEQTA/BetterSEQTA-Plus` (**MIT, 40★**, org-owned, 25 forks, Chrome Web Store, pushed 2026-10-06) + `BetterSEQTA/DesQTA` (**MIT, 16★**) over **SEQTA**, Australia. 🔴 **New Zealand is one MIT KAMAR row and it is archived** — *"[DEPRECATED AFTER KAMAR API CHANGE]"*. 🟡 **Open sub-gap: `BetterSEQTA` has no AI/MCP surface yet** — the only product-shaped org in the tier and it has not shipped an agent |
 
 ## 🆕 Actions opened by p132
 
@@ -83,6 +83,47 @@ attached as evidence.
   a region** — and it is the claim this KB repeats most often.
 - **`ACTION BF` — run a dedicated ANZ probe.** Australia and New Zealand run Moodle and Canvas at
   scale in a mature English-language export market and are a blank here.
+
+## ✅ Verdicts on p132's actions, judged by p133
+
+- 🟢 **`ACTION BE` — DISCHARGED AND REFUTING.** Run with `sigaa`, `suap mcp`, `siu-guarani`,
+  `q-academico`, `siagie`, `bedelias`, `chamilo`, `ucampus`. **12 new LATAM addresses**; the "no
+  LATAM supply" claim is retired across `agents/top.md`, `intel/market.md`, `intel/trends.md` (T11)
+  and this file. 🔵 **The action's own wording was right: it was a claim about a query.**
+- 🟢 **`ACTION BF` — DISCHARGED AND REFUTING.** ANZ is not a blank: **MIT, 40★, org-owned,
+  pushed this week.**
+- 🔴 **Both actions also produced a methodological failure worth more than either result**
+  (`P133-E`): the probes `ucampus` and `seqta` collided with homographs in other languages and
+  fields. **A platform proper noun is only a probe when it is not a homograph** —
+  `agents/top.md` → vocabulary rule, clause 4.
+
+## 🆕 Actions opened by p133
+
+- **`ACTION BG` — add a mirror detector to the recency lanes before any freshness claim is
+  published again.** `compose/code/git-recency-channel` and `compose/code/p109-freshness` rank by
+  `pushed_at` and therefore mis-rank **every mirror** in the direction of looking abandoned. Flag a
+  reading unreliable when *"mirror"* is in topics, when two repos in one org share `pushed_at` to
+  the second, or when the README names an upstream elsewhere. 🔴 *Refuted if `canvas-lms` is the only
+  mirror in this KB's corpus — in which case the defect is one row, not a lane.*
+- **`ACTION BH` — probe the staff-facing axis globally, since LATAM found it by accident.** p133
+  found 4 teacher-facing rows only because LATAM was probed. Run the capability nouns a *teacher*
+  would use, in several languages: *lançar notas*, *cargar notas*, *grade passback*, *Notenerfassung*,
+  *bulletin*, *workload report*, *attendance register*. 🔴 *Refuted if fewer than 3 further
+  staff-facing rows exist outside LATAM, which would make the staff-side wave a regional
+  phenomenon rather than an unprobed one.*
+- **`ACTION BI` — licence-measure the 12 new LATAM rows on the payload lane.** All 12 are recorded
+  from the search field only; 3 show no licence and the field cannot see a `NOASSERTION` payload.
+  🔴 *Refuted if none of the 3 unlicensed rows has a readable payload, since `ddl-killer` and
+  `openeducat_erp` both prove the field and the payload disagree.*
+- **`ACTION BJ` — finish the LATAM platform sweep.** `simat` (Colombia) and `saes` (Mexico) were
+  pre-registered in `ACTION BE` and not reached. Also unprobed: **Blackboard LATAM**, and Peru's
+  **SIAGIE** and Brazil's **Q-Acadêmico** for an *AI* layer specifically rather than any repo.
+  🔴 *Refuted if both return zero under a qualified probe, which would make Brazil and Argentina the
+  whole of LATAM supply rather than its first two countries.*
+- **`ACTION BK` — re-probe EMEA demand with country and institution nouns, not "EMEA".** p133's
+  regional battery returned **zero** education-specific EMEA results because *"EMEA"* is a vendor
+  sales-region word no ministry uses (`intel/market.md` → EMEA). 🔴 *Refuted if country-level queries
+  also return nothing new, which would make EMEA demand genuinely saturated rather than mis-queried.*
 - **`ACTION BG` — extend `ACTION BC` to abundances.** A named control is required beside every
   declared absence; p132 adds that one is required beside every declared **abundance** too. `OR` is
   not honoured as a boolean in repo search: `oneroster OR ed-fi MCP agent` → **69 812**,

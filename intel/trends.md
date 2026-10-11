@@ -72,8 +72,11 @@ integration. Budget for the integration, not the engine.
 [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad)
 (**Apache-2.0, 39 444★**) — so the shape is two large permissive projects, not one, and the second
 one is an *offline composition layer* rather than an engine. Second, the "long tail of sub-1k
-projects" is **much longer and much better placed than this KB knew**: 21 SIS/portal rows at 0–10
-stars, ~80% MIT, ~90% region-placed. 🔵 **The concentration finding holds for *engines* and is
+projects" is **much longer and much better placed than this KB knew**: **36** SIS/portal rows at
+0–40 stars (21 from p132, **15 added by p133**), ~90% region-placed. 🔴 **Licence mix corrected by
+p133: p132's "~80% MIT" was measured before the LATAM and ANZ probes ran** — the 12 LATAM rows are
+**42% MIT**, and the tier's new top row, `BetterSEQTA-Plus`, is **MIT at 40★**, which also retires
+the "nothing above 10 stars" ceiling. 🔵 **The concentration finding holds for *engines* and is
 misleading about *connectors*** — the connector layer is not concentrated at all, it is atomised
 across national platforms, which is a different procurement problem and a different opportunity.
 
@@ -271,8 +274,8 @@ phenomenon rather than a coincidence:
 
 | property | value | what it implies |
 |---|---|---|
-| **author** | one person, almost always a student at the institution | no roadmap, no support, no bus factor above 1 |
-| **licence** | **~80% MIT** | 🟢 chosen by default, not by strategy — but genuinely usable |
+| **author** | ~~one person, almost always a student~~ → 🔴 **not in LATAM or Australia** | p133: **4 rows serve a teacher**, one is **org-owned with a product homepage** (`expeditto`), and `BetterSEQTA` is a two-product org with 25 forks |
+| **licence** | ~~**~80% MIT**~~ → 🔴 **tier-wide this is wrong; see p133** | 🟡 measured on 21 EMEA/APAC/NA rows. The **12 LATAM rows** p133 added are **42% MIT** (3 unlicensed, 2 GPL-3.0, 1 AGPL-3.0), and the one row p132 left unread reads **AGPL-3.0** |
 | **stars** | **0–10**, none higher | no production-grade row anywhere in the tier |
 | **created** | mostly within the last 6 months; three within 10 days of this pass | 🟢 the tier is *forming now* |
 | **region** | **~90% placed** on hard evidence (named institution, national platform, country-coded host) | the best regional evidence in this KB |
@@ -294,8 +297,17 @@ a budget, or permission.
    market report on this page.
 3. 🔴 **None of it is adoptable.** A 1-star repo with a stored pupil password is a reference
    document, not a dependency. Say so to a client before they find it themselves.
-4. 🔵 **Where it is NOT happening is the finding for LATAM:** zero of the 21 are LATAM-origin, in a
-   region with real Blackboard and Chamilo share. The bottom-up wave has not reached it.
+4. ~~🔵 **Where it is NOT happening is the finding for LATAM:** zero of the 21 are LATAM-origin…~~
+   🔴 **REFUTED BY p133, and this was a claim about a query.** Probing `sigaa`, `suap` and
+   `siu-guarani` returns **12 LATAM rows**. The bottom-up wave had reached LATAM; the probe had not.
+   🟢 **And it arrived in a different shape: LATAM's wave is partly *staff-side*** — `expeditto`
+   (AGPL-3.0, org-owned, drafts a lecturer's RIT workload report), `auto-sigaa` and
+   `Auto_Grade_Guarani` (both move grades into the national SIS for a teacher). See `T9`.
+5. 🔴 **The structural risk of the whole tier now has a measured instance, not just a worry.**
+   `st22209/Parent-Portal` (MIT, New Zealand, **KAMAR**) is **archived**, and its README gives the
+   cause: *"[DEPRECATED AFTER KAMAR API CHANGE]"*. **An unsanctioned connector does not degrade when
+   the vendor changes an endpoint — it ends.** That is the argument for pattern `P8` as an observed
+   outcome.
 
 **What would falsify this:** a vendor (Librus, EduPage, Instructure, Moodle HQ) shipping an official
 agent or MCP surface, which would make the student connectors redundant overnight — and which is
@@ -319,8 +331,19 @@ exactly the engagement to propose to such a vendor.
 - Whether `mathtutorbench` **resolves its own licence** (T7). Re-checked: still no `LICENSE`, badge
   **CC-BY-4.0** vs body **CC-BY-SA-4.0**. Still the single highest-leverage upstream change
   available to this KB.
-- Whether `instructure/canvas-lms` resumes activity; `pushed_at` **2026-04-30**, now ~5.4 months
-  and a third consecutive pass unchanged.
+- ~~Whether `instructure/canvas-lms` resumes activity; `pushed_at` **2026-04-30**…~~ 🔴 **RETIRED
+  BY p133 AS A MIS-MEASUREMENT.** `canvas-lms` declares the topic **`gerrit-mirror`**, and
+  `instructure/analytics` shares its `pushed_at` **one second later** (14:52:10 / 14:52:11) — two
+  repos cannot be hand-pushed a second apart. **This is a stopped mirror export, not four passes of
+  developer silence.** 🟡 **Watch the right thing instead: whether the GitHub mirror resumes at all**
+  — because while it is frozen, GitHub is not an activity signal for Canvas and anyone diffing the
+  mirror to track upstream is reading a five-month-old tree. See `repos/foundations.md`.
+- 🔴 **New standing rule from that correction: never read `pushed_at` as activity without checking
+  for a mirror.** Flag a recency reading as unreliable when *"mirror"* appears in topics, when two
+  repos in one org share `pushed_at` to the second, or when the README names an upstream elsewhere
+  (Gerrit, GitLab, SVN). This KB's `git-recency-channel` and `p109-freshness` lanes currently
+  mis-rank every mirror in the direction of looking abandoned; `gerrit` appeared **zero** times
+  across 1 733 addresses before this pass.
 - Whether **Open edX MCP** moves past experimental; `blend-ed/openedx-mcp` still **2 stars**.
 - Whether any **proctoring project acquires an institutional owner** — tier still permissive and
   capped at 18★.
@@ -329,17 +352,27 @@ exactly the engagement to propose to such a vendor.
 
 **New for the next pass:**
 
-- 🔴 **Probe ANZ directly.** Australia and New Zealand entered this KB this pass as a regulatory
-  signal only, with **zero** ANZ-origin open-source education AI found and no dedicated query yet
-  run. A mature English-language higher-ed export market running Moodle and Canvas at scale should
-  not be a blank.
-- 🔴 **Probe LATAM with platform proper nouns, not category terms.** The vocabulary rule
-  (`agents/top.md`) was what unlocked EMEA and APAC supply this pass. The LATAM equivalents were
-  never tried: **SIGA, SIGAA, Q-Acadêmico, Moodle-BR, Blackboard LATAM, Chamilo, SIAGIE (Peru),
-  SIMAT (Colombia), SEP (Mexico)**. 🔵 **A LATAM zero is not credible until it is re-run this way.**
+- ~~🔴 **Probe ANZ directly.**~~ 🟢 **DONE p133 (`ACTION BF`) — and ANZ is not a blank.**
+  `BetterSEQTA/BetterSEQTA-Plus` (**MIT, 40★**, org-owned, 25 forks, Chrome Web Store, pushed
+  2026-10-06) and `BetterSEQTA/DesQTA` (**MIT, 16★**) over **SEQTA**, Australia. New Zealand:
+  one MIT **KAMAR** row, archived. 🟡 **Watch next: whether `BetterSEQTA` adds an AI/MCP surface** —
+  it is the only product-shaped org in the portal tier and has not yet shipped an agent.
+- ~~🔴 **Probe LATAM with platform proper nouns, not category terms.**~~ 🟢 **DONE p133
+  (`ACTION BE`) — REFUTED: 12 LATAM rows.** `sigaa` (5), `suap` (3), `siu-guarani` (4). 🔴 **Probes
+  that returned nothing are recorded with their probe in `intel/market.md` → LATAM**: SIAGIE (Peru)
+  and Q-Acadêmico (Brazil) have real installed bases and **no agent layer at all** — the two
+  cleanest unclaimed LATAM slots this KB can name. **Chile's `ucampus` probe collided with a Chinese
+  homograph and the qualified re-probe returned 0.** 🟡 **Not reached: `simat` (Colombia), `saes`
+  (Mexico)** — carried as `ACTION BJ`.
 - 🟡 Read **ILIA 2025 (CEPAL)** directly for LATAM country-level regulation, instead of re-running
   regional news queries that return commentary.
-- 🟡 Licence-measure the three rows left `UNREAD` this pass: `edwyj/ddl-killer`,
-  `karissafuller/project-nomad-macos`, `Tushar-cy/Offline-AI`.
+- ~~🟡 Licence-measure the three rows left `UNREAD`…~~ 🟢 **DONE p133, all three read:**
+  `edwyj/ddl-killer` = 🔴 **AGPL-3.0** (holder is the FSF only — a `DOCUMENT-TEXT` case),
+  `karissafuller/project-nomad-macos` = 🟢 **MIT** (*"Copyright (c) 2026 Karissa Fuller"*),
+  `Tushar-cy/Offline-AI` = 🔴 **no payload at `/main/` or `/master/`** → measured-absent.
+  🔴 **Instrument note for the next pass: the GitHub contents API is scope-blocked in this session**
+  (it returns *"repository is not configured for this session"*, which is an authorisation refusal,
+  **not** a 404 and **not** evidence about the repo). **The working lane is
+  `raw.githubusercontent.com/<owner>/<repo>/<branch>/LICENSE`.**
 - 🔵 Check whether `Tushar-cy/Offline-AI` and `Tushar-cy/Ai-edge-learning-hub` are a rename pair,
   and retire the dead one from this KB before it is ever counted twice.

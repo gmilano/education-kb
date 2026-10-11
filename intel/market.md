@@ -120,6 +120,19 @@ nor audit trail. **The sellable work is governance, integration and evidence —
   schools-facing Annex III date is **2027-12-02**. Correcting this politely is a credibility
   opportunity, not a pedantic one.
 
+- 🟡 **One figure on this page needs a definition warning, added p133.** A North-America-specific
+  series puts the regional market at **$951M (2024) → $2 303.2M (2029), a 15.9% CAGR** — while this
+  page's global figures carry CAGRs of **31%–41.5%**. 🔴 **A region said to hold ~36% of a market
+  cannot grow at half the market's rate unless the two series count different things**, and they do:
+  the regional series uses a narrower product definition. **Quote the global CAGR or the regional
+  level, never one against the other.** Same class of error as `P132-D`'s base-year mix.
+- 🔴 **The stale EU AI Act claim resurfaced in a North-America-facing source, for the fourth pass
+  running.** A US comparison piece states the Act takes *"full effect in August 2026"* and
+  classifies education AI as high-risk. **The Annex III date is 2027-12-02** (`intel/trends.md` →
+  `T3`). 🟡 **This is now a documented pattern rather than a one-off: the error travels through
+  North-American commentary, so a US or Canadian client is the most likely to arrive holding it.**
+  Correcting it is a credibility win and it widens the EMEA delivery window by 16 months.
+
 ### EMEA
 
 - **The regulatory clock moved, and the deferral is now confirmed as law.** High-risk obligations
@@ -176,6 +189,18 @@ nor audit trail. **The sellable work is governance, integration and evidence —
   engagement no longer starts from a licence problem. Standards and accessibility compliance are
   scored in tenders. Richie (MIT, France) is proven at national scale for the public-facing layer.
 
+- 🔴 **p133's EMEA demand probe returned nothing education-specific, and the reason is the query —
+  recorded here rather than left looking like coverage.** The prescribed battery term *"AI education
+  EMEA 2026 adoption regulation players"* returns enterprise IT: CompTIA's EMEA outlook, a Workday
+  study from 2023, Bandwidth/Cavell telecoms research. **Zero results covered education ministries,
+  university policy or EdTech vendors.** 🔵 **"EMEA" is a vendor sales-region word — no ministry,
+  regulator or university describes itself that way**, so the term reaches people who sell *into*
+  regions, not people who run schools. 🟢 **This is `P133-E`/`P132-A` on the demand side: the probe's
+  vocabulary, not the region, produced the emptiness.** Later passes should query **country and
+  institution names** (Skills England, Eurydice, the Council of the EU, individual Bundesländer) and
+  aggregate to EMEA afterwards. 🟡 **Nothing here contradicts the EMEA findings above — those came
+  from targeted country-level queries, which is exactly the point.**
+
 ### APAC
 
 - **Fastest-growing region (~35.3% CAGR), and the only one where curriculum mandates are driving
@@ -216,6 +241,20 @@ nor audit trail. **The sellable work is governance, integration and evidence —
   APAC jurisdiction that **explicitly names education, automated assessment and behavioural
   monitoring as high-risk** (Decision 33/2026/QD-TTg). It is also the tier's only copyleft row.
 
+- 🟢 **ANZ closes on both sides this pass, having been a stated blank (`ACTION BF`).** Demand:
+  Canberra is tightening AI governance and copyright, and OpenAI has appointed a dedicated ANZ
+  policy lead (Brent Thomas). Supply, new in p133: **Australia has the best-licensed national
+  platform corner in this KB** — `BetterSEQTA/BetterSEQTA-Plus` (**MIT, 40★**, org-owned, 25 forks,
+  a Chrome Web Store listing, pushed 2026-10-06) plus `BetterSEQTA/DesQTA` (**MIT, 16★**), both over
+  **SEQTA**. 🔴 **New Zealand is one MIT row and it is archived**, killed by a **KAMAR API change**
+  its README names explicitly — the clearest evidence in this KB for why pattern `P8` (sanctioned
+  connector) beats a scraper.
+- 🟡 **Governance lag, quantified regionally:** a Diligent Institute survey reports **57% of
+  organisations in Asia** have put AI into at least one area of operations while governance
+  frameworks struggle to keep pace. Pearson and TCS announced a multi-year AI learning alliance
+  aimed at **employer** skills gaps rather than schools — consistent with this page's reading that
+  APAC money moves through workforce programmes.
+
 ### LATAM
 
 - **Adoption is ahead of governance, more starkly than anywhere else.** UNESCO IESALC reports
@@ -233,6 +272,58 @@ nor audit trail. **The sellable work is governance, integration and evidence —
   across Argentina, Brazil, Chile, Colombia, the Dominican Republic, El Salvador, Mexico, Peru and
   Uruguay, targeting 1.25M students by 2028. UNESCO launched a regional AI-in-education observatory
   and, in August 2026, a pilot with CONALEP and DGETI in Mexico.
+- 🟢 **`ACTION BE` DISCHARGED BY p133 — and "no LATAM supply" is REFUTED.** This KB declared a LATAM
+  supply zero four times and pre-registered the reason it might be wrong: the probes had only ever
+  used English category terms. Run with platform proper nouns, LATAM returns **12 addresses** —
+  **SIGAA** (5), **SUAP** (3), **SIU-Guaraní** (4) — in `agents/top.md` and
+  `evidence/verified-repos.2026-10-11-p133.tsv`. 🔴 **The claim immediately above this bullet, that
+  `campus-cli` is "the only LATAM-origin row in the entire KB", is therefore retired.**
+- 🔴 **And the LATAM rows are a different animal from the rest of the tier: they serve staff.**
+  Three of the twelve automate a *teacher's* obligation — `expeditto` (AGPL-3.0, **org-owned**, with
+  a product homepage, drafting a lecturer's **RIT** workload report from SUAP), `auto-sigaa` (MIT,
+  grade entry from a spreadsheet) and `Auto_Grade_Guarani` (grade upload to SIU-Guaraní). 🔵 **Two
+  countries, two national systems, the same unmet need: moving grades and workload into a system of
+  record that a human is currently retyping.** That is the regional opportunity stated concretely,
+  and it is `T9` with addresses attached for the first time.
+- 🟡 **Licence shape of the LATAM slice, because it differs from the rest of the shelf:** **5 of 12
+  MIT (42%)**, 3 unlicensed, 2 GPL-3.0, 1 AGPL-3.0. The staff-side builders here reach for copyleft,
+  and the single most institutional project (`expeditto`) is the one that cannot be forked.
+- 🟢 **The vendor consortium is reachable, which is new.** [`SIU-Toba`](https://github.com/SIU-Toba)
+  — the Argentine university consortium that *publishes* SIU-Guaraní — has its own GitHub org
+  (`docker-guarani`, 4★). 🔴 **Unlicensed and dormant since 2017**, so not a counterparty today, but
+  it is the first named sanctioned-integration counterparty this KB has for pattern `P8`.
+- 🔴 **The named instrument behind this page's 92% / 79% figures, finally identified.** They are the
+  **Digital Education Council "AI in Higher Education LATAM Survey 2026"**, run with **Tecnológico
+  de Monterrey's Institute for the Future of Education** — not a Tec observatory release as earlier
+  passes implied. New predicates from it: **50% of students** support AI-assisted feedback on
+  assignments while **only 19% of faculty** currently give it that way, and **only ~30% of LATAM
+  universities have published** a policy on AI use. 🔵 **The 50/19 gap is the most directly sellable
+  number on this page: demand for a feature that the people who would operate it are not using.**
+- 🟢 **IESALC's fieldwork, now with its denominator.** The **87% adoption / 26% with a formal
+  framework** figures come from **200 higher-education institutions across 19 countries, surveyed
+  August–October 2025** (so they date to late 2025, as p132 established). By area: **teaching and
+  learning 73.5%**, research **57.0%**, administration **34.1%**, community engagement **20.0%**.
+  🔴 **Administration is the second-least-served area in the survey and the layer with the most
+  open-source supply (above) — that mismatch is the LATAM engagement thesis in one line.**
+  By institution type: private non-profit **84%**, public **68%**, private for-profit **52%**.
+- 🟡 **Country-level regulation, which p132 said ILIA was needed for.** **Chile** leads — a National
+  AI Policy since 2021 and a bill under discussion. **Brazil** and **Colombia** have national AI
+  strategies but **no education-sector rule**. **Mexico**: SEP, ANUIES and the Observatorio IA have
+  issued recommendations that are **explicitly non-binding**. 🔵 **The IDB's Latin American AI Index
+  (ILIA) covers 19 countries** and remains the instrument to read for depth. 🔴 **Net: there is still
+  no education-specific binding instrument anywhere in the region** — which is why the EMEA
+  conformity work (`compose/patterns.md` → `P4`) does not transfer here as a compliance sale.
+- 🔴 **Probes that returned nothing, named so the gap is informed rather than silent.** Per
+  `agents/top.md` → clause 4, each is reported with the probe that produced it:
+  | country | platform probed | result |
+  |---|---|---|
+  | **Chile** | `ucampus`, then `ucampus chile universidad` | 🔴 bare probe returned a **Chinese** homework tool and an Indian app (homograph collision); **qualified probe returned 0**. **No evidence found for U-Campus.** |
+  | **Peru** | `siagie` | 26 results, **all** zero-star school coursework, no AI, no licences. SIAGIE has a national installed base and **no agent layer at all** |
+  | **Brazil** | `q-academico` | 85 results, almost all 2018-era student UML exercises. Real installed base, **no agent layer** |
+  | **Uruguay** | `bedelias` | 28 results, nothing relevant — student clones of a *bedelía* system, no connectors |
+  | **Colombia / Mexico** | `simat`, `saes` | not reached this pass — **carried to `ACTION BJ`** |
+  🟢 **Peru's SIAGIE and Brazil's Q-Acadêmico are the two cleanest unclaimed LATAM slots this KB has
+  ever been able to name: a real system of record, millions of records, and zero open-source AI.**
 - **Opportunity:** be the governance layer that regulators have not yet imposed. Institutions
   adopting at speed with no legal framework will face one within the engagement's lifetime — build
   for Brazil's PL 2338 shape now. Second, **offline and low-bandwidth delivery is a first-class
@@ -291,6 +382,12 @@ nor audit trail. **The sellable work is governance, integration and evidence —
   **Licence screening is not a late-stage check in this sector; it reorders the shortlist.**
   🟡 **p132 qualifies the scope of this claim, which was overstated as "across every tier
   measured".** The new SIS/portal tier is **~80% MIT** — the inversion does *not* hold across it.
+  🔴 **p133 qualifies p132's qualification, on the same error one level down.** The "~80% MIT" was
+  measured on 21 rows that were EMEA/APAC/NA only. Adding the **12 LATAM rows** takes the tier to
+  **42% MIT in that region** (3 unlicensed, 2 GPL-3.0, 1 AGPL-3.0) — and the single row p132 left
+  `UNREAD`, `edwyj/ddl-killer`, reads **AGPL-3.0**, the most restrictive licence in the tier. 🔵
+  **An unread row is not a random draw: the repos that are hard to read are disproportionately the
+  ones doing something unusual with their licence. Measure before you average.**
   🔵 **But it still holds at the top of that tier:** its two most-starred rows are the weak ones —
   `librus-mcp` (10★) is mixed-licence (MIT 2.x over a **GPL-3.0-only** `legacy_reference/`) and
   `DAU-buddy` (7★) is unlicensed. 🟢 **So the accurate form of the finding is narrower and still

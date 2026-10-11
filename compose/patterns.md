@@ -389,6 +389,77 @@ designs and expect to own the code.
 
 ---
 
+## P10 — Grade and workload passback for a LATAM national academic system *(new, p133 — the first pattern this KB can ground in LATAM rows)*
+
+**For:** Brazilian federal universities (**SIGAA**) and federal institutes (**SUAP**), Argentine
+universities on the **SIU-Guaraní** consortium stack. **Timeline:** 6–8 weeks for the first faculty,
+plus 3–4 weeks per additional campus. 🟢 **The shortest, lowest-risk engagement in this file.**
+
+🔵 **Why this pattern exists now and could not be written before.** For four passes this KB reported
+"no LATAM-origin supply" and recommended LATAM work on market share alone. `ACTION BE` refuted that
+with **12 addresses** — and three of them are doing the *same unglamorous job in two countries*:
+**moving grades and workload into a national system of record that a human is currently retyping.**
+🟢 **That is not a guess about demand; it is three independent people having already built it.**
+
+🔴 **And the demand number is on the same page.** IESALC's 200-institution survey puts
+**administration at 34.1%** adoption — second-lowest of four areas — while the Digital Education
+Council's LATAM 2026 survey finds **50% of students want AI-assisted feedback and only 19% of faculty
+give it** (`intel/market.md` → LATAM). **The bottleneck is the teacher's data-entry time, and that is
+exactly what this pattern removes.**
+
+**Stack**
+
+| layer | component | licence | note |
+|---|---|---|---|
+| reference: grade passback | [`filipecalegario/auto-sigaa`](https://github.com/filipecalegario/auto-sigaa) | **MIT** | 🟢 **start here.** Pushes a spreadsheet of grades into SIGAA. MIT, 9★ — the one forkable staff-facing row |
+| reference: workload report | [`fabrica-de-inovacao/expeditto`](https://github.com/fabrica-de-inovacao/expeditto) | 🔴 **AGPL-3.0** | **Read, do not fork.** Org-owned, drafts a lecturer's **RIT** from SUAP via CLI **and** MCP — the closest thing to a product in this tier. Its *architecture* is the deliverable here, not its code |
+| reference: Argentina | [`eugeborzone/Auto_Grade_Guarani`](https://github.com/eugeborzone/Auto_Grade_Guarani) | 🔴 **unlicensed** | Pattern only. Proves the identical need on SIU-Guaraní |
+| API surface: SUAP | [`joojdev/academic-tracker-mcp`](https://github.com/joojdev/academic-tracker-mcp) (**MIT**) + [`frjunioalves/suap-mcp`](https://github.com/frjunioalves/suap-mcp) (🔴 unlicensed) | mixed | 🟢 **Two independent MCP implementations of the same SUAP surface** — cross-read them to separate the real API from one author's assumptions |
+| API surface: SIGAA | [`Agso-o/sigaa-calendar`](https://github.com/Agso-o/sigaa-calendar) (🟡 GPL-3.0), [`RubsNeto/SigaaUI`](https://github.com/RubsNeto/SigaaUI) (**MIT**), [`trindadetiago/sigaa-caiu`](https://github.com/trindadetiago/sigaa-caiu) (**MIT**) | mixed | The published map of SIGAA's undocumented screens. 🔴 Read `sigaa-calendar` for its *surface*, not its code — GPL-3.0 |
+| agent scaffold | [`sandraschi/classroom-mcp`](https://github.com/sandraschi/classroom-mcp) | **MIT** | tool taxonomy for courses/assignments/scores (1★ — reference design) |
+| audit | [`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records) | **Apache-2.0** | per-access logging; the LGPD analogue of its FERPA model |
+| the counterparty | [`SIU-Toba`](https://github.com/SIU-Toba) (Argentina) | 🔴 unlicensed, dormant since 2017 | 🟢 **The SIS consortium is itself on GitHub** — the only named sanctioned-integration counterparty in this KB (`P8`) |
+
+**Wiring.** Three steps, in this order, and the order is the whole point.
+
+1. **Build the importer, not the agent.** A deterministic job that takes an instructor's grade
+   spreadsheet, validates it against the course roster pulled from SUAP/SIGAA, and writes it back
+   through the institution's own authenticated session. **No model in this path.** `auto-sigaa` is
+   the worked example; fork it. 🔵 **Grade entry is a correctness problem, not a language problem —
+   an LLM in the write path converts a 2-hour chore into an unauditable liability.**
+2. **Put the LLM only where the text is.** Two jobs, both safe: (a) *reconciliation* — explain in
+   Portuguese or Spanish why 3 of 180 rows failed validation, which name matched no enrolment, which
+   grade is out of range; (b) *narrative drafting* — the prose sections of a workload report
+   (`expeditto`'s RIT), always **as a draft the lecturer edits and submits.** 🔴 **Never
+   auto-submit:** a drafted report a human signs is administrative support; an auto-filed one is an
+   automated decision about staff performance.
+3. **Then, and only then, add the MCP surface.** Once the importer is correct and logged, expose it
+   as MCP tools modelled on `academic-tracker-mcp` so the instructor can ask *"how many of my
+   students are missing a grade for unit 2"*. 🟢 **This ordering is what makes the engagement
+   financeable: step 1 has a measurable baseline (hours per term per lecturer, error rate,
+   days-late on grade submission) before any AI spend is defended.**
+
+**Credentials — the one blocker, and LATAM has a better answer than EMEA.** Every reference row above
+logs in as its author. 🔴 **Do not ship that.** But unlike Librus or Pronote, **the counterparty here
+is reachable**: SIGAA and SUAP are *public-sector* systems (SIG/UFRN-derived and IFRN-derived
+respectively, both federal), and SIU-Guaraní is published by a **university consortium that already
+has a GitHub org**. 🟢 **A federal institute can authorise its own integration — which is precisely
+what pattern `P8` cannot get from a private EMEA vendor.** Get an institutional service account and
+a DPA under **LGPD** (Brazil) or **Ley 25.326** (Argentina) before the first write.
+
+**Result licence:** MIT throughout, if built from `auto-sigaa` + `academic-tracker-mcp` +
+`classroom-mcp` and `expeditto`/`sigaa-calendar` are read rather than copied. 🔴 **Track that
+boundary in the repo:** the two most useful references are **AGPL-3.0** and **GPL-3.0**, and this
+pattern's whole commercial value depends on not importing them.
+
+**Does not solve:** 🔴 **this is administrative plumbing, not pedagogy** — it will not satisfy a
+client who came for a tutor (`P1`). 🔴 **It is per-platform**, so a Brazilian federal university
+(SIGAA) and a federal institute (SUAP) are two integrations, not one. 🟡 **And every reference row is
+0–20★ with a bus factor of one** — budget to own the code, and read `P8` before promising the
+institution a sanctioned path.
+
+---
+
 ## Pattern selection, one line each
 
 | if the client… | run |
@@ -398,6 +469,8 @@ designs and expect to own the code.
 | faces a US state mandate with a date | **P3** |
 | is an EU institution touching admissions/grading | **P4** |
 | is a ministry facing a curriculum mandate | **P5** |
+| is a Brazilian or Argentine institution on SIGAA / SUAP / SIU-Guaraní | **P10** |
+| wants a teacher's admin time back, with a measurable baseline | **P10**, then **P9** |
 | will be asked whether it worked | **P6** — always, alongside the others |
 | runs **Moodle** and wants to own its AI layer | **P7** |
 | is the **vendor** of a national K-12 platform, or runs one at scale | 🆕 **P8** |

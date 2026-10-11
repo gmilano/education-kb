@@ -81,6 +81,20 @@ analyst's words. The probe that worked was `timetable timetabling MCP in:name,de
 stars. The licences are good and the maturity is near zero. **Nothing here is a product; the value
 is that the integration work against ten national platforms has already been scouted.**
 
+🔴 **Qualified by p133 — the sentence above was true of the 21 rows p132 had, and the tier is
+bigger than that.** Running the LATAM and ANZ probes added **15 rows**, and they break three of
+p132's generalisations about this shelf:
+
+| p132's claim about the tier | what p133's rows show |
+|---|---|
+| *"the builders are students and parents… **no procurement story whatsoever**"* | 🔴 **4 rows automate a *teacher's* obligation**, and one is org-owned with a product homepage — see the staff-facing subsection below |
+| *"**~80% MIT**"* | 🔴 **The LATAM slice is 42% MIT** (5 of 12), with 3 unlicensed, 2 GPL-3.0 and 1 AGPL-3.0. Staff-side builders in this region reach for copyleft |
+| *"nothing here is a product"* | 🟡 **One exception:** `BetterSEQTA` ships two MIT products (40★ + 16★) with a Chrome Web Store listing, an org, 25 forks and a push this week |
+
+🔵 **The honest generalisation is the one p132 itself reached for: a claim about "every tier
+measured" is only a claim about the tiers you queried — and that now applies to p132's own tier
+description.**
+
 #### Generic / platform-independent — the forkable ones
 
 | agent | repo | licence | stars | region | what it actually does |
@@ -97,12 +111,24 @@ evidence** — a named institution, a national system, a country-coded homepage 
 
 | agent | repo | licence | stars | region | platform it connects to |
 |---|---|---|---|---|---|
+| **BetterSEQTA+** | [`BetterSEQTA/BetterSEQTA-Plus`](https://github.com/BetterSEQTA/BetterSEQTA-Plus) | **MIT** | **40** | **APAC (Australia)** | 🟢 **The largest and only product-shaped row in this tier.** **SEQTA Learn**, the Australian school platform: a Chrome/Firefox extension (published on the Chrome Web Store) rewriting the SEQTA interface — timetable, assessments, dark mode, redesign. **Org-owned** (`BetterSEQTA`), **25 forks**, pushed **2026-10-06**. Added p133 (`ACTION BF`). |
+| **sigaa-calendar** | [`Agso-o/sigaa-calendar`](https://github.com/Agso-o/sigaa-calendar) | 🟡 **GPL-3.0** | **20** | **LATAM (Brazil)** | **SIGAA**, the SIS of Brazil's federal universities: extracts deadlines and timetables straight into Google Tasks/Calendar. Go. Pushed **2026-10-09**. 🟡 Copyleft — read before forking. Added p133. |
+| **sigaa-caiu** | [`trindadetiago/sigaa-caiu`](https://github.com/trindadetiago/sigaa-caiu) | **MIT** | 19 | **LATAM (Brazil)** | **SIGAA** — TypeScript. Added p133. |
+| **siu-guarani-promedio** | [`juliancasaburi/siu-guarani-promedio-extension`](https://github.com/juliancasaburi/siu-guarani-promedio-extension) | **MIT** | 17 | **LATAM (Argentina)** | **SIU-Guaraní**, the SIS of the Argentine university consortium: grade-average visualisation over academic history. Chromium/Firefox extension. Added p133. |
+| **SigaaUI** | [`RubsNeto/SigaaUI`](https://github.com/RubsNeto/SigaaUI) | **MIT** | 16 | **LATAM (Brazil)** | **SIGAA** — open-source extension modernising *Portal do Discente*, grades and enrolment screens. Added p133. |
+| **DesQTA** | [`BetterSEQTA/DesQTA`](https://github.com/BetterSEQTA/DesQTA) | **MIT** | 16 | **APAC (Australia)** | **SEQTA** ported to a native desktop app (Svelte). Same org as `BetterSEQTA-Plus` — 🟢 **the only two-product line in the tier.** Added p133. |
+| **QuantoFalta** | [`MatheusMach/QuantoFalta`](https://github.com/MatheusMach/QuantoFalta) | 🔴 **no licence** | 9 | **LATAM (Brazil)** | **SIGAA** absence counter per subject. Created **and** pushed 2026-10-08 — three days old at this pass. Added p133. |
+| **siu-guarani** (seats) | [`despedite/siu-guarani`](https://github.com/despedite/siu-guarani) | 🟡 **GPL-3.0** | 8 | **LATAM (Argentina)** | **SIU-Guaraní** — scraper that watches for free course seats. Added p133. |
+| **docker-guarani** | [`SIU-Toba/docker-guarani`](https://github.com/SIU-Toba/docker-guarani) | 🔴 **no licence** | 4 | **LATAM (Argentina)** | 🟢 **The only row in this tier owned by the SIS vendor itself** — `SIU-Toba` is the Argentine university consortium's own org. Docker containers for Guaraní. 🔴 **Dormant since 2017 and unlicensed**, so not a usable counterparty today — but it is the named counterparty `P8`/`P9` need. Added p133. |
+| **Parent-Portal (KAMAR)** | [`st22209/Parent-Portal`](https://github.com/st22209/Parent-Portal) | **MIT** | 2 | **APAC (New Zealand)** | **KAMAR**, the New Zealand school SIS, via a CLI (PyPI `kmrpp`). 🔴 **ARCHIVED, and the README states the cause: *"[DEPRECATED AFTER KAMAR API CHANGE]"*.** The tier's only worked example of what a vendor-side API change does to an unsanctioned connector. Added p133 (`ACTION BF`). |
+| **academic-tracker-mcp** | [`joojdev/academic-tracker-mcp`](https://github.com/joojdev/academic-tracker-mcp) | **MIT** | 0 | **LATAM (Brazil)** | **SUAP** (*Sistema Unificado de Administração Pública*), the SIS of Brazil's federal institute network — MCP server over the author's own academic record. 🟢 **The first LATAM row this KB ever placed in this tier.** Added p133. |
+| **suap-mcp** | [`frjunioalves/suap-mcp`](https://github.com/frjunioalves/suap-mcp) | 🔴 **no licence field** | 0 | **LATAM (Brazil)** | **SUAP** — independent second Python implementation. 🔵 Two independent SUAP connectors is the same demand signal EduPage gives in EMEA. Added p133. |
 | **librus-mcp** | [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp) | 🟡 **MIT (2.x)**; `legacy_reference/` is **GPL-3.0-only** | **10** | **EMEA (Poland)** | **Librus Synergia**, the dominant Polish school platform: grades, messages, attendance, homework, timetables, announcements. 🔴 **Mixed-licence repo — a fork must exclude `legacy_reference/` or inherit GPL-3.0.** Unofficial, not affiliated with Librus; no 2FA support. |
 | **DAU-buddy** | [`Piyushtanwani/DAU-buddy`](https://github.com/Piyushtanwani/DAU-buddy) | 🔴 **no licence** | 7 | **APAC (India)** | Dhirubhai Ambani University (DA-IICT) — timetables, library catalogue, faculty directory. Second-largest row of the tier and unusable as published. |
 | **vtop-bhopal-mcp** | [`divyarthjain/vtop-bhopal-mcp`](https://github.com/divyarthjain/vtop-bhopal-mcp) | **Apache-2.0** | 4 | **APAC (India)** | VIT Bhopal's **VTOP** portal: attendance, marks, timetable, exams, grades, plus bunk/OD calculators. Created 2026-10-02 — nine days old at this pass. |
 | **soongpt-plugin** | [`yourssu/soongpt-plugin`](https://github.com/yourssu/soongpt-plugin) | **MIT** | 3 | **APAC (South Korea)** | Soongsil University **uSaint** via `rusaint`: course search, timetable planning and **graduation-requirement checking** — the only row that reasons about degree progress. Org-owned (`yourssu`). |
 | **edupage-mcp** | [`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) | **MIT** | 3 | **EMEA (Slovakia)** | **EduPage**, the Slovak/Czech school platform. The most complete connector of the tier: timetables, grades, homework, daily summary, **meal ordering**, multi-school discovery, role-aware student switching and **2FA**. |
-| **ddl-killer** | [`edwyj/ddl-killer`](https://github.com/edwyj/ddl-killer) | 🟡 **UNREAD** | 3 | **APAC (China)** | Student planner for Chinese universities — timetables, tasks and deadlines in one schedule, AI-assisted scheduling, MCP access, Web/Android sync. Created **2026-10-10**, one day before this pass. Licence not measured. |
+| **ddl-killer** | [`edwyj/ddl-killer`](https://github.com/edwyj/ddl-killer) | 🔴 **AGPL-3.0** (payload-read, p133) | 3 | **APAC (China)** | Student planner for Chinese universities — timetables, tasks and deadlines in one schedule, AI-assisted scheduling, MCP access, Web/Android sync. Created **2026-10-10**. 🔴 **Licence measured by p133 and it is the most restrictive in the tier: the payload is the full AGPL-3.0 text, and the only copyright line in it is the Free Software Foundation's — a `DOCUMENT-TEXT` holder with no program-specific licensor.** Network copyleft on a student-data connector: do not fork into client work. |
 | **mcgill-vsb-mcp** | [`luca-dupont2/mcgill-vsb-mcp`](https://github.com/luca-dupont2/mcgill-vsb-mcp) | **MIT** | 2 | **North America (Canada)** | McGill **VSB**: timetable data, conflict checks and schedule generation *without browser automation* — an API path rather than a scraper. |
 | **edupage-mcp** (second) | [`mhlavac/edupage-mcp`](https://github.com/mhlavac/edupage-mcp) | **MIT** | 1 | **EMEA (Slovakia)** | Independent second EduPage implementation — a useful cross-check, and evidence that EduPage demand is real rather than one person's itch. |
 | **mcp-pronotes** | [`HAL-XP/mcp-pronotes`](https://github.com/HAL-XP/mcp-pronotes) | **MIT** | 1 | **EMEA (France)** | **Pronote**, the dominant French school platform: grades, timetables, homework, absences. |
@@ -115,6 +141,30 @@ evidence** — a named institution, a national system, a country-coded homepage 
 | **iserv-mcp** | [`chenning42/iserv-mcp`](https://github.com/chenning42/iserv-mcp) | **MIT** | 0 | **EMEA (Germany)** | **IServ**, a German school platform: parent letters, timetables, **sick notes**. 🔵 Note the user it serves — a *parent*, not a student or teacher. The only row on that surface. |
 | **uoft-quercus-mcp** | [`skhdemo/uoft-quercus-mcp`](https://github.com/skhdemo/uoft-quercus-mcp) | **MIT** | 0 | **North America (Canada)** | University of Toronto **Quercus** — a Canvas deployment — plus Timetable Builder tools. Belongs to the Canvas connector family as much as to this tier. |
 | **vsuet-timetable-api-mcp** | [`fakelag28/vsuet-timetable-api-mcp`](https://github.com/fakelag28/vsuet-timetable-api-mcp) | **MIT** | 0 | **EMEA (Russia)** | VSUET (ВГУИТ) timetable client library plus MCP server. |
+
+#### 🟢 Staff- and teacher-facing administrative agents *(new, p133 — the user p132's tier did not have)*
+
+🔴 **Every row above serves a student or a parent. These four serve the person being paid.** They
+turned up only in the LATAM and ANZ probes, which is why p132 — whose 21 rows were EMEA/APAC/NA —
+concluded the tier had *"no procurement story whatsoever."*
+
+| agent | repo | licence | stars | region | whose work it removes |
+|---|---|---|---|---|---|
+| **expeditto** | [`fabrica-de-inovacao/expeditto`](https://github.com/fabrica-de-inovacao/expeditto) | 🟡 **AGPL-3.0** | 1 | **LATAM (Brazil, IFMA)** | 🟢 **The strongest signal in this subsection.** Drafts a lecturer's **RIT** — the workload report Brazilian federal institutes require — from **SUAP**, as a CLI *and* an MCP server. **Org-owned** (*Fábrica de Inovação*), product homepage, pushed **2026-10-08**. Tagline: *"seu segundo expediente, resolvido"* — your second shift, solved. 🔴 **AGPL-3.0: read it as a reference design, do not fork it into client work.** |
+| **auto-sigaa** | [`filipecalegario/auto-sigaa`](https://github.com/filipecalegario/auto-sigaa) | **MIT** | 9 | **LATAM (Brazil)** | Pushes a spreadsheet of grades into **SIGAA** so a teacher does not retype them. 🟢 **MIT, and the cleanest thing to fork in this subsection.** |
+| **Auto_Grade_Guarani** | [`eugeborzone/Auto_Grade_Guarani`](https://github.com/eugeborzone/Auto_Grade_Guarani) | 🔴 **no licence** | 0 | **LATAM (Argentina)** | The same job against **SIU-Guaraní**. 🔵 **Two countries, two national systems, one identical unmet need — that is the finding, not the star count.** |
+| **AI-Based-Timetable-Generation-System** | [`saytooyum/AI-Based-Timetable-Generation-System`](https://github.com/saytooyum/AI-Based-Timetable-Generation-System) | **MIT** | 1 | **APAC (India)** | *(also listed above)* Conflict-free timetabling under **NEP 2020** — the registrar's job, not the student's. |
+
+🟢 **Why this subsection matters more than its stars.** `intel/trends.md` **T9** has said for several
+passes that administrative automation is the most-cited adoption driver and the least-served layer.
+🔵 **These rows are the first addresses this KB can put against it** — and all four do the same
+narrow thing: **move grades or workload into a system of record that a human was otherwise
+retyping.** That is a scoped, auditable, non-pedagogical first engagement, in a jurisdiction where
+automated *assessment* is the regulated activity and data *entry* is not.
+
+🔴 **But note the licence shape before pitching it:** of the four, **two are MIT, one is AGPL-3.0 and
+one is unlicensed.** The most mature and most institutional of them (`expeditto`) is the one that
+cannot be forked.
 
 #### 🔴 The credential model is a tier-wide blocker, not a per-repo caveat
 
@@ -299,3 +349,28 @@ threshold and no amount of internal grepping fixes that.
 🔵 **Probe 3 is where regional supply hides.** A tier that looks empty from a global English query
 is often fully populated under ten national platform names — and those rows come with their region
 already attached as evidence, which is the thing this KB most often lacks.
+
+### 🔴 Clause 4, added by p133: a proper noun is only a probe if it is not a homograph
+
+p133 ran probe 3 for LATAM and ANZ and it worked — **15 rows, 12 of them LATAM, a region this KB had
+declared empty four times.** 🔴 **But two probes failed, and they failed in the opposite direction
+from `P132-A`: the proper noun was not proper enough.**
+
+| probe | intended | returned |
+|---|---|---|
+| `ucampus` | **U-Campus**, Universidad de Chile | a **Chinese** *u校园* homework tool (GPL-2.0, 34★) and an Indian campus-food app |
+| `ucampus chile universidad` | same | 🔴 **0** |
+| `seqta` | **SEQTA**, Australia | the real SEQTA rows **plus** genomics (`SeqTagger`, `SeqTagQA`) |
+
+**So, when probing by platform name:**
+
+4. **Carry a country or vendor qualifier as a named control, and check the top hits are in the right
+   language and sector.** A bare noun that returns a populated page in the wrong language has told
+   you nothing about your market. 🔴 **If the bare probe returns noise and the qualified probe
+   returns zero, report "no evidence found for this platform" — never a row count, and never a
+   regional zero.** Chile is recorded that way in `intel/market.md`, with both probes named.
+
+🔵 **Both failure modes have the same root and it is worth stating once:** a search result is a fact
+about the query. `P131-E` found it with a multi-term zero, `P132-A` with a category term that reached
+nothing, `P133-E` with a proper noun that reached the wrong field. **Every regional or tier-level
+absence in this KB must name the probe that produced it, or it is not a finding.**

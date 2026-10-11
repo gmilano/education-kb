@@ -6,6 +6,66 @@ updated: 2026-10-11
 
 # Education — trending repos (append-only log)
 
+## 2026-10-11 — Pass 133
+
+🔴 **The headline here is a correction to this page's sibling, and it is a measurement error this
+KB has repeated for four passes.** `repos/foundations.md` says of `instructure/canvas-lms`:
+*"the last push is 2026-04-30, the quietest of the major platforms."* `intel/trends.md` carries the
+same reading on its watch list. 🟢 **Both are wrong, and the repo's own metadata says so.**
+
+### `P133-A` — `pushed_at` on a mirror measures the mirror
+
+| field | value | what it means |
+|---|---|---|
+| `instructure/canvas-lms` → `topics` | **`canvas-lms`, `gerrit-mirror`, `instructure`** | 🔴 **Instructure declares this repo a mirror.** Development happens in their Gerrit; GitHub receives an export |
+| `instructure/canvas-lms` → `pushed_at` | **2026-04-30T14:52:10Z** | the last time the export ran |
+| `instructure/analytics` → `pushed_at` | **2026-04-30T14:52:11Z** | 🔴 **one second later** |
+| `instructure/canvas-lms` → `updated_at` | **2026-10-11** | metadata still moving today |
+
+🔵 **Two independent repositories cannot be hand-pushed one second apart.** A shared timestamp to
+the second is a batch job, and the topic names it. 🔴 **So "Canvas went quiet in April" is not a
+finding about Instructure's engineering activity at all — it is the date their mirror job stopped
+writing to GitHub.** The correct statement is narrower and more useful to a client:
+**the public GitHub mirror has been frozen since 2026-04-30, so GitHub is no longer a reliable
+activity signal for Canvas — and anyone diffing the mirror to track upstream changes has been
+reading a stale tree for five months.**
+
+🟡 **What this does and does not change.** It does **not** rehabilitate Canvas as an open
+contribution target — a Gerrit-upstream, AGPL-3.0 project with a frozen mirror is *harder* to
+build on, not easier. It **does** mean this KB must stop inferring project health from `pushed_at`
+without first checking whether the repo is a mirror. 🔵 **`gerrit` appeared **zero** times across
+this KB's 1 733 addresses before this pass.**
+
+### The generalised defect: `pushed_at` is not an activity metric
+
+This KB runs a `git-recency-channel` and several freshness sweeps
+(`compose/code/p109-freshness`, `compose/code/git-recency-channel`) that rank repos by `pushed_at`.
+🔴 **Every mirror in that corpus is mis-ranked, in the direction of looking abandoned.** The
+detector is cheap and should be added to those lanes:
+
+```
+flag a recency reading as UNRELIABLE when any of:
+  - "mirror" appears in topics        (canvas-lms: "gerrit-mirror")
+  - two repos in the same org share pushed_at to the second
+  - description/README names an upstream elsewhere (Gerrit, GitLab, SVN, Phabricator)
+then report the mirror's freeze date, not the project's silence.
+```
+
+### Foundational repos re-measured this pass
+
+| repo | licence | ★ | pushed | verdict |
+|---|---|---|---|---|
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | AGPL-3.0 | **6 863** | 2026-04-30 | 🔴 **mirror frozen**, not quiet (above) |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | GPL-3.0 | **1 009** | **2026-10-10** | 🟢 **active yesterday.** Already held by this KB; re-measured only to confirm. The LMS with the deepest LATAM/Spain footprint |
+| [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) | 🔴 **none** | 43 | 2026-08-27 | unchanged, 4th pass |
+| [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) | AGPL-3.0 | **2** | 2026-08-28 | unchanged |
+
+🟡 **One note on `chamilo-lms`, because it is relevant to `P133-B`'s region.** This KB already holds
+Chamilo extensively, and it is **GPL-3.0** with an **AGPL-3.0** Docker image and mobile app — so the
+platform with the strongest LATAM installed base is also, licence-wise, on the copyleft side of the
+boundary `agents/top.md` draws for Moodle. **A LATAM engagement that wants a permissive base does
+not get it from the regional incumbent.**
+
 ## 2026-10-11 — Pass 132
 
 **The repo finding of this pass is a 39 444-star Apache-2.0 project sitting in the slot this KB has

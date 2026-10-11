@@ -6,6 +6,135 @@ updated: 2026-10-11
 
 # Education — trending agents (append-only log)
 
+## 2026-10-11 — Pass 133
+
+**The pass that ran the LATAM probe this KB had pre-registered three times and never executed.**
+`ACTION BE` (`intel/open-gaps.md`) said it plainly: *"Until that is run, 'no LATAM supply' is an
+untested claim about a query, not a finding about a region — and it is the claim this KB repeats
+most often."* 🟢 **Run. It is refuted: 12 new LATAM addresses.** 🔴 **And the LATAM rows do not look
+like the tier p132 described — they are staff-facing, and one is org-owned with a product page.**
+
+| finding | verdict | figure |
+|---|---|---|
+| `P133-A` | 🔴 **THE "QUIETEST MAJOR PLATFORM" CLAIM MEASURES A STOPPED MIRROR, NOT A PROJECT** | `canvas-lms` topics include **`gerrit-mirror`**; `instructure/analytics` shares its `pushed_at` by **1 second** |
+| `P133-B` | 🟢 **`ACTION BE` DISCHARGED — THE LATAM SUPPLY ZERO IS REFUTED** | **12 new rows**, Brazil + Argentina, found under platform proper nouns |
+| `P133-C` | 🔴 **AND LATAM INVERTS `P132-B`'s PORTRAIT OF THE TIER: IT IS STAFF-FACING** | **3 of 12** automate a *teacher's* work; one is **org-owned with a homepage** |
+| `P133-D` | 🟢 **`ACTION BF` DISCHARGED — ANZ IS NO LONGER BLANK, AND IT IS THE BEST-LICENSED CORNER** | `BetterSEQTA-Plus` **MIT, 40★, org-owned, pushed 5 days ago** |
+| `P133-E` | 🔴 **THE VOCABULARY RULE HAS A FAILURE MODE: HOMOGRAPH COLLISION** | `ucampus` → a Chinese homework bot; `seqta` → a genomics tool; disambiguated Chile probe → **0** |
+| `P133-F` | 🟢 **THE PAYLOAD LANE MOVED INSTRUMENT AGAIN, AND ALL THREE `UNREAD` ROWS ARE NOW READ** | contents API **scope-blocked**; `raw.githubusercontent.com` works |
+| `P133-G` | 🔴 **THE ONE ROW p132 COULD NOT READ IS THE MOST RESTRICTIVE IN THE TIER** | `ddl-killer` = **AGPL-3.0**, against `P132-B`'s *"~80% MIT"* |
+
+### 🆕 The LATAM tier — 12 new addresses, under three platform names
+
+🔵 **The probes that worked were `sigaa`, `suap mcp` and `siu-guarani`.** Not *SIS*, not *sistema
+académico*, not *LATAM*. Exactly as `P132-A` predicted: the builders name the repo after the
+national platform. 🔴 **But note what this KB had already partly seen and never placed** — four
+SIGAA rows were sitting in `compose/code/p444-*` payload sweeps as bare addresses with no region
+and no tier. The probe did not only find new rows; it gave the old ones a region.
+
+| repo | licence | ★ | country | platform | who it serves |
+|---|---|---|---|---|---|
+| [`fabrica-de-inovacao/expeditto`](https://github.com/fabrica-de-inovacao/expeditto) | 🟡 **AGPL-3.0** | 1 | **Brazil** (IFMA) | SUAP | 🔴 **teacher** — drafts the RIT workload report |
+| [`Agso-o/sigaa-calendar`](https://github.com/Agso-o/sigaa-calendar) | 🟡 **GPL-3.0** | **20** | **Brazil** | SIGAA | student — deadlines → Google Tasks |
+| [`trindadetiago/sigaa-caiu`](https://github.com/trindadetiago/sigaa-caiu) | **MIT** | 19 | **Brazil** | SIGAA | student |
+| [`juliancasaburi/siu-guarani-promedio-extension`](https://github.com/juliancasaburi/siu-guarani-promedio-extension) | **MIT** | 17 | **Argentina** | SIU-Guaraní | student — grade averages |
+| [`RubsNeto/SigaaUI`](https://github.com/RubsNeto/SigaaUI) | **MIT** | 16 | **Brazil** | SIGAA | student — UI modernisation |
+| [`filipecalegario/auto-sigaa`](https://github.com/filipecalegario/auto-sigaa) | **MIT** | 9 | **Brazil** | SIGAA | 🔴 **teacher** — grade entry from a spreadsheet |
+| [`MatheusMach/QuantoFalta`](https://github.com/MatheusMach/QuantoFalta) | 🔴 **none** | 9 | **Brazil** | SIGAA | student — absence counter; created **2026-10-08** |
+| [`despedite/siu-guarani`](https://github.com/despedite/siu-guarani) | 🟡 **GPL-3.0** | 8 | **Argentina** | SIU-Guaraní | student — seat availability |
+| [`SIU-Toba/docker-guarani`](https://github.com/SIU-Toba/docker-guarani) | 🔴 **none** | 4 | **Argentina** | SIU-Guaraní | 🟢 **the vendor consortium itself** |
+| [`joojdev/academic-tracker-mcp`](https://github.com/joojdev/academic-tracker-mcp) | **MIT** | 0 | **Brazil** | SUAP | student — MCP over own records |
+| [`frjunioalves/suap-mcp`](https://github.com/frjunioalves/suap-mcp) | 🔴 **none** | 0 | **Brazil** | SUAP | student — MCP server |
+| [`eugeborzone/Auto_Grade_Guarani`](https://github.com/eugeborzone/Auto_Grade_Guarani) | 🔴 **none** | 0 | **Argentina** | SIU-Guaraní | 🔴 **teacher** — grade upload |
+
+### `P133-C` — why "students and parents" was a sampling artifact
+
+p132 wrote that the SIS tier's builders *"are not enterprises — they are students and parents"*,
+with **"no procurement story whatsoever."** That was true of the 21 rows it had. 🔴 **It is not true
+of LATAM.** Three of these twelve automate a **teacher's** administrative obligation, not a
+student's convenience:
+
+- **`expeditto`** is the sharpest counterexample: owned by an organisation (*Fábrica de Inovação*),
+  carrying a product homepage, pushed three days ago, and its whole purpose is to prepare a
+  lecturer's **RIT** — the workload report Brazilian federal institutes require. Its tagline is
+  *"seu segundo expediente, resolvido"* (your second shift, solved). 🟡 **AGPL-3.0, so it is a
+  reference design rather than a base to fork into client work.**
+- **`auto-sigaa`** and **`Auto_Grade_Guarani`** both do the same unglamorous thing in two countries:
+  push a spreadsheet of grades into the national SIS so a teacher does not retype them.
+
+🔵 **This is `T9` ("administrative automation is the most-cited driver and the least-served") with
+actual addresses attached, and it is the first time this KB can name who is already doing it.**
+🔴 **And `P132-B`'s two inversions do not survive LATAM either: of these 12 rows only 5 are MIT**
+(42%, against p132's ~80%), with **3 unlicensed, 2 GPL-3.0 and 1 AGPL-3.0** — because the staff-side
+builders in this region reach for copyleft.
+
+### `P133-D` — Australia and New Zealand, after `ACTION BF`
+
+🟢 **Australia has the best-licensed national-platform corner this KB has found.**
+[`BetterSEQTA/BetterSEQTA-Plus`](https://github.com/BetterSEQTA/BetterSEQTA-Plus) — **MIT, 40★,
+pushed 2026-10-06**, an **organisation** (not an individual), 25 forks, a published Chrome Web Store
+extension over **SEQTA Learn**, plus a second product,
+[`BetterSEQTA/DesQTA`](https://github.com/BetterSEQTA/DesQTA) (**MIT, 16★**), porting the same
+interface to native desktop. **This is the only member of the whole portal tier that looks like a
+maintained product line rather than one person's term project.**
+
+🔴 **New Zealand is one row, and it is dead for an instructive reason.**
+[`st22209/Parent-Portal`](https://github.com/st22209/Parent-Portal) — MIT, 2★, **archived**, README:
+*"[DEPRECATED AFTER KAMAR API CHANGE]"*. 🟡 **Write that cause of death down: it is the structural
+risk of this entire tier.** Every row here wraps a vendor endpoint it has no contract for, so a
+vendor-side change does not degrade the integration, it ends it. That is the argument for `P8`
+(sanctioned connector) stated as an observed outcome rather than a worry.
+
+### `P133-E` — the vocabulary rule needs a second clause
+
+`P132-A` established that platform proper nouns reach fields that category terms cannot. 🔴 **Two
+probes this pass failed in the opposite direction: the proper noun was not proper enough.**
+
+| probe | intended target | what came back |
+|---|---|---|
+| `ucampus` | **Chile's U-Campus** (Universidad de Chile) | [`dummerchen/Ucampus`](https://github.com/dummerchen/Ucampus) — GPL-2.0, 34★, a **Chinese** *u校园* homework-answering tool; plus an Indian campus food-ordering app |
+| `ucampus chile universidad` | same | 🔴 **0 results** |
+| `seqta` | **SEQTA** (Australia) | genomics: `novoalab/SeqTagger` (nanopore RNA-seq), `dmis-lab/SeqTagQA` — alongside the real SEQTA rows |
+
+🟢 **So the rule gains a clause:** a platform proper noun is only a usable probe when it is not a
+homograph in another language or field. **Carry a country or vendor qualifier as the control** — and
+when the qualified probe returns zero while the bare one returns noise, the honest report is
+*"no evidence found for this platform"*, not a row count. 🔵 **Chile is recorded that way below.**
+
+### `P133-F` / `P133-G` — the three `UNREAD` rows, and what reading them cost p132's generalisation
+
+🔴 **The instrument changed again.** The GitHub **contents API is scope-blocked in this session** —
+`get_file_contents` returns *"repository is not configured for this session"* for every repo but
+this KB's own. That is an authorisation refusal, **not** a 404 and **not** evidence about the repo,
+and a pass that logged it as "no licence file" would publish a fabricated absence. 🟢 **The working
+lane is `raw.githubusercontent.com/<owner>/<repo>/<branch>/LICENSE` over the web.**
+
+| row | p132 | p133 measured | holder class |
+|---|---|---|---|
+| `edwyj/ddl-killer` | `UNREAD` | 🔴 **AGPL-3.0** | **DOCUMENT-TEXT** — only *"Copyright (C) 2007 Free Software Foundation"*; no program line |
+| `karissafuller/project-nomad-macos` | `UNREAD` | 🟢 **MIT** | **NAMED** — *"Copyright (c) 2026 Karissa Fuller"* |
+| `Tushar-cy/Offline-AI` | `UNREAD` | 🔴 **none** | no payload at `/main/` **or** `/master/` → measured-absent, not unread |
+
+🔵 **The lesson is about sampling, not about one repo.** p132 published *"~80% MIT"* over a tier
+whose single unmeasured row turns out to hold **the most restrictive licence in it**. An unread row
+is not a random draw: the repos that are hard to read are disproportionately the ones doing something
+unusual with their licence. **Measure before you average.**
+
+### What this pass did not resolve
+
+- 🔴 **`mathtutorbench` still has no licence.** Re-measured: the licence key is **absent** from the
+  API payload, 43★, pushed 2026-08-27. Unchanged for a 4th pass, still the highest-leverage
+  upstream fix available to this KB.
+- 🔴 **`blend-ed/openedx-mcp` is still at 2★.** Unchanged. Open edX MCP remains experimental.
+- 🔴 **Chile, Peru, Uruguay, Colombia and Mexico returned nothing usable** — see
+  `intel/market.md` → LATAM for each probe and its result. SIAGIE (Peru) and Q-Acadêmico (Brazil)
+  both have real installed bases and **no agent layer at all**.
+- 🟡 **`SIU-Toba/docker-guarani` has no licence and has been dormant since 2017** — the one vendor
+  org in the tier, and not currently a usable counterparty.
+
+Evidence for every row measured this pass: `evidence/verified-repos.2026-10-11-p133.tsv`
+(instrument recorded per row — `search` or `payload` — plus two named homograph controls).
+
 ## 2026-10-11 — Pass 132
 
 **The pass where this KB's largest declared gap turned out to be a vocabulary problem.** p131 told
