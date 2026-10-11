@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Pass 123 — 2026-10-11 (tenth pass of this date), 08:4x–09:4x UTC
+
+🔵 **APPEND-ONLY page. This section is added above p122's and nothing below it is edited** —
+including rows this pass found stale. Stale tokens in the history are listed here, not rewritten.
+
+🟢 **Instrument: `compose/code/p123-grant-set-calibration/` — `ACTION W, X, Y, Z` discharged,
+`ACTION V` implemented. `test_p123.sh` **35 passed / 0 failed**, fully offline.**
+
+### 🔴 The week's honest headline: zero new agents, and the reason is worth more than a row
+
+🔴 **The mandated sweep returned NO new agent addresses. Every repository surfaced was already
+held on these shelves.** That is the second consecutive pass with a zero on the supply side, and
+p122 proved why the generic phrasing cannot do better: it returns courses **about** AI, not agents
+that **deliver** education. 🔵 **At 123 passes the open-source education-agent layer is thin and
+this KB has already enumerated it; a sweep is now a CONFIRMATION instrument.**
+
+🟢 **What the sweep DID return is a calibration of the open web, which is worth recording:**
+
+| returned as a "top open source AI agent for education" | stars | licence | commits | verdict |
+|---|---|---|---|---|
+| [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | 15 | 🟢 MIT | 🔴 **4** | 🔴 **a demo.** Not promoted |
+| [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | 15 | 🟢 MIT | 32 | 🟡 **architecturally the most interesting thing measured this pass** — the MCP↔xAPI wire. Used in `P123-P1` **with an explicit own-it-yourself risk note** |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | **139** | 🟢 MIT | 191 | 🟢 held; local-first adaptive workspace, 10+ providers |
+| `microsoft/ai-agents-for-beginners` | ~67 000 | — | — | 🔴 **a COURSE about agents, not an agent.** `Gap 402`'s query defect, demonstrated again |
+
+### 🟢 `P123-D` — a channel this KB recorded as closed is open, and star figures are measurable again
+
+🔴 **`api.github.com` and `github.com` HTML are still 403 to `curl` through the session proxy** —
+that part of p122's record stands. 🟢 **But the `WebFetch` channel returns the rendered repository
+page**, which restores stars, commit counts and the **archived** banner to a KB that had been
+inferring them.
+
+🟢 **The first cross-channel agreement is encouraging:**
+[`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) reads **816★** — p122 published 816★.
+🔵 **Unlike the sibling technology KB, whose star figures p122 found pipeline-inflated, this KB's
+Artemis figure was sound.**
+
+| address | stars | licence | commits | note |
+|---|---|---|---|---|
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | **816** | 🟢 MIT | 12 316 | default branch 🔴 **`develop`** |
+| [`UCL-INGI/INGInious`](https://github.com/UCL-INGI/INGInious) | 243 | 🔴 AGPL-3.0 | 3 323 | the rendered page omits the token; the tree gives it |
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 144 | 🟢 Apache-2.0 | 2 269 | |
+| [`opetushallitus/koski`](https://github.com/opetushallitus/koski) | 23 | 🟢 EUPL-1.1-or-later | **22 212** | 🔵 **23 stars, 22 212 commits — a national system of record. Stars measure attention, not production use** |
+| [`skolverket/dnp-ss12000-reference-api`](https://github.com/skolverket/dnp-ss12000-reference-api) | 5 | 🟢 Apache-2.0 | 35 | the STANDARD is the asset |
+| [`KI-Campus/LRS`](https://github.com/KI-Campus/LRS) | 3 | 🟢 MIT | 212 | 🔴 **ARCHIVED 2026-02-20** |
+
+### 🟢 New demand-side intelligence: Singapore MOE's "Four Learns"
+
+🟢 **`Gap 402` lead #2 — "name the ministries directly" — discharged, and it returned a framework
+this KB did not hold.** Singapore MOE's **"Four Learns"**: Learn About AI · Learn to Use AI ·
+Learn With AI · Learn Beyond AI. A **common AI competency foundation for all institute-of-higher-
+learning students from 2027**, delivered via **two** baseline frameworks (autonomous universities;
+polytechnics + ITE). Minister **Desmond Lee**, NUS120 series; combined parliamentary reply
+**2026-05-06**. 🟡 **Two independent secondary channels; no MOE primary text — the proxy resolves
+`github.com` but not these hosts.**
+
+### 🔴 Reproduced open-web defects, recorded so they are not re-served
+
+| claim | this KB holds | verdict |
+|---|---|---|
+| China's floor is *"at least **six** hours yearly"* | 🟢 **≥ 8 h/year**, Sep 2025, from age six | 🔴 **wrong.** A second channel returned 8 h and flagged it single-sourced |
+| EU AI Act Annex III education high-risk applies **2026-08-02** | 🟢 **`2027-12-02`** (`Reg. (EU) 2026/1744`); Annex I → `2028-08-02`; **Art. 50 unmoved, live since `2026-08-02`** | 🔴 **fourth reproduction.** Correction holds |
+
 ## 🟢 Pass 122 — 2026-10-11 (ninth pass of this date), 07:3x–08:4x UTC
 
 🔵 **APPEND-ONLY page. This section is added above p121's and nothing below it is edited.**

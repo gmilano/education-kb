@@ -6,6 +6,81 @@ updated: 2026-10-11
 
 # Education — compose patterns
 
+**Pass 123, 2026-10-11.** ⏱️ **Tenth pass of this date** (window **08:4x → 09:4x UTC**).
+
+🟢 **Instrument: `compose/code/p123-grant-set-calibration/`, discharging `ACTION W, X, Y, Z` and
+implementing `ACTION V`. `test_p123.sh` **35 passed / 0 failed**, fully offline.**
+
+🟢 **This page carried 0 live licence defects this pass**, and its 1 repaired row now carries the
+`<!--corrected-->` marker.
+
+## 🟢 🆕 `P123-P1` — attainment-aware tutoring over a verifiable learning record
+
+🟢 **Every component is MIT or Apache-2.0, verified from the live tree this pass on its REAL
+default branch. The licence closure is permissive end to end, so a closed client derivative is
+available.**
+
+| # | component | address | licence (tree-verified) | branch | role |
+|---|---|---|---|---|---|
+| 1 | learning-record store | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** | `main` | xAPI-conformant LRS, SQLite or Postgres, containerised. **144★ / 2 269 commits** |
+| 2 | agent ↔ record wire | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | 🟢 **MIT** | `main` | MCP server letting an agent **write and read** xAPI statements. 🔴 **15★ / 32 commits — see the risk note** |
+| 3 | statement routing | [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) | 🟢 **Apache-2.0** | `main` | forwards statements between stores, governed by xAPI Profiles |
+| 4 | automated feedback | [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 **MIT** | 🔴 **`develop`** | TU Munich's interactive learning with automated feedback. **816★ / 12 316 commits** |
+| 5 | learner-facing tutor | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** | `main` | block-based adaptive workspace that **runs locally**, 10+ LLM providers. 139★ |
+| 6 | SIS interop (EMEA) | [`skolverket/dnp-ss12000-reference-api`](https://github.com/skolverket/dnp-ss12000-reference-api) | 🟢 **Apache-2.0** | `main` | Sweden's national agency's **SS 12000** reference — the standard is the asset |
+
+### How it wires together
+
+```
+  learner ──▶ [5] OpenTutor ───────────────┐   (local-first; no learner text leaves the estate
+                 │  block-based UI          │    unless the provider is remote — the privacy
+                 │                          │    posture EMEA and LATAM engagements ask for)
+                 ▼                          │
+            [2] learnmcp-xapi  ◀────────────┘
+             (MCP tools: record_activity / get_activities)
+                 │  xAPI statements
+                 ▼
+            [1] lrsql  ──────[3] xapipe──▶  institutional LRS / warehouse
+             (system of record)                    │
+                 ▲                                 ▼
+                 │                        [6] SS 12000 API  ◀──▶ national/municipal SIS
+            [4] Artemis
+             (exercise + automated feedback events)
+```
+
+🟢 **The composition's point: the tutor's agent does not hold the learner model in a prompt — it
+reads and writes it as xAPI statements in a store the institution owns.** That is what makes the
+tutoring *attainment-aware* across sessions, and it is also what makes the system auditable,
+which is the part a 2027 EU conformity file needs.
+
+### 🔴 The risk that must be priced, stated before the benefit
+
+🔴 **Component 2 is 32 commits and 15 stars.** It is the only permissive MCP↔xAPI bridge measured
+on these shelves, and it is the thinnest link in the chain. 🟢 **Mitigation, and it is cheap:
+the surface is two verbs over a documented standard.** Budget to OWN that component — vendor it
+and treat it as project code, or reimplement it against the xAPI statement API directly. 🔵 **Do
+not plan a client delivery whose critical path depends on a 32-commit upstream staying
+maintained; the MIT grant means you may fork it, which is the whole reason it is in this pattern
+rather than an AGPL alternative.**
+
+### 🟡 What NOT to substitute in, and why
+
+| rejected | licence | why |
+|---|---|---|
+| [`UCL-INGI/INGInious`](https://github.com/UCL-INGI/INGInious) | 🔴 **AGPL-3.0** | 243★ and genuinely good at secure autograding, but network copyleft: a hosted derivative must publish. Integrate over its API, do not embed |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | 🔴 **AGPL-3.0** (`dev`) | same reason |
+| [`KI-Campus/LRS`](https://github.com/KI-Campus/LRS) | 🟢 MIT | 🔴 **archived 2026-02-20, read-only.** The grant is fine; the project is not maintained |
+| [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | 🟢 MIT | 🔴 **4 commits.** Returned by a search engine as a "top open source AI agent for education" |
+| `yetanalytics/lrspipe` | — | 🔴 **does not exist.** LRSPipe is the PRODUCT name; the repository is `yetanalytics/xapipe`, which is component 3 |
+
+### Estimate
+
+🟡 **8–10 weeks** to a production pilot for one institution: 2 weeks to stand up [1] + [3] and
+model the statements, 2 weeks to own and harden [2], 2–3 weeks to wire [5] and the provider
+routing, 2–3 weeks for [4]'s feedback events and the SS 12000 mapping where the engagement is
+EMEA. 🔵 **The licence closure is the part that does NOT consume time here, which is the argument
+for choosing these six over a faster-looking AGPL stack.**
+
 **Pass 122, 2026-10-11.** ⏱️ **Ninth pass of this date** (window **07:3x → 08:4x UTC**).
 
 🟢 **Instrument: `compose/code/p122-prose-licence-census/`, discharging `ACTION R, S, T, U`.
@@ -57,7 +132,7 @@ compatible with the GPL family: read from it, do not vendor it.
 | `skolverket/dnp-ss12000-reference-api` | 🟢 **Apache-2.0** | 🟢 yes |
 | `FWU-DE/fwu-kc-extensions` | 🟢 **Apache-2.0** | 🟢 yes |
 | `SafeExamBrowser/seb-server` | 🟡 **MPL-2.0** | 🟡 per-file copyleft — new files stay yours |
-| `opetushallitus/koski` | 🟡 **EUPL** | 🔴 no — integrate, do not embed |
+| `opetushallitus/koski` | 🟡 **EUPL-1.1-or-later** <!--p123--> | 🔴 no — integrate, do not embed |
 | `FWU-DE/ais-chat` | 🔴 **AGPL-3.0** | 🔴 **no** — deploy unmodified, or publish source |
 
 ## 🟢 🆕 `P122-P2` — LATAM long tail: the WordPress plugin layer, not Moodle
@@ -939,7 +1014,7 @@ has no room for supply-chain work.**
 | [`moodle/moodle`](https://github.com/moodle/moodle) | LMS of record | 🟡 GPL-3 | 🟢 **0 / 63 orphaned** |
 | [`temporalio/temporal`](https://github.com/temporalio/temporal) | durable orchestration for agent workflows | 🟢 MIT | 🟢 **0 / 2** |
 | [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | assessment engine | 🟡 AGPL-3 | 🟢 **0 / 58** |
-| [`leemonade/leemons`](https://github.com/leemonade/leemons) | modular platform shell | 🔴 **"Fair Code License" v1.0 — NOT OSI; €100k + 5 % royalty above 1 000 users** ⚠️ **was 🟢 Apache-2.0** — 🔴 **do not put this in a client build** | 🟢 **0 / 114** |
+| [`leemonade/leemons`](https://github.com/leemonade/leemons) | modular platform shell | 🔴 **"Fair Code License" v1.0 — NOT OSI; €100k + 5 % royalty above 1 000 users** ⚠️ **was 🟢 Apache-2.0**<!--corrected--> — 🔴 **do not put this in a client build** | 🟢 **0 / 114** |
 | [`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) | LLM evaluation harness | 🟢 Apache-2.0 | 🟢 **0 / 2** |
 
 🔵 **Wiring:** Moodle as the system of record; Temporal workflows drive each

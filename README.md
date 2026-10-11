@@ -4,6 +4,129 @@ region: Global
 updated: 2026-10-11
 ---
 
+## Pass 123 — 2026-10-11
+
+⏱️ **Tenth pass of this date** (census window **08:4x → 09:4x UTC**).
+
+🟢 **Fourteenth axis in fourteen passes: all four actions p122 pre-registered (`W`, `X`, `Y`, `Z`)
+discharged, and the carried `ACTION V` IMPLEMENTED rather than measured again.**
+
+🟢 **Instrument: `compose/code/p123-grant-set-calibration/` — `test_p123.sh` **35 passed / 0
+failed**, fully offline, over 14 fixtures.**
+
+| action | verdict | figure |
+|---|---|---|
+| `ACTION W` | 🟢 **NOT REFUTED** | the one-token model's false-positive rate is **68 %** (17 / 25 gold-correct rows) |
+| `ACTION X` | 🔴 **REFUTED** | **2 survived** of 41 read by hand; the clause required 5 |
+| `ACTION Y` | 🟢 **NOT REFUTED** | **18** genuinely absent — 🔴 but 20 of the 38 raw "absent" are not addresses at all |
+| `ACTION Z` | 🟢 **NOT REFUTED** | **17** addresses carry more than one grant file |
+| `ACTION V` | 🟢 **IMPLEMENTED** | **51 rows** marked across 6 files, idempotent — 🔴 p122's "57 rows, 1 marker" was 57 lines and **0** markers |
+
+🔴 **`P123-H` — the pass's main finding, stated first because it bounds this whole family of
+instruments.** p123 fixed all three causes p122 diagnosed: the grant became a SET (`ACTION Z`),
+attribution became ROW-scoped inside tables, and the correction guard became an exact marker
+(`ACTION V`). The candidate count fell **576 → 359**, the high-consequence subset **72 → 41**.
+🔴 **And the false-positive rate did not move: 39 of 41 are false, 95.1 %, against p122's 95 %.**
+🟢 **The reason is worth more than the instrument: the residual false positives are not errors in
+this KB — they are its correction apparatus working as designed.** Its audit tables put the OLD
+and the NEW licence in adjacent columns (`| repo | 🟢 MIT | 🔴 AGPL-3.0 |`), so a correction
+record and a claim are *the same bytes*, and only the column tells them apart. 🟢 **`ACTION AB`
+follows: the marker must cover all THREE correction forms, not the one form `ACTION V` covered.**
+
+🔴 **`P123-A` — the two real defects, and both are on the page that announces the repair.**
+[`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud)
+(1 173★) is **GPL-2.0**, default branch `v2`. p121 repaired it and called it *"the largest-star
+licence defect of the pass"* — at `intel/market.md:5500`. Two cells on **that same page** were
+never repaired: line 1761 (*"MIT, fresh 1 d"*) and line 5585, which read 🔴 ***"MIT, 1 173★ —
+the only permissive full MOOC platform on the shelf"***. 🔴 **The stale token there carries a
+load-bearing conclusion: a studio reading it picks GPL-2.0 code believing it is the one permissive
+option.** 🟢 **Both repaired with the marker.** 🔵 **The lesson is where a repair stops: p121 fixed
+the row it found the defect in, and the prose CITING that row kept the old value. A repair has to
+be a search, not an edit — `ACTION AC`.**
+
+🔴 **`P123-B` — p123's instrument carries the exact defect p123 was built to remove.**
+[`Elgg/Elgg`](https://github.com/Elgg/Elgg) (1 677★) serves one `LICENSE.txt` on default branch
+`7.x` reading *"Bundled plugins (the contents of `/mod`) are available only under the GPLv2
+license. The remainder of the project is…"*. No `SPLIT_MARKER` matches that sentence, so the
+classifier reduced it to `MIT` and then flagged this KB's three Elgg rows — which already say
+*"🟡 GPL-2.0 + MIT (bundled plugins MIT)"* — as defects. 🔴 **p122's structural finding reproduced
+inside p123's own code: the page was more precise than the census auditing it.** 🟢 **`ACTION AA`.**
+
+🟢 **`ACTION Y` — a non-existence count that was 68 % noise.** 1 365 folded addresses, **1 327
+EXISTS / 38 ABSENT**, every ABSENT confirmed on three independent probes with zero flips. 🔴 **But
+14 of the 38 are URL-path artefacts** (`topics/ai-tutor`, `trending/python`, `search/repositories`,
+`orgs/opetushallitus` — the extraction regex reading `github.com/topics/…` as an owner/repo) **and
+6 are this KB's own negative controls**, leaving **18 genuinely absent**. 🟢 **Of those 18, exactly
+one appears on a live content page, and it is already recorded as "does not resolve"** — so the
+live pages carry **zero** false existence claims, the opposite of what 38 would suggest.
+`yetanalytics/lrspipe`, `imsglobal/caliper-python` and `1edtech/caliper-{java,js,php}` are
+`P122-G`'s product-name class recurring.
+
+🔴 **The branch was the larger blind spot: 84 addresses default to neither `main` nor `master`,
+and 77 of them hold a grant no `main`/`master` probe could reach.** The non-standard defaults are
+release lines — `openeducat/openeducat_erp` `19.0` (LGPL-3.0), `claroline/claroline` `15.0`
+(AGPL-3.0), `portabilis/i-educar` `2.12` (GPL-2.0), `Elgg/Elgg` `7.x`, `ls1intum/Artemis`
+`develop` (MIT) — the convention of exactly the platforms this KB exists to place.
+
+🟢 **`ACTION Z` — 17 addresses, in five legal conventions, not a noise tail.** R/CRAN stub +
+`DESCRIPTION` (7); dual **MIT OR Apache-2.0** where the *licensee chooses*
+([`contentauth/c2pa-rs`](https://github.com/contentauth/c2pa-rs), `c2pa-python`); code/docs split
+(3, incl. [`microsoft/autogen`](https://github.com/microsoft/autogen)); code/**data** split
+([`haolpku/K12-KGraph`](https://github.com/haolpku/K12-KGraph) — 🔴 `CC-BY-NC-SA` data, and in an
+education KB the data IS the asset); and `COPYING` + `COPYING.LESSER`, where the LGPL file is the
+operative grant. 🟢 **20 grants sit on paths p122 never requested** — `DESCRIPTION` ×13,
+`LICENSE-CODE` ×2, `LICENSE-DOCS` ×2, `LICENSE-APACHE` ×2, `COPYING.LESSER` ×1.
+
+🟢 **`P123-D` — a channel this KB recorded as closed is open.** `api.github.com` and `github.com`
+HTML are still 403 to `curl`, but **`WebFetch` returns the rendered repository page**, restoring
+stars, commit counts and the archived banner. [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis)
+**816★ MIT, 12 316 commits — agreeing with p122's figure exactly**;
+[`UCL-INGI/INGInious`](https://github.com/UCL-INGI/INGInious) 243★ AGPL-3.0;
+[`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) 144★ Apache-2.0;
+[`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) 139★ MIT;
+[`opetushallitus/koski`](https://github.com/opetushallitus/koski) 23★ but **22 212 commits**;
+[`KI-Campus/LRS`](https://github.com/KI-Campus/LRS) 🔴 **archived 2026-02-20**. 🔵 **Two rows a
+search engine returned as "top open source AI agents for education" have 15★ and — in
+[`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent)'s case — 🔴 four commits; recorded
+as measured-and-rejected rather than published.**
+
+🟢 **`P123-E` — Finland's national stack is split across TWO EUPL versions.** The new
+by-reference tier reads `koski`'s 654-byte grant as **EUPL-1.1-or-later** (p122 got `UNKNOWN`;
+this KB said bare *"EUPL"*) and places **9** addresses: 6 at **EUPL-1.1-or-later**, 2 at
+**EUPL-1.2-or-later** (`ataru`, `suorituspalvelu`), 1 at **EUPL-1.2** — a distinction one `EUPL`
+token cannot carry.
+
+🟢 **Research sweep: the mandated queries returned 0 new supply-side addresses and 1 new
+demand-side placement.** Every repository the global and regional queries surfaced was already
+held. 🟢 **The one genuine addition is APAC and it came from `Gap 402`'s lead #2 — "name the
+ministries directly":** Singapore MOE's **"Four Learns"** model (Learn About / to Use / With /
+Beyond AI) and a **common AI competency foundation for all IHL students from 2027**, delivered
+through two baseline frameworks (autonomous universities; polytechnics + ITE), announced by
+Education Minister Desmond Lee and set out in a combined parliamentary reply **2026-05-06**.
+🔴 **And one reproduced open-web defect: a search summary gave China's floor as "six hours yearly"
+against this KB's held ≥ 8 h; a second channel returned 8 h and flagged the figure as
+single-sourced. This KB's value stands and the 6 h variant is recorded as wrong.** 🔵 **The EMEA
+queries re-served the superseded `2026-08-02` Annex III date for the fourth time; this KB's
+`Reg. (EU) 2026/1744` → `2027-12-02` correction holds.**
+
+### Pre-registered for p124
+
+🟢 **`ACTION AA`** — detect a split grant by its SHAPE (a path-scoping noun phrase followed by two
+licence tokens), not by adding a phrase to a marker list. 🔴 *Refuted if fewer than 3 addresses
+change verdict.*
+🟢 **`ACTION AB`** — extend the `ACTION V` marker to the other TWO correction forms: the
+audit-table OLD column and unmarked prose *"was X"*. 🔴 *Refuted if fewer than 15 rows need it.*
+🟢 **`ACTION AC`** — a repair must be a SEARCH: after repairing an address, assert no page carries
+its old token outside a marked span. 🔴 *Refuted if the assertion passes on all 51 already-repaired
+rows.*
+🟢 **`ACTION AD`** — resolve the `CC` bucket (41 rows) to a version, since `CC-BY` and
+`CC-BY-NC-SA` differ commercially and this census cannot tell them apart. 🔴 *Refuted if fewer
+than 10 resolve.*
+🟢 **`ACTION AE`** — build a gold set that CONTAINS branch disagreements, so `MAIN-ONLY` can be
+scored honestly instead of reading 0 % on a set that cannot see it. 🔴 *Refuted if fewer than 5
+gold rows sit on a non-`main`/`master` default.*
+🔴 **`ACTION X`** — **CLOSED as refuted**; not to be re-listed.
+
 ## Pass 122 — 2026-10-11
 
 ⏱️ **Ninth pass of this date** (census window **07:3x → 08:4x UTC**).

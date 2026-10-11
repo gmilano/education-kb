@@ -6,6 +6,32 @@ updated: 2026-10-11
 
 # Education — AI agents shelf
 
+**Pass 123, 2026-10-11.** ⏱️ **Tenth pass of this date** (census window **08:4x → 09:4x UTC**).
+
+🟢 **Instrument: `compose/code/p123-grant-set-calibration/` — `ACTION W`, `X`, `Y`, `Z` discharged
+and the carried `ACTION V` IMPLEMENTED. `test_p123.sh` **35 passed / 0 failed**, fully offline.**
+
+🟢 **This page carried 0 live licence defects this pass.** Its **14** repaired rows now carry the
+machine-readable `<!--corrected-->` marker (`ACTION V`), so the census no longer has to recognise
+a correction by its wording.
+
+🔴 **What this page's audit tables cost the census, stated because it is this pass's main result:**
+every one of the highest-consequence candidates raised against this page was a BEFORE/AFTER row —
+`| [`fwu-de/ais-chat`](…) | 🟢 MIT | 🔴 **AGPL-3.0** | network-use copyleft |` — where the
+permissive token is the OLD value in its own column, recorded on purpose. 🟢 **The rows are
+correct and stay as they are; the instrument is what needed fixing.** 🔵 **`ACTION AB` extends the
+marker to the OLD-column form, which `ACTION V` did not cover.**
+
+🟢 **Two agents were measured this pass and deliberately NOT promoted onto this shelf.** A search
+engine returned both as *"top open source AI agents for education"*:
+
+| address | stars | licence | commits | verdict |
+|---|---|---|---|---|
+| [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | 15 | 🟢 MIT | 32 | 🟡 **architecturally interesting, not yet a foundation** — it is the MCP↔xAPI wire, see `compose/patterns.md` |
+| [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | 15 | 🟢 MIT | 🔴 **4** | 🔴 **rejected — four commits is a demo** |
+
+🔵 **Recorded rather than published: a shelf is only useful if the bar for joining it is visible.**
+
 **Pass 122, 2026-10-11.** ⏱️ **Ninth pass of this date** (census window **07:3x → 08:4x UTC**).
 
 🟢 **Instrument: `compose/code/p122-prose-licence-census/` — `ACTION R`, `S`, `T`, `U` discharged,
@@ -125,7 +151,7 @@ be written.** The first run of `ACTION P` flagged 10 rows. Reading all 10 before
 them — `P120-E`'s lesson — showed **6 were already correct**:
 
 ```
-| [`lovejzzz/CourseMapper`](…) | 🔴 **NO GRANT — no licence file** ⚠️ **was 🟢 MIT** | …
+| [`lovejzzz/CourseMapper`](…) | 🔴 **NO GRANT — no licence file** ⚠️ **was 🟢 MIT**<!--corrected--> | …
 ```
 
 🔴 **That row carries the right verdict AND quotes the superseded token, in the same cell, under an
@@ -149,7 +175,7 @@ copyleft; what is permissive is the grading, assessment and tooling layer.
 | [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | 67k | 🟢 MIT | North America | 12-lesson agent course; the teaching artefact, not a tutor |
 | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 30k | 🟢 Apache-2.0 | EMEA (FR) | minimal agent loop; the substrate most of this shelf builds on |
 | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 1.5k | 🟢 MIT | North America (UC Berkeley) | Bayesian Knowledge Tracing ITS |
-| [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) | 453 | 🟢 **Apache-2.0** ⚠️ **was 🟢 MIT** | APAC (CN) | skill-lineage tutor — **repaired this pass**, `main/LICENSE` 11 358 B |
+| [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) | 453 | 🟢 **Apache-2.0** ⚠️ **was 🟢 MIT**<!--corrected--> | APAC (CN) | skill-lineage tutor — **repaired this pass**, `main/LICENSE` 11 358 B |
 | [`rstudio/ggcheck`](https://github.com/rstudio/ggcheck) | — | 🟢 MIT | North America | inspects student `ggplot` code — grading layer |
 | [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) | — | 🟢 BSD-3 | North America | R autograding |
 
@@ -307,10 +333,10 @@ cells are repaired in this commit.
 | [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | **931** | 931 | 🔴 GPL-3.0 | 🟡 live, but see p118 |
 | [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | **825** | 🔴 772 | 🟢 MIT | 🟢 live — **repaired, the tail carried 772** |
 | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | **512** | 511 | 🟢 MIT | 🟢 live |
-| [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) | **453** | — | 🟢 **Apache-2.0** ⚠️ **was 🟢 MIT** | 🟢 live |
+| [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) | **453** | — | 🟢 **Apache-2.0** ⚠️ **was 🟢 MIT**<!--corrected--> | 🟢 live |
 | [`satvik314/educhain`](https://github.com/satvik314/educhain) | **389** | 389 | 🟢 MIT | 🟡 live, pushed 2026-05-29 |
-| [`artcc/freelingo`](https://github.com/artcc/freelingo) | **165** | 164 | 🔴 **AGPL-3.0** ⚠️ **was 🟢 MIT** | 🟢 live |
-| [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | **25** | 25 | 🔴 **AGPL-3.0** ⚠️ **was 🟢 Apache-2.0** — network copyleft | 🟢 live (EMEA, DE) |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | **165** | 164 | 🔴 **AGPL-3.0** ⚠️ **was 🟢 MIT**<!--corrected--> | 🟢 live |
+| [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | **25** | 25 | 🔴 **AGPL-3.0** ⚠️ **was 🟢 Apache-2.0**<!--corrected--> — network copyleft | 🟢 live (EMEA, DE) |
 | [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🔴 **1** | `—` | 🟢 MIT | 🔴 **`fork:true` — see `P119-B`** |
 
 🔵 **Fourteen real agents with a measured star count and a licence read from the tree.** The
@@ -370,15 +396,15 @@ is not decoration: 37 of the 249 addresses in this KB default to neither `main` 
 | [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | 76 867 | 🟢 MIT | `main` | course, not a runtime — a teaching corpus Globant can fork for enablement |
 | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 29 775 | 🟢 Apache-2.0 | `main` | minimal agent loop; the cheapest permissive base to build a tutor on |
 | [`agent0ai/agent-zero`](https://github.com/agent0ai/agent-zero) | 19 420 | 🟢 MIT | `main` | general agent framework, used here as a tutoring harness |
-| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | **931** | 🔴 **GPL-3.0** ⚠️ **was MIT** | `main` | theory-of-mind tutor. 🔴 **Roundups still list it as permissive; the tree says GPL-3.0 and a distributed derivative inherits it.** |
-| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🔴 **1** (`fork:true`) | 🟢 **MIT** ⚠️ **was BSD-3** | `main` | MIT Open Learning's tutor. 🔴 **`P119-B`: a FORK with 1★, not an original — and the `—` in this column was never the 403, it was fork-exclusion from the search channel** |
+| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | **931** | 🔴 **GPL-3.0** ⚠️ **was MIT**<!--corrected--> | `main` | theory-of-mind tutor. 🔴 **Roundups still list it as permissive; the tree says GPL-3.0 and a distributed derivative inherits it.** |
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🔴 **1** (`fork:true`) | 🟢 **MIT** ⚠️ **was BSD-3**<!--corrected--> | `main` | MIT Open Learning's tutor. 🔴 **`P119-B`: a FORK with 1★, not an original — and the `—` in this column was never the 403, it was fork-exclusion from the search channel** |
 | [`satvik314/educhain`](https://github.com/satvik314/educhain) | **389** | 🟢 MIT | `main` | educational content generation. 🔵 Published as "~12k" before p117 measured it |
-| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | — | 🟢 **MIT** ⚠️ **was Apache-2.0** | `main` | EMEA (PL) mentoring LMS |
-| [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | — | 🟢 **MIT** ⚠️ **was Apache-2.0** | `main` | EMEA; adaptive KG over `ollama` + `sentence-transformers` |
-| [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | **25** | 🔴 **AGPL-3.0** ⚠️ **was MIT** | `main` | EMEA (DE), state-funded school chatbot. 🔴 Network copyleft: a hosted derivative must publish. 🔵 Canonical spelling is `FWU-DE`, not `fwu-de` |
-| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 164 | 🔴 **AGPL-3.0** ⚠️ **was MIT** | `main` | EMEA (ES) language tutor, fully local |
-| [`OtterDen-Lab/Autograder`](https://github.com/OtterDen-Lab/Autograder) | — | 🔴 **GPL-3.0** ⚠️ **was MIT** | `main` | North America; distribution copyleft |
-| [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | — | 🔴 **GPL-3.0** ⚠️ **was MIT** | `main` | EMEA; distribution copyleft |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | — | 🟢 **MIT** ⚠️ **was Apache-2.0**<!--corrected--> | `main` | EMEA (PL) mentoring LMS |
+| [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | — | 🟢 **MIT** ⚠️ **was Apache-2.0**<!--corrected--> | `main` | EMEA; adaptive KG over `ollama` + `sentence-transformers` |
+| [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | **25** | 🔴 **AGPL-3.0** ⚠️ **was MIT**<!--corrected--> | `main` | EMEA (DE), state-funded school chatbot. 🔴 Network copyleft: a hosted derivative must publish. 🔵 Canonical spelling is `FWU-DE`, not `fwu-de` |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 164 | 🔴 **AGPL-3.0** ⚠️ **was MIT**<!--corrected--> | `main` | EMEA (ES) language tutor, fully local |
+| [`OtterDen-Lab/Autograder`](https://github.com/OtterDen-Lab/Autograder) | — | 🔴 **GPL-3.0** ⚠️ **was MIT**<!--corrected--> | `main` | North America; distribution copyleft |
+| [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | — | 🔴 **GPL-3.0** ⚠️ **was MIT**<!--corrected--> | `main` | EMEA; distribution copyleft |
 
 🔴 **Eight of these thirteen were published under the wrong licence before this pass. Five of the
 eight were published as MIT and are copyleft** — the error runs in the direction that costs a
@@ -694,7 +720,7 @@ Of the 64 decidable rows, these are the agent-shaped ones — every figure below
 |---|---|---|---|
 | [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 GPL-3.0 | 🟢 **`agree`** | **86 / 86** (pnpm) |
 | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 MIT | 🟢 **`agree`** | **54 / 54** |
-| [`lovejzzz/CourseMapper`](https://github.com/lovejzzz/CourseMapper) | 🔴 **NO GRANT — no licence file on the default branch** ⚠️ **was 🟢 MIT** | 🟢 **`agree`** | **57 / 57** |
+| [`lovejzzz/CourseMapper`](https://github.com/lovejzzz/CourseMapper) | 🔴 **NO GRANT — no licence file on the default branch** ⚠️ **was 🟢 MIT**<!--corrected--> | 🟢 **`agree`** | **57 / 57** |
 | [`aiverify-foundation/moonshot-ui`](https://github.com/aiverify-foundation/moonshot-ui) | 🟢 Apache-2.0 | 🟢 **`agree`** | **42 / 42** |
 | [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | 🟢 AGPL-3 | 🟢 **`agree`** | **32 / 32** (pnpm, aliased — see `P116-Q`) |
 | [`thu-maic/dsh-openmaic`](https://github.com/thu-maic/dsh-openmaic) | 🟢 MIT | 🟢 **`agree`** | **7 / 7** — 🔴 **the one row the positive control moves** |

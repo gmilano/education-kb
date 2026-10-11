@@ -6,6 +6,51 @@ updated: 2026-10-11
 
 # Education — current trends
 
+**Pass 123, 2026-10-11.** ⏱️ **Tenth pass of this date** (window **08:4x → 09:4x UTC**).
+
+🟢 **Instrument: `compose/code/p123-grant-set-calibration/`. `test_p123.sh` **35 passed / 0
+failed**, fully offline. This page carried **0** live defects this pass.**
+
+### 🟢 🆕 p123 — what the mandated sweep returned, and what it did not
+
+🔴 **Supply side: ZERO new addresses.** Every repository the global and per-region queries
+surfaced was already held on these shelves — including the ones the summaries presented as
+discoveries. 🔵 **At 123 passes the supply side of open-source education AI is saturated for these
+query shapes, and the honest report is that a sweep can now be a CONFIRMATION instrument rather
+than a discovery one.**
+
+🟢 **Demand side: one genuine new placement, and it came from doing what p122 pre-registered.**
+`Gap 402`'s lead #2 said the next attempt must **name the ministries directly** instead of
+re-running the generic phrasing. Naming Singapore's MOE returned a framework this KB did not hold:
+
+| 🇸🇬 Singapore MOE | state |
+|---|---|
+| named model | 🟢 **"Four Learns"** — Learn About AI · Learn to Use AI · Learn With AI · Learn Beyond AI |
+| higher education | 🟢 **a common AI competency foundation for ALL students in institutes of higher learning, from 2027** |
+| instruments | 🟢 **two baseline frameworks** — one for autonomous universities, one for polytechnics + ITE |
+| provenance | Education Minister **Desmond Lee**, NUS120 Distinguished Speaker Series; combined parliamentary reply **2026-05-06** |
+| evidence tier | 🟡 **two independent secondary channels; no MOE primary text read** (the proxy resolves `github.com` but not these hosts) |
+
+### 🔴 🆕 Two open-web defects reproduced this pass
+
+| claim returned | this KB's held value | verdict |
+|---|---|---|
+| China's instructional floor is *"at least **six** hours yearly"* | 🟢 **≥ 8 h/year**, from **Sep 2025**, MoE tiered curriculum from age six | 🔴 **the 6 h variant is WRONG.** A second channel returned 8 h and flagged the figure as single-sourced. 🟢 This KB's value stands |
+| the EU AI Act's Annex III high-risk duties for education apply from **2026-08-02** | 🟢 **`2027-12-02`** — `Reg. (EU) 2026/1744`, CELEX `32026R1744`, Council final approval `2026-06-29`; Annex I embedded → `2028-08-02`; **Article 50 transparency did NOT move and is live since `2026-08-02`** | 🔴 **Fourth recorded reproduction.** The correction holds; the open web has not caught up |
+
+🔵 **The Article 50 detail is why the stale date is dangerous rather than merely old: `2026-08-02`
+is the CORRECT date for Article 50 transparency, so a reader sees a real date attached to the
+wrong obligation.**
+
+### 🟡 🆕 The regional evidence asymmetry, re-measured
+
+| region | demand-side state |
+|---|---|
+| **LATAM** | 🟢 **best-evidenced, unchanged** — UNESCO IESALC: 200 HEIs across 19 countries, **87 %** using AI in ≥ 1 area, **74 %** in teaching and learning, 🔴 only **26 %** with a formal AI strategy; private non-profit uptake 84 % vs public 68 % |
+| **APAC** | 🟡 **one named-ministry placement this pass** (Singapore, above); China's mandate remains the furthest-advanced |
+| **North America** | 🟡 held: state-by-state, **Ohio's** district AI-policy mandate (2026-07-01), **134 bills / 31 states**, H.R. 8747 advanced 2026-07-21 and **not law** |
+| **EMEA** | 🔴 **demand-side absence for the FIFTH consecutive pass.** Supply side is the opposite — it is the strongest region on these shelves, because European public agencies publish their systems of record |
+
 **Pass 122, 2026-10-11.** ⏱️ **Ninth pass of this date** (window **07:3x → 08:4x UTC**).
 
 🟢 **Instrument: `compose/code/p122-prose-licence-census/`. `test_p122.sh` **50 passed / 0

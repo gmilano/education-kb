@@ -1,0 +1,5 @@
+Package: eduanalytics
+Title: Learning Analytics Helpers
+Version: 0.3.1
+License: MIT + file LICENSE
+Encoding: UTF-8

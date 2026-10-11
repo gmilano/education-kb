@@ -4,6 +4,196 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Hundred-and-twenty-third pass, 2026-10-11 — **all four pre-registered actions DISCHARGED**; `ACTION X` **REFUTED** and closed; 🟢 **`ACTION V` IMPLEMENTED on 51 rows**; 🔴 **`P123-H` — three fixes cut the candidate count 38 % and the error rate 0 %**; 🔴 **`P123-B` — p123's own classifier reproduced p122's structural defect**; `P123-A`–`P123-H`, `ACTION AA`–`AE` adopted
+
+🟢 **Instrument: `compose/code/p123-grant-set-calibration/`. `test_p123.sh` — **35 passed / 0
+failed**, fully offline, 14 fixtures.**
+
+### 🔴 `P123-H` — stated first, because it bounds this family of instruments
+
+p123 repaired all three causes p122 diagnosed for its 95 % false-positive rate:
+
+| change | action | effect |
+|---|---|---|
+| a grant is a SET of (path → token), not one token | `ACTION Z` | 17 multi-grant addresses become verifiable |
+| attribution is ROW-scoped inside tables, paragraph-scoped only in prose | `P123-C` | removed 28 of 72 high-consequence candidates (39 %) |
+| the correction guard is an exact marker, not a vocabulary | `ACTION V` | 51 rows marked; guard no longer needs teaching |
+
+| | raw candidates | high-consequence | survived |
+|---|---|---|---|
+| p122 model | **576** | 72 | — |
+| p123 model | **359** | **41** | **2** |
+
+🔴 **The rate did not move: 39 of 41 false, 95.1 %, against p122's 95 %.** 🟢 **The cause is the
+finding: the residual false positives are this KB's correction apparatus working correctly.** Its
+audit tables carry the OLD and NEW licence in adjacent columns —
+`| [fwu-de/ais-chat] | 🟢 MIT | 🔴 AGPL-3.0 | network-use copyleft |` — so a correction record and
+a claim are *the same bytes*, and only the column distinguishes them. 🔵 **`ACTION V` solved this
+for one of the three correction forms in use; the audit-table OLD column and unmarked prose
+*"was X"* remain, which is `ACTION AB`.**
+
+The 39 false positives, classified:
+
+| class | n |
+|---|---|
+| audit table — OLD and NEW in adjacent columns | 21 |
+| prose correction without the marker shape (*"was 🟢 Apache-2.0"*, *"(⚠️ was MIT)"*) | 9 |
+| 🟢 the page is MORE precise than the census (*"MIT badges over a 404"*; `classroomio` AGPL core + MIT `mcp` package) | 6 |
+| 🔴 p123's own classifier under-read a split grant — `P123-B` | 3 |
+
+### 🟢 `ACTION W` — DISCHARGED, NOT REFUTED at 68 %
+
+Gold label is non-circular by construction: a claim is GOLD-CORRECT when the live tree grants
+that licence in SOME grant file, read over EVERY grant file (`ACTION Z`) on the REAL default
+branch (`ACTION Y`). The model under test reads only PART of that evidence. The gold set is the
+**25** rows where the models CAN disagree; rows with a single plain `LICENSE` are excluded because
+including them would pad the denominator and flatter the narrower model.
+
+| model | FPs | rate |
+|---|---|---|
+| **ONE-TOKEN** (p114–p122) | 17 / 25 | 🔴 **68.0 %** |
+| **MAIN-ONLY** (pre-p122) | 0 / 25 | 🟢 0.0 % |
+| **GRANT-SET** (p123) | 0 / 25 | 🟢 0.0 % by construction |
+
+🟢 **`MAIN-ONLY`'s 0 % is reported rather than smoothed: all 25 gold rows sit on `main`/`master`,
+so this set cannot see a branch defect that `ACTION Y` proves real on 77 addresses.** 🔵 **A
+calibration set is only as good as the disagreements it contains, and saying so is part of
+publishing the rate — `ACTION AE`.**
+
+### 🔴 `ACTION X` — DISCHARGED and REFUTED (2 of a required 5), and CLOSED
+
+41 high-consequence candidates read by hand: 32 over-permissive (the direction that creates legal
+exposure) and 9 over-restrictive (`P121-C`'s direction). **Two survived, and both are the same
+repository.**
+
+🔴 **`P123-A`** — [`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud)
+(1 173★, **GPL-2.0**, default branch `v2`). p121 repaired it and called it *"the largest-star
+licence defect of the pass"*, at `intel/market.md:5500`. Two cells on **that same page** survived:
+
+| line | text | consequence |
+|---|---|---|
+| 1761 | *"(MIT, fresh 1 d — a complete course platform…)"* | a plain live claim |
+| 5585 | *"(MIT, 1 173★ 🇨🇳 — **the only permissive full MOOC platform on the shelf**)"* | 🔴 the stale token carries the conclusion: a studio picks GPL-2.0 code believing it is the one permissive option |
+
+🟢 **Both repaired with the marker this pass.** 🔵 **The generalisable lesson is where a repair
+stops: p121 fixed the row it found the defect in; the prose CITING that row kept the old value.
+A repair must be a search — `ACTION AC`.**
+
+### 🔴 `P123-B` — the instrument reproduced the defect it was built to remove
+
+[`Elgg/Elgg`](https://github.com/Elgg/Elgg) (1 677★) serves one `LICENSE.txt` on default `7.x`:
+*"Bundled plugins (the contents of the `/mod` directory) are available only under the GPLv2
+license. The remainder of the project is…"*. **No `SPLIT_MARKER` matches**, so p123's classifier
+reduced it to `MIT` and flagged this KB's three Elgg rows — which already read *"🟡 GPL-2.0 + MIT
+(bundled plugins MIT)"* — as over-restriction defects. 🔴 **p122's structural finding, recurring
+inside p123's own code one pass after p123 was built to fix it.** 🟢 **`ACTION AA` detects the
+split by SHAPE, not by a longer phrase list.**
+
+### 🟢 `ACTION Y` — DISCHARGED, NOT REFUTED on 18, and a count that was 68 % noise
+
+**1 365** folded addresses → **1 327 EXISTS / 38 ABSENT**, each ABSENT confirmed on **three**
+independent probes, **zero flips**.
+
+| kind | n |
+|---|---|
+| 🔴 URL-path artefacts (`topics/…`, `trending/…`, `search/…`, `orgs/…`) | **14** |
+| 🔴 this KB's own negative controls (`openedx/fake-repo-zzz999`, `owner/repo`) | **6** |
+| 🟢 **genuinely absent** | **18** |
+
+🟢 **Of the 18, exactly ONE is on a live content page, and it already reads *"does not resolve"*.
+The live pages carry zero false existence claims.** `NOT_A_REPO` filtering is now in the extractor.
+`yetanalytics/lrspipe` (the repository is [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe),
+Apache-2.0 verified), `imsglobal/caliper-python`, `1edtech/caliper-{java,js,php}` are `P122-G`'s
+product-name class recurring.
+
+🔴 **The branch was the larger blind spot: 84 non-`main`/`master` defaults, 77 holding a grant
+unreachable by the old probe** — and they are RELEASE LINES, the convention of the platforms this
+KB places: `openeducat/openeducat_erp` `19.0` LGPL-3.0, `claroline/claroline` `15.0` AGPL-3.0,
+`portabilis/i-educar` `2.12` GPL-2.0, `Elgg/Elgg` `7.x`, `eclipse-ee4j/jersey` `4.x` EPL-2.0,
+`ls1intum/Artemis` `develop` MIT.
+
+### 🟢 `ACTION Z` — DISCHARGED, NOT REFUTED on 17, in five legal conventions
+
+| convention | n | why one token is wrong |
+|---|---|---|
+| R/CRAN stub `LICENSE` + grant in `DESCRIPTION` | 7 | `LICENSE` alone reads as a stub, inviting *"no grant"* |
+| dual **MIT OR Apache-2.0** (`contentauth/c2pa-rs`, `c2pa-python`) | 2 | 🟢 the **licensee chooses**; one arm removes a right |
+| code / docs split (`microsoft/autogen`, `azure/moodle`, `wildcat430524/stepstogreat`) | 3 | docs CC, code permissive |
+| code / **data** split (`haolpku/K12-KGraph`) | 1 | 🔴 `CC-BY-NC-SA` data — in an education KB the DATA is the asset |
+| `COPYING` + `COPYING.LESSER` (`datacamp/catsim`) | 1 | 🟢 the LGPL file is operative; `COPYING` alone over-restricts |
+
+🟢 **20 grants sit on paths p122's probe never requested**: `DESCRIPTION` ×13, `LICENSE-CODE` ×2,
+`LICENSE-DOCS` ×2, `LICENSE-APACHE` ×2, `COPYING.LESSER` ×1.
+
+### 🟢 `ACTION V` — IMPLEMENTED, and p122's own figures for it were wrong
+
+**51 rows marked across 6 files**, idempotent, verified by a re-run marking 0. 🔴 **p122 published
+*"57 rows need it; 1 exists"*. Both were wrong and p123 re-measured rather than inheriting:** 57
+counted every line carrying the inline marker, including **6 lines of PROSE DISCUSSING** it; and
+the *"1 marker"* was an occurrence of `<!--corrected-->` inside the ACTION V **clause text** —
+**zero** rows carried it. 🔵 **A pass measuring its own pending work counted the sentences about
+the work.**
+
+### 🟢 `P123-D` — a channel recorded as closed is open
+
+`api.github.com` and `github.com` HTML remain **403 to `curl`**; 🟢 **`WebFetch` returns the
+rendered repository page**, restoring stars, commits and the archived banner.
+`ls1intum/Artemis` **816★ MIT / 12 316 commits — agrees with p122 exactly**; `UCL-INGI/INGInious`
+243★ AGPL-3.0 / 3 323; `yetanalytics/lrsql` 144★ Apache-2.0 / 2 269; `zijinz456/OpenTutor` 139★
+MIT / 191; `opetushallitus/koski` 23★ / **22 212**; `skolverket/dnp-ss12000-reference-api` 5★
+Apache-2.0 / 35; `KI-Campus/LRS` 🔴 **archived 2026-02-20**. 🔵 **`DavidLMS/learnmcp-xapi` 15★ / 32
+commits and `Ebimsv/AITutorAgent` 15★ / 🔴 4 commits were both returned by a search engine as "top
+open source AI agents for education" — recorded as measured-and-rejected, not published.**
+
+### 🟢 `P123-E` — Finland's national stack spans TWO EUPL versions
+
+The new by-reference tier reads `opetushallitus/koski`'s 654-byte grant as **EUPL-1.1-or-later**
+(p122: `UNKNOWN`; this KB: bare *"EUPL"*) and places **9** addresses: **6** EUPL-1.1-or-later
+(`koski`, `ehoks`, `eperusteet`, `oppijanumerorekisteri`, `organisaatio`, `valtionavustus`),
+**2** EUPL-1.2-or-later (`ataru`, `suorituspalvelu`), **1** EUPL-1.2 (`public-ui/kolibri`).
+🟢 **One `EUPL` token cannot carry that, and the upgrade clause is what reconciles the two
+versions.**
+
+### 🟢 `Gap 402` lead #2 discharged — naming the ministry worked
+
+🟢 **The mandated queries returned 0 new supply-side addresses; every repository surfaced was
+already held.** The one genuine demand-side addition came from doing what p122 pre-registered —
+naming the ministries directly: **Singapore MOE's "Four Learns"** (Learn About / to Use / With /
+Beyond AI) and a **common AI competency foundation for all IHL students from 2027** via two
+baseline frameworks (autonomous universities; polytechnics + ITE), announced by Education
+Minister Desmond Lee, combined parliamentary reply **2026-05-06**.
+
+🔴 **One reproduced open-web defect:** a summary gave China's instructional floor as *"six hours
+yearly"*; a second channel returned **8 h** and flagged the figure as single-sourced. 🟢 **This
+KB's held ≥ 8 h stands; the 6 h variant is recorded as wrong.** 🔵 **EMEA re-served the superseded
+`2026-08-02` Annex III date for the fourth time; `Reg. (EU) 2026/1744` → `2027-12-02` holds.**
+
+### 🟡 Declared gaps, carried
+
+- 🔴 **`CC` ×41, `UNKNOWN` ×40, `GPL-UNTITLED` ×16** — **97 of 1 096** readable grants (8.9 %) do
+  not resolve to a version. `CC` matters most here: `CC-BY` and `CC-BY-NC-SA` differ commercially.
+  `ACTION AD`.
+- 🟡 **EMEA and APAC demand-side data**: APAC gained one named-ministry placement this pass;
+  EMEA's demand-side absence is now **five** consecutive passes. **LATAM stays best-evidenced**
+  (UNESCO IESALC 200 HEIs / 19 countries; 87 % using AI in ≥ 1 area, 74 % in teaching and
+  learning, only 26 % with a formal strategy).
+- 🟡 **No tag or commit-date channel this pass**; recency figures on these pages were not
+  re-measured.
+
+### Pre-registered for p124
+
+🟢 **`ACTION AA`** — detect a split grant by SHAPE (path-scoping noun phrase + two licence
+tokens), not by a longer phrase list. 🔴 *Refuted if fewer than 3 addresses change verdict.*
+🟢 **`ACTION AB`** — extend the `ACTION V` marker to the other TWO correction forms: the
+audit-table OLD column and unmarked prose *"was X"*. 🔴 *Refuted if fewer than 15 rows need it.*
+🟢 **`ACTION AC`** — a repair must be a SEARCH: after repairing an address, assert no page carries
+its old token outside a marked span. 🔴 *Refuted if the assertion passes on all 51 repaired rows.*
+🟢 **`ACTION AD`** — resolve the `CC` bucket (41 rows) to a version. 🔴 *Refuted if fewer than 10
+resolve.*
+🟢 **`ACTION AE`** — build a gold set CONTAINING branch disagreements so `MAIN-ONLY` is scored
+honestly. 🔴 *Refuted if fewer than 5 gold rows sit on a non-`main`/`master` default.*
+🔴 **`ACTION X`** — **CLOSED as refuted**; not to be re-listed.
+
 ## 🟢 Hundred-and-twenty-second pass, 2026-10-11 — **all four pre-registered actions DISCHARGED**; **`ACTION C` and `ACTION D` discharged after five passes and BOTH REFUTED**; 🔴 **`ACTION V` was orphaned in p121's instrument README and `ACTION T` caught it on its first run**; 🔴 **`P122-H` — the census's own false-positive rate reached 95 %**; `Gap 402` RESOLVED as a query defect; `P122-A`–`P122-H`, `ACTION W`–`Z` adopted
 
 🟢 **Instrument: `compose/code/p122-prose-licence-census/`. `test_p122.sh` — **50 passed / 0
@@ -309,7 +499,7 @@ table. 🔵 **A reader who stopped at the first table got the truth.**
 corrections **inline**:
 
 ```
-| [`lovejzzz/CourseMapper`](…) | 🔴 **NO GRANT — no licence file** ⚠️ **was 🟢 MIT** | …
+| [`lovejzzz/CourseMapper`](…) | 🔴 **NO GRANT — no licence file** ⚠️ **was 🟢 MIT**<!--corrected--> | …
 ```
 
 🔴 **p120's guard detects a correction by the table HEADER** (`published` / `what is actually

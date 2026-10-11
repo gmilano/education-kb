@@ -6,6 +6,66 @@ updated: 2026-10-11
 
 # Education — foundational repos
 
+**Pass 123, 2026-10-11.** ⏱️ **Tenth pass of this date** (census window **08:4x → 09:4x UTC**).
+
+🟢 **Instrument: `compose/code/p123-grant-set-calibration/`, discharging `ACTION W, X, Y, Z` and
+implementing `ACTION V`. `test_p123.sh` **35 passed / 0 failed**, fully offline.**
+
+🟢 **This page carried 0 live licence defects this pass.** Its **11** repaired rows now carry the
+`<!--corrected-->` marker.
+
+### 🟢 🆕 `ACTION Z` — a grant is a SET, and 17 addresses on these shelves prove it matters
+
+Every licence probe in this KB up to p122 stopped at the FIRST grant file that returned 200. p123
+reads them all. **17 of 1 096 addresses with a readable grant carry more than one grant file**,
+and each is a convention with a different legal meaning from any single arm:
+
+| convention | addresses | why one token is wrong |
+|---|---|---|
+| R/CRAN: stub `LICENSE`, grant in `DESCRIPTION` | [`rstudio/ggcheck`](https://github.com/rstudio/ggcheck), [`rstudio/tblcheck`](https://github.com/rstudio/tblcheck), [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna), [`sidneybissoli/educabr`](https://github.com/sidneybissoli/educabr), [`cambridgeassessmentresearch/kerneqwps`](https://github.com/cambridgeassessmentresearch/kerneqwps), [`r-dcm/measr`](https://github.com/r-dcm/measr), [`dexter-psychometrics/dexter`](https://github.com/dexter-psychometrics/dexter) | `LICENSE` alone is a stub or `UNKNOWN` — which reads as *"no grant"*, the worst possible error |
+| dual **MIT OR Apache-2.0** | [`contentauth/c2pa-rs`](https://github.com/contentauth/c2pa-rs), [`contentauth/c2pa-python`](https://github.com/contentauth/c2pa-python) | 🟢 **the licensee chooses.** Reporting one arm removes a right the grant gives |
+| code / docs split | [`microsoft/autogen`](https://github.com/microsoft/autogen), [`azure/moodle`](https://github.com/azure/moodle), [`wildcat430524/stepstogreat`](https://github.com/wildcat430524/stepstogreat) | docs under CC, code permissive |
+| code / **data** split | [`haolpku/K12-KGraph`](https://github.com/haolpku/K12-KGraph) | 🔴 `CC-BY-NC-SA` **data** — and in an education KB the data is the asset |
+| `COPYING` + `COPYING.LESSER` | [`datacamp/catsim`](https://github.com/datacamp/catsim) | 🟢 the LGPL file is the operative grant; `COPYING` alone over-restricts |
+
+🟢 **20 grants sit on paths no previous probe requested** — `DESCRIPTION` ×13, `LICENSE-CODE` ×2,
+`LICENSE-DOCS` ×2, `LICENSE-APACHE` ×2, `COPYING.LESSER` ×1.
+
+### 🔴 🆕 `ACTION Y` — the default branch, not the path, was the bigger blind spot
+
+**84 of 1 327 addresses default to neither `main` nor `master`, and 77 of them hold a readable
+grant that a `main`/`master` probe could never reach.** These are not abandoned branches — they
+are RELEASE LINES, which is the convention of the platforms this page exists to place:
+
+| address | default branch | grant |
+|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `19.0` | 🔴 LGPL-3.0 |
+| [`claroline/claroline`](https://github.com/claroline/claroline) | `15.0` | 🔴 AGPL-3.0 |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | `2.12` | 🔴 GPL-2.0 |
+| [`Elgg/Elgg`](https://github.com/Elgg/Elgg) | `7.x` | 🟡 split — GPL-2.0 core + MIT bundled plugins |
+| [`eclipse-ee4j/jersey`](https://github.com/eclipse-ee4j/jersey) | `4.x` | 🟡 EPL-2.0 |
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | `develop` | 🟢 **MIT**, 816★, 12 316 commits |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `develop` | 🟢 **MIT** |
+| [`coqui-ai/TTS`](https://github.com/coqui-ai/TTS) | `dev` | 🟡 MPL-2.0 |
+
+🔵 **`git ls-remote --symref` answers existence and default branch in one call, so this is now
+cheaper than the guessing it replaces, not more expensive.**
+
+### 🟢 🆕 The xAPI / learning-record tier, re-verified repo-by-repo this pass
+
+🟢 **Measured, not inferred** — licence from the live tree, stars and commits from the rendered
+page (`P123-D`):
+
+| address | stars | licence | commits | role |
+|---|---|---|---|---|
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **144** | 🟢 **Apache-2.0** | 2 269 | SQL LRS — the deployable learning-record store |
+| [`yetanalytics/lrs`](https://github.com/yetanalytics/lrs) | — | 🟢 **Apache-2.0** | — | the conformant-LRS protocol library |
+| [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) | — | 🟢 **Apache-2.0** | — | statement forwarding governed by xAPI Profiles. 🔴 **Its PRODUCT name is LRSPipe; `yetanalytics/lrspipe` does not exist** — `ACTION Y`'s product-name class |
+| [`Apereo-Learning-Analytics-Initiative/Larissa`](https://github.com/Apereo-Learning-Analytics-Initiative/Larissa) | — | 🟢 **Apache-2.0** | — | Apereo's LRS |
+| [`UCL-INGI/INGInious`](https://github.com/UCL-INGI/INGInious) | **243** | 🔴 **AGPL-3.0** | 3 323 | secure automated exercise assessment (UCLouvain, 🇧🇪). 🔴 **network copyleft — integrate, do not embed** |
+| [`skolverket/dnp-ss12000-reference-api`](https://github.com/skolverket/dnp-ss12000-reference-api) | 5 | 🟢 **Apache-2.0** | 35 | 🟢 **the value is the STANDARD, not the stars**: Sweden's national agency's SS 12000 SIS reference |
+| [`KI-Campus/LRS`](https://github.com/KI-Campus/LRS) | 3 | 🟢 MIT | 212 | 🔴 **ARCHIVED 2026-02-20, read-only** — do not start here |
+
 **Pass 122, 2026-10-11.** ⏱️ **Ninth pass of this date** (census window **07:3x → 08:4x UTC**).
 
 🟢 **Instrument: `compose/code/p122-prose-licence-census/`, discharging `ACTION R, S, T, U` and
@@ -31,7 +91,7 @@ Five passes of carrying it forward as a general tool is why it never paid off.
 
 | address | namespace | country | licence, measured this pass | what it is |
 |---|---|---|---|---|
-| [`opetushallitus/koski`](https://github.com/opetushallitus/koski) | `fi.vm.sade` | 🇫🇮 Finland | 🟢 **EUPL** (README: *"Koski on EUPL-lisensoitu sovellus"*) | the Finnish National Agency for Education's **national study-rights and attainments registry**. A state-run system of record, in the open |
+| [`opetushallitus/koski`](https://github.com/opetushallitus/koski) | `fi.vm.sade` | 🇫🇮 Finland | 🟢 **EUPL-1.1-or-later** — `master/LICENSE.txt`, 654 B, *"Licensed under the EUPL, Version 1.1 or … subsequent versions"* (README: *"Koski on EUPL-lisensoitu sovellus"*). 🆕 **p123: the grant is by REFERENCE and admits later versions** | the Finnish National Agency for Education's **national study-rights and attainments registry**. A state-run system of record, in the open |
 | [`opetushallitus/oppijanumerorekisteri`](https://github.com/opetushallitus/oppijanumerorekisteri) | `fi.vm.sade.oppijanumerorekisteri` | 🇫🇮 Finland | carried | national **learner-identifier** registry — the join key for every other service |
 | [`opetushallitus/organisaatio`](https://github.com/opetushallitus/organisaatio) | `fi.vm.sade.organisaatio` | 🇫🇮 Finland | carried | national **institution** registry |
 | [`skolverket/dnp-ss12000-reference-api`](https://github.com/skolverket/dnp-ss12000-reference-api) | `se.skolverket.service.provisioning` | 🇸🇪 Sweden | 🟢 **Apache-2.0**, 5★ | **reference implementation of SS 12000**, Sweden's school-interoperability standard, published by the Swedish National Agency for Education itself |
@@ -116,7 +176,7 @@ prior one corrected the cell.**
 | [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 1.3k | 🟢 BSD-3 | North America | notebook autograding; pairs with JupyterHub |
 | [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 800 | 🟢 BSD-3 | North America (RPI) | programming-assignment autograder with plagiarism detection |
 | [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | — | 🟢 BSD-3 | North America (UC Berkeley) | Python/R autograding, container-isolated |
-| [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 153 | 🟢 **BSD-3-Clause** ⚠️ **was 🟢 MIT** | LATAM (BR) | computerised adaptive testing — **repaired this pass** |
+| [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 153 | 🟢 **BSD-3-Clause** ⚠️ **was 🟢 MIT**<!--corrected--> | LATAM (BR) | computerised adaptive testing — **repaired this pass** |
 | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 1.5k | 🟢 MIT | North America | Bayesian Knowledge Tracing intelligent tutor |
 | [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | — | 🟢 Apache-2.0 | Global | 🔵 **cite the VALIDATOR** — the *specification* repo carries no grant (`P120-J`) |
 | [`dspace/dspace`](https://github.com/dspace/dspace) | 1.1k | 🟢 BSD-3 | Global | institutional repository of record |
@@ -298,7 +358,7 @@ procurement facts, and this page had a recency column but no liveness column.
 | [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | **507** | 🟢 MIT | 🟢 live — spaced repetition |
 | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **443** | 🟢 MIT | 🟢 live — **repaired, 3 cells carried `~430`** |
 | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | **283** | 🟢 MIT | 🟢 live — knowledge tracing |
-| [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | **153** | 🟢 **BSD-3-Clause** ⚠️ **was 🟢 MIT** | 🟢 live, `dev` — adaptive testing |
+| [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | **153** | 🟢 **BSD-3-Clause** ⚠️ **was 🟢 MIT**<!--corrected--> | 🟢 live, `dev` — adaptive testing |
 | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **144** | 🟢 Apache-2.0 | 🟢 live — the xAPI record store |
 | [`adlnet/xAPI-SCORM-Profile`](https://github.com/adlnet/xAPI-SCORM-Profile) | **42** | 🟢 Apache-2.0 | 🔴 **ARCHIVED — treat as a frozen SPEC to implement, never a dependency that will take a fix** |
 
@@ -359,21 +419,21 @@ ungated one.**
 | [`DSpace/DSpace`](https://github.com/DSpace/DSpace) | `main` | `LICENSE` | 🟢 BSD | permissive |
 | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `develop` | `LICENSE` | 🟢 MIT | permissive — offline-first, the LATAM//APAC low-connectivity base |
 | [`oppia/oppia`](https://github.com/oppia/oppia) | `develop` | `LICENSE` | 🟢 Apache-2.0 | permissive |
-| [`frappe/frappe`](https://github.com/frappe/frappe) | `develop` | `LICENSE` | 🟢 **MIT** ⚠️ **was GPL-3.0** | permissive — see `P118-G` |
+| [`frappe/frappe`](https://github.com/frappe/frappe) | `develop` | `LICENSE` | 🟢 **MIT** ⚠️ **was GPL-3.0**<!--corrected--> | permissive — see `P118-G` |
 | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master` | `LICENSE` | 🟡 **ECL-2.0 + Apache-2.0** | multi-grant, both permissive |
 | [`opencast/opencast`](https://github.com/opencast/opencast) | `develop` | `LICENSE` | 🟡 **ECL-2.0 + Apache-2.0** | multi-grant, both permissive |
-| [`moodle/moodle`](https://github.com/moodle/moodle) | `main` | **`COPYING.txt`** | 🔴 **GPL-3.0** ⚠️ **was "no licence file at all"** | see `P118-N` |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `main` | **`COPYING.txt`** | 🔴 **GPL-3.0** ⚠️ **was "no licence file at all"**<!--corrected--> | see `P118-N` |
 | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `master` | `LICENSE` | 🔴 AGPL-3.0 | network copyleft |
-| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | `master` | `LICENSE` | 🔴 **AGPL-3.0** ⚠️ **was Apache-2.0** | network copyleft |
+| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | `master` | `LICENSE` | 🔴 **AGPL-3.0** ⚠️ **was Apache-2.0**<!--corrected--> | network copyleft |
 | [`overhangio/tutor`](https://github.com/overhangio/tutor) | `release` | `LICENSE.txt` | 🔴 AGPL-3.0 | network copyleft |
 | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `master` | `LICENSE` | 🔴 AGPL-3.0 | network copyleft |
 | [`frappe/erpnext`](https://github.com/frappe/erpnext) | `develop` | `license.txt` | 🔴 GPL-3.0 | distribution copyleft |
-| [`frappe/lms`](https://github.com/frappe/lms) | `develop` | `license.txt` | 🔴 **AGPL-3.0** ⚠️ **was GPL** | network copyleft |
+| [`frappe/lms`](https://github.com/frappe/lms) | `develop` | `license.txt` | 🔴 **AGPL-3.0** ⚠️ **was GPL**<!--corrected--> | network copyleft |
 | [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | `master` | `LICENSE` | 🔴 **AGPL-3.0 (CE) + MIT (portions) + proprietary `ee/`** | see `P118-J` |
-| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | `main` | `LICENSE` | 🔴 **Elastic-2.0 — NOT open source** ⚠️ **was AGPL-3** | see `P118-I` |
-| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | `2.12` | `LICENSE` | 🔴 **GPL-2.0** ⚠️ **was LGPL-3.0** | 🔴 LGPL permits linking without copyleft reaching your code; **GPL-2.0 does not** |
-| [`portabilis/i-diario`](https://github.com/portabilis/i-diario) | `1.6` | `LICENSE` | 🔴 **AGPL-3.0** ⚠️ **was unread** | 🔵 the AGPL-3 **in Portuguese** — see `P118-K` |
-| [`lukeslp/awesome-accessibility`](https://github.com/lukeslp/awesome-accessibility) | `main` | `LICENSE` | 🟢 **CC0-1.0** ⚠️ **was MIT** | public-domain dedication, no code |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | `main` | `LICENSE` | 🔴 **Elastic-2.0 — NOT open source** ⚠️ **was AGPL-3**<!--corrected--> | see `P118-I` |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | `2.12` | `LICENSE` | 🔴 **GPL-2.0** ⚠️ **was LGPL-3.0**<!--corrected--> | 🔴 LGPL permits linking without copyleft reaching your code; **GPL-2.0 does not** |
+| [`portabilis/i-diario`](https://github.com/portabilis/i-diario) | `1.6` | `LICENSE` | 🔴 **AGPL-3.0** ⚠️ **was unread**<!--corrected--> | 🔵 the AGPL-3 **in Portuguese** — see `P118-K` |
+| [`lukeslp/awesome-accessibility`](https://github.com/lukeslp/awesome-accessibility) | `main` | `LICENSE` | 🟢 **CC0-1.0** ⚠️ **was MIT**<!--corrected--> | public-domain dedication, no code |
 | [`rstudio/ggcheck`](https://github.com/rstudio/ggcheck), [`rstudio/tblcheck`](https://github.com/rstudio/tblcheck), [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr), [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna), [`sidneybissoli/educabr`](https://github.com/sidneybissoli/educabr) | various | `LICENSE` | 🔵 **`GRANT-IN-MANIFEST`** | 45–108 B field stub; the licence is named in `DESCRIPTION`, not in the licence file |
 | [`frappe/education`](https://github.com/frappe/education) | `develop` | `license.txt` | 🔵 **`GRANT-BY-REFERENCE`** | one line: `License: GNU GPL V3`. No body, no terms, no holder |
 
@@ -809,7 +869,7 @@ prove a large polyglot tree CAN be pinned end to end. These are the three widest
 
 | repo | licence | lockable manifests | reached |
 |---|---|---|---|
-| [`leemonade/leemons`](https://github.com/leemonade/leemons) | 🔴 **"Fair Code License" v1.0 — NOT OSI** ⚠️ **was 🟢 Apache-2.0** | **114** | 🟢 **114 / 114** |
+| [`leemonade/leemons`](https://github.com/leemonade/leemons) | 🔴 **"Fair Code License" v1.0 — NOT OSI** ⚠️ **was 🟢 Apache-2.0**<!--corrected--> | **114** | 🟢 **114 / 114** |
 | [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3 | **63** | 🟢 **63 / 63** |
 | [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | 🟢 AGPL-3 | **58** | 🟢 **58 / 58** |
 

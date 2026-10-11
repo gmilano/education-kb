@@ -4,6 +4,107 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Pass 123 — 2026-10-11 (tenth pass of this date), 08:4x–09:4x UTC
+
+🔵 **APPEND-ONLY page. This section is added above p122's and nothing below it is edited** —
+including rows this pass found stale. Stale tokens in the history are listed here, not rewritten.
+
+🟢 **Instrument: `compose/code/p123-grant-set-calibration/`. `test_p123.sh` **35 passed / 0
+failed**, fully offline.**
+
+### 🔴 Zero new trending addresses, and 18 published addresses that do not exist
+
+🔴 **The GitHub-trending sweep returned no new addresses.** 🟢 **The pass's repo-side result came
+from the tree instead: a complete existence and grant census of every address this KB publishes.**
+
+**1 365 folded addresses → 1 327 EXISTS / 38 ABSENT**, each ABSENT confirmed on **three**
+independent probes with **zero flips**. 🔴 **But 38 is noise, not a finding:**
+
+| kind | n | examples |
+|---|---|---|
+| 🔴 URL-path artefacts | **14** | `topics/ai-tutor`, `topics/ferpa`, `trending/python`, `search/repositories`, `orgs/opetushallitus` — the extractor reading `github.com/topics/…` as an owner/repo |
+| 🔴 this KB's own negative controls | **6** | `openedx/fake-repo-zzz999`, `owner/repo`, `your-username/safetutors` |
+| 🟢 **genuinely absent** | **18** | below |
+
+🟢 **Of the 18, exactly ONE appears on a live content page — and that row already reads *"does not
+resolve"*. The live shelves carry zero false existence claims**, which is the opposite of what a
+raw 38 would have implied. The other 17 are in this append-only history, which is not rewritten.
+
+🔴 **Several are `P122-G`'s product-name class recurring — an address assembled from a product
+NAME rather than read from a tree:**
+
+| published address | what is wrong | the real address |
+|---|---|---|
+| `yetanalytics/lrspipe` | **LRSPipe** is the product name | 🟢 [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe), Apache-2.0, verified |
+| `imsglobal/caliper-python` | the org renamed to **1EdTech** | 🔴 not found under either spelling |
+| `1edtech/caliper-java` · `-js` · `-php` | the Caliper spec's SDK repos | 🔴 absent in both case spellings; 🟢 [`1edtech/caliper-spec`](https://github.com/1edtech/caliper-spec) EXISTS |
+| `concentricsky/badgr-server` | Badgr moved | 🔴 absent |
+| `eduware-inc/eduware-oneroster`, `longsightgroup/qti3-core`, `uoc/java-lti-1.3-provider`, `a-ariff/canvas-instant-mcp`, `eastarctica/canvas-mcp`, `radhepa/teacher-mcp`, `dajiaohuang/waymarker`, `fh-yarbouh/oak-curriculum-ontology`, `superbuilders/timeback-dev-python`, `ahmed-html/unlimited-ai-platform`, `sabuhi-huseynli-grc/high-risk-deployer-fria-governance-toolkit`, `epesi-team/epesi` | 🔴 do not resolve | `epesi-team/epesi` is the one on a live page, already marked |
+
+🟢 **Case folding is SAFE and was verified rather than assumed**: `ls1intum/artemis` and
+`openedx/xblock` resolve in lowercase, so `ACTION U`'s folding introduces no false absences.
+`1edtech/caliper-java` is absent in **both** spellings.
+
+### 🔴 The default branch is where the licence census was blind
+
+**84 of 1 327 addresses default to neither `main` nor `master`; 77 of them hold a readable grant
+no `main`/`master` probe could reach.** 🟢 **They are RELEASE LINES, the convention of exactly the
+platforms this KB tracks:**
+
+| default | n | examples |
+|---|---|---|
+| `develop` | **34** | [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) MIT, [`learningequality/kolibri`](https://github.com/learningequality/kolibri) MIT, [`frappe/erpnext`](https://github.com/frappe/erpnext) GPL-3.0 |
+| `dev` | **11** | [`coqui-ai/TTS`](https://github.com/coqui-ai/TTS) MPL-2.0, [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) BSD-3-Clause, [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) AGPL-3.0 |
+| version-pinned | **~30** | `openeducat/openeducat_erp` **`19.0`** LGPL-3.0 · `claroline/claroline` **`15.0`** AGPL-3.0 · `portabilis/i-educar` **`2.12`** GPL-2.0 · `Elgg/Elgg` **`7.x`** · `eclipse-ee4j/jersey` **`4.x`** EPL-2.0 · `moodlehq/moodle-tool_dataprivacy` **`MOODLE_34_STABLE`** |
+
+🔵 **`git ls-remote --symref` returns existence AND the default branch in one call, so reading the
+right branch is now cheaper than guessing: p120 needed 462 probes to read 52 files because 410
+were 404s.**
+
+### 🟢 `ACTION Z` — 20 grants on paths no previous sweep requested
+
+| path | n | why it exists |
+|---|---|---|
+| `DESCRIPTION` | **13** | R/CRAN states the grant in a FIELD; `LICENSE` is a two-line stub |
+| `LICENSE-CODE` | 2 | code/docs and code/data splits |
+| `LICENSE-DOCS` | 2 | docs under CC |
+| `LICENSE-APACHE` | 2 | the Rust **MIT OR Apache-2.0** dual convention |
+| `COPYING.LESSER` | 1 | the LGPL file is the operative grant |
+
+🟢 **17 addresses carry more than one grant file.** Full accounting in `repos/foundations.md` and
+`intel/open-gaps.md`.
+
+### 🟢 Re-verified this pass, repo by repo (tree for licence, rendered page for figures)
+
+| address | licence | branch | state |
+|---|---|---|---|
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 Apache-2.0 | `main` | 144★ / 2 269 commits |
+| [`yetanalytics/lrs`](https://github.com/yetanalytics/lrs) | 🟢 Apache-2.0 | `master` | protocol library |
+| [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) | 🟢 Apache-2.0 | `main` | the real LRSPipe repo |
+| [`Apereo-Learning-Analytics-Initiative/Larissa`](https://github.com/Apereo-Learning-Analytics-Initiative/Larissa) | 🟢 Apache-2.0 | `master` | Apereo LRS |
+| [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | 🟢 MIT | `main` | 🔴 15★ / **32 commits** |
+| [`UCL-INGI/INGInious`](https://github.com/UCL-INGI/INGInious) | 🔴 AGPL-3.0 | `main` | 243★ / 3 323 |
+| [`skolverket/dnp-ss12000-reference-api`](https://github.com/skolverket/dnp-ss12000-reference-api) | 🟢 Apache-2.0 | `main` | 5★ / 35 |
+| [`opetushallitus/koski`](https://github.com/opetushallitus/koski) | 🟢 **EUPL-1.1-or-later** | `master` | 23★ / **22 212** |
+| [`CAHLR/OATutor-AI-Feedback-Experiment`](https://github.com/CAHLR/OATutor-AI-Feedback-Experiment) | 🟢 MIT | `main` | BKT tutoring + LLM feedback |
+| [`KI-Campus/LRS`](https://github.com/KI-Campus/LRS) | 🟢 MIT | `main` | 🔴 **ARCHIVED 2026-02-20** |
+
+### 🟢 `P123-E` — Finland's national stack spans two EUPL versions
+
+🟢 **The new by-reference classifier tier places 9 addresses and splits what a bare `EUPL` token
+hid:** **EUPL-1.1-or-later** ×6 (`koski`, `ehoks`, `eperusteet`, `oppijanumerorekisteri`,
+`organisaatio`, `valtionavustus`), **EUPL-1.2-or-later** ×2 (`ataru`, `suorituspalvelu`),
+**EUPL-1.2** ×1 (`public-ui/kolibri`). 🔵 **The upgrade clause — *"Version 1.1 or … subsequent
+versions"* — is what reconciles the two, and it is only visible if you read the grant rather than
+match a token.**
+
+### 🔴 Stale tokens found in THIS page's history, listed and not rewritten
+
+- line 138 — [`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud)
+  published 🟢 **MIT**; the tree reads 🔴 **GPL-2.0** (`LICENSE`, 18 092 B, branch `v2`).
+  🟢 **Repaired on the live pages this pass (`P123-A`); left standing here, as the append-only rule
+  requires.**
+
 ## 🟢 Pass 122 — 2026-10-11 (ninth pass of this date), 07:3x–08:4x UTC
 
 🔵 **APPEND-ONLY page. This section is added above p121's and nothing below it is edited** —

@@ -6,6 +6,35 @@ updated: 2026-10-11
 
 # Education — market intelligence
 
+**Pass 123, 2026-10-11.** ⏱️ **Tenth pass of this date** (window **08:4x → 09:4x UTC**).
+🔵 **Per-region opportunities are updated IN PLACE under the single canonical
+`## Opportunities by region` block further down this file — one block, **five** `###`, closed
+vocabulary (North America · EMEA · APAC · LATAM · Global).**
+
+🟢 **Instrument: `compose/code/p123-grant-set-calibration/`, discharging `ACTION W, X, Y, Z` and
+implementing `ACTION V`. `test_p123.sh` **35 passed / 0 failed**, fully offline.**
+
+### 🔴 🆕 `P123-A` — this page carried the pass's ONLY two live defects, and it is the page that announced the repair
+
+🔴 **[`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud)
+(1 173★) is GPL-2.0 — `LICENSE`, 18 092 B, default branch `v2`.** p121 repaired it and called it
+*"the largest-star licence defect of the pass"*. **That announcement is on THIS page.** Two cells
+on this same page were never repaired, and p123's hand verification found them:
+
+| line | what it read | why it mattered |
+|---|---|---|
+| **1761** | *"(MIT, fresh 1 d — a complete course platform held up by a single maintainer)"* | a plain live claim — no marker, no hedge |
+| **5585** | *"(MIT, 1 173★ 🇨🇳 — **the only permissive full MOOC platform on the shelf**)"* | 🔴 **the stale token carried the conclusion.** A studio reading this cell selects GPL-2.0 code believing it is the one permissive option available |
+
+🟢 **Both repaired in this commit, with the `<!--corrected-->` marker, and the false
+"only permissive" assertion struck.** 🔵 **The transferable lesson is about where a repair stops:
+p121 fixed the row it found the defect in, and the prose CITING that row kept the old value. A
+repair has to be a search, not an edit — pre-registered as `ACTION AC`.**
+
+🟢 **For scale: these were the ONLY 2 survivors of 41 high-consequence candidates read by hand.
+The other 39 were false — 95.1 %, and the full accounting is in `intel/open-gaps.md` under
+`P123-H`.**
+
 **Pass 122, 2026-10-11.** ⏱️ **Ninth pass of this date** (window **07:3x → 08:4x UTC**).
 🔵 **Per-region opportunities are updated IN PLACE under the single canonical
 `## Opportunities by region` block further down this file — one block, **five** `###`, closed
@@ -1758,7 +1787,8 @@ A large CI surface is not a working one.**
 🟡 **Of the 11 APAC-published rows the `P110-S` mapping places, **5 are `solo` (45 %)**
 and **2 are `broad`**. Median `bus_factor`: 2. One is at 100 % one author:
 [`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud)
-(MIT, fresh 1 d — a complete course platform held up by a single maintainer).**
+(🔴 **GPL-2.0** ⚠️ **was 🟢 MIT**<!--corrected-->, fresh 1 d — a complete course platform
+held up by a single maintainer).**
 
 🔴 **APAC owns this shelf's starkest wide-and-cold pair, and it is a national platform:
 [`project-sunbird/sunbird-devops`](https://github.com/project-sunbird/sunbird-devops)
@@ -2693,9 +2723,9 @@ and **8 of 9 are at 100 % one author**. **Zero are `broad`.** Median `bus_factor
 | [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | 🟢 MIT + CC BY 4.0 | 🟢 active 60 d | 🔴 100 % |
 | [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | 🟢 MIT + CC BY 4.0 | 🟢 fresh 21 d | 🔴 100 % |
 | [`sidneybissoli/educabr`](https://github.com/sidneybissoli/educabr) | 🟢 MIT | 🟢 fresh 7 d | 🔴 100 % |
-| [`xgabrielcv/auto-matricula-sigaa-unb`](https://github.com/xgabrielcv/auto-matricula-sigaa-unb) | 🔴 **NO GRANT — "License: Open Source" badge, no licence file** ⚠️ **was 🟢 MIT** | 🟢 fresh 16 d | 🔴 100 % |
+| [`xgabrielcv/auto-matricula-sigaa-unb`](https://github.com/xgabrielcv/auto-matricula-sigaa-unb) | 🔴 **NO GRANT — "License: Open Source" badge, no licence file** ⚠️ **was 🟢 MIT**<!--corrected--> | 🟢 fresh 16 d | 🔴 100 % |
 | [`fborrasumh/tutoria`](https://github.com/fborrasumh/tutoria) | 🟢 MIT | 🟢 fresh 10 d | 🔴 100 % |
-| [`Zion-support/curriculum-alignment-checker`](https://github.com/Zion-support/curriculum-alignment-checker) | 🔴 **NO GRANT — no licence file on the default branch** ⚠️ **was 🟢 MIT** | 🟢 fresh 6 d | 🔴 100 % |
+| [`Zion-support/curriculum-alignment-checker`](https://github.com/Zion-support/curriculum-alignment-checker) | 🔴 **NO GRANT — no licence file on the default branch** ⚠️ **was 🟢 MIT**<!--corrected--> | 🟢 fresh 6 d | 🔴 100 % |
 | [`devissaputra/classroom_discourse_intelligence`](https://github.com/devissaputra/classroom_discourse_intelligence) | 🟢 MIT | 🟢 fresh 14 d | 🔴 100 % |
 | [`academico-sis/academico`](https://github.com/academico-sis/academico) | 🟢 MIT | 🟢 fresh 3 d | 🔴 98 % |
 
@@ -4353,7 +4383,7 @@ European university and public-agency convention:
 
 | what | who | licence, measured |
 |---|---|---|
-| national attainments registry (`koski`) + learner-ID + institution registries | 🇫🇮 **Finnish National Agency for Education** (`fi.vm.sade`) | 🟡 EUPL |
+| national attainments registry (`koski`) + learner-ID + institution registries | 🇫🇮 **Finnish National Agency for Education** (`fi.vm.sade`) | 🟡 **EUPL — mixed: 1.1-or-later ×6, 1.2-or-later ×2** <!--p123--> |
 | **SS 12000** school-interoperability reference API | 🇸🇪 **Swedish National Agency for Education** (`se.skolverket`) | 🟢 **Apache-2.0** |
 | European Digital Credentials (EDCI) | 🇪🇺 **European Commission** (`eu.europa.ec.empl.edci`) | carried |
 | Artemis + Ares2 — interactive learning, automated feedback | 🇩🇪 **TU Munich** (`de.tum.cit`) | 🟢 **MIT**, 816★ |
@@ -5451,6 +5481,31 @@ duty is the sellable deliverable that is already overdue.**
 
 ### APAC
 
+#### 🟢 🆕 p123 — Singapore MOE, named directly, and it returned a framework this KB did not hold
+
+🟢 **`Gap 402`'s lead #2 said the next attempt must NAME THE MINISTRIES instead of re-running the
+generic phrasing. It worked, and this is the pass's only new demand-side placement.**
+
+| 🇸🇬 Singapore MOE | state |
+|---|---|
+| named model | 🟢 **"Four Learns"** — Learn About AI · Learn to Use AI · Learn With AI · Learn Beyond AI |
+| higher education | 🟢 **a common AI competency foundation for ALL students in institutes of higher learning, from 2027** |
+| instruments | 🟢 **two baseline frameworks** — one for the autonomous universities, one for the polytechnics + ITE |
+| schools | 🟡 already held: AI literacy across curriculum, co-curriculum and self-directed learning via **Student Learning Space (SLS)** |
+| provenance | Education Minister **Desmond Lee**, NUS120 Distinguished Speaker Series; combined parliamentary reply **2026-05-06** |
+| evidence tier | 🟡 **two independent secondary channels, no MOE primary text** — the session proxy resolves `github.com` but not these hosts |
+
+🟢 **Why this is an opportunity and not just a fact: a named four-part competency model plus a
+2027 mandate across every IHL is a procurement shape.** An engagement can be scoped directly to
+one of the Four Learns rather than to "AI literacy" in general, and the polytechnic/ITE framework
+being SEPARATE from the university one means two distinct buyers with different curricula.
+
+🔴 **The region's reproduced defect, recorded so it is not re-served:** a sweep returned China's
+instructional floor as *"at least **six** hours yearly"*. 🟢 **This KB holds **≥ 8 h/year** from
+**Sep 2025**, and a second channel this pass returned 8 h while flagging the figure as
+single-sourced. The 6 h variant is wrong.**
+
+
 #### 🟢 p122 — 2026-10-11
 
 🟡 **Thin but no longer empty, and the named signals are new this pass:**
@@ -5582,7 +5637,9 @@ index, which answers on canonical names, exposes it.
 [`frappe/erpnext`](https://github.com/frappe/erpnext) (GPL-3.0, 39 986★) — Frappe Technologies,
 Mumbai 🇮🇳, and the MIT *framework* under a GPL *application* is the composition that matters;
 [`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud)
-(MIT, 1 173★ 🇨🇳 — the only permissive full MOOC platform on the shelf);
+(🔴 **GPL-2.0** ⚠️ **was 🟢 MIT**<!--corrected-->, 1 173★ 🇨🇳 — 🔴 **not permissive, and
+therefore NOT "the only permissive full MOOC platform on the shelf"**, which is what this
+cell asserted for two passes after the repair was announced on this same page);
 [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) (MIT, **825★**, 🇨🇳 — repaired
 this pass from a stale 772); [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) (285★),
 [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill)
