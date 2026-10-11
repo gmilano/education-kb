@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Pass 122 — 2026-10-11 (ninth pass of this date), 07:3x–08:4x UTC
+
+🔵 **APPEND-ONLY page. This section is added above p121's and nothing below it is edited.**
+
+🟢 **`Gap 402` is no longer a mystery: it is a QUERY defect, and this pass demonstrates it
+rather than counting it again.** p121 offered the explanation and pre-registered `ACTION S` to
+test it. The test ran, and both halves came back as predicted.
+
+### 🟢 🆕 `P122-S` — the mandated phrase returns courses about building AI, not agents that teach
+
+🔴 **What the four mandated searches return, verbatim from this pass's results:**
+
+| returned by *"AI education"* phrasing | what it actually is | ★ |
+|---|---|---|
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | a **course about building agents** | ~67 000 |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | a **tutorial** for building agents without frameworks | ~800 |
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | an **AI-engineering curriculum**; #1 on GitHub Trending 24 May 2026 | — |
+
+🔵 **Every one is educational *content about AI*. None of them is an agent that delivers
+education.** Six passes of "zero new agents" measured the phrase, not the field.
+
+### 🟢 🆕 `P122-S2` — edtech nouns return edtech, and 3 addresses are genuinely new
+
+🟢 **`ACTION S` re-ran discovery with `LMS`, `SIS`, `autograder`, `student information system`,
+`learning analytics`, `proctoring`, `curriculum alignment`, `gradebook` — once globally and once
+per region. The clause was *refuted if zero genuinely new addresses*. Three survived
+verification, so it is NOT REFUTED** — and the character of the yield matters more than the count.
+
+| address | ★ | licence, measured from the tree | verdict |
+|---|---|---|---|
+| [`Koha-Community/Koha`](https://github.com/Koha-Community/Koha) | **594** | 🟡 **GPL-3.0** — `main/LICENSE`, 35 151 B | 🟢 **new, real.** The world's most deployed open-source **integrated library system**. Default branch `main`, resolved by `git ls-remote --symref` |
+| [`themeum/tutor`](https://github.com/themeum/tutor) | **129** | 🟡 **GPL-3.0** — `master/LICENSE`, 35 149 B | 🟢 **new, real, and regionally significant:** Tutor LMS is the **leading LMS plugin in Brazil at 22.4 %** of LMS-carrying sites (wmtips, 2026) |
+| [`linil/centreSIS`](https://github.com/linil/centreSIS) | **0** | 🟡 **GPL-2.0** — `master/LICENSE`, 15 235 B | 🟡 **new and real but dormant** — 191 commits, 0★, and its own upstream moved to a fork. Recorded so the next pass does not rediscover it |
+
+🔴 **None of the three is an agent.** Edtech nouns return **platforms**. So `Gap 402` splits into
+two findings that should never again be reported as one: the *query* was wrong (proved), **and**
+the open-source **agent** layer for education really is thin (still true).
+
+### 🔴 🆕 `P122-G` — three of this pass's six candidate addresses DO NOT EXIST
+
+🔴 **Searches returned product NAMES without addresses, and an address assembled from a product
+name is a fabrication.** All three returned **404** on the rendered page and failed
+`git ls-remote`:
+
+| constructed address | product the search actually named | status |
+|---|---|---|
+| `studip/studip` | Stud.IP (Göttingen campus system) | 🔴 **404** |
+| `OpenEduCat-Inc/OpenEduCat` | OpenEduCat (education ERP, LGPL-3.0) | 🔴 **404** |
+| `Opigno/opigno_lms` | Opigno (Drupal LMS) | 🔴 **404** |
+
+🔴 **They would have been published as *"no licence file"*, because a licence probe over
+`raw.githubusercontent.com` returns 404 for a missing file and for a missing repository alike.**
+🟢 **Fixed: `resolve_head.sh` uses `git ls-remote --symref`, which separates the two and returns
+the real default branch in one call.** The three products are real; this KB simply does not have
+their addresses, and says so rather than guessing.
+
+### 🔵 Regional signals this pass, including the two gaps stated as absences
+
+| region | education-specific signal found | state |
+|---|---|---|
+| **North America** | CMU + Gates Foundation **$55 M** into gateway-course courseware; OpenAI country-level education programme with 8 national partners (Q1 2026); **71 %** of US teachers untrained, **10 %** of institutions with formal AI guidelines; regulation fragmented (Colorado, Texas piecemeal; no FDA-equivalent for edtech) | 🟢 adequate |
+| **EMEA** | 🔴 **demand side still a measured absence.** The regional query returned only cross-industry material: EU AI Act (education AI = high-risk), CompTIA **94 %** likely to invest in AI training 2026, Workday **38 %** not yet piloting. 🟢 **Supply side is now strong** — see `repos/foundations.md` `P122-EMEA`: 13 namespace-placed addresses, two national agencies | 🟡 half-filled |
+| **APAC** | TCS + Pearson multi-year AI learning alliance; LearnUpon APAC HQ in Sydney with Create+ AI authoring; OpenAI appoints ANZ policy lead as Canberra tightens AI governance; AI **sovereignty** to shape infrastructure for ~half of APAC firms (Forrester). 🔴 **Ministry-level education policy and edtech market data: still absent** | 🟡 thin |
+| **LATAM** | UNESCO IESALC + UNU-IAS working paper — **200 institutions, 19 countries**; Digital Education Council LATAM 2026 — **92 % students / 79 % faculty**, 30 000+ responses, 29 institutions, with Tec de Monterrey's IFE; only **30 %** of LatAm universities have published AI policies; Chile national AI policy since 2021; Brazil and Colombia have strategies without education-specific rules; Mexico's SEP/ANUIES non-binding; ILIA index 3rd edition (IDB/CEPAL) | 🟢 best-evidenced |
+
+
 ## 🟢 Pass 121 — 2026-10-11 (eighth pass of this date), 06:3x–07:2x UTC
 
 🔵 **APPEND-ONLY page. This section is added above p120's and nothing below it is edited** —

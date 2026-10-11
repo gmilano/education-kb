@@ -4,6 +4,225 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Hundred-and-twenty-second pass, 2026-10-11 — **all four pre-registered actions DISCHARGED**; **`ACTION C` and `ACTION D` discharged after five passes and BOTH REFUTED**; 🔴 **`ACTION V` was orphaned in p121's instrument README and `ACTION T` caught it on its first run**; 🔴 **`P122-H` — the census's own false-positive rate reached 95 %**; `Gap 402` RESOLVED as a query defect; `P122-A`–`P122-H`, `ACTION W`–`Z` adopted
+
+🟢 **Instrument: `compose/code/p122-prose-licence-census/`. `test_p122.sh` — **50 passed / 0
+failed**, fully offline. 13 fixtures, each a real licence file that broke an earlier build.**
+
+### 🔴 `P122-H` — stated first, because it disqualifies most of what this pass could have published
+
+🔴 **`ACTION R` was built three times. Each build flagged defects; verification destroyed almost
+all of them.**
+
+| build | candidates | survived verification | false-positive rate |
+|---|---|---|---|
+| 1 — line-scoped, token anywhere on the line | 25 | 7 | 72 % |
+| 2 — + correction guard, multi-token guard | 11 | 1 | 91 % |
+| 3 — paragraph-unwrapped, proximity-attributed | 59 *(high-consequence subset)* | **3** | **95 %** |
+
+🔴 **The cause is structural, not carelessness: these pages record licences with per-artifact
+precision, and any census that reduces a repository to ONE token is less precise than the text it
+audits.** Verified examples the census called defects and which are correct:
+
+| row | what the page says | why the census was wrong |
+|---|---|---|
+| `microsoft/autogen` | *"MIT (`LICENSE-CODE`) · `LICENSE` is CC-BY-4.0 for docs"* | both files exist; the scan read `LICENSE` only |
+| `haolpku/K12-KGraph` | *"MIT code / 🔴 CC BY-NC-SA data"* | correct, and strictly more informative |
+| `qed42/ai-accessibility-checker` | *"MIT badges over a 404"* | the sentence already said what the scan "found" |
+| `moodle/moodle` flagged BSD-3-Clause | never claimed | the token belongs to `jupyterhub/jupyterhub`, the adjacent table row |
+| `jcputney/scorm-again (354★)` | never claimed | the `Apache-2.0` belongs to `yetanalytics/lrsql`, the previous list item |
+
+🟢 **The generalisable rule, and `ACTION W`: a census may not publish a defect rate until it has
+been scored against rows known to be CORRECT.** An instrument that has never been shown a correct
+row it mishandles has not been calibrated, and its rate is a property of the instrument.
+🔵 **This is p121's "rate measured on a selected sample" lesson one level up: p121 checked whether
+its denominator was honest; p122 had to check whether its detector was.**
+
+### 🟢 The four actions p121 pre-registered, all discharged
+
+| action | clause | verdict |
+|---|---|---|
+| **`ACTION R`** | extend the licence census to PROSE claims. *Refuted if fewer than 3 prose licence claims disagree with the tree* | 🟢 **DISCHARGED, NOT REFUTED — on exactly 3 verified claims.** 🔴 **All 3 are ONE address (`fwu-de/ais-chat`) on 2 pages; counted by address the clause would FAIL, and that is recorded rather than smoothed** |
+| **`ACTION S`** | re-run discovery with edtech nouns. *Refuted if that set also returns zero genuinely new addresses* | 🟢 **DISCHARGED, NOT REFUTED — 3 genuinely new and verified** (`Koha-Community/Koha` 594★ GPL-3.0, `themeum/tutor` 129★ GPL-3.0, `linil/centreSIS` GPL-2.0 dormant) |
+| **`ACTION T`** | assert mechanically that ledger, root README and newest instrument README name the same pass and the same open actions. *Refuted if all three already agree* | 🟢 **DISCHARGED, NOT REFUTED — and it fired on its first run**, see `P122-F` |
+| **`ACTION U`** | normalise slug case at every join. *Refuted if fewer than 2 addresses change verdict* | 🟢 **DISCHARGED, NOT REFUTED — 76 addresses double-counted**: 1 795 case-sensitive vs 1 719 folded, across **73** folded keys, 3 of them carrying three spellings |
+
+### 🔴 `P122-F` — `ACTION V` existed in ONE of the three records, and `ACTION T` is why we know
+
+🔴 **p121 pre-registered an `ACTION V` in `compose/code/p121-stale-token-crosspage/README.md` and
+in neither the root `README.md` nor this ledger.** It is the exact failure `P121-G` diagnosed —
+a pass writing its assignment where the next pass does not look — recurring **in p121's own
+output, one pass after p121 named it** and pre-registered `ACTION T` to catch it.
+
+| record | newest pass named | open actions named |
+|---|---|---|
+| root `README.md` | 121 | B C D N O P Q R S T U |
+| `intel/open-gaps.md` | 121 | B C D N O P Q R S T U |
+| newest instrument README | p121-* present | C D P Q R S T U **V** |
+
+🟢 **`ACTION V` recovered, clause verbatim:** replace the vocabulary-based correction guard with an
+explicit machine-readable marker (e.g. a trailing `<!--corrected-->`), *refuted if fewer than 10
+existing rows would need the marker back-filled*. 🟢 **MEASURED this pass: 57 inline
+`⚠️ **was` markers across 8 files, and exactly 1 explicit marker exists. NOT REFUTED.**
+🟡 **Carried to p123 for implementation** — this pass measured it but did not back-fill.
+
+🔴 **`ACTION T` also found that the pass→instrument link is not mechanical.** The `pNNN-` prefix is
+an instrument **index**, not a pass number: it runs to **p1040** across **147** `pNNN-*`
+directories while this KB is on pass 122. `max(pNNN)` answers "largest index", not "newest pass",
+and silently returns an instrument from another era. 🟢 **Only an exact `p{pass}-*` match links
+them, and that works solely because recent passes happened to use their own number.**
+
+### 🔴 `ACTION C` — DISCHARGED after five passes, and REFUTED
+
+🔴 **Clause: refuted if layer P places fewer than 20. It placed 13.** Probed `pom.xml`
+`<groupId>` and Gradle `group` across **1 627** folded addresses; **68** declare a namespace.
+
+🟢 **The refutation is informative rather than empty: all 13 placements are EMEA.** A ccTLD-leading
+namespace (`de.`, `fi.`, `se.`, `ch.`, `nl.`, `uk.ac.`, `eu.`) is a **European university and
+public-agency convention**. North American projects use `org.` (37), `com.` (6), `edu.` (4),
+which place nothing; **APAC and LATAM place zero**.
+
+🟢 **Layer P is not a general placement layer — it is an EMEA public-sector detector**, and five
+passes of carrying it forward as a general tool is precisely why it never paid off. 🟢 **It also
+earned its keep once:** it surfaced `ls1intum/Artemis` (**MIT, 816★, TU Munich**), a first-rate
+automated-feedback platform that eight mandated searches never returned. Full table in
+`repos/foundations.md` `P122-EMEA`. 🔴 **CLOSED as refuted; it must not be re-listed as open.**
+
+### 🔴 `ACTION D` — DISCHARGED after five passes, and REFUTED
+
+🔴 **Clause: requires placing ≥ 10 of the census. It placed 8 of 18 (44 %)** — and the 18 were
+**selected to favour placement** (institutional and national projects), so 44 % is an upper bound
+by construction, which is p121's own lesson applied to this pass's sample.
+
+🟢 **The channel question p118 left open is answered: `github.com` HTML is readable via WebFetch**
+(description, licence and stars), while `curl` gets **403** and `api.github.com` gets **403**.
+p118 recorded `description` as reachable only through the MCP relay's SEARCH endpoint.
+
+🟢 **The sharper result is what layer D can and cannot do.** It places a repository only when the
+description is **written in a national language** or **names a country or national agency**:
+
+| placed by layer D | mechanism |
+|---|---|
+| `opetushallitus/koski` → 🇫🇮 | description is in Finnish |
+| `FWU-DE/ais-chat` → 🇩🇪 | description is in German (*"Der KI-Chatbot für die Schule"*) |
+| `skolverket/dnp-ss12000-reference-api` → 🇸🇪 | names *"the Swedish National Agency for Education"* |
+| `portabilis/i-educar` → 🇧🇷 | names *"do Brasil"* |
+| `bncc-dev/bncc-pacotes` → 🇧🇷 | Portuguese + names the Brazilian curriculum |
+| `sidneybissoli/educabr` → 🇧🇷 | names *"Brazilian"* and **INEP** |
+| `mitodl/open-learning-ai-tutor` → 🇺🇸 | names *"MIT open Learning"* |
+
+🔴 **It does NOT place via the owner/org name (`GEMLab-HKU`, `eth-lre`, `ls1intum` — that is
+layer 0), via README prose (layer R), or via the licence file's copyright holder.** Three channels
+that look like layer D and are not, which is how p117's estimate of its reach was formed.
+
+🔴 **The `P800` trap caught live, exactly as p118 warned.**
+[`xGabrielCv/Auto-Matricula-SIGAA-UnB`](https://github.com/xGabrielCv/Auto-Matricula-SIGAA-UnB)'s
+description names **SIGAA da UnB**, while its README states the project has **no affiliation,
+authorisation or endorsement from the Universidade de Brasília**. 🟢 **The defensible placement is
+Brazil (language + a Brazilian federal university system), NOT UnB-affiliated.** A description
+names what a project targets, not who built it. 🔴 **CLOSED as refuted.**
+
+### 🟢 `Gap 402` — RESOLVED as a query defect, after six passes of counting zero
+
+🟢 **p121's hypothesis is confirmed by running the test rather than the count.** The mandated
+phrase returns educational content **about** AI, not agents that **deliver** education:
+`microsoft/ai-agents-for-beginners` (~67 000★, a course), `pguso/agents-from-scratch` (~800★, a
+tutorial), `rohitg00/ai-engineering-from-scratch` (#1 on GitHub Trending, 24 May 2026, a
+curriculum).
+
+🔴 **But the gap splits in two and must never again be reported as one.** The **query** was wrong
+(proved), **and** the open-source **agent** layer for education really is thin: edtech nouns
+returned three new addresses and **none of them is an agent** — an ILS, a WordPress LMS plugin and
+a dormant SIS fork.
+
+### 🔴 `P122-G` — three candidate addresses this pass DO NOT EXIST
+
+🔴 **`studip/studip`, `OpenEduCat-Inc/OpenEduCat`, `Opigno/opigno_lms` — all 404.** Each was
+constructed from a product **name** in vendor prose, because the searches returned products
+(Stud.IP, OpenEduCat, Opigno) and never their addresses.
+
+🔴 **They would have been published as *"no licence file"***, because a probe over
+`raw.githubusercontent.com` returns 404 for a missing file and a missing repository alike.
+🟢 **Fixed: `git ls-remote --symref` separates the two and returns the real default branch in one
+call** — which also retires the guessing that cost p120 **410 of 462** probes. 🟢 **All 7
+addresses this KB could not previously resolve do exist**, and 4 became read grants once the real
+branch was known.
+
+### 🟢 `P122-A` — the one real defect, and where this KB's licence errors concentrate
+
+🟢 **[`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) is AGPL-3.0** (`main/LICENSE`,
+34 523 B; no second licence file; `package.json` declares none; rendered page agrees). This KB
+says AGPL-3.0 in **47** cells, and carried a permissive claim in **3** live places, all repaired:
+
+| page | what it said |
+|---|---|
+| `compose/patterns.md` prose | 🔴 *"MIT, so a closed derivative is permitted"* — two lines under a table reading AGPL-3.0, inside a buildable pattern |
+| `compose/patterns.md` ASCII diagram | 🔴 `(MIT, broker: …)` — inside a fenced block, which every census p118→p121 skips **by design** |
+| `intel/market.md` | 🔴 listed under *"the live permissive EMEA shelf, **measured this pass**"* |
+
+🔵 **`P121-A3` was the same shape on the LATAM shelf one pass earlier. The pattern is now named:
+this KB's licence errors concentrate under the phrase *"measured this pass"*, because it suppresses
+a reader's instinct to re-check.** 🔴 **And two of the three sat where no census was looking —
+prose and a code fence. A licence claim is wherever a reader finds one.**
+
+### 🟢 `P122-B`…`P122-E` — five licence-reading defect classes, each with a fixture
+
+| class | the trap | fixture |
+|---|---|---|
+| `P122-B` | **a NAME must never outvote a TITLE.** GPL-2.0's own preamble names the Lesser GPL at byte 853 of 18 092, so every GPL-2.0 file reads as LGPL | `gpl2-preamble-names-lesser.txt` |
+| `P122-B2` | EPL-2.0's secondary-licence clause names *"GNU General Public License, version 2.0"*; MPL-2.0 names the GPL and AGPL | `epl2-secondary-names-gpl2.txt`, `mpl2-secondary-names-gpl.txt` |
+| `P122-C` | a **split grant** has no single token — `LICENSE` vs `LICENSE-CODE`, code vs docs vs data. Reporting whichever name appears first is arbitrary | `mit-split-grant-names-cc.txt`, `split-unmarked-code-vs-content.txt` |
+| `P122-D` | a split marker is **language-specific** — pt-BR *"usa duas licenças"*. An English-only marker list reads a dual licence as a single one | `split-grant-portuguese.txt` |
+| `P122-E` | LGPL-3.0 committed **without its title line**, identifiable only by its own incorporation sentence; and the R/CRAN **stub** (`YEAR:` + `COPYRIGHT HOLDER:` only, grant in `DESCRIPTION`) which must never read as "no grant" | `lgpl3-headerless.txt`, `r-stub-licence.txt` |
+
+🟢 **Corrections to this KB's own earlier readings, in its favour:**
+`SafeExamBrowser/seb-server` **is MPL-2.0** and this KB said so — p122's first classifier wrongly
+read it as AGPL-3.0 because MPL-2.0 names the AGPL. `rstudio/ggcheck` and `sidneybissoli/educabr`
+are **MIT**, resolved from `DESCRIPTION` (*"License: MIT + file LICENSE"*), not from their stub
+LICENSE files.
+
+🔴 **Upstream self-contradiction, not this KB's error:**
+[`eth-lre/MathTutorBench`](https://github.com/eth-lre/MathTutorBench) carries **CC BY 4.0** in its
+README badge and **CC BY-SA 4.0** in its footer.
+
+🔴 **The global AES constraint re-confirmed from a second, independent repository:**
+[`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) —
+code **MIT**, content **CC BY 4.0**, annotated CLEAR and **PERSUADE 2.0 corpora CC BY-NC-SA 4.0
+(NonCommercial)**.
+
+### 🟡 What this pass did NOT do
+
+🔴 **216 of the 242 scored prose candidates are unverified.** They are recorded as candidates, not
+published as defects, because `P122-H` disqualifies the rate that produced them. `ACTION X`
+verifies them.
+🔴 **`ACTION V` was measured, not implemented** — 57 rows still need the marker.
+🔴 **EMEA and APAC demand-side data remain measured absences**, four and three consecutive passes
+respectively.
+
+### 🟢 Pre-registered for p123, each with its refutation clause — written into ALL THREE records
+
+🟢 **`ACTION W`** — calibrate every census in this KB as `ACTION R` was forced to be: score it
+against rows known to be CORRECT and publish the false-positive rate beside the defect count.
+🔴 *Refuted if no existing instrument's rate exceeds 20 %.*
+
+🟢 **`ACTION X`** — verify the **216 remaining candidates**, in table cells as well as prose, with
+a multi-file grant reader rather than one token per address. 🔴 *Refuted if fewer than 5 survive.*
+
+🟢 **`ACTION Y`** — replace every guessed branch in this KB's toolchain with `resolve_head.sh`,
+and re-probe this pass's **56 `NO-FILE`** addresses to separate "no grant" from "no repository".
+🔴 *Refuted if fewer than 3 of the 56 do not exist.*
+
+🟢 **`ACTION Z`** — record a repository's grant as a SET of (path → token) pairs; read
+`LICENSE-CODE`, `LICENSE-DOCS`, `LICENSE-DADOS` and `DESCRIPTION` wherever `LICENSE` disagrees
+with the page. 🔴 *Refuted if fewer than 8 addresses carry more than one grant file.*
+
+🟡 **`ACTION V`** — **carried forward, clause verbatim**: emit `<!--corrected-->` on every repaired
+row instead of teaching the guard new vocabulary. **57 rows need back-filling; 1 marker exists.**
+
+🔴 **`ACTION C` and `ACTION D` are CLOSED as refuted after five passes.** Their reach is now
+characterised rather than assumed. Neither may be re-listed as open, and neither may be reported
+later as discharged by any other pass.
+
 ## 🟢 Hundred-and-twenty-first pass, 2026-10-11 — **all four pre-registered actions DISCHARGED, two REFUTED on their own clauses**; 🔴 **`P121-G` — THIS LEDGER WAS TWO PASSES STALE**; 🔴 **`P121-C` — a new defect class: OVER-restrictive licence cells**; **`Gap 402` weakens a SIXTH consecutive pass**; 10 cells repaired; `P121-A`–`P121-G`, `ACTION R`–`S` adopted
 
 🟢 **Instrument: `compose/code/p121-stale-token-crosspage/`. `test_p121.sh` — **27 passed / 0

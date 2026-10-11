@@ -6,11 +6,91 @@ updated: 2026-10-11
 
 # Education — compose patterns
 
-**Pass 121, 2026-10-11.** ⏱️ **Eighth pass of this date** (window **06:3x → 07:2x UTC**).
+**Pass 122, 2026-10-11.** ⏱️ **Ninth pass of this date** (window **07:3x → 08:4x UTC**).
 
-🟢 **Instrument: `compose/code/p121-stale-token-crosspage/`, discharging `ACTIONS N, O, P, Q`.
-`test_p121.sh` **27 passed / 0 failed**, fully offline. This page carried **0** of the 10 cells
-repaired in this commit — the first pass in four in which it carried none.**
+🟢 **Instrument: `compose/code/p122-prose-licence-census/`, discharging `ACTION R, S, T, U`.
+`test_p122.sh` **50 passed / 0 failed**, fully offline.**
+
+🔴 **This page carried the worst defect of the pass and it is repaired (`P122-A`).** A pattern's
+prose read *"`ais-chat` … German public-sector origin, **MIT, so a closed derivative is
+permitted**"* — two lines below a table in the same section reading 🔴 **AGPL-3.0**. A second
+instance sat inside an ASCII deployment diagram, where every licence census from p118 to p121
+skips by design. 🔵 **A compose pattern is the one place in this KB a reader acts on directly, so
+a wrong licence here is the most expensive kind.**
+
+## 🟢 🆕 `P122-P1` — EMEA public-sector autograding, every component licence-verified this pass
+
+🟢 **Why this pattern exists: `ACTION C` found that a ccTLD-leading package namespace is a
+European university and public-agency marker, which surfaced a coherent, state-maintained,
+licence-verified stack that no mandated search has ever returned.**
+
+```
+  ┌──────────────── institution estate, data stays in jurisdiction ─────────────────┐
+  │                                                                                  │
+  │  learners ─┤  ls1intum/Artemis        (MIT, 816★, TU Munich)                     │
+  │            │     │  interactive exercises + automated feedback                    │
+  │            │     ├──▶ ls1intum/Ares2   (TU Munich)  ── grading sandbox            │
+  │            │     ├──▶ jplag/jplag      (de.jplag)   ── plagiarism / integrity     │
+  │            │     └──▶ SafeExamBrowser/seb-server (MPL-2.0, ETH Zurich) ── lockdown │
+  │            │                                                                      │
+  │  registry ─┤  skolverket/dnp-ss12000-reference-api (Apache-2.0)                  │
+  │            │     SS 12000 — Sweden's school-interoperability standard             │
+  │            │     └──▶ opetushallitus/koski (EUPL, Finland) ── attainments of record│
+  │            │                                                                      │
+  │  identity ─┤  FWU-DE/fwu-kc-extensions (Apache-2.0) ── Keycloak, German states     │
+  └──────────────────────────────────────────────────────────────────────────────────┘
+```
+
+**Wiring, concretely.** Artemis is the learner surface and the only component a studio should
+fork — it is **MIT**, so a closed derivative is permitted (verified on the rendered page, not
+inferred). Ares2 is its grading sandbox and travels with it. JPlag runs as a post-submission
+batch over Artemis's repositories. `seb-server` is **MPL-2.0**: file-level copyleft, so keep
+customisations in new files and it stays shippable. Integration with the national layer goes
+through **SS 12000** — Sweden publishes the reference API under **Apache-2.0**, which is the
+cheapest legitimate way into a Nordic public tender. Koski is **EUPL**, a copyleft licence
+compatible with the GPL family: read from it, do not vendor it.
+
+| component | licence, measured | may a studio ship a closed derivative? |
+|---|---|---|
+| `ls1intum/Artemis` | 🟢 **MIT** | 🟢 **yes** |
+| `thm-mni-ii/feedbacksystem` | 🟢 **Apache-2.0** | 🟢 yes, patent grant included |
+| `skolverket/dnp-ss12000-reference-api` | 🟢 **Apache-2.0** | 🟢 yes |
+| `FWU-DE/fwu-kc-extensions` | 🟢 **Apache-2.0** | 🟢 yes |
+| `SafeExamBrowser/seb-server` | 🟡 **MPL-2.0** | 🟡 per-file copyleft — new files stay yours |
+| `opetushallitus/koski` | 🟡 **EUPL** | 🔴 no — integrate, do not embed |
+| `FWU-DE/ais-chat` | 🔴 **AGPL-3.0** | 🔴 **no** — deploy unmodified, or publish source |
+
+## 🟢 🆕 `P122-P2` — LATAM long tail: the WordPress plugin layer, not Moodle
+
+🔴 **Correcting an assumption this KB has carried implicitly:** LATAM's open LMS estate is not
+only Moodle. Measured this pass — **Tutor LMS holds 22.4 % of Brazil's** LMS-carrying sites and
+**LearnPress 24 % of Mexico's** (wmtips, 2026). The plugin layer is where the long tail is.
+
+```
+  tutor LMS (themeum/tutor, GPL-3.0, 129★)  ← the estate that already exists
+        │  REST + WP hooks
+        ▼
+  curriculum alignment:  bncc-dev/bncc-pacotes   (MIT code + CC BY 4.0 data)
+        │                bncc-dev/bncc-benchmark (MIT code + CC BY 4.0 data)
+        │  BNCC codes = Brazil's national curriculum, MEC/CNE
+        ▼
+  system of record:      portabilis/i-educar (GPL-2.0, 718★)
+                         "o maior software livre de educação do Brasil",
+                         originally built by the city of Itajaí, SC
+```
+
+**Wiring, concretely.** Tutor LMS is GPL-3.0 and lives inside WordPress, so the AI layer belongs
+**beside** it over REST, not inside it as patched plugin code — that keeps the studio's code out
+of the GPL boundary. The `bncc-dev` packages are the right alignment substrate because their
+grant is split in the client's favour: **MIT for the code, CC BY 4.0 for the curriculum data**
+(both read from the files this pass; the data is attribution-only, not NonCommercial). `i-educar`
+is **GPL-2.0** and is a system of record — integrate over its API, never vendor it.
+
+🔴 **The licence trap in this region, stated plainly:** `leemonade/leemons` looks like the
+natural LXP for a Spanish-speaking engagement and is **not open source** — a "Fair code"
+/ Sustainable Use grant restricted to education professionals, read directly from
+`main/LICENSE.md` this pass. Do not place it in a LATAM or EMEA proposal.
+
 
 ## 🟢 🆕 `P121-PAT-1` — bidirectional licence gate at engagement intake (2–3 days)
 
@@ -931,7 +1011,7 @@ client's estate, with every component derived as `local` or `broker` this pass.*
   learners ─┤  openedx/edx-platform  (AGPL-3, local, pinned, checked)    │
             │          │ LTI 1.3 / xAPI                                  │
             │          ▼                                                 │
-            │  fwu-de/ais-chat  (MIT, broker: langchain + base_url)       │
+            │  fwu-de/ais-chat  (AGPL-3.0, broker: langchain+base_url)   │
             │          │ OpenAI-compatible HTTP                          │
             │          ▼                                                 │
             │  ollama/ollama  (MIT, local, pinned)  ── GGUF weights       │
@@ -1161,8 +1241,11 @@ and this stack produces one by construction rather than by report-writing.**
 | national-agency services | the 8 [`opetushallitus`](https://github.com/opetushallitus) repos | carried | 🔴 **1 of 8 PR-gated** | 🟢 **8 of 8 `pinned`** |
 | agent graph | [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | 🟢 **MIT** | 🟢 `checked` | 🟢 `pinned` |
 
-🟢 **Wiring: `ais-chat` is the teacher-facing surface (German public-sector origin, MIT, so
-a closed derivative is permitted); ILIAS holds courses and assessment; a LangGraph graph
+🟢 **Wiring: `ais-chat` is the teacher-facing surface (German public-sector origin, 🔴 **AGPL-3.0**
+— `P122-A`, repaired this pass: a hosted derivative MUST publish its source, so deploy it
+unmodified or budget for the source release; it was written here as *"MIT, so a closed derivative
+is permitted"*, directly under a table in the same section reading 🔴 AGPL-3.0);
+ILIAS holds courses and assessment; a LangGraph graph
 mediates every call and is the single place where retention, logging and
 purpose-limitation live. For a Finnish deployment, the `opetushallitus` services
 (`koski`, `ataru`, `ehoks`, `eperusteet`, `oppijanumerorekisteri`, `organisaatio`,

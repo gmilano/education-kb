@@ -6,11 +6,55 @@ updated: 2026-10-11
 
 # Education — foundational repos
 
-**Pass 121, 2026-10-11.** ⏱️ **Eighth pass of this date** (census window **06:3x → 07:2x UTC**).
+**Pass 122, 2026-10-11.** ⏱️ **Ninth pass of this date** (census window **07:3x → 08:4x UTC**).
 
-🟢 **Instrument: `compose/code/p121-stale-token-crosspage/`, discharging `ACTIONS N, O, P, Q`.
-`test_p121.sh` **27 passed / 0 failed**, fully offline. This page carried **2** of the 10 cells
-repaired in this commit.**
+🟢 **Instrument: `compose/code/p122-prose-licence-census/`, discharging `ACTION R, S, T, U` and
+closing the five-pass-old `ACTION C` and `ACTION D` as **refuted**. `test_p122.sh`
+**50 passed / 0 failed**, fully offline.**
+
+🟢 **This page gains a 13-row EMEA public-sector shelf** that no mandated search has ever
+returned — two national education agencies, the European Commission, TU Munich, ETH Zurich,
+Oxford and Amsterdam — found by reading package namespaces out of the tree (`ACTION C`).
+
+## 🟢 🆕 `P122-EMEA` — the EMEA public-sector shelf, found by package namespace (`ACTION C`)
+
+**Pass 122, 2026-10-11.** `ACTION C` — carried unattempted for five passes — probed `pom.xml`
+`<groupId>` and Gradle `group` across **1 627** folded addresses. **68** declare a namespace;
+**13** are placed by it. 🔴 **The action is REFUTED on its own clause (it required ≥ 20).**
+🟢 **But all 13 placements are EMEA, and that is the reusable result:** a ccTLD-leading
+reverse-DNS namespace (`de.`, `fi.`, `se.`, `ch.`, `nl.`, `uk.ac.`, `eu.`) is a **European
+university and public-agency convention**. North American projects use `org.` (37), `com.` (6)
+and `edu.` (4), which place nothing. APAC and LATAM: **zero**.
+
+🟢 **Layer P is therefore not a general placement layer — it is an EMEA public-sector detector.**
+Five passes of carrying it forward as a general tool is why it never paid off.
+
+| address | namespace | country | licence, measured this pass | what it is |
+|---|---|---|---|---|
+| [`opetushallitus/koski`](https://github.com/opetushallitus/koski) | `fi.vm.sade` | 🇫🇮 Finland | 🟢 **EUPL** (README: *"Koski on EUPL-lisensoitu sovellus"*) | the Finnish National Agency for Education's **national study-rights and attainments registry**. A state-run system of record, in the open |
+| [`opetushallitus/oppijanumerorekisteri`](https://github.com/opetushallitus/oppijanumerorekisteri) | `fi.vm.sade.oppijanumerorekisteri` | 🇫🇮 Finland | carried | national **learner-identifier** registry — the join key for every other service |
+| [`opetushallitus/organisaatio`](https://github.com/opetushallitus/organisaatio) | `fi.vm.sade.organisaatio` | 🇫🇮 Finland | carried | national **institution** registry |
+| [`skolverket/dnp-ss12000-reference-api`](https://github.com/skolverket/dnp-ss12000-reference-api) | `se.skolverket.service.provisioning` | 🇸🇪 Sweden | 🟢 **Apache-2.0**, 5★ | **reference implementation of SS 12000**, Sweden's school-interoperability standard, published by the Swedish National Agency for Education itself |
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | `de.tum.cit.aet.artemis` | 🇩🇪 Germany | 🟢 **MIT**, 816★ | interactive learning with automated feedback, TU Munich |
+| [`ls1intum/Ares2`](https://github.com/ls1intum/Ares2) | `de.tum.cit.ase` | 🇩🇪 Germany | carried | Artemis's auto-grading sandbox |
+| [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | `de.thm.ii` | 🇩🇪 Germany | 🟢 **Apache-2.0**, 24★ | AI feedback for students, TH Mittelhessen |
+| [`jplag/jplag`](https://github.com/jplag/jplag) | `de.jplag` | 🇩🇪 Germany | carried | plagiarism detection |
+| [`FWU-DE/fwu-kc-extensions`](https://github.com/FWU-DE/fwu-kc-extensions) | `de.intension` | 🇩🇪 Germany | 🟢 Apache-2.0 | Keycloak extensions behind the German states' school identity layer |
+| [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | `ch.ethz.seb` | 🇨🇭 Switzerland | 🟢 **MPL-2.0** — 16 725 B, title line *"Mozilla Public License Version 2.0"* | exam-lockdown server, ETH Zurich |
+| [`oxctl/spring-security-lti13`](https://github.com/oxctl/spring-security-lti13) | `uk.ac.ox.ctl` | 🇬🇧 United Kingdom | carried | LTI 1.3 for Spring Security, University of Oxford |
+| [`apereo-learning-analytics-initiative/Larissa`](https://github.com/apereo-learning-analytics-initiative/Larissa) | `nl.uva` | 🇳🇱 Netherlands | carried | learning analytics, University of Amsterdam |
+| [`european-commission-empl/european-digital-credentials`](https://github.com/european-commission-empl/european-digital-credentials) | `eu.europa.ec.empl.edci` | 🇪🇺 EU | carried | the EU's own digital-credentials stack (EDCI) |
+
+🟢 **`SafeExamBrowser/seb-server` is MPL-2.0 and this page already said so.** This pass's first
+classifier read it as AGPL-3.0 because **MPL-2.0 names the GPL and AGPL in its secondary-licence
+section**. The page was right; the instrument was wrong. Fixture:
+`fixtures/mpl2-secondary-names-gpl.txt`.
+
+🔵 **Why this matters for an EMEA engagement.** p121 recorded EMEA as a *measured absence* on the
+demand side, and that still holds. This is the **supply** side, and it is unusually strong: two
+national agencies (Finland, Sweden) publish their systems of record as open source, the EU
+publishes its credentials stack, and SS 12000 gives a public standard to integrate against. An
+EMEA proposal can cite named, licence-verified, state-maintained code rather than vendor claims.
 
 ## 🟢 🆕 `P121-N` — the foundations shelf is 98 % granted, and last pass's headline said 59 %
 

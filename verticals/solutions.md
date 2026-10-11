@@ -6,11 +6,37 @@ updated: 2026-10-11
 
 # Education — vertical platforms
 
-**Pass 121, 2026-10-11.** ⏱️ **Eighth pass of this date** (window **06:3x → 07:2x UTC**).
+**Pass 122, 2026-10-11.** ⏱️ **Ninth pass of this date** (window **07:3x → 08:4x UTC**).
 
-🟢 **Instrument: `compose/code/p121-stale-token-crosspage/`, discharging `ACTIONS N, O, P, Q`.
-`test_p121.sh` **27 passed / 0 failed**, fully offline. 🔴 **This page carried 6 of the 10 cells
-repaired in this commit — more than every other page combined, and in both directions.**
+🟢 **Instrument: `compose/code/p122-prose-licence-census/`, discharging `ACTION R, S, T, U` and
+closing `ACTION C`/`ACTION D` as refuted. `test_p122.sh` **50 passed / 0 failed**, fully
+offline. This page carried **0** live defects this pass.**
+
+## 🟢 🆕 `P122-V` — two new platforms, and a confirmation that matters commercially
+
+| platform | address | ★ | licence, measured from the tree | where it fits |
+|---|---|---|---|---|
+| **Koha** | [`Koha-Community/Koha`](https://github.com/Koha-Community/Koha) | **594** | 🟡 **GPL-3.0** — `main/LICENSE`, 35 151 B | the most deployed open-source **integrated library system**. Every university engagement has a library; this is the system already in it. GPL-3.0 ⇒ deploy and extend, do not ship closed |
+| **Tutor LMS** | [`themeum/tutor`](https://github.com/themeum/tutor) | **129** | 🟡 **GPL-3.0** — `master/LICENSE`, 35 149 B | WordPress LMS plugin. 🟢 **The LATAM fact that makes it relevant: 22.4 % of Brazil's LMS-carrying sites run Tutor LMS, and 24 % of Mexico's run LearnPress** (wmtips, 2026) — the WordPress plugin layer, not Moodle, is where a large part of LATAM's long tail actually is |
+| **centre SIS** | [`linil/centreSIS`](https://github.com/linil/centreSIS) | 0 | 🟡 **GPL-2.0** — `master/LICENSE`, 15 235 B | 🟡 **do not start here.** Real (191 commits) but dormant, and its own upstream moved to a fork. Listed so it is not rediscovered as new |
+
+🔴 **`leemonade/leemons` is confirmed NOT open source, on a direct read of its grant.**
+`main/LICENSE.md`, 10 830 B: *"Portions of this software are licensed as follows… Content outside
+of the above mentioned files or restrictions is available under the **"Fair code License"**"* —
+*"the conditions established by the "Sustainable Use License""*, issued by Leemons Edtech
+Solutions SL, Madrid, and **directed exclusively at professionals in education**. This page's
+`P121` reading stands and is now quoted from the file itself. 🔵 **This is the n8n licence family
+arriving on the education shelf** — a licence that looks open, is published on GitHub, and
+forbids the thing a studio would do with it.
+
+🟢 **Two SIS platforms verified on their own grants this pass**, both GPL and both real:
+[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) (**345★**, *"commercial grade…
+Student Information System"*, GNU GPL) and
+[`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) (**645★**,
+GPL-2.0). 🔵 **The open SIS layer is uniformly copyleft.** There is no permissive SIS of
+consequence on this shelf — `rubelw/osss` is Apache-2.0 but near-empty — so any SIS engagement is
+a deploy-and-extend engagement, not a fork-and-ship one. That is a pricing fact, not a technical
+one.
 
 ## 🔴 🆕 `P121-C` — this shelf marked two usable platforms "🔴 no", and that error class had never been looked for
 

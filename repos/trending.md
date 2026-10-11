@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Pass 122 — 2026-10-11 (ninth pass of this date), 07:3x–08:4x UTC
+
+🔵 **APPEND-ONLY page. This section is added above p121's and nothing below it is edited** —
+including rows this pass found stale. Stale tokens in the history are listed here, not rewritten.
+
+🟢 **Three new verified addresses, three fabricated ones rejected, and a new channel that makes
+the difference detectable.**
+
+| address | ★ | licence, measured | default branch | note |
+|---|---|---|---|---|
+| [`Koha-Community/Koha`](https://github.com/Koha-Community/Koha) | **594** | 🟡 GPL-3.0 (35 151 B) | `main` | integrated library system; the ILS adjacent to every academic-library engagement |
+| [`themeum/tutor`](https://github.com/themeum/tutor) | **129** | 🟡 GPL-3.0 (35 149 B) | `master` | WordPress LMS plugin; **22.4 % of Brazil's** LMS-carrying sites |
+| [`linil/centreSIS`](https://github.com/linil/centreSIS) | 0 | 🟡 GPL-2.0 (15 235 B) | `master` | dormant SIS fork; recorded to stop rediscovery |
+| `studip/studip` | — | — | — | 🔴 **404 — address does not exist** |
+| `OpenEduCat-Inc/OpenEduCat` | — | — | — | 🔴 **404 — address does not exist** |
+| `Opigno/opigno_lms` | — | — | — | 🔴 **404 — address does not exist** |
+
+### 🟢 🆕 `P122-CHANNEL` — `git ls-remote --symref` replaces every guessed branch in this KB
+
+🔴 **p120 needed 462 probes to read 52 licence files. 410 returned `http=404`** — because the
+probe guessed `main`, then `master`, then walked a path list. A 404 from
+`raw.githubusercontent.com` cannot tell you whether the **branch** was wrong, the **path** was
+wrong, or the **repository does not exist**.
+
+🟢 **`git ls-remote --symref https://github.com/<addr> HEAD` answers all three in one call:** a
+public repository returns its symbolic HEAD (so the real default branch is known, not guessed),
+and a missing or private one fails asking for credentials. Measured this pass on the 7 addresses
+this KB could not resolve: **all 7 exist**, and their default branches are now recorded, which
+turned 4 of them from `UNKNOWN` into read grants.
+
+| channel | status through this session's proxy |
+|---|---|
+| `raw.githubusercontent.com` | 🟢 **200** — the only `curl`-readable channel; cannot see metadata |
+| `github.com` HTML via `curl` | 🔴 **403** |
+| `github.com` HTML via WebFetch | 🟢 **readable** — description, licence and stars |
+| `api.github.com` | 🔴 **403** |
+| `git ls-remote --symref` | 🟢 **works** — existence + default branch |
+
+### 🔴 🆕 `P122-STALE` — stale tokens inside this page's history, listed not rewritten
+
+| address | this page's history says | 🟢 measured this pass |
+|---|---|---|
+| [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | MIT / Apache-2.0 in older sections | 🔴 **AGPL-3.0** (34 523 B) — repaired in `compose/patterns.md` and `intel/market.md`, see `P122-A` |
+| [`eth-lre/MathTutorBench`](https://github.com/eth-lre/MathTutorBench) | CC BY 4.0 | 🔴 **the repository contradicts itself** — README badge says *"License: CC BY 4.0"*, footer says *"Creative Commons Attribution-ShareAlike 4.0"*. Not this KB's error; the upstream carries both |
+| [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | MPL-2.0 | 🟢 **MPL-2.0 confirmed** — this pass's first classifier wrongly read it as AGPL-3.0 because MPL-2.0 names the GPL and AGPL in its secondary-licence clause. The page was right |
+
+
 ## 🟢 Pass 121 — 2026-10-11 (eighth pass of this date), 06:3x–07:2x UTC
 
 🔵 **APPEND-ONLY page. Added above p120's section; nothing below is edited.**

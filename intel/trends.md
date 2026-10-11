@@ -6,11 +6,62 @@ updated: 2026-10-11
 
 # Education — current trends
 
-**Pass 121, 2026-10-11.** ⏱️ **Eighth pass of this date** (window **06:3x → 07:2x UTC**).
+**Pass 122, 2026-10-11.** ⏱️ **Ninth pass of this date** (window **07:3x → 08:4x UTC**).
 
-🟢 **Instrument: `compose/code/p121-stale-token-crosspage/`, discharging `ACTIONS N, O, P, Q`.
-`test_p121.sh` **27 passed / 0 failed**, fully offline. This page carried **0** of the 10 cells
-repaired in this commit.**
+🟢 **Instrument: `compose/code/p122-prose-licence-census/`. `test_p122.sh` **50 passed / 0
+failed**, fully offline. This page carried **0** live defects this pass.**
+
+## 🟢 🆕 `P122-T1` — the market-size figures do not agree, and the spread is the finding
+
+🔴 **Four houses, four numbers, same sector, same year.** Any proposal quoting one of these
+should quote the spread, because a client who checks will find a different number.
+
+| source | 2025/2026 base | horizon | implied CAGR |
+|---|---|---|---|
+| IMARC-derived | **$6.4 B** (2025) | $79.6 B by 2034 | ~32 % |
+| Grand View Research | **$8.3 B** (2025) | $57.2 B by 2033 | ~27 % |
+| The Business Research Company | **$7.52 B** (2025) | **$10.6 B by 2026** | ~41 % |
+| MarketsandMarkets (North America only) | **$951 M** (2024) | $2.3 B by 2029 | **15.9 %** |
+
+🔵 **The one figure the houses agree on is the shape, not the size: fast growth from a small base,
+with North America holding ~36 % of spend and APAC growing fastest.** 🔴 **They disagree by a
+factor of ~12 on the 2033/34 endpoint**, because each defines "AI in education" differently
+(tutoring only, vs tutoring + admin + assessment + courseware).
+
+## 🟢 🆕 `P122-T2` — adoption is a student-led phenomenon and institutions are the lagging variable
+
+🟢 **The pattern repeats in every region measured this pass, and it is the most actionable trend
+on this page:** students adopt first, faculty follow, institutions arrive last.
+
+| measure | figure | region |
+|---|---|---|
+| students actively using AI | **92 %** | LATAM (Digital Education Council, 30 000+ responses) |
+| faculty actively using AI | **79 %** | LATAM (same survey) |
+| universities with a **published AI policy** | 🔴 **30 %** | LATAM |
+| institutions with **formal AI guidelines** | 🔴 **10 %** | global/US |
+| US teachers with **no AI training** | 🔴 **71 %** | North America |
+| organisations likely to invest in AI training in 2026 | **94 %** | EMEA (CompTIA, cross-industry) |
+| EMEA organisations **not yet piloting** | 38 % | EMEA (cross-industry) |
+
+🔵 **The gap between 92 % use and 30 % policy is the engagement.** It is not a model problem or a
+platform problem — it is governance, audit trail and purpose limitation on tools already in daily
+use. That work is billable immediately and needs no new AI capability.
+
+## 🟢 🆕 `P122-T3` — sovereignty is becoming the architecture constraint, in two regions at once
+
+🟢 **EMEA**: the EU AI Act classifies education AI as **high-risk**, and the supply side has
+responded in a way this KB can now cite from the tree rather than from commentary — Finland's and
+Sweden's national education agencies publish their own systems of record as open source, and the
+European Commission publishes its credentials stack (see `repos/foundations.md` `P122-EMEA`).
+
+🟢 **APAC**: AI **sovereignty** is forecast to shape infrastructure choices for roughly half of
+APAC firms, OpenAI has appointed an ANZ policy lead as Canberra tightens AI governance and
+copyright rules, and governance lags enablement sharply — **87 %** of organisations encourage AI
+agents while only **47 %** have governance and controls for them.
+
+🔵 **Both regions are converging on the same requirement from opposite directions: the model must
+run where the jurisdiction says it may.** That is why the self-hostable, permissively licensed
+components on these shelves matter more than benchmark scores.
 
 ## 🟢 🆕 `P121-TREND` — five trends, each with the channel that evidences it
 

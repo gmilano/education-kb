@@ -6,14 +6,74 @@ updated: 2026-10-11
 
 # Education — AI agents shelf
 
-**Pass 121, 2026-10-11.** ⏱️ **Eighth pass of this date** (census window **06:3x → 07:2x UTC**).
+**Pass 122, 2026-10-11.** ⏱️ **Ninth pass of this date** (census window **07:3x → 08:4x UTC**).
 
-🟢 **Instrument: `compose/code/p121-stale-token-crosspage/` — all four pre-registered actions
-(`N`, `O`, `P`, `Q`) discharged. `test_p121.sh` **27 passed / 0 failed**, fully offline.
-**Two of the four are REFUTED on their own clauses**, and the two headline numbers this KB has
-been carrying — p120's *"41 % ungranted"* and *"50 % of manifests contradict"* — are both
-artifacts of a sample too small to divide. 🟢 **10 licence cells repaired across 4 pages, every
-one re-read from the live tree first.**
+🟢 **Instrument: `compose/code/p122-prose-licence-census/` — `ACTION R`, `S`, `T`, `U` discharged,
+the five-pass-old `ACTION C` and `ACTION D` discharged and **both refuted**, and `ACTION V`
+measured. `test_p122.sh` **50 passed / 0 failed**, fully offline.**
+
+🔴 **One agent-shelf licence was wrong and is repaired: `FWU-DE/ais-chat` (`P122-A`).** It is
+**AGPL-3.0** and this KB already said so in 47 cells — while three other places still called it
+MIT or Apache-2.0, including a compose pattern whose prose read *"MIT, so a closed derivative is
+permitted"*.
+
+🟢 **One genuinely new agent reaches this shelf, and it arrives from the layer nobody expected:**
+[`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) — **MIT**, 816★, *"Interactive Learning
+with Automated Feedback"*, built by the Applied Education Technologies group at the **Technical
+University of Munich**. It was found not by the mandated searches but by `ACTION C`'s
+reverse-DNS namespace census (`de.tum.cit.aet.artemis`).
+
+🔵 **The pass's own instrument is its main finding.** Three builds of the prose census flagged
+25, then 11, then 59 candidates; verification left **7, then 1, then 3**. The cause is structural
+and is written up in the instrument README: this shelf records licences with per-artifact
+precision (*"MIT code / CC BY-NC-SA data"*, *"MIT (`LICENSE-CODE`) · `LICENSE` is CC-BY-4.0 for
+docs"*), and a census that reduces a repository to one token is **less precise than the rows it
+audits**.
+
+## 🟢 🆕 `P122-NEW` — one new agent, and it came from a Maven `<groupId>` rather than a search
+
+🔴 **For the seventh consecutive pass the four mandated searches returned no new agent.** The
+reason is now demonstrated rather than asserted (`Gap 402`, below). 🟢 **But `ACTION C`, carried
+unattempted for five passes, placed 13 addresses by their reverse-DNS package namespace, and one
+of them is a first-rate agent this shelf never held.**
+
+| agent | address | ★ | licence, measured | why it belongs here |
+|---|---|---|---|---|
+| **Artemis** | [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | **816** | 🟢 **MIT** (confirmed on the rendered page) | *"Interactive Learning with Automated Feedback"* — automated assessment with feedback loops, from the Applied Education Technologies group at **TU Munich**. Namespace `de.tum.cit.aet.artemis`. MIT means a studio can fork, extend and ship a closed derivative |
+| **Ares 2** | [`ls1intum/Ares2`](https://github.com/ls1intum/Ares2) | — | carried, namespace `de.tum.cit.ase` | Artemis's auto-grading sandbox. Same group; take the pair, not the parts |
+| **Feedbacksystem** | [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | **24** | 🟢 **Apache-2.0** © Technische Hochschule Mittelhessen | *"Intelligent, personalized feedback for students using artificial intelligence"*. Small, but permissive and purpose-built |
+| **JPlag** | [`jplag/jplag`](https://github.com/jplag/jplag) | carried | namespace `de.jplag` | plagiarism detection across 20+ languages; the integrity half of any autograder story |
+
+🔵 **Why a `<groupId>` found what eight searches could not:** the mandated queries ask the web
+what is popular. A namespace census asks the *tree* who built it. University and
+public-agency Java projects publish under their own domain, so they are discoverable by
+construction — and they are exactly the projects that never trend.
+
+## 🔴 🆕 `P122-A` — this shelf was right 47 times and wrong 3 times about the same repository
+
+🟢 **[`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) is AGPL-3.0.** `main/LICENSE`,
+**34 523 B**, AGPL-3.0 title line; no second licence file (`LICENSE.md`, `LICENSE-APACHE`,
+`LICENSE-MIT`, `COPYING`, `NOTICE` all **404**); `package.json` declares no licence; the rendered
+page shows *"AGPL-3.0 license"*.
+
+| token | cells in this KB |
+|---|---|
+| 🟢 **AGPL-3.0** (correct) | **47** |
+| 🔴 Apache-2.0 | 10 |
+| 🔴 MIT | 13 |
+
+🔴 **Most of the 23 wrong-looking cells are correction tables that quote the wrong value in order
+to correct it — which is right.** Three were live claims, and all three are repaired:
+
+| page | what it said | state |
+|---|---|---|
+| `compose/patterns.md` (prose) | *"German public-sector origin, MIT, so a closed derivative is permitted"* | 🟢 **repaired** — it is AGPL-3.0; a hosted derivative must publish its source |
+| `compose/patterns.md` (ASCII diagram) | `fwu-de/ais-chat (MIT, broker: …)` | 🟢 **repaired** |
+| `intel/market.md` | listed under *"the live permissive EMEA shelf, measured this pass"* | 🟢 **struck from that shelf** and re-placed under its real licence |
+
+🔵 **For a studio this is the difference between "deploy it unmodified" and "we own a source
+release".** `ais-chat` remains the EMEA sovereignty **reference** — it is the German states' own
+school chatbot — but it is a deploy-as-shipped component, not a base to fork closed.
 
 ## 🔴 🆕 `P121-C` — the error class nobody looked for: this shelf has been telling a studio "no" about platforms it CAN build on
 

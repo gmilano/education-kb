@@ -4,6 +4,92 @@ region: Global
 updated: 2026-10-11
 ---
 
+## Pass 122 — 2026-10-11
+
+⏱️ **Ninth pass of this date** (census window **07:3x → 08:4x UTC**).
+
+🟢 **Thirteenth axis in thirteen passes: all four actions p121 pre-registered (`R`, `S`, `T`, `U`)
+discharged, and the two actions pending FIVE passes (`ACTION C`, `ACTION D`) discharged and
+CLOSED — both refuted on their own clauses.**
+
+🟢 **Instrument: `compose/code/p122-prose-licence-census/` — `test_p122.sh` **50 passed / 0
+failed**, fully offline, over 13 fixtures that are each a real licence file which broke an
+earlier build.**
+
+| action | verdict | figure |
+|---|---|---|
+| `ACTION R` | 🟢 **NOT REFUTED** | **3 verified prose claims** — 🔴 but all 3 on ONE address; by address the clause would fail |
+| `ACTION S` | 🟢 **NOT REFUTED** | **3 genuinely new addresses**; `Gap 402` resolved as a **query defect** |
+| `ACTION T` | 🟢 **NOT REFUTED** | the three records disagree — **`ACTION V` existed in only one of them** |
+| `ACTION U` | 🟢 **NOT REFUTED** | **76 addresses double-counted** (1 795 case-sensitive vs 1 719 folded) |
+| `ACTION C` | 🔴 **REFUTED** | **13 placements** of a required 20 — and **13 of 13 are EMEA** |
+| `ACTION D` | 🔴 **REFUTED** | **8 of 18** placed, on a sample selected to favour placement |
+| `ACTION V` | 🟢 **MEASURED, NOT REFUTED** | **57 rows** need the marker; **1** exists |
+
+🔴 **`P122-H` — the pass's main finding is about its own instrument, and it is stated first
+because it disqualifies most of what this pass could have published.** `ACTION R` was built three
+times; each build flagged defects and verification destroyed almost all of them — **25 → 7**,
+then **11 → 1**, then **59 → 3**, a false-positive rate reaching **95 %**. The cause is
+structural: these pages record licences with per-artifact precision (*"MIT code / CC BY-NC-SA
+data"*, *"MIT (`LICENSE-CODE`) · `LICENSE` is CC-BY-4.0 for docs"*, *"MIT badges over a 404"*),
+and a census that reduces a repository to ONE token is **less precise than the text it audits**.
+🟢 **`ACTION W` follows: no census may publish a defect rate until it has been scored against rows
+known to be correct.**
+
+🟢 **`P122-A` — the one real defect, repaired in 3 places.**
+[`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) is **AGPL-3.0** (34 523 B; rendered page
+agrees). This KB said so in **47** cells while three live claims still called it MIT or
+Apache-2.0 — including a compose pattern reading *"MIT, so a closed derivative is permitted"* two
+lines under a table saying AGPL-3.0, and an ASCII diagram inside a code fence that every census
+from p118 to p121 **skips by design**. 🔵 **The errors concentrate under the phrase "measured this
+pass", which suppresses a reader's instinct to re-check.**
+
+🔴 **`P122-F` — `ACTION V` was orphaned in p121's instrument README**, in neither the root README
+nor the ledger: `P121-G`'s exact failure mode recurring in p121's own output, one pass after p121
+named it. 🟢 **`ACTION T` caught it on its first run, and p123's actions are written into all
+three records.** `ACTION T` also showed the `pNNN-` prefix is an instrument **index**, not a pass
+number — it reaches **p1040** across 147 directories while this KB is on pass 122.
+
+🟢 **`Gap 402` RESOLVED after six passes of counting zero.** The mandated phrase returns courses
+**about** AI, not agents that **deliver** education — `microsoft/ai-agents-for-beginners`
+(~67 000★), `agents-from-scratch`, `ai-engineering-from-scratch`. 🔴 **The gap splits in two:
+the query was wrong (proved), and the open-source agent layer for education really is thin** —
+edtech nouns returned 3 new addresses and none is an agent.
+
+🔴 **`P122-G` — 3 candidate addresses this pass DO NOT EXIST** (`studip/studip`,
+`OpenEduCat-Inc/OpenEduCat`, `Opigno/opigno_lms` — all 404), each assembled from a product NAME in
+vendor prose. 🟢 **`git ls-remote --symref` now separates "no licence" from "no repository" and
+returns the real default branch in one call**, retiring the branch-guessing that cost p120 **410
+of 462** probes.
+
+🟢 **New supply-side evidence that fills half of the EMEA gap, found in the tree rather than on
+the web.** `ACTION C`'s 13 placements are all EMEA because a ccTLD-leading namespace is a European
+university and public-agency convention: Finland's and Sweden's **national education agencies**
+publish their systems of record as open source (`opetushallitus/koski` EUPL;
+`skolverket/dnp-ss12000-reference-api` **Apache-2.0**, the SS 12000 reference), the European
+Commission publishes its credentials stack, and **TU Munich** publishes
+[`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) — **MIT, 816★**, automated feedback —
+which eight mandated searches never returned. 🔴 **EMEA and APAC demand-side data remain measured
+absences**, four and three consecutive passes respectively; **LATAM stays the best-evidenced
+region** (UNESCO IESALC 200 HEIs / 19 countries; Digital Education Council 92 % students / 79 %
+faculty over 30 000+ responses; only ~30 % of universities with a published AI policy).
+
+### Pre-registered for p123
+
+🟢 **`ACTION W`** — calibrate every census in this KB against rows known to be CORRECT and publish
+the false-positive rate beside the defect count. 🔴 *Refuted if no existing instrument's rate
+exceeds 20 %.*
+🟢 **`ACTION X`** — verify the **216 remaining prose candidates**, tables included, with a
+multi-file grant reader. 🔴 *Refuted if fewer than 5 survive verification.*
+🟢 **`ACTION Y`** — replace every guessed branch with `resolve_head.sh` and re-probe this pass's
+**56 `NO-FILE`** addresses. 🔴 *Refuted if fewer than 3 of the 56 do not exist.*
+🟢 **`ACTION Z`** — record a grant as a SET of (path → token) pairs; read `LICENSE-CODE`,
+`LICENSE-DOCS`, `LICENSE-DADOS`, `DESCRIPTION`. 🔴 *Refuted if fewer than 8 addresses carry more
+than one grant file.*
+🟡 **`ACTION V`** — **carried forward, clause verbatim**: emit `<!--corrected-->` on repaired rows
+instead of teaching the guard new vocabulary. **57 rows need it; 1 exists.**
+🔴 **`ACTION C` / `ACTION D`** — **CLOSED as refuted** after five passes; not to be re-listed.
+
 ## Pass 121 — 2026-10-11
 
 ⏱️ **Eighth pass of this date** (census window **06:3x → 07:2x UTC**).

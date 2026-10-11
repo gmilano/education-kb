@@ -6,7 +6,7 @@ updated: 2026-10-11
 
 # Education — market intelligence
 
-**Pass 121, 2026-10-11.** ⏱️ **Eighth pass of this date** (window **06:3x → 07:2x UTC**).
+**Pass 122, 2026-10-11.** ⏱️ **Ninth pass of this date** (window **07:3x → 08:4x UTC**).
 🔵 **Per-region opportunities are updated IN PLACE under the single canonical
 `## Opportunities by region` block further down this file — one block, **five** `###`, closed
 vocabulary (North America · EMEA · APAC · LATAM · Global). 🟢 This pass's findings are prepended
@@ -16,6 +16,46 @@ region subsections re-parents them.**
 🟢 **Instrument: `compose/code/p121-stale-token-crosspage/`, discharging `ACTIONS N, O, P, Q`.
 `test_p121.sh` **27 passed / 0 failed**, fully offline. This page carried **1** of the 10 cells
 repaired in this commit — a LATAM prose cell.**
+
+## 🔴 🆕 `P122-A` — *"the live permissive EMEA shelf, measured this pass"* listed an AGPL-3.0 repository
+
+🔴 **This page's EMEA shelf opened with
+[`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) (Apache-2.0, 25★)** under the words
+*"measured this pass"*. It is **AGPL-3.0** — `main/LICENSE`, **34 523 B**, AGPL title line, no
+second licence file, and the rendered page agrees. 🟢 **Struck from the permissive shelf and
+re-placed under its real licence in this commit.**
+
+🔵 **This KB already knew.** AGPL-3.0 appears in **47** cells for this address. The defect was not
+ignorance — it was a permissive token surviving in three live claims while the correction was
+recorded everywhere else. 🔴 **`P121-A3` was the same shape on the LATAM shelf one pass ago.**
+🟢 **The pattern is now named: the phrase *"measured this pass"* is where this KB's licence errors
+concentrate, because it suppresses the reader's instinct to re-check.**
+
+## 🟢 🆕 `P122-R` — the prose census ran, and it mostly measured itself
+
+🟢 **`ACTION R` is discharged and NOT refuted — on exactly 3 verified claims, all 3 on one
+address (`ais-chat`), across 2 pages.** The clause required 3. 🔴 **Stating the weakness plainly:
+by addresses it is ONE, and the clause would fail.**
+
+🔴 **The instrument flagged 25, then 11, then 59 candidates across three builds. Verification left
+7, then 1, then 3.** The false-positive rate reached **95 %**, and the cause is structural rather
+than careless: **this page records licences with per-artifact precision, and a census that reduces
+a repository to one token is less precise than the rows it audits.** Rows this census called
+defects and which are right:
+
+| row | what the page says | why the census was wrong |
+|---|---|---|
+| `microsoft/autogen` | *"MIT (`LICENSE-CODE`) · `LICENSE` is CC-BY-4.0 for docs"* | both files exist; the scan read `LICENSE` only |
+| `haolpku/K12-KGraph` | *"MIT code / 🔴 CC BY-NC-SA data"* | correct, and more informative than either token |
+| `qed42/ai-accessibility-checker` | *"MIT badges over a 404"* | the sentence already said what the scan "found" |
+| `jcputney/scorm-again (354★)` | no licence claimed | the nearby `Apache-2.0` belongs to `yetanalytics/lrsql`, the previous list item |
+
+🟢 **Carried into p123 as `ACTION W`: no census in this KB may publish a defect rate until it has
+been scored against rows known to be correct.** An uncalibrated rate is a property of the
+instrument.
+
+🟡 **216 candidate claims remain unverified** (242 scored − 26 resolved this pass). They are
+recorded, not published as defects, and `ACTION X` is pre-registered to verify them.
 
 ## 🔴 🆕 `P121-A3` — the "live LATAM shelf, measured this pass" published the wrong licence for Brazil's biggest SIS
 
@@ -3488,6 +3528,25 @@ regulatory rows as primary-verified. They are not, and the reason is recorded.**
 
 ### North America
 
+#### 🟢 p122 — 2026-10-11
+
+🔵 **Sizing, re-read this pass with the spread stated.** MarketsandMarkets: **$951 M (2024) →
+$2.3 B (2029), 15.9 % CAGR**; North America holds **~36 %** of global spend while APAC grows
+fastest. 🔴 **Global totals disagree by a factor of ~12 at the 2033/34 horizon** (IMARC-derived
+$79.6 B by 2034; Grand View $57.2 B by 2033; TBRC $10.6 B by 2026) — quote the spread, not one
+number.
+
+🟢 **Capital and programmes, named:** Carnegie Mellon + Gates Foundation committed **$55 M** to
+gateway-course AI courseware; a government commitment of **$169 M** to responsible AI in higher
+education was reported in Q1 2026 (source does not name the government — 🔴 unverified); OpenAI
+launched a country-level education programme with **8 national partners** in Q1 2026.
+
+🔴 **Institutional readiness is the opportunity, and it is a governance gap, not a model gap:**
+**71 %** of US teachers have no AI training and only **10 %** of institutions have formal AI
+guidelines. 🔴 **Regulation is fragmented** — state-level and piecemeal (Colorado, Texas), with
+no sector regulator for educational technology. The EU AI Act still binds any North American
+vendor selling into Europe.
+
 #### 🟢 p121 — 2026-10-11
 
 🔵 **Sizing.** MarketsandMarkets puts North America at **$951 M (2024) → $2.3 B (2029), 15.9 %
@@ -4277,6 +4336,37 @@ regulatory grain; one that leads with governance, auditability and teacher-augme
 
 ### EMEA
 
+#### 🟢 p122 — 2026-10-11
+
+🔴 **The demand-side gap is unchanged and is restated as a measured absence, not as coverage.**
+The mandated regional query returned only cross-industry material: the **EU AI Act** (education
+AI classified **high-risk**), CompTIA's **94 %** of organisations likely to invest in AI training
+in 2026, and Workday's **38 %** of EMEA organisations not yet piloting. 🔴 **No education-sector
+adoption rate, no ministry figure, no named edtech player came back.** Four consecutive passes
+have now failed to find EMEA demand-side data with this phrasing; that is a query problem worth
+its own action, not a fact about Europe.
+
+🟢 **The SUPPLY side is now this KB's strongest EMEA evidence, and it was found in the tree rather
+than on the web** (`ACTION C`; full table in `repos/foundations.md` `P122-EMEA`). **13 addresses
+placed by reverse-DNS package namespace — all 13 EMEA**, because a ccTLD-leading namespace is a
+European university and public-agency convention:
+
+| what | who | licence, measured |
+|---|---|---|
+| national attainments registry (`koski`) + learner-ID + institution registries | 🇫🇮 **Finnish National Agency for Education** (`fi.vm.sade`) | 🟡 EUPL |
+| **SS 12000** school-interoperability reference API | 🇸🇪 **Swedish National Agency for Education** (`se.skolverket`) | 🟢 **Apache-2.0** |
+| European Digital Credentials (EDCI) | 🇪🇺 **European Commission** (`eu.europa.ec.empl.edci`) | carried |
+| Artemis + Ares2 — interactive learning, automated feedback | 🇩🇪 **TU Munich** (`de.tum.cit`) | 🟢 **MIT**, 816★ |
+| exam lockdown server | 🇨🇭 **ETH Zurich** (`ch.ethz.seb`) | 🟡 **MPL-2.0** |
+| AI feedback for students | 🇩🇪 **TH Mittelhessen** (`de.thm.ii`) | 🟢 **Apache-2.0** |
+| LTI 1.3 for Spring Security | 🇬🇧 **University of Oxford** (`uk.ac.ox.ctl`) | carried |
+
+🟢 **Why this changes an EMEA proposal:** it can cite named, state-maintained, licence-verified
+code and a public interoperability standard (SS 12000) to integrate against, instead of vendor
+claims. 🔴 **And the one component most likely to be reached for first — `FWU-DE/ais-chat`, the
+German states' school chatbot — is AGPL-3.0, not permissive** (`P122-A`): the sovereignty
+reference, but a deploy-unmodified component.
+
 #### 🟢 p121 — 2026-10-11
 
 🔵 **Regulation is the market here, and the education-specific layer is thinner than the
@@ -4369,10 +4459,13 @@ one.** This is the exact shape of the n8n "Sustainable Use License" flag the tec
 already carries — the licence family has now reached the education shelf in Spain.
 
 🟢 **The live permissive EMEA shelf, measured this pass**:
-[`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) (Apache-2.0, 25★ — German state
-schools' own chatbot, the sovereignty reference),
 [`openfun/richie`](https://github.com/openfun/richie) (MIT, 316★ — France Université Numérique),
 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) (Apache-2.0, 447★, CH),
+🔴 **NOT on this shelf, and struck from it this pass (`P122-A`):**
+[`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) (🔴 **AGPL-3.0**, 25★ — German state
+schools' own chatbot, still the sovereignty *reference*, but network-use copyleft: a hosted
+derivative must publish its source. It was listed here as Apache-2.0 under the words *"measured
+this pass"*, while 47 other cells of this KB already said AGPL-3.0),
 [`INGInious/INGInious`](https://github.com/INGInious/INGInious) (243★, UCLouvain BE),
 [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) (114★, self-hosted
 pronunciation assessment), [`dkavargy/ESCOPlus2.0`](https://github.com/dkavargy/ESCOPlus2.0) and
@@ -5358,6 +5451,27 @@ duty is the sellable deliverable that is already overdue.**
 
 ### APAC
 
+#### 🟢 p122 — 2026-10-11
+
+🟡 **Thin but no longer empty, and the named signals are new this pass:**
+
+| signal | detail |
+|---|---|
+| **TCS + Pearson** | multi-year AI learning alliance aimed at employer skills gaps and proving return on technology investment |
+| **LearnUpon** | APAC push with a new **Sydney** HQ and `Create+` AI course authoring |
+| **Alteryx** | Academy relaunched with personalised AI learning paths and new credentials |
+| **OpenAI / ANZ** | policy lead appointed for Australia and New Zealand as Canberra tightens AI governance and copyright rules |
+| **Sovereignty** | forecast to shape infrastructure choices for **~half** of APAC firms (Forrester) |
+| **Governance gap** | **87 %** of organisations encourage AI agents; only **47 %** have governance, oversight and controls |
+| **Infrastructure** | **49 %** cite insufficient infrastructure for real-time data processing as an adoption barrier |
+
+🔴 **Still a measured absence, stated as such:** no ministry-level AI curriculum or education
+regulation, no school or university AI policy, and no APAC edtech market sizing came back from
+the mandated query. 🔴 **The supply side is also empty on this pass's strongest new instrument —
+layer P placed ZERO APAC addresses**, because the reverse-DNS convention it detects is European.
+🔵 **An APAC address in this KB is therefore placed by owner or by language, never by namespace;
+that is a known blind spot, not an absence of APAC work.**
+
 #### 🟢 p121 — 2026-10-11
 
 🔵 **The 2026 framing across APAC sources is AI SOVEREIGNTY** — harmonisation on shared principles
@@ -5490,6 +5604,36 @@ KB, carries THREE different licences across four repositories, and this KB had p
 licence for all of them.**
 
 ### LATAM
+
+#### 🟢 p122 — 2026-10-11
+
+🟢 **Still the best-evidenced region on the demand side, re-confirmed from the primary bodies this
+pass:**
+
+| source | measurement |
+|---|---|
+| **UNESCO IESALC + UNU-IAS** working paper | AI implementation mapped across **200 higher-education institutions in 19 countries** of LAC; survey ran **Aug–Oct 2025**; covers teaching, research, community engagement, administration and governance |
+| **Digital Education Council**, LATAM 2026 | **92 % of students** and **79 % of faculty** actively engaging with AI; **30 000+ responses** across **29 institutions**, with Tec de Monterrey's Institute for the Future of Education |
+| policy coverage | 🔴 only **~30 %** of Latin American universities have published AI-use policies |
+| **ILIA** (Latin American AI Index), 3rd edition | readiness, adoption and governance across 19 countries (IDB / CEPAL) |
+
+🔴 **Regulation is heterogeneous and none of it is binding on education specifically.** Chile
+leads with a national AI policy since **2021**; Brazil and Colombia have national AI strategies
+with no education-sector rules; in Mexico, **SEP** and **ANUIES** have issued recommendations
+that explicitly lack binding force.
+
+🟢 **New supply-side fact that changes where a LATAM engagement starts:** the open LMS estate is
+not only Moodle. **Tutor LMS holds 22.4 % of Brazil's** LMS-carrying sites and **LearnPress 24 %
+of Mexico's** (wmtips, 2026) — the **WordPress plugin layer** is a large part of the long tail.
+[`themeum/tutor`](https://github.com/themeum/tutor) is **GPL-3.0** (verified, 35 149 B), and the
+compose recipe for wiring an AI layer beside it without crossing the GPL boundary is
+`compose/patterns.md` `P122-P2`.
+
+🟢 **`portabilis/i-educar` re-verified independently this pass:** description *"Lançando o maior
+software livre de educação do Brasil!"*, **718★**, **GPL-2.0**, maintained by **Portábilis**, and
+originally built by the **city government of Itajaí, Santa Catarina**. 🔵 **Its licence has now
+been read from the file in two consecutive passes** after carrying three different values
+(AGPL-3.0, LGPL-3.0, GPL-2.0) across this KB's pages.
 
 #### 🟢 p121 — 2026-10-11
 
@@ -5636,6 +5780,29 @@ the IDB's ILIA index were **all already held** — 19 tokens checked, 19 rejecte
 at fault, and the fault had a regional shape worth stating plainly.**
 
 ### Global
+
+#### 🟢 p122 — 2026-10-11
+
+🔴 **The global supply-side constraint on automated essay scoring is re-confirmed from a second,
+independent repository this pass.**
+[`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) states in
+its own `LICENSE.md`: the **code is MIT**, the **evaluator content is CC BY 4.0**, and the
+**annotated CLEAR and PERSUADE 2.0 corpora are CC BY-NC-SA 4.0 — NonCommercial**. 🔵 **So the
+constraint p121 recorded is not an artefact of one publisher: the canonical graded-essay corpora
+are NonCommercial wherever they are redistributed, and no permissive substitute of comparable
+size exists on this shelf.** Any AES proposal must either licence the corpus commercially or
+train on client-owned scripts.
+
+🔵 **Adoption, the figures that recur across sources:** student AI usage **66 % (2024) → 92 %
+(2025)**; **86 %** of students across 16 countries report using AI in their studies; **10 %** of
+institutions have formal AI guidelines. 🔴 **All are self-reported vendor-survey figures** and
+should be quoted as such.
+
+🔴 **Sector maturity, stated against this KB's own interest:** market analysts rate the sector's
+maturity **low** — most institutions are still piloting, while competition is intense. The
+commercial consequence is that an engagement sold as "deploy an AI tutor" meets a client with no
+governance, no policy and no training (see `intel/trends.md` `P122-T2`), so the governance and
+audit work is usually the deliverable that can actually be completed.
 
 #### 🟢 p121 — 2026-10-11
 
