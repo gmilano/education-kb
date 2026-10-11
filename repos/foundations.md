@@ -29,6 +29,41 @@ pushed 2026-09-18 — has no licence file under any of eight probed filenames**,
 [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) is published
 **unlicensed and archived by the US Department of Defense body that authored both SCORM and xAPI.**
 Neither can be used in a client deliverable. Both are measured absent, not inferred.
+<!--corrected by p136: see "The pipwerks correction" below. The `pipwerks` half of this paragraph is
+wrong about rights and right about files -- a grant IS declared, in `package.json` and the source
+header. The `adlnet` half is not re-measured this pass and stands as written.-->
+
+## 🔴 The `pipwerks` correction — `ACTION BR`, and the sentence this page got wrong
+
+**Pass 136, 2026-10-11.** `ACTION BR` asked for the **dependency closure** of the unlicensed
+`pipwerks/scorm-api-wrapper` across this KB's own rows, predicting refutation *"if no published row
+depends on it."* 🔴 **The action was discharged and it answered a bigger question than it asked: the
+premise of five pages of this KB is wrong.**
+
+| what p135 published | what p136 measured |
+|---|---|
+| *"no licence file exists under 8 probed filenames"* | 🟢 **TRUE.** Re-confirmed; the repository's whole tree is `package.json`, `readme.md` and three source files |
+| *"there is no grant, so there is no right to use it"* | 🔴 **FALSE.** `package.json` carries `"license": "MIT-style license: http://pipwerks.mit-license.org/"`, and `src/JavaScript/SCORM_API_wrapper.js` lines 11–12 carry *"Copyright (c) Philip Hutchison / MIT-style license: …"* |
+| *"391★, 130 forks, pushed 2026-09-18"* — a live dependency | 🔴 **HEAD commit is 2018-09-06.** The manifest version is `1.1.20160322`. `pushed_at` moved in 2026; the code did not |
+| *"the blast radius is unmeasured"* | 🟢 **Measured. One** published row on this KB's pages depends on it |
+
+🟢 **The one dependant, and how it hides.** Seven manifest types were probed across the 324 repo
+rows on this KB's non-log pages; **150 rows exposed at least one manifest**, and the only
+`pipwerks` hit in any of them is **pipwerks' own `package.json`**. 🔴 **A manifest probe is the
+wrong instrument**: [`numbas/Numbas`](https://github.com/numbas/Numbas) (Apache-2.0, Newcastle
+University) **vendors the file** at `runtime/scripts/SCORM_API_wrapper.js` — version
+**`v1.1.20121005`**, four years behind upstream's own manifest — with the copyright and MIT-style
+header **intact**. GitHub code search finds **293 files** named `SCORM_API_wrapper.js` carrying that
+header, including [`Lumieducation/Lumi`](https://github.com/Lumieducation/Lumi) and
+[`sr258/scorm-h5p-wrapper`](https://github.com/sr258/scorm-h5p-wrapper), both in the H5P family this
+KB tables on `verticals/solutions.md`.
+
+🔵 **So the rule this page should carry is about the grant's LOCATION, not its existence.** A
+filename probe measures files. A grant can live in a package manifest, a source header, or a URL —
+and when it travels inside a **vendored file**, the header travels with it while the version does
+not. 🔴 **The residual risk is real but different from the one this page published**: the terms are
+declared, *unread* (the host is refused in this channel — DNS failure on `http`, 403 CONNECT on
+`https`) and **not an SPDX identifier**, since *"MIT-style"* names no standard text.
 
 **Pass 134, 2026-10-11.** 🟢 **This page gains the layer it was missing: the interoperability
 standards an institution procures against.** `instructure/ims-lti` has sat at the bottom of this
@@ -166,6 +201,39 @@ mirrors and some are GitHub-native, and the topic tells you which.** `pushed_at`
 freshness signal for `ims-lti` and an invalid one for `canvas-lms` — which means freshness must be
 checked per repo, never per organisation.
 
+### 🔴 p136 runs the rule over the whole corpus — and 44% of its hits are not mirrors at all
+
+`ACTION BU` asked for p135's successor signal (README **byte-identity**, which p135 called *"a
+verdict"* against licence grouping's *"lead"*) to be applied corpus-wide. **1 389 READMEs fetched
+over 1 528 published rows → 71 byte-identical clusters, 25 of them cross-owner** — twelve times
+`ACTION BU`'s refutation threshold, so **not refuted**. 🔴 **But the word "verdict" does not
+survive:**
+
+| lineage verdict | clusters | what it means here |
+|---|---|---|
+| `ALIAS` — **identical ref set** | 🔴 **11** | **One repository under two slugs.** GitHub keeps answering a renamed owner or repo name, so the "two owners" are one |
+| `DIVERGED_FORK` — shared commit shas | 5 | A real fork; count the connector once |
+| `FORK_AT_TIP` — same HEAD, different ref sets | 4 | A fork that has not diverged yet |
+| `ATTRIBUTION_STRIPPED_COPY` — identical root tree, **zero** shared commits | 1 | the ENEM cluster (`ACTION BW`, below) |
+| `SQUASHED_COPY` — one side a single commit | 1 | `0awei0/kt`, and it **dropped the upstream MIT file** |
+| `UNRESOLVED` — measurement not taken | 🔵 3 | **said, not guessed** |
+
+🔴 **One of the eleven aliases lands on a conclusion this KB published.** `agents/trending.md`
+reasoned about `theopenem/OneRoster.NET` versus `jdolny/OneRoster.NET` — *"both licences name
+`theopenem` as copyright … so pin `theopenem`"* — when the two slugs have an **identical ref set**
+(`3f4540f9706d9099`) and are **one repository**. The pin is harmless; the reasoning was about a
+distinction that does not exist. 🟡 `KI-Campus/LRS` and `openHPI/openLRS` are the same case across
+*both* a rename and a transfer.
+
+🔴 **And 37 further clusters are this KB citing one repository under two spellings** — `Elgg/Elgg`
+and `elgg/elgg`, `Schroedinger-Hat/certo` under **three**, eight `Opetushallitus/*` pairs. That is
+`p443`'s case-collision class measured across the whole corpus for the first time.
+
+🟢 **The rule, generalised for this page.** Freshness must be checked per repo (p134).
+**Identity must be checked before freshness**: resolve the slug to a repository by **ref set**, then
+ask about forks, then ask about dates. Instrument, six verdicts and 10 tests:
+`compose/code/p136-lineage-verdict/`.
+
 ## 🟢 The assessment and content layer — added by p135
 
 The standards an institution procures against do not stop at rostering and grade passback. Two more
@@ -174,10 +242,10 @@ assessment items. This is where an AI engagement touching *content* or *assessme
 
 | system | repo | licence *(hash-verified)* | ★ | pushed | owner | why it is foundational |
 |---|---|---|---|---|---|---|
-| **Adapt Framework** | [`adaptlearning/adapt_framework`](https://github.com/adaptlearning/adapt_framework) | 🔴 **GPL-3.0** | **630** | **2026-10-10** | Adapt community | The largest repo in the whole standards stack. Authoring toolkit producing responsive, accessible, multi-language courses that emit **both SCORM and xAPI**. 🔵 Copyleft: run it as a tool, do not link it |
+| **Adapt Framework** | [`adaptlearning/adapt_framework`](https://github.com/adaptlearning/adapt_framework) | 🔴 **GPL-3.0** 🆕 *(p136: `UNMATCHED` → `RESOLVED` at ratio `0.997431`, holder **"2013 ADAPT LEARNING"**, 11 opcodes and not one an added clause)* | **630** | **2026-10-10** | Adapt community | The largest repo in the whole standards stack. Authoring toolkit producing responsive, accessible, multi-language courses that emit **both SCORM and xAPI**. 🔵 Copyleft: run it as a tool, do not link it |
 | **OpenOlat** | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟡 **Apache-2.0 + attribution** | **447** | 2026-10-09 | frentix GmbH / Univ. of Zurich | 🟢 **A full Java LMS this KB had never tabled**, with QTI, SCORM, curriculum management, assessment and lecture management built in. The permissive full-featured LMS this page's flagship gap says does not exist — see the verdict below |
 | **scorm-again** | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 **MIT** | **354** | 2026-10-09 | individual | The modern SCORM 1.2 / 2004 runtime. **Offline-first**, TypeScript, actively maintained. 🟢 **The permissive replacement for the unlicensed `pipwerks` wrapper** |
-| **Numbas** | [`numbas/Numbas`](https://github.com/numbas/Numbas) | 🟢 **Apache-2.0** | 215 | 2026-10-09 | 🟢 **Newcastle University (UK)** | Browser-based e-assessment, strongest in mathematics, SCORM-packageable. **Institution-owned and permissive** — the cleanest base for assessment work before the 2027 clocks |
+| **Numbas** | [`numbas/Numbas`](https://github.com/numbas/Numbas) | 🟢 **Apache-2.0** | 215 | 2026-10-09 | 🟢 **Newcastle University (UK)** | Browser-based e-assessment, strongest in mathematics, SCORM-packageable. **Institution-owned and permissive** — the cleanest base for assessment work before the 2027 clocks. 🆕 **p136: it vendors `pipwerks`' SCORM wrapper** (`runtime/scripts/SCORM_API_wrapper.js`, `v1.1.20121005`, header intact) — the only `pipwerks` dependant on this KB's pages, and a reminder that Apache-2.0 at the root says nothing about a vendored subtree |
 | **QTI 3 item player** | [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | 🟢 **MIT** | 30 | 2026-04-07 | amp-up.io | The reference renderer for QTI 3 assessment items, with a four-component sibling family from the same vendor |
 | **Mentingo** | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | 92 | **2026-10-10** | Selleo (PL) | 🟢 **An AI-native LMS under a permissive licence** — AI mentor, role-play, SCORM and xAPI, white-label, self-hosted. Small, but the only row where the AI is the platform's architecture rather than a bolt-on |
 | **1EdTech validator** | [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) | 🟢 **Apache-2.0** | 17 | 2026-09-23 | 🟢 **1EdTech (the standards body)** | Conformance validation for **Open Badges and Comprehensive Learner Record**. The second conformance suite this KB has found, and the steward's own |
@@ -186,7 +254,7 @@ assessment items. This is where an AI engagement touching *content* or *assessme
 
 | repo | ★ | problem |
 |---|---|---|
-| [`pipwerks/scorm-api-wrapper`](https://github.com/pipwerks/scorm-api-wrapper) | **391** | **No licence file.** Eight filenames probed, all absent. The most widely used SCORM wrapper in the sector confers no rights whatsoever |
+| [`pipwerks/scorm-api-wrapper`](https://github.com/pipwerks/scorm-api-wrapper) | **391** | 🆕 **p136: the reason changed.** The grant is **declared by reference** (`package.json` + source header, *"MIT-style license"* at a host refused in this channel) — so *"confers no rights whatsoever"* is withdrawn. Reach instead for `scorm-again` because **HEAD here is 2018-09-06** and *"MIT-style"* is not an SPDX id, not because there is no grant |
 | [`cybercussion/SCOBot`](https://github.com/cybercussion/SCOBot) | 164 | **CC-BY-SA-4.0, and the file is only the 837-byte human-readable deed.** ShareAlike copyleft, no patent grant, and a content licence applied to code |
 
 ### 🔴 What this layer does NOT have
@@ -305,11 +373,32 @@ Kiwix and a local model, and it is permissive enough to fork.
 
 ### 🆕 Gaps this page opens after p135
 
-- 🔴 **The sector's most-used SCORM library is unlicensed, and the blast radius is unmeasured.**
-  `pipwerks/scorm-api-wrapper` has 391 stars and **130 forks**, and no licence file. Every fork and
-  every vendor that vendored it inherits the defect. This KB has not measured how many of the rows
-  on its own pages depend on it — that is a dependency-closure question, and the instrument for it
-  already exists (`compose/code/p112-dependency-closure`, `dependency-licence-closure`).
+- ~~**The sector's most-used SCORM library is unlicensed, and the blast radius is unmeasured.**~~
+  🟢 **CLOSED AND CORRECTED by p136 (`ACTION BR`).** A grant is declared (manifest + source header);
+  the blast radius on this KB's own pages is **one row**, `numbas/Numbas`, by **vendoring** rather
+  than by manifest; and the sector-level reach is **293 files** carrying the header. 🔴 **What
+  replaces it is narrower**: the declared body is unreadable in this channel and *"MIT-style"* is
+  not an SPDX identifier, so the row's terms are *declared and unread* — and `pipwerks`' HEAD commit
+  is **2018-09-06**, which makes it a stale dependency regardless of its licence.
 - 🔴 **No permissive Python library exists for Open Badges.** Both Python rows are copyleft
   (LGPL-2.1 and LGPL-3.0). The permissive credential work is in **Rust** (`impierce`, Apache-2.0)
   and **Java** (`1EdTech`, Apache-2.0), which is a language mismatch for most AI engagements.
+
+### 🆕 Gaps this page opens after p136
+
+- 🔴 **This page's dependency picture is manifest-shaped, and the sector's is not.** `ACTION BR`
+  measured 150 of 324 rows exposing at least one of seven manifest types; the one dependency that
+  mattered was **vendored**, invisible to all seven. Until a tree-level probe runs (the instruments
+  exist — `compose/code/p275-tree-enumeration`, `p441-tree-licence-enumeration`), **every "no
+  dependants" statement on this page is a statement about manifests**.
+- 🔴 **A root licence says nothing about a vendored subtree, and this page tables root licences.**
+  `numbas/Numbas` is Apache-2.0 at the root and carries an MIT-style third-party header four levels
+  down. Of the 24 rows in this page's platform and standards tables, **the number whose vendored
+  subtrees have been read is zero.** 🔵 **This is `p969-root-only-licence-reach` one level deeper.**
+  p93 measured that the grant ladder cannot see a **per-directory** licence (`bncc-dados`: code at
+  the root, data one directory down). p136 measures that it cannot see a **third-party header inside
+  a vendored file** either — same blind spot, and the vendored case is the common one in a sector
+  whose code moves by copying.
+- 🟡 **Three `UNRESOLVED` lineage clusters remain** (`education-ai-suite`, `OpenPronounce`,
+  `agents-radar`). Each needs one clone per side; none is an education-supply row, which is why they
+  were left — recorded so the 25-cluster figure is not read as 25 resolved.

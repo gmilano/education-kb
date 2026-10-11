@@ -1,0 +1,51 @@
+# Pass 136, 2026-10-11. Education KB measured-row evidence.
+# licence column: SPDX id + how it was established.
+#   PAYLOAD = LICENSE file fetched from raw.githubusercontent.com this pass and read
+#   RESIDUE_RESOLVED = compose/code/p136-licence-residue, every diff opcode accounted for
+#   BY_REFERENCE = a grant is DECLARED (manifest field or source header) and its BODY points
+#     off-repository; the body was NOT readable in this channel. Not "unlicensed", not "MIT".
+#   DEED_ONLY = the payload is the human-readable summary, legal code off-repository
+#   ABSENT = no licence file under 5 probed filenames
+# lineage column: compose/code/p136-lineage-verdict (ALIAS/FORK_AT_TIP/DIVERGED_FORK/
+#   ATTRIBUTION_STRIPPED_COPY/SQUASHED_COPY/UNRESOLVED), established from ref sets, HEADs,
+#   root tree shas and commit shas -- never from GitHub's `fork` flag.
+# stars/forks/pushed: GitHub search API via MCP, 2026-10-11. api.github.com direct = 403 this session.
+repo	layer	stars	forks	pushed	licence	licence_evidence	owner_class	region	note
+giantswarm/mcp-oauth	identity broker	14	3	2026-10-11	Apache-2.0	PAYLOAD 11353B	company (Giant Swarm, DE)	EMEA	ACTION BS REFUTES T13's absence. Go 1.26. MCP auth spec 2025-11-25 full. RFC 9728 protected-resource metadata, RFC 8707 resource binding, RFC 9068 JWT access tokens + published JWKS, PKCE, DPoP, token exchange. Upstream OIDC id_token verified against provider JWKS; refuses to issue when provider supplies no subject claim. 56 test files under server/
+atrawog/mcp-oauth-gateway	identity broker	60	9	2026-09-28	Apache-2.0	PAYLOAD 11360B	individual	unplaced	OAuth 2.1 authorization server that fronts ANY MCP server with no code change -- the deployable shape of P13
+NapthaAI/http-oauth-mcp-server	identity broker	108	18	2026-09-30	MIT	PAYLOAD	company	unplaced	Most-starred row in the broker register. Implements the MCP authorization extension; jwks-rsa present
+empires-security/mcp-oauth2-aws-cognito	identity broker	68	12	2026-09-12	MIT	PAYLOAD	company	unplaced	Worked example against a managed IdP (Cognito)
+tuannvm/oauth-mcp-proxy	identity broker	33	13	2026-08-05	MIT	PAYLOAD	individual	unplaced	Go library for OAuth 2.1 on MCP servers
+janwilmake/universal-mcp-oauth	identity broker	30	3	2025-12-25	MIT	PAYLOAD	individual	unplaced	Self-described universal MCP IdP. Oldest row in the register; untouched since 2025-12
+ictinnovations/ictexam-mcp	assessment MCP	17	15	2026-10-07	MIT	PAYLOAD 1114B	company (ICT Innovations)	unplaced	SOURCE-READ CORRECTION of this KB's own row. Auth = ICTEXAM_EMAIL + ICTEXAM_PASSWORD, a teacher/admin account password; session cookie + x-csrf-token, "exactly as the web app does". Writes gated by ICTEXAM_MCP_ALLOW_WRITE (off by default) -- that cell was right. Carries topic `lti`, implements NO LTI: the LTI 1.3 path belongs to a separate Moodle activity module. ICTEXAM_TLS_INSECURE option exists
+tkawen/developer-platform	vendor MCP + SDK	0	0	2026-10-04	MIT	PAYLOAD 1063B	company (TKAWEN, Algeria)	EMEA	Second of the only TWO repositories on GitHub carrying topics `lti`+`mcp`. Read-only MCP (no write tools at all), learner BEARER TOKEN, never a password; `whoami` returns abilities and expiry, never the token. SCORM/xAPI appear as lesson-type enums in the API schema -- NOT an LTI or SCORM implementation. Africa/MENA supply row
+GarethManning/education-agent-skills	agent skills	847	122	2026-10-11	CC-BY-SA-4.0	DEED_ONLY 1230B	individual	unplaced	RESOLVES this KB's NOASSERTION cell. Payload is self-labelled "a human-readable notice"; legal code at creativecommons.org/licenses/by-sa/4.0/legalcode (host REFUSED here, body readable via the SPDX mirror). ShareAlike on skills/prompts: derivatives inherit
+HKUDS/DeepTutor	tutoring agent	41144	5192	2026-10-11	Apache-2.0	PAYLOAD 11408B	academic (HKU)	APAC	RE-MEASURED, NOT NEW: this KB's pages already carry 41 136 (measured 2026-10-08), so the delta over three days is +8 stars. Recorded because an unchecked re-measure of a 41k row is how a false growth claim gets published. 5 192 forks; created 2025-12-28
+RohanMuppa/brightspace-mcp-server	portal connector	56	27	2026-10-11	MIT	PAYLOAD 1068B	individual	North America	Brightspace/D2L -- a platform tier this KB's connector pages did not have. Same owner as purdue-mcp, which is a FORK_AT_TIP pair with sharziki/purdue-mcp
+ilodezis/mti-lms-mcp	portal connector	-	-	-	MIT	PAYLOAD 1101B	individual	EMEA	Moscow Technological Institute student portal. Stars NOT measured: the MCP search channel did not return this row
+StudyDrift/lextures	AI-native LMS	62	-	2026-10-10	AGPL-3.0	PAYLOAD 34520B	company	unplaced	"The learning environment that adapts." AGPL-3.0 -- network copyleft, so a hosted deliverable triggers source provision
+Simon-Initiative/lti-example-tool	LTI 1.3 example	-	-	-	NOASSERTION	ABSENT (5 filenames)	academic (CMU Simon Initiative)	North America	LTI 1.3 example tool in Gleam. No licence file under LICENSE/LICENSE.md/LICENSE.txt/LICENCE/COPYING
+1EdTech/lti-1-3-php-example-tool	LTI 1.3 example	55	42	2026-09-09	-	not probed	standards body	unplaced	The standards body's own LTI 1.3 reference tool. 42 forks against 55 stars -- a reference implementation being copied, not starred
+pipwerks/scorm-api-wrapper	SCORM wrapper	391	130	2026-09-18 (metadata)	MIT-style, BY_REFERENCE	package.json `license` field + src/JavaScript/SCORM_API_wrapper.js header lines 11-12	individual	unplaced	ACTION BR CORRECTS THIS KB ON FIVE PAGES. A grant IS declared: "MIT-style license: http://pipwerks.mit-license.org/" in the manifest AND the source header. The body is NOT readable here (DNS failure on http, 403 CONNECT on https) and "MIT-style" is not an SPDX id. HEAD COMMIT IS 2018-09-06 while pushed_at reads 2026-09-18. Manifest version 1.1.20160322
+numbas/Numbas	assessment	215	-	2026-10-09	Apache-2.0	PAYLOAD	academic (Newcastle University)	EMEA	The ONE published row in this KB that depends on pipwerks: runtime/scripts/SCORM_API_wrapper.js, VENDORED (no manifest entry), v1.1.20121005 -- four years behind upstream's manifest -- with the MIT-style header intact
+Citolab/qti-convert	QTI	-	-	-	GPL-3.0	RESIDUE_RESOLVED 0.998672	company/institution (Stichting Cito)	EMEA	ACTION BV. 3 opcodes: sign transliteration + appendix instantiation. Holder "2024 Stichting Cito Instituut voor Toetsontwikkeling, Arnhem"
+adaptlearning/adapt_framework	SCORM authoring	630	-	2026-10-10	GPL-3.0	RESIDUE_RESOLVED 0.997431	foundation (ADAPT Learning)	unplaced	ACTION BV. 11 opcodes, all delimiter/appendix/sign. Holder "2013 ADAPT LEARNING"
+CoopCodeCommun/pyopenbadges	Open Badges	-	-	-	LGPL-2.1	RESIDUE_RESOLVED 0.998056	collective	EMEA	ACTION BV. 7 opcodes incl. ONE steward divergence ("a brief idea" vs SPDX's "an idea") -- the canonical table is what is wrong, not the payload
+hcnoh/knowledge-tracing-collection-pytorch	knowledge tracing	-	-	-	MIT	PAYLOAD 1071B	individual	APAC	Upstream of a SQUASHED_COPY. Holder "Hyungcheol Noh, 2022". 79 commits, ships LICENSE
+0awei0/kt	knowledge tracing	-	-	-	ABSENT	licence_dropped=True	individual	unplaced	SQUASHED_COPY of the row above: README byte-identical (55e2f536ac87f2893dc89463, 7 994 B), ONE commit ("first commit", 2025-03-15, author "joshua he"), __pycache__ and checkpoints committed, and the upstream MIT LICENSE file ABSENT. Reads as unlicensed; upstream is MIT
+# LINEAGE: the 25 cross-owner README-identity clusters -> ALIAS 11 · DIVERGED_FORK 5 · FORK_AT_TIP 4 · UNRESOLVED 3 · ATTRIBUTION_STRIPPED_COPY 1 · SQUASHED_COPY 1
+jdolny/OneRoster.NET	OneRoster	-	-	-	-	-	individual	unplaced	ALIAS of theopenem/OneRoster.NET: IDENTICAL ref set 3f4540f9706d9099, HEAD 4f96365d3108. ONE repository, two slugs -- and this KB reasoned about which owner to pin
+KI-Campus/LRS	LRS	-	-	-	-	-	institution	EMEA	ALIAS of openHPI/openLRS (ref set ef865c69a8416619) across BOTH a rename and a transfer
+filipedeschamps/api_enem_microdados	dataset API	30	-	2026-10-08	GPL-3.0	p135 WHITESPACE_COLLAPSED	individual	LATAM	ACTION BW: the ORIGINAL. Root tree a847c05fb690b23ec6255d17de4542b3416ce562, 20 commits, authors Filipe Deschamps + OtavioVB
+rendgentmars/api_enem_microdados	dataset API	10	-	2026-10-08	GPL-3.0	p135 WHITESPACE_COLLAPSED	individual	LATAM	ATTRIBUTION_STRIPPED_COPY. Same root tree, same 20 messages and dates, ZERO shared commit shas, every commit re-authored to the owner
+livrunakcream/api_enem_microdados	dataset API	7	-	2026-01-12	GPL-3.0	p135 WHITESPACE_COLLAPSED	individual	LATAM	ATTRIBUTION_STRIPPED_COPY, same shape
+bluesky816/api_enem_microdados	dataset API	1	-	2026-08-19	GPL-3.0	p135 WHITESPACE_COLLAPSED	individual	LATAM	ATTRIBUTION_STRIPPED_COPY, and its commits are authored by a FIFTH identity (garu2044x) -- owner and rewritten author are different accounts
+# NAMED CONTROLS / MEASURED ZEROS
+# topic:lti + topic:mcp across ALL of GitHub: total_count=2 (ictexam-mcp, tkawen/developer-platform). NEITHER implements LTI.
+# "LTI 1.3 + MCP server" probe (web, 2026): no repository found that terminates an LTI launch and then serves MCP. P13's LTI leg stays unbuilt.
+# pipwerks dependency closure: 7 manifest types x 324 core-corpus rows; 150 rows exposed >=1 manifest; HITS = 1, and that one is pipwerks' own package.json.
+#   Vendored copies are NOT visible to a manifest probe: GitHub code search for the header in a file named SCORM_API_wrapper.js = 293 files, incl. numbas/Numbas and Lumieducation/Lumi.
+# README sweep: 1 528 published rows probed at main then master; 1 389 returned a README (139 did not, so a cluster among those is invisible).
+# Japan (ACTION BT): NOT absent. MEXT guideline Ver.2.0 published 2024-12-26 as circular 6文科初第1895号; Ver.1.0 July 2023; Ver.2.1 revision opened 2026-06-30.
+#   p135's "MEASURED ABSENT" was a probe-language artefact: the instrument was in English, the instrument's name is Japanese.
+# gnu.org, creativecommons.org, pipwerks.mit-license.org, www.mext.go.jp: ALL refused via curl/WebFetch this session. Domain-restricted search reaches mext.go.jp documents.

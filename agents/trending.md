@@ -6,6 +6,97 @@ updated: 2026-10-11
 
 # Education — trending agents (append-only log)
 
+## 2026-10-11 — Pass 136
+
+**The pass that went looking for something it had just declared missing, and found six of them.**
+p135 closed with the honest admission that its headline absence — *"nothing terminates a verified
+identity and then calls an MCP server with a subject it established itself"* — was measured against
+**this KB's own rows** rather than against GitHub, and registered `ACTION BS` to test it.
+🔴 **The component exists six times over, two rows are Apache-2.0, and the best one is better
+engineered than anything on this shelf.**
+
+### 🟢 The identity-broker register — new tier, `ACTION BS` discharged and refuting
+
+| repo | licence *(payload)* | ★ | pushed | the measurement |
+|---|---|---|---|---|
+| [`giantswarm/mcp-oauth`](https://github.com/giantswarm/mcp-oauth) | 🟢 **Apache-2.0** | 14 | **2026-10-11** | OAuth 2.1 authorization server for MCP, Go 1.26. Upstream OIDC `id_token` **verified against the provider's JWKS**; **refuses to issue when the provider supplies no subject claim**; MCP auth spec **2025-11-25**, RFC **9728** protected-resource metadata, RFC **8707** resource binding, RFC **9068** JWT access tokens with published JWKS, PKCE, DPoP, refresh rotation, `503` on a degraded store. 🟢 **56 test files** under `server/` |
+| [`NapthaAI/http-oauth-mcp-server`](https://github.com/NapthaAI/http-oauth-mcp-server) | 🟢 **MIT** | **108** | 2026-09-30 | Most-starred row; implements the MCP spec's authorization extension; carries `jwks-rsa` |
+| [`atrawog/mcp-oauth-gateway`](https://github.com/atrawog/mcp-oauth-gateway) | 🟢 **Apache-2.0** | 60 | 2026-09-28 | 🟢 Fronts **any** MCP server *"without code modification"* — the deployable shape for the connectors already on this shelf |
+| [`empires-security/mcp-oauth2-aws-cognito`](https://github.com/empires-security/mcp-oauth2-aws-cognito) | 🟢 **MIT** | 68 | 2026-09-12 | Worked example against a managed IdP |
+| [`tuannvm/oauth-mcp-proxy`](https://github.com/tuannvm/oauth-mcp-proxy) | 🟢 **MIT** | 33 | 2026-08-05 | Go library |
+| [`janwilmake/universal-mcp-oauth`](https://github.com/janwilmake/universal-mcp-oauth) | 🟢 **MIT** | 30 | 2025-12-25 | 🔴 Untouched since December 2025 |
+
+🔵 **Why education vocabulary could never have found it.** These are **authorization**
+infrastructure, built by the cloud-native community; the query that works is
+`mcp oauth resource server`, not `ai education identity`. 🟢 **`P13` drops from a four-to-six-week
+build to a three-to-four-week buy-and-adapt**, and what stays bespoke is one **LTI→broker adapter**.
+
+🔴 **What is still missing, measured rather than assumed:** `topic:lti` + `topic:mcp` across **all
+of GitHub** returns exactly **two** repositories — and **neither implements LTI**.
+
+### 🔴 A source read that corrects this KB's own row — and names a metadata class
+
+| row | what this KB published | what the source says |
+|---|---|---|
+| [`ictinnovations/ictexam-mcp`](https://github.com/ictinnovations/ictexam-mcp) · MIT · 17★ | *"a corporate holder and an **LTI path**, which makes it the most procurement-friendly assessment connector on the shelf"* | 🔴 **`ICTEXAM_EMAIL` + `ICTEXAM_PASSWORD`** — a teacher/admin account **password** — then the web app's **session cookie + `x-csrf-token`**, *"exactly as the web app does"*. LTI 1.3 belongs to a **separate Moodle activity module**. 🟢 *"Writes off by default"* **confirmed** (`ICTEXAM_MCP_ALLOW_WRITE`). Also exposes `ICTEXAM_TLS_INSECURE` |
+| [`tkawen/developer-platform`](https://github.com/tkawen/developer-platform) · MIT · 0★ · **Algeria** | *(new row)* | 🟢 Read-only MCP — **no write tool of any kind** — authenticated by a **learner bearer token, never a password**; `whoami` returns abilities and expiry *"never the token itself"*. 🔴 Topics `lti`/`scorm`/`xapi`: **none implemented**; in the SDK they are lesson-type enums |
+
+🟢 **So the class is: a repository's TOPICS are a claim, not an implementation** — the same defect as
+a licence badge, one field over (`intel/trends.md` → `T14`). Two source reads, two overturned cells:
+**2 for 2** on the connector tier.
+
+### 🟢 Other rows new to this KB this pass
+
+| repo | licence *(payload)* | ★ | pushed | why it is here |
+|---|---|---|---|---|
+| [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | 🟢 **MIT** | **56** | **2026-10-11** | 🟢 **Brightspace / D2L — the third major commercial LMS, and a tier this KB had no row for.** Grades, due dates, assignments, rosters, syllabus; on npm; 27 forks |
+| [`StudyDrift/lextures`](https://github.com/StudyDrift/lextures) | 🔴 **AGPL-3.0** | 62 | 2026-10-10 | A second **AI-native** platform beside `mentingo` — and the licence decides which one a studio can host |
+| [`ilodezis/mti-lms-mcp`](https://github.com/ilodezis/mti-lms-mcp) | 🟢 **MIT** | *not measured* | — | Moscow Technological Institute portal. 🔵 Stars **recorded as not measured** rather than guessed |
+| [`1EdTech/lti-1-3-php-example-tool`](https://github.com/1EdTech/lti-1-3-php-example-tool) | *not probed* | 55 | 2026-09-09 | The standards body's own LTI 1.3 reference tool. 🔵 **42 forks against 55 stars** — being copied, not watched |
+| [`Simon-Initiative/lti-example-tool`](https://github.com/Simon-Initiative/lti-example-tool) | 🔴 **ABSENT** (5 filenames) | *not measured* | — | CMU Simon Initiative, in Gleam — an **unlicensed** reference implementation |
+
+### 🔴 `ACTION BW` — the ENEM cluster at source level: "clone" was too WEAK
+
+p135 found four `api_enem_microdados` repositories with byte-identical READMEs and called them
+clones, flagging that README identity is not source identity. 🔴 **At source level it is worse than
+clones:**
+
+| repo | root tree | commits | authors |
+|---|---|---|---|
+| `filipedeschamps/…` *(original, 2022-07-25)* | `a847c05f…` | 20 | Filipe Deschamps, OtavioVB |
+| `rendgentmars/…` | 🔴 **`a847c05f…` identical** | 20, **zero shared shas** | `rendgentmars` |
+| `livrunakcream/…` | 🔴 **identical** | 20, **zero shared** | `livrunakcream` |
+| `bluesky816/…` | 🔴 **identical** | 20, **zero shared** | 🔴 **`garu2044x`** — a fifth identity |
+
+**Identical files, identical commit messages and dates, not one shared commit sha**: the history was
+replayed under another identity. 🔵 Stated as a measurement of authorship fields, not a legal
+conclusion.
+
+### 🔵 Method and channel state
+
+- 🟢 **`git clone` of public third-party repositories keeps working** and is now this KB's primary
+  instrument for auth claims: **11 repositories cloned** this pass (4 brokers/connectors, 4 ENEM, 12
+  lineage probes in total).
+- 🔵 **`git ls-remote` is NOT a new channel and this pass does not claim it.**
+  `compose/code/p989-sha-identity-fork/` (pass 97) already called it *"the cheapest identity test"*
+  and used **HEAD-SHA** identity with it. 🆕 **p136 adds the REF SET** — a sha256 over every ref —
+  which is what separates a **renamed repository** (one repo, two slugs) from a **non-diverged
+  fork** that happens to share HEAD. 🔴 **HEAD alone would have called 4 fork pairs in this corpus
+  "one repository"**, which is exactly what p989's section heading says and its own body carefully
+  does not. It is also what demoted p135's README detector from verdict to candidate.
+- 🔵 **A freshness datapoint that fell out of re-measuring p989's own sample:**
+  `Ronald-TR/OpenPronounce` was `f43079b80fcbef` on 2026-10-10 and is **`d08f355381f1`** today — the
+  diverged fork is the one that moved.
+- 🔴 **`api.github.com` direct remains 403**; metadata via the MCP GitHub tools, payloads via
+  `raw.githubusercontent.com` (200).
+- 🔴 **Non-GitHub hosts still refused**: `gnu.org`, `creativecommons.org`,
+  `pipwerks.mit-license.org`, `www.mext.go.jp` — DNS `ENOTFOUND` or 403 CONNECT. 🟢 **Two
+  workarounds that both worked**: canonical licence texts from the **SPDX mirror on GitHub**, and
+  MEXT's own documents through a **domain-restricted search**.
+- 🔵 **No `pytest`**; both of this pass's instruments ship their own runner (**10** and **7** tests).
+
+---
+
 ## 2026-10-11 — Pass 135
 
 **The pass that read the code instead of the descriptions, and found the blocker had moved rather

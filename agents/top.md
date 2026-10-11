@@ -6,6 +6,42 @@ updated: 2026-10-11
 
 # Education — AI agents shelf
 
+**Pass 136, 2026-10-11.** 🔴 **`ACTION BS` refuted this page's newest absence claim, and that is the
+most useful thing this pass did.** p135 wrote that *"nothing in this KB terminates a verified
+identity and then calls an MCP server with a subject it established itself"* — true of this KB, and
+p135 said so — and `ACTION BS` was registered precisely because an absence measured against one's
+own pages is the weak kind. Probed in the professional register, **the component exists, six times
+over**, and the best-engineered row is **Apache-2.0**:
+[`giantswarm/mcp-oauth`](https://github.com/giantswarm/mcp-oauth) verifies an upstream OIDC
+`id_token` against the provider's **JWKS**, refuses to issue when the provider supplies **no subject
+claim**, and implements the MCP authorization spec of **2025-11-25** including RFC 9728 protected-
+resource metadata and RFC 8707 resource binding. 🟢 **So `P13` becomes build-versus-buy, not build**,
+and `T13` is rewritten rather than restated. Register below.
+
+🔴 **The second finding is a correction of this page's own row, and it is the same method that
+produced p135's.** p135 read three bridges in source. This pass read a fourth —
+[`ictinnovations/ictexam-mcp`](https://github.com/ictinnovations/ictexam-mcp), which this page
+describes as having *"an LTI path, which makes it the most procurement-friendly assessment connector
+on the shelf."* 🔴 **It authenticates with `ICTEXAM_EMAIL` and `ICTEXAM_PASSWORD` — a teacher or
+admin account's password — and drives the web app's session cookie and CSRF token.** The LTI 1.3
+path belongs to a *separate Moodle activity module*, not to the MCP server. The row is in the
+password-credential tier this page calls unshippable, and it was sitting in the sanctioned-looking
+one.
+
+🔴 **Generalised, because it is measurable rather than anecdotal: a repository's TOPICS are a claim,
+not an implementation.** `topic:lti` + `topic:mcp` across all of GitHub is **two repositories**
+(`ictexam-mcp` and `tkawen/developer-platform`) — 🔴 **and neither implements LTI.** Sibling of
+`T14` (licence metadata wrong in the direction of institutional code), and the reason the register
+below is annotated by source read rather than by topic.
+
+🟢 **Licence flags moved in both directions this pass.** `ACTION BV` resolved all three payloads
+p135 left `UNMATCHED`; `ACTION BR` **corrected this page's own `pipwerks` cell** — a grant *is*
+declared, in the manifest and the source header, so "no right to use it" was wrong; and
+`ACTION BU`'s lineage sweep found a copy that **dropped** its upstream's MIT file. 🔵 **Taken
+together: a licence verdict belongs to a LINEAGE, not to a slug** (`intel/trends.md` → `T15`).
+
+---
+
 **Pass 135, 2026-10-11.** 🟢 **`ACTION BL` discharged by reading the source of all three agent
 bridges rather than their descriptions — and it splits.** The credential claim this page has made
 for four passes **holds**: not one of the three stores a student's password, and `ltijs` holds no
@@ -474,6 +510,39 @@ instrument, verdicts and the five ways a licence payload defeats hashing are in
 |---|---|---|---|---|
 | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | **92** | **2026-10-10** | An **AI-native LMS**: AI mentor, role-play scenarios, SCORM and xAPI, white-label, self-hosted — positioned against Moodle, Docebo, TalentLMS and Open edX. 🟢 **The only permissive row this KB has found where the AI is the platform's own architecture rather than a connector bolted onto someone else's.** Published by Selleo (Poland) |
 
+### 🟢 The identity-broker register — `ACTION BS`, and the component p135 said was unbuilt *(new, p136)*
+
+`ACTION BS` predicted refutation *"if any repository verifies an LTI or OIDC assertion itself before
+acting as an MCP server."* 🔴 **Six do.** Queried in the professional register (clause 5) rather than
+in education vocabulary — `mcp oauth resource server`, `mcp authorization server`,
+`token exchange rfc 8693` — because the component is an **authorization** component and the people
+who build it do not use the word "education".
+
+| repo | licence *(payload-read)* | ★ | pushed | what it actually terminates |
+|---|---|---|---|---|
+| [`giantswarm/mcp-oauth`](https://github.com/giantswarm/mcp-oauth) | 🟢 **Apache-2.0** | 14 | **2026-10-11** | 🟢 **The reference row.** Go library implementing an OAuth 2.1 **authorization server** for MCP: upstream OIDC `id_token` verified against the provider's **JWKS**, nonce bound and echoed, **refuses to issue when the provider returns no subject claim**, opaque **or** RFC 9068 JWT access tokens with published JWKS, PKCE enforced, DPoP, refresh rotation, RFC 9728 protected-resource metadata, RFC 8707 resource binding, and a `503` on a degraded store rather than a dead token. **56 test files** under `server/` |
+| [`NapthaAI/http-oauth-mcp-server`](https://github.com/NapthaAI/http-oauth-mcp-server) | 🟢 **MIT** | **108** | 2026-09-30 | The most-starred row. Remote MCP server implementing the spec's authorization extension; carries `jwks-rsa` |
+| [`atrawog/mcp-oauth-gateway`](https://github.com/atrawog/mcp-oauth-gateway) | 🟢 **Apache-2.0** | 60 | 2026-09-28 | 🟢 **The deployable shape**: an OAuth 2.1 authorization server that fronts **any** MCP server *"without code modification"* — so the connectors already on this shelf can sit behind it unchanged |
+| [`empires-security/mcp-oauth2-aws-cognito`](https://github.com/empires-security/mcp-oauth2-aws-cognito) | 🟢 **MIT** | 68 | 2026-09-12 | A worked example against a managed IdP. The shortest path to a demo an institution's security team will recognise |
+| [`tuannvm/oauth-mcp-proxy`](https://github.com/tuannvm/oauth-mcp-proxy) | 🟢 **MIT** | 33 | 2026-08-05 | Go library, OAuth 2.1 on an existing MCP server |
+| [`janwilmake/universal-mcp-oauth`](https://github.com/janwilmake/universal-mcp-oauth) | 🟢 **MIT** | 30 | 2025-12-25 | Self-described universal MCP IdP. 🔴 Untouched since December 2025 — the oldest row here |
+
+🔴 **What the register does NOT contain, and this is now the whole gap.** Not one of the six
+terminates an **LTI 1.3 launch**. They terminate OIDC, OAuth and a managed IdP. LTI's launch *is* an
+OIDC-shaped flow — a platform-signed `id_token` verified against the platform's keys, which
+[`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) already does correctly — but the **mapping**
+from a verified LTI launch (its `deployment_id`, its AGS scopes, its roster context) onto a broker's
+subject and audience is the piece nobody has written.
+
+🟢 **So the engagement shrinks from a component to an adapter**, and the adapter is small, nameable
+and the only bespoke code on the sanctioned path: `ltijs` verifies the launch → the adapter mints the
+broker's subject → `mcp-oauth` (or the gateway) issues an audience-bound token → the existing
+connectors act. Written up as `compose/patterns.md` → **P13**, now build-versus-buy.
+
+🔵 **Region note, said rather than left blank.** One of the six is placeable: **Giant Swarm is
+German (EMEA)**. The other five publish no affiliation this pass could establish from the artefact,
+and are recorded `unplaced` rather than guessed — `P800`'s rule.
+
 ### Moodle connectors — the tier p130 declared absent
 
 p130's declared gaps said *"no Moodle MCP server with a clear permissive licence"*. **That is
@@ -485,7 +554,7 @@ standalone tier.
 | agent | repo | licence | stars | last push | what it actually does |
 |---|---|---|---|---|---|
 | **moodle-mcp-server** | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | **MIT** | 43 | 2026-02-22 | The permissive Moodle connector. Standalone MCP server over Moodle's web-service API. **Verified at pass 30 of this KB as the licence-boundary exemplar** — MIT while in-tree Moodle plugins are GPL-3.0 — and re-verified this pass by repo search (`license.spdx_id = MIT`). Two independent instruments agree. **Caveat:** last push 2026-02-22, the quietest row here, and it publishes no tags. |
-| **ictexam-mcp** | [`ictinnovations/ictexam-mcp`](https://github.com/ictinnovations/ictexam-mcp) | **MIT** | 17 | 2026-09-07 | Exam authoring, delivery, gradebooks and item analysis as MCP tools, with **writes off by default**. A corporate holder (ICT Innovations) and an LTI path, which makes it the most procurement-friendly assessment connector on the shelf. |
+| **ictexam-mcp** | [`ictinnovations/ictexam-mcp`](https://github.com/ictinnovations/ictexam-mcp) | **MIT** *(payload, 1 114 B)* | 17 | 2026-10-07 | Exam authoring, delivery, gradebooks and item analysis as MCP tools. 🟢 **Writes off by default confirmed in source** (`ICTEXAM_MCP_ALLOW_WRITE`), and the corporate holder is real. 🔴 **But p136 read the source and this row's "LTI path" is not this row's**: it authenticates with `ICTEXAM_EMAIL` + `ICTEXAM_PASSWORD` — a teacher/admin **password** — then rides the web app's session cookie and `x-csrf-token`, *"exactly as the web app does"*. LTI 1.3 belongs to a separate Moodle activity module. **It is a password-credential row**, and it also exposes `ICTEXAM_TLS_INSECURE`. p135's "most procurement-friendly" is withdrawn. |
 | **moodle-mcp** (template) | [`1alexandrer/moodle-mcp`](https://github.com/1alexandrer/moodle-mcp) | **MIT** | 18 | 2026-04-21 | MCP server *template* for Moodle — the cleanest starting skeleton rather than a finished product. |
 | **moodle-mcp** (dev-facing) | [`SaadRahman01/moodle-mcp`](https://github.com/SaadRahman01/moodle-mcp) | **MIT** | 8 | 2026-06-06 | Not learner-facing: gives an agent live access to moodledev.io docs, the Hooks API, capabilities, XMLDB and the Moodle Jira tracker. Pairs with `claude-moodle-dev` below for delivery velocity. |
 | **mydy-lms-helper** | [`Deeptanshuu/mydy-lms-helper`](https://github.com/Deeptanshuu/mydy-lms-helper) | **MIT** | 7 | 2026-09-29 | APAC (D.Y. Patil, India). TUI **and** MCP server over a Moodle-based institutional LMS: attendance, courses, assignments, grades, materials. A worked example of a single-institution deployment. |
@@ -495,6 +564,16 @@ standalone tier.
 [`haanhtuandev/vgu-mcp`](https://github.com/haanhtuandev/vgu-mcp) (**none**, 10★, Go, Vietnamese-German
 University) and [`ink-waffle/moodle-mcp`](https://github.com/ink-waffle/moodle-mcp) (**none**, 6★).
 The pattern on this tier is consistent: **the permissive ones are not the most-starred ones.**
+
+### 🆕 Connector rows added by p136 — and a platform tier this page did not have
+
+| repo | licence *(payload-read)* | ★ | pushed | why it is here |
+|---|---|---|---|---|
+| [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | 🟢 **MIT** | **56** | **2026-10-11** | 🟢 **Brightspace / D2L — the third major commercial LMS, and a platform tier this page was missing** next to Canvas and Blackboard. Grades, due dates, assignments, announcements, rosters, syllabus; published to npm; *"works with any school"*. 27 forks against 56 stars. 🔵 Same owner as `purdue-mcp`, which p136 measured as a `FORK_AT_TIP` pair with `sharziki/purdue-mcp` — count the connector once |
+| [`tkawen/developer-platform`](https://github.com/tkawen/developer-platform) | 🟢 **MIT** | 0 | 2026-10-04 | 🟢 **A vendor publishing its own MCP server, from Algeria** — the first North-African supply row on this page. Read-only by construction (**no write tools at all**), authenticated with a **learner bearer token, never a password**, and `whoami` returns the token's abilities and expiry *"never the token itself"*. 🔴 Carries topics `lti`, `scorm`, `xapi`; implements none of them — they are lesson-type enums in its API schema |
+| [`ilodezis/mti-lms-mcp`](https://github.com/ilodezis/mti-lms-mcp) | 🟢 **MIT** | *not measured* | — | Moscow Technological Institute student portal. 🔵 Unofficial, single-institution, and **its star count is recorded as not measured** rather than guessed: the MCP search channel did not return the row |
+| [`Simon-Initiative/lti-example-tool`](https://github.com/Simon-Initiative/lti-example-tool) | 🔴 **NOASSERTION** — no file under 5 filenames | *not measured* | — | An LTI 1.3 example tool from **CMU's Simon Initiative**, in **Gleam**. Listed for the adapter gap above, flagged because an unlicensed reference implementation cannot be copied into a deliverable |
+| [`1EdTech/lti-1-3-php-example-tool`](https://github.com/1EdTech/lti-1-3-php-example-tool) | *not probed this pass* | 55 | 2026-09-09 | 🟢 **The standards body's own LTI 1.3 reference tool.** 🔵 **42 forks against 55 stars** — the ratio of a reference implementation being *copied* rather than watched, which is what you want at the start of an adapter build |
 
 ### Evaluation and benchmark layer — p130 called this "the largest hole on the shelf"
 
@@ -536,7 +615,7 @@ part; the deployability check is `intel/policy-matrix.tsv`.
 
 | repo | flag | consequence |
 |---|---|---|
-| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | **NOASSERTION** (GitHub reads the licence as "Other"), 847 stars | The single most-starred education *agent-skills* collection found — 165 evidence-grounded skills for teachers, leaders and EdTech builders, spanning pedagogy, learning science, curriculum and assessment. **But the licence is not an OSI-recognised identifier**, so terms must be read before any client reuse. Do not assume permissive. |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 🆕 **CC-BY-SA-4.0, deed only** *(p136 payload read — the `NOASSERTION` is RESOLVED)*, 847 stars, 122 forks | The single most-starred education *agent-skills* collection found — 165 evidence-grounded skills for teachers, leaders and EdTech builders. 🔵 **GitHub reads "Other" because the 1 230-byte file is the Creative Commons *deed*, self-labelled *"a human-readable notice"*, with the legal code off-repository.** The terms are therefore knowable: **ShareAlike**, so a client deliverable that adapts these skills inherits the obligation to publish its adaptations under the same licence, and a **content** licence carries no patent grant. Usable — with that obligation priced in — rather than unknown. |
 | [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | **No licence file at all**, 103 stars | A 54-tool Canvas MCP server with real traction and **no grant of rights**. Absent a licence, default copyright applies and Globant cannot build on it. Prefer `vishalsachdev/canvas-mcp` (MIT). |
 | [`onbirdev/moodle-webservice_mcp`](https://github.com/onbirdev/moodle-webservice_mcp) | **No licence field**, 17 stars | Implements MCP as a Moodle *web-service plugin* and is listed on marketplace.moodle.com, which makes it architecturally the cleanest Moodle→MCP route found. Unlicensed as published; ask the author before use. |
 | [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) | AGPL-3.0 | Network copyleft. Fine inside a client's own estate, a problem if the client intends to offer it as a hosted service without reciprocal source release. |
@@ -546,7 +625,7 @@ part; the deployability check is `intel/policy-matrix.tsv`.
 
 | repo | flag | consequence |
 |---|---|---|
-| [`pipwerks/scorm-api-wrapper`](https://github.com/pipwerks/scorm-api-wrapper) | **No licence file**, 391 stars | 🔴 **The canonical SCORM API wrapper, and the single largest unlicensed row this KB has measured.** Eight candidate filenames probed, all 404. Default copyright applies: there is no grant, so there is no right to use it in a client deliverable. Use [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) (MIT, 354★) instead. |
+| [`pipwerks/scorm-api-wrapper`](https://github.com/pipwerks/scorm-api-wrapper) | 🆕 **MIT-style, DECLARED BY REFERENCE** *(p136 — this cell's p135 reading is CORRECTED)*, 391 stars, 130 forks | 🔴 **p135 published *"there is no grant, so there is no right to use it"* and that was wrong.** A grant **is** declared in two places the filename probe never looked at: `package.json`'s `license` field and `src/JavaScript/SCORM_API_wrapper.js` lines 11–12 — *"Copyright (c) Philip Hutchison / MIT-style license: http://pipwerks.mit-license.org/"*. 🟡 **What remains true**: the body lives off-repository, that host is **refused in this channel** (DNS failure on `http`, 403 CONNECT on `https`), and *"MIT-style"* is **not** an SPDX identifier — so the terms are declared, unread and non-standard. 🔵 And the row is not alive: **HEAD commit is 2018-09-06** while its `pushed_at` reads 2026-09-18. [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) (MIT, 354★, pushed 2026-10-09) remains the right dependency — now because it is *maintained and SPDX-identifiable*, not because the other has no grant. |
 | [`cybercussion/SCOBot`](https://github.com/cybercussion/SCOBot) | **CC-BY-SA-4.0, and the file is only the deed**, 164 stars | 🔴 Two problems at once. **ShareAlike** is copyleft, and a **Creative Commons *content* licence carries no patent grant and is not designed for software** — Creative Commons itself advises against it for code. Worse, the 837-byte file is the *human-readable deed summary*, not the legal code, so the operative terms are incorporated only by reference. |
 | [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | **No licence file**, archived, 99 stars | 🔴 Published by the **ADL Initiative (US Department of Defense)** — the body that authored both SCORM and xAPI. The steward of the standard ships its own bridge **unlicensed and archived**. Treat as reference reading, not as a dependency. |
 | [`adaptlearning/adapt_framework`](https://github.com/adaptlearning/adapt_framework) | **GPL-3.0**, 630 stars | The largest row in the standards layer is copyleft. Fine as an **authoring tool the client runs** to produce SCORM/xAPI packages; a licensing problem if its code is linked into a client deliverable. |
@@ -561,6 +640,45 @@ to its own licence text — not from GitHub's licence badge and not from prose. 
 got several of these wrong:** a licence payload never hashes to its canonical text naively, because
 real `LICENSE` files wrap at ~72 columns and SPDX wraps at ~105. Instrument, 33 tests and the five
 classes of difference: `compose/code/p135-licence-sha-identity/`.
+
+#### 🆕 The class p136 adds: a grant DECLARED BY REFERENCE is not a grant ABSENT
+
+Three rows on this shelf now declare terms whose **body is not in the repository**, and p135's
+instrument had no verdict for that shape — so all three read as `NOASSERTION`, which in this KB's
+own prose became *"no grant."*
+
+🔵 **Credit where it is due, and the difference stated precisely.** This KB already holds
+`compose/code/p742-grant-body-vs-reference/` (pass 58), which fixed the adjacent error: a licence
+**file** whose text points at another artefact while still carrying the grant body —
+`openeducat_erp`'s *"please see the COPYRIGHT file"* over 8 241 bytes of LGPL-3.0. 🔴 **What p136
+adds is a different SURFACE, not a better reading of the same one**: `p742` scans the licence file,
+and these three rows have **no licence file to scan**. The grant is in `package.json`, in a source
+header, or in a deed that names the body's URL. **An instrument that only opens `LICENSE*` cannot
+reach any of them.**
+
+| repo | where the grant is declared | where the body lives | readable here? |
+|---|---|---|---|
+| [`pipwerks/scorm-api-wrapper`](https://github.com/pipwerks/scorm-api-wrapper) | `package.json` + source header | `pipwerks.mit-license.org` | 🔴 **No** — DNS failure / 403 CONNECT |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | the deed, self-labelled a notice | `creativecommons.org/.../legalcode` | 🟡 **Not at that host** (403 CONNECT) — 🟢 but the canonical body **is** readable from the SPDX mirror on GitHub |
+| [`cybercussion/SCOBot`](https://github.com/cybercussion/SCOBot) | the 837-byte deed | same | 🟡 same |
+
+🟢 **The operational rule, because the distinction is worth money.** `ABSENT` (no grant found
+anywhere, e.g. [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms))
+means do not build. `BY_REFERENCE` to a **named standard licence** means read the standard body —
+which GitHub mirrors, even when the publisher's own host is unreachable — and proceed on those
+terms. `BY_REFERENCE` to a **bespoke** text (`pipwerks`'s personalised "MIT-style") means the terms
+are genuinely unknown and the row needs a question to the author, not a ban.
+
+#### 🆕 And the mirror image: a copy can DROP the grant
+
+`ACTION BU`'s lineage sweep found [`0awei0/kt`](https://github.com/0awei0/kt) — a one-commit
+re-upload of [`hcnoh/knowledge-tracing-collection-pytorch`](https://github.com/hcnoh/knowledge-tracing-collection-pytorch)
+with the README byte-identical and **the upstream `LICENSE` file absent**. Upstream is **MIT
+(Hyungcheol Noh, 2022)**; the copy reads as unlicensed to any probe that looks for a filename.
+
+🔵 **So the two errors are the same error.** A licence verdict attached to a *slug* is wrong when the
+grant sits outside the LICENSE file, and wrong again when the slug is a copy that dropped it. Attach
+it to a **lineage**: `compose/code/p136-lineage-verdict/`, `intel/trends.md` → `T15`.
 
 ### Fork-swarm warning — `canvas-mcp` and `tutor-mcp`
 
@@ -790,3 +908,48 @@ is the point.**
 - 🔴 **The most-used SCORM library in the world has no licence.** `pipwerks/scorm-api-wrapper`,
   391★, 130 forks, pushed 2026-09-18, eight filenames probed and all absent. Everything downstream
   of it inherits that defect, and this KB has not yet measured how far downstream that reaches.
+
+### 🟢 Verdicts p136 returns on the gaps p135 opened
+
+- ~~**The identity-assertion gap … that component does not exist in open source, in any region.**~~
+  🔴 **REFUTED on the second clause, and p135 pre-registered its own refutation.** The component
+  exists **six times** (register above); the best row is **Apache-2.0**, verifies an upstream OIDC
+  `id_token` against the provider's JWKS, and **refuses to issue a token when no subject claim comes
+  back**. 🟡 **What survives is narrower and more useful**: no row terminates an **LTI 1.3 launch**.
+  The gap is an **adapter between `ltijs` and a broker**, not a component — so `P13` is
+  build-versus-buy and this page's own sentence *"in any region"* was the part that could not be
+  measured from this KB's rows.
+- ~~**The most-used SCORM library in the world has no licence** … everything downstream inherits
+  that defect.~~ 🔴 **CORRECTED, in two directions.** `pipwerks/scorm-api-wrapper` **does** declare a
+  grant (manifest `license` field and source header; body off-repository and unreachable here), so
+  *"no licence"* was a statement about **filenames**, not about rights. And the downstream reach that
+  this KB said it had not measured is now measured: **one** published row depends on it
+  ([`numbas/Numbas`](https://github.com/numbas/Numbas)), **by vendoring rather than by manifest** —
+  `runtime/scripts/SCORM_API_wrapper.js`, version **1.1.20121005**, with the MIT-style header
+  intact. 🔵 The grant travels with the vendored file; the version does not.
+- **Caliper has no supply at all.** 🔴 **SURVIVES p136 unchanged** — not re-probed this pass, and
+  said rather than quietly dropped.
+- **No standards-native row originates in LATAM.** 🔴 **SURVIVES p136, a sixth consecutive pass.**
+  This pass's new rows are German, Algerian, American, Russian and unplaced. 🔵 The one LATAM
+  lineage measured is the ENEM cluster, and what it added is an **attribution** finding, not supply.
+
+### 🆕 Gaps this page opens after p136
+
+- 🔴 **The LTI→broker adapter is unbuilt, and it is now the only bespoke code on the sanctioned
+  path.** Measured, not assumed: `topic:lti` + `topic:mcp` across all of GitHub is **two
+  repositories**, neither of which implements LTI, and no row in the six-strong broker register
+  terminates an LTI launch. Everything either side of the adapter is permissive and maintained.
+- 🔴 **This page's auth cells are still topic- and description-derived for every row it has not
+  cloned.** Two source reads have now each overturned a published cell (`learnmcp-xapi`'s JWT
+  docstrings in p135, `ictexam-mcp`'s "LTI path" in p136). **Two for two.** Until the connector tier
+  is read in source, every auth cell on it should be read as a claim by its author.
+- 🟡 **No row in the broker register is placed outside EMEA, and five of six are unplaced
+  entirely.** A North American or APAC engagement that wants a locally-supported broker has nothing
+  on this page to point at — and that is a gap in this KB's *placement*, not necessarily in supply.
+- 🟡 **The write surface of the new rows is unaudited.** `tkawen/developer-platform` states it has
+  **no write tools at all** and that was confirmed by reading its tool table;
+  `brightspace-mcp-server`, `EduBase/MCP` and `bruchris/canvas-lms-mcp` were **not** read in source
+  this pass, and their grade-write behaviour is therefore unknown. 🔵 `tkawen/developer-platform`'s
+  *"no tool writes anything"* is read from its README tool table and is consistent with its SDK
+  surface — it is **not** a handler-by-handler source audit either, and is recorded at that
+  strength.

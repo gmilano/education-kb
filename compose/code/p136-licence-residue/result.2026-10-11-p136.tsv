@@ -1,0 +1,37 @@
+repo	payload_path	bytes	canonical	ratio	verdict	opcodes	classes	resolved_spdx
+Citolab/qti-convert	main/LICENSE	35196	GPL-3.0-only	0.998672	RESOLVED	3	APPENDIX_INSTANTIATION:2,SIGN_TRANSLITERATION:1	GPL-3.0-only
+adaptlearning/adapt_framework	master/LICENSE	35129	GPL-3.0-only	0.997431	RESOLVED	11	APPENDIX_INSTANTIATION:2,PLACEHOLDER_DELIMITER:8,SIGN_TRANSLITERATION:1	GPL-3.0-only
+CoopCodeCommun/pyopenbadges	main/LICENSE	26526	LGPL-2.1-only	0.998056	RESOLVED	7	PLACEHOLDER_DELIMITER:6,STEWARD_DIVERGENCE:1	LGPL-2.1-only
+
+# every opcode, verbatim, so the verdict can be re-judged without re-running the instrument
+# == Citolab/qti-convert vs GPL-3.0-only (RESOLVED, ratio 0.998672, 3 opcodes)
+#   [SIGN_TRANSLITERATION] canonical<<©>> payload<<(C)>>
+#   [APPENDIX_INSTANTIATION] canonical<<<program>>> payload<<@citolab/qti-convert>>
+#   [APPENDIX_INSTANTIATION] canonical<<<year> <name of author>>> payload<<2024 Stichting Cito Instituut voor Toetsontwikkeling, Arnhem>>
+# == adaptlearning/adapt_framework vs GPL-3.0-only (RESOLVED, ratio 0.997431, 11 opcodes)
+#   [SIGN_TRANSLITERATION] canonical<<©>> payload<<(C)>>
+#   [PLACEHOLDER_DELIMITER] canonical<<<https://fsf.org/>>> payload<<{https://fsf.org/}>>
+#   [PLACEHOLDER_DELIMITER] canonical<<<one>> payload<<{one>>
+#   [PLACEHOLDER_DELIMITER] canonical<<does.>>> payload<<does.}>>
+#   [PLACEHOLDER_DELIMITER] canonical<<<year> <name>> payload<<{year} {name>>
+#   [PLACEHOLDER_DELIMITER] canonical<<author>>> payload<<author}>>
+#   [PLACEHOLDER_DELIMITER] canonical<<<https://www.gnu.org/licenses/>.>> payload<<{https://www.gnu.org/licenses/}.>>
+#   [APPENDIX_INSTANTIATION] canonical<<<program>>> payload<<adapt_framework>>
+#   [APPENDIX_INSTANTIATION] canonical<<<year> <name of author>>> payload<<2013 ADAPT LEARNING>>
+#   [PLACEHOLDER_DELIMITER] canonical<<<https://www.gnu.org/licenses/>.>> payload<<{https://www.gnu.org/licenses/}.>>
+#   [PLACEHOLDER_DELIMITER] canonical<<<https://www.gnu.org/philosophy/why-not-lgpl.html>.>> payload<<{https://www.gnu.org/philosophy/why-not-lgpl.html}.>>
+# == CoopCodeCommun/pyopenbadges vs LGPL-2.1-only (RESOLVED, ratio 0.998056, 7 opcodes)
+#   [PLACEHOLDER_DELIMITER] canonical<<one>> payload<<<one>>
+#   [STEWARD_DIVERGENCE] canonical<<an>> payload<<a brief>>
+#   [PLACEHOLDER_DELIMITER] canonical<<does.>> payload<<does.>>>
+#   [PLACEHOLDER_DELIMITER] canonical<<year name>> payload<<<year> <name>>
+#   [PLACEHOLDER_DELIMITER] canonical<<author>> payload<<author>>>
+#   [PLACEHOLDER_DELIMITER] canonical<<signature>> payload<<<signature>>
+#   [PLACEHOLDER_DELIMITER] canonical<<Coon,>> payload<<Coon>,>>
+
+# canonical texts: raw.githubusercontent.com/spdx/license-list-data/main/text/<id>.txt
+# GPL-3.0-only 34674 B · LGPL-2.1-only 26001 B, both HTTP 200 on 2026-10-11
+# gnu.org and creativecommons.org are both REFUSED in this channel (403 CONNECT / DNS ENOTFOUND),
+# so the SPDX mirror ON GITHUB is the only readable source of a canonical body here.
+# -only vs -or-later is NOT decided by this payload: the text is identical in both cases.
+# It is decided by the per-file headers, which this instrument does not read.

@@ -160,6 +160,7 @@ and this KB had never listed one.
 | **Ed-Fi ODS** | 🟢 **Ed-Fi Alliance (standards body) — North America** | [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) — serves a **OneRoster 1.2 API from an Ed-Fi ODS**, pushed 2026-10-09 | 🟢 **Apache-2.0** |
 | **Google Classroom estate** | 🟢 **Google — North America** | [`googleworkspace/oneroster-integration-conformance-tests`](https://github.com/googleworkspace/oneroster-integration-conformance-tests) — conformance tests proving a OneRoster integration correct | 🟢 **Apache-2.0** |
 | **Aeries SIS + Edgenuity** | **North America (Fresno, California)** | [`openfresno/edgenuity-aeries-grade-passback`](https://github.com/openfresno/edgenuity-aeries-grade-passback) — keeps an **Aeries** gradebook current from **Edgenuity**. 🔴 **No licence field**, 0★. 🔴 **And its content could not be reached:** repo search returns it with metadata, but the raw lane returned 404 for 15 candidate paths across `HEAD`/`main`/`master`, so **this pass verified that the repository exists and did not verify that it contains anything.** 🟢 **Listed because of who owns it: a US school-district-adjacent org publishing its own passback job** — the K-12 integration need, in public, from the buyer's side | 🔴 **none** |
+| 🆕 **TKAWEN OS** *(p136)* | 🟢 **TKAWEN — EMEA (Algeria)** | [`tkawen/developer-platform`](https://github.com/tkawen/developer-platform) — an **OpenAPI v1 spec, a TypeScript SDK and an MCP server** for an academy's live catalogue, instructors, certificate verification and, with a learner token, that learner's own dashboard, courses and transcript. 🟢 **Read-only by construction: the repo states it ships no write tool of any kind** — no cart, checkout, review, discussion or progress write. 🟢 **Auth is a learner bearer token, never a password**, and its `whoami` returns the token's abilities and expiry *"never the token itself"*. 🔴 Carries topics `lti`, `scorm`, `xapi` and implements none of them — in the SDK those are **lesson-type enum values**. 🔵 **The first North-African supply row on this page**, and 0★ | 🟢 **MIT** *(payload-read, 1 063 B)* |
 | **Agilix Buzz** | **North America (Idaho Digital Learning Alliance)** | [`RyanGravetteIDLA/qualtrics-lti-connector`](https://github.com/RyanGravetteIDLA/qualtrics-lti-connector) — LTI 1.3 bridge from Buzz LMS to Qualtrics with automated grade passback. 🔴 **ARCHIVED** | **MIT** |
 | **Virtual Arkansas** | **North America (state virtual school)** | [`virtualarkansas/jupyterlite-zestables`](https://github.com/virtualarkansas/jupyterlite-zestables) — JupyterLite notebooks packaged as Canvas content with assessment and state persistence. 🔴 No licence field | 🔴 **none** |
 
@@ -221,6 +222,25 @@ institution-derived projects are the most likely to do.** 🔴 **So `NOASSERTION
 exactly the platforms an education engagement most wants to use**, and that is the second time this
 KB has recorded that bias (`P134-F`).
 
+## 🆕 Platforms and platform-adjacent rows added by p136
+
+| platform | licence *(payload-read)* | the attachment point | what exists today |
+|---|---|---|---|
+| **Brightspace / D2L** — proprietary, **not** open source | n/a (the platform) · 🟢 **MIT** (the connector) | 🟢 **A platform tier this page did not have.** [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) (**56★**, 27 forks, pushed **2026-10-11**, published to npm) reads grades, due dates, assignments, announcements, rosters, syllabus and course content over the **Brightspace API** and states it *"works with any school"* | 🟡 **A read connector, individually owned.** Brightspace is the third major commercial LMS after Canvas and Blackboard, and this is the first row this KB has for it. 🔴 **Not source-read this pass** — its write surface is unknown, and D2L publishes no vendor agent programme this pass could find |
+| **Lextures** — [`StudyDrift/lextures`](https://github.com/StudyDrift/lextures), **62★**, pushed 2026-10-10 | 🔴 **AGPL-3.0** *(payload, 34 520 B)* | Not an attachment — another **AI-native** platform, self-described as *"the learning environment that adapts"* | 🔴 **The licence is the finding.** AGPL-3.0 means a **hosted** deliverable for a client's students triggers network-copyleft source provision. Compare `Selleo/mentingo` (MIT) for the same architectural slot: 🟢 **when two AI-native platforms sit side by side, the licence decides which one a studio can host** |
+
+### 🔵 A vendor-page caution, measured rather than asserted
+
+This pass re-ran the open-source-platform probe that produced the ERP table above, and **every one
+of the ten results came from a single vendor's own domain** (`openeducat.org`, in nine languages).
+🔴 **That vendor's pages contradict each other**: its Moodle comparison table marks Moodle as *not*
+open source, while another of its own pages describes Moodle as *"GPL PHP"*. 🟢 **Useful facts do
+come out of it**, and they are recorded as **vendor self-reported**: the Community Edition is
+**LGPLv3**, needs **Python 3.10+** and **PostgreSQL 14+**, and the vendor claims **3M+ users across
+90+ countries since 2014**. 🔵 **The lesson for this page is the channel, not the product:** a
+query naming a product returns that product's marketing, so the ERP table's weakness is structural
+and will not improve by re-running the same query.
+
 ## The licence decision, stated plainly
 
 | client intent | platforms that permit it |
@@ -235,7 +255,10 @@ KB has recorded that bias (`P134-F`).
 - **Eight of the fifteen platforms above have no AI-on-top project at all.** 🟢 **SURVIVES.** The AI
   work has concentrated almost entirely on Canvas (five-plus MCP servers) and Moodle (three plugins
   **plus eight standalone MCP servers, five of them MIT** — p131). Sakai, Chamilo, ILIAS, OpenOLAT,
-  Oppia, Kolibri, Frappe LMS and OpenEduCat are open ground.
+  Oppia, Kolibri, Frappe LMS and OpenEduCat are open ground. 🆕 **p136 adds a platform to the
+  numerator and the denominator at once**: Brightspace/D2L now has a connector (MIT, 56★) and had
+  none here before — and it is **proprietary**, so it joins Canvas and Blackboard in the column a
+  studio cannot fork.
 - ~~**Two platform licences (`openeducat_erp`, `OpenOLAT`) do not resolve to an OSI identifier.**~~
   🟢 **FULLY RESOLVED BY p135 — both halves.** `openeducat_erp` resolves to **LGPL-3.0**, read from
   an 8 241-byte `master/LICENSE` by an earlier pass. 🟢 **`OpenOLAT` resolves to Apache-2.0 with two
@@ -263,3 +286,13 @@ KB has recorded that bias (`P134-F`).
   platforms (above) with real open connectors and **no LTI, no partner API and no vendor agent
   programme** between them. Every existing connector is an unofficial password-scraper. This is
   simultaneously the clearest unmet need and the clearest compliance hazard on this page.
+- 🆕 **p136: the national-platform gap now has a counter-example, and it is 8 000 km from Europe.**
+  [`tkawen/developer-platform`](https://github.com/tkawen/developer-platform) is a vendor publishing
+  a read-only MCP server with **token** auth for its own academy platform — exactly the shape the
+  nine national K-12 platforms do not publish. 🔵 It is 0★ and serves one small vendor, so it is a
+  **proof that the shape is cheap**, not evidence that the gap is closing.
+- 🆕 **This page's licence cells are root-level, and p136 found a root licence hiding a vendored
+  third-party grant** (`numbas/Numbas`, Apache-2.0 at the root, an MIT-style `pipwerks` header four
+  levels down — `repos/foundations.md`). **None of the platforms on this page has had its vendored
+  subtrees read.** For a platform of Moodle's or OpenOlat's size that is a material unknown, not a
+  footnote.

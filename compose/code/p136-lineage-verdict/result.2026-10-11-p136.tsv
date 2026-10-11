@@ -1,0 +1,36 @@
+verdict	readme_sha16	bytes	n_distinct	slugs	heads	trees_measured	shared_commits
+ALIAS	3ecc2e10b322ded15029eb86	19781	2	agent0ai/agent-zero,frdel/agent-zero	e3051fb5,e3051fb5	0/2	-
+ALIAS	508dd31c170113db4fee0891	12990	2	The-LLM-Data-Company/rubric,paper-instruments/rubric	eb0755a1,eb0755a1	0/2	-
+ALIAS	68a303bf6d6dec62c5786a5d	2048	2	jdolny/OneRoster.NET,theopenem/OneRoster.NET	4f96365d,4f96365d	0/2	-
+ALIAS	6ea4c92d6e1a96f2f78a491f	2060	2	1EdTech/caliper-spec,IMSGlobal/caliper-spec	1849e118,1849e118	0/2	-
+ALIAS	826b2c7e7161383143514fee	3392	2	KI-Campus/LRS,openHPI/openLRS	db284a9d,db284a9d	0/2	-
+ALIAS	89ab86b98b4f6c69b563efb1	3979	2	bgwdotdev/go-oneroster,fffnite/go-oneroster	b8ddb0a6,b8ddb0a6	0/2	-
+ALIAS	8b69d8eb4e06a85ae11febc6	2638	2	1EdTech/openbadges-specification,IMSGlobal/openbadges-specification	04c4bc2e,04c4bc2e	0/2	-
+ALIAS	9b9000bdb9dd690dd3be59b1	31286	2	rosewang2008/edu-convokit,stanfordnlp/edu-convokit	d845ffda,d845ffda	0/2	-
+ALIAS	a714cbdd60a590143e306aae	5185	2	isakskogstad/Skolverket-MCP,ksaklfszf921/skolverket-mcp	5631a7fc,5631a7fc	0/2	-
+ALIAS	b0ee7d87b454263d861bb067	16928	2	IC-Redacoes-UTFPR/CorrecaoRedacao,YuriMatsumotoSantos/CorrecaoRedacao	da2e8d3d,da2e8d3d	0/2	-
+ALIAS	b103653dd40035a26106636b	3580	2	Ovsyanka83/autograder,zmievsa/autograder	5936028e,5936028e	0/2	-
+ATTRIBUTION_STRIPPED_COPY	fea59dc854f35eac9cb72f14	1842	4	bluesky816/api_enem_microdados,filipedeschamps/api_enem_microdados,livrunakcream/api_enem_microdados,rendgentmars/api_enem_microdados	17af4e41,1e8d72eb,0743bc14,988d4d9c	4/4	-
+DIVERGED_FORK	2492c4f803cd50d155be4623	2578	2	Harvard-University-iCommons/django-lti,academic-innovation/django-lti	e5dcc15c,516069dd	2/2	67
+DIVERGED_FORK	274d94acdd565ff479dec165	11807	2	adity982/OpenTutor,zijinz456/OpenTutor	9b7a1da3,f0142f28	2/2	75
+DIVERGED_FORK	2eb866b870f00bb5b8df9b41	7536	2	CAHLR/ims-lti,omsmith/ims-lti	9b712f69,4df2936c	2/2	115
+DIVERGED_FORK	7f50ee2f42594923210d1200	37048	2	abr-Projects/canvas-mcp,harrywang/canvas-mcp	c4683b33,0fccce28	2/2	134
+DIVERGED_FORK	c12dc6bc0f36c8cbd3bc7ab1	4101	2	CSR2017/edfi-oneroster,Ed-Fi-Alliance-OSS/edfi-oneroster	937248be,6de5476b	2/2	73
+FORK_AT_TIP	34cdf29b97a79cd1e4597d00	13812	2	RohanMuppa/purdue-mcp,sharziki/purdue-mcp	6922f1f3,6922f1f3	0/2	-
+FORK_AT_TIP	86a1287efce4276a80e83d7c	44900	2	GenAI-Gurus/awesome-eu-ai-act,mlx-cassio/awesome-eu-ai-act	d9843016,d9843016	0/2	-
+FORK_AT_TIP	a683ff833090cc9471ddb42e	21413	2	Mcp-Brasil/mcp-brasil,dasgltd/mcp-brasil	2efb2583,2efb2583	0/2	-
+FORK_AT_TIP	fc90924a4e4867a6079cd936	16228	2	Dymayo/moodler-mcp,GhaithAlHallak8/moodler-mcp	4e6139eb,4e6139eb	0/2	-
+SQUASHED_COPY	55e2f536ac87f2893dc89463	7994	2	0awei0/kt,hcnoh/knowledge-tracing-collection-pytorch	403b1076,6151f490	2/2	-
+UNRESOLVED	27d3b00197b8fc997afd4714	2709	2	open-edge-platform/education-ai-suite,wiwaszko-intel/education-ai-suite	1ee834c1,775e0084	0/2	-
+UNRESOLVED	a005d079f57116702b76ea96	10570	3	CHINOBv/OpenPronounce,Halleck45/OpenPronounce,Ronald-TR/OpenPronounce	74bc17ea,74bc17ea,d08f3553	0/3	-
+UNRESOLVED	aedd5b9691b3efc81b8ab99c	22588	2	duanyytop/agents-radar,kouweizhu/agents-radar	6ae80233,879681ca	0/2	-
+
+# verdict counts across the 25 cross-owner README-identity clusters
+# ALIAS	11
+# DIVERGED_FORK	5
+# FORK_AT_TIP	4
+# UNRESOLVED	3
+# ATTRIBUTION_STRIPPED_COPY	1
+# SQUASHED_COPY	1
+# 37 further clusters were CASE_VARIANT (one repository, two spellings in this KB's own rows)
+# 6 further clusters were SAME_OWNER_ALIAS (one owner, two repository names)

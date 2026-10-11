@@ -1,0 +1,68 @@
+CROSS_OWNER_SAMENAME	fea59dc854f35eac9cb72f14	1842	4	bluesky816/api_enem_microdados filipedeschamps/api_enem_microdados livrunakcream/api_enem_microdados rendgentmars/api_enem_microdados
+CROSS_OWNER_SAMENAME	c12dc6bc0f36c8cbd3bc7ab1	4101	2	CSR2017/edfi-oneroster Ed-Fi-Alliance-OSS/edfi-oneroster csr2017/edfi-oneroster
+CASE_VARIANT	6d596d2ef7559daa93c508ed	15618	1	Schroedinger-Hat/certo schroedinger-Hat/certo schroedinger-hat/certo
+SAME_OWNER_ALIAS	4c3468640697ea67e60a64ea	1220	2	Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard Ed-Fi-Alliance-OSS/Ed-Fi-Standard ed-fi-alliance-oss/Ed-Fi-Data-Standard
+CROSS_OWNER_SAMENAME	6ea4c92d6e1a96f2f78a491f	2060	2	1EdTech/caliper-spec 1edtech/caliper-spec IMSGlobal/caliper-spec
+CROSS_OWNER_SAMENAME	a005d079f57116702b76ea96	10570	3	CHINOBv/OpenPronounce Halleck45/OpenPronounce Ronald-TR/OpenPronounce
+CROSS_OWNER_SAMENAME	8b69d8eb4e06a85ae11febc6	2638	2	1EdTech/openbadges-specification IMSGlobal/openbadges-specification
+CASE_VARIANT	f4bf78c6cc841ff5f9cf93a9	16829	1	DavidLMS/learnmcp-xapi davidlms/learnmcp-xapi
+CROSS_OWNER_SAMENAME	fc90924a4e4867a6079cd936	16228	2	Dymayo/moodler-mcp GhaithAlHallak8/moodler-mcp
+CASE_VARIANT	ab1e89aa540629c3c26848bf	10614	1	FWU-DE/ais-chat fwu-de/ais-chat
+CASE_VARIANT	fee22e6c23d9e71658f9d73d	4119	1	Elgg/Elgg elgg/elgg
+CASE_VARIANT	bad77231f24f0fbfb8900f8e	11331	1	JuneYaooo/lineage-skill juneyaooo/lineage-skill
+CROSS_OWNER_DIFFNAME	826b2c7e7161383143514fee	3392	2	KI-Campus/LRS openHPI/openLRS
+CASE_VARIANT	d164bbe9c3644852a5395995	44937	1	LongsightGroup/qti3 longsightgroup/qti3
+CASE_VARIANT	8d3ad337c848a1a886898b2e	18927	1	OpenOLAT/OpenOLAT openolat/OpenOLAT
+CASE_VARIANT	1a026cab8556d3af77f13f9e	37095	1	AStheTECH/mewcp-google-classroom asthetech/mewcp-google-classroom
+CROSS_OWNER_SAMENAME	89ab86b98b4f6c69b563efb1	3979	2	bgwdotdev/go-oneroster fffnite/go-oneroster
+CASE_VARIANT	b41ea2f087685925d144436f	14354	1	ClassroomIO/ClassroomIO classroomio/classroomio
+CASE_VARIANT	5671750e2efd81968caa60c0	1582	1	Ed-Fi-Alliance-OSS/Ed-Fi-ODS ed-fi-alliance-oss/Ed-Fi-ODS
+CASE_VARIANT	f4da3fbff27b1825836ec9e2	14935	1	eth-lre/MathTutorBench eth-lre/mathtutorbench
+CROSS_OWNER_SAMENAME	3ecc2e10b322ded15029eb86	19781	2	agent0ai/agent-zero frdel/agent-zero
+CROSS_OWNER_SAMENAME	68a303bf6d6dec62c5786a5d	2048	2	jdolny/OneRoster.NET theopenem/OneRoster.NET
+CASE_VARIANT	e30e572f6672a6245b337da4	6798	1	KualiCo/rice kualico/rice
+CASE_VARIANT	1947799ebe2a40789038a349	5754	1	minouza/MathCrew minouza/mathcrew
+CASE_VARIANT	557d976a5cbbb44a20ab1f42	750	1	OpenEduCat/openeducat_erp openeducat/openeducat_erp
+CASE_VARIANT	b98842b056fb1813c3f19778	4149	1	Opetushallitus/suorituspalvelu opetushallitus/suorituspalvelu
+CASE_VARIANT	9989b08d33f493718743e36d	11067	1	Opetushallitus/ataru opetushallitus/ataru
+CASE_VARIANT	f1d9f5312bb663a4613460d7	12245	1	Opetushallitus/eperusteet opetushallitus/eperusteet
+CASE_VARIANT	5a61d336473929568a40c458	17902	1	Opetushallitus/ehoks opetushallitus/ehoks
+CASE_VARIANT	d636c843ae900dd0eb9f61e1	955	1	Opetushallitus/oppijanumerorekisteri opetushallitus/oppijanumerorekisteri
+CASE_VARIANT	237336feaaed3fbbf7f9bce0	35200	1	Opetushallitus/koski opetushallitus/koski
+CASE_VARIANT	ec261574ec54234cf2a63370	602	1	Opetushallitus/organisaatio opetushallitus/organisaatio
+CASE_VARIANT	61c42e9db43ab6ea2178586e	12420	1	Opetushallitus/valtionavustus opetushallitus/valtionavustus
+CASE_VARIANT	522cac7af0d6694559054f23	9961	1	sdv-dev/SDV sdv-dev/sdv
+CASE_VARIANT	efeac12651fa0e271976c0a8	18107	1	xGabrielCv/Auto-Matricula-SIGAA-UnB xgabrielcv/auto-matricula-sigaa-unb
+CROSS_OWNER_SAMENAME	274d94acdd565ff479dec165	11807	2	adity982/OpenTutor zijinz456/OpenTutor
+CROSS_OWNER_DIFFNAME	55e2f536ac87f2893dc89463	7994	2	0awei0/kt hcnoh/knowledge-tracing-collection-pytorch
+CASE_VARIANT	4ffd3a925ffc77a58de65eab	4324	1	Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy apereo-learning-analytics-initiative/opendashboard-legacy
+CROSS_OWNER_SAMENAME	2eb866b870f00bb5b8df9b41	7536	2	CAHLR/ims-lti omsmith/ims-lti
+CASE_VARIANT	30213d5b0a961d52dc1ede62	9107	1	FWU-DE/mem-mcp fwu-de/mem-mcp
+CROSS_OWNER_SAMENAME	86a1287efce4276a80e83d7c	44900	2	GenAI-Gurus/awesome-eu-ai-act mlx-cassio/awesome-eu-ai-act
+CASE_VARIANT	3a796b72b77a678a7fd828d5	3236	1	GibbonEdu/core gibbonedu/core
+CROSS_OWNER_SAMENAME	2492c4f803cd50d155be4623	2578	2	Harvard-University-iCommons/django-lti academic-innovation/django-lti
+CROSS_OWNER_SAMENAME	b0ee7d87b454263d861bb067	16928	2	IC-Redacoes-UTFPR/CorrecaoRedacao YuriMatsumotoSantos/CorrecaoRedacao
+CASE_VARIANT	7493a9cc46866fe714f067ce	8824	1	LongsightGroup/oneroster longsightgroup/oneroster
+CROSS_OWNER_SAMENAME	a683ff833090cc9471ddb42e	21413	2	Mcp-Brasil/mcp-brasil dasgltd/mcp-brasil
+SAME_OWNER_ALIAS	5c9e50eb3f49f450788b36c3	8827	2	NiccoloSalvini/mcp-moodle-staff NiccoloSalvini/mcp-moodle-teacher
+CASE_VARIANT	e3dc7073688474caab6a9cba	1214	1	OpenEMIS/core openemis/core
+SAME_OWNER_ALIAS	4b2df8b4c4bb6ba89450a6cb	1042	2	OS4ED/openSIS-Classic OS4ED/openSIS-Responsive-Design
+CROSS_OWNER_SAMENAME	b103653dd40035a26106636b	3580	2	Ovsyanka83/autograder zmievsa/autograder
+CASE_VARIANT	e5907fefcaaafa36eeb7014f	12754	1	RohanMuppa/brightspace-mcp-server rohanmuppa/brightspace-mcp-server
+CROSS_OWNER_SAMENAME	34cdf29b97a79cd1e4597d00	13812	2	RohanMuppa/purdue-mcp sharziki/purdue-mcp
+CASE_VARIANT	23495e714140f98925346aec	17655	1	Skolverket/dnp-ss12000-reference-api skolverket/dnp-ss12000-reference-api
+CASE_VARIANT	dc70992f19b9008e1a5aa4ab	2366	1	Tadreeb-LMS/tadreeblms tadreeb-lms/tadreeblms
+CROSS_OWNER_SAMENAME	508dd31c170113db4fee0891	12990	2	The-LLM-Data-Company/rubric paper-instruments/rubric
+CASE_VARIANT	3d1ec0cf6beb2576ad7e2dd9	4700	1	Unicon/tool13demo unicon/tool13demo
+CROSS_OWNER_SAMENAME	7f50ee2f42594923210d1200	37048	2	abr-Projects/canvas-mcp harrywang/canvas-mcp
+SAME_OWNER_ALIAS	abc762b183d7a0849e7f0737	13344	2	aisingapore/sea-lion aisingapore/sealion
+SAME_OWNER_ALIAS	49463f42102f44e34729addb	7462	2	caiuc/equipo-1-haCAIthon-2026 caiuc/equipo-16-haCAIthon-2026
+CROSS_OWNER_SAMENAME	aedd5b9691b3efc81b8ab99c	22588	2	duanyytop/agents-radar kouweizhu/agents-radar
+CASE_VARIANT	9791d287e1b18c88751b9cf4	3173	1	emorynlp/LLM-Grading emorynlp/llm-grading
+CASE_VARIANT	678ca2542738a1c6388f9560	16983	1	idiap/coqui-ai-TTS idiap/coqui-ai-tts
+CROSS_OWNER_SAMENAME	a714cbdd60a590143e306aae	5185	2	isakskogstad/Skolverket-MCP ksaklfszf921/skolverket-mcp
+CASE_VARIANT	9b348ba80fe8db08d2b2e944	18461	1	microsoft/Shiksha-Copilot microsoft/shiksha-copilot
+CASE_VARIANT	b10f4270559ee2963754c159	9993	1	ocrmypdf/OCRmyPDF ocrmypdf/ocrmypdf
+CROSS_OWNER_SAMENAME	27d3b00197b8fc997afd4714	2709	2	open-edge-platform/education-ai-suite wiwaszko-intel/education-ai-suite
+SAME_OWNER_ALIAS	743543f6bbda3e1269957c1b	1033	2	openstax/osbooks-college-physics openstax/osbooks-college-physics-bundle
+CROSS_OWNER_SAMENAME	9b9000bdb9dd690dd3be59b1	31286	2	rosewang2008/edu-convokit stanfordnlp/edu-convokit

@@ -611,9 +611,50 @@ generating feedback**, plus:
 9% evaluate it.** 🟢 **Nobody is arguing about whether students use AI. The unanswered question is
 whether the institution can show what its own AI did** — and that is this pattern.
 
-## 🔴 P13 — The identity broker in front of a standards MCP server *(new, p135 — and it is a prerequisite for P11, not an alternative to it)*
+## 🟢 P13 — The identity broker in front of a standards MCP server *(new, p135; **rewritten by p136 from BUILD to BUY-AND-ADAPT**)*
 
-**Why this pattern exists.** p134 established that the sanctioned path (P11) removes the credential
+### 🆕 p136 — the broker is a product now, and only the adapter is yours
+
+**Pass 136.** p135 wrote this pattern around **"your ~300 lines"** because no row in this KB
+terminated a verified identity before calling an MCP server. 🔴 **`ACTION BS` probed the
+professional register and found six repositories that do**, so the middle row of the stack table
+below is **no longer bespoke**:
+
+| layer | p135 said | 🆕 p136 says |
+|---|---|---|
+| Identity termination (LTI) | `Cvmcosta/ltijs`, Apache-2.0 | 🟢 unchanged |
+| **Broker** | 🔴 **"your ~300 lines"** | 🟢 **BUY**: [`giantswarm/mcp-oauth`](https://github.com/giantswarm/mcp-oauth) (**Apache-2.0**, Go, MCP auth spec **2025-11-25**, RFC 9728 + 8707 + 9068, JWKS-verified upstream OIDC, PKCE, DPoP, token exchange, **56 test files**) — or [`atrawog/mcp-oauth-gateway`](https://github.com/atrawog/mcp-oauth-gateway) (**Apache-2.0**, 60★) to front an existing MCP server *"without code modification"* |
+| **LTI→broker adapter** | *(not separated out)* | 🔴 **BUILD — and this is the only bespoke code on the path.** Map the verified launch's `sub`, roles, `deployment_id`, course context and AGS endpoints onto the broker's subject, audience and scopes |
+| Agent surface | `bb-mcp` / `learnmcp-xapi`, MIT | 🟢 unchanged — and behind the gateway they need no edits |
+
+🔵 **Why the broker existed where nobody looked.** It was built by the **cloud-infrastructure**
+community for MCP generally, not by edtech: querying `mcp oauth resource server` finds it,
+`ai education identity` does not. 🟢 **That is clause 5 of `agents/top.md`'s vocabulary rule paying
+for itself**, and it is the reason this pattern's price drops by weeks.
+
+🔴 **What is NOT bought, stated precisely.** None of the six terminates an **LTI 1.3 launch**; they
+terminate OIDC, OAuth and managed IdPs. LTI's launch is OIDC-shaped and `ltijs` already verifies it
+correctly, so the adapter is a mapping rather than a protocol implementation — but it is **yours**,
+it is where the security review will look, and `topic:lti` + `topic:mcp` across all of GitHub is
+**two repositories, neither implementing LTI**.
+
+🟢 **Revised engagement shape: 3–4 weeks, not 4–6.** Week 1: LTI developer key and a verified
+launch (unchanged). Week 2: stand up `mcp-oauth` or the gateway against the institution's IdP —
+configuration, not code. Week 3: the adapter, with the same two tests p135 specified (an unasserted
+subject is refused; `role:admin` cannot be self-granted) **plus one the bought component makes
+cheap** — that a token minted for course A cannot be replayed against course B, which is RFC 8707
+resource binding and already implemented. Week 4: the security review.
+
+🔵 **One caution that comes with buying.** `giantswarm/mcp-oauth` is **14★**. The capability is
+excellent and the bus factor is not; `atrawog/mcp-oauth-gateway` (60★) and
+[`NapthaAI/http-oauth-mcp-server`](https://github.com/NapthaAI/http-oauth-mcp-server) (108★, MIT)
+are the alternates, and a client's security team will ask about exactly this. **Vendor-in the
+component, pin the version, and read the 56 tests — they are the strongest evidence any of the three
+offers.**
+
+---
+
+**Why this pattern exists** *(p135's original, kept because the mechanism is unchanged)*. p134 established that the sanctioned path (P11) removes the credential
 blocker, and that is correct: a tool launched over LTI holds no user credential. 🔴 **p135 read the
 source of all three agent bridges and found that two of them accept the user's identity on trust**
 (`intel/trends.md` → `T13`, `agents/top.md` → `ACTION BL`). **P11 as written ships an MCP server
@@ -636,7 +677,7 @@ broker's whole job is to carry it across.
 | role | component | licence |
 |---|---|---|
 | Identity termination | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) — LTI 1.3 launch, OIDC, signature verification, nonce replay protection | 🟢 Apache-2.0 *(hash-verified, p135)* |
-| Broker | **your ~300 lines.** Maps the verified `sub`/roles/context claims from the launch into a short-lived, signed capability token; refuses to mint one for a subject the launch did not assert | — |
+| Broker | ~~**your ~300 lines.**~~ 🆕 **p136: BUY IT.** [`giantswarm/mcp-oauth`](https://github.com/giantswarm/mcp-oauth) (Apache-2.0) or [`atrawog/mcp-oauth-gateway`](https://github.com/atrawog/mcp-oauth-gateway) (Apache-2.0). What stays yours is the **LTI→broker adapter**: map the launch's verified claims onto the broker's subject, audience and scopes | 🟢 **Apache-2.0** *(payload-read, p136)* |
 | Agent surface | [`nitsuah/bb-mcp`](https://github.com/nitsuah/bb-mcp) or [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi), called **only** by the broker | 🟢 MIT *(both hash-verified)* |
 | Record | the institution's LRS (xAPI) or the platform's own API | — |
 | Audit | `bb-mcp`'s structured access log, SHA-256-hashed subjects, kept | 🟢 MIT |
@@ -743,6 +784,9 @@ conformance suite for QTI**, so "the item is valid QTI 3" rests on the player ac
 | 🆕 asks for **AI-generated course content or assessment items** for an LMS it already owns | 🟢 **P14** |
 | 🆕 needs tracked content delivery to work **offline** | 🟢 **P14** (`scorm-again` is offline-first), with **P2** |
 | 🆕 is a **German-speaking-Europe** institution wanting off Moodle's GPL | 🟢 **OpenOlat** as the base (Apache-2.0 + attribution), then **P11** |
+| 🆕 runs **Brightspace / D2L** | 🟢 **P11** shape with [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) (MIT) as the read surface — 🔴 **behind P13**, and audit its write surface first: it was not source-read |
+| 🆕 asks *"can we buy the identity layer rather than build it?"* | 🟢 **P13 as rewritten by p136** — buy `giantswarm/mcp-oauth` or `atrawog/mcp-oauth-gateway` (both Apache-2.0), build only the LTI adapter |
+| 🆕 wants to **reuse an open skills/prompt library** in a client deliverable | 🔴 Read the licence first: `GarethManning/education-agent-skills` is **CC-BY-SA-4.0 by deed** (847★) — **ShareAlike propagates into the client's adaptations** |
 
 **Cross-cutting constraints.** Prefer **LTI 1.3** over forking any AGPL platform. Never ship
 emotion recognition into an EU deployment. Treat unlicensed components as unusable
@@ -752,7 +796,23 @@ this KB has now resolved **both** such rows by reading the payload (`openeducat_
 8 241 B; `OpenOLAT` → **Apache-2.0 with two attribution statements**, p135). 🔴 **And `NOASSERTION`
 is biased towards institution-derived projects**, because appending institutional attribution is
 exactly what defeats a licence matcher — so the rows it mislabels are disproportionately the ones an
-education engagement most wants to use (`intel/trends.md` → `T14`). Pin commits for repos with no releases. **Benchmarks and datasets need the same licence
+education engagement most wants to use (`intel/trends.md` → `T14`).
+
+🆕 **p136 splits `NOASSERTION` once more, because two of its causes have opposite remedies.**
+**(a) GRANTED, BODY ELSEWHERE** — the grant is declared in a manifest, a source header or a URL
+rather than in a `LICENSE` file. `pipwerks/scorm-api-wrapper` declares *"MIT-style license"* in
+`package.json` **and** in `src/JavaScript/SCORM_API_wrapper.js`; `GarethManning/education-agent-skills`
+and `cybercussion/SCOBot` ship the **Creative Commons deed** with the legal code off-repository.
+🟢 **Remedy: read the manifest and the file headers before concluding anything, and fetch the named
+standard text from the SPDX mirror on GitHub** — which works even when the publisher's own host is
+unreachable. 🔴 **But a *bespoke* referenced text (`pipwerks`' personalised "MIT-style") stays
+genuinely unknown: that one needs a question to the author.**
+**(b) THE GRANT WAS DROPPED BY A COPY** — [`0awei0/kt`](https://github.com/0awei0/kt) re-uploads an
+**MIT** project in one commit without its `LICENSE` file. 🟢 **Remedy: resolve the lineage and read
+the UPSTREAM's grant** (`compose/code/p136-lineage-verdict/`, `intel/trends.md` → `T15`).
+🔵 **One line to carry both: ask where the grant IS, not whether a file is.**
+
+Pin commits for repos with no releases. **Benchmarks and datasets need the same licence
 screen as code** — the two education benchmarks that exist are both ungranted.
 
 🆕 **Three cross-cutting rules added by p132:**
@@ -789,3 +849,19 @@ screen as code** — the two education benchmarks that exist are both ungranted.
    conformance suite exists, running it is the cheapest credibility in the engagement; where none
    exists — LTI AGS, Ed-Fi, and all 43 portal connectors — "it works" is a developer's assertion,
    and that is worth stating in the proposal rather than leaving a client to discover.**
+
+🆕 **Two cross-cutting rules added by p136:**
+
+7. 🔴 **Resolve the repository before you cost the component.** Two rows can be one repository: p136
+   measured **11** slug pairs on this KB's own pages with **identical git ref sets** — a rename or a
+   transfer that GitHub still answers — plus **37** more that differ only in capitalisation. 🟢 **In
+   a proposal this matters twice**: a "two independent implementations" claim can be one, and a
+   "well-forked, actively maintained" claim can be one repository counted twice. **Check the ref set
+   (`git ls-remote`), then the shared commits, then the dates** — `compose/code/p136-lineage-verdict/`.
+8. 🔴 **A declared field is a claim; source and payload are measurements — say which you used.**
+   Two source reads have each overturned a cell this KB had published: `learnmcp-xapi`'s docstrings
+   name a **JWT** trust anchor the project has no dependency on (p135), and `ictexam-mcp`'s `lti`
+   **topic** describes a separate Moodle module while the MCP server itself logs in with an admin
+   **password** (p136). 🟢 **Before any auth or standards claim reaches a client deliverable, clone
+   the repository and read the three files that matter** — the config loader, the HTTP client and the
+   tool definitions. It took under ten minutes per repository in this environment.

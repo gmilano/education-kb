@@ -6,6 +6,123 @@ updated: 2026-10-11
 
 # Education — open gaps ledger
 
+## ✅ Verdicts on p135's pre-registered actions, judged by p136 — **all six reached; six discharged, and three refuted their own premise**
+
+| action | verdict | the measurement |
+|---|---|---|
+| **`ACTION BR`** — dependency closure of the unlicensed `pipwerks/scorm-api-wrapper` | 🟢 **DISCHARGED — and it refuted the premise behind the question** | Refutation condition was *"no row depends on it"*. **One does** — [`numbas/Numbas`](https://github.com/numbas/Numbas), by **vendoring**, invisible to all 7 manifest types across the 150 manifest-bearing rows of 324. 🔴 **And the bigger finding is that the row is not unlicensed**: `package.json` and the source header both declare *"MIT-style license: http://pipwerks.mit-license.org/"*. Five pages of this KB said *"no grant, so no right to use"*; that is **withdrawn**. HEAD commit **2018-09-06** against a `pushed_at` of 2026-09-18 |
+| **`ACTION BS`** — probe for an identity broker before asserting its absence | 🔴 **DISCHARGED AND REFUTED — exactly as pre-registered** | Condition: *"refuted if any repository verifies an LTI or OIDC assertion itself before acting as an MCP server."* **Six do.** [`giantswarm/mcp-oauth`](https://github.com/giantswarm/mcp-oauth) (Apache-2.0) verifies the upstream OIDC `id_token` against the provider's **JWKS** and **refuses to issue without a subject claim**; [`atrawog/mcp-oauth-gateway`](https://github.com/atrawog/mcp-oauth-gateway) (Apache-2.0) fronts any MCP server *"without code modification"*. 🟢 **`T13` rewritten, `P13` becomes buy-and-adapt** |
+| **`ACTION BT`** — probe Japan by ministry, in Japanese | 🟢 **DISCHARGED, NOT REFUTED — and p135's "MEASURED ABSENT" was a probe artefact** | Japan's instrument predates India's and Singapore's: 「初等中等教育段階における生成AIの利活用に関するガイドライン（Ver.2.0）」, **2024-12-26**, issued as circular **6文科初第1895号** to every prefectural and designated-city board of education; **Ver.1.0** July 2023; **Ver.2.1 revision opened 2026-06-30** naming agentic AI, cognitive offloading and assessment. 🔵 Read from MEXT's own PDFs via domain-restricted search (`www.mext.go.jp` is DNS-refused here) |
+| **`ACTION BU`** — README byte-identity mirror detection across the whole corpus | 🟢 **DISCHARGED, NOT REFUTED — and it demoted its own signal** | Condition: *"refuted if fewer than 2 further cross-owner clusters exist."* **24 further** (25 total) out of **71** byte-identical clusters over **1 389** READMEs. 🔴 **But 11 of the 25 are one repository under two slugs** (identical git ref sets after a rename/transfer), so p135's *"README identity is a verdict"* is wrong: it is a **candidate**. 🔴 Plus **37** clusters that are this KB citing one repository under two spellings |
+| **`ACTION BV`** — close the steward-edit table or declare it unclosable | 🟢 **DISCHARGED, PREMISE REFUTED** | Condition: *"refuted if any of the three carries a substantive added clause."* **Zero of three.** All resolve: `Citolab/qti-convert` → **GPL-3.0** (`0.998672`), `adaptlearning/adapt_framework` → **GPL-3.0** (`0.997431`), `CoopCodeCommun/pyopenbadges` → **LGPL-2.1** (`0.998056`). Residue is four mechanical classes, one of which — a **steward divergence** between SPDX's text and the FSF's wording — means the canonical table was wrong, not the payload |
+| **`ACTION BW`** — verify the ENEM cluster's lineage at source level | 🟢 **DISCHARGED, PREMISE REFUTED IN THE OPPOSITE DIRECTION** | Condition: *"refuted if the source trees differ substantially"* — i.e. "clone" too strong. 🔴 **"Clone" was too WEAK.** All four share the **root tree sha** `a847c05fb690b23ec6255d17de4542b3416ce562` and 20 commits with identical messages and dates, and **not one commit sha is shared**: every commit was re-authored, one of them to an identity that is not even the owner's (`garu2044x` under `bluesky816`) |
+
+## 🟢 Gaps CLOSED, CORRECTED or RETIRED by p136
+
+- 🔴 **CORRECTED — *"the most-used SCORM library in the world has no licence … there is no right to
+  use it"*** (`agents/top.md`, `repos/foundations.md`, `repos/trending.md`, `compose/patterns.md`,
+  `intel/trends.md`). A grant **is** declared, in the package manifest and the source header. The
+  corrected residual risk is narrower and real: the body is **off-repository and unreachable here**,
+  *"MIT-style"* is **not** an SPDX identifier, and **HEAD is 2018**.
+- 🔴 **REFUTED — *"no repository in this KB does this, in any region"*** (the identity broker, `T13`).
+  Six repositories do it. 🟢 **The clause that could not be measured from this KB's rows is exactly
+  the clause that was wrong** — which is why `ACTION BS` existed.
+- 🟢 **CLOSED — *"Japan's national AI-education policy is MEASURED ABSENT in this KB"*.** It exists,
+  it is dated, and it arrived through a ministerial circular. 🔵 **The gap was in the probe, not in
+  Japan**, and `T10` gains a third clause: **the instrument's language is part of the probe**.
+- 🟢 **CLOSED — the three `UNMATCHED` licence payloads** (`ACTION BV`). Three licence cells on
+  `agents/top.md` and `repos/foundations.md` now carry an SPDX id established by residue analysis.
+- 🟢 **CLOSED — `GarethManning/education-agent-skills`' `NOASSERTION`.** The payload is the
+  **CC-BY-SA-4.0 deed**, self-labelled *"a human-readable notice"*. 🔴 **ShareAlike on an
+  agent-skills pack** is now a priced obligation rather than an unknown.
+- 🟢 **CLOSED — the two standing `p383-region-heading-gate` findings on `intel/market.md`.**
+  `### Global / unplaced` was out of the closed region vocabulary, which also made `Global` read as a
+  missing region. Renamed to `### Global`; the gate now returns **0 findings** and its own 11 tests
+  pass.
+
+## 🔴 Gaps OPEN after p136, with the measurement behind each
+
+- 🔴 **The LTI→broker adapter.** Nothing maps a verified LTI 1.3 launch (`deployment_id`, AGS
+  scopes, course context) onto a broker's subject and audience. Measured: `topic:lti` + `topic:mcp`
+  across all of GitHub is **2 repositories**, **neither implementing LTI**; none of the six brokers
+  terminates an LTI launch. 🟢 **This is the whole remaining bespoke surface of the sanctioned
+  path.**
+- 🔴 **This KB's auth cells are author-declared for every row it has not cloned.** Two source reads,
+  two overturned published cells (`learnmcp-xapi`'s JWT docstrings, `ictexam-mcp`'s `lti` topic) —
+  **2 for 2**. The connector tier is ~43 rows; **5** have been read in source.
+- 🔴 **Vendored subtrees are unread across the entire corpus.** `numbas/Numbas` is Apache-2.0 at the
+  root and carries a third-party MIT-style header four levels down. **Zero** of the platform and
+  standards rows have had their trees enumerated — so every licence cell in this KB is a **root**
+  licence.
+- 🔴 **Caliper Analytics still has no supply.** Not re-probed this pass; carried forward rather than
+  quietly dropped.
+- 🔴 **No standards-native row originates in LATAM** — a **sixth** consecutive pass. This pass's new
+  rows are German, Algerian, American, Russian and unplaced.
+- 🔴 **Higher education and Canada are holes in the North America picture**, and **European
+  procurement data does not exist on this KB's pages**. Both measured as empty probes this pass, not
+  inferred.
+- 🔴 **APAC has mandates and no market**: dated curriculum obligations for five countries, **zero**
+  vendor names or market figures.
+- 🟡 **Three lineage clusters remain `UNRESOLVED`** (`education-ai-suite`, `OpenPronounce`,
+  `agents-radar`) — one clone per side each, and none is an education-supply row.
+- 🟡 **China, Korea and Brazil policy cells rest on English sources about non-English instruments.**
+  `ACTION BT` showed that shape can miss an entire national policy.
+
+## 🆕 Actions opened by p136, pre-registered for p137 with refutation conditions
+
+🟢 **`ACTION BX`** — **probe for the LTI→broker adapter before `T13`'s surviving clause is asserted
+as fact.** The same discipline that refuted `ACTION BS`: query `lti 1.3 oauth token exchange`,
+`lti advantage oauth resource server`, `ags access token service mcp`, and read
+`1EdTech/lti-1-3-php-example-tool` plus `ltijs`'s own token-service code to see whether the mapping
+is already library code. 🔴 *Refuted if any repository or library maps a verified LTI launch onto an
+OAuth subject/audience for a downstream resource server — in which case the sanctioned path has
+**no** bespoke component left and `P13` becomes pure configuration.*
+
+🟢 **`ACTION BY`** — **test `T15`'s own falsifier with a tree-level licence probe.** Enumerate the
+file trees of the 20 largest rows on `repos/foundations.md` and count those carrying a **foreign**
+licence header (a holder other than the repo's own). 🔴 *Refuted if under 5% carry one — in which
+case slug-level licence verdicts are good enough and `T15` is four unlucky examples rather than a
+trend.*
+
+🟡 **`ACTION BZ`** — **re-probe China, South Korea and Brazil in their own languages** (中文 /
+한국어 / português), by ministry, applying `T10` clause 3. 🔴 *Refuted if the native-language probe
+returns nothing the English probe missed — which would make `ACTION BT`'s Japan result a one-off
+rather than a method rule.*
+
+🟢 **`ACTION CA`** — **source-read the three connectors this pass added and did NOT read**
+(`RohanMuppa/brightspace-mcp-server`, `EduBase/MCP`, `bruchris/canvas-lms-mcp`): auth model, write
+surface, and whether topics match implementation. 🔴 *Refuted if all three match their descriptions —
+which would break a 2-for-2 streak and mean the defect is specific to the rows already read, not to
+the tier.*
+
+🟡 **`ACTION CB`** — **measure how much of the 37-cluster case-variant finding is actually published
+as duplicate ROWS.** A cluster only matters if both spellings appear as separate rows on a
+non-log page. 🔴 *Refuted if fewer than 5 of the 37 appear as two distinct published rows — in which
+case the finding is about this KB's citation hygiene rather than its row counts.*
+
+🟡 **`ACTION CC`** — **run the two empty regional probes with instrument-class vocabulary**: North
+American **higher-education** AI policy (try accreditor, system office, board of regents, provost)
+and European **procurement** (try framework agreement, tender, OJEU, Jisc framework, SURF
+contract). 🔴 *Refuted if both return nothing again — which converts two coverage holes into two
+measured absences, itself a publishable finding.*
+
+### 🔵 Channel state after p136, recorded because two items changed
+
+| channel | state |
+|---|---|
+| **Public third-party `git clone`** | 🟢 **WORKS, and is now the primary auth instrument.** 11 repositories cloned this pass (`--depth 1` and `--depth 50/80`) |
+| **`git ls-remote`** | 🟢 **NOT new — `p989-sha-identity-fork` (pass 97) already named it the cheapest identity test open to this KB**, and used HEAD-SHA identity with it. 🆕 **What p136 adds is the REF SET**: sha256 over every ref, which separates a renamed repository (`ALIAS`) from a **non-diverged fork** that shares HEAD (`FORK_AT_TIP`) — a distinction HEAD alone cannot make, and there are **4** such pairs in this corpus |
+| `raw.githubusercontent.com` | 🟢 200. **1 389 of 1 528** README probes succeeded; **150 of 324** core rows exposed at least one of 7 manifest types |
+| `api.github.com` direct | 🔴 **403** — use the MCP GitHub tools |
+| GitHub **code search** via MCP | 🟢 **WORKS and measures sector scale**: 293 files carrying the `pipwerks` header; `topic:lti`+`topic:mcp` = 2 repositories |
+| Non-GitHub hosts via `curl` / `WebFetch` | 🔴 **REFUSED.** Newly confirmed for `gnu.org`, `creativecommons.org`, `pipwerks.mit-license.org`, `www.mext.go.jp` |
+| 🆕 **SPDX licence mirror on GitHub** | 🟢 **The workaround for refused licence hosts.** `spdx/license-list-data` serves canonical GPL-3.0 (34 674 B) and LGPL-2.1 (26 001 B) over `raw.githubusercontent.com` |
+| Domain-restricted search | 🟢 **Still reaches refused hosts' documents** — MEXT's guideline, circular number and committee papers, as `ACTION BO` did for Colorado |
+| `pytest` | 🔴 **NOT INSTALLED.** Both instruments ship their own runner (10 and 7 tests) |
+| 🔵 `python3 -I` | 🟡 **Does not put the script directory on `sys.path`.** Instruments must insert it themselves — fixed in both of this pass's test files |
+
+---
+
 ## ✅ Verdicts on p134's pre-registered actions, judged by p135 — **all six reached; five discharged, and two refuted their own premise**
 
 | action | verdict | the measurement |

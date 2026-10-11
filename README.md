@@ -4,6 +4,150 @@ region: Global
 updated: 2026-10-11
 ---
 
+## Pass 136 — 2026-10-11
+
+⏱️ **Twenty-third pass of this date.** 🟢 **All six of p135's pre-registered actions reached and
+discharged; three refuted their own premise, and one refuted a claim p135 had published the hour
+before.** 🔴 **The headline: the component this KB called the clearest unbuilt piece on the shelf
+already exists, six times over, and two of the six are Apache-2.0.**
+
+| finding | verdict | figure |
+|---|---|---|
+| `P136-A` | 🔴 **`ACTION BS` REFUTED `T13`'s ABSENCE — THE IDENTITY BROKER IS A PRODUCT** | **6 repositories**; `giantswarm/mcp-oauth` **Apache-2.0**, JWKS-verified OIDC, refuses to issue without a subject claim, MCP spec **2025-11-25**, **56 test files** |
+| `P136-B` | 🔴 **`ACTION BR` CORRECTED FIVE PAGES — `pipwerks` IS NOT UNLICENSED** | grant declared in `package.json` **and** the source header; **HEAD commit 2018-09-06**; closure = **1** row, by vendoring |
+| `P136-C` | 🔴 **`ACTION BU`: 11 OF 25 "MIRRORS" ARE ONE REPOSITORY UNDER TWO SLUGS** | **71** README-identical clusters over **1 389** READMEs; **37** more are this KB's own spelling variants |
+| `P136-D` | 🔴 **`ACTION BW`: "CLONE" WAS TOO WEAK — THE ENEM HISTORIES WERE RE-AUTHORED** | identical root tree `a847c05f…`, 20 commits each, **zero shared commit shas**, a fifth identity under one owner |
+| `P136-E` | 🟢 **`ACTION BT`: JAPAN WAS NEVER ABSENT — THE PROBE WAS IN THE WRONG LANGUAGE** | MEXT Ver.2.0, **2024-12-26**, circular **6文科初第1895号**; Ver.2.1 opened **2026-06-30** |
+| `P136-F` | 🟢 **`ACTION BV`: ZERO OF THREE PAYLOADS CARRY AN ADDED CLAUSE** | three licence cells resolved; one **steward divergence** found between SPDX and the FSF |
+| `P136-G` | 🔴 **A SOURCE READ OVERTURNED THIS KB'S OWN ROW, AND NAMED A CLASS** | `ictexam-mcp` authenticates with an **admin password**; `topic:lti`+`topic:mcp` = **2 repos**, **neither implements LTI** |
+| `P136-H` | 🔴 **SOUTH KOREA'S AI TEXTBOOK MANDATE HAS BEEN ROLLED BACK** | below **30%** adoption by March; **National Assembly stripped official status in August**; **$960M** plan to 2030 instead |
+| `P136-I` | 🟢 **OHIO'S DISTRICT AI-POLICY DEADLINE HAS ALREADY ELAPSED** | **2026-07-01**, three months ago — the conversation moves from drafting to evidence |
+
+### `P136-A` — the finding, and why the method matters more than the result
+
+🔵 **p135 wrote its own refutation condition.** It said, in its *"what this pass did NOT achieve"*
+section: *"the identity broker was not built, and **its absence is asserted from this KB's own rows
+rather than measured against GitHub**."* `ACTION BS` was registered to test it in the **professional
+register** — `mcp oauth resource server`, `mcp authorization server`, `token exchange rfc 8693` —
+because an authorization component is built by people who never say "education".
+
+🔴 **Six repositories do exactly what `T13` said nothing did**, and the measurement is from source,
+not description: `giantswarm/mcp-oauth` (Apache-2.0, Go) verifies the upstream OIDC `id_token`
+against the provider's **JWKS**, binds and checks the nonce, **refuses to issue a token when the
+provider returns no subject claim**, and implements RFC 9728 protected-resource metadata, RFC 8707
+resource binding, RFC 9068 JWT access tokens, PKCE, DPoP and token exchange, with **56 test files**.
+`atrawog/mcp-oauth-gateway` (Apache-2.0, 60★) does it **in front of any MCP server without code
+modification**, which means the connectors already on this shelf need no edits.
+
+🟡 **What survives is narrower and more sellable.** None of the six terminates an **LTI 1.3 launch**.
+`ltijs` already verifies the launch correctly; nothing maps that verified launch onto a broker's
+subject and audience. 🟢 **So `P13` drops from a 4–6-week build to a 3–4-week buy-and-adapt, and
+the only bespoke code on the sanctioned path is one adapter.** Measured, not assumed:
+`topic:lti` + `topic:mcp` across all of GitHub is **two** repositories, and neither implements LTI.
+
+### `P136-B` and `P136-C` — two errors with one shape
+
+🔴 **`pipwerks/scorm-api-wrapper` declares a grant and this KB said it had none.** It is in
+`package.json` (`"license": "MIT-style license: http://pipwerks.mit-license.org/"`) and in
+`src/JavaScript/SCORM_API_wrapper.js` lines 11–12. The eight-filename probe was correct about files
+and wrong about rights. 🟡 **The real residual risk is different**: the body is off-repository at a
+host refused in this channel, *"MIT-style"* is not an SPDX identifier, and **HEAD is 2018-09-06**
+against a `pushed_at` of 2026-09-18.
+
+🔴 **And `0awei0/kt` is the same error mirrored**: a one-commit re-upload of an **MIT** project with
+the README byte-identical and the upstream `LICENSE` **dropped**. One row reads unlicensed because
+the grant is outside the file; another reads unlicensed because a copy deleted it.
+
+🟢 **Hence `T15`: a licence verdict belongs to a LINEAGE, not to a slug.** `SCORM_API_wrapper.js`
+appears in **293 files** on GitHub; this KB's corpus holds **71** byte-identical README clusters;
+the sector moves code by **copying**, not by dependency resolution. Resolve the slug to a repository
+(ref set), then to a lineage (shared commits / root tree), then read the grant wherever the artefact
+declares it — and record **which** of those it was.
+
+### Regions this pass
+
+| region | this pass |
+|---|---|
+| **North America** | 🟢 **A deadline has ELAPSED rather than approached: Ohio required every district to adopt an AI policy by 2026-07-01**, three months ago — so the question becomes *"can you show it works?"*, which is the billable one. Oklahoma (before 2027-28), Maryland (**2027-06-01**), Idaho and California A.B. 1159 remain live. 🔴 **Two source conflicts recorded unresolved on COUNTABLE quantities**: **134 bills / 31 states** vs **68 / 27**, and *"35+ states"* over an own table reading **33–35**. 🟢 The buying unit is also the district: Chicago, Denver, Charlotte-Mecklenburg, NYC's playbook. 🔴 **Higher education, federal action and Canada returned NOTHING** |
+| **EMEA** | 🔴 **The bare probe failed a third independent time.** 🟢 The country probe returned builders, not just rules: **France** is building a *sovereign* education AI with literacy through the state **Pix** platform; **Germany**'s KMK guidelines (2024) are implemented by **sixteen Länder**; the **Netherlands**' NOLAI is **building** GenAI tools; **Finland** tests GenAI primarily for **teacher support**. 🟢 Supply placed here: `giantswarm/mcp-oauth` (German) and 🟢 **`tkawen/developer-platform` — the first North-African row on these pages**. 🔴 **Procurement data: none. Nordic university policy: none** |
+| **APAC** | 🟢 **`ACTION BT` closes the Japan hole and the hole was in the probe**: MEXT's guideline **Ver.2.0 of 2024-12-26**, issued as circular **6文科初第1895号**, with **Ver.2.1 opened 2026-06-30** naming **agentic AI** and **cognitive offloading** — and 校務 use framed as **働き方改革**, which is `T9` written into national policy. 🔴 **South Korea has REVERSED**: AI textbooks stripped of official status by the National Assembly in August after sub-30% adoption, replaced by a **$960M** capacity plan to 2030. India: Classes **3–8 from 2026-27**, **9–10 from 2027-28**, 18 000+ CBSE schools already running a 15-hour SOAR module. China: compulsory from age six, 🔴 **6 or 8 hours a year depending on the source** |
+| **LATAM** | 🟢 **The only region whose bare probe works, two passes running**, and it returns the narrowest denominator yet: UNESCO IESALC 2026 — **87%** of universities use AI, **26%** have a formal strategy, 🔴 **9% evaluate their implementation**. Brazil's basic education: **53%** of school administrators use AI, **22%** have guidelines. TALIS 2024 teacher use — **Brazil 56%, Chile 55%, Colombia 53%, Costa Rica 52%** against an OECD average of **36%** — 🔴 **every one 16–20 points above the OECD and not one with a binding education rule.** Regulation moves on the **general** AI track: Brazil's **PL 2.338/2023** (Senate 2024-12-10, still pending) plus an **ANPD sandbox to December 2026**; Mexico's **2026 reforms are the first binding wave**; Colombia's **CONPES 4144** and the CON-IA bill |
+| **Global** | Market: the 2026 column now spans **$1.94B–$11.4B (5.88×)**, and 🟢 **most of it dissolves on inspection** — one row is **incremental growth**, not a level; one is **higher-education only**. The broad-market 2026 level is **$9.6–11.4B** across three firms (**1.19×**), and the real disagreement remains the growth rate, **25.9%–45%**. 🟢 **New rule: a figure needs a base year, a geography AND a quantity type** |
+
+### Verdicts on p135's actions
+
+- 🟢 **`ACTION BR` — DISCHARGED, and it corrected this KB on five pages.**
+- 🔴 **`ACTION BS` — DISCHARGED AND REFUTED**, exactly as its condition specified.
+- 🟢 **`ACTION BT` — DISCHARGED, NOT REFUTED.** Japan has a dated national instrument.
+- 🟢 **`ACTION BU` — DISCHARGED, NOT REFUTED — and it demoted its own signal** from verdict to
+  candidate.
+- 🟢 **`ACTION BV` — DISCHARGED, PREMISE REFUTED.** Zero added clauses; three cells resolved.
+- 🟢 **`ACTION BW` — DISCHARGED, PREMISE REFUTED** in the opposite direction to the one predicted.
+
+### Pre-registered for p137
+
+🟢 **`ACTION BX`** — probe for the **LTI→broker adapter** before `T13`'s surviving clause is
+asserted as fact. 🔴 *Refuted if any library already maps a verified LTI launch onto an OAuth
+subject/audience.*
+
+🟢 **`ACTION BY`** — test **`T15`'s own falsifier** with a tree-level licence probe over the 20
+largest rows. 🔴 *Refuted if under 5% carry a foreign licence header.*
+
+🟡 **`ACTION BZ`** — re-probe **China, Korea and Brazil in their own languages**, by ministry.
+🔴 *Refuted if the native-language probe returns nothing the English one missed.*
+
+🟢 **`ACTION CA`** — **source-read** the three connectors added but not read this pass.
+🔴 *Refuted if all three match their descriptions.*
+
+🟡 **`ACTION CB`** — measure how many of the **37 case-variant clusters** are published as two
+distinct rows. 🔴 *Refuted if fewer than 5 are.*
+
+🟡 **`ACTION CC`** — re-run the two **empty** regional probes with instrument-class vocabulary.
+🔴 *Refuted if both return nothing again — which converts two holes into two measured absences.*
+
+### 🔴 What this pass did NOT achieve, said rather than hidden
+
+- 🔴 **The LTI→broker adapter was not built, and its absence is again asserted from a topic
+  intersection and six READMEs rather than from a code-level sweep.** `ACTION BX` exists for
+  exactly the reason `ACTION BS` did — and `ACTION BS` is the proof that this kind of claim fails.
+- 🔴 **Three connectors were added to the shelf without a source read** — and the two rows this KB
+  *has* read in source have both overturned a published cell. **2 for 2** is a bad base rate to
+  publish against (`ACTION CA`).
+- 🔴 **Three lineage clusters were left `UNRESOLVED`**, declared rather than chased.
+- 🔴 **`www.mext.go.jp` was never read directly** (DNS `ENOTFOUND`). The guideline, its circular
+  number and the 2026-06-30 committee papers came through a domain-restricted search: **primary
+  source, secondary transport**, recorded as such.
+- 🔴 **No vendored subtree was enumerated**, so every licence cell in this KB remains a **root**
+  licence — including the 24 rows in `repos/foundations.md`'s own tables.
+- 🔴 **`-only` vs `-or-later` is still unresolved** for the two GPL-3.0 cells this pass closed: the
+  payload is identical either way and the election lives in per-file headers nobody read.
+- 🔴 **No LATAM standards-native row, for the sixth consecutive pass.** This pass's new supply is
+  German, Algerian, American, Russian and unplaced.
+
+### Files changed
+
+`agents/top.md` (**the identity-broker register**, the `ictexam-mcp` source-read correction, five
+new connector rows, the `pipwerks` and skills-pack licence corrections, the
+**grant-declared-by-reference** and **grant-dropped-by-a-copy** classes, p136 verdicts + 4 new
+gaps) · `repos/foundations.md` (**the `pipwerks` correction in full**, the corpus-scale lineage
+result, `adapt_framework` and `Numbas` cells, 3 new gaps) · `verticals/solutions.md` (**TKAWEN OS**,
+**Brightspace/D2L**, **lextures**, the vendor-page self-contradiction, 2 new gaps) ·
+`intel/market.md` (**all five regions**; the market-size **quantity-type** rule; Ohio's elapsed
+deadline and two unresolved counts; OECD DEO 2026 by country; **Japan in full** and Korea's
+reversal; LATAM's 9% evaluation denominator and TALIS by country; `### Global / unplaced` →
+`### Global`, which closes both standing `p383` gate findings; 5 new gaps) · `intel/trends.md`
+(**`T13` rewritten build→buy**, **`T14` extended to topics and self-corrected**, **`T15` added**,
+**`T10` gains its third clause**, 2 watch items resolved, 7 added) · `compose/patterns.md`
+(**`P13` rewritten as buy-and-adapt** with a revised 3–4-week shape, 3 selection rows, the
+`NOASSERTION` rule split again, 2 cross-cutting rules) · `intel/open-gaps.md` (6 verdicts, 6 gaps
+closed/corrected, **9 open**, **`ACTION BX`–`CC`**, channel state with two new channels) · both
+append-only trending logs (dated sections prepended, zero deletions) ·
+`evidence/verified-repos.2026-10-11-p136.tsv` (**28 measured rows + 9 named controls**) ·
+`compose/code/p136-lineage-verdict/` (**6 verdicts, 10 tests, 3 result files**) ·
+`compose/code/p136-licence-residue/` (**5 classes, 7 tests, every diff opcode committed**).
+
+---
+
 ## Pass 135 — 2026-10-11
 
 ⏱️ **Twenty-second pass of this date.** 🟢 **All six of p134's pre-registered actions reached; five

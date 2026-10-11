@@ -298,6 +298,33 @@ whether a region-scoped education institution exists; if not, probe by country f
 country probe returned India's Class-3 mandate, Singapore's literacy framework and South Korea's
 2026 work plan, none of which the regional probe could see.
 
+### 🔴 p136 adds the missing clause: the INSTRUMENT'S LANGUAGE is part of the probe
+
+p135's rule — *a bare regional probe works when a region-scoped education body publishes under that
+label* — is right and **incomplete**, and `ACTION BT` found the hole. 🔴 **Japan has a body that
+publishes prolifically, a dated national instrument, and a ministerial circular number — and p135
+recorded Japan as MEASURED ABSENT**, because the probe ran in English while the instrument is
+Japanese.
+
+| probe form | result |
+|---|---|
+| English, country-level (`"AI education Japan policy"` family, p135's APAC sweep) | 🔴 **Nothing.** Japan was the one country in a five-country sweep that returned no instrument |
+| 🟢 Japanese, by ministry (`文部科学省 生成AI 教育 ガイドライン`) | 🟢 **First attempt**: MEXT's own PDFs, the guideline Ver.2.0 of **2024-12-26**, circular **6文科初第1895号**, and the 2026-06-30 committee papers opening the Ver.2.1 revision |
+
+🟢 **So the method rule now has three clauses, and all three are decidable before searching:**
+
+1. **Does a region-scoped education body publish under that label?** If not, probe by country
+   (p133/p134/p135).
+2. 🆕 **In what language does that country's education ministry publish?** Probe in it. The
+   ministry's own name is the highest-yield token — `文部科学省`, not "Japan".
+3. **Name the instrument class, not the topic.** "Guideline", "circular", "curriculum" and their
+   local words; a topic word returns commentary, an instrument word returns the instrument.
+
+🔴 **The uncomfortable corollary, written down rather than left implicit.** This KB's **China**,
+**Korea** and **Brazil** policy cells were all built from English-language sources about
+non-English instruments. `ACTION BT` proved that shape can miss an entire national policy, so those
+three cells are provisional until re-probed in 中文, 한국어 and português.
+
 ## T11 — The connector layer is being built bottom-up by students, not by vendors *(new, p132)*
 
 🟢 **The strongest structural finding of this pass, and it reframes where supply comes from.** The
@@ -462,6 +489,38 @@ sanctioned path. See `compose/patterns.md` → **P13**.
 acting — rather than accepting `caller_identity` — this trend has been answered by the ecosystem and
 becomes a build-versus-buy question instead of a gap.
 
+### 🔴 p136: THE FALSIFIER FIRED, and `T13` is rewritten rather than restated
+
+`ACTION BS` queried the **professional** register — `mcp oauth resource server`,
+`mcp authorization server`, `token exchange rfc 8693` — because an authorization component is built
+by people who do not say "education". 🔴 **Six repositories do exactly what the falsifier
+describes**, and the best is Apache-2.0:
+[`giantswarm/mcp-oauth`](https://github.com/giantswarm/mcp-oauth) verifies the upstream OIDC
+`id_token` against the provider's **JWKS**, binds and checks the nonce, **refuses to issue when the
+provider returns no subject claim** (*"provider did not supply a subject claim"*, in its own error
+path), and implements the MCP authorization spec of **2025-11-25** — RFC 9728 protected-resource
+metadata, RFC 8707 resource binding, RFC 9068 JWT access tokens with published JWKS, PKCE, DPoP and
+token exchange, with **56 test files** under `server/`.
+[`atrawog/mcp-oauth-gateway`](https://github.com/atrawog/mcp-oauth-gateway) (Apache-2.0, 60★) puts
+the same thing in front of **any** MCP server *"without code modification"*. Register and licences:
+`agents/top.md`.
+
+🟢 **So the trend's mechanism stands and its conclusion inverts.** MCP still has no end-user
+identity model — that is why these six exist. 🔴 **What was wrong was the sentence "no repository
+does this, in any region"**: it was true of *this KB's rows*, which is the weak kind of absence
+claim, and p135 said so when it registered `ACTION BS` against its own finding.
+
+🟡 **What survives, and it is now sharp enough to quote in a proposal.** None of the six terminates
+an **LTI 1.3 launch**. The missing piece is no longer a component but an **adapter**: `ltijs`
+already verifies the launch correctly, and nothing maps that verified launch — its `deployment_id`,
+AGS scopes and roster context — onto a broker's subject and audience. 🔵 **Measured, not assumed:**
+`topic:lti` + `topic:mcp` across all of GitHub returns **two** repositories, and **neither
+implements LTI**.
+
+🔵 **New falsifier for the rewritten trend.** If a repository appears that terminates an **LTI 1.3
+launch** and then issues a broker token bound to that subject, `T13` closes entirely and `P13`
+becomes a procurement decision with no bespoke code at all.
+
 ## 🟡 `T14` — Licence metadata is systematically wrong in the direction of institutional code *(new, p135)*
 
 🔴 **Measured, twice, with a reason.** `P134-F` found that GitHub's `NOASSERTION` is *"biased toward
@@ -488,6 +547,66 @@ two it cannot: `pipwerks/scorm-api-wrapper` (**391★, 130 forks, no licence fil
 `cybercussion/SCOBot` (**164★, and the licence file is the CC-BY-SA-4.0 human-readable deed, not the
 legal code** — a ShareAlike content licence on software). 🟢 **Rule: on anything a client will ship,
 read the payload and hash it. A badge is a lead.**
+
+### 🔴 p136 extends `T14` from licences to DECLARED METADATA, and corrects its own example
+
+🔴 **The `pipwerks` example above is wrong in the direction this trend warns about.** "No licence
+file at all" is a statement about **filenames**; the repository declares an MIT-style grant in
+`package.json` and in its source header. 🔵 **A trend about metadata being unreliable published an
+unreliable metadata reading** — which is the most useful way to learn that *absence of a file* and
+*absence of a grant* are different measurements. Corrected in full on `repos/foundations.md` and
+`agents/top.md`.
+
+🟢 **And the same defect exists one field over, in topics.** `topic:lti` + `topic:mcp` across all of
+GitHub is **two** repositories:
+
+| repo | what the topic claims | what the source does |
+|---|---|---|
+| [`ictinnovations/ictexam-mcp`](https://github.com/ictinnovations/ictexam-mcp) | `lti` | 🔴 Logs in with `ICTEXAM_EMAIL` + `ICTEXAM_PASSWORD` and rides the web app's session cookie + CSRF. LTI 1.3 belongs to a **separate Moodle activity module** |
+| [`tkawen/developer-platform`](https://github.com/tkawen/developer-platform) | `lti`, `scorm`, `xapi` | 🔴 None implemented. In the SDK, `scorm` and `xapi` are **lesson-type enum values** |
+
+🔵 **Why topics behave like licence badges.** Both are **author-declared strings with no verifier**,
+and both are read by tooling as facts. 🟢 **Rule, generalised: every author-declared field — licence
+badge, topic, description, docstring (p135's `learnmcp-xapi` *"Actor UUID from JWT"*) — is a claim.
+Source and payload are measurements. This KB's auth and standards cells must say which they are**,
+and after two source reads that each overturned a published cell, the base rate for the connector
+tier is **2 for 2**.
+
+## 🔴 `T15` — A licence verdict belongs to a LINEAGE, not to a slug *(new, p136)*
+
+Three of this pass's findings are the same finding seen from three sides, and together they break an
+assumption every page of this KB rests on: **that a repository URL identifies the thing whose
+licence you read.**
+
+| what was measured | why the slug is the wrong key |
+|---|---|
+| 🔴 **A grant declared outside the LICENSE file.** `pipwerks/scorm-api-wrapper`: `package.json` + source header, body at an off-repository URL (`ACTION BR`) | The licence is in the **artefact**, not at the path a filename probe looks at |
+| 🔴 **A copy that DROPPED the grant.** [`0awei0/kt`](https://github.com/0awei0/kt) re-uploads [`hcnoh/knowledge-tracing-collection-pytorch`](https://github.com/hcnoh/knowledge-tracing-collection-pytorch) in **one commit**, README byte-identical, **upstream's MIT `LICENSE` absent** | The row reads unlicensed; **the code is MIT**. The grant lives with the **upstream**, not with this slug |
+| 🔴 **Eleven slug pairs that are ONE repository.** Identical ref sets after a rename or transfer — `jdolny`/`theopenem` `OneRoster.NET`, `KI-Campus/LRS`/`openHPI/openLRS` (`ACTION BU`) | Two rows, one licence, and this KB has already **reasoned about which owner to pin** |
+| 🔴 **A grant that travels INSIDE a vendored file.** `numbas/Numbas` is Apache-2.0 at the root and carries `pipwerks`' MIT-style header four levels down, at a version **four years** behind upstream | A root licence is not the licence of the tree |
+
+🔵 **Two earlier passes each found one face of this, and neither generalised it.**
+`p742-grant-body-vs-reference` (p58) fixed the licence **file** that points elsewhere while carrying
+the grant; `p969-root-only-licence-reach` (p93) found that a root probe cannot see a **per-directory**
+licence. 🟢 **`T15` is the third instance and the one that names the common cause**: the grant's
+location is not a property of the slug, and neither is the code's provenance.
+
+🔵 **Why it is a trend rather than four incidents.** The sector's code moves by **copying**, not by
+dependency resolution: `SCORM_API_wrapper.js` appears in **293 files** on GitHub, the ENEM dataset
+API exists as one project and **three history-rewritten copies**, and this KB's own corpus holds
+**71** byte-identical README clusters. 🟢 **In a copy-propagated ecosystem, provenance is the
+licence question.** Where a dependency manifest would carry a version and a licence, a vendored file
+carries a header and a copy carries nothing at all.
+
+🟢 **The operational rule.** Resolve the slug to a **repository** (ref-set identity), then to a
+**lineage** (shared commits / root tree), then read the grant **wherever the artefact declares it**
+— file, manifest, header or reference — and record **which** of those it was. Instrument with six
+verdicts and 10 tests: `compose/code/p136-lineage-verdict/`; the grant-location classes are on
+`agents/top.md`.
+
+🔵 **Falsifier.** If a corpus-wide tree-level probe finds that vendored third-party code is rare —
+say under 5% of rows carrying a foreign licence header — then slug-level licence verdicts are good
+enough and this trend is an artefact of four unlucky examples.
 
 ## Watch list for the next pass
 
@@ -585,20 +704,55 @@ read the payload and hash it. A badge is a lead.**
 - 🔴 **Whether anything at all appears for Caliper Analytics.** One repository, 0★, unlicensed,
   untouched since 2023. A permissive client above ~50★ would reframe `T12` and partially unblock the
   measurement layer of `T7`.
-- 🟡 **Whether `pipwerks/scorm-api-wrapper` gains a licence.** 391★ and 130 forks with no grant of
-  rights; the sector's most-used SCORM wrapper. Also worth measuring: **how far down this KB's own
-  rows that defect propagates** — a dependency-closure question, and the instrument exists.
+- ~~🟡 **Whether `pipwerks/scorm-api-wrapper` gains a licence.**~~ 🔴 **ANSWERED BY p136, and the
+  question was wrong.** It has declared one all along — `package.json` and the source header, *"MIT-style
+  license"* at an off-repository URL. The propagation question is answered too: **one** row on this
+  KB's pages (`numbas/Numbas`, by **vendoring**), and **293 files** sector-wide carrying the header.
+  🟡 **Watch instead** whether it ever ships an SPDX-identifiable text, since *"MIT-style"* names no
+  standard body, and note its **HEAD commit is 2018-09-06**.
 - 🟡 **Whether `learnmcp-xapi` is maintained or forked.** Last push **2025-08-29**, and it is still
   the only agent↔xAPI bridge in existence. Its docstrings describe a JWT trust anchor it does not
   implement, so a maintained fork would be a natural place for the identity work above to land.
 - 🟡 **Whether `Selleo/mentingo` keeps its pace.** MIT, 92★, pushed 2026-10-10, and the only row
   where the AI *is* the platform rather than a connector onto someone else's. If it sustains, it is
   a fork base; if it stalls, it is a reference architecture.
-- 🔴 **Japan's national AI-education policy, which this pass measured ABSENT** and which is a hole in
-  this KB's APAC coverage rather than a finding about Japan. Probe MEXT directly, in Japanese.
+- ~~🔴 **Japan's national AI-education policy, which this pass measured ABSENT.**~~ 🟢 **RESOLVED BY
+  p136 (`ACTION BT`): Ver.2.0 of 2024-12-26, circular 6文科初第1895号, Ver.1.0 in July 2023.**
+  🟡 **Watch instead** for the **Ver.2.1** text, whose draft direction names agentic AI, cognitive
+  offloading and assessment — the first national instrument this KB has seen address **agentic** AI
+  in schools directly, and therefore the most quotable document in the region when it lands.
 - 🟡 **Whether Colorado's enforcement stay is lifted** (`X. AI LLC v. Weiser`) and whether the AG's
   rulemaking lands by its **2027-01-01** deadline. The compliance dates are not stayed; the cure
   period ends 2030.
 - 🟡 **Whether ELM (European Learner Model) supply grows beyond three repositories**, and whether any
   of it appears in a language other than Rust. It is the EU's cross-border credential model and the
   only permissive implementation is a language mismatch for most AI work.
+
+### 🆕 Added to the watch list by p136
+
+- 🔴 **Whether anyone writes the LTI→broker adapter.** Six identity brokers exist and none
+  terminates an LTI 1.3 launch; `topic:lti` + `topic:mcp` is **two** repositories, neither
+  implementing LTI. 🟢 **This is now the single most consequential thing on this shelf** (`T13`
+  rewritten): the first repository that verifies an LTI launch and issues a broker token bound to
+  that subject closes `T13` and turns `P13` into procurement.
+- 🟡 **Whether `giantswarm/mcp-oauth` stays alive and gains adopters.** Apache-2.0, **14★**, pushed
+  the day of this pass, 56 test files, MCP spec 2025-11-25. 🔴 **Its star count is small enough that
+  bus-factor is a real question for a component a client's security team must trust** — compare
+  `atrawog/mcp-oauth-gateway` (60★) and `NapthaAI/http-oauth-mcp-server` (108★), and watch whether
+  one of the three becomes the obvious default.
+- 🔴 **Japan's Ver.2.1 guideline**, expected within FY2026 — agentic AI, cognitive offloading,
+  assessment (see `T10`'s third clause and `intel/market.md` → APAC).
+- 🔴 **Whether South Korea's reversal spreads.** The National Assembly stripped AI textbooks of
+  official status in August after sub-30% adoption. 🟡 Watch whether any other APAC mandate slips on
+  **readiness** grounds — the stated reason — because that is the teacher-capacity engagement
+  (`compose/patterns.md` → **P5**) arriving as a procurement, not a pilot.
+- 🟡 **Whether Ohio enforces.** Its district AI-policy deadline of **2026-07-01** has elapsed. Watch
+  for the first compliance review, audit finding or state report naming districts without a policy —
+  the moment the North American conversation moves from drafting to evidence.
+- 🟡 **Whether a tree-level licence probe changes `T15`.** The falsifier is explicit: if vendored
+  third-party code turns out to be rare across this corpus, slug-level licence verdicts are good
+  enough and `T15` is four unlucky examples rather than a trend.
+- 🟡 **Whether `GarethManning/education-agent-skills`' ShareAlike obligation becomes visible in
+  practice.** 847★, 122 forks, CC-BY-SA-4.0 by deed. Watch whether any fork publishes adaptations
+  under the same licence — the first test of whether a content licence on an agent-skills pack is
+  honoured or ignored.

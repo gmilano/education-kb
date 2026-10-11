@@ -6,6 +6,70 @@ updated: 2026-10-11
 
 # Education — trending repos (append-only log)
 
+## 2026-10-11 — Pass 136
+
+🔴 **The headline is that this KB's own row counts are inflated, and the inflation is measurable.**
+`ACTION BU` ran p135's README-byte-identity detector across the whole corpus — **1 389 READMEs over
+1 528 published rows** — expecting to confirm that it is *"a verdict"*. It found **71** byte-identical
+clusters, **25** of them cross-owner, which is twelve times the refutation threshold. 🟢 **Then one
+cheap extra measurement — `git ls-remote`, the full ref set — showed that 11 of those 25 are ONE
+repository under TWO slugs.**
+
+| lineage verdict | clusters | the evidence |
+|---|---|---|
+| 🔴 **`ALIAS`** | **11** | identical ref sets — a rename or transfer GitHub still answers |
+| `DIVERGED_FORK` | 5 | different HEAD, shared commit shas |
+| `FORK_AT_TIP` | 4 | same HEAD, different ref sets |
+| 🔴 `ATTRIBUTION_STRIPPED_COPY` | 1 | identical root tree, **zero** shared commits (the ENEM cluster) |
+| 🔴 `SQUASHED_COPY` | 1 | one commit against 79, **upstream's MIT file dropped** |
+| 🔵 `UNRESOLVED` | 3 | **measurement not taken — said, not guessed** |
+| `CASE_VARIANT` | 🔴 **37** | one repository, two spellings **in this KB's own rows** |
+| `SAME_OWNER_ALIAS` | 6 | one owner, two repository names |
+
+🔴 **One alias lands on a conclusion this log published.** It reasoned about
+[`theopenem/OneRoster.NET`](https://github.com/theopenem/OneRoster.NET) versus
+[`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) — *"both licences name `theopenem`
+… so pin `theopenem`"* — and the two slugs share the ref set `3f4540f9706d9099`. **One repository.**
+Same for [`KI-Campus/LRS`](https://github.com/KI-Campus/LRS) and
+[`openHPI/openLRS`](https://github.com/openHPI/openLRS), across both a rename and a transfer. 🟡 The
+pins are harmless; the reasoning was about a distinction that does not exist.
+
+### 🔴 `ACTION BR` — the unlicensed SCORM wrapper is not unlicensed
+
+| this KB's claim, on five pages | p136's measurement |
+|---|---|
+| *"no licence file under 8 probed filenames"* | 🟢 **TRUE** — the whole tree is `package.json`, `readme.md`, 3 sources |
+| *"there is no grant, so there is no right to use it"* | 🔴 **FALSE.** `package.json`: `"license": "MIT-style license: http://pipwerks.mit-license.org/"`. `src/JavaScript/SCORM_API_wrapper.js` lines 11–12: the same, under *"Copyright (c) Philip Hutchison"* |
+| *"pushed 2026-09-18"* | 🔴 **HEAD commit is 2018-09-06**; manifest version `1.1.20160322` |
+| *"the blast radius is unmeasured"* | 🟢 **Measured: ONE row** on this KB's pages — [`numbas/Numbas`](https://github.com/numbas/Numbas), by **vendoring** (`runtime/scripts/SCORM_API_wrapper.js`, `v1.1.20121005`, header intact), invisible to all 7 manifest types probed across 150 manifest-bearing rows. Sector-wide: **293 files** carry that header, including [`Lumieducation/Lumi`](https://github.com/Lumieducation/Lumi) |
+
+🔵 **The lesson is the shape of the probe.** A filename probe measures **files**. A grant can sit in
+a manifest, a source header or a URL — and when the code travels as a **vendored file**, the header
+travels with it while the version does not.
+
+### 🟢 `ACTION BV` — three `UNMATCHED` licence payloads, closed
+
+| repo | ratio | residue | resolved |
+|---|---|---|---|
+| [`Citolab/qti-convert`](https://github.com/Citolab/qti-convert) | `0.998672` | `©`→`(C)`; appendix filled with **Stichting Cito**, 2024 | 🟢 **GPL-3.0** |
+| [`adaptlearning/adapt_framework`](https://github.com/adaptlearning/adapt_framework) | `0.997431` | every `<…>` rewritten `{…}`; appendix filled with **ADAPT LEARNING**, 2013 | 🟢 **GPL-3.0** |
+| [`CoopCodeCommun/pyopenbadges`](https://github.com/CoopCodeCommun/pyopenbadges) | `0.998056` | delimiters, plus 🔴 **one steward divergence**: the payload says *"a brief idea of what it does"*, SPDX's LGPL-2.1 text says *"an idea"* | 🟢 **LGPL-2.1** |
+
+🔴 **Zero of three carry an added clause** — `ACTION BV`'s refutation condition not met. 🔵 And the
+steward divergence means **the canonical table was the thing that was wrong**, a third instance of
+the class p135 opened with two FSF edits. `-only` vs `-or-later` is **not** decided by these
+payloads and is left open rather than guessed.
+
+### 🔵 Instruments shipped this pass
+
+- `compose/code/p136-lineage-verdict/` — six verdicts, **10 tests**, every fixture a value measured
+  today; plus the 71-cluster classification, the 55-slug ref-set table and the 25-cluster result.
+- `compose/code/p136-licence-residue/` — five residue classes, **7 tests** including an
+  added-clause control that must still flip the verdict to `MODIFIED`, and a result file carrying
+  **every diff opcode verbatim** so the verdicts can be re-judged without re-running it.
+
+---
+
 ## 2026-10-11 — Pass 135
 
 🟢 **The headline is a correction of emphasis: this KB built its standards tier around the wrong
