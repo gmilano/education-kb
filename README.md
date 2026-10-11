@@ -4,6 +4,183 @@ region: Global
 updated: 2026-10-11
 ---
 
+## Pass 134 — 2026-10-11
+
+⏱️ **Twenty-first pass of this date.** 🟢 **This pass did not add another connector to the tier this
+KB is built around — it found the tier that makes most of that one unshippable, and it had been
+missing the whole time.** For three passes `agents/top.md` has correctly said the 36-row portal tier
+is undeployable because every row holds a student's password against a platform that never
+sanctioned it, and that the sanctioned alternative (`sis-demo`, `mcp-student-records`) is immature.
+🔴 **The second half of that is wrong. The sanctioned path is a mature, permissive, vendor- and
+government-owned standards stack, and this KB carried exactly one row from it.**
+
+| finding | verdict | figure |
+|---|---|---|
+| `P134-A` | 🟢 **THE SANCTIONED-INTEGRATION TIER IS MATURE, PERMISSIVE AND WAS ABSENT** | `Cvmcosta/ltijs` **Apache-2.0, 373★, pushed 2026-10-06** vs the KB's one LTI row (`ims-lti`, 203★) |
+| `P134-B` | 🔴 **THE AGENT↔STANDARD BRIDGE IS ONE REPO, AND THE Ed-Fi MCP SERVER IS EMPTY** | `learnmcp-xapi` MIT **15★** (2025-08-29); `edfi-mcp-server` **`size:0`**, 404 on **15** probes |
+| `P134-C` | 🔴 **NEW VOCABULARY FAILURE MODE: TOKENIZER FRAGMENTATION** | `ed-fi` → **24 061** (top hit `FizzBuzzEnterpriseEdition`); `edfi ods api` → **6** |
+| `P134-D` | 🟢 **`ACTION BG` DISCHARGED — 1 OF 3 DETECTORS WORKS, AND `P133-A` NARROWS** | `gerrit-mirror` on **5 of 40**; **0** shared timestamps; siblings exported **2026-10-08** |
+| `P134-E` | 🟢 **`ACTION BI` DISCHARGED — ALL 12 LATAM CELLS CONFIRMED, NOT CORRECTED** | 8 payloads read, 8 confirmed; **4 measured-absent** |
+| `P134-F` | 🔴 **`NOASSERTION` IS BIASED TOWARD "UNUSUAL", NOT TOWARD "FINE"** | `tha-edfi-runner` = **MIT + a visible-attribution clause** |
+| `P134-G` | 🟢 **`ACTION BJ` DISCHARGED — BLACKBOARD IS 7 ROWS, AUTH SPLITS BY SELF-DECLARATION** | 3 × REST API, 1 × **Okta SSO**, 2 × self-declared scraping |
+| `P134-H` | 🟢 **`ACTION BK` DISCHARGED AND REFUTING — EMEA WAS MIS-QUERIED, NOT SATURATED** | France's **cadre d'usage**; **EC guidelines updated 2026**; **Jisc: 38 institutions** |
+
+### `P134-A` / `P134-B` — the finding, and why it is a build rather than a dependency
+
+🔵 **The probe that found it was `grade passback`, then `lti 1.3 advantage`, `oneroster`, `ltijs` and
+`xapi` — the professional register of the people who do this work for a living.** Not the category
+term (`SIS`, which found nothing for p132), not the capability term (`timetable`, which found p132's
+21 rows), not a national platform noun (which found p133's 15). 🟢 **It is a fourth, distinct
+vocabulary, and it is the one that reaches institutional and vendor-owned supply** — clause 5 in
+`agents/top.md`.
+
+🟢 **What it reached.** `Cvmcosta/ltijs` (**Apache-2.0**, payload-read, **373★**, pushed 2026-10-06)
+— the platform-independent LTI 1.3 Advantage tool provider with OIDC launch, Deep Linking, **AGS
+grade passback** and NRPS rosters. Plus `pylti1.3` (MIT, 138★), `trilogy-group/oneroster-ts`
+(**0BSD** — the most permissive licence in this KB, it drops even attribution),
+`Ed-Fi-Alliance-OSS/edfi-oneroster` (**Apache-2.0**, the standards body's own bridge, pushed
+2026-10-09), `googleworkspace/oneroster-integration-conformance-tests` (**Apache-2.0** — 🟢 **the
+only conformance suite this KB has found for any standard in this industry**), and
+`AlexMeiling/wiseflow-api-integration-packages` (**MIT**, holder **"UNIwise ApS"** — the WISEflow
+vendor itself).
+
+🔴 **A tool launched over LTI holds no user credential at all.** It runs on a client ID the
+institution issued and can revoke. **That is the whole answer to the blocker this KB has been
+documenting**, and it is also why `st22209/Parent-Portal`'s death certificate
+(*"DEPRECATED AFTER KAMAR API CHANGE"*) does not apply to it.
+
+🔴 **And here is the gap, which is sharper and more valuable than the one it replaces: the standards
+are finished and the agents have not arrived.** The bridge from an agent to any sanctioned standard
+is **one repository** — `DavidLMS/learnmcp-xapi` (MIT, 15★, last push 2025-08-29) — and the only
+Ed-Fi MCP server in existence is **an empty repository**:
+
+| `cdweaver1992/edfi-mcp-server` | measurement |
+|---|---|
+| `size` | 🔴 **0** |
+| raw lane, **15 probes** (5 entry points × `HEAD` / `main` / `master`) | 🔴 **404 on all fifteen** |
+| `created_at` / `pushed_at` | 🔴 **`2026-02-17T19:54:46Z` / `:47Z`**, never touched again |
+
+🔵 **`size: 0` plus a 404 sweep is a measurement of emptiness.** A pass that trusted the description
+would have tabled a working Ed-Fi MCP server that does not exist — the easiest way this KB could
+mislead an engagement. New pattern **`P11`** turns the gap into a costed build; **`P12`** aims it at
+the fastest-growing segment (**assessment and feedback agents, 44.36% CAGR**) and the three 2027
+compliance clocks (EU **2027-12-02**, Oklahoma **before 2027-28**, Maryland **June 2027**).
+
+### `P134-D` — `ACTION BG`: the detector works, and it corrects the pass that asked for it
+
+| p133's proposed signal | verdict | measurement |
+|---|---|---|
+| a topic containing *mirror* | 🟢 **WORKS** | **5 of 40** `instructure` repos carry `gerrit-mirror` → refutation condition **not met**; the defect is a lane |
+| two repos sharing `pushed_at` to the second | 🔴 **RETIRED** | **no timestamp is shared by any two of the 40**; p133's evidence was two *adjacent* seconds, not a shared one |
+| a README naming an upstream | 🟡 not tested | the topic field is cheaper and sufficient |
+
+🔴 **And it narrows `P133-A`.** p133 concluded 2026-04-30 was *"the date their export to GitHub
+stopped running"*. 🟢 **Sibling mirrors were exported 2026-09-30 and 2026-10-08 — three days before
+this pass. The job runs; `canvas-lms` alone stopped receiving it.** Why is not visible from here and
+this KB should not guess. 🟢 **p133's operative conclusion survives and is the one to quote:
+`pushed_at` on `canvas-lms` is not an activity signal.** Control: `instructure/ims-lti` has no mirror
+topic and was pushed 2026-10-02 — 🔵 **so freshness must be checked per repo, never per org.**
+
+### `P134-E` / `P134-F` — the payload lane cut both ways this pass
+
+🟢 **`ACTION BI` discharged, and for once the payload lane confirmed rather than corrected.** All 8
+licensed LATAM rows read; **all 8 of p133's cells confirmed** (GPL-3.0 ×2 — byte-identical,
+sha256 `3972dc97…`; AGPL-3.0 ×1; MIT ×5 with named holders). The 4 unlicensed rows returned 404 at
+main+master × 5 filenames → **measured-absent**. 🔵 **p133 got these right from the search field
+alone.**
+
+🔴 **But `P134-F` breaks an expectation this KB had been building.** Several recent passes corrected
+`NOASSERTION` rows *upward* (`openeducat_erp` → LGPL-3.0, `mcp-student-records` → Apache-2.0), and
+the habit forming was "payload wins, and payload usually clears the row".
+**`tha-guy-nate/tha-edfi-runner` is MIT *plus* an added clause requiring a visible link to the repo
+or PyPI page in any publicly available application or service** — a user-visible obligation inside
+a client's product. 🟢 **GitHub's matcher was right to flag it.** `NOASSERTION` means *unusual*, not
+*fine*; read the payload to learn **which way**.
+
+### 🔴 Two instrument failures caught by control before they published
+
+1. **A four-concept conjunction produced a false zero.** `caliper analytics xapi learning record
+   store` → **0**, over a field `xapi learning` shows holds **144** repos. Third consecutive pass to
+   generate one of these (`P131-E`, `P133-E`). 🟢 Retracted before publication.
+2. **A licence detector that greps a payload for a licence *name* false-positives.** p134's first
+   read of two p133 LATAM rows said **LGPL** — which would have been a material and wrong correction,
+   since LGPL permits linking without reciprocity and GPL does not. 🟢 **The control caught it:
+   GPL-3.0's own line 672 reads *"use the GNU Lesser General\nPublic License instead of this
+   License"*, line-wrapped.** `ACTION BP` opened to replace substring matching with hashes.
+
+🔵 **Both failures share one root with `P131-E`, `P132-A` and `P133-E`: a search result, and now a
+payload grep, is a fact about the query.** This pass adds a third instance and a new form —
+**tokenizer fragmentation** (`P134-C`): `ed-fi` splits into `ed` + `fi` and matches inside *Edition*,
+*Edit*, *ReFinED* and *edge*, returning **24 061** results topped by `FizzBuzzEnterpriseEdition`.
+🔴 **A fourth form, also new: relevance pollution.** `xapi learning` under `sort=stars` ranks six
+anti-government propaganda repos (3 258–127★) above the entire field; the first real row is rank 7.
+
+### Regions
+
+🟢 **Demand moved in all four regions this pass, and EMEA moved most — from a declared blank to the
+best-documented region in this KB.**
+
+| region | what changed |
+|---|---|
+| **EMEA** | 🟢 **`ACTION BK` DISCHARGED AND REFUTING.** p133 recorded *"the probe returned nothing education-specific"*; the country-level probe returns France's **"L'IA en éducation : cadre d'usage"** (Ministry of Education, June 2025 — transparency and **human oversight for AI-assisted decisions**, fuller plan expected spring 2026, 🔴 **no national monitoring body**), the **European Commission's ethical guidelines updated in 2026**, the **NRW ministry** (Germany) and **Skolverket** (Sweden) via UNESCO FutureProof, the Dutch inspectorate (+ VU Amsterdam conference **29–30 Oct 2026**), **OECD DEO 2026** (🔴 **~3 in 4 teachers lack the skills to teach with AI; 1 in 10 report their school bans it**), and 🟢 **Jisc's AI marking and feedback pilots across 38 UK colleges and universities**, against UK student AI use rising **66% → 92%** in a year. **Supply newly placed: UNIwise (Denmark, MIT, vendor), OAT (Luxembourg), France Université Numérique (a second MIT row, pushed today), Zanichelli (Italy), 3iPunt (Spain), Osnabrück (Germany)** |
+| **North America** | 🟢 **The state legislature is the buyer, and it has dates.** PIE Network tracked **~100 state bills** affecting student AI use inside **>1 500** AI bills nationwide. Dated obligations: **Oklahoma S.B. 1734** (every district a written AI policy **before 2027-28**), **Maryland S.B. 720** (an **AI coordinator** per system; literacy in standards **by June 2027**), **Idaho S.B. 1227**, plus **California A.B. 1159** (pending — bars student data for model training), **Virginia S.B. 394**, **Alabama H.B. 329**, **Utah H.B. 273**. Federal: **K-12 AI Literacy and Readiness Act of 2026**, White House **National AI Policy Framework**. 🔴 **Three source conflicts recorded unresolved**, including an **unconfirmed** Colorado repeal (`ACTION BO`). 🟢 **The only region where the OSS supply is owned by the buyers** |
+| **APAC** | 🟢 **China: AI compulsory from age six since Sept 2025** — with the UAE, the only compulsory national AI curricula. **India: mandatory from Class 3 in 2026-27**; IT-rule labelling from **2026-02-20**. **Singapore: AI Verify, teacher training at every level by 2026, 60.9% adult diffusion.** 🔴 **China requires a separate AI stack** (registration, content controls, localisation). 🔴 **Japan's education policy did not surface at all** — informed gap. 🔵 **Enterprise-maturity rankings invert the curriculum facts; do not conflate the axes** |
+| **LATAM** | 🟢 **The gap now has a denominator: 87% of universities use AI, 26% have a strategy, 9% evaluate it** — a 78-point use-to-evaluation gap. Brazil admins: **53% use / 22% have guidelines**. **Colombia CONPES 4144** (Feb 2025, budget **through 2030**) + a bill adding **fundamental-rights impact assessments** and a **high-risk registry** — 🔵 **pair with the SIMAT dropout model for the clearest named LATAM opportunity**. Brazil **PL 2338/2023** still in process. Mexico: no comprehensive law. 🆕 **Q-Acadêmico = a fourth Brazilian national system**; SAES (Mexico) = 19 hits, nothing usable; 🔴 **SIAGIE (Peru) = no evidence found, probe named** |
+
+### Verdicts on p133's pre-registrations
+
+- 🟢 **`ACTION BG` — DISCHARGED AND SPLIT.** One detector validated, one retired, `P133-A` narrowed.
+- 🟡 **`ACTION BH` — DISCHARGED; refutation condition MET, informatively.** The vernacular found
+  nothing; **the standards register found the whole tier.** The staff-facing axis is global and was
+  queried in the wrong language all along.
+- 🟢 **`ACTION BI` — DISCHARGED AND CONFIRMING.** 8 of 8 p133 cells upheld; 4 measured-absent.
+- 🟢 **`ACTION BJ` — DISCHARGED, NOT REFUTED.** Q-Acadêmico, SAES, SIMAT and 7 Blackboard rows;
+  SIAGIE a named zero.
+- 🟢 **`ACTION BK` — DISCHARGED AND REFUTING.** EMEA was mis-queried, not saturated.
+
+### Pre-registered for p135
+
+🟢 **`ACTION BL`** — **read the source** of `ltijs`, `learnmcp-xapi` and `bb-mcp`, not their
+descriptions; confirm the auth model and that no credential is stored. 🔴 *Refuted if all three match
+their descriptions, which would downgrade `Gap p134-2`.*
+
+🟢 **`ACTION BM`** — test whether **"APAC" and "LATAM" fail the way "EMEA" did**. 🔴 *Refuted if the
+bare regional probes return the same material as country-level ones, making `P134-H` a fact about one
+word.*
+
+🟢 **`ACTION BN`** — finish the standards register: **QTI** (note `instructure/qti`, pushed
+2026-09-23), **SCORM**, **Comprehensive Learner Record**, **Open Badges**, **Caliper alone**, **LTI
+Deep Linking**. 🔴 *Refuted if fewer than 3 further institution- or vendor-owned rows exist across all
+six.*
+
+🟢 **`ACTION BO`** — confirm or **strike** the Colorado AI Act repeal claim against the state
+legislature's own record. 🔴 *Refuted if no such repeal exists — then strike it and name the source.*
+
+🟢 **`ACTION BP`** — replace substring licence detection with **sha256 matching against canonical
+licence texts**, normalising trailing whitespace and the FSF's `http`→`https` update. 🔴 *Refuted if
+fewer than 2 corpus payloads are whitespace-variant copies — but three are already known.*
+
+🟡 **`ACTION BQ`** — probe the **ministry-facing axis** that `simat colombia` opened by accident, by
+national dataset name (C-600, SIMAT, Censo Escolar/INEP, SISTEC, ENEM). 🔴 *Refuted if fewer than 3
+such rows exist outside Colombia.*
+
+### Files changed
+
+`agents/top.md` (**new standards-native tier** — LTI/OneRoster/Ed-Fi/xAPI, the empty-repo finding,
+the Blackboard auth-model split, **clause 5** + tokenizer-fragmentation and relevance-pollution
+hazards, gaps restated) · `repos/foundations.md` (**new interoperability layer**, `ltijs` correction
+to the LTI recommendation, **the mirror rule measured**) · `verticals/solutions.md` (**4 national
+systems** + a named zero, **new vendor-publishes-its-own-integration category**, ERP field named with
+an instrument warning, LTI attachment point corrected) · `intel/market.md` (all five regions
+extended; NA state-legislation table with dates and 3 recorded conflicts; **`ACTION BK` discharge**;
+APAC curricula; LATAM denominators; the 2027-clock synthesis) · `intel/trends.md` (**T12** + 8 watch
+items) · `compose/patterns.md` (**P11** and **P12**, selection table + **3 cross-cutting rules**) ·
+`intel/open-gaps.md` (5 verdicts, 4 gaps closed, **8 gaps open**, **`ACTION BL`–`BQ`**) · both
+append-only trending logs (dated sections prepended; 127 and 113 insertions, **zero deletions**) ·
+`evidence/verified-repos.2026-10-11-p134.tsv` (**61 measured rows + 9 named controls**).
+
+---
+
 ## Pass 133 — 2026-10-11
 
 ⏱️ **Twentieth pass of this date.** 🟢 **This pass ran two probes the KB had pre-registered and never

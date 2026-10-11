@@ -1,0 +1,106 @@
+# p134 — 2026-10-11 — education KB. 61 measured rows + 9 named controls.
+# INSTRUMENTS THIS PASS: "search" = GitHub repo search via the session's GitHub MCP tool (authoritative for
+#   license.spdx_id / stars / pushed_at / fork / archived / topics). "raw" = payload read over
+#   raw.githubusercontent.com/<owner>/<repo>/<branch>/LICENSE (the only working payload lane).
+# DEAD INSTRUMENTS, RE-CONFIRMED BY CONTROL THIS PASS: curl -sI (403 for real AND fake repos),
+#   api.github.com (403), gh CLI search (403 "sessions are bound to their configured repositories").
+repo	licence_field	licence_payload_read	stars	pushed	region	probe	instrument
+# ---- P134-A / P134-B : the sanctioned-integration (standards) tier ----
+Cvmcosta/ltijs	Apache-2.0	Apache-2.0 (11361B; holder "Carlos Vinicius Monteiro Costa")	373	2026-10-06	unplaced	ltijs	search+raw
+dmitry-viskov/pylti1.3	MIT	MIT (1070B; holder "Dmitry Viskov")	138	2024-08-18	unplaced	lti 1.3 advantage	search+raw
+trilogy-group/oneroster-ts	0BSD	0BSD "BSD Zero Clause License" (711B; holder "Bjorn Pagen", noreply addr)	10	2026-05-11	unplaced	oneroster	search+raw
+Ed-Fi-Alliance-OSS/edfi-oneroster	Apache-2.0	Apache-2.0 (10173B; NO copyright line -> DOCUMENT-TEXT holder class)	6	2026-10-09	North America	oneroster + edfi ods api	search+raw
+googleworkspace/oneroster-integration-conformance-tests	Apache-2.0	Apache-2.0 (11357B; NO copyright line)	7	2026-07-30	North America	oneroster	search+raw
+AlexMeiling/wiseflow-api-integration-packages	MIT	MIT (1068B; holder "UNIwise ApS" = the WISEflow VENDOR)	3	2026-06-11	EMEA (Denmark)	grade passback	search+raw
+Liberate-Labs/ltikit-sdk	MIT	MIT (1063B; holder "alasim" = individual, despite org name)	0	2026-10-07	unplaced	grade passback	search+raw
+tha-guy-nate/tha-edfi-runner	NOASSERTION	MIT + ADDED visible-attribution clause (1351B; holder "Nathan Wright")	0	2026-10-04	unplaced	edfi ods api	search+raw
+cdweaver1992/edfi-mcp-server	NO-FIELD	NO PAYLOAD; REPO IS EMPTY (size:0; HTTP 404 on 15 probes = 5 entry points x HEAD/main/master)	1	2026-02-17	unplaced	edfi ods api	search+raw
+oat-sa/oneroster-import	GPL-2.0	not read	8	2026-07-16	EMEA (Luxembourg, Open Assessment Technologies)	oneroster	search
+bgwdotdev/libre-oneroster	AGPL-3.0	not read	5	2025-04-26	unplaced	oneroster	search
+lepo-project/roster-hub	AGPL-3.0	not read	4	2024-03-01	APAC (Japan)	oneroster	search
+bgwdotdev/go-oneroster	MIT	not read	8	2020-07-30	unplaced	oneroster	search
+vossenv/oneroster-python	MIT	not read	11	2020-07-21	unplaced	oneroster	search
+jdolny/OneRoster.NET	MIT	not read	6	2023-10-13	unplaced	oneroster	search
+TCI/OneRoster	MIT	not read	4	2026-09-11	unplaced	oneroster	search
+gotranseo/oneroster	Apache-2.0	not read	4	2023-05-02	unplaced	oneroster	search
+ridencww/uniroster-server	MIT	not read	6	2022-12-20 ARCHIVED	unplaced	oneroster	search
+xcesaralejandro/lti1p3	MIT	not read	11	2025-01-03	unplaced	lti 1.3 advantage	search
+3iPunt/wordpress-lti-1-3	Apache-2.0	not read	6	2023-07-11	EMEA (Spain)	lti 1.3 advantage	search
+blackboard/BBDN-lti-1p3-tool-example	Apache-2.0	not read	1	2023-11-13	North America (VENDOR-owned)	lti 1.3 advantage	search
+blackboard/BBDN-LTI-Adv-Node	NO-FIELD	not read	14	2020-08-25	North America (VENDOR-owned)	lti 1.3 advantage	search
+paurushrai/lti-1.3-node-nextjs-starter	MIT	not read	2	2026-06-17	unplaced	lti 1.3 advantage + ltijs	search
+paurushrai/lti-1p3-nextjs-starter	MIT	not read	1	2026-06-18	unplaced	grade passback	search
+glenn-watt/lti-1p3-reference-tool	MIT	not read	0	2026-06-18	unplaced	lti 1.3 advantage	search
+CNIT-Organization/ltitoolkit	MIT	not read	0	2026-08-05	unplaced	lti 1.3 advantage	search
+dvdcastro/moodle-local_ltifederation	GPL-3.0	not read	0	2026-07-01	unplaced	lti 1.3 advantage	search
+srvanukuri/moodle-local_edugears	NO-FIELD	not read	0	2026-08-25	unplaced	lti 1.3 advantage	search
+Schoolees/schoolees.moodle-local-bridge	NOASSERTION	not read	0	2026-08-24	unplaced	grade passback	search
+openfresno/edgenuity-aeries-grade-passback	NO-FIELD	CONTENT UNREACHABLE (404 on 15 candidate paths x 3 refs; existence from search metadata only)	0	2026-03-02	North America (Fresno, CA)	grade passback	search
+virtualarkansas/jupyterlite-zestables	NO-FIELD	not read	0	2026-02-22	North America (Virtual Arkansas)	grade passback	search
+RyanGravetteIDLA/qualtrics-lti-connector	MIT	not read	0	2025-08-19 ARCHIVED	North America (Idaho Digital Learning)	grade passback	search
+mn-mde-edfi/MDE-Ed-Fi-ODS-API-SDK	NO-FIELD	not read	0	2026-04-14	North America (Minnesota Dept of Education)	edfi ods api	search
+xmarcosx/edfi-via-kubernetes	Apache-2.0	not read	1	2022-04-22	unplaced	edfi ods api	search
+esegrave/edfi	Apache-2.0	not read	0	2022-03-04	unplaced	edfi ods api	search
+# ---- the agent<->standard bridge (xAPI / LRS) ----
+DavidLMS/learnmcp-xapi	MIT	not read	15	2025-08-29	unplaced	xapi learning	search
+openfun/warren	MIT	not read	17	2026-10-11	EMEA (France, France Universite Numerique)	xapi learning	search
+adlnet/xapi-lab	MIT	not read	38	2017-04-15 ARCHIVED	North America (ADL Initiative, US DoD)	xapi learning	search
+adlnet/MasterObjectModel	Apache-2.0	not read	12	2025-07-03	North America (ADL Initiative)	xapi learning	search
+Transcordia/jupiter	MIT	not read	11	2015-04-19	unplaced	xapi learning	search
+Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider	NOASSERTION	not read	11	2021-03-25	North America (Apereo)	xapi learning	search
+ZanichelliEditore/LearningRecordStore-xapi	MIT	not read	9	2022-06-21	EMEA (Italy, Zanichelli Editore)	xapi learning	search
+webtech-uos/nodejs-lrs	MIT	not read	9	2014-02-13	EMEA (Germany, Univ Osnabrueck)	xapi learning	search
+nicolaasmatthijs/xapicaliper	NO-FIELD	not read	9	2016-01-26	unplaced	xapi learning	search
+elc-gh/xAPI-Spec_ja	NO-FIELD	not read	9	2020-09-30	APAC (e-Learning Consortium Japan)	xapi learning	search
+# ---- P134-G : the Blackboard tier (ACTION BJ) — auth model split is self-declared ----
+alejooroncoy/campus-cli	ISC	not read	11	2026-10-11	LATAM (Peru; topic "peru")	blackboard learn mcp	search
+nitsuah/bb-mcp	MIT	not read	2	2026-10-11	unplaced	blackboard learn mcp	search
+felipedias-ie/blackboard-mcp	MIT	not read	1	2026-09-18	unplaced	blackboard learn mcp	search
+NiccoloSalvini/mcp-blackboard-ucsc	MIT	not read	0	2026-09-21	unplaced	blackboard learn mcp	search
+P1ckle3/blackboard-mcp	NO-FIELD	not read	0	2026-07-28	APAC (Australia, Univ of Queensland)	blackboard learn mcp	search
+karkarkins/BlackboardAssistantMCP	NO-FIELD	not read	0	2025-09-09	unplaced	blackboard learn mcp	search
+ruud0/aula-virtual-mcp	NO-FIELD	not read	0	2026-09-23	unplaced (topic "web-scraping")	blackboard learn mcp	search
+# ---- ACTION BJ : the remaining LATAM national systems ----
+juanfelipemalaver00-arch/Predictive-model-for-primary-school-dropout-in-Colombia	NO-FIELD	not read	1	2026-10-10	LATAM (Colombia)	simat colombia	search
+adiel-calixto/IFAcademico	Apache-2.0	not read	6	2026-04-26	LATAM (Brazil)	q-academico	search
+WKolodziejski/QMobile	NO-FIELD	not read	6	2024-02-17	LATAM (Brazil, IFSul)	q-academico	search
+MuriloCalegari/Ifes-Academico	GPL-3.0	not read	4	2020-06-09	LATAM (Brazil, IFES)	q-academico	search
+kkauaon/qaluno	NO-FIELD	not read	4	2026-01-13	LATAM (Brazil, IFCE)	q-academico	search
+roncuevas/ipn_saes_utils	MIT	not read	0	2026-02-09	LATAM (Mexico, IPN)	saes escolar	search
+DanieelRC/SAES-R	NO-FIELD	not read	0	2026-01-06	LATAM (Mexico, IPN)	saes escolar	search
+DanieelRC/AgenteConversacional-SAES-R	NO-FIELD	not read	0	2025-12-14	LATAM (Mexico, IPN)	saes escolar	search
+pekochu/SAES2GO	GPL-3.0	not read	4	2020-07-08	LATAM (Mexico, IPN; self-described obsolete)	saes escolar	search
+# ---- ACTION BI : payload-read of p133's 12 LATAM rows. ALL p133 LICENCE CELLS CONFIRMED. ----
+Agso-o/sigaa-calendar	GPL-3.0	GPL-3.0 CONFIRMED (35149B; sha256 3972dc9744f6499f; FSF document text)	20	2026-10-09	LATAM (Brazil)	ACTION BI	raw
+despedite/siu-guarani	GPL-3.0	GPL-3.0 CONFIRMED (35149B; byte-identical sha to the row above)	8	2026-10-09	LATAM (Argentina)	ACTION BI	raw
+fabrica-de-inovacao/expeditto	AGPL-3.0	AGPL-3.0 CONFIRMED (34523B; FSF document text)	1	2026-10-08	LATAM (Brazil, IFMA)	ACTION BI	raw
+trindadetiago/sigaa-caiu	MIT	MIT CONFIRMED (1071B; holder "Tiago Trindade" 2026)	19	2026-10-09	LATAM (Brazil)	ACTION BI	raw
+juliancasaburi/siu-guarani-promedio-extension	MIT	MIT CONFIRMED (1073B; holder "Julian Casaburi" 2023)	17	2026-10-09	LATAM (Argentina)	ACTION BI	raw
+RubsNeto/SigaaUI	MIT	MIT CONFIRMED (1073B; holder "Rubens Neto" 2025-2026)	16	2026-10-09	LATAM (Brazil)	ACTION BI	raw
+joojdev/academic-tracker-mcp	MIT	MIT CONFIRMED (1077B; holder "Joao Vitor Piovezan" 2026)	0	2026-10-09	LATAM (Brazil)	ACTION BI	raw
+filipecalegario/auto-sigaa	MIT	MIT CONFIRMED (1073B; holder "Filipe Calegario" 2023)	9	2026-10-09	LATAM (Brazil)	ACTION BI	raw
+MatheusMach/QuantoFalta	NO-FIELD	MEASURED-ABSENT (404 on main+master x LICENSE/.md/.txt/COPYING/LICENCE)	9	2026-10-08	LATAM (Brazil)	ACTION BI	raw
+SIU-Toba/docker-guarani	NO-FIELD	MEASURED-ABSENT (404 on main+master x 5 filenames)	4	2017	LATAM (Argentina, SIS vendor org)	ACTION BI	raw
+frjunioalves/suap-mcp	NO-FIELD	MEASURED-ABSENT (404 on main+master x 5 filenames)	0	2026	LATAM (Brazil)	ACTION BI	raw
+eugeborzone/Auto_Grade_Guarani	NO-FIELD	MEASURED-ABSENT (404 on main+master x 5 filenames)	0	2026	LATAM (Argentina)	ACTION BI	raw
+# ---- ACTION BG : the mirror detector, run over the instructure org (40 most-recently-updated repos) ----
+instructure/dockerfiles	n/a	n/a	n/a	2026-10-08T07:11:15	North America	user:instructure	search [topic gerrit-mirror]
+instructure/switchman	n/a	n/a	n/a	2026-09-30T14:08:31	North America	user:instructure	search [topic gerrit-mirror]
+instructure/screencap	n/a	n/a	n/a	2026-05-21T19:34:31	North America	user:instructure	search [topic gerrit-mirror]
+instructure/outrigger	n/a	n/a	n/a	2026-05-08T13:07:49	North America	user:instructure	search [topic gerrit-mirror]
+instructure/canvas-lms	AGPL-3.0	not read	6863	2026-04-30T14:52:10	North America	user:instructure	search [topic gerrit-mirror]
+instructure/ims-lti	MIT	not read	203	2026-10-02T15:29:07	North America	user:instructure	search [CONTROL: no mirror topic -> GitHub-native, pushed_at IS a signal]
+# ================= NAMED CONTROLS AND NEGATIVE RESULTS =================
+CONTROL-DEAD-INSTRUMENT	curl -sI github.com/HKUDS/DeepTutor (real) -> 403; curl -sI github.com/zzz-not-a-real-org-9981/zzz-not-real-9981 (fake) -> 403	a 403 here distinguishes nothing; the KB's standing "verify with curl -sI" instruction remains inoperable from this runner
+CONTROL-DEAD-INSTRUMENT	api.github.com/repos/HKUDS/DeepTutor -> 403; gh search repos -> HTTP 403 "sessions are bound to their configured repositories"	repo search via the GitHub MCP tool is the only lane that reaches third-party repos
+CONTROL-DEAD-INSTRUMENT	raw.githubusercontent.com LICENSE lane -> HTTP 200	the payload lane p133 found still works; 20 payloads read this pass
+PROBE-ZERO	"siagie peru in:name,description" -> total_count 0	Peru's SIAGIE: NO EVIDENCE FOUND FOR THIS PLATFORM (reported per clause 4, not as a regional zero)
+PROBE-ZERO-ARTEFACT	"caliper analytics xapi learning record store in:name,description" -> 0  BUT  "xapi learning in:name,description" -> 144	a 4-concept conjunction produced a zero over a populated field; same class as P131-E. The zero was retracted before publication
+PROBE-NOISE-TOKENIZER	"ed-fi in:name,description" -> 24061, top hits FizzBuzzEnterpriseEdition / filerobot-image-editor / "Second Edition" books  vs  "edfi ods api" -> 6 clean rows	NEW FAILURE MODE (P134-C): the hyphen is split and "ed"+"fi" match substrings of Edition/Edit/ReFinED/edge
+PROBE-NOISE-RELEVANCE	"xapi learning" sort=stars -> ranks 1-6 are anti-government propaganda repos (3258/2038/371/211/202/127 stars); the first real row is rank 7	sort=stars over a broad query ranks incidental high-star matches above the field. Read past the head of the list
+PROBE-VERNACULAR-NEAR-ZERO	"Notenerfassung in:name,description" -> 11 rows, ALL 0 stars, ALL no licence field, 2017-2025, all student coursework	ACTION BH: the German staff-facing vernacular reaches coursework, not products
+PROBE-VERNACULAR-NEAR-ZERO	"cargar notas docentes in:name,description" -> 3 rows, ALL 0 stars, student projects (2024-2025)	ACTION BH: same result in Spanish
+CONTROL-DETECTOR-BUG	GPL-3.0 payload line 672-673 reads "use the GNU Lesser General\nPublic License instead of this License"	substring detection of a licence FAMILY inside a licence BODY false-positives LGPL on every GPL-3.0 file. Caught by control before publication; resolve by sha256 against canonical texts
+CONTROL-EXISTENCE-SWEEP	70 distinct repos referenced by p134 probed over the raw lane for any readable file on HEAD	66 confirmed directly. 3 needed non-default filenames (SakaiXAPI-Provider -> pom.xml; DanieelRC/SAES-R -> .gitignore; both CONFIRMED). 1 unreachable (openfresno/edgenuity-aeries-grade-passback). 1 confirmed EMPTY by design (cdweaver1992/edfi-mcp-server)
+CONTROL-LINK-INTEGRITY	150 github.com links added by p134, link text vs URL	0 typos. 8 intentional short labels (bare repo name where the owner is named in adjacent prose)
+CONTROL-TABLE-INTEGRITY	197 markdown table rows added by p134, pipe count vs their table header	0 malformed after fixing 4 tables in agents/top.md whose header omitted the leading name column

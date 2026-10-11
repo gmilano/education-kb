@@ -6,6 +6,33 @@ updated: 2026-10-11
 
 # Education — AI agents shelf
 
+**Pass 134, 2026-10-11.** 🔴 **This pass did not add a connector to the tier this shelf is built
+around — it found the tier that makes most of that one unshippable, and it has been missing from
+this KB the whole time.** Every row in the 36-row portal tier below authenticates by holding a
+student's password against a platform that never sanctioned it, and this page has correctly called
+that a tier-wide blocker for three passes. 🟢 **The sanctioned alternative is not a research
+project: it is a mature, permissive, actively-maintained standards stack — `ltijs` (Apache-2.0,
+**373★**, pushed 2026-10-06), `pylti1.3` (MIT, 138★), OneRoster SDKs owned by **Google** and the
+**Ed-Fi Alliance**, and an Ed-Fi line maintained by a **US state department of education**.** This
+shelf carried exactly **one** row from that world (`instructure/ims-lti`, MIT, 203★, in
+`repos/foundations.md`) and never connected it to the blocker.
+
+🔴 **And the one thing that stack is missing is the thing this KB exists to find.** The bridge from
+an *agent* to a *sanctioned standard* is **one repo** — `DavidLMS/learnmcp-xapi` (MIT, 15★) — and
+the only Ed-Fi MCP server in existence, `cdweaver1992/edfi-mcp-server`, is **an empty repository**:
+`size: 0`, HTTP 404 on all 15 probes (5 candidate entry points × `HEAD`/`main`/`master`), created
+and pushed in the same second.
+🟢 **That is the sharpest engagement-shaped finding on this page: the standards are built, the
+agents are built, and almost nobody has wired the two together.**
+
+🔵 **One method note, since it cost this KB the whole tier.** The probe that found it was
+`grade passback`, and then `lti 1.3 advantage`, `oneroster` and `ltijs` — **the professional
+register of the people who do this work for a living.** Not the category term (`SIS`), not the
+capability term (`timetable`, which found p132's 21 rows), and not a national platform noun
+(which found p133's 15). It is a **fourth, distinct vocabulary**, and it is the one that reaches
+the institutional and vendor-owned supply. See clause 5 at the foot of this page.
+
+
 **Pass 132, 2026-10-11.** p131's rows retained; 🔴 **an entire tier is ADDED below — the one this
 KB had declared its largest hole.** *"No agent targeting a student information system"* is refuted
 by **21 rows** (see `README.md` → Pass 132, `P132-A`). p131's own rows were verified hours earlier
@@ -186,6 +213,129 @@ switched off.
   Neither is mature, but together they describe the architecture a client can actually buy.
 - 🟢 **Read these repos as integration intelligence, then rebuild the auth layer.** The API surface
   mapping is the expensive part and it is done; the credential model is the part to throw away.
+
+##### 🟡 Qualified by p134: "nearly every" is right, "every" would not be — and the repos say which is which
+
+🔴 **p134 ran `blackboard learn mcp` and got seven rows, where this KB carried one.** The tier's
+auth model does **not** split by guesswork: **the repos declare it in their own descriptions and
+topics**, and on this platform the split is three ways.
+
+| repo | licence | ★ | last push | auth model, as the repo states it |
+|---|---|---|---|---|
+| [`nitsuah/bb-mcp`](https://github.com/nitsuah/bb-mcp) | **MIT** | 2 | **2026-10-11** | 🟢 **Blackboard Learn REST API**, HTTP or stdio, with **RBAC middleware for role-based access control**. *"Built for educational platform AI integrations."* 🟢 **The only row in the whole 43-row connector population that ships an access-control layer as a feature.** |
+| [`felipedias-ie/blackboard-mcp`](https://github.com/felipedias-ie/blackboard-mcp) | **MIT** | 1 | 2026-09-18 | Blackboard Learn **Ultra**: courses, content, files, grades, deadlines. 2 forks. |
+| [`NiccoloSalvini/mcp-blackboard-ucsc`](https://github.com/NiccoloSalvini/mcp-blackboard-ucsc) | **MIT** | 0 | 2026-09-21 | 🟢 Explicitly *"over the **public REST API**"*. |
+| [`P1ckle3/blackboard-mcp`](https://github.com/P1ckle3/blackboard-mcp) | 🔴 **no licence** | 0 | 2026-07-28 | 🟢 **Okta SSO** against **University of Queensland** Blackboard — **APAC (Australia)**. 🟢 **The second worked example of enterprise SSO in this KB**, after `barneslardo/sis-demo`, and unlike that one it is against a real institution. 🔴 Unlicensed, so unusable as published. |
+| [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli) | ISC | **11** | **2026-10-11** | **LATAM (Peru)** — unofficial CLI + MCP for UPC *Aula Virtual*. 🟢 **Region is now hard evidence, not inference: the repo carries the topic `peru`** (with `blackboard-learn`, `mcp-server`, `upc`) and the homepage `campuscli.com`. Pushed hours before this pass. |
+| [`karkarkins/BlackboardAssistantMCP`](https://github.com/karkarkins/BlackboardAssistantMCP) | 🔴 **no licence** | 0 | 2025-09-09 | 🔴 Self-declared: *"**scrapes**, organizes, and contextualizes academic course data"*. |
+| [`ruud0/aula-virtual-mcp`](https://github.com/ruud0/aula-virtual-mcp) | 🔴 **no licence** | 0 | 2026-09-23 | 🔴 Self-declared by **topic**: `web-scraping`. |
+
+🟢 **So the precise claim, which is more useful than the blanket one:** *where the platform vendor
+publishes a REST API, the connectors use it* — four of these seven go through Blackboard's public
+API or Okta SSO rather than a stored portal password. 🔴 **Where the vendor publishes nothing —
+Librus, EduPage, Pronote, IServ, SIGAA, SUAP, SIU-Guaraní — every connector scrapes, because there
+is no other door.** The blocker is therefore **a property of the platform, not of the builders**,
+and that reframes the sales conversation: on Canvas, Blackboard, Moodle and Open edX there is a
+sanctioned path today; on the national K-12 platforms there is a vendor to negotiate with
+(`compose/patterns.md` → **P8**).
+
+🔵 **One honest caveat on that reframing:** "uses the REST API" is read from the repos' own
+descriptions and topics, not from their code. This pass did not audit a single implementation. A
+repo that says *public REST API* and ships a password prompt would look identical from here.
+
+### 🟢 Standards-native agents and tooling — the sanctioned alternative *(new, p134)*
+
+🔴 **Read this tier against the credential-model blocker two sections below, because it is the
+answer to it.** Everything here talks to an LMS or SIS through a published interoperability
+standard — **LTI 1.3 Advantage** (launch + AGS grade passback + NRPS rosters), **OneRoster 1.2**
+(rostering), **Ed-Fi** (the US K-12 data standard) or **xAPI** (learning records). A tool launched
+over LTI is *invited in by the platform*, with a client ID the institution issued and can revoke.
+No stored student password, no scraping, no breakage when a vendor changes an endpoint.
+
+🟢 **It is also the best-licensed and best-owned tier in this entire KB**, and the only one with
+vendor and government holders.
+
+#### The LTI 1.3 layer — how an AI tool gets launched from inside any compliant LMS
+
+| agent / library | repo | licence | stars | last push | origin / holder | what it gives you |
+|---|---|---|---|---|---|---|
+| **ltijs** | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 **Apache-2.0** (payload-read, 11 361 B) | **373** | **2026-10-06** | unplaced (holder *"Carlos Vinícius Monteiro Costa"*) | 🟢 **The reference LTI 1.3 tool provider, and the largest row in this tier by a wide margin.** "Turn your application into a fully integratable LTI 1.3 tool provider" — OIDC launch, Deep Linking, AGS grade passback, NRPS. 🔴 **This is the single most important repo p134 adds to this KB:** it is 1.8× the stars of the LTI row the KB already had, it was pushed five days before this pass, and it is permissive with a named holder. First-party database plugins: [`ltijs-sequelize`](https://github.com/Cvmcosta/ltijs-sequelize) (Apache-2.0, pushed 2026-09-29). |
+| **pylti1.3** | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 **MIT** (payload-read, 1 070 B; holder *"Dmitry Viskov"*) | **138** | 2024-08-18 | unplaced | The Python equivalent, framework-agnostic (Django/Flask). 🔴 **Dormant: last push 2024-08-18, ~2 years** — the only maturity caveat in this subsection, and it matters because Python is where the agent frameworks are. Use it, pin it, expect to maintain it. |
+| **lti1p3 (Laravel)** | [`xcesaralejandro/lti1p3`](https://github.com/xcesaralejandro/lti1p3) | **MIT** | 11 | 2025-01-03 | unplaced | Laravel integration for LTI 1.3 + Deep Linking. 🟡 Its own description says *"without LTI Advantage"* — so **no AGS grade passback**. Launch only. |
+| **wordpress-lti-1-3** | [`3iPunt/wordpress-lti-1-3`](https://github.com/3iPunt/wordpress-lti-1-3) | **Apache-2.0** | 6 | 2023-07-11 | **EMEA (Spain)** | LTI 1.3 Advantage on WordPress. Relevant where a client's content estate is WordPress rather than an LMS. |
+| **BBDN-lti-1p3-tool-example** | [`blackboard/BBDN-lti-1p3-tool-example`](https://github.com/blackboard/BBDN-lti-1p3-tool-example) | **Apache-2.0** | 1 | 2023-11-13 | **North America — 🟢 VENDOR-OWNED (Blackboard's own org)** | Python/Flask LTI 1.3 tool with AWS deployment. 🟢 **Low stars, high procurement value: it is the platform vendor's own worked example**, which is the artefact a client's security review asks for. Sibling: [`BBDN-LTI-Adv-Node`](https://github.com/blackboard/BBDN-LTI-Adv-Node) (Node/React, 14★, **no licence field**, 2020). |
+| **ltikit-sdk** | [`Liberate-Labs/ltikit-sdk`](https://github.com/Liberate-Labs/ltikit-sdk) | 🟢 **MIT** (payload-read; holder *"alasim"* — an individual, despite the org name) | 0 | **2026-10-07** | unplaced | LTI 1.3 SDK for Canvas/Moodle SSO, grade passback and deep linking. Four days old at this pass. A skeleton, not a dependency. |
+| **lti-1.3-node-nextjs-starter** | [`paurushrai/lti-1.3-node-nextjs-starter`](https://github.com/paurushrai/lti-1.3-node-nextjs-starter) | **MIT** | 2 | 2026-06-17 | unplaced | `ltijs` backend + Next.js 14 front end, Dynamic Registration, PostgreSQL. 🟢 **The fastest honest start for a PoC** — it is a template over `ltijs` rather than a reimplementation. Sibling: [`lti-1p3-nextjs-starter`](https://github.com/paurushrai/lti-1p3-nextjs-starter) (MIT, MongoDB). |
+| **lti-1p3-reference-tool** | [`glenn-watt/lti-1p3-reference-tool`](https://github.com/glenn-watt/lti-1p3-reference-tool) | **MIT** | 0 | 2026-06-18 | unplaced | Python/Flask, *"implemented from first principles"* — OIDC, JWKS validation, AGS, NRPS, Deep Linking. Useful for **reading**, to understand what the libraries above hide. |
+| **ltitoolkit** | [`CNIT-Organization/ltitoolkit`](https://github.com/CNIT-Organization/ltitoolkit) | **MIT** | 0 | 2026-08-05 | unplaced | Python LTI 1.3 Advantage toolkit, published to PyPI. |
+
+#### OneRoster 1.2 — rostering without a scraped password
+
+🟢 **Two rows here are owned by organisations a client has heard of, and both are permissive.**
+
+| agent / library | repo | licence | stars | last push | origin / holder | what it gives you |
+|---|---|---|---|---|---|---|
+| **edfi-oneroster** | [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 **Apache-2.0** (payload-read, 10 173 B) | 6 | **2026-10-09** | **North America — 🟢 the Ed-Fi Alliance's own org** | Serves a **OneRoster 1.2 API from an Ed-Fi ODS database**. 🟢 **The single most procurement-friendly row in this KB:** the standards body's own bridge between the two US K-12 data standards, permissive, 5 forks, pushed two days before this pass. 🔵 Holder class **DOCUMENT-TEXT** — the payload carries no copyright line. |
+| **oneroster-integration-conformance-tests** | [`googleworkspace/oneroster-integration-conformance-tests`](https://github.com/googleworkspace/oneroster-integration-conformance-tests) | 🟢 **Apache-2.0** (payload-read, 11 357 B) | 7 | 2026-07-30 | **North America — 🟢 Google's own org** | Conformance tests for a OneRoster integration. 🟢 **This is how you prove to a client that your rostering connector is correct**, and it is maintained by the vendor whose Classroom estate they probably run. |
+| **oneroster-ts** | [`trilogy-group/oneroster-ts`](https://github.com/trilogy-group/oneroster-ts) | 🟢 **0BSD** (payload-read, 711 B — *"BSD Zero Clause License"*) | 10 | 2026-05-11 | unplaced (holder *"Bjorn Pagen"*, a **noreply** address, despite the org name) | TypeScript SDK for the 1EdTech OneRoster API. 🟢 **0BSD is the most permissive licence anywhere in this KB — it drops even the attribution requirement**, so a derivative needs no notice at all. 🟡 Weigh that against a single-individual holder on an org-named repo. |
+| **oneroster-import** | [`oat-sa/oneroster-import`](https://github.com/oat-sa/oneroster-import) | 🟡 **GPL-2.0** | 8 | 2026-07-16 | **EMEA (Luxembourg — Open Assessment Technologies, the TAO vendor)** | Vendor-owned OneRoster import. 🟡 Copyleft; read before forking. |
+| **libre-oneroster** | [`bgwdotdev/libre-oneroster`](https://github.com/bgwdotdev/libre-oneroster) | 🔴 **AGPL-3.0** | 5 | 2025-04-26 | unplaced | OneRoster server + CLI in **Rust**. 🔴 Network copyleft — do not offer it as a hosted service without reciprocal source release. |
+| **roster-hub** | [`lepo-project/roster-hub`](https://github.com/lepo-project/roster-hub) | 🔴 **AGPL-3.0** | 4 | 2024-03-01 | **APAC (Japan)** | Roster-management system on OneRoster. The only APAC-origin row in this subsection. |
+
+🔵 **Dormant but permissive, if you need a language binding:** [`vossenv/oneroster-python`](https://github.com/vossenv/oneroster-python)
+(MIT, 11★, 2020), [`bgwdotdev/go-oneroster`](https://github.com/bgwdotdev/go-oneroster) (MIT, 8★, 2020),
+[`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) (MIT, 6★, 2023),
+[`gotranseo/oneroster`](https://github.com/gotranseo/oneroster) (Apache-2.0, Swift, 2023),
+[`TCI/OneRoster`](https://github.com/TCI/OneRoster) (MIT, 4★, pushed 2026-09-11 — the freshest of these).
+🔴 [`ridencww/uniroster-server`](https://github.com/ridencww/uniroster-server) (MIT, 6★) is **archived**.
+
+#### Ed-Fi — and the empty repository at the centre of it
+
+| agent / library | repo | licence | stars | last push | origin / holder | what it gives you |
+|---|---|---|---|---|---|---|
+| **MDE-Ed-Fi-ODS-API-SDK** | [`mn-mde-edfi/MDE-Ed-Fi-ODS-API-SDK`](https://github.com/mn-mde-edfi/MDE-Ed-Fi-ODS-API-SDK) | 🔴 **no licence field** | 0 | 2026-04-14 | **North America — 🟢 the Minnesota Department of Education's own org** | C# client SDK for the Minnesota Ed-Fi ODS API. 🟢 **A US state education agency maintaining public code is the strongest institutional signal in this KB.** 🔴 **And it carries no licence, so it cannot be built on** — the recurring shape of this whole KB: the best-owned rows are the worst-licensed. |
+| **tha-edfi-runner** | [`tha-guy-nate/tha-edfi-runner`](https://github.com/tha-guy-nate/tha-edfi-runner) | 🔴 **MIT *plus* an added visible-attribution clause** (payload-read, 1 351 B; holder *"Nathan Wright"*) | 0 | **2026-10-04** | unplaced | Typed, pipeline-friendly Python wrapper over the Ed-Fi ODS REST API (PyPI). 🔴 **Read the licence before shipping this in a client deliverable.** GitHub reports `NOASSERTION` and **GitHub is right**: the payload is MIT with an extra clause requiring *"a visible link to either the GitHub repository or the PyPI package page"* in any publicly available application or service. That is a **user-visible obligation in the client's product**, not a notice in a THIRD-PARTY file. See `P134-F`. |
+| **edfi-mcp-server** | [`cdweaver1992/edfi-mcp-server`](https://github.com/cdweaver1992/edfi-mcp-server) | 🔴 **no licence field** | 1 | 2026-02-17 | unplaced | 🔴 **THE REPOSITORY IS EMPTY. There is no Ed-Fi MCP server.** Its description promises *"Model Context Protocol (MCP) server for Ed-Fi ODS/API integration"*; search reports **`size: 0`**; and the raw lane returns **HTTP 404 for all 15 probes — 5 candidate entry points (`README.md`, `.gitignore`, `package.json`, `index.js`, `src/index.ts`) across all three of `HEAD`, `main` and `master`**; and it was **created and pushed within the same second** (`2026-02-17T19:54:46Z` / `:47Z`) and never touched again. 🟢 **Listed deliberately, as a name to recognise and not install** — and as the measurement behind this pass's headline gap. |
+| **edfi-via-kubernetes** | [`xmarcosx/edfi-via-kubernetes`](https://github.com/xmarcosx/edfi-via-kubernetes) | **Apache-2.0** | 1 | 2022-04-22 | unplaced | Deploys the Ed-Fi API/ODS/Admin App to GKE with Cloud SQL. Dormant, but the only infrastructure-as-code path found. Sibling for Cloud Run: [`esegrave/edfi`](https://github.com/esegrave/edfi) (Apache-2.0). |
+
+#### 🟢 xAPI / Learning Record Store — the one real agent↔standard bridge
+
+| agent / library | repo | licence | stars | last push | origin / holder | what it gives you |
+|---|---|---|---|---|---|---|
+| **learnmcp-xapi** | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | **MIT** | 15 | 2025-08-29 | unplaced | 🟢 **The most important small repo in this KB.** An **MCP server that lets an AI agent record and retrieve learning activities through an xAPI-compliant Learning Record Store.** 🔵 **Why it matters out of all proportion to 15 stars:** every other agent on this shelf reads a *portal*, as that portal's user. This one reads and writes a *standard*, into a store the institution owns. It is the architecture the credential-model blocker has been asking for, and it is the only instance of it. 🔴 **Last push 2025-08-29 — ~14 months.** Treat as a reference design with a maintenance plan attached. |
+| **warren** | [`openfun/warren`](https://github.com/openfun/warren) | **MIT** | 17 | **2026-10-11 (the day of this pass)** | **EMEA (France — France Université Numérique)** | Visualisation toolkit for learning analytics over xAPI. 🟢 **Same national-scale owner as [`openfun/richie`](https://github.com/openfun/richie)**, already in `repos/foundations.md` — so this KB now has **two** MIT rows from a French public education operator, and this one was pushed today. The dashboard layer for anything built on an LRS. |
+| **MasterObjectModel** | [`adlnet/MasterObjectModel`](https://github.com/adlnet/MasterObjectModel) | **Apache-2.0** | 12 | 2025-07-03 | **North America — 🟢 the ADL Initiative (US DoD), who authored xAPI** | An xAPI *profile* describing how a learner's activity is tracked across their whole lifetime in a training estate. The governing body's own modelling guidance. 🔴 Sibling [`adlnet/xapi-lab`](https://github.com/adlnet/xapi-lab) (MIT, 38★ — the most-starred row in this subsection) is **ARCHIVED**. |
+| **jupiter** | [`Transcordia/jupiter`](https://github.com/Transcordia/jupiter) | **MIT** | 11 | 2015-04-19 | unplaced | An LRS supporting **both xAPI and Caliper**. 🔴 Dormant since 2015 — listed because it is the only row this pass found that implements Caliper at all. |
+| **LearningRecordStore-xapi** | [`ZanichelliEditore/LearningRecordStore-xapi`](https://github.com/ZanichelliEditore/LearningRecordStore-xapi) | **MIT** | 9 | 2022-06-21 | **EMEA (Italy — Zanichelli Editore, a publisher)** | Validates xAPI statements and ships them to S3. A small, real, publisher-owned LRS ingest path. |
+| **SakaiXAPI-Provider** | [`Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider`](https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider) | 🟡 **NOASSERTION** | 11 | 2021-03-25 | **North America (Apereo)** | xAPI provider for **Sakai**, whose platform row (ECL-2.0) is already in `repos/foundations.md`. 🟡 Licence unread this pass. |
+
+🔵 **Also found, unplaced and dormant:** [`webtech-uos/nodejs-lrs`](https://github.com/webtech-uos/nodejs-lrs)
+(MIT, 9★, 2014, Universität Osnabrück), [`nicolaasmatthijs/xapicaliper`](https://github.com/nicolaasmatthijs/xapicaliper)
+(no licence, 9★, 2016 — converts activities to **both** xAPI and Caliper statements), and
+[`elc-gh/xAPI-Spec_ja`](https://github.com/elc-gh/xAPI-Spec_ja) (the Japanese translation of the
+xAPI spec, by the **e-Learning Consortium Japan** — APAC's only row here).
+
+#### 🔴 What this tier does NOT give you, stated precisely
+
+🟢 **Do not read this subsection as "the problem is solved."** It is not, and the shape of what is
+missing is the engagement:
+
+- **The libraries are integration plumbing, not agents.** `ltijs` will get your tool launched and
+  your grade posted. It contains no pedagogy, no model call and no agent loop. The AI is still yours
+  to build; what you no longer have to build is the part a client's security team will audit.
+- 🔴 **The agent↔standard bridge is one 15-star repo with a 14-month-old last push.** That is the
+  gap, restated as a build: an MCP server over LTI AGS and OneRoster, with the auth model from
+  `barneslardo/sis-demo` (Okta OIDC/SAML + SCIM) and the audit logging from
+  `zavora-ai/mcp-student-records` (FERPA). Every piece exists separately. See
+  `compose/patterns.md` → **P11**.
+- 🟡 **LTI gets you into the LMS, not into the SIS.** Grade passback writes to the LMS gradebook.
+  Pushing to a *system of record* — the thing the LATAM teacher-facing rows actually do — is
+  OneRoster/Ed-Fi territory, and that is where the institutional owners are and the agents are not.
+- 🔴 **Nothing in this tier is placed in LATAM or APAC except two AGPL-3.0 rows and a spec
+  translation.** The sanctioned stack is overwhelmingly North-American and European in origin. For
+  a LATAM engagement the national systems in `verticals/solutions.md` publish no comparable
+  standard, which is exactly why the LATAM supply is scrapers. That is an informed gap, not an
+  unexamined one.
 
 ### Moodle connectors — the tier p130 declared absent
 
@@ -374,3 +524,74 @@ from `P132-A`: the proper noun was not proper enough.**
 about the query. `P131-E` found it with a multi-term zero, `P132-A` with a category term that reached
 nothing, `P133-E` with a proper noun that reached the wrong field. **Every regional or tier-level
 absence in this KB must name the probe that produced it, or it is not a finding.**
+
+### 🔴 Clause 5, added by p134: name the class in the PROFESSIONAL register too
+
+p132 established that a category term cannot reach a field named by platform. p133 established that
+a platform noun can reach the wrong field. 🔴 **p134 found a fourth register, and it is the one that
+reaches the institutional and vendor-owned supply this KB most wants and most lacks.**
+
+| register | example probe | what it reached |
+|---|---|---|
+| 1. the **category** term | `student information system` | 🔴 nothing — p132's 21 rows were invisible to it |
+| 2. the **capability** every member implements | `timetable timetabling MCP` | 🟢 p132's **21 rows** |
+| 3. the **proper nouns** of the market | `sigaa`, `suap mcp`, `siu-guarani`, `seqta` | 🟢 p133's **15 rows** (and `P133-E`'s homograph failures) |
+| 4. 🆕 the **standard / professional** register | `grade passback`, `lti 1.3 advantage`, `oneroster`, `ltijs`, `xapi` | 🟢 p134's **tier above** — including the only **vendor-owned** (Blackboard, UNIwise, OAT) and **government-owned** (Ed-Fi Alliance, Minnesota DoE, ADL, France Université Numérique) rows in this KB |
+
+🔵 **Why register 4 reaches owners the other three cannot.** Registers 1–3 are the vocabulary of
+*users* — a category an analyst invented, a capability a student wants, a portal a university runs.
+Register 4 is the vocabulary of **the standards an institution procures against**. Vendors and
+public bodies publish code named for the standard they conform to, because conformance is the
+thing they are selling. 🔴 **So a tier that looks like it is built entirely by students may simply
+have been queried entirely in students' words** — which is what happened here for ten passes.
+
+🔴 **And register 4 has its own failure mode, new this pass: tokenizer fragmentation.** A hyphenated
+standard name is split and matched as substrings of unrelated words.
+
+| probe | returned |
+|---|---|
+| `ed-fi in:name,description` | 🔴 **24 061** results, topped by `FizzBuzzEnterpriseEdition` (23 898★), `filerobot-image-editor`, `FireRed-Image-Edit`, `Mastering-Python-for-Finance-Second-Edition`, `next-firebase-auth-edge` |
+| `edfi ods api in:name,description` | 🟢 **6** rows, every one a genuine Ed-Fi project |
+
+🔵 **The hyphen is not a token boundary that protects you — it is one that betrays you.** `ed` and
+`fi` each match inside *Edition*, *Edit*, *ReFinED* and *edge*. **Before reporting a count from a
+hyphenated or two-letter standard name, run the unhyphenated form and a qualifier and compare the
+two counts.** A four-order-of-magnitude gap between them means the first probe measured the
+English language, not the field.
+
+🔴 **A second register-4 hazard, also new: relevance pollution under `sort=stars`.** `xapi learning`
+sorted by stars returns, at ranks 1–6, anti-government propaganda repositories carrying 3 258,
+2 038, 371, 211, 202 and 127 stars. **The first genuine row is rank 7.** Sorting a broad query by
+stars ranks incidental high-star matches above the entire field. **Read past the head of the list,
+or the single most-starred "finding" will be unrelated to education.**
+
+## 🔴 Gaps this page declares after p134
+
+🟢 **Two gaps on this page are retired by the tier above, and the replacements are narrower, which
+is the point.**
+
+- ~~**The portal-connector tier's credential model makes the whole tier undeployable, and the
+  sanctioned path is immature** (`sis-demo`, `mcp-student-records`, *"neither is mature"*).~~
+  🔴 **RETIRED AS STATED.** The sanctioned path is not immature — it is **`ltijs` at Apache-2.0 and
+  373★, `pylti1.3` at MIT and 138★, OneRoster bridges owned by Google and the Ed-Fi Alliance, and an
+  Ed-Fi line maintained by a US state department of education.** 🟢 **The surviving gap is one layer
+  up and far more actionable: the standards are mature and the AGENT BINDING TO THEM IS ONE REPO**
+  (`DavidLMS/learnmcp-xapi`, MIT, 15★, last push 2025-08-29), **and the only Ed-Fi MCP server is an
+  empty repository.** That is a build with every dependency already chosen.
+- ~~**`campus-cli` is the only Blackboard connector.**~~ 🔴 **REFUTED.** There are **seven**, four of
+  them MIT, and four reach the platform through its public REST API or Okta SSO rather than a stored
+  password.
+- **No standards-native row originates in LATAM.** 🟢 **SURVIVES, and it now has a mechanism rather
+  than a shrug:** the sanctioned tier is North-American and European because **Ed-Fi, OneRoster and
+  LTI are North-American and European procurement standards.** SIGAA, SUAP, SIU-Guaraní, SAES,
+  Q-Acadêmico and SIAGIE publish no equivalent, so LATAM supply is scrapers by necessity. The one
+  named counterparty remains `SIU-Toba` (`verticals/solutions.md`).
+- 🆕 **No conformance-tested connector for anything but OneRoster.** `googleworkspace/oneroster-integration-conformance-tests`
+  is the only test suite found that proves an integration correct. There is no equivalent for LTI
+  AGS, for Ed-Fi, or for any of the 43 portal connectors — so "it works" is currently a developer's
+  assertion in every engagement this KB can supply.
+- 🆕 **Nothing in the standards tier has been code-audited by this KB.** Every auth claim above is
+  read from a description or a topic. `P134-G`'s three-way split is a claim about what seven repos
+  *say*, and a repo that says *public REST API* while shipping a password prompt is indistinguishable
+  from here. **This is the first gap in this KB that can only be closed by reading source, not by
+  running a better query.**

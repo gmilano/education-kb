@@ -313,6 +313,56 @@ a budget, or permission.
 agent or MCP surface, which would make the student connectors redundant overnight — and which is
 exactly the engagement to propose to such a vendor.
 
+## T12 — The sanctioned-integration layer is mature, permissive and agent-less *(new, p134)*
+
+🔴 **This is the trend that reframes `T5`, `T6` and `T11` at once, and it took four passes of
+connector-counting to see.** `T11` says the connector layer is being built bottom-up by students
+rather than vendors, and `agents/top.md` says the resulting credential model makes nearly all of it
+undeployable. 🟢 **Both are true of the *portal* layer and false of the layer beside it.**
+
+**The interoperability standards layer — LTI 1.3 Advantage, OneRoster 1.2, Ed-Fi, xAPI — is built,
+permissive, and owned by exactly the institutions this KB keeps saying are absent:**
+
+| the claim this KB has been making | what the standards layer shows |
+|---|---|
+| *"supply is extraordinarily concentrated and student-built"* (`T4`, `T11`) | 🟢 **`Cvmcosta/ltijs` — Apache-2.0, 373★, pushed 2026-10-06.** Larger and more active than the LTI row this KB already had |
+| *"licence risk is concentrated where the traction is"* (`T6`) | 🔴 **Inverted here.** The platforms are AGPL/GPL/LGPL; **the standards layer is Apache-2.0, MIT and 0BSD** — the most permissive set of rows in this entire KB |
+| *"no institutional or vendor owners"* | 🟢 **Ed-Fi Alliance, Google, the US DoD's ADL Initiative, the Minnesota Department of Education, France Université Numérique, UNIwise ApS, Blackboard, Open Assessment Technologies** |
+| *"the credential model is a tier-wide blocker"* | 🟢 **A tool launched over LTI holds no user password at all** — it runs on a client ID the institution issues and can revoke |
+
+🔴 **And here is the trend, in one sentence: the standards are finished and the agents have not
+arrived.** The bridge from an AI agent to any sanctioned learning standard is **one repository** —
+[`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) (MIT, 15★, last push
+2025-08-29) — and **the only Ed-Fi MCP server in existence is an empty repository**
+(`cdweaver1992/edfi-mcp-server`: `size: 0`, HTTP 404 on 15 probes across 3 branch refs, created and pushed in
+the same second).
+
+🟢 **Why this is a trend and not a single finding.** The direction of travel across every other
+trend on this page points at it. `T9` (administrative automation is the most-cited driver and least
+served) needs a system of record, and OneRoster/Ed-Fi *is* the sanctioned route into one. `T3` and
+the 2027 compliance clocks reward auditable access over scraped access. The market's
+fastest-growing segment — **assessment and feedback agents at 44.36% CAGR** — is precisely what
+**LTI AGS grade passback** was designed to carry. 🔵 **Four independent pressures all terminate at
+the same missing component, which is usually what a build opportunity looks like before anyone
+builds it.**
+
+🟡 **What would falsify this trend.** If an MCP-over-LTI/OneRoster server appears with real
+traction in the next few passes, this stops being an opportunity and becomes a dependency — and
+**that is the thing to watch for, because it would also be the fastest-moving row in this KB.**
+🔴 **Equally, if the standards layer turns out to be shallower than its metadata suggests — the
+Python LTI library is already ~2 years dormant and the xAPI bridge ~14 months — then "mature" is
+too strong, and this pass will have over-read activity from stars and a single `pushed_at`.** No
+repository in this tier has been code-audited by this KB.
+
+🔵 **The regional asymmetry is part of the trend, not an aside.** LTI, OneRoster and Ed-Fi are
+**North-American and European procurement standards**. The LATAM national systems (SIGAA, SUAP,
+SIU-Guaraní, SAES, Q-Acadêmico) publish no equivalent, and APAC's only standards-tier rows are an
+AGPL-3.0 project and a spec translation. 🔴 **So the sanctioned path is available where the
+standards are, and the scraping is a symptom of their absence — not of a different builder
+culture.** That is a materially different explanation from `T11`'s, and it is testable: it predicts
+that LATAM supply stays unsanctioned until a national system publishes an API, regardless of who
+builds it.
+
 ## Watch list for the next pass
 
 **Resolved this pass:**
@@ -376,3 +426,26 @@ exactly the engagement to propose to such a vendor.
   `raw.githubusercontent.com/<owner>/<repo>/<branch>/LICENSE`.**
 - 🔵 Check whether `Tushar-cy/Offline-AI` and `Tushar-cy/Ai-edge-learning-hub` are a rename pair,
   and retire the dead one from this KB before it is ever counted twice.
+
+### 🆕 Added to the watch list by p134
+
+- 🟢 **An MCP server over LTI AGS, OneRoster or Ed-Fi gaining traction.** Today the whole category is
+  one 15-star repo and one empty one. This is the highest-signal thing to re-measure next pass.
+- 🔴 **`cdweaver1992/edfi-mcp-server` — watch for it to acquire code.** A named, described, empty
+  repo in a high-demand slot is the kind of thing that gets filled, and if it is filled by someone
+  else it stops being an opportunity.
+- 🟡 **`dmitry-viskov/pylti1.3` (MIT, 138★, last push 2024-08-18).** The Python LTI binding is the
+  weak link for any agent build. Watch for a fork gaining activity, or for the upstream to wake.
+- 🟡 **`DavidLMS/learnmcp-xapi` last push (2025-08-29).** If it stays still, the bridge has to be
+  built rather than adopted.
+- 🟢 **France's fuller AI-in-education plan**, expected spring 2026 per the June 2025 *cadre
+  d'usage*; and whether a **national monitoring body** is created, since its absence is the
+  assurance opening.
+- 🟢 **Jisc's AI marking and feedback pilots (38 UK institutions).** Findings from a 38-institution
+  programme would be the best outcome evidence available in this market.
+- 🔴 **Colorado's reported AI Act repeal (May 2026) and the FERPA-covered-institution exemption** —
+  unconfirmed by any second source this pass. **Either confirm it against the state legislature or
+  strike it; it must not reach a client either way until then.**
+- 🟡 **Whether "APAC" and "LATAM" are mis-queried the way "EMEA" was.** `ACTION BK` proved the
+  sales-region word reaches enterprise IT rather than ministries. The same test has not been run on
+  the other two region words — see `ACTION BM`.

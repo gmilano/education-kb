@@ -6,6 +6,19 @@ updated: 2026-10-11
 
 # Education — foundational repos
 
+**Pass 134, 2026-10-11.** 🟢 **This page gains the layer it was missing: the interoperability
+standards an institution procures against.** `instructure/ims-lti` has sat at the bottom of this
+page for many passes, described correctly as *"the integration path that avoids touching platform
+source"* — and this KB never followed that sentence anywhere. Followed, it leads to **`Cvmcosta/ltijs`
+(Apache-2.0, 373★, pushed 2026-10-06)**, which is larger and far more active than the row that
+pointed at it, and to the first **vendor- and government-owned** repositories this KB has ever
+tabled. See the new section *The interoperability layer* below, and `agents/top.md` → *Standards-native
+agents*.
+
+🟢 **`ACTION BG` is also discharged on this page** — the mirror detector p133 asked for was built and
+run, one of its three proposed signals works, and `P133-A`'s inference about Canvas is narrowed. See
+*The mirror rule, measured* below.
+
 **Pass 132, 2026-10-11.** p131's rows carried forward unchanged (they were verified hours earlier
 in the same date window); 🔴 **one new row changes this page's headline recommendation and refutes
 this page's own flagship gap** — see `README.md` → Pass 132, `P132-C`. These are the systems a
@@ -66,6 +79,68 @@ around it already exists. See `compose/patterns.md` → P2.
 | repo | licence | stars | origin | what it gives you |
 |---|---|---|---|---|
 | [`saytooyum/AI-Based-Timetable-Generation-System`](https://github.com/saytooyum/AI-Based-Timetable-Generation-System) | **MIT** | 1 | **APAC (India)** | Conflict-free academic timetable generation under **India's NEP 2020**: electives, faculty availability, courses, rooms, balanced workloads, scenario simulation, manual overrides, exports, and a natural-language interface over MCP. 🟢 **The "most-cited driver, least-served tier" finally has a repo, and it is an optimiser rather than an LLM wrapper.** 🔴 One star — a reference design, not a dependency. |
+
+## 🟢 The interoperability layer — how AI attaches without touching platform source *(new, p134)*
+
+🔴 **Read this section before proposing a fork of anything above it.** Every platform in *The
+platforms* is AGPL-3.0, GPL-3.0, LGPL-3.0 or ECL-2.0, and this KB spends a lot of words on which
+reciprocity obligation bites when. 🟢 **The standards below make most of that moot:** a tool
+launched over **LTI 1.3** runs as a separate application with its own licence, talking to the LMS
+over HTTP. It never links platform code, so it inherits **no** copyleft obligation from Moodle,
+Canvas or Open edX — and it is *invited in* by a client ID the institution issues and can revoke,
+rather than holding a user's password.
+
+| repo | licence | stars | last push | holder class | why it is foundational |
+|---|---|---|---|---|---|
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 **Apache-2.0** (payload-read) | **373** | **2026-10-06** | named individual | 🟢 **The reference LTI 1.3 Advantage tool provider, and the headline addition to this page.** OIDC launch, Deep Linking, AGS grade passback, NRPS rosters. **1.8× the stars of `ims-lti` and pushed five days before this pass** — where `ims-lti` is Instructure's library for *their* platform, this is the platform-independent one. If an engagement puts AI inside an existing LMS, this is the integration dependency. |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 **MIT** (payload-read) | 138 | 2024-08-18 | named individual | The Python LTI 1.3 Advantage library (Django/Flask). 🔴 **Dormant ~2 years**, and that is the most consequential staleness on this page: Python is where the agent frameworks live, so the LTI binding for an agent build is the least-maintained link in the chain. |
+| [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 **Apache-2.0** (payload-read) | 6 | **2026-10-09** | 🟢 **standards body** | Serves a **OneRoster 1.2 API from an Ed-Fi ODS**. The bridge between the two US K-12 data standards, written by the body that owns one of them. 🟢 **Stars are the wrong measure here: this is the row that makes a US K-12 rostering story procurement-safe.** |
+| [`googleworkspace/oneroster-integration-conformance-tests`](https://github.com/googleworkspace/oneroster-integration-conformance-tests) | 🟢 **Apache-2.0** (payload-read) | 7 | 2026-07-30 | 🟢 **platform vendor (Google)** | Conformance tests for a OneRoster integration. 🟢 **The only test suite in this KB that proves an integration correct rather than asserting it.** |
+| [`trilogy-group/oneroster-ts`](https://github.com/trilogy-group/oneroster-ts) | 🟢 **0BSD** (payload-read, 711 B) | 10 | 2026-05-11 | named individual (noreply addr) | TypeScript OneRoster SDK. 🟢 **0BSD — the most permissive licence in this KB; it drops even attribution**, so a derivative carries no notice obligation at all. |
+| [`AlexMeiling/wiseflow-api-integration-packages`](https://github.com/AlexMeiling/wiseflow-api-integration-packages) | 🟢 **MIT** (payload-read; holder **"UNIwise ApS"**) | 3 | 2026-06-11 | 🟢 **platform vendor (EMEA, Denmark)** | Integration packages for the **WISEflow** assessment platform — user creation, flow setup, assessor allocation, **grade passback**. 🟢 **A European assessment vendor publishing its own MIT integration path**: the cleanest EMEA counterparty in this KB, and the opposite of the unsanctioned-connector problem. |
+| [`openfun/warren`](https://github.com/openfun/warren) | **MIT** | 17 | **2026-10-11** | 🟢 **national public operator (EMEA, France)** | Learning-analytics visualisation over **xAPI**. Same owner as [`openfun/richie`](https://github.com/openfun/richie) below — 🟢 **France Université Numérique now gives this KB two MIT rows, and this one was pushed on the day of this pass.** The dashboard layer over an LRS. |
+| [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | **MIT** | 15 | 2025-08-29 | named individual | 🟢 **The only repo found that bridges an AI agent to a sanctioned standard**: an MCP server that records and retrieves learning activity through an xAPI Learning Record Store. 🔴 **15 stars, last push ~14 months ago** — load-bearing and unmaintained, which is precisely why it is a build item rather than a dependency. Full tier in `agents/top.md`. |
+| [`adlnet/MasterObjectModel`](https://github.com/adlnet/MasterObjectModel) | **Apache-2.0** | 12 | 2025-07-03 | 🟢 **government (US DoD ADL Initiative)** | xAPI profile for lifetime learner tracking, from the body that authored xAPI. The modelling reference for an LRS schema. |
+| [`mn-mde-edfi/MDE-Ed-Fi-ODS-API-SDK`](https://github.com/mn-mde-edfi/MDE-Ed-Fi-ODS-API-SDK) | 🔴 **no licence field** | 0 | 2026-04-14 | 🟢 **government (Minnesota Dept of Education)** | C# SDK for a US state's Ed-Fi ODS API. 🔴 **The best-owned row on this page and unusable, because it carries no grant** — the recurring shape of this KB in one line. |
+
+🔵 **The licence asymmetry is worth stating plainly, because it inverts this page's usual advice.**
+*The platforms* are copyleft almost without exception and the one permissive major platform
+(`oppia/oppia`, Apache-2.0) is the one nobody asks for. 🟢 **The interoperability layer is
+permissive almost without exception** — Apache-2.0, MIT and 0BSD, with named vendor and government
+holders. **So the licence-safest way to build on a copyleft platform is to not build on it at all,
+and to attach over a standard instead.**
+
+🔴 **And the honest limit of this section:** these are libraries, conformance tests and profiles.
+They are the plumbing a security review passes. **None of them contains any AI**, and the one row
+that joins them to an agent has 15 stars and has not been pushed in over a year.
+
+## 🟢 The mirror rule, measured — `ACTION BG` discharged *(p134)*
+
+p133 corrected a four-pass claim that `instructure/canvas-lms` was *"the quietest of the major
+platforms"*, having found the topic `gerrit-mirror` and a sibling repo sharing its `pushed_at` one
+second later. 🟢 **`ACTION BG` asked for that to become a detector before any further freshness
+claim published. It was built and run over the 40 most-recently-updated `instructure` repositories,
+and the result is mixed in a useful way.**
+
+| proposed signal | verdict | measurement |
+|---|---|---|
+| **a topic containing *mirror*** | 🟢 **WORKS — and the defect is a lane, not a row** | **5 of 40** repos carry `gerrit-mirror`: `canvas-lms`, `dockerfiles`, `switchman`, `screencap`, `outrigger`. `ACTION BG`'s refutation condition (*"refuted if `canvas-lms` is the only mirror"*) is **not met** |
+| **two repos in an org sharing `pushed_at` to the second** | 🔴 **DOES NOT GENERALISE — retire it** | across 40 repos, **no timestamp is shared by more than one repo.** p133's own evidence was two *adjacent* seconds (`:10` and `:11`), not a shared one; generalised into a detector it finds nothing |
+| **a README naming an upstream elsewhere** | 🟡 **NOT TESTED** this pass | would need a payload read per repo; the topic field is cheaper and sufficient |
+
+🔴 **And the measurement narrows `P133-A`'s inference.** p133 concluded 2026-04-30 was *"the date
+their export to GitHub stopped running"*. 🟢 **It was not: sibling mirrors in the same org received
+exports on 2026-09-30 (`switchman`) and 2026-10-08 (`dockerfiles`)** — three days before this pass.
+**The Gerrit export job is running; `canvas-lms` specifically stopped receiving it.** Whether that
+is a disabled export, a renamed upstream branch or a deliberate halt is not visible from here, and
+this KB should not guess. 🟢 **p133's operative conclusion survives intact and is the one to quote:
+`pushed_at` on `canvas-lms` is not an activity signal.** Its stronger causal story does not.
+
+🟢 **The control that makes the rule usable:** [`instructure/ims-lti`](https://github.com/instructure/ims-lti)
+carries **no** mirror topic and was pushed **2026-10-02**. **So within one org, some repos are
+mirrors and some are GitHub-native, and the topic tells you which.** `pushed_at` is a valid
+freshness signal for `ims-lti` and an invalid one for `canvas-lms` — which means freshness must be
+checked per repo, never per organisation.
 
 ## Supporting infrastructure
 

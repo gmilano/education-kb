@@ -6,6 +6,133 @@ updated: 2026-10-11
 
 # Education — trending agents (append-only log)
 
+## 2026-10-11 — Pass 134
+
+**The pass that found the tier this shelf has been working around for ten passes.** 🔴 **Not another
+portal connector — the sanctioned alternative to all of them.** Every row in the 36-row portal tier
+authenticates by holding a student's password against a platform that never sanctioned it, and this
+KB has correctly called that a blocker since p132. 🟢 **The sanctioned path is a mature, permissive,
+institution-owned standards stack — and this shelf carried exactly one row from it.**
+
+| finding | verdict | figure |
+|---|---|---|
+| `P134-A` | 🟢 **THE SANCTIONED-INTEGRATION TIER IS MATURE, PERMISSIVE, AND WAS ABSENT FROM THIS KB** | `Cvmcosta/ltijs` **Apache-2.0, 373★, pushed 2026-10-06** — vs the one LTI row this KB had (`ims-lti`, 203★) |
+| `P134-B` | 🔴 **AND THE AGENT↔STANDARD BRIDGE IS ONE REPO; THE Ed-Fi MCP SERVER IS AN EMPTY REPOSITORY** | `learnmcp-xapi` MIT **15★**, last push 2025-08-29; `edfi-mcp-server` **`size:0`, 404 on 15 probes** |
+| `P134-C` | 🔴 **NEW VOCABULARY FAILURE MODE: TOKENIZER FRAGMENTATION** | `ed-fi` → **24 061** hits topped by `FizzBuzzEnterpriseEdition`; `edfi ods api` → **6** clean rows |
+| `P134-D` | 🟢 **`ACTION BG` DISCHARGED — one detector works, one is retired, and `P133-A` narrows** | `gerrit-mirror` on **5 of 40** repos; **zero** shared timestamps; sibling mirrors exported **2026-10-08** |
+| `P134-E` | 🟢 **`ACTION BI` DISCHARGED — ALL 12 LATAM LICENCE CELLS CONFIRMED, 4 MEASURED-ABSENT** | 8 payloads read; 4 × 404 on main+master × 5 filenames; **no corrections** |
+| `P134-F` | 🔴 **`NOASSERTION` IS NOT BIASED TOWARD "FINE" — IT IS BIASED TOWARD "UNUSUAL"** | `tha-edfi-runner` = **MIT + a visible-attribution clause**; GitHub's matcher was right |
+| `P134-G` | 🟢 **`ACTION BJ` DISCHARGED — BLACKBOARD IS 7 ROWS, AND THE AUTH MODEL SPLITS BY SELF-DECLARATION** | 3 × public REST API, 1 × **Okta SSO**, 2 × self-declared scraping |
+| `P134-H` | 🟢 **`ACTION BK` DISCHARGED AND REFUTING — EMEA WAS MIS-QUERIED, NOT SATURATED** | France's **"cadre d'usage"** (June 2025), **EC guidelines updated 2026**, **Jisc: 38 institutions** |
+
+### 🆕 The standards tier — the rows, and why stars are the wrong measure here
+
+| repo | licence | ★ | pushed | holder class | what it is |
+|---|---|---|---|---|---|
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 **Apache-2.0** (payload) | **373** | **2026-10-06** | named individual | The reference **LTI 1.3 Advantage tool provider** — OIDC, Deep Linking, **AGS grade passback**, NRPS |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 **MIT** (payload) | 138 | 🔴 2024-08-18 | named individual | The Python LTI 1.3 library. 🔴 **~2 years dormant — the weak link for any agent build** |
+| [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | **MIT** | 15 | 🔴 2025-08-29 | named individual | 🟢 **The only agent↔standard bridge found: MCP ↔ xAPI Learning Record Store** |
+| [`openfun/warren`](https://github.com/openfun/warren) | **MIT** | 17 | 🟢 **2026-10-11** | 🟢 **national public operator (France)** | xAPI learning-analytics dashboards. Same owner as `openfun/richie` |
+| [`trilogy-group/oneroster-ts`](https://github.com/trilogy-group/oneroster-ts) | 🟢 **0BSD** (payload, 711 B) | 10 | 2026-05-11 | named individual | OneRoster 1.2 TypeScript SDK. 🟢 **0BSD drops even attribution** |
+| [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 **Apache-2.0** (payload) | 6 | **2026-10-09** | 🟢 **standards body** | OneRoster 1.2 API served from an **Ed-Fi ODS** |
+| [`googleworkspace/oneroster-integration-conformance-tests`](https://github.com/googleworkspace/oneroster-integration-conformance-tests) | 🟢 **Apache-2.0** (payload) | 7 | 2026-07-30 | 🟢 **Google** | 🟢 **The only conformance suite in this KB for any standard in this industry** |
+| [`AlexMeiling/wiseflow-api-integration-packages`](https://github.com/AlexMeiling/wiseflow-api-integration-packages) | 🟢 **MIT** (payload, holder **"UNIwise ApS"**) | 3 | 2026-06-11 | 🟢 **platform vendor (Denmark)** | WISEflow: assessor allocation + **grade passback** |
+| [`adlnet/MasterObjectModel`](https://github.com/adlnet/MasterObjectModel) | **Apache-2.0** | 12 | 2025-07-03 | 🟢 **US DoD (ADL)** | xAPI profile from the body that authored xAPI |
+| [`mn-mde-edfi/MDE-Ed-Fi-ODS-API-SDK`](https://github.com/mn-mde-edfi/MDE-Ed-Fi-ODS-API-SDK) | 🔴 **no licence** | 0 | 2026-04-14 | 🟢 **Minnesota Dept of Education** | 🔴 **Best-owned row in this KB and unusable** |
+| [`tha-guy-nate/tha-edfi-runner`](https://github.com/tha-guy-nate/tha-edfi-runner) | 🔴 **MIT + attribution clause** (payload) | 0 | 2026-10-04 | named individual | Typed Python wrapper over the Ed-Fi ODS REST API |
+| [`blackboard/BBDN-lti-1p3-tool-example`](https://github.com/blackboard/BBDN-lti-1p3-tool-example) | **Apache-2.0** | 1 | 2023-11-13 | 🟢 **platform vendor** | Blackboard's own LTI 1.3 worked example |
+| [`Liberate-Labs/ltikit-sdk`](https://github.com/Liberate-Labs/ltikit-sdk) | 🟢 **MIT** (payload, holder *"alasim"*) | 0 | **2026-10-07** | individual (despite org name) | LTI 1.3 SDK — Canvas/Moodle SSO, grade passback, deep linking |
+
+🔵 **Read the holder column, not the star column.** 🟢 **This is the first tier in this KB with
+vendor and government holders — Google, the Ed-Fi Alliance, the US DoD, a US state department of
+education, a French national operator, Blackboard, UNIwise, OAT.** A 6-star repo from the standards
+body that owns the standard is worth more in a procurement conversation than a 40-star student
+project, and this KB's ranking habits have been reading it the other way round.
+
+### 🆕 The Blackboard tier — 7 rows where this KB had 1
+
+| repo | licence | ★ | pushed | auth model, **as the repo itself declares it** |
+|---|---|---|---|---|
+| [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli) | ISC | **11** | **2026-10-11** | **LATAM (Peru** — topic `peru`**)**, unofficial UPC *Aula Virtual* |
+| [`nitsuah/bb-mcp`](https://github.com/nitsuah/bb-mcp) | **MIT** | 2 | **2026-10-11** | 🟢 **Blackboard REST API + RBAC middleware** — the only connector in 43 that ships access control as a feature |
+| [`felipedias-ie/blackboard-mcp`](https://github.com/felipedias-ie/blackboard-mcp) | **MIT** | 1 | 2026-09-18 | Blackboard **Ultra** — courses, content, grades, deadlines |
+| [`NiccoloSalvini/mcp-blackboard-ucsc`](https://github.com/NiccoloSalvini/mcp-blackboard-ucsc) | **MIT** | 0 | 2026-09-21 | 🟢 *"over the **public REST API**"* |
+| [`P1ckle3/blackboard-mcp`](https://github.com/P1ckle3/blackboard-mcp) | 🔴 none | 0 | 2026-07-28 | 🟢 **Okta SSO**, Univ of Queensland — **APAC** |
+| [`karkarkins/BlackboardAssistantMCP`](https://github.com/karkarkins/BlackboardAssistantMCP) | 🔴 none | 0 | 2025-09-09 | 🔴 self-declared *"**scrapes**"* |
+| [`ruud0/aula-virtual-mcp`](https://github.com/ruud0/aula-virtual-mcp) | 🔴 none | 0 | 2026-09-23 | 🔴 self-declared by topic: `web-scraping` |
+
+🟢 **The finding is the split, not the count: where the vendor publishes a REST API, the connectors
+use it.** 🔴 **Where no vendor API exists — Librus, EduPage, Pronote, IServ, SIGAA, SUAP,
+SIU-Guaraní — every connector scrapes, because there is no other door.** **The credential blocker is
+a property of the platform, not of the builders**, which is a different and more sellable diagnosis
+than the one this KB has been carrying.
+
+### 🆕 LATAM, finishing `ACTION BJ`
+
+- 🟢 **Q-Acadêmico (Brazil)** — a **fourth** Brazilian national academic system. ~7 real rows of 85
+  hits, best [`adiel-calixto/IFAcademico`](https://github.com/adiel-calixto/IFAcademico)
+  (**Apache-2.0**, 6★); [`MuriloCalegari/Ifes-Academico`](https://github.com/MuriloCalegari/Ifes-Academico)
+  (GPL-3.0, 4★) **syncs grades**, so staff-adjacent.
+- 🔴 **SAES (Mexico)** — 19 hits, nothing usable: only 3 permissive, the rest unlicensed scrapers.
+  **Two conversational agents exist** ([`DanieelRC/SAES-R`](https://github.com/DanieelRC/SAES-R),
+  [`AgenteConversacional-SAES-R`](https://github.com/DanieelRC/AgenteConversacional-SAES-R), the
+  latter aimed partly at *profesores*) — 🔴 **both unlicensed, both 0★.**
+- 🟢 **SIMAT (Colombia)** — one row and a different species:
+  [a dropout-risk model](https://github.com/juanfelipemalaver00-arch/Predictive-model-for-primary-school-dropout-in-Colombia)
+  joining **C-600, SIMAT and IPM** into explainable alerts **for a Secretaría de Educación**
+  (🔴 no licence, 1★, pushed 2026-10-10). 🔵 **The only ministry-facing row in this KB.**
+- 🔴 **SIAGIE (Peru) — NO EVIDENCE FOUND FOR THIS PLATFORM.** `siagie peru in:name,description` →
+  **`total_count: 0`**. Reported with its probe named, per clause 4 — **not** as a Peruvian zero.
+
+### 🔴 Three instrument lessons, because two of them nearly published a false claim
+
+1. 🔴 **`ed-fi` is unsearchable as written.** 24 061 results, ranks 1–5 being
+   `FizzBuzzEnterpriseEdition`, an image editor, an image-editing model and two *"Second Edition"*
+   book repos — the hyphen splits and `ed`+`fi` match inside *Edition*, *Edit*, *ReFinED*, *edge*.
+   **`edfi ods api` returns 6 clean rows.** Clause 5 added to `agents/top.md`.
+2. 🔴 **A multi-term zero again.** `caliper analytics xapi learning record store` → **0**, over a
+   field that `xapi learning` shows holds **144** repos. 🟢 **The zero was caught and retracted
+   before publication** — but it is the third pass in a row to generate one (`P131-E`, `P133-E`),
+   and it means **a conjunction of four concepts is not a measurement of any of them.**
+3. 🔴 **A licence detector that greps a payload for a licence *name* false-positives.** p134's first
+   read of [`Agso-o/sigaa-calendar`](https://github.com/Agso-o/sigaa-calendar) and
+   [`despedite/siu-guarani`](https://github.com/despedite/siu-guarani) said **LGPL**, which would
+   have been a material correction (LGPL permits linking without reciprocity; GPL does not).
+   🟢 **It was wrong, and a control caught it: GPL-3.0's own closing paragraph reads *"use the GNU
+   Lesser General\nPublic License instead of this License"*, line-wrapped, at line 672.** Both
+   payloads are GPL-3.0 (sha256 `3972dc97…`, identical, matching Moodle's `COPYING.txt` but for the
+   FSF's `http`→`https` update). 🟢 **p133's cells were right. Resolve licence family by hash against
+   canonical texts, never by substring.**
+
+### 🟡 Negative results worth keeping
+
+- 🔴 **`Notenerfassung`** → 11 rows, **all 0★, all unlicensed**, 2017–2025, every one student
+  coursework. **`cargar notas docentes`** → 3 rows, same shape. 🟢 **`ACTION BH` answered in an
+  unexpected direction: the staff-facing axis is NOT reachable through vernacular verbs** — those
+  reach homework. **It is reachable through the standards register** (`grade passback` → the LTI
+  tier above). The wave p133 saw in LATAM is real but was found by platform nouns, not by language.
+- 🔴 **The generic demand channel is still generic.** `top open source AI agents education 2026
+  github MIT` returns OpenClaw, OpenHands, CrewAI, LangGraph, SWE-agent — **general-purpose and
+  coding agents, nothing education-specific**, as `T10` predicts. **`github trending education AI
+  October 2026` returned no October list at all**, only May–July 2026 items (`llm-course`,
+  `nn-zero-to-hero`, `ai-engineering-from-scratch`) — all *learning-about-AI* repos, not
+  *AI-for-education* repos. 🔵 **A standing confusion worth naming: this KB's industry is education,
+  and that channel keeps returning AI pedagogy for developers.**
+- 🔴 **`sort=stars` over a broad query is unsafe.** `xapi learning` ranks six anti-government
+  propaganda repositories (3 258 / 2 038 / 371 / 211 / 202 / 127★) **above the entire field**; the
+  first real row is rank 7.
+
+### Dead instruments, re-confirmed by control
+
+🔴 **`curl -sI` returned 403 for a real repo AND for a deliberately fake one** — so a 403
+distinguishes nothing, and this KB's standing *"verify every URL with `curl -sI`"* instruction
+remains inoperable from this runner. 🔴 **`api.github.com` → 403. `gh search repos` → 403
+*"sessions are bound to their configured repositories"*.** 🟢 **Working: GitHub repo search via the
+session's MCP tool (metadata) and `raw.githubusercontent.com/<owner>/<repo>/<branch>/LICENSE`
+(payload) — 20 payloads read this pass.**
+
+---
+
 ## 2026-10-11 — Pass 133
 
 **The pass that ran the LATAM probe this KB had pre-registered three times and never executed.**

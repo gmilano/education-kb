@@ -460,6 +460,145 @@ institution a sanctioned path.
 
 ---
 
+## P11 — The sanctioned-integration agent: MCP over LTI AGS, OneRoster and an LRS *(new, p134 — and it is the pattern the other ten have been working around)*
+
+🔴 **Every connector-based pattern in this file carries the same unpriced risk**, and `P8` names it:
+the open-source connectors authenticate as a student with a stored portal password against a
+platform that never sanctioned it. 🟢 **p134 found that the sanctioned path is not a research
+project — it is a mature, permissive, institution-owned standards stack — and that the one missing
+piece is the agent binding.** This pattern is that binding, and every dependency in it is already
+chosen and licence-verified.
+
+**Use it when:** the client runs **Canvas, Moodle, Blackboard, Open edX, Sakai, D2L or ILIAS** (i.e.
+anything LTI-compliant), AND the engagement has to survive a security review, a procurement process,
+or a data-protection assessment. 🟢 **Which is to say: almost every real engagement, as opposed to
+every demo.**
+
+### The stack, with licences this pass verified by payload read
+
+| layer | component | licence | why this one |
+|---|---|---|---|
+| **launch + identity** | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 **Apache-2.0** (11 361 B, holder named) | 373★, pushed 2026-10-06. OIDC launch, JWKS, Deep Linking, **AGS**, NRPS. The tool is **invited in** by a client ID the institution issues and can revoke — no stored password anywhere in the design |
+| *(Python alternative)* | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 **MIT** (1 070 B) | 138★. 🔴 **Dormant since 2024-08-18 — budget maintenance for it, or put the LTI edge in Node and the agent in Python** |
+| **PoC scaffold** | [`paurushrai/lti-1.3-node-nextjs-starter`](https://github.com/paurushrai/lti-1.3-node-nextjs-starter) | **MIT** | A template *over* `ltijs` with Dynamic Registration and PostgreSQL — days, not weeks, to a first launch |
+| **grade write-back** | **LTI AGS**, via `ltijs` | — | Writes to the LMS gradebook **through the platform's own service**, which is the sanctioned equivalent of what the LATAM teacher-facing rows do by scraping (`P10`) |
+| **rostering** | [`trilogy-group/oneroster-ts`](https://github.com/trilogy-group/oneroster-ts) | 🟢 **0BSD** (711 B) | TypeScript OneRoster 1.2 SDK. **0BSD drops even attribution** — the least encumbered dependency in this KB |
+| **rostering (US K-12)** | [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 **Apache-2.0** (10 173 B) | Serves OneRoster 1.2 from an **Ed-Fi ODS** — the standards body's own bridge, pushed 2026-10-09 |
+| 🟢 **conformance proof** | [`googleworkspace/oneroster-integration-conformance-tests`](https://github.com/googleworkspace/oneroster-integration-conformance-tests) | 🟢 **Apache-2.0** | **Run these and hand the client the output.** The only test suite in this KB that proves an integration correct rather than asserting it |
+| **learner state / audit** | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | **MIT** | 🔴 **The load-bearing and least-maintained link: 15★, last push 2025-08-29.** An MCP server that records and retrieves learning activity via an **xAPI LRS**. **Expect to fork and own it** |
+| **analytics surface** | [`openfun/warren`](https://github.com/openfun/warren) | **MIT** | xAPI learning-analytics dashboards from **France Université Numérique**, pushed 2026-10-11 |
+| **enterprise auth** | [`barneslardo/sis-demo`](https://github.com/barneslardo/sis-demo) (pattern only) | 🔴 **no licence — read, do not fork** | The worked example of **Okta OIDC/SAML + SCIM** provisioning. 🟢 Second instance now exists against a real institution: [`P1ckle3/blackboard-mcp`](https://github.com/P1ckle3/blackboard-mcp) (UQ, Okta SSO, 🔴 unlicensed) |
+| **access logging** | [`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records) (pattern only) | 🟢 Apache-2.0 (notice-block form) | **FERPA access logging as a first-class feature** — the audit-trail design to copy |
+| **pedagogical state** | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | **MIT** | BKT mastery, review scheduling, auditable pedagogical decisions, LMS-agnostic — so it sits behind the LTI edge rather than inside the LMS |
+
+### How it wires together
+
+1. **The LMS launches the tool over LTI 1.3.** `ltijs` validates the OIDC handshake and the platform
+   JWT. 🟢 **The agent now knows who the learner is, in which course, with what role — signed by the
+   platform, with no credential of the learner's held anywhere.**
+2. **Roster context comes from OneRoster**, not from scraping a class list: `oneroster-ts` against
+   the institution's rostering endpoint, or `edfi-oneroster` over an Ed-Fi ODS in US K-12.
+3. **The agent runs** — any framework; `tutor-mcp` supplies mastery and scheduling state so the
+   pedagogy is auditable rather than an LLM's opinion.
+4. **Learner activity is written to an LRS as xAPI statements** through `learnmcp-xapi`. 🟢 **This is
+   the step that makes the whole thing defensible:** every interaction lands in a store the
+   institution owns, in a standard format, queryable for an audit or an impact study.
+5. **Grades go back over AGS**, into the LMS gradebook, through the platform's own service.
+6. **`warren` renders the analytics** over the same xAPI data — so the evaluation harness (`P6`) and
+   the product read from one store.
+7. **Access is governed by the institution's IdP** (Okta OIDC/SAML + SCIM per `sis-demo`) and
+   **every record access is logged** (per `mcp-student-records`).
+
+### Shape of the engagement
+
+**8–12 weeks to a defensible pilot in one course**, on the assumption that the client's LMS admin
+can register an LTI tool — 🔴 **confirm that in week one; it is the only hard external dependency,
+and in a large institution it is a ticket, not a conversation.**
+
+- **Weeks 1–2** — LTI registration; `ltijs` launch working end to end; rostering endpoint identified
+  and the **Google conformance tests run against it**.
+- **Weeks 3–5** — LRS stood up; fork and harden `learnmcp-xapi` (🔴 **assume this is real work: 15
+  stars, 14 months quiet**); xAPI statement vocabulary agreed with the client's institutional
+  research team.
+- **Weeks 6–8** — the agent itself, with `tutor-mcp` for mastery state; AGS grade passback;
+  human-in-the-loop review on every write.
+- **Weeks 9–12** — IdP integration and SCIM; FERPA/GDPR access logging; `warren` dashboards; the
+  conformance and audit artefacts packaged as deliverables.
+
+### Why it wins the room
+
+🟢 **The security review is the deliverable, not the obstacle.** Against any of the 43 portal
+connectors, the honest answer to *"where does the student's password live?"* is "in our config".
+Here the answer is **"we never have one"** — and there is a conformance-test output, an audit log and
+a standards-based record store to hand over with it. 🟢 **And it is the only pattern in this file
+whose dependencies are owned by the Ed-Fi Alliance, Google, the US DoD and a French public
+operator**, which is a different procurement conversation from one about student projects.
+
+🔴 **What to tell the client honestly.** The standards layer is mature; **the agent binding is one
+unmaintained 15-star repository and you are adopting it.** `learnmcp-xapi` and `pylti1.3` are the
+two components to price as *owned*, not *consumed*. 🔴 **And no repository in this stack has been
+code-audited by this KB** — the licences are payload-verified and the activity is metadata-verified,
+but *"uses the public REST API"* is read from descriptions, not source. **Read the code in week one.**
+
+🔴 **Where this pattern does not apply, and say so early.** The LATAM national systems
+(SIGAA, SUAP, SIU-Guaraní, SAES, Q-Acadêmico) and the EMEA K-12 platforms (Librus, EduPage, Pronote,
+IServ) **publish no LTI, no OneRoster and no Ed-Fi.** There is no sanctioned door to walk through,
+which is why that supply is scrapers. For those clients the route is **`P8`** (negotiate with the
+vendor) or **`P10`** (work inside the institution's own mandate), not this.
+
+## P12 — Assessment and feedback agent built for the 2027 clocks *(new, p134)*
+
+🟢 **Why this pattern exists separately from `P1`:** assessment and feedback is the **fastest-growing
+segment of this market (44.36% CAGR,** `intel/market.md`**)** and simultaneously **the most regulated
+activity in every region this KB covers.** Those two facts are usually treated as a tension. 🟢
+**They are the offer:** build the fast-growing thing in the way the compliance clocks will require,
+and the compliance work becomes the differentiator instead of the tax.
+
+**The three clocks, which are closer than they look:**
+
+| jurisdiction | obligation | date |
+|---|---|---|
+| **EU** | education uses in **Annex III high-risk**; 🔴 **emotion inference in education prohibited outright since 2025-02-02** | 🔴 **2027-12-02** |
+| **Oklahoma** | every district to adopt a written AI policy | 🔴 **before the 2027-28 school year** |
+| **Maryland** | an **AI coordinator** per school system; AI literacy in state standards | 🔴 **by June 2027** |
+
+**The build:** `P11`'s stack, with the agent specialised to **grading open-ended responses and
+generating feedback**, plus:
+
+- 🔴 **No affect, emotion or behavioural inference, at all.** Prohibited in EU education settings
+  since 2025-02-02 and the single fastest way to make the deliverable unshippable. This rules out
+  three of the four permissive proctoring rows in `agents/top.md` by construction.
+- 🟢 **Human-in-the-loop on every grade that reaches a student**, logged, with the model's rationale
+  retained. AGS write-back happens **after** review, not instead of it.
+- 🟢 **Every decision written to the LRS as xAPI** — which is what turns "we had oversight" into
+  evidence that oversight happened.
+- 🟢 **Evaluate against a real benchmark and say which:** [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench)
+  for pedagogical quality, [`Khan/tutoring-accuracy-dataset`](https://github.com/Khan/tutoring-accuracy-dataset)
+  for known maths-tutoring failure modes. 🔴 **Both are ungranted — run them, cite them, ship
+  neither** (`P6`, `T7`).
+- 🟢 **Exam/item plumbing, if the client needs it:** [`ictinnovations/ictexam-mcp`](https://github.com/ictinnovations/ictexam-mcp)
+  (MIT, corporate holder, **writes off by default**, LTI path) is the most procurement-friendly
+  assessment connector on the shelf.
+
+**The counterparties p134 adds, which make this sellable rather than speculative:**
+
+- 🟢 **UNIwise ApS (Denmark)** — a Nordic/UK digital-assessment vendor publishing its **own MIT
+  integration packages** covering **assessor allocation and grade passback**
+  ([`AlexMeiling/wiseflow-api-integration-packages`](https://github.com/AlexMeiling/wiseflow-api-integration-packages),
+  licence payload-read, holder *"UNIwise ApS"*). **A vendor that already ships a permissive
+  integration path is the shortest route to a sanctioned assessment engagement in EMEA.**
+- 🟢 **Jisc's AI marking and feedback pilots across 38 UK colleges and universities** — a named
+  sector programme already running, and the obvious place to look for outcome evidence rather than
+  vendor claims.
+- 🟡 **Open Assessment Technologies (Luxembourg)**, vendor of **TAO**, publishing
+  [`oat-sa/oneroster-import`](https://github.com/oat-sa/oneroster-import) — 🟡 GPL-2.0, so read
+  before forking.
+
+🔵 **The demand signal to open the conversation with:** UK university student AI use went from
+**66% to 92% in one year**, and in LATAM **87% of universities use AI while 26% have a strategy and
+9% evaluate it.** 🟢 **Nobody is arguing about whether students use AI. The unanswered question is
+whether the institution can show what its own AI did** — and that is this pattern.
+
 ## Pattern selection, one line each
 
 | if the client… | run |
@@ -475,6 +614,10 @@ institution a sanctioned path.
 | runs **Moodle** and wants to own its AI layer | **P7** |
 | is the **vendor** of a national K-12 platform, or runs one at scale | 🆕 **P8** |
 | wants **administrative** automation and will run open-source as its record | 🆕 **P9** |
+| 🆕 runs **any LTI-compliant LMS** and the build must pass a security review or DPIA | 🟢 **P11** — *the new default where P1 was the old one* |
+| 🆕 wants **AI grading or feedback**, in the EU, Oklahoma or Maryland | 🟢 **P12**, on **P11**'s stack |
+| 🆕 is a **US K-12 district or state agency** with an Ed-Fi ODS | 🟢 **P11**, via `edfi-oneroster` |
+| 🆕 is an **assessment platform vendor** rather than an institution | 🟢 **P12** — and see UNIwise as the precedent |
 
 **Cross-cutting constraints.** Prefer **LTI 1.3** over forking any AGPL platform. Never ship
 emotion recognition into an EU deployment. Treat unlicensed components as unusable
@@ -498,3 +641,23 @@ screen as code** — the two education benchmarks that exist are both ungranted.
    pupil with a stored password against an unsanctioned platform, and the ones that work are the
    ones with 2FA disabled. 🟢 **Read them for the API surface map, then rebuild the auth layer**
    (`P8`).
+
+🆕 **Three cross-cutting rules added by p134:**
+
+4. 🟢 **Reach for the standard before the connector.** If the client's platform speaks **LTI 1.3**,
+   **OneRoster** or **Ed-Fi**, that is the integration — and it is permissively licensed, vendor- or
+   government-owned, and holds no user credential. **Scraping is for platforms that publish no door**
+   (the LATAM national systems, the EMEA K-12 platforms), not a general technique.
+5. 🔴 **`NOASSERTION` is not biased toward "actually fine" — it is biased toward "unusual".** This
+   KB has corrected several `NOASSERTION` rows *upward* (`openeducat_erp` → LGPL-3.0,
+   `mcp-student-records` → Apache-2.0) and that run created an expectation p134 broke:
+   [`tha-guy-nate/tha-edfi-runner`](https://github.com/tha-guy-nate/tha-edfi-runner) is **MIT plus an
+   added clause requiring a visible link to the repo or PyPI page in any publicly available
+   application** — a **user-visible obligation inside the client's product**, not a notice in a
+   THIRD-PARTY file. **GitHub's matcher was right to flag it.** Read the payload to find out *which*
+   way it is unusual, and never to confirm that it is fine.
+6. 🟢 **Ask for a conformance test and hand over its output.** `googleworkspace/oneroster-integration-conformance-tests`
+   is currently the only one this KB has found, for any standard in this industry. **Where a
+   conformance suite exists, running it is the cheapest credibility in the engagement; where none
+   exists — LTI AGS, Ed-Fi, and all 43 portal connectors — "it works" is a developer's assertion,
+   and that is worth stating in the proposal rather than leaving a client to discover.**

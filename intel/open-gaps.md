@@ -4,6 +4,117 @@ region: Global
 updated: 2026-10-11
 ---
 
+# Education — open gaps ledger
+
+## ✅ Verdicts on p133's pre-registered actions, judged by p134 — **all five reached, four discharged**
+
+| action | verdict | what settled it |
+|---|---|---|
+| **`ACTION BG`** — build a mirror detector before any freshness claim publishes | 🟢 **DISCHARGED, AND SPLIT** | **1 of 3 signals works.** Topic `mirror`: **5 of 40** `instructure` repos carry `gerrit-mirror` → the refutation condition (*"refuted if `canvas-lms` is the only mirror"*) is **not met**, so the defect is a lane. 🔴 **Shared `pushed_at` to the second: RETIRED** — no timestamp is shared by any two of the 40; p133's own evidence was two *adjacent* seconds, not a shared one. README-upstream signal **not tested**. 🔴 **And `P133-A`'s causal inference is narrowed:** sibling mirrors were exported **2026-09-30** and **2026-10-08**, so the export job is **not** stopped org-wide — only `canvas-lms` stopped receiving it |
+| **`ACTION BH`** — probe the staff-facing axis globally in several languages | 🟡 **DISCHARGED, AND THE REFUTATION CONDITION IS MET — in an informative way** | *"Refuted if fewer than 3 further staff-facing rows exist outside LATAM."* 🔴 **The vernacular probes found none.** `Notenerfassung` → 11 rows, **all 0★, all unlicensed**, all student coursework; `cargar notas docentes` → 3 rows, same. 🟢 **But the axis is not regional — it was the wrong register.** `grade passback` found the **LTI/AGS tier**, including vendor-owned grade-passback code (UNIwise, Blackboard) and a US district's Aeries passback job. **The staff-facing wave is global; it is named in the standards register, not in teachers' verbs** |
+| **`ACTION BI`** — payload-read the 12 new LATAM rows | 🟢 **DISCHARGED — AND IT CONFIRMED p133 RATHER THAN CORRECTING IT** | *"Refuted if none of the 3 has a readable payload."* 🔴 **Condition met: 4 unlicensed rows (not 3) have no payload** at main+master × 5 filenames → **measured-absent**. 🟢 **All 8 licensed rows read and all 8 of p133's cells CONFIRMED**: GPL-3.0 ×2 (sha-identical), AGPL-3.0 ×1, MIT ×5 with named holders. 🔵 **The inversion is the lesson: the payload lane corrected nothing this time. p133 got it right from the field** |
+| **`ACTION BJ`** — finish the LATAM sweep (`simat`, `saes`, Blackboard LATAM, SIAGIE, Q-Acadêmico) | 🟢 **DISCHARGED, NOT REFUTED** | *"Refuted if both return zero."* **Neither did.** `simat colombia` → **1** ministry-facing dropout-prediction model; `saes escolar` → **19** hits (🔴 nothing usable: 3 permissive, 2 unlicensed conversational agents); `q-academico` → **85** hits, ~7 real, best **Apache-2.0** — 🟢 **a fourth Brazilian national system**; Blackboard → **7 rows** where this KB had 1. 🔴 **`siagie peru` → `total_count: 0`** — recorded as *no evidence found for this platform*, probe named, per clause 4 |
+| **`ACTION BK`** — re-probe EMEA demand by country and institution | 🟢 **DISCHARGED AND REFUTING** | *"Refuted if country-level queries also return nothing new."* 🟢 **They returned a great deal:** France's **"L'IA en éducation : cadre d'usage"** (Ministry of Education, June 2025, with a transparency-and-human-oversight obligation and 🔴 **no monitoring body**), the **European Commission's ethical guidelines updated in 2026**, the **NRW ministry** (Germany) and **Skolverket** (Sweden) via UNESCO FutureProof, the Dutch inspectorate, and 🟢 **Jisc's AI marking pilots across 38 UK colleges and universities**. **EMEA was mis-queried, not saturated** — `P133-E` on the demand side |
+
+## 🟢 Gaps CLOSED or RETIRED by p134
+
+- ~~**The sanctioned alternative to the portal-connector credential model is immature** (*"`sis-demo`
+  and `mcp-student-records`… neither is mature"*).~~ 🔴 **RETIRED AS STATED.** The sanctioned path is
+  **`ltijs` (Apache-2.0, 373★, pushed 2026-10-06)**, **`pylti1.3` (MIT, 138★)**, OneRoster bridges
+  owned by **Google** and the **Ed-Fi Alliance**, and an Ed-Fi line from the **Minnesota Department
+  of Education**. 🟢 **Replaced by a sharper gap — see `Gap p134-1`.**
+- ~~**`campus-cli` is the only Blackboard connector.**~~ 🔴 **REFUTED: seven**, four MIT, four
+  reaching the platform via its public REST API or Okta SSO.
+- ~~**This KB has no vendor or government open-source counterparty.**~~ 🔴 **REFUTED.** Google,
+  the Ed-Fi Alliance, the US DoD's ADL Initiative, the Minnesota Department of Education, France
+  Université Numérique, UNIwise ApS (Denmark), Blackboard and Open Assessment Technologies all
+  publish code this KB can now name, most of it Apache-2.0 or MIT.
+- ~~**No conformance test exists for any integration in this industry.**~~ 🟡 **NARROWED to one:**
+  `googleworkspace/oneroster-integration-conformance-tests` (Apache-2.0). Still **none** for LTI AGS,
+  Ed-Fi, or any of the 43 portal connectors.
+
+## 🔴 Gaps OPEN after p134, with the measurement behind each
+
+- 🔴 **`Gap p134-1` — the agent↔standard bridge is one repository.** The standards layer is mature
+  and permissive; the binding from an AI agent to any of it is
+  [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) (MIT, **15★**, last push
+  **2025-08-29**), and the only Ed-Fi MCP server is **an empty repository** (`size: 0`, 404 on 15
+  probes across 3 branch refs, created and pushed the same second). 🟢 **The highest-value gap in this KB, because every
+  dependency around it is already chosen and licence-verified** (`compose/patterns.md` → **P11**).
+- 🔴 **`Gap p134-2` — nothing in the standards tier has been code-audited.** Every auth claim in
+  `P134-G`'s three-way Blackboard split is read from a **description or a topic**, not from source. A
+  repo that says *"public REST API"* and ships a password prompt is indistinguishable from here.
+  🟢 **The first gap in this KB that cannot be closed by a better query** — see `ACTION BL`.
+- 🔴 **`Gap p134-3` — the sanctioned stack is absent from LATAM and thin in APAC, and now has a
+  mechanism.** LTI, OneRoster and Ed-Fi are **North-American and European procurement standards**;
+  SIGAA, SUAP, SIU-Guaraní, SAES, Q-Acadêmico and SIAGIE publish no equivalent. 🟢 **This replaces
+  the older "LATAM builders are students" explanation with a testable one: LATAM supply stays
+  unsanctioned until a national system publishes an API, regardless of who builds it.**
+- 🔴 **`Gap p134-4` — the Python LTI binding is dormant and load-bearing.** `pylti1.3` (MIT, 138★)
+  last pushed **2024-08-18**, ~2 years. Python is where the agent frameworks are, so the weakest
+  link in `P11` sits exactly at the join.
+- 🟡 **`Gap p134-5` — the ERP/SIS product field is listicle-sourced, not repo-verified.** OpenEduCat,
+  Frappe Education, RosarioSIS, openSIS and Gibbon are recorded in `verticals/solutions.md` from
+  **vendor pages and web search**, one source ~656 days old. 🔴 **Gibbon has no primary evidence at
+  all.** Everything else on that page is repo-verified; that table is not, and it says so.
+- 🔴 **`Gap p134-6` — one unconfirmed regulatory claim is in circulation.** A source states
+  **Colorado repealed its AI Act in May 2026**, replacing it with a narrower framework **exempting
+  FERPA-covered institutions**. 🔴 **No second source confirms it.** It must not reach a client until
+  confirmed or struck — `ACTION BO`.
+- **`Gap p134-7` — no permissive proctoring project with an institutional owner.** 🟢 **SURVIVES**
+  unchanged from p133; against an Annex III class binding **2027-12-02**, still four individual MIT
+  projects, largest 18★.
+- **`Gap p134-8` — no outcome benchmark, and the two behaviour benchmarks are ungranted.** 🟢
+  **SURVIVES.** `mathtutorbench` (no licence key, contradictory README) and
+  `Khan/tutoring-accuracy-dataset` (bespoke 2 690-byte licence, dormant since 2024-08-29).
+
+## 🆕 Actions opened by p134, pre-registered for p135 with refutation conditions
+
+🟢 **`ACTION BL` — read the source, not the description, of the three repos `P11` depends on.**
+`Cvmcosta/ltijs`, `DavidLMS/learnmcp-xapi` and `nitsuah/bb-mcp`: confirm the auth model, confirm no
+credential storage, and check `learnmcp-xapi` actually speaks xAPI to a real LRS. The raw lane reads
+any file, so this is reachable this session. 🔴 *Refuted if all three match their descriptions — which
+would mean description-level auth reading is reliable and `Gap p134-2` can be downgraded.*
+
+🟢 **`ACTION BM` — test whether "APAC" and "LATAM" fail the way "EMEA" did.** `ACTION BK` proved the
+vendor sales-region word reaches enterprise IT rather than ministries. Run the same comparison:
+a bare `AI education APAC` / `AI education LATAM` probe against country- and institution-level
+probes, and record the delta. 🔴 *Refuted if the bare regional probes return the same material as the
+country-level ones, which would make `P134-H` a fact about the word "EMEA" alone rather than about
+regional querying.*
+
+🟢 **`ACTION BN` — finish the standards register.** `grade passback`, `lti 1.3 advantage`,
+`oneroster`, `edfi ods api`, `ltijs` and `xapi` were productive. Not yet probed: **QTI** (assessment
+item interchange — note `instructure/qti` exists and was pushed 2026-09-23), **SCORM** (beyond
+`scorm-again`, already held), **Comprehensive Learner Record / CLR**, **Open Badges**, **Caliper** on
+its own (the 4-term conjunction produced a false zero), and **LTI Deep Linking** as a term. 🔴
+*Refuted if fewer than 3 further institution- or vendor-owned rows exist across all six, which would
+mean p134 exhausted register 4 rather than opening it.*
+
+🟢 **`ACTION BO` — confirm or strike the Colorado claim.** Check the state legislature's own record
+for a May 2026 repeal of the Colorado AI Act and any FERPA-covered-institution exemption. 🔴 *Refuted
+if the primary record shows no such repeal — in which case strike it from `intel/market.md` and note
+the source that carried it.*
+
+🟢 **`ACTION BP` — replace substring licence detection with hashes.** p134's detector reported
+**LGPL** for two GPL-3.0 payloads, because GPL-3.0's own closing paragraph recommends the LGPL by
+name across a line break (line 672). Build a small table of sha256 digests for the canonical
+GPL-3.0 / LGPL-3.0 / AGPL-3.0 / Apache-2.0 / MIT / ISC / 0BSD texts and match against it, falling
+back to a read only on a miss. 🔴 *Refuted if fewer than 2 payloads in the corpus are
+whitespace-variant copies of a canonical text — but p134 already found that `sigaa-calendar`,
+`siu-guarani` and Moodle's `COPYING.txt` are three near-identical GPL-3.0 copies differing only in
+trailing whitespace and the FSF's `http`→`https` update, so the fallback must normalise both.*
+
+🟡 **`ACTION BQ` — probe the ministry-facing axis, which `simat colombia` opened by accident.** The
+Colombian dropout model is the only row in this KB aimed at an education *ministry* rather than a
+student, teacher or institution. Probe for early-warning / dropout-prediction / enrolment-forecasting
+systems by national dataset name (C-600, SIMAT, INEP/Censo Escolar, SISTEC, ENEM). 🔴 *Refuted if
+fewer than 3 such rows exist outside Colombia, which would make it one analyst's project rather than
+a category.*
+
+---
+
+
 # Education — open gaps
 
 **Pass 132, 2026-10-11.** ⏱️ **Nineteenth pass of this date.** 🔴 **This pass's finding is that a gap

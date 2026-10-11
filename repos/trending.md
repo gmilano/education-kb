@@ -6,6 +6,119 @@ updated: 2026-10-11
 
 # Education — trending repos (append-only log)
 
+## 2026-10-11 — Pass 134
+
+🟢 **The headline for this page is an addition, not a correction: the interoperability layer, which
+is the best-licensed and best-owned set of repositories in this entire KB and had never been
+tabled.** `repos/foundations.md` has carried [`instructure/ims-lti`](https://github.com/instructure/ims-lti)
+(MIT, 203★) for many passes with the note that LTI *"avoids touching platform source, and therefore
+avoids AGPL reciprocity entirely"*. 🔴 **This KB never followed its own sentence.** Followed, it
+leads here.
+
+### `P134-A` — the repo that should have been on this page all along
+
+| field | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | [`instructure/ims-lti`](https://github.com/instructure/ims-lti) *(the row this KB had)* |
+|---|---|---|
+| licence | 🟢 **Apache-2.0** — payload-read, 11 361 B, holder *"Carlos Vinícius Monteiro Costa"* | MIT |
+| stars | 🟢 **373** | 203 |
+| last push | 🟢 **2026-10-06** | 2026-10-02 |
+| scope | **platform-independent LTI 1.3 Advantage tool provider** — OIDC launch, Deep Linking, **AGS grade passback**, NRPS rosters | Instructure's library for Instructure's platform |
+| ecosystem | first-party DB plugins: [`ltijs-sequelize`](https://github.com/Cvmcosta/ltijs-sequelize) (Apache-2.0, pushed 2026-09-29), `ltijs-firestore`, `ltijs-dynamodb`; third-party TypeScript fork [`bhunt02/lti-typescript`](https://github.com/bhunt02/lti-typescript) | — |
+
+🔵 **Both are live and permissive; they are not competitors.** The point is that the KB held the
+vendor-specific one and missed the general one, **and the general one is larger, newer and has the
+grade-passback service the engagement actually needs.**
+
+### 🆕 Institution- and vendor-owned rows — a holder class this page has never had
+
+| repo | licence | ★ | pushed | holder |
+|---|---|---|---|---|
+| [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 **Apache-2.0** (payload) | 6 | **2026-10-09** | 🟢 **the Ed-Fi Alliance** — the standards body itself, 5 forks |
+| [`googleworkspace/oneroster-integration-conformance-tests`](https://github.com/googleworkspace/oneroster-integration-conformance-tests) | 🟢 **Apache-2.0** (payload) | 7 | 2026-07-30 | 🟢 **Google** |
+| [`adlnet/MasterObjectModel`](https://github.com/adlnet/MasterObjectModel) | **Apache-2.0** | 12 | 2025-07-03 | 🟢 **US DoD ADL Initiative** — authors of xAPI |
+| [`openfun/warren`](https://github.com/openfun/warren) | **MIT** | 17 | 🟢 **2026-10-11 (today)** | 🟢 **France Université Numérique** — second `openfun` row in this KB |
+| [`AlexMeiling/wiseflow-api-integration-packages`](https://github.com/AlexMeiling/wiseflow-api-integration-packages) | 🟢 **MIT** (payload) | 3 | 2026-06-11 | 🟢 **UNIwise ApS** — the WISEflow vendor (Denmark) |
+| [`oat-sa/oneroster-import`](https://github.com/oat-sa/oneroster-import) | 🟡 GPL-2.0 | 8 | 2026-07-16 | 🟢 **Open Assessment Technologies** — the TAO vendor (Luxembourg) |
+| [`blackboard/BBDN-lti-1p3-tool-example`](https://github.com/blackboard/BBDN-lti-1p3-tool-example) | **Apache-2.0** | 1 | 2023-11-13 | 🟢 **Blackboard** |
+| [`mn-mde-edfi/MDE-Ed-Fi-ODS-API-SDK`](https://github.com/mn-mde-edfi/MDE-Ed-Fi-ODS-API-SDK) | 🔴 **no licence** | 0 | 2026-04-14 | 🟢 **Minnesota Department of Education** |
+| [`lepo-project/roster-hub`](https://github.com/lepo-project/roster-hub) | 🔴 AGPL-3.0 | 4 | 2024-03-01 | APAC (Japan) |
+| [`openfresno/edgenuity-aeries-grade-passback`](https://github.com/openfresno/edgenuity-aeries-grade-passback) | 🔴 **no licence** | 0 | 2026-03-02 | North America (Fresno, CA) |
+| [`virtualarkansas/jupyterlite-zestables`](https://github.com/virtualarkansas/jupyterlite-zestables) | 🔴 **no licence** | 0 | 2026-02-22 | North America (Virtual Arkansas) |
+
+🔴 **The pattern across that table is worth a rule.** 🟢 **Vendors and standards bodies publish
+permissively** (Google, Ed-Fi, ADL, UNIwise, Blackboard, openfun — Apache-2.0 or MIT).
+🔴 **School districts and state agencies publish *unlicensed*** (Minnesota DoE, Fresno, Virtual
+Arkansas) — not from hostility but because nobody asked them to add a `LICENSE` file. **That makes
+them the one category where asking for a grant is likely to succeed**, unlike the ~20 unlicensed
+student scrapers elsewhere in this KB.
+
+### `P134-D` — `ACTION BG` discharged: the mirror detector, built and run
+
+p133 corrected this page's four-pass claim that `canvas-lms` was *"the quietest of the major
+platforms"*, and asked for a detector before any further freshness claim published. 🟢 **Built, run
+over the 40 most-recently-updated `instructure` repos, and the result is mixed in a useful way.**
+
+| p133's proposed signal | verdict | measurement |
+|---|---|---|
+| a topic containing *mirror* | 🟢 **WORKS — the defect is a lane, not one row** | **5 of 40**: `canvas-lms`, `dockerfiles`, `switchman`, `screencap`, `outrigger`. `ACTION BG`'s refutation condition is **not met** |
+| two repos sharing `pushed_at` to the second | 🔴 **RETIRE IT** | **no timestamp is shared by any two of the 40.** p133's evidence was two *adjacent* seconds (`:10`/`:11`), not a shared one |
+| a README naming an upstream elsewhere | 🟡 **not tested** | needs a payload read per repo; the topic field is cheaper and sufficient |
+
+🔴 **And it narrows `P133-A`.** p133 said 2026-04-30 was *"the date their export to GitHub stopped
+running"*. 🟢 **It was not — sibling mirrors received exports on 2026-09-30 and 2026-10-08, three
+days before this pass. The export job runs; `canvas-lms` specifically stopped receiving it.** Why is
+not visible from here and this KB should not guess. 🟢 **p133's operative conclusion stands and is
+the one to quote: `pushed_at` on `canvas-lms` is not an activity signal.**
+
+🟢 **The control that makes the rule usable:** [`instructure/ims-lti`](https://github.com/instructure/ims-lti)
+has **no** mirror topic and was pushed **2026-10-02**. 🔵 **So within one organisation some repos are
+mirrors and some are GitHub-native, and the topic tells you which — freshness must be checked per
+repo, never per org.**
+
+### 🔴 `P134-B` — the empty repository at the centre of the opportunity
+
+[`cdweaver1992/edfi-mcp-server`](https://github.com/cdweaver1992/edfi-mcp-server) advertises
+*"Model Context Protocol (MCP) server for Ed-Fi ODS/API integration"*. **There is nothing in it.**
+
+| measurement | value |
+|---|---|
+| `size` (repo search) | 🔴 **0** |
+| raw lane, 15 probes (5 entry points × `HEAD`/`main`/`master`) | 🔴 **HTTP 404 on all fifteen** |
+| `created_at` / `pushed_at` | 🔴 **`2026-02-17T19:54:46Z` / `:47Z`** — one second apart, never touched again |
+
+🟢 **Recorded deliberately, as a name to recognise and not install.** 🔵 **And note the method point:
+`size: 0` plus a 404 sweep is a *measurement* of emptiness. A pass that read only the description
+would have tabled a working Ed-Fi MCP server that does not exist** — which is the single easiest way
+this KB could mislead an engagement.
+
+### 🔴 Three instrument failures this pass, two of which nearly published
+
+1. **`ed-fi` is unsearchable as written** — **24 061** hits, ranks 1–5 `FizzBuzzEnterpriseEdition`
+   (23 898★), `filerobot-image-editor`, `FireRed-Image-Edit`, two *"Second Edition"* book repos. The
+   hyphen splits; `ed`+`fi` match inside *Edition*, *Edit*, *ReFinED*, *edge*. 🟢 **`edfi ods api` →
+   6 clean rows.**
+2. **A four-concept conjunction produced a false zero.** `caliper analytics xapi learning record
+   store` → **0**; `xapi learning` → **144**. 🟢 Caught and retracted before publication; third pass
+   running to generate one of these.
+3. **A licence detector that greps a payload for a licence name false-positives.** p134's first read
+   of two p133 LATAM rows said **LGPL**, which would have been a material (and wrong) correction.
+   🟢 **Control caught it: GPL-3.0 line 672 reads *"use the GNU Lesser General\nPublic License
+   instead of this License"*.** Both payloads are GPL-3.0, sha256 `3972dc97…`, identical to each
+   other and to Moodle's `COPYING.txt` but for the FSF's `http`→`https` update. 🟢 **p133's cells
+   were right; resolve licence family by hash, not substring.**
+
+🔴 **Dead instruments, re-confirmed by control:** `curl -sI` → **403 for a real repo and for a fake
+one** (so it distinguishes nothing); `api.github.com` → 403; `gh search repos` → 403. 🟢 **Working:
+repo search via the session's GitHub MCP tool, and `raw.githubusercontent.com/.../LICENSE` — 20
+payloads read.**
+
+🟡 **Channel note:** `github trending education AI October 2026` returned **no October list**, only
+May–July 2026 items — and all of them (`ai-engineering-from-scratch`, `llm-course`,
+`nn-zero-to-hero`) are **repos for learning about AI, not AI for education.** 🔵 **That confusion is
+persistent in this channel and worth naming once per pass rather than rediscovering.**
+
+---
+
 ## 2026-10-11 — Pass 133
 
 🔴 **The headline here is a correction to this page's sibling, and it is a measurement error this
