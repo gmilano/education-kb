@@ -4,6 +4,161 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 2026-10-11 — pass 116: the lock-vs-manifest axis comes back clean on every region, and the regional figure that matters is how little of each region it can read
+
+**Pass 116, 2026-10-11.** ⏱️ **Second pass of this date** (census window
+**2026-10-11 02:18 UTC → 02:33 UTC**; p114 ran 23:54 on the 10th → 00:25 UTC on the 11th).
+
+🟢 **Instrument this pass: `compose/code/p116-lock-agreement/` — `test_p116.sh`
+**113 passed / 0 failed** (fully offline: real git repositories committed on disk and
+served to the real `agree.sh` over `file://`, no mocks, no `api.github.com`);
+`agree.sh` read **134 of 134** addresses, `rc=0` on every one, **zero unread**, plus
+**two** control runs over the same 134.**
+
+🔵 **On the pass number, stated because it affects how every cross-tab below reads:**
+a SECOND instrument also numbered itself p115 — `compose/code/p115-region-evidence/`,
+measuring regional placement and `Gap 403` — and it landed in the window 01:13–01:25 UTC,
+while this pass's own work was in progress. **The two are independent reads of the same
+shelf, not a sequence.** That pass holds the number 115 and the trend ids `T50`–`T52`;
+this one is therefore **pass 116**, its rules are `P116-*` and its trends `T53`–`T55`.
+This pass cross-tabulates against **p114**, which is the axis its question comes from, and
+**does not incorporate the concurrent p115's regional channel** — it could not have,
+because that channel was not on the shelf when `agree.sh` started.
+
+🔵 **Tenth axis in ten passes, sixth read from the TREE. It answers the question p114
+wrote into its own trend table and left open:** p114 published 34.5 % `full-reach` and
+said what the figure still hid — *“whether the pinned versions are any good”*. Of that,
+version currency and known vulnerabilities need a registry and an advisory feed, and
+neither is on this channel (`P116-D`). But whether the lock and the manifest describe the
+**same dependency set** is decidable from committed bytes — and it is the half with a hard
+failure mode: **`npm ci` does not install a stale lock, it exits 1 and installs nothing.**
+
+### The regional read, and why the interesting column is "decidable"
+
+🔵 **Placed by the committed `orgs.region.tsv` (`P112-L`); contested entries carry `?` and
+are reported separately, never folded into a regional total.**
+
+| region | rows in denominator | 🆕 **decidable** | 🆕 `agree` | `drift` | declared deps |
+|---|---|---|---|---|---|
+| **North America** | 22 | 9 (40.9 %) | 🟢 **9 / 9** | 🟢 **0** | **994** |
+| **EMEA** | 17 | 7 (41.2 %) | 🟢 **7 / 7** | 🟢 **0** | 164 |
+| **APAC** | 7 | 4 (57.1 %) | 🟢 **4 / 4** | 🟢 **0** | 242 |
+| **LATAM** | 3 | 3 (100 %) | 🟢 **3 / 3** | 🟢 **0** | 48 |
+| *unplaced* | 103 | 41 (39.8 %) | 🟢 **41 / 41** | 🟢 **0** | 1 652 |
+| *contested (`North America?`, `EMEA?`)* | 2 | 0 | — | — | 0 |
+
+🟢 **No region drifts. There is no regional story in the verdict column, and saying so is
+the finding** — eight passes have produced a regional inversion or a laggard every time,
+and this axis produces neither.
+
+🔴 **The column that does separate the regions is `decidable`, and it is a coverage
+statement about this axis rather than a quality statement about the region.** North
+America and EMEA can be read on fewer than half their rows, because their rows are
+disproportionately python and JVM — ecosystems with no lockfile grammar to compare
+against. 🔵 **LATAM reads 3 of 3 only because all three of its rows in this denominator
+are PHP/npm platforms** ([`portabilis/i-educar`](https://github.com/portabilis/i-educar)
+among them), and a 100 % on a denominator of three is not a lead over a 40.9 % on 22.
+
+🔵 **The honest regional conclusion: this axis is clean everywhere it can see, and it
+cannot see most of North America or EMEA. An engagement in either region needs the
+python/JVM equivalent of this check, which is not a lockfile comparison and is not on this
+channel (`P116-D`).**
+
+### 🔵 Where each region's declared graph actually concentrates
+
+🔴 **North America's 994 dependencies are one row.**
+[`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) declares **345** of
+them and [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn),
+[`libretexts/shapeshift`](https://github.com/libretexts/shapeshift) and
+[`inducer/relate`](https://github.com/inducer/relate) most of the rest. 🔵 **Remove
+canvas-lms and the region's decidable graph falls to 649 across 8 rows** — the same
+concentration p114 found on its own axis, reproduced on a different unit, which is weak
+corroboration that the concentration is a property of the shelf rather than of either
+instrument.
+
+🔵 **APAC's 242 rest largely on [`yukazakiri/koakademy`](https://github.com/yukazakiri/koakademy)
+(214).** 🔵 **EMEA's 164 are the most evenly spread of any region** — ILIAS, Claroline,
+OpenOLAT's neighbours and `opetushallitus/valtionavustus` (51) — which makes EMEA the only
+region whose decidable figure does not rest on a single row.
+
+### 🟢 🆕 `P116-P` — `Gap 404` CLOSED, and p114's sizing was exact
+
+🔵 **p114 found that the anchored requirement-file rule — carried in TWO copies, p112's
+`manifests.awk` and p114's `positions.awk` — refuses the prefixed half of its own
+convention (`dev_requirements.txt`, `latest_requirements.txt`, `system_requirements.txt`).
+It sized the gap (198 files seen, 8 missed, 5 rows affected, exactly ONE verdict),
+declared it, and deliberately did not fix it, because `P237` forbids forking a shared
+classifier.**
+
+🟢 **Fixed where the rule lives.** [`lib/reqname.awk`](../compose/code/lib/reqname.awk)
+now holds **one** definition, widened to
+`^([a-z0-9._-]+[-_.])?requirements([-_.][a-z0-9._-]+)?\.txt$`, loaded by both passes with
+a second `-f`. `lib/test_reqname.sh` — **22 passed / 0 failed** — pins every case,
+including the `myrequirements.txt` exclusion that stops the prefix group swallowing any
+word that merely ends in the literal string. Neither consumer regressed:
+**`test_p114.sh` 98 / 0**, **`test_p112.sh` 109 / 0**.
+
+| p114 figure | as published | 🆕 restated | delta |
+|---|---|---|---|
+| rows at `full-reach` | 102 (34.5 %) | 🟢 **103 (34.8 %)** | **+1** |
+| lockable manifests | 2 135 | **2 143** | **+8** — the 8 missed files, exactly as sized |
+| manifests reached | 1 625 (76.1 %) | **1 633 (76.2 %)** | +8 |
+| manifests orphaned | 510 (23.9 %) | **510 (23.8 %)** | 🟢 **0** |
+| rows whose ROOT manifest is orphaned | 88 | 🟢 **87** | **−1** |
+| rows that moved | — | 🟢 **[`sdv-dev/sdv`](https://github.com/sdv-dev/sdv) `no-reach` → `full-reach`** | exactly one |
+
+🔵 **The orphan count does not move at all — all 8 newly-visible files are pins that ADD
+coverage, so numerator and denominator rise together.** That is the direction the widened
+rule predicts in its own header, and it is why no row lost a verdict it held.
+
+### 🔴 🆕 `Gap 406` — OPENED: there is a FOURTH npm lock flavour on this shelf, and it is sized at exactly one row
+
+🔵 **`P116-I` widened this axis from one npm lock flavour to three. The shelf has
+four.** Of the 70 rows this axis could not decide, **69** are rows whose root manifest is
+in an ecosystem with no lock grammar here at all (python 28, `npm,py` 12, maven, go,
+ruby). **The seventieth is not:**
+
+| row | root tree | why undecided |
+|---|---|---|
+| [`mietiainvestigacion-creator/api-eduadapt`](https://github.com/mietiainvestigacion-creator/api-eduadapt) | `package.json`, **`bun.lock`**, `bunfig.toml` | 🔴 **`bun.lock` is a fourth npm lock flavour this axis does not read** |
+
+🔵 **Sized, not guessed:** exactly **1 of 134** rows. The file is JSON-shaped — a
+`workspaces` map keyed by path, each entry carrying its own `dependencies` — so it is
+very likely parseable, which is precisely why it is **declared rather than parsed on a
+hunch**: adding a grammar without a fixture and a control is how the three false
+positives above were produced in the first place.
+
+🔵 **Error direction:** one-way and benign. A flavour this axis cannot read makes a row
+**undecidable**, never `agree` and never `drift`, so no published figure here is wrong
+because of it — the decidable denominator is 64 rather than 65.
+
+🔵 **How it ends:** a `bun.lock` grammar with its own fixtures in the suite, the census
+re-run, and the decidable denominator restated from 64 to 65.
+
+### 🔴 🆕 `P116-S` — the channel is narrower this pass, and it bounds what these pages may claim
+
+| lane | result |
+|---|---|
+| `git ls-remote` / `git fetch` → github.com | 🟢 `rc=0` |
+| `raw.githubusercontent.com/<slug>/<ref>/…` | 🟢 `200` |
+| `api.github.com` | 🔴 `403` (unchanged since `P107-A`) |
+| `github.com` HTML | 🔴 `403` |
+| 🔴 **every non-GitHub domain, `curl` AND the fetch tool** | 🔴 **`ENOTFOUND`** |
+
+🔴 **The last row is new and it matters.** Repository facts are verified on the git
+lane, which works — every repo URL written this pass was probed there. **Non-GitHub URLs
+could not be probed at all**, so no page written this pass presents a non-GitHub link as
+verified. Those sources are named in prose, with the search that produced them recorded
+in `intel/market.md` under `P116-M`, and a market figure whose only source page is
+unreachable is marked **UNVERIFIABLE** rather than quoted.
+
+### 🟢 New this week on the platform shelf
+
+🟢 **One new verified platform, `jtylek/EpesiCRM` — MIT, © 2006–2026, last commit
+2026-10-07, all four manifest/lock files at the root, and it passes this pass's own axis
+21/21 and 11/11.** Full disambiguation (three of the four candidate addresses are dead) in
+`verticals/solutions.md` under `P116-T`.
+
 ## 2026-10-11 — pass 115: a 2026 search for an MIT platform hands you four addresses and the grant is in the tree of exactly one
 
 🟢 **Measured over **296 of 296** addresses in 12 min, zero unread, zero empty trees

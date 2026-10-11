@@ -54,12 +54,12 @@ C_LOCKED=8; C_LOCKF=9; C_DEPSTREE=10; C_REQPIN=11; C_DEPLOY=12; C_VERDICT=13
 echo "== A. classifier: P112-A a manifest is a basename, never a substring =="
 out=$(printf '%s\n' docs/requirements.rst doc/requirements.md \
       curriculum/package.json.sample notes/go.mod.txt \
-      fixtures/composer.json.tpl README.md | awk -f manifests.awk)
+      fixtures/composer.json.tpl README.md | awk -f ../lib/reqname.awk -f manifests.awk)
 eq "requirements.rst / .json.sample / .mod.txt / .json.tpl -> 0 manifests" \
    "man=0" "$(field "$out" man)"
 out=$(printf '%s\n' package.json requirements.txt composer.json Gemfile \
       go.mod Cargo.toml pom.xml build.gradle mix.exs pubspec.yaml \
-      Package.swift app/App.csproj DESCRIPTION pyproject.toml | awk -f manifests.awk)
+      Package.swift app/App.csproj DESCRIPTION pyproject.toml | awk -f ../lib/reqname.awk -f manifests.awk)
 eq "fourteen real manifests are all found" "man=14" "$(field "$out" man)"
 eq "  ... and they resolve to 13 ecosystems in stable order" \
    "ecos=npm,py,php,ruby,go,rust,maven,gradle,elixir,dart,swift,dotnet,r" \
@@ -68,14 +68,14 @@ eq "  ... and they resolve to 13 ecosystems in stable order" \
 echo "== B. classifier: requirements variants, and only real ones =="
 for f in requirements.txt requirements-dev.txt requirements_test.txt \
          requirements.prod.txt reqs/requirements-ci.txt; do
-  out=$(printf '%s\n' "$f" | awk -f manifests.awk)
+  out=$(printf '%s\n' "$f" | awk -f ../lib/reqname.awk -f manifests.awk)
   eq "requirement file: $f" "reqs=1" "$(field "$out" reqs)"
 done
-out=$(printf '%s\n' requirements/base.in requirements.rst | awk -f manifests.awk)
+out=$(printf '%s\n' requirements/base.in requirements.rst | awk -f ../lib/reqname.awk -f manifests.awk)
 eq "a .in and a .rst are not requirement files" "reqs=0" "$(field "$out" reqs)"
 
 echo "== C. classifier: lockfiles map to their ecosystem =="
-out=$(printf '%s\n' package-lock.json | awk -f manifests.awk)
+out=$(printf '%s\n' package-lock.json | awk -f ../lib/reqname.awk -f manifests.awk)
 eq "package-lock.json -> npm lock" "locks=npm" "$(field "$out" locks)"
 for pair in "yarn.lock npm" "pnpm-lock.yaml npm" "bun.lockb npm" \
             "poetry.lock py" "uv.lock py" "Pipfile.lock py" \
@@ -84,44 +84,44 @@ for pair in "yarn.lock npm" "pnpm-lock.yaml npm" "bun.lockb npm" \
             "Package.resolved swift" "packages.lock.json dotnet" \
             "renv.lock r" "gradle.lockfile gradle"; do
   set -- $pair
-  out=$(printf '%s\n' "$1" | awk -f manifests.awk)
+  out=$(printf '%s\n' "$1" | awk -f ../lib/reqname.awk -f manifests.awk)
   eq "lock $1 -> $2" "locks=$2" "$(field "$out" locks)"
 done
-out=$(printf '%s\n' gradle/dependency-locks/compileClasspath.lockfile | awk -f manifests.awk)
+out=$(printf '%s\n' gradle/dependency-locks/compileClasspath.lockfile | awk -f ../lib/reqname.awk -f manifests.awk)
 eq "gradle dependency-locks dir -> gradle" "locks=gradle" "$(field "$out" locks)"
 
 # P112-K. A lock is evidence only about an ecosystem the repo DECLARES.
-out=$(printf '%s\n' Gemfile.lock src/app.rb | awk -f manifests.awk)
+out=$(printf '%s\n' Gemfile.lock src/app.rb | awk -f ../lib/reqname.awk -f manifests.awk)
 eq "a stray lock with no manifest is reported ..." "locks=ruby" "$(field "$out" locks)"
 eq "  ... and never credited" "lockedlist=-" "$(field "$out" lockedlist)"
 eq "  ... so it cannot inflate the locked count" "lockedcnt=0" "$(field "$out" lockedcnt)"
-out=$(printf '%s\n' Gemfile Gemfile.lock | awk -f manifests.awk)
+out=$(printf '%s\n' Gemfile Gemfile.lock | awk -f ../lib/reqname.awk -f manifests.awk)
 eq "manifest + its lock IS credited" "lockedlist=ruby" "$(field "$out" lockedlist)"
 
 echo "== D. classifier: P112-B maven is self-pinning, not lockable =="
-out=$(printf '%s\n' pom.xml | awk -f manifests.awk)
+out=$(printf '%s\n' pom.xml | awk -f ../lib/reqname.awk -f manifests.awk)
 eq "pom.xml is not lockable" "lockable=0" "$(field "$out" lockable)"
 eq "pom.xml is self-pinning"  "selfpin=1" "$(field "$out" selfpin)"
-out=$(printf '%s\n' build.gradle | awk -f manifests.awk)
+out=$(printf '%s\n' build.gradle | awk -f ../lib/reqname.awk -f manifests.awk)
 eq "gradle IS lockable (it can lock, and mostly does not)" \
    "lockable=1" "$(field "$out" lockable)"
-out=$(printf '%s\n' go.mod | awk -f manifests.awk)
+out=$(printf '%s\n' go.mod | awk -f ../lib/reqname.awk -f manifests.awk)
 eq "go is lockable: go.mod without go.sum is an unverified resolve" \
    "lockable=1" "$(field "$out" lockable)"
 
 echo "== E. classifier: P112-D committed deps credited, residue not =="
 out=$(printf '%s\n' node_modules/left-pad/package.json src/app.js package.json \
-      | awk -f manifests.awk)
+      | awk -f ../lib/reqname.awk -f manifests.awk)
 eq "node_modules stripped from the manifest count" "man=1" "$(field "$out" man)"
 eq "  ... and recorded as a committed dependency tree" "depstree=1" "$(field "$out" depstree)"
 for v in vendor/x/go.mod third_party/y/package.json Pods/A/A.podspec \
          bower_components/b/package.json Godeps/_workspace/x.go; do
-  out=$(printf '%s\n' "$v" | awk -f manifests.awk)
+  out=$(printf '%s\n' "$v" | awk -f ../lib/reqname.awk -f manifests.awk)
   eq "committed dep tree: $v" "depstree=1" "$(field "$out" depstree)"
 done
 for r in .venv/lib/site-packages/p/setup.py .tox/py39/lib/x.py \
          foo.egg-info/PKG-INFO venv/lib/x.py; do
-  out=$(printf '%s\n' "$r" | awk -f manifests.awk)
+  out=$(printf '%s\n' "$r" | awk -f ../lib/reqname.awk -f manifests.awk)
   eq "build residue is NOT a dependency tree: $r" "depstree=0" "$(field "$out" depstree)"
 done
 
@@ -129,10 +129,10 @@ echo "== F. classifier: P112-G deployable shape =="
 for dpl in Dockerfile Dockerfile.prod docker-compose.yml compose.yaml \
            Procfile k8s/deploy.yaml charts/app/Chart.yaml helm/values.yaml \
            Vagrantfile deploy/prod.yml; do
-  out=$(printf '%s\n' "$dpl" | awk -f manifests.awk)
+  out=$(printf '%s\n' "$dpl" | awk -f ../lib/reqname.awk -f manifests.awk)
   eq "deployable: $dpl" "deploy=1" "$(field "$out" deploy)"
 done
-out=$(printf '%s\n' docs/docker.md src/dockerfiles.py | awk -f manifests.awk)
+out=$(printf '%s\n' docs/docker.md src/dockerfiles.py | awk -f ../lib/reqname.awk -f manifests.awk)
 eq "prose about docker is not a deployment" "deploy=0" "$(field "$out" deploy)"
 
 echo "== G. end to end: the verdict ladder over real repositories =="
@@ -257,7 +257,7 @@ echo "== M2. P112-N a declaration this instrument cannot resolve is not absent =
 for fbp in WORKSPACE MODULE.bazel app/BUILD.bazel rules/defs.bzl \
            addons/x/__manifest__.py addons/y/__openerp__.py \
            blocks/chat/version.php CMakeLists.txt conanfile.txt vcpkg.json; do
-  out=$(printf '%s\n' "$fbp" | awk -f manifests.awk)
+  out=$(printf '%s\n' "$fbp" | awk -f ../lib/reqname.awk -f manifests.awk)
   eq "foreign build system: $fbp" "foreign=1" "$(field "$out" foreign)"
 done
 mkrepo bazelrepo; addf bazelrepo WORKSPACE 'workspace(name="x")'
@@ -283,9 +283,9 @@ r=$(row plainc)
 eq "a plain Makefile repo is still no-manifest" "no-manifest" "$(col "$r" $C_VERDICT)"
 
 echo "== N. nix pins by hash, and flake.lock is its lock =="
-out=$(printf '%s\n' flake.nix | awk -f manifests.awk)
+out=$(printf '%s\n' flake.nix | awk -f ../lib/reqname.awk -f manifests.awk)
 eq "flake.nix is a manifest" "ecos=nix" "$(field "$out" ecos)"
-out=$(printf '%s\n' flake.lock | awk -f manifests.awk)
+out=$(printf '%s\n' flake.lock | awk -f ../lib/reqname.awk -f manifests.awk)
 eq "flake.lock is a lock" "locks=nix" "$(field "$out" locks)"
 mkrepo nixrepo; addf nixrepo flake.nix 'x'; addf nixrepo flake.lock 'y'
 addf nixrepo src/a.py; seal nixrepo

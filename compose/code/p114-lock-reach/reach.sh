@@ -101,7 +101,7 @@ while IFS= read -r slug; do
     rm -rf "$d"; continue
   fi
 
-  printf '%s\n' "$tree" | awk -f positions.awk > "$d.pos"
+  printf '%s\n' "$tree" | awk -f ../lib/reqname.awk -f positions.awk > "$d.pos"
 
   # ---- stage B: which requirement FILES are themselves locks, and where ----
   # P114-C. The answer is a set of DIRECTORIES, not a boolean.

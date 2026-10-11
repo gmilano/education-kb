@@ -4,6 +4,99 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Hundred-and-sixteenth pass, 2026-10-11 — **`Gap 404` CLOSED** (the widened rule lives in `lib/`, both consumers unregressed, and p114's sizing was exact to the file and the verdict); **`Gap 406` OPENED** (a fourth npm lock flavour, sized at one row); `T53`–`T55`, `P116-A`–`P116-T` adopted; the instrument produced three FALSE findings before a true zero, and all three are recorded
+
+⏱️ **Second pass of 2026-10-11.** Census window **02:18 → 02:33 UTC** (main 02:18–02:23,
+then two controls); the `Gap 404` re-measurement over all 296 addresses ran 02:33–02:37.
+**Append-only.**
+
+🟢 **Instrument written and executed: `compose/code/p116-lock-agreement/`.** `test_p116.sh`
+**113 passed / 0 failed**, **fully offline** — no network and no mocks: it builds real git
+repositories, commits real manifests and lockfiles into them and serves them to the real
+`agree.sh` over `file://`. `agree.sh` read **134 of 134** addresses, **zero unread**, with
+**two** control runs over the same 134.
+
+### 🟢 🆕 `Gap 404` — CLOSED
+
+| | |
+|---|---|
+| what it was | the anchored requirement-file rule `^requirements([-_.]<suffix>)?\.txt$`, carried in **two** copies (p112's `manifests.awk`, p114's `positions.awk`), refused the prefixed half of its own convention — `dev_requirements.txt`, `system_requirements.txt`, `latest_requirements.txt` |
+| how it was fixed | 🟢 **in the shared place, per `P237`.** [`lib/reqname.awk`](../compose/code/lib/reqname.awk) now holds ONE definition, widened to `^([a-z0-9._-]+[-_.])?requirements([-_.][a-z0-9._-]+)?\.txt$`, loaded by both passes with a second `-f`. The two narrow copies are kept verbatim as `positions.PRE-P116-CONTROL-2026-10-11.awk` and `manifests.PRE-P116-CONTROL-2026-10-11.awk` so the delta is reproducible |
+| guarded | 🟢 **`lib/test_reqname.sh` — 22 passed / 0 failed**, including the `myrequirements.txt` exclusion that stops the prefix group swallowing any word merely ending in the literal string, and the `requirements.rst` / `.md` / `.in` refusals that were the point of anchoring in the first place |
+| consumers unregressed | 🟢 **`test_p114.sh` 98 / 0** and **`test_p112.sh` 109 / 0** against the shared rule |
+| 🟢 p114's sizing, re-measured | 🟢 **exact.** +8 lockable manifests (2 135 → **2 143**) — the 8 files p114 counted as missed. **Exactly ONE verdict moved:** [`sdv-dev/sdv`](https://github.com/sdv-dev/sdv) `no-reach` → `full-reach`. `full-reach` 102 → **103** (34.5 % → **34.8 %**); root orphans 88 → **87** |
+| 🔵 and the figure that did NOT move | 🔵 **orphaned manifests stay at 510.** All 8 newly-visible files are pins that ADD coverage, so numerator and denominator rise together — the direction `lib/reqname.awk` predicts in its own header, and the reason no row lost a verdict it held |
+| evidence | `compose/code/p116-lock-agreement/result-P116P-REQNAME-RESTATED-2026-10-11.tsv` (296 rows, p114's own `reach.sh` under the widened rule). p114's committed result is left untouched as the historical record |
+
+🔵 **Noted for the record: p112's figures are affected in the same direction and are NOT
+restated here.** This pass re-ran p114's census because `Gap 404`'s sized cost was a *reach*
+verdict. p112's closure figures move by at most the same 8 files and cannot move a row
+downward; restating them needs its own census run and is the next pass's.
+
+### 🔴 🆕 `Gap 406` — OPENED: a fourth npm lock flavour
+
+| | |
+|---|---|
+| what it is | 🔴 **`P116-I` widened this axis from one npm lock flavour to three (`package-lock.json`/`npm-shrinkwrap.json`, `yarn.lock`, `pnpm-lock.yaml`). The shelf has four: `bun.lock`** |
+| how it was found | 🔵 by checking why a row with `root_ecos=npm` came back undecidable — i.e. by distrusting the instrument's own undecidable bucket rather than reporting its size |
+| sized, not asserted | 🔴 **exactly 1 of 134 rows:** [`mietiainvestigacion-creator/api-eduadapt`](https://github.com/mietiainvestigacion-creator/api-eduadapt), root tree `package.json` + **`bun.lock`** + `bunfig.toml`. The other 69 undecidable rows are genuinely outside this axis's grammar (python 28, `npm,py` 12, maven, go, ruby) |
+| 🔵 what it costs | 🔵 **no published figure.** A flavour this axis cannot read makes a row **undecidable** — never `agree`, never `drift` — so the decidable denominator is 64 rather than 65 and nothing else changes |
+| error direction | 🔵 **one-way and benign**, the opposite of `P116-R`'s: an unread lock flavour can only withhold a verdict, never grant one |
+| 🔵 why it is not fixed in this pass | 🔵 **the file is JSON-shaped and very likely parseable** — a `workspaces` map keyed by path, each entry carrying its own `dependencies` — **which is exactly why it was not parsed on a hunch.** Adding a grammar without a fixture and a control is how this pass's three false findings were produced in the first place |
+| how it ends | a `bun.lock` grammar with its own fixtures in `test_p116.sh`, the census re-run, and the decidable denominator restated 64 → 65 |
+
+### 🔴 🆕 `P116-R` — a STATED ERROR in this pass's own figures
+
+🔵 **Declared in the manner `P112-E` established, rather than discovered by a later pass.**
+npm name extraction takes the segment after the last `node_modules/`, so a package present
+only as a **nested** install credits a top-level declaration. 🔴 **Error direction: one-way.
+It can only ever make a row read MORE agreeable, so every figure in this pass is a LOWER
+bound on drift.** With the measured drift at zero, the bound is doing no work today — but it
+will the moment a future pass reports a non-zero, and it is recorded now so that figure is
+read correctly.
+
+### 🔴 🆕 The three false findings, recorded as gaps that were caught rather than shipped
+
+🔴 **This axis produced three false `drift` findings before it produced a true zero. All
+three are recorded because a correction that leaves no trace is indistinguishable from a
+measurement that was always right.**
+
+| the convention | the false finding | caught by | rule |
+|---|---|---|---|
+| yarn and pnpm **are** npm locks | 22 rows called "no lock at root" | 🔵 hand-reading a row whose p114 verdict contradicted it | `P116-I` |
+| yarn keys an alias under the **alias** | `oppia/oppia` and `instructure/canvas-lms` read as drifting | 🔵 reading the declared SPECS, not just the names | `P116-K` |
+| pnpm keys an alias under its **target**, alias only in `importers:` | 🔴 **`PrairieLearn/PrairieLearn` — the single `drift` row of the first clean census** | 🔵 hand-reading the lock before publishing the finding | `P116-Q` |
+| a workspace-local package is absent **by design** | `@instructure/canvas-media`, `@instructure/ready` on canvas-lms | 🔵 reading `workspaces` in the root manifest | `P116-L` |
+| an empty lock is not total drift | a zero-byte lock read as *every* dep missing | 🟢 **the suite** | `P116-N` |
+
+🟢 **Four of five were caught by hand; one by the suite.** 🔴 **The uncomfortable
+proportion is deliberate in this record: the suite caught the cheap one.** The three that
+would have shipped false defects against named repositories were caught only because a
+surprising result was checked against the repository before it was written down — which is a
+practice, not a test, and practices do not survive on their own. 🔵 **`T54` promotes it from
+an instrument note to a trend, because the same three conventions will defeat any gate a
+studio builds the same way.**
+
+### 🔵 `Gap 403` — MEASURED by the concurrent p115, untested by this pass
+
+🔵 **p113 opened `Gap 403` on the regional placement, p114 corroborated it from an
+independent axis, and the concurrent `p115-region-evidence` MEASURED it in the window
+01:13–01:25 UTC — its own pre-registered remedy yields 12 rows of 193, and it reports the
+gap stays open for a different reason than it was opened for.**
+
+🔵 **This pass is placed by the same committed `orgs.region.tsv` and so inherits the same
+exposure, but it did NOT test it, and it does not incorporate p115's new channel:** that
+channel did not exist on the shelf when `agree.sh` started, and this pass's regional read is
+over 134 rows rather than 296 — a coverage figure on a smaller denominator can neither
+corroborate nor refute a placement question. 🔵 **Recorded as untested rather than
+unaffected.** The one placement decision this pass did make, it made by the map's own rule:
+`jtylek` is a personal account and is therefore **UNPLACED**, not assigned to anybody.
+
+🔵 **For the next pass: p115 places 59 rows that `orgs.region.tsv` leaves unplaced. 103 of
+this pass's 134 rows are unplaced, carrying 1 652 of the 3 100 compared dependencies.
+Re-reading this axis's regional table against p115's channel is a cheap, bounded follow-up
+and would be the first cross-tab between the two concurrent axes.**
+
 ## 🟢 Hundred-and-fifteenth pass, 2026-10-11 — **`Gap 403` MEASURED** (its own pre-registered remedy yields 12 rows of 193); **`Gap 405` OPENED** (the channel that works is right on everything checkable and unverifiable on 58 % of what it claims); **`Gap 402` WEAKENED** for the first time in eleven passes; `T50`–`T52`, `P115-A`–`P115-AJ` adopted; the suite found **six** faults in this instrument before the shelf did, and the pass owns a **seventh of its own making**
 
 ⏱️ **Second pass of 2026-10-11.** Census window **01:13 → 01:25 UTC** (p114 ran 23:54 → 00:25

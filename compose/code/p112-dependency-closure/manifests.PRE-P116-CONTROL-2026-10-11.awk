@@ -45,7 +45,7 @@ function vendor_kind(p,   n, a, i, c) {
 function manifest_eco(p,   l, b) {
   b = lc(basename(p)); l = lc(p)
   if (b == "package.json")                                     return "npm"
-  if (is_reqname(b))                                           return "py"   # P116-P: lib/reqname.awk
+  if (b ~ /^requirements([-_.][a-z0-9._-]+)?\.txt$/)           return "py"
   if (b == "pyproject.toml" || b == "pipfile")                 return "py"
   if (b == "setup.py" || b == "setup.cfg")                     return "py"
   if (b == "environment.yml" || b == "environment.yaml")       return "py"
@@ -145,7 +145,7 @@ function is_selfpinning(e) { return (e == "maven") }
 # tell you which kind you have.
 function is_reqtxt(p,   b) {
   b = lc(basename(p))
-  return is_reqname(b)
+  return (b ~ /^requirements([-_.][a-z0-9._-]+)?\.txt$/)
 }
 
 # P112-G. DEPLOYABLE SHAPE. A library that floats its dependencies is

@@ -6,6 +6,116 @@ updated: 2026-10-11
 
 # Education — compose patterns
 
+**Pass 116, 2026-10-11.** ⏱️ **Second pass of this date** (census window
+**2026-10-11 02:18 UTC → 02:33 UTC**; p114 ran 23:54 on the 10th → 00:25 UTC on the 11th).
+
+🟢 **Instrument this pass: `compose/code/p116-lock-agreement/` — `test_p116.sh`
+**113 passed / 0 failed** (fully offline: real git repositories committed on disk and
+served to the real `agree.sh` over `file://`, no mocks, no `api.github.com`);
+`agree.sh` read **134 of 134** addresses, `rc=0` on every one, **zero unread**, plus
+**two** control runs over the same 134.**
+
+🟢 **Every repository named in this pass's additions was read live by `agree.sh` (`rc=0`,
+134 of 134 addresses, zero unread) and carries its p111 verification verdict, its p112
+closure verdict, its p114 reach verdict and its 🆕 p115 agreement verdict.**
+
+## 🟢 🆕 `P116-GATE` — the agreement gate, and the one thing `P114-GATE` still let through
+
+🔵 **`P112-GATE` asked: is the dependency set locked? `P114-GATE` added: locked WHERE — does
+a lock reach the directory you will install from? Both can pass on a tree that refuses to
+install.** A lock can sit exactly where it belongs and still disagree with the manifest
+beside it, and `npm ci` does not degrade gracefully on that: it exits 1 and installs nothing.
+
+| component this page relies on | p112 | p114 | 🆕 p115 | gate |
+|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 `pinned` | 🟢 `full-reach` | 🟢 **`agree` 118/118** | 🟢 **passes outright** |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 `pinned` | 🟢 `full-reach` | 🟢 **`agree` 170/170** | 🟢 **passes outright** |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | — | 🟢 reached | 🟢 **`agree` 268/268** | 🟢 **passes outright** |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔵 `partial-pin` | 🔵 `partial-reach` | 🟢 **`agree` 345/345** | 🟢 **passes at the root; pin the one orphaned manifest at fork time** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🔵 `partial-pin` | 🔵 `partial-reach` | 🟢 **`agree` 13/13** | 🟢 **passes at the root; two deep manifests still unreached** |
+| [`elgg/elgg`](https://github.com/elgg/elgg) | 🔵 `partial-pin` | 🔵 `partial-reach` | 🟢 **`agree` 49/49** | 🟢 **passes at the root** |
+| 🟢 **[`jtylek/EpesiCRM`](https://github.com/jtylek/EpesiCRM)** | — | — | 🟢 **`agree` 21/21 + 11/11** | 🟢 **🆕 passes outright — MIT, and locked at the root in both ecosystems** |
+| [`temporalio/temporal`](https://github.com/temporalio/temporal) | 🟢 `pinned` | 🟢 `full-reach` | 🔵 `no-lock-grammar` | 🔵 **UNDECIDABLE here — go. Gate it by running the resolver, not by reading bytes** |
+| [`huggingface/transformers`](https://github.com/huggingface/transformers) | 🔴 `floating` | 🔴 root orphaned | 🔵 *out of scope* | 🔴 **FAILS at p114 — pin at fork time (unchanged)** |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🔴 `floating` | 🔴 `no-reach` | 🔵 *out of scope* | 🔴 **FAILS at p114 — own the dependency set (unchanged)** |
+
+🟢 **No component on this page newly fails.** 🔵 **One changes category:** `temporalio/temporal`
+is not failing, it is **unreachable by this gate** — and a gate that silently passes what it
+cannot read is worse than one that says so.
+
+### 🟢 The gate as commands, so it is checkable rather than quotable
+
+```sh
+# 0. p114's question first — does a lock reach the manifest you will install from?
+test -f package-lock.json -o -f yarn.lock -o -f pnpm-lock.yaml -o -f bun.lock || echo "NO ROOT NPM LOCK"
+
+# 1. p115's question — does that lock AGREE with the manifest beside it?
+#    The only honest check is the resolver's own, run in --frozen mode:
+npm  ci --dry-run                 # exits 1 on disagreement
+yarn install --immutable          # berry; v1: --frozen-lockfile
+pnpm install --frozen-lockfile
+composer install --dry-run
+
+# 2. if you write your own name-comparison instead, it MUST model all three
+#    conventions or it will flag Canvas and PrairieLearn on day one (T54):
+#      - yarn:  an alias is keyed under the ALIAS      (name@npm:target@ver)
+#      - pnpm:  under its TARGET in packages:, the alias only in importers:
+#      - both:  a workspace-local package is absent BY DESIGN
+#    Reference implementation, 113 tests: compose/code/p116-lock-agreement/
+
+# 3. for python / maven / go / ruby components there is no committed lock to
+#    compare (T55). Run the resolver in a clean container and diff the result.
+pip install --no-deps -r requirements.txt --dry-run
+```
+
+## 🟢 🆕 `P12` — permissive CRM/ERP spine for a student-services engagement, on a base that passes every gate so far
+
+🔵 **Why this pattern and why now.** The recurring blocker on `verticals/solutions.md` is
+that the strong education platforms are copyleft (Moodle GPL-3, Chamilo GPL-3, Canvas AGPL-3)
+while the permissive slot has been thin and, where it existed, broken at the root
+(`apache/ofbiz-framework` is root-orphaned at p114). 🟢 **This pass verified a base that is
+MIT, alive this month, root-locked in both its ecosystems and internally consistent in both.**
+
+| layer | component | licence | gate status |
+|---|---|---|---|
+| CRM/ERP spine, custom modules | 🟢 **[`jtylek/EpesiCRM`](https://github.com/jtylek/EpesiCRM)** `laravel` | 🟢 **MIT** © 2006–2026 | 🟢 **`agree` 21/21 composer + 11/11 npm; root-locked both** |
+| learner record / delivery | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT | 🟢 `agree` 13/13 at root |
+| structured lesson authoring | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | 🟢 `agree` 170/170 |
+| durable workflow (admissions, re-enrolment) | [`temporalio/temporal`](https://github.com/temporalio/temporal) | 🟢 MIT | 🔵 undecidable by `P116-GATE` — gate by running the resolver |
+| interop | [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | 🟢 Apache-2.0 | 🔴 `no-reach` at p114 — vendor at a SHA and own its pins |
+
+**Wiring, concretely:**
+
+1. **Fork `EpesiCRM` at a SHA and keep the root locks.** `composer install` and
+   `npm ci` both resolve reproducibly today; the fork's first commit should be a CI job
+   running `composer install --dry-run` and `npm ci --dry-run` so the property is enforced
+   rather than assumed. 🔵 Note what you are forking: a **RAD base, not an education
+   product** — there is no student-records or gradebook domain model in it. That is the
+   integration work, and it is the reason this is a spine and not a solution.
+2. **Model student, enrolment and case records as Epesi modules**, not as a parallel
+   service. Its reason for being on this page is that custom modules are the normal way to
+   extend it — that is what "RAD framework" means here.
+3. **Put `temporal` behind every multi-step process with a deadline** (application review,
+   re-enrolment, financial-aid chase). 🔵 It passes p112 and p114 but **cannot be gated by
+   `P116-GATE`** — it is go at the root. Gate it in CI by running the resolver in a clean
+   container, per step 3 of the gate above.
+4. **`kolibri` for delivery where connectivity is unreliable**, which on this shelf is the
+   LATAM and Africa-facing work. Root npm pair matches (13/13); its two deep orphaned
+   manifests (p114) are not on the install path for a standard deployment, but pin them in
+   the fork anyway.
+5. **`oppia` for structured lesson content**; 170/170 matched, the largest clean yarn graph
+   among the Apache-2.0 rows.
+6. **Badges last, and defensively.** `openbadges-validator-core` is `no-reach` at p114 —
+   vendor it at a SHA and generate the lock yourself; do not inherit its dependency set.
+
+🔵 **Effort, stated as a range rather than a promise:** 8–12 weeks to a demonstrable
+student-services slice, of which the Epesi domain modelling in step 2 is the bulk and the
+irreducible part. 🔴 **What this pattern does NOT give you:** any assurance that the matched,
+pinned versions are current or free of known vulnerabilities — that is `P116-D`, it needs a
+registry and an advisory feed, and neither is on this channel.
+
+# Education — compose patterns
+
 **Pass 115, 2026-10-11.** Census window **01:13 → 01:25 UTC**.
 🟢 **`compose/code/p115-region-evidence/`, `test_p115.sh` 193 passed / 0 failed, fully
 offline; `region.sh` read 296 of 296 addresses, zero unread, four controls from one snapshot.**

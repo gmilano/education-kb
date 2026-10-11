@@ -157,7 +157,7 @@ while IFS= read -r slug; do
   fi
 
   reqsha="$d.reqsha"; : > "$reqsha"
-  eval "$(printf '%s\n' "$tree" | awk -v reqsha="$reqsha" -f manifests.awk)"
+  eval "$(printf '%s\n' "$tree" | awk -v reqsha="$reqsha" -f ../lib/reqname.awk -f manifests.awk)"
 
   # ---- stage B: are the Python requirement files themselves locks? --------
   reqpin=0

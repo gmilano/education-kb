@@ -4,6 +4,139 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 2026-10-11 — pass 116: where this shelf has a lock that reaches the manifest, the lock matches it — 3 100 of 3 100 dependencies, and the three false findings it took to be able to say so
+
+**Pass 116, 2026-10-11.** ⏱️ **Second pass of this date** (census window
+**2026-10-11 02:18 UTC → 02:33 UTC**; p114 ran 23:54 on the 10th → 00:25 UTC on the 11th).
+
+🟢 **Instrument this pass: `compose/code/p116-lock-agreement/` — `test_p116.sh`
+**113 passed / 0 failed** (fully offline: real git repositories committed on disk and
+served to the real `agree.sh` over `file://`, no mocks, no `api.github.com`);
+`agree.sh` read **134 of 134** addresses, `rc=0` on every one, **zero unread**, plus
+**two** control runs over the same 134.**
+
+🔵 **On the pass number, stated because it affects how every cross-tab below reads:**
+a SECOND instrument also numbered itself p115 — `compose/code/p115-region-evidence/`,
+measuring regional placement and `Gap 403` — and it landed in the window 01:13–01:25 UTC,
+while this pass's own work was in progress. **The two are independent reads of the same
+shelf, not a sequence.** That pass holds the number 115 and the trend ids `T50`–`T52`;
+this one is therefore **pass 116**, its rules are `P116-*` and its trends `T53`–`T55`.
+This pass cross-tabulates against **p114**, which is the axis its question comes from, and
+**does not incorporate the concurrent p115's regional channel** — it could not have,
+because that channel was not on the shelf when `agree.sh` started.
+
+🔵 **Tenth axis in ten passes, sixth read from the TREE. It answers the question p114
+wrote into its own trend table and left open:** p114 published 34.5 % `full-reach` and
+said what the figure still hid — *“whether the pinned versions are any good”*. Of that,
+version currency and known vulnerabilities need a registry and an advisory feed, and
+neither is on this channel (`P116-D`). But whether the lock and the manifest describe the
+**same dependency set** is decidable from committed bytes — and it is the half with a hard
+failure mode: **`npm ci` does not install a stale lock, it exits 1 and installs nothing.**
+
+### What is new this week: the first axis in ten that does not tighten
+
+🟢 **64 of 64 decidable rows `agree`. 3 100 declared dependencies, 3 100 present, zero
+missing.** Eight passes have each taken something away from this shelf; this one gives
+something back, and the give is narrow and real: **the locks that exist and reach, match.**
+
+🔵 **p114 wrote the sequence down and noted a property of it:** *"no axis has yet
+reversed the direction of the one before it. Each has been a tightening."* 🟢 **p115 is
+the first that does not tighten** — and the reason is worth more than the figure. The
+defect this axis looks for is invisible to all eight previous axes: a row can be tagged,
+alive, bus-factor-safe, verified, closed, pinned and reached and still fail `npm ci` on
+the first command a client team runs. That failure mode is checked now, and it is absent.
+
+### 🔴 🆕 `P116-K` / `P116-L` / `P116-Q` — what it cost to get a trustworthy zero, which is the part that generalises
+
+🔴 **This axis produced THREE false `drift` findings before it produced a true zero,
+each from a different real convention of the npm ecosystem — and every one of them named
+a prominent row of this shelf.**
+
+| the convention | what a naive name-comparison did | rule |
+|---|---|---|
+| yarn and pnpm **are** npm locks | called **22 rows** “no lock at root” when they carry `yarn.lock` / `pnpm-lock.yaml` | `P116-I` |
+| **yarn** keys an alias under the **alias** — `codemirror-v5.17.0@npm:codemirror@5.17.0` | split on the last `@`, so every aliased dep read as missing — hit [`oppia/oppia`](https://github.com/oppia/oppia) and [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `P116-K` |
+| **pnpm** keys an alias under its **target**, recording the alias only under `importers:` | read `packages:` alone and called `@typescript/native` missing — **the single `drift` row of the first clean census, on [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn)** | `P116-Q` |
+| a **workspace-local** dependency is absent from the lock **by design** | read `@instructure/canvas-media` and `@instructure/ready` as missing on `canvas-lms` | `P116-L` |
+| an **empty** lock is not total drift | a zero-byte lock read as *every* dependency missing — the most alarming verdict the axis can emit, from a file that says nothing at all | `P116-N` |
+
+🔵 **Four of the five were caught by reading a repository by hand; the fifth by the
+suite.** Three of them are not parser bugs so much as three mutually inconsistent
+conventions for one fact.
+
+🔴 **The transferable warning, and the reason this belongs in a studio's notes rather
+than only in an instrument's README: a supply-chain gate that compares a manifest to a
+lock by NAME will report false defects on aliased and workspace-local dependencies unless
+it models all three conventions — and the false positives land on exactly the large,
+well-maintained monorepos a studio is most likely to adopt.**
+
+### 🟢 🆕 `P116-T` — the ten-pass zero streak ENDS: one new platform, verified on the git lane
+
+🔵 **Ten consecutive passes produced no new verified item. This one produces exactly
+one — and finding it took disambiguating four addresses, three of which are dead.**
+
+| address | refs | what is actually there |
+|---|---|---|
+| `Telaxus/EPESI` — the name every aggregator implies | 2 | 🔴 **a README-only repo whose entire content is `:3`**, one commit, 2026-06-27. No source, no LICENSE |
+| `Epesi-Team/epesi` | 🔴 **0** | gone |
+| `Epesi-Team/EpesiFacelift` | 🔴 **0** | gone |
+| [`x-systems/epesi-base`](https://github.com/x-systems/epesi-base) | 4 | MIT, but © **2018–2019** — a stale partial |
+| 🟢 **[`jtylek/EpesiCRM`](https://github.com/jtylek/EpesiCRM)** | 🟢 **71** | 🟢 **the live canonical** |
+
+🟢 **`jtylek/EpesiCRM`, branch `laravel` — every fact below read on the git lane this
+pass:**
+
+| | |
+|---|---|
+| licence | 🟢 **MIT**, `LICENSE` returns `200` at both `laravel` and `master`, © **2006–2026 Janusz Tylek** — a current copyright year |
+| liveness | 🟢 **last commit `2026-10-07`** (four days before this pass), 71 refs |
+| what it is | a Laravel-based PHP CRM / ERP RAD framework — the “build the education modules on top” layer, in the same slot this page gives OFBiz and Corteza |
+| 🟢 supply chain | 🟢 **`composer.json` + `composer.lock` AND `package.json` + `package-lock.json`, all four at the ROOT** |
+| 🟢 this pass's own axis, applied | 🟢 **`composer` 21/21 `agree`, `npm` 11/11 `agree`** — it would pass `P116` outright |
+| 🔵 notable | ships **`AGENTS.md`**, **`CLAUDE.md`** and an `AI-shared/` directory — agent-facing instrumentation committed into the tree |
+| 🔵 region | 🔵 **UNPLACED.** `jtylek` is a personal account, and `orgs.region.tsv` never places those (`P112-L`). Not assigned to anybody |
+
+🔴 **Not promoted to the 296-address shelf this pass.** The shelf is p114's census
+denominator; adding an address changes every cross-tab on these pages. It is recorded
+here as a **verified promotion candidate** with its evidence, so the next pass promotes it
+against a measurement rather than a claim.
+
+### 🔴 🆕 `Gap 406` — OPENED: there is a FOURTH npm lock flavour on this shelf, and it is sized at exactly one row
+
+🔵 **`P116-I` widened this axis from one npm lock flavour to three. The shelf has
+four.** Of the 70 rows this axis could not decide, **69** are rows whose root manifest is
+in an ecosystem with no lock grammar here at all (python 28, `npm,py` 12, maven, go,
+ruby). **The seventieth is not:**
+
+| row | root tree | why undecided |
+|---|---|---|
+| [`mietiainvestigacion-creator/api-eduadapt`](https://github.com/mietiainvestigacion-creator/api-eduadapt) | `package.json`, **`bun.lock`**, `bunfig.toml` | 🔴 **`bun.lock` is a fourth npm lock flavour this axis does not read** |
+
+🔵 **Sized, not guessed:** exactly **1 of 134** rows. The file is JSON-shaped — a
+`workspaces` map keyed by path, each entry carrying its own `dependencies` — so it is
+very likely parseable, which is precisely why it is **declared rather than parsed on a
+hunch**: adding a grammar without a fixture and a control is how the three false
+positives above were produced in the first place.
+
+🔵 **Error direction:** one-way and benign. A flavour this axis cannot read makes a row
+**undecidable**, never `agree` and never `drift`, so no published figure here is wrong
+because of it — the decidable denominator is 64 rather than 65.
+
+🔵 **How it ends:** a `bun.lock` grammar with its own fixtures in the suite, the census
+re-run, and the decidable denominator restated from 64 to 65.
+
+### 🔵 The eleventh consecutive zero on new agents, and the first non-zero on new items
+
+🔵 **The eight mandated queries ran in extended mode (four global, four regional) and
+**37 candidate tokens** were extracted and checked one at a time against the live pages of
+this KB: **33 already held, 4 new**.** Of the four, **one verified** (`P116-T`), **one
+failed and produced a correction**, one is real but predates this window, and one is
+**unverifiable on this channel**. The full ledger, including the failure, is in
+`intel/market.md` under `P116-M`.
+
+🟢 **That ends a ten-pass run of zero new verified items.** It does not end the agent
+drought: no new education-specific AGENT reached the shelf, for the eleventh pass running.
+
 ## 2026-10-11 — pass 115: the agent tier cannot say where it is built — 0 of 14 — and the channel that CAN is the one this pass built as a throwaway
 
 🟢 **ONE new item reached this KB's pages this pass, ending TEN consecutive zeros — and it is

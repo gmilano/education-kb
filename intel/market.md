@@ -6,6 +6,116 @@ updated: 2026-10-11
 
 # Education — market intelligence
 
+**Pass 116, 2026-10-11.** ⏱️ **Second pass of this date** (census window
+**2026-10-11 02:18 UTC → 02:33 UTC**; p114 ran 23:54 on the 10th → 00:25 UTC on the 11th).
+
+🟢 **Instrument this pass: `compose/code/p116-lock-agreement/` — `test_p116.sh`
+**113 passed / 0 failed** (fully offline: real git repositories committed on disk and
+served to the real `agree.sh` over `file://`, no mocks, no `api.github.com`);
+`agree.sh` read **134 of 134** addresses, `rc=0` on every one, **zero unread**, plus
+**two** control runs over the same 134.**
+
+### 🟢 🆕 `P116-M` — the token ledger: TEN passes of zero end here, with one verified, one corrected and one unverifiable
+
+🔵 **Eight queries, extended mode, computed year 2026 (never hardcoded): four global
+(`top open source AI agents education 2026 github MIT`, `github trending education AI
+2026`, `open source platform education ERP CRM MIT Apache`, `AI education industry trends
+2026`) and one per region (`AI education {North America|EMEA|APAC|LATAM} 2026 adoption
+regulation players`). **37 candidate tokens** extracted and checked one at a time against
+the live pages of this KB.**
+
+| token class | checked | already held | new |
+|---|---|---|---|
+| global agents / courses (nanochat, ai-engineering-from-scratch, awesome-ai-agents-2026 ×2, 500-AI-Agents-Projects, MetaGPT, HF Agents Course, CEU×GitHub) | 8 | 🔵 8 | 0 |
+| global platforms (**Epesi**) | 1 | 0 | 🟢 **1** |
+| North America (NYC moratorium, Oklahoma/Maryland oversight, Alabama procurement, UChicago Law, NEA/AFT/CTA, 60 %/32 % teachers, Technavio 86 %, NCSL all-50, **NC DPI**) | 9 | 🔵 8 | 🔴 **1** |
+| EMEA (UAE 2031, SDAIA, Kenya/Nigeria, UK principles-based, Finland/Estonia, **Germany €20 bn**, **10 % formal guidelines**) | 7 | 🔵 5 | 🔴 **2** |
+| APAC (Korea grace period, Australia AI Safety Institute, Byju's/KenResearch, Digital-in-Asia 102 B, Singapore/China spectrum) | 5 | 🔵 5 | 0 |
+| LATAM (Digital Learning Week, Chile first constitutional stage, UNESCO Ecuador, 84/68/52 split, TALIS CR/CO/CL, THE "uneven", VuraOS Argentina) | 7 | 🔵 7 | 0 |
+| **total** | **37** | 🔵 **33** | 🟢 **4** |
+
+🟢 **Four new tokens — the first non-zero in eleven passes. They did not all survive, and
+the two that failed are recorded here because an unrecorded failure is indistinguishable
+from an unasked question.**
+
+| # | token | verdict | what the check found |
+|---|---|---|---|
+| 1 | **Epesi** — "MIT, actively maintained, PHP 8" | 🟢 **VERIFIED, with a correction** | 🟢 **`jtylek/EpesiCRM`: MIT © 2006–2026, 71 refs, last commit 2026-10-07, all four manifest/lock files at root.** 🔴 But the address the aggregators imply, `Telaxus/EPESI`, is a **README-only repo whose entire content is `:3`**, and the two `Epesi-Team/*` repos a follow-up search named have **0 refs**. See `verticals/solutions.md` `P116-T` |
+| 2 | **Germany "€20 bn AI investment 2025–2030"** | 🔴 **FAILED — a conflation, now corrected** | 🔴 **The €20 bn is the EU's InvestAI allocation for AI gigafactories, not a German commitment.** Germany's own figures are different: BMFTR states **>€1.6 bn** for AI this legislative period, the High-Tech Agenda ~**€5.5 bn**, and the **National Data Center Strategy adopted 18 Mar 2026** carries no euro total (it targets doubled capacity and 4× AI/HPC by 2030). **€805 m** is earmarked toward a German AI gigafactory estimated at €4–5 bn |
+| 3 | **NC DPI K-12 generative-AI guidance** | 🔵 **REAL but not new in this window** | The guidebook is *"NC Generative AI Implementation Recommendations and Considerations for PK-13 Public Schools"*, first released **16 Jan 2024**, a living document last updated **Feb 2026** (42 pp., 7 appendices, the "EVERY" framework). 🔵 The genuinely current item is the **NC AI Leadership Council's AI Strategic Roadmap, 1 Jul 2026** — reported, contents not verified |
+| 4 | **"only 10 % of schools and universities have formal AI guidelines"** | 🔴 **UNVERIFIABLE on this channel** | 🔴 The only source is a statistics aggregator whose domain does **not resolve** from this session (`ENOTFOUND`, both `curl` and the fetch tool). **Not quoted as a figure.** It is also in tension with a token this KB already holds — UNESCO IESALC's **26 %** of LAC institutions with a formal AI strategy — and the two cannot be reconciled without reading at least one of them |
+
+🔴 **`#2` is the kind of error this ledger exists to catch.** "Germany has committed €20 bn
+to AI" is a plausible, quotable, client-facing sentence, and it is wrong: the number is the
+EU's and the programme is gigafactories. 🔵 **A regional investment figure sourced from an
+adoption-index aggregator should be treated as a pointer to a primary source, not as the
+figure.**
+
+### 🔴 🆕 `P116-S` — the channel is narrower this pass, and it bounds what these pages may claim
+
+| lane | result |
+|---|---|
+| `git ls-remote` / `git fetch` → github.com | 🟢 `rc=0` |
+| `raw.githubusercontent.com/<slug>/<ref>/…` | 🟢 `200` |
+| `api.github.com` | 🔴 `403` (unchanged since `P107-A`) |
+| `github.com` HTML | 🔴 `403` |
+| 🔴 **every non-GitHub domain, `curl` AND the fetch tool** | 🔴 **`ENOTFOUND`** |
+
+🔴 **The last row is new and it matters.** Repository facts are verified on the git
+lane, which works — every repo URL written this pass was probed there. **Non-GitHub URLs
+could not be probed at all**, so no page written this pass presents a non-GitHub link as
+verified. Those sources are named in prose, with the search that produced them recorded
+in `intel/market.md` under `P116-M`, and a market figure whose only source page is
+unreachable is marked **UNVERIFIABLE** rather than quoted.
+
+### 🟢 🆕 `P116-T` — the ten-pass zero streak ENDS: one new platform, verified on the git lane
+
+🔵 **Ten consecutive passes produced no new verified item. This one produces exactly
+one — and finding it took disambiguating four addresses, three of which are dead.**
+
+| address | refs | what is actually there |
+|---|---|---|
+| `Telaxus/EPESI` — the name every aggregator implies | 2 | 🔴 **a README-only repo whose entire content is `:3`**, one commit, 2026-06-27. No source, no LICENSE |
+| `Epesi-Team/epesi` | 🔴 **0** | gone |
+| `Epesi-Team/EpesiFacelift` | 🔴 **0** | gone |
+| [`x-systems/epesi-base`](https://github.com/x-systems/epesi-base) | 4 | MIT, but © **2018–2019** — a stale partial |
+| 🟢 **[`jtylek/EpesiCRM`](https://github.com/jtylek/EpesiCRM)** | 🟢 **71** | 🟢 **the live canonical** |
+
+🟢 **`jtylek/EpesiCRM`, branch `laravel` — every fact below read on the git lane this
+pass:**
+
+| | |
+|---|---|
+| licence | 🟢 **MIT**, `LICENSE` returns `200` at both `laravel` and `master`, © **2006–2026 Janusz Tylek** — a current copyright year |
+| liveness | 🟢 **last commit `2026-10-07`** (four days before this pass), 71 refs |
+| what it is | a Laravel-based PHP CRM / ERP RAD framework — the “build the education modules on top” layer, in the same slot this page gives OFBiz and Corteza |
+| 🟢 supply chain | 🟢 **`composer.json` + `composer.lock` AND `package.json` + `package-lock.json`, all four at the ROOT** |
+| 🟢 this pass's own axis, applied | 🟢 **`composer` 21/21 `agree`, `npm` 11/11 `agree`** — it would pass `P116` outright |
+| 🔵 notable | ships **`AGENTS.md`**, **`CLAUDE.md`** and an `AI-shared/` directory — agent-facing instrumentation committed into the tree |
+| 🔵 region | 🔵 **UNPLACED.** `jtylek` is a personal account, and `orgs.region.tsv` never places those (`P112-L`). Not assigned to anybody |
+
+🔴 **Not promoted to the 296-address shelf this pass.** The shelf is p114's census
+denominator; adding an address changes every cross-tab on these pages. It is recorded
+here as a **verified promotion candidate** with its evidence, so the next pass promotes it
+against a measurement rather than a claim.
+
+### 🔵 What eleven passes of near-zero means, stated as a position rather than a complaint
+
+🔵 **The mandated query set has now returned 33/37 already-held tokens. That is not a
+search failure — it is what saturation looks like**, and this KB already measured it
+(`p287-regional-saturation`). 🔵 **The marginal value of the eleventh identical sweep is
+close to zero; the marginal value of READING one page the sweep returns is what produced
+both of this pass's findings** — `Epesi` came from following an aggregator's claim to four
+actual git addresses, and the Germany correction came from distrusting a round number.
+
+🟢 **Recommendation for the next pass, recorded so it is a decision rather than a drift:**
+keep the eight mandated queries (they are the audit trail), but spend the pass's research
+budget on **verifying one held token against a primary source** rather than on extracting a
+thirty-eighth candidate. The two corrections this pass produced both came from verification,
+not from discovery.
+
+# Education — market intelligence
+
 **Pass 115, 2026-10-11.** ⏱️ **Second pass of this date** (census window
 **01:13 → 01:25 UTC**; p114 ran 23:54 → 00:25 across midnight).
 

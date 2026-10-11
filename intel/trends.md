@@ -6,6 +6,163 @@ updated: 2026-10-11
 
 # Education — current trends
 
+**Pass 116, 2026-10-11.** ⏱️ **Second pass of this date** (census window
+**2026-10-11 02:18 UTC → 02:33 UTC**; p114 ran 23:54 on the 10th → 00:25 UTC on the 11th).
+
+🟢 **Instrument this pass: `compose/code/p116-lock-agreement/` — `test_p116.sh`
+**113 passed / 0 failed** (fully offline: real git repositories committed on disk and
+served to the real `agree.sh` over `file://`, no mocks, no `api.github.com`);
+`agree.sh` read **134 of 134** addresses, `rc=0` on every one, **zero unread**, plus
+**two** control runs over the same 134.**
+
+🔵 **On the pass number, stated because it affects how every cross-tab below reads:**
+a SECOND instrument also numbered itself p115 — `compose/code/p115-region-evidence/`,
+measuring regional placement and `Gap 403` — and it landed in the window 01:13–01:25 UTC,
+while this pass's own work was in progress. **The two are independent reads of the same
+shelf, not a sequence.** That pass holds the number 115 and the trend ids `T50`–`T52`;
+this one is therefore **pass 116**, its rules are `P116-*` and its trends `T53`–`T55`.
+This pass cross-tabulates against **p114**, which is the axis its question comes from, and
+**does not incorporate the concurrent p115's regional channel** — it could not have,
+because that channel was not on the shelf when `agree.sh` started.
+
+🔵 **Tenth axis in ten passes, sixth read from the TREE. It answers the question p114
+wrote into its own trend table and left open:** p114 published 34.5 % `full-reach` and
+said what the figure still hid — *“whether the pinned versions are any good”*. Of that,
+version currency and known vulnerabilities need a registry and an advisory feed, and
+neither is on this channel (`P116-D`). But whether the lock and the manifest describe the
+**same dependency set** is decidable from committed bytes — and it is the half with a hard
+failure mode: **`npm ci` does not install a stale lock, it exits 1 and installs nothing.**
+
+### 🟢 🆕 `T53` — trend: the tightening sequence breaks, and what breaks it is a defect class the first eight axes could not see
+
+🔵 **Ten passes have now measured this shelf on ten independent axes. p114 published
+the sequence and named a property of it: *"no axis has yet reversed the direction of the one
+before it. Each has been a tightening."* That property ends this pass.**
+
+| axis | pass | what the shelf looks like | what the figure hides |
+|---|---|---|---|
+| releases | p108 | pinnable | the pin may be from 2019 |
+| liveness | p109 | alive | one person is keeping it alive |
+| bench | p110 | 🔴 67.6 % one person | nobody can tell if a fork broke it |
+| verification | p111 | 🔴 38.9 % `checked` | the check runs on GitHub's machines |
+| closure | p112 | 🔴 36.1 % `pinned` | the lock may not reach the manifest |
+| provider binding | p113 | parallel axis | — |
+| reach | p114 | 🔴 34.5 % `full-reach` → 🟢 **34.8 % restated** | whether the pinned versions are any good |
+| region evidence | p115 | measured concurrently, different axis | — (independent of this read) |
+| 🟢 🆕 **agreement** | 🟢 **p115** | 🟢 **64 / 64 `agree`; 3 100 / 3 100 deps** | 🔴 **whether those versions are current or safe (`P116-D`)** |
+
+🟢 **The shelf is clean on this axis, and the cleanliness is informative precisely because
+the defect is invisible to the other eight.** A row can be tagged, alive,
+bus-factor-survivable, CI-verified, dependency-closed, pinned AND reached and still fail the
+first command a client team types. 🔵 **That failure mode is now checked and it is absent —
+so the eight pessimistic figures above are not measuring a shelf that is sloppy in general.
+They are measuring eight specific things that are missing, on a shelf whose maintainers keep
+the files they DO commit internally consistent.** That is a meaningfully different reading of
+p108–p114 than those passes could support on their own.
+
+### 🔴 🆕 `T54` — trend: the supply-chain gate a studio would most naturally build reports false defects on the best repositories
+
+🔴 **This is the pass's most transferable finding and it did not come from the shelf — it
+came from getting the instrument wrong three times.** "Compare the manifest to the lock by
+name" is the obvious gate, it is a dozen lines, and run naively it reports drift on
+`PrairieLearn`, `oppia` and `canvas-lms` — three of the shelf's largest and best-maintained
+rows — because of three mutually inconsistent ecosystem conventions:
+
+| convention | the false finding it produces |
+|---|---|
+| yarn keys an aliased dependency under the **alias** | every aliased dep reads as missing |
+| pnpm keys the same thing under its **target**, recording the alias only under `importers:` | the *opposite* parse is needed for the same fact |
+| a workspace-local package is absent from the lock **by design** | monorepo-internal deps read as missing |
+
+🔴 **The false positives are not randomly distributed: they concentrate on monorepos,
+which means they concentrate on the mature, multi-package platforms a studio is most likely
+to adopt.** 🔵 **A gate that flags Canvas and PrairieLearn on day one is a gate the client
+turns off in week two**, and the trend worth naming is that supply-chain tooling bought or
+built in 2026 should be evaluated against an aliased, workspace-using monorepo before it is
+evaluated against anything else.
+
+### 🔵 🆕 `T55` — trend: the undecidable half is where the risk actually sits
+
+🔵 **Of 134 rows with a lock that reaches the root, only 64 can be checked for agreement.
+The other 70 are python, maven, go and ruby at the root** — ecosystems with no committed
+lockfile grammar to compare a manifest against.
+
+🔴 **The overlap is the finding: the ecosystems p112 and p114 found WORST at pinning are
+the same ones where agreement is undecidable.** python rows dominate both lists. So the two
+halves of this shelf fail differently and neither failure is visible from the other half:
+the npm/composer half is pinned, reached and internally consistent; the python/JVM half is
+weakly pinned and **cannot be audited by this method at all**.
+
+🔵 **For an engagement this means a single supply-chain gate is not enough.** The npm and
+composer components can be gated on committed bytes. The python and JVM components need a
+resolver actually run in a controlled environment, which is a different kind of check with a
+different cost — and on this shelf it is the majority of rows.
+
+### 🟢 🆕 `P116-P` — `Gap 404` CLOSED, and p114's sizing was exact
+
+🔵 **p114 found that the anchored requirement-file rule — carried in TWO copies, p112's
+`manifests.awk` and p114's `positions.awk` — refuses the prefixed half of its own
+convention (`dev_requirements.txt`, `latest_requirements.txt`, `system_requirements.txt`).
+It sized the gap (198 files seen, 8 missed, 5 rows affected, exactly ONE verdict),
+declared it, and deliberately did not fix it, because `P237` forbids forking a shared
+classifier.**
+
+🟢 **Fixed where the rule lives.** [`lib/reqname.awk`](../compose/code/lib/reqname.awk)
+now holds **one** definition, widened to
+`^([a-z0-9._-]+[-_.])?requirements([-_.][a-z0-9._-]+)?\.txt$`, loaded by both passes with
+a second `-f`. `lib/test_reqname.sh` — **22 passed / 0 failed** — pins every case,
+including the `myrequirements.txt` exclusion that stops the prefix group swallowing any
+word that merely ends in the literal string. Neither consumer regressed:
+**`test_p114.sh` 98 / 0**, **`test_p112.sh` 109 / 0**.
+
+| p114 figure | as published | 🆕 restated | delta |
+|---|---|---|---|
+| rows at `full-reach` | 102 (34.5 %) | 🟢 **103 (34.8 %)** | **+1** |
+| lockable manifests | 2 135 | **2 143** | **+8** — the 8 missed files, exactly as sized |
+| manifests reached | 1 625 (76.1 %) | **1 633 (76.2 %)** | +8 |
+| manifests orphaned | 510 (23.9 %) | **510 (23.8 %)** | 🟢 **0** |
+| rows whose ROOT manifest is orphaned | 88 | 🟢 **87** | **−1** |
+| rows that moved | — | 🟢 **[`sdv-dev/sdv`](https://github.com/sdv-dev/sdv) `no-reach` → `full-reach`** | exactly one |
+
+🔵 **The orphan count does not move at all — all 8 newly-visible files are pins that ADD
+coverage, so numerator and denominator rise together.** That is the direction the widened
+rule predicts in its own header, and it is why no row lost a verdict it held.
+
+### 🔴 🆕 `Gap 406` — OPENED: there is a FOURTH npm lock flavour on this shelf, and it is sized at exactly one row
+
+🔵 **`P116-I` widened this axis from one npm lock flavour to three. The shelf has
+four.** Of the 70 rows this axis could not decide, **69** are rows whose root manifest is
+in an ecosystem with no lock grammar here at all (python 28, `npm,py` 12, maven, go,
+ruby). **The seventieth is not:**
+
+| row | root tree | why undecided |
+|---|---|---|
+| [`mietiainvestigacion-creator/api-eduadapt`](https://github.com/mietiainvestigacion-creator/api-eduadapt) | `package.json`, **`bun.lock`**, `bunfig.toml` | 🔴 **`bun.lock` is a fourth npm lock flavour this axis does not read** |
+
+🔵 **Sized, not guessed:** exactly **1 of 134** rows. The file is JSON-shaped — a
+`workspaces` map keyed by path, each entry carrying its own `dependencies` — so it is
+very likely parseable, which is precisely why it is **declared rather than parsed on a
+hunch**: adding a grammar without a fixture and a control is how the three false
+positives above were produced in the first place.
+
+🔵 **Error direction:** one-way and benign. A flavour this axis cannot read makes a row
+**undecidable**, never `agree` and never `drift`, so no published figure here is wrong
+because of it — the decidable denominator is 64 rather than 65.
+
+🔵 **How it ends:** a `bun.lock` grammar with its own fixtures in the suite, the census
+re-run, and the decidable denominator restated from 64 to 65.
+
+### 🔵 Regional: no story in the verdict, a real story in the coverage
+
+🟢 **No region drifts — 9/9 North America, 7/7 EMEA, 4/4 APAC, 3/3 LATAM, 41/41
+unplaced.** 🔴 **But North America and EMEA can be read on fewer than half their rows
+(40.9 % and 41.2 %)**, because their rows are disproportionately the python and JVM
+ecosystems `T55` describes. 🔵 **LATAM's 3/3 is a denominator of three, not a lead.** The
+regional conclusion is a coverage statement, not a quality ranking, and the detail is in
+`repos/trending.md`.
+
+# Education — current trends
+
 **Pass 115, 2026-10-11.** ⏱️ **Second pass of this date** (census window
 **01:13 → 01:25 UTC**).
 

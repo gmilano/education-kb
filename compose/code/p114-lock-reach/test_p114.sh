@@ -30,7 +30,7 @@ hasnt(){ case "$2" in *"$3"*) bad "$1" "NOT contains <$3>" "$2" ;; *) ok "$1" ;;
 # helpers
 # ---------------------------------------------------------------------------
 # positions: feed a newline path list, get positions.awk output
-positions() { printf '%s\n' "$1" | awk -f "$here/positions.awk"; }
+positions() { printf '%s\n' "$1" | awk -f "$here/../lib/reqname.awk" -f "$here/positions.awk"; }
 
 # cover: feed positions text (+ optional flat/extrapy), get one key's value
 coverval() { # $1 positions text, $2 key, $3 flat, $4 extrapy

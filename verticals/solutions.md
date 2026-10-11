@@ -6,6 +6,144 @@ updated: 2026-10-11
 
 # Education — vertical platforms and solutions
 
+**Pass 116, 2026-10-11.** ⏱️ **Second pass of this date** (census window
+**2026-10-11 02:18 UTC → 02:33 UTC**; p114 ran 23:54 on the 10th → 00:25 UTC on the 11th).
+
+🟢 **Instrument this pass: `compose/code/p116-lock-agreement/` — `test_p116.sh`
+**113 passed / 0 failed** (fully offline: real git repositories committed on disk and
+served to the real `agree.sh` over `file://`, no mocks, no `api.github.com`);
+`agree.sh` read **134 of 134** addresses, `rc=0` on every one, **zero unread**, plus
+**two** control runs over the same 134.**
+
+🔵 **On the pass number, stated because it affects how every cross-tab below reads:**
+a SECOND instrument also numbered itself p115 — `compose/code/p115-region-evidence/`,
+measuring regional placement and `Gap 403` — and it landed in the window 01:13–01:25 UTC,
+while this pass's own work was in progress. **The two are independent reads of the same
+shelf, not a sequence.** That pass holds the number 115 and the trend ids `T50`–`T52`;
+this one is therefore **pass 116**, its rules are `P116-*` and its trends `T53`–`T55`.
+This pass cross-tabulates against **p114**, which is the axis its question comes from, and
+**does not incorporate the concurrent p115's regional channel** — it could not have,
+because that channel was not on the shelf when `agree.sh` started.
+
+🔵 **Tenth axis in ten passes, sixth read from the TREE. It answers the question p114
+wrote into its own trend table and left open:** p114 published 34.5 % `full-reach` and
+said what the figure still hid — *“whether the pinned versions are any good”*. Of that,
+version currency and known vulnerabilities need a registry and an advisory feed, and
+neither is on this channel (`P116-D`). But whether the lock and the manifest describe the
+**same dependency set** is decidable from committed bytes — and it is the half with a hard
+failure mode: **`npm ci` does not install a stale lock, it exits 1 and installs nothing.**
+
+### 🟢 🆕 `P116-T` — the ten-pass zero streak ENDS: one new platform, verified on the git lane
+
+🔵 **Ten consecutive passes produced no new verified item. This one produces exactly
+one — and finding it took disambiguating four addresses, three of which are dead.**
+
+| address | refs | what is actually there |
+|---|---|---|
+| `Telaxus/EPESI` — the name every aggregator implies | 2 | 🔴 **a README-only repo whose entire content is `:3`**, one commit, 2026-06-27. No source, no LICENSE |
+| `Epesi-Team/epesi` | 🔴 **0** | gone |
+| `Epesi-Team/EpesiFacelift` | 🔴 **0** | gone |
+| [`x-systems/epesi-base`](https://github.com/x-systems/epesi-base) | 4 | MIT, but © **2018–2019** — a stale partial |
+| 🟢 **[`jtylek/EpesiCRM`](https://github.com/jtylek/EpesiCRM)** | 🟢 **71** | 🟢 **the live canonical** |
+
+🟢 **`jtylek/EpesiCRM`, branch `laravel` — every fact below read on the git lane this
+pass:**
+
+| | |
+|---|---|
+| licence | 🟢 **MIT**, `LICENSE` returns `200` at both `laravel` and `master`, © **2006–2026 Janusz Tylek** — a current copyright year |
+| liveness | 🟢 **last commit `2026-10-07`** (four days before this pass), 71 refs |
+| what it is | a Laravel-based PHP CRM / ERP RAD framework — the “build the education modules on top” layer, in the same slot this page gives OFBiz and Corteza |
+| 🟢 supply chain | 🟢 **`composer.json` + `composer.lock` AND `package.json` + `package-lock.json`, all four at the ROOT** |
+| 🟢 this pass's own axis, applied | 🟢 **`composer` 21/21 `agree`, `npm` 11/11 `agree`** — it would pass `P116` outright |
+| 🔵 notable | ships **`AGENTS.md`**, **`CLAUDE.md`** and an `AI-shared/` directory — agent-facing instrumentation committed into the tree |
+| 🔵 region | 🔵 **UNPLACED.** `jtylek` is a personal account, and `orgs.region.tsv` never places those (`P112-L`). Not assigned to anybody |
+
+🔴 **Not promoted to the 296-address shelf this pass.** The shelf is p114's census
+denominator; adding an address changes every cross-tab on these pages. It is recorded
+here as a **verified promotion candidate** with its evidence, so the next pass promotes it
+against a measurement rather than a claim.
+
+### 🟢 🆕 `P116-V` — the platforms on this page, re-read on whether the lock matches
+
+🔵 **`P116-A` reads only rows whose ROOT manifest a lock reaches, so the rows p114 failed
+at the root are out of scope rather than passing. The nine this axis can read are below.**
+
+| platform | licence | p112 | p114 | 🆕 p115 | declared / present | 🆕 stand-up verdict |
+|---|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🔵 GPL-3 | 🟢 `pinned` | 🟢 `full-reach` | 🟢 **`agree`** | 🟢 **118 / 118** | 🟢 **safe — strongest row on this page on every axis so far** |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔵 GPL-3 | — | 🟢 reached | 🟢 **`agree`** | 🟢 **268 / 268** | 🟢 **safe — the largest matched graph on this page** |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔵 AGPL-3 | 🔵 `partial-pin` | 🔵 `partial-reach` | 🟢 **`agree`** | 🟢 **345 / 345** | 🟢 **safe at the root — 596 manifests, one orphan, and the root pair matches exactly** |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | 🟢 `pinned` | 🟢 `full-reach` | 🟢 **`agree`** | 🟢 **170 / 170** | 🟢 **safe** |
+| [`claroline/Claroline`](https://github.com/claroline/Claroline) | 🔵 GPL-3 | — | 🟢 reached | 🟢 **`agree`** | 🟢 **101 / 101** | 🟢 **safe** |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🔵 GPL-3 | 🟢 `pinned` | 🟢 `full-reach` | 🟢 **`agree`** | 🟢 **46 / 46** | 🟢 **safe** |
+| [`elgg/elgg`](https://github.com/elgg/elgg) | 🔵 GPL-2 | 🔵 `partial-pin` | 🔵 `partial-reach` | 🟢 **`agree`** | 🟢 **49 / 49** | 🟢 **safe at the root** |
+| [`pressbooks/pressbooks`](https://github.com/pressbooks/pressbooks) | 🔵 GPL-3 | — | 🟢 reached | 🟢 **`agree`** | 🟢 **57 / 57** | 🟢 **safe** |
+| [`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud) | 🔵 contested | 🟢 `pinned` | 🟢 `full-reach` | 🟢 **`agree`** | 🟢 **19 / 19** | 🔵 **tree matches; licence still contested, bench still 1** |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 Apache-2.0 | 🟢 `pinned` | 🔵 `partial-reach` | 🔵 `no-lock-grammar` | — | 🔵 **undecidable here — root manifest is maven** |
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 BSD-3 | 🟢 `pinned` | 🔴 root orphaned | 🔵 *out of scope* | — | 🔴 **p114's verdict stands: no lock reaches its root `pyproject.toml`** |
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 MIT | 🔵 `partial-pin` | 🔴 root orphaned | 🔵 *out of scope* | — | 🔴 **p114's verdict stands** |
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🟢 Apache-2.0 | 🔵 `partial-pin` | 🔴 root orphaned | 🔵 *out of scope* | — | 🔴 **p114's verdict stands** |
+
+🟢 **Every platform this axis can read matches its lock, and two that p114 marked
+`partial-reach` — `canvas-lms` and `elgg` — are clean at the root.** 🔵 **That is not a
+reversal of p114 and must not be quoted as one:** p114 says some directory deep in the
+tree cannot be reproducibly installed, p115 says the directory a stand-up actually begins
+in can. Both are true and they concern different files.
+
+### 🔵 The MIT/Apache customisable-platform slot, restated with this pass's new row
+
+🔵 **The standing problem on this page is that the strongest education platforms are
+copyleft (Moodle GPL-3, Chamilo GPL-3, Canvas AGPL-3, ILIAS GPL-3), and the permissive
+slot has been thin. It is one row less thin this pass.**
+
+| platform | licence | role | p115 |
+|---|---|---|---|
+| 🟢 **[`jtylek/EpesiCRM`](https://github.com/jtylek/EpesiCRM)** | 🟢 **MIT** © 2006–2026 | 🟢 **🆕 CRM/ERP RAD base — build education modules on top** | 🟢 **`agree` 21/21 + 11/11** |
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🟢 Apache-2.0 | ERP base | 🔴 root orphaned at p114 |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | structured lesson authoring | 🟢 `agree` 170/170 |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🔵 GPL-3 | full LMS | 🟢 `agree` 46/46 |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT | offline-first delivery | 🟢 `agree` 13/13 |
+
+🟢 **`EpesiCRM` is, on this pass's evidence, the only row on this page that is
+permissively licensed, alive this month, locked at the root in BOTH its ecosystems, and
+internally consistent in both.** 🔵 **It is a base, not an education product** — there is
+no student-records or gradebook domain model in it, and that gap is the integration work,
+not a defect.
+
+### 🔴 🆕 `Gap 406` — OPENED: there is a FOURTH npm lock flavour on this shelf, and it is sized at exactly one row
+
+🔵 **`P116-I` widened this axis from one npm lock flavour to three. The shelf has
+four.** Of the 70 rows this axis could not decide, **69** are rows whose root manifest is
+in an ecosystem with no lock grammar here at all (python 28, `npm,py` 12, maven, go,
+ruby). **The seventieth is not:**
+
+| row | root tree | why undecided |
+|---|---|---|
+| [`mietiainvestigacion-creator/api-eduadapt`](https://github.com/mietiainvestigacion-creator/api-eduadapt) | `package.json`, **`bun.lock`**, `bunfig.toml` | 🔴 **`bun.lock` is a fourth npm lock flavour this axis does not read** |
+
+🔵 **Sized, not guessed:** exactly **1 of 134** rows. The file is JSON-shaped — a
+`workspaces` map keyed by path, each entry carrying its own `dependencies` — so it is
+very likely parseable, which is precisely why it is **declared rather than parsed on a
+hunch**: adding a grammar without a fixture and a control is how the three false
+positives above were produced in the first place.
+
+🔵 **Error direction:** one-way and benign. A flavour this axis cannot read makes a row
+**undecidable**, never `agree` and never `drift`, so no published figure here is wrong
+because of it — the decidable denominator is 64 rather than 65.
+
+🔵 **How it ends:** a `bun.lock` grammar with its own fixtures in the suite, the census
+re-run, and the decidable denominator restated from 64 to 65.
+
+### 🔴 What this page still cannot tell you
+
+🔴 **Nothing on this page speaks to whether the matched, pinned versions are CURRENT or
+free of known vulnerabilities (`P116-D`).** Both need a registry and an advisory feed and
+neither is reachable on this channel (`P116-S`). A row reading `agree` here is a row whose
+dependency set resolves consistently — not a row whose dependencies are safe.
+
+# Education — vertical platforms and solutions
+
 **Pass 115, 2026-10-11.** ⏱️ **Second pass of this date** (census window
 **01:13 → 01:25 UTC**).
 

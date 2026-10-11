@@ -6,6 +6,187 @@ updated: 2026-10-11
 
 # Education — foundational repos
 
+**Pass 116, 2026-10-11.** ⏱️ **Second pass of this date** (census window
+**2026-10-11 02:18 UTC → 02:33 UTC**; p114 ran 23:54 on the 10th → 00:25 UTC on the 11th).
+
+🟢 **Instrument this pass: `compose/code/p116-lock-agreement/` — `test_p116.sh`
+**113 passed / 0 failed** (fully offline: real git repositories committed on disk and
+served to the real `agree.sh` over `file://`, no mocks, no `api.github.com`);
+`agree.sh` read **134 of 134** addresses, `rc=0` on every one, **zero unread**, plus
+**two** control runs over the same 134.**
+
+🔵 **On the pass number, stated because it affects how every cross-tab below reads:**
+a SECOND instrument also numbered itself p115 — `compose/code/p115-region-evidence/`,
+measuring regional placement and `Gap 403` — and it landed in the window 01:13–01:25 UTC,
+while this pass's own work was in progress. **The two are independent reads of the same
+shelf, not a sequence.** That pass holds the number 115 and the trend ids `T50`–`T52`;
+this one is therefore **pass 116**, its rules are `P116-*` and its trends `T53`–`T55`.
+This pass cross-tabulates against **p114**, which is the axis its question comes from, and
+**does not incorporate the concurrent p115's regional channel** — it could not have,
+because that channel was not on the shelf when `agree.sh` started.
+
+🔵 **Tenth axis in ten passes, sixth read from the TREE. It answers the question p114
+wrote into its own trend table and left open:** p114 published 34.5 % `full-reach` and
+said what the figure still hid — *“whether the pinned versions are any good”*. Of that,
+version currency and known vulnerabilities need a registry and an advisory feed, and
+neither is on this channel (`P116-D`). But whether the lock and the manifest describe the
+**same dependency set** is decidable from committed bytes — and it is the half with a hard
+failure mode: **`npm ci` does not install a stale lock, it exits 1 and installs nothing.**
+
+### 🟢 🆕 `P116-A` — the shelf where a lock reaches the root, re-read on whether it MATCHES
+
+🔵 **Denominator: p114's own rows with `lockable_man > 0` and `root_orphan == 0` — the
+**134** addresses p114 says have a lockable root manifest that a lock does reach. Rows
+p114 already failed are not re-failed here; this is a tightening of p114's positive
+class, not a new census of the shelf.**
+
+| figure | value |
+|---|---|
+| rows in the denominator (`P116-A`) | **134** |
+| rows where agreement is **decidable** from the root pair | **64** |
+| rows where it is not | 70 |
+| declared dependencies compared | **3 100** |
+| declared dependencies **present** in the reaching lock | 🟢 **3 100** |
+| declared dependencies **missing** | 🟢 **0** |
+| rows at `agree` | 🟢 **64 of 64 (100 %)** |
+| rows at `drift` | 🟢 **0** |
+
+🟢 **Where this shelf has a lock that reaches the manifest, the lock matches the
+manifest. On this axis the shelf is clean — and it is the FIRST axis in ten of which
+that is true.**
+
+### 🟢 The zero is a measurement, not an empty code path
+
+🔵 **A census that reports none of the thing it looks for has to show it could have
+found it. This one does, twice, through the same code path.**
+
+| control | what it changes | result |
+|---|---|---|
+| `P116_PEER=1` | counts `peerDependencies`, which npm does **not** require in the lock tree | 🔴 **1 row drifts** — `thu-maic/dsh-openmaic`, declared 7 → 15, **7 missing** |
+| `P116_NO_DEV=1` | drops `devDependencies` / `require-dev` | declared 3 100 → **1 902**; still **0 missing** |
+
+🔵 **The positive control emits `drift` on real shelf data, so the zero is about the
+shelf. The second shows what the zero covers: 1 198 of the 3 100 compared dependencies
+(38.6 %) are dev-only, and the locks account for those too.**
+
+### 🟢 🆕 `P116-U` — the foundation rows, re-read on whether the lock matches
+
+🔵 **`P116-A` reads only rows whose root manifest a lock REACHES, so four of p114's nine
+are out of scope here by construction — they are the four p114 already failed at the root,
+and this axis does not re-fail a row. Shown so the page does not read as if they passed.**
+
+| repo | licence | p111 | p112 | p114 | 🆕 p115 | declared / present |
+|---|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🔵 GPL-3 | 🟢 `checked` | 🟢 `pinned` | 🟢 `full-reach` | 🟢 **`agree`** | 🟢 **118 / 118** (npm 71, composer 47) |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | 🟢 `checked` | 🟢 `pinned` | 🟢 `full-reach` | 🟢 **`agree`** | 🟢 **170 / 170** (yarn) |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT | 🟢 `checked` | 🔵 `partial-pin` | 🔵 `partial-reach` | 🟢 **`agree`** | 🟢 **13 / 13** |
+| [`temporalio/temporal`](https://github.com/temporalio/temporal) | 🟢 MIT | 🟢 `checked` | 🟢 `pinned` | 🟢 `full-reach` | 🔵 `no-lock-grammar` | — root manifest is go, not npm/composer/cargo |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 ECL-2.0 | 🟢 `checked` | 🔵 `partial-pin` | 🔵 `partial-reach` | 🔵 `no-lock-grammar` | — root manifest is maven |
+| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🟢 Apache-2.0 | 🟢 `checked` | 🔵 `partial-pin` | 🔴 root orphaned | 🔵 *out of scope* | 🔴 already failed p114 at the root |
+| [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 BSD-3 | 🟢 `checked` | 🔵 `self-pinned` | 🔵 `self-pinned` | 🔵 *out of scope* | maven: no claim either way |
+| [`huggingface/transformers`](https://github.com/huggingface/transformers) | 🟢 Apache-2.0 | 🟢 `checked` | 🔴 `floating` | 🔴 root orphaned | 🔵 *out of scope* | 🔴 already failed p114 at the root |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🟢 AGPL-3 | 🟢 `checked` | 🔴 `floating` | 🔴 `no-reach` | 🔵 *out of scope* | 🔴 already failed p114 at the root |
+
+🟢 **The three foundation rows this axis can read all hold, and `kolibri` holds on the
+axis where p112 and p114 both marked it partial** — its root npm pair is internally
+consistent even though two of its 57 manifests are orphaned deeper in the tree. 🔵 **Those
+are different claims about different files and neither cancels the other:** p114 says two
+directories cannot be reproducibly installed; p115 says the directory you start in can.
+
+🔵 **A studio consequence worth stating plainly:** on this shelf the python and JVM
+foundations (`temporal`, `opencast`, `dspace`, `transformers`, `tutor`) are precisely the
+rows where the lock-vs-manifest question **cannot be answered from committed bytes** —
+there is no lockfile grammar to compare against. 🔴 **The ecosystems with the weakest
+pinning on this shelf are also the ones where agreement is undecidable**, so a gate built
+on this axis alone would silently pass them.
+
+### 🟢 🆕 `P116-P` — `Gap 404` CLOSED, and p114's sizing was exact
+
+🔵 **p114 found that the anchored requirement-file rule — carried in TWO copies, p112's
+`manifests.awk` and p114's `positions.awk` — refuses the prefixed half of its own
+convention (`dev_requirements.txt`, `latest_requirements.txt`, `system_requirements.txt`).
+It sized the gap (198 files seen, 8 missed, 5 rows affected, exactly ONE verdict),
+declared it, and deliberately did not fix it, because `P237` forbids forking a shared
+classifier.**
+
+🟢 **Fixed where the rule lives.** [`lib/reqname.awk`](../compose/code/lib/reqname.awk)
+now holds **one** definition, widened to
+`^([a-z0-9._-]+[-_.])?requirements([-_.][a-z0-9._-]+)?\.txt$`, loaded by both passes with
+a second `-f`. `lib/test_reqname.sh` — **22 passed / 0 failed** — pins every case,
+including the `myrequirements.txt` exclusion that stops the prefix group swallowing any
+word that merely ends in the literal string. Neither consumer regressed:
+**`test_p114.sh` 98 / 0**, **`test_p112.sh` 109 / 0**.
+
+| p114 figure | as published | 🆕 restated | delta |
+|---|---|---|---|
+| rows at `full-reach` | 102 (34.5 %) | 🟢 **103 (34.8 %)** | **+1** |
+| lockable manifests | 2 135 | **2 143** | **+8** — the 8 missed files, exactly as sized |
+| manifests reached | 1 625 (76.1 %) | **1 633 (76.2 %)** | +8 |
+| manifests orphaned | 510 (23.9 %) | **510 (23.8 %)** | 🟢 **0** |
+| rows whose ROOT manifest is orphaned | 88 | 🟢 **87** | **−1** |
+| rows that moved | — | 🟢 **[`sdv-dev/sdv`](https://github.com/sdv-dev/sdv) `no-reach` → `full-reach`** | exactly one |
+
+🔵 **The orphan count does not move at all — all 8 newly-visible files are pins that ADD
+coverage, so numerator and denominator rise together.** That is the direction the widened
+rule predicts in its own header, and it is why no row lost a verdict it held.
+
+### 🔴 🆕 `Gap 406` — OPENED: there is a FOURTH npm lock flavour on this shelf, and it is sized at exactly one row
+
+🔵 **`P116-I` widened this axis from one npm lock flavour to three. The shelf has
+four.** Of the 70 rows this axis could not decide, **69** are rows whose root manifest is
+in an ecosystem with no lock grammar here at all (python 28, `npm,py` 12, maven, go,
+ruby). **The seventieth is not:**
+
+| row | root tree | why undecided |
+|---|---|---|
+| [`mietiainvestigacion-creator/api-eduadapt`](https://github.com/mietiainvestigacion-creator/api-eduadapt) | `package.json`, **`bun.lock`**, `bunfig.toml` | 🔴 **`bun.lock` is a fourth npm lock flavour this axis does not read** |
+
+🔵 **Sized, not guessed:** exactly **1 of 134** rows. The file is JSON-shaped — a
+`workspaces` map keyed by path, each entry carrying its own `dependencies` — so it is
+very likely parseable, which is precisely why it is **declared rather than parsed on a
+hunch**: adding a grammar without a fixture and a control is how the three false
+positives above were produced in the first place.
+
+🔵 **Error direction:** one-way and benign. A flavour this axis cannot read makes a row
+**undecidable**, never `agree` and never `drift`, so no published figure here is wrong
+because of it — the decidable denominator is 64 rather than 65.
+
+🔵 **How it ends:** a `bun.lock` grammar with its own fixtures in the suite, the census
+re-run, and the decidable denominator restated from 64 to 65.
+
+### 🟢 The 64 decidable rows, by declared-dependency volume
+
+🔵 **Every row below read `agree` — `declared/present` with zero missing. Volume matters
+because it is the size of the graph a client team inherits intact.**
+
+| repo | declared / present | ecosystems |
+|---|---|---|
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🟢 **345 / 345** | npm (yarn, workspaces — `P116-L`) |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🟢 **268 / 268** | npm 133 + composer 135 |
+| [`yukazakiri/koakademy`](https://github.com/yukazakiri/koakademy) | 🟢 **214 / 214** | npm 125 + composer 89 |
+| [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) | 🟢 **197 / 197** | npm (yarn) |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🟢 **174 / 174** | npm 54 + composer 120 |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 **170 / 170** | npm (yarn) |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 **118 / 118** | npm 71 + composer 47 |
+| [`claroline/Claroline`](https://github.com/claroline/Claroline) | 🟢 **101 / 101** | npm 51 + composer 50 |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🟢 **88 / 88** | npm |
+| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🟢 **86 / 86** | npm (pnpm) |
+| [`ucfopen/UDOIT`](https://github.com/ucfopen/UDOIT) | 🟢 **79 / 79** | npm 22 + composer 57 |
+| [`libretexts/shapeshift`](https://github.com/libretexts/shapeshift) | 🟢 **73 / 73** | npm |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 🟢 **63 / 63** | npm |
+| [`inducer/relate`](https://github.com/inducer/relate) | 🟢 **63 / 63** | npm |
+| [`pressbooks/pressbooks`](https://github.com/pressbooks/pressbooks) | 🟢 **57 / 57** | npm 21 + composer 36 |
+| [`openmage/magento-lts`](https://github.com/openmage/magento-lts) | 🟢 **50 / 50** | composer |
+| [`elgg/elgg`](https://github.com/elgg/elgg) | 🟢 **49 / 49** | npm 7 + composer 42 |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🟢 **46 / 46** | npm 18 + composer 28 |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🟢 **43 / 43** | npm 6 + composer 37 |
+| [`aiverify-foundation/moonshot-ui`](https://github.com/aiverify-foundation/moonshot-ui) | 🟢 **42 / 42** | npm |
+
+🔵 *44 further rows read `agree` at smaller volumes; the full census is
+`compose/code/p116-lock-agreement/result.2026-10-11.tsv`.*
+
+# Education — foundational repos
+
 **Pass 115, 2026-10-11.** ⏱️ **Second pass of this date** (census window
 **01:13 → 01:25 UTC**).
 
