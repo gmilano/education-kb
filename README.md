@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-11
 ---
 
+## Pass 129 — 2026-10-11
+
+⏱️ **Sixteenth pass of this date** (census window **14:4x → 15:3x UTC**).
+
+🔴 **A pass that overturns the previous pass's cause.** p128 established a real rule about `git`
+(`ls-remote --tags` emits a `^{}` dereference line per annotated tag) and attributed this corpus's
+wrong tag figures to it. 🟢 **Re-derived from the evidence file `p108` itself committed, the
+instrument was never wrong: `result.2026-10-10.tsv` records `moodle/moodle` **591** and
+`openedx/edx-platform` **5 896** — and the page `p108` wrote says **590** and **451**, neither of
+which appears anywhere in its own output.** 🔵 **The defect is TRANSCRIPTION, from the instrument to
+the prose, and no clause in this lineage had named it.**
+
+| finding | verdict | figure |
+|---|---|---|
+| `P129-A` | 🔴 **THE PAGES DISAGREE WITH THIS KB'S OWN MEASUREMENT** | **13 addresses**, **37 sites repaired** over 8 live pages; p108's committed TSV agrees with today's re-measure on **13 of 13** |
+| `P129-B` | 🔴 **THE ERROR HAS TWO SIGNS, and the understating one is the dangerous one** | `451` is exactly `edx-platform`'s dereference count (**13.1×** low); `16` is exactly `kolibri`'s (**33.9×** low) |
+| `P129-C` | 🔴 **SUPERLATIVE REFUTED BY A ROW TWO LINES AWAY** | *"`OpenOLAT` … 542 tags … the most of any repository in this KB"* — `repos/foundations.md` published `moodle/moodle` at **590** on the line above. Live on **6 sites** |
+| `P129-D` | 🟡 **A REPAIR BOUND TO INLINE ADDRESSES REACHES 11 OF 32 SITES** | the binder bound **207 of 470** figures; short-name-only lines and bare column figures carry the rest |
+| `P129-E` | 🔴 **`ACTION AT` REFUTED — and answered on another population** | **1** placeholder holder in **359** addresses; 🟢 **46 of 59** Apache-2.0/ECL addresses name no licensor in `LICENSE` **or** `NOTICE` |
+| `P129-F` | 🟢 **4 NEW ADDRESSES, ALL FROM LAYER-SPECIFIC QUERIES** | Open edX's MCP harness (**AGPL-3.0**, 2 repos, released) · a third **MIT** Canvas connector (**EMEA** holder) · 🟢 **the first Blackboard connector in this KB — ISC, 22 tags, LATAM/Peru** |
+| `P129-G` | 🔴 **CHANNEL IS A POLICY — now with a control** | non-GitHub hosts: `403 to CONNECT` at the gateway **and** `ENOTFOUND` in the fetch tool; 🟢 **github.com answers in both**, so the tool is not broken — the allowlist is the finding |
+
+🟢 **Instrument: `compose/code/p129-transcription-audit/` — `test_p129.sh` **21 passed / 0 failed**,
+fully offline, over 13 fixtures.** It carries the counting rule as a pure function over an
+`ls-remote` dump (`count_tags.sh`), the figure→address binder with the correction apparatus as a
+SCOPE, the holder census, and the repair writer.
+
+🔴 **Regions: zero new tokens in all four, third consecutive pass.** 🔴 **EMEA returned nothing
+education-specific at all** (enterprise-AI proxies, one US-only survey, one 2023 study); APAC
+returned vendor announcements only; North America and LATAM returned figures this KB already holds,
+every one of them. 🟢 **The SUPPLY side moved instead, and it placed two of its four new addresses
+by region — LATAM and EMEA.**
+
+### Verdicts on p128's pre-registrations
+
+🔴 **`ACTION AS` — REFUTED on its second clause.** **13** addresses change (clause: ≥ 5), but the
+causes are **four**, not two: line-counting, dereference-count-as-total, a dated release, and
+transcription. 🟢 **The refutation is the finding: `speechocean762` was published as ZERO releases and
+carries one tag dated 2022-07-06 — neither a dereference nor a release explains it, and p108's own
+file says `9` for the row below it.**
+
+🔴 **`ACTION AT` — REFUTED.** **359** shelf addresses probed on the payload lane: **163** NAMED,
+**53** DOCUMENT-TEXT (the licence text's own steward, not the work's licensor), **94** with no holder
+in the operative text, **47** with no payload, **1** PLACEHOLDER (p128's own `researchrubrics`),
+**1** HOLDER-BY-REFERENCE. 🔴 **Zero FURTHER placeholders, against a clause of 3.**
+
+🟡 **`ACTION AU` — UNREFUTABLE AS WRITTEN, not refuted on the count.** The generic set returned
+**0** new addresses; **a ratio clause with a zero denominator cannot be refuted**, so the 3× form was
+void before it ran. 🟢 **On absolute counts the direction holds hard: layer-specific 4, generic 0.**
+
+🟢 **`ACTION AV` — NOT REFUTED.** `P128-B` is not the only one. `P129-C` is the fourth instance of
+the shape, and the cheapest refutation again sat on this KB's own page. 🔵 **A fifth ran in the
+opposite direction this pass: the new holder instrument read `sdv-dev/sdv` as `MIT` — because
+BSL-1.1 names MIT as its *Change License* — and this KB's own pages, which hold it as BUSL-1.1 on
+nine sites, refuted the instrument.**
+
+### Pre-registered for p130
+
+🟢 **`ACTION AW`** — re-derive every published figure from the committed instrument output that
+produced it, not from the web. 🔴 *Refuted if fewer than 5 further figures disagree with their own
+pass's evidence file.*
+
+🟢 **`ACTION AX`** — give the binder the three forms `P129-D` found it blind to: a short name in
+backticks with no inline address, a bare figure in a tag column, and a slash-separated ordinal list
+(`26 / 6 / 23 tags`). 🔴 *Refuted if binding does not rise from 207/470 to ≥ 400/470, or if any of
+the 37 repaired sites regresses.*
+
+🟢 **`ACTION AY`** — probe whether the **46** Apache-2.0/ECL addresses that name no licensor in
+either canonical file name one in their source headers. 🔴 *Refuted if fewer than 20 of the 46
+carry one.*
+
+🟢 **`ACTION AZ`** — state a supply clause that survives a zero denominator: measure new addresses
+per query against the layer it names. 🔴 *Refuted if any generic query returns a new address that no
+layer-specific query returns.*
+
 ## Pass 128 — 2026-10-11
 
 ⏱️ **Fifteenth pass of this date** (census window **13:4x → 14:2x UTC**).
@@ -1348,7 +1423,7 @@ pase 98.**
 🟢 **`P1010`: antes de declarar un nivel bloqueado por una propiedad, re-medí las filas EXISTENTES de
 ese nivel.** 🔴 **Y no es anécdota de un nivel: una TERCERA fila arrastrada apareció con la columna
 vacía en el mismo pase** — `OpenOLAT/OpenOLAT`, en la página de plataformas **desde el pase 35**,
-mide **542 tags**, más que cualquier otro repositorio de esta base.
+mide **542 tags** — 🔴 **empatado con `learningequality/kolibri` (542) y por detrás de `moodle/moodle` (591) y `openedx/edx-platform` (5 896)** ⚠️ **was más que cualquier otro repositorio de esta base**<!--corrected--> (`P129-C`).
 
 🔴 **Lo que queda no es un hueco de oferta sino de CORPUS (`T21`, `Gap 390`):** el código es
 permisivo y corre, pero los **pesos distribuidos** se entrenaron sobre **PERSUADE 2.0**, que su
@@ -1614,7 +1689,7 @@ de modo que habría hecho prometer a un cliente libertades que la licencia no da
 
 ### 🟢 Dos capas nuevas, las dos de consultas que nombran la TÉCNICA (`P955`)
 
-- 🟢 **Taxonomía de skills** — `nestauk/ojd_daps_skills` (**MIT**, `v3.0.0`, 8 tags, 🟢 **EMEA** por la
+- 🟢 **Taxonomía de skills** — `nestauk/ojd_daps_skills` (**MIT**, `v3.0.0`, 7 tags ⚠️ **was 8 tags**<!--corrected-->, 🟢 **EMEA** por la
   línea de titular *«Copyright (c) 2024, Nesta»*) · `KonstantinosPetrakis/esco-skill-extractor`
   (**MIT** leído del CUERPO, sin título, y 🔴 **con comillas tipográficas** — `P998`) ·
   `dkavargy/ESCOPlus2.0` (**MIT**, mantiene la taxonomía misma).
@@ -1625,7 +1700,7 @@ de modo que habría hecho prometer a un cliente libertades que la licencia no da
   ROI de esta industria comparten UNA oficina de licenciamiento.** 🟢 El sello `"BY DOWNLOADING"` ya
   atrapó 2 de 2. 🔴 **Es clave de búsqueda, nunca veredicto — `P975` manda.**
 - 🟢 **Credencialización** — `CredentialEngine/Open-Badge-Publisher` (**Apache-2.0**, 11 357 B
-  prístino, 4 de 4 encabezados) y `nfh-trust-labs/opencred` (**MIT**, `v1.9.1`, 30 tags) contra
+  prístino, 4 de 4 encabezados) y `nfh-trust-labs/opencred` (**MIT**, `v1.9.1`, 21 tags ⚠️ **was 30 tags**<!--corrected-->) contra
   🔴 **cuatro emisores AGPL/LGPL**. 🔵 **`P1001`/`T17`: la licencia permisiva está del lado que MIDE y
   el copyleft del lado que se vuelve el REGISTRO** — segunda confirmación independiente, siete pases
   después de la del scoring (`Gap 372`). 🔵 **Publicado como falsable, con las tres consultas que lo

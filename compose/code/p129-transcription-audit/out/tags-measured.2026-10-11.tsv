@@ -1,0 +1,79 @@
+ArnaudGuiovanna/tutor-mcp	10	3	7	v0.6.1
+1EdTech/openbadges-validator-core	39	11	28	v1.1.1
+CredentialEngine/Open-Badge-Publisher	0	0	0	
+EducationalTestingService/rsmtool	50	17	33	v9.1.1
+Fuann/open-apa	0	0	0	
+GarethManning/education-agent-skills	0	0	0	
+Halleck45/OpenPronounce	4	2	2	v0.3.0
+GeminiLight/gen-mentor	7	3	4	v0.1.0
+HendrikStrobelt/detecting-fake-text	0	0	0	
+Imalwayshere/Open-Detector	0	0	0	
+Jasig/SSP	57	28	29	ssp-2.9.0
+JazminVidal/gop-pykaldi	0	0	0	
+KonstantinosPetrakis/esco-skill-extractor	0	0	0	
+KamalEzzo/automated-essay-grading-system	0	0	0	
+LearningLocker/learninglocker	221	0	221	v7.1.1
+MontrealCorpusTools/Montreal-Forced-Aligner	116	0	116	v3.4.3
+Li-Evan/Bloom	0	0	0	
+OpenOLAT/OpenOLAT	925	383	542	OpenOlat_20.0.pre2
+SafeExamBrowser/seb-server	194	86	108	v3.0-latest
+YuanGongND/gopt	0	0	0	
+UniTime/unitime	202	101	101	v4.9.93
+aiverify-foundation/moonshot	26	0	26	0.7.6
+ahnopologetic/canvas-lms-mcp	3	0	3	v0.1.2
+aiverify-foundation/moonshot-cicd	7	1	6	uat0.2
+alessandroryo/student-dropout-prediction	0	0	0	
+apereo-learning-analytics-initiative/lap-sakai-extractor	0	0	0	
+apache/ofbiz-framework	47	21	26	release24.09.07
+apereo-learning-analytics-initiative/opendashboard-legacy	4	1	3	RC1.0.2
+bigbluebutton/bigbluebutton	338	19	319	v4.0.x-beta.3
+csmediapro/moodle-mcp-server	7	0	7	v0.1.7
+bruchris/canvas-lms-mcp	78	0	78	canvas-lms-mcp-v2.2.0
+dkavargy/ESCOPlus2.0	0	0	0	
+cortezaproject/corteza	308	10	298	2026.9.0-rc.2
+doheejin/HiPAMA	0	0	0	
+douglasrizzo/catsim	38	1	37	0.9.1
+doheejin/ProTACT	0	0	0	
+dspace/dspace	226	90	136	language-pack-1_4_1
+ed-fi-alliance-oss/Ed-Fi-Data-Standard	21	0	21	v6.1.0
+ed-fi-alliance-oss/Ed-Fi-ODS	44	2	42	v7.3.2-pre
+european-commission-empl/european-digital-credentials	4	0	4	2.0.6
+jibberswrld/fcps-school-mcp	8	4	4	v1.2.0
+jimbozhang/speechocean762	1	0	1	v1.2.0
+frappe/education	17	0	17	v16.1.0
+kaldi-asr/kaldi	0	0	0	
+juneyaooo/lineage-skill	0	0	0	
+lingjzhu/charsiu	0	0	0	
+mitodl/open-learning-ai-tutor	30	15	15	v0.0.24
+moodle/moodle	1181	590	591	v5.3.0-rc2
+nfh-trust-labs/opencred	30	9	21	v1.9.1
+nestauk/ojd_daps_skills	8	1	7	v3.0.0
+open-spaced-repetition/free-spaced-repetition-scheduler	0	0	0	
+open-spaced-repetition/fsrs-browser	34	0	34	v6.6.0
+open-spaced-repetition/fsrs-optimizer	127	0	127	v6.5.0
+open-spaced-repetition/fsrs-rs	73	0	73	v6.6.2
+open-spaced-repetition/fsrs4anki	200	1	199	v6.1.3
+open-spaced-repetition/go-fsrs	16	0	16	v4.0.0-rc1
+open-spaced-repetition/py-fsrs	38	0	38	v6.3.2
+open-spaced-repetition/srs-benchmark	0	0	0	
+open-spaced-repetition/ts-fsrs	145	31	114	v5.4.2
+openfun/arnold	119	0	119	v6.9.0
+openedx/edx-platform	6347	451	5896	xmod-reuse-refactor-skeleton
+openfun/django-lti-toolbox	7	0	7	v2.0.0
+openfun/marsha	152	6	146	v5.9.1
+openfun/joanie	46	1	45	v3.5.0
+openfun/openedx-docker	208	4	204	ironwood.2-oee-1.1.1
+openfun/richie	166	27	139	v3.5.1
+openfun/ralph	32	0	32	v5.0.1
+openfun/potsie	17	0	17	v1.2.2
+peancor/moodle-mcp-server	0	0	0	
+openfun/warren	13	0	13	v0.5.0-api
+pupilfirst/pupilfirst	100	43	57	v2024.2.1efffc4
+shibing624/judger	0	0	0	
+supe-log/writing-engine	0	0	0	
+saylordotorg/moodle-local_ai_course_assistant	428	132	296	v7.8.7
+toshieji/moodle-grading-mcp	0	0	0	
+tl-its-umich-edu/my-learning-analytics	39	1	38	2026.01.02
+tzyll/goparrot	0	0	0	
+vishalsachdev/canvas-mcp	26	3	23	v1.9.0
+yetanalytics/lrsql	152	37	115	v1.0.0-pre_ui_testing

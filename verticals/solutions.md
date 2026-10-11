@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-11
 ---
 
+# Education — vertical platforms and solutions
+
+**Pass 129, 2026-10-11.** ⏱️ **Sixteenth pass of this date** (census window **14:4x → 15:3x UTC**).
+
+🔴 **The platform claim this page has carried since pass 35 is refuted, by a row on another page of
+this KB that was published at the same time.** 🟢 **And the Open edX platform gains a released,
+institutionally-shaped agent surface — AGPL-3.0, two repositories, 12 releases between them.**
+
+## 🔴 🆕 `P129-C` — *"the most release-engineered platform"* was false when it was written
+
+🟢 **`OpenOLAT/OpenOLAT` does measure 542 tags** (925 `ls-remote` lines − 383 dereferences), and
+p108's committed evidence file says 542 too. 🔴 **What fails is the sentence built on it**, live on
+**6 sites** across six pages:
+
+| the platform | 🟢 real tags, re-measured 2026-10-11 | grant | what the KB published |
+|---|---|---|---|
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🟢 **5 896** | 🟡 AGPL-3.0 | 🔴 **451** — its dereference count (`P129-B`) |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 **591** | 🟡 GPL-3.0 | 🔴 590 — also its dereference count |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | **542** | 🟢 **Apache-2.0** | 🟢 542, correct |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **542** | 🟢 **MIT** | 🔴 **16** — its dereference count |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | — | 🟡 AGPL-3.0 | pin `v5.14.2` |
+
+🔵 **`moodle` at 590 was on this KB's own `repos/foundations.md` release ladder, one line above
+`edx-platform`, at the moment the superlative was written.** 🔴 **590 > 542. The cheapest refutation
+was two lines away and nothing checked it** — the fourth instance of the shape after `p103`,
+`P127-B` and `P128-B`, and the one that discharges p128's `ACTION AV`.
+
+🟢 **The claim that survives, stated so it cannot be stretched:** `OpenOLAT` is **the most
+release-engineered PERMISSIVE platform in this KB** — Apache-2.0 at 542 tags — 🟡 **tied on count by
+`kolibri` (MIT, 542) and beaten on count by two copyleft platforms.** 🔵 **For a client that must
+fork and close a platform, the permissive pair is `OpenOLAT` (full LMS/LCMS, QTI 2.1) and `kolibri`
+(offline-first), and they are now known to be equally released.**
+
+## 🟢 🆕 Open edX gets an agent surface, and it is the institutional one
+
+| layer | address | grant | 🟢 real tags | what it gives a platform engagement |
+|---|---|---|---|---|
+| facade | 🆕 [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) | 🔴 **AGPL-3.0** | **5** (`v0.1.5`) | course, user, role, enrolment, certificate, report and authoring operations over native platform APIs |
+| deployment | 🆕 [`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp) | 🔴 **AGPL-3.0** | **7** (`v0.1.7`) | a Tutor plugin: installs the Django app into LMS/CMS, runs the MCP server as its own container behind Caddy |
+
+🟢 **Why this is a platform row and not an agent row.** Authorisation is **the platform's own**
+`is_staff` / `is_superuser`, re-checked live on every request; there is no separate identity model,
+no Hasura, no multi-tenant org layer. 🔵 **An Open edX operator can therefore reason about the agent
+surface with the access-control model they already audit.** 🔴 **AGPL-3.0 — the same tier as
+`edx-platform` itself, so hosting is unchanged and redistribution is a review.**
+
+🟡 **The Moodle column is still empty and this pass can say so precisely.** The Moodle agent edge
+has `csmediapro/moodle-mcp-server` (**AGPL-3.0**), `peancor/moodle-mcp-server`,
+`toshieji/moodle-grading-mcp` and `a2br/moodle-mcp` (**MIT, 0 tags**, confirmed again from p108's own
+file). 🔴 **Zero permissive releases at the Moodle edge against Canvas's three permissive connectors
+and Open edX's two released AGPL ones.** 🔵 **For the platform with the largest install base in
+LATAM and EMEA public education, that gap is the single most valuable thing on this page.**
+
+## 🟢 The platform table's own figures, re-derived — a control for `P129-A`
+
+🟢 **12 of the 15 figures in this page's ≥ 50-tags table reproduce EXACTLY** when dereference lines
+are subtracted: `o365-moodle` 695 (785 − 90), `bigbluebutton` 319 (338 − 19), `elgg` 309 (422 − 113),
+`pressbooks` 302 (325 − 23), `transformers` 291 (537 − 246), `koakademy` 232 (441 − 209),
+`magento-lts` 163 (204 − 41), `dspace` 136 (226 − 90), `manifold` 121 (215 − 94),
+`fwu-kc-extensions` 118 (118 − 0), `integration_openai` 58 (95 − 37), `context_chat_backend` 53
+(64 − 11). 🔵 **So this table was measured correctly.**
+
+🟡 **Three moved, all upward and all by releases cut since**: `ollama` 689 → **691**,
+`temporalio/temporal` 573 → **574**, `course-tencent-cloud` 67 → **68**. 🟢 **`ollama` cut
+`v0.40.3-rc0` on 2026-10-09, read over the git lane without the API.** 🔵 **None crosses the
+50-tag threshold, so this page's counts — 5 permissive and 11 copyleft rows at ≥ 50 tags, 19 of 38
+permissive rows with zero — are unchanged.** 🔴 **`moodle-local_ai_course_assistant` is corrected
+295 → 296 here, on both of the two sites that carried it.**
+
 # Education — vertical platforms and the agent edge
 
 **Pass 128, 2026-10-11.** ⏱️ **Fifteenth pass of this date** (census window **13:4x → 14:2x UTC**).
@@ -1931,7 +2000,7 @@ platforms are almost all copyleft, and the permissive rows are almost all unrele
 | [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🔴 **LGPL-3.0** · 7 652 B | 🔴 `v3.0.x-develop` · 🟢 **319** | 🔵 unplaced | Virtual classroom. Re-confirmed byte-exact this pass |
 | [`elgg/elgg`](https://github.com/elgg/elgg) | 🔴 **GPL-2.0** · `LICENSE.txt` 17 173 B | 🔴 `7.x` · 🟢 **309** | 🔵 unplaced | Social-learning network engine |
 | [`pressbooks/pressbooks`](https://github.com/pressbooks/pressbooks) | 🔴 **GPL-3.0** · `LICENSE.md` 35 147 B | 🔴 `dev` · 🟢 **302** | 🟢 **North America** | Open-textbook authoring and publishing |
-| [`saylordotorg/moodle-local_ai_course_assistant`](https://github.com/saylordotorg/moodle-local_ai_course_assistant) | 🔴 **GPL-3.0** · 35 149 B | `main` · 🟢 **295** | 🟢 **North America** (Saylor Academy) | 🔵 **An AI course assistant INSIDE Moodle, from a degree-granting nonprofit** — 295 tags |
+| [`saylordotorg/moodle-local_ai_course_assistant`](https://github.com/saylordotorg/moodle-local_ai_course_assistant) | 🔴 **GPL-3.0** · 35 149 B | `main` · 🟢 **296** ⚠️ **was 295 tags**<!--corrected--> | 🟢 **North America** (Saylor Academy) | 🔵 **An AI course assistant INSIDE Moodle, from a degree-granting nonprofit** — 296 tags ⚠️ **was 295 tags**<!--corrected--> |
 | [`yukazakiri/koakademy`](https://github.com/yukazakiri/koakademy) | 🔴 **AGPL-3.0** · `LICENSE.md` 34 523 B | `master` · 🟢 **232** | 🔵 unplaced | Full academy platform. 🔴 **Network copyleft** |
 | [`openmage/magento-lts`](https://github.com/openmage/magento-lts) | 🔴 **OSL-3.0** · `LICENSE.txt` 10 293 B | `main` · 🟢 **163** | 🔵 unplaced | 🔴 **Commerce, not education** — carried only because the reset dropped it. OSL-3.0 is a reciprocal licence, not permissive |
 | [`manifoldscholar/manifold`](https://github.com/manifoldscholar/manifold) | 🔴 **GPL-3.0** · `LICENSE.md` 35 141 B | `main` · 🟢 **121** | 🟢 **North America** | Scholarly-monograph reading platform |
@@ -1952,7 +2021,7 @@ engineering and the picture reverses:**
 | | permissive (MIT/Apache/BSD) | copyleft (GPL/AGPL/LGPL/OSL) |
 |---|---|---|
 | rows | 🟢 **38** | 22 |
-| 🔴 **rows with ≥ 50 tags** | 5 — `ollama` (689), `temporal` (573), `transformers` (291), `dspace` (136), `fwu-kc-extensions` (118) | 🔴 **11** — `o365-moodle` (695), `bigbluebutton` (319), `elgg` (309), `pressbooks` (302), `moodle-local_ai_course_assistant` (295), `koakademy` (232), `magento-lts` (163), `manifold` (121), `course-tencent-cloud` (67), `integration_openai` (58), `context_chat_backend` (53) |
+| 🔴 **rows with ≥ 50 tags** | 5 — `ollama` (689), `temporal` (573), `transformers` (291), `dspace` (136), `fwu-kc-extensions` (118) | 🔴 **11** — `o365-moodle` (695), `bigbluebutton` (319), `elgg` (309), `pressbooks` (302), `moodle-local_ai_course_assistant` (296 ⚠️ **was 295**<!--corrected-->), `koakademy` (232), `magento-lts` (163), `manifold` (121), `course-tencent-cloud` (67), `integration_openai` (58), `context_chat_backend` (53) |
 | 🔴 rows with **zero** tags | 🔴 **19 of 38** | 4 of 22 |
 
 🔵 **`T29`: in education, the PLATFORM is copyleft and released; the permissive supply is mostly
@@ -2112,8 +2181,8 @@ on this page.**
 | licence | 🟢 Apache-2.0, 10 982 B — carried since pass 35 | 🟢 **re-confirmed**, and 🟢 **clause-probed for the first time: 3 of 4** — *Grant of Copyright License*, *Grant of Patent License*, *Redistribution* present, **only *APPENDIX* absent**, which carries no terms |
 | `NOTICE.TXT` | not read | 🔴 **14 712 B, and it points at `LICENSE.TXT` — which returns `404`.** The file is `LICENSE` |
 
-🟢 **542 tags makes `OpenOLAT` the most release-engineered platform on this page** — more than
-`seb-server`'s 194 — 🔵 **and it is an Apache-2.0 LMS, so the fact matters: it is evidence of
+🟡 **542 tags makes `OpenOLAT` the most release-engineered platform on THIS page** ⚠️ **was the most release-engineered platform**<!--corrected--> — 🔴 **but not in this KB: `learningequality/kolibri` also measures 542 and `openedx/edx-platform` 5 896 (`P129-C`)** — more than
+`seb-server`'s 108 ⚠️ **was 194**<!--corrected--> — 🔵 **and it is an Apache-2.0 LMS, so the fact matters: it is evidence of
 sustained maintenance on the one established platform here a client can fork and close.**
 
 🟢 **`P974` is vindicated by the case that nearly failed it.** 🔴 **10 982 B is NOT canonical
@@ -2192,7 +2261,7 @@ KB's platform page, verified, and **the 2026-10-06 reset dropped it** (`Gap 387`
 
 | platform | grant (payload · bytes · ref · SHA-14) | release ladder | layer | region |
 |---|---|---|---|---|
-| 🆕 p98 [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | 🟡 **MPL-2.0** · `LICENSE` **16 725 B** · `master` · `7f45689f797337` | 🟢 **194 tags**, `v3.0-latest` | **Exam supervision and lockdown** — the layer this page had nothing for | 🟡 **EMEA** (ETH Zürich lineage: upstream's Java package tree is `ch/ethz/seb/`; 🔵 **package-path evidence, not a holder line** — `P800` cannot be applied, because MPL-2.0's text carries no holder) |
+| 🆕 p98 [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | 🟡 **MPL-2.0** · `LICENSE` **16 725 B** · `master` · `7f45689f797337` | 🟢 **108 tags** ⚠️ **was 194 tags**<!--corrected-->, `v3.0-latest` | **Exam supervision and lockdown** — the layer this page had nothing for | 🟡 **EMEA** (ETH Zürich lineage: upstream's Java package tree is `ch/ethz/seb/`; 🔵 **package-path evidence, not a holder line** — `P800` cannot be applied, because MPL-2.0's text carries no holder) |
 
 🟢 **The archive proves the row existed:** `archive/2026-10-06-pre-reset/repos-foundations.md:3774`
 carries *"🟢 `SafeExamBrowser/seb-server` (⚠️ MPL-2.0, `HEAD` de `master` = `7f45689`,

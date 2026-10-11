@@ -6,6 +6,147 @@ updated: 2026-10-11
 
 # Education — AI agents shelf
 
+**Pass 129, 2026-10-11.** ⏱️ **Sixteenth pass of this date** (census window **14:4x → 15:3x UTC**).
+
+🟢 **A SUPPLY pass and a transcription audit.** The payload lane answered as usual; every non-GitHub
+host is refused in both directions (`P129-G`). What changed the shelf is that **four new addresses
+arrived, all four from layer-specific queries**, and that **13 of this shelf's published release
+figures disagreed with the measurement this KB had already committed** (`P129-A`).
+
+## 🟢 🆕 `P129-F` — four new addresses, and the layer each one closes
+
+🔵 **Every row below was read on the git lane only: `git ls-remote --tags` for the release count
+with `^{}` dereference lines subtracted, the payload on `raw.githubusercontent.com` for the grant,
+and the holder line read inside the operative text.**
+
+| address | grant · payload · holder | 🟢 real tags | latest | region | what it is |
+|---|---|---|---|---|---|
+| 🆕 [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli) | 🟢 **ISC** · `LICENSE` 748 B · © 2026 **Alejandro Oroncoy** | 🟢 **22** (34 lines − 12 deref) | `v2.2.0` | 🟢 **LATAM** (Peru — *"UPC Aula Virtual, Peru"* stated in its own README) | 🟢 **The first BLACKBOARD connector in this KB.** CLI + MCP server over Blackboard Learn: courses, assignments, grades, feedback, materials, plus Crossref / OpenAlex / Scopus lookup. Canvas and Moodle on its roadmap |
+| 🆕 [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) | 🔴 **AGPL-3.0** · `LICENSE` 34 524 B · 🔵 no licensor named (FSF document text) | 🟢 **5** (10 − 5) | `v0.1.5` | 🔵 unplaced — no location evidence read | Open edX plugin exposing **staff / superuser** admin operations as a REST facade for MCP. Native `openedx-platform` APIs; authorisation is the platform's own `is_staff` / `is_superuser`, re-checked per request |
+| 🆕 [`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp) | 🔴 **AGPL-3.0** · `LICENSE` 34 524 B · 🔵 no licensor named | 🟢 **7** (14 − 7) | `v0.1.7` | 🔵 unplaced | The Tutor plugin that stands the above up: installs the Django app, runs a streamable-http MCP container behind Caddy at `mcp.<LMS_HOST>`. 🟢 **The MCP server holds no secrets — each request carries its own key** |
+| 🆕 [`admin978/canvas-mcp`](https://github.com/admin978/canvas-mcp) | 🟢 **MIT** · `LICENSE` 1 072 B · © 2026 **AGENTE 404 S.L** | 🟡 **3** (3 − 0) | `v0.1.3` | 🟡 **EMEA, weakly** — the holder is an `S.L.`, a Spanish company form; no location is stated | A **third** permissive Canvas connector: local-first, single-user, token in `~/.canvas.env`, no broker. 🔴 **Self-declared alpha** |
+
+🟢 **What this does to the LMS connector layer, which is this KB's most commercially used page.**
+
+| LMS | permissive and released? | the row to start from |
+|---|---|---|
+| Canvas | 🟢 **yes, three** | `bruchris/canvas-lms-mcp` (MIT, 78 tags, widest write surface) · `vishalsachdev/canvas-mcp` (MIT, 23 tags, `P800`-grade North America) · 🆕 `admin978/canvas-mcp` (MIT, 3 tags, alpha) |
+| Open edX | 🔴 **no — released, but AGPL-3.0** | 🆕 `blend-ed/openedx-mcp` + `blend-ed/tutor-contrib-openedxmcp`, **12 releases between them** |
+| Blackboard | 🟡 **yes, one, and it is student-side** | 🆕 `alejooroncoy/campus-cli` (ISC, 22 tags) |
+| Moodle | 🔴 **still nothing** | `csmediapro/moodle-mcp-server` is AGPL-3.0; `a2br/moodle-mcp` is MIT with **0** releases |
+
+🔴 **The governance warning that travels with `campus-cli` and must be said before it is proposed:
+it authenticates with the STUDENT's own SSO session and needs no institutional OAuth key.** 🔵 **That
+is exactly why it exists and exactly why an institution cannot adopt it as-is** — it is a template
+for an institutional Blackboard connector, not a deployable one. 🟢 **ISC is the permissive half of
+that trade: the code can be taken and re-pointed at an institutional credential.**
+
+🟡 **And the Open edX harness is the mirror image: institutionally shaped, authorisation-correct,
+released — and AGPL-3.0.** 🔵 **For a client that will host it and not redistribute, AGPL is a
+licence review, not a blocker; for a client shipping a product, it is a rewrite.** 🟢 **That choice
+is now costable, because both halves exist and are pinned.**
+
+## 🔴 🆕 `P129-A` — this shelf's release figures disagreed with the measurement this KB had already committed
+
+🟢 **p128's rule about `git` is correct and this pass reproduces it.** 🔴 **Its attribution was
+wrong.** `compose/code/p108-release-identity/census.sh` already subtracts dereference lines — its
+committed `result.2026-10-10.tsv` carries `tags_uniq` — and on **13 of 13** addresses that file
+agrees exactly with today's independent re-measure. 🔵 **The wrong numbers were typed onto the
+pages, not produced by the instrument.**
+
+| address | published (stale) | p108's committed `result.2026-10-10.tsv` reads | re-measured today | cause |
+|---|---|---|---|---|
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | **451** | 🟢 **5 896** | 🟢 **5 896** (6 347 − 451) | 🔴 **the dereference count, published as the total — 13.1× low** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **16** | 🟢 **542** | 🟢 **542** (558 − 16) | 🔴 **same, 33.9× low** |
+| [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | **194** | 🟢 **108** | 🟢 **108** (194 − 86) | 🟡 the line count |
+| [`Jasig/SSP`](https://github.com/Jasig/SSP) | **57** | 🟢 **29** | 🟢 **29** (57 − 28) | 🟡 the line count |
+| [`nfh-trust-labs/opencred`](https://github.com/nfh-trust-labs/opencred) | **30** | 🟢 **21** | 🟢 **21** (30 − 9) | 🟡 the line count |
+| [`nestauk/ojd_daps_skills`](https://github.com/nestauk/ojd_daps_skills) | **8** | 🟢 **7** | 🟢 **7** (8 − 1) | 🟡 the line count |
+| [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | **38** | 🟢 **37** | 🟢 **37** (38 − 1) | 🟡 the line count |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | **590** | 🟢 **591** | 🟢 **591** (1 181 − 590) | 🔴 **the dereference count — and here it is 1 low, which is why it survived 21 passes** |
+| [`saylordotorg/moodle-local_ai_course_assistant`](https://github.com/saylordotorg/moodle-local_ai_course_assistant) | **295** | 🟢 **296** | 🟢 **296** (428 − 132) | 🟢 a dated release (`v7.8.7`, 2026-10-10) |
+| [`jimbozhang/speechocean762`](https://github.com/jimbozhang/speechocean762) | 🔴 **0** | 🟢 **1** | 🟢 **1** | 🔴 **neither — its one tag `v1.2.0` is dated 2022-07-06** |
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **112** | 🟢 **115** | 🟢 **115** (152 − 37) | 🔴 **neither; 99 of its 115 tags are `vN.N.N` and the newest is `v0.9.9` (2026-10-01)** |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 26 → 23 | 🟢 **23** | 🟢 **23** | 🟢 repaired by p128, confirmed here |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | **542** | 🟢 **542** | 🟢 **542** (925 − 383) | 🟢 **the figure is right; the sentence around it is not — `P129-C`** |
+
+🟢 **Repaired on 37 sites across 8 live pages**, each marked with this KB's own correction marker so
+the old value stays readable: `README.md` (3), `agents/top.md` (7), `repos/foundations.md` (8),
+`verticals/solutions.md` (5), `intel/market.md` (1), `intel/trends.md` (4), `intel/open-gaps.md` (2),
+`compose/patterns.md` (7). 🔵 **The two append-only pages carry 10 further sites and are NEVER
+edited — their dated sections at the top carry the corrections forward (p128's `ACTION AQ`).**
+
+🟢 **The control that makes `P129-A` more than a list of repairs: 12 of the 15 figures in
+`verticals/solutions.md`'s ≥ 50-tags table reproduce EXACTLY** — `transformers` 291 off 537 lines,
+`koakademy` 232 off 441, `manifold` 121 off 215 — 🔵 **so whoever wrote that table did subtract the
+dereferences.** 🟢 **The three that moved (`ollama` 689 → **691**, `temporalio/temporal` 573 → **574**,
+`course-tencent-cloud` 67 → **68**) are dated releases; `ollama` cut `v0.40.3-rc0` on 2026-10-09.**
+🔴 **So the defect is PER-PASS, not corpus-wide — which means it cannot be fixed by a rule and can
+only be fixed by re-deriving each figure from the evidence file of the pass that published it.**
+🔵 **Pre-registered as `ACTION AW`.**
+
+## 🟡 🆕 `P129-D` — a repair bound to inline addresses reaches 11 of the 32 tag sites
+
+🟢 **The binder is the one this pass built and committed** (`bind_tags.py`, with the correction
+apparatus treated as a SCOPE rather than a token, so a figure inside `⚠️ **was N tags**` is read as
+the record of a retracted claim and never as a live one). 🔴 **It bound 207 of 470 figures across the
+ten pages, and reached 11 of the 32 sites that actually needed repair.**
+
+| the form that carries a figure | bound? | example |
+|---|---|---|
+| an inline address plus `N tags` in one cell | 🟢 yes | `` [`x/y`](…) │ 🟢 **8 tags** `` |
+| a short name in backticks, no inline address | 🔴 **no** | *"`Jasig/SSP` (Apache-2.0, 57 tags) remains the tier's only other"* |
+| a bare figure in a tag column | 🔴 **no** | `` `main` · 🟢 **295** `` |
+| a slash-separated ordinal list | 🔴 **no, and it MIS-binds** | a three-figure list for three addresses, `26 / 6 / 23` on `intel/market.md` → the third figure binds to `moonshot-cicd`, which has **6** releases |
+| an ordinal list of six figures for six addresses | 🔴 **mis-binds** | *"139/146/204/119/45/32 tags on the six"* |
+
+🔴 **This is `P125-H`'s class in a new place: an assertion run over a domain narrower than its
+claim.** 🔵 **The repair this pass shipped was therefore driven by `(project name, old value)` pairs
+over all live pages, not by the binder** — and the binder's own gap is pre-registered as `ACTION AX`
+with a clause that forbids regressing any of the 37 sites.
+
+## 🔴 🆕 `P129-E` — `ACTION AT` is refuted, and the population it was looking for is the Apache tier
+
+🟢 **359 shelf addresses, every grant payload read on the lane that answers.** 🔵 **The instrument
+had to learn three distinctions before its output meant anything, and all three are asserted in
+`test_p129.sh`:**
+
+- 🔴 **the standard texts of Apache-2.0, GPL-3 and MPL-2.0 CONTAIN a placeholder holder line** inside
+  their *"how to apply"* instructions, so the operative text is truncated at that boundary first;
+- 🔴 **GPL-3's wrapped prose** (*"copyright on the Program, and are irrevocable"*) reads as a holder
+  line to any `^copyright` pattern — a notice must open with a year or a bracketed field;
+- 🔴 **the FSF line in a GPL payload is the holder of the LICENCE DOCUMENT**, not the licensor of the
+  work — p125's `DOCUMENT-TEXT` label, now a verdict rather than a note.
+
+| verdict | n | reading |
+|---|---|---|
+| **NAMED** | 🟢 **163** | a licensor is identified in the operative text (123 MIT, 17 BSD, 5 Apache-2.0, …) |
+| **NO-HOLDER-IN-OPERATIVE-TEXT** | 🟡 **94** | 47 Apache-2.0, 16 unknown-family, 12 ECL, 10 CC, 3 GPL, … |
+| **DOCUMENT-TEXT** | 🔵 **53** | the licence text's own steward (25 GPL, 18 AGPL, 9 LGPL) |
+| **NO-PAYLOAD** | 🔴 **47** | no grant file at nine canonical filenames |
+| **PLACEHOLDER** | 🔴 **1** | [`scaleapi/researchrubrics`](https://github.com/scaleapi/researchrubrics) — *"Copyright (c) 2025 [Authors/Institution]"*, 🔵 **p128's own find, and the only one in 359** |
+| **HOLDER-BY-REFERENCE** | 🟡 **1** | [`Submitty/Submitty`](https://github.com/Submitty/Submitty) — *"(c) 2014-2026, [Submitty team](AUTHORS.md)"*; 🟢 **the reference resolves (`AUTHORS.md`, 200)**, so this is a named licensor, not an unfilled field |
+
+🔴 **So `ACTION AT`'s clause fails: zero FURTHER placeholders against a clause of three.** 🟢 **And
+the question it asked has a much larger answer one tier over: of the 59 Apache-2.0 / ECL addresses
+whose grant names no licensor, 46 have NO `NOTICE` file either** — 13 do, and those 13 name a
+holder. 🔵 **Among the 46: `HKUDS/DeepTutor`, `huggingface/smolagents`, `sakaiproject/sakai`,
+`opencast/opencast`, `numbas/Numbas`, `aiverify-foundation/moonshot`, `ed-fi-alliance-oss/Ed-Fi-ODS`,
+all eight `Apereo-Learning-Analytics-Initiative/*` rows, `adlnet/ADL_LRS`.** 🟢 **Why it matters
+commercially: Apache-2.0 §4(d) obliges a redistributor to carry the NOTICE file's contents, and a
+diligence question of the form "who grants this to us?" has no answer in the repository for 46 of
+this KB's shelf rows.** 🔵 **Pre-registered as `ACTION AY`: the licensor is probably in the source
+headers, and that is a measurable claim.**
+
+🔵 **One more instance of `ACTION AV`'s shape, running the other way.** This instrument's first
+reading called [`sdv-dev/sdv`](https://github.com/sdv-dev/sdv) **MIT** — because **BSL-1.1 names
+MIT as its *Change License***, and a family detector that scans for `"MIT License"` finds it there.
+🟢 **This KB's own pages hold it as BUSL-1.1 on nine sites and refuted the new instrument.**
+🔴 **The family detector now tests the non-OSI families FIRST, and `test_p129.sh` asserts that a
+BSL-1.1 payload is never classified MIT.**
+
+# Education — AI agents shelf
+
 **Pass 128, 2026-10-11.** ⏱️ **Fifteenth pass of this date** (census window **13:4x → 14:2x UTC**).
 
 🟢 **This is a MEASUREMENT pass.** Two of this KB's three working lanes are refused to this session
@@ -2871,7 +3012,7 @@ and a classifier that mapped filename → licence would have shelved a proprieta
 - 🟢 **`Gap 385` is DISCHARGED. A permissive open-source student early-warning system exists:
   [`Jasig/SSP`](https://github.com/Jasig/SSP)** — the Apereo **Student Success Plan** —
   **Apache-2.0**, `LICENSE` 11 359 B, `master` · `711244dc0d6d5c65fd261c9bec77dd48b4dbaaf6`,
-  **57 tags** (top `ssp-2.9.0`), `pom.xml` `org.jasig.ssp:ssp:2.9-SNAPSHOT`.
+  **29 tags** ⚠️ **was 57 tags**<!--corrected--> (top `ssp-2.9.0`), `pom.xml` `org.jasig.ssp:ssp:2.9-SNAPSHOT`.
   🔴 **Five passes of this shelf said this layer had no permissive row. It had one with 57 releases.**
 - 🔵 **`P1012`: an incumbent consortium's code may still be addressed under its PREDECESSOR
   organisation's name.** Measured, not inferred: `apereo/SSP`, `apereo/OpenLRW`, `apereo/openlrs` and
@@ -2922,7 +3063,7 @@ and a classifier that mapped filename → licence would have shelved a proprieta
   (`v12.0.0`).** 🔵 **Neither had ever had its tags counted, because `tags` only became a measured
   column at pass 98.** 🟢 **`P1010`: re-measure a tier's EXISTING rows before declaring the tier
   blocked on a newly measured property.** 🔴 **A THIRD instance landed in the same pass** —
-  `OpenOLAT/OpenOLAT`, on the platform page **since pass 35**, measures **542 tags**, the most of any
+  `OpenOLAT/OpenOLAT`, on the platform page **since pass 35**, measures **542 tags** — 🔴 **tied with `learningequality/kolibri` and behind `moodle/moodle` (591) and `openedx/edx-platform` (5 896)** ⚠️ **was the most of any repository in this KB**<!--corrected--> (`P129-C`), not the most of any
   repository in this KB. 🔵 **Three carried rows, three empty tag columns, one false gap: `P1010` is a
   property of every row tabled before pass 98.**
 - 🟢 **`P1011`: in a regulated activity, search the INCUMBENT's open-source output before the AI
@@ -3420,7 +3561,7 @@ grant → reading list, never a dependency.**
 | `doheejin/ProTACT` | 🟢 **BSD-3-Clause** | 🔴 **0** | **cross-prompt** trait scoring, ACL Findings 2023 — 🔴 **paper artefact** |
 
 🟢 **The control is in this same pass, same industry, same instrument:** `canvas-mcp` **23 tags** ⚠️ **was 26 tags**<!--corrected--> **/
-`v1.14.0`**, `HKUDS/DeepTutor` **135 tags**, `SafeExamBrowser/seb-server` **194 tags**.
+`v1.14.0`**, `HKUDS/DeepTutor` **135 tags**, `SafeExamBrowser/seb-server` **108 tags** ⚠️ **was 194 tags**<!--corrected-->.
 🔵 **So the tier is not licence-blocked. It is release-blocked** — and that changes what the studio
 sells: 🟢 **not "find a scorer" but "harden one of three permissive scorers to a release", with
 `ProTACT`'s cross-prompt property as the one worth hardening** because transfer to an unseen prompt
@@ -3753,7 +3894,7 @@ buyer this tier serves had no supply tier at all.
 
 | repo | grant (payload · bytes · ref · SHA-14) | release ladder | ★ | region | what it is |
 |---|---|---|---|---|---|
-| 🆕 p98 [`nestauk/ojd_daps_skills`](https://github.com/nestauk/ojd_daps_skills) | 🟢 **MIT** · `LICENSE` **1 095 B** · `dev` · `e73c2b5045793d` | 🟢 **8 tags**, `v3.0.0` | — | 🟢 **EMEA** — holder *"Copyright (c) 2024, Nesta"* (UK), read off the grant (`P800`) | 🟢 **The anchor.** Extracts skill phrases from free text and maps them onto **ESCO**, **Lightcast Open Skills** or a custom taxonomy. 🔵 **The taxonomy is a parameter** — which is exactly what a studio serving several clients and jurisdictions needs. |
+| 🆕 p98 [`nestauk/ojd_daps_skills`](https://github.com/nestauk/ojd_daps_skills) | 🟢 **MIT** · `LICENSE` **1 095 B** · `dev` · `e73c2b5045793d` | 🟢 **7 tags** ⚠️ **was 8 tags**<!--corrected-->, `v3.0.0` | — | 🟢 **EMEA** — holder *"Copyright (c) 2024, Nesta"* (UK), read off the grant (`P800`) | 🟢 **The anchor.** Extracts skill phrases from free text and maps them onto **ESCO**, **Lightcast Open Skills** or a custom taxonomy. 🔵 **The taxonomy is a parameter** — which is exactly what a studio serving several clients and jurisdictions needs. |
 | 🆕 p98 [`KonstantinosPetrakis/esco-skill-extractor`](https://github.com/KonstantinosPetrakis/esco-skill-extractor) | 🟢 **MIT, read from the BODY** · `LICENSE` **1 068 B** · `master` · `cf2877d462f99a` | 🔴 **0 tags** → `UNRELEASED` (`P985`) | — | 🔵 unplaced — the holder is a person, so `P800` yields no institution | ESCO skills **and** ISCO occupations from job descriptions or CVs, by sentence embedding + cosine similarity. Ships on PyPI and as a Docker image. |
 | 🆕 p98 [`dkavargy/ESCOPlus2.0`](https://github.com/dkavargy/ESCOPlus2.0) | 🟢 **MIT** · `LICENSE` **1 086 B** · `main` · `88338a7cc196c8` | 🔴 **0 tags** | — | 🟡 **EMEA, weakly** — holder *"Copyright (c) 2026 Dimitrios Christos Kavargyris"*; the sibling slug a search named sits under `Datalab-AUTH`, Aristotle University of Thessaloniki | Extends and maintains the ESCO taxonomy itself from live job-ad data. 🔵 **The maintenance end, not the extraction end** — ESCO ages, and this is the only row here that addresses that. |
 
@@ -3785,7 +3926,7 @@ on a seam this KB has already met once.**
 | repo | grant (payload · bytes · ref · SHA-14) | release ladder | what it does |
 |---|---|---|---|
 | 🆕 p98 [`CredentialEngine/Open-Badge-Publisher`](https://github.com/CredentialEngine/Open-Badge-Publisher) | 🟢 **Apache-2.0** · **11 357 B pristine**, 🟢 4 of 4 clause headings (`P974`) · `main` · `278b9d7dc084a6` | 🔴 **0 tags** | 🟢 **The only permissive row in the layer**, and it **publishes** badge descriptions to the Credential Registry. 🔴 **No `NOTICE`** — so no holder, so no region from the payload. |
-| 🆕 p98 [`nfh-trust-labs/opencred`](https://github.com/nfh-trust-labs/opencred) | 🟢 **MIT** · **1 071 B**, *"Copyright (c) 2026 NFH Trust Labs"* · `main` · `0fd0a9c65356db` | 🟢 **30 tags**, `v1.9.1` | Local-first **W3C Verifiable Credentials** issuer/verifier; issuer private keys never leave the host. 🔵 **The permissive issuing option is the GENERIC VC one, not the Open Badges one.** |
+| 🆕 p98 [`nfh-trust-labs/opencred`](https://github.com/nfh-trust-labs/opencred) | 🟢 **MIT** · **1 071 B**, *"Copyright (c) 2026 NFH Trust Labs"* · `main` · `0fd0a9c65356db` | 🟢 **21 tags** ⚠️ **was 30 tags**<!--corrected-->, `v1.9.1` | Local-first **W3C Verifiable Credentials** issuer/verifier; issuer private keys never leave the host. 🔵 **The permissive issuing option is the GENERIC VC one, not the Open Badges one.** |
 | 🔴 p98 `19otherrsh-dot/Opencred` | 🔴 **AGPL-3.0** · 34 523 B · `main` · `d14619e186ed08` | — | Open Badges 3.0, `did:web` issuers, status-list revocation, Docker/Helm. 🔴 **Same project NAME as the row above, different repository, opposite licence** (`P1000`). |
 | 🔴 p98 `Schroedinger-Hat/certo` | 🔴 **AGPL-3.0** · 33 820 B · `main` · `6fd0a11fe2ff61` | — | Open Badges 3.0 on Strapi/Nuxt, bulk CSV issuance, public verification page. |
 | 🔴 p98 `LongsightGroup/credtrail-app` | 🔴 **AGPL-3.0** · 34 523 B · `main` · `948a8ca43f3f33` | — | Open Badges 3.0, Ed25519 signing, `did:web`. |
@@ -3808,7 +3949,7 @@ platform since **pass 43**.
 
 | repo | grant (payload · bytes · ref · SHA-14) | release ladder | what already exists HERE |
 |---|---|---|---|
-| 🆕 p98 [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | 🟡 **MPL-2.0** · `LICENSE` **16 725 B** · `master` · `7f45689f797337` | 🟢 **194 tags**, `v3.0-latest` | 🟢 **`sebserver-mcp-gate`** (MCP allowlist, `P85`'s second instance), 🟢 **`seb-proctoring-validator`** (closes upstream gap 90 in `ProctoringSettingsValidator.java`), 🟢 **`proctoring-reach-audit`** (which provider methods talk to the remote). 🔵 **FIRST MPL-2.0 row on any live page here** — per-file copyleft (§1.10(a)), so a proprietary integration layer is lawful and only modified MPL files reciprocate. |
+| 🆕 p98 [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | 🟡 **MPL-2.0** · `LICENSE` **16 725 B** · `master` · `7f45689f797337` | 🟢 **108 tags** ⚠️ **was 194 tags**<!--corrected-->, `v3.0-latest` | 🟢 **`sebserver-mcp-gate`** (MCP allowlist, `P85`'s second instance), 🟢 **`seb-proctoring-validator`** (closes upstream gap 90 in `ProctoringSettingsValidator.java`), 🟢 **`proctoring-reach-audit`** (which provider methods talk to the remote). 🔵 **FIRST MPL-2.0 row on any live page here** — per-file copyleft (§1.10(a)), so a proprietary integration layer is lawful and only modified MPL files reciprocate. |
 | 🆕 p98 [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp) | 🟢 **MIT** · `LICENSE` **1 120 B** · `main` · `5695878b4735ed` | 🔴 **0 tags** → `UNRELEASED` | 🟢 **`grading-draft-gate`, 37/37 offline with negative controls.** 🔵 **`Gap 372`'s seam in one repo: it writes the grade at `workflowstate=readyforreview` and never releases it** — the human stays the author of record, which is precisely what the Annex III high-risk framing asks for. |
 | 🆕 p98 [`juneyaooo/lineage-skill`](https://github.com/juneyaooo/lineage-skill) | 🟢 **Apache-2.0** · `LICENSE` **11 358 B** · `main` · `7e2cbc5dc31713` | 🔴 **0 tags** | Carried by `aiact-50-2-marking`. 🔵 **11 358 B in a REPOSITORY refines `P992`** — that byte count is not unique to `apache.org`. |
 
@@ -4057,7 +4198,7 @@ withdrawn — the sampling difference remains the explanation.
 ## What this shelf still does not have
 
 - 🟢 🆕 **p101: `Gap 385` is DISCHARGED — and it was a SEARCH failure, not a supply failure.**
-  `Jasig/SSP` (Apache-2.0, 57 tags) has existed since 2012 under Apereo's **predecessor** org name, so
+  `Jasig/SSP` (Apache-2.0, 29 tags ⚠️ **was 57 tags**<!--corrected-->) has existed since 2012 under Apereo's **predecessor** org name, so
   every `apereo/*` probe this KB could have run would have returned ABSENT (`P1012`). 🔴 **What is
   genuinely missing is narrower and now stated precisely: a permissive, MODERN, release-engineered ML
   early-warning implementation.** 4 of 6 candidates are ungranted, 1 is non-commercial by its own terms,

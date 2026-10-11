@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Pass 129 — 2026-10-11 (sixteenth pass of this date), 14:4x–15:3x UTC
+
+🔵 **APPEND-ONLY page. This section is added above p128's and nothing below it is edited.**
+
+🟢 **A discovery week on the supply side, after eight passes of none** — and every one of the four
+new addresses came from a query naming a LAYER, not from the four mandated generic queries, which
+returned **0 new addresses** for the third consecutive pass.
+
+| 🆕 this week | grant | 🟢 real tags | latest | region | layer |
+|---|---|---|---|---|---|
+| [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli) | 🟢 **ISC** (748 B, © 2026 Alejandro Oroncoy) | 🟢 **22** | `v2.2.0` | 🟢 **LATAM** (Peru, stated) | 🟢 **Blackboard — a layer this KB had NOTHING on** |
+| [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) | 🔴 **AGPL-3.0** (34 524 B) | 🟢 **5** | `v0.1.5` | 🔵 unplaced | Open edX admin MCP facade |
+| [`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp) | 🔴 **AGPL-3.0** (34 524 B) | 🟢 **7** | `v0.1.7` | 🔵 unplaced | the Tutor plugin that deploys it |
+| [`admin978/canvas-mcp`](https://github.com/admin978/canvas-mcp) | 🟢 **MIT** (1 072 B, © 2026 AGENTE 404 S.L) | 🟡 **3** | `v0.1.3` | 🟡 **EMEA, weakly** (`S.L.`) | a third permissive Canvas connector, alpha |
+
+🔴 **The four mandated generic queries, for the record.** `top open source AI agents education 2026
+github MIT` → `microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch` — **held**, and both
+are curricula about AI rather than education agents. `github trending education AI 2026` →
+`rohitg00/ai-engineering-from-scratch`, `MadsLorentzen/ai-job-search` — **held**, ninth consecutive
+empty pass on that query. `open source platform education ERP CRM MIT Apache` → OpenEduCat, Odoo,
+ERPNext, Twenty — **held**. `AI education industry trends 2026` → market-size estimates only.
+
+🟢 **The four layer-specific queries, and what each actually returned.** `open source QTI 3
+assessment item bank github Apache 2026` → Longsight's `qti3` stack and
+`gnowledge/OpenAssessmentsClient`, **both held** (0 new). `open source OneRoster rostering SIS
+connector github 2026` → Moodle's in-tree `enrol_oneroster`, a MIT Ruby gem, **0 new** — this KB
+already holds six OneRoster addresses. `open source xAPI learning record store github Apache 2026` →
+`LearningLocker`, `leogaggl/lxHive`, TRAX, `openfun/ralph`, **all held** (🔵 **and the channel called
+`lxHive` GPL-3; its payload is 18 092 B of LGPL — a classifier claim this KB does not have to
+inherit**). `MCP server Moodle Canvas Open edX github 2026` → 🟢 **all four new addresses.**
+
+### 🔴 Corrections carried forward onto this page (it is never edited)
+
+🔵 **Five figures below this line are stale as of this pass. The claims keep their dates; the
+current values are stated here, where the reader arrives.** Cause and evidence in `P129-A` on
+`agents/top.md`.
+
+| row below | published (stale) | 🟢 re-measured 2026-10-11, and equal to what p108's committed `result.2026-10-10.tsv` reads |
+|---|---|---|
+| `SafeExamBrowser/seb-server` | 194 tags | 🟢 **108** (194 `ls-remote` lines − 86 `^{}` dereferences) |
+| `nestauk/ojd_daps_skills` | 8 tags | 🟢 **7** |
+| `nfh-trust-labs/opencred` | 30 tags | 🟢 **21** |
+| `jimbozhang/speechocean762` | 🔴 0 tags | 🟢 **1** — `v1.2.0`, dated **2022-07-06**, so this was never a release-freshness question |
+| *"`OpenOLAT` … 542 tags … the most of any repository in this KB"* | as written | 🔴 **refuted: `learningequality/kolibri` also measures 542, `moodle/moodle` 591, `openedx/edx-platform` 5 896** (`P129-C`) |
+
+🔴 **Zero new tokens in all four regions, third consecutive pass, and one region returned nothing at
+all.** EMEA's mandated query returned enterprise-AI material with **no named education player,
+ministry or programme** — a CompTIA figure that is US-only and a Workday study from 2023. 🔵 **That
+is written down as an informed gap, not as coverage.** APAC returned vendor announcements (TCS ×
+Pearson, LearnUpon's Sydney HQ, a Diligent Institute 57 % enterprise figure) and no education
+regulation. North America and LATAM returned only figures this KB already holds — the $169 M higher-ed
+commitment, CMU + Gates' $55 M, OpenAI's eight national partners, 71 % of US teachers untrained,
+UNESCO IESALC's 87 % / 26 %, the Digital Education Council's 92 % / 79 %, Chile's 2021 national AI
+policy, Mexico's SEP / ANUIES, the IDB's ILIA index.
+
+🟡 **One live conflict the channel surfaced and this KB will not resolve from here**: UNESCO IESALC
+reports **26 %** of 200 LAC institutions holding a formal AI framework, while a Tecnológico de
+Monterrey speaker is quoted at **30 %** of LATAM universities having *published* policies. 🔵 **Two
+different predicates, compatible — and neither readable first-hand, because `iesalc.unesco.org` and
+`digitaleducationcouncil.com` are refused at the gateway AND unresolvable in the fetch tool
+(`P129-G`).**
+
 ## 🟢 Pass 128 — 2026-10-11 (fifteenth pass of this date), 13:4x–14:2x UTC
 
 🔵 **APPEND-ONLY page. This section is added above p127's and nothing below it is edited.**

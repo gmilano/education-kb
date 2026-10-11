@@ -6,6 +6,79 @@ updated: 2026-10-11
 
 # Education — compose patterns
 
+**Pass 129, 2026-10-11.** ⏱️ **Sixteenth pass of this date** (census window **14:4x → 15:3x UTC**).
+
+🟢 **Three new patterns, each built only from addresses this pass read byte-for-byte on the git
+lane, with the release count stated as real tags (dereference lines subtracted) and the licensor
+stated from the payload's operative text.**
+
+## 🟢 `PAT-P129-1` — an Open edX admin agent an institution can actually audit (6–8 weeks)
+
+🔵 **For**: a university or ministry already operating Open edX (Tutor-deployed) that wants staff to
+run course, enrolment, certificate and report operations through an assistant.
+
+| step | address | grant · 🟢 real tags | wiring |
+|---|---|---|---|
+| 1. platform | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🟡 **AGPL-3.0** · **5 896** tags, 🔴 of which only **12** are `vN.N.N` | 🟢 **Pin `v2.1.0`**, never a `release-YYYY-MM-DD` CI stamp — `P129-B` is the measurement behind that instruction |
+| 2. facade | 🆕 [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) | 🔴 **AGPL-3.0** · **5** (`v0.1.5`) | Installs as a Django app; exposes `/api/mcp/` and `/api/mcp/cms/`. 🟢 **Authorisation is the platform's own `is_staff`/`is_superuser`, re-checked per request — do not add a second identity model** |
+| 3. deployment | 🆕 [`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp) | 🔴 **AGPL-3.0** · **7** (`v0.1.7`) | Tutor plugin: builds the app into LMS/CMS, runs `openedxmcp` as its own container, Caddy at `mcp.<LMS_HOST>`. 🟢 **The MCP server holds no secrets; each request carries its own key** |
+| 4. gate | [`compose/code/mcp-allowlist-gateway/`](../compose/code/mcp-allowlist-gateway/) | 🟢 this KB's own | Put the allowlist in front of the facade so destructive operations are opt-in per role |
+| 5. evidence | [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 **MIT** · 32 tags | Emit xAPI for every agent-initiated action, so human-oversight evidence exists before an auditor asks |
+
+🔴 **The licence conversation to have in week 1, not week 7:** steps 2 and 3 are **AGPL-3.0**, the
+same tier as the platform. 🟢 **A client who HOSTS this takes on nothing new.** 🔴 **A client who
+packages it into a product they distribute is in a rewrite, and the honest alternative is to build
+the facade fresh against the same native APIs** — 🔵 **which is a quotable work package precisely
+because `openedx-mcp` documents the surface.**
+
+## 🟢 `PAT-P129-2` — an institutional Blackboard connector, started from the only permissive one that exists (4–6 weeks)
+
+🔵 **For**: a LATAM university on Blackboard Learn (the pattern's evidence base is Peru) that wants
+an assistant over courses, assignments, grades and feedback.
+
+| step | address | grant · 🟢 real tags | wiring |
+|---|---|---|---|
+| 1. base | 🆕 [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli) | 🟢 **ISC** · **22** (`v2.2.0`) | 🟢 **Take the Blackboard REST surface and the MCP tool definitions.** Its README states UPC's Aula Virtual, Peru |
+| 2. 🔴 **the rewrite that makes it institutional** | — | — | 🔴 **Replace the student-SSO session with an institutional OAuth developer key**, scope it per role, and move the token out of the student's machine. 🔵 **This is the whole engagement; ISC is what makes step 1 legal to start from** |
+| 3. policy | [`compose/code/p782-policy-gate/`](../compose/code/p782-policy-gate/) | 🟢 this KB's own | Per-course and per-role read/write scoping, evaluated before the Blackboard call |
+| 4. grading guard | [`compose/code/grading-draft-gate/`](../compose/code/grading-draft-gate/) | 🟢 this KB's own | 🔴 **Nothing the agent produces reaches a gradebook unreviewed** — the one rule a risk-based Brazilian or Chilean statute will test |
+| 5. academic integrity | [`compose/code/nomad-citation-trace/`](../compose/code/nomad-citation-trace/) | 🟢 this KB's own | `campus-cli` already queries Crossref, OpenAlex, Scopus and Web of Science; 🟢 **bind each returned source to a verifiable DOI before it enters a student's draft** |
+
+🟡 **Why this is the strongest LATAM pattern in this KB**: every prior LATAM pattern started from a
+gap and billed discovery. 🟢 **This one starts from 22 released versions of working code under a
+permissive grant**, and the work is the credential model — 🔵 **the part a university must own
+anyway.**
+
+## 🟢 `PAT-P129-3` — the figure-provenance gate, so a KB stops publishing numbers its own instruments contradict (1 week)
+
+🔵 **For**: any knowledge base, this one included, whose pages carry measured figures.
+
+| step | component | what it does |
+|---|---|---|
+| 1. measure once | [`compose/code/p129-transcription-audit/count_tags.sh`](../compose/code/p129-transcription-audit/count_tags.sh) | The counting rule as a pure function over an `ls-remote` dump: `lines − deref = real`. 🟢 **Testable with no network** |
+| 2. commit the evidence | `out/*.tsv` beside the instrument | 🟢 **p108 did this and that is the only reason `P129-A` was provable** |
+| 3. bind figure → address | [`bind_tags.py`](../compose/code/p129-transcription-audit/bind_tags.py) | Binds every `N tags` on a page to an address, with the correction apparatus treated as a **SCOPE**: a figure inside `⚠️ **was N tags**` is a retracted claim, never a live one |
+| 4. diff page against evidence | `bind_tags.py <root> <evidence.tsv>` | 🔴 **This is the gate.** p129 ran it against p108's own file and got **32 disagreements over 13 addresses** |
+| 5. repair in place, before prepending | [`repair_tags.py`](../compose/code/p129-transcription-audit/repair_tags.py) | Writes the new value, marks the old, emits the marker OUTSIDE the emphasis span, refuses the append-only pages, and is idempotent. 🔴 **Run it BEFORE a pass prepends its section, or every coordinate moves (`P126-A`)** |
+
+🔵 **Reusable beyond this KB, and that is the point**: 🟢 **the gate needs no network, no API and no
+model** — it compares what a page says against what the repository's own evidence file says.
+🔴 **Its current limit is `P129-D`: the binder reaches 207 of 470 figures, so a short name in
+backticks or a bare column figure still escapes it.** 🟢 **`ACTION AX` fixes that with a clause that
+forbids regressing any of the 37 sites repaired this pass.**
+
+## 🔴 Patterns on this page whose figures changed
+
+🟢 **Repaired on 7 sites on this page, each marked**: `SafeExamBrowser/seb-server` **194 → 108**,
+`Jasig/SSP` **57 → 29**, `nestauk/ojd_daps_skills` **8 → 7**, `nfh-trust-labs/opencred` **30 → 21**,
+`douglasrizzo/catsim` **38 → 37**. 🔵 **No pattern's conclusion changes: every pinned ref and every
+licence verdict on this page survives the re-measure** — 🟢 **`seb-server` is still the only
+proctoring layer here, `SSP` still the only education domain model with an Apache-2.0 grant, and
+`catsim` still the only computerised-adaptive-testing engine.** 🔴 **What changed is how released
+they are, and in four of the five cases they are less released than this page claimed.**
+
+# Education — compose patterns
+
 **Pass 128, 2026-10-11.** ⏱️ **Fifteenth pass of this date** (census window **13:4x → 14:2x UTC**).
 
 🟢 **Every address below was read from its licence payload this pass, on its real default branch,
@@ -3126,7 +3199,7 @@ repository's own archive before it is quoted as unbuyable.**
 | student-data spine | [`ed-fi-alliance-oss/Ed-Fi-ODS`](https://github.com/ed-fi-alliance-oss/Ed-Fi-ODS) | 🟢 **Apache-2.0** · `LICENSE.txt` **10 172 B** · `main` · `e453cd2cad8a0653c65453948d3d235aec7c517c` · **42 tags / `v7.3.2-pre`** | 🟢 **The operational data store and API that US districts already run** — enrolment, rostering, assessment, discipline. 🔵 **Education-specific AND permissive AND released: the combination `T26` said did not exist.** 🟡 **10 172 B is Apache-2.0 with the appendix omitted, not a modified grant** (`P1024`). 🔴 Top tag is `-pre`; ship from the newest stable `v7.3.x`. |
 | the model, without the server | [`ed-fi-alliance-oss/Ed-Fi-Data-Standard`](https://github.com/ed-fi-alliance-oss/Ed-Fi-Data-Standard) | 🟢 **Apache-2.0** · 10 173 B · 🔴 **`v6.2.0`** · `3d24df6` · **21 tags** | 🟢 **The cheap half when the client already has a warehouse and needs the SCHEMA.** 🔴 **Its default ref is a TAG-SHAPED BRANCH (`P1021`)** — `--symref` first, or you will believe you pinned a release. |
 | LMS edge | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B · `main` · `b054b913603a206c677565bcbec128652cb9d398` · **23 tags / `v1.14.0`** ⚠️ **was 26 tags**<!--corrected--> *(p99)* | 🟢 The only permissive **and released** LMS connector this KB has verified. 🔴 **Moodle has no row that is both** (`P1006`): **+3–4 weeks** for a Moodle variant. |
-| interpretable risk layer | `pyBKT` + [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 **BSD-3-Clause** · 1 514 B · 🔴 `dev` · `7e6caae84a8e7779422ba9338cfe2e2335185b28` · **38 tags** *(p101)* | 🟢 Explainable to a registrar. 🔴 Non-standard default ref (`P1020`). |
+| interpretable risk layer | `pyBKT` + [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 **BSD-3-Clause** · 1 514 B · 🔴 `dev` · `7e6caae84a8e7779422ba9338cfe2e2335185b28` · **37 tags** ⚠️ **was 38 tags**<!--corrected--> *(p101)* | 🟢 Explainable to a registrar. 🔴 Non-standard default ref (`P1020`). |
 | ML risk layer | **re-implement** (XGBoost + SHAP) | 🔴 **not takeable** | 🔴 **`Gap 392`: 6 of 6 unusable** — including one that excludes selling a service built on it. |
 | institutional corpus | [`dspace/dspace`](https://github.com/dspace/dspace) *(optional)* | 🟢 **BSD-3-Clause** · 1 504 B · `main` · `a5b0f0fc17ad5c7f8917eb89b9222f2c2d441aed` · **136 tags** | 🟡 Where a university's own outputs become a corpus to ground a tutor in. 🔴 **Do not sort its tags naively** — `language-pack-1_4_1` ranks last (`P978`). |
 | badges | 🟢 **validate** with [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) · 🔴 **minting is a BUILD** | 🟢 Apache-2.0 · **13 185 B** · `develop` · `0a66b52` · **28 tags** | 🔴 **`Gap 396`: the minter is ABSENT at 5 of 5 org names** (`concentricsky`, `1EdTech`, `IMSGlobal`, `instructure`, plus `badgr-ui`). 🟡 **`P1024`: the 13 185 B payload embeds its bundled-grant notice — OAuth and Base64, both Apache-2.0, so the closure is clean.** |
@@ -3161,8 +3234,8 @@ names the way through: build on a generic permissive core.**
 |---|---|---|---|
 | administrative core | [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0** · 11 906 B · `trunk` · `45506b377c855e455942b238dbd55e33fce79d4f` · **26 tags** | 🟢 ASF governance, **`P1013` bundle check CLEAN** (NOTICE 166 B; only Noto Sans Apache-2.0 + Public Domain timezones). Accounting, HR, catalogue, CRM already built. |
 | case management (alternative core) | [`cortezaproject/corteza`](https://github.com/cortezaproject/corteza) | 🟢 **Apache-2.0** · 11 358 B · `2024.9.x` · `3835dfc4ac8bd89381753f09042ad147a4502576` · **298 tags** | 🟢 Pick this instead of OFBiz when the deliverable is **advising caseloads and intervention tracking** rather than finance/inventory. 🔴 Pin a tag, not HEAD (`P1021`). |
-| education domain model | [`Jasig/SSP`](https://github.com/Jasig/SSP) | 🟢 **Apache-2.0** · 11 359 B · `master` · `711244dc0d6d5c65fd261c9bec77dd48b4dbaaf6` · **57 tags** *(p101)* | 🟢 **Take the SCHEMA and the early-alert / caseload / intervention model via its Liquibase changesets.** 🔴 **Do NOT take the front end** — `NOTICE` declares Ext JS **GPL-3.0**, JasperReports / JFreeChart / c3p0 **LGPL**, iText **MPL** (`P1013`). |
-| interpretable risk layer | `pyBKT` + [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 **BSD-3-Clause** · 1 514 B · 🔴 `dev` · `7e6caae84a8e7779422ba9338cfe2e2335185b28` · **38 tags** *(p101)* | 🟢 The part a registrar will accept because it can be explained. 🔴 Note the non-standard default ref (`P1020`). |
+| education domain model | [`Jasig/SSP`](https://github.com/Jasig/SSP) | 🟢 **Apache-2.0** · 11 359 B · `master` · `711244dc0d6d5c65fd261c9bec77dd48b4dbaaf6` · **29 tags** ⚠️ **was 57 tags**<!--corrected--> *(p101)* | 🟢 **Take the SCHEMA and the early-alert / caseload / intervention model via its Liquibase changesets.** 🔴 **Do NOT take the front end** — `NOTICE` declares Ext JS **GPL-3.0**, JasperReports / JFreeChart / c3p0 **LGPL**, iText **MPL** (`P1013`). |
+| interpretable risk layer | `pyBKT` + [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 **BSD-3-Clause** · 1 514 B · 🔴 `dev` · `7e6caae84a8e7779422ba9338cfe2e2335185b28` · **37 tags** ⚠️ **was 38 tags**<!--corrected--> *(p101)* | 🟢 The part a registrar will accept because it can be explained. 🔴 Note the non-standard default ref (`P1020`). |
 | ML risk layer | **re-implement** (XGBoost + SHAP calibration) | 🔴 **not takeable** | 🔴 **`Gap 392`: the modern ML early-warning tier is 6 of 6 unusable** — 4 ungranted, 1 non-commercial by its own text (`dssg/student-early-warning` **excludes selling a service that uses the Program**, which is Globant's model verbatim), 1 a portfolio project. 🟢 **Re-implementation is the cheap half; the model is 30 lines.** |
 | LMS edge | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B · `main` · `b054b913603a206c677565bcbec128652cb9d398` · **23 tags / `v1.14.0`** ⚠️ **was 26 tags**<!--corrected--> *(p99)* | 🟢 The only **permissive AND released** LMS connector this KB has verified. 🔴 For Moodle there is no row that is both (`P1006`), so a Moodle variant of this pattern costs a connector. |
 | learning-record store | 🔴 **behind a service boundary** | 🔴 LearningLocker **GPL-3.0** | 🔵 Reachable only across a process boundary; never linked into the deliverable. |
@@ -3203,7 +3276,7 @@ recognises.
 |---|---|---|---|
 | Domain model + schema | [`Jasig/SSP`](https://github.com/Jasig/SSP) · `master` · `711244dc0d6d5c65fd261c9bec77dd48b4dbaaf6` | 🟢 **Apache-2.0** (11 359 B) | **57 releases** of a real early-alert / caseload / intervention model, **originally granted by Sinclair Community College**. 🟢 **Its migrations are Liquibase changesets** (`NOTICE`: *Liquibase Core, Apache-2.0*), so **the schema is extractable as DDL without running the portlet app.** |
 | Per-skill mastery | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🟢 MIT | Bayesian Knowledge Tracing — **a per-skill mastery PROBABILITY is an explanation**; a network activation is not. |
-| Item difficulty / adaptive testing | [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) · **`dev`** · `7e6caae84a8e7779422ba9338cfe2e2335185b28` | 🟢 BSD-3-Clause (1 514 B, **38 tags**) | The only adaptive-testing engine on this shelf. 🔴 **Pin `dev`, not `main`** (`P1015`). |
+| Item difficulty / adaptive testing | [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) · **`dev`** · `7e6caae84a8e7779422ba9338cfe2e2335185b28` | 🟢 BSD-3-Clause (1 514 B, **37 tags** ⚠️ **was 38 tags**<!--corrected-->) | The only adaptive-testing engine on this shelf. 🔴 **Pin `dev`, not `main`** (`P1015`). |
 | Risk classifier + explanation | `scikit-learn` (BSD-3), `xgboost` (Apache-2.0), `shap` (MIT) | 🟢 permissive | 🔵 **The DESIGN is read from [`Gnanakamalesh-M/student-dropout-early-warning`](https://github.com/Gnanakamalesh-M/student-dropout-early-warning) — calibrated XGBoost + SHAP, 30-day withdrawal horizon at fixed course checkpoints — which is 🔴 UNGRANTED (0 of 24 filenames) and must be RE-IMPLEMENTED, not vendored.** |
 | Event pipe | [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) · `5fec948a823e372e740df521aa3684c8df1dcba7` | 🔴 **GPL-3.0** (221 tags) | xAPI Learning Record Store. 🔴 **Deploy as a SERVICE over HTTP; never link it into client code.** 🔵 Or emit xAPI to the institution's existing LRS and ship no store at all. |
 | Agent surface | the agent-skill unit (`T1`), per `P91-C` | — | The advisor-facing "who should I call today, and why" skill is the deliverable the client sees. |
@@ -4315,7 +4388,7 @@ three were on no shelf page** — `UniTime` until pass 96, `seb-server` until pa
 | step | repo | grant · ref · release ladder | gate already committed here | what it does |
 |---|---|---|---|---|
 | 1. **schedule** | [`UniTime/unitime`](https://github.com/UniTime/unitime) | 🟢 **Apache-2.0** · `master` · **101 tags**, `v4.9.152` *(counted p96; not re-read this pass)* | 🟢 `compose/code/unitime-mcp-gate/` (`P85`) | Timetabling, course and exam-period scheduling. 🔴 **Apache §4(d): its `NOTICE` is 22 526 B and must be propagated.** |
-| 2. **supervise** | [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | 🟡 **MPL-2.0** · `master` · `7f45689f797337` · 🟢 **194 tags**, `v3.0-latest` | 🟢 `compose/code/sebserver-mcp-gate/` + `seb-proctoring-validator/` + `proctoring-reach-audit/` | Exam lockdown, session supervision, proctoring-provider configuration. 🟢 **Per-file copyleft — integrate directly; do NOT build beside it.** |
+| 2. **supervise** | [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | 🟡 **MPL-2.0** · `master` · `7f45689f797337` · 🟢 **108 tags** ⚠️ **was 194 tags**<!--corrected-->, `v3.0-latest` | 🟢 `compose/code/sebserver-mcp-gate/` + `seb-proctoring-validator/` + `proctoring-reach-audit/` | Exam lockdown, session supervision, proctoring-provider configuration. 🟢 **Per-file copyleft — integrate directly; do NOT build beside it.** |
 | 3. **grade** | [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp) | 🟢 **MIT** · `main` · `5695878b4735ed` · 🔴 **0 tags** | 🟢 `compose/code/grading-draft-gate/` — **37/37 offline, with negative controls** | Writes the grade at `workflowstate=readyforreview` and **never releases it.** |
 | 4. **validate the grade** | [`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool) + [`skll`](https://github.com/EducationalTestingService/skll) | 🟢 **Apache-2.0** / **BSD-3** | — | The evidence package (`T13`, `T17`). 🔵 **This is the half a regulator and an appeal actually consume.** |
 | 5. **record** | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** | — | Every exam event as xAPI. 🟢 **The deployer's own audit trail, which `T18` says the institution must produce itself.** |
@@ -4364,12 +4437,12 @@ regularly, and only 1 in 3 workers got employer-provided AI training in the last
 
 | step | repo | grant · ref · release ladder | what it does here |
 |---|---|---|---|
-| 1. **extract skills** | [`nestauk/ojd_daps_skills`](https://github.com/nestauk/ojd_daps_skills) | 🟢 **MIT** · `dev` · `e73c2b5045793d` · 🟢 **8 tags**, `v3.0.0` | Skill phrases out of CVs, job descriptions and internal role docs, mapped onto **ESCO**, **Lightcast Open Skills** or a custom taxonomy. 🟢 **Pin this one — it is the only row in the tier with a release ladder.** |
+| 1. **extract skills** | [`nestauk/ojd_daps_skills`](https://github.com/nestauk/ojd_daps_skills) | 🟢 **MIT** · `dev` · `e73c2b5045793d` · 🟢 **7 tags** ⚠️ **was 8 tags**<!--corrected-->, `v3.0.0` | Skill phrases out of CVs, job descriptions and internal role docs, mapped onto **ESCO**, **Lightcast Open Skills** or a custom taxonomy. 🟢 **Pin this one — it is the only row in the tier with a release ladder.** |
 | 1b. **occupations too** | [`KonstantinosPetrakis/esco-skill-extractor`](https://github.com/KonstantinosPetrakis/esco-skill-extractor) | 🟢 **MIT** (titleless payload) · `master` · 🔴 0 tags | ESCO skills **and** ISCO occupations by embedding similarity; PyPI + Docker. 🔵 Use where the client needs role-level inference, not only skill-level. |
 | 2. **keep the taxonomy alive** | [`dkavargy/ESCOPlus2.0`](https://github.com/dkavargy/ESCOPlus2.0) | 🟢 **MIT** · `main` · 🔴 0 tags | Extends and validates ESCO from live job-ad data. 🔵 **The only answer here to "the taxonomy is three years stale".** |
 | 3. **measure mastery, not opinion** | `pyBKT` (MIT) · `py-irt` (MIT) · `eribean/girth` · `douglasrizzo/catsim` (BSD-3) | 🟢 permissive | The psychometric tier. 🔴 **Mastery is an INPUT to readiness, never a substitute for it** (`Gap 385`'s wording). |
 | 4. **shorten the assessment** | [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) + `py-irt` | 🟢 **BSD-3 / MIT** | Adaptive testing: fewer items, same confidence — 🔵 **the difference between a 90-minute skills audit and a 15-minute one, which is what decides adoption inside a company.** |
-| 5. **credential the outcome** | [`CredentialEngine/Open-Badge-Publisher`](https://github.com/CredentialEngine/Open-Badge-Publisher) (Apache-2.0) to publish; [`nfh-trust-labs/opencred`](https://github.com/nfh-trust-labs/opencred) (MIT, **30 tags**, `v1.9.1`) to issue | 🟢 permissive | 🟢 **The only all-permissive path through the credentialing layer** (`T17`): the four Open Badges *issuers* are AGPL/LGPL. |
+| 5. **credential the outcome** | [`CredentialEngine/Open-Badge-Publisher`](https://github.com/CredentialEngine/Open-Badge-Publisher) (Apache-2.0) to publish; [`nfh-trust-labs/opencred`](https://github.com/nfh-trust-labs/opencred) (MIT, **21 tags** ⚠️ **was 30 tags**<!--corrected-->, `v1.9.1`) to issue | 🟢 permissive | 🟢 **The only all-permissive path through the credentialing layer** (`T17`): the four Open Badges *issuers* are AGPL/LGPL. |
 | 6. **deliver and record** | `OpenOLAT` (Apache-2.0) for the corporate-facing LMS · `yetanalytics/lrsql` for xAPI | 🟢 **Apache-2.0** | 🔴 **NOT `frappe/lms`** — a 2026 listicle calls it MIT and the payload says **AGPL-3.0** (`P1002`). |
 
 ### 🔴 The one thing that will go wrong if nobody reads this line

@@ -6,6 +6,81 @@ updated: 2026-10-11
 
 # Education — current trends
 
+**Pass 129, 2026-10-11.** ⏱️ **Sixteenth pass of this date** (census window **14:4x → 15:3x UTC**).
+
+## 🟢 🆕 `T18` — the LMS agent edge has stratified by LICENCE, and the strata now predict the engagement
+
+🔵 **Three passes ago this KB could say only that the Canvas edge had connectors and Moodle did
+not.** 🟢 **With this pass's four addresses the layer resolves into a pattern that holds across all
+four major LMSs and is the most useful single table on this page:**
+
+| LMS | agent connectors | grant tier | releases | what the tier means for a client |
+|---|---|---|---|---|
+| Canvas | **3** | 🟢 **all MIT** | 78 / 23 / 3 | 🟢 **Take and close.** Pick on write scope, not availability |
+| Open edX | **2** 🆕 | 🔴 **AGPL-3.0** | 5 + 7 | 🟡 **Host freely, redistribute carefully** — the same tier as `edx-platform` itself |
+| Blackboard | **1** 🆕 | 🟢 **ISC** | 22 | 🟡 **Permissive, released — and student-side.** A template, not a deployment |
+| Moodle | **4** | 🔴 **AGPL-3.0 or 0 releases** | 🔴 **0 permissive releases** | 🔴 **Build.** The largest public-education install base has no takeable agent edge |
+
+🔵 **`T18`: the agent edge's licence tier tracks who built it.** 🟢 **Vendor-adjacent and
+platform-native work arrives copyleft (Open edX, Moodle), because it extends a copyleft platform;
+individual and small-company work arrives permissive (all three Canvas rows, the Blackboard row).**
+🔴 **Which means the permissive supply is systematically the LESS institutional supply — exactly the
+inverse of what a client needs.** 🟡 **The commercial consequence is concrete: the cheapest
+institutionally-shaped agent surface for Open edX is AGPL and the cheapest permissive one for
+Blackboard is a student tool, so the work Globant sells at the LMS edge is hardening, not
+integration.**
+
+## 🔴 🆕 `T19` — in this corpus a published number is likelier to be mis-transcribed than mis-measured
+
+🟢 **`P129-A` re-derived 13 disputed release figures from the evidence file of the pass that
+published them, and p108's committed `result.2026-10-10.tsv` agreed with today's independent
+re-measure 13 times out of 13.** 🔴 **The pages did not.** 🔵 **So p128's rule about `git` — real and
+reproduced — explained the wrong thing: the instrument subtracted dereferences; the prose did not
+copy what the instrument said.**
+
+🟡 **The trend this sets for a knowledge base that is read by a compiler:** 🔴 **a figure typed into
+prose has no provenance a later pass can check, while a figure in a committed TSV has.** 🟢 **The
+operational rule adopted this pass: a published figure must be re-derivable from a committed
+evidence file, and `ACTION AW` tests it on five more figures.** 🔵 **The control that makes this a
+trend rather than an anecdote: 12 of the 15 figures in `verticals/solutions.md`'s platform table
+reproduce exactly, so the defect is per-pass discipline, not a corpus-wide method error.**
+
+## 🔴 🆕 `T20` — the demand channel has stopped producing information, and that is now a measurement
+
+🔵 **Three consecutive passes of zero new tokens in all four regions is no longer noise.** 🟢 **This
+pass can say what each region's query actually yields:**
+
+| region | what the mandated query returns now |
+|---|---|
+| 🔴 **EMEA** | 🔴 **nothing education-specific at all** — enterprise-AI proxies, one US-only survey, one 2023 study. No named education player, ministry or programme |
+| 🟡 **APAC** | vendor announcements only (TCS × Pearson, LearnUpon); 🔴 **no education regulation**, while this KB holds three dated statutes the channel never returns |
+| 🟡 **North America** | held figures only, and 🟢 **every one of them already on this page** |
+| 🟡 **LATAM** | held figures only — 🟢 **and the KB is strictly finer** (it holds the 9 % formal-evaluation figure and the institution-type split the channel omits) |
+
+🟢 **Where the information actually came from this pass: a query naming a LAYER.** 🔵 **Four new
+addresses, all four from `MCP server Moodle Canvas Open edX github 2026`, zero from the four
+mandated generic queries.** 🔴 **The demand channel is saturated at this KB's resolution; the supply
+channel is not — it was being asked the wrong questions.**
+
+## 🟡 Carried trends, re-checked this pass
+
+🟢 **`T17` (standards bodies publish specs without permissive validators) stands** — and `P129-E`
+sharpens it: `1EdTech/openbadges-validator-core` is Apache-2.0 with **28** tags and 🔴 **no `NOTICE`
+file, so the repository names no licensor at all.**
+
+🟢 **The governance-over-personalisation direction stands**, independently reproduced by this pass's
+trends query: AI tutors moving from pilot to core use, corporate reskilling as the second demand
+driver, and institutional maturity still rated low with most institutions in pilot mode.
+🔴 **Vendor-reported, carried as such.**
+
+🔵 **Release-engineering as a maturity signal is unchanged as a method and corrected in its
+figures**: the most-released repositories in this KB are now known to be
+`openedx/edx-platform` (**5 896**, 🔴 of which 5 315 are CI date stamps and only **12** are
+`vN.N.N`), `moodle/moodle` (**591**), and `OpenOLAT` and `kolibri` tied at **542**. 🟢 **`kolibri` is
+the one of the four that is MIT.**
+
+# Education — current trends
+
 **Pass 128, 2026-10-11.** ⏱️ **Fifteenth pass of this date** (census window **13:4x → 14:2x UTC**).
 
 ## 🟢 🆕 `T128-1` — the instrument is becoming the finding: a published figure is only as good as the command that produced it
@@ -1726,7 +1801,7 @@ none       113  38.2%   NO version exists
 imperfectly correlated — on this shelf they invert at the top.** 🟢 **The four
 `opetushallitus` repositories hold **4 468**, **4 225**, **1 134** and **726** tags, more
 than any other addresses measured, and not one has ever cut a versioned release: those
-refs are CI deploy stamps.** 🔵 **Meanwhile `kolibri`, with 16 tags, is clean semver at
+refs are CI deploy stamps.** 🔵 **Meanwhile `kolibri`, with 542 tags ⚠️ **was 16 tags**<!--corrected-->, is clean semver at
 `v0.19.5`.**
 
 🟢 **Why it is a trend and not a measurement artefact:** 🔵 **the stamp pattern clusters in
@@ -2330,7 +2405,7 @@ both. 🟢 **Any of the three retires this trend, and that is the point of stati
 | `doheejin/ProTACT` | 🟢 **BSD-3-Clause** | 🔴 **0** |
 
 🟢 **The control is from the same pass, same industry, same instrument:** `canvas-mcp` **23 tags** ⚠️ **was 26 tags**<!--corrected-->,
-`HKUDS/DeepTutor` **135 tags**, `SafeExamBrowser/seb-server` **194 tags**. 🔵 **So "0 tags" is a real
+`HKUDS/DeepTutor` **135 tags**, `SafeExamBrowser/seb-server` **108 tags** ⚠️ **was 194 tags**<!--corrected-->. 🔵 **So "0 tags" is a real
 signal here and not an artefact of how this industry publishes.**
 
 🔵 **`T20`, stated generally: in education the permissive grant is abundant and the RELEASE is scarce**
@@ -2364,7 +2439,7 @@ client own the record.** 🔵 **`P94-A` reached exactly that conclusion for scor
 principles** — T17 says it generalises, and says where to look for the next instance.
 
 🟢 **The one permissive exception proves the shape rather than breaking it.**
-`nfh-trust-labs/opencred` (MIT, **30 tags**, `v1.9.1`) **does** mint credentials — and it is a
+`nfh-trust-labs/opencred` (MIT, **21 tags** ⚠️ **was 30 tags**<!--corrected-->, `v1.9.1`) **does** mint credentials — and it is a
 **generic W3C Verifiable Credentials** toolkit, not an Open Badges product. 🔵 **The permissive
 minting option is the one that is not education-specific**, which is the same observation
 `repos/foundations.md` makes about spec-boundary code at a different altitude.
@@ -2390,7 +2465,7 @@ cannot buy from the vendor.
 been **prohibited since 2 Feb 2025** (Art. 5). 🔵 **Affect and engagement inference ship switched on
 by default in proctoring and engagement-analytics products**, so for an existing deployer this is a
 **feature audit of live systems**, not a 2027 planning item. 🟢 **And as of this pass the platform
-layer for it finally exists on the shelf:** `SafeExamBrowser/seb-server` (**MPL-2.0**, 194 tags) with
+layer for it finally exists on the shelf:** `SafeExamBrowser/seb-server` (**MPL-2.0**, 108 tags ⚠️ **was 194 tags**<!--corrected-->) with
 three tested artefacts already in `compose/code/` — 🔴 **which this KB had held since pass 43 while
 publishing the exposure and offering nothing to address it** (`Gap 381`).
 

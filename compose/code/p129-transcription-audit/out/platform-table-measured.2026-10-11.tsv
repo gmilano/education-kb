@@ -1,0 +1,15 @@
+FWU-DE/fwu-kc-extensions	118	0	118	7.0.0
+ManifoldScholar/manifold	215	94	121	v9.0
+bigbluebutton/bigbluebutton	338	19	319	v4.0.x-beta.3
+dspace/dspace	226	90	136	language-pack-1_4_1
+elgg/elgg	422	113	309	7.1.1
+huggingface/transformers	537	246	291	v5.9.0
+microsoft/o365-moodle	785	90	695	v5.2.1
+nextcloud/context_chat_backend	64	11	53	v5.5.0-beta1
+nextcloud/integration_openai	95	37	58	v5.0.0
+ollama/ollama	692	1	691	v0.9.7-rc1
+openmage/magento-lts	204	41	163	v21.0.0-beta2
+pressbooks/pressbooks	325	23	302	v3.9.7-RC3
+temporalio/temporal	720	146	574	v1.9.3
+xiaochong0302/course-tencent-cloud	87	19	68	v2.0.1
+yukazakiri/koakademy	441	209	232	v1.9.0-dev.4.0

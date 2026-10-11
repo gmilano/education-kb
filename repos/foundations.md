@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-11
 ---
 
+# Education — foundational repos
+
+**Pass 129, 2026-10-11.** ⏱️ **Sixteenth pass of this date** (census window **14:4x → 15:3x UTC**).
+
+🔴 **This page is where `P129-A` lands hardest, because the release ladder p108 published here is
+the table whose figures contradict p108's own evidence file.** 🟢 **The instrument was right. Its
+committed `result.2026-10-10.tsv` carries `moodle/moodle` **591** and `openedx/edx-platform`
+**5 896**; the rows on this page said **590** and **451**.** 🔵 **Repaired on 8 sites on this page,
+with the old values marked.**
+
+## 🔴 🆕 `P129-B` — the counting error has two signs, and the understating one is the one no reader catches
+
+| address | published here | 🟢 real | the published number IS | ratio |
+|---|---|---|---|---|
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | **451** | 🟢 **5 896** | 🔴 **its dereference count exactly** (6 347 lines − 5 896) | **13.1× low** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **16** | 🟢 **542** | 🔴 **its dereference count exactly** (558 − 542) | **33.9× low** |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | **590** | 🟢 **591** | 🔴 **its dereference count exactly** (1 181 − 591) | 1 low |
+
+🔵 **The three are one error with three magnitudes, and the magnitude is set by the repository's
+tagging style, not by the mistake.** 🟢 **Where every tag is annotated — `moodle`, 590 of 591 — the
+dereference count and the real count are the same number, and the page reads correctly for 21
+passes.** 🔴 **Where most tags are lightweight — `edx-platform`, 451 annotated out of 5 896 — the
+same command understates by an order of magnitude, and the result still looks like an ordinary
+number.** 🔵 **This is the opposite failure mode from p128's: an inflated figure is caught by a
+plausibility check, an understated one is not.**
+
+🟢 **What it changes about this page's substance, not just its arithmetic.**
+
+- 🔴 **`openedx/edx-platform` is the most heavily released repository in this entire KB — 5 896
+  tags.** 🔵 Its own row already warned that *"its `release-2021-…` tags are NOT releases"*, and that
+  remains true and is now quantifiable: **5 315 of the 5 896** are `release-YYYY-MM-DD` CI stamps,
+  **60** are `open-release/*`, and 🟢 **exactly 12 are `vN.N.N`, the newest `v2.1.0`** — which is the
+  pin this page already recommends. 🟢 **The pin was right; the count was wrong; and the ratio
+  12 : 5 896 is the real argument for the pin.**
+- 🔴 **`learningequality/kolibri` is not a 16-tag project.** It has **542** tags — **95 stable, 433
+  pre-release** per p108's own file — 🟢 **tying `OpenOLAT` for the most-released platform in this
+  KB** while being the one row on this page that is **MIT and offline-first**. 🔵 **The permissive
+  foundation of this page is far better released than the page said.**
+- 🟡 **`moodle/moodle` 591, `v5.3.0-rc2` at HEAD, `v5.3.0` as the stable pin** — unchanged in
+  substance.
+
+## 🟢 Foundational layer additions this pass
+
+| repo | grant | 🟢 real tags | pin | why it is foundational |
+|---|---|---|---|---|
+| 🆕 [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) | 🔴 **AGPL-3.0** · 34 524 B | **5** | `v0.1.5` | 🟢 **The Open edX platform's admin surface as an agent-callable facade, built on native `openedx-platform` APIs with the platform's own `is_staff`/`is_superuser` checks re-evaluated per request.** 🔵 Authorisation is not re-implemented — the reason it belongs on a foundations page rather than an agents page |
+| 🆕 [`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp) | 🔴 **AGPL-3.0** · 34 524 B | **7** | `v0.1.7` | The deployment half: Tutor plugin, LMS/CMS image install, a streamable-http MCP container behind Caddy at `mcp.<LMS_HOST>`, 🟢 **and no secrets held by the MCP server — each request carries its own key** |
+
+🔵 **Both are AGPL-3.0, which is the same tier as the platform they extend** (`edx-platform` is
+AGPL-3), 🟢 **so a client already hosting Open edX takes on no new licence class by adopting them.**
+🔴 **A client packaging a product does.**
+
+## 🔴 🆕 `P129-E` (foundations view) — 46 of this KB's shelf rows name no licensor anywhere in the repository
+
+🟢 **359 shelf addresses, every grant payload read.** Of the **59** Apache-2.0 / ECL addresses whose
+`LICENSE` names no holder — which is normal for those texts, since the field lives in `NOTICE` —
+🔴 **46 have no `NOTICE` file at all.** 🔵 **The 13 that do, name a holder.**
+
+🔵 **Foundational rows among the 46**: [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai),
+[`opencast/opencast`](https://github.com/opencast/opencast),
+[`numbas/Numbas`](https://github.com/numbas/Numbas),
+[`ed-fi-alliance-oss/Ed-Fi-ODS`](https://github.com/ed-fi-alliance-oss/Ed-Fi-ODS),
+[`ed-fi-alliance-oss/Ed-Fi-Data-Standard`](https://github.com/ed-fi-alliance-oss/Ed-Fi-Data-Standard),
+[`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core),
+[`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS),
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor),
+[`huggingface/smolagents`](https://github.com/huggingface/smolagents), and all eight
+`Apereo-Learning-Analytics-Initiative/*` rows.
+
+🟢 **Why a foundations page cares.** Apache-2.0 **§4(d)** requires a redistributor to carry the
+contents of the upstream `NOTICE` file; **§3** grants patent rights *"by each Contributor"*. 🔵 **With
+no `NOTICE` and no holder line, the repository itself answers neither "who grants this" nor "whose
+patents travel".** 🔴 **For an institutional client that is a diligence question, not a licence
+question, and it is answerable — almost certainly from the source headers.** 🟢 **Pre-registered as
+`ACTION AY` with a clause of 20 of 46.**
+
 # Education — foundational repositories
 
 **Pass 128, 2026-10-11.** ⏱️ **Fifteenth pass of this date** (census window **13:4x → 14:2x UTC**).
@@ -160,7 +236,7 @@ abridgement** — the opposite of `P127-F`'s `ai-literacy-superpowers` case (11 
 
 🔴 **What this does NOT close, stated so the gap stays usable:** MyLA is a **dashboard**, not a
 risk model. 🔴 **A permissive, modern, release-engineered ML early-warning *model* is still absent
-from this page**, and `Jasig/SSP` (Apache-2.0, 57 tags) remains the tier's only other
+from this page**, and `Jasig/SSP` (Apache-2.0, 29 tags ⚠️ **was 57 tags**<!--corrected-->) remains the tier's only other
 release-engineered row. 🟢 **The engagement consequence is precise: the presentation and
 student-consent surface is now takeable permissively, and the model is the part the studio builds.**
 
@@ -2032,9 +2108,9 @@ rather than in adjectives.**
 
 | repo | licence | `class` | pin | note |
 |---|---|---|---|---|
-| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3 | `semver` | 🟢 **`v5.3.0`** | the LMS incumbent; 590 tags, disciplined semver |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3 | `semver` | 🟢 **`v5.3.0`** | the LMS incumbent; 591 tags ⚠️ **was 590 tags**<!--corrected-->, disciplined semver |
 | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🟡 AGPL-3 | `semver` | 🟢 **`v5.14.2`** | AGPL — hosting implications, see `verticals/solutions.md` |
-| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🟡 AGPL-3 | `semver` | 🟢 **`v2.1.0`** | 451 tags; 🔴 **its `release-2021-…` tags are NOT releases** |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🟡 AGPL-3 | `semver` | 🟢 **`v2.1.0`** | 5 896 tags ⚠️ **was 451 tags**<!--corrected-->; 🔴 **its `release-2021-…` tags are NOT releases** |
 | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT | `semver` | 🟢 **`v0.19.5`** | 🟢 **MIT + offline-first — the permissive foundation of this shelf** |
 | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | `semver` | 🟢 **`v3.5.3`** | 🟢 Apache-2.0, interactive-lesson engine |
 | [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🟡 LGPL-3 | `semver` | 🟢 **`v3.0.39`** | synchronous classroom |
@@ -2556,7 +2632,7 @@ correctly** (`git ls-remote --symref` first), which is one more reason the censu
 ### 🟢 🆕 p101 Tier 2h — the student-success DOMAIN MODEL, and the `NOTICE` oracle
 
 🟢 **[`Jasig/SSP`](https://github.com/Jasig/SSP) — Apache-2.0, `LICENSE` 11 359 B, `master` ·
-`711244dc0d6d5c65fd261c9bec77dd48b4dbaaf6`, 57 tags (`ssp-2.9.0`), `pom.xml`
+`711244dc0d6d5c65fd261c9bec77dd48b4dbaaf6`, 29 tags ⚠️ **was 57 tags**<!--corrected--> (`ssp-2.9.0`), `pom.xml`
 `org.jasig.ssp:ssp:2.9-SNAPSHOT`.** The Apereo **Student Success Plan**: early alert, caseload, and
 intervention tracking. 🔴 **It discharges `Gap 385`, and it was invisible because it lives under
 Apereo's PREDECESSOR org name** (`P1012` — `apereo/SSP`, `apereo/OpenLRW`, `apereo/openlrs` and
@@ -3091,7 +3167,7 @@ makes this layer composable rather than monolithic.
 | 🔵 promoted [`Fuann/open-apa`](https://github.com/Fuann/open-apa) | 🟢 **BSD-3-Clause** · 1 528 B · `master` · `2c92c0de1eca58` | 🔴 0 tags | **benchmark** — scores the scorer. This is the acceptance-test layer. |
 | 🔵 promoted [`kaldi-asr/kaldi`](https://github.com/kaldi-asr/kaldi) | 🟡 **Apache-2.0** · `COPYING` **17 264 B** · `master` · `e02e35f0254bb0` | 🔴 0 tags | **ASR substrate.** 🔴 `P991` — title displaced to byte 2 531; 4/4 clause headings. |
 | 🔴 **CORRECTION** [`CyanXLab/Phonos`](https://github.com/CyanXLab/Phonos) | 🔴 **NO LICENCE PAYLOAD** / 24 names @ 1 B · `8a13a3b7611a3d` | 1 tag | 🔴 **This KB counted it in a permissive layer of three. It has no grant.** |
-| 🔴 negative [`jimbozhang/speechocean762`](https://github.com/jimbozhang/speechocean762) | 🔴 **NO LICENCE PAYLOAD** · `613968e3b0b789` | 🔴 0 tags | 🔴 **`P994` — the reference CORPUS is ungranted while all seven tools are permissive.** |
+| 🔴 negative [`jimbozhang/speechocean762`](https://github.com/jimbozhang/speechocean762) | 🔴 **NO LICENCE PAYLOAD** · `613968e3b0b789` | 🔴 1 tag ⚠️ **was 0 tags**<!--corrected--> | 🔴 **`P994` — the reference CORPUS is ungranted while all seven tools are permissive.** |
 | 🔴 negative [`tzyll/goparrot`](https://github.com/tzyll/goparrot) · [`JazminVidal/gop-pykaldi`](https://github.com/JazminVidal/gop-pykaldi) | 🔴 **NO LICENCE PAYLOAD** (both) | 🔴 0 tags | Two more GOP implementations, neither granted (`P981`). |
 
 ### 🔴 🆕 `P994` — a permissive toolchain around an ungranted corpus is a scope item, not a blocker
@@ -3151,7 +3227,7 @@ when written:** *"🟢 `SafeExamBrowser/seb-server` (⚠️ MPL-2.0, `HEAD` de `
 
 | repo | grant (payload · bytes · ref · SHA-14) | release ladder | ★ | region | role in a build |
 |---|---|---|---|---|---|
-| 🆕 p98 [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | 🟡 **MPL-2.0** · `LICENSE` **16 725 B** · `master` · `7f45689f797337` | 🟢 **194 tags**, `v3.0-latest` | — | 🟡 **EMEA** (ETH Zürich lineage — the Java package tree is `ch/ethz/seb/`) | 🟢 **Institutional exam supervision and lockdown.** The supervision half of the exam layer whose scheduling half is `UniTime`. |
+| 🆕 p98 [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | 🟡 **MPL-2.0** · `LICENSE` **16 725 B** · `master` · `7f45689f797337` | 🟢 **108 tags** ⚠️ **was 194 tags**<!--corrected-->, `v3.0-latest` | — | 🟡 **EMEA** (ETH Zürich lineage — the Java package tree is `ch/ethz/seb/`) | 🟢 **Institutional exam supervision and lockdown.** The supervision half of the exam layer whose scheduling half is `UniTime`. |
 
 🔵 **Why MPL-2.0 is the useful verdict and not just a licence string:** MPL is **per-file** copyleft
 (§1.10(a)). A proprietary integration layer around it is lawful; only **modified MPL files**
@@ -3184,7 +3260,7 @@ with no supply tier is a gap in this file, not only in that one** — so the tie
 
 | repo | grant (payload · bytes · ref · SHA-14) | release ladder | region | role in a build |
 |---|---|---|---|---|
-| 🆕 p98 [`nestauk/ojd_daps_skills`](https://github.com/nestauk/ojd_daps_skills) | 🟢 **MIT** · `LICENSE` **1 095 B** · `dev` · `e73c2b5045793d` | 🟢 **8 tags**, `v3.0.0` | 🟢 **EMEA** — *"Copyright (c) 2024, Nesta"* (UK), off the grant (`P800`) | 🟢 **The one to standardise on.** Skill phrases out of free text, mapped onto **ESCO**, **Lightcast Open Skills** or a custom taxonomy — 🔵 **the taxonomy is a parameter**, which is what survives a change of client and jurisdiction. |
+| 🆕 p98 [`nestauk/ojd_daps_skills`](https://github.com/nestauk/ojd_daps_skills) | 🟢 **MIT** · `LICENSE` **1 095 B** · `dev` · `e73c2b5045793d` | 🟢 **7 tags** ⚠️ **was 8 tags**<!--corrected-->, `v3.0.0` | 🟢 **EMEA** — *"Copyright (c) 2024, Nesta"* (UK), off the grant (`P800`) | 🟢 **The one to standardise on.** Skill phrases out of free text, mapped onto **ESCO**, **Lightcast Open Skills** or a custom taxonomy — 🔵 **the taxonomy is a parameter**, which is what survives a change of client and jurisdiction. |
 | 🆕 p98 [`KonstantinosPetrakis/esco-skill-extractor`](https://github.com/KonstantinosPetrakis/esco-skill-extractor) | 🟢 **MIT, read from the BODY** · **1 068 B** · `master` · `cf2877d462f99a` | 🔴 **0 tags** | 🔵 unplaced (holder is a person) | ESCO skills **and** ISCO occupations by embedding similarity. PyPI + Docker. 🟡 **Titleless MIT payload** — second instance here after `Montreal-Forced-Aligner` (p97) — and 🔴 **curly quotes in the grant text** (`P998`). |
 | 🆕 p98 [`dkavargy/ESCOPlus2.0`](https://github.com/dkavargy/ESCOPlus2.0) | 🟢 **MIT** · **1 086 B** · `main` · `88338a7cc196c8` | 🔴 **0 tags** | 🟡 **EMEA, weakly** (Aristotle University of Thessaloniki lineage) | Extends and validates **the taxonomy itself** from live job-ad data. 🔵 **The maintenance end — ESCO ages, and nothing else here addresses that.** |
 
@@ -3208,7 +3284,7 @@ specification. This is the product end.**
 | repo | grant (payload · bytes · ref · SHA-14) | release ladder | role in a build |
 |---|---|---|---|
 | 🆕 p98 [`CredentialEngine/Open-Badge-Publisher`](https://github.com/CredentialEngine/Open-Badge-Publisher) | 🟢 **Apache-2.0** · **11 357 B pristine**, 🟢 4 of 4 clause headings (`P974`) · `main` · `278b9d7dc084a6` | 🔴 **0 tags** | 🟢 **The only permissive row in the layer.** Publishes badge descriptions to the Credential Registry. 🔴 **No `NOTICE` → no holder → no region from the payload.** |
-| 🆕 p98 [`nfh-trust-labs/opencred`](https://github.com/nfh-trust-labs/opencred) | 🟢 **MIT** · **1 071 B**, *"Copyright (c) 2026 NFH Trust Labs"* · `main` · `0fd0a9c65356db` | 🟢 **30 tags**, `v1.9.1` | Local-first **W3C VC** issuer/verifier; issuer keys never leave the host. 🔵 **The permissive issuing option is the generic VC one, not the Open Badges one.** |
+| 🆕 p98 [`nfh-trust-labs/opencred`](https://github.com/nfh-trust-labs/opencred) | 🟢 **MIT** · **1 071 B**, *"Copyright (c) 2026 NFH Trust Labs"* · `main` · `0fd0a9c65356db` | 🟢 **21 tags** ⚠️ **was 30 tags**<!--corrected-->, `v1.9.1` | Local-first **W3C VC** issuer/verifier; issuer keys never leave the host. 🔵 **The permissive issuing option is the generic VC one, not the Open Badges one.** |
 | 🔴 p98 `19otherrsh-dot/Opencred` | 🔴 **AGPL-3.0** · 34 523 B · `main` · `d14619e186ed08` | — | OB3 + `did:web` + status-list revocation. 🔴 **Same NAME as the MIT row above, different repository, opposite licence** (`P1000`). |
 | 🔴 p98 `Schroedinger-Hat/certo` | 🔴 **AGPL-3.0** · 33 820 B · `main` · `6fd0a11fe2ff61` | — | OB3 on Strapi/Nuxt, bulk CSV issuance. |
 | 🔴 p98 `LongsightGroup/credtrail-app` | 🔴 **AGPL-3.0** · 34 523 B · `main` · `948a8ca43f3f33` | — | OB3, Ed25519, `did:web`. |

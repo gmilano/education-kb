@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Pass 129 — 2026-10-11 (sixteenth pass of this date), 14:4x–15:3x UTC
+
+🔵 **APPEND-ONLY page. This section is added above p128's and nothing below it is edited.**
+
+🔴 **The mandated `github trending education AI 2026` query returned ZERO education-specific
+repositories for the NINTH consecutive pass.** 🟢 **What it returned again were curricula ABOUT AI:**
+`rohitg00/ai-engineering-from-scratch` (first #1 on GitHub Trending 2026-05-24),
+`MadsLorentzen/ai-job-search` (#1 on 2026-07-07), `microsoft/ai-agents-for-beginners`,
+`aneelv75/github-trending`. 🔵 **All held, all declined on the standing ground that a course about
+AI is not an education AI repository.** 🟡 **One context figure worth carrying: a February 2026
+survey of GitHub's monthly trending ranking found nine of the top ten projects AI-related** —
+channel-only, and it says more about GitHub than about education.
+
+🟢 **What DID move, and the method finding under it.** Four new addresses entered this KB this pass
+and **all four came from queries naming a layer** (`MCP server Moodle Canvas Open edX github 2026`),
+none from the generic set. 🔵 **Full table on `agents/trending.md`; the repository-side reading:**
+
+| 🆕 | grant · payload | 🟢 real tags | release engineering |
+|---|---|---|---|
+| [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli) | 🟢 **ISC** · 748 B | 🟢 **22** (34 − 12) | 🟢 **npm-published, `v2.2.0`, and the only ISC row on this page** |
+| [`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp) | 🔴 **AGPL-3.0** · 34 524 B | 🟢 **7** (14 − 7) | PyPI + CI badge; Tutor plugin |
+| [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) | 🔴 **AGPL-3.0** · 34 524 B | 🟢 **5** (10 − 5) | PyPI + CI badge |
+| [`admin978/canvas-mcp`](https://github.com/admin978/canvas-mcp) | 🟢 **MIT** · 1 072 B | 🟡 **3** | PyPI (`canvas-local-mcp`), self-declared alpha |
+
+🟢 **A lane this KB had not used, found by control test.** `api.github.com` is `403` to this session
+and has been since `P107-A`, so repository ENUMERATION looked closed. 🔵 **It is not: an
+organisation's HTML page over the fetch tool lists its repositories with the licence GitHub's
+classifier assigns** — that is how `blend-ed`'s 59 repositories and their two MCP rows were found.
+🔴 **The licence shown there is the CLASSIFIER, not the payload** (`P445`'s standing lesson), so
+every one of the four rows above was re-read byte-for-byte on `raw.githubusercontent.com` before it
+was published here.
+
+### 🔴 Corrections carried forward onto this page (it is never edited)
+
+🔵 **Four figures below this line are stale as of this pass; the sections below keep their dates.**
+Cause and evidence in `P129-A` on `agents/top.md` — 🔴 **the pages disagreed with the measurement
+this KB itself committed in `compose/code/p108-release-identity/result.2026-10-10.tsv`.**
+
+| row below | published (stale) | 🟢 re-measured (2026-10-11) |
+|---|---|---|
+| `SafeExamBrowser/seb-server` | 194 tags | 🟢 **108** |
+| `nestauk/ojd_daps_skills` | 8 tags | 🟢 **7** |
+| `nfh-trust-labs/opencred` | 30 tags | 🟢 **21** |
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **112 tags** | 🟢 **115** (152 − 37). 🔴 **Neither a dereference nor a new release explains the 3: its newest tag is `v0.9.9`, dated 2026-10-01, and 99 of its 115 tags are `vN.N.N`** |
+| *"`OpenOLAT` … 542 tags … the most"* | as written | 🔴 **refuted — `kolibri` 542, `moodle` 591, `edx-platform` 5 896** (`P129-C`) |
+
 ## 🟢 Pass 128 — 2026-10-11 (fifteenth pass of this date), 13:4x–14:2x UTC
 
 🔵 **APPEND-ONLY page. This section is added above p127's and nothing below it is edited.**

@@ -6,6 +6,54 @@ updated: 2026-10-11
 
 # Education — open gaps
 
+**Pass 129, 2026-10-11.** ⏱️ **Sixteenth pass of this date** (census window **14:4x → 15:3x UTC**).
+
+## 🟢 Gaps CLOSED or narrowed this pass
+
+| gap | state | what closed it |
+|---|---|---|
+| **Blackboard agent edge — nothing held** | 🟢 **CLOSED** | 🆕 [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli), **ISC**, 22 real tags, `v2.2.0`, 🟢 **LATAM/Peru on stated evidence**. 🔴 Student-side credential model is a hardening task, not a blocker |
+| **Open edX agent edge — vendor-blog claim only** | 🟢 **CLOSED with addresses** | 🆕 [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) (**AGPL-3.0**, 5 tags) + [`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp) (**AGPL-3.0**, 7 tags). 🔵 The September-2026 claim was true and is now payload-verified |
+| **`Gap 402` supply side (LATAM permissive infrastructure)** | 🟡 **NARROWED, first time in several passes** | `campus-cli` is the first LATAM-placed permissive release-engineered INFRASTRUCTURE row; the rest of the held LATAM set is ministry or university content |
+| **Repository enumeration without the GitHub API** | 🟢 **CLOSED** | 🟢 An organisation's HTML page over the fetch tool lists repositories and GitHub's classifier licence (`P129-G`). 🔴 Classifier, never payload |
+| **p128's `ACTION AQ` (may an append-only page carry a correction?)** | 🟢 **ANSWERED and now exercised twice** | A dated section at the top carries 10 stale figures forward; no historical line edited |
+
+## 🔴 Gaps OPEN, with this pass's reason
+
+| gap | why it is still open |
+|---|---|
+| **Moodle permissive agent edge** | 🔴 **ZERO permissive releases, re-confirmed from p108's own evidence file** (`a2br/moodle-mcp` MIT at 0 tags; `csmediapro/moodle-mcp-server` AGPL-3.0). 🔵 The largest LATAM/EMEA public-education install base still has no takeable connector |
+| **APAC-placed permissive supply** | 🔴 Third consecutive pass with none. The FSRS family is APAC by lineage only and stays unplaced |
+| **The AI Act date a client can be quoted** | 🔴 Three readings now in the channel (2026-08-02 enforcement, 2027-12-02 / 2028-08-02 schools-facing, *"full effect August 2026"*), 🔴 **zero primary sources readable — `eur-lex` class hosts are refused in BOTH lanes** (`P129-G`) |
+| **The UNESCO IESALC faculty denominator** | 🔴 Open since p125. `iesalc.unesco.org`, `unu.edu` and `digitaleducationcouncil.com` are 403 at the gateway and `ENOTFOUND` in the fetch tool, while `github.com` resolves in the same tool — so this is a policy, not a dead source |
+| 🆕 **The LATAM policy-share conflict** | 🟡 **26 %** (IESALC, formal AI framework, n = 200 institutions, 19 countries) vs **30 %** (Tec de Monterrey speaker, *published* policies). 🔵 Compatible predicates; neither first-hand |
+| 🆕 **Who grants 46 of this KB's Apache-2.0 / ECL rows** | 🔴 No holder line in `LICENSE` and **no `NOTICE` file at all**. 🟢 Measurable from source headers — `ACTION AY`, clause of 20 of 46 |
+| 🆕 **`yetanalytics/lrsql` 112 → 115** | 🔴 Explained by neither a dereference nor a dated release (newest tag `v0.9.9`, 2026-10-01; 99 of 115 are `vN.N.N`). 🔵 Its row cites `hub.docker.com/v2` as a second channel — **refused at the gateway**, so the likeliest explanation (a Docker tag count read as a git tag count) cannot be tested from here |
+
+## 🔴 🆕 `P129-H` — this page's own contract was broken, and it took a schema check to see it
+
+🟢 **The ingest contract states that opportunities live under a SINGLE `## Opportunities by region`
+heading with one `###` per region, so the compiler can bucket them.** 🔴 **`intel/market.md` carried
+THREE such headings — p129's, p128's, and an earlier pass's — because every pass that wrote one
+prepended a new block instead of updating the live section.** 🔵 **Three headings mean three buckets
+and a region filter that silently reads the oldest one it finds.**
+
+🟢 **Repaired: the live section is p129's, at the top; the other two are marked superseded with this
+KB's correction marker rather than deleted** — p126's `ACTION AO` precedent, which marked a
+superseded writer rather than removing it. 🔵 **The generalisation worth carrying: a page that is
+prepended-to forever will duplicate any heading the schema says is singular, and nothing in this
+KB checks headings.** 🟡 **That is the next schema instrument — a singular-heading gate across all
+ten live pages, and it is cheap because it is pure text.**
+
+## 🔵 Frontmatter, checked rather than assumed
+
+🟢 **All ten live pages carry `industry: education`, `region: Global`, `updated: 2026-10-11`** — one
+value from the closed five-term vocabulary, country names kept in prose where they belong (`UPC`,
+Peru, Spain, Poland, Germany). 🔵 **`region: Global` is correct for a page, not a hedge: the
+per-row region is a column, and `P800` grades it.**
+
+# Education — open gaps
+
 **Pass 128, 2026-10-11.** ⏱️ **Fifteenth pass of this date** (census window **13:4x → 14:2x UTC**).
 
 ## 🔴 New and restated gaps
@@ -3258,7 +3306,7 @@ KB has had in ten: **Mexico's `Plan Nacional de IA`, April 2026, a first-party g
 
 | slug | purpose-built directories | verdict measured this pass | now shelved |
 |---|---|---|---|
-| 🔴 `SafeExamBrowser/seb-server` | **three** — `seb-proctoring-validator` (p43), `sebserver-mcp-gate` (p43/44), `proctoring-reach-audit` (p46) | 🟡 **MPL-2.0** · `LICENSE` **16 725 B** · `master` · `7f45689f797337` · 🟢 **194 tags**, `v3.0-latest` | 🟢 `repos/foundations.md`, `verticals/solutions.md`, `agents/top.md`, `compose/patterns.md` (`P98-A`) |
+| 🔴 `SafeExamBrowser/seb-server` | **three** — `seb-proctoring-validator` (p43), `sebserver-mcp-gate` (p43/44), `proctoring-reach-audit` (p46) | 🟡 **MPL-2.0** · `LICENSE` **16 725 B** · `master` · `7f45689f797337` · 🟢 **108 tags** ⚠️ **was 194 tags**<!--corrected-->, `v3.0-latest` | 🟢 `repos/foundations.md`, `verticals/solutions.md`, `agents/top.md`, `compose/patterns.md` (`P98-A`) |
 | 🔴 `toshieji/moodle-grading-mcp` | `grading-draft-gate` (p56, **37/37** offline) | 🟢 **MIT** · **1 120 B** · `main` · `5695878b4735ed` · 🔴 0 tags | 🟢 same |
 | 🔴 `juneyaooo/lineage-skill` | `aiact-50-2-marking` | 🟢 **Apache-2.0** · **11 358 B** · `main` · `7e2cbc5dc31713` · 🔴 0 tags | 🟢 `agents/top.md`, `repos/foundations.md` |
 
@@ -3356,7 +3404,7 @@ sweeps. `P872` is right that a control is needed and wrong that the control is a
 | **`P997`** | 🔴 **A correction written as prose in one file does not propagate.** Pass 44 corrected `seb-server` Apache-2.0 → **MPL-2.0** in `sebserver-mcp-gate/README.md`; `proctoring-reach-audit/README.md`, written at **pass 46 — two passes LATER** — reintroduced Apache-2.0. 🔴 **And the error ran in the expensive direction: Apache is MORE permissive than MPL, so it would have promised a client freedoms the grant does not give.** 🟢 **Both corrected in this commit.** |
 | **`P998`** | 🟡 **A grant can be unmatchable by a naive string test for TYPOGRAPHIC reasons.** `esco-skill-extractor`'s MIT body uses curly quotes — `“Software”`, not `"Software"` — on top of being **titleless** (second instance after `Montreal-Forced-Aligner`, p97). 🔵 **Classify on the permission sentence, never on the quoted term or the title line.** |
 | **`P999`** | 🔴 **The two highest-ROI institutional use cases in this industry share one licensing office.** `workforce-data-initiative/skills-ml` (skills, **1 976 B**) and `dssg/student-early-warning` (risk, `Gap 385`) carry the **same University of Chicago non-commercial template**, phrase for phrase, including *"excludes any service or part of selling a service"*. 🟢 **The opening `"BY DOWNLOADING"` is a reusable fingerprint, 2 of 2.** 🔴 **A SEARCH KEY, never a verdict — `P975` governs.** |
-| **`P1000`** | 🔴 **The project NAME is not an identity.** Two repositories named *OpenCred*: `nfh-trust-labs/opencred` is **MIT** (1 071 B, 30 tags) and `19otherrsh-dot/Opencred` is **AGPL-3.0** (34 523 B). 🔵 **They differ by the one property that decides the engagement.** Resolve to `slug` + `SHA`, as `P253`/`P989` already require for forks. |
+| **`P1000`** | 🔴 **The project NAME is not an identity.** Two repositories named *OpenCred*: `nfh-trust-labs/opencred` is **MIT** (1 071 B, 21 tags ⚠️ **was 30 tags**<!--corrected-->) and `19otherrsh-dot/Opencred` is **AGPL-3.0** (34 523 B). 🔵 **They differ by the one property that decides the engagement.** Resolve to `slug` + `SHA`, as `P253`/`P989` already require for forks. |
 | **`P1001`** | 🟢 **The permissive grant sits on the side that MEASURES; copyleft sits on the side that becomes the RECORD.** Scoring (p94): validation Apache/BSD, scorers AGPL. Credentialing (p98): validate/publish Apache, **mint copyleft 4 of 5**. 🔵 **Two layers, four publishers, seven passes apart. Published as `T17` with the three queries that would falsify it.** |
 | **`P1002`** | 🟡 **A secondary source's licence claim about an app inherits the FRAMEWORK's grant.** `frappe/lms` is **AGPL-3.0** (33 893 B) while `frappe/frappe` **is** MIT (1 118 B) — and a 2026 listicle called the app MIT. 🟡 **2 of 2 measured, right once:** `openeducat/openeducat_erp` is LGPL-3.0 on an LGPL Odoo base. 🔵 **A 50 % oracle is not an oracle, and the failure direction is the over-permissive one.** |
 | **`P1003`** | 🔴 **`P800` cannot place an Apache-2.0 row: a pristine Apache payload carries no copyright holder.** 🟢 **`NOTICE` is the route and it is 2 of 4** — `UniTime` → *"The Apereo Foundation"*, `oppia-android` → *"The Oppia Authors"*; `Open-Badge-Publisher` and `lineage-skill` serve **no `NOTICE`**, which §4(d) permits. 🔵 **So `region: unplaced` on an Apache row with no `NOTICE` is UNMEASURABLE from the licence channel, not unexamined** — and it explains why `unplaced` clusters on Apache rows. |
