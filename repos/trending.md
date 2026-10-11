@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Pass 127 — 2026-10-11 (fourteenth pass of this date), 12:4x–13:0x UTC
+
+🔵 **APPEND-ONLY page. This section is added above p126's and nothing below it is edited.**
+
+🔴 **The mandated `github trending education AI 2026` query returned ZERO education-specific
+repositories for the seventh consecutive pass.** 🟢 **What it did return were AI-engineering
+curricula — `rohitg00/ai-engineering-from-scratch` (~63k★), `rasbt/LLMs-from-scratch`,
+`microsoft/generative-ai-for-beginners` (21 lessons), `karpathy/nanochat`,
+`kamranahmedse/developer-roadmap`.** 🔵 **These are teaching artefacts ABOUT AI, not AI FOR
+education, and this page has consistently declined to count them as education rows.**
+
+🟢 **So the rows below came from org and topic enumeration plus payload reads, which is the channel
+that works in this industry.**
+
+### 🟢 Two families entered this KB this pass, and both are org-held
+
+**1. `open-spaced-repetition` — the FSRS retention family (13 repos read).**
+
+| repo | ★ | grant | tags |
+|---|---|---|---|
+| [`fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | **4 099** | 🟢 MIT · 1 079 B | **199** |
+| [`ts-fsrs`](https://github.com/open-spaced-repetition/ts-fsrs) | 811 | 🟢 MIT · 1 079 B | **114** |
+| [`free-spaced-repetition-scheduler`](https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler) | 723 | 🟢 MIT · 1 089 B | 0 — a spec |
+| [`awesome-fsrs`](https://github.com/open-spaced-repetition/awesome-fsrs) | 718 | 🟡 **CC0 1.0** · 7 048 B | 0 |
+| [`py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | 507 | 🟢 MIT · 1 079 B | 38 |
+| [`fsrs-rs`](https://github.com/open-spaced-repetition/fsrs-rs) | 441 | 🟢 BSD-3 · 1 509 B | 73 |
+| 🔴 [`fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) | **325** | 🔴 **NO GRANT** | 4 |
+| 🔴 [`srs-benchmark`](https://github.com/open-spaced-repetition/srs-benchmark) | **274** | 🔴 **NO GRANT** (15 filenames) | 0 |
+| [`go-fsrs`](https://github.com/open-spaced-repetition/go-fsrs) | 146 | 🟢 MIT · 1 079 B | 16 |
+| [`fsrs-optimizer`](https://github.com/open-spaced-repetition/fsrs-optimizer) | 112 | 🟢 BSD-3 · 1 509 B | **127** |
+| [`swift-fsrs`](https://github.com/open-spaced-repetition/swift-fsrs) | 105 | 🟢 MIT · 1 066 B 🟡 individual holder | — |
+| [`dart-fsrs`](https://github.com/open-spaced-repetition/dart-fsrs) | 65 | 🟢 MIT · 1 079 B | — |
+| [`fsrs-browser`](https://github.com/open-spaced-repetition/fsrs-browser) | 57 | 🟡 BSD-3 body, no title line · 1 460 B | 34 |
+
+🔵 **11 of 13 permissive, 2 with no grant, and the two ungranted ones are the add-on and the
+BENCHMARK.**
+
+**2. `openfun` — France Université Numérique (10 repos read).** 🟢 **9 × MIT, institutionally held,
+139/146/204/119/45/32 tags on the six largest; 🔴 1 × AGPL-3.0 and it is the Open edX wrapper.**
+🔵 **Tabled in full on `agents/top.md` `P127-A`.** 🟢 **Also notable as an artefact rather than a
+row: `openfun/learninglocker-docker` is published as "⚠️ DEPRECATED ⚠️"** — the consortium
+retired its GPL-3.0 LRS wrapper after shipping an MIT LRS.
+
+### 🟢 Single new rows
+
+| repo | ★ | grant (bytes · ref · SHA) | tags | note |
+|---|---|---|---|---|
+| [`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics) | 37 | 🟢 **Apache-2.0** · 11 379 B + `NOTICE` 304 B · `master` · `44dbf90` | **38** | © **Regents of the University of Michigan**. 🟡 **11 379 B is 21 B ABOVE canonical** — the Appendix filled in, not an abridgement |
+| [`hanhuark/machine-learning-for-engineers`](https://github.com/hanhuark/machine-learning-for-engineers) | 51 | 🟢 **BSD-3** · 1 493 B · `main` · `9c68f2d` | — | AI/ML + AI-literacy curriculum |
+| [`BradGroux/ai-dev-days`](https://github.com/BradGroux/ai-dev-days) | 33 | 🟢 **MIT** · 1 085 B · `master` · `24a063d` | — | curriculum, labs, tool tracks |
+| [`Gego-K12/gegok12-documentation`](https://github.com/Gego-K12/gegok12-documentation) | 2 | — | — | 🔴 **recorded as the EVIDENCE for a negative**: the vendor's MIT school-ERP claim has only docs and a `.github` profile behind it. See `verticals/solutions.md` `P127-V3` |
+
+### 🔵 Measurement notes for whoever reads this next
+
+- 🟢 **33 of 33 addresses resolved on the git lane; 0 unreachable.** Licence bytes from
+  `raw.githubusercontent.com`, SHAs and tag counts from `git ls-remote`.
+- 🔴 **The GitHub REST API is not reachable from this session for repositories outside its
+  configured scope** — org and topic enumeration went through the authenticated MCP search tool,
+  and every payload read went over the raw/git lane. 🔵 **Recorded because it bounds what a future
+  pass can reproduce and how.**
+- 🔴 **LATAM returned ZERO new repositories**, queried in Spanish and Portuguese. 🟢 **Cause
+  identified and pre-registered as a channel change** — see `intel/market.md` LATAM `p127`.
+
 ## 🟢 Pass 126 — 2026-10-11 (thirteenth pass of this date), 11:4x–12:1x UTC
 
 🔵 **APPEND-ONLY page. This section is added above p125's and nothing below it is edited** — except

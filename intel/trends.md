@@ -6,6 +6,132 @@ updated: 2026-10-11
 
 # Education — current trends
 
+**Pass 127, 2026-10-11.** ⏱️ **Fourteenth pass of this date** (census window **12:4x → 13:0x UTC**).
+
+🟢 **Six trends, each with the channel that evidences it, and one this page explicitly cannot
+evidence.** 🔵 **The rule this page keeps: a trend with no instrument behind it is an opinion.**
+
+## 🟢 🆕 `P127-T1` — the permissive education stack is INSTITUTIONAL, and that is a change in kind
+
+🔵 **Evidenced from the payloads this pass, not from commentary.** The holder line of a licence is a
+fact about who is funding the work, and this pass read 33 of them.
+
+| holder type | rows this pass | grants |
+|---|---|---|
+| 🟢 **state / university institution** | **11** — `openfun/*` ×10 (France Université Numérique / GIP FUN MOOC), `my-learning-analytics` (Regents of the University of Michigan) | 🟢 **10 × MIT, 1 × Apache-2.0**; one AGPL-3.0 (the Open edX wrapper) |
+| 🟡 org-held, no jurisdiction | 13 — the FSRS family | MIT / BSD-3, 🔴 2 with no grant |
+| 🟡 individual | 5 | 🔴 **1 CC-BY-SA, 1 CC0, 1 non-canonical Apache, 1 BSD-3 with no title line, 1 MIT** |
+
+🟢 **The pattern: institutional authorship correlates with a clean, canonical, released permissive
+grant; individual authorship correlates with licence irregularity.** 🔵 **All five individual-held
+rows this pass needed a caveat; none of the eleven institutional ones did** (beyond `openedx-docker`
+being AGPL for a structural reason).
+
+🔵 **Why it matters commercially rather than as trivia:** the standing advice in this KB has been to
+treat large-install-base platforms as copyleft and look to small permissive projects. 🟢 **This pass
+inverts the heuristic — the most reliable permissive supply came from the BIGGEST, most
+institutional source**, with 139/146/204/119 tags. 🟢 **"Institutionally held" is now a better
+predictor of a usable grant than "small and new".**
+
+## 🟢 🆕 `P127-T2` — in education AI the implementation gets a licence and the YARDSTICK does not. n=2
+
+🔴 **Two independent instances, in unrelated subdomains, found by unrelated routes:**
+
+| layer | the implementations | 🔴 the benchmark |
+|---|---|---|
+| pedagogical evaluation (`Gap 393`, p102) | scorer `kaushal0494/AITutor-EvalKit` — 🔴 also ungranted | 🔴 **`MRBench` / `UnifyingAITutorEvaluation` — NO GRANT** |
+| 🆕 retention scheduling (`P127-C`) | 🟢 **MIT / BSD-3 across 7 languages**, 199 + 127 + 114 tags | 🔴 **`srs-benchmark` (274★) — NO GRANT in 15 filenames, no licence claim in its README** |
+
+🟢 **n=1 was an anecdote about one shared task. n=2, in subdomains with no shared authors, is a
+shape.** 🔵 **The mechanism is plausible and worth stating: a benchmark is published to be *cited*,
+not to be *redistributed*, so its authors never face the licence question.** 🔴 **The consequence
+for a studio is identical in both cases — the comparable number is the unusable asset.**
+
+🟢 **The move, in one line: take the implementation, re-run the comparison on the client's own
+data, and price the re-annotation.** 🔴 **What you cannot do is ship the league table, and
+"everybody cites it" is not a grant.** 🔵 **Pre-registered as a test rather than a belief: if a
+third subdomain shows granted implementations with an ungranted benchmark, this becomes a standing
+rule of the industry; if the next benchmark this KB reads is permissively licensed, `T2` is
+weakened and should be said so.**
+
+## 🟢 🆕 `P127-T3` — education AI is now STATUTORY in three regions, on three different clocks
+
+🔵 **Dates, from `intel/market.md`'s regional sweep:**
+
+| clock | instrument | education consequence |
+|---|---|---|
+| 🟢 **in force now** | **Korea AI Basic Act** (22 Jan 2026) | education is "high-impact"; 🔴 foreign providers need a **local representative** |
+| 🟢 **1 Mar 2027** | **Vietnam Law 134/2025/QH15** | automated assessment and behavioural monitoring are **high-risk**; 🟢 **+6 months if operating before 15 Aug 2026** |
+| 🟢 **2 Dec 2027** | **EU AI Act**, standalone high-risk (post-omnibus) | admission, student evaluation, exam scoring are **Annex III high-risk**; 2 Aug 2028 if embedded in a regulated product |
+| 🟢 **applying since 2 Feb 2025** | **EU AI Act Article 4** (AI literacy) | 🟡 amended to *"take measures to support"* rather than *"ensure"* |
+
+🔴 **No two of these clocks agree, and none is global.** 🟢 **So the architectural consequence is
+concrete: jurisdiction has to be a parameter of the system, not a deployment choice** — per-region
+policy enforcement, per-region data boundaries, per-region human-review gates.
+🔵 **The trend is not "regulation is coming"; it is "regulation has arrived unevenly, and the
+unevenness is the engineering requirement."**
+
+## 🟢 🆕 `P127-T4` — governance capacity, not model capability, is the binding constraint, and there is now a number for it
+
+🟢 **UNESCO-IESALC: only 26 % of LatAm higher-education institutions have a formal AI strategy**,
+against widespread adoption driven by teachers and students rather than policy. 🟢 **1EdTech,
+independently and for a different market, describes institutions moving toward comprehensive AI
+strategies with strong oversight.** 🔵 **Two sources, opposite ends of the same gap.**
+
+🔵 **This reframes the deliverable.** 🔴 **Roughly 3 in 4 institutions in one whole region are
+running AI they have not governed.** 🟢 **The sellable artefact is the governance baseline —
+inventory, approved-tool register, data-provenance register, staff literacy programme — and this KB
+already holds the register patterns.** 🔵 **It is also the engagement that does not depend on the
+client buying a model.**
+
+## 🟢 🆕 `P127-T5` — the CONTENT grant and the CODE grant are diverging, and education is where it bites
+
+🔵 **Education deliverables are part software and part curriculum, and the two halves are drifting
+into different licence families.** 🟢 **Measured on this pass's own rows:**
+
+| artefact | typical grant found this pass |
+|---|---|
+| 🟢 platform code | **MIT / Apache-2.0 / BSD-3** — `openfun/*`, FSRS family, `my-learning-analytics` |
+| 🔴 pedagogy and curriculum **content** | **CC-BY-SA-4.0** — `education-agent-skills` (**845★**, the highest-starred education-specific skill set this KB has found); **CC-BY-4.0** for the AI-literacy curricula already on the shelf |
+| 🟡 research code | **CC0 1.0** — `gen-mentor` (WWW 2025 Oral). 🔴 Permissive for copyright, 🔴 **no patent or trademark grant**, unlike Apache-2.0 |
+
+🔴 **The trap is specific and expensive: a studio can ship the platform closed and cannot ship the
+pedagogy closed**, if the pedagogy came from a ShareAlike source. 🟢 **And this pass found two
+permissive curriculum bases precisely because the tier needed them** —
+[`hanhuark/machine-learning-for-engineers`](https://github.com/hanhuark/machine-learning-for-engineers)
+(BSD-3) and [`BradGroux/ai-dev-days`](https://github.com/BradGroux/ai-dev-days) (MIT) —
+🔵 **which is the actionable form of this trend: source curriculum on licence terms deliberately,
+the way you already source code.**
+
+## 🟢 🆕 `P127-T6` — retention mechanics are commoditised, and that closes a build-vs-depend question
+
+🟢 **FSRS now ships as a first-class dependency in Python, TypeScript, Rust, Go, Swift, Dart and
+WASM, permissively, with 199 / 127 / 114 tags on the three most-released rows** (`P127-C`).
+🔵 **Until this pass this KB treated spaced repetition as an application feature reached through
+`anki-mcp-server`. It is infrastructure.**
+
+🟢 **The consequence: "when does this learner see this item again" is no longer a reason to build.**
+🔵 **And `fsrs-optimizer` (BSD-3, 127 tags) makes it calibratable to the client's own review log**,
+which is the difference between shipping a default curve and shipping their curve.
+
+## 🔴 🆕 `P127-T7` — the trend this page CANNOT evidence, stated because it is the honest answer
+
+🔴 **"Agentic AI is moving into production in education."** 🔵 **Every demand-side source this pass
+asserts it** — Educativa names AI agents as the major 2026 development, HolonIQ names agentic use
+cases, Microsoft shipped agentic features in its Education AI Toolkit in April 2026.
+
+🔴 **This page cannot evidence it from the supply side, and the supply side is what this KB
+measures.** 🔴 **Of the 33 addresses verified this pass, the agent-native rows are a
+CC-BY-SA skill collection with 0 tags, a CC0 research prototype with 4 tags, and
+curriculum repositories.** 🔴 **The rows with real release engineering — 199, 204, 146, 139, 127,
+119, 114 tags — are schedulers, portals, record stores, ERP and deployment tooling. None of them is
+an agent.**
+
+🟢 **So the defensible statement is narrower and more useful than the one in the market reports:
+the INFRASTRUCTURE an education agent needs is production-grade and permissive; the AGENTS
+themselves are not yet release-engineered.** 🔵 **For a studio that is good news rather than bad —
+it is precisely the gap a systems integrator is paid to close** — but it should not be sold as
+"agents are mature in education", because this pass's bytes do not support that.
 **Pass 126, 2026-10-11.** ⏱️ **Thirteenth pass of this date** (census window **11:4x → 12:1x UTC**).
 
 🟢 **Instrument: `compose/code/p126-address-binding/` — `ACTION AK` and `AM` discharged and not refuted; 🔴 **`ACTION AJ` and `ACTION AL` REFUTED on their own clauses**. `test_p126.sh` **20 passed / 0 failed**, fully offline, over 9 fixtures.**

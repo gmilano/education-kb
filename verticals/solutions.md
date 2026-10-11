@@ -6,6 +6,67 @@ updated: 2026-10-11
 
 # Education — vertical platforms
 
+**Pass 127, 2026-10-11.** ⏱️ **Fourteenth pass of this date** (census window **12:4x → 13:0x UTC**).
+
+## 🟢 🆕 `P127-V` — the permissive platform tier grows by four, and one of them is the education ERP this shelf never had
+
+🔵 **This page's standing recommendation has been *"the permissive platform tier is real but
+small — Kolibri (MIT), DSpace (BSD-3), Opencast and Sakai (ECL-2.0), Pupilfirst (MIT), UniTime
+(Apache-2.0)"*.** 🟢 **Four MIT rows join it this pass, from one holder: France Université
+Numérique / GIP FUN MOOC, the French state higher-education MOOC operator.** All four are added to
+the current-state table below; the grants were read from the payload and the SHAs from
+`git ls-remote`.
+
+🟢 **The one that changes an engagement shape is [`openfun/joanie`](https://github.com/openfun/joanie)
+— a headless ERP for education under MIT, with 45 tags.** Enrolment, subscription, **payment** and
+**certificate delivery** as a service behind an API.
+
+🔴 **Read that against the rest of the ERP/SIS tier on this page, which is uniformly copyleft or
+worse**: `openeducat/openeducat_erp` LGPL-3.0, `frappe/education` GPL-3.0 (19 B by reference),
+`portabilis/i-educar` GPL-2.0, `francoisjacquet/rosariosis` GPL-2.0, `GibbonEdu/core` GPL-3.0,
+`OS4ED/openSIS-Classic` GPL-2.0. 🟢 **`joanie` is the first row in the administrative tier a studio
+can fork and ship closed.** 🟡 **The honest caveat: it is the smallest row in that tier by stars
+(30) and it is scoped to enrolment-to-certificate commerce, not to a full SIS** — it does not
+replace a student information system, it replaces the commerce and credential half of one.
+
+## 🟢 🆕 `P127-V2` — two rows on this page re-verified independently, and both of this page's values hold
+
+🔵 **Neither is a correction. Both are reproductions by a different channel** (raw payload + default
+branch resolved from `git ls-remote --symref`), which is worth recording because this page has
+corrected these two cells before.
+
+| row | this page says | 🟢 reproduced this pass |
+|---|---|---|
+| [`frappe/education`](https://github.com/frappe/education) | 🔴 **GPL-3.0** (by reference, 19 B `license.txt`) | 🟢 **Confirmed.** `develop/license.txt` = **19 bytes**, the single line `License: GNU GPL V3`. No licence body anywhere in the repo. HEAD `444cc8e`, 17 tags |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 **LGPL-3.0**, tracks the Odoo major (`19.0`) | 🟢 **Confirmed on both counts.** `git ls-remote --symref` resolves HEAD to `refs/heads/19.0`; `19.0/LICENSE` is **8 241 B** and reads *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3"*. HEAD `1c95cef` |
+
+🔴 **🆕 One NEW defect in the OpenEduCat grant, which this page had not recorded:** the `LICENSE`
+file opens *"For copyright information, please see the COPYRIGHT file."* — and
+🔴 **`19.0/COPYRIGHT` returns 404.** 🔵 **The grant delegates the identity of its own copyright
+holder to a file the repository does not ship.** The licence *type* is unambiguous; the *holder* is
+unstated in the tree. 🟡 **For an LGPL link-don't-fork integration that is tolerable; for any
+attribution obligation a client's counsel will ask about, it is an open question to put to the
+vendor.**
+
+## 🔴 🆕 `P127-V3` — a vendor's MIT school-ERP claim with no application source behind it
+
+🔴 **A vendor page presents **GegoK12** as a *free, MIT-licensed, open-source school ERP* for K-12,
+developed in Laravel/PHP.** 🔵 **This page's rule is that a vendor's licence claim is a claim, not a
+grant** — so it was probed.
+
+| what was searched | what was found |
+|---|---|
+| `gegok12/gegok12` | 🔴 unresolvable on the git lane |
+| the actual org, `Gego-K12` | 🟢 exists, and publishes **exactly two** public repositories |
+| [`Gego-K12/gegok12-documentation`](https://github.com/Gego-K12/gegok12-documentation) | **2★** — *"Official Documentation for GegoK12"*, JavaScript docs site |
+| `Gego-K12/.github` | **0★** — an org profile README |
+
+🔴 **There is no application repository published under that org.** 🔵 **So the MIT claim cannot be
+verified because the software it describes is not on GitHub at that address** — and a platform a
+studio cannot read is not a platform it can build on. 🟡 **Recorded as licence-unverifiable, not as
+GPL or as absent**: the vendor may distribute the source another way, and this pass did not find a
+channel for it. **Do not put it in a client option set on the strength of the vendor page.**
+
 **Pass 126, 2026-10-11.** ⏱️ **Thirteenth pass of this date** (census window **11:4x → 12:1x UTC**).
 
 🟢 **Instrument: `compose/code/p126-address-binding/` — `ACTION AK` and `AM` discharged and not refuted; 🔴 **`ACTION AJ` and `ACTION AL` REFUTED on their own clauses**. `test_p126.sh` **20 passed / 0 failed**, fully offline, over 9 fixtures.**
@@ -443,6 +504,10 @@ a permissive answer on a GPL platform.
 | [`atutor/ATutor`](https://github.com/atutor/ATutor) | LMS (accessibility pioneer) | 180 | 🔴 **no licence file; README says only "GPL", no version** | 🔴 **treat as licence-unresolved** |
 | [`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce) | 云学习系统 | 126 | 🔴 **proprietary EULA — NOT OSS** ⚠️ *was 🟢 MIT*<!--corrected--> | 🔴 **no, at any price the file names** |
 | [`leemonade/leemons`](https://github.com/leemonade/leemons) | LMS platform | — | 🔴 **"Fair Code License" v1.0** — €100 000 past 1 000 users + 5 %; `package.json` declares 🟢 MIT | 🔴 no |
+| 🆕 p127 [`openfun/joanie`](https://github.com/openfun/joanie) | 🟢 **headless education ERP** — enrolment, subscription, payment, certificates | 30 | 🟢 **MIT** · `LICENSE` 1 086 B · `main` · `ff0f8bb` · 45 tags | 🟢 **yes — the first forkable row in the administrative tier** |
+| 🆕 p127 [`openfun/richie`](https://github.com/openfun/richie) | education portal / course-catalogue CMS (Django) | 316 | 🟢 **MIT** · `LICENSE` 1 079 B · `master` · `8b14aec` · 139 tags | 🟢 **yes** |
+| 🆕 p127 [`openfun/marsha`](https://github.com/openfun/marsha) | LTI learning **content** management system — video, live, webinar | 152 | 🟢 **MIT** · `LICENSE` 1 078 B · `master` · `2e4f470` · 146 tags | 🟢 **yes — attaches to Moodle/Open edX over LTI** |
+| 🆕 p127 [`openfun/openedx-docker`](https://github.com/openfun/openedx-docker) | best-practice Open edX Docker image | 142 | 🔴 **AGPL-3.0** · `LICENSE` 34 520 B · `master` · `40d0dbf` · 204 tags | 🔴 **no — the one copyleft row in the FUN-MOOC stack, and it is the Open edX wrapper** |
 
 🟢 **The standing recommendation is unchanged and this pass strengthens it: the permissive
 platform tier is real but small — Kolibri (MIT), DSpace (BSD-3), Opencast and Sakai (ECL-2.0),

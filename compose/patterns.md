@@ -6,6 +6,164 @@ updated: 2026-10-11
 
 # Education — compose patterns
 
+**Pass 127, 2026-10-11.** ⏱️ **Fourteenth pass of this date** (census window **12:4x → 13:0x UTC**).
+
+🟢 **Three patterns, all composed from addresses verified THIS pass at the SHAs recorded on
+`agents/top.md` and `repos/foundations.md`.** 🔵 **No pattern below contains a row whose grant was
+not read from its payload this pass.**
+
+## 🟢 🆕 `P127-P1` — the sovereign permissive learning platform (EMEA), one holder, one licence
+
+🔵 **The engagement:** a European ministry, university consortium or public training body wants a
+learning platform it can run and modify, with provenance and licence terms that survive a
+sovereignty review, and with an audit trail ready for the AI Act's Annex III file.
+
+🟢 **Every component is MIT and every copyright holder is the same French state body**
+(France Université Numérique / GIP FUN MOOC), which is what makes this a *procurement* answer and
+not just an architecture.
+
+| layer | repo | grant · ref · SHA | tags |
+|---|---|---|---|
+| course catalogue / portal | [`openfun/richie`](https://github.com/openfun/richie) | 🟢 MIT · `master` · `8b14aec` | 139 |
+| LTI content (video, live, webinar) | [`openfun/marsha`](https://github.com/openfun/marsha) | 🟢 MIT · `master` · `2e4f470` | 146 |
+| LTI tool-provider plumbing | [`openfun/django-lti-toolbox`](https://github.com/openfun/django-lti-toolbox) | 🟢 MIT · `master` · `22c6f2f` | 7 |
+| enrolment · payment · certificates | [`openfun/joanie`](https://github.com/openfun/joanie) | 🟢 MIT · `main` · `ff0f8bb` | 45 |
+| learner-event record (xAPI LRS) | [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 MIT · `main` · `16f52e4` | 32 |
+| analytics over xAPI | [`openfun/warren`](https://github.com/openfun/warren) | 🟢 MIT · `main` · `839fcbb` | 13 |
+| dashboards | [`openfun/potsie`](https://github.com/openfun/potsie) | 🟢 MIT · `main` · `040f85b` | 17 |
+| cohort discussion | [`openfun/ashley`](https://github.com/openfun/ashley) | 🟢 MIT · `master` · `7c23e03` | 20 |
+| deployment (K8s/Ansible) | [`openfun/arnold`](https://github.com/openfun/arnold) | 🟢 MIT · `master` · `f19ea6d` | 119 |
+
+### How it wires together
+
+1. **`richie`** is the public face — catalogue, course pages, SEO — and holds no learner state.
+2. **`joanie`** sits behind it as the headless commerce/credential service: enrolment and
+   subscription, payment, and **certificate issuance**. 🔵 **Keep it headless** — it is the only
+   component that touches money, and a clean API boundary is what lets it be audited separately.
+3. **`marsha`** is mounted into the LMS **over LTI** (via `django-lti-toolbox`), so content lives
+   in `marsha` while the gradebook stays wherever the client already keeps it — **Moodle, Open edX
+   or Canvas, untouched**. 🟢 **This is the move that keeps the copyleft platform at arm's length:
+   you integrate over LTI rather than forking it.**
+4. **Every learner interaction emits xAPI statements into `ralph`**, which validates them against
+   Pydantic statement models and persists to Elasticsearch or Mongo. 🔵 **`ralph` is the system of
+   record for "what happened", and it is the artefact an Annex III conformity file is built on.**
+5. **`warren`** reads the LRS and **`potsie`** renders Grafana dashboards over it — instructor and
+   programme views without writing a reporting stack.
+6. **`arnold`** deploys the whole set; 119 tags means the deployment path is the maintained one.
+
+### 🔴 The boundary that must be priced before anything else
+
+🔴 **Do NOT pull [`openfun/openedx-docker`](https://github.com/openfun/openedx-docker) into a
+closed deliverable: it is AGPL-3.0** (34 520 B, `master` · `40d0dbf`), because it packages Open edX,
+which is itself AGPL. 🟢 **The whole rest of the stack is MIT, so the copyleft in this architecture
+is exactly one named layer.** 🔵 **Two honest options:** run Open edX as a **separate service** the
+MIT components talk to over LTI/xAPI (the recommended shape, and the one steps 3-4 already
+describe), or accept AGPL at the packaging layer and scope the deliverable so no proprietary code
+links into it.
+
+### 🟡 What NOT to substitute in, and why
+
+- 🔴 **Do not swap `ralph` for [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker)**
+  — **GPL-3.0**. 🔵 **The same organisation already made this call**: `openfun/learninglocker-docker`
+  is published as **"⚠️ DEPRECATED ⚠️"**.
+- 🟡 **`yetanalytics/lrsql` (Apache-2.0) is a legitimate alternative LRS** and is already on
+  `repos/foundations.md`. 🔵 **Prefer it if the client wants a SQL-backed LRS**; prefer `ralph` if
+  the value is one holder across record + analytics + dashboards.
+- 🔴 **Do not present `joanie` as a student information system.** It is enrolment-to-certificate
+  commerce, 30★. 🔴 **The permissive SIS gap on `verticals/solutions.md` is NOT closed by it.**
+
+🟡 **Honest sizing:** 8-10 weeks to a running, branded, LTI-integrated portal with the record store
+and dashboards live, assuming the client's LMS stays in place. 🔴 **Add time for the AI Act file:
+the 2 Dec 2027 standalone high-risk deadline is the one to plan against**, not 2 Aug 2026 — see
+`intel/market.md` EMEA, where this pass records a live source conflict on that date.
+
+## 🟢 🆕 `P127-P2` — calibrated retention under a no-training-on-student-data rule (North America)
+
+🔵 **The engagement:** a US district, state system or university wants durable learning gains from a
+tutoring deliverable, **and its counsel has a rule — explicit under California's AB 1159 — that
+student data may not be used to train models.**
+
+🟢 **The insight that makes this sellable: retention scheduling is parameter estimation, not model
+training.** 🔵 **`fsrs-optimizer` fits a handful of scheduler parameters to a review log. Nothing is
+pre-trained, no corpus leaves the tenancy, and the output is a small vector of numbers you can show
+to counsel.** 🟢 **That is a materially easier conversation than fine-tuning, and it is the thing to
+lead with.**
+
+| layer | repo | grant | why this one |
+|---|---|---|---|
+| retention scheduler, matched to the stack | [`py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) (🟢 MIT, 38 tags) · [`ts-fsrs`](https://github.com/open-spaced-repetition/ts-fsrs) (🟢 MIT, 114 tags) · [`fsrs-rs`](https://github.com/open-spaced-repetition/fsrs-rs) (🟢 BSD-3, 73 tags) | 🟢 permissive | pick by the client's runtime; all three are the same algorithm |
+| 🟢 **parameter fitting on the client's own log** | [`fsrs-optimizer`](https://github.com/open-spaced-repetition/fsrs-optimizer) | 🟢 **BSD-3**, **127 tags** | 🔵 **the row that makes this "their curve", not a default curve** |
+| in-browser scheduling (no server round-trip) | [`fsrs-browser`](https://github.com/open-spaced-repetition/fsrs-browser) | 🟡 BSD-3 body, no title line | 🟡 read the payload before relying on it |
+| tutoring loop | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (Apache-2.0) or [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) (MIT) | 🟢 permissive | `Artemis` if the client wants a platform; `DeepTutor` if they want an agent loop |
+| spaced repetition as a tool call | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 MIT | 🔵 only if the client already lives in Anki |
+| the student-facing oversight surface | [`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics) | 🟢 **Apache-2.0**, 38 tags, © Regents of the University of Michigan | 🟢 **a US public university's own dashboard — the human-oversight artefact OK/MD rules require** |
+
+### How it wires together
+
+1. The tutor (`DeepTutor` or `Artemis`) owns the dialogue and the exercise.
+2. Each graded interaction produces a **review record** — item, outcome, timestamp — written to the
+   client's store (and, if `P127-P1` is also in play, emitted as xAPI into `ralph`).
+3. A **nightly `fsrs-optimizer` job** refits the scheduler parameters on that log, per cohort.
+   🔵 **Per cohort, not per learner** — cohort-level fitting avoids a per-student model, which is
+   the thing a privacy rule is actually aimed at.
+4. The fitted parameters go back into `py-fsrs`/`ts-fsrs`, which answers "what next, and when".
+5. **MyLA** surfaces to the learner what the system holds about them — 🟢 **which is how you satisfy
+   a human-oversight requirement with an artefact instead of a policy document.**
+
+### 🔴 What not to ship
+
+🔴 **Do NOT redistribute [`srs-benchmark`](https://github.com/open-spaced-repetition/srs-benchmark)
+(274★): no grant in 15 probed filenames, no licence claim in its README.** 🔵 **Nor
+[`fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) (325★), same
+problem.** 🟢 **If the client wants evidence the scheduler beats their status quo, run an A/B on
+their own learners and report that** — which is a better number for them anyway, and
+`intel/trends.md` `P127-T2` explains why this situation recurs.
+
+🟡 **Honest sizing:** 6-8 weeks for the scheduler, the nightly fitting job and the learner-facing
+dashboard on top of an existing tutor. 🔴 **The tutoring layer itself is not in that estimate.**
+
+## 🟢 🆕 `P127-P3` — the multi-jurisdiction assessment gate (APAC)
+
+🔵 **The engagement:** an APAC client runs automated assessment across two or more of Korea,
+Vietnam, China, Singapore, Japan and Australia. 🔴 **Korea's AI Basic Act is in force now and names
+education "high-impact"; Vietnam's Law 134/2025/QH15 makes automated assessment and behavioural
+monitoring high-risk from 1 Mar 2027; Australia has no statute yet.** 🔴 **One global setting cannot
+satisfy these, and the differences are not cosmetic — Korea requires a local representative.**
+
+🟢 **Pattern: make jurisdiction a parameter of the assessment path, enforced in the orchestration
+graph rather than in configuration.**
+
+| concern | component | grant |
+|---|---|---|
+| orchestration with policy nodes | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) (Apache-2.0) or the LangGraph-based [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) (Apache-2.0) | 🟢 permissive |
+| the assessment itself | [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) + [`ls1intum/Ares2`](https://github.com/ls1intum/Ares2) (MIT) | 🟢 MIT — config-gated LLM subsystems |
+| integrity | [`jplag/jplag`](https://github.com/jplag/jplag) | 🟢 carried |
+| the event record that proves a human reviewed it | [`openfun/ralph`](https://github.com/openfun/ralph) (MIT) | 🟢 MIT |
+| the learner-visible explanation | [`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics) (Apache-2.0) | 🟢 Apache-2.0 |
+
+### How it wires together
+
+1. Every assessment request carries a **jurisdiction tag** resolved from the enrolling institution,
+   **never from the learner's IP**.
+2. A **policy node** in the graph reads that tag and decides, before any scoring call: is automated
+   scoring permitted unreviewed, does it require human sign-off, is behavioural monitoring allowed
+   at all. 🔵 **Korea and Vietnam both answer "human sign-off" for high-stakes marks today.**
+3. Where sign-off is required, the score is written as a **proposal**, and only a human action
+   promotes it to a grade. 🟢 **`ralph` records both events, which is the evidence a regulator asks
+   for.**
+4. **MyLA** gives the learner the explanation, satisfying transparency without a bespoke build.
+5. 🟢 **Vietnam's grace window is a planning lever: a system demonstrably in operation before
+   15 Aug 2026 gets six extra months**, so sequence the Vietnamese rollout first if the dates allow.
+
+🔴 **Do not substitute a scorer with no grant.** 🔴 **`kaushal0494/AITutor-EvalKit` and `MRBench`
+carry no licence** (`Gap 393`), and the BEA-2025 rubric is reusable as a *method* while its
+benchmark is not redistributable. 🟡 **Cost the re-annotation, or cost the engagement without a
+published benchmark number.**
+
+🟡 **Honest sizing:** 12-14 weeks for two jurisdictions, dominated by the review workflow and the
+evidence trail rather than the model work. 🔴 **Legal review is on the critical path and is not
+optional** — Korea's local-representative requirement is a corporate action, not an engineering
+task.
 **Pass 126, 2026-10-11.** ⏱️ **Thirteenth pass of this date** (census window **11:4x → 12:1x UTC**).
 
 🟢 **Instrument: `compose/code/p126-address-binding/` — `ACTION AK` and `AM` discharged and not refuted; 🔴 **`ACTION AJ` and `ACTION AL` REFUTED on their own clauses**. `test_p126.sh` **20 passed / 0 failed**, fully offline, over 9 fixtures.**

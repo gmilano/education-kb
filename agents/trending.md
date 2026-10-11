@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Pass 127 — 2026-10-11 (fourteenth pass of this date), 12:4x–13:0x UTC
+
+🔵 **APPEND-ONLY page. This section is added above p126's and nothing below it is edited.**
+
+🟢 **What moved this week, measured rather than announced.** Every row read from its licence payload
+this pass; SHAs and tag counts from `git ls-remote`.
+
+### 🟢 New on the shelf — the agent-adjacent infrastructure tier
+
+| row | ★ | grant (bytes · ref · SHA) | tags | why it is new HERE |
+|---|---|---|---|---|
+| [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | **4 099** | 🟢 **MIT** · 1 079 B · `main` · `ff7c85c` | **199** | 🟢 **The highest-starred permissive row this KB has added to the retention tier.** FSRS scheduler; the layer under `anki-mcp-server` |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | **845** | 🟡 **CC-BY-SA-4.0** · 1 230 B · `main` · `6bbbce4` | **0** | **165 education agent skills** — the largest such collection found, and 🔴 **ShareAlike** |
+| [`openfun/richie`](https://github.com/openfun/richie) | 316 | 🟢 **MIT** · 1 079 B · `master` · `8b14aec` | **139** | the FUN-MOOC stack's portal — see `P127-A` |
+| [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | 133 | 🟡 **CC0 1.0** · 7 048 B · `main` · `7cb4d9a` | 4 | **GenMentor**, WWW 2025 Industry Track **Oral** — multi-agent goal-oriented ITS |
+| [`Habitat-Thinking/ai-literacy-superpowers`](https://github.com/Habitat-Thinking/ai-literacy-superpowers) | 115 | 🟡 **Apache-2.0 at 11 207 B** (canonical 11 358 B) · `main` · `9d35995` | — | agent-harness plugins for an AI-literacy workflow; 🟡 **non-canonical licence text** |
+| [`openfun/ralph`](https://github.com/openfun/ralph) | 51 | 🟢 **MIT** · 1 094 B · `main` · `16f52e4` | 32 | 🟡 **the xAPI tier's only LIVE MIT row** — not a discharge, see `P127-B` |
+| [`hanhuark/machine-learning-for-engineers`](https://github.com/hanhuark/machine-learning-for-engineers) | 51 | 🟢 **BSD-3-Clause** · 1 493 B · `main` · `9c68f2d` | — | permissive AI-literacy curriculum |
+| [`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics) | 37 | 🟢 **Apache-2.0** · 11 379 B · `master` · `44dbf90` | **38** | MyLA — © **Regents of the University of Michigan** |
+| [`BradGroux/ai-dev-days`](https://github.com/BradGroux/ai-dev-days) | 33 | 🟢 **MIT** · 1 085 B (`LICENSE.md`) · `master` · `24a063d` | — | permissive curriculum + labs |
+| [`openfun/joanie`](https://github.com/openfun/joanie) | 30 | 🟢 **MIT** · 1 086 B · `main` · `ff0f8bb` | **45** | 🟢 **headless education ERP** — enrolment → payment → certificate |
+
+### 🔴 New negatives — rows a roundup would have handed over as usable
+
+| row | ★ | what the payload says |
+|---|---|---|
+| 🔴 [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) | **325** | 🔴 **NO GRANT** in 6 filenames · `main` · `29208f2` |
+| 🔴 [`open-spaced-repetition/srs-benchmark`](https://github.com/open-spaced-repetition/srs-benchmark) | **274** | 🔴 **NO GRANT** in 15 filenames, and no licence claim in the README · `main` · `bd9110f`. 🔵 **The benchmark, ungranted — `P127-T2`** |
+| 🔴 [`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) | 56 | 🔴 **NO GRANT** in 7 filenames · `main` · `fcec416` |
+
+### 🔵 The week's one-line reading
+
+🟢 **The movement this week is not in agents — it is in the infrastructure agents need.** 🔴 **Of
+the ten new rows above, the three with serious release engineering (199, 139, 45 tags) are a
+scheduler, a portal and an ERP. The two most agent-native rows have 0 and 4 tags.**
+🔵 **`intel/trends.md` `P127-T7` states this as the trend this KB cannot evidence from the supply
+side, and why that is good news for an integrator.**
+
+🟡 **Carried, unchanged, and NOT re-measured this pass** — `HKUDS/DeepTutor`, `ls1intum/Artemis`,
+`satvik314/educhain`, `Selleo/mentingo`, `Open-TutorAi/open-tutor-ai-CE`, the MCP × SCORM pair, the
+BNCC pair, `vishalsachdev/canvas-mcp`, and the skill tier. 🔵 **Their values stand at the SHAs
+recorded on `agents/top.md`; this section adds rows rather than restating them.**
+
 ## 🟢 Pass 126 — 2026-10-11 (thirteenth pass of this date), 11:4x–12:1x UTC
 
 🔵 **APPEND-ONLY page. This section is added above p125's and nothing below it is edited** — except

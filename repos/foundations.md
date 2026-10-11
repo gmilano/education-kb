@@ -6,6 +6,126 @@ updated: 2026-10-11
 
 # Education — foundational repos
 
+**Pass 127, 2026-10-11.** ⏱️ **Fourteenth pass of this date** (census window **12:4x → 13:0x UTC**).
+
+🟢 **A supply pass. 33 of 33 addresses resolved on the git lane; every grant below read from the
+payload, every SHA from `git ls-remote`.**
+
+## 🟢 🆕 `P127-F1` Tier 1e — the retention spine: FSRS, permissive in seven languages
+
+🔵 **This page has carried spaced repetition only as an application property** (`ankitects/anki`,
+AGPL-3.0 with per-file exceptions; `ankimcp/anki-mcp-server` as a tool surface). 🟢 **The algorithm
+and its bindings are a foundation tier in their own right, and they are permissive.**
+
+🔵 **Tabled once on `agents/top.md` under `P127-C` with full payload bytes and SHAs.** What belongs
+on *this* page is the dependency decision, because that is what a foundation tier is for:
+
+| if the client's stack is… | take | grant | release engineering |
+|---|---|---|---|
+| Python | [`py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | 🟢 MIT | 38 tags |
+| TypeScript / JS | [`ts-fsrs`](https://github.com/open-spaced-repetition/ts-fsrs) | 🟢 MIT | **114 tags** |
+| Rust | [`fsrs-rs`](https://github.com/open-spaced-repetition/fsrs-rs) | 🟢 BSD-3-Clause | 73 tags |
+| Go | [`go-fsrs`](https://github.com/open-spaced-repetition/go-fsrs) | 🟢 MIT | 16 tags |
+| Swift / iOS | [`swift-fsrs`](https://github.com/open-spaced-repetition/swift-fsrs) | 🟢 MIT | 🟡 individual holder |
+| Dart / Flutter | [`dart-fsrs`](https://github.com/open-spaced-repetition/dart-fsrs) | 🟢 MIT | — |
+| in-browser / WASM | [`fsrs-browser`](https://github.com/open-spaced-repetition/fsrs-browser) | 🟡 BSD-3 body, no title line | 34 tags |
+| **fitting to a real review log** | [`fsrs-optimizer`](https://github.com/open-spaced-repetition/fsrs-optimizer) | 🟢 BSD-3-Clause | **127 tags** |
+| the algorithm itself, to implement | [`free-spaced-repetition-scheduler`](https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler) | 🟢 MIT | 0 tags — a spec, not a release |
+
+🟢 **Why this is a foundation and not a library curiosity:** every tutoring engagement eventually
+has to answer *"when does this learner see this item again"*, and the choice is to reimplement a
+scheduler, buy one, or depend on this. 🔵 **`fsrs-optimizer` is the row that matters most** — it
+fits the model's parameters to the client's own review history, which is the difference between a
+generic scheduler and one calibrated to their learners.
+
+🔴 **The hole in the tier, and it is the same hole as `Gap 393`:**
+[`srs-benchmark`](https://github.com/open-spaced-repetition/srs-benchmark) (**274★**) — the
+benchmark that ranks these schedulers — carries **no grant in 15 probed filenames** and its README
+makes no licence claim. 🔴 **`fsrs4anki-helper` (325★) likewise carries none in 6.**
+🔵 **See `intel/trends.md` `P127-T2`: this is the second independent instance in this industry of
+granted implementations with an ungranted yardstick, and n=2 makes it a shape.**
+
+🟡 **Region, stated honestly rather than upgraded.** The family's README derives FSRS from
+**MaiMemo's DHP model**, linking a Chinese-language explainer and a KDD 2022 paper — so the
+*lineage* is APAC. 🔴 **But no payload in the family carries a jurisdiction** (holders read
+*"Open Spaced Repetition"*, plus two individuals), so these rows stay 🔵 **unplaced** under `P800`
+rather than being promoted on a README link.
+
+## 🟢 🆕 `P127-F2` Tier 1f — the FUN-MOOC platform spine, and the xAPI tier's only live MIT row
+
+🔵 **`openfun` (France Université Numérique / GIP FUN MOOC) publishes ten repositories that
+together form a platform spine; nine are MIT.** Tabled once on `agents/top.md` under `P127-A`.
+What this page adds is how it sits against the tier already here.
+
+🟡 **The xAPI / learning-record tier on this page already contained permissive rows** —
+[`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) (Apache-2.0),
+[`yetanalytics/lrs`](https://github.com/yetanalytics/lrs),
+[`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) and
+[`Apereo-Learning-Analytics-Initiative/Larissa`](https://github.com/Apereo-Learning-Analytics-Initiative/Larissa).
+🔴 **So [`openfun/ralph`](https://github.com/openfun/ralph) is not a discharge** — `agents/top.md`
+`P127-B` records that correction in full. 🟢 **What it is: the tier's only LIVE MIT row**, since
+[`KI-Campus/LRS`](https://github.com/KI-Campus/LRS), the only other MIT entry, is **ARCHIVED
+read-only since 2026-02-20**.
+
+🟢 **And the chain is the real addition:**
+
+| layer | repo | grant |
+|---|---|---|
+| learner-event record | [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 MIT · 32 tags |
+| analytics toolkit over xAPI | [`openfun/warren`](https://github.com/openfun/warren) | 🟢 MIT · 13 tags |
+| dashboards (Grafana/Jsonnet) | [`openfun/potsie`](https://github.com/openfun/potsie) | 🟢 MIT · 17 tags |
+| LTI tool-provider library | [`openfun/django-lti-toolbox`](https://github.com/openfun/django-lti-toolbox) | 🟢 MIT · 7 tags |
+| K8s/Ansible deployment | [`openfun/arnold`](https://github.com/openfun/arnold) | 🟢 MIT · **119 tags** |
+
+🔵 **One holder, one licence, five layers — an event-to-dashboard path that needs no grant
+reconciliation.** 🔴 **The boundary:**
+[`openfun/openedx-docker`](https://github.com/openfun/openedx-docker) is **AGPL-3.0**, because it
+packages Open edX. 🟢 **The copyleft in this stack is one named layer, not a diffuse risk**, which
+is what makes it costable.
+
+## 🟢 🆕 `P127-F3` Tier 2h re-measured — the student-success tier gains a released, institution-held analytics row
+
+🔵 **`Gap 385`, as p101 restated it, asks for a *permissive, modern, release-engineered* layer**
+after `dssg/student-early-warning` turned out to carry bespoke U Chicago terms excluding the sale
+of a service.
+
+| address | grant (payload · bytes · ref · SHA) | ★ | tags | region | role |
+|---|---|---|---|---|---|
+| [`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics) | 🟢 **Apache-2.0** · `LICENSE` 11 379 B + `NOTICE` 304 B · `master` · `44dbf90` | 37 | **38** | 🟢 **North America** — `NOTICE`: © 2018-2019 **The Regents of the University of Michigan** | MyLA: student-facing learning-analytics dashboard over LMS data |
+
+🟢 **Apache-2.0 with a patent grant, 38 tags, an institutional holder, and a `NOTICE` file** — the
+`NOTICE` oracle this tier was built on at p101 works again here, and it is what makes the region
+`P800`-grade rather than inferred.
+
+🟡 **A note on the byte count, because this page pins them:** 11 379 B is **21 B larger** than
+canonical Apache-2.0 (11 358 B). 🟢 **That is the Appendix boilerplate filled in rather than an
+abridgement** — the opposite of `P127-F`'s `ai-literacy-superpowers` case (11 207 B, i.e. text
+*removed*). 🔵 **Bigger-than-canonical is benign; smaller-than-canonical is the one to read.**
+
+🔴 **What this does NOT close, stated so the gap stays usable:** MyLA is a **dashboard**, not a
+risk model. 🔴 **A permissive, modern, release-engineered ML early-warning *model* is still absent
+from this page**, and `Jasig/SSP` (Apache-2.0, 57 tags) remains the tier's only other
+release-engineered row. 🟢 **The engagement consequence is precise: the presentation and
+student-consent surface is now takeable permissively, and the model is the part the studio builds.**
+
+## 🟢 🆕 `P127-F4` Tier 3b — the AI-literacy curriculum tier gains two PERMISSIVE bases
+
+🔴 **This page has recorded the AI-literacy tier as dominated by Creative Commons**, which is fine
+to teach from and awkward to fold into a closed training product. 🟢 **Two permissive rows this
+pass**, tabled once on `agents/top.md` under `P127-G`:
+
+- [`hanhuark/machine-learning-for-engineers`](https://github.com/hanhuark/machine-learning-for-engineers)
+  — 🟢 **BSD-3-Clause**, 51★, AI/ML **and AI-literacy** curriculum for engineers: tutorials,
+  assignments, projects, verified workflows for physical systems. 🟡 Region is org-name inference
+  only; **not `P800`-grade**.
+- [`BradGroux/ai-dev-days`](https://github.com/BradGroux/ai-dev-days) — 🟢 **MIT**, 33★, reusable
+  events, curriculum, labs and tool tracks.
+
+🔵 **Why the tier matters more than its star counts suggest: AI literacy is now a statutory duty in
+two regions** — EU AI Act Article 4 (applying since 2 Feb 2025) and, in the US, H.R. 8747 cleared
+committee this year (`intel/market.md`). 🟢 **A client under a literacy obligation needs curriculum
+it can rebrand, and BSD-3/MIT is the version that permits it.**
+
 **Pass 126, 2026-10-11.** ⏱️ **Thirteenth pass of this date** (census window **11:4x → 12:1x UTC**).
 
 🟢 **Instrument: `compose/code/p126-address-binding/` — `ACTION AK` and `AM` discharged and not refuted; 🔴 **`ACTION AJ` and `ACTION AL` REFUTED on their own clauses**. `test_p126.sh` **20 passed / 0 failed**, fully offline, over 9 fixtures.**

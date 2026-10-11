@@ -6,6 +6,209 @@ updated: 2026-10-11
 
 # Education — AI agents shelf
 
+**Pass 127, 2026-10-11.** ⏱️ **Fourteenth pass of this date** (census window **12:4x → 13:0x UTC**).
+
+🟢 **This pass is a SUPPLY pass, not an apparatus pass.** Every row below was read from the licence
+payload over the git/raw lane this session can reach, with HEAD SHA and tag count taken from
+`git ls-remote`. **33 of 33 addresses resolved; 0 unreachable.**
+
+## 🟢 🆕 `P127-A` — the permissive education stack is INSTITUTIONAL, and one consortium ships nine tenths of it
+
+🔵 **France Université Numérique (FUN-MOOC), the French state higher-education MOOC operator,
+publishes a complete education platform stack under MIT** — and the holder line in each payload is
+the institution, not a username, so every one of these rows is `P800`-grade on the region.
+
+| repo | grant (payload · bytes · ref · SHA) | ★ | tags | region | layer |
+|---|---|---|---|---|---|
+| [`openfun/richie`](https://github.com/openfun/richie) | 🟢 **MIT** · `LICENSE` 1 079 B · `master` · `8b14aec` | 316 | **139** | **EMEA** (© 2018-present **GIP FUN MOOC**) | Education portal / course-catalogue CMS (Django) |
+| [`openfun/marsha`](https://github.com/openfun/marsha) | 🟢 **MIT** · `LICENSE` 1 078 B · `master` · `2e4f470` | 152 | **146** | **EMEA** (© 2018-present **GIP FUN-MOOC**) | LTI Learning **Content** Management System — video, live, webinar |
+| [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 **MIT** · `LICENSE.md` 1 094 B · `main` · `16f52e4` | 51 | **32** | **EMEA** (© 2020-present **France Université Numérique**) | 🟢 **xAPI Learning Record Store** — see `P127-B` |
+| [`openfun/joanie`](https://github.com/openfun/joanie) | 🟢 **MIT** · `LICENSE` 1 086 B · `main` · `ff0f8bb` | 30 | **45** | **EMEA** (© 2021 **France Université Numérique**) | 🟢 **Headless ERP for education** — enrolment, subscription, payment, certificate delivery |
+| [`openfun/warren`](https://github.com/openfun/warren) | 🟢 **MIT** · `LICENSE.md` 1 094 B · `main` · `839fcbb` | 17 | 13 | **EMEA** (© 2023-present **France Université Numérique**) | Learning-analytics visualisation toolkit over xAPI |
+| [`openfun/potsie`](https://github.com/openfun/potsie) | 🟢 **MIT** · `LICENSE.md` 1 094 B · `main` · `040f85b` | 11 | 17 | **EMEA** (© 2021-present **France Université Numérique**) | Grafana dashboard suite for learning analytics (Jsonnet) |
+| [`openfun/ashley`](https://github.com/openfun/ashley) | 🟢 **MIT** · `LICENSE` 1 078 B · `master` · `7c23e03` | 12 | 20 | **EMEA** (© 2020-present **GIP FUN MOOC**) | Self-hosted multi-tenant discussion forum for learning |
+| [`openfun/django-lti-toolbox`](https://github.com/openfun/django-lti-toolbox) | 🟢 **MIT** · `LICENSE` 1 078 B · `master` · `22c6f2f` | 14 | 7 | **EMEA** (© 2020-present **GIP FUN MOOC**) | Library for building LTI Tool Providers — the interop wire |
+| [`openfun/arnold`](https://github.com/openfun/arnold) | 🟢 **MIT** · `LICENSE` 1 078 B · `master` · `f19ea6d` | 41 | **119** | **EMEA** (© 2018-present **GIP FUN MOOC**) | Ansible/Kubernetes deployment for the above |
+| 🔴 [`openfun/openedx-docker`](https://github.com/openfun/openedx-docker) | 🔴 **AGPL-3.0** · `LICENSE` 34 520 B · `master` · `40d0dbf` | 142 | **204** | **EMEA** | 🔴 **The one exception — and it is exactly the Open edX wrapper** |
+
+🟢 **Nine of ten are MIT. The tenth is AGPL-3.0, and it is the one that packages Open edX** —
+whose own platform is AGPL. 🔵 **So the copyleft boundary in this stack is not scattered, it is a
+single named layer**, which is the property that makes it costable: a studio can take the portal,
+the LTI content layer, the record store, the ERP, the dashboards, the forum and the deployment
+under MIT, and decide about Open edX separately.
+
+🔵 **Release engineering, not a demo shelf**: 139 / 146 / 204 / 119 / 45 / 32 tags on the six
+largest. This is the most heavily released permissive cluster this KB has recorded in education.
+
+## 🟡 🆕 `P127-B` — `openfun/ralph` is a permissive LRS, and the gap it *looks* like it discharges was already half-discharged in this KB's own back catalogue
+
+🔴 **This section was drafted as a discharge and is published as a correction of that draft.**
+The draft claimed the xAPI record layer had been copyleft-only until this pass. 🔴 **That is false,
+and this KB already held the refutation**: `repos/foundations.md`'s xAPI / learning-record tier
+carries [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) (**Apache-2.0**, 144★, SQL
+LRS), [`yetanalytics/lrs`](https://github.com/yetanalytics/lrs) (Apache-2.0),
+[`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) (Apache-2.0) and
+[`Apereo-Learning-Analytics-Initiative/Larissa`](https://github.com/Apereo-Learning-Analytics-Initiative/Larissa)
+(Apache-2.0). 🔵 **This is `p103`'s own pattern recurring one pass later: the gap was in the back
+catalogue, not in the supply.**
+
+🟢 **What is true, and narrower:** this KB's standing *copyleft* claim is about two specific
+addresses — [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker)
+**GPL-3.0** and [`IMSGlobal/caliper-spec`](https://github.com/IMSGlobal/caliper-spec), a consortium
+*Specification Document License* that is not OSI. **Both still hold.** `ralph` does not overturn
+them; it joins a permissive tier that already existed.
+
+🟢 **So what does `ralph` actually add, stated as a purchase rather than a discharge?**
+
+- 🟢 **The first MIT LRS in the tier** — the existing permissive rows are Apache-2.0. MIT matters
+  only where a client's policy distinguishes them, but that distinction is real in public
+  procurement.
+- 🟢 **A state institution as the holder** (© France Université Numérique), making the row
+  `P800`-grade on region where `KI-Campus/LRS` — the tier's only other MIT row — is 🔴 **ARCHIVED
+  read-only since 2026-02-20**. 🔵 **So `ralph` is the tier's only LIVE MIT row.**
+- 🟢 **The chain, not the box.** `ralph` (record) → [`warren`](https://github.com/openfun/warren)
+  (xAPI analytics toolkit) → [`potsie`](https://github.com/openfun/potsie) (Grafana dashboards)
+  are **one holder, one licence, three layers**. 🔵 **That is what the tier did not have: an
+  event-to-dashboard path a studio can take whole without reconciling four grants.**
+
+🟢 **And one genuinely new piece of evidence, which is the part of this section worth keeping.**
+The same organisation publishes `openfun/learninglocker-docker` with its description beginning
+**"⚠️ DEPRECATED ⚠️"**. 🔵 **The consortium that ran the GPL-3.0 LRS in Docker built an MIT one and
+retired its own wrapper.** 🟢 **That is a licence-driven architecture decision evidenced by a
+retirement rather than an opinion** — and it is the strongest artefact this pass found for the
+"sovereignty and licence are becoming the same conversation in EMEA" trend.
+
+## 🟢 🆕 `P127-C` — the FSRS layer: retention mechanics are commoditised in seven languages, and the BENCHMARK is the ungranted part
+
+🔵 **`open-spaced-repetition` publishes the Free Spaced Repetition Scheduler as an org-held family
+with first-class bindings.** This KB already carried `ankimcp/anki-mcp-server` as *"the cheapest way
+to give an agent durable retention mechanics"* — this is the layer underneath it, and it is
+permissive.
+
+| repo | grant (payload · bytes · ref · SHA) | ★ | tags | role |
+|---|---|---|---|---|
+| [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | 🟢 **MIT** · `LICENSE` 1 079 B · `main` · `ff7c85c` | **4 099** | **199** | The flagship scheduler, as an Anki custom scheduling |
+| [`open-spaced-repetition/ts-fsrs`](https://github.com/open-spaced-repetition/ts-fsrs) | 🟢 **MIT** · 1 079 B · `main` · `c8ca282` | 811 | **114** | TypeScript (ESM/CJS/UMD) |
+| [`open-spaced-repetition/free-spaced-repetition-scheduler`](https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler) | 🟢 **MIT** · 1 089 B · `main` · `93ed713` | 723 | 0 | The **algorithm spec** (DSR model) |
+| [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | 🟢 **MIT** · 1 079 B · `main` · `9446cb0` | 507 | 38 | Python package |
+| [`open-spaced-repetition/fsrs-rs`](https://github.com/open-spaced-repetition/fsrs-rs) | 🟢 **BSD-3-Clause** · 1 509 B · `main` · `0a57374` | 441 | 73 | Rust — optimiser **and** scheduler |
+| [`open-spaced-repetition/go-fsrs`](https://github.com/open-spaced-repetition/go-fsrs) | 🟢 **MIT** · 1 079 B · `main` · `61159b9` | 146 | 16 | Go module |
+| [`open-spaced-repetition/fsrs-optimizer`](https://github.com/open-spaced-repetition/fsrs-optimizer) | 🟢 **BSD-3-Clause** · 1 509 B · `main` · `ac2a82d` | 112 | **127** | 🟢 **Fits the parameters to a real review log** |
+| [`open-spaced-repetition/swift-fsrs`](https://github.com/open-spaced-repetition/swift-fsrs) | 🟢 **MIT** · 1 066 B · `main` · — | 105 | — | Swift package. 🟡 holder is an individual (© 2023 **Ben Smiley**) |
+| [`open-spaced-repetition/dart-fsrs`](https://github.com/open-spaced-repetition/dart-fsrs) | 🟢 **MIT** · 1 079 B · `main` · — | 65 | — | Dart/Flutter |
+| [`open-spaced-repetition/fsrs-browser`](https://github.com/open-spaced-repetition/fsrs-browser) | 🟡 **BSD-3-Clause by BODY, no title line** · 1 460 B · `main` · `752dd67` | 57 | 34 | Rust/WASM in-browser optimiser + scheduler. 🟡 © 2023 **Alex Nguyen** |
+| [`open-spaced-repetition/awesome-fsrs`](https://github.com/open-spaced-repetition/awesome-fsrs) | 🟡 **CC0 1.0 Universal** · 7 048 B · `main` · `ff20ec6` | 718 | 0 | The index of implementations |
+| 🔴 [`open-spaced-repetition/srs-benchmark`](https://github.com/open-spaced-repetition/srs-benchmark) | 🔴 **NO GRANT** — 15 filenames probed, all 404; README carries no licence claim · `main` · `bd9110f` | **274** | 0 | 🔴 **The benchmark for spaced-repetition schedulers** |
+| 🔴 [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) | 🔴 **NO GRANT** — 6 filenames probed · `main` · `29208f2` | **325** | 4 | Postpone / advance / load-balance add-on |
+
+🔴 **The pattern is exact, and this is now its SECOND independent instance in this industry.**
+`Gap 393` recorded that the BEA-2025 pedagogical-evaluation layer has an ungranted scorer
+(`kaushal0494/AITutor-EvalKit`) **and** an ungranted benchmark (`MRBench`). Here the
+implementations are MIT and BSD-3 across seven languages with 199 and 127 tags — and
+🔴 **`srs-benchmark`, the thing that decides whose scheduler is better, carries no grant at all.**
+
+🟢 **n=2 is a shape, not an anecdote: in education AI, the code gets a licence and the yardstick
+does not.** 🔵 **Operationally this means the same move in both cases** — take the implementation,
+and re-run the comparison on the client's own data rather than shipping or redistributing the
+benchmark. The scheduler is reusable; the league table is not.
+
+## 🟢 🆕 `P127-D` — the student early-warning / analytics gap NARROWS: a permissive, released, institutionally-held dashboard
+
+🔴 **`Gap 385`, as restated at p101, asks for *"a permissive, MODERN, release-engineered"* analytics
+layer** after `dssg/student-early-warning` turned out to carry bespoke U Chicago terms that exclude
+selling a service.
+
+| repo | grant (payload · bytes · ref · SHA) | ★ | tags | region | note |
+|---|---|---|---|---|---|
+| [`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics) | 🟢 **Apache-2.0** · `LICENSE` 11 379 B + `NOTICE` 304 B · `master` · `44dbf90` | 37 | **38** | 🟢 **North America** (`NOTICE`: © 2018-2019 **The Regents of the University of Michigan**) | 🟢 **MyLA — a student-facing learning-analytics dashboard, Apache-2.0 with a patent grant, 38 tags.** 🔵 Region evidence is the `NOTICE` holder line, so this is `P800`-grade |
+
+🟢 **What this discharges:** the "no permissive release-engineered analytics layer" half.
+🔴 **What it does NOT discharge, stated precisely so the gap stays honest:** MyLA is a
+**dashboard over LMS data**, not an ML risk model. 🔴 **A permissive, modern, released ML
+early-warning *model* is still absent from this shelf**, and `Jasig/SSP` (Apache-2.0, p101) remains
+the only release-engineered row in the tier. 🔵 **The engagement shape this changes**: the
+presentation and consent layer can now be taken permissively, and the model is the part a studio
+builds.
+
+## 🟡 🆕 `P127-E` — the biggest education agent-skill collection on this shelf is ShareAlike, not MIT
+
+| repo | grant (payload · bytes · ref · SHA) | ★ | tags | region | verdict |
+|---|---|---|---|---|---|
+| 🟡 [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 🟡 **CC-BY-SA-4.0** · `LICENSE` 1 230 B · `main` · `6bbbce4` | **845** | **0** | 🔵 unplaced (© 2026 **Gareth Manning**, an individual; no jurisdiction in the payload and no UK/DfE/Ofsted token in the README) | **165 evidence-grounded skills** for teachers, school leaders and EdTech builders — pedagogy, learning science, curriculum, assessment. 🔴 **ShareAlike: a derivative must be licensed alike.** 🔴 **0 tags** |
+
+🔴 **This is the single highest-starred education-specific agent-skill artefact this KB has found —
+845★ — and it is the one that a studio cannot fold into a closed deliverable.** 🔵 **Read it against
+this shelf's own skill tier**, where `Study-Mate` (841★), `universal-examprep-skill` (304★),
+`algo-sensei` (287★) and `Bloom` (285★) are all **MIT**. 🟢 **The lesson is not "avoid it" — it is
+that the skill tier has a licence split that tracks AUTHOR TYPE**: individual pedagogy authors
+reach for Creative Commons because they are publishing *content*, and CC-BY-SA is the default
+"open" choice in education publishing. 🔵 **Use it as a reference and a rubric source; do not
+vendor its text into a client's closed skill pack.**
+
+## 🟡 🆕 `P127-F` — three permissive texts that are not what their badge says
+
+🔵 **All three are usable. All three would be mis-recorded by a badge reader**, which is this
+shelf's standing argument for reading the payload.
+
+| row | what a badge/README implies | what the payload says |
+|---|---|---|
+| 🟡 [`Habitat-Thinking/ai-literacy-superpowers`](https://github.com/Habitat-Thinking/ai-literacy-superpowers) (115★, `main` · `9d35995`) | Apache-2.0 | 🟡 **Apache-2.0 text at 11 207 B — canonical is 11 358 B.** A reworded, non-canonical copy: the `Appendix` and six `patent` mentions survive, but the wording differs from apache.org's text in at least two clauses. 🔵 **Same class as `SimonsTang/feifei-companion` (10 227 B)** — read it before relying on the patent clause |
+| 🟡 [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) (133★, 4 tags, `main` · `7cb4d9a`) | an open research release | 🟡 **CC0 1.0 Universal** · 7 048 B. 🟢 Maximally permissive for *copyright* — no attribution obligation. 🔴 **But CC0 expressly does not license patent or trademark rights**, unlike Apache-2.0. For code this is the one gap to note |
+| 🟡 [`open-spaced-repetition/fsrs-browser`](https://github.com/open-spaced-repetition/fsrs-browser) (57★, 34 tags) | BSD-3 by org convention | 🟡 **The 3-clause BSD body with NO title line**, 1 460 B, © 2023 **Alex Nguyen** — an individual, inside an org-held family whose other rows say *"Open Spaced Repetition"* |
+
+🟢 **And one that IS what it says:** [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor)
+is the reference implementation of **GenMentor** — *"LLM-powered Multi-agent Framework for
+Goal-oriented Learning in Intelligent Tutoring System"*, **WWW 2025 Industry Track, Oral**.
+🔵 **Goal-oriented ITS with a multi-agent decomposition and 4 tags** — a rare education row that is
+both peer-reviewed at a top venue and tagged.
+
+## 🟢 🆕 `P127-G` — the AI-literacy tier gets two permissive bases, which the statutory duty requires
+
+🔵 **Article 4 of the EU AI Act has applied since 2 Feb 2025 and H.R. 8747 cleared committee in the
+US this year** (`intel/market.md`), so AI literacy is a procurement line, not a nice-to-have. This
+shelf has recorded the tier as thin and the framework everyone points at as ungranted.
+
+| repo | grant (payload · bytes · ref · SHA) | ★ | region | scope |
+|---|---|---|---|---|
+| [`hanhuark/machine-learning-for-engineers`](https://github.com/hanhuark/machine-learning-for-engineers) | 🟢 **BSD-3-Clause** · `LICENSE` 1 493 B · `main` · `9c68f2d` | 51 | 🟡 **North America** by org-name inference only (© 2024, **Han Hu** — an individual; `hanhuark` and the Jupyter/Arkansas-style course layout are the only signals). **Not `P800`-grade; labelled** | Open AI/ML **and AI-literacy** curriculum for engineers — tutorials, assignments, projects, verified workflows for physical systems. Jupyter, with a published course site |
+| [`BradGroux/ai-dev-days`](https://github.com/BradGroux/ai-dev-days) | 🟢 **MIT** · `LICENSE.md` 1 085 B · `master` · `24a063d` | 33 | 🔵 unplaced (© 2026 **AI Dev Days contributors** — a project, no jurisdiction) | Reusable **events, curriculum, labs and tool tracks** companion to an AI-native operating framework |
+
+🔵 **Both are permissive and both are curriculum rather than software**, which is the combination
+the tier was missing: the KB's existing AI-literacy rows are overwhelmingly **CC-BY-4.0**
+(`somehippie/ai-starter-kit-digital-tasks`, `Tessangelika/ai-literacy-curriculum`), i.e. fine to
+teach from and awkward to fold into a closed training product. 🟢 **BSD-3 and MIT curriculum is
+the version a studio can rebrand.**
+
+## 🔴 🆕 `P127-H` — four negatives, each read from the payload
+
+| row | what is claimed | what this pass found |
+|---|---|---|
+| 🔴 [`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) (56★, `main` · `fcec416`) | a learning-science-principles LLM tutor, cited in ITS work | 🔴 **NO licence payload in 7 filenames.** A widely-referenced research tutor with no grant |
+| 🔴 [`frappe/education`](https://github.com/frappe/education) (17 tags, `develop` · `444cc8e`) | roundups present the Frappe/ERPNext education module as the open school-management option | 🔴 **GPL-3.0 — declared in a 19-BYTE `license.txt` reading `License: GNU GPL V3`.** 🔵 **There is no licence *text* in the repository at all**, only that one line. Same family, same lowercase-`license.txt` trap as `frappe/lms` (AGPL-3.0, p101) |
+| 🟡 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) (`19.0` · `1c95cef`) | LGPL-3.0 education ERP | 🟢 **LGPL-3.0 confirmed from the payload** — `LICENSE` 8 241 B, *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3"*. 🔴 **Two corrections:** the default branch is **`19.0`**, not `17.0`; and the `LICENSE` opens *"For copyright information, please see the COPYRIGHT file"* — 🔴 **that `COPYRIGHT` file 404s.** The grant names a file the repo does not carry |
+| 🔴 **GegoK12** | a vendor page states a **free, MIT-licensed open-source school ERP** for K-12 | 🔴 **No application source at that claim.** The org is `Gego-K12`, not `gegok12`, and it publishes exactly two public repos: [`Gego-K12/gegok12-documentation`](https://github.com/Gego-K12/gegok12-documentation) (**2★**) and a `.github` profile. 🔴 **An MIT claim with no code behind it is not a finding**, and it should not reach a client deck as an option |
+
+🔵 **`P127-H` is why this shelf reads payloads: of four rows a roundup would have handed over as
+usable, one has no grant, one is GPL-3.0 by a 19-byte stub, one is LGPL with a dangling reference,
+and one has no software published at all.**
+
+## 🔵 🆕 `P127-R` — what the mandated regional sweep returned, stated per region
+
+🟢 **The brief requires each region to be searched and each empty region to be written down.**
+
+| region | new SUPPLY rows this pass | new DEMAND/intel this pass |
+|---|---|---|
+| **EMEA** | 🟢 **10** — the entire FUN-MOOC stack (`P127-A`), 9 MIT + 1 AGPL, all institutionally held | 🟢 AI Act enforcement start vs the **2 Dec 2027** high-risk deadline, and a dated source conflict — `intel/market.md` |
+| **North America** | 🟢 **1** — `my-learning-analytics` (Apache-2.0, U Michigan) | 🟢 H.R. 8747 cleared committee; 134 bills / 31 states |
+| **APAC** | 🟡 **0 new placed rows.** The FSRS family is APAC **by lineage only** — its README derives FSRS from **MaiMemo's DHP model** with a Chinese-language explainer and a KDD 2022 paper, but 🔴 **no payload in the family carries a jurisdiction**, so the rows stay 🔵 unplaced rather than being upgraded on a README link | 🟢 **3 statutes dated** — Korea AI Basic Act in force 22 Jan 2026, Vietnam Law 134/2025/QH15 (education AI high-risk, 1 Mar 2027), Taiwan AI Basic Act Dec 2025 |
+| 🔴 **LATAM** | 🔴 **ZERO new rows.** Queried in Spanish and Portuguese, which this shelf records as the highest-yield move for the region: `tutor inteligencia artificial educacion escuela estudiantes` and `educacao tutor IA professor escola` both returned **0 repositories above 5★**. 🔵 **The existing LATAM rows are unaffected** (`bncc-dev/*`, `LabSirius/TutorIA`, `mumuki/mumuki-laboratory`, `belentani7/aprende-brasil`, `douglasrizzo/catsim`) | 🟢 **A hard governance number: UNESCO-IESALC finds only 26 % of LatAm higher-education institutions have a formal AI strategy** — `intel/market.md` |
+
+🔴 **So LATAM's supply zero is now at least two consecutive passes, and this pass can say why with
+more precision than "nothing found": the region's rows in this KB are overwhelmingly produced by
+universities and ministries (UTP, INET, MEC/CNE), not by the individual-author channel that
+GitHub's star-ranked search surfaces.** 🔵 **The implication for the next pass is a channel change,
+not another query: institutional and ministry repositories, not star-ranked keyword search.**
+
 **Pass 126, 2026-10-11.** ⏱️ **Thirteenth pass of this date** (census window **11:4x → 12:1x UTC**).
 
 🟢 **Instrument: `compose/code/p126-address-binding/` — `ACTION AK` and `AM` discharged and not refuted; 🔴 **`ACTION AJ` and `ACTION AL` REFUTED on their own clauses**. `test_p126.sh` **20 passed / 0 failed**, fully offline, over 9 fixtures.**
@@ -3580,6 +3783,41 @@ own annotated set. 🔴 **What is not takeable is the comparability** — scores
 only numbers anyone recognises, and MRBench is the ungranted half. 🔵 **Cost the re-annotation, or
 cost the engagement without a published benchmark number. There is no third option, and pretending
 otherwise is how `P1014` reaches a client deck.**
+
+### 🟢 🆕 p127 The platform-infrastructure tier — a state consortium's MIT stack, and the permissive record store
+
+🔵 **Rows are tabled once, at the top of this page under `P127-A` / `P127-B`, and deliberately not
+restated here** — this shelf carries a duplicate-claim gate, and a licence stated twice is a
+licence that can drift once.
+
+🟢 **What the tier adds, in one line each:**
+
+- **Portal + content + interop:** [`openfun/richie`](https://github.com/openfun/richie) (MIT, 139 tags),
+  [`openfun/marsha`](https://github.com/openfun/marsha) (MIT, 146 tags),
+  [`openfun/django-lti-toolbox`](https://github.com/openfun/django-lti-toolbox) (MIT).
+- **The learner-event record:** [`openfun/ralph`](https://github.com/openfun/ralph) (MIT, 32 tags) —
+  🟡 **the tier's only LIVE MIT LRS**, joining the Apache-2.0 rows `repos/foundations.md` already
+  carries. 🔴 **Not a discharge — see `P127-B`, which corrects that draft claim.**
+- **Commerce and credentials:** [`openfun/joanie`](https://github.com/openfun/joanie) (MIT, 45 tags) —
+  enrolment, payment and certificate delivery as a headless service. 🔵 **The only permissive
+  education *ERP* layer on this shelf;** see `verticals/solutions.md`.
+- **Analytics presentation:** [`openfun/warren`](https://github.com/openfun/warren) (MIT) +
+  [`openfun/potsie`](https://github.com/openfun/potsie) (MIT, Grafana) +
+  [`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics) (Apache-2.0, 38 tags).
+- 🔴 **The boundary to cost:** [`openfun/openedx-docker`](https://github.com/openfun/openedx-docker)
+  is **AGPL-3.0** — the only non-MIT row in the consortium's stack, and it is the Open edX wrapper.
+
+### 🟢 🆕 p127 The retention tier — spaced repetition as a dependency rather than a reimplementation
+
+🔵 **Tabled once under `P127-C`.** The short version: the **FSRS** scheduler is MIT
+([`fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki), **4 099★ / 199 tags**) with
+first-class bindings in TypeScript, Python, Rust, Go, Swift and Dart, plus a BSD-3
+[`fsrs-optimizer`](https://github.com/open-spaced-repetition/fsrs-optimizer) (127 tags) that fits
+the model to a real review log.
+
+🔴 **The one row not to ship:**
+[`srs-benchmark`](https://github.com/open-spaced-repetition/srs-benchmark) (**274★**) carries
+**no grant in 15 filenames**. 🔵 **Take the scheduler, re-run the comparison on the client's data.**
 
 ## Negatives and licence flags — read before you quote a blog
 
