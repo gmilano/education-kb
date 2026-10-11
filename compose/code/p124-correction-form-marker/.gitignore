@@ -1,0 +1,6 @@
+# The fetched licence BODIES (1 135 files, ~15 MB) are reproducible from
+# out/heads-all.tsv by re-running grant_set.sh, so they are not committed.
+# What IS committed is every derived TSV, which is the evidence for the
+# figures this pass publishes.
+out/cache/
+out/*.err

@@ -6,6 +6,78 @@ updated: 2026-10-11
 
 # Education — current trends
 
+**Pass 124, 2026-10-11.** ⏱️ **Eleventh pass of this date** (window **10:0x → 11:3x UTC**).
+
+🟢 **Instrument: `compose/code/p124-correction-form-marker/`. `test_p124.sh` **50 passed / 0
+failed**, fully offline. This page carried **0** live defects this pass.**
+
+## 🟢 🆕 `P124-T1` — the trend this pass can evidence from its own bytes: permissive code, NonCommercial data
+
+🔴 **This is the strongest trend statement this page has been able to make about the DATA layer,
+and it is measured rather than surveyed.** `ACTION AD` resolved all **41** of this KB's bare-`CC`
+grants to a version. **15 of 41 — 37 % — forbid a commercial derivative.**
+
+| layer | what the measurement says |
+|---|---|
+| **code** | 🟢 overwhelmingly permissive — MIT 111, Apache-2.0 46, BSD-3 13 of 1 135 grant files read this pass |
+| **data / content** | 🔴 **NonCommercial at 37 % of the CC bucket** — 13 × `CC-BY-NC-SA-4.0`, 1 × `CC-BY-NC-4.0`, 1 × `CC-BY-NC-ND-4.0` |
+
+**Channel:** every token read from the licence file's bytes on the repository's real default
+branch; no badge, no blog, no API. 🔵 **The addresses concerned are corpora, item banks,
+curriculum frameworks and knowledge graphs — the asset, not the documentation.**
+
+🟢 **Consequence a studio can act on: an open education dataset is a BENCHMARK, not a
+deliverable.** Price client-data ingestion from day one.
+
+## 🟢 🆕 `P124-T2` — a repository's licence can depend on which BRANCH you cloned, and one row proves it
+
+🔴 **New, and it inverts a standing assumption on this page.** `ACTION AE` scored the
+branch-guessing model against the 79 addresses where it can fail.
+[`Learnosity/learnosity-qti`](https://github.com/Learnosity/learnosity-qti) serves **MIT on
+`master`** and **GPL-2.0 on `develop`** — and `develop` is its default branch. Both files were
+fetched and read.
+
+**Channel:** `git ls-remote --symref` for the default branch, `raw.githubusercontent.com` for the
+two licence bodies.
+
+🔵 **So "what licence is this repository?" is not always a well-formed question.** On 86 of 1 344
+addresses (**11.7 %**, across 39 distinct branch names) "clone the default branch" and "clone
+`main`" are different instructions, and on at least one they are different **licences** — with the
+abandoned branch carrying the *more permissive* text, which is the direction that costs money.
+
+## 🟢 🆕 `P124-T3` — the discovery channel is exhausted, and that is now a measurement rather than a complaint
+
+🔴 **The mandated query set returned ZERO new items in all four regions, on both the supply and
+the demand side — the first pass where that is simultaneously true.** `Gap 402` weakens for a
+seventh consecutive pass.
+
+**Channel:** the four global queries plus one per region, each token checked against 1 370 held
+addresses and this KB's demand-side record.
+
+🟢 **The honest interpretation is not that the market stopped moving.** It is that at 124 passes
+this KB's resolution exceeds its channel's: the queries return *"Vietnam's AI law covers education"*
+where this KB holds `Law 134/2025/QH15`, `Decision 33/2026/QD-TTg`, `Decree 142/2026/NĐ-CP` and
+**46 high-risk systems of which education is 3**. 🔵 **A sweep that keeps returning zero against a
+corpus that keeps being verified is a CONTROL, and a passing control is a result.** 🔴 **What it
+also means: the next genuinely new supply-side row will not come from a search engine. It will
+come from a namespace census (`ACTION C`'s route, which is how `ls1intum/Artemis` arrived) or from
+a forge this environment currently cannot reach.**
+
+## 🔴 🆕 `P124-T4` — the trend this page CANNOT evidence, stated because it is the honest answer
+
+🔴 **"AI in education is shifting from experimentation to governance" is the headline every 2026
+trend source returns, and this page still cannot evidence it with a measurement.** The sources
+available are vendor roundups, consultancy posts and one OECD reference; the figures they carry
+(*"42 % improvement in outcomes"*, *"86 % of educational organizations have adopted generative
+AI"*, *"only 10 % of 450+ institutions have formal guidelines"*) have methodology this pass could
+not inspect, and the primary hosts are unreachable from this environment.
+
+🟢 **What this page can say instead, from its own bytes: the governance gap is real at the LICENCE
+layer, where it is measurable.** 41 CC grants unreadable until this pass, 15 of them commercially
+prohibitive, **27** correction records in surface forms no census reaches, and **11.7 %** of
+addresses on a default branch that a guessing tool mis-reads. 🔵 **That is a governance deficit
+with a number attached, and it is this KB's own.**
+
 **Pass 123, 2026-10-11.** ⏱️ **Tenth pass of this date** (window **08:4x → 09:4x UTC**).
 
 🟢 **Instrument: `compose/code/p123-grant-set-calibration/`. `test_p123.sh` **35 passed / 0

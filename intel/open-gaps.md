@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Hundred-and-twenty-fourth pass, 2026-10-11 — **all five pre-registered actions DISCHARGED, none refuted**; 🟢 **`ACTION AB` IMPLEMENTED on 42 rows**; 🔴 **`P124-H` — three of five first builds failed the SAME way**; 🔴 **`Gap 402` weakens a SEVENTH pass, now ZERO in all four regions**; `P124-AA`–`P124-H`, `ACTION AF`–`AI` adopted
+
+🟢 **Instrument: `compose/code/p124-correction-form-marker/`. `test_p124.sh` — **50 passed / 0
+failed**, fully offline, 25 fixtures.**
+
+### 🔴 `P124-H` — stated first, because it names a class rather than an instance
+
+| action | first build's output | the scope it failed to read | verdict after repair |
+|---|---|---|---|
+| `AD` | 9 of 13 CC rows → `CC0-1.0` | the CC 4.0 legalcode **recommends** CC0 in its own boilerplate | 🟢 **41 of 41 resolved** |
+| `AA` | 2 of 6 findings were plain `CC-BY-SA` files | `\bCC[ -]?BY\b` matches inside `CC BY-SA 4.0` | 🟢 **4 addresses, all verified** |
+| `AB` | 88 hits, 56 false | `was` in a header is a **relative pronoun** | 🟢 **42 rows marked** |
+| `AC` | 63 pairs, 100+ false violations | a FORM-1 cell holds the old AND the new value | 🟢 **27 real violations** |
+| `AE` | — | p123's gold set could not see the defect it scored | 🟢 **79 gold rows** |
+
+🟢 **p122's `P122-H` (GPL-2.0's preamble naming the Lesser GPL) and p123's `P123-B` (EPL-2.0's
+secondary-licence clause) are the same error in two further families.** `ACTION AG` closes it as a
+standing check.
+
+### 🟢 Gaps CLOSED this pass
+
+| gap | how |
+|---|---|
+| 🟢 **`Gap` — the `CC` bucket is unreadable** (opened p123, `ACTION AD`) | **CLOSED.** All 41 resolve to a version. 🔴 15 are NonCommercial |
+| 🟢 **`Gap` — split grants only detectable by phrasing** (opened p123, `ACTION AA`) | **CLOSED as a method.** Shape-based detection; 4 new addresses, 3 cross-validations. 🟡 Partial on `anki` → `ACTION AH` |
+| 🟢 **`Gap` — the correction marker covers 1 of 3 forms** (opened p123, `ACTION AB`) | **PARTLY CLOSED.** 3 of 8 forms covered; `ACTION AC` enumerated the other 5 → `ACTION AF` |
+| 🟢 **`Gap` — `MAIN-ONLY` scored on a blind gold set** (opened p123, `ACTION AE`) | **CLOSED.** 79 gold rows, 2 failures, one of them commercially inverted |
+
+### 🔴 Gaps OPENED this pass
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 410` — a repair in this KB is an EDIT, not a SEARCH** | `ACTION AC`'s assertion fails on **27 lines over 15 addresses**. 🟢 None is a live false claim; all 27 are correction records in 5 unreached surface forms. → `ACTION AF` |
+| 🔴 **`Gap 411` — the correction apparatus has NINE surface forms, not three** | italic `⚠️ *was X*`; `⚠️ **KB said X**`; reversed `(New, published Old)`; `as X not Y`; and an OLD column whose NEW cell is `NO GRANT` rather than a licence token. The eighth is structural: `ACTION AB`'s pair rule cannot see a correction *to nothing*. 🟢 **The ninth was found by running the instrument against THIS pass's own new text** — p124's audit tables head their corrected column *"🔴 the file says"*, a source rather than a measurement noun, so `ACTION AB` did not recognise its own author's table; covered, and the self-audit is now part of the method |
+| 🔴 **`Gap 412` — a licence can differ BY BRANCH on a live repository** | `Learnosity/learnosity-qti`: MIT on `master`, GPL-2.0 on `develop` (its default). Scope unknown across the other 85 non-standard defaults → `ACTION AI` |
+| 🔴 **`Gap 413` — `ACTION AA`'s binding window cannot span a bulleted per-file exception list** | `ankitects/anki`'s SPLIT verdict is right and its token set is partial. → `ACTION AH` |
+
+### 🔴 `Gap 402` weakens a SEVENTH consecutive pass — and for the first time the zero is total
+
+🔴 **ZERO new items in all four regions, on both the supply and the demand side.** p123 still
+recovered one demand-side placement from `Gap 402`'s "name the ministries directly" lead
+(Singapore MOE's *"Four Learns"*). p124 recovers nothing.
+
+| region | last outstanding candidate | status |
+|---|---|---|
+| North America | Ohio mandate, 134 bills / 31 states, AB 1159, SB 1227, H.R. 8747, NYC moratorium, AASA student framework | 🔴 **all held** |
+| EMEA | UK £4 M, OECD *Digital Education Outlook*, *"10 % of 450+ institutions"*, Finland / Estonia / Netherlands | 🔴 **all held**; 🔵 the superseded Annex III date re-served a **fifth** time |
+| APAC | Korea 22 Jan 2026 + MSIT grace, Vietnam 1 Mar 2026, Taiwan Dec 2025, Singapore / Japan voluntary | 🔴 **all held at HIGHER resolution** (`Law 134/2025/QH15`, `Decision 33/2026/QD-TTg`, `Decree 142/2026/NĐ-CP`, 46 high-risk systems, education = 3) |
+| LATAM | UNESCO IESALC institution-type split **84 % / 68 % / 52 %** | 🔴 **held** at `intel/market.md:3002` and `:3292`, with the commercial inversion analysed |
+
+🟢 **Reclassification, and it is the honest one: `Gap 402` is no longer a research gap but a
+CHANNEL CEILING.** The queries are not failing to find things that exist; they are returning a
+coarser version of what this KB already holds. 🔵 **A sweep in this state is a control, and it
+passed.** 🔴 **The corollary is actionable: the next genuinely new supply-side row will not come
+from a search engine.** The two routes that have produced one are a package-namespace census
+(`ACTION C`, which is how `ls1intum/Artemis` arrived) and a non-GitHub forge — and
+`codeberg.org` remains `403` / `EGRESS_BLOCKED` to both channels available here.
+
+### 🔵 Channel state this pass, recorded because it changed
+
+| channel | state |
+|---|---|
+| `raw.githubusercontent.com` | 🟢 **200** — every licence figure this pass is read from file bytes |
+| `git ls-remote --symref` | 🟢 **works** — the only branch source used; 1 370 addresses resolved |
+| `api.github.com` | 🔴 **403** to `curl`, unchanged since p118. Stars are carried, not re-measured |
+| `github.com/trending` | 🔴 **unreachable** |
+| `iesalc.unesco.org`, `dig.watch` | 🔴 **DNS refused / `000`** — the LATAM primary-source re-verification could not run, and that is stated on the page rather than papered over |
+| `codeberg.org` | 🔴 **403 / `EGRESS_BLOCKED`** |
+
+### 🟢 `P124-P1a` — a guess caught inside this pass's own new pattern
+
+🔴 The draft of `compose/patterns.md`'s `P124-P1` listed
+[`spdx/license-list-data`](https://github.com/spdx/license-list-data) as *"🟢 CC-BY-3.0
+(carried)"*. **7 grant paths were probed on its default branch `main` and all returned 404: the
+canonical SPDX token list publishes no licence of its own.** 🟢 **Corrected to `NO GRANT FILE`
+before publication**, and recorded here because it is `ACTION AG`'s lesson committed and caught
+inside a single table.
+
 ## 🟢 Hundred-and-twenty-third pass, 2026-10-11 — **all four pre-registered actions DISCHARGED**; `ACTION X` **REFUTED** and closed; 🟢 **`ACTION V` IMPLEMENTED on 51 rows**; 🔴 **`P123-H` — three fixes cut the candidate count 38 % and the error rate 0 %**; 🔴 **`P123-B` — p123's own classifier reproduced p122's structural defect**; `P123-A`–`P123-H`, `ACTION AA`–`AE` adopted
 
 🟢 **Instrument: `compose/code/p123-grant-set-calibration/`. `test_p123.sh` — **35 passed / 0

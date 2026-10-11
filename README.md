@@ -4,6 +4,104 @@ region: Global
 updated: 2026-10-11
 ---
 
+## Pass 124 — 2026-10-11
+
+⏱️ **Eleventh pass of this date** (census window **10:0x → 11:3x UTC**).
+
+🟢 **Fifteenth axis in fifteen passes: all five actions p123 pre-registered (`AA`, `AB`, `AC`,
+`AD`, `AE`) discharged, and none refuted.**
+
+🟢 **Instrument: `compose/code/p124-correction-form-marker/` — `test_p124.sh` **50 passed / 0
+failed**, fully offline, over 25 fixtures.**
+
+| action | verdict | figure |
+|---|---|---|
+| `ACTION AA` | 🟢 **NOT REFUTED** | **4 addresses** change verdict (clause: ≥ 3), all 4 verified by reading the file |
+| `ACTION AB` | 🟢 **NOT REFUTED + IMPLEMENTED** | **42 rows** marked across 5 files (clause: ≥ 15); marked rows **52 → 94** |
+| `ACTION AC` | 🟢 **NOT REFUTED** | the assertion **FAILS on 27 lines over 15 addresses** — and 🟢 **none of the 27 is a live false claim** |
+| `ACTION AD` | 🟢 **NOT REFUTED** | **41 of 41** bare-`CC` grants resolved (clause: ≥ 10); 🔴 **15 are NonCommercial** |
+| `ACTION AE` | 🟢 **NOT REFUTED** | **79 gold rows** on non-`main`/`master` defaults (clause: ≥ 5); `MAIN-ONLY` wrong on **2** |
+
+Corpus re-derived independently: **1 370** folded addresses, **1 344 EXISTS / 26 ABSENT**,
+**1 135** grant files read from each repository's REAL default branch, **86** defaulting to
+neither `main` nor `master` across **39** distinct branch names. 🟢 **p123 counted 1 365 and 84 —
+agreement to 0.4 % and 2 % on two figures neither pass carried from the other.**
+
+🔴 **`P124-H` — the pass's main finding, stated first because it names a class this KB has been
+fixing one instance at a time for three passes.** Every one of the five actions was refuted by its
+own fixtures on its first build, and **three of the five failed the same way: a licence token was
+read without reading what SCOPES it.**
+
+| action | what the first build produced | the scope it failed to read |
+|---|---|---|
+| `AD` | **9 of 13** CC rows as `CC0-1.0`, incl. `openstax/osbooks-college-physics-bundle` (really `CC-BY-NC-SA-4.0`) | the CC 4.0 legalcode **recommends** CC0 in its own boilerplate — a recommendation, not a grant |
+| `AA` | **2 of 6** findings were plain `CC-BY-SA` files called split grants | `\bCC[ -]?BY\b` matches **inside** `CC BY-SA 4.0` — a substring of a longer token |
+| `AB` | **88 hits of which 56 were false** | `was` in a table header is a **relative pronoun** (*"token that was invisible"*), and the column holds a LIVE claim |
+| `AC` | **63 pairs and 100+ "violations", every one the KB being RIGHT** | a FORM-1 cell holds the old AND new value; the whole cell is not the marked span |
+| `AE` | — | the action exists precisely to fix a gold set that could not see the defect |
+
+🟢 **p122's `P122-H` (GPL-2.0's preamble naming the Lesser GPL) and p123's `P123-B` (EPL-2.0's
+secondary-licence clause) are the same error in two other families.** 🔵 **`ACTION AG` makes it a
+standing check instead of a lesson relearned each pass.**
+
+🟢 **`P124-AA` — four split grants a marker list could not reach, each read from the file.**
+[`Elgg/Elgg`](https://github.com/Elgg/Elgg) (1 677★, `7.x`) — `/mod` plugins **GPL-2.0 only**,
+remainder MIT *or* GPL-2.0; p123 published bare `MIT`.
+[`vieanderes/understory`](https://github.com/vieanderes/understory) — MIT code,
+🔴 **`CC-BY-NC-SA-4.0` lesson content**, and in education the content is the deliverable.
+[`masakhane-io/masakhane-ner`](https://github.com/masakhane-io/masakhane-ner) — Apache-2.0 code,
+🔴 **`CC-BY-NC-4.0` African-language NER data**.
+[`ankitects/anki`](https://github.com/ankitects/anki) — AGPL-3.0 core with named per-file BSD-3 /
+MIT / Apache-2 / CC-BY-4.0 exceptions. 🟢 **Three further addresses cross-validate p123's own
+SPLIT verdicts by a completely different route.**
+
+🟢 **`P124-AE` — a repository's licence can depend on which branch you cloned.**
+[`Learnosity/learnosity-qti`](https://github.com/Learnosity/learnosity-qti) serves **MIT on
+`master`** and **GPL-2.0 on `develop`**, which is its default branch; both files were fetched and
+read. 🔴 **A branch-guessing probe hands a studio the PERMISSIVE answer for a copyleft
+repository** — the one direction of error that costs money. 🟢 **This KB publishes `GPL-2.0` on
+`develop` and is correct; the defect is in the model.** `MAIN-ONLY`'s honest error rate is
+**2.5 %** where it can err, 0.15 % across the corpus, and 0 % on the set p123 scored it against.
+
+🔴 **Research sweep: the mandated queries returned ZERO new items in ALL FOUR REGIONS, on both the
+supply and the demand side — the first pass where that is simultaneously true.** `Gap 402`
+weakens for a seventh consecutive pass. Every token the global and regional queries returned is
+held, most at higher resolution than the channel states it; the last outstanding LATAM candidate
+(UNESCO IESALC's **84 % / 68 % / 52 %** institution-type split) closed as **already held**, with
+its commercial inversion already analysed. 🟢 **The honest reading: at 124 passes this KB has
+outrun its discovery channel, and a sweep that keeps returning zero against a corpus that keeps
+verifying is a CONTROL rather than a failure.** 🔵 **The EMEA channel re-served the superseded
+Annex III date for a fifth time; this KB's `Regulation (EU) 2026/1744` → `2027-12-02` correction
+holds, with `2026-08-02` correctly an Article 50 date.**
+
+🟢 **`P124-P1a` — one unverified claim was caught inside this pass's own new pattern and
+corrected before publication.** The draft listed `spdx/license-list-data` as *"CC-BY-3.0
+(carried)"*; 🔴 **7 grant paths were probed on its default branch `main` and all 404 — the
+canonical SPDX token list publishes no licence of its own.** The row now reads `NO GRANT FILE`.
+
+### Pre-registered for p125
+
+🟢 **`ACTION AF`** — cover correction forms 4–8 enumerated by `ACTION AC`: the italic
+`⚠️ *was X*` variant, the `KB said X` verb, the reversed `(New, published Old)` prose order,
+`as X not Y`, and the pair rule's blind spot where the NEW value is `NO GRANT` rather than a
+licence token. 🔴 *Refuted if fewer than 20 of the 27 outstanding violations are resolved.*
+
+🟢 **`ACTION AG`** — make the shared cause of p122/p123/p124's first-build defects a standing
+check: **no licence token may be read without reading what SCOPES it.** Every match must record
+whether it sits in a granting clause, a recommendation, a preamble, a secondary-licence clause, or
+inside a longer token — and a match in any of the last four is discarded. 🔴 *Refuted if the check
+does not independently reproduce all four known instances (GPL-2.0 preamble → LGPL, EPL-2.0
+secondary → GPL-2.0, CC 4.0 boilerplate → CC0, `CC BY` inside `CC BY-SA`).*
+
+🟢 **`ACTION AH`** — complete `ACTION AA`'s token sets. The verdict is right on all four addresses
+and the set is partial on `ankitects/anki`, whose per-file exceptions sit in a bulleted list no
+single binding window spans. 🔴 *Refuted if fewer than 3 further tokens are recovered on `anki`.*
+
+🟢 **`ACTION AI`** — extend `ACTION AE` to the false-permissive question specifically: for all 86
+non-standard-default addresses, probe whether a surviving `main`/`master` branch grants a MORE
+permissive licence than the real default. 🔴 *Refuted if `learnosity-qti` is the only such address
+in the corpus.*
+
 ## Pass 123 — 2026-10-11
 
 ⏱️ **Tenth pass of this date** (census window **08:4x → 09:4x UTC**).

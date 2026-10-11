@@ -6,6 +6,56 @@ updated: 2026-10-11
 
 # Education — AI agents shelf
 
+**Pass 124, 2026-10-11.** ⏱️ **Eleventh pass of this date** (census window **10:0x → 11:3x UTC**).
+
+🟢 **Instrument: `compose/code/p124-correction-form-marker/` — `ACTION AA`, `AB`, `AC`, `AD`, `AE`
+all five discharged, none refuted. `test_p124.sh` **50 passed / 0 failed**, fully offline.**
+
+🟢 **This page carried 0 live licence defects this pass, for the second pass running.** Its
+repaired rows now carry **26** `<!--corrected-->` markers: p123's inline `⚠️ **was X**` form plus
+the OLD-column and prose forms `ACTION AB` added this pass.
+
+🔴 **`P124-AA` — two agents on this shelf are split grants, and the arm this shelf lost is the
+NonCommercial one.** `ACTION AA` replaced p123's list of split-grant *phrasings* with a test on
+SHAPE: a scope expression, a grant verb and a licence token form a **binding**, and a split needs
+**two bindings with two distinct scopes and two distinct licences**. Four addresses change verdict
+corpus-wide; two of them belong on this page.
+
+| address | this shelf published | 🔴 the file says | what changes for a client |
+|---|---|---|---|
+| [`masakhane-io/masakhane-ner`](https://github.com/masakhane-io/masakhane-ner) | 🟢 **Apache-2.0**<!--corrected-->| 🔴 **Apache-2.0 (code) + `CC-BY-NC-4.0` (data)** | 🔴 **The African-language NER corpus is NonCommercial.** The code is Apache-2.0 *"based on the original transformer code by the Hugging Face team"*; the `Attribution-NonCommercial 4.0 International` text sits in the same `LICENSE` at line 212. In an NER engagement the **data is the asset**. |
+| [`ankitects/anki`](https://github.com/ankitects/anki) | 🟢 **AGPL-3.0** | 🟡 **AGPL-3.0 core + named per-file exceptions** | *"portions contributed by Anki users licensed under the BSD-3 license … items use a license other than AGPL3: `statsbg.py`: CC BY 4.0 … `mpv.py`: MIT … MathJax: Apache 2 … `protobuf.js`: BSD 3 clause"*. 🟢 The AGPL-3.0 headline is right; the exceptions are vendorable where the core is not. |
+
+🔵 **The detector's SPLIT verdict is right on both and its token SET is partial on `anki`** — the
+per-file exceptions sit in a bulleted list no single binding window spans. Recorded as partial
+rather than published as complete; `ACTION AH` closes it.
+
+🔴 **`P124-H` — the pass's main finding, and it disqualifies the first build of every action this
+pass ran.** All five actions were refuted by their own fixtures before publication, and three of
+the five failed the **same way**: a licence token was read without reading what SCOPES it.
+`ACTION AD`'s first build called 9 of 13 CC rows `CC0-1.0` because **the CC 4.0 legalcode
+recommends the CC0 dedication in its own boilerplate**; `ACTION AA`'s called two `CC-BY-SA` files
+split grants because **`\bCC[ -]?BY\b` matches inside `CC BY-SA 4.0`**; `ACTION AB`'s called 56
+live claims corrections because **`was` in a table header is a relative pronoun** (*"token that
+was invisible"*). 🔵 **This is the class this KB's classifier has been fixing one instance at a
+time since p122 — GPL-2.0's preamble naming the Lesser GPL, EPL-2.0's secondary-licence clause —
+without ever naming the class.** 🟢 **`ACTION AG` makes it a standing check.**
+
+🟢 **`P124-AC` — this page's correction records were searched, not just edited, and the page is
+clean.** `ACTION AC` harvests every (address, superseded token) pair from a marked span and
+asserts that no page carries that token unmarked. It **fails corpus-wide on 27 lines over 15
+addresses** — so a repair in this KB is still an edit rather than a search — but **all 27 were
+read by hand and NONE is a live false claim.** They are correction records in five surface forms
+the marker does not yet reach (italic `⚠️ *was X*`, `KB said X`, reversed `(New, published Old)`,
+`as X not Y`, and an OLD column whose NEW cell reads `NO GRANT` rather than a licence).
+🔵 **p123's `P123-A` found two genuine stale claims at this point; p124 finds none.**
+
+🟢 **Research sweep: the mandated global and regional queries returned 0 new agents, for a
+SEVENTH consecutive pass.** Every repository the queries surfaced was already held, and the
+two the search engine ranked as *"top open source AI agents for education"* are the same 15★
+rows p123 measured and rejected. 🔵 **What the queries returned instead was demand-side and is
+recorded on `intel/market.md`.**
+
 **Pass 123, 2026-10-11.** ⏱️ **Tenth pass of this date** (census window **08:4x → 09:4x UTC**).
 
 🟢 **Instrument: `compose/code/p123-grant-set-calibration/` — `ACTION W`, `X`, `Y`, `Z` discharged
@@ -109,8 +159,8 @@ published as copyleft that are not.**
 
 | address | published here | 🟢 measured from the tree this pass | what the wrong cell cost |
 |---|---|---|---|
-| [`UniTime/unitime`](https://github.com/UniTime/unitime) (350★) | 🔴 GPL-3.0 | 🟢 **Apache-2.0** — `master/LICENSE`, 11 357 B | 🔴 the university-timetabling platform was marked **"🔴 no"** for reuse. It is Apache-2.0, patent grant included |
-| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) (979★) | 🔴 AGPL-3.0 | 🟢 **MIT**, split grant — `docs/` is CC-BY-SA-4.0, client-side JS and everything else MIT | 🔴 an LMS marked **"🔴 no"** is in fact usable through its MIT arm |
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) (350★) | 🔴 GPL-3.0<!--corrected-->| 🟢 **Apache-2.0** — `master/LICENSE`, 11 357 B | 🔴 the university-timetabling platform was marked **"🔴 no"** for reuse. It is Apache-2.0, patent grant included |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) (979★) | 🔴 AGPL-3.0<!--corrected-->| 🟢 **MIT**, split grant — `docs/` is CC-BY-SA-4.0, client-side JS and everything else MIT | 🔴 an LMS marked **"🔴 no"** is in fact usable through its MIT arm |
 
 🔵 **Both were repaired in this commit.** 🔴 **The asymmetry is the finding.** A permissive token on
 a copyleft repo creates legal exposure and every pass of this KB has been built to catch it. An
@@ -138,7 +188,7 @@ repaired in both places.
 
 ## 🟢 `artcc/freelingo` — this page published 🟢 MIT for an AGPL-3.0 agent, 67 lines above its own correction
 
-🔴 **[`artcc/freelingo`](https://github.com/artcc/freelingo) (164★) was 🟢 MIT in this page's star
+🔴 **[`artcc/freelingo`](https://github.com/artcc/freelingo) (164★) was 🟢 MIT<!--corrected--> in this page's star
 table. It is AGPL-3.0** — `main/LICENSE`, 34 514 B, re-read this pass. Sixteen cells across this KB
 name this address; **fourteen are correct**, and line 207 of *this page* already read
 *"🔴 **AGPL-3.0** ⚠️ **was MIT**"*. The wrong cell was 67 lines above its own correction.
@@ -215,7 +265,7 @@ thing.**
 
 ## 🔴 🆕 `P120-A` — this shelf published a 🟢 Apache-2.0 agent that is AGPL-3.0, at 2 % page depth
 
-🔴 **[`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) was 🟢 Apache-2.0 in this page's
+🔴 **[`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) was 🟢 Apache-2.0<!--corrected--> in this page's
 TOP star-and-licence table — measured at 2.0 % page depth before this pass's sections were
 prepended, the most-read cell in this KB. It is AGPL-3.0.** Network copyleft: a hosted
 derivative must publish its source to every user it serves, which is the single licence outcome a
@@ -256,7 +306,7 @@ published a permissive token. **13 carry a readable grant. 9 do not.**
 
 | address | ★ | was published here | 🔴 measured this pass | repaired |
 |---|---|---|---|---|
-| [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | 25 | 🟢 Apache-2.0 | 🔴 **AGPL-3.0** | 🟢 **repaired** |
+| [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | 25 | 🟢 Apache-2.0<!--corrected-->| 🔴 **AGPL-3.0** | 🟢 **repaired** |
 | [`lovejzzz/CourseMapper`](https://github.com/lovejzzz/CourseMapper) | 0 | 🟢 MIT | 🔴 **NO GRANT** — 22 paths 404, `package.json` has no `license` field | 🟢 **repaired** |
 | [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | 3 | 🔴 already `NONE` | 🔴 MIT **badge** linking to `LICENSE` → **404** | 🔵 already correct |
 | [`qed42/ai-accessibility-checker`](https://github.com/qed42/ai-accessibility-checker) | 3 | 🔴 already `NONE` | 🔴 *"See the LICENSE file"* → **404** | 🔵 already correct |
@@ -310,7 +360,7 @@ had already explained away.
 
 ## 🔴 🆕 `P119-D` — the shelf's licence correction was page-local, AGAIN, and the sweep built to catch that was blind to it
 
-🔴 **`learning-commons-org/evaluators` was published on this page as 🟢 MIT.** Its `LICENSE.md`
+🔴 **`learning-commons-org/evaluators` was published on this page as 🟢 MIT<!--corrected-->.** Its `LICENSE.md`
 puts the code under MIT, the prompts under CC BY 4.0, and **the annotated CLEAR and PERSUADE 2.0
 corpora under CC BY-NC-SA 4.0** — NonCommercial. The corpora are what make it *evidence-backed*,
 so the part a Globant engagement would actually want is the part it cannot ship for money.
@@ -419,7 +469,7 @@ the small self-hosted tutors a studio is most likely to reach for: `tutor-gpt`, 
 
 ## 🔴 🆕 `P118-I` — one row in this KB was not open source at all
 
-`canyongbs/advisingapp` was published as AGPL-3. Its root `LICENSE` on `main` is **Elastic
+`canyongbs/advisingapp` was published as AGPL<!--corrected-->-3. Its root `LICENSE` on `main` is **Elastic
 License 2.0** — 3 860 bytes, **zero** occurrences of "affero" or "general public". Elastic 2.0
 forbids providing the software to third parties as a managed service and forbids circumventing
 licence keys; **neither restriction exists under AGPL-3**. `compose/patterns.md` said
@@ -474,10 +524,10 @@ fourteen licence files from the tree. 🔴 **That conclusion is RETRACTED.**
 
 | row | published | 🔴 actually | what changes for a client |
 |---|---|---|---|
-| [`fwu-de/ais-chat`](https://github.com/fwu-de/ais-chat) | 🟢 MIT | 🔴 **AGPL-3.0** | network-use copyleft; a hosted derivative must publish |
-| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 🟢 MIT | 🔴 **AGPL-3.0** | same |
-| [`OtterDen-Lab/Autograder`](https://github.com/OtterDen-Lab/Autograder) | 🟢 MIT | 🔴 **GPL-3.0** | distribution copyleft |
-| [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 🟢 MIT | 🔴 **GPL-3.0** | distribution copyleft |
+| [`fwu-de/ais-chat`](https://github.com/fwu-de/ais-chat) | 🟢 MIT<!--corrected-->| 🔴 **AGPL-3.0** | network-use copyleft; a hosted derivative must publish |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 🟢 MIT<!--corrected-->| 🔴 **AGPL-3.0** | same |
+| [`OtterDen-Lab/Autograder`](https://github.com/OtterDen-Lab/Autograder) | 🟢 MIT<!--corrected-->| 🔴 **GPL-3.0** | distribution copyleft |
+| [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 🟢 MIT<!--corrected-->| 🔴 **GPL-3.0** | distribution copyleft |
 
 🟡 **And two whose published `MIT` is true of the CODE and silent about the part a client
 actually wants:** [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators)

@@ -6,6 +6,70 @@ updated: 2026-10-11
 
 # Education — vertical platforms
 
+**Pass 124, 2026-10-11.** ⏱️ **Eleventh pass of this date** (window **10:0x → 11:3x UTC**).
+
+🟢 **Instrument: `compose/code/p124-correction-form-marker/` — `ACTION AA`, `AB`, `AC`, `AD`, `AE`
+all five discharged, none refuted. `test_p124.sh` **50 passed / 0 failed**, fully offline.**
+
+## 🔴 🆕 `P124-AA` — a 1 677★ platform on this shelf is TWO licences, and the plugin directory is the copyleft one
+
+`ACTION AA` stopped looking for split-grant *phrasings* and started testing for split-grant
+SHAPE. [`Elgg/Elgg`](https://github.com/Elgg/Elgg) is the result that justifies the change.
+
+Its `LICENSE.txt` on default branch **`7.x`** opens:
+
+> Bundled plugins (the contents of the "/mod" directory) are available
+> only under the GPLv2 license.
+>
+> The remainder of the project is available under either MIT or GPLv2.
+
+🔴 **No marker in p123's list matches that sentence**, so p123's classifier fell through to its
+title anchor, found `The MIT License (MIT)` further down the same file, and published
+**`MIT`** — for a social-learning platform whose entire plugin directory is **GPL-2.0 only**.
+
+| | p123 published | 🔴 p124 reads, from the file |
+|---|---|---|
+| [`Elgg/Elgg`](https://github.com/Elgg/Elgg) (1 677★, `7.x`) | 🟢 **MIT**<!--corrected-->| 🔴 **`/mod` → GPL-2.0 only · everything else → MIT *or* GPL-2.0, licensee's choice** |
+
+🟢 **What this means for a build-on decision, which is what this page exists for.** Elgg stays
+usable and its commercial reading is *better* than a flat GPL-2.0 would be — the core is MIT at
+the licensee's election. 🔴 **But a studio that writes or forks a `/mod` plugin is writing
+GPL-2.0 code, and a plugin is exactly what an AI layer on Elgg would be.** The deliverable lands
+in the one directory the permissive arm does not cover.
+
+🔵 **This is also why the shape test insists on TWO DISTINCT SCOPES.** *"either MIT or GPLv2"* is
+a **dual grant** — one scope, two licences, licensee chooses — and is not a split. The split is
+`/mod` versus the remainder. A detector that counted licence names alone would call every
+dual-licensed file a split and every split a dual grant.
+
+## 🟢 🆕 `P124-AD` — the vertical shelf's CC rows, resolved to a version
+
+`ACTION AD` resolved all **41** bare-`CC` grants corpus-wide (see `repos/foundations.md`), and the
+distinction is sharper on this page than anywhere else: a platform's **content bundle** is often
+licensed separately from its code. 🔴 **15 of the 41 are NonCommercial** — they cannot ship in a
+commercial deliverable at any price. One is a textbook case of the pattern and new this pass:
+
+| address | code | content | verdict |
+|---|---|---|---|
+| [`vieanderes/understory`](https://github.com/vieanderes/understory) | 🟢 **MIT** — source, design, scripts, labs, tests, docs | 🔴 **`CC-BY-NC-SA-4.0`** — everything under `content/` and the built bundle | 🔴 **p123 published `MIT` for the whole repository.** The lesson content is the deliverable in an education engagement, and it is NonCommercial. |
+
+🔵 **Read `verticals` licences per ARTIFACT, never per repository.** This page has said so since
+p94; `ACTION AA` is the first instrument that can enforce it mechanically.
+
+## 🟢 🆕 `P124-AB` — 27 markers on this page, and the pair rule that earned them
+
+**27** marked rows on this page, up from 22. The marker now covers the
+audit-table OLD column, so a census reading
+`| [`pupilfirst/pupilfirst`](…) | 979 | 🔴 AGPL-3.0 → *"🔴 no"* | 🟢 **MIT**, `master/LICENSE` |`
+can tell that the `AGPL-3.0` is this KB's own retracted claim rather than a live one.
+
+🔴 **The rule that made it safe is that a correction is a PAIR — an old token AND a differing new
+token.** Without it the first build marked 56 live claims as corrections, which would have told
+every future census to ignore real licence facts: strictly worse than the false positives the
+marker exists to remove. 🔵 **And the pair rule has a known blind spot, stated rather than hidden:
+a correction to `NO GRANT` has no new token to pair with, so rows like
+`| 🟢 MIT | 🔴 **NO GRANT** |` stay unmarked. `ACTION AF` covers it.**
+
 **Pass 123, 2026-10-11.** ⏱️ **Tenth pass of this date** (window **08:4x → 09:4x UTC**).
 
 🟢 **Instrument: `compose/code/p123-grant-set-calibration/`, discharging `ACTION W, X, Y, Z` and
@@ -86,8 +150,8 @@ on a copyleft repository. This pass looked the other way for the first time.**
 
 | address | ★ | published here | 🟢 measured this pass | reuse verdict |
 |---|---|---|---|---|
-| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 979 | 🔴 AGPL-3.0 → *"🔴 no"* | 🟢 **MIT**, `master/LICENSE` 1 684 B | 🟢 **yes, via the MIT arm** |
-| [`UniTime/unitime`](https://github.com/UniTime/unitime) | 350 | 🔴 GPL-3.0 → *"🔴 no"* | 🟢 **Apache-2.0**, `master/LICENSE` 11 357 B | 🟢 **yes** |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 979 | 🔴 AGPL-3.0 → *"🔴 no"*<!--corrected-->| 🟢 **MIT**, `master/LICENSE` 1 684 B | 🟢 **yes, via the MIT arm** |
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) | 350 | 🔴 GPL-3.0 → *"🔴 no"*<!--corrected-->| 🟢 **Apache-2.0**, `master/LICENSE` 11 357 B | 🟢 **yes** |
 
 🔵 **`pupilfirst` is a SPLIT grant and the split favours the studio.** Read from the file:
 
@@ -106,7 +170,7 @@ decision.** A studio reading this shelf would have struck a 979★ LMS off its s
 cell produces no compliance incident, no scanner alert and no client complaint — it just quietly
 shrinks the menu. Nothing in this KB's seven passes of instruments was pointed at it.
 
-## 🔴 🆕 `P121-A2` — `course-tencent-cloud`, 1 173★, was 🟢 MIT and is GPL-2.0
+## 🔴 🆕 `P121-A2` — `course-tencent-cloud`, 1 173★, was 🟢 MIT<!--corrected--> and is GPL-2.0
 
 🔴 **[`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud)
 (酷瓜云课堂) headed this page's APAC platform rows as 🟢 **MIT**, reuse *"🟢 yes"*.** Measured this
@@ -205,7 +269,7 @@ can make.**
 ## 🔴 🆕 `P120-A` — this shelf published a proprietary Chinese EULA as 🟢 MIT
 
 🔴 **[`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce)
-(126★, 云学习系统) was 🟢 MIT in two cells on this page. Its root `LICENSE` on the default
+(126★, 云学习系统) was 🟢 MIT<!--corrected--> in two cells on this page. Its root `LICENSE` on the default
 branch `master` is 4 117 B of proprietary end-user agreement containing ZERO occurrences of any
 OSI licence name.** Read from the file:
 

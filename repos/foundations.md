@@ -6,6 +6,99 @@ updated: 2026-10-11
 
 # Education — foundational repos
 
+**Pass 124, 2026-10-11.** ⏱️ **Eleventh pass of this date** (census window **10:0x → 11:3x UTC**).
+
+🟢 **Instrument: `compose/code/p124-correction-form-marker/` — `ACTION AA`, `AB`, `AC`, `AD`, `AE`
+all five discharged, none refuted. `test_p124.sh` **50 passed / 0 failed**, fully offline.**
+
+Corpus re-derived from scratch this pass: **1 370** folded addresses off the ten live pages,
+**1 344 EXISTS / 26 ABSENT**, **1 135** grant files read from each repository's REAL default
+branch. 🟢 **p123 counted 1 365 addresses and 84 non-standard default branches; p124's independent
+re-derivation gives 1 370 and 86 — agreement to 0.4 % and 2 % on two figures nobody carried.**
+
+## 🟢 🆕 `P124-AD` — the `CC` bucket is resolved, and 15 of its 41 rows forbid a commercial deliverable
+
+p123 left **41** readable grants in a bare `CC` bucket and said why it mattered: in education the
+asset under a CC grant is the curriculum, the item bank or the knowledge graph — the deliverable
+itself. 🟢 **All 41 now resolve to a version.**
+
+| token | rows | may Globant ship a commercial derivative? |
+|---|---|---|
+| `CC-BY-NC-SA-4.0` | **13** | 🔴 **no** |
+| `CC0-1.0` | 11 | 🟢 yes — public-domain dedication, no attribution duty |
+| `CC-BY-4.0` | 7 | 🟢 yes, with attribution |
+| `CC-BY-SA-4.0` | 6 | 🟡 yes, but the derivative inherits ShareAlike |
+| `CC-BY-SA-3.0` | 2 | 🟡 as above, older licence text |
+| `CC-BY-NC-ND-4.0` | 1 | 🔴 **no, and no derivatives at all** |
+| `CC-BY-NC-4.0` | 1 | 🔴 **no** |
+
+🔴 **15 of 41 — 37 % of the CC bucket — cannot be used commercially, and until this pass all 41
+read as the same token.** 🟢 **16 further candidates were correctly rejected as `NOT-CC`:**
+`GPL-UNTITLED` rows such as [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) and
+[`r-dcm/measr`](https://github.com/r-dcm/measr) that mention Creative Commons without being
+licensed under it.
+
+🔴 **The resolution order had to be TITLE LINE FIRST, and the reason is the pass's sharpest
+lesson.** The first build scanned the whole text for its element set and returned **`CC0-1.0` for
+9 of 13 rows**, including [`openstax/osbooks-college-physics-bundle`](https://github.com/openstax/osbooks-college-physics-bundle),
+whose first line reads `Attribution-NonCommercial-ShareAlike 4.0 International`. The cause is not
+a typo: **the CC 4.0 legalcode body recommends the `CC0 Public Domain Dedication` in its own
+"Considerations for licensors" boilerplate**, so every CC-BY file on earth contains that string,
+and a whole-text scan reads all of them as CC0 — the single most permissive answer for the single
+most restrictive licence. 🔵 **Two further refinements came from real files: the CC0 legalcode puts
+`CC0 1.0 Universal` on its SECOND line under a `Creative Commons Legal Code` document header, and
+[`azure/moodle`](https://github.com/azure/moodle)'s `LICENSE-DOCS` is served with a UTF-8 BOM that
+hides the title from a naive first-line read.**
+
+## 🟢 🆕 `P124-AE` — `MAIN-ONLY` scored where it CAN fail, and one foundation inverts commercially
+
+p123 measured the branch-guessing `MAIN-ONLY` model at **0 % error** and noted in the same breath
+that its gold set could not see the defect: every gold row's default branch *was* `main` or
+`master`. 🔴 **A model scored only where it cannot fail scores perfectly and means nothing.**
+
+`ACTION AE` built the complement — **79 gold rows**, each an address whose real default branch is
+neither `main` nor `master` and which carries a readable grant there. `MAIN-ONLY` gets **77 right
+and 2 wrong.**
+
+| address | real default | the grant there | what guessing returns |
+|---|---|---|---|
+| [`Learnosity/learnosity-qti`](https://github.com/Learnosity/learnosity-qti) | `develop` | 🔴 **GPL-2.0** · 18 264 B | 🟢 **MIT** from `master` · 1 067 B |
+| [`pressbooks/pressbooks`](https://github.com/pressbooks/pressbooks) | `dev` | 🔴 GPL-3.0 · `LICENSE.md` | 🔴 **nothing** — `main` and `master` both 404 |
+
+🟢 **The 77 agreements are a real result, not a let-off:** `raw.githubusercontent.com` keeps
+serving a `master`/`main` branch that still exists even after the repository's *default* has moved
+on, so guessing usually returns the same bytes. 🔴 **`learnosity-qti` is where usually fails, and
+it fails in the expensive direction.** Both files were fetched and read: `master/LICENSE` is the
+MIT text, `develop/LICENSE` is GPL-2.0 verbatim. **A branch-guessing probe hands a studio the
+PERMISSIVE answer for a repository whose current default branch is COPYLEFT.** 🟢 **This shelf
+publishes `GPL-2.0` on `develop` at `repos/trending.md:3720` and is correct — the defect is in the
+model, not the shelf.**
+
+🔵 **So `MAIN-ONLY`'s error rate is 2.5 % where it can err, 0.15 % across the 1 344-address
+corpus, and 0 % on the set p123 scored it against — three true numbers of which only the first is
+useful.** The 86 non-standard defaults span **39 distinct branch names**, and the convention
+belongs to exactly the platforms this KB exists to place: release lines
+(`openeducat/openeducat_erp` `19.0`, `claroline/claroline` `15.0`, `ILIAS-eLearning/ILIAS`
+`release_11`, `Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard` `v6.2.0`, `GibbonEdu/core` `v31.0.00`),
+gitflow (`frappe/*`, `oppia/*`, `oat-sa/tao-core`, `opencast/opencast`, `1EdTech/*` on `develop`),
+and `trunk` (`apache/ofbiz-framework`, `gocodebox/lifterlms`).
+
+## 🟢 🆕 `P124-AB` — this page's correction records are now machine-readable
+
+**14** marked rows on this page, up from 11. `ACTION AB` extended p123's marker from the inline
+`⚠️ **was X**` span to the audit-table OLD column and to prose retractions — **42 rows across 5
+files, 52 → 94 marked rows corpus-wide.**
+
+🔵 **The figure is 94 ROWS and a raw `grep` for the marker returns 102.** The difference is 8
+lines of prose *about* the marker, inside backticks, on these same pages. 🔴 **p122 made exactly
+this mistake (its "57 rows" included 6 lines discussing the marker) and p124 very nearly repeated
+it in its own headline figure.** Counted here as a marked ROW: a table row carrying the marker, or
+a prose line whose `was …` span carries it. 🟢 **Two of this page's rows were correctly NOT
+marked, and that is the harder half:** `| moodle/moodle | 🟡 GPL-3 | GPL-3.0 (COPYING.txt) |
+🟢 AGREE |` and the `overhangio/tutor` row beside it are **agreements**, not corrections —
+`GPL-3` and `GPL-3.0` are the same grant written two ways, and the first build reported both as
+defects.
+
 **Pass 123, 2026-10-11.** ⏱️ **Tenth pass of this date** (census window **08:4x → 09:4x UTC**).
 
 🟢 **Instrument: `compose/code/p123-grant-set-calibration/`, discharging `ACTION W, X, Y, Z` and
@@ -209,7 +302,7 @@ this page carried **1** of the 7 cells repaired in this commit.**
 ## 🔴 🆕 `P120-J` — the foundations shelf's most-cited standards repo grants nothing at all
 
 🔴 **[`1EdTech/openbadges-specification`](https://github.com/1EdTech/openbadges-specification)
-(205★) was 🟢 Apache-2.0 on this page. It carries no licence file at any of 22 probed paths on
+(205★) was 🟢 Apache-2.0<!--corrected--> on this page. It carries no licence file at any of 22 probed paths on
 its default branch `develop`, and its README names no licence.**
 
 🔵 **This page was already half-right about it**: a row further down reads *"The specification
@@ -477,7 +570,7 @@ authoritative here for the first time, and every licence below was re-read from 
 
 | row | published p114 / p115 / 🆕 **p116** | 🔴 tree, p117 | published p93–p112 |
 |---|---|---|---|
-| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🟢 Apache-2.0 ×3 | 🔴 **AGPL-3.0** | 🟢 **AGPL-3 — correct** |
+| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🟢 Apache-2.0 ×3<!--corrected-->| 🔴 **AGPL-3.0** | 🟢 **AGPL-3 — correct** |
 
 🔴 **It is now THREE passes, not two, and the third happened while this pass was measuring it.**
 The independent `p116-lock-agreement` run pushed to `origin/main` (`2ec715f`) mid-census and
@@ -502,7 +595,7 @@ LICENSE`, `Version 3`.**
 | [`oppia/oppia`](https://github.com/oppia/oppia) | 6 845 | 🟢 Apache-2.0 | Apache-2.0 | 🟢 AGREE |
 | [`opencast/opencast`](https://github.com/opencast/opencast) | 506 | 🟢 ECL-2.0 | ECL-2.0 | 🟢 AGREE |
 | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 1 141 | 🟢 MIT | MIT | 🟢 AGREE |
-| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 64 | 🟢 Apache-2.0 | 🔴 **AGPL-3.0** | 🔴 **DIFFER** |
+| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 64 | 🟢 Apache-2.0<!--corrected-->| 🔴 **AGPL-3.0** | 🔴 **DIFFER** |
 | [`DSpace/DSpace`](https://github.com/DSpace/DSpace) ※ | 1 102 | 🟢 BSD-3 | BSD-3-Clause | 🟢 AGREE |
 | [`huggingface/transformers`](https://github.com/huggingface/transformers) | 167 302 | 🟢 Apache-2.0 | Apache-2.0 | 🟢 AGREE |
 | [`overhangio/tutor`](https://github.com/overhangio/tutor) | 1 127 | 🟢 AGPL-3 | AGPL-3.0 | 🟢 AGREE |

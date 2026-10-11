@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Pass 124 — 2026-10-11 (eleventh pass of this date), 10:0x–11:3x UTC
+
+🔵 **APPEND-ONLY page. This section is added above p123's and nothing below it is edited** —
+including rows this pass found stale. Stale tokens in the history are listed here, not rewritten.
+
+🟢 **Instrument: `compose/code/p124-correction-form-marker/` — `ACTION AA, AB, AC, AD, AE` all
+five discharged, none refuted. `test_p124.sh` **50 passed / 0 failed**, fully offline.**
+
+### 🔴 Seventh consecutive zero on the supply side, and the query set is now a control
+
+🔴 **The mandated sweep returned NO new agent addresses, for the seventh pass running.** Run
+globally and then once per region, the queries surfaced only repositories already held. The two
+the engine ranked highest as *"top open source AI agents for education"* are the same pair p123
+measured and rejected: [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) (15★,
+MIT, 32 commits) and [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) (15★, MIT,
+🔴 **4 commits**).
+
+🟢 **At seven zeros the sweep has stopped being a discovery instrument and become a CONTROL, and
+that is worth stating as a result rather than a failure.** A query set that returns nothing new
+across seven passes against a KB holding 1 370 addresses is evidence that the open-source
+education-agent layer is enumerated. 🔵 **What the generic phrasing returns is courses *about* AI
+(`AI Agents for Beginners`, 56 002★; `LLMs-from-scratch`; `GenAI for Beginners`) and
+general-purpose agent frameworks (OpenHands, MetaGPT, CrewAI, opencode) — neither of which is an
+education agent.** p122 proved that mechanism; p124 confirms it holds.
+
+### 🟢 What the tree returned instead: two agent rows that are split grants
+
+The pass's agent-side movement came from reading licence files, not from searching. `ACTION AA`
+tests for split-grant SHAPE — a scope, a grant verb and a licence token form a binding; a split
+needs two bindings with two distinct scopes and two distinct licences — and found that two agent
+rows carry an arm this KB had not recorded:
+
+| address | published | 🔴 the file says | signal |
+|---|---|---|---|
+| [`masakhane-io/masakhane-ner`](https://github.com/masakhane-io/masakhane-ner) | 🟢 Apache-2.0 | 🔴 **Apache-2.0 code + `CC-BY-NC-4.0` data** | 🔴 **the African-language NER corpus is NonCommercial** — and the corpus is the asset |
+| [`ankitects/anki`](https://github.com/ankitects/anki) | 🟢 AGPL-3.0 | 🟡 **AGPL-3.0 core + per-file BSD-3 / MIT / Apache-2 / CC-BY-4.0 exceptions** | 🟢 headline correct; the exceptions are vendorable where the core is not |
+
+🔵 **Both read from the `LICENSE` bytes on the real default branch, not from a badge or a blog.**
+
+### 🟡 Trend this page can evidence: the NonCommercial arm is where education data lives
+
+🟢 **`ACTION AD` resolved all 41 of this KB's bare-`CC` grants to a version, and 15 of them — 37 %
+— are NonCommercial** (13 × `CC-BY-NC-SA-4.0`, 1 × `CC-BY-NC-4.0`, 1 × `CC-BY-NC-ND-4.0`). The
+addresses concerned are corpora, item banks, curriculum frameworks and knowledge graphs:
+[`openstax/osbooks-college-physics-bundle`](https://github.com/openstax/osbooks-college-physics-bundle)
+(`CC-BY-NC-SA-4.0`), [`anaistack/cefr-asag-corpus`](https://github.com/anaistack/cefr-asag-corpus)
+(`CC-BY-NC-SA-4.0`), `masakhane-ner`'s data (`CC-BY-NC-4.0`).
+
+🔴 **So the standing shape of this market is: permissive CODE, NonCommercial DATA.** A studio can
+almost always ship the engine and almost never ship the corpus it was demonstrated on. 🔵 **The
+commercially correct move is to treat every open education dataset as a BENCHMARK, not a
+deliverable, and to price client-data ingestion into the engagement from day one.**
+
+### 🔴 What this page searched and did NOT find — stated, not hidden
+
+| line of enquiry | result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **0 new** — returned general agent rankings and AI *courses*; no education-specific MIT agent not already held |
+| `github trending education AI 2026` | 🔴 **0 new** — no live trending list reachable; third-party roundups only, all already held |
+| North America / EMEA / APAC / LATAM agent queries | 🔴 **0 new agents in all four regions.** Each returned demand-side policy and adoption material, recorded on `intel/market.md` |
+| a non-GitHub forge (Codeberg, GitLab) agent | 🔴 **still unreachable** — `codeberg.org` remains `403`/`EGRESS_BLOCKED` to both channels; the gap is the network's, not the market's |
+
 ## 🟢 Pass 123 — 2026-10-11 (tenth pass of this date), 08:4x–09:4x UTC
 
 🔵 **APPEND-ONLY page. This section is added above p122's and nothing below it is edited** —

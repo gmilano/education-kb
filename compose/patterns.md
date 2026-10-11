@@ -6,6 +6,140 @@ updated: 2026-10-11
 
 # Education — compose patterns
 
+**Pass 124, 2026-10-11.** ⏱️ **Eleventh pass of this date** (window **10:0x → 11:3x UTC**).
+
+🟢 **Instrument: `compose/code/p124-correction-form-marker/` — `ACTION AA, AB, AC, AD, AE` all
+five discharged, none refuted. `test_p124.sh` **50 passed / 0 failed**, fully offline.**
+
+## 🟢 🆕 `P124-P1` — the data-licence register, and why it is a separate deliverable from the tool register
+
+**Any region · 3–5 days · sellable on its own, and a prerequisite for every pattern below it.**
+
+🔴 **The gap this closes, measured this pass.** `ACTION AD` resolved all 41 of this KB's bare-`CC`
+grants and found **15 — 37 % — forbid a commercial derivative**. Until this pass they all read as
+the token `CC`. 🔴 **And two of them sit inside repositories whose CODE is permissive**, so a
+per-repository licence column is structurally incapable of carrying the answer.
+
+**Components, all verified this pass unless marked carried:**
+
+| component | address | licence (read this pass) | role |
+|---|---|---|---|
+| default-branch resolver | `compose/code/p124-correction-form-marker/resolve_head.sh` | this KB | `git ls-remote --symref` — existence + real default branch, no guessing |
+| grant-set reader | `compose/code/p124-correction-form-marker/grant_set.sh` | this KB | every grant file per address, 21 paths, not the first 200 |
+| CC resolver | `compose/code/p124-correction-form-marker/cc_version.py` | this KB | title line → URL → short token → elements+version |
+| split-shape detector | `compose/code/p124-correction-form-marker/split_shape.py` | this KB | scope/verb/licence bindings; 2 scopes + 2 licences = split |
+| SPDX normaliser | [`spdx/license-list-data`](https://github.com/spdx/license-list-data) | 🔴 **NO GRANT FILE** — 7 paths probed on `main`, all 404 | 🔴 **do NOT vendor — see the note below** |
+
+🔴 **`P124-P1a` — the canonical SPDX token list publishes no licence of its own, and this pattern
+nearly shipped a guess about it.** The first draft of the table above carried
+`spdx/license-list-data` as *"🟢 CC-BY-3.0 (carried)"*. 🟢 **It was probed before publication and
+the claim does not hold: `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE`,
+`license.txt` and `LICENSE-CODE` are all 404 on the default branch, which
+`git ls-remote --symref` confirms is `main`.** 🔵 **The address is held elsewhere in this KB with a
+`—` in its licence column, which was right.**
+
+🟢 **So the normalisation step does not vendor that repository.** Take the SPDX short-form
+identifiers as a constant — they are stable and already encoded in `classify_licence.py` — and if
+the client's register must cite a source, cite the SPDX specification by name and version rather
+than a repository with no grant. 🔴 **This is `ACTION AG`'s lesson committed and caught inside one
+table: a token read without reading what scopes it. "Everyone knows SPDX is CC-BY" is not a
+grant.**
+
+**Wiring, concretely:**
+
+```
+addresses.txt                       # from the client's SBOM, or a repo sweep
+  │
+  ├─ resolve_head.sh  ──────────▶  address  EXISTS|ABSENT  default-branch
+  │                                 (🔴 never main/master by assumption —
+  │                                  11.7 % of this market defaults elsewhere)
+  ├─ grant_set.sh     ──────────▶  address  branch  path  bytes  token
+  │                                 (one row PER GRANT FILE, 21 paths incl.
+  │                                  LICENSE-CODE / LICENSE-DOCS / LICENSE-DADOS
+  │                                  / DESCRIPTION)
+  ├─ split_shape.py   ──────────▶  is_split, [tokens], n_bindings
+  ├─ cc_version.py    ──────────▶  CC-BY-4.0 | CC-BY-NC-SA-4.0 | CC0-1.0 | …
+  └─ join            ──────────▶  register.tsv
+                                   address · branch · commit · artifact ·
+                                   path · token · bytes · commercial? (y/n)
+```
+
+🟢 **The deliverable is one row PER ARTIFACT, not per repository**, with a boolean
+*"may this appear in a commercially operated service?"*. That boolean is the only column a client
+executive reads, and it is the one a per-repository register gets wrong on `masakhane-ner`
+(Apache-2.0 code / `CC-BY-NC-4.0` data) and `understory` (MIT code / `CC-BY-NC-SA-4.0` content).
+
+🔴 **Two traps to write into the method, both found by this pass's own failures rather than by
+design:**
+1. **Never resolve a CC grant by scanning the whole file.** The CC 4.0 legalcode recommends the
+   `CC0 Public Domain Dedication` in its own boilerplate, so a whole-text scan reads every
+   `CC-BY-4.0` file as CC0 — the most permissive answer for the most restrictive licence. The
+   first build of `cc_version.py` did exactly this on 9 of 13 rows, including
+   [`openstax/osbooks-college-physics-bundle`](https://github.com/openstax/osbooks-college-physics-bundle),
+   which is `CC-BY-NC-SA-4.0`. **Read the title line.**
+2. **Never match `CC BY` without excluding the element suffixes.** `\bCC[ -]?BY\b` matches inside
+   `CC BY-SA 4.0` because the hyphen is a word boundary, which made two plain CC-BY-SA
+   repositories look like split grants.
+
+**Pricing anchor:** 3–5 days for up to ~300 addresses, because the probe cost is
+`addresses × 21` HEAD requests and the human cost is reading the exceptions. 🔵 **Sell it as the
+artefact an AI Act Annex III file, an Ohio district policy or a LATAM ministry procurement needs
+and cannot buy: the one that names what the model was trained and demonstrated on.**
+
+## 🟢 🆕 `P124-P2` — the pinned-artefact manifest, for an EU conformity file
+
+**EMEA · 2–3 days · the input to an Annex III assessment, due before `2027-12-02`.**
+
+🔴 **The problem, measured.** An AI Act conformity file must identify the exact artefact assessed.
+*"The current version of Claroline"* is not an identification: `claroline/claroline` defaults to
+**`15.0`**, a release line that moves. `ACTION AE` found **86 addresses across 39 distinct branch
+names** where the default is neither `main` nor `master`, and the European public-sector platforms
+are over-represented — `claroline/claroline` `15.0` (AGPL-3.0),
+[`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) `release_11`,
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) `19.0` (LGPL-3.0),
+[`Elgg/Elgg`](https://github.com/Elgg/Elgg) `7.x`.
+
+**Wiring:** `resolve_head.sh` → `grant_set.sh` → freeze. One row per artefact:
+`address · default-branch · HEAD commit · grant path · grant token · bytes`. Re-run per release,
+diff against the frozen manifest, and attach the diff to the conformity file.
+
+🔴 **The failure this prevents, named with the row that proves it:**
+[`Learnosity/learnosity-qti`](https://github.com/Learnosity/learnosity-qti) serves **MIT on
+`master`** and **GPL-2.0 on `develop`**, its default. A QTI assessment engagement whose tooling
+guessed `master` documents MIT in its conformity file and ships GPL-2.0. 🟢 **A manifest that
+records the branch makes that error impossible; one that records only the repository cannot.**
+
+🔵 **Dates, so the pitch is right: Article 50 transparency duties have applied since
+`2026-08-02`; Annex III high-risk obligations — admissions, assessment, exam scoring — apply from
+`2027-12-02` per `Regulation (EU) 2026/1744`, embedded systems from `2028-08-02`.** The manifest is
+cheap now and expensive to reconstruct later.
+
+## 🟡 🆕 `P124-P3` — the Elgg plugin trap, as a one-page go/no-go
+
+**Any region · half a day · run it before quoting an Elgg engagement.**
+
+🔴 [`Elgg/Elgg`](https://github.com/Elgg/Elgg) (1 677★, default branch `7.x`) is a split grant:
+*"Bundled plugins (the contents of the `/mod` directory) are available only under the GPLv2
+license. The remainder of the project is available under either MIT or GPLv2."*
+
+🟢 **The core is therefore MIT at the licensee's election — a BETTER commercial position than a
+flat GPL-2.0.** 🔴 **And an AI layer on Elgg is a `/mod` plugin, which is the one directory the
+MIT arm does not reach.**
+
+**The go/no-go, in three questions:**
+1. Does the deliverable live in `/mod`? → if yes, it is **GPL-2.0** and a closed derivative is not
+   available. Quote the source release, or re-architect.
+2. Can the AI layer sit **outside** the Elgg tree as a separate service the plugin only calls? →
+   then the plugin is a thin GPL-2.0 shim and the valuable code stays closed. 🟢 **This is the
+   recommended shape** and it is the same boundary `P117-PAT-1` / `P119-PAT-1` establish for
+   copyleft LMS work.
+3. Is the client's own existing plugin set already GPL-2.0? → then obligation 1 is already
+   accepted and the question is only about *new* closed components.
+
+🔵 **Why this is a pattern and not a footnote: p123 published `MIT` for this repository**, because
+its classifier found `The MIT License (MIT)` further down the same file. A studio reading that row
+would have quoted a closed plugin on a GPL-2.0-only directory.
+
 **Pass 123, 2026-10-11.** ⏱️ **Tenth pass of this date** (window **08:4x → 09:4x UTC**).
 
 🟢 **Instrument: `compose/code/p123-grant-set-calibration/`, discharging `ACTION W, X, Y, Z` and
@@ -1318,7 +1452,7 @@ and this stack produces one by construction rather than by report-writing.**
 
 🟢 **Wiring: `ais-chat` is the teacher-facing surface (German public-sector origin, 🔴 **AGPL-3.0**
 — `P122-A`, repaired this pass: a hosted derivative MUST publish its source, so deploy it
-unmodified or budget for the source release; it was written here as *"MIT, so a closed derivative
+unmodified or budget for the source release; it was written here as *"MIT<!--corrected-->, so a closed derivative
 is permitted"*, directly under a table in the same section reading 🔴 AGPL-3.0);
 ILIAS holds courses and assessment; a LangGraph graph
 mediates every call and is the single place where retention, logging and

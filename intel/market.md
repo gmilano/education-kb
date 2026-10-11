@@ -6,6 +6,66 @@ updated: 2026-10-11
 
 # Education — market intelligence
 
+**Pass 124, 2026-10-11.** ⏱️ **Eleventh pass of this date** (window **10:0x → 11:3x UTC**).
+
+🟢 **Instrument: `compose/code/p124-correction-form-marker/` — `ACTION AA, AB, AC, AD, AE` all
+five discharged, none refuted. `test_p124.sh` **50 passed / 0 failed**, fully offline.**
+
+🔵 **Per-region opportunities are updated IN PLACE under the single canonical
+`## Opportunities by region` block further down this file — one block, **five** `###`, closed
+vocabulary (North America · EMEA · APAC · LATAM · Global).**
+
+## 🔴 🆕 `P124-R` — the mandated query set returned ZERO new items in ALL FOUR REGIONS, on both the supply and the demand side
+
+This is the first pass where that is true simultaneously. p123 ran the same sweep and recovered
+one genuinely new demand-side placement (Singapore MOE's *"Four Learns"*, via `Gap 402`'s
+"name the ministries directly" lead). 🔴 **p124 recovered nothing, and the reason is not thin
+searching — it is that this file already holds every item at HIGHER resolution than the channel
+returns it.**
+
+| region | what the channel returned | verdict |
+|---|---|---|
+| **North America** | Ohio's first-in-nation district AI-policy mandate (**1 Jul 2026**); **134 bills across 31 states**; California **AB 1159** (no student data for model training); Idaho **SB 1227**; Oklahoma + Maryland human-oversight rules; **H.R. 8747** K-12 AI Literacy and Readiness Act; NYC's one-year student-facing moratorium through grade 8; AASA's student-authored *STUDENTS FIRST Act of 2026*; 60 % of K-12 teachers using AI in 2024-25 | 🔴 **0 new — every token held** |
+| **EMEA** | the AI-omnibus *"adopted June 2026, in force 27 July 2026"* and *"from 2 August 2026 the AI Office started to enforce"*; UK **£4 M** for lesson-planning and marking tools; OECD **2026 Digital Education Outlook**; *"only 10 % of 450+ institutions have formal AI guidelines"*; Finland / Estonia / Netherlands leading K-12 integration; UAE AI Strategy 2031; SDAIA; Kenya / South Africa / Nigeria drafting | 🔴 **0 new — and the date conflict is a KNOWN channel defect, see below** |
+| **APAC** | Korea's **AI Basic Act** in force **22 Jan 2026** with an MSIT penalty grace period; **Vietnam's** AI law effective **1 Mar 2026** with education in its high-risk list; **Taiwan's** AI Basic Act (Dec 2025); Singapore and Japan voluntary; China's binding algorithm rules; Byju's / Pearson / Google / Microsoft / IBM as named players | 🔴 **0 new — all held at HIGHER resolution.** This file carries `Law 134/2025/QH15`, `Decision 33/2026/QD-TTg`, `Decree 142/2026/NĐ-CP`, **46 high-risk systems of which education is 3**, and the pre-1 Sep 2027 compliance limb |
+| **LATAM** | UNESCO **IESALC**: 200 institutions / 19 countries, **87 %** using AI, **74 %** in teaching, **26 %** with a formal strategy, **84 % / 68 % / 52 %** by private-non-profit / public / private-for-profit; OECD **TALIS**: Brazil 56 %, Chile 55 %, Colombia 53 %, Costa Rica 52 % vs OECD 36 %; **Ceibal** 75 % of Uruguayan public-school teachers; Brazil **PL 2.338/2023**; Chile's risk-based bill; Colombia **CONPES 4144**; UNESCO's Regional Observatory (**14 Apr**) | 🔴 **0 new.** The institution-type split was the last candidate and it is held at lines 3002 and 3292, with its commercial inversion already analysed |
+
+🔵 **`Gap 402` therefore weakens a SEVENTH consecutive pass.** 🟢 **The honest reading is not that
+the market stopped moving but that a 124-pass KB has outrun its own discovery channel: this file's
+resolution on every one of these instruments is finer than a search summary can be.** A query set
+that returns nothing new across seven passes, checked token by token against 1 370 held
+addresses, has become a **control** rather than a discovery instrument — and a control that keeps
+passing is worth running.
+
+🔴 **The EMEA channel re-served the superseded date for the FIFTH time, and this pass states the
+resolution once more because it keeps costing a reader.** The two dates are not in conflict and
+neither is wrong: **2 August 2026** is real and is an **Article 50 transparency** date, which is
+when the AI Office's enforcement powers began; **Annex III high-risk obligations — the ones that
+catch admissions, assessment and exam scoring — were deferred to 2027-12-02 by
+`Regulation (EU) 2026/1744` of 8 July 2026**, with embedded high-risk systems at 2028-08-02.
+🟢 **A channel that reports the first date as the high-risk deadline is reporting a corrected
+claim as current; this KB's correction holds, verified on three channels since pass 58.**
+
+## 🟢 🆕 `P124-PROC` — what the pass DID produce for a client, and it came from the tree, not the web
+
+🔴 **The single most commercially consequential thing measured this pass is cross-region and is a
+procurement fact: the open education stack is PERMISSIVE at the code layer and NONCOMMERCIAL at
+the data layer.** `ACTION AD` resolved all **41** of this KB's bare-`CC` grants to a version, and
+**15 of 41 — 37 % — forbid a commercial derivative** (13 × `CC-BY-NC-SA-4.0`, 1 × `CC-BY-NC-4.0`,
+1 × `CC-BY-NC-ND-4.0`). The addresses under those tokens are corpora, item banks, curriculum
+frameworks and knowledge graphs — the deliverable, not the docs folder.
+
+🔴 **And two of them are split grants where ONE repository carries both arms**, so a per-repository
+licence column cannot express the answer:
+[`masakhane-io/masakhane-ner`](https://github.com/masakhane-io/masakhane-ner) (Apache-2.0 code,
+`CC-BY-NC-4.0` data) and [`vieanderes/understory`](https://github.com/vieanderes/understory) (MIT
+code, `CC-BY-NC-SA-4.0` lesson content).
+
+🟢 **The commercially correct posture, stated for any region's engagement: treat every open
+education dataset as a BENCHMARK rather than a deliverable, and price client-data ingestion into
+the engagement from day one.** 🔵 **That is a sentence a studio can take into a first meeting, and
+it is worth more than the zero the searches returned.**
+
 **Pass 123, 2026-10-11.** ⏱️ **Tenth pass of this date** (window **08:4x → 09:4x UTC**).
 🔵 **Per-region opportunities are updated IN PLACE under the single canonical
 `## Opportunities by region` block further down this file — one block, **five** `###`, closed
@@ -3558,6 +3618,26 @@ regulatory rows as primary-verified. They are not, and the reason is recorded.**
 
 ### North America
 
+#### 🟢 p124 — 2026-10-11
+
+🔴 **Sweep result: 0 new items.** Every token the North America query returned is held — Ohio's
+district AI-policy mandate (1 Jul 2026), 134 bills / 31 states, AB 1159, SB 1227, H.R. 8747, the
+NYC grade-8 moratorium, Oklahoma and Maryland human-oversight rules, AASA's student-authored
+framework.
+
+🟢 **The opportunity this pass ADDS is a procurement one, measured from the tree.** `ACTION AD`
+resolved this KB's CC bucket: **15 of 41 grants forbid a commercial derivative**. In a region where
+30+ states now publish AI guidance and Ohio *requires* a district policy, the deliverable a
+district cannot buy anywhere is **a licence-provenance register for the content and corpora its
+AI tools were trained or demonstrated on** — not just the tools. 🔵 **`compose/patterns.md`'s
+approved-tool register (`C115-3`, `P119-PAT-2`) extends to a DATA register with no new research,
+and `ACTION AD`'s 41-row output is the first fill of it.**
+
+🔴 **The one procurement trap to put in writing for a US client: `Learnosity/learnosity-qti`
+serves MIT on `master` and GPL-2.0 on `develop`, which is its default branch.** An assessment
+engagement that clones `master` because a tool guessed the branch ships GPL-2.0 code believing it
+is MIT. QTI tooling is squarely in the North American assessment market.
+
 #### 🟢 p122 — 2026-10-11
 
 🔵 **Sizing, re-read this pass with the spread stated.** MarketsandMarkets: **$951 M (2024) →
@@ -3666,15 +3746,15 @@ them change what a client may legally ship.**
 
 | address | published | measured from the tree | what changes for an engagement here |
 |---|---|---|---|
-| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 AGPL-3 | 🔴 **Elastic-2.0, NOT open source** | 🔴 **a hosted student-advising offering is forbidden outright**, not merely copyleft-encumbered |
-| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🟢 MIT | 🔴 **GPL-3.0** | 🔴 a distributed derivative inherits GPL-3.0. 🟡 Also: last push **2026-02-20**, eight months stale |
-| [`elmsln/elmsln`](https://github.com/elmsln/elmsln) | 🟢 Apache-2.0 | 🔴 **GPL-3.0** | 🔴 Penn State's NGDLE; p117 published AGPL-3.0, also wrong |
-| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🟢 Apache-2.0 | 🔴 **AGPL-3.0** | 🔴 the open-response SCORING code is network copyleft |
-| [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | 🔴 AGPL-3.0, GPL | 🔴 **AGPL-3.0 (CE) + MIT + proprietary `ee/`** | 🔴 a fork that keeps `apps/prairielearn/src/ee/` is not an AGPL fork |
-| [`OtterDen-Lab/Autograder`](https://github.com/OtterDen-Lab/Autograder) | 🟢 MIT | 🔴 **GPL-3.0** | 🔴 distribution copyleft |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 AGPL-3<!--corrected-->| 🔴 **Elastic-2.0, NOT open source** | 🔴 **a hosted student-advising offering is forbidden outright**, not merely copyleft-encumbered |
+| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🟢 MIT<!--corrected-->| 🔴 **GPL-3.0** | 🔴 a distributed derivative inherits GPL-3.0. 🟡 Also: last push **2026-02-20**, eight months stale |
+| [`elmsln/elmsln`](https://github.com/elmsln/elmsln) | 🟢 Apache-2.0<!--corrected-->| 🔴 **GPL-3.0** | 🔴 Penn State's NGDLE; p117 published AGPL-3.0, also wrong |
+| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🟢 Apache-2.0<!--corrected-->| 🔴 **AGPL-3.0** | 🔴 the open-response SCORING code is network copyleft |
+| [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | 🔴 AGPL-3.0, GPL<!--corrected-->| 🔴 **AGPL-3.0 (CE) + MIT + proprietary `ee/`** | 🔴 a fork that keeps `apps/prairielearn/src/ee/` is not an AGPL fork |
+| [`OtterDen-Lab/Autograder`](https://github.com/OtterDen-Lab/Autograder) | 🟢 MIT<!--corrected-->| 🔴 **GPL-3.0** | 🔴 distribution copyleft |
 | [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🟢 BSD-3 | 🟢 **MIT** | 🟢 permissive either way. 🟡 **The API returned no record for this address this pass** — 7 of 8 queried came back — so its existence is attested only by `raw.githubusercontent.com` |
-| [`lukeslp/awesome-accessibility`](https://github.com/lukeslp/awesome-accessibility) | 🟢 MIT | 🟢 **CC0-1.0** | 🟢 public-domain dedication; no code |
-| [`microsoft/autogen`](https://github.com/microsoft/autogen) | 🟢 MIT | 🟡 **MIT (`LICENSE-CODE`) + CC-BY-4.0 (`LICENSE`)** | 🟢 the KB's MIT is right for the CODE; the docs are CC-BY and attribution is owed when they are reused |
+| [`lukeslp/awesome-accessibility`](https://github.com/lukeslp/awesome-accessibility) | 🟢 MIT<!--corrected-->| 🟢 **CC0-1.0** | 🟢 public-domain dedication; no code |
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | 🟢 MIT<!--corrected-->| 🟡 **MIT (`LICENSE-CODE`) + CC-BY-4.0 (`LICENSE`)** | 🟢 the KB's MIT is right for the CODE; the docs are CC-BY and attribution is owed when they are reused |
 
 🟢 **The commercial read for this region is unchanged in direction and sharper in detail: the
 four states asking for substantially the same evaluation artefact (Maryland's rubric, North
@@ -4366,6 +4446,35 @@ regulatory grain; one that leads with governance, auditability and teacher-augme
 
 ### EMEA
 
+#### 🟢 p124 — 2026-10-11
+
+🔴 **Sweep result: 0 new items**, and the channel re-served the **superseded** Annex III date for
+the fifth time. 🟢 **The resolution, restated because it keeps costing a reader: 2 August 2026 is
+real and is an ARTICLE 50 transparency date; the Annex III high-risk clock — admissions,
+assessment, exam scoring — was deferred to `2027-12-02` by `Regulation (EU) 2026/1744` of 8 July
+2026, with embedded high-risk systems at `2028-08-02`.** A source quoting the first date as the
+high-risk deadline is quoting a corrected claim as current.
+
+🟢 **The EMEA-specific opportunity sharpened this pass.** `ACTION AE` enumerated the 86 addresses
+whose default branch is neither `main` nor `master`, and the European public-sector platforms are
+over-represented in the **version-numbered release line** convention:
+[`claroline/claroline`](https://github.com/claroline/claroline) `15.0` (AGPL-3.0),
+[`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) `release_11`,
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) `19.0` (LGPL-3.0),
+[`Elgg/Elgg`](https://github.com/Elgg/Elgg) `7.x`.
+
+🔵 **Why that is commercial and not trivia: an AI Act conformity file has to name the exact
+artefact assessed.** *"The current version of X"* is not an identification when the default branch
+is a release line that moves. 🟢 **The deliverable is a pinned-artefact manifest — address,
+default branch, commit, grant file, grant token, bytes — produced once at intake and refreshed per
+release.** That is `ACTION AE`'s own output format, and it is the evidence an Annex III file needs
+before 2027-12-02.
+
+🔴 **New this pass and EMEA-adjacent:** [`Elgg/Elgg`](https://github.com/Elgg/Elgg) (1 677★) is a
+split grant — `/mod` plugins **GPL-2.0 only**, the remainder MIT *or* GPL-2.0. A European
+social-learning deployment that adds an AI plugin is writing GPL-2.0 code in the one directory the
+permissive arm does not cover.
+
 #### 🟢 p122 — 2026-10-11
 
 🔴 **The demand-side gap is unchanged and is restated as a measured absence, not as coverage.**
@@ -4439,7 +4548,7 @@ passes of corrections never reached.**
 
 | address | country | published | 🔴 measured from the tree |
 |---|---|---|---|
-| [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | 🇩🇪 DE | 🔴 **🟢 Apache-2.0** in the top table of `agents/top.md` | 🔴 **AGPL-3.0** (root `LICENSE`, 34 523 B, branch `main`) — **network copyleft** |
+| [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | 🇩🇪 DE | 🔴 **🟢 Apache-2.0** in the top table of `agents/top.md`<!--corrected-->| 🔴 **AGPL-3.0** (root `LICENSE`, 34 523 B, branch `main`) — **network copyleft** |
 | [`leemonade/leemons`](https://github.com/leemonade/leemons) | 🇪🇸 ES | 🔴 Fair Code v1.0 *(p119)* | 🔴 **reproduced independently** by p120's classifier — 3 restriction signals. 🔴 `package.json` says **MIT** |
 
 🔴 **`ais-chat` is the costliest shape of this error in EMEA specifically.** It is the school
@@ -4494,7 +4603,7 @@ already carries — the licence family has now reached the education shelf in Sp
 🔴 **NOT on this shelf, and struck from it this pass (`P122-A`):**
 [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) (🔴 **AGPL-3.0**, 25★ — German state
 schools' own chatbot, still the sovereignty *reference*, but network-use copyleft: a hosted
-derivative must publish its source. It was listed here as Apache-2.0 under the words *"measured
+derivative must publish its source. It was listed here as Apache-2.0<!--corrected--> under the words *"measured
 this pass"*, while 47 other cells of this KB already said AGPL-3.0),
 [`INGInious/INGInious`](https://github.com/INGInious/INGInious) (243★, UCLouvain BE),
 [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) (114★, self-hosted
@@ -4515,14 +4624,14 @@ university-funded self-hosted tutors are copyleft and were published as permissi
 
 | address | country | published | measured from the tree |
 |---|---|---|---|
-| [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | 🇩🇪 DE | 🟢 MIT | 🔴 **AGPL-3.0** — 🔴 state-funded school chatbot; a hosted derivative must publish. 🔵 canonical owner spelling is `FWU-DE` |
-| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 🇪🇸 ES | 🟢 MIT | 🔴 **AGPL-3.0** |
-| [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | — | 🟢 MIT | 🔴 **GPL-3.0** |
-| [`claroline/Claroline`](https://github.com/claroline/Claroline) | 🇫🇷🇧🇪 consortium | 🔵 GPL-3 | 🔴 **AGPL-3.0** — 🔵 a *"Claroline Connect License"* header wrapping the verbatim AGPL-3 text |
-| [`nextcloud/llm2`](https://github.com/nextcloud/llm2) | 🇩🇪 DE | 🟡 AGPL-3 | 🟢 **MIT** — 🟢 the one EMEA correction that *loosens* the obligation |
-| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🇵🇱 PL | 🟢 Apache-2.0 | 🟢 **MIT** — 92★; self-hosted AI-native LMS positioned against Moodle and Open edX |
-| [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | — | 🟢 Apache-2.0 | 🟢 **MIT** — 17★; KG + local LLM + IRT/BKT mastery modelling |
-| [`Tadreeb-LMS/tadreeblms`](https://github.com/Tadreeb-LMS/tadreeblms) | 🇦🇪 Arabic-language | 🟡 GPL-3 | 🔴 **AGPL-3.0** — 34★. 🔵 canonical owner spelling is `Tadreeb-LMS` |
+| [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | 🇩🇪 DE | 🟢 MIT<!--corrected-->| 🔴 **AGPL-3.0** — 🔴 state-funded school chatbot; a hosted derivative must publish. 🔵 canonical owner spelling is `FWU-DE` |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 🇪🇸 ES | 🟢 MIT<!--corrected-->| 🔴 **AGPL-3.0** |
+| [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | — | 🟢 MIT<!--corrected-->| 🔴 **GPL-3.0** |
+| [`claroline/Claroline`](https://github.com/claroline/Claroline) | 🇫🇷🇧🇪 consortium | 🔵 GPL-3<!--corrected-->| 🔴 **AGPL-3.0** — 🔵 a *"Claroline Connect License"* header wrapping the verbatim AGPL-3 text |
+| [`nextcloud/llm2`](https://github.com/nextcloud/llm2) | 🇩🇪 DE | 🟡 AGPL-3<!--corrected-->| 🟢 **MIT** — 🟢 the one EMEA correction that *loosens* the obligation |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🇵🇱 PL | 🟢 Apache-2.0<!--corrected-->| 🟢 **MIT** — 92★; self-hosted AI-native LMS positioned against Moodle and Open edX |
+| [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | — | 🟢 Apache-2.0<!--corrected-->| 🟢 **MIT** — 17★; KG + local LLM + IRT/BKT mastery modelling |
+| [`Tadreeb-LMS/tadreeblms`](https://github.com/Tadreeb-LMS/tadreeblms) | 🇦🇪 Arabic-language | 🟡 GPL-3<!--corrected-->| 🔴 **AGPL-3.0** — 34★. 🔵 canonical owner spelling is `Tadreeb-LMS` |
 
 🔴 **The regional consequence. The EU AI Act puts admission, student evaluation and exam scoring
 in the high-risk class, which obliges a conformity assessment and technical documentation of the
@@ -5481,6 +5590,31 @@ duty is the sellable deliverable that is already overdue.**
 
 ### APAC
 
+#### 🟢 p124 — 2026-10-11
+
+🔴 **Sweep result: 0 new items, and this file holds all of them at HIGHER resolution than the
+channel returns.** The query gave Korea's AI Basic Act (22 Jan 2026, MSIT grace period), Vietnam's
+law effective 1 Mar 2026 with education named high-risk, Taiwan's AI Basic Act (Dec 2025),
+Singapore and Japan as voluntary, and China's binding algorithm rules. 🟢 **This file already
+carries `Law 134/2025/QH15`, `Decision 33/2026/QD-TTg` (in force 15 Aug 2026),
+`Decree 142/2026/NĐ-CP`, the **46** high-risk systems of which education is **3**, the pre-1 Sep
+2027 compliance limb, and p123's Singapore MOE *"Four Learns"* model with the common AI competency
+foundation for all IHL students from 2027.**
+
+🔵 **One channel defect worth recording rather than repeating: a search summary again gave China's
+instruction floor as "six hours yearly" against this KB's held ≥ 8 h.** p123 checked that on a
+second channel, which returned 8 h and flagged the figure as single-sourced. 🟢 **This KB's value
+stands; the 6 h variant is recorded as wrong for the second pass.**
+
+🟡 **The APAC opportunity this pass can evidence is the multi-jurisdiction one, unchanged in
+substance and now with a data layer.** Vietnam names education high-risk, Korea is in a grace
+year, Taiwan has a framework act and Singapore and Japan are voluntary — so a regional deployment
+has to satisfy the strictest limb per market. 🔴 **`ACTION AD` adds the part nobody prices: the
+corpora. 15 of 41 CC grants in this KB are NonCommercial**, and a NonCommercial corpus is
+NonCommercial in every one of those jurisdictions regardless of their AI statute. 🟢 **The
+jurisdiction matrix and the data-licence matrix are independent, and an APAC engagement needs
+both.**
+
 #### 🟢 🆕 p123 — Singapore MOE, named directly, and it returned a framework this KB did not hold
 
 🟢 **`Gap 402`'s lead #2 said the next attempt must NAME THE MINISTRIES instead of re-running the
@@ -5550,9 +5684,9 @@ demand side specifically — the supply side (repositories) is well covered.
 - [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (**Apache-2.0**, 24k★, HK) — the
   strongest permissive agent-native tutor on the whole shelf, APAC-origin.
 - [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) (453★, CN) — 🟢 **repaired
-  this pass to Apache-2.0**; was published MIT.
+  this pass to Apache-2.0**; was published MIT<!--corrected-->.
 - 🔴 [`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud)
-  (1 173★, 酷瓜云课堂) — 🔴 **repaired this pass to GPL-2.0**; was published 🟢 MIT with reuse
+  (1 173★, 酷瓜云课堂) — 🔴 **repaired this pass to GPL-2.0**; was published 🟢 MIT<!--corrected--> with reuse
   *"yes"*. **The largest-star licence defect of the pass, and APAC's biggest MOOC platform here.**
 - 🔴 [`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce) (126★) —
   **proprietary Chinese EULA**: non-commercial only, derivatives for redistribution forbidden,
@@ -5662,6 +5796,39 @@ licence for all of them.**
 
 ### LATAM
 
+#### 🟢 p124 — 2026-10-11
+
+🔴 **Sweep result: 0 new items, and the last outstanding candidate closed as ALREADY HELD.** The
+UNESCO IESALC institution-type split — **84 %** private non-profit vs **68 %** public vs **52 %**
+private for-profit — was the one figure a token census could not find in this file. 🟢 **It is
+held, at lines 3002 and 3292, together with its commercial inversion** (for-profit institutions
+are the *least* adopted, private non-profits the most, so the 26 %-governance gap is most acute in
+the sector furthest along). The rest — 200 institutions / 19 countries, 87 % / 74 % / 26 %, TALIS
+Brazil 56 % · Chile 55 % · Colombia 53 % · Costa Rica 52 % against OECD 36 %, Ceibal's 75 %,
+`PL 2.338/2023`, Chile's risk-based bill, `CONPES 4144`, the Regional Observatory of 14 Apr — all
+held.
+
+🔵 **A primary-source re-verification was attempted and could not run: `iesalc.unesco.org` and
+`dig.watch` are both unreachable from this environment (DNS refused / `000`), while
+`raw.githubusercontent.com` is 200.** 🟢 **So the figures stand on this KB's own prior
+three-channel confirmation, not on this pass's channel — stated rather than presented as fresh.**
+
+🟡 **The LATAM opportunity, re-priced off this pass's measurement.** The region's standing gap is
+governance, not adoption. 🔴 **`ACTION AD` shows the gap has a concrete, billable shape: the
+Brazilian and regional open education assets this KB holds include split grants whose DATA arm is
+NonCommercial** — [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark)
+(`LICENSE-CODIGO`=MIT, `LICENSE-DADOS`=CC BY) is the pattern, and
+[`openstax/osbooks-college-physics-bundle`](https://github.com/openstax/osbooks-college-physics-bundle)
+(`CC-BY-NC-SA-4.0`) is the trap, since OpenStax content is widely translated and reused across the
+region.
+
+🟢 **Deliverable: a *licença de dados* register distinct from the software register** — for a
+ministry or a university consortium, the artefact that says which curriculum content, item banks
+and corpora may appear in a commercially operated service. 🔵 **Brazil's platforms also sit on
+version-numbered default branches (`portabilis/i-educar` `2.12`, `portabilis/i-diario` `1.6`,
+`portabilis/pre-matricula-digital` `2.12`), so the register must pin the branch, not the
+repository.**
+
 #### 🟢 p122 — 2026-10-11
 
 🟢 **Still the best-evidenced region on the demand side, re-confirmed from the primary bodies this
@@ -5730,7 +5897,7 @@ regulation framework and the **ILIA** index across 19 countries.
   municipal SIS, *software público*) — 🟢 **repaired this pass to GPL-2.0**; was published
   **AGPL-3.0** both in this page's prose and in the verticals top table (`P121-A`).
 - 🟢 [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) (153★, BR author) — 🟢 **repaired
-  this pass to BSD-3-Clause**; was published MIT. The region's adaptive-testing (IRT/CAT) foundation.
+  this pass to BSD-3-Clause**; was published MIT<!--corrected-->. The region's adaptive-testing (IRT/CAT) foundation.
 - [`portabilis/i-diario`](https://github.com/portabilis/i-diario) (117★) and
   [`portabilis/pre-matricula-digital`](https://github.com/portabilis/pre-matricula-digital) (21★) —
   **AGPL-3.0**, licence text in Portuguese (`LICENCA PUBLICA GERAL AFFERO GNU`).
@@ -5837,6 +6004,36 @@ the IDB's ILIA index were **all already held** — 19 tokens checked, 19 rejecte
 at fault, and the fault had a regional shape worth stating plainly.**
 
 ### Global
+
+#### 🟢 p124 — 2026-10-11
+
+🟢 **The pass's one genuinely new, region-independent commercial fact: the open education stack is
+PERMISSIVE at the code layer and NONCOMMERCIAL at the data layer.** `ACTION AD` resolved all **41**
+bare-`CC` grants in this KB to a version — the first time the bucket has been readable:
+
+| token | rows | commercial derivative permitted? |
+|---|---|---|
+| `CC-BY-NC-SA-4.0` | **13** | 🔴 **no** |
+| `CC0-1.0` | 11 | 🟢 yes, no attribution duty |
+| `CC-BY-4.0` | 7 | 🟢 yes, with attribution |
+| `CC-BY-SA-4.0` | 6 | 🟡 yes, derivative inherits ShareAlike |
+| `CC-BY-SA-3.0` | 2 | 🟡 as above |
+| `CC-BY-NC-ND-4.0` | 1 | 🔴 **no, and no derivatives** |
+| `CC-BY-NC-4.0` | 1 | 🔴 **no** |
+
+🔴 **15 of 41 — 37 % — forbid a commercial derivative, and until this pass all 41 read as the
+single token `CC`.** 🔵 **In an education engagement that is the whole risk, because the artefact
+under the CC grant is the curriculum, the item bank or the knowledge graph: the deliverable, not
+the documentation.**
+
+🔴 **Two of the 41 sit inside a repository whose CODE is permissive**, so no per-repository licence
+column can express the answer: [`masakhane-io/masakhane-ner`](https://github.com/masakhane-io/masakhane-ner)
+(Apache-2.0 code / `CC-BY-NC-4.0` data) and [`vieanderes/understory`](https://github.com/vieanderes/understory)
+(MIT code / `CC-BY-NC-SA-4.0` lesson content). 🟢 **Licence must be recorded per ARTIFACT, which
+this KB has said since p94 and `ACTION AA` is the first instrument able to enforce.**
+
+🟢 **Standing posture for any region: treat every open education dataset as a BENCHMARK, not a
+deliverable, and price client-data ingestion into the engagement from day one.**
 
 #### 🟢 p122 — 2026-10-11
 

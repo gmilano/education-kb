@@ -4,6 +4,94 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Pass 124 — 2026-10-11 (eleventh pass of this date), 10:0x–11:3x UTC
+
+🔵 **APPEND-ONLY page. This section is added above p123's and nothing below it is edited** —
+including rows this pass found stale. Stale tokens in the history are listed here, not rewritten.
+
+🟢 **Instrument: `compose/code/p124-correction-form-marker/`. `test_p124.sh` **50 passed / 0
+failed**, fully offline.**
+
+### 🔴 Zero new trending addresses, and the census that replaced the search
+
+🔴 **The GitHub-trending sweep returned no new addresses.** `github.com/trending` is not reachable
+from this environment and `api.github.com` is **403**; the third-party roundups the queries return
+are all already held. 🟢 **`raw.githubusercontent.com` is 200, and `git ls-remote --symref` works,
+so the pass's repo-side result came from the tree again.**
+
+**1 370 folded addresses → 1 344 EXISTS / 26 ABSENT**, **1 135 grant files** read from each
+repository's REAL default branch.
+
+🟢 **This is an independent re-derivation of p123's corpus and it agrees:** p123 counted 1 365
+addresses and 84 non-`main`/`master` defaults; p124 counts **1 370** and **86**. Two figures
+nobody carried forward, agreeing to 0.4 % and 2 %.
+
+### 🔴 `T124-1` — a default branch can be MORE PERMISSIVE than the repository, and one row proves it
+
+This is new and it inverts a standing assumption on this page. `ACTION AE` scored the
+branch-guessing `MAIN-ONLY` model against the only population where it can fail — the **79**
+addresses whose real default branch is neither `main` nor `master` and which carry a grant there.
+**77 agree, 2 do not.**
+
+| address | real default | grant on the real default | what `main`/`master` serves |
+|---|---|---|---|
+| 🔴 [`Learnosity/learnosity-qti`](https://github.com/Learnosity/learnosity-qti) | **`develop`** | 🔴 **GPL-2.0** · 18 264 B | 🟢 **MIT** · 1 067 B — `master` still exists |
+| 🔴 [`pressbooks/pressbooks`](https://github.com/pressbooks/pressbooks) | **`dev`** | 🔴 GPL-3.0 · `LICENSE.md` | 🔴 **nothing** — `main` and `master` both 404 |
+
+🔴 **`learnosity-qti` serves two different licences on two live branches, and the abandoned one is
+the permissive one.** Both files were fetched and read: `master/LICENSE` is the MIT text,
+`develop/LICENSE` is the GPL-2.0 text verbatim. 🟢 **This page published `GPL-2.0` on `develop` at
+line 3720 and is correct** — the error belongs to any instrument that guesses the branch, and the
+error runs in the direction that costs money: a studio told MIT builds on GPL-2.0.
+
+🔵 **Why the other 77 agree is worth knowing too, because it bounds the risk.**
+`raw.githubusercontent.com` keeps serving a `master`/`main` branch for as long as that branch
+exists, even after the repository's *default* has moved elsewhere — so guessing usually returns
+the same bytes. The failure mode is not "the branch is non-standard"; it is "the non-standard
+default has **diverged** from the stale one". Only a per-address comparison can tell, which is
+what `ACTION AI` pre-registers.
+
+### 🟢 `T124-2` — the non-standard-default convention, enumerated: 86 addresses, 39 branch names
+
+The 86 are not a noise tail. They are the release-engineering conventions of exactly the platforms
+this KB exists to place:
+
+| convention | branch | addresses |
+|---|---|---|
+| version-numbered release line | `19.0`, `15.0`, `release_11`, `v6.2.0`, `v31.0.00`, `2.12`, `1.6`, `7.x`, `v2`, `2024.9.x`, `v3.0.x-develop`, `java11`, `4.x` | `openeducat/openeducat_erp`, `claroline/claroline`, `ILIAS-eLearning/ILIAS`, `Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard`, `GibbonEdu/core`, `portabilis/i-educar`, `portabilis/i-diario`, `Elgg/Elgg`, `xiaochong0302/course-tencent-cloud`, `cortezaproject/corteza`, `bigbluebutton/bigbluebutton`, `kualico/rice`, `eclipse-ee4j/jersey` |
+| gitflow | `develop` | `frappe/frappe`, `frappe/erpnext`, `frappe/lms`, `frappe/education`, `oppia/oppia`, `oppia/oppia-android`, `oat-sa/tao-core`, `opencast/opencast`, `1EdTech/openbadges-specification`, `1EdTech/openbadges-validator-core`, `LearnPress/learnpress`, `learningequality/kolibri`, `ls1intum/Artemis`, `Learnosity/learnosity-qti` |
+| short gitflow | `dev` | `pressbooks/pressbooks`, `learnhouse/learnhouse`, `douglasrizzo/catsim`, `coqui-ai/TTS`, `nestauk/ojd_daps_skills`, `thm-mni-ii/feedbacksystem` |
+| svn heritage | `trunk` | `apache/ofbiz-framework`, `gocodebox/lifterlms` |
+| product line | `release`, `mobile`, `laravel`, `MOODLE_34_STABLE` | `overhangio/tutor`, `francoisjacquet/rosariosis`, `jtylek/EpesiCRM`, `moodlehq/moodle-tool_dataprivacy` |
+
+🔵 **Procurement consequence, and it is durable: on 11.7 % of this market's repositories, "clone
+the default branch" and "clone `main`" are different instructions, and on at least one of them
+they are different LICENCES.**
+
+### 🟢 `T124-3` — the CC bucket, resolved: permissive code over NonCommercial data
+
+`ACTION AD` resolved all **41** bare-`CC` grants to a version. **15 are NonCommercial** (13 ×
+`CC-BY-NC-SA-4.0`, 1 × `CC-BY-NC-4.0`, 1 × `CC-BY-NC-ND-4.0`), **11** are `CC0-1.0`, **7**
+`CC-BY-4.0`, **8** ShareAlike.
+
+🔴 **The repositories under the NonCommercial tokens are corpora, item banks and knowledge
+graphs** — [`openstax/osbooks-college-physics-bundle`](https://github.com/openstax/osbooks-college-physics-bundle),
+[`anaistack/cefr-asag-corpus`](https://github.com/anaistack/cefr-asag-corpus),
+[`masakhane-io/masakhane-ner`](https://github.com/masakhane-io/masakhane-ner)'s data arm,
+[`haolpku/K12-KGraph`](https://github.com/haolpku/K12-KGraph). 🟢 **The trend this page can
+evidence from its own bytes: the education open-source layer is permissive at the CODE layer and
+NonCommercial at the DATA layer, and those are different repositories only sometimes — two of
+these are split grants inside ONE repository.**
+
+### 🔴 What this page searched and did NOT find — stated, not hidden
+
+| line of enquiry | result |
+|---|---|
+| `github trending education AI 2026` | 🔴 **0 new** — live trending unreachable (`403`); roundups all held |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **0 new** — returned OpenEduCat (LGPL-3.0), ERPNext (GPL-3.0), Krayin (MIT), Huly/Corteza/OFBiz (Apache-2.0), Epesi (MIT), Dolibarr. 🟢 **Every one already held**, and the question it answers is already on `verticals/solutions.md` |
+| a non-GitHub forge | 🔴 **unreachable** — `codeberg.org` `403`/`EGRESS_BLOCKED`; recorded as a channel gap, not a market gap |
+| `api.github.com` star/fork metadata | 🔴 **403 to `curl`**, unchanged since p118. Stars in this section are carried, not re-measured; grants are measured |
+
 ## 🟢 Pass 123 — 2026-10-11 (tenth pass of this date), 08:4x–09:4x UTC
 
 🔵 **APPEND-ONLY page. This section is added above p122's and nothing below it is edited** —
