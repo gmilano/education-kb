@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-11
 ---
 
+## Pass 125 — 2026-10-11
+
+⏱️ **Twelfth pass of this date** (census window **11:0x → 11:1x UTC**).
+
+🟡 **Sixteenth axis in sixteen passes: of the four actions p124 pre-registered, `AF`, `AG` and `AH` are discharged and not refuted — and 🔴 **`AI` is REFUTED on its own clause**, the first refutation since p123's `ACTION X`.**
+
+🟢 **Instrument: `compose/code/p125-retraction-cue/` — `test_p125.sh` **51 passed / 0 failed**, fully offline, over 25 fixtures.**
+
+| action | verdict | figure |
+|---|---|---|
+| `ACTION AF` | 🟢 **NOT REFUTED + IMPLEMENTED** | **40 of 61** baseline violations resolved (clause: ≥ 20); **81 rows** marked, marked rows **105 → 190** |
+| `ACTION AG` | 🟢 **NOT REFUTED** | all **4** known instances reproduced through their own naive patterns — and 🔴 **4 further instances found**, one of them inside `ACTION AG` itself |
+| `ACTION AH` | 🟢 **NOT REFUTED** | **4 further tokens** on `ankitects/anki` (clause: ≥ 3); its grant set is **6** tokens, not 2 |
+| `ACTION AI` | 🔴 **REFUTED** | `learnosity-qti` **is** the only false-permissive address: **1 of 86**, all 86 probed on three branches |
+
+🔴 **`P125-H` — p124's `ACTION AC`, the assertion that a repair must be corpus-wide, was run over 5 of the 10 live pages.** Re-derived from p124's own committed code it returns **61 violations over 23 addresses**, not 27 over 15; restricted to p124's five pages it returns **23 over 15** — p124's address count exactly. 🔴 **The five pages it never reached include both append-only trending pages, where stale tokens necessarily accumulate.** p122 found a census less precise than its page, p123 a repair that was an edit, p124 a token read without its scope; p125 finds **an assertion run without its domain**.
+
+🔴 **`P125-A` — three live false claims, where p124 reported none.** [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) read 🟢 `MIT` on `agents/trending.md` and is **`Apache-2.0`** (`main/LICENSE`, 11 358 B) — repaired on `agents/top.md` by p124 and left standing on a page outside the assertion's domain. [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) was published as 🟢 *"**MIT** both"* alongside `pyBKT`, and is **`BSD-3-Clause`** (`dev/LICENSE`, 1 514 B) — 🔴 **that row is inside p124's domain and was read by hand; the word carrying the error is the quantifier, not the token**. And the licence-tier table counted [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) under **"not open source / unknown"** as *"(no file)"* when it is **`GPL-3.0`**, declared in the WordPress plugin header of `develop/readme.txt` — which this README already said.
+
+🟢 **`P125-AG` — the fifth instance of the scope class was committed inside the module written to prevent it.** p125's first build matched `MIT` inside `LIMITED` and `ISC` inside `DISCLAIMED`, so every BSD-3 and Apache-2.0 warranty disclaimer yielded a spurious `MIT` grant; the `SUBSTRING` check could not see it, because it compares a span against other *licence* tokens and `LIMITED` is not one. 🔵 **The test suite then committed the same error in one line of itself** — `hasnt "ISC"` over the whole report failed because `DISCARDED` contains `ISC`. Both are fixed and both are asserted. 🔴 **Two more instances came from AGPL-3's own text** (section 13's compatibility grant, and the preamble's paragraph on the historical Affero GPL), which together produced **seven** spurious `GPL` grants from a single AGPL-3 file.
+
+🔴 **p124's description of its own CC instance is wrong.** It is not that *"the CC 4.0 legalcode recommends CC0"*: the file says *"The text of the Creative Commons public licenses is dedicated to the public domain under the CC0 Public Domain Dedication"* — a real grant whose **subject is the licence document**. A gate built to p124's description looks for `recommends` and finds nothing. The label is `DOCUMENT-TEXT`.
+
+🟢 **`ACTION AH` — `ankitects/anki` is `AGPL-3.0` + `BSD-3-Clause` + `CC-BY-4.0` + `MIT` + `Apache-2.0` + `CC-BY-SA-4.0`**, read as seven per-item bindings off a bulleted exception list, with `LGPL` (binary distributions only) and `AGPL3-compatible` (a class, not a grant) correctly discarded.
+
+🔴 **`ACTION AI` is refuted, and refutes its own premise too.** All 86 non-standard-default addresses were probed on three branches: **77 agree, 7 have no grant anywhere, 1 is false-permissive, 1 misses a grant, 0 invent one**. Separating the two failure directions puts `MAIN-ONLY`'s false-permissive rate at **1.3 %** where it can err, not p124's 2.5 %. 🟢 **Two of the 7 'grant-less' addresses do carry grants** — [`veraPDF/veraPDF-library`](https://github.com/veraPDF/veraPDF-library) dual `GPL-3.0` + `MPL-2.0` at `LICENSE.GPL`/`LICENSE.MPL`, and `learnpress` at `readme.txt` — at paths the 21-path probe list never requests. 🔴 **"No grant at 22 probed paths" is a statement about the path list.**
+
+🔴 **Research sweep: ZERO new items in ALL FOUR REGIONS for a second consecutive pass.** Every token the global and regional queries returned is held. 🔴 **One open item could not be closed for a channel reason and is recorded as such**: the Digital Education Council's LATAM faculty denominator (**7 319 faculty** vs **30 000+ responses**, compatible as subset and total, never read first-hand) stays open because `www.digitaleducationcouncil.com` answers `ENOTFOUND` to the fetch tool and `CONNECT tunnel failed, response 403` at the agent proxy.
+
+🔵 **One figure of p124's did not reproduce.** p124 reports the 86 non-standard defaults spread over **39** distinct branch names; re-derived from p124's own `out/heads-all.tsv` the count is **37** (`develop` 34, `dev` 11, `v6.2.0` 3, `trunk`/`java11`/`3.x`/`2.12` 2 each). The address count 86 reproduces exactly.
+
+### Pre-registered for p126
+
+🟢 **`ACTION AJ`** — bind a licence token to an ADDRESS, not to a line. All 15 violations `ACTION AF` newly surfaced have one cause: a cell naming two repositories (*"`moodle` GPL-3.0 · `canvas-lms` AGPL-3.0"*, *"the spec carries no grant while the validator is Apache-2.0"*) lets a token co-occur with an address it does not describe. 🔴 *Refuted if fewer than 12 of the 15 are explained by mis-binding.*
+
+🟢 **`ACTION AK`** — give the correction apparatus p123's grant-as-a-SET. A correction table that collapses a split grant into one token (`pupilfirst` *"published CC-BY-SA-4.0 → corrected MIT"*) makes the surviving split member read as superseded on 6 live rows. 🔴 *Refuted if treating the old and new values as SETS does not clear all 6.*
+
+🟢 **`ACTION AL`** — extend the grant path list by the two ecosystem conventions `ACTION AI` found it blind to (`LICENSE.GPL`/`LICENSE.MPL` dual-licence filenames, and the WordPress `readme.txt` plugin header) and re-run p123's `ACTION Y` absence census. 🔴 *Refuted if fewer than 3 of the corpus's 'genuinely absent' addresses turn out to carry a grant.*
+
+🟢 **`ACTION AM`** — mark at WRITE time, not by sweeping afterwards. Thirteen surface forms over four passes is a losing race; a pass that writes a retraction should emit the marker with it. 🔴 *Refuted if a write-time check cannot reproduce ≥ 90 % of the 81 rows `ACTION AF` marked this pass.*
+
+
 ## Pass 124 — 2026-10-11
 
 ⏱️ **Eleventh pass of this date** (census window **10:0x → 11:3x UTC**).
@@ -46,7 +88,7 @@ standing check instead of a lesson relearned each pass.**
 
 🟢 **`P124-AA` — four split grants a marker list could not reach, each read from the file.**
 [`Elgg/Elgg`](https://github.com/Elgg/Elgg) (1 677★, `7.x`) — `/mod` plugins **GPL-2.0 only**,
-remainder MIT *or* GPL-2.0; p123 published bare `MIT`.
+remainder MIT *or* GPL-2.0; p123 published bare `MIT<!--corrected-->`.
 [`vieanderes/understory`](https://github.com/vieanderes/understory) — MIT code,
 🔴 **`CC-BY-NC-SA-4.0` lesson content**, and in education the content is the deliverable.
 [`masakhane-io/masakhane-ner`](https://github.com/masakhane-io/masakhane-ner) — Apache-2.0 code,
@@ -335,7 +377,7 @@ numbers this KB published last pass.**
 🟢 **10 licence cells repaired across 4 pages, every one re-read from the live tree first.**
 
 🔴 **`P121-C` — a NEW defect class, invisible to seven passes of instruments: OVER-restriction.**
-[`UniTime/unitime`](https://github.com/UniTime/unitime) (Apache-2.0) was published GPL-3.0 and
+[`UniTime/unitime`](https://github.com/UniTime/unitime) (Apache-2.0) was published GPL-3.0<!--corrected--> and
 [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) (MIT, split grant) was
 published AGPL-3.0 — **both marked "🔴 no" for reuse.** Every sweep from p114 to p120 tested only
 whether a token was *too permissive*, because that direction creates legal exposure. An
@@ -476,7 +518,7 @@ failed**, fully offline against 52 licence files captured this pass.**
 
 🔵 **Why `ACTION L` failed, which is the pass's most portable lesson.** `FWU-DE/ais-chat` is
 AGPL-3.0; p117 measured it and correction tables on **two** pages publish it. Those tables name
-the superseded value as *"was MIT"*. The stale cell's value was **Apache-2.0**. 🔴 **A repair
+the superseded value as *"was MIT"*. The stale cell's value was **Apache-2.0**<!--corrected-->. 🔴 **A repair
 keyed on the wrong value you expect to find cannot fix a row that is wrong in a different way** —
 so the error sat ~65 lines from its own correction, at the top of the most-read page, for three
 passes.
@@ -540,7 +582,7 @@ the same census. A prose correction is not a KB correction.**
 🔴 **Eight of the thirteen agents on this KB's shelf were under the wrong licence, and five
 published as MIT are copyleft** — the error ran toward understating the obligation, which is the
 direction that costs a client. 🔴 **The most consequential single row:
-[`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) was published as AGPL-3 and
+[`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) was published as AGPL<!--corrected-->-3 and
 is **Elastic License 2.0** — not open source at all, no managed service, no licence-key
 circumvention. `compose/patterns.md` had said "build on it, AGPL duties apply".**
 

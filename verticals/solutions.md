@@ -6,6 +6,34 @@ updated: 2026-10-11
 
 # Education — vertical platforms
 
+**Pass 125, 2026-10-11.** ⏱️ **Twelfth pass of this date** (census window **11:0x → 11:1x UTC**).
+
+🟢 **Instrument: `compose/code/p125-retraction-cue/` — `ACTION AF`, `AG`, `AH` discharged and not refuted; 🔴 **`ACTION AI` REFUTED on its own clause**. `test_p125.sh` **51 passed / 0 failed**, fully offline, over 25 fixtures.**
+
+## 🔴 🆕 `P125-A` — three live false claims, and one of them is on a page p124 read by hand
+
+p124 found **zero** live false claims among its 27. Over the full ten-page domain there are
+**three**, each verified against the repository's own bytes on its real default branch.
+
+| # | where | the page said | the file says | how it was missed |
+|---|---|---|---|---|
+| 1 | `agents/trending.md` | [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) **453★** 🟢 `MIT` | 🟢 **`Apache-2.0`** — `main/LICENSE`, **11 358 B** | p124 repaired this address on `agents/top.md` **and recorded the repair on both of that page's tables**; the trending row was outside the assertion's domain |
+| 2 | `compose/patterns.md` | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) + [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) 🟢 **`MIT` both** | 🟡 `pyBKT` **MIT**, `catsim` **`BSD-3-Clause`** — `dev/LICENSE`, **1 514 B** | 🔴 **inside p124's domain and read by hand.** The word *"both"* carries the error, and twelve other rows on these pages already say `BSD-3` |
+| 3 | `verticals/solutions.md` | the licence-tier table counted [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) under 🔴 **"not open source / unknown"** as *"(no file)"* | 🔴 **`GPL-3.0`** — declared in the WordPress plugin header of `develop/readme.txt`: *"License: GPLv3"*, *"License URI: gnu.org/licenses/gpl-3.0.html"* | the row is right that there is no `LICENSE` **file**, and wrong about the tier. 🟢 **This KB's own `README.md` already records it as GPL-3.0** |
+
+🔴 **Defect 2 is the one worth the pass.** A hand-read of a row that says *"MIT both"* about two
+repositories confirms the token and not the quantifier. A single cell naming two addresses is the
+smallest unit at which this shelf can be wrong about exactly one of them, and `ACTION AJ` makes
+that the next thing measured.
+
+🔵 **Defect 3 is the direction this KB's own `intel/trends.md` trend 1 names as the expensive
+one**: an over-restrictive cell creates no legal exposure and silently deletes a platform from a
+shortlist. **24 % of Mexico's LMS-carrying sites run LearnPress**, and the tier table had it in
+the bucket a studio never reads twice. Repaired: copyleft **8 → 9 of 20**, not-open-source
+**2 → 1**.
+
+🔵 **`compose/code/p125-retraction-cue/false_permissive.sh`, `scope_gate.py`, `bullet_bindings.py` and `mark_forms.py` carry the method; `out/ai-verdict.tsv` and `out/ac-{baseline,after}.triples` carry the evidence.**
+
 **Pass 124, 2026-10-11.** ⏱️ **Eleventh pass of this date** (window **10:0x → 11:3x UTC**).
 
 🟢 **Instrument: `compose/code/p124-correction-form-marker/` — `ACTION AA`, `AB`, `AC`, `AD`, `AE`
@@ -51,7 +79,7 @@ commercial deliverable at any price. One is a textbook case of the pattern and n
 
 | address | code | content | verdict |
 |---|---|---|---|
-| [`vieanderes/understory`](https://github.com/vieanderes/understory) | 🟢 **MIT** — source, design, scripts, labs, tests, docs | 🔴 **`CC-BY-NC-SA-4.0`** — everything under `content/` and the built bundle | 🔴 **p123 published `MIT` for the whole repository.** The lesson content is the deliverable in an education engagement, and it is NonCommercial. |
+| [`vieanderes/understory`](https://github.com/vieanderes/understory) | 🟢 **MIT** — source, design, scripts, labs, tests, docs | 🔴 **`CC-BY-NC-SA-4.0`** — everything under `content/` and the built bundle | 🔴 **p123 published `MIT<!--corrected-->` for the whole repository.** The lesson content is the deliverable in an education engagement, and it is NonCommercial. |
 
 🔵 **Read `verticals` licences per ARTIFACT, never per repository.** This page has said so since
 p94; `ACTION AA` is the first instrument that can enforce it mechanically.
@@ -191,7 +219,7 @@ LGPL-3.0*.**
 
 | the cell | value | the truth? | the value the correction names? |
 |---|---|---|---|
-| `verticals/solutions.md:205` | 🔴 GPL-2.0 ⚠️ *was LGPL-3.0* | 🟢 yes | — |
+| `verticals/solutions.md:205` | 🔴 GPL-2.0 ⚠️ *was LGPL-3.0*<!--corrected--> | 🟢 yes | — |
 | 🔴 the top platform table | 🔴 **AGPL-3.0** | 🔴 no | 🔴 **no — a third value** |
 
 🟢 **Measured: `2.12/LICENSE`, 18 092 B, GPL-2.0. Repaired.** 🔵 **This is what discharged
@@ -224,7 +252,7 @@ a permissive answer on a GPL platform.
 |---|---|---|---|---|
 | [`moodle/moodle`](https://github.com/moodle/moodle) | LMS — the largest install base on earth | 6.2k | 🔴 GPL-3.0 | 🟡 **plugin API only** — do not fork |
 | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | MOOC platform | 7.5k | 🔴 AGPL-3.0 | 🟡 **service boundary** — AGPL reaches hosted use |
-| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | HiEd LMS | 5.8k | 🔴 **AGPL-3.0** ⚠️ *was GPL* | 🟡 LTI/API integration only |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | HiEd LMS | 5.8k | 🔴 **AGPL-3.0** ⚠️ *was GPL*<!--corrected--> | 🟡 LTI/API integration only |
 | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | offline-first LMS | 1.1k | 🟢 **MIT** | 🟢 **yes — the low-bandwidth answer** |
 | [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | LMS | 979 | 🟢 **MIT** (split: `docs/` CC-BY-SA-4.0) ⚠️ **was 🔴 AGPL-3.0**<!--corrected--> | 🟢 **yes — repaired this pass** |
 | [`UniTime/unitime`](https://github.com/UniTime/unitime) | university timetabling | 350 | 🟢 **Apache-2.0** ⚠️ **was 🔴 GPL-3.0**<!--corrected--> | 🟢 **yes — repaired this pass** |
@@ -241,7 +269,7 @@ a permissive answer on a GPL platform.
 | [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | virtual classroom | 8.7k | 🔴 LGPL-3.0 | 🟡 link, do not fork |
 | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | HiEd LMS/CLE | — | 🟢 ECL-2.0 | 🟢 **yes** |
 | [`atutor/ATutor`](https://github.com/atutor/ATutor) | LMS (accessibility pioneer) | 180 | 🔴 **no licence file; README says only "GPL", no version** | 🔴 **treat as licence-unresolved** |
-| [`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce) | 云学习系统 | 126 | 🔴 **proprietary EULA — NOT OSS** ⚠️ *was 🟢 MIT* | 🔴 **no, at any price the file names** |
+| [`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce) | 云学习系统 | 126 | 🔴 **proprietary EULA — NOT OSS** ⚠️ *was 🟢 MIT*<!--corrected--> | 🔴 **no, at any price the file names** |
 | [`leemonade/leemons`](https://github.com/leemonade/leemons) | LMS platform | — | 🔴 **"Fair Code License" v1.0** — €100 000 past 1 000 users + 5 %; `package.json` declares 🟢 MIT | 🔴 no |
 
 🟢 **The standing recommendation is unchanged and this pass strengthens it: the permissive
@@ -546,8 +574,8 @@ measurement.** 🔵 **‡ published by this KB under a non-canonical spelling �
 |---|---|---|
 | 🟢 **permissive** (BSD-3, Apache-2.0, MIT, ECL-2.0) | jupyterhub, Submitty, OpenOLAT, tsugi, scorm-again, Numbas, opencast, DSpace | 🟢 **8 of 20** |
 | 🟡 weak / dual (LGPL-3, MIT-or-GPL-2) | openeducat_erp, Elgg | 2 |
-| 🔴 **copyleft** (GPL-3, AGPL-3) | erpnext, frappe, openedx-platform, moodle, canvas-lms, frappe/lms, classroomio, lifterlms | 🔴 **8 of 20** |
-| 🔴 **not open source / unknown** | advisingapp (Elastic-2.0), learnpress (no file) | 🔴 **2** |
+| 🔴 **copyleft** (GPL-3, AGPL-3) | erpnext, frappe, openedx-platform, moodle, canvas-lms, frappe/lms, classroomio, lifterlms, learnpress | 🔴 **9 of 20** ⚠️ **was 8 of 20**<!--corrected--> |
+| 🔴 **not open source / unknown** | advisingapp (Elastic-2.0) | 🔴 **1** ⚠️ **was 2 — `learnpress` counted here as "no file"**<!--corrected--> |
 
 🔴 **Every one of the five largest platforms on this shelf is copyleft, and the two biggest LMS
 targets — Open edX and Canvas — are AGPL-3.0, i.e. network copyleft: hosting a modified
@@ -1039,7 +1067,7 @@ the same tier the worst-verified. p112 splits the tier in a way neither could:**
 
 | SIS | bench | p111 | p112 | the engagement shape it implies |
 |---|---|---|---|---|
-| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) (BR) | 🟡 small | 🟢 `checked` | 🟢 `pinned` | 🟡 **build on it, but as GPL-2.0 not LGPL-3.0** — `p118` measured the root `LICENSE` as GPL-2.0 where this page published LGPL-3.0. LGPL permits linking without the copyleft reaching your code; GPL-2.0 does not, so a derivative ships under GPL-2.0. |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) (BR) | 🟡 small | 🟢 `checked` | 🟢 `pinned` | 🟡 **build on it, but as GPL-2.0 not LGPL-3.0**<!--corrected--> — `p118` measured the root `LICENSE` as GPL-2.0 where this page published LGPL-3.0. LGPL permits linking without the copyleft reaching your code; GPL-2.0 does not, so a derivative ships under GPL-2.0. |
 | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) (US) | 🟡 pair | 🔴 `fossil-ci` | 🟢 `vendored` | 🟡 **fork it, add a pipeline** |
 | [`ed-fi-alliance-oss/Ed-Fi-ODS`](https://github.com/ed-fi-alliance-oss/Ed-Fi-ODS) (US) | 🟡 small | 🟢 `checked` | 🔴 **`floating`** | 🟡 **fork it, pin it first** |
 | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) (FR) | 🔴 1 | 🔴 `bare` | 🔴 **`floating`** | 🔴 **rewrite, or do not start here** |

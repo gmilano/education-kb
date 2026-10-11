@@ -6,6 +6,69 @@ updated: 2026-10-11
 
 # Education — market intelligence
 
+**Pass 125, 2026-10-11.** ⏱️ **Twelfth pass of this date** (census window **11:0x → 11:1x UTC**).
+
+🟢 **Instrument: `compose/code/p125-retraction-cue/` — `ACTION AF`, `AG`, `AH` discharged and not refuted; 🔴 **`ACTION AI` REFUTED on its own clause**. `test_p125.sh` **51 passed / 0 failed**, fully offline, over 25 fixtures.**
+
+## 🔴 🆕 `P125-S` — the research sweep returned ZERO new items in all four regions for a second consecutive pass
+
+Every mandated query was run globally and once per region. 🔴 **Not one token returned is new to
+this KB**, on either the supply or the demand side — the second pass for which that is
+simultaneously true in all four regions, and the eighth consecutive weakening of `Gap 402`.
+
+| region | what the channel returned | held? |
+|---|---|---|
+| **North America** | `H.R. 8747` K-12 AI Literacy and Readiness Act (advanced 2026-07-21) · 134 bills across 31 states · CA `AB 1159` · ID `SB 1227` · `STUDENTS FIRST Act of 2026` (Day of AI) · NA share 36 %, **$3.68 B** 2026 → $32 B 2030 @ 31.1 % · NYC K-8 moratorium · Gemini for Education > 1 000 institutions | 🔴 **all held** |
+| **EMEA** | EU AI Act Art. 50 · Digital Omnibus → `2027-12-02` stand-alone / `2028-08-02` embedded · EU market **$2.64 B** 2026 · UK **£4 M** lesson-planning fund · 10 % of institutions with formal guidelines · OECD *Digital Education Outlook 2026* · UAE National AI Strategy 2031 · SDAIA | 🔴 **all held** |
+| **APAC** | Vietnam's AI law in force `2026-03-01`, education named high-risk · Korea's AI Basic Act in force `2026-01-22` with a one-year penalty grace period · Singapore and Japan voluntary · China's binding algorithm rules | 🔴 **all held** |
+| **LATAM** | Digital Education Council LATAM Survey 2026 — **92 % of students / 79 % of faculty**, 29 institutions · `ILIA` 2025 third edition (published 2026-03) · Brazil's AI bill, Chile's framework, Colombia's `CONPES`, Mexico's sectoral rules | 🔴 **all held** |
+
+🟢 **The honest reading is unchanged from p124 and now has a second data point: at 125 passes this
+KB has outrun its discovery channel, and a sweep that keeps returning zero against a corpus that
+keeps verifying is a CONTROL, not a failure.** 🔵 **The EMEA channel re-served the superseded
+Annex III date for a sixth time; this KB's `Regulation (EU) 2026/1744` → `2027-12-02` correction
+holds.**
+
+🔴 **One open item could not be closed, and the reason is a CHANNEL REFUSAL rather than an absent
+source.** `agents/trending.md` records the Digital Education Council LATAM survey's faculty
+denominator as unreconciled: this KB holds both **7 319 faculty** (pass 33) and **30 000+ total
+responses** (later passes) across 29 institutions, which are compatible as a subset and a total
+but have never been read first-hand. 🔴 **`www.digitaleducationcouncil.com` is unreachable from
+this environment: `ENOTFOUND` via the fetch tool and `CONNECT tunnel failed, response 403` at the
+agent proxy.** Recorded as a refusal with its exact status, not as a gap in the literature.
+
+## 🔴 🆕 `P125-H` — the assertion that a repair must be corpus-wide was itself run over half the corpus
+
+p124's `ACTION AC` exists to enforce one rule: *a repair must be a SEARCH, not an edit* — for
+every repaired `(address, superseded token)`, no page may carry that token on a line naming that
+address outside a marked span. p124 discharged it at **27 violations over 15 addresses** and
+reported that all 27 were read by hand and **none** was a live false claim.
+
+🔴 **Re-derived independently from p124's own committed code and pages, the assertion returns 61
+violations over 23 addresses — 2.3× p124's figure.** The difference is not the recogniser and not
+the token vocabulary; both were reproduced exactly. It is the **domain**: run over the five pages
+p124 had just marked, the assertion returns **23 violations over 15 addresses** — p124's address
+count exactly, and its violation count to within four.
+
+| domain | violations | addresses |
+|---|---|---|
+| `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`, `intel/market.md`, `compose/patterns.md` | **23** | **15** — p124 published 27 / 15 |
+| 🔴 **all ten live pages** | 🔴 **61** | 🔴 **23** |
+
+🔴 **The five pages it did not reach are `agents/trending.md`, `repos/trending.md`,
+`intel/trends.md`, `intel/open-gaps.md` and `README.md` — and the trending pages are where the
+largest number of stale tokens live, because they are append-only and a repair is never allowed to
+rewrite them.** 🟢 **So the finding is not that p124 was careless; it is that the one instrument
+built to prove a repair was corpus-wide had a domain narrower than the corpus, and nothing in the
+instrument could say so.** This is p122's `P122-H`, p123's `P123-H` and p124's `P124-H` one level
+up: p122 found a census less precise than the page, p123 a repair that was an edit, p124 a token
+read without its scope — and p125 finds **an assertion run without its domain**.
+
+🟢 **Every instrument in this lineage now takes its page list from one place and asserts its own
+cardinality.** `test_p125.sh` checks the baseline is 61 over ten pages before it scores anything.
+
+🔵 **`compose/code/p125-retraction-cue/false_permissive.sh`, `scope_gate.py`, `bullet_bindings.py` and `mark_forms.py` carry the method; `out/ai-verdict.tsv` and `out/ac-{baseline,after}.triples` carry the evidence.**
+
 **Pass 124, 2026-10-11.** ⏱️ **Eleventh pass of this date** (window **10:0x → 11:3x UTC**).
 
 🟢 **Instrument: `compose/code/p124-correction-form-marker/` — `ACTION AA, AB, AC, AD, AE` all
@@ -1675,9 +1738,9 @@ KB: write down what you refused to use, and why.**
 
 | repo | default branch | licence file | grant | ★ |
 |---|---|---|---|---|
-| [`frappe/frappe`](https://github.com/frappe/frappe) | `develop` | `LICENSE` | 🟢 **MIT** ⚠️ **KB said GPL-3.0** | 10 913 |
+| [`frappe/frappe`](https://github.com/frappe/frappe) | `develop` | `LICENSE` | 🟢 **MIT** ⚠️ **KB said GPL-3.0**<!--corrected--> | 10 913 |
 | [`frappe/erpnext`](https://github.com/frappe/erpnext) | `develop` | `license.txt` | 🔴 GPL-3.0 | — |
-| [`frappe/lms`](https://github.com/frappe/lms) | `develop` | `license.txt` | 🔴 **AGPL-3.0** ⚠️ **KB said GPL** | — |
+| [`frappe/lms`](https://github.com/frappe/lms) | `develop` | `license.txt` | 🔴 **AGPL-3.0** ⚠️ **KB said GPL**<!--corrected--> | — |
 | [`frappe/education`](https://github.com/frappe/education) | `develop` | `license.txt` | 🔵 **`GRANT-BY-REFERENCE`** — the one line `License: GNU GPL V3`, no body | — |
 
 🟢 **The framework is permissive and the applications are copyleft.** The KB had inherited
@@ -3752,7 +3815,7 @@ them change what a client may legally ship.**
 | [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🟢 Apache-2.0<!--corrected-->| 🔴 **AGPL-3.0** | 🔴 the open-response SCORING code is network copyleft |
 | [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | 🔴 AGPL-3.0, GPL<!--corrected-->| 🔴 **AGPL-3.0 (CE) + MIT + proprietary `ee/`** | 🔴 a fork that keeps `apps/prairielearn/src/ee/` is not an AGPL fork |
 | [`OtterDen-Lab/Autograder`](https://github.com/OtterDen-Lab/Autograder) | 🟢 MIT<!--corrected-->| 🔴 **GPL-3.0** | 🔴 distribution copyleft |
-| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🟢 BSD-3 | 🟢 **MIT** | 🟢 permissive either way. 🟡 **The API returned no record for this address this pass** — 7 of 8 queried came back — so its existence is attested only by `raw.githubusercontent.com` |
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🟢 BSD-3<!--corrected--> | 🟢 **MIT** | 🟢 permissive either way. 🟡 **The API returned no record for this address this pass** — 7 of 8 queried came back — so its existence is attested only by `raw.githubusercontent.com` |
 | [`lukeslp/awesome-accessibility`](https://github.com/lukeslp/awesome-accessibility) | 🟢 MIT<!--corrected-->| 🟢 **CC0-1.0** | 🟢 public-domain dedication; no code |
 | [`microsoft/autogen`](https://github.com/microsoft/autogen) | 🟢 MIT<!--corrected-->| 🟡 **MIT (`LICENSE-CODE`) + CC-BY-4.0 (`LICENSE`)** | 🟢 the KB's MIT is right for the CODE; the docs are CC-BY and attribution is owed when they are reused |
 
@@ -3787,9 +3850,9 @@ provider-binding evidence such a register consumes (`P115-GATE` in `compose/patt
 
 🔴 **A caution that is new this pass and specific to this region: of the nine rows whose
 published licence `P117-C` found WRONG, the two most dangerous US-origin ones are
-[`OtterDen-Lab/Autograder`](https://github.com/OtterDen-Lab/Autograder) (published MIT, actually
+[`OtterDen-Lab/Autograder`](https://github.com/OtterDen-Lab/Autograder) (published MIT<!--corrected-->, actually
 **GPL-3.0**) and [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor)
-(published BSD-3, actually MIT). A state approved-tool register that inherits this KB's licence
+(published BSD-3<!--corrected-->, actually MIT). A state approved-tool register that inherits this KB's licence
 column would have published the first one wrong.**
 
 🟢 **Supply, re-measured: the permissive assessment layer is overwhelmingly North American —
@@ -5925,7 +5988,7 @@ permissive, and the one LATAM row that was wrong was wrong by badge.**
 |---|---|---|---|
 | [`SidneyBissoli/educabR`](https://github.com/SidneyBissoli/educabR) | 🇧🇷 BR | 🟢 MIT | 🟢 **MIT confirmed** — CRAN stub resolved via `LICENSE.md` + `DESCRIPTION` (`MIT + file LICENSE`) |
 | [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | 🇧🇷 BR | split grant | 🟢 **`LICENSE-CODIGO.md` = MIT · `LICENSE-DADOS.md` = CC BY 4.0**, reproduced independently |
-| [`xGabrielCv/Auto-Matricula-SIGAA-UnB`](https://github.com/xGabrielCv/Auto-Matricula-SIGAA-UnB) | 🇧🇷 BR | 🔴 **🟢 MIT** | 🔴 **NO GRANT** — the README badge reads **`License: Open Source`**, which is not a licence, and there is no licence file |
+| [`xGabrielCv/Auto-Matricula-SIGAA-UnB`](https://github.com/xGabrielCv/Auto-Matricula-SIGAA-UnB) | 🇧🇷 BR | 🔴 **🟢 MIT**<!--corrected--> | 🔴 **NO GRANT** — the README badge reads **`License: Open Source`**, which is not a licence, and there is no licence file |
 | [`cezarc/EPESI`](https://github.com/cezarc/EPESI) | 🇧🇷 mirror | 🔴 already `NONE` | 🔴 README prose *"available for free under the MIT license"*, no file, last commit **2013** |
 
 🟢 **`educabR` is the useful find and it is specifically a LATAM asset.** MIT, on CRAN, fresh, and

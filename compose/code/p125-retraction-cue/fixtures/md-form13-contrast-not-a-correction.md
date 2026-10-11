@@ -1,0 +1,1 @@
+| advising workflow | [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 Elastic-2.0 (not OSS) | 🔴 **do NOT build a hosted offering on it** — Elastic-2.0 forbids providing the software as a managed service. Neither restriction exists under AGPL-3, so the duty this cell named was the wrong duty. |

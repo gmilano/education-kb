@@ -6,6 +6,183 @@ updated: 2026-10-11
 
 # Education — foundational repos
 
+**Pass 125, 2026-10-11.** ⏱️ **Twelfth pass of this date** (census window **11:0x → 11:1x UTC**).
+
+🟢 **Instrument: `compose/code/p125-retraction-cue/` — `ACTION AF`, `AG`, `AH` discharged and not refuted; 🔴 **`ACTION AI` REFUTED on its own clause**. `test_p125.sh` **51 passed / 0 failed**, fully offline, over 25 fixtures.**
+
+## 🔴 🆕 `P125-A` — three live false claims, and one of them is on a page p124 read by hand
+
+p124 found **zero** live false claims among its 27. Over the full ten-page domain there are
+**three**, each verified against the repository's own bytes on its real default branch.
+
+| # | where | the page said | the file says | how it was missed |
+|---|---|---|---|---|
+| 1 | `agents/trending.md` | [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) **453★** 🟢 `MIT` | 🟢 **`Apache-2.0`** — `main/LICENSE`, **11 358 B** | p124 repaired this address on `agents/top.md` **and recorded the repair on both of that page's tables**; the trending row was outside the assertion's domain |
+| 2 | `compose/patterns.md` | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) + [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) 🟢 **`MIT` both** | 🟡 `pyBKT` **MIT**, `catsim` **`BSD-3-Clause`** — `dev/LICENSE`, **1 514 B** | 🔴 **inside p124's domain and read by hand.** The word *"both"* carries the error, and twelve other rows on these pages already say `BSD-3` |
+| 3 | `verticals/solutions.md` | the licence-tier table counted [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) under 🔴 **"not open source / unknown"** as *"(no file)"* | 🔴 **`GPL-3.0`** — declared in the WordPress plugin header of `develop/readme.txt`: *"License: GPLv3"*, *"License URI: gnu.org/licenses/gpl-3.0.html"* | the row is right that there is no `LICENSE` **file**, and wrong about the tier. 🟢 **This KB's own `README.md` already records it as GPL-3.0** |
+
+🔴 **Defect 2 is the one worth the pass.** A hand-read of a row that says *"MIT both"* about two
+repositories confirms the token and not the quantifier. A single cell naming two addresses is the
+smallest unit at which this shelf can be wrong about exactly one of them, and `ACTION AJ` makes
+that the next thing measured.
+
+🔵 **Defect 3 is the direction this KB's own `intel/trends.md` trend 1 names as the expensive
+one**: an over-restrictive cell creates no legal exposure and silently deletes a platform from a
+shortlist. **24 % of Mexico's LMS-carrying sites run LearnPress**, and the tier table had it in
+the bucket a studio never reads twice. Repaired: copyleft **8 → 9 of 20**, not-open-source
+**2 → 1**.
+
+## 🟢 `ACTION AF` — one retraction CUE, not thirteen regexes
+
+p124's `ACTION AC` enumerated **nine** surface forms of this KB's correction apparatus and reached
+four. p125 began by writing one pattern per unreached form and stopped at **thirteen**:
+
+| # | form | status |
+|---|---|---|
+| 1 | `⚠️ **was X**` bold | 🟢 p123 |
+| 2 | audit-table OLD column | 🟢 p124 |
+| 3 | prose `was X` + publication reference | 🟢 p124 |
+| 9 | NEW column named by its SOURCE | 🟢 p124 |
+| 4 | `⚠️ *was X*` **italic** | 🟢 **p125** |
+| 5 | `⚠️ **KB said X**` | 🟢 **p125** |
+| 6 | reversed `(New, published Old)` | 🟢 **p125** |
+| 7 | `as X not Y` | 🟢 **p125** |
+| 8 | OLD column whose NEW cell holds **no token** | 🟢 **p125** |
+| 10 | 🔴 **`⚠️ was X` with NO emphasis at all** — **19 of the 61 violations**, the single largest class | 🟢 **p125** |
+| 11 | prose naming a PRIOR PASS's reading (*"`p1040` read Elastic-2.0 …"*, *"an older row on this shelf said AGPL-3 and was superseded"*) | 🟢 **p125** |
+| 12 | a `P###-x` finding SECTION whose heading announces the correction | 🟢 **p125** |
+| 13 | a licence named in a **CONTRAST clause** (*"Neither restriction exists under AGPL-3"*) | 🟢 **p125 — and it needs no marker at all** |
+
+🟢 **Enumeration is losing, and FORM 13 is why.** Every pass that writes a correction invents a
+spelling, and the sweep that chases it ships one pass later — but a licence token inside a
+comparison clause was **never a claim about that repository**, so marking it would record a
+correction that never happened. The model therefore changes from a form list to the same two-part
+rule the rest of this lineage converged on: a **retraction CUE** (a verb or sigil announcing a
+superseded value) and a **SCOPE GATE** (`ACTION AG`) that tells a retraction from a contrast, a
+quotation or a live claim. Forms 4, 5 and 10 collapse into one pattern with the asterisks optional.
+
+**81 rows marked** across 9 pages; rows carrying the marker **105 → 190**. Applying it twice marks
+nothing (asserted). 🟢 **40 of the 61 baseline violations resolved — the clause required 20.**
+
+🔴 **And three defects in `ACTION AF`'s own first application, each found by re-measuring rather
+than by inspection:**
+
+| defect | what it did | the rule it became |
+|---|---|---|
+| a correction table's column mapping **outlived its table** | a header row whose columns `classify_header` cannot read left the PREVIOUS table's mapping in force, and the foundational shelf's **live** licence column was marked superseded on [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | a header row — the one directly above a `\|---\|` separator — always clears the mapping, read or not |
+| the marker landed **inside** the emphasis | `⚠️ *was GPL<!--corrected-->*` splits the span the marker is meant to close, so the row read back as unmarked and the assertion re-raised it — 3 rows, all already repaired | the marker moves past any closing `*`/`**` the cue opened |
+| `\| \`GPL\` \| 🟢 **GPL-3.0** \|` read as a correction | 20 Moodle-plugin rows marked as repairs that never happened | a bare family token made precise is a **RESOLUTION**, not a correction — `GPL → GPL-3.0` exactly as p124's `ACTION AD` resolved 41 bare `CC` grants without calling one a correction |
+
+🔵 **A fourth was prose, not code**: *"(`⚠️ **was 🟢 MIT**` inside the cell)"* and
+*"read *\"⚠️ **was LGPL-3.0**\"*"* are discussion OF the marker. p124 hit the same wall from the
+other side — its headline of 94 marked rows differed from a raw `grep`'s 102 by exactly these
+lines. The cue's own position now decides: inside backticks or a quotation it is apparatus. 🔵 **The
+test keeps the boundary case separate because it is a judgement rather than a rule**: *"The stale
+cell's value was **Apache-2.0**"* is apparatus prose *and* a retraction in its own voice, and it
+is marked.
+
+## 🟢 `ACTION AG` — the standing check, and three further instances of its own class
+
+The clause: *refuted if the check does not independently reproduce all four known instances.* It
+reproduces all four, each driven through the **naive pattern that actually produced the defect**,
+because a gate that can only judge its own matches cannot be shown to catch anything:
+
+| instance | pass | naive read | gate's label |
+|---|---|---|---|
+| GPL-2.0's preamble names the Lesser GPL — *"(Some other Free Software Foundation software is covered by the GNU Lesser General Public License instead.)"* | p122 | `LGPL` | 🟢 `PREAMBLE` |
+| EPL-2.0's secondary-licence clause names GPL-2.0 | p123 | `GPL-2.0` | 🟢 `SECONDARY` |
+| CC 4.0's own boilerplate names CC0 | p124 | `CC0-1.0` | 🟢 `DOCUMENT-TEXT` |
+| `CC BY` matches **inside** `CC BY-SA 4.0` | p124 | a second licence → a split grant | 🟢 `SUBSTRING` |
+
+🔴 **p124's description of its own third instance is wrong, and a gate built to that description
+finds nothing.** p124 called it *"the CC 4.0 legalcode **recommends** CC0 in its own
+boilerplate"*. The sentence in the file reads *"The text of the Creative Commons public licenses
+is dedicated to the public domain under the CC0 Public Domain Dedication."* That is a real grant
+with a real verb — and its **subject is the licence document, not the licensed material**. The
+label is `DOCUMENT-TEXT`, not `RECOMMENDATION`, and the distinction is the whole content of the
+check: the question is never *"is there a verb?"* but *"what does the verb govern?"*
+
+🔴 **Three further instances, none of them hypothesised, all found by the gate's own controls:**
+
+| # | instance | consequence before the gate |
+|---|---|---|
+| 5 | 🔴 **`MIT` matches inside `LIMITED`, and `ISC` inside `DISCLAIMED`** | **every BSD-3 and Apache-2.0 warranty disclaimer on earth** yields a spurious `MIT` grant. The `SUBSTRING` check could not see it — it compares a span against other LICENCE tokens, and `LIMITED` is not one. 🔴 **This was p125's own first build: the fifth instance of the class, committed inside the module written to prevent it** |
+| 6 | AGPL-3's **section 13** is a compatibility grant over a work being *combined* with this one — *"permission to link or combine any covered work with a work licensed under version 3 of the GNU General Public License"* | one AGPL-3 file yielded **five** spurious `GPL` grants, enough to make every AGPL-3.0 repository in the corpus read as dual-licensed |
+| 7 | AGPL-3's preamble spends a paragraph on the **historical Affero GPL** to say this is *not* it — *"This is a different license, not a version of the Affero GPL"* | two more spurious `GPL` grants from the same file |
+| 8 | `ankitects/anki`: *"without the need to license your work under an **AGPL3-compatible license**"* | a compatibility **class** read as a grant (found by `ACTION AH`, below) |
+
+🟢 **The controls assert an EXACT grant set, not non-emptiness** — p124's `ACTION AE` established
+that a model scored only where it cannot fail scores perfectly and means nothing, and a control
+that only asks *"did it find anything?"* is that same mistake in a test.
+
+## 🟢 `ACTION AH` — `ankitects/anki` is six licences, not two
+
+p124 published [`ankitects/anki`](https://github.com/ankitects/anki) as `AGPL-3.0 + CC-BY-SA` and
+recorded the set as **partial**: the per-file exceptions sit in a bulleted list no single binding
+window spans. The clause: *refuted if fewer than 3 further tokens are recovered.* **Four are.**
+
+🟢 **A list distributes one introducing sentence over many items, so a binding is assembled from
+three levels rather than matched in one window** — the grant verb from *"The following included
+source code items use a license other than AGPL3:"*, the directory from *"In the qt folder:"*, and
+the artifact and licence from the bullet itself.
+
+| scope | token | read from |
+|---|---|---|
+| *(whole repository)* | `AGPL-3.0` | *"Anki is licensed under the GNU Affero General Public License, version 3 or later"* |
+| contributed portions | 🆕 **`BSD-3-Clause`** | *"with portions contributed by Anki users licensed under the BSD-3 license (see CONTRIBUTORS)"* |
+| `pylib/statsbg.py` | 🆕 **`CC-BY-4.0`** | ` * statsbg.py: CC BY 4.0.` |
+| `qt/mpv.py`, `qt/winpaths.py`, `qt/jQuery and jQuery-UI`, `qt/plot.js` | 🆕 **`MIT`** | four bullets |
+| `qt/MathJax` | 🆕 **`Apache-2.0`** | ` * MathJax: Apache 2.` |
+| `qt/protobuf.js` | `BSD-3-Clause` | ` * protobuf.js: BSD 3 clause` — **no trailing period** |
+| `docs-site/` | `CC-BY-SA-4.0` | the file's last paragraph |
+
+🔵 **Three things the list names that are NOT grants over this tree**, and the gate discards each:
+*"Binary distributions also include copies of Qt translation files **(LGPL)**"* → `OUT-OF-TREE`;
+*"an **AGPL3-compatible** license"* → `SECONDARY`; and *"Anki's translations are **a mix of** BSD
+and public domain"* → no single grant for the item, so no binding. 🟢 **`jQuery-UI` is not split at
+its own hyphen** — the item separator is a colon or a spaced dash, which cost one fixture to learn.
+
+## 🔴 `ACTION AI` — REFUTED, and the refutation is the useful result
+
+The clause: *refuted if [`Learnosity/learnosity-qti`](https://github.com/Learnosity/learnosity-qti)
+is the only such address in the corpus.* **It is.** All **86** non-standard-default addresses were
+probed on their real default branch and on `main` and `master` as a guessing probe would request
+them — **258 probes, 79 real-branch grants**, independently reproducing p124's 79 to the row.
+
+| verdict | n | what it means for a studio |
+|---|---|---|
+| `AGREE` | **77** | `raw.githubusercontent.com` keeps serving a `main`/`master` that still exists, so guessing usually returns the same bytes |
+| `BOTH-ABSENT` | 7 | no grant on any of the three branches |
+| 🔴 **`FALSE-PERMISSIVE`** | 🔴 **1** | [`Learnosity/learnosity-qti`](https://github.com/Learnosity/learnosity-qti): `develop` is **`GPL-2.0`** (18 264 B), `master` is 🟢 **`MIT`** (1 067 B) |
+| `GUESS-MISSES-GRANT` | 1 | [`pressbooks/pressbooks`](https://github.com/pressbooks/pressbooks): `dev` is `GPL-3.0`, `main` and `master` both 404 |
+| `GUESS-INVENTS-GRANT` | 🟢 **0** | no address where a guess asserts a licence the real default does not grant |
+
+🟢 **p125 separates p124's two failures by DIRECTION, and only one of them costs money.**
+`pressbooks` returns nothing where there is something — that costs a shortlist. `learnosity-qti`
+returns **permissive** for a **copyleft** repository — that costs a licence breach. So
+`MAIN-ONLY`'s false-permissive rate is **1 of 79 = 1.3 %** where it can err and **1.2 %** across
+the 86, not p124's 2.5 %, which counted both directions as one failure mode.
+
+🔵 **The hypothesis behind the clause was that p124's gold set hid the worst case by requiring a
+grant on the real default — and that is refuted too.** The 7 excluded addresses were probed on
+14 paths × 3 branches: not one has a `main`/`master` grant over a grant-less default.
+
+🟢 **But two of the 7 are not grant-less at all, and that is a real finding about the
+instrument rather than about the shelf.**
+
+| address | the 21-path list requests | the grant actually is |
+|---|---|---|
+| [`veraPDF/veraPDF-library`](https://github.com/veraPDF/veraPDF-library) | no `LICENSE.GPL`, no `LICENSE.MPL` | 🟡 **dual `GPL-3.0` (35 142 B) + `MPL-2.0` (15 921 B)** on default branch `integration` |
+| [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | no `readme.txt` | 🔴 **`GPL-3.0`**, declared in the WordPress plugin header |
+
+🔴 **So "no grant file at 22 probed paths" is a statement about the path list, and p123's
+`ACTION Y` built a 'genuinely absent' census on it.** 🟢 **Both repositories' real licences were
+already correctly recorded on these pages** — the pages are more precise than the census auditing
+them, which is `P122-H` for the fourth consecutive pass. The genuinely grant-less set is **5**,
+not 7, and `P125-A` defect 3 is the same blindness reaching a live tier table.
+
+🔵 **`compose/code/p125-retraction-cue/false_permissive.sh`, `scope_gate.py`, `bullet_bindings.py` and `mark_forms.py` carry the method; `out/ai-verdict.tsv` and `out/ac-{baseline,after}.triples` carry the evidence.**
+
 **Pass 124, 2026-10-11.** ⏱️ **Eleventh pass of this date** (census window **10:0x → 11:3x UTC**).
 
 🟢 **Instrument: `compose/code/p124-correction-form-marker/` — `ACTION AA`, `AB`, `AC`, `AD`, `AE`
@@ -262,8 +439,8 @@ prior one corrected the cell.**
 | address | ★ | 🟢 licence, measured | region | why it is foundational |
 |---|---|---|---|---|
 | [`moodle/moodle`](https://github.com/moodle/moodle) | 6.2k | 🔴 GPL-3.0 — `COPYING.txt` | Global (AU origin) | the largest-install LMS on earth; integrate, do not absorb |
-| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 7.5k | 🔴 **AGPL-3.0** ⚠️ *was GPL* | North America | the MOOC platform of record; AGPL reaches hosted services |
-| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 5.8k | 🔴 **AGPL-3.0** ⚠️ *was GPL* | North America | the HiEd LMS with the largest US market share |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 7.5k | 🔴 **AGPL-3.0** ⚠️ *was GPL*<!--corrected--> | North America | the MOOC platform of record; AGPL reaches hosted services |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 5.8k | 🔴 **AGPL-3.0** ⚠️ *was GPL*<!--corrected--> | North America | the HiEd LMS with the largest US market share |
 | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 1.1k | 🟢 **MIT** | Global (offline-first) | the only permissive LMS at scale — the low-bandwidth answer |
 | [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | 8.1k | 🟢 BSD-3 | Global | multi-user notebook serving; the CS-teaching substrate |
 | [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 1.3k | 🟢 BSD-3 | North America | notebook autograding; pairs with JupyterHub |
@@ -382,7 +559,7 @@ default-branch measurement is what made this row readable at all.
 
 ## 🔴 🆕 `P119-A` — the foundations shelf published a €100 000 licence as 🟢 Apache-2.0
 
-🔴 **[`leemonade/leemons`](https://github.com/leemonade/leemons) was row-level 🟢 Apache-2.0 on
+🔴 **[`leemonade/leemons`](https://github.com/leemonade/leemons) was row-level 🟢 Apache-2.0<!--corrected--> on
 this page. Its root `LICENSE.md` (10 830 B) is a "Fair Code License" v1.0 built on the
 Sustainable Use License, and contains ZERO occurrences of the word "apache".** What it actually
 says, read from the file:

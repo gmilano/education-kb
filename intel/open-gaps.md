@@ -4,6 +4,192 @@ region: Global
 updated: 2026-10-11
 ---
 
+**Pass 125, 2026-10-11.** ⏱️ **Twelfth pass of this date** (census window **11:0x → 11:1x UTC**).
+
+🟢 **Instrument: `compose/code/p125-retraction-cue/` — `ACTION AF`, `AG`, `AH` discharged and not refuted; 🔴 **`ACTION AI` REFUTED on its own clause**. `test_p125.sh` **51 passed / 0 failed**, fully offline, over 25 fixtures.**
+
+## 🔴 🆕 `P125-H` — the assertion that a repair must be corpus-wide was itself run over half the corpus
+
+p124's `ACTION AC` exists to enforce one rule: *a repair must be a SEARCH, not an edit* — for
+every repaired `(address, superseded token)`, no page may carry that token on a line naming that
+address outside a marked span. p124 discharged it at **27 violations over 15 addresses** and
+reported that all 27 were read by hand and **none** was a live false claim.
+
+🔴 **Re-derived independently from p124's own committed code and pages, the assertion returns 61
+violations over 23 addresses — 2.3× p124's figure.** The difference is not the recogniser and not
+the token vocabulary; both were reproduced exactly. It is the **domain**: run over the five pages
+p124 had just marked, the assertion returns **23 violations over 15 addresses** — p124's address
+count exactly, and its violation count to within four.
+
+| domain | violations | addresses |
+|---|---|---|
+| `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`, `intel/market.md`, `compose/patterns.md` | **23** | **15** — p124 published 27 / 15 |
+| 🔴 **all ten live pages** | 🔴 **61** | 🔴 **23** |
+
+🔴 **The five pages it did not reach are `agents/trending.md`, `repos/trending.md`,
+`intel/trends.md`, `intel/open-gaps.md` and `README.md` — and the trending pages are where the
+largest number of stale tokens live, because they are append-only and a repair is never allowed to
+rewrite them.** 🟢 **So the finding is not that p124 was careless; it is that the one instrument
+built to prove a repair was corpus-wide had a domain narrower than the corpus, and nothing in the
+instrument could say so.** This is p122's `P122-H`, p123's `P123-H` and p124's `P124-H` one level
+up: p122 found a census less precise than the page, p123 a repair that was an edit, p124 a token
+read without its scope — and p125 finds **an assertion run without its domain**.
+
+🟢 **Every instrument in this lineage now takes its page list from one place and asserts its own
+cardinality.** `test_p125.sh` checks the baseline is 61 over ten pages before it scores anything.
+
+## 🟢 `ACTION AF` — one retraction CUE, not thirteen regexes
+
+p124's `ACTION AC` enumerated **nine** surface forms of this KB's correction apparatus and reached
+four. p125 began by writing one pattern per unreached form and stopped at **thirteen**:
+
+| # | form | status |
+|---|---|---|
+| 1 | `⚠️ **was X**` bold | 🟢 p123 |
+| 2 | audit-table OLD column | 🟢 p124 |
+| 3 | prose `was X` + publication reference | 🟢 p124 |
+| 9 | NEW column named by its SOURCE | 🟢 p124 |
+| 4 | `⚠️ *was X*` **italic** | 🟢 **p125** |
+| 5 | `⚠️ **KB said X**` | 🟢 **p125** |
+| 6 | reversed `(New, published Old)` | 🟢 **p125** |
+| 7 | `as X not Y` | 🟢 **p125** |
+| 8 | OLD column whose NEW cell holds **no token** | 🟢 **p125** |
+| 10 | 🔴 **`⚠️ was X` with NO emphasis at all** — **19 of the 61 violations**, the single largest class | 🟢 **p125** |
+| 11 | prose naming a PRIOR PASS's reading (*"`p1040` read Elastic-2.0 …"*, *"an older row on this shelf said AGPL-3 and was superseded"*) | 🟢 **p125** |
+| 12 | a `P###-x` finding SECTION whose heading announces the correction | 🟢 **p125** |
+| 13 | a licence named in a **CONTRAST clause** (*"Neither restriction exists under AGPL-3"*) | 🟢 **p125 — and it needs no marker at all** |
+
+🟢 **Enumeration is losing, and FORM 13 is why.** Every pass that writes a correction invents a
+spelling, and the sweep that chases it ships one pass later — but a licence token inside a
+comparison clause was **never a claim about that repository**, so marking it would record a
+correction that never happened. The model therefore changes from a form list to the same two-part
+rule the rest of this lineage converged on: a **retraction CUE** (a verb or sigil announcing a
+superseded value) and a **SCOPE GATE** (`ACTION AG`) that tells a retraction from a contrast, a
+quotation or a live claim. Forms 4, 5 and 10 collapse into one pattern with the asterisks optional.
+
+**81 rows marked** across 9 pages; rows carrying the marker **105 → 190**. Applying it twice marks
+nothing (asserted). 🟢 **40 of the 61 baseline violations resolved — the clause required 20.**
+
+🔴 **And three defects in `ACTION AF`'s own first application, each found by re-measuring rather
+than by inspection:**
+
+| defect | what it did | the rule it became |
+|---|---|---|
+| a correction table's column mapping **outlived its table** | a header row whose columns `classify_header` cannot read left the PREVIOUS table's mapping in force, and the foundational shelf's **live** licence column was marked superseded on [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | a header row — the one directly above a `\|---\|` separator — always clears the mapping, read or not |
+| the marker landed **inside** the emphasis | `⚠️ *was GPL<!--corrected-->*` splits the span the marker is meant to close, so the row read back as unmarked and the assertion re-raised it — 3 rows, all already repaired | the marker moves past any closing `*`/`**` the cue opened |
+| `\| \`GPL\` \| 🟢 **GPL-3.0** \|` read as a correction | 20 Moodle-plugin rows marked as repairs that never happened | a bare family token made precise is a **RESOLUTION**, not a correction — `GPL → GPL-3.0` exactly as p124's `ACTION AD` resolved 41 bare `CC` grants without calling one a correction |
+
+🔵 **A fourth was prose, not code**: *"(`⚠️ **was 🟢 MIT**` inside the cell)"* and
+*"read *\"⚠️ **was LGPL-3.0**\"*"* are discussion OF the marker. p124 hit the same wall from the
+other side — its headline of 94 marked rows differed from a raw `grep`'s 102 by exactly these
+lines. The cue's own position now decides: inside backticks or a quotation it is apparatus. 🔵 **The
+test keeps the boundary case separate because it is a judgement rather than a rule**: *"The stale
+cell's value was **Apache-2.0**"* is apparatus prose *and* a retraction in its own voice, and it
+is marked.
+
+## 🟢 `ACTION AG` — the standing check, and three further instances of its own class
+
+The clause: *refuted if the check does not independently reproduce all four known instances.* It
+reproduces all four, each driven through the **naive pattern that actually produced the defect**,
+because a gate that can only judge its own matches cannot be shown to catch anything:
+
+| instance | pass | naive read | gate's label |
+|---|---|---|---|
+| GPL-2.0's preamble names the Lesser GPL — *"(Some other Free Software Foundation software is covered by the GNU Lesser General Public License instead.)"* | p122 | `LGPL` | 🟢 `PREAMBLE` |
+| EPL-2.0's secondary-licence clause names GPL-2.0 | p123 | `GPL-2.0` | 🟢 `SECONDARY` |
+| CC 4.0's own boilerplate names CC0 | p124 | `CC0-1.0` | 🟢 `DOCUMENT-TEXT` |
+| `CC BY` matches **inside** `CC BY-SA 4.0` | p124 | a second licence → a split grant | 🟢 `SUBSTRING` |
+
+🔴 **p124's description of its own third instance is wrong, and a gate built to that description
+finds nothing.** p124 called it *"the CC 4.0 legalcode **recommends** CC0 in its own
+boilerplate"*. The sentence in the file reads *"The text of the Creative Commons public licenses
+is dedicated to the public domain under the CC0 Public Domain Dedication."* That is a real grant
+with a real verb — and its **subject is the licence document, not the licensed material**. The
+label is `DOCUMENT-TEXT`, not `RECOMMENDATION`, and the distinction is the whole content of the
+check: the question is never *"is there a verb?"* but *"what does the verb govern?"*
+
+🔴 **Three further instances, none of them hypothesised, all found by the gate's own controls:**
+
+| # | instance | consequence before the gate |
+|---|---|---|
+| 5 | 🔴 **`MIT` matches inside `LIMITED`, and `ISC` inside `DISCLAIMED`** | **every BSD-3 and Apache-2.0 warranty disclaimer on earth** yields a spurious `MIT` grant. The `SUBSTRING` check could not see it — it compares a span against other LICENCE tokens, and `LIMITED` is not one. 🔴 **This was p125's own first build: the fifth instance of the class, committed inside the module written to prevent it** |
+| 6 | AGPL-3's **section 13** is a compatibility grant over a work being *combined* with this one — *"permission to link or combine any covered work with a work licensed under version 3 of the GNU General Public License"* | one AGPL-3 file yielded **five** spurious `GPL` grants, enough to make every AGPL-3.0 repository in the corpus read as dual-licensed |
+| 7 | AGPL-3's preamble spends a paragraph on the **historical Affero GPL** to say this is *not* it — *"This is a different license, not a version of the Affero GPL"* | two more spurious `GPL` grants from the same file |
+| 8 | `ankitects/anki`: *"without the need to license your work under an **AGPL3-compatible license**"* | a compatibility **class** read as a grant (found by `ACTION AH`, below) |
+
+🟢 **The controls assert an EXACT grant set, not non-emptiness** — p124's `ACTION AE` established
+that a model scored only where it cannot fail scores perfectly and means nothing, and a control
+that only asks *"did it find anything?"* is that same mistake in a test.
+
+## 🟢 `ACTION AH` — `ankitects/anki` is six licences, not two
+
+p124 published [`ankitects/anki`](https://github.com/ankitects/anki) as `AGPL-3.0 + CC-BY-SA` and
+recorded the set as **partial**: the per-file exceptions sit in a bulleted list no single binding
+window spans. The clause: *refuted if fewer than 3 further tokens are recovered.* **Four are.**
+
+🟢 **A list distributes one introducing sentence over many items, so a binding is assembled from
+three levels rather than matched in one window** — the grant verb from *"The following included
+source code items use a license other than AGPL3:"*, the directory from *"In the qt folder:"*, and
+the artifact and licence from the bullet itself.
+
+| scope | token | read from |
+|---|---|---|
+| *(whole repository)* | `AGPL-3.0` | *"Anki is licensed under the GNU Affero General Public License, version 3 or later"* |
+| contributed portions | 🆕 **`BSD-3-Clause`** | *"with portions contributed by Anki users licensed under the BSD-3 license (see CONTRIBUTORS)"* |
+| `pylib/statsbg.py` | 🆕 **`CC-BY-4.0`** | ` * statsbg.py: CC BY 4.0.` |
+| `qt/mpv.py`, `qt/winpaths.py`, `qt/jQuery and jQuery-UI`, `qt/plot.js` | 🆕 **`MIT`** | four bullets |
+| `qt/MathJax` | 🆕 **`Apache-2.0`** | ` * MathJax: Apache 2.` |
+| `qt/protobuf.js` | `BSD-3-Clause` | ` * protobuf.js: BSD 3 clause` — **no trailing period** |
+| `docs-site/` | `CC-BY-SA-4.0` | the file's last paragraph |
+
+🔵 **Three things the list names that are NOT grants over this tree**, and the gate discards each:
+*"Binary distributions also include copies of Qt translation files **(LGPL)**"* → `OUT-OF-TREE`;
+*"an **AGPL3-compatible** license"* → `SECONDARY`; and *"Anki's translations are **a mix of** BSD
+and public domain"* → no single grant for the item, so no binding. 🟢 **`jQuery-UI` is not split at
+its own hyphen** — the item separator is a colon or a spaced dash, which cost one fixture to learn.
+
+## 🔴 `ACTION AI` — REFUTED, and the refutation is the useful result
+
+The clause: *refuted if [`Learnosity/learnosity-qti`](https://github.com/Learnosity/learnosity-qti)
+is the only such address in the corpus.* **It is.** All **86** non-standard-default addresses were
+probed on their real default branch and on `main` and `master` as a guessing probe would request
+them — **258 probes, 79 real-branch grants**, independently reproducing p124's 79 to the row.
+
+| verdict | n | what it means for a studio |
+|---|---|---|
+| `AGREE` | **77** | `raw.githubusercontent.com` keeps serving a `main`/`master` that still exists, so guessing usually returns the same bytes |
+| `BOTH-ABSENT` | 7 | no grant on any of the three branches |
+| 🔴 **`FALSE-PERMISSIVE`** | 🔴 **1** | [`Learnosity/learnosity-qti`](https://github.com/Learnosity/learnosity-qti): `develop` is **`GPL-2.0`** (18 264 B), `master` is 🟢 **`MIT`** (1 067 B) |
+| `GUESS-MISSES-GRANT` | 1 | [`pressbooks/pressbooks`](https://github.com/pressbooks/pressbooks): `dev` is `GPL-3.0`, `main` and `master` both 404 |
+| `GUESS-INVENTS-GRANT` | 🟢 **0** | no address where a guess asserts a licence the real default does not grant |
+
+🟢 **p125 separates p124's two failures by DIRECTION, and only one of them costs money.**
+`pressbooks` returns nothing where there is something — that costs a shortlist. `learnosity-qti`
+returns **permissive** for a **copyleft** repository — that costs a licence breach. So
+`MAIN-ONLY`'s false-permissive rate is **1 of 79 = 1.3 %** where it can err and **1.2 %** across
+the 86, not p124's 2.5 %, which counted both directions as one failure mode.
+
+🔵 **The hypothesis behind the clause was that p124's gold set hid the worst case by requiring a
+grant on the real default — and that is refuted too.** The 7 excluded addresses were probed on
+14 paths × 3 branches: not one has a `main`/`master` grant over a grant-less default.
+
+🟢 **But two of the 7 are not grant-less at all, and that is a real finding about the
+instrument rather than about the shelf.**
+
+| address | the 21-path list requests | the grant actually is |
+|---|---|---|
+| [`veraPDF/veraPDF-library`](https://github.com/veraPDF/veraPDF-library) | no `LICENSE.GPL`, no `LICENSE.MPL` | 🟡 **dual `GPL-3.0` (35 142 B) + `MPL-2.0` (15 921 B)** on default branch `integration` |
+| [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | no `readme.txt` | 🔴 **`GPL-3.0`**, declared in the WordPress plugin header |
+
+🔴 **So "no grant file at 22 probed paths" is a statement about the path list, and p123's
+`ACTION Y` built a 'genuinely absent' census on it.** 🟢 **Both repositories' real licences were
+already correctly recorded on these pages** — the pages are more precise than the census auditing
+them, which is `P122-H` for the fourth consecutive pass. The genuinely grant-less set is **5**,
+not 7, and `P125-A` defect 3 is the same blindness reaching a live tier table.
+
+🔵 **`compose/code/p125-retraction-cue/false_permissive.sh`, `scope_gate.py`, `bullet_bindings.py` and `mark_forms.py` carry the method; `out/ai-verdict.tsv` and `out/ac-{baseline,after}.triples` carry the evidence.**
+
+
 ## 🟢 Hundred-and-twenty-fourth pass, 2026-10-11 — **all five pre-registered actions DISCHARGED, none refuted**; 🟢 **`ACTION AB` IMPLEMENTED on 42 rows**; 🔴 **`P124-H` — three of five first builds failed the SAME way**; 🔴 **`Gap 402` weakens a SEVENTH pass, now ZERO in all four regions**; `P124-AA`–`P124-H`, `ACTION AF`–`AI` adopted
 
 🟢 **Instrument: `compose/code/p124-correction-form-marker/`. `test_p124.sh` — **50 passed / 0
@@ -545,8 +731,8 @@ restrictive than they are:
 
 | address | ★ | published | 🟢 measured | what it cost |
 |---|---|---|---|---|
-| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 979 | 🔴 AGPL-3.0, *"🔴 no"* | 🟢 **MIT** (split: `docs/` CC-BY-SA-4.0), 1 684 B | a 979★ LMS struck off the shortlist |
-| [`UniTime/unitime`](https://github.com/UniTime/unitime) | 350 | 🔴 GPL-3.0, *"🔴 no"* | 🟢 **Apache-2.0**, 11 357 B | the only timetabling platform in this KB, struck off |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 979 | 🔴 AGPL-3.0, *"🔴 no"*<!--corrected--> | 🟢 **MIT** (split: `docs/` CC-BY-SA-4.0), 1 684 B | a 979★ LMS struck off the shortlist |
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) | 350 | 🔴 GPL-3.0, *"🔴 no"*<!--corrected--> | 🟢 **Apache-2.0**, 11 357 B | the only timetabling platform in this KB, struck off |
 
 🟢 **Both repaired.** 🔴 **An over-restrictive cell generates no compliance incident, no scanner
 alert and no client complaint — so nothing was ever pointed at it.** It costs options rather than
@@ -556,16 +742,16 @@ money, which makes it invisible to every feedback loop this KB has.
 
 | page | address | published | 🟢 measured |
 |---|---|---|---|
-| `agents/top.md` | `artcc/freelingo` | 🟢 MIT | 🔴 **AGPL-3.0** (34 514 B) |
-| `agents/top.md` | `JuneYaooo/lineage-skill` | 🟢 MIT | 🟢 **Apache-2.0** (11 358 B) |
-| `repos/foundations.md` | `douglasrizzo/catsim` | 🟢 MIT | 🟢 **BSD-3-Clause** (1 514 B) |
-| `verticals/solutions.md` | `portabilis/i-educar` | 🔴 AGPL-3.0 | 🔴 **GPL-2.0** (18 092 B) |
-| `verticals/solutions.md` | `frappe/education` | 🟡 AGPL-3 | 🔴 **GPL-3.0** by reference (19 B) |
-| `verticals/solutions.md` | `frappe/education` | 🟢 MIT | 🔴 **GPL-3.0** by reference (19 B) |
-| `verticals/solutions.md` | `UniTime/unitime` | 🔴 GPL-3.0 | 🟢 **Apache-2.0** |
-| `verticals/solutions.md` | `pupilfirst/pupilfirst` | 🔴 AGPL-3.0 | 🟢 **MIT** (split) |
-| `verticals/solutions.md` | `xiaochong0302/course-tencent-cloud` | 🟢 MIT | 🔴 **GPL-2.0** (18 092 B) |
-| `intel/market.md` | `portabilis/i-educar` (**prose**) | AGPL-3.0 | 🔴 **GPL-2.0** |
+| `agents/top.md` | `artcc/freelingo` | 🟢 MIT<!--corrected--> | 🔴 **AGPL-3.0** (34 514 B) |
+| `agents/top.md` | `JuneYaooo/lineage-skill` | 🟢 MIT<!--corrected--> | 🟢 **Apache-2.0** (11 358 B) |
+| `repos/foundations.md` | `douglasrizzo/catsim` | 🟢 MIT<!--corrected--> | 🟢 **BSD-3-Clause** (1 514 B) |
+| `verticals/solutions.md` | `portabilis/i-educar` | 🔴 AGPL-3.0<!--corrected--> | 🔴 **GPL-2.0** (18 092 B) |
+| `verticals/solutions.md` | `frappe/education` | 🟡 AGPL-3<!--corrected--> | 🔴 **GPL-3.0** by reference (19 B) |
+| `verticals/solutions.md` | `frappe/education` | 🟢 MIT<!--corrected--> | 🔴 **GPL-3.0** by reference (19 B) |
+| `verticals/solutions.md` | `UniTime/unitime` | 🔴 GPL-3.0<!--corrected--> | 🟢 **Apache-2.0** |
+| `verticals/solutions.md` | `pupilfirst/pupilfirst` | 🔴 AGPL-3.0<!--corrected--> | 🟢 **MIT** (split) |
+| `verticals/solutions.md` | `xiaochong0302/course-tencent-cloud` | 🟢 MIT<!--corrected--> | 🔴 **GPL-2.0** (18 092 B) |
+| `intel/market.md` | `portabilis/i-educar` (**prose**) | AGPL-3.0<!--corrected--> | 🔴 **GPL-2.0** |
 
 🔴 **`P121-F`: `frappe/education` carried THREE different licences in three cells of ONE page** —
 GPL-3.0 (correct) in the top table, AGPL-3 in the dependency-reach table, MIT in the lock-reach

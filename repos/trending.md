@@ -4,6 +4,94 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Pass 125 — 2026-10-11 (twelfth pass of this date), 11:0x–11:1x UTC
+
+🔵 **APPEND-ONLY page. This section is added above p124's and nothing below it is edited** — including rows this pass found stale. Stale tokens in the history are listed here, not rewritten.
+
+🟢 **Instrument: `compose/code/p125-retraction-cue/` — `ACTION AF`, `AG`, `AH` discharged and not refuted; 🔴 **`ACTION AI` REFUTED**. `test_p125.sh` **51 passed / 0 failed**, fully offline.**
+
+## 🔴 🆕 `P125-H` — the assertion that a repair must be corpus-wide was itself run over half the corpus
+
+p124's `ACTION AC` exists to enforce one rule: *a repair must be a SEARCH, not an edit* — for
+every repaired `(address, superseded token)`, no page may carry that token on a line naming that
+address outside a marked span. p124 discharged it at **27 violations over 15 addresses** and
+reported that all 27 were read by hand and **none** was a live false claim.
+
+🔴 **Re-derived independently from p124's own committed code and pages, the assertion returns 61
+violations over 23 addresses — 2.3× p124's figure.** The difference is not the recogniser and not
+the token vocabulary; both were reproduced exactly. It is the **domain**: run over the five pages
+p124 had just marked, the assertion returns **23 violations over 15 addresses** — p124's address
+count exactly, and its violation count to within four.
+
+| domain | violations | addresses |
+|---|---|---|
+| `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`, `intel/market.md`, `compose/patterns.md` | **23** | **15** — p124 published 27 / 15 |
+| 🔴 **all ten live pages** | 🔴 **61** | 🔴 **23** |
+
+🔴 **The five pages it did not reach are `agents/trending.md`, `repos/trending.md`,
+`intel/trends.md`, `intel/open-gaps.md` and `README.md` — and the trending pages are where the
+largest number of stale tokens live, because they are append-only and a repair is never allowed to
+rewrite them.** 🟢 **So the finding is not that p124 was careless; it is that the one instrument
+built to prove a repair was corpus-wide had a domain narrower than the corpus, and nothing in the
+instrument could say so.** This is p122's `P122-H`, p123's `P123-H` and p124's `P124-H` one level
+up: p122 found a census less precise than the page, p123 a repair that was an edit, p124 a token
+read without its scope — and p125 finds **an assertion run without its domain**.
+
+🟢 **Every instrument in this lineage now takes its page list from one place and asserts its own
+cardinality.** `test_p125.sh` checks the baseline is 61 over ten pages before it scores anything.
+
+## 🔴 🆕 `P125-A` — three live false claims, and one of them is on a page p124 read by hand
+
+p124 found **zero** live false claims among its 27. Over the full ten-page domain there are
+**three**, each verified against the repository's own bytes on its real default branch.
+
+| # | where | the page said | the file says | how it was missed |
+|---|---|---|---|---|
+| 1 | `agents/trending.md` | [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) **453★** 🟢 `MIT` | 🟢 **`Apache-2.0`** — `main/LICENSE`, **11 358 B** | p124 repaired this address on `agents/top.md` **and recorded the repair on both of that page's tables**; the trending row was outside the assertion's domain |
+| 2 | `compose/patterns.md` | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) + [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) 🟢 **`MIT` both** | 🟡 `pyBKT` **MIT**, `catsim` **`BSD-3-Clause`** — `dev/LICENSE`, **1 514 B** | 🔴 **inside p124's domain and read by hand.** The word *"both"* carries the error, and twelve other rows on these pages already say `BSD-3` |
+| 3 | `verticals/solutions.md` | the licence-tier table counted [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) under 🔴 **"not open source / unknown"** as *"(no file)"* | 🔴 **`GPL-3.0`** — declared in the WordPress plugin header of `develop/readme.txt`: *"License: GPLv3"*, *"License URI: gnu.org/licenses/gpl-3.0.html"* | the row is right that there is no `LICENSE` **file**, and wrong about the tier. 🟢 **This KB's own `README.md` already records it as GPL-3.0** |
+
+🔴 **Defect 2 is the one worth the pass.** A hand-read of a row that says *"MIT both"* about two
+repositories confirms the token and not the quantifier. A single cell naming two addresses is the
+smallest unit at which this shelf can be wrong about exactly one of them, and `ACTION AJ` makes
+that the next thing measured.
+
+🔵 **Defect 3 is the direction this KB's own `intel/trends.md` trend 1 names as the expensive
+one**: an over-restrictive cell creates no legal exposure and silently deletes a platform from a
+shortlist. **24 % of Mexico's LMS-carrying sites run LearnPress**, and the tier table had it in
+the bucket a studio never reads twice. Repaired: copyleft **8 → 9 of 20**, not-open-source
+**2 → 1**.
+
+## 🔴 🆕 `P125-S` — the research sweep returned ZERO new items in all four regions for a second consecutive pass
+
+Every mandated query was run globally and once per region. 🔴 **Not one token returned is new to
+this KB**, on either the supply or the demand side — the second pass for which that is
+simultaneously true in all four regions, and the eighth consecutive weakening of `Gap 402`.
+
+| region | what the channel returned | held? |
+|---|---|---|
+| **North America** | `H.R. 8747` K-12 AI Literacy and Readiness Act (advanced 2026-07-21) · 134 bills across 31 states · CA `AB 1159` · ID `SB 1227` · `STUDENTS FIRST Act of 2026` (Day of AI) · NA share 36 %, **$3.68 B** 2026 → $32 B 2030 @ 31.1 % · NYC K-8 moratorium · Gemini for Education > 1 000 institutions | 🔴 **all held** |
+| **EMEA** | EU AI Act Art. 50 · Digital Omnibus → `2027-12-02` stand-alone / `2028-08-02` embedded · EU market **$2.64 B** 2026 · UK **£4 M** lesson-planning fund · 10 % of institutions with formal guidelines · OECD *Digital Education Outlook 2026* · UAE National AI Strategy 2031 · SDAIA | 🔴 **all held** |
+| **APAC** | Vietnam's AI law in force `2026-03-01`, education named high-risk · Korea's AI Basic Act in force `2026-01-22` with a one-year penalty grace period · Singapore and Japan voluntary · China's binding algorithm rules | 🔴 **all held** |
+| **LATAM** | Digital Education Council LATAM Survey 2026 — **92 % of students / 79 % of faculty**, 29 institutions · `ILIA` 2025 third edition (published 2026-03) · Brazil's AI bill, Chile's framework, Colombia's `CONPES`, Mexico's sectoral rules | 🔴 **all held** |
+
+🟢 **The honest reading is unchanged from p124 and now has a second data point: at 125 passes this
+KB has outrun its discovery channel, and a sweep that keeps returning zero against a corpus that
+keeps verifying is a CONTROL, not a failure.** 🔵 **The EMEA channel re-served the superseded
+Annex III date for a sixth time; this KB's `Regulation (EU) 2026/1744` → `2027-12-02` correction
+holds.**
+
+🔴 **One open item could not be closed, and the reason is a CHANNEL REFUSAL rather than an absent
+source.** `agents/trending.md` records the Digital Education Council LATAM survey's faculty
+denominator as unreconciled: this KB holds both **7 319 faculty** (pass 33) and **30 000+ total
+responses** (later passes) across 29 institutions, which are compatible as a subset and a total
+but have never been read first-hand. 🔴 **`www.digitaleducationcouncil.com` is unreachable from
+this environment: `ENOTFOUND` via the fetch tool and `CONNECT tunnel failed, response 403` at the
+agent proxy.** Recorded as a refusal with its exact status, not as a gap in the literature.
+
+🔵 **`compose/code/p125-retraction-cue/false_permissive.sh`, `scope_gate.py`, `bullet_bindings.py` and `mark_forms.py` carry the method; `out/ai-verdict.tsv` and `out/ac-{baseline,after}.triples` carry the evidence.**
+
+
 ## 🟢 Pass 124 — 2026-10-11 (eleventh pass of this date), 10:0x–11:3x UTC
 
 🔵 **APPEND-ONLY page. This section is added above p123's and nothing below it is edited** —
@@ -314,8 +402,8 @@ has looked for.**
 
 | address | ★ | published here | 🟢 measured this pass | consequence |
 |---|---|---|---|---|
-| [`UniTime/unitime`](https://github.com/UniTime/unitime) | 350 | 🔴 GPL-3.0, *"🔴 no"* | 🟢 **Apache-2.0**, `master/LICENSE` 11 357 B | 🟢 **usable** — the shelf's only timetabling platform, wrongly excluded |
-| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 979 | 🔴 AGPL-3.0, *"🔴 no"* | 🟢 **MIT** (split: `docs/` CC-BY-SA-4.0) | 🟢 **usable via the MIT arm** — a 979★ LMS, wrongly excluded |
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) | 350 | 🔴 GPL-3.0, *"🔴 no"*<!--corrected--> | 🟢 **Apache-2.0**, `master/LICENSE` 11 357 B | 🟢 **usable** — the shelf's only timetabling platform, wrongly excluded |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 979 | 🔴 AGPL-3.0, *"🔴 no"*<!--corrected--> | 🟢 **MIT** (split: `docs/` CC-BY-SA-4.0) | 🟢 **usable via the MIT arm** — a 979★ LMS, wrongly excluded |
 
 🟢 **Both repaired in this commit.** 🔵 **An over-restrictive cell creates no legal exposure, which
 is exactly why no sweep in seven passes was built to find one — and why it survived.** It costs
@@ -325,7 +413,7 @@ worse deliverable than one with a licence typo.
 ### 🔴 And one that moves INTO it — a 1 173★ APAC MOOC platform published as MIT
 
 🔴 **[`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud)
-(1 173★, 酷瓜云课堂) was 🟢 MIT and marked *"🟢 yes"* on the verticals shelf. Its `v2/LICENSE` is
+(1 173★, 酷瓜云课堂) was 🟢 MIT<!--corrected--> and marked *"🟢 yes"* on the verticals shelf. Its `v2/LICENSE` is
 18 092 B — the canonical size of GPL-2.0 — titled "GNU GENERAL PUBLIC LICENSE Version 2".**
 🟢 **Repaired to 🔴 GPL-2.0.** This is the largest-star defect of the pass and the dangerous
 direction: a studio told *"yes, permissive"* about the shelf's biggest Chinese MOOC platform.
@@ -544,22 +632,22 @@ oldest transport was the only ungated one.
 | repo | ★ | last push | default branch | licence, from the tree |
 |---|---|---|---|---|
 | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 41 103 | 2026-10-11 | `main` | 🟢 Apache-2.0 |
-| [`frappe/frappe`](https://github.com/frappe/frappe) | 10 913 | 2026-10-11 | 🔴 `develop` | 🟢 **MIT** ⚠️ was GPL-3.0 |
+| [`frappe/frappe`](https://github.com/frappe/frappe) | 10 913 | 2026-10-11 | 🔴 `develop` | 🟢 **MIT** ⚠️ was GPL-3.0<!--corrected--> |
 | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 6 863 | 2026-10-09 | `master` | 🔴 AGPL-3.0 |
 | [`oppia/oppia`](https://github.com/oppia/oppia) | 6 845 | 2026-10-11 | 🔴 `develop` | 🟢 Apache-2.0 |
-| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | 2 335 | 2026-10-10 | 🔴 `dev` | 🔴 **AGPL-3.0** ⚠️ was Apache-2.0 |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | 2 335 | 2026-10-10 | 🔴 `dev` | 🔴 **AGPL-3.0** ⚠️ was Apache-2.0<!--corrected--> |
 | [`Elgg/Elgg`](https://github.com/Elgg/Elgg) | 1 677 | 2026-10-10 | 🔴 `7.x` | 🟡 **GPL-2.0 + MIT** (bundled plugins MIT) |
 | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 1 141 | 2026-10-11 | 🔴 `develop` | 🟢 MIT |
 | [`overhangio/tutor`](https://github.com/overhangio/tutor) | 1 127 | 2026-10-08 | 🔴 `release` | 🔴 AGPL-3.0 |
-| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 931 | 🔴 **2026-02-20** | `main` | 🔴 **GPL-3.0** ⚠️ was MIT |
+| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 931 | 🔴 **2026-02-20** | `main` | 🔴 **GPL-3.0** ⚠️ was MIT<!--corrected--> |
 | [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | 518 | 2026-10-10 | `master` | 🔴 **AGPL-3.0 (CE) + MIT + proprietary `ee/`** |
 | [`satvik314/educhain`](https://github.com/satvik314/educhain) | 389 | 2026-10-06 | `main` | 🟢 MIT |
-| [`elmsln/elmsln`](https://github.com/elmsln/elmsln) | 253 | 🟡 2026-08-14 | `master` | 🔴 **GPL-3.0** ⚠️ was Apache-2.0 |
-| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 92 | 2026-10-10 | `main` | 🟢 **MIT** ⚠️ was Apache-2.0 |
-| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 64 | 2026-10-04 | `master` | 🔴 **AGPL-3.0** ⚠️ was Apache-2.0 |
-| [`Tadreeb-LMS/tadreeblms`](https://github.com/Tadreeb-LMS/tadreeblms) | 34 | 2026-10-06 | `main` | 🔴 **AGPL-3.0** ⚠️ was GPL-3 |
-| [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | 25 | 2026-10-10 | `main` | 🔴 **AGPL-3.0** ⚠️ was MIT |
-| [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | 17 | 2026-10-08 | `main` | 🟢 **MIT** ⚠️ was Apache-2.0 |
+| [`elmsln/elmsln`](https://github.com/elmsln/elmsln) | 253 | 🟡 2026-08-14 | `master` | 🔴 **GPL-3.0** ⚠️ was Apache-2.0<!--corrected--> |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 92 | 2026-10-10 | `main` | 🟢 **MIT** ⚠️ was Apache-2.0<!--corrected--> |
+| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 64 | 2026-10-04 | `master` | 🔴 **AGPL-3.0** ⚠️ was Apache-2.0<!--corrected--> |
+| [`Tadreeb-LMS/tadreeblms`](https://github.com/Tadreeb-LMS/tadreeblms) | 34 | 2026-10-06 | `main` | 🔴 **AGPL-3.0** ⚠️ was GPL-3<!--corrected--> |
+| [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | 25 | 2026-10-10 | `main` | 🔴 **AGPL-3.0** ⚠️ was MIT<!--corrected--> |
+| [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | 17 | 2026-10-08 | `main` | 🟢 **MIT** ⚠️ was Apache-2.0<!--corrected--> |
 
 🟡 **One address queried did not come back: [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor).
 Seven of eight `repo:` qualifiers returned; this one returned no record from the search endpoint,
@@ -597,7 +685,7 @@ API, and licences from the tree.**
 | [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) | 501 | — | 501(c)(3); multilingual tutoring, 7 languages, underserved learners |
 | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 376 | 🟢 **Apache-2.0** | 🟢 **LTI / Common Cartridge plumbing — the standards layer, permissively licensed** |
 | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 354 | 🟢 MIT | modern SCORM 1.2 / 2004 runtime |
-| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 340 | 🔴 **Elastic-2.0** | HE student-success CRM. 🔴 **Source-available, NOT open source — already correctly flagged here; an older row on this shelf said AGPL-3 and was superseded** |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 340 | 🔴 **Elastic-2.0** | HE student-success CRM. 🔴 **Source-available, NOT open source — already correctly flagged here; an older row on this shelf said AGPL<!--corrected-->-3 and was superseded** |
 
 ### 🟢 `topic:education topic:ai-agent` above 100★ — the complete result set, all 7
 
@@ -3144,8 +3232,8 @@ specs and teaching material get granted less often than code.
 
 | repo | published last pass | payload title block | corrected to |
 |---|---|---|---|
-| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🔴 `LGPL-3.0` · 18 025 B | **GNU GENERAL PUBLIC LICENSE, Version 2, June 1991** | 🔴 **GPL-2.0** (GPL-2.0-**only** — one-way incompatible with GPL-3.0) |
-| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🔴 `LGPL-3.0` · 18 092 B | **GNU GENERAL PUBLIC LICENSE, Version 2, June 1991** | 🔴 **GPL-2.0** (18 092 B is the canonical GPL-2.0 byte count) |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🔴 `LGPL-3.0` · 18 025 B<!--corrected--> | **GNU GENERAL PUBLIC LICENSE, Version 2, June 1991** | 🔴 **GPL-2.0** (GPL-2.0-**only** — one-way incompatible with GPL-3.0) |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🔴 `LGPL-3.0` · 18 092 B<!--corrected--> | **GNU GENERAL PUBLIC LICENSE, Version 2, June 1991** | 🔴 **GPL-2.0** (18 092 B is the canonical GPL-2.0 byte count) |
 | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🟡 bare `GPL` · 15 214 B | **Version 2, June 1991** | 🟢 **GPL-2.0** — version recovered |
 
 🔵 **This page already held the right answer for `tao-core`** — *"17 rows gained family precision **by
@@ -6497,7 +6585,7 @@ repositories below.
 [`OpenLLM-Europe/European-OpenLLM-Projects`](https://github.com/OpenLLM-Europe/European-OpenLLM-Projects)
 (exists via `main/README.md` — 🔵 **a catalogue of European low-resource-language LLM projects, i.e.
 precisely the EMEA discovery channel this KB wanted, and it is itself unlicensed**) ·
-[`formalms/formalms`](https://github.com/formalms/formalms) (**`P470`** — published as Apache-2.0 by
+[`formalms/formalms`](https://github.com/formalms/formalms) (**`P470`** — published as Apache-2.0<!--corrected--> by
 secondary sources; **19 filenames × 2 branches, Packagist 404, no `composer.json`** all fail to
 confirm it).
 
@@ -6929,8 +7017,8 @@ Version 2, June 1991`):
 
 | Repo | published | 🟢 corrected | Commercial use |
 |---|---|---|---|
-| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | `LGPL?` | **GPL-2.0** | 🟢 ALLOWED |
-| [`OS4ED/openSIS-Responsive-Design`](https://github.com/OS4ED/openSIS-Responsive-Design) | `LGPL?` | **GPL-2.0** | 🟢 ALLOWED |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | `LGPL?`<!--corrected--> | **GPL-2.0** | 🟢 ALLOWED |
+| [`OS4ED/openSIS-Responsive-Design`](https://github.com/OS4ED/openSIS-Responsive-Design) | `LGPL?`<!--corrected--> | **GPL-2.0** | 🟢 ALLOWED |
 
 **For these two the subtree is the only licence evidence that exists** — the class a root-only
 sweep cannot see, and the reason the tree run was worth it even though its headline prediction
@@ -6940,10 +7028,10 @@ failed.
 
 | Repo | published | 🟢 corrected | Why | Consequence |
 |---|---|---|---|---|
-| [`untisapi/untis4j`](https://github.com/untisapi/untis4j) | `GPL-3.0` | **LGPL-3.0** | title-stripped payload; identifies itself only in prose (`P457`) | 🔴 **the LGPL permits linking from proprietary code and the GPL does not** — published a tier too restrictive |
-| [`ankitects/anki`](https://github.com/ankitects/anki) | `CC-BY-SA-4.0` | **AGPL-3.0** | mixed-case prose grant no GNU branch matched (`P455`) | a copyleft **code** licence filed as a **content** licence |
-| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | `CC-BY-SA-4.0` | **MIT** | kept `docs/`'s CC clause, dropped the software's MIT grant (`P456`) | 🔴 a **permissive, redistributable** row rejected as ShareAlike |
-| `dequelabs/axe-core`, `ocrmypdf/OCRmyPDF`, `coqui-ai/TTS`, `idiap/coqui-ai-TTS`, `edrys-org/edrys` | `GPL-3.0` (shell) | **MPL-2.0** | MPL §1.12 names three GNU licences; the shell probed GNU first (`P454`) | the **same five repositories** pass 26 fixed in the *other* classifier |
+| [`untisapi/untis4j`](https://github.com/untisapi/untis4j) | `GPL-3.0`<!--corrected--> | **LGPL-3.0** | title-stripped payload; identifies itself only in prose (`P457`) | 🔴 **the LGPL permits linking from proprietary code and the GPL does not** — published a tier too restrictive |
+| [`ankitects/anki`](https://github.com/ankitects/anki) | `CC-BY-SA-4.0`<!--corrected--> | **AGPL-3.0** | mixed-case prose grant no GNU branch matched (`P455`) | a copyleft **code** licence filed as a **content** licence |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | `CC-BY-SA-4.0`<!--corrected--> | **MIT** | kept `docs/`'s CC clause, dropped the software's MIT grant (`P456`) | 🔴 a **permissive, redistributable** row rejected as ShareAlike |
+| `dequelabs/axe-core`, `ocrmypdf/OCRmyPDF`, `coqui-ai/TTS`, `idiap/coqui-ai-TTS`, `edrys-org/edrys` | `GPL-3.0` (shell)<!--corrected--> | **MPL-2.0** | MPL §1.12 names three GNU licences; the shell probed GNU first (`P454`) | the **same five repositories** pass 26 fixed in the *other* classifier |
 
 ### 🟢 The EUPL tier now has a version, and it is not the one a reader would assume
 

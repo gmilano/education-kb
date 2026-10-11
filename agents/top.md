@@ -6,6 +6,64 @@ updated: 2026-10-11
 
 # Education — AI agents shelf
 
+**Pass 125, 2026-10-11.** ⏱️ **Twelfth pass of this date** (census window **11:0x → 11:1x UTC**).
+
+🟢 **Instrument: `compose/code/p125-retraction-cue/` — `ACTION AF`, `AG`, `AH` discharged and not refuted; 🔴 **`ACTION AI` REFUTED on its own clause**. `test_p125.sh` **51 passed / 0 failed**, fully offline, over 25 fixtures.**
+
+## 🔴 🆕 `P125-H` — the assertion that a repair must be corpus-wide was itself run over half the corpus
+
+p124's `ACTION AC` exists to enforce one rule: *a repair must be a SEARCH, not an edit* — for
+every repaired `(address, superseded token)`, no page may carry that token on a line naming that
+address outside a marked span. p124 discharged it at **27 violations over 15 addresses** and
+reported that all 27 were read by hand and **none** was a live false claim.
+
+🔴 **Re-derived independently from p124's own committed code and pages, the assertion returns 61
+violations over 23 addresses — 2.3× p124's figure.** The difference is not the recogniser and not
+the token vocabulary; both were reproduced exactly. It is the **domain**: run over the five pages
+p124 had just marked, the assertion returns **23 violations over 15 addresses** — p124's address
+count exactly, and its violation count to within four.
+
+| domain | violations | addresses |
+|---|---|---|
+| `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`, `intel/market.md`, `compose/patterns.md` | **23** | **15** — p124 published 27 / 15 |
+| 🔴 **all ten live pages** | 🔴 **61** | 🔴 **23** |
+
+🔴 **The five pages it did not reach are `agents/trending.md`, `repos/trending.md`,
+`intel/trends.md`, `intel/open-gaps.md` and `README.md` — and the trending pages are where the
+largest number of stale tokens live, because they are append-only and a repair is never allowed to
+rewrite them.** 🟢 **So the finding is not that p124 was careless; it is that the one instrument
+built to prove a repair was corpus-wide had a domain narrower than the corpus, and nothing in the
+instrument could say so.** This is p122's `P122-H`, p123's `P123-H` and p124's `P124-H` one level
+up: p122 found a census less precise than the page, p123 a repair that was an edit, p124 a token
+read without its scope — and p125 finds **an assertion run without its domain**.
+
+🟢 **Every instrument in this lineage now takes its page list from one place and asserts its own
+cardinality.** `test_p125.sh` checks the baseline is 61 over ten pages before it scores anything.
+
+## 🔴 🆕 `P125-A` — three live false claims, and one of them is on a page p124 read by hand
+
+p124 found **zero** live false claims among its 27. Over the full ten-page domain there are
+**three**, each verified against the repository's own bytes on its real default branch.
+
+| # | where | the page said | the file says | how it was missed |
+|---|---|---|---|---|
+| 1 | `agents/trending.md` | [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) **453★** 🟢 `MIT` | 🟢 **`Apache-2.0`** — `main/LICENSE`, **11 358 B** | p124 repaired this address on `agents/top.md` **and recorded the repair on both of that page's tables**; the trending row was outside the assertion's domain |
+| 2 | `compose/patterns.md` | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) + [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) 🟢 **`MIT` both** | 🟡 `pyBKT` **MIT**, `catsim` **`BSD-3-Clause`** — `dev/LICENSE`, **1 514 B** | 🔴 **inside p124's domain and read by hand.** The word *"both"* carries the error, and twelve other rows on these pages already say `BSD-3` |
+| 3 | `verticals/solutions.md` | the licence-tier table counted [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) under 🔴 **"not open source / unknown"** as *"(no file)"* | 🔴 **`GPL-3.0`** — declared in the WordPress plugin header of `develop/readme.txt`: *"License: GPLv3"*, *"License URI: gnu.org/licenses/gpl-3.0.html"* | the row is right that there is no `LICENSE` **file**, and wrong about the tier. 🟢 **This KB's own `README.md` already records it as GPL-3.0** |
+
+🔴 **Defect 2 is the one worth the pass.** A hand-read of a row that says *"MIT both"* about two
+repositories confirms the token and not the quantifier. A single cell naming two addresses is the
+smallest unit at which this shelf can be wrong about exactly one of them, and `ACTION AJ` makes
+that the next thing measured.
+
+🔵 **Defect 3 is the direction this KB's own `intel/trends.md` trend 1 names as the expensive
+one**: an over-restrictive cell creates no legal exposure and silently deletes a platform from a
+shortlist. **24 % of Mexico's LMS-carrying sites run LearnPress**, and the tier table had it in
+the bucket a studio never reads twice. Repaired: copyleft **8 → 9 of 20**, not-open-source
+**2 → 1**.
+
+🔵 **`compose/code/p125-retraction-cue/false_permissive.sh`, `scope_gate.py`, `bullet_bindings.py` and `mark_forms.py` carry the method; `out/ai-verdict.tsv` and `out/ac-{baseline,after}.triples` carry the evidence.**
+
 **Pass 124, 2026-10-11.** ⏱️ **Eleventh pass of this date** (census window **10:0x → 11:3x UTC**).
 
 🟢 **Instrument: `compose/code/p124-correction-form-marker/` — `ACTION AA`, `AB`, `AC`, `AD`, `AE`
@@ -177,7 +235,7 @@ it.** Its correction tables on two pages read *"⚠️ **was LGPL-3.0**"*. The l
 
 | where | value | is it the truth? | is it the value the correction names? |
 |---|---|---|---|
-| `repos/foundations.md`, `verticals/solutions.md:205` | 🔴 GPL-2.0 ⚠️ *was LGPL-3.0* | 🟢 yes | — |
+| `repos/foundations.md`, `verticals/solutions.md:205` | 🔴 GPL-2.0 ⚠️ *was LGPL-3.0*<!--corrected--> | 🟢 yes | — |
 | 🔴 `verticals/solutions.md` top platform table | 🔴 **AGPL-3.0** | 🔴 no | 🔴 **no — a THIRD value** |
 | 🔴 `intel/market.md`, the live LATAM shelf (prose) | 🔴 **AGPL-3.0** | 🔴 no | 🔴 **no — a THIRD value** |
 
@@ -2484,7 +2542,7 @@ slug tried**, as it did for pass 94.
   [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) (**BSD-3-Clause**, UC Berkeley,
   `v7.0.0`, Canvas + Gradescope). 🔵 **It does not close `Gap 372`** — it grades code against tests, not
   open responses. 🟢 **It closes a hole nobody had named**: the automated-feedback layer's only
-  classroom-proven row was AGPL-3.0.
+  classroom-proven row was AGPL-3.0<!--corrected-->.
 - 🔴 **`Gap 372` now has three MEASURED negatives instead of a shrug.** `GradeAid` is **CC BY-SA 4.0** (a
   content licence, carrying a ShareAlike term, applied to software); `RATASv1` and `emorynlp/llm-grading`
   have **no licence payload at all**. 🔴 **`P981`: "we publicly release our code" in a paper is not a
@@ -2823,7 +2881,7 @@ evaluator rather than a prompt.** 🔵 **So the question in the checker tier is 
 "is the permissive part the valuable part".** Here it is not. The code and prompts are usable in a paid
 deliverable; the annotated corpora are not, and a studio must bring or buy its own.
 
-🔴 **Four checker candidates have NO grant at all** (24 filenames each) and one of them is published as MIT:
+🔴 **Four checker candidates have NO grant at all** (24 filenames each) and one of them is published as MIT<!--corrected-->:
 
 | row | what is claimed | what the payload says |
 |---|---|---|

@@ -6,6 +6,39 @@ updated: 2026-10-11
 
 # Education — current trends
 
+**Pass 125, 2026-10-11.** ⏱️ **Twelfth pass of this date** (census window **11:0x → 11:1x UTC**).
+
+🟢 **Instrument: `compose/code/p125-retraction-cue/` — `ACTION AF`, `AG`, `AH` discharged and not refuted; 🔴 **`ACTION AI` REFUTED on its own clause**. `test_p125.sh` **51 passed / 0 failed**, fully offline, over 25 fixtures.**
+
+## 🔴 🆕 `P125-S` — the research sweep returned ZERO new items in all four regions for a second consecutive pass
+
+Every mandated query was run globally and once per region. 🔴 **Not one token returned is new to
+this KB**, on either the supply or the demand side — the second pass for which that is
+simultaneously true in all four regions, and the eighth consecutive weakening of `Gap 402`.
+
+| region | what the channel returned | held? |
+|---|---|---|
+| **North America** | `H.R. 8747` K-12 AI Literacy and Readiness Act (advanced 2026-07-21) · 134 bills across 31 states · CA `AB 1159` · ID `SB 1227` · `STUDENTS FIRST Act of 2026` (Day of AI) · NA share 36 %, **$3.68 B** 2026 → $32 B 2030 @ 31.1 % · NYC K-8 moratorium · Gemini for Education > 1 000 institutions | 🔴 **all held** |
+| **EMEA** | EU AI Act Art. 50 · Digital Omnibus → `2027-12-02` stand-alone / `2028-08-02` embedded · EU market **$2.64 B** 2026 · UK **£4 M** lesson-planning fund · 10 % of institutions with formal guidelines · OECD *Digital Education Outlook 2026* · UAE National AI Strategy 2031 · SDAIA | 🔴 **all held** |
+| **APAC** | Vietnam's AI law in force `2026-03-01`, education named high-risk · Korea's AI Basic Act in force `2026-01-22` with a one-year penalty grace period · Singapore and Japan voluntary · China's binding algorithm rules | 🔴 **all held** |
+| **LATAM** | Digital Education Council LATAM Survey 2026 — **92 % of students / 79 % of faculty**, 29 institutions · `ILIA` 2025 third edition (published 2026-03) · Brazil's AI bill, Chile's framework, Colombia's `CONPES`, Mexico's sectoral rules | 🔴 **all held** |
+
+🟢 **The honest reading is unchanged from p124 and now has a second data point: at 125 passes this
+KB has outrun its discovery channel, and a sweep that keeps returning zero against a corpus that
+keeps verifying is a CONTROL, not a failure.** 🔵 **The EMEA channel re-served the superseded
+Annex III date for a sixth time; this KB's `Regulation (EU) 2026/1744` → `2027-12-02` correction
+holds.**
+
+🔴 **One open item could not be closed, and the reason is a CHANNEL REFUSAL rather than an absent
+source.** `agents/trending.md` records the Digital Education Council LATAM survey's faculty
+denominator as unreconciled: this KB holds both **7 319 faculty** (pass 33) and **30 000+ total
+responses** (later passes) across 29 institutions, which are compatible as a subset and a total
+but have never been read first-hand. 🔴 **`www.digitaleducationcouncil.com` is unreachable from
+this environment: `ENOTFOUND` via the fetch tool and `CONNECT tunnel failed, response 403` at the
+agent proxy.** Recorded as a refusal with its exact status, not as a gap in the literature.
+
+🔵 **`compose/code/p125-retraction-cue/false_permissive.sh`, `scope_gate.py`, `bullet_bindings.py` and `mark_forms.py` carry the method; `out/ai-verdict.tsv` and `out/ac-{baseline,after}.triples` carry the evidence.**
+
 **Pass 124, 2026-10-11.** ⏱️ **Eleventh pass of this date** (window **10:0x → 11:3x UTC**).
 
 🟢 **Instrument: `compose/code/p124-correction-form-marker/`. `test_p124.sh` **50 passed / 0
