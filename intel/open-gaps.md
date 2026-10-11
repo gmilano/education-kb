@@ -6,6 +6,112 @@ updated: 2026-10-11
 
 # Education — open gaps ledger
 
+## ✅ Verdicts on p136's pre-registered actions, judged by p137 — **all six reached; six discharged, and three refuted their own premise**
+
+| action | verdict | the measurement |
+|---|---|---|
+| **`ACTION BX`** — probe for the LTI→broker adapter before `T13`'s surviving clause is asserted as fact | 🔴 **DISCHARGED AND REFUTED — exactly as pre-registered** | Condition: *"refuted if any repository or library maps a verified LTI launch onto an OAuth subject/audience for a downstream resource server."* 🔴 **[`kstateome/lti-launch`](https://github.com/kstateome/lti-launch) does** — **LGPL-3.0**, Kansas State University, HEAD **2026-09-30**: `LtiLaunch.ensureApiTokenPresent()` reads the launch subject (`ltiSession.getEid()`), looks up a **per-user** refresh token (`OauthTokenService.getRefreshToken`), and on a miss sends that user to `/login/oauth2/auth` with a per-session `state`, storing `storeToken(userId, refreshToken)` and calling Canvas **as** them. 🟡 Residue is exactly one standard version wide: the anchor is **LTI 1.1**, and nothing emits an **RFC 8707**-bound token for an MCP resource server — proven in `ltijs` v7.0.7's code (`sub: platform.clientId`) |
+| **`ACTION BY`** — tree-level licence probe over the 20 largest rows | 🟢 **DISCHARGED, NOT REFUTED — by a factor of ten** | Condition: *"refuted if under 5% carry a foreign licence header."* 🔴 **50% do** — 10 of 20. **224 591** tree paths, **316** non-root licence-shaped files, **242** real grants. Instrument `compose/code/p137-foreign-holder-tree` (12 tests, own runner). 🔵 Read against `p444`'s **92% family-complete**, the rule becomes *a root cell predicts what you may DO, not whom you OWE* |
+| **`ACTION BZ`** — re-probe China, Korea and Brazil in their own languages | 🟢 **DISCHARGED, NOT REFUTED — and it resolved a conflict this ledger carried as open** | Condition: *"refuted if the native-language probe returns nothing the English one missed."* All three returned instruments the English probe had not: 🇨🇳 **教科信〔2026〕1号** (MOE **+ five ministries**, 2026-04-10) and the stage schedule **grades 1–2 ≥6 h/yr, grade 3–junior high ≥8 h/yr** — 🟢 **so p136's "6 or 8 hours depending on the source" was never a conflict, it was a dropped stage**; 🇰🇷 the **2026 업무계획** (**1 141→2 000** AI 중점학교; primary AI hours **34→68**, middle **68→102**) and the **August 2025 초중등교육법 amendment** that demoted AI textbooks from 교과용 도서 to 교육자료; 🇧🇷 MEC's **2026-04-08** *IA na Educação Básica* and the March 2026 *Referencial*, **self-declared non-normative** |
+| **`ACTION CA`** — source-read the three connectors p136 added and did not read | 🟢 **DISCHARGED, PREMISE REFUTED** | Condition: *"refuted if all three match their descriptions."* 🟢 **All three do**, so the 2-for-2 streak stops at **2 of 5** and belongs to specific rows, not to the tier. 🔵 Each read still moved a model: the password tier is a **deployment mode** (`D2L_PASSWORDLESS`, token paste), a 136-tool vendor connector is **governable** (`EDUBASE_READONLY`, 12 toolsets, `destructiveHint`), and a **9★** row is a fuller OAuth 2.1 implementation than the 289★ family |
+| **`ACTION CB`** — how many of the 37 case-variant clusters are published as duplicate ROWS | 🟢 **DISCHARGED, PREMISE REFUTED — 0 of 37** | Condition: *"refuted if fewer than 5 appear as two distinct published rows."* Mechanically **5** clusters show two spellings on a non-log page (`FWU-DE/ais-chat`, `Elgg/Elgg`, `JuneYaooo/lineage-skill`, `OpenEduCat/openeducat_erp`, `xGabrielCv/Auto-Matricula-SIGAA-UnB`) — 🔵 **and every one is this ledger, or `repos/foundations.md`'s p136 paragraph, quoting both spellings INSIDE the finding that reports the cluster.** Not one is a duplicated supply row. **The 37 is a citation-hygiene number and must not be read as 37 rows** |
+| **`ACTION CC`** — re-run the two empty regional probes with instrument-class vocabulary | 🔴 **DISCHARGED AND REFUTED — both of them** | Condition: *"refuted if both return nothing again."* 🟢 **North American higher education**: five system-board instruments — South Dakota **BOR policy 7.9 adopted** (July 2026), Kansas BOR (top priority, Sept 2026), Alaska draft to regents (Sept 2026), Nebraska **AI Institute** (2026-06-18), UC **AI Steering Committee** (March 2026); plus federal **H.R. 8747** ordered reported **18–15** on **2026-07-21**. 🟢 **European procurement**: four Jisc routes, incl. a digital-assessment framework running **2026-11-01 → 2029-10-31** and a Google-for-Education reseller framework naming **Gemini for Education**. 🔴 **SURF and Canada still return nothing** |
+
+## 🟢 Gaps CLOSED, CORRECTED or RETIRED by p137
+
+- 🔴 **REFUTED — *"nothing maps a verified LTI launch onto a broker's subject and audience"***
+  (`T13`, `P13`, `agents/top.md`, `intel/trends.md`). It is library code, it is LGPL-3.0, and a US
+  public university owns it. 🔵 **Second pass running in which this KB's own absence claim was the
+  thing that fell**, and the second time the refutation came from a vocabulary it was not using —
+  p136 needed *authorization*, p137 needed *Java and 2016*.
+- 🟢 **CLOSED — "European procurement data does not exist on this KB's pages."** Four Jisc routes,
+  one with a contract window. 🔵 **The gap was in the noun**: *framework agreement* and *catalogue*
+  return rows where *procurement* returns none.
+- 🟢 **CLOSED — "higher education is a hole in the North America picture."** The buying unit is the
+  **system board**, and five of them have dated instruments.
+- 🟢 **CLOSED — the 6-vs-8 class-hours conflict for China.** Both numbers are correct and belong to
+  different school stages.
+- 🟢 **CLOSED — `kstateome/lti-launch` recorded as having no licence file.** It serves
+  **`License.txt`** (LGPL-3.0, 7 651 B) and `pom.xml` agrees. 🔴 **This KB's own four-filename probe
+  produced the false absence, in this pass, hours after `p441` warned about exactly that.**
+- 🟡 **NARROWED — "the connector tier's auth cells are author-declared."** Five of ~43 rows were read
+  in source before this pass; **eight** are now, and the three newest **match** their descriptions.
+
+## 🔴 Gaps OPEN after p137, with the measurement behind each
+
+- 🔴 **The LTI 1.3 → RFC 8707 adapter.** The 1.1 version of the mapping exists; the 1.3 version does
+  not. Measured in code: `ltijs` v7.0.7 signs `{sub: platform.clientId}` under `client_credentials`,
+  and 1EdTech's own reference tool (HEAD **2020-06-03**) returns a hard-coded string as its
+  `access_token`.
+- 🔴 **`DMontgomery40/mcp-canvas-lms` declares MIT and ships no licence text.** 103★, 39 forks,
+  36-path tree, `package.json` lists `"LICENSE"` in `files` and no such file exists. 🟢 The npm
+  tarball is now reachable and unread (`ACTION CD`).
+- 🔴 **No LATAM-owned standards row — a SEVENTH consecutive pass.** The only LATAM artefact added is
+  `src/auth/javeriana-sso.ts` **inside** a US-owned connector.
+- 🔴 **No Vietnamese-owned repository anywhere on these pages**, while Vietnam is now the only
+  jurisdiction with education-AI conformity duties in force. Every component of `P16` is
+  foreign-owned.
+- 🔴 **Vietnam's transition date is a conflict, not a date** (2027-09-01 vs an unspecified period
+  from 2026-08-15), and both sources are law-firm briefings rather than the gazette.
+- 🔴 **Every national instrument this pass rests on a search result, not on the ministry's own PDF.**
+  `moe.gov.cn`, `moe.go.kr`, `gov.br/mec` and Vietnam's gazette were not fetched here.
+- 🔴 **Vendored subtrees are still unread for source headers.** `p137-foreign-holder-tree` reads
+  licence FILES; 50% is a floor (`ACTION CH`).
+- 🔴 **Caliper Analytics still has no supply** — carried forward, not re-probed, for a third pass.
+- 🟡 **SURF, the Netherlands and Canada**: measured empty again with the vocabulary that worked
+  elsewhere.
+- 🟡 **Tool counts across the connector tier are unmeasured** except where read from source
+  (`ACTION CI`).
+
+## 🆕 Actions opened by p137, pre-registered for p138 with refutation conditions
+
+🟢 **`ACTION CD`** — **read the npm tarball of `mcp-canvas-lms`.** `registry.npmjs.org` answers
+**200** in this channel for the first time in several passes. 🔴 *Refuted if the published package
+carries the `LICENSE` the repository lacks — in which case `P137-J` is repository hygiene rather
+than a distribution defect, and the "SPDX id without text" class needs the distribution layer in its
+definition.*
+
+🟢 **`ACTION CE`** — **test the `P13` seam.** Can `ltijs` v7's `LaunchContext` hand a verified `sub`
+to `canvas-lms-mcp`'s authorization server with no fork of either library? 🔴 *Refuted if either
+needs a patched release — in which case the "about two weeks" estimate on `P13` is wrong and must be
+restated.*
+
+🟡 **`ACTION CF`** — **source-read the three Moodle connectors**
+(`csmediapro/moodle-mcp-server` AGPL-3.0, `Dymayo/moodler-mcp`, `Jawadh-Salih/moodle-mcp-server`):
+auth model, write surface, and whether "read-only" is enforced or asserted. 🔴 *Refuted if all three
+match their descriptions, as `ACTION CA`'s three did — which would make 6 of 8 reads clean and
+retire the "author-declared auth cells" gap.*
+
+🟡 **`ACTION CG`** — **read Vietnam's Decision 33/2026/QD-TTg in Vietnamese**, by ministry, for the
+transition date and the exact wording of the three education classes. 🔴 *Refuted if the decree names
+no transition date for education systems already in operation — which would make the conflict a
+secondary-source artefact.*
+
+🟢 **`ACTION CH`** — **extend `p137-foreign-holder-tree` to source-file headers** on the three
+largest `ROOT_ONLY` rows (`frappe/lms`, `academico-sis/academico`, `Crosstalk-Solutions/project-nomad`).
+🔴 *Refuted if none carries a foreign copyright header — which would make 50% an estimate rather than
+the floor this pass calls it.*
+
+🟡 **`ACTION CI`** — **measure tool-count drift across the connector tier** (About vs README vs code).
+🔴 *Refuted if fewer than a third of rows disagree with themselves — in which case `P137-I` is one
+unlucky fork family, not a property of the tier.*
+
+### 🔵 Channel state after p137 — three changes, two of them openings
+
+| channel | state |
+|---|---|
+| 🆕 `registry.npmjs.org` | 🟢 **200.** The first non-GitHub host to answer in several passes. The npm-surface lane reopens and is unused (`ACTION CD`) |
+| 🆕 `curl -sI https://github.com/<slug>` | 🔴 **403 for all 16 slugs probed — including repositories that cloned successfully minutes later.** A 403 on the HTML host is **not** evidence of absence; existence is established by a `raw.githubusercontent.com` **200** or a clone |
+| 🆕 WebFetch on `github.com` repo pages | 🟢 **Works.** Source of stars, forks, licence badge and About text this pass (6 rows). `api.github.com` remains **403** |
+| Blobless clone (`--filter=blob:none --no-checkout --depth 1`) | 🟢 **The instrument of the pass**: 20 trees, **224 591 paths**, seconds each, negligible disk — `moodle` alone is 67 589 paths |
+| Public third-party `git clone` (full, depth 1) | 🟢 Still the source-read instrument: **6** repositories cloned and read |
+| `raw.githubusercontent.com` | 🟢 **200** on all 316 non-root licence payloads fetched |
+| Four-filename licence probe | 🔴 **Produced one false absence out of two absence verdicts this pass** (`kstateome/lti-launch` serves `License.txt`). Retired in favour of tree enumeration |
+| `pytest` | 🔴 Still **NOT INSTALLED**. `p137-foreign-holder-tree` ships its own runner: **12 tests, 12 pass** |
+| Ministry hosts (`moe.gov.cn`, `moe.go.kr`, `gov.br`, Vietnam gazette) | 🔴 **Not fetched directly this pass.** Every national instrument above is primary source, **secondary transport** |
+
+---
+
 ## ✅ Verdicts on p135's pre-registered actions, judged by p136 — **all six reached; six discharged, and three refuted their own premise**
 
 | action | verdict | the measurement |

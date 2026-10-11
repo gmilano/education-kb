@@ -6,6 +6,48 @@ updated: 2026-10-11
 
 # Education — vertical platforms you can customise
 
+**Pass 137, 2026-10-11.** 🔴 **The licence column on this page is a ROOT licence column, and for the
+platforms a client actually runs that is now a measured understatement.** `ACTION BY` enumerated the
+trees of the twenty largest rows across this KB's platform and foundation layers: **10 of 20 carry a
+licence file whose holder is not the project** (`compose/code/p137-foreign-holder-tree`). The
+platforms on this page are the worst of it, because they are the biggest:
+
+| platform | root licence | what the tree adds |
+|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | GPL-3.0 | 🔴 **96 non-root licence files, 87 real grants, 66 of them somebody else's** — Fonticons, CKSource, OTPHP (Florent Morselli) under `admin/tool/mfa/factor/totp/extlib`, the QUAIL accessibility library, and more |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | ECL-2.0 | 🔴 **76 / 58 / 13**, including **The Trustees of Columbia University** (`delegatedaccess/NOTICE`), the Apache Software Foundation and AOL LLC |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | GPL-3.0 | 🔴 **28 / 22 / 17** — d3, highlight.js, the Harmattan font, Symfony contributors |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | Apache-2.0 *(payload-read, p135)* | 🔴 **17 / 13 / 10** — Bootstrap, Font Awesome, Tiny Technologies' editor, Adobe cmaps, Dailymotion |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | AGPL-3.0 | 🟢 **`gems/lti-advantage/LICENSE.txt` is MIT, held by a named individual.** The LTI Advantage implementation inside the dominant North-American LMS is the **permissive** part of it |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | AGPL-3.0 | 🔴 **18 / 11 / 9** — pdf.js with Adobe's cmaps, the PDFium Authors, Google's Liberation data, Mozilla |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟢 LGPL-3.0 *(payload-read, p131)* | 🟡 **14 licence-shaped non-root paths and not one readable grant** — no family anchor, no dated notice. A measured *unreadable* class, not a measured absence |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT | 🟡 one foreign holder, and it is a **Debian packaging** copyright under `platforms/debian-server/debian/copyright` |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor), [`frappe/lms`](https://github.com/frappe/lms), [`adaptlearning/adapt_framework`](https://github.com/adaptlearning/adapt_framework) | AGPL-3.0 / AGPL-3.0 / GPL-3.0 | 🟢 **`ROOT_ONLY` — the root file is the whole story.** The cleanest licence position of any platform here |
+| [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) | 🟢 Apache-2.0 | 🔴 **`ROOT_ONLY` and that is misleading**: it composes Kiwix, Kolibri and Ollama **as container images**, so its third-party obligations exist and are not in its tree at all |
+
+🔵 **What to do with this on an engagement.** The licence cell still decides whether a *derivative*
+can ship. 🟢 **The tree decides what goes in the NOTICE file**, and for a Moodle or Sakai derivative
+that is now a countable task with a number next to it rather than a vague caution.
+
+## 🆕 The procurement route into these platforms, EMEA — `ACTION CC`
+
+🔴 **p136 recorded European procurement data as "does not exist on this KB's pages", measured as an
+empty probe.** 🟢 **It was a vocabulary problem**: the words that work are *framework agreement*,
+*tender* and *catalogue*, not *procurement*.
+
+| route | what it is | the date that matters |
+|---|---|---|
+| **Jisc digital assessment tools framework** | market engagement for digital assessment solutions across UK further and higher education | 🟢 **Responses closed 2026-03-13; contract runs 2026-11-01 → 2029-10-31** — a four-week window at the time of this pass |
+| **Jisc Google for Education reseller framework** | single-lot, multi-supplier framework; 🟢 **the published scope names Gemini for Education**, with Google pricing under a separate Jisc–Google agreement | published **April 2026** |
+| **Jisc Chest** | catalogue/purchasing service: members buy **without running their own tender** (LearnWise AI is listed on it) | standing route |
+| **Jisc VR/AR framework** | immersive-technology procurement vehicle | standing route |
+
+🟢 **Why this belongs on a platforms page**: an AI layer sold into a UK institution does not need a
+new tender if it arrives through a framework the institution already calls off. 🔴 **SURF — the Dutch
+equivalent — returned nothing**, so the Netherlands remains a hole, and it is now a *measured* one.
+
+---
+
 **Pass 135, 2026-10-11.** 🟢 **This page's longest-standing unresolved licence cell is resolved by
 payload read, and the answer promotes a platform the page had written off.** `OpenOLAT` has sat in
 *Declared gaps* as *"survives as unresolved — its own documentation describes an Apache-2.0 basis

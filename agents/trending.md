@@ -6,6 +6,60 @@ updated: 2026-10-11
 
 # Education — trending agents (append-only log)
 
+## 2026-10-11 — Pass 137
+
+**The pass that read the thing it had been describing, and found that the missing piece shipped
+years ago under a university's name.**
+
+### 🔴 `ACTION BX` — the absence this KB was about to publish as fact
+
+| what p136 published | what p137 measured in source |
+|---|---|
+| *"Nothing maps a verified LTI 1.3 launch onto a broker's subject and audience"* | 🔴 [`kstateome/lti-launch`](https://github.com/kstateome/lti-launch) (**LGPL-3.0**, Kansas State University, HEAD **2026-09-30**) maps a verified launch onto a **per-user** OAuth grant and calls Canvas as that user |
+| *"this is the whole remaining bespoke surface of the sanctioned path"* | 🟡 The surface is **narrower**: the mapping is anchored on **LTI 1.1**, and nothing emits an **RFC 8707**-bound token for an MCP resource server |
+| `ltijs` is *"the integration dependency"* | 🟢 True, and now **version-specific**: **v7.0.0 (09 Sep 2026) is a ground-up TypeScript rewrite** — Node **24+** (from 12.13), Zod validation, **session cookies removed** in favour of `localStorage` + the platform postMessage storage API, pluggable database/cache/HTTP/logger, Redis JWKS cache, `MongoLegacyDatabaseManager` for in-place v5 upgrade. HEAD **v7.0.7, 2026-10-06** |
+| — | 🔴 `ltijs` v7's `AccessTokenManager` signs `{sub: platform.clientId, iss: platform.clientId, aud: platform.authorizationServer}` under `client_credentials`: **the tool is the subject, by design, in the newest code** |
+
+🔵 **Why this matters to a client this quarter and not only to this ledger:** a Moodle or Canvas
+integration standing on `ltijs` v5 now faces a **major-version migration** (Node 12.13 → 24, cookies
+→ `localStorage`, `Provider.setup()` → a constructed `Provider`, string error matching → error
+classes). That is a dated, scoped modernisation item, not a research topic.
+
+### 🟢 `ACTION CA` — three connectors read in source, three descriptions that hold
+
+🟢 **The streak breaks in the honest direction.** p135's two source reads each overturned a published
+cell; p136 warned that **2 for 2** was a bad base rate to publish against. Three more reads: **3 for
+3 accurate**. The connector tier is not systematically mis-described; two specific rows were.
+
+| repo | ★ / forks | licence | the sentence this page adds |
+|---|---|---|---|
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | **9 / 4** | 🟢 MIT | 🟢 **An OAuth 2.1 authorization server *and* resource server for Canvas** — RFC 9728 metadata, audience and scope checks, revocation, upstream Canvas refresh, `400` to a pasted `X-Canvas-Token`, plus a pseudonymiser. **The best-engineered row on this shelf has nine stars** |
+| [`EduBase/MCP`](https://github.com/EduBase/MCP) | 28 / 13 | 🟢 MIT | **136 tools (57 get / 41 post / 24 delete / 10 patch / 3 put)** behind **`EDUBASE_READONLY`**, 12 selectable toolsets and `destructiveHint` annotations — 🟢 the first *governable* write surface this KB has measured |
+| [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | 56 / 27 | 🟢 MIT | **36 tools, zero writes**; auth is browser-driven institutional SSO with the student's own password in the OS keychain — 🟢 **but passwordless and token-paste modes exist, so the "unshippable credential tier" is a deployment mode, not a repository property** |
+
+### 🔴 The capability-claim finding: four of four disagree with themselves
+
+| repo | About says | README / manifest says |
+|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) **289★** | *up to 102 tools* | *up to 126 tools* |
+| [`abr-Projects/canvas-mcp`](https://github.com/abr-Projects/canvas-mcp) (fork) | *80+ tools, 5 skills* | *up to 101 tools, 8 skills* |
+| [`lindsay-cheng/canvas-mcp`](https://github.com/lindsay-cheng/canvas-mcp) (fork) | *102 tools* | *103 tools* |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) **103★** | *Version 2.2 · 54 tools* | README **v2.3.0**, `package.json` **2.3.1** |
+
+🔵 **A tool count is a marketing surface.** The only count that survives contact with the tree is one
+you take from the tree — 136 for `EduBase/MCP`, 36 for `brightspace-mcp-server`, both counted here
+from source.
+
+### 🔴 And a licence class that is new: an SPDX id with no text behind it
+
+[`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) — **103★, 39
+forks** — declares `"license": "MIT"` in `package.json` and lists `"LICENSE"` among its packaged
+`files`. 🔴 **Tree enumeration over all 36 paths finds no licence file anywhere.** This is the exact
+inverse of p136's `pipwerks` correction: there the grant lived outside the filename probe; here the
+identifier is real and the **notice text a redistributor must ship does not exist in the
+repository.** 🟢 `registry.npmjs.org` answers **200** in this channel for the first time in several
+passes, so the published tarball is the next place to look — pre-registered as `ACTION CD`.
+
 ## 2026-10-11 — Pass 136
 
 **The pass that went looking for something it had just declared missing, and found six of them.**

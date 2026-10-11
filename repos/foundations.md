@@ -6,6 +6,89 @@ updated: 2026-10-11
 
 # Education — foundational repos
 
+**Pass 137, 2026-10-11.** 🔴 **Every licence cell on this page describes a repository ROOT, and for
+half of the largest rows the root is not the whole obligation.** `ACTION BY` enumerated the file
+trees of the **20 largest rows on this page** — **224 591 paths** — and found **316** licence-shaped
+files outside the root, **242** of them real grants. 🔴 **Ten of the twenty (50%) carry at least one
+grant whose copyright holder is not the repository's own.** The refutation threshold was **5%**.
+Instrument, tests and per-row results: `compose/code/p137-foreign-holder-tree`.
+
+🔵 **Read this next to [`p444-root-vs-tree-family`](../compose/code/p444-root-vs-tree-family/README.md),
+which measured the other half of the same question and looks like it says the opposite.** p444: the
+licence **family** read from the root file is the tree's family **92%** of the time. p137: the
+**ownership** is incomplete in **50%** of the largest rows. 🟢 **Both are true, and together they
+are the rule: a root licence cell predicts what you may DO; it does not predict whom you OWE.**
+
+### 🆕 `ACTION BY` — what the trees carry, per row
+
+| row | tree paths | non-root licence files | real grants | 🔴 foreign holders | verdict |
+|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | **67 589** | 96 | 87 | 🔴 **66** | `FOREIGN_HOLDER_IN_TREE` |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 18 127 | 76 | 58 | 🔴 **13** | `FOREIGN_HOLDER_IN_TREE` |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 13 231 | 28 | 22 | 🔴 **17** | `FOREIGN_HOLDER_IN_TREE` |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 25 823 | 17 | 13 | 🔴 **10** | `FOREIGN_HOLDER_IN_TREE` |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 5 137 | 14 | 10 | 🔴 **10** | `FOREIGN_HOLDER_IN_TREE` |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 9 273 | 18 | 11 | 🔴 **9** | `FOREIGN_HOLDER_IN_TREE` |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 22 662 | 23 | 22 | 🔴 **4** | `FOREIGN_HOLDER_IN_TREE` |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 4 826 | 2 | 2 | 2 | `FOREIGN_HOLDER_IN_TREE` |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 17 073 | 6 | 1 | 1 | `FOREIGN_HOLDER_IN_TREE` |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 5 749 | 8 | 8 | 1 | `FOREIGN_HOLDER_IN_TREE` |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 7 405 | 13 | 8 | 🟢 **0** | `OWN_HOLDER_ONLY` |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | 2 489 | 1 | 1 | 🟢 **0** | `OWN_HOLDER_ONLY` |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 1 345 | 14 | 🟡 **0 readable** | 0 | 🟡 unreadable class |
+| [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) | 664 | 🟢 0 | 0 | 0 | `ROOT_ONLY` |
+| [`frappe/lms`](https://github.com/frappe/lms) | 1 606 | 🟢 0 | 0 | 0 | `ROOT_ONLY` |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 249 | 🟢 0 | 0 | 0 | `ROOT_ONLY` |
+| [`adaptlearning/adapt_framework`](https://github.com/adaptlearning/adapt_framework) | 118 | 🟢 0 | 0 | 0 | `ROOT_ONLY` |
+| [`openedx/codejail`](https://github.com/openedx/codejail) | 43 | 🟢 0 | 0 | 0 | `ROOT_ONLY` |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | 193 | 🟢 0 | 0 | 0 | `ROOT_ONLY` |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | 692 | 🟢 0 | 0 | 0 | `ROOT_ONLY` |
+
+### 🔴 The two findings inside the 50% that change a delivery decision
+
+🔴 **`instructure/canvas-lms` is AGPL-3.0 at the root and ships an MIT LTI Advantage implementation
+four levels down.** `gems/lti-advantage/LICENSE.txt` is **MIT, held by a named individual (Nathan
+Mills)**. 🟢 **The LTI Advantage code inside the dominant North-American LMS is the permissive part
+of it** — which is a different sentence from anything this page has published about Canvas, and the
+one a studio needs before it decides to reimplement rather than extract. (The same tree also carries
+`rick olson`'s `attachment_fu` and `Coolite Inc.`'s date library.)
+
+🆕 **`classroomio/classroomio` (AGPL-3.0) vendors ten MIT-licensed agent-skills packs** —
+`skills/*/LICENSE`, held by three outside individuals. 🔵 **This is a 2026-shaped obligation**: the
+skills are exactly the part a client redistributes, and their grants are not the platform's.
+
+🔵 **The rest of the 50% is front-end vendoring and the FSF's own text**: Fonticons, Twitter's
+Bootstrap, Tiny Technologies' editor, Michael Bostock's d3, Ivan Sagalaev's highlight.js, Adobe's
+cmaps, the PDFium Authors, Google's Liberation data, Mozilla; plus **The Trustees of Columbia
+University** and the Apache Software Foundation inside Sakai, and a Debian maintainer's packaging
+copyright inside Kolibri. The FSF appears as a holder **21 times** — a vendored licence body, not a
+third-party grant, and counted because a notice obligation attaches to it too.
+
+### 🔴 Three defects this probe produced before it produced a finding — stated, because the first two were wrong in the direction of a finding
+
+1. 🔴 **An empty path list counted as one path**, so seven of twenty rows were first reported as
+   carrying a non-root licence file they do not have. `printf '%s\n' "$empty" | grep -c ''` is 1.
+2. 🔴 **Sakai's `content-copyright` i18n bundles matched on the WORD "copyright"** and produced seven
+   false grants out of translated UI strings.
+3. 🔴 **A four-filename licence sweep over 16 candidate rows called `kstateome/lti-launch`
+   unlicensed. Tree enumeration found `License.txt` — LGPL-3.0, 7 651 B.** One of this pass's two
+   absence verdicts was false, which is `p288-agpl-casefold` biting this KB a second time, and is
+   why the committed instrument matches case-insensitively and ships a regression test for it.
+
+🟡 **And one limit that keeps 50% a floor rather than an estimate:** this instrument reads licence
+**files**. A grant inside a source header — the `pipwerks` case p136 corrected — is invisible to it.
+🔴 **`Crosstalk-Solutions/project-nomad` defeats the method entirely**: `ROOT_ONLY` over 664 paths,
+while composing Kiwix, Kolibri and Ollama **as container images**, so its real third-party
+obligations are nowhere in its tree.
+
+### 🆕 One row added to the interoperability layer, and it is university-owned
+
+| repo | licence *(payload-read)* | ★ | last push | holder class | why it is foundational |
+|---|---|---|---|---|---|
+| [`kstateome/lti-launch`](https://github.com/kstateome/lti-launch) | 🟢 **LGPL-3.0** (`License.txt`, 7 651 B; `pom.xml` `<licenses>` agrees) | **UNMEASURED** | **2026-09-30** | 🟢 **US public university** (Kansas State University, Office of Mediated Education) | 🔴 **The only repository in this KB that maps a verified LTI launch onto a per-user OAuth grant** — `ltiSession.getEid()` → `OauthTokenService.getRefreshToken(userId)` → Canvas as that user. LTI **1.1** (OAuth 1.0a consumer model), Spring/Java, 34 paths. 🟢 **The first university-owned row in this page's standards tier**, and the pattern `P13` now copies. 🔴 LGPL + Java: port the pattern, not the file |
+
+---
+
 **Pass 135, 2026-10-11.** 🟢 **The assessment and course-content layer is added — the part of the
 standards stack p134's interoperability section pointed at and did not reach.** p134 finished with
 LTI, OneRoster, Ed-Fi and xAPI. Finishing the register (`ACTION BN`) found that **SCORM carries an

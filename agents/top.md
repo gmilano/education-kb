@@ -6,6 +6,76 @@ updated: 2026-10-11
 
 # Education — AI agents shelf
 
+**Pass 137, 2026-10-11.** 🔴 **This page's newest tier gains the row it said did not exist, and the
+row is twenty years older than the tier.** p136 closed `T13` with one surviving clause — *"nothing
+maps a verified LTI launch onto a broker's subject and audience"* — and registered `ACTION BX` to
+test it before asserting it. 🔴 **[`kstateome/lti-launch`](https://github.com/kstateome/lti-launch)
+does exactly that, in LGPL-3.0, owned by Kansas State University**, and this KB's own four-filename
+licence probe had called it unlicensed forty minutes earlier. Both findings are below.
+
+🟢 **`ACTION CA` discharged and refuting: the three connectors p136 added without reading all three
+match their descriptions.** The 2-for-2 streak of source reads overturning a published cell stops at
+2 of 5 — so the defect belongs to the rows p135 read, not to the connector tier. 🔵 **Each read
+still changed something this page publishes**, and the three changes are more useful than another
+contradiction would have been:
+
+| row read in source | what the description said | what the code says |
+|---|---|---|
+| [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) 🟢 **MIT**, 56★, 27 forks, v3.13.10, HEAD **2026-10-10** | *"Check grades, due dates, assignments, announcements, syllabus, rosters"* | 🟢 **Accurate, and the write surface is ZERO**: 36 tools, every one a `get_`, `download_` or `search_`. 🔴 Auth is a Playwright-driven **institutional SSO login with the student's own password** in the OS keychain (Keychain / Credential Manager / `secret-tool`), with Duo and TOTP handling and **8 named institution modules** — `cuny`, `suny`, `purdue`, `mcgill`, `western`, `leiden`, `tudelft`, **`javeriana`** (Javeriana Cali, Colombia). 🟢 **But the password tier is a CONFIGURATION, not a property**: `D2L_PASSWORDLESS=true` stores no password (Entra phone approval), and `D2L_SESSION_COOKIE` / `D2L_ACCESS_TOKEN` skip the browser entirely |
+| [`EduBase/MCP`](https://github.com/EduBase/MCP) 🟢 **MIT**, 28★, 13 forks, v2.0.3, HEAD **2026-09-28** | *"MCP server for the EduBase e-learning platform"* | 🟢 **Accurate, and it is the best-governed write surface on this shelf.** **136 tools — 57 `get`, 41 `post`, 24 `delete`, 10 `patch`, 3 `put`** — including `edubase_delete_user` and `edubase_delete_organization`; and they are gated by **`EDUBASE_READONLY`** (env var, `edubase-mcp-readonly` header, or `?read_only=true`), by **per-toolset selection** (12 toolsets), and by MCP `readOnlyHint` / `destructiveHint` annotations. Auth: `base64(app:secret)` **or an OAuth 2.1 IdP access token** forwarded as Bearer with cached revalidation |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) 🟢 **MIT**, **9★**, 4 forks, v2.2.0, HEAD **2026-10-10**, 360 commits | *"172 tools … New Quizzes (LTI), outcomes, discussions, admin workflows"* | 🟢 **Accurate — and it is an OAuth 2.1 authorization server AND resource server for an LMS**, which is the `T13` component this KB spent three passes looking for. Three auth profiles; the `oauth_brokered` one publishes `/.well-known/oauth-protected-resource…/mcp` (**RFC 9728**), checks **audience** (*"Access token was not issued for this resource"*), scopes (`canvas:read`), revocation and Canvas refresh, and **answers `400` to an `X-Canvas-Token`**. It also ships `src/pseudonym/pseudonymizer.ts`. 🔴 **The `(LTI)` in its description is Canvas's product name**: the code reads `is_quiz_lti_assignment` and `lti_context_id` and implements no LTI |
+
+🔵 **The third row is why a star count must never be the filter on this page.** `canvas-lms-mcp` has
+**9★** and implements more of the MCP authorization specification than the **289★** connector family
+below it.
+
+## 🆕 `ACTION BX` — the LTI→OAuth-subject mapping, read in source
+
+| repo | licence *(payload-read)* | ★ | HEAD | holder class | what it actually does |
+|---|---|---|---|---|---|
+| 🆕 [`kstateome/lti-launch`](https://github.com/kstateome/lti-launch) | 🟢 **LGPL-3.0** (`License.txt`, **7 651 B**, canonical FSF text) + `pom.xml` `<licenses>` | **UNMEASURED** | **2026-09-30** | 🟢 **US public university** — `<organization>Kansas State University, Office of Mediated Education</organization>` | 🔴 **The mapping `T13` said did not exist.** `LtiLaunch.ensureApiTokenPresent()` reads the launch subject (`ltiSession.getEid()`), looks up a **per-user** refresh token via `OauthTokenService.getRefreshToken(userId)`, and when there is none sends **that user** to `https://<canvas>/login/oauth2/auth` with a per-session `state` UUID (`OauthController./beginOauth`), storing the result with `storeToken(userId, refreshToken)`. Calls Canvas **as the launching user**, validated by `showUserDetails("self")`. Spring/Java, 34 paths |
+
+🟡 **What is still missing, stated exactly rather than broadly.** The mapping above is anchored on an
+**LTI 1.1** launch (OAuth 1.0a consumer signing: `LtiOAuthAuthenticationHandler`,
+`LtiConsumerDetailsService`) and yields a *platform API* token, not an **RFC 8707**-bound token for
+an MCP resource server. 🔴 **The 1.3 half is confirmed in the canonical library's own code**:
+[`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) **v7.0.7** mints only
+`grant_type=client_credentials` with the assertion `{sub: platform.clientId, iss: platform.clientId,
+aud: platform.authorizationServer}` — the **tool's** client id is the subject, the launching user's
+`sub` is persisted (`idTokenDoc.user`) and never leaves, and the token cache is keyed by platform +
+client + scopes, never by user. 🔴 1EdTech's own
+[`lti-1-3-php-example-tool`](https://github.com/1EdTech/lti-1-3-php-example-tool) has a HEAD of
+**2020-06-03** and returns a hard-coded UUID as its `access_token`.
+
+🟢 **Consequence for delivery:** `P13` drops to an **adapter of about two weeks** — terminate the
+1.3 launch with `ltijs` v7, keep the per-user token store in the shape `lti-launch` proves, and let
+`canvas-lms-mcp`'s authorization server issue the audience-bound MCP token. 🔴 **Licence care:
+`lti-launch` is LGPL-3.0 and Java** — a Python/TypeScript studio ports the *pattern*, not the file.
+
+## 🆕 The Canvas connector family, measured — and every member disagrees with itself
+
+| repo | licence *(payload-read)* | ★ / forks | what it is | the self-contradiction |
+|---|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** | **289 / 96** | the upstream of the family; 1 001 commits | 🔴 About says *"up to 102 tools"*, README says *"up to 126 tools"* |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 🔴 **SPDX id without text** — `package.json` says `"license": "MIT"` **and lists `"LICENSE"` in `files`**; the **whole 36-path tree has no licence file** | **103 / 39** | independent implementation, HEAD **2026-05-31** | 🔴 About says *"Version 2.2 · 54 tools"*, README header says **v2.3.0**, `package.json` says **2.3.1** |
+| [`JohannsenLum/canvas-api-mcp`](https://github.com/JohannsenLum/canvas-api-mcp) | 🟢 **MIT** (holder *Johannsen Lum, 2026*) | 3 / **13** | 16 curated student tools **plus a gateway tool reaching all 1 116 Canvas API endpoints** | 🔴 **More forks than stars**, and 🔴 **a gateway tool defeats tool-level allowlisting** — see `compose/code/mcp-allowlist-gateway` |
+| [`abr-Projects/canvas-mcp`](https://github.com/abr-Projects/canvas-mcp) | 🟢 **MIT** | 0 / 0 | **fork of `vishalsachdev/canvas-mcp`** (the page says so) | 🔴 About *"80+ tools and 5 agent skills"*, README *"up to 101 tools and 8 agent skills"* |
+| [`lindsay-cheng/canvas-mcp`](https://github.com/lindsay-cheng/canvas-mcp) | 🟢 **MIT** | 0 / 0 | **fork of `vishalsachdev/canvas-mcp`** | 🔴 About *"102 tools"*, README *"103 tools"* |
+
+🔵 **So the rule this page should carry about capability is the one it already carries about
+licences: the claim is not the measurement.** Four of four members of one family contradict
+themselves about their own size, in the field a KB row would quote. `intel/trends.md` → `T14`.
+
+## 🆕 The Moodle connector tier, placed — and one licence flag
+
+| repo | licence *(payload-read)* | ★ | the measurement |
+|---|---|---|---|
+| [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **AGPL-3.0** | 1 | Moodle Web Services client, described as **read-only**. 🔴 **AGPL on a connector is the reciprocity trap this KB flags on `P7`**: a hosted deployment is a conveyance of the service |
+| [`Dymayo/moodler-mcp`](https://github.com/Dymayo/moodler-mcp) | 🟢 **MIT**, holder **Ghaith AlHallak** — *upstream's* name, intact | 0 | 🟢 **Resolves one of p136's cross-owner clusters**: it is a **fork** of [`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp) with attribution kept — the opposite of the `0awei0/kt` squashed copy |
+| [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server) | 🟢 **MIT** | **UNMEASURED** | Student-facing: courses, grades, assignments, deadlines. 🔴 **Not read in source** — `ACTION CF` |
+
+---
+
 **Pass 136, 2026-10-11.** 🔴 **`ACTION BS` refuted this page's newest absence claim, and that is the
 most useful thing this pass did.** p135 wrote that *"nothing in this KB terminates a verified
 identity and then calls an MCP server with a subject it established itself"* — true of this KB, and

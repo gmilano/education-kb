@@ -4,6 +4,141 @@ region: Global
 updated: 2026-10-11
 ---
 
+## Pass 137 — 2026-10-11
+
+⏱️ **Twenty-fourth pass of this date.** 🟢 **All six of p136's pre-registered actions reached and
+discharged; three refuted their own premise.** 🔴 **The headline: the LTI→broker adapter that p136
+called "the whole remaining bespoke surface of the sanctioned path" has existed in library code for
+years, it is owned by a US university, and this KB's own four-filename probe had just called that
+repository unlicensed.**
+
+| finding | verdict | figure |
+|---|---|---|
+| `P137-A` | 🔴 **`ACTION BX` REFUTED — THE LTI→OAUTH-SUBJECT MAPPING IS LIBRARY CODE** | [`kstateome/lti-launch`](https://github.com/kstateome/lti-launch) **LGPL-3.0**, Kansas State University, HEAD **2026-09-30**: launch `eid` → per-user refresh token → Canvas as that user |
+| `P137-B` | 🟢 **`ACTION CA` REFUTED — 3 OF 3 CONNECTORS MATCH THEIR DESCRIPTIONS** | and one of them, [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) (**MIT, 9★**), *is* an OAuth 2.1 authorization **and** resource server for an LMS |
+| `P137-C` | 🔴 **`ACTION BY` NOT REFUTED — BY A FACTOR OF TEN** | **10 of the 20 largest rows (50%)** carry a foreign-holder licence file outside the root; threshold was **5%** |
+| `P137-D` | 🟢 **`ACTION BZ` NOT REFUTED — THREE LANGUAGES, THREE MISSED INSTRUMENTS** | China 教科信〔2026〕1号 (five ministries, **2026-04-10**); Korea's **1 141→2 000** AI 중점학교; Brazil's MEC guide, **explicitly non-normative** |
+| `P137-E` | 🔴 **`ACTION CC` REFUTED — BOTH "EMPTY" REGIONS FILLED ON A VOCABULARY CHANGE** | **5** US system-board AI policies; **4** Jisc procurement routes incl. a framework running **2026-11-01 → 2029-10-31** |
+| `P137-F` | 🟢 **`ACTION CB` PREMISE REFUTED — 0 OF 37** | all five mechanical hits are this KB's own ledger quoting both spellings inside one finding |
+| `P137-G` | 🔴 **THE EU EDUCATION HIGH-RISK CLOCK MOVED TO 2027-12-02 — AND ARTICLE 50 DID NOT MOVE** | Regulation **(EU) 2026/1744**, in force **2026-07-27**; Art. 50 applied **2026-08-02** |
+| `P137-H` | 🔴 **APAC OVERTOOK THE EU: VIETNAM'S EDUCATION CONFORMITY DUTIES ARE IN FORCE NOW** | Decision **33/2026/QD-TTg**, effective **2026-08-15**, **3 of 46** high-risk classes are education |
+| `P137-I` | 🔴 **A TOOL COUNT IN A DESCRIPTION IS NOT A MEASUREMENT** | 4 of 4 connectors in one fork family disagree **with themselves**: 102 vs 126, 80+ vs 101, 102 vs 103, "2.2/54 tools" vs v2.3.1 |
+| `P137-J` | 🔴 **THE INVERSE OF THE `pipwerks` CORRECTION, AND IT IS THE BETTER-STARRED ROW** | [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) **103★**: manifest says `"license": "MIT"` and lists `"LICENSE"`; the **whole 36-path tree has no licence file** |
+
+### `P137-A` — the finding, and why it lands on the same spot twice
+
+🔵 **p136 wrote this pass's target in its own words**: *"Nothing maps a verified LTI 1.3 launch onto
+a broker's subject and audience… this is the whole remaining bespoke surface of the sanctioned
+path."* `ACTION BX` was registered to test that before it was asserted as fact — the same discipline
+that refuted `ACTION BS` one pass earlier.
+
+🔴 **It is refuted in source.** `kstateome/lti-launch` — LGPL-3.0, **Kansas State University, Office
+of Mediated Education**, 34 paths, HEAD 2026-09-30 — does exactly the mapping, and has for years:
+
+- `LtiLaunch.ensureApiTokenPresent()` reads the **launch subject** from the LTI session
+  (`ltiSession.getEid()`);
+- it looks up a **per-user** refresh token through `OauthTokenService.getRefreshToken(userId)`;
+- when there is none, `OauthController./beginOauth` redirects **that user** to
+  `https://<canvas>/login/oauth2/auth` with a per-session `state` UUID, and the callback stores
+  `storeToken(userId, refreshToken)`;
+- the resulting `RefreshableOauthToken` then calls Canvas **as that user**, validated by
+  `showUserDetails("self")`.
+
+🟡 **What survives is narrow and exact, and it is now measured rather than assumed.** The mapping is
+anchored on an **LTI 1.1** launch (OAuth 1.0a consumer signing — `LtiOAuthAuthenticationHandler`,
+`LtiConsumerDetailsService`), and it hands back a *platform API* token, not an **RFC 8707**-bound
+token for an MCP resource server. The 1.3 half of the gap is confirmed in the canonical library's
+own code: `ltijs` **v7.0.7**'s `AccessTokenManager` mints only
+`grant_type=client_credentials` with the assertion `{sub: platform.clientId, iss: platform.clientId,
+aud: platform.authorizationServer}` — 🔴 **the tool's own client id is the subject**, the launching
+user's `sub` is stored (`idTokenDoc.user`) and never leaves, and the token cache is keyed by
+platform + client + scopes, never by user. 🔴 And 1EdTech's own reference tool
+([`1EdTech/lti-1-3-php-example-tool`](https://github.com/1EdTech/lti-1-3-php-example-tool)) has a
+HEAD of **2020-06-03** and returns a hard-coded UUID string as its `access_token`.
+
+🟢 **So `P13` drops again — from p136's "three-to-four-week buy-and-adapt" to an adapter of
+about two weeks** between three components that each already exist, and `T13` is rewritten for the
+second pass running. The seam is named in `compose/patterns.md` → `P13`.
+
+### `P137-B` and `P137-J` — the two reads that cut in opposite directions
+
+🟢 **`ACTION CA` predicted its own refutation and got it**: all three connectors added-but-unread by
+p136 match their descriptions, so the 2-for-2 defect streak belongs to the rows p135 read, not to the
+tier. 🔵 **But each read still changed a model this KB publishes**: the password-credential tier is a
+**deployment configuration** rather than a property of a repository (`brightspace-mcp-server` ships a
+passwordless mode and a token-paste path beside the keychain one); a 136-tool vendor connector with
+`edubase_delete_organization` in it turns out to carry **`EDUBASE_READONLY`, per-toolset selection
+and MCP `destructiveHint` annotations**, which is the best-governed write surface on this shelf; and
+a **9★** repository is a fuller OAuth 2.1 implementation than anything the 289★ fork family contains.
+
+🔴 **`P137-J` is the inverse of p136's `pipwerks` correction.** There, a row this KB called
+unlicensed turned out to carry a grant **outside** the filename probe. Here, the row carries an
+SPDX identifier in `package.json` — `"license": "MIT"`, a real identifier, and `"LICENSE"` listed in
+`files` — while **tree enumeration over all 36 paths finds no licence file at all**. 🔵 **The class
+is new and it is the one that matters for redistribution: an SPDX id without text.** A client told
+to "ship the notice" has nothing to ship.
+
+### Regions this pass
+
+| region | this pass |
+|---|---|
+| **North America** | 🟢 **`ACTION CC` filled the higher-education hole by changing the noun.** The instrument class is the **system board**: South Dakota's BOR adopted systemwide policy **7.9** (July 2026); Kansas's BOR made an AI framework its **top** priority (Sept 2026); Alaska's regents have a **draft policy** to decide this year; Nebraska took an **AI Institute** item on **2026-06-18**; UC's **AI Steering Committee** (March 2026) advises President, chancellors and Regents. 🟢 Federal: **H.R. 8747**, the K-12 AI Literacy and Readiness Act, was ordered reported by House Education & Workforce on **2026-07-21**, **18–15**, as an amendment in the nature of a substitute — no floor vote. 🔴 **Canada: still nothing** |
+| **EMEA** | 🔴 **The education high-risk clock moved a second time.** The Digital Omnibus on AI (Parliament **2026-06-16**, Council **2026-06-29**, signed **2026-07-08**, **Regulation (EU) 2026/1744**, in force **2026-07-27**) defers Annex III duties — education is an Annex III use case — from **2026-08-02** to **2027-12-02**, and Annex I embedded systems to **2028-08-02**. 🟢 **Article 50 transparency did NOT move: it applied from 2026-08-02**, with a grace period to **2026-12-02** for systems already on the market (one source says 2027-02-02 — recorded unresolved). 🟢 **Procurement finally has rows**: Jisc's Google for Education reseller framework (scope names **Gemini for Education**), its **digital assessment tools** framework (**2026-11-01 → 2029-10-31**), the **Chest** catalogue route, a VR/AR framework. 🔴 **SURF: nothing** |
+| **APAC** | 🔴 **Vietnam is now the first jurisdiction with education-AI conformity duties actually in force.** AI Law **134/2025/QH15** (in force **2026-03-01**) plus Decision **33/2026/QD-TTg** (**2026-06-30**, effective **2026-08-15**) list **46** high-risk systems, **three of them education**: self-study content generated from uncontrolled sources, **grading or ranking learners**, and biometric behaviour monitoring. Duties: conformity assessment, registration in the **National AI Database**, human oversight, incident reporting. 🔴 Transition date conflicts (2027-09-01 vs "an additional period") — unresolved. 🟢 `ACTION BZ` in 中文 and 한국어: China's 教科信〔2026〕1号 (**five ministries**, 2026-04-10) and the **6/8-hours-per-stage** guideline that resolves p136's recorded conflict; Korea's **AI 보편교육** first of 15 tasks, **1 141 → 2 000** AI 중점학교, primary AI hours **34→68** |
+| **LATAM** | 🟡 **The regulatory picture holds and now rests on an instrument's own words**: MEC's *Inteligência Artificial na Educação Básica* (**2026-04-08**) and the March 2026 *Referencial* are **explicitly non-normative** while CNE debates diretrizes. 🟢 **Deal-level supply appears for the first time**: Google's **USD 5M** to Raspberry Pi Foundation's Experience AI across **nine countries** (1M students, 24 000 educators, March 2026); **Luca** (Mexico) Series A **US$8M** (Jan 2026, 6 Degrees Capital, >US$13M total); Colombia's MinEducación roadmap — **180 000 teachers**, licences for **64 public universities**, with UNESCO and the IDB. 🔴 **Seventh consecutive pass with no LATAM-owned standards row**; the only LATAM artefact added is `javeriana-sso.ts` **inside** a US-owned connector |
+| **Global** | 🔴 **The 2026 market column widened again rather than converging**: **USD 7.50B–11.4B** across four firms that define the market broadly, plus a **USD 1.94B** outlier. Regional shares exist only from the weakest publishers, and one of them prints LATAM at a flat **5% in 2026, 2030 and 2036** — 🔵 **a constant across three forecast horizons is a modelling assumption, not a measurement, and this KB records it as one** |
+
+### Verdicts on p136's actions
+
+- 🔴 **`ACTION BX` — DISCHARGED AND REFUTED**, in source, by a university-owned LGPL-3.0 library.
+- 🟢 **`ACTION BY` — DISCHARGED, NOT REFUTED**: 50% against a 5% threshold.
+- 🟢 **`ACTION BZ` — DISCHARGED, NOT REFUTED**: three languages, three instruments the English probe
+  missed, and one recorded source conflict resolved.
+- 🟢 **`ACTION CA` — DISCHARGED, PREMISE REFUTED**: 3 of 3 match their descriptions.
+- 🟢 **`ACTION CB` — DISCHARGED, PREMISE REFUTED**: 0 of 37, not ≥5.
+- 🔴 **`ACTION CC` — DISCHARGED AND REFUTED**: both "measured absences" were probe artefacts.
+
+### Pre-registered for p138
+
+🟢 **`ACTION CD`** — read the **npm tarball** of `mcp-canvas-lms` (`registry.npmjs.org` answers
+**200** in this channel, newly). 🔴 *Refuted if the published package carries the `LICENSE` the
+repository lacks — in which case `P137-J` is repository hygiene, not a distribution defect.*
+
+🟢 **`ACTION CE`** — test the `P13` seam for real: can `ltijs` v7's `LaunchContext` hand a verified
+`sub` to `canvas-lms-mcp`'s authorization server with no fork of either? 🔴 *Refuted if either
+library needs a patched release — which would put the adapter back above two weeks.*
+
+🟡 **`ACTION CF`** — source-read the **three Moodle connectors** (`csmediapro/moodle-mcp-server`
+AGPL-3.0, `Dymayo/moodler-mcp`, `Jawadh-Salih/moodle-mcp-server`). 🔴 *Refuted if all three match
+their descriptions, as `ACTION CA`'s three did.*
+
+🟡 **`ACTION CG`** — probe Vietnam's **Decision 33/2026/QD-TTg** in Vietnamese, by ministry, for the
+transition date this KB records as conflicting. 🔴 *Refuted if the decree text names no date.*
+
+🟢 **`ACTION CH`** — extend `p137-foreign-holder-tree` to **source-file headers** on the three
+largest `ROOT_ONLY` rows. 🔴 *Refuted if none carries a foreign header — which would make 50% an
+estimate rather than the floor this pass calls it.*
+
+🟡 **`ACTION CI`** — measure **tool-count drift** (README vs About vs code) across the whole
+connector tier. 🔴 *Refuted if fewer than a third of rows disagree with themselves.*
+
+### 🔴 What this pass did NOT achieve, said rather than hidden
+
+- 🔴 **No LATAM-owned standards row — a seventh consecutive pass.** The only LATAM artefact this
+  pass is a Javeriana Cali SSO module **inside** a US-owned repository: the region appears as an
+  integration *target*, never as an owner.
+- 🔴 **Every national instrument in `P137-D` and `P137-H` was read through search results, not from
+  the ministry's own PDF.** `moe.gov.cn`, `moe.go.kr`, `gov.br/mec` and Vietnam's gazette were not
+  fetched in this channel this pass. Primary source, secondary transport — recorded as such.
+- 🔴 **Vietnam's Decision 33 is cited from law-firm briefings**, and its education transition date
+  is **contradictory across two of them**. It is published here as a conflict, not a date.
+- 🔴 **The npm lane opened and went unused.** `registry.npmjs.org` answered 200 for the first time in
+  several passes and no tarball was read (`ACTION CD`).
+- 🔴 **`p137-foreign-holder-tree` reads licence FILES only**, so the `pipwerks`-shaped case — a grant
+  in a source header — is invisible to it. 50% is a floor.
+- 🔴 **Star counts were taken from `github.com` HTML via WebFetch for six rows only**; every other
+  new row says `UNMEASURED` rather than carrying a number this pass did not take.
+
 ## Pass 136 — 2026-10-11
 
 ⏱️ **Twenty-third pass of this date.** 🟢 **All six of p135's pre-registered actions reached and

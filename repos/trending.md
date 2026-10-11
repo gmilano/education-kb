@@ -6,6 +6,61 @@ updated: 2026-10-11
 
 # Education — trending repos (append-only log)
 
+## 2026-10-11 — Pass 137
+
+🔴 **The headline is that this KB's own licence cells are root-only, and now the size of that
+limitation is measured rather than suspected.** `ACTION BY` enumerated the trees of the **20 largest
+rows** on `repos/foundations.md` — **224 591 paths** through blobless depth-1 clones — and read
+**316** licence-shaped files outside the root. **242** are real grants. 🔴 **10 of 20 rows (50%)
+carry a grant held by somebody other than the repository.** The refutation threshold was 5%.
+
+| verdict | rows | what it means for a delivery |
+|---|---|---|
+| 🔴 **`FOREIGN_HOLDER_IN_TREE`** | **10** | the root cell understates the notice obligations |
+| 🟢 `OWN_HOLDER_ONLY` | 2 | tree has further grants, all the project's own |
+| 🟢 `ROOT_ONLY` | 7 | the root file genuinely is the whole story |
+| 🟡 unreadable | 1 | `openeducat_erp`: 14 licence-shaped non-root paths, **none with a family anchor or a dated notice** |
+
+🔵 **The pairing with [`p444-root-vs-tree-family`](../compose/code/p444-root-vs-tree-family/README.md)
+is the real finding.** p444 measured the licence **family** at **92% root-complete**; p137 measures
+**ownership** at **50% root-incomplete**. 🟢 **What you may do is usually in the root file. Whom you
+owe usually is not.**
+
+### 🔴 Two rows where the tree changes the recommendation
+
+- 🔴 **`instructure/canvas-lms`: AGPL-3.0 root, `gems/lti-advantage/LICENSE.txt` MIT held by a named
+  individual.** The LTI Advantage implementation inside the dominant North-American LMS is the
+  **permissive** part of it. Extraction is a live option where reimplementation was assumed.
+- 🆕 **`classroomio/classroomio`: AGPL-3.0 root, ten MIT `skills/*/LICENSE` packs held by three
+  outside individuals.** Vendored **agent skills** are now a licence layer of their own, and they are
+  the part a client redistributes.
+
+### 🟢 Supply added this week, with the licence read from the payload
+
+| repo | licence | ★ / forks | HEAD | note |
+|---|---|---|---|---|
+| 🆕 [`kstateome/lti-launch`](https://github.com/kstateome/lti-launch) | 🟢 **LGPL-3.0** | UNMEASURED | **2026-09-30** | 🔴 **Refutes `T13`'s surviving clause**: launch subject → per-user OAuth grant → Canvas as that user. Kansas State University |
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 Apache-2.0 | 373 (p136) | **v7.0.7, 2026-10-06** | 🔴 **v7.0.0 (09 Sep 2026) is a ground-up TypeScript rewrite**: Node **24+**, Zod validation, **session cookies removed** → `localStorage` + postMessage storage, pluggable backends, Redis JWKS cache, legacy Mongo manager for in-place v5 upgrade. 🟡 A client on v5 now has a dated migration |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 🟢 MIT | **9 / 4** | **2026-10-10** (v2.2.0) | 🟢 OAuth 2.1 authorization **and** resource server for Canvas; RFC 9728 metadata; `400` to a pasted token; pseudonymiser |
+| [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | 🟢 MIT | 56 / 27 | **2026-10-10** (v3.13.10) | 36 tools, **zero writes**; 8 institution SSO modules including **Javeriana Cali** |
+| [`EduBase/MCP`](https://github.com/EduBase/MCP) | 🟢 MIT | 28 / 13 | 2026-09-28 (v2.0.3) | **136 tools** behind `EDUBASE_READONLY` + 12 toolsets + `destructiveHint` |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 MIT | **289 / 96** | — | upstream of a fork family; 🔴 contradicts itself on tool count (102 vs 126) |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 🔴 **SPDX id, no text in the tree** | **103 / 39** | 2026-05-31 | 🔴 `"license": "MIT"` + `"LICENSE"` in `files`; **36-path tree has no licence file** |
+| [`JohannsenLum/canvas-api-mcp`](https://github.com/JohannsenLum/canvas-api-mcp) | 🟢 MIT | 3 / **13** | — | 🔴 a **gateway tool reaching 1 116 endpoints** defeats tool-level allowlisting |
+| [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **AGPL-3.0** | 1 | — | read-only Moodle Web Services client; AGPL on a hosted connector is a conveyance |
+| [`Dymayo/moodler-mcp`](https://github.com/Dymayo/moodler-mcp) | 🟢 MIT (holder **Ghaith AlHallak**, upstream's) | 0 | — | 🟢 **Resolves a p136 cross-owner cluster**: a fork with attribution intact |
+
+### 🔵 Channel state — three changes, two of them openings
+
+| channel | state after p137 |
+|---|---|
+| 🆕 `registry.npmjs.org` | 🟢 **200.** The first non-GitHub host confirmed reachable in several passes; the npm-tarball lane reopens (`ACTION CD`) |
+| 🆕 `curl -sI https://github.com/<slug>` | 🔴 **403 for every slug — including ones that clone successfully in the same minute.** A 403 here is **not** evidence of absence. Existence is established by a `raw.githubusercontent.com` **200** or a clone |
+| 🆕 WebFetch on `github.com` repository pages | 🟢 **Works**, and is this pass's source for stars, forks and About text (`api.github.com` stays 403) |
+| Blobless `--filter=blob:none --no-checkout --depth 1` | 🟢 **Enumerates a 67 589-path tree in seconds and almost no disk** — the instrument behind `ACTION BY` |
+| Public third-party `git clone` | 🟢 Still the primary source-read instrument: **6** repositories cloned and read this pass |
+| `pytest` | 🔴 Still absent; `p137-foreign-holder-tree` ships its own runner (**12 tests, 12 pass**) |
+
 ## 2026-10-11 — Pass 136
 
 🔴 **The headline is that this KB's own row counts are inflated, and the inflation is measurable.**

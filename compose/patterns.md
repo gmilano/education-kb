@@ -6,6 +6,100 @@ updated: 2026-10-11
 
 # Education — compose patterns
 
+**Pass 137, 2026-10-11.** p136's fourteen recipes retained. 🔴 **`P13` is rewritten again and
+shrinks again** — from p136's three-to-four-week buy-and-adapt to **an adapter of about two weeks**,
+because `ACTION BX` found the per-user mapping already implemented in a university-owned library and
+the MCP half already implemented in an MIT one. 🆕 **`P15` is added because the EU deferral changed
+which obligation is late**: Annex III high-risk moved to 2027-12-02 and **Article 50 did not move**.
+🆕 **`P16` is added because Vietnam's education conformity duties are in force as of 2026-08-15** —
+the first such regime anywhere, and this KB had no recipe for it.
+
+🔵 **Every component named below was read this pass or in a prior pass with the licence established
+from the payload.** Where a component was **not** read in source, the row says so.
+
+## 🔁 `P13` rewritten — sanctioned MCP access to an LMS with no new credential *(third revision, p137)*
+
+**The engagement.** An institution wants agents to act inside its LMS *as the person who launched
+them*, with no personal access token pasted anywhere and no password held by the tooling. 🔴 **p135
+called this a 4–6-week build. p136 called it a 3–4-week buy-and-adapt. p137 measures it as an
+adapter**, because three of the four pieces exist.
+
+| piece | component | licence | status after this pass |
+|---|---|---|---|
+| terminate the launch | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) **v7.0.7** | 🟢 Apache-2.0 | 🟢 Verifies an LTI 1.3 launch correctly. 🔴 **v7 is a TypeScript rewrite: Node 24+, no session cookies (`localStorage` + postMessage storage), `Provider` constructed not `setup()`** — budget the migration if the client is on v5 |
+| map launch subject → per-user grant | [`kstateome/lti-launch`](https://github.com/kstateome/lti-launch) | 🔴 **LGPL-3.0**, Java/Spring | 🆕 **The pattern, proven in production code**: `ensureApiTokenPresent()` → `getRefreshToken(eid)` → `/beginOauth` for that user → `storeToken(userId, refreshToken)`. 🔴 **Port the pattern, not the file**: LGPL + Java against a Python/TS agent stack |
+| issue the agent's own audience-bound token | [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) `--auth-profile oauth_brokered` | 🟢 MIT | 🆕 **Already an OAuth 2.1 authorization + resource server**: RFC 9728 protected-resource metadata, audience check, `canvas:read` scope, revocation, Canvas refresh, **`400` to a pasted `X-Canvas-Token`** |
+| generic IdP instead of Canvas | [`giantswarm/mcp-oauth`](https://github.com/giantswarm/mcp-oauth) or [`atrawog/mcp-oauth-gateway`](https://github.com/atrawog/mcp-oauth-gateway) | 🟢 Apache-2.0 | carried from p136: JWKS-verified `id_token`, refuses to issue with no subject claim, RFC 8707 resource binding |
+| 🔴 **the bespoke part** | the LTI 1.3 → broker adapter | — | 🔴 **Still nothing maps a verified 1.3 `id_token` onto an RFC 8707-bound MCP token.** Proven in code, not assumed: `ltijs` v7 mints only `client_credentials` with the **tool's** client id as `sub` |
+
+**Shape of the work (≈2 weeks, one engineer).**
+1. Stand up `ltijs` v7 as the tool; take `sub`, `deployment_id` and the course context from the
+   verified launch (the `LaunchContext` v7 hands the handler).
+2. Persist a per-user upstream grant in the `OauthTokenService` shape — `get` / `store` / `update`
+   keyed by the launch subject. 🔵 **This is the piece `lti-launch` proves is sufficient.**
+3. Point `canvas-lms-mcp`'s `oauth_brokered` profile at that store, so the MCP access token it issues
+   is bound to the same subject and carries its own audience.
+4. Pseudonymise before anything leaves the boundary: `canvas-lms-mcp` ships
+   `src/pseudonym/pseudonymizer.ts`.
+5. 🔴 **Acceptance test that makes the pattern honest**: a request bearing a *valid* MCP token for a
+   *different* audience must be refused. That string exists in the implementation — *"Access token
+   was not issued for this resource"*.
+
+🔴 **What still kills this build:** an institution whose LMS is **not** Canvas. `canvas-lms-mcp`'s
+broker is Canvas-specific, `lti-launch` is Canvas-specific, and the Brightspace and Moodle
+connectors on the shelf hold credentials instead of brokering them. 🟡 **For Brightspace,
+`D2L_PASSWORDLESS=true` plus a token-paste path is the stopgap** — and it is a stopgap, not the
+pattern.
+
+## 🆕 `P15` — Ship the Article 50 obligation that did NOT move, while the high-risk clock runs *(new, p137 — EMEA)*
+
+**The engagement.** A European institution or edtech vendor was told to be conformity-ready by
+**2026-08-02**. 🔴 **That date moved to 2027-12-02 for Annex III** (education) under **Regulation
+(EU) 2026/1744** (in force 2026-07-27). 🟢 **Article 50 transparency did not move: it applied from
+2026-08-02**, with a grace period to **2026-12-02** for systems already on the market. So the
+client's *late* obligation is the marking one, and the expensive one has fourteen months.
+
+| step | component | licence | what it does |
+|---|---|---|---|
+| mark synthetic output | `compose/code/aiact-50-2-marking` | this KB | Article 50(2) marking surface, with tests |
+| package the provenance | `compose/code/aiact-50-2-pack` | this KB | an XSD-validated marking pack |
+| find what is already exposed | `compose/code/aiact-50-2-exposure`, `-spans` | this KB | which outputs and spans fall under the duty |
+| disclose at the interaction boundary | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) v7 launch handler | 🟢 Apache-2.0 | the launch is where a learner meets the system, so it is where the disclosure belongs |
+| keep the conformity file open | `intel/policy-matrix.tsv` | this KB | 🟡 Annex III duties by **2027-12-02**: a tracked file, not a sprint |
+
+🔵 **Why this sells in October 2026 and not in 2027:** the deferral was granted because harmonised
+standards and national authorities were not ready, so **the control set a client will be audited
+against does not exist yet** — while the marking duty is already enforceable. 🟢 **Do the enforceable
+half now and keep a dated register for the deferred half.** 🔴 **One conflict to disclose to a
+client rather than hide**: one source dates the already-on-market grace to **2027-02-02** rather than
+2026-12-02; treat 2026-12-02 as the planning date and say why.
+
+## 🆕 `P16` — Conformity dossier for an education AI system under Vietnam's Decision 33 *(new, p137 — APAC)*
+
+**The engagement.** A platform operating in Vietnam runs one of the **three education classes** that
+Decision **33/2026/QD-TTg** made high-risk, **effective 2026-08-15**: self-study content generated
+from uncontrolled sources; **testing, grading or ranking learners**; behaviour monitoring using
+biometric data. Duties: conformity assessment, **registration in the National AI Database**, human
+oversight, incident reporting.
+
+| duty | how this KB's shelf discharges it | component | licence |
+|---|---|---|---|
+| **human oversight** on grading | 🟢 **Never let the agent be the grader**: draft-only, human commit | `compose/code/grading-draft-gate` + [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) read tools | this KB / 🟢 MIT |
+| **bounded write surface** | 🟢 `EDUBASE_READONLY` + per-toolset selection + `destructiveHint` is the pattern to copy: a connector that can be *configured* to be unable to write | [`EduBase/MCP`](https://github.com/EduBase/MCP) | 🟢 MIT |
+| 🔴 **no uncontrolled-source self-study content** | serve retrieval from an institution-controlled corpus only; offline-first stacks make the boundary physical | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (🟢 MIT) + [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) (🟢 Apache-2.0) | 🟢 permissive |
+| **no biometric monitoring** | state it as a *design exclusion* in the dossier; the cheapest conformity argument is the capability you do not ship | — | — |
+| **identity, so the oversight claim is auditable** | `P13`'s broker chain: a token bound to the launching person, not a shared key | `ltijs` v7 + `canvas-lms-mcp` + `lti-launch` pattern | 🟢/🟢/🔴 LGPL |
+| **incident reporting** | one append-only log per tool call with the subject the broker established, not the one the caller claimed | this KB's `mcp-allowlist-gateway` notes | this KB |
+
+🔴 **What this pattern cannot yet do, said plainly.** The decree's **transition date for systems
+already running is contradictory across the two briefings this KB could reach** (2027-09-01 vs an
+unspecified additional period from 2026-08-15), and **no Vietnamese-language read of the decree has
+been done** (`ACTION CG`). 🔴 **There is also no Vietnamese-owned repository anywhere on this KB's
+pages**, so every component above is foreign-owned — which is itself a procurement risk in a
+jurisdiction that registers systems nationally. 🟡 **Scope a dossier, not a certification.**
+
+---
+
 **Pass 135, 2026-10-11.** p134's twelve recipes retained; 🔴 **`P13` is added and it is a
 prerequisite for `P11`, not an alternative** — p135 read the source of all three agent bridges and
 found that two accept the user's identity on trust, so the pattern this KB has been recommending as

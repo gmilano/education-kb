@@ -1,0 +1,22 @@
+slug	tree_paths	root_licence	nonroot_licence_shaped	nonroot_grants	foreign_holders	verdict	foreign_sample
+Crosstalk-Solutions/project-nomad	664	1	0	0	0	ROOT_ONLY	
+bigbluebutton/bigbluebutton	4826	1	2	2	2	FOREIGN_HOLDER_IN_TREE	bigbluebutton-web/COPYING.LESSER=>Free Software Foundation, Inc. <http://fsf.org/ [LGPL] | build/packages-template/bigbluebutton/license.txt=>Free Software Foundation, Inc. <http://fsf.org/ [LGPL]
+openedx/openedx-platform	9273	1	18	11	9	FOREIGN_HOLDER_IN_TREE	common/static/css/vendor/pdfjs/cmaps/LICENSE=>Copyright 1990-2009 Adobe Systems Incorporated [BSD] | common/static/js/vendor/pdfjs/web/cmaps/LICENSE=>Copyright 1990-2009 Adobe Systems Incorporated [BSD] | common/static/js/vendor/pdfjs/web/standard_fonts/LICENSE_FOXIT=>PDFium Authors. All rights reserved [BSD]
+moodle/moodle	67589	1	96	87	66	FOREIGN_HOLDER_IN_TREE	lib/bundles/fontawesome/LICENSE.txt=>Fonticons, Inc. (https://fontawesome.com) [MIT] | public/admin/tool/brickfield/LICENSE_QUAIL.txt=>Free Software Foundation, Inc. <http://fsf.org/ [MIT] | public/admin/tool/mfa/factor/totp/extlib/OTPHP/LICENSE=>Florent Morselli [MIT]
+instructure/canvas-lms	22662	2	23	22	4	FOREIGN_HOLDER_IN_TREE	gems/attachment_fu/LICENSE=>rick olson [AGPL] | gems/lti-advantage/LICENSE.txt=>Nathan Mills [MIT] | packages/canvas-rce/LICENSE=>Free Software Foundation, Inc. <http://fsf.org/ [AGPL]
+oppia/oppia	7405	2	13	8	0	OWN_HOLDER_ONLY	
+frappe/lms	1606	1	0	0	0	ROOT_ONLY	
+learnhouse/learnhouse	2489	1	1	1	0	OWN_HOLDER_ONLY	
+classroomio/classroomio	5137	1	14	10	10	FOREIGN_HOLDER_IN_TREE	skills/animation-vocabulary/LICENSE=>Emil Kowalski [MIT] | skills/apple-design/LICENSE=>Emil Kowalski [MIT] | skills/emil-design-eng/LICENSE=>Emil Kowalski [MIT]
+sakaiproject/sakai	18127	1	76	58	13	FOREIGN_HOLDER_IN_TREE	content/content-tool/tool/src/webapp/js/jstree/LICENSE-MIT=>Ivan Bozhanov [MIT] | delegatedaccess/NOTICE=>The Trustees of Columbia University in the City of New York [] | libs/elfinder/LICENSE=>shen zhihong [BSD]
+learningequality/kolibri	5749	1	8	8	1	FOREIGN_HOLDER_IN_TREE	platforms/debian-server/debian/copyright=>José L. Redrejo Rodríguez <jredrejo@debian.org [GPL]
+overhangio/tutor	249	1	0	0	0	ROOT_ONLY	
+chamilo/chamilo-lms	13231	2	28	22	17	FOREIGN_HOLDER_IN_TREE	"public/documentation/license.txt=>Free Software Foundation, Inc. <http://fsf.org/ [AGPL] | public/fonts/Harmattan/LICENSE.txt=>The C&MA Guinea Fulbe Team; Copyright renewed 2011-2012, George W. Nuss (http://www.fulbefouta.com), with the Reserved Font Name ""Fouta"". Copyright (c) 2004-2015, SIL International (http://scripts.sil.org), with Reserved Font Names 'Andika' and 'SIL'. Copyright (c) 2014-2016, SIL International (http://www.sil.org/), with Reserved Font Names ""Harmattan"" and ""SIL"" [MIT] | public/main/inc/lib/javascript/d3/d3.LICENSE=>Michael Bostock [BSD]"
+openeducat/openeducat_erp	1345	1	14	0	0	ROOT_ONLY	
+adaptlearning/adapt_framework	118	1	0	0	0	ROOT_ONLY	
+ILIAS-eLearning/ILIAS	17073	1	6	1	1	FOREIGN_HOLDER_IN_TREE	components/ILIAS/UI/resources/images/license.txt=>Free Software Foundation, Inc [LGPL]
+openedx/codejail	43	2	0	0	0	ROOT_ONLY	
+openedx/XBlock	193	2	0	0	0	ROOT_ONLY	
+OpenOLAT/OpenOLAT	25823	2	17	13	10	FOREIGN_HOLDER_IN_TREE	src/main/webapp/static/bootstrap/LICENSE=>Twitter, Inc [MIT] | src/main/webapp/static/font-awesome/LICENSE.txt=>Fonticons, Inc. (https://fontawesome.com) [MIT] | src/main/webapp/static/js/jquery/qrcodejs/LICENSE=>davidshimjs [MIT]
+academico-sis/academico	692	1	0	0	0	ROOT_ONLY	
+# probed=20 with_foreign_holder=10 share=50.00%

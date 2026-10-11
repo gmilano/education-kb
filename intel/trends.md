@@ -6,6 +6,98 @@ updated: 2026-10-11
 
 # Education — current trends
 
+**Pass 137, 2026-10-11.** p136's fifteen trends retained. 🔴 **`T13` is rewritten for the second
+consecutive pass, and this time by source code rather than by a better query**: the mapping it
+called absent is library code owned by a US university. 🟢 **`T14` extends from licence metadata to
+CAPABILITY metadata** — four of four connectors in one fork family contradict themselves about their
+own tool count. 🟢 **`T15` survives its own falsifier by a factor of ten** (50% against a 5%
+threshold) and gains the clause that makes it usable. 🆕 **`T16` is added: the first binding
+education-AI conformity regime in force is Vietnam's, not the EU's.** Each change states the
+measurement and the condition that would overturn it.
+
+### 🔴 p137 rewrites `T13`: the LTI→OAuth-subject mapping exists, and the residue is one standard version wide
+
+| p136's clause | p137's measurement, in source |
+|---|---|
+| *"Nothing maps a verified LTI 1.3 launch onto a broker's subject and audience"* | 🔴 [`kstateome/lti-launch`](https://github.com/kstateome/lti-launch) (**LGPL-3.0**, Kansas State University, HEAD 2026-09-30) maps a verified launch onto a **per-user** OAuth grant: `ltiSession.getEid()` → `OauthTokenService.getRefreshToken(userId)` → `/login/oauth2/auth` for that user → Canvas **as** that user |
+| *"the whole remaining bespoke surface of the sanctioned path"* | 🟡 **Narrower**: the mapping is anchored on **LTI 1.1** (OAuth 1.0a consumer signing) and returns a platform API token, **not** an RFC 8707-bound token for an MCP resource server |
+| *"none of the six brokers terminates an LTI launch"* | 🟢 **Still true**, and now accompanied by its mirror image: a 9★ education-native row, [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) (**MIT**), *is* an OAuth 2.1 authorization **and** resource server with RFC 9728 metadata and audience checks |
+| *(unstated — assumed from READMEs)* | 🔴 **`ltijs` v7.0.7 confirms the gap in code**: its only outbound token is `client_credentials` with `{sub: platform.clientId, iss: platform.clientId, aud: platform.authorizationServer}`. **The tool is the subject by design**, and the launch user's `sub` is stored and never leaves |
+
+🔵 **The trend statement that survives**: *the credential blocker was solved, the
+identity-assertion blocker was solved twice in parts, and what remains is an adapter between two
+standard versions.* 🔴 **Falsifier for the next pass**: if `ltijs` v7's `LaunchContext` cannot hand a
+verified `sub` to `canvas-lms-mcp`'s authorization server without forking either library, the
+adapter is bigger than two weeks and this clause is wrong (`ACTION CE`).
+
+### 🟢 `T14` extended — from licence metadata to CAPABILITY metadata
+
+`T14` says declared metadata is systematically wrong in the direction of institutional code. 🔴 **The
+same defect now has a second, cheaper-to-measure form**: a connector's declared **tool count**.
+
+| repo | About | README / manifest |
+|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) **289★** | *up to 102 tools* | *up to 126 tools* |
+| [`abr-Projects/canvas-mcp`](https://github.com/abr-Projects/canvas-mcp) (fork) | *80+ tools, 5 skills* | *101 tools, 8 skills* |
+| [`lindsay-cheng/canvas-mcp`](https://github.com/lindsay-cheng/canvas-mcp) (fork) | *102 tools* | *103 tools* |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) **103★** | *Version 2.2 · 54 tools* | README **v2.3.0**, `package.json` **2.3.1** |
+
+🔵 **Four of four, including the upstream.** A KB row that quotes a tool count inherits the drift, so
+this KB now counts from source: **136** for `EduBase/MCP` (57 get / 41 post / 24 delete / 10 patch /
+3 put), **36** for `brightspace-mcp-server`, all read-only. 🔴 **And the same class covers standards
+names used as product names**: `canvas-lms-mcp`'s *"New Quizzes (LTI)"* is Canvas's feature name —
+the code reads `is_quiz_lti_assignment` and implements no LTI, so a topic- or keyword-level LTI probe
+false-positives on it.
+
+### 🟢 `T15` survives its falsifier by a factor of ten, and gains the clause that makes it usable
+
+🔴 **`ACTION BY`: 10 of the 20 largest rows (50%) carry a licence file whose holder is not the
+repository's own.** The refutation threshold was 5%. **224 591** tree paths, **316** non-root
+licence-shaped files, **242** real grants (`compose/code/p137-foreign-holder-tree`, 12 tests).
+
+🔵 **The new clause comes from reading it against
+[`p444-root-vs-tree-family`](../compose/code/p444-root-vs-tree-family/README.md), which measured the
+root licence **family** as complete **92%** of the time:**
+
+> 🟢 **A root licence cell predicts what you may DO. It does not predict whom you OWE.**
+> Family: 92% root-complete. Ownership: 50% root-incomplete, in the largest rows.
+
+🔴 **Two instances that change a decision rather than a caution**: `instructure/canvas-lms` is
+AGPL-3.0 at the root and ships **MIT** LTI Advantage code held by a named individual four levels
+down; `classroomio/classroomio` is AGPL-3.0 and vendors **ten MIT agent-skills packs** held by
+outsiders. 🟡 **And 50% is a floor**: the instrument reads licence *files*, so a grant inside a
+source header — the `pipwerks` case — is invisible to it (`ACTION CH`).
+
+## 🆕 `T16` — The first binding education-AI conformity regime in force is Vietnam's, not the EU's *(new, p137)*
+
+🔴 **Vietnam:** AI Law **No. 134/2025/QH15** in force **2026-03-01**; Decision **No.
+33/2026/QD-TTg** (issued 2026-06-30) **effective 2026-08-15** lists **46 high-risk AI systems** over
+six sectors, **three of them education** — generating self-study content from uncontrolled data
+sources, **testing/grading/ranking learners**, and monitoring learner behaviour with biometric data.
+Duties: conformity assessment (third-party or self-assessment per the decision's pathway),
+registration in the **National AI Database**, human oversight, incident reporting.
+
+🔴 **The EU moved the other way on the same obligation class.** The Digital Omnibus on AI —
+**Regulation (EU) 2026/1744**, in force **2026-07-27** — defers **Annex III** high-risk duties, which
+is where education sits, from **2026-08-02** to **2027-12-02** (Annex I embedded: **2028-08-02**).
+🟢 **Article 50 transparency was not deferred and applied from 2026-08-02**, with a grace period to
+**2026-12-02** for systems already on the market.
+
+🔵 **Why this is a trend and not a news item.** For three passes this KB has sold the EU's clock as
+*the* compliance driver and recorded APAC as *"mandates and no market"*. 🟢 **Both halves flip**: the
+jurisdiction with live education-AI conformity duties is in APAC, and the EU's live duty is the
+*transparency* one — narrower, cheaper, and already late. A single engagement therefore splits into
+two differently-shaped pieces (`compose/patterns.md` → `P15` for the EU, `P16` for Vietnam).
+
+🔴 **Falsifiers, stated:** `T16` fails if Vietnam's decree text (read in Vietnamese, `ACTION CG`)
+grants education systems a transition that runs past **2027-12-02**, since the EU's deferred date
+would then arrive first after all; and it weakens if another jurisdiction is found whose education-AI
+conformity duties were already in force before **2026-08-15**. 🔴 **Both sources for the Vietnamese
+dates are law-firm briefings, and they contradict each other on the transition**, which is recorded
+as a conflict rather than resolved.
+
+---
+
 **Pass 135, 2026-10-11.** p134's trends retained; 🔴 **`T12` is qualified by the measurement that
 finished its own register — the sanctioned layer is not uniformly mature, and the variable is the
 standard's AGE** — **`T10`'s probe rule is generalised from a fact about one word into a rule about
