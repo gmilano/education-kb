@@ -35,6 +35,23 @@ and the holder line read inside the operative text.**
 | Blackboard | 🟡 **yes, one, and it is student-side** | 🆕 `alejooroncoy/campus-cli` (ISC, 22 tags) |
 | Moodle | 🔴 **still nothing** | `csmediapro/moodle-mcp-server` is AGPL-3.0; `a2br/moodle-mcp` is MIT with **0** releases |
 
+🟡 **Release RECENCY, because a count without a date is the exact failure this pass is about.**
+Every latest tag was dated over the git lane with `tag_date.sh` (no GitHub API), measured
+**2026-10-11**:
+
+| address | latest | dated | age | object |
+|---|---|---|---|---|
+| [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli) | `v2.2.0` | **2026-08-26** | 🟡 46 d | annotated tag |
+| [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) | `v0.1.5` | **2026-07-25** | 🟡 78 d | annotated tag |
+| [`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp) | `v0.1.7` | **2026-07-25** | 🟡 78 d | annotated tag |
+| [`admin978/canvas-mcp`](https://github.com/admin978/canvas-mcp) | `v0.1.3` | **2026-07-23** | 🟡 80 d | lightweight tag |
+
+🔵 **So all four are RELEASED and none is being released weekly** — these are working bases,
+not moving targets, which for a fork-and-harden engagement is the better of the two.
+🔴 **One package/repository divergence, the `P840` class**: `campus-cli`'s own README installs
+`campus-cli@2.2.3` from npm while its newest git tag is `v2.2.0`. 🟢 **npm is ahead of the tags, so
+pin the npm version and read the code at `main`, not at the tag.**
+
 🔴 **The governance warning that travels with `campus-cli` and must be said before it is proposed:
 it authenticates with the STUDENT's own SSO session and needs no institutional OAuth key.** 🔵 **That
 is exactly why it exists and exactly why an institution cannot adopt it as-is** — it is a template
