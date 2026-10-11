@@ -1,0 +1,29 @@
+# p119 ACTION I - the LIVENESS and IDENTITY census over the KB's 249 addresses.
+# Columns: slug, class, evidence
+# class:
+#   ARCHIVED        GitHub archived flag is true - read-only, cannot accept a PR
+#   DEPRECATED-SELF repo is live but its own description declares it dead
+#   FORK            fork:true - carried by this KB as if it were a canonical project
+#   STALE-ADDRESS   resolves over git by redirect; canonical name differs (SHA-identical)
+#   ALIAS-PAIR      two held addresses, one repository, proven by identical HEAD SHA
+#   INDEX-MISS      git resolves, not a fork, no rename target found - unexplained
+adlnet/SCORM-to-xAPI-Wrapper	ARCHIVED	search API archived=true; 99 stars; last update 2026-03-04
+adlnet/xAPI-SCORM-Profile	ARCHIVED	search API archived=true; 42 stars; last update 2026-03-12
+adlnet/SCORM-to-TLA-Roadmap	ARCHIVED	search API archived=true; 7 stars; last update 2026-03-12
+moodlehq/moodle-tool_dataprivacy	ARCHIVED	search API archived=true; 8 stars; default branch MOODLE_34_STABLE
+nsip/curriculum-mapper	ARCHIVED	search API archived=true; 1 star; last update 2023-01-28
+kuali/rice	DEPRECATED-SELF	description: "DEPRECATED - see https://github.com/KualiCo/rice for latest"
+Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy	DEPRECATED-SELF	description opens "(Deprecated)"
+atutor/ATutor	DEPRECATED-SELF	description opens "NO LONGER USER LEVEL SUPPORTED"
+GEMLab-HKU/Unlearn_and_Relearn	FORK	fork:true; 5 stars; AIED 2026 full-paper repo carried as original
+mitodl/open-learning-ai-tutor	FORK	fork:true; 1 star; published on the agent shelf as "MIT Open Learning's tutor"
+mlx-cassio/awesome-eu-ai-act	FORK	fork:true; 0 stars; fork of GenAI-Gurus/awesome-eu-ai-act (106 stars), both held
+CSR2017/edfi-oneroster	FORK	fork:true; 0 stars
+openedx/edx-platform	ALIAS-PAIR	HEAD 2e46ebdf508c == openedx/openedx-platform; BOTH in slugs249
+openedx/openedx-platform	ALIAS-PAIR	HEAD 2e46ebdf508c == openedx/edx-platform; the indexed/canonical spelling
+frdel/agent-zero	ALIAS-PAIR	HEAD e3051fb584b1 == agent0ai/agent-zero; BOTH in slugs249
+agent0ai/agent-zero	ALIAS-PAIR	HEAD e3051fb584b1 == frdel/agent-zero; the indexed/canonical spelling
+project-sunbird/knowledge-platform	STALE-ADDRESS	HEAD adca9749a0ce == Sunbird-Knowlg/knowledge-platform
+project-sunbird/sunbird-lms-service	STALE-ADDRESS	HEAD 48c79a862038 == Sunbird-Lern/sunbird-lms-service
+openedx/ease	STALE-ADDRESS	HEAD 056da0adc6f3 == edx/ease; neither spelling is in the search index
+garethmanning/claude-education-skills	INDEX-MISS	git HEAD 6bbbce418f82 resolves; fork:true returns nothing; no rename target found

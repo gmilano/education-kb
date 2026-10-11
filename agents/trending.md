@@ -4,6 +4,90 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Pass 119 — 2026-10-11 (sixth pass of this date), 04:3x–05:2x UTC
+
+🔵 **APPEND-ONLY page. This section is added above p118's and nothing below it is edited.**
+
+🔴 **What is new this week is not an agent, and for the second pass running it is not a discovery
+either — it is that three of the agents on this KB's shelf are not the kind of thing the shelf
+says they are.** `mitodl/open-learning-ai-tutor`, carried as *"MIT Open Learning's tutor"*, is a
+**fork with 1★**. Two more shelf entries are forks with 5★ and 0★, and one of those is a fork of
+another address this same KB holds at 106★.
+
+### 🔴 `P119-B` — the `—` in the star column was never the 403
+
+`intel/market.md` has said for **nineteen consecutive passes** that `api.github.com http=403` is
+*"the cause of every `—` in a ★ column."* It is not. **GitHub's repository search excludes forks
+unless `fork:true` is passed**, and four of this KB's addresses are forks. One query flag turned
+four permanent dashes into numbers.
+
+| address | ★ | `fork` | what this KB published |
+|---|---|---|---|
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | **1** | 🔴 true | *"MIT Open Learning's tutor"*, stars `—` |
+| [`GEMLab-HKU/Unlearn_and_Relearn`](https://github.com/GEMLab-HKU/Unlearn_and_Relearn) | **5** | 🔴 true | AIED 2026 full paper |
+| [`mlx-cassio/awesome-eu-ai-act`](https://github.com/mlx-cassio/awesome-eu-ai-act) | **0** | 🔴 true | 🔴 a fork of [`GenAI-Gurus/awesome-eu-ai-act`](https://github.com/GenAI-Gurus/awesome-eu-ai-act) (**106★**) — **both held as separate entries** |
+| [`CSR2017/edfi-oneroster`](https://github.com/CSR2017/edfi-oneroster) | **0** | 🔴 true | an Ed-Fi ↔ OneRoster bridge |
+
+🔵 **The channel disagreement is the instrument.** `git ls-remote` follows a rename and resolves
+a fork without comment; the search index answers only on the canonical, non-fork name. An address
+`git` resolves and search does not is *evidence*, and this pass classified every one of the ten
+rather than dropping them.
+
+### 🟢 Agents — stars measured from the API this pass
+
+| agent | ★ this pass | p118 | Δ | licence, from the tree |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **41 108** | 41 103 | 🟢 +5 | 🟢 Apache-2.0 |
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | **76 876** | 76 867 | 🟢 +9 | 🟢 MIT |
+| [`huggingface/agents-course`](https://github.com/huggingface/agents-course) | **33 419** | — | 🆕 | 🟢 Apache-2.0 |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | **29 778** | 29 775 | 🟢 +3 | 🟢 Apache-2.0 |
+| [`agent0ai/agent-zero`](https://github.com/agent0ai/agent-zero) | **19 420** | 19 420 | ⏸️ 0 | 🟢 MIT |
+| [`HKUDS/Paper2Slides`](https://github.com/HKUDS/Paper2Slides) | **3 834** | — | 🆕 | 🟢 MIT |
+| [`ai-builders-foundation/ai-builders-curriculum`](https://github.com/ai-builders-foundation/ai-builders-curriculum) | **1 422** | — | 🆕 | 🟢 MIT |
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | **825** | 🔴 772 | 🔴 **+53, and 772 was a stale cell, not a Δ** | 🟢 MIT |
+| [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) | **453** | — | 🆕 | 🟢 MIT |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | **389** | 389 | ⏸️ 0 | 🟢 MIT |
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🔴 **1** | `—` | 🔴 **fork** | 🟢 MIT |
+
+### 🔴 `P119-A` — the licence finding of the week: `UNREAD` is not safe
+
+🔴 **`leemonade/leemons` was published on the foundations shelf as 🟢 Apache-2.0. Its root
+`LICENSE.md` is a "Fair Code License" v1.0 built on the Sustainable Use License, with ZERO
+occurrences of the word "apache".** It bills **€100 000** past 1 000 users or €1 M revenue, plus
+a **5 % royalty** after year one, and permits redistribution only free of charge and
+non-commercially.
+
+🔵 **And p118's 957-claim whole-KB sweep could not have caught it, by design:** the grant is a
+prose index → measured `UNKNOWN` → verdict `UNREAD` → and the repair script, correctly, *cannot
+touch an unmeasured row*. 🔴 **42 of p118's 55 `UNREAD` rows, across 22 addresses, claim MIT,
+Apache-2.0 or BSD against a grant the sweep could not read.** p118's own `P118-K` wrote the
+reason down — *absence of a licence reads as permission* — and applied it to the measurement but
+not to the verdict.
+
+### 🔴 Five repositories on this KB's shelves are ARCHIVED, and none said so
+
+`adlnet/SCORM-to-xAPI-Wrapper` (99★), `adlnet/xAPI-SCORM-Profile` (42★),
+`adlnet/SCORM-to-TLA-Roadmap` (7★), `moodlehq/moodle-tool_dataprivacy` (8★),
+`nsip/curriculum-mapper` (1★). An archived repo is read-only: no patch, no CVE fix, no issue
+reply. 🔴 **`intel/market.md` was selling `adlnet/xAPI-SCORM-Profile` as *"permissive substrate"*
+for a compliance build.** 🟢 **And `Gap 354` has an answer it never looked for**: it records
+`SCORM-to-xAPI-Wrapper` as an *"upstream-askable negative"*. The upstream is archived.
+
+### 🟡 `Gap 402` weakens a FOURTH consecutive pass — 0 new, 19 rejected as already held
+
+The eight mandated searches ran, global and once per region. **Zero new addresses, zero new
+regulation tokens.** Nineteen candidate tokens were checked one at a time against the held KB and
+every one was already there — Digital Education Council, the UK AI Adoption Summit's £200 M,
+Bridge AI, Skills England, UNU-IAS, OpenAI's ANZ policy lead, Carnegie Mellon / Gates, TCS ×
+Pearson, Georgia SB 179, Florida SB 1194, Schola Europaea `2025-01-D-66`, AI Week LATAM,
+LearnUpon, Alteryx, Observatorio IA, ANUIES, ILIA.
+
+🔴 **p117: 4 new / 13 rejected → p118: 0 / 15 → p119: 0 / 19.** The brief's fixed query set is
+exhausted on this industry; the global queries now return market-research landing pages and
+vendor blogs almost exclusively. 🟢 Recorded as a property of the query set, not as an absence of
+news.
+
+
 ## 🟢 Pass 118 — 2026-10-11 (fifth pass of this date), 03:4x–04:2x UTC
 
 🔵 **APPEND-ONLY page. This section is added above p117's and nothing below it is edited.**

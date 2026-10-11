@@ -6,6 +6,88 @@ updated: 2026-10-11
 
 # Education — vertical platforms
 
+**Pass 119, 2026-10-11.** ⏱️ **Sixth pass of this date** (window **04:3x → 05:2x UTC**).
+
+🟢 **Instrument: `compose/code/p119-carried-column-audit/`, discharging `ACTIONS F, G, H, I`.
+This page carried **3** of the 7 wrong star cells — more than any other — and **1** of the rows
+needing an `ARCHIVED` marker. All repaired in this commit.**
+
+## 🔴 🆕 `P119-H` — the platform shelf's star column was rounded, not measured, below the fold
+
+🔴 **All three of this page's wrong cells were written in k-form — `1.2k`, `1.1k`, `1.3k` — and
+all three sit below 90 % page depth.** A k-form figure was never a measurement; it is a
+recollection. The top of this page is re-measured every pass and scores `EXACT`; the bottom
+carries numbers no pass has touched since it wrote them.
+
+| platform | published | measured this pass | Δ |
+|---|---|---|---|
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `1.2k` | **1 237** | +37 |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | `1.1k` | **1 127** | +27 |
+| [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | `1.3k` | **1 273** | 🔴 **−27 — the only cell in the sweep that OVERSTATED** |
+
+🟡 **Said plainly: this is a weak finding in kind.** A star count 3 % stale is the same fact
+slightly out of date, unlike a wrong licence, which is a different obligation. The column was
+wrong; it was not dangerous. 🔵 **The depth correlation is the part worth keeping** — and
+`ACTION L` is pre-registered to re-measure every live page's sub-78 % tail, where every single
+wrong cell in this sweep was found.
+
+## 🟢 The vertical platform shelf — grant and liveness from the default branch
+
+🔵 **These are the real systems a client already runs, which AI gets built *on top of*. The
+licence decides whether "on top of" means a fork or an integration; `archived` decides whether it
+means anything at all.**
+
+| platform | layer | ★ | grant, from the default branch | can a client ship a closed derivative? |
+|---|---|---|---|---|
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | virtual classroom | **9 242** | 🔴 LGPL-3.0 | 🟡 link, do not fork |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | LMS | **8 196** | 🔴 AGPL-3.0 | 🔴 no — network copyleft |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | LMS | **7 473** | 🔴 GPL-3.0 | 🔴 no |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | guided lessons | **6 845** | 🟢 Apache-2.0 | 🟢 **yes** |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | LMS | **6 863** | 🔴 AGPL-3.0 | 🔴 no — network copyleft |
+| [`frappe/lms`](https://github.com/frappe/lms) | LMS | **3 299** | 🔴 AGPL-3.0 | 🔴 no |
+| [`cortezaproject/corteza`](https://github.com/cortezaproject/corteza) | low-code / CRM | **2 171** | 🟢 Apache-2.0 | 🟢 **yes** |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | LMS | **2 335** | 🔴 AGPL-3.0 | 🔴 no |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | LMS | **1 717** | 🔴 AGPL-3.0 | 🔴 no |
+| [`Elgg/Elgg`](https://github.com/Elgg/Elgg) | social learning | **1 677** | 🟡 multi-grant (GPL-2.0 core) | 🟡 read the tree first |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | HE LMS | **1 237** | 🟢 **ECL-2.0** | 🟢 **yes** — Apache-derived, the permissive HE option |
+| [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | course platform | **1 273** | 🔴 AGPL-3.0 | 🔴 no |
+| [`course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud) | MOOC (APAC, CN) | **1 173** | 🟢 MIT | 🟢 **yes** |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | Open edX distribution | **1 127** | 🔴 AGPL-3.0 | 🔴 no |
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | ERP / CRM | **1 129** | 🟢 Apache-2.0 | 🟢 **yes** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | offline-first LMS | **1 141** | 🟢 **MIT** | 🟢 **yes** — the offline/low-bandwidth option |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | LMS | **1 009** | 🔴 GPL-3.0 | 🔴 no |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | LMS | **979** | 🔴 AGPL-3.0 | 🔴 no |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | education ERP | **886** | 🔴 LGPL-3.0 | 🟡 link, do not fork — `19.0`, tracks the Odoo major |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | SIS (LATAM, BR) | **718** | 🔴 AGPL-3.0 | 🔴 no |
+| [`frappe/education`](https://github.com/frappe/education) | school management | **660** | 🔴 GPL-3.0 | 🔴 no |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | SIS | **645** | 🔴 GPL-2.0 | 🔴 no — default branch `mobile` |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | school management | **635** | 🔴 GPL-3.0 | 🔴 no — default branch `v31.0.00` |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | lecture capture | **506** | 🟢 **ECL-2.0** | 🟢 **yes** |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | LMS | **505** | 🔴 GPL-3.0 | 🔴 no — `release_11` |
+| [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | assessment | **518** | 🟡 AGPL-3.0 + MIT portions | 🟡 read the tree first |
+| [`pressbooks/pressbooks`](https://github.com/pressbooks/pressbooks) | OER publishing | **457** | 🔴 GPL-3.0 | 🔴 no — `dev` |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | LMS | **447** | 🟢 **Apache-2.0** | 🟢 **yes** |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | school management | **404** | 🟢 **MIT** | 🟢 **yes** |
+| [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | LTI 1.3 bridge | **376** | 🟢 **Apache-2.0** | 🟢 **yes** — the process boundary copyleft does not cross |
+| [`unitime/unitime`](https://github.com/UniTime/unitime) | timetabling | **350** | 🔴 GPL-3.0 | 🔴 no |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | SIS | **345** | 🔴 GPL-2.0 | 🔴 no |
+| [`openfun/richie`](https://github.com/openfun/richie) | course catalogue CMS | **316** | 🟢 **MIT** | 🟢 **yes** (EMEA, FR) |
+| [`leemonade/leemons`](https://github.com/leemonade/leemons) | LXP | **292** | 🔴 **"Fair Code License" v1.0 — NOT OSI** | 🔴 **no, and worse: €100 000 past 1 000 users + 5 % royalty. See `P119-A`** |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | advising CRM | **340** | 🔴 **Elastic-2.0 — NOT OSS** | 🔴 no managed service at all |
+| [`moodlehq/moodle-tool_dataprivacy`](https://github.com/moodlehq/moodle-tool_dataprivacy) | GDPR tooling | **8** | 🔴 GPL-3.0 | 🔴 no — 🔴 **ARCHIVED**, branch `MOODLE_34_STABLE` |
+
+🔴 **The shape of this shelf has not changed and is worth restating, because it is the single
+most useful fact on this page: every one of the five largest-install LMS platforms is copyleft.**
+The permissive tier is not the platform — it is the *boundary and the periphery*: `tsugi`
+(LTI), `OpenOLAT`, `Sakai` and `opencast` (ECL/Apache), `kolibri` and `academico` (MIT),
+`richie` (catalogue), `oppia` (lessons), `corteza` and `ofbiz` (generic ERP/CRM).
+
+🔴 **And two entries on this shelf are not open source at all** — `leemons` (Fair Code) and
+`advisingapp` (Elastic-2.0). Both were published as permissive within the last three passes.
+🔵 **That is now a pattern, not an incident**: source-available licensing is entering the
+education shelf and it does not announce itself in the places a sweep looks.
+
+
 **Pass 118, 2026-10-11.** ⏱️ **Fifth pass of this date** (window **03:4x → 04:2x UTC**).
 
 🟢 **Instrument: `compose/code/p118-licence-column-sweep/`, discharging `ACTION E`. This page
@@ -1207,7 +1289,7 @@ platforms are almost all copyleft, and the permissive rows are almost all unrele
 | [`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud) | 🔴 **GPL-2.0** · 18 092 B | 🔴 `v2` · 🟢 **67** | 🟢 **APAC** (China) | 🔵 **A Chinese-market online-course platform with real release history** |
 | [`nextcloud/integration_openai`](https://github.com/nextcloud/integration_openai) | 🔴 **AGPL-3.0** · `COPYING` 34 519 B | `main` · 🟢 **58** | 🟢 **EMEA** (Germany) | LLM integration for the Nextcloud suite |
 | [`nextcloud/context_chat_backend`](https://github.com/nextcloud/context_chat_backend) | 🔴 **AGPL-3.0** · 34 520 B | `master` · 🟢 **53** | 🟢 **EMEA** (Germany) | RAG backend over institutional documents |
-| [`moodlehq/moodle-tool_dataprivacy`](https://github.com/moodlehq/moodle-tool_dataprivacy) | 🔴 **GPL-3.0** · 35 147 B | 🔴 `MOODLE_34_STABLE` · 🟢 **20** | 🔵 unplaced (Moodle HQ) | 🔴 **GDPR tooling pinned to a 2017 branch** — `P1021`: the default ref is not the newest release line |
+| [`moodlehq/moodle-tool_dataprivacy`](https://github.com/moodlehq/moodle-tool_dataprivacy) | 🔴 **GPL-3.0** · 35 147 B · 🔴 **ARCHIVED** | 🔴 `MOODLE_34_STABLE` · 🟢 **20** | 🔵 unplaced (Moodle HQ) | 🔴 **GDPR tooling pinned to a 2017 branch** — `P1021`: the default ref is not the newest release line |
 | [`limekiller/moodle-block_openai_chat`](https://github.com/limekiller/moodle-block_openai_chat) | 🔴 **GPL-3.0** · 35 149 B | `main` · 🟢 **10** | 🔵 unplaced | The widely-installed Moodle chat block |
 | [`jeanlucio/moodle-local_aihub`](https://github.com/jeanlucio/moodle-local_aihub) | 🔴 **GPL-3.0** · `COPYING.txt` 35 149 B | `main` · 🟢 **9** | 🔵 unplaced | Moodle AI provider hub |
 | [`tadreeb-lms/tadreeblms`](https://github.com/tadreeb-lms/tadreeblms) | 🔴 **AGPL-3.0** · 34 523 B | `main` · 🟢 **6** | 🟡 **EMEA** (Arabic-language LMS) | 🔵 **The only Arabic-first LMS row this KB has measured** |
@@ -1823,7 +1905,7 @@ knows ECL by name** and both rows classify correctly for the first time.
 | platform | grant (payload · bytes · ref · SHA) | ★ | region | posture |
 |---|---|---|---|---|
 | [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 **MIT** · 1 091 B · `develop` · `760e2e1` | 816 | **EMEA** (TU München) | 🟢 **The best starting point in this industry right now.** Production university platform, MIT, already AI-native: **Iris** (LLM tutor), **Athena** (feedback suggestion), **Hyperion** (AI exercise authoring, Spring AI). Java/Spring. |
-| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** · 11 120 B · `master` · `10a1d90` | 1.2k | **North America** (Apereo Foundation) | 🟢 Mature HE teaching/learning/collaboration suite. **Permissive.** Java. |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** · 11 120 B · `master` · `10a1d90` | 1237 | **North America** (Apereo Foundation) | 🟢 Mature HE teaching/learning/collaboration suite. **Permissive.** Java. |
 | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 **ECL-2.0** · 11 340 B · `develop` · `52805eb` | — | 🟡 **EMEA / North America** (ETH + US university lineage) | 🟢 Lecture capture, transcoding and distribution. The permissive place to attach transcription, captioning and video search. |
 | 🟢 **re-measured p100** [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** · 10 982 B · `master` · **`cccdcda6861d48817fa2eef1bb4d2f9f189ab774`** · 🟢 **542 tags, `OpenOLAT_21.0.3`** · 🟢 **clause probe 3 of 4** (`P974`) | 447 | **EMEA** (frentix GmbH, Switzerland) | 🟢 Production HE LMS; central LMS of Koblenz University. The EMEA-sovereignty answer. Java. |
 | [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 🟢 **MIT** · 1 684 B · `master` · `001ec46` | 979 | **APAC** (India) | 🟢 LMS for asynchronous online schools, Ruby/Rails. |
@@ -1903,7 +1985,7 @@ Not inferior software. Several are the best in the industry. The constraint is o
 |---|---|---|---|
 | [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 **GPL-3.0** · `COPYING.txt` 35 147 B · `main` · `f205347` | — | 🟢 **APAC** (Moodle HQ, Perth, Australia) — the market leader is an Australian project, which matters for an APAC pitch |
 | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0** · 35 136 B · `master` · `2e46ebd` | — | **North America** (Axim Collaborative) |
-| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🔴 **AGPL-3.0** · 34 523 B · `release` · `2776223` | 1.1k | 🔵 unplaced — the Docker Open edX distribution, i.e. how Open edX actually gets deployed |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🔴 **AGPL-3.0** · 34 523 B · `release` · `2776223` | 1127 | 🔵 unplaced — the Docker Open edX distribution, i.e. how Open edX actually gets deployed |
 | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 **AGPL-3.0** · 34 520 B · `master` · `1c9f0bb` | — | **North America** (Instructure) |
 | [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **AGPL-3.0** · `license.txt` 33 893 B · `develop` · `933fc60` | 3.3k | **APAC** (India) — 🔴 **widely mis-listed as MIT.** 🆕 **And the row that exposed the instrument defect v3 fixes:** v2 never probed the lowercase `license.txt` and recorded it as *no grant*. |
 | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 🆕 **p96 GPL-3.0-*or-later*** · `LICENSE` 35 147 B **+ `license.txt` 1 614 B** · `master` · `e5cf557` *(HEAD moved from `f30df11`; grant unchanged)* | 1.0k | 🟢 🆕 **p96 LATAM is in the GRANT**: the payload's **first** copyright line is **`BeezNest Latino SAC, Peru`**, ahead of BeezNest Belgium — 12 holders across Peru, Belgium, Spain, France and Switzerland (`P800`). Still 🟢 EMEA origin with a heavy LATAM install base; **the practical LATAM LMS incumbent.** |
@@ -1913,7 +1995,7 @@ Not inferior software. Several are the best in the industry. The constraint is o
 | 🆕 [`mumuki/mumuki-laboratory`](https://github.com/mumuki/mumuki-laboratory) | 🔴 **AGPL-3.0** · 34 523 B · `master` · `fce1ede` | 199 | 🟢 **LATAM** (Argentina) — 🟢 **programming practice with automated feedback**, in real school and university use. The strongest LATAM row in the assessment tier. |
 | [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | 🔴 **AGPL-3.0** · 34 523 B · `dev` · `9a13191` | 2.3k | 🔵 unplaced |
 | [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 🔴 **AGPL-3.0** · 34 523 B · `main` · `c225cc4` | 1.7k | 🔵 unplaced |
-| [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | 🔴 **AGPL-3.0** · `LICENSE.md` 34 143 B · `main` · `62b5abb` | 1.3k | 🔵 unplaced |
+| [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | 🔴 **AGPL-3.0** · `LICENSE.md` 34 143 B · `main` · `62b5abb` | 1273 | 🔵 unplaced |
 | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔴 **GPL-3.0** · 35 121 B · `v31.0.00` · `1d83c2b` | — | 🟡 **APAC** (Hong Kong lineage) — K-12 school platform |
 | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** · 15 214 B · `mobile` · `541c509` | — | 🟡 **LATAM** lineage (named for Rosario, Argentina) — SIS. 🆕 **Version recovered this pass**: the payload says *"Version 2, June 1991"* and pass 91 published the bare family `GPL`. 🔵 **Its 15 214 B variant text drops the LGPL cross-reference entirely, which is why the same forked classifier that misread `tao-core` and `i-educar` left this row merely imprecise rather than wrong** — the natural control for `P960`. |
 

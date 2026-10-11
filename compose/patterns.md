@@ -6,6 +6,93 @@ updated: 2026-10-11
 
 # Education — compose patterns
 
+**Pass 119, 2026-10-11.** ⏱️ **Sixth pass of this date** (window **04:3x → 05:2x UTC**).
+
+🟢 **Instrument: `compose/code/p119-carried-column-audit/`. `test_p119.sh` **43 passed / 0
+failed**, offline. This page carried **2** of the licence cells this pass retracts, and one of
+them was inside a RECOMMENDATION — the exact defect `P118-PAT-0` pre-registered as `ACTION I`.**
+
+## 🔴 🆕 `P119-PAT-0` — the recommendation this page owed, for the second pass running
+
+🔴 **This page recommended [`leemonade/leemons`](https://github.com/leemonade/leemons) as a
+"modular platform shell" under 🟢 Apache-2.0. It is a "Fair Code License" v1.0 — not OSI — that
+bills €100 000 once a deployment passes 1 000 users or profiles, plus a 5 % royalty after year
+one, and permits redistribution only free of charge and non-commercially.**
+
+🔴 **It also recommended [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators)
+under 🟢 MIT.** The code is MIT; the annotated CLEAR and PERSUADE 2.0 corpora — the part that
+makes it *evidence-backed*, and therefore the part a client is paying for — are
+**CC BY-NC-SA 4.0**. NonCommercial.
+
+🔵 **`P118-PAT-0` predicted exactly this and the prediction held.** Its lesson was that a licence
+token and the recommendation built on it are different cells, so a token-level repair does not
+propagate. 🔴 **This pass adds the harder half: the sweep could not even repair the token,
+because `leemons` measured `UNREAD` and a repair driven by a verdict file cannot touch an
+unmeasured row.** Both cells are corrected here with their prose, not just their tokens.
+
+## 🟢 🆕 `P119-PAT-1` — "ship a closed AI vertical on a copyleft LMS", with the boundary and the liveness both measured
+
+🔵 **The pattern is unchanged and now rests on 36 measured platforms. What p119 adds is the
+liveness check, because two of the pieces a builder would have reached for are read-only.**
+
+| layer | repo | ★ | grant | why this one |
+|---|---|---|---|---|
+| host | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) **or** [`moodle/moodle`](https://github.com/moodle/moodle) | 8 196 / 7 473 | 🔴 AGPL-3 / GPL-3 | **DEPLOY UNMODIFIED.** No patches, no forks — the copyleft never reaches your code ⚠️ use the `openedx-platform` spelling; `edx-platform` is the same repo by redirect |
+| boundary | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 376 | 🟢 **Apache-2.0** | LTI 1.3 / Common Cartridge bridge — the process boundary copyleft does not cross |
+| agent | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 29 778 | 🟢 **Apache-2.0** | the tool-calling loop, in **your** repository |
+| inference | [`ollama/ollama`](https://github.com/ollama/ollama) | 182 679 | 🟢 **MIT** | local inference — the EMEA-sovereignty and LATAM-bandwidth answer in one dependency |
+| assessment | [`numbas/Numbas`](https://github.com/numbas/Numbas) | 215 | 🟢 **Apache-2.0** | generated items rendered and marked in-browser |
+| mastery | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) + [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 283 + 153 | 🟢 **MIT** both | Bayesian knowledge tracing + adaptive item selection |
+| spacing | [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | 507 | 🟢 **MIT** | review scheduling |
+| SCORM out | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 354 | 🟢 **MIT** | 🔴 **NOT `adlnet/SCORM-to-xAPI-Wrapper` — that is ARCHIVED (`P119-C`)** |
+| xAPI trail | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 144 | 🟢 **Apache-2.0** | the audit record. 🔴 Implement [`adlnet/xAPI-SCORM-Profile`](https://github.com/adlnet/xAPI-SCORM-Profile) as a **frozen spec** — it is ARCHIVED and will not take a fix |
+| orchestration | [`temporalio/temporal`](https://github.com/temporalio/temporal) | 23 591 | 🟢 **MIT** | durable multi-step grading and enrolment workflows |
+
+🔴 **Wiring, stated so the copyleft boundary is unambiguous:** Open edX or Moodle runs as shipped,
+in its own container. Your vertical is a **separate service** that the LMS reaches **only** over
+LTI 1.3 through `tsugi`. `smolagents` + `ollama` + `pyBKT`/`catsim`/`py-fsrs` live entirely inside
+that service. Learner events leave over xAPI into `lrsql`. **Nothing of yours is linked into,
+patched into, or distributed with the AGPL/GPL host**, which is what keeps the derivative closed.
+🔵 **Do not** put `leemons` or `advisingapp` anywhere in this diagram.
+
+## 🟢 🆕 `P119-PAT-2` — "the compliance trail nobody can buy", North America, 6–8 weeks
+
+🔵 **The opportunity `P119-C` created by accident.** ADL authored SCORM and xAPI and has now
+**archived** the bridge repositories; districts and agencies with 2026 AI-accountability
+deadlines still need a working trail, and the reference implementations will not be maintained
+for them.
+
+| step | repo | grant | note |
+|---|---|---|---|
+| 1. ingest | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 MIT | live SCORM 1.2 / 2004 runtime |
+| 2. translate | [`adlnet/xAPI-SCORM-Profile`](https://github.com/adlnet/xAPI-SCORM-Profile) | 🟢 Apache-2.0 | 🔴 **ARCHIVED — a spec you implement, not a library you depend on.** This is the billable step |
+| 3. store | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 Apache-2.0 | SQL-backed LRS, live |
+| 4. govern | [`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) | 🟢 Apache-2.0 | Singapore IMDA's evaluation harness — reuse it for the model-behaviour half of the audit |
+| 5. align | [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 🟡 MIT code · 🔴 **corpora CC-BY-NC-SA** | use the judge code; **substitute or separately license the corpora** |
+| 6. orchestrate | [`temporalio/temporal`](https://github.com/temporalio/temporal) | 🟢 MIT | retention and review-deadline workflows |
+
+🔵 **Every grant in this recipe is read from the default branch this pass, and every repo's
+`archived` flag is checked.** Step 2's archived status is the reason the pattern is worth
+selling: the standard is frozen, the obligation is not, and the gap between them is the
+engagement.
+
+## 🔵 🆕 `P119-PAT-3` — the pattern this page will not write, and why
+
+🔴 **A "permissive education ERP" pattern has been asked for by the brief's query set for four
+consecutive passes and this page still cannot write one honestly.** The measured shelf is:
+`openeducat/openeducat_erp` (LGPL-3.0, 886★, tracks the Odoo major), `frappe/erpnext` (GPL-3.0,
+39 986★) over `frappe/frappe` (MIT, 10 913★), `frappe/education` (GPL-3.0, 660★),
+`apache/ofbiz-framework` (Apache-2.0, 1 129★, generic) and `cortezaproject/corteza`
+(Apache-2.0, 2 171★, generic low-code).
+
+🟢 **The honest composition, which is not an "education ERP" and should not be sold as one**:
+build on `frappe/frappe`'s **MIT framework** directly, or on `ofbiz`/`corteza`, and implement the
+education domain yourself. 🔴 **Do not fork `erpnext` or `openeducat` and expect to ship closed** —
+GPL-3.0 and LGPL-3.0 respectively. 🔵 **Stated as a declared gap rather than padded with a
+recipe**: the permissive education ERP the brief imagines does not appear to exist, and four
+passes of searching is now evidence of that rather than of a search problem.
+
+
 **Pass 118, 2026-10-11.** ⏱️ **Fifth pass of this date** (window **03:4x → 04:2x UTC**).
 
 🟢 **Instrument: `compose/code/p118-licence-column-sweep/`. This page carried **15** of the 38
@@ -569,7 +656,7 @@ has no room for supply-chain work.**
 | [`moodle/moodle`](https://github.com/moodle/moodle) | LMS of record | 🟡 GPL-3 | 🟢 **0 / 63 orphaned** |
 | [`temporalio/temporal`](https://github.com/temporalio/temporal) | durable orchestration for agent workflows | 🟢 MIT | 🟢 **0 / 2** |
 | [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | assessment engine | 🟡 AGPL-3 | 🟢 **0 / 58** |
-| [`leemonade/leemons`](https://github.com/leemonade/leemons) | modular platform shell | 🟢 Apache-2.0 | 🟢 **0 / 114** |
+| [`leemonade/leemons`](https://github.com/leemonade/leemons) | modular platform shell | 🔴 **"Fair Code License" v1.0 — NOT OSI; €100k + 5 % royalty above 1 000 users** ⚠️ **was 🟢 Apache-2.0** — 🔴 **do not put this in a client build** | 🟢 **0 / 114** |
 | [`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) | LLM evaluation harness | 🟢 Apache-2.0 | 🟢 **0 / 2** |
 
 🔵 **Wiring:** Moodle as the system of record; Temporal workflows drive each
@@ -620,7 +707,7 @@ testable and portable, and every figure in it was derived this pass.**
 | [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🟢 `broker` | `langchain` | 🟢 **MIT** |
 | [`fwu-de/ais-chat`](https://github.com/fwu-de/ais-chat) | 🟢 `broker` | `langchain` + `base_url` | 🔴 **AGPL-3.0** |
 | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 `broker` | `langchain` + `base_url` | 🟢 **MIT** |
-| [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 🟢 `broker` | `langchain` | 🟢 **MIT** |
+| [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 🟢 `broker` | `langchain` | 🟡 **MIT** code · 🔴 **corpora CC-BY-NC-SA-4.0 — NonCommercial, so the corpus cannot ship in a paid engagement** |
 | [`nextcloud/llm2`](https://github.com/nextcloud/llm2) | 🟢 `broker` | `langchain` | 🟢 MIT |
 | [`aiverify-foundation/moonshot-cicd`](https://github.com/aiverify-foundation/moonshot-cicd) | 🟢 `broker` | `langchain` | 🟢 **Apache-2.0** |
 | [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | 🟡 `broker` ※ | `langchain`, `openrouter` | 🟢 **Apache-2.0** |

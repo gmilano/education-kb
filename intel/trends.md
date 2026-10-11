@@ -6,6 +6,51 @@ updated: 2026-10-11
 
 # Education — current trends
 
+**Pass 119, 2026-10-11.** ⏱️ **Sixth pass of this date** (window **04:3x → 05:2x UTC**).
+
+🟢 **Instrument: `compose/code/p119-carried-column-audit/`. `test_p119.sh` **43 passed / 0
+failed**, offline. This page carried **1** of the 7 wrong star cells; it is repaired.**
+
+## 🟢 🆕 `P119-TREND` — five trends, each with the channel that evidences it
+
+🔵 **The rule this page has kept since p114: a trend without a named channel is an opinion. The
+channel column says how this pass knows, not who said it.**
+
+| # | trend | channel | strength |
+|---|---|---|---|
+| 1 | 🔴 **"Source-available" is now established on the education shelf, not an incident.** Two platforms were published here as permissive within three passes and are neither: `canyongbs/advisingapp` is **Elastic-2.0** and `leemonade/leemons` is a **"Fair Code License"** built on the Sustainable Use License, billing **€100 000** past 1 000 users plus a **5 % royalty**. Both were 🟢-tokened. | 🟢 **measured** — root licence files read from the default branch, 10 830 B and 3 860 B | 🟢 **strong** |
+| 2 | 🔴 **Published liveness metadata is worse than published licence metadata, because nobody has a column for it.** Five shelf repositories are GitHub-**ARCHIVED** and no row said so; three more declare themselves dead in their own description while the API reports them live. Four of the five are US DoD / ADL — the authors of SCORM and xAPI. | 🟢 **measured** — `archived` flag over 249 addresses | 🟢 **strong** |
+| 3 | 🟡 **A repository's IDENTITY is a carried column too, and it decays silently.** 4 addresses are forks carried as canonical (one at **1★**, published as an institutional flagship); 3 are stale redirects, India's national Sunbird stack among them; 2 pairs are one repository double-counted, so `249 addresses` is at most **247**. `git` follows a rename without comment, so only a second channel exposes it. | 🟢 **measured** — SHA identity + `fork:true`, both channels | 🟢 **strong** |
+| 4 | 🟡 **The permissive tier of education OSS remains the plumbing, not the platform.** All five largest-install LMS platforms (Moodle, Canvas, Open edX, ILIAS, Chamilo) are copyleft; the permissive layer is boundary and periphery — `tsugi` (LTI), `OpenOLAT`, `Sakai`, `opencast` (ECL/Apache), `kolibri`, `academico` (MIT), `richie`, `oppia`. Unchanged across six passes, and the most useful single fact in this KB. | 🟢 **measured** — 36 platforms, grant read from each default branch | 🟢 **strong** |
+| 5 | 🔵 **The agent layer's centre of gravity is the Chinese-language agent-skill, and the open-source layer still has no education agent framework.** Six of the eleven newest agent entries are Chinese-language MIT skills (`Study-Mate` 825★, `universal-examprep-skill` 303★, `Bloom` 285★, `kaogong-skill` 169★, `feifei-companion` 106★, `dsh-openmaic` 90★). The largest education-specific agent is still a tutor (`HKUDS/DeepTutor`, 41 108★). | 🟢 **measured** for stars and shelf, 🟡 **secondary** for the framing | 🟡 **moderate** |
+
+## 🔴 🆕 `P119-M` — the trend this page cannot evidence, stated because it is the honest answer
+
+🔵 **The brief's eight mandated searches ran this pass — global and once per region. They returned
+ZERO new addresses and ZERO new regulation tokens; 19 tokens were rejected as already held.**
+
+🔴 **`Gap 402` weakens a FOURTH consecutive pass** — p117: 4 new / 13 rejected; p118: 0 / 15;
+p119: 0 / 19. 🟡 **The fixed query set in the brief has stopped yielding on this industry, and
+that is a measured property of the query set, not evidence that nothing is happening in
+education AI.** The distinction is the whole reason `Gap 402` exists, and this page will keep
+making it rather than filling the space with market-research summaries it cannot verify.
+
+## 🟡 🆕 `P119-N` — the market-size question, and why this page will keep refusing to answer it
+
+The mandated `AI education industry trends 2026` query returned three irreconcilable forecasts:
+**USD 6.4 B (2025) → 79.6 B (2034)**, **8.3 B → 57.2 B (2033)**, and **10.6 B for 2026** — from
+three different research firms, none with a published methodology this session can reach.
+
+🔴 **Three incompatible vendor figures are not a market size**, and picking the middle one would
+manufacture precision this KB has no basis for. 🟢 **What is defensible, and is sourced**: on
+every region's own survey, student and faculty use runs far ahead of institutional policy —
+UNESCO IESALC finds **87 %** of 200 LATAM institutions using AI in at least one area with only
+about **a quarter** holding a formal framework; the Digital Education Council's LATAM survey
+reports **92 % of students and 79 % of faculty** actively using AI. 🔵 **That gap, not the market
+size, is the thing a studio engagement is actually sold into** — and it is the same gap in every
+region this KB has placed.
+
+
 **Pass 118, 2026-10-11.** ⏱️ **Fifth pass of this date** (window **03:4x → 04:2x UTC**).
 
 ## 🟢 🆕 `P118-TREND` — five trends, each with the channel that evidences it
@@ -2079,7 +2124,7 @@ techniques, and the structure inside it is the trend:**
 | Item Response Theory | [`nd-ball/py-irt`](https://github.com/nd-ball/py-irt) · [`eribean/girth`](https://github.com/eribean/girth) | **MIT** · **MIT** | 173 · 126 | 🟢 item difficulty and discrimination, learner ability, on one scale |
 | Computerized Adaptive Testing | [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | **BSD-3-Clause** | 153 | 🟢 the next item, and a defensible stopping rule |
 | review scheduling | [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | **MIT** | 506 | 🟢 when the learner will forget |
-| deep knowledge tracing | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **MIT** | ~430 | 🟡 a predicted probability from a trained network |
+| deep knowledge tracing | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **MIT** | 443 | 🟡 a predicted probability from a trained network |
 
 🔵 **The trend is the coincidence of three properties that usually trade off against each other.** The
 classical psychometric layer is simultaneously (a) **permissive** — MIT and BSD throughout, (b) **more

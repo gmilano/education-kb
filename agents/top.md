@@ -6,6 +6,82 @@ updated: 2026-10-11
 
 # Education — AI agents shelf
 
+**Pass 119, 2026-10-11.** ⏱️ **Sixth pass of this date** (p114 23:54→00:25, p115 01:13→01:25,
+p117 02:45→03:0x, p118 03:4x→04:2x, this census window **04:3x → 05:2x UTC**).
+
+🟢 **Instrument: `compose/code/p119-carried-column-audit/` — all four of p118's pre-registered
+actions discharged. `test_p119.sh` **43 passed / 0 failed**, fully offline. `ACTION G` and
+`ACTION H` are **REFUTED on their own clauses**, and both refutations found more than the action
+would have.**
+
+## 🔴 🆕 `P119-B` — three of the agents on this shelf are not what the shelf says they are
+
+🔴 **`mitodl/open-learning-ai-tutor` is a FORK with 1★.** This page published it as *"MIT Open
+Learning's tutor"* with `—` in the star column, and `intel/market.md` has explained every `—` as
+the `api.github.com` 403 for nineteen consecutive passes. **That explanation is wrong here.** The
+search channel excludes forks unless `fork:true` is passed; one query flag turned four permanent
+dashes into numbers.
+
+| address | what the shelf implied | measured this pass |
+|---|---|---|
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | MIT Open Learning's tutor, stars unmeasurable | 🔴 **`fork:true`, 1★** |
+| [`GEMLab-HKU/Unlearn_and_Relearn`](https://github.com/GEMLab-HKU/Unlearn_and_Relearn) | AIED 2026 full paper | 🔴 **`fork:true`, 5★** |
+| [`mlx-cassio/awesome-eu-ai-act`](https://github.com/mlx-cassio/awesome-eu-ai-act) | an EU AI Act resource | 🔴 **`fork:true`, 0★** — a fork of [`GenAI-Gurus/awesome-eu-ai-act`](https://github.com/GenAI-Gurus/awesome-eu-ai-act) (106★), and **this KB holds both** |
+| [`CSR2017/edfi-oneroster`](https://github.com/CSR2017/edfi-oneroster) | an Ed-Fi ↔ OneRoster bridge | 🔴 **`fork:true`, 0★** |
+
+🔵 **A fork is not disqualifying — it is unstated.** A 1★ fork and a 41 108★ original are
+different procurement risks, and the column that would have said so was carrying a dash the KB
+had already explained away.
+
+## 🔴 🆕 `P119-D` — the shelf's licence correction was page-local, AGAIN, and the sweep built to catch that was blind to it
+
+🔴 **`learning-commons-org/evaluators` was published on this page as 🟢 MIT.** Its `LICENSE.md`
+puts the code under MIT, the prompts under CC BY 4.0, and **the annotated CLEAR and PERSUADE 2.0
+corpora under CC BY-NC-SA 4.0** — NonCommercial. The corpora are what make it *evidence-backed*,
+so the part a Globant engagement would actually want is the part it cannot ship for money.
+
+🔵 **`intel/trends.md` and `compose/patterns.md`'s deep tier already said so.** This is `P118-D`
+one layer down: the correction existed in the KB and never reached the recommendation column. Both
+cells are repaired in this commit.
+
+## 🟢 The agent shelf — stars and liveness read from the API this pass, not carried
+
+| agent | ★ this pass | p118 | licence, from the tree | state |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **41 108** | 41 103 | 🟢 Apache-2.0 | 🟢 live, pushed 2026-10-08 |
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | **76 876** | 76 867 | 🟢 MIT | 🟢 live |
+| [`huggingface/agents-course`](https://github.com/huggingface/agents-course) | **33 419** | — | 🟢 Apache-2.0 | 🟢 live |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | **29 778** | 29 775 | 🟢 Apache-2.0 | 🟢 live |
+| [`agent0ai/agent-zero`](https://github.com/agent0ai/agent-zero) | **19 420** | 19 420 | 🟢 MIT | 🟢 live · ⚠️ **also held as `frdel/agent-zero`; same repo, same HEAD** |
+| [`HKUDS/Paper2Slides`](https://github.com/HKUDS/Paper2Slides) | **3 834** | — | 🟢 MIT | 🟢 live |
+| [`ai-builders-foundation/ai-builders-curriculum`](https://github.com/ai-builders-foundation/ai-builders-curriculum) | **1 422** | — | 🟢 MIT | 🟢 live |
+| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | **931** | 931 | 🔴 GPL-3.0 | 🟡 live, but see p118 |
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | **825** | 🔴 772 | 🟢 MIT | 🟢 live — **repaired, the tail carried 772** |
+| [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | **512** | 511 | 🟢 MIT | 🟢 live |
+| [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) | **453** | — | 🟢 MIT | 🟢 live |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | **389** | 389 | 🟢 MIT | 🟡 live, pushed 2026-05-29 |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | **165** | 164 | 🟢 MIT | 🟢 live |
+| [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | **25** | 25 | 🟢 Apache-2.0 | 🟢 live (EMEA, DE) |
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🔴 **1** | `—` | 🟢 MIT | 🔴 **`fork:true` — see `P119-B`** |
+
+🔵 **Fourteen real agents with a measured star count and a licence read from the tree.** The
+`—` that stood here for nineteen passes is gone, and it was never the 403.
+
+## 🟡 🆕 `P119-E` — `Gap 402` weakens a FOURTH consecutive pass
+
+The brief's eight mandated searches ran — four global, one per region. **Zero new addresses,
+zero new regulation tokens, and 19 candidate tokens checked one by one against the held KB and
+rejected as already held**: Digital Education Council (6 files), UK AI Adoption Summit (2),
+Bridge AI (1), Skills England (2), UNU-IAS (5), Brent Thomas (4), Carnegie Mellon (5), Gates
+Foundation (4), TCS (6), Pearson (8), Georgia SB 179 (2), Florida SB 1194 (2), Schola Europaea
+(3), AI Week LATAM (2), LearnUpon (7), Alteryx (2), Observatorio IA (1), ANUIES (4), ILIA (19).
+
+🔴 **p117: 4 new / 13 rejected. p118: 0 / 15. p119: 0 / 19.** The fixed query set is exhausted on
+this industry, and the global queries now return market-research landing pages and vendor blogs
+almost exclusively. 🟢 **Recorded as a measured property of the brief's query set, not as an
+absence of news** — the distinction `Gap 402` exists to keep.
+
+
 **Pass 118, 2026-10-11.** ⏱️ **Fifth pass of this date** (p114 23:54→00:25, p115 01:13→01:25,
 p117 02:45→03:0x, this census window **03:4x → 04:2x UTC**).
 
@@ -46,7 +122,7 @@ is not decoration: 37 of the 249 addresses in this KB default to neither `main` 
 | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 29 775 | 🟢 Apache-2.0 | `main` | minimal agent loop; the cheapest permissive base to build a tutor on |
 | [`agent0ai/agent-zero`](https://github.com/agent0ai/agent-zero) | 19 420 | 🟢 MIT | `main` | general agent framework, used here as a tutoring harness |
 | [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | **931** | 🔴 **GPL-3.0** ⚠️ **was MIT** | `main` | theory-of-mind tutor. 🔴 **Roundups still list it as permissive; the tree says GPL-3.0 and a distributed derivative inherits it.** |
-| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | — | 🟢 **MIT** ⚠️ **was BSD-3** | `main` | MIT Open Learning's tutor; permissive either way, but the token was wrong |
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🔴 **1** (`fork:true`) | 🟢 **MIT** ⚠️ **was BSD-3** | `main` | MIT Open Learning's tutor. 🔴 **`P119-B`: a FORK with 1★, not an original — and the `—` in this column was never the 403, it was fork-exclusion from the search channel** |
 | [`satvik314/educhain`](https://github.com/satvik314/educhain) | **389** | 🟢 MIT | `main` | educational content generation. 🔵 Published as "~12k" before p117 measured it |
 | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | — | 🟢 **MIT** ⚠️ **was Apache-2.0** | `main` | EMEA (PL) mentoring LMS |
 | [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | — | 🟢 **MIT** ⚠️ **was Apache-2.0** | `main` | EMEA; adaptive KG over `ollama` + `sentence-transformers` |
@@ -647,7 +723,7 @@ them and added the binding column.**
 | [`OtterDen-Lab/Autograder`](https://github.com/OtterDen-Lab/Autograder) | 🔴 **GPL-3.0** | 🟢 `local` | `ollama` | North America |
 | [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 🔴 **GPL-3.0** | 🟢 `local` | `sentence-transformers` + `OPENAI_API_BASE` | EMEA |
 | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | 🟢 `broker` | `langchain` + `base_url` | EMEA (PL) |
-| [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 🟢 **MIT** | 🟢 `broker` | `langchain` | North America |
+| [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 🟡 **MIT** code · 🔴 **corpora CC-BY-NC-SA-4.0** | 🟢 `broker` | `langchain` | North America |
 | [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | 🟢 **Apache-2.0** | 🟡 `broker` | `langchain`, `openrouter` ※ | North America |
 | [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | 🟢 **MIT** | 🟡 `broker` | `openrouter` ※ | LATAM (BR) |
 | [`aiverify-foundation/moonshot-cicd`](https://github.com/aiverify-foundation/moonshot-cicd) | 🟢 **Apache-2.0** | 🟢 `broker` | `langchain` | APAC (SG) |
@@ -2903,7 +2979,7 @@ with no UI, no hosting and no database, and overwhelmingly MIT.
 
 | skill | grant (payload · bytes · ref · SHA) | ★ | region | scope |
 |---|---|---|---|---|
-| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | **MIT** · 1 064 B · `main` · `2cd8393` | 772 | 🔵 unplaced | Self-study agent: plans learning paths, explains concepts, guides projects |
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | **MIT** · 1 064 B · `main` · `2cd8393` | 825 | 🔵 unplaced | Self-study agent: plans learning paths, explains concepts, guides projects |
 | [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | **MIT** · 1 065 B · `main` · `b9e84f5` | 303 | 🔵 unplaced | Slide-based teaching with page citations, **cross-session memory** |
 | [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | **MIT** · 1 081 B · `main` · `25ea970` | 286 | 🔵 unplaced | DSA mentor with progressive hints and mock interviews |
 | [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | **MIT** · 1 069 B · `main` · `b391898` | 285 | 🔵 unplaced | Adaptive tutor built on **Bloom's 2-sigma** research; self-hostable *and* a skill |

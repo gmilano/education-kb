@@ -6,6 +6,105 @@ updated: 2026-10-11
 
 # Education — foundational repos
 
+**Pass 119, 2026-10-11.** ⏱️ **Sixth pass of this date** (census window **04:3x → 05:2x UTC**).
+
+🟢 **Instrument: `compose/code/p119-carried-column-audit/`, discharging `ACTIONS F, G, H, I`.
+`test_p119.sh` **43 passed / 0 failed**, offline. This page carried **3** of the 7 wrong star
+cells, **1** of the 2 wrong licence cells, and **5** of the 6 rows that needed an `ARCHIVED`
+marker. All are repaired in this commit.**
+
+## 🔴 🆕 `P119-A` — the foundations shelf published a €100 000 licence as 🟢 Apache-2.0
+
+🔴 **[`leemonade/leemons`](https://github.com/leemonade/leemons) was row-level 🟢 Apache-2.0 on
+this page. Its root `LICENSE.md` (10 830 B) is a "Fair Code License" v1.0 built on the
+Sustainable Use License, and contains ZERO occurrences of the word "apache".** What it actually
+says, read from the file:
+
+| clause | text, as committed |
+|---|---|
+| scope of use | *"may only be used or copied to facilitate the management of educational services offered by the User"* — any other use needs prior written authorization |
+| redistribution | *"only ... if done so free of charge and for non-commercial purposes"* |
+| 🔴 fee trigger | **ONE HUNDRED THOUSAND EURO** once the platform passes **1 000 users or profiles**, *or* €1 M annual revenue from it |
+| 🔴 royalty | **5 %** after the first year of use |
+| sublicensing | forbidden without prior written authorization |
+
+🔴 **For a consultancy this is the worst possible shape of error.** Any education deployment
+Globant would be hired to build crosses 1 000 users on day one, and the KB's own shelf said the
+licence was permissive. Repaired here and in `compose/patterns.md`.
+
+## 🔴 🆕 `P119-A2` — and p118's 957-claim sweep could not have caught it, by design
+
+This is the mechanism, and it is the pass's most transferable finding:
+
+1. `leemons`' grant is a prose index, so p118's classifier measured it **`UNKNOWN`**.
+2. `UNKNOWN` → verdict **`UNREAD`**, which p118's layer *correctly* refuses to fold into `AGREE`:
+   *"not contradicted, not corroborated."*
+3. `repair.py` is driven by the verdict file, so — also correctly — it **cannot touch an
+   unmeasured row**.
+4. The stale 🟢 Apache-2.0 therefore survived a whole-KB sweep **because every layer behaved as
+   specified**.
+
+🔴 **The dangerous cell is `UNREAD` + a permissive claim, and there are 42 of them across 22
+addresses** — **76 %** of p118's 55 `UNREAD` rows claim MIT, Apache-2.0 or BSD against a grant
+the sweep could not read.
+
+| address | `UNREAD` rows claiming permissive |
+|---|---|
+| `bncc-dev/bncc-benchmark` | 8 |
+| `learning-commons-org/evaluators` | 4 |
+| `ed-fi-alliance-oss/Ed-Fi-Data-Standard` | 4 |
+| `FWU-DE/ais-chat` | 3 |
+| `yuanjiusheng/cloud-learning-ce`, `sidneybissoli/educabr`, **`leemonade/leemons`**, `kaushal0494/AITutor-EvalKit`, `cezarc/EPESI` | 2 each |
+| 12 more addresses | 1 each |
+
+🔵 p118's own `P118-K` wrote the reason down — *absence of a licence reads as permission* — and
+applied it to the measurement but not to the verdict. **`ACTION J` is pre-registered to resolve
+the remaining 20.**
+
+## 🟢 The foundations shelf — grant, liveness and stars all measured this pass
+
+🔵 **`ARCHIVED` is a new column on this page, and it changes five recommendations.** A repo that
+is read-only cannot take a patch or ship a CVE fix; *"stale"* and *"archived"* are different
+procurement facts, and this page had a recency column but no liveness column.
+
+| repo | ★ this pass | grant, from the default branch | state |
+|---|---|---|---|
+| [`ollama/ollama`](https://github.com/ollama/ollama) | **182 679** | 🟢 MIT | 🟢 live — local inference, the offline-first floor |
+| [`huggingface/transformers`](https://github.com/huggingface/transformers) | **167 342** | 🟢 Apache-2.0 | 🟢 live |
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | **61 345** | 🟢 **MIT** (`LICENSE-CODE`) · 🔵 `LICENSE` is CC-BY-4.0 for docs | 🟢 live |
+| [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | **43 034** | 🟢 MIT | 🟢 live |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | **39 986** | 🔴 GPL-3.0 | 🟢 live, `develop` |
+| [`temporalio/temporal`](https://github.com/temporalio/temporal) | **23 591** | 🟢 MIT | 🟢 live |
+| [`kaldi-asr/kaldi`](https://github.com/kaldi-asr/kaldi) | **15 491** | 🟢 Apache-2.0 | 🟢 live — pronunciation assessment |
+| [`frappe/frappe`](https://github.com/frappe/frappe) | **10 913** | 🟢 MIT | 🟢 live, `develop` |
+| [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | **8 354** | 🟢 BSD-3-Clause | 🟢 live |
+| [`MontrealCorpusTools/Montreal-Forced-Aligner`](https://github.com/MontrealCorpusTools/Montreal-Forced-Aligner) | **1 902** | 🟢 MIT | 🟢 live |
+| [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | **1 374** | 🟢 BSD-3-Clause | 🟢 live |
+| [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | **518** | 🟡 AGPL-3.0 core + MIT contributed portions | 🟢 live |
+| [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | **507** | 🟢 MIT | 🟢 live — spaced repetition |
+| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **443** | 🟢 MIT | 🟢 live — **repaired, 3 cells carried `~430`** |
+| [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | **283** | 🟢 MIT | 🟢 live — knowledge tracing |
+| [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | **153** | 🟢 MIT | 🟢 live, `dev` — adaptive testing |
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **144** | 🟢 Apache-2.0 | 🟢 live — the xAPI record store |
+| [`adlnet/xAPI-SCORM-Profile`](https://github.com/adlnet/xAPI-SCORM-Profile) | **42** | 🟢 Apache-2.0 | 🔴 **ARCHIVED — treat as a frozen SPEC to implement, never a dependency that will take a fix** |
+
+🔵 **Eighteen foundational repos, every star count and grant measured this pass, and the three
+rows that would have been recommendations on dead upstreams now say so.**
+
+## 🟢 🆕 `P119-G` — p118's `P118-C` cross-validated on a second, independent channel
+
+p118 read all 249 default branches over the **git transport**. p119 read them over the **search
+API**. 🟢 **26 addresses are comparable across both captures and they agree 26 / 26** — including
+every one of p118's awkward cases: `frappe/*` → `develop`, `Elgg/Elgg` → `7.x`,
+`claroline/Claroline` → `15.0`, `openeducat/openeducat_erp` → `19.0`,
+`ILIAS-eLearning/ILIAS` → `release_11`, `overhangio/tutor` → `release`,
+`gocodebox/lifterlms` → `trunk`, `francoisjacquet/rosariosis` → `mobile`.
+
+🔵 **`P118-C` is confirmed, not merely unrefuted** — which matters because every licence and
+recency figure on this page is read from a branch, so reading the wrong branch is not a near-miss
+but a different repository state.
+
+
 **Pass 118, 2026-10-11.** ⏱️ **Fifth pass of this date** (census window **03:4x → 04:2x UTC**).
 
 🟢 **Instrument: `compose/code/p118-licence-column-sweep/`, discharging `ACTION E`. This page
@@ -496,7 +595,7 @@ prove a large polyglot tree CAN be pinned end to end. These are the three widest
 
 | repo | licence | lockable manifests | reached |
 |---|---|---|---|
-| [`leemonade/leemons`](https://github.com/leemonade/leemons) | 🟢 Apache-2.0 | **114** | 🟢 **114 / 114** |
+| [`leemonade/leemons`](https://github.com/leemonade/leemons) | 🔴 **"Fair Code License" v1.0 — NOT OSI** ⚠️ **was 🟢 Apache-2.0** | **114** | 🟢 **114 / 114** |
 | [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3 | **63** | 🟢 **63 / 63** |
 | [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | 🟢 AGPL-3 | **58** | 🟢 **58 / 58** |
 
@@ -982,11 +1081,11 @@ today, and these are the rows an engagement would have reached for:**
 
 | repo | pin | last commit | age |
 |---|---|---|---|
-| [`adlnet/SCORM-to-TLA-Roadmap`](https://github.com/adlnet/SCORM-to-TLA-Roadmap) | `v1.0` | 2017-01-24 | 🔴 3 546 d |
+| [`adlnet/SCORM-to-TLA-Roadmap`](https://github.com/adlnet/SCORM-to-TLA-Roadmap) | `v1.0` · 🔴 **ARCHIVED** | 2017-01-24 | 🔴 3 546 d |
 | [`kuali/rice`](https://github.com/kuali/rice) | `rice-2.6.0` | 2017-05-17 | 🔴 3 433 d |
 | [`IMSGlobal/caliper-spec`](https://github.com/IMSGlobal/caliper-spec) | `1.1.0` | 2019-05-06 | 🔴 2 714 d |
 | [`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | `1.2.3` | 2020-02-06 | 🔴 2 438 d |
-| [`moodlehq/moodle-tool_dataprivacy`](https://github.com/moodlehq/moodle-tool_dataprivacy) | `34.9.0` | 2020-06-16 | 🔴 2 307 d |
+| [`moodlehq/moodle-tool_dataprivacy`](https://github.com/moodlehq/moodle-tool_dataprivacy) | `34.9.0` · 🔴 **ARCHIVED** | 2020-06-16 | 🔴 2 307 d |
 | [`kualico/rice`](https://github.com/kualico/rice) | `2.7.2` | 2020-07-01 | 🔴 2 292 d |
 | [`openfun/xblock-proctor-exam`](https://github.com/openfun/xblock-proctor-exam) | `v1.0.0` | 2021-02-11 | 🔴 2 067 d |
 | [`Jasig/SSP`](https://github.com/Jasig/SSP) | `ssp-2.9.0` | 2021-07-26 | 🔴 1 902 d |
@@ -1817,7 +1916,7 @@ already runs and get learner data *out* of it.
 | repo | grant (payload · bytes · ref · SHA) | ★ | region | role in a build |
 |---|---|---|---|---|
 | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | **MIT** · 1 072 B · `master` · `882f3b8` | 354 | 🔵 unplaced | The runtime shim. SCORM 1.2 / 2004 API surface for any content in any LMS. |
-| [`adlnet/xAPI-SCORM-Profile`](https://github.com/adlnet/xAPI-SCORM-Profile) | **Apache-2.0** · 11 324 B · `master` · `ea17c40` | 42 | **North America** (US DoD / ADL) | The authoritative SCORM → xAPI statement mapping. The audit-trail spec. |
+| [`adlnet/xAPI-SCORM-Profile`](https://github.com/adlnet/xAPI-SCORM-Profile) | **Apache-2.0** · 11 324 B · `master` · `ea17c40` · 🔴 **ARCHIVED** | 42 | **North America** (US DoD / ADL) | The authoritative SCORM → xAPI statement mapping. The audit-trail spec. |
 | [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | **Apache-2.0** · 11 357 B · `master` · `efa045e` | — | **North America** (US DoD / ADL) | Reference Learning Record Store — the canonical implementation to test against. |
 | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **Apache-2.0** · 11 357 B · `main` · `cb794e4` | — | **North America** (Yet Analytics, US) | **A production SQL LRS.** Apache-2.0 and backed by a real database — this is the one to deploy, where `ADL_LRS` is the one to conform to. |
 | [`tunapanda/h5p-standalone`](https://github.com/tunapanda/h5p-standalone) | **MIT** · 1 077 B · `master` · `b5ac7dd` | — | 🟡 **EMEA** (Tunapanda, Kenya lineage) | 🟢 **The MIT escape hatch from H5P's GPL core.** Plays H5P content with no LMS and no GPL server-side library. |
@@ -1990,7 +2089,7 @@ named the technique instead of the industry** — `P955` holding for a second pa
 
 | repo | grant (payload · bytes · ref · SHA) | ★ | region | role in a build |
 |---|---|---|---|---|
-| 🆕 [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **MIT** · 1 066 B · `main` · `77c3e90` | ~430 | 🔵 unplaced | 🟢 **The reference deep-knowledge-tracing benchmark library** (NeurIPS 2022 datasets-and-benchmarks track, `pykt.org`). Standardised preprocessing plus a model zoo — **DKT, DKVMN, SAKT, SAINT, AKT, GKT, LPKT** — over 7 datasets. 🔵 **This is the missing layer, not another tutor:** it turns "the agent remembers the conversation" into **a per-skill mastery estimate you can threshold on**, which is what adaptive sequencing and mastery-gated progression actually need. MIT, so it can sit inside a paid deliverable. |
+| 🆕 [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **MIT** · 1 066 B · `main` · `77c3e90` | 443 | 🔵 unplaced | 🟢 **The reference deep-knowledge-tracing benchmark library** (NeurIPS 2022 datasets-and-benchmarks track, `pykt.org`). Standardised preprocessing plus a model zoo — **DKT, DKVMN, SAKT, SAINT, AKT, GKT, LPKT** — over 7 datasets. 🔵 **This is the missing layer, not another tutor:** it turns "the agent remembers the conversation" into **a per-skill mastery estimate you can threshold on**, which is what adaptive sequencing and mastery-gated progression actually need. MIT, so it can sit inside a paid deliverable. |
 | 🆕 [`JonathanSilver/pyKT`](https://github.com/JonathanSilver/pyKT) | **MIT** · 1 065 B · `main` · `2bef7e9` | — | 🔵 unplaced | 🔴 **Name collision, and the weaker of the two.** A separate PyTorch reference implementation whose own README warns *"not all the implemented models have achieved comparable performance to that of the original implementations"*. 🔵 **Read it as a reference, never as the benchmark** — and note it is reachable by the same search string as the row above. |
 
 🔴 **And the third candidate carries no grant:**
@@ -2026,7 +2125,7 @@ logistic item curve is an explanation. A trained LSTM is not.**
 | 🆕 p95 [`eribean/girth_mcmc`](https://github.com/eribean/girth_mcmc) | **MIT** · `LICENSE.txt` 1 061 B · `main` · version **0.6.0** | — | 🔵 unplaced (same pseudonymous holder as `girth`; no geography to take, so none is asserted) | **Bayesian / MCMC item-response-theory estimation** — the sampling companion to `girth`, and the third of the three estimators `catsim`'s README points Python users at. 🟢 **Triple-confirmed grant**: the `LICENSE.txt` payload is canonical MIT, `setup.py` declares `license="MIT"`, and the classifier says `License :: OSI Approved :: MIT License`. 🟡 **Same filename trap as `girth`**: `LICENSE` is a **404**, the grant is in `LICENSE.txt`. |
 | 🆕 [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | **BSD-3-Clause** · `LICENSE` 1 514 B · `dev` · `7e6caae` | 153 | 🟡 **LATAM** (Brazil) — ⚠️ **evidence class is weaker than `P800`**: the payload's copyright line is a personal name only, and the Brazil placement comes from the project's own documentation host, `douglasrizzo.com.br`, linked throughout the README. Labelled, not upgraded. | **Computerized Adaptive Testing engine** — item selection, ability estimation, stopping rules, plus a simulator. 🟢 **The only CAT engine on this shelf, and the only psychometrics row with a LATAM claim.** 🟡 Default branch is `dev`, not `main` — pin it. |
 | 🆕 [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | **MIT** · `LICENSE` 1 079 B · `main` · `9446cb0` | 506 | 🔵 unplaced (payload copyright line is the org, *"Open Spaced Repetition"*) | **FSRS scheduling** — when to show an item again, as a library. 🔵 **The complement to mastery, not a duplicate of it:** BKT/IRT say *whether* a learner knows a skill; FSRS says *when they will forget it*. Highest star count in this tier. |
-| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **MIT** · 1 066 B · `main` · `77c3e90` | ~430 | 🔵 unplaced | 🟢 Deep knowledge tracing: DKT, DKVMN, SAKT, SAINT, AKT, GKT, LPKT over 7 datasets (NeurIPS 2022). **Carried from pass 92 at its pass-92 SHA; not re-read this pass.** 🔵 Read it as the research ceiling, and `pyBKT` as the deliverable floor. |
+| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **MIT** · 1 066 B · `main` · `77c3e90` | 443 | 🔵 unplaced | 🟢 Deep knowledge tracing: DKT, DKVMN, SAKT, SAINT, AKT, GKT, LPKT over 7 datasets (NeurIPS 2022). **Carried from pass 92 at its pass-92 SHA; not re-read this pass.** 🔵 Read it as the research ceiling, and `pyBKT` as the deliverable floor. |
 
 ### 🟢 The seam is named by the tools themselves, not inferred by this KB
 
@@ -2291,9 +2390,9 @@ now a pattern inside a single publisher:
 
 | ADL repo | grant | ★ |
 |---|---|---|
-| [`adlnet/xAPI-SCORM-Profile`](https://github.com/adlnet/xAPI-SCORM-Profile) | 🟢 **Apache-2.0** · 11 324 B | 42 |
+| [`adlnet/xAPI-SCORM-Profile`](https://github.com/adlnet/xAPI-SCORM-Profile) | 🟢 **Apache-2.0** · 11 324 B · 🔴 **ARCHIVED** | 42 |
 | [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | 🟢 **Apache-2.0** · 11 357 B | — |
-| [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | 🔴 **no payload / 24** · `master` · `3e532b8` | 99 |
+| [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | 🔴 **no payload / 24** · `master` · `3e532b8` · 🔴 **ARCHIVED** | 99 |
 | 🆕 [`adlnet/SCORM-2004-4ed-Test-Suite`](https://github.com/adlnet/SCORM-2004-4ed-Test-Suite) | 🔴 **no payload / 24** · `master` · `050f1b4` | 18 |
 | 🆕 [`adlnet/SCORM-to-TLA-Roadmap`](https://github.com/adlnet/SCORM-to-TLA-Roadmap) | 🔴 **no payload / 24** · `master` · `da1b9a2` | 7 |
 

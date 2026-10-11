@@ -1,0 +1,130 @@
+DRIFT	COLUMN	../../../agents/top.md	44	HKUDS/DeepTutor	41103	41108	-5	★ (API, this pass)
+DRIFT	COLUMN	../../../agents/top.md	45	microsoft/ai-agents-for-beginners	76867	76876	-9	★ (API, this pass)
+DRIFT	COLUMN	../../../agents/top.md	46	huggingface/smolagents	29775	29778	-3	★ (API, this pass)
+EXACT	COLUMN	../../../agents/top.md	47	agent0ai/agent-zero	19420	19420	0	★ (API, this pass)
+EXACT	COLUMN	../../../agents/top.md	48	plastic-labs/tutor-gpt	931	931	0	★ (API, this pass)
+EXACT	COLUMN	../../../agents/top.md	50	satvik314/educhain	389	389	0	★ (API, this pass)
+EXACT	COLUMN	../../../agents/top.md	53	FWU-DE/ais-chat	25	25	0	★ (API, this pass)
+DRIFT	COLUMN	../../../agents/top.md	54	artcc/freelingo	164	165	-1	★ (API, this pass)
+DRIFT	COLUMN	../../../agents/top.md	156	huggingface/transformers	167302	167342	-40	🟢 stars (API)
+DRIFT	COLUMN	../../../agents/top.md	157	microsoft/ai-agents-for-beginners	76867	76876	-9	🟢 stars (API)
+DRIFT	COLUMN	../../../agents/top.md	158	HKUDS/DeepTutor	41100	41108	-8	🟢 stars (API)
+DRIFT	COLUMN	../../../agents/top.md	159	huggingface/smolagents	29775	29778	-3	🟢 stars (API)
+EXACT	COLUMN	../../../agents/top.md	160	agent0ai/agent-zero	19420	19420	0	🟢 stars (API)
+EXACT	COLUMN	../../../agents/top.md	161	overhangio/tutor	1127	1127	0	🟢 stars (API)
+EXACT	COLUMN	../../../agents/top.md	162	pguso/agents-from-scratch	1040	1040	0	🟢 stars (API)
+EXACT	COLUMN	../../../agents/top.md	163	satvik314/educhain	389	389	0	🟢 stars (API)
+EXACT	COLUMN	../../../agents/top.md	164	Open-TutorAi/open-tutor-ai-CE	108	108	0	🟢 stars (API)
+EXACT	COLUMN	../../../agents/top.md	165	A-R007/Multi-Agent-Study-Assistant	62	62	0	🟢 stars (API)
+EXACT	COLUMN	../../../agents/top.md	166	Ebimsv/AITutorAgent	15	15	0	🟢 stars (API)
+EXACT	COLUMN	../../../agents/top.md	167	marc-shade/docsingest	6	6	0	🟢 stars (API)
+EXACT	COLUMN	../../../agents/top.md	168	eai6/ai-tutor	0	0	0	🟢 stars (API)
+DRIFT	COLUMN	../../../agents/top.md	2184	HKUDS/DeepTutor	41000	41108	-108	★
+EXACT	COLUMN	../../../agents/top.md	2185	ls1intum/Artemis	816	816	0	★
+DRIFT	COLUMN	../../../agents/top.md	2186	Open-TutorAi/open-tutor-ai-CE	107	108	-1	★
+DRIFT	COLUMN	../../../agents/top.md	2187	Selleo/mentingo	91	92	-1	★
+DRIFT	COLUMN	../../../agents/top.md	2194	ankimcp/anki-mcp-server	511	512	-1	★
+EXACT	COLUMN	../../../agents/top.md	2195	ArnaudGuiovanna/tutor-mcp	44	44	0	★
+EXACT	COLUMN	../../../agents/top.md	2196	kemalyy/edumints-scorm-mcp	8	8	0	★
+EXACT	COLUMN	../../../agents/top.md	2197	giacomomaria81/scorm-mcp-server	6	6	0	★
+EXACT	COLUMN	../../../agents/top.md	2198	bncc-dev/bncc-pacotes	9	9	0	★
+EXACT	COLUMN	../../../agents/top.md	2200	towardsai/ai-tutor-app	31	31	0	★
+EXACT	COLUMN	../../../agents/top.md	2201	MysterionRise/adaptive-knowledge-graph	17	17	0	★
+EXACT	COLUMN	../../../agents/top.md	2566	wwrwbs/AI_AWE	2	2	0	★
+EXACT	COLUMN	../../../agents/top.md	2604	EducationalTestingService/rsmtool	71	71	0	★
+EXACT	COLUMN	../../../agents/top.md	2606	HASKI-RAK/NodeGrade	3	3	0	★
+WRONG	COLUMN	../../../agents/top.md	2906	Miaotofu01/Study-Mate	772	825	-53	★
+EXACT	COLUMN	../../../agents/top.md	2907	ZeKaiNie/universal-examprep-skill	303	303	0	★
+DRIFT	COLUMN	../../../agents/top.md	2908	karanb192/algo-sensei	286	287	-1	★
+EXACT	COLUMN	../../../agents/top.md	2909	Li-Evan/Bloom	285	285	0	★
+EXACT	COLUMN	../../../agents/top.md	2910	SenmuuuuW/universal-diagnostic-tutor-skill	242	242	0	★
+DRIFT	COLUMN	../../../agents/top.md	2911	KeWang0622/kaogong-skill	166	169	-3	★
+DRIFT	COLUMN	../../../agents/top.md	2912	zijinz456/OpenTutor	137	139	-2	★
+EXACT	COLUMN	../../../agents/top.md	2913	PrepLabsAI/InterviewMentor	112	112	0	★
+EXACT	COLUMN	../../../agents/top.md	2914	SimonsTang/feifei-companion	106	106	0	★
+EXACT	COLUMN	../../../agents/top.md	2915	flysheep-ai/education-skills	107	107	0	★
+EXACT	COLUMN	../../../agents/top.md	2916	codeXsidd/Studivexa	72	72	0	★
+EXACT	COLUMN	../../../agents/top.md	2926	mumuki/mumuki-laboratory	199	199	0	★
+EXACT	COLUMN	../../../agents/top.md	2929	douglasrizzo/catsim	153	153	0	★
+EXACT	COLUMN	../../../agents/top.md	2930	bncc-dev/bncc-dados	20	20	0	★
+EXACT	COLUMN	../../../repos/foundations.md	127	moodle/moodle	7473	7473	0	🟢 stars (API)
+DRIFT	COLUMN	../../../repos/foundations.md	128	temporalio/temporal	23587	23591	-4	🟢 stars (API)
+EXACT	COLUMN	../../../repos/foundations.md	129	oppia/oppia	6845	6845	0	🟢 stars (API)
+EXACT	COLUMN	../../../repos/foundations.md	130	opencast/opencast	506	506	0	🟢 stars (API)
+EXACT	COLUMN	../../../repos/foundations.md	131	learningequality/kolibri	1141	1141	0	🟢 stars (API)
+EXACT	COLUMN	../../../repos/foundations.md	132	openedx/edx-ora2	64	64	0	🟢 stars (API)
+EXACT	COLUMN	../../../repos/foundations.md	133	DSpace/DSpace	1102	1102	0	🟢 stars (API)
+DRIFT	COLUMN	../../../repos/foundations.md	134	huggingface/transformers	167302	167342	-40	🟢 stars (API)
+EXACT	COLUMN	../../../repos/foundations.md	135	overhangio/tutor	1127	1127	0	🟢 stars (API)
+EXACT	COLUMN	../../../repos/foundations.md	1819	jcputney/scorm-again	354	354	0	★
+EXACT	COLUMN	../../../repos/foundations.md	1820	adlnet/xAPI-SCORM-Profile	42	42	0	★
+EXACT	COLUMN	../../../repos/foundations.md	1826	edly-io/pxc	9	9	0	★
+EXACT	COLUMN	../../../repos/foundations.md	1840	bncc-dev/bncc-dados	20	20	0	★
+EXACT	COLUMN	../../../repos/foundations.md	1841	bncc-dev/bncc-pacotes	9	9	0	★
+EXACT	COLUMN	../../../repos/foundations.md	1842	bncc-dev/bncc-benchmark	9	9	0	★
+EXACT	COLUMN	../../../repos/foundations.md	1886	numbas/Numbas	215	215	0	★
+EXACT	COLUMN	../../../repos/foundations.md	1898	EducationalTestingService/rsmtool	71	71	0	★
+EXACT	COLUMN	../../../repos/foundations.md	1900	HASKI-RAK/NodeGrade	3	3	0	★
+WRONG	COLUMN	../../../repos/foundations.md	1993	pykt-team/pykt-toolkit	430	443	-13	★
+DRIFT	COLUMN	../../../repos/foundations.md	2023	CAHLR/pyBKT	282	283	-1	★
+EXACT	COLUMN	../../../repos/foundations.md	2024	nd-ball/py-irt	173	173	0	★
+EXACT	COLUMN	../../../repos/foundations.md	2025	eribean/girth	126	126	0	★
+EXACT	COLUMN	../../../repos/foundations.md	2027	douglasrizzo/catsim	153	153	0	★
+DRIFT	COLUMN	../../../repos/foundations.md	2028	open-spaced-repetition/py-fsrs	506	507	-1	★
+WRONG	COLUMN	../../../repos/foundations.md	2029	pykt-team/pykt-toolkit	430	443	-13	★
+EXACT	COLUMN	../../../repos/foundations.md	2294	adlnet/xAPI-SCORM-Profile	42	42	0	★
+EXACT	COLUMN	../../../repos/foundations.md	2296	adlnet/SCORM-to-xAPI-Wrapper	99	99	0	★
+EXACT	COLUMN	../../../repos/foundations.md	2297	adlnet/SCORM-2004-4ed-Test-Suite	18	18	0	★
+EXACT	COLUMN	../../../repos/foundations.md	2298	adlnet/SCORM-to-TLA-Roadmap	7	7	0	★
+EXACT	COLUMN	../../../verticals/solutions.md	106	frappe/erpnext	39986	39986	0	🟢 stars
+EXACT	COLUMN	../../../verticals/solutions.md	107	frappe/frappe	10913	10913	0	🟢 stars
+EXACT	COLUMN	../../../verticals/solutions.md	108	openedx/openedx-platform	8196	8196	0	🟢 stars
+EXACT	COLUMN	../../../verticals/solutions.md	109	jupyterhub/jupyterhub	8354	8354	0	🟢 stars
+EXACT	COLUMN	../../../verticals/solutions.md	110	moodle/moodle	7473	7473	0	🟢 stars
+EXACT	COLUMN	../../../verticals/solutions.md	111	instructure/canvas-lms	6863	6863	0	🟢 stars
+EXACT	COLUMN	../../../verticals/solutions.md	112	frappe/lms	3299	3299	0	🟢 stars
+EXACT	COLUMN	../../../verticals/solutions.md	113	Elgg/Elgg	1677	1677	0	🟢 stars
+EXACT	COLUMN	../../../verticals/solutions.md	114	classroomio/classroomio	1717	1717	0	🟢 stars
+EXACT	COLUMN	../../../verticals/solutions.md	115	openeducat/openeducat_erp	886	886	0	🟢 stars
+EXACT	COLUMN	../../../verticals/solutions.md	116	Submitty/Submitty	801	801	0	🟢 stars
+EXACT	COLUMN	../../../verticals/solutions.md	117	OpenOLAT/OpenOLAT	447	447	0	🟢 stars
+EXACT	COLUMN	../../../verticals/solutions.md	118	tsugiproject/tsugi	376	376	0	🟢 stars
+EXACT	COLUMN	../../../verticals/solutions.md	119	jcputney/scorm-again	354	354	0	🟢 stars
+EXACT	COLUMN	../../../verticals/solutions.md	120	canyongbs/advisingapp	340	340	0	🟢 stars
+EXACT	COLUMN	../../../verticals/solutions.md	121	LearnPress/learnpress	275	275	0	🟢 stars
+EXACT	COLUMN	../../../verticals/solutions.md	122	numbas/Numbas	215	215	0	🟢 stars
+EXACT	COLUMN	../../../verticals/solutions.md	123	gocodebox/lifterlms	211	211	0	🟢 stars
+EXACT	COLUMN	../../../verticals/solutions.md	124	opencast/opencast	506	506	0	🟢 stars
+EXACT	COLUMN	../../../verticals/solutions.md	125	DSpace/DSpace	1102	1102	0	🟢 stars
+EXACT	COLUMN	../../../verticals/solutions.md	1825	ls1intum/Artemis	816	816	0	★
+WRONG	COLUMN	../../../verticals/solutions.md	1826	sakaiproject/sakai	1200	1237	-37	★
+EXACT	COLUMN	../../../verticals/solutions.md	1828	OpenOLAT/OpenOLAT	447	447	0	★
+EXACT	COLUMN	../../../verticals/solutions.md	1829	pupilfirst/pupilfirst	979	979	0	★
+EXACT	COLUMN	../../../verticals/solutions.md	1830	inducer/relate	436	436	0	★
+EXACT	COLUMN	../../../verticals/solutions.md	1831	academico-sis/academico	404	404	0	★
+EXACT	COLUMN	../../../verticals/solutions.md	1832	openfun/richie	316	316	0	★
+DRIFT	COLUMN	../../../verticals/solutions.md	1833	Selleo/mentingo	91	92	-1	★
+DRIFT	COLUMN	../../../verticals/solutions.md	1834	Open-TutorAi/open-tutor-ai-CE	107	108	-1	★
+EXACT	COLUMN	../../../verticals/solutions.md	1861	leemonade/leemons	292	292	0	★
+EXACT	COLUMN	../../../verticals/solutions.md	1872	LearnPress/learnpress	275	275	0	★
+EXACT	COLUMN	../../../verticals/solutions.md	1873	gocodebox/lifterlms	211	211	0	★
+EXACT	COLUMN	../../../verticals/solutions.md	1874	atutor/ATutor	180	180	0	★
+WRONG	COLUMN	../../../verticals/solutions.md	1906	overhangio/tutor	1100	1127	-27	★
+DRIFT	COLUMN	../../../verticals/solutions.md	1908	frappe/lms	3300	3299	1	★
+DRIFT	COLUMN	../../../verticals/solutions.md	1909	chamilo/chamilo-lms	1000	1009	-9	★
+EXACT	COLUMN	../../../verticals/solutions.md	1910	ILIAS-eLearning/ILIAS	505	505	0	★
+EXACT	COLUMN	../../../verticals/solutions.md	1911	claroline/Claroline	350	350	0	★
+EXACT	COLUMN	../../../verticals/solutions.md	1912	elmsln/elmsln	253	253	0	★
+EXACT	COLUMN	../../../verticals/solutions.md	1913	mumuki/mumuki-laboratory	199	199	0	★
+DRIFT	COLUMN	../../../verticals/solutions.md	1914	learnhouse/learnhouse	2300	2335	-35	★
+DRIFT	COLUMN	../../../verticals/solutions.md	1915	classroomio/classroomio	1700	1717	-17	★
+WRONG	COLUMN	../../../verticals/solutions.md	1916	codelitdev/courselit	1300	1273	27	★
+EXACT	COLUMN	../../../intel/market.md	3033	frappe/frappe	10913	10913	0	★
+DRIFT	COLUMN	../../../intel/trends.md	2078	CAHLR/pyBKT	282	283	-1	★
+EXACT	COLUMN	../../../intel/trends.md	2080	douglasrizzo/catsim	153	153	0	★
+DRIFT	COLUMN	../../../intel/trends.md	2081	open-spaced-repetition/py-fsrs	506	507	-1	★
+WRONG	COLUMN	../../../intel/trends.md	2082	pykt-team/pykt-toolkit	430	443	-13	★
+EXACT	INLINE	../../../compose/patterns.md	118	tsugiproject/tsugi	376	376	0	inline
+DRIFT	INLINE	../../../compose/patterns.md	119	huggingface/smolagents	29775	29778	-3	inline
+EXACT	INLINE	../../../compose/patterns.md	120	numbas/Numbas	215	215	0	inline
+EXACT	INLINE	../../../compose/patterns.md	121	jcputney/scorm-again	354	354	0	inline

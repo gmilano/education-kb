@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Pass 119 — 2026-10-11 (sixth pass of this date), 04:3x–05:2x UTC
+
+🔵 **APPEND-ONLY page. Added above p118's section; nothing below is edited.**
+
+🟢 **"Trending" is measured here, not quoted. p118 added the default branch as a second measured
+axis. p119 adds the two axes that turn out to decide whether a repo belongs on a shelf at all:
+`archived` and `fork`.**
+
+### 🔴 `P119-C` — five repositories on this KB's shelves are ARCHIVED, and not one row said so
+
+| address | ★ | last update | what the KB published |
+|---|---|---|---|
+| [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | 99 | 2026-03-04 | no flag; `Gap 354` calls it an *"upstream-askable negative"* |
+| [`adlnet/xAPI-SCORM-Profile`](https://github.com/adlnet/xAPI-SCORM-Profile) | 42 | 2026-03-12 | 🔴 *"the authoritative SCORM → xAPI profile"* and **"permissive substrate"** for a compliance build |
+| [`adlnet/SCORM-to-TLA-Roadmap`](https://github.com/adlnet/SCORM-to-TLA-Roadmap) | 7 | 2026-03-12 | no flag |
+| [`moodlehq/moodle-tool_dataprivacy`](https://github.com/moodlehq/moodle-tool_dataprivacy) | 8 | 2023-01-28 | no flag; default branch `MOODLE_34_STABLE` |
+| [`nsip/curriculum-mapper`](https://github.com/nsip/curriculum-mapper) | 1 | 2023-01-28 | no flag |
+
+🔴 **An archived repository is read-only.** It cannot take a patch, ship a CVE fix, or answer an
+issue. *"Stale"* and *"archived"* are different procurement facts, and this KB has a recency
+column but had no liveness column. 🟢 **`Gap 354` is answered by this, not merely informed by
+it**: the upstream it records as refusing to answer is archived. Nobody is going to answer.
+
+🔵 **Three more declare themselves dead in their own description while GitHub still reports them
+live**: [`kuali/rice`](https://github.com/kuali/rice) (*"DEPRECATED — see KualiCo/rice"*),
+[`Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy)
+(*"(Deprecated)"*), [`atutor/ATutor`](https://github.com/atutor/ATutor) (*"NO LONGER USER LEVEL
+SUPPORTED"*). A self-declared death is not in any API field — it is in prose this KB already
+stored and never read as a signal.
+
+### 🔴 `P119-F` — `249 addresses` is at most `247` repositories
+
+Two pairs are one repository each, both spellings held, proven by **identical HEAD SHA** rather
+than inferred from the names:
+
+| held | held | HEAD SHA |
+|---|---|---|
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `2e46ebdf508c` |
+| [`frdel/agent-zero`](https://github.com/frdel/agent-zero) | [`agent0ai/agent-zero`](https://github.com/agent0ai/agent-zero) | `e3051fb584b1` |
+
+🔵 **Why no sweep caught this: `git` and `raw` follow a rename silently.** p118 read
+`edx-platform`'s licence successfully over the git transport and had no way to notice it was
+reading the same tree twice. Only the search index, which answers on canonical names, exposes it
+— the same channel disagreement as `P119-B`.
+
+🟢 **Three further addresses are stale redirects, each resolved by SHA, not by guesswork:**
+`project-sunbird/knowledge-platform` → `Sunbird-Knowlg/knowledge-platform`,
+`project-sunbird/sunbird-lms-service` → `Sunbird-Lern/sunbird-lms-service`, and `openedx/ease` ≡
+`edx/ease`. 🔵 **One stays unexplained and is recorded as such**:
+`garethmanning/claude-education-skills` resolves over `git`, is not a fork, and has no rename
+target this pass could find. An unexplained address does not become an explained one by being
+left out of the table.
+
+### 🟢 Trending by measured growth, this pass vs p118
+
+| repo | ★ this pass | p118 | Δ | note |
+|---|---|---|---|---|
+| [`ollama/ollama`](https://github.com/ollama/ollama) | **182 679** | — | 🆕 | the local-inference floor for every offline-first education build |
+| [`huggingface/transformers`](https://github.com/huggingface/transformers) | **167 342** | 167 302 | 🟢 +40 | |
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | **66 863** | — | 🆕 | the one repo the brief's "github trending education" query actually surfaced |
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | **61 345** | — | 🆕 | 🔵 `LICENSE` CC-BY-4.0 (docs), `LICENSE-CODE` MIT (code) |
+| [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | **43 034** | — | 🆕 | |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | **39 986** | — | 🆕 | default branch `develop` |
+| [`huggingface/agents-course`](https://github.com/huggingface/agents-course) | **33 419** | — | 🆕 | |
+| [`temporalio/temporal`](https://github.com/temporalio/temporal) | **23 591** | 23 587 | 🟢 +4 | |
+| [`kaldi-asr/kaldi`](https://github.com/kaldi-asr/kaldi) | **15 491** | — | 🆕 | the pronunciation-assessment substrate |
+| [`frappe/frappe`](https://github.com/frappe/frappe) | **10 913** | 10 913 | ⏸️ 0 | |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | **9 242** | — | 🆕 | default branch `v3.0.x-develop` |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | **8 196** | 8 196 | ⏸️ 0 | ⚠️ **also held as `openedx/edx-platform` — see `P119-F`** |
+| [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | **8 354** | — | 🆕 | |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | **7 473** | 7 473 | ⏸️ 0 | |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | **6 845** | — | 🆕 | |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | **6 863** | — | 🆕 | |
+
+🔵 **Repaired on the foundations page this pass, because the figures were stale rather than
+changed**: `pykt-team/pykt-toolkit` published `~430` on three pages against a measured **443**,
+and `leemonade/leemons` published 🟢 Apache-2.0 against a **Fair Code / Sustainable Use** licence.
+
+### 🟡 The mandated repo searches, and what they returned
+
+`github trending education AI 2026` and `open source platform education ERP CRM MIT Apache`
+returned **no verifiable new repository**. The first surfaced third-party trending mirrors
+(`gittrend.io`, `trendshift.io`) and one real repo already captured above
+(`rohitg00/ai-engineering-from-scratch`); the second returned **ten pages of a single vendor's
+glossary** (`openeducat.org`), whose own product is **LGPLv3**, not the MIT/Apache the query
+asked for. 🔴 **Written down rather than skipped: the ERP/CRM query has now failed to surface a
+permissive education ERP for four consecutive passes**, and the honest reading is that the
+permissive education ERP the brief imagines may not exist — the shelf's ERPs are
+`frappe/*` (MIT framework, but the education module tracks `develop`), `openeducat` (LGPL-3),
+`apache/ofbiz-framework` (Apache-2.0, generic) and `cortezaproject/corteza` (low-code, generic).
+
+
 ## 🟢 Pass 118 — 2026-10-11 (fifth pass of this date), 03:4x–04:2x UTC
 
 🔵 **APPEND-ONLY page. Added above p117's section; nothing below is edited.**

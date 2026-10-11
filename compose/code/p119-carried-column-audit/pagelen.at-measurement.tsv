@@ -1,0 +1,10 @@
+# Page line counts AT MEASUREMENT TIME (before this pass inserted its own
+# sections). The depth finding is a property of the pages as they were measured;
+# recomputing it from the mutated files would silently restate the claim against
+# a different document. Frozen here so the assertion stays checkable.
+../../../agents/top.md	3093
+../../../repos/foundations.md	2526
+../../../verticals/solutions.md	2022
+../../../intel/market.md	5491
+../../../intel/trends.md	2417
+../../../compose/patterns.md	3382

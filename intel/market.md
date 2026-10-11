@@ -6,6 +6,65 @@ updated: 2026-10-11
 
 # Education — market intelligence
 
+**Pass 119, 2026-10-11.** ⏱️ **Sixth pass of this date** (window **04:3x → 05:2x UTC**).
+🔵 **Per-region opportunities are updated in place under the single canonical
+`## Opportunities by region` block further down this file — one block, five `###`, closed
+vocabulary, as the brief and `p383-region-heading-gate` both require.**
+
+🟢 **Instrument: `compose/code/p119-carried-column-audit/`. `test_p119.sh` **43 passed / 0
+failed**, offline. This page carried **1** of the 7 wrong star cells and **2** of the claims this
+pass retracts.**
+
+## 🔴 🆕 `P119-B` — this page's nineteen-pass explanation for the `—` in every ★ column is wrong
+
+🔴 **The channel table has said since pass 100 that `api.github.com http=403` is *"the cause of
+every `—` in a ★ column."* It is not.** GitHub's repository search **excludes forks unless
+`fork:true` is passed**, and four of this KB's addresses are forks. One query flag turned four
+permanent dashes into numbers:
+[`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) (**1★**),
+[`GEMLab-HKU/Unlearn_and_Relearn`](https://github.com/GEMLab-HKU/Unlearn_and_Relearn) (5★),
+[`mlx-cassio/awesome-eu-ai-act`](https://github.com/mlx-cassio/awesome-eu-ai-act) (0★),
+[`CSR2017/edfi-oneroster`](https://github.com/CSR2017/edfi-oneroster) (0★).
+
+🔵 **p118 was one sentence away from this.** Its North America table says of `open-learning-ai-tutor`:
+*"The API returned no record for it."* It recorded the symptom and reached for the explanation
+already on the page instead of testing it. 🔴 **A carried explanation decays exactly like a
+carried figure, and it is harder to notice because nothing re-measures a sentence.**
+
+## 🟡 🆕 `P119-E` — the twelfth consecutive pass of mandated searches, and the fourth with nothing new
+
+The brief's eight queries ran: four global, one per region. **Zero new addresses. Zero new
+regulation tokens. Nineteen candidate tokens extracted and checked one at a time against the held
+KB — all nineteen already present.**
+
+| token | region | files already holding it |
+|---|---|---|
+| Digital Education Council LATAM survey | LATAM | 6 |
+| UK AI Adoption Summit / £200 M | EMEA | 2 |
+| Bridge AI · Skills England | EMEA | 1 · 2 |
+| UNU-IAS higher-education working paper | LATAM | 5 |
+| OpenAI ANZ policy lead (Brent Thomas) | APAC | 4 |
+| Carnegie Mellon · Gates Foundation courseware | North America | 5 · 4 |
+| TCS × Pearson learning alliance | APAC | 6 · 8 |
+| Georgia SB 179 · Florida SB 1194 | North America | 2 · 2 |
+| Schola Europaea `2025-01-D-66` | EMEA | 3 |
+| AI Week LATAM 2026 | LATAM | 2 |
+| LearnUpon · Alteryx Academy | APAC | 7 · 2 |
+| Observatorio IA · ANUIES · ILIA index | LATAM | 1 · 4 · 19 |
+
+🔴 **p117: 4 new / 13 rejected → p118: 0 / 15 → p119: 0 / 19.** 🟢 **The honest conclusion, stated
+as a property of the instrument rather than of the world: the brief's fixed query set is
+exhausted on this industry.** The global queries now return market-research landing pages,
+vendor glossaries and SEO roundups almost exclusively — the `open source platform education ERP
+CRM MIT Apache` query returned **ten results from a single vendor's glossary site**, whose own
+product is LGPL-3.
+
+🔵 **What would actually yield, pre-registered as a method change rather than acted on
+unilaterally**: the new addresses this KB *has* gained in recent passes arrived from the GitHub
+search channel (topic and recency queries), not from the brief's prose queries. The brief's
+queries are tuned for discovering an industry; this KB is past that point.
+
+
 **Pass 117, 2026-10-11.** ⏱️ **Fourth pass of this date** (window **02:45 → 03:1x UTC**).
 🔵 **Per-region opportunities are updated in place under the single canonical
 `## Opportunities by region` block further down this file — one block, five `###`, as the brief
@@ -633,7 +692,7 @@ closed channel.**
 |---|---|---|
 | `git ls-remote` / `git fetch` (anonymous) | 🟢 **OPEN** | carried the whole census: `rc=0` on 296 of 296 addresses, 7 m 10 s |
 | `raw.githubusercontent.com` | 🟢 OPEN | unchanged |
-| `api.github.com` | 🔴 **`http=403`** | 🔵 **nineteenth consecutive pass** — the cause of every `—` in a ★ column |
+| `api.github.com` | 🔴 **`http=403`** | 🔵 **twentieth consecutive pass.** ⚠️ **`P119-B` retracts "the cause of every `—` in a ★ column"**: for 4 addresses the cause is that the address is a **FORK**, and the search channel excludes forks unless `fork:true` is passed. One flag, not a blocked endpoint |
 | WebSearch (extended) | 🟢 OPEN | 8 mandated queries ran; 🔴 **32 of 33 tokens already held** |
 | UK DfE primary announcement | 🔴 unreachable | `P113-T` rests on secondary sources, and says so |
 
@@ -1340,6 +1399,28 @@ KB: write down what you refused to use, and why.**
 
 ### North America
 
+🟢 **p119 (2026-10-11) — `ACTIONS F/G/H/I`. No new regulation token this pass (`Gap 402`, fourth
+consecutive weakening). What changed for this region is liveness: four of the five ARCHIVED
+repositories this pass found are North American, and one of them was being sold here as build
+substrate.**
+
+| address | owner | p119 finding | what changes for an engagement here |
+|---|---|---|---|
+| [`adlnet/xAPI-SCORM-Profile`](https://github.com/adlnet/xAPI-SCORM-Profile) | US DoD / ADL | 🔴 **ARCHIVED** (42★) | 🔴 This page recommended it as *"permissive substrate"* for a compliance trail. It is read-only. 🟢 **Re-framed: treat it as a frozen SPEC Globant implements, and bill the implementation** |
+| [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | US DoD / ADL | 🔴 **ARCHIVED** (99★) | 🟢 **`Gap 354` is answered, not informed**: it records this as an *"upstream-askable negative"*. The upstream is archived; nobody will answer |
+| [`adlnet/SCORM-to-TLA-Roadmap`](https://github.com/adlnet/SCORM-to-TLA-Roadmap) | US DoD / ADL | 🔴 **ARCHIVED** (7★) | the SCORM → TLA transition guidance is frozen at `v1.0`, 2017 |
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | MIT Open Learning | 🔴 **`fork:true`, 1★** | 🔴 p118 wrote *"the API returned no record"* and left it. **`P119-B` has the cause: forks are excluded from the search channel unless `fork:true`.** Not an institutional flagship — a 1★ fork |
+| [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | Learning Commons | 🔴 MIT code, but **corpora CC-BY-NC-SA-4.0** | 🔴 **NonCommercial.** The annotated CLEAR and PERSUADE 2.0 corpora are what make it evidence-backed, and they cannot ship in a paid engagement. Use the judge code; license the corpora separately or substitute |
+
+🔴 **The commercial read, sharpened: the US federal e-learning standards stack is frozen.** ADL
+authored SCORM and xAPI and has archived the bridge repositories. That is not a gap in the
+market — it *is* the market. A district or agency with a 2026 AI-accountability deadline needs a
+working xAPI trail and the reference implementations will not be maintained for them.
+🟢 **The permissive substrate that IS live**: [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql)
+(Apache-2.0, 144★), [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) (354★),
+[`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) (ECL-2.0, 1 237★) where an HE
+platform is in scope.
+
 
 🟢 **p118 (2026-10-11) — `ACTION E`. No new regulation token this pass; the change in this region
 is that **9 of the 18 wrong licences the sweep found sit on North American addresses**, and two of
@@ -1879,7 +1960,7 @@ direct school benefit; Oklahoma and Maryland are moving on human oversight of hi
 
 🟢 **Sell the compliance layer.** Thousands of districts have a legal deadline and no instrument. An auditable
 record of *what the AI did, to which learner, on whose data, reviewed by which human* is a deliverable, and the
-permissive substrate exists: `yetanalytics/lrsql` (Apache-2.0) + `adlnet/xAPI-SCORM-Profile` (Apache-2.0) for
+permissive substrate exists: `yetanalytics/lrsql` (Apache-2.0) + `adlnet/xAPI-SCORM-Profile` (Apache-2.0, 🔴 **ARCHIVED — `P119-C`: read-only upstream, so treat the profile as a frozen SPEC to implement, never as a dependency that will take a fix**) for
 the trail, `Sakai` (ECL-2.0) where an HE platform is in scope. See `P91-B`.
 🟢 🆕 **And sell the teacher-capability layer, which is now measured as the larger hole**: 71 % untrained
 against 10 % with guidelines means the binding constraint is people, not software.
@@ -2046,6 +2127,42 @@ adoption.** 🔴 **So a North America pitch that leads with adoption is pushing 
 regulatory grain; one that leads with governance, auditability and teacher-augmentation is with it.**
 
 ### EMEA
+
+🟢 **p119 (2026-10-11) — `ACTION F`. The costliest licence error this KB has held belongs to this
+region, and it is a procurement trap with a number attached.**
+
+🔴 **[`leemonade/leemons`](https://github.com/leemonade/leemons) (292★) is Leemons Edtech
+Solutions SL, Avda Manoteras 38, Madrid 🇪🇸.** The KB published it as 🟢 Apache-2.0 on the
+foundations shelf and in a compose pattern. Its root `LICENSE.md` is a **"Fair Code License"
+v1.0** built on the Sustainable Use License, with **zero** occurrences of the word "apache":
+
+| clause | as committed |
+|---|---|
+| use | only to manage *the User's own* educational services; anything else needs written authorization |
+| redistribution | only **free of charge and non-commercial** |
+| 🔴 fee | **€100 000** past **1 000 users or profiles**, or €1 M annual revenue from it |
+| 🔴 royalty | **5 %** after year one |
+
+🔴 **Any EMEA education deployment Globant would be hired to build crosses 1 000 users on day
+one.** This is the exact shape of the n8n "Sustainable Use License" flag the technology rotation
+already carries — the licence family has now reached the education shelf in Spain.
+
+🟢 **The live permissive EMEA shelf, measured this pass**:
+[`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) (Apache-2.0, 25★ — German state
+schools' own chatbot, the sovereignty reference),
+[`openfun/richie`](https://github.com/openfun/richie) (MIT, 316★ — France Université Numérique),
+[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) (Apache-2.0, 447★, CH),
+[`INGInious/INGInious`](https://github.com/INGInious/INGInious) (243★, UCLouvain BE),
+[`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) (114★, self-hosted
+pronunciation assessment), [`dkavargy/ESCOPlus2.0`](https://github.com/dkavargy/ESCOPlus2.0) and
+[`KonstantinosPetrakis/esco-skill-extractor`](https://github.com/KonstantinosPetrakis/esco-skill-extractor)
+(ESCO taxonomy, the EU skills vocabulary).
+
+🔵 **Regulatory context unchanged and still the strongest selling position of any region**: the EU
+AI Act makes admission, evaluation and exam scoring high-risk, which obliges a conformity
+assessment — a deliverable, not a worry. 🔴 **No new EMEA regulation token this pass**; the
+mandated query returned 2023-vintage enterprise-AI research and one UK edtech newsletter whose
+£200 M AI Adoption Summit figure this KB has held for two passes.
 
 
 🟢 **p118 (2026-10-11) — `ACTION E`. No new regulation token. **8 of the 18 wrong licences sit on
@@ -3020,6 +3137,43 @@ duty is the sellable deliverable that is already overdue.**
 
 ### APAC
 
+🟢 **p119 (2026-10-11) — `ACTIONS F/I`. This region's finding is an identity one: the KB's
+addresses for India's national education stack are stale, and the stale spelling is what a
+builder would have cloned.**
+
+🔴 **Sunbird — the Government of India's national education platform — reorganised into
+sub-orgs, and this KB still holds the old addresses.** Both resolved by **identical HEAD SHA**,
+not by guessing from the names:
+
+| held address | the canonical address now | HEAD SHA |
+|---|---|---|
+| `project-sunbird/knowledge-platform` | [`Sunbird-Knowlg/knowledge-platform`](https://github.com/Sunbird-Knowlg/knowledge-platform) | `adca9749a0ce` |
+| `project-sunbird/sunbird-lms-service` | [`Sunbird-Lern/sunbird-lms-service`](https://github.com/Sunbird-Lern/sunbird-lms-service) | `48c79a862038` |
+
+🔵 **Why no previous pass noticed: `git` and `raw` follow a rename silently.** Every licence and
+recency figure the KB holds for these two was read correctly — from a redirect. Only the search
+index, which answers on canonical names, exposes it.
+
+🟢 **The live APAC shelf, measured this pass**:
+[`frappe/frappe`](https://github.com/frappe/frappe) (MIT, 10 913★) and
+[`frappe/erpnext`](https://github.com/frappe/erpnext) (GPL-3.0, 39 986★) — Frappe Technologies,
+Mumbai 🇮🇳, and the MIT *framework* under a GPL *application* is the composition that matters;
+[`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud)
+(MIT, 1 173★ 🇨🇳 — the only permissive full MOOC platform on the shelf);
+[`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) (MIT, **825★**, 🇨🇳 — repaired
+this pass from a stale 772); [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) (285★),
+[`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill)
+(303★), [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) (169★),
+[`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion) (106★),
+[`THU-MAIC/dsh-openmaic`](https://github.com/THU-MAIC/dsh-openmaic) (90★, Tsinghua),
+[`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) (Apache-2.0,
+355★ — Singapore IMDA's own LLM evaluation harness, the region's governance instrument).
+
+🔴 **The agent-skill tier is overwhelmingly Chinese-language and MIT, and it is the fastest-moving
+part of this KB's shelf** — six of the eleven newest agent entries. 🔵 **Regulatory context held,
+0 new tokens**: Vietnam's Law on AI (in force 2026-03-01, education named high-risk, 72-hour
+incident reporting), South Korea's AI Basic Act (2026-01-22), Taiwan's AI Basic Act (2025-12).
+
 
 🟢 **p118 (2026-10-11) — `ACTION E`. APAC is the region where this pass's licence sweep changed
 the most for the least obvious reason: the Frappe family, which is the APAC ERP/LMS stack in this
@@ -3917,6 +4071,45 @@ the permission argument first — except in ANZ, where it does.** 🔴 **That is
 North America posture recorded above, and the two pitches should not share a slide.**
 
 ### LATAM
+
+🟢 **p119 (2026-10-11) — `ACTION F`. The Brazilian curriculum-data cluster's split grants are now
+resolved from the files they name, and the KB's reading of them was right.**
+
+🟢 **`ACTION F` followed each prose-index `LICENSE` to the sibling files it names.** For the
+`bncc-dev` family the KB's `MIT` token was **correct for the code**, and the data tier is
+separate — which is the distinction a LATAM curriculum engagement actually turns on:
+
+| address | code | data | engagement read |
+|---|---|---|---|
+| [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) (20★) | — | CC BY 4.0 | 1 721 BNCC learning objectives as JSON/SQLite/CSV with per-record provenance |
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) (9★) | 🟢 **MIT** (`LICENSE-CODIGO.md`) | CC BY 4.0 (`LICENSE-DADOS.md`) | npm/PyPI packages + MCP server: the dataset in one line |
+| [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) (9★) | 🟢 **MIT** | CC BY 4.0 | 15 300 answers from 17 models — an open LLM-hallucination benchmark **on the Brazilian national curriculum** |
+
+🔵 **The `bncc-pacotes` repo also declares its name and visual identity NOT licensed** — a third
+class neither p118's sweep nor this one has a column for, and the one a white-label engagement
+would trip over.
+
+🟢 **The live LATAM shelf, measured this pass**:
+[`portabilis/i-educar`](https://github.com/portabilis/i-educar) (AGPL-3.0, **718★**, branch
+`2.12` — Brazil's largest free school SIS, *software público*),
+[`portabilis/i-diario`](https://github.com/portabilis/i-diario) (117★, branch `1.6`),
+[`portabilis/pre-matricula-digital`](https://github.com/portabilis/pre-matricula-digital) (21★),
+[`SidneyBissoli/educabR`](https://github.com/SidneyBissoli/educabR) (15★, CRAN — INEP
+microdata, *Censo Escolar* and ENEM, in R),
+[`mumuki/mumuki-laboratory`](https://github.com/mumuki/mumuki-laboratory) (199★ 🇦🇷),
+[`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) (Universidad Tecnológica de Pereira
+🇨🇴, rural HE tutoring),
+[`programadores-obreros/Agente-editor-inet`](https://github.com/programadores-obreros/Agente-editor-inet)
+(🇦🇷 INET technical schools, Arduino/ESP32 teaching, offline),
+[`belentani7/aprende-brasil`](https://github.com/belentani7/aprende-brasil) (🇧🇷),
+[`xGabrielCv/Auto-Matricula-SIGAA-UnB`](https://github.com/xGabrielCv/Auto-Matricula-SIGAA-UnB) (🇧🇷 UnB).
+
+🔴 **The structural read is unchanged and it is the one that sells**: Brazil's public-education
+software is AGPL-3.0 and its curriculum data is CC BY — so the closed layer must sit *beside*
+`i-educar`, not inside it, and the BNCC alignment data is free to use with attribution.
+🔵 **0 new regulation tokens**: UNESCO IESALC's 87 % adoption / ~26 % formal-framework finding,
+the Digital Education Council LATAM survey, Chile's national AI policy, Brazil's PL 2.338 and
+the IDB's ILIA index were **all already held** — 19 tokens checked, 19 rejected.
 
 
 🟢 **p118 (2026-10-11) — `ACTION E`. LATAM is the region where this pass's instrument was itself
@@ -4975,6 +5168,35 @@ and the government primary-source channel is closed.** 🔴 **A later pass must 
 regulatory rows as primary-verified. They are not, and the reason is recorded.**
 
 ### Global
+
+🟢 **p119 (2026-10-11) — `ACTIONS F/G/H/I`. Two global corrections, both about the KB's own
+figures rather than the market.**
+
+🔴 **`249 addresses` is at most `247` repositories.** Two held pairs are one repository each,
+proven by identical HEAD SHA: `openedx/edx-platform` ≡ `openedx/openedx-platform`
+(`2e46ebdf508c`) and `frdel/agent-zero` ≡ `agent0ai/agent-zero` (`e3051fb584b1`). Every
+percentage this KB has published against a denominator of 249 is affected.
+🟢 **`ACTION M` is pre-registered to re-derive them**, with the clause that it is refuted if no
+published figure moves by more than one point.
+
+🔴 **`UNREAD` is not a safe verdict, and it is the global lesson of this pass.** p118's sweep
+scored 55 rows `UNREAD` — correctly refusing to call them `AGREE`. **42 of those 55, across 22
+addresses, claim MIT / Apache-2.0 / BSD against a grant the instrument could not read.** One of
+the 22 (`leemonade/leemons`) turned out to be a **€100 000** Fair Code licence published as
+Apache-2.0. The other 20 are unexamined; `ACTION J` is pre-registered to resolve them.
+
+🔵 **The transferable form, for any industry KB in this programme:** a sweep that reports
+*"could not read"* has produced a work item, not a result. Absence of a readable grant reads as
+permission — p118 wrote that down about measurement (`P118-K`) and did not apply it to the
+verdict.
+
+🟡 **Market sizing remains the weakest-sourced thing on this page and is labelled as such.** The
+mandated global query returned estimates that do not reconcile: USD 6.4 B (2025) → 79.6 B (2034)
+from one firm, 8.3 B → 57.2 B from another, and 10.6 B for 2026 from a third. 🔴 **Three
+incompatible figures from three vendors is not a market size**, and this KB will keep reporting
+the spread rather than picking one. The defensible global facts are the adoption/governance gap
+(student and faculty use far ahead of institutional policy, on every region's own survey) and
+the licence structure of the open-source shelf, which this KB measures itself.
 
 
 🟢 **p118 (2026-10-11) — `ACTION E`, and one address in the Global tier moved.**
