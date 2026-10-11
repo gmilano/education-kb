@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Pass 128 — 2026-10-11 (fifteenth pass of this date), 13:4x–14:2x UTC
+
+🔵 **APPEND-ONLY page. This section is added above p127's and nothing below it is edited.**
+
+🟢 **A measurement week, not a discovery week.** The payload lane answered; everything else was
+refused at the gateway (`P128-F` on `agents/top.md`). So what moved is what this KB had already
+published and had not re-measured.
+
+### 🔴 The figure that moved: a tag count is not an `ls-remote` line count
+
+🔵 **`git ls-remote --tags` prints `refs/tags/X` AND `refs/tags/X^{}` for every annotated tag.**
+Subtracting the dereference lines, **p127's ten published figures reproduce exactly** (139 · 146 ·
+204 · 119 · 45 · 32 · 199 · 127 · 114 · 38) and 🔴 **p99's `canvas-mcp` **26** becomes **23**.
+
+| address | lines | `^{}` | 🟢 real tags | note |
+|---|---|---|---|---|
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 233 | **115** | **118** | 🟢 **+27 releases since the shelf's `2bca285`; HEAD is now `242a932`.** The **91** on the shelf is a STAR count, not a tag count — no correction, new information |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 26 | 3 | 🟢 **23** | 🔴 **repaired on 20 sites over 7 non-append-only pages.** `v1.14.0` still the latest tag |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 78 | 0 | **78** | 🟢 all lightweight — this row was never inflated |
+| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 10 | 3 | **7** | HEAD `3708287` → `368d637`; latest `v0.6.1`. The **44** on the shelf is a STAR count |
+
+🔵 **The four occurrences of the old figure on THIS page and on `repos/trending.md` are left exactly
+as they were**, because both pages are append-only. 🟢 **That is the rule `ACTION AQ` asked for and
+this pass adopts: history is not edited, the dated section at the top carries the current value.**
+
+### 🔴 This KB's own back catalogue refuted a claim on its own shelf
+
+🟢 **`bruchris/canvas-lms-mcp` is MIT (`LICENSE` 1 070 B, `main` · `5da987a`) with 78 tags**, latest
+`canvas-lms-mcp-v2.2.0`. 🔴 **So `vishalsachdev/canvas-mcp` was not "the only RELEASED permissive LMS
+agent connector this KB has verified"** — and this page already carried `bruchris` with its payload
+read, 165 tools, 62 npm versions and a FERPA mode. 🔵 **Third instance of the back-catalogue shape
+(`p103`, `P127-B`, `P128-B`): check a superlative against this KB before checking it against the web.**
+
+### 🟢 Forks, read without the GitHub API
+
+🔴 **`api.github.com` and `github.com` HTML are refused to this session**, so `fork:true` is
+unreadable. 🟢 **Identical payload bytes + identical holder line + a different HEAD does the job:**
+
+| address | payload | holder | HEAD | tags | verdict |
+|---|---|---|---|---|---|
+| [`lindsay-cheng/canvas-mcp`](https://github.com/lindsay-cheng/canvas-mcp) | 1 071 B | © 2025 **Vishal Sachdev** | `bf446a6` | 21 (`v1.12.0`) | 🔴 **fork, 2 minors behind** |
+| [`YeetingWaterbottle/canvas-mcp`](https://github.com/YeetingWaterbottle/canvas-mcp) | 1 071 B | © 2025 **Vishal Sachdev** | `94c05cc` | **0** | 🔴 **fork, unreleased** |
+| [`kvnloo/tutor-mcp`](https://github.com/kvnloo/tutor-mcp) | 1 073 B | © 2026 **Arnaud Guiovanna** | `3d11705` | 7 | 🔴 **fork — and it CONFIRMS this shelf's canonical attribution** |
+
+🔵 **One search query returned five Canvas-connector "projects"; they are three.** 🟢 **A search
+listing over-counts this layer by 67 %, and one `curl` per address fixes it.**
+
+### 🟡 New addresses this pass — 3, of which 1 is usable and 0 are released
+
+| address | grant (payload · bytes · ref · SHA) | tags | verdict |
+|---|---|---|---|
+| [`supe-log/writing-engine`](https://github.com/supe-log/writing-engine) | 🟢 **MIT** · `LICENSE` 1 065 B · `main` · `baa865f` | 🔴 **0** | 🟡 **Fork base.** Rubric essay-grading agent, TypeScript. 🔵 unplaced — holder is a username |
+| 🔴 [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | 🔴 **NO GRANT** — 17 filenames probed on `master` · `60e422c` | 0 | 🔴 **Unusable**, and the README says early development |
+| 🟡 [`scaleapi/researchrubrics`](https://github.com/scaleapi/researchrubrics) | 🟡 **MIT body, 🔴 holder line unfilled**: *"Copyright (c) 2025 **[Authors/Institution]**"* · 1 078 B · `main` · `2dc80e2` | 0 | 🔴 **Do not redistribute** — a grant with no identifiable licensor is worse in review than no grant at all |
+
+🔴 **And it is the benchmark layer AGAIN.** `srs-benchmark` 🔴 no grant, `MRBench` 🔴 no grant
+(`Gap 393`), `researchrubrics` 🟡 defective grant. 🔵 **Three for three: in this industry the code
+gets a licence and the yardstick does not.**
+
+
+
 ## 🟢 Pass 127 — 2026-10-11 (fourteenth pass of this date), 12:4x–13:0x UTC
 
 🔵 **APPEND-ONLY page. This section is added above p126's and nothing below it is edited.**

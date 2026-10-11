@@ -6,6 +6,136 @@ updated: 2026-10-11
 
 # Education — market intelligence
 
+**Pass 128, 2026-10-11.** ⏱️ **Fifteenth pass of this date** (census window **13:4x → 14:2x UTC**).
+
+## 🔴 🆕 `P128-F` — every non-GitHub citation this session could make is search-snippet grade, and that is a POLICY
+
+🟢 **p125 recorded one refused host, p126 a second.** This pass tested the class:
+
+| host | wanted for | result |
+|---|---|---|
+| `digital-strategy.ec.europa.eu` · `eur-lex.europa.eu` | the AI Act application dates, first-hand | 🔴 `403 to CONNECT` |
+| `www.lw.com` | the APAC statute tracker behind the Vietnam date | 🔴 `403 to CONNECT` |
+| `www.iesalc.unesco.org` · `www.unesco.org` · `dig.watch` | the LATAM denominators and a mirror of them | 🔴 `403 to CONNECT` |
+| `www.multistate.us` | the 134-bills / 31-states count | 🔴 `403 to CONNECT` |
+
+🔴 **Seven of seven refused at the gateway.** 🟢 **`raw.githubusercontent.com` and `git ls-remote`
+answer**, which is why this pass's verified content is supply-side. 🔵 **So "channel-only" is not a
+property of three unlucky sources — it is the status of EVERY policy figure below, and of every
+policy figure any pass makes from this session.** 🟢 **Stated once here so each figure does not have
+to carry the caveat twice.**
+
+🔴 **Three open conflicts therefore CANNOT be closed from here**, and are carried with their
+evidence weight rather than silently resolved:
+
+| conflict | sides | this pass's handling |
+|---|---|---|
+| **EU AI Act high-risk dates** | enforcement from **2026-08-02** (amendments in force 2026-07-27) · vs **2027-12-02** stand-alone / **2028-08-02** embedded | 🔴 **Unresolved. Carry both, label which is which.** An EMEA engagement gets a range and a reason, not a date |
+| **Vietnam education-AI high-risk date** | **1 Mar 2026** (3 back-catalogue rows + channel) · vs **1 Mar 2027** (p127's shelf row) | 🟢 **Repaired to 2026 by weight of evidence** (`P128-C`), 🔴 **not closed against the statute** |
+| **LATAM faculty denominator** | 7 319 faculty vs 30 000+ responses | 🔴 **Still open**, same refused host as p125 |
+
+## 🔴 The mandated sweep: zero new tokens in all four regions, and in two the KB is FINER than the channel
+
+| query | yield |
+|---|---|
+| `top open source AI agents education {year} github MIT` | 🔴 **0 new.** Generic agent frameworks (LangChain, CrewAI, LangGraph, OpenHands, OpenCode) — horizontal, all held |
+| `github trending education AI {year}` | 🔴 **0 new** — eighth consecutive pass. Curricula ABOUT AI, declined on the standing ground |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **0 new.** OFBiz, Krayin, Aureus, Huly, ERPNext — all held; 🟢 **and the channel independently confirms this KB's finding that the education-specific tier is copyleft while the permissive tier is horizontal** |
+| `AI {industry} industry trends {year}` | 🔴 **0 new tokens**, 🟢 **1 confirmed direction**: governance and evidence-of-learning displacing personalisation promises |
+| 4 × regional queries | 🔴 **0 new tokens in any region.** Details per region below |
+
+🟢 **The one actionable method finding:** the four generic queries returned **0** new addresses;
+three **layer-specific** queries (LMS connector edge, SIS, rubric grading) returned **3**.
+🔵 **Pre-registered as `ACTION AU` with a 3× refutation clause.**
+
+## Opportunities by region
+
+### 🟢 North America
+
+🟢 **The engagement this KB can now underwrite end to end at the Canvas edge, with a choice.**
+`P128-B` puts **two** permissive maintained connectors on the shelf where the page claimed one:
+[`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) (**MIT**, **78** tags, widest
+write surface, FERPA pseudonymisation mode) and
+[`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (**MIT**, **23** tags,
+`P800`-grade **North America**). 🔵 **Pick on write scope and governance, not availability** — and
+where a US public institution needs provenance in the file, the Illinois-lineage holder is the row
+that provides it.
+
+🔴 **Demand side: 0 new tokens, all channel-only.** 134 AI-in-education bills across 31 states;
+California `AB 1159` (student data out of model training); Idaho `SB 1227`; `H.R. 8747` cleared
+committee markup 21 Jul 2026 and 🔴 **is not law**; Ohio first to mandate a district AI policy
+(`2026-07-01`); NYC's K-8 student-facing moratorium; Katy ISD's K-6 ban from 2026-27.
+🟢 **All already held.** 🔵 **The opportunity follows from the shape, not the count: a district or
+system that must adopt a policy needs the policy implemented in the tooling** — `bruchris`'s
+`CANVAS_DESTRUCTIVE_TOOLS` gate and pseudonymisation mode are the cheapest existing mechanism for
+exactly that, and they are MIT.
+
+### 🟢 EMEA
+
+🟡 **No new supply, one re-measured row that matters**: [`Selleo/mentingo`](https://github.com/Selleo/mentingo)
+(**MIT**, EMEA/Poland) is at **118** real tags and HEAD `242a932` — **+27 releases** past the
+`2bca285` this KB had. 🟢 **An EMEA AI-native LMS that ships that often is a live base, not a demo.**
+🔵 **p127's FUN-MOOC stack (9 MIT + 1 AGPL, institutionally held) is confirmed sound by this pass's
+independent re-measure of all six of its tag figures** — so the sovereign-stack opportunity stands
+exactly as costed.
+
+🔴 **The regulatory date a client will ask for cannot be given a single value from here.** Carry:
+*enforcement of the AI Act began 2026-08-02 under amendments in force 2026-07-27*, **and** *a
+schools-facing reading places stand-alone high-risk obligations at 2027-12-02 and embedded at
+2028-08-02*. 🟢 **Both channel-only; the primary sources are refused (`P128-F`).** 🔵 **The
+commercially useful framing is unaffected: education access, assessment and exam scoring are
+high-risk under Annex III on either timeline, so conformity assessment and human oversight are
+in-scope work now.** 🟡 Other held, unverified figures: ~10 % of 450+ institutions have formal AI-use
+guidelines; Finland, Estonia and the Netherlands lead K-12 integration; UAE `AI Strategy 2031` and
+Saudi `SDAIA` lead the MEA governance half.
+
+### 🟡 APAC
+
+🔴 **0 new supply rows. 0 new demand tokens.** 🟢 **What this pass contributes to APAC is a repair of
+this KB's own record**: `P128-C` — Vietnam's education-AI high-risk date read **1 Mar 2027** on the
+agents shelf while three back-catalogue rows and the search channel read **1 Mar 2026**. 🟢 **Repaired
+to 2026**, 🔴 **by evidence weight, not against the statute.**
+
+🔵 **The APAC picture otherwise holds and this KB remains finer than the channel**: Korea's AI
+Framework Act in force 2026-01-22 with 2026 as a pilot year, a one-year penalty grace **and** an
+enforcement decree the channel did not return (2026-07-21); Vietnam's Law 134/2025/QH15 naming
+education among high-risk sectors with automated assessment and behavioural monitoring called out;
+Taiwan's AI Basic Act passed Dec 2025; China binding, Singapore and Japan voluntary, Australia and
+New Zealand light-touch. 🟢 **Opportunity: a multi-jurisdiction assessment deployment needs
+per-jurisdiction policy nodes, and the three dated statutes make that costable now rather than at
+discovery.** 🔴 **The gap is supply: no APAC-placed permissive education row has entered this KB in
+this pass or the last — the FSRS family is APAC by lineage only and stays unplaced.**
+
+### 🔴 LATAM
+
+🔴 **Zero new supply rows for a third consecutive pass, and this pass can bound the claim rather
+than repeat it.** The region's held rows (`bncc-dev/*`, `LabSirius/TutorIA`,
+`mumuki/mumuki-laboratory`, `belentani7/aprende-brasil`, `douglasrizzo/catsim` — **BSD-3-Clause**)
+are produced by ministries and public universities; 🔵 **star-ranked keyword search structurally
+cannot see that channel**, which is why p127's Spanish and Portuguese queries returned nothing above
+5★ and why this pass did not re-run them expecting a different answer.
+
+🔴 **Demand side: 0 new tokens, and the channel returned LESS than this KB holds.** The UNESCO
+IESALC / UNU-IAS study (200 institutions, 19 countries) is already filed with **87 %** using AI
+somewhere, **74 %** in teaching and learning, **26 %** with a formal strategy, and the
+**84 % / 68 % / 52 %** private-non-profit / public / private-for-profit split — 🟢 **plus the 57 %
+research and 9 % formal-evaluation figures the channel did not surface at all.** Also held: TALIS
+2024 teacher AI use (Brazil 56 %, Chile 55 %, Colombia 53 %, Costa Rica 52 % vs OECD 36 %), Ceibal's
+75 % in Uruguay, the UNESCO LAC AI-in-education Observatory (14 Apr 2026), Colombia's `CONPES 4144`,
+Brazil's `PL 2.338/2023` in the Chamber of Deputies, Chile's risk-based bill. 🔴 **All channel-only;
+`iesalc.unesco.org` is refused at the gateway for the third pass running.**
+
+🟢 **The opportunity is the inverse of the supply gap and is this region's strongest commercial
+fact: adoption at 87 % against governance at 26 % is a 61-point gap, and it is institution-level
+work** — policy, evaluation design, and the human-oversight evidence a risk-based Brazilian or
+Chilean statute will require. 🔵 **A LATAM engagement is therefore sold on governance and evaluation
+capacity, delivered on Moodle** — and `P128-D` is the cost warning that comes with it: the Moodle
+agent edge still has **0** permissive releases against Canvas's **113**.
+
+
+
+# Education — market intelligence
+
 **Pass 127, 2026-10-11.** ⏱️ **Fourteenth pass of this date** (census window **12:4x → 13:0x UTC**).
 
 ## 🟡 🆕 `P127-S` — the mandated sweep: one region returns a hard new number, one returns a dated statute set, two return mostly held tokens
@@ -3411,7 +3541,7 @@ adoption has outrun governance everywhere, and LATAM has measured it best.**
 🔴 **The supply-side caveat that belongs beside it, and it is regional.** `P1006` holds: **Moodle is
 what the ministries and public universities run**, and its connector tier is split — one **AGPL-3.0**
 (`csmediapro`, 34 523 B) and one **MIT but unreleased** (`peancor`, 0 tags). 🔴 **Neither is
-permissive AND released**, while Canvas has exactly that (`canvas-mcp`, MIT, 26 tags).
+permissive AND released**, while Canvas has exactly that twice over (`canvas-mcp`, MIT, 23 tags ⚠️ **was 26 tags**<!--corrected-->; and `bruchris/canvas-lms-mcp`, MIT, **78 tags**).
 🔵 **So `P102-A` costs 3–4 weeks MORE in LATAM than in North America, and the reason is a connector,
 not a platform.** 🟢 **The permissive-core finding helps here too**: OFBiz and Corteza are
 Apache-2.0, so the administrative layer of a ministry engagement no longer has to start from
@@ -4465,7 +4595,7 @@ so a per-state product control is the sellable unit, not a better model.**
 **`Ed-Fi-Data-Standard`** is **Apache-2.0** (10 173 B) with **21 tags**. 🔴 **This refutes `T26` for
 the rostering layer**: an education-specific, permissive, release-engineered student-data platform
 exists in this region. 🔵 **So a North America K-12 engagement can be permissive end to end —
-Ed-Fi for the data spine, `canvas-mcp` (MIT, 26 tags) at the LMS edge — and `P103-B` costs it.**
+Ed-Fi for the data spine, `canvas-mcp` (MIT, 23 tags ⚠️ **was 26 tags**<!--corrected-->) at the LMS edge — and `P103-B` costs it.**
 🟡 **Also recovered here:** `mitodl/open-learning-ai-tutor` (MIT, 15 releases),
 `dspace/dspace` (BSD-3, 136 tags), `1EdTech/openbadges-validator-core` (Apache-2.0, 28 tags).
 
@@ -4486,8 +4616,8 @@ decisions about students, and Ohio required every district to adopt an AI policy
 Apache-2.0 and was born in a US community college** (`Jasig/SSP`, Sinclair). 🔴 **The modern ML tier
 is 6 of 6 unusable** (`Gap 392`) — 🔵 **which is a FIT, not a loss, because an interpretable BKT/IRT
 layer is what a statute requiring human oversight will actually accept.** 🟢 **Now costed end to end
-as `P102-A`** on an Apache-2.0 core with 26 releases, plus the only permissive-and-released LMS
-connector this KB has verified (`canvas-mcp`, MIT, 26 tags) — 🔵 **and Canvas's install base is
+as `P102-A`** on an Apache-2.0 core with 26 releases, plus a permissive-and-released LMS
+connector (`canvas-mcp`, MIT, 23 tags ⚠️ **was “the only permissive-and-released LMS connector this KB has verified”, 26 tags**<!--corrected-->; `bruchris/canvas-lms-mcp`, MIT, **78 tags**, is the larger one) — 🔵 **and Canvas's install base is
 overwhelmingly US higher ed, so the connector and the region line up.**
 
 #### 🟢 🆕 p101 — the early-alert domain model is Apache-2.0, and it was born in a US community college
@@ -4556,7 +4686,7 @@ across 31 states in 2026**, and **more than 30 states** now have guidance docume
 
 🟢 **And `P1006` falls favourably in this region:** Canvas is overwhelmingly a US higher-ed platform
 and it is the one LMS with an agent connector that is **both permissive and released**
-(`vishalsachdev/canvas-mcp`, **MIT**, **26 tags / `v1.14.0`**). 🔵 **A North America engagement
+(`vishalsachdev/canvas-mcp`, **MIT**, **23 tags / `v1.14.0`** ⚠️ **was 26 tags**<!--corrected-->). 🔵 **A North America engagement
 inherits permissive reach into the gradebook; a Moodle-shaped one does not.**
 
 🟡 **Sources are legislative trackers and market reports, and one regulatory overview returned

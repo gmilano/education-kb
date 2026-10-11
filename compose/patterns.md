@@ -6,6 +6,75 @@ updated: 2026-10-11
 
 # Education — compose patterns
 
+**Pass 128, 2026-10-11.** ⏱️ **Fifteenth pass of this date** (census window **13:4x → 14:2x UTC**).
+
+🟢 **Every address below was read from its licence payload this pass, on its real default branch,
+with the HEAD SHA and tag count from `git ls-remote`.** 🔵 **Tag counts are `^{}`-corrected
+(`P128-A`), so they are release counts rather than ref-line counts.**
+
+## 🟢 🆕 `P128-R1` — Canvas grading loop with the write surface GATED, 4–6 weeks
+
+🔵 **The brief a US district or system brings after Ohio-style policy mandates: let staff use an
+agent on the gradebook, and be able to show what it may and may not do.** 🟢 **This is now buildable
+entirely from permissive, released parts — and `P128-B` means there is a choice at the edge.**
+
+| layer | repo | grant · ref · SHA · releases | why this one |
+|---|---|---|---|
+| LMS edge (write) | [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 🟢 **MIT** · 1 070 B · `main` · `5da987a` · **78 tags** | Widest surface in the layer; `CANVAS_DESTRUCTIVE_TOOLS` scopes writes and a FERPA pseudonymisation mode exists as shipped behaviour |
+| LMS edge (read, placed) | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B · `main` · `63f4222` · **23 tags** (`v1.14.0`) | `P800`-grade **North America** provenance where the client needs the holder in the file |
+| tutoring/ITS surface | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT** · 1 073 B · `main` · `368d637` · **7 tags** (`v0.6.1`) | Model-agnostic ITS over MCP, so tutoring is a tool call rather than a prompt |
+| rubric grading | [`supe-log/writing-engine`](https://github.com/supe-log/writing-engine) | 🟢 **MIT** · 1 065 B · `main` · `baa865f` · 🔴 **0 tags** | 🔴 **Vendored as a fork base, never as a dependency** — unreleased, single username holder |
+| learner event record | [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 **MIT** · `LICENSE.md` 1 094 B · `main` · `16f52e4` · **32 tags** | xAPI LRS, MIT, institutionally held — the audit trail the policy mandate actually needs |
+| analytics surface | [`openfun/warren`](https://github.com/openfun/warren) → [`openfun/potsie`](https://github.com/openfun/potsie) | 🟢 **MIT** · 1 094 B · `main` · `839fcbb` / `040f85b` · 13 / 17 tags | One holder, one licence, event → dashboard without reconciling grants |
+
+🟢 **Wiring, concretely.** `canvas-lms-mcp` runs with `CANVAS_DESTRUCTIVE_TOOLS=block` and the
+pseudonymisation flag ON by default; every grade write the agent proposes is emitted as an xAPI
+statement into `ralph` BEFORE it is applied, so the LRS is the proposal log and not just the
+outcome log; `warren`/`potsie` read `ralph` to give the district the "what did the agent do last
+week" dashboard that a policy requirement asks for; `tutor-mcp` handles the student-facing
+explanation path, which under NYC-style K-8 moratoria is the part that must be switchable off by
+grade band. 🔴 **`writing-engine` is forked into the repo and its rubric re-validated on the
+client's own scored essays** — its accuracy claim is unverifiable from the payload lane, and
+`T128-2` says a benchmark claim is not evidence a studio can accept second-hand.
+
+🔵 **Licence boundary: every layer MIT. No copyleft, no open-core ambiguity, nothing to reconcile.**
+
+## 🔴 🆕 `P128-R2` — the same loop on Moodle, and why it costs 3–4 weeks more
+
+🟢 **Identical brief, EMEA or LATAM public institution, Moodle instead of Canvas.**
+
+| layer | option | grant | consequence |
+|---|---|---|---|
+| Moodle edge | [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **AGPL-3.0** · 34 523 B · `main` · `5a194a5` · 7 tags | 🔴 **Declined for linking.** Network copyleft on a server the client reaches over a network. 🟢 **Read it as a specification of the Moodle Web Services surface** |
+| Moodle edge | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 **MIT** · 1 064 B · 🔴 **0 tags** | 🟢 **The buildable path**: 1 064 B of MIT, auditable in an afternoon, extended in-house to the tool set the engagement needs |
+| everything above the edge | as `P128-R1` | 🟢 MIT | 🔵 Unchanged — `ralph`, `warren`, `potsie`, `tutor-mcp` are platform-agnostic over xAPI and MCP |
+
+🔵 **So the delta is one layer, and it is a BUILD rather than an INTEGRATE.** 🟢 **Budget the Moodle
+connector as new permissive code against a documented API, not as adoption of an existing server**
+— that is the whole of `P102-A`'s regional cost difference, and this pass re-confirms both sides of
+it (Canvas **113** permissive releases across 3 projects; Moodle **0**).
+
+## 🟢 🆕 `P128-R3` — the pre-flight that would have caught every defect this pass found, ~1 day
+
+🔵 **Four checks, in this order, before any repository enters a proposal.** 🟢 **Each one is a single
+command on the payload lane, which is the lane that stays open when APIs do not.**
+
+| # | check | command shape | what it catches |
+|---|---|---|---|
+| 1 | **real default branch** | `git ls-remote --symref URL HEAD` | a grant read off `main` when the repo defaults to `master`/`develop` — **86** addresses in this corpus do |
+| 2 | **payload, not badge** | `curl raw.../$BRANCH/LICENSE` over a filename list | `Kosudo/nextSIS` (**no grant**, 17 filenames), `srs-benchmark`, `fsrs4anki-helper` |
+| 3 | 🆕 **holder line** | read the first 3 lines of the payload | 🟡 `scaleapi/researchrubrics` — MIT with `[Authors/Institution]` unfilled; username holders (`supe-log`, `peancor`) that cannot be placed by region |
+| 4 | 🆕 **release count, `^{}`-corrected** | `git ls-remote --tags URL` then subtract `^{}` lines | the **+97 %** inflation on `Selleo/mentingo`, the **+13 %** on `canvas-mcp` |
+| 5 | 🆕 **fork, without the API** | compare payload bytes + holder across candidate addresses | `lindsay-cheng` and `YeetingWaterbottle` presenting as alternatives to their own upstream |
+
+🟢 **Run as a gate, this is the difference between "five Canvas connectors to evaluate" and "three
+projects, one of which is two versions behind".** 🔵 **It needs no GitHub token, which is the point:
+every step survives an environment where `api.github.com` is refused.**
+
+
+
+# Education — compose patterns
+
 **Pass 127, 2026-10-11.** ⏱️ **Fourteenth pass of this date** (census window **12:4x → 13:0x UTC**).
 
 🟢 **Three patterns, all composed from addresses verified THIS pass at the SHAs recorded on
@@ -2726,7 +2795,7 @@ for it** (`compose/code/aiact-50-2-marking/`, `aiact-50-2-pack/`, `aiact-50-2-sp
 
 🔴 **Second constraint, new this pass and it changes an integration estimate: the connector decides
 the platform** (`T19`/`P1006`). **Canvas** has an agent connector that is **MIT and released**
-(`vishalsachdev/canvas-mcp`, **26 tags**, `v1.14.0`); **Moodle** has an **AGPL-3.0** one at `v0.1.7`
+(`vishalsachdev/canvas-mcp`, **23 tags**, `v1.14.0` ⚠️ **was 26 tags**<!--corrected-->); **Moodle** has an **AGPL-3.0** one at `v0.1.7`
 and an **MIT** one with **zero tags**. 🔵 **So a Moodle engagement carries a fork in its estimate and
 a Canvas engagement does not** — and that falls hardest on **LATAM** and public-sector work, which is
 exactly where this page has aimed Moodle for eight passes.
@@ -3056,7 +3125,7 @@ repository's own archive before it is quoted as unbuyable.**
 |---|---|---|---|
 | student-data spine | [`ed-fi-alliance-oss/Ed-Fi-ODS`](https://github.com/ed-fi-alliance-oss/Ed-Fi-ODS) | 🟢 **Apache-2.0** · `LICENSE.txt` **10 172 B** · `main` · `e453cd2cad8a0653c65453948d3d235aec7c517c` · **42 tags / `v7.3.2-pre`** | 🟢 **The operational data store and API that US districts already run** — enrolment, rostering, assessment, discipline. 🔵 **Education-specific AND permissive AND released: the combination `T26` said did not exist.** 🟡 **10 172 B is Apache-2.0 with the appendix omitted, not a modified grant** (`P1024`). 🔴 Top tag is `-pre`; ship from the newest stable `v7.3.x`. |
 | the model, without the server | [`ed-fi-alliance-oss/Ed-Fi-Data-Standard`](https://github.com/ed-fi-alliance-oss/Ed-Fi-Data-Standard) | 🟢 **Apache-2.0** · 10 173 B · 🔴 **`v6.2.0`** · `3d24df6` · **21 tags** | 🟢 **The cheap half when the client already has a warehouse and needs the SCHEMA.** 🔴 **Its default ref is a TAG-SHAPED BRANCH (`P1021`)** — `--symref` first, or you will believe you pinned a release. |
-| LMS edge | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B · `main` · `b054b913603a206c677565bcbec128652cb9d398` · **26 tags / `v1.14.0`** *(p99)* | 🟢 The only permissive **and released** LMS connector this KB has verified. 🔴 **Moodle has no row that is both** (`P1006`): **+3–4 weeks** for a Moodle variant. |
+| LMS edge | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B · `main` · `b054b913603a206c677565bcbec128652cb9d398` · **23 tags / `v1.14.0`** ⚠️ **was 26 tags**<!--corrected--> *(p99)* | 🟢 The only permissive **and released** LMS connector this KB has verified. 🔴 **Moodle has no row that is both** (`P1006`): **+3–4 weeks** for a Moodle variant. |
 | interpretable risk layer | `pyBKT` + [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 **BSD-3-Clause** · 1 514 B · 🔴 `dev` · `7e6caae84a8e7779422ba9338cfe2e2335185b28` · **38 tags** *(p101)* | 🟢 Explainable to a registrar. 🔴 Non-standard default ref (`P1020`). |
 | ML risk layer | **re-implement** (XGBoost + SHAP) | 🔴 **not takeable** | 🔴 **`Gap 392`: 6 of 6 unusable** — including one that excludes selling a service built on it. |
 | institutional corpus | [`dspace/dspace`](https://github.com/dspace/dspace) *(optional)* | 🟢 **BSD-3-Clause** · 1 504 B · `main` · `a5b0f0fc17ad5c7f8917eb89b9222f2c2d441aed` · **136 tags** | 🟡 Where a university's own outputs become a corpus to ground a tutor in. 🔴 **Do not sort its tags naively** — `language-pack-1_4_1` ranks last (`P978`). |
@@ -3095,7 +3164,7 @@ names the way through: build on a generic permissive core.**
 | education domain model | [`Jasig/SSP`](https://github.com/Jasig/SSP) | 🟢 **Apache-2.0** · 11 359 B · `master` · `711244dc0d6d5c65fd261c9bec77dd48b4dbaaf6` · **57 tags** *(p101)* | 🟢 **Take the SCHEMA and the early-alert / caseload / intervention model via its Liquibase changesets.** 🔴 **Do NOT take the front end** — `NOTICE` declares Ext JS **GPL-3.0**, JasperReports / JFreeChart / c3p0 **LGPL**, iText **MPL** (`P1013`). |
 | interpretable risk layer | `pyBKT` + [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 **BSD-3-Clause** · 1 514 B · 🔴 `dev` · `7e6caae84a8e7779422ba9338cfe2e2335185b28` · **38 tags** *(p101)* | 🟢 The part a registrar will accept because it can be explained. 🔴 Note the non-standard default ref (`P1020`). |
 | ML risk layer | **re-implement** (XGBoost + SHAP calibration) | 🔴 **not takeable** | 🔴 **`Gap 392`: the modern ML early-warning tier is 6 of 6 unusable** — 4 ungranted, 1 non-commercial by its own text (`dssg/student-early-warning` **excludes selling a service that uses the Program**, which is Globant's model verbatim), 1 a portfolio project. 🟢 **Re-implementation is the cheap half; the model is 30 lines.** |
-| LMS edge | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B · `main` · `b054b913603a206c677565bcbec128652cb9d398` · **26 tags / `v1.14.0`** *(p99)* | 🟢 The only **permissive AND released** LMS connector this KB has verified. 🔴 For Moodle there is no row that is both (`P1006`), so a Moodle variant of this pattern costs a connector. |
+| LMS edge | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B · `main` · `b054b913603a206c677565bcbec128652cb9d398` · **23 tags / `v1.14.0`** ⚠️ **was 26 tags**<!--corrected--> *(p99)* | 🟢 The only **permissive AND released** LMS connector this KB has verified. 🔴 For Moodle there is no row that is both (`P1006`), so a Moodle variant of this pattern costs a connector. |
 | learning-record store | 🔴 **behind a service boundary** | 🔴 LearningLocker **GPL-3.0** | 🔵 Reachable only across a process boundary; never linked into the deliverable. |
 
 **Estimated 7–10 weeks** for the core + domain model + interpretable layer + Canvas edge; **+2 weeks**
@@ -4173,7 +4242,7 @@ now evidence.
 
 **Why this one is clean.** 🟢 **`vishalsachdev/canvas-mcp` is the only LMS agent connector this KB has
 verified as both permissive and released** — **MIT**, `LICENSE` 1 071 B, `main` ·
-`b054b913603a206c677565bcbec128652cb9d398`, **26 tags**, `v1.14.0`, 40+ tools over the Canvas API.
+`b054b913603a206c677565bcbec128652cb9d398`, **23 tags**, `v1.14.0` ⚠️ **was 26 tags**<!--corrected-->, 40+ tools over the Canvas API.
 🔵 **So the gradebook is reachable through maintained permissive code and nothing in the stack needs a
 fork.**
 

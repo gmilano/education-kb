@@ -6,6 +6,66 @@ updated: 2026-10-11
 
 # Education — current trends
 
+**Pass 128, 2026-10-11.** ⏱️ **Fifteenth pass of this date** (census window **13:4x → 14:2x UTC**).
+
+## 🟢 🆕 `T128-1` — the instrument is becoming the finding: a published figure is only as good as the command that produced it
+
+🔵 **Three passes in a row have now found their largest defect in their own measurement rather than
+in the world**: p126 found evidence keyed on coordinates the pass itself invalidated, p127 published
+a draft discharge as a correction, and p128 finds a release count read with a command that
+double-counts annotated tags. 🟢 **The trend, stated for a studio rather than for this KB: in a
+market where every vendor publishes star counts and release cadences, the differentiator is a
+figure whose derivation is written down.** 🔴 **`git ls-remote --tags | wc -l` inflates by up to
+97 % (`Selleo/mentingo`: 233 lines, 118 tags) and by 0 % on lightweight-tag repositories — so the
+error is invisible exactly where it is harmless.**
+
+## 🔴 🆕 `T128-2` — in education AI the code gets a licence and the YARDSTICK does not: n = 3
+
+| layer | implementation | its benchmark |
+|---|---|---|
+| spaced repetition | 🟢 MIT / BSD-3 across **7** language bindings, 199 + 127 tags | 🔴 [`open-spaced-repetition/srs-benchmark`](https://github.com/open-spaced-repetition/srs-benchmark) — **no grant**, 15 filenames probed |
+| pedagogical evaluation | 🟢 granted scorers | 🔴 `MRBench` — **no grant** (`Gap 393`) |
+| 🆕 rubric evaluation | 🟢 granted agents | 🟡 [`scaleapi/researchrubrics`](https://github.com/scaleapi/researchrubrics) — **MIT whose holder line is the unfilled template** `[Authors/Institution]` |
+
+🟢 **Three independent subdomains, three defective yardsticks — and the third is a NEW failure mode:
+not an absent grant, a grant with no identifiable licensor.** 🔵 **Operational consequence is the
+same in all three: take the implementation, re-run the comparison on the client's own data,
+redistribute the benchmark in none of them.** 🔴 **The claim "state-of-the-art on benchmark X" is
+therefore rarely re-runnable by a studio under terms it can accept, and that should be priced as
+evaluation work rather than assumed as evidence.**
+
+## 🟢 🆕 `T128-3` — the agent edge consolidates into few projects and many forks, and star counts mislead in both directions
+
+🔵 **The Canvas MCP layer presents as five projects and is three** (`P128-D`): two of the five are
+byte-identical forks whose licence payloads still name the upstream holder. 🔴 **Meanwhile the
+most-released project in the layer is the least starred** — `bruchris/canvas-lms-mcp` at **78** tags
+and 62 npm versions carries single-digit stars, while the better-known row has **23**.
+🟢 **So for connector selection, releases and write-scope beat popularity**, and the fork check
+costs one `curl` per address. 🔵 **This is the same direction the 2026 commentary reports from the
+buy side — purpose-built education tooling over generic chatbots, and evidence over promise — seen
+from the supply side.**
+
+## 🟢 🆕 `T128-4` — adoption has outrun governance everywhere, and the size of the gap is now the regional variable
+
+| region | adoption signal | governance signal | gap |
+|---|---|---|---|
+| **LATAM** | **87 %** of 200 HE institutions using AI | **26 %** with a formal strategy | 🔴 **61 points** — the largest, and the clearest commercial opening |
+| **EMEA** | Finland / Estonia / Netherlands leading K-12 | ~**10 %** of 450+ institutions with formal AI-use guidelines; AI Act high-risk duties binding on either timeline | 🔴 **Large, with a statutory deadline attached** |
+| **North America** | 60 % of K-12 teachers used AI in 2024-25, 32 % weekly | 134 bills / 31 states; Ohio mandates district policy | 🟡 **Closing by legislation, unevenly** |
+| **APAC** | China, India, Japan dominate the market | 3 dated statutes; education named high-risk in Vietnam | 🟡 **Closing by statute, per jurisdiction** |
+
+🔵 **All figures channel-only (`P128-F`).** 🟢 **The direction is consistent and is the one trend
+this KB has now seen from four independent channels: 2026 is the year education AI is bought on
+governance, evaluation and evidence of learning rather than on personalisation claims.**
+🔴 **The supply side is not keeping pace in one specific place — the connector tier for the platform
+public education actually runs.** Canvas: **113** permissive releases over three projects. Moodle:
+🔴 **0** permissive releases. 🔵 **That single asymmetry is the most consequential technical fact in
+this KB for EMEA and LATAM engagements.**
+
+
+
+# Education — current trends
+
 **Pass 127, 2026-10-11.** ⏱️ **Fourteenth pass of this date** (census window **12:4x → 13:0x UTC**).
 
 🟢 **Six trends, each with the channel that evidences it, and one this page explicitly cannot
@@ -2055,7 +2115,7 @@ not whether the publisher is public.**
 
 | region | the sentence that goes in the proposal |
 |---|---|
-| **North America** | 🟢 **"We adopt Ed-Fi for the student-data spine."** Permissive end to end with `canvas-mcp` (MIT, 26 tags) at the LMS edge — costed as **`P103-B`**. |
+| **North America** | 🟢 **"We adopt Ed-Fi for the student-data spine."** Permissive end to end with `canvas-mcp` (MIT, 23 tags ⚠️ **was 26 tags**<!--corrected-->) at the LMS edge — costed as **`P103-B`**. |
 | **APAC** | 🟢 **"We adopt Sunbird and evaluate on the harness your own regulator's foundation maintains."** 🔵 A procurement argument no other region can make — `moonshot` + `moonshot-cicd`, **`P103-A`**. |
 | **EMEA** | 🔴 **"We construct on a generic Apache-2.0 core"** (`P102-A`), 🟢 **and the first action item is a written grant request to the publishing body** — cheap, dateable, and it either unblocks the EDC route or documents that it is closed. |
 | **LATAM** | 🟢 **"We adopt the curriculum spine and construct the platform."** `P102-A` with a BNCC tool at the alignment edge. 🔵 **A different engagement SHAPE, not a discounted version of the North America one.** |
@@ -2229,7 +2289,7 @@ falls across PLATFORMS, not across repos.**
 
 | platform | connector | grant | tags / latest |
 |---|---|---|---|
-| **Canvas** | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B | 🟢 **26 / `v1.14.0`** |
+| **Canvas** | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B | 🟢 **23 / `v1.14.0`** ⚠️ **was 26 tags**<!--corrected--> |
 | **Moodle** | [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **AGPL-3.0** · 34 523 B | 🟡 **7 / `v0.1.7`** |
 | **Moodle** | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 **MIT** · 1 064 B | 🔴 **0** |
 
@@ -2269,7 +2329,7 @@ both. 🟢 **Any of the three retires this trend, and that is the point of stati
 | `shibing624/judger` | 🟢 **Apache-2.0** | 🔴 **0** |
 | `doheejin/ProTACT` | 🟢 **BSD-3-Clause** | 🔴 **0** |
 
-🟢 **The control is from the same pass, same industry, same instrument:** `canvas-mcp` **26 tags**,
+🟢 **The control is from the same pass, same industry, same instrument:** `canvas-mcp` **23 tags** ⚠️ **was 26 tags**<!--corrected-->,
 `HKUDS/DeepTutor` **135 tags**, `SafeExamBrowser/seb-server` **194 tags**. 🔵 **So "0 tags" is a real
 signal here and not an artefact of how this industry publishes.**
 

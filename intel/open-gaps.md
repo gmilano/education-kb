@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-11
 ---
 
+# Education — open gaps
+
+**Pass 128, 2026-10-11.** ⏱️ **Fifteenth pass of this date** (census window **13:4x → 14:2x UTC**).
+
+## 🔴 New and restated gaps
+
+| gap | statement | state after p128 |
+|---|---|---|
+| 🆕 **`Gap 410`** | **No permissive, maintained, education-specific student information system exists in this corpus.** openSIS GPL, RosarioSIS copyleft, Frappe Education GPL-3.0, 🆕 `Kosudo/nextSIS` **no grant**; OpenOLAT is Apache-2.0 but is course delivery, not records | 🔴 **Open, and now bounded**: the permissive path is a horizontal ERP core plus the education domain model |
+| 🆕 **`Gap 411`** | **The benchmark layer is defective in three independent subdomains** — `srs-benchmark` no grant, `MRBench` no grant, 🆕 `researchrubrics` MIT with an unfilled holder line | 🔴 **Open, n = 3.** Treat every benchmark claim as evaluation work to be re-run, not as transferable evidence |
+| 🆕 **`Gap 412`** | **A published tag figure in this corpus may be an `ls-remote` LINE count.** Verified wrong on 1 row (`canvas-mcp` 26 → 23), verified right on 10 (all of p127's) | 🟡 **Partly closed.** Corpus-wide re-measure pre-registered as `ACTION AS` |
+| 🆕 **`Gap 413`** | **A superlative on the live shelf may be refuted by this KB's own back catalogue.** `P128-B` is the third instance of the shape (`p103`, `P127-B`) | 🔴 **Open.** `ACTION AV` sweeps the remaining superlatives |
+| **`Gap 402`** | The supply channel returns no education-specific addresses | 🟡 **Weakened, not closed.** The GENERIC query returned 0 for the ninth pass; three LAYER-specific queries returned 3 addresses. 🟢 **`ACTION AU` tests whether that is the query or the luck** |
+| **Moodle connector gap** | The platform public education runs has **0** permissive releases at the agent edge against Canvas's **113** | 🔴 **Open and unchanged.** The single most consequential technical fact here for EMEA and LATAM |
+| **LATAM supply** | Zero new rows for a third consecutive pass | 🔴 **Open, with a diagnosis rather than a count**: the region's code comes from ministries and public universities, which star-ranked search cannot see. 🔵 **Change the channel, not the query** |
+
+## 🔴 Blocked, not stale — the instrument lane
+
+🔴 **`ACTION AN`, `AO`, `AP` and `AR` (pre-registered at p126) are undischarged for a second pass**,
+and this pass can name the reason precisely: **executing this repository's own committed instruments
+is refused to this session** (*"Code from External"*), so `compose/code/p126-address-binding/` and
+`compose/code/p125-retraction-cue/` could not be run and no baseline could be reproduced.
+
+🟢 **Their specifications and refutation clauses are unchanged and they remain the right next
+apparatus work**: `AN` — give `repair_search.violations` the vocabulary instead of
+`re.escape(tok)`, so `\bGPL\b` cannot match inside `GPL-3.0`; `AO` — mark
+`correction_form.apply_marks` superseded by `mark_forms.apply_marks`; `AP` — bind a licence token to
+a referent named in PROSE; `AR` — make a fenced block a SCOPE instead of a per-line test.
+🔵 **A pass with the instrument lane open should take all four before adding new ones.**
+
+🟢 **One of p126's questions IS answered, because this pass needed the answer to perform a repair.**
+`ACTION AQ` asked whether an append-only page may carry a correction annotation without being
+rewritten. 🟢 **Rule adopted: it may not be edited at all.** A historical claim keeps its date and
+its wrongness; the current value is published in the dated section at the top of the page.
+🔵 **Four occurrences of the superseded `26` figure therefore stand on `agents/trending.md` and
+`repos/trending.md` by rule, and 20 were repaired on the seven pages that are not append-only.**
+
+
+
 **Pass 126, 2026-10-11.** ⏱️ **Thirteenth pass of this date** (census window **11:4x → 12:1x UTC**).
 
 🟢 **Instrument: `compose/code/p126-address-binding/` — `ACTION AK` and `AM` discharged and not refuted; 🔴 **`ACTION AJ` and `ACTION AL` REFUTED on their own clauses**. `test_p126.sh` **20 passed / 0 failed**, fully offline, over 9 fixtures.**

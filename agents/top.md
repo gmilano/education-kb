@@ -6,6 +6,211 @@ updated: 2026-10-11
 
 # Education — AI agents shelf
 
+**Pass 128, 2026-10-11.** ⏱️ **Fifteenth pass of this date** (census window **13:4x → 14:2x UTC**).
+
+🟢 **This is a MEASUREMENT pass.** Two of this KB's three working lanes are refused to this session
+(`P128-F`), and the one that answers — `git ls-remote` plus the licence payload over
+`raw.githubusercontent.com` — is enough to re-measure what earlier passes published. It found a
+counting rule the corpus needs, one live inflated figure, one live uniqueness claim this KB's own
+back catalogue refutes, and one live date error introduced by the previous pass.
+
+| action | verdict | figure |
+|---|---|---|
+| `P128-A` tag census | 🟢 **RULE ESTABLISHED + REPAIRED** | p127's **10 of 10** figures reproduce exactly; p99's `canvas-mcp` **26 → 23**, repaired on **20 sites over 7 pages** |
+| `P128-B` uniqueness claim | 🔴 **REFUTED by this KB's own pages** | `bruchris/canvas-lms-mcp` **MIT, 78 tags** — **3.4×** the releases of the row called "the only" one |
+| `P128-C` Vietnam date | 🔴 **LIVE ERROR, repaired** | p127's shelf says `1 Mar 2027`; **3** back-catalogue rows and the channel say `1 Mar 2026` |
+| `P128-D` fork discriminator | 🟢 **WORKS WITH THE API BLOCKED** | **5** Canvas addresses are **3** projects; `tutor-mcp`'s canonical holder confirmed independently |
+| `P128-E` new supply | 🟡 **3 addresses, 1 usable** | 1 MIT unreleased · 1 **NO GRANT** · 1 **MIT with no identifiable licensor** |
+| `P128-F` channel | 🔴 **POLICY, not dead hosts** | **7 of 7** non-GitHub hosts refused `403 to CONNECT` at the gateway |
+
+## 🟢 🆕 `P128-A` — a tag count read off `git ls-remote --tags` counts every ANNOTATED tag twice
+
+🔵 **`git ls-remote --tags` emits two lines per annotated tag**: `refs/tags/X` and `refs/tags/X^{}`,
+the second being the dereference to the commit object. It is one tag and one release. A census that
+counts lines therefore inflates a repository's release count by exactly its number of annotated
+tags — and **by zero where the tags are lightweight.**
+
+🔴 **So the error is invisible on the repositories where it does not matter and largest on the most
+heavily released ones** — which are precisely the rows this KB promotes for being release-engineered.
+
+| address | `ls-remote` lines | `^{}` lines | 🟢 **real tags** | inflation |
+|---|---|---|---|---|
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 233 | **115** | **118** | 🔴 **+97 %** |
+| [`open-spaced-repetition/ts-fsrs`](https://github.com/open-spaced-repetition/ts-fsrs) | 145 | 31 | **114** | +27 % |
+| [`openfun/richie`](https://github.com/openfun/richie) | 166 | 27 | **139** | +19 % |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 26 | 3 | 🟢 **23** | +13 % |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 78 | **0** | **78** | 🟢 **0 %** |
+
+🟢 **p127's method was already right, and this pass proves it rather than asserting it.** All ten
+tag figures p127 published reproduce **exactly** when `^{}` lines are subtracted — `richie` **139**,
+`marsha` **146**, `openedx-docker` **204**, `arnold` **119**, `joanie` **45**, `ralph` **32**,
+`fsrs4anki` **199**, `fsrs-optimizer` **127**, `ts-fsrs` **114**,
+`my-learning-analytics` **38**. 🔵 **Ten of ten, on an instrument p127 did not hand this pass.**
+
+🔴 **p99's figure is the one that is wrong.** `vishalsachdev/canvas-mcp` was published as **26 tags**
+and is **23**: 26 lines, 3 of them dereferences. 🟢 **The version is right** — `v1.14.0` is still the
+latest tag — so the row's conclusion survives and only its count changes.
+
+🟢 **Repaired on 20 sites across 7 pages**, each marked with this KB's own correction marker, so the
+old value stays readable as a record: `README.md`, `agents/top.md`, `repos/foundations.md`,
+`verticals/solutions.md`, `intel/market.md`, `intel/trends.md`, `compose/patterns.md`.
+
+🟢 **`ACTION AQ` is hereby answered, because this pass had to answer it to do the repair.** Four
+further occurrences sit on `agents/trending.md` and `repos/trending.md`, which are **append-only**.
+🔵 **The rule adopted: an append-only page is never edited, and a dated section at its top carries
+the correction forward.** A historical claim keeps its date and its wrongness; the current value is
+stated where the reader arrives. 🔴 **This also means a figure quoted from a trending page is only
+ever as good as its date** — which is what append-only means and has always meant here.
+
+## 🔴 🆕 `P128-B` — "the only released permissive LMS connector" is refuted by this KB's own trending pages, for the THIRD time in this shape
+
+🟢 **`vishalsachdev/canvas-mcp` carried the sentence *"the only RELEASED permissive LMS agent
+connector this KB has verified"*.** Measured this pass:
+
+| address | grant · payload · bytes · ref · SHA | 🟢 real tags | latest tag | holder |
+|---|---|---|---|---|
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 🟢 **MIT** · `LICENSE` 1 070 B · `main` · `5da987a` | 🟢 **78** | `canvas-lms-mcp-v2.2.0` | © 2026 **Christian Bru** |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · `LICENSE` 1 071 B · `main` · `63f4222` | 23 | `v1.14.0` | © 2025 **Vishal Sachdev** |
+| [`CharlieCardenasToledo/mcp-canvas-server`](https://github.com/CharlieCardenasToledo/mcp-canvas-server) | 🟢 **MIT** · `LICENSE` 1 081 B · `main` · `2343408` | 12 | — | © 2025 **Charlie Cárdenas Toledo** |
+
+🔴 **`bruchris/canvas-lms-mcp` is MIT, released 78 times, and this KB already held it** — its
+trending pages carry the address with the payload read (*"MIT License / Copyright (c) 2026 Christian
+Bru"*), 165 tools, 62 npm versions and a FERPA pseudonymisation mode. 🔵 **Nothing was discovered
+here. The shelf and the back catalogue simply disagreed, and the shelf was louder.**
+
+🟢 **This is the same shape as `p103` and `P127-B`, and n is now 3.** p127 drafted `ralph` as a
+discharge of a gap its own `repos/foundations.md` had already half-closed; p128 finds a uniqueness
+claim its own `agents/trending.md` had already refuted. 🔵 **The lesson is specific enough to act
+on: a superlative ("the only", "the first", "the largest") must be checked against this KB BEFORE
+the web**, because the cheapest refutation is almost always already filed here.
+
+🟢 **What changes operationally:** the Canvas edge has **two** permissive maintained connectors, not
+one. `bruchris` is the wider surface (165 tools, write paths, FERPA mode) and the more released;
+`vishalsachdev` is the better-placed row (© University of Illinois lineage, `P800`-grade on
+**North America**). 🔵 **A Canvas engagement picks on write-scope and governance, not availability.**
+
+## 🟢 🆕 `P128-D` — the fork discriminator that works with the GitHub API blocked
+
+🔴 **`api.github.com/repos/...` and `github.com` HTML are both refused to this session**, so
+`fork:true` — the field this KB used at `P119-B` and `P933` — is unreadable. 🟢 **The licence payload
+replaces it**, because a fork copies the file byte for byte and the holder line names the upstream
+author:
+
+> **identical payload bytes + identical holder line + a different HEAD SHA = one project, two addresses.**
+
+| address | payload | holder | HEAD | real tags | latest | verdict |
+|---|---|---|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 1 071 B | © 2025 Vishal Sachdev | `63f4222` | 23 | `v1.14.0` | 🟢 **UPSTREAM** |
+| [`lindsay-cheng/canvas-mcp`](https://github.com/lindsay-cheng/canvas-mcp) | **1 071 B** | **© 2025 Vishal Sachdev** | `bf446a6` | 21 | `v1.12.0` | 🔴 **FORK, 2 minors behind** |
+| [`YeetingWaterbottle/canvas-mcp`](https://github.com/YeetingWaterbottle/canvas-mcp) | **1 071 B** | **© 2025 Vishal Sachdev** | `94c05cc` | **0** | — | 🔴 **FORK, no releases** |
+| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 1 073 B | © 2026 Arnaud Guiovanna | `368d637` | 7 | `v0.6.1` | 🟢 **UPSTREAM** |
+| [`kvnloo/tutor-mcp`](https://github.com/kvnloo/tutor-mcp) | **1 073 B** | **© 2026 Arnaud Guiovanna** | `3d11705` | 7 | — | 🔴 **FORK** |
+
+🟢 **Two independent confirmations in one table.** The `tutor-mcp` row this shelf already publishes
+names `ArnaudGuiovanna` as canonical; the fork's own payload preserves that holder, so a prior
+pass's attribution is confirmed **by a method that pass did not use**. And the tag distance is a
+freshness measure a star count cannot give: `lindsay-cheng` is two minor versions behind, which is
+what a studio actually needs to know before forking the fork.
+
+🔴 **The search channel does not know any of this.** One query returned five Canvas-connector
+"projects"; they are **three**, of which two are maintained. 🔵 **A search listing over-counts this
+layer by 67 %, and the correction costs one `curl` per address.**
+
+🟢 **Reproductions, recorded because an unchanged figure is also a measurement:**
+[`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) is 🔴 **AGPL-3.0**,
+`LICENSE` **34 523 B**, `main` · `5a194a5`, **7** tags — byte for byte what this KB publishes, so the
+Moodle-side "declined, network copyleft" verdict stands unchanged.
+[`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) is 🟢 **MIT** · 1 068 B · `main` ·
+`f0142f2` · **0** tags (© 2026 **Zijin Zhang**).
+
+## 🟡 🆕 `P128-E` — three new addresses, and the only clean grant is the one with no releases
+
+| address | grant (payload · bytes · ref · SHA) | tags | region | verdict |
+|---|---|---|---|---|
+| [`supe-log/writing-engine`](https://github.com/supe-log/writing-engine) | 🟢 **MIT** · `LICENSE` 1 065 B · `main` · `baa865f` | 🔴 **0** | 🔵 **unplaced** (© 2026 **supe-log** — a username, **not** `P800`-grade) | 🟡 **Fork base only.** Rubric essay-grading agent; vendor claims validation against state-scored essays, unverified from the payload lane |
+| 🔴 [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | 🔴 **NO GRANT** — 17 filenames probed on the real default branch (`master`) · `60e422c` | 0 | — | 🔴 **Unusable.** README states planning/early development |
+| 🟡 [`scaleapi/researchrubrics`](https://github.com/scaleapi/researchrubrics) | 🟡 **MIT by body, 🔴 UNFILLED holder** · `LICENSE` 1 078 B · `main` · `2dc80e2` | 0 | — | 🔴 **Do not redistribute.** See below |
+
+🔴 **`scaleapi/researchrubrics` is a new licence-hygiene class for this KB: an MIT grant whose
+copyright line was never filled in.** The payload reads *"Copyright (c) 2025
+**[Authors/Institution]**"* — the template placeholder, shipped. 🔵 **The permission text is
+complete and the licensor is not identified**, so there is no one to attribute under clause 1 and no
+one whose warranty disclaimer is being relied on. 🟢 **For a studio this is worse than `NO GRANT`,
+because `NO GRANT` is obvious in review and a filled-looking MIT file is not.**
+
+🔴 **And it lands on the benchmark layer again.** `researchrubrics` is the ICLR 2026
+*ResearchRubrics* benchmark. `P127-T2` recorded that in education AI **the code gets a licence and
+the yardstick does not** (`srs-benchmark` 🔴 no grant; `MRBench` 🔴 no grant, `Gap 393`). 🔵 **This is
+a third variant of the same shape: not an absent grant, a defective one.** 🟢 **The move is
+unchanged and now better evidenced — take the implementation, re-run the comparison on the client's
+own data, redistribute neither.**
+
+## 🔴 🆕 `P128-F` — the blocked channel is a GATEWAY POLICY, which makes three open conflicts unclosable from here
+
+🟢 **p125 recorded `digitaleducationcouncil.com` and p126 `iesalc.unesco.org` as refused with
+`CONNECT tunnel failed, response 403`.** This pass tested the class rather than the instance:
+
+| host | why it was wanted | result |
+|---|---|---|
+| `digital-strategy.ec.europa.eu` | the AI Act application dates, first-hand | 🔴 `403 to CONNECT` |
+| `eur-lex.europa.eu` | the Official Journal text | 🔴 `403 to CONNECT` |
+| `www.lw.com` | the APAC statute tracker behind the Vietnam date | 🔴 `403 to CONNECT` |
+| `www.iesalc.unesco.org` · `www.unesco.org` · `dig.watch` | the LATAM denominators, and a mirror of them | 🔴 `403 to CONNECT` |
+| `www.multistate.us` | the 134-bills / 31-states count | 🔴 `403 to CONNECT` |
+
+🔴 **Seven of seven.** 🟢 **What does answer: `raw.githubusercontent.com` (200) and `git ls-remote`**
+— the payload lane, which is why this pass is a measurement pass and not a policy pass.
+🔵 **So "channel-only" is not a property of three unlucky sources; it is the shape of every non-GitHub
+citation this session could make.** Every policy figure in `intel/market.md` and `intel/trends.md`
+below is search-snippet grade and labelled so.
+
+🔴 **The instrument lane is refused too, and by a different policy.** Executing this repository's own
+committed instruments is denied to this session (*"Code from External"*), so
+`compose/code/p126-address-binding/` and `p125-retraction-cue/` could not be run and
+🔴 **`ACTION AN`, `AO`, `AP` and `AR` are carried forward undischarged for a second pass.** 🟢 **They
+are not stale, they are blocked, and this is the first pass to say which lane blocks them.**
+
+## 🟢 Region sweep — all four searched, every empty region written down
+
+| region | new SUPPLY rows | new DEMAND/intel | gap, stated |
+|---|---|---|---|
+| **North America** | 🟡 **0 placed.** `canvas-mcp` re-measured (23 tags), `bruchris` promoted off the back catalogue — 🔵 **unplaced** (© Christian Bru, no jurisdiction in the payload) | 🔴 **0 new tokens.** 134 bills / 31 states, CA `AB 1159`, ID `SB 1227`, `H.R. 8747`, Ohio `2026-07-01`, NYC K-8 moratorium, Katy ISD — 🟢 **all already held** | 🔴 The channel returns this KB's own contents. The North America supply question is now a **promotion** question, not a discovery one |
+| **EMEA** | 🟡 **0 new.** `Selleo/mentingo` re-measured: **118** tags (not a correction — the 91 on the shelf is a STAR count), SHA `2bca285` → `242a932`, **+27 releases** since | 🔴 **0 new tokens.** The AI Act date conflict (enforcement from `2026-08-02` vs `2027-12-02` for stand-alone high-risk) 🔴 **stands unresolved** — both sides channel-only, primary sources refused (`P128-F`) | 🔴 **An EMEA engagement cannot be given a defensible high-risk date from this session.** Carry both and say which is which |
+| **APAC** | 🔴 **0** | 🟡 **1 — and it is a defect in this KB, not a token from the world.** `P128-C`: Vietnam's education-AI high-risk date reads `1 Mar 2027` on this shelf and `1 Mar 2026` on three back-catalogue rows. Korea's `2026` pilot year and one-year penalty grace: 🟢 **already held, and this KB is finer** (enforcement decree `2026-07-21`) | 🔴 Date **repaired by weight of evidence (3 + channel vs 1)**, not closed against the statute. `www.lw.com` refused |
+| 🔴 **LATAM** | 🔴 **0 — third consecutive pass** | 🔴 **0 new tokens, and the KB is FINER than the channel**: it already holds 200 institutions / 19 countries, 87 % / 74 % / 26 %, the 84-68-52 institution-type split, TALIS 2024, Ceibal 75 %, CONPES 4144, `PL 2.338/2023` — **and also the 57 % research and 9 % evaluation figures the channel did not return** | 🟢 **The declared gap is unchanged and now triple-confirmed**: star-ranked keyword search cannot see a region whose code is produced by ministries and public universities. 🔵 **p127's prescription stands — change the channel, not the query** |
+
+🟢 **One method observation worth more than the sweep that produced it.** The brief's four generic
+supply queries returned **0** addresses this KB does not hold. Three **narrower** queries — the
+LMS-connector layer, student information systems, rubric grading — returned **3** new addresses in
+one attempt. 🔵 **The generic query is saturated; the layer-specific query is not.** That is
+testable, and it is pre-registered below.
+
+### Pre-registered for p129
+
+🟢 **`ACTION AS`** — re-measure the tag figure of every address this KB publishes WITH one, subtracting
+`^{}` lines, and mark each row whose figure moves. 🔴 *Refuted if fewer than 5 published figures change,
+or if any change is not explained by either dereference lines or a dated release since the figure was taken.*
+
+🟢 **`ACTION AT`** — census the holder line, not just the token. `researchrubrics` ships
+`[Authors/Institution]`; `supe-log` and `peancor` ship usernames. 🔴 *Refuted if fewer than 3 further
+addresses in this corpus carry a grant with a placeholder or non-identifying licensor.*
+
+🟢 **`ACTION AU`** — test `P128`'s own method claim: run four LAYER-specific supply queries (assessment,
+SIS/ERP edge, accessibility, credentialing) against four generic ones. 🔴 *Refuted if the layer-specific
+set does not return at least 3× the new addresses of the generic set.*
+
+🟢 **`ACTION AV`** — check every superlative on the live shelf ("the only", "the first", "the largest")
+against this KB's own back catalogue before the web. 🔴 *Refuted if `P128-B` is the only such claim this
+KB's own pages already refute.*
+
+🔴 **Carried forward, BLOCKED not stale** — `ACTION AN` (vocabulary instead of `re.escape`), `AO`
+(mark the superseded writer), `AP` (bind a token to a prose referent), `AR` (make the fence a scope).
+🔵 **All four need the instrument lane, which `P128-F` records as refused to this session.** 🟢 **A pass
+that can execute `compose/code/` should take them first; they are specified and their clauses stand.**
+
+
+# Education — AI agents shelf
+
 **Pass 127, 2026-10-11.** ⏱️ **Fourteenth pass of this date** (census window **12:4x → 13:0x UTC**).
 
 🟢 **This pass is a SUPPLY pass, not an apparatus pass.** Every row below was read from the licence
@@ -200,7 +405,7 @@ and one has no software published at all.**
 |---|---|---|
 | **EMEA** | 🟢 **10** — the entire FUN-MOOC stack (`P127-A`), 9 MIT + 1 AGPL, all institutionally held | 🟢 AI Act enforcement start vs the **2 Dec 2027** high-risk deadline, and a dated source conflict — `intel/market.md` |
 | **North America** | 🟢 **1** — `my-learning-analytics` (Apache-2.0, U Michigan) | 🟢 H.R. 8747 cleared committee; 134 bills / 31 states |
-| **APAC** | 🟡 **0 new placed rows.** The FSRS family is APAC **by lineage only** — its README derives FSRS from **MaiMemo's DHP model** with a Chinese-language explainer and a KDD 2022 paper, but 🔴 **no payload in the family carries a jurisdiction**, so the rows stay 🔵 unplaced rather than being upgraded on a README link | 🟢 **3 statutes dated** — Korea AI Basic Act in force 22 Jan 2026, Vietnam Law 134/2025/QH15 (education AI high-risk, 1 Mar 2027), Taiwan AI Basic Act Dec 2025 |
+| **APAC** | 🟡 **0 new placed rows.** The FSRS family is APAC **by lineage only** — its README derives FSRS from **MaiMemo's DHP model** with a Chinese-language explainer and a KDD 2022 paper, but 🔴 **no payload in the family carries a jurisdiction**, so the rows stay 🔵 unplaced rather than being upgraded on a README link | 🟢 **3 statutes dated** — Korea AI Basic Act in force 22 Jan 2026, Vietnam Law 134/2025/QH15 (education AI high-risk, 1 Mar **2026** ⚠️ **was 1 Mar 2027**<!--corrected--> — `P128-C`), Taiwan AI Basic Act Dec 2025 |
 | 🔴 **LATAM** | 🔴 **ZERO new rows.** Queried in Spanish and Portuguese, which this shelf records as the highest-yield move for the region: `tutor inteligencia artificial educacion escuela estudiantes` and `educacao tutor IA professor escola` both returned **0 repositories above 5★**. 🔵 **The existing LATAM rows are unaffected** (`bncc-dev/*`, `LabSirius/TutorIA`, `mumuki/mumuki-laboratory`, `belentani7/aprende-brasil`, `douglasrizzo/catsim`) | 🟢 **A hard governance number: UNESCO-IESALC finds only 26 % of LatAm higher-education institutions have a formal AI strategy** — `intel/market.md` |
 
 🔴 **So LATAM's supply zero is now at least two consecutive passes, and this pass can say why with
@@ -2745,7 +2950,7 @@ and a classifier that mapped filename → licence would have shelved a proprieta
 
 - 🔴 **`P1006`: the LMS connector layer splits on licence, and the split decides which LMS the studio
   can serve permissively.** **Canvas** has a released permissive connector
-  (`vishalsachdev/canvas-mcp`, **MIT**, **26 tags, `v1.14.0`**). **Moodle has no repo that is both**:
+  (`vishalsachdev/canvas-mcp`, **MIT**, **23 tags, `v1.14.0`** ⚠️ **was 26 tags**<!--corrected-->). **Moodle has no repo that is both**:
   its released connector is **AGPL-3.0 at `v0.1.7`** and self-describes as the connector *behind* a
   commercial product; its **MIT** alternative has **0 tags**. 🔵 **And the sting is regional — Moodle
   is the platform this KB has aimed at LATAM and the public sector for eight passes of patterns.**
@@ -3033,7 +3238,7 @@ reproducing a no-grant negative this KB already carried, with a different instru
 | 🆕 p93 [`dfdb76/bncc-mcp`](https://github.com/dfdb76/bncc-mcp) | **MIT** · `LICENSE` 1 218 B · `main` · `f94ca6a` | — | 🟡 **LATAM** (Brazil by subject matter — the payload's copyright line is a username, so the region is **not** `P800`-grade here and is labelled accordingly) | A **second, independent** MCP server over the BNCC skills, by a different author. 🔵 **n=2, so this is a shape rather than one project** — the same test pass 92 applied to MCP × SCORM. |
 | [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | **Apache-2.0** · 11 386 B · `main` · `1b7fbe0` | 31 | 🔵 unplaced | Agentic RAG tutor built on LangGraph — a readable reference for the orchestration layer rather than a product. |
 | [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | **MIT** · 1 094 B · `main` · `f88f69f` | 17 | 🔵 unplaced | Knowledge graph + local LLM + **Bayesian skill tracking**. One of very few rows carrying an explicit learner model rather than relying on prompt context. |
-| 🆕 p99 [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · `LICENSE` 1 071 B · `main` · `b054b913603a206c677565bcbec128652cb9d398` | — | 🟢 **North America** (© 2025 **Vishal Sachdev**, University of Illinois — and Canvas's install base is overwhelmingly US higher ed) | 🟢 **The only RELEASED permissive LMS agent connector this KB has verified: 26 tags, `v1.14.0`, README 44 176 B.** MCP server over the Canvas LMS API — courses, assignments, submissions, feedback — so an agent reaches the gradebook through a maintained tool surface instead of bespoke REST glue. 🔵 **This is the row that makes a Canvas engagement permissive end to end.** |
+| 🆕 p99 [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · `LICENSE` 1 071 B · `main` · `b054b913603a206c677565bcbec128652cb9d398` | — | 🟢 **North America** (© 2025 **Vishal Sachdev**, University of Illinois — and Canvas's install base is overwhelmingly US higher ed) | 🟢 **A RELEASED permissive LMS agent connector: 23 tags, `v1.14.0`, README 44 176 B.** ⚠️ **was “the only RELEASED permissive LMS agent connector this KB has verified: 26 tags”**<!--corrected--> 🔴 **`P128-B`/`P128-D`: the count was 26 `ls-remote` lines of which 3 are `^{}` dereferences, and [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) is **MIT** with **78** tags — an address this KB already held on its own trending pages.** MCP server over the Canvas LMS API — courses, assignments, submissions, feedback — so an agent reaches the gradebook through a maintained tool surface instead of bespoke REST glue. 🔵 **This is the row that makes a Canvas engagement permissive end to end.** |
 | 🆕 p99 [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 **MIT** · `LICENSE` 1 064 B · `main` · `666f12222ed6cffc9051455eb4799bb2ac8608ce` | — | 🔵 unplaced (the payload's copyright line is a username — **not** `P800`-grade, labelled accordingly) | MCP server exposing Moodle courses, students, assignments and quizzes to an LLM, **including grades and feedback**, over Moodle Web Services. 🔴 **0 tags** — the permissive half of `P1006`'s split, and the unreleased half. 🟡 Use it as a fork base, not as a dependency. |
 | 🆕 p99 [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 **MIT** · `LICENSE` 1 069 B · `main` · `b3918981bb34ef5d3090dc81cc5b184555ae3bd6` | — | 🔵 unplaced (© 2026 **Li Zhengping**; no institutional holder in the payload) | Self-hosted adaptive tutor — **FastAPI + React 19, Python 3.11+** — that reads how a learner actually learns and targets the next lesson from it, built explicitly on the **2-sigma** premise that 1-on-1 tutoring moves a median learner to the top few per cent. 🟡 **0 tags**, so treat it as a current reference implementation of the learner-model loop rather than a dependency. |
 | 🆕 p99 [`shibing624/judger`](https://github.com/shibing624/judger) | 🟢 **Apache-2.0** · `LICENSE` 11 357 B *(pristine)* · `master` · `7c0817c02efa4a844937869d107ccb5afb14a972` | — | 🟡 **APAC** (by subject matter — it scores **Chinese** and English essays; the payload carries no holder line, so this is not `P800`-grade) | Java essay scorer with **self-trainable** scoring models and WEKA feature handling, zh + en. 🔴 **0 tags and a 177-byte README** — the most permissive grant in the scorer tier attached to the least documented repo in it. |
@@ -3077,7 +3282,7 @@ licence.**
 
 | slug | grant (payload · bytes · ref · full SHA) | tags / latest | verdict for the studio |
 |---|---|---|---|
-| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B · `main` · `b054b913603a206c677565bcbec128652cb9d398` | 🟢 **26 / `v1.14.0`** | 🟢 **Use it.** Permissive *and* released. |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B · `main` · `b054b913603a206c677565bcbec128652cb9d398` | 🟢 **23 / `v1.14.0`** ⚠️ **was 26 tags**<!--corrected--> | 🟢 **Use it.** Permissive *and* released. |
 | [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **AGPL-3.0** · 34 523 B · `main` · `5a194a53cc399155bdc5e49737709f43f9a16406` | 🟡 **7 / `v0.1.7`** | 🔴 **Declined.** Network copyleft on a server the client reaches over a network. |
 | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 **MIT** · 1 064 B · `main` · `666f12222ed6cffc9051455eb4799bb2ac8608ce` | 🔴 **0** | 🟡 **Fork base only.** Permissive, unreleased. |
 
@@ -3214,7 +3419,7 @@ grant → reading list, never a dependency.**
 | `shibing624/judger` | 🟢 **Apache-2.0** | 🔴 **0** | Java/WEKA, zh + en, self-trainable — 🔴 **177-byte README** |
 | `doheejin/ProTACT` | 🟢 **BSD-3-Clause** | 🔴 **0** | **cross-prompt** trait scoring, ACL Findings 2023 — 🔴 **paper artefact** |
 
-🟢 **The control is in this same pass, same industry, same instrument:** `canvas-mcp` **26 tags /
+🟢 **The control is in this same pass, same industry, same instrument:** `canvas-mcp` **23 tags** ⚠️ **was 26 tags**<!--corrected--> **/
 `v1.14.0`**, `HKUDS/DeepTutor` **135 tags**, `SafeExamBrowser/seb-server` **194 tags**.
 🔵 **So the tier is not licence-blocked. It is release-blocked** — and that changes what the studio
 sells: 🟢 **not "find a scorer" but "harden one of three permissive scorers to a release", with

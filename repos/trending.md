@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Pass 128 — 2026-10-11 (fifteenth pass of this date), 13:4x–14:2x UTC
+
+🔵 **APPEND-ONLY page. This section is added above p127's and nothing below it is edited.**
+
+🔴 **The mandated `github trending education AI 2026` query returned ZERO education-specific
+repositories for the EIGHTH consecutive pass.** 🟢 **What it returned, again, were curricula about
+AI** — `rasbt/LLMs-from-scratch` (~106k★), `rohitg00/ai-engineering-from-scratch` (~63k★),
+`microsoft/generative-ai-for-beginners`, `kamranahmedse/developer-roadmap`. 🔵 **All held, all
+declined on the same ground as before: teaching artefacts ABOUT AI are not AI FOR education.**
+
+🟢 **The method finding of this pass is about the QUERY, not the channel.** The four mandated generic
+queries returned **0** addresses this KB does not already hold. Three **layer-specific** queries —
+the LMS-connector edge, student information systems, rubric grading — returned **3** new addresses
+on the first attempt. 🔵 **The generic query is saturated; the layer query is not.** 🟢 **Pre-registered
+as `ACTION AU` with a 3× clause, so the next pass measures this instead of believing it.**
+
+### 🟢 Measured this pass, over `git ls-remote` + the licence payload
+
+| address | grant (payload · bytes · ref · SHA) | 🟢 real tags (lines − `^{}`) | latest tag |
+|---|---|---|---|
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 🟢 **MIT** · `LICENSE` 1 070 B · `main` · `5da987a` | **78** (78 − 0) | `canvas-lms-mcp-v2.2.0` |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** · 1 062 B · `main` · `242a932` | **118** (233 − 115) | `v4.22.0` |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B · `main` · `63f4222` | **23** (26 − 3) | `v1.14.0` |
+| [`CharlieCardenasToledo/mcp-canvas-server`](https://github.com/CharlieCardenasToledo/mcp-canvas-server) | 🟢 **MIT** · 1 081 B · `main` · `2343408` | **12** | — |
+| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT** · 1 073 B · `main` · `368d637` | **7** (10 − 3) | `v0.6.1` |
+| [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **AGPL-3.0** · `LICENSE` 34 523 B · `main` · `5a194a5` | **7** | — |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** · 1 068 B · `main` · `f0142f2` | **0** | — |
+| [`supe-log/writing-engine`](https://github.com/supe-log/writing-engine) | 🟢 **MIT** · `LICENSE` 1 065 B · `main` · `baa865f` | **0** | — |
+| 🔴 [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | 🔴 **NO GRANT** (17 filenames, `master`) · `60e422c` | 0 | — |
+| 🟡 [`scaleapi/researchrubrics`](https://github.com/scaleapi/researchrubrics) | 🟡 **MIT, holder unfilled** (`[Authors/Institution]`) · 1 078 B · `main` · `2dc80e2` | 0 | — |
+
+🔵 **A one-byte note, recorded and NOT repaired because this page is append-only:** an earlier row
+here gives `bruchris/canvas-lms-mcp`'s payload as **1069 B**; the current payload measures
+**1 070 B**. 🟢 **Both readings are plausible against a file that changed its copyright year line;
+the current value is the one above.**
+
+### 🔴 p127's figures, re-derived independently
+
+🟢 **Ten of ten reproduce exactly** on the corrected method — `openfun/richie` **139**,
+`marsha` **146**, `openedx-docker` **204**, `arnold` **119**, `joanie` **45**, `ralph` **32**,
+`fsrs4anki` **199**, `fsrs-optimizer` **127**, `ts-fsrs` **114**,
+`my-learning-analytics` **38**. 🔵 **Two passes, two instruments, no shared code: p127's supply
+figures are good.**
+
+
+
 ## 🟢 Pass 127 — 2026-10-11 (fourteenth pass of this date), 12:4x–13:0x UTC
 
 🔵 **APPEND-ONLY page. This section is added above p126's and nothing below it is edited.**

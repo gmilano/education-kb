@@ -4,6 +4,37 @@ region: Global
 updated: 2026-10-11
 ---
 
+## Pass 128 — 2026-10-11
+
+⏱️ **Fifteenth pass of this date** (census window **13:4x → 14:2x UTC**).
+
+🟢 **A MEASUREMENT pass.** Two of three lanes are refused to this session — every non-GitHub host at the gateway (`403 to CONNECT`, 7 of 7) and the execution of this repository's own instruments — so the pass re-measured what earlier passes published over the one lane that answers (`git ls-remote` + the licence payload on `raw.githubusercontent.com`).
+
+| finding | verdict | figure |
+|---|---|---|
+| `P128-A` | 🟢 **RULE + REPAIR** | `git ls-remote --tags` double-counts ANNOTATED tags. p127's **10 of 10** figures reproduce exactly; p99's `canvas-mcp` **26 → 23**, repaired on **20 sites / 7 pages** |
+| `P128-B` | 🔴 **REFUTED by this KB's own pages** | *"the only RELEASED permissive LMS agent connector"* — [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) is **MIT with 78 tags**, and was already held on the trending pages. Third instance of the back-catalogue shape |
+| `P128-C` | 🔴 **LIVE ERROR, repaired** | Vietnam's education-AI high-risk date read `1 Mar 2027` on the shelf; **3** back-catalogue rows and the channel read `1 Mar 2026` |
+| `P128-D` | 🟢 **METHOD** | Forks read without the GitHub API: identical payload bytes + identical holder + divergent HEAD. **5** Canvas addresses are **3** projects; `tutor-mcp`'s canonical holder confirmed by a method its own pass never used |
+| `P128-E` | 🟡 **3 new addresses** | `supe-log/writing-engine` **MIT**, 0 tags · `Kosudo/nextSIS` 🔴 **NO GRANT** (17 filenames) · `scaleapi/researchrubrics` 🟡 **MIT with the holder line unfilled** — a grant with no identifiable licensor |
+| `P128-F` | 🔴 **CHANNEL IS A POLICY** | 7 of 7 non-GitHub hosts refused. The AI Act date conflict, the Vietnam statute and the LATAM denominator all stay unclosable from here |
+
+🔴 **Regions: zero new tokens in all four**, and in LATAM and APAC this KB is **finer than the channel** (it holds the 57 % research / 9 % evaluation figures and Korea's 2026-07-21 enforcement decree, which the sweep did not return). 🟢 **Method finding: the four mandated generic queries returned 0 new addresses; three layer-specific queries returned 3.**
+
+🟢 **`ACTION AQ` answered** — an append-only page is never edited; the dated section at its top carries the correction. 🔴 **`ACTION AN`, `AO`, `AP`, `AR` carried forward BLOCKED, not stale**: they need the instrument lane this session cannot open.
+
+### Pre-registered for p129
+
+🟢 **`ACTION AS`** — re-measure every published tag figure with `^{}` subtracted. 🔴 *Refuted if fewer than 5 change, or if any change is explained by neither dereference lines nor a dated release.*
+
+🟢 **`ACTION AT`** — census the HOLDER line, not just the token. 🔴 *Refuted if fewer than 3 further addresses carry a placeholder or non-identifying licensor.*
+
+🟢 **`ACTION AU`** — four layer-specific supply queries against four generic ones. 🔴 *Refuted if the layer-specific set does not return at least 3× the new addresses.*
+
+🟢 **`ACTION AV`** — check every live superlative against this KB's own back catalogue. 🔴 *Refuted if `P128-B` is the only one its own pages already refute.*
+
+
+
 ## Pass 126 — 2026-10-11
 
 ⏱️ **Thirteenth pass of this date** (census window **11:4x → 12:1x UTC**).
@@ -1223,7 +1254,7 @@ es específica de educación **y** permisiva **y** con ingeniería de releases.
 🟢 **Nuevo patrón `P102-A`** — la vía permisiva de información estudiantil: núcleo Apache-2.0 (OFBiz
 26 tags, o Corteza 298 para gestión de casos) + el modelo de dominio de `Jasig/SSP` (Apache-2.0, 57
 releases, vía changesets de Liquibase, **sin** su front end) + `pyBKT`/`catsim` interpretables + capa ML
-**re-implementada** (`Gap 392`: 6 de 6 inusables) + `canvas-mcp` (MIT, 26 tags) en el borde LMS.
+**re-implementada** (`Gap 392`: 6 de 6 inusables) + `canvas-mcp` (MIT, 23 tags ⚠️ **was 26 tags**<!--corrected-->) en el borde LMS.
 **7–10 semanas**, +2 por la capa ML, **+3–4 si el LMS es Moodle** y no Canvas (`P1006`).
 
 ### 🔴 `Gap 393` ABIERTO — el banco de pruebas pedagógico no tiene concesión en NINGUNA de sus dos mitades
@@ -1403,7 +1434,7 @@ artefactos probados exactamente para ese limbo**: `aiact-50-2-exposure/`, `aiact
 
 | plataforma | conector | licencia (payload) | tags / último |
 |---|---|---|---|
-| **Canvas** | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B | 🟢 **26 / `v1.14.0`** |
+| **Canvas** | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B | 🟢 **23 / `v1.14.0`** ⚠️ **was 26 tags**<!--corrected--> |
 | **Moodle** | [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **AGPL-3.0** · 34 523 B | 🟡 **7 / `v0.1.7`** |
 | **Moodle** | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 **MIT** · 1 064 B | 🔴 **0** |
 
@@ -1421,7 +1452,7 @@ el cliente alcanza por red es la única familia que puede alcanzar su propio có
 `shibing624/judger` (**Apache-2.0**, README de **177 B**) ·
 `doheejin/ProTACT` (**BSD-3-Clause**, implementación del paper ACL Findings 2023).
 🔴 **0 de 3 tiene un solo tag de release.** 🟢 **Y el control está en el mismo pase, misma industria,
-mismo instrumento: `canvas-mcp` 26 tags, `DeepTutor` 135, `seb-server` 194.**
+mismo instrumento: `canvas-mcp` 23 tags ⚠️ **was 26 tags**<!--corrected-->, `DeepTutor` 135, `seb-server` 194.**
 🔵 **`T20`: en educación el permiso abunda y el RELEASE escasea, y los dos se confunden porque ambos
 se ven como «no encontré nada usable».** 🟢 **La oferta pasa de «buscar un corrector» a «endurecer
 uno», y `ProTACT` es el que vale endurecer** porque *cross-prompt* —transferir a una consigna no

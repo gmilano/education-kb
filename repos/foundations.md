@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-11
 ---
 
+# Education — foundational repositories
+
+**Pass 128, 2026-10-11.** ⏱️ **Fifteenth pass of this date** (census window **13:4x → 14:2x UTC**).
+
+## 🔴 🆕 `P128-A/F` — the release figure on this page was being read with an instrument that double-counts
+
+🔵 **A foundational row earns its place partly on release engineering**, so the tag figure on this
+page is load-bearing. 🔴 **`git ls-remote --tags` emits two lines per ANNOTATED tag** — `refs/tags/X`
+and the `refs/tags/X^{}` dereference — so a line-count census inflates every annotated-tag
+repository and leaves lightweight-tag ones untouched.
+
+🟢 **Re-derived with `^{}` subtracted, p127's ten figures reproduce exactly**, so this page's
+FUN-MOOC and FSRS tiers are sound as published. 🔴 **The one foundational row that moves is the
+Canvas connector**: [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) is
+**23** tags, not 26 — repaired in place above, with the old value kept visible as a record.
+
+🟢 **The rule for this page, stated so it does not have to be rediscovered:**
+
+> a release count is `git ls-remote --tags | grep -c 'refs/tags/'` **minus** the `^{}` lines.
+> If the two numbers differ, the repository uses annotated tags and the line count is wrong.
+
+## 🟢 🆕 `P128-B` — a second permissive, heavily released Canvas connector belongs on this page, and this KB already had it
+
+| address | grant (payload · bytes · ref · SHA) | 🟢 real tags | latest tag | tier verdict |
+|---|---|---|---|---|
+| 🆕 [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 🟢 **MIT** · `LICENSE` 1 070 B · `main` · `5da987a` | 🟢 **78** | `canvas-lms-mcp-v2.2.0` | 🟢 **Foundational at the LMS edge.** Widest surface in the cluster (gradebook history, rubrics, admin workflows, write paths behind env gates); 🔵 unplaced — © 2026 **Christian Bru**, no jurisdiction in the payload |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B · `main` · `63f4222` | **23** | `v1.14.0` | 🟢 **Foundational and PLACED** — `P800`-grade on **North America**. Prefer it where the region line matters |
+| [`CharlieCardenasToledo/mcp-canvas-server`](https://github.com/CharlieCardenasToledo/mcp-canvas-server) | 🟢 **MIT** · 1 081 B · `main` · `2343408` | **12** | — | 🟡 **Third independent project**, smaller surface; 🔵 unplaced |
+| [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **AGPL-3.0** · `LICENSE` 34 523 B · `main` · `5a194a5` | 7 | — | 🔴 **Declined, unchanged** — network copyleft on a networked server. 🟢 **Reproduced byte for byte this pass** |
+
+🔴 **Three of those four addresses are independent projects and two more addresses that look like
+projects are forks** (`lindsay-cheng`, `YeetingWaterbottle` — identical 1 071 B payload, identical
+holder, divergent HEAD). 🔵 **The Canvas edge is a three-project layer with a fork fringe, and the
+discriminator is the payload, not the API.**
+
+🟢 **The asymmetry this page should carry forward:** **Canvas** has three permissive maintained
+connectors; **Moodle** — the platform LATAM ministries and public universities actually run — still
+has one AGPL-3.0 server and one unreleased MIT fork base
+([`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server), 0 tags).
+🔴 **That gap is a region gap, not a technology gap, and it has not closed in this pass either.**
+
+## 🔴 🆕 `P128-E` — read the HOLDER line, not just the token, before a row joins this page
+
+🟡 [`scaleapi/researchrubrics`](https://github.com/scaleapi/researchrubrics) serves a complete
+**MIT** permission text (1 078 B, `main` · `2dc80e2`) whose copyright line is the **unfilled
+template**: *"Copyright (c) 2025 **[Authors/Institution]**"*. 🔵 **There is no one to attribute and no
+one disclaiming warranty**, so the grant cannot be relied on even though every other line of it is
+standard. 🔴 **For a foundational row this is disqualifying, and it is harder to catch in review than
+a missing file**, which is why it is now a page rule and `ACTION AT` for the next pass.
+
+🔵 **This page already labels a username holder as not `P800`-grade** (`peancor`, and now
+[`supe-log/writing-engine`](https://github.com/supe-log/writing-engine), MIT 1 065 B, **0** tags).
+🟢 **A placeholder holder is the same class one step worse: not merely unplaceable, but unattributable.**
+
+
+
 # Education — foundational repos
 
 **Pass 127, 2026-10-11.** ⏱️ **Fourteenth pass of this date** (census window **12:4x → 13:0x UTC**).
@@ -2622,7 +2678,7 @@ runs.** 🟢 **The three repos that do that were read this pass, and they disagr
 
 | slug | grant (payload · bytes · ref · full SHA) | tags / latest | verdict |
 |---|---|---|---|
-| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B · `main` · `b054b913603a206c677565bcbec128652cb9d398` | 🟢 **26 / `v1.14.0`** | 🟢 **Foundational.** Permissive **and** released; 40+ tools over the Canvas API. |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B · `main` · `b054b913603a206c677565bcbec128652cb9d398` | 🟢 **23 / `v1.14.0`** ⚠️ **was 26 tags**<!--corrected--> | 🟢 **Foundational.** Permissive **and** released; 40+ tools over the Canvas API. |
 | [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **AGPL-3.0** · 34 523 B · `main` · `5a194a53cc399155bdc5e49737709f43f9a16406` | 🟡 **7 / `v0.1.7`** | 🔴 **Declined** — network copyleft on a networked server. Read as a spec, do not link. |
 | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 **MIT** · 1 064 B · `main` · `666f12222ed6cffc9051455eb4799bb2ac8608ce` | 🔴 **0** | 🟡 **Fork base** — 1 064 B of MIT over Moodle Web Services, auditable in an afternoon. |
 

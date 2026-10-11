@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-11
 ---
 
+# Education — vertical platforms and the agent edge
+
+**Pass 128, 2026-10-11.** ⏱️ **Fifteenth pass of this date** (census window **13:4x → 14:2x UTC**).
+
+## 🟢 🆕 `P128-D` — the LMS connector edge is THREE projects, not five, and a search listing cannot tell
+
+🔵 **A studio choosing how an agent reaches the gradebook reads a search listing and sees five
+Canvas MCP servers.** 🔴 **Three of those five addresses carry a byte-identical licence payload
+naming the same holder** — they are one project and two forks of it. Measured over the payload lane
+(`git ls-remote` + `raw.githubusercontent.com`), with the GitHub API refused to this session:
+
+| platform | address | grant (payload · bytes · ref · SHA) | 🟢 real tags | verdict for a studio |
+|---|---|---|---|---|
+| **Canvas** (Instructure) | [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 🟢 **MIT** · 1 070 B · `main` · `5da987a` | 🟢 **78** (`canvas-lms-mcp-v2.2.0`) | 🟢 **Widest surface.** Grading, comments, rubrics, gradebook history, admin workflows; destructive tools behind `CANVAS_DESTRUCTIVE_TOOLS`, FERPA pseudonymisation mode. 🔵 Use where write scope is the requirement |
+| **Canvas** | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B · `main` · `63f4222` | **23** (`v1.14.0`) | 🟢 **Best-placed row** — `P800`-grade **North America**. Use where provenance and region must line up |
+| **Canvas** | [`CharlieCardenasToledo/mcp-canvas-server`](https://github.com/CharlieCardenasToledo/mcp-canvas-server) | 🟢 **MIT** · 1 081 B · `main` · `2343408` | **12** | 🟡 **Third independent project.** Smaller surface; a fallback, not a first pick |
+| **Canvas** | `lindsay-cheng/canvas-mcp` · `YeetingWaterbottle/canvas-mcp` | 🟢 MIT · **1 071 B, © 2025 Vishal Sachdev** (identical payload) | 21 (`v1.12.0`) · **0** | 🔴 **Forks, not projects.** One is two minor versions behind; one has never released. **Do not evaluate as alternatives** |
+| **Moodle** | [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **AGPL-3.0** · 34 523 B · `main` · `5a194a5` | 7 | 🔴 **Declined** — network copyleft on a server reached over a network. 🟢 Read as a spec for Moodle Web Services, do not link |
+| **Moodle** | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 **MIT** · 1 064 B | 🔴 **0** | 🟡 **Fork base only** — 1 064 B of MIT over Moodle Web Services, auditable in an afternoon |
+
+🔴 **So the platform asymmetry is unchanged and now better quantified: Canvas has 113 permissive
+releases across three projects; Moodle has 0 permissive releases.** 🔵 **Since Moodle is what LATAM
+and much of EMEA public education actually runs, the connector — not the platform — is what makes a
+Moodle engagement cost more. `P102-A` already carries that cost; this pass does not change it.**
+
+## 🔴 🆕 `P128-E` — the student-information tier gains a negative, and the tier's shape is now explicit
+
+🔵 **An SIS is the record system an AI layer must sit beside**, so its grant decides whether the AI
+layer can ship at all.
+
+| system | address | grant | verdict |
+|---|---|---|---|
+| **openSIS Classic** | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 **GPL** (community edition, v9.3, Jun 2026) | 🟡 Customisable, copyleft — plan the boundary before writing a line |
+| 🆕 **nextSIS** | [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | 🔴 **NO GRANT** — 17 filenames probed on `master` · `60e422c` | 🔴 **Unusable.** README states planning / early development. 🔵 Recorded so the next pass does not re-cost it |
+| **RosarioSIS** | held | 🔴 copyleft | 🟡 as previously filed |
+| **OpenOLAT** | held | 🟢 **Apache-2.0** | 🟢 **The permissive exit from this tier — but it is course delivery, not student records** |
+| **Frappe Education** | held | 🔴 **GPL-3.0** (19-byte stub, read at p127) | 🟡 ERP-shaped, copyleft |
+
+🔴 **Stated plainly, because three passes have now circled it: there is no permissive, maintained,
+education-specific student information system in this corpus.** 🟢 **The permissive options are
+either horizontal ERP/CRM cores to be customised** (Apache OFBiz, Krayin, Aureus, Corteza — all
+already filed here) **or a course-delivery platform** (OpenOLAT). 🔵 **A school-records engagement
+therefore starts from a horizontal core plus the education domain model, not from an education SIS.**
+
+## 🟢 🆕 Assessment edge — one new permissive address, unreleased
+
+🟡 [`supe-log/writing-engine`](https://github.com/supe-log/writing-engine) — 🟢 **MIT** · `LICENSE`
+1 065 B · `main` · `baa865f` · 🔴 **0 tags**. Rubric-based essay grading with per-criterion
+explanation; the vendor claims validation against real state-scored essays, 🔴 **which the payload
+lane cannot verify**. 🔵 **Fork base, not a dependency**: permissive and readable, but an unreleased
+single-holder repository (© 2026 **supe-log**, a username — **not** `P800`-grade) does not belong in
+a delivery path. 🟢 **Pair it with a client-side re-run of its evaluation rather than its claim.**
+
+
+
 # Education — vertical platforms
 
 **Pass 127, 2026-10-11.** ⏱️ **Fourteenth pass of this date** (census window **12:4x → 13:0x UTC**).
@@ -2088,7 +2143,7 @@ falls across platforms, not across repos.**
 
 | platform | connector | grant (payload · bytes · ref · full SHA) | tags / latest | what it means for an engagement |
 |---|---|---|---|---|
-| **Canvas** (Instructure) | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B · `main` · `b054b913603a206c677565bcbec128652cb9d398` | 🟢 **26 / `v1.14.0`** | 🟢 **Permissive end to end.** 40+ tools over the Canvas API; README 44 176 B. The gradebook is reachable through maintained code. |
+| **Canvas** (Instructure) | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B · `main` · `b054b913603a206c677565bcbec128652cb9d398` | 🟢 **23 / `v1.14.0`** ⚠️ **was 26 tags**<!--corrected--> | 🟢 **Permissive end to end.** 40+ tools over the Canvas API; README 44 176 B. The gradebook is reachable through maintained code. |
 | **Moodle** | [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **AGPL-3.0** · 34 523 B · `main` · `5a194a53cc399155bdc5e49737709f43f9a16406` | 🟡 **7 / `v0.1.7`** | 🔴 **Declined.** Network copyleft on a server the client reaches over a network; self-describes as the connector *behind* a commercial product. **Read it as a specification, do not link it.** |
 | **Moodle** | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 **MIT** · 1 064 B · `main` · `666f12222ed6cffc9051455eb4799bb2ac8608ce` | 🔴 **0** | 🟡 **Fork base.** 1 064 B of MIT over Moodle Web Services — courses, students, assignments, quizzes, **grades and feedback** — auditable in an afternoon. |
 
