@@ -1,0 +1,16 @@
+# P116 ACTION A, pre-registered by p115 under Gap 405: validate layer R's 34
+# rows with no settled org against a SECOND channel -- raw.githubusercontent.com
+# reaching CODEOWNERS / .github/FUNDING.yml / AUTHORS / CONTRIBUTORS, none of
+# which layer R (the README) reads.
+# Refutation clause as written by p115: REFUTED if layer R contradicts the
+# second channel on >= 3 of 34.
+#
+# 594 requests over 34 rows x 9 paths x {main,master}: 589 x 404, 5 x 200.
+#
+slug	region_r	channel_file	channel_says	verdict
+ls1intum/Artemis	EMEA	.github/CODEOWNERS	de/tum/cit/aet/artemis (reverse-DNS Java package, cc=de) + @ls1intum teams	CORROBORATES
+numbas/Numbas	EMEA	CONTRIBUTORS.md	heading "## For Newcastle University" (institution, UK)	CORROBORATES
+ankimcp/anki-mcp-server	LATAM	.github/CODEOWNERS	"@anatoly314" -- a USERNAME; P800 forbids placing on a person	PLACES-NOTHING
+mumuki/mumuki-laboratory	LATAM	.github/FUNDING.yml + AUTHORS	"open_collective: mumuki"; AUTHORS names two PERSONS	PLACES-NOTHING
+# the other 30 of 34: no CODEOWNERS, no FUNDING.yml, no AUTHORS, no CONTRIBUTORS
+# on either branch -- 404 on all 9 paths. The channel is EMPTY on them.

@@ -6,6 +6,133 @@ updated: 2026-10-11
 
 # Education — AI agents shelf
 
+**Pass 117, 2026-10-11.** ⏱️ **Fourth pass of this date** (p114 23:54→00:25, p115 01:13→01:25,
+this census window **02:45 → 03:0x UTC**).
+
+🟢 **Instrument this pass: `compose/code/p117-second-channel/` — ACTION A as p115 pre-registered
+it (594 requests, 589 × `404`), plus the first authoritative read of this page's figures from
+the GitHub API, which answers through a transport that `curl` and `gh` are both refused on
+(`P117-A`).**
+
+🔵 **Tenth axis in ten passes, and the first one this KB did not choose: `api.github.com` has
+been recorded as blocked since p107. It answers now. That makes the licence and star columns
+checkable for the first time, and checking them was more valuable than a tenth placement
+layer.**
+
+## 🔴 🆕 `P117-C` — RETRACTION: the fourteen-row recommendation table below is 9/14 wrong on licence
+
+🔴 **The table further down this page (`P113`) carries the preamble *"Licences carried from this
+page's prior passes; p113 changed none of them"* and the conclusion *"Eleven of the fourteen are
+permissive (MIT / Apache-2.0 / BSD-3) — a client can ship a closed derivative."* p117 re-read all
+fourteen licence files from the tree. 🔴 **That conclusion is RETRACTED.**
+
+| | |
+|---|---|
+| published licence CORRECT | 🔴 **5 of 14** |
+| published licence WRONG | 🔴 **9 of 14** |
+| 🔴 **published PERMISSIVE, actually COPYLEFT** | 🔴 **4** |
+| wrong but harmless (permissive ↔ permissive) | 🟡 **3** |
+| wrong by OMISSION (stricter licence on the content) | 🟡 **2** |
+| 🟢 permissive for code, measured | 🟡 **8 of 14**, two with CC content (one **NON-COMMERCIAL**) |
+
+🔴 **The four that invert the commercial answer — each read from the licence file's title line:**
+
+| row | published | 🔴 actually | what changes for a client |
+|---|---|---|---|
+| [`fwu-de/ais-chat`](https://github.com/fwu-de/ais-chat) | 🟢 MIT | 🔴 **AGPL-3.0** | network-use copyleft; a hosted derivative must publish |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 🟢 MIT | 🔴 **AGPL-3.0** | same |
+| [`OtterDen-Lab/Autograder`](https://github.com/OtterDen-Lab/Autograder) | 🟢 MIT | 🔴 **GPL-3.0** | distribution copyleft |
+| [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 🟢 MIT | 🔴 **GPL-3.0** | distribution copyleft |
+
+🟡 **And two whose published `MIT` is true of the CODE and silent about the part a client
+actually wants:** [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators)
+— MIT code, CC BY 4.0 prompts, 🔴 **CC BY-NC-SA 4.0 on the annotated CLEAR and PERSUADE 2.0
+corpora**; [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) — MIT for
+`harness/` + `test/`, CC BY 4.0 for the item bank and results.
+
+🟢 **The three harmless ones, corrected for the record:** `mitodl/open-learning-ai-tutor`
+BSD-3 → **MIT**; `MysterionRise/adaptive-knowledge-graph` Apache-2.0 → **MIT**;
+`Selleo/mentingo` Apache-2.0 → **MIT**. 🟢 **The five that were right:**
+`openedx/edx-platform` (AGPL-3), `ILIAS-eLearning/ILIAS` (GPL-3), `langchain-ai/langgraph`
+(MIT), `towardsai/ai-tutor-app` (Apache-2.0), `aiverify-foundation/moonshot-cicd` (Apache-2.0).
+
+🔵 **The mechanism, and it is the finding worth keeping: this page has TWO licence columns —
+one it measures each pass and one it CARRIES. `verticals/solutions.md`, which measures, was
+spot-checked this pass and was RIGHT on all three rows checked. The carried column is 9/14
+wrong. Carrying a column forward is not verifying it, and a preamble that says "carried"
+is a warning this KB wrote to itself and then read for three passes without acting.**
+
+## 🔴 🆕 `P117-F` — the agent tier on size and licence, authoritative, for the first time
+
+🔵 **These are p115's fourteen — the same addresses, no reselection — now with the two columns
+that decide whether a studio should start from them:**
+
+| # | row | 🟢 stars (API) | 🟢 licence (tree) |
+|---|---|---|---|
+| 1 | [`huggingface/transformers`](https://github.com/huggingface/transformers) | 167 302 | 🟢 Apache-2.0 |
+| 2 | [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | 76 867 | 🟢 MIT |
+| 3 | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **41 100** | 🟢 Apache-2.0 |
+| 4 | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 29 775 | 🟢 Apache-2.0 |
+| 5 | [`agent0ai/agent-zero`](https://github.com/agent0ai/agent-zero) ※ | 19 420 | 🟢 MIT |
+| 6 | [`overhangio/tutor`](https://github.com/overhangio/tutor) | 1 127 | 🔴 AGPL-3.0 |
+| 7 | [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | 1 040 | 🟢 MIT |
+| 8 | [`satvik314/educhain`](https://github.com/satvik314/educhain) | 🔴 **389** | 🟢 MIT |
+| 9 | [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 108 | 🟢 BSD-3-Clause |
+| 10 | [`A-R007/Multi-Agent-Study-Assistant`](https://github.com/A-R007/Multi-Agent-Study-Assistant) | 62 | 🔴 **no licence file** |
+| 11 | [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | 15 | 🟢 MIT |
+| 12 | [`marc-shade/docsingest`](https://github.com/marc-shade/docsingest) | 6 | 🟢 MIT |
+| 13 | [`eai6/ai-tutor`](https://github.com/eai6/ai-tutor) | 0 | 🟢 MIT |
+| 14 | [`LAION-AI/Desktop_BUD-E`](https://github.com/LAION-AI/Desktop_BUD-E) | 🔴 search-absent | 🔴 **no licence file** |
+
+🔵 **※ this KB publishes `frdel/agent-zero`. The API's canonical `full_name` is
+`agent0ai/agent-zero`, and `git ls-remote` returns the same head SHA (`983fc50a…`) for both —
+a rename redirect, verified rather than assumed (`P117-G`).**
+
+🔴 **Two rows commit NO LICENCE FILE. Globant cannot build on either, and neither may be
+labelled MIT by inference.** 🔴 **Five of fourteen are under 110 stars and three are under 20.**
+🟢 **Rows 1–5 are large, permissive and real; the useful reading of this table is that its top
+and its bottom are different kinds of object and should not share a page without saying so.**
+
+## 🔴 🆕 `P117-E` — the two star figures this KB had most wrong, in opposite directions
+
+| row | published by this KB | 🟢 API, 2026-10-11 | error |
+|---|---|---|---|
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | 🔴 "~9k★" then "~12k★" | 🟢 **389** | 🔴 **31× overstated** |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🔴 "~22k★" then "~24k★" | 🟢 **41 100** | 🔴 **1.7× understated** |
+
+🔵 **Both came off the same line of the same rotation ledger, which had already recorded a
+suspicion that prior cycles' star counts were "pipeline-inflated" — without the channel to
+prove it. The channel exists now. 🟢 `huggingface/smolagents` at "~30k★" vs 29 775 measured
+shows the ledger was not uniformly wrong, which is why guessing which figures to distrust was
+never going to work.**
+
+## 🟡 🆕 `P117-B` — ACTION A ran, and layer R is not refuted
+
+🟢 **p115's clause: REFUTED if the second channel contradicts layer R on ≥ 3 of 34.**
+🔴 **Reached 4 of 34. Corroborated 2. Contradicted 0.** 🟢 **Not refuted.** 🔴 **`Gap 405` stays
+open — a 2/34 corroboration does not retire "25/25 measured on 42 % of its own output".**
+
+🟢 **The two that placed did so on channels nobody here has read: `ls1intum/Artemis` on the
+reverse-DNS Java package path `de/tum/cit/aet/…` in `CODEOWNERS`, and `numbas/Numbas` on a
+`## For Newcastle University` heading in `CONTRIBUTORS.md`.** 🔵 **Both are pre-registered as
+`ACTION C` / layer P in `compose/code/p117-second-channel/README.md`.**
+
+🔴 **For the agent tier specifically ACTION A changed nothing: none of the fourteen carries a
+`CODEOWNERS`, `FUNDING.yml` or `AUTHORS` that names an institution, so `P115-AG`'s "0 of 14
+place" stands, now from two independent channels instead of one.**
+
+## 🟡 How to read this page after p117
+
+🔴 **The fourteen-row table below keeps its licence column as published, with this section as
+its correction — the KB's convention is that history is not rewritten. Read `P117-C` first; the
+corrected licences there supersede the table's for every row they name.**
+🟡 **Note also that this page contains TWO disjoint sets both called "the fourteen" — p115's
+region-evidence rows (measured in `P117-F` above) and p113's recommendation rows (corrected in
+`P117-C`). They share one row. That collision is a legibility defect, not a data one, and
+renaming either set is deferred rather than done silently.**
+
+# Education — AI agents shelf
+
 **Pass 116, 2026-10-11.** ⏱️ **Second pass of this date** (census window
 **2026-10-11 02:18 UTC → 02:33 UTC**; p114 ran 23:54 on the 10th → 00:25 UTC on the 11th).
 

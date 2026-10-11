@@ -1,0 +1,14 @@
+openedx/openedx-platform
+ILIAS-eLearning/ILIAS
+langchain-ai/langgraph
+fwu-de/ais-chat
+mitodl/open-learning-ai-tutor
+MysterionRise/adaptive-knowledge-graph
+artcc/freelingo
+OtterDen-Lab/Autograder
+ahmedEid1/lumen
+Selleo/mentingo
+learning-commons-org/evaluators
+towardsai/ai-tutor-app
+bncc-dev/bncc-benchmark
+aiverify-foundation/moonshot-cicd

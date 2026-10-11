@@ -6,6 +6,62 @@ updated: 2026-10-11
 
 # Education — current trends
 
+**Pass 117, 2026-10-11.** ⏱️ **Fourth pass of this date** (window **02:45 → 03:1x UTC**).
+
+## 🟢 🆕 `P117-Q` — the five trends this pass can actually evidence, each with its channel named
+
+| # | trend | evidence class | state |
+|---|---|---|---|
+| 1 | 🟢 **Purpose-built beats general-purpose, and procurement moves from TEACHER to DISTRICT** | converging: 4 US state bills + Schola Europaea all demand an *approved-tool* process | 🟢 **settled by convergence** |
+| 2 | 🟢 **Copyleft dominates the platform layer; permissive lives in assessment + plumbing** | 🟢 **measured** — 20 platforms, licences read from trees (`P117-L`) | 🟢 **measured** |
+| 3 | 🟡 **Governance lags usage badly** — near-universal adoption, most institutions without policy | aggregator blogs, no primary | 🟡 candidate |
+| 4 | 🟡 **Faculty enthusiasm is DECLINING in North America while flat elsewhere** (76 %→67 % intent, US/CA) | one survey, regionally split | 🟡 candidate, 🟢 notable |
+| 5 | 🟡 **Funding is consolidating** — EdTech VC $1 B in H1 2026, −26 % YoY | vendor report | 🟡 candidate |
+
+🔵 **Trend 1 is the one worth building for, and it is the only one this pass can call settled
+without a primary source — because it is settled by CONVERGENCE rather than by any single
+claim. Georgia (governance framework), Florida (statewide standards), Maryland (evaluation
+rubric), North Carolina (evaluation framework + public approved-tool list), Ohio (mandatory
+district policy) and the European Schools network (approved tools, written rules, staff
+guidance) all independently describe the same artefact. Six jurisdictions converging on one
+deliverable is stronger evidence than any of the six.**
+
+🔴 **Trend 4 deserves more attention than its candidate status suggests, because it cuts against
+every vendor narrative on this page: if North American faculty INTENT is falling 9 points while
+other regions hold steady, the 2026 North American sale is to ADMINISTRATORS and compliance
+owners, not to enthusiastic instructors. 🟢 That matches trend 1's district-level procurement
+shift exactly, from an unrelated source.**
+
+## 🔴 🆕 `P117-R` — the counter-trend inside this KB, and it is the pass's real finding
+
+🔵 **A trends page should record when the instrument changed, not only when the world did.**
+
+🔴 **`api.github.com` has been recorded as blocked since p107. It answers through the MCP relay
+while `curl` still gets `403` at CONNECT and `gh api` is repo-scope gated (`P117-A`). Nine
+passes of workarounds were built around one transport's answer.** 🟢 **The first use of the
+channel immediately found: a 31× star overstatement, a 1.7× understatement, 9 wrong licences in
+14 rows, 5 non-canonical addresses and a foundation row that declares itself unmaintained.**
+
+🔵 **The generalisable trend, stated for whoever reads this KB next: the binding constraint on
+this knowledge base has not been what is true about education AI. It has been which channel
+this KB could reach, and it mistook that for what was knowable.**
+
+## 🟡 What this page searched and did NOT find — stated, not hidden
+
+🔴 **No new APAC policy token.** The region's picture (China's MoE curriculum, India's Class-3
+mandate from 2026-27, Singapore's Student Learning Space, Japan's deliberate caution) was
+already held in full — saturation of holdings, not absence of activity.
+🔴 **No primary source reachable for any 2026 market-size figure.** Two aggregators give
+mutually inconsistent numbers ($12.3 B for 2026 vs ~$32 B by 2030 from ~$6 B in 2024); both are
+marked **do not quote** in `intel/market.md` rather than averaged.
+🔴 **`topic:education topic:llm` returns `total_count: 0` above 400★.** The topic pair is unused
+on GitHub; the zero is a tagging artefact and must not be read as absence of work.
+🔴 **No LATAM education-specific AI trend source.** A dedicated regional query returned
+enterprise-AI, data-centre and IP-law material; the four LATAM items this pass holds are the
+entire usable yield.
+
+# Education — current trends
+
 **Pass 116, 2026-10-11.** ⏱️ **Second pass of this date** (census window
 **2026-10-11 02:18 UTC → 02:33 UTC**; p114 ran 23:54 on the 10th → 00:25 UTC on the 11th).
 

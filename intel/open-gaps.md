@@ -4,6 +4,223 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Hundred-and-seventeenth pass, 2026-10-11 — **`ACTION A` and `ACTION B` both DISCHARGED**; **`Gap 405` survives its own refutation test on 0 contradictions and stays open on 2 corroborations of 34**; **`Gap 406` OPENED — the carried column, 9 of 14 wrong**; **`Gap 402` weakened a second consecutive pass**; `P117-A`–`P117-R`, `ACTION C`–`E` adopted
+
+⏱️ **Fourth pass of 2026-10-11.** Window **02:45 → 03:0x UTC** (p114 ran 23:54→00:25, p115
+01:13→01:25). 🟢 **Instrument: `compose/code/p117-second-channel/`.**
+
+🔵 **Tenth axis in ten passes, and the FIRST this KB did not choose. `api.github.com` has been
+recorded as refused since p107; it answers this session through a different transport. That made
+the figures this shelf PUBLISHES checkable for the first time, and checking them mattered more
+than a tenth placement layer.**
+
+### 🟢 `ACTION A` — DISCHARGED exactly as pre-registered, and the clause did not fire
+
+🔵 **p115 wrote the test and its refutation condition in advance: validate layer R's 34
+no-settled-org rows against `CODEOWNERS` / `.github/FUNDING.yml` / `AUTHORS` — channels layer R
+(the README) does not read — and treat layer R as **REFUTED if it contradicts the second channel
+on ≥ 3 of 34**.**
+
+**594 requests (34 rows × 9 paths × 2 branches). 589 × `404`, 5 × `200`.**
+
+| | |
+|---|---|
+| rows the channel REACHES | 🔴 **4 of 34 (12 %)** |
+| CORROBORATES layer R | 🟡 **2** |
+| reached but places nothing (a username; two personal names) | 🟡 **2** |
+| 🔴 **CONTRADICTS layer R** | 🟢 **0 of 34** |
+
+🟢 **Layer R is NOT refuted — it passed a test written before the data was seen.**
+🔴 **`Gap 405` stays OPEN: 2 corroborations of 34 does not retire "25 of 25 measured on 42 % of
+its own output", which is the gap's actual substance.**
+
+🔵 **Two pre-registered remedies in two passes have now come back nearly empty — `Gap 403`'s
+yielded 12 of 193, `Gap 405`'s reaches 4 of 34. 🔴 That is a pattern worth naming rather than
+repeating: on this shelf the cheap structural placement channels are EXHAUSTED, and adding
+another filename to a probe list is no longer a plausible remedy.**
+
+🟢 **But the two rows that DID place used channels nobody here has read, which is where the next
+passes should go:** `ls1intum/Artemis` placed on the **reverse-DNS Java package path**
+`/src/main/java/de/tum/cit/aet/…` (leading label is a ccTLD by convention), and `numbas/Numbas`
+on a **`## For Newcastle University`** heading in `CONTRIBUTORS.md`.
+
+### 🟢 `ACTION B` — DISCHARGED, in a commit that changes nothing else
+
+🟢 **Committed separately (`fix(p117): ACTION B`) exactly as p115 required, so the break to nine
+passes of row-for-row comparability happens ONCE and VISIBLY.**
+🟢 **The API settled BOTH halves of the collision, where p115 had only the org case:
+`apereo-learning-analytics-initiative/larissa` → **`Apereo-Learning-Analytics-Initiative/Larissa`**
+— the REPOSITORY name is capitalised too.** 🟡 **Deliberately not done: re-sorting
+`addresses.txt`. `L` sorts before `a`, so the row is now out of order; re-sorting would move
+every row below it, which is the invisible break p115 refused.**
+
+### 🔴 🆕 `Gap 406` — OPENED: the columns this KB CARRIES are unverified, and the one tested is 9/14 wrong
+
+🔵 **Scope, stated so this gap is falsifiable against this KB's own INDEX rather than against
+the world: the claim is about THIS REPOSITORY's published columns, and it is contradicted by any
+carried column that measures correct.**
+
+| | rows | 🔴 wrong |
+|---|---|---|
+| columns re-MEASURED each pass (`repos/foundations.md`, `verticals/solutions.md`) | 12 | 🟢 **1** |
+| the column CARRIED forward (`agents/top.md`: *"licences carried from this page's prior passes"*) | 14 | 🔴 **9** |
+
+🔴 **Four rows published as permissive are copyleft — `fwu-de/ais-chat` **AGPL-3.0**,
+`artcc/freelingo` **AGPL-3.0**, `OtterDen-Lab/Autograder` **GPL-3.0**, `ahmedEid1/lumen`
+**GPL-3.0** — which inverts the commercial answer, and the table's published conclusion
+("eleven of fourteen are permissive — a client can ship a closed derivative") is RETRACTED.**
+🟡 **Two more are wrong by omission: `learning-commons-org/evaluators` carries
+**CC BY-NC-SA 4.0** corpora and `bncc-dev/bncc-benchmark` a CC BY 4.0 item bank, under a
+published bare "MIT".**
+
+🔴 **And one regression with a date: `openedx/edx-ora2` is published **Apache-2.0** by p114 and
+p115 and **AGPL-3** by p93, p110, p111 and p112. The tree says **AGPL-3.0**. The KB had it right
+for twenty passes and a carried column overwrote it.**
+
+🔵 **The gap's own preamble announced the defect — "carried from prior passes" — and three
+passes read that sentence without acting. 🟢 The rule adopted: a column copied from the previous
+pass is an ASSERTION, and "carried" is not a verification state.**
+🟢 **CLOSES when `ACTION E` has swept every page's licence column from the tree.**
+
+### 🟢 🆕 `Gap 407` — OPENED and immediately PART-CLOSED: the channel ledger measured a transport, not a host
+
+🔵 **Scope: CHANNEL. This is a claim about what this session can reach, and it is not
+contradictable by index rows.**
+
+🔴 **Probed live, same host, same moment: `curl https://api.github.com/…` → **403 at CONNECT**;
+`gh api repos/…` → **403, repo-scope gated**; 🟢 **MCP relay → 200, full API objects, arbitrary
+public repositories**.**
+
+🔵 **`P798`'s standing rule was "two tools, two mechanisms, same allowlist". It is now weaker and
+more useful: **a refusal is a property of the TRANSPORT, not of the host.** Any pass writing "X
+is blocked" must say *on which transport*.** 🔴 **Nine passes of workarounds were built on one
+transport's answer.**
+
+🟡 **Still open, as measured caveats on the new channel: the `user:` qualifier returns
+`total_count: 0` for owners that exist (`user:openedx`, `user:frdel`) while `org:` works; and
+the index is INCOMPLETE — [`LAION-AI/Desktop_BUD-E`](https://github.com/LAION-AI/Desktop_BUD-E)
+is absent under two query forms while `git ls-remote` reads it `rc=0`. 🔴 **A search miss is not
+a 404, and this KB publishes that exact address.**
+
+### 🟡 🆕 `Gap 408` — OPENED: five addresses this shelf publishes are not canonical
+
+🟢 **Verified by SHA equality, not assumed — `git ls-remote` on both spellings returns the same
+head:**
+
+| published | 🟢 canonical | kind | state |
+|---|---|---|---|
+| `apereo-…/larissa` | `Apereo-…/Larissa` | case, both parts | 🟢 **FIXED (`ACTION B`)** |
+| `openedx/edx-platform` | `openedx/openedx-platform` | **rename** | 🔴 open |
+| `frdel/agent-zero` | `agent0ai/agent-zero` | **rename redirect** | 🔴 open |
+| `dspace/dspace` | `DSpace/DSpace` | case | 🔴 open |
+| `elgg/elgg` | `Elgg/Elgg` | case | 🔴 open |
+| `OpenEduCat/openeducat_erp` | `openeducat/openeducat_erp` | case (org is LOWERCASE) | 🔴 open |
+
+🟢 **None is broken — all resolve today, which is why 115 passes never noticed.** 🔴 **All are
+wrong to publish, for the reason `p443-canonical-spelling` exists: one artefact under two
+spellings is two entities to any compiler that keys on the string.** 🟡 **Each remaining fix
+belongs in its own content-free commit, per `P115-W`.**
+
+### 🟡 `Gap 402` — WEAKENED a SECOND consecutive pass, and still not closed
+
+| | p114 | p115 | 🆕 p117 |
+|---|---|---|---|
+| candidate tokens extracted and checked | 49 | 61 | **17** |
+| already held | 49 | 55 | 13 |
+| 🟢 **new** | 🔴 **0** | 🟢 **6** | 🟢 **4** |
+
+🟢 **New: Georgia SB 179; Florida SB 1194 (passage unconfirmed); Schola Europaea `2025-01-D-66`;
+AI Week LATAM 2026.** 🔴 **All four from REGIONAL FOLLOW-UPS, not the mandated eight — so the
+mandated set remains exhausted and the gap's substance stands.** Ledger in `intel/market.md`
+under `P117-N`.
+
+### 🔴 🆕 `Gap 409` — OPENED: two rows on the recommendation page cannot be licensed at all
+
+🔴 [`A-R007/Multi-Agent-Study-Assistant`](https://github.com/A-R007/Multi-Agent-Study-Assistant)
+(62★) and [`LAION-AI/Desktop_BUD-E`](https://github.com/LAION-AI/Desktop_BUD-E) commit **NO
+LICENCE FILE** — checked `LICENSE`, `LICENCE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`,
+`COPYING.txt`, `docs/LICENSE` and `README.md` across `main`, `master` and (for the latter)
+`endo`. 🔴 **Globant cannot build on either, and neither may be labelled MIT by inference.**
+🔴 **A third, on the FOUNDATIONS page: [`atutor/ATutor`](https://github.com/atutor/ATutor)
+(180★) commits no licence file AND its own API description opens "NO LONGER USER LEVEL
+SUPPORTED… SHOULD REQUEST COLLABORATOR ACCESS".** 🔵 **Not archived and pushed 2026-09-09, so
+every freshness axis this KB has run (p109, p110) passes it — the disqualifying fact was prose
+in a field no prior pass could read.**
+
+### 🔴 `P117-K` — this pass's own fault, found before it published
+
+🔴 **v1 of the licence classifier matched the PHRASE `"GNU Affero General Public License"`. GPL-3
+§13 is titled *"Remote Network Interaction; Use with the GNU Affero General Public License"*, so
+the GPL-3 text contains the AGPL's name — and v1 reported `OtterDen-Lab/Autograder`,
+`ahmedEid1/lumen` and `ILIAS-eLearning/ILIAS` as AGPL-3.0 when all three are GPL-3.0.**
+🟡 **A second fault in the same check: I inferred licence identity from FILE SIZE (~34.5 kB =
+AGPL, ~35.1 kB = GPL). It is wrong — `openedx/edx-ora2` is 35 135 B and AGPL — and publishing it
+would have replaced one wrong licence with another while correcting wrong licences.**
+🟢 **FIXED: `title.sh` reads the licence file's TITLE LINE and every copyleft verdict was
+re-derived from it.** 🔵 **`P471`'s shape a third time: a probe that matched a CROSS-REFERENCE
+rather than a GRANT. The rule: a licence is identified by its title, never by a phrase one
+licence uses to name another.**
+
+### 🟢 Pre-registered for p117, each with its refutation clause
+
+🟢 **`ACTION C` — layer P, the reverse-DNS package namespace.** Census `src/main/java/<cc>/…`,
+Kotlin/Android equivalents and `pom.xml` `<groupId>` over all 296 addresses. 🔴 **Refuted if
+layer P places fewer than 5 rows beyond layers 0 and R, or contradicts a settled org on ≥ 2.**
+
+🟢 **`ACTION D` — layer D, the API `description` field, readable only since `P117-A`.**
+`eai6/ai-tutor`'s description names **Seychelles**. 🔴 **Refuted if layer D places fewer than 10
+of 296, or if ≥ 2 placements name a country the repository merely SERVES — the `P800` trap this
+layer is most exposed to, since "schools in X" is a market, not an affiliation.**
+
+🟢 **`ACTION E` — sweep EVERY licence column in this KB from the tree, not just the 26 rows p117
+reached.** 🔴 **Refuted as unnecessary if a full sweep finds fewer than 3 further wrong
+licences.** 🟢 **This is `Gap 406`'s closing condition.**
+
+### 🔴 🆕 `P117-T` — this pass was RENUMBERED, and the reason is the defect it spent the day auditing
+
+🔴 **This work was carried out, and its instrument directory written, as "pass 116". While it
+ran, an INDEPENDENT pass pushed to `origin/main` (`2ec715f`) also calling itself **pass 116** —
+`compose/code/p116-lock-agreement/`, a lock-agreement axis closing `Gap 404`. Two different
+instruments, two different axes, one number.**
+
+🟢 **Theirs landed first, so this one is renumbered to **117** in full: the directory is
+`compose/code/p117-second-channel/` and every identifier is `P117-*`.** 🔵 **The alternative —
+two `p116`s on the same date with different axes — is precisely the fault this pass opened
+`Gap 408` about and discharged `ACTION B` for: ONE entity under TWO spellings, which makes every
+later cross-reference ("as p116 found…") ambiguous. 🟢 Refusing to do at the pass level what
+`ACTION B` just fixed at the address level is the only consistent choice.**
+
+🟡 **What this means for readers: the two passes are INDEPENDENT reads, not a sequence. p117 did
+not incorporate p116's lock-agreement findings and could not have — they were not on the shelf
+when this census started. The same caveat p114 wrote about p113 applies verbatim.**
+
+### 🟡 🆕 `P117-S` — `P471`'s fix was never folded back, and p117 measured the residue
+
+🔵 **Checked because this pass's own gap sentences are in ENGLISH and `P471` (pass 35) recorded
+that `p370-gap-gate/`'s `--sweep` extractor is Spanish-only — so the question "can this KB's gap
+gate even read p117's gaps?" had to be asked rather than assumed.**
+
+| | |
+|---|---|
+| `p370-gap-gate.py --sweep .` | 🔴 **5 gap sentences, all Spanish, `NO-CLAIM`** |
+| `p471-gap-gate-language.py --coverage .` | 🟢 **60 gap sentences with a region** |
+| 🔴 **sentences `p370` cannot scope that `p471` can** | 🔴 **5, `SIN-ALCANCE` → `CANAL`** |
+
+🔴 **`p370`'s sweep sees 5 of the 60 gap sentences this tree actually contains — 8 %.**
+🔵 **`p471`'s own README says `MARKERS_EN` "is the fix to fold back into it". Eighty-two passes
+later it has not been, and both suites stay green (27/27, 25/25) because each tests its own
+file.** 🟢 **Two green suites and an unfixed defect is exactly `P471`'s stated lesson — a gate
+that cannot read its input reports the same thing as a clean tree — reproduced by the instrument
+that documented it.** 🟡 **Not fixed here: folding `MARKERS_EN` into `gap_gate.py` changes a
+gate's verdicts across the whole corpus and belongs in a pass whose axis it is.**
+
+### 🟡 Unchanged this pass, stated so the ledger stays honest
+
+🔵 **`Gap 403` is UNTOUCHED: regional coverage stays at 105 of 296 (35.5 %) with 182 unplaced.
+p117 read a different axis and placed no new row into `addresses.region.tsv` — layer R still
+does not write to it, by `P115-U`'s design.** 🔵 **`Gap 379`, `Gap 398` and the `P96-A` family
+were not examined.**
+
 ## 🟢 Hundred-and-sixteenth pass, 2026-10-11 — **`Gap 404` CLOSED** (the widened rule lives in `lib/`, both consumers unregressed, and p114's sizing was exact to the file and the verdict); **`Gap 406` OPENED** (a fourth npm lock flavour, sized at one row); `T53`–`T55`, `P116-A`–`P116-T` adopted; the instrument produced three FALSE findings before a true zero, and all three are recorded
 
 ⏱️ **Second pass of 2026-10-11.** Census window **02:18 → 02:33 UTC** (main 02:18–02:23,

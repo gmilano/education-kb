@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Pass 117 — 2026-10-11 (fourth pass of this date), 02:45–03:0x UTC
+
+🔵 **APPEND-ONLY page. This section is added above p115's and nothing below it is edited.**
+
+🟢 **What is new this week is not a repository — it is a CHANNEL. `api.github.com` answers
+this session through the MCP relay while `curl` still receives `403` at the CONNECT layer and
+`gh api` is repo-scope gated (`P117-A`). Every star figure below is read from it; every licence
+is read from the repository tree.**
+
+### 🔴 The week's real story: four of this page's own recommendations are copyleft, not MIT
+
+🔴 **`P117-C` retracts the fourteen-row table on `agents/top.md`: 9 of 14 published licences
+are wrong and FOUR rows published as MIT are copyleft —
+[`fwu-de/ais-chat`](https://github.com/fwu-de/ais-chat) (**AGPL-3.0**),
+[`artcc/freelingo`](https://github.com/artcc/freelingo) (**AGPL-3.0**),
+[`OtterDen-Lab/Autograder`](https://github.com/OtterDen-Lab/Autograder) (**GPL-3.0**),
+[`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) (**GPL-3.0**).** 🔵 **If a trend page
+exists to record what changed, the honest entry this week is that four rows a reader could have
+quoted to a client were wrong in the direction that costs money.**
+
+### 🟢 New to this KB this pass — four rows, all verified, with licences from the tree
+
+| repo | 🟢 stars | 🟢 licence | region signal | why it is here |
+|---|---|---|---|---|
+| [`pguso/ai-agents-from-scratch`](https://github.com/pguso/ai-agents-from-scratch) | 🟢 **4 844** | 🟢 MIT | — | 🔴 **the larger sibling of a row this KB already holds.** This KB publishes `pguso/agents-from-scratch` (1 040★); the SAME author's `ai-agents-from-scratch` is 4.7× bigger and was never held. Local LLM, function calling, ReAct, no framework |
+| [`brycewang-stanford/Auto-Empirical-Research-Skills`](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) | 🟢 **4 566** | 🟡 **CC-BY-SA-4.0** | North America (Stanford REAP) | 23 000+ agent skills for empirical research across 8 social-science disciplines. 🟡 **A SHARE-ALIKE content licence on a skills corpus — derivative skill packs inherit it** |
+| [`dmoshehun-prog/learn-from-materials`](https://github.com/dmoshehun-prog/learn-from-materials) | 🟢 **974** | 🟢 MIT | — | PDFs/books/papers → traceable, quizzable learning pages. Created 2026-09-08, so this is genuinely this quarter |
+| [`122-syf-wcy/PhysicsOS`](https://github.com/122-syf-wcy/PhysicsOS) | 239 | 🟢 Apache-2.0 | 🟢 **APAC (CN)** | K-12 physics: the agent reads the problem, then a PHYSICS ENGINE renders it interactive and verifiable. 🔵 **A non-chat tutoring shape, and one of very few APAC-origin rows this KB can place** |
+
+🟢 **All four discovered through the API rather than a roundup blog — which is why all four
+carry a real star count and a licence read from the tree instead of a claim.**
+
+### 🔵 Held rows, re-measured — the API's figures against what this KB had
+
+| row | 🟢 stars now | note |
+|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **41 100** | 🔴 this KB published "~22k" then "~24k". The shelf's largest education-specific agent, and it was understated for two cycles |
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 **76 867** | 🔵 a 2026 roundup read during this pass said 56 002 — roundups lag badly |
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | 🟢 **34 446** | MIT; technical book → agent skill. Already held |
+| [`agent0ai/agent-zero`](https://github.com/agent0ai/agent-zero) | 🟢 **19 420** | 🔴 held under the stale address `frdel/agent-zero`; same head SHA, so a rename redirect |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | 🔴 **389** | 🔴 this KB published "~9k" then "~12k" — **31× overstated** |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🟢 **2 028** | 🟢 this KB already correctly flags its **custom "PageLM Community License"** — not OSI |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 844 | 165 evidence-grounded teaching skills; already held |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 285 | Socratic tutor, Bloom 2-sigma framing; already held |
+| [`helixnow/deep-student`](https://github.com/helixnow/deep-student) | 279 | local-first learning workbench, FSRS + RAG; already held |
+
+### 🟡 What this page searched and did NOT find — stated, not hidden
+
+🔴 **`topic:education topic:llm stars:>400 pushed:>2026-09-01` returns `total_count: 0`.** The
+education+LLM topic pair is essentially unused on GitHub; `topic:edtech` (14 repos above the
+250★ line) and `topic:education topic:ai-agent` (7 repos above 100★) are the only topic
+channels on this shelf that carry signal.
+🔴 **No new EMEA-origin and no new LATAM-origin agent repository cleared the bar this pass.**
+The four new rows place as North America ×1, APAC ×1, unplaced ×2. 🔵 **That is a finding about
+where agent work is published, and it matches `P115-AA`: this shelf's agent tier is
+overwhelmingly either US-institutional or single-maintainer-unplaceable.**
+
 ## 2026-10-11 — pass 116: where this shelf has a lock that reaches the manifest, the lock matches it — 3 100 of 3 100 dependencies, and the three false findings it took to be able to say so
 
 **Pass 116, 2026-10-11.** ⏱️ **Second pass of this date** (census window

@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Pass 117 — 2026-10-11 (fourth pass of this date), 02:45–03:0x UTC
+
+🔵 **APPEND-ONLY page. Added above p115's section; nothing below is edited.**
+
+🟢 **First pass able to read `api.github.com` (`P117-A`), so "trending" is measured here
+instead of quoted: star counts, push dates, archive flags and canonical names all come from the
+API, and licences from the tree.**
+
+### 🟢 `topic:edtech`, everything above 250★ pushed since 2026-08-01 — the whole result set, 10 of 14
+
+🔵 **Not a selection: this is the ranked head of the query, so the ordering is checkable.**
+
+| repo | 🟢 stars | 🟢 licence (tree) | note |
+|---|---|---|---|
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | 34 446 | 🟢 MIT | technical book PDF → agent skill. Created 2026-05-01 |
+| [`Kaustubh-Natuskar/moreThanFAANGM`](https://github.com/Kaustubh-Natuskar/moreThanFAANGM) | 5 239 | — | 🔴 a jobs list, `edtech`-tagged. **Topic noise, named so a later pass does not re-discover it as a platform** |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 2 028 | 🔴 **"PageLM Community License"** | NotebookLM-alike: quizzes, flashcards, podcasts. 🔴 **Custom licence, not OSI — already correctly flagged by this KB** |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 1 717 | 🔴 **AGPL-3.0** | self-describes as the alternative to Moodle/edX/Thinkific. 🔴 **Network copyleft on the core — the `classroomio/mcp` npm package is MIT, which is the seam to build against** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 1 141 | 🟢 MIT | offline-first; already a `checked` foundation |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 844 | — | 165 evidence-grounded skills: pedagogy, assessment, curriculum |
+| [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) | 501 | — | 501(c)(3); multilingual tutoring, 7 languages, underserved learners |
+| [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 376 | 🟢 **Apache-2.0** | 🟢 **LTI / Common Cartridge plumbing — the standards layer, permissively licensed** |
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 354 | 🟢 MIT | modern SCORM 1.2 / 2004 runtime |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 340 | 🔴 **Elastic-2.0** | HE student-success CRM. 🔴 **Source-available, NOT open source — already correctly flagged here; an older row on this shelf said AGPL-3 and was superseded** |
+
+### 🟢 `topic:education topic:ai-agent` above 100★ — the complete result set, all 7
+
+| repo | 🟢 stars | 🟢 licence | region signal |
+|---|---|---|---|
+| [`brycewang-stanford/Auto-Empirical-Research-Skills`](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) | 4 566 | 🟡 CC-BY-SA-4.0 | 🟢 North America (Stanford REAP) |
+| [`dmoshehun-prog/learn-from-materials`](https://github.com/dmoshehun-prog/learn-from-materials) | 974 | 🟢 MIT | — |
+| [`minicoohei/ai-agent-camp`](https://github.com/minicoohei/ai-agent-camp) | 347 | — | 🟡 APAC (JP, by account) |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 285 | — | 🟡 APAC (CN, zh-first) |
+| [`helixnow/deep-student`](https://github.com/helixnow/deep-student) | 279 | — | — |
+| [`122-syf-wcy/PhysicsOS`](https://github.com/122-syf-wcy/PhysicsOS) | 239 | 🟢 Apache-2.0 | 🟢 APAC (CN) |
+| [`ystemsrx/sql_to_ER`](https://github.com/ystemsrx/sql_to_ER) | 188 | — | 🟡 APAC (CN) |
+
+🔵 **Five of seven carry an APAC signal, against an agent tier where `P115-AA` measured APAC at
+ZERO placements from root metadata. 🟢 `P115`'s own conclusion — "APAC's zero is a property of
+where the instrument looks, not of the shelf" — is corroborated here from a completely
+different channel.** 🔴 **These are account- and language-level signals, not committed
+institutional evidence, so they do NOT enter `addresses.region.tsv`; they are a reason to go
+looking, not a placement.**
+
+### 🔴 Channel notes a later pass will need
+
+🔴 **`topic:education topic:llm stars:>400 pushed:>2026-09-01` → `total_count: 0`.** That topic
+pair is unused; do not read the zero as an absence of work.
+🔴 **`user:` qualifier is non-functional on this transport** — `user:openedx` and `user:frdel`
+both return `total_count: 0` for owners that demonstrably exist. 🟢 **`org:` works, and repeated
+`org:` qualifiers OR together** (nine orgs read in two calls this pass).
+🔴 **The index is incomplete: [`LAION-AI/Desktop_BUD-E`](https://github.com/LAION-AI/Desktop_BUD-E)
+is absent under two query forms while `git ls-remote` reads it `rc=0`.** 🔵 **A search miss is
+not a 404 — and this KB publishes that exact address on `agents/top.md`.**
+
 ## 2026-10-11 — pass 116: the lock-vs-manifest axis comes back clean on every region, and the regional figure that matters is how little of each region it can read
 
 **Pass 116, 2026-10-11.** ⏱️ **Second pass of this date** (census window

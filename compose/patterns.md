@@ -6,6 +6,80 @@ updated: 2026-10-11
 
 # Education — compose patterns
 
+**Pass 117, 2026-10-11.** ⏱️ **Fourth pass of this date** (window **02:45 → 03:1x UTC**).
+
+## 🟢 🆕 `P117-PAT-1` — "AI on a copyleft LMS without inheriting the copyleft"
+
+🔴 **The problem, now measured rather than suspected (`P117-L`): the five largest education
+platforms are ALL copyleft, and the two biggest LMS targets — Open edX and Canvas — are
+**AGPL-3.0**, i.e. hosting a MODIFIED instance for a client triggers source release. The
+instinctive move ("fork the LMS, add AI") is the one that costs the client its closed
+derivative.**
+
+🟢 **The recipe — three real components, each with a licence verified from its tree this pass:**
+
+| layer | component | 🟢 licence | role |
+|---|---|---|---|
+| host | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) 8 196★ **or** [`moodle/moodle`](https://github.com/moodle/moodle) 7 473★ | 🔴 AGPL-3 / GPL-3 | **DEPLOY UNMODIFIED.** No patches, no forks |
+| boundary | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) 376★ | 🟢 **Apache-2.0** | LTI 1.3 / Common Cartridge bridge — the process boundary the copyleft does not cross |
+| agent | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) 29 775★ | 🟢 **Apache-2.0** | the tool-calling agent, in YOUR repository |
+| assessment | [`numbas/Numbas`](https://github.com/numbas/Numbas) 215★ | 🟢 **Apache-2.0** | generated items rendered + marked in-browser |
+| packaging | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) 354★ | 🟢 **MIT** | SCORM 1.2 / 2004 runtime so output lands in ANY LMS |
+
+🟢 **Wiring:** the LMS launches your tool over **LTI 1.3** (`tsugi` handles the handshake and
+roster context); your service — a separate process, separate repository, Apache-2.0/MIT top to
+bottom — calls `smolagents` to generate or mark; items render through `Numbas`; results return
+to the LMS gradebook over **LTI AGS**, or ship as a SCORM package via `scorm-again` when the
+client's LMS is unknown. 🔵 **Nothing links against the AGPL code and nothing modifies it, so
+the obligation never attaches. The LTI boundary is not a loophole — it is the integration
+mechanism these platforms publish for exactly this purpose.**
+
+🔵 **The reference to quote: [`classroomio`](https://github.com/classroomio/classroomio) ships an
+**AGPL-3.0** core and an **MIT** `classroomio/mcp` package. The vendor drew this same line
+itself, which is the most persuasive possible argument that the pattern is the intended one.**
+
+## 🟢 🆕 `P117-PAT-2` — "the approved-tool register", now with four buyers instead of one
+
+🔵 **p115 pre-registered this for North Carolina alone. `P117-N` found that Georgia (SB 179),
+Florida (SB 1194) and Maryland (SB 720) plus Ohio's district mandate and the European Schools
+network each independently require substantially the SAME artefact — so the build is one and the
+sale is six.**
+
+🟢 **What the register must emit per candidate tool, and the instrument in this repo that already
+computes it:**
+
+| column | source already in this KB |
+|---|---|
+| licence, **read from the tree, never carried** | `compose/code/p117-second-channel/title.sh` — 🔴 and `P117-C` is the proof this column cannot be inherited |
+| commercial-use verdict | `compose/code/p250-commercial-use-axis/` |
+| canonical address | `P117-G` — 5 of this shelf's addresses were non-canonical |
+| maintenance state | 🟢 **API `archived` + `pushed_at` + the DESCRIPTION** — `P117-H` caught `atutor/ATutor` declaring itself unmaintained in prose |
+| dependency pinning | `compose/code/p112-dependency-closure/`, `p114-lock-reach/` |
+| provider binding (where inference leaves the building) | `compose/code/p113-provider-binding/` |
+| region of maintenance | `compose/code/p115-region-evidence/` — 🔴 places only 35.5 % |
+
+🔴 **The hard warning this pattern must ship with: do NOT populate the licence column from this
+KB until `ACTION E` has swept every page. p117 checked 14 rows and found 9 wrong, 4 of them
+inverting the commercial answer. A register inherits the authority of its worst column.**
+
+## 🟡 🆕 `P117-PAT-3` — "place a repository when it will not place itself"
+
+🔵 **Nine placement passes have taken committed regional evidence from 0 to 35.5 % of 296
+addresses, and ACTION A showed the cheap structural channels are exhausted (4 of 34 reached).
+What `P117` adds is two channels that DID work, both of which a client engagement can reuse:**
+
+🟢 **(a) the reverse-DNS package namespace.** `ls1intum/Artemis` placed on
+`/src/main/java/de/tum/cit/aet/…` in `CODEOWNERS` — the leading label of a Java/Kotlin/Maven
+namespace is a ccTLD by convention. 🟢 **Cheap, offline, and applies to every JVM repository on
+the shelf.** Pre-registered as `ACTION C`.
+
+🟢 **(b) the API `description` field**, readable only since `P117-A`. `eai6/ai-tutor`'s
+description names **Seychelles**. Pre-registered as `ACTION D` — 🔴 **with its trap stated in
+advance: "schools in X" names a MARKET, not an affiliation, and `P800` forbids placing a row on
+where it is sold.**
+
+# Education — compose patterns
+
 **Pass 116, 2026-10-11.** ⏱️ **Second pass of this date** (census window
 **2026-10-11 02:18 UTC → 02:33 UTC**; p114 ran 23:54 on the 10th → 00:25 UTC on the 11th).
 

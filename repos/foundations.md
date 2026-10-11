@@ -6,6 +6,91 @@ updated: 2026-10-11
 
 # Education — foundational repos
 
+**Pass 117, 2026-10-11.** ⏱️ **Fourth pass of this date** (census window **02:45 → 03:0x UTC**).
+
+🟢 **Instrument: `compose/code/p117-second-channel/`. The GitHub API answers this session
+through the MCP relay while `curl` still gets `403` at the CONNECT layer and `gh api` is
+repo-scope gated (`P117-A`) — so star counts, archive state and canonical names are
+authoritative here for the first time, and every licence below was re-read from the TREE.**
+
+## 🔴 🆕 `P117-D` — one of the nine `checked` foundations has had the WRONG LICENCE for two passes
+
+| row | published p114 / p115 / 🆕 **p116** | 🔴 tree, p117 | published p93–p112 |
+|---|---|---|---|
+| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🟢 Apache-2.0 ×3 | 🔴 **AGPL-3.0** | 🟢 **AGPL-3 — correct** |
+
+🔴 **It is now THREE passes, not two, and the third happened while this pass was measuring it.**
+The independent `p116-lock-agreement` run pushed to `origin/main` (`2ec715f`) mid-census and
+republished this row as 🟢 `Apache-2.0` a fourth time. 🔵 **So `Gap 406` is not a historical
+observation about a stale column — it is a live propagation mechanism, caught in the act: a
+carried column was copied forward once more, by a different pass, on the same day, after the
+error was already twenty passes old.**
+
+🔵 **This is a REGRESSION, not a long-standing error. This same file publishes `AGPL-3` for the
+row under p93, p110, p111 and p112, and `Apache-2.0` under p114 and p115.** 🔴 **The KB had it
+right for twenty passes; a licence column carried forward instead of re-read overwrote it with
+the most consequential possible mistake — a strong network copyleft presented as a permissive
+licence.** 🟢 **Read from `master/LICENSE`, 35 135 B, title line `GNU AFFERO GENERAL PUBLIC
+LICENSE`, `Version 3`.**
+
+## 🟢 🆕 `P117-I` — the other eight are RIGHT, and that is the point
+
+| repo | 🟢 stars (API) | published licence | 🟢 tree, p117 | verdict |
+|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 7 473 | 🟡 GPL-3 | GPL-3.0 (`COPYING.txt`) | 🟢 AGREE |
+| [`temporalio/temporal`](https://github.com/temporalio/temporal) | 23 587 | 🟢 MIT | MIT | 🟢 AGREE |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 6 845 | 🟢 Apache-2.0 | Apache-2.0 | 🟢 AGREE |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 506 | 🟢 ECL-2.0 | ECL-2.0 | 🟢 AGREE |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 1 141 | 🟢 MIT | MIT | 🟢 AGREE |
+| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 64 | 🟢 Apache-2.0 | 🔴 **AGPL-3.0** | 🔴 **DIFFER** |
+| [`DSpace/DSpace`](https://github.com/DSpace/DSpace) ※ | 1 102 | 🟢 BSD-3 | BSD-3-Clause | 🟢 AGREE |
+| [`huggingface/transformers`](https://github.com/huggingface/transformers) | 167 302 | 🟢 Apache-2.0 | Apache-2.0 | 🟢 AGREE |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 1 127 | 🟢 AGPL-3 | AGPL-3.0 | 🟢 AGREE |
+
+🔵 **※ published as `dspace/dspace`; the canonical spelling is `DSpace/DSpace` and
+`git ls-remote` returns the same head (`9d355068…`) for both — case only, not a break
+(`P117-G`).**
+
+🟢 **Eight of nine correct. The eight are the ones this page MEASURED; the one that is wrong is
+the one it carried.** 🔵 **That contrast is the most transferable thing p117 found, and it
+applies across this KB: `agents/top.md`'s carried column is 9/14 wrong on the same axis.**
+
+## 🔴 🆕 `P117-H` — a foundation row that declares itself unmaintained
+
+🔴 [`atutor/ATutor`](https://github.com/atutor/ATutor) — 180★, last push 2026-09-09. Its own
+API description begins: **"NO LONGER USER LEVEL SUPPORTED. CONTRIBUTING DEVELOPERS INTERESTED
+IN MAINTAINING ATUTOR, SHOULD REQUEST COLLABORATOR ACCESS."** 🔴 **It commits no licence file**
+— checked `LICENSE`, `LICENCE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `COPYING.txt`,
+`docs/LICENSE` and `README.md` on `master`.
+
+🔵 **Not archived and not stale by date, so every freshness axis this KB has run (p109, p110)
+would pass it. The disqualifying fact is written in prose in a field no prior pass could
+read.** 🟢 **`elmsln/elmsln` (253★, GPL-3.0 in `LICENSE.md`) is the comparable row and carries
+neither problem.**
+
+🟡 **Recommendation, stated as a judgement rather than a measurement: `ATutor` should not be
+offered as a starting point for an engagement. An LMS with no licence file cannot be
+relicensed, forked commercially or indemnified, and its maintainers have asked in writing for
+someone else to take it over.**
+
+## 🟢 🆕 `P117-J` — the shelf's canonical-name drift, verified by SHA
+
+| this KB publishes | 🟢 canonical (API `full_name`) | how verified |
+|---|---|---|
+| `openedx/edx-platform` | 🟢 **`openedx/openedx-platform`** | same head `e6d65a85…` — a RENAME |
+| `dspace/dspace` | 🟢 **`DSpace/DSpace`** | same head `9d355068…` — case only |
+| `frdel/agent-zero` | 🟢 **`agent0ai/agent-zero`** | same head `983fc50a…` — rename redirect |
+
+🟢 **None is broken — all three resolve today, which is why 115 passes never noticed.**
+🔴 **All three are wrong to publish: `p443-canonical-spelling` exists because one artefact under
+two spellings becomes two entities in any compiler that keys on the string, and this page keys
+on the string.** 🟡 **Not re-spelled in this pass's content commit: the addresses feed nine
+passes of row-for-row cross-tabs, and `P115-W` established that re-spelling belongs in a commit
+that changes nothing else. One such commit was made this pass, for the `Apereo…/Larissa` row
+(`ACTION B`); the other three are pre-registered the same way.**
+
+# Education — foundational repos
+
 **Pass 116, 2026-10-11.** ⏱️ **Second pass of this date** (census window
 **2026-10-11 02:18 UTC → 02:33 UTC**; p114 ran 23:54 on the 10th → 00:25 UTC on the 11th).
 

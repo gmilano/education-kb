@@ -1,0 +1,49 @@
+# P116. The figures this shelf PUBLISHES, re-read from the authoritative GitHub API
+# (reachable for the first time in this KB's history -- see P117-A) and, for licences,
+# from the repository TREE via raw.githubusercontent.com.
+#
+# slug_verified   the canonical full_name the API returns
+# slug_published  the address this KB publishes, when it differs
+# stars           stargazers_count, API, 2026-10-11 ~02:5x UTC
+# licence         read from the licence file's TITLE line (see P117-K on why not a phrase)
+# lic_published   the licence this KB publishes for the row
+# verdict         AGREE | DIFFER | DIFFER-DANGEROUS (permissive published, copyleft actual)
+#
+slug_verified	slug_published	tier	stars	licence	lic_published	verdict
+huggingface/transformers	=	agent	167302	Apache-2.0	Apache-2.0	AGREE
+microsoft/ai-agents-for-beginners	=	agent	76867	MIT	-	NOT-PUBLISHED
+HKUDS/DeepTutor	=	agent	41100	Apache-2.0	-	NOT-PUBLISHED
+huggingface/smolagents	=	agent	29775	Apache-2.0	-	NOT-PUBLISHED
+agent0ai/agent-zero	frdel/agent-zero	agent	19420	MIT	-	ALIAS
+overhangio/tutor	=	agent	1127	AGPL-3.0	AGPL-3	AGREE
+pguso/agents-from-scratch	=	agent	1040	MIT	-	NOT-PUBLISHED
+satvik314/educhain	=	agent	389	MIT	-	NOT-PUBLISHED
+Open-TutorAi/open-tutor-ai-CE	=	agent	108	BSD-3-Clause	-	NOT-PUBLISHED
+A-R007/Multi-Agent-Study-Assistant	=	agent	62	NO-LICENCE-FILE	-	UNLICENSED
+Ebimsv/AITutorAgent	=	agent	15	MIT	-	NOT-PUBLISHED
+marc-shade/docsingest	=	agent	6	MIT	-	NOT-PUBLISHED
+eai6/ai-tutor	=	agent	0	MIT	-	NOT-PUBLISHED
+LAION-AI/Desktop_BUD-E	=	agent	SEARCH-ABSENT	NO-LICENCE-FILE	-	UNLICENSED
+openedx/openedx-platform	openedx/edx-platform	rec14	8196	AGPL-3.0	AGPL-3	AGREE
+ILIAS-eLearning/ILIAS	=	rec14	-	GPL-3.0	GPL-3	AGREE
+langchain-ai/langgraph	=	rec14	-	MIT	MIT	AGREE
+fwu-de/ais-chat	=	rec14	-	AGPL-3.0	MIT	DIFFER-DANGEROUS
+mitodl/open-learning-ai-tutor	=	rec14	-	MIT	BSD-3	DIFFER
+MysterionRise/adaptive-knowledge-graph	=	rec14	-	MIT	Apache-2.0	DIFFER
+artcc/freelingo	=	rec14	-	AGPL-3.0	MIT	DIFFER-DANGEROUS
+OtterDen-Lab/Autograder	=	rec14	-	GPL-3.0	MIT	DIFFER-DANGEROUS
+ahmedEid1/lumen	=	rec14	-	GPL-3.0	MIT	DIFFER-DANGEROUS
+Selleo/mentingo	=	rec14	-	MIT	Apache-2.0	DIFFER
+learning-commons-org/evaluators	=	rec14	-	MIT-code+CC-BY-4.0-content+CC-BY-NC-SA-4.0-corpora	MIT	DIFFER-INCOMPLETE
+towardsai/ai-tutor-app	=	rec14	-	Apache-2.0	Apache-2.0	AGREE
+bncc-dev/bncc-benchmark	=	rec14	-	MIT-code+CC-BY-4.0-data	MIT	DIFFER-INCOMPLETE
+aiverify-foundation/moonshot-cicd	=	rec14	-	Apache-2.0	Apache-2.0	AGREE
+moodle/moodle	=	foundation	7473	GPL-3.0	GPL-3	AGREE
+temporalio/temporal	=	foundation	23587	MIT	MIT	AGREE
+oppia/oppia	=	foundation	6845	Apache-2.0	Apache-2.0	AGREE
+opencast/opencast	=	foundation	506	ECL-2.0	ECL-2.0	AGREE
+learningequality/kolibri	=	foundation	1141	MIT	MIT	AGREE
+openedx/edx-ora2	=	foundation	64	AGPL-3.0	Apache-2.0	DIFFER-DANGEROUS
+DSpace/DSpace	dspace/dspace	foundation	1102	BSD-3-Clause	BSD-3	ALIAS
+atutor/ATutor	=	foundation	180	NO-LICENCE-FILE	-	UNLICENSED
+elmsln/elmsln	=	foundation	253	GPL-3.0	-	NOT-PUBLISHED

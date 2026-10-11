@@ -4,6 +4,83 @@ region: Global
 updated: 2026-10-11
 ---
 
+# Education — vertical platforms
+
+**Pass 117, 2026-10-11.** ⏱️ **Fourth pass of this date** (window **02:45 → 03:1x UTC**).
+
+🟢 **Instrument: `compose/code/p117-second-channel/`. Sizes and canonical names from the GitHub
+API — reachable this session through the MCP relay while `curl` gets `403` (`P117-A`) — and
+every licence below re-read from the repository TREE by its licence file's TITLE line
+(`P117-K`).**
+
+🔵 **This page was the CONTROL in `P117-C`. `agents/top.md` carries a licence column it does not
+re-measure and it is 9/14 wrong; this page measures its licences and the three rows spot-checked
+(`PageLM`'s custom licence, `advisingapp`'s Elastic-2.0, `classroomio`'s AGPL-3.0) were all
+RIGHT. The practice, not the subject matter, is what differs.**
+
+## 🟢 🆕 `P117-L` — the platform layer, sized and licensed in one table
+
+🔵 **These are real, deployable systems a studio can customise with AI on top — the Odoo /
+OpenMRS / Moodle class of artefact. Ordered by size, which is now a measured column.**
+
+| platform | what it is | 🟢 stars | 🟢 licence (tree) | can Globant ship a closed derivative? |
+|---|---|---|---|---|
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | full ERP; the education module's host | 39 986 | 🔴 **GPL-3.0** | 🔴 no — distribution copyleft |
+| [`frappe/frappe`](https://github.com/frappe/frappe) | the low-code framework underneath it | 10 913 | 🔴 **GPL-3.0** ※ | 🔴 no |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | the LMS + Studio ⚠️ renamed | 8 196 | 🔴 **AGPL-3.0** | 🔴 no — **network** copyleft |
+| [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | multi-user notebooks; the CS-course workhorse | 8 354 | 🟢 **BSD-3-Clause** | 🟢 **yes** |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | the world's most deployed LMS | 7 473 | 🔴 **GPL-3.0** (`COPYING.txt`) | 🔴 no — but plugins are the seam |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | the HE LMS incumbent | 6 863 | 🔴 **AGPL-3.0** | 🔴 no — network copyleft |
+| [`frappe/lms`](https://github.com/frappe/lms) | standalone LMS on Frappe | 3 299 | 🔴 **AGPL-3.0** | 🔴 no |
+| [`Elgg/Elgg`](https://github.com/Elgg/Elgg) ‡ | social-learning engine | 1 677 | 🟡 **MIT *or* GPL-2 (dual)** | 🟢 **yes, via the MIT arm** |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | modern LMS; self-styled Moodle alternative | 1 717 | 🔴 **AGPL-3.0** | 🔴 no — 🟢 **but `classroomio/mcp` on npm is MIT** |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) ‡ | education ERP on Odoo (branch `19.0`) | 886 | 🟡 **LGPL-3.0** | 🟡 **yes if linked, not if modified** |
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | homework submission + autograding (RPI) | 801 | 🟢 **BSD-3-Clause** | 🟢 **yes** |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | LMS with QTI, SCORM, curriculum mgmt | 447 | 🟢 **Apache-2.0** | 🟢 **yes** |
+| [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | LTI / Common Cartridge plumbing | 376 | 🟢 **Apache-2.0** | 🟢 **yes** |
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | modern SCORM 1.2 / 2004 runtime | 354 | 🟢 **MIT** | 🟢 **yes** |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | HE student-success CRM, AI assistant | 340 | 🔴 **Elastic-2.0** | 🔴 **no — source-available, NOT open source** |
+| [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | WordPress LMS plugin | 275 | 🔴 **no licence file at `develop`** | 🔴 **unknown — do not assume GPL** |
+| [`numbas/Numbas`](https://github.com/numbas/Numbas) | browser e-assessment, maths-first | 215 | 🟢 **Apache-2.0** | 🟢 **yes** |
+| [`gocodebox/lifterlms`](https://github.com/gocodebox/lifterlms) | WordPress LMS, course commerce | 211 | 🔴 **GPL-3.0** | 🔴 no |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | lecture capture at scale | 506 | 🟢 **ECL-2.0** | 🟢 **yes** (Apache-derived) |
+| [`DSpace/DSpace`](https://github.com/DSpace/DSpace) ‡ | institutional repository | 1 102 | 🟢 **BSD-3-Clause** | 🟢 **yes** |
+
+🔵 **※ `frappe/frappe`'s licence file was not reachable at the paths probed this pass; GPL-3.0
+is carried from `frappe/erpnext`'s committed `license.txt` and is marked as inference, not
+measurement.** 🔵 **‡ published by this KB under a non-canonical spelling — `elgg/elgg`,
+`OpenEduCat/openeducat_erp`, `dspace/dspace`. All three resolve; see `P117-G`.**
+
+## 🔴 🆕 `P117-M` — the commercial reading, which inverts the obvious one
+
+| licence tier | platforms | share |
+|---|---|---|
+| 🟢 **permissive** (BSD-3, Apache-2.0, MIT, ECL-2.0) | jupyterhub, Submitty, OpenOLAT, tsugi, scorm-again, Numbas, opencast, DSpace | 🟢 **8 of 20** |
+| 🟡 weak / dual (LGPL-3, MIT-or-GPL-2) | openeducat_erp, Elgg | 2 |
+| 🔴 **copyleft** (GPL-3, AGPL-3) | erpnext, frappe, openedx-platform, moodle, canvas-lms, frappe/lms, classroomio, lifterlms | 🔴 **8 of 20** |
+| 🔴 **not open source / unknown** | advisingapp (Elastic-2.0), learnpress (no file) | 🔴 **2** |
+
+🔴 **Every one of the five largest platforms on this shelf is copyleft, and the two biggest LMS
+targets — Open edX and Canvas — are AGPL-3.0, i.e. network copyleft: hosting a modified
+instance for a client triggers the source obligation.** 🟢 **The permissive tier is real but it
+is not where the students are: it is the ASSESSMENT and PLUMBING layer — autograding
+(`Submitty`), e-assessment (`Numbas`), standards (`tsugi`, `scorm-again`), capture
+(`opencast`), repositories (`DSpace`), notebooks (`jupyterhub`).**
+
+🟢 **The engagement shape this implies, and it is the opposite of "fork the LMS": leave the
+copyleft platform UNMODIFIED and sell the permissive layer that plugs into it. Moodle plugins,
+Open edX XBlocks, LTI tools via `tsugi`, SCORM packages via `scorm-again` — each is a boundary
+the copyleft does not cross, and each is where the AI actually goes.** 🔵 **`classroomio` is the
+clean illustration: AGPL-3.0 core, **MIT** `classroomio/mcp` package — the vendor has already
+drawn the line for you.**
+
+🔴 **Two rows a studio must not put in a proposal without a lawyer:
+[`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) is **Elastic-2.0** —
+source-available, with a no-managed-service restriction — and
+[`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) commits **no licence file**
+at its default branch, so its terms are whatever the WordPress.org listing says and not
+something this KB can verify from the tree.**
+
 # Education — vertical platforms and solutions
 
 **Pass 116, 2026-10-11.** ⏱️ **Second pass of this date** (census window
