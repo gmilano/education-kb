@@ -6,6 +6,84 @@ updated: 2026-10-11
 
 # Education — vertical platforms
 
+**Pass 118, 2026-10-11.** ⏱️ **Fifth pass of this date** (window **03:4x → 04:2x UTC**).
+
+🟢 **Instrument: `compose/code/p118-licence-column-sweep/`, discharging `ACTION E`. This page
+carried **5** of the 38 wrong licence cells; all repaired in this commit.**
+
+## 🟢 The vertical platform shelf — every grant read from the DEFAULT branch this pass
+
+🔵 **These are the real systems a client already runs, which AI gets built *on top of*. The
+licence decides whether "on top of" means a fork or an integration, so it is measured here
+rather than carried. Branch matters: 10 of the 24 rows below do not default to `main` or
+`master`.**
+
+| platform | layer | default branch | licence file | grant, from the tree | can a client ship a closed derivative? |
+|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | LMS | `main` | **`COPYING.txt`** | 🔴 **GPL-3.0** ⚠️ **was "no licence file"** | 🔴 no |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | LMS | `master` | `LICENSE` | 🔴 AGPL-3.0 | 🔴 no — network copyleft |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | LMS | `master` | `LICENSE` | 🔴 AGPL-3.0 | 🔴 no — network copyleft |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | LMS | `release_11` | `LICENSE` | 🔴 GPL-3.0 | 🔴 no |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | LMS | `master` | `LICENSE` | 🔴 GPL-3.0 | 🔴 no |
+| [`claroline/Claroline`](https://github.com/claroline/Claroline) | LMS | `15.0` | `LICENSE` | 🔴 **AGPL-3.0** ⚠️ **was GPL-3** | 🔴 no — 🔵 a *"Claroline Connect License"* header wrapping the verbatim AGPL-3 |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | LMS | `dev` | `LICENSE` | 🔴 **AGPL-3.0** ⚠️ **was Apache-2.0** | 🔴 no |
+| [`tadreeb-lms/tadreeblms`](https://github.com/tadreeb-lms/tadreeblms) | LMS (EMEA, AR) | `main` | `LICENSE` | 🔴 **AGPL-3.0** ⚠️ **was GPL-3** | 🔴 no |
+| [`frappe/lms`](https://github.com/frappe/lms) | LMS | `develop` | `license.txt` | 🔴 AGPL-3.0 | 🔴 no |
+| [`elmsln/elmsln`](https://github.com/elmsln/elmsln) | LMS | `master` | `LICENSE.md` | 🔴 **GPL-3.0** ⚠️ **was Apache-2.0**, and p117 said AGPL-3.0 | 🔴 no |
+| [`gocodebox/lifterlms`](https://github.com/gocodebox/lifterlms) | LMS (WordPress) | `trunk` | `LICENSE` | 🔴 GPL-3.0 | 🔴 no |
+| [`pressbooks/pressbooks`](https://github.com/pressbooks/pressbooks) | authoring | `dev` | `LICENSE.md` | 🔴 GPL-3.0 | 🔴 no |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | LMS (HE, EMEA) | `master` | `LICENSE` | 🟢 **Apache-2.0** | 🟢 **yes — the only large LMS here that permits it** |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | LMS (HE) | `master` | `LICENSE` | 🟡 **ECL-2.0 + Apache-2.0** | 🟢 yes — ECL-2.0 is Apache-derived |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | lecture capture | `develop` | `LICENSE` | 🟡 **ECL-2.0 + Apache-2.0** | 🟢 yes |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | offline LMS | `develop` | `LICENSE` | 🟢 MIT | 🟢 yes — the low-connectivity base for LATAM / APAC |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | lesson authoring | `develop` | `LICENSE` | 🟢 Apache-2.0 | 🟢 yes |
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | assessment (TUM) | `develop` | `LICENSE` | 🟢 MIT | 🟢 yes |
+| [`DSpace/DSpace`](https://github.com/DSpace/DSpace) | repository | `main` | `LICENSE` | 🟢 BSD | 🟢 yes |
+| [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | assessment | `master` | `LICENSE` | 🔴 **AGPL-3.0 (CE) + MIT (portions) + proprietary `ee/`** | 🔴 no — and see `P118-J` before forking |
+| [`Elgg/Elgg`](https://github.com/Elgg/Elgg) | social learning | `7.x` | `LICENSE.txt` | 🟡 **GPL-2.0 + MIT** (bundled plugins MIT) | 🔴 no for core |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | assessment (QTI) | `develop` | `LICENSE` | 🔴 GPL-2.0 | 🔴 no |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | SIS | `mobile` | `LICENSE` | 🔴 GPL-2.0 | 🔴 no |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | SIS (K-12) | `v31.0.00` | `LICENSE` | 🔴 GPL-3.0 | 🔴 no |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | SIS (LATAM, BR) | `2.12` | `LICENSE` | 🔴 **GPL-2.0** ⚠️ **was LGPL-3.0** | 🔴 no — 🔴 **LGPL permits linking without copyleft reaching your code; GPL-2.0 does not** |
+| [`portabilis/i-diario`](https://github.com/portabilis/i-diario) | gradebook (LATAM, BR) | `1.6` | `LICENSE` | 🔴 **AGPL-3.0** ⚠️ **was unread** | 🔴 no — 🔵 the AGPL-3 in Portuguese |
+| [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | ERP (Odoo) | `19.0` | `LICENSE` | 🟡 LGPL-3.0 | 🟡 linking permitted, modifications must publish |
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | ERP | `trunk` | `LICENSE` | 🟢 Apache-2.0 | 🟢 yes |
+| [`cortezaproject/corteza`](https://github.com/cortezaproject/corteza) | low-code CRM | `2024.9.x` | `LICENSE` | 🟢 Apache-2.0 | 🟢 yes |
+| [`frappe/frappe`](https://github.com/frappe/frappe) | low-code framework | `develop` | `LICENSE` | 🟢 **MIT** ⚠️ **was GPL-3.0** | 🟢 **yes** — see `P118-G` |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | ERP | `develop` | `license.txt` | 🔴 GPL-3.0 | 🔴 no |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | student advising | `main` | `LICENSE` | 🔴 **Elastic-2.0 — NOT OPEN SOURCE** ⚠️ **was AGPL-3** | 🔴 **no, and no managed service either** |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | SIS | `master` | — | 🔵 **no licence file on the default branch** | 🔴 treat as all-rights-reserved |
+| [`atutor/ATutor`](https://github.com/atutor/ATutor) | LMS (accessibility) | `master` | — | 🔵 **no licence file** | 🔴 treat as all-rights-reserved |
+| [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | LMS (WordPress) | `develop` | — | 🔵 **no licence file on `develop`** | 🔴 unresolved |
+| [`frappe/education`](https://github.com/frappe/education) | SIS | `develop` | `license.txt` | 🔵 **`GRANT-BY-REFERENCE`** — one line, `License: GNU GPL V3` | 🔴 no body to rely on |
+
+🔴 **The shape of this shelf, measured: the five largest-install LMS platforms — Moodle, Canvas,
+Open edX, ILIAS, Chamilo — are ALL copyleft. The permissive tier is the assessment,
+capture and plumbing layer: `OpenOLAT`, `Sakai`, `Opencast`, `Kolibri`, `Oppia`, `Artemis`,
+`DSpace`, `frappe/frappe`, `OFBiz`, `Corteza`.**
+
+🟢 **This is `P117-PAT-1`'s premise, now measured across 24 platforms rather than inferred: do
+not fork the copyleft LMS. Integrate across the LTI / xAPI boundary and keep your code on your
+side of it.** 🔵 `compose/patterns.md` carries the recipe.
+
+## 🔴 🆕 `P118-I` — the one row that is not open source at all
+
+`canyongbs/advisingapp` was published here and in `repos/foundations.md` as AGPL-3. Its root
+`LICENSE` on `main` is **Elastic License 2.0**: 3 860 bytes, **zero** occurrences of "affero" or
+"general public". `p1040` had read Elastic-2.0 as a `NON-GRANT` found *in tree* beside a root
+AGPL-3; the root IS Elastic-2.0.
+
+🔴 **Elastic 2.0 forbids providing the software to third parties as a managed service, and
+forbids circumventing licence keys. Neither restriction exists under AGPL-3.** The previous
+recommendation — *"build on it, AGPL duties apply"* — named the wrong duty, not an understated
+one. An engagement that had read it and scoped a hosted student-advising offering would have
+found the problem after launch, which is the one point at which it cannot be fixed.
+
+🟡 **A licence correction invalidates the recommendation built on it, and a token-level repair
+does not propagate to the prose.** This pass's repair script rewrote 38 licence *cells*; the two
+stale recommendation cells downstream of them had to be found by a second, separate search. That
+is pre-registered as part of `ACTION I`.
+
 **Pass 117, 2026-10-11.** ⏱️ **Fourth pass of this date** (window **02:45 → 03:1x UTC**).
 
 🟢 **Instrument: `compose/code/p117-second-channel/`. Sizes and canonical names from the GitHub
@@ -26,7 +104,7 @@ OpenMRS / Moodle class of artefact. Ordered by size, which is now a measured col
 | platform | what it is | 🟢 stars | 🟢 licence (tree) | can Globant ship a closed derivative? |
 |---|---|---|---|---|
 | [`frappe/erpnext`](https://github.com/frappe/erpnext) | full ERP; the education module's host | 39 986 | 🔴 **GPL-3.0** | 🔴 no — distribution copyleft |
-| [`frappe/frappe`](https://github.com/frappe/frappe) | the low-code framework underneath it | 10 913 | 🔴 **GPL-3.0** ※ | 🔴 no |
+| [`frappe/frappe`](https://github.com/frappe/frappe) | the low-code framework underneath it | 10 913 | 🟢 **MIT** ※ | 🔴 no |
 | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | the LMS + Studio ⚠️ renamed | 8 196 | 🔴 **AGPL-3.0** | 🔴 no — **network** copyleft |
 | [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | multi-user notebooks; the CS-course workhorse | 8 354 | 🟢 **BSD-3-Clause** | 🟢 **yes** |
 | [`moodle/moodle`](https://github.com/moodle/moodle) | the world's most deployed LMS | 7 473 | 🔴 **GPL-3.0** (`COPYING.txt`) | 🔴 no — but plugins are the seam |
@@ -152,7 +230,7 @@ at the root are out of scope rather than passing. The nine this axis can read ar
 | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔵 GPL-3 | — | 🟢 reached | 🟢 **`agree`** | 🟢 **268 / 268** | 🟢 **safe — the largest matched graph on this page** |
 | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔵 AGPL-3 | 🔵 `partial-pin` | 🔵 `partial-reach` | 🟢 **`agree`** | 🟢 **345 / 345** | 🟢 **safe at the root — 596 manifests, one orphan, and the root pair matches exactly** |
 | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | 🟢 `pinned` | 🟢 `full-reach` | 🟢 **`agree`** | 🟢 **170 / 170** | 🟢 **safe** |
-| [`claroline/Claroline`](https://github.com/claroline/Claroline) | 🔵 GPL-3 | — | 🟢 reached | 🟢 **`agree`** | 🟢 **101 / 101** | 🟢 **safe** |
+| [`claroline/Claroline`](https://github.com/claroline/Claroline) | 🔴 AGPL-3.0 | — | 🟢 reached | 🟢 **`agree`** | 🟢 **101 / 101** | 🟢 **safe** |
 | [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🔵 GPL-3 | 🟢 `pinned` | 🟢 `full-reach` | 🟢 **`agree`** | 🟢 **46 / 46** | 🟢 **safe** |
 | [`elgg/elgg`](https://github.com/elgg/elgg) | 🔵 GPL-2 | 🔵 `partial-pin` | 🔵 `partial-reach` | 🟢 **`agree`** | 🟢 **49 / 49** | 🟢 **safe at the root** |
 | [`pressbooks/pressbooks`](https://github.com/pressbooks/pressbooks) | 🔵 GPL-3 | — | 🟢 reached | 🟢 **`agree`** | 🟢 **57 / 57** | 🟢 **safe** |
@@ -344,7 +422,7 @@ that locks all three"* and marked 🟢 **safe**, has an **orphaned root manifest
 | [`gocodebox/lifterlms`](https://github.com/gocodebox/lifterlms) | 🟡 GPL-3 | 🟡 `partial-pin` | 🟡 `partial-reach` | 🔴 6 / 18, root | 🔴 **root orphaned** |
 | [`edly-io/pxc`](https://github.com/edly-io/pxc) | 🟢 Apache-2.0 | 🟡 `partial-pin` | 🟡 `partial-reach` | 🔴 6 / 17, root | 🔴 **root orphaned** |
 | [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | 🟢 BSD-3 | 🟡 `partial-pin` | 🟡 `partial-reach` | 🔴 7 / 9, root | 🔴 **root orphaned** |
-| [`tadreeb-lms/tadreeblms`](https://github.com/tadreeb-lms/tadreeblms) | 🟡 GPL-3 | 🟡 `partial-pin` | 🟡 `partial-reach` | 🟡 1 / 28, root | 🟡 **27 of 28 reached, but the one orphan is the root** |
+| [`tadreeb-lms/tadreeblms`](https://github.com/tadreeb-lms/tadreeblms) | 🔴 AGPL-3.0 | 🟡 `partial-pin` | 🟡 `partial-reach` | 🟡 1 / 28, root | 🟡 **27 of 28 reached, but the one orphan is the root** |
 | [`numbas/Numbas`](https://github.com/numbas/Numbas) | 🟢 Apache-2.0 | 🟡 `partial-pin` | 🟡 `partial-reach` | 🔴 1 / 2, root | 🔴 **root orphaned** |
 | [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🟢 Apache-2.0 | 🟡 `partial-pin` | 🟡 `partial-reach` | 🔴 5 / 7, root | 🔴 **root orphaned (gradle + npm)** |
 | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🟡 GPL-2 | 🔴 `floating` | 🔴 **`no-reach`** | 🔴 **5 / 5, root** | 🔴 **nothing reached; vendor at a SHA and own the dependency set** |
@@ -503,7 +581,7 @@ today?**
 | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 ECL-2.0 | 🟢 `checked` | npm,py,maven | 🟡 1 / 2 | 🟡 `partial-pin` | 🟡 **py half unlocked** |
 | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT | 🟢 `checked` | npm,py,gradle | 🟡 2 / 3 | 🟡 `partial-pin` | 🟡 **gradle half unlocked** |
 | [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🟡 GPL-2 | 🟡 `partial` | npm,php | 🟡 1 / 2 | 🟡 `partial-pin` | 🔴 **unverified AND half-unpinned** |
-| [`elmsln/elmsln`](https://github.com/elmsln/elmsln) | 🟢 Apache-2.0 | 🔴 `fossil-ci` | npm,php,dotnet | 🔴 1 / 3 | 🟡 `partial-pin` | 🔴 **34 dead CI configs, 2 of 3 ecosystems unlocked** |
+| [`elmsln/elmsln`](https://github.com/elmsln/elmsln) | 🔴 GPL-3.0 | 🔴 `fossil-ci` | npm,php,dotnet | 🔴 1 / 3 | 🟡 `partial-pin` | 🔴 **34 dead CI configs, 2 of 3 ecosystems unlocked** |
 | [`frappe/education`](https://github.com/frappe/education) | 🟢 MIT | — | npm,py | 🟡 1 / 2 | 🟡 `partial-pin` | 🟡 **py half unlocked** |
 | [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 BSD-3 | 🟢 `checked` | maven | — | 🟡 `self-pinned` | 🟡 **direct versions literal, transitives resolved** |
 | [`kuali/rice`](https://github.com/kuali/rice) | 🟢 ECL-2.0 | 🟡 `tests-only` | maven | — | 🟡 `self-pinned` | 🟡 **1 791 tests; supply a pipeline** |
@@ -550,7 +628,7 @@ the same tier the worst-verified. p112 splits the tier in a way neither could:**
 
 | SIS | bench | p111 | p112 | the engagement shape it implies |
 |---|---|---|---|---|
-| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) (BR) | 🟡 small | 🟢 `checked` | 🟢 `pinned` | 🟢 **build on it** |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) (BR) | 🟡 small | 🟢 `checked` | 🟢 `pinned` | 🟡 **build on it, but as GPL-2.0 not LGPL-3.0** — `p118` measured the root `LICENSE` as GPL-2.0 where this page published LGPL-3.0. LGPL permits linking without the copyleft reaching your code; GPL-2.0 does not, so a derivative ships under GPL-2.0. |
 | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) (US) | 🟡 pair | 🔴 `fossil-ci` | 🟢 `vendored` | 🟡 **fork it, add a pipeline** |
 | [`ed-fi-alliance-oss/Ed-Fi-ODS`](https://github.com/ed-fi-alliance-oss/Ed-Fi-ODS) (US) | 🟡 small | 🟢 `checked` | 🔴 **`floating`** | 🟡 **fork it, pin it first** |
 | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) (FR) | 🔴 1 | 🔴 `bare` | 🔴 **`floating`** | 🔴 **rewrite, or do not start here** |
@@ -596,7 +674,7 @@ broke?**
 | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 Apache-2.0 | 🔴 **1** | — | 🟢 **1 634** | 🔴 **0** | 🟡 **`tests-only`** | 🟡 **big suite, no pipeline** |
 | [`kuali/rice`](https://github.com/kuali/rice) | 🟢 ECL-2.0 | 🟢 5 | — | 🟢 **1 791** | 🔴 **0** | 🟡 **`tests-only`** | 🟡 **big suite, no pipeline** |
 | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🟡 GPL-2 | — | — | 🟢 306 | 1 · 🔴 **travis** | 🔴 **`fossil-ci`** | 🔴 **suite, dead runner** |
-| [`elmsln/elmsln`](https://github.com/elmsln/elmsln) | 🟢 Apache-2.0 | 🔴 **1** | — | 🟢 **1 996** | 34 · 🔴 **travis** | 🔴 **`fossil-ci`** | 🔴 **34 configs, none of them run** |
+| [`elmsln/elmsln`](https://github.com/elmsln/elmsln) | 🔴 GPL-3.0 | 🔴 **1** | — | 🟢 **1 996** | 34 · 🔴 **travis** | 🔴 **`fossil-ci`** | 🔴 **34 configs, none of them run** |
 | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🟡 GPL-2 | 🔴 **1** | 🟢 fresh 1 d | 🔴 **0** | 🔴 **0** | 🔴 **`bare`** | 🔴 **603 source files, nothing verifies them** |
 | [`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud) | 🟡 **contested** ※ | 🔴 **1** | 🟢 fresh 1 d | 5 | 🔴 **0** | 🟡 `tests-only` | 🔴 **one person, 5 test files** |
 | [`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce) | 🟢 MIT | 🔴 **1** | — | 🔴 **0** | 🔴 **0** | 🔴 **`bare`** | 🔴 **671 source files, nothing verifies them** |

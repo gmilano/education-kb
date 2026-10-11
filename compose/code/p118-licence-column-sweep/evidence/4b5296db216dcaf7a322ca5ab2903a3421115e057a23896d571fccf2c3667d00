@@ -1,0 +1,35 @@
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+   Copyright 2026 AI Scoring Platform contributors
+
+   ---------------------------------------------------------------------------
+   Components and their respective licenses:
+     * This project (source code, LoRA adapters, LightGBM scorer):
+       Apache License 2.0 (above).
+     * TextComplexityToolkit (vendored under essay_score/scoring_pipeline/
+       TextComplexityToolkit): MIT License — see
+       essay_score/scoring_pipeline/TextComplexityToolkit/LICENSE.
+     * TAALED (inside TextComplexityToolkit/src/TAALED): permissive; see notice.
+     * Qwen2.5-7B-Instruct base model: Apache License 2.0, obtained separately
+       from Hugging Face; NOT redistributed in this repository.
+     * Persuade 2.0 corpus: used under its original academic-use license with
+       attribution; the raw corpus is NOT redistributed here. See README.
+
+   NOTICE: Automated essay scoring (AES) systems may exhibit biases inherited
+   from their training data (e.g., Persuade 2.0 consists of US middle-school
+   argumentative essays). This software is intended for research and assistive
+   use, not for high-stakes automated decisions without human oversight.

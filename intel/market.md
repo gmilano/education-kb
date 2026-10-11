@@ -1340,6 +1340,35 @@ KB: write down what you refused to use, and why.**
 
 ### North America
 
+
+🟢 **p118 (2026-10-11) — `ACTION E`. No new regulation token this pass; the change in this region
+is that **9 of the 18 wrong licences the sweep found sit on North American addresses**, and two of
+them change what a client may legally ship.**
+
+| address | published | measured from the tree | what changes for an engagement here |
+|---|---|---|---|
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 AGPL-3 | 🔴 **Elastic-2.0, NOT open source** | 🔴 **a hosted student-advising offering is forbidden outright**, not merely copyleft-encumbered |
+| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🟢 MIT | 🔴 **GPL-3.0** | 🔴 a distributed derivative inherits GPL-3.0. 🟡 Also: last push **2026-02-20**, eight months stale |
+| [`elmsln/elmsln`](https://github.com/elmsln/elmsln) | 🟢 Apache-2.0 | 🔴 **GPL-3.0** | 🔴 Penn State's NGDLE; p117 published AGPL-3.0, also wrong |
+| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🟢 Apache-2.0 | 🔴 **AGPL-3.0** | 🔴 the open-response SCORING code is network copyleft |
+| [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | 🔴 AGPL-3.0, GPL | 🔴 **AGPL-3.0 (CE) + MIT + proprietary `ee/`** | 🔴 a fork that keeps `apps/prairielearn/src/ee/` is not an AGPL fork |
+| [`OtterDen-Lab/Autograder`](https://github.com/OtterDen-Lab/Autograder) | 🟢 MIT | 🔴 **GPL-3.0** | 🔴 distribution copyleft |
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🟢 BSD-3 | 🟢 **MIT** | 🟢 permissive either way. 🟡 **The API returned no record for this address this pass** — 7 of 8 queried came back — so its existence is attested only by `raw.githubusercontent.com` |
+| [`lukeslp/awesome-accessibility`](https://github.com/lukeslp/awesome-accessibility) | 🟢 MIT | 🟢 **CC0-1.0** | 🟢 public-domain dedication; no code |
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | 🟢 MIT | 🟡 **MIT (`LICENSE-CODE`) + CC-BY-4.0 (`LICENSE`)** | 🟢 the KB's MIT is right for the CODE; the docs are CC-BY and attribution is owed when they are reused |
+
+🟢 **The commercial read for this region is unchanged in direction and sharper in detail: the
+four states asking for substantially the same evaluation artefact (Maryland's rubric, North
+Carolina's framework plus public approved-tool list, Georgia's governance framework, Florida's
+standards) are all asking for something this KB can now populate with *measured* licence data
+rather than carried data. 🔴 An approved-tool register is exactly the deliverable that a wrong
+licence column poisons: `advisingapp` would have entered a state's public approved-tool list as
+AGPL-3 open source when it is use-restricted and not open source at all.**
+
+🔵 **Regulation tokens this pass: ZERO new.** The mandated search for this region returned
+California AB 1159, Idaho SB 1227, H.R. 8747 (K-12 AI Literacy and Readiness Act, advanced
+2026-07-21), Oklahoma and Maryland human-oversight rules, the NYC through-grade-8 moratorium and
+the student-drafted STUDENTS FIRST Act — **all already held**. Stated rather than hidden.
 🟢 **p117 (2026-10-11) — two NEW regulation tokens, and they make one deliverable sell three times.**
 
 | token | state | what it obliges | state here |
@@ -2018,6 +2047,42 @@ regulatory grain; one that leads with governance, auditability and teacher-augme
 
 ### EMEA
 
+
+🟢 **p118 (2026-10-11) — `ACTION E`. No new regulation token. **8 of the 18 wrong licences sit on
+EMEA addresses**, and the pattern is specific to this region: the small, state- or
+university-funded self-hosted tutors are copyleft and were published as permissive.**
+
+| address | country | published | measured from the tree |
+|---|---|---|---|
+| [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | 🇩🇪 DE | 🟢 MIT | 🔴 **AGPL-3.0** — 🔴 state-funded school chatbot; a hosted derivative must publish. 🔵 canonical owner spelling is `FWU-DE` |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 🇪🇸 ES | 🟢 MIT | 🔴 **AGPL-3.0** |
+| [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | — | 🟢 MIT | 🔴 **GPL-3.0** |
+| [`claroline/Claroline`](https://github.com/claroline/Claroline) | 🇫🇷🇧🇪 consortium | 🔵 GPL-3 | 🔴 **AGPL-3.0** — 🔵 a *"Claroline Connect License"* header wrapping the verbatim AGPL-3 text |
+| [`nextcloud/llm2`](https://github.com/nextcloud/llm2) | 🇩🇪 DE | 🟡 AGPL-3 | 🟢 **MIT** — 🟢 the one EMEA correction that *loosens* the obligation |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🇵🇱 PL | 🟢 Apache-2.0 | 🟢 **MIT** — 92★; self-hosted AI-native LMS positioned against Moodle and Open edX |
+| [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | — | 🟢 Apache-2.0 | 🟢 **MIT** — 17★; KG + local LLM + IRT/BKT mastery modelling |
+| [`Tadreeb-LMS/tadreeblms`](https://github.com/Tadreeb-LMS/tadreeblms) | 🇦🇪 Arabic-language | 🟡 GPL-3 | 🔴 **AGPL-3.0** — 34★. 🔵 canonical owner spelling is `Tadreeb-LMS` |
+
+🔴 **The regional consequence. The EU AI Act puts admission, student evaluation and exam scoring
+in the high-risk class, which obliges a conformity assessment and technical documentation of the
+system a client DEPLOYS. Four of the eight addresses above are AGPL-3.0: if the deployed system
+is a hosted derivative, the AGPL obliges publishing the corresponding source of exactly the
+system the conformity assessment documents.** 🟢 **Those two obligations are compatible and
+cheaper together than separately — the AGPL's source-publication duty and the AI Act's technical
+documentation duty are satisfied by one artefact — but only if the licence is known at design
+time. Published as MIT, `ais-chat` looked like a system a client could deploy closed.**
+
+🟢 **The permissive EMEA alternatives, measured: [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT)
+(Apache-2.0, the only large LMS here a client can ship closed), `Selleo/mentingo` (MIT),
+`MysterionRise/adaptive-knowledge-graph` (MIT), [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis)
+(MIT, TU München).**
+
+🔵 **Regulation tokens this pass: ZERO new.** The search returned the EU AI Act high-risk
+classification for education, the June 2026 Council Digital Omnibus revised application dates
+(2027-12-02 stand-alone, 2028-08-02 embedded), the 2026-07-31 entry-into-force milestone, the UK
+£4 M lesson-planning investment, and UAE / Saudi national AI frameworks — **all already held**.
+🟡 **Still missing, a third consecutive pass: no source maps EMEA education-specific national
+rules for the UK, Germany or France at ministry level.** Declared, not inferred.
 🟢 **p117 (2026-10-11) — one NEW token, and it is a procurement gate rather than a law.**
 
 🆕 🟡 **Schola Europaea — the European Schools network's own genAI guidelines
@@ -2955,6 +3020,46 @@ duty is the sellable deliverable that is already overdue.**
 
 ### APAC
 
+
+🟢 **p118 (2026-10-11) — `ACTION E`. APAC is the region where this pass's licence sweep changed
+the most for the least obvious reason: the Frappe family, which is the APAC ERP/LMS stack in this
+KB, carries THREE different licences across four repositories, and this KB had published one
+licence for all of them.**
+
+## 🟢 🆕 `P118-G` — the Frappe family, measured (Frappe Technologies, Mumbai 🇮🇳)
+
+| repo | default branch | licence file | grant | ★ |
+|---|---|---|---|---|
+| [`frappe/frappe`](https://github.com/frappe/frappe) | `develop` | `LICENSE` | 🟢 **MIT** ⚠️ **KB said GPL-3.0** | 10 913 |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | `develop` | `license.txt` | 🔴 GPL-3.0 | — |
+| [`frappe/lms`](https://github.com/frappe/lms) | `develop` | `license.txt` | 🔴 **AGPL-3.0** ⚠️ **KB said GPL** | — |
+| [`frappe/education`](https://github.com/frappe/education) | `develop` | `license.txt` | 🔵 **`GRANT-BY-REFERENCE`** — the one line `License: GNU GPL V3`, no body | — |
+
+🟢 **The framework is permissive and the applications are copyleft.** The KB had inherited
+ERPNext's GPL-3.0 onto `frappe/frappe` — which is the one repo in the family a studio would
+actually build on, and the only one that is MIT. 🟢 **This is a genuine APAC opportunity that was
+hidden by a wrong cell: a client can build a closed vertical on the Frappe FRAMEWORK and
+integrate with ERPNext and Frappe LMS across their API boundary, rather than forking a GPL app.**
+
+🔴 **And a caution for the same stack: `frappe/education`, the SIS app, grants nothing in its
+licence file. A one-line pointer is not a grant** (`P118-H`). An engagement that needs the SIS
+layer should treat it as unresolved until the pointer is followed to a licence body.
+
+🔵 **Regulation tokens this pass: ZERO new.** The search returned South Korea's AI Framework Act
+(in force 2026-01-22, with 2026 a pilot year and a one-year penalty grace period, plus a local
+representative duty above revenue/user thresholds), Vietnam's Law on AI (in force 2026-03-01,
+**education in the high-risk list covering automated assessment and behavioural monitoring**),
+Taiwan's AI Basic Act (Dec 2025), China's binding algorithm and generative-AI rules, the
+voluntary Singapore and Japan guidelines, and Australia's AI Safety Institute and National AI
+Plan — **all already held**.
+
+🟡 **p117 recorded that APAC returned no new regulation tokens and stated it rather than hiding
+it. p118 returns the same zero, and so does every other region** — so for this pass the APAC zero
+is no longer a regional anomaly but an instance of `Gap 402`'s global saturation (`P118-M`).
+🔴 **Still missing: school-level adoption rates and ministry-of-education positions per APAC
+country. The market reports name Google, Microsoft, IBM, Pearson and Byju's as the regional
+players and put China, India and Japan as the leading markets, but those are commercial
+market-research claims this KB has no primary channel for.** Declared.
 🟢 **p117 (2026-10-11) — APAC's measured ZERO is now contradicted from a second, independent channel.**
 
 🔴 **`P115-AA` measured APAC at **0 layer-0 placements** of 296 addresses and concluded "APAC's
@@ -3813,6 +3918,56 @@ North America posture recorded above, and the two pitches should not share a sli
 
 ### LATAM
 
+
+🟢 **p118 (2026-10-11) — `ACTION E`. LATAM is the region where this pass's instrument was itself
+at fault, and the fault had a regional shape worth stating plainly.**
+
+## 🔴 🆕 `P118-K` — the licence classifier was English-only, and the repos it could not read were Brazilian
+
+| address | country | before this pass | measured this pass |
+|---|---|---|---|
+| [`portabilis/i-diario`](https://github.com/portabilis/i-diario) | 🇧🇷 BR | 🔵 **unread** | 🔴 **AGPL-3.0** — the licence text is in **Portuguese**: `LICENÇA PÚBLICA GERAL AFFERO GNU` |
+| [`portabilis/pre-matricula-digital`](https://github.com/portabilis/pre-matricula-digital) | 🇧🇷 BR | 🔵 **unread** | 🔴 **AGPL-3.0** — same, Portuguese |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🇧🇷 BR | 🟡 LGPL-3.0 | 🔴 **GPL-2.0** |
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🇧🇷 BR | 🟢 MIT | 🟡 **MIT (code) + CC BY 4.0 (embedded data)**, and the **name and visual identity are NOT licensed** |
+
+🔴 **A probe written in the wrong alphabet for its data reports absence where there is presence,
+and absence of a licence reads as permission.** The two `portabilis` repos had been sitting in
+this KB's unread bucket, and they are AGPL-3.0 — network copyleft on the Brazilian municipal
+gradebook and pre-enrolment systems. 🔵 `P471` recorded the mirror image of this defect: a gap
+extractor that was Spanish-only. **Two passes, two instruments, the same blind spot pointing in
+opposite directions.**
+
+🟡 **The fix also had to be written carefully, and the reason is worth keeping: `LICEN.A P.BLICA`
+does NOT match `LICENÇA PÚBLICA`, because a `.` in a POSIX regex matches one BYTE and `Ç` is two
+in UTF-8. The working anchor is the ASCII tail — `GERAL AFFERO GNU`.** A regional blind spot can
+survive its own fix if the fix is written in the same encoding assumption that caused it.
+
+🔴 **What this changes for a LATAM engagement.** `i-educar` is the SIS a Brazilian municipality
+is most likely to already run, and this KB said LGPL-3.0. **LGPL permits linking without the
+copyleft reaching your code; GPL-2.0 does not.** The AI layer a studio adds beside an LGPL core
+could stay proprietary; beside a GPL-2.0 core, a derivative ships under GPL-2.0. 🟢
+`verticals/solutions.md` now says so in the recommendation cell, not only in the licence cell.
+
+🟢 **`bncc-dev/bncc-pacotes` is the most carefully licensed repository in this KB and deserves to
+be read as a model**: it separates code (MIT), embedded curriculum data (CC BY 4.0, synced from a
+pinned commit of `bncc-dev/bncc-dados` and carrying that licence through), and trademark (not
+licensed at all — "o código é livre; a marca não"). 🔵 **This KB has no column for the third
+category**, which is why the sweep scores this address WRONG and the ledger records the KB's MIT
+as correct for the code. Pre-registered as a gap, not papered over.
+
+🔵 **Regulation tokens this pass: ZERO new.** The search returned Brazil's PL 2.338/2023 (Senate
+Dec 2024, now in the Chamber of Deputies, text still open), Chile's risk-based government bill
+(first constitutional stage), Colombia's CONPES 4144 (Feb 2025, a policy programme through 2030,
+not a statute), UNESCO's Regional Observatory on AI in Education launched 2026-04-14 in Santiago,
+the UNESCO IESALC study (200 institutions, 19 countries: **87 % using AI, 26 % with a formal AI
+strategy**, 84 % uptake at private non-profits vs 68 % public), TALIS secondary-teacher AI use of
+52–56 % in Brazil, Chile, Colombia and Costa Rica against an OECD average of 36 %, and Ceibal's
+75 % figure for Uruguayan public-school teachers — **all already held**.
+
+🟡 **Still missing, and declared rather than inferred: the status of Mexico's and Argentina's
+education-specific AI rules.** Neither the global nor the LATAM search reached a primary source
+for either, two passes running.
 🟢 **p117 (2026-10-11) — one NEW token, and it names the region's channel partners rather than a law.**
 
 🆕 🟡 **AI Week LATAM 2026 — a SoftServe + NVIDIA training programme, 29 September → 3 October
@@ -4821,6 +4976,61 @@ regulatory rows as primary-verified. They are not, and the reason is recorded.**
 
 ### Global
 
+
+🟢 **p118 (2026-10-11) — `ACTION E`, and one address in the Global tier moved.**
+
+🔴 **[`moodle/moodle`](https://github.com/moodle/moodle) — published in this KB as committing NO
+LICENCE FILE AT ALL (p117's `Gap 409`). It commits `COPYING.txt`: the GPL-3.0, on `main`.**
+p117's candidate list was `LICENSE LICENSE.txt LICENSE.md LICENCE COPYING LICENSE-MIT` — the file
+is `COPYING.txt`, one extension away from a name already being tried. 🔵 **The world's
+most-installed LMS was recorded in this KB as unlicensed**, and "no licence file" is the single
+most dangerous cell this KB can print, because absence reads as permission. It now requires 9
+filename candidates on the default branch before it may be written.
+
+🟢 **`P118-O` — the corrections have a SECOND channel, and it agrees 7 out of 7.** The sweep reads
+the committed licence file. The GitHub API's own `license.spdx_id` is an independent
+determination, reachable this pass through the MCP relay's search endpoint (`P118-A`). On the
+seven corrected addresses the API returned, the two channels agree completely:
+
+| address | tree (this pass) | API `spdx_id` | KB before |
+|---|---|---|---|
+| `frappe/frappe` | MIT | **MIT** | 🔴 GPL-3.0 |
+| `learnhouse/learnhouse` | AGPL-3.0 | **AGPL-3.0** | 🔴 Apache-2.0 |
+| `plastic-labs/tutor-gpt` | GPL-3.0 | **GPL-3.0** | 🔴 MIT |
+| `elmsln/elmsln` | GPL-3.0 | **GPL-3.0** | 🔴 Apache-2.0 (p117: AGPL-3.0) |
+| `Selleo/mentingo` | MIT | **MIT** | 🔴 Apache-2.0 |
+| `Tadreeb-LMS/tadreeblms` | AGPL-3.0 | **AGPL-3.0** | 🔴 GPL-3 |
+| `MysterionRise/adaptive-knowledge-graph` | MIT | **MIT** | 🔴 Apache-2.0 |
+
+🟢 **Two independent channels, zero disagreements, and both disagree with what this KB published.
+`Gap 406` is not a measurement artefact.**
+
+🔵 **`P118-A` — a refusal is a property of the (transport × endpoint) CELL, not of the transport.**
+p117 concluded from three transports and three outcomes that *"a refusal is a property of the
+TRANSPORT, not of the host."* Measured again on two endpoints of the same host:
+
+| endpoint | `curl` | `gh api` | MCP relay |
+|---|---|---|---|
+| `/repos/{owner}/{repo}` | 🔴 403 | 🔴 403 | 🔴 denied |
+| `/search/repositories?q=repo:…` | 🔴 403 | 🔴 403 | 🟢 **200, full object** |
+
+All three transports give the SAME outcome on `/repos`, so p117's "three outcomes" was reading
+two different gates as a transport difference — the two 403 bodies differ, and that is the tell:
+one names the repository, the other names the path. 🟢 **One endpoint swap turns the relay's
+refusal into a 200 carrying `description`, `license.spdx_id`, `stargazers_count` and
+`default_branch`. `P798`'s ledger should be a MATRIX, not a list.**
+
+🟢 **`P118-B` — and the ungated channel was the oldest one. `git ls-remote --symref HEAD`
+answered for 249 of 249 addresses with no session scope at all**, while both REST endpoints were
+gated to `curl` and `gh`. For the one field this sweep could not proceed without — the default
+branch — git needed no permission.
+
+🔵 **Market figures: re-confirmed as HELD, not republished as new.** The mandated search returned
+USD 10.6 B for 2026 rising to USD 42.48 B by 2030 (Research and Markets), a North American share
+of ~36 % at USD 3.68 B, a European figure of USD 2.64 B at 31.9 % CAGR, and an APAC AI market of
+~USD 102 B (not education-specific). 🟡 **Every one of these is a market-research or aggregator
+estimate with no primary channel from this session, and this KB already held all of them. They
+are recorded as held claims with their provenance, not promoted to measurements.**
 🟢 **p117 (2026-10-11) — the pass's one transferable lesson, and it is about this KB's own method.**
 
 🔵 **p117 re-read 37 published rows against the authoritative API and the repository tree. The

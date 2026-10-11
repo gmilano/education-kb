@@ -6,6 +6,37 @@ updated: 2026-10-11
 
 # Education — current trends
 
+**Pass 118, 2026-10-11.** ⏱️ **Fifth pass of this date** (window **03:4x → 04:2x UTC**).
+
+## 🟢 🆕 `P118-TREND` — five trends, each with the channel that evidences it
+
+🔵 **The rule this page has kept since p114: a trend without a named channel is an opinion. The
+channel column says how this pass knows, not who said it.**
+
+| # | trend | channel | strength |
+|---|---|---|---|
+| 1 | 🔴 **Published licence metadata for education OSS is unreliable at scale.** A whole-KB sweep of 957 licence claims over 249 addresses found **18 wrong**, and the error ran toward *understating* the obligation: five addresses published as MIT are copyleft. | 🟢 **measured** — `compose/code/p118-licence-column-sweep/`, two independent channels (committed licence file + API `spdx_id`) agreeing 7/7 | 🟢 **strong** |
+| 2 | 🟡 **The permissive tier of education OSS is the plumbing, not the platform.** The five largest-install LMS platforms (Moodle, Canvas, Open edX, ILIAS, Chamilo) are all copyleft; the permissive layer is assessment, capture and framework: OpenOLAT, Sakai, Opencast, Kolibri, Oppia, Artemis, DSpace, `frappe/frappe`. | 🟢 **measured** — 24 platforms, licence read from each default branch | 🟢 **strong** |
+| 3 | 🟡 **"Source-available" is entering the education shelf and does not announce itself.** `canyongbs/advisingapp` is Elastic-2.0 — no managed service, no licence-key circumvention — and was carried here as AGPL-3 open source. One instance of 249, but the one instance has the largest commercial consequence in the sweep. | 🟢 **measured** — root `LICENSE`, 3 860 B, zero occurrences of "affero" or "general public" | 🟡 **one instance, high consequence** |
+| 4 | 🟢 **Governance is the thing education buyers are actually procuring.** Four US states want substantially the same artefact (an evaluation rubric / framework / standards / public approved-tool list) with deadlines clustered in 2026; the EU AI Act obliges a conformity assessment for admission, evaluation and exam scoring; UNESCO IESALC finds **87 % of 200 LATAM institutions using AI and 26 % with a formal AI strategy**. | 🟡 **secondary** — policy trackers, UNESCO coverage, all tokens already held in this KB | 🟢 **strong but second-hand** |
+| 5 | 🔵 **Agentic framing has replaced chatbot framing in the vendor layer, and the open-source layer has not followed.** The 2026 roundups describe agents that plan lessons and draft assessments for teacher review; the education-specific OSS in this KB is still tutors and autograders, and the largest education agent here (`HKUDS/DeepTutor`, 41 103★) is a tutor. | 🟡 **secondary** for the framing, 🟢 **measured** for the star counts and the shelf | 🟡 **moderate** |
+
+## 🔴 🆕 `P118-M` — the trend this page cannot evidence, stated because it is the honest answer
+
+🔵 **The brief's eight mandated searches ran this pass — global and once per region. They returned
+ZERO new addresses and ZERO new regulation tokens; 15 tokens were rejected as already held.**
+
+🔴 **`Gap 402` weakens a THIRD consecutive pass** — p117: 4 new / 13 rejected; p118: 0 new / 15
+rejected. 🟡 **The fixed query set in the brief has stopped yielding on this industry.** That is
+not evidence that nothing is happening in AI and education; it is evidence that *these eight
+queries* have been asked enough times. A pass that reported "no trend" from this would be
+reporting a property of the query, not of the world.
+
+🟢 **So this pass's trend claims are grounded in measurement rather than search**, and the
+recommendation to the next pass is in `intel/open-gaps.md` as `ACTION I`: vary the query set, or
+accept that the discovery half of this brief is saturated and spend the budget on measurement,
+which is where all 18 of this pass's findings came from.
+
 **Pass 117, 2026-10-11.** ⏱️ **Fourth pass of this date** (window **02:45 → 03:1x UTC**).
 
 ## 🟢 🆕 `P117-Q` — the five trends this pass can actually evidence, each with its channel named

@@ -1,0 +1,31 @@
+slug	published	measured	branch	evidence	verdict
+MysterionRise/adaptive-knowledge-graph	Apache-2.0	MIT	main	LICENSE title "MIT License" (c) 2025	CORRECT-THE-KB
+OtterDen-Lab/Autograder	MIT	GPL-3.0	main	LICENSE title "GNU GENERAL PUBLIC LICENSE Version 3"	CORRECT-THE-KB
+Selleo/mentingo	Apache-2.0	MIT	main	LICENSE title "MIT License" (c) 2024 Selleo	CORRECT-THE-KB
+ahmedEid1/lumen	MIT	GPL-3.0	main	LICENSE title "GNU GENERAL PUBLIC LICENSE Version 3"	CORRECT-THE-KB
+artcc/freelingo	MIT	AGPL-3.0	main	LICENSE title "GNU AFFERO GENERAL PUBLIC LICENSE Version 3"	CORRECT-THE-KB
+claroline/Claroline	GPL	AGPL-3.0	15.0	"Claroline Connect License" header wrapping verbatim AGPL-3 text	CORRECT-THE-KB
+elmsln/elmsln	Apache-2.0	GPL-3.0	master	LICENSE.md title "GNU GENERAL PUBLIC LICENSE Version 3"	CORRECT-THE-KB
+frappe/frappe	GPL-3.0	MIT	develop	LICENSE title "The MIT License" (c) 2016-2021 Frappe Technologies	CORRECT-THE-KB
+frappe/lms	GPL	AGPL-3.0	develop	license.txt, AGPL-3 body	CORRECT-THE-KB
+fwu-de/ais-chat	MIT	AGPL-3.0	main	LICENSE title "GNU AFFERO GENERAL PUBLIC LICENSE Version 3"	CORRECT-THE-KB
+instructure/canvas-lms	GPL	AGPL-3.0	master	LICENSE title "GNU AFFERO GENERAL PUBLIC LICENSE Version 3"	CORRECT-THE-KB
+learnhouse/learnhouse	Apache-2.0	AGPL-3.0	dev	LICENSE title "GNU AFFERO GENERAL PUBLIC LICENSE Version 3"	CORRECT-THE-KB
+mitodl/open-learning-ai-tutor	BSD	MIT	main	LICENSE title "MIT License" (c) 2024 Romain Puech	CORRECT-THE-KB
+nextcloud/llm2	GPL	MIT	main	LICENSE title "MIT License" (c) 2024 cloud-py-api	CORRECT-THE-KB
+openedx/edx-ora2	Apache-2.0 / GPL	AGPL-3.0	master	LICENSE title "GNU AFFERO GENERAL PUBLIC LICENSE Version 3"	CORRECT-THE-KB
+openedx/edx-platform	GPL	AGPL-3.0	master	LICENSE title "GNU AFFERO GENERAL PUBLIC LICENSE Version 3"	CORRECT-THE-KB
+openedx/openedx-platform	GPL	AGPL-3.0	master	LICENSE title "GNU AFFERO GENERAL PUBLIC LICENSE Version 3"	CORRECT-THE-KB
+overhangio/tutor	GPL	AGPL-3.0	release	LICENSE.txt, AGPL-3 body	CORRECT-THE-KB
+plastic-labs/tutor-gpt	MIT	GPL-3.0	main	LICENSE title "GNU GENERAL PUBLIC LICENSE Version 3"	CORRECT-THE-KB
+portabilis/i-educar	LGPL	GPL-2.0	2.12	LICENSE title "GNU GENERAL PUBLIC LICENSE Version 2, June 1991"	CORRECT-THE-KB
+tadreeb-lms/tadreeblms	GPL	AGPL-3.0	main	LICENSE title "GNU AFFERO GENERAL PUBLIC LICENSE Version 3"	CORRECT-THE-KB
+PrairieLearn/PrairieLearn	GPL	AGPL-3.0 (CE) + MIT (portions) + proprietary ee/	master	LICENSE prose: CE is AGPL-3.0, Illinois/contributor portions MIT, apps/prairielearn/src/ee/ under a separate EE licence	CORRECT-THE-KB-MULTI
+microsoft/autogen	MIT	LICENSE=CC-BY-4.0, LICENSE-CODE=MIT	main	two files: docs CC-BY-4.0, code MIT	KB-RIGHT-INSTRUMENT-WRONG
+bncc-dev/bncc-pacotes	MIT	MIT (code) + CC-BY-4.0 (data)	main	LICENSE is a prose index naming LICENSE-CODIGO.md (MIT) and LICENSE-DADOS.md (CC BY 4.0); name and visual identity NOT licensed	KB-RIGHT-INSTRUMENT-WRONG
+canyongbs/advisingapp	AGPL-3	ElasticLicense-2.0-NOT-OSS	main	root LICENSE 3860 B, Elastic License 2.0; zero occurrences of "affero" or "general public". p1040 had read it as a NON-GRANT found in tree beside a root AGPL-3	CORRECT-THE-KB
+lukeslp/awesome-accessibility	MIT	CC0-1.0	main	LICENSE title "CC0 1.0 Universal"	CORRECT-THE-KB
+portabilis/i-diario	(unread)	AGPL-3.0	1.6	LICENSE title "LICENCA PUBLICA GERAL AFFERO GNU" — Portuguese	NEWLY-READ
+portabilis/pre-matricula-digital	(unread)	AGPL-3.0	2.12	same, Portuguese	NEWLY-READ
+moodle/moodle	(no licence file)	GPL-3.0	main	COPYING.txt — p117 Gap 409 listed this address as committing no licence at all	RETRACT-GAP-409
+frappe/education	AGPL-3.0 / MIT	GRANT-BY-REFERENCE:GNU GPL V3	develop	license.txt is the single line "License: GNU GPL V3" — no grant body	REFERENCE-ONLY

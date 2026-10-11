@@ -22,6 +22,71 @@ education-kb/
 └── compose/code/  # Código ejecutable y probado, no prosa
 ```
 
+## Pass 118 — 2026-10-11
+
+⏱️ **Fifth pass of this date** (p114 23:54→00:25, p115 01:13→01:25, p117 02:45→03:0x, this
+census window **03:4x → 04:2x UTC**). 🔵 **This block jumps from `Pass 115` because the README's
+pass log had again fallen behind the eight content pages — recorded rather than back-filled, as
+p115 did for the same reason.**
+
+🟢 **Eleventh axis in eleven passes, and the second this KB did not choose: `ACTION E` exactly as
+p117 wrote it — *sweep EVERY licence column in this KB from the tree.***
+
+🟢 **Instrument: `compose/code/p118-licence-column-sweep/` — `test_p118.sh` **21 passed / 0
+failed**, fully offline against real captured licence files. 957 licence claims, 249 addresses,
+**249 / 249 measured from the DEFAULT branch**, `rc=0` throughout, **472** licence files kept on
+disk.**
+
+| measure | value |
+|---|---|
+| licence claims swept | 🟢 **957** across 7 live pages |
+| distinct addresses | 🟢 **249 / 249 measured**, zero unread by the census |
+| addresses with a readable grant | 🟢 **230 / 249 (92.4 %)** |
+| 🔴 **wrong licences found** | 🔴 **18 addresses · 38 published cells · 5 pages** |
+| repaired in this commit | 🟢 **38 / 38**, sweep re-run to confirm |
+| agreement after repair | 🟢 **844 `AGREE`** · 🟡 44 `PARTIAL` · 🔵 50 `UNREAD` · 🔵 2 `REFERENCE-ONLY` · 🔴 17 `WRONG`, all explained |
+| this pass's own faults | 🔴 **7**, all caught before publishing (`P118-L`) |
+
+🔴 **`ACTION E` is DISCHARGED and NOT refuted.** Its clause was *"refuted as unnecessary if a
+full sweep finds fewer than 3 further wrong licences."* It found **18**. 🟢 **`Gap 406` widens on
+scope — from "9 of 14 rows on one page" to 18 addresses on five pages — then closes on
+measurement.** 🟡 **It does not close as a process gap: `P118-D` found that p117's correction was
+PAGE-LOCAL. `fwu-de/ais-chat` read `AGREE` on the page p117 fixed and `WRONG` on three others in
+the same census. A prose correction is not a KB correction.**
+
+🔴 **Eight of the thirteen agents on this KB's shelf were under the wrong licence, and five
+published as MIT are copyleft** — the error ran toward understating the obligation, which is the
+direction that costs a client. 🔴 **The most consequential single row:
+[`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) was published as AGPL-3 and
+is **Elastic License 2.0** — not open source at all, no managed service, no licence-key
+circumvention. `compose/patterns.md` had said "build on it, AGPL duties apply".**
+
+🟢 **The corrections have a second channel and it agrees 7 / 7** (`P118-O`): the committed licence
+file and the GitHub API's own `license.spdx_id` agree on every corrected address the search
+endpoint returned, and both disagree with what this KB published.
+
+🟢 **`P117-A` REFINED.** p117 concluded a refusal is a property of the TRANSPORT. Measured on two
+endpoints of one host, all three transports give the *same* outcome on `/repos/{owner}/{repo}`,
+while `/search/repositories` answers 200 to the MCP relay alone. 🟢 **A refusal is a property of
+the (transport × endpoint) CELL, and `P798`'s ledger should be a matrix.** 🟢 **`P118-B`: the
+ungated channel was the oldest one — `git ls-remote --symref HEAD` resolved 249 / 249 default
+branches with no session scope**, which exposed that 🔴 **37 addresses (14.9 %) default to
+neither `main` nor `master` and 5 default to a tag-shaped ref** no branch probe can reach.
+
+🟡 **`Gap 409` partly RETRACTED: `moodle/moodle` commits `COPYING.txt` — the GPL-3.0.** The
+world's most-installed LMS was recorded here as committing no licence file at all.
+
+🔴 **`Gap 402` weakened a THIRD consecutive pass. All eight mandated searches ran, global and
+once per region: ZERO new addresses, ZERO new regulation tokens, 15 rejected as already held**
+(p117: 4 new / 13 rejected). Every region's zero is stated under its own `###` in
+`intel/market.md`. 🟢 **All 18 findings this pass came from measurement, none from search.**
+
+🔴 **This pass did NOT attempt `ACTION C` and only partly reached `ACTION D`** — both carried
+forward with their clauses verbatim, and neither may later be reported as discharged by p118.
+🟢 **Opened: `Gap 410`** (a licence correction orphans the recommendation built on it — two stale
+recommendations had to be found by a separate search) **and `Gap 411`** (a KB that records its own
+corrections becomes harder for its own validator to read). 🟢 **Pre-registered `ACTION F`–`J`.**
+
 ## Pass 115 — 2026-10-11
 
 ⏱️ **Second pass of this date** (p114 ran 23:54 → 00:25 crossing midnight; this census window

@@ -6,6 +6,100 @@ updated: 2026-10-11
 
 # Education — compose patterns
 
+**Pass 118, 2026-10-11.** ⏱️ **Fifth pass of this date** (window **03:4x → 04:2x UTC**).
+
+🟢 **Instrument: `compose/code/p118-licence-column-sweep/`. This page carried **15** of the 38
+wrong licence cells — more than any other page — and one of its RECOMMENDATION cells was wrong in
+a way the licence repair did not fix. Both are corrected in this commit.**
+
+## 🔴 🆕 `P118-PAT-0` — the correction this page owed, because a pattern is a recommendation and a wrong licence makes it a wrong recommendation
+
+🔴 **This page said, of `canyongbs/advisingapp`: "🟢 build on it, AGPL duties apply." The
+repository is Elastic License 2.0. The duty named was the WRONG duty, not an understated one** —
+Elastic 2.0 forbids providing the software to third parties as a managed service and forbids
+circumventing licence keys, and neither restriction exists under AGPL-3.
+
+🟡 **The mechanism is worth more than the instance. This pass's repair script rewrote 38 licence
+CELLS, driven by the sweep's verdict file, and it could not have found this sentence: the licence
+token and the recommendation built on it are different cells, and only the token was measured.**
+A licence correction invalidates every recommendation downstream of it, and a token-level repair
+does not propagate. Pre-registered as `ACTION I`.
+
+## 🟢 🆕 `P118-PAT-1` — "ship a closed AI vertical on a copyleft LMS", now with the licence boundary MEASURED
+
+🔵 **p117 proposed exploiting the LTI boundary instead of forking. p118 measured the 24 platforms
+that premise rests on, so the recipe can now name which side of the boundary each component sits
+on and why.**
+
+**The problem.** A client runs Moodle (GPL-3.0), Canvas (AGPL-3.0) or Open edX (AGPL-3.0). They
+want an AI tutor and automated open-response scoring. Forking the LMS puts the studio's code
+inside the copyleft boundary; for the two AGPL platforms, merely *hosting* the derivative triggers
+the source-publication duty.
+
+**The recipe — nothing the studio writes crosses into the copyleft tree.**
+
+| step | component | licence, measured this pass | why this one |
+|---|---|---|---|
+| 1 | the LMS, **unforked** | 🔴 [`moodle/moodle`](https://github.com/moodle/moodle) GPL-3.0 (`COPYING.txt`, `main`) · [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) AGPL-3.0 · [`openedx/edx-platform`](https://github.com/openedx/edx-platform) AGPL-3.0 | 🟢 **run it as shipped.** An unmodified deployment triggers no copyleft duty at all |
+| 2 | the integration boundary | 🟢 [`1EdTech/openbadges-specification`](https://github.com/1EdTech/openbadges-specification) · [`celtic-project/LTI-PHP`](https://github.com/celtic-project/LTI-PHP) LGPL-3.0 | 🟡 **LTI 1.3 / xAPI is a protocol, not a link.** LGPL on the PHP helper permits linking without the copyleft reaching the studio's code — 🔴 **but only because it is LGPL: `P118`'s `i-educar` correction is the cautionary case, where a published LGPL-3.0 turned out to be GPL-2.0** |
+| 3 | the tutor | 🟢 [`huggingface/smolagents`](https://github.com/huggingface/smolagents) Apache-2.0 · [`agent0ai/agent-zero`](https://github.com/agent0ai/agent-zero) MIT · [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) **MIT** (⚠️ was Apache-2.0) | 🟢 permissive; the studio's tutor logic stays closed |
+| 4 | 🔴 **NOT the scoring code the KB used to recommend** | 🔴 [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) **AGPL-3.0** (⚠️ was Apache-2.0) | 🔴 **this is the substitution `ACTION E` forced.** Open-response scoring was on this shelf as Apache-2.0. It is network copyleft, so calling it from a hosted product publishes the product |
+| 5 | the scoring replacement | 🟢 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) **MIT** (TU München) · [`oppia/oppia`](https://github.com/oppia/oppia) Apache-2.0 | 🟢 permissive assessment, measured this pass |
+| 6 | the model runtime | 🟢 `ollama` MIT · `vllm` Apache-2.0 · `huggingface/transformers` Apache-2.0 | 🟢 keeps inference local for EU AI Act and LATAM data-residency work |
+| 7 | the evaluation artefact | 🟢 this KB's `compose/code/` instruments | 🟢 what four US states are actually procuring (see `intel/market.md` → North America) |
+
+🔴 **Do NOT reach for, and the measured reason:**
+
+| address | why not |
+|---|---|
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 **Elastic-2.0 — not open source.** No managed service, no licence-key circumvention |
+| [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | 🔴 AGPL-3.0 CE **plus a proprietary `apps/prairielearn/src/ee/` tree.** A fork that keeps `ee/` is not an AGPL fork |
+| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 **GPL-3.0** (⚠️ roundups still call it permissive), and last pushed **2026-02-20** |
+| [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | 🔴 **AGPL-3.0** (⚠️ was MIT). 🟢 Fine to *deploy as shipped* for a DE school engagement; not fine to host a modified fork closed |
+| [`frappe/education`](https://github.com/frappe/education) | 🔴 licence file is a one-line pointer with no grant body |
+| [`atutor/ATutor`](https://github.com/atutor/ATutor), [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic), [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | 🔴 no licence file on the default branch — treat as all-rights-reserved |
+
+🟢 **Estimate: 8–10 weeks.** 🔵 **The change from p117's version of this recipe is not the shape —
+it is that steps 2, 4 and 5 moved because the licence column was wrong. Step 4 is the one that
+matters: a studio that had built open-response scoring on `edx-ora2` believing it Apache-2.0
+would have shipped a hosted product with an unmet AGPL source-publication duty.**
+
+## 🟢 🆕 `P118-PAT-2` — "build a closed vertical on the Frappe FRAMEWORK, integrate with the apps"
+
+🔵 **Available only because `ACTION E` corrected one cell.** This KB published `frappe/frappe` as
+GPL-3.0, inheriting ERPNext's licence onto the one repo in the family that is **MIT**
+(`P118-G`).
+
+| step | component | licence | role |
+|---|---|---|---|
+| 1 | [`frappe/frappe`](https://github.com/frappe/frappe) `develop` | 🟢 **MIT** | the low-code framework. 🟢 **A closed vertical app built on it stays closed** |
+| 2 | [`frappe/erpnext`](https://github.com/frappe/erpnext) `develop` | 🔴 GPL-3.0 | run as shipped; integrate over its REST API |
+| 3 | [`frappe/lms`](https://github.com/frappe/lms) `develop` | 🔴 **AGPL-3.0** (⚠️ was GPL) | 🔴 run as shipped — do not fork into the hosted product |
+| 4 | the AI layer | 🟢 `smolagents` Apache-2.0 + `ollama` MIT | the studio's code, on the MIT side of the boundary |
+
+🟢 **Why this matters for APAC specifically:** Frappe Technologies is Mumbai-based and the Frappe
+stack is the APAC education-ERP presence in this KB. 🟢 **Estimate: 6–8 weeks** for a vertical on
+the framework with read/write integration to ERPNext and Frappe LMS.
+
+## 🟢 🆕 `P118-PAT-3` — the licence-column sweep itself, as a client deliverable
+
+🔵 **This is the pattern this pass accidentally built, and it is sellable.** Four US states want
+an evaluation framework and a public approved-tool list; the EU AI Act wants technical
+documentation of the deployed system. Both consume exactly what
+`compose/code/p118-licence-column-sweep/` produces.
+
+| step | what to run | what it answers |
+|---|---|---|
+| 1 | `defaultbranch.sh` over the client's dependency inventory | which branch is authoritative — 🔴 **14.9 % of addresses default to neither `main` nor `master`, and 5 default to a tag-shaped ref** |
+| 2 | `measure2.sh` + `classify2.sh` | the grant each component actually commits, from the tree, with every byte kept on disk as evidence |
+| 3 | `verdict2.sh` | where the register disagrees with reality, in five classes — including 🔴 `*-NOT-OSS` and 🔵 `GRANT-BY-REFERENCE`, the two that a licence scanner reporting only SPDX strings will silently miss |
+| 4 | `repair.py` | the corrected register, rewritten only where the measurement reached |
+| 5 | `test_p118.sh` | **21 offline assertions** — the auditable part, which is what a conformity assessment actually asks for |
+
+🟢 **Estimate: 2–3 weeks** for a register of a few hundred components. 🔵 **The selling point is
+step 3: the classes. A client's existing SBOM tool will report `advisingapp` as AGPL-3.0, because
+that is what the metadata says. Reading the committed file is what found Elastic-2.0.**
+
 **Pass 117, 2026-10-11.** ⏱️ **Fourth pass of this date** (window **02:45 → 03:1x UTC**).
 
 ## 🟢 🆕 `P117-PAT-1` — "AI on a copyleft LMS without inheriting the copyleft"
@@ -517,17 +611,17 @@ testable and portable, and every figure in it was derived this pass.**
 | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🟢 `local` | `transformers` | 🟡 AGPL-3 |
 | [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🟢 `local` | `transformers` | 🟡 GPL-3 |
 | [`ollama/ollama`](https://github.com/ollama/ollama) | 🟢 `local` | `ollama` | 🟢 **MIT** |
-| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | 🟢 `local` | `ollama` + `pydantic-ai` | 🟢 **Apache-2.0** |
-| [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | 🟢 `local` | `ollama`, `sentence-transformers` | 🟢 **Apache-2.0** |
-| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 🟢 `local` | `ollama`, `whisper` | 🟢 **MIT** |
-| [`OtterDen-Lab/Autograder`](https://github.com/OtterDen-Lab/Autograder) | 🟢 `local` | `ollama` | 🟢 **MIT** |
-| [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 🟢 `local` | `sentence-transformers` + `OPENAI_API_BASE` | 🟢 **MIT** |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | 🟢 `local` | `ollama` + `pydantic-ai` | 🔴 **AGPL-3.0** |
+| [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | 🟢 `local` | `ollama`, `sentence-transformers` | 🟢 **MIT** |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 🟢 `local` | `ollama`, `whisper` | 🔴 **AGPL-3.0** |
+| [`OtterDen-Lab/Autograder`](https://github.com/OtterDen-Lab/Autograder) | 🟢 `local` | `ollama` | 🔴 **GPL-3.0** |
+| [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 🟢 `local` | `sentence-transformers` + `OPENAI_API_BASE` | 🔴 **GPL-3.0** |
 | [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | 🟢 `broker` | `langchain` | 🟢 **MIT** |
-| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🟢 `broker` | `langchain` | 🟢 **BSD-3** |
-| [`fwu-de/ais-chat`](https://github.com/fwu-de/ais-chat) | 🟢 `broker` | `langchain` + `base_url` | 🟢 **MIT** |
-| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 `broker` | `langchain` + `base_url` | 🟢 **Apache-2.0** |
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🟢 `broker` | `langchain` | 🟢 **MIT** |
+| [`fwu-de/ais-chat`](https://github.com/fwu-de/ais-chat) | 🟢 `broker` | `langchain` + `base_url` | 🔴 **AGPL-3.0** |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 `broker` | `langchain` + `base_url` | 🟢 **MIT** |
 | [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 🟢 `broker` | `langchain` | 🟢 **MIT** |
-| [`nextcloud/llm2`](https://github.com/nextcloud/llm2) | 🟢 `broker` | `langchain` | 🟡 AGPL-3 |
+| [`nextcloud/llm2`](https://github.com/nextcloud/llm2) | 🟢 `broker` | `langchain` | 🟢 MIT |
 | [`aiverify-foundation/moonshot-cicd`](https://github.com/aiverify-foundation/moonshot-cicd) | 🟢 `broker` | `langchain` | 🟢 **Apache-2.0** |
 | [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | 🟡 `broker` ※ | `langchain`, `openrouter` | 🟢 **Apache-2.0** |
 | [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | 🟡 `broker` ※ | `openrouter` | 🟢 **MIT** |
@@ -772,7 +866,7 @@ and this stack produces one by construction rather than by report-writing.**
 
 | role | component | licence | p111 | p112 |
 |---|---|---|---|---|
-| chat assistant for schools | [`fwu-de/ais-chat`](https://github.com/fwu-de/ais-chat) | 🟢 **MIT** | 🟢 `checked` | 🟢 `pinned` |
+| chat assistant for schools | [`fwu-de/ais-chat`](https://github.com/fwu-de/ais-chat) | 🔴 **AGPL-3.0** | 🟢 `checked` | 🟢 `pinned` |
 | LMS of record | [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🟡 GPL-3 | 🟢 `checked` | 🟢 `pinned` |
 | national-agency services | the 8 [`opetushallitus`](https://github.com/opetushallitus) repos | carried | 🔴 **1 of 8 PR-gated** | 🟢 **8 of 8 `pinned`** |
 | agent graph | [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | 🟢 **MIT** | 🟢 `checked` | 🟢 `pinned` |
@@ -807,7 +901,7 @@ with a gate rather than a component.**
 |---|---|---|---|---|---|
 | SIS / data standard | [`ed-fi-alliance-oss/Ed-Fi-ODS`](https://github.com/ed-fi-alliance-oss/Ed-Fi-ODS) | carried | 🟢 `checked` | 🔴 **`floating`** | 🔴 **pin first (`P112-PAT-1`)** |
 | autograding reference | [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 **BSD-3** | 🟢 `checked` | 🟢 **`pinned` (3/3)** | 🟢 build on it |
-| advising workflow | [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🟡 AGPL-3 | 🟢 `checked` | 🟢 `pinned` | 🟢 build on it, AGPL duties apply |
+| advising workflow | [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 Elastic-2.0 (not OSS) | 🟢 `checked` | 🟢 `pinned` | 🔴 **do NOT build a hosted offering on it** — Elastic-2.0 forbids providing the software to third parties as a managed service and forbids circumventing licence keys. Neither restriction exists under AGPL-3, so the duty this cell named until `p118` was the wrong duty, not merely an understated one. |
 | accessibility scan | [`ucfopen/UDOIT`](https://github.com/ucfopen/UDOIT) | 🟡 GPL-3 | 🟢 `checked` | 🟢 `pinned` | 🟢 build on it |
 | assessment analytics | the 3 [`EducationalTestingService`](https://github.com/EducationalTestingService) repos | carried | 🔴 **0 of 3 PR-gated** | 🔴 **0 of 3 pinned** | 🔴 **pin AND wire — budget both** |
 

@@ -6,6 +6,90 @@ updated: 2026-10-11
 
 # Education — AI agents shelf
 
+**Pass 118, 2026-10-11.** ⏱️ **Fifth pass of this date** (p114 23:54→00:25, p115 01:13→01:25,
+p117 02:45→03:0x, this census window **03:4x → 04:2x UTC**).
+
+🟢 **Instrument: `compose/code/p118-licence-column-sweep/` — `ACTION E` exactly as p117
+pre-registered it: sweep EVERY licence column in this KB from the tree, not just the 26 rows p117
+reached. `test_p118.sh` **21 passed / 0 failed**, fully offline against real captured licence
+files. 957 claims, 249 addresses, **249 / 249 measured from the DEFAULT branch**, `rc=0`
+throughout, 472 licence files kept on disk.**
+
+🔴 **`ACTION E` is DISCHARGED and NOT refuted. Its clause was "refuted as unnecessary if a full
+sweep finds fewer than 3 further wrong licences." It found **18**, on 18 distinct addresses,
+across **38 published cells** and five pages. All 38 are repaired in this commit and the sweep
+re-run to confirm: **844 `AGREE`, and every one of the 17 residual `WRONG` rows is explained by a
+named limit of the instrument rather than by a KB error.**
+
+## 🔴 🆕 `P118-D` — p117's correction was PAGE-LOCAL, and that is the finding
+
+p117 corrected four rows on **this page** and published the result. The same four addresses were
+still wrong on `repos/foundations.md`, `verticals/solutions.md`, `compose/patterns.md` and
+`intel/market.md` when this sweep ran. `fwu-de/ais-chat` scored 🟢 `AGREE` on the page p117 fixed
+and 🔴 `WRONG` on three others **in the same census**.
+
+🔵 **A correction published in prose is not a correction applied to the KB.** `Gap 406` was
+opened as "the carried column, 9 of 14 wrong". It is better described as: *a licence value
+propagates to every page that cites the address, and a repair does not.* Only a whole-KB sweep
+can see the difference, which is why `ACTION E` was the right clause to write.
+
+## 🟢 The agents shelf — licence and branch MEASURED this pass, not carried
+
+🔵 **Every row below was read from the repository's DEFAULT branch this pass. The `branch` column
+is not decoration: 37 of the 249 addresses in this KB default to neither `main` nor `master`
+(`P118-C`), and `frappe/frappe`'s `master` carries a different licence from its `develop`.**
+
+| agent | ★ (API, this pass) | licence, from the tree | default branch | note |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **41 103** | 🟢 Apache-2.0 | `main` | lifelong personalised tutoring; largest education-specific agent in this KB |
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | 76 867 | 🟢 MIT | `main` | course, not a runtime — a teaching corpus Globant can fork for enablement |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 29 775 | 🟢 Apache-2.0 | `main` | minimal agent loop; the cheapest permissive base to build a tutor on |
+| [`agent0ai/agent-zero`](https://github.com/agent0ai/agent-zero) | 19 420 | 🟢 MIT | `main` | general agent framework, used here as a tutoring harness |
+| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | **931** | 🔴 **GPL-3.0** ⚠️ **was MIT** | `main` | theory-of-mind tutor. 🔴 **Roundups still list it as permissive; the tree says GPL-3.0 and a distributed derivative inherits it.** |
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | — | 🟢 **MIT** ⚠️ **was BSD-3** | `main` | MIT Open Learning's tutor; permissive either way, but the token was wrong |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | **389** | 🟢 MIT | `main` | educational content generation. 🔵 Published as "~12k" before p117 measured it |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | — | 🟢 **MIT** ⚠️ **was Apache-2.0** | `main` | EMEA (PL) mentoring LMS |
+| [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | — | 🟢 **MIT** ⚠️ **was Apache-2.0** | `main` | EMEA; adaptive KG over `ollama` + `sentence-transformers` |
+| [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | **25** | 🔴 **AGPL-3.0** ⚠️ **was MIT** | `main` | EMEA (DE), state-funded school chatbot. 🔴 Network copyleft: a hosted derivative must publish. 🔵 Canonical spelling is `FWU-DE`, not `fwu-de` |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 164 | 🔴 **AGPL-3.0** ⚠️ **was MIT** | `main` | EMEA (ES) language tutor, fully local |
+| [`OtterDen-Lab/Autograder`](https://github.com/OtterDen-Lab/Autograder) | — | 🔴 **GPL-3.0** ⚠️ **was MIT** | `main` | North America; distribution copyleft |
+| [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | — | 🔴 **GPL-3.0** ⚠️ **was MIT** | `main` | EMEA; distribution copyleft |
+
+🔴 **Eight of these thirteen were published under the wrong licence before this pass. Five of the
+eight were published as MIT and are copyleft** — the error runs in the direction that costs a
+client, not the direction that merely understates.
+
+🟢 **Permissive and safe to ship a closed derivative from, measured this pass: `DeepTutor`
+(Apache-2.0), `smolagents` (Apache-2.0), `ai-agents-for-beginners` (MIT), `agent-zero` (MIT),
+`educhain` (MIT), `open-learning-ai-tutor` (MIT), `mentingo` (MIT),
+`adaptive-knowledge-graph` (MIT) — eight of thirteen.** 🔴 **Copyleft, and four of the five are
+the small self-hosted tutors a studio is most likely to reach for: `tutor-gpt`, `ais-chat`,
+`freelingo`, `Autograder`, `lumen`.**
+
+## 🔴 🆕 `P118-I` — one row in this KB was not open source at all
+
+`canyongbs/advisingapp` was published as AGPL-3. Its root `LICENSE` on `main` is **Elastic
+License 2.0** — 3 860 bytes, **zero** occurrences of "affero" or "general public". Elastic 2.0
+forbids providing the software to third parties as a managed service and forbids circumventing
+licence keys; **neither restriction exists under AGPL-3**. `compose/patterns.md` said
+"build on it, AGPL duties apply" until this pass. 🔵 Full reasoning in the instrument README.
+
+## 🔵 🆕 `P118-M` — what the web searches added this pass: nothing, and that is the result
+
+🔵 **The brief's eight searches ran — global and once per region. Every open-source address they
+surfaced is already in this KB** (`OpenOLAT/OpenOLAT`, `rohitg00/ai-engineering-from-scratch`,
+`microsoft/generative-ai-for-beginners`, `ashishpatel26/500-AI-Agents-Projects`,
+`awesome-ai-agents-2026`, `HKUDS/DeepTutor`, `satvik314/educhain`). **And all 15 regulation
+tokens they surfaced are already held** — California AB 1159, Idaho SB 1227, H.R. 8747, Korea's
+AI Basic Act, Vietnam's AI Law, Taiwan's AI Basic Act, Australia's National AI Plan, the EU
+Digital Omnibus dates, Brazil's PL 2.338/2023, Colombia's CONPES 4144, UNESCO IESALC, Ceibal,
+TALIS, the NYC moratorium, the UNESCO Regional Observatory.
+
+🔴 **Zero new addresses, zero new tokens, 15 rejected as already held. `Gap 402` weakens a THIRD
+consecutive pass** (p117: 4 new / 13 rejected; p118: 0 new / 15 rejected). The fixed query set in
+the brief has stopped yielding. 🟢 **The value this pass adds is measurement, not discovery — and
+the measurement found 18 wrong licences the discovery passes had been building on.**
+
 **Pass 117, 2026-10-11.** ⏱️ **Fourth pass of this date** (p114 23:54→00:25, p115 01:13→01:25,
 this census window **02:45 → 03:0x UTC**).
 
@@ -283,7 +367,7 @@ Of the 64 decidable rows, these are the agent-shaped ones — every figure below
 
 | row | licence | p115 | declared / present |
 |---|---|---|---|
-| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🟢 MIT | 🟢 **`agree`** | **86 / 86** (pnpm) |
+| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 GPL-3.0 | 🟢 **`agree`** | **86 / 86** (pnpm) |
 | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 MIT | 🟢 **`agree`** | **54 / 54** |
 | [`lovejzzz/CourseMapper`](https://github.com/lovejzzz/CourseMapper) | 🟢 MIT | 🟢 **`agree`** | **57 / 57** |
 | [`aiverify-foundation/moonshot-ui`](https://github.com/aiverify-foundation/moonshot-ui) | 🟢 Apache-2.0 | 🟢 **`agree`** | **42 / 42** |
@@ -556,13 +640,13 @@ them and added the binding column.**
 | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🟡 AGPL-3 | 🟢 `local` | `transformers` | North America |
 | [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🟡 GPL-3 | 🟢 `local` | `transformers` | EMEA (DE) |
 | [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | 🟢 **MIT** | 🟢 `broker` | `langchain` | North America |
-| [`fwu-de/ais-chat`](https://github.com/fwu-de/ais-chat) | 🟢 **MIT** | 🟢 `broker` | `langchain` + `base_url` | EMEA (DE) |
-| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🟢 **BSD-3** | 🟢 `broker` | `langchain` | North America |
-| [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | 🟢 **Apache-2.0** | 🟢 `local` | `ollama`, `sentence-transformers`, `transformers` | EMEA |
-| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 🟢 **MIT** | 🟢 `local` | `ollama`, `whisper` | EMEA (ES) |
-| [`OtterDen-Lab/Autograder`](https://github.com/OtterDen-Lab/Autograder) | 🟢 **MIT** | 🟢 `local` | `ollama` | North America |
-| [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 🟢 **MIT** | 🟢 `local` | `sentence-transformers` + `OPENAI_API_BASE` | EMEA |
-| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **Apache-2.0** | 🟢 `broker` | `langchain` + `base_url` | EMEA (PL) |
+| [`fwu-de/ais-chat`](https://github.com/fwu-de/ais-chat) | 🔴 **AGPL-3.0** | 🟢 `broker` | `langchain` + `base_url` | EMEA (DE) |
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🟢 **MIT** | 🟢 `broker` | `langchain` | North America |
+| [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | 🟢 **MIT** | 🟢 `local` | `ollama`, `sentence-transformers`, `transformers` | EMEA |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 🔴 **AGPL-3.0** | 🟢 `local` | `ollama`, `whisper` | EMEA (ES) |
+| [`OtterDen-Lab/Autograder`](https://github.com/OtterDen-Lab/Autograder) | 🔴 **GPL-3.0** | 🟢 `local` | `ollama` | North America |
+| [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 🔴 **GPL-3.0** | 🟢 `local` | `sentence-transformers` + `OPENAI_API_BASE` | EMEA |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | 🟢 `broker` | `langchain` + `base_url` | EMEA (PL) |
 | [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 🟢 **MIT** | 🟢 `broker` | `langchain` | North America |
 | [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | 🟢 **Apache-2.0** | 🟡 `broker` | `langchain`, `openrouter` ※ | North America |
 | [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | 🟢 **MIT** | 🟡 `broker` | `openrouter` ※ | LATAM (BR) |
@@ -585,7 +669,7 @@ model is a code change in someone else's repository.**
 |---|---|---|
 | [`oppia/oppia`](https://github.com/oppia/oppia) | 🔴 `google` | 🔴 **Apache-2.0, `broad` bench, 2 959 test files — the strongest row on this shelf by every earlier axis, and single-vendor on this one** |
 | [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | 🔴 `anthropic`, `openai` | two vendors is not an abstraction: both are wired, neither is swappable |
-| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 `openai` | 🔴 AGPL-3 **and** Elastic-2.0 in its tree (`p1040`'s `NON-GRANT` bucket) |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 `openai` | 🔴 Elastic-2.0 (not OSS) **and** Elastic-2.0 in its tree (`p1040`'s `NON-GRANT` bucket) |
 | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟡 `anthropic` | an MCP server — see the adjudication below |
 | [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 🔴 `deepseek`, `openai` | solo-maintained (p110) |
 | [`tomaszboloz/WCAG-Accessibility-Skills`](https://github.com/tomaszboloz/WCAG-Accessibility-Skills) | 🟡 `gemini` | a skill pack — see the adjudication below |
@@ -688,12 +772,12 @@ added the closure column. Ordered by suite size.**
 | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | 🟢 broad | 🟢 2 959 | npm,py | North America |
 | [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🟡 GPL-3 | 🟡 small | 🟢 2 276 | npm,php,maven | EMEA (DE) |
 | [`temporalio/temporal`](https://github.com/temporalio/temporal) | 🟢 **MIT** | 🟢 broad | 🟢 1 208 | go | North America |
-| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🟡 AGPL-3 | 🟡 small | 🟢 770 | npm,php | North America |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 Elastic-2.0 (not OSS) | 🟡 small | 🟢 770 | npm,php | North America |
 | [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 **BSD-3** | 🟡 small | 🟢 757 | npm,py,php | North America |
 | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🟡 GPL-2 | 🟡 small | 🟢 469 | npm,php | LATAM (BR) |
 | [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 🟡 contested ※ | 🟡 small | 🟢 304 | npm,ruby | APAC (IN) |
 | [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | 🟢 **MIT** | 🟡 small | 251 | npm,py | North America |
-| [`fwu-de/ais-chat`](https://github.com/fwu-de/ais-chat) | 🟢 **MIT** | 🟡 small | 201 | npm | EMEA (DE) |
+| [`fwu-de/ais-chat`](https://github.com/fwu-de/ais-chat) | 🔴 **AGPL-3.0** | 🟡 small | 201 | npm | EMEA (DE) |
 | [`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) | 🟢 **Apache-2.0** | 🟡 small | 150 | py | APAC (SG) |
 | [`ucfopen/UDOIT`](https://github.com/ucfopen/UDOIT) | 🟡 GPL-3 | 🟡 small | 18 | npm,php | North America |
 

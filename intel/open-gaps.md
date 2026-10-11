@@ -4,6 +4,228 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Hundred-and-eighteenth pass, 2026-10-11 — **`ACTION E` DISCHARGED and NOT refuted: 18 wrong licences, 38 cells, five pages**; **`Gap 406` widens then CLOSES on measurement**; **`P117-A` REFINED — a refusal is a (transport × endpoint) cell**; **`Gap 409` partly RETRACTED — Moodle does commit a licence**; **`Gap 402` weakened a THIRD consecutive pass**; `P118-A`–`P118-O`, `ACTION F`–`J` adopted; 🔴 **`ACTION C` NOT attempted and `ACTION D` only partly reached — both carried forward**
+
+⏱️ **Fifth pass of 2026-10-11.** Window **03:4x → 04:2x UTC** (p114 23:54→00:25, p115
+01:13→01:25, p117 02:45→03:0x). 🟢 **Instrument: `compose/code/p118-licence-column-sweep/`,
+`test_p118.sh` 21 passed / 0 failed, fully offline.**
+
+🔵 **Eleventh axis in eleven passes, and the second this KB did not choose — `ACTION E` was
+written by p117 with its refutation clause attached, and this pass executed it as written.**
+
+### 🔴 `ACTION C` NOT attempted, `ACTION D` only PARTLY reached — stated first, because a pass that reports only what it did is not auditable
+
+🔵 **p117 pre-registered three actions. This pass executed ONE of them.**
+
+| action | layer | status after p118 |
+|---|---|---|
+| `ACTION C` | layer P — the reverse-DNS package namespace (`src/main/java/<cc>/…`, `pom.xml` `<groupId>`) over all 296 addresses | 🔴 **NOT ATTEMPTED.** No census was run. Its refutation clause is untested and it is carried forward unchanged |
+| `ACTION D` | layer D — the API `description` field | 🟡 **PARTLY REACHED, NOT DISCHARGED.** Its clause requires placing ≥ 10 of 296; this pass read `description` for **8** addresses only, as a side-effect of grounding the region column on the licences it corrected. 🟢 **What it did establish is the channel: `description` is readable, but only through the MCP relay's SEARCH endpoint, not the `/repos` endpoint p117 assumed (`P118-A`)** |
+| `ACTION E` | the licence column, whole-KB | 🟢 **DISCHARGED, not refuted** — below |
+
+🔴 **Why: `ACTION E` was the action whose subject matter was already known to be wrong — p117 had
+measured 9 of 14 — and it turned out to be wrong on 18 addresses across five pages, so it
+consumed the pass. That is a defensible allocation and it is still a choice this pass made rather
+than a plan it completed.** 🟡 **`ACTION C` and `ACTION D` keep their original clauses verbatim
+and are re-listed for p119 below; neither is weakened by having been skipped, and neither may be
+reported later as discharged by this pass.**
+
+🔵 **One caution for whoever runs `ACTION D`: it is the action most exposed to `P800`'s trap, and
+this pass saw the trap live. `Selleo/mentingo`'s description names Moodle, Docebo, TalentLMS,
+Thinkific, Teachable and Open edX — six platforms it is positioned AGAINST. A naive read of
+layer D would place the repository at six vendors' addresses.** The placement that actually held
+was the OWNER (Selleo, a Polish studio), not anything in the description text.
+
+### 🟢 `ACTION E` — DISCHARGED as pre-registered, and NOT refuted
+
+🔵 **The clause: "sweep EVERY licence column in this KB from the tree, not just the 26 rows p117
+reached. 🔴 Refuted as unnecessary if a full sweep finds fewer than 3 further wrong licences.
+🟢 This is `Gap 406`'s closing condition."**
+
+| | |
+|---|---|
+| licence claims extracted | **957**, from the licence COLUMNS of 7 live pages |
+| distinct addresses | **249** |
+| measured from the DEFAULT branch | 🟢 **249 / 249**, `rc=0` throughout |
+| licence files kept on disk | **472** streams |
+| addresses with a readable grant | **230 / 249 (92.4 %)** |
+| 🔴 **wrong licences** | 🔴 **18 addresses, 38 published cells, 5 pages** |
+| repaired this commit | 🟢 **38 / 38**, then the sweep re-run to confirm |
+| agreement after repair | 🟢 **844 `AGREE`** · 🟡 44 `PARTIAL` · 🔵 50 `UNREAD` · 🔵 2 `REFERENCE-ONLY` · 🔴 **17 `WRONG`, every one explained by a named limit of the instrument, none a KB error** |
+
+🔴 **Not refuted: the clause required 3, the sweep found 18.** 🟢 **`Gap 406` therefore WIDENS
+on scope — from "9 of 14 rows on one page" to 18 addresses across five pages — and then CLOSES
+on measurement, because after repair the licence column agrees with the tree on every address the
+instrument can read.** 🟡 **It does NOT close as a *process* gap: see `P118-D`.**
+
+### 🔴 `P118-D` — the real content of `Gap 406` is that corrections do not propagate
+
+p117 corrected four rows on `agents/top.md` and published the finding. The same four addresses
+were still wrong on four other pages when this sweep ran. 🔴 **`fwu-de/ais-chat` scored 🟢
+`AGREE` on the page p117 fixed and 🔴 `WRONG` on three others in the same census.**
+
+🔵 **`Gap 406` was framed as "the carried column". It is better framed as: a licence value
+propagates to every page that cites the address, and a repair does not.** A prose correction is
+not a KB correction. 🟢 **Only a whole-KB sweep can see the difference, which is why `ACTION E`
+was the right clause for p117 to have written.**
+
+### 🟡 `Gap 409` — PARTLY RETRACTED, and the retracted row is the largest LMS in the world
+
+🔴 **p117 recorded three addresses that "commit no licence file at all". `moodle/moodle` commits
+`COPYING.txt` — the GPL-3.0, on `main`.** p117's candidate list was
+`LICENSE LICENSE.txt LICENSE.md LICENCE COPYING LICENSE-MIT`; the file is `COPYING.txt`, one
+extension away from a name already being tried.
+
+🟢 **Surviving the re-measurement: `atutor/ATutor` genuinely commits no licence file on `master`,
+and 13 further addresses commit none** (`OS4ED/openSIS-Classic`, `LearnPress/learnpress`,
+`1EdTech/openbadges-specification`, `ed-fi-alliance-oss/Ed-Fi-Data-Standard`, + 9 more).
+🟡 **"No licence file" now requires 9 filename candidates on the DEFAULT branch before it may be
+written, because absence of a licence reads as permission and this KB published the world's
+most-installed LMS as unlicensed.**
+
+### 🟢 `P117-A` — REFINED. A refusal is a property of the (transport × endpoint) CELL
+
+p117: *"Three transports, three outcomes, one host — so `P798`'s rule becomes: a refusal is a
+property of the TRANSPORT, not of the host."* Measured on two endpoints of the same host:
+
+| endpoint | `curl` | `gh api` | MCP relay |
+|---|---|---|---|
+| `/repos/{owner}/{repo}` | 🔴 403 *"access to this repository is not enabled"* | 🔴 403, same body | 🔴 denied, same gate |
+| `/search/repositories?q=repo:…` | 🔴 403 *"this API path is not available"* | 🔴 403, same body | 🟢 **200, full object** |
+
+🔴 **All three transports give the SAME outcome on `/repos`.** p117's "three outcomes" read two
+different gates as a transport difference — and the two 403 bodies differ, which is the tell: one
+names the repository, the other names the path. 🟢 **One endpoint swap turns the relay's refusal
+into a 200 carrying `description`, `license.spdx_id`, `stargazers_count` and `default_branch`.
+`P798`'s ledger should be a MATRIX of (transport × endpoint), not a list of hosts.**
+
+### 🟢 `P118-B` / `P118-C` — the ungated channel, and the 14.9 % it exposed
+
+🟢 **`git ls-remote --symref HEAD` resolved the default branch for 249 / 249 addresses with no
+session scope** while both REST endpoints were gated to `curl` and `gh`.
+
+🔴 **37 of 249 (14.9 %) default to neither `main` nor `master`, and 5 default to a TAG-SHAPED
+ref** (`v31.0.00`, `15.0`, `19.0`, `2.12`, `v6.2.0`) that no branch probe reaches. 🔴
+**`frappe/frappe`'s `master` carries an MIT file; `develop` is what it ships. First-answering is
+not default**, and p117's `licence.sh` — plus v1 of this pass's own instrument — read
+first-answering.
+
+### 🟢 `P118-O` — the corrections have a second channel, agreeing 7 / 7
+
+The sweep reads the committed licence file; the API's `license.spdx_id` is an independent
+determination. On the seven corrected addresses the search endpoint returned
+(`frappe/frappe` MIT, `learnhouse/learnhouse` AGPL-3.0, `plastic-labs/tutor-gpt` GPL-3.0,
+`elmsln/elmsln` GPL-3.0, `Selleo/mentingo` MIT, `Tadreeb-LMS/tadreeblms` AGPL-3.0,
+`MysterionRise/adaptive-knowledge-graph` MIT) **the two channels agree completely, and both
+disagree with what this KB published. `Gap 406` is not a measurement artefact.**
+
+### 🔴 `Gap 410` OPENED — a licence correction orphans the recommendation built on it
+
+🔴 **`compose/patterns.md` said of `canyongbs/advisingapp`: "🟢 build on it, AGPL duties apply."
+The repository is Elastic License 2.0 — no managed service, no licence-key circumvention. The
+duty named was the WRONG duty, not an understated one.**
+
+🟡 **The repair script rewrote 38 licence CELLS from the verdict file and could not have found
+that sentence: the licence token and the recommendation built on it are different cells, and only
+the token was measured.** Two such stale recommendations were found by a second, separate search
+(`advisingapp`, and `portabilis/i-educar`'s "build on it" under a licence that moved from
+LGPL-3.0 to GPL-2.0). 🔴 **`Gap 410`: this KB has no mechanism that ties a recommendation to the
+measurement it depends on.** Closing condition in `ACTION I`.
+
+### 🔴 `Gap 411` OPENED — a KB that records its own corrections becomes harder for its own validator to read
+
+🔴 **Two of the 17 residual `WRONG` rows are this pass's own retraction prose**: a cell that names
+AGPL-3 in order to say AGPL-3 was wrong is scored by `extract.sh` as *claiming* AGPL-3.
+🔵 **`P471`'s and `P117-K`'s shape a fifth time — a probe matching a CROSS-REFERENCE rather than a
+GRANT.** Closing condition in `ACTION H`.
+
+### 🔴 `P118-K` — the unread bucket was four nameable classes, and one of them was regional
+
+`UNKNOWN` fell from 18 addresses to 5 once the classifier learned what was in it:
+
+| class | n | what it is |
+|---|---|---|
+| `GRANT-IN-MANIFEST` | 5 | 45–108 B field stub; licence named in `DESCRIPTION` |
+| 🔴 `*-NOT-OSS` | 1 | `canyongbs/advisingapp`, Elastic-2.0 — source-available, use-restricted |
+| `GRANT-BY-REFERENCE` | 1 | `frappe/education`, the one line `License: GNU GPL V3`, no body |
+| 🔴 **non-English grant** | 2 | `portabilis/i-diario`, `portabilis/pre-matricula-digital` — the AGPL-3 **in Portuguese** |
+| `CC0-1.0` | 4 | reads "Creative Commons Legal Code", never "Attribution" |
+| still unread | 5 | 4 multi-grant prose indexes + 1 Chinese-language file |
+
+🔴 **The non-English class is a REGIONAL blind spot in a KB whose brief is to place findings by
+region, and the addresses it hid were Brazilian.** 🔵 `P471` recorded the mirror image — a gap
+extractor that was Spanish-only. 🟡 **And the fix nearly failed the same way: `LICEN.A P.BLICA`
+does not match `LICENÇA PÚBLICA`, because a `.` matches one BYTE and `Ç` is two in UTF-8.** A
+regional blind spot can survive its own fix if the fix carries the same encoding assumption that
+caused it.
+
+### 🔴 `P118-L` — this pass's own faults, all seven, all caught before publishing
+
+| | fault | effect | fix |
+|---|---|---|---|
+| **F1** | emitted `LGPL-3` where the KB publishes `LGPL-3.0` | 2 false `WRONG` | normalise versions at both ends |
+| **F2** | read the FIRST meaningful line of a multi-grant file | `PrairieLearn` → MIT from a *portions* clause; `Elgg` → MIT from a *bundled plugins* clause | report the plurality, never pick by position |
+| **F3** | read the first-answering branch | `frappe/frappe` → MIT from a stale `master` | resolve the default branch first |
+| **F4** | one licence file wins | `microsoft/autogen` → CC-BY from `LICENSE`, ignoring `LICENSE-CODE` (MIT) | probe `LICENSE-CODE`; 2 addresses still excluded by name |
+| 🔴 **F5** | **the token regex had no entry for this KB's own short spellings — on `AGPL-3` the leftmost match was the bare `GPL` inside it** | **every row correctly reading `AGPL-3` was scored as claiming `GPL` and called WRONG against an `AGPL-3.0` tree** | matched the short forms; **the headline fell from 23 wrong addresses to 16 before the two late findings took it to 18** |
+| **F6** | classifier was English-only | 2 Brazilian repos reported unread | see `P118-K` |
+| **F7** | cannot tell a CLAIM from a RETRACTION | 2 residual false `WRONG` | 🔴 **unfixed**, `ACTION H` |
+
+🔴 **F5 is the one that matters, and it is the lesson of this pass.** p117 matched the AGPL's name
+inside GPL-3 §13; p118 matched `GPL` inside `AGPL-3`. **When a token set has long and short
+spellings, the long ones must be in the alternation or the short match silently wins** — and a
+false headline of 23 was one regex away from being published.
+
+### 🔴 `Gap 402` — weakened a THIRD consecutive pass
+
+🔵 **All eight mandated searches ran, global and once per region. ZERO new addresses, ZERO new
+regulation tokens, 15 tokens rejected as already held.** (p117: 4 new / 13 rejected.)
+
+🟡 **The fixed query set in the brief has stopped yielding on this industry.** Every region's
+"returned nothing new" is stated explicitly in `intel/market.md` under its own `###`, because
+silence there is indistinguishable from coverage. 🟢 **All 18 of this pass's findings came from
+measurement, none from search** — which is the argument for `ACTION I`.
+
+🔴 **Still missing, declared rather than inferred:** EMEA education-specific national rules at
+ministry level for the UK, Germany and France (third pass running); Mexico's and Argentina's
+education-specific AI rules (second pass running); APAC school-level adoption rates and
+ministry-of-education positions per country.
+
+### 🟢 Pre-registered for p119, each with its refutation clause
+
+🔵 **`ACTION C` and `ACTION D` are CARRIED FORWARD with their p117 clauses verbatim** — layer P
+over all 296 addresses, refuted if it places fewer than 5 rows beyond layers 0 and R or
+contradicts a settled org on ≥ 2; layer D over all 296, refuted if it places fewer than 10 or if
+≥ 2 placements name a country the repository merely SERVES.
+
+🟢 **`ACTION F` — resolve the 5 still-unread addresses by following their prose indexes to the
+sibling licence files they name** (`bncc-dev/bncc-benchmark`, `learning-commons-org/evaluators`,
+`learning-commons-org/knowledge-graph`, `leemonade/leemons`, `yuanjiusheng/cloud-learning-ce`).
+🔴 **Refuted as unnecessary if fewer than 3 of the 5 resolve to a grant that differs from what
+this KB publishes.**
+
+🟢 **`ACTION G` — run `ACTION E`'s instrument over the CURRENT sections of `agents/trending.md`
+and `repos/trending.md`** (811 and 1 123 addresses, excluded this pass because an append-only
+history records what a pass BELIEVED and correcting it would destroy the record). 🔴 **Refuted if
+the two pages' current-section claims disagree with the tree on fewer than 5 addresses.** 🔵 Only
+the current section is in scope; the history stays as written.
+
+🟢 **`ACTION H` — teach `extract.sh` to skip licence tokens inside a RETRACTION context**, closing
+`Gap 411`. 🔴 **Refuted if the residual `WRONG` count does not fall to exactly the 14
+split-licence rows.**
+
+🟢 **`ACTION I` — audit the OTHER carried columns, and tie recommendations to their measurements**,
+closing `Gap 410`. p117's error rate split on *re-measured vs carried forward*, not on subject
+matter; licence was one carried column, and star counts, region and bus-factor are others.
+🔴 **Refuted if a carried non-licence column is wrong on fewer than 3 addresses.** 🟡 **Second
+half, not refutable but required: every recommendation cell downstream of a licence this pass
+changed must be re-read, not just the licence cell.**
+
+🟡 **`ACTION J` — vary the mandated query set, or declare the discovery half saturated.** Three
+consecutive passes of near-zero on a fixed eight-query set is a property of the queries. 🔴
+**Refuted if a varied query set returns zero new addresses AND zero new tokens a fourth time** —
+at which point the saturation is the finding and the budget belongs in measurement.
+
 ## 🟢 Hundred-and-seventeenth pass, 2026-10-11 — **`ACTION A` and `ACTION B` both DISCHARGED**; **`Gap 405` survives its own refutation test on 0 contradictions and stays open on 2 corroborations of 34**; **`Gap 406` OPENED — the carried column, 9 of 14 wrong**; **`Gap 402` weakened a second consecutive pass**; `P117-A`–`P117-R`, `ACTION C`–`E` adopted
 
 ⏱️ **Fourth pass of 2026-10-11.** Window **02:45 → 03:0x UTC** (p114 ran 23:54→00:25, p115

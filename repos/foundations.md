@@ -6,6 +6,93 @@ updated: 2026-10-11
 
 # Education — foundational repos
 
+**Pass 118, 2026-10-11.** ⏱️ **Fifth pass of this date** (census window **03:4x → 04:2x UTC**).
+
+🟢 **Instrument: `compose/code/p118-licence-column-sweep/`, discharging `ACTION E`. This page
+carried **7** of the 38 wrong licence cells the sweep found; all are repaired in this commit.**
+
+## 🟢 🆕 `P118-C` — 37 of 249 addresses default to neither `main` nor `master`
+
+🔴 **14.9 %, and five of them default to a TAG-SHAPED ref that no `main`/`master`/`develop`
+probe reaches at all.** Every foundation row's licence and recency is read from a branch, so
+reading the wrong branch is not a near-miss — it is a different repository state.
+
+| address | default branch | why it matters here |
+|---|---|---|
+| [`frappe/frappe`](https://github.com/frappe/frappe) | `develop` | 🔴 `master` carries an **MIT** `LICENSE`; `develop` is what ships |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | `v31.0.00` | tag-shaped; unreachable by branch probe |
+| [`claroline/Claroline`](https://github.com/claroline/Claroline) | `15.0` | tag-shaped |
+| [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | `19.0` | tag-shaped, tracks the Odoo major |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | `2.12` | tag-shaped; LATAM (BR) |
+| [`ed-fi-alliance-oss/Ed-Fi-Data-Standard`](https://github.com/ed-fi-alliance-oss/Ed-Fi-Data-Standard) | `v6.2.0` | tag-shaped |
+| [`Elgg/Elgg`](https://github.com/Elgg/Elgg) | `7.x` | 🔵 canonical spelling is `Elgg/Elgg`; `elgg/elgg` is a case variant of the same repo |
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | `trunk` | |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | `release` | |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `mobile` | 🔵 a *default* branch named `mobile` |
+| `oppia/oppia`, `learningequality/kolibri`, `opencast/opencast`, `oat-sa/tao-core`, `ls1intum/Artemis`, `1EdTech/*`, `frappe/*`, `LearnPress/learnpress`, `pressbooks/pressbooks` (+ others) | `develop` / `dev` | 22 further addresses |
+
+🟢 **`P118-B`: the default branch was read with `git ls-remote --symref HEAD` — 249 / 249, no
+session scope needed — while BOTH REST endpoints were gated to `curl` and `gh api` (`P118-A`).
+For the one field this sweep could not proceed without, the oldest transport was the only
+ungated one.**
+
+## 🟢 The foundations shelf — licence measured from the default branch
+
+| repo | default branch | licence file | grant, from the tree | class |
+|---|---|---|---|---|
+| [`huggingface/transformers`](https://github.com/huggingface/transformers) | `main` | `LICENSE` | 🟢 Apache-2.0 | permissive |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | `main` | `LICENSE` | 🟢 Apache-2.0 | permissive |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `master` | `LICENSE` | 🟢 Apache-2.0 | permissive — 🟢 **the only large LMS in this KB a client can ship closed** |
+| [`DSpace/DSpace`](https://github.com/DSpace/DSpace) | `main` | `LICENSE` | 🟢 BSD | permissive |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `develop` | `LICENSE` | 🟢 MIT | permissive — offline-first, the LATAM//APAC low-connectivity base |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | `develop` | `LICENSE` | 🟢 Apache-2.0 | permissive |
+| [`frappe/frappe`](https://github.com/frappe/frappe) | `develop` | `LICENSE` | 🟢 **MIT** ⚠️ **was GPL-3.0** | permissive — see `P118-G` |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master` | `LICENSE` | 🟡 **ECL-2.0 + Apache-2.0** | multi-grant, both permissive |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | `develop` | `LICENSE` | 🟡 **ECL-2.0 + Apache-2.0** | multi-grant, both permissive |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `main` | **`COPYING.txt`** | 🔴 **GPL-3.0** ⚠️ **was "no licence file at all"** | see `P118-N` |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `master` | `LICENSE` | 🔴 AGPL-3.0 | network copyleft |
+| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | `master` | `LICENSE` | 🔴 **AGPL-3.0** ⚠️ **was Apache-2.0** | network copyleft |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | `release` | `LICENSE.txt` | 🔴 AGPL-3.0 | network copyleft |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `master` | `LICENSE` | 🔴 AGPL-3.0 | network copyleft |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | `develop` | `license.txt` | 🔴 GPL-3.0 | distribution copyleft |
+| [`frappe/lms`](https://github.com/frappe/lms) | `develop` | `license.txt` | 🔴 **AGPL-3.0** ⚠️ **was GPL** | network copyleft |
+| [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | `master` | `LICENSE` | 🔴 **AGPL-3.0 (CE) + MIT (portions) + proprietary `ee/`** | see `P118-J` |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | `main` | `LICENSE` | 🔴 **Elastic-2.0 — NOT open source** ⚠️ **was AGPL-3** | see `P118-I` |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | `2.12` | `LICENSE` | 🔴 **GPL-2.0** ⚠️ **was LGPL-3.0** | 🔴 LGPL permits linking without copyleft reaching your code; **GPL-2.0 does not** |
+| [`portabilis/i-diario`](https://github.com/portabilis/i-diario) | `1.6` | `LICENSE` | 🔴 **AGPL-3.0** ⚠️ **was unread** | 🔵 the AGPL-3 **in Portuguese** — see `P118-K` |
+| [`lukeslp/awesome-accessibility`](https://github.com/lukeslp/awesome-accessibility) | `main` | `LICENSE` | 🟢 **CC0-1.0** ⚠️ **was MIT** | public-domain dedication, no code |
+| [`rstudio/ggcheck`](https://github.com/rstudio/ggcheck), [`rstudio/tblcheck`](https://github.com/rstudio/tblcheck), [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr), [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna), [`sidneybissoli/educabr`](https://github.com/sidneybissoli/educabr) | various | `LICENSE` | 🔵 **`GRANT-IN-MANIFEST`** | 45–108 B field stub; the licence is named in `DESCRIPTION`, not in the licence file |
+| [`frappe/education`](https://github.com/frappe/education) | `develop` | `license.txt` | 🔵 **`GRANT-BY-REFERENCE`** | one line: `License: GNU GPL V3`. No body, no terms, no holder |
+
+🟢 **22 foundations with a readable grant are listed above; 230 of the KB's 249 addresses
+(92.4 %) now have one.** 🔵 **The permissive tier of the LMS layer is thin and it is worth
+naming precisely: `OpenOLAT` (Apache-2.0), `Sakai` and `Opencast` (ECL-2.0, Apache-derived),
+`Kolibri` (MIT), `Oppia` (Apache-2.0), `DSpace` (BSD), `frappe/frappe` (MIT). The five largest
+LMS platforms by install base are all copyleft.**
+
+## 🔴 🆕 `P118-N` — Moodle does commit a licence, and the KB said it did not
+
+p117's `Gap 409` recorded three rows that *"commit no licence file at all"*, and
+`moodle/moodle` was one of them. 🔴 **Moodle commits `COPYING.txt` — the GPL-3.0, on `main`.**
+p117's candidate list was `LICENSE LICENSE.txt LICENSE.md LICENCE COPYING LICENSE-MIT`; the file
+is `COPYING.txt`, one extension away from a name it was already trying.
+
+🔵 **The world's most-installed LMS was published in this KB as unlicensed.** The remaining
+`Gap 409` claims survive re-measurement: `atutor/ATutor` genuinely commits no licence file on
+`master`, and 13 further addresses commit none. 🟡 **"No licence file" is the most dangerous
+cell this KB can print, because absence reads as permission — so it now requires 9 filename
+candidates across the default branch before it may be written.**
+
+## 🔵 🆕 `P118-F` — every byte figure p117 published is short by one
+
+p117 measured file sizes inside a command substitution, which strips trailing newlines before
+`wc -c` sees them. Confirmed 3 / 3, including the discriminating case: the single file whose
+published size matches its on-disk size is the single file that does not end in a newline
+(`openedx/edx-ora2`, 35 135 B). p117 also declared, as its own fault, that it had *inferred
+licence identity from file size*. 🔵 The sizes it was inferring from were systematically off by
+one — which is harmless for identity at kilobyte granularity and is recorded because p117 asked
+for exactly this kind of check on its own numbers.
+
 **Pass 117, 2026-10-11.** ⏱️ **Fourth pass of this date** (census window **02:45 → 03:0x UTC**).
 
 🟢 **Instrument: `compose/code/p117-second-channel/`. The GitHub API answers this session
@@ -167,7 +254,7 @@ and this axis does not re-fail a row. Shown so the page does not read as if they
 | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT | 🟢 `checked` | 🔵 `partial-pin` | 🔵 `partial-reach` | 🟢 **`agree`** | 🟢 **13 / 13** |
 | [`temporalio/temporal`](https://github.com/temporalio/temporal) | 🟢 MIT | 🟢 `checked` | 🟢 `pinned` | 🟢 `full-reach` | 🔵 `no-lock-grammar` | — root manifest is go, not npm/composer/cargo |
 | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 ECL-2.0 | 🟢 `checked` | 🔵 `partial-pin` | 🔵 `partial-reach` | 🔵 `no-lock-grammar` | — root manifest is maven |
-| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🟢 Apache-2.0 | 🟢 `checked` | 🔵 `partial-pin` | 🔴 root orphaned | 🔵 *out of scope* | 🔴 already failed p114 at the root |
+| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🔴 AGPL-3.0 | 🟢 `checked` | 🔵 `partial-pin` | 🔴 root orphaned | 🔵 *out of scope* | 🔴 already failed p114 at the root |
 | [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 BSD-3 | 🟢 `checked` | 🔵 `self-pinned` | 🔵 `self-pinned` | 🔵 *out of scope* | maven: no claim either way |
 | [`huggingface/transformers`](https://github.com/huggingface/transformers) | 🟢 Apache-2.0 | 🟢 `checked` | 🔴 `floating` | 🔴 root orphaned | 🔵 *out of scope* | 🔴 already failed p114 at the root |
 | [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🟢 AGPL-3 | 🟢 `checked` | 🔴 `floating` | 🔴 `no-reach` | 🔵 *out of scope* | 🔴 already failed p114 at the root |
@@ -292,7 +379,7 @@ a country:**
 | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | 🟢 `pinned` | 🟢 `full-reach` | 🔴 `no-country` | `n-none` | `r-none` |
 | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 ECL-2.0 | 🟡 `partial-pin` | 🟡 `partial-reach` | 🔴 `no-country` | `n-none` | 🔴 `r-no-country` |
 | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT | 🟡 `partial-pin` | 🟡 `partial-reach` | 🔴 `no-country` | 🔴 `n-no-country` | 🔴 `r-no-country` |
-| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🟢 Apache-2.0 | 🟡 `partial-pin` | 🔴 `partial-reach`, root | 🔴 `no-country` | `n-none` | 🔴 `r-no-country` |
+| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🔴 AGPL-3.0 | 🟡 `partial-pin` | 🔴 `partial-reach`, root | 🔴 `no-country` | `n-none` | 🔴 `r-no-country` |
 | [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 BSD-3 | 🔵 `self-pinned` | 🔵 `self-pinned` | 🔴 `no-country` | 🔴 `n-no-country` | 🔴 `r-no-country` |
 | [`huggingface/transformers`](https://github.com/huggingface/transformers) | 🟢 Apache-2.0 | 🔴 `floating` | 🔴 `partial-reach`, root | 🔴 `no-country` | `n-none` | 🔴 `r-no-country` |
 | [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🟢 AGPL-3 | 🔴 `floating` | 🔴 `no-reach` | 🔴 `no-country` | `n-none` | 🔴 `r-no-country` |
@@ -377,7 +464,7 @@ separately. p111/p112 columns are carried; this pass changed neither.**
 | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | 🟢 `checked` | 🟢 `pinned` | 🟢 **`full-reach`** | 🟢 **0 / 6** | 🟡 **holds, but on a `requirements.txt` — see below** |
 | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 ECL-2.0 | 🟢 `checked` | 🟡 `partial-pin` | 🟡 `partial-reach` | 1 / 9 | 🟡 **one orphan, not at the root** |
 | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT | 🟢 `checked` | 🟡 `partial-pin` | 🟡 `partial-reach` | 2 / 57 | 🟡 **57 manifests, 2 orphaned** |
-| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🟢 Apache-2.0 | 🟢 `checked` | 🟡 `partial-pin` | 🟡 `partial-reach` | 🔴 **2 / 3, root** | 🔴 **the root manifest is orphaned** |
+| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🔴 AGPL-3.0 | 🟢 `checked` | 🟡 `partial-pin` | 🟡 `partial-reach` | 🔴 **2 / 3, root** | 🔴 **the root manifest is orphaned** |
 | [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 BSD-3 | 🟢 `checked` | 🔵 `self-pinned` | 🔵 `self-pinned` | — | 🔵 **maven: no claim either way (`P114-E`)** |
 | [`huggingface/transformers`](https://github.com/huggingface/transformers) | 🟢 Apache-2.0 | 🟢 `checked` | 🔴 `floating` | 🔴 `partial-reach` | 🔴 **21 / 22, root** | 🔴 **pin at fork time; 20 requirement files, zero lockfiles** |
 | [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🟢 AGPL-3 | 🟢 `checked` | 🔴 `floating` | 🔴 **`no-reach`** | 🔴 **1 / 1, root** | 🔴 **pin at fork time; the root `pyproject.toml` has no lock at all** |
@@ -489,7 +576,7 @@ and needs the same `uv lock` / `pip-compile` step at fork time.**
 | [`oppia/oppia`](https://github.com/oppia/oppia) | 🔴 `google` | Apache-2.0, `broad` bench, 2 959 tests, `pinned`, `checked` — and one vendor |
 | [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | 🔴 `anthropic`, `openai` | two wired vendors is not an abstraction |
 | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🔴 `anthropic` | Apache-2.0 Swiss LMS; `tests-only` on p111 |
-| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 `openai` | AGPL-3 plus Elastic-2.0 in tree (`p1040` `NON-GRANT`) |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 `openai` | 🔴 **Elastic-2.0 (not OSS) AT THE ROOT** — `p1040` read Elastic-2.0 as a `NON-GRANT` found *in tree* beside a root AGPL-3; `p118` read the root `LICENSE` itself (3 860 B, zero occurrences of "affero" or "general public") and it IS Elastic-2.0 |
 | [`Qwen-Applications/OpenRS`](https://github.com/Qwen-Applications/OpenRS) | 🔴 `openai` | `floating` and `bare` — weakest row on three axes at once |
 | [`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) | 🟡 `moonshot` | 🟢 **DISCOUNTED — self-name collision, adjudicated by hand on `agents/top.md` (`P113-R`)** |
 
@@ -541,7 +628,7 @@ from this page's prior passes; this pass changed neither and added four columns.
 | [`huggingface/transformers`](https://github.com/huggingface/transformers) | 🟢 Apache-2.0 | 🟢 11 | 🟢 `checked` | py | 🔴 **0 / 1** | 🔴 **`floating`** |
 | [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🟡 AGPL-3 | 🟢 6 | 🟢 `checked` | py | 🔴 **0 / 1** | 🔴 **`floating`** |
 | [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🟡 GPL-2 | 🟢 6 | 🟡 `partial` | npm,php | 🟡 1 / 2 | 🟡 **`partial-pin`** |
-| [`lukeslp/awesome-accessibility`](https://github.com/lukeslp/awesome-accessibility) | 🟢 MIT | 🟢 6 | 🔵 `no-code` | — | — | 🔵 **`no-manifest`** |
+| [`lukeslp/awesome-accessibility`](https://github.com/lukeslp/awesome-accessibility) | 🟢 CC0-1.0 | 🟢 6 | 🔵 `no-code` | — | — | 🔵 **`no-manifest`** |
 
 🟢 **So the foundation layer of this KB, after three independent tests (bench, tree
 verification, tree closure), is **three repositories**: `moodle/moodle`,
@@ -580,12 +667,12 @@ is staffed, verifiable and reproducible at once:**
 | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | 🟢 broad | 🟢 2 959 | npm,py | North America |
 | [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🟡 GPL-3 | 🟡 small | 🟢 2 276 | npm,php,maven | EMEA (DE) |
 | [`temporalio/temporal`](https://github.com/temporalio/temporal) | 🟢 **MIT** | 🟢 broad | 🟢 1 208 | go | North America |
-| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🟡 AGPL-3 | 🟡 small | 🟢 770 | npm,php | North America |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 Elastic-2.0 (not OSS) | 🟡 small | 🟢 770 | npm,php | North America |
 | [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 **BSD-3** | 🟡 small | 🟢 757 | npm,py,php | North America |
 | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🟡 GPL-2 | 🟡 small | 🟢 469 | npm,php | LATAM (BR) |
 | [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 🟡 contested | 🟡 small | 🟢 304 | npm,ruby | APAC (IN) |
 | [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | 🟢 **MIT** | 🟡 small | 251 | npm,py | North America |
-| [`fwu-de/ais-chat`](https://github.com/fwu-de/ais-chat) | 🟢 **MIT** | 🟡 small | 201 | npm | EMEA (DE) |
+| [`fwu-de/ais-chat`](https://github.com/fwu-de/ais-chat) | 🔴 **AGPL-3.0** | 🟡 small | 201 | npm | EMEA (DE) |
 | [`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) | 🟢 **Apache-2.0** | 🟡 small | 150 | py | APAC (SG) |
 | [`ucfopen/UDOIT`](https://github.com/ucfopen/UDOIT) | 🟡 GPL-3 | 🟡 small | 18 | npm,php | North America |
 
@@ -670,7 +757,7 @@ Markdown list has a history exactly like a compiler does.**
 | [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🟡 AGPL-3 | 🟢 7 | 🟢 fresh 10 d | 🟢 **`checked`** | 🟢 235 | 7 · gha |
 | [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🟡 AGPL-3 | 🟢 6 | 🟢 fresh 2 d | 🟢 **`checked`** | 38 | 9 · gha+gitlab |
 | [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🟡 GPL-2 | 🟢 6 | 🟢 fresh 3 d | 🟡 **`partial`** | 🟢 577 | 4 · gha |
-| [`lukeslp/awesome-accessibility`](https://github.com/lukeslp/awesome-accessibility) | 🟢 MIT | 🟢 6 | 🟢 fresh 6 d | 🔴 **`no-code`** | 🔴 **0** | 🔴 **0** |
+| [`lukeslp/awesome-accessibility`](https://github.com/lukeslp/awesome-accessibility) | 🟢 CC0-1.0 | 🟢 6 | 🟢 fresh 6 d | 🔴 **`no-code`** | 🔴 **0** | 🔴 **0** |
 
 🔴 **`lukeslp/awesome-accessibility` is a curated link list: 46 authors, `bus_factor` 6,
 committed six days ago, **zero source files**. It is a perfectly good list and it was
@@ -701,10 +788,10 @@ set that is both staffed and verifiable:**
 | [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 BSD-3 | 🟢 16 | 🟢 1 025 | 9 · gha | North America |
 | [`oppia/oppia-android`](https://github.com/oppia/oppia-android) | 🟢 Apache-2.0 | 🟢 4 | 🟢 888 | 22 · gha | North America |
 | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT | 🟢 7 | 🟢 777 | 43 · gha | North America |
-| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🟡 AGPL-3 | 🟢 3 | 🟢 770 | 10 · gha | North America |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 Elastic-2.0 (not OSS) | 🟢 3 | 🟢 770 | 10 · gha | North America |
 | [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 BSD-3 | 🟢 5 | 🟢 757 | 13 · gha | North America |
 | [`portabilis/i-diario`](https://github.com/portabilis/i-diario) | 🟡 **contested** ※ | 🟢 5 | 🟢 616 | 2 · gha | 🟢 **LATAM** |
-| [`portabilis/i-educar`](https://github.com/portabilis/i-educar)  | 🟡 LGPL-3 | 🟢 3 | 🟢 469 | 2 · gha | 🟢 **LATAM** |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar)  | 🔴 GPL-2.0 | 🟢 3 | 🟢 469 | 2 · gha | 🟢 **LATAM** |
 | [`ed-fi-alliance-oss/Ed-Fi-ODS`](https://github.com/ed-fi-alliance-oss/Ed-Fi-ODS) | 🟢 Apache-2.0 | 🟢 3 | 🟢 423 | 26 · gha | North America |
 | [`microsoft/autogen`](https://github.com/microsoft/autogen) | 🟢 MIT | 🟢 4 | 🟢 306 | 12 · gha | North America |
 | [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 🟡 **contested** ※ | 🟢 4 | 🟢 304 | 3 · gha | APAC |
@@ -795,7 +882,7 @@ foundation:**
 | [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3 | 🟢 9 | 🟢 13 % | 319 | 🟢 fresh 7 d |
 | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT | 🟢 7 | 🟢 17 % | 249 | 🟢 fresh 1 d |
 | [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🟡 AGPL-3 | 🟢 7 | 🟢 13 % | 62 | 🟢 fresh 10 d |
-| [`lukeslp/awesome-accessibility`](https://github.com/lukeslp/awesome-accessibility) | 🟢 MIT | 🟢 6 | 🟢 29 % | 46 | 🟢 fresh 6 d |
+| [`lukeslp/awesome-accessibility`](https://github.com/lukeslp/awesome-accessibility) | 🟢 CC0-1.0 | 🟢 6 | 🟢 29 % | 46 | 🟢 fresh 6 d |
 | [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🟡 GPL-2 | 🟢 6 | 🟢 14 % | 47 | 🟢 fresh 3 d |
 | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 Apache-2.0 (ECL-2.0) | 🟢 6 | 🟢 21 % | 198 | 🟢 fresh 1 d |
 | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | 🟢 6 | 🟢 14 % | 37 | 🟢 fresh 0 d |
