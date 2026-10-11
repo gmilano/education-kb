@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-11
 ---
 
+# Education — trending agents (append-only log)
+
+## 2026-10-11 — Pass 130
+
+**A verification pass.** Instruments were re-tested before any row was written, and two of this
+KB's long-standing figures turned out to be wrong by large multiples.
+
+### Instrument finding — `curl -sI` cannot verify anything from this runner
+
+`curl -sI https://github.com/<repo>` returns **HTTP 403 for every URL**. A control request for the
+deliberately nonexistent `zzz-not-a-real-org-9981/zzz-not-real-9981` **also returned 403**, so the
+response carries no information about whether a repository exists. The `api.github.com/repos/...`
+path and the `gh` CLI search path are both blocked for out-of-scope repositories. **Only GitHub
+repo search and fetching the rendered repository page work.** Later passes should verify with repo
+search; the KB's standing `curl -sI` instruction is inoperative here and has been for an unknown
+number of passes.
+
+### Star-count corrections — both previously published figures were wrong
+
+| agent | this KB previously published | verified 2026-10-11 | error |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | ~22k★ (v54), ~24k★ (v65) | **41 136★** | understated ~1.7× |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | ~9k★ (v54), ~12k★ (v65) | **388★** | **overstated ~31×** |
+
+The educhain figure is the more damaging: a 12k-star project reads as a safe dependency, a
+388-star one does not. Its README's own version history also stops at **v0.3.13 (October 2024)** and
+it publishes no GitHub releases — the opposite of the "v0.4 YouTube→course" state recorded in v65.
+**Treat every star count in this KB predating pass 130 as unverified.**
+
+### Fork swarms resolved
+
+Web search returns **five-plus** repositories with a byte-identical `canvas-mcp` description, and
+two for `tutor-mcp`. GitHub repo search excludes forks by default; running it leaves exactly one of
+each standing:
+
+- canonical: [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) — MIT, 288★,
+  pushed 2026-10-11. The `YeetingWaterbottle`, `papatistos` and `fdis111` copies are forks; the
+  `fdis111` one still advertises "80+ tools, v1.1.0" as current.
+- canonical: [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) — MIT, 44★,
+  Go, pushed 2026-10-10. `kvnloo/tutor-mcp` is a fork, and is the one web search surfaces first.
+
+### New to the shelf this pass
+
+| agent | licence | stars | note |
+|---|---|---|---|
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | **NOASSERTION** | 847 | 165 evidence-grounded education agent skills — pedagogy, learning science, curriculum, assessment. The most-starred education agent-skills collection found, and the licence does not resolve to an OSI identifier. |
+| [`Berserk-hub150/moodle-ai-skill-navigator`](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | GPL-3.0 | 222 | Most-starred in-Moodle AI plugin found: tutoring, quizzes, mind maps, RAG over course materials. |
+| [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | CC0-1.0 | 133 | WWW 2025 industry-track multi-agent goal-oriented ITS. |
+| [`SaadRahman01/claude-moodle-dev`](https://github.com/SaadRahman01/claude-moodle-dev) | MIT | 39 | Agent skills for *building* Moodle plugins (XMLDB, Hooks, Behat, GDPR, a11y). |
+| [`ideas-edu/ideas`](https://github.com/ideas-edu/ideas) | Apache-2.0 | 28 | **EMEA (Utrecht University)** — deterministic step-level feedback reasoners for maths/logic. Defensible where LLM free-text is not. |
+| [`onbirdev/moodle-webservice_mcp`](https://github.com/onbirdev/moodle-webservice_mcp) | **none** | 17 | MCP as a Moodle web-service plugin, listed on marketplace.moodle.com. Architecturally the cleanest Moodle→MCP route; **published with no licence**. |
+| [`saylordotorg/moodle-local_ai_course_assistant`](https://github.com/saylordotorg/moodle-local_ai_course_assistant) | GPL-3.0 | 16 | **North America** — Saylor Academy's "SOLA" learning coach. A real institutional deployment, not a demo. |
+| [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli) | ISC | 11 | **LATAM (Peru, UPC)** — the only Blackboard connector and the only LATAM-origin education agent found. |
+| [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) | AGPL-3.0 | 2 | Only Open edX MCP path found. Experimental. |
+
+### Ecosystem event
+
+**Open edX announced an official MCP integration** (openedx.org blog, ~2 weeks before this pass):
+two packages — a Django app inside LMS/CMS and a Tutor plugin — **AGPL-3.0**, initial release
+targeting the **Ulmo** release. This is the first *first-party* platform MCP commitment in
+education and makes Open edX the second platform after Canvas with a sanctioned agent surface.
+
+### Declared gaps this pass
+
+- **No education-specific agent-evaluation or learning-outcome benchmark exists.** Searched; found
+  nothing. Largest hole on the shelf.
+- **No permissively licensed Moodle MCP server**, despite Moodle being the most deployed LMS.
+- **No student-information-system agent** — no enrolment, records or timetabling agent in open
+  source, though administrative automation is the most-cited adoption driver.
+- **No AI agent on top of Kolibri** (MIT, offline-first) — the clearest unclaimed slot.
+- **LATAM supply remains one repository at 11 stars.** An informed gap, not an absence of demand.
+
+---
+
+# History (passes 1–129 below)
+
 ## 🟢 Pass 129 — 2026-10-11 (sixteenth pass of this date), 14:4x–15:3x UTC
 
 🔵 **APPEND-ONLY page. This section is added above p128's and nothing below it is edited.**

@@ -4,6 +4,92 @@ region: Global
 updated: 2026-10-11
 ---
 
+# Education — trending repos (append-only log)
+
+## 2026-10-11 — Pass 130
+
+**The headline is a rename this KB has been getting wrong.**
+
+### `edx-platform` is now `openedx-platform`
+
+The canonical repository is [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform)
+— **AGPL-3.0, 8 195★, pushed 2026-10-10**. The old `openedx/edx-platform` URL still resolves, and
+the README states the project was *"formerly known as edx-platform"*. Every earlier pass of this KB
+cites the old path, including the tag-count tables of passes 108–129. **Write the new name.**
+
+### `moodle/moodle` on GitHub is a mirror, not the development repo
+
+The page identifies itself as a **public mirror of `git.moodle.org`**. It publishes **no GitHub
+releases and no tags**, and pull requests are not accepted there; contribution goes through
+Moodle's own tracker and git server. Verified: **GPL-3.0, 7 473★**.
+
+This also retires a whole line of inquiry from passes 108–129, which spent several passes
+reconciling `git ls-remote --tags` counts for `moodle/moodle` and `openedx/edx-platform`. Tag counts
+on a mirror that publishes no releases are not a meaningful measure of release cadence for either
+project, whichever way they are counted.
+
+### Platform activity census (verified `pushed_at`, 2026-10-11)
+
+| repo | licence | stars | last push | signal |
+|---|---|---|---|---|
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | LGPL-3.0 | 9 241 | 2026-10-10 | active |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | AGPL-3.0 | 8 195 | 2026-10-10 | active |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | GPL-3.0 | 7 473 | 2026-10-09 | active (mirror) |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | AGPL-3.0 | 6 863 | **2026-04-30** | 🔴 **~5 months quiet — the only major platform not pushed this month** |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | **Apache-2.0** | 6 845 | 2026-10-11 | active |
+| [`frappe/lms`](https://github.com/frappe/lms) | AGPL-3.0 | 3 299 | 2026-10-11 | active |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | AGPL-3.0 | 2 336 | 2026-10-11 | active |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | AGPL-3.0 | 1 717 | 2026-10-11 | active |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | **ECL-2.0** | 1 237 | 2026-10-09 | active |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | 1 141 | 2026-10-10 | active |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | AGPL-3.0 | 1 127 | 2026-10-08 | active |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | GPL-3.0 | 1 009 | 2026-10-10 | active |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | **NOASSERTION** | 886 | 2026-10-09 | active, licence unresolved |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | GPL-3.0 | 505 | 2026-10-10 | active |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | **NOASSERTION** | 447 | 2026-10-09 | active, licence unresolved |
+
+**Canvas going quiet is the one to watch.** It is the platform every education MCP connector
+targets, and it is the least recently pushed major platform in the census. Re-check next cycle
+before recommending it as an actively developed base.
+
+### The permissive shortlist — worth stating because it is so short
+
+Education platforms are overwhelmingly copyleft. Verified permissive this pass:
+**[`oppia/oppia`](https://github.com/oppia/oppia)** (Apache-2.0, 6 845★ — the only major platform a
+client can fork into a closed product), **[`sakaiproject/sakai`](https://github.com/sakaiproject/sakai)**
+(ECL-2.0 — Apache-2.0 with an educational-community patent clause, routinely misread as
+restrictive), **[`learningequality/kolibri`](https://github.com/learningequality/kolibri)** (MIT),
+**[`academico-sis/academico`](https://github.com/academico-sis/academico)** (MIT, 404★),
+**[`openfun/richie`](https://github.com/openfun/richie)** (MIT, 316★),
+**[`jcputney/scorm-again`](https://github.com/jcputney/scorm-again)** (MIT, 354★),
+**[`openedx/XBlock`](https://github.com/openedx/XBlock)** (Apache-2.0, 470★) and
+**[`openedx/codejail`](https://github.com/openedx/codejail)** (Apache-2.0, 476★).
+
+Note the asymmetry inside Open edX: the **platform is AGPL-3.0 but XBlock and codejail are
+Apache-2.0**, which makes a custom XBlock the lowest-friction way to put AI inside Open edX without
+inheriting network copyleft.
+
+### Two licences that do not resolve
+
+`openeducat/openeducat_erp` (886★, the closest thing to an open-source student information system)
+and `OpenOLAT/OpenOLAT` (447★) both read as **NOASSERTION** to GitHub. Both are otherwise
+attractive — OpenEduCat is the only ERP-shaped option in the KB. **Terms must be read before any
+client commitment.**
+
+### Declared gaps this pass
+
+- **No permissively licensed, full-featured LMS at Moodle/Canvas scale.** Oppia and Sakai are the
+  permissive options; neither is a drop-in replacement.
+- **No open-source student information system of record.**
+- **No open-source proctoring or academic-integrity system**, in the year assessment integrity
+  became the top institutional concern and EU rules will class such systems as high-risk.
+- **No open-source LMS market-share data by region.** Platform-share claims in `intel/market.md`
+  come from vendor and roundup sources, not measurement.
+
+---
+
+# History (passes 1–129 below)
+
 ## 🟢 Pass 129 — 2026-10-11 (sixteenth pass of this date), 14:4x–15:3x UTC
 
 🔵 **APPEND-ONLY page. This section is added above p128's and nothing below it is edited.**

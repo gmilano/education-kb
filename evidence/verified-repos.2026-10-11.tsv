@@ -1,0 +1,42 @@
+full_name	stars	license	last_push	language	fork	region_origin	region_evidence
+HKUDS/DeepTutor	41136	Apache-2.0	2026-10-08	Python	false	APAC	HKUDS = Univ. of Hong Kong data-science group
+GarethManning/education-agent-skills	847	NOASSERTION	2026-08-28	TypeScript	false	unplaced	no location evidence read
+satvik314/educhain	388	MIT	2026-10-09	Python	false	unplaced	no location evidence read
+Sri-Krishna-V/awesome-adk-agents	348	Apache-2.0	2026-10-11	Python	false	unplaced	no location evidence read
+vishalsachdev/canvas-mcp	288	MIT	2026-10-11	Python	false	unplaced	canonical of canvas-mcp fork swarm
+CAHLR/OATutor	264	MIT	2026-10-11	JavaScript	false	North America	CAHLR lab, UC Berkeley
+Berserk-hub150/moodle-ai-skill-navigator	222	GPL-3.0	2026-09-29	PHP	false	unplaced	no location evidence read
+GeminiLight/gen-mentor	133	CC0-1.0	2026-10-08	TypeScript	false	unplaced	WWW'25 industry-track paper
+DMontgomery40/mcp-canvas-lms	103	NONE	2026-05-31	TypeScript	false	unplaced	no LICENSE file present
+ArnaudGuiovanna/tutor-mcp	44	MIT	2026-10-10	Go	false	unplaced	canonical; kvnloo/tutor-mcp absent from fork-excluding search
+SaadRahman01/claude-moodle-dev	39	MIT	2026-06-22	Python	false	unplaced	no location evidence read
+ideas-edu/ideas	28	Apache-2.0	2026-09-05	Haskell	false	EMEA	homepage ideas.cs.uu.nl = Utrecht University, NL
+onbirdev/moodle-webservice_mcp	17	NONE	2026-07-23	PHP	false	unplaced	no license field; listed on marketplace.moodle.com
+saylordotorg/moodle-local_ai_course_assistant	16	GPL-3.0	2026-10-10	PHP	false	North America	Saylor Academy, US
+alejooroncoy/campus-cli	11	ISC	2026-10-11	TypeScript	false	LATAM	own description: "UPC Aula Virtual" (Univ. Peruana de Ciencias Aplicadas, Peru)
+bruchris/canvas-lms-mcp	9	MIT	2026-10-10	Python	false	unplaced	no location evidence read
+blend-ed/openedx-mcp	2	AGPL-3.0	2026-08-28	Python	false	unplaced	no location evidence read
+bigbluebutton/bigbluebutton	9241	LGPL-3.0	2026-10-10	JavaScript	false	North America	Blindside Networks, Canada
+openedx/openedx-platform	8195	AGPL-3.0	2026-10-10	Python	false	North America	Axim Collaborative / Open edX, US
+moodle/moodle	7473	GPL-3.0	2026-10-09	PHP	false	APAC	Moodle HQ, Perth, Australia; GitHub repo is a mirror of git.moodle.org
+instructure/canvas-lms	6863	AGPL-3.0	2026-04-30	Ruby	false	North America	Instructure Inc., US
+oppia/oppia	6845	Apache-2.0	2026-10-11	Python	false	Global	Oppia Foundation, distributed contributor base
+frappe/lms	3299	AGPL-3.0	2026-10-11	TypeScript	false	APAC	Frappe Technologies, India
+learnhouse/learnhouse	2336	AGPL-3.0	2026-10-11	Python	false	unplaced	no location evidence read
+classroomio/classroomio	1717	AGPL-3.0	2026-10-11	TypeScript	false	unplaced	no location evidence read
+sakaiproject/sakai	1237	ECL-2.0	2026-10-09	Java	false	North America	Apereo Foundation, US
+codelitdev/courselit	1273	AGPL-3.0	2026-10-09	TypeScript	false	unplaced	no location evidence read
+overhangio/tutor	1127	AGPL-3.0	2026-10-08	Python	false	EMEA	Overhang.IO, France
+learningequality/kolibri	1141	MIT	2026-10-10	Python	false	Global	Learning Equality, US-based; built for offline/global deployment
+chamilo/chamilo-lms	1009	GPL-3.0	2026-10-10	PHP	false	EMEA	Chamilo Association, Belgium
+openeducat/openeducat_erp	886	NOASSERTION	2026-10-09	HTML	false	APAC	OpenEduCat, India
+ILIAS-eLearning/ILIAS	505	GPL-3.0	2026-10-10	PHP	false	EMEA	ILIAS open source e-Learning e.V., Germany
+openedx/codejail	476	Apache-2.0	2026-10-05	Python	false	North America	Open edX org
+openedx/XBlock	470	Apache-2.0	2026-10-11	Python	false	North America	Open edX org
+OpenOLAT/OpenOLAT	447	NOASSERTION	2026-10-09	Java	false	EMEA	frentix GmbH, Switzerland
+oppia/oppia-android	418	Apache-2.0	2026-10-09	Kotlin	false	Global	Oppia Foundation
+academico-sis/academico	404	MIT	2026-10-07	PHP	false	unplaced	no location evidence read
+jcputney/scorm-again	354	MIT	2026-10-09	TypeScript	false	unplaced	no location evidence read
+openfun/richie	316	MIT	2026-10-11	Python	false	EMEA	France Universite Numerique (openFUN), France
+h5p/h5p-interactive-video	263	MIT	2026-10-02	JavaScript	false	EMEA	H5P / Joubel, Norway
+learningequality/studio	192	MIT	2026-10-10	Python	false	Global	Learning Equality content curation for Kolibri
