@@ -22,6 +22,97 @@ education-kb/
 └── compose/code/  # Código ejecutable y probado, no prosa
 ```
 
+## Pass 120 — 2026-10-11
+
+⏱️ **Seventh pass of this date** (p114 23:54→00:25, p115 01:13→01:25, p117 02:45→03:0x,
+p118 03:4x→04:2x, p119 04:3x→05:2x, this census window **05:3x → 06:2x UTC**). 🔵 **This block
+jumps from `Pass 118` because the README's pass log had again fallen behind the eight content
+pages — recorded rather than back-filled, as p118 and p115 did for the same reason.**
+
+🟢 **Twelfth axis in twelve passes: `ACTION J` exactly as p119 pre-registered it — *resolve the
+remaining `UNREAD` + permissive-claim addresses*. Discharged over all 22, with p119's four
+`ACTION F` answers reproduced from scratch as a control.**
+
+🟢 **Instrument: `compose/code/p120-unread-grant-resolution/` — `test_p120.sh` **55 passed / 0
+failed**, fully offline against 52 licence files captured this pass.**
+
+| measure | value |
+|---|---|
+| addresses resolved | 🟢 **22 / 22**, none left `UNKNOWN` |
+| licence paths probed | **462** (22 per address, on the **measured** default branch) |
+| probes returning a file | **52** · 🔴 **410 were `http=404`** |
+| resolution tiers needed | 🟢 **5** — file · README-named path · ecosystem manifest · author claim · nothing |
+| 🔴 **addresses with NO grant** | 🔴 **9 / 22 (41 %)** — 5 with no file anywhere, 4 with only an author's claim |
+| 🔴 **published cells repaired** | 🔴 **7**, across 5 pages |
+| rows read and left alone as already correct | 🟢 **11** |
+| p119 answers reproduced as a control | 🟢 **4 / 4** |
+
+### 🔴 The pass's findings
+
+- 🔴 **`P120-A`** — [`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce)
+  (126★), published here as 🟢 MIT, commits a **proprietary Chinese EULA**: non-commercial use
+  only, commercial use forbidden without a purchased licence, a mandatory *"Powered by"* footer,
+  and 🔴 **derivative versions for redistribution forbidden outright**. Worse for a studio than
+  p119's €100 000 `leemons`, because there is no price to budget — only an e-mail address.
+- 🔴 **`P120-J`** — the `UNREAD` pile is not mostly hard-to-read grants. **9 of 22 are ABSENT
+  grants**, and a repository with no licence file is all rights reserved by default.
+- 🔴 **Badges** — three audited addresses render a green `MIT` shield whose link target **404s**;
+  a fourth renders `License: Open Source`, which names no licence.
+- 🔴 **`P120-Q`** — a package manifest is not evidence: `leemons` declares `MIT` in `package.json`
+  while billing €100 000; `learnpress` declares `ISC` while being GPL-3.0.
+- 🔴 **`P120-REGION`** — `### LATAM` and `### Global` had been **orphaned** from the canonical
+  `## Opportunities by region` block by two p118 sections inserted between the regions. All five
+  `###` are children of it again; no region prose edited, line count unchanged.
+  🔴 `p383-region-heading-gate` could not see it: it counts headings, not nesting, and enumerates
+  four regions where the brief's vocabulary has five.
+- 🟢 **`P120-R`** — five R-ecosystem autograders were right all along and only ever **unmeasured**
+  (CRAN commits a 45-byte stub as `LICENSE`): `ggcheck`, `tblcheck`, `tna`, `educabR` all **MIT**,
+  `ottr` **BSD-3**. Plus `Ed-Fi-Data-Standard` **Apache-2.0**, read from its default branch — the
+  **tag `v6.2.0`**.
+- 🟢 **Two platforms resolved out of the doubtful column**: `OS4ED/openSIS-Classic` **GPL-2.0**
+  (grant at `docs/License.txt`) and `LearnPress/learnpress` **GPL-3.0** (declared in the WordPress
+  `readme.txt` plugin header, which no filename probe reaches).
+
+### Pre-registered actions, judged on their own clauses
+
+| action | verdict |
+|---|---|
+| `ACTION J` | 🟢 **DISCHARGED, not refuted** — 4 of the 22 resolve to a non-permissive grant, against a clause of 3. Its *premise* (follow the prose index) covered 7 of 22; five tiers were needed |
+| `ACTION K` | 🟡 **DISCHARGED on its mechanism, clause NOT met** — 22 claim rows carrying a source-available token had left the census entirely and are visible again. The clause measured a full `ACTION E` re-run this pass did not perform, and is recorded unmet rather than reinterpreted |
+| `ACTION L` | 🔴 **REFUTED on its premise** — 13 of 17 licence defects sit **below** 78 % page depth, and the costliest sits at **2.0 %**. p119's depth correlation is real for star counts and does not generalise to licences |
+| `ACTION M` | 🔵 **not attempted this pass** — stated rather than silently dropped |
+
+🔵 **Why `ACTION L` failed, which is the pass's most portable lesson.** `FWU-DE/ais-chat` is
+AGPL-3.0; p117 measured it and correction tables on **two** pages publish it. Those tables name
+the superseded value as *"was MIT"*. The stale cell's value was **Apache-2.0**. 🔴 **A repair
+keyed on the wrong value you expect to find cannot fix a row that is wrong in a different way** —
+so the error sat ~65 lines from its own correction, at the top of the most-read page, for three
+passes.
+
+### 🔴 The search channel, fifth consecutive zero
+
+All eight mandated searches ran — four global, one per region. **Zero new addresses, zero new
+regulation tokens**; 14 tokens checked against the tree, 14 already held (`Digital Omnibus`,
+Korea's `AI Basic Act`, Vietnam's AI Law, Taiwan's AI Basic Act, `H.R. 8747`, `AB 1159`,
+`SB 1227`, `SB 1546`, `CONPES 4144`, UNESCO `IESALC`, the LAC Observatory, `TALIS`, the NYC
+moratorium, the OECD *Digital Education Outlook*). Ledger: p117 — 4/13 · p118 — 0/15 ·
+p119 — 0/19 · **p120 — 0/14**. 🔵 **Stated as a position: the public-web channel is exhausted for
+this industry at this cadence, and measurement of what is held now beats discovery of what is
+not.**
+
+### Pre-registered for p121
+
+🟢 **`ACTION N`** — probe the other **227** addresses for tier-4 and tier-5 shapes. 🔴 *Refuted if
+fewer than 10 are ungranted or author-claim-only.*
+🟢 **`ACTION O`** — anchor `MIT` and every bare token in the claim-side alternation on word
+boundaries, then re-run the full `ACTION E` sweep. 🔴 *Refuted if the claim count moves by fewer
+than 3.*
+🟢 **`ACTION P`** — sweep every `was X` marker against the OTHER pages' values for the same
+address. 🔴 *Refuted if no second address carries a stale token differing from the one its own
+correction table names.*
+🟢 **`ACTION Q`** — read the licence of every address whose `package.json`, `composer.json` or
+`pyproject.toml` declares one, and count the contradictions. 🔴 *Refuted if fewer than 15 % differ.*
+
 ## Pass 118 — 2026-10-11
 
 ⏱️ **Fifth pass of this date** (p114 23:54→00:25, p115 01:13→01:25, p117 02:45→03:0x, this

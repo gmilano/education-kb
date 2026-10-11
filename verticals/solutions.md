@@ -6,11 +6,87 @@ updated: 2026-10-11
 
 # Education — vertical platforms
 
-**Pass 119, 2026-10-11.** ⏱️ **Sixth pass of this date** (window **04:3x → 05:2x UTC**).
+**Pass 120, 2026-10-11.** ⏱️ **Seventh pass of this date** (window **05:3x → 06:2x UTC**).
 
-🟢 **Instrument: `compose/code/p119-carried-column-audit/`, discharging `ACTIONS F, G, H, I`.
-This page carried **3** of the 7 wrong star cells — more than any other — and **1** of the rows
-needing an `ARCHIVED` marker. All repaired in this commit.**
+🟢 **Instrument: `compose/code/p120-unread-grant-resolution/`, discharging `ACTIONS J, K, L`.
+`test_p120.sh` **55 passed / 0 failed**, fully offline. This page carried **2** of the 7 cells
+repaired in this commit — both for the same platform, and both the worst kind of error this KB
+can make.**
+
+## 🔴 🆕 `P120-A` — this shelf published a proprietary Chinese EULA as 🟢 MIT
+
+🔴 **[`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce)
+(126★, 云学习系统) was 🟢 MIT in two cells on this page. Its root `LICENSE` on the default
+branch `master` is 4 117 B of proprietary end-user agreement containing ZERO occurrences of any
+OSI licence name.** Read from the file:
+
+| clause | text, as committed |
+|---|---|
+| reservation | 版权所有 (c) 2021，猿究生 · **保留所有权利** — *all rights reserved* |
+| §1.1 | free use for **non-commercial** purposes only, no licence fee |
+| 🔴 §2.1 | **commercial use forbidden** without a purchased licence — *"企业网站、经营性网站、以营利为目或实现盈利的网站"* (enterprise sites, operating sites, profit-making sites). Purchase is by e-mail |
+| §2.2 | no renting, selling, pledging or **sublicensing** |
+| §2.3 | the page footer *"Powered by cloud-learning ©2021 猿究生"* **must be retained**, unmodified, however much of the code is used |
+| 🔴 §2.5 | **derivative, modified or third-party versions for redistribution are forbidden** |
+| §2.6 | breach terminates the grant and reclaims the rights |
+| §3.4 | the licensor may change the terms **and the price list** without prior notice |
+
+🔴 **For a studio this is categorically worse than `leemons`, which p119 found on the
+foundations shelf.** `leemons` is expensive and therefore budgetable: €100 000 past 1 000 users,
+plus 5 %. This one is **unusable at any price the file names** — §2.5 forbids the derivative work
+that customisation *is*, §2.1 forbids the commercial deployment that an engagement *is*, and
+§3.4 means today's terms are not tomorrow's. 🔴 **Both cells are repaired in this commit and the
+platform should be treated as closed source with public code.**
+
+🔵 **Why no sweep could have caught it.** p118's classifier detects source-available licences **by
+name** — Elastic, BUSL, SSPL, Commons Clause, PolyForm. A bespoke one-off document has no name to
+match, so it fell through to `UNKNOWN`, then `UNREAD`, where p118's own `P118-K` warned that
+*absence of a licence reads as permission*. 🟢 **p120's classifier matches restriction SEMANTICS
+instead — reserved rights, a non-commercial clause, a fee trigger — and requires two independent
+signals, because every BSD-3 licence contains the words "All rights reserved" and a one-signal
+threshold would have condemned every BSD repo in this KB.** That guard is asserted in the suite
+against real BSD, MIT, Apache and AGPL files.
+
+## 🟢 🆕 `P120-P` — two platforms moved OUT of the doubtful column, both by reading what the repo pointed at
+
+| platform | ★ | default branch | what p120 established |
+|---|---|---|---|
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 345 | `master` | 🟢 **GPL-2.0 confirmed** — the grant is at **`docs/License.txt`** (17 286 B), a path no root probe reaches. The README names it; following the README was the entire measurement |
+| [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | 275 | `develop` | 🟢 **GPL-3.0 resolved**, after this page carried *"🔴 unknown — do not assume GPL"* for several passes |
+
+🟢 **This page was right to leave `learnpress` open, and right about the mechanism.** A row below
+hypothesised that *"WordPress plugins declare their grant in a PHP header comment, which filename
+probing cannot see."* 🔵 **Right in kind, wrong in detail** — the declaration is in
+**`readme.txt`**, the WordPress plugin header, a file nobody probes for a licence because it is
+not named like one:
+
+| channel | says |
+|---|---|
+| `readme.txt` (WP plugin header) | 🟢 **`License: GPLv3`** + `License URI: gnu.org/licenses/gpl-3.0.html` |
+| `composer.json` | 🟢 **`GPL-3.0-or-later`** |
+| 🔴 `package.json` | 🔴 **`ISC`** — `npm init` boilerplate contradicting both |
+| any conventional licence file | 🔴 **absent at every probed path** |
+
+🔴 **`P120-Q`: a package manifest is not evidence of a licence.** 2 of the 4 audited addresses
+with a manifest `license` field contradict their own committed licence file —
+`learnpress` (ISC vs GPL-3.0) and, far worse, **[`leemonade/leemons`](https://github.com/leemonade/leemons),
+whose `package.json` says 🟢 `MIT` while its `LICENSE.md` bills €100 000.** The field was given
+no weight in any tier of this pass's resolution. 🟢 **`ACTION Q` is pre-registered to count the
+contradiction rate across the whole shelf.**
+
+## 🟡 🆕 `P120-C` — two cells on this page were never wrong, and the instrument said they were
+
+🟡 **p118's claim-side alternation matches `MIT` with no word boundary, so it matches inside
+`COMMITTED`.** Two rows on this page reading *"the dependency tree is **COMMITTED**"* — for
+[`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) and
+[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) — were counted as claiming
+MIT, and the first run of this pass's scorer reported both as licence defects. **Both rows are
+entirely correct and are untouched.**
+
+🟡 **2 of 461 MIT claims, 0.4 % — weak in magnitude, and recorded for its direction.** Every
+other defect this KB hunts is a published cell that is wrong; this is the instrument manufacturing
+a wrong cell out of a right one, which is how a census stops being trusted. 🟢 **`ACTION O` is
+pre-registered to anchor every bare token and re-run the full sweep.**
 
 ## 🔴 🆕 `P119-H` — the platform shelf's star column was rounded, not measured, below the fold
 
@@ -668,7 +744,7 @@ today?**
 | [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 BSD-3 | 🟢 `checked` | maven | — | 🟡 `self-pinned` | 🟡 **direct versions literal, transitives resolved** |
 | [`kuali/rice`](https://github.com/kuali/rice) | 🟢 ECL-2.0 | 🟡 `tests-only` | maven | — | 🟡 `self-pinned` | 🟡 **1 791 tests; supply a pipeline** |
 | [`project-sunbird/sunbird-lms-service`](https://github.com/project-sunbird/sunbird-lms-service) | 🟢 MIT | 🟢 `checked` | maven | — | 🟡 `self-pinned` | 🟡 **19 deployment artefacts on resolved transitives** |
-| [`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce) | 🟢 MIT | 🔴 `bare` | maven | — | 🟡 `self-pinned` | 🔴 **671 source files, nothing verifies them** |
+| [`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce) | 🔴 **proprietary EULA — NOT OSS** ⚠️ **was 🟢 MIT** | 🔴 `bare` | maven | — | 🟡 `self-pinned` | 🔴 **671 source files, nothing verifies them** |
 | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🟡 GPL-2 | 🔴 `fossil-ci` | php | 🔴 0 / 1 | 🟢 **`vendored`** | 🟢 **upgraded — deps COMMITTED, suite runnable offline** |
 | [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | 🟡 GPL-3 | 🟡 `partial` | npm,php | 🔴 0 / 2 | 🟢 **`vendored`** | 🟡 **no lock, but the tree is complete** |
 | [`atutor/ATutor`](https://github.com/atutor/ATutor) | 🟡 GPL-3 ‡ | 🟡 `tests-only` | php | 🔴 0 / 1 | 🟢 **`vendored`** | 🟡 **no lock, but the tree is complete** |
@@ -759,7 +835,7 @@ broke?**
 | [`elmsln/elmsln`](https://github.com/elmsln/elmsln) | 🔴 GPL-3.0 | 🔴 **1** | — | 🟢 **1 996** | 34 · 🔴 **travis** | 🔴 **`fossil-ci`** | 🔴 **34 configs, none of them run** |
 | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🟡 GPL-2 | 🔴 **1** | 🟢 fresh 1 d | 🔴 **0** | 🔴 **0** | 🔴 **`bare`** | 🔴 **603 source files, nothing verifies them** |
 | [`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud) | 🟡 **contested** ※ | 🔴 **1** | 🟢 fresh 1 d | 5 | 🔴 **0** | 🟡 `tests-only` | 🔴 **one person, 5 test files** |
-| [`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce) | 🟢 MIT | 🔴 **1** | — | 🔴 **0** | 🔴 **0** | 🔴 **`bare`** | 🔴 **671 source files, nothing verifies them** |
+| [`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce) | 🔴 **proprietary EULA — NOT OSS** ⚠️ **was 🟢 MIT** | 🔴 **1** | — | 🔴 **0** | 🔴 **0** | 🔴 **`bare`** | 🔴 **671 source files, nothing verifies them** |
 
 🔵 **Licences and bench figures are carried from this page's prior passes; this pass
 changed neither and added three columns.**

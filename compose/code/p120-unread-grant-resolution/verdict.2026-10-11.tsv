@@ -1,0 +1,22 @@
+1EdTech/openbadges-specification	develop	NO-GRANT-FOUND	tier5:none
+FWU-DE/ais-chat	main	AGPL-3.0	tier1:file:LICENSE
+Gnanakamalesh-M/student-dropout-early-warning	main	AUTHOR-CLAIM-NO-FILE	tier4:README-prose
+LearnPress/learnpress	develop	MANIFEST:GPLv3	tier3:wp-readme.txt
+OS4ED/openSIS-Classic	master	GPL-2.0	tier2:readme-named-file:docs/License.txt
+Zion-support/curriculum-alignment-checker	main	NO-GRANT-FOUND	tier5:none
+bncc-dev/bncc-benchmark	main	SPLIT-GRANT:LICENSE-CODIGO.md=MIT + LICENSE-DADOS.md=CC-BY	tier1b:sibling-files
+cezarc/EPESI	master	AUTHOR-CLAIM-NO-FILE	tier4:README-prose
+Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard	v6.2.0	Apache-2.0	tier1:file:LICENSE
+kaushal0494/AITutor-EvalKit	main	AUTHOR-CLAIM-DANGLING-POINTER	tier4:README-prose
+learning-commons-org/evaluators	main	PROSE-INDEX-NONCOMMERCIAL-TIER:CC BY 4.0+CC BY-NC-SA 4.0+MIT	tier1c:prose-index:LICENSE.md
+learning-commons-org/knowledge-graph	main	PROSE-INDEX:CC BY 4.0+CC0+MIT	tier1c:prose-index:LICENSE.md
+leemonade/leemons	main	PROPRIETARY-UNNAMED-NOT-OSS:restriction-signals=3	tier1:file:LICENSE.md
+lovejzzz/CourseMapper	main	NO-GRANT-FOUND	tier5:none
+qed42/ai-accessibility-checker	main	AUTHOR-CLAIM-DANGLING-POINTER	tier4:README-prose
+rstudio/ggcheck	main	MIT	tier1:file:LICENSE.md
+rstudio/tblcheck	main	MIT	tier1:file:LICENSE.md
+SidneyBissoli/educabR	main	MIT	tier1:file:LICENSE.md
+sonsoleslp/tna	main	MIT	tier1:file:LICENSE.md
+ucbds-infra/ottr	master	BSD	tier1:file:LICENSE.md
+xGabrielCv/Auto-Matricula-SIGAA-UnB	main	AUTHOR-CLAIM-DANGLING-POINTER	tier4:README-prose
+yuanjiusheng/cloud-learning-ce	master	PROPRIETARY-UNNAMED-NOT-OSS:restriction-signals=4	tier1:file:LICENSE

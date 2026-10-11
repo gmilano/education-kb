@@ -1,0 +1,51 @@
+Package: tblcheck
+Title: Grade Tables in Learning Exercises
+Version: 0.3.1
+Authors@R: c(
+    person("Alexander", "Rossell Hayes", , "alex.rossellhayes@rstudio.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-9412-0457")),
+    person("Garrick", "Aden-Buie", , "garrick@rstudio.com", role = "aut",
+           comment = c(ORCID = "0000-0002-7111-0077")),
+    person("Sara", "Altman", , "sara.altman@rstudio.com", role = "ctb",
+           comment = c(ORCID = "0000-0002-2529-5680")),
+    person(, "RStudio, PBC", role = c("cph", "fnd"))
+  )
+Description: 'tblcheck' extends 'gradethis' with functions that inspect
+    data frame or tibble objects to make it easier for teachers to check
+    that student tables meet expectations.
+License: MIT + file LICENSE
+URL: https://pkgs.rstudio.com/tblcheck,
+    https://github.com/rstudio/tblcheck
+BugReports: https://github.com/rstudio/tblcheck/issues
+Imports:
+    checkmate,
+    dplyr,
+    ellipsis,
+    glue,
+    gradethis (>= 0.2.7.9000),
+    knitr,
+    lifecycle,
+    magrittr,
+    methods,
+    purrr,
+    rlang,
+    tidyselect,
+    utils,
+    vctrs
+Suggests:
+    learnr,
+    lubridate,
+    mockery,
+    rmarkdown,
+    testthat (>= 3.0.0),
+    tibble
+VignetteBuilder: 
+    knitr
+Remotes: 
+    rstudio/gradethis
+Config/Needs/learnr: rstudio/learnr, rstudio/gradethis
+Config/Needs/website: pkgdown, tidyverse/tidytemplate, forcats, stringr
+Config/roxygen2/version: 8.0.0
+Config/testthat/edition: 3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)

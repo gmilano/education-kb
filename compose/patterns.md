@@ -6,11 +6,117 @@ updated: 2026-10-11
 
 # Education — compose patterns
 
-**Pass 119, 2026-10-11.** ⏱️ **Sixth pass of this date** (window **04:3x → 05:2x UTC**).
+**Pass 120, 2026-10-11.** ⏱️ **Seventh pass of this date** (window **05:3x → 06:2x UTC**).
 
-🟢 **Instrument: `compose/code/p119-carried-column-audit/`. `test_p119.sh` **43 passed / 0
-failed**, offline. This page carried **2** of the licence cells this pass retracts, and one of
-them was inside a RECOMMENDATION — the exact defect `P118-PAT-0` pre-registered as `ACTION I`.**
+🟢 **Instrument: `compose/code/p120-unread-grant-resolution/`, discharging `ACTIONS J, K, L`.
+`test_p120.sh` **55 passed / 0 failed**, fully offline. This page carried **1** of the 7 cells
+repaired in this commit — a 🟢 token on an UNGRANTED repository, inside a recommendation, which is
+exactly the defect `P119-PAT-0` pre-registered.**
+
+## 🔴 🆕 `P120-PAT-0` — the green token inside a recommendation, for the third pass running
+
+🔴 **Pattern 2's integration boundary recommended
+[`1EdTech/openbadges-specification`](https://github.com/1EdTech/openbadges-specification) with a
+🟢 token. That repository carries no licence file at any of 22 probed paths on its default branch
+`develop`, and its README names no licence.**
+
+🔵 **`P119-PAT-0` predicted this shape and the prediction held a second time.** Its lesson was
+that a licence token and the recommendation built on it are different cells, so a token-level
+repair does not propagate. 🔴 **p120 adds the third layer: the recommendation's token was not
+wrong, it was EMPTY — and an empty grant renders as 🟢 because nothing distinguishes "permissive"
+from "unmeasured" in a single glyph.**
+
+🟢 **Repaired in this commit**, and the row now names the grant rather than colouring it:
+the specification text is governed by 1EdTech membership IPR, the **validator** is Apache-2.0, and
+the pattern cites the validator.
+
+## 🟢 🆕 `P120-PAT-1` — licence-provenance gate at engagement intake (2–3 days)
+
+🔵 **Why this pattern exists: 9 of 22 addresses this KB published as permissive carry no grant, and
+3 of them render a green MIT badge.** Every studio that starts an education engagement by
+shortlisting open-source substrate needs this gate before the first architecture call, not after.
+
+**Wire it together like this.**
+
+1. **Resolve the default branch first, for every candidate.** Not `main`.
+   `Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard` defaults to the **tag `v6.2.0`**;
+   `1EdTech/openbadges-specification` and `LearnPress/learnpress` default to `develop`. Channel:
+   GitHub repository search with **`fork:true`** (without the flag, forks return no record at all —
+   `P119-B`), fields `default_branch`, `archived`, `fork`, `stargazers_count`.
+2. **Probe the licence surface on that branch** — `compose/code/p120-unread-grant-resolution/probe.sh`,
+   22 paths per address over `raw.githubusercontent.com`: `LICENSE{,.md,.txt}`, `LICENCE{,.md}`,
+   `COPYING`, `LICENSE-CODIGO.md` / `LICENSE-DADOS.md` (split grants), `NOTICE`, plus `DESCRIPTION`,
+   `package.json`, `composer.json` and `README.md` as **pointer** sources, never as grants.
+3. **Classify what you captured, not what it is called** —
+   `compose/code/p120-unread-grant-resolution/classify3.sh`. It anchors MIT on the grant sentence
+   *"Permission is hereby granted, free of charge"* rather than the token `MIT`, which otherwise
+   matches inside `perMITted` and `COMMITTED` (`P120-C`), and it classifies an **unnamed**
+   proprietary grant by restriction semantics — reserved rights, a non-commercial clause, a fee
+   trigger — requiring **two** signals, because every BSD-3 licence says *"All rights reserved"*.
+4. **Resolve pointers in tier order and record the tier**, so a reader knows how strong the answer
+   is: a licence file → the README-named path (`OS4ED/openSIS-Classic` → `docs/License.txt`) → the
+   ecosystem manifest (R `DESCRIPTION`; WordPress `readme.txt`) → an **author claim** → **nothing**.
+5. **Gate on the tier, not on the token.** Tier 4 and tier 5 are `NO-GRANT`: the candidate is
+   closed until its author says otherwise, and the remedy is an e-mail, not a build.
+6. **Run it offline in CI** — `test_p120.sh`, 53 assertions against captured licence files, so the
+   gate keeps working when `api.github.com` returns 403, which it does.
+
+🔴 **The two rules this gate exists to enforce, both of them learned the expensive way:**
+**a package manifest is not a grant** (`leemonade/leemons` declares `MIT` in `package.json` and
+bills **€100 000** in `LICENSE.md`), and **a badge is not a grant** (three audited addresses render
+`MIT` shields whose target 404s).
+
+## 🟢 🆕 `P120-PAT-2` — permissive R autograding stack for a quantitative course (3–4 weeks)
+
+🔵 **Every repo in this pattern had its grant READ from its default branch this pass, at tier 1.
+No badge, no manifest field, no author claim.** This is the pass's usable output: a complete
+autograding pipeline a studio can vendor into a client build today.
+
+| layer | repo | grant | role |
+|---|---|---|---|
+| grading kernel | [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) | 🟢 **BSD-3** | runs R scripts, Rmd and Jupyter-R notebooks against test suites; Gradescope-compatible |
+| plot grading | [`rstudio/ggcheck`](https://github.com/rstudio/ggcheck) | 🟢 **MIT** | inspects a `ggplot2` object's layers, mappings and geoms — grades the *plot*, not its image |
+| table grading | [`rstudio/tblcheck`](https://github.com/rstudio/tblcheck) | 🟢 **MIT** | compares tibbles/data frames with student-readable failure messages |
+| learning analytics | [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna) | 🟢 **MIT** | Transition Network Analysis over the attempt sequence — which wrong answer leads to which next |
+| interop | [`Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard) | 🟢 **Apache-2.0** (pin tag `v6.2.0`) | shape the gradebook export so a US K-12 SIS can ingest it |
+| LATAM data layer | [`SidneyBissoli/educabR`](https://github.com/SidneyBissoli/educabR) | 🟢 **MIT** | pull INEP Censo Escolar / ENEM microdata for Brazilian cohort baselining |
+
+**Wire it together like this.**
+
+1. **Author each assessment as an Rmd with `ottr`-format test blocks**, one `## Test` chunk per
+   learning objective, and keep the public tests in the student notebook and the hidden tests in
+   the grader image only.
+2. **Call `ggcheck` inside a plot question's test** — `get_geoms()` / `uses_geom()` /
+   `get_mappings()` assert the *structure* of the submitted `ggplot2` object. This is why the stack
+   is R rather than Python: nothing in the permissive Python tier grades a plot's grammar rather
+   than its pixels.
+3. **Call `tblcheck` inside a wrangling question's test** — `tbl_check()` returns the failure as a
+   sentence a student can act on, which is what turns a grader into feedback.
+4. **Emit one row per attempt** (`student_id`, `question_id`, `objective`, `pass/fail`,
+   `timestamp`) and feed the sequence to `tna::build_model()`. The transition matrix answers the
+   question a gradebook cannot: *which misconception leads to which next misconception.* That
+   analysis is the consulting deliverable; the grading is the commodity.
+5. **Map the gradebook to Ed-Fi `StudentAcademicRecord` / `Grade`** at the pinned tag for a North
+   America engagement. 🔵 For credentialing, integrate **against** Open Badges 3.0 using the
+   Apache-2.0 **validator** — `P120-PAT-0`: the specification repository itself is ungranted.
+6. **Baseline a Brazilian cohort with `educabR`** before claiming improvement — `censo_escolar()`
+   and `enem()` give the regional comparison that makes a before/after credible.
+
+🔴 **What NOT to put in this build, measured this pass:**
+[`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce) — a
+proprietary Chinese EULA forbidding commercial use **and** redistributable derivatives;
+[`leemonade/leemons`](https://github.com/leemonade/leemons) — €100 000 past 1 000 users plus 5 %;
+[`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) and
+[`qed42/ai-accessibility-checker`](https://github.com/qed42/ai-accessibility-checker) — MIT badges
+over a 404; [`lovejzzz/CourseMapper`](https://github.com/lovejzzz/CourseMapper) and
+[`Zion-support/curriculum-alignment-checker`](https://github.com/Zion-support/curriculum-alignment-checker)
+— no grant at all.
+
+🟡 **Honest limits of this pattern.** The R tier is small: `ottr` is 3★, `tblcheck` 9★, `tna` 13★,
+`educabR` 15★, `ggcheck` 23★. These are **low-bus-factor dependencies** and the mitigation is the
+same one this KB prescribes for the Brazilian data repos — **vendor at a pinned SHA** and budget an
+engineer who can maintain the fork. 🟢 The grants permit exactly that; that is what tier-1
+permissive buys and what a tier-4 badge does not.
 
 ## 🔴 🆕 `P119-PAT-0` — the recommendation this page owed, for the second pass running
 
@@ -128,7 +234,7 @@ the source-publication duty.
 | step | component | licence, measured this pass | why this one |
 |---|---|---|---|
 | 1 | the LMS, **unforked** | 🔴 [`moodle/moodle`](https://github.com/moodle/moodle) GPL-3.0 (`COPYING.txt`, `main`) · [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) AGPL-3.0 · [`openedx/edx-platform`](https://github.com/openedx/edx-platform) AGPL-3.0 | 🟢 **run it as shipped.** An unmodified deployment triggers no copyleft duty at all |
-| 2 | the integration boundary | 🟢 [`1EdTech/openbadges-specification`](https://github.com/1EdTech/openbadges-specification) · [`celtic-project/LTI-PHP`](https://github.com/celtic-project/LTI-PHP) LGPL-3.0 | 🟡 **LTI 1.3 / xAPI is a protocol, not a link.** LGPL on the PHP helper permits linking without the copyleft reaching the studio's code — 🔴 **but only because it is LGPL: `P118`'s `i-educar` correction is the cautionary case, where a published LGPL-3.0 turned out to be GPL-2.0** |
+| 2 | the integration boundary | 🔴 [`1EdTech/openbadges-specification`](https://github.com/1EdTech/openbadges-specification) **NO GRANT** · [`celtic-project/LTI-PHP`](https://github.com/celtic-project/LTI-PHP) LGPL-3.0 | 🟡 **LTI 1.3 / xAPI is a protocol, not a link.** LGPL on the PHP helper permits linking without the copyleft reaching the studio's code — 🔴 **but only because it is LGPL: `P118`'s `i-educar` correction is the cautionary case, where a published LGPL-3.0 turned out to be GPL-2.0** |
 | 3 | the tutor | 🟢 [`huggingface/smolagents`](https://github.com/huggingface/smolagents) Apache-2.0 · [`agent0ai/agent-zero`](https://github.com/agent0ai/agent-zero) MIT · [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) **MIT** (⚠️ was Apache-2.0) | 🟢 permissive; the studio's tutor logic stays closed |
 | 4 | 🔴 **NOT the scoring code the KB used to recommend** | 🔴 [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) **AGPL-3.0** (⚠️ was Apache-2.0) | 🔴 **this is the substitution `ACTION E` forced.** Open-response scoring was on this shelf as Apache-2.0. It is network copyleft, so calling it from a hosted product publishes the product |
 | 5 | the scoring replacement | 🟢 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) **MIT** (TU München) · [`oppia/oppia`](https://github.com/oppia/oppia) Apache-2.0 | 🟢 permissive assessment, measured this pass |

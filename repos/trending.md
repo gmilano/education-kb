@@ -4,6 +4,93 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Pass 120 — 2026-10-11 (seventh pass of this date), 05:3x–06:2x UTC
+
+🔵 **APPEND-ONLY page. Added above p119's section; nothing below is edited.**
+
+🟢 **"Trending" is measured here, not quoted. p118 added the default branch; p119 added
+`archived` and `fork`. p120 adds the axis that decides whether a repository can be used at
+all, and that no previous axis could see: whether it carries a GRANT.**
+
+### 🔴 `P120-J` — 41 % of the audited addresses cannot be built on, and the shelf said they could
+
+`ACTION J` resolved the 22 addresses p118's licence sweep measured `UNREAD` while this KB
+published a permissive token for them. The resolution needed five tiers, and the tier
+distribution is the finding:
+
+| tier | how the grant was found | addresses | usable? |
+|---|---|---|---|
+| 1 | a licence file at a conventional root path | 8 | 🟢 yes, grant read |
+| 1b | a **split grant** in siblings the root file names | 1 | 🟡 code yes, data NC-free but attributed |
+| 1c | a **prose index** naming its grants inline | 2 | 🟡 one has a NonCommercial corpus tier |
+| 2 | the **non-conventional path the README names** | 1 | 🟢 yes — `docs/License.txt` |
+| 3 | the **ecosystem's own manifest** | 1 | 🟢 yes — WordPress `readme.txt` |
+| 4 | 🔴 an **author's claim**, no licence file behind it | 4 | 🔴 **no grant in law** |
+| 5 | 🔴 **nothing at 22 probed paths** | 5 | 🔴 **no grant at all** |
+
+🔴 **Tiers 4 and 5 are 9 of 22.** A repository with no licence file is **all rights reserved by
+default** in every Berne jurisdiction. It is not permissively licensed, and it is not
+*"licence unclear"* — it is closed, and the absence of a file is what makes it closed.
+
+### 🟢 Two repositories moved OUT of the doubtful column this pass
+
+| address | ★ | default branch | what p120 established |
+|---|---|---|---|
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 345 | `master` | 🟢 **GPL-2.0 confirmed** — the grant is at `docs/License.txt` (17 286 B), a path no root probe reaches. The README names it; following the README was the whole measurement |
+| [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | 275 | `develop` | 🟢 **GPL-3.0 resolved** after passes of *"unknown — do not assume GPL"* |
+
+🔵 **`learnpress` is the methodological one.** It has **no licence file at any probed path**, and
+an earlier pass hypothesised the grant sat in a PHP header comment. 🟢 **Right in kind, wrong in
+detail**: it is in `readme.txt`, the WordPress plugin header — a file nobody probes for a licence
+because it is not named like one.
+
+| channel | says |
+|---|---|
+| `readme.txt` (WP plugin header) | 🟢 **`License: GPLv3`** + `License URI: gnu.org/licenses/gpl-3.0.html` |
+| `composer.json` | 🟢 **`GPL-3.0-or-later`** |
+| 🔴 `package.json` | 🔴 **`ISC`** — `npm init` boilerplate contradicting both |
+
+### 🔴 `P120-Q` — a repository's own package manifest is not evidence of its licence
+
+2 of the 4 audited addresses with a manifest `license` field state something their committed
+licence file contradicts:
+
+| address | manifest says | the licence file says |
+|---|---|---|
+| [`leemonade/leemons`](https://github.com/leemonade/leemons) | `package.json`: 🟢 **MIT** | 🔴 **"Fair Code License" v1.0 — €100 000 past 1 000 users + 5 % royalty** |
+| [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | `package.json`: 🟢 **ISC** | 🔴 GPL-3.0 (from `readme.txt` and `composer.json`) |
+
+🔴 **`leemons` is the one that matters.** Whatever a sweep reads from `package.json`, that
+repository bills €100 000 — and its npm metadata says MIT. A manifest field is a developer's
+convenience string; the committed licence file is the instrument, and only it was given weight
+in any tier above.
+
+### 🟡 `P120-C` — the instrument's own defect, recorded because it points the wrong way
+
+p118's claim-side alternation matches `MIT` with **no word boundary**, so the token matches
+inside **`COMMITTED`**. Two rows reading *"the dependency tree is COMMITTED"* were counted as
+claiming MIT, and the first run of this pass's scorer reported both as licence defects on rows
+that were entirely correct.
+
+🟡 **2 of 461 MIT claims — 0.4 %, weak in magnitude.** Recorded for its direction: every other
+defect this KB hunts is a published cell that is wrong, and this is the instrument inventing a
+wrong cell from a right one. 🔵 **`ACTION O` is pre-registered to anchor every bare token and
+re-run the full sweep.**
+
+### 🔵 Declared gaps, so silence is not read as coverage
+
+🔴 **The public-web channel returned nothing for a fourth consecutive pass.** All four global
+searches and all four regional searches in the brief ran this pass. **Zero new repositories.**
+14 regulation tokens checked, 14 already held. No GitHub trending page was reachable
+(`github.com` HTML is `http=403` this pass); the trending claims in the third-party roundups the
+search surfaced name no education repository this KB does not already hold.
+
+🔴 **Still no dominant open-source education-specific AGENT FRAMEWORK**, eleven passes running.
+The largest education-specific agent remains a tutor ([`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor),
+41 111★), and the fastest-moving tier is Chinese-language MIT agent-skills.
+
+---
+
 ## 🟢 Pass 119 — 2026-10-11 (sixth pass of this date), 04:3x–05:2x UTC
 
 🔵 **APPEND-ONLY page. Added above p118's section; nothing below is edited.**

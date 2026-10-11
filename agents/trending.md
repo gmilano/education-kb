@@ -4,6 +4,99 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Pass 120 — 2026-10-11 (seventh pass of this date), 05:3x–06:2x UTC
+
+🔵 **APPEND-ONLY page. This section is added above p119's and nothing below it is edited.**
+
+🔴 **What is new this week is not an agent. It is that 9 of 22 audited addresses on this KB's
+shelves carry NO LICENCE AT ALL, and every one of the 9 was published here with an OSI token.**
+`ACTION J` resolved the 22 `UNREAD` + permissive-claim addresses p118's 957-claim sweep could
+not read. 13 carry a readable grant. **9 do not** — 5 have no licence file at any of 22 probed
+paths, and 4 have only an author's sentence in a README with nothing behind it.
+
+### 🔴 `P120-A` — `yuanjiusheng/cloud-learning-ce` (126★) was 🟢 MIT here, and is proprietary
+
+Its root `LICENSE` on the default branch `master` is 4 117 B of Chinese EULA with **zero**
+occurrences of any OSI licence name.
+
+| clause | what it says |
+|---|---|
+| 版权所有 (c) 2021，猿究生 · **保留所有权利** | all rights reserved |
+| §1.1 | free use for **non-commercial** purposes only |
+| 🔴 §2.1 | **commercial use forbidden** without a purchased licence — enterprise, operating, and profit-making sites are named |
+| §2.3 | the footer *"Powered by cloud-learning ©2021 猿究生"* must be retained |
+| 🔴 §2.5 | **derivative, modified or third-party versions for redistribution are forbidden** |
+| §3.4 | the licensor may change the terms and the price list **without notice** |
+
+🔴 **This is worse for a studio than `leemons`, which p119 found.** `leemons` is expensive —
+€100 000 past 1 000 users — and therefore budgetable. This one forbids the derivative work that
+customisation *is* and the commercial deployment that an engagement *is*, and names no price at
+all, only an e-mail address.
+
+### 🔴 The nine addresses with nothing behind the token
+
+| address | ★ | published here | 🔴 what is actually there |
+|---|---|---|---|
+| [`1EdTech/openbadges-specification`](https://github.com/1EdTech/openbadges-specification) | 205 | 🟢 Apache-2.0 | 🔴 **no licence file at 22 probed paths; README names none** |
+| [`lovejzzz/CourseMapper`](https://github.com/lovejzzz/CourseMapper) | 0 | 🟢 MIT | 🔴 **nothing; `package.json` has no `license` field** |
+| [`Zion-support/curriculum-alignment-checker`](https://github.com/Zion-support/curriculum-alignment-checker) | 0 | 🟢 MIT | 🔴 **nothing** |
+| [`cezarc/EPESI`](https://github.com/cezarc/EPESI) | 3 | 🔴 already NONE | 🔴 README prose *"available for free under the MIT license"*, no file |
+| [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | 3 | 🔴 already NONE | 🔴 MIT badge linking to `LICENSE` → **404** |
+| [`qed42/ai-accessibility-checker`](https://github.com/qed42/ai-accessibility-checker) | 3 | 🔴 already NONE | 🔴 *"See the LICENSE file for details"* → **404** |
+| [`xGabrielCv/Auto-Matricula-SIGAA-UnB`](https://github.com/xGabrielCv/Auto-Matricula-SIGAA-UnB) | 0 | 🟢 MIT | 🔴 badge reads **"License: Open Source"** — which is not a licence |
+| [`Gnanakamalesh-M/student-dropout-early-warning`](https://github.com/Gnanakamalesh-M/student-dropout-early-warning) | 0 | 🔴 already UNGRANTED | 🔴 README *"Code: MIT"*, no file |
+| [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | 25 | 🔴 **🟢 Apache-2.0 at `agents/top.md:64`** | 🔴 **AGPL-3.0** — network copyleft |
+
+🔵 **A licence badge is the most dangerous of these.** Three addresses render a green `MIT`
+shield that links to a file that does not exist. The badge is generated from a string in the
+README; nothing validates its target. It reads exactly like a measurement and is a decoration.
+
+### 🔴 `P120-L` — the correction and the error, 65 lines apart, for three passes
+
+`FWU-DE/ais-chat` is AGPL-3.0. p117 measured it, and **both** `agents/top.md` and
+`intel/market.md` carry a correction table publishing it. Those tables say the superseded value
+*"was MIT"*. 🔴 **At `agents/top.md:64` the superseded value was `Apache-2.0`**, so a repair
+driven by the wrong value it expected to find never touched it — at **2.0 % page depth**, the
+top table of the most-read page in this KB.
+
+🔵 **This refutes p119's `ACTION L` on its premise.** p119 found all 7 of its wrong **star**
+cells below 78 % depth and pre-registered a tail sweep. Of p120's 17 **licence** defects, **13
+are below 78 %** and the costliest is at 2 %. Depth predicts a stale number; it does not predict
+a stale licence, because the two go stale by different mechanisms — a number decays on its own,
+a licence token survives a repair that was looking for something else.
+
+### 🟢 What the resolution confirmed, so the shelf is not only bad news
+
+🟢 **Five R-ecosystem autograders were right all along** and were only ever *unmeasured*: they
+commit a 45-byte `YEAR`/`COPYRIGHT HOLDER` stub, which is the CRAN convention, with the real
+grant in `LICENSE.md` and declared in `DESCRIPTION`.
+
+| address | ★ | `DESCRIPTION` | grant read from `LICENSE.md` |
+|---|---|---|---|
+| [`rstudio/ggcheck`](https://github.com/rstudio/ggcheck) | 23 | `MIT + file LICENSE` | 🟢 **MIT** |
+| [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna) | 13 | `MIT + file LICENSE` | 🟢 **MIT** |
+| [`SidneyBissoli/educabR`](https://github.com/SidneyBissoli/educabR) | 15 | `MIT + file LICENSE` | 🟢 **MIT** |
+| [`rstudio/tblcheck`](https://github.com/rstudio/tblcheck) | 9 | `MIT + file LICENSE` | 🟢 **MIT** |
+| [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) | 3 | `BSD_3_clause + file LICENSE` | 🟢 **BSD-3** |
+
+🟢 **`Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard` (46★) is confirmed Apache-2.0**, read from its
+default branch — which is the **tag `v6.2.0`**, not a branch at all.
+
+### 🔵 The search channel, seventh consecutive pass of nothing
+
+🔴 **`Gap 402` weakens a FIFTH consecutive pass.** The brief's eight mandated searches ran —
+global and once per region — and returned **ZERO new addresses and ZERO new regulation tokens**.
+14 tokens were checked against the tree and all 14 are already held: `Digital Omnibus`,
+Korea's `AI Basic Act`, Vietnam's AI Law, Taiwan's AI Basic Act, `H.R. 8747`, `AB 1159`,
+Idaho `SB 1227`, Oregon `SB 1546`, `CONPES 4144`, UNESCO `IESALC`, the LAC Observatory, `TALIS`,
+the NYC moratorium, and the OECD *Digital Education Outlook*.
+
+🔵 **Stated as the honest conclusion it is: the public-web channel is exhausted for this
+industry at this cadence.** Four passes running, the findings have come from the tree and not
+from search. p119: 0 new / 19 rejected. p118: 0 / 15. p117: 4 / 13. p120: 0 / 14.
+
+---
+
 ## 🟢 Pass 119 — 2026-10-11 (sixth pass of this date), 04:3x–05:2x UTC
 
 🔵 **APPEND-ONLY page. This section is added above p118's and nothing below it is edited.**

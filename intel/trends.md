@@ -6,10 +6,55 @@ updated: 2026-10-11
 
 # Education — current trends
 
-**Pass 119, 2026-10-11.** ⏱️ **Sixth pass of this date** (window **04:3x → 05:2x UTC**).
+**Pass 120, 2026-10-11.** ⏱️ **Seventh pass of this date** (window **05:3x → 06:2x UTC**).
 
-🟢 **Instrument: `compose/code/p119-carried-column-audit/`. `test_p119.sh` **43 passed / 0
-failed**, offline. This page carried **1** of the 7 wrong star cells; it is repaired.**
+🟢 **Instrument: `compose/code/p120-unread-grant-resolution/`, discharging `ACTIONS J, K, L`.
+`test_p120.sh` **55 passed / 0 failed**, fully offline. This page carried **0** of the 7 cells
+repaired in this commit — the first pass in six in which it carried none.**
+
+## 🟢 🆕 `P120-TREND` — five trends, each with the channel that evidences it
+
+🔵 **The rule this page has kept since p114: a trend without a named channel is an opinion. The
+channel column says how this pass knows, not who said it.**
+
+| # | trend | channel | strength |
+|---|---|---|---|
+| 1 | 🔴 **The education shelf's licence problem is not wrong licences. It is ABSENT ones.** Of 22 addresses this KB published with a permissive token, **9 carry no grant** — 5 have no licence file at any of 22 probed paths, 4 have only an author's sentence behind a 404. Last pass's story was a wrong token (`leemons`, Apache-2.0 → Fair Code); this pass's is an empty one, and absent grants outnumber wrong ones 9 to 3. | 🟢 **measured** — 22 paths probed per address on the measured default branch, 410 of 462 probes `http=404` | 🟢 **strong** |
+| 2 | 🔴 **A licence badge is a decoration that reads like a measurement, and this shelf is full of them.** Three audited addresses render a green `MIT` shield linking to a `LICENSE` that returns 404; a fourth renders **`License: Open Source`**, which names no licence at all. The badge is generated from a README string and nothing validates its target. | 🟢 **measured** — badge target probed on each default branch | 🟢 **strong** |
+| 3 | 🔴 **"Source-available" on this shelf is now mostly BESPOKE, which defeats name-matching entirely.** Both non-OSI platforms here are one-off documents: `yuanjiusheng/cloud-learning-ce` (**126★**, 🟢 MIT here) is a Chinese EULA forbidding commercial use AND redistributable derivatives, and `leemonade/leemons` is a "Fair Code License" billing €100 000. Neither carries a licence NAME, so no alternation of Elastic/BUSL/SSPL/PolyForm would ever match them. | 🟢 **measured** — root licence files read from the default branch, 4 117 B and 10 830 B, zero OSI licence names in either | 🟢 **strong** |
+| 4 | 🟡 **A repository's own package manifest is not evidence of its licence, and it fails in the dangerous direction.** 2 of the 4 audited addresses with a manifest `license` field contradict their committed file — and the contradiction is permissive-over-restrictive both times: `leemons` declares `MIT` in `package.json` while billing €100 000, `learnpress` declares `ISC` while being GPL-3.0. | 🟢 **measured** — both manifests and both licence sources read | 🟡 **moderate** — 4 addresses is a thin denominator; `ACTION Q` is pre-registered to widen it |
+| 5 | 🟢 **The permissive tier of education OSS remains the plumbing, not the platform — unchanged across seven passes and still the most useful single fact in this KB.** p120 adds the grading layer to the permissive column with five confirmations: `rstudio/ggcheck`, `rstudio/tblcheck`, `sonsoleslp/tna`, `SidneyBissoli/educabR` (all MIT) and `ucbds-infra/ottr` (BSD-3). All five largest-install LMS platforms (Moodle, Canvas, Open edX, ILIAS, Chamilo) remain copyleft. | 🟢 **measured** — grant read from each default branch; the five R rows resolved through `LICENSE.md` + `DESCRIPTION` | 🟢 **strong** |
+
+## 🔴 🆕 `P120-M` — the trend this page cannot evidence, stated because it is the honest answer
+
+🔵 **The brief's eight mandated searches ran this pass — four global and one per region. They
+returned ZERO new addresses and ZERO new regulation tokens. 14 tokens were checked against the
+tree and all 14 were already held.**
+
+🔴 **`Gap 402` weakens a FIFTH consecutive pass**, and the ledger is now long enough to be a
+finding rather than a complaint:
+
+| pass | new tokens | rejected as already held |
+|---|---|---|
+| p117 | 4 | 13 |
+| p118 | 0 | 15 |
+| p119 | 0 | 19 |
+| 🔴 **p120** | 🔴 **0** | **14** |
+
+🔵 **Stated as a position: the public-web channel is exhausted for this industry at this cadence,
+and that is itself the trend.** Four passes running, every finding has come from reading the tree —
+licence files, default branches, fork and archived flags, heading nesting. A pass that spent its
+budget on search would have produced nothing. 🟢 **The methodological consequence has already
+changed how these passes are planned, and it should be stated rather than merely practised: at
+hourly cadence over a mature KB, MEASUREMENT of what is already held beats DISCOVERY of what is
+not.**
+
+🔴 **Two gaps declared rather than left silent.** No GitHub trending page was reachable this pass
+(`github.com` HTML is `http=403`); the third-party trending roundups the searches surfaced name no
+education repository this KB does not already hold. And for a seventh consecutive pass there is
+**no dominant open-source education-specific AGENT FRAMEWORK** — the largest education-specific
+agent remains a tutor ([`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor), 41 111★) and the
+fastest-moving tier is Chinese-language MIT agent-skills.
 
 ## 🟢 🆕 `P119-TREND` — five trends, each with the channel that evidences it
 

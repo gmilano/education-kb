@@ -6,12 +6,93 @@ updated: 2026-10-11
 
 # Education — foundational repos
 
-**Pass 119, 2026-10-11.** ⏱️ **Sixth pass of this date** (census window **04:3x → 05:2x UTC**).
+**Pass 120, 2026-10-11.** ⏱️ **Seventh pass of this date** (census window **05:3x → 06:2x UTC**).
 
-🟢 **Instrument: `compose/code/p119-carried-column-audit/`, discharging `ACTIONS F, G, H, I`.
-`test_p119.sh` **43 passed / 0 failed**, offline. This page carried **3** of the 7 wrong star
-cells, **1** of the 2 wrong licence cells, and **5** of the 6 rows that needed an `ARCHIVED`
-marker. All are repaired in this commit.**
+🟢 **Instrument: `compose/code/p120-unread-grant-resolution/`, discharging `ACTIONS J, K, L`.
+`test_p120.sh` **55 passed / 0 failed**, fully offline. This page's own `leemons` row — p119's
+€100 000 finding — is **independently reproduced** by this pass's classifier as a control, and
+this page carried **1** of the 7 cells repaired in this commit.**
+
+## 🔴 🆕 `P120-J` — the foundations shelf's most-cited standards repo grants nothing at all
+
+🔴 **[`1EdTech/openbadges-specification`](https://github.com/1EdTech/openbadges-specification)
+(205★) was 🟢 Apache-2.0 on this page. It carries no licence file at any of 22 probed paths on
+its default branch `develop`, and its README names no licence.**
+
+🔵 **This page was already half-right about it**: a row further down reads *"The specification
+carries no grant while the validator is Apache-2.0. Cite the validator."* 🟢 **That row stands
+and p120 confirms it by measurement.** The defect was the row that still carried the green token,
+and in `compose/patterns.md` the same address was tokened 🟢 **inside a recommendation** — the
+exact shape `P119-PAT-0` pre-registered.
+
+🔴 **For a consultancy the distinction is operational, not academic.** Open Badges 3.0 is the
+credentialing standard a client asks for by name. The *specification text* is governed by
+1EdTech's own membership IPR terms, not by an OSI licence in the repository; what is Apache-2.0
+is the **validator**. A build that vendors the spec repo has vendored an ungranted artefact; a
+build that depends on the validator has a grant. 🟢 **Cite the validator.**
+
+## 🔴 🆕 `P120-K` — a repaired row LEAVES this KB's census, and five of them already have
+
+p118's claim-side alternation can only express OSI licences. 🔴 **So the moment a pass repairs a
+row on this page to *"Fair Code License v1.0"*, that row stops matching and becomes invisible to
+the instrument that repaired it.**
+
+`ACTION K` extended the alternation with the source-available family. **22 claim rows across 6
+pages reappeared**, 5 of them on this page:
+
+| address | token that was invisible | rows on this page |
+|---|---|---|
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | `Elastic-2.0` | 4 |
+| [`leemonade/leemons`](https://github.com/leemonade/leemons) | `Fair Code License` | 1 |
+
+🔴 **A repaired row that vanishes is worse than a wrong one.** The page is right and nothing can
+see it any more, so nothing will notice when it next goes stale — and `leemons` is the row where
+going unnoticed costs €100 000.
+
+🟡 **`ACTION K`'s own clause is not the measurement that matters.** It said *"refuted if the
+residual `WRONG` count does not fall below 19"*, which measures a re-run of the full `ACTION E`
+sweep that this pass did not run. Recorded as discharged **on its mechanism only**, with the
+clause left unmet rather than quietly reinterpreted.
+
+## 🟢 🆕 `P120-F` — `leemons` reproduced from scratch, as a control on the instrument
+
+🟢 **p119 found the €100 000 Fair Code licence by hand. p120's classifier finds it
+independently**, through a branch that matches restriction *semantics* rather than licence
+*names* — and finds a second address of the same shape that p119 did not reach
+([`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce), see
+`verticals/solutions.md`).
+
+| control | p119 found, by hand | p120 measured, by instrument | agrees |
+|---|---|---|---|
+| [`leemonade/leemons`](https://github.com/leemonade/leemons) | Fair Code v1.0, €100k + 5 % | 🔴 **proprietary, 3 restriction signals** | 🟢 yes |
+| [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | MIT code · 🔴 CC BY-NC-SA corpora | 🔴 **NonCommercial tier, MIT + CC BY 4.0 + CC BY-NC-SA 4.0** | 🟢 yes |
+| [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) | multi-grant framework | 🟢 **MIT + CC0 + CC BY 4.0** | 🟢 yes |
+| [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | split, MIT for code | 🟢 **`LICENSE-CODIGO.md`=MIT + `LICENSE-DADOS.md`=CC BY** | 🟢 yes |
+
+🔵 **4 of 4 reproduced.** An instrument that re-derives a previous pass's hand-read answers is
+worth more than one that only finds new things, because it is the only evidence that the new
+things are not artefacts. 🟡 **One gap, stated: p119 also recorded that `knowledge-graph` has
+*"Open + Gated" and "Gated" tiers covered by no open licence at all.* p120's prose-index tier
+reads licence NAMES and does not detect an unlicensed tier, so it under-reports that row.**
+
+## 🟢 🆕 `P120-R` — five permissive grading repos, confirmed and safe to vendor
+
+🟢 **The one unambiguously good outcome of this pass.** Five R-ecosystem autograders were
+published here as MIT/BSD, measured `UNREAD` by p118 because they commit a 45-byte CRAN stub as
+`LICENSE`, and are now confirmed from `LICENSE.md` + `DESCRIPTION`:
+
+| address | ★ | grant | what it does |
+|---|---|---|---|
+| [`rstudio/ggcheck`](https://github.com/rstudio/ggcheck) | 23 | 🟢 **MIT** | inspects `ggplot2` plots for automated grading |
+| [`SidneyBissoli/educabR`](https://github.com/SidneyBissoli/educabR) | 15 | 🟢 **MIT** | downloads and processes Brazilian INEP education microdata (Censo Escolar, ENEM) |
+| [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna) | 13 | 🟢 **MIT** | Transition Network Analysis for learning-analytics sequences |
+| [`rstudio/tblcheck`](https://github.com/rstudio/tblcheck) | 9 | 🟢 **MIT** | grading checks for tabular data |
+| [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) | 3 | 🟢 **BSD-3** | autograder for R scripts, Rmd and Jupyter R kernels (UC Berkeley) |
+
+🟢 **[`Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard)
+(46★) is confirmed Apache-2.0** — read from its default branch, which is the **tag `v6.2.0`**,
+not a branch. 🔵 A probe assuming `main` would have 404'd and fed the `UNREAD` pile; p118's
+default-branch measurement is what made this row readable at all.
 
 ## 🔴 🆕 `P119-A` — the foundations shelf published a €100 000 licence as 🟢 Apache-2.0
 

@@ -6,13 +6,90 @@ updated: 2026-10-11
 
 # Education — AI agents shelf
 
-**Pass 119, 2026-10-11.** ⏱️ **Sixth pass of this date** (p114 23:54→00:25, p115 01:13→01:25,
-p117 02:45→03:0x, p118 03:4x→04:2x, this census window **04:3x → 05:2x UTC**).
+**Pass 120, 2026-10-11.** ⏱️ **Seventh pass of this date** (p114 23:54→00:25, p115 01:13→01:25,
+p117 02:45→03:0x, p118 03:4x→04:2x, p119 04:3x→05:2x, this census window **05:3x → 06:2x UTC**).
 
-🟢 **Instrument: `compose/code/p119-carried-column-audit/` — all four of p118's pre-registered
-actions discharged. `test_p119.sh` **43 passed / 0 failed**, fully offline. `ACTION G` and
-`ACTION H` are **REFUTED on their own clauses**, and both refutations found more than the action
-would have.**
+🟢 **Instrument: `compose/code/p120-unread-grant-resolution/` — `ACTION J` discharged over all 22
+addresses, with p119's four `ACTION F` answers reproduced from scratch as a control.
+`test_p120.sh` **55 passed / 0 failed**, fully offline. `ACTION L` is **REFUTED on its premise**,
+and `ACTION K` is discharged on its mechanism but **not on its clause**, which measured the wrong
+thing.**
+
+## 🔴 🆕 `P120-A` — this shelf published a 🟢 Apache-2.0 agent that is AGPL-3.0, at 2 % page depth
+
+🔴 **[`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) was 🟢 Apache-2.0 in this page's
+TOP star-and-licence table — measured at 2.0 % page depth before this pass's sections were
+prepended, the most-read cell in this KB. It is AGPL-3.0.** Network copyleft: a hosted
+derivative must publish its source to every user it serves, which is the single licence outcome a
+client paying for a hosted school chatbot least wants to discover after launch.
+
+🔵 **The reason it survived is the finding, not the licence.** p117 measured the AGPL. **Both this
+page and `intel/market.md` carry a correction table publishing it.** Those tables name the
+superseded value as *"was MIT"*:
+
+| where | superseded value named | reached the top table? |
+|---|---|---|
+| `agents/top.md`, the `published / 🔴 actually` correction table below | 🟢 MIT | 🔴 **no** |
+| `intel/market.md` EMEA correction table | 🟢 MIT | 🔴 **no** |
+| 🔴 **the actual cell in the top table** | 🔴 **🟢 Apache-2.0** | — |
+
+🔴 **A repair keyed on the wrong value you expect to find cannot fix a row that is wrong in a
+different way.** The error sat ~65 lines from its own correction, on this page, for three passes.
+🟢 **`ACTION P` is pre-registered to sweep every `was X` marker in this KB against the other
+pages' values for the same address.**
+
+## 🔴 🆕 `P120-J` — nine of twenty-two audited addresses carry no grant, and the shelf tokened them green
+
+`ACTION J` resolved the 22 addresses p118's 957-claim sweep measured `UNREAD` while this KB
+published a permissive token. **13 carry a readable grant. 9 do not.**
+
+| tier | how the grant was found | n |
+|---|---|---|
+| 1 / 1b / 1c | a licence file, a split grant, or a prose index | 11 |
+| 2 | the non-conventional path the README names | 1 |
+| 3 | the ecosystem's own manifest (R `DESCRIPTION`, WP `readme.txt`) | 1 |
+| 🔴 4 | an **author's claim** with no licence file behind it | **4** |
+| 🔴 5 | 🔴 **nothing at 22 probed paths** | **5** |
+
+🔴 **A repository with no licence file is all rights reserved by default.** It is not
+*"unclear"* — it is closed, and the absence of the file is what closes it.
+
+### 🔴 The agent rows on THIS page that the resolution moved
+
+| address | ★ | was published here | 🔴 measured this pass | repaired |
+|---|---|---|---|---|
+| [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | 25 | 🟢 Apache-2.0 | 🔴 **AGPL-3.0** | 🟢 **repaired** |
+| [`lovejzzz/CourseMapper`](https://github.com/lovejzzz/CourseMapper) | 0 | 🟢 MIT | 🔴 **NO GRANT** — 22 paths 404, `package.json` has no `license` field | 🟢 **repaired** |
+| [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | 3 | 🔴 already `NONE` | 🔴 MIT **badge** linking to `LICENSE` → **404** | 🔵 already correct |
+| [`qed42/ai-accessibility-checker`](https://github.com/qed42/ai-accessibility-checker) | 3 | 🔴 already `NONE` | 🔴 *"See the LICENSE file"* → **404** | 🔵 already correct |
+
+🔵 **A licence badge is the most dangerous shape on this shelf.** Three audited addresses render a
+green `MIT` shield whose link target does not exist. The badge is generated from a string in the
+README and nothing validates it, so it reads like a measurement and is a decoration.
+
+🟢 **11 rows measured `ALREADY-CORRECT`** — they say `NONE`, `No payload / 24` or `UNGRANTED` and
+name the claimed MIT only to attribute it to whoever claimed it. The first run of this pass's
+scorer called all 11 defects. 🔵 **Reading each row before repairing it is what kept the headline
+at 7 cells instead of 18**, and it is the only reason this section is not overstated.
+
+## 🟢 🆕 `P120-R` — five autograders this shelf was right about, and only ever failed to measure
+
+🟢 **The R ecosystem commits a 45-byte `YEAR` / `COPYRIGHT HOLDER` stub as `LICENSE`** — the CRAN
+convention — with the real grant in `LICENSE.md` and declared in `DESCRIPTION`. p118 correctly
+classified the stub as `GRANT-IN-MANIFEST` and correctly declined to resolve it; p120 performs
+that deferred measurement.
+
+| address | ★ | `DESCRIPTION` declares | grant read from `LICENSE.md` |
+|---|---|---|---|
+| [`rstudio/ggcheck`](https://github.com/rstudio/ggcheck) | 23 | `MIT + file LICENSE` | 🟢 **MIT** |
+| [`SidneyBissoli/educabR`](https://github.com/SidneyBissoli/educabR) | 15 | `MIT + file LICENSE` | 🟢 **MIT** |
+| [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna) | 13 | `MIT + file LICENSE` | 🟢 **MIT** |
+| [`rstudio/tblcheck`](https://github.com/rstudio/tblcheck) | 9 | `MIT + file LICENSE` | 🟢 **MIT** |
+| [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) | 3 | `BSD_3_clause + file LICENSE` | 🟢 **BSD-3** |
+
+🔵 **This is the usable half of the pass.** All five are permissive, all five are grading
+instruments rather than tutors, and all five are safe to vendor into a client build today.
+🟡 **Note the canonical owner spellings:** `SidneyBissoli/educabR`, not `sidneybissoli/educabr`.
 
 ## 🔴 🆕 `P119-B` — three of the agents on this shelf are not what the shelf says they are
 
@@ -61,7 +138,7 @@ cells are repaired in this commit.
 | [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) | **453** | — | 🟢 MIT | 🟢 live |
 | [`satvik314/educhain`](https://github.com/satvik314/educhain) | **389** | 389 | 🟢 MIT | 🟡 live, pushed 2026-05-29 |
 | [`artcc/freelingo`](https://github.com/artcc/freelingo) | **165** | 164 | 🟢 MIT | 🟢 live |
-| [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | **25** | 25 | 🟢 Apache-2.0 | 🟢 live (EMEA, DE) |
+| [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | **25** | 25 | 🔴 **AGPL-3.0** ⚠️ **was 🟢 Apache-2.0** — network copyleft | 🟢 live (EMEA, DE) |
 | [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🔴 **1** | `—` | 🟢 MIT | 🔴 **`fork:true` — see `P119-B`** |
 
 🔵 **Fourteen real agents with a measured star count and a licence read from the tree.** The
@@ -445,7 +522,7 @@ Of the 64 decidable rows, these are the agent-shaped ones — every figure below
 |---|---|---|---|
 | [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 GPL-3.0 | 🟢 **`agree`** | **86 / 86** (pnpm) |
 | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 MIT | 🟢 **`agree`** | **54 / 54** |
-| [`lovejzzz/CourseMapper`](https://github.com/lovejzzz/CourseMapper) | 🟢 MIT | 🟢 **`agree`** | **57 / 57** |
+| [`lovejzzz/CourseMapper`](https://github.com/lovejzzz/CourseMapper) | 🔴 **NO GRANT — no licence file on the default branch** ⚠️ **was 🟢 MIT** | 🟢 **`agree`** | **57 / 57** |
 | [`aiverify-foundation/moonshot-ui`](https://github.com/aiverify-foundation/moonshot-ui) | 🟢 Apache-2.0 | 🟢 **`agree`** | **42 / 42** |
 | [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | 🟢 AGPL-3 | 🟢 **`agree`** | **32 / 32** (pnpm, aliased — see `P116-Q`) |
 | [`thu-maic/dsh-openmaic`](https://github.com/thu-maic/dsh-openmaic) | 🟢 MIT | 🟢 **`agree`** | **7 / 7** — 🔴 **the one row the positive control moves** |
